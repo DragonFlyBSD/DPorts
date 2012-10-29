@@ -1,0 +1,33 @@
+DragonFly Ports, a.k.a. "DPorts"
+================================
+
+DragonFly Ports is a derivative of FreeBSD's Ports Collection.  It serves
+the same purpose for DragonFly as the Ports Collection does for FreeBSD,
+which is to provide instructions on how to build software on DragonFly BSD.
+The products of DPorts are executable software which are manipulated by
+Baptiste Daroussin's pkgng binary package manager.
+
+The traditional pkg_* tools seen previously on FreeBSD, DragonFly, and
+currently with pkgsrc will not be offered.  They are antiquated and have
+reached End-Of-Life on FreeBSD.
+
+While anyone could clone this repository and build a DPort from source,
+this will not be generally encouraged.  Unlike pkgsrc, the binary packages
+will be built and made available continuously as opposed to quarterly sets.
+Using pkgng to keep a system current will be recommended.
+
+This repository is actually generated.  Starting with the Ports Collection
+as a basis, DragonFly-specific patches and/or files are applied as necessary
+to create a modified port that builds on DragonFly.  If the FreeBSD port is
+updated in a way that either causes the patches to no longer apply, or just
+plain fail to build on DragonFly, the update will not be carried forward.
+The last working DPort will remain in place until a manual fix is provided
+that allows the FreeBSD update to work on DragonFly as well.
+
+A slightly modified version of Tinderbox will be used to confirm good
+builds.  Upon success, a hook in Tinderbox will update the patches
+repository to indicate a good build, and then another script will generate
+the DPort, place it here, and commit the change.  Theoretically, every
+single DPort should build on DragonFly.
+
+This project was conceived and implemented by John Marino
