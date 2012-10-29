@@ -1141,14 +1141,15 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # These need to be absolute since we don't know how deep in the ports
 # tree we are and thus can't go relative.  They can, of course, be overridden
 # by individual Makefiles or local system make configuration.
-#WITH_PKGNG?=		yes
+WITH_PKGNG?=		yes
 WITHOUT_FBSD10_FIX?=	yes
 DFLY_PATCHDIR?= 	${MASTERDIR}/dragonfly
 DFLY_FILESDIR?= 	${MASTERDIR}/dragonfly
 PORTSDIR?=		/usr/dports
 LOCALBASE?=		/usr/local
 LINUXBASE?=		/compat/linux
-DISTDIR?=		${PORTSDIR}/distfiles
+DISTDIR?=		/usr/dports-distfiles
+WRKDIRPREFIX?=		/usr/dports-work
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 INDEXDIR?=		${PORTSDIR}
 SRC_BASE?=		/usr/src
