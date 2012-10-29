@@ -1,0 +1,20 @@
+bin/iconv
+include/iconv.h
+include/libcharset.h
+include/localcharset.h
+lib/libcharset.a
+lib/libcharset.la
+lib/libcharset.so
+lib/libcharset.so.1
+lib/libiconv.a
+lib/libiconv.la
+lib/libiconv.so
+lib/libiconv.so.3
+libdata/charset.alias
+%%DOCSDIR%%/iconv.1.html
+%%DOCSDIR%%/iconv.3.html
+%%DOCSDIR%%/iconv_close.3.html
+%%DOCSDIR%%/iconv_open.3.html
+%%DOCSDIR%%/iconv_open_into.3.html
+%%DOCSDIR%%/iconvctl.3.html
+@dirrm %%DOCSDIR%%
