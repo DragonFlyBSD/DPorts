@@ -1154,9 +1154,6 @@ _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 INDEXDIR?=		${PORTSDIR}
 SRC_BASE?=		/usr/src
 
-# Set variable expansion behavior as default
-.MAKE.EXPAND_VARIABLES=	yes
-
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
 #
