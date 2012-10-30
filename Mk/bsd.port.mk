@@ -1154,6 +1154,9 @@ _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 INDEXDIR?=		${PORTSDIR}
 SRC_BASE?=		/usr/src
 
+# Set variable expansion behavior as default
+.MAKE.EXPAND_VARIABLES=	yes
+
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
 #
@@ -1544,7 +1547,7 @@ check-makefile::
 
 _POSTMKINCLUDED=	yes
 
-WRKDIR?=		${WRKDIRPREFIX}${.CURDIR:H:T}/${.CURDIR:T}/work
+WRKDIR?=		${WRKDIRPREFIX}/${.CURDIR:H:T}/${.CURDIR:T}/work
 .if !defined(IGNORE_MASTER_SITE_GITHUB) && defined(USE_GITHUB)
 WRKSRC?=		${WRKDIR}/${GH_ACCOUNT}-${GH_PROJECT}-${GH_COMMIT}
 .endif
