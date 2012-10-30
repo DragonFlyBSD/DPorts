@@ -68,12 +68,16 @@ ARCH!=	${UNAME} -p
 .endif
 
 .if !defined(OSVERSION)
+OSVERSION=	9999999
+.endif
+
+if !defined(DFLYVERSION)
 .if exists(/usr/include/sys/param.h)
-OSVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < /usr/include/sys/param.h
+DFLYVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < /usr/include/sys/param.h
 .elif exists(${SRC_BASE}/sys/sys/param.h)
-OSVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < ${SRC_BASE}/sys/sys/param.h
+DFLYVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < ${SRC_BASE}/sys/sys/param.h
 .else
-OSVERSION!=	${SYSCTL} -n kern.osreldate
+DFLYVERSION!=	${SYSCTL} -n kern.osreldate
 .endif
 .endif
 

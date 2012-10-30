@@ -43,7 +43,8 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  makefile is being used on.  Automatically set to
 #				  "FreeBSD," "NetBSD," or "OpenBSD" as appropriate.
 # OSREL			- The release version (numeric) of the operating system.
-# OSVERSION		- The value of __DragonFly_version.
+# OSVERSION		- 9999999 - try to ignore FreeBSD version check
+# DFLYVERSION		- The value of __DragonFly_version.
 #
 # This is the beginning of the list of all variables that need to be
 # defined in a port, listed in order that they should be included
@@ -1211,12 +1212,16 @@ OSREL!=	${UNAME} -r | ${SED} -e 's/[-(].*//'
 
 # Get __DragonFly_version
 .if !defined(OSVERSION)
+OSVERSION=	9999999
+.endif
+
+.if !defined(DFLYVERSION)
 .if exists(/usr/include/sys/param.h)
-OSVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < /usr/include/sys/param.h
+DFLYVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < /usr/include/sys/param.h
 .elif exists(${SRC_BASE}/sys/sys/param.h)
-OSVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < ${SRC_BASE}/sys/sys/param.h
+DFLYVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < ${SRC_BASE}/sys/sys/param.h
 .else
-OSVERSION!=	${SYSCTL} -n kern.osreldate
+DFLYVERSION!=	${SYSCTL} -n kern.osreldate
 .endif
 .endif
 
@@ -2242,7 +2247,7 @@ CFLAGS:=	${CFLAGS:N-std=*} -std=${USE_CSTD}
 _MAKE_JOBS=		#
 .else
 .if defined(MAKE_JOBS_SAFE) || defined(FORCE_MAKE_JOBS)
-MAKE_JOBS_NUMBER?=	`${SYSCTL} -n kern.smp.cpus`
+MAKE_JOBS_NUMBER?=	`${SYSCTL} -n hw.ncpu`
 _MAKE_JOBS?=		-j${MAKE_JOBS_NUMBER}
 .if defined(FORCE_MAKE_JOBS) && !defined(MAKE_JOBS_SAFE)
 BUILD_FAIL_MESSAGE+=	"You have chosen to use multiple make jobs (parallelization) for all ports.  This port was not tested for this setting.  Please remove FORCE_MAKE_JOBS and retry the build before reporting the failure to the maintainer."

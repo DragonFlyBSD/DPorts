@@ -1,2 +1,0 @@
-# Disable FreeBSD OSVERSION check
-OSVERSION=	9999999
