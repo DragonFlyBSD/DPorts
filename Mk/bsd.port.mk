@@ -1225,14 +1225,6 @@ DFLYVERSION!=	${SYSCTL} -n kern.osreldate
 .endif
 .endif
 
-.if ${OSVERSION} >= 1000017
-.if !defined(WITHOUT_PKGNG)
-WITH_PKGNG=	yes
-.else
-.undef	WITH_PKGNG
-.endif
-.endif
-
 # Only define tools here (for transition period with between pkg tools)
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
@@ -1354,7 +1346,7 @@ PKGVERSION=	${PORTVERSION:C/[-_,]/./g}${_SUF1}${_SUF2}
 PKGNAME=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-${PKGVERSION}
 DISTNAME?=	${PORTNAME}-${DISTVERSIONPREFIX}${DISTVERSION:C/:(.)/\1/g}${DISTVERSIONSUFFIX}
 
-INDEXFILE?=		INDEX-${OSVERSION:C/([0-9]*)[0-9]{5}/\1/}
+INDEXFILE?=		INDEX-${DFLYVERSION:C/([0-9]*)[0-9]{5}/\1/}
 
 DOCSDIR?=		${PREFIX}/share/doc/${PORTNAME}
 EXAMPLESDIR?=		${PREFIX}/share/examples/${PORTNAME}
@@ -1676,9 +1668,6 @@ PKG_DEPENDS+=		${LOCALBASE}/sbin/pkg:${PORTSDIR}/ports-mgmt/pkg
 .if defined(USE_ZIP)
 EXTRACT_DEPENDS+=	${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 .endif
-.if defined(USE_XZ) && ( (${OSVERSION} >= 900000 && ${OSVERSION} < 900012) || ${OSVERSION} < 800505 )
-EXTRACT_DEPENDS+=	${LOCALBASE}/bin/xz:${PORTSDIR}/archivers/xz
-.endif
 .if defined(USE_MAKESELF)
 EXTRACT_DEPENDS+=	unmakeself:${PORTSDIR}/archivers/unmakeself
 .endif
@@ -1724,12 +1713,10 @@ MAKE_ENV+=	${b}="${${b}}"
 .endif
 
 .if defined(USE_READLINE)
-.if ${USE_READLINE} == "port" || ${OSVERSION} > 1000000
 LIB_DEPENDS+=	readline.6:${PORTSDIR}/devel/readline
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib -lreadline
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
-.endif
 .endif
 
 .if defined(USE_OPENAL)
@@ -1913,7 +1900,7 @@ USE_LINUX=	${OVERRIDE_LINUX_BASE_PORT}
 LINUX_BASE_PORT=	${LINUXBASE}/bin/sh:${PORTSDIR}/emulators/linux_base-${USE_LINUX}
 .	else
 .		if ${USE_LINUX:tl} == "yes"
-.			if ${OSVERSION} < 800076 || ${LINUX_OSRELEASE} == "2.4.2"
+.			if ${LINUX_OSRELEASE} == "2.4.2"
 LINUX_BASE_PORT=	${LINUXBASE}/etc/fedora-release:${PORTSDIR}/emulators/linux_base-fc4
 .			else
 LINUX_BASE_PORT=	${LINUXBASE}/etc/fedora-release:${PORTSDIR}/emulators/linux_base-f10
@@ -6024,6 +6011,7 @@ tags:
 	OPSYS="${OPSYS:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
 	OSREL="${OSREL:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
 	OSVERSION="${OSVERSION:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
+	DFLYVERSION="${DFLYVERSION:Q}" \
 	SYSTEMVERSION="${SYSTEMVERSION:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}"
 .endif
 

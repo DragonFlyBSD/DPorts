@@ -81,14 +81,6 @@ DFLYVERSION!=	${SYSCTL} -n kern.osreldate
 .endif
 .endif
 
-.if ${OSVERSION} >= 1000017
-.if !defined(WITHOUT_PKGNG)
-WITH_PKGNG=	yes
-.else
-.undef	WITH_PKGNG
-.endif
-.endif
-
 .if !defined(_OSRELEASE)
 _OSRELEASE!=			uname -r
 .endif
@@ -156,7 +148,7 @@ PKGINSTALLVER!=	${PKG_INFO} -P 2>/dev/null | ${SED} -e 's/.*: //'
 .endif
 
 INDEXDIR?=	${PORTSDIR}
-INDEXFILE?=	INDEX-${OSVERSION:C/([0-9]*)[0-9]{5}/\1/}
+INDEXFILE?=	INDEX-${DFLYVERSION:C/([0-9]*)[0-9]{5}/\1/}
 
 # local customization of the ports tree
 .if exists(${.CURDIR}/Makefile.local)
@@ -377,6 +369,7 @@ README.html:
 	OPSYS="${OPSYS:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
 	OSREL="${OSREL:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
 	OSVERSION="${OSVERSION:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
+	DFLYVERSION="${DFLYVERSION:Q}" \
 	UID="${UID:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
 	PKGINSTALLVER="${PKGINSTALLVER:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
 	HAVE_COMPAT_IA32_KERN="${HAVE_COMPAT_IA32_KERN}" \
