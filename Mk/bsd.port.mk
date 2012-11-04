@@ -3012,7 +3012,7 @@ __pmlinks!=	${ECHO_CMD} '${MLINKS:S/	/ /}' | ${AWK} \
 		else \
 			{ print "broken"; exit; } \
 	} \
-  }' | ${SED} -e 's \([^/ ][^ ]*\.\(.\)[^. ]*\) $${MAN\2PREFIX}/$$$$$$$${__lang}/man\2/\1${MANEXT}g' -e 's/ //g' -e 's/MANlPREFIX/MANLPREFIX/g' -e 's/MANnPREFIX/MANNPREFIX/g'
+  }' | ${SED} -e 's \([^/ ][^ ]*\.\(.\)[^. ]*\) $${MAN\2PREFIX}/___LANG___/man\2/\1${MANEXT}g' -e 's/ //g' -e 's/MANlPREFIX/MANLPREFIX/g' -e 's/MANnPREFIX/MANNPREFIX/g'
 .if ${__pmlinks:Mbroken} == "broken"
 check-makevars::
 	@${ECHO_MSG} "${PKGNAME}: Makefile error: unable to parse MLINKS."
@@ -3023,7 +3023,7 @@ _MLINKS=	${_MLINKS_PREPEND}
 .for lang in ${MANLANG:S%^%man/%:S%^man/""$%man%}
 .for ___pmlinks in ${__pmlinks}
 .for __lang in ${lang}
-_MLINKS+=	${___pmlinks:S// /g}
+_MLINKS+=	${___pmlinks:S// /g:S/___LANG___/${__lang}/}
 .endfor
 .endfor
 .endfor
