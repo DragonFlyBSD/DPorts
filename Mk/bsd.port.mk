@@ -1381,7 +1381,7 @@ EXTRACT_SUFX?=			.run
 .else
 EXTRACT_SUFX?=			.tar.gz
 .endif
-PACKAGES?=		${PORTSDIR}/packages
+PACKAGES?=		/usr/packages
 TEMPLATES?=		${PORTSDIR}/Templates
 
 PATCHDIR?=		${MASTERDIR}/files
