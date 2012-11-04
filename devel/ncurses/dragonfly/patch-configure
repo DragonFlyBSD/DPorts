@@ -1,0 +1,20 @@
+--- configure.orig	2011-04-01 01:35:51.000000000 +0200
++++ configure	2012-11-03 18:35:54.000000000 +0100
+@@ -5406,7 +5406,7 @@
+ openbsd[2-9].*) #(vi
+ 	LD_RPATH_OPT="-Wl,-rpath,"
+ 	;;
+-freebsd*) #(vi
++freebsd*|dragonfly*) #(vi
+ 	LD_RPATH_OPT="-rpath "
+ 	;;
+ netbsd*) #(vi
+@@ -5704,7 +5704,7 @@
+ 		MK_SHARED_LIB='${LD} -Bshareable -o $@'
+ 		test "$cf_cv_shlib_version" = auto && cf_cv_shlib_version=rel
+ 		;;
+-	freebsd*) #(vi
++	freebsd*|dragonfly*) #(vi
+ 		CC_SHARED_OPTS="$CC_SHARED_OPTS -DPIC"
+ 		if test "$DFT_LWR_MODEL" = "shared" && test "$cf_cv_enable_rpath" = yes ; then
+ 			LOCAL_LDFLAGS="${cf_ld_rpath_opt}\$(LOCAL_LIBDIR)"
