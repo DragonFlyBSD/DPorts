@@ -1155,6 +1155,10 @@ _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 INDEXDIR?=		${PORTSDIR}
 SRC_BASE?=		/usr/src
 
+# Prevent dport from building profile libraries
+NOPROFILE=		yes
+.export NOPROFILE
+
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
 #
