@@ -53,7 +53,7 @@
  		if (chroot(chroot_path) == -1)
  			errx(EX_SOFTWARE, "chroot failed!");
  
-+#if USE_LIBJAIL
++#ifndef NO_LIBJAIL
  	if (jail_str != NULL) {
  		jid = jail_getid(jail_str);
  		if (jid < 0)
