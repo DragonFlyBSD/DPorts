@@ -1,0 +1,34 @@
+--- pkg/pkg.8.orig	2012-11-06 14:40:24.000000000 +0100
++++ pkg/pkg.8	2012-11-10 04:15:04.000000000 +0100
+@@ -28,7 +28,7 @@
+ .Nm
+ .Op Fl v
+ .Op Fl d
+-.Op Fl j Ao jail name or id Ac | Fl c Ao chroot path Ac
++.Op Fl c Ao chroot path Ac
+ .Ao command Ac Ao Ar flags Ac
+ .\" ---------------------------------------------------------------------------
+ .Sh DESCRIPTION
+@@ -53,22 +53,6 @@
+ .Nm
+ .It Fl d
+ Show debug information
+-.It Fl j Ao jail name or id Ac
+-.Nm
+-will execute in the given
+-.Ao jail name or id Ac ,
+-where
+-.Em name
+-matches
+-.Dq Cm jls Ar name
+-and
+-.Em id
+-matches
+-.Dq Cm jls Ar jid .
+-See
+-.Xr jail 8
+-and
+-.Xr jls 8 .
+ .It Fl c Ao chroot path Ac
+ .Nm
+ will chroot in the
