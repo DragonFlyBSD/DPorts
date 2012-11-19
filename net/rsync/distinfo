@@ -1,0 +1,4 @@
+SHA256 (rsync-3.0.9.tar.gz) = 30f10f8dd5490d28240d4271bb652b1da7a60b22ed2b9ae28090668de9247c05
+SIZE (rsync-3.0.9.tar.gz) = 792725
+SHA256 (rsync-patches-3.0.9.tar.gz) = 0c1e9b56e99667dfc47641124460bac61a04c5d2ee89f575c6bc78c7a69005a9
+SIZE (rsync-patches-3.0.9.tar.gz) = 172417

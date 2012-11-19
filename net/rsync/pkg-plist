@@ -1,0 +1,5 @@
+@comment $FreeBSD: ports/net/rsync/pkg-plist,v 1.10 2005/05/16 21:07:54 pav Exp $
+bin/rsync
+@unexec if cmp -s %D/etc/rsyncd.conf.sample %D/etc/rsyncd.conf; then rm -f %D/etc/rsyncd.conf; fi
+etc/rsyncd.conf.sample
+@exec [ -f %B/rsyncd.conf ] || cp %B/%f %B/rsyncd.conf
