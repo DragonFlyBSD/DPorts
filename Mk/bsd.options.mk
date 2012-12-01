@@ -100,7 +100,7 @@ PORT_OPTIONS+=	${O}
 optdesc:=	${opt}
 ${optname}_DESC:=	${opt:S|"||g}
 .    else
-.      if ${opt:L} == off
+.      if ${opt:tl} == off
 .        if defined(PORT_OPTIONS) && defined(optname)
 NO_OPTIONS+=	${optname}
 NO_OPTIONS:=	${NO_OPTIONS:O:u}

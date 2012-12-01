@@ -84,7 +84,7 @@ CMAKE_BUILD_TYPE?=	Release
 INSTALL_TARGET?=	install/strip
 .endif
 
-PLIST_SUB+=	CMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE:L}"
+PLIST_SUB+=	CMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE:tl}"
 
 #
 # Force makefile verbosity if needed

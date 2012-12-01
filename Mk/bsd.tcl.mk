@@ -143,10 +143,10 @@ _TK_BUILD_DEPENDS=	yes
 .endif
 
 # Set WITH_TCL_THREADS or WITH_TK_THREADS if port-specific define
-. if defined(${UNIQUENAME:U:S,-,_,}_WITH_TCL_THREADS)
+. if defined(${UNIQUENAME:tu:S,-,_,}_WITH_TCL_THREADS)
 WITH_TCL_THREADS=	yes
 . endif
-. if defined(${UNIQUENAME:U:S,-,_,}_WITH_TK_THREADS)
+. if defined(${UNIQUENAME:tu:S,-,_,}_WITH_TK_THREADS)
 WITH_TK_THREADS=	yes
 .endif
 
@@ -162,11 +162,11 @@ WITH_TCL_THREADS=	${WITH_TK_THREADS}
 
 # Override the global WITH_TCL_VER or WITH_TK_VER with the
 # port specific <UNIQUENAME>_WITH_TCL_VER or <UNIQUENAME>_WITH_TK_VER
-. if defined(${UNIQUENAME:U:S,-,_,}_WITH_TCL_VER)
-WITH_TCL_VER:=	${${UNIQUENAME:U:S,-,_,}_WITH_TCL_VER}
+. if defined(${UNIQUENAME:tu:S,-,_,}_WITH_TCL_VER)
+WITH_TCL_VER:=	${${UNIQUENAME:tu:S,-,_,}_WITH_TCL_VER}
 . endif
-. if defined(${UNIQUENAME:U:S,-,_,}_WITH_TK_VER)
-WITH_TK_VER:=	${${UNIQUENAME:U:S,-,_,}_WITH_TK_VER}
+. if defined(${UNIQUENAME:tu:S,-,_,}_WITH_TK_VER)
+WITH_TK_VER:=	${${UNIQUENAME:tu:S,-,_,}_WITH_TK_VER}
 . endif
 
 # If USE_TK, WITH_TK_VER, INVALID_TK_VER is defined,

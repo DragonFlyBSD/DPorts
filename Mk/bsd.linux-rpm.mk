@@ -160,7 +160,7 @@ linux-rpm-clean-portdocs:
 
 .  if defined(AUTOMATIC_PLIST)
 
-.    if ${USE_LINUX} == "fc4" || ${USE_LINUX:L} == "yes"
+.    if ${USE_LINUX} == "fc4" || ${USE_LINUX:tl} == "yes"
 _LINUX_BASE_SUFFIX=		fc4
 .    elif ${USE_LINUX} == "f10"
 _LINUX_BASE_SUFFIX=		f10

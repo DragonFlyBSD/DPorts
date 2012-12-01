@@ -114,7 +114,7 @@ QMAKEFLAGS+=	QMAKE_CC="${CC}" QMAKE_CXX="${CXX}" \
 # Translate `c++` to its real name and select the appropriate mkspec.
 #
 QMAKE_BASE_COMPILER!=	cc --version 2> /dev/null | ${AWK} 'NR == 1 { gsub(/[()]/, "", $$2); print $$2 }'
-.if ${QMAKE_BASE_COMPILER:L} == "gcc"
+.if ${QMAKE_BASE_COMPILER:tl} == "gcc"
 QMAKE_BASE_COMPILER=	g++
 .endif
 .if ${CXX} == "c++"
