@@ -1,0 +1,13 @@
+@comment $FreeBSD: ports/databases/gdbm/pkg-plist,v 1.14 2012/11/17 05:55:08 svnexp Exp $
+bin/testgdbm
+include/gdbm.h
+%%GDBM_COMPAT%%include/dbm.h
+%%GDBM_COMPAT%%include/ndbm.h
+lib/libgdbm.a
+lib/libgdbm.la
+lib/libgdbm.so
+lib/libgdbm.so.4
+%%GDBM_COMPAT%%lib/libgdbm_compat.a
+%%GDBM_COMPAT%%lib/libgdbm_compat.la
+%%GDBM_COMPAT%%lib/libgdbm_compat.so
+%%GDBM_COMPAT%%lib/libgdbm_compat.so.4
