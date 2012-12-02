@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.port.mk,v 1.754 2012/11/17 05:54:17 svnexp Exp $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -5043,7 +5043,7 @@ _INSTALL_DEPENDS=	\
 				${ECHO_MSG} "===>   Installing existing package $${subpkgfile}"; \
 				if [ -n "${WITH_PKGNG}" -a $${subpkgname} = "pkg" ]; then \
 					[ -d ${WRKDIR} ] || ${MKDIR} ${WRKDIR} ; \
-					${TAR} xf $${subpkgfile} -C ${WRKDIR} -s ",/.*/,,g" "*/pkg-static" ; \
+					${TAR} -xf $${subpkgfile} -C ${WRKDIR} -s ",/.*/,,g" "*/pkg-static" ; \
 					${WRKDIR}/pkg-static add $${subpkgfile}; \
 					${RM} -f ${WRKDIR}/pkg-static; \
 				else \
