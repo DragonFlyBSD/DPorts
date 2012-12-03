@@ -80,6 +80,7 @@ bin/termidx
 @dirrmtry man/ru/man1
 @dirrmtry man/ru
 @dirrmtry %%DATADIR%%/charmaps
+@dirrmtry %%DATADIR%%/doc
 @dirrmtry %%DATADIR%%/lang
 @dirrmtry %%DATADIR%%/syntax
 @dirrmtry %%DATADIR%%
