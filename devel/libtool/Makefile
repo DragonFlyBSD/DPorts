@@ -2,7 +2,7 @@
 # Date created:		6 May 1998
 # Whom:			Motoyuki Kasahara <m-kasahr@sra.co.jp>
 #
-# $FreeBSD$
+# $FreeBSD: ports/devel/libtool/Makefile,v 1.34 2012/01/27 13:58:32 miwi Exp $
 #
 
 PORTNAME?=	libtool
