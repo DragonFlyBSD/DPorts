@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: ports/ports-mgmt/pkg/Makefile,v 1.45 2012/11/17 06:00:45 svnexp Exp $
 
 PORTNAME=	pkg
 DISTVERSION=	1.0.2
