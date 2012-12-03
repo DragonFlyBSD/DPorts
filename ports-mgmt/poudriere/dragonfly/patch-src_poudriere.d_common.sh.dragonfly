@@ -1,0 +1,68 @@
+--- /dev/null	2012-11-24 04:15:22.498925541 +0100
++++ src/poudriere.d/common.sh.dragonfly	2012-11-24 22:18:11.000000000 +0100
+@@ -0,0 +1,65 @@
++#!/bin/sh
++#
++# DragonFly-specific
++
++set_sysctl() {
++	[ $# -ne 2 ] && eargs knob value
++	local KNOB=${1}
++	local WANTVAL=${2}
++	CURVAL=`sysctl -n ${KNOB} 2>/dev/null`
++	if [ ${WANTVAL} -ne ${CURVAL} ]; then
++		sysctl ${KNOB}=${WANTVAL}
++	fi
++}
++
++jrun() {
++	[ $# -ne 1 ] && eargs network
++	local AWKCMD='{ if ($2 != "127.0.0.1") print $2 }'
++	local network=$1
++	local ipargs
++	if [ ${network} -eq 0 ]; then
++		ipargs="127.0.0.1"
++	else
++		local inherited=`grep 'inet [0-9]' | awk "${AWKCMD}"`
++		ipargs="127.0.0.1,${inherited}"
++	fi
++
++	set_sysctl jail.allow_raw_sockets 1
++	set_sysctl jail.chflags_allowed 1
++	set_sysctl jail.sysvipc_allowed 1
++	set_sysctl jail.socket_unixiproute_only 1
++	set_sysctl jail.set_hostname_allowed 0
++
++	jail -U root ${JAILMNT} ${JAILNAME} ${ipargs} /bin/sh /etc/rc
++}
++
++jail_soft_stop() {
++	local AWKCMD='{ if($2 == host) print $1 }'
++	local JAIL_ID=$(jls | awk -v host="${1}" "${AWKCMD}")
++	local SHUTDWN="/bin/sh /etc/rc.shutdown"
++	if [ -n "${JAIL_ID}" ]; then
++		#eval env -i /usr/sbin/jexec ${JAIL_ID} ${SHUTDWN} 2>&1
++		killall -j ${JAIL_ID} -TERM > /dev/null 2>&1
++		sleep 1
++		#killall -j ${JAIL_ID} -KILL > /dev/null 2>&1
++	fi
++	return 0
++}
++
++injail() {
++	local AWKCMD='{ if($2 == host) print $1 }'
++	local JAIL_ID=$(jls | awk -v host="${JAILNAME}" "${AWKCMD}")
++	if [ -z "${JAIL_ID}" ]; then
++	   err 1 "Jail not running; won't execute injail command"
++	else
++	   jexec ${JAIL_ID} $@
++	fi
++}
++
++jail_runs() {
++	[ $# -ne 0 ] && eargs
++	local AWKCMD='{ if($2 == host) print $1 }'
++	local check=$(jls | awk -v host="${JAILNAME}" "${AWKCMD}")
++	[ -n "${check}" ] && return 0
++	return 1
++}

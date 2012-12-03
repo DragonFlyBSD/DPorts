@@ -1,0 +1,13 @@
+# Usually you would see the post-patch target used to remove patch .orig
+# files, but these need to stay around longer to make it easier to modify
+# the patches in the future.
+
+pre-install:
+	rm -f ${WRKSRC}/src/poudriere.d/*.orig
+
+PLIST_FILES+=	share/poudriere/common.sh.hammer \
+		share/poudriere/common.sh.zfs \
+		share/poudriere/jail.sh.dragonfly \
+		share/poudriere/jail.sh.freebsd
+
+RUN_DEPENDS+=	rsync:${PORTSDIR}/net/rsync

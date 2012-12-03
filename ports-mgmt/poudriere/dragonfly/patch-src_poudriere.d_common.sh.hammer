@@ -1,0 +1,504 @@
+--- /dev/null	2012-11-24 04:15:22.498925541 +0100
++++ src/poudriere.d/common.sh.hammer	2012-11-24 23:01:33.000000000 +0100
+@@ -0,0 +1,501 @@
++#!/bin/sh
++
++zget() {
++	[ $# -ne 1 ] && eargs property
++	local name="${JAILNAME}"
++	local confloc=${POUDRIERE_DATA}/hammer/jails/${name}/${1}
++	if [ -f ${confloc} ]; then
++	   cat ${confloc}
++	else
++	   echo "-"
++	fi
++	return 0
++}
++
++zset() {
++	[ $# -ne 2 ] && eargs property value
++	local name="${JAILNAME}"
++	local confdir=${POUDRIERE_DATA}/hammer/jails/${name}
++	[ -d ${confdir} ] && echo "$2" > ${confdir}/${1}
++}
++
++pzget() {
++	[ $# -ne 1 ] && eargs property
++	local name="${PTNAME}"
++	local confloc=${POUDRIERE_DATA}/hammer/ports/${name}/${1}
++	if [ -f ${confloc} ]; then
++	   cat ${confloc}
++	else
++	   echo "-"
++	fi
++	return 0
++}
++
++pzset() {
++	[ $# -ne 2 ] && eargs property value
++	local name="${PTNAME}"
++	local confdir=${POUDRIERE_DATA}/hammer/ports/${name}
++	[ -d ${confdir} ] && echo "$2" > ${confdir}/${1}
++}
++
++snapname () {
++	[ $# -ne 1 ] && eargs pfs-filesystem@snapname
++	echo "${1}" | sed -e "s|\/pfs\/poudriere\.||"
++}
++
++extract_pfs () {
++	[ $# -ne 1 ] && eargs pfs-filesystem@snapname
++	echo "${1}" | sed -e 's|@.*||'
++}
++
++pfs_path () {
++	[ $# -ne 1 ] && eargs filesystem
++	local part2=$(echo "${1}" | sed -e "s|${ZROOTFS}\/||" -e "s|\/|\.|g")
++	echo "/pfs/poudriere.${part2}"
++}
++
++onlysnap () {
++	[ $# -ne 1 ] && eargs filesystem@snapname
++	local testat=$(echo "${1}" | grep @)
++	if [ -n "${testat}" ]; then
++	   echo 1
++	else
++	   echo 0
++	fi
++}
++
++check_mount () {
++	[ $# -ne 1 ] && eargs filesystem
++	local REAL=$(realpath ${1})
++	local AWKCMD='{ if ($1 == mnt) print $3 }'
++	mount | awk -v mnt="${REAL}" "${AWKCMD}"
++	return 0
++}
++
++zsnap() {
++	[ $# -ne 1 ] && eargs pfs-filesystem@snapname
++	local snap=$(snapname "${1}")
++	local pfs=$(extract_pfs ${1})
++	mkdir -p ${HAMMER_SNAPDIR}
++	if [ -L ${HAMMER_SNAPDIR}/${snap} ]; then
++		err 1 "Cannot snapshot, ${snap} already exists"
++	else
++		hammer snapshot ${pfs} ${HAMMER_SNAPDIR}/${snap} > /dev/null
++	fi
++	return 0
++}
++
++
++kill_metadata () {
++	[ $# -ne 1 ] && eargs jailport_name
++	rm -rf ${POUDRIERE_DATA}/hammer/${1}
++}
++
++zkill() {
++	[ $# -ne 1 ] && eargs pfs-filesystem@snapname
++	if [ $(onlysnap "${1}") -eq 1 ]; then
++		local snap=$(snapname "${1}")
++		[ -L ${HAMMER_SNAPDIR}/${snap} ] && \
++		  hammer snaprm ${HAMMER_SNAPDIR}/${snap}
++	fi
++	return 0
++}
++
++zdelete() {
++	[ $# -ne 2 ] && eargs pfs-filesystem subdirectory
++	# Hammer doesn't use this, no-op
++}
++
++zkillfs () {
++	[ $# -ne 2 ] && eargs pfs-filesystem jailport
++	local mounted=$(check_mount ${1})
++	[ -n "${mounted}" ] && \
++	  err 1 "Must unmount filesystem ${1} before destroying it"
++	kill_metadata ${2}
++	hammer pfs-destroy ${1}
++}
++
++zrollback () {
++	[ $# -ne 1 ] && eargs pfs-filesystem@snapname
++	if [ $(onlysnap "${1}") -eq 0 ]; then
++		err 1 "Must specify snapshot in rollback"
++	fi
++	local snap=$(snapname "${1}")
++	local pfs=$(extract_pfs ${1})
++	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/ ${pfs}/
++}
++
++zxdiff () {
++	[ $# -ne 2 ] && eargs filesystem@snapname filesystem
++	# very basic zfs diff emulations: [M+-] (no R, no / type)
++	if [ $(onlysnap "${1}") -eq 0 ]; then
++		err 1 "Must specify snapshot in rollback"
++	fi
++	local snap=$(snapname "${1}")
++	local RIGHT=$(extract_pfs ${1})
++	local LEFTS=${HAMMER_SNAPDIR}/${snap}
++	local AWKCMD='{ \
++ if ($1 == "Files") \
++ { \
++   len = index ($0, " and ") - 7; \
++   print "M * " substr ($0, 7, len); \
++ } \
++ if ($1 == "Only") \
++ { \
++   ndx = index ($0, ":"); \
++   lslen = length (leftside); \
++   if (leftside == substr($0, 9, lslen)) { \
++     sym = "- * "; \
++   } \
++   else { \
++     sym = "+ * "; \
++   } \
++   ufile  = substr ($0, ndx + 2); \
++   print sym leftside "/" ufile; \
++ } \
++}'
++	diff -qr ${LEFTS} ${RIGHT} | awk -v leftside=${LEFTS} "${AWKCMD}"
++}
++
++jail_exists() {
++	[ $# -ne 1 ] && eargs jailname
++	local pfs=$(pfs_path "${ZROOTFS}/jails/${1}")
++	if [ -d ${pfs} ] || \
++	   [ -d ${POUDRIERE_DATA}/hammer/jails/${1} ]; then
++	    return 0
++	fi
++	return 1
++}
++
++jail_get_base() {
++	[ $# -ne 1 ] && eargs jailname
++	local confloc=${POUDRIERE_DATA}/hammer/jails/${1}/mountpoint
++	[ -f ${confloc} ] && cat ${confloc}
++}
++
++jail_get_version() {
++	[ $# -ne 1 ] && eargs jailname
++	local confloc=${POUDRIERE_DATA}/hammer/jails/${1}/version
++	[ -f ${confloc} ] && cat ${confloc}
++}
++
++jail_get_fs() {
++	[ $# -ne 1 ] && eargs jailname
++	local confloc=${POUDRIERE_DATA}/hammer/jails/${1}/filesys
++	[ -f ${confloc} ] && cat ${confloc}
++}
++
++port_exists() {
++	[ $# -ne 1 ] && eargs portstree_name
++	local pfs=$(pfs_path "${ZROOTFS}/ports/${1}")
++	if [ -d ${pfs} ] || \
++	   [ -d ${POUDRIERE_DATA}/hammer/ports/${1} ]; then
++	    return 0;
++	fi
++	return 1
++}
++
++port_get_base() {
++	[ $# -ne 1 ] && eargs portstree_name
++	local confloc=${POUDRIERE_DATA}/hammer/ports/${1}/mountpoint
++	[ -f ${confloc} ] && cat ${confloc}
++}
++
++port_get_fs() {
++	[ $# -ne 1 ] && eargs portstree_name
++	local confloc=${POUDRIERE_DATA}/hammer/ports/${1}/filesys
++	[ -f ${confloc} ] && cat ${confloc}
++}
++
++get_data_dir() {
++	if [ -n "${POUDRIERE_DATA}" ]; then
++		echo ${POUDRIERE_DATA}
++	else
++		echo ${BASEFS}/data
++	fi
++}
++
++jail_create_zfs() {
++	[ $# -ne 5 ] && eargs name version arch mountpoint pfs
++	local name=$1
++	local version=$2
++	local arch=$3
++	local mnt=$( echo $4 | sed -e "s,//,/,g")
++	local pfs=$5
++	local confdir="${POUDRIERE_DATA}/hammer/jails/${name}"
++	local numcpu=$(sysctl -n hw.ncpu)
++	local JOBX="$(jot -w %02d ${numcpu})"
++	msg_n "Creating ${name} fs..."
++
++	mkdir -p ${mnt}
++	mkdir -p ${confdir}
++	hammer pfs-master $pfs
++
++	echo "rootfs"     > ${confdir}/type
++	echo "${name}"    > ${confdir}/name
++	echo "${version}" > ${confdir}/version
++	echo "${arch}"    > ${confdir}/arch
++	echo "${mnt}"     > ${confdir}/mountpoint
++	echo "${pfs}"     > ${confdir}/filesys
++	echo "${numcpu}"  > ${confdir}/slaves
++
++	for j in ${JOBX}; do
++		jmnt="${mnt}/build/${j}"
++		jpfs="${pfs}.job-${j}"
++		jname="${name}-job-${j}"
++		jconfdir=${confdir}-job-${j}
++
++		mkdir -p ${jconfdir}
++		hammer pfs-master $jpfs
++
++		echo "rootfs"     > ${jconfdir}/type
++		echo "${jname}"   > ${jconfdir}/name
++		echo "${version}" > ${jconfdir}/version
++		echo "${arch}"    > ${jconfdir}/arch
++		echo "${jmnt}"    > ${jconfdir}/mountpoint
++		echo "${jpfs}"    > ${jconfdir}/filesys
++	done
++
++	echo " done"
++}
++
++port_create_zfs() {
++	[ $# -ne 3 ] && eargs name mountpoint pfs
++	local name=$1
++	local mnt=$( echo $2 | sed -e 's,//,/,g')
++	local pfs=$3
++	local confdir="${POUDRIERE_DATA}/hammer/ports/${name}"
++	msg_n "Creating ${name} fs..."
++
++	mkdir -p ${mnt}
++	mkdir -p ${confdir}
++	hammer pfs-master $pfs
++
++	echo "ports"	> ${confdir}/type
++	echo "${name}"	> ${confdir}/name
++	echo "${mnt}"	> ${confdir}/mountpoint
++	echo "${pfs}"	> ${confdir}/filesys
++
++	echo " done"
++}
++
++start_builders() {
++	local arch=$(zget arch)
++	local version=$(zget version)
++	local snap=$(snapname "${JAILFS}@prepkg")
++	local j mnt pfs name
++
++	for j in ${JOBS}; do
++		mnt="${JAILMNT}/build/${j}"
++		pfs="${JAILFS}.job-${j}"
++		name="${JAILNAME}-job-${j}"
++		zset status "starting_jobs:${j}"
++		mkdir -p "${mnt}"
++
++		# sync slave with master snapshot
++		msg_n "Syncing slave ${j}..."
++		cpdup -x -i0 ${HAMMER_SNAPDIR}/${snap}/ ${pfs}/
++		echo "done"
++
++		# take a snapshot of slave
++		zkill ${pfs}@prepkg
++		zsnap ${pfs}@prepkg
++
++		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${pfs} do_jail_mounts 0
++		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${pfs} do_portbuild_mounts 0
++		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${pfs} jrun 0
++		JAILNAME=${name} zset status "idle:"
++	done
++}
++
++stop_builders() {
++	local j mnt
++
++	# wait for the last running processes
++	cat ${JAILMNT}/poudriere/var/run/*.pid 2>/dev/null | xargs pwait 2>/dev/null
++
++	msg "Stopping ${PARALLEL_JOBS} builders"
++
++	for j in ${JOBS}; do
++		jail_soft_stop ${JAILNAME}-job-${j} || :
++	done
++
++	mnt=`realpath ${JAILMNT}`
++	mount | awk -v mnt="${mnt}/build/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount -f 2>/dev/null || :
++
++	# No builders running, unset JOBS
++	JOBS=""
++}
++
++post_conf_check () {
++	[ -z ${HAMMER_SNAPDIR} ] && err 1 "HAMMER_SNAPDIR variable is not set"
++
++	# Hammer starts with ZROOTFS value, set ZPOOL to null
++	ZPOOL=
++
++	# Try to minimize ZVERSION checks issues
++	ZVERSION=9999
++}
++
++print_ports_table () {
++	[ $# -ne 1 ] && eargs quiet
++	TABFORM='%-20s %-10s\n'
++	[ ${1} -eq 0 ] && printf "${TABFORM}" "PORTSTREE" "METHOD"
++	local METHOD
++	local confdir=${POUDRIERE_DATA}/hammer/ports
++	if [ -d ${confdir} ] && [ -n "$(ls -A ${confdir})" ]; then
++	  cd ${confdir}
++	  PORTLIST=$(find -s * -type d)
++	  for port in ${PORTLIST}; do
++	    if [ -f ${confdir}/${port}/method ]; then
++	      METHOD=$(cat ${confdir}/${port}/method)
++	    else
++	      METHOD=-
++	    fi
++	    printf "${TABFORM}" "${port}" "${METHOD}"
++	  done
++	fi
++}
++
++print_jails_table () {
++	[ $# -ne 1 ] && eargs quiet
++	local confdir=${POUDRIERE_DATA}/hammer/jails
++	local TABFORM='%-20s %-12s %-7s %-7s %-7s %-7s %-7s %-7s %-7s %s\n'
++	local COLCNT
++	local PARAMS
++	[ ${1} -eq 0 ] && printf "${TABFORM}" \
++		"JAILNAME" "VERSION" "ARCH" "METHOD" "SUCCESS" \
++		"FAILED" "IGNORED" "SKIPPED" "QUEUED" "STATUS"
++	PARAMS="name version arch method stats_built stats_failed \
++	        stats_ignored stats_skipped stats_queued status"
++	if [ -d ${confdir} ] && [ -n "$(ls -A ${confdir})" ]; then
++	  cd ${confdir}
++	  local JAILLIST="`find -s * -type d`"
++	  for jail in ${JAILLIST}; do
++	    COLCNT=0
++	    for param in ${PARAMS}; do
++	      if [ -f ${confdir}/${jail}/${param} ]; then
++	        eval "val_${COLCNT}=`cat ${confdir}/${jail}/${param}`"
++	      else
++	        eval "val_${COLCNT}=-"
++	      fi
++	      COLCNT=`expr ${COLCNT} + 1`
++	    done
++	    printf "${TABFORM}" "${val_0}" "${val_1}" "${val_2}" "${val_3}" \
++			        "${val_4}" "${val_5}" "${val_6}" "${val_7}" \
++			        "${val_8}" "${val_9}"
++	  done
++	fi
++}
++
++list_jail_info () {
++	[ $# -ne 2 ] && eargs num_queued num_to_build
++	echo "Jailname:              $(zget name)"
++	echo "BSD version:           $(zget version)"
++	echo "BSD arch:              $(zget arch)"
++	echo "Install/update method: $(zget method)"
++	echo "Status:                $(zget status)"
++	echo "Packages built:        $(zget stats_built)"
++	echo "Packages failed:       $(zget stats_failed)"
++	echo "Packages ignored:      $(zget stats_ignored)"
++	echo "Packages skipped:      $(zget stats_skipped)"
++	echo "Packages queued:       ${1}"
++	echo "Packages to be built:  ${2}"
++}
++
++mount_jailport() {
++	[ $# -ne 2 ] && eargs pfs-filesystem mountpoint
++	local mounted=$(check_mount ${1})
++	[ -z "${mounted}" ] && ${NULLMOUNT} ${1} ${2} || \
++  	  err 1 "Failed to null-mount ${1} to ${2}"
++}
++
++get_portsdir() {
++	[ $# -ne 1 ] && eargs portstree_name
++	echo $(port_get_fs ${1})
++}
++
++check_jobs() {
++	case ${PARALLEL_JOBS} in
++	''|*[!0-9]*)
++		PARALLEL_JOBS=$(zget slaves)
++		;;
++	esac
++}
++
++build_queue() {
++
++	local activity j cnt mnt pfs name pkgname
++
++	while :; do
++		activity=0
++		for j in ${JOBS}; do
++			mnt="${JAILMNT}/build/${j}"
++			name="${JAILNAME}-job-${j}"
++			pfs="${JAILFS}.job-${j}"
++			if [ -f  "${JAILMNT}/poudriere/var/run/${j}.pid" ]; then
++				if pgrep -F "${JAILMNT}/poudriere/var/run/${j}.pid" >/dev/null 2>&1; then
++					continue
++				fi
++				build_stats
++				rm -f "${JAILMNT}/poudriere/var/run/${j}.pid"
++				JAILNAME="${name}" zset status "idle:"
++			fi
++			pkgname=$(next_in_queue)
++			if [ -z "${pkgname}" ]; then
++				# pool empty ?
++				[ $(stat -f '%z' ${JAILMNT}/poudriere/pool) -eq 2 ] && return
++				break
++			fi
++			activity=1
++			MASTERMNT=${JAILMNT} JAILNAME="${name}" JAILMNT="${mnt}" JAILFS="${pfs}" \
++				MY_JOBID="${j}" \
++				build_pkg "${pkgname}" >/dev/null 2>&1 &
++			echo "$!" > ${JAILMNT}/poudriere/var/run/${j}.pid
++		done
++		# Sleep briefly if still waiting on builds, to save CPU
++		[ $activity -eq 0 ] && sleep 0.1
++	done
++}
++
++cleanup() {
++	[ -n "${CLEANED_UP}" ] && return 0
++	msg "Cleaning up"
++	# If this is a builder, don't cleanup, the master will handle that.
++	if [ -n "${MY_JOBID}" ]; then
++		[ -n "${PKGNAME}" ] && clean_pool ${PKGNAME} 1 || :
++		return 0
++
++	fi
++	# Prevent recursive cleanup on error
++	if [ -n "${CLEANING_UP}" ]; then
++		echo "Failure cleaning up. Giving up." >&2
++		return
++	fi
++	export CLEANING_UP=1
++	local BASEJNAME=${JAILNAME%-job-*}
++	[ -z "${BASEJNAME}" ] && err 2 "Fail: Missing JAILNAME"
++	log_stop
++
++	if [ -d ${MASTERMNT:-${JAILMNT}}/poudriere/var/run ]; then
++		for pid in ${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid; do
++			# Ensure there is a pidfile to read or break
++			[ "${pid}" = "${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid" ] && break
++			pkill -15 -F ${pid} >/dev/null 2>&1 || :
++		done
++		wait
++	fi
++
++	local numjobs JOBX BASEJFS
++	BASEJFS=${JAILFS%.job-*}
++	JAILNAME="${BASEJNAME}" numjobs=$(zget slaves)
++	local JOBX="$(jot -w %02d ${numjobs})"
++
++	for j in ${JOBX}; do
++		zkill ${BASEJFS}.job-${j}@prepkg
++		zkill ${BASEJFS}.job-${j}@preinst
++	done
++	zkill ${BASEJFS}@prepkg
++	jail_stop
++	export CLEANED_UP=1
++}
