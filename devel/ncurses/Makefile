@@ -2,7 +2,7 @@
 # Date created:				23 September 1997
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD$
+# $FreeBSD: ports/devel/ncurses/Makefile,v 1.62 2012/10/09 22:38:56 linimon Exp $
 #
 
 PORTNAME=	ncurses
