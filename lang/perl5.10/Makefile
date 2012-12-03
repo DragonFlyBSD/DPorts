@@ -2,7 +2,7 @@
 # Date created:		16 April 1995
 # Whom:			markm
 #
-# $FreeBSD$
+# $FreeBSD: ports/lang/perl5.10/Makefile,v 1.136 2012/11/17 05:58:54 svnexp Exp $
 #
 
 PORTNAME=	perl
