@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: ports/lang/perl5.8/Makefile.man,v 1.9 2012/11/17 05:58:54 svnexp Exp $
 
 MAN1+=	a2p.1
 MAN1+=	c2ph.1
