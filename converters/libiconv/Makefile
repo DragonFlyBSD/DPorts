@@ -2,7 +2,7 @@
 # Date created:				17 July 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/converters/libiconv/Makefile,v 1.58 2012/04/21 19:00:29 kwm Exp $
 #
 
 PORTNAME=	libiconv
