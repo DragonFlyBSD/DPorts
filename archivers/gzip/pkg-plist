@@ -1,0 +1,25 @@
+@comment $FreeBSD: ports/archivers/gzip/pkg-plist,v 1.8 2012/11/17 05:54:20 svnexp Exp $
+bin/gunzip
+bin/gzexe
+bin/gzip
+bin/uncompress
+bin/zcat
+bin/zcmp
+bin/zdiff
+bin/zegrep
+bin/zfgrep
+bin/zforce
+bin/zgrep
+bin/zless
+bin/zmore
+bin/znew
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog-2007
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/THANKS
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
