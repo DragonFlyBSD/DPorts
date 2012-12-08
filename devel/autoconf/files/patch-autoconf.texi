@@ -1,0 +1,30 @@
+--- doc/autoconf.texi.orig	2012-04-24 19:14:19.000000000 -0700
++++ doc/autoconf.texi	2012-04-26 10:52:26.000000000 -0700
+@@ -219,3 +219,3 @@
+ 
+-@dircategory Software development
++@dircategory Programming & development tools
+ @direntry
+@@ -224,22 +224,2 @@
+ 
+-@dircategory Individual utilities
+-@direntry
+-* autoscan: (autoconf)autoscan Invocation.
+-                                Semi-automatic @file{configure.ac} writing
+-* ifnames: (autoconf)ifnames Invocation.        Listing conditionals in source.
+-* autoconf-invocation: (autoconf)autoconf Invocation.
+-                                How to create configuration scripts
+-* autoreconf: (autoconf)autoreconf Invocation.
+-                                Remaking multiple @command{configure} scripts
+-* autoheader: (autoconf)autoheader Invocation.
+-                                How to create configuration templates
+-* autom4te: (autoconf)autom4te Invocation.
+-                                The Autoconf executables backbone
+-* configure: (autoconf)configure Invocation.    Configuring a package.
+-* autoupdate: (autoconf)autoupdate Invocation.
+-                                Automatic update of @file{configure.ac}
+-* config.status: (autoconf)config.status Invocation. Recreating configurations.
+-* testsuite: (autoconf)testsuite Invocation.    Running an Autotest test suite.
+-@end direntry
+-
+ @titlepage
