@@ -3151,7 +3151,7 @@ _DESKTOPDIR_REL=
 
 # Check the machine architectures
 .if defined(ONLY_FOR_ARCHS)
-.for __ARCH in ${ONLY_FOR_ARCHS}
+.for __ARCH in ${ONLY_FOR_ARCHS:S/amd64/x86_64/}
 .if ${ARCH:M${__ARCH}} != ""
 __ARCH_OK?=		1
 .endif
@@ -3161,7 +3161,7 @@ __ARCH_OK?=		1
 .endif
 
 .if defined(NOT_FOR_ARCHS)
-.for __NARCH in ${NOT_FOR_ARCHS}
+.for __NARCH in ${NOT_FOR_ARCHS:S/amd64/x86_64/}
 .if ${ARCH:M${__NARCH}} != ""
 .undef __ARCH_OK
 .endif
@@ -3170,9 +3170,9 @@ __ARCH_OK?=		1
 
 .if !defined(__ARCH_OK)
 .if defined(ONLY_FOR_ARCHS)
-IGNORE=		is only for ${ONLY_FOR_ARCHS},
+IGNORE=		is only for ${ONLY_FOR_ARCHS:S/amd64/x86_64/},
 .else # defined(NOT_FOR_ARCHS)
-IGNORE=		does not run on ${NOT_FOR_ARCHS},
+IGNORE=		does not run on ${NOT_FOR_ARCHS:S/amd64/x86_64/},
 .endif
 IGNORE+=	while you are running ${ARCH}
 
