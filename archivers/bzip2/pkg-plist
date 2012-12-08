@@ -1,0 +1,21 @@
+@comment $FreeBSD: ports/archivers/bzip2/pkg-plist,v 1.17 2012/11/17 05:54:20 svnexp Exp $
+bin/bzip2
+bin/bunzip2
+bin/bzcat
+bin/bz2cat
+bin/bzip2recover
+bin/bzgrep
+bin/bzegrep
+bin/bzfgrep
+bin/bzmore
+bin/bzless
+include/bzlib.h
+lib/libbz2.a
+lib/libbz2.so
+lib/libbz2.so.1
+%%PORTDOCS%%%%DOCSDIR%%/manual.ps.bz2
+%%PORTDOCS%%%%DOCSDIR%%/manual.xml
+%%PORTDOCS%%%%DOCSDIR%%/manual.html
+%%PORTDOCS%%%%DOCSDIR%%/manual.pdf
+%%PORTDOCS%%%%DOCSDIR%%/bzip2.txt
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
