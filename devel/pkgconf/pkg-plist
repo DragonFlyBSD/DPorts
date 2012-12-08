@@ -1,0 +1,3 @@
+bin/pkgconf
+bin/pkg-config
+share/aclocal/pkg.m4
