@@ -1,6 +1,6 @@
---- /dev/null	2012-11-20 03:01:24.170929943 +0100
-+++ src/poudriere.d/jail.sh.freebsd	2012-11-20 20:54:33.000000000 +0100
-@@ -0,0 +1,308 @@
+--- /dev/null	2012-11-24 23:36:10.517360845 +0100
++++ src/poudriere.d/jail.sh.freebsd	2012-11-25 02:04:16.000000000 +0100
+@@ -0,0 +1,331 @@
 +#!/bin/sh
 +#
 +# FreeBSD specific
@@ -15,6 +15,7 @@
 +		METHOD="ftp"
 +		zset method "${METHOD}"
 +	fi
++	msg "Upgrading using ${METHOD}"
 +	case ${METHOD} in
 +	ftp)
 +		JAILMNT=`jail_get_base ${JAILNAME}`
@@ -33,14 +34,15 @@
 +		jail_stop
 +		;;
 +	csup)
-+		msg "Upgrading using csup"
 +		install_from_csup
++		update_version $(zget version)
 +		yes | make -C ${JAILMNT}/usr/src delete-old delete-old-libs DESTDIR=${JAILMNT}
 +		zkill ${JAILFS}@clean
 +		zsnap ${JAILFS}@clean
 +		;;
 +	svn*)
 +		install_from_svn
++		update_version $(zget version)
 +		yes | make -C ${JAILMNT} delete-old delete-old-libs DESTDIR=${JAILMNT}
 +		zkill ${JAILFS}@clean
 +		zsnap ${JAILFS}@clean
@@ -61,12 +63,23 @@
 +	mkdir -p ${JAILMNT}/etc
 +	[ -f ${JAILMNT}/etc/src.conf ] && rm -f ${JAILMNT}/etc/src.conf
 +	[ -f ${POUDRIERED}/src.conf ] && cat ${POUDRIERED}/src.conf > ${JAILMNT}/etc/src.conf
-+	[ -f ${POUDRIERED}/${JAILMNT}-src.conf ] && cat ${POUDRIERED}/${JAILMNT}-src.conf >> ${JAILMNT}/etc/src.conf
++	[ -f ${POUDRIERED}/${JAILNAME}-src.conf ] && cat ${POUDRIERED}/${JAILNAME}-src.conf >> ${JAILMNT}/etc/src.conf
 +	unset MAKEOBJPREFIX
 +	export __MAKE_CONF=/dev/null
 +	export SRCCONF=${JAILMNT}/etc/src.conf
-+	msg "Starting make buildworld"
-+	make -C ${JAILMNT}/usr/src buildworld ${MAKEWORLDARGS} || err 1 "Fail to build world"
++	MAKE_JOBS="-j${PARALLEL_JOBS}"
++
++	: ${CCACHE_PATH:="/usr/local/libexec/ccache"}
++	if [ -n "${CCACHE_DIR}" -a -d ${CCACHE_PATH}/world ]; then
++		export CCACHE_DIR
++		# Fix building world when CC is clang
++		export CCACHE_CPP2=yes
++		export CC="${CCACHE_PATH}/world/cc"
++		export CXX="${CCACHE_PATH}/world/c++"
++	fi
++
++	msg "Starting make buildworld with ${PARALLEL_JOBS} jobs"
++	make -C ${JAILMNT}/usr/src buildworld ${MAKE_JOBS} ${MAKEWORLDARGS} || err 1 "Fail to build world"
 +	msg "Starting make installworld"
 +	make -C ${JAILMNT}/usr/src installworld DESTDIR=${JAILMNT} || err 1 "Fail to install world"
 +	make -C ${JAILMNT}/usr/src DESTDIR=${JAILMNT} distrib-dirs && \
@@ -115,16 +128,16 @@
 +
 +install_from_ftp() {
 +	mkdir ${JAILMNT}/fromftp
-+	local URL BASEURL
++	local URL V
 +
-+	if [ ${VERSION%%.*} -lt 9 ]; then
-+		msg "Fetching sets for FreeBSD ${VERSION} ${ARCH}"
++	V=${ALLBSDVER:-${VERSION}}
++	if [ ${V%%.*} -lt 9 ]; then
++		msg "Fetching sets for FreeBSD ${V} ${ARCH}"
 +		case ${METHOD} in
-+		ftp) BASEURL="${FREEBSD_HOST}/pub/FreeBSD/releases/${ARCH}/" ;;
-+		allbsd) BASEURL="https://pub.allbsd.org/FreeBSD-snapshots/${ARCH}-${ARCH}" ;;
++		ftp) URL="${FREEBSD_HOST}/pub/FreeBSD/releases/${ARCH}/${V}" ;;
++		allbsd) URL="https://pub.allbsd.org/FreeBSD-snapshots/${ARCH}-${ARCH}/${V}-JPSNAP/ftp" ;;
 +		esac
-+		URL="${BASEURL}/${VERSION}"
-+		DISTS="base dict src"
++		DISTS="base dict src games"
 +		[ ${ARCH} = "amd64" ] && DISTS="${DISTS} lib32"
 +		for dist in ${DISTS}; do
 +			fetch_file ${JAILMNT}/fromftp/ ${URL}/$dist/CHECKSUM.SHA256 || \
@@ -155,14 +168,13 @@
 +		done
 +	else
 +		case ${METHOD} in
-+		ftp) BASEURL="${FREEBSD_HOST}/pub/FreeBSD/releases/${ARCH}/${ARCH}" ;;
-+		allbsd) BASEURL="https://pub.allbsd.org/FreeBSD-snapshots/${ARCH}-${ARCH}" ;;
++		ftp) URL="${FREEBSD_HOST}/pub/FreeBSD/releases/${ARCH}/${ARCH}/${V}" ;;
++		allbsd) URL="https://pub.allbsd.org/FreeBSD-snapshots/${ARCH}-${ARCH}/${V}-JPSNAP/ftp" ;;
 +		esac
-+		URL="${BASEURL}/${VERSION}"
-+		DISTS="base.txz src.txz"
++		DISTS="base.txz src.txz games.txz"
 +		[ ${ARCH} = "amd64" ] && DISTS="${DISTS} lib32.txz"
 +		for dist in ${DISTS}; do
-+			msg "Fetching ${dist} for FreeBSD ${VERSION} ${ARCH}"
++			msg "Fetching ${dist} for FreeBSD ${V} ${ARCH}"
 +			fetch_file ${JAILMNT}/fromftp/${dist} ${URL}/${dist}
 +			msg_n "Extracting ${dist}..."
 +			tar -xpf ${JAILMNT}/fromftp/${dist} -C  ${JAILMNT}/ || err 1 " fail" && echo " done"
@@ -255,15 +267,13 @@
 +	CLEANUP_HOOK=cleanup_new_jail
 +	zset method "${METHOD}"
 +	${FCT}
++
 +	eval `grep "^[RB][A-Z]*=" ${JAILMNT}/usr/src/sys/conf/newvers.sh `
 +	RELEASE=${REVISION}-${BRANCH}
 +	zset version "${RELEASE}"
-+
-+	OSVERSION=`awk '/\#define __FreeBSD_version/ { print $3 }' ${JAILMNT}/usr/include/sys/param.h`
-+	LOGIN_ENV=",UNAME_r=${RELEASE},UNAME_v=FreeBSD ${RELEASE},OSVERSION=${OSVERSION}"
++	update_version ${RELEASE}
 +
 +	if [ "${ARCH}" = "i386" -a "${REALARCH}" = "amd64" ];then
-+		LOGIN_ENV="${LOGIN_ENV},UNAME_p=i386,UNAME_m=i386"
 +		cat > ${JAILMNT}/etc/make.conf << EOF
 +ARCH=i386
 +MACHINE=i386
@@ -272,8 +282,6 @@
 +
 +	fi
 +
-+	sed -i .back -e "s/:\(setenv.*\):/:\1${LOGIN_ENV}:/" ${JAILMNT}/etc/login.conf
-+	cap_mkdb ${JAILMNT}/etc/login.conf
 +	pwd_mkdb -d ${JAILMNT}/etc/ -p ${JAILMNT}/etc/master.passwd
 +
 +	cat >> ${JAILMNT}/etc/make.conf << EOF
@@ -307,5 +315,20 @@
 +	rm -f ${POUDRIERE_DATA}/logs/*-${JAILNAME}.*.log
 +	rm -f ${POUDRIERE_DATA}/logs/bulk-${JAILNAME}.log
 +	rm -rf ${POUDRIERE_DATA}/logs/*/${JAILNAME}
-+	echo "done"
++	echo done
++}
++
++update_version() {
++	local release="$1"
++	local login_env osversion
++
++	osversion=`awk '/\#define __FreeBSD_version/ { print $3 }' ${JAILMNT}/usr/include/sys/param.h`
++	login_env=",UNAME_r=${release},UNAME_v=FreeBSD ${release},OSVERSION=${osversion}"
++
++	if [ "${ARCH}" = "i386" -a "${REALARCH}" = "amd64" ];then
++		login_env="${login_env},UNAME_p=i386,UNAME_m=i386"
++	fi
++
++	sed -i "" -e "s/:\(setenv.*\):/:\1${login_env}:/" ${JAILMNT}/etc/login.conf
++	cap_mkdb ${JAILMNT}/etc/login.conf
 +}

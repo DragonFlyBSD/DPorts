@@ -1,14 +1,14 @@
---- src/poudriere.d/bulk.sh.orig	2012-10-15 18:18:18.000000000 +0200
-+++ src/poudriere.d/bulk.sh	2012-11-24 16:25:33.000000000 +0100
-@@ -32,6 +32,7 @@
- CLEAN_LISTED=0
- ALL=0
- . ${SCRIPTPREFIX}/common.sh
-+check_jobs
- 
- [ $# -eq 0 ] && usage
- 
-@@ -93,6 +94,8 @@
+--- src/poudriere.d/bulk.sh.orig	2012-12-01 01:15:48.000000000 +0100
++++ src/poudriere.d/bulk.sh	2012-12-08 12:57:12.414220000 +0100
+@@ -10,7 +10,6 @@
+ Options:
+     -c          -- Clean the previous built binary packages
+     -C          -- Clean previous packages for the given list to build
+-    -D          -- Debug mode, dislay more information
+     -t          -- Add some testings to package building
+     -s          -- Skip sanity
+     -J n        -- Run n jobs in parallel
+@@ -94,6 +93,8 @@
  	LISTPORTS="$@"
  fi
  
@@ -17,17 +17,30 @@
  export SKIPSANITY
  
  STATUS=0 # out of jail #
-@@ -128,7 +131,7 @@
+@@ -123,16 +124,19 @@
+ 	rm -f ${LOGD}/*.log 2>/dev/null
+ fi
  
- test -z ${PORTTESTING} && echo "DISABLE_MAKE_JOBS=yes" >> ${JAILMNT}/etc/make.conf
++zkill ${JAILFS}@prepkg
++zsnap ${JAILFS}@prepkg
++
+ prepare_ports
+ 
++firehook bulk_build_start "${JAILNAME}" "${PTNAME}" `zget stats_queued`
++
+ zset status "building:"
+ 
+ if [ -z "${PORTTESTING}" -a -z "${ALLOW_MAKE_JOBS}" ]; then
+ 	echo "DISABLE_MAKE_JOBS=yes" >> ${JAILMNT}/etc/make.conf
+ fi
  
 -zfs snapshot ${JAILFS}@prepkg
-+zsnap ${JAILFS}@prepkg
+-
+ parallel_build || : # Ignore errors as they are handled below
  
- parallel_build
- 
-@@ -158,14 +161,14 @@
- elif [ $PKGNG -eq 1 ]; then
+ zset status "done:"
+@@ -165,14 +169,14 @@
+ 	fi
  	msg "Creating pkgng repository"
  	zset status "pkgrepo:"
 -	injail tar xf /usr/ports/packages/Latest/pkg.txz -C /
@@ -44,13 +57,12 @@
 +		injail pkg-static repo ${STD_PACKAGES}/
  	fi
  else
- 	msg "Preparing INDEX"
-@@ -177,7 +180,7 @@
- 		[ "${pkg}" = "${PKGDIR}/All/*.tbz" ] && break
- 		msg_n "Extracting description from ${pkg_file##*/}..."
- 		ORIGIN=$(pkg_get_origin ${pkg_file})
--		[ -d ${PORTSDIR}/${ORIGIN} ] && injail make -C /usr/ports/${ORIGIN} describe >> ${INDEXF}.1
-+		[ -d ${PORTSDIR}/${ORIGIN} ] && injail make -C ${PORTSRC}/${ORIGIN} describe >> ${INDEXF}.1
- 		echo " done"
- 	done
+ 	if [ -n "${NO_RESTRICTED}" ]; then
+@@ -319,4 +323,7 @@
  
+ set +e
+ 
++firehook bulk_build_ended "${JAILNAME}" "${PTNAME}" "${nbbuilt}" \
++	"${nbfailed}" "${nbignored}" "${nbskipped}"
++
+ exit $((nbfailed + nbskipped))

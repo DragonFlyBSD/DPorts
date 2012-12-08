@@ -1,9 +1,80 @@
---- /dev/null	2012-11-24 04:15:22.498925541 +0100
-+++ src/poudriere.d/common.sh.dragonfly	2012-11-24 22:18:11.000000000 +0100
-@@ -0,0 +1,65 @@
+--- /dev/null	2012-12-05 09:14:49.161043935 +0100
++++ src/poudriere.d/common.sh.dragonfly	2012-12-05 11:07:22.000000000 +0100
+@@ -0,0 +1,229 @@
 +#!/bin/sh
 +#
 +# DragonFly-specific
++# Many vestigial functions left over from attempt to use jails.
++# Since DragonFly doesn't care about only having network during fetch,
++# It is more efficient and simpler just to use chroots.
++
++injail()  {
++	chroot ${JAILMNT} $@
++}
++
++jrun() {
++	[ $# -ne 1 ] && eargs network
++	# NO-OP FOR CHROOT
++}
++
++jail_soft_stop() {
++	# NO-OP FOR CHROOT
++}
++
++jail_stop() {
++	[ $# -ne 0 ] && eargs
++	local mnt
++	zset status "stop:"
++
++	cd /
++	msg "Umounting file systems"
++	mnt=`realpath ${MASTERMNT:-${JAILMNT}}`
++	mount | awk -v mnt="${mnt}/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount || :
++	umount ${mnt} || :
++
++	zset status "idle:"
++	export STATUS=0
++}
++
++jail_start() {
++	[ $# -ne 0 ] && eargs
++	local arch=$(zget arch)
++	local NEEDFS="${NULLFSREF} procfs"
++	if [ -z "${NOLINUX}" ]; then
++		if [ "${arch}" = "i386" ]; then
++			NEEDFS="${NEEDFS} linprocfs linsysfs"
++			sysctl -n compat.linux.osrelease >/dev/null 2>&1 || kldload linux
++		fi
++	fi
++	[ -n "${USE_TMPFS}" ] && NEEDFS="${NEEDFS} tmpfs"
++	for fs in ${NEEDFS}; do
++		lsvfs $fs >/dev/null 2>&1 || kldload $fs
++	done
++	jail_exists ${JAILNAME} || err 1 "No such jail: ${JAILNAME}"
++	zset status "start:"
++
++	zrollback ${JAILFS}@clean
++
++	msg "Mounting system devices for ${JAILNAME}"
++	do_jail_mounts 1
++
++	test -n "${RESOLV_CONF}" && cp -v "${RESOLV_CONF}" "${JAILMNT}/etc/"
++
++	# Only set STATUS=1 if not turned off
++	# jail -s should not do this or jail will stop on EXIT
++	[ ${SET_STATUS_ON_START-1} -eq 1 ] && export STATUS=1
++}
++
++jail_runs() {
++	[ $# -ne 0 ] && eargs
++	local check=$(zget status)
++	[ "${check}" = "idle:" ] && return 0
++	return 1
++}
++
++
++# BELOW HERE IS TRUE JAIL FUNCTIONALITY NOT USED AT THIS TIME
++# conflicting names have _jail suffix added
 +
 +set_sysctl() {
 +	[ $# -ne 2 ] && eargs knob value
@@ -15,7 +86,7 @@
 +	fi
 +}
 +
-+jrun() {
++jrun_jail() {
 +	[ $# -ne 1 ] && eargs network
 +	local AWKCMD='{ if ($2 != "127.0.0.1") print $2 }'
 +	local network=$1
@@ -36,7 +107,7 @@
 +	jail -U root ${JAILMNT} ${JAILNAME} ${ipargs} /bin/sh /etc/rc
 +}
 +
-+jail_soft_stop() {
++jail_soft_stop_jail() {
 +	local AWKCMD='{ if($2 == host) print $1 }'
 +	local JAIL_ID=$(jls | awk -v host="${1}" "${AWKCMD}")
 +	local SHUTDWN="/bin/sh /etc/rc.shutdown"
@@ -49,7 +120,7 @@
 +	return 0
 +}
 +
-+injail() {
++injail_jail() {
 +	local AWKCMD='{ if($2 == host) print $1 }'
 +	local JAIL_ID=$(jls | awk -v host="${JAILNAME}" "${AWKCMD}")
 +	if [ -z "${JAIL_ID}" ]; then
@@ -59,10 +130,103 @@
 +	fi
 +}
 +
-+jail_runs() {
++
++jail_runs_jail() {
 +	[ $# -ne 0 ] && eargs
 +	local AWKCMD='{ if($2 == host) print $1 }'
 +	local check=$(jls | awk -v host="${JAILNAME}" "${AWKCMD}")
 +	[ -n "${check}" ] && return 0
 +	return 1
++}
++
++jail_start_jail() {
++	[ $# -ne 0 ] && eargs
++	local arch=$(zget arch)
++	local NEEDFS="${NULLFSREF} procfs"
++	if [ -z "${NOLINUX}" ]; then
++		if [ "${arch}" = "i386" ]; then
++			NEEDFS="${NEEDFS} linprocfs linsysfs"
++			sysctl -n compat.linux.osrelease >/dev/null 2>&1 || kldload linux
++		fi
++	fi
++	[ -n "${USE_TMPFS}" ] && NEEDFS="${NEEDFS} tmpfs"
++	for fs in ${NEEDFS}; do
++		lsvfs $fs >/dev/null 2>&1 || kldload $fs
++	done
++	jail_exists ${JAILNAME} || err 1 "No such jail: ${JAILNAME}"
++	jail_runs && err 1 "jail already running: ${JAILNAME}"
++	zset status "start:"
++	zdelete ${JAILFS} build 2>/dev/null || :
++	zrollback ${JAILFS}@clean
++
++	msg "Mounting system devices for ${JAILNAME}"
++	do_jail_mounts 1
++
++	test -n "${RESOLV_CONF}" && cp -v "${RESOLV_CONF}" "${JAILMNT}/etc/"
++	msg "Starting jail ${JAILNAME}"
++	jrun 0
++	# Only set STATUS=1 if not turned off
++	# jail -s should not do this or jail will stop on EXIT
++	[ ${SET_STATUS_ON_START-1} -eq 1 ] && export STATUS=1
++}
++
++jail_stop_jail() {
++	[ $# -ne 0 ] && eargs
++	local mnt
++	jail_runs || err 1 "No such jail running: ${JAILNAME}"
++	zset status "stop:"
++
++	jail_soft_stop ${JAILNAME%-job-*}
++	# Shutdown all builders
++	if [ ${PARALLEL_JOBS} -ne 0 ]; then
++		# - here to only check for unset, {start,stop}_builders will set this to blank if already stopped
++		for j in ${JOBS-$(jot -w %02d ${PARALLEL_JOBS})}; do
++			jail_soft_stop ${JAILNAME%-job-*}-job-${j} 2>&1 || :
++		done
++	fi
++	msg "Umounting file systems"
++	mnt=`realpath ${MASTERMNT:-${JAILMNT}}`
++	mount | awk -v mnt="${mnt}/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount -f || :
++	umount ${mnt} || :
++
++	if [ -n "${MFSSIZE}" ]; then
++		# umount the ${JAILMNT}/build/$jobno/wrkdirs
++		mount | grep "/dev/md.*${mnt}/build" | while read mntpt; do
++			local dev=`echo $mntpt | awk '{print $1}'`
++			if [ -n "$dev" ]; then
++				umount $dev
++				mdconfig -d -u $dev
++			fi
++		done
++		# umount the $JAILMNT/wrkdirs
++		local dev=`mount | grep "/dev/md.*${mnt}" | awk '{print $1}'`
++		if [ -n "$dev" ]; then
++			umount $dev
++			mdconfig -d -u $dev
++		fi
++	fi
++	zset status "idle:"
++	export STATUS=0
++}
++
++listed_ports() {
++	if [ ${ALL:-0} -eq 1 ]; then
++		PORTSDIR=$(get_portsdir ${PTNAME})
++		local toplevel="$(cd ${PORTSDIR} && find * -type d -depth 0 -maxdepth 0 2>/dev/null)"
++		for level in ${toplevel}; do
++		  if [ "${level}" != "Mk" \
++		    -a "${level}" != "Tools" \
++		    -a "${level}" != "Templates" ]; then
++		    cd ${PORTSDIR} && find ${level}/ -type d -depth 1 -maxdepth 1 2>/dev/null
++		  fi
++		done
++		return
++	fi
++	if [ -z "${LISTPORTS}" ]; then
++		if [ -n "${LISTPKGS}" ]; then
++			grep -v -E '(^[[:space:]]*#|^[[:space:]]*$)' ${LISTPKGS}
++		fi
++	else
++		echo ${LISTPORTS} | tr ' ' '\n'
++	fi
 +}

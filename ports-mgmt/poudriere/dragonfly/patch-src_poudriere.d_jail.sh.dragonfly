@@ -1,6 +1,6 @@
---- /dev/null	2012-11-24 04:15:22.498925541 +0100
-+++ src/poudriere.d/jail.sh.dragonfly	2012-11-24 21:25:17.000000000 +0100
-@@ -0,0 +1,255 @@
+--- /dev/null	2012-11-25 03:01:18.885857679 +0100
++++ src/poudriere.d/jail.sh.dragonfly	2012-11-25 13:42:30.000000000 +0100
+@@ -0,0 +1,267 @@
 +#!/bin/sh
 +#
 +# DragonFly specific
@@ -19,6 +19,7 @@
 +		METHOD="git"
 +		zset method "${METHOD}"
 +	fi
++	msg "Upgrading using ${METHOD}"
 +	case ${METHOD} in
 +	git)
 +		install_from_git ${1}
@@ -183,13 +184,12 @@
 +	CLEANUP_HOOK=cleanup_new_jail
 +	zset method "${METHOD}"
 +	${FCT}
++
 +	eval `grep "^[RB][A-Z]*=" ${JAILMNT}/usr/src/sys/conf/newvers.sh `
 +	RELEASE=${REVISION}-${BRANCH}
-+	OSVERSION=`awk '/\#define __DragonFly_version/ { print $3 }' ${JAILMNT}/usr/include/sys/param.h`
-+	LOGIN_ENV=",UNAME_r=${RELEASE},UNAME_v=DragonFly ${RELEASE},OSVERSION=${OSVERSION}"
++	zset version "${RELEASE}"
++	update_version ${RELEASE}
 +
-+	sed -i .back -e "s/:\(setenv.*\):/:\1${LOGIN_ENV}:/" ${JAILMNT}/etc/login.conf
-+	cap_mkdb ${JAILMNT}/etc/login.conf
 +	pwd_mkdb -d ${JAILMNT}/etc/ -p ${JAILMNT}/etc/master.passwd
 +
 +	cat > ${JAILMNT}/etc/make.conf << EOF
@@ -206,6 +206,7 @@
 +EOF
 +	echo "# dummy" 	            >> ${JAILMNT}/etc/fstab
 +	echo "src"                  >> ${JAILMNT}/usr/.cpignore
++	echo "sys"                  >> ${JAILMNT}/.cpignore
 +
 +	mkdir -p ${JAILMNT}/${PORTSRC}
 +	mkdir -p ${JAILMNT}/${STD_PACKAGES}
@@ -255,4 +256,15 @@
 +	rm -rf ${POUDRIERE_DATA}/logs/*/${JAILNAME}
 +	rm -rf ${POUDRIERE_DATA}/jailbuild/${JAILNAME}
 +	echo "done"
++}
++
++update_version() {
++	local release="$1"
++	local login_env osversion
++
++	osversion=`awk '/\#define __DragonFly_version/ { print $3 }' ${JAILMNT}/usr/include/sys/param.h`
++	login_env=",UNAME_r=${release},UNAME_v=DragonFly ${release},OSVERSION=${osversion}"
++
++	sed -i "" -e "s/:\(setenv.*\):/:\1${login_env}:/" ${JAILMNT}/etc/login.conf
++	cap_mkdb ${JAILMNT}/etc/login.conf
 +}

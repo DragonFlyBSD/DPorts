@@ -1,6 +1,6 @@
---- /dev/null	2012-11-24 04:15:22.498925541 +0100
-+++ src/poudriere.d/common.sh.hammer	2012-11-24 23:01:33.000000000 +0100
-@@ -0,0 +1,501 @@
+--- /dev/null	2012-12-05 09:14:49.161043935 +0100
++++ src/poudriere.d/common.sh.hammer	2012-12-05 10:19:20.000000000 +0100
+@@ -0,0 +1,567 @@
 +#!/bin/sh
 +
 +zget() {
@@ -88,7 +88,6 @@
 +	return 0
 +}
 +
-+
 +kill_metadata () {
 +	[ $# -ne 1 ] && eargs jailport_name
 +	rm -rf ${POUDRIERE_DATA}/hammer/${1}
@@ -125,39 +124,51 @@
 +	fi
 +	local snap=$(snapname "${1}")
 +	local pfs=$(extract_pfs ${1})
-+	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/ ${pfs}/
++	# rollback only used for jails
++	# Don't transverse the entire tree, just do the minimum
++
++	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${pfs}/etc
++	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/var       ${pfs}/var
++	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${pfs}/etc
++	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/usr/bin   ${pfs}/usr/bin
++	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/usr/local ${pfs}/usr/local
++	rm -rf ${pfs}/poudriere
 +}
 +
 +zxdiff () {
-+	[ $# -ne 2 ] && eargs filesystem@snapname filesystem
++	[ $# -ne 2 ] && eargs pfs-filesystem@snapname pfs-filesystem
 +	# very basic zfs diff emulations: [M+-] (no R, no / type)
 +	if [ $(onlysnap "${1}") -eq 0 ]; then
 +		err 1 "Must specify snapshot in rollback"
 +	fi
 +	local snap=$(snapname "${1}")
-+	local RIGHT=$(extract_pfs ${1})
++	local RIGHT="${2}"
 +	local LEFTS=${HAMMER_SNAPDIR}/${snap}
 +	local AWKCMD='{ \
++ lslen = length (leftside); \
++ rslen = length (rightside); \
 + if ($1 == "Files") \
 + { \
 +   len = index ($0, " and ") - 7; \
-+   print "M * " substr ($0, 7, len); \
++   print "M * " substr ($0, 7 + lslen, len - lslen); \
 + } \
 + if ($1 == "Only") \
 + { \
 +   ndx = index ($0, ":"); \
-+   lslen = length (leftside); \
-+   if (leftside == substr($0, 9, lslen)) { \
++   if (leftside == substr ($0, 9, lslen)) { \
 +     sym = "- * "; \
++     stem = substr ($0, 9 + lslen, ndx - 9 - lslen); \
 +   } \
 +   else { \
 +     sym = "+ * "; \
++     stem = substr ($0, 9 + rslen, ndx - 9 - rslen); \
 +   } \
-+   ufile  = substr ($0, ndx + 2); \
-+   print sym leftside "/" ufile; \
++   ufile = substr ($0, ndx + 2); \
++   print sym stem "/" ufile; \
 + } \
 +}'
-+	diff -qr ${LEFTS} ${RIGHT} | awk -v leftside=${LEFTS} "${AWKCMD}"
++	diff -qr --exclude=src ${LEFTS} ${RIGHT} 2> /dev/null | \
++	   awk -v leftside=${LEFTS} -v rightside=${RIGHT} "${AWKCMD}"
 +}
 +
 +jail_exists() {
@@ -188,7 +199,7 @@
 +	[ -f ${confloc} ] && cat ${confloc}
 +}
 +
-+port_exists() {
++porttree_exists() {
 +	[ $# -ne 1 ] && eargs portstree_name
 +	local pfs=$(pfs_path "${ZROOTFS}/ports/${1}")
 +	if [ -d ${pfs} ] || \
@@ -198,15 +209,21 @@
 +	return 1
 +}
 +
-+port_get_base() {
++porttree_get_base() {
 +	[ $# -ne 1 ] && eargs portstree_name
 +	local confloc=${POUDRIERE_DATA}/hammer/ports/${1}/mountpoint
 +	[ -f ${confloc} ] && cat ${confloc}
 +}
 +
-+port_get_fs() {
++porttree_get_fs() {
 +	[ $# -ne 1 ] && eargs portstree_name
 +	local confloc=${POUDRIERE_DATA}/hammer/ports/${1}/filesys
++	[ -f ${confloc} ] && cat ${confloc}
++}
++
++porttree_get_method() {
++	[ $# -ne 1 ] && eargs portstree_name
++	local confloc=${POUDRIERE_DATA}/hammer/ports/${1}/method
 +	[ -f ${confloc} ] && cat ${confloc}
 +}
 +
@@ -262,7 +279,7 @@
 +	echo " done"
 +}
 +
-+port_create_zfs() {
++porttree_create_zfs() {
 +	[ $# -ne 3 ] && eargs name mountpoint pfs
 +	local name=$1
 +	local mnt=$( echo $2 | sed -e 's,//,/,g')
@@ -321,13 +338,137 @@
 +
 +	for j in ${JOBS}; do
 +		jail_soft_stop ${JAILNAME}-job-${j} || :
++		JAILNAME=${JAILNAME}-job-${j} zset status "available"
 +	done
 +
++	cd /
 +	mnt=`realpath ${JAILMNT}`
-+	mount | awk -v mnt="${mnt}/build/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount -f 2>/dev/null || :
++	mount | awk -v mnt="${mnt}/build/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount || :
 +
 +	# No builders running, unset JOBS
 +	JOBS=""
++}
++
++build_queue() {
++
++	local j cnt mnt pfs name pkgname read_queue builders_active should_build_stats
++	local AWKCMD='{ if ($1 != "PID") print $1 }'
++	local pidfile running
++
++	read_queue=1
++	should_build_stats=1 # Always build stats on first pass
++	while :; do
++		builders_active=0
++		for j in ${JOBS}; do
++			mnt="${JAILMNT}/build/${j}"
++			pfs="${JAILFS}.job-${j}"
++			name="${JAILNAME}-job-${j}"
++			pidfile="${JAILMNT}/poudriere/var/run/${j}.pid"
++			if [ -f "${pidfile}" ]; then
++				running=$(ps -p `cat ${pidfile}` | awk "${AWKCMD}")
++				if [ -n "${running}" ]; then
++					builders_active=1
++					continue
++				fi
++				should_build_stats=1
++				rm -f ${pidfile}
++				JAILNAME="${name}" zset status "idle:"
++
++				# A builder finished, check the queue to see if
++				# it can do some work
++				read_queue=1
++			fi
++
++			# Don't want to read the queue, so just skip this
++			# builder and check the next, as it may be done
++			[ ${read_queue} -eq 0 ] && continue
++
++			pkgname=$(next_in_queue)
++			if [ -z "${pkgname}" ]; then
++				# pool empty ?
++				[ -n "$(dir_empty ${JAILMNT}/poudriere/pool)" ] && return
++
++				# Pool is waiting on dep, wait until a build
++				# is done before checking the queue again
++				read_queue=0
++			else
++				MASTERMNT=${JAILMNT} JAILNAME="${name}" JAILMNT="${mnt}" JAILFS="${pfs}" \
++				MY_JOBID="${j}" \
++				build_pkg "${pkgname}" >/dev/null 2>&1 &
++				echo "$!" > ${pidfile}
++
++				# A new job is spawned, try to read the queue
++				# just to keep things moving
++				read_queue=1
++				builders_active=1
++			fi
++		done
++		if [ ${read_queue} -eq 0 ]; then
++			# If not wanting to read the queue, sleep to save CPU
++			sleep 1
++		fi
++
++		if [ ${builders_active} -eq 0 ]; then
++			msg "Dependency loop or poudriere bug detected."
++			find ${JAILMNT}/poudriere/pool || echo "pool missing"
++			find ${JAILMNT}/poudriere/deps || echo "deps missing"
++			err 1 "Queue is unprocessable"
++		fi
++
++		if [ ${should_build_stats} -eq 1 ]; then
++			build_stats
++			should_build_stats=0
++		fi
++	done
++}
++
++
++cleanup() {
++	[ -n "${CLEANED_UP}" ] && return 0
++	msg "Cleaning up"
++	# If this is a builder, don't cleanup, the master will handle that.
++	if [ -n "${MY_JOBID}" ]; then
++		[ -n "${PKGNAME}" ] && clean_pool ${PKGNAME} 1 || :
++		return 0
++
++	fi
++	# Prevent recursive cleanup on error
++	if [ -n "${CLEANING_UP}" ]; then
++		echo "Failure cleaning up. Giving up." >&2
++		return
++	fi
++	export CLEANING_UP=1
++	local BASEJNAME=${JAILNAME%-job-*}
++	[ -z "${BASEJNAME}" ] && err 2 "Fail: Missing JAILNAME"
++	log_stop
++
++	# Kill all children - this does NOT recurse, so orphans can still
++	# occur. This is just to avoid requiring pid files for parallel_run
++	for pid in $(jobs -p); do
++		kill ${pid} 2>/dev/null || :
++	done
++
++	if [ -d ${MASTERMNT:-${JAILMNT}}/poudriere/var/run ]; then
++		for pid in ${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid; do
++			# Ensure there is a pidfile to read or break
++			[ "${pid}" = "${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid" ] && break
++			kill -15 `cat ${pid}` >/dev/null 2>&1 || :
++		done
++	fi
++	wait
++
++	local numjobs JOBX BASEJFS
++	BASEJFS=${JAILFS%.job-*}
++	JAILNAME="${BASEJNAME}" numjobs=$(zget slaves)
++	local JOBX="$(jot -w %02d ${numjobs})"
++
++	for j in ${JOBX}; do
++		zkill ${BASEJFS}.job-${j}@prepkg
++		zkill ${BASEJFS}.job-${j}@preinst
++	done
++	zkill ${BASEJFS}@prepkg
++	jail_stop
++	export CLEANED_UP=1
 +}
 +
 +post_conf_check () {
@@ -342,9 +483,9 @@
 +
 +print_ports_table () {
 +	[ $# -ne 1 ] && eargs quiet
-+	TABFORM='%-20s %-10s\n'
-+	[ ${1} -eq 0 ] && printf "${TABFORM}" "PORTSTREE" "METHOD"
-+	local METHOD
++	TABFORM='%-20s %-10s %s\n'
++	[ ${1} -eq 0 ] && printf "${TABFORM}" "PORTSTREE" "METHOD" "PATH"
++	local METHOD PTREEPATH
 +	local confdir=${POUDRIERE_DATA}/hammer/ports
 +	if [ -d ${confdir} ] && [ -n "$(ls -A ${confdir})" ]; then
 +	  cd ${confdir}
@@ -355,7 +496,8 @@
 +	    else
 +	      METHOD=-
 +	    fi
-+	    printf "${TABFORM}" "${port}" "${METHOD}"
++	    PTREEPATH=$(cat ${confdir}/${port}/mountpoint)
++	    printf "${TABFORM}" "${port}" "${METHOD}" "${PTREEPATH}"
 +	  done
 +	fi
 +}
@@ -415,7 +557,7 @@
 +
 +get_portsdir() {
 +	[ $# -ne 1 ] && eargs portstree_name
-+	echo $(port_get_fs ${1})
++	echo $(porttree_get_fs ${1})
 +}
 +
 +check_jobs() {
@@ -426,79 +568,3 @@
 +	esac
 +}
 +
-+build_queue() {
-+
-+	local activity j cnt mnt pfs name pkgname
-+
-+	while :; do
-+		activity=0
-+		for j in ${JOBS}; do
-+			mnt="${JAILMNT}/build/${j}"
-+			name="${JAILNAME}-job-${j}"
-+			pfs="${JAILFS}.job-${j}"
-+			if [ -f  "${JAILMNT}/poudriere/var/run/${j}.pid" ]; then
-+				if pgrep -F "${JAILMNT}/poudriere/var/run/${j}.pid" >/dev/null 2>&1; then
-+					continue
-+				fi
-+				build_stats
-+				rm -f "${JAILMNT}/poudriere/var/run/${j}.pid"
-+				JAILNAME="${name}" zset status "idle:"
-+			fi
-+			pkgname=$(next_in_queue)
-+			if [ -z "${pkgname}" ]; then
-+				# pool empty ?
-+				[ $(stat -f '%z' ${JAILMNT}/poudriere/pool) -eq 2 ] && return
-+				break
-+			fi
-+			activity=1
-+			MASTERMNT=${JAILMNT} JAILNAME="${name}" JAILMNT="${mnt}" JAILFS="${pfs}" \
-+				MY_JOBID="${j}" \
-+				build_pkg "${pkgname}" >/dev/null 2>&1 &
-+			echo "$!" > ${JAILMNT}/poudriere/var/run/${j}.pid
-+		done
-+		# Sleep briefly if still waiting on builds, to save CPU
-+		[ $activity -eq 0 ] && sleep 0.1
-+	done
-+}
-+
-+cleanup() {
-+	[ -n "${CLEANED_UP}" ] && return 0
-+	msg "Cleaning up"
-+	# If this is a builder, don't cleanup, the master will handle that.
-+	if [ -n "${MY_JOBID}" ]; then
-+		[ -n "${PKGNAME}" ] && clean_pool ${PKGNAME} 1 || :
-+		return 0
-+
-+	fi
-+	# Prevent recursive cleanup on error
-+	if [ -n "${CLEANING_UP}" ]; then
-+		echo "Failure cleaning up. Giving up." >&2
-+		return
-+	fi
-+	export CLEANING_UP=1
-+	local BASEJNAME=${JAILNAME%-job-*}
-+	[ -z "${BASEJNAME}" ] && err 2 "Fail: Missing JAILNAME"
-+	log_stop
-+
-+	if [ -d ${MASTERMNT:-${JAILMNT}}/poudriere/var/run ]; then
-+		for pid in ${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid; do
-+			# Ensure there is a pidfile to read or break
-+			[ "${pid}" = "${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid" ] && break
-+			pkill -15 -F ${pid} >/dev/null 2>&1 || :
-+		done
-+		wait
-+	fi
-+
-+	local numjobs JOBX BASEJFS
-+	BASEJFS=${JAILFS%.job-*}
-+	JAILNAME="${BASEJNAME}" numjobs=$(zget slaves)
-+	local JOBX="$(jot -w %02d ${numjobs})"
-+
-+	for j in ${JOBX}; do
-+		zkill ${BASEJFS}.job-${j}@prepkg
-+		zkill ${BASEJFS}.job-${j}@preinst
-+	done
-+	zkill ${BASEJFS}@prepkg
-+	jail_stop
-+	export CLEANED_UP=1
-+}

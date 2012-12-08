@@ -1,7 +1,9 @@
---- /dev/null	2012-11-24 04:15:22.498925541 +0100
-+++ src/poudriere.d/common.sh.zfs	2012-11-24 14:39:04.000000000 +0100
-@@ -0,0 +1,330 @@
+--- /dev/null	2012-11-25 03:01:18.885857679 +0100
++++ src/poudriere.d/common.sh.zfs	2012-11-25 15:09:20.000000000 +0100
+@@ -0,0 +1,407 @@
 +#!/bin/sh
++#
++# ZFS-specific functions
 +
 +# zfs namespace
 +NS="poudriere"
@@ -81,23 +83,55 @@
 +		awk -v n=$1 '$1 == "rootfs" && $2 == n { print $3 }' | head -n 1
 +}
 +
-+port_exists() {
++porttree_exists() {
 +	[ $# -ne 1 ] && eargs portstree_name
-+	zfs list -t filesystem -H -o ${NS}:type,${NS}:name,name | \
-+		awk -v n=$1 'BEGIN { ret = 1 } $1 == "ports" && $2 == n { ret = 0; } END { exit ret }' && return 0
++	porttree_list |
++		awk -v portstree_name=$1 '
++		BEGIN { ret = 1 }
++		$1 == portstree_name {ret = 0; }
++		END { exit ret }
++		' && return 0
 +	return 1
 +}
 +
-+port_get_base() {
++porttree_get_base() {
 +	[ $# -ne 1 ] && eargs portstree_name
-+	zfs list -t filesystem -H -o ${NS}:type,${NS}:name,mountpoint | \
-+		awk -v n=$1 '$1 == "ports" && $2 == n { print $3 }'
++	porttree_list | awk -v portstree_name=$1 '$1 == portstree_name { print $3 }'
 +}
 +
-+port_get_fs() {
++porttree_get_fs() {
 +	[ $# -ne 1 ] && eargs portstree_name
 +	zfs list -t filesystem -H -o ${NS}:type,${NS}:name,name | \
 +		awk -v n=$1 '$1 == "ports" && $2 == n { print $3 }'
++}
++
++porttree_get_method() {
++	[ $# -ne 1 ] && eargs portstree_name
++	porttree_list | awk -v portstree_name=$1 '$1 == portstree_name {print $2}'
++}
++
++porttree_list() {
++	local name method mntpoint n format
++	# Combine local ZFS and manual list
++	zfs list -t filesystem -H -o ${NS}:type,${NS}:name,${NS}:method,mountpoint | \
++		awk '$1 == "ports" { print $2 " " $3 " " $4 }'
++	if [ -f "${POUDRIERED}/portstrees" ]; then
++		# Validate proper format
++		format="Format expected: NAME PATH"
++		n=0
++		while read name mntpoint; do
++			n=$((n + 1))
++			[ -z "${name###*}" ] && continue # Skip comments
++			[ -n "${name%%/*}" ] || \
++				err 1 "$(realpath ${POUDRIERED}/portstrees):${n}: Invalid name '${name}'. ${format}"
++			[ -n "${mntpoint}" ] || \
++				err 1 "$(realpath ${POUDRIERED}/portstrees):${n}: Missing path for '${name}'. ${format}"
++			[ -z "${mntpoint%%/*}" ] || \
++				err 1 "$(realpath ${POUDRIERED}/portstrees):${n}: Invalid path '${mntpoint}' for '${name}'. ${format}"
++			echo "${name} manual ${mntpoint}"
++		done < ${POUDRIERED}/portstrees
++	fi
++	# Outputs: name method mountpoint
 +}
 +
 +get_data_dir() {
@@ -133,13 +167,15 @@
 +		-o mountpoint=${mnt} ${fs} || err 1 " Fail" && echo " done"
 +}
 +
-+port_create_zfs() {
++porttree_create_zfs() {
 +	[ $# -ne 3 ] && eargs name mountpoint fs
 +	local name=$1
 +	local mnt=$( echo $2 | sed -e 's,//,/,g')
 +	local fs=$3
 +	msg_n "Creating ${name} fs..."
 +	zfs create -p \
++		-o atime=off \
++		-o compression=off \
 +		-o mountpoint=${mnt} \
 +		-o ${NS}:type=ports \
 +		-o ${NS}:name=${name} \
@@ -165,11 +201,11 @@
 +			-o ${NS}:arch=${arch} \
 +			-o ${NS}:version=${version} \
 +			${JAILFS}@prepkg ${fs}
-+		zsnap ${fs}@prepkg
++		zfs snapshot ${fs}@prepkg
 +		# Jail might be lingering from previous build. Already recursively
 +		# destroyed all the builder datasets, so just try stopping the jail
 +		# and ignore any errors
-+		jail_soft_stop ${name} 2>&1 || :
++		jail -r ${name} >/dev/null 2>&1 || :
 +		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${fs} do_jail_mounts 0
 +		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${fs} do_portbuild_mounts 0
 +		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${fs} jrun 0
@@ -186,16 +222,126 @@
 +	msg "Stopping ${PARALLEL_JOBS} builders"
 +
 +	for j in ${JOBS}; do
-+		jail_soft_stop ${JAILNAME}-job-${j} || :
++		jail -r ${JAILNAME}-job-${j} >/dev/null 2>&1 || :
 +	done
 +
 +	mnt=`realpath ${JAILMNT}`
 +	mount | awk -v mnt="${mnt}/build/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount -f 2>/dev/null || :
 +
-+	zdelete ${JAILFS} build 2>/dev/null || :
++	zfs destroy -r ${JAILFS}/build 2>/dev/null || :
 +
 +	# No builders running, unset JOBS
 +	JOBS=""
++}
++
++build_queue() {
++
++	local j cnt mnt fs name pkgname read_queue builders_active should_build_stats
++
++	read_queue=1
++	should_build_stats=1 # Always build stats on first pass
++	while :; do
++		builders_active=0
++		for j in ${JOBS}; do
++			mnt="${JAILMNT}/build/${j}"
++			fs="${JAILFS}/build/${j}"
++			name="${JAILNAME}-job-${j}"
++			if [ -f  "${JAILMNT}/poudriere/var/run/${j}.pid" ]; then
++				if pgrep -F "${JAILMNT}/poudriere/var/run/${j}.pid" >/dev/null 2>&1; then
++					builders_active=1
++					continue
++				fi
++				should_build_stats=1
++				rm -f "${JAILMNT}/poudriere/var/run/${j}.pid"
++				JAILFS="${fs}" zset status "idle:"
++
++				# A builder finished, check the queue to see if
++				# it can do some work
++				read_queue=1
++			fi
++
++			# Don't want to read the queue, so just skip this
++			# builder and check the next, as it may be done
++			[ ${read_queue} -eq 0 ] && continue
++
++			pkgname=$(next_in_queue)
++			if [ -z "${pkgname}" ]; then
++				# pool empty ?
++				[ -n "$(dir_empty ${JAILMNT}/poudriere/pool)" ] && return
++
++				# Pool is waiting on dep, wait until a build
++				# is done before checking the queue again
++				read_queue=0
++			else
++				MASTERMNT=${JAILMNT} JAILNAME="${name}" JAILMNT="${mnt}" JAILFS="${fs}" \
++					MY_JOBID="${j}" \
++					build_pkg "${pkgname}" >/dev/null 2>&1 &
++				echo "$!" > ${JAILMNT}/poudriere/var/run/${j}.pid
++
++				# A new job is spawned, try to read the queue
++				# just to keep things moving
++				read_queue=1
++				builders_active=1
++			fi
++		done
++		if [ ${read_queue} -eq 0 ]; then
++			# If not wanting to read the queue, sleep to save CPU
++			sleep 1
++		fi
++
++		if [ ${builders_active} -eq 0 ]; then
++			msg "Dependency loop or poudriere bug detected."
++			find ${JAILMNT}/poudriere/pool || echo "pool missing"
++			find ${JAILMNT}/poudriere/deps || echo "deps missing"
++			err 1 "Queue is unprocessable"
++		fi
++
++		if [ ${should_build_stats} -eq 1 ]; then
++			build_stats
++			should_build_stats=0
++		fi
++	done
++}
++
++
++cleanup() {
++	[ -n "${CLEANED_UP}" ] && return 0
++	msg "Cleaning up"
++	# If this is a builder, don't cleanup, the master will handle that.
++	if [ -n "${MY_JOBID}" ]; then
++		[ -n "${PKGNAME}" ] && clean_pool ${PKGNAME} 1 || :
++		return 0
++
++	fi
++	# Prevent recursive cleanup on error
++	if [ -n "${CLEANING_UP}" ]; then
++		echo "Failure cleaning up. Giving up." >&2
++		return
++	fi
++	export CLEANING_UP=1
++	[ -z "${JAILNAME%-job-*}" ] && err 2 "Fail: Missing JAILNAME"
++	log_stop
++
++	# Kill all children - this does NOT recurse, so orphans can still
++	# occur. This is just to avoid requiring pid files for parallel_run
++	for pid in $(jobs -p); do
++		kill ${pid} 2>/dev/null || :
++	done
++
++	if [ -d ${MASTERMNT:-${JAILMNT}}/poudriere/var/run ]; then
++		for pid in ${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid; do
++			# Ensure there is a pidfile to read or break
++			[ "${pid}" = "${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid" ] && break
++			pkill -15 -F ${pid} >/dev/null 2>&1 || :
++		done
++	fi
++	wait
++
++	zfs destroy -r ${JAILFS%/build/*}/build 2>/dev/null || :
++	zfs destroy -r ${JAILFS%/build/*}@prepkg 2>/dev/null || :
++	zfs destroy -r ${JAILFS%/build/*}@preinst 2>/dev/null || :
++	jail_stop
++	export CLEANED_UP=1
 +}
 +
 +post_conf_check () {
@@ -250,7 +396,7 @@
 +
 +get_portsdir() {
 +	[ $# -ne 1 ] && eargs porttree
-+	local PD=`port_get_base ${PTNAME}`
++	local PD=$(porttree_get_base ${PTNAME})
 +	[ -d "${PD}/ports" ] && PD="${PD}/ports"
 +	echo ${PD}
 +}
@@ -261,73 +407,4 @@
 +		PARALLEL_JOBS=$(sysctl -n hw.ncpu)
 +		;;
 +	esac
-+}
-+
-+build_queue() {
-+
-+	local activity j cnt mnt fs name pkgname
-+
-+	while :; do
-+		activity=0
-+		for j in ${JOBS}; do
-+			mnt="${JAILMNT}/build/${j}"
-+			fs="${JAILFS}/build/${j}"
-+			name="${JAILNAME}-job-${j}"
-+			if [ -f  "${JAILMNT}/poudriere/var/run/${j}.pid" ]; then
-+				if pgrep -F "${JAILMNT}/poudriere/var/run/${j}.pid" >/dev/null 2>&1; then
-+					continue
-+				fi
-+				build_stats
-+				rm -f "${JAILMNT}/poudriere/var/run/${j}.pid"
-+				JAILFS="${fs}" zset status "idle:"
-+			fi
-+			pkgname=$(next_in_queue)
-+			if [ -z "${pkgname}" ]; then
-+				# pool empty ?
-+				[ $(stat -f '%z' ${JAILMNT}/poudriere/pool) -eq 2 ] && return
-+				break
-+			fi
-+			activity=1
-+			MASTERMNT=${JAILMNT} JAILNAME="${name}" JAILMNT="${mnt}" JAILFS="${fs}" \
-+				MY_JOBID="${j}" \
-+				build_pkg "${pkgname}" >/dev/null 2>&1 &
-+			echo "$!" > ${JAILMNT}/poudriere/var/run/${j}.pid
-+		done
-+		# Sleep briefly if still waiting on builds, to save CPU
-+		[ $activity -eq 0 ] && sleep 0.1
-+	done
-+}
-+
-+cleanup() {
-+	[ -n "${CLEANED_UP}" ] && return 0
-+	msg "Cleaning up"
-+	# If this is a builder, don't cleanup, the master will handle that.
-+	if [ -n "${MY_JOBID}" ]; then
-+		[ -n "${PKGNAME}" ] && clean_pool ${PKGNAME} 1 || :
-+		return 0
-+
-+	fi
-+	# Prevent recursive cleanup on error
-+	if [ -n "${CLEANING_UP}" ]; then
-+		echo "Failure cleaning up. Giving up." >&2
-+		return
-+	fi
-+	export CLEANING_UP=1
-+	[ -z "${JAILNAME%-job-*}" ] && err 2 "Fail: Missing JAILNAME"
-+	log_stop
-+
-+	if [ -d ${MASTERMNT:-${JAILMNT}}/poudriere/var/run ]; then
-+		for pid in ${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid; do
-+			# Ensure there is a pidfile to read or break
-+			[ "${pid}" = "${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid" ] && break
-+			pkill -15 -F ${pid} >/dev/null 2>&1 || :
-+		done
-+		wait
-+	fi
-+
-+	zdelete ${JAILFS%/build/*} build 2>/dev/null || :
-+	zkill ${JAILFS%/build/*}@prepkg 2>/dev/null || :
-+	zkill ${JAILFS%/build/*}@preinst 2>/dev/null || :
-+	jail_stop
-+	export CLEANED_UP=1
 +}

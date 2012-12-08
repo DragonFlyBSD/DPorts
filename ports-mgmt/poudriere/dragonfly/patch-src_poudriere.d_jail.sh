@@ -1,17 +1,17 @@
---- src/poudriere.d/jail.sh.orig	2012-10-15 18:18:18.000000000 +0200
-+++ src/poudriere.d/jail.sh	2012-11-20 19:57:32.000000000 +0100
-@@ -15,67 +15,32 @@
- Options:
+--- src/poudriere.d/jail.sh.orig	2012-12-01 01:15:48.000000000 +0100
++++ src/poudriere.d/jail.sh	2012-12-08 13:38:58.420144000 +0100
+@@ -16,70 +16,32 @@
      -q            -- quiet (remove the header in list)
+     -J n          -- Run buildworld in parallell with n jobs.
      -j jailname   -- Specifies the jailname
 -    -v version    -- Specifies which version of FreeBSD we want in jail
 -    -a arch       -- Indicates architecture of the jail: i386 or amd64
 -                     (Default: same as host)
 -    -f fs         -- FS name (tank/jails/myjail)
 +    -v version    -- Specifies which version of DragonFly we want in jail
-+    		     e.g. \"3.4\", \"3.6\", or \"master\"
++                     e.g. \"3.4\", \"3.6\", or \"master\"
 +    -a arch       -- Does nothing - set to be same as host
-+    -f fs         -- FS name (/poudriere/jails/thejail)
++    -f fs         -- FS name (/pfs/poudriere.jail.myjail)
      -M mountpoint -- mountpoint
 +    -Q quickworld -- when used with -u jail is incrementally updated
      -m method     -- when used with -c forces the method to use by default
@@ -19,6 +19,9 @@
 -		     \"csup\" please note that with svn and csup the world
 -		     will be built. note that building from sources can use
 -		     src.conf and jail-src.conf from localbase/etc/poudriere.d
+-		     other possible method are: \"allbsd\" retreive snapshot
+-		     from allbsd website or \"gjb\" for snapshot from Glen
+-		     Barber's website.
 +                     \"git\" to build world from source.  There are no other
 +                     method options at this time.
      -t version    -- version to upgrade to"
@@ -82,10 +85,25 @@
  }
  
  cleanup_new_jail() {
-@@ -83,296 +48,6 @@
+@@ -87,325 +49,6 @@
  	delete_jail
  }
  
+-update_version() {
+-	local release="$1"
+-	local login_env osversion
+-
+-	osversion=`awk '/\#define __FreeBSD_version/ { print $3 }' ${JAILMNT}/usr/include/sys/param.h`
+-	login_env=",UNAME_r=${release},UNAME_v=FreeBSD ${release},OSVERSION=${osversion}"
+-
+-	if [ "${ARCH}" = "i386" -a "${REALARCH}" = "amd64" ];then
+-		login_env="${login_env},UNAME_p=i386,UNAME_m=i386"
+-	fi
+-
+-	sed -i "" -e "s/:\(setenv.*\):/:\1${login_env}:/" ${JAILMNT}/etc/login.conf
+-	cap_mkdb ${JAILMNT}/etc/login.conf
+-}
+-
 -update_jail() {
 -	jail_exists ${JAILNAME} || err 1 "No such jail: ${JAILNAME}"
 -	jail_runs && \
@@ -96,6 +114,7 @@
 -		METHOD="ftp"
 -		zset method "${METHOD}"
 -	fi
+-	msg "Upgrading using ${METHOD}"
 -	case ${METHOD} in
 -	ftp)
 -		JAILMNT=`jail_get_base ${JAILNAME}`
@@ -114,19 +133,20 @@
 -		jail_stop
 -		;;
 -	csup)
--		msg "Upgrading using csup"
 -		install_from_csup
+-		update_version $(zget version)
 -		yes | make -C ${JAILMNT}/usr/src delete-old delete-old-libs DESTDIR=${JAILMNT}
 -		zfs destroy -r ${JAILFS}@clean
 -		zfs snapshot ${JAILFS}@clean
 -		;;
 -	svn*)
 -		install_from_svn
--		yes | make -C ${JAILMNT} delete-old delete-old-libs DESTDIR=${JAILMNT}
+-		update_version $(zget version)
+-		yes | make -C ${JAILMNT}/usr/src delete-old delete-old-libs DESTDIR=${JAILMNT}
 -		zfs destroy -r ${JAILFS}@clean
 -		zfs snapshot ${JAILFS}@clean
 -		;;
--	allbsd)
+-	allbsd|gjb)
 -		err 1 "Upgrade is not supported with allbsd, to upgrade, please delete and recreate the jail"
 -		;;
 -	*)
@@ -142,12 +162,23 @@
 -	mkdir -p ${JAILMNT}/etc
 -	[ -f ${JAILMNT}/etc/src.conf ] && rm -f ${JAILMNT}/etc/src.conf
 -	[ -f ${POUDRIERED}/src.conf ] && cat ${POUDRIERED}/src.conf > ${JAILMNT}/etc/src.conf
--	[ -f ${POUDRIERED}/${JAILMNT}-src.conf ] && cat ${POUDRIERED}/${JAILMNT}-src.conf >> ${JAILMNT}/etc/src.conf
+-	[ -f ${POUDRIERED}/${JAILNAME}-src.conf ] && cat ${POUDRIERED}/${JAILNAME}-src.conf >> ${JAILMNT}/etc/src.conf
 -	unset MAKEOBJPREFIX
 -	export __MAKE_CONF=/dev/null
 -	export SRCCONF=${JAILMNT}/etc/src.conf
--	msg "Starting make buildworld"
--	make -C ${JAILMNT}/usr/src buildworld ${MAKEWORLDARGS} || err 1 "Fail to build world"
+-	MAKE_JOBS="-j${PARALLEL_JOBS}"
+-
+-	: ${CCACHE_PATH:="/usr/local/libexec/ccache"}
+-	if [ -n "${CCACHE_DIR}" -a -d ${CCACHE_PATH}/world ]; then
+-		export CCACHE_DIR
+-		# Fix building world when CC is clang
+-		export CCACHE_CPP2=yes
+-		export CC="${CCACHE_PATH}/world/cc"
+-		export CXX="${CCACHE_PATH}/world/c++"
+-	fi
+-
+-	msg "Starting make buildworld with ${PARALLEL_JOBS} jobs"
+-	make -C ${JAILMNT}/usr/src buildworld ${MAKE_JOBS} ${MAKEWORLDARGS} || err 1 "Fail to build world"
 -	msg "Starting make installworld"
 -	make -C ${JAILMNT}/usr/src installworld DESTDIR=${JAILMNT} || err 1 "Fail to install world"
 -	make -C ${JAILMNT}/usr/src DESTDIR=${JAILMNT} distrib-dirs && \
@@ -196,16 +227,16 @@
 -
 -install_from_ftp() {
 -	mkdir ${JAILMNT}/fromftp
--	local URL BASEURL
+-	local URL V
 -
--	if [ ${VERSION%%.*} -lt 9 ]; then
--		msg "Fetching sets for FreeBSD ${VERSION} ${ARCH}"
+-	V=${ALLBSDVER:-${VERSION}}
+-	if [ ${V%%.*} -lt 9 ]; then
+-		msg "Fetching sets for FreeBSD ${V} ${ARCH}"
 -		case ${METHOD} in
--		ftp) BASEURL="${FREEBSD_HOST}/pub/FreeBSD/releases/${ARCH}/" ;;
--		allbsd) BASEURL="https://pub.allbsd.org/FreeBSD-snapshots/${ARCH}-${ARCH}" ;;
+-		ftp) URL="${FREEBSD_HOST}/pub/FreeBSD/releases/${ARCH}/${V}" ;;
+-		allbsd) URL="https://pub.allbsd.org/FreeBSD-snapshots/${ARCH}-${ARCH}/${V}-JPSNAP/ftp" ;;
 -		esac
--		URL="${BASEURL}/${VERSION}"
--		DISTS="base dict src"
+-		DISTS="base dict src games"
 -		[ ${ARCH} = "amd64" ] && DISTS="${DISTS} lib32"
 -		for dist in ${DISTS}; do
 -			fetch_file ${JAILMNT}/fromftp/ ${URL}/$dist/CHECKSUM.SHA256 || \
@@ -236,14 +267,14 @@
 -		done
 -	else
 -		case ${METHOD} in
--		ftp) BASEURL="${FREEBSD_HOST}/pub/FreeBSD/releases/${ARCH}/${ARCH}" ;;
--		allbsd) BASEURL="https://pub.allbsd.org/FreeBSD-snapshots/${ARCH}-${ARCH}" ;;
+-		ftp) URL="${FREEBSD_HOST}/pub/FreeBSD/releases/${ARCH}/${ARCH}/${V}" ;;
+-		allbsd) URL="https://pub.allbsd.org/FreeBSD-snapshots/${ARCH}-${ARCH}/${V}-JPSNAP/ftp" ;;
+-		gjb) URL="https://snapshots.glenbarber.us/Latest/ftp/${GJBVERSION}/${ARCH}/${ARCH}/" ;;
 -		esac
--		URL="${BASEURL}/${VERSION}"
--		DISTS="base.txz src.txz"
+-		DISTS="base.txz src.txz games.txz"
 -		[ ${ARCH} = "amd64" ] && DISTS="${DISTS} lib32.txz"
 -		for dist in ${DISTS}; do
--			msg "Fetching ${dist} for FreeBSD ${VERSION} ${ARCH}"
+-			msg "Fetching ${dist} for FreeBSD ${V} ${ARCH}"
 -			fetch_file ${JAILMNT}/fromftp/${dist} ${URL}/${dist}
 -			msg_n "Extracting ${dist}..."
 -			tar -xpf ${JAILMNT}/fromftp/${dist} -C  ${JAILMNT}/ || err 1 " fail" && echo " done"
@@ -273,6 +304,11 @@
 -	case ${METHOD} in
 -	ftp)
 -		FCT=install_from_ftp
+-		;;
+-	gjb)
+-		FCT=install_from_ftp
+-		GJBVERSION=${VERSION}
+-		VERSION=${VERSION%%-*}
 -		;;
 -	allbsd)
 -		FCT=install_from_ftp
@@ -338,15 +374,13 @@
 -	CLEANUP_HOOK=cleanup_new_jail
 -	zset method "${METHOD}"
 -	${FCT}
+-
 -	eval `grep "^[RB][A-Z]*=" ${JAILMNT}/usr/src/sys/conf/newvers.sh `
 -	RELEASE=${REVISION}-${BRANCH}
 -	zset version "${RELEASE}"
--
--	OSVERSION=`awk '/\#define __FreeBSD_version/ { print $3 }' ${JAILMNT}/usr/include/sys/param.h`
--	LOGIN_ENV=",UNAME_r=${RELEASE},UNAME_v=FreeBSD ${RELEASE},OSVERSION=${OSVERSION}"
+-	update_version ${RELEASE}
 -
 -	if [ "${ARCH}" = "i386" -a "${REALARCH}" = "amd64" ];then
--		LOGIN_ENV="${LOGIN_ENV},UNAME_p=i386,UNAME_m=i386"
 -		cat > ${JAILMNT}/etc/make.conf << EOF
 -ARCH=i386
 -MACHINE=i386
@@ -355,8 +389,6 @@
 -
 -	fi
 -
--	sed -i .back -e "s/:\(setenv.*\):/:\1${LOGIN_ENV}:/" ${JAILMNT}/etc/login.conf
--	cap_mkdb ${JAILMNT}/etc/login.conf
 -	pwd_mkdb -d ${JAILMNT}/etc/ -p ${JAILMNT}/etc/master.passwd
 -
 -	cat >> ${JAILMNT}/etc/make.conf << EOF
@@ -379,7 +411,7 @@
  ARCH=`uname -m`
  REALARCH=${ARCH}
  START=0
-@@ -383,24 +58,24 @@
+@@ -416,12 +59,15 @@
  QUIET=0
  INFO=0
  UPDATE=0
@@ -391,14 +423,12 @@
  . ${SCRIPTPREFIX}/common.sh
 +. ${SCRIPTPREFIX}/jail.sh.${BSDPLATFORM}
  
--while getopts "j:v:a:z:m:n:f:M:sdklqciut:" FLAG; do
-+while getopts "j:v:a:z:m:n:f:M:sdklqciut:Q" FLAG; do
+-while getopts "J:j:v:a:z:m:n:f:M:sdklqciut:" FLAG; do
++while getopts "J:j:v:a:z:m:n:f:M:sdklqciut:Q" FLAG; do
  	case "${FLAG}" in
  		j)
--			JAILNAME=${OPTARG}
-+			JAILNAME=$(echo ${OPTARG} | sed -e 's| |_|g')
- 			;;
- 		v)
+ 			JAILNAME=${OPTARG}
+@@ -433,10 +79,7 @@
  			VERSION=${OPTARG}
  			;;
  		a)
@@ -410,7 +440,7 @@
  			;;
  		m)
  			METHOD=${OPTARG}
-@@ -411,6 +86,9 @@
+@@ -447,6 +90,9 @@
  		M)
  			JAILMNT=${OPTARG}
  			;;
@@ -420,7 +450,7 @@
  		s)
  			START=1
  			;;
-@@ -444,7 +122,6 @@
+@@ -480,7 +126,6 @@
  	esac
  done
  
@@ -428,7 +458,7 @@
  if [ -n "${JAILNAME}" ] && [ ${CREATE} -eq 0 ]; then
  	JAILFS=`jail_get_fs ${JAILNAME}`
  	JAILMNT=`jail_get_base ${JAILNAME}`
-@@ -469,7 +146,7 @@
+@@ -505,7 +150,7 @@
  		export SET_STATUS_ON_START=0
  		test -z ${JAILNAME} && usage
  		jail_start
@@ -437,7 +467,7 @@
  		jrun 1
  		;;
  	0000100)
-@@ -482,6 +159,6 @@
+@@ -518,6 +163,6 @@
  		;;
  	0000001)
  		test -z ${JAILNAME} && usage
