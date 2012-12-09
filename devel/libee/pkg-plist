@@ -1,0 +1,29 @@
+@comment $FreeBSD: ports/devel/libee/pkg-plist,v 1.3 2012/11/17 05:55:53 svnexp Exp $
+include/libee/apache.h
+include/libee/ctx.h
+include/libee/event.h
+include/libee/field.h
+include/libee/fieldbucket.h
+include/libee/fieldset.h
+include/libee/fieldtype.h
+include/libee/int.h
+include/libee/internal.h
+include/libee/libee.h
+include/libee/namelist.h
+include/libee/obj.h
+include/libee/parser.h
+include/libee/primitivetype.h
+include/libee/tag.h
+include/libee/tagbucket.h
+include/libee/tagset.h
+include/libee/timestamp.h
+include/libee/valnode.h
+include/libee/value.h
+include/libee/valuetype.h
+lib/libee.a
+lib/libee.la
+lib/libee.so
+lib/libee.so.0
+libdata/pkgconfig/libee.pc
+sbin/libee-convert
+@dirrm include/libee
