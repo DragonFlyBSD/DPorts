@@ -1,0 +1,59 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/dns/nsd/files/nsd.in,v 1.11 2012/11/17 05:57:09 svnexp Exp $
+#
+# PROVIDE: nsd
+# REQUIRE: DAEMON
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following line to /etc/rc.conf to enable nsd:
+#
+# nsd_enable="YES"
+#
+
+. /etc/rc.subr
+
+name=nsd
+rcvar=nsd_enable
+
+required_files=%%PREFIX%%/etc/nsd/nsd.conf
+
+command=%%PREFIX%%/sbin/nsdc
+command_args="start"
+pidfile=`%%PREFIX%%/sbin/nsd-checkconf -o pidfile %%PREFIX%%/etc/nsd/nsd.conf`
+procname=%%PREFIX%%/sbin/${name}
+
+load_rc_config ${name}
+
+nsd_enable=${nsd_enable-"NO"}
+
+extra_commands="reload"
+start_precmd="nsd_precmd"
+reload_cmd="nsd_reload"
+stop_cmd="nsd_stop"
+
+nsd_precmd()
+{
+	db=`%%PREFIX%%/sbin/nsd-checkconf -o database %%PREFIX%%/etc/nsd/nsd.conf`
+	if [ ! -f "$db" ]; then
+		${command} rebuild
+	fi
+}
+
+nsd_reload()
+{
+	${command} rebuild && ${command} reload
+}
+
+nsd_stop()
+{
+	echo "Merging nsd zone transfer changes to zone files."
+	${command} patch
+
+	echo "Stopping ${name}."
+	${command} stop
+}
+
+run_rc_command "$1"
+
