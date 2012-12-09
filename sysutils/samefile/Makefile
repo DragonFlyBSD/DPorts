@@ -1,0 +1,33 @@
+# New ports collection makefile for:   samefile
+# Date created:        15 March 2001
+# Whom:                schweikh
+#
+# $FreeBSD: ports/sysutils/samefile/Makefile,v 1.10 2012/11/17 06:01:45 svnexp Exp $
+#
+
+PORTNAME=	samefile
+PORTVERSION=	2.12
+CATEGORIES=	sysutils
+MASTER_SITES=	http://www.schweikhardt.net/
+
+MAINTAINER=	schweikh@FreeBSD.org
+COMMENT=	Find files with identical contents
+
+CONFLICTS=	samesame-[0-9]*
+
+MAN1=		samefile.1
+PLIST_FILES=	bin/samefile
+GNU_CONFIGURE=	yes
+
+CFLAGS+=	-ansi -pedantic -Wall -Wshadow -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wconversion -Wsign-compare -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wredundant-decls -Wnested-externs -Winline -Wno-long-long
+
+post-build:
+	@${ECHO_MSG} "   >>>>                        <<<<"
+	@${ECHO_MSG} "   >>>> Running the test suite <<<<"
+	@${ECHO_MSG} "   >>>>                        <<<<"
+	cd ${WRKSRC}; ${MAKE} test
+
+post-install:
+	${STRIP_CMD} ${PREFIX}/bin/samefile
+
+.include <bsd.port.mk>
