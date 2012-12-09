@@ -1,0 +1,5 @@
+%%ETCDIR%%/admuser.conf
+%%ETCDIR%%/admuser.log
+www/cgi-bin/admuser.cgi
+@dirrm %%ETCDIR%%
+@dirrmtry www/cgi-bin
