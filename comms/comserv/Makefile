@@ -1,0 +1,20 @@
+# New ports collection makefile for:	comserv
+# Date created:				12 November 2000
+# Whom:					Brian Dean <bsd@FreeBSD.org>
+#
+# $FreeBSD: ports/comms/comserv/Makefile,v 1.18 2012/11/17 05:54:59 svnexp Exp $
+#
+
+PORTNAME=	comserv
+PORTVERSION=	1.4.3
+CATEGORIES=	comms net
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	bsd
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Provide network access to local serial ports and make remote ports appear local
+
+MAN8=		comservd.8
+MANCOMPRESSED=	yes
+
+.include <bsd.port.mk>
