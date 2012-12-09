@@ -1,0 +1,23 @@
+--- Makefile.orig	Wed Jul  6 00:16:36 2005
++++ Makefile	Mon Nov 14 22:52:35 2005
+@@ -1,6 +1,6 @@
+ #
+ #
+-CFLAGS=-O2
++CFLAGS?=$(CFLAGS)
+ # 
+ # Defines:
+ #DEFS=
+@@ -14,9 +14,9 @@
+ # (3) If need call /bin/sh for parsing argument of option -s
+ DEFS+=-DEXEC_SHELL
+ 
+-BINDIR ?= /bin
+-MAPDIR ?= /etc/mapchan
+-LDFLAGS=-s
++BINDIR?=$(PREFIX)/bin
++MAPDIR?=$(PREFIX)/mapchan
++LDFLAGS=-s -lutil
+ LOADLIBES=-lutil
+ #--------------------------------------------------------------
+ CFLAGS += $(DEFS)
