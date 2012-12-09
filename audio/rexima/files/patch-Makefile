@@ -1,0 +1,18 @@
+--- Makefile.orig	Mon Apr  7 06:51:06 2003
++++ Makefile	Wed Oct 22 16:41:57 2003
+@@ -1,13 +1,12 @@
+ # Makefile - makefile for rexima
+ 
+-CC=gcc
+-CFLAGS=-O -Wall
++CC?=cc
++CFLAGS?=-O -pipe
+ 
+ # Set BINDIR to directory for binary,
+ # MANDIR to directory for man page.
+ # Usually it will be simpler to just set PREFIX.
+ #
+-PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin
+ MANDIR=$(PREFIX)/man/man1
+ 
