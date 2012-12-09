@@ -1,0 +1,3 @@
+include/utf-8.h
+lib/libutf-8.so
+lib/libutf-8.so.1
