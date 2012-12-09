@@ -1,0 +1,12 @@
+bin/pads
+bin/pads-report
+etc/pads-ether-codes
+etc/pads-signature-list
+etc/pads.conf
+%%DATADIR%%/AUTHORS
+%%DATADIR%%/COPYING
+%%DATADIR%%/CREDITS
+%%DATADIR%%/ChangeLog
+%%DATADIR%%/INSTALL
+%%DATADIR%%/README
+@dirrm %%DATADIR%%
