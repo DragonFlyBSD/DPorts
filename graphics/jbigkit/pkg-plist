@@ -1,0 +1,8 @@
+bin/jbgtopbm
+bin/pbmtojbg
+include/jbig.h
+lib/libjbig.a
+lib/libjbig.so
+lib/libjbig.so.1
+%%PORTDOCS%%%%DOCSDIR%%/jbig.doc
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
