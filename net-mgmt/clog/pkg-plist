@@ -1,0 +1,2 @@
+@comment $FreeBSD: ports/net-mgmt/clog/pkg-plist,v 1.4 2012/11/17 06:00:31 svnexp Exp $
+sbin/clog
