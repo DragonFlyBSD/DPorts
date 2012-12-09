@@ -1,0 +1,20 @@
+# New ports collection makefile for:	id3tool
+# Date created:				Apr 1, 2001
+# Whom:					Mark Pulford <mark@kyne.com.au>
+#
+# $FreeBSD: ports/audio/id3tool/Makefile,v 1.9 2012/11/17 05:54:35 svnexp Exp $
+#
+
+PORTNAME=	id3tool
+PORTVERSION=	1.2a
+CATEGORIES=	audio
+MASTER_SITES=	http://nekohako.xware.cx/id3tool/
+
+MAINTAINER=	gavin.atkinson@ury.york.ac.uk
+COMMENT=	A utility for manipulating mp3 ID3 Tags
+
+GNU_CONFIGURE=	yes
+MAN1=		id3tool.1
+PLIST_FILES=	bin/id3tool
+
+.include <bsd.port.mk>
