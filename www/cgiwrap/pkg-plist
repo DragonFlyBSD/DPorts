@@ -1,0 +1,5 @@
+www/cgi-bin/cgiwrap
+%%DEBUGFLAG%%www/cgi-bin/cgiwrapd
+%%NPHFLAG%%www/cgi-bin/nph-cgiwrap
+%%NPHFLAG%%%%DEBUGFLAG%%www/cgi-bin/nph-cgiwrapd
+@dirrmtry www/cgi-bin
