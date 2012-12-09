@@ -1,0 +1,30 @@
+# New ports collection makefile for:	corkscrew
+# Date created:			Apr 12, 2001
+# Whom:				Mark Pulford <mark@kyne.com.au>
+#
+# $FreeBSD: ports/net/corkscrew/Makefile,v 1.12 2012/11/17 05:59:58 svnexp Exp $
+#
+
+PORTNAME=	corkscrew
+PORTVERSION=	2.0
+PORTREVISION=	1
+CATEGORIES=	net
+MASTER_SITES=	http://www.agroman.net/corkscrew/ \
+		CRITICAL
+
+MAINTAINER=	ehaupt@FreeBSD.org
+COMMENT=	A HTTP tunnelling utility for SSH
+
+LICENSE=	GPLv2
+
+GNU_CONFIGURE=	yes
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for file in NEWS README TODO
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>
