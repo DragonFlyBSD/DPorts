@@ -1,0 +1,6 @@
+bin/prn
+bin/cprn
+bin/cmt
+bin/psconv
+lib/prn/cmtdefs
+@dirrm lib/prn
