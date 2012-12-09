@@ -1,0 +1,6 @@
+bin/bmore
+bin/bvedit
+bin/bvi
+bin/bview
+%%DATADIR%%/bmore.help
+@dirrm %%DATADIR%%
