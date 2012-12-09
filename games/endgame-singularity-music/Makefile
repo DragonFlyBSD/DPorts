@@ -1,0 +1,24 @@
+# New ports collection makefile for:	endgame-singularity-music
+# Date created:		10 August 2007
+# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
+#
+# $FreeBSD: ports/games/endgame-singularity-music/Makefile,v 1.9 2012/11/17 05:57:37 svnexp Exp $
+#
+
+PORTNAME=	endgame-singularity-music
+PORTVERSION=	006
+CATEGORIES=	games
+MASTER_SITES=	GOOGLE_CODE CENKES
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Music pack for endgame-singularity
+
+PROJECTHOST=	endgame-singularity
+NO_BUILD=	yes
+USE_ZIP=	yes
+DATADIR=	${PREFIX}/share/singularity
+
+do-install:
+	@cd ${WRKSRC}/&&${COPYTREE_SHARE} music ${DATADIR}/
+
+.include <bsd.port.mk>
