@@ -1,0 +1,33 @@
+@comment $FreeBSD: ports/news/leafnode/pkg-plist,v 1.21 2012/11/17 06:00:42 svnexp Exp $
+bin/leafnode-version
+bin/newsq
+etc/leafnode/config.example
+etc/leafnode/filters.example
+etc/leafnode/nntp.rules.dist
+etc/leafnode/run.tcpd.dist
+etc/leafnode/run.tcpserver.dist
+etc/leafnode/Makefile.dist
+etc/leafnode/UNINSTALL-daemontools
+sbin/leafnode
+sbin/fetchnews
+sbin/texpire
+sbin/checkgroups
+sbin/applyfilter
+sbin/setup-daemontools.sh
+@comment only remove these when empty:
+@comment we don't want to kill the news spool across updates
+@unexec rm -f %%SPOOLDIR%%/leaf.node/lock.file
+@dirrmtry %%SPOOLDIR%%/failed.postings 2>/dev/null || :
+@dirrmtry %%SPOOLDIR%%/failed.postings
+@dirrmtry %%SPOOLDIR%%/leaf.node
+@dirrmtry %%SPOOLDIR%%/message.id/*
+@dirrmtry %%SPOOLDIR%%/message.id
+@dirrmtry %%SPOOLDIR%%/interesting.groups
+@dirrmtry %%SPOOLDIR%%/out.going
+@dirrmtry %%SPOOLDIR%%/temp.files
+@dirrmtry %%SPOOLDIR%%
+@dirrmtry %D/var/spool
+@dirrmtry %D/var
+@dirrmtry %D/lib/leafnode
+@dirrm etc/leafnode
+@unexec if test -d "%%SPOOLDIR%%" || test -d "%D/etc/leafnode" ; then echo ; echo "==============================================================================" ; echo "If you want to remove leafnode for good," ; echo "type: rm -rf %D/etc/leafnode %%SPOOLDIR%%" ; echo "==============================================================================" ; fi
