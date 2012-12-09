@@ -1,0 +1,4 @@
+sbin/ipacctd
+%%PORTDOCS%%%%DOCSDIR%%/ru/README.ipacctd
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/ru
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
