@@ -1,0 +1,34 @@
+--- Makefile.orig	2012-01-22 22:48:54.000000000 +0900
++++ Makefile	2012-02-12 23:57:39.000000000 +0900
+@@ -6,9 +6,6 @@
+ 
+ DESTDIR = 
+ 
+-CC = gcc
+-RPM_OPT_FLAGS = -Os -Wall -g
+-CFLAGS = $(RPM_OPT_FLAGS) $(EXTRA_CFLAGS)
+ INSTALL = install
+ INSTALLFLAGS = -s
+ prefix = $(DESTDIR)/usr
+@@ -25,12 +22,6 @@
+ DEFINES = -DVERSION=\"$(VERSION)\"  -D__COMPILER__="\"$(COMPILER)\""
+ OUT = -o $@
+ 
+-ifeq ($(CC),wcl386)
+-  CFLAGS = "-ox -wx $(EXTRA_CFLAGS)"
+-  DEFINES = -dMISS_STRSIGNAL -dMISS_PREAD -dVERSION=\"$(VERSION)\" -d__COMPILER__="\"$(COMPILER)\""
+-  OUT = ""
+-endif
+-
+ default: $(TARGETS)
+ 
+ libfalloc: dd_rescue.c
+@@ -43,7 +34,7 @@
+ 	$(CC) $(CFLAGS) -DHAVE_FALLOCATE=1 $(DEFINES) $< -o dd_rescue
+ 
+ dd_rescue: dd_rescue.c
+-	$(CC) $(CFLAGS) $(DEFINES) $< $(OUT)
++	$(CC) $(CFLAGS) $(DEFINES) $(LIBS) $< $(OUT)
+ 
+ strip: dd_rescue
+ 	strip -S $<
