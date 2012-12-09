@@ -1,0 +1,25 @@
+etc/ngircd.conf.sample
+sbin/ngircd
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/Bopm.txt
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/Capabilities.txt
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/FAQ.txt
+%%PORTDOCS%%%%DOCSDIR%%/GIT.txt
+%%PORTDOCS%%%%DOCSDIR%%/HowToRelease.txt
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL
+%%PORTDOCS%%%%DOCSDIR%%/Modes.txt
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/PAM.txt
+%%PORTDOCS%%%%DOCSDIR%%/Platforms.txt
+%%PORTDOCS%%%%DOCSDIR%%/Protocol.txt
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/README-AUX.txt
+%%PORTDOCS%%%%DOCSDIR%%/README-BeOS.txt
+%%PORTDOCS%%%%DOCSDIR%%/README-Interix.txt
+%%PORTDOCS%%%%DOCSDIR%%/RFC.txt
+%%PORTDOCS%%%%DOCSDIR%%/SSL.txt
+%%PORTDOCS%%%%DOCSDIR%%/Services.txt
+%%PORTDOCS%%%%DOCSDIR%%/sample-ngircd.conf
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
