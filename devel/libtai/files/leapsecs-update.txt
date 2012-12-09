@@ -1,0 +1,5 @@
+# Under a BSDL license. Copyright by Mario S F Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: ports/devel/libtai/files/leapsecs-update.txt,v 1.4 2012/11/17 05:55:56 svnexp Exp $
++2005-12-31
++2008-12-31
++2012-06-30
