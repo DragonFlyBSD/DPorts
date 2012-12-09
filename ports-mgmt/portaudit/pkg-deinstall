@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/ports-mgmt/portaudit/pkg-deinstall,v 1.4 2012/11/17 06:00:45 svnexp Exp $
+#
+
+case $2 in
+POST-DEINSTALL)
+  echo
+  echo "The portaudit package has been deleted."
+  if [ -f "%%DATABASEDIR%%/auditfile.tbz" ]; then
+    echo "If you're *not* upgrading and won't be using"
+    echo "it any longer, you may want to remove the"
+    echo "portaudit database:"
+    echo
+    echo "  rm -Rf %%DATABASEDIR%%"
+  fi
+  echo
+  ;;
+esac
