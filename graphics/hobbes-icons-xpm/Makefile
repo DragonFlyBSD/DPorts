@@ -1,0 +1,37 @@
+# New ports collection makefile for:	hobbes-icons-xpm3
+# Date created:		19 October 1996
+# Whom:			pgs
+#
+# $FreeBSD: ports/graphics/hobbes-icons-xpm/Makefile,v 1.26 2012/11/17 05:58:09 svnexp Exp $
+#
+
+PORTNAME=	hobbes-icons-xpm3
+PORTVERSION=	1.0
+PORTREVISION=	1
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://ftp.x.org/R5contrib/
+DISTNAME=	${PORTNAME}
+
+MAINTAINER=	dinoex@FreeBSD.org
+COMMENT=	Collection of over 3000 icons in XPM3 format
+
+NO_BUILD=	yes
+
+# Where it will be installed (change pkg/PLIST if you change this)
+LIBDIR=		${PREFIX}/include/X11/pixmaps
+
+do-install:
+	@${MKDIR} ${LIBDIR}
+	${CP} -R ${WRKSRC}/* ${LIBDIR}
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${LIBDIR}
+	-${RM} ${LIBDIR}/README
+	-${RM} ${LIBDIR}/readem.shar
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	@${INSTALL_SCRIPT} ${WRKSRC}/*.shar ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
