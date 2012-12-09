@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/shells/heirloom-sh/pkg-install,v 1.2 2012/11/17 06:01:23 svnexp Exp $
+#
+
+JSH="$(echo ${PKG_PREFIX-/usr/local}/bin/jsh | /usr/bin/sed -e 's|//|/|g')"
+SHELLS="/etc/shells"
+
+case $2 in
+POST-INSTALL)
+  if [ -d "${SHELLS%/*}" ] && ! grep -qs "^$JSH\$" "$SHELLS"; then
+    if [ $(id -u) -eq 0 ]; then
+      echo "$JSH" >> "$SHELLS"
+    else
+      echo "Not root, please add $JSH to $SHELLS manually"
+    fi
+  fi
+  ;;
+esac
