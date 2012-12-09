@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/devel/libestr/pkg-plist,v 1.2 2012/11/17 05:55:54 svnexp Exp $
+include/libestr.h
+lib/libestr.a
+lib/libestr.la
+lib/libestr.so
+lib/libestr.so.0
+libdata/pkgconfig/libestr.pc
