@@ -1,0 +1,2 @@
+@comment $FreeBSD: ports/sysutils/minirsyslogd/pkg-plist,v 1.2 2012/11/17 06:01:38 svnexp Exp $
+sbin/minirsyslogd

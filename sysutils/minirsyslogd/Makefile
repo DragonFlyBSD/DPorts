@@ -1,0 +1,26 @@
+# New ports collection makefile for:	minirsyslogd
+# Date created:		2003-10-30
+# Whom:			lx@redundancy.redundancy.org
+#
+# $FreeBSD: ports/sysutils/minirsyslogd/Makefile,v 1.4 2012/11/17 06:01:38 svnexp Exp $
+#
+
+PORTNAME=	minirsyslogd
+PORTVERSION=	1.02
+CATEGORIES=	sysutils net
+MASTER_SITES=	http://redundancy.redundancy.org/mirror/
+
+MAINTAINER=	lx@FreeBSD.org
+COMMENT=	Minimal, fast and secure syslog receiver
+
+MAN8=		minirsyslogd.8
+MANCOMPRESSED=	yes
+
+do-build:
+	cd ${WRKSRC} && ${CC} ${CFLAGS} -o ${PORTNAME} ${PORTNAME}.c
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.8.gz ${MAN8PREFIX}/man/man8
+
+.include <bsd.port.mk>
