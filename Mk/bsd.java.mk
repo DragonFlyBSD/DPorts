@@ -9,7 +9,7 @@
 # Please send all suggested changes to the maintainer instead of committing
 # them to CVS yourself.
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.java.mk,v 1.95 2012/11/17 05:54:17 svnexp Exp $
 #
 
 .if !defined(Java_Include)
@@ -291,9 +291,11 @@ A_JAVA_PORT_VERSION=		${A_JAVA_PORT_INFO:MVERSION=*:C/VERSION=([0-9])\.([0-9])(.
 A_JAVA_PORT_OS=				${A_JAVA_PORT_INFO:MOS=*:S,OS=,,}
 A_JAVA_PORT_VENDOR=			${A_JAVA_PORT_INFO:MVENDOR=*:S,VENDOR=,,}
 .if !defined(_JAVA_PORTS_INSTALLED)
-A_JAVA_PORT_INSTALLED!=		${TEST} -x "${A_JAVA_PORT_HOME}/${_JDK_FILE}" \
-							&& ${ECHO_CMD} "${A_JAVA_PORT}" \
-							|| ${TRUE}
+.if exists(${A_JAVA_PORT_HOME}/${_JDK_FILE})
+A_JAVA_PORT_INSTALLED=	${A_JAVA_PORT}
+.else
+A_JAVA_PORT_INSTALLED=
+.endif
 __JAVA_PORTS_INSTALLED!=	${ECHO_CMD} "${__JAVA_PORTS_INSTALLED} ${A_JAVA_PORT_INSTALLED}"
 .endif
 
@@ -304,11 +306,13 @@ __JAVA_PORTS_INSTALLED!=	${ECHO_CMD} "${__JAVA_PORTS_INSTALLED} ${A_JAVA_PORT_IN
 # 
 # We can't do this in make because it doesn't allow nested modifiers ${foo:${bar}}
 #
-A_JAVA_PORT_POSSIBLE!=		ver="${_JAVA_VERSION}"; os="${_JAVA_OS}"; vendor="${_JAVA_VENDOR}"; \
-				${TEST} "$${ver\#*${A_JAVA_PORT_VERSION}*}" != "${_JAVA_VERSION}" -a \
-				"$${os\#*${A_JAVA_PORT_OS}*}" != "${_JAVA_OS}" -a \
-				"$${vendor\#*${A_JAVA_PORT_VENDOR}*}" != "${_JAVA_VENDOR}" && \
-				${ECHO_CMD} "${A_JAVA_PORT}" || ${TRUE}
+.if "${_JAVA_VERSION:S/${A_JAVA_PORT_VERSION}//}" != "${_JAVA_VERSION}" && \
+    "${_JAVA_OS:S/${_A_JAVA_PORT_OS}//}"          != "${_JAVA_OS}" && \
+    "${_JAVA_VENDOR:S/${_A_JAVA_PORT_VENDOR}//}"  != "${_JAVA_VENDOR}"
+A_JAVA_PORT_POSSIBLE=	${A_JAVA_PORT}
+.else
+A_JAVA_PORT_POSSIBLE=
+.endif
 __JAVA_PORTS_POSSIBLE:=		${__JAVA_PORTS_POSSIBLE} ${A_JAVA_PORT_POSSIBLE}
 .		endfor
 .if !defined(_JAVA_PORTS_INSTALLED)
@@ -326,9 +330,11 @@ _JAVA_PORTS_POSSIBLE=		${__JAVA_PORTS_POSSIBLE:C/ [ ]+/ /g}
 .		undef _JAVA_PORTS_INSTALLED_POSSIBLE
 
 .		for A_JAVA_PORT in ${_JAVA_PORTS_POSSIBLE}
-A_JAVA_PORT_INSTALLED_POSSIBLE!=	inst="${_JAVA_PORTS_INSTALLED}"; \
-					${TEST} "$${inst\#*${A_JAVA_PORT}*}" != "${_JAVA_PORTS_INSTALLED}" && \
-					${ECHO_CMD} "${A_JAVA_PORT}" || ${TRUE}
+.if "${_JAVA_PORTS_INSTALLED:S/${A_JAVA_PORT}//}" != "${_JAVA_PORTS_INSTALLED}"
+A_JAVA_PORT_INSTALLED_POSSIBLE= ${A_JAVA_PORT}
+.else
+A_JAVA_PORT_INSTALLED_POSSIBLE=
+.endif
 __JAVA_PORTS_INSTALLED_POSSIBLE:=	${__JAVA_PORTS_INSTALLED_POSSIBLE} ${A_JAVA_PORT_INSTALLED_POSSIBLE}
 .		endfor
 _JAVA_PORTS_INSTALLED_POSSIBLE=		${__JAVA_PORTS_INSTALLED_POSSIBLE:C/[ ]+//g}
