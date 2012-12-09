@@ -2841,18 +2841,11 @@ patch-sites: patch-sites-DEFAULT
 
 .if defined(IGNOREFILES)
 .if !defined(CKSUMFILES)
-CKSUMFILES!=	\
-	for file in ${ALLFILES}; do \
-		ignore=0; \
-		for tmp in ${IGNOREFILES}; do \
-			if [ "$$file" = "$$tmp" ]; then \
-				ignore=1; \
-			fi; \
-		done; \
-		if [ "$$ignore" = 0 ]; then \
-			${ECHO_CMD} "$$file"; \
-		fi; \
-	done
+.  for file in ${ALLFILES}
+.    if empty(IGNOREFILES:M${file})
+CKSUMFILES+= ${file}
+.    endif
+.  endfor
 .endif
 .else
 CKSUMFILES=		${ALLFILES}
