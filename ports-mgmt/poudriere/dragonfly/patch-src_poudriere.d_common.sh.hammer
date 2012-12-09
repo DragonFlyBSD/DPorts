@@ -1,5 +1,5 @@
---- /dev/null	2012-12-05 09:14:49.161043935 +0100
-+++ src/poudriere.d/common.sh.hammer	2012-12-05 10:19:20.000000000 +0100
+--- /dev/null	2012-12-06 03:01:20.230192667 +0100
++++ src/poudriere.d/common.sh.hammer	2012-12-06 03:16:16.000000000 +0100
 @@ -0,0 +1,567 @@
 +#!/bin/sh
 +
@@ -127,11 +127,11 @@
 +	# rollback only used for jails
 +	# Don't transverse the entire tree, just do the minimum
 +
-+	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${pfs}/etc
-+	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/var       ${pfs}/var
-+	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${pfs}/etc
-+	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/usr/bin   ${pfs}/usr/bin
-+	cpdup -i0 ${HAMMER_SNAPDIR}/${snap}/usr/local ${pfs}/usr/local
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${pfs}/etc
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/var       ${pfs}/var
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${pfs}/etc
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/usr/bin   ${pfs}/usr/bin
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/usr/local ${pfs}/usr/local
 +	rm -rf ${pfs}/poudriere
 +}
 +
@@ -314,7 +314,7 @@
 +
 +		# sync slave with master snapshot
 +		msg_n "Syncing slave ${j}..."
-+		cpdup -x -i0 ${HAMMER_SNAPDIR}/${snap}/ ${pfs}/
++		cpdup -VV -x -i0 ${HAMMER_SNAPDIR}/${snap}/ ${pfs}/
 +		echo "done"
 +
 +		# take a snapshot of slave

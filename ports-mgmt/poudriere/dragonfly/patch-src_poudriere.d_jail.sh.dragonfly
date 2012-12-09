@@ -1,5 +1,5 @@
---- /dev/null	2012-11-25 03:01:18.885857679 +0100
-+++ src/poudriere.d/jail.sh.dragonfly	2012-11-25 13:42:30.000000000 +0100
+--- /dev/null	2012-12-06 03:01:20.230192667 +0100
++++ src/poudriere.d/jail.sh.dragonfly	2012-12-06 03:16:39.000000000 +0100
 @@ -0,0 +1,267 @@
 +#!/bin/sh
 +#
@@ -37,7 +37,7 @@
 +	for j in ${JOBX}; do
 +		if [ -d ${JAILFS}.job-${j} ]; then
 +			msg_n "${JAILNAME}: Syncing slave ${j}..."
-+			cpdup -x -i0 ${JAILFS}/ ${JAILFS}.job-${j}/
++			cpdup -VV -x -i0 ${JAILFS}/ ${JAILFS}.job-${j}/
 +			echo "done"
 +		fi
 +	done
@@ -223,7 +223,7 @@
 +	for j in ${JOBX}; do
 +		if [ -d ${JAILFS}.job-${j} ]; then
 +			msg_n "${JAILNAME}: Syncing slave ${j}..."
-+			cpdup -x -i0 ${JAILFS}/ ${JAILFS}.job-${j}/
++			cpdup -VV -x -i0 ${JAILFS}/ ${JAILFS}.job-${j}/
 +			echo "done"
 +		fi
 +	done

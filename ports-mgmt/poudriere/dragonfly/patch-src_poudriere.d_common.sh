@@ -1,5 +1,5 @@
 --- src/poudriere.d/common.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/common.sh	2012-12-08 13:28:54.287645000 +0100
++++ src/poudriere.d/common.sh	2012-12-06 13:06:12.000000000 +0100
 @@ -1,8 +1,6 @@
  #!/bin/sh
  
@@ -269,7 +269,7 @@
  
 -	mount -t nullfs ${PORTSDIR} ${JAILMNT}/usr/ports || err 1 "Failed to mount the ports directory "
 -	mount -t nullfs ${PKGDIR} ${JAILMNT}/usr/ports/packages || err 1 "Failed to mount the packages directory "
-+	${NULLMOUNT} ${PORTSDIR} ${JAILMNT}/${PORTSRC} || err 1 "Failed to mount the ports directory "
++	${NULLMOUNT} -r ${PORTSDIR} ${JAILMNT}/${PORTSRC} || err 1 "Failed to mount the ports directory "
 +	${NULLMOUNT} ${PKGDIR} ${JAILMNT}/${STD_PACKAGES} || err 1 "Failed to mount the packages directory "
  
  	if [ "$(realpath ${DISTFILES_CACHE:-/nonexistent})" != "$(realpath ${PORTSDIR}/distfiles)" ]; then
@@ -466,7 +466,15 @@
  					while read mod type path; do
  					local ppath
  					ppath=`echo "$path" | sed -e "s,^${JAILMNT},," -e "s,^${PREFIX}/,," -e "s,^share/${portname},%%DATADIR%%," -e "s,^etc/${portname},%%ETCDIR%%,"`
-@@ -676,10 +418,10 @@
+@@ -628,6 +370,7 @@
+ 					/var/run/*) continue;;
+ 					/wrkdirs/*) continue;;
+ 					/tmp/*) continue;;
++					lib/charset.alias) continue;;
+ 					share/nls/POSIX) continue;;
+ 					share/nls/en_US.US-ASCII) continue;;
+ 					/var/db/fontconfig/*) continue;;
+@@ -676,10 +419,10 @@
  			fi
  		fi
  	done
@@ -479,7 +487,7 @@
  	return 0
  }
  
-@@ -716,58 +458,6 @@
+@@ -716,58 +459,6 @@
  	fi
  }
  
@@ -538,7 +546,7 @@
  build_stats_list() {
  	[ $# -ne 3 ] && eargs html_path type display_name
  	local html_path="$1"
-@@ -792,12 +482,12 @@
+@@ -792,12 +483,12 @@
      <div id="${type}">
        <h2>${display_name} ports </h2>
        <table>
@@ -555,7 +563,7 @@
  EOF
  	cnt=0
  	while read port extra; do
-@@ -818,12 +508,12 @@
+@@ -818,12 +509,12 @@
  		fi
  
  		cat >> ${html_path} << EOF
@@ -572,7 +580,7 @@
  EOF
  		cnt=$(( cnt + 1 ))
  	done <  ${JAILMNT}/poudriere/ports.${type}
-@@ -916,74 +606,6 @@
+@@ -916,74 +607,6 @@
  	[ "${html_path}" = "/dev/null" ] || mv ${html_path} ${html_path%.tmp}
  }
  
@@ -647,7 +655,7 @@
  
  # Build ports in parallel
  # Returns when all are built.
-@@ -1066,11 +688,11 @@
+@@ -1066,11 +689,11 @@
  
  	PKGNAME="${pkgname}" # set ASAP so cleanup() can use it
  	port=$(cache_get_origin ${pkgname})
@@ -661,7 +669,7 @@
  
  	# If this port is IGNORED, skip it
  	# This is checked here instead of when building the queue
-@@ -1119,10 +741,12 @@
+@@ -1119,10 +742,12 @@
  			job_msg "Finished build of ${port}: Success"
  			# Cache information for next run
  			pkg_cache_data "${PKGDIR}/All/${PKGNAME}.${PKG_EXT}" ${port} || :
@@ -674,7 +682,7 @@
  		fi
  	fi
  
-@@ -1137,10 +761,10 @@
+@@ -1137,10 +762,10 @@
  	[ $# -ne 1 ] && eargs directory
  	local dir=$1
  	local makeargs="-VPKG_DEPENDS -VBUILD_DEPENDS -VEXTRACT_DEPENDS -VLIB_DEPENDS -VPATCH_DEPENDS -VFETCH_DEPENDS -VRUN_DEPENDS"
@@ -687,7 +695,7 @@
  }
  
  deps_file() {
-@@ -1150,7 +774,7 @@
+@@ -1150,7 +775,7 @@
  
  	if [ ! -f "${depfile}" ]; then
  		if [ "${PKG_EXT}" = "tbz" ]; then
@@ -696,7 +704,7 @@
  		else
  			pkg info -qdF "${pkg}" > "${depfile}"
  		fi
-@@ -1168,7 +792,7 @@
+@@ -1168,7 +793,7 @@
  	if [ ! -f "${originfile}" ]; then
  		if [ -z "${origin}" ]; then
  			if [ "${PKG_EXT}" = "tbz" ]; then
@@ -705,7 +713,7 @@
  			else
  				origin=$(pkg query -F "${pkg}" "%o")
  			fi
-@@ -1188,7 +812,7 @@
+@@ -1188,7 +813,7 @@
  
  	if [ ! -f "${optionsfile}" ]; then
  		if [ "${PKG_EXT}" = "tbz" ]; then
@@ -714,7 +722,7 @@
  		else
  			compiled_options=$(pkg query -F "${pkg}" '%Ov %Ok' | awk '$1 == "on" {print $2}' | sort | tr '\n' ' ')
  		fi
-@@ -1284,7 +908,7 @@
+@@ -1284,7 +909,7 @@
  	o=$(pkg_get_origin ${pkg})
  	v=${pkg##*-}
  	v=${v%.*}
@@ -723,7 +731,7 @@
  		msg "${o} does not exist anymore. Deleting stale ${pkg##*/}"
  		delete_pkg ${pkg}
  		return 0
-@@ -1299,7 +923,7 @@
+@@ -1299,7 +924,7 @@
  
  	# Check if the compiled options match the current options from make.conf and /var/db/options
  	if [ "${CHECK_CHANGED_OPTIONS:-no}" != "no" ]; then
@@ -732,7 +740,7 @@
  		compiled_options=$(pkg_get_options ${pkg})
  
  		if [ "${compiled_options}" != "${current_options}" ]; then
-@@ -1365,7 +989,7 @@
+@@ -1365,7 +990,7 @@
  
  	# Add to cache if not found.
  	if [ -z "${pkgname}" ]; then
@@ -741,7 +749,7 @@
  		# Make sure this origin did not already exist
  		existing_origin=$(cache_get_origin "${pkgname}" 2>/dev/null || :)
  		# It may already exist due to race conditions, it is not harmful. Just ignore.
-@@ -1417,24 +1041,6 @@
+@@ -1417,24 +1042,6 @@
  	done
  }
  
@@ -766,7 +774,7 @@
  parallel_stop() {
  	wait
  }
-@@ -1596,8 +1202,7 @@
+@@ -1596,8 +1203,7 @@
  	export FORCE_PACKAGE=yes
  	export USER=root
  	export HOME=/root
@@ -776,7 +784,7 @@
  	[ -z "${JAILMNT}" ] && err 1 "No path of the base of the jail defined"
  	[ -z "${PORTSDIR}" ] && err 1 "No ports directory defined"
  	[ -z "${PKGDIR}" ] && err 1 "No package directory defined"
-@@ -1620,9 +1225,9 @@
+@@ -1620,9 +1226,9 @@
  
  	msg "Populating LOCALBASE"
  	mkdir -p ${JAILMNT}/${MYBASE:-/usr/local}
@@ -788,7 +796,7 @@
  	if [ -n "${WITH_PKGNG}" ]; then
  		export PKGNG=1
  		export PKG_EXT="txz"
-@@ -1645,26 +1250,40 @@
+@@ -1645,26 +1251,40 @@
  . ${SCRIPTPREFIX}/../../etc/poudriere.conf
  POUDRIERED=${SCRIPTPREFIX}/../../etc/poudriere.d
  
@@ -837,7 +845,7 @@
  case ${ZROOTFS} in
  	[!/]*)
  		err 1 "ZROOTFS shoud start with a /"
-@@ -1679,8 +1298,3 @@
+@@ -1679,8 +1299,3 @@
  	*) err 1 "invalid format for WRKDIR_ARCHIVE_FORMAT: ${WRKDIR_ARCHIVE_FORMAT}" ;;
  esac
  

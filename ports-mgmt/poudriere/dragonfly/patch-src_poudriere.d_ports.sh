@@ -1,5 +1,5 @@
 --- src/poudriere.d/ports.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/ports.sh	2012-12-08 15:43:53.718950000 +0100
++++ src/poudriere.d/ports.sh	2012-12-06 03:19:49.000000000 +0100
 @@ -21,12 +21,11 @@
                       them.
      -p name       -- specifies the name of the portstree we workon . If not
@@ -138,7 +138,7 @@
 -			;;
 +		rsync)
 +			msg "Cloning the ports tree via rsync"
-+			cpdup -i0 ${DPORTS_RSYNC_LOC}/ ${PTFS}/ || {
++			cpdup -VV -i0 ${DPORTS_RSYNC_LOC}/ ${PTFS}/ || {
 + 				err 1 " Fail"
 + 			}
 + 			echo " done"
@@ -229,7 +229,7 @@
 -		;;
 +	rsync)
 +		msg "Updating the ports tree via rsync"
-+		cpdup -i0 ${DPORTS_RSYNC_LOC}/ ${PTFS}/
++		cpdup -VV -i0 ${DPORTS_RSYNC_LOC}/ ${PTFS}/
 + 		echo " done"
 + 		;;
  	git)
