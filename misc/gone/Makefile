@@ -1,0 +1,35 @@
+# New ports collection makefile for:   gone
+# Date created:        19 April 1998
+# Whom:                marcus
+#
+# $FreeBSD: ports/misc/gone/Makefile,v 1.18 2012/11/17 05:59:37 svnexp Exp $
+#
+
+PORTNAME=	gone
+PORTVERSION=	1.3.6
+CATEGORIES=	misc
+MASTER_SITES=	http://www.marcuscom.com/downloads/gone/
+
+MAINTAINER=	marcus@FreeBSD.org
+COMMENT=	A terminal locking utility with many improvements over lock(1)
+
+MAN1=		gone.1
+PLIST_FILES=	bin/gone
+GNU_CONFIGURE=	yes
+
+OPTIONS=	SETUID "Install gone setuid root for password support" OFF
+
+.include <bsd.port.pre.mk>
+
+#
+# If you would like to be able to use system passwords for gone
+# override this with WITH_SETUID=yes in your environment.
+# Be aware that setting gone to suid MAY be a security hole.
+#
+.if defined(WITH_SETUID)
+CONFIGURE_ENV=	with_setuid=yes
+.else
+CONFIGURE_ENV=	with_setuid=no
+.endif
+
+.include <bsd.port.post.mk>
