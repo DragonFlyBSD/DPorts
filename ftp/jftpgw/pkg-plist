@@ -1,0 +1,4 @@
+sbin/jftpgw
+etc/jftpgw.conf.sample
+%%PORTDOCS%%%%DOCSDIR%%/config.html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
