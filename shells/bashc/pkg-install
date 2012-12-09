@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/shells/bashc/pkg-install,v 1.2 2012/11/17 06:01:23 svnexp Exp $
+#
+
+BASHC="$(echo ${PKG_PREFIX-/usr/local}/bin/bashc | /usr/bin/sed -e 's|//|/|g')"
+SHELLS="/etc/shells"
+
+case $2 in
+POST-INSTALL)
+  if [ -d "${SHELLS%/*}" ] && ! grep -qs "^$BASHC\$" "$SHELLS"; then
+    if [ `id -u` -eq 0 ]; then
+      echo "$BASHC" >> "$SHELLS"
+    else
+      echo "Not root, please add $BASHC to $SHELLS manually"
+    fi
+  fi
+  ;;
+esac
