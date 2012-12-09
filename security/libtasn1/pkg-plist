@@ -1,0 +1,19 @@
+@comment $FreeBSD: ports/security/libtasn1/pkg-plist,v 1.13 2012/11/17 06:01:07 svnexp Exp $
+bin/asn1Parser
+bin/asn1Coding
+bin/asn1Decoding
+include/libtasn1.h
+lib/libtasn1.a
+lib/libtasn1.la
+lib/libtasn1.so
+lib/libtasn1.so.4
+libdata/pkgconfig/libtasn1.pc
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/THANKS
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%%%DOCSDIR%%/libtasn1.html
+%%PORTDOCS%%%%DOCSDIR%%/libtasn1.pdf
+%%PORTDOCS%%%%DOCSDIR%%/libtasn1.ps
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
