@@ -1,0 +1,36 @@
+# New ports collection makefile for:	fujiplay
+# Date created:		20 Sep 1999
+# Whom:			KIRIYAMA Kazuhiko<kiri@pis.toba-cmt.ac.jp>
+#
+# $FreeBSD: ports/graphics/fujiplay/Makefile,v 1.11 2012/11/17 05:58:06 svnexp Exp $
+#
+
+PORTNAME=	fujiplay
+PORTVERSION=	1.33
+PORTREVISION=	1
+CATEGORIES=	graphics
+MASTER_SITES=	http://topo.math.u-psud.fr/~bousch/
+DISTNAME=	${PORTNAME}
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Digital camera downloading tool for Fujifilm digital cameras
+
+NO_WRKSUBDIR=	yes
+
+PLIST_FILES=	bin/fujiplay bin/yycc2ppm
+PORTDOCS=	README fujiplay.lsm mx700-commands.html
+
+post-patch:
+	@${REINPLACE_CMD} -e 's/^\(CC[^g]*\)gcc$$/\1${CC}/' ${WRKSRC}/Makefile
+
+do-install:
+	(cd ${WRKDIR}; ${INSTALL_PROGRAM} fujiplay yycc2ppm ${PREFIX}/bin)
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${PREFIX}/share/doc/fujiplay
+.for f in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKDIR}/${f} ${PREFIX}/share/doc/fujiplay
+.endfor
+.endif
+
+.include <bsd.port.mk>
