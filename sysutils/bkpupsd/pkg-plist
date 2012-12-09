@@ -1,0 +1,6 @@
+sbin/bkpupsd
+libexec/bkpupsd/bkpups.failed
+libexec/bkpupsd/bkpups.restored
+libexec/bkpupsd/bkpups.shutdown
+libexec/bkpupsd/bkpups.battlow
+@dirrm libexec/bkpupsd
