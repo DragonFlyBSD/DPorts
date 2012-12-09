@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# $FreeBSD: ports/dns/dualserver/files/dualserver.in,v 1.2 2012/11/17 05:57:08 svnexp Exp $
+#
+# PROVIDE: dualserver
+# REQUIRE: SERVERS
+# BEFORE:
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="dualserver"
+rcvar=dualserver_enable
+start_cmd="dualserver_startcmd"
+stop_cmd="dualserver_stopcmd"
+
+dualserver_startcmd ()
+{
+%%PREFIX%%/sbin/dualserver
+}
+
+dualserver_stopcmd ()
+{
+killall dualserver
+}
+
+load_rc_config $name
+run_rc_command "$1"
