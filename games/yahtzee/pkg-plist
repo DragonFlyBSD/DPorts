@@ -1,0 +1,3 @@
+bin/yahtzee
+%%DATADIR%%/yahtzee.sco
+@dirrm %%DATADIR%%
