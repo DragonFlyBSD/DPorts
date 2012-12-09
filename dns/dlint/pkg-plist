@@ -1,0 +1,4 @@
+sbin/dlint
+sbin/digparse
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
