@@ -1,0 +1,26 @@
+# New ports collection makefile for:	KDE iconset Gartoon
+# Date created:		Mon Nov 15 20:30:10 UTC 2004
+# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+#
+# $FreeBSD: ports/x11-themes/kde-icons-gartoon-svg/Makefile,v 1.8 2012/11/17 06:03:32 svnexp Exp $
+#
+
+PORTNAME=	gartoon
+PORTVERSION=	1.3
+MASTER_SITES=	${MASTER_SITE_LOCAL} \
+		http://ns.ael.ru/ports/distfiles/KDE/
+MASTER_SITE_SUBDIR=	fluffy
+PKGNAMESUFFIX=	-svg
+DISTNAME=	ICONS-Gartoon-SVG-v${PORTVERSION}
+
+COMMENT=	KDE Gartoon SVG iconset
+
+USE_BZIP2=	yes
+
+WRKSRC=		${WRKDIR}/Gartoon
+PORT_SHAREDIR?=	"${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}"
+
+PLIST_DIR_PATTERN_EXTRA=	-v "extra/work"
+PLIST_FILE_PATTERN_EXTRA=	-v "extra/work"
+
+.include "${.CURDIR}/../kde-icons-noia/Makefile.icons"
