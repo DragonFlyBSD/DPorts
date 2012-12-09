@@ -1,0 +1,5 @@
+bin/aub
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/aubconf.example
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
