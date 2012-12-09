@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/net-mgmt/whatmask/pkg-plist,v 1.3 2012/11/17 06:00:38 svnexp Exp $
+bin/whatmask
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
