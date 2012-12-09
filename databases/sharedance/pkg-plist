@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/databases/sharedance/pkg-plist,v 1.2 2012/11/17 05:55:25 svnexp Exp $
+%%DATADIR%%/session_handler.php
+%%DATADIR%%/sharedance.php
+%%DATADIR%%/test_session.php
+%%DATADIR%%/test_sharedance.php
+sbin/sharedanced
+@dirrmtry %%DATADIR%%
