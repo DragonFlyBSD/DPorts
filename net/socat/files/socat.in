@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# Author: Emanuel Haupt <ehaupt@FreeBSD.org>
+#
+# $FreeBSD: ports/net/socat/files/socat.in,v 1.6 2012/11/17 06:00:21 svnexp Exp $
+#
+
+# PROVIDE: socat
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+# Add the following lines to /etc/rc.conf to enable socat:
+# socat_enable="YES"
+# socat_flags="<set as needed>"
+
+. /etc/rc.subr
+
+name="socat"
+rcvar=socat_enable
+
+load_rc_config $name
+
+: ${socat_enable="NO"}
+
+socat_flags="%%PREFIX%%/bin/socat ${socat_flags} &"
+command="%%PREFIX%%/sbin/socat_wrapper"
+command_interpreter="/bin/sh -T"
+pidfile=/var/run/socat_wrapper.pid
+
+run_rc_command "$1"
