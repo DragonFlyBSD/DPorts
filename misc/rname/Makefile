@@ -1,0 +1,24 @@
+# New ports collection makefile for:	rname
+# Date created:		26 October 2000
+# Whom:			roam@FreeBSD.org
+#
+# $FreeBSD: ports/misc/rname/Makefile,v 1.10 2012/11/17 05:59:44 svnexp Exp $
+#
+
+PORTNAME=	rname
+PORTVERSION=	1.0
+PORTREVISION=	1
+CATEGORIES=	misc
+MASTER_SITES=	http://devel.ringlet.net/sysutils/rname/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Execute a program with a fake name
+
+WRKSRC=		${WRKDIR}/${PORTNAME}
+USE_GMAKE=	yes
+
+.if 		!defined(NOPORTDOCS)
+INSTALL_TARGET=	install install-doc
+.endif
+
+.include <bsd.port.mk>
