@@ -1,0 +1,54 @@
+@comment $FreeBSD: ports/databases/libdbi/pkg-plist,v 1.11 2012/11/17 05:55:09 svnexp Exp $
+include/dbi/dbd.h
+include/dbi/dbi-dev.h
+include/dbi/dbi.h
+lib/libdbi.a
+lib/libdbi.la
+lib/libdbi.so
+lib/libdbi.so.1
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide.pdf
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/contact.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/copying-fdl.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/description.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/drivercaps.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/driverfuncs-dbquery.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/driverfuncs-infrastructure.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/driverfuncs-publicdbquery.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/driverfuncs.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/gnugpl.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/helperfuncs.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/index.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/intro.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/requireddrivercaps.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/settingdrivercaps.html
+%%PORTDOCS%%%%DOCSDIR%%/driver-guide/terminology.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide.pdf
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/connerrors.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/contact.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/copying-fdl.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/description.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/errorhandling.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/errornumbers.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/gnugpl.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/index.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/intro.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/quickstart-code.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/quickstart-debriefing.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/quickstart.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/reference-conn.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/reference-core.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/reference-database.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/reference-driver.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/reference-field.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/reference-field-idx.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/reference-field-meta.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/reference-query.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/reference-results.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/reference.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/terminology.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/x267.html
+%%PORTDOCS%%%%DOCSDIR%%/programmers-guide/x276.html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/programmers-guide
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/driver-guide
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm include/dbi

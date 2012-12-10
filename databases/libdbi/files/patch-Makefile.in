@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2010-09-01 07:22:52.000000000 +0800
++++ Makefile.in	2011-03-07 14:25:30.000000000 +0800
+@@ -195,7 +195,7 @@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = foreign dist-zip
+ ACLOCAL_AMFLAGS = -I m4
+-SUBDIRS = src include @docs_subdirs@
++SUBDIRS = src include
+ EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL README README.win32 README.osx TODO NEWS libdbi.spec.in config.h.in Makefile.w32 autogen.sh drivers/example/AUTHORS drivers/example/Makefile.am drivers/example/README drivers/example/TODO drivers/example/.cvsignore drivers/example/dbd_example.c drivers/example/dbd_example.h drivers/example/dbd_example.sgml
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
