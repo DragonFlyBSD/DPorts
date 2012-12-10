@@ -1,0 +1,4 @@
+bin/filetran
+bin/recombine
+%%PORTDOCS%%%%DOCSDIR%%/recombine.txt
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
