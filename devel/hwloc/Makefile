@@ -1,0 +1,57 @@
+# $FreeBSD: ports/devel/hwloc/Makefile,v 1.6 2012/11/17 05:55:50 svnexp Exp $
+
+PORTNAME=	hwloc
+PORTVERSION=	1.5.1
+CATEGORIES=	devel
+MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v1.5/downloads/ \
+		http://icl.cs.utk.edu/open-mpi/software/hwloc/v1.5/downloads/
+
+MAINTAINER=	phd_kimberlite@yahoo.co.jp
+COMMENT=	The Portable Hardware Locality software package
+
+LICENSE=	BSD
+LICENSE_FILE=	${WRKSRC}/COPYING
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--enable-static \
+			--enable-libxml2
+USE_BZIP2=	yes
+USE_PKGCONFIG=	build
+USE_LDCONFIG=	yes
+USE_GNOME=	libxml2 gnomehack
+MAKE_JOBS_SAFE=	yes
+
+PORTDOCS=	*
+
+ONLY_FOR_ARCHS=		i386 amd64
+ONLY_FOR_ARCHS_REASON=	has not been ported to this architecture
+
+OPTIONS_DEFINE=	CAIRO
+
+.include "${.CURDIR}/Makefile.man"
+.include <bsd.port.options.mk>
+
+.if empty(PORT_OPTIONS:MCAIRO)
+CONFIGURE_ARGS+=	--disable-cairo \
+			--without-x
+.else
+CONFIGURE_ARGS+=	--enable-cairo \
+			--with-x
+LIB_DEPENDS+=		cairo:${PORTSDIR}/graphics/cairo
+USE_XORG=		x11
+.endif
+
+post-patch:
+.if empty(PORT_OPTIONS:MDOCS)
+	@${REINPLACE_CMD} -e \
+	's|^\(install-data-am:\) install-dist_pdfDATA \(install-man\)|\1 \2|g' \
+	${WRKSRC}/doc/Makefile.in
+.endif
+
+post-install:
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}/html
+	@${INSTALL_DATA} ${WRKSRC}/doc/doxygen-doc/html/* ${DOCSDIR}/html/.
+.endif
+
+.include <bsd.port.mk>

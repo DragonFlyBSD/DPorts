@@ -1,0 +1,30 @@
+bin/hwloc-assembler
+bin/hwloc-assembler-remote
+bin/hwloc-bind
+bin/hwloc-calc
+bin/hwloc-distances
+bin/hwloc-distrib
+bin/hwloc-info
+bin/hwloc-ls
+bin/hwloc-ps
+bin/lstopo
+bin/lstopo-no-graphics
+include/hwloc.h
+include/hwloc/autogen/config.h
+include/hwloc/bitmap.h
+include/hwloc/cuda.h
+include/hwloc/cudart.h
+include/hwloc/helper.h
+include/hwloc/myriexpress.h
+include/hwloc/openfabrics-verbs.h
+include/hwloc/rename.h
+lib/libhwloc.a
+lib/libhwloc.la
+lib/libhwloc.so
+lib/libhwloc.so.6
+libdata/pkgconfig/hwloc.pc
+share/hwloc/hwloc-valgrind.supp
+share/hwloc/hwloc.dtd
+@dirrmtry share/hwloc
+@dirrmtry include/hwloc/autogen
+@dirrmtry include/hwloc
