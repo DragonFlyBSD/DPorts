@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/games/ftjava/files/ftjava.sh.in,v 1.3 2012/11/17 05:57:39 svnexp Exp $
+
+HOME_DIR=${HOME}/.ftjava
+CLASSPATH=".:%%DATADIR%%/FTJava.jar:%%DATADIR%%/xerces.jar:%%DATADIR%%/activation.jar:%%DATADIR%%/mail.jar"
+export JAVA_VERSION="%%JAVA_VERSION%%"
+
+[ ! -d ${HOME_DIR}/OutgoingGames ] && \
+	mkdir -p ${HOME_DIR}/OutgoingGames
+
+[ ! -d ${HOME_DIR}/IncomingGames ] && \
+	mkdir -p ${HOME_DIR}/IncomingGames
+
+[ ! -d ${HOME_DIR}/Images ] && \
+	ln -s %%DATADIR%%/Images ${HOME_DIR}/Images
+
+[ ! -d ${HOME_DIR}/Ships ] && \
+        ln -s %%DATADIR%%/Ships ${HOME_DIR}/Ships
+
+cd ${HOME_DIR} &&
+	exec %%LOCALBASE%%/bin/java -cp ${CLASSPATH} ftjava.gui.FTJava "${@}"
