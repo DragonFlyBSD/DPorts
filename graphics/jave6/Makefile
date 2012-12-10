@@ -1,0 +1,43 @@
+# Ports collection makefile for:	Jave
+# Date created:				29 January 2006
+# Whom:					Andreas Daehn <ad001@uni-rostock.de>
+#
+# $FreeBSD: ports/graphics/jave6/Makefile,v 1.8 2012/11/17 05:58:10 svnexp Exp $
+
+PORTNAME=	jave6
+PORTVERSION=	0.1
+PORTREVISION=	3
+CATEGORIES=	graphics java
+MASTER_SITES=	http://www.jave.de/developer/\
+		http://ikaria.informatik.uni-rostock.de/public_bsd/FreeBSD/
+DISTNAME=	jave_6.0_i20060105
+EXTRACT_SUFX=	.zip
+
+MAINTAINER=	ad001@uni-rostock.de
+COMMENT=	Java ASCII-Art-Generator
+
+USE_JAVA=	YES
+USE_ZIP=	YES
+JAVA_VERSION=	1.5+
+NO_BUILD=	YES
+DATADIR=	${JAVASHAREDIR}/${PORTNAME}
+LNKTARGET=	${PREFIX}/bin/jave6
+HLPSKRIPT=	jave6
+
+PLIST_SUB+=DATADIR=%%JAVASHAREDIR%%/${PORTNAME}
+
+do-install:
+	@${ECHO} "Installing JavE6 files in ${DATADIR}..."
+	@${MKDIR} ${DATADIR}
+	@${CP} -rv ${WRKDIR}/* ${DATADIR}
+	@${ECHO} "creating start script ${LNKTARGET}..."
+	@${ECHO} "#!/bin/sh" > ${DATADIR}/${HLPSKRIPT}
+	@${ECHO} "JAVA_VERSION=${JAVA_VERSION} exec ${LOCALBASE}/bin/java -jar ${DATADIR}/jave.jar" >> ${DATADIR}/${HLPSKRIPT}
+	@${CHMOD} a+x ${DATADIR}/${HLPSKRIPT}
+	@${LN} -sf ${DATADIR}/${HLPSKRIPT} ${LNKTARGET}
+	@${ECHO} "done."
+
+post-install:
+	@${ECHO} "Errors may occur while running the program, as it will try to access ${DATADIR}/tmp/ for output."
+
+.include <bsd.port.mk>
