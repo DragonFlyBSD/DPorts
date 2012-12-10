@@ -1,0 +1,31 @@
+# New ports collection makefile for:	htable
+# Date created:				13 Aug 2010
+# Whom:					Frederic Culot <frederic@culot.org>
+#
+# $FreeBSD: ports/devel/htable/Makefile,v 1.4 2012/11/17 05:55:50 svnexp Exp $
+#
+
+PORTNAME=	htable
+PORTVERSION=	1.2
+CATEGORIES=	devel
+MASTER_SITES=	ftp://ftp2.culot.org/culot/
+
+MAINTAINER=	culot@FreeBSD.org
+COMMENT=	Lightweight implementation of hash tables in C
+
+USE_GMAKE=	yes
+WRKSRC=		${WRKDIR}/${PORTNAME}
+
+MAN3=		htable.3
+PLIST_FILES=	include/htable.h
+
+NO_BUILD=	yes
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/src/htable.h ${PREFIX}/include
+	${INSTALL_MAN} ${WRKSRC}/src/htable.3 ${MAN3PREFIX}/man/man3
+
+regression-test:
+	cd ${WRKSRC}/tst && ${GMAKE} test
+
+.include <bsd.port.mk>
