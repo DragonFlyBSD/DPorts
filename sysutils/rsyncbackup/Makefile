@@ -1,0 +1,45 @@
+# New ports collection makefile for:	rsyncbackup
+# Date created:				8 October 2007
+# Whom: 				Daniel Bond
+#
+# $FreeBSD: ports/sysutils/rsyncbackup/Makefile,v 1.4 2012/11/17 06:01:43 svnexp Exp $
+#
+
+PORTNAME=	rsyncbackup
+PORTVERSION=	1.0
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
+DISTNAME=	rsyncbackup
+
+MAINTAINER=	ports@danielbond.org
+COMMENT=	Rsync frontend written in Perl
+
+RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync
+
+PROJECTHOST=	rsync-backup
+CONFIGSRC=	${WRKSRC}/config
+CONFIGFILES=	backupset.conf config.conf destinations.conf sources.conf
+
+USE_ZIP=	yes
+USE_PERL5=	yes
+NO_BUILD=	yes
+
+SUB_FILES=	pkg-message
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
+
+	${MKDIR} ${ETCDIR}
+.for configfile in ${CONFIGFILES}
+	${INSTALL_DATA} ${CONFIGSRC}/${configfile} ${ETCDIR}/${configfile}.example
+.endfor
+
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR}
+	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \* ${DOCSDIR})
+.endif
+
+post-install:
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>
