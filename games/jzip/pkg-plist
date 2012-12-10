@@ -1,0 +1,3 @@
+bin/jzip
+%%PORTDOCS%%%%DOCSDIR%%/Jzip.doc
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
