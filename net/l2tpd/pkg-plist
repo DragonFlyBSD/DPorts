@@ -1,0 +1,6 @@
+bin/l2tpd
+etc/l2tp/l2tp-secrets.sample
+etc/l2tp/l2tpd.conf.sample
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm etc/l2tp
