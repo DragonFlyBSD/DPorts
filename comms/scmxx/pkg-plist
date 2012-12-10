@@ -1,0 +1,26 @@
+@comment $FreeBSD: ports/comms/scmxx/pkg-plist,v 1.12 2012/11/17 05:55:01 svnexp Exp $
+bin/adr2vcf
+bin/apoconv
+bin/scmxx
+bin/smi
+share/locale/de/LC_MESSAGES/scmxx.mo
+share/locale/fr/LC_MESSAGES/scmxx.mo
+share/locale/it/LC_MESSAGES/scmxx.mo
+share/locale/ru/LC_MESSAGES/scmxx.mo
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/README_WIN32.txt
+%%PORTDOCS%%%%DOCSDIR%%/adr.txt
+%%PORTDOCS%%%%DOCSDIR%%/apo.txt
+%%PORTDOCS%%%%DOCSDIR%%/doc_sources.txt
+%%PORTDOCS%%%%DOCSDIR%%/gsm0338.txt
+%%PORTDOCS%%%%DOCSDIR%%/gsmcharset.txt
+%%PORTDOCS%%%%DOCSDIR%%/smi.txt
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%EXAMPLESDIR%%/sms.txt
+%%EXAMPLESDIR%%/vCalendar.vcs
+%%EXAMPLESDIR%%/vCard.vcf
+@dirrm %%EXAMPLESDIR%%
+@dirrmtry man/de/man1
+@dirrmtry man/de/
+@dirrmtry man/ru/man1
+@dirrmtry man/ru/
