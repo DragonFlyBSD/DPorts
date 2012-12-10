@@ -1,0 +1,12 @@
+@comment $FreeBSD: ports/science/svmlight/pkg-plist,v 1.3 2012/11/17 06:01:00 svnexp Exp $
+bin/svm_classify
+bin/svm_learn
+include/svmlight/kernel.h
+include/svmlight/svm_common.h
+include/svmlight/svm_learn.h
+lib/libsvmlight.a
+lib/libsvmlight.so
+lib/libsvmlight.so.1
+%%DOCSDIR%%/LICENSE.txt
+@dirrm %%DOCSDIR%%
+@dirrm include/svmlight
