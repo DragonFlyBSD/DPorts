@@ -1,0 +1,9 @@
+@comment $FreeBSD: ports/devel/libshhmsg/pkg-plist,v 1.5 2012/11/17 05:55:56 svnexp Exp $
+include/shhmsg.h
+lib/libshhmsg.a
+lib/libshhmsg.so
+lib/libshhmsg.so.1
+%%PORTDOCS%%share/doc/libshhmsg/CREDITS
+%%PORTDOCS%%share/doc/libshhmsg/README
+%%PORTDOCS%%share/doc/libshhmsg/shhmsg.txt
+%%PORTDOCS%%@dirrm share/doc/libshhmsg
