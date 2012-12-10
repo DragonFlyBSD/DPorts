@@ -1,0 +1,6 @@
+bin/siege
+bin/bombardment
+bin/siege2csv
+bin/siege.config
+%%DATADIR%%/siegerc
+@dirrm %%DATADIR%%
