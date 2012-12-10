@@ -1,0 +1,5 @@
+bin/hackbot.pl
+%%DATADIR%%/google.db
+%%DATADIR%%/fingerprint.db
+%%DATADIR%%/cgi.db
+@dirrm %%DATADIR%%
