@@ -1,0 +1,13 @@
+@comment $FreeBSD: ports/biology/paml/pkg-plist,v 1.8 2012/11/17 05:54:52 svnexp Exp $
+bin/baseml
+bin/basemlg
+bin/chi2
+bin/codeml
+bin/evolver
+bin/pamp
+bin/yn00
+%%PORTDOCS%%%%DOCSDIR%%/pamlDOC.pdf
+%%PORTDOCS%%%%DOCSDIR%%/MCMCtreeDoc.pdf
+%%PORTDOCS%%%%DOCSDIR%%/pamlFAQs.pdf
+%%PORTDOCS%%%%DOCSDIR%%/pamlHistory.txt
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
