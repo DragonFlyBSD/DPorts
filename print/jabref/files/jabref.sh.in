@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/print/jabref/files/jabref.sh.in,v 1.2 2012/11/17 06:00:51 svnexp Exp $
+
+JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/%%JARNAME%%" "$@"
