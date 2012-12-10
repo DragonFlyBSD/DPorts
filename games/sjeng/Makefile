@@ -1,0 +1,26 @@
+# New ports collection makefile for:	sjeng
+# Date created:				18 Feb 2006
+# Whom:					Alejandro Pulver <alejandro@varnet.biz>
+#
+# $FreeBSD: ports/games/sjeng/Makefile,v 1.6 2012/11/17 05:57:52 svnexp Exp $
+#
+
+PORTNAME=	sjeng
+PORTVERSION=	11.2
+PORTREVISION=	1
+CATEGORIES=	games
+MASTER_SITES=	http://sjeng.org/ftp/
+DISTNAME=	Sjeng-Free-${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Chess engine supporting chess variations
+
+LIB_DEPENDS=	gdbm.4:${PORTSDIR}/databases/gdbm
+
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -lgdbm
+
+PLIST_FILES=	bin/sjeng
+
+.include <bsd.port.mk>
