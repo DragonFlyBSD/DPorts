@@ -1,0 +1,36 @@
+# New ports collection makefile for:	ecm
+# Date created:				9 Aug 2005
+# Whom:					Emanuel Haupt <ehaupt@critical.ch>
+#
+# $FreeBSD: ports/archivers/ecm/Makefile,v 1.11 2012/11/17 05:54:20 svnexp Exp $
+#
+
+PORTNAME=	ecm
+PORTVERSION=	1.0
+PORTREVISION=	1
+CATEGORIES=	archivers
+MASTER_SITES=	CRITICAL
+
+MAINTAINER=	ehaupt@FreeBSD.org
+COMMENT=	Compresses CD images by stripping unnecessary EDC/ECC data
+
+LICENSE=	GPLv2
+
+CONFLICTS=	gmp-ecm-[0-9]*
+
+MAKE_JOBS_SAFE=	yes
+
+PLIST_FILES=	bin/ecm bin/unecm
+PORTDOCS=	format.txt
+
+do-install:
+.for f in ${PORTNAME} un${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
+.endfor
+
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
