@@ -1,0 +1,6 @@
+bin/x86dis
+include/libdis.h
+lib/libdisasm.a
+lib/libdisasm.la
+lib/libdisasm.so
+lib/libdisasm.so.0
