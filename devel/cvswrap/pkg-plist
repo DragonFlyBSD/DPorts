@@ -1,0 +1,4 @@
+bin/cvswrap
+share/examples/cvswrap/accesscheck.c
+share/examples/cvswrap/cvswrap.conf
+@dirrm share/examples/cvswrap
