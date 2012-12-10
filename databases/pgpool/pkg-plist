@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/databases/pgpool/pkg-plist,v 1.4 2012/11/17 05:55:18 svnexp Exp $
+bin/pgpool
+etc/pgpool.conf.sample
+etc/pool_hba.conf.sample
+share/pgpool/pgpool.pam
+@dirrm share/pgpool
