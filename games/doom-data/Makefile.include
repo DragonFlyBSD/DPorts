@@ -1,0 +1,33 @@
+# Makefile for defining variables used by other Doom related ports
+# $FreeBSD: ports/games/doom-data/Makefile.include,v 1.4 2012/11/22 15:02:39 svnexp Exp $
+
+# Set variables
+
+DMPKGNAMEPREFIX?=doom-
+DMDIR?=		${LOCALBASE}/share/doom
+
+# Add them to the environment
+
+MAKE_ENV+=	DMDIR="${DMDIR}"
+PLIST_SUB+=	DMDIR="${DMDIR:S/${LOCALBASE}\///}"
+SUB_LIST+=	DMDIR="${DMDIR}"
+
+# Add the dependency
+
+.if ${PORTNAME} != "data"
+RUN_DEPENDS+=	${DMDIR}:${PORTSDIR}/games/doom-data
+.endif
+
+# DOS to Unix text conversion
+
+.if defined(USE_CRLF)
+.   if defined(USE_ZIP)
+EXTRACT_BEFORE_ARGS=	-aqo
+.   else
+pre-patch:
+	@${FIND} ${WRKDIR} -type f -print0 | \
+		${XARGS} -0 ${FILE} | ${GREP} 'CRLF' | \
+		${SED} -e "s/:.*//" | ${SED} -e 's/ /\\ /g' | \
+		${XARGS} ${REINPLACE_CMD} -i "" -e "s/`${PRINTF} '\r'`$$//"
+.   endif
+.endif
