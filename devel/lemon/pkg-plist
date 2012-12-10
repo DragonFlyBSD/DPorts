@@ -1,0 +1,3 @@
+bin/lemon
+%%DATADIR%%/lempar.c
+@dirrm %%DATADIR%%
