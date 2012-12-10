@@ -1,0 +1,23 @@
+# New ports collection makefile for:	id3v2
+# Date created:		10 Oct 2001
+# Whom:			David MacKenzie <djm@pix.net>
+#
+# $FreeBSD: ports/audio/id3v2/Makefile,v 1.22 2012/11/17 05:54:35 svnexp Exp $
+#
+
+PORTNAME=	id3v2
+PORTVERSION=	0.1.12
+CATEGORIES=	audio
+MASTER_SITES=	SF
+
+MAINTAINER=	sunpoet@FreeBSD.org
+COMMENT=	Command line id3v2 tag editor
+
+LIB_DEPENDS=	id3-3.8.3:${PORTSDIR}/audio/id3lib
+
+MAKE_JOBS_UNSAFE=	yes
+
+MAN1=		id3v2.1
+PLIST_FILES=	bin/id3v2
+
+.include <bsd.port.mk>
