@@ -1,0 +1,5 @@
+include/ure.h
+include/utf.h
+lib/libutf.a
+%%EXAMPLESDIR%%/langcoll.utf
+@dirrm %%EXAMPLESDIR%%
