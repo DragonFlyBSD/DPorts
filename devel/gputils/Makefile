@@ -1,0 +1,23 @@
+# Created by: Samuel Tardieu <sam@rfc1149.net>
+# $FreeBSD: ports/devel/gputils/Makefile,v 1.23 2012/11/17 05:55:46 svnexp Exp $
+
+PORTNAME=	gputils
+PORTVERSION=	0.14.3
+CATEGORIES=	devel
+MASTER_SITES=	SF
+
+MAINTAINER=	tijl@coosemans.org
+COMMENT=	A set of utilities for Microchip PIC microcontrollers
+
+LICENSE=	GPLv2
+
+CONFLICTS=	gplink-[0-9]*
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+CONFIGURE_ARGS= --disable-dependency-tracking --disable-html-doc
+
+MANLANG=	"" fr
+MAN1=		gpasm.1 gpdasm.1 gplib.1 gplink.1 gpstrip.1 gputils.1 \
+		gpvc.1 gpvo.1
+
+.include <bsd.port.mk>
