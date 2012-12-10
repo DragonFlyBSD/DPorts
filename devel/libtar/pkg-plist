@@ -1,0 +1,6 @@
+bin/libtar
+include/libtar.h
+include/libtar_listhash.h
+lib/libtar.a
+lib/libtar.so
+lib/libtar.so.0
