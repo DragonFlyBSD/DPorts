@@ -1,0 +1,47 @@
+@comment $FreeBSD: ports/databases/gnats4/pkg-plist,v 1.6 2012/11/17 05:55:08 svnexp Exp $
+bin/edit-pr
+bin/getclose
+bin/install-sid
+bin/query-pr
+bin/send-pr
+%%SERVER%%@unexec if cmp -s %D/etc/gnats/databases %D/etc/gnats/databases.default; then rm -f %D/etc/gnats/databases; fi
+%%SERVER%%etc/gnats/databases.default
+%%SERVER%%@exec [ -f %B/databases ] || cp %B/%f %B/databases
+%%SERVER%%@unexec if cmp -s %D/etc/gnats/gnatsd.host_access %D/etc/gnats/gnatsd.host_access.default; then rm -f %D/etc/gnats/gnatsd.host_access; fi
+%%SERVER%%etc/gnats/gnatsd.host_access.default
+%%SERVER%%@exec [ -f %B/gnatsd.host_access ] || cp %B/%f %B/gnatsd.host_access
+etc/gnats/defaults/addresses
+etc/gnats/defaults/categories
+etc/gnats/defaults/classes
+etc/gnats/defaults/dbconfig
+etc/gnats/defaults/gnatsd.user_access
+etc/gnats/defaults/responsible
+etc/gnats/defaults/states
+etc/gnats/defaults/submitters
+etc/gnats/send-pr.conf
+@dirrm etc/gnats/defaults
+@dirrmtry etc/gnats
+%%SERVER%%libexec/gnats/at-pr
+%%SERVER%%libexec/gnats/check-db
+%%SERVER%%libexec/gnats/delete-pr
+libexec/gnats/diff-prs
+libexec/gnats/file-pr
+%%SERVER%%libexec/gnats/gen-index
+%%SERVER%%libexec/gnats/gnats-pwconv
+%%SERVER%%libexec/gnats/gnatsd
+libexec/gnats/mail-agent
+%%SERVER%%libexec/gnats/mail-query
+%%SERVER%%libexec/gnats/mkcat
+%%SERVER%%libexec/gnats/mkdb
+libexec/gnats/pr-age
+libexec/gnats/pr-edit
+%%SERVER%%libexec/gnats/queue-pr
+%%SERVER%%libexec/gnats/rmcat
+@dirrm libexec/gnats
+@exec mkdir -p %%GNATSDBDIR%%
+@exec chown gnats %%GNATSDBDIR%%
+@dirrmtry %%GNATSDBDIR%%
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/UPGRADING
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%EMACS_SITE_LISPDIR%%/gnats.el
