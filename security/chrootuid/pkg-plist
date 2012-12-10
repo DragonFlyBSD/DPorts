@@ -1,0 +1,4 @@
+sbin/chrootuid
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/chrootuid_license
+@dirrm %%DOCSDIR%%
