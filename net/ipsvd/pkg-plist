@@ -1,0 +1,21 @@
+@comment $FreeBSD: ports/net/ipsvd/pkg-plist,v 1.6 2012/11/17 06:00:03 svnexp Exp $
+sbin/ipsvd-cdb
+sbin/tcpsvd
+sbin/udpsvd
+%%PORTDOCS%%%%DOCSDIR%%/CHANGES
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/benefits.html
+%%PORTDOCS%%%%DOCSDIR%%/examples.html
+%%PORTDOCS%%%%DOCSDIR%%/index.html
+%%PORTDOCS%%%%DOCSDIR%%/install.html
+%%PORTDOCS%%%%DOCSDIR%%/ipsvd-cdb.8.html
+%%PORTDOCS%%%%DOCSDIR%%/ipsvd-instruct.5.html
+%%PORTDOCS%%%%DOCSDIR%%/ipsvd.7.html
+%%PORTDOCS%%%%DOCSDIR%%/sslio.8.html
+%%PORTDOCS%%%%DOCSDIR%%/sslsvd.8.html
+%%PORTDOCS%%%%DOCSDIR%%/tcpsvd.8.html
+%%PORTDOCS%%%%DOCSDIR%%/udpsvd.8.html
+%%PORTDOCS%%%%DOCSDIR%%/upgrade.html
+%%PORTDOCS%%%%DOCSDIR%%/usedietlibc.html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
