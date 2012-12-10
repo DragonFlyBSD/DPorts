@@ -1,0 +1,29 @@
+# $FreeBSD: ports/mail/popa3d/pkg-install,v 1.4 2012/11/17 05:59:10 svnexp Exp $
+#
+
+if [ "$2" != "PRE-INSTALL" ]; then
+    exit 0
+fi
+
+PATH=/bin:/usr/bin
+
+use_vipw () {
+
+    cat << EOF
+
+You need an account "pop" to install this package.
+Please add it by hand (try "man vipw") and try again.
+
+An example passwd entry is:
+pop:*:68:6::0:0:Post Office Owner:/nonexistent:/nonexistent
+
+EOF
+
+}
+
+if ! id -u "pop" > /dev/null 2>&1; then
+    use_vipw
+    exit 1
+fi
+
+exit 0
