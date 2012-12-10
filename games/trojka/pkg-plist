@@ -1,0 +1,5 @@
+bin/trojka
+%%DATADIR%%/COPYRIGHT
+%%DATADIR%%/README
+%%DATADIR%%/trojka.scores
+@dirrm %%DATADIR%%
