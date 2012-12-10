@@ -1,0 +1,3 @@
+bin/bf2c
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
