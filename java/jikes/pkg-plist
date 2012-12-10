@@ -1,0 +1,4 @@
+bin/jikes
+include/jikesapi.h
+share/doc/jikes-%%PORTVERSION%%/license.htm
+@dirrm share/doc/jikes-%%PORTVERSION%%
