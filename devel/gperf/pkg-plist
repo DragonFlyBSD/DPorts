@@ -1,0 +1,3 @@
+bin/gperf
+%%DOCSDIR%%/gperf.html
+@dirrm %%DOCSDIR%%
