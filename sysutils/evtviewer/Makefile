@@ -1,0 +1,30 @@
+# New ports collection makefile for:    evtViewer
+# Date created:		Sat Sep 01 09:30:00 UTC 2006
+# Whom:			Ganael LAPLANCHE <ganael.laplanche@martymac.org>
+#
+# $FreeBSD: ports/sysutils/evtviewer/Makefile,v 1.12 2012/11/17 06:01:29 svnexp Exp $
+#
+
+PORTNAME=	evtViewer
+PORTVERSION=	0.5
+PORTREVISION=	1
+CATEGORIES=	sysutils
+MASTER_SITES=	SF/${PORTNAME:L}/${PORTNAME:L}/${PORTNAME}-${PORTVERSION} \
+		http://contribs.martymac.org/evtViewer/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	martymac@FreeBSD.org
+COMMENT=	PERL-based Event viewer
+
+LICENSE=	GPLv2
+
+USE_PERL5=	yes
+NO_BUILD=	yes
+
+PLIST_FILES=	bin/evtViewer
+
+# Just copy the script
+do-install:
+	${CP} ${WRKSRC}/evtViewer ${PREFIX}/bin
+
+.include <bsd.port.mk>
