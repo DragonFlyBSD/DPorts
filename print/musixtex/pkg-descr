@@ -1,0 +1,26 @@
+MusiXTeX is a set of TeX macros to typeset polyphonic, orchestral or
+polyphonic music. 
+
+If you are not familiar with TeX at all I would recommend to find another 
+software package to do musical typesetting. Setting up TeX and MusiXTeX
+on your machine and mastering it is an awesome job which gobbles up
+a lot of your time and disk space. But, once you master it...
+
+MusiXTeX is documented in /usr/local/lib/texmf/documentation/musixtex.tex. This
+file must be processed  with LaTeX and musixflx:
+  latex  musixdoc
+  musixflx musixdoc
+  latex  musixdoc
+  makeindex musixdoc.idx
+  latex  musixdoc
+  makeindex musixdoc.idx
+  latex  musixdoc
+
+A few examples are provided in the directory
+    /usr/local/lib/texmf/documentation/musixtex.examples
+for instance, to typeset the file 'traeumer.tex' type:
+  musixtex traeumer
+  musixflx traeumer
+  musixtex traeumer
+
+WWW: http://icking-music-archive.org/software/indexmt6.html
