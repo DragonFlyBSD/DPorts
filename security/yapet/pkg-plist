@@ -1,0 +1,13 @@
+bin/yapet
+%%CSV2YAPET%%bin/csv2yapet
+share/applications/yapet.desktop
+%%NOPORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%NOPORTDOCS%%%%DOCSDIR%%/DESIGN
+%%NOPORTDOCS%%%%DOCSDIR%%/LICENSE
+%%NOPORTDOCS%%%%DOCSDIR%%/README
+%%NOPORTDOCS%%%%DOCSDIR%%/THANKS
+%%NLS%%share/locale/de/LC_MESSAGES/yapet.mo
+@dirrmtry share/locale/de/LC_MESSAGES
+@dirrmtry share/locale/de
+%%NOPORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrmtry share/applications
