@@ -1,0 +1,10 @@
+@comment $FreeBSD: ports/devel/liblcfg/pkg-plist,v 1.2 2012/11/17 05:55:55 svnexp Exp $
+bin/lcfg
+include/lcfg/lcfg.h
+include/lcfgx/lcfgx_tree.h
+lib/liblcfg.so.1
+lib/liblcfg.so
+lib/liblcfg.la
+lib/liblcfg.a
+@dirrm include/lcfgx
+@dirrm include/lcfg
