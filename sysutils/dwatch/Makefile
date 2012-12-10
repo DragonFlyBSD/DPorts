@@ -1,0 +1,34 @@
+# New ports collection makefile for:	dwatch
+# Date created:		14 Aug 2002
+# Whom:			Andrew Turner <zombie@i4free.co.nz>
+#
+# $FreeBSD: ports/sysutils/dwatch/Makefile,v 1.5 2012/11/17 06:01:29 svnexp Exp $
+#
+
+PORTNAME=	dwatch
+PORTVERSION=	0.1.1
+PORTREVISION=	1
+CATEGORIES=	sysutils
+MASTER_SITES=	http://siag.nu/pub/dwatch/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A Daemon Watcher
+
+LICENSE=	GPLv2 GPLv3
+LICENSE_COMB=	dual
+
+MAN1=		dwatch.1
+PLIST_FILES=	bin/dwatch etc/dwatch.conf-dist
+
+CFLAGS+=	-DETCDIR="\"${PREFIX}/etc\"" \
+		-DPS="\"/bin/ps -ax\""
+
+do-build:
+	(cd ${BUILD_WRKSRC}; ${CC} ${CFLAGS} -o dwatch dwatch.c)
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/dwatch ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/dwatch.1 ${MANPREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/dwatch.conf ${PREFIX}/etc/dwatch.conf-dist
+
+.include <bsd.port.mk>
