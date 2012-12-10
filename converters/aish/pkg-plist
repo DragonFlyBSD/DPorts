@@ -1,0 +1,5 @@
+bin/aish
+bin/aishmv
+bin/ishcat
+%%PORTDOCS%%share/doc/ja/aish/aish.txt
+%%PORTDOCS%%@dirrm share/doc/ja/aish
