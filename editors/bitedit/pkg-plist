@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/editors/bitedit/pkg-plist,v 1.3 2012/11/17 05:57:11 svnexp Exp $
+bin/bitedit
+%%PORTDOCS%%%%DOCSDIR%%/bitedit.txt
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
