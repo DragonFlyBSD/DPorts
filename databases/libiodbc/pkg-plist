@@ -1,0 +1,43 @@
+bin/iodbc-config
+%%GUI%%bin/iodbcadm-gtk
+%%ETCDIR%%/odbc.ini.sample
+%%ETCDIR%%/odbcinst.ini.sample
+include/iodbcext.h
+include/iodbcinst.h
+include/iodbcunix.h
+include/isql.h
+include/isqlext.h
+include/isqltypes.h
+include/odbcinst.h
+include/sql.h
+include/sqlext.h
+include/sqltypes.h
+include/sqlucode.h
+%%GUI%%lib/libdrvproxy.a
+%%GUI%%lib/libdrvproxy.la
+%%GUI%%lib/libdrvproxy.so
+%%GUI%%lib/libdrvproxy.so.3
+lib/libiodbc.a
+lib/libiodbc.la
+lib/libiodbc.so
+lib/libiodbc.so.3
+%%GUI%%lib/libiodbcadm.a
+%%GUI%%lib/libiodbcadm.la
+%%GUI%%lib/libiodbcadm.so
+%%GUI%%lib/libiodbcadm.so.3
+lib/libiodbcinst.a
+lib/libiodbcinst.la
+lib/libiodbcinst.so
+lib/libiodbcinst.so.3
+lib/libodbc.a
+lib/libodbc.so
+libdata/pkgconfig/libiodbc.pc
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/Makefile.sample
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/iodbctest.c
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%
+@dirrmtry %%ETCDIR%%
