@@ -1,0 +1,11 @@
+# $FreeBSD: ports/audio/id3lib/files/patch-configure,v 1.3 2012/11/17 05:54:35 svnexp Exp $
+--- configure.orig	Sun Aug 14 11:21:37 2005
++++ configure	Sun Aug 14 11:29:43 2005
+@@ -9134,6 +9134,7 @@
+ else
+   ID3_NEEDZLIB_TRUE='#'
+   ID3_NEEDZLIB_FALSE=
++  LIBS="-lz $LIBS"
+ fi
+ 
+ 
