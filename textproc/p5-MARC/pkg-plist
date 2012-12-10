@@ -1,0 +1,3 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/MARC/.packlist
+%%SITE_PERL%%/MARC.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/MARC
