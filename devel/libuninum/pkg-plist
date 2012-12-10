@@ -1,0 +1,10 @@
+@comment $FreeBSD: ports/devel/libuninum/pkg-plist,v 1.7 2012/11/17 05:55:57 svnexp Exp $
+bin/NumberConverter.tcl
+bin/numconv
+include/uninum/uninum.h
+include/uninum/nsdefs.h
+include/uninum/unicode.h
+lib/libuninum.so.7
+lib/libuninum.so
+lib/libuninum.a
+@dirrmtry include/uninum
