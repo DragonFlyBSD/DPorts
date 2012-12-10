@@ -1,0 +1,5 @@
+bin/fpp
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/fpp_spec
+%%PORTDOCS%%%%DOCSDIR%%/fpp_license.ps
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
