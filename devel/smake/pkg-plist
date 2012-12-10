@@ -1,0 +1,10 @@
+bin/smake
+include/schily/%%RULESUSED%%/align.h
+include/schily/%%RULESUSED%%/avoffset.h
+include/schily/%%RULESUSED%%/xconfig.h
+lib/defaults.smk
+lib/libschily.a
+lib/profiled/libschily.a
+@dirrmtry lib/profiled
+@dirrm include/schily/%%RULESUSED%%
+@dirrm include/schily
