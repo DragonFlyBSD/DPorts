@@ -1,0 +1,5 @@
+%%SITE_PERL%%/B/Graph.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/B/Graph/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/B/Graph
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/B
+@dirrmtry %%SITE_PERL%%/B
