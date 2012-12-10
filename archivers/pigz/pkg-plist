@@ -1,0 +1,5 @@
+@comment $FreeBSD: ports/archivers/pigz/pkg-plist,v 1.3 2012/11/17 05:54:23 svnexp Exp $
+bin/pigz
+bin/pigzn
+bin/pigzt
+bin/unpigz
