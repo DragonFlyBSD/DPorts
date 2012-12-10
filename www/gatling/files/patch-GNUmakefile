@@ -1,0 +1,84 @@
+--- GNUmakefile.orig	2010-04-11 07:49:08.000000000 +0200
++++ GNUmakefile	2010-04-14 18:29:35.000000000 +0200
+@@ -1,24 +1,23 @@
+-#DEBUG=1
+-ZLIB=1
+-prefix=/opt/diet
++prefix=${PREFIX}
+ BINDIR=${prefix}/bin
+ MANDIR=${prefix}/man
+ man1dir=$(MANDIR)/man1
+ 
+-TARGETS=gatling httpbench bindbench dl ioerr bench tlsgatling \
+-pthreadbench cgi
+-TARGETS2=mktestdata mmapbench manymapbench forkbench forksbench
++TARGETS=gatling dl \
++cgi
++TARGETS2=
++ifdef BENCHMARKS
++TARGETS+=httpbench bindbench ioerr bench pthreadbench
++TARGETS2+=mktestdata mmapbench manymapbench forkbench forksbench
++endif
++ifdef TLSGATLING
++TARGETS+=tlsgatling
++endif
+ ALLTARGETS=$(TARGETS) acc hcat referrer hitprofile matchiprange getlinks \
+ rellink $(TARGETS2)
+ 
+ all: $(ALLTARGETS)
+ 
+-CROSS=
+-#CROSS=i686-mingw32-
+-CC=$(CROSS)gcc
+-CFLAGS=-pipe -Wall
+-LDFLAGS=
+-
+ path = $(subst :, ,$(PATH))
+ diet_path = $(foreach dir,$(path),$(wildcard $(dir)/diet))
+ ifeq ($(strip $(diet_path)),)
+@@ -34,15 +33,11 @@
+ # to build without diet libc support, use $ make DIET=
+ # see http://www.fefe.de/dietlibc/ for details about the diet libc
+ 
++DIET=
++
+ ifneq ($(DEBUG),)
+ CFLAGS+=-g
+ LDFLAGS+=-g
+-else
+-CFLAGS+=-O2 -fomit-frame-pointer -I/usr/local/include
+-LDFLAGS+=-s
+-ifneq ($(DIET),)
+-DIET+=-Os
+-endif
+ endif
+ 
+ LDLIBS=-lowfat
+@@ -68,7 +63,7 @@
+ CC:=$(DIET) $(CC)
+ 
+ pthreadbench: pthreadbench.o
+-	$(CC) $< -o $@ -I. $(CFLAGS) $(LDFLAGS) $(LDLIBS) -lpthread
++	$(CC) $< -o $@ -I. $(CFLAGS) $(LDFLAGS) $(LDLIBS) $(PTHREAD_LIBS)
+ 
+ forksbench: forkbench.o
+ 	$(CC) -static -o $@ forkbench.o $(LDFLAGS) $(LDLIBS)
+@@ -121,11 +116,13 @@
+ 	rm -f trysocket
+ 
+ libiconv: tryiconv.c
+-	if $(CC) $(CFLAGS) -o tryiconv tryiconv.c >/dev/null 2>&1; then echo ""; else \
+-	if $(CC) $(CFLAGS) -o tryiconv tryiconv.c -liconv >/dev/null 2>&1; then echo "-liconv"; else \
+-	if $(CC) $(CFLAGS) -o tryiconv tryiconv.c -L/usr/local/lib -liconv >/dev/null 2>&1; then \
+-	  echo "-L/usr/local/lib -liconv"; \
+-	fi; fi; fi > libiconv
++ifdef ICONV
++	if $(CC) $(CFLAGS) $(LDFLAGS) -o tryiconv tryiconv.c -liconv >/dev/null 2>&1; then echo "-L$(LDFLAGS) -liconv"; else \
++	echo ""; \
++	fi > libiconv
++else
++	echo "" > libiconv
++endif
+ 	rm -f tryiconv
+ 
+ libcrypt: trycrypt.c
