@@ -1,0 +1,9 @@
+A small utility to read and write ID3 tags, as well as retrieve and display
+the MP3 header information.
+
+Some features include:
+* Get, set and wipe ID3 tags
+* User-definable output formatting
+* Rename files according to a user-defined scheme
+
+WWW: http://ibiblio.org/mp3info/
