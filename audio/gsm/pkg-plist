@@ -1,0 +1,9 @@
+bin/toast
+@exec ln -sf %f %B/tcat
+@exec ln -sf %f %B/untoast
+@rmtry bin/tcat
+@rmtry bin/untoast
+include/gsm.h
+lib/libgsm.a
+lib/libgsm.so
+lib/libgsm.so.1

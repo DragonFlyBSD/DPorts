@@ -1,0 +1,28 @@
+# New ports collection makefile for:	gsm
+# Date created:		5 January 1995
+# Whom:			pst
+#
+# $FreeBSD: ports/audio/gsm/Makefile,v 1.30 2012/11/17 05:54:33 svnexp Exp $
+#
+
+PORTNAME=	gsm
+PORTVERSION=	1.0.13
+CATEGORIES=	audio
+MASTER_SITES=	ftp://ftp.dvo.ru/pub/Gentoo/distfiles/ \
+		http://www.imagemagick.org/download/delegates/ffmpeg/ \
+		http://www.quut.com/gsm/ \
+		http://downloads.openwrt.org/sources/
+
+MAINTAINER=	m.tsatsenko@gmail.com
+COMMENT=	Audio converter and library for converting u-law to gsm encoding
+
+WRKSRC=		${WRKDIR}/gsm-1.0-pl13
+
+USE_LDCONFIG=	yes
+MAKE_JOBS_SAFE=	yes
+
+MAN1=		toast.1
+MAN3=		gsm.3 gsm_explode.3 gsm_option.3 gsm_print.3
+MLINKS=		toast.1 untoast.1	toast.1 tcat.1
+
+.include <bsd.port.mk>
