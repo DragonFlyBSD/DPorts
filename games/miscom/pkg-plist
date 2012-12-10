@@ -1,0 +1,13 @@
+bin/miscom
+%%PORTDOCS%%share/doc/miscom/COPYING
+%%PORTDOCS%%share/doc/miscom/ChangeLog
+%%PORTDOCS%%share/doc/miscom/README
+%%PORTDOCS%%share/doc/miscom/TODO
+share/miscom/citybang.raw
+share/miscom/explode.raw
+share/miscom/gameover.raw
+share/miscom/launch.raw
+share/miscom/levelend.raw
+share/miscom/levelst.raw
+%%PORTDOCS%%@dirrm share/doc/miscom
+@dirrm share/miscom
