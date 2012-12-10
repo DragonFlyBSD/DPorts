@@ -1,0 +1,15 @@
+libao is a cross-platform audio library that allows programs to
+output audio using a simple API on a wide variety of platforms.
+On FreeBSD, it currently supports:
+   * null output
+   * raw output
+   * AU files
+   * WAV files
+   * OSS (Open Sound System)
+And optionally:
+   * ESD (ESounD or Enlightened Sound Daemon)
+   * aRts (KDE sound server)
+   * NAS (Network Audio System)
+   * PulseAudio
+
+WWW: http://www.xiph.org/ao/
