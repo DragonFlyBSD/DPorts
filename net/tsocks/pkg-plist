@@ -1,0 +1,9 @@
+bin/tsocks
+etc/tsocks.conf.sample
+lib/libtsocks.so.1
+lib/libtsocks.so
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/tsocks.conf.complex.example
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/tsocks.conf.simple.example
+%%PORTDOCS%%%%DOCSDIR%%/README
+@dirrm %%EXAMPLESDIR%%
+@dirrm %%DOCSDIR%%
