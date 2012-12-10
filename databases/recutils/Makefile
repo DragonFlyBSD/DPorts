@@ -1,0 +1,40 @@
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: ports/databases/recutils/Makefile,v 1.3 2012/11/17 05:55:23 svnexp Exp $
+
+PORTNAME=	recutils
+PORTVERSION=	1.5
+CATEGORIES=	databases
+MASTER_SITES=	GNU
+
+MAINTAINER=	zeus@ibs.dn.ua
+COMMENT=	Tools and libraries to access human-editable, plain text databases
+
+LICENSE=	GPLv3
+
+OPTIONS_DEFINE=	NLS DOCS
+
+GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+
+INFO=		${PORTNAME}
+MAN1=		csv2rec.1 rec2csv.1 recdel.1 recfix.1 recfmt.1 recinf.1 \
+		recins.1 recsel.1 recset.1
+PORTDOCS=	ChangeLog NEWS README
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=	--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.endif
+
+post-install:
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
