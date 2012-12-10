@@ -1,12 +1,8 @@
-# New ports collection makefile for:	httping
-# Date created:				26 Aug 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/net/httping/Makefile,v 1.37 2012/11/17 06:00:02 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: ports/net/httping/Makefile,v 1.38 2012/12/10 10:12:07 svnexp Exp $
 
 PORTNAME=	httping
-PORTVERSION=	1.5.5
+PORTVERSION=	1.5.6
 CATEGORIES=	net
 MASTER_SITES=	http://www.vanheusden.com/httping/ \
 		CRITICAL
