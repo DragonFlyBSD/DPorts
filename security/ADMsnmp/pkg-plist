@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/security/ADMsnmp/pkg-plist,v 1.2 2012/11/17 06:01:00 svnexp Exp $
+bin/ADMsnmp
+share/ADMsnmp/snmp.passwd
+share/doc/ADMsnmp/ADMsnmp.README
+@dirrm share/doc/ADMsnmp
+@dirrm share/ADMsnmp
