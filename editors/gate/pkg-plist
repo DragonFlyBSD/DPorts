@@ -1,0 +1,3 @@
+bin/gate
+%%DATADIR%%/gate.help
+@dirrm %%DATADIR%%
