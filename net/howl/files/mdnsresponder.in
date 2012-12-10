@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net/howl/files/mdnsresponder.in,v 1.5 2012/11/17 06:00:02 svnexp Exp $
+#
+# PROVIDE: mdnsresponder
+# REQUIRE: DAEMON
+#
+# Howl's mDNSResponder, a Zeroconf (Bonjour) service advertisement daemon.
+
+# Add the following lines to /etc/rc.conf to enable mdnsresponder:
+# mdnsresponder_enable="YES"
+# mdnsresponder_flags="<set as needed>"
+
+. /etc/rc.subr
+
+name=mdnsresponder
+rcvar=mdnsresponder_enable
+
+command=%%PREFIX%%/bin/mDNSResponder
+
+load_rc_config ${name}
+
+mdnsresponder_enable=${mdnsresponder_enable-"NO"}
+
+run_rc_command "$1"
