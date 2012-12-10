@@ -1,0 +1,10 @@
+bin/thttpdpasswd
+bin/makeweb
+bin/syslogtocern
+etc/thttpd.conf.sample
+sbin/thttpd
+www/cgi-bin/phf
+www/cgi-bin/redirect
+www/cgi-bin/ssi
+@dirrmtry www/cgi-bin
+@dirrmtry www/data
