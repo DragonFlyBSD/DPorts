@@ -1,0 +1,18 @@
+
+$FreeBSD: ports/archivers/star/files/patch-rmt_Makefile.man,v 1.2 2012/11/17 05:54:23 svnexp Exp $
+
+--- rmt/Makefile.man.orig
++++ rmt/Makefile.man
+@@ -8,10 +8,10 @@
+ ###########################################################################
+ 
+ MANDIR=		man
+-TARGETMAN=	rmt
++TARGETMAN=	srmt
+ MANSECT=	$(MANSECT_CMD)
+ MANSUFFIX=	$(MANSUFF_CMD)
+-MANFILE=	rmt.1
++MANFILE=	srmt.1
+ 
+ ###########################################################################
+ include		$(SRCROOT)/$(RULESDIR)/rules.man
