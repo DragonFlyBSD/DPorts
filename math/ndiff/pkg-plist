@@ -1,0 +1,3 @@
+bin/ndiff
+%%DATADIR%%/ndiff.awk
+@dirrm %%DATADIR%%
