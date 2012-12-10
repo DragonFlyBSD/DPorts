@@ -1,0 +1,13 @@
+
+$FreeBSD: ports/devel/ORBit/files/patch-popt::configure,v 1.2 2012/11/17 05:55:32 svnexp Exp $
+
+--- popt/configure	2002/06/07 16:28:12	1.1
++++ popt/configure	2002/06/07 16:30:28
+@@ -7339,6 +7339,7 @@
+ 
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
++$ac_aux_dir/ltconfig $LIBTOOL_DEPS
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
