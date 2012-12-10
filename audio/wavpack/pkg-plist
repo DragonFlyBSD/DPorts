@@ -1,0 +1,10 @@
+bin/wavpack
+bin/wvgain
+bin/wvunpack
+include/wavpack/wavpack.h
+lib/libwavpack.a
+lib/libwavpack.la
+lib/libwavpack.so
+lib/libwavpack.so.2
+libdata/pkgconfig/wavpack.pc
+@dirrm include/wavpack
