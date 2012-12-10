@@ -1,0 +1,17 @@
+bin/ftpgw.tcl
+bin/zebedee
+etc/server.zbd.sample
+%%EXAMPLESDIR%%/client1.key
+%%EXAMPLESDIR%%/client2.key
+%%EXAMPLESDIR%%/clients.id
+%%EXAMPLESDIR%%/server.id
+%%EXAMPLESDIR%%/server.key
+%%EXAMPLESDIR%%/vncserver.zbd
+%%EXAMPLESDIR%%/vncviewer.zbd
+%%PORTDOCS%%%%DOCSDIR%%/CHANGES.txt
+%%PORTDOCS%%%%DOCSDIR%%/LICENCE.txt
+%%PORTDOCS%%%%DOCSDIR%%/README.txt
+%%PORTDOCS%%%%DOCSDIR%%/ftpgw.tcl.html
+%%PORTDOCS%%%%DOCSDIR%%/zebedee.html
+@dirrm %%EXAMPLESDIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
