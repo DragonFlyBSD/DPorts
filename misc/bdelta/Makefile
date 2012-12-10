@@ -1,0 +1,29 @@
+# New ports collection makefile for:	bdelta
+# Date created:		2005-05-18
+# Whom:			Roman Bogorodskiy <novel@FreeBSD.org>
+#
+# $FreeBSD: ports/misc/bdelta/Makefile,v 1.5 2012/11/17 05:59:33 svnexp Exp $
+#
+
+PORTNAME=	bdelta
+PORTVERSION=	0.1.0
+CATEGORIES=	misc devel
+MASTER_SITES=	SF/deltup/${PORTNAME}/${PORTVERSION}
+
+MAINTAINER=	novel@FreeBSD.org
+COMMENT=	An advanced delta creator, patcher, and library
+
+USE_GMAKE=	yes
+USE_LDCONFIG=	yes
+PLIST_FILES=	bin/bdelta \
+		bin/bpatch \
+		lib/libbdelta.so
+
+MAKE_JOBS_UNSAFE=	yes
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bdelta ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bpatch ${PREFIX}/bin
+	${INSTALL_DATA}	${WRKSRC}/libbdelta.so ${PREFIX}/lib
+
+.include <bsd.port.mk>
