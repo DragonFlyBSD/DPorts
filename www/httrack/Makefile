@@ -1,0 +1,51 @@
+# New ports collection makefile for:	httrack
+# Date created:		Sun Jun 17 10:28:52 CEST 2001
+# Whom:			Dirk Froemberg <dirk@FreeBSD.org>
+#
+# $FreeBSD: ports/www/httrack/Makefile,v 1.56 2012/11/17 06:02:37 svnexp Exp $
+#
+
+PORTNAME=	httrack
+PORTVERSION=	3.46.1
+CATEGORIES=	www
+MASTER_SITES=	http://download.httrack.com/ \
+		http://mirror.httrack.com/ \
+		LOCAL/sunpoet
+
+MAINTAINER=	sunpoet@FreeBSD.org
+COMMENT=	Easy-to-use offline browser utility and website copier
+
+LICENSE=	GPLv2 GPLv3
+LICENSE_COMB=	dual
+
+OPTIONS_DEFINE=	DOCS
+
+CONFIGURE_ARGS=	--docdir="${DOCSDIR}"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+USE_AUTOTOOLS=	libtool
+USE_GMAKE=	yes
+USE_ICONV=	yes
+USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/${PORTNAME}
+
+MAN1=		htsserver.1 httrack.1 proxytrack.1 webhttrack.1
+
+.include <bsd.port.options.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e '/DEFAULT_CFLAGS=/ s|-O -g3 ||g' \
+		-e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e '/ install-data-hook/d' ${WRKSRC}/html/Makefile.in
+	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|' \
+		${WRKSRC}/html/server/div/WebHTTrack.desktop \
+		${WRKSRC}/html/server/div/WebHTTrack-Websites.desktop
+.if empty(PORT_OPTIONS:MDOCS)
+	@${REINPLACE_CMD} -e '/^SUBDIRS = / s| html||' ${WRKSRC}/Makefile.in
+.endif
+
+post-install:
+.if ${PORT_OPTIONS:MDOCS}
+	${INSTALL_DATA} ${WRKSRC}/html/httrack.css ${DOCSDIR}/html/httrack.css
+.endif
+
+.include <bsd.port.mk>
