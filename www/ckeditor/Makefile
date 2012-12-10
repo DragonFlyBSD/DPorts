@@ -1,18 +1,15 @@
-# New ports collection makefile for:	CKEditor
-# Date created:		2010/09/04
-# Whom:			Joe Horn <joehorn@gmail.com>
+# Created by: Joe Horn <joehorn@gmail.com>
 #
-# $FreeBSD: ports/www/ckeditor/Makefile,v 1.3 2012/11/17 06:02:30 svnexp Exp $
-#
+# $FreeBSD: ports/www/ckeditor/Makefile,v 1.4 2012/12/05 01:21:42 svnexp Exp $
 
 PORTNAME=	CKEditor
-PORTVERSION=	3.6
+PORTVERSION=	4.0
 CATEGORIES=	www
 MASTER_SITES=	http://download.cksource.com/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}/
-DISTNAME=	ckeditor_${PORTVERSION}
+DISTNAME=	ckeditor_${PORTVERSION}_full
 
 MAINTAINER=	joehorn@gmail.com
-COMMENT=	CKEditor is a WYSIWYG editor to be used inside web page
+COMMENT=	WYSIWYG editor to be used inside web page
 
 LICENSE=	MPL
 
