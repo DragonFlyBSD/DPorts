@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/dns/crossip/pkg-plist,v 1.4 2012/11/17 05:57:08 svnexp Exp $
+bin/crossip
+%%DATADIR%%/CrossIP.jar
+%%DATADIR%%/LICENSE.txt
+%%DATADIR%%/README.txt
+@dirrm %%DATADIR%%
