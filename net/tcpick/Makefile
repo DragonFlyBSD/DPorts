@@ -1,0 +1,26 @@
+# New ports collection makefile for:   tcpick
+# Date created:        09 January 2005
+# Whom:                MANTANI Nobutaka <nobutaka@FreeBSD.org>
+#
+# $FreeBSD: ports/net/tcpick/Makefile,v 1.7 2012/11/17 06:00:22 svnexp Exp $
+#
+
+PORTNAME=	tcpick
+PORTVERSION=	0.2.1
+PORTREVISION=	1
+CATEGORIES=	net
+MASTER_SITES=	SF
+
+MAINTAINER=	nobutaka@FreeBSD.org
+COMMENT=	A text-based TCP stream sniffer
+
+GNU_CONFIGURE=	yes
+
+MANLANG=	"" it
+MAN8=		tcpick.8
+
+post-install:
+	${MKDIR} ${PREFIX}/man/it/man8
+	${MV} ${PREFIX}/man/man8/tcpick_italian.8 ${PREFIX}/man/it/man8/tcpick.8
+
+.include <bsd.port.mk>
