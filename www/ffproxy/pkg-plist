@@ -1,0 +1,25 @@
+bin/ffproxy
+@unexec if cmp -s %D/etc/ffproxy.conf.sample %D/etc/ffproxy.conf; then rm -f %D/etc/ffproxy.conf; fi
+etc/ffproxy.conf.sample
+@exec [ -f %B/ffproxy.conf ] || cp %B/%f %B/ffproxy.conf
+%%DATADIR%%/db/access.dyndns
+%%DATADIR%%/db/access.host
+%%DATADIR%%/db/access.ip
+%%DATADIR%%/db/filter.header.add
+%%DATADIR%%/db/filter.header.drop
+%%DATADIR%%/db/filter.header.entry
+%%DATADIR%%/db/filter.header.match
+%%DATADIR%%/db/filter.host.match
+%%DATADIR%%/db/filter.rheader.drop
+%%DATADIR%%/db/filter.rheader.entry
+%%DATADIR%%/db/filter.rheader.match
+%%DATADIR%%/db/filter.url.match
+%%DATADIR%%/html/connect
+%%DATADIR%%/html/filtered
+%%DATADIR%%/html/invalid
+%%DATADIR%%/html/post
+%%DATADIR%%/html/resolve
+%%DATADIR%%/sample.config
+@dirrm %%DATADIR%%/html
+@dirrm %%DATADIR%%/db
+@dirrm %%DATADIR%%
