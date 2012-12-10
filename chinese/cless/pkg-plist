@@ -1,0 +1,8 @@
+@comment $FreeBSD: ports/chinese/cless/pkg-plist,v 1.8 2012/11/17 05:54:56 svnexp Exp $
+bin/cless
+bin/clesskey
+share/cless.hlp
+share/cless.bg5
+share/cless.gb
+%%PORTDOCS%%share/doc/cless/README.CLESS
+%%PORTDOCS%%@dirrm share/doc/cless
