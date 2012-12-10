@@ -1,0 +1,25 @@
+sbin/auto-amd-local-setup
+sbin/auto-amd-nfs-setup
+sbin/auto-append-line
+sbin/auto-ask
+sbin/auto-clean-ports
+sbin/auto-disable-service
+sbin/auto-enable-compat32
+sbin/auto-enable-passwdqc
+sbin/auto-enable-procfs
+sbin/auto-enable-service
+sbin/auto-fastest-mirror
+sbin/auto-install-packages
+sbin/auto-ipfw-gateway-setup
+sbin/auto-kdm3-toggle
+sbin/auto-ldap-adduser
+sbin/auto-ldap-client-setup
+sbin/auto-package-installed
+sbin/auto-replace-file
+sbin/auto-service-enabled
+sbin/auto-set-suspend-on-lid
+sbin/auto-update-port-framework
+sbin/auto-update-xorg.conf
+sbin/auto-xdm-toggle
+%%DATADIR%%/ipfw-rules.sh
+@dirrm %%DATADIR%%
