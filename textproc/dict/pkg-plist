@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/textproc/dict/pkg-plist,v 1.8 2012/11/17 06:01:54 svnexp Exp $
+bin/dict
+bin/dict_lookup
+bin/dictl
+@unexec if cmp -s %D/etc/dict.conf.sample %D/etc/dict.conf; then rm -f %D/etc/dict.conf; fi
+etc/dict.conf.sample
+@exec [ -f %B/dict.conf ] || cp %B/%f %B/dict.conf
