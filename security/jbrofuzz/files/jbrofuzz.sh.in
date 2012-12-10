@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/security/jbrofuzz/files/jbrofuzz.sh.in,v 1.2 2012/11/17 06:01:06 svnexp Exp $
+#
+
+exec %%JAVA_CMD%% -jar -Xmx256m %%JAVASHAREDIR%%/%%JBROFUZZ%%/%%JBROFUZZ%%.jar "$@"
