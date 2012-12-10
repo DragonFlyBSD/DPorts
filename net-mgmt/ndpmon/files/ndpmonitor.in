@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net-mgmt/ndpmon/files/ndpmonitor.in,v 1.8 2012/11/17 06:00:34 svnexp Exp $
+#
+# PROVIDE: ndpmonitor
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+
+. /etc/rc.subr
+
+name="ndpmonitor"
+rcvar=ndpmonitor_enable
+
+command="%%PREFIX%%/sbin/ndpmon"
+required_files=%%ETCDIR%%/config_ndpmon.xml
+
+load_rc_config $name
+
+: ${ndpmonitor_enable="NO"}
+
+command_args=">/dev/null 2>&1 &"
+
+run_rc_command "$1"

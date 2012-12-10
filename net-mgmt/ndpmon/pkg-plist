@@ -1,0 +1,11 @@
+%%ETCDIR%%/config_ndpmon.xml-dist
+sbin/ndpmon
+%%DATADIR%%/config_ndpmon.dtd
+%%DATADIR%%/demopipeprogram.pl.sample
+%%DATADIR%%/neighbor_list.dtd
+%%PY%%%%DATADIR%%/create_html_table.py
+var/ndpmon/neighbor_list.xml
+@dirrmtry var/ndpmon
+@dirrmtry var
+@dirrmtry %%DATADIR%%
+@dirrmtry %%ETCDIR%%

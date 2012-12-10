@@ -1,0 +1,20 @@
+
+$FreeBSD: ports/net-mgmt/ndpmon/files/patch-config__ndpmon.xml.in,v 1.3 2012/11/17 06:00:34 svnexp Exp $
+
+--- config_ndpmon.xml.in.orig
++++ config_ndpmon.xml.in
+@@ -8,12 +8,12 @@
+         <actions_low_pri>
+             <sendmail>1</sendmail>
+             <syslog>1</syslog>
+-            <exec_pipe_program>/usr/local/ndpmon/create_html_table.py</exec_pipe_program>
++            <exec_pipe_program>%%PREFIX%%/share/ndpmon/create_html_table.py</exec_pipe_program>
+         </actions_low_pri>
+         <actions_high_pri>
+             <sendmail>1</sendmail>
+             <syslog>1</syslog>
+-            <exec_pipe_program>/usr/local/ndpmon/create_html_table.py</exec_pipe_program>
++            <exec_pipe_program>%%PREFIX%%/share/ndpmon/create_html_table.py</exec_pipe_program>
+         </actions_high_pri>
+         <use_reverse_hostlookups>1</use_reverse_hostlookups>
+     <routers>
