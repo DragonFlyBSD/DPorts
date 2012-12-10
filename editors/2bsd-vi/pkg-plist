@@ -1,0 +1,9 @@
+bin/ex
+bin/edit
+bin/vedit
+bin/vi
+bin/view
+libexec/exrecover
+libexec/expreserve
+@exec install -d -m 1777 %%PRESERVEDIR%%
+@unexec rmdir %%PRESERVEDIR%% 2> /dev/null || true
