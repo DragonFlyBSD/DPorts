@@ -1,0 +1,28 @@
+# New ports collection makefile for:	mpiexec
+# Date created:		2006-11-16
+# Whom:			trasz <trasz@pin.if.uz.zgora.pl>
+#
+# $FreeBSD: ports/sysutils/mpiexec/Makefile,v 1.11 2012/11/17 06:01:39 svnexp Exp $
+#
+
+PORTNAME=	mpiexec
+PORTVERSION=	0.84
+CATEGORIES=	sysutils parallel
+MASTER_SITES=	http://www.osc.edu/~djohnson/mpiexec/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	5u623l20@gmail.com
+COMMENT=	A tool to run a parallel job from within a PBS environment
+
+LIB_DEPENDS=	torque.2:${PORTSDIR}/sysutils/torque
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+CONFIGURE_ARGS=	--with-default-comm=mpich2
+
+PLIST_FILES=	bin/mpiexec
+MAN1=		mpiexec.1
+
+CONFLICTS=	mpich2-1.2.*
+
+.include <bsd.port.mk>
