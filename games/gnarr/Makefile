@@ -1,0 +1,20 @@
+# New ports collection makefile for:	gnarr
+# Date created:		13 December 2000
+# Whom:			roam@FreeBSD.org
+#
+# $FreeBSD: ports/games/gnarr/Makefile,v 1.9 2012/11/17 05:57:40 svnexp Exp $
+#
+
+PORTNAME=	gnarr
+PORTVERSION=	3
+CATEGORIES=	games
+MASTER_SITES=	http://www.volny.cz/nakamura/gnarr/
+
+MAINTAINER=	daniel.ryslink@dialtelecom.cz
+COMMENT=	A program for generating battle cries
+
+MAN6=		gnarr.6
+
+NO_BUILD=	yes
+
+.include <bsd.port.mk>
