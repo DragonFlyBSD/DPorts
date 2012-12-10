@@ -1,0 +1,11 @@
+bin/hspell
+bin/hspell-i
+bin/multispell
+include/hspell.h
+include/linginfo.h
+lib/libhspell.a
+%%DATADIR%%/hebrew.wgz
+%%DATADIR%%/hebrew.wgz.hints
+%%DATADIR%%/hebrew.wgz.prefixes
+%%DATADIR%%/hebrew.wgz.sizes
+@dirrm %%DATADIR%%
