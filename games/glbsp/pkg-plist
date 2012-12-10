@@ -1,0 +1,3 @@
+bin/glbsp
+%%GUI_VERSION%%bin/glBSPX
+%%PLUGIN%%lib/libglbsp.a
