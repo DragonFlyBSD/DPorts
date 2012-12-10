@@ -1,0 +1,19 @@
+--- ./Makefile.orig	2012-10-18 14:26:39.000000000 +0200
++++ ./Makefile	2012-10-18 14:27:54.000000000 +0200
+@@ -16,13 +16,11 @@
+ 
+ TARGET=httping
+ 
+-DEBUG=yes
+-WFLAGS=-Wall -W
+-OFLAGS=-O3
+-CFLAGS+=$(WFLAGS) $(OFLAGS) -DVERSION=\"$(VERSION)\"
++DEBUG=no
++CFLAGS+=-DVERSION=\"$(VERSION)\"
+ 
+ PACKAGE=$(TARGET)-$(VERSION)
+-PREFIX=/usr
++PREFIX?=/usr
+ BINDIR=$(PREFIX)/bin
+ MANDIR=$(PREFIX)/share/man
+ DOCDIR=$(PREFIX)/share/doc/$(TARGET)
