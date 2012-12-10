@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/shells/psh/files/pkg-deinstall.in,v 1.3 2012/11/17 06:01:23 svnexp Exp $
+#
+
+PSH="%%PREFIX%%/bin/psh"
+SHELLS="/etc/shells"
+
+case $2 in
+DEINSTALL)
+  if grep -qs "^$PSH\$" "$SHELLS"; then
+    if [ `id -u` -eq 0 ]; then
+      TMPSHELLS=`mktemp -t shells`
+      grep -v "^$PSH\$" "$SHELLS" > "$TMPSHELLS"
+      cat "$TMPSHELLS" > "$SHELLS"
+      rm "$TMPSHELLS"
+    else
+      echo "Not root, please remove $PSH from $SHELLS manually"
+    fi
+  fi
+  ;;
+esac
