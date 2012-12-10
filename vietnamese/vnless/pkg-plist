@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/vietnamese/vnless/pkg-plist,v 1.4 2012/11/17 06:02:26 svnexp Exp $
+bin/vnless
+bin/vnlesskey
+share/misc/vnless.help
