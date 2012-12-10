@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/security/nbaudit/pkg-plist,v 1.6 2012/11/17 06:01:08 svnexp Exp $
+bin/nat
+bin/nbaudit
+bin/nbaudition.pl
