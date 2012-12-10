@@ -1,0 +1,33 @@
+# ex:ts=8
+# New ports collection makefile for:	mboxstats
+# Date created:			Oct 31 2003
+# Whom:				clsung
+#
+# $FreeBSD: ports/mail/mboxstats/Makefile,v 1.16 2012/11/17 05:59:05 svnexp Exp $
+#
+
+PORTNAME=	mboxstats
+PORTVERSION=	3.1
+CATEGORIES=	mail
+MASTER_SITES=	http://vanheusden.com/mboxstats/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	clsung@FreeBSD.org
+COMMENT=	Creates top-10 lists of the messages in a mailbox
+
+PLIST_FILES=	bin/mboxstats
+
+.include <bsd.port.pre.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|ssize_t|size_t|g' ${WRKSRC}/io.h
+	@${REINPLACE_CMD} -e 's|PATH_MAX|FILENAME_MAX|g' ${WRKSRC}/main.cpp
+	@${REINPLACE_CMD} -e 's|^CC=|CC?=|g' ${WRKSRC}/${MAKEFILE}
+	@${REINPLACE_CMD} -e 's|^CPPFLAGS|CXXFLAGS|g' ${WRKSRC}/${MAKEFILE}
+	@${REINPLACE_CMD} -Ee 's,(stat|open)64,\1,g' ${WRKSRC}/main.cpp
+	@${REINPLACE_CMD} -Ee 's,(stat|mmap|lseek|off)64,\1,g' ${WRKSRC}/br.h ${WRKSRC}/br.cpp
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/mboxstats ${PREFIX}/bin
+
+.include <bsd.port.post.mk>
