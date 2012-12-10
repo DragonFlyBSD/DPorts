@@ -1,0 +1,5 @@
+include/hesiod.h
+lib/libhesiod.a
+lib/libhesiod.la
+lib/libhesiod.so
+lib/libhesiod.so.0
