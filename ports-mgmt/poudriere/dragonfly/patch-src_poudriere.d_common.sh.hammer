@@ -1,6 +1,6 @@
 --- /dev/null	2012-12-06 03:01:20.230192667 +0100
-+++ src/poudriere.d/common.sh.hammer	2012-12-06 21:07:05.000000000 +0100
-@@ -0,0 +1,566 @@
++++ src/poudriere.d/common.sh.hammer	2012-12-06 03:16:16.000000000 +0100
+@@ -0,0 +1,567 @@
 +#!/bin/sh
 +
 +zget() {
@@ -442,16 +442,17 @@
 +	[ -z "${BASEJNAME}" ] && err 2 "Fail: Missing JAILNAME"
 +	log_stop
 +
-+	# Kill main process' children
++	# Kill all children - this does NOT recurse, so orphans can still
++	# occur. This is just to avoid requiring pid files for parallel_run
 +	for pid in $(jobs -p); do
-+		killtree ${pid} 15 || :
++		kill ${pid} 2>/dev/null || :
 +	done
 +
 +	if [ -d ${MASTERMNT:-${JAILMNT}}/poudriere/var/run ]; then
 +		for pid in ${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid; do
 +			# Ensure there is a pidfile to read or break
 +			[ "${pid}" = "${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid" ] && break
-+			killtree `cat ${pid}` 15 || :
++			kill -15 `cat ${pid}` >/dev/null 2>&1 || :
 +		done
 +	fi
 +	wait

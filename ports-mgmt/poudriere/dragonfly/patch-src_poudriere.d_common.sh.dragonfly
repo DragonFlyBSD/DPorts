@@ -1,6 +1,6 @@
---- /dev/null	2012-12-06 03:01:20.230192667 +0100
-+++ src/poudriere.d/common.sh.dragonfly	2012-12-06 22:01:48.000000000 +0100
-@@ -0,0 +1,244 @@
+--- /dev/null	2012-12-05 09:14:49.161043935 +0100
++++ src/poudriere.d/common.sh.dragonfly	2012-12-05 11:07:22.000000000 +0100
+@@ -0,0 +1,229 @@
 +#!/bin/sh
 +#
 +# DragonFly-specific
@@ -186,7 +186,7 @@
 +	fi
 +	msg "Umounting file systems"
 +	mnt=`realpath ${MASTERMNT:-${JAILMNT}}`
-+	mount | awk -v mnt="${mnt}/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount || :
++	mount | awk -v mnt="${mnt}/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount -f || :
 +	umount ${mnt} || :
 +
 +	if [ -n "${MFSSIZE}" ]; then
@@ -229,19 +229,4 @@
 +	else
 +		echo ${LISTPORTS} | tr ' ' '\n'
 +	fi
-+}
-+
-+killtree() {
-+	local _pid=${1}
-+	local _sig=${2}
-+	local _child
-+	local _children
-+
-+	# stop parent from attempting to folk
-+	kill -17 ${_pid}
-+	_children=$(pgrep -P ${_pid})
-+	for _child in ${children}; do
-+		killtree ${_child} ${_sig}
-+	done
-+	kill -${_sig} ${_pid}
 +}
