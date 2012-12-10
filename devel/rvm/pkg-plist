@@ -1,0 +1,20 @@
+include/rvm/rds.h
+include/rvm/rvm.h
+include/rvm/rvm_segment.h
+include/rvm/rvm_statistics.h
+lib/librdslwp.a
+lib/librdslwp.la
+lib/librdslwp.so
+lib/librdslwp.so.3
+lib/librvmlwp.a
+lib/librvmlwp.la
+lib/librvmlwp.so
+lib/librvmlwp.so.3
+lib/libseglwp.a
+lib/libseglwp.la
+lib/libseglwp.so
+lib/libseglwp.so.3
+libdata/pkgconfig/rvmlwp.pc
+sbin/rdsinit
+sbin/rvmutl
+@dirrm include/rvm
