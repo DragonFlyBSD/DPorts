@@ -1,0 +1,15 @@
+#!/bin/csh
+#
+# $FreeBSD: ports/devel/opengrok/files/opengrok.in,v 1.2 2012/11/17 05:56:03 svnexp Exp $
+
+set JAVA = "%%LOCALBASE%%/bin/java"
+set LIBFILES = "%%LIBFILES%%"
+setenv JAVA_VERSION "%%JAVA_VERSION%%"
+
+if ( "${LIBFILES}" != "" ) then
+	set CLASSPATH = `echo ${LIBFILES} | sed -E -e 's,[[:space:]]+,:,g'`
+else
+	set CLASSPATH = ""
+endif
+
+exec "${JAVA}" -cp "${CLASSPATH}" -jar %%JARFILE%% -c %%LOCALBASE%%/bin/exctags $*
