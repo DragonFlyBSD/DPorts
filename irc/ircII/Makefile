@@ -1,0 +1,25 @@
+# New ports collection makefile for:	IrcII Client
+# Date created:		18 Oct 1994
+# Whom:			torstenb
+#
+# $FreeBSD: ports/irc/ircII/Makefile,v 1.57 2012/11/17 05:58:28 svnexp Exp $
+#
+
+PORTNAME=	ircii
+PORTVERSION=	20111115
+CATEGORIES=	irc ipv6
+MASTER_SITES=	http://ircii.warped.com/
+
+MAINTAINER=	sylvio@FreeBSD.org
+COMMENT=	The 'Internet Relay Chat' and 'Internet Citizens Band' Client
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	IRCLIB=${PREFIX}/share/irc
+
+USE_BZIP2=	yes
+
+MAN1=		irc.1 ircII.1 ircbug.1
+
+PLIST_SUB=	VERSION="${PORTVERSION}"
+
+.include <bsd.port.mk>
