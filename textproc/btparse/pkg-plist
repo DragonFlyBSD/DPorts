@@ -1,0 +1,8 @@
+@comment $FreeBSD: ports/textproc/btparse/pkg-plist,v 1.2 2012/11/17 06:01:52 svnexp Exp $
+bin/bibparse
+include/btparse.h
+lib/libbtparse.so.0
+lib/libbtparse.so
+lib/libbtparse.la
+lib/libbtparse.a
+libdata/pkgconfig/btparse.pc
