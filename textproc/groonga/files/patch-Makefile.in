@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2010-11-24 21:34:43.000000000 +0900
++++ Makefile.in	2010-11-28 22:37:10.799791656 +0900
+@@ -276,7 +276,7 @@
+ SUBDIRS = include lib plugins src examples test apt rpm yum data resource doc
+ #dist_data_DATA =
+ EXTRA_DIST = bindings version-gen.sh
+-pkgconfigdir = $(libdir)/pkgconfig
++pkgconfigdir = $(prefix)/libdata/pkgconfig
+ pkgconfig_DATA = groonga.pc
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
