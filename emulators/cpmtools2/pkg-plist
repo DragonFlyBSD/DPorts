@@ -1,0 +1,10 @@
+sbin/cpmls
+sbin/cpmcp
+sbin/cpmrm
+sbin/cpmchmod
+sbin/cpmchattr
+sbin/mkfs.cpm
+sbin/fsck.cpm
+sbin/fsed.cpm
+%%DATADIR%%/diskdefs
+@dirrm %%DATADIR%%
