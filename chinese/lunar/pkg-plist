@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/chinese/lunar/pkg-plist,v 1.6 2012/11/17 05:54:57 svnexp Exp $
+bin/lunar
+share/chinese/lunar.bitmap
+@dirrmtry share/chinese
