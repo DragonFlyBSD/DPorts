@@ -1,0 +1,21 @@
+%%PORTDOCS%%%%DOCSDIR%%/COPYRIGHT
+%%PORTDOCS%%%%DOCSDIR%%/README.versions
+%%PORTDOCS%%%%DOCSDIR%%/fasta20.doc
+%%PORTDOCS%%%%DOCSDIR%%/fasta20.me
+%%PORTDOCS%%%%DOCSDIR%%/format.doc
+%%PORTDOCS%%%%DOCSDIR%%/readme.v15
+%%PORTDOCS%%%%DOCSDIR%%/readme.v16
+%%PORTDOCS%%%%DOCSDIR%%/readme.v17
+%%PORTDOCS%%%%DOCSDIR%%/readme.v20
+%%PORTDOCS%%%%DOCSDIR%%/readme.v20u4
+%%PORTDOCS%%%%DOCSDIR%%/readme.v20u5
+%%PORTDOCS%%%%DOCSDIR%%/readme.v20u6
+%%PORTDOCS%%%%DOCSDIR%%/readme.v21u0
+bin/align
+bin/align0
+bin/chofas
+bin/garnier
+bin/lalign
+bin/plalign
+bin/psgrease
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
