@@ -1,0 +1,8 @@
+@comment $FreeBSD: ports/devel/libxalloc/pkg-plist,v 1.5 2012/11/17 05:55:57 svnexp Exp $
+include/xalloc.h
+lib/libxalloc.a
+lib/libxalloc.so
+lib/libxalloc.so.1
+%%PORTDOCS%%share/doc/libxalloc/CREDITS
+%%PORTDOCS%%share/doc/libxalloc/README
+%%PORTDOCS%%@dirrm share/doc/libxalloc
