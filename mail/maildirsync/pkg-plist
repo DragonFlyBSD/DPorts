@@ -1,0 +1,14 @@
+@comment $FreeBSD: ports/mail/maildirsync/pkg-plist,v 1.5 2012/11/17 05:59:05 svnexp Exp $
+bin/maildirsync
+%%EXAMPLESDIR%%/sample.sh
+%%EXAMPLESDIR%%/mailbalance/PREPPED.USERS.db
+%%EXAMPLESDIR%%/mailbalance/README
+%%EXAMPLESDIR%%/mailbalance/do_ms.sh
+%%EXAMPLESDIR%%/mailbalance/functions.inc
+%%EXAMPLESDIR%%/mailbalance/install.sh
+%%EXAMPLESDIR%%/mailbalance/mailbalance
+%%EXAMPLESDIR%%/mailbalance/mailbalance.conf
+%%EXAMPLESDIR%%/mailbalance/scoop_users.pl
+%%EXAMPLESDIR%%/mailbalance/todo.txt
+@dirrm %%EXAMPLESDIR%%/mailbalance
+@dirrm %%EXAMPLESDIR%%
