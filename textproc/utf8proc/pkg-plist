@@ -1,0 +1,5 @@
+@comment $FreeBSD: ports/textproc/utf8proc/pkg-plist,v 1.2 2012/11/17 06:02:24 svnexp Exp $
+include/utf8proc.h
+lib/libutf8proc.a
+lib/libutf8proc.so
+lib/libutf8proc.so.1
