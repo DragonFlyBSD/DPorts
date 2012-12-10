@@ -1,0 +1,33 @@
+# New ports collection makefile for:	dmjava
+# Date Created:		1 Sep 2002
+# Whom:			Oliver Lehmann <lehmann@ans-netz.de>
+#
+# $FreeBSD: ports/games/dmjava/Makefile,v 1.9 2012/11/17 05:57:36 svnexp Exp $
+#
+
+PORTNAME=	dmjava
+PORTVERSION=	1.05
+PORTREVISION=	2
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_LOCAL} \
+		http://chaos.zpc.cz/files/
+MASTER_SITE_SUBDIR=	oliver
+DISTNAME=	dmj${PORTVERSION}
+
+MAINTAINER=	oliver@FreeBSD.org
+COMMENT=	Dungeon Master Java is a remake of the classic Dungeon Master by FTL
+
+EXTRACT_AFTER_ARGS=	-d ${WRKSRC}
+
+USE_ZIP=	yes
+USE_JAVA=	yes
+JAVA_VERSION=	1.5+
+NO_BUILD=	yes
+
+do-install:
+	@${MKDIR} ${PREFIX}/${PORTNAME}
+	@${CP} -r ${WRKSRC}/* ${PREFIX}/${PORTNAME}
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "To start dmjava, type 'cd ${PREFIX}/${PORTNAME} && javavm dmnew'"
+	@${ECHO_MSG} ""
+.include <bsd.port.mk>
