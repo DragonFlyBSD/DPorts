@@ -1,0 +1,11 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Memoize/.packlist
+%%SITE_PERL%%/Memoize.pm
+%%SITE_PERL%%/Memoize/ExpireTest.pm
+%%SITE_PERL%%/Memoize/Expire.pm
+%%SITE_PERL%%/Memoize/AnyDBM_File.pm
+%%SITE_PERL%%/Memoize/Storable.pm
+%%SITE_PERL%%/Memoize/SDBM_File.pm
+%%SITE_PERL%%/Memoize/ExpireFile.pm
+%%SITE_PERL%%/Memoize/NDBM_File.pm
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Memoize
+@dirrmtry %%SITE_PERL%%/Memoize
