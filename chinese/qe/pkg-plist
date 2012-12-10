@@ -1,0 +1,5 @@
+bin/qe
+bin/pe2
+share/qe/qe.hlp
+share/qe/qe.pro
+@dirrm share/qe/
