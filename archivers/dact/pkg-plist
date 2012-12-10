@@ -1,0 +1,9 @@
+bin/dact
+etc/dact.conf
+lib/libdact.so
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/dact.txt
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/dact.conf
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm %%DATADIR%%
