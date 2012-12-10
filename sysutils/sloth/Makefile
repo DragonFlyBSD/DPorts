@@ -1,0 +1,26 @@
+# ex:ts=8
+# Ports collection makefile for:	sloth
+# Date created:			May 9, 2002
+# Whom:				ijliao
+#
+# $FreeBSD: ports/sysutils/sloth/Makefile,v 1.10 2012/11/17 06:01:46 svnexp Exp $
+#
+
+PORTNAME=	sloth
+PORTVERSION=	1.1.0
+CATEGORIES=	sysutils
+MASTER_SITES=	http://www.sourcefiles.org/Utilities/Miscellaneous/ \
+		http://T32.TecNik93.com/FreeBSD/others_ports/${PORTNAME}${PKGNAMESUFFIX}/sources/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Slow down a process
+
+GNU_CONFIGURE=	yes
+
+MAN1=		sloth.1
+PLIST_FILES=	bin/sloth
+
+post-patch:
+	@${REINPLACE_CMD} -e "s,wait.h,sys/wait.h,g" ${WRKSRC}/configure
+
+.include <bsd.port.mk>
