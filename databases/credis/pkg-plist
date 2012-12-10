@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/databases/credis/pkg-plist,v 1.2 2012/11/17 05:55:06 svnexp Exp $
+include/credis.h
+lib/libcredis.a
+lib/libcredis.so
+lib/libcredis.so.0
+lib/libcredis.so.%%VERSION%%
