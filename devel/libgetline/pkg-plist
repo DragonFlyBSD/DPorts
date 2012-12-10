@@ -1,0 +1,4 @@
+include/getline.h
+lib/libgetline.a
+lib/libgetline.so
+lib/libgetline.so.1
