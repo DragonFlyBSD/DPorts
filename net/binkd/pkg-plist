@@ -1,0 +1,6 @@
+etc/binkd.cfg.sample
+sbin/binkd
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/README.FIX
+%%PORTDOCS%%%%DOCSDIR%%/SRIF.TXT
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
