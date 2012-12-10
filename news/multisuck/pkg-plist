@@ -1,0 +1,5 @@
+bin/msuck
+%%PORTDOCS%%%%EXAMPLESDIR%%/filters.sample
+%%PORTDOCS%%%%EXAMPLESDIR%%/newsrc.sample
+%%PORTDOCS%%%%EXAMPLESDIR%%/suck.cfg.sample
+%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%
