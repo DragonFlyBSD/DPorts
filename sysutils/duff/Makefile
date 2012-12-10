@@ -1,0 +1,41 @@
+# $FreeBSD: ports/sysutils/duff/Makefile,v 1.9 2012/11/17 06:01:29 svnexp Exp $
+
+PORTNAME=	duff
+PORTVERSION=	0.5.2
+CATEGORIES=	sysutils
+MASTER_SITES=	SF
+
+MAINTAINER=	jhale@FreeBSD.org
+COMMENT=	Duplicate file finder
+
+LICENSE=	ZLIB
+LICENSE_FILE=	${WRKSRC}/COPYING
+
+USE_BZIP2=	yes
+GNU_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	yes
+
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+MAN1=		duff.1
+
+PORTDOCS=	README.SHA
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USE_GETTEXT=	yes
+PLIST_SUB=	NLS=""
+.else
+CONFIGURE_ARGS+=	--disable-nls
+PLIST_SUB=	NLS="@comment "
+.endif
+
+post-patch:
+.if !${PORT_OPTIONS:MDOCS}
+	@${REINPLACE_CMD} '/^install-data-am:/s/install-dist_docDATA//' \
+		${WRKSRC}/Makefile.in
+.endif
+
+.include <bsd.port.mk>
