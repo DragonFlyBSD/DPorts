@@ -1,0 +1,37 @@
+# New ports collection makefile for:   slib
+# Date created:        01 April 1998
+# Whom:                Yukihiro Nakai <Nakai@technologist.com>
+#
+# $FreeBSD: ports/lang/slib/Makefile,v 1.35 2012/11/17 05:58:56 svnexp Exp $
+#
+
+PORTNAME=	slib
+PORTVERSION=	3b3
+CATEGORIES=	lang scheme
+MASTER_SITES=	http://groups.csail.mit.edu/mac/ftpdir/scm/ \
+		http://groups.csail.mit.edu/mac/ftpdir/scm/OLD/
+DISTFILES=	slib-${PORTVERSION}${EXTRACT_SUFX}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A portable scheme library
+
+USE_GMAKE=	yes
+ALL_TARGET=	slib.info
+INFO=		slib
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/usr/lib/slib|${PREFIX}/share/slib|' ${WRKSRC}/guile.init
+
+do-install:
+	@${MKDIR} ${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/*.scm ${WRKSRC}/*.init ${WRKSRC}/*.txt \
+		${WRKSRC}/*.xyz ${WRKSRC}/*.ps ${DATADIR}
+	${INSTALL_MAN} ${WRKSRC}/slib.info ${MANPREFIX}/info
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for f in ANNOUNCE ChangeLog FAQ README
+	${INSTALL_MAN} ${WRKSRC}/${f} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>
