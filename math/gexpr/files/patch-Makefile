@@ -1,0 +1,16 @@
+--- Makefile.orig	Sat Feb 13 02:28:35 1999
++++ Makefile	Sun Jul  6 20:06:03 2003
+@@ -1,11 +1,10 @@
+ # Makefile for gexpr
+ # Last updated: 10 February 1999
+ 
+-CC	= gcc
+-OPTS	= -s -O2 -Wall
++OPTS	= ${CFLAGS} ${CPPFLAGS}
+ OBJS	= eval.o read_token.o commands.o output.o errors.o gexpr.o 
+ GEXPR	= gexpr
+-LIBS	= -lm
++LIBS	= -lm ${LDFLAGS}
+ 
+ all: $(GEXPR)
+ 
