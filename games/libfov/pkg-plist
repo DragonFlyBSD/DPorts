@@ -1,0 +1,10 @@
+include/fov/fov.h
+lib/fov/include/config.h
+lib/libfov.a
+lib/libfov.la
+lib/libfov.so
+lib/libfov.so.1
+libdata/pkgconfig/libfov.pc
+@dirrm lib/fov/include
+@dirrm lib/fov
+@dirrm include/fov
