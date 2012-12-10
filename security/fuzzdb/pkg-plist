@@ -1,0 +1,256 @@
+%%DATADIR%%/attack-payloads/all-attacks/all-attacks-unix.txt
+%%DATADIR%%/attack-payloads/all-attacks/all-attacks-win.txt
+%%DATADIR%%/attack-payloads/all-attacks/interesting-metacharacters.txt
+%%DATADIR%%/attack-payloads/control-chars/null.fuzz
+%%DATADIR%%/attack-payloads/disclosure-directory/generic/directory-indexing-generic.txt
+%%DATADIR%%/attack-payloads/disclosure-directory/source-directory-file-indexing-cheatsheet.html
+%%DATADIR%%/attack-payloads/disclosure-localpaths/unix/common-unix-httpd-log-locations.txt
+%%DATADIR%%/attack-payloads/disclosure-source/source-disc-cmd-exec-traversal.txt
+%%DATADIR%%/attack-payloads/disclosure-source/source-disclosure-generic.txt
+%%DATADIR%%/attack-payloads/disclosure-source/source-disclosure-microsoft.txt
+%%DATADIR%%/attack-payloads/file-upload/alt-extensions-asp.txt
+%%DATADIR%%/attack-payloads/file-upload/alt-extensions-coldfusion.txt
+%%DATADIR%%/attack-payloads/file-upload/alt-extensions-jsp.txt
+%%DATADIR%%/attack-payloads/file-upload/alt-extensions-perl.txt
+%%DATADIR%%/attack-payloads/file-upload/alt-extensions-php.txt
+%%DATADIR%%/attack-payloads/file-upload/file-ul-filter-bypass-commonly-writable-directories.txt
+%%DATADIR%%/attack-payloads/file-upload/file-ul-filter-bypass-microsoft-asp-filetype-bf.txt
+%%DATADIR%%/attack-payloads/file-upload/file-ul-filter-bypass-microsoft-asp.txt
+%%DATADIR%%/attack-payloads/file-upload/file-ul-filter-bypass-ms-php.txt
+%%DATADIR%%/attack-payloads/file-upload/file-ul-filter-bypass-x-platform-generic.txt
+%%DATADIR%%/attack-payloads/file-upload/file-ul-filter-bypass-x-platform-php.txt
+%%DATADIR%%/attack-payloads/file-upload/file-ul-filter-bypass.readme
+%%DATADIR%%/attack-payloads/file-upload/invalid-filenames-linux.txt
+%%DATADIR%%/attack-payloads/file-upload/invalid-filenames-microsoft.txt
+%%DATADIR%%/attack-payloads/file-upload/invalid-filesystem-chars-microsoft.txt
+%%DATADIR%%/attack-payloads/file-upload/invalid-filesystem-chars-osx.txt
+%%DATADIR%%/attack-payloads/format-strings/format-strings.txt
+%%DATADIR%%/attack-payloads/html_fuzz/html_tags.txt
+%%DATADIR%%/attack-payloads/html_fuzz/javascript_events.txt
+%%DATADIR%%/attack-payloads/http-protocol/docs.http-method-defs.html
+%%DATADIR%%/attack-payloads/http-protocol/http-header-cache-poison.txt
+%%DATADIR%%/attack-payloads/http-protocol/http-protocol-methods.txt
+%%DATADIR%%/attack-payloads/http-protocol/user-agents.txt
+%%DATADIR%%/attack-payloads/integer-overflow/integer-overflows.txt
+%%DATADIR%%/attack-payloads/ldap/ldap-injection.txt
+%%DATADIR%%/attack-payloads/lfi/common-unix-httpd-log-locations.txt
+%%DATADIR%%/attack-payloads/lfi/readme.txt
+%%DATADIR%%/attack-payloads/os-cmd-execution/command-execution-unix.txt
+%%DATADIR%%/attack-payloads/os-cmd-execution/commands-unix.txt
+%%DATADIR%%/attack-payloads/os-cmd-execution/commands-windows.txt
+%%DATADIR%%/attack-payloads/os-cmd-execution/docs/command-execution-cheatsheat-unix.txt
+%%DATADIR%%/attack-payloads/os-cmd-execution/source-disc-cmd-exec-traversal.txt
+%%DATADIR%%/attack-payloads/os-dir-indexing/directory-indexing.txt
+%%DATADIR%%/attack-payloads/path-traversal/path-traversal-windows.txt
+%%DATADIR%%/attack-payloads/path-traversal/traversals-8-deep-exotic-encoding.txt
+%%DATADIR%%/attack-payloads/rfi/readme.txt
+%%DATADIR%%/attack-payloads/rfi/rfi-cheatsheet.html
+%%DATADIR%%/attack-payloads/rfi/rfi.txt
+%%DATADIR%%/attack-payloads/server-side-include/server-side-includes-generic.txt
+%%DATADIR%%/attack-payloads/sql-injection/detect/generic/sql-injection-active.txt
+%%DATADIR%%/attack-payloads/sql-injection/detect/generic/sql-injection-passive.txt
+%%DATADIR%%/attack-payloads/sql-injection/detect/generic/sql-injection.txt
+%%DATADIR%%/attack-payloads/sql-injection/detect/ms-sql/sql-injection-ms-sql-blind-ninja.txt
+%%DATADIR%%/attack-payloads/sql-injection/detect/ms-sql/sql-injection-ms-sql.txt
+%%DATADIR%%/attack-payloads/sql-injection/detect/mysql/sql-injection-mysql-ms-sql.txt
+%%DATADIR%%/attack-payloads/sql-injection/detect/mysql/sql-injection-mysql.txt
+%%DATADIR%%/attack-payloads/sql-injection/detect/oracle/docs/docs.oracle_cheat.pdf
+%%DATADIR%%/attack-payloads/sql-injection/detect/oracle/docs/docs.sql_injection_cheatsheet.html
+%%DATADIR%%/attack-payloads/sql-injection/detect/oracle/sql-injection-oracle.txt
+%%DATADIR%%/attack-payloads/sql-injection/exploit/db2-enumeration.txt
+%%DATADIR%%/attack-payloads/sql-injection/exploit/ms-sql-enumeration.txt
+%%DATADIR%%/attack-payloads/sql-injection/exploit/mysql-injection-login-bypass.txt
+%%DATADIR%%/attack-payloads/sql-injection/exploit/mysql-read-local-files.txt
+%%DATADIR%%/attack-payloads/sql-injection/exploit/postgres-enumeration.txt
+%%DATADIR%%/attack-payloads/xml/xml-attacks.txt
+%%DATADIR%%/attack-payloads/xpath/xpath-injection.txt
+%%DATADIR%%/attack-payloads/xss/docs.wasc-scriptmapping/ScriptMapping_Release_26Nov2007.html
+%%DATADIR%%/attack-payloads/xss/docs.wasc-scriptmapping/images/ff2.png
+%%DATADIR%%/attack-payloads/xss/docs.wasc-scriptmapping/images/ie7.png
+%%DATADIR%%/attack-payloads/xss/docs.wasc-scriptmapping/images/safari3.png
+%%DATADIR%%/attack-payloads/xss/docs.wasc-scriptmapping/license.txt
+%%DATADIR%%/attack-payloads/xss/xss-rsnake.txt
+%%DATADIR%%/attack-payloads/xss/xss-uri.txt
+%%DATADIR%%/discovery/filename-bruteforce/copy_of.txt
+%%DATADIR%%/discovery/filename-bruteforce/file-extensions/file-extensions-backup-files.txt
+%%DATADIR%%/discovery/filename-bruteforce/file-extensions/file-extensions-common-datafile-types.txt
+%%DATADIR%%/discovery/filename-bruteforce/file-extensions/file-extensions-compressed-filetypes.txt
+%%DATADIR%%/discovery/filename-bruteforce/file-extensions/file-extensions-mostcommon.txt
+%%DATADIR%%/discovery/filename-bruteforce/file-extensions/file-extensions-skipfish.txt
+%%DATADIR%%/discovery/filename-bruteforce/file-or-dir-root-wordlists/wordlist-skipfish.txt
+%%DATADIR%%/discovery/generic/cgi-HTTP-POST-reqd.txt
+%%DATADIR%%/discovery/generic/cgi-x-platform.txt
+%%DATADIR%%/discovery/generic/cms/drupal_plugins.txt
+%%DATADIR%%/discovery/generic/cms/drupal_themes.txt
+%%DATADIR%%/discovery/generic/cms/joomla_plugins.txt
+%%DATADIR%%/discovery/generic/cms/joomla_themes.txt
+%%DATADIR%%/discovery/generic/cms/readme.txt
+%%DATADIR%%/discovery/generic/cms/wp_plugins.txt
+%%DATADIR%%/discovery/generic/cms/wp_themes.txt
+%%DATADIR%%/discovery/generic/interesting-dirs-kitchensink.txt
+%%DATADIR%%/discovery/generic/interesting-files-apache-tomcat.txt
+%%DATADIR%%/discovery/generic/interesting-files-apache.txt
+%%DATADIR%%/discovery/generic/interesting-files-coldfusion.txt
+%%DATADIR%%/discovery/generic/interesting-files-hyperion.txt
+%%DATADIR%%/discovery/generic/interesting-files-logins.txt
+%%DATADIR%%/discovery/generic/interesting-files-lotus-notes.txt
+%%DATADIR%%/discovery/generic/interesting-files-oracle-application-server.txt
+%%DATADIR%%/discovery/generic/interesting-files-passwords.txt
+%%DATADIR%%/discovery/generic/interesting-files-random.txt
+%%DATADIR%%/discovery/generic/interesting-files-websphere.txt
+%%DATADIR%%/discovery/generic/php-common-backdoors.txt
+%%DATADIR%%/discovery/generic/tftp.txt
+%%DATADIR%%/discovery/unix/interesting-files-dotfiles.txt
+%%DATADIR%%/discovery/unix/interesting-files-iplanet.txt
+%%DATADIR%%/discovery/unix/interesting-files-sun-app-server.txt
+%%DATADIR%%/discovery/win/cgi-HTTP-POST-reqd-microsoft.txt
+%%DATADIR%%/discovery/win/cgi-microsoft.txt
+%%DATADIR%%/discovery/win/interesting-files-microsoft-iis-http-post.txt
+%%DATADIR%%/discovery/win/interesting-files-microsoft-iis.txt
+%%DATADIR%%/discovery/win/interesting-files-microsoft-sharepoint.txt
+%%DATADIR%%/discovery/win/interesting-files-netware.txt
+%%DATADIR%%/regex/errors.txt
+%%DATADIR%%/regex/readme.txt
+%%DATADIR%%/regex/sessionid.txt
+%%DATADIR%%/web-backdoors/asp/cmd-asp-5.1.asp
+%%DATADIR%%/web-backdoors/asp/cmd.asp
+%%DATADIR%%/web-backdoors/asp/cmd.aspx
+%%DATADIR%%/web-backdoors/asp/cmdasp.asp
+%%DATADIR%%/web-backdoors/asp/cmdasp.aspx
+%%DATADIR%%/web-backdoors/asp/list.asp
+%%DATADIR%%/web-backdoors/asp/list.txt
+%%DATADIR%%/web-backdoors/asp/ntdaddy.asp
+%%DATADIR%%/web-backdoors/asp/up.asp
+%%DATADIR%%/web-backdoors/c/cmd.c
+%%DATADIR%%/web-backdoors/cfm/cfexec.cfm
+%%DATADIR%%/web-backdoors/cfm/cmd.cfm
+%%DATADIR%%/web-backdoors/exe/nc.exe
+%%DATADIR%%/web-backdoors/jsp/CmdServlet.class
+%%DATADIR%%/web-backdoors/jsp/CmdServlet.java
+%%DATADIR%%/web-backdoors/jsp/ListServlet.class
+%%DATADIR%%/web-backdoors/jsp/ListServlet.java
+%%DATADIR%%/web-backdoors/jsp/UpServlet.class
+%%DATADIR%%/web-backdoors/jsp/UpServlet.java
+%%DATADIR%%/web-backdoors/jsp/browser.jsp
+%%DATADIR%%/web-backdoors/jsp/cmd.jsp
+%%DATADIR%%/web-backdoors/jsp/cmdjsp.jsp
+%%DATADIR%%/web-backdoors/jsp/jsp-reverse.jsp
+%%DATADIR%%/web-backdoors/jsp/list.jsp
+%%DATADIR%%/web-backdoors/jsp/up.jsp
+%%DATADIR%%/web-backdoors/jsp/win32/cmd_win32.jsp
+%%DATADIR%%/web-backdoors/jsp/win32/up_win32.jsp
+%%DATADIR%%/web-backdoors/php/cmd.php
+%%DATADIR%%/web-backdoors/php/list.php
+%%DATADIR%%/web-backdoors/php/php-backdoor.php
+%%DATADIR%%/web-backdoors/php/simple-backdoor.php
+%%DATADIR%%/web-backdoors/php/up.php
+%%DATADIR%%/web-backdoors/pl-cgi/cmd.pl
+%%DATADIR%%/web-backdoors/pl-cgi/list.pl
+%%DATADIR%%/web-backdoors/pl-cgi/perlcmd.cgi
+%%DATADIR%%/web-backdoors/pl-cgi/up.pl
+%%DATADIR%%/web-backdoors/servlet/CmdServlet.java
+%%DATADIR%%/web-backdoors/servlet/ListServlet.java
+%%DATADIR%%/web-backdoors/servlet/UpServlet.java
+%%DATADIR%%/web-backdoors/sh/cmd.sh
+%%DATADIR%%/web-backdoors/sh/list.sh
+%%DATADIR%%/web-backdoors/sh/up.sh
+%%DATADIR%%/wordlists-misc/common-http-ports.txt
+%%DATADIR%%/wordlists-misc/us_cities.txt
+%%DATADIR%%/wordlists-misc/wordlist-alphanumeric-case.txt
+%%DATADIR%%/wordlists-misc/wordlist-common-snmp-community-strings.txt
+%%DATADIR%%/wordlists-misc/wordlist-dna.txt
+%%DATADIR%%/wordlists-user-passwd/db2/db2_default_pass.txt
+%%DATADIR%%/wordlists-user-passwd/db2/db2_default_user.txt
+%%DATADIR%%/wordlists-user-passwd/db2/db2_default_userpass.txt
+%%DATADIR%%/wordlists-user-passwd/faithwriters.txt
+%%DATADIR%%/wordlists-user-passwd/generic-listpairs/http_default_pass.txt
+%%DATADIR%%/wordlists-user-passwd/generic-listpairs/http_default_userpass.txt
+%%DATADIR%%/wordlists-user-passwd/generic-listpairs/http_default_users.txt
+%%DATADIR%%/wordlists-user-passwd/names/namelist.txt
+%%DATADIR%%/wordlists-user-passwd/oracle/_hci_oracle_passwords.txt
+%%DATADIR%%/wordlists-user-passwd/oracle/_oracle_default_passwords.txt
+%%DATADIR%%/wordlists-user-passwd/passwds/john.txt
+%%DATADIR%%/wordlists-user-passwd/passwds/phpbb.txt
+%%DATADIR%%/wordlists-user-passwd/passwds/twitter.txt
+%%DATADIR%%/wordlists-user-passwd/passwds/weaksauce.txt
+%%DATADIR%%/wordlists-user-passwd/postgres/postgres_default_pass.txt
+%%DATADIR%%/wordlists-user-passwd/postgres/postgres_default_user.txt
+%%DATADIR%%/wordlists-user-passwd/postgres/postgres_default_userpass.txt
+%%DATADIR%%/wordlists-user-passwd/readme.txt
+%%DATADIR%%/wordlists-user-passwd/tomcat/tomcat_mgr_default_pass.txt
+%%DATADIR%%/wordlists-user-passwd/tomcat/tomcat_mgr_default_userpass.txt
+%%DATADIR%%/wordlists-user-passwd/tomcat/tomcat_mgr_default_users.txt
+%%DATADIR%%/wordlists-user-passwd/unix-os/unix_passwords.txt
+%%DATADIR%%/wordlists-user-passwd/unix-os/unix_users.txt
+@dirrm %%DATADIR%%/wordlists-user-passwd/unix-os
+@dirrm %%DATADIR%%/wordlists-user-passwd/tomcat
+@dirrm %%DATADIR%%/wordlists-user-passwd/postgres
+@dirrm %%DATADIR%%/wordlists-user-passwd/passwds
+@dirrm %%DATADIR%%/wordlists-user-passwd/oracle
+@dirrm %%DATADIR%%/wordlists-user-passwd/names
+@dirrm %%DATADIR%%/wordlists-user-passwd/generic-listpairs
+@dirrm %%DATADIR%%/wordlists-user-passwd/db2
+@dirrm %%DATADIR%%/wordlists-user-passwd
+@dirrm %%DATADIR%%/wordlists-misc
+@dirrm %%DATADIR%%/web-backdoors/sh
+@dirrm %%DATADIR%%/web-backdoors/servlet
+@dirrm %%DATADIR%%/web-backdoors/pl-cgi
+@dirrm %%DATADIR%%/web-backdoors/php
+@dirrm %%DATADIR%%/web-backdoors/jsp/win32
+@dirrm %%DATADIR%%/web-backdoors/jsp
+@dirrm %%DATADIR%%/web-backdoors/exe
+@dirrm %%DATADIR%%/web-backdoors/dll
+@dirrm %%DATADIR%%/web-backdoors/cfm
+@dirrm %%DATADIR%%/web-backdoors/c
+@dirrm %%DATADIR%%/web-backdoors/asp
+@dirrm %%DATADIR%%/web-backdoors
+@dirrm %%DATADIR%%/regex
+@dirrm %%DATADIR%%/discovery/win
+@dirrm %%DATADIR%%/discovery/unix
+@dirrm %%DATADIR%%/discovery/generic/cms
+@dirrm %%DATADIR%%/discovery/generic
+@dirrm %%DATADIR%%/discovery/filename-bruteforce/file-or-dir-root-wordlists
+@dirrm %%DATADIR%%/discovery/filename-bruteforce/file-extensions
+@dirrm %%DATADIR%%/discovery/filename-bruteforce
+@dirrm %%DATADIR%%/discovery
+@dirrm %%DATADIR%%/attack-payloads/xss/docs.wasc-scriptmapping/images
+@dirrm %%DATADIR%%/attack-payloads/xss/docs.wasc-scriptmapping
+@dirrm %%DATADIR%%/attack-payloads/xss
+@dirrm %%DATADIR%%/attack-payloads/xpath
+@dirrm %%DATADIR%%/attack-payloads/xml
+@dirrm %%DATADIR%%/attack-payloads/sql-injection/exploit
+@dirrm %%DATADIR%%/attack-payloads/sql-injection/detect/oracle/docs
+@dirrm %%DATADIR%%/attack-payloads/sql-injection/detect/oracle
+@dirrm %%DATADIR%%/attack-payloads/sql-injection/detect/mysql/docs
+@dirrm %%DATADIR%%/attack-payloads/sql-injection/detect/mysql
+@dirrm %%DATADIR%%/attack-payloads/sql-injection/detect/ms-sql/docs
+@dirrm %%DATADIR%%/attack-payloads/sql-injection/detect/ms-sql
+@dirrm %%DATADIR%%/attack-payloads/sql-injection/detect/generic/docs
+@dirrm %%DATADIR%%/attack-payloads/sql-injection/detect/generic
+@dirrm %%DATADIR%%/attack-payloads/sql-injection/detect
+@dirrm %%DATADIR%%/attack-payloads/sql-injection
+@dirrm %%DATADIR%%/attack-payloads/server-side-include
+@dirrm %%DATADIR%%/attack-payloads/rfi
+@dirrm %%DATADIR%%/attack-payloads/path-traversal
+@dirrm %%DATADIR%%/attack-payloads/os-dir-indexing
+@dirrm %%DATADIR%%/attack-payloads/os-cmd-execution/docs
+@dirrm %%DATADIR%%/attack-payloads/os-cmd-execution
+@dirrm %%DATADIR%%/attack-payloads/lfi
+@dirrm %%DATADIR%%/attack-payloads/ldap
+@dirrm %%DATADIR%%/attack-payloads/integer-overflow
+@dirrm %%DATADIR%%/attack-payloads/http-protocol
+@dirrm %%DATADIR%%/attack-payloads/html_fuzz
+@dirrm %%DATADIR%%/attack-payloads/format-strings
+@dirrm %%DATADIR%%/attack-payloads/file-upload
+@dirrm %%DATADIR%%/attack-payloads/disclosure-source
+@dirrm %%DATADIR%%/attack-payloads/disclosure-localpaths/unix
+@dirrm %%DATADIR%%/attack-payloads/disclosure-localpaths/microsoft
+@dirrm %%DATADIR%%/attack-payloads/disclosure-localpaths
+@dirrm %%DATADIR%%/attack-payloads/disclosure-directory/win
+@dirrm %%DATADIR%%/attack-payloads/disclosure-directory/unix
+@dirrm %%DATADIR%%/attack-payloads/disclosure-directory/generic
+@dirrm %%DATADIR%%/attack-payloads/disclosure-directory
+@dirrm %%DATADIR%%/attack-payloads/control-chars
+@dirrm %%DATADIR%%/attack-payloads/all-attacks
+@dirrm %%DATADIR%%/attack-payloads
+@dirrm %%DATADIR%%
