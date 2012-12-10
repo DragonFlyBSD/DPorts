@@ -1,0 +1,16 @@
+
+$FreeBSD: ports/net/stund/files/patch-Makefile,v 1.3 2012/11/17 06:00:22 svnexp Exp $
+
+--- Makefile.orig
++++ Makefile
+@@ -21,8 +21,8 @@
+ #
+ # Alternatively, for debugging.
+ #
+-CXXFLAGS+=-g -O -Wall
+-LDFLAGS+=-g -O -Wall
++CXXFLAGS+=-Wall
++LDFLAGS+=-Wall
+ # for solaris
+ #LDFLAGS+= -lnsl -lsocket
+ 
