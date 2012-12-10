@@ -1,0 +1,32 @@
+--- Makefile.orig	Fri Oct 24 13:11:13 2003
++++ Makefile	Fri Oct 24 13:17:47 2003
+@@ -3,9 +3,9 @@
+ # for details
+ 
+ # Linux 2.4
+-OS_CFLAGS=-DNEED_PTY_H                       
++#OS_CFLAGS=-DNEED_PTY_H                       
+ # FreeBSD, version unknown
+-#OS_CFLAGS=-DNEED_LIBUTIL_H                  
++OS_CFLAGS=-DNEED_LIBUTIL_H                  
+ # Solaris, some version of
+ #OS_CFLAGS=-DNEED_STRINGS_H -DNEED_LOCAL_FORKPTY_H
+ # MacOS X needs libpoll from fink
+@@ -23,7 +23,7 @@
+ # no forkpty in Solaris or MacOS X
+ # OS_OBJECTS=forkpty.o
+ 
+-INSTALL_DIR=/usr/local/bin
++INSTALL_DIR=${PREFIX}/bin
+ 
+ # You probably don't need to edit anything below this line
+ 
+@@ -35,7 +35,7 @@
+ 	-rm *.o *~ attachtty detachtty
+ 
+ install: all
+-	install detachtty attachtty $(DESTDIR)$(INSTALL_DIR)
++	install detachtty attachtty $(INSTALL_DIR)
+ 
+ deb:
+ 	rm -rf /usr/local/src/Packages/detachtty/ 
