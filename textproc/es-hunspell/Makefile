@@ -1,13 +1,8 @@
-# New ports collection makefile for:	es-hunspell
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/es-hunspell/Makefile,v 1.7 2012/11/17 06:01:55 svnexp Exp $
-#
+# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
+# $FreeBSD: ports/textproc/es-hunspell/Makefile,v 1.8 2012/12/09 10:42:16 svnexp Exp $
 
 PORTNAME=	hunspell
-PORTVERSION=	0.5
-PORTREVISION=	1
+PORTVERSION=	0.6
 CATEGORIES=	textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}/
 PKGNAMEPREFIX=	es-
