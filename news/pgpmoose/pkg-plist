@@ -1,0 +1,6 @@
+bin/pmapp
+bin/pmcanon
+bin/pmcheck
+bin/pmnewsgroups
+bin/pmdaemon
+bin/pmcancel
