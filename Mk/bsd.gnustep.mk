@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.gnustep.mk,v 1.75 2012/11/17 05:54:17 svnexp Exp $
 #
 # This file contains some variable definitions that are supposed to
 # make your life easier when dealing with ports related to the GNUstep.

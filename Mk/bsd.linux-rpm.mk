@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: /tmp/pcvs/ports/Mk/bsd.linux-rpm.mk,v 1.27 2012-05-23 08:17:49 miwi Exp $
+# $FreeBSD: ports/Mk/bsd.linux-rpm.mk,v 1.28 2012/11/17 05:54:17 svnexp Exp $
 #
 
 # Variables:

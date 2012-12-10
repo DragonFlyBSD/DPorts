@@ -1,5 +1,5 @@
 #
-#	$FreeBSD$
+#	$FreeBSD: ports/Mk/bsd.emacs.mk,v 1.92 2012/11/17 05:54:17 svnexp Exp $
 #
 #	bsd.emacs.mk - 19990829 Shigeyuki Fukushima.
 #

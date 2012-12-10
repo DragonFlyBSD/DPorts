@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.pbi.mk,v 1.2 2012/11/17 05:54:17 svnexp Exp $
 #
 # Creates a PBI file from a port with just 'make pbi'
 #

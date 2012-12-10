@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.ncurses.mk,v 1.7 2012/11/17 05:54:17 svnexp Exp $
 #
 # the user/port can now set this options in the makefiles.
 #

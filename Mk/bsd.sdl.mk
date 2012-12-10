@@ -29,7 +29,7 @@
 #
 
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.sdl.mk,v 1.21 2012/11/17 05:54:18 svnexp Exp $
 #
 
 SDL_Include_MAINTAINER=		edwin@FreeBSD.org

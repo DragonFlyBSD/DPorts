@@ -29,7 +29,7 @@
 # If you are wondering what your port exactly does, use "make test-gcc"
 # to see some debugging.
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.gcc.mk,v 1.72 2012/11/17 05:54:17 svnexp Exp $
 #
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org
@@ -202,6 +202,7 @@ CPP:=			cpp${V}
 .   if ${_USE_GCC} != 3.4
 _GCC_RUNTIME:=		${LOCALBASE}/lib/gcc${V}
 CFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
+CXXFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 LDFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 .    if defined (USE_FORTRAN)
 .    if ${USE_FORTRAN} == yes

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.options.desc.mk,v 1.149 2012/11/30 08:09:39 svnexp Exp $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -65,6 +65,7 @@ DVDCSS_DESC?=		Encrypted DVD via libdvdcss
 ECW_DESC?=		ECW image format
 ESOUND_DESC?=		EsounD sound server
 EXAMPLES_DESC?=		Build and/or install examples
+EXIV2_DESC?=		EXIF metadata support via exiv2
 EXPAT_DESC?=		Expat XML parser
 FAAC_DESC?=		FAAC AAC encoder
 FAAD_DESC?=		FAAD AAC decoder
@@ -159,6 +160,7 @@ LATEX_DESC?=		LaTeX support
 LCMS2_DESC?=		LCMS2 support
 LDAP_DESC?=		LDAP support
 LDAPS_DESC?=		LDAPS support
+LENSFUN_DESC?=		Camera lens database via LensFun
 LFS_DESC?=		Large files support
 LIBBLURAY_DESC?=	Blu-ray discs via libbluray
 LIBEDIT_DESC?=		readline support
@@ -213,6 +215,7 @@ NAS_DESC?=		Network Audio System
 NETCDF_DESC?=		NetCDF data format
 NETPBM_DESC?=		Netpbm graphics toolkit
 NLS_DESC?=		Native Language Support
+NMAP_DESC?=		NMAP support
 NNTP_DESC?=		NNTP (News) support
 NOTIFY_DESC?=		Startup notification
 NTLM_DESC?=		NTLM authentication
@@ -276,6 +279,7 @@ SMB_DESC?=		SMB protocol
 SNAPPY_DESC?=		Snappy compression library
 SNDFILE_DESC?=		libsndfile support
 SNMP_DESC?=		SNMP protocol
+SOCKS_DESC?=		SOCKS proxy support
 SOUND_DESC?=		Sound (audio)
 SPANDSP_DESC?=		Spandsp faxing
 SPEEX_DESC?=		Speex audio format
@@ -287,6 +291,7 @@ SSH_DESC?=		SSH protocol
 SSL_DESC?=		SSL protocol
 STATIC_DESC?=		Build static executables/libraries
 STRIP_DESC?=		Strip binaries before installation
+STROKE_DESC?=		Mouse gestures support via libstroke
 SVG_DESC?=		SVG vector image format
 SVGALIB_DESC?=		SVGA graphics
 SVN_DESC?=		Subversion support

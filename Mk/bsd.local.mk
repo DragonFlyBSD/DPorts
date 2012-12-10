@@ -5,7 +5,7 @@
 #
 # Created by: Mark Linimon <linimon@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.local.mk,v 1.4 2012/11/17 05:54:17 svnexp Exp $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Local_Pre_Include)

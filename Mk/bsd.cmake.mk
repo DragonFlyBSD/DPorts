@@ -26,7 +26,7 @@
 #				Default: ${PREFIX}
 #
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.cmake.mk,v 1.15 2012/11/17 05:54:17 svnexp Exp $
 
 CMAKE_MAINTAINER=	kde@FreeBSD.org
 

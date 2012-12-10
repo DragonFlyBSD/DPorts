@@ -1,7 +1,7 @@
 #-*- mode: makefile; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.zenoss.mk,v 1.5 2012/11/17 05:54:18 svnexp Exp $
 #
 # bsd.zenoss.mk - Support for Zenoss ports and Zenpacks.
 #

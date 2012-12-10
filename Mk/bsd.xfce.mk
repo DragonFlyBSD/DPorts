@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.xfce.mk,v 1.14 2012/11/17 05:54:18 svnexp Exp $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Xfce_Pre_Include)

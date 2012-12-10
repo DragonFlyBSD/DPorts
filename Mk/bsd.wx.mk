@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.wx.mk,v 1.21 2012/11/17 05:54:18 svnexp Exp $
 #
 # bsd.wx.mk - Support for wxWidgets based ports.
 #

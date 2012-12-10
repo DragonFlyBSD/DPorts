@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.database.mk,v 1.82 2012/11/17 05:54:17 svnexp Exp $
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Database_Post_Include)
@@ -217,7 +217,7 @@ PGSQL_VER=	${version}
 .      endif
 PGSQL_VER?=	${version}
 .    endfor
-.    if empty(PGSQL_VER)
+.    if defined(WITH_PGSQL_VER) && ${WITH_PGSQL_VER} != ${PGSQL_VER}
 IGNORE?=	cannot install: the port wants postgresql-client version ${WANT_PGSQL_VER} and you have version ${WITH_PGSQL_VER} installed or set in make.conf
 .    endif
 .  endif

@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.licenses.mk,v 1.14 2012/11/17 05:54:17 svnexp Exp $
 
 Licenses_Include_MAINTAINER=         portmgr@FreeBSD.org
 

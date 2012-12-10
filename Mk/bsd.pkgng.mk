@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.pkgng.mk,v 1.12 2012/11/17 05:54:17 svnexp Exp $
 #
 
 .if defined(_POSTMKINCLUDED)

@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.kde.mk,v 1.84 2012/11/17 05:54:17 svnexp Exp $
 #
 # Please view me with 4 column tabs!
 

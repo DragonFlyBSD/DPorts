@@ -1,7 +1,7 @@
 #-*- mode: makefile; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.drupal.mk,v 1.14 2012/11/17 05:54:17 svnexp Exp $
 #
 # bsd.drupal.mk - Support for Drupal ports and modules.
 #

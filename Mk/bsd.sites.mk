@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD$
+# $FreeBSD: ports/Mk/bsd.sites.mk,v 1.593 2012/11/27 11:42:51 svnexp Exp $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -517,9 +517,10 @@ MASTER_SITE_GENTOO+= \
 #                 default: not set, mandatory
 #            
 .if defined(USE_GITHUB)
-MASTER_SITE_GITHUB+= https://nodeload.github.com/%SUBDIR%
-.if !defined(MASTER_SITES) || !${MASTER_SITES:MGH}
-MASTER_SITES+=	GH
+MASTER_SITE_GITHUB+=		https://nodeload.github.com/%SUBDIR%
+MASTER_SITE_GITHUB_CLOUD+=	http://cloud.github.com/downloads/%SUBDIR%
+.if !defined(MASTER_SITES) || !${MASTER_SITES:MGH} && !${MASTER_SITES:MGHC}
+MASTER_SITES+=	GH GHC
 .endif
 GH_PROJECT?=	${PORTNAME}
 GH_TAGNAME?=	${DISTVERSION}
@@ -821,8 +822,8 @@ MASTER_SITE_NETBSD+= \
 MASTER_SITE_NETLIB+= \
 	ftp://ftp.netlib.org/%SUBDIR%/ \
 	http://www.netlib.org/%SUBDIR%/ \
-	ftp://ftp.mirrorservice.org/sites/netlib.bell-labs.com/netlib/%SUBDIR%/ \
-	http://www.mirrorservice.org/sites/netlib.bell-labs.com/netlib/%SUBDIR%/ \
+	ftp://old-ftp.mirrorservice.org/sites/netlib.bell-labs.com/netlib/%SUBDIR%/ \
+	http://old-www.mirrorservice.org/sites/netlib.bell-labs.com/netlib/%SUBDIR%/ \
 	ftp://ftp.netlib.no/netlib/%SUBDIR%/ \
 	http://www.netlib.no/netlib/%SUBDIR%/ \
 	ftp://ftp.irisa.fr/pub/netlib/%SUBDIR%/ \
@@ -1125,11 +1126,11 @@ MASTER_SITE_SAVANNAH+= \
 .endif
 
 # List:		http://sourceforge.net/apps/trac/sourceforge/wiki/Mirrors
-# Updated:	2012-10-26
+# Updated:	2012-10-31
 .if !defined(IGNORE_MASTER_SITE_SOURCEFORGE)
-.for mirror in heanet sunet iweb switch freefr garr aarnet \
-		voxel jaist osdn nchc ncu internode waix \
-		hivelocity superb-dca3
+.for mirror in heanet sunet iweb switch freefr garr aarnet jaist osdn \
+	nchc ncu internode waix hivelocity superb-dca3 ufpr tenet space \
+	netcologne ignum
 MASTER_SITE_SOURCEFORGE+= \
 	http://${mirror}.dl.sourceforge.net/project/%SUBDIR%/
 .endfor
@@ -1427,6 +1428,7 @@ MASTER_SITE_KERNEL_ORG+= \
 
 MASTER_SITES_ABBREVS=	CPAN:PERL_CPAN \
 			GH:GITHUB \
+			GHC:GITHUB_CLOUD \
 			NL:NETLIB \
 			SF:SOURCEFORGE \
 			SFJP:SOURCEFORGE_JP \
@@ -1440,7 +1442,8 @@ MASTER_SITES_SUBDIRS=	\
 			CSME:myports \
 			DEBIAN:pool/main/${PORTNAME:C/^((lib)?.).*$/\1/}/${PORTNAME} \
 			GCC:releases/${DISTNAME} \
-			GITHUB:${GH_ACCOUNT}/${GH_PROJECT}/tarball/${GH_TAGNAME}?dummy=/ \
+			GITHUB:${GH_ACCOUNT}/${GH_PROJECT}/legacy.tar.gz/${GH_TAGNAME}?dummy=/ \
+			GITHUB_CLOUD:${GH_ACCOUNT}/${GH_PROJECT}/ \
 			GNOME:sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/} \
 			GNU:${PORTNAME} \
 			HORDE:${PORTNAME} \
