@@ -1,0 +1,6 @@
+bin/gopher
+bin/gophfilt
+etc/gopher/gopher.rc
+etc/gopher/gopherremote.rc
+etc/gopher/gopher.hlp
+@dirrm etc/gopher
