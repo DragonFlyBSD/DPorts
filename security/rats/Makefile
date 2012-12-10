@@ -1,0 +1,34 @@
+# Ports collection makefile for:  rats
+# Date created:			  22 August 2001
+# Whom:				  Kris Kennaway <kris@FreeBSD.org>
+#
+# $FreeBSD: ports/security/rats/Makefile,v 1.19 2012/11/17 06:01:18 svnexp Exp $
+#
+
+PORTNAME=	rats
+PORTVERSION=	2.3
+CATEGORIES=	security devel
+MASTER_SITES=	https://www.fortify.com/downloads2/public/ \
+				http://redundancy.redundancy.org/mirror/
+
+MAINTAINER=	lx@FreeBSD.org
+COMMENT=	Source code auditing tool
+
+LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+CONFIGURE_ARGS+=--with-expat-lib=${LOCALBASE}/lib \
+		--with-expat-include=${LOCALBASE}/include/xml \
+		--datadir=${DATADIR}
+
+ALL_TARGET=	${PORTNAME}
+
+post-install:
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+.endif
+MAN1=		rats.1
+
+.include <bsd.port.mk>
