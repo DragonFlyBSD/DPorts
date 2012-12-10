@@ -1,0 +1,38 @@
+# ex:ts=8
+# Ports collection makefile for:	smc
+# Date created:			Jun 3, 2004
+# Whom:				ijliao
+#
+# $FreeBSD: ports/devel/smc/Makefile,v 1.11 2012/11/17 05:57:03 svnexp Exp $
+#
+
+PORTNAME=	smc
+PORTVERSION=	4.3.0
+PORTREVISION=	2
+CATEGORIES=	devel
+MASTER_SITES=	SF/${PORTNAME}/OldFiles
+DISTNAME=	${PORTNAME}_${PORTVERSION:S/./_/g}
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	The State Machine Compiler
+
+USE_JAVA=	yes
+JAVA_VERSION=	1.5+
+NO_BUILD=	yes
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/bin/Smc.jar ${JAVAJARDIR}
+	${INSTALL_DATA} ${WRKSRC}/lib/statemap.h ${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/lib/statemap.jar ${JAVAJARDIR}
+	${CP} -R ${WRKSRC}/lib/statemap1.0 ${PREFIX}/include
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${EXAMPLESDIR}
+	${CP} -R ${WRKSRC}/examples/ ${EXAMPLESDIR}
+	@${FIND} ${EXAMPLESDIR} ! -type d | \
+		${SED} 's,^${PREFIX}/,,' >> ${TMPPLIST}
+	@${FIND} ${EXAMPLESDIR} -type d | ${SORT} -r | \
+		${SED} 's,^${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
+.endif
+
+.include <bsd.port.mk>

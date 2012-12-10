@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/devel/smc/pkg-plist,v 1.4 2012/11/17 05:57:03 svnexp Exp $
+include/statemap.h
+include/statemap1.0/pkgIndex.tcl
+include/statemap1.0/statemap.tcl
+@dirrm include/statemap1.0
+%%JAVAJARDIR%%/Smc.jar
+%%JAVAJARDIR%%/statemap.jar
