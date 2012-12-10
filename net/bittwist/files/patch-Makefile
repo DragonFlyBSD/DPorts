@@ -1,0 +1,10 @@
+--- ./Makefile.orig	2012-01-16 13:46:05.147743123 -0500
++++ ./Makefile	2012-01-16 13:46:25.029731197 -0500
+@@ -1,6 +1,6 @@
+ SHELL = /bin/sh
+ 
+-prefix = /usr/local
++prefix = ${PREFIX}
+ exec_prefix = ${prefix}
+ bindir = ${exec_prefix}/bin
+ mandir = ${prefix}/man/man1
