@@ -1,0 +1,34 @@
+--- Makefile.orig	Sun Oct 26 15:15:08 1997
++++ Makefile	Sat Aug 11 00:15:35 2001
+@@ -2,12 +2,13 @@
+ SRCS	= ladder.c lplay.c ltime.c lscore.c lscreens.c
+ OBJS	= ladder.o lplay.o ltime.o lscore.o lscreens.o
+ 
+-CC		= gcc
+-CFLAGS	= -O -pedantic -I/usr/include/ncurses
++CC	?= gcc
++CFLAGS	?= -O
++CFLAGS  += -pedantic -Wall
+ LDFLAGS	= -s
+ M4		= m4
+ LIBS	= -lncurses
+-SCOREFILE	= ./ladder.scores
++SCOREFILE	= /var/games/ladder.scores
+ 
+ .SUFFIXES:	.o .c .m4
+ 
+@@ -21,6 +22,14 @@
+ 	$(CC) -o $(TARGET) $(LDFLAGS) $(OBJS) $(LIBS)
+ 
+ $(OBJS):	ladder.h
++
++clean:
++	-$(RM)	$(OBJS) $(TARGET) *.core
++
++all: $(TARGET)
++
++install:
++	install -c -s -o root -g games -m 2555 ladder ${PREFIX}/bin
+ 
+ # ladder.c:	ladder.m4
+ 

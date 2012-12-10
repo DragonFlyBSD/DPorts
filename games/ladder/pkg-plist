@@ -1,0 +1,2 @@
+bin/ladder
+@unexec if [ -f /var/games/ladder.scores ] ; then rm /var/games/ladder.scores; fi
