@@ -1,0 +1,58 @@
+--- ./Makefile.orig	2011-06-24 16:25:27.000000000 +0200
++++ ./Makefile	2012-09-17 13:38:44.926563330 +0200
+@@ -16,14 +16,14 @@
+ # along with this program; if not, write to the Free Software
+ # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ 
+-prefix = /usr
++prefix = ${PREFIX}
+ 
+-CC=gcc
++CC?=gcc
+ 
+ VERSION=1.6.0
+ TREE_DEST=tree
+ BINDIR=${prefix}/bin
+-MAN=tree.1
++MAN=doc/tree.1
+ MANDIR=${prefix}/man/man1
+ OBJS=tree.o unix.o html.o xml.o hash.o color.o
+ 
+@@ -31,13 +31,13 @@
+ 
+ # Linux defaults:
+ #CFLAGS=-ggdb -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+-CFLAGS=-O4 -Wall  -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+-LDFLAGS=-s
++#CFLAGS=-O4 -Wall  -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
++#LDFLAGS=-s
+ 
+ # Uncomment for FreeBSD:
+-#CFLAGS=-O2 -Wall -fomit-frame-pointer
+-#LDFLAGS=-s
+-#OBJS+=strverscmp.o
++CFLAGS?=-O2 -Wall -fomit-frame-pointer
++LDFLAGS?=-s
++OBJS+=strverscmp.o
+ 
+ # Uncomment for Solaris:
+ #CC=cc
+@@ -93,13 +93,11 @@
+ 	if [ -f tree.o ]; then rm *.o; fi
+ 	rm -f *~
+ 
+-install: tree
+-	install -d $(BINDIR)
+-	install -d $(MANDIR)
+-	if [ -e $(TREE_DEST) ]; then \
+-		install -s $(TREE_DEST) $(BINDIR)/$(TREE_DEST); \
+-	fi
+-	install doc/$(MAN) $(MANDIR)/$(MAN)
++install: $(TREE_DEST)
++	@$(MKDIR) $(BINDIR)
++	@$(MKDIR) $(MANDIR)
++	${BSD_INSTALL_PROGRAM} $(TREE_DEST) $(BINDIR)
++	${BSD_INSTALL_MAN} $(MAN) $(MANDIR)
+ 
+ distclean:
+ 	if [ -f tree.o ]; then rm *.o; fi
