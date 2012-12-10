@@ -1,0 +1,11 @@
+bin/aafire
+bin/aainfo
+bin/aasavefont
+bin/aatest
+bin/aalib-config
+include/aalib.h
+lib/libaa.a
+lib/libaa.la
+lib/libaa.so
+lib/libaa.so.1
+share/aclocal/aalib.m4
