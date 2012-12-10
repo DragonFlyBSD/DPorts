@@ -1,0 +1,54 @@
+@comment $FreeBSD: ports/devel/poslib/pkg-plist,v 1.6 2012/11/17 05:56:43 svnexp Exp $
+bin/poslib-config
+include/poslib-%%VERSION%%/poslib/bits.h
+include/poslib-%%VERSION%%/poslib/dnsdefs.h
+include/poslib-%%VERSION%%/poslib/dnsmessage.h
+include/poslib-%%VERSION%%/poslib/domainfn.h
+include/poslib-%%VERSION%%/poslib/exception.h
+include/poslib-%%VERSION%%/poslib/lexfn.h
+include/poslib-%%VERSION%%/poslib/masterfile.h
+include/poslib-%%VERSION%%/poslib/poslib.h
+include/poslib-%%VERSION%%/poslib/postime.h
+include/poslib-%%VERSION%%/poslib/random.h
+include/poslib-%%VERSION%%/poslib/resolver.h
+include/poslib-%%VERSION%%/poslib/rr.h
+include/poslib-%%VERSION%%/poslib/server/configuration.h
+include/poslib-%%VERSION%%/poslib/server/handlequery.h
+include/poslib-%%VERSION%%/poslib/server/log.h
+include/poslib-%%VERSION%%/poslib/server/pending.h
+include/poslib-%%VERSION%%/poslib/server/posthreads.h
+include/poslib-%%VERSION%%/poslib/server/requestid.h
+include/poslib-%%VERSION%%/poslib/server/server.h
+include/poslib-%%VERSION%%/poslib/server/serverthread.h
+include/poslib-%%VERSION%%/poslib/server/srvresolver.h
+include/poslib-%%VERSION%%/poslib/socket.h
+include/poslib-%%VERSION%%/poslib/syssocket.h
+include/poslib-%%VERSION%%/poslib/sysstl.h
+include/poslib-%%VERSION%%/poslib/sysstring.h
+include/poslib-%%VERSION%%/poslib/types.h
+include/poslib-%%VERSION%%/poslib/vsnprintf.h
+include/poslib-%%VERSION%%/poslib/w32poll.h
+lib/libposlib.a
+lib/libposlib.la
+lib/libposlib.so
+lib/libposlib.so.0
+lib/libposserver.a
+lib/libposserver.la
+lib/libposserver.so
+lib/libposserver.so.0
+lib/poslib-%%VERSION%%/include/poslib-config.h
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%EXAMPLESDIR%%/dnstimeago.cpp
+%%EXAMPLESDIR%%/host.cpp
+%%EXAMPLESDIR%%/server.cpp
+@dirrm %%EXAMPLESDIR%%
+@dirrm include/poslib-%%VERSION%%/poslib/server
+@dirrm include/poslib-%%VERSION%%/poslib
+@dirrm include/poslib-%%VERSION%%
+@dirrm lib/poslib-%%VERSION%%/include
+@dirrm lib/poslib-%%VERSION%%

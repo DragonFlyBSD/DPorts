@@ -1,0 +1,35 @@
+# New ports collection makefile for:	poslib
+# Date created:		2003-08-03
+# Whom:			Sergei Kolobov <sergei@kolobov.com>
+#
+# $FreeBSD: ports/devel/poslib/Makefile,v 1.21 2012/11/17 05:56:43 svnexp Exp $
+#
+
+PORTNAME=	poslib
+PORTVERSION=	1.0.6
+PORTREVISION=	1
+CATEGORIES=	devel dns
+MASTER_SITES=	SF/posadis/${PORTNAME}/${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Posadis C++ DNS library
+
+USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
+USE_LDCONFIG=	yes
+
+PLIST_SUB=	VERSION="${PORTVERSION}"
+
+DOCS=		AUTHORS ChangeLog NEWS README TODO
+EXAMPLES=	examples/*.cpp
+
+post-install:
+	@${MKDIR} ${EXAMPLESDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${EXAMPLES} ${EXAMPLESDIR}
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
