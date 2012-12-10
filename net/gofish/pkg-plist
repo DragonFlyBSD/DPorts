@@ -1,0 +1,22 @@
+bin/mkcache
+bin/check-files
+@unexec if cmp -s %D/etc/gofish.conf.sample %D/etc/gofish.conf; then rm -f %D/etc/gofish.conf; fi
+etc/gofish.conf.sample
+@exec if [ ! -f %D/etc/gofish.conf ] ; then cp -p %D/%F %B/gofish.conf; fi
+@unexec if cmp -s %D/etc/gofish-www.conf.sample %D/etc/gofish-www.conf; then rm -f %D/etc/gofish-www.conf; fi
+etc/gofish-www.conf.sample
+@exec if [ ! -f %D/etc/gofish-www.conf ] ; then cp -p %D/%F %B/gofish-www.conf; fi
+sbin/gofish
+sbin/gopherd
+gopher/Configure_GoFish
+gopher/.cache
+gopher/.gopher+
+gopher/icons/gofish.gif
+gopher/icons/gopher_binary.gif
+gopher/icons/gopher_html.gif
+gopher/icons/gopher_image.gif
+gopher/icons/gopher_menu.gif
+gopher/icons/gopher_text.gif
+gopher/icons/gopher_unknown.gif
+@dirrm gopher/icons
+@dirrm gopher
