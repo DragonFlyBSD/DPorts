@@ -1,0 +1,15 @@
+
+$FreeBSD: ports/textproc/libxml/files/patch-config.h.in,v 1.2 2012/11/17 06:02:01 svnexp Exp $
+
+--- config.h.in	2001/08/13 11:13:32	1.1
++++ config.h.in	2001/08/13 11:13:47
+@@ -72,9 +72,6 @@
+ /* Define if you have the <ieeefp.h> header file.  */
+ #undef HAVE_IEEEFP_H
+ 
+-/* Define if you have the <malloc.h> header file.  */
+-#undef HAVE_MALLOC_H
+-
+ /* Define if you have the <math.h> header file.  */
+ #undef HAVE_MATH_H
+ 
