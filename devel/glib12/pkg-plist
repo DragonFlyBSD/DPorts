@@ -1,0 +1,19 @@
+bin/glib-config
+bin/glib12-config
+include/glib12/glib.h
+include/glib12/glibconfig.h
+include/glib12/gmodule.h
+lib/libglib-12.a
+lib/libglib-12.so
+lib/libglib-12.so.3
+lib/libgmodule-12.a
+lib/libgmodule-12.so
+lib/libgmodule-12.so.3
+lib/libgthread-12.a
+lib/libgthread-12.so
+lib/libgthread-12.so.3
+libdata/pkgconfig/glib.pc
+libdata/pkgconfig/gmodule.pc
+libdata/pkgconfig/gthread.pc
+share/aclocal/glib.m4
+@dirrm include/glib12
