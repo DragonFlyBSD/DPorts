@@ -1,0 +1,20 @@
+@unexec %%SGMLCAT_RM%%
+share/sgml/docbook/3.1/dtd/31chg.txt
+share/sgml/docbook/3.1/dtd/40issues.txt
+share/sgml/docbook/3.1/dtd/50issues.txt
+share/sgml/docbook/3.1/dtd/ChangeLog
+share/sgml/docbook/3.1/dtd/cals-tbl.dtd
+share/sgml/docbook/3.1/dtd/catalog
+share/sgml/docbook/3.1/dtd/dbcent.mod
+share/sgml/docbook/3.1/dtd/dbgenent.mod
+share/sgml/docbook/3.1/dtd/dbhier.mod
+share/sgml/docbook/3.1/dtd/dbnotn.mod
+share/sgml/docbook/3.1/dtd/dbpool.mod
+share/sgml/docbook/3.1/dtd/docbook.cat
+share/sgml/docbook/3.1/dtd/docbook.dcl
+share/sgml/docbook/3.1/dtd/docbook.dtd
+share/sgml/docbook/3.1/dtd/readme.txt
+@dirrm share/sgml/docbook/3.1/dtd
+@dirrm share/sgml/docbook/3.1
+@dirrmtry share/sgml/docbook
+@exec %%SGMLCAT_ADD%%
