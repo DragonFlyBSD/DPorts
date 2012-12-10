@@ -1,0 +1,60 @@
+bin/mined
+bin/minmacs
+bin/mpico
+bin/mstar
+bin/umined
+bin/uterm
+bin/xmined
+share/applications/mined.desktop
+%%DATADIR%%/bin/mterm
+%%DATADIR%%/bin/umined
+%%DATADIR%%/bin/uprint
+%%DATADIR%%/bin/uterm
+%%DATADIR%%/bin/wined
+%%DATADIR%%/bin/wined.bat
+%%DATADIR%%/bin/xmined
+%%DATADIR%%/conf_user/MINED-VMS.COM
+%%DATADIR%%/conf_user/Xdefaults.mined
+%%DATADIR%%/conf_user/konsole/xterm-modified.keytab
+%%DATADIR%%/conf_user/kp5
+%%DATADIR%%/conf_user/minedrc
+%%DATADIR%%/conf_user/mlterm/key
+%%DATADIR%%/conf_user/mlterm/main
+%%DATADIR%%/conf_user/profile.mined
+%%DATADIR%%/conf_user/terminator/options
+%%DATADIR%%/conf_user/xinitrc.mined
+%%DATADIR%%/help/mined.hlp
+%%DATADIR%%/setup_install/bin/bdf18to20
+%%DATADIR%%/setup_install/bin/configure-xterm
+%%DATADIR%%/setup_install/bin/installfonts
+%%DATADIR%%/setup_install/bin/makeprint
+%%DATADIR%%/setup_install/cyg/mkicon
+%%DATADIR%%/setup_install/cyg/postinstall
+%%DATADIR%%/setup_install/cyg/preremove
+%%DATADIR%%/setup_install/cyg/setupreg.sh
+%%DATADIR%%/setup_install/mined.desktop
+%%DATADIR%%/setup_install/mined.ico
+%%DATADIR%%/setup_install/mined.png
+%%DATADIR%%/setup_install/mined.xpm
+%%DATADIR%%/setup_install/win/.@mined
+%%DATADIR%%/setup_install/win/MinEd Web Manual.url
+%%DATADIR%%/setup_install/win/MinEd-AD.lnk
+%%DATADIR%%/setup_install/win/MinEd-PF.lnk
+%%DATADIR%%/setup_install/win/Uninst-AD.lnk
+%%DATADIR%%/setup_install/win/Uninst-PF.lnk
+%%DATADIR%%/setup_install/win/deleteall.bat
+%%DATADIR%%/setup_install/win/install.sh
+%%DATADIR%%/setup_install/win/uninstall.sh
+share/pixmaps/mined.xpm
+@dirrm %%DATADIR%%/setup_install/win
+@dirrm %%DATADIR%%/setup_install/cyg
+@dirrm %%DATADIR%%/setup_install/bin
+@dirrm %%DATADIR%%/setup_install
+@dirrm %%DATADIR%%/help
+@dirrm %%DATADIR%%/conf_user/terminator
+@dirrm %%DATADIR%%/conf_user/mlterm
+@dirrm %%DATADIR%%/conf_user/konsole
+@dirrm %%DATADIR%%/conf_user
+@dirrm %%DATADIR%%/bin
+@dirrm %%DATADIR%%
+@dirrmtry share/applications
