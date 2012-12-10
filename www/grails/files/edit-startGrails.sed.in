@@ -1,0 +1,7 @@
+# $FreeBSD: ports/www/grails/files/edit-startGrails.sed.in,v 1.2 2012/11/17 06:02:34 svnexp Exp $
+14i\
+: ${GRAILS_HOME="%%DATADIR%%"}
+14i\
+[ -z "${JAVA_HOME}" ] && JAVA_HOME="`env JAVAVM_DRYRUN=yes %%LOCALBASE%%/bin/java | grep '^JAVA_HOME' | cut -c11-`"
+231c\
+\  if [ -n "$GRAILS_OPTS" ]
