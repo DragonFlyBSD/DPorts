@@ -1,0 +1,30 @@
+# New ports collection makefile for:	mimelib
+# Date created:				20 November 2000
+# Whom:					never@nevermind.kiev.ua
+#
+# $FreeBSD: ports/converters/mimelib/Makefile,v 1.14 2012/11/17 05:55:03 svnexp Exp $
+#
+
+PORTNAME=	mimelib
+PORTVERSION=	1.1.2
+PORTREVISION=	1
+CATEGORIES=	converters
+MASTER_SITES=	SF/icqmail/libs/${PORTVERSION}
+
+MAINTAINER=	never@nevermind.kiev.ua
+COMMENT=	C++ class library for manipulating messages in MIME format
+
+CONFLICTS=	kdenetwork-3.1.*
+
+USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+
+.include <bsd.port.pre.mk>
+
+post-patch:
+	${FIND} ${WRKSRC}/mimelib/ -name "*.cpp" -or -name "*.h" \
+		| ${XARGS} ${REINPLACE_CMD} -e "s,iostream.h,iostream,"
+	${TOUCH} ${WRKSRC}/mimelib/mimelib/Makefile.in ${WRKSRC}/stamp-h.in ${WRKSRC}/Makefile.in ${WRKSRC}/mimelib/Makefile.in
+
+.include <bsd.port.post.mk>
