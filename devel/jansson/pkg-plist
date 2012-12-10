@@ -1,0 +1,7 @@
+include/jansson.h
+include/jansson_config.h
+lib/libjansson.a
+lib/libjansson.la
+lib/libjansson.so
+lib/libjansson.so.7
+libdata/pkgconfig/jansson.pc
