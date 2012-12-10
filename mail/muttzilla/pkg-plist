@@ -1,0 +1,15 @@
+@comment $FreeBSD: ports/mail/muttzilla/pkg-plist,v 1.5 2012/11/17 05:59:07 svnexp Exp $
+bin/mzmail.sh
+bin/mzmail.py
+bin/mznews.sh
+bin/mznews.py
+etc/muttzilla.conf
+lib/muttzilla.so
+lib/muttzilla/mutt
+lib/muttzilla/pine
+lib/muttzilla/dtmail
+lib/muttzilla/VM
+lib/muttzilla/tin
+%%PORTDOCS%%share/doc/muttzilla/INSTALL
+%%PORTDOCS%%@dirrm share/doc/muttzilla
+@dirrm lib/muttzilla
