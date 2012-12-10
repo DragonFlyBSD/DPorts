@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/comms/smstools3/files/smsd.in,v 1.5 2012/11/17 05:55:01 svnexp Exp $
+#
+# PROVIDE: smsd 
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following line to /etc/rc.conf to enable smsd:
+#
+# smsd_enable="YES"
+#
+. /etc/rc.subr
+
+name="smsd"
+rcvar=smsd_enable
+
+load_rc_config ${name}
+: ${smsd_enable="NO"}
+: ${smsd_pidfile="%%PIDDIR%%/smsd.pid"}
+: ${smsd_infofile="%%PIDDIR%%/smsd.working"}
+: ${smsd_logfile="%%LOGDIR%%/smsd.log"}
+: ${smsd_config="%%PREFIX%%/etc/smsd.conf"}
+: ${smsd_user="uucp"}
+: ${smsd_group="dialer"}
+
+pidfile=${smsd_pidfile}
+command="%%PREFIX%%/bin/smsd"
+command_args="-c${smsd_config} -p${smsd_pidfile} -i${smsd_infofile} -l${smsd_logfile} -u${smsd_user} -g${smsd_group}"
+
+run_rc_command "$1"

@@ -1,0 +1,39 @@
+bin/smsd
+bin/sendsms
+bin/sms2html
+bin/sms2unicode
+bin/unicode2sms
+%%DATADIR%%/callhandler
+%%DATADIR%%/checkhandler-utf-8
+%%DATADIR%%/email2sms
+%%DATADIR%%/eventhandler-utf-8
+%%DATADIR%%/eventhandler_report
+%%DATADIR%%/forwardsms
+%%DATADIR%%/hex2bin
+%%DATADIR%%/hex2dec
+%%DATADIR%%/load_balancing.sh
+%%DATADIR%%/mysmsd
+%%DATADIR%%/pkill
+%%DATADIR%%/regular_run
+%%DATADIR%%/sendsms
+%%DATADIR%%/sms3
+%%DATADIR%%/sms2html
+%%DATADIR%%/sms2unicode
+%%DATADIR%%/sms2xml
+%%DATADIR%%/smsevent
+%%DATADIR%%/smsresend
+%%DATADIR%%/smstest.php
+%%DATADIR%%/sql_demo
+%%DATADIR%%/unicode2sms
+@unexec if [ -f %D/etc/smsd.conf ] && cmp -s %D/etc/smsd.conf %D/etc/smsd.conf.sample; then rm -f %D/etc/smsd.conf; fi
+etc/smsd.conf.sample
+@exec if [ ! -f %D/etc/smsd.conf ] ; then cp -p %D/%F %B/smsd.conf; fi
+@dirrm %%DATADIR%%
+@exec mkdir -p %%SPOOLDIR%%/incoming %%SPOOLDIR%%/outgoing %%SPOOLDIR%%/checked %%LOGDIR%% %%PIDDIR%%
+@exec chown -R %%SMSD_USER%%:%%SMSD_GROUP%% %%SPOOLDIR%% %%LOGDIR%% %%PIDDIR%%
+@unexec echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+@unexec echo "If you are permanently removing smstools, you should also:" | /usr/bin/fmt
+@unexec echo "'rm -rf %%SPOOLDIR%%'" | /usr/bin/fmt
+@unexec echo "'rm -rf %%LOGDIR%%'" | /usr/bin/fmt
+@unexec echo "'rm -rf %%PIDDIR%%'" | /usr/bin/fmt
+@unexec echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
