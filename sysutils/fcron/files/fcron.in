@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/sysutils/fcron/files/fcron.in,v 1.4 2012/11/17 06:01:30 svnexp Exp $
+#
+
+# PROVIDE: fcron
+# REQUIRE: LOGIN
+# BEFORE: securelevel
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="fcron"
+rcvar=fcron_enable
+command="%%PREFIX%%/sbin/${name}"
+pidfile="/var/run/${name}.pid"
+
+load_rc_config $name
+run_rc_command "$1"
