@@ -1,0 +1,22 @@
+# New ports collection makefile for:	freedt
+# Date created:		25 May 2003
+# Whom:			Tim Bishop <tim@bishnet.net>
+#
+# $FreeBSD: ports/sysutils/freedt/Makefile,v 1.10 2012/11/17 06:01:31 svnexp Exp $
+#
+
+PORTNAME=	freedt
+PORTVERSION=	0.22
+CATEGORIES=	sysutils
+MASTER_SITES=	http://offog.org/files/ \
+		ftp://ftp.i-scream.org/pub/offog.org/files/ \
+		http://ftp.i-scream.org/pub/offog.org/files/
+
+MAINTAINER=	tdb@FreeBSD.org
+COMMENT=	An experimental reimplementation of Dan Bernstein's daemontools
+
+CONFLICTS=	daemontools-[0-9]*
+
+GNU_CONFIGURE=	yes
+
+.include <bsd.port.mk>
