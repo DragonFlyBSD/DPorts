@@ -1,0 +1,7 @@
+bin/polipo
+etc/polipo/config.sample
+etc/polipo/forbidden.sample
+etc/periodic/daily/400.polipo
+%%PORTDOCS%%%%DATADIR%%/www/index.html
+@dirrmtry etc/periodic/daily
+@dirrmtry etc/periodic
