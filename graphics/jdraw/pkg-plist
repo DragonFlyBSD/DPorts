@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/graphics/jdraw/pkg-plist,v 1.3 2012/11/17 05:58:10 svnexp Exp $
+bin/jdraw
+%%JAVASHAREDIR%%/jdraw/jdraw_v1.1.5.jar
+@dirrm %%JAVASHAREDIR%%/jdraw
