@@ -1,0 +1,27 @@
+# New ports collection makefile for:	ftnchek
+# Date created:		4 May 1998
+# Whom:			kargl@apl.washington.edu
+#
+# $FreeBSD: ports/devel/ftnchek/Makefile,v 1.32 2012/11/17 05:55:43 svnexp Exp $
+
+PORTNAME=	ftnchek
+PORTVERSION=	3.3.1
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_SUNSITE} \
+		http://www.dsm.fordham.edu/~ftnchek/download/
+MASTER_SITE_SUBDIR=	devel/lang/fortran
+
+MAINTAINER=	bf@FreeBSD.org
+COMMENT=	Fortran 77 semantic checking utility
+
+LICENSE=	MIT
+
+PORTSCOUT=	skipv:3.3.a,3.3.b,3.3.c
+
+MAN1=		dcl2inc.1 ftnchek.1
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--libdir=${PREFIX}/share
+MAKE_ARGS=	OPT="${CFLAGS}" CC="${CC}"
+
+.include <bsd.port.mk>
