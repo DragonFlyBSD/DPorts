@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/security/zzuf/pkg-plist,v 1.3 2012/11/17 06:01:23 svnexp Exp $
+bin/zzcat
+bin/zzuf
+lib/zzuf/libzzuf.so
+lib/zzuf/libzzuf.a
+@dirrm lib/zzuf
