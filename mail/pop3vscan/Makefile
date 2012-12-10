@@ -1,0 +1,50 @@
+# New ports collection makefile for:	pop3vscan
+# Date created:				01 June 2003
+# Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
+#
+# $FreeBSD: ports/mail/pop3vscan/Makefile,v 1.12 2012/11/17 05:59:10 svnexp Exp $
+#
+
+PORTNAME=	pop3vscan
+PORTVERSION=	0.4
+PORTREVISION=	2
+CATEGORIES=	mail
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
+
+MAINTAINER=	leeym@FreeBSD.org
+COMMENT=	A transparent POP3-Proxy with virus-scanning capabilities
+
+LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+
+USE_GMAKE=	yes
+MAKE_ENV=	_LDFLAGS="${LDFLAGS}"
+SCRIPTS_ENV=	PKG_PREFIX=${PREFIX} NONEXISTENT=${NONEXISTENT} PASSWD=/etc/passwd
+
+PLIST_FILES=	etc/pop3vscan.conf.sample \
+		etc/pop3vscan.mail.sample \
+		etc/rc.d/pop3vscan.sh \
+		sbin/pop3vscan
+
+SUB_FILES=	pkg-message
+
+post-extract:
+	@${RM} ${WRKSRC}/ripmime/ripmime.a
+
+post-patch:
+	@${REINPLACE_CMD} -e 's,malloc.h,stdlib.h,g' ${WRKSRC}/*.c
+	@${REINPLACE_CMD} -e 's,#endif.*,#endif,g' ${WRKSRC}/*.h
+	@${REINPLACE_CMD} -e 's,make,${GMAKE},g' ${WRKSRC}/ripmime/build_tnef
+	@${REINPLACE_CMD} -e 's,=4321,=_BYTE_ORDER -include /usr/include/machine/endian.h,g' \
+		${WRKSRC}/ripmime/tnef/Makefile
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/pop3vscan ${PREFIX}/sbin/
+	${INSTALL_DATA} ${WRKSRC}/pop3vscan.conf ${PREFIX}/etc/pop3vscan.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/pop3vscan.mail ${PREFIX}/etc/pop3vscan.mail.sample
+	${INSTALL_SCRIPT} ${FILESDIR}/pop3vscan.sh ${PREFIX}/etc/rc.d/
+
+post-install:
+	@${SETENV} ${SCRIPTS_ENV} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>
