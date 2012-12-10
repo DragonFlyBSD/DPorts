@@ -1,0 +1,21 @@
+# New ports collection makefile for:	e169-stats
+# Date created:				1 June 2009
+# Whom:					Edwin Groothuis <edwin@mavetju.org>
+#
+# $FreeBSD: ports/net/e169-stats/Makefile,v 1.7 2012/11/17 05:59:59 svnexp Exp $
+#
+
+PORTNAME=	e169-stats
+PORTVERSION=	0.6
+CATEGORIES=	net
+MASTER_SITES=	http://www.mavetju.org/download/
+
+MAINTAINER=	edwin@mavetju.org
+COMMENT=	Curses realtime statistics for the Huawei E169 modem
+
+PLIST_FILES=	bin/e169-stats
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/e169-stats ${PREFIX}/bin
+
+.include <bsd.port.mk>
