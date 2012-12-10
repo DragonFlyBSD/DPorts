@@ -1,0 +1,27 @@
+--- Makefile.orig	2003-09-20 12:17:34.000000000 -0300
++++ Makefile	2009-08-29 14:56:21.000000000 -0300
+@@ -2,12 +2,7 @@
+ # - TODO: MAKE NEATER ONE 
+ # This makefile should work under most POSIX OSes (at least FreeBSD)
+ 
+-BINDIR = /usr/local/bin
+-MANDIR = /usr/local/man
+-
+-
+-CFLAGS = -O2 -pipe -Wall
+-
++all: fnteditfs
+ fnteditfs: fnteditfs.o font.o stack.o
+ 	gcc -o fnteditfs fnteditfs.o font.o stack.o -lcurses
+ 	strip fnteditfs
+@@ -17,8 +12,8 @@
+ stack.o: stack.c stack.h
+ 
+ install: fnteditfs fnteditfs.1
+-	cp fnteditfs $(BINDIR)
+-	gzip < fnteditfs.1 > $(MANDIR)/man1/fnteditfs.1.gz
++	__INSTALL_SCRIPT__ fnteditfs __PREFIX__/bin
++	__INSTALL_MAN__ fnteditfs.1 __PREFIX__/man/man1
+ 
+ clean:
+ 	rm -f *.o fnteditfs
