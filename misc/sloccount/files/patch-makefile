@@ -1,0 +1,27 @@
+--- makefile.orig	2009-08-29 15:28:59.000000000 -0300
++++ makefile	2009-08-29 15:30:34.000000000 -0300
+@@ -28,7 +28,6 @@
+ # Set this for where to store the man pages and executables.
+ # If you want to store this as part of an official distribution,
+ # change this to "/usr":
+-PREFIX=/usr/local
+ 
+ # Set "EXE_SUFFIX" to ".exe" if you're running on Windows, like this:
+ # EXE_SUFFIX=.exe
+@@ -37,7 +36,6 @@
+ # Set this to your C compiler, if it's not "gcc"; a likely alternative is "cc".
+ # The "-Wall" option turns on warnings in gcc.  gcc users might also want
+ # to consider using "-Werror", which turns warnings into errors.
+-CC=gcc -Wall
+ 
+ # Set this to the name of your "install" program.  On some systems,
+ # "install -C" would be useful (so unchanged files won't be modified),
+@@ -70,7 +68,7 @@
+ ARCH=i386
+ VERSIONEDNAME=$(NAME)-$(VERSION)
+ INSTALL_DIR=$(PREFIX)/bin
+-MAN_DIR=$(PREFIX)/share/man
++MAN_DIR=$(PREFIX)/man
+ MAN_DIR_MAN1=$(MAN_DIR)/man1
+ DOC_DIR=$(PREFIX)/share/doc/$(VERSIONEDNAME)-$(RPM_VERSION)
+ POSTED_DIR=/home/dwheeler/dwheeler.com/sloccount
