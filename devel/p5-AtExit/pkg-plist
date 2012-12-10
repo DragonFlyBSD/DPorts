@@ -1,0 +1,3 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/AtExit/.packlist
+%%SITE_PERL%%/AtExit.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/AtExit
