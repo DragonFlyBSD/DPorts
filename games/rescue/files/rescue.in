@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/games/rescue/files/rescue.in,v 1.2 2012/11/17 05:57:51 svnexp Exp $
+#
+
+export JAVA_VERSION="%%JAVA_VERSION%%"
+
+cd "%%DATADIR%%" && exec "%%LOCALBASE%%/bin/java" \
+-Djava.ext.dirs="%%DATADIR%%" -jar "%%DATADIR%%/Rescue.jar" "${@}"
