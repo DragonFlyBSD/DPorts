@@ -1,0 +1,23 @@
+bin/atoc_conv
+bin/kakasi
+bin/kakasi-config
+bin/mkkanwa
+bin/rdic_conv
+bin/wx2_conv
+include/libkakasi.h
+lib/libkakasi.a
+lib/libkakasi.la
+lib/libkakasi.so
+lib/libkakasi.so.3
+%%PORTDOCS%%share/doc/kakasi/ChangeLog.lib
+%%PORTDOCS%%share/doc/kakasi/JISYO
+%%PORTDOCS%%share/doc/kakasi/NEWS
+%%PORTDOCS%%share/doc/kakasi/README
+%%PORTDOCS%%share/doc/kakasi/README-ja
+%%PORTDOCS%%share/doc/kakasi/README.lib
+%%PORTDOCS%%share/doc/kakasi/README.wakati
+%%PORTDOCS%%share/doc/kakasi/TODO
+%%PORTDOCS%%@dirrm share/doc/kakasi
+share/kakasi/itaijidict
+share/kakasi/kanwadict
+@dirrm share/kakasi
