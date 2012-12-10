@@ -1,0 +1,22 @@
+# New ports collection makefile for:	zh-joe2
+# Date created:			3 July 1999
+# Whom:				Shen Chuan-Hsing <statue@mail.elife.idv.tw>
+#
+# $FreeBSD: ports/chinese/joe2/Makefile,v 1.25 2012/11/17 05:54:57 svnexp Exp $
+#
+
+CATEGORIES=	chinese
+
+PATCH_SITES=	${MASTER_SITE_LOCAL}
+PATCH_SITE_SUBDIR=	chinsan
+PATCHFILES=	zh-joe-2.9.8.diff
+PATCH_DIST_STRIP=	-p1
+
+MAINTAINER=	ports@FreeBSD.org
+
+LATEST_LINK=	${PKGNAMEPREFIX}joe2
+
+MASTERDIR=	${.CURDIR}/../../editors/joe2
+DISTINFO_FILE=	${.CURDIR}/distinfo
+
+.include "${MASTERDIR}/Makefile"
