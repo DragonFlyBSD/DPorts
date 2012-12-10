@@ -1,0 +1,6 @@
+include/libmng.h
+include/libmng_conf.h
+include/libmng_types.h
+lib/libmng.a
+lib/libmng.so
+lib/libmng.so.1
