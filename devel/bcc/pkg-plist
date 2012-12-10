@@ -1,0 +1,5 @@
+bin/as86
+bin/ld86
+bin/bcc
+lib/bcc/bcc-cc1
+@dirrm lib/bcc
