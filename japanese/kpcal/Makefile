@@ -1,0 +1,32 @@
+# New ports collection makefile for:	kpcal
+# Date created:		1 February 2001
+# Whom:			Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
+#
+# $FreeBSD: ports/japanese/kpcal/Makefile,v 1.13 2012/11/17 05:58:36 svnexp Exp $
+#
+
+PORTNAME=	kpcal
+PORTVERSION=	2.0
+PORTREVISION=	2
+CATEGORIES=	japanese
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	yoichi
+
+PATCH_SITES=	http://www.tamaru.kuee.kyoto-u.ac.jp/~tsuchiya/misc/kpcal/
+PATCHFILES=	${PORTNAME}-${PORTVERSION}-20040518.patch
+PATCH_DIST_STRIP=	-p1
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Make Calendar in Postscript format
+
+ALL_TARGET=	kpcal
+MAN1=		kpcal.1
+PLIST_FILES=	bin/kpcal
+
+post-patch:
+	${REINPLACE_CMD} -e 's/long/time_t/' ${WRKSRC}/kpcal.c
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/kpcal ${LOCALBASE}/bin
+	${INSTALL_MAN} ${WRKSRC}/kpcal.1 ${LOCALBASE}/man/man1
+
+.include <bsd.port.mk>
