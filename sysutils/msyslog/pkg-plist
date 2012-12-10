@@ -1,0 +1,24 @@
+sbin/peochk
+sbin/syslogd
+lib/libmsyslog.so.1
+man/man5/syslog.conf.5.gz
+man/man8/im_bsd.8.gz
+man/man8/im_file.8.gz
+man/man8/im_tcp.8.gz
+man/man8/im_udp.8.gz
+man/man8/im_unix.8.gz
+man/man8/om_classic.8.gz
+man/man8/om_peo.8.gz
+man/man8/om_regex.8.gz
+man/man8/om_tcp.8.gz
+man/man8/om_udp.8.gz
+man/man8/peochk.8.gz
+man/man8/syslogd.8.gz
+%%EXAMPLESDIR%%/im_mymodule.c
+%%EXAMPLESDIR%%/om_mymodule.c
+%%EXAMPLESDIR%%/syslog.conf.classic
+%%EXAMPLESDIR%%/syslog.conf.mysql
+%%EXAMPLESDIR%%/syslog.conf.peo
+%%EXAMPLESDIR%%/syslog.conf.pgsql
+%%EXAMPLESDIR%%/syslog.conf.regex
+@dirrm %%EXAMPLESDIR%%
