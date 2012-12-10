@@ -1,0 +1,5 @@
+@comment $FreeBSD: ports/www/man2web/pkg-plist,v 1.4 2012/11/17 06:02:39 svnexp Exp $
+bin/man2web
+%%CGIDIR%%/man2web
+etc/man2web.conf.default
+@dirrmtry %%CGIDIR%%
