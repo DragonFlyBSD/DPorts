@@ -1,0 +1,5 @@
+#!/bin/sh
+# $FreeBSD: ports/games/jin/files/jin.in,v 1.2 2012/11/17 05:57:42 svnexp Exp $
+cd %%DATADIR%%
+JAVA_VERSION="%%JAVA_VERSION%%"	\
+exec "%%LOCALBASE%%/bin/java" -jar %%DATADIR%%/%%JINJAR%% "$@"
