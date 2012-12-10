@@ -1,0 +1,7 @@
+%%SITE_PERL%%/NSNMP.pm
+%%SITE_PERL%%/NSNMP/Agent.pm
+%%SITE_PERL%%/NSNMP/Mapper.pm
+%%SITE_PERL%%/NSNMP/Simple.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/NSNMP/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/NSNMP
+@dirrmtry %%SITE_PERL%%/NSNMP
