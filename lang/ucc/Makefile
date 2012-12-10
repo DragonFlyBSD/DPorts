@@ -1,0 +1,33 @@
+# New ports collection makefile for:	ucc
+# Date created:				15 August 2008
+# Whom:					Wen Heping <wenheping@gmail.com>
+#
+# $FreeBSD: ports/lang/ucc/Makefile,v 1.4 2012/11/17 05:58:58 svnexp Exp $
+#
+
+PORTNAME=	ucc
+PORTVERSION=	1.6.0
+CATEGORIES=	lang
+MASTER_SITES=	SF/${PORTNAME}/OldFiles
+DISTNAME=	ucc160
+
+MAINTAINER=	wenheping@gmail.com
+COMMENT=	C Compiler Which Implements the ANSI C89 Standard
+
+USE_ZIP=	yes
+USE_DOS2UNIX=	yes
+WRKSRC=		${WRKDIR}/${PORTNAME}
+
+USE_LDCONFIG=	yes
+
+post-patch:	.SILENT
+	${REINPLACE_CMD} 's/make/$$(MAKE)/' \
+		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e '/^CC[[:blank:]]*=/d' \
+		-e '/^CFLAGS/ { s/=/+=/; s/-g//; }' \
+		-e '/:[[:blank:]]/s/\.c/.o/g' \
+		-e 's/$$^/$$>/g' \
+		${WRKSRC}/driver/Makefile \
+		${WRKSRC}/ucl/Makefile
+
+.include <bsd.port.mk>
