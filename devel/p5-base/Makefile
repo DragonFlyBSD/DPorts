@@ -1,0 +1,22 @@
+# New ports collection makefile for:	base
+# Date created:	   31 August 2003
+# Whom:		   Sergey Skvortsov <skv@protey.ru>
+#
+# $FreeBSD: ports/devel/p5-base/Makefile,v 1.11 2012/11/17 05:56:36 svnexp Exp $
+#
+
+PORTNAME=	base
+PORTVERSION=	2.18
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:RGARCIA
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Set of modules to operate with inheritance and class fields at runtime
+
+PERL_CONFIGURE=	yes
+
+MAN3=		base.3 fields.3
+
+.include <bsd.port.mk>
