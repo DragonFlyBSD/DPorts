@@ -1,0 +1,31 @@
+# New ports collection makefile for:    echat
+# Date created:        26 Aug 2003
+# Whom:                SeaD
+#
+# $FreeBSD: ports/net-im/echat/Makefile,v 1.7 2012/11/17 06:00:26 svnexp Exp $
+#
+
+PORTNAME=	echat
+DISTVERSION=	0.04beta1
+CATEGORIES=	net-im
+MASTER_SITES=	http://echat.deep.perm.ru/files/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	LAN chat program over the TCP/IP networks
+
+MAN1=		echat.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|^CFLAGS=|CFLAGS+=|g ; \
+		s|PREFIX=|PREFIX?=|g ; s|CC=|CC?=|g; \
+		\|^CFLAGS| { s|-g||; s|-O2||; } ; \
+		\|CC|s|@||; \|install|s|-s|${STRIP}|' ${WRKSRC}/Makefile
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/.echatrc.sample ${PREFIX}/etc/echatrc.sample
+	@${ECHO} "======================================================================"
+	@${ECHO} "  Please put \"${PREFIX}/etc/echatrc.sample\" in the right place."
+	@${ECHO} "  eChat will search in \"~/.echatrc\". Then edit it as you want."
+	@${ECHO} "======================================================================"
+
+.include <bsd.port.mk>
