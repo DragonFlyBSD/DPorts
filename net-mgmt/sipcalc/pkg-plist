@@ -1,0 +1,5 @@
+bin/sipcalc
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/sipcalc.txt
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
