@@ -1,0 +1,9 @@
+bin/thrulay
+sbin/thrulayd
+include/thrulay/client.h
+include/thrulay/server.h
+lib/libthrulay.a
+lib/libthrulay.la
+lib/libthrulay.so
+lib/libthrulay.so.0
+@dirrm include/thrulay
