@@ -1,0 +1,4 @@
+bin/sscalc
+%%PORTDOCS%%%%DOCSDIR%%/cities.txt
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
