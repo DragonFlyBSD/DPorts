@@ -1,0 +1,4 @@
+bin/autossh
+%%EXAMPLESDIR%%/autossh.host
+%%EXAMPLESDIR%%/rscreen
+@dirrm %%EXAMPLESDIR%%
