@@ -1,0 +1,63 @@
+# New ports collection makefile for:	pv
+# Date created:		04 May 2004
+# Whom:			Daniel Roethlisberger <daniel@roe.ch>
+#
+# $FreeBSD: ports/sysutils/pv/Makefile,v 1.16 2012/11/17 06:01:42 svnexp Exp $
+#
+
+PORTNAME=	pv
+PORTVERSION=	1.3.1
+CATEGORIES=	sysutils
+MASTER_SITES=	http://www.ivarch.com/programs/sources/
+
+MAINTAINER=	martymac@FreeBSD.org
+COMMENT=	A pipe throughput monitor
+
+LICENSE=	ART20
+
+CONFLICTS=	waon-[0-9]*
+
+PROJECTHOST=	pipeviewer
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+
+MAN1=		pv.1
+PLIST_FILES=	bin/pv
+PORTDOCS=	README INSTALL NEWS PACKAGE \
+		TODO VERSION release-checklist
+
+OPTIONS_DEFINE=	NLS LFS
+OPTIONS_DEFAULT=	LFS
+
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MLFS}
+CONFIGURE_ARGS+=	--enable-lfs
+.else
+CONFIGURE_ARGS+=	--disable-lfs
+.endif
+
+.if ${PORT_OPTIONS:MNLS}
+CONFIGURE_ARGS+=	--enable-static-nls
+.else
+CONFIGURE_ARGS+=	--disable-nls
+.endif
+
+post-patch:
+	@${CP} ${WRKSRC}/README ${WRKSRC}/doc
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/pv ${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/doc/quickref.1 ${MAN1PREFIX}/man/man1/pv.1
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${DOCSDIR}
+.for doc in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/doc/${doc} ${DOCSDIR}
+.endfor
+.endif
+
+test:
+	cd ${WRKSRC} && make test
+
+.include <bsd.port.post.mk>
