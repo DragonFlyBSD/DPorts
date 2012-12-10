@@ -1,0 +1,14 @@
+@comment $FreeBSD: ports/ftp/ncftp3/pkg-plist,v 1.17 2012/11/17 05:57:30 svnexp Exp $
+lib/libStrn.so
+lib/libStrn.so.1
+lib/libncftp.so
+lib/libncftp.so.3
+lib/libsio.so
+lib/libsio.so.5
+bin/%%NCFTP%%
+bin/ncftpbatch
+bin/ncftpbookmarks
+bin/ncftpget
+bin/ncftpls
+bin/ncftpput
+bin/ncftpspooler
