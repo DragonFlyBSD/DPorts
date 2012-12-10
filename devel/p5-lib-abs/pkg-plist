@@ -1,0 +1,5 @@
+%%SITE_PERL%%/lib/abs.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/lib/abs/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/lib/abs
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/lib
+@dirrmtry %%SITE_PERL%%/lib
