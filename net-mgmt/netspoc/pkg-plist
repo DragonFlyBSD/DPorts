@@ -1,0 +1,6 @@
+bin/cut-netspoc
+bin/netspoc
+bin/print-group
+%%SITE_PERL%%/Netspoc.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Netspoc/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Netspoc
