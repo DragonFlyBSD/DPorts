@@ -1,0 +1,37 @@
+# New ports collection makefile for:	lamprop
+# Date created:				15 May 2005
+# Whom:					rsmith@xs4all.nl
+#
+# $FreeBSD: ports/science/lamprop/Makefile,v 1.9 2012/11/17 06:00:58 svnexp Exp $
+#
+
+PORTNAME=	lamprop
+PORTVERSION=	1.3.3
+CATEGORIES=	science
+MASTER_SITES=	http://rsmith.home.xs4all.nl/software/
+
+MAINTAINER=	rsmith@xs4all.nl
+COMMENT=	Calculates properties of fiber reinforced composites
+
+PLIST_FILES=	bin/lamprop
+
+MAN1=		lamprop.1
+MAN5=		lamprop.5
+MANCOMPRESSED=	yes
+MAKE_JOBS_SAFE=	yes
+
+LICENSE=	BSD
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+.if defined(NOPORTDOCS)
+MAKE_ENV=	NOPORTDOCS=yes
+.else
+PORTDOCS=	LICENSE README NEWS
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|-pipe||; s|-fmerge-constants||; s|-fno-unit-at-a-time||; s|--fast-math||' \
+		 ${WRKSRC}/Makefile
+
+.include <bsd.port.mk>
