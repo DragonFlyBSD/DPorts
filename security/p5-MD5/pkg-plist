@@ -1,0 +1,3 @@
+%%SITE_PERL%%/MD5.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/MD5/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/MD5
