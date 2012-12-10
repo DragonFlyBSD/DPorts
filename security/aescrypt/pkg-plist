@@ -1,0 +1,4 @@
+bin/aescrypt
+bin/aesget
+%%PORTDOCS%%%%DOCSDIR%%/README.html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
