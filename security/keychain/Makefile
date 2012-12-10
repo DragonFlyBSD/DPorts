@@ -1,0 +1,42 @@
+# Created by: Johann Visagie <wjv@FreeBSD.org>
+# $FreeBSD: ports/security/keychain/Makefile,v 1.35 2012/11/17 06:01:06 svnexp Exp $
+
+PORTNAME=	keychain
+PORTVERSION=	2.7.1
+CATEGORIES=	security
+MASTER_SITES=	http://www.funtoo.org/archive/keychain/ \
+		${MASTER_SITE_GENTOO}
+MASTER_SITE_SUBDIR=	distfiles
+
+MAINTAINER=	garga@FreeBSD.org
+COMMENT=	A user-friendly front-end to ssh-agent(1)
+
+OPTIONS_DEFINE=	DOCS
+
+USE_BZIP2=		yes
+USE_GMAKE=		yes
+USE_PERL5_BUILD=	yes
+
+MAN1=		keychain.1
+
+PLIST_FILES=	bin/keychain
+
+PORTDOCS=	ChangeLog README.rst
+
+.include <bsd.port.pre.mk>
+
+.if !exists(${LOCALBASE}/bin/ssh-agent) && !exists(/usr/bin/ssh-agent)
+RUN_DEPENDS+=	ssh-agent:${PORTSDIR}/security/openssh-portable
+.endif
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/keychain ${PREFIX}/bin/keychain
+	${INSTALL_MAN} ${WRKSRC}/keychain.1 ${PREFIX}/man/man1
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+.for f in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.post.mk>
