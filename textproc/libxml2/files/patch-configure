@@ -1,0 +1,34 @@
+--- configure.orig	2010-11-27 15:40:06.000000000 +0100
++++ configure	2010-11-27 15:40:06.000000000 +0100
+@@ -11414,7 +11414,7 @@ else
+   esac
+ fi
+ 
+- if test -z "$VERSION_SCRIPT_FLAGS"; then
++ if test -n "$VERSION_SCRIPT_FLAGS"; then
+   USE_VERSION_SCRIPT_TRUE=
+   USE_VERSION_SCRIPT_FALSE='#'
+ else
+@@ -13501,11 +13501,12 @@ fi
+     fi
+     if test "$PYTHON_VERSION" != ""
+     then
++	with_python=`$PYTHON -c "import sys; print sys.exec_prefix"`
+ 	if test -r $with_python/include/python$PYTHON_VERSION/Python.h -a \
+ 	   -d $with_python/lib/python$PYTHON_VERSION/site-packages
+ 	then
+ 	    PYTHON_INCLUDES=$with_python/include/python$PYTHON_VERSION
+-	    PYTHON_SITE_PACKAGES=$libdir/python$PYTHON_VERSION/site-packages
++	    PYTHON_SITE_PACKAGES=$with_python/lib/python$PYTHON_VERSION/site-packages
+ 	else
+ 	    if test -r $prefix/include/python$PYTHON_VERSION/Python.h
+ 	    then
+@@ -13901,6 +13902,8 @@ fi
+ 	       fi
+ 	   fi
+        ;;
++       *freebsd*) THREAD_LIBS=""
++       ;;
+     esac
+     if test "$WITH_THREADS" = "1" ; then
+ 	THREAD_CFLAGS="$THREAD_CFLAGS -D_REENTRANT"
