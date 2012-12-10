@@ -1,0 +1,31 @@
+--- ./Makefile.orig	2011-10-10 08:34:43.000000000 +0200
++++ ./Makefile	2011-10-15 10:22:58.000000000 +0200
+@@ -11,16 +11,6 @@
+   MAN = $(DESTDIR)/usr/local/man
+ endif
+ 
+-ifeq ($(DEBUG),)
+-  override CPPFLAGS += -DNDEBUG
+-  CFLAGS += -O3 #-fno-stack-protector #-march=native
+-  LDFLAGS += -O3 #-march=native
+-else
+-  override CPPFLAGS += -DDEBUG
+-  CFLAGS += -g #-pg
+-  LDFLAGS += -g #-pg
+-endif
+-
+ CC ?= gcc
+ GZIP = gzip -9 -c
+ RM = rm -rf
+@@ -45,9 +35,9 @@
+ override CPPFLAGS += $(shell cat $(BINS)/autoconf.cppflags)
+ 
+ 
+-all: tthsum manual test runtest
++all: tthsum manual
+ 
+-install: tthsum manual test runtest
++install: tthsum manual
+ 	install -d $(BIN) $(MAN)/man1
+ 	install $(BINS)/tthsum $(BIN)
+ 	install -m644 $(SHARES)/tthsum.1.gz $(MAN)/man1
