@@ -1,0 +1,176 @@
+# New ports collection makefile for:	zsh
+# Date created:			11 Feb. 1995
+# Whom:				torstenb
+#
+# $FreeBSD: ports/shells/zsh/Makefile,v 1.144 2012/11/17 06:01:24 svnexp Exp $
+#
+
+PORTNAME=	zsh
+PORTVERSION=	5.0.0
+CATEGORIES=	shells
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION} \
+		SF/${PORTNAME}/${PORTNAME}-doc/${PORTVERSION}:doc
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+
+MAINTAINER=	bapt@FreeBSD.org
+COMMENT=	The Z shell
+
+LICENSE=	ZSH
+LICENSE_NAME=	ZSH license
+LICENSE_FILE=	${WRKSRC}/LICENCE
+LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+
+MAKE_JOBS_UNSAFE=	yes
+
+ZSH_VER=	${PORTVERSION}
+
+USE_BZIP2=	yes
+USE_ICONV=	yes
+GNU_CONFIGURE=	yes
+USE_NCURSES=	yes
+
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ARGS=	--with-term-lib="ncursesw ncurses" --with-tcsetpgrp \
+		--enable-function-subdirs
+
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-bsdtar
+#EXTRA_COMPLETION_FILES=	_sockstat
+#EXTRA_COMPLETION_DIR=	Completion/BSD/Command
+
+OPTIONS_DEFINE=	GDBM MEM SECURE_FREE MAILDIR MULTIBYTE PCRE STATIC DOCS DEBUG
+OPTIONS_DEFAULT=	SECURE_FREE MAILDIR MULTIBYTE
+
+GDBM_DESC=	Enable GDBM support (GPL)
+MEM_DESC=	Enable zsh-mem options
+SECURE_FREE_DESC=	Enable zsh-secure-free
+MAILDIR_DESC=	Enable support for Maildirs in MAIL(PATH)
+
+PLIST_SUB+=	ZSH_VER="${ZSH_VER}"
+
+MAN1=		zsh.1 zshbuiltins.1 zshcompctl.1 zshcompwid.1 zshcompsys.1 \
+		zshcontrib.1 zshexpn.1 zshmisc.1 zshmodules.1 zshoptions.1 \
+		zshparam.1 zshroadmap.1 zshtcpsys.1 zshzftpsys.1 zshzle.1 \
+		zshall.1 zshcalsys.1
+DOCS=		LICENCE META-FAQ README Etc/BUGS Etc/CONTRIBUTORS Etc/FAQ \
+		Etc/completion-style-guide Doc/zsh*.html Doc/zsh.dvi
+PORTDOCS=	*
+PORTEXAMPLES=	zlogin zshenv zshrc
+SHELLS=		/etc/shells
+
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
+DISTFILES+=	${DISTNAME}-doc${EXTRACT_SUFX}:doc
+.endif
+
+.if ${PORT_OPTIONS:MGDBM}
+LIB_DEPENDS+=		gdbm.4:${PORTSDIR}/databases/gdbm
+PLIST_SUB+=		GDBM=""
+.else
+CONFIGURE_ARGS+=	--disable-gdbm
+PLIST_SUB+=		GDBM="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MPCRE}
+CONFIGURE_ARGS+=	--enable-pcre
+LIB_DEPENDS+=		pcre.1:${PORTSDIR}/devel/pcre
+PLIST_SUB+=		PCRE=""
+.else
+CONFIGURE_ARGS+=	--disable-pcre
+PLIST_SUB+=		PCRE="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MMEM}
+CONFIGURE_ARGS+=	--enable-zsh-mem
+.endif
+
+.if ${PORT_OPTIONS:MSECURE_FREE}
+CONFIGURE_ARGS+=	--enable-zsh-secure-free
+.endif
+
+.if ${PORT_OPTIONS:MMAILDIR}
+CONFIGURE_ARGS+=	--enable-maildir-support
+.endif
+
+.if ${PORT_OPTIONS:MSTATIC}
+LDFLAGS+=	-static
+CONFIGURE_ARGS+=	--disable-dynamic
+PLIST_SUB+=		SHARED="@comment "
+.else
+CONFIGURE_ARGS+=	--enable-dynamic
+PLIST_SUB+=		SHARED=""
+.endif
+
+.if ${PORT_OPTIONS:MDEBUG}
+CONFIGURE_ARGS+=	--enable-zsh-debug
+.else
+CONFIGURE_ARGS+=	--disable-zsh-debug
+.endif
+
+.if ${PORT_OPTIONS:MMULTIBYTE}
+CONFIGURE_ARGS+=	--enable-multibyte
+.else
+CONFIGURE_ARGS+=	--disable-multibyte
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e '/LIBS/s/-lrt//' ${WRKSRC}/configure
+	@${SED} -i "" -e "s,link=dynamic,link=either," \
+		${WRKSRC}/Src/Modules/*.mdd
+	@${SED} -i "" -e "s,/etc/,${LOCALBASE}/etc/," \
+		${WRKSRC}/Functions/MIME/zsh-mime-setup
+.ifdef EXTRA_COMPLETION_FILES
+	@${ECHO} "===>  Installing extra completion files"
+.for COMPFILE in ${EXTRA_COMPLETION_FILES}
+	@(if [ -f ${WRKSRC}/${EXTRA_COMPLETION_DIR}/${COMPFILE} ] ; then \
+		${ECHO} "${EXTRA_COMPLETION_DIR}/${COMPFILE} already exists" ; \
+		exit 1 ; \
+	else \
+		${ECHO} ${EXTRA_COMPLETION_DIR}/${COMPFILE} ; \
+		${CP} ${FILESDIR}/${COMPFILE} \
+			${WRKSRC}/${EXTRA_COMPLETION_DIR}/${COMPFILE} ; \
+	fi)
+.endfor
+.endif
+	@${FIND} ${WRKSRC}/Completion -type f -iname '*.orig' -delete
+
+post-build:
+	# Fix ".so" macro problem by using "soelim" command.
+	${LN} -sf ${WRKSRC}/Doc ${WRKSRC}/man1
+	${MV} ${WRKSRC}/Doc/zshall.1 ${WRKSRC}/Doc/zshall.1.source
+	cd ${WRKSRC} && /usr/bin/soelim ${WRKSRC}/Doc/zshall.1.source > \
+		${WRKSRC}/Doc/zshall.1
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${PREFIX}/info
+	makeinfo --no-split --output=${WRKSRC}/Doc/zsh.info \
+		${WRKSRC}/Doc/zsh.texi
+INFO=	zsh
+.endif
+
+post-install:
+	${LN} ${PREFIX}/bin/zsh ${PREFIX}/bin/rzsh
+	${TEST} -d ${ZSH_ETCDIR} || ${MKDIR} ${ZSH_ETCDIR}
+	${TEST} -d ${ZSH_SITEFNDIR} || ${MKDIR} ${ZSH_SITEFNDIR}
+.if !defined(NOPORTEXAMPLES)
+	@${MKDIR} ${EXAMPLESDIR}
+	cd ${WRKSRC}/StartupFiles && ${INSTALL_DATA} ${PORTEXAMPLES} ${EXAMPLESDIR}
+.endif
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/Doc/zsh.info ${PREFIX}/info/zsh.info
+.endif
+	@${ECHO_MSG} "Updating ${SHELLS}"
+	@${GREP} -v ${PREFIX}/bin/r?zsh ${SHELLS}	 > ${SHELLS}.new
+	@${ECHO_CMD} ${PREFIX}/bin/zsh			>> ${SHELLS}.new
+	@${ECHO_CMD} ${PREFIX}/bin/rzsh			>> ${SHELLS}.new
+	@${MV} ${SHELLS}.new ${SHELLS}
+	@${PREFIX}/bin/zsh -fc ' \
+		setopt extendedglob nomark_dirs; \
+		for i in ${DATADIR}/${ZSH_VER}/functions/**/*(/) ; do \
+			zcompile -U -M $$i.zwc $$i/*~*.zwc(^/) ; \
+			${CHMOD} 644 $$i.zwc ; \
+		done'
+
+.include <bsd.port.post.mk>
