@@ -1,0 +1,4 @@
+bin/utftp
+sbin/utftpd
+sbin/utftpd_dump
+sbin/utftpd_make
