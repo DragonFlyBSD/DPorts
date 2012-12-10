@@ -1,0 +1,76 @@
+# New ports collection makefile for:	ja-lynx
+# Date created:         10 August 1998
+# Whom:                 Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
+#
+# $FreeBSD: ports/japanese/lynx/Makefile,v 1.23 2012/11/17 05:58:36 svnexp Exp $
+#
+
+PORTNAME=	lynx
+DISTVERSION=	${VERSION}.${MINOR_VERSION:S/.//}
+CATEGORIES=	japanese www ipv6
+MASTER_SITES=	http://lynx.isc.org/current/ \
+		http://ftp2.uk.freebsd.org/sites/lynx.isc.org/current/
+DISTNAME=	${PORTNAME}${VERSION}${MINOR_VERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A terminal-based World-Wide Web Client with multi-byte modification
+
+VERSION=	2.8.7
+MINOR_VERSION=	rel.1
+
+CONFLICTS=	lynx-2.* ja-lynx-2.8.8.*
+
+WRKSRC=		${WRKDIR}/${PORTNAME}${VERSION:S/./-/g}
+USE_BZIP2=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--with-screen=ncurses --with-zlib --libdir="${L_LIB}" \
+		--enable-nsl-fork --enable-ipv6 \
+		--enable-cjk --enable-internal-links \
+		--with-bzlib
+
+.if !defined(WITHOUT_JAPANESE_UTF8)
+USE_ICONV=	yes
+CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE} \
+		--enable-japanese-utf8
+.else
+CONFIGURE_ARGS+=--disable-japanese-utf8
+.endif
+
+.if defined(WITH_COLOR_STYLE)
+CONFIGURE_ARGS+=--enable-color-style
+PLIST_SUB+=	WITH_COLOR_STYLE=""
+.else
+CONFIGURE_ARGS+=--disable-color-style
+PLIST_SUB+=	WITH_COLOR_STYLE="@comment "
+.endif
+
+.if defined(WITH_DEFAULT_COLORS)
+CONFIGURE_ARGS+=--enable-default-colors
+.else
+CONFIGURE_ARGS+=--disable-default-colors
+.endif
+
+MAKE_ARGS=	helpdir=${L_HELP} docdir=${DOCSDIR}
+MAKEFILE=	makefile
+MAN1=		lynx.1
+
+.if !defined(NOPORTDOCS)
+INSTALL_TARGET=	install-full
+.else
+INSTALL_TARGET=	install install-help
+.endif
+
+L_LIB=		${PREFIX}/etc
+L_HELP=		${PREFIX}/share/lynx_help
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lssl -lcrypto|-L${OPENSSLLIB} &|g' \
+		${WRKSRC}/configure
+
+post-install:
+.if !defined(NOPORTDOCS)
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOCSDIR}
+.endif
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${L_HELP}
+
+.include <bsd.port.mk>
