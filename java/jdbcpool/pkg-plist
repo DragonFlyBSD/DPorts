@@ -1,0 +1,10 @@
+%%JAVAJARDIR%%/jdbcpool.jar
+%%EXAMPLESDIR%%/PoolTest.class
+%%EXAMPLESDIR%%/PoolTest.java
+%%EXAMPLESDIR%%/gsp/JDBCApplication.class
+%%EXAMPLESDIR%%/gsp/JDBCApplication.java
+%%EXAMPLESDIR%%/gsp/README
+%%EXAMPLESDIR%%/gsp/monitor_pool.gsp
+%%EXAMPLESDIR%%/gsp/query.gsp
+@dirrm %%EXAMPLESDIR%%/gsp
+@dirrm %%EXAMPLESDIR%%
