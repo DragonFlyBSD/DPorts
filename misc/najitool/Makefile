@@ -1,0 +1,26 @@
+# New ports collection makefile for:	najitool
+# Date created:				18 May 2005
+# Whom:					NECDET COKYAZICI <cokyazici@yahoo.co.uk>
+#
+# $FreeBSD: ports/misc/najitool/Makefile,v 1.8 2012/11/17 05:59:42 svnexp Exp $
+#
+
+PORTNAME=	najitool
+PORTVERSION=	0.8.4
+CATEGORIES=	misc
+MASTER_SITES=	SF
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A tool that generates, converts, and filters files
+
+BUILD_DEPENDS=	${LOCALBASE}/lib/libnaji.a:${PORTSDIR}/devel/libnaji
+
+DISTVERSIONSUFFIX=	.src
+
+post-patch:
+	${REINPLACE_CMD} -e 's|cflags =|cflags = -I${LOCALBASE}/include|; s|libnaji.a|${LOCALBASE}/lib/libnaji.a|' ${WRKSRC}/${MAKEFILE}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/najitool ${PREFIX}/bin
+
+.include <bsd.port.mk>
