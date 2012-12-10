@@ -1,0 +1,29 @@
+# New ports collection makefile for:  lttoolbox
+# Date created:                14 April 2009
+# Whom:                        Mykola Dzham <freebsd@levsha.org.ua>
+#
+# $FreeBSD: ports/textproc/lttoolbox/Makefile,v 1.4 2012/11/17 06:02:02 svnexp Exp $
+#
+
+PORTNAME=	lttoolbox
+PORTVERSION=	${APVER}.${APREV}
+CATEGORIES=	textproc
+MASTER_SITES=	SF/apertium/${PORTNAME}/${APVER}
+
+MAINTAINER=	i@levsha.me
+COMMENT=	A tool for lexical, morphological analysis and generation of words
+
+LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2
+
+APVER=	3.2
+APREV=	0
+
+GNU_CONFIGURE=	yes
+
+USE_LDCONFIG=	yes
+USE_GNOME=	gnomehack pkgconfig
+
+PLIST_SUB+=	APVER="${APVER}"
+MAN1=	lt-comp.1 lt-expand.1 lt-proc.1 lt-tmxcomp.1 lt-tmxproc.1
+
+.include <bsd.port.mk>
