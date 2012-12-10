@@ -1,0 +1,3 @@
+bin/cvsmapfs
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
