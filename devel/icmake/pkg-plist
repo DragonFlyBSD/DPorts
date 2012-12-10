@@ -1,0 +1,24 @@
+@comment $FreeBSD: ports/devel/icmake/pkg-plist,v 1.4 2012/12/04 10:54:13 svnexp Exp $
+bin/icmake
+bin/icmbuild
+bin/icmstart
+bin/icmun
+etc/icmake/icmake.rc
+etc/icmake/icmstart.rc
+lib/icmake-%%PORTVERSION%%/icm-comp
+lib/icmake-%%PORTVERSION%%/icm-exec
+lib/icmake-%%PORTVERSION%%/icm-pp
+share/icmake-%%PORTVERSION%%/parser/grammar
+share/icmake-%%PORTVERSION%%/scanner/lexer
+share/icmake-%%PORTVERSION%%/scanner/scanner.ih
+share/icmake-%%PORTVERSION%%/CLASSES
+share/icmake-%%PORTVERSION%%/icmconf
+share/icmake-%%PORTVERSION%%/main.cc
+share/icmake-%%PORTVERSION%%/main.ih
+share/icmake-%%PORTVERSION%%/usage.cc
+share/icmake-%%PORTVERSION%%/version.cc
+@dirrm etc/icmake
+@dirrm lib/icmake-%%PORTVERSION%%
+@dirrm share/icmake-%%PORTVERSION%%/parser
+@dirrm share/icmake-%%PORTVERSION%%/scanner
+@dirrm share/icmake-%%PORTVERSION%%
