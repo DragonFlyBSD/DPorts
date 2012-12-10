@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/java/netbeans61/files/patch-harness_run.xml,v 1.2 2012/11/17 05:58:45 svnexp Exp $
+
+--- harness/run.xml.orig
++++ harness/run.xml
+@@ -151,7 +151,7 @@
+             <arg line="${run.args}"/>
+             <arg line="${run.args.extra}"/>
+         </exec>
+-        <exec os="Linux SunOS Solaris Mac OS X" dir="." executable="sh" failonerror="yes">
++        <exec os="FreeBSD Linux SunOS Solaris Mac OS X" dir="." executable="sh" failonerror="yes">
+             <arg value="${run.sh}"/>
+             <arg value="--jdkhome"/>
+             <arg file="${run.jdkhome}"/>

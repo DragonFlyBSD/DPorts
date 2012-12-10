@@ -1,0 +1,16 @@
+
+$FreeBSD: ports/java/netbeans61/files/patch-bin_netbeans,v 1.2 2012/11/17 05:58:45 svnexp Exp $
+
+--- bin/netbeans.orig
++++ bin/netbeans
+@@ -132,6 +132,10 @@
+         mem=`expr $mem / 1048576`
+         cms_options=""
+         ;;
++    FreeBSD*)
++        mem=`/sbin/sysctl hw.physmem | tr -d [:alpha:][:space:].:`
++        mem=`expr $mem / 1048576`
++        ;;
+         *) 
+         ;;
+     esac
