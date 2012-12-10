@@ -1,0 +1,8 @@
+INADYN is a dynamic DNS client, it maintains the IP address of a host name by 
+periodically checking whether the IP address stored by the DNS server is the 
+real current address of the machine that is running INADYN.
+
+Supported dynamic DNS services are: dyndns.org (in all three flavors: dynamic, 
+static, custom), freedns.afraid.org, zoneedit.com, no-ip.com 
+ 
+WWW: http://www.inatech.eu/inadyn/
