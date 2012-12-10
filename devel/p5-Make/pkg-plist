@@ -1,0 +1,4 @@
+bin/perlmake
+%%SITE_PERL%%/Make.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Make/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Make
