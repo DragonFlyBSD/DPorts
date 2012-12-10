@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/cad/fidocadj/pkg-plist,v 1.2 2012/11/17 05:54:53 svnexp Exp $
+bin/fidocadj
+%%DATADIR%%/fidocadj.jar
+%%PORTDOCS%%%%DOCSDIR%%/fidocadj_manual_en.pdf
+@dirrm %%DATADIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
