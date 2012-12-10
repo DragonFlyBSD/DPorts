@@ -1,0 +1,7 @@
+bin/bon_csv2html
+bin/bon_csv2txt
+bin/generate_randfile
+sbin/bonnie++
+sbin/getc_putc
+sbin/getc_putc_helper
+sbin/zcav
