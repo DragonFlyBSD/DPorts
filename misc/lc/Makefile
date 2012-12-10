@@ -1,0 +1,23 @@
+# New ports collection makefile for:   lc
+# Date created:        13 November 1999
+# Whom:                jsellens
+#
+# $FreeBSD: ports/misc/lc/Makefile,v 1.6 2012/11/17 05:59:41 svnexp Exp $
+#
+
+PORTNAME=	lc
+PORTVERSION=	1.0
+CATEGORIES=	misc
+MASTER_SITES=	http://www.generalconcepts.com/resources/software/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	An alternative to ls(1)
+
+MAN1=		lc.1
+PLIST_FILES=	bin/lc
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/lc ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/lc.1 ${MAN1PREFIX}/man/man1
+
+.include <bsd.port.mk>
