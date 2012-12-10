@@ -1,0 +1,14 @@
+@comment $FreeBSD: ports/multimedia/rtmpdump/pkg-plist,v 1.2 2012/11/17 05:59:53 svnexp Exp $
+bin/rtmpdump
+sbin/rtmpgw
+sbin/rtmpsrv
+sbin/rtmpsuck
+include/librtmp/amf.h
+include/librtmp/http.h
+include/librtmp/log.h
+include/librtmp/rtmp.h
+@dirrm include/librtmp
+lib/librtmp.a
+lib/librtmp.so
+lib/librtmp.so.0
+libdata/pkgconfig/librtmp.pc
