@@ -1,0 +1,25 @@
+# New ports collection makefile for:	ipv6calc
+# Date created:				30 January 2002
+# Whom:				Edwin Groothuis <edwin@mavetju.org>
+#
+# $FreeBSD: ports/net-mgmt/ipv6calc/Makefile,v 1.41 2012/11/17 06:00:33 svnexp Exp $
+#
+
+PORTNAME=	ipv6calc
+PORTVERSION=	0.73.0
+PORTREVISION=	1
+CATEGORIES=	net-mgmt ipv6
+MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
+
+MAINTAINER=	edwin@mavetju.org
+COMMENT=	Convert, change, and calculate with IPv6 addresses
+
+USE_GETTEXT=	yes
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+
+PLIST_FILES=	bin/ipv6calc bin/ipv6logconv bin/ipv6logstats bin/ipv6loganon
+
+MAN8=		ipv6calc.8 ipv6logconv.8 ipv6logstats.8 ipv6loganon.8
+
+.include <bsd.port.mk>
