@@ -1,0 +1,25 @@
+
+$FreeBSD: ports/www/bozohttpd/files/patch-bozohttpd.8,v 1.4 2012/11/17 06:02:29 svnexp Exp $
+
+--- bozohttpd.8.orig
++++ bozohttpd.8
+@@ -284,8 +284,8 @@
+ .Xr inetd.conf 5
+ entry would be:
+ .Bd -literal
+-http stream tcp  nowait:600 httpd /usr/pkg/libexec/bozohttpd bozohttpd /var/www
+-http stream tcp6 nowait:600 httpd /usr/pkg/libexec/bozohttpd bozohttpd /var/www
++http stream tcp  nowait:600 httpd @@PREFIX@@/libexec/bozohttpd bozohttpd /var/www
++http stream tcp6 nowait:600 httpd @@PREFIX@@/libexec/bozohttpd bozohttpd /var/www
+ .Ed
+ .Pp
+ This would serve web pages from
+@@ -308,7 +308,7 @@
+ .Xr inetd.conf 5
+ entry like:
+ .Bd -literal
+-http stream tcp  nowait:600 httpd /usr/pkg/libexec/bozohttpd bozohttpd -v /var/vroot /var/www
++http stream tcp  nowait:600 httpd @@PREFIX@@/libexec/bozohttpd bozohttpd -v /var/vroot /var/www
+ .Ed
+ .Pp
+ and inside
