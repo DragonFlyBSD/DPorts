@@ -1,0 +1,5 @@
+%%SITE_PERL%%/PDF/Table.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/PDF/Table/.packlist
+@dirrmtry %%SITE_PERL%%/PDF
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/PDF/Table
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/PDF
