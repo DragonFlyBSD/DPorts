@@ -1,0 +1,38 @@
+@comment $FreeBSD: ports/mail/crm114/pkg-plist,v 1.9 2012/11/17 05:59:00 svnexp Exp $
+bin/crm
+bin/cssdiff
+bin/cssmerge
+bin/cssutil
+bin/osbf-util
+%%PORTDOCS%%%%DOCSDIR%%/CRM114_Mailfilter_HOWTO.txt
+%%PORTDOCS%%%%DOCSDIR%%/FAQ.txt
+%%PORTDOCS%%%%DOCSDIR%%/INTRO.txt
+%%PORTDOCS%%%%DOCSDIR%%/QUICKREF.txt
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/CLASSIFY_DETAILS.txt
+%%PORTDOCS%%%%DOCSDIR%%/inoc_passwd.txt
+%%PORTDOCS%%%%DOCSDIR%%/COLOPHON.txt
+%%PORTDOCS%%%%DOCSDIR%%/KNOWNBUGS.txt
+%%PORTDOCS%%%%DOCSDIR%%/THINGS_TO_DO.txt
+%%PORTDOCS%%%%DOCSDIR%%/Alice_In_Wonderland_Chap_1_And_2.txt
+%%PORTDOCS%%%%DOCSDIR%%/Hound_of_the_Baskervilles_first_500_lines.txt
+%%PORTDOCS%%%%DOCSDIR%%/Macbeth_Act_IV.txt
+%%PORTDOCS%%%%DOCSDIR%%/The_Wind_in_the_Willows_Chap_1.txt
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%EXAMPLESDIR%%/reto_procmailrc.recipe
+%%EXAMPLESDIR%%/mailfilter.crm
+%%EXAMPLESDIR%%/mailfilter.cf
+%%EXAMPLESDIR%%/mailreaver.crm
+%%EXAMPLESDIR%%/mailtrainer.crm
+%%EXAMPLESDIR%%/maillib.crm
+%%EXAMPLESDIR%%/shuffle.crm
+%%EXAMPLESDIR%%/rewriteutil.crm
+%%EXAMPLESDIR%%/rewrites.mfp
+%%EXAMPLESDIR%%/whitelist.mfp
+%%EXAMPLESDIR%%/blacklist.mfp
+%%EXAMPLESDIR%%/priolist.mfp
+%%EXAMPLESDIR%%/priolist.mfp.example
+%%EXAMPLESDIR%%/blacklist.mfp.example
+%%EXAMPLESDIR%%/whitelist.mfp.example
+%%EXAMPLESDIR%%/crm114-mode.el
+@dirrm %%EXAMPLESDIR%%
