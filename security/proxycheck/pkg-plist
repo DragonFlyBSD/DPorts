@@ -1,0 +1,3 @@
+sbin/proxycheck
+%%PORTDOCS%%%%DOCSDIR%%/CHANGES
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
