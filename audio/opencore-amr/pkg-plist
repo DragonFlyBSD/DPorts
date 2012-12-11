@@ -1,0 +1,17 @@
+@comment $FreeBSD: ports/audio/opencore-amr/pkg-plist,v 1.3 2012/11/17 05:54:40 svnexp Exp $
+include/opencore-amrnb/interf_dec.h
+include/opencore-amrnb/interf_enc.h
+include/opencore-amrwb/dec_if.h
+include/opencore-amrwb/if_rom.h
+lib/libopencore-amrnb.a
+lib/libopencore-amrnb.la
+lib/libopencore-amrnb.so
+lib/libopencore-amrnb.so.0
+lib/libopencore-amrwb.a
+lib/libopencore-amrwb.la
+lib/libopencore-amrwb.so
+lib/libopencore-amrwb.so.0
+libdata/pkgconfig/opencore-amrnb.pc
+libdata/pkgconfig/opencore-amrwb.pc
+@dirrmtry include/opencore-amrwb
+@dirrmtry include/opencore-amrnb
