@@ -1,0 +1,38 @@
+bin/shisa
+bin/shishi
+bin/ccache2shishi
+sbin/keytab2shishi
+sbin/shishid
+etc/shishi/shisa.conf
+etc/shishi/shishi.conf
+@rmtry etc/shishi/shishi.keys
+etc/shishi/shishi.skel
+include/shisa.h
+include/shishi-int.h
+include/shishi.h
+lib/libshisa.a
+lib/libshisa.la
+lib/libshisa.so
+lib/libshisa.so.1
+lib/libshishi.a
+lib/libshishi.la
+lib/libshishi.so
+lib/libshishi.so.1
+lib/security/pam_shishi.so
+lib/security/pam_shishi.la
+lib/security/pam_shishi.a
+libdata/pkgconfig/shishi.pc
+%%NLS%%share/locale/en@boldquot/LC_MESSAGES/shishi.mo
+%%NLS%%share/locale/en@quot/LC_MESSAGES/shishi.mo
+%%NLS%%share/locale/fi/LC_MESSAGES/shishi.mo
+%%NLS%%share/locale/pl/LC_MESSAGES/shishi.mo
+%%NLS%%share/locale/fr/LC_MESSAGES/shishi.mo
+%%NLS%%share/locale/vi/LC_MESSAGES/shishi.mo
+%%NLS%%@dirrmtry share/locale/en@boldquot/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/en@boldquot
+%%NLS%%@dirrmtry share/locale/en@quot/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/en@quot
+@dirrmtry etc/shishi
+@dirrmtry lib/security
+@exec mkdir -m 0700 -p /var/shishi
+@unexec rmdir /var/shishi 2>/dev/null || true
