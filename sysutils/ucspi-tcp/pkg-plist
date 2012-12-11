@@ -1,0 +1,17 @@
+bin/addcr
+bin/argv0
+bin/date@
+bin/delcr
+bin/finger@
+bin/fixcrio
+bin/http@
+bin/mconnect
+bin/mconnect-io
+bin/rblsmtpd
+bin/recordio
+bin/tcpcat
+bin/tcpclient
+bin/tcprules
+bin/tcprulescheck
+bin/tcpserver
+bin/who@
