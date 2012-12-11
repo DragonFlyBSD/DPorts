@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Acme/Monta.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Acme/Monta/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Acme/Monta
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Acme
+@dirrmtry %%SITE_PERL%%/Acme
