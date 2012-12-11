@@ -1,0 +1,8 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod/Xhtml/.packlist
+%%SITE_PERL%%/Pod/Hyperlink/BounceURL.pm
+%%SITE_PERL%%/Pod/Xhtml.pm
+bin/pod2xhtml
+@dirrmtry %%SITE_PERL%%/Pod/Hyperlink
+@dirrmtry %%SITE_PERL%%/Pod
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod/Xhtml
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod
