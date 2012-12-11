@@ -1,0 +1,4 @@
+bin/mp3asm
+%%PORTDOCS%%%%DOCSDIR%%/Changelog
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
