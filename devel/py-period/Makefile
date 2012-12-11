@@ -1,0 +1,30 @@
+# ex:ts=8
+# New ports collection makefile for:	py-period
+# Date created:			Mar 15, 2002
+# Whom:				ijliao
+#
+# $FreeBSD: ports/devel/py-period/Makefile,v 1.8 2012/11/17 05:56:49 svnexp Exp $
+#
+
+PORTNAME=	period
+PORTVERSION=	0.5
+CATEGORIES=	devel python
+MASTER_SITES=	http://www.biostat.wisc.edu/~annis/creations/
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A basic time period checking library
+
+USE_PYTHON=	yes
+NO_BUILD=	yes
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/period.py ${PYTHON_SITELIBDIR}
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for ex in html txt
+	${INSTALL_DATA} ${WRKSRC}/period.${ex} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>

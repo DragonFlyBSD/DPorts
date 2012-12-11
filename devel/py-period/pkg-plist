@@ -1,0 +1,4 @@
+%%PYTHON_SITELIBDIR%%/period.py
+%%PORTDOCS%%share/doc/period/period.html
+%%PORTDOCS%%share/doc/period/period.txt
+%%PORTDOCS%%@dirrm share/doc/period
