@@ -1,0 +1,17 @@
+@comment $FreeBSD: ports/devel/py-iniparse/pkg-plist,v 1.3 2012/11/17 05:56:47 svnexp Exp $
+%%PYTHON_SITELIBDIR%%/iniparse/__init__.py
+%%PYTHON_SITELIBDIR%%/iniparse/__init__.pyc
+%%PYTHON_SITELIBDIR%%/iniparse/__init__.pyo
+%%PYTHON_SITELIBDIR%%/iniparse/compat.py
+%%PYTHON_SITELIBDIR%%/iniparse/compat.pyc
+%%PYTHON_SITELIBDIR%%/iniparse/compat.pyo
+%%PYTHON_SITELIBDIR%%/iniparse/config.py
+%%PYTHON_SITELIBDIR%%/iniparse/config.pyc
+%%PYTHON_SITELIBDIR%%/iniparse/config.pyo
+%%PYTHON_SITELIBDIR%%/iniparse/ini.py
+%%PYTHON_SITELIBDIR%%/iniparse/ini.pyc
+%%PYTHON_SITELIBDIR%%/iniparse/ini.pyo
+%%PYTHON_SITELIBDIR%%/iniparse/utils.py
+%%PYTHON_SITELIBDIR%%/iniparse/utils.pyc
+%%PYTHON_SITELIBDIR%%/iniparse/utils.pyo
+@dirrm %%PYTHON_SITELIBDIR%%/iniparse
