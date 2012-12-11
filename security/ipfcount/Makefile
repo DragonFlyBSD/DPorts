@@ -1,0 +1,48 @@
+# New ports collection makefile for:	ipfcount
+# Date created:				22 December 2005
+# Whom:					Robert Archer <freebsd@deathbeforedecaf.net>
+#
+# $FreeBSD: ports/security/ipfcount/Makefile,v 1.7 2012/11/17 06:01:05 svnexp Exp $
+#
+
+PORTNAME=	ipfcount
+PORTVERSION=	0.2.1
+PORTREVISION=	1
+CATEGORIES=	security
+MASTER_SITES=	http://deathbeforedecaf.net/misc/ports/ \
+		http://users.netleader.com.au/~rob/
+
+MAINTAINER=	freebsd@deathbeforedecaf.net
+COMMENT=	Summarise ipf logs by counting and sorting the fields
+
+PLIST_FILES=	bin/ipfcount
+MAN1=		ipfcount.1
+
+USE_PERL5=	yes
+
+.if !defined(NOPORTDOCS)
+PLIST_DIRS=	%%EXAMPLESDIR%%
+PLIST_FILES+=	%%EXAMPLESDIR%%/100.ipfcount
+SUB_FILES=	pkg-message
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e '1s,^#![^ ]*,#!${PERL},' ${WRKSRC}/ipfcount
+
+do-build:
+	cd ${WRKSRC} && pod2man ipfcount > ipfcount.1
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/ipfcount ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/ipfcount.1 ${PREFIX}/man/man1/ipfcount.1
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/100.ipfcount ${EXAMPLESDIR}
+.endif
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${CAT} ${PKGMESSAGE}
+.endif
+
+.include <bsd.port.mk>
