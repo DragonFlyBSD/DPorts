@@ -1,0 +1,17 @@
+bin/fngrab
+%%PYTHON_SITELIBDIR%%/FreenetGrab/__init__.py
+%%PYTHON_SITELIBDIR%%/FreenetGrab/__init__.pyc
+%%PYTHON_SITELIBDIR%%/FreenetGrab/__init__.pyo
+%%PYTHON_SITELIBDIR%%/FreenetGrab/cmdline.py
+%%PYTHON_SITELIBDIR%%/FreenetGrab/cmdline.pyc
+%%PYTHON_SITELIBDIR%%/FreenetGrab/cmdline.pyo
+%%PYTHON_SITELIBDIR%%/FreenetGrab/fngrab.py
+%%PYTHON_SITELIBDIR%%/FreenetGrab/fngrab.pyc
+%%PYTHON_SITELIBDIR%%/FreenetGrab/fngrab.pyo
+%%PYTHON_SITELIBDIR%%/FreenetGrab/status.py
+%%PYTHON_SITELIBDIR%%/FreenetGrab/status.pyc
+%%PYTHON_SITELIBDIR%%/FreenetGrab/status.pyo
+%%PYTHON_SITELIBDIR%%/FreenetGrab/xmlrpclib.py
+%%PYTHON_SITELIBDIR%%/FreenetGrab/xmlrpclib.pyc
+%%PYTHON_SITELIBDIR%%/FreenetGrab/xmlrpclib.pyo
+@dirrm %%PYTHON_SITELIBDIR%%/FreenetGrab
