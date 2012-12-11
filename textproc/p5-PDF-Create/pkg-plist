@@ -1,0 +1,13 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/PDF/Create/.packlist
+%%SITE_PERL%%/PDF/Create/Page.pm
+%%SITE_PERL%%/PDF/Create/Outline.pm
+%%SITE_PERL%%/PDF/sample.pl
+%%SITE_PERL%%/PDF/sample-cgi.pl
+%%SITE_PERL%%/PDF/Create.pm
+%%SITE_PERL%%/PDF/Image/GIF.pm
+%%SITE_PERL%%/PDF/Image/JPEG.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/PDF/Create
+@dirrm %%SITE_PERL%%/PDF/Create
+@dirrm %%SITE_PERL%%/PDF/Image
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/PDF
+@dirrmtry %%SITE_PERL%%/PDF
