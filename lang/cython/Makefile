@@ -1,0 +1,22 @@
+# New ports collection makefile for:	cython
+# Date created:		2008-11-09
+# Whom:			Wen Heping <wenhping@gmail.com>
+#
+# $FreeBSD: ports/lang/cython/Makefile,v 1.18 2012/11/17 05:58:48 svnexp Exp $
+#
+
+PORTNAME=	cython
+PORTVERSION=	0.17.1
+CATEGORIES=	lang python
+MASTER_SITES=	http://www.cython.org/release/ \
+		CHEESESHOP
+DISTNAME=	Cython-${PORTVERSION}
+
+MAINTAINER=	wen@FreeBSD.org
+COMMENT=	Compiler for Writing C Extensions for the Python Language
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_PKGNAME=	Cython
+
+.include <bsd.port.mk>
