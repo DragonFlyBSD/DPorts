@@ -1,0 +1,56 @@
+# ex:ts=8
+# Ports collection makefile for:	gss
+# Date created:			Oct 19, 2003
+# Whom:				ijliao
+#
+# $FreeBSD: ports/security/gss/Makefile,v 1.38 2012/11/17 06:01:04 svnexp Exp $
+#
+
+PORTNAME=	gss
+PORTVERSION=	1.0.2
+CATEGORIES=	security
+MASTER_SITES=	GNU
+
+MAINTAINER=	johans@FreeBSD.org
+COMMENT=	GNU Generic Security Service Library
+
+LIB_DEPENDS=	shishi.1:${PORTSDIR}/security/shishi
+
+CONFLICTS=	heimdal-[0-9]*
+
+USE_PERL5_BUILD=	yes
+USE_GNOME=	gnomehack pkgconfig
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-kerberos5
+USE_LDCONFIG=	yes
+
+INFO=		gss
+PORTDOCS=	gss.html gss.ps gss.pdf
+
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+.include "Makefile.man"
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USE_GETTEXT=		yes
+PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=	--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.endif
+
+post-configure:
+	@cd ${WRKSRC}/doc && ${TOUCH} Makefile*
+
+pre-install:
+	@${MKDIR} ${PREFIX}/${INFO_PATH}
+
+post-install:
+.ifndef	NOPORTDOCS
+	${MKDIR} ${DOCSDIR}
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
