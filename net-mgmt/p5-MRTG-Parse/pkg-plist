@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/MRTG/Parse/.packlist
+%%SITE_PERL%%/MRTG/Parse.pm
+@dirrmtry %%SITE_PERL%%/MRTG
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/MRTG/Parse
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/MRTG
