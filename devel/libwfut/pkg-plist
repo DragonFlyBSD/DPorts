@@ -1,0 +1,18 @@
+bin/wfut
+include/libwfut-0.2/libwfut/ChannelFileList.h
+include/libwfut-0.2/libwfut/ChannelIO.h
+include/libwfut-0.2/libwfut/Encoder.h
+include/libwfut-0.2/libwfut/FileIO.h
+include/libwfut-0.2/libwfut/IO.h
+include/libwfut-0.2/libwfut/WFUT.h
+include/libwfut-0.2/libwfut/crc32.h
+include/libwfut-0.2/libwfut/header.h
+include/libwfut-0.2/libwfut/platform.h
+include/libwfut-0.2/libwfut/types.h
+lib/libwfut-0.2.a
+lib/libwfut-0.2.la
+lib/libwfut-0.2.so
+lib/libwfut-0.2.so.2
+libdata/pkgconfig/libwfut-0.2.pc
+@dirrm include/libwfut-0.2/libwfut
+@dirrm include/libwfut-0.2
