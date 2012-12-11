@@ -1,0 +1,9 @@
+%%SITE_PERL%%/auto/Math/Round/autosplit.ix
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Math/Round/.packlist
+%%SITE_PERL%%/Math/Round.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Math/Round
+@dirrm %%SITE_PERL%%/auto/Math/Round
+@dirrmtry %%SITE_PERL%%/auto/Math
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Math
+@dirrmtry %%SITE_PERL%%/Math
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Math
