@@ -1,0 +1,23 @@
+# $FreeBSD: ports/net/p5-Growl-GNTP/Makefile,v 1.6 2012/12/02 20:11:44 svnexp Exp $
+
+PORTNAME=	Growl-GNTP
+PORTVERSION=	0.16
+CATEGORIES=	net perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	brix@FreeBSD.org
+COMMENT=	Perl implementation of the Growl GNTP Protocol (Client Part)
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-Data-UUID>=0:${PORTSDIR}/devel/p5-Data-UUID \
+		p5-Crypt-CBC>=0:${PORTSDIR}/security/p5-Crypt-CBC
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=	Growl::GNTP.3
+
+.include <bsd.port.mk>
