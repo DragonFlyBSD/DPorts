@@ -1,0 +1,22 @@
+--- python/Makefile.in.orig	2008-05-23 23:03:51.000000000 -0500
++++ python/Makefile.in	2008-05-23 23:09:55.000000000 -0500
+@@ -258,7 +258,7 @@
+ 	-I$(top_srcdir) \
+ 	-I../libexslt
+ 
+-DOCS_DIR = $(datadir)/doc/libxslt-python-$(LIBXSLT_VERSION)
++DOCS_DIR = $(datadir)/doc/py-libxslt
+ # libxsltclass.txt is generated
+ DOCS = TODO
+ EXTRA_DIST = \
+@@ -273,8 +273,8 @@
+ 
+ libxsltmod_la_LDFLAGS = -module -avoid-version
+ @WITH_PYTHON_TRUE@mylibs = \
+-@WITH_PYTHON_TRUE@	$(top_builddir)/libxslt/libxslt.la \
+-@WITH_PYTHON_TRUE@	$(top_builddir)/libexslt/libexslt.la
++@WITH_PYTHON_TRUE@	-lxslt \
++@WITH_PYTHON_TRUE@	-lexslt
+ 
+ @WITH_PYTHON_TRUE@python_LTLIBRARIES = libxsltmod.la
+ @WITH_PYTHON_TRUE@libxsltmod_la_SOURCES = libxslt.c types.c libxslt-py.c
