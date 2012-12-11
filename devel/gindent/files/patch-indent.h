@@ -1,0 +1,14 @@
+--- src/indent.h.orig	2008-03-11 19:50:42.000000000 +0100
++++ src/indent.h	2010-06-27 16:29:17.000000000 +0200
+@@ -135,9 +135,9 @@
+   bb_cast
+ } bb_code_ty;
+ 
+-#define DEFAULT_RIGHT_MARGIN 78
++#define DEFAULT_RIGHT_MARGIN 79
+ 
+-#define DEFAULT_RIGHT_COMMENT_MARGIN 78
++#define DEFAULT_RIGHT_COMMENT_MARGIN 79
+ 
+ #define DEFAULT_LABEL_INDENT -2
+ 
