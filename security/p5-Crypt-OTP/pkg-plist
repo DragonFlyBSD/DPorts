@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Crypt/OTP.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/OTP/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/OTP
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt
+@dirrmtry %%SITE_PERL%%/Crypt
