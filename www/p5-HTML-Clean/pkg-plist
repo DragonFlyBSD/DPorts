@@ -1,0 +1,10 @@
+bin/htmlclean
+%%SITE_PERL%%/HTML/Clean.pm
+@dirrmtry %%SITE_PERL%%/HTML
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Clean/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Clean
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML
+%%SITE_PERL%%/auto/HTML/Clean/autosplit.ix
+@dirrm %%SITE_PERL%%/auto/HTML/Clean
+@dirrmtry %%SITE_PERL%%/auto/HTML
+@dirrmtry lib/perl5/%%PERL_VERSION%%/man/man1
