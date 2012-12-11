@@ -1,0 +1,30 @@
+# New ports collection Makefile for:	tap-plugins
+# Date created:				2004-05-19
+# Whom:					arved
+#
+# $FreeBSD: ports/audio/tap-plugins/Makefile,v 1.9 2012/11/17 05:54:45 svnexp Exp $
+
+PORTNAME=	tap-plugins
+PORTVERSION=	0.7.2
+CATEGORIES=	audio
+MASTER_SITES=	SF/tap-plugins/tap-plugins/${PORTVERSION}
+
+MAINTAINER=	taku@tackymt.homeip.net
+COMMENT=	LADSPA Plugins by Tom Szilagy
+
+LICENSE=	GPLv2
+
+MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I. -c -fPIC -DPIC" \
+		LDFLAGS="-nostartfiles -shared -Wl,-Bsymbolic -lm"
+
+post-patch:
+	@${GREP} -lR "<stdint\.h>" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
+		's|<stdint\.h>|<inttypes.h>|g'
+
+do-install:
+	${MKDIR} ${PREFIX}/lib/ladspa
+	${INSTALL_DATA} ${WRKSRC}/*.so ${PREFIX}/lib/ladspa/
+	${MKDIR} ${PREFIX}/share/ladspa/rdf/
+	${INSTALL_DATA} ${WRKSRC}/tap-plugins.rdf ${PREFIX}/share/ladspa/rdf/
+
+.include <bsd.port.mk>
