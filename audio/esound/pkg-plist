@@ -1,0 +1,25 @@
+bin/esd
+bin/esd-config
+bin/esdcat
+bin/esdctl
+bin/esddsp
+bin/esdfilt
+bin/esdloop
+bin/esdmon
+bin/esdplay
+bin/esdrec
+bin/esdsample
+@unexec if cmp -s %D/etc/esd.conf %D/etc/esd.conf.default; then rm -f %D/etc/esd.conf; fi
+etc/esd.conf.default
+@exec [ -f %B/esd.conf ] || cp %B/%f %B/esd.conf
+include/esd.h
+lib/libesd.a
+lib/libesd.la
+lib/libesd.so
+lib/libesd.so.2
+lib/libesddsp.a
+lib/libesddsp.la
+lib/libesddsp.so
+lib/libesddsp.so.2
+libdata/pkgconfig/esound.pc
+share/aclocal/esd.m4
