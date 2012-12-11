@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Proc/Queue.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Proc/Queue/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Proc/Queue
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Proc
+@dirrmtry %%SITE_PERL%%/Proc
