@@ -1,0 +1,27 @@
+# New ports collection makefile for:    jpeginfo
+# Date created:         9.8.2001
+# Whom:                 ache
+#
+# $FreeBSD: ports/graphics/jpeginfo/Makefile,v 1.16 2012/11/17 05:58:10 svnexp Exp $
+#
+
+PORTNAME=	jpeginfo
+PORTVERSION=	1.6.1
+PORTREVISION=	1
+CATEGORIES=	graphics
+MASTER_SITES=	http://www.kokkonen.net/tjko/src/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Generate listing and MD5, check jpegs for error, delete broken ones
+
+LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+MAKE_ARGS=	mandir=${MANPREFIX}/man
+
+MAN1=		jpeginfo.1
+PLIST_FILES=	bin/jpeginfo
+
+.include <bsd.port.mk>
