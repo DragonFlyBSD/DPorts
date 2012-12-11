@@ -1,0 +1,24 @@
+# New ports collection makefile for:	Devel-Size
+# Date created:	   16 Octobre 2003
+# Whom:		   mat
+#
+# $FreeBSD: ports/devel/p5-Devel-Size/Makefile,v 1.19 2012/11/17 05:56:14 svnexp Exp $
+#
+
+PORTNAME=	Devel-Size
+PORTVERSION=	0.78
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Perl extension for finding the memory usage of Perl variables
+
+LICENSE_COMB=	dual
+LICENSES=	ART10 GPLv1
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Devel::Size.3
+
+.include <bsd.port.mk>
