@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/security/gnupg/pkg-install,v 1.2 2012/11/17 06:01:04 svnexp Exp $
+#
+
+if [ "$2" != "POST-INSTALL" ]; then
+    exit 0
+fi
+
+if [ -r ${PKG_PREFIX}/bin/gpg ] || [ -L ${PKG_PREFIX}/bin/gpg ]; then
+	# Skip.
+else
+	ln -s gpg2 ${PKG_PREFIX}/bin/gpg
+fi
