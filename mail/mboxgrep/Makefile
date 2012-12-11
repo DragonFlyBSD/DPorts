@@ -1,0 +1,42 @@
+# New ports collection makefile for:	mboxgrep
+# Date created:				28 October 2001
+# Whom:					Anders Nordby <anders@fix.no>
+#
+# $FreeBSD: ports/mail/mboxgrep/Makefile,v 1.17 2012/11/17 05:59:05 svnexp Exp $
+#
+
+PORTNAME=	mboxgrep
+PORTVERSION=	0.7.9
+PORTREVISION=	2
+CATEGORIES=	mail
+MASTER_SITES=	SF
+
+MAINTAINER=	anders@FreeBSD.org
+COMMENT=	Utility to scan mailboxes for messages matching a regular expression
+
+.if defined(WITH_PCRE)
+LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+.endif
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib"
+CFLAGS+=	-I${LOCALBASE}/include
+USE_OPENSSL=	yes
+
+MAN1=		mboxgrep.1
+INFO=		mboxgrep
+
+DOCS=		ChangeLog NEWS README TODO
+
+post-patch:
+	@${REINPLACE_CMD} -e 's,void \*tmpp,FILE \*tmpp,g' ${WRKSRC}/src/main.c
+
+post-install:
+.if !defined(NOPORTDOCS)
+	${INSTALL} -d -o root -g wheel -m 0755 ${DOCSDIR}
+.for f in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
+.endfor
+.endif
+
+.include <bsd.port.mk>
