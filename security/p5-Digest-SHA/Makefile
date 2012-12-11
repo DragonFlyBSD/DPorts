@@ -1,0 +1,37 @@
+# Created by: Travis Campbell <hcoyote@ghostar.org>
+# $FreeBSD: ports/security/p5-Digest-SHA/Makefile,v 1.28 2012/11/26 12:43:38 svnexp Exp $
+
+PORTNAME=	Digest-SHA
+PORTVERSION=	5.74
+CATEGORIES=	security perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Perl extension for SHA-1/224/256/384/512
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
+		p5-Test-Pod-Coverage>=0.08:${PORTSDIR}/devel/p5-Test-Pod-Coverage
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Digest::SHA.3
+
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} >= 501000
+PLIST_SUB+=	EXE_FILES="@comment "
+.else
+PLIST_SUB+=	EXE_FILES=""
+MAN1=		shasum.1
+.endif
+
+post-patch:
+.if ${PERL_LEVEL} >= 501000
+	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
+.endif
+
+.include <bsd.port.post.mk>
