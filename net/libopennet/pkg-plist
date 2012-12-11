@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/net/libopennet/pkg-plist,v 1.4 2012/11/17 06:00:04 svnexp Exp $
+include/opennet.h
+lib/libopennet.a
+lib/libopennet.so
+lib/libopennet.so.0
+lib/libopennet.so.%%PORTVERSION%%
