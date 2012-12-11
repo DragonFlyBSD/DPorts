@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Tie/iCal.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie/iCal/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie/iCal
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie
+@dirrmtry %%SITE_PERL%%/Tie
