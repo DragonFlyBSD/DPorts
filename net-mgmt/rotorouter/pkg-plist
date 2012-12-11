@@ -1,0 +1,3 @@
+sbin/rotorouter
+@unexec if cmp -s %D/etc/rotorouter.conf %D/etc/rotorouter.conf-example; then rm -f %D/etc/rotorouter.conf; fi
+etc/rotorouter.conf-example
