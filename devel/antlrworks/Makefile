@@ -1,0 +1,49 @@
+# New ports collection makefile for:    antlrworks
+# Date created:                         December, 5th 2006
+# Whom:                                 Matthias Sund <m.sund@arcor.de>
+#
+# $FreeBSD: ports/devel/antlrworks/Makefile,v 1.14 2012/11/17 05:55:33 svnexp Exp $
+
+PORTNAME=	antlrworks
+PORTVERSION=	1.4.2
+PORTEPOCH=	1
+CATEGORIES=	devel java
+MASTER_SITES=	http://www.antlr.org/download/
+EXTRACT_SUFX=	.jar
+
+MAINTAINER=	m.sund@arcor.de
+COMMENT=	The ANTLR GUI Development Environment
+
+NO_BUILD=	yes
+
+USE_JAVA=	yes
+JAVA_VERSION=	1.5+
+
+DESKTOP_ENTRIES="ANTLRWorks" \
+	"ANTLR GUI Development Environment" \
+	"antlrworks.png" \
+	"antlrworks" \
+	"Application;Development;" \
+	true
+
+PLIST_FILES=	bin/antlrworks \
+		${JAVAJARDIR:C,${PREFIX}/?,,}/${PORTNAME}.jar \
+		share/pixmaps/antlrworks.png
+
+do-install:
+	${SED} -e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|' \
+	-e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+	-e 's|%%PORTNAME%%|${PORTNAME}|' \
+	-e 's|%%JAVA_VERSION%%|${JAVA_VERSION}|' ${FILESDIR}/antlrworks.sh > ${WRKDIR}/antlrworks.sh
+
+	@${MKDIR} ${JAVAJARDIR}
+	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${PORTNAME}.jar..."
+	@${INSTALL_DATA} ${DISTDIR}/${DISTFILES} ${JAVAJARDIR}/${PORTNAME}.jar
+	@${ECHO_MSG} " [ DONE ]"
+	@${ECHO_MSG} -n ">> Installing antlrworks script as ${PREFIX}/bin/antlrworks..."
+	@${INSTALL_SCRIPT} ${WRKDIR}/antlrworks.sh ${PREFIX}/bin/antlrworks
+	@${ECHO_MSG} " [ DONE ]"
+	@${MKDIR} ${PREFIX}/share/pixmaps
+	@${INSTALL_DATA} ${WRKDIR}/icons/app_64x64.png ${PREFIX}/share/pixmaps/antlrworks.png
+
+.include <bsd.port.mk>
