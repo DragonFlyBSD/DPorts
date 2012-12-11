@@ -1,0 +1,13 @@
+%%SITE_PERL%%/Bundle/PlRPC.pm
+%%SITE_PERL%%/RPC/PlClient.pm
+%%SITE_PERL%%/RPC/PlClient/Comm.pm
+%%SITE_PERL%%/RPC/PlServer.pm
+%%SITE_PERL%%/RPC/PlServer/Comm.pm
+%%SITE_PERL%%/RPC/PlServer/Test.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/RPC/PlServer/.packlist
+@dirrm %%SITE_PERL%%/RPC/PlServer
+@dirrm %%SITE_PERL%%/RPC/PlClient
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/RPC/PlServer
+@dirrmtry %%SITE_PERL%%/Bundle
+@dirrmtry %%SITE_PERL%%/RPC
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/RPC
