@@ -1,0 +1,30 @@
+# New ports collection makefile for:	libeXosip2
+# Date created:				12 April 2006
+# Whom:					Muhammad Moinur Rahman <bd_subzero@yahoo.com>
+#
+# $FreeBSD: ports/net/libexosip2/Makefile,v 1.13 2012/11/17 06:00:04 svnexp Exp $
+#
+
+PORTNAME=	libeXosip2
+PORTVERSION=	3.6.0
+CATEGORIES=	net
+MASTER_SITES=	SAVANNAH/exosip
+
+MAINTAINER=	5u623l20@gmail.com
+COMMENT=	GPL library that extends the capability of the oSIP library
+
+LIB_DEPENDS=	osip2:${PORTSDIR}/net/libosip
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--disable-tools --disable-debug --disable-trace
+USE_LDCONFIG=	yes
+SHLIB_VER=	9
+
+PLIST_SUB+=	SHLIB_VER=${SHLIB_VER}
+
+CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
+
+post-patch:
+	@${REINPLACE_CMD} -e '/HAVE_OPENSSL/d' ${WRKSRC}/config.h.in
+
+.include <bsd.port.mk>
