@@ -1,0 +1,12 @@
+#!/bin/sh
+# $FreeBSD: ports/lang/tcl-wrapper/files/pkg-install.in,v 1.2 2012/11/17 05:58:57 svnexp Exp $
+#
+CP="%%CP%%"
+TX_CONF="%%TX_CONF_FULL%%"
+
+if [ "$2" = "POST-INSTALL" ]; then
+
+	if [ ! -f "${TX_CONF}" ]; then
+		${CP} "${TX_CONF}.sample" "${TX_CONF}"
+	fi
+fi

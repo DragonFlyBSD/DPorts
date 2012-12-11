@@ -1,0 +1,17 @@
+#!/bin/sh
+# $FreeBSD: ports/lang/tcl-wrapper/files/pkg-deinstall.in,v 1.2 2012/11/17 05:58:57 svnexp Exp $
+#
+MD5="%%MD5%%"
+MD5SUM=
+RM="%%RM%%"
+TX_CONF="%%TX_CONF_FULL%%"
+
+if [ "$2" = "POST-DEINSTALL" ]; then
+
+	if [ -f ${TX_CONF} ]; then
+		MD5CHECK=`${MD5} ${TX_CONF}`
+		if [ "x${MD5CHECK}" = "x${MD5SUM}" ]; then
+	 		${RM} ${TX_CONF}
+		fi
+	fi
+fi
