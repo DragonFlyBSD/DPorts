@@ -1,0 +1,3 @@
+bin/newspost
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
