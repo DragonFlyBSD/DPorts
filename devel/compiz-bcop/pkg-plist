@@ -1,0 +1,5 @@
+@comment $FreeBSD: ports/devel/compiz-bcop/pkg-plist,v 1.3 2012/11/17 05:55:38 svnexp Exp $
+bin/bcop
+libdata/pkgconfig/bcop.pc
+share/bcop/bcop.xslt
+@dirrmtry share/bcop
