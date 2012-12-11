@@ -1,0 +1,7 @@
+bin/RomanDate
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Date/Roman/.packlist
+%%SITE_PERL%%/Date/Roman.pm
+man/man1/RomanDate.1
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Date/Roman
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Date
+@dirrmtry %%SITE_PERL%%/Date
