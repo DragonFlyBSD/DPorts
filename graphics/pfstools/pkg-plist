@@ -1,0 +1,75 @@
+bin/pfsinrgbe
+bin/pfsoutrgbe
+bin/pfsinpfm
+bin/pfsoutpfm
+bin/pfsin
+bin/pfsout
+bin/pfsoutffmpeg
+bin/pfsinmulti
+bin/pfsindcraw
+bin/pfsclamp
+bin/pfsgamma
+bin/pfstag
+bin/pfssize
+bin/pfsextractchannels
+bin/pfspanoramic
+bin/pfsrotate
+bin/pfsflip
+bin/pfscut
+bin/pfspad
+bin/pfscat
+bin/pfsabsolute
+%%PPM%%bin/pfsinppm
+%%PPM%%bin/pfsoutppm
+%%EXR%%bin/pfsinexr
+%%EXR%%bin/pfsoutexr
+%%TIFF%%bin/pfsintiff
+%%TIFF%%bin/pfsouttiff
+%%IM%%bin/pfsinimgmagick
+%%IM%%bin/pfsoutimgmagick
+%%QT%%bin/pfsview
+%%QT%%bin/pfsv
+%%OCTAVE%%bin/pfsoctavelum
+%%OCTAVE%%bin/pfsoctavergb
+%%OCTAVE%%bin/pfsstat
+%%GL%%bin/pfsglview
+include/pfs-1.2/pfs.h
+include/pfs-1.2/array2d.h
+lib/libpfs-1.2.a
+lib/libpfs-1.2.la
+lib/libpfs-1.2.so
+lib/libpfs-1.2.so.0
+libdata/pkgconfig/pfs.pc
+%%OCTAVE%%@cwd %%OCTAVE_BASE%%
+%%OCTAVE%%libexec/octave/%%OCTAVE_VERSION%%/site/oct/%%BUILD%%/pfstools/pfsclose.oct
+%%OCTAVE%%libexec/octave/%%OCTAVE_VERSION%%/site/oct/%%BUILD%%/pfstools/pfsget.oct
+%%OCTAVE%%libexec/octave/%%OCTAVE_VERSION%%/site/oct/%%BUILD%%/pfstools/pfsopen.oct
+%%OCTAVE%%libexec/octave/%%OCTAVE_VERSION%%/site/oct/%%BUILD%%/pfstools/pfsput.oct
+%%OCTAVE%%libexec/octave/%%OCTAVE_VERSION%%/site/oct/%%BUILD%%/pfstools/pfsread.oct
+%%OCTAVE%%libexec/octave/%%OCTAVE_VERSION%%/site/oct/%%BUILD%%/pfstools/pfstransform_colorspace.oct
+%%OCTAVE%%libexec/octave/%%OCTAVE_VERSION%%/site/oct/%%BUILD%%/pfstools/pfswrite.oct
+%%OCTAVE%%share/octave/%%OCTAVE_VERSION%%/site/m/pfstools/pfs_close_frames.m
+%%OCTAVE%%share/octave/%%OCTAVE_VERSION%%/site/m/pfstools/pfs_open_frames.m
+%%OCTAVE%%share/octave/%%OCTAVE_VERSION%%/site/m/pfstools/pfs_read_luminance.m
+%%OCTAVE%%share/octave/%%OCTAVE_VERSION%%/site/m/pfstools/pfs_read_rgb.m
+%%OCTAVE%%share/octave/%%OCTAVE_VERSION%%/site/m/pfstools/pfs_read_xyz.m
+%%OCTAVE%%share/octave/%%OCTAVE_VERSION%%/site/m/pfstools/pfs_write_rgb.m
+%%OCTAVE%%share/octave/%%OCTAVE_VERSION%%/site/m/pfstools/pfssize.m
+%%OCTAVE%%share/octave/%%OCTAVE_VERSION%%/site/m/pfstools/pfsview.m
+%%OCTAVE%%share/octave/%%OCTAVE_VERSION%%/site/m/pfstools/pfsview_list.m
+%%OCTAVE%%share/octave/%%OCTAVE_VERSION%%/site/m/pfstools/pfsview_rgb.m
+%%OCTAVE%%@cwd %%PFS_BASE%%
+@dirrm include/pfs-1.2
+%%OCTAVE%%@cwd %%OCTAVE_BASE%%
+%%OCTAVE%%@dirrm share/octave/%%OCTAVE_VERSION%%/site/m/pfstools
+%%OCTAVE%%@dirrmtry share/octave/%%OCTAVE_VERSION%%/site/m
+%%OCTAVE%%@dirrmtry share/octave/%%OCTAVE_VERSION%%/site
+%%OCTAVE%%@dirrmtry share/octave/%%OCTAVE_VERSION%%
+%%OCTAVE%%@dirrmtry share/octave
+%%OCTAVE%%@dirrm libexec/octave/%%OCTAVE_VERSION%%/site/oct/%%BUILD%%/pfstools
+%%OCTAVE%%@dirrmtry libexec/octave/%%OCTAVE_VERSION%%/site/oct/%%BUILD%%
+%%OCTAVE%%@dirrmtry libexec/octave/%%OCTAVE_VERSION%%/site/oct
+%%OCTAVE%%@dirrmtry libexec/octave/%%OCTAVE_VERSION%%/site
+%%OCTAVE%%@dirrmtry libexec/octave/%%OCTAVE_VERSION%%
+%%OCTAVE%%@dirrmtry libexec/octave
+%%OCTAVE%%@cwd %%PFS_BASE%%
