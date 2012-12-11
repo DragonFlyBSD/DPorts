@@ -1,0 +1,28 @@
+# New ports collection makefile for:	HTTP-MHTTP
+# Date created:	   22 January 2004
+# Whom:		   Sergey Skvortsov <skv@protey.ru>
+#
+# $FreeBSD: ports/www/p5-HTTP-MHTTP/Makefile,v 1.4 2012/11/17 06:02:51 svnexp Exp $
+#
+
+PORTNAME=	HTTP-MHTTP
+PORTVERSION=	0.15
+CATEGORIES=	www perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Low level access to the HTTP protocol
+
+PERL_CONFIGURE=	yes
+USE_OPENSSL=	yes
+CONFIGURE_ENV=	GOTSSL=yes
+CONFIGURE_ARGS=	--default
+
+MAN3=		HTTP::MHTTP.3
+
+post-patch:
+	@${PERL} -pi -e 's!(?<=POSSIBLE_SSL_DIRS = qw\().*(?=\);)!${OPENSSLBASE}!;' \
+		${WRKSRC}/Makefile.PL
+
+.include <bsd.port.mk>
