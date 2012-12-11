@@ -1,0 +1,13 @@
+@comment $FreeBSD: ports/ftp/twoftpd/pkg-plist,v 1.7 2012/11/17 05:57:30 svnexp Exp $
+bin/twoftpd-anon
+bin/twoftpd-anon-conf
+bin/twoftpd-auth
+bin/twoftpd-bind-port
+bin/twoftpd-conf
+bin/twoftpd-drop
+bin/twoftpd-switch
+bin/twoftpd-xfer
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
