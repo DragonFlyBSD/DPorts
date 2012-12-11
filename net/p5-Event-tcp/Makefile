@@ -1,0 +1,25 @@
+# New ports collection makefile for:	p5-Event-tcp
+# Date created:				2009-11-15
+# Whom:					steinex
+#
+# $FreeBSD: ports/net/p5-Event-tcp/Makefile,v 1.5 2012/11/17 06:00:09 svnexp Exp $
+#
+
+PORTNAME=	Event-tcp
+PORTVERSION=	0.14
+CATEGORIES=	net devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Glue code to build client-server style TCP-based services
+
+BUILD_DEPENDS=	p5-Event>=0:${PORTSDIR}/devel/p5-Event \
+		p5-Ioctl>=0:${PORTSDIR}/devel/p5-Ioctl
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Event::tcpsession.3
+
+.include <bsd.port.mk>
