@@ -1,0 +1,5 @@
+%%SITE_PERL%%/News/NNTPClient.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/News/NNTPClient/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/News/NNTPClient
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/News
+@dirrmtry %%SITE_PERL%%/News
