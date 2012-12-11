@@ -1,0 +1,17 @@
+#!/bin/sh
+# $FreeBSD: ports/mail/majordomo/pkg-deinstall,v 1.2 2012/11/17 05:59:05 svnexp Exp $
+
+MAJORDOMOUSER=majordom
+MAJORDOMOGROUP=majordom
+
+case $2 in
+POST-DEINSTALL)
+	if pw groupshow "${MAJORDOMOGROUP}" 2>/dev/null 1>&2; then
+		echo "To delete ${MAJORDOMOGROUP} group permanently, use 'pw groupdel \"${MAJORDOMOGROUP}\"'"
+	fi
+	if pw usershow "${MAJORDOMOUSER}" 2>/dev/null 1>&2; then
+		echo "To delete ${MAJORDOMOUSER} user permanently, use 'pw userdel \"${MAJORDOMOUSER}\"'"
+	fi
+	;;
+esac
+exit 0
