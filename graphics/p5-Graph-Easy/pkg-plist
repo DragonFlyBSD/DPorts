@@ -1,0 +1,38 @@
+bin/graph-easy
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Graph/Easy/.packlist
+%%SITE_PERL%%/Graph/Easy.pm
+%%SITE_PERL%%/Graph/Easy/As_ascii.pm
+%%SITE_PERL%%/Graph/Easy/As_graphml.pm
+%%SITE_PERL%%/Graph/Easy/As_graphviz.pm
+%%SITE_PERL%%/Graph/Easy/As_txt.pm
+%%SITE_PERL%%/Graph/Easy/As_vcg.pm
+%%SITE_PERL%%/Graph/Easy/Attributes.pm
+%%SITE_PERL%%/Graph/Easy/Base.pm
+%%SITE_PERL%%/Graph/Easy/Edge.pm
+%%SITE_PERL%%/Graph/Easy/Edge/Cell.pm
+%%SITE_PERL%%/Graph/Easy/Group.pm
+%%SITE_PERL%%/Graph/Easy/Group/Anon.pm
+%%SITE_PERL%%/Graph/Easy/Group/Cell.pm
+%%SITE_PERL%%/Graph/Easy/Layout.pm
+%%SITE_PERL%%/Graph/Easy/Layout/Chain.pm
+%%SITE_PERL%%/Graph/Easy/Layout/Force.pm
+%%SITE_PERL%%/Graph/Easy/Layout/Grid.pm
+%%SITE_PERL%%/Graph/Easy/Layout/Path.pm
+%%SITE_PERL%%/Graph/Easy/Layout/Repair.pm
+%%SITE_PERL%%/Graph/Easy/Layout/Scout.pm
+%%SITE_PERL%%/Graph/Easy/Node.pm
+%%SITE_PERL%%/Graph/Easy/Node/Anon.pm
+%%SITE_PERL%%/Graph/Easy/Node/Cell.pm
+%%SITE_PERL%%/Graph/Easy/Node/Empty.pm
+%%SITE_PERL%%/Graph/Easy/Parser.pm
+%%SITE_PERL%%/Graph/Easy/Parser/Graphviz.pm
+%%SITE_PERL%%/Graph/Easy/Parser/VCG.pm
+@dirrmtry %%SITE_PERL%%/Graph/Easy/Parser
+@dirrmtry %%SITE_PERL%%/Graph/Easy/Node
+@dirrmtry %%SITE_PERL%%/Graph/Easy/Layout
+@dirrmtry %%SITE_PERL%%/Graph/Easy/Group
+@dirrmtry %%SITE_PERL%%/Graph/Easy/Edge
+@dirrmtry %%SITE_PERL%%/Graph/Easy
+@dirrmtry %%SITE_PERL%%/Graph
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Graph/Easy
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Graph
