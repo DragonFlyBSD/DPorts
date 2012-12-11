@@ -1,0 +1,23 @@
+# New ports collection makefile for:	jjclient
+# Date created:				07 June 2008
+# Whom:					Lucas Holt <luke@justjournal.com>
+#
+# $FreeBSD: ports/deskutils/jjclient/Makefile,v 1.5 2012/11/17 05:55:28 svnexp Exp $
+#
+
+PORTNAME=	jjclient
+PORTVERSION=	1.0.2
+PORTREVISION=	1
+CATEGORIES=	deskutils
+MASTER_SITES=	SF/justjournal/JustJournal%20UNIX%20Client/${PORTVERSION} \
+		http://www.justjournal.com/software/unix/
+
+
+MAINTAINER=	luke@justjournal.com
+COMMENT=	A command line client for posting JustJournal entries
+
+LIB_DEPENDS+=	xmlrpc.3:${PORTSDIR}/net/xmlrpc-c
+
+PLIST_FILES=	bin/jjclient
+
+.include <bsd.port.mk>
