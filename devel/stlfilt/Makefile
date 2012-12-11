@@ -1,0 +1,31 @@
+# Created by: ijliao
+# $FreeBSD: ports/devel/stlfilt/Makefile,v 1.13 2012/11/17 05:57:03 svnexp Exp $
+
+PORTNAME=	stlfilt
+PORTVERSION=	20080203
+CATEGORIES=	devel
+MASTER_SITES=	http://www.bdsoft.com/dist/
+DISTNAME=	g${PORTNAME}
+EXTRACT_SUFX=	.tar
+
+MAINTAINER=	eadler@FreeBSD.org
+COMMENT=	An STL Error Message Decryptor for C++
+
+EXTRACT_CMD=	${TAR}
+EXTRACT_BEFORE_ARGS=	-xf
+EXTRACT_AFTER_ARGS=	# empty
+USE_PERL5_RUN=	yes
+NO_BUILD=	yes
+NO_WRKSUBDIR=	yes
+
+PLIST_FILES=	bin/gSTLFilt.pl bin/gfilt
+
+post-patch:
+	@${REINPLACE_CMD} -e "s,[$$]HOME,${PREFIX}/bin," ${WRKSRC}/gfilt
+
+do-install:
+.for file in gSTLFilt.pl gfilt
+	@${INSTALL_SCRIPT} ${WRKSRC}/${file} ${PREFIX}/bin
+.endfor
+
+.include <bsd.port.mk>
