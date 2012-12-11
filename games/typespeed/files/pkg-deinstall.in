@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/games/typespeed/files/pkg-deinstall.in,v 1.3 2012/11/17 05:57:55 svnexp Exp $
+
+SCOREDIR="%%SCOREDIR%%"
+SCOREFILE="%%SCOREFILE%%"
+
+[ "$2" != "DEINSTALL" ] && exit 0
+
+file="${SCOREDIR}/${SCOREFILE}"
+cmp -s "$file" "$file.default" && rm -f "$file"
+rm -f "$file.default"
+
+rmdir "$SCOREDIR" > /dev/null 2>&1 || true

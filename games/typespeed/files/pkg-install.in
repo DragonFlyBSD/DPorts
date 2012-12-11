@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/games/typespeed/files/pkg-install.in,v 1.3 2012/11/17 05:57:55 svnexp Exp $
+
+SCOREDIR="%%SCOREDIR%%"
+SCOREFILE="%%SCOREFILE%%"
+WRKSRC="%%WRKSRC%%"
+
+[ "$2" != "POST-INSTALL" ] && exit 0
+
+if [ ! -d "${SCOREDIR}" ]; then
+	mkdir -p ${SCOREDIR}
+	chown root:games ${SCOREDIR}
+fi
+
+install -o root -g games -m 0464 ${WRKSRC}/src/${SCOREFILE} ${SCOREDIR}/${SCOREFILE}.default
+
+file="${SCOREDIR}/${SCOREFILE}"
+if [ -f "$file" ]; then
+	cmp -s "$file" "$file.default" && install -o root -g games -m 464 "$file.default" "$file"
+else
+	install -o root -g games -m 464 "$file.default" "$file"
+fi
+true
