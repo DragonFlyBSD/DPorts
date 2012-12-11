@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Color/Rgb/.packlist
+%%SITE_PERL%%/Color/Rgb.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Color/Rgb
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Color
+@dirrmtry %%SITE_PERL%%/Color
