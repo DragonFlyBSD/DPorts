@@ -1,0 +1,25 @@
+bin/mm-common-prepare
+share/aclocal/mm-common.m4
+share/aclocal/mm-dietlib.m4
+share/aclocal/mm-doc.m4
+share/aclocal/mm-module.m4
+share/aclocal/mm-pkg.m4
+share/aclocal/mm-warnings.m4
+share/doc/mm-common/README
+share/doc/mm-common/skeletonmm.tar.gz
+share/mm-common/build/compile-binding.am
+share/mm-common/build/dist-changelog.am
+share/mm-common/build/doc-reference.am
+share/mm-common/build/generate-binding.am
+share/mm-common/doctags/libstdc++.tag
+share/mm-common/doctool/doc-install.pl
+share/mm-common/doctool/doc-postprocess.pl
+share/mm-common/doctool/doxygen.css
+share/mm-common/doctool/tagfile-to-devhelp2.xsl
+libdata/pkgconfig/mm-common-libstdc++.pc
+@dirrm share/mm-common/doctool
+@dirrm share/mm-common/doctags
+@dirrm share/mm-common/build
+@dirrm share/mm-common
+@dirrm share/doc/mm-common
+@dirrmtry share/aclocal
