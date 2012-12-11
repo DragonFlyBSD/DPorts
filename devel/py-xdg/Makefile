@@ -1,0 +1,28 @@
+# New ports collection makefile for:	py-xdg
+# Date created:		2004-06-25
+# Whom:			michael johnson <ahze@ahze.net>
+#
+# $FreeBSD: ports/devel/py-xdg/Makefile,v 1.25 2012/11/17 05:56:52 svnexp Exp $
+#   $MCom: ports/devel/py-xdg/Makefile,v 1.4 2007/09/10 05:35:05 mezz Exp $
+#
+
+PORTNAME=	xdg
+PORTVERSION=	0.19
+CATEGORIES=	devel python
+MASTER_SITES=	http://people.freedesktop.org/~lanius/
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	py${PORTNAME}-${PORTVERSION}
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	A python library to access freedesktop.org standards
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=yes
+PYDISTUTILS_PKGNAME=	pyxdg
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|%%LOCALBASE%%|${LOCALBASE}|g' \
+			${WRKSRC}/xdg/BaseDirectory.py
+
+.include <bsd.port.mk>
