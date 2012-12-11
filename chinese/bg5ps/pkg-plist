@@ -1,0 +1,25 @@
+@comment $FreeBSD: ports/chinese/bg5ps/pkg-plist,v 1.5 2012/11/17 05:54:55 svnexp Exp $
+%%PORTDOCS%%%%DOCSDIR%%/COPYING.txt
+%%PORTDOCS%%%%DOCSDIR%%/bg5ps.sgml
+%%PORTDOCS%%%%DOCSDIR%%/bg5ps.txt
+%%PORTDOCS%%%%DOCSDIR%%/html/bg5ps-1.html
+%%PORTDOCS%%%%DOCSDIR%%/html/bg5ps-2.html
+%%PORTDOCS%%%%DOCSDIR%%/html/bg5ps-3.html
+%%PORTDOCS%%%%DOCSDIR%%/html/bg5ps-4.html
+%%PORTDOCS%%%%DOCSDIR%%/html/bg5ps-5.html
+%%PORTDOCS%%%%DOCSDIR%%/html/bg5ps-6.html
+%%PORTDOCS%%%%DOCSDIR%%/html/bg5ps-7.html
+%%PORTDOCS%%%%DOCSDIR%%/html/bg5ps.html
+%%PORTDOCS%%%%DOCSDIR%%/makeps
+%%PORTDOCS%%%%DOCSDIR%%/ttf2ps.doc
+%%EXAMPLESDIR%%/netscape.ps
+%%EXAMPLESDIR%%/test.big5
+%%EXAMPLESDIR%%/test.gb2312
+%%EXAMPLESDIR%%/test.sh
+bin/bg5ps
+bin/ttf2psm
+etc/bg5ps.conf.sample
+etc/gb2312-bg5ps.conf.sample
+@dirrm %%EXAMPLESDIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
