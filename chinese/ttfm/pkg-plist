@@ -1,0 +1,5 @@
+bin/ttfinfo
+bin/ttfm.sh
+%%DATADIR%%/gscjk.ttfm
+%%DATADIR%%/xttfm.ttfm
+@dirrm %%DATADIR%%
