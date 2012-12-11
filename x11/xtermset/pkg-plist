@@ -1,0 +1,3 @@
+bin/xtermset
+%%DATADIR%%/terms
+@dirrm %%DATADIR%%
