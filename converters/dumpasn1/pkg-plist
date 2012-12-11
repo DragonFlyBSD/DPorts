@@ -1,0 +1,3 @@
+bin/dumpasn1
+%%DATADIR%%/dumpasn1.cfg
+@dirrm %%DATADIR%%
