@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/XPath/.packlist
+%%SITE_PERL%%/Class/XPath.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/XPath
+@dirrmtry %%SITE_PERL%%/Class
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class
