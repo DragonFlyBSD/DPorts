@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie/Syslog/.packlist
+%%SITE_PERL%%/Tie/Syslog.pm
+@dirrmtry %%SITE_PERL%%/Tie
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie/Syslog
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie
