@@ -1,0 +1,29 @@
+# New ports collection makefile for:	osslsigncode
+# Date created:		9 November 2006
+# Whom:			snb@threerings.net
+#
+# $FreeBSD: ports/security/osslsigncode/Makefile,v 1.9 2012/11/17 06:01:10 svnexp Exp $
+#
+
+PORTNAME=	osslsigncode
+PORTVERSION=	1.3
+PORTREVISION=	2
+CATEGORIES=	security devel
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
+
+MAINTAINER=	snb@FreeBSD.org
+COMMENT=	OpenSSL-based signcode utility
+
+PLIST_FILES=	bin/osslsigncode
+
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_OPENSSL=	yes
+
+.if !defined(WITHOUT_CURL)
+LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+.endif
+
+.include <bsd.port.mk>
