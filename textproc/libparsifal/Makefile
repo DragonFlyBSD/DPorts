@@ -1,0 +1,35 @@
+# ex:ts=8
+# Ports collection makefile for:	libparsifal
+# Date created:			Jan 6, 2004
+# Whom:				ijliao
+#
+# $FreeBSD: ports/textproc/libparsifal/Makefile,v 1.25 2012/11/17 06:02:01 svnexp Exp $
+#
+
+PORTNAME=	libparsifal
+PORTVERSION=	1.1.0
+CATEGORIES=	textproc
+MASTER_SITES=	http://www.saunalahti.fi/~samiuus/toni/xmlproc/
+
+MAINTAINER=	yzlin@FreeBSD.org
+COMMENT=	Lightweight XML Parser
+
+USE_AUTOTOOLS=	libtool
+USE_ICONV=	yes
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+USE_LDCONFIG=	yes
+
+PLIST_SUB=	VERSION=${PORTVERSION}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-O3|${CFLAGS}|g' ${WRKSRC}/configure
+
+post-install:
+.ifndef(NOPORTDOCS)
+	@${ECHO_MSG} "===>   Installing documentation for ${PKGNAME}"
+	@(cd ${WRKSRC}/doc/ && ${COPYTREE_SHARE} . ${DOCSDIR})
+.endif
+
+.include <bsd.port.mk>
