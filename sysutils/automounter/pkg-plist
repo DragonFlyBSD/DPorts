@@ -1,0 +1,4 @@
+sbin/automounter
+etc/rc.d/automounter
+etc/automounter.conf.sample
+etc/devd/automounter.conf
