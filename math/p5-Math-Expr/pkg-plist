@@ -1,0 +1,16 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Math/Expr/.packlist
+%%SITE_PERL%%/Math/Expr.pm
+%%SITE_PERL%%/Math/Expr/FormulaDB.pm
+%%SITE_PERL%%/Math/Expr/MatchSet.pm
+%%SITE_PERL%%/Math/Expr/Node.pm
+%%SITE_PERL%%/Math/Expr/Num.pm
+%%SITE_PERL%%/Math/Expr/Opp.pm
+%%SITE_PERL%%/Math/Expr/OpperationDB.pm
+%%SITE_PERL%%/Math/Expr/Rule.pm
+%%SITE_PERL%%/Math/Expr/TypeDB.pm
+%%SITE_PERL%%/Math/Expr/Var.pm
+%%SITE_PERL%%/Math/Expr/VarSet.pm
+@dirrm %%SITE_PERL%%/Math/Expr
+@dirrm %%SITE_PERL%%/Math
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Math/Expr
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Math
