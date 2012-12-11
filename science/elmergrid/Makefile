@@ -1,0 +1,22 @@
+# New ports collection makefile for:	ElmerGrid
+# Date created:		5 Jan 2006
+# Whom:			Pedro Giffuni <giffunip@asme.org>
+#
+# $FreeBSD: ports/science/elmergrid/Makefile,v 1.19 2012/11/17 06:00:57 svnexp Exp $
+#
+
+PORTNAME=	elmergrid
+PORTVERSION=	5.4.0
+PORTREVISION=	2
+CATEGORIES=	science
+MASTER_SITES=	http://garr.dl.sourceforge.net/sourceforge/elmerfem/
+
+MAINTAINER=	sylvio@FreeBSD.org
+COMMENT=	A Mesh Manipulation Utility for use with the ELMER FEM package
+
+ALL_TARGET=
+GNU_CONFIGURE=	yes
+
+PLIST_FILES=	bin/ElmerGrid
+
+.include <bsd.port.mk>
