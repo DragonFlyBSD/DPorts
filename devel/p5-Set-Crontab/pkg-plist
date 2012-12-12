@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Set/Crontab.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Set/Crontab/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Set/Crontab
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Set
+@dirrmtry %%SITE_PERL%%/Set
