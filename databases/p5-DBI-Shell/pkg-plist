@@ -1,0 +1,16 @@
+bin/dbish
+%%SITE_PERL%%/DBI/Format.pm
+%%SITE_PERL%%/DBI/Shell/Completion.pm
+%%SITE_PERL%%/DBI/Shell/SQLMinus.pm
+%%SITE_PERL%%/DBI/Shell/Spool.pm
+%%SITE_PERL%%/DBI/Shell/Timing.pm
+%%SITE_PERL%%/DBI/Shell/FindSqlFile.pm
+%%SITE_PERL%%/DBI/Format/CSV.pm
+%%SITE_PERL%%/DBI/Format/SQLMinus.pm
+%%SITE_PERL%%/DBI/Shell.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/DBI/Shell/.packlist
+@dirrmtry %%SITE_PERL%%/DBI/Shell
+@dirrmtry %%SITE_PERL%%/DBI/Format
+@dirrmtry %%SITE_PERL%%/DBI
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/DBI/Shell
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/DBI
