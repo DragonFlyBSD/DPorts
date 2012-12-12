@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/textproc/saxon/files/saxon.sh.in,v 1.2 2012/11/17 06:02:20 svnexp Exp $
+
+SAXON_CLASSPATH=""
+for jarfile in %%SAXON_JARS%%
+do
+	SAXON_CLASSPATH="${SAXON_CLASSPATH}:${jarfile}"
+done
+
+JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -classpath "${SAXON_CLASSPATH}" com.icl.saxon.StyleSheet "$@"
