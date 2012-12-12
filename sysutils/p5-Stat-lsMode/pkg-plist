@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Stat/lsMode/.packlist
+%%SITE_PERL%%/Stat/lsMode.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Stat/lsMode
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Stat
+@dirrmtry %%SITE_PERL%%/Stat
