@@ -1,0 +1,10 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod/.packlist
+%%SITE_PERL%%/Pod/Man.pm
+%%SITE_PERL%%/Pod/ParseLink.pm
+%%SITE_PERL%%/Pod/Text.pm
+%%SITE_PERL%%/Pod/Text/Color.pm
+%%SITE_PERL%%/Pod/Text/Overstrike.pm
+%%SITE_PERL%%/Pod/Text/Termcap.pm
+@dirrmtry %%SITE_PERL%%/Pod/Text
+@dirrmtry %%SITE_PERL%%/Pod
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod
