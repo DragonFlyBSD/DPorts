@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/comms/esmska/files/esmska.in,v 1.2 2012/11/17 05:54:59 svnexp Exp $
+
+cd "%%DATADIR%%"
+JAVA_VERSION="%%JAVA_VERSION%%" exec "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/esmska.jar" "$@"
