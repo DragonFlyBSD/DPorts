@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Hook/LexWrap/.packlist
+%%SITE_PERL%%/Hook/LexWrap.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Hook/LexWrap
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Hook
+@dirrmtry %%SITE_PERL%%/Hook
