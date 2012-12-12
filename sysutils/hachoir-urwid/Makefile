@@ -1,0 +1,22 @@
+# New ports collection makefile for:	hachoir-urwid
+# Date created:		25 January 2007
+# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
+#
+# $FreeBSD: ports/sysutils/hachoir-urwid/Makefile,v 1.7 2012/11/17 06:01:34 svnexp Exp $
+#
+
+PORTNAME=	hachoir-urwid
+PORTVERSION=	1.1
+CATEGORIES=	sysutils python
+MASTER_SITES=	CHEESESHOP
+
+MAINTAINER=	lwhsu@FreeBSD.org
+COMMENT=	Binary file explorer
+
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/hachoir_parser/__init__.py:${PORTSDIR}/devel/hachoir-parser \
+		${PYTHON_SITELIBDIR}/urwid/__init__.py:${PORTSDIR}/devel/py-urwid
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=yes
+
+.include <bsd.port.mk>
