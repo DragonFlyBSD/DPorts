@@ -1,0 +1,33 @@
+# $FreeBSD: ports/x11-fonts/proggy_fonts-ttf/Makefile,v 1.4 2012/11/17 06:03:29 svnexp Exp $
+
+PORTNAME=	proggy_fonts-ttf
+PORTVERSION=	1.0
+CATEGORIES=	x11-fonts
+MASTER_SITES=	http://www.proggyfonts.com/download/
+DISTFILES=	ProggyClean.ttf.zip ProggySquare.ttf.zip \
+		ProggySmall.ttf.zip ProggyTiny.ttf.zip	\
+		ProggyCleanSZ.ttf.zip ProggySquareSZ.ttf.zip \
+		ProggyTinySZ.ttf.zip ProggyCleanSZBP.ttf.zip
+DIST_SUBDIR=	proggy_fonts-ttf
+
+MAINTAINER=	rakuco@FreeBSD.org
+COMMENT=	The perfect monospaced bitmap programming fonts, TTF version
+
+LICENSE=	MIT
+
+BUILD_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
+		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
+
+USE_ZIP=	yes
+NO_WRKSUBDIR=	yes
+INSTALLDIR=	${PREFIX}/lib/X11/fonts/${PORTNAME}
+
+do-build:
+	@cd ${WRKSRC} && ${LOCALBASE}/bin/mkfontscale
+	@cd ${WRKSRC} && ${LOCALBASE}/bin/mkfontdir
+
+do-install:
+	@${MKDIR} ${INSTALLDIR}
+	@cd ${WRKSRC} && ${INSTALL_DATA} fonts.dir fonts.scale *.ttf ${INSTALLDIR}
+
+.include <bsd.port.mk>
