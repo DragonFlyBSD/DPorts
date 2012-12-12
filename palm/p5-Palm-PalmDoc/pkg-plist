@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Palm/PalmDoc/.packlist
+%%SITE_PERL%%/Palm/PalmDoc.pm
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Palm/PalmDoc
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Palm
+@dirrmtry %%SITE_PERL%%/Palm
