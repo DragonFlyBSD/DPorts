@@ -1,0 +1,7 @@
+bin/compile_encoding
+bin/make_encmap
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Encoding/.packlist
+%%SITE_PERL%%/XML/Encoding.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Encoding
+@dirrmtry %%SITE_PERL%%/XML
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
