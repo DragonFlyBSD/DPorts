@@ -1,0 +1,33 @@
+# New ports collection makefile for:   altermime
+# Date created:        2005-01-25
+# Whom:                Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
+#
+# $FreeBSD: ports/mail/altermime/Makefile,v 1.10 2012/11/17 05:58:58 svnexp Exp $
+# $Tecnik: ports/mail/altermime/Makefile,v 1.4 2006/04/07 20:30:34 itetcu Exp $
+#
+
+PORTNAME=	altermime
+PORTVERSION=	0.3.11.a1
+CATEGORIES=	mail textproc
+#MASTER_SITES=	http://www.pldaniels.com/altermime/ \
+MASTER_SITES=	http://T32.tecnik93.com/FreeBSD/ports/altermime/sources/
+
+MAINTAINER=	itetcu@FreeBSD.org
+COMMENT=	Small C program which is used to alter your mime-encoded mailpacks
+
+PLIST_FILES=	bin/altermime
+PORTDOCS=	CHANGELOG LICENCE README
+
+post-patch:
+	@${REINPLACE_CMD} -e "s#CFLAGS=-Wall -g#CFLAGS=-Wall ${CFLAGS}#" ${WRKSRC}/Makefile
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+.ifndef(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for i in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>
