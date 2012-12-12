@@ -1,0 +1,19 @@
+@comment $FreeBSD: ports/net-mgmt/airport/pkg-plist,v 1.12 2012/11/17 06:00:30 svnexp Exp $
+bin/airport
+bin/airport2
+bin/hostmon
+bin/linkmon
+bin/airmodem
+%%DATADIR%%/Airport2BaseStationConfig.jar
+%%DATADIR%%/AirportBaseStationConfig.jar
+%%DATADIR%%/HostMonitor.jar
+%%DATADIR%%/LinkMonitor.jar
+%%DATADIR%%/AirportModemUtility.jar
+@dirrm %%DATADIR%%
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/helpdocs/ReadMe.txt
+%%PORTDOCS%%%%DOCSDIR%%/helpdocs/mainscreen.jpg
+%%PORTDOCS%%%%DOCSDIR%%/helpdocs/manual.html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/helpdocs
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
