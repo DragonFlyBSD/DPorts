@@ -1,0 +1,32 @@
+# New ports collection makefile for:    netrek
+# Date created:         15 Mar 1999
+# Whom:                 Donald Burr <dburr@FreeBSD.org>
+#
+# $FreeBSD: ports/games/netrek-BRMH-bin/Makefile,v 1.14 2012/11/17 05:57:46 svnexp Exp $
+#
+
+PORTNAME=	netrek-BRMH
+PORTVERSION=	2.2.2
+PORTREVISION=	2
+CATEGORIES=	games
+MASTER_SITES=	http://ftp.netrek.org/pub/netrek/mirrors/ftp.csua.berkeley.edu.old/netrek/ \
+
+DISTNAME=	BRMH-2.2p2.freebsd.bin
+EXTRACT_SUFX=	.gz
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A 16-player network space battle/conquest game with a Star Trek theme
+
+NO_BUILD=		YES
+NO_WRKSUBDIR=		YES
+PLIST_FILES=	bin/netrek
+
+do-extract:
+	${MKDIR} ${WRKDIR}
+	${GUNZIP_CMD} < ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} > ${WRKDIR}/netrek
+
+do-install:
+	${INSTALL} -c -o root -g wheel -m 555 ${WRKDIR}/netrek ${PREFIX}/bin
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>
