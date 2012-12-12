@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/BBS/UserInfo/.packlist
+%%SITE_PERL%%/BBS/UserInfo.pm
+@dirrmtry %%SITE_PERL%%/BBS
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/BBS/UserInfo
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/BBS
