@@ -1,0 +1,7 @@
+bin/console
+%%EXAMPLESDIR%%/conserver.cf
+%%EXAMPLESDIR%%/conserver.passwd
+%%EXAMPLESDIR%%/conserver.rc
+sbin/conserver
+sbin/conserver-convert
+@dirrm %%EXAMPLESDIR%%
