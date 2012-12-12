@@ -1,0 +1,45 @@
+# New ports collection makefile for:    portdowngrade
+# Date created:                         2003/02/13
+# Whom:                                 Heiner <h.eichmann@gmx.de>
+#
+# $FreeBSD: ports/ports-mgmt/portdowngrade/Makefile,v 1.20 2012/11/17 06:00:46 svnexp Exp $
+#
+
+PORTNAME=	portdowngrade
+PORTVERSION=	0.6
+PORTREVISION=	4
+CATEGORIES=	ports-mgmt
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Sets a port back to a previous version
+
+LIB_DEPENDS=    popt.0:${PORTSDIR}/devel/popt
+
+CONFIGURE_ENV=	LIBS="-lpopt -L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+.if defined(DEFAULT_CVS_SERVER)
+CONFIGURE_ARGS+=	--enable-default-server=${DEFAULT_CVS_SERVER}
+.endif
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+
+USE_BZIP2=	yes
+
+MAN1=		portdowngrade.1
+PLIST_FILES=	sbin/portdowngrade
+
+pre-everything::
+.if !defined(DEFAULT_CVS_SERVER)
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "Press CTRL-C and define DEFAULT_CVS_SERVER"
+	@${ECHO_MSG} "(e.g. make DEFAULT_CVS_SERVER=\":pserver:anoncvs@anoncvs. ... .FreeBSD.org:/home/ncvs\" install)"
+	@${ECHO_MSG} "if you want to use a special CVS server as default. See"
+	@${ECHO_MSG} "http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/anoncvs.html"
+	@${ECHO_MSG} "for a list of possible cvs server"
+	@${ECHO_MSG} ""
+	@sleep 3
+.endif
+
+.include <bsd.port.mk>
