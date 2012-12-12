@@ -1,0 +1,23 @@
+# New ports collection makefile for:	Tree:Nary
+# Date created:				18 May 2001
+# Whom:					Seamus Venasse <svenasse@polaris.ca>
+#
+# $FreeBSD: ports/textproc/p5-Tree-Nary/Makefile,v 1.10 2012/11/17 06:02:11 svnexp Exp $
+#
+
+PORTNAME=		Tree-Nary
+PORTVERSION=		1.30
+PORTEPOCH=		1
+CATEGORIES=		textproc perl5
+MASTER_SITES=		CPAN
+PKGNAMEPREFIX=		p5-
+DISTNAME=		${PORTNAME}-1.3
+
+MAINTAINER=		perl@FreeBSD.org
+COMMENT=		Perl implementation of N-ary search trees
+
+PERL_CONFIGURE=		yes
+
+MAN3=			Tree::Nary.3
+
+.include <bsd.port.mk>
