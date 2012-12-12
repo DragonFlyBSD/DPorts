@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/ftp/dmachine/files/dmachine.sh.in,v 1.3 2012/11/17 05:57:29 svnexp Exp $
+
+"%%LOCALBASE%%/bin/java" -jar "%%PREFIX%%/share/java/classes/dmachine.jar" $*
