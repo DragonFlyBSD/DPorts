@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/devel/py-json-py/pkg-plist,v 1.2 2012/11/17 05:56:48 svnexp Exp $
+%%PYTHON_SITELIBDIR%%/json.py
+%%PYTHON_SITELIBDIR%%/json.pyc
+%%PYTHON_SITELIBDIR%%/jsontest.py
+%%PYTHON_SITELIBDIR%%/jsontest.pyc
+%%PYTHON_SITELIBDIR%%/minjson.py
+%%PYTHON_SITELIBDIR%%/minjson.pyc
