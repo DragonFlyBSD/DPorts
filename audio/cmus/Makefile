@@ -1,0 +1,200 @@
+# Created by: Adam Weinberger
+# $FreeBSD: ports/audio/cmus/Makefile,v 1.47 2012/12/02 21:10:27 svnexp Exp $
+
+PORTNAME=	cmus
+PORTVERSION=	2.5.0
+CATEGORIES=	audio
+MASTER_SITES=	SF/${PORTNAME}
+DISTNAME=	${PORTNAME}-v${PORTVERSION}
+
+MAINTAINER=	h.skuhra@gmail.com
+COMMENT=	Console-based music player with really cool features
+
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_ICONV=	yes
+USE_NCURSES=	yes
+USE_PKGCONFIG=	build
+HAS_CONFIGURE=	yes
+CONFIGURE_ARGS+=prefix=${PREFIX} mandir=${MANPREFIX}/man \
+		exampledir=${EXAMPLESDIR} \
+		CONFIG_ALSA=n CONFIG_ROAR=n
+
+OPTIONS_DEFINE=	AAC AO ARTS CDDB CDIO CUE DISCID FFMPEG FLAC MAD MIKMOD \
+		MODPLUG MP4 MUSEPACK PULSEAUDIO TREMOR VORBIS WAVPACK
+OPTIONS_DEFAULT=FLAC MAD VORBIS
+DISCID_DESC=	DISCID support
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MFLAC}
+LIB_DEPENDS+=	FLAC:${PORTSDIR}/audio/flac
+CONFIGURE_ARGS+=CONFIG_FLAC=y
+PLIST_SUB+=	FLAC=""
+.else
+CONFIGURE_ARGS+=CONFIG_FLAC=n
+PLIST_SUB+=	FLAC="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MMAD}
+LIB_DEPENDS+=	mad:${PORTSDIR}/audio/libmad
+CONFIGURE_ARGS+=CONFIG_MAD=y
+PLIST_SUB+=	MAD=""
+.else
+CONFIGURE_ARGS+=CONFIG_MAD=n
+PLIST_SUB+=	MAD="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MMODPLUG}
+LIB_DEPENDS+=	modplug:${PORTSDIR}/audio/libmodplug
+CONFIGURE_ARGS+=CONFIG_MODPLUG=y
+PLIST_SUB+=	MODPLUG=""
+.else
+CONFIGURE_ARGS+=CONFIG_MODPLUG=n
+PLIST_SUB+=	MODPLUG="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MMIKMOD}
+LIB_DEPENDS+=	mikmod:${PORTSDIR}/audio/libmikmod
+CONFIGURE_ARGS+=CONFIG_MIKMOD=y
+PLIST_SUB+=	MIKMOD=""
+.else
+PLIST_SUB+=	MIKMOD="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MMUSEPACK}
+LIB_DEPENDS+=	mpcdec:${PORTSDIR}/audio/musepack
+CONFIGURE_ARGS+=CONFIG_MPC=y
+PLIST_SUB+=	MPC=""
+.else
+CONFIGURE_ARGS+=CONFIG_MPC=n
+PLIST_SUB+=	MPC="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MVORBIS} || ${PORT_OPTIONS:MTREMOR}
+LIB_DEPENDS+=	vorbisfile:${PORTSDIR}/audio/libvorbis
+CONFIGURE_ARGS+=CONFIG_VORBIS=y
+PLIST_SUB+=	VORBIS=""
+.else
+CONFIGURE_ARGS+=CONFIG_VORBIS=n
+PLIST_SUB+=	VORBIS="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MTREMOR}
+LIB_DEPENDS+=	vorbisidec:${PORTSDIR}/audio/libtremor
+CONFIGURE_ARGS+=CONFIG_TREMOR=y
+.endif
+
+.if ${PORT_OPTIONS:MMP4}
+LIB_DEPENDS+=	faad:${PORTSDIR}/audio/faad
+LIB_DEPENDS+=	mp4v2:${PORTSDIR}/multimedia/mp4v2
+CONFIGURE_ARGS+=CONFIG_MP4=y
+PLIST_SUB+=	MP4=""
+.else
+CONFIGURE_ARGS+=CONFIG_MP4=n
+PLIST_SUB+=	MP4="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MAAC}
+LIB_DEPENDS+=	faad:${PORTSDIR}/audio/faad
+CONFIGURE_ARGS+=CONFIG_AAC=y
+PLIST_SUB+=	AAC=""
+.else
+CONFIGURE_ARGS+=CONFIG_AAC=n
+PLIST_SUB+=	AAC="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MWAVPACK}
+LIB_DEPENDS+=	wavpack:${PORTSDIR}/audio/wavpack
+CONFIGURE_ARGS+=CONFIG_WAVPACK=y
+PLIST_SUB+=	WAVPACK=""
+.else
+CONFIGURE_ARGS+=CONFIG_WAVPACK=n
+PLIST_SUB+=	WAVPACK="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MFFMPEG}
+FFMPEG_SUFFIX=	-011
+BUILD_DEPENDS+=	ffmpeg${FFMPEG_SUFFIX}>0.11:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFIX}
+RUN_DEPENDS+=	ffmpeg${FFMPEG_SUFFIX}>0.11:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFIX}
+CONFIGURE_ARGS+=CONFIG_FFMPEG=y
+PLIST_SUB+=	FFMPEG=""
+.else
+CONFIGURE_ARGS+=CONFIG_FFMPEG=n
+PLIST_SUB+=	FFMPEG="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MAO}
+LIB_DEPENDS+=	ao:${PORTSDIR}/audio/libao
+CONFIGURE_ARGS+=CONFIG_AO=y
+PLIST_SUB+=	AO=""
+.else
+CONFIGURE_ARGS+=CONFIG_AO=n
+PLIST_SUB+=	AO="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MPULSEAUDIO}
+LIB_DEPENDS+=	pulse:${PORTSDIR}/audio/pulseaudio
+CONFIGURE_ARGS+=CONFIG_PULSE=y
+PLIST_SUB+=	PULSEAUDIO=""
+.else
+CONFIGURE_ARGS+=CONFIG_PULSE=n
+PLIST_SUB+=	PULSEAUDIO="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MARTS}
+LIB_DEPENDS+=	artsc:${PORTSDIR}/audio/arts
+CONFIGURE_ARGS+=CONFIG_ARTS=y
+PLIST_SUB+=	ARTS=""
+.else
+CONFIGURE_ARGS+=CONFIG_ARTS=n
+PLIST_SUB+=	ARTS="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MCDDB} && ${PORT_OPTIONS:MCDIO}
+LIB_DEPENDS+=	cddb:${PORTSDIR}/audio/libcddb
+CONFIGURE_ARGS+=CONFIG_CDDB=y
+PLIST_SUB+=	CDDB=""
+.else
+CONFIGURE_ARGS+=CONFIG_CDDB=n
+PLIST_SUB+=	CDDB="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MCDIO}
+LIB_DEPENDS+=	cdio:${PORTSDIR}/sysutils/libcdio
+CONFIGURE_ARGS+=CONFIG_CDIO=y
+PLIST_SUB+=	CDIO=""
+.else
+CONFIGURE_ARGS+=CONFIG_CDIO=n
+PLIST_SUB+=	CDIO="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MCUE}
+LIB_DEPENDS+=	cue:${PORTSDIR}/textproc/libcue
+CONFIGURE_ARGS+=CONFIG_CUE=y
+PLIST_SUB+=	CUE=""
+.else
+CONFIGURE_ARGS+=CONFIG_CUE=n
+PLIST_SUB+=	CUE="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MDISCID}
+LIB_DEPENDS+=	discid:${PORTSDIR}/audio/libdiscid
+CONFIGURE_ARGS+=CONFIG_DISCID=y
+.else
+CONFIGURE_ARGS+=CONFIG_DISCID=n
+.endif
+
+MAN1=	cmus.1 cmus-remote.1
+MAN7=	cmus-tutorial.7
+
+post-patch:
+	@${REINPLACE_CMD} -e 's,doc/cmus/examples,examples/cmus,g' \
+		${WRKSRC}/Doc/cmus.txt
+	@${REINPLACE_CMD} -e 's,/usr,${PREFIX},g' ${WRKSRC}/Doc/cmus.txt
+.if ${PORT_OPTIONS:MFFMPEG}
+	@${REINPLACE_CMD} -e 's,libavformat,libavformat${FFMPEG_SUFFIX},g' \
+		${WRKSRC}/configure
+.endif
+
+.include <bsd.port.mk>
