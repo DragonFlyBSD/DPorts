@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/java/proguard/files/proguard.sh.in,v 1.5 2012/11/17 05:58:46 svnexp Exp $
+
+exec "%%LOCALBASE%%/bin/java" -Xmx256m -jar "%%DATADIR%%/proguard.jar" "$@"
