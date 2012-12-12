@@ -1,0 +1,36 @@
+# New ports collection makefile for:	X11-Protocol
+# Date created:				Mon Jan  1 21:49:44 2001
+# Whom:					will
+#
+# $FreeBSD: ports/x11/p5-X11-Protocol/Makefile,v 1.12 2012/11/17 06:03:18 svnexp Exp $
+#
+
+PORTNAME=	X11-Protocol
+PORTVERSION=	0.56
+CATEGORIES=	x11 perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Perl module that provides an interface roughly equivalent to Xlib
+
+PERL_CONFIGURE=	yes
+
+MAN3=		X11::Auth.3 \
+		X11::Keysyms.3 \
+		X11::Protocol.3 \
+		X11::Protocol::Connection.3 \
+		X11::Protocol::Connection::Socket.3 \
+		X11::Protocol::Connection::FileHandle.3 \
+		X11::Protocol::Connection::INETFH.3 \
+		X11::Protocol::Connection::INETSocket.3 \
+		X11::Protocol::Connection::UNIXFH.3 \
+		X11::Protocol::Connection::UNIXSocket.3 \
+		X11::Protocol::Ext::BIG_REQUESTS.3 \
+		X11::Protocol::Ext::DPMS.3 \
+		X11::Protocol::Ext::RENDER.3 \
+		X11::Protocol::Ext::SHAPE.3 \
+		X11::Protocol::Ext::XC_MISC.3 \
+		X11::Protocol::Ext::XFree86_Misc.3
+
+.include <bsd.port.mk>
