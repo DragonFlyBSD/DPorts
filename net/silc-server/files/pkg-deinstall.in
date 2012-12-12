@@ -1,0 +1,20 @@
+#!/bin/sh
+# $FreeBSD: ports/net/silc-server/files/pkg-deinstall.in,v 1.2 2012/11/17 06:00:20 svnexp Exp $
+
+KEY_FILES="silcd.prv silcd.pub"
+
+case "$2" in
+POST-DEINSTALL)
+	if [ -f %%PREFIX%%/etc/silc/silcd.prv -o -f %%PREFIX%%/etc/silc/silcd.pub ]; then
+		echo "$1: The following files were left behind:"
+		for key_file in ${KEY_FILES}
+		do
+			[ -f %%PREFIX%%/etc/silc/${key_file} ] && echo "%%PREFIX%%/etc/silc/${key_file}"
+		done
+		echo "$1: If this port is not used anymore please remove them."
+	fi
+	;;
+*)
+	;;
+esac
+exit
