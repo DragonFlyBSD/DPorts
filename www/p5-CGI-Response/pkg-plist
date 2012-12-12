@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/Response/.packlist
+%%SITE_PERL%%/CGI/Response.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/Response
+@dirrmtry %%SITE_PERL%%/CGI
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI
