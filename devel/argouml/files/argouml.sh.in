@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/devel/argouml/files/argouml.sh.in,v 1.6 2012/11/17 05:55:33 svnexp Exp $
+
+JAVA_VERSION="%%JAVA_VERSION%%"  "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/argouml.jar" "$@"
