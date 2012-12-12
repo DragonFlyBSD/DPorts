@@ -1,0 +1,28 @@
+bin/xpath
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/XPath/.packlist
+%%SITE_PERL%%/XML/XPath/Node/Namespace.pm
+%%SITE_PERL%%/XML/XPath/Node/Comment.pm
+%%SITE_PERL%%/XML/XPath/Node/Attribute.pm
+%%SITE_PERL%%/XML/XPath/Node/PI.pm
+%%SITE_PERL%%/XML/XPath/Node/Text.pm
+%%SITE_PERL%%/XML/XPath/Node/Element.pm
+%%SITE_PERL%%/XML/XPath/Root.pm
+%%SITE_PERL%%/XML/XPath/Variable.pm
+%%SITE_PERL%%/XML/XPath/Node.pm
+%%SITE_PERL%%/XML/XPath/LocationPath.pm
+%%SITE_PERL%%/XML/XPath/Function.pm
+%%SITE_PERL%%/XML/XPath/Builder.pm
+%%SITE_PERL%%/XML/XPath/Number.pm
+%%SITE_PERL%%/XML/XPath/Literal.pm
+%%SITE_PERL%%/XML/XPath/Parser.pm
+%%SITE_PERL%%/XML/XPath/NodeSet.pm
+%%SITE_PERL%%/XML/XPath/Step.pm
+%%SITE_PERL%%/XML/XPath/XMLParser.pm
+%%SITE_PERL%%/XML/XPath/Expr.pm
+%%SITE_PERL%%/XML/XPath/PerlSAX.pm
+%%SITE_PERL%%/XML/XPath/Boolean.pm
+%%SITE_PERL%%/XML/XPath.pm
+@dirrm %%SITE_PERL%%/XML/XPath/Node
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/XPath
+@dirrmtry %%SITE_PERL%%/XML/XPath
+@dirrmtry %%SITE_PERL%%/XML
