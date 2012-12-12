@@ -1,0 +1,32 @@
+# New ports collection makefile for:	gutenfetch
+# Date created:		22-Aug-2001
+# Whom:			Russell Francis
+#
+# $FreeBSD: ports/net/gutenfetch/Makefile,v 1.15 2012/11/17 06:00:01 svnexp Exp $
+#
+
+PORTNAME=	gutenfetch
+PORTVERSION=	1.5
+CATEGORIES=	net
+MASTER_SITES=	SF
+
+MAINTAINER=	johntabularasa@users.sf.net
+COMMENT=	Fetch listings and books from Project Gutenberg
+
+LIB_DEPENDS=	gutenfetch:${PORTSDIR}/devel/libgutenfetch
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
+CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+USE_GMAKE=	yes
+USE_BZIP2=	yes
+
+MAN1=		gutenfetch.1
+PLIST_FILES=	bin/gutenfetch
+SUB_FILES=	pkg-message
+
+post-install:
+	${STRIP_CMD} ${PREFIX}/bin/gutenfetch
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>
