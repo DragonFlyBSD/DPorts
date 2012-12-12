@@ -1,0 +1,5 @@
+%%PYTHON_SITELIBDIR%%/spark.py
+%%PORTDOCS%%%%DOCSDIR%%/doc.html
+%%PORTDOCS%%%%DOCSDIR%%/doc.tex
+%%PORTDOCS%%%%DOCSDIR%%/paper.ps.gz
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
