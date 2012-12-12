@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/UUID/Tiny/.packlist
+%%SITE_PERL%%/UUID/Tiny.pm
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/UUID/Tiny
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/UUID
+@dirrmtry %%SITE_PERL%%/UUID
