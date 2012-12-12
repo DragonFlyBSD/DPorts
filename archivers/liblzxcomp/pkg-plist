@@ -1,0 +1,6 @@
+include/lzx_compress.h
+include/lzx_constants.h
+lib/liblzxcomp.a
+lib/liblzxcomp.so
+lib/liblzxcomp.so.%%SHLIB_MAJOR%%
+%%PROFILE%%lib/liblzxcomp_p.a
