@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Carp/Assert/.packlist
+%%SITE_PERL%%/Carp/Assert.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Carp/Assert
+@dirrmtry %%SITE_PERL%%/Carp
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Carp
