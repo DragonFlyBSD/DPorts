@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Devel/DProfPP/.packlist
+%%SITE_PERL%%/Devel/DProfPP.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Devel/DProfPP
+@dirrmtry %%SITE_PERL%%/Devel
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Devel
