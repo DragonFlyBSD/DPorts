@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Digest/Crc32.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Digest/Crc32/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Digest/Crc32/
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Digest/
+@dirrmtry %%SITE_PERL%%/Digest/
