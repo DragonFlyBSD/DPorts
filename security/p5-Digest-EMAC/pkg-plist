@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Digest/EMAC.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Digest/EMAC/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Digest/EMAC/
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Digest/
+@dirrmtry %%SITE_PERL%%/Digest/
