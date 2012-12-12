@@ -1,0 +1,9 @@
+@comment $FreeBSD: ports/net/sprinkle/pkg-plist,v 1.2 2012/11/17 06:00:21 svnexp Exp $
+%%PORTDOCS%%%%DOCSDIR%%/README.html
+%%PORTDOCS%%%%DOCSDIR%%/README.txt
+%%PORTDOCS%%%%DOCSDIR%%/hackers.html
+%%PORTDOCS%%%%DOCSDIR%%/hackers.txt
+%%PORTDOCS%%%%DOCSDIR%%/users.html
+%%PORTDOCS%%%%DOCSDIR%%/users.txt
+sbin/sprinkle.py
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
