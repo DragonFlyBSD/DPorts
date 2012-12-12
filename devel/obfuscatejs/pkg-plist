@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/devel/obfuscatejs/pkg-plist,v 1.2 2012/11/17 05:56:02 svnexp Exp $
+bin/obfuscatejs
+%%DATADIR%%/consyntools.jar
+@dirrm %%DATADIR%%
