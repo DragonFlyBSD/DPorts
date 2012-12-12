@@ -1,0 +1,3 @@
+@comment $FreeBSD: ports/textproc/jdictionary/pkg-plist.plugin,v 1.3 2012/11/17 06:02:00 svnexp Exp $
+%%DATADIR%%/%%DISTNAME%%
+@dirrmtry %%DATADIR%%
