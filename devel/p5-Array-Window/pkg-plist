@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Array/Window/.packlist
+%%SITE_PERL%%/Array/Window.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Array/Window
+@dirrmtry %%SITE_PERL%%/Array
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Array
