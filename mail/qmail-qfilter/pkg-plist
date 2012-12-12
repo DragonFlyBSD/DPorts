@@ -1,0 +1,11 @@
+@comment $FreeBSD: ports/mail/qmail-qfilter/pkg-plist,v 1.2 2012/11/17 05:59:12 svnexp Exp $
+bin/qmail-qfilter
+%%EXAMPLESDIR%%/README
+%%EXAMPLESDIR%%/block-long-dates
+%%EXAMPLESDIR%%/deny-filetypes
+%%EXAMPLESDIR%%/rename-filetypes
+@dirrm %%EXAMPLESDIR%%
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
