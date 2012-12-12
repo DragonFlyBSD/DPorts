@@ -1,0 +1,5 @@
+%%SITE_PERL%%/File/Binary.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/File/Binary/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/File/Binary
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/File
+@dirrmtry %%SITE_PERL%%/File
