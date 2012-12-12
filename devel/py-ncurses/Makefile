@@ -1,0 +1,33 @@
+# New ports collection makefile for:	pyncurses
+# Date created:				Tue May 16 22:15:11 PDT 2000
+# Whom:					adsharma@sharams.dhs.org
+#
+# $FreeBSD: ports/devel/py-ncurses/Makefile,v 1.16 2012/11/17 05:56:48 svnexp Exp $
+#
+
+PORTNAME=	ncurses
+PORTVERSION=	0.3
+PORTREVISION=	1
+CATEGORIES=	devel python
+MASTER_SITES=	SF/py${PORTNAME}/py${PORTNAME}/${PORTVERSION}
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	pyncurses-${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A ncurses binding for Python
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_PKGNAME=	pyncurses
+
+.include <bsd.port.pre.mk>
+
+post-patch:
+.for f in _curses_wrap.c _panel_wrap.c _menu_wrap.c _form_wrap.c
+	@${REINPLACE_CMD} -e '45s,^.*$$,#include "py_curses.h",' \
+		${WRKSRC}/ncurses/${f}
+.endfor
+	@${REINPLACE_CMD} -e '/^extern int define_key(/d' \
+		${WRKSRC}/ncurses/_curses_wrap.c
+
+.include <bsd.port.post.mk>
