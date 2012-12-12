@@ -1,0 +1,7 @@
+%%SITE_PERL%%/XML/Node.pm
+%%SITE_PERL%%/XML/parse-foo.pl
+%%SITE_PERL%%/XML/parse-orders.pl
+%%SITE_PERL%%/XML/parse-testsuite.pl
+%%SITE_PERL%%/%%PERL_ARCH%%//auto/XML/Node/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Node
+@dirrmtry %%SITE_PERL%%/XML
