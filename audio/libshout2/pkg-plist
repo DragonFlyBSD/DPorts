@@ -1,0 +1,14 @@
+include/shout/shout.h
+lib/libshout.a
+lib/libshout.la
+lib/libshout.so
+lib/libshout.so.5
+libdata/pkgconfig/shout.pc
+share/aclocal/shout.m4
+%%DOCSDIR%%/COPYING
+%%DOCSDIR%%/NEWS
+%%DOCSDIR%%/README
+%%DOCSDIR%%/example.c
+%%DOCSDIR%%/nonblocking.c
+@dirrm %%DOCSDIR%%
+@dirrm include/shout
