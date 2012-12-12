@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/devel/cl-infix/files/patch-infix.system,v 1.2 2012/11/17 05:55:37 svnexp Exp $
+
+--- infix.system.orig
++++ infix.system
+@@ -2,7 +2,7 @@
+ 
+ (mk:defsystem infix
+   :source-pathname "cl-library:infix;"
+-  :source-extension "cl"
++  :source-extension "lisp"
+   :binary-pathname nil
+   :binary-extension nil
+   :components ((:file "infix")))

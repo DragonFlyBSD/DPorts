@@ -1,0 +1,44 @@
+# New ports collection makefile for:	infix
+# Date created:				19 August 2006
+# Whom:					Pedro F. Giffuni
+#
+# $FreeBSD: ports/devel/cl-infix/Makefile,v 1.9 2012/11/17 05:55:37 svnexp Exp $
+
+PORTNAME=	infix
+PORTVERSION=	19960628
+PORTREVISION=	3
+CATEGORIES=	devel lisp
+MASTER_SITES=	http://ftp.linux.org.uk/pub/lisp/cclan/ \
+		ftp://ftp.ntnu.no/pub/lisp/cclan/ \
+		http://thingamy.com/cclan/ \
+		http://www-jcsu.jesus.cam.ac.uk/ftp/pub/cclan/
+PKGNAMEPREFIX=	cl-
+DISTNAME=	${PORTNAME}
+
+MAINTAINER=	olgeni@FreeBSD.org
+COMMENT=	A lisp macro for reading math expressions in infix form
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
+NO_BUILD=	yes
+NO_CDROM=	No fees or compensation can be charged
+
+USE_ASDF=	yes
+
+post-extract:
+	@${MV} ${WRKSRC}/infix.cl ${WRKSRC}/infix.lisp
+
+do-install:
+	@${MKDIR} ${ASDF_PATHNAME}
+	@${INSTALL_DATA} ${WRKSRC}/*.lisp ${ASDF_PATHNAME}
+	@${INSTALL_DATA} ${WRKSRC}/infix.asd ${ASDF_PATHNAME}
+	@${INSTALL_DATA} ${WRKSRC}/infix.system ${ASDF_PATHNAME}
+	@${LN} -sf ${ASDF_PATHNAME}/*.asd ${ASDF_REGISTRY}
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for FILE in COPYING infix.3lisp
+	@${INSTALL_DATA} ${WRKSRC}/${FILE} ${DOCSDIR}
+.endfor
+.endif
+
+.include "${.CURDIR}/../../devel/cl-asdf/bsd.cl-asdf.mk"
+.include <bsd.port.mk>
