@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# $FreeBSD: ports/net/wired-tracker/files/trackerd.in,v 1.2 2012/11/17 06:00:24 svnexp Exp $
+#
+# PROVIDE: trackerd
+# REQUIRE: 
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# trackerd_enable (bool):   Set to NO by default.
+#               Set it to YES to enable trackerd.
+#
+
+. /etc/rc.subr
+
+name="trackerd"
+rcvar=trackerd_enable
+
+pidfile=%%PREFIX%%/wired/trackerd.pid
+command=%%PREFIX%%/sbin/${name}
+
+load_rc_config $name
+
+: ${trackerd_enable="NO"}
+
+run_rc_command "$1"
