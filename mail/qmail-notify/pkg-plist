@@ -1,0 +1,9 @@
+@comment $FreeBSD: ports/mail/qmail-notify/pkg-plist,v 1.4 2012/11/17 05:59:12 svnexp Exp $
+bin/qmail-notify
+%%EXAMPLESDIR%%/cron.hourly
+%%EXAMPLESDIR%%/message.txt
+@dirrm %%EXAMPLESDIR%%
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
