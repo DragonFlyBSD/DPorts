@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net/micro_proxy/pkg-deinstall,v 1.2 2012/11/17 06:00:05 svnexp Exp $
+#
+
+case $2 in
+POST-DEINSTALL)
+cat << "EOF"
+===============================================================================
+Micro_proxy has been successfully deinstalled. If you ran it with inetd(8) make
+sure you remove all the manual configuration.
+===============================================================================
+EOF
+;;
+esac
