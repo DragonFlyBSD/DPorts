@@ -1,0 +1,32 @@
+# New ports collection makefile for: py-shout
+# Date created:		2009-08-07
+# Whom:				Olivier Duchateau <duchateau.olivier@gmail.com>
+#
+# $FreeBSD: ports/audio/py-shout/Makefile,v 1.4 2012/11/17 05:54:42 svnexp Exp $
+#
+
+PORTNAME=	shout
+PORTVERSION=	0.2.1
+CATEGORIES=	audio python
+MASTER_SITES=	http://downloads.us.xiph.org/releases/libshout/
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	${PORTNAME}-python-${PORTVERSION}
+
+MAINTAINER=	python@FreeBSD.org
+COMMENT=	Python bindings for libshout2
+
+LIB_DEPENDS=	shout.5:${PORTSDIR}/audio/libshout2
+
+EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
+
+USE_PYTHON=		2.5+
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_PKGNAME=	${PORTNAME}-python
+
+.if !defined(NOPORTEXAMPLES)
+post-install:
+	@${MKDIR} ${EXAMPLESDIR}
+	${CP} ${WRKSRC}/example.py ${EXAMPLESDIR}
+.endif
+
+.include <bsd.port.mk>
