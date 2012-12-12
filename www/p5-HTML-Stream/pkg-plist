@@ -1,0 +1,5 @@
+%%SITE_PERL%%/HTML/Stream.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Stream/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Stream
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML
+@dirrmtry %%SITE_PERL%%/HTML
