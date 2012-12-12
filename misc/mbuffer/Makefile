@@ -1,0 +1,48 @@
+# New ports collection makefile for:	mbuffer
+# Date created:				Dec 14 2006
+# Whom:					Rong-En Fan <rafan@FreeBSD.org>
+#
+# $FreeBSD: ports/misc/mbuffer/Makefile,v 1.13 2012/11/17 05:59:41 svnexp Exp $
+#
+
+PORTNAME=	mbuffer
+PORTVERSION=	2011.07.24
+PORTREVISION=	1
+CATEGORIES=	misc
+MASTER_SITES=	http://www.maier-komor.de/software/mbuffer/
+DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//g}
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	rafan@FreeBSD.org
+COMMENT=	A tool for buffering data streams
+
+LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+MAKE_ARGS=	SHELL=${SH}
+
+PLIST_FILES=	bin/mbuffer
+
+MAN1=		${PORTNAME}.1
+
+OPTIONS=	MHASH	"Use mhash for hash generation"	on
+
+.include <bsd.port.options.mk>
+
+.if !defined(WITHOUT_MHASH)
+LIB_DEPENDS+=	mhash.2:${PORTSDIR}/security/mhash
+CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+.else
+CONFIGURE_ARGS+=ac_cv_search_mhash_init=no
+USE_OPENSSL=	yes
+.endif
+
+.include <bsd.port.pre.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e 's,-lpthread,${PTHREAD_LIBS},' ${WRKSRC}/configure
+
+.include <bsd.port.post.mk>
