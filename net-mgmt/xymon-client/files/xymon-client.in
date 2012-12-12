@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net-mgmt/xymon-client/files/xymon-client.in,v 1.2 2012/11/17 06:00:38 svnexp Exp $
+#
+
+# PROVIDE: xymon_client
+# REQUIRE: DAEMON
+
+. /etc/rc.subr
+
+name="xymon_client"
+rcvar="xymon_client_enable"
+
+load_rc_config "$name"
+: ${xymon_client_enable:="NO"}
+
+command="%%PREFIX%%/www/xymon/client/runclient.sh"
+start_cmd="%%PREFIX%%/www/xymon/client/runclient.sh ${xymon_client_flags} start"
+stop_cmd="%%PREFIX%%/www/xymon/client/runclient.sh ${xymon_client_flags} stop"
+status_cmd="%%PREFIX%%/www/xymon/client/runclient.sh ${xymon_client_flags} status"
+reload_cmd="%%PREFIX%%/www/xymon/client/runclient.sh ${xymon_client_flags} restart"
+pidfile="%%PREFIX%%/www/xymon/client/logs/clientlaunch.`hostname`.pid"
+
+run_rc_command "$1"
