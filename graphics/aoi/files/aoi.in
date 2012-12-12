@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/graphics/aoi/files/aoi.in,v 1.2 2012/11/17 05:58:01 svnexp Exp $
+
+export JAVA_VERSION="%%JAVA_VERSION%%"
+
+cd "%%DATADIR%%" && exec "%%LOCALBASE%%/bin/java" \
+-Djava.ext.dirs="%%DATADIR%%" -jar "%%DATADIR%%/ArtOfIllusion.jar" "${@}"
