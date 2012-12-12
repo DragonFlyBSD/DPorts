@@ -1,0 +1,151 @@
+bin/lynx
+@unexec if [ -f %D/etc/lynx.cfg ] && cmp -s %D/etc/lynx.cfg %D/etc/lynx.cfg.default; then rm -f %D/etc/lynx.cfg; fi
+etc/lynx.cfg.default
+@exec if [ ! -f %D/etc/lynx.cfg ] ; then cp -p %D/%F %B/lynx.cfg; fi
+@unexec if [ -f %D/etc/lynx.lss ] && cmp -s %D/etc/lynx.lss %D/etc/lynx.lss.default; then rm -f %D/etc/lynx.lss; fi
+etc/lynx.lss.default
+@exec if [ ! -f %D/etc/lynx.lss ] ; then cp -p %D/%F %B/lynx.lss; fi
+@exec mkdir -p %D/share/lynx_help
+%%DOCSDIR%%/CHANGES
+%%DOCSDIR%%/COPYHEADER
+@exec ln -sf %D/%F %D/share/lynx_help/%f
+@unexec rm -f %D/share/lynx_help/%f
+%%DOCSDIR%%/COPYHEADER.asc
+%%DOCSDIR%%/COPYING
+@exec ln -sf %D/%F %D/share/lynx_help/%f
+@unexec rm -f %D/share/lynx_help/%f
+%%DOCSDIR%%/COPYING.asc
+%%DOCSDIR%%/PROBLEMS
+%%DOCSDIR%%/README
+%%DOCSDIR%%/docs/CHANGES2.3.gz
+%%DOCSDIR%%/docs/CHANGES2.4.gz
+%%DOCSDIR%%/docs/CHANGES2.5.gz
+%%DOCSDIR%%/docs/CHANGES2.6.gz
+%%DOCSDIR%%/docs/CHANGES2.7.gz
+%%DOCSDIR%%/docs/CHANGES2.8.gz
+%%DOCSDIR%%/docs/CRAWL.announce.gz
+%%DOCSDIR%%/docs/FM.announce.gz
+%%DOCSDIR%%/docs/IBMPC-charsets.announce.gz
+%%DOCSDIR%%/docs/OS-390.announce.gz
+%%DOCSDIR%%/docs/README.TRST
+%%DOCSDIR%%/docs/README.chartrans
+%%DOCSDIR%%/docs/README.cookies
+%%DOCSDIR%%/docs/README.defines
+%%DOCSDIR%%/docs/README.jp
+%%DOCSDIR%%/docs/README.metrics
+%%DOCSDIR%%/docs/README.options
+%%DOCSDIR%%/docs/README.release
+%%DOCSDIR%%/docs/README.rootcerts
+%%DOCSDIR%%/docs/README.ssl
+%%DOCSDIR%%/docs/README.sslcerts
+%%DOCSDIR%%/docs/SOCKETSHR.announce.gz
+%%DOCSDIR%%/docs/TCPWARE.announce.gz
+%%DOCSDIR%%/docs/VMSWAIS.announce.gz
+%%DOCSDIR%%/docs/djgpp.key
+%%DOCSDIR%%/docs/pdcurses.key
+%%DOCSDIR%%/docs/slang.key
+%%DOCSDIR%%/docs/win-386.announce.gz
+%%DOCSDIR%%/samples/blue-background.lss
+%%DOCSDIR%%/samples/bright-blue.lss
+%%DOCSDIR%%/samples/cernrules.txt
+%%DOCSDIR%%/samples/home.htm
+%%DOCSDIR%%/samples/installdirs.html
+%%DOCSDIR%%/samples/jumps.htm
+%%DOCSDIR%%/samples/jumpsUnix.html
+%%DOCSDIR%%/samples/jumpsVMS.html
+%%DOCSDIR%%/samples/keepviewer
+%%DOCSDIR%%/samples/lynx-demo.cfg
+%%DOCSDIR%%/samples/lynx-keymaps
+%%DOCSDIR%%/samples/lynx.bat
+%%DOCSDIR%%/samples/lynx.com
+%%DOCSDIR%%/samples/lynx.ico
+%%DOCSDIR%%/samples/lynx.lss
+%%DOCSDIR%%/samples/lynx_bookmarks.htm
+%%DOCSDIR%%/samples/lynxdump
+%%DOCSDIR%%/samples/mailcap
+%%DOCSDIR%%/samples/mailto-form.pl
+%%DOCSDIR%%/samples/midnight.lss
+%%DOCSDIR%%/samples/mild-colors.lss
+%%DOCSDIR%%/samples/mime.types
+%%DOCSDIR%%/samples/oldlynx
+%%DOCSDIR%%/samples/opaque.lss
+%%DOCSDIR%%/test/ALT88592.html
+%%DOCSDIR%%/test/ISO_LATIN1_test.html
+%%DOCSDIR%%/test/README.txt
+%%DOCSDIR%%/test/TestComment.html
+%%DOCSDIR%%/test/bad-html.html
+%%DOCSDIR%%/test/c1.html
+%%DOCSDIR%%/test/cp-1252.html
+%%DOCSDIR%%/test/cp-1252a.html
+%%DOCSDIR%%/test/iso-8859-1.html
+%%DOCSDIR%%/test/iso-8859-1a.html
+%%DOCSDIR%%/test/iso-8859-2.html
+%%DOCSDIR%%/test/iso-8859-2a.html
+%%DOCSDIR%%/test/koi8-r.html
+%%DOCSDIR%%/test/quickbrown.html
+%%DOCSDIR%%/test/raw8bit.html
+%%DOCSDIR%%/test/sgml.html
+%%DOCSDIR%%/test/spaces.html
+%%DOCSDIR%%/test/special_urls.html
+%%DOCSDIR%%/test/tabtest.html
+%%DOCSDIR%%/test/tags.html
+%%DOCSDIR%%/test/test-styles.html
+%%DOCSDIR%%/test/unicode.html
+%%DOCSDIR%%/test/utf-8-demo.html
+%%NLS%%share/locale/ca/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/cs/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/da/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/de/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/en/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/eo/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/et/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/fi/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/fr/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/hu/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/id/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/it/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/ja/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/nl/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/pt_BR/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/ru/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/sl/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/sv/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/tr/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/uk/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/vi/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/zh_CN/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/zh_TW/LC_MESSAGES/lynx.mo
+share/lynx_help/Lynx_users_guide.html.gz
+share/lynx_help/about_lynx.html.gz
+share/lynx_help/keystrokes/alt_edit_help.html.gz
+share/lynx_help/keystrokes/bashlike_edit_help.html.gz
+share/lynx_help/keystrokes/bookmark_help.html.gz
+share/lynx_help/keystrokes/cookie_help.html.gz
+share/lynx_help/keystrokes/dired_help.html.gz
+share/lynx_help/keystrokes/edit_help.html.gz
+share/lynx_help/keystrokes/environments.html.gz
+share/lynx_help/keystrokes/follow_help.html.gz
+share/lynx_help/keystrokes/gopher_types_help.html.gz
+share/lynx_help/keystrokes/history_help.html.gz
+share/lynx_help/keystrokes/keystroke_help.html.gz
+share/lynx_help/keystrokes/movement_help.html.gz
+share/lynx_help/keystrokes/option_help.html.gz
+share/lynx_help/keystrokes/other_help.html.gz
+share/lynx_help/keystrokes/print_help.html.gz
+share/lynx_help/keystrokes/scrolling_help.html.gz
+share/lynx_help/keystrokes/test_display.html.gz
+share/lynx_help/keystrokes/visited_help.html.gz
+share/lynx_help/keystrokes/xterm_help.html.gz
+share/lynx_help/lynx-dev.html.gz
+share/lynx_help/lynx_help_main.html.gz
+share/lynx_help/lynx_url_support.html.gz
+@dirrm %%DOCSDIR%%/samples
+@dirrm %%DOCSDIR%%/test
+@dirrm %%DOCSDIR%%/docs
+@dirrm %%DOCSDIR%%
+@dirrm share/lynx_help/keystrokes
+@dirrm share/lynx_help
+%%NLS%%@dirrmtry share/locale/fi/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/fi
+%%NLS%%@dirrmtry share/locale/eo/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/eo
