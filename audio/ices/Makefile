@@ -1,0 +1,44 @@
+# Created by: Michael Nottebrock <michaelnottebrock@gmx.net>
+# $FreeBSD: ports/audio/ices/Makefile,v 1.27 2012/11/17 05:54:35 svnexp Exp $
+
+PORTNAME=	ices
+PORTVERSION=	2.0.2
+PORTEPOCH=	1
+CATEGORIES=	audio net
+MASTER_SITES=	http://downloads.xiph.org/releases/ices/ \
+		http://svn.xiph.org/releases/ices/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Vorbis streaming source client for icecast 2
+
+LICENSE=	GPLv2
+
+LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg \
+		shout:${PORTSDIR}/audio/libshout2 \
+		vorbis:${PORTSDIR}/audio/libvorbis \
+		speex:${PORTSDIR}/audio/speex \
+		theora:${PORTSDIR}/multimedia/libtheora
+
+OPTIONS_DEFINE=	ALSA
+
+USE_BZIP2=	yes
+USE_GNOME=	libxml2
+USE_GMAKE=	yes
+USE_ICONV=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-roaraudio --disable-sun-audio
+USE_PKGCONFIG=	build
+MAKE_JOBS_SAFE=	yes
+
+CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MALSA}
+LIB_DEPENDS+=	asound:${PORTSDIR}/audio/alsa-lib
+.else
+CONFIGURE_ARGS+=--disable-alsa
+.endif
+
+.include <bsd.port.mk>
