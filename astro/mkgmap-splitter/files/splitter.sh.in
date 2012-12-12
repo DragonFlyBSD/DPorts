@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/astro/mkgmap-splitter/files/splitter.sh.in,v 1.3 2012/11/17 05:54:25 svnexp Exp $
+
+JAVA="%%LOCALBASE%%/bin/java"
+
+exec "${JAVA}" -jar %%DATADIR%%/splitter.jar "$@"
