@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/ftp/jftp/files/jftp.sh.in,v 1.3 2012/11/17 05:57:29 svnexp Exp $
+
+exec "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/jftp.jar"
