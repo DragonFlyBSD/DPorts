@@ -1,0 +1,15 @@
+bin/xt
+bin/xt-xml4j
+bin/xt-xp
+%%JAVAJARDIR%%/xt.jar
+%%EXAMPLESDIR%%/date.xsl
+%%EXAMPLESDIR%%/nxml.xsl
+%%EXAMPLESDIR%%/slides.xml
+%%EXAMPLESDIR%%/slides.xsl
+%%EXAMPLESDIR%%/sort-uniq.xml
+%%EXAMPLESDIR%%/sort-uniq.xsl
+%%EXAMPLESDIR%%/split.xml
+%%EXAMPLESDIR%%/split.xsl
+%%EXAMPLESDIR%%/textfile.xml
+%%EXAMPLESDIR%%/textfile.xsl
+@dirrm %%EXAMPLESDIR%%
