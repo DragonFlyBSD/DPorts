@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Filter/Simple.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Filter/Simple/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Filter/Simple
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Filter
+@dirrmtry %%SITE_PERL%%/Filter
