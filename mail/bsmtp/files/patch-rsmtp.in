@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/mail/bsmtp/files/patch-rsmtp.in,v 1.2 2012/11/17 05:58:59 svnexp Exp $
+
+--- rsmtp.in.orig
++++ rsmtp.in
+@@ -72,7 +72,7 @@
+     print STDERR "Recipient: $r\n" if ($debug);
+     push (@recipients, $r);
+   }
+-  $sendmail="$sendmailproto -f$mailfrom -p@INPROTO@:$fromhost";
++  $sendmail="$sendmailproto -f$mailfrom -p@INPROTO@:$fromhost --";
+   while (defined $recipients[0]) {
+     $sendmail .= " " . $recipients[0];
+     shift (@recipients);
