@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Mail/Sendmail.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mail/Sendmail/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Mail/Sendmail
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Mail
+@dirrmtry %%SITE_PERL%%/Mail
