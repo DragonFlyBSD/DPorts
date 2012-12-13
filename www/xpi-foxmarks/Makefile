@@ -1,0 +1,22 @@
+# New ports collection makefile for:	xpi-foxmarks
+# Date created:		21 July 2006
+# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
+#
+# $FreeBSD: ports/www/xpi-foxmarks/Makefile,v 1.18 2012/11/17 06:03:12 svnexp Exp $
+#
+
+PORTNAME=	foxmarks
+PORTVERSION=	2.7.2
+PORTREVISION=	1
+DISTVERSIONSUFFIX=	-fx
+CATEGORIES=	www
+
+MAINTAINER=	miwi@FreeBSD.org
+COMMENT=	Bookmark synchronizer
+
+XPI_DISTNAME=	foxmarks_bookmark_synchronizer
+XPI_ID=		foxmarks@kei.com
+XPI_NUM=	2410
+
+.include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
+.include <bsd.port.mk>
