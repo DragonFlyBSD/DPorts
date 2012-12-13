@@ -1,0 +1,7 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Patricia/Patricia.so
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Patricia/Patricia.bs
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Patricia/.packlist
+%%SITE_PERL%%/%%PERL_ARCH%%/Net/Patricia.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Patricia
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/Net
