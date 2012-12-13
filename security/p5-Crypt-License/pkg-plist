@@ -1,0 +1,8 @@
+%%SITE_PERL%%/Crypt/License.pm
+%%SITE_PERL%%/Crypt/License/Notice.pm
+%%SITE_PERL%%/Crypt/License/Util.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/License/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/License/
+@dirrm %%SITE_PERL%%/Crypt/License/
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt
+@dirrmtry %%SITE_PERL%%/Crypt
