@@ -1,0 +1,22 @@
+# ex:ts=8
+# Ports collection makefile for:	p5-Chatbot-Eliza
+# Date created:			Jan 12, 2002
+# Whom:	      			ijliao
+#
+# $FreeBSD: ports/misc/p5-Chatbot-Eliza/Makefile,v 1.7 2012/11/17 05:59:43 svnexp Exp $
+#
+
+PORTNAME=	Chatbot-Eliza
+PORTVERSION=	1.04
+CATEGORIES=	misc perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A clone of the classic Eliza program
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Chatbot::Eliza.3
+
+.include <bsd.port.mk>
