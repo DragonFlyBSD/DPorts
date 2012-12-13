@@ -1,0 +1,8 @@
+%%SITE_PERL%%/HTML/Chunks.pm
+%%SITE_PERL%%/HTML/Chunks/Super.pm
+%%SITE_PERL%%/HTML/Chunks/Local.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Chunks/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Chunks
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML
+@dirrm %%SITE_PERL%%/HTML/Chunks
+@dirrmtry %%SITE_PERL%%/HTML
