@@ -1,0 +1,9 @@
+@comment $FreeBSD: ports/mail/annoyance-filter/pkg-plist,v 1.2 2012/11/17 05:58:58 svnexp Exp $
+bin/annoyance-filter
+bin/annoyance-filter-run
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/annoyance-filter.pdf
+%%PORTDOCS%%%%DOCSDIR%%/statlib.pdf
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
