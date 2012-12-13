@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Convert/Morse.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Convert/Morse/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Convert/Morse
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Convert
+@dirrmtry %%SITE_PERL%%/Convert
