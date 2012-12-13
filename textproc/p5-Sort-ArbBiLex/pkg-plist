@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Sort/ArbBiLex.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Sort/ArbBiLex/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Sort/ArbBiLex
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Sort
+@dirrmtry %%SITE_PERL%%/Sort
