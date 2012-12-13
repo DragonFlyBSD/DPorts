@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Mac/Macbinary.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mac/Macbinary/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Mac/Macbinary
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Mac
+@dirrmtry %%SITE_PERL%%/Mac
