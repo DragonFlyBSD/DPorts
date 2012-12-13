@@ -1,0 +1,19 @@
+# New ports collection makefile for:	Authen-Ticket
+# Date created:				Mon Jan  1 03:55:39 2001
+# Whom:					will
+#
+# $FreeBSD: ports/security/p5-Authen-Ticket/Makefile,v 1.10 2012/11/17 06:01:10 svnexp Exp $
+#
+
+PORTNAME=	Authen-Ticket
+PORTVERSION=	0.02
+CATEGORIES=	security perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Perl module providing the framework for implementing a ticketing system
+
+PERL_CONFIGURE=	yes
+
+.include <bsd.port.mk>
