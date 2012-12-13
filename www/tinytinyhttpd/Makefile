@@ -1,0 +1,33 @@
+# New ports collection makefile for:	tinytinyhttpd
+# Date created:		01 Aug 2009
+# Whom:			Shinsuke Matsui <smatsui@karashi.org>
+#
+# $FreeBSD: ports/www/tinytinyhttpd/Makefile,v 1.8 2012/11/17 06:03:07 svnexp Exp $
+#
+
+PORTNAME=	tinytinyhttpd
+PORTVERSION=	0.0.11
+CATEGORIES=	www
+MASTER_SITES=	http://cloud.github.com/downloads/mattn/tinytinyhttpd/ \
+		${MASTER_SITE_LOCAL}
+
+MAINTAINER=	smatsui@karashi.org
+COMMENT=	Tiny tiny httpd
+
+HAS_CONFIGURE=	yes
+
+PLIST_FILES=	bin/tthttpd
+SUB_FILES=	example.conf
+PORTDOCS=	README example.conf ChangeLog
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/tthttpd ${PREFIX}/bin
+
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKDIR}/example.conf ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
