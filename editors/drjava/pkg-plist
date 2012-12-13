@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/editors/drjava/pkg-plist,v 1.4 2012/11/17 05:57:12 svnexp Exp $
+bin/drjava
+%%DATADIR%%/%%DRJAVAJAR%%
+@dirrm %%DATADIR%%
