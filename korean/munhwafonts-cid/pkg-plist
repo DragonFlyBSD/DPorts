@@ -1,0 +1,11 @@
+@comment $FreeBSD: ports/korean/munhwafonts-cid/pkg-plist,v 1.9 2012/11/17 05:58:47 svnexp Exp $
+%%FONTSDIR%%/Munhwa-Bold
+%%FONTSDIR%%/Munhwa-Bold-KSC-EUC-H.gsf
+%%FONTSDIR%%/Munhwa-Regular
+%%FONTSDIR%%/Munhwa-Regular-KSC-EUC-H.gsf
+%%FONTSDIR%%/MunhwaGothic-Bold
+%%FONTSDIR%%/MunhwaGothic-Bold-KSC-EUC-H.gsf
+%%FONTSDIR%%/MunhwaGothic-Regular
+%%FONTSDIR%%/MunhwaGothic-Regular-KSC-EUC-H.gsf
+@dirrmtry %%FONTSDIR%%
+@dirrmtry share/fonts
