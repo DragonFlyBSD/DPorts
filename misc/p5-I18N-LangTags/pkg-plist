@@ -1,0 +1,8 @@
+%%SITE_PERL%%/I18N/LangTags.pm
+%%SITE_PERL%%/I18N/LangTags/List.pm
+%%SITE_PERL%%/I18N/LangTags/Detect.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/I18N/LangTags/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/I18N/LangTags
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/I18N
+@dirrm %%SITE_PERL%%/I18N/LangTags
+@dirrmtry %%SITE_PERL%%/I18N
