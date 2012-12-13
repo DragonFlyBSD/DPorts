@@ -1,0 +1,34 @@
+# New ports collection makefile for:	wand-libconfig
+# Date created:				Tue Oct  9 00:56:22 PDT 2007
+# Whom:					Matt Peterson <matt@peterson.org>
+#
+# $FreeBSD: ports/devel/wand-libconfig/Makefile,v 1.6 2012/11/17 05:57:06 svnexp Exp $
+#
+
+PORTNAME=	libconfig
+PORTVERSION=	1.0.5
+CATEGORIES=	devel
+MASTER_SITES=	http://research.wand.net.nz/software/libconfig/ \
+		http://matt.peterson.org/FreeBSD/ports/
+PKGNAMEPREFIX=	wand-
+
+MAINTAINER=	matt@peterson.org
+COMMENT=	C library for parsing config files
+
+CONFLICTS=	libconfig-[0-9]*
+
+USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+USE_GMAKE=	yes
+
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+PLIST_FILES=	include/libconfig.h lib/libconfig.a lib/libconfig.la \
+		lib/libconfig.so lib/libconfig.so.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' \
+	${WRKSRC}/configure
+
+.include <bsd.port.mk>
