@@ -1,0 +1,23 @@
+# New ports collection makefile for:  p5-Class-Declare
+# Date created:        12 January 2009
+# Whom:            kevit
+#
+# $FreeBSD: ports/devel/p5-Class-Declare/Makefile,v 1.6 2012/11/17 05:56:07 svnexp Exp $
+#
+
+PORTNAME=	Class-Declare
+PORTVERSION=	0.17
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	simarg@gmail.com
+COMMENT=	Perl module for declare classes
+
+BUILD_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+MAN3=	Class::Declare::Dump.3 Class::Declare.3 Class::Declare::Hash.3
+
+.include <bsd.port.mk>
