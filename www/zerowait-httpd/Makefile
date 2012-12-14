@@ -1,0 +1,28 @@
+# New ports collection makefile for:	0W-httpd
+# Date created:				17 March 2005
+# Whom:					Vsevolod Stakhov
+#
+# $FreeBSD: ports/www/zerowait-httpd/Makefile,v 1.14 2012/11/17 06:03:13 svnexp Exp $
+#
+
+PORTNAME=	zerowait
+PORTVERSION=	0.8d
+PORTREVISION=	2
+CATEGORIES=	www
+MASTER_SITES=	http://mirror.mcx2.org/
+PKGNAMESUFFIX=	-httpd
+DISTNAME=	0W-httpd-${PORTVERSION}
+
+MAINTAINER=	dhn@FreeBSD.org
+COMMENT=	Lightweight and fast http server
+
+USE_GMAKE=	yes
+USE_OPENSSL=	yes
+USE_RC_SUBR=	0W-httpd
+ALL_TARGET=	#none
+
+HAS_CONFIGURE=	yes
+CONFIGURE_ARGS=	--prefix=${PREFIX} --owner=${WWWOWN} --group=${WWWGRP}
+PLIST_SUB=	WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
+
+.include <bsd.port.mk>
