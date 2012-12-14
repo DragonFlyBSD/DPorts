@@ -1,0 +1,12 @@
+bin/xml_grep
+bin/xml_merge
+bin/xml_pp
+bin/xml_spellcheck
+bin/xml_split
+%%SITE_PERL%%/XML/Twig.pm
+%%SITE_PERL%%/XML/Twig/XPath.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Twig/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Twig
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
+@dirrm %%SITE_PERL%%/XML/Twig
+@dirrmtry %%SITE_PERL%%/XML
