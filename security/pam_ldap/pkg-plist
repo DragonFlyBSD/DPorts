@@ -1,0 +1,2 @@
+etc/ldap.conf.dist
+lib/pam_ldap.so
