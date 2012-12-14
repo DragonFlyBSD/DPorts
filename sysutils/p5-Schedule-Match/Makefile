@@ -1,0 +1,21 @@
+# New ports collection makefile for:	sysutils/p5-Schedule-Match
+# Date created:				03 January 2001
+# Whom:					Anton Berezin <tobez@tobez.org>
+#
+# $FreeBSD: ports/sysutils/p5-Schedule-Match/Makefile,v 1.7 2012/11/17 06:01:40 svnexp Exp $
+#
+
+PORTNAME=	Schedule-Match
+PORTVERSION=	0.07
+CATEGORIES=	sysutils perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	tobez@FreeBSD.org
+COMMENT=	Handles and detects clash between pattern-based schedules
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Schedule::Match.3
+
+.include <bsd.port.mk>
