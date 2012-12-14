@@ -1,0 +1,33 @@
+@unexec if cmp -s %D/%%ETCDIR%%/ldapscripts.conf.sample %D/%%ETCDIR%%/ldapscripts.conf; then rm -f %D/%%ETCDIR%%/ldapscripts.conf; fi
+%%ETCDIR%%/ldapscripts.conf.sample
+@exec if [ ! -f %D/%%ETCDIR%%/ldapscripts.conf ] ; then cp -p %D/%F %B/ldapscripts.conf; fi
+@unexec if cmp -s %D/%%ETCDIR%%/ldapscripts.passwd.sample %D/%%ETCDIR%%/ldapscripts.passwd; then rm -f %D/%%ETCDIR%%/ldapscripts.passwd; fi
+%%ETCDIR%%/ldapscripts.passwd.sample
+@exec if [ ! -f %D/%%ETCDIR%%/ldapscripts.passwd ] ; then cp -p %D/%F %B/ldapscripts.passwd; fi
+%%ETCDIR%%/ldapaddgroup.template.sample
+%%ETCDIR%%/ldapadduser.template.sample
+%%ETCDIR%%/ldapaddmachine.template.sample
+@dirrmtry %%ETCDIR%%
+lib/ldapscripts/runtime
+@dirrmtry lib/ldapscripts
+sbin/ldapdeletemachine
+sbin/ldapinit
+sbin/lsldap
+sbin/ldapaddgroup
+sbin/ldapaddmachine
+sbin/ldapadduser
+sbin/ldapaddusertogroup
+sbin/ldapdeletegroup
+sbin/ldapdeleteuser
+sbin/ldapdeleteuserfromgroup
+sbin/ldapsetprimarygroup
+sbin/ldaprenameuser
+sbin/ldaprenamemachine
+sbin/ldaprenamegroup
+sbin/ldapsetpasswd
+sbin/ldapfinger
+sbin/ldapgid
+sbin/ldapid
+sbin/ldapmodifygroup
+sbin/ldapmodifymachine
+sbin/ldapmodifyuser
