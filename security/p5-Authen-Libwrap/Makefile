@@ -1,0 +1,23 @@
+# New ports collection makefile for:	security/p5-Authen-Libwrap
+# Date created:				05 February 2006
+# Whom:					Zach Thompson <hideo@lastamericanempire.com>
+#
+# $FreeBSD: ports/security/p5-Authen-Libwrap/Makefile,v 1.10 2012/11/17 06:01:10 svnexp Exp $
+#
+
+PORTNAME=	Authen-Libwrap
+PORTVERSION=	0.22
+CATEGORIES=	security perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Authen::Libwrap - access to TCP Wrappers library
+
+TEST_DEPENDS=	p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception
+
+PERL_MODBUILD=	yes
+
+MAN3=	Authen::Libwrap.3
+
+.include <bsd.port.mk>
