@@ -1,0 +1,10 @@
+%%SITE_PERL%%/CGI/Base.pm
+%%SITE_PERL%%/CGI/BasePlus.pm
+%%SITE_PERL%%/CGI/Carp.pm
+%%SITE_PERL%%/CGI/Form.pm
+%%SITE_PERL%%/CGI/MiniSvr.pm
+%%SITE_PERL%%/CGI/Request.pm
+%%SITE_PERL%%/CGI/test.pl
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI
+@dirrm %%SITE_PERL%%/CGI
