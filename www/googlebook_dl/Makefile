@@ -1,0 +1,26 @@
+# New ports collection makefile for:	googlebook_dl
+# Date created:		2010-12-02
+# Whom:			<spam@rm-rf.kiev.ua>
+#
+# $FreeBSD: ports/www/googlebook_dl/Makefile,v 1.3 2012/11/17 06:02:34 svnexp Exp $
+#
+
+PORTNAME=	googlebook_dl
+PORTVERSION=	20100502
+CATEGORIES=	www
+MASTER_SITES=	# none
+DISTFILES=	# none
+
+MAINTAINER=	ak@FreeBSD.org
+COMMENT=	A command-line utility for downloading books from Google Books
+
+RUN_DEPENDS=	wget:${PORTSDIR}/ftp/wget
+
+NO_BUILD=	yes
+
+PLIST_FILES=	bin/${PORTNAME}
+
+do-install:
+	${INSTALL_SCRIPT} ${FILESDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
+
+.include <bsd.port.mk>
