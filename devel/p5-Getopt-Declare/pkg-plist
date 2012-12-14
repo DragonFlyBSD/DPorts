@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Getopt/Declare/.packlist
+%%SITE_PERL%%/Getopt/Declare.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Getopt/Declare
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Getopt
+@dirrmtry %%SITE_PERL%%/Getopt
