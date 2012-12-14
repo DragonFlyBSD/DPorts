@@ -1,0 +1,8 @@
+%%SITE_PERL%%/Array/IntSpan.pm
+%%SITE_PERL%%/Array/IntSpan/IP.pm
+%%SITE_PERL%%/Array/IntSpan/Fields.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Array/IntSpan/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Array/IntSpan
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Array
+@dirrm %%SITE_PERL%%/Array/IntSpan
+@dirrmtry %%SITE_PERL%%/Array
