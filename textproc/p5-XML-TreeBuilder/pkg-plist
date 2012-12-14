@@ -1,0 +1,3 @@
+%%SITE_PERL%%/XML/TreeBuilder.pm
+%%SITE_PERL%%/XML/Element.pm
+@dirrmtry %%SITE_PERL%%/XML
