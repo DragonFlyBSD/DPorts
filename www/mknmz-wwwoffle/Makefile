@@ -1,0 +1,35 @@
+# New ports collection makefile for:   mknmz-wwwoffle
+# Date created:        2 May 2004
+# Whom:                Andrey Slusar <anray@FreeBSD.org>
+#
+# $FreeBSD: ports/www/mknmz-wwwoffle/Makefile,v 1.8 2012/11/17 06:02:40 svnexp Exp $
+#
+
+PORTNAME=	mknmz-wwwoffle
+PORTVERSION=	0.7.2
+PORTREVISION=	1
+CATEGORIES=	www databases textproc
+MASTER_SITES=	http://www.naney.org/comp/distrib/mknmz-wwwoffle/archive/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	WWWOFFLE cache indexer for full-text search system Namazu
+
+RUN_DEPENDS=	${LOCALBASE}/bin/wwwoffle:${PORTSDIR}/www/wwwoffle
+BUILD_DEPENDS=	${LOCALBASE}/bin/mknmz:${PORTSDIR}/databases/namazu2
+
+USE_PERL5=	yes
+HAS_CONFIGURE=	yes
+
+MAN1=		mknmz-wwwoffle.1
+PORTDOCS=	AUTHORS COPYING INSTALL INSTALL.ja NEWS README README.ja THANKS
+
+post-build:
+.if !defined(NOPORTDOCS)
+post-install:
+	${MKDIR} ${DOCSDIR}
+.for a in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${a} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>
