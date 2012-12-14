@@ -1,0 +1,15 @@
+bin/perl.prov
+bin/perl.prov.files
+bin/perl.req
+bin/perl.req.files
+%%SITE_PERL%%/B/Clobbers.pm
+%%SITE_PERL%%/B/PerlReq.pm
+%%SITE_PERL%%/B/Walker.pm
+%%SITE_PERL%%/PerlReq/Utils.pm
+%%SITE_PERL%%/fake.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/rpm-build-perl/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/B
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/PerlReq
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/rpm-build-perl
+@dirrmtry %%SITE_PERL%%/B
+@dirrmtry %%SITE_PERL%%/PerlReq
