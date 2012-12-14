@@ -1,0 +1,8 @@
+@comment $FreeBSD: ports/devel/py-iterpipes/pkg-plist,v 1.2 2012/11/17 05:56:47 svnexp Exp $
+%%PYTHON_SITELIBDIR%%/iterpipes/__init__.py
+%%PYTHON_SITELIBDIR%%/iterpipes/__init__.pyc
+%%PYTHON_SITELIBDIR%%/iterpipes/__init__.pyo
+%%PYTHON_SITELIBDIR%%/iterpipes/testing.py
+%%PYTHON_SITELIBDIR%%/iterpipes/testing.pyc
+%%PYTHON_SITELIBDIR%%/iterpipes/testing.pyo
+@dirrm %%PYTHON_SITELIBDIR%%/iterpipes
