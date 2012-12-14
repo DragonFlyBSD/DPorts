@@ -1,0 +1,24 @@
+# New ports collection makefile for:	p5-WWW-OpenSVN
+# Date created:		2006-07-24
+# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+#
+# $FreeBSD: ports/www/p5-WWW-OpenSVN/Makefile,v 1.8 2012/11/17 06:02:55 svnexp Exp $
+#
+
+PORTNAME=	WWW-OpenSVN
+PORTVERSION=	0.1.3
+CATEGORIES=	www perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	snowfly@yuntech.edu.tw
+COMMENT=	An automated interface for OpenSVN.csie.org
+
+BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_MODBUILD=	yes
+
+MAN3=		WWW::OpenSVN.3
+
+.include <bsd.port.mk>
