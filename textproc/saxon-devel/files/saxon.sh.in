@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/textproc/saxon-devel/files/saxon.sh.in,v 1.4 2012/11/17 06:02:21 svnexp Exp $
+
+IAM="`basename "$0"`"
+
+if [ "${IAM}" = "saxon-xquery" ]
+then
+	LAUNCHER_CLASS="net.sf.saxon.Query"
+else
+	LAUNCHER_CLASS="net.sf.saxon.Transform"
+fi
+
+SAXON_CLASSPATH=""
+for jarfile in %%SAXON_JARS%%
+do
+	SAXON_CLASSPATH="${SAXON_CLASSPATH}:${jarfile}"
+done
+
+JAVA_VERSION="%%JAVA_VERSION%%" exec "%%LOCALBASE%%/bin/java" -classpath "${SAXON_CLASSPATH}" "${LAUNCHER_CLASS}" "$@"
