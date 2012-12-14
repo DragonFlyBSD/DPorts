@@ -1,0 +1,8 @@
+include/portaudio2/portaudio.h
+lib/portaudio2/libportaudio.a
+lib/portaudio2/libportaudio.la
+lib/portaudio2/libportaudio.so
+lib/portaudio2/libportaudio.so.2
+libdata/pkgconfig/portaudio-2.0.pc
+@dirrm include/portaudio2
+@dirrm lib/portaudio2
