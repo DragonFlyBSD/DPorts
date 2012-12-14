@@ -1,0 +1,25 @@
+@comment $FreeBSD: ports/print/psutils-letter/pkg-plist,v 1.9 2012/11/17 06:00:53 svnexp Exp $
+bin/psbook
+bin/psselect
+bin/pstops
+bin/epsffit
+bin/psnup
+bin/psresize
+bin/getafm
+bin/fixfmps
+bin/fixmacps
+bin/fixpsditps
+bin/fixpspps
+bin/fixtpps
+bin/fixwfwps
+bin/fixwpps
+bin/fixscribeps
+bin/fixwwps
+bin/fixdlsrps
+bin/extractres
+bin/includeres
+bin/psmerge
+bin/showchar
+%%DATADIR%%/md68_0.ps
+%%DATADIR%%/md71_0.ps
+@dirrm %%DATADIR%%
