@@ -1,0 +1,21 @@
+# New ports collection makefile for:	Lingua-Stem-Ru
+# Date created:				Jul 26 2004
+# Whom:					Cheng-Lung Sung <clsung@dragon2.net>
+#
+# $FreeBSD: ports/textproc/p5-Lingua-Stem-Ru/Makefile,v 1.5 2012/11/17 06:02:05 svnexp Exp $
+#
+
+PORTNAME=		Lingua-Stem-Ru
+PORTVERSION=		0.01
+CATEGORIES=		textproc perl5
+MASTER_SITES=		CPAN
+PKGNAMEPREFIX=		p5-
+
+MAINTAINER=		ports@FreeBSD.org
+COMMENT=		Porter's stemming algorithm for Russian (KOI8-R only)
+
+PERL_CONFIGURE=		yes
+
+MAN3=			Lingua::Stem::Ru.3
+
+.include <bsd.port.mk>

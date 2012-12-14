@@ -1,0 +1,6 @@
+Lingua::Stem::Ru - Porter's stemming algorithm for Russian (KOI8-R only)
+
+This module applies the Porter Stemming Algorithm to its parameters,
+returning the stemmed words.
+
+WWW: http://search.cpan.org/dist/Lingua-Stem-Ru/
