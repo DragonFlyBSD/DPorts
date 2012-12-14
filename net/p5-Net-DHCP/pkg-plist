@@ -1,0 +1,4 @@
+%%SITE_PERL%%/Net/DHCP/Constants.pm
+%%SITE_PERL%%/Net/DHCP/Packet.pm
+@dirrmtry %%SITE_PERL%%/Net/DHCP
+@dirrmtry %%SITE_PERL%%/Net
