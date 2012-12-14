@@ -1,0 +1,8 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Mixi/.packlist
+%%SITE_PERL%%/WWW/Mixi.pm
+%%SITE_PERL%%/WWW/Mixi/Cookbook.pod
+%%SITE_PERL%%/WWW/Mixi/Mixi.pod
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Mixi
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW
+@dirrm %%SITE_PERL%%/WWW/Mixi
+@dirrmtry %%SITE_PERL%%/WWW
