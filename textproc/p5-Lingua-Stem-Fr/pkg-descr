@@ -1,0 +1,6 @@
+Lingua::Stem::Fr - Porter's stemming algorithm for French
+
+This module applies the Porter Stemming Algorithm to its parameters,
+returning the stemmed words.
+
+WWW: http://search.cpan.org/dist/Lingua-Stem-Fr/
