@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Time/Duration/.packlist
+%%SITE_PERL%%/Time/Duration.pm
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Time/Duration
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Time
+@dirrmtry %%SITE_PERL%%/Time
