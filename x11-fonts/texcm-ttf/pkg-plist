@@ -1,0 +1,10 @@
+@comment $FreeBSD: ports/x11-fonts/texcm-ttf/pkg-plist,v 1.2 2012/11/17 06:03:29 svnexp Exp $
+%%FONTSDIR%%/fonts.dir
+%%FONTSDIR%%/fonts.scale
+%%FONTSDIR%%/cmsy10.ttf
+%%FONTSDIR%%/cmr10.ttf
+%%FONTSDIR%%/cmmi10.ttf
+%%FONTSDIR%%/cmex10.ttf
+%%FONTSDIR%%/license.txt
+@unexec rm %D/%%FONTSDIR%%/fonts.cache-1 2>/dev/null || true
+@dirrm %%FONTSDIR%%
