@@ -1,0 +1,5 @@
+%%SITE_PERL%%/WWW/Robot.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Robot/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Robot
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW
+@dirrmtry %%SITE_PERL%%/WWW
