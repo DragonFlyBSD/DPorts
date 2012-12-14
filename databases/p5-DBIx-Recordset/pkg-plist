@@ -1,0 +1,11 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/DBIx/Recordset/.packlist
+%%SITE_PERL%%/DBIx/Compat.pm
+%%SITE_PERL%%/DBIx/Database.pm
+%%SITE_PERL%%/DBIx/Intrors.pod
+%%SITE_PERL%%/DBIx/Recordset.pm
+%%SITE_PERL%%/DBIx/Recordset/DBSeq.pm
+%%SITE_PERL%%/DBIx/Recordset/FileSeq.pm
+@dirrm %%SITE_PERL%%/DBIx/Recordset
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/DBIx/Recordset
+@dirrmtry %%SITE_PERL%%/DBIx
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/DBIx
