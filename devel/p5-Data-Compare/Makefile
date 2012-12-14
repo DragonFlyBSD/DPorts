@@ -1,0 +1,27 @@
+# New ports collection makefile for:	devel/p5-Data-Compare
+# Date created:				25 April 2001
+# Whom:					Anton Berezin <tobez@tobez.org>
+#
+# $FreeBSD: ports/devel/p5-Data-Compare/Makefile,v 1.22 2012/11/17 05:56:09 svnexp Exp $
+#
+
+PORTNAME=	Data-Compare
+PORTVERSION=	1.2200
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:DCANTRELL
+PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION:C/0*$//}
+
+MAINTAINER=	tobez@FreeBSD.org
+COMMENT=	Data::Compare - compare perl data structures
+
+BUILD_DEPENDS=	p5-File-Find-Rule>=0:${PORTSDIR}/devel/p5-File-Find-Rule
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Data::Compare.3 Data::Compare::Plugins.3 \
+		Data::Compare::Plugins::Scalar::Properties.3
+
+.include <bsd.port.mk>
