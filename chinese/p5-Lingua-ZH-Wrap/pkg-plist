@@ -1,0 +1,7 @@
+%%SITE_PERL%%/Lingua/ZH/Wrap.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Lingua/ZH/Wrap/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Lingua/ZH/Wrap
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Lingua/ZH
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Lingua
+@dirrmtry %%SITE_PERL%%/Lingua/ZH
+@dirrmtry %%SITE_PERL%%/Lingua
