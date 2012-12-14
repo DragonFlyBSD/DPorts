@@ -1,0 +1,6 @@
+bin/podstrip
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod/Stripper/.packlist
+%%SITE_PERL%%/Pod/Stripper.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod/Stripper
+@dirrmtry %%SITE_PERL%%/Pod
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod
