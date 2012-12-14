@@ -1,0 +1,7 @@
+bin/svg_annotate
+bin/svg_validate
+%%SITE_PERL%%/SVG/Metadata.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/SVG/Metadata/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/SVG/Metadata
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/SVG
+@dirrmtry %%SITE_PERL%%/SVG
