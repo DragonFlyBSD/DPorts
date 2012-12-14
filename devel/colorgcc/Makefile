@@ -1,0 +1,43 @@
+# New ports collection makefile for:	colorgcc
+# Date created:		2009-07-21
+# Whom:			Sofian Brabez <sbrabez@gmail.com>
+#
+# $FreeBSD: ports/devel/colorgcc/Makefile,v 1.6 2012/11/17 05:55:38 svnexp Exp $
+#
+
+PORTNAME=	colorgcc
+PORTVERSION=	1.3.2
+CATEGORIES=	devel misc
+MASTER_SITES=	http://schlueters.de/
+DISTNAME=	${PORTNAME}.${PORTVERSION}
+EXTRACT_SUFX=	.txt
+DIST_SUBDIR=	${PORTNAME}
+
+MAINTAINER=	sbz@FreeBSD.org
+COMMENT=	Perl script to colorize the terminal output of GCC
+
+RUN_DEPENDS=	p5-Term-ANSIColor>=0:${PORTSDIR}/devel/p5-Term-ANSIColor
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+
+PLIST_FILES=	bin/${PORTNAME} \
+		share/examples/${PORTNAME}/${PORTNAME}rc
+PLIST_DIRS=	share/examples/${PORTNAME}
+SUB_FILES=	pkg-message
+
+NO_BUILD=yes
+
+do-extract:
+	@${MKDIR} ${WRKSRC}
+	@${CP} ${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${WRKSRC}/${PORTNAME}
+
+do-install:
+	@${MKDIR} ${EXAMPLESDIR}
+	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
+	@${INSTALL_DATA} ${FILESDIR}/${PORTNAME}rc ${EXAMPLESDIR}/
+
+post-install:
+.if !defined(BATCH)
+	@${CAT} ${PKGMESSAGE}
+.endif
+
+.include <bsd.port.mk>
