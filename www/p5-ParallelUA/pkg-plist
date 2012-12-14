@@ -1,0 +1,17 @@
+%%SITE_PERL%%/Bundle/ParallelUA.pm
+%%SITE_PERL%%/LWP/Parallel.pm
+%%SITE_PERL%%/LWP/Parallel/Protocol.pm
+%%SITE_PERL%%/LWP/Parallel/Protocol/file.pm
+%%SITE_PERL%%/LWP/Parallel/Protocol/ftp.pm
+%%SITE_PERL%%/LWP/Parallel/Protocol/http.pm
+%%SITE_PERL%%/LWP/Parallel/Protocol/https.pm
+%%SITE_PERL%%/LWP/Parallel/RobotUA.pm
+%%SITE_PERL%%/LWP/Parallel/UserAgent.pm
+%%SITE_PERL%%/LWP/ParallelUA.pm
+%%SITE_PERL%%/LWP/RobotPUA.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/LWP/Parallel/.packlist
+@dirrm %%SITE_PERL%%/LWP/Parallel/Protocol
+@dirrm %%SITE_PERL%%/LWP/Parallel
+@dirrmtry %%SITE_PERL%%/LWP
+@dirrmtry %%SITE_PERL%%/Bundle
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/LWP/Parallel
