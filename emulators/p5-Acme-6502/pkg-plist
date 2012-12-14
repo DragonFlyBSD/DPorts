@@ -1,0 +1,5 @@
+@comment $FreeBSD: ports/emulators/p5-Acme-6502/pkg-plist,v 1.2 2012/11/17 05:57:22 svnexp Exp $
+%%SITE_PERL%%/Acme/6502.pm
+%%SITE_PERL%%/Acme/6502/Tube.pm
+@dirrm %%SITE_PERL%%/Acme/6502/
+@dirrmtry %%SITE_PERL%%/Acme/
