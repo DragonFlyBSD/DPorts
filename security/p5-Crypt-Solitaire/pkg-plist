@@ -1,0 +1,8 @@
+%%SITE_PERL%%/Crypt/Solitaire.pm
+%%SITE_PERL%%/auto/Crypt/Solitaire/autosplit.ix
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/Solitaire/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/Solitaire
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt
+@dirrm %%SITE_PERL%%/auto/Crypt/Solitaire
+@dirrmtry %%SITE_PERL%%/auto/Crypt
+@dirrmtry %%SITE_PERL%%/Crypt
