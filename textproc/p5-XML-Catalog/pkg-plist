@@ -1,0 +1,5 @@
+%%SITE_PERL%%/XML/Catalog.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Catalog/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Catalog
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
+@dirrmtry %%SITE_PERL%%/XML
