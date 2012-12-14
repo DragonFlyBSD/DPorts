@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Math/BaseCalc/.packlist
+%%SITE_PERL%%/Math/BaseCalc.pm
+@dirrmtry %%SITE_PERL%%/Math
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Math/BaseCalc
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Math
