@@ -1,0 +1,14 @@
+bin/dave
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTTP/DAV/.packlist
+%%SITE_PERL%%/HTTP/DAV.pm
+%%SITE_PERL%%/HTTP/DAV/Changes.pod
+%%SITE_PERL%%/HTTP/DAV/Comms.pm
+%%SITE_PERL%%/HTTP/DAV/Lock.pm
+%%SITE_PERL%%/HTTP/DAV/Resource.pm
+%%SITE_PERL%%/HTTP/DAV/ResourceList.pm
+%%SITE_PERL%%/HTTP/DAV/Response.pm
+%%SITE_PERL%%/HTTP/DAV/Utils.pm
+@dirrm %%SITE_PERL%%/HTTP/DAV
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTTP/DAV
+@dirrmtry %%SITE_PERL%%/HTTP
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTTP
