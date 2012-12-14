@@ -1,0 +1,37 @@
+%%SITE_PERL%%/Module/Build.pm
+%%SITE_PERL%%/Module/Build/API.pod
+%%SITE_PERL%%/Module/Build/Authoring.pod
+%%SITE_PERL%%/Module/Build/Base.pm
+%%SITE_PERL%%/Module/Build/Bundling.pod
+%%SITE_PERL%%/Module/Build/Compat.pm
+%%SITE_PERL%%/Module/Build/Config.pm
+%%SITE_PERL%%/Module/Build/ConfigData.pm
+%%SITE_PERL%%/Module/Build/Cookbook.pm
+%%SITE_PERL%%/Module/Build/Dumper.pm
+%%SITE_PERL%%/Module/Build/ModuleInfo.pm
+%%SITE_PERL%%/Module/Build/Notes.pm
+%%SITE_PERL%%/Module/Build/PPMMaker.pm
+%%SITE_PERL%%/Module/Build/Platform/Amiga.pm
+%%SITE_PERL%%/Module/Build/Platform/Default.pm
+%%SITE_PERL%%/Module/Build/Platform/EBCDIC.pm
+%%SITE_PERL%%/Module/Build/Platform/MPEiX.pm
+%%SITE_PERL%%/Module/Build/Platform/MacOS.pm
+%%SITE_PERL%%/Module/Build/Platform/RiscOS.pm
+%%SITE_PERL%%/Module/Build/Platform/Unix.pm
+%%SITE_PERL%%/Module/Build/Platform/VMS.pm
+%%SITE_PERL%%/Module/Build/Platform/VOS.pm
+%%SITE_PERL%%/Module/Build/Platform/Windows.pm
+%%SITE_PERL%%/Module/Build/Platform/aix.pm
+%%SITE_PERL%%/Module/Build/Platform/cygwin.pm
+%%SITE_PERL%%/Module/Build/Platform/darwin.pm
+%%SITE_PERL%%/Module/Build/Platform/os2.pm
+%%SITE_PERL%%/Module/Build/PodParser.pm
+%%SITE_PERL%%/Module/Build/Version.pm
+%%SITE_PERL%%/Module/Build/YAML.pm
+%%SITE_PERL%%/inc/latest.pm
+%%SITE_PERL%%/inc/latest/private.pm
+@dirrm %%SITE_PERL%%/inc/latest
+@dirrm %%SITE_PERL%%/inc
+@dirrm %%SITE_PERL%%/Module/Build/Platform
+@dirrm %%SITE_PERL%%/Module/Build
+@dirrmtry %%SITE_PERL%%/Module
