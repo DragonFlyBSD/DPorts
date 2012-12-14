@@ -1,0 +1,10 @@
+bin/drawstatexml.pl
+bin/drawstate.pl
+%%SITE_PERL%%/UML/drawstatexml.pl
+%%SITE_PERL%%/UML/drawstate.pl
+%%SITE_PERL%%/UML/State.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/UML/State/.packlist
+@dirrm %%SITE_PERL%%/UML
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/UML/State
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/UML
+@dirrmtry %%SITE_PERL%%/UML
