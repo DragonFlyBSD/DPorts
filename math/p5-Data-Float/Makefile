@@ -1,0 +1,22 @@
+# New ports collection makefile for:	p5-Data-Float
+# Date created:		2006-08-07
+# Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
+#
+# $FreeBSD: ports/math/p5-Data-Float/Makefile,v 1.13 2012/11/17 05:59:25 svnexp Exp $
+#
+
+PORTNAME=	Data-Float
+PORTVERSION=	0.012
+CATEGORIES=	math perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:ZEFRAM
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Details of the floating point data type
+
+PERL_MODBUILD=	yes
+
+MAN3=		Data::Float.3
+
+.include <bsd.port.mk>
