@@ -1,0 +1,20 @@
+bin/rtf2text
+bin/rtf2html
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/RTF/Parser/.packlist
+%%SITE_PERL%%/RTF/Parser.pm
+%%SITE_PERL%%/RTF/Charsets.pm
+%%SITE_PERL%%/RTF/Config.pm
+%%SITE_PERL%%/RTF/Control.pm
+%%SITE_PERL%%/RTF/HTML/Converter.pm
+%%SITE_PERL%%/RTF/HTML/Converter/ansi.pm
+%%SITE_PERL%%/RTF/HTML/Converter/charmap.pm
+%%SITE_PERL%%/RTF/TEXT/Converter.pm
+%%SITE_PERL%%/RTF/TEXT/Converter/ansi.pm
+%%SITE_PERL%%/RTF/TEXT/Converter/charmap.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/RTF/Parser
+@dirrm %%SITE_PERL%%/RTF/HTML/Converter
+@dirrm %%SITE_PERL%%/RTF/HTML
+@dirrm %%SITE_PERL%%/RTF/TEXT/Converter
+@dirrm %%SITE_PERL%%/RTF/TEXT
+@dirrm %%SITE_PERL%%/RTF
+@dirrmtry %%SITE_PERL%%/RTF
