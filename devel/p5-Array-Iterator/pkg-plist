@@ -1,0 +1,6 @@
+%%SITE_PERL%%/Array/Iterator.pm
+%%SITE_PERL%%/Array/Iterator/BiDirectional.pm
+%%SITE_PERL%%/Array/Iterator/Circular.pm
+%%SITE_PERL%%/Array/Iterator/Reusable.pm
+@dirrm %%SITE_PERL%%/Array/Iterator
+@dirrmtry %%SITE_PERL%%/Array
