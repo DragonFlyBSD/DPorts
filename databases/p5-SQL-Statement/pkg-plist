@@ -1,0 +1,26 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/SQL/Statement/.packlist
+%%SITE_PERL%%/SQL/Dialects/ANSI.pm
+%%SITE_PERL%%/SQL/Dialects/AnyData.pm
+%%SITE_PERL%%/SQL/Dialects/CSV.pm
+%%SITE_PERL%%/SQL/Dialects/Role.pm
+%%SITE_PERL%%/SQL/Eval.pm
+%%SITE_PERL%%/SQL/Parser.pm
+%%SITE_PERL%%/SQL/Statement.pm
+%%SITE_PERL%%/SQL/Statement/Embed.pod
+%%SITE_PERL%%/SQL/Statement/Function.pm
+%%SITE_PERL%%/SQL/Statement/Functions.pm
+%%SITE_PERL%%/SQL/Statement/GetInfo.pm
+%%SITE_PERL%%/SQL/Statement/Operation.pm
+%%SITE_PERL%%/SQL/Statement/Placeholder.pm
+%%SITE_PERL%%/SQL/Statement/RAM.pm
+%%SITE_PERL%%/SQL/Statement/Roadmap.pod
+%%SITE_PERL%%/SQL/Statement/Structure.pod
+%%SITE_PERL%%/SQL/Statement/Syntax.pod
+%%SITE_PERL%%/SQL/Statement/Term.pm
+%%SITE_PERL%%/SQL/Statement/TermFactory.pm
+%%SITE_PERL%%/SQL/Statement/Util.pm
+@dirrmtry %%SITE_PERL%%/SQL/Statement
+@dirrmtry %%SITE_PERL%%/SQL/Dialects
+@dirrmtry %%SITE_PERL%%/SQL
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/SQL/Statement
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/SQL
