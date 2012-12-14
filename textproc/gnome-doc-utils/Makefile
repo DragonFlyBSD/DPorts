@@ -1,0 +1,43 @@
+# New ports collection makefile for:	gnome-doc-utils
+# Date created:				11 November 2004
+# Whom:					Adam Weinberger <adamw@FreeBSD.org>
+#
+# $FreeBSD: ports/textproc/gnome-doc-utils/Makefile,v 1.33 2012/11/17 06:01:57 svnexp Exp $
+#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.84 2010/09/29 15:20:02 kwm Exp $
+#
+
+PORTNAME=	gnome-doc-utils
+PORTVERSION=	0.20.3
+CATEGORIES=	textproc gnome
+MASTER_SITES=	GNOME
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	GNOME doc utils
+
+BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
+		${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml2 \
+    		gawk:${PORTSDIR}/lang/gawk
+RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
+		${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml2 \
+		${LOCALBASE}/share/xml/docbook/4.3/catalog.xml:${PORTSDIR}/textproc/docbook-xml-430 \
+		${LOCALBASE}/share/xml/docbook/4.4/catalog.xml:${PORTSDIR}/textproc/docbook-xml-440
+
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+MAKE_JOBS_UNSAFE=yes
+USE_GETTEXT=	yes
+USE_GNOME=	gnomehier gnomehack libxslt intlhack
+USE_PYTHON=	yes
+INSTALLS_OMF=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-omf-dir=${PREFIX}/share/omf
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+MAN1=		xml2po.1
+
+post-install:
+	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}/xml2po
+	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}/xml2po/modes
+
+.include <bsd.port.mk>
