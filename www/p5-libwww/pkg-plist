@@ -1,0 +1,37 @@
+bin/GET
+bin/HEAD
+bin/POST
+bin/lwp-download
+bin/lwp-dump
+bin/lwp-mirror
+bin/lwp-request
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/LWP/.packlist
+%%SITE_PERL%%/LWP.pm
+%%SITE_PERL%%/LWP/Authen/Basic.pm
+%%SITE_PERL%%/LWP/Authen/Digest.pm
+%%SITE_PERL%%/LWP/Authen/Ntlm.pm
+%%SITE_PERL%%/LWP/ConnCache.pm
+%%SITE_PERL%%/LWP/Debug.pm
+%%SITE_PERL%%/LWP/DebugFile.pm
+%%SITE_PERL%%/LWP/MemberMixin.pm
+%%SITE_PERL%%/LWP/Protocol.pm
+%%SITE_PERL%%/LWP/Protocol/GHTTP.pm
+%%SITE_PERL%%/LWP/Protocol/cpan.pm
+%%SITE_PERL%%/LWP/Protocol/data.pm
+%%SITE_PERL%%/LWP/Protocol/file.pm
+%%SITE_PERL%%/LWP/Protocol/ftp.pm
+%%SITE_PERL%%/LWP/Protocol/gopher.pm
+%%SITE_PERL%%/LWP/Protocol/http.pm
+%%SITE_PERL%%/LWP/Protocol/loopback.pm
+%%SITE_PERL%%/LWP/Protocol/mailto.pm
+%%SITE_PERL%%/LWP/Protocol/nntp.pm
+%%SITE_PERL%%/LWP/Protocol/nogo.pm
+%%SITE_PERL%%/LWP/RobotUA.pm
+%%SITE_PERL%%/LWP/Simple.pm
+%%SITE_PERL%%/LWP/UserAgent.pm
+%%SITE_PERL%%/lwpcook.pod
+%%SITE_PERL%%/lwptut.pod
+@dirrmtry %%SITE_PERL%%/LWP/Protocol
+@dirrmtry %%SITE_PERL%%/LWP/Authen
+@dirrmtry %%SITE_PERL%%/LWP
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/LWP
