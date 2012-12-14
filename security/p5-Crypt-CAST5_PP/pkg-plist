@@ -1,0 +1,13 @@
+%%SITE_PERL%%/Crypt/CAST5_PP.pm
+%%SITE_PERL%%/Crypt/CAST5_PP/Tables.pm
+%%SITE_PERL%%/auto/Crypt/CAST5_PP/autosplit.ix
+%%SITE_PERL%%/auto/Crypt/CAST5_PP/decrypt.al
+%%SITE_PERL%%/auto/Crypt/CAST5_PP/encrypt.al
+%%SITE_PERL%%/auto/Crypt/CAST5_PP/init.al
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/CAST5_PP/.packlist
+@dirrm %%SITE_PERL%%/Crypt/CAST5_PP
+@dirrmtry %%SITE_PERL%%/Crypt
+@dirrm %%SITE_PERL%%/auto/Crypt/CAST5_PP
+@dirrmtry %%SITE_PERL%%/auto/Crypt
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/CAST5_PP
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt
