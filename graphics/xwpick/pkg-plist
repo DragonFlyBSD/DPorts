@@ -1,0 +1,5 @@
+bin/xwpick
+%%PORTDOCS%%share/doc/xwpick/CHANGELOG
+%%PORTDOCS%%share/doc/xwpick/CNL_ARTICLE.PS
+%%PORTDOCS%%share/doc/xwpick/README
+%%PORTDOCS%%@dirrm share/doc/xwpick
