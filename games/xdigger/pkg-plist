@@ -1,0 +1,10 @@
+bin/xdigger
+%%PORTDOCS%%share/doc/xdigger/ChangeLog
+%%PORTDOCS%%share/doc/xdigger/README
+share/xdigger/diamond.au
+share/xdigger/step.au
+share/xdigger/stone.au
+share/xdigger/xdigger.hiscore
+share/xdigger/xdigger.level
+%%PORTDOCS%%@dirrm share/doc/xdigger
+@dirrm share/xdigger
