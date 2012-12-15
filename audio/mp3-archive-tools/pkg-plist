@@ -1,0 +1,11 @@
+@comment $FreeBSD: ports/audio/mp3-archive-tools/pkg-plist,v 1.3 2012/11/17 05:54:38 svnexp Exp $
+bin/cddbtofilename
+bin/filenametoid3
+bin/freedbtofilename
+bin/id3tofilename
+bin/movemusic
+bin/mp3id
+bin/pmv
+bin/update-music-symlinks
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/mp3-archive-tools/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/mp3-archive-tools
