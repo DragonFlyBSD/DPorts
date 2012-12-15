@@ -1,0 +1,3 @@
+bin/lupe
+%%PORTDOCS%%%%DOCSDIR%%/lupe.doc
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
