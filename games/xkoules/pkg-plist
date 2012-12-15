@@ -1,0 +1,17 @@
+bin/xkoules
+%%PORTDOCS%%%%DOCSDIR%%/ANNOUNCE
+%%PORTDOCS%%%%DOCSDIR%%/BUGS
+%%PORTDOCS%%%%DOCSDIR%%/Card
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/Koules.FAQ
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+libexec/koules.sndsrv.freebsd
+%%DATADIR%%/colize.raw
+%%DATADIR%%/creator1.raw
+%%DATADIR%%/creator2.raw
+%%DATADIR%%/destroy1.raw
+%%DATADIR%%/destroy2.raw
+%%DATADIR%%/end.raw
+%%DATADIR%%/start.raw
+@dirrm %%DATADIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
