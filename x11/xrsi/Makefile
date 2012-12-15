@@ -1,0 +1,32 @@
+# New ports collection makefile for:	xrsi
+# Date created:		2007-03-17
+# Whom:			Martin Tournoij <carpetsmoker@xs4all.nl>
+#
+# $FreeBSD: ports/x11/xrsi/Makefile,v 1.8 2012/11/17 06:03:22 svnexp Exp $
+#
+
+PORTNAME=	xrsi
+PORTVERSION=	0.9
+PORTREVISION=	2
+CATEGORIES=	x11
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Minimalist break enforcer for Linux/Unix for the prevention of RSI
+
+USE_XORG=	x11
+PLIST_FILES=	bin/xrsi
+PORTDOCS=	Readme Licence
+
+do-build:
+	${CC} ${CFLAGS} -I${LOCALBASE}/include -L${LOCALBASE}/lib -lX11 -o ${WRKSRC}/xrsi ${WRKSRC}/xrsi.c
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/xrsi ${PREFIX}/bin/
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/Readme  ${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/Licence ${DOCSDIR}/
+.endif
+
+.include <bsd.port.mk>
