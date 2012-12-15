@@ -1,0 +1,24 @@
+# New ports collection makefile for:	ipfw-graph
+# Date created:		16 November 2001
+# Whom:			Edwin Groothuis (edwin@mavetju.org)
+#
+# $FreeBSD: ports/net/ipfw-graph/Makefile,v 1.13 2012/11/17 06:00:03 svnexp Exp $
+#
+
+PORTNAME=	ipfw-graph
+PORTVERSION=	1.4
+PORTREVISION=	4
+CATEGORIES=	net
+MASTER_SITES=	http://www.mavetju.org/download/
+
+MAINTAINER=	edwin@mavetju.org
+COMMENT=	Graphical overview of traffic going through your IPFW rules
+
+USE_GNOME=	gtk12
+
+MAN8=		ipfw-al.8 ipfw-graph.8
+
+pre-patch:
+	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' ${WRKSRC}/ipfw-graph.h
+
+.include <bsd.port.mk>
