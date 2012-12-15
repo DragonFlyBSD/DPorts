@@ -1,0 +1,4 @@
+bin/mxico
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/READMEj
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
