@@ -1,0 +1,8 @@
+bin/we
+bin/wpe
+bin/xwe
+bin/xwpe
+%%DATADIR%%/help.key
+%%DATADIR%%/help.xwpe
+%%DATADIR%%/syntax_def
+@dirrm %%DATADIR%%
