@@ -136,16 +136,7 @@ _JAVA_PORTS_INSTALLED!=		make -V _JAVA_PORTS_INSTALLED USE_JAVA=1 -f ${PORTSDIR}
 UID!=	${ID} -u
 .endif
 
-.if exists(${LOCALBASE}/sbin/pkg_info)
-PKG_INFO?=	${LOCALBASE}/sbin/pkg_info
-.else
-PKG_INFO?=	/usr/sbin/pkg_info
-.endif
-.if !defined(PKGINSTALLVER)
-PKGINSTALLVER!=	${PKG_INFO} -P 2>/dev/null | ${SED} -e 's/.*: //'
-.endif
-
-.endif
+PKGINSTALLVER?= 20100403
 
 INDEXDIR?=	${PORTSDIR}
 INDEXFILE?=	INDEX-${DFLYVERSION:C/([0-9]*)[0-9]{5}/\1/}
