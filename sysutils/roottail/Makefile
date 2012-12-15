@@ -1,0 +1,39 @@
+# New ports collection makefile for:	roottail
+# Date created:			30 September 1999
+# Whom:				Chris D. Faulhaber <jedgar@fxp.org>
+#
+# $FreeBSD: ports/sysutils/roottail/Makefile,v 1.19 2012/11/17 06:01:43 svnexp Exp $
+#
+
+PORTNAME=	roottail
+PORTVERSION=	1.2
+PORTREVISION=	3
+CATEGORIES=	sysutils
+MASTER_SITES=	http://www.goof.com/pcg/marc/data/
+DISTNAME=	root-tail-${PORTVERSION}
+
+.if defined(WITH_EXTRA_PATCH)
+PATCH_SITES=	http://bmp-plugins.berlios.de/misc/patches/
+PATCHFILES=	roottail-1.2+xfce.diff
+PATCH_DIST_STRIP=	-p1
+.endif
+
+MAINTAINER=	xride@FreeBSD.org
+COMMENT=	Print text directly to X11 root window
+
+MAN1=		root-tail.1
+PLIST_FILES=	bin/root-tail
+USE_IMAKE=	yes
+USE_XORG=	x11 xext
+MAKE_ARGS=	CC="${CC}"
+
+pre-everything::
+.if defined(WITH_EXTRA_PATCH)
+	@${ECHO_MSG}
+	@${ECHO_MSG} "Note: this extra patch is not supported by roottail maintainer."
+	@${ECHO_MSG} "Before reporting any problems you should build roottail without"
+	@${ECHO_MSG} "this option."
+	@${ECHO_MSG}
+.endif
+
+.include <bsd.port.mk>
