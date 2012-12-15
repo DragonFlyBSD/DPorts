@@ -1,0 +1,31 @@
+# Created by: Patrick Gardella <patrick@freebsd.org>
+# $FreeBSD: ports/graphics/backfract/Makefile,v 1.13 2012/11/17 05:58:01 svnexp Exp $
+
+PORTNAME=	backfract
+PORTVERSION=	1.1.2
+PORTREVISION=	2
+CATEGORIES=	graphics
+MASTER_SITES=	http://www.igoweb.org/~wms/comp/backfract/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Fractal image animated wallpaper program
+
+LICENSE=	GPLv2 # (or later)
+
+USE_XORG=	x11
+GNU_CONFIGURE=	yes
+ALL_TARGET=	# none
+MAKE_JOBS_UNSAFE=	yes
+
+PLIST_FILES=	bin/backfract
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		"/'-O3'/s|^|#| ; \
+		 /'-O'/s|^|#| ; \
+		 s|linux/soundcard.h|sys/soundcard.h|" ${WRKSRC}/configure
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/backfract ${PREFIX}/bin
+
+.include <bsd.port.mk>
