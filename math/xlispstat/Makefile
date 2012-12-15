@@ -1,0 +1,29 @@
+# New ports collection makefile for:	xlisp-stat
+# Date created:				Tue Aug 15 17:57:48 CDT 1995
+# Whom:					Eric L. Hernes <erich@rrnet.com>
+#
+# $FreeBSD: ports/math/xlispstat/Makefile,v 1.22 2012/11/17 05:59:32 svnexp Exp $
+#
+
+PORTNAME=	xlispstat
+PORTVERSION=	3.52.20
+PORTREVISION=	2
+CATEGORIES=	math lang lisp
+MASTER_SITES=	ftp://ftp.stat.umn.edu/pub/xlispstat/current/ \
+		http://lib.stat.cmu.edu/xlispstat/Src/current/ \
+		ftp://ftp.stat.unipg.it/pub/stat/xlispstat/current/ \
+		ftp://srsuna.shlrc.mq.edu.au/pub/xlispstat/current/ \
+		ftp://statlab.uni-heidelberg.de/pub/mirrors/umn/xlispstat/current/
+DISTNAME=	${PORTNAME}-${PORTVERSION:S/./-/g}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A statistics/X11 based lisp interpreter
+
+GNU_CONFIGURE=	yes
+ALL_TARGET=	${PORTNAME}
+USE_XORG=	x11
+
+post-patch:
+	@${REINPLACE_CMD} '/^static double fmax/d' ${WRKSRC}/lowess.c
+
+.include <bsd.port.mk>
