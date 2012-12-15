@@ -1,0 +1,23 @@
+# ex:ts=8
+# Ports collection makefile for:	gsfv
+# Date created:			18 September 2002
+# Whom:				Frederic Cambus
+#
+# $FreeBSD: ports/security/gsfv/Makefile,v 1.9 2012/11/17 06:01:04 svnexp Exp $
+#
+
+PORTNAME=	gsfv
+PORTVERSION=	0.2.1
+PORTREVISION=	4
+CATEGORIES=	security
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	ijliao
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Create or verify Simple File Verification (SFV) checksum files
+
+PLIST_FILES=	bin/gsfv
+USE_GNOME=	gtk12
+GNU_CONFIGURE=	yes
+
+.include <bsd.port.mk>
