@@ -1,0 +1,24 @@
+# New ports collection makefile for:	xkbprint
+# Date Created:				17 Feb 2006
+# Whom:					Florent Thoumie <flz@FreeBSD.org>
+#
+# $FreeBSD: ports/x11/xkbprint/Makefile,v 1.4 2012/11/17 06:03:21 svnexp Exp $
+#
+
+PORTNAME=	xkbprint
+PORTVERSION=	1.0.3
+CATEGORIES=	x11
+
+MAINTAINER=	x11@FreeBSD.org
+COMMENT=	Utility for printing an XKB keyboard description
+
+LICENSE=	MIT
+
+XORG_CAT=	app
+USE_XORG=	xkbfile x11
+
+PLIST_FILES=	bin/xkbprint
+
+MAN1=		xkbprint.1
+
+.include <bsd.port.mk>
