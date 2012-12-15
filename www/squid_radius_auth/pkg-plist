@@ -1,0 +1,5 @@
+etc/squid/squid_radius_auth.conf
+etc/squid/squid_radius_auth.conf.default
+libexec/squid/squid_radius_auth
+@dirrmtry libexec/squid/
+@dirrmtry etc/squid/
