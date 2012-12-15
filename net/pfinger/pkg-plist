@@ -1,0 +1,4 @@
+bin/finger
+%%WITHOUT_X11%%bin/pfinger
+sbin/fingerd
+sbin/in.fingerd
