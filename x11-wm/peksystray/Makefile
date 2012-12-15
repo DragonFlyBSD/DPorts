@@ -1,0 +1,29 @@
+# New ports collection makefile for:	PekSysTray
+# Date created:				08 Jul 2004
+# Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
+#
+# $FreeBSD: ports/x11-wm/peksystray/Makefile,v 1.15 2012/11/17 06:03:43 svnexp Exp $
+#
+
+PORTNAME=	peksystray
+PORTVERSION=	0.4.0
+PORTREVISION=	2
+CATEGORIES=	x11-wm
+MASTER_SITES=	SF
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A system tray dockapp similar to the GNOME notification area applet
+
+LICENSE=	GPLv2
+
+USE_BZIP2=	yes
+USE_XORG=	x11 ice sm
+GNU_CONFIGURE=	yes
+
+PLIST_FILES=	bin/peksystray
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|@x_includes@|| ; s|@x_libraries@||' \
+		${WRKSRC}/src/Makefile.in
+
+.include <bsd.port.mk>
