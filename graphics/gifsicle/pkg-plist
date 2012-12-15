@@ -1,0 +1,5 @@
+bin/gifdiff
+bin/gifsicle
+%%X11%%bin/gifview
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
