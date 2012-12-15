@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/x11/xcb-util-keysyms/pkg-plist,v 1.2 2012/11/17 06:03:20 svnexp Exp $
+include/xcb/xcb_keysyms.h
+lib/libxcb-keysyms.so.1
+lib/libxcb-keysyms.so
+lib/libxcb-keysyms.la
+lib/libxcb-keysyms.a
+libdata/pkgconfig/xcb-keysyms.pc
