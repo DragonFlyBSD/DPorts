@@ -1,0 +1,10 @@
+@comment $FreeBSD: ports/audio/libmp3-archive-perl/pkg-plist,v 1.2 2012/11/17 05:54:36 svnexp Exp $
+etc/mp3archiverc
+%%SITE_PERL%%/MP3/Archive.pm
+%%SITE_PERL%%/MP3/Archive/Config.pm
+%%SITE_PERL%%/MP3/Archive/Format.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/MP3/Archive/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/MP3/Archive
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/MP3
+@dirrmtry %%SITE_PERL%%/MP3/Archive
+@dirrmtry %%SITE_PERL%%/MP3
