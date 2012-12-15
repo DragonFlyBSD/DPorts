@@ -1,0 +1,23 @@
+bin/ion
+bin/ion-edit
+bin/ion-man
+bin/ion-runinxterm
+bin/ion-ssh
+bin/ion-view
+etc/ion/bindings-default.conf
+etc/ion/bindings-sun.conf
+etc/ion/kludges.conf
+etc/ion/look-brownsteel.conf
+etc/ion/look-greyviolet.conf
+etc/ion/look-simpleblue.conf
+etc/ion/look-wheat.conf
+@unexec if cmp -s %D/etc/ion/ion.conf %D/etc/ion/sample.conf; then rm -f %D/etc/ion/ion.conf; fi
+etc/ion/sample.conf
+@exec [ -f %B/ion.conf ] || cp %B/%f %B/ion.conf
+share/doc/ion/README
+share/doc/ion/LICENSE
+share/doc/ion/ChangeLog
+share/doc/ion/config.txt
+share/doc/ion/functions.txt
+@dirrm share/doc/ion
+@dirrmtry etc/ion
