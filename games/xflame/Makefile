@@ -1,0 +1,25 @@
+# Created by: Kris Kennaway <kkennawa@physics.adelaide.edu.au>
+# $FreeBSD: ports/games/xflame/Makefile,v 1.14 2012/11/17 05:57:56 svnexp Exp $
+
+PORTNAME=	xflame
+PORTVERSION=	1.1.1
+PORTREVISION=	2
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=kris
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A cool animated flame
+
+DEPRECATED=	No more public distfiles
+
+USE_IMAKE=	yes
+USE_XORG=	x11 xext
+
+NO_INSTALL_MANPAGES=	yes
+PLIST_FILES=		bin/xflame
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/xflame ${PREFIX}/bin/xflame
+
+.include <bsd.port.mk>
