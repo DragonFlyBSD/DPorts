@@ -1,0 +1,24 @@
+# $FreeBSD: ports/japanese/p5-Encode-JP-Mobile/Makefile,v 1.8 2012/11/17 05:58:38 svnexp Exp $
+
+PORTNAME=	Encode-JP-Mobile
+PORTVERSION=	0.30
+CATEGORIES=	japanese perl5
+MASTER_SITES=	CPAN
+
+MAINTAINER=	kuriyama@FreeBSD.org
+COMMENT=	Perl extension for encoding for mobile phones in Japan
+
+RUN_DEPENDS=	\
+	p5-File-ShareDir>=0.05:${PORTSDIR}/devel/p5-File-ShareDir \
+	p5-MIME-Tools>=5.428:${PORTSDIR}/mail/p5-MIME-Tools
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+TEST_DEPENDS=	\
+	p5-YAML>0:${PORTSDIR}/textproc/p5-YAML
+
+PERL_CONFIGURE=	yes
+
+.include <bsd.port.pre.mk>
+
+PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
+
+.include <bsd.port.post.mk>
