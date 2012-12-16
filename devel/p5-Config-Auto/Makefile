@@ -1,0 +1,35 @@
+# New ports collection makefile for:	p5-Config-Auto
+# Date created:				August 29 2003
+# Whom:					Lars Thegler <lars@thegler.dk>
+#
+# $FreeBSD: ports/devel/p5-Config-Auto/Makefile,v 1.27 2012/11/17 05:56:08 svnexp Exp $
+
+PORTNAME=	Config-Auto
+PORTVERSION=	0.42
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:BINGOS
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	lth@FreeBSD.org
+COMMENT=	Magical config file parser
+
+BUILD_DEPENDS=	p5-Config-IniFiles>=0:${PORTSDIR}/devel/p5-Config-IniFiles \
+		p5-YAML>=0.67:${PORTSDIR}/textproc/p5-YAML
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String
+
+PERL_CONFIGURE=	yes
+
+OPTIONS=	XMLSIMPLE "Support for XML config files" off
+
+.include <bsd.port.pre.mk>
+
+.ifdef(WITH_XMLSIMPLE)
+BUILD_DEPENDS+=	p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple
+RUN_DEPENDS+=	p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple
+.endif
+
+MAN3=		Config::Auto.3
+
+.include <bsd.port.post.mk>
