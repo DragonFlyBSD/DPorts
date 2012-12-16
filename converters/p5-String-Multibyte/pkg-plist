@@ -1,0 +1,24 @@
+%%SITE_PERL%%/String/Multibyte/Unicode.pm
+%%SITE_PERL%%/String/Multibyte/UTF8.pm
+%%SITE_PERL%%/String/Multibyte/UTF32LE.pm
+%%SITE_PERL%%/String/Multibyte/UTF32BE.pm
+%%SITE_PERL%%/String/Multibyte/UTF16LE.pm
+%%SITE_PERL%%/String/Multibyte/UTF16BE.pm
+%%SITE_PERL%%/String/Multibyte/UHC.pm
+%%SITE_PERL%%/String/Multibyte/ShiftJIS.pm
+%%SITE_PERL%%/String/Multibyte/Johab.pm
+%%SITE_PERL%%/String/Multibyte/Grapheme.pm
+%%SITE_PERL%%/String/Multibyte/GBK.pm
+%%SITE_PERL%%/String/Multibyte/GB18030.pm
+%%SITE_PERL%%/String/Multibyte/EUC_TW.pm
+%%SITE_PERL%%/String/Multibyte/EUC_JP.pm
+%%SITE_PERL%%/String/Multibyte/EUC.pm
+%%SITE_PERL%%/String/Multibyte/Bytes.pm
+%%SITE_PERL%%/String/Multibyte/Big5Plus.pm
+%%SITE_PERL%%/String/Multibyte/Big5.pm
+%%SITE_PERL%%/String/Multibyte.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/String/Multibyte/.packlist
+@dirrmtry %%SITE_PERL%%/String/Multibyte
+@dirrmtry %%SITE_PERL%%/String
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/String/Multibyte
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/String
