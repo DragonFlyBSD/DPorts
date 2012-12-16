@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/net/linc/files/patch-Makefile.in,v 1.3 2012/11/17 06:00:05 svnexp Exp $
+
+--- Makefile.in	2002/02/12 12:58:07	1.1
++++ Makefile.in	2002/02/12 13:09:12
+@@ -89,7 +89,7 @@
+ VERSION = @VERSION@
+ WARN_CFLAGS = @WARN_CFLAGS@
+ 
+-SUBDIRS = include src test docs
++SUBDIRS = include src docs
+ 
+ m4datadir = $(datadir)/aclocal
+ m4data_DATA = linc.m4
