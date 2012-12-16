@@ -1,0 +1,24 @@
+# New ports collection makefile for:	p5-Net-DNS-Async
+# Date created:				3 May 2008
+# Whom:				 	Sahil Tandon <sahil@tandon.net>
+#
+# $FreeBSD: ports/dns/p5-Net-DNS-Async/Makefile,v 1.6 2012/11/17 05:57:10 svnexp Exp $
+#
+
+PORTNAME=	Net-DNS-Async
+PORTVERSION=	1.07
+CATEGORIES=	dns perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	sahil@FreeBSD.org
+COMMENT=	Asynchronous DNS helper for high volume applications
+
+BUILD_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Net::DNS::Async.3
+
+.include <bsd.port.mk>
