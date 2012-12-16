@@ -1,0 +1,8 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mozilla/CA/.packlist
+%%SITE_PERL%%/Mozilla/CA.pm
+%%SITE_PERL%%/Mozilla/CA/cacert.pem
+%%SITE_PERL%%/Mozilla/mk-ca-bundle.pl
+@dirrm %%SITE_PERL%%/Mozilla/CA
+@dirrmtry %%SITE_PERL%%/Mozilla
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Mozilla/CA
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Mozilla
