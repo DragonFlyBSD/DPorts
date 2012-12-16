@@ -1,0 +1,4 @@
+bin/version.pl
+%%SITE_PERL%%/Module/Info/File.pm
+@dirrmtry %%SITE_PERL%%/Module/Info
+@dirrmtry %%SITE_PERL%%/Module
