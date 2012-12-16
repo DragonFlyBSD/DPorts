@@ -1,0 +1,7 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Filter/SAXT/.packlist
+%%SITE_PERL%%/XML/Filter/SAXT.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Filter/SAXT
+@dirrmtry %%SITE_PERL%%/XML/Filter
+@dirrmtry %%SITE_PERL%%/XML
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Filter
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
