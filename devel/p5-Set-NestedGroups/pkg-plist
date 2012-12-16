@@ -1,0 +1,7 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Set/NestedGroups/.packlist
+%%SITE_PERL%%/Set/NestedGroups.pm
+%%SITE_PERL%%/Set/NestedGroups/Member.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Set/NestedGroups
+@dirrm %%SITE_PERL%%/Set/NestedGroups
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Set
+@dirrmtry %%SITE_PERL%%/Set
