@@ -1,0 +1,21 @@
+# New ports collection makefile for:	p5-Digest-Nilsimsa
+# Date created:				13 August 2002
+# Whom:					Yen-Ming Lee <leeym@leeym.com>
+#
+# $FreeBSD: ports/security/p5-Digest-Nilsimsa/Makefile,v 1.7 2012/11/17 06:01:12 svnexp Exp $
+#
+
+PORTNAME=	Digest-Nilsimsa
+PORTVERSION=	0.06
+CATEGORIES=	security perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	leeym@FreeBSD.org
+COMMENT=	Perl version of Nilsimsa code
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Digest::Nilsimsa.3
+
+.include <bsd.port.mk>
