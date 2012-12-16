@@ -1,0 +1,3 @@
+%%SITE_PERL%%/Text/Diff/HTML.pm
+@dirrmtry %%SITE_PERL%%/Text/Diff
+@dirrmtry %%SITE_PERL%%/Text
