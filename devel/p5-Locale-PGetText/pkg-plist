@@ -1,0 +1,7 @@
+bin/XText
+bin/MsgFormat
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Locale/PGetText/.packlist
+%%SITE_PERL%%/Locale/PGetText.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Locale/PGetText
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Locale
+@dirrmtry %%SITE_PERL%%/Locale
