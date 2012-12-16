@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Tie/FileLRUCache.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie/FileLRUCache/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie/FileLRUCache
+@dirrmtry %%SITE_PERL%%/Tie
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie
