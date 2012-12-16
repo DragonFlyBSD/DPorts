@@ -1,0 +1,37 @@
+bin/croco-%%VERSION%%-config
+bin/csslint-%%VERSION%%
+include/libcroco-%%VERSION%%/libcroco/cr-additional-sel.h
+include/libcroco-%%VERSION%%/libcroco/cr-attr-sel.h
+include/libcroco-%%VERSION%%/libcroco/cr-cascade.h
+include/libcroco-%%VERSION%%/libcroco/cr-declaration.h
+include/libcroco-%%VERSION%%/libcroco/cr-doc-handler.h
+include/libcroco-%%VERSION%%/libcroco/cr-enc-handler.h
+include/libcroco-%%VERSION%%/libcroco/cr-fonts.h
+include/libcroco-%%VERSION%%/libcroco/cr-input.h
+include/libcroco-%%VERSION%%/libcroco/cr-num.h
+include/libcroco-%%VERSION%%/libcroco/cr-om-parser.h
+include/libcroco-%%VERSION%%/libcroco/cr-parser.h
+include/libcroco-%%VERSION%%/libcroco/cr-parsing-location.h
+include/libcroco-%%VERSION%%/libcroco/cr-prop-list.h
+include/libcroco-%%VERSION%%/libcroco/cr-pseudo.h
+include/libcroco-%%VERSION%%/libcroco/cr-rgb.h
+include/libcroco-%%VERSION%%/libcroco/cr-sel-eng.h
+include/libcroco-%%VERSION%%/libcroco/cr-selector.h
+include/libcroco-%%VERSION%%/libcroco/cr-simple-sel.h
+include/libcroco-%%VERSION%%/libcroco/cr-statement.h
+include/libcroco-%%VERSION%%/libcroco/cr-string.h
+include/libcroco-%%VERSION%%/libcroco/cr-style.h
+include/libcroco-%%VERSION%%/libcroco/cr-stylesheet.h
+include/libcroco-%%VERSION%%/libcroco/cr-term.h
+include/libcroco-%%VERSION%%/libcroco/cr-tknzr.h
+include/libcroco-%%VERSION%%/libcroco/cr-token.h
+include/libcroco-%%VERSION%%/libcroco/cr-utils.h
+include/libcroco-%%VERSION%%/libcroco/libcroco-config.h
+include/libcroco-%%VERSION%%/libcroco/libcroco.h
+lib/libcroco-%%VERSION%%.a
+lib/libcroco-%%VERSION%%.la
+lib/libcroco-%%VERSION%%.so
+lib/libcroco-%%VERSION%%.so.3
+libdata/pkgconfig/libcroco-%%VERSION%%.pc
+@dirrm include/libcroco-%%VERSION%%/libcroco
+@dirrm include/libcroco-%%VERSION%%
