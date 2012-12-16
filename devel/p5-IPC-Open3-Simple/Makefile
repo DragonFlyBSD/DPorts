@@ -1,0 +1,21 @@
+# New ports collection makefile for:	p5-IPC-Open3-Simple
+# Date created:		2006-07-21
+# Whom:			Gea-Suan Lin <gslin@gslin.org>
+#
+# $FreeBSD: ports/devel/p5-IPC-Open3-Simple/Makefile,v 1.4 2012/11/17 05:56:19 svnexp Exp $
+#
+
+PORTNAME=	IPC-Open3-Simple
+PORTVERSION=	0.04
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	gslin@gslin.org
+COMMENT=	A simple alternative to IPC::Open3
+
+PERL_CONFIGURE=	yes
+
+MAN3=		IPC::Open3::Simple.3
+
+.include <bsd.port.mk>
