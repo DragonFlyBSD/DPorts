@@ -1,0 +1,21 @@
+# New ports collection makefile for:	p5-Encode-HanExtra
+# Date created:				19 August 2005
+# Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
+#
+# $FreeBSD: ports/chinese/p5-Encode-HanExtra/Makefile,v 1.7 2012/11/17 05:54:57 svnexp Exp $
+#
+
+PORTNAME=	Encode-HanExtra
+PORTVERSION=	0.23
+CATEGORIES=	chinese perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	leeym@FreeBSD.org
+COMMENT=	Extra sets of Chinese encodings
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Encode::HanExtra.3 Encode::TW::Unisys::SOSI1.3 Encode::TW::Unisys::SOSI2.3
+
+.include <bsd.port.mk>
