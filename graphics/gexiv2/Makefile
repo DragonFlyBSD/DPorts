@@ -1,0 +1,34 @@
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: ports/graphics/gexiv2/Makefile,v 1.10 2012/11/17 05:58:07 svnexp Exp $
+
+PORTNAME=	gexiv2
+PORTVERSION=	0.4.1
+CATEGORIES=	graphics
+MASTER_SITES=	http://yorba.org/download/${PORTNAME}/${PORTVERSION:R}/
+DISTNAME=	libgexiv2-${PORTVERSION}
+
+MAINTAINER=	lioux@FreeBSD.org
+COMMENT=	GObject-based wrapper around Exiv2 library
+
+LICENSE=	GPLv2
+
+BUILD_DEPENDS=	libtool:${PORTSDIR}/devel/libtool \
+		gm4:${PORTSDIR}/devel/m4
+LIB_DEPENDS=	exiv2:${PORTSDIR}/graphics/exiv2
+
+USE_BZIP2=	yes
+USE_GNOME=	glib20
+USE_GMAKE=	yes
+USE_LDCONFIG=	yes
+USE_PKGCONFIG=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -E \
+		-e 's|^([[:space:]]+)m4[[:space:]]|\1gm4 |' \
+		-e 's|\$$\(LIB\)/pkgconfig|libdata/pkgconfig|' \
+			${WRKSRC}/${MAKEFILE}
+
+pre-install:
+	@${MKDIR} ${PREFIX}/share/vala/vapi
+
+.include <bsd.port.mk>
