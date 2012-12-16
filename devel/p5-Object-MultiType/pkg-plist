@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Object/MultiType/.packlist
+%%SITE_PERL%%/Object/MultiType.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Object/MultiType
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Object
+@dirrmtry %%SITE_PERL%%/Object
