@@ -1,0 +1,7 @@
+bin/pppclient
+@unexec if cmp -s %D/%%ETCDIR%%/client.conf %D/%%ETCDIR%%/client.conf.sample; then rm -f %D/%%ETCDIR%%/client.conf; fi
+%%ETCDIR%%/client.conf.sample
+%%PORTDOCS%%%%DOCSDIR%%/client.LISEZ-MOI
+%%PORTDOCS%%%%DOCSDIR%%/client.README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrmtry %%ETCDIR%%
