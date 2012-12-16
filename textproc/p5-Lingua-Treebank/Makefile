@@ -1,0 +1,25 @@
+# New ports collection makefile for:	textproc/p5-Lingua-Treebank
+# Date created:				27 August 2008
+# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
+#
+# $FreeBSD: ports/textproc/p5-Lingua-Treebank/Makefile,v 1.4 2012/11/17 06:02:05 svnexp Exp $
+#
+
+PORTNAME=	Lingua-Treebank
+PORTVERSION=	0.16
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Perl extension for manipulating the Penn Treebank format
+
+PERL_CONFIGURE=	yes
+
+MAN1=	get-words.1 list-edges.1 list-rewrites.1 \
+	tree-collapse.1 tree-inflate.1 vocabulary.1
+MAN3=	Lingua::Treebank.3 \
+	Lingua::Treebank::Const.3 \
+	Lingua::Treebank::HeadFinder.3
+
+.include <bsd.port.mk>
