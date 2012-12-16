@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Devel/TraceCalls/.packlist
+%%SITE_PERL%%/Devel/TraceCalls.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Devel/TraceCalls
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Devel
+@dirrmtry %%SITE_PERL%%/Devel
