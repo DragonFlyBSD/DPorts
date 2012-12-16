@@ -1,0 +1,11 @@
+@comment $FreeBSD: ports/net/libfixbuf/pkg-plist,v 1.7 2012/11/17 06:00:04 svnexp Exp $
+include/fixbuf/autoinc.h
+include/fixbuf/public.h
+include/fixbuf/private.h
+lib/libfixbuf-1.0.2.so.8
+lib/libfixbuf-1.0.2.so
+lib/libfixbuf.so
+lib/libfixbuf.la
+lib/libfixbuf.a
+libdata/pkgconfig/libfixbuf.pc
+@dirrmtry include/fixbuf
