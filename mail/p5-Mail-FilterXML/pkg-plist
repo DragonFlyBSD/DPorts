@@ -1,0 +1,4 @@
+%%SITE_PERL%%/Mail/mailfilter.pl
+%%SITE_PERL%%/Mail/FilterXML.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mail/FilterXML/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Mail/FilterXML

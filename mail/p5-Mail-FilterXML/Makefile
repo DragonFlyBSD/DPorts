@@ -1,0 +1,25 @@
+# New ports collection makefile for:	Mail-FilterXML
+# Date created:				Wed Jan  3 14:28:38 2001
+# Whom:					will
+#
+# $FreeBSD: ports/mail/p5-Mail-FilterXML/Makefile,v 1.12 2012/11/17 05:59:08 svnexp Exp $
+#
+
+PORTNAME=	Mail-FilterXML
+PORTVERSION=	0.3
+CATEGORIES=	mail perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Perl module that allows writing mail filter rules in XML
+
+BUILD_DEPENDS=	p5-Mail-Audit>=0:${PORTSDIR}/mail/p5-Mail-Audit \
+		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Mail::FilterXML.3
+
+.include <bsd.port.mk>
