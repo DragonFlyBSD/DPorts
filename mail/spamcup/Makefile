@@ -1,0 +1,30 @@
+# New ports collection makefile for:	spamcup
+# Date created:				07 February 2005
+# Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
+#
+# $FreeBSD: ports/mail/spamcup/Makefile,v 1.9 2012/11/17 05:59:14 svnexp Exp $
+#
+
+PORTNAME=	spamcup
+PORTVERSION=	1.09
+PORTREVISION=	3
+CATEGORIES=	mail
+MASTER_SITES=	SF
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A tool for automatic spam reporting via Spamcop.net
+
+LICENSE=	GPLv1
+
+RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
+		p5-Getopt-ArgvFile>=0:${PORTSDIR}/devel/p5-Getopt-ArgvFile \
+		p5-HTML-Form>=0:${PORTSDIR}/www/p5-HTML-Form
+
+PERL_CONFIGURE=	yes
+
+PLIST_FILES=	bin/spamcup.pl ${SITE_PERL_REL}/spamcup.pl \
+		${SITE_PERL_REL}/${PERL_ARCH}/auto/Spamcup/.packlist
+
+PLIST_DIRS=	${SITE_PERL_REL}/${PERL_ARCH}/auto/Spamcup
+
+.include <bsd.port.mk>
