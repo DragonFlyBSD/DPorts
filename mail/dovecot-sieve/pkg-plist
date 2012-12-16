@@ -1,0 +1,9 @@
+@comment $FreeBSD: ports/mail/dovecot-sieve/pkg-plist,v 1.4 2012/11/17 05:59:01 svnexp Exp $
+bin/sieve-test
+bin/sievec
+bin/sieved
+lib/dovecot/lda/lib90_sieve_plugin.a
+lib/dovecot/lda/lib90_sieve_plugin.la
+lib/dovecot/lda/lib90_sieve_plugin.so
+@dirrmtry lib/dovecot/lda
+@dirrmtry lib/dovecot
