@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/devel/p5-Gearman-Server/files/gearmand-perl.in,v 1.3 2012/11/17 05:56:17 svnexp Exp $
+#
+
+# PROVIDE: %%NAME%%
+# REQUIRE: DAEMON
+
+# Add the following line to /etc/rc.conf to enable `%%NAME%%':
+#
+#%%NAME%%_enable="YES"
+
+. /etc/rc.subr
+
+name="%%NAME%%"
+rcvar=%%NAME%%_enable
+
+command="%%PREFIX%%/bin/gearmand"
+command_interpreter="%%PREFIX%%/bin/perl"
+command_args="--daemon"
+
+# read configuration and set defaults
+load_rc_config "$name"
+: ${%%NAME%%_enable="NO"}
+
+run_rc_command "$1"
