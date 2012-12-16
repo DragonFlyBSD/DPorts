@@ -1,0 +1,5 @@
+%%SITE_PERL%%/HTML/SimpleParse.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/SimpleParse/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/SimpleParse
+@dirrmtry %%SITE_PERL%%/HTML
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML
