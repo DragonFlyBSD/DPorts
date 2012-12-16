@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/WhiteHole/.packlist
+%%SITE_PERL%%/Class/WhiteHole.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/WhiteHole
+@dirrmtry %%SITE_PERL%%/Class
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class
