@@ -1,0 +1,6 @@
+%%SITE_PERL%%/Text/ASCIITable.pm
+%%SITE_PERL%%/Text/ASCIITable/Wrap.pm
+@dirrm %%SITE_PERL%%/Text/ASCIITable
+@dirrmtry %%SITE_PERL%%/Text
+%%PORTDOCS%%%%EXAMPLESDIR%%/ansi-example.pl
+%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%
