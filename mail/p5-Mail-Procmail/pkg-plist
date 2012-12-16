@@ -1,0 +1,4 @@
+%%SITE_PERL%%/Mail/Procmail.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mail/Procmail/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Mail/Procmail
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Mail
