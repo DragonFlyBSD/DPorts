@@ -1,0 +1,9 @@
+bin/othello-demo
+%%SITE_PERL%%/Games/AlphaBeta.pm
+%%SITE_PERL%%/Games/AlphaBeta/Position.pm
+%%SITE_PERL%%/Games/AlphaBeta/Reversi.pm
+%%SITE_PERL%%/Games/Sequential.pm
+%%SITE_PERL%%/Games/Sequential/Position.pm
+@dirrm %%SITE_PERL%%/Games/AlphaBeta
+@dirrm %%SITE_PERL%%/Games/Sequential
+@dirrmtry %%SITE_PERL%%/Games
