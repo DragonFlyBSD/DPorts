@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Getopt/ArgvFile.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Getopt/ArgvFile/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Getopt/ArgvFile
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Getopt
+@dirrmtry %%SITE_PERL%%/Getopt
