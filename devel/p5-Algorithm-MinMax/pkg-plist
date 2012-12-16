@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Algorithm/MinMax.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Algorithm/MinMax/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Algorithm/MinMax
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Algorithm
+@dirrmtry %%SITE_PERL%%/Algorithm
