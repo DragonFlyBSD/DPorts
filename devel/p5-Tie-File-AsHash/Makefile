@@ -1,0 +1,25 @@
+# New ports collection makefile for:	p5-Tie-File-AsHash
+# Date created:				13 December 2007
+# Whom:	      				Ruben de Groot <rdg@bzerk.org>
+#
+# $FreeBSD: ports/devel/p5-Tie-File-AsHash/Makefile,v 1.3 2012/11/17 05:56:35 svnexp Exp $
+#
+
+PORTNAME=	Tie-File-AsHash
+PORTVERSION=	0.08
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	Tie
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	rdg@bzerk.org
+COMMENT=	Access the lines of a disk file via a Perl hash
+
+BUILD_DEPENDS=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
+RUN_DEPENDS=	p5-Tie-File>=0:${PORTSDIR}/devel/p5-Tie-File
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Tie::File::AsHash.3
+
+.include <bsd.port.mk>
