@@ -1,0 +1,12 @@
+@comment $FreeBSD: ports/emulators/libspectrum/pkg-plist,v 1.8 2012/11/17 05:57:21 svnexp Exp $
+include/libspectrum.h
+lib/libspectrum.a
+lib/libspectrum.la
+lib/libspectrum.so
+lib/libspectrum.so.8
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/THANKS
+%%PORTDOCS%%%%DOCSDIR%%/libspectrum.txt
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
