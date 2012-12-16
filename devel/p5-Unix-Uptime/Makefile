@@ -1,0 +1,24 @@
+# New ports collection makefile for:	p5-Unix-Uptime
+# Date created:		2009-01-19
+# Whom:			Murilo Opsfelder <mopsfelder@gmail.com>
+#
+# $FreeBSD: ports/devel/p5-Unix-Uptime/Makefile,v 1.7 2012/11/17 05:56:36 svnexp Exp $
+#
+
+PORTNAME=	Unix-Uptime
+PORTVERSION=	0.3701
+PORTEPOCH=	1
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	mopsfelder@gmail.com
+COMMENT=	Determine the current uptime in seconds
+
+PERL_MODBUILD=	yes
+
+MAN3=		Unix::Uptime.3 \
+		Unix::Uptime::BSD.3 \
+		Unix::Uptime::Linux.3
+
+.include <bsd.port.mk>
