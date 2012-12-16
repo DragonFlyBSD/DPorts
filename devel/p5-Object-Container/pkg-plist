@@ -1,0 +1,8 @@
+@comment $FreeBSD: ports/devel/p5-Object-Container/pkg-plist,v 1.2 2012/11/17 05:56:24 svnexp Exp $
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Object/Container/.packlist
+%%SITE_PERL%%/Object/Container.pm
+%%SITE_PERL%%/Object/Container/ja.pod
+@dirrmtry %%SITE_PERL%%/Object/Container
+@dirrmtry %%SITE_PERL%%/Object
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Object/Container
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Object
