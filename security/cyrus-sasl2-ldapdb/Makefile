@@ -1,0 +1,80 @@
+# New ports collection makefile for:	cyrus-sasl2-ldapdb
+# Date created:				May 18 2005
+# Whom:					ume@FreeBSD.org
+#
+# $FreeBSD: ports/security/cyrus-sasl2-ldapdb/Makefile,v 1.16 2012/11/17 06:01:03 svnexp Exp $
+#
+
+PORTNAME=	ldapdb
+PORTVERSION=	2.1.25
+#PORTREVISION=	0
+CATEGORIES=	security ipv6
+MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/%SUBDIR%/ \
+		ftp://ftp.westbend.net/pub/cyrus-mail/%SUBDIR%/ \
+		http://www.transit.hanse.de/mirror/ftp.andrew.cmu.edu/pub/cyrus-mail/%SUBDIR%/
+MASTER_SITE_SUBDIR=	. OLD-VERSIONS/sasl
+PKGNAMEPREFIX=	cyrus-sasl-
+DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
+
+MAINTAINER=	ume@FreeBSD.org
+COMMENT=	SASL LDAPDB auxprop plugin
+
+LICENSE=	BSD
+LICENSE_FILE=	${WRKSRC}/COPYING
+
+LIB_DEPENDS=	sasl2.2:${PORTSDIR}/security/cyrus-sasl2
+
+CYRUS_SASL2_DIR=${MASTERDIR}/../cyrus-sasl2
+DISTINFO_FILE=	${CYRUS_SASL2_DIR}/distinfo
+PATCHDIR=	${CYRUS_SASL2_DIR}/files
+INSTALL_WRKSRC=	${WRKSRC}/plugins
+
+USE_LDCONFIG=	yes
+
+USE_AUTOTOOLS=	libtool
+USE_OPENSSL=	yes
+GNU_CONFIGURE=	yes
+
+.if defined(WITH_OPENLDAP_VER)
+WANT_OPENLDAP_VER=	${WITH_OPENLDAP_VER}
+.endif
+USE_OPENLDAP=	yes
+
+CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
+		--with-plugindir=${PREFIX}/lib/sasl2 \
+		--with-dbpath=${PREFIX}/etc/sasldb2 \
+		--includedir=${PREFIX}/include \
+		--enable-static \
+		--with-rc4=openssl
+
+CONFIGURE_ARGS+=--with-dblib=none \
+		--disable-anon \
+		--disable-cram \
+		--disable-digest \
+		--disable-gssapi \
+		--disable-krb4 \
+		--disable-ntlm \
+		--disable-otp \
+		--disable-plain \
+		--disable-scram
+
+CONFIGURE_ARGS+=--enable-ldapdb --with-ldap=${LOCALBASE}
+
+PLIST_FILES=	lib/sasl2/libldapdb.a \
+		lib/sasl2/libldapdb.la \
+		lib/sasl2/libldapdb.so \
+		lib/sasl2/libldapdb.so.2
+
+.include <bsd.port.pre.mk>
+
+.if ${OPENSSLBASE} == /usr
+CONFIGURE_ARGS+=--with-openssl=yes
+.else
+CONFIGURE_ARGS+=--with-openssl=${OPENSSLBASE}
+.endif
+
+do-build:
+	cd ${WRKSRC}/include && ${MAKE}
+	cd ${WRKSRC}/plugins && ${MAKE}
+
+.include <bsd.port.post.mk>
