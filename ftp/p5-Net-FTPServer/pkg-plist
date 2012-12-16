@@ -1,0 +1,35 @@
+bin/dbeg1-ftpd.pl
+bin/ftpd.pl
+bin/inmem-ftpd.pl
+bin/proxy-ftpd.pl
+bin/ro-ftpd.pl
+%%SITE_PERL%%/Net/FTPServer.pm
+%%SITE_PERL%%/Net/FTPServer/DBeg1/DirHandle.pm
+%%SITE_PERL%%/Net/FTPServer/DBeg1/FileHandle.pm
+%%SITE_PERL%%/Net/FTPServer/DBeg1/IOBlob.pm
+%%SITE_PERL%%/Net/FTPServer/DBeg1/Server.pm
+%%SITE_PERL%%/Net/FTPServer/DirHandle.pm
+%%SITE_PERL%%/Net/FTPServer/FileHandle.pm
+%%SITE_PERL%%/Net/FTPServer/Full/DirHandle.pm
+%%SITE_PERL%%/Net/FTPServer/Full/FileHandle.pm
+%%SITE_PERL%%/Net/FTPServer/Full/Server.pm
+%%SITE_PERL%%/Net/FTPServer/Handle.pm
+%%SITE_PERL%%/Net/FTPServer/InMem/DirHandle.pm
+%%SITE_PERL%%/Net/FTPServer/InMem/FileHandle.pm
+%%SITE_PERL%%/Net/FTPServer/InMem/Server.pm
+%%SITE_PERL%%/Net/FTPServer/Proxy/DirHandle.pm
+%%SITE_PERL%%/Net/FTPServer/Proxy/FileHandle.pm
+%%SITE_PERL%%/Net/FTPServer/Proxy/Server.pm
+%%SITE_PERL%%/Net/FTPServer/RO/DirHandle.pm
+%%SITE_PERL%%/Net/FTPServer/RO/FileHandle.pm
+%%SITE_PERL%%/Net/FTPServer/RO/Server.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/FTPServer/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/FTPServer
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net
+@dirrm %%SITE_PERL%%/Net/FTPServer/RO
+@dirrm %%SITE_PERL%%/Net/FTPServer/Proxy
+@dirrm %%SITE_PERL%%/Net/FTPServer/InMem
+@dirrm %%SITE_PERL%%/Net/FTPServer/Full
+@dirrm %%SITE_PERL%%/Net/FTPServer/DBeg1
+@dirrm %%SITE_PERL%%/Net/FTPServer
+@dirrmtry %%SITE_PERL%%/Net
