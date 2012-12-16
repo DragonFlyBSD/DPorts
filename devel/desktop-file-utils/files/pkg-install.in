@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/devel/desktop-file-utils/files/pkg-install.in,v 1.3 2012/11/17 05:55:40 svnexp Exp $
+#
+# Initialize the desktop directories and MIME cache.
+
+if [ "$2" != "POST-INSTALL" ]; then
+    exit 0
+fi
+
+for pmdir in %%PORT_MIMEDIRS%%; do
+    mkdir -p ${pmdir}
+done
+
+${PKG_PREFIX}/bin/update-desktop-database -q
+
+exit 0
