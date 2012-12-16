@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie/DNS/.packlist
+%%SITE_PERL%%/Tie/DNS.pm
+@dirrmtry %%SITE_PERL%%/Tie
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie/DNS
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie
