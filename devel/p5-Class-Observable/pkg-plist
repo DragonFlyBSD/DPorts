@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Class/Observable.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/Observable/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/Observable
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class
+@dirrmtry %%SITE_PERL%%/Class
