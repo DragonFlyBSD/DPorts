@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Validate/Net/.packlist
+%%SITE_PERL%%/Validate/Net.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Validate/Net
+@dirrmtry %%SITE_PERL%%/Validate
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Validate
