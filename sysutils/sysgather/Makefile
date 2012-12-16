@@ -1,0 +1,24 @@
+# New ports collection makefile for:	sysgather
+# Date created:				16 December 2005
+# Whom:					roam@FreeBSD.org
+#
+# $FreeBSD: ports/sysutils/sysgather/Makefile,v 1.12 2012/11/17 06:01:47 svnexp Exp $
+#
+
+PORTNAME=	sysgather
+PORTVERSION=	1.0.b9
+CATEGORIES=	sysutils
+MASTER_SITES=	http://devel.ringlet.net/sysutils/sysgather/
+DISTNAME=	${PORTNAME}-${PORTVERSION:S/.b/pre/}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Keep configuration files under version control
+
+BUILD_DEPENDS=	p5-Config-IniFiles>=0:${PORTSDIR}/devel/p5-Config-IniFiles
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+USE_PERL5=	yes
+
+MAN1=		sysgather.1
+
+.include <bsd.port.mk>
