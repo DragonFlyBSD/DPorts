@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Test/LongString.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Test/LongString/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Test/LongString
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Test
+@dirrmtry %%SITE_PERL%%/Test
