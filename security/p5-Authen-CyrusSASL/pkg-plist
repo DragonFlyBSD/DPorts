@@ -1,0 +1,8 @@
+%%SITE_PERL%%/Authen/CyrusSASL.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Authen/CyrusSASL/.packlist
+%%SITE_PERL%%/auto/Authen/CyrusSASL/autosplit.ix
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Authen/CyrusSASL
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Authen
+@dirrm %%SITE_PERL%%/auto/Authen/CyrusSASL
+@dirrmtry %%SITE_PERL%%/auto/Authen
+@dirrmtry %%SITE_PERL%%/Authen
