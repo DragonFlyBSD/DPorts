@@ -1,0 +1,17 @@
+bin/admsXml
+lib/libadmsAdmstpath.a
+lib/libadmsAdmstpath.la
+lib/libadmsAdmstpath.so
+lib/libadmsAdmstpath.so.0
+lib/libadmsElement.a
+lib/libadmsElement.la
+lib/libadmsElement.so
+lib/libadmsElement.so.0
+lib/libadmsPreprocessor.a
+lib/libadmsPreprocessor.la
+lib/libadmsPreprocessor.so
+lib/libadmsPreprocessor.so.0
+lib/libadmsVeriloga.a
+lib/libadmsVeriloga.la
+lib/libadmsVeriloga.so
+lib/libadmsVeriloga.so.0
