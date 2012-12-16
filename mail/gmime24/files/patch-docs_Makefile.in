@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/mail/gmime24/files/patch-docs_Makefile.in,v 1.2 2012/11/17 05:59:03 svnexp Exp $
+
+--- docs/Makefile.in.orig
++++ docs/Makefile.in
+@@ -201,7 +201,7 @@
+ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = reference tutorial
++SUBDIRS = 
+ EXTRA_DIST = gtkdocs_fix
+ all: all-recursive
+ 
