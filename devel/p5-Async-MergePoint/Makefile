@@ -1,0 +1,31 @@
+# New ports collection makefile for:	p5-Async-MergePoint2
+# Date created:		2009-08-04
+# Whom:			Felippe M. Motta <lippe@shire.freebsd.org>
+#
+# $FreeBSD: ports/devel/p5-Async-MergePoint/Makefile,v 1.4 2012/11/17 05:56:05 svnexp Exp $
+#
+
+PORTNAME=	Async-MergePoint
+PORTVERSION=	0.04
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	johan@stromnet.se
+COMMENT=	Perl modules that resynchronise diverged control flow
+
+TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
+		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Async::MergePoint.3
+
+PLIST_FILES=	%%SITE_PERL%%/Async/MergePoint.pm \
+		%%SITE_PERL%%/mach/auto/Async/MergePoint/.packlist
+
+PLIST_DIRS=	%%SITE_PERL%%/mach/auto/Async/MergePoint \
+		%%SITE_PERL%%/mach/auto/Async \
+		%%SITE_PERL%%/Async
+
+.include <bsd.port.mk>
