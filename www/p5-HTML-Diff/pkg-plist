@@ -1,0 +1,6 @@
+bin/htmldiff
+%%SITE_PERL%%/HTML/Diff.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Diff/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Diff
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML
+@dirrmtry %%SITE_PERL%%/HTML
