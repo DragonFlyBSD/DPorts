@@ -1,0 +1,7 @@
+%%SITE_PERL%%/IPC/Shareable.pm
+%%SITE_PERL%%/IPC/Shareable/SharedMem.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/IPC/Shareable/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/IPC/Shareable
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/IPC
+@dirrm %%SITE_PERL%%/IPC/Shareable
+@dirrm %%SITE_PERL%%/IPC
