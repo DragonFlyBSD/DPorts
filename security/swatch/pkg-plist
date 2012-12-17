@@ -1,0 +1,10 @@
+bin/swatch
+%%SITE_PERL%%/Swatch/Actions.pm
+%%SITE_PERL%%/Swatch/Threshold.pm
+%%SITE_PERL%%/Swatch/Throttle.pm
+%%SITE_PERL%%/auto/Swatch/Actions/autosplit.ix
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/swatch/.packlist
+@dirrm %%SITE_PERL%%/Swatch
+@dirrm %%SITE_PERL%%/auto/Swatch/Actions
+@dirrm %%SITE_PERL%%/auto/Swatch
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/swatch
