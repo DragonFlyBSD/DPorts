@@ -1,0 +1,25 @@
+# New ports collection makefile for:	py-gitdb
+# Date created:				March 15, 2011
+# Whom:					Wen Heping <wenheping@gmail.com>
+#
+# $FreeBSD: ports/devel/py-gitdb/Makefile,v 1.3 2012/11/17 05:56:47 svnexp Exp $
+#
+
+PORTNAME=	gitdb
+PORTVERSION=	0.5.4
+CATEGORIES=	devel python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	wen@FreeBSD.org
+COMMENT=	Pure Python git object database
+
+LICENSE=	BSD
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}async>=0.6.1:${PORTSDIR}/devel/py-async \
+		${PYTHON_PKGNAMEPREFIX}smmap>=0.8.0:${PORTSDIR}/devel/py-smmap
+
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+
+.include <bsd.port.mk>
