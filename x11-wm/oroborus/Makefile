@@ -1,0 +1,28 @@
+# New ports collection makefile for:	oroborus
+# Date created:				19 April 2001
+# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
+#
+# $FreeBSD: ports/x11-wm/oroborus/Makefile,v 1.16 2012/11/17 06:03:43 svnexp Exp $
+#
+
+PORTNAME=	oroborus
+PORTVERSION=	2.0.18
+PORTREVISION=	1
+CATEGORIES=	x11-wm
+MASTER_SITES=	http://www.oroborus.org/debian/dists/sid/main/source/x11/ \
+		http://matt.peterson.org/FreeBSD/ports/
+DISTNAME=	${PORTNAME}_${PORTVERSION}
+
+MAINTAINER=	matt@peterson.org
+COMMENT=	A small and simple GNOME-compatible window manager
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+USE_XORG=	xpm
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+
+MAN1=		oroborus.1
+MAN5=		oroborusrc.5
+
+.include <bsd.port.mk>
