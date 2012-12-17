@@ -1,0 +1,33 @@
+# New ports collection makefile for: larswm
+# Date created: Sat Oct  7 21:25:11 EDT 2000
+# Whom: lab@fnurt.net
+#
+# $FreeBSD: ports/x11-wm/larswm/Makefile,v 1.15 2012/11/17 06:03:43 svnexp Exp $
+#
+
+PORTNAME=	larswm
+PORTVERSION=	7.5.3
+PORTREVISION=	2
+CATEGORIES=	x11-wm
+MASTER_SITES=	SF/${PORTNAME}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Tiling Window Manager for X
+
+USE_IMAKE=	yes
+USE_XORG=	ice sm x11 xext xmu xt
+
+MAN1=		larsclock.1 larsmenu.1 larsremote.1 larswm.1
+PORTDOCS=	ChangeLog README README.9menu README.9wm \
+		sample.larswmrc sample.xsession
+PLIST_FILES=	bin/larsclock bin/larsmenu bin/larsremote bin/larswm
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for file in ${PORTDOCS}
+	${INSTALL_DATA} $(WRKSRC)/${file} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>
