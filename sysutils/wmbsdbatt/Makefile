@@ -1,0 +1,23 @@
+# New ports collection Makefile for: 	wmbsdbatt
+# Date created:				04 Feb 2004
+# Whom:					Josef El-Rayes <josef@FreeBSD.org>
+#
+# $FreeBSD: ports/sysutils/wmbsdbatt/Makefile,v 1.12 2012/11/17 06:01:50 svnexp Exp $
+
+PORTNAME=	wmbsdbatt
+PORTVERSION=	0.1
+PORTREVISION=	4
+CATEGORIES=	sysutils windowmaker
+MASTER_SITES=	http://homepage.univie.ac.at/l.ertl/wmbsdbatt/files/
+
+MAINTAINER=	xride@FreeBSD.org
+COMMENT=	Dockapp for battery & temperature monitoring through ACPI
+
+USE_XORG=	x11 xpm
+
+PLIST_FILES=	bin/wmbsdbatt
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/wmbsdbatt ${PREFIX}/bin
+
+.include <bsd.port.mk>
