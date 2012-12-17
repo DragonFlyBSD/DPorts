@@ -1,0 +1,20 @@
+bin/libvncserver-config
+include/rfb/default8x16.h
+include/rfb/keysym.h
+include/rfb/rfb.h
+include/rfb/rfbclient.h
+include/rfb/rfbconfig.h
+include/rfb/rfbint.h
+include/rfb/rfbproto.h
+include/rfb/rfbregion.h
+lib/libvncclient.a
+lib/libvncserver.a
+lib/libvncserver.so.0
+lib/libvncserver.so
+lib/libvncserver.la
+lib/libvncclient.so.0
+lib/libvncclient.so
+lib/libvncclient.la
+libdata/pkgconfig/libvncserver.pc
+libdata/pkgconfig/libvncclient.pc
+@dirrm include/rfb
