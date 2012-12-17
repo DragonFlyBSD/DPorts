@@ -1,0 +1,34 @@
+# Created by: <ports@c0decafe.net>
+# $FreeBSD: ports/net/onioncat/Makefile,v 1.5 2012/11/17 06:00:08 svnexp Exp $
+
+PORTNAME=	onioncat
+PORTVERSION=	0.2.2.r553
+CATEGORIES=	net security
+MASTER_SITES=	http://www.cypherpunk.at/ocat/download/Source/stable/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	IP-transparent Tor Hidden Service connector
+
+LICENSE=	GPLv3
+
+RUN_DEPENDS=	tor:${PORTSDIR}/security/tor
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
+		PTHREAD_LIBS="${PTHREAD_LIBS}"
+MAKE_JOBS_SAFE=	yes
+
+USE_RC_SUBR=	${PORTNAME}
+MAN1=		ocat.1
+PLIST_FILES=	bin/ocat
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		'/CFLAGS=/s|-O2|$$CFLAGS|' ${WRKSRC}/configure
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/src/ocat ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/ocat.1 ${MANPREFIX}/man/man1
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>
