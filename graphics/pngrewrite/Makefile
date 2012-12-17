@@ -1,0 +1,32 @@
+# New ports collection makefile for:	pngrewrite
+# Date created:		10 February 2004
+# Whom:			Daniel Roethlisberger <daniel@roe.ch>
+#
+# $FreeBSD: ports/graphics/pngrewrite/Makefile,v 1.8 2012/11/17 05:58:19 svnexp Exp $
+#
+
+PORTNAME=	pngrewrite
+PORTVERSION=	1.4.0
+PORTREVISION=	1
+CATEGORIES=	graphics
+MASTER_SITES=	http://entropymine.com/jason/pngrewrite/ \
+		http://mirror.roe.ch/dist/pngrewrite/
+
+MAINTAINER=	bapt@FreeBSD.org
+COMMENT=	A PNG palette optimizer
+
+LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+
+USE_ZIP=	yes
+NO_WRKSUBDIR=	yes
+
+PLIST_FILES=	bin/pngrewrite
+
+do-build:
+	${CC} ${CFLAGS} -I${LOCALBASE}/include -L${LOCALBASE}/lib \
+		-o ${WRKSRC}/pngrewrite ${WRKSRC}/pngrewrite.c ${WRKSRC}/libpngrewrite.c -lpng -lz -lm
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/pngrewrite ${PREFIX}/bin
+
+.include <bsd.port.mk>
