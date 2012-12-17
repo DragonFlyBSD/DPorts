@@ -1,0 +1,37 @@
+# New ports collection makefile for:	p5-Nginx-ReadBody
+# Date created:				2010-04-19
+# Whom:					jupengfei <jupengfei@gmail.com>
+#
+# $FreeBSD: ports/www/p5-Nginx-ReadBody/Makefile,v 1.5 2012/11/17 06:02:52 svnexp Exp $
+#
+
+PORTNAME=	Nginx-ReadBody
+PORTVERSION=	0.07
+CATEGORIES=	www perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:TPABA/Nginx
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Nginx embeded perl module to read and evaluate a request body
+
+OPTIONS_DEFINE=	NGINX_DEVEL
+NGINX_DEVEL_DESC=	Use nginx-devel
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNGINX_DEVEL}
+RUN_DEPENDS+=	nginx:${PORTSDIR}/www/nginx-devel
+.else
+RUN_DEPENDS+=	nginx:${PORTSDIR}/www/nginx
+.endif
+
+PERL_CONFIGURE=	YES
+
+pre-everything::
+		@${CAT} ${PKGMESSAGE}
+
+MAN3=		Nginx::ReadBody.3 \
+		Nginx::ReadBody::Russian.3
+
+.include <bsd.port.mk>
