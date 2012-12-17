@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/devel/py-Breve/pkg-plist,v 1.6 2012/11/17 05:56:44 svnexp Exp $
+bin/breve_server
+bin/html2breve
+bin/soup2breve
+bin/xsd2breve
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
