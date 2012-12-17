@@ -1,0 +1,59 @@
+# New ports collection makefile for:	xvkbd
+# Date created:		26 November 2000
+# Whom:			roam@FreeBSD.org
+#
+# $FreeBSD: ports/x11/xvkbd/Makefile,v 1.26 2012/11/17 06:03:23 svnexp Exp $
+#
+
+PORTNAME=	xvkbd
+PORTVERSION=	3.3
+CATEGORIES=	x11
+MASTER_SITES=	http://homepage3.nifty.com/tsato/xvkbd/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A virtual keyboard for X applications
+
+# FIXME: IMHO, there really ought to be a GPL-2+ option or some such.
+LICENSE=	GPLv2 GPLv3
+LICENSE_COMB=	dual
+
+MAN1=		xvkbd.1
+
+OPTIONS_DEFINE=	XAW3D XTEST NLS DOCS
+OPTIONS_DEFAULT=	XTEST
+XAW3D_DESC=	Xaw3d support
+XTEST_DESC=	XTEST extensions support
+
+USE_IMAKE=	yes
+USE_XORG=	ice sm x11 xaw xext xmu xpm xt
+
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MXAW3D}
+BUILD_DEPENDS=	${LOCALBASE}/lib/libXaw3d.a:${PORTSDIR}/x11-toolkits/Xaw3d
+.endif
+
+.if ${PORT_OPTIONS:MXAW3D}
+XK_DEFSUBST +=	-e 's/XCOMM define XAW3D/\#define XAW3D/;'
+.endif
+.if ${PORT_OPTIONS:MXTEST}
+XK_DEFSUBST +=	-e 's/XCOMM define XTEST/\#define XTEST/;'
+USE_XORG+=	xtst
+.endif
+.if ${PORT_OPTIONS:MNLS}
+XK_DEFSUBST +=	-e 's/XCOMM define I18N/\#define I18N/;'
+.endif
+
+post-patch:
+.if defined(XK_DEFSUBST)
+		${REINPLACE_CMD} ${XK_DEFSUBST} ${WRKSRC}/Imakefile
+.endif
+		${REINPLACE_CMD} -e "s@/usr/include/@${LOCALBASE}/include/@" ${WRKSRC}/XVkbd-small.ad
+
+.if ${PORT_OPTIONS:MDOCS}
+post-install:
+		${MKDIR} ${DOCSDIR}
+		${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
+.endif
+
+.include <bsd.port.post.mk>
