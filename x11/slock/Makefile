@@ -1,0 +1,27 @@
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: ports/x11/slock/Makefile,v 1.18 2012/11/17 06:03:19 svnexp Exp $
+
+PORTNAME=	slock
+PORTVERSION=	1.1
+CATEGORIES=	x11
+MASTER_SITES=	http://dl.suckless.org/tools/
+
+MAINTAINER=	bapt@FreeBSD.org
+COMMENT=	Simple X screen locker
+
+MAKE_ARGS=	PREFIX="${PREFIX}" X11LIB="${LOCALBASE}/lib" \
+		X11INC="${LOCALBASE}/include" CC="${CC}" \
+		MANPREFIX="${MANPREFIX}/man"
+PLIST_FILES=	bin/slock
+
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+MAKE_JOBS_SAFE=	yes
+USE_XORG=	x11 xt xproto xext
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-I/usr/include||;s|-L/usr/lib||;s|= -Os|+=|'\
+		-e 's|-DHAVE_SHADOW_H||' ${WRKSRC}/config.mk
+
+.include <bsd.port.mk>
