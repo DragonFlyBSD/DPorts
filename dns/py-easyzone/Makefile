@@ -1,0 +1,22 @@
+# Created by: Attila Nagy <bra@fsn.hu>
+# $FreeBSD: ports/dns/py-easyzone/Makefile,v 1.3 2012/11/17 05:57:10 svnexp Exp $
+
+PORTNAME=	easyzone
+PORTVERSION=	1.2.2
+PORTREVISION=	1
+CATEGORIES=	dns python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	bra@fsn.hu
+COMMENT=	DNS Zone abstraction module for Python
+
+LICENSE=	MIT
+
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dnspython>=1.9.4:${PORTSDIR}/dns/py-dnspython
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	easy_install
+
+.include <bsd.port.mk>
