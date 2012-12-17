@@ -1,0 +1,19 @@
+# Ports collection makefile for:	python-nexus
+# Date created:				29 Dec, 2009
+# Whom:					Wen Heping <wen@FreeBSD.org>
+#
+# $FreeBSD: ports/biology/python-nexus/Makefile,v 1.5 2012/11/17 05:54:53 svnexp Exp $
+#
+
+PORTNAME=	python-nexus
+PORTVERSION=	0.87
+CATEGORIES=	biology python
+MASTER_SITES=	CHEESESHOP
+
+MAINTAINER=	wen@FreeBSD.org
+COMMENT=	A generic nexus file format reader for python
+
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	easy_install
+
+.include <bsd.port.mk>
