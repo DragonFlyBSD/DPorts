@@ -1,0 +1,34 @@
+# New ports collection makefile for:	Filter-CBC
+# Date created:		11 Dec 2001
+# Whom:			Sergey Skvortsov <skv@protey.ru>
+#
+# $FreeBSD: ports/security/p5-Filter-CBC/Makefile,v 1.11 2012/11/17 06:01:13 svnexp Exp $
+#
+
+PORTNAME=	Filter-CBC
+PORTVERSION=	0.10
+CATEGORIES=	security perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Source filter for Cipher Block Chaining
+
+BUILD_DEPENDS=	p5-Filter>=0:${PORTSDIR}/devel/p5-Filter \
+		p5-Crypt-Rijndael>=0:${PORTSDIR}/security/p5-Crypt-Rijndael \
+		p5-Crypt-CBC>=0:${PORTSDIR}/security/p5-Crypt-CBC
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PLIST_SUB=	EXAMPLESDIR="share/examples/${PORTNAME}"
+PERL_CONFIGURE=	yes
+
+MAN3=		Filter::CBC.3
+
+post-install:
+.ifndef(NOPORTEXAMPLES)
+	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
+	@${MKDIR} ${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/* ${EXAMPLESDIR}
+.endif
+
+.include <bsd.port.mk>
