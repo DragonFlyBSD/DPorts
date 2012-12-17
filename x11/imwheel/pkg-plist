@@ -1,0 +1,5 @@
+bin/imwheel
+etc/imwheelrc
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/EMACS
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
