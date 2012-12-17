@@ -1,0 +1,57 @@
+bin/mindfocus
+%%EXAMPLESDIR%%/akane.mfc
+%%EXAMPLESDIR%%/misaki.mfc
+%%EXAMPLESDIR%%/nanase.mfc
+%%EXAMPLESDIR%%/mayu.mfc
+%%EXAMPLESDIR%%/mio.mfc
+%%EXAMPLESDIR%%/misaki2.mfc
+%%EXAMPLESDIR%%/mizuka.mfc
+%%EXAMPLESDIR%%/myu.mfc
+%%EXAMPLESDIR%%/ryoko.mfc
+%%EXAMPLESDIR%%/system.mindfocus
+%%EXAMPLESDIR%%/pixmaps/akane0.xpm
+%%EXAMPLESDIR%%/pixmaps/akane1.xpm
+%%EXAMPLESDIR%%/pixmaps/akane2.xpm
+%%EXAMPLESDIR%%/pixmaps/akane3.xpm
+%%EXAMPLESDIR%%/pixmaps/misaki0.xpm
+%%EXAMPLESDIR%%/pixmaps/misaki1.xpm
+%%EXAMPLESDIR%%/pixmaps/misaki2.xpm
+%%EXAMPLESDIR%%/pixmaps/misaki3.xpm
+%%EXAMPLESDIR%%/pixmaps/nanase0.xpm
+%%EXAMPLESDIR%%/pixmaps/nanase1.xpm
+%%EXAMPLESDIR%%/pixmaps/nanase2.xpm
+%%EXAMPLESDIR%%/pixmaps/nanase3.xpm
+%%EXAMPLESDIR%%/pixmaps/mayu1.xpm
+%%EXAMPLESDIR%%/pixmaps/mayu2.xpm
+%%EXAMPLESDIR%%/pixmaps/mayu3.xpm
+%%EXAMPLESDIR%%/pixmaps/mayu4.xpm
+%%EXAMPLESDIR%%/pixmaps/mio1.xpm
+%%EXAMPLESDIR%%/pixmaps/mio2.xpm
+%%EXAMPLESDIR%%/pixmaps/mio3.xpm
+%%EXAMPLESDIR%%/pixmaps/mio4.xpm
+%%EXAMPLESDIR%%/pixmaps/misaki2-1.xpm
+%%EXAMPLESDIR%%/pixmaps/misaki2-2.xpm
+%%EXAMPLESDIR%%/pixmaps/misaki2-3.xpm
+%%EXAMPLESDIR%%/pixmaps/misaki2-4.xpm
+%%EXAMPLESDIR%%/pixmaps/mizuka1.xpm
+%%EXAMPLESDIR%%/pixmaps/mizuka2.xpm
+%%EXAMPLESDIR%%/pixmaps/mizuka3.xpm
+%%EXAMPLESDIR%%/pixmaps/mizuka4.xpm
+%%EXAMPLESDIR%%/pixmaps/myu1.xpm
+%%EXAMPLESDIR%%/pixmaps/myu2.xpm
+%%EXAMPLESDIR%%/pixmaps/myu3.xpm
+%%EXAMPLESDIR%%/pixmaps/myu4.xpm
+%%EXAMPLESDIR%%/pixmaps/ryoko1.xpm
+%%EXAMPLESDIR%%/pixmaps/ryoko2.xpm
+%%EXAMPLESDIR%%/pixmaps/ryoko3.xpm
+%%EXAMPLESDIR%%/pixmaps/ryoko4.xpm
+%%EXAMPLESDIR%%/scripts/eye.ms
+%%PORTDOCS%%%%DOCSDIR%%/HISTORY.euc
+%%PORTDOCS%%%%DOCSDIR%%/MFC.euc
+%%PORTDOCS%%%%DOCSDIR%%/README.euc
+%%PORTDOCS%%%%DOCSDIR%%/SCRIPT.euc
+%%PORTDOCS%%%%DOCSDIR%%/TODO.euc
+@dirrm %%EXAMPLESDIR%%/pixmaps
+@dirrm %%EXAMPLESDIR%%/scripts
+@dirrm %%EXAMPLESDIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
