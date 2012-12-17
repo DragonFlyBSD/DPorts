@@ -1,0 +1,29 @@
+# New ports collection makefile for:	wmxss
+# Date created:		27 August 2002
+# Whom:			Bruce M Simpson <bms@FreeBSD.org>
+#
+# $FreeBSD: ports/x11/wmxss/Makefile,v 1.9 2012/11/17 06:03:20 svnexp Exp $
+#
+
+PORTNAME=	wmxss
+PORTVERSION=	0.1
+PORTREVISION=	2
+CATEGORIES=	x11
+MASTER_SITES=	http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/files/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Run xscreensaver modules inside a WindowMaker dock
+
+USE_XORG=	x11 xpm
+PLIST_FILES=	bin/wmxss
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/Src
+
+post-extract:
+	@( cd ${WRKSRC} ; ${MAKE} clean ; ${RM} -f .nfs* )
+
+post-patch:
+	@${REINPLACE_CMD} -E \
+		-e 's|-O2||' \
+		${BUILD_WRKSRC}/${MAKEFILE}
+
+.include <bsd.port.mk>
