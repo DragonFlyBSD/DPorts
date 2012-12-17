@@ -1,0 +1,26 @@
+# New ports collection makefile for: python-daemon
+# Date created: 7 Jul 2010
+# Whom:			jessekempf@gmail.com
+# $FreeBSD: ports/devel/py-daemon/Makefile,v 1.4 2012/11/17 05:56:45 svnexp Exp $
+#
+
+PORTNAME=	daemon
+PORTVERSION=	1.5.5
+PORTREVISION=	2
+CATEGORIES=	devel python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	python-daemon-${PORTVERSION}
+
+MAINTAINER=	jessekempf@gmail.com
+COMMENT=	Well-behaved daemon framework for Python
+
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lockfile>=0.9:${PORTSDIR}/devel/py-lockfile
+RUN_DEPENDS:=	${BUILD_REPENDS}
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_PKGNAME =	python-daemon
+PYDISTUTILS_NOEGGINFO =	yes
+
+.include <bsd.port.mk>
