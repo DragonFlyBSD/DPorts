@@ -1,0 +1,22 @@
+# New ports collection makefile for:	py-poster
+# Date created:		2010-12-30
+# Whom:			Nicola Vitale <nivit@FreeBSD.org>
+#
+# $FreeBSD: ports/www/py-poster/Makefile,v 1.3 2012/11/17 06:03:01 svnexp Exp $
+#
+
+PORTNAME=	poster
+PORTVERSION=	0.8.1
+#PORTREVISION=	0
+CATEGORIES=	www python
+MASTER_SITES=	http://atlee.ca/software/poster/dist/${PORTVERSION}/ \
+		http://nivi.interfree.it/distfiles/${PORTNAME}/
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	nivit@FreeBSD.org
+COMMENT=	Streaming HTTP uploads and multipart/form-data encoding
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	easy_install
+
+.include <bsd.port.mk>

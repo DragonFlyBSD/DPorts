@@ -1,0 +1,2 @@
+@comment $FreeBSD: ports/www/py-poster/pkg-plist,v 1.2 2012/11/17 06:03:01 svnexp Exp $
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
