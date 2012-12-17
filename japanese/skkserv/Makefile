@@ -1,0 +1,35 @@
+# New ports collection makefile for:	skkserv
+# Date created:		31 Oct 1998
+# Whom:			Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
+#
+# $FreeBSD: ports/japanese/skkserv/Makefile,v 1.23 2012/11/17 05:58:40 svnexp Exp $
+#
+
+PORTNAME=	skkserv
+PORTVERSION=	9.6
+PORTREVISION=	4
+CATEGORIES=	japanese
+MASTER_SITES=	${MASTER_SITE_PORTS_JP}
+DISTNAME=	skk${PORTVERSION}
+
+MAINTAINER=	hrs@FreeBSD.org
+COMMENT=	Dictionary server for the SKK Japanese-input software
+
+RUN_DEPENDS=	${LOCALBASE}/share/skk/${SKKJISYO}:${PORTSDIR}/japanese/skk-jisyo
+
+USE_RC_SUBR=	skkserv
+WRKSRC=		${WRKDIR}/skk-${PORTVERSION}
+GNU_CONFIGURE=	yes
+MAKE_ARGS=	SUBDIRS='skkserv'
+CONFIGURE_ARGS+=	--with-jisyo=${SKKJISYO} --libexecdir=${PREFIX}/sbin
+PLIST_FILES=	sbin/skkserv
+USERS=		skkserv
+GROUPS=		skkserv
+
+SKKJISYO_SIZE?=	L
+SKKJISYO?=	SKK-JISYO.${SKKJISYO_SIZE}
+
+do-install:
+	@${INSTALL_PROGRAM} ${WRKSRC}/skkserv/skkserv ${PREFIX}/sbin
+
+.include <bsd.port.mk>
