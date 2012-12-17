@@ -1,0 +1,2 @@
+bin/yabt-trans
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
