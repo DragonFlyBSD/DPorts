@@ -1,0 +1,3 @@
+bin/mbx2mbox
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/mbx2mbox/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/mbx2mbox
