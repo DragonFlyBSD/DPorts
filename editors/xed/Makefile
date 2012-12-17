@@ -1,0 +1,27 @@
+# New ports collection makefile for:	xed
+# Date created:		28 Jul 1996
+# Whom:			shanee
+#
+# $FreeBSD: ports/editors/xed/Makefile,v 1.22 2012/11/17 05:57:19 svnexp Exp $
+#
+
+PORTNAME=	xed
+PORTVERSION=	1.3
+PORTREVISION=	2
+CATEGORIES=	editors
+MASTER_SITES=	${MASTER_SITE_XCONTRIB}
+MASTER_SITE_SUBDIR=	editors
+DISTNAME=	${PORTNAME}${PORTVERSION}
+EXTRACT_SUFX=	.tar.Z
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A text editor for X
+
+USE_IMAKE=	yes
+USE_XORG=	xaw
+MAN1=		xed.1
+
+pre-build:
+	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} -e \
+		's|extern char \*malloc();|/\* extern char \*malloc(); \*/|g'
+.include <bsd.port.mk>
