@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Tk/Autoscroll.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Tk/Autoscroll/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tk/Autoscroll
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tk
+@dirrmtry %%SITE_PERL%%/Tk
