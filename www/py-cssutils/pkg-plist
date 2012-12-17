@@ -1,0 +1,19 @@
+bin/csscapture
+bin/csscombine
+bin/cssparse
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+%%EXAMPLESDIR%%/build.py
+%%EXAMPLESDIR%%/codec.py
+%%EXAMPLESDIR%%/cssencodings.py
+%%EXAMPLESDIR%%/customlog.py
+%%EXAMPLESDIR%%/imports.py
+%%EXAMPLESDIR%%/minify.py
+%%EXAMPLESDIR%%/parse.py
+%%EXAMPLESDIR%%/properties_with_same_name.py
+%%EXAMPLESDIR%%/selectors_tolower.py
+%%EXAMPLESDIR%%/serialize.py
+%%EXAMPLESDIR%%/style.py
+%%EXAMPLESDIR%%/styledeclaration.py
+%%EXAMPLESDIR%%/testutil.py
+%%EXAMPLESDIR%%/website.py
+@dirrm %%EXAMPLESDIR%%
