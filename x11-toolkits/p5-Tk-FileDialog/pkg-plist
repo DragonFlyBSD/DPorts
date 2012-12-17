@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Tk/FileDialog/.packlist
+%%SITE_PERL%%/Tk/FileDialog.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tk/FileDialog
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tk
+@dirrmtry %%SITE_PERL%%/Tk
