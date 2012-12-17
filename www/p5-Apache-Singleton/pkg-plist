@@ -1,0 +1,8 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache/Singleton/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache/Singleton
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache
+%%SITE_PERL%%/Apache/Singleton.pm
+%%SITE_PERL%%/Apache/Singleton/Process.pm
+%%SITE_PERL%%/Apache/Singleton/Request.pm
+@dirrm %%SITE_PERL%%/Apache/Singleton
+@dirrmtry %%SITE_PERL%%/Apache
