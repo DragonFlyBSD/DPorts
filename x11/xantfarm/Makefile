@@ -1,0 +1,24 @@
+# New ports collection makefile for:	xantfarm
+# Date created:		13 February 1997
+# Whom:			Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+#
+# $FreeBSD: ports/x11/xantfarm/Makefile,v 1.15 2012/11/17 06:03:20 svnexp Exp $
+#
+
+PORTNAME=	xantfarm
+PORTVERSION=	1.16
+PORTREVISION=	2
+CATEGORIES=	x11
+MASTER_SITES=	http://www.acme.com/software/xantfarm/
+DISTNAME=	${PORTNAME}_23oct1991
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Ant hill simulation on X11 root window
+
+WRKSRC=		${WRKDIR}/xantfarm
+USE_IMAKE=	yes
+USE_XORG=	x11 xext xt
+MAN1=		xantfarm.1
+PLIST_FILES=	bin/xantfarm
+
+.include <bsd.port.mk>
