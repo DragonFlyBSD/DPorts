@@ -1,0 +1,5 @@
+%%SITE_PERL%%/CGI/ArgChecker.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/ArgChecker/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/ArgChecker
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI
+@dirrmtry %%SITE_PERL%%/CGI
