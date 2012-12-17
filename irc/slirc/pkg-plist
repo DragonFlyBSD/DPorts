@@ -1,0 +1,39 @@
+bin/slirc
+lib/slirc/vfile-module.so
+lib/slirc/utils-module.so
+lib/slirc/scripts/LList.sl
+lib/slirc/scripts/RBL.sl
+lib/slirc/scripts/ak47.sl
+lib/slirc/scripts/bot-kernel.sl
+lib/slirc/scripts/bot.sl
+lib/slirc/scripts/colours.sl
+lib/slirc/scripts/config.sl
+lib/slirc/scripts/ctcp.sl
+lib/slirc/scripts/ctcp_cmd.sl
+lib/slirc/scripts/dcc.sl
+lib/slirc/scripts/editor.sl
+lib/slirc/scripts/flip.sl
+lib/slirc/scripts/goodies.sl
+lib/slirc/scripts/init.sl
+lib/slirc/scripts/lists.sl
+lib/slirc/scripts/op-stuff.sl
+lib/slirc/scripts/registry.sl
+lib/slirc/scripts/slftp.sl
+lib/slirc/scripts/standard.sl
+lib/slirc/scripts/tab-ex.sl
+@dirrm lib/slirc/scripts
+@dirrm lib/slirc
+%%PORTDOCS%%share/doc/slirc/BUGS
+%%PORTDOCS%%share/doc/slirc/CHANGES
+%%PORTDOCS%%share/doc/slirc/COPYING
+%%PORTDOCS%%share/doc/slirc/FAQ
+%%PORTDOCS%%share/doc/slirc/LACK-OF-WARRANTY
+%%PORTDOCS%%share/doc/slirc/README
+%%PORTDOCS%%share/doc/slirc/README.dropin
+%%PORTDOCS%%share/doc/slirc/README.gutsbonesbloodtoilsweat
+%%PORTDOCS%%%%JA%%share/doc/slirc/README.ja
+%%PORTDOCS%%share/doc/slirc/TODO
+%%PORTDOCS%%share/doc/slirc/VFile.txt
+%%PORTDOCS%%share/doc/slirc/slirc.hlp
+%%PORTDOCS%%share/doc/slirc/utilsfun.txt
+%%PORTDOCS%%@dirrm share/doc/slirc
