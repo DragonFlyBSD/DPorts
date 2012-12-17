@@ -1,0 +1,3 @@
+bin/xoids
+%%PORTDOCS%%share/doc/xoids/README
+%%PORTDOCS%%@dirrm share/doc/xoids
