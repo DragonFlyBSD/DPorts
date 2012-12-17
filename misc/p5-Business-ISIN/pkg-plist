@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Business/ISIN/.packlist
+%%SITE_PERL%%/Business/ISIN.pm
+@dirrmtry %%SITE_PERL%%/Business
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Business/ISIN
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Business
