@@ -1,0 +1,29 @@
+# New ports collection makefile for:	py-flask
+# Date created:		2010-09-26
+# Whom:			Olivier Duchateau <duchateau.olivier@gmail.com>
+#
+# $FreeBSD: ports/www/py-flask/Makefile,v 1.7 2012/11/17 06:03:00 svnexp Exp $
+#
+
+PORTNAME=	Flask
+PORTVERSION=	0.9
+CATEGORIES=	www python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	olivierd@FreeBSD.org
+COMMENT=	Micro webdevelopment framework for Python
+
+LICENSE=	BSD
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}werkzeug>=0.8:${PORTSDIR}/www/py-werkzeug \
+		${PYTHON_PKGNAMEPREFIX}Jinja2>=2.5:${PORTSDIR}/devel/py-Jinja2
+
+USE_PYTHON=	2.6+
+USE_PYDISTUTILS=	easy_install
+
+post-patch:
+	@${REINPLACE_CMD} -e "s|, 'flask.testsuite'||; \
+		s|test_suite|#test_suite|" ${WRKSRC}/setup.py
+
+.include <bsd.port.mk>
