@@ -1,0 +1,5 @@
+bin/editss
+libexec/editss
+%%DATADIR%%/editssrc
+%%DATADIR%%/ships
+@dirrm %%DATADIR%%
