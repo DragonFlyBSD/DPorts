@@ -1,0 +1,25 @@
+# New ports collection makefile for:	wmfirew
+# Date created:				16 May 2002
+# Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
+#
+# $FreeBSD: ports/misc/wmfirew/Makefile,v 1.9 2012/11/17 05:59:46 svnexp Exp $
+#
+
+PORTNAME=	wmfirew
+PORTVERSION=	0.20
+PORTREVISION=	3
+CATEGORIES=	misc windowmaker afterstep
+MASTER_SITES=	http://web.novalis.org/programs/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A dockapp that shows fireworks in action
+
+PLIST_FILES=	bin/wmfirew
+WRKSRC=	${WRKDIR}/${PORTNAME}.app/${PORTNAME}
+USE_GMAKE=	yes
+USE_XORG=	xpm
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+
+.include <bsd.port.mk>
