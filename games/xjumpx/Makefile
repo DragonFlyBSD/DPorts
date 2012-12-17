@@ -1,0 +1,35 @@
+# New ports collection makefile for:	xjumpx
+# Date created:				14 August 2001
+# Whom:					Tatsuya Kuidoh <cdr@ga.xdsl.ne.jp>
+#
+# $FreeBSD: ports/games/xjumpx/Makefile,v 1.10 2012/11/17 05:57:57 svnexp Exp $
+#
+
+PORTNAME=	xjumpx
+PORTVERSION=	1.4
+PORTREVISION=	3
+CATEGORIES=	games
+MASTER_SITES=	http://fenix.ne.jp/~cdrtk/soft/dl/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Improved version of xjump
+
+MAKE_ENV=	X11BASE=${LOCALBASE}
+USE_XORG=	xpm xaw
+
+MAN1=		xjumpx.1
+MANCOMPRESSED=	yes
+
+SUB_FILES=	pkg-message
+PKGMESSAGE=	${WRKDIR}/pkg-message
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/xjumpx ${PREFIX}/bin
+	${MKDIR} ${PREFIX}/lib/X11/xjumpx
+	${CHMOD} 777 ${PREFIX}/lib/X11/xjumpx
+	${CP} ${WRKSRC}/XJumpX.ad ${PREFIX}/lib/X11/app-defaults/XJumpX
+	${INSTALL_MAN} ${WRKSRC}/xjumpx.1 ${PREFIX}/man/man1
+	${GZIP_CMD} ${PREFIX}/man/man1/xjumpx.1
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>
