@@ -1,0 +1,25 @@
+# New ports collection makefile for:	bibview
+# Date created:		21 July 1997
+# Whom:			dbader@eece.unm.edu
+#
+# $FreeBSD: ports/print/bibview/Makefile,v 1.15 2012/11/17 06:00:48 svnexp Exp $
+#
+
+PORTNAME=	bibview
+PORTVERSION=	2.2
+PORTREVISION=	2
+CATEGORIES=	print databases
+MASTER_SITES=	${MASTER_SITE_TEX_CTAN}
+MASTER_SITE_SUBDIR= biblio/bibtex/utils/bibview-2.0
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Graphical interface for manipulating BibTeX bibliography databases
+
+MAKE_JOBS_SAFE=	yes
+
+USE_IMAKE=	yes
+USE_XORG=	ice sm x11 xaw xext xmu xt
+WRKSRC=		${WRKDIR}/bibview-${PORTVERSION}
+MAN1=		bibview.1
+
+.include <bsd.port.mk>
