@@ -1,0 +1,83 @@
+--- ./Makefile.orig	2012-02-18 15:17:14.650207401 -0500
++++ ./Makefile	2012-02-18 15:19:42.390202289 -0500
+@@ -301,8 +301,8 @@
+ 
+ # CFLAGS and LDFLAGS are for the users to override from the command line.
+ 
+-CFLAGS = -g -O2 -Wall
+-LDFLAGS =
++CFLAGS ?= -g -O2 -Wall
++LDFLAGS ?=
+ ALL_CFLAGS = $(CPPFLAGS) $(CFLAGS)
+ ALL_LDFLAGS = $(LDFLAGS)
+ STRIP ?= strip
+@@ -322,15 +322,15 @@
+ prefix = $(HOME)
+ bindir_relative = bin
+ bindir = $(prefix)/$(bindir_relative)
+-mandir = share/man
+-infodir = share/info
++mandir = $(prefix)/man
++infodir = $(prefix)/info
+ gitexecdir = libexec/git-core
+ mergetoolsdir = $(gitexecdir)/mergetools
+ sharedir = $(prefix)/share
+-gitwebdir = $(sharedir)/gitweb
++gitwebdir = $(sharedir)/examples/git/gitweb
+ localedir = $(sharedir)/locale
+ template_dir = share/git-core/templates
+-htmldir = share/doc/git-doc
++htmldir = share/doc/git
+ ETC_GITCONFIG = $(sysconfdir)/gitconfig
+ ETC_GITATTRIBUTES = $(sysconfdir)/gitattributes
+ lib = lib
+@@ -339,21 +339,21 @@
+ 
+ export prefix bindir sharedir sysconfdir gitwebdir localedir
+ 
+-CC = cc
+-AR = ar
+-RM = rm -f
+-DIFF = diff
+-TAR = tar
+-FIND = find
+-INSTALL = install
+-RPMBUILD = rpmbuild
+-TCL_PATH = tclsh
+-TCLTK_PATH = wish
+-XGETTEXT = xgettext
+-MSGFMT = msgfmt
+-PTHREAD_LIBS = -lpthread
+-PTHREAD_CFLAGS =
+-GCOV = gcov
++CC ?= cc
++AR ?= ar
++RM ?= rm -f
++DIFF ?= diff
++TAR ?= tar
++FIND ?= find
++INSTALL ?= install
++RPMBUILD ?= rpmbuild
++TCL_PATH ?= tclsh
++TCLTK_PATH ?= wish
++XGETTEXT ?= xgettext
++MSGFMT ?= msgfmt
++PTHREAD_LIBS ?= -lpthread
++PTHREAD_CFLAGS ?=
++GCOV ?= gcov
+ 
+ export TCL_PATH TCLTK_PATH
+ 
+@@ -1438,9 +1438,9 @@
+ 
+ ifndef NO_OPENSSL
+ 	OPENSSL_LIBSSL = -lssl
+-	ifdef OPENSSLDIR
+-		BASIC_CFLAGS += -I$(OPENSSLDIR)/include
+-		OPENSSL_LINK = -L$(OPENSSLDIR)/$(lib) $(CC_LD_DYNPATH)$(OPENSSLDIR)/$(lib)
++	ifdef OPENSSLBASE
++		BASIC_CFLAGS += -I$(OPENSSLBASE)/include
++		OPENSSL_LINK = -L$(OPENSSLBASE)/$(lib) $(CC_LD_DYNPATH)$(OPENSSLBASE)/$(lib)
+ 	else
+ 		OPENSSL_LINK =
+ 	endif
