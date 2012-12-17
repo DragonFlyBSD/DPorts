@@ -1,0 +1,26 @@
+# $FreeBSD: ports/math/eigen3/Makefile,v 1.25 2012/11/17 22:08:18 svnexp Exp $
+
+PORTNAME=	eigen
+PORTVERSION=	3.1.2
+CATEGORIES=	math
+MASTER_SITES=	https://bitbucket.org/${PORTNAME}/${PORTNAME}/get/
+DISTNAME=	${PORTVERSION}
+DIST_SUBDIR=	${PORTNAME}
+
+MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Lightweight library for vector and matrix math
+
+LICENSE=	LGPL21 MPL
+LICENSE_COMB=	multi
+
+USE_BZIP2=	yes
+USE_CMAKE=	yes
+CMAKE_OUTSOURCE=yes
+CMAKE_ENV+=	PKG_CONFIG_LIBDIR="${CMAKE_INSTALL_PREFIX}/libdata"
+NO_BUILD=	yes
+
+LATEST_LINK=	${PORTNAME}3
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-5097c01bcdc4
+
+.include <bsd.port.mk>
