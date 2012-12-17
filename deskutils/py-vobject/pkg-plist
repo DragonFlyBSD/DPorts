@@ -1,0 +1,3 @@
+bin/change_tz
+bin/ics_diff
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
