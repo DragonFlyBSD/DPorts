@@ -1,0 +1,6 @@
+bin/tkxmlview
+%%SITE_PERL%%/Tk/XMLViewer.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Tk/XMLViewer/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tk/XMLViewer
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tk
+@dirrmtry %%SITE_PERL%%/Tk
