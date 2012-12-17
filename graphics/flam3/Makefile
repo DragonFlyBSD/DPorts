@@ -1,0 +1,32 @@
+# New ports collection makefile for: flam3
+# Date created:  21 Mar 2010
+# Whom:          John Prather
+#
+# $FreeBSD: ports/graphics/flam3/Makefile,v 1.6 2012/11/17 05:58:05 svnexp Exp $
+#
+
+PORTNAME=	flam3
+PORTVERSION=	2.7.18
+PORTREVISION=	2
+CATEGORIES=	graphics
+MASTER_SITES=	http://flam3.com/ \
+		http://interwebfun.org/distfiles/
+
+MAINTAINER=	john.c.prather@gmail.com
+COMMENT=	A Flame Renderer
+
+LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
+		xml2.5:${PORTSDIR}/textproc/libxml2 \
+		jpeg.11:${PORTSDIR}/graphics/jpeg
+
+MAN1=		flam3-animate.1 flam3-genome.1 flam3-render.1 flam3-convert.1
+MANCOMPRESSED=	no
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_GNOME=	pkgconfig gnomehack
+
+CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib"
+CFLAGS+=	-I${LOCALBASE}/include/libpng15
+
+.include <bsd.port.mk>
