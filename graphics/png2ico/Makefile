@@ -1,0 +1,30 @@
+# Created by: Franz Klammer <klammer@webonaut.com>
+# $FreeBSD: ports/graphics/png2ico/Makefile,v 1.12 2012/11/17 05:58:19 svnexp Exp $
+
+PORTNAME=	png2ico
+PORTVERSION=	2002.12.08
+PORTREVISION=	4
+CATEGORIES=	graphics
+MASTER_SITES=	http://www.winterdrache.de/freeware/png2ico/data/
+DISTNAME=	${PORTNAME}-src-${PORTVERSION:S/./-/g}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Converts PNG files to Windows icon resource files
+
+LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+
+MAN1=		png2ico.1
+PLIST_FILES=	bin/png2ico
+PORTDOCS=	bmp.txt
+
+WRKSRC=		${WRKDIR}/${PORTNAME}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/png2ico.1 ${PREFIX}/man/man1/
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/bmp.txt ${DOCSDIR}/
+.endif
+
+.include <bsd.port.mk>
