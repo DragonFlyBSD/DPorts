@@ -1,0 +1,30 @@
+# New ports collection makefile for:	darcsver
+# Date created:		5th June, 2009
+# Whom:			Wen Heping <wenheping@gmail.com>
+#
+# $FreeBSD: ports/devel/py-darcsver/Makefile,v 1.12 2012/11/17 05:56:45 svnexp Exp $
+#
+
+PORTNAME=	darcsver
+PORTVERSION=	1.7.4
+PORTREVISION=	1
+CATEGORIES=	devel python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	wen@FreeBSD.org
+COMMENT=	Generate a version number from darcs history
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	easy_install
+
+post-patch:
+	@${REINPLACE_CMD} -e 's#(doc_loc, data_fnames)##g' ${WRKSRC}/setup.py
+
+post-install:
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR}
+	cd ${WRKSRC} && ${CP} README.rst ${DOCSDIR}/
+.endif
+
+.include <bsd.port.mk>
