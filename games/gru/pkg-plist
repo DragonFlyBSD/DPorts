@@ -1,0 +1,3 @@
+bin/gru
+%%PORTDOCS%%share/doc/ja/gru/README.jp
+%%PORTDOCS%%@dirrm share/doc/ja/gru
