@@ -2,7 +2,7 @@
 # Date created:		01 Jul 1995
 # Whom:			torstenb@FreeBSD.org
 #
-# $FreeBSD: ports/editors/joe/Makefile,v 1.36 2011/09/23 22:22:20 amdmi3 Exp $
+# $FreeBSD: ports/editors/joe/Makefile,v 1.37 2012/11/17 05:57:14 svnexp Exp $
 #
 
 PORTNAME=	joe
