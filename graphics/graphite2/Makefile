@@ -1,0 +1,26 @@
+# New ports collection makefile for:	graphite2
+# Date created:		2012-01-22
+# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
+#
+# $FreeBSD: ports/graphics/graphite2/Makefile,v 1.8 2012/11/17 05:58:08 svnexp Exp $
+#
+
+PORTNAME=	graphite2
+PORTVERSION=	1.1.3
+CATEGORIES=	graphics print
+MASTER_SITES=	SF/silgraphite/${PORTNAME}
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	office@FreeBSD.org
+COMMENT=	Rendering capabilities for complex non-Roman writing systems
+
+USE_CMAKE=	yes
+USE_ICONV=	yes
+USE_LDCONFIG=	yes
+LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+
+post-patch:
+	@${REINPLACE_CMD} -e 's,/pkgconfig,data/pkgconfig,g' ${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e 's/.$${GRAPHITE_API_REVISION}.$${GRAPHITE_API_AGE}//g' ${WRKSRC}/src/CMakeLists.txt
+
+.include <bsd.port.mk>
