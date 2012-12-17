@@ -1,0 +1,5 @@
+# only use provided libraries CURL and EXPAT on DragonFly
+
+CONFIGURE_ARGS+= --system-zlib
+CONFIGURE_ARGS+= --system-libarchive
+CONFIGURE_ARGS+= --system-bzip2
