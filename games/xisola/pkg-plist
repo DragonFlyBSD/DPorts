@@ -1,0 +1,3 @@
+bin/xisola
+%%PORTDOCS%%share/doc/xisola/README
+%%PORTDOCS%%@dirrm share/doc/xisola
