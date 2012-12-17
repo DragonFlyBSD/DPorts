@@ -1,0 +1,3 @@
+@comment $FreeBSD: ports/mail/xlbiff/pkg-plist,v 1.4 2012/11/17 05:59:18 svnexp Exp $
+bin/xlbiff
+lib/X11/app-defaults/XLbiff
