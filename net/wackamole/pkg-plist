@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/net/wackamole/pkg-plist,v 1.2 2012/11/17 06:00:24 svnexp Exp $
+etc/wackamole.conf.sample
+sbin/wackamole
+sbin/wackatrl
