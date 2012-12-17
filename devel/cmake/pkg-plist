@@ -1,0 +1,58 @@
+bin/ccmake
+bin/cmake
+bin/cpack
+bin/ctest
+share/aclocal/cmake.m4
+%%DATADIR%%/completions/cmake
+%%DATADIR%%/completions/cpack
+%%DATADIR%%/completions/ctest
+%%DATADIR%%/editors/emacs/cmake-mode.el
+%%DATADIR%%/editors/vim/cmake-help.vim
+%%DATADIR%%/editors/vim/cmake-indent.vim
+%%DATADIR%%/editors/vim/cmake-syntax.vim
+%%DATADIR%%/include/cmCPluginAPI.h
+%%DOCSDIR%%/Copyright.txt
+%%DOCSDIR%%/ccmake.docbook
+%%DOCSDIR%%/ccmake.html
+%%DOCSDIR%%/ccmake.txt
+%%DOCSDIR%%/cmake-commands.html
+%%DOCSDIR%%/cmake-commands.txt
+%%DOCSDIR%%/cmake-compatcommands.html
+%%DOCSDIR%%/cmake-compatcommands.txt
+%%DOCSDIR%%/cmake-modules.html
+%%DOCSDIR%%/cmake-modules.txt
+%%DOCSDIR%%/cmake-policies.html
+%%DOCSDIR%%/cmake-policies.txt
+%%DOCSDIR%%/cmake-properties.html
+%%DOCSDIR%%/cmake-properties.txt
+%%DOCSDIR%%/cmake-variables.html
+%%DOCSDIR%%/cmake-variables.txt
+%%DOCSDIR%%/cmake.docbook
+%%DOCSDIR%%/cmake.html
+%%DOCSDIR%%/cmake.txt
+%%DOCSDIR%%/cmcompress/Copyright.txt
+%%DOCSDIR%%/cmcurl/COPYING
+%%DOCSDIR%%/cmexpat/COPYING
+%%DOCSDIR%%/cmlibarchive/COPYING
+%%DOCSDIR%%/cmsys/Copyright.txt
+%%DOCSDIR%%/cmzlib/Copyright.txt
+%%DOCSDIR%%/cpack.docbook
+%%DOCSDIR%%/cpack.html
+%%DOCSDIR%%/cpack.txt
+%%DOCSDIR%%/ctest.docbook
+%%DOCSDIR%%/ctest.html
+%%DOCSDIR%%/ctest.txt
+share/emacs/site-lisp/cmake-mode.el
+@dirrm %%DOCSDIR%%/cmzlib
+@dirrm %%DOCSDIR%%/cmsys
+@dirrm %%DOCSDIR%%/cmlibarchive
+@dirrm %%DOCSDIR%%/cmexpat
+@dirrm %%DOCSDIR%%/cmcurl
+@dirrm %%DOCSDIR%%/cmcompress
+@dirrm %%DOCSDIR%%
+@dirrm %%DATADIR%%/include
+@dirrm %%DATADIR%%/editors/vim
+@dirrm %%DATADIR%%/editors/emacs
+@dirrm %%DATADIR%%/editors
+@dirrm %%DATADIR%%/completions
+@dirrmtry %%DATADIR%%
