@@ -1,0 +1,28 @@
+# New ports collection makefile for:	py-creole
+# Date created:			May 27 2009
+# Whom:				Stanislav Svirid <count@211.ru>
+#
+# $FreeBSD: ports/textproc/py-creole/Makefile,v 1.9 2012/11/17 06:02:17 svnexp Exp $
+#
+
+PORTNAME=	creole
+PORTVERSION=	1.0.1
+CATEGORIES=	textproc python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	python-${PORTNAME}-${PORTVERSION}
+
+MAINTAINER=	count@211.ru
+COMMENT=	Markup converter in pure Python
+
+LICENSE=	GPLv3
+
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/docutils/__init__.py:${PORTSDIR}/textproc/py-docutils
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_PKGNAME=	python_creole
+
+PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+
+.include <bsd.port.mk>
