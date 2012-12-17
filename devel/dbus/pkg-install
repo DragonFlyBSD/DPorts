@@ -1,0 +1,14 @@
+#!/bin/sh
+
+case $2 in
+POST-INSTALL)
+	USER=messagebus
+	GROUP=${USER}
+
+	/usr/bin/install -d -o ${USER} -g ${GROUP} /var/run/dbus
+	/usr/bin/install -d -o ${USER} -g ${GROUP} /var/db/dbus
+	/usr/bin/chgrp ${GROUP} ${PKG_PREFIX}/libexec/dbus-daemon-launch-helper
+	${PKG_PREFIX}/bin/dbus-uuidgen --ensure
+	exit 0
+	;;
+esac

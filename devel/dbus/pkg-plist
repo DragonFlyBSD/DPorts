@@ -1,0 +1,47 @@
+bin/dbus-cleanup-sockets
+bin/dbus-daemon
+bin/dbus-launch
+bin/dbus-monitor
+bin/dbus-send
+bin/dbus-uuidgen
+etc/dbus-1/session.conf
+etc/dbus-1/system.conf
+include/dbus-%%VERSION%%/dbus/dbus-address.h
+include/dbus-%%VERSION%%/dbus/dbus-bus.h
+include/dbus-%%VERSION%%/dbus/dbus-connection.h
+include/dbus-%%VERSION%%/dbus/dbus-errors.h
+include/dbus-%%VERSION%%/dbus/dbus-macros.h
+include/dbus-%%VERSION%%/dbus/dbus-memory.h
+include/dbus-%%VERSION%%/dbus/dbus-message.h
+include/dbus-%%VERSION%%/dbus/dbus-misc.h
+include/dbus-%%VERSION%%/dbus/dbus-pending-call.h
+include/dbus-%%VERSION%%/dbus/dbus-protocol.h
+include/dbus-%%VERSION%%/dbus/dbus-server.h
+include/dbus-%%VERSION%%/dbus/dbus-shared.h
+include/dbus-%%VERSION%%/dbus/dbus-signature.h
+include/dbus-%%VERSION%%/dbus/dbus-threads.h
+include/dbus-%%VERSION%%/dbus/dbus-types.h
+include/dbus-%%VERSION%%/dbus/dbus.h
+include/dbus-%%VERSION%%/include/dbus/dbus-arch-deps.h
+lib/libdbus-1.a
+lib/libdbus-1.la
+lib/libdbus-1.so
+lib/libdbus-1.so.3
+libdata/pkgconfig/dbus-1.pc
+libexec/dbus-daemon-launch-helper
+@exec mkdir -p %D/etc/dbus-1/system.d
+@exec mkdir -p %D/share/dbus-1/interfaces
+@exec mkdir -p %D/share/dbus-1/services
+@exec mkdir -p %D/share/dbus-1/system-services
+@exec mkdir -p %D/etc/dbus-1/session.d
+@dirrmtry share/dbus-1/system-services
+@dirrmtry share/dbus-1/services
+@dirrmtry share/dbus-1/interfaces
+@dirrmtry share/dbus-1
+@dirrm include/dbus-%%VERSION%%/include/dbus
+@dirrm include/dbus-%%VERSION%%/include
+@dirrm include/dbus-%%VERSION%%/dbus
+@dirrm include/dbus-%%VERSION%%
+@dirrm etc/dbus-1/system.d
+@dirrm etc/dbus-1/session.d
+@dirrm etc/dbus-1
