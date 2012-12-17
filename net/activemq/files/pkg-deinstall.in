@@ -1,0 +1,15 @@
+#!/bin/sh
+# $FreeBSD: ports/net/activemq/files/pkg-deinstall.in,v 1.2 2012/11/17 05:59:56 svnexp Exp $
+
+ETCDIR=%%ETCDIR%%
+ETC_FILES="%%ETC_FILES%%"
+
+case $2 in
+DEINSTALL)
+	for f in ${ETC_FILES}
+	do
+		/usr/bin/cmp -s ${ETCDIR}/${f}.sample \
+			${ETCDIR}/${f} \
+			&& /bin/rm -f ${ETCDIR}/${f}
+	done
+esac

@@ -1,0 +1,15 @@
+#!/bin/sh
+# $FreeBSD: ports/net/activemq/files/pkg-install.in,v 1.2 2012/11/17 05:59:56 svnexp Exp $
+
+ETCDIR=%%ETCDIR%%
+ETC_FILES="%%ETC_FILES%%"
+
+case $2 in
+POST-INSTALL)
+	for f in ${ETC_FILES}
+	do
+		if [ ! -f ${ETCDIR}/${f} ]; then
+			/bin/cp ${ETCDIR}/${f}.sample ${ETCDIR}/${f}
+		fi
+	done
+esac
