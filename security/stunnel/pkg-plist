@@ -1,0 +1,34 @@
+bin/stunnel
+bin/stunnel3
+%%ETCDIR%%/stunnel.conf-sample
+lib/stunnel/libstunnel.a
+lib/stunnel/libstunnel.la
+lib/stunnel/libstunnel.so
+%%PORTDOCS%%%%DOCSDIR%%/stunnel.html
+%%PORTDOCS%%%%DOCSDIR%%/stunnel.fr.html
+%%PORTDOCS%%%%DOCSDIR%%/stunnel.pl.html
+%%PORTDOCS%%%%DOCSDIR%%/examples/ca.html
+%%PORTDOCS%%%%DOCSDIR%%/examples/ca.pl
+%%PORTDOCS%%%%DOCSDIR%%/examples/importCA.html
+%%PORTDOCS%%%%DOCSDIR%%/examples/importCA.sh
+%%PORTDOCS%%%%DOCSDIR%%/examples/script.sh
+%%PORTDOCS%%%%DOCSDIR%%/examples/stunnel.init
+%%PORTDOCS%%%%DOCSDIR%%/examples/stunnel.service
+%%PORTDOCS%%%%DOCSDIR%%/examples/stunnel.spec
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/BUGS
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/COPYRIGHT.GPL
+%%PORTDOCS%%%%DOCSDIR%%/CREDITS
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL.FIPS
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL.W32
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL.WCE
+%%PORTDOCS%%%%DOCSDIR%%/PORTS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/examples
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm lib/stunnel
+@unexec rmdir %D/etc/stunnel 2>/dev/null || echo "If you are permanently removing this port, you should do a ``rm -rf ${PKG_PREFIX}/etc/stunnel`` to remove any configuration files left." | fmt
