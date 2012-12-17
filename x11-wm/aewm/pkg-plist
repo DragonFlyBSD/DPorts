@@ -1,0 +1,14 @@
+bin/aemenu
+bin/aemenu-xaw
+bin/aepanel
+bin/aepanel-xaw
+bin/aesession
+bin/aewm
+bin/set-gnome-pda
+@unexec if cmp -s %D/etc/aewm/aewmrc.sample %D/etc/aewm/aewmrc; then rm -f %D/etc/aewm/aewmrc; fi
+etc/aewm/aewmrc.sample
+@exec if [ ! -e %D/etc/aewm/aewmrc ]; then cp %D/etc/aewm/aewmrc.sample %D/etc/aewm/aewmrc; fi
+@unexec if cmp -s %D/etc/aewm/clientsrc.sample %D/etc/aewm/clientsrc; then rm -f %D/etc/aewm/clientsrc; fi
+etc/aewm/clientsrc.sample
+@exec if [ ! -e %D/etc/aewm/clientsrc ]; then cp %D/etc/aewm/clientsrc.sample %D/etc/aewm/clientsrc; fi
+@dirrmtry etc/aewm
