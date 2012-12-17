@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/games/nethack33/files/pkg-deinstall.in,v 1.2 2012/11/17 05:57:46 svnexp Exp $
+
+if [ "${2}" = "POST-DEINSTALL" ]; then
+	if [ -d "${PKG_PREFIX}/%%HACKDIR%%" ]; then
+		echo
+		echo "The ${1} save files have not been removed."
+		echo
+		echo "If you are deleting ${1} permanently then you can "
+		echo "remove the save files with the command:"
+		echo
+		echo "	rm -rf ${PKG_PREFIX}/%%HACKDIR%%"
+		echo
+	fi
+fi
