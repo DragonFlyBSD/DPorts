@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# $FreeBSD: ports/sysutils/py-supervisor/files/supervisord.in,v 1.4 2012/11/17 06:01:43 svnexp Exp $
+#
+# PROVIDE: supervisord
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
+#
+# Add the following line to /etc/rc.conf.local or /etc/rc.conf
+# to enable supervisord:
+#
+# supervisord_enable="YES"
+#
+
+. /etc/rc.subr
+
+name="supervisord"
+rcvar=supervisord_enable
+
+command="%%PREFIX%%/bin/${name}"
+command_interpreter="%%PYTHON_CMD%%"
+pidfile="%%PIDDIR%%/${name}.pid"
+
+load_rc_config $name
+
+: ${supervisord_enable="NO"}
+
+run_rc_command "$1"
