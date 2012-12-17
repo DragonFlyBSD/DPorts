@@ -1,0 +1,7 @@
+bin/uufilter
+bin/xloadimage
+bin/xsetbg
+bin/xview
+@unexec if cmp -s %D/etc/xloadimagerc.sample %D/etc/xloadimagerc; then rm -f %D/etc/xloadimagerc; fi
+etc/xloadimagerc.sample
+@exec if [ ! -f %D/etc/xloadimagerc ] ; then cp -p %D/%F %B/xloadimagerc; fi
