@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Getargs/Long.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Getargs/Long/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Getargs/Long
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Getargs
+@dirrmtry %%SITE_PERL%%/Getargs
