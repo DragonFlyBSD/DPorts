@@ -1,0 +1,10 @@
+#! /bin/sh
+#
+#	$FreeBSD: ports/mail/dovecot2/files/pkg-deinstall.in,v 1.3 2012/11/17 05:59:01 svnexp Exp $
+#
+
+case $2 in
+DEINSTALL)
+	echo "If you don't intend on reinstalling this port you should manually 'rm -rf /var/db/dovecot' if anything was stored there."
+	;;
+esac
