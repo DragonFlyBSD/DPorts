@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/x11/xcb-util-renderutil/pkg-plist,v 1.2 2012/11/17 06:03:20 svnexp Exp $
+include/xcb/xcb_renderutil.h
+lib/libxcb-render-util.so.0
+lib/libxcb-render-util.so
+lib/libxcb-render-util.la
+lib/libxcb-render-util.a
+libdata/pkgconfig/xcb-renderutil.pc
