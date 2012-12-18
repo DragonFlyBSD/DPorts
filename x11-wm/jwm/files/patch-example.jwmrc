@@ -1,0 +1,25 @@
+
+$FreeBSD: ports/x11-wm/jwm/files/patch-example.jwmrc,v 1.2 2012/11/17 06:03:43 svnexp Exp $
+
+--- example.jwmrc.orig
++++ example.jwmrc
+@@ -5,7 +5,8 @@
+    <!-- The root menu, if this is undefined you will not get a menu. -->
+    <!-- Additional RootMenu attributes: onroot, labeled, label -->
+    <RootMenu height="32" onroot="123">
+-      <Program icon="rxvt.png" label="Terminal">rxvt</Program>
++      <Program icon="rxvt.png" label="rxvt">rxvt</Program>
++      <Program icon="xterm.png" label="xterm">xterm</Program>
+ 
+       <Menu icon="folder.png" label="Applications">
+          <Program icon="audacious.png" label="Audacious">audacious</Program>
+@@ -136,6 +137,9 @@
+ 
+    <IconPath>
+       $HOME/.icons
++      %%PREFIX%%/share/icons
++      %%PREFIX%%/share/pixmaps
++      %%PREFIX%%/lib/X11/icons
+    </IconPath>
+ 
+    <!-- Virtual Desktops -->
