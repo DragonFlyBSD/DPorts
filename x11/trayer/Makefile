@@ -1,0 +1,43 @@
+# New ports collection makefile for:   trayer
+# Date created: Aug 21, 2006
+# Whom:         Alexey Mikhailov <karma@ez.pereslavl.ru>
+#
+# $FreeBSD: ports/x11/trayer/Makefile,v 1.17 2012/11/17 06:03:20 svnexp Exp $
+#
+
+PORTNAME=	trayer
+PORTVERSION=	1.1.5
+CATEGORIES=	x11
+MASTER_SITES=	http://github.com/sargon/${PORTNAME}-srg/tarball/${PORTNAME}-${PORTVERSION}/
+DISTNAME=	sargon-${PORTNAME}-srg-${PORTNAME}-${PORTVERSION}-${GITVERSION}
+
+MAINTAINER=	madpilot@FreeBSD.org
+COMMENT=	Lightweight GTK2-based systray for UNIX desktop
+
+GITVERSION=	0-g5353f80
+FETCH_ARGS=	-pRr
+USE_GNOME=	gtk20 glib20 pango atk
+USE_ICONV=	yes
+USE_XORG=	xmu
+USE_GMAKE=	yes
+MAKE_ARGS=	"PREFIX=${PREFIX}"
+MAKE_JOBS_SAFE=	yes
+WRKSRC=		${WRKDIR}/sargon-${PORTNAME}-srg-${GITVERSION:S/^0-g//}
+
+PORTDOCS=	README CREDITS CHANGELOG
+MAN1=		trayer.1
+
+PLIST_FILES=	bin/trayer
+
+.include <bsd.port.options.mk>
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/man/${PORTNAME}.1 ${MAN1PREFIX}/man/man1
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${DOCSDIR}
+.for f in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>
