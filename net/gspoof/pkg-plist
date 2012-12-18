@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/net/gspoof/pkg-plist,v 1.5 2012/11/17 06:00:01 svnexp Exp $
+bin/gspoof
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%DATADIR%%/pixmap/icon.png
+@dirrm %%DATADIR%%/pixmap
+@dirrm %%DATADIR%%
