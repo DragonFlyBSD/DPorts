@@ -1,0 +1,11 @@
+bin/cron
+bin/crontab
+bin/mcron
+%%DATADIR%%/config.scm
+%%DATADIR%%/core.scm
+%%DATADIR%%/environment.scm
+%%DATADIR%%/job-specifier.scm
+%%DATADIR%%/redirect.scm
+%%DATADIR%%/vixie-specification.scm
+%%DATADIR%%/vixie-time.scm
+@dirrm %%DATADIR%%

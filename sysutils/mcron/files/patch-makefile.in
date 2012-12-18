@@ -1,0 +1,18 @@
+--- makefile.in.orig	2008-03-03 14:13:46.000000000 +0100
++++ makefile.in	2008-03-07 09:31:12.000000000 +0100
+@@ -874,13 +874,11 @@
+ install-exec-hook:
+ 	@if [ "`id -u`" -eq "0" ]; then \
+ 	   rm -f $(fpp)cron$(EXEEXT) > /dev/null 2>&1; \
+-	   $(INSTALL) --mode='u=rwx' mcron$(EXEEXT) $(fpp)cron$(EXEEXT); \
++	   $(INSTALL) -m='u=rwx' mcron$(EXEEXT) $(fpp)cron$(EXEEXT); \
+ 	   rm -f $(fpp)crontab$(EXEEXT) > /dev/null 2>&1; \
+-	   $(INSTALL) --mode='u=rwxs,og=rx' mcron$(EXEEXT) $(fpp)crontab$(EXEEXT); \
++	   $(INSTALL) -m='u=rwxs,og=rx' mcron$(EXEEXT) $(fpp)crontab$(EXEEXT); \
+ 	   ./mkinstalldirs -m 'u=rwx' /var/cron; \
+ 	   ./mkinstalldirs -m 'u=rwx,og=rx' /var/run; \
+-	   ./mkinstalldirs -m 'u=rwx,og=rx' @GUILE_SITE@; \
+-	   ./mkinstalldirs -m 'u=rwx,og=rx' @GUILE_SITE@/mcron; \
+     else \
+        echo "+++ WARNING: NON-ROOT INSTALL: ONLY mcron WILL BE INSTALLED, NOT ANY OF THE VIXIE REPLACEMENT PROGRAMS"; \
+ 	fi
