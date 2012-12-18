@@ -1,0 +1,5 @@
+bin/dbench
+bin/tbench
+bin/tbench_srv
+%%DATADIR%%/client.txt
+@dirrm %%DATADIR%%
