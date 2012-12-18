@@ -1,0 +1,25 @@
+# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
+# $FreeBSD: ports/net/p5-Net-SSH2/Makefile,v 1.28 2012/11/18 04:06:25 svnexp Exp $
+
+PORTNAME=	Net-SSH2
+PORTVERSION=	0.46
+CATEGORIES=	net perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	jadawin@FreeBSD.org
+COMMENT=	Support for the SSH 2 protocol via libSSH2
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+LIB_DEPENDS=	ssh2.1:${PORTSDIR}/security/libssh2
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Net::SSH2.3 Net::SSH2::Channel.3 \
+		Net::SSH2::Dir.3 Net::SSH2::File.3 \
+		Net::SSH2::Listener.3 Net::SSH2::PublicKey.3 \
+		Net::SSH2::SFTP.3
+
+.include <bsd.port.mk>
