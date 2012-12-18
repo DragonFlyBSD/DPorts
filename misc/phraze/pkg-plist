@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/misc/phraze/pkg-plist,v 1.3 2012/11/17 05:59:44 svnexp Exp $
+bin/phraze
+%%DATADIR%%/wordlist.phr
+@dirrm %%DATADIR%%
