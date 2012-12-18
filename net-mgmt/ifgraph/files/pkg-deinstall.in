@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net-mgmt/ifgraph/files/pkg-deinstall.in,v 1.3 2012/11/17 06:00:32 svnexp Exp $
+#
+
+PATH=/bin:/usr/bin:/usr/sbin
+
+case $2 in
+
+DEINSTALL)
+  echo '---> Starting deinstall script:'
+
+  echo '---> Zeroing crontab(5) file belonging to user "%%USER%%"'
+  /usr/bin/crontab -u %%USER%% /dev/null
+  echo '     (The crontab(5) will be deleted completely when user "%%USER%%" is removed.)'
+
+  ;;
+
+esac
