@@ -1,0 +1,13 @@
+--- Makefile.am.orig	2008-05-19 19:00:44.000000000 +0200
++++ Makefile.am	2008-05-19 19:03:20.000000000 +0200
+@@ -136,10 +136,6 @@
+ 
+ install-data-local:
+ 	$(srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir)
+-	$(INSTALL) -m 644 $(srcdir)/mime.types $(DESTDIR)$(sysconfdir)/mime.types.dist
+-	-if [ ! -f $(DESTDIR)$(sysconfdir)/mime.types ]; then \
+-		$(INSTALL) -m 644 $(srcdir)/mime.types $(DESTDIR)$(sysconfdir); \
+-	fi
+ 
+ uninstall-local:
+ 	for i in mime.types ; do \
