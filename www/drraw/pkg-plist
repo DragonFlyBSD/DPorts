@@ -1,0 +1,14 @@
+@comment $FreeBSD: ports/www/drraw/pkg-plist,v 1.3 2012/11/17 06:02:31 svnexp Exp $
+@unexec if cmp -s %D/%%CONFDIR%%/drraw.conf-dist %D/%%CONFDIR%%/drraw.conf; then rm -f %D/%%CONFDIR%%/drraw.conf; fi
+%%CONFDIR%%/drraw.conf-dist
+@exec if [ ! -f %D/%%CONFDIR%%/drraw.conf ]; then cp -p %D/%F %B/drraw.conf; fi
+%%WWWDIR%%/drraw.cgi
+%%WWWDIR%%/icons/bomb.gif
+%%WWWDIR%%/icons/folder.gif
+%%WWWDIR%%/icons/folder.open.gif
+%%WWWDIR%%/icons/generic.gif
+%%WWWDIR%%/icons/link.gif
+%%WWWDIR%%/icons/text.gif
+%%WWWDIR%%/icons/unknown.gif
+@dirrm %%WWWDIR%%/icons
+@dirrm %%WWWDIR%%
