@@ -1,0 +1,40 @@
+@comment $FreeBSD: ports/x11-fonts/webfonts/pkg-plist,v 1.10 2012/11/17 06:03:29 svnexp Exp $
+%%DOCSDIR%%/LICENSE
+%%FONTSDIR%%/andalemo.ttf
+%%FONTSDIR%%/arial.ttf
+%%FONTSDIR%%/arialbd.ttf
+%%FONTSDIR%%/arialbi.ttf
+%%FONTSDIR%%/ariali.ttf
+%%FONTSDIR%%/ariblk.ttf
+%%FONTSDIR%%/comic.ttf
+%%FONTSDIR%%/comicbd.ttf
+%%FONTSDIR%%/cour.ttf
+%%FONTSDIR%%/courbd.ttf
+%%FONTSDIR%%/courbi.ttf
+%%FONTSDIR%%/couri.ttf
+@unexec /bin/rm %D/%%FONTSDIR%%/fonts.cache-1 2>/dev/null || /usr/bin/true
+%%FONTSDIR%%/fonts.dir
+%%FONTSDIR%%/fonts.scale
+%%FONTSDIR%%/georgia.ttf
+%%FONTSDIR%%/georgiab.ttf
+%%FONTSDIR%%/georgiai.ttf
+%%FONTSDIR%%/georgiaz.ttf
+%%FONTSDIR%%/impact.ttf
+%%EXTRAFONTS%%%%FONTSDIR%%/tahoma.ttf
+%%EXTRAFONTS%%%%FONTSDIR%%/tahomabd.ttf
+%%FONTSDIR%%/times.ttf
+%%FONTSDIR%%/timesbd.ttf
+%%FONTSDIR%%/timesbi.ttf
+%%FONTSDIR%%/timesi.ttf
+%%FONTSDIR%%/trebuc.ttf
+%%FONTSDIR%%/trebucbd.ttf
+%%FONTSDIR%%/trebucbi.ttf
+%%FONTSDIR%%/trebucit.ttf
+%%FONTSDIR%%/verdana.ttf
+%%FONTSDIR%%/verdanab.ttf
+%%FONTSDIR%%/verdanai.ttf
+%%FONTSDIR%%/verdanaz.ttf
+%%FONTSDIR%%/webdings.ttf
+@dirrm %%DOCSDIR%%
+@dirrm %%FONTSDIR%%
+@exec %%LOCALBASE%%/bin/fc-cache -f -v %%FONTSDIR%% || /usr/bin/true
