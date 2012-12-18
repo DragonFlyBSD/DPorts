@@ -1,0 +1,30 @@
+# Created by:	Guillaume Paquet <amyfoub@gmail.com>
+#
+# $FreeBSD: ports/deskutils/xpad/Makefile,v 1.33 2012/11/17 05:55:31 svnexp Exp $
+
+PORTNAME=	xpad
+PORTVERSION=	3.1
+PORTREVISION=	6
+CATEGORIES=	deskutils
+MASTER_SITES=	http://launchpad.net/xpad/stable/${PORTVERSION}/+download/
+
+MAINTAINER=	jgh@FreeBSD.org
+COMMENT=	A virtual note-pad system for your X11 desktop
+
+LICENSE=	GPLv3
+
+CONFLICTS_INSTALL=	xpad-current-[0-9]*
+
+FETCH_ARGS=	"-pRr"
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_XORG=	x11 sm
+USE_GNOME=	pkgconfig gtk20 gnomehier intltool
+INSTALLS_ICONS=	yes
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+MAN1=		xpad.1
+
+.include <bsd.port.mk>
