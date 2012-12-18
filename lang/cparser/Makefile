@@ -1,0 +1,33 @@
+# New ports collection makefile for: libFIRM
+# Date created:         22 Nov 2008
+# Whom:                 Christoph Mallon <christoph.mallon@gmx.de>
+#
+# $FreeBSD: ports/lang/cparser/Makefile,v 1.9 2012/11/17 05:58:48 svnexp Exp $
+#
+
+PORTNAME=	cparser
+PORTVERSION=	0.9.13
+CATEGORIES=	lang devel
+MASTER_SITES=	SF
+
+MAINTAINER=	armin@frozen-zone.org
+COMMENT=	A C99 compiler using libFIRM as backend
+
+LICENSE=	GPLv2
+
+LIB_DEPENDS=	firm.1:${PORTSDIR}/devel/libfirm
+
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+
+PLIST_FILES=	bin/cparser
+
+.include <bsd.port.pre.mk>
+
+MAN1=	cparser.1
+
+do-install:
+	@${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/build/cparser ${PREFIX}/bin
+	@${INSTALL_MAN} ${INSTALL_WRKSRC}/cparser.1 ${MAN1PREFIX}/man/man1
+
+.include <bsd.port.post.mk>
