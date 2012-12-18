@@ -1,0 +1,51 @@
+# New ports collection makefile for:	claroline
+# Date created:		29 Feb 2008
+# Whom:			Wen heping <wenheping@gmail.com>
+#
+# $FreeBSD: ports/www/claroline/Makefile,v 1.11 2012/11/17 06:02:30 svnexp Exp $
+#
+
+PORTNAME=	claroline
+PORTVERSION=	1.10.2
+CATEGORIES=	www
+MASTER_SITES=	SF/${PORTNAME}/Claroline/claroline%20${PORTVERSION}
+DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
+
+MAINTAINER=	wen@FreeBSD.org
+COMMENT=	Open Source eLearning and eWorking platform
+
+NO_BUILD=	yes
+USE_PHP=	mysql
+WRKSRC=		${WRKDIR}/${DISTNAME}
+SUB_FILES=	pkg-message
+
+OPTIONS=	LDAP    "Add LDAP authentication functionality" Off \
+		GD      "Add GD functionality" On \
+		OPENSSL "Add OpenSSL functionality" Off
+
+.include <bsd.port.pre.mk>
+
+.if !defined(WITHOUT_GD)
+USE_PHP+=	gd
+.endif
+
+.if defined(WITH_OPENSSL)
+USE_PHP+=	openssl
+.endif
+
+.if defined(WITH_LDAP)
+USE_PHP+=	ldap
+.endif
+
+do-install:
+	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${WWWDIR}
+	@${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}
+	@${CHMOD} -R 755 ${WWWDIR}
+	@${ECHO_CMD} '@exec ${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}' \
+		>> ${TMPPLIST}
+	@${ECHO_CMD} '@exec ${CHMOD} -R 755 ${WWWDIR}' >>${TMPPLIST}
+
+post-install:
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.post.mk>
