@@ -1,0 +1,117 @@
+bin/gendiff
+bin/rpm
+bin/rpm2cpio
+include/rpm/dbindex.h
+include/rpm/header.h
+include/rpm/misc.h
+include/rpm/rpmbuild.h
+include/rpm/rpmio.h
+include/rpm/rpmlib.h
+include/rpm/rpmmacro.h
+include/rpm/rpmspec.h
+include/rpm/rpmurl.h
+include/rpm/stringbuf.h
+lib/librpm.a
+lib/librpm.la
+lib/librpm.so
+lib/librpm.so.0
+lib/librpmbuild.a
+lib/librpmbuild.la
+lib/librpmbuild.so
+lib/librpmbuild.so.0
+lib/rpm/brp-compress
+lib/rpm/brp-redhat
+lib/rpm/brp-sparc64-linux
+lib/rpm/brp-strip
+lib/rpm/brp-strip-comment-note
+lib/rpm/check-prereqs
+lib/rpm/config.guess
+lib/rpm/config.sub
+lib/rpm/convertrpmrc.sh
+lib/rpm/cpanflute
+lib/rpm/find-lang.sh
+lib/rpm/find-prov.pl
+lib/rpm/find-provides
+lib/rpm/find-provides.perl
+lib/rpm/find-req.pl
+lib/rpm/find-requires
+lib/rpm/find-requires.perl
+lib/rpm/get_magic.pl
+lib/rpm/getpo.sh
+lib/rpm/http.req
+lib/rpm/macros
+lib/rpm/magic.prov
+lib/rpm/magic.req
+lib/rpm/mkinstalldirs
+lib/rpm/perl.prov
+lib/rpm/perl.req
+lib/rpm/rpmdiff
+lib/rpm/rpmdiff.cgi
+%%NLS%%lib/rpm/rpmgettext
+lib/rpm/rpmpopt
+%%NLS%%lib/rpm/rpmputtext
+lib/rpm/rpmrc
+lib/rpm/u_pkg.sh
+lib/rpm/vpkg-provides.sh
+lib/rpm/vpkg-provides2.sh
+lib/rpmpopt
+lib/rpmrc
+%%NLS%%share/locale/cs/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/de/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/fi/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/fr/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/ja/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/pl/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/pt_BR/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/ru/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/sk/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/sl/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/sr/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/sv/LC_MESSAGES/rpm.mo
+%%NLS%%share/locale/tr/LC_MESSAGES/rpm.mo
+@dirrm lib/rpm
+@dirrm include/rpm
+@dirrmtry src/redhat/SRPMS
+@dirrmtry src/redhat/SPECS
+@dirrmtry src/redhat/SOURCES
+@dirrmtry src/redhat/RPMS/amd64
+@dirrmtry src/redhat/RPMS/athlon
+@dirrmtry src/redhat/RPMS/i386
+@dirrmtry src/redhat/RPMS/i486
+@dirrmtry src/redhat/RPMS/i586
+@dirrmtry src/redhat/RPMS/i686
+@dirrmtry src/redhat/RPMS/ia64
+@dirrmtry src/redhat/RPMS/noarch
+@dirrmtry src/redhat/RPMS/powerpc
+@dirrmtry src/redhat/RPMS/ppc
+@dirrmtry src/redhat/RPMS/sparc
+@dirrmtry src/redhat/RPMS/sparcv9
+@dirrmtry src/redhat/RPMS/sparc64
+@dirrmtry src/redhat/RPMS
+@dirrmtry src/redhat/BUILD
+@dirrmtry src/redhat
+@dirrmtry src
+@unexec rmdir /var/lib/rpm 2>/dev/null || true
+@unexec rmdir /var/lib 2>/dev/null || true
+@exec mkdir -p /var/lib
+@exec mkdir -p /var/lib/rpm
+@exec mkdir -p %D/src
+@exec mkdir -p %D/src/redhat
+@exec mkdir -p %D/src/redhat/BUILD
+@exec mkdir -p %D/src/redhat/RPMS
+@exec mkdir -p %D/src/redhat/RPMS/amd64
+@exec mkdir -p %D/src/redhat/RPMS/athlon
+@exec mkdir -p %D/src/redhat/RPMS/i386
+@exec mkdir -p %D/src/redhat/RPMS/i486
+@exec mkdir -p %D/src/redhat/RPMS/i586
+@exec mkdir -p %D/src/redhat/RPMS/i686
+@exec mkdir -p %D/src/redhat/RPMS/ia64
+@exec mkdir -p %D/src/redhat/RPMS/noarch
+@exec mkdir -p %D/src/redhat/RPMS/powerpc
+@exec mkdir -p %D/src/redhat/RPMS/ppc
+@exec mkdir -p %D/src/redhat/RPMS/sparc
+@exec mkdir -p %D/src/redhat/RPMS/sparcv9
+@exec mkdir -p %D/src/redhat/RPMS/sparc64
+@exec mkdir -p %D/src/redhat/SOURCES
+@exec mkdir -p %D/src/redhat/SPECS
+@exec mkdir -p %D/src/redhat/SRPMS
