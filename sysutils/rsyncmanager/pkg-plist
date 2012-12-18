@@ -1,0 +1,2 @@
+bin/rsyncmanager.rb
+etc/rsyncmanager.xml.sample
