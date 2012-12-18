@@ -1,0 +1,13 @@
+--- source/Makefile.common.orig	Thu May 15 19:42:31 2003
++++ source/Makefile.common	Sat Feb  7 14:47:52 2004
+@@ -21,6 +21,10 @@
+ nc: nc.o server_common.o ../util/libNUtil.a
+ 	$(CC) $(CFLAGS) nc.o server_common.o ../util/libNUtil.a $(LIBS) -o $@
+ 
++install: nedit nc
++	${INSTALL} ${COPY} ${STRIP} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} nedit ${PREFIX}/bin
++	${INSTALL} ${COPY} ${STRIP} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} nc ${PREFIX}/bin/nclient
++
+ help.o: help.c
+ 	$(CC) $(CFLAGS) $(BIGGER_STRINGS) -c help.c -o $@
+ 
