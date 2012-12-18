@@ -1,0 +1,56 @@
+# New ports collection makefile for:   ja-uim-anthy
+# Date created:        31 August 2003
+# Whom:                MANTANI Nobutaka <nobutaka@FreeBSD.org>
+#
+# $FreeBSD: ports/japanese/uim-anthy/Makefile,v 1.18 2012/11/17 05:58:40 svnexp Exp $
+#
+
+CATEGORIES=	japanese
+.if defined(WITHOUT_X11)
+PKGNAMESUFFIX=	-anthy-nox11
+.else
+PKGNAMESUFFIX=	-anthy
+.endif
+
+COMMENT=	Uim plugin using Anthy input method
+
+.if !defined(WITHOUT_X11)
+USE_GNOME=	gtk20
+.endif
+
+LIB_DEPENDS=	anthy.1:${PORTSDIR}/japanese/anthy \
+		uim.8:${PORTSDIR}/textproc/uim
+
+MASTERDIR=	${.CURDIR}/../../textproc/uim
+PKGDIR=		${.CURDIR}
+CONFIGURE_ARGS=	--with-anthy --with-anthy-utf8
+
+.if !defined(WITHOUT_X11)
+CONFIGURE_ARGS+=	--with-gtk2 --enable-dict
+.endif
+
+UIM_SLAVE=	yes
+
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-uim_Makefile.in \
+		${PATCHDIR}/extra-patch-gtk2_dict_Makefile.in
+
+do-build:
+	(cd ${WRKSRC}/uim && ${GMAKE} libuim-anthy.la)
+	(cd ${WRKSRC}/uim && ${GMAKE} libuim-anthy-utf8.la)
+.if !defined(WITHOUT_X11)
+	(cd ${WRKSRC}/gtk2/dict && ${GMAKE} uim-dict-gtk)
+.endif
+
+do-install:
+	(cd ${WRKSRC}/uim && \
+	${GMAKE} uim_plugin_LTLIBRARIES=libuim-anthy.la install-uim_pluginLTLIBRARIES && \
+	${GMAKE} uim_plugin_LTLIBRARIES=libuim-anthy-utf8.la install-uim_pluginLTLIBRARIES)
+.if !defined(WITHOUT_X11)
+	(cd ${WRKSRC}/gtk2/dict && ${GMAKE} bin_PROGRAMS=uim-dict-gtk install-binPROGRAMS install-uim_dict_uiDATA)
+.endif
+
+post-install:
+	${LOCALBASE}/bin/uim-module-manager --register anthy
+	${LOCALBASE}/bin/uim-module-manager --register anthy-utf8
+
+.include "${MASTERDIR}/Makefile"
