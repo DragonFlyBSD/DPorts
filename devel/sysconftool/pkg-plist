@@ -1,0 +1,8 @@
+bin/sysconftoolize
+bin/sysconftoolcheck
+share/aclocal/sysconftool.m4
+%%DATADIR%%/sysconftool
+%%DATADIR%%/sysconftoolize.pl
+%%DATADIR%%/sysconftoolcheck
+%%DATADIR%%/sysconftoolize.am
+@dirrm %%DATADIR%%
