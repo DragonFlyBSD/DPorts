@@ -1,0 +1,34 @@
+# Created by: Mike Krutov <neko@takino.org>
+# $FreeBSD: ports/x11-toolkits/girara/Makefile,v 1.5 2012/11/17 06:03:34 svnexp Exp $
+
+PORTNAME=	girara
+PORTVERSION=	0.1.4
+CATEGORIES=	x11-toolkits graphics
+MASTER_SITES=	http://pwmt.org/projects/girara/download/
+
+MAINTAINER=	madpilot@FreeBSD.org
+COMMENT=	GTK2 Interface Library for Zathura PDF Viewer
+
+USE_GNOME=	glib20 gtk20
+USE_GMAKE=	yes
+USE_LDCONFIG=	yes
+FETCH_ARGS=	-Fpr
+
+.if !defined(WITHOUT_NLS)
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.else
+PLIST_SUB+=	NLS="@comment "
+.endif
+
+LIBDIR=		${PREFIX}/lib
+
+post-patch:	.SILENT
+	${REINPLACE_CMD} -e 's|$${LIBDIR}/pkgconfig|${PREFIX}/libdata/pkgconfig|g'\
+		${WRKSRC}/Makefile
+.if defined(WITHOUT_NLS)
+	${REINPLACE_CMD} -e '/-C po/d'\
+		${WRKSRC}/Makefile
+.endif
+
+.include <bsd.port.mk>
