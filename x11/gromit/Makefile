@@ -1,0 +1,31 @@
+# New ports collection makefile for:	gromit
+# Date Created:				03 Mar 2003
+# Whom:					Sergei Kolobov <sergei@kolobov.com>
+#
+# $FreeBSD: ports/x11/gromit/Makefile,v 1.19 2012/11/17 06:03:15 svnexp Exp $
+#
+
+PORTNAME=	gromit
+PORTVERSION=	20041213
+PORTREVISION=	7
+CATEGORIES=	x11
+MASTER_SITES=	http://www.home.unix-ag.org/simon/gromit/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	GRaphics Over Miscellaneous Objects (Gromit)
+
+USE_GNOME=	gtk20
+USE_PKGCONFIG=	build
+
+DOCS=		AUTHORS ChangeLog README
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/gromit ${PREFIX}/bin
+	@${MKDIR} ${EXAMPLESDIR}
+	${INSTALL_DATA}   ${WRKSRC}/gromitrc       ${EXAMPLESDIR}
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
