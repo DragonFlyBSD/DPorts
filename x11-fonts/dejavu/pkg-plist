@@ -1,0 +1,35 @@
+@comment $FreeBSD: ports/x11-fonts/dejavu/pkg-plist,v 1.14 2012/11/17 06:03:27 svnexp Exp $
+%%FCDIR_REL%%/20-unhint-small-dejavu-sans-mono.conf
+%%FCDIR_REL%%/20-unhint-small-dejavu-sans.conf
+%%FCDIR_REL%%/20-unhint-small-dejavu-serif.conf
+%%FCDIR_REL%%/57-dejavu-sans-mono.conf
+%%FCDIR_REL%%/57-dejavu-sans.conf
+%%FCDIR_REL%%/57-dejavu-serif.conf
+%%FCDIR_LINKS%%/20-unhint-small-dejavu-sans-mono.conf
+%%FCDIR_LINKS%%/20-unhint-small-dejavu-sans.conf
+%%FCDIR_LINKS%%/20-unhint-small-dejavu-serif.conf
+%%FCDIR_LINKS%%/57-dejavu-sans-mono.conf
+%%FCDIR_LINKS%%/57-dejavu-sans.conf
+%%FCDIR_LINKS%%/57-dejavu-serif.conf
+%%FONTSDIR_REL%%/DejaVuSans-Bold.ttf
+%%FONTSDIR_REL%%/DejaVuSans-BoldOblique.ttf
+%%FONTSDIR_REL%%/DejaVuSans-ExtraLight.ttf
+%%FONTSDIR_REL%%/DejaVuSans-Oblique.ttf
+%%FONTSDIR_REL%%/DejaVuSans.ttf
+%%FONTSDIR_REL%%/DejaVuSansCondensed-Bold.ttf
+%%FONTSDIR_REL%%/DejaVuSansCondensed-BoldOblique.ttf
+%%FONTSDIR_REL%%/DejaVuSansCondensed-Oblique.ttf
+%%FONTSDIR_REL%%/DejaVuSansCondensed.ttf
+%%FONTSDIR_REL%%/DejaVuSansMono-Bold.ttf
+%%FONTSDIR_REL%%/DejaVuSansMono-BoldOblique.ttf
+%%FONTSDIR_REL%%/DejaVuSansMono-Oblique.ttf
+%%FONTSDIR_REL%%/DejaVuSansMono.ttf
+%%FONTSDIR_REL%%/DejaVuSerif-Bold.ttf
+%%FONTSDIR_REL%%/DejaVuSerif-BoldItalic.ttf
+%%FONTSDIR_REL%%/DejaVuSerif-Italic.ttf
+%%FONTSDIR_REL%%/DejaVuSerif.ttf
+%%FONTSDIR_REL%%/DejaVuSerifCondensed-Bold.ttf
+%%FONTSDIR_REL%%/DejaVuSerifCondensed-BoldItalic.ttf
+%%FONTSDIR_REL%%/DejaVuSerifCondensed-Italic.ttf
+%%FONTSDIR_REL%%/DejaVuSerifCondensed.ttf
+@dirrm %%FONTSDIR_REL%%
