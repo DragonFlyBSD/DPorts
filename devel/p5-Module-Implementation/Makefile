@@ -1,0 +1,37 @@
+# New ports collection makefile for:	p5-Module-Implementation
+# Date created:		2012-02-07
+# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+#
+# $FreeBSD: ports/devel/p5-Module-Implementation/Makefile,v 1.7 2012/11/17 05:56:21 svnexp Exp $
+#
+
+PORTNAME=	Module-Implementation
+PORTVERSION=	0.06
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	sunpoet@FreeBSD.org
+COMMENT=	Loads one of several alternate underlying implementations for a module
+
+BUILD_DEPENDS=	p5-Module-Runtime>=0.012:${PORTSDIR}/devel/p5-Module-Runtime \
+		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
+RUN_DEPENDS=	p5-Module-Runtime>=0.012:${PORTSDIR}/devel/p5-Module-Runtime \
+		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
+
+TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
+		p5-Test-NoTabs>=0:${PORTSDIR}/devel/p5-Test-NoTabs \
+		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
+		p5-Test-Taint>=0:${PORTSDIR}/devel/p5-Test-Taint
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Module::Implementation.3
+
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 501001
+TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
+.endif
+
+.include <bsd.port.post.mk>
