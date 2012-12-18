@@ -1,0 +1,24 @@
+bin/cttex
+include/thai/thailib.h
+include/thai/thbrk.h
+include/thai/thcell.h
+include/thai/thcoll.h
+include/thai/thctype.h
+include/thai/thinp.h
+include/thai/thrend.h
+include/thai/thstr.h
+include/thai/thwbrk.h
+include/thai/thwchar.h
+include/thai/thwcoll.h
+include/thai/thwctype.h
+include/thai/thwinp.h
+include/thai/thwrend.h
+include/thai/thwstr.h
+include/thai/tis.h
+include/thai/wtt.h
+lib/libthai.a
+lib/libthai.la
+lib/libthai.so
+lib/libthai.so.0
+libdata/pkgconfig/libthai.pc
+@dirrm include/thai
