@@ -29,3 +29,5 @@ PLIST_FILES+=	share/poudriere/common.sh.dragonfly \
 		etc/hooks_poudriere/hook_port_build_success.sh.sample \
 		etc/hooks_poudriere/hook_test_port_ended.sh.sample \
 		etc/hooks_poudriere/hook_test_port_start.sh.sample
+
+PLIST_DIRS+=	etc/hooks_poudriere

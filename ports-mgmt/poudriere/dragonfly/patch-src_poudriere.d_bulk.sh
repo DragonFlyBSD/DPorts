@@ -1,5 +1,5 @@
 --- src/poudriere.d/bulk.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/bulk.sh	2012-12-08 12:57:12.414220000 +0100
++++ src/poudriere.d/bulk.sh	2012-12-16 18:57:27.000000000 +0100
 @@ -10,7 +10,6 @@
  Options:
      -c          -- Clean the previous built binary packages
@@ -17,11 +17,10 @@
  export SKIPSANITY
  
  STATUS=0 # out of jail #
-@@ -123,16 +124,19 @@
+@@ -123,16 +124,18 @@
  	rm -f ${LOGD}/*.log 2>/dev/null
  fi
  
-+zkill ${JAILFS}@prepkg
 +zsnap ${JAILFS}@prepkg
 +
  prepare_ports
@@ -39,7 +38,7 @@
  parallel_build || : # Ignore errors as they are handled below
  
  zset status "done:"
-@@ -165,14 +169,14 @@
+@@ -165,14 +168,14 @@
  	fi
  	msg "Creating pkgng repository"
  	zset status "pkgrepo:"
@@ -58,7 +57,7 @@
  	fi
  else
  	if [ -n "${NO_RESTRICTED}" ]; then
-@@ -319,4 +323,7 @@
+@@ -319,4 +322,7 @@
  
  set +e
  

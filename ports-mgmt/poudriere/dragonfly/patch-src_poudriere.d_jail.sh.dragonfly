@@ -1,6 +1,6 @@
---- /dev/null	2012-12-06 03:01:20.230192667 +0100
-+++ src/poudriere.d/jail.sh.dragonfly	2012-12-06 03:16:39.000000000 +0100
-@@ -0,0 +1,267 @@
+--- /dev/null	2012-12-16 13:28:18.947036696 +0100
++++ src/poudriere.d/jail.sh.dragonfly	2012-12-16 19:11:40.000000000 +0100
+@@ -0,0 +1,243 @@
 +#!/bin/sh
 +#
 +# DragonFly specific
@@ -24,23 +24,12 @@
 +	git)
 +		install_from_git ${1}
 +		umount ${JAILMNT}
-+		zkill ${JAILFS}@clean
 +		zsnap ${JAILFS}@clean
 +		;;
 +	*)
 +		err 1 "Unsupported method"
 +		;;
 +	esac
-+
-+	local numjobs=$(zget slaves)
-+	local JOBX="$(jot -w %02d ${numjobs})"
-+	for j in ${JOBX}; do
-+		if [ -d ${JAILFS}.job-${j} ]; then
-+			msg_n "${JAILNAME}: Syncing slave ${j}..."
-+			cpdup -VV -x -i0 ${JAILFS}/ ${JAILFS}.job-${j}/
-+			echo "done"
-+		fi
-+	done
 +}
 +
 +build_and_install_world() {
@@ -214,19 +203,8 @@
 +	mkdir -p ${JAILMNT}/wrkdirs
 +	mkdir -p ${JAILMNT}/var/db/pkg
 +
-+	zkill ${JAILFS}@clean
 +	zsnap ${JAILFS}@clean
 +	unset CLEANUP_HOOK
-+
-+	local numjobs=$(zget slaves)
-+	local JOBX="$(jot -w %02d ${numjobs})"
-+	for j in ${JOBX}; do
-+		if [ -d ${JAILFS}.job-${j} ]; then
-+			msg_n "${JAILNAME}: Syncing slave ${j}..."
-+			cpdup -VV -x -i0 ${JAILFS}/ ${JAILFS}.job-${j}/
-+			echo "done"
-+		fi
-+	done
 +
 +	msg "Jail ${JAILNAME} ${VERSION} ${ARCH} is ready to be used"
 +	umount ${JAILMNT}
@@ -244,9 +222,7 @@
 +	msg_n "Removing ${JAILNAME} jail..."
 +	zkillfs ${JAILFS} jails/${JAILNAME}
 +	for j in ${JOBX}; do
-+		jpfs="${JAILFS}.job-${j}"
-+		jname="${name}-job-${j}"
-+		zkillfs ${jpfs} ${jname}
++		kill_metadata ${jname}
 +	done
 +	rmdir ${JAILMNT}
 +	rm -rf ${POUDRIERE_DATA}/packages/${JAILNAME}

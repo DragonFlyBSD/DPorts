@@ -1,6 +1,6 @@
---- /dev/null	2012-12-05 09:14:49.161043935 +0100
-+++ src/poudriere.d/common.sh.dragonfly	2012-12-05 11:07:22.000000000 +0100
-@@ -0,0 +1,229 @@
+--- /dev/null	2012-12-17 03:01:40.881614136 +0100
++++ src/poudriere.d/common.sh.dragonfly	2012-12-17 16:07:15.000000000 +0100
+@@ -0,0 +1,110 @@
 +#!/bin/sh
 +#
 +# DragonFly-specific
@@ -73,142 +73,6 @@
 +}
 +
 +
-+# BELOW HERE IS TRUE JAIL FUNCTIONALITY NOT USED AT THIS TIME
-+# conflicting names have _jail suffix added
-+
-+set_sysctl() {
-+	[ $# -ne 2 ] && eargs knob value
-+	local KNOB=${1}
-+	local WANTVAL=${2}
-+	CURVAL=`sysctl -n ${KNOB} 2>/dev/null`
-+	if [ ${WANTVAL} -ne ${CURVAL} ]; then
-+		sysctl ${KNOB}=${WANTVAL}
-+	fi
-+}
-+
-+jrun_jail() {
-+	[ $# -ne 1 ] && eargs network
-+	local AWKCMD='{ if ($2 != "127.0.0.1") print $2 }'
-+	local network=$1
-+	local ipargs
-+	if [ ${network} -eq 0 ]; then
-+		ipargs="127.0.0.1"
-+	else
-+		local inherited=`grep 'inet [0-9]' | awk "${AWKCMD}"`
-+		ipargs="127.0.0.1,${inherited}"
-+	fi
-+
-+	set_sysctl jail.allow_raw_sockets 1
-+	set_sysctl jail.chflags_allowed 1
-+	set_sysctl jail.sysvipc_allowed 1
-+	set_sysctl jail.socket_unixiproute_only 1
-+	set_sysctl jail.set_hostname_allowed 0
-+
-+	jail -U root ${JAILMNT} ${JAILNAME} ${ipargs} /bin/sh /etc/rc
-+}
-+
-+jail_soft_stop_jail() {
-+	local AWKCMD='{ if($2 == host) print $1 }'
-+	local JAIL_ID=$(jls | awk -v host="${1}" "${AWKCMD}")
-+	local SHUTDWN="/bin/sh /etc/rc.shutdown"
-+	if [ -n "${JAIL_ID}" ]; then
-+		#eval env -i /usr/sbin/jexec ${JAIL_ID} ${SHUTDWN} 2>&1
-+		killall -j ${JAIL_ID} -TERM > /dev/null 2>&1
-+		sleep 1
-+		#killall -j ${JAIL_ID} -KILL > /dev/null 2>&1
-+	fi
-+	return 0
-+}
-+
-+injail_jail() {
-+	local AWKCMD='{ if($2 == host) print $1 }'
-+	local JAIL_ID=$(jls | awk -v host="${JAILNAME}" "${AWKCMD}")
-+	if [ -z "${JAIL_ID}" ]; then
-+	   err 1 "Jail not running; won't execute injail command"
-+	else
-+	   jexec ${JAIL_ID} $@
-+	fi
-+}
-+
-+
-+jail_runs_jail() {
-+	[ $# -ne 0 ] && eargs
-+	local AWKCMD='{ if($2 == host) print $1 }'
-+	local check=$(jls | awk -v host="${JAILNAME}" "${AWKCMD}")
-+	[ -n "${check}" ] && return 0
-+	return 1
-+}
-+
-+jail_start_jail() {
-+	[ $# -ne 0 ] && eargs
-+	local arch=$(zget arch)
-+	local NEEDFS="${NULLFSREF} procfs"
-+	if [ -z "${NOLINUX}" ]; then
-+		if [ "${arch}" = "i386" ]; then
-+			NEEDFS="${NEEDFS} linprocfs linsysfs"
-+			sysctl -n compat.linux.osrelease >/dev/null 2>&1 || kldload linux
-+		fi
-+	fi
-+	[ -n "${USE_TMPFS}" ] && NEEDFS="${NEEDFS} tmpfs"
-+	for fs in ${NEEDFS}; do
-+		lsvfs $fs >/dev/null 2>&1 || kldload $fs
-+	done
-+	jail_exists ${JAILNAME} || err 1 "No such jail: ${JAILNAME}"
-+	jail_runs && err 1 "jail already running: ${JAILNAME}"
-+	zset status "start:"
-+	zdelete ${JAILFS} build 2>/dev/null || :
-+	zrollback ${JAILFS}@clean
-+
-+	msg "Mounting system devices for ${JAILNAME}"
-+	do_jail_mounts 1
-+
-+	test -n "${RESOLV_CONF}" && cp -v "${RESOLV_CONF}" "${JAILMNT}/etc/"
-+	msg "Starting jail ${JAILNAME}"
-+	jrun 0
-+	# Only set STATUS=1 if not turned off
-+	# jail -s should not do this or jail will stop on EXIT
-+	[ ${SET_STATUS_ON_START-1} -eq 1 ] && export STATUS=1
-+}
-+
-+jail_stop_jail() {
-+	[ $# -ne 0 ] && eargs
-+	local mnt
-+	jail_runs || err 1 "No such jail running: ${JAILNAME}"
-+	zset status "stop:"
-+
-+	jail_soft_stop ${JAILNAME%-job-*}
-+	# Shutdown all builders
-+	if [ ${PARALLEL_JOBS} -ne 0 ]; then
-+		# - here to only check for unset, {start,stop}_builders will set this to blank if already stopped
-+		for j in ${JOBS-$(jot -w %02d ${PARALLEL_JOBS})}; do
-+			jail_soft_stop ${JAILNAME%-job-*}-job-${j} 2>&1 || :
-+		done
-+	fi
-+	msg "Umounting file systems"
-+	mnt=`realpath ${MASTERMNT:-${JAILMNT}}`
-+	mount | awk -v mnt="${mnt}/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount -f || :
-+	umount ${mnt} || :
-+
-+	if [ -n "${MFSSIZE}" ]; then
-+		# umount the ${JAILMNT}/build/$jobno/wrkdirs
-+		mount | grep "/dev/md.*${mnt}/build" | while read mntpt; do
-+			local dev=`echo $mntpt | awk '{print $1}'`
-+			if [ -n "$dev" ]; then
-+				umount $dev
-+				mdconfig -d -u $dev
-+			fi
-+		done
-+		# umount the $JAILMNT/wrkdirs
-+		local dev=`mount | grep "/dev/md.*${mnt}" | awk '{print $1}'`
-+		if [ -n "$dev" ]; then
-+			umount $dev
-+			mdconfig -d -u $dev
-+		fi
-+	fi
-+	zset status "idle:"
-+	export STATUS=0
-+}
-+
 +listed_ports() {
 +	if [ ${ALL:-0} -eq 1 ]; then
 +		PORTSDIR=$(get_portsdir ${PTNAME})
@@ -228,5 +92,22 @@
 +		fi
 +	else
 +		echo ${LISTPORTS} | tr ' ' '\n'
++	fi
++}
++
++killtree() {
++	local _pid=${1}
++	local _sig=${2}
++	local _child
++	local _children
++
++	# stop parent from attempting to folk
++	kill -17 ${_pid} 2>/dev/null
++	if [ $? -eq 0 ]; then
++	   _children=$(pgrep -P ${_pid})
++	   for _child in ${children}; do
++	      killtree ${_child} ${_sig}
++	   done
++	   kill -${_sig} ${_pid}
 +	fi
 +}

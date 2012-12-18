@@ -1,6 +1,6 @@
---- src/poudriere.d/test_ports.sh.orig	2012-11-14 19:10:09.000000000 +0100
-+++ src/poudriere.d/test_ports.sh	2012-12-02 08:40:43.000000000 +0100
-@@ -10,7 +10,6 @@
+--- src/poudriere.d/test_ports.sh.orig	2012-12-01 01:15:48.000000000 +0100
++++ src/poudriere.d/test_ports.sh	2012-12-17 13:33:41.000000000 +0100
+@@ -10,11 +10,11 @@
  
  Options:
      -c          -- Run make config for the given port
@@ -8,7 +8,12 @@
      -J n        -- Run n jobs in parallel for dependencies
      -j name     -- Run only inside the given jail
      -n          -- No custom prefix
-@@ -70,13 +69,15 @@
+     -p tree     -- Specify on which portstree we work
++    -s          -- Skip sanity
+     -v          -- Be verbose; show more information. Use twice to enable debug output."
+ 	exit 1
+ }
+@@ -70,13 +70,15 @@
  
  test -z ${HOST_PORTDIRECTORY} && test -z ${ORIGIN} && usage
  
@@ -26,7 +31,7 @@
  fi
  
  test -z "${JAILNAME}" && err 1 "Don't know on which jail to run please specify -j"
-@@ -94,13 +95,18 @@
+@@ -94,13 +96,17 @@
  
  if [ -z ${ORIGIN} ]; then
  	mkdir -p ${JAILMNT}/${PORTDIRECTORY}
@@ -35,7 +40,6 @@
 +	  err 1 "Failed to null-mount ${HOST_PORTDIRECTORY} to jail"
  fi
  
-+zkill ${JAILFS}@prepkg
 +zsnap ${JAILFS}@prepkg
 +
  LISTPORTS=$(list_deps ${PORTDIRECTORY} )

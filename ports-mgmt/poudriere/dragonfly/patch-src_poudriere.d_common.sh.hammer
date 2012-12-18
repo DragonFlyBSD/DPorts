@@ -1,6 +1,6 @@
---- /dev/null	2012-12-06 03:01:20.230192667 +0100
-+++ src/poudriere.d/common.sh.hammer	2012-12-06 03:16:16.000000000 +0100
-@@ -0,0 +1,567 @@
+--- /dev/null	2012-12-18 07:36:50.645068709 +0100
++++ src/poudriere.d/common.sh.hammer	2012-12-18 07:48:21.000000000 +0100
+@@ -0,0 +1,777 @@
 +#!/bin/sh
 +
 +zget() {
@@ -81,11 +81,47 @@
 +	local pfs=$(extract_pfs ${1})
 +	mkdir -p ${HAMMER_SNAPDIR}
 +	if [ -L ${HAMMER_SNAPDIR}/${snap} ]; then
-+		err 1 "Cannot snapshot, ${snap} already exists"
++		zkill ${1}
 +	else
 +		hammer snapshot ${pfs} ${HAMMER_SNAPDIR}/${snap} > /dev/null
 +	fi
 +	return 0
++}
++
++save_preinstall_state () {
++	[ $# -ne 3 ] && eargs master-mountpoint slave-mountpoint job-id
++	local mm="${1}"
++	local jn="${3}"
++	if [ -z "${mm}" ]; then
++	   mm="${2}"
++	   jn="00"
++	fi
++	local mtreename=slave-${jn}.preinst
++	local trees=${mm}/poudriere/trees
++	mtree -X ${trees}/mtree.exclude -xcn -k uid,gid,mode -p ${2} \
++	   > ${trees}/${mtreename}
++}
++
++differential () {
++	[ $# -ne 3 ] && eargs master-mountpoint slave-mountpoint job-id
++	local mm="${1}"
++	local jn="${3}"
++	if [ -z "${mm}" ]; then
++	   mm="${2}"
++	   jn="00"
++	fi
++	local mtreename=slave-${jn}.preinst
++	local trees=${mm}/poudriere/trees
++	local AWKCMD='{ if ($0 != ". changed") { \
++xx = length ($0); \
++if ($NF == "changed") {print "M * " substr ($0, 1, xx - 8)} \
++if ($NF == "missing") {print "- * " substr ($0, 1, xx - 8)} \
++if ($NF == "extra")   {print "+ * " substr ($0, 1, xx - 6)} \
++}}'
++	mtree -X ${trees}/mtree.exclude -x -f ${trees}/${mtreename} -p ${2} \
++	   | grep -E ' (changed|extra|missing)$' \
++	   | sed -e 's|^./||' \
++	   | awk "${AWKCMD}"
 +}
 +
 +kill_metadata () {
@@ -124,15 +160,20 @@
 +	fi
 +	local snap=$(snapname "${1}")
 +	local pfs=$(extract_pfs ${1})
-+	# rollback only used for jails
-+	# Don't transverse the entire tree, just do the minimum
++	# rollback only used for starting jail and building world
 +
-+	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${pfs}/etc
-+	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/var       ${pfs}/var
-+	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${pfs}/etc
-+	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/usr/bin   ${pfs}/usr/bin
-+	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/usr/local ${pfs}/usr/local
-+	rm -rf ${pfs}/poudriere
++	cpdup -x -VV -i0 ${HAMMER_SNAPDIR}/${snap}/ ${pfs}/
++}
++
++reset_slave () {
++	[ $# -ne 2 ] && eargs pfs-filesystem@snapname slave-mountpoint
++	local snap=$(snapname "${1}")
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${2}/etc
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/var       ${2}/var
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${2}/etc
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/usr/bin   ${2}/usr/bin
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/usr/local ${2}/usr/local
++	rm -rf ${2}/tmp/*
 +}
 +
 +zxdiff () {
@@ -261,19 +302,16 @@
 +
 +	for j in ${JOBX}; do
 +		jmnt="${mnt}/build/${j}"
-+		jpfs="${pfs}.job-${j}"
 +		jname="${name}-job-${j}"
 +		jconfdir=${confdir}-job-${j}
 +
 +		mkdir -p ${jconfdir}
-+		hammer pfs-master $jpfs
 +
 +		echo "rootfs"     > ${jconfdir}/type
 +		echo "${jname}"   > ${jconfdir}/name
 +		echo "${version}" > ${jconfdir}/version
 +		echo "${arch}"    > ${jconfdir}/arch
 +		echo "${jmnt}"    > ${jconfdir}/mountpoint
-+		echo "${jpfs}"    > ${jconfdir}/filesys
 +	done
 +
 +	echo " done"
@@ -312,14 +350,16 @@
 +		zset status "starting_jobs:${j}"
 +		mkdir -p "${mnt}"
 +
-+		# sync slave with master snapshot
-+		msg_n "Syncing slave ${j}..."
-+		cpdup -VV -x -i0 ${HAMMER_SNAPDIR}/${snap}/ ${pfs}/
++		# Make duplicate of master@prepkg snapshot (one per job)
++		mount -t tmpfs tmpfs ${mnt}
++		msg_n "Creating slave ${j}..."
++		cpdup -x -i0 ${HAMMER_SNAPDIR}/${snap}/ ${mnt}/
 +		echo "done"
 +
-+		# take a snapshot of slave
-+		zkill ${pfs}@prepkg
-+		zsnap ${pfs}@prepkg
++		# This is a bug somewhere in tmpfs -- the directories
++		# sometimes aren't available for mount right away.
++		# Wait it out until this is fixed.
++		sleep 5
 +
 +		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${pfs} do_jail_mounts 0
 +		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${pfs} do_portbuild_mounts 0
@@ -393,7 +433,7 @@
 +				read_queue=0
 +			else
 +				MASTERMNT=${JAILMNT} JAILNAME="${name}" JAILMNT="${mnt}" JAILFS="${pfs}" \
-+				MY_JOBID="${j}" \
++				MASTERFS=${JAILFS} MY_JOBID="${j}" \
 +				build_pkg "${pkgname}" >/dev/null 2>&1 &
 +				echo "$!" > ${pidfile}
 +
@@ -442,30 +482,20 @@
 +	[ -z "${BASEJNAME}" ] && err 2 "Fail: Missing JAILNAME"
 +	log_stop
 +
-+	# Kill all children - this does NOT recurse, so orphans can still
-+	# occur. This is just to avoid requiring pid files for parallel_run
++	# Kill main process' children
 +	for pid in $(jobs -p); do
-+		kill ${pid} 2>/dev/null || :
++		killtree ${pid} 15 || :
 +	done
 +
 +	if [ -d ${MASTERMNT:-${JAILMNT}}/poudriere/var/run ]; then
 +		for pid in ${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid; do
 +			# Ensure there is a pidfile to read or break
 +			[ "${pid}" = "${MASTERMNT:-${JAILMNT}}/poudriere/var/run/*.pid" ] && break
-+			kill -15 `cat ${pid}` >/dev/null 2>&1 || :
++			killtree `cat ${pid}` 15 || :
 +		done
 +	fi
 +	wait
 +
-+	local numjobs JOBX BASEJFS
-+	BASEJFS=${JAILFS%.job-*}
-+	JAILNAME="${BASEJNAME}" numjobs=$(zget slaves)
-+	local JOBX="$(jot -w %02d ${numjobs})"
-+
-+	for j in ${JOBX}; do
-+		zkill ${BASEJFS}.job-${j}@prepkg
-+		zkill ${BASEJFS}.job-${j}@preinst
-+	done
 +	zkill ${BASEJFS}@prepkg
 +	jail_stop
 +	export CLEANED_UP=1
@@ -479,6 +509,9 @@
 +
 +	# Try to minimize ZVERSION checks issues
 +	ZVERSION=9999
++
++	# use tmpfs for poudriere deps and pool
++	TMPFS_DATA=yes
 +}
 +
 +print_ports_table () {
@@ -568,3 +601,180 @@
 +	esac
 +}
 +
++do_jail_mounts() {
++	[ $# -ne 1 ] && eargs should_mkdir
++	local should_mkdir=$1
++	local arch=$(zget arch)
++
++	# only the master jail is mounted
++	# The slaves are created on the fly on a new tmpfs mount
++	if [ ${should_mkdir} -eq 1 ]; then
++	   mount_jailport ${JAILFS} ${JAILMNT}
++	fi
++
++	mount -t devfs devfs ${JAILMNT}/dev
++	mount -t procfs proc ${JAILMNT}/proc
++
++	if [ -z "${NOLINUX}" ]; then
++				if [ "${arch}" = "i386" ]; then
++			if [ ${should_mkdir} -eq 1 ]; then
++				mkdir -p ${JAILMNT}/compat/linux/proc
++				mkdir -p ${JAILMNT}/compat/linux/sys
++			fi
++			mount -t linprocfs linprocfs ${JAILMNT}/compat/linux/proc
++		fi
++	fi
++}
++
++do_portbuild_mounts() {
++	[ $# -ne 1 ] && eargs should_mkdir
++	local should_mkdir=$1
++
++	# Only do this when starting the master jail, clones will already have the dirs
++	if [ ${should_mkdir} -eq 1 ]; then
++		mkdir -p ${STD_PACKAGES}
++		mkdir -p ${PKGDIR}/All
++		mkdir -p ${STD_DISTFILES}
++		if [ -d "${CCACHE_DIR:-/nonexistent}" ]; then
++			mkdir -p ${JAILMNT}${CCACHE_DIR} || err 1 "Failed to create ccache directory "
++			msg "Mounting ccache from: ${CCACHE_DIR}"
++			export CCACHE_DIR
++			export WITH_CCACHE_BUILD=yes
++		fi
++		# Check for invalid options-JAILNAME created by bad options.sh
++		[ -d ${POUDRIERED}/options-${JAILNAME%-job-*} ] && err 1 "Please move your options-${JAILNAME%-job-*} to ${JAILNAME%-job-*}-options"
++		
++		# only mount wrkdirs on master jail
++		# The slaves are already tmpfs, no need to mount tmpfs on tmpfs
++		[ -n "${USE_TMPFS}" ] && mount -t tmpfs tmpfs ${JAILMNT}/wrkdirs
++
++		msg "Mounting packages from: ${PKGDIR}"
++	fi
++
++	${NULLMOUNT} -o ro ${PORTSDIR} ${JAILMNT}/${PORTSRC} || err 1 "Failed to mount the ports directory "
++	${NULLMOUNT} ${PKGDIR} ${JAILMNT}/${STD_PACKAGES} || err 1 "Failed to mount the packages directory "
++
++	if [ "$(realpath ${DISTFILES_CACHE:-/nonexistent})" != "$(realpath ${PORTSDIR}/distfiles)" ]; then
++		${NULLMOUNT} ${DISTFILES_CACHE} ${JAILMNT}/${STD_DISTFILES} || err 1 "Failed to mount the distfile directory"
++	fi
++
++	# Order is JAILNAME-SETNAME, then SETNAME, then JAILNAME, then default.
++	if [ -n "${SETNAME}" -a -d ${POUDRIERED}/${JAILNAME%-job-*}${SETNAME}-options ]; then
++		use_options ${POUDRIERED}/${JAILNAME%-job-*}${SETNAME}-options ${should_mkdir}
++	elif [ -d ${POUDRIERED}/${SETNAME#-}-options ]; then
++		use_options ${POUDRIERED}/${SETNAME#-}-options ${should_mkdir}
++	elif [ -d ${POUDRIERED}/${JAILNAME%-job-*}-options ]; then
++		use_options ${POUDRIERED}/${JAILNAME%-job-*}-options ${should_mkdir}
++	elif [ -d ${POUDRIERED}/options ]; then
++		use_options ${POUDRIERED}/options ${should_mkdir}
++	fi
++
++	if [ -d "${CCACHE_DIR:-/nonexistent}" ]; then
++		# Mount user supplied CCACHE_DIR into /var/cache/ccache
++		${NULLMOUNT} ${CCACHE_DIR} ${JAILMNT}${CCACHE_DIR} || err 1 "Failed to mount the ccache directory "
++	fi
++}
++
++# Build+test port and return on first failure
++build_port() {
++	[ $# -ne 1 ] && eargs portdir
++	local portdir=$1
++	local port=$(echo ${portdir} | sed -e "s|^${PORTSRC}/||")
++	local targets="check-config fetch checksum extract patch configure build run-depends install package ${PORTTESTING:+deinstall}"
++
++	for phase in ${targets}; do
++		zset status "${phase}:${port}"
++		job_msg_verbose "Status for build ${port}: ${phase}"
++		if [ "${phase}" = "fetch" ]; then
++			jail_soft_stop ${JAILNAME}
++			jrun 1
++		fi
++		if [ "${phase}" = "install" ]; then
++			save_preinstall_state "${MASTERMNT}" "${JAILMNT}" "${MY_JOBID}"
++		fi
++		if [ "${phase}" = "deinstall" ]; then
++			msg "Checking shared library dependencies"
++			if [ ${PKGNG} -eq 0 ]; then
++				PLIST="/var/db/pkg/${PKGNAME}/+CONTENTS"
++				grep -v "^@" ${JAILMNT}${PLIST} | \
++					sed -e "s,^,${PREFIX}/," | \
++					xargs injail ldd 2>&1 | \
++					grep -v "not a dynamic executable" | \
++					awk ' /=>/{ print $3 }' | sort -u
++			else
++				injail pkg query "%Fp" ${PKGNAME} | \
++					xargs injail ldd 2>&1 | \
++					grep -v "not a dynamic executable" | \
++					awk '/=>/ { print $3 }' | sort -u
++			fi
++		fi
++
++		print_phase_header ${phase}
++		injail env ${PKGENV} ${PORT_FLAGS} make -C ${portdir} ${phase} || return 1
++		print_phase_footer
++
++		if [ "${phase}" = "checksum" ]; then
++			jail_soft_stop ${JAILNAME}
++			jrun 0
++		fi
++		if [ "${phase}" = "deinstall" ]; then
++			msg "Checking for extra files and directories"
++			PREFIX=`injail make -C ${portdir} -VPREFIX`
++			zset status "leftovers:${port}"
++			if [ $ZVERSION -lt 28 ]; then
++				find ${jailbase}${PREFIX} ! -type d | \
++					sed -e "s,^${jailbase}${PREFIX}/,," | sort
++
++				find ${jailbase}${PREFIX}/ -type d | sed "s,^${jailbase}${PREFIX}/,," | sort > ${jailbase}${PREFIX}.PLIST_DIRS.after
++				comm -13 ${jailbase}${PREFIX}.PLIST_DIRS.before ${jailbase}${PREFIX}.PLIST_DIRS.after | sort -r | awk '{ print "@dirrmtry "$1}'
++			else
++				local portname=$(injail make -C ${portdir} -VPORTNAME)
++				local add=$(mktemp ${jailbase}/tmp/add.XXXXXX)
++				local add1=$(mktemp ${jailbase}/tmp/add1.XXXXXX)
++				local del=$(mktemp ${jailbase}/tmp/del.XXXXXX)
++				local del1=$(mktemp ${jailbase}/tmp/del1.XXXXXX)
++				local mod=$(mktemp ${jailbase}/tmp/mod.XXXXXX)
++				local mod1=$(mktemp ${jailbase}/tmp/mod1.XXXXXX)
++				local die=0
++				differential "${MASTERMNT}" "${JAILMNT}" "${MY_JOBID}" | \
++					while read mod type path; do
++					local ppath
++					ppath=`echo "$path" | sed -e "s,^${JAILMNT},," -e "s,^${PREFIX}/,," -e "s,^share/${portname},%%DATADIR%%," -e "s,^etc/${portname},%%ETCDIR%%,"`
++					case $mod$type in
++					+*) echo "${ppath}" >> ${add};;
++					-*) echo "${ppath}" >> ${del};;
++					M/) continue;;
++					M*) echo "${ppath}" >> ${mod};;
++					esac
++				done
++				sort ${add} > ${add1}
++				sort ${del} > ${del1}
++				sort ${mod} > ${mod1}
++				comm -12 ${add1} ${del1} >> ${mod1}
++				comm -23 ${add1} ${del1} > ${add}
++				comm -13 ${add1} ${del1} > ${del}
++				if [ -s "${add}" ]; then
++					msg "Files or directories left over:"
++					die=1
++					cat ${add}
++				fi
++				if [ -s "${del}" ]; then
++					msg "Files or directories removed:"
++					die=1
++					cat ${del}
++				fi
++				if [ -s "${mod}" ]; then
++					msg "Files or directories modified:"
++					die=1
++					cat ${mod1}
++				fi
++				rm -f ${add} ${add1} ${del} ${del1} ${mod} ${mod1}
++				[ $die -eq 0 ] || return 1
++			fi
++		fi
++	done
++	jail_soft_stop ${JAILNAME}
++	jrun 0
++	zset status "idle:"
++	return 0
++}

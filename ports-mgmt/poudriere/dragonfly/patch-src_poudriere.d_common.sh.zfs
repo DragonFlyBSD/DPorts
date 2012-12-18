@@ -1,6 +1,6 @@
---- /dev/null	2012-11-25 03:01:18.885857679 +0100
-+++ src/poudriere.d/common.sh.zfs	2012-11-25 15:09:20.000000000 +0100
-@@ -0,0 +1,407 @@
+--- /dev/null	2012-12-16 13:28:18.947036696 +0100
++++ src/poudriere.d/common.sh.zfs	2012-12-16 19:34:50.000000000 +0100
+@@ -0,0 +1,603 @@
 +#!/bin/sh
 +#
 +# ZFS-specific functions
@@ -407,4 +407,200 @@
 +		PARALLEL_JOBS=$(sysctl -n hw.ncpu)
 +		;;
 +	esac
++}
++
++do_jail_mounts() {
++	[ $# -ne 1 ] && eargs should_mkdir
++	local should_mkdir=$1
++	local arch=$(zget arch)
++
++	# Only do this when starting the master jail, clones will already have the dirs
++	if [ ${should_mkdir} -eq 1 ]; then
++		mkdir -p ${JAILMNT}/proc
++	fi
++
++	mount -t devfs devfs ${JAILMNT}/dev
++	mount -t fdescfs fdesc ${JAILMNT}/dev/fd
++	mount -t procfs proc ${JAILMNT}/proc
++
++	if [ -z "${NOLINUX}" ]; then
++		if [ "${arch}" = "i386" -o "${arch}" = "amd64" ]; then
++			if [ ${should_mkdir} -eq 1 ]; then
++				mkdir -p ${JAILMNT}/compat/linux/proc
++				mkdir -p ${JAILMNT}/compat/linux/sys
++			fi
++			mount -t linprocfs linprocfs ${JAILMNT}/compat/linux/proc
++#			mount -t linsysfs linsysfs ${JAILMNT}/compat/linux/sys
++		fi
++	fi
++}
++
++do_portbuild_mounts() {
++	[ $# -ne 1 ] && eargs should_mkdir
++	local should_mkdir=$1
++
++	# Only do this when starting the master jail, clones will already have the dirs
++	if [ ${should_mkdir} -eq 1 ]; then
++		mkdir -p ${PORTSDIR}/packages
++		mkdir -p ${PKGDIR}/All
++		mkdir -p ${PORTSDIR}/distfiles
++		if [ -d "${CCACHE_DIR:-/nonexistent}" ]; then
++			mkdir -p ${JAILMNT}${CCACHE_DIR} || err 1 "Failed to create ccache directory "
++			msg "Mounting ccache from: ${CCACHE_DIR}"
++			export CCACHE_DIR
++			export WITH_CCACHE_BUILD=yes
++		fi
++		# Check for invalid options-JAILNAME created by bad options.sh
++		[ -d ${POUDRIERED}/options-${JAILNAME%-job-*} ] && err 1 "Please move your options-${JAILNAME%-job-*} to ${JAILNAME%-job-*}-options"
++
++		msg "Mounting packages from: ${PKGDIR}"
++	fi
++
++	mount -t nullfs ${PORTSDIR} ${JAILMNT}/usr/ports || err 1 "Failed to mount the ports directory "
++	mount -t nullfs ${PKGDIR} ${JAILMNT}/usr/ports/packages || err 1 "Failed to mount the packages directory "
++
++	if [ "$(realpath ${DISTFILES_CACHE:-/nonexistent})" != "$(realpath ${PORTSDIR}/distfiles)" ]; then
++		mount -t nullfs ${DISTFILES_CACHE} ${JAILMNT}/usr/ports/distfiles || err 1 "Failed to mount the distfile directory"
++	fi
++	[ -n "${MFSSIZE}" ] && mdmfs -M -S -o async -s ${MFSSIZE} md ${JAILMNT}/wrkdirs
++	[ -n "${USE_TMPFS}" ] && mount -t tmpfs tmpfs ${JAILMNT}/wrkdirs
++
++	# Order is JAILNAME-SETNAME, then SETNAME, then JAILNAME, then default.
++	if [ -n "${SETNAME}" -a -d ${POUDRIERED}/${JAILNAME%-job-*}${SETNAME}-options ]; then
++		use_options ${POUDRIERED}/${JAILNAME%-job-*}${SETNAME}-options ${should_mkdir}
++	elif [ -d ${POUDRIERED}/${SETNAME#-}-options ]; then
++		use_options ${POUDRIERED}/${SETNAME#-}-options ${should_mkdir}
++	elif [ -d ${POUDRIERED}/${JAILNAME%-job-*}-options ]; then
++		use_options ${POUDRIERED}/${JAILNAME%-job-*}-options ${should_mkdir}
++	elif [ -d ${POUDRIERED}/options ]; then
++		use_options ${POUDRIERED}/options ${should_mkdir}
++	fi
++
++	if [ -d "${CCACHE_DIR:-/nonexistent}" ]; then
++		# Mount user supplied CCACHE_DIR into /var/cache/ccache
++		mount -t nullfs ${CCACHE_DIR} ${JAILMNT}${CCACHE_DIR} || err 1 "Failed to mount the ccache directory "
++	fi
++}
++
++# Build+test port and return on first failure
++build_port() {
++	[ $# -ne 1 ] && eargs portdir
++	local portdir=$1
++	local port=${portdir##/usr/ports/}
++	local targets="check-config fetch checksum extract patch configure build run-depends install package ${PORTTESTING:+deinstall}"
++
++	for phase in ${targets}; do
++		zset status "${phase}:${port}"
++		job_msg_verbose "Status for build ${port}: ${phase}"
++		if [ "${phase}" = "fetch" ]; then
++			jail -r ${JAILNAME} >/dev/null
++			jrun 1
++		fi
++		[ "${phase}" = "install" -a $ZVERSION -ge 28 ] && zfs snapshot ${JAILFS}@preinst
++		if [ "${phase}" = "deinstall" ]; then
++			msg "Checking shared library dependencies"
++			if [ ${PKGNG} -eq 0 ]; then
++				PLIST="/var/db/pkg/${PKGNAME}/+CONTENTS"
++				grep -v "^@" ${JAILMNT}${PLIST} | \
++					sed -e "s,^,${PREFIX}/," | \
++					xargs injail ldd 2>&1 | \
++					grep -v "not a dynamic executable" | \
++					awk ' /=>/{ print $3 }' | sort -u
++			else
++				injail pkg query "%Fp" ${PKGNAME} | \
++					xargs injail ldd 2>&1 | \
++					grep -v "not a dynamic executable" | \
++					awk '/=>/ { print $3 }' | sort -u
++			fi
++		fi
++
++		print_phase_header ${phase}
++		injail env ${PKGENV} ${PORT_FLAGS} make -C ${portdir} ${phase} || return 1
++		print_phase_footer
++
++		if [ "${phase}" = "checksum" ]; then
++			jail -r ${JAILNAME} >/dev/null
++			jrun 0
++		fi
++		if [ "${phase}" = "deinstall" ]; then
++			msg "Checking for extra files and directories"
++			PREFIX=`injail make -C ${portdir} -VPREFIX`
++			zset status "leftovers:${port}"
++			if [ $ZVERSION -lt 28 ]; then
++				find ${jailbase}${PREFIX} ! -type d | \
++					sed -e "s,^${jailbase}${PREFIX}/,," | sort
++
++				find ${jailbase}${PREFIX}/ -type d | sed "s,^${jailbase}${PREFIX}/,," | sort > ${jailbase}${PREFIX}.PLIST_DIRS.after
++				comm -13 ${jailbase}${PREFIX}.PLIST_DIRS.before ${jailbase}${PREFIX}.PLIST_DIRS.after | sort -r | awk '{ print "@dirrmtry "$1}'
++			else
++				local portname=$(injail make -C ${portdir} -VPORTNAME)
++				local add=$(mktemp ${jailbase}/tmp/add.XXXXXX)
++				local add1=$(mktemp ${jailbase}/tmp/add1.XXXXXX)
++				local del=$(mktemp ${jailbase}/tmp/del.XXXXXX)
++				local del1=$(mktemp ${jailbase}/tmp/del1.XXXXXX)
++				local mod=$(mktemp ${jailbase}/tmp/mod.XXXXXX)
++				local mod1=$(mktemp ${jailbase}/tmp/mod1.XXXXXX)
++				local die=0
++				zfs diff -FH ${JAILFS}@preinst ${JAILFS} | \
++					while read mod type path; do
++					local ppath
++					ppath=`echo "$path" | sed -e "s,^${JAILMNT},," -e "s,^${PREFIX}/,," -e "s,^share/${portname},%%DATADIR%%," -e "s,^etc/${portname},%%ETCDIR%%,"`
++					case "$ppath" in
++					/var/db/pkg/*) continue;;
++					/var/run/*) continue;;
++					/wrkdirs/*) continue;;
++					/tmp/*) continue;;
++					share/nls/POSIX) continue;;
++					share/nls/en_US.US-ASCII) continue;;
++					/var/db/fontconfig/*) continue;;
++					/var/log/*) continue;;
++					/var/mail/*) continue;;
++					${HOME}/*) continue;;
++					/etc/spwd.db) continue;;
++					/etc/pwd.db) continue;;
++					/etc/group) continue;;
++					/etc/make.conf) continue;;
++					/etc/passwd) continue;;
++					/etc/master.passwd) continue;;
++					/etc/shells) continue;;
++					/etc/make.conf.bak) continue;;
++					esac
++					case $mod$type in
++					+*) echo "${ppath}" >> ${add};;
++					-*) echo "${ppath}" >> ${del};;
++					M/) continue;;
++					M*) echo "${ppath}" >> ${mod};;
++					esac
++				done
++				sort ${add} > ${add1}
++				sort ${del} > ${del1}
++				sort ${mod} > ${mod1}
++				comm -12 ${add1} ${del1} >> ${mod1}
++				comm -23 ${add1} ${del1} > ${add}
++				comm -13 ${add1} ${del1} > ${del}
++				if [ -s "${add}" ]; then
++					msg "Files or directories left over:"
++					die=1
++					cat ${add}
++				fi
++				if [ -s "${del}" ]; then
++					msg "Files or directories removed:"
++					die=1
++					cat ${del}
++				fi
++				if [ -s "${mod}" ]; then
++					msg "Files or directories modified:"
++					die=1
++					cat ${mod1}
++				fi
++				rm -f ${add} ${add1} ${del} ${del1} ${mod} ${mod1}
++				[ $die -eq 0 ] || return 1
++			fi
++		fi
++	done
++	jail -r ${JAILNAME} >/dev/null
++	jrun 0
++	zset status "idle:"
++	zfs destroy -r ${JAILFS}@preinst || :
++	return 0
 +}
