@@ -1,0 +1,37 @@
+# New ports collection makefile for:	ruby-rbprof
+# Date created:		08 April 2002
+# Whom:			Sean Chittenden <sean@chittenden.org>
+#
+# $FreeBSD: ports/devel/ruby-rbprof/Makefile,v 1.4 2012/11/17 05:56:57 svnexp Exp $
+#
+
+PORTNAME=	rbprof
+PORTVERSION=	0.2.1
+CATEGORIES=	devel ruby
+MASTER_SITES=	SF/aspectr/aspectr/0.3.5
+DISTNAME=	aspectr-0-3-5
+DIST_SUBDIR=	ruby
+
+MAINTAINER=	sean@chittenden.org
+COMMENT=	A flexible Ruby profiler
+
+#RUN_DEPENDS=	${RUBY_SITELIBDIR}/runit/error.rb:${PORTSDIR}/devel/ruby-unit \
+#		${RUBY_SITELIBDIR}/aspectr.rb:${PORTSDIR}/devel/ruby-aspectr
+
+USE_RUBY=	yes
+
+NO_BUILD=	yes
+
+do-install:
+.ifndef NOPORTDOCS
+	@${MKDIR} ${PORTDOCS}${RUBY_DOCDIR}/rbprof
+	${INSTALL_DATA} ${WRKSRC}/README ${PORTDOCS}${RUBY_DOCDIR}/rbprof/
+	${INSTALL_DATA} ${WRKSRC}/TODO ${PORTDOCS}${RUBY_DOCDIR}/rbprof/
+.endif
+	${RUBY} -p -i -e 'gsub(/\r\n/, "\n")' ${WRKSRC}/aspects/profiler/lib/rbprof.rb
+	${RUBY} -p -i -e 'gsub(/\r\n/, "\n")' ${WRKSRC}/aspects/profiler/lib/trap_method_definitions.rb
+	${INSTALL_DATA} ${WRKSRC}/aspects/profiler/lib/rbprof.rb ${RUBY_SITELIBDIR}/
+	${MKDIR} ${RUBY_SITELIBDIR}/rbprof
+	${INSTALL_DATA} ${WRKSRC}/aspects/profiler/lib/trap_method_definitions.rb ${RUBY_SITELIBDIR}/rbprof/
+
+.include <bsd.port.mk>
