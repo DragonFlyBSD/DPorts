@@ -1,0 +1,29 @@
+# New ports collection makefile for:	stjerm
+# Date created:		2011-03-25
+# Whom:			Zhihao Yuan <lichray@gmail.com>
+#
+# $FreeBSD: ports/x11/stjerm/Makefile,v 1.4 2012/11/17 06:03:19 svnexp Exp $
+#
+
+PORTNAME=	stjerm
+PORTVERSION=	0.15
+PORTREVISION=	1
+CATEGORIES=	x11
+MASTER_SITES=	http://stjerm-terminal.googlecode.com/files/
+
+MAINTAINER=	lichray@gmail.com
+COMMENT=	A GTK+-based quake-like terminal emulator
+
+USE_AUTOTOOLS=	aclocal autoheader automake
+AUTOMAKE_ARGS=	--add-missing
+ACLOCAL_ARGS=	--acdir=${ACLOCAL_DIR} \
+		-I${LOCALBASE}/share/aclocal
+USE_GNOME=	vte gtk20
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+
+MAN8=		stjerm.8
+LICENSE_FILE=	${WRKSRC}/COPYING
+PLIST_FILES=	bin/stjerm
+
+.include <bsd.port.mk>
