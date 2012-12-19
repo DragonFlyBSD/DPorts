@@ -1,0 +1,21 @@
+%%PHPMP%%/COPYING
+%%PHPMP%%/ChangeLog
+%%PHPMP%%/INSTALL
+%%PHPMP%%/README
+%%PHPMP%%/TODO
+@unexec if cmp -s %D/%%PHPMP%%/config.php.sample %D/%%PHPMP%%/config.php; then rm -f %D/%%PHPMP%%/config.php; fi
+%%PHPMP%%/config.php.sample
+@exec if [ ! -f %D/%%PHPMP%%/config.php ] ; then cp -p %D/%F %B/config.php; fi
+%%PHPMP%%/features.php
+%%PHPMP%%/index.php
+%%PHPMP%%/info.php
+%%PHPMP%%/info2html.php
+%%PHPMP%%/main.php
+%%PHPMP%%/mpd-favicon.ico
+%%PHPMP%%/playlist.php
+%%PHPMP%%/sort.php
+%%PHPMP%%/theme.php
+%%PHPMP%%/transparent.gif
+%%PHPMP%%/utils.php
+%%PHPMP%%/xml-parse.php
+@dirrmtry %%PHPMP%%
