@@ -1,0 +1,25 @@
+# New ports collection makefile for:	POE-Devel-Profiler
+# Date created:	   19 October 2004
+# Whom:		   Sergey Skvortsov <skv@protey.ru>
+#
+# $FreeBSD: ports/devel/p5-POE-Devel-Profiler/Makefile,v 1.9 2012/11/17 05:56:25 svnexp Exp $
+#
+
+PORTNAME=	POE-Devel-Profiler
+PORTVERSION=	0.02
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Profiles POE programs
+
+BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN1=		poepp.1
+MAN3=		POE::Devel::Profiler.3
+
+.include <bsd.port.mk>
