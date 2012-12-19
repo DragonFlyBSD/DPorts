@@ -1,0 +1,29 @@
+# New ports collection makefile for:	pecl-qrencode
+# Date created:				Apr 16 2007
+# Whom:					vanilla
+#
+# $FreeBSD: ports/graphics/pecl-qrencode/Makefile,v 1.8 2012/11/17 05:58:18 svnexp Exp $
+#
+
+PORTNAME=	qrencode
+PORTVERSION=	0.4
+CATEGORIES=	graphics pear
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	vanilla
+PKGNAMEPREFIX=	pecl-
+DIST_SUBDIR=	PECL
+
+MAINTAINER=	vanilla@FreeBSD.org
+COMMENT=	A PECL extension for generate qrcode
+
+LIB_DEPENDS=	qrencode.3:${PORTSDIR}/graphics/libqrencode
+
+USE_PHP=	yes
+USE_PHPEXT=	yes
+USE_BZIP2=	yes
+
+CONFIGURE_ARGS=	--with-qrencode=${LOCALBASE}
+LDFLAGS+=	-L${LOCALBASE}/lib ${EXTRA_LIBS}
+CFLAGS+=	-I${LOCALBASE}/include
+
+.include <bsd.port.mk>
