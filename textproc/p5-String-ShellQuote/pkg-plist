@@ -1,0 +1,6 @@
+bin/shell-quote
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/String/ShellQuote/.packlist
+%%SITE_PERL%%/String/ShellQuote.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/String/ShellQuote
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/String
+@dirrmtry %%SITE_PERL%%/String
