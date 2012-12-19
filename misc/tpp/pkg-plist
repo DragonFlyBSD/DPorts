@@ -1,0 +1,28 @@
+bin/tpp
+%%DOCSDIR%%/CHANGES
+%%DOCSDIR%%/COPYING
+%%DOCSDIR%%/DESIGN
+%%DOCSDIR%%/README
+%%DOCSDIR%%/THANKS
+%%DOCSDIR%%/contrib/tpp-mode.el
+%%DOCSDIR%%/contrib/tpp.vim
+%%DOCSDIR%%/examples/ac-am.tpp
+%%DOCSDIR%%/examples/align-footer.tpp
+%%DOCSDIR%%/examples/bold.tpp
+%%DOCSDIR%%/examples/colors.tpp
+%%DOCSDIR%%/examples/colors2.tpp
+%%DOCSDIR%%/examples/debian-packaging.tpp
+%%DOCSDIR%%/examples/exec.tpp
+%%DOCSDIR%%/examples/horline.tpp
+%%DOCSDIR%%/examples/huge.tpp
+%%DOCSDIR%%/examples/list.tpp
+%%DOCSDIR%%/examples/manyslides.tpp
+%%DOCSDIR%%/examples/shell.tpp
+%%DOCSDIR%%/examples/slidein.tpp
+%%DOCSDIR%%/examples/source.tpp
+%%DOCSDIR%%/examples/test.tpp
+%%DOCSDIR%%/examples/tpp-features.tpp
+%%DOCSDIR%%/examples/wrap.tpp
+@dirrm %%DOCSDIR%%/contrib
+@dirrm %%DOCSDIR%%/examples
+@dirrm %%DOCSDIR%%
