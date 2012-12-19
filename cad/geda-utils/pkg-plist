@@ -1,0 +1,26 @@
+bin/convert_sym
+bin/garchive
+bin/gmk_sym
+bin/gnet_hier_verilog.sh
+bin/grenum
+bin/gsch2pcb
+bin/gschlas
+bin/gschupdate
+bin/gsymfix.pl
+bin/gsymupdate
+bin/olib
+bin/pads_backannotate
+bin/pcb_backannotate
+bin/refdes_renum
+bin/sarlacc_schem
+bin/sarlacc_sym
+bin/smash_megafile
+bin/tragesym
+%%DOCSDIR%%/readmes/README.grenum
+%%DOCSDIR%%/readmes/README.gsch2pcb
+%%DOCSDIR%%/readmes/README.olib
+%%DOCSDIR%%/readmes/README.tragesym
+%%DATADIR%%/system-gschlasrc
+@dirrmtry %%DATADIR%%
+@dirrmtry %%DOCSDIR%%/readmes
+@dirrmtry %%DOCSDIR%%
