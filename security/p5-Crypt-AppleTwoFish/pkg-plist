@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Crypt/AppleTwoFish.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/AppleTwoFish/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/AppleTwoFish/
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt
+@dirrmtry %%SITE_PERL%%/Crypt
