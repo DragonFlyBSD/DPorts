@@ -1,0 +1,10 @@
+@comment $FreeBSD: ports/www/p5-Protocol-SocketIO/pkg-plist,v 1.2 2012/11/17 06:02:53 svnexp Exp $
+%%SITE_PERL%%/Protocol/SocketIO.pm
+%%SITE_PERL%%/Protocol/SocketIO/Message.pm
+%%SITE_PERL%%/Protocol/SocketIO/Path.pm
+%%SITE_PERL%%/Protocol/SocketIO/Handshake.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Protocol/SocketIO/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Protocol/SocketIO
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Protocol
+@dirrm %%SITE_PERL%%/Protocol/SocketIO
+@dirrmtry %%SITE_PERL%%/Protocol
