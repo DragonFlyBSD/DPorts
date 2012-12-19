@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/File/Flat/.packlist
+%%SITE_PERL%%/File/Flat.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/File/Flat
+@dirrmtry %%SITE_PERL%%/File
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/File
