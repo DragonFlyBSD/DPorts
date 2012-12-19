@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Business/CreditCard.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Business/CreditCard/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Business/CreditCard
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Business
+@dirrmtry %%SITE_PERL%%/Business
