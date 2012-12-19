@@ -1,0 +1,48 @@
+# $FreeBSD: ports/comms/spandsp-devel/Makefile,v 1.33 2012/11/17 05:55:01 svnexp Exp $
+
+PORTNAME=	spandsp
+DISTVERSION=	0.0.6pre21
+CATEGORIES=	comms
+MASTER_SITES=	http://www.soft-switch.org/downloads/spandsp/
+PKGNAMESUFFIX=	-devel
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	nemysis@gmx.ch
+COMMENT=	DSP library and software FAX machine
+
+LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff
+
+WRKSRC=		${WRKDIR}/spandsp-${DISTVERSION:C/pre.*//}
+USE_AUTOTOOLS=	libtool autoconf
+USE_GMAKE=	yes
+USE_GNOME=	gnomehack
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		-C
+
+USE_LDCONFIG=	yes
+
+CONFLICTS=	spandsp-[0-9]*
+
+OPTIONS_DEFINE=	DOXYGEN
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOXYGEN}
+CONFIGURE_ARGS+=--enable-doc
+BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
+PORTDOCS=	*
+.else
+CONFIGURE_ARGS+=--disable-doc
+.endif
+
+post-install:
+.if ${PORT_OPTIONS:MDOXYGEN}
+	${MKDIR} ${DOCSDIR}
+	(cd ${WRKSRC}/doc && \
+		${COPYTREE_SHARE} \* ${DOCSDIR} "-type d -or -mindepth 1")
+.endif
+
+.include <bsd.port.mk>
