@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/mail/dovecot-managesieve/pkg-plist,v 1.3 2012/11/17 05:59:01 svnexp Exp $
+libexec/dovecot/managesieve
+libexec/dovecot/managesieve-login
+@dirrmtry libexec/dovecot
