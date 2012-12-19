@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/sysutils/moosefs-chunkserver/files/mfschunkserver.in,v 1.3 2012/11/17 06:01:38 svnexp Exp $
+#
+
+# PROVIDE: mfschunkserver
+# REQUIRE: LOGIN 
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf or or /etc/rc.conf to enable mfschunkserver:
+#
+# mfschunkserver_enable="YES"
+#
+
+. /etc/rc.subr
+
+name=mfschunkserver
+rcvar=mfschunkserver_enable
+
+command=%%PREFIX%%/sbin/${name}
+
+stop_postcmd=stop_postcmd
+
+stop_postcmd()
+{
+  rm -f $pidfile
+}
+
+# set defaults
+mfschunkserver_enable=${mfschunkserver_enable:-"NO"}
+mfschunkserver_flags=${mfschunkserver_flags:-"-c %%PREFIX%%/etc/mfschunkserver.cfg"}
+
+load_rc_config $name
+run_rc_command "$1"
