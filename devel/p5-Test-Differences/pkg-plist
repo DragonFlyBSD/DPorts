@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Test/Differences/.packlist
+%%SITE_PERL%%/Test/Differences.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Test/Differences
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Test
+@dirrmtry %%SITE_PERL%%/Test
