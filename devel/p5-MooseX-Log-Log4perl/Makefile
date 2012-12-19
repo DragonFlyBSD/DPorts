@@ -1,0 +1,34 @@
+# New ports collection makefile for:	devel/p5-MooseX-Log-Log4perl
+# Date created:				25 February 2009
+# Whom:					Lars Thegler <lth@FreeBSD.org>
+#
+# $FreeBSD: ports/devel/p5-MooseX-Log-Log4perl/Makefile,v 1.12 2012/11/17 05:56:23 svnexp Exp $
+#
+
+PORTNAME=	MooseX-Log-Log4perl
+PORTVERSION=	0.46
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	A logging role for Moose based on Log::Log4perl
+
+BUILD_DEPENDS=	p5-Any-Moose>=0.12:${PORTSDIR}/devel/p5-Any-Moose \
+		p5-Log-Log4perl>=1.13:${PORTSDIR}/devel/p5-Log-Log4perl
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
+		p5-Moose>=0.65:${PORTSDIR}/devel/p5-Moose
+
+PERL_CONFIGURE=	yes
+
+MAN3=		MooseX::Log::Log4perl.3 \
+		MooseX::Log::Log4perl::Easy.3
+
+post-patch:
+	@${PERL} -pi -e '$$_="" if m/auto_install/' ${WRKSRC}/Makefile.PL
+
+regression-test: build
+	cd ${WRKSRC}/ && ${MAKE} test
+
+.include <bsd.port.mk>
