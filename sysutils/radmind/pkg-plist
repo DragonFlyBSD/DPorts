@@ -1,0 +1,37 @@
+@comment $FreeBSD: ports/sysutils/radmind/pkg-plist,v 1.10 2012/11/17 06:01:43 svnexp Exp $
+bin/fsdiff
+bin/ktcheck
+bin/lapply
+bin/lcksum
+bin/lcreate
+bin/lfdiff
+bin/lmerge
+bin/lsort
+bin/ra.sh
+bin/repo
+bin/twhich
+sbin/radmind
+%%PORTDOCS%%%%DOCSDIR%%/COPYRIGHT
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/SPEC
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@exec mkdir -p -m 755 %%RADMIND_BASE_DIR%%
+@exec mkdir -p -m 755 %%RADMIND_BASE_DIR%%/cert
+@exec mkdir -p -m 755 %%RADMIND_BASE_DIR%%/client
+@exec mkdir -p -m 755 %%RADMIND_BASE_DIR%%/preapply
+@exec mkdir -p -m 755 %%RADMIND_BASE_DIR%%/postapply
+@exec chown -R %%RADMINUSER%%:%%RADMINUSER%% %%RADMIND_BASE_DIR%%
+@unexec if cmp -s %%RADMIND_BASE_DIR%%/config.sample %%RADMIND_BASE_DIR%%/config; then rm -f %%RADMIND_BASE_DIR%%/config; fi
+%%RADMIND_BASE_DIR%%/config.sample
+@dirrmtry %%RADMIND_BASE_DIR%%/transcript
+@dirrmtry %%RADMIND_BASE_DIR%%/tmp/transcript
+@dirrmtry %%RADMIND_BASE_DIR%%/tmp/file
+@dirrmtry %%RADMIND_BASE_DIR%%/tmp
+@dirrmtry %%RADMIND_BASE_DIR%%/special
+@dirrmtry %%RADMIND_BASE_DIR%%/postapply
+@dirrmtry %%RADMIND_BASE_DIR%%/preapply
+@dirrmtry %%RADMIND_BASE_DIR%%/file
+@dirrmtry %%RADMIND_BASE_DIR%%/command
+@dirrmtry %%RADMIND_BASE_DIR%%/client
+@dirrmtry %%RADMIND_BASE_DIR%%/cert
+@dirrmtry %%RADMIND_BASE_DIR%%
