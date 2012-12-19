@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Unicode/UTF8simple.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Unicode/UTF8simple/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Unicode/UTF8simple
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Unicode
+@dirrmtry %%SITE_PERL%%/Unicode
