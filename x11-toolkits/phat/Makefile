@@ -1,0 +1,28 @@
+# New ports collection makefile for:	phat
+# Date created:		2007-03-06
+# Whom:			trasz <trasz@pin.if.uz.zgora.pl>
+#
+# $FreeBSD: ports/x11-toolkits/phat/Makefile,v 1.13 2012/11/17 06:03:38 svnexp Exp $
+#
+
+PORTNAME=	phat
+PORTVERSION=	0.4.1
+PORTREVISION=	5
+CATEGORIES=	x11-toolkits
+MASTER_SITES=	${MASTER_SITE_BERLIOS}
+MASTER_SITE_SUBDIR=	phat
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Collection of GTK+ widgets geared toward pro-audio apps
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gtk20 libgnomecanvas gnomehack
+USE_LDCONFIG=	yes
+USE_PKGCONFIG=	build
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' \
+	    ${WRKSRC}/configure
+
+.include <bsd.port.mk>
