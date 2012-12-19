@@ -1,0 +1,26 @@
+# New ports collection makefile for:	p5-Algorithm-RabinKarp
+# Date created:				24 May 2006
+# Whom:					Aaron Dalton <aaron@FreeBSD.org>
+#
+# $FreeBSD: ports/textproc/p5-Algorithm-RabinKarp/Makefile,v 1.11 2012/11/17 06:02:03 svnexp Exp $
+#
+
+PORTNAME=	Algorithm-RabinKarp
+PORTVERSION=	0.41
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:NNUNLEY
+PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION}_1
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Rabin-Karp streaming hash
+
+BUILD_DEPENDS=	p5-File-Temp>=0:${PORTSDIR}/devel/p5-File-Temp
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+MAN3=	Algorithm::RabinKarp.3 Algorithm::RabinKarp::Util.3
+
+PERL_CONFIGURE=	yes
+
+.include <bsd.port.mk>
