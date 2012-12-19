@@ -1,0 +1,21 @@
+bin/dvdisaster
+bin/dvdisaster-uninstall.sh
+locale/cs/LC_MESSAGES/dvdisaster.mo
+locale/de/LC_MESSAGES/dvdisaster.mo
+locale/it/LC_MESSAGES/dvdisaster.mo
+locale/ru/LC_MESSAGES/dvdisaster.mo
+locale/sv/LC_MESSAGES/dvdisaster.mo
+locale/pt_BR/LC_MESSAGES/dvdisaster.mo
+@dirrm locale/pt_BR/LC_MESSAGES
+@dirrm locale/pt_BR
+@dirrm locale/sv/LC_MESSAGES
+@dirrm locale/sv
+@dirrm locale/ru/LC_MESSAGES
+@dirrm locale/ru
+@dirrm locale/it/LC_MESSAGES
+@dirrm locale/it
+@dirrm locale/de/LC_MESSAGES
+@dirrm locale/de
+@dirrm locale/cs/LC_MESSAGES
+@dirrm locale/cs
+@dirrmtry locale
