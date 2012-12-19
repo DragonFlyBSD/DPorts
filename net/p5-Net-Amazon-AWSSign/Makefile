@@ -1,0 +1,30 @@
+# New ports collection makefile for:	p5-Net-Amazon-AWSSign
+# Date created:		2011-01-28
+# Whom:			Gea-Suan Lin <gslin@gslin.org>
+#
+# $FreeBSD: ports/net/p5-Net-Amazon-AWSSign/Makefile,v 1.6 2012/11/17 06:00:10 svnexp Exp $
+#
+
+PORTNAME=	Net-Amazon-AWSSign
+PORTVERSION=	0.12
+CATEGORIES=	net perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:NATON
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Perl extension to create signatures for AWS requests
+
+RUN_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Net::Amazon::AWSSign.3
+
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 500903
+RUN_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
+.endif
+
+.include <bsd.port.post.mk>
