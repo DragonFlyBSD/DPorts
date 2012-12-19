@@ -1,0 +1,11 @@
+--- ssh_config.orig	2010-01-12 01:40:27.000000000 -0700
++++ ssh_config	2010-09-14 16:14:13.000000000 -0600
+@@ -27,7 +27,7 @@
+ #   GSSAPIAuthentication no
+ #   GSSAPIDelegateCredentials no
+ #   BatchMode no
+-#   CheckHostIP yes
++#   CheckHostIP no
+ #   AddressFamily any
+ #   ConnectTimeout 0
+ #   StrictHostKeyChecking ask

@@ -1,0 +1,50 @@
+--- sshd_config.orig	2009-10-11 04:51:09.000000000 -0600
++++ sshd_config	2010-09-14 16:14:13.000000000 -0600
+@@ -36,7 +36,7 @@
+ # Authentication:
+ 
+ #LoginGraceTime 2m
+-#PermitRootLogin yes
++#PermitRootLogin no
+ #StrictModes yes
+ #MaxAuthTries 6
+ #MaxSessions 10
+@@ -55,11 +55,11 @@
+ # Don't read the user's ~/.rhosts and ~/.shosts files
+ #IgnoreRhosts yes
+ 
+-# To disable tunneled clear text passwords, change to no here!
+-#PasswordAuthentication yes
++# Change to yes to enable built-in password authentication.
++#PasswordAuthentication no
+ #PermitEmptyPasswords no
+ 
+-# Change to no to disable s/key passwords
++# Change to no to disable PAM authentication
+ #ChallengeResponseAuthentication yes
+ 
+ # Kerberos options
+@@ -72,7 +72,7 @@
+ #GSSAPIAuthentication no
+ #GSSAPICleanupCredentials yes
+ 
+-# Set this to 'yes' to enable PAM authentication, account processing, 
++# Set this to 'no' to disable PAM authentication, account processing,
+ # and session processing. If this is enabled, PAM authentication will 
+ # be allowed through the ChallengeResponseAuthentication and
+ # PasswordAuthentication.  Depending on your PAM configuration,
+@@ -81,12 +81,12 @@
+ # If you just want the PAM account and session checks to run without
+ # PAM authentication, then enable this but set PasswordAuthentication
+ # and ChallengeResponseAuthentication to 'no'.
+-#UsePAM no
++#UsePAM yes
+ 
+ #AllowAgentForwarding yes
+ #AllowTcpForwarding yes
+ #GatewayPorts no
+-#X11Forwarding no
++#X11Forwarding yes
+ #X11DisplayOffset 10
+ #X11UseLocalhost yes
+ #PrintMotd yes
