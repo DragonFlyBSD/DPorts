@@ -1,0 +1,5 @@
+%%SITE_PERL%%/CPAN/DistnameInfo.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/CPAN/DistnameInfo/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/CPAN/DistnameInfo
+@dirrmtry %%SITE_PERL%%/CPAN
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/CPAN
