@@ -1,0 +1,26 @@
+# Ports collection makefile for:	p5-MIME-Base64-URLSafe
+# Date created:	   Fri Aug 21, 2009
+# Whom:		   Dan Rench <citric@cubicone.tmetic.com>
+#
+# $FreeBSD: ports/converters/p5-MIME-Base64-URLSafe/Makefile,v 1.4 2012/11/17 05:55:04 svnexp Exp $
+#
+
+PORTNAME=	MIME-Base64-URLSafe
+PORTVERSION=	0.01
+CATEGORIES=	converters perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	citric@cubicone.tmetic.com
+COMMENT=	Perl version of Python's URL-safe base64 codec
+
+RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/00//}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		MIME::Base64::URLSafe.3
+
+.include <bsd.port.mk>
