@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Sendmail/AccessDB.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Sendmail/AccessDB/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Sendmail/AccessDB
+@dirrmtry %%SITE_PERL%%/Sendmail
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Sendmail
