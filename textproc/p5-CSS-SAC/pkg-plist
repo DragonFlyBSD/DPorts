@@ -1,0 +1,30 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/CSS/SAC/.packlist
+%%SITE_PERL%%/CSS/SAC.pm
+%%SITE_PERL%%/CSS/SAC/Condition.pm
+%%SITE_PERL%%/CSS/SAC/Condition/Attribute.pm
+%%SITE_PERL%%/CSS/SAC/Condition/Combinator.pm
+%%SITE_PERL%%/CSS/SAC/Condition/Content.pm
+%%SITE_PERL%%/CSS/SAC/Condition/Lang.pm
+%%SITE_PERL%%/CSS/SAC/Condition/Negative.pm
+%%SITE_PERL%%/CSS/SAC/Condition/Positional.pm
+%%SITE_PERL%%/CSS/SAC/ConditionFactory.pm
+%%SITE_PERL%%/CSS/SAC/LexicalUnit.pm
+%%SITE_PERL%%/CSS/SAC/Selector.pm
+%%SITE_PERL%%/CSS/SAC/Selector/CharacterData.pm
+%%SITE_PERL%%/CSS/SAC/Selector/Conditional.pm
+%%SITE_PERL%%/CSS/SAC/Selector/Descendant.pm
+%%SITE_PERL%%/CSS/SAC/Selector/Element.pm
+%%SITE_PERL%%/CSS/SAC/Selector/Negative.pm
+%%SITE_PERL%%/CSS/SAC/Selector/ProcessingInstruction.pm
+%%SITE_PERL%%/CSS/SAC/Selector/Sibling.pm
+%%SITE_PERL%%/CSS/SAC/Selector/Simple.pm
+%%SITE_PERL%%/CSS/SAC/SelectorFactory.pm
+%%SITE_PERL%%/CSS/SAC/SelectorList.pm
+%%SITE_PERL%%/CSS/SAC/TestWriter.pm
+%%SITE_PERL%%/CSS/SAC/Writer.pm
+@dirrm %%SITE_PERL%%/CSS/SAC/Condition
+@dirrm %%SITE_PERL%%/CSS/SAC/Selector
+@dirrm %%SITE_PERL%%/CSS/SAC
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/CSS/SAC
+@dirrmtry %%SITE_PERL%%/CSS
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/CSS
