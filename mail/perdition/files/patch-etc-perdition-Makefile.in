@@ -1,0 +1,23 @@
+--- etc/perdition/Makefile.in.orig	2007-11-02 15:40:32.000000000 +0100
++++ etc/perdition/Makefile.in	2007-11-02 15:45:43.000000000 +0100
+@@ -259,16 +259,16 @@
+ 	@list='$(perditionconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(perditionconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(perditionconfdir)/$$f'"; \
+-	  $(perditionconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(perditionconfdir)/$$f"; \
++	  echo " $(perditionconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(perditionconfdir)/$$f-dist'"; \
++	  $(perditionconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(perditionconfdir)/$$f-dist"; \
+ 	done
+ 
+ uninstall-perditionconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+ 	@list='$(perditionconf_DATA)'; for p in $$list; do \
+ 	  f=$(am__strip_dir) \
+-	  echo " rm -f '$(DESTDIR)$(perditionconfdir)/$$f'"; \
+-	  rm -f "$(DESTDIR)$(perditionconfdir)/$$f"; \
++	  echo " rm -f '$(DESTDIR)$(perditionconfdir)/$$f-dist'"; \
++	  rm -f "$(DESTDIR)$(perditionconfdir)/$$f-dist"; \
+ 	done
+ tags: TAGS
+ TAGS:

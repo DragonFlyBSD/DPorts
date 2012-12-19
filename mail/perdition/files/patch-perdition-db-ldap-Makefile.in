@@ -1,0 +1,13 @@
+--- perdition/db/ldap/Makefile.in.orig	Tue Dec  6 15:59:30 2005
++++ perdition/db/ldap/Makefile.in	Tue Dec  6 16:04:27 2005
+@@ -545,8 +545,8 @@
+ 				"$(DESTDIR)@ldap_schemadir@"; \
+ 		fi; \
+ 		if test -w "$(DESTDIR)@ldap_schemadir@"; then \
+-			install -m644 $< \
+-				"$(DESTDIR)@ldap_schemadir@/perdition.schema";\
++			install -m644 $(schema_sources) \
++				"$(DESTDIR)@ldap_schemadir@/perdition.schema-dist";\
+ 		fi \
+ 	fi
+ 
