@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Devel/Cycle/.packlist
+%%SITE_PERL%%/Devel/Cycle.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Devel/Cycle
+@dirrmtry %%SITE_PERL%%/Devel
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Devel
