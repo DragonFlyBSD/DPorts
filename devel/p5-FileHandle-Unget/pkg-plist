@@ -1,0 +1,6 @@
+%%SITE_PERL%%/FileHandle/Unget.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/FileHandle/Unget/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/FileHandle/Unget
+@dirrm %%SITE_PERL%%/FileHandle
+@dirrmtry %%SITE_PERL%%/FileHandle
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/FileHandle
