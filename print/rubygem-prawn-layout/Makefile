@@ -1,0 +1,19 @@
+# Ports collection makefile for:	rubygem-prawn-layout
+# Date created:				21 Jan 2009
+# Whom:					wenheping@gmail.com
+#
+# $FreeBSD: ports/print/rubygem-prawn-layout/Makefile,v 1.10 2012/11/17 06:00:54 svnexp Exp $
+
+PORTNAME=	prawn-layout
+PORTVERSION=	0.8.4
+CATEGORIES=	print rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	An Prawn Extension to Provides Table Support and Other Layout
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
