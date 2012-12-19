@@ -1,0 +1,29 @@
+# New ports collection makefile for:	ruby-deplate
+# Date created:		14 July 2007
+# Whom:			Martin Matuska <mm@FreeBSD.org>
+#
+# $FreeBSD: ports/textproc/ruby-deplate/Makefile,v 1.7 2012/11/17 06:02:19 svnexp Exp $
+#
+
+PORTNAME=		deplate
+PORTVERSION=		0.8.5
+CATEGORIES=		textproc ruby
+MASTER_SITES=		SF
+PKGNAMEPREFIX=		${RUBY_PKGNAMEPREFIX}
+DIST_SUBDIR=		ruby
+
+MAINTAINER=		ruby@FreeBSD.org
+COMMENT=		Ruby tool for converting wiki-like markup
+
+LICENSE=		GPLv2
+LICENSE_FILE=		${WRKSRC}/LICENSE.TXT
+
+WRKSRC=			${WRKDIR}/${PORTNAME}
+
+USE_ZIP=		yes
+USE_RUBY=		yes
+USE_RUBY_SETUP=		yes
+
+MAN1=			deplate.1
+
+.include <bsd.port.mk>
