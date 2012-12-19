@@ -1,0 +1,35 @@
+# New ports collection makefile for:	p5-FCGI-Async
+# Date created:		2007-06-10
+# Whom:			Gea-Suan Lin <gslin@gslin.org>
+#
+# $FreeBSD: ports/www/p5-FCGI-Async/Makefile,v 1.16 2012/11/17 06:02:48 svnexp Exp $
+#
+
+PORTNAME=	FCGI-Async
+PORTVERSION=	0.22
+PORTREVISION=	1
+CATEGORIES=	www perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Module to allow use of FastCGI asynchronously
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-IO-Async>=0:${PORTSDIR}/devel/p5-IO-Async \
+		p5-Net-Async-FastCGI>=0:${PORTSDIR}/www/p5-Net-Async-FastCGI \
+  		p5-Net-FastCGI>=0:${PORTSDIR}/www/p5-Net-FastCGI
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Identity>=0:${PORTSDIR}/devel/p5-Test-Identity \
+		p5-Test-HexString>=0:${PORTSDIR}/devel/p5-Test-HexString \
+		p5-Test-Refcount>0:${PORTSDIR}/devel/p5-Test-Refcount
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Plack::Handler::FCGI::Async.3 \
+		FCGI::Async::PSGI.3 \
+		FCGI::Async.3
+
+.include <bsd.port.mk>
