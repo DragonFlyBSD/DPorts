@@ -1,0 +1,28 @@
+# New ports collection makefile for:	ruby-exmars
+# Date created:				22 Jul 2005
+# Whom:					Alejandro Pulver <alejandro@varnet.biz>
+#
+# $FreeBSD: ports/games/ruby-exmars/Makefile,v 1.8 2012/11/17 05:57:51 svnexp Exp $
+#
+
+PORTNAME=	exmars
+PORTVERSION=	0.01
+CATEGORIES=	games ruby
+MASTER_SITES=	http://corewar.co.uk/ankerl/
+PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Ruby interface to the exMARS Memory Array Redcode Simulator
+
+USE_RUBY=	yes
+USE_RUBY_EXTCONF=	yes
+
+post-install:
+	${MKDIR} ${RUBY_MODEXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/test.rb ${RUBY_MODEXAMPLESDIR}/Mars.rb
+
+.include <bsd.port.pre.mk>
+.if ${RUBY_VER} == 1.9
+BROKEN=	does not build with ruby 1.9
+.endif
+.include <bsd.port.post.mk>
