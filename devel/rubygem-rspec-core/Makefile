@@ -1,0 +1,23 @@
+# New ports collection makefile for:	rubygem-rspec-core
+# Date created:		2011-06-12
+# Whom:			Steve Wills <swills@FreeBSD.org>
+#
+# $FreeBSD: ports/devel/rubygem-rspec-core/Makefile,v 1.6 2012/11/17 05:57:01 svnexp Exp $
+#
+
+PORTNAME=	rspec-core
+PORTVERSION=	2.11.1
+CATEGORIES=	devel rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	RSpec Core provides the structure for writing executable examples
+
+USE_RUBY=	yes
+USE_RAKE=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+PLIST_FILES=	bin/autospec bin/rspec
+
+.include <bsd.port.mk>
