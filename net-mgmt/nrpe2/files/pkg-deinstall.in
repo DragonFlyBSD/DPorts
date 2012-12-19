@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net-mgmt/nrpe2/files/pkg-deinstall.in,v 1.3 2012/11/17 06:00:35 svnexp Exp $
+#
+
+NAGIOSDIR=%%NAGIOSDIR%%
+
+if [ "$2" = "POST-DEINSTALL" ]; then
+  if [ -e "${NAGIOSDIR}" ]; then
+    echo "You should manually remove the \"${NAGIOSDIR}\" directory."
+  fi
+fi

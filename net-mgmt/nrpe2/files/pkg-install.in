@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net-mgmt/nrpe2/files/pkg-install.in,v 1.4 2012/11/17 06:00:35 svnexp Exp $
+#
+
+NAGIOSDIR=%%NAGIOSDIR%%
+NAGIOSUSER=%%NAGIOSUSER%%
+NAGIOSGROUP=%%NAGIOSGROUP%%
+NAGIOSUID=%%NAGIOSUID%%
+NAGIOSGID=%%NAGIOSGID%%
+
+if [ "$2" = "POST-INSTALL" ]; then
+  if [ ! -e "${NAGIOSDIR}" ]; then
+    /bin/mkdir -p "${NAGIOSDIR}"
+    /bin/chmod 775 "${NAGIOSDIR}"
+    /usr/sbin/chown "${NAGIOSUSER}":"${NAGIOSGROUP}" "${NAGIOSDIR}"
+  fi
+fi
