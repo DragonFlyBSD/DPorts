@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/security/pear-Crypt_CBC/pkg-deinstall,v 1.2 2012/11/17 06:01:14 svnexp Exp $
+#
+# Remove package declaration from PEAR's registry.
+
+if [ x$2 != xDEINSTALL ]; then
+    exit
+fi
+PKG_NAME=${1%%-[0-9._]*}
+PACKAGE=$(echo $PKG_NAME | sed 's/pear-//')
+
+${PKG_PREFIX}/bin/pear uninstall -r ${PACKAGE} || true
