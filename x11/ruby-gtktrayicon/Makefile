@@ -1,0 +1,45 @@
+# New ports collection makefile for:	ruby-gtktrayicon
+# Date created:		29 June 2004
+# Whom:			Hye-Shik Chang
+#
+# $FreeBSD: ports/x11/ruby-gtktrayicon/Makefile,v 1.19 2012/11/17 06:03:19 svnexp Exp $
+#
+
+PORTNAME=	gtktrayicon
+PORTVERSION=	0.1.0
+PORTREVISION=	8
+CATEGORIES=	x11 gnome ruby
+MASTER_SITES=	SF/ruby-gnome2/OldFiles
+PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
+DISTNAME=	ruby-gtktrayicon-${PORTVERSION}
+DIST_SUBDIR=	ruby
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Ruby binding for GtkTrayIcon
+
+BUILD_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gtk2.so:${PORTSDIR}/x11-toolkits/ruby-gtk2
+RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gtk2.so:${PORTSDIR}/x11-toolkits/ruby-gtk2
+
+USE_RUBY=	yes
+USE_GNOME=	gtk20
+USE_RUBY_EXTCONF=	yes
+
+INSTALL_TARGET=	site-install
+
+DOCS=		COPYING.LIB ChangeLog NEWS README
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${RUBY_MODEXAMPLESDIR}
+	@${INSTALL_DATA} ${WRKSRC}/sample/* ${RUBY_MODEXAMPLESDIR}/
+	@${MKDIR} ${RUBY_MODDOCDIR}
+.for f in ${DOCS}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_MODDOCDIR}/
+.endfor
+.endif
+
+.include <bsd.port.pre.mk>
+.if ${RUBY_VER} == 1.9
+BROKEN=	does not build with ruby 1.9
+.endif
+.include <bsd.port.post.mk>
