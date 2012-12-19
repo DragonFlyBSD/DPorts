@@ -1,0 +1,14 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/Proc/Killall.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/Proc/Killfam.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/Proc/ProcessTable.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/Proc/ProcessTable/Process.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/Proc/example.pl
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Proc/ProcessTable/.packlist
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Proc/ProcessTable/Process/autosplit.ix
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Proc/ProcessTable/ProcessTable.bs
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Proc/ProcessTable/ProcessTable.so
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Proc/ProcessTable/Process
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Proc/ProcessTable
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/Proc/ProcessTable
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Proc
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/Proc
