@@ -1,0 +1,36 @@
+# New ports collection makefile for:	pecl-shape
+# Date created:			15 Nov 2007
+# Whom:				Ditesh Shashikant Gathani <ditesh@gathani.org>
+#
+# $FreeBSD: ports/devel/pecl-shape/Makefile,v 1.7 2012/11/17 05:56:41 svnexp Exp $
+#
+
+PORTNAME=	shape
+PORTVERSION=	0.9.2
+PORTREVISION=	1
+CATEGORIES=	devel pear
+MASTER_SITES=	http://pecl.php.net/get/
+PKGNAMEPREFIX=	pecl-
+EXTRACT_SUFX=	.tgz
+DIST_SUBDIR=	PECL
+
+MAINTAINER=	miwi@FreeBSD.org
+COMMENT=	A PECL extension that wraps libshape
+
+LIB_DEPENDS=	shp:${PORTSDIR}/devel/shapelib
+
+USE_PHP=	yes
+USE_PHP_BUILD=	yes
+USE_PHPEXT=	yes
+PHP_MODNAME=	shp
+DEFAULT_PHP_VER=53
+IGNORE_WITH_PHP=5
+
+CONFIGURE_ARGS+=--with-shp=${LOCALBASE}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|include/libshp|include|g' ${WRKSRC}/config.m4
+	@${REINPLACE_CMD} -e 's|-ldl||g' ${WRKSRC}/config.m4
+	@${REINPLACE_CMD} -e 's|include "libshp/|include "|g' ${WRKSRC}/php_shp.h
+
+.include <bsd.port.mk>
