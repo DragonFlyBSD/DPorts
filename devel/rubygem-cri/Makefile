@@ -1,0 +1,22 @@
+# Ports collection makefile for:	gem-cri
+# Date created:				26 Apr 2012
+# Whom:					Ryan Steinmetz <zi@FreeBSD.org>
+#
+# $FreeBSD: ports/devel/rubygem-cri/Makefile,v 1.4 2012/11/17 05:56:58 svnexp Exp $
+
+PORTNAME=	cri
+PORTVERSION=	2.3.0
+CATEGORIES=	devel rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Allows building easy-to-use commandline interfaces
+
+RUN_DEPENDS=        rubygem-colored>=1.2:${PORTSDIR}/textproc/rubygem-colored
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+USE_RAKE=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
