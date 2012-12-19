@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Lingua/Conjunction.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Lingua/Conjunction/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Lingua/Conjunction
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Lingua
+@dirrmtry %%SITE_PERL%%/Lingua
