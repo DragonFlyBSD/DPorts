@@ -1,0 +1,6 @@
+bin/profxp
+%%SITE_PERL%%/profxp/command.pm
+%%SITE_PERL%%/profxp/config.pm
+%%SITE_PERL%%/profxp/screen.pm
+%%SITE_PERL%%/profxp/tcp.pm
+@dirrm %%SITE_PERL%%/profxp
