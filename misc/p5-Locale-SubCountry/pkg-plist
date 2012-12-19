@@ -1,0 +1,4 @@
+%%SITE_PERL%%/Locale/SubCountry.pm
+%%SITE_PERL%%/Locale/SubCountry/Data.pm
+@dirrm %%SITE_PERL%%/Locale/SubCountry
+@dirrmtry %%SITE_PERL%%/Locale
