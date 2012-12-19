@@ -1,0 +1,24 @@
+# $FreeBSD: ports/deskutils/vnc2flv/Makefile,v 1.7 2012/11/17 05:55:31 svnexp Exp $
+
+PORTNAME=	vnc2flv
+PORTVERSION=	20100207
+PORTREVISION=	1
+CATEGORIES=	deskutils multimedia www python
+MASTER_SITES=	CHEESESHOP
+MASTER_SITE_SUBDIR=	source/v/${PORTNAME}
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Captures a VNC desktop session and saves as a flv
+
+.if empty(PORT_OPTIONS:MX11)
+RUN_DEPENDS+=	x11vnc:${PORTSDIR}/net/x11vnc
+.endif
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_PKGNAME=	${PORTNAME}
+PYDISTUTILS_PKGVERSION=	${PORTVERSION}
+
+.include <bsd.port.mk>
