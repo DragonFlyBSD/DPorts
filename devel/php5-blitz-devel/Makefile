@@ -1,0 +1,24 @@
+# New ports collection makefile for:	php5-blitz-devel
+# Date created:				2011-08-19
+# Whom:					Valery Komarov <komarov@valerka.net>
+#
+# $FreeBSD: ports/devel/php5-blitz-devel/Makefile,v 1.5 2012/11/17 05:56:41 svnexp Exp $
+
+PORTNAME=	blitz-devel
+PORTVERSION=	0.7.2
+CATEGORIES=	devel
+MASTER_SITES=	http://alexeyrybak.com/blitz/
+PKGNAMEPREFIX=	php5-
+DISTNAME=	blitz-${PORTVERSION}-devel
+
+MAINTAINER=	komarov@valerka.net
+COMMENT=	PHP templating engine
+
+CONFLICTS=	php5-blitz-0.6*
+
+USE_PHP=	yes
+USE_PHP_BUILD=	yes
+USE_PHPEXT=	yes
+PHP_MODNAME=	blitz
+
+.include <bsd.port.mk>
