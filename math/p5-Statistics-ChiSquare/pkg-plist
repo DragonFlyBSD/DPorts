@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Statistics/ChiSquare/.packlist
+%%SITE_PERL%%/Statistics/ChiSquare.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Statistics/ChiSquare
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Statistics
+@dirrmtry %%SITE_PERL%%/Statistics
