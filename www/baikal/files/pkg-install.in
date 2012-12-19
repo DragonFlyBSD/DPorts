@@ -1,0 +1,15 @@
+#!/bin/sh
+# $FreeBSD: ports/www/baikal/files/pkg-install.in,v 1.1 2012/12/06 19:30:41 svnexp Exp $
+
+PKG_BATCH=${BATCH:=NO}
+PKG_PREFIX=${PREFIX:=/usr/local}
+
+case $1 in
+POST-INSTALL)
+	if [ "${PKG_BATCH}" = "NO" ]; then
+		if [ ! -f %%CALDB%% ]; then
+			/bin/cp -p %%CALDB%%-dist %%CALDB%%
+		fi
+	fi
+	;;
+esac
