@@ -1,0 +1,29 @@
+# New ports collection makefile for:	p5-Petal
+# Date created:				25 May 2006
+# Whom:					Aaron Dalton <aaron@FreeBSD.org>
+#
+# $FreeBSD: ports/textproc/p5-Petal/Makefile,v 1.11 2012/11/17 06:02:06 svnexp Exp $
+#
+
+PORTNAME=	Petal
+PORTVERSION=	2.20
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:NINE
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Perl Template Attribute Language - TAL for Perl!
+
+BUILD_DEPENDS=	p5-MKDoc-XML>=0:${PORTSDIR}/textproc/p5-MKDoc-XML
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+MAN3=	Petal.3 \
+	Petal::Cookbook.3 \
+	Petal::Deprecated.3 \
+	Petal::Hash::Test.3 \
+	Petal::I18N.3
+
+PERL_CONFIGURE=	yes
+
+.include <bsd.port.mk>
