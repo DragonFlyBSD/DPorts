@@ -1,0 +1,27 @@
+# New ports collection makefile for:	py-BytecodeAssembler
+# Date created:		23 June, 2009
+# Whom:			Wen Heping <wenheping@gmail.com>
+#
+# $FreeBSD: ports/devel/py-BytecodeAssembler/Makefile,v 1.4 2012/11/17 05:56:44 svnexp Exp $
+#
+
+PORTNAME=	BytecodeAssembler
+PORTVERSION=	0.6
+CATEGORIES=	devel python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Generate Python code objects by "assembling" bytecode
+
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}DecoratorTools>=1.7:${PORTSDIR}/devel/py-decoratortools \
+		${PYTHON_PKGNAMEPREFIX}SymbolType>0:${PORTSDIR}/devel/py-SymbolType
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+
+USE_ZIP=	yes
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	easy_install
+
+.include <bsd.port.mk>
