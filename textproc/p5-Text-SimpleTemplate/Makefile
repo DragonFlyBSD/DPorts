@@ -1,0 +1,21 @@
+# New ports collection makefile for:	Text::SimpleTemplate
+# Date created:				26 February 2001
+# Whom:					Anton Berezin <tobez@tobez.org>
+#
+# $FreeBSD: ports/textproc/p5-Text-SimpleTemplate/Makefile,v 1.7 2012/11/17 06:02:10 svnexp Exp $
+#
+
+PORTNAME=	Text-SimpleTemplate
+PORTVERSION=	0.36
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	tobez@FreeBSD.org
+COMMENT=	Yet another Perl module for template processing
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Text::SimpleTemplate.3
+
+.include <bsd.port.mk>
