@@ -1,0 +1,8 @@
+bin/flexbackup
+etc/flexbackup.conf.sample
+%%PORTDOCS%%%%DOCSDIR%%/CHANGES
+%%PORTDOCS%%%%DOCSDIR%%/CREDITS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%%%DOCSDIR%%/faq.html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
