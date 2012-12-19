@@ -1,0 +1,6 @@
+bin/pod2docbook
+%%SITE_PERL%%/Pod/DocBook.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod/DocBook/.packlist
+@dirrmtry %%SITE_PERL%%/Pod
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod/DocBook
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Pod
