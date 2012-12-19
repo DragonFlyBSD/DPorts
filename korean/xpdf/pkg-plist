@@ -1,0 +1,9 @@
+@comment $FreeBSD: ports/korean/xpdf/pkg-plist,v 1.5 2012/11/17 05:58:47 svnexp Exp $
+%%DATADIR%%/korean/Adobe-Korea1.cidToUnicode
+%%DATADIR%%/korean/ISO-2022-KR.unicodeMap
+%%DATADIR%%/korean/README
+@exec exec < %D/etc/xpdfrc; rm -f %D/etc/xpdfrc; ( grep -v "%%EXTRARC%%"; echo "include %%EXTRARC%%" ) > %D/etc/xpdfrc; chmod 0444 %D/etc/xpdfrc
+@unexec exec < %D/etc/xpdfrc; rm -f %D/etc/xpdfrc && grep -v "%%EXTRARC%%" > %D/etc/xpdfrc; chmod 0444 %D/etc/xpdfrc
+%%DATADIR%%/korean/dot.xpdfrc
+@dirrm %%DATADIR%%/korean
+@dirrmtry %%DATADIR%%
