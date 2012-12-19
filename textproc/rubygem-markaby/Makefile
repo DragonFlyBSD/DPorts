@@ -1,0 +1,23 @@
+# New ports collection makefile for:	rubygem-markaby
+# Date created:		28, Dec 2008
+# Whom:			Martin Wilke <miwi@FreeBSD.org>
+#
+# $FreeBSD: ports/textproc/rubygem-markaby/Makefile,v 1.6 2012/11/17 06:02:20 svnexp Exp $
+#
+
+PORTNAME=	markaby
+PORTVERSION=	0.5
+CATEGORIES=	textproc rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	miwi@FreeBSD.org
+COMMENT=	HTML Markup as Ruby
+
+RUN_DEPENDS=	rubygem-builder>=2.0.0:${PORTSDIR}/devel/rubygem-builder
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+USE_RAKE=	yes
+RUBYGEM_AUTOPLIST=  yes
+
+.include <bsd.port.mk>
