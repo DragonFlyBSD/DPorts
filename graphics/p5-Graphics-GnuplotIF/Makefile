@@ -1,0 +1,21 @@
+# New ports collection makefile for:	p5-Graphics-GnuplotIF
+# Date Created:				Oct 21, 2010
+# Whom:					Wen Heping <wen@FreeBSD.org>
+#
+# $FreeBSD: ports/graphics/p5-Graphics-GnuplotIF/Makefile,v 1.4 2012/11/17 05:58:17 svnexp Exp $
+#
+
+PORTNAME=	Graphics-GnuplotIF
+PORTVERSION=	1.7
+CATEGORIES=	graphics perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	wen@FreeBSD.org
+COMMENT=	A dynamic Perl interface to gnuplot
+
+PERL_MODBUILD=	yes
+
+MAN3=		Graphics::GnuplotIF.3
+
+.include <bsd.port.mk>
