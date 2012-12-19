@@ -1,0 +1,44 @@
+# Created by: Steffen Vogelreuter
+# $FreeBSD: ports/sysutils/gtk-imonc/Makefile,v 1.30 2012/11/17 06:01:33 svnexp Exp $
+
+PORTNAME=	gtk-imonc
+PORTVERSION=	0.6.4.1
+PORTREVISION=	11
+CATEGORIES=	sysutils
+MASTER_SITES=	http://stefan-strigler.de/download/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	GTK2-based imond-client to control an on(e) disc fli4l router
+
+LICENSE=	GPLv2 # (or later)
+
+LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
+		pcre:${PORTSDIR}/devel/pcre \
+		cairo:${PORTSDIR}/graphics/cairo \
+		png15:${PORTSDIR}/graphics/png \
+		freetype:${PORTSDIR}/print/freetype2 \
+		expat:${PORTSDIR}/textproc/expat2 \
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
+		xcb:${PORTSDIR}/x11/libxcb
+
+GNU_CONFIGURE=	yes
+USE_GETTEXT=	yes
+USE_ICONV=	yes
+USE_PKGCONFIG=	build
+USE_GNOME=	gdkpixbuf2 gtk20
+USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext \
+		xfixes xi xinerama xrandr xrender
+MAKE_JOBS_SAFE=	yes
+
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|/gnome/apps/Internet|/applications|' ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e \
+		's|/usr/share/pixmaps/||' ${WRKSRC}/gtk-imonc.desktop
+	@${REINPLACE_CMD} -e \
+		's|<endian.h>|<sys/endian.h>|' ${WRKSRC}/src/md5.h
+
+.include <bsd.port.mk>
