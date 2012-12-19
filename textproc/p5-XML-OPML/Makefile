@@ -1,0 +1,26 @@
+# ex:ts=8
+# Ports collection makefile for:	XML-OPML
+# Date created:			Nov 21, 2005
+# Whom:				ijliao
+#
+# $FreeBSD: ports/textproc/p5-XML-OPML/Makefile,v 1.8 2012/11/17 06:02:13 svnexp Exp $
+#
+
+PORTNAME=	XML-OPML
+PORTVERSION=	0.26
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Creates and updates OPML (Outline Processor Markup Language) files
+
+BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
+		p5-XML-SimpleObject>=0:${PORTSDIR}/textproc/p5-XML-SimpleObject
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=	XML::OPML.3
+
+.include <bsd.port.mk>
