@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Math/Combinatorics.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Math/Combinatorics/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Math/Combinatorics
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Math
+@dirrmtry %%SITE_PERL%%/Math
