@@ -1,0 +1,28 @@
+# New ports collection makefile for:	py-ToscaWidgets
+# Date created:		1st July, 2009
+# Whom:			Wen Heping <wenheping@gmail.com>
+#
+# $FreeBSD: ports/devel/py-ToscaWidgets/Makefile,v 1.10 2012/11/17 05:56:44 svnexp Exp $
+
+PORTNAME=	ToscaWidgets
+PORTVERSION=	0.9.12
+PORTREVISION=	1
+CATEGORIES=	devel python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	wen@FreeBSD.org
+COMMENT=	A python framework for building reusable web components
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}webob>=0:${PORTSDIR}/www/py-webob
+
+USE_PYTHON=		2.5+
+USE_PYDISTUTILS=	easy_install
+
+.include <bsd.port.pre.mk>
+
+.if ${PYTHON_REL} < 260
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}simplejson>=2.0.9:${PORTSDIR}/devel/py-simplejson
+.endif
+
+.include <bsd.port.post.mk>
