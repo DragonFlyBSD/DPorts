@@ -1,0 +1,19 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/IO/All/.packlist
+%%SITE_PERL%%/IO/All.pm
+%%SITE_PERL%%/IO/All.pod
+%%SITE_PERL%%/IO/All/Base.pm
+%%SITE_PERL%%/IO/All/DBM.pm
+%%SITE_PERL%%/IO/All/Dir.pm
+%%SITE_PERL%%/IO/All/File.pm
+%%SITE_PERL%%/IO/All/Filesys.pm
+%%SITE_PERL%%/IO/All/Link.pm
+%%SITE_PERL%%/IO/All/MLDBM.pm
+%%SITE_PERL%%/IO/All/Pipe.pm
+%%SITE_PERL%%/IO/All/STDIO.pm
+%%SITE_PERL%%/IO/All/Socket.pm
+%%SITE_PERL%%/IO/All/String.pm
+%%SITE_PERL%%/IO/All/Temp.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/IO/All
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/IO
+@dirrm %%SITE_PERL%%/IO/All
+@dirrmtry %%SITE_PERL%%/IO
