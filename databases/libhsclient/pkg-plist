@@ -1,0 +1,19 @@
+@comment $FreeBSD: ports/databases/libhsclient/pkg-plist,v 1.2 2012/11/17 05:55:10 svnexp Exp $
+include/handlersocket/allocator.hpp
+include/handlersocket/config.hpp
+include/handlersocket/mutex.hpp
+include/handlersocket/string_util.hpp
+include/handlersocket/auto_addrinfo.hpp
+include/handlersocket/escape.hpp
+include/handlersocket/socket.hpp
+include/handlersocket/thread.hpp
+include/handlersocket/auto_file.hpp
+include/handlersocket/fatal.hpp
+include/handlersocket/string_buffer.hpp
+include/handlersocket/util.hpp
+include/handlersocket/auto_ptrcontainer.hpp
+include/handlersocket/hstcpcli.hpp
+include/handlersocket/string_ref.hpp
+lib/libhsclient.la
+lib/libhsclient.a
+@dirrmtry include/handlersocket
