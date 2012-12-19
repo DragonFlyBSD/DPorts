@@ -1,0 +1,27 @@
+# New ports collection makefile for:	py-libsexy
+# Date created:		09 December 2006
+# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
+#
+# $FreeBSD: ports/x11-toolkits/py-sexy/Makefile,v 1.17 2012/11/17 06:03:38 svnexp Exp $
+#
+
+PORTNAME=	sexy
+PORTVERSION=	0.1.9
+PORTREVISION=	6
+DISTVERSIONPREFIX=	python-
+CATEGORIES=	x11-toolkits python
+MASTER_SITES=	http://releases.chipx86.com/libsexy/sexy-python/ CENKES
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Libsexy bindings for Python
+
+LIB_DEPENDS=	sexy.2:${PORTSDIR}/x11-toolkits/libsexy
+
+USE_AUTOTOOLS=	libtool
+USE_GNOME=	pygtk2
+USE_PYTHON=	yes
+USE_PKGCONFIG=	yes
+GNU_CONFIGURE=	yes
+
+.include <bsd.port.mk>
