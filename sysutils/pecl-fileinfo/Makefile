@@ -1,0 +1,27 @@
+# New ports collection makefile for:	pecl-fileinfo
+# Date created:			21 Jul 2004
+# Whom:				Alex Dupre <ale@FreeBSD.org>
+#
+# $FreeBSD: ports/sysutils/pecl-fileinfo/Makefile,v 1.12 2012/11/17 06:01:41 svnexp Exp $
+#
+
+PORTNAME=	fileinfo
+PORTVERSION=	1.0.4
+CATEGORIES=	sysutils pear
+MASTER_SITES=	http://pecl.php.net/get/
+PKGNAMEPREFIX=	pecl-
+DISTNAME=	Fileinfo-${PORTVERSION}
+EXTRACT_SUFX=	.tgz
+DIST_SUBDIR=	PECL
+
+MAINTAINER=	ale@FreeBSD.org
+COMMENT=	A PECL extension to retrieve info about files
+
+USE_PHP=	yes
+USE_PHPEXT=	yes
+DEFAULT_PHP_VER=52
+IGNORE_WITH_PHP=5 53
+
+CONFIGURE_ARGS=	--with-fileinfo=/usr
+
+.include <bsd.port.mk>
