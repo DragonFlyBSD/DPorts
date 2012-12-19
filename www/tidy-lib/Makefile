@@ -1,0 +1,19 @@
+# New ports collection makefile for:    tidy-lib
+# Date created:                         21 February 2003
+# Whom:                                 Thierry Thomas <thierry@pompo.net>
+#
+# $FreeBSD: ports/www/tidy-lib/Makefile,v 1.4 2012/11/17 06:03:07 svnexp Exp $
+#
+
+PORTNAME=	tidy
+CATEGORIES=	www
+PKGNAMESUFFIX=	-lib
+
+MAINTAINER=	thierry@FreeBSD.org
+COMMENT=	Utility to clean up and pretty print HTML/XHTML/XML (with shared lib)
+
+MASTERDIR=	${.CURDIR}/../../www/tidy-devel
+
+WITH_SHLIB=	yes
+
+.include "${MASTERDIR}/Makefile"
