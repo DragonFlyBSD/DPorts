@@ -1,0 +1,39 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Regexp/Common/.packlist
+%%SITE_PERL%%/Regexp/Common/CC.pm
+%%SITE_PERL%%/Regexp/Common/SEN.pm
+%%SITE_PERL%%/Regexp/Common/URI/fax.pm
+%%SITE_PERL%%/Regexp/Common/URI/file.pm
+%%SITE_PERL%%/Regexp/Common/URI/http.pm
+%%SITE_PERL%%/Regexp/Common/URI/RFC1035.pm
+%%SITE_PERL%%/Regexp/Common/URI/tel.pm
+%%SITE_PERL%%/Regexp/Common/URI/gopher.pm
+%%SITE_PERL%%/Regexp/Common/URI/ftp.pm
+%%SITE_PERL%%/Regexp/Common/URI/tv.pm
+%%SITE_PERL%%/Regexp/Common/URI/pop.pm
+%%SITE_PERL%%/Regexp/Common/URI/prospero.pm
+%%SITE_PERL%%/Regexp/Common/URI/wais.pm
+%%SITE_PERL%%/Regexp/Common/URI/RFC2806.pm
+%%SITE_PERL%%/Regexp/Common/URI/telnet.pm
+%%SITE_PERL%%/Regexp/Common/URI/RFC1808.pm
+%%SITE_PERL%%/Regexp/Common/URI/RFC1738.pm
+%%SITE_PERL%%/Regexp/Common/URI/RFC2384.pm
+%%SITE_PERL%%/Regexp/Common/URI/RFC2396.pm
+%%SITE_PERL%%/Regexp/Common/URI/news.pm
+%%SITE_PERL%%/Regexp/Common/_support.pm
+%%SITE_PERL%%/Regexp/Common/lingua.pm
+%%SITE_PERL%%/Regexp/Common/net.pm
+%%SITE_PERL%%/Regexp/Common/number.pm
+%%SITE_PERL%%/Regexp/Common/balanced.pm
+%%SITE_PERL%%/Regexp/Common/whitespace.pm
+%%SITE_PERL%%/Regexp/Common/URI.pm
+%%SITE_PERL%%/Regexp/Common/delimited.pm
+%%SITE_PERL%%/Regexp/Common/comment.pm
+%%SITE_PERL%%/Regexp/Common/zip.pm
+%%SITE_PERL%%/Regexp/Common/list.pm
+%%SITE_PERL%%/Regexp/Common/profanity.pm
+%%SITE_PERL%%/Regexp/Common.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Regexp/Common
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Regexp
+@dirrm %%SITE_PERL%%/Regexp/Common/URI
+@dirrm %%SITE_PERL%%/Regexp/Common
+@dirrmtry %%SITE_PERL%%/Regexp
