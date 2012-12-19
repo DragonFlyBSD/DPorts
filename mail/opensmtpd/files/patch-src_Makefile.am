@@ -1,0 +1,19 @@
+
+$FreeBSD: ports/mail/opensmtpd/files/patch-src_Makefile.am,v 1.2 2012/11/17 05:59:07 svnexp Exp $
+
+--- src/Makefile.am.orig
++++ src/Makefile.am
+@@ -107,10 +107,10 @@
+ 	$(MKDIR_P) $(DESTDIR)$(mandir)/$(mansubdir)5
+ 	$(MKDIR_P) $(DESTDIR)$(mandir)/$(mansubdir)8
+ 
+-	@if [ ! -f $(DESTDIR)$(sysconfdir)/mail/smtpd.conf ]; then		\
+-		$(INSTALL) -m 644 smtpd.conf.out $(DESTDIR)$(sysconfdir)/mail/smtpd.conf; \
++	@if [ ! -f $(DESTDIR)$(sysconfdir)/mail/smtpd.conf.sample ]; then		\
++		$(INSTALL) -m 644 smtpd.conf.out $(DESTDIR)$(sysconfdir)/mail/smtpd.conf.sample; \
+ 	else									\
+-		echo "$(DESTDIR)$(sysconfdir)/mail/smtpd.conf already exists, install will not overwrite"; \
++		echo "$(DESTDIR)$(sysconfdir)/mail/smtpd.conf.sample already exists, install will not overwrite"; \
+ 	fi
+ 
+ 	@if [ ! -f $(DESTDIR)$(bindir)/mailq$(EXEEXT) ]; then			\
