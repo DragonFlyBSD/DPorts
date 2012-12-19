@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Term/ReadPassword.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Term/ReadPassword/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Term/ReadPassword
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Term
+@dirrmtry %%SITE_PERL%%/Term
