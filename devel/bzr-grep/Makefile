@@ -1,0 +1,30 @@
+# Ports collection makefile for:	bzr-grep
+# Date created:				9 Jun 2010
+# Whom:					Carlo Strub <c-s@c-s.li>
+#
+# $FreeBSD: ports/devel/bzr-grep/Makefile,v 1.5 2012/11/17 05:55:36 svnexp Exp $
+#
+
+PORTNAME=	bzr-grep
+PORTVERSION=	0.4.0
+PORTREVISION=	2
+CATEGORIES=	devel
+MASTER_SITES=	http://launchpadlibrarian.net/49936719/ \
+		http://www.c-s.li/ports/
+
+MAINTAINER=	cs@FreeBSD.org
+COMMENT=	Bazaar plugin to grep files
+
+BUILD_DEPENDS=	bzr:${PORTSDIR}/devel/bzr
+RUN_DEPENDS=	bzr:${PORTSDIR}/devel/bzr
+
+LICENSE=	GPLv2
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+USE_PYTHON=		2.5+
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_PKGNAME=	bzr_grep
+PYDISTUTILS_PKGVERSION=	${PORTVERSION}.final.0
+
+.include <bsd.port.mk>
