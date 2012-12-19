@@ -1,0 +1,5 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/ExtUtils/Depends/.packlist
+%%SITE_PERL%%/ExtUtils/Depends.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/ExtUtils/Depends
+@dirrmtry %%SITE_PERL%%/ExtUtils
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/ExtUtils
