@@ -1,0 +1,6 @@
+%%SITE_PERL%%/Net/DAAP/Client.pm
+%%SITE_PERL%%/Net/DAAP/Client/v2.pm
+%%SITE_PERL%%/Net/DAAP/Client/v3.pm
+@dirrmtry %%SITE_PERL%%/Net/DAAP/Client
+@dirrmtry %%SITE_PERL%%/Net/DAAP
+@dirrmtry %%SITE_PERL%%/Net
