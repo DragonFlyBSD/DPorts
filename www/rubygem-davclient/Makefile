@@ -1,0 +1,24 @@
+# Ports collection makefile for:	rubygem-davclient
+# Date created:				2011-01-19
+# Whom:					Mikhail T. <michael@fun-box.ru>
+#
+# $FreeBSD: ports/www/rubygem-davclient/Makefile,v 1.4 2012/11/17 06:03:03 svnexp Exp $
+#
+
+PORTNAME=	davclient
+PORTVERSION=	0.0.8
+CATEGORIES=	www rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Command line WebDAV client and Ruby library
+
+LICENSE=	GPLv2
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+PLIST_FILES=	bin/dav
+
+.include <bsd.port.mk>
