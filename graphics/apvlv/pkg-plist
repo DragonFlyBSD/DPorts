@@ -1,0 +1,10 @@
+bin/apvlv
+etc/apvlvrc
+%%DOCSDIR%%/Startup.pdf
+%%DOCSDIR%%/Startup.tex
+%%DOCSDIR%%/apvlvrc.example
+%%DOCSDIR%%/icons/dir.png
+%%DOCSDIR%%/icons/pdf.png
+%%DOCSDIR%%/icons/reg.png
+@dirrm %%DOCSDIR%%/icons
+@dirrm %%DOCSDIR%%
