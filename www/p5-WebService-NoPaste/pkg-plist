@@ -1,0 +1,6 @@
+bin/nopaste
+%%SITE_PERL%%/WebService/NoPaste.pm
+@dirrmtry %%SITE_PERL%%/WebService
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/WebService/NoPaste/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/WebService/NoPaste
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/WebService
