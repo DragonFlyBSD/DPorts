@@ -1,0 +1,31 @@
+# New ports collection makefile for:	devel/p5-Parallel-Prefork
+# Date created:				23 September 2009
+# Whom:					Anton Berezin <tobez@FreeBSD.org>
+#
+# $FreeBSD: ports/devel/p5-Parallel-Prefork/Makefile,v 1.8 2012/11/17 05:56:25 svnexp Exp $
+#
+
+PORTNAME=	Parallel-Prefork
+PORTVERSION=	0.13
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:KAZUHO
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	tobez@FreeBSD.org
+COMMENT=	A simple prefork server framework
+
+BUILD_DEPENDS=	p5-Proc-Wait3>=0.03:${PORTSDIR}/devel/p5-Proc-Wait3 \
+		p5-Class-Accessor-Lite>=0.04:${PORTSDIR}/devel/p5-Class-Accessor-Lite \
+		p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
+		p5-Scope-Guard>=0:${PORTSDIR}/devel/p5-Scope-Guard
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
+		p5-Test-SharedFork>=0:${PORTSDIR}/devel/p5-Test-SharedFork \
+		p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
+
+PERL_CONFIGURE=	yes
+
+MAN3=	Parallel::Prefork.3 Parallel::Prefork::SpareWorkers.3
+
+.include <bsd.port.mk>
