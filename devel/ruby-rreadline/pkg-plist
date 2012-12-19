@@ -1,0 +1,21 @@
+%%RUBY_SITELIBDIR%%/BuiltInExecutables.rb
+%%RUBY_SITELIBDIR%%/CommandLineActions.rb
+%%RUBY_SITELIBDIR%%/CommandLineEditor.rb
+%%RUBY_SITELIBDIR%%/EditingContext.rb
+%%RUBY_SITELIBDIR%%/EditingLine.rb
+%%RUBY_SITELIBDIR%%/KeyBind.rb
+%%RUBY_SITELIBDIR%%/LimitedArray.rb
+%%RUBY_SITELIBDIR%%/RReadline.rb
+%%RUBY_SITELIBDIR%%/StringUtil.rb
+%%RUBY_SITELIBDIR%%/Terminal.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/rbsh/rbsh
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/rbsh/ContextualExecutables.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/rbsh/RubyShell.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/rbsh/ShellExecutables.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/rbsh/UnixDirectoryClient.rb
+%%PORTDOCS%%@dirrm %%RUBY_MODEXAMPLESDIR%%/rbsh
+%%PORTDOCS%%@dirrm %%RUBY_MODEXAMPLESDIR%%
+%%PORTDOCS%%%%RUBY_MODDOCDIR%%/README
+%%PORTDOCS%%%%RUBY_MODDOCDIR%%/ja/README.ja
+%%PORTDOCS%%@dirrm %%RUBY_MODDOCDIR%%/ja
+%%PORTDOCS%%@dirrm %%RUBY_MODDOCDIR%%
