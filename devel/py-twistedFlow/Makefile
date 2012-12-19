@@ -1,0 +1,28 @@
+# New ports collection makefile for:	py-twistedFlow
+# Date created:		14 April 2005
+# Whom:	      		Neal Nelson <neal@nelson.name>
+#
+# $FreeBSD: ports/devel/py-twistedFlow/Makefile,v 1.8 2012/11/17 05:56:51 svnexp Exp $
+#
+
+PORTNAME=	twistedFlow
+PORTVERSION=	8.2.0
+CATEGORIES=	devel python
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Flow/${PORTVERSION:R}/
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	TwistedFlow-${PORTVERSION}
+
+MAINTAINER=	neal@nelson.name
+COMMENT=	Generator based asynchronous result flows
+
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/twisted:${PORTSDIR}/devel/py-twistedCore
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+WRKSRC=		${WRKDIR}/TwistedFlow-${PORTVERSION}
+
+USE_BZIP2=	yes
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_PKGNAME=	Twisted_Flow
+
+.include <bsd.port.mk>
