@@ -1,0 +1,74 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/MakeMethods/.packlist
+
+%%SITE_PERL%%/Class/MakeMethods.pm
+%%SITE_PERL%%/Class/MakeMethods/Attribute.pm
+%%SITE_PERL%%/Class/MakeMethods/Autoload.pm
+%%SITE_PERL%%/Class/MakeMethods/Basic.pm
+%%SITE_PERL%%/Class/MakeMethods/Basic/Array.pm
+%%SITE_PERL%%/Class/MakeMethods/Basic/Global.pm
+%%SITE_PERL%%/Class/MakeMethods/Basic/Hash.pm
+%%SITE_PERL%%/Class/MakeMethods/Composite.pm
+%%SITE_PERL%%/Class/MakeMethods/Composite/Array.pm
+%%SITE_PERL%%/Class/MakeMethods/Composite/Global.pm
+%%SITE_PERL%%/Class/MakeMethods/Composite/Hash.pm
+%%SITE_PERL%%/Class/MakeMethods/Composite/Inheritable.pm
+%%SITE_PERL%%/Class/MakeMethods/Composite/Universal.pm
+%%SITE_PERL%%/Class/MakeMethods/Docs/Catalog.pod
+%%SITE_PERL%%/Class/MakeMethods/Docs/Changes.pod
+%%SITE_PERL%%/Class/MakeMethods/Docs/Examples.pod
+%%SITE_PERL%%/Class/MakeMethods/Docs/ReadMe.pod
+%%SITE_PERL%%/Class/MakeMethods/Docs/RelatedModules.pod
+%%SITE_PERL%%/Class/MakeMethods/Docs/ToDo.pod
+%%SITE_PERL%%/Class/MakeMethods/Emulator.pm
+%%SITE_PERL%%/Class/MakeMethods/Emulator/AccessorFast.pm
+%%SITE_PERL%%/Class/MakeMethods/Emulator/Inheritable.pm
+%%SITE_PERL%%/Class/MakeMethods/Emulator/MethodMaker.pm
+%%SITE_PERL%%/Class/MakeMethods/Emulator/Singleton.pm
+%%SITE_PERL%%/Class/MakeMethods/Emulator/Struct.pm
+%%SITE_PERL%%/Class/MakeMethods/Emulator/accessors.pm
+%%SITE_PERL%%/Class/MakeMethods/Emulator/mcoder.pm
+%%SITE_PERL%%/Class/MakeMethods/Evaled.pm
+%%SITE_PERL%%/Class/MakeMethods/Evaled/Hash.pm
+%%SITE_PERL%%/Class/MakeMethods/Standard.pm
+%%SITE_PERL%%/Class/MakeMethods/Standard/Array.pm
+%%SITE_PERL%%/Class/MakeMethods/Standard/Global.pm
+%%SITE_PERL%%/Class/MakeMethods/Standard/Hash.pm
+%%SITE_PERL%%/Class/MakeMethods/Standard/Inheritable.pm
+%%SITE_PERL%%/Class/MakeMethods/Standard/Universal.pm
+%%SITE_PERL%%/Class/MakeMethods/Template.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Array.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Class.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/ClassInherit.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/ClassName.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/ClassVar.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Flyweight.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Generic.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Global.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Hash.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Inheritable.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/InsideOut.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/PackageVar.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Ref.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Scalar.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Static.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Struct.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/StructBuiltin.pm
+%%SITE_PERL%%/Class/MakeMethods/Template/Universal.pm
+%%SITE_PERL%%/Class/MakeMethods/Utility/ArraySplicer.pm
+%%SITE_PERL%%/Class/MakeMethods/Utility/DiskCache.pm
+%%SITE_PERL%%/Class/MakeMethods/Utility/Inheritable.pm
+%%SITE_PERL%%/Class/MakeMethods/Utility/Ref.pm
+%%SITE_PERL%%/Class/MakeMethods/Utility/TextBuilder.pm
+
+@dirrmtry %%SITE_PERL%%/Class/MakeMethods/Basic
+@dirrmtry %%SITE_PERL%%/Class/MakeMethods/Composite
+@dirrmtry %%SITE_PERL%%/Class/MakeMethods/Docs
+@dirrmtry %%SITE_PERL%%/Class/MakeMethods/Emulator
+@dirrmtry %%SITE_PERL%%/Class/MakeMethods/Evaled
+@dirrmtry %%SITE_PERL%%/Class/MakeMethods/Standard
+@dirrmtry %%SITE_PERL%%/Class/MakeMethods/Template
+@dirrmtry %%SITE_PERL%%/Class/MakeMethods/Utility
+@dirrmtry %%SITE_PERL%%/Class/MakeMethods
+@dirrmtry %%SITE_PERL%%/Class
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/MakeMethods
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class
