@@ -1,0 +1,21 @@
+# Ports collection makefile for:	rubygem-russian
+# Date created:				22 June 2009
+# Whom:					Alexander Logvinov <avl@FreeBSD.org>
+#
+# $FreeBSD: ports/russian/rubygem-russian/Makefile,v 1.10 2012/11/17 06:00:56 svnexp Exp $
+
+PORTNAME=	russian
+PORTVERSION=	0.6.0
+CATEGORIES=	russian devel rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Russian language support for Ruby and Rails, based on I18n library
+
+RUN_DEPENDS=	rubygem-i18n>=0.5.0:${PORTSDIR}/devel/rubygem-i18n
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
