@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# $FreeBSD: ports/sysutils/boxbackup-devel/files/bbackupd.in,v 1.3 2012/11/17 06:01:25 svnexp Exp $
+#
+# PROVIDE: bbackupd
+# REQUIRE: NETWORKING
+# KEYWORD: shutdown
+#
+# Add the following line to /etc/rc.conf to enable bbackupd:
+#
+# bbackupd_enable="YES"
+
+. /etc/rc.subr
+
+name="bbackupd"
+rcvar=bbackupd_enable
+
+load_rc_config $name
+
+: ${bbackupd_enable:="NO"}
+: ${bbackupd_flags:="%%PREFIX%%/etc/box/bbackupd.conf"}
+
+pidfile=${bbackupd_pidfile:-"/var/run/bbackupd.pid"}
+
+command="%%PREFIX%%/sbin/bbackupd"
+extra_commands="reload"
+
+run_rc_command "$1"
