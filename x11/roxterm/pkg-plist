@@ -1,0 +1,31 @@
+bin/roxterm
+bin/roxterm-config
+share/applications/roxterm.desktop
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/Changes
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/en/guide.html
+%%PORTDOCS%%%%DOCSDIR%%/en/index.html
+%%PORTDOCS%%%%DOCSDIR%%/en/installation.html
+%%PORTDOCS%%%%DOCSDIR%%/en/news.html
+%%PORTDOCS%%%%DOCSDIR%%/lib/favicon.ico
+%%PORTDOCS%%%%DOCSDIR%%/lib/header.png
+%%PORTDOCS%%%%DOCSDIR%%/lib/logo_text.png
+%%PORTDOCS%%%%DOCSDIR%%/lib/logo_text_only.png
+%%PORTDOCS%%%%DOCSDIR%%/lib/roxterm.css
+%%PORTDOCS%%%%DOCSDIR%%/lib/roxterm_ie.css
+%%PORTDOCS%%%%DOCSDIR%%/lib/roxterm_logo.png
+%%PORTDOCS%%%%DOCSDIR%%/lib/sprites.png
+share/icons/hicolor/scalable/apps/roxterm.svg
+%%DATADIR%%/Config/Colours/GTK
+%%DATADIR%%/Config/Colours/Tango
+%%DATADIR%%/Config/Shortcuts/Default
+%%DATADIR%%/roxterm-config.ui
+@dirrm %%DATADIR%%/Config/Shortcuts
+@dirrm %%DATADIR%%/Config/Colours
+@dirrm %%DATADIR%%/Config
+@dirrm %%DATADIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/lib
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/en
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrmtry share/applications
