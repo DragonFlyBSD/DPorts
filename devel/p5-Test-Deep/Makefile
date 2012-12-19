@@ -1,0 +1,29 @@
+# New ports collection makefile for:    p5-Test-Deep
+# Date created:				May 12th 2004
+# Whom:	      				Alex Kapranoff <alex@kapranoff.ru>
+#
+# $FreeBSD: ports/devel/p5-Test-Deep/Makefile,v 1.20 2012/11/17 05:56:32 svnexp Exp $
+#
+
+PORTNAME=	Test-Deep
+PORTVERSION=	0.110
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Test data structures for differences deeply
+
+BUILD_DEPENDS=	p5-Test-NoWarnings>=0.02:${PORTSDIR}/devel/p5-Test-NoWarnings \
+		p5-Test-Tester>=0.04:${PORTSDIR}/devel/p5-Test-Tester
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+REINPLACE_ARGS=	-i ''
+
+MAN3=		Test::Deep.3 Test::Deep::NoTest.3
+
+post-patch:
+	@${REINPLACE_CMD} -e '/return (/s/;/);/' ${WRKSRC}/lib/Test/Deep/RegexpOnly.pm
+
+.include <bsd.port.mk>
