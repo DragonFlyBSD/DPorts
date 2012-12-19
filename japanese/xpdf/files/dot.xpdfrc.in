@@ -1,0 +1,31 @@
+#Japanese PDF resources
+# $FreeBSD: ports/japanese/xpdf/files/dot.xpdfrc.in,v 1.5 2012/11/17 05:58:41 svnexp Exp $
+cidToUnicode	Adobe-Japan1	%%DATADIR%%/japanese/Adobe-Japan1.cidToUnicode
+unicodeMap	ISO-2022-JP	%%DATADIR%%/japanese/ISO-2022-JP.unicodeMap
+unicodeMap	EUC-JP		%%DATADIR%%/japanese/EUC-JP.unicodeMap
+unicodeMap	Shift-JIS	%%DATADIR%%/japanese/Shift-JIS.unicodeMap
+cMapDir		Adobe-Japan1	%%ADOBECMAPDIR%%
+toUnicodeDir			%%ADOBECMAPDIR%%
+displayNamedCIDFontTT	Ryumin-Light			"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	Ryumin-Light-H			"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	Ryumin-Light-V			"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	Ryumin-Light-Identity		"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	Ryumin-Light-Identity-H		"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	Ryumin-Light-Identity-V		"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	HeiseiMin-W3H			"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	MS-Mincho			"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	FutoMinA101-Bold		"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	FutoMinA101-Bold-H		"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	FutoMinA101-Bold-V		"%%FONTSDIR%%/Ryumin-Light"
+displayNamedCIDFontTT	GothicBBB-Medium		"%%FONTSDIR%%/GothicBBB-Medium"
+displayNamedCIDFontTT	GothicBBB-Medium-H		"%%FONTSDIR%%/GothicBBB-Medium"
+displayNamedCIDFontTT	GothicBBB-Medium-V		"%%FONTSDIR%%/GothicBBB-Medium"
+displayNamedCIDFontTT	GothicBBB-Medium-Identity	"%%FONTSDIR%%/GothicBBB-Medium"
+displayNamedCIDFontTT	GothicBBB-Medium-Identity-H	"%%FONTSDIR%%/GothicBBB-Medium"
+displayNamedCIDFontTT	GothicBBB-Medium-Identity-V	"%%FONTSDIR%%/GothicBBB-Medium"
+displayNamedCIDFontTT	HeiseiKakuGo-W5H		"%%FONTSDIR%%/GothicBBB-Medium"
+displayNamedCIDFontTT	MS-Gothic			"%%FONTSDIR%%/GothicBBB-Medium"
+displayNamedCIDFontTT	FutoGoB101-Bold			"%%FONTSDIR%%/GothicBBB-Medium"
+displayNamedCIDFontTT	FutoGoB101-Bold-H		"%%FONTSDIR%%/GothicBBB-Medium"
+displayNamedCIDFontTT	FutoGoB101-Bold-V		"%%FONTSDIR%%/GothicBBB-Medium"
+#Japanese PDF resources

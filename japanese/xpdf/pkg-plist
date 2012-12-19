@@ -1,0 +1,11 @@
+@comment $FreeBSD: ports/japanese/xpdf/pkg-plist,v 1.5 2012/11/17 05:58:41 svnexp Exp $
+%%DATADIR%%/japanese/Adobe-Japan1.cidToUnicode
+%%DATADIR%%/japanese/EUC-JP.unicodeMap
+%%DATADIR%%/japanese/ISO-2022-JP.unicodeMap
+%%DATADIR%%/japanese/README
+%%DATADIR%%/japanese/Shift-JIS.unicodeMap
+@exec exec < %D/etc/xpdfrc; rm -f %D/etc/xpdfrc; ( grep -v "%%EXTRARC%%"; echo "include %%EXTRARC%%" ) > %D/etc/xpdfrc; chmod 0444 %D/etc/xpdfrc
+@unexec exec < %D/etc/xpdfrc; rm -f %D/etc/xpdfrc; grep -v "%%EXTRARC%%" > %D/etc/xpdfrc; chmod 0444 %D/etc/xpdfrc
+%%DATADIR%%/japanese/dot.xpdfrc
+@dirrm %%DATADIR%%/japanese
+@dirrmtry %%DATADIR%%
