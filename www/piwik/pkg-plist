@@ -1,0 +1,2507 @@
+%%WWWDIR%%/LEGALNOTICE
+%%WWWDIR%%/README
+%%WWWDIR%%/composer.json
+%%WWWDIR%%/config/config.ini.sample.php
+%%WWWDIR%%/config/global.ini.php
+%%WWWDIR%%/config/manifest.inc.php
+%%WWWDIR%%/core/API/DataTableGenericFilter.php
+%%WWWDIR%%/core/API/DataTableManipulator/LabelFilter.php
+%%WWWDIR%%/core/API/DataTableManipulator/Flattener.php
+%%WWWDIR%%/core/API/DataTableManipulator.php
+%%WWWDIR%%/core/API/DocumentationGenerator.php
+%%WWWDIR%%/core/API/Proxy.php
+%%WWWDIR%%/core/API/Request.php
+%%WWWDIR%%/core/API/ResponseBuilder.php
+%%WWWDIR%%/core/Access.php
+%%WWWDIR%%/core/Archive.php
+%%WWWDIR%%/core/Archive/Array.php
+%%WWWDIR%%/core/Archive/Array/IndexedByDate.php
+%%WWWDIR%%/core/Archive/Array/IndexedBySite.php
+%%WWWDIR%%/core/Archive/Single.php
+%%WWWDIR%%/core/ArchiveProcessing.php
+%%WWWDIR%%/core/ArchiveProcessing/Day.php
+%%WWWDIR%%/core/ArchiveProcessing/Period.php
+%%WWWDIR%%/core/AssetManager.php
+%%WWWDIR%%/core/Auth.php
+%%WWWDIR%%/core/CacheFile.php
+%%WWWDIR%%/core/Common.php
+%%WWWDIR%%/core/Config.php
+%%WWWDIR%%/core/Config/Compat.php
+%%WWWDIR%%/core/Controller.php
+%%WWWDIR%%/core/Controller/Admin.php
+%%WWWDIR%%/core/Cookie.php
+%%WWWDIR%%/core/DataFiles/Countries.php
+%%WWWDIR%%/core/DataFiles/Currencies.php
+%%WWWDIR%%/core/DataFiles/LanguageToCountry.php
+%%WWWDIR%%/core/DataFiles/Languages.php
+%%WWWDIR%%/core/DataFiles/SearchEngines.php
+%%WWWDIR%%/core/DataTable.php
+%%WWWDIR%%/core/DataTable/Array.php
+%%WWWDIR%%/core/DataTable/Filter.php
+%%WWWDIR%%/core/DataTable/Filter/AddColumnsProcessedMetrics.php
+%%WWWDIR%%/core/DataTable/Filter/AddColumnsProcessedMetricsGoal.php
+%%WWWDIR%%/core/DataTable/Filter/AddConstantMetadata.php
+%%WWWDIR%%/core/DataTable/Filter/AddSummaryRow.php
+%%WWWDIR%%/core/DataTable/Filter/BeautifyRangeLabels.php
+%%WWWDIR%%/core/DataTable/Filter/BeautifyTimeRangeLabels.php
+%%WWWDIR%%/core/DataTable/Filter/ColumnCallbackAddColumn.php
+%%WWWDIR%%/core/DataTable/Filter/ColumnCallbackAddColumnPercentage.php
+%%WWWDIR%%/core/DataTable/Filter/ColumnCallbackAddColumnQuotient.php
+%%WWWDIR%%/core/DataTable/Filter/ColumnCallbackAddMetadata.php
+%%WWWDIR%%/core/DataTable/Filter/ColumnCallbackDeleteRow.php
+%%WWWDIR%%/core/DataTable/Filter/ColumnCallbackReplace.php
+%%WWWDIR%%/core/DataTable/Filter/ColumnDelete.php
+%%WWWDIR%%/core/DataTable/Filter/ExcludeLowPopulation.php
+%%WWWDIR%%/core/DataTable/Filter/GroupBy.php
+%%WWWDIR%%/core/DataTable/Filter/Limit.php
+%%WWWDIR%%/core/DataTable/Filter/MetadataCallbackAddMetadata.php
+%%WWWDIR%%/core/DataTable/Filter/MetadataCallbackReplace.php
+%%WWWDIR%%/core/DataTable/Filter/Null.php
+%%WWWDIR%%/core/DataTable/Filter/Pattern.php
+%%WWWDIR%%/core/DataTable/Filter/PatternRecursive.php
+%%WWWDIR%%/core/DataTable/Filter/RangeCheck.php
+%%WWWDIR%%/core/DataTable/Filter/ReplaceColumnNames.php
+%%WWWDIR%%/core/DataTable/Filter/ReplaceSummaryRowLabel.php
+%%WWWDIR%%/core/DataTable/Filter/SafeDecodeLabel.php
+%%WWWDIR%%/core/DataTable/Filter/Sort.php
+%%WWWDIR%%/core/DataTable/Filter/Truncate.php
+%%WWWDIR%%/core/DataTable/Manager.php
+%%WWWDIR%%/core/DataTable/Renderer.php
+%%WWWDIR%%/core/DataTable/Renderer/Console.php
+%%WWWDIR%%/core/DataTable/Renderer/Csv.php
+%%WWWDIR%%/core/DataTable/Renderer/Html.php
+%%WWWDIR%%/core/DataTable/Renderer/Json.php
+%%WWWDIR%%/core/DataTable/Renderer/Php.php
+%%WWWDIR%%/core/DataTable/Renderer/Rss.php
+%%WWWDIR%%/core/DataTable/Renderer/Tsv.php
+%%WWWDIR%%/core/DataTable/Renderer/Xml.php
+%%WWWDIR%%/core/DataTable/Row.php
+%%WWWDIR%%/core/DataTable/Row/DataTableSummary.php
+%%WWWDIR%%/core/DataTable/Simple.php
+%%WWWDIR%%/core/Date.php
+%%WWWDIR%%/core/Db/Adapter.php
+%%WWWDIR%%/core/Db/Adapter/Interface.php
+%%WWWDIR%%/core/Db/Adapter/Mysqli.php
+%%WWWDIR%%/core/Db/Adapter/Pdo/Mssql.php
+%%WWWDIR%%/core/Db/Adapter/Pdo/Mysql.php
+%%WWWDIR%%/core/Db/Adapter/Pdo/Pgsql.php
+%%WWWDIR%%/core/Db/Schema.php
+%%WWWDIR%%/core/Db/Schema/Interface.php
+%%WWWDIR%%/core/Db/Schema/Myisam.php
+%%WWWDIR%%/core/ErrorHandler.php
+%%WWWDIR%%/core/ExceptionHandler.php
+%%WWWDIR%%/core/FrontController.php
+%%WWWDIR%%/core/HTMLPurifier.php
+%%WWWDIR%%/core/Http.php
+%%WWWDIR%%/core/IP.php
+%%WWWDIR%%/core/Loader.php
+%%WWWDIR%%/core/Log.php
+%%WWWDIR%%/core/Log/APICall.php
+%%WWWDIR%%/core/Log/Error.php
+%%WWWDIR%%/core/Log/Exception.php
+%%WWWDIR%%/core/Log/Message.php
+%%WWWDIR%%/core/Mail.php
+%%WWWDIR%%/core/Menu/Abstract.php
+%%WWWDIR%%/core/Menu/Admin.php
+%%WWWDIR%%/core/Menu/Main.php
+%%WWWDIR%%/core/Menu/Top.php
+%%WWWDIR%%/core/Nonce.php
+%%WWWDIR%%/core/Option.php
+%%WWWDIR%%/core/Period.php
+%%WWWDIR%%/core/Period/Day.php
+%%WWWDIR%%/core/Period/Month.php
+%%WWWDIR%%/core/Period/Range.php
+%%WWWDIR%%/core/Period/Week.php
+%%WWWDIR%%/core/Period/Year.php
+%%WWWDIR%%/core/Piwik.php
+%%WWWDIR%%/core/Plugin.php
+%%WWWDIR%%/core/Plugin/Config.php
+%%WWWDIR%%/core/PluginsFunctions/Sql.php
+%%WWWDIR%%/core/PluginsFunctions/WidgetsList.php
+%%WWWDIR%%/core/PluginsManager.php
+%%WWWDIR%%/core/ProxyHeaders.php
+%%WWWDIR%%/core/QuickForm2.php
+%%WWWDIR%%/core/RankingQuery.php
+%%WWWDIR%%/core/ReportRenderer.php
+%%WWWDIR%%/core/ReportRenderer/Html.php
+%%WWWDIR%%/core/ReportRenderer/Pdf.php
+%%WWWDIR%%/core/ScheduledTask.php
+%%WWWDIR%%/core/ScheduledTime.php
+%%WWWDIR%%/core/ScheduledTime/Daily.php
+%%WWWDIR%%/core/ScheduledTime/Hourly.php
+%%WWWDIR%%/core/ScheduledTime/Monthly.php
+%%WWWDIR%%/core/ScheduledTime/Weekly.php
+%%WWWDIR%%/core/Segment.php
+%%WWWDIR%%/core/SegmentExpression.php
+%%WWWDIR%%/core/Session.php
+%%WWWDIR%%/core/Session/Namespace.php
+%%WWWDIR%%/core/Session/SaveHandler/DbTable.php
+%%WWWDIR%%/core/Site.php
+%%WWWDIR%%/core/Smarty.php
+%%WWWDIR%%/core/SmartyPlugins/block.purify.php
+%%WWWDIR%%/core/SmartyPlugins/function.ajaxErrorDiv.php
+%%WWWDIR%%/core/SmartyPlugins/function.ajaxLoadingDiv.php
+%%WWWDIR%%/core/SmartyPlugins/function.ajaxRequestErrorDiv.php
+%%WWWDIR%%/core/SmartyPlugins/function.hiddenurl.php
+%%WWWDIR%%/core/SmartyPlugins/function.includeAssets.php
+%%WWWDIR%%/core/SmartyPlugins/function.loadJavascriptTranslations.php
+%%WWWDIR%%/core/SmartyPlugins/function.logoHtml.php
+%%WWWDIR%%/core/SmartyPlugins/function.postEvent.php
+%%WWWDIR%%/core/SmartyPlugins/function.sparkline.php
+%%WWWDIR%%/core/SmartyPlugins/function.url.php
+%%WWWDIR%%/core/SmartyPlugins/modifier.inlineHelp.php
+%%WWWDIR%%/core/SmartyPlugins/modifier.money.php
+%%WWWDIR%%/core/SmartyPlugins/modifier.stripeol.php
+%%WWWDIR%%/core/SmartyPlugins/modifier.sumtime.php
+%%WWWDIR%%/core/SmartyPlugins/modifier.translate.php
+%%WWWDIR%%/core/SmartyPlugins/modifier.unescape.php
+%%WWWDIR%%/core/SmartyPlugins/modifier.urlRewriteBasicView.php
+%%WWWDIR%%/core/SmartyPlugins/modifier.urlRewriteWithParameters.php
+%%WWWDIR%%/core/SmartyPlugins/outputfilter.ajaxcdn.php
+%%WWWDIR%%/core/SmartyPlugins/outputfilter.cachebuster.php
+%%WWWDIR%%/core/TCPDF.php
+%%WWWDIR%%/core/TablePartitioning.php
+%%WWWDIR%%/core/TaskScheduler.php
+%%WWWDIR%%/core/Timer.php
+%%WWWDIR%%/core/Tracker.php
+%%WWWDIR%%/core/Tracker/Action.php
+%%WWWDIR%%/core/Tracker/Config.php
+%%WWWDIR%%/core/Tracker/Db.php
+%%WWWDIR%%/core/Tracker/Db/Exception.php
+%%WWWDIR%%/core/Tracker/Db/Mysqli.php
+%%WWWDIR%%/core/Tracker/Db/Pdo/Mysql.php
+%%WWWDIR%%/core/Tracker/Db/Pdo/Pgsql.php
+%%WWWDIR%%/core/Tracker/GoalManager.php
+%%WWWDIR%%/core/Tracker/IgnoreCookie.php
+%%WWWDIR%%/core/Tracker/Visit.php
+%%WWWDIR%%/core/Tracker/javascriptCode.tpl
+%%WWWDIR%%/core/Translate.php
+%%WWWDIR%%/core/TranslationWriter.php
+%%WWWDIR%%/core/Unzip.php
+%%WWWDIR%%/core/Unzip/Interface.php
+%%WWWDIR%%/core/Unzip/PclZip.php
+%%WWWDIR%%/core/Unzip/ZipArchive.php
+%%WWWDIR%%/core/UpdateCheck.php
+%%WWWDIR%%/core/Updater.php
+%%WWWDIR%%/core/Updates.php
+%%WWWDIR%%/core/Updates/0.2.10.php
+%%WWWDIR%%/core/Updates/0.2.12.php
+%%WWWDIR%%/core/Updates/0.2.13.php
+%%WWWDIR%%/core/Updates/0.2.24.php
+%%WWWDIR%%/core/Updates/0.2.27.php
+%%WWWDIR%%/core/Updates/0.2.32.php
+%%WWWDIR%%/core/Updates/0.2.33.php
+%%WWWDIR%%/core/Updates/0.2.34.php
+%%WWWDIR%%/core/Updates/0.2.35.php
+%%WWWDIR%%/core/Updates/0.2.37.php
+%%WWWDIR%%/core/Updates/0.4.1.php
+%%WWWDIR%%/core/Updates/0.4.2.php
+%%WWWDIR%%/core/Updates/0.4.4.php
+%%WWWDIR%%/core/Updates/0.4.php
+%%WWWDIR%%/core/Updates/0.5.4.php
+%%WWWDIR%%/core/Updates/0.5.5.php
+%%WWWDIR%%/core/Updates/0.5.php
+%%WWWDIR%%/core/Updates/0.6-rc1.php
+%%WWWDIR%%/core/Updates/0.6.2.php
+%%WWWDIR%%/core/Updates/0.6.3.php
+%%WWWDIR%%/core/Updates/0.7.php
+%%WWWDIR%%/core/Updates/0.9.1.php
+%%WWWDIR%%/core/Updates/1.1.php
+%%WWWDIR%%/core/Updates/1.2-rc1.php
+%%WWWDIR%%/core/Updates/1.2-rc2.php
+%%WWWDIR%%/core/Updates/1.2.3.php
+%%WWWDIR%%/core/Updates/1.2.5-rc1.php
+%%WWWDIR%%/core/Updates/1.2.5-rc7.php
+%%WWWDIR%%/core/Updates/1.4-rc1.php
+%%WWWDIR%%/core/Updates/1.4-rc2.php
+%%WWWDIR%%/core/Updates/1.5-b1.php
+%%WWWDIR%%/core/Updates/1.5-b2.php
+%%WWWDIR%%/core/Updates/1.5-b3.php
+%%WWWDIR%%/core/Updates/1.5-b4.php
+%%WWWDIR%%/core/Updates/1.5-b5.php
+%%WWWDIR%%/core/Updates/1.5-rc6.php
+%%WWWDIR%%/core/Updates/1.6-b1.php
+%%WWWDIR%%/core/Updates/1.6-rc1.php
+%%WWWDIR%%/core/Updates/1.7-b1.php
+%%WWWDIR%%/core/Updates/1.7.2-rc5.php
+%%WWWDIR%%/core/Updates/1.7.2-rc7.php
+%%WWWDIR%%/core/Updates/1.8.3-b1.php
+%%WWWDIR%%/core/Updates/1.8.4-b1.php
+%%WWWDIR%%/core/Updates/1.9-b9.php
+%%WWWDIR%%/core/Updates/1.9-b16.php
+%%WWWDIR%%/core/Updates/1.9-b19.php
+%%WWWDIR%%/core/Updates/1.9.1-b2.php
+%%WWWDIR%%/core/Url.php
+%%WWWDIR%%/core/Version.php
+%%WWWDIR%%/core/View.php
+%%WWWDIR%%/core/View/Interface.php
+%%WWWDIR%%/core/View/OneClickDone.php
+%%WWWDIR%%/core/ViewDataTable.php
+%%WWWDIR%%/core/ViewDataTable/Cloud.php
+%%WWWDIR%%/core/ViewDataTable/GenerateGraphData.php
+%%WWWDIR%%/core/ViewDataTable/GenerateGraphData/ChartEvolution.php
+%%WWWDIR%%/core/ViewDataTable/GenerateGraphData/ChartPie.php
+%%WWWDIR%%/core/ViewDataTable/GenerateGraphData/ChartVerticalBar.php
+%%WWWDIR%%/core/ViewDataTable/GenerateGraphHTML.php
+%%WWWDIR%%/core/ViewDataTable/GenerateGraphHTML/ChartEvolution.php
+%%WWWDIR%%/core/ViewDataTable/GenerateGraphHTML/ChartPie.php
+%%WWWDIR%%/core/ViewDataTable/GenerateGraphHTML/ChartVerticalBar.php
+%%WWWDIR%%/core/ViewDataTable/HtmlTable.php
+%%WWWDIR%%/core/ViewDataTable/HtmlTable/AllColumns.php
+%%WWWDIR%%/core/ViewDataTable/HtmlTable/Goals.php
+%%WWWDIR%%/core/ViewDataTable/Sparkline.php
+%%WWWDIR%%/core/Visualization/Chart.php
+%%WWWDIR%%/core/Visualization/Chart/Evolution.php
+%%WWWDIR%%/core/Visualization/Chart/Pie.php
+%%WWWDIR%%/core/Visualization/Chart/VerticalBar.php
+%%WWWDIR%%/core/Visualization/Cloud.php
+%%WWWDIR%%/core/Visualization/Sparkline.php
+%%WWWDIR%%/core/testMinimumPhpVersion.php
+%%WWWDIR%%/index.php
+%%WWWDIR%%/js/LICENSE.txt
+%%WWWDIR%%/js/README
+%%WWWDIR%%/js/index.php
+%%WWWDIR%%/js/piwik.js
+%%WWWDIR%%/lang/am.php
+%%WWWDIR%%/lang/ar.php
+%%WWWDIR%%/lang/be.php
+%%WWWDIR%%/lang/bg.php
+%%WWWDIR%%/lang/ca.php
+%%WWWDIR%%/lang/cs.php
+%%WWWDIR%%/lang/da.php
+%%WWWDIR%%/lang/de.php
+%%WWWDIR%%/lang/el.php
+%%WWWDIR%%/lang/en.php
+%%WWWDIR%%/lang/es.php
+%%WWWDIR%%/lang/et.php
+%%WWWDIR%%/lang/eu.php
+%%WWWDIR%%/lang/fa.php
+%%WWWDIR%%/lang/fi.php
+%%WWWDIR%%/lang/fr.php
+%%WWWDIR%%/lang/gl.php
+%%WWWDIR%%/lang/he.php
+%%WWWDIR%%/lang/hu.php
+%%WWWDIR%%/lang/id.php
+%%WWWDIR%%/lang/is.php
+%%WWWDIR%%/lang/it.php
+%%WWWDIR%%/lang/ja.php
+%%WWWDIR%%/lang/ka.php
+%%WWWDIR%%/lang/ko.php
+%%WWWDIR%%/lang/lt.php
+%%WWWDIR%%/lang/lv.php
+%%WWWDIR%%/lang/nb.php
+%%WWWDIR%%/lang/nl.php
+%%WWWDIR%%/lang/nn.php
+%%WWWDIR%%/lang/pl.php
+%%WWWDIR%%/lang/pt-br.php
+%%WWWDIR%%/lang/pt.php
+%%WWWDIR%%/lang/ro.php
+%%WWWDIR%%/lang/ru.php
+%%WWWDIR%%/lang/sk.php
+%%WWWDIR%%/lang/sl.php
+%%WWWDIR%%/lang/sq.php
+%%WWWDIR%%/lang/sr.php
+%%WWWDIR%%/lang/sv.php
+%%WWWDIR%%/lang/te.php
+%%WWWDIR%%/lang/th.php
+%%WWWDIR%%/lang/tr.php
+%%WWWDIR%%/lang/uk.php
+%%WWWDIR%%/lang/zh-cn.php
+%%WWWDIR%%/lang/zh-tw.php
+%%WWWDIR%%/libs/Event/Dispatcher.php
+%%WWWDIR%%/libs/Event/Notification.php
+%%WWWDIR%%/libs/HTML/Common2.php
+%%WWWDIR%%/libs/HTML/QuickForm2.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Container.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Container/Fieldset.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Container/Group.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller/Action.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller/Action/Back.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller/Action/Direct.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller/Action/Display.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller/Action/Jump.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller/Action/Next.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller/Action/Submit.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller/DefaultAction.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller/Page.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Controller/SessionContainer.php
+%%WWWDIR%%/libs/HTML/QuickForm2/DataSource.php
+%%WWWDIR%%/libs/HTML/QuickForm2/DataSource/Array.php
+%%WWWDIR%%/libs/HTML/QuickForm2/DataSource/Session.php
+%%WWWDIR%%/libs/HTML/QuickForm2/DataSource/Submit.php
+%%WWWDIR%%/libs/HTML/QuickForm2/DataSource/SuperGlobal.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/Button.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/Date.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/Input.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputButton.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputCheckable.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputCheckbox.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputFile.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputHidden.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputImage.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputPassword.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputRadio.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputReset.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputSubmit.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/InputText.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/Select.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/Static.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Element/Textarea.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Exception.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Factory.php
+%%WWWDIR%%/libs/HTML/QuickForm2/JavascriptBuilder.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Loader.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Node.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Renderer.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Renderer/Array.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Renderer/Default.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Renderer/Plugin.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Renderer/Proxy.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Renderer/Smarty.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/Callback.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/Compare.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/Each.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/Empty.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/Length.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/MaxFileSize.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/MimeType.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/Nonempty.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/NotCallback.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/NotRegex.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/Regex.php
+%%WWWDIR%%/libs/HTML/QuickForm2/Rule/Required.php
+%%WWWDIR%%/libs/MaxMindGeoIP/geoipcity.inc
+%%WWWDIR%%/libs/MaxMindGeoIP/geoipregionvars.php
+%%WWWDIR%%/libs/MaxMindGeoIP/geoip.inc
+%%WWWDIR%%/libs/PEAR.php
+%%WWWDIR%%/libs/PEAR/Exception.php
+%%WWWDIR%%/libs/PEAR/FixPHP5PEARWarnings.php
+%%WWWDIR%%/libs/PEAR/LICENSE
+%%WWWDIR%%/libs/PEAR5.php
+%%WWWDIR%%/libs/PclZip/lgpl-2.1.txt
+%%WWWDIR%%/libs/PclZip/pclzip.lib.php
+%%WWWDIR%%/libs/PiwikTracker/LICENSE.txt
+%%WWWDIR%%/libs/PiwikTracker/PiwikTracker.php
+%%WWWDIR%%/libs/PiwikTracker/java/pom.xml
+%%WWWDIR%%/libs/PiwikTracker/java/src/main/java/org/piwik/EBrowserPlugins.java
+%%WWWDIR%%/libs/PiwikTracker/java/src/main/java/org/piwik/IPiwikTracker.java
+%%WWWDIR%%/libs/PiwikTracker/java/src/main/java/org/piwik/PiwikException.java
+%%WWWDIR%%/libs/PiwikTracker/java/src/main/java/org/piwik/ResponseData.java
+%%WWWDIR%%/libs/PiwikTracker/java/src/main/java/org/piwik/SimplePiwikTracker.java
+%%WWWDIR%%/libs/PiwikTracker/java/src/test/java/org/piwik/SimplePiwikTrackerTest.java
+%%WWWDIR%%/libs/README_LIBS
+%%WWWDIR%%/libs/Smarty/Config_File.class.php
+%%WWWDIR%%/libs/Smarty/Smarty.class.php
+%%WWWDIR%%/libs/Smarty/Smarty_Compiler.class.php
+%%WWWDIR%%/libs/Smarty/debug.tpl
+%%WWWDIR%%/libs/Smarty/gpl.txt
+%%WWWDIR%%/libs/Smarty/internals/core.assemble_plugin_filepath.php
+%%WWWDIR%%/libs/Smarty/internals/core.assign_smarty_interface.php
+%%WWWDIR%%/libs/Smarty/internals/core.create_dir_structure.php
+%%WWWDIR%%/libs/Smarty/internals/core.display_debug_console.php
+%%WWWDIR%%/libs/Smarty/internals/core.get_include_path.php
+%%WWWDIR%%/libs/Smarty/internals/core.get_microtime.php
+%%WWWDIR%%/libs/Smarty/internals/core.get_php_resource.php
+%%WWWDIR%%/libs/Smarty/internals/core.is_secure.php
+%%WWWDIR%%/libs/Smarty/internals/core.is_trusted.php
+%%WWWDIR%%/libs/Smarty/internals/core.load_plugins.php
+%%WWWDIR%%/libs/Smarty/internals/core.load_resource_plugin.php
+%%WWWDIR%%/libs/Smarty/internals/core.process_cached_inserts.php
+%%WWWDIR%%/libs/Smarty/internals/core.process_compiled_include.php
+%%WWWDIR%%/libs/Smarty/internals/core.read_cache_file.php
+%%WWWDIR%%/libs/Smarty/internals/core.rm_auto.php
+%%WWWDIR%%/libs/Smarty/internals/core.rmdir.php
+%%WWWDIR%%/libs/Smarty/internals/core.run_insert_handler.php
+%%WWWDIR%%/libs/Smarty/internals/core.smarty_include_php.php
+%%WWWDIR%%/libs/Smarty/internals/core.write_cache_file.php
+%%WWWDIR%%/libs/Smarty/internals/core.write_compiled_include.php
+%%WWWDIR%%/libs/Smarty/internals/core.write_compiled_resource.php
+%%WWWDIR%%/libs/Smarty/internals/core.write_file.php
+%%WWWDIR%%/libs/Smarty/lgpl-2.1.txt
+%%WWWDIR%%/libs/Smarty/lgpl-3.0.txt
+%%WWWDIR%%/libs/Smarty/plugins/block.textformat.php
+%%WWWDIR%%/libs/Smarty/plugins/compiler.assign.php
+%%WWWDIR%%/libs/Smarty/plugins/function.assign_debug_info.php
+%%WWWDIR%%/libs/Smarty/plugins/function.config_load.php
+%%WWWDIR%%/libs/Smarty/plugins/function.counter.php
+%%WWWDIR%%/libs/Smarty/plugins/function.cycle.php
+%%WWWDIR%%/libs/Smarty/plugins/function.debug.php
+%%WWWDIR%%/libs/Smarty/plugins/function.eval.php
+%%WWWDIR%%/libs/Smarty/plugins/function.fetch.php
+%%WWWDIR%%/libs/Smarty/plugins/function.html_checkboxes.php
+%%WWWDIR%%/libs/Smarty/plugins/function.html_image.php
+%%WWWDIR%%/libs/Smarty/plugins/function.html_options.php
+%%WWWDIR%%/libs/Smarty/plugins/function.html_radios.php
+%%WWWDIR%%/libs/Smarty/plugins/function.html_select_date.php
+%%WWWDIR%%/libs/Smarty/plugins/function.html_select_time.php
+%%WWWDIR%%/libs/Smarty/plugins/function.html_table.php
+%%WWWDIR%%/libs/Smarty/plugins/function.mailto.php
+%%WWWDIR%%/libs/Smarty/plugins/function.math.php
+%%WWWDIR%%/libs/Smarty/plugins/function.popup.php
+%%WWWDIR%%/libs/Smarty/plugins/function.popup_init.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.capitalize.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.cat.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.count_characters.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.count_paragraphs.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.count_sentences.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.count_words.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.date_format.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.debug_print_var.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.default.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.escape.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.indent.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.lower.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.nl2br.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.regex_replace.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.replace.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.spacify.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.string_format.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.strip.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.strip_tags.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.truncate.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.upper.php
+%%WWWDIR%%/libs/Smarty/plugins/modifier.wordwrap.php
+%%WWWDIR%%/libs/Smarty/plugins/outputfilter.trimwhitespace.php
+%%WWWDIR%%/libs/Smarty/plugins/shared.escape_special_chars.php
+%%WWWDIR%%/libs/Smarty/plugins/shared.make_timestamp.php
+%%WWWDIR%%/libs/UserAgentParser/README
+%%WWWDIR%%/libs/UserAgentParser/UserAgentParser.php
+%%WWWDIR%%/libs/UserAgentParser/UserAgentParser.test.php
+%%WWWDIR%%/libs/Zend/Auth.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/DbTable.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/Digest.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/Exception.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/Http.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/Http/Resolver/Exception.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/Http/Resolver/File.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/Http/Resolver/Interface.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/InfoCard.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/Interface.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/Ldap.php
+%%WWWDIR%%/libs/Zend/Auth/Adapter/OpenId.php
+%%WWWDIR%%/libs/Zend/Auth/Exception.php
+%%WWWDIR%%/libs/Zend/Auth/Result.php
+%%WWWDIR%%/libs/Zend/Auth/Storage/Exception.php
+%%WWWDIR%%/libs/Zend/Auth/Storage/Interface.php
+%%WWWDIR%%/libs/Zend/Auth/Storage/NonPersistent.php
+%%WWWDIR%%/libs/Zend/Auth/Storage/Session.php
+%%WWWDIR%%/libs/Zend/Cache.php
+%%WWWDIR%%/libs/Zend/Cache/Backend.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/Apc.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/BlackHole.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/ExtendedInterface.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/File.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/Interface.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/Libmemcached.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/Memcached.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/Sqlite.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/Static.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/Test.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/TwoLevels.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/WinCache.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/Xcache.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/ZendPlatform.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/ZendServer.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/ZendServer/Disk.php
+%%WWWDIR%%/libs/Zend/Cache/Backend/ZendServer/ShMem.php
+%%WWWDIR%%/libs/Zend/Cache/Core.php
+%%WWWDIR%%/libs/Zend/Cache/Exception.php
+%%WWWDIR%%/libs/Zend/Cache/Frontend/Capture.php
+%%WWWDIR%%/libs/Zend/Cache/Frontend/Class.php
+%%WWWDIR%%/libs/Zend/Cache/Frontend/File.php
+%%WWWDIR%%/libs/Zend/Cache/Frontend/Function.php
+%%WWWDIR%%/libs/Zend/Cache/Frontend/Output.php
+%%WWWDIR%%/libs/Zend/Cache/Frontend/Page.php
+%%WWWDIR%%/libs/Zend/Cache/Manager.php
+%%WWWDIR%%/libs/Zend/Config.php
+%%WWWDIR%%/libs/Zend/Config/Exception.php
+%%WWWDIR%%/libs/Zend/Config/Ini.php
+%%WWWDIR%%/libs/Zend/Config/Json.php
+%%WWWDIR%%/libs/Zend/Config/Writer.php
+%%WWWDIR%%/libs/Zend/Config/Writer/Array.php
+%%WWWDIR%%/libs/Zend/Config/Writer/FileAbstract.php
+%%WWWDIR%%/libs/Zend/Config/Writer/Ini.php
+%%WWWDIR%%/libs/Zend/Config/Writer/Json.php
+%%WWWDIR%%/libs/Zend/Config/Writer/Xml.php
+%%WWWDIR%%/libs/Zend/Config/Writer/Yaml.php
+%%WWWDIR%%/libs/Zend/Config/Xml.php
+%%WWWDIR%%/libs/Zend/Config/Yaml.php
+%%WWWDIR%%/libs/Zend/Db.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Abstract.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Db2.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Db2/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Mysqli.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Mysqli/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Oracle.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Oracle/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Pdo/Abstract.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Pdo/Ibm.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Pdo/Ibm/Db2.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Pdo/Ibm/Ids.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Pdo/Mssql.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Pdo/Mysql.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Pdo/Oci.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Pdo/Pgsql.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Pdo/Sqlite.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Sqlsrv.php
+%%WWWDIR%%/libs/Zend/Db/Adapter/Sqlsrv/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Expr.php
+%%WWWDIR%%/libs/Zend/Db/Profiler.php
+%%WWWDIR%%/libs/Zend/Db/Profiler/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Profiler/Firebug.php
+%%WWWDIR%%/libs/Zend/Db/Profiler/Query.php
+%%WWWDIR%%/libs/Zend/Db/Select.php
+%%WWWDIR%%/libs/Zend/Db/Select/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Statement.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Db2.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Db2/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Interface.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Mysqli.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Mysqli/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Oracle.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Oracle/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Pdo.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Pdo/Ibm.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Pdo/Oci.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Sqlsrv.php
+%%WWWDIR%%/libs/Zend/Db/Statement/Sqlsrv/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Table.php
+%%WWWDIR%%/libs/Zend/Db/Table/Abstract.php
+%%WWWDIR%%/libs/Zend/Db/Table/Definition.php
+%%WWWDIR%%/libs/Zend/Db/Table/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Table/Row.php
+%%WWWDIR%%/libs/Zend/Db/Table/Row/Abstract.php
+%%WWWDIR%%/libs/Zend/Db/Table/Row/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Table/Rowset.php
+%%WWWDIR%%/libs/Zend/Db/Table/Rowset/Abstract.php
+%%WWWDIR%%/libs/Zend/Db/Table/Rowset/Exception.php
+%%WWWDIR%%/libs/Zend/Db/Table/Select.php
+%%WWWDIR%%/libs/Zend/Db/Table/Select/Exception.php
+%%WWWDIR%%/libs/Zend/Exception.php
+%%WWWDIR%%/libs/Zend/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Abstract.php
+%%WWWDIR%%/libs/Zend/Feed/Atom.php
+%%WWWDIR%%/libs/Zend/Feed/Builder.php
+%%WWWDIR%%/libs/Zend/Feed/Builder/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Builder/Exception.php
+%%WWWDIR%%/libs/Zend/Feed/Builder/Header.php
+%%WWWDIR%%/libs/Zend/Feed/Builder/Header/Itunes.php
+%%WWWDIR%%/libs/Zend/Feed/Builder/Interface.php
+%%WWWDIR%%/libs/Zend/Feed/Element.php
+%%WWWDIR%%/libs/Zend/Feed/Entry/Abstract.php
+%%WWWDIR%%/libs/Zend/Feed/Entry/Atom.php
+%%WWWDIR%%/libs/Zend/Feed/Entry/Rss.php
+%%WWWDIR%%/libs/Zend/Feed/Exception.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/CallbackAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/CallbackInterface.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/Exception.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/HttpResponse.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/Model/ModelAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/Model/Subscription.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/Model/SubscriptionInterface.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/Publisher.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/Subscriber.php
+%%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/Subscriber/Callback.php
+%%WWWDIR%%/libs/Zend/Feed/Reader.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Collection.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Collection/Author.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Collection/Category.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Collection/CollectionAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Entry/Atom.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Entry/Rss.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/EntryAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/EntryInterface.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Atom/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Atom/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Content/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/CreativeCommons/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/CreativeCommons/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/DublinCore/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/DublinCore/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/EntryAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/FeedAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Podcast/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Podcast/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Slash/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Syndication/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Thread/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Extension/WellFormedWeb/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Feed/Atom.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Feed/Atom/Source.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/Feed/Rss.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/FeedAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/FeedInterface.php
+%%WWWDIR%%/libs/Zend/Feed/Reader/FeedSet.php
+%%WWWDIR%%/libs/Zend/Feed/Rss.php
+%%WWWDIR%%/libs/Zend/Feed/Writer.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Deleted.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Exception/InvalidMethodException.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Atom/Renderer/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Content/Renderer/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/DublinCore/Renderer/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/DublinCore/Renderer/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/ITunes/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/ITunes/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/ITunes/Renderer/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/ITunes/Renderer/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/RendererAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/RendererInterface.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Slash/Renderer/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Threading/Renderer/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Extension/WellFormedWeb/Renderer/Entry.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Feed.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Feed/FeedAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Entry/Atom.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Entry/Atom/Deleted.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Entry/Rss.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Feed/Atom.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Feed/Atom/AtomAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Feed/Atom/Source.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Feed/Rss.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/RendererAbstract.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/RendererInterface.php
+%%WWWDIR%%/libs/Zend/Feed/Writer/Source.php
+%%WWWDIR%%/libs/Zend/Http/Client.php
+%%WWWDIR%%/libs/Zend/Http/Client/Adapter/Curl.php
+%%WWWDIR%%/libs/Zend/Http/Client/Adapter/Exception.php
+%%WWWDIR%%/libs/Zend/Http/Client/Adapter/Interface.php
+%%WWWDIR%%/libs/Zend/Http/Client/Adapter/Proxy.php
+%%WWWDIR%%/libs/Zend/Http/Client/Adapter/Socket.php
+%%WWWDIR%%/libs/Zend/Http/Client/Adapter/Stream.php
+%%WWWDIR%%/libs/Zend/Http/Client/Adapter/Test.php
+%%WWWDIR%%/libs/Zend/Http/Client/Exception.php
+%%WWWDIR%%/libs/Zend/Http/Cookie.php
+%%WWWDIR%%/libs/Zend/Http/CookieJar.php
+%%WWWDIR%%/libs/Zend/Http/Exception.php
+%%WWWDIR%%/libs/Zend/Http/Response.php
+%%WWWDIR%%/libs/Zend/Http/Response/Stream.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/AbstractDevice.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Bot.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Checker.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Console.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Desktop.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Device.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Email.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Exception.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Features/Adapter.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Features/Adapter/DeviceAtlas.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Features/Adapter/TeraWurfl.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Features/Adapter/WurflApi.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Features/Exception.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Feed.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Mobile.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Offline.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Probe.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Spam.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Storage.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Storage/Exception.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Storage/NonPersistent.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Storage/Session.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Text.php
+%%WWWDIR%%/libs/Zend/Http/UserAgent/Validator.php
+%%WWWDIR%%/libs/Zend/LICENSE.txt
+%%WWWDIR%%/libs/Zend/Log.php
+%%WWWDIR%%/libs/Zend/Log/Exception.php
+%%WWWDIR%%/libs/Zend/Log/FactoryInterface.php
+%%WWWDIR%%/libs/Zend/Log/Filter/Abstract.php
+%%WWWDIR%%/libs/Zend/Log/Filter/Interface.php
+%%WWWDIR%%/libs/Zend/Log/Filter/Message.php
+%%WWWDIR%%/libs/Zend/Log/Filter/Priority.php
+%%WWWDIR%%/libs/Zend/Log/Filter/Suppress.php
+%%WWWDIR%%/libs/Zend/Log/Formatter/Abstract.php
+%%WWWDIR%%/libs/Zend/Log/Formatter/Firebug.php
+%%WWWDIR%%/libs/Zend/Log/Formatter/Interface.php
+%%WWWDIR%%/libs/Zend/Log/Formatter/Simple.php
+%%WWWDIR%%/libs/Zend/Log/Formatter/Xml.php
+%%WWWDIR%%/libs/Zend/Log/Writer/Abstract.php
+%%WWWDIR%%/libs/Zend/Log/Writer/Db.php
+%%WWWDIR%%/libs/Zend/Log/Writer/Firebug.php
+%%WWWDIR%%/libs/Zend/Log/Writer/Mail.php
+%%WWWDIR%%/libs/Zend/Log/Writer/Mock.php
+%%WWWDIR%%/libs/Zend/Log/Writer/Null.php
+%%WWWDIR%%/libs/Zend/Log/Writer/Stream.php
+%%WWWDIR%%/libs/Zend/Log/Writer/Syslog.php
+%%WWWDIR%%/libs/Zend/Log/Writer/ZendMonitor.php
+%%WWWDIR%%/libs/Zend/Mail.php
+%%WWWDIR%%/libs/Zend/Mail/Exception.php
+%%WWWDIR%%/libs/Zend/Mail/Message.php
+%%WWWDIR%%/libs/Zend/Mail/Message/File.php
+%%WWWDIR%%/libs/Zend/Mail/Message/Interface.php
+%%WWWDIR%%/libs/Zend/Mail/Part.php
+%%WWWDIR%%/libs/Zend/Mail/Part/File.php
+%%WWWDIR%%/libs/Zend/Mail/Part/Interface.php
+%%WWWDIR%%/libs/Zend/Mail/Protocol/Abstract.php
+%%WWWDIR%%/libs/Zend/Mail/Protocol/Exception.php
+%%WWWDIR%%/libs/Zend/Mail/Protocol/Imap.php
+%%WWWDIR%%/libs/Zend/Mail/Protocol/Pop3.php
+%%WWWDIR%%/libs/Zend/Mail/Protocol/Smtp.php
+%%WWWDIR%%/libs/Zend/Mail/Protocol/Smtp/Auth/Crammd5.php
+%%WWWDIR%%/libs/Zend/Mail/Protocol/Smtp/Auth/Login.php
+%%WWWDIR%%/libs/Zend/Mail/Protocol/Smtp/Auth/Plain.php
+%%WWWDIR%%/libs/Zend/Mail/Storage.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Abstract.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Exception.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Folder.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Folder/Interface.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Folder/Maildir.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Folder/Mbox.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Imap.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Maildir.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Mbox.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Pop3.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Writable/Interface.php
+%%WWWDIR%%/libs/Zend/Mail/Storage/Writable/Maildir.php
+%%WWWDIR%%/libs/Zend/Mail/Transport/Abstract.php
+%%WWWDIR%%/libs/Zend/Mail/Transport/Exception.php
+%%WWWDIR%%/libs/Zend/Mail/Transport/File.php
+%%WWWDIR%%/libs/Zend/Mail/Transport/Sendmail.php
+%%WWWDIR%%/libs/Zend/Mail/Transport/Smtp.php
+%%WWWDIR%%/libs/Zend/Mime.php
+%%WWWDIR%%/libs/Zend/Mime/Decode.php
+%%WWWDIR%%/libs/Zend/Mime/Exception.php
+%%WWWDIR%%/libs/Zend/Mime/Message.php
+%%WWWDIR%%/libs/Zend/Mime/Part.php
+%%WWWDIR%%/libs/Zend/OpenId.php
+%%WWWDIR%%/libs/Zend/OpenId/Consumer.php
+%%WWWDIR%%/libs/Zend/OpenId/Consumer/Storage.php
+%%WWWDIR%%/libs/Zend/OpenId/Consumer/Storage/File.php
+%%WWWDIR%%/libs/Zend/OpenId/Exception.php
+%%WWWDIR%%/libs/Zend/OpenId/Extension.php
+%%WWWDIR%%/libs/Zend/OpenId/Extension/Sreg.php
+%%WWWDIR%%/libs/Zend/OpenId/Provider.php
+%%WWWDIR%%/libs/Zend/OpenId/Provider/Storage.php
+%%WWWDIR%%/libs/Zend/OpenId/Provider/Storage/File.php
+%%WWWDIR%%/libs/Zend/OpenId/Provider/User.php
+%%WWWDIR%%/libs/Zend/OpenId/Provider/User/Session.php
+%%WWWDIR%%/libs/Zend/Registry.php
+%%WWWDIR%%/libs/Zend/Session.php
+%%WWWDIR%%/libs/Zend/Session/Abstract.php
+%%WWWDIR%%/libs/Zend/Session/Exception.php
+%%WWWDIR%%/libs/Zend/Session/Namespace.php
+%%WWWDIR%%/libs/Zend/Session/SaveHandler/DbTable.php
+%%WWWDIR%%/libs/Zend/Session/SaveHandler/Exception.php
+%%WWWDIR%%/libs/Zend/Session/SaveHandler/Interface.php
+%%WWWDIR%%/libs/Zend/Session/Validator/Abstract.php
+%%WWWDIR%%/libs/Zend/Session/Validator/HttpUserAgent.php
+%%WWWDIR%%/libs/Zend/Session/Validator/Interface.php
+%%WWWDIR%%/libs/Zend/Uri.php
+%%WWWDIR%%/libs/Zend/Uri/Exception.php
+%%WWWDIR%%/libs/Zend/Uri/Http.php
+%%WWWDIR%%/libs/Zend/Validate.php
+%%WWWDIR%%/libs/Zend/Validate/Abstract.php
+%%WWWDIR%%/libs/Zend/Validate/Alnum.php
+%%WWWDIR%%/libs/Zend/Validate/Alpha.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/AdapterAbstract.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/AdapterInterface.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Code25.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Code25interleaved.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Code39.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Code39ext.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Code93.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Code93ext.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Ean12.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Ean13.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Ean14.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Ean18.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Ean2.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Ean5.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Ean8.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Gtin12.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Gtin13.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Gtin14.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Identcode.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Intelligentmail.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Issn.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Itf14.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Leitcode.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Planet.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Postnet.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Royalmail.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Sscc.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Upca.php
+%%WWWDIR%%/libs/Zend/Validate/Barcode/Upce.php
+%%WWWDIR%%/libs/Zend/Validate/Between.php
+%%WWWDIR%%/libs/Zend/Validate/Callback.php
+%%WWWDIR%%/libs/Zend/Validate/Ccnum.php
+%%WWWDIR%%/libs/Zend/Validate/CreditCard.php
+%%WWWDIR%%/libs/Zend/Validate/Date.php
+%%WWWDIR%%/libs/Zend/Validate/Db/Abstract.php
+%%WWWDIR%%/libs/Zend/Validate/Db/NoRecordExists.php
+%%WWWDIR%%/libs/Zend/Validate/Db/RecordExists.php
+%%WWWDIR%%/libs/Zend/Validate/Digits.php
+%%WWWDIR%%/libs/Zend/Validate/EmailAddress.php
+%%WWWDIR%%/libs/Zend/Validate/Exception.php
+%%WWWDIR%%/libs/Zend/Validate/File/Count.php
+%%WWWDIR%%/libs/Zend/Validate/File/Crc32.php
+%%WWWDIR%%/libs/Zend/Validate/File/ExcludeExtension.php
+%%WWWDIR%%/libs/Zend/Validate/File/ExcludeMimeType.php
+%%WWWDIR%%/libs/Zend/Validate/File/Exists.php
+%%WWWDIR%%/libs/Zend/Validate/File/Extension.php
+%%WWWDIR%%/libs/Zend/Validate/File/FilesSize.php
+%%WWWDIR%%/libs/Zend/Validate/File/Hash.php
+%%WWWDIR%%/libs/Zend/Validate/File/ImageSize.php
+%%WWWDIR%%/libs/Zend/Validate/File/IsCompressed.php
+%%WWWDIR%%/libs/Zend/Validate/File/IsImage.php
+%%WWWDIR%%/libs/Zend/Validate/File/Md5.php
+%%WWWDIR%%/libs/Zend/Validate/File/MimeType.php
+%%WWWDIR%%/libs/Zend/Validate/File/NotExists.php
+%%WWWDIR%%/libs/Zend/Validate/File/Sha1.php
+%%WWWDIR%%/libs/Zend/Validate/File/Size.php
+%%WWWDIR%%/libs/Zend/Validate/File/Upload.php
+%%WWWDIR%%/libs/Zend/Validate/File/WordCount.php
+%%WWWDIR%%/libs/Zend/Validate/Float.php
+%%WWWDIR%%/libs/Zend/Validate/GreaterThan.php
+%%WWWDIR%%/libs/Zend/Validate/Hex.php
+%%WWWDIR%%/libs/Zend/Validate/Hostname.php
+%%WWWDIR%%/libs/Zend/Validate/Hostname/Biz.php
+%%WWWDIR%%/libs/Zend/Validate/Hostname/Cn.php
+%%WWWDIR%%/libs/Zend/Validate/Hostname/Com.php
+%%WWWDIR%%/libs/Zend/Validate/Hostname/Jp.php
+%%WWWDIR%%/libs/Zend/Validate/Iban.php
+%%WWWDIR%%/libs/Zend/Validate/Identical.php
+%%WWWDIR%%/libs/Zend/Validate/InArray.php
+%%WWWDIR%%/libs/Zend/Validate/Int.php
+%%WWWDIR%%/libs/Zend/Validate/Interface.php
+%%WWWDIR%%/libs/Zend/Validate/Ip.php
+%%WWWDIR%%/libs/Zend/Validate/Isbn.php
+%%WWWDIR%%/libs/Zend/Validate/LessThan.php
+%%WWWDIR%%/libs/Zend/Validate/NotEmpty.php
+%%WWWDIR%%/libs/Zend/Validate/PostCode.php
+%%WWWDIR%%/libs/Zend/Validate/Regex.php
+%%WWWDIR%%/libs/Zend/Validate/Sitemap/Changefreq.php
+%%WWWDIR%%/libs/Zend/Validate/Sitemap/Lastmod.php
+%%WWWDIR%%/libs/Zend/Validate/Sitemap/Loc.php
+%%WWWDIR%%/libs/Zend/Validate/Sitemap/Priority.php
+%%WWWDIR%%/libs/Zend/Validate/StringLength.php
+%%WWWDIR%%/libs/Zend/Version.php
+%%WWWDIR%%/libs/cssmin/MIT-LICENSE.txt
+%%WWWDIR%%/libs/cssmin/cssmin.php
+%%WWWDIR%%/libs/javascript/json2.js
+%%WWWDIR%%/libs/javascript/sprintf.js
+%%WWWDIR%%/libs/jqplot/MIT-LICENSE.txt
+%%WWWDIR%%/libs/jqplot/excanvas.min.js
+%%WWWDIR%%/libs/jqplot/gpl-2.0.txt
+%%WWWDIR%%/libs/jqplot/jqplot-custom.min.js
+%%WWWDIR%%/libs/jqplot/jqplot.axisLabelRenderer.js
+%%WWWDIR%%/libs/jqplot/jqplot.axisTickRenderer.js
+%%WWWDIR%%/libs/jqplot/jqplot.canvasGridRenderer.js
+%%WWWDIR%%/libs/jqplot/jqplot.core.js
+%%WWWDIR%%/libs/jqplot/jqplot.divTitleRenderer.js
+%%WWWDIR%%/libs/jqplot/jqplot.lineRenderer.js
+%%WWWDIR%%/libs/jqplot/jqplot.linearAxisRenderer.js
+%%WWWDIR%%/libs/jqplot/jqplot.markerRenderer.js
+%%WWWDIR%%/libs/jqplot/jqplot.shadowRenderer.js
+%%WWWDIR%%/libs/jqplot/jqplot.shapeRenderer.js
+%%WWWDIR%%/libs/jqplot/jqplot.sprintf.js
+%%WWWDIR%%/libs/jqplot/jqplot.tableLegendRenderer.js
+%%WWWDIR%%/libs/jqplot/jqplot.themeEngine.js
+%%WWWDIR%%/libs/jqplot/plugins/jqplot.barRenderer.js
+%%WWWDIR%%/libs/jqplot/plugins/jqplot.canvasAxisTickRenderer.js
+%%WWWDIR%%/libs/jqplot/plugins/jqplot.canvasTextRenderer.js
+%%WWWDIR%%/libs/jqplot/plugins/jqplot.categoryAxisRenderer.js
+%%WWWDIR%%/libs/jqplot/plugins/jqplot.pieRenderer.js
+%%WWWDIR%%/libs/jquery/LICENSE-sizzle.txt
+%%WWWDIR%%/libs/jquery/MIT-LICENSE-history.txt
+%%WWWDIR%%/libs/jquery/MIT-LICENSE-jquery.txt
+%%WWWDIR%%/libs/jquery/MIT-LICENSE-jqueryui.txt
+%%WWWDIR%%/libs/jquery/MIT-LICENSE-scrollto.txt
+%%WWWDIR%%/libs/jquery/MIT-LICENSE-tooltip.txt
+%%WWWDIR%%/libs/jquery/gpl-2.0.txt
+%%WWWDIR%%/libs/jquery/gpl-3.0.txt
+%%WWWDIR%%/libs/jquery/jquery-ui.js
+%%WWWDIR%%/libs/jquery/jquery.history.js
+%%WWWDIR%%/libs/jquery/jquery.js
+%%WWWDIR%%/libs/jquery/jquery.scrollTo.js
+%%WWWDIR%%/libs/jquery/jquery.tooltip.js
+%%WWWDIR%%/libs/jquery/jquery.truncate.js
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-anim_basic_16x16.gif
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-bg_flat_75_ffffff_40x100.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-bg_glass_65_ffffff_1x400.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-bg_glass_75_dadada_1x400.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-icons_222222_256x240.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-icons_2e83ff_256x240.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-icons_454545_256x240.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-icons_888888_256x240.png
+%%WWWDIR%%/libs/jquery/themes/base/images/ui-icons_cd0a0a_256x240.png
+%%WWWDIR%%/libs/jquery/themes/base/jquery-ui.css
+%%WWWDIR%%/libs/jsmin/jsmin.php
+%%WWWDIR%%/libs/pChart2.1.3/class/pData.class.php
+%%WWWDIR%%/libs/pChart2.1.3/class/pDraw.class.php
+%%WWWDIR%%/libs/pChart2.1.3/class/pPie.class.php
+%%WWWDIR%%/libs/pChart2.1.3/class/pImage.class.php
+%%WWWDIR%%/libs/pChart2.1.3/change.log
+%%WWWDIR%%/libs/pChart2.1.3/GPLv3.txt
+%%WWWDIR%%/libs/pChart2.1.3/readme.txt
+%%WWWDIR%%/libs/pChart2.1.3/index.php
+%%WWWDIR%%/libs/sparkline/CHANGES
+%%WWWDIR%%/libs/sparkline/DESIGN
+%%WWWDIR%%/libs/sparkline/LICENSE-BSD.txt
+%%WWWDIR%%/libs/sparkline/README
+%%WWWDIR%%/libs/sparkline/gpl-2.0.txt
+%%WWWDIR%%/libs/sparkline/lib/Object.php
+%%WWWDIR%%/libs/sparkline/lib/Sparkline.php
+%%WWWDIR%%/libs/sparkline/lib/Sparkline_Bar.php
+%%WWWDIR%%/libs/sparkline/lib/Sparkline_Line.php
+%%WWWDIR%%/libs/swfobject/MIT-LICENSE.txt
+%%WWWDIR%%/libs/swfobject/expressInstall.swf
+%%WWWDIR%%/libs/swfobject/swfobject.js
+%%WWWDIR%%/libs/tcpdf/2dbarcodes.php
+%%WWWDIR%%/libs/tcpdf/CHANGELOG.TXT
+%%WWWDIR%%/libs/tcpdf/README.TXT
+%%WWWDIR%%/libs/tcpdf/barcodes.php
+%%WWWDIR%%/libs/tcpdf/config/lang/eng.php
+%%WWWDIR%%/libs/tcpdf/config/tcpdf_config.php
+%%WWWDIR%%/libs/tcpdf/config/tcpdf_config_alt.php
+%%WWWDIR%%/libs/tcpdf/fonts/almohanad.ctg.z
+%%WWWDIR%%/libs/tcpdf/fonts/almohanad.php
+%%WWWDIR%%/libs/tcpdf/fonts/almohanad.z
+%%WWWDIR%%/libs/tcpdf/fonts/dejavusans.ctg.z
+%%WWWDIR%%/libs/tcpdf/fonts/dejavusans.php
+%%WWWDIR%%/libs/tcpdf/fonts/dejavusans.z
+%%WWWDIR%%/libs/tcpdf/fonts/helvetica.php
+%%WWWDIR%%/libs/tcpdf/fonts/helveticab.php
+%%WWWDIR%%/libs/tcpdf/fonts/helveticabi.php
+%%WWWDIR%%/libs/tcpdf/fonts/helveticai.php
+%%WWWDIR%%/libs/tcpdf/fonts/hysmyeongjostdmedium.php
+%%WWWDIR%%/libs/tcpdf/fonts/kozminproregular.php
+%%WWWDIR%%/libs/tcpdf/fonts/kozgopromedium.php
+%%WWWDIR%%/libs/tcpdf/fonts/msungstdlight.php
+%%WWWDIR%%/libs/tcpdf/fonts/stsongstdlight.php
+%%WWWDIR%%/libs/tcpdf/fonts/symbol.php
+%%WWWDIR%%/libs/tcpdf/fonts/times.php
+%%WWWDIR%%/libs/tcpdf/fonts/timesb.php
+%%WWWDIR%%/libs/tcpdf/fonts/timesbi.php
+%%WWWDIR%%/libs/tcpdf/fonts/timesi.php
+%%WWWDIR%%/libs/tcpdf/gpl.txt
+%%WWWDIR%%/libs/tcpdf/htmlcolors.php
+%%WWWDIR%%/libs/tcpdf/lgpl-3.0.txt
+%%WWWDIR%%/libs/tcpdf/pdf417.php
+%%WWWDIR%%/libs/tcpdf/qrcode.php
+%%WWWDIR%%/libs/tcpdf/spotcolors.php
+%%WWWDIR%%/libs/tcpdf/tcpdf.crt
+%%WWWDIR%%/libs/tcpdf/tcpdf.fdf
+%%WWWDIR%%/libs/tcpdf/tcpdf.p12
+%%WWWDIR%%/libs/tcpdf/tcpdf.php
+%%WWWDIR%%/libs/tcpdf/unicode_data.php
+%%WWWDIR%%/libs/upgradephp/README
+%%WWWDIR%%/libs/upgradephp/upgrade.php
+%%WWWDIR%%/misc/How to install Piwik.html
+%%WWWDIR%%/misc/cron/archive.php
+%%WWWDIR%%/misc/cron/archive.sh
+%%WWWDIR%%/misc/cron/archive.windows.ps1
+%%WWWDIR%%/misc/gpl-3.0.txt
+%%WWWDIR%%/misc/log-analytics/README
+%%WWWDIR%%/misc/log-analytics/import_logs.py
+%%WWWDIR%%/misc/others/ExamplePiwikTracker.php
+%%WWWDIR%%/misc/others/api_internal_call.php
+%%WWWDIR%%/misc/others/api_rest_call.php
+%%WWWDIR%%/misc/others/crossdomain.xml
+%%WWWDIR%%/misc/others/db-schema-README
+%%WWWDIR%%/misc/others/db-schema.png
+%%WWWDIR%%/misc/others/db-schema.xml
+%%WWWDIR%%/misc/others/diagram_general_request.jpg
+%%WWWDIR%%/misc/others/diagram_general_request.vsd
+%%WWWDIR%%/misc/others/download-count.txt
+%%WWWDIR%%/misc/others/generateDoc.bat
+%%WWWDIR%%/misc/others/generateDoc.sh
+%%WWWDIR%%/misc/others/geoipUpdateRows.php
+%%WWWDIR%%/misc/others/iframeWidget.htm
+%%WWWDIR%%/misc/others/iframeWidget_localhost.php
+%%WWWDIR%%/misc/others/phpdoc-config.ini
+%%WWWDIR%%/misc/others/stress.sh
+%%WWWDIR%%/misc/others/svn-props-to-set-new-files.svnprops
+%%WWWDIR%%/misc/others/test_cookies_GenerateHundredsWebsitesAndVisits.php
+%%WWWDIR%%/misc/others/test_generateLotsVisitsWebsites.php
+%%WWWDIR%%/misc/others/tracker_simpleImageTracker.php
+%%WWWDIR%%/misc/others/uninstall-delete-piwik-directory.php
+%%WWWDIR%%/misc/others/widget_example_lastvisits.html
+%%WWWDIR%%/misc/proxy-hide-piwik-url/piwik.php
+%%WWWDIR%%/piwik.js
+%%WWWDIR%%/piwik.php
+%%WWWDIR%%/plugins/API/API.php
+%%WWWDIR%%/plugins/API/Controller.php
+%%WWWDIR%%/plugins/API/css/styles.css
+%%WWWDIR%%/plugins/API/templates/listAllAPI.tpl
+%%WWWDIR%%/plugins/Actions/API.php
+%%WWWDIR%%/plugins/Actions/Actions.php
+%%WWWDIR%%/plugins/Actions/Archiving.php
+%%WWWDIR%%/plugins/Actions/ArchivingHelper.php
+%%WWWDIR%%/plugins/Actions/Controller.php
+%%WWWDIR%%/plugins/Actions/templates/indexSiteSearch.tpl
+%%WWWDIR%%/plugins/AnonymizeIP/AnonymizeIP.php
+%%WWWDIR%%/plugins/CoreAdminHome/API.php
+%%WWWDIR%%/plugins/CoreAdminHome/Controller.php
+%%WWWDIR%%/plugins/CoreAdminHome/CoreAdminHome.php
+%%WWWDIR%%/plugins/CoreAdminHome/templates/footer.tpl
+%%WWWDIR%%/plugins/CoreAdminHome/templates/generalSettings.js
+%%WWWDIR%%/plugins/CoreAdminHome/templates/generalSettings.tpl
+%%WWWDIR%%/plugins/CoreAdminHome/templates/header.tpl
+%%WWWDIR%%/plugins/CoreAdminHome/templates/menu.css
+%%WWWDIR%%/plugins/CoreAdminHome/templates/menu.tpl
+%%WWWDIR%%/plugins/CoreAdminHome/templates/optOut.tpl
+%%WWWDIR%%/plugins/CoreAdminHome/templates/styles.css
+%%WWWDIR%%/plugins/CoreHome/Controller.php
+%%WWWDIR%%/plugins/CoreHome/CoreHome.php
+%%WWWDIR%%/plugins/CoreHome/DataTableRowAction/RowEvolution.php
+%%WWWDIR%%/plugins/CoreHome/DataTableRowAction/MultiRowEvolution.php
+%%WWWDIR%%/plugins/CoreHome/templates/popover_rowevolution.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/popover_multirowevolution.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/autocomplete.js
+%%WWWDIR%%/plugins/CoreHome/templates/broadcast.js
+%%WWWDIR%%/plugins/CoreHome/templates/calendar.js
+%%WWWDIR%%/plugins/CoreHome/templates/cloud.css
+%%WWWDIR%%/plugins/CoreHome/templates/cloud.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/datatable.css
+%%WWWDIR%%/plugins/CoreHome/templates/datatable.js
+%%WWWDIR%%/plugins/CoreHome/templates/datatable.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/datatable_actions.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/datatable_actions_js.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/datatable_actions_recursive.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/datatable_actions_subdatable.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/datatable_cell.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/datatable_footer.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/datatable_js.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/datatable_rowactions.js
+%%WWWDIR%%/plugins/CoreHome/templates/date.js
+%%WWWDIR%%/plugins/CoreHome/templates/graph.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/header.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/header_message.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/html_report_body.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/html_report_footer.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/html_report_header.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/iframe_buster_header.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/iframe_buster_body.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/images/bg_header.jpg
+%%WWWDIR%%/plugins/CoreHome/templates/images/bullet1.gif
+%%WWWDIR%%/plugins/CoreHome/templates/images/bullet2.gif
+%%WWWDIR%%/plugins/CoreHome/templates/images/favicon.ico
+%%WWWDIR%%/plugins/CoreHome/templates/images/more.png
+%%WWWDIR%%/plugins/CoreHome/templates/images/more_date.gif
+%%WWWDIR%%/plugins/CoreHome/templates/images/more_period.gif
+%%WWWDIR%%/plugins/CoreHome/templates/images/reset_search.png
+%%WWWDIR%%/plugins/CoreHome/templates/images/search.png
+%%WWWDIR%%/plugins/CoreHome/templates/index.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/jqplot.css
+%%WWWDIR%%/plugins/CoreHome/templates/jqplot.js
+%%WWWDIR%%/plugins/CoreHome/templates/jquery.ui.autocomplete.css
+%%WWWDIR%%/plugins/CoreHome/templates/js_css_includes.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/js_disabled_notice.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/js_global_variables.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/logo.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/menu.css
+%%WWWDIR%%/plugins/CoreHome/templates/menu.js
+%%WWWDIR%%/plugins/CoreHome/templates/menu.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/period_select.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/piwik_tag.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/popover.js
+%%WWWDIR%%/plugins/CoreHome/templates/single_report.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/sites_selection.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/sparkline.js
+%%WWWDIR%%/plugins/CoreHome/templates/sparkline_footer.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/styles.css
+%%WWWDIR%%/plugins/CoreHome/templates/tooltip.js
+%%WWWDIR%%/plugins/CoreHome/templates/top_bar.tpl
+%%WWWDIR%%/plugins/CoreHome/templates/top_screen.tpl
+%%WWWDIR%%/plugins/CorePluginsAdmin/Controller.php
+%%WWWDIR%%/plugins/CorePluginsAdmin/CorePluginsAdmin.php
+%%WWWDIR%%/plugins/CorePluginsAdmin/templates/manage.tpl
+%%WWWDIR%%/plugins/CoreUpdater/Controller.php
+%%WWWDIR%%/plugins/CoreUpdater/CoreUpdater.php
+%%WWWDIR%%/plugins/CoreUpdater/templates/cli_update_database_done.tpl
+%%WWWDIR%%/plugins/CoreUpdater/templates/cli_update_welcome.tpl
+%%WWWDIR%%/plugins/CoreUpdater/templates/footer.tpl
+%%WWWDIR%%/plugins/CoreUpdater/templates/header.tpl
+%%WWWDIR%%/plugins/CoreUpdater/templates/update_database_done.tpl
+%%WWWDIR%%/plugins/CoreUpdater/templates/update_new_version_available.tpl
+%%WWWDIR%%/plugins/CoreUpdater/templates/update_one_click_results.tpl
+%%WWWDIR%%/plugins/CoreUpdater/templates/update_welcome.tpl
+%%WWWDIR%%/plugins/CustomVariables/API.php
+%%WWWDIR%%/plugins/CustomVariables/Controller.php
+%%WWWDIR%%/plugins/CustomVariables/CustomVariables.php
+%%WWWDIR%%/plugins/DBStats/API.php
+%%WWWDIR%%/plugins/DBStats/Controller.php
+%%WWWDIR%%/plugins/DBStats/DBStats.php
+%%WWWDIR%%/plugins/DBStats/templates/index.tpl
+%%WWWDIR%%/plugins/DBStats/MySQLMetadataProvider.php
+%%WWWDIR%%/plugins/Dashboard/Controller.php
+%%WWWDIR%%/plugins/Dashboard/Dashboard.php
+%%WWWDIR%%/plugins/Dashboard/templates/dashboard.css
+%%WWWDIR%%/plugins/Dashboard/templates/dashboard.js
+%%WWWDIR%%/plugins/Dashboard/templates/dashboardWidget.js
+%%WWWDIR%%/plugins/Dashboard/templates/dashboardObject.js
+%%WWWDIR%%/plugins/Dashboard/templates/header.tpl
+%%WWWDIR%%/plugins/Dashboard/templates/index.tpl
+%%WWWDIR%%/plugins/Dashboard/templates/standalone.tpl
+%%WWWDIR%%/plugins/Dashboard/templates/widgetMenu.js
+%%WWWDIR%%/plugins/DoNotTrack/DoNotTrack.php
+%%WWWDIR%%/plugins/ExampleAPI/API.php
+%%WWWDIR%%/plugins/ExampleAPI/ExampleAPI.php
+%%WWWDIR%%/plugins/ExamplePlugin/Controller.php
+%%WWWDIR%%/plugins/ExamplePlugin/ExamplePlugin.php
+%%WWWDIR%%/plugins/ExamplePlugin/config/.htaccess
+%%WWWDIR%%/plugins/ExamplePlugin/config/local.config.sample.php
+%%WWWDIR%%/plugins/ExamplePlugin/lang/en.php
+%%WWWDIR%%/plugins/ExamplePlugin/templates/piwikDownloads.tpl
+%%WWWDIR%%/plugins/ExampleRssWidget/ExampleRssWidget.php
+%%WWWDIR%%/plugins/ExampleRssWidget/templates/styles.css
+%%WWWDIR%%/plugins/ExampleUI/API.php
+%%WWWDIR%%/plugins/ExampleUI/Controller.php
+%%WWWDIR%%/plugins/ExampleUI/ExampleUI.php
+%%WWWDIR%%/plugins/ExampleUI/images/icons-planet/LICENSE
+%%WWWDIR%%/plugins/ExampleUI/images/icons-planet/earth.png
+%%WWWDIR%%/plugins/ExampleUI/images/icons-planet/jupiter.png
+%%WWWDIR%%/plugins/ExampleUI/images/icons-planet/mars.png
+%%WWWDIR%%/plugins/ExampleUI/images/icons-planet/mercury.png
+%%WWWDIR%%/plugins/ExampleUI/images/icons-planet/neptune.png
+%%WWWDIR%%/plugins/ExampleUI/images/icons-planet/saturn.png
+%%WWWDIR%%/plugins/ExampleUI/images/icons-planet/uranus.png
+%%WWWDIR%%/plugins/ExampleUI/images/icons-planet/venus.png
+%%WWWDIR%%/plugins/Feedback/Controller.php
+%%WWWDIR%%/plugins/Feedback/Feedback.php
+%%WWWDIR%%/plugins/Feedback/images/go-previous.png
+%%WWWDIR%%/plugins/Feedback/templates/feedback.js
+%%WWWDIR%%/plugins/Feedback/templates/index.tpl
+%%WWWDIR%%/plugins/Feedback/templates/sent.tpl
+%%WWWDIR%%/plugins/Feedback/templates/styles.css
+%%WWWDIR%%/plugins/Goals/API.php
+%%WWWDIR%%/plugins/Goals/Controller.php
+%%WWWDIR%%/plugins/Goals/Goals.php
+%%WWWDIR%%/plugins/Goals/templates/GoalForm.js
+%%WWWDIR%%/plugins/Goals/templates/add_edit_goal.tpl
+%%WWWDIR%%/plugins/Goals/templates/add_new_goal.tpl
+%%WWWDIR%%/plugins/Goals/templates/form_add_goal.tpl
+%%WWWDIR%%/plugins/Goals/templates/goals.css
+%%WWWDIR%%/plugins/Goals/templates/list_goal_edit.tpl
+%%WWWDIR%%/plugins/Goals/templates/list_top_dimension.tpl
+%%WWWDIR%%/plugins/Goals/templates/overview.tpl
+%%WWWDIR%%/plugins/Goals/templates/single_goal.tpl
+%%WWWDIR%%/plugins/Goals/templates/table_by_dimension.tpl
+%%WWWDIR%%/plugins/Goals/templates/title_and_evolution_graph.tpl
+%%WWWDIR%%/plugins/ImageGraph/API.php
+%%WWWDIR%%/plugins/ImageGraph/Controller.php
+%%WWWDIR%%/plugins/ImageGraph/ImageGraph.php
+%%WWWDIR%%/plugins/ImageGraph/StaticGraph.php
+%%WWWDIR%%/plugins/ImageGraph/StaticGraph/Evolution.php
+%%WWWDIR%%/plugins/ImageGraph/StaticGraph/PieGraph.php
+%%WWWDIR%%/plugins/ImageGraph/StaticGraph/Pie.php
+%%WWWDIR%%/plugins/ImageGraph/StaticGraph/HorizontalBar.php
+%%WWWDIR%%/plugins/ImageGraph/StaticGraph/Exception.php
+%%WWWDIR%%/plugins/ImageGraph/StaticGraph/VerticalBar.php
+%%WWWDIR%%/plugins/ImageGraph/StaticGraph/3DPie.php
+%%WWWDIR%%/plugins/ImageGraph/StaticGraph/GridGraph.php
+%%WWWDIR%%/plugins/ImageGraph/fonts/tahoma.ttf
+%%WWWDIR%%/plugins/ImageGraph/templates/debug_graphs_all_sizes.tpl
+%%WWWDIR%%/plugins/ImageGraph/templates/index.tpl
+%%WWWDIR%%/plugins/Insight/API.php
+%%WWWDIR%%/plugins/Insight/Controller.php
+%%WWWDIR%%/plugins/Insight/Insight.php
+%%WWWDIR%%/plugins/Insight/client/linktags.png
+%%WWWDIR%%/plugins/Insight/client/urlnormalizer.js
+%%WWWDIR%%/plugins/Insight/client/linktags.psd
+%%WWWDIR%%/plugins/Insight/client/linktags_noshadow.png
+%%WWWDIR%%/plugins/Insight/client/loading.gif
+%%WWWDIR%%/plugins/Insight/client/linktags.eps
+%%WWWDIR%%/plugins/Insight/client/close.png
+%%WWWDIR%%/plugins/Insight/client/client.js
+%%WWWDIR%%/plugins/Insight/client/followingpages.js
+%%WWWDIR%%/plugins/Insight/client/linktags_lessshadow.png
+%%WWWDIR%%/plugins/Insight/client/insight.css
+%%WWWDIR%%/plugins/Insight/client/translations.js
+%%WWWDIR%%/plugins/Insight/templates/insight.js
+%%WWWDIR%%/plugins/Insight/templates/notify_parent_iframe.tpl
+%%WWWDIR%%/plugins/Insight/templates/index.tpl
+%%WWWDIR%%/plugins/Insight/templates/sidebar.tpl
+%%WWWDIR%%/plugins/Insight/templates/index.css
+%%WWWDIR%%/plugins/Insight/templates/info.png
+%%WWWDIR%%/plugins/Installation/Controller.php
+%%WWWDIR%%/plugins/Installation/FormDatabaseSetup.php
+%%WWWDIR%%/plugins/Installation/FormFirstWebsiteSetup.php
+%%WWWDIR%%/plugins/Installation/FormGeneralSetup.php
+%%WWWDIR%%/plugins/Installation/Installation.php
+%%WWWDIR%%/plugins/Installation/View.php
+%%WWWDIR%%/plugins/Installation/templates/allSteps.tpl
+%%WWWDIR%%/plugins/Installation/templates/databaseCheck.tpl
+%%WWWDIR%%/plugins/Installation/templates/databaseSetup.tpl
+%%WWWDIR%%/plugins/Installation/templates/displayJavascriptCode.tpl
+%%WWWDIR%%/plugins/Installation/templates/finished.tpl
+%%WWWDIR%%/plugins/Installation/templates/firstWebsiteSetup.tpl
+%%WWWDIR%%/plugins/Installation/templates/generalSetup.tpl
+%%WWWDIR%%/plugins/Installation/templates/integrityDetails.tpl
+%%WWWDIR%%/plugins/Installation/templates/systemCheck_legend.tpl
+%%WWWDIR%%/plugins/Installation/templates/install.css
+%%WWWDIR%%/plugins/Installation/templates/structure.tpl
+%%WWWDIR%%/plugins/Installation/templates/systemCheck.tpl
+%%WWWDIR%%/plugins/Installation/templates/tablesCreation.tpl
+%%WWWDIR%%/plugins/Installation/templates/welcome.tpl
+%%WWWDIR%%/plugins/LanguagesManager/API.php
+%%WWWDIR%%/plugins/LanguagesManager/Controller.php
+%%WWWDIR%%/plugins/LanguagesManager/LanguagesManager.php
+%%WWWDIR%%/plugins/LanguagesManager/templates/languageSelector.js
+%%WWWDIR%%/plugins/LanguagesManager/templates/languages.tpl
+%%WWWDIR%%/plugins/Live/API.php
+%%WWWDIR%%/plugins/Live/Controller.php
+%%WWWDIR%%/plugins/Live/Live.php
+%%WWWDIR%%/plugins/Live/Visitor.php
+%%WWWDIR%%/plugins/Live/templates/images/file0.png
+%%WWWDIR%%/plugins/Live/templates/images/file1.png
+%%WWWDIR%%/plugins/Live/templates/images/file2.png
+%%WWWDIR%%/plugins/Live/templates/images/file3.png
+%%WWWDIR%%/plugins/Live/templates/images/file4.png
+%%WWWDIR%%/plugins/Live/templates/images/file5.png
+%%WWWDIR%%/plugins/Live/templates/images/file6.png
+%%WWWDIR%%/plugins/Live/templates/images/file7.png
+%%WWWDIR%%/plugins/Live/templates/images/file8.png
+%%WWWDIR%%/plugins/Live/templates/images/file9.png
+%%WWWDIR%%/plugins/Live/templates/images/pause.gif
+%%WWWDIR%%/plugins/Live/templates/images/pause_disabled.gif
+%%WWWDIR%%/plugins/Live/templates/images/play.gif
+%%WWWDIR%%/plugins/Live/templates/images/play_disabled.gif
+%%WWWDIR%%/plugins/Live/templates/images/returningVisitor.gif
+%%WWWDIR%%/plugins/Live/templates/index.tpl
+%%WWWDIR%%/plugins/Live/templates/lastVisits.tpl
+%%WWWDIR%%/plugins/Live/templates/live.css
+%%WWWDIR%%/plugins/Live/templates/scripts/live.js
+%%WWWDIR%%/plugins/Live/templates/totalVisits.tpl
+%%WWWDIR%%/plugins/Live/templates/visitorLog.tpl
+%%WWWDIR%%/plugins/Login/Auth.php
+%%WWWDIR%%/plugins/Login/Controller.php
+%%WWWDIR%%/plugins/Login/FormLogin.php
+%%WWWDIR%%/plugins/Login/FormResetPassword.php
+%%WWWDIR%%/plugins/Login/Login.php
+%%WWWDIR%%/plugins/Login/templates/header.tpl
+%%WWWDIR%%/plugins/Login/templates/login.css
+%%WWWDIR%%/plugins/Login/templates/login.js
+%%WWWDIR%%/plugins/Login/templates/login.tpl
+%%WWWDIR%%/plugins/Login/templates/message.tpl
+%%WWWDIR%%/plugins/MobileMessaging/API.php
+%%WWWDIR%%/plugins/MobileMessaging/APIException.php
+%%WWWDIR%%/plugins/MobileMessaging/Controller.php
+%%WWWDIR%%/plugins/MobileMessaging/CountryCallingCodes.php
+%%WWWDIR%%/plugins/MobileMessaging/GSMCharset.php
+%%WWWDIR%%/plugins/MobileMessaging/MobileMessaging.php
+%%WWWDIR%%/plugins/MobileMessaging/ReportRenderer/Exception.php
+%%WWWDIR%%/plugins/MobileMessaging/ReportRenderer/Sms.php
+%%WWWDIR%%/plugins/MobileMessaging/SMSProvider/Clockwork.php
+%%WWWDIR%%/plugins/MobileMessaging/SMSProvider.php
+%%WWWDIR%%/plugins/MobileMessaging/images/Clockwork.png
+%%WWWDIR%%/plugins/MobileMessaging/images/phone.png
+%%WWWDIR%%/plugins/MobileMessaging/lang/en.php
+%%WWWDIR%%/plugins/MobileMessaging/scripts/MobileMessagingSettings.js
+%%WWWDIR%%/plugins/MobileMessaging/templates/ReportParameters.tpl
+%%WWWDIR%%/plugins/MobileMessaging/templates/SMSReport.tpl
+%%WWWDIR%%/plugins/MobileMessaging/templates/Settings.tpl
+%%WWWDIR%%/plugins/MultiSites/API.php
+%%WWWDIR%%/plugins/MultiSites/CalculateEvolutionFilter.php
+%%WWWDIR%%/plugins/MultiSites/Controller.php
+%%WWWDIR%%/plugins/MultiSites/MultiSites.php
+%%WWWDIR%%/plugins/MultiSites/images/arrow_asc.gif
+%%WWWDIR%%/plugins/MultiSites/images/arrow_desc.gif
+%%WWWDIR%%/plugins/MultiSites/images/arrow_down.png
+%%WWWDIR%%/plugins/MultiSites/images/arrow_up.png
+%%WWWDIR%%/plugins/MultiSites/images/door_in.png
+%%WWWDIR%%/plugins/MultiSites/images/link.gif
+%%WWWDIR%%/plugins/MultiSites/images/loading-blue.gif
+%%WWWDIR%%/plugins/MultiSites/images/stop.png
+%%WWWDIR%%/plugins/MultiSites/images/arrow_down_green.png
+%%WWWDIR%%/plugins/MultiSites/images/arrow_up_red.png
+%%WWWDIR%%/plugins/MultiSites/templates/common.js
+%%WWWDIR%%/plugins/MultiSites/templates/index.tpl
+%%WWWDIR%%/plugins/MultiSites/templates/row.tpl
+%%WWWDIR%%/plugins/MultiSites/templates/styles.css
+%%WWWDIR%%/plugins/PDFReports/API.php
+%%WWWDIR%%/plugins/PDFReports/Controller.php
+%%WWWDIR%%/plugins/PDFReports/PDFReports.php
+%%WWWDIR%%/plugins/PDFReports/config/tcpdf_config.php
+%%WWWDIR%%/plugins/PDFReports/templates/add.tpl
+%%WWWDIR%%/plugins/PDFReports/templates/index.tpl
+%%WWWDIR%%/plugins/PDFReports/templates/list.tpl
+%%WWWDIR%%/plugins/PDFReports/templates/pdf.js
+%%WWWDIR%%/plugins/PDFReports/templates/report_parameters.tpl
+%%WWWDIR%%/plugins/PrivacyManager/Controller.php
+%%WWWDIR%%/plugins/PrivacyManager/PrivacyManager.php
+%%WWWDIR%%/plugins/PrivacyManager/LogDataPurger.php
+%%WWWDIR%%/plugins/PrivacyManager/ReportsPurger.php
+%%WWWDIR%%/plugins/PrivacyManager/templates/databaseSize.tpl
+%%WWWDIR%%/plugins/PrivacyManager/templates/privacySettings.js
+%%WWWDIR%%/plugins/PrivacyManager/templates/privacySettings.tpl
+%%WWWDIR%%/plugins/Provider/API.php
+%%WWWDIR%%/plugins/Provider/Controller.php
+%%WWWDIR%%/plugins/Provider/Provider.php
+%%WWWDIR%%/plugins/Provider/functions.php
+%%WWWDIR%%/plugins/Proxy/Controller.php
+%%WWWDIR%%/plugins/Proxy/Proxy.php
+%%WWWDIR%%/plugins/Proxy/templates/exportImage.tpl
+%%WWWDIR%%/plugins/Referers/API.php
+%%WWWDIR%%/plugins/Referers/Controller.php
+%%WWWDIR%%/plugins/Referers/Referers.php
+%%WWWDIR%%/plugins/Referers/functions.php
+%%WWWDIR%%/plugins/Referers/images/searchEngines/1.cz.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/abcsok.no.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/alexa.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/all.by.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/apollo.lv.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/apollo7.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/arama.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/ariadna.elmundo.es.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/arianna.libero.it.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/ask.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/bg.setooz.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/bing.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/blekko.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/blogs.icerocket.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/blogsearch.google.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/busca.orange.es.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/busca.uol.com.br.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/buscador.terra.es.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/cgi.search.biglobe.ne.jp.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/daemon-search.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/digg.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/dir.gigablast.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/dmoz.org.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/duckduckgo.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/ecosia.org.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/encrypted.google.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/eo.st.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/forestle.org.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/fr.dir.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/fr.wedoo.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/friendfeed.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/gais.cs.ccu.edu.tw.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/geona.net.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/go.mail.ru.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/google.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/googlesyndicatedsearch.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/holmes.ge.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/images.google.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/images.search.yahoo.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/images.yandex.ru.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/infospace.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/iwon.ask.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/ixquick.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/junglekey.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/jyxo.1188.cz.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/ko.search.need2find.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/lo.st.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/meta.rrzn.uni-hannover.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/meta.ua.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/metager2.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/news.google.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/nigma.ru.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/nova.rambler.ru.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/online.no.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/otsing.delfi.ee.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/p.zhongsou.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/pesquisa.clix.pt.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/pesquisa.sapo.pt.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/poisk.ru.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/recherche.francite.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/rechercher.aliceadsl.fr.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/req.hit-parade.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/ricerca.virgilio.it.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/rpmfind.net.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/s1.metacrawler.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/scour.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.1und1.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.aol.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.babylon.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.bluewin.ch.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.centrum.cz.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.comcast.net.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.conduit.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.daum.net.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.earthlink.net.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.excite.it.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.free.fr.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.freecause.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.goo.ne.jp.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.ke.voila.fr.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.lycos.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.nate.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.naver.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.nifty.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.peoplepc.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.qip.ru.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.rr.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.seznam.cz.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.softonic.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.tiscali.it.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.winamp.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.www.ee.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.yahoo.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.yam.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/search.yippy.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/searchalot.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/searchatlas.centrum.cz.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/searchservice.myspace.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/sm.aport.ru.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/smart.delfi.lv.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/so.360.cn.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/start.iplay.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/startgoogle.startpagina.nl.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/suche.freenet.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/suche.gmx.net.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/suche.info.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/suche.t-online.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/suche.web.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/szukaj.onet.pl.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/szukaj.wp.pl.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/technorati.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/translate.google.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/video.google.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/web.canoe.ca.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/web.volny.cz.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/websearch.cs.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/websearch.rakuten.co.jp.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.123people.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.1881.no.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.abacho.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.acoon.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.allesklar.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.alltheweb.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.altavista.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.arcor.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.baidu.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.blogdigger.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.blogpulse.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.crawler.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.charter.net.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.cuil.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.dasoertliche.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.eniro.se.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.eurip.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.euroseek.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.everyclick.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.exalead.fr.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.facebook.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.fastbrowsersearch.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.fireball.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.firstsfind.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.fixsuche.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.flix.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.gigablast.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.gnadenmeer.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.google.interia.pl.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.gomeo.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.goyellow.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.gulesider.no.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.highbeam.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.hooseek.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.hotbot.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.icq.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.ilse.nl.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.jungle-spider.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.kataweb.it.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.kvasir.no.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.latne.lv.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.looksmart.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.maailm.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.mamma.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.meinestadt.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.mister-wong.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.monstercrawler.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.mozbot.fr.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.mysearch.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.najdi.si.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.neti.ee.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.paperball.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.picsearch.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.plazoo.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.qualigo.at.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.search.ch.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.search.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.searchcanvas.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.searchy.co.uk.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.sharelook.fr.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.skynet.be.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.sogou.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.soso.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.startsiden.no.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.suchmaschine.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.suchnase.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.talktalk.co.uk.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.teoma.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.tixuma.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.toile.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.toolbarhome.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.trouvez.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.trovarapido.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.trusted--search.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.twingly.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.url.org.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.vinden.nl.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.vindex.nl.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.walhello.info.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.web.nl.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.weborama.fr.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.websearch.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.witch.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.x-recherche.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.yasni.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.yatedo.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.yougoo.fr.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.zapmeta.com.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.zoeken.nl.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www.zoznam.sk.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www1.dastelefonbuch.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www2.austronaut.at.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/www3.zoek.nl.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/xx.gif
+%%WWWDIR%%/plugins/Referers/images/searchEngines/xx.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/yandex.ru.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/yellowmap.de.png
+%%WWWDIR%%/plugins/Referers/images/searchEngines/zoohoo.cz.png
+%%WWWDIR%%/plugins/Referers/templates/index.tpl
+%%WWWDIR%%/plugins/Referers/templates/searchEngines_Keywords.tpl
+%%WWWDIR%%/plugins/SEO/API.php
+%%WWWDIR%%/plugins/SEO/Controller.php
+%%WWWDIR%%/plugins/SEO/RankChecker.php
+%%WWWDIR%%/plugins/SEO/SEO.php
+%%WWWDIR%%/plugins/SEO/images/whois.png
+%%WWWDIR%%/plugins/SEO/templates/index.tpl
+%%WWWDIR%%/plugins/SEO/templates/rank.js
+%%WWWDIR%%/plugins/SecurityInfo/Controller.php
+%%WWWDIR%%/plugins/SecurityInfo/LICENSE
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/PhpSecInfo.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Application/php.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Application/piwik.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/CGI/force_redirect.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/allow_url_fopen.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/allow_url_include.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/display_errors.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/expose_php.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/file_uploads.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/gid.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/magic_quotes_gpc.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/memory_limit.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/open_basedir.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/post_max_size.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/register_globals.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/uid.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/upload_max_filesize.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core/upload_tmp_dir.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Curl/file_support.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Session/save_path.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Session/use_trans_sid.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Suhosin/extension.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Suhosin/patch.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Test.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Test_Application.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Test_Cgi.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Test_Core.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Test_Curl.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Test_Session.php
+%%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Test_Suhosin.php
+%%WWWDIR%%/plugins/SecurityInfo/README
+%%WWWDIR%%/plugins/SecurityInfo/SecurityInfo.php
+%%WWWDIR%%/plugins/SecurityInfo/templates/index.tpl
+%%WWWDIR%%/plugins/SitesManager/API.php
+%%WWWDIR%%/plugins/SitesManager/Controller.php
+%%WWWDIR%%/plugins/SitesManager/SitesManager.php
+%%WWWDIR%%/plugins/SitesManager/templates/DisplayAlternativeTags.tpl
+%%WWWDIR%%/plugins/SitesManager/templates/DisplayJavascriptCode.tpl
+%%WWWDIR%%/plugins/SitesManager/templates/SitesManager.js
+%%WWWDIR%%/plugins/SitesManager/templates/SitesManager.tpl
+%%WWWDIR%%/plugins/Transitions/API.php
+%%WWWDIR%%/plugins/Transitions/Controller.php
+%%WWWDIR%%/plugins/Transitions/Transitions.php
+%%WWWDIR%%/plugins/Transitions/templates/transitions.css
+%%WWWDIR%%/plugins/Transitions/templates/transitions.js
+%%WWWDIR%%/plugins/Transitions/templates/transitions_icon.png
+%%WWWDIR%%/plugins/Transitions/templates/transitions.tpl
+%%WWWDIR%%/plugins/Transitions/templates/transitions_icon_hover.png
+%%WWWDIR%%/plugins/SitesManager/templates/Tracking.tpl
+%%WWWDIR%%/plugins/UserCountry/API.php
+%%WWWDIR%%/plugins/UserCountry/Controller.php
+%%WWWDIR%%/plugins/UserCountry/LocationProvider.php
+%%WWWDIR%%/plugins/UserCountry/LocationProvider/Default.php
+%%WWWDIR%%/plugins/UserCountry/LocationProvider/GeoIp.php
+%%WWWDIR%%/plugins/UserCountry/LocationProvider/GeoIp/Pecl.php
+%%WWWDIR%%/plugins/UserCountry/LocationProvider/GeoIp/Php.php
+%%WWWDIR%%/plugins/UserCountry/LocationProvider/GeoIp/ServerBased.php
+%%WWWDIR%%/plugins/UserCountry/UserCountry.php
+%%WWWDIR%%/plugins/UserCountry/flags/a1.png
+%%WWWDIR%%/plugins/UserCountry/flags/a2.png
+%%WWWDIR%%/plugins/UserCountry/flags/ac.png
+%%WWWDIR%%/plugins/UserCountry/flags/ad.png
+%%WWWDIR%%/plugins/UserCountry/flags/ae.png
+%%WWWDIR%%/plugins/UserCountry/flags/af.png
+%%WWWDIR%%/plugins/UserCountry/flags/ag.png
+%%WWWDIR%%/plugins/UserCountry/flags/ai.png
+%%WWWDIR%%/plugins/UserCountry/flags/al.png
+%%WWWDIR%%/plugins/UserCountry/flags/am.png
+%%WWWDIR%%/plugins/UserCountry/flags/an.png
+%%WWWDIR%%/plugins/UserCountry/flags/ao.png
+%%WWWDIR%%/plugins/UserCountry/flags/ap.png
+%%WWWDIR%%/plugins/UserCountry/flags/aq.png
+%%WWWDIR%%/plugins/UserCountry/flags/ar.png
+%%WWWDIR%%/plugins/UserCountry/flags/as.png
+%%WWWDIR%%/plugins/UserCountry/flags/at.png
+%%WWWDIR%%/plugins/UserCountry/flags/au.png
+%%WWWDIR%%/plugins/UserCountry/flags/aw.png
+%%WWWDIR%%/plugins/UserCountry/flags/ax.png
+%%WWWDIR%%/plugins/UserCountry/flags/az.png
+%%WWWDIR%%/plugins/UserCountry/flags/ba.png
+%%WWWDIR%%/plugins/UserCountry/flags/bb.png
+%%WWWDIR%%/plugins/UserCountry/flags/bd.png
+%%WWWDIR%%/plugins/UserCountry/flags/be.png
+%%WWWDIR%%/plugins/UserCountry/flags/bf.png
+%%WWWDIR%%/plugins/UserCountry/flags/bg.png
+%%WWWDIR%%/plugins/UserCountry/flags/bh.png
+%%WWWDIR%%/plugins/UserCountry/flags/bi.png
+%%WWWDIR%%/plugins/UserCountry/flags/bj.png
+%%WWWDIR%%/plugins/UserCountry/flags/bl.png
+%%WWWDIR%%/plugins/UserCountry/flags/bm.png
+%%WWWDIR%%/plugins/UserCountry/flags/bn.png
+%%WWWDIR%%/plugins/UserCountry/flags/bo.png
+%%WWWDIR%%/plugins/UserCountry/flags/bq.png
+%%WWWDIR%%/plugins/UserCountry/flags/br.png
+%%WWWDIR%%/plugins/UserCountry/flags/bs.png
+%%WWWDIR%%/plugins/UserCountry/flags/bt.png
+%%WWWDIR%%/plugins/UserCountry/flags/bu.png
+%%WWWDIR%%/plugins/UserCountry/flags/bv.png
+%%WWWDIR%%/plugins/UserCountry/flags/bw.png
+%%WWWDIR%%/plugins/UserCountry/flags/by.png
+%%WWWDIR%%/plugins/UserCountry/flags/bz.png
+%%WWWDIR%%/plugins/UserCountry/flags/ca.png
+%%WWWDIR%%/plugins/UserCountry/flags/cat.png
+%%WWWDIR%%/plugins/UserCountry/flags/cc.png
+%%WWWDIR%%/plugins/UserCountry/flags/cd.png
+%%WWWDIR%%/plugins/UserCountry/flags/cf.png
+%%WWWDIR%%/plugins/UserCountry/flags/cg.png
+%%WWWDIR%%/plugins/UserCountry/flags/ch.png
+%%WWWDIR%%/plugins/UserCountry/flags/ci.png
+%%WWWDIR%%/plugins/UserCountry/flags/ck.png
+%%WWWDIR%%/plugins/UserCountry/flags/cl.png
+%%WWWDIR%%/plugins/UserCountry/flags/cm.png
+%%WWWDIR%%/plugins/UserCountry/flags/cn.png
+%%WWWDIR%%/plugins/UserCountry/flags/co.png
+%%WWWDIR%%/plugins/UserCountry/flags/cp.png
+%%WWWDIR%%/plugins/UserCountry/flags/cr.png
+%%WWWDIR%%/plugins/UserCountry/flags/cs.png
+%%WWWDIR%%/plugins/UserCountry/flags/cu.png
+%%WWWDIR%%/plugins/UserCountry/flags/cv.png
+%%WWWDIR%%/plugins/UserCountry/flags/cw.png
+%%WWWDIR%%/plugins/UserCountry/flags/cx.png
+%%WWWDIR%%/plugins/UserCountry/flags/cy.png
+%%WWWDIR%%/plugins/UserCountry/flags/cz.png
+%%WWWDIR%%/plugins/UserCountry/flags/de.png
+%%WWWDIR%%/plugins/UserCountry/flags/dg.png
+%%WWWDIR%%/plugins/UserCountry/flags/dj.png
+%%WWWDIR%%/plugins/UserCountry/flags/dk.png
+%%WWWDIR%%/plugins/UserCountry/flags/dm.png
+%%WWWDIR%%/plugins/UserCountry/flags/do.png
+%%WWWDIR%%/plugins/UserCountry/flags/dz.png
+%%WWWDIR%%/plugins/UserCountry/flags/ea.png
+%%WWWDIR%%/plugins/UserCountry/flags/ec.png
+%%WWWDIR%%/plugins/UserCountry/flags/ee.png
+%%WWWDIR%%/plugins/UserCountry/flags/eg.png
+%%WWWDIR%%/plugins/UserCountry/flags/eh.png
+%%WWWDIR%%/plugins/UserCountry/flags/er.png
+%%WWWDIR%%/plugins/UserCountry/flags/es.png
+%%WWWDIR%%/plugins/UserCountry/flags/et.png
+%%WWWDIR%%/plugins/UserCountry/flags/eu.png
+%%WWWDIR%%/plugins/UserCountry/flags/fi.png
+%%WWWDIR%%/plugins/UserCountry/flags/fj.png
+%%WWWDIR%%/plugins/UserCountry/flags/fk.png
+%%WWWDIR%%/plugins/UserCountry/flags/fm.png
+%%WWWDIR%%/plugins/UserCountry/flags/fo.png
+%%WWWDIR%%/plugins/UserCountry/flags/fr.png
+%%WWWDIR%%/plugins/UserCountry/flags/fx.png
+%%WWWDIR%%/plugins/UserCountry/flags/ga.png
+%%WWWDIR%%/plugins/UserCountry/flags/gb.png
+%%WWWDIR%%/plugins/UserCountry/flags/gd.png
+%%WWWDIR%%/plugins/UserCountry/flags/ge.png
+%%WWWDIR%%/plugins/UserCountry/flags/gf.png
+%%WWWDIR%%/plugins/UserCountry/flags/gg.png
+%%WWWDIR%%/plugins/UserCountry/flags/gh.png
+%%WWWDIR%%/plugins/UserCountry/flags/gi.png
+%%WWWDIR%%/plugins/UserCountry/flags/gl.png
+%%WWWDIR%%/plugins/UserCountry/flags/gm.png
+%%WWWDIR%%/plugins/UserCountry/flags/gn.png
+%%WWWDIR%%/plugins/UserCountry/flags/gp.png
+%%WWWDIR%%/plugins/UserCountry/flags/gq.png
+%%WWWDIR%%/plugins/UserCountry/flags/gr.png
+%%WWWDIR%%/plugins/UserCountry/flags/gs.png
+%%WWWDIR%%/plugins/UserCountry/flags/gt.png
+%%WWWDIR%%/plugins/UserCountry/flags/gu.png
+%%WWWDIR%%/plugins/UserCountry/flags/gw.png
+%%WWWDIR%%/plugins/UserCountry/flags/gy.png
+%%WWWDIR%%/plugins/UserCountry/flags/hk.png
+%%WWWDIR%%/plugins/UserCountry/flags/hm.png
+%%WWWDIR%%/plugins/UserCountry/flags/hn.png
+%%WWWDIR%%/plugins/UserCountry/flags/hr.png
+%%WWWDIR%%/plugins/UserCountry/flags/ht.png
+%%WWWDIR%%/plugins/UserCountry/flags/hu.png
+%%WWWDIR%%/plugins/UserCountry/flags/ic.png
+%%WWWDIR%%/plugins/UserCountry/flags/id.png
+%%WWWDIR%%/plugins/UserCountry/flags/ie.png
+%%WWWDIR%%/plugins/UserCountry/flags/il.png
+%%WWWDIR%%/plugins/UserCountry/flags/im.png
+%%WWWDIR%%/plugins/UserCountry/flags/in.png
+%%WWWDIR%%/plugins/UserCountry/flags/io.png
+%%WWWDIR%%/plugins/UserCountry/flags/iq.png
+%%WWWDIR%%/plugins/UserCountry/flags/ir.png
+%%WWWDIR%%/plugins/UserCountry/flags/is.png
+%%WWWDIR%%/plugins/UserCountry/flags/it.png
+%%WWWDIR%%/plugins/UserCountry/flags/je.png
+%%WWWDIR%%/plugins/UserCountry/flags/jm.png
+%%WWWDIR%%/plugins/UserCountry/flags/jo.png
+%%WWWDIR%%/plugins/UserCountry/flags/jp.png
+%%WWWDIR%%/plugins/UserCountry/flags/ke.png
+%%WWWDIR%%/plugins/UserCountry/flags/kg.png
+%%WWWDIR%%/plugins/UserCountry/flags/kh.png
+%%WWWDIR%%/plugins/UserCountry/flags/ki.png
+%%WWWDIR%%/plugins/UserCountry/flags/km.png
+%%WWWDIR%%/plugins/UserCountry/flags/kn.png
+%%WWWDIR%%/plugins/UserCountry/flags/kp.png
+%%WWWDIR%%/plugins/UserCountry/flags/kr.png
+%%WWWDIR%%/plugins/UserCountry/flags/kw.png
+%%WWWDIR%%/plugins/UserCountry/flags/ky.png
+%%WWWDIR%%/plugins/UserCountry/flags/kz.png
+%%WWWDIR%%/plugins/UserCountry/flags/la.png
+%%WWWDIR%%/plugins/UserCountry/flags/lb.png
+%%WWWDIR%%/plugins/UserCountry/flags/lc.png
+%%WWWDIR%%/plugins/UserCountry/flags/li.png
+%%WWWDIR%%/plugins/UserCountry/flags/lk.png
+%%WWWDIR%%/plugins/UserCountry/flags/lr.png
+%%WWWDIR%%/plugins/UserCountry/flags/ls.png
+%%WWWDIR%%/plugins/UserCountry/flags/lt.png
+%%WWWDIR%%/plugins/UserCountry/flags/lu.png
+%%WWWDIR%%/plugins/UserCountry/flags/lv.png
+%%WWWDIR%%/plugins/UserCountry/flags/ly.png
+%%WWWDIR%%/plugins/UserCountry/flags/ma.png
+%%WWWDIR%%/plugins/UserCountry/flags/mc.png
+%%WWWDIR%%/plugins/UserCountry/flags/md.png
+%%WWWDIR%%/plugins/UserCountry/flags/me.png
+%%WWWDIR%%/plugins/UserCountry/flags/mf.png
+%%WWWDIR%%/plugins/UserCountry/flags/mg.png
+%%WWWDIR%%/plugins/UserCountry/flags/mh.png
+%%WWWDIR%%/plugins/UserCountry/flags/mk.png
+%%WWWDIR%%/plugins/UserCountry/flags/ml.png
+%%WWWDIR%%/plugins/UserCountry/flags/mm.png
+%%WWWDIR%%/plugins/UserCountry/flags/mn.png
+%%WWWDIR%%/plugins/UserCountry/flags/mo.png
+%%WWWDIR%%/plugins/UserCountry/flags/mp.png
+%%WWWDIR%%/plugins/UserCountry/flags/mq.png
+%%WWWDIR%%/plugins/UserCountry/flags/mr.png
+%%WWWDIR%%/plugins/UserCountry/flags/ms.png
+%%WWWDIR%%/plugins/UserCountry/flags/mt.png
+%%WWWDIR%%/plugins/UserCountry/flags/mu.png
+%%WWWDIR%%/plugins/UserCountry/flags/mv.png
+%%WWWDIR%%/plugins/UserCountry/flags/mw.png
+%%WWWDIR%%/plugins/UserCountry/flags/mx.png
+%%WWWDIR%%/plugins/UserCountry/flags/my.png
+%%WWWDIR%%/plugins/UserCountry/flags/mz.png
+%%WWWDIR%%/plugins/UserCountry/flags/na.png
+%%WWWDIR%%/plugins/UserCountry/flags/nc.png
+%%WWWDIR%%/plugins/UserCountry/flags/ne.png
+%%WWWDIR%%/plugins/UserCountry/flags/nf.png
+%%WWWDIR%%/plugins/UserCountry/flags/ng.png
+%%WWWDIR%%/plugins/UserCountry/flags/ni.png
+%%WWWDIR%%/plugins/UserCountry/flags/nl.png
+%%WWWDIR%%/plugins/UserCountry/flags/no.png
+%%WWWDIR%%/plugins/UserCountry/flags/np.png
+%%WWWDIR%%/plugins/UserCountry/flags/nr.png
+%%WWWDIR%%/plugins/UserCountry/flags/nt.png
+%%WWWDIR%%/plugins/UserCountry/flags/nu.png
+%%WWWDIR%%/plugins/UserCountry/flags/nz.png
+%%WWWDIR%%/plugins/UserCountry/flags/o1.png
+%%WWWDIR%%/plugins/UserCountry/flags/om.png
+%%WWWDIR%%/plugins/UserCountry/flags/pa.png
+%%WWWDIR%%/plugins/UserCountry/flags/pe.png
+%%WWWDIR%%/plugins/UserCountry/flags/pf.png
+%%WWWDIR%%/plugins/UserCountry/flags/pg.png
+%%WWWDIR%%/plugins/UserCountry/flags/ph.png
+%%WWWDIR%%/plugins/UserCountry/flags/pk.png
+%%WWWDIR%%/plugins/UserCountry/flags/pl.png
+%%WWWDIR%%/plugins/UserCountry/flags/pm.png
+%%WWWDIR%%/plugins/UserCountry/flags/pn.png
+%%WWWDIR%%/plugins/UserCountry/flags/pr.png
+%%WWWDIR%%/plugins/UserCountry/flags/ps.png
+%%WWWDIR%%/plugins/UserCountry/flags/pt.png
+%%WWWDIR%%/plugins/UserCountry/flags/pw.png
+%%WWWDIR%%/plugins/UserCountry/flags/py.png
+%%WWWDIR%%/plugins/UserCountry/flags/qa.png
+%%WWWDIR%%/plugins/UserCountry/flags/re.png
+%%WWWDIR%%/plugins/UserCountry/flags/ro.png
+%%WWWDIR%%/plugins/UserCountry/flags/rs.png
+%%WWWDIR%%/plugins/UserCountry/flags/ru.png
+%%WWWDIR%%/plugins/UserCountry/flags/rw.png
+%%WWWDIR%%/plugins/UserCountry/flags/sa.png
+%%WWWDIR%%/plugins/UserCountry/flags/sb.png
+%%WWWDIR%%/plugins/UserCountry/flags/sc.png
+%%WWWDIR%%/plugins/UserCountry/flags/sd.png
+%%WWWDIR%%/plugins/UserCountry/flags/se.png
+%%WWWDIR%%/plugins/UserCountry/flags/sf.png
+%%WWWDIR%%/plugins/UserCountry/flags/sg.png
+%%WWWDIR%%/plugins/UserCountry/flags/sh.png
+%%WWWDIR%%/plugins/UserCountry/flags/si.png
+%%WWWDIR%%/plugins/UserCountry/flags/sj.png
+%%WWWDIR%%/plugins/UserCountry/flags/sk.png
+%%WWWDIR%%/plugins/UserCountry/flags/sl.png
+%%WWWDIR%%/plugins/UserCountry/flags/sm.png
+%%WWWDIR%%/plugins/UserCountry/flags/sn.png
+%%WWWDIR%%/plugins/UserCountry/flags/so.png
+%%WWWDIR%%/plugins/UserCountry/flags/sr.png
+%%WWWDIR%%/plugins/UserCountry/flags/ss.png
+%%WWWDIR%%/plugins/UserCountry/flags/st.png
+%%WWWDIR%%/plugins/UserCountry/flags/su.png
+%%WWWDIR%%/plugins/UserCountry/flags/sv.png
+%%WWWDIR%%/plugins/UserCountry/flags/sx.png
+%%WWWDIR%%/plugins/UserCountry/flags/sy.png
+%%WWWDIR%%/plugins/UserCountry/flags/sz.png
+%%WWWDIR%%/plugins/UserCountry/flags/ta.png
+%%WWWDIR%%/plugins/UserCountry/flags/tc.png
+%%WWWDIR%%/plugins/UserCountry/flags/td.png
+%%WWWDIR%%/plugins/UserCountry/flags/tf.png
+%%WWWDIR%%/plugins/UserCountry/flags/tg.png
+%%WWWDIR%%/plugins/UserCountry/flags/th.png
+%%WWWDIR%%/plugins/UserCountry/flags/ti.png
+%%WWWDIR%%/plugins/UserCountry/flags/tj.png
+%%WWWDIR%%/plugins/UserCountry/flags/tk.png
+%%WWWDIR%%/plugins/UserCountry/flags/tl.png
+%%WWWDIR%%/plugins/UserCountry/flags/tm.png
+%%WWWDIR%%/plugins/UserCountry/flags/tn.png
+%%WWWDIR%%/plugins/UserCountry/flags/to.png
+%%WWWDIR%%/plugins/UserCountry/flags/tp.png
+%%WWWDIR%%/plugins/UserCountry/flags/tr.png
+%%WWWDIR%%/plugins/UserCountry/flags/tt.png
+%%WWWDIR%%/plugins/UserCountry/flags/tv.png
+%%WWWDIR%%/plugins/UserCountry/flags/tw.png
+%%WWWDIR%%/plugins/UserCountry/flags/tz.png
+%%WWWDIR%%/plugins/UserCountry/flags/ua.png
+%%WWWDIR%%/plugins/UserCountry/flags/ug.png
+%%WWWDIR%%/plugins/UserCountry/flags/uk.png
+%%WWWDIR%%/plugins/UserCountry/flags/um.png
+%%WWWDIR%%/plugins/UserCountry/flags/us.png
+%%WWWDIR%%/plugins/UserCountry/flags/uy.png
+%%WWWDIR%%/plugins/UserCountry/flags/uz.png
+%%WWWDIR%%/plugins/UserCountry/flags/va.png
+%%WWWDIR%%/plugins/UserCountry/flags/vc.png
+%%WWWDIR%%/plugins/UserCountry/flags/ve.png
+%%WWWDIR%%/plugins/UserCountry/flags/vg.png
+%%WWWDIR%%/plugins/UserCountry/flags/vi.png
+%%WWWDIR%%/plugins/UserCountry/flags/vn.png
+%%WWWDIR%%/plugins/UserCountry/flags/vu.png
+%%WWWDIR%%/plugins/UserCountry/flags/wf.png
+%%WWWDIR%%/plugins/UserCountry/flags/ws.png
+%%WWWDIR%%/plugins/UserCountry/flags/xx.png
+%%WWWDIR%%/plugins/UserCountry/flags/ye.png
+%%WWWDIR%%/plugins/UserCountry/flags/yt.png
+%%WWWDIR%%/plugins/UserCountry/flags/yu.png
+%%WWWDIR%%/plugins/UserCountry/flags/za.png
+%%WWWDIR%%/plugins/UserCountry/flags/zm.png
+%%WWWDIR%%/plugins/UserCountry/flags/zr.png
+%%WWWDIR%%/plugins/UserCountry/flags/zw.png
+%%WWWDIR%%/plugins/UserCountry/functions.php
+%%WWWDIR%%/plugins/UserCountry/templates/admin.js
+%%WWWDIR%%/plugins/UserCountry/templates/adminIndex.tpl
+%%WWWDIR%%/plugins/UserCountry/templates/index.tpl
+%%WWWDIR%%/plugins/UserCountryMap/Controller.php
+%%WWWDIR%%/plugins/UserCountryMap/PiwikMap.swf
+%%WWWDIR%%/plugins/UserCountryMap/UserCountryMap.php
+%%WWWDIR%%/plugins/UserCountryMap/templates/worldmap.tpl
+%%WWWDIR%%/plugins/UserSettings/API.php
+%%WWWDIR%%/plugins/UserSettings/Controller.php
+%%WWWDIR%%/plugins/UserSettings/UserSettings.php
+%%WWWDIR%%/plugins/UserSettings/functions.php
+%%WWWDIR%%/plugins/UserSettings/images/browsers/AB.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/AM.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/AR.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/AV.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/AW.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/B2.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/BB.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/BE.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/BP.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/BX.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/CA.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/CF.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/CH.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/CO.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/CS.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/DF.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/DI.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/EL.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/EP.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/FB.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/FD.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/FE.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/FF.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/FL.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/GA.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/GE.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/HA.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/HJ.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/IB.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/IC.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/IE.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/IR.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/KM.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/KO.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/KP.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/KZ.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/LI.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/LX.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/MC.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/MI.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/MO.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/NS.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/OP.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/OW.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/PX.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/RK.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/SF.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/SM.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/TI.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/UNK.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/WO.gif
+%%WWWDIR%%/plugins/UserSettings/images/browsers/WP.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/AIX.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/AMI.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/AND.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/BBX.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/BEO.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/BLB.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/BSD.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/DFB.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/DSI.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/HPX.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/IPA.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/IPD.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/IPH.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/IRI.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/LIN.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/MAC.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/MAE.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/NBS.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/NDS.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/OBS.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/OS2.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/POS.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/PS3.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/PSP.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/QNX.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/SBA.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/SOS.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/SYL.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/SYM.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/T64.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/UNK.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/VMS.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/W2K.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/W61.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/W65.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/W75.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/W95.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/W98.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WCE.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WI7.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WI8.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WII.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WME.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WMO.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WNT.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WOS.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WPH.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WP7.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WS3.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WVI.gif
+%%WWWDIR%%/plugins/UserSettings/images/os/WXP.gif
+%%WWWDIR%%/plugins/UserSettings/images/plugins/cookie.gif
+%%WWWDIR%%/plugins/UserSettings/images/plugins/director.gif
+%%WWWDIR%%/plugins/UserSettings/images/plugins/flash.gif
+%%WWWDIR%%/plugins/UserSettings/images/plugins/gears.gif
+%%WWWDIR%%/plugins/UserSettings/images/plugins/java.gif
+%%WWWDIR%%/plugins/UserSettings/images/plugins/pdf.gif
+%%WWWDIR%%/plugins/UserSettings/images/plugins/quicktime.gif
+%%WWWDIR%%/plugins/UserSettings/images/plugins/realplayer.gif
+%%WWWDIR%%/plugins/UserSettings/images/plugins/silverlight.gif
+%%WWWDIR%%/plugins/UserSettings/images/plugins/windowsmedia.gif
+%%WWWDIR%%/plugins/UserSettings/images/screens/dual.gif
+%%WWWDIR%%/plugins/UserSettings/images/screens/mobile.gif
+%%WWWDIR%%/plugins/UserSettings/images/screens/normal.gif
+%%WWWDIR%%/plugins/UserSettings/images/screens/unknown.gif
+%%WWWDIR%%/plugins/UserSettings/images/screens/wide.gif
+%%WWWDIR%%/plugins/UserSettings/templates/index.tpl
+%%WWWDIR%%/plugins/UsersManager/API.php
+%%WWWDIR%%/plugins/UsersManager/Controller.php
+%%WWWDIR%%/plugins/UsersManager/UsersManager.php
+%%WWWDIR%%/plugins/UsersManager/images/add.png
+%%WWWDIR%%/plugins/UsersManager/images/no-access.png
+%%WWWDIR%%/plugins/UsersManager/images/ok.png
+%%WWWDIR%%/plugins/UsersManager/templates/UsersManager.js
+%%WWWDIR%%/plugins/UsersManager/templates/UsersManager.tpl
+%%WWWDIR%%/plugins/UsersManager/templates/userSettings.js
+%%WWWDIR%%/plugins/UsersManager/templates/userSettings.tpl
+%%WWWDIR%%/plugins/VisitFrequency/API.php
+%%WWWDIR%%/plugins/VisitFrequency/Controller.php
+%%WWWDIR%%/plugins/VisitFrequency/VisitFrequency.php
+%%WWWDIR%%/plugins/VisitFrequency/templates/index.tpl
+%%WWWDIR%%/plugins/VisitFrequency/templates/sparklines.tpl
+%%WWWDIR%%/plugins/VisitTime/API.php
+%%WWWDIR%%/plugins/VisitTime/Controller.php
+%%WWWDIR%%/plugins/VisitTime/VisitTime.php
+%%WWWDIR%%/plugins/VisitTime/templates/index.tpl
+%%WWWDIR%%/plugins/VisitorGenerator/Controller.php
+%%WWWDIR%%/plugins/VisitorGenerator/VisitorGenerator.php
+%%WWWDIR%%/plugins/VisitorGenerator/data/access.log
+%%WWWDIR%%/plugins/VisitorGenerator/templates/generate.tpl
+%%WWWDIR%%/plugins/VisitorGenerator/templates/index.tpl
+%%WWWDIR%%/plugins/VisitorInterest/API.php
+%%WWWDIR%%/plugins/VisitorInterest/Controller.php
+%%WWWDIR%%/plugins/VisitorInterest/VisitorInterest.php
+%%WWWDIR%%/plugins/VisitorInterest/templates/index.tpl
+%%WWWDIR%%/plugins/VisitsSummary/API.php
+%%WWWDIR%%/plugins/VisitsSummary/Controller.php
+%%WWWDIR%%/plugins/VisitsSummary/VisitsSummary.php
+%%WWWDIR%%/plugins/VisitsSummary/templates/index.tpl
+%%WWWDIR%%/plugins/VisitsSummary/templates/sparklines.tpl
+%%WWWDIR%%/plugins/Widgetize/Controller.php
+%%WWWDIR%%/plugins/Widgetize/Widgetize.php
+%%WWWDIR%%/plugins/Widgetize/templates/empty.tpl
+%%WWWDIR%%/plugins/Widgetize/templates/iframe.tpl
+%%WWWDIR%%/plugins/Widgetize/templates/index.tpl
+%%WWWDIR%%/plugins/Widgetize/templates/js.tpl
+%%WWWDIR%%/plugins/Widgetize/templates/test_jsinclude.tpl
+%%WWWDIR%%/plugins/Widgetize/templates/test_jsinclude2.tpl
+%%WWWDIR%%/plugins/Widgetize/templates/widgetize.js
+%%WWWDIR%%/tests/README.txt
+%%WWWDIR%%/themes/default/common.css
+%%WWWDIR%%/themes/default/common.js
+%%WWWDIR%%/themes/default/genericForm.tpl
+%%WWWDIR%%/themes/default/ie6.tpl
+%%WWWDIR%%/themes/default/ieonly.css
+%%WWWDIR%%/themes/default/images/arr_r.png
+%%WWWDIR%%/themes/default/images/background-submit.png
+%%WWWDIR%%/themes/default/images/chart_bar.png
+%%WWWDIR%%/themes/default/images/chart_line_edit_bg.png
+%%WWWDIR%%/themes/default/images/chart_line_edit.png
+%%WWWDIR%%/themes/default/images/chart_pie.png
+%%WWWDIR%%/themes/default/images/close.png
+%%WWWDIR%%/themes/default/images/collapsed_arrows.gif
+%%WWWDIR%%/themes/default/images/configure.png
+%%WWWDIR%%/themes/default/images/configure-highlight.png
+%%WWWDIR%%/themes/default/images/dashboard_h_bg.png
+%%WWWDIR%%/themes/default/images/dashboard_h_bg_hover.png
+%%WWWDIR%%/themes/default/images/data_table_footer_active_item.png
+%%WWWDIR%%/themes/default/images/datepicker_arr_l.png
+%%WWWDIR%%/themes/default/images/datepicker_arr_r.png
+%%WWWDIR%%/themes/default/images/delete.png
+%%WWWDIR%%/themes/default/images/download.png
+%%WWWDIR%%/themes/default/images/ecommerceAbandonedCart.gif
+%%WWWDIR%%/themes/default/images/ecommerceOrder.gif
+%%WWWDIR%%/themes/default/images/email.png
+%%WWWDIR%%/themes/default/images/error.png
+%%WWWDIR%%/themes/default/images/error_medium.png
+%%WWWDIR%%/themes/default/images/expanded_arrows.gif
+%%WWWDIR%%/themes/default/images/export.png
+%%WWWDIR%%/themes/default/images/feed.png
+%%WWWDIR%%/themes/default/images/fullscreen.png
+%%WWWDIR%%/themes/default/images/goal.png
+%%WWWDIR%%/themes/default/images/help.png
+%%WWWDIR%%/themes/default/images/help_grey.png
+%%WWWDIR%%/themes/default/images/html_icon.png
+%%WWWDIR%%/themes/default/images/ico_alert.png
+%%WWWDIR%%/themes/default/images/ico_delete.png
+%%WWWDIR%%/themes/default/images/ico_edit.png
+%%WWWDIR%%/themes/default/images/ico_info.png
+%%WWWDIR%%/themes/default/images/icon-calendar.gif
+%%WWWDIR%%/themes/default/images/image.png
+%%WWWDIR%%/themes/default/images/inp_bg.png
+%%WWWDIR%%/themes/default/images/li_dbl_gray.gif
+%%WWWDIR%%/themes/default/images/link.gif
+%%WWWDIR%%/themes/default/images/loading-blue.gif
+%%WWWDIR%%/themes/default/images/logo-header.png
+%%WWWDIR%%/themes/default/images/logo.png
+%%WWWDIR%%/themes/default/images/minimise.png
+%%WWWDIR%%/themes/default/images/maximise.png
+%%WWWDIR%%/themes/default/images/minus.png
+%%WWWDIR%%/themes/default/images/ok.png
+%%WWWDIR%%/themes/default/images/page_border_grad.png
+%%WWWDIR%%/themes/default/images/plus.png
+%%WWWDIR%%/themes/default/images/plus_blue.png
+%%WWWDIR%%/themes/default/images/refresh.png
+%%WWWDIR%%/themes/default/images/row_evolution.png
+%%WWWDIR%%/themes/default/images/row_evolution_hover.png
+%%WWWDIR%%/themes/default/images/search_bg.png
+%%WWWDIR%%/themes/default/images/search_ico.png
+%%WWWDIR%%/themes/default/images/sites_selection.png
+%%WWWDIR%%/themes/default/images/sort_subtable_asc.png
+%%WWWDIR%%/themes/default/images/sort_subtable_asc_light.png
+%%WWWDIR%%/themes/default/images/sort_subtable_desc.png
+%%WWWDIR%%/themes/default/images/sort_subtable_desc_light.png
+%%WWWDIR%%/themes/default/images/sortasc.png
+%%WWWDIR%%/themes/default/images/sortdesc.png
+%%WWWDIR%%/themes/default/images/success_medium.png
+%%WWWDIR%%/themes/default/images/table.png
+%%WWWDIR%%/themes/default/images/table_more.png
+%%WWWDIR%%/themes/default/images/tagcloud.png
+%%WWWDIR%%/themes/default/images/warning.png
+%%WWWDIR%%/themes/default/images/warning_medium.png
+%%WWWDIR%%/themes/default/images/warning_small.png
+%%WWWDIR%%/themes/default/rtl.css
+%%WWWDIR%%/themes/default/simple_structure.css
+%%WWWDIR%%/themes/default/simple_structure_footer.tpl
+%%WWWDIR%%/themes/default/simple_structure_header.tpl
+%%WWWDIR%%/themes/default/styles.css
+@dirrm %%WWWDIR%%/tmp
+@dirrm %%WWWDIR%%/themes/default/images
+@dirrm %%WWWDIR%%/themes/default
+@dirrm %%WWWDIR%%/themes
+@dirrm %%WWWDIR%%/tests
+@dirrm %%WWWDIR%%/plugins/Widgetize/templates
+@dirrm %%WWWDIR%%/plugins/Widgetize
+@dirrm %%WWWDIR%%/plugins/VisitsSummary/templates
+@dirrm %%WWWDIR%%/plugins/VisitsSummary
+@dirrm %%WWWDIR%%/plugins/VisitorInterest/templates
+@dirrm %%WWWDIR%%/plugins/VisitorInterest
+@dirrm %%WWWDIR%%/plugins/VisitorGenerator/templates
+@dirrm %%WWWDIR%%/plugins/VisitorGenerator/data
+@dirrm %%WWWDIR%%/plugins/VisitorGenerator
+@dirrm %%WWWDIR%%/plugins/VisitTime/templates
+@dirrm %%WWWDIR%%/plugins/VisitTime
+@dirrm %%WWWDIR%%/plugins/VisitFrequency/templates
+@dirrm %%WWWDIR%%/plugins/VisitFrequency
+@dirrm %%WWWDIR%%/plugins/UsersManager/templates
+@dirrm %%WWWDIR%%/plugins/UsersManager/images
+@dirrm %%WWWDIR%%/plugins/UsersManager
+@dirrm %%WWWDIR%%/plugins/UserSettings/templates
+@dirrm %%WWWDIR%%/plugins/UserSettings/images/screens
+@dirrm %%WWWDIR%%/plugins/UserSettings/images/plugins
+@dirrm %%WWWDIR%%/plugins/UserSettings/images/os
+@dirrm %%WWWDIR%%/plugins/UserSettings/images/browsers
+@dirrm %%WWWDIR%%/plugins/UserSettings/images
+@dirrm %%WWWDIR%%/plugins/UserSettings
+@dirrm %%WWWDIR%%/plugins/UserCountryMap/templates
+@dirrm %%WWWDIR%%/plugins/UserCountryMap
+@dirrm %%WWWDIR%%/plugins/UserCountry/LocationProvider/GeoIp
+@dirrm %%WWWDIR%%/plugins/UserCountry/LocationProvider
+@dirrm %%WWWDIR%%/plugins/UserCountry/templates
+@dirrm %%WWWDIR%%/plugins/UserCountry/flags
+@dirrm %%WWWDIR%%/plugins/UserCountry
+@dirrm %%WWWDIR%%/plugins/Transitions/templates
+@dirrm %%WWWDIR%%/plugins/Transitions
+@dirrm %%WWWDIR%%/plugins/SitesManager/templates
+@dirrm %%WWWDIR%%/plugins/SitesManager
+@dirrm %%WWWDIR%%/plugins/SecurityInfo/templates
+@dirrm %%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Suhosin
+@dirrm %%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Session
+@dirrm %%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Curl
+@dirrm %%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Core
+@dirrm %%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/CGI
+@dirrm %%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test/Application
+@dirrm %%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo/Test
+@dirrm %%WWWDIR%%/plugins/SecurityInfo/PhpSecInfo
+@dirrm %%WWWDIR%%/plugins/SecurityInfo
+@dirrm %%WWWDIR%%/plugins/SEO/templates
+@dirrm %%WWWDIR%%/plugins/SEO/images
+@dirrm %%WWWDIR%%/plugins/SEO
+@dirrm %%WWWDIR%%/plugins/Referers/templates
+@dirrm %%WWWDIR%%/plugins/Referers/images/searchEngines
+@dirrm %%WWWDIR%%/plugins/Referers/images
+@dirrm %%WWWDIR%%/plugins/Referers
+@dirrm %%WWWDIR%%/plugins/Proxy/templates
+@dirrm %%WWWDIR%%/plugins/Proxy
+@dirrm %%WWWDIR%%/plugins/Provider
+@dirrm %%WWWDIR%%/plugins/PrivacyManager/templates
+@dirrm %%WWWDIR%%/plugins/PrivacyManager
+@dirrm %%WWWDIR%%/plugins/PDFReports/templates
+@dirrm %%WWWDIR%%/plugins/PDFReports/config
+@dirrm %%WWWDIR%%/plugins/PDFReports
+@dirrm %%WWWDIR%%/plugins/MultiSites/templates
+@dirrm %%WWWDIR%%/plugins/MultiSites/images
+@dirrm %%WWWDIR%%/plugins/MultiSites
+@dirrm %%WWWDIR%%/plugins/MobileMessaging/templates
+@dirrm %%WWWDIR%%/plugins/MobileMessaging/scripts
+@dirrm %%WWWDIR%%/plugins/MobileMessaging/lang
+@dirrm %%WWWDIR%%/plugins/MobileMessaging/images
+@dirrm %%WWWDIR%%/plugins/MobileMessaging/SMSProvider
+@dirrm %%WWWDIR%%/plugins/MobileMessaging/ReportRenderer
+@dirrm %%WWWDIR%%/plugins/MobileMessaging
+@dirrm %%WWWDIR%%/plugins/Login/templates
+@dirrm %%WWWDIR%%/plugins/Login
+@dirrm %%WWWDIR%%/plugins/Live/templates/scripts
+@dirrm %%WWWDIR%%/plugins/Live/templates/images
+@dirrm %%WWWDIR%%/plugins/Live/templates
+@dirrm %%WWWDIR%%/plugins/Live
+@dirrm %%WWWDIR%%/plugins/LanguagesManager/templates
+@dirrm %%WWWDIR%%/plugins/LanguagesManager
+@dirrm %%WWWDIR%%/plugins/Installation/templates
+@dirrm %%WWWDIR%%/plugins/Installation
+@dirrm %%WWWDIR%%/plugins/Insight/templates
+@dirrm %%WWWDIR%%/plugins/Insight/client
+@dirrm %%WWWDIR%%/plugins/Insight
+@dirrm %%WWWDIR%%/plugins/ImageGraph/templates
+@dirrm %%WWWDIR%%/plugins/ImageGraph/fonts
+@dirrm %%WWWDIR%%/plugins/ImageGraph/StaticGraph
+@dirrm %%WWWDIR%%/plugins/ImageGraph
+@dirrm %%WWWDIR%%/plugins/Goals/templates
+@dirrm %%WWWDIR%%/plugins/Goals
+@dirrm %%WWWDIR%%/plugins/Feedback/templates
+@dirrm %%WWWDIR%%/plugins/Feedback/images
+@dirrm %%WWWDIR%%/plugins/Feedback
+@dirrm %%WWWDIR%%/plugins/ExampleUI/images/icons-planet
+@dirrm %%WWWDIR%%/plugins/ExampleUI/images
+@dirrm %%WWWDIR%%/plugins/ExampleUI
+@dirrm %%WWWDIR%%/plugins/ExampleRssWidget/templates
+@dirrm %%WWWDIR%%/plugins/ExampleRssWidget
+@dirrm %%WWWDIR%%/plugins/ExamplePlugin/templates
+@dirrm %%WWWDIR%%/plugins/ExamplePlugin/lang
+@dirrm %%WWWDIR%%/plugins/ExamplePlugin/config
+@dirrm %%WWWDIR%%/plugins/ExamplePlugin
+@dirrm %%WWWDIR%%/plugins/ExampleAPI
+@dirrm %%WWWDIR%%/plugins/DoNotTrack
+@dirrm %%WWWDIR%%/plugins/Dashboard/templates
+@dirrm %%WWWDIR%%/plugins/Dashboard
+@dirrm %%WWWDIR%%/plugins/DBStats/templates
+@dirrm %%WWWDIR%%/plugins/DBStats
+@dirrm %%WWWDIR%%/plugins/CustomVariables
+@dirrm %%WWWDIR%%/plugins/CoreUpdater/templates
+@dirrm %%WWWDIR%%/plugins/CoreUpdater
+@dirrm %%WWWDIR%%/plugins/CorePluginsAdmin/templates
+@dirrm %%WWWDIR%%/plugins/CorePluginsAdmin
+@dirrm %%WWWDIR%%/plugins/CoreHome/DataTableAction
+@dirrm %%WWWDIR%%/plugins/CoreHome/DataTableRowAction
+@dirrm %%WWWDIR%%/plugins/CoreHome/templates/images
+@dirrm %%WWWDIR%%/plugins/CoreHome/templates
+@dirrm %%WWWDIR%%/plugins/CoreHome
+@dirrm %%WWWDIR%%/plugins/CoreAdminHome/templates
+@dirrm %%WWWDIR%%/plugins/CoreAdminHome
+@dirrm %%WWWDIR%%/plugins/AnonymizeIP
+@dirrm %%WWWDIR%%/plugins/Actions/templates
+@dirrm %%WWWDIR%%/plugins/Actions
+@dirrm %%WWWDIR%%/plugins/API/templates
+@dirrm %%WWWDIR%%/plugins/API/css
+@dirrm %%WWWDIR%%/plugins/API
+@dirrm %%WWWDIR%%/plugins
+@dirrm %%WWWDIR%%/misc/proxy-hide-piwik-url
+@dirrm %%WWWDIR%%/misc/others
+@dirrm %%WWWDIR%%/misc/log-analytics
+@dirrm %%WWWDIR%%/misc/cron
+@dirrm %%WWWDIR%%/misc
+@dirrm %%WWWDIR%%/libs/upgradephp
+@dirrm %%WWWDIR%%/libs/tcpdf/fonts
+@dirrm %%WWWDIR%%/libs/tcpdf/config/lang
+@dirrm %%WWWDIR%%/libs/tcpdf/config
+@dirrm %%WWWDIR%%/libs/tcpdf
+@dirrm %%WWWDIR%%/libs/swfobject
+@dirrm %%WWWDIR%%/libs/sparkline/lib
+@dirrm %%WWWDIR%%/libs/sparkline
+@dirrm %%WWWDIR%%/libs/pChart2.1.3/class
+@dirrm %%WWWDIR%%/libs/pChart2.1.3
+@dirrm %%WWWDIR%%/libs/jsmin
+@dirrm %%WWWDIR%%/libs/jquery/themes/base/images
+@dirrm %%WWWDIR%%/libs/jquery/themes/base
+@dirrm %%WWWDIR%%/libs/jquery/themes
+@dirrm %%WWWDIR%%/libs/jquery
+@dirrm %%WWWDIR%%/libs/jqplot/plugins
+@dirrm %%WWWDIR%%/libs/jqplot
+@dirrm %%WWWDIR%%/libs/javascript
+@dirrm %%WWWDIR%%/libs/cssmin
+@dirrm %%WWWDIR%%/libs/Zend/Validate/Sitemap
+@dirrm %%WWWDIR%%/libs/Zend/Validate/Hostname
+@dirrm %%WWWDIR%%/libs/Zend/Validate/File
+@dirrm %%WWWDIR%%/libs/Zend/Validate/Db
+@dirrm %%WWWDIR%%/libs/Zend/Validate/Barcode
+@dirrm %%WWWDIR%%/libs/Zend/Validate
+@dirrm %%WWWDIR%%/libs/Zend/Uri
+@dirrm %%WWWDIR%%/libs/Zend/Session/Validator
+@dirrm %%WWWDIR%%/libs/Zend/Session/SaveHandler
+@dirrm %%WWWDIR%%/libs/Zend/Session
+@dirrm %%WWWDIR%%/libs/Zend/OpenId/Provider/User
+@dirrm %%WWWDIR%%/libs/Zend/OpenId/Provider/Storage
+@dirrm %%WWWDIR%%/libs/Zend/OpenId/Provider
+@dirrm %%WWWDIR%%/libs/Zend/OpenId/Extension
+@dirrm %%WWWDIR%%/libs/Zend/OpenId/Consumer/Storage
+@dirrm %%WWWDIR%%/libs/Zend/OpenId/Consumer
+@dirrm %%WWWDIR%%/libs/Zend/OpenId
+@dirrm %%WWWDIR%%/libs/Zend/Mime
+@dirrm %%WWWDIR%%/libs/Zend/Mail/Transport
+@dirrm %%WWWDIR%%/libs/Zend/Mail/Storage/Writable
+@dirrm %%WWWDIR%%/libs/Zend/Mail/Storage/Folder
+@dirrm %%WWWDIR%%/libs/Zend/Mail/Storage
+@dirrm %%WWWDIR%%/libs/Zend/Mail/Protocol/Smtp/Auth
+@dirrm %%WWWDIR%%/libs/Zend/Mail/Protocol/Smtp
+@dirrm %%WWWDIR%%/libs/Zend/Mail/Protocol
+@dirrm %%WWWDIR%%/libs/Zend/Mail/Part
+@dirrm %%WWWDIR%%/libs/Zend/Mail/Message
+@dirrm %%WWWDIR%%/libs/Zend/Mail
+@dirrm %%WWWDIR%%/libs/Zend/Log/Writer
+@dirrm %%WWWDIR%%/libs/Zend/Log/Formatter
+@dirrm %%WWWDIR%%/libs/Zend/Log/Filter
+@dirrm %%WWWDIR%%/libs/Zend/Log
+@dirrm %%WWWDIR%%/libs/Zend/Http/UserAgent/Storage
+@dirrm %%WWWDIR%%/libs/Zend/Http/UserAgent/Features/Adapter
+@dirrm %%WWWDIR%%/libs/Zend/Http/UserAgent/Features
+@dirrm %%WWWDIR%%/libs/Zend/Http/UserAgent
+@dirrm %%WWWDIR%%/libs/Zend/Http/Response
+@dirrm %%WWWDIR%%/libs/Zend/Http/Client/Adapter
+@dirrm %%WWWDIR%%/libs/Zend/Http/Client
+@dirrm %%WWWDIR%%/libs/Zend/Http
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Feed/Atom
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Feed
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Entry/Atom
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Renderer/Entry
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Renderer
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Feed
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/WellFormedWeb/Renderer
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/WellFormedWeb
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Threading/Renderer
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Threading
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Slash/Renderer
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Slash
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/ITunes/Renderer
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/ITunes
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/DublinCore/Renderer
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/DublinCore
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Content/Renderer
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Content
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Atom/Renderer
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension/Atom
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Extension
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer/Exception
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Writer
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Feed/Atom
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Feed
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Extension/WellFormedWeb
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Thread
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Syndication
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Slash
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Podcast
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Extension/DublinCore
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Extension/CreativeCommons
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Content
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Extension/Atom
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Extension
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Entry
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader/Collection
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Reader
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/Subscriber
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/Model
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub/Http
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Pubsubhubbub
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Entry
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Builder/Header
+@dirrm %%WWWDIR%%/libs/Zend/Feed/Builder
+@dirrm %%WWWDIR%%/libs/Zend/Feed
+@dirrm %%WWWDIR%%/libs/Zend/Db/Table/Select
+@dirrm %%WWWDIR%%/libs/Zend/Db/Table/Rowset
+@dirrm %%WWWDIR%%/libs/Zend/Db/Table/Row
+@dirrm %%WWWDIR%%/libs/Zend/Db/Table
+@dirrm %%WWWDIR%%/libs/Zend/Db/Statement/Sqlsrv
+@dirrm %%WWWDIR%%/libs/Zend/Db/Statement/Pdo
+@dirrm %%WWWDIR%%/libs/Zend/Db/Statement/Oracle
+@dirrm %%WWWDIR%%/libs/Zend/Db/Statement/Mysqli
+@dirrm %%WWWDIR%%/libs/Zend/Db/Statement/Db2
+@dirrm %%WWWDIR%%/libs/Zend/Db/Statement
+@dirrm %%WWWDIR%%/libs/Zend/Db/Select
+@dirrm %%WWWDIR%%/libs/Zend/Db/Profiler
+@dirrm %%WWWDIR%%/libs/Zend/Db/Adapter/Sqlsrv
+@dirrm %%WWWDIR%%/libs/Zend/Db/Adapter/Pdo/Ibm
+@dirrm %%WWWDIR%%/libs/Zend/Db/Adapter/Pdo
+@dirrm %%WWWDIR%%/libs/Zend/Db/Adapter/Oracle
+@dirrm %%WWWDIR%%/libs/Zend/Db/Adapter/Mysqli
+@dirrm %%WWWDIR%%/libs/Zend/Db/Adapter/Db2
+@dirrm %%WWWDIR%%/libs/Zend/Db/Adapter
+@dirrm %%WWWDIR%%/libs/Zend/Db
+@dirrm %%WWWDIR%%/libs/Zend/Config/Writer
+@dirrm %%WWWDIR%%/libs/Zend/Config
+@dirrm %%WWWDIR%%/libs/Zend/Cache/Frontend
+@dirrm %%WWWDIR%%/libs/Zend/Cache/Backend/ZendServer
+@dirrm %%WWWDIR%%/libs/Zend/Cache/Backend
+@dirrm %%WWWDIR%%/libs/Zend/Cache
+@dirrm %%WWWDIR%%/libs/Zend/Auth/Storage
+@dirrm %%WWWDIR%%/libs/Zend/Auth/Adapter/Http/Resolver
+@dirrm %%WWWDIR%%/libs/Zend/Auth/Adapter/Http
+@dirrm %%WWWDIR%%/libs/Zend/Auth/Adapter
+@dirrm %%WWWDIR%%/libs/Zend/Auth
+@dirrm %%WWWDIR%%/libs/Zend
+@dirrm %%WWWDIR%%/libs/UserAgentParser
+@dirrm %%WWWDIR%%/libs/Smarty/plugins
+@dirrm %%WWWDIR%%/libs/Smarty/internals
+@dirrm %%WWWDIR%%/libs/Smarty
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java/src/test/java/org/piwik
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java/src/test/java/org
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java/src/test/java
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java/src/test
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java/src/main/resources
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java/src/main/java/org/piwik
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java/src/main/java/org
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java/src/main/java
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java/src/main
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java/src
+@dirrm %%WWWDIR%%/libs/PiwikTracker/java
+@dirrm %%WWWDIR%%/libs/PiwikTracker
+@dirrm %%WWWDIR%%/libs/PclZip
+@dirrm %%WWWDIR%%/libs/PEAR
+@dirrm %%WWWDIR%%/libs/MaxMindGeoIP
+@dirrm %%WWWDIR%%/libs/HTML/QuickForm2/Rule
+@dirrm %%WWWDIR%%/libs/HTML/QuickForm2/Renderer
+@dirrm %%WWWDIR%%/libs/HTML/QuickForm2/Element
+@dirrm %%WWWDIR%%/libs/HTML/QuickForm2/DataSource
+@dirrm %%WWWDIR%%/libs/HTML/QuickForm2/Controller/Action
+@dirrm %%WWWDIR%%/libs/HTML/QuickForm2/Controller
+@dirrm %%WWWDIR%%/libs/HTML/QuickForm2/Container
+@dirrm %%WWWDIR%%/libs/HTML/QuickForm2
+@dirrm %%WWWDIR%%/libs/HTML
+@dirrm %%WWWDIR%%/libs/Event
+@dirrm %%WWWDIR%%/libs
+@dirrm %%WWWDIR%%/lang
+@dirrm %%WWWDIR%%/js
+@dirrm %%WWWDIR%%/core/Visualization/Chart
+@dirrm %%WWWDIR%%/core/Visualization
+@dirrm %%WWWDIR%%/core/ViewDataTable/HtmlTable
+@dirrm %%WWWDIR%%/core/ViewDataTable/GenerateGraphHTML
+@dirrm %%WWWDIR%%/core/ViewDataTable/GenerateGraphData
+@dirrm %%WWWDIR%%/core/ViewDataTable
+@dirrm %%WWWDIR%%/core/View
+@dirrm %%WWWDIR%%/core/Updates
+@dirrm %%WWWDIR%%/core/Unzip
+@dirrm %%WWWDIR%%/core/Tracker/Db/Pdo
+@dirrm %%WWWDIR%%/core/Tracker/Db
+@dirrm %%WWWDIR%%/core/Tracker
+@dirrm %%WWWDIR%%/core/SmartyPlugins
+@dirrm %%WWWDIR%%/core/Session/SaveHandler
+@dirrm %%WWWDIR%%/core/Session
+@dirrm %%WWWDIR%%/core/ScheduledTime
+@dirrm %%WWWDIR%%/core/ReportRenderer
+@dirrm %%WWWDIR%%/core/PluginsFunctions
+@dirrm %%WWWDIR%%/core/Plugin
+@dirrm %%WWWDIR%%/core/Period
+@dirrm %%WWWDIR%%/core/Menu
+@dirrm %%WWWDIR%%/core/Log
+@dirrm %%WWWDIR%%/core/Db/Schema
+@dirrm %%WWWDIR%%/core/Db/Adapter/Pdo
+@dirrm %%WWWDIR%%/core/Db/Adapter
+@dirrm %%WWWDIR%%/core/Db
+@dirrm %%WWWDIR%%/core/DataTable/Row
+@dirrm %%WWWDIR%%/core/DataTable/Renderer
+@dirrm %%WWWDIR%%/core/DataTable/Filter
+@dirrm %%WWWDIR%%/core/DataTable
+@dirrm %%WWWDIR%%/core/DataFiles
+@dirrm %%WWWDIR%%/core/Controller
+@dirrm %%WWWDIR%%/core/Config
+@dirrm %%WWWDIR%%/core/ArchiveProcessing
+@dirrm %%WWWDIR%%/core/Archive/Array
+@dirrm %%WWWDIR%%/core/Archive
+@dirrm %%WWWDIR%%/core/API/DataTableManipulator
+@dirrm %%WWWDIR%%/core/API
+@dirrm %%WWWDIR%%/core
+@dirrm %%WWWDIR%%/config
+@dirrm %%WWWDIR%%
