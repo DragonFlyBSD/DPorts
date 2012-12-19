@@ -1,0 +1,7 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/Autouse/.packlist
+%%SITE_PERL%%/Class/Autouse/Parent.pm
+%%SITE_PERL%%/Class/Autouse.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/Autouse
+@dirrm %%SITE_PERL%%/Class/Autouse
+@dirrmtry %%SITE_PERL%%/Class
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class
