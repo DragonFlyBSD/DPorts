@@ -1,0 +1,17 @@
+bin/unnethack
+%%DATADIR%%/nhdat
+%%DATADIR%%/recover
+%%DATADIR%%/unnethack
+@dirrm %%DATADIR%%
+%%VARDIR%%/logfile
+%%VARDIR%%/perm
+%%VARDIR%%/record
+%%VARDIR%%/xlogfile
+@dirrmtry %%VARDIR%%/bones
+@dirrmtry %%VARDIR%%/level
+@dirrmtry %%VARDIR%%/saves
+@unexec rmdir -p %D/%%VARDIR%% 2>/dev/null || true
+%%DOCSDIR%%/Guidebook.txt
+%%DOCSDIR%%/license
+%%PORTDOCS%%%%DOCSDIR%%/sample.unnethackrc
+@dirrm %%DOCSDIR%%
