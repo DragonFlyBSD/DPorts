@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net/DarwinStreamingServer/files/streamingadminserver.in,v 1.2 2012/11/17 05:59:56 svnexp Exp $
+#
+# PROVIDE: streamingadminserver
+# REQUIRE: login
+#
+streamingadminserver_enable=${streamingadminserver_enable-"NO"}
+
+. /etc/rc.subr
+
+name=streamingadminserver
+rcvar=streamingadminserver_enable
+command=%%PREFIX%%/sbin/${name}.pl
+command_interpreter=%%PERL%%
+
+load_rc_config ${name}
+
+pidfile=/var/run/streamingadminserver.pid
+
+run_rc_command "$1"
