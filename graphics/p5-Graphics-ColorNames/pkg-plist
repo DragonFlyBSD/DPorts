@@ -1,0 +1,7 @@
+%%SITE_PERL%%/Graphics/ColorNames.pm
+%%SITE_PERL%%/Graphics/ColorNames/HTML.pm
+%%SITE_PERL%%/Graphics/ColorNames/Netscape.pm
+%%SITE_PERL%%/Graphics/ColorNames/Windows.pm
+%%SITE_PERL%%/Graphics/ColorNames/X.pm
+@dirrm %%SITE_PERL%%/Graphics/ColorNames
+@dirrmtry %%SITE_PERL%%/Graphics
