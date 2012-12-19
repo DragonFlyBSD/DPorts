@@ -1,0 +1,10 @@
+%%SITE_PERL%%/CGI/Untaint.pm
+%%SITE_PERL%%/CGI/Untaint/hex.pm
+%%SITE_PERL%%/CGI/Untaint/integer.pm
+%%SITE_PERL%%/CGI/Untaint/object.pm
+%%SITE_PERL%%/CGI/Untaint/printable.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/Untaint/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/Untaint
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI
+@dirrm %%SITE_PERL%%/CGI/Untaint
+@dirrmtry %%SITE_PERL%%/CGI
