@@ -1,0 +1,3 @@
+%%SITE_PERL%%/Data/Dumper/Simple.pm
+@dirrmtry %%SITE_PERL%%/Data/Dumper
+@dirrmtry %%SITE_PERL%%/Data
