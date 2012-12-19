@@ -1,0 +1,24 @@
+# New ports collection makefile for:	lxmenu-data
+# Date created:		Fri Sept 24 09:52:35 EST 2010
+# Whom:			Kris Moore <kmoore@freebsd.org>
+#
+# $FreeBSD: ports/x11/lxmenu-data/Makefile,v 1.6 2012/11/17 06:03:18 svnexp Exp $
+#
+
+PORTNAME=	lxmenu-data
+PORTVERSION=	0.1.2
+CATEGORIES=	x11
+MASTER_SITES=	SF/lxde/lxmenu-data%20%28desktop%20menu%29/lxmenu-data%20${PORTVERSION}
+
+MAINTAINER=	kmoore@FreeBSD.org
+COMMENT=	Menu data used by lxpanel
+
+USE_XORG=	x11 xmu
+USE_GNOME=	intltool
+USE_GETTEXT=	yes
+GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	automake:env
+CONFIGURE_ARGS+=--prefix=${LOCALBASE} --sysconfdir=${LOCALBASE}/etc
+USE_GMAKE=	yes
+
+.include <bsd.port.mk>
