@@ -1,0 +1,25 @@
+# New ports collection makefile for:	Net-IMAP-Client
+# Date created:	   02 Feb 2010
+# Whom:		   Sergey Skvortsov <skv@protey.ru>
+#
+# $FreeBSD: ports/mail/p5-Net-IMAP-Client/Makefile,v 1.5 2012/11/17 05:59:09 svnexp Exp $
+#
+
+PORTNAME=	Net-IMAP-Client
+PORTVERSION=	0.9501
+CATEGORIES=	mail perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Not so simple IMAP client library
+
+RUN_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
+		p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL
+
+PERL_CONFIGURE=	YES
+
+MAN3=		Net::IMAP::Client.3 Net::IMAP::Client::MsgAddress.3 \
+		Net::IMAP::Client::MsgSummary.3
+
+.include <bsd.port.mk>
