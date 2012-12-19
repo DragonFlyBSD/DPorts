@@ -1,0 +1,23 @@
+# New ports collection makefile for:   devel/p5-Shell-EnvImporter
+# Date created:                                25 Aug 2006
+# Whom:                                        Martin Jackson (mhjacks@swbell.net)
+#
+# $FreeBSD: ports/devel/p5-Shell-EnvImporter/Makefile,v 1.8 2012/11/17 05:56:29 svnexp Exp $
+#
+
+PORTNAME=	Shell-EnvImporter
+PORTVERSION=	1.07
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	mhjacks@swbell.net
+COMMENT=	Inherit different shell environments and restore previous
+
+RUN_DEPENDS=	p5-Class-MethodMaker>=0:${PORTSDIR}/devel/p5-Class-MethodMaker
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Shell::EnvImporter.3 Shell::EnvImporter::Result.3 Shell::EnvImporter::Shell.3
+
+.include <bsd.port.mk>
