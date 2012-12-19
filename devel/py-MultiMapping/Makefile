@@ -1,0 +1,27 @@
+# New ports collection makefile for:	py-MultiMapping
+# Date created:				Nov 14, 2011
+# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
+#
+# $FreeBSD: ports/devel/py-MultiMapping/Makefile,v 1.3 2012/11/17 05:56:44 svnexp Exp $
+#
+
+PORTNAME=	MultiMapping
+PORTVERSION=	2.13.0
+CATEGORIES=	devel python zope
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DIST_SUBDIR=	zope
+
+MAINTAINER=	zope@FreeBSD.org
+COMMENT=	Special MultiMapping objects used in Zope2
+
+LICENSE=	ZPL21
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ExtensionClass>=0:${PORTSDIR}/devel/py-ExtensionClass
+
+PYEASYINSTALL_ARCHDEP=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	easy_install
+USE_ZIP=		yes
+
+.include <bsd.port.mk>
