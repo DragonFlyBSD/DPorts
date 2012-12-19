@@ -1,0 +1,51 @@
+# New ports collection makefile for:	ruby-libxml
+# Date created:		09 July 2002
+# Whom:	      		Sean Chittenden <seanc@FreeBSD.org>
+#
+# $FreeBSD: ports/textproc/ruby-libxml/Makefile,v 1.34 2012/11/17 06:02:19 svnexp Exp $
+#
+
+PORTNAME=	libxml
+PORTVERSION=	1.1.3
+CATEGORIES=	textproc ruby
+MASTER_SITES=	RF
+PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
+DISTNAME=	${PORTNAME}-ruby-${PORTVERSION}
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	gahr@FreeBSD.org
+COMMENT=	A friendly API to libxml for Ruby
+
+LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
+
+USE_RUBY=	yes
+USE_ICONV=	yes
+USE_LDCONFIG=	${RUBY_SITEARCHLIBDIR}/xml
+
+EXT_ARGS=	--with-iconv-dir=${LOCALBASE} \
+		--with-iconv-lib=${LOCALBASE}/lib \
+		--with-iconv-include=${LOCALBASE}/include
+
+post-patch:
+	${REINPLACE_CMD} -e 's|libxml_ruby|xml/libxml_ruby|' \
+	    ${WRKSRC}/lib/libxml.rb
+
+do-configure:
+	cd ${WRKSRC}/ext/libxml && ${RUBY} extconf.rb build ${EXT_ARGS}
+
+do-build:
+	cd ${WRKSRC}/ext/libxml && ${MAKE}
+
+do-install:
+	${INSTALL} -d ${RUBY_SITELIBDIR}/xml ${RUBY_SITELIBDIR}/libxml ${RUBY_SITEARCHLIBDIR}/xml
+	${INSTALL_DATA} ${WRKSRC}/lib/libxml.rb ${RUBY_SITELIBDIR}/xml
+	(cd ${WRKSRC}/lib/libxml && ${COPYTREE_SHARE} \*.rb ${RUBY_SITELIBDIR}/libxml)
+	${INSTALL_DATA} ${WRKSRC}/ext/libxml/libxml_ruby.so ${RUBY_SITEARCHLIBDIR}/xml/
+
+.include <bsd.port.pre.mk>
+
+.if ${RUBY_VER} == 1.9
+BROKEN=	extconf.rb:6: [BUG] Segmentation fault
+.endif
+
+.include <bsd.port.post.mk>
