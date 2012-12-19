@@ -1,0 +1,14 @@
+#!/bin/sh
+# $FreeBSD: ports/russian/fortune-bashorgru/pkg-install,v 1.2 2012/11/17 06:00:55 svnexp Exp $
+#
+
+if [ "$2" != "PRE-INSTALL" ]; then
+    exit 0
+fi
+
+if [ ! -x "/usr/games/strfile" ]; then
+    echo ""
+    echo "You must have the ``games'' distribution installed to use this port."
+    echo ""
+    exit 1
+fi
