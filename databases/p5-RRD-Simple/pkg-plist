@@ -1,0 +1,4 @@
+%%SITE_PERL%%/RRD/Simple.pm
+%%SITE_PERL%%/RRD/Simple/Examples.pod
+@dirrmtry %%SITE_PERL%%/RRD/Simple
+@dirrmtry %%SITE_PERL%%/RRD
