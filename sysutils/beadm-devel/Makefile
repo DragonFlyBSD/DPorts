@@ -1,7 +1,7 @@
-# $FreeBSD: ports/sysutils/beadm-devel/Makefile,v 1.11 2012/12/01 02:22:48 svnexp Exp $
+# $FreeBSD: ports/sysutils/beadm-devel/Makefile,v 1.12 2012/12/05 22:27:45 svnexp Exp $
 
 PORTNAME=	beadm
-PORTVERSION=	0.8.99.20121130
+PORTVERSION=	0.8.99.20121205
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
@@ -12,7 +12,7 @@ LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	vermaden
-GH_COMMIT=	8f412c0
+GH_COMMIT=	393d285
 GH_TAGNAME=	${GH_COMMIT}
 
 NO_BUILD=	YES
