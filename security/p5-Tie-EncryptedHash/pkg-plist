@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Tie/EncryptedHash.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie/EncryptedHash/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie/EncryptedHash
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Tie
+@dirrmtry %%SITE_PERL%%/Tie
