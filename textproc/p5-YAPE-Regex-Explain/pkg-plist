@@ -1,0 +1,7 @@
+%%SITE_PERL%%/YAPE/Regex/Explain.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/YAPE/Regex/Explain/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/YAPE/Regex/Explain
+@dirrmtry %%SITE_PERL%%/YAPE/Regex
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/YAPE/Regex
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/YAPE
+@dirrmtry %%SITE_PERL%%/YAPE
