@@ -1,0 +1,26 @@
+# New ports collection makefile for:	rubygem-compass
+# Date created:		2011-10-07
+# Whom:			Jason Helfman <jhelfman@experts-exchange.com>
+#
+# $FreeBSD: ports/textproc/rubygem-compass/Makefile,v 1.8 2012/11/17 06:02:20 svnexp Exp $
+#
+
+PORTNAME=	compass
+PORTVERSION=	0.12.2
+CATEGORIES=	textproc ruby
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Provides an open-source CSS authoring framework
+
+RUN_DEPENDS=	rubygem-sass>=3.1:${PORTSDIR}/textproc/rubygem-sass \
+		rubygem-fssm>=0.2.7:${PORTSDIR}/sysutils/rubygem-fssm \
+		rubygem-chunky_png>=1.2:${PORTSDIR}/graphics/rubygem-chunky_png
+
+USE_RUBY=		yes
+USE_RUBYGEMS=		yes
+RUBYGEM_AUTOPLIST=	yes
+
+PLIST_FILES=	bin/compass
+
+.include <bsd.port.mk>
