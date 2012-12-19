@@ -1,0 +1,31 @@
+# New ports collection makefile for:	p5-XML-SimpleObject
+# Date created:				14 November 2001
+# Whom:	      				steve
+#
+# $FreeBSD: ports/textproc/p5-XML-SimpleObject/Makefile,v 1.11 2012/11/17 06:02:14 svnexp Exp $
+#
+
+PORTNAME=	XML-SimpleObject
+PORTVERSION=	0.53
+PORTREVISION=	1
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	API for accessing the structure of an XML document
+
+BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
+
+WRKSRC?=	${WRKDIR}/${PORTNAME}${PORTVERSION}
+
+PERL_CONFIGURE=	YES
+CONFIGURE_ARGS+=	DIR='Enhanced'
+
+MAN3=		XML::SimpleObject.3
+
+post-patch:
+	${PERL} -pi -e 's/^our\s+([\$$\@\%]\w+)/use vars qw($$1);$$1/;' \
+		${WRKSRC}/SimpleObject.pm ${WRKSRC}/LibXML/LibXML.pm
+
+.include <bsd.port.mk>
