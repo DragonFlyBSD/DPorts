@@ -1,0 +1,62 @@
+%%EXE_FILES%%bin/cpan2dist
+%%EXE_FILES%%bin/cpanp
+%%EXE_FILES%%bin/cpanp-run-perl
+%%SITE_PERL%%/CPANPLUS.pm
+%%SITE_PERL%%/CPANPLUS/Backend.pm
+%%SITE_PERL%%/CPANPLUS/Backend/RV.pm
+%%SITE_PERL%%/CPANPLUS/Config.pm
+%%SITE_PERL%%/CPANPLUS/Config/HomeEnv.pm
+%%SITE_PERL%%/CPANPLUS/Configure.pm
+%%SITE_PERL%%/CPANPLUS/Configure/Setup.pm
+%%SITE_PERL%%/CPANPLUS/Dist.pm
+%%SITE_PERL%%/CPANPLUS/Dist/Autobundle.pm
+%%SITE_PERL%%/CPANPLUS/Dist/Base.pm
+%%SITE_PERL%%/CPANPLUS/Dist/MM.pm
+%%SITE_PERL%%/CPANPLUS/Dist/Sample.pm
+%%SITE_PERL%%/CPANPLUS/Error.pm
+%%SITE_PERL%%/CPANPLUS/FAQ.pod
+%%SITE_PERL%%/CPANPLUS/Hacking.pod
+%%SITE_PERL%%/CPANPLUS/Internals.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Constants.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Constants/Report.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Extract.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Fetch.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Report.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Search.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Source.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Source/SQLite/Tie.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Source/SQLite.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Source/Memory.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Utils.pm
+%%SITE_PERL%%/CPANPLUS/Internals/Utils/Autoflush.pm
+%%SITE_PERL%%/CPANPLUS/Module.pm
+%%SITE_PERL%%/CPANPLUS/Module/Author.pm
+%%SITE_PERL%%/CPANPLUS/Module/Author/Fake.pm
+%%SITE_PERL%%/CPANPLUS/Module/Checksums.pm
+%%SITE_PERL%%/CPANPLUS/Module/Fake.pm
+%%SITE_PERL%%/CPANPLUS/Module/Signature.pm
+%%SITE_PERL%%/CPANPLUS/Selfupdate.pm
+%%SITE_PERL%%/CPANPLUS/Shell.pm
+%%SITE_PERL%%/CPANPLUS/Shell/Classic.pm
+%%SITE_PERL%%/CPANPLUS/Shell/Default.pm
+%%SITE_PERL%%/CPANPLUS/Shell/Default/Plugins/CustomSource.pm
+%%SITE_PERL%%/CPANPLUS/Shell/Default/Plugins/HOWTO.pod
+%%SITE_PERL%%/CPANPLUS/Shell/Default/Plugins/Remote.pm
+%%SITE_PERL%%/CPANPLUS/Shell/Default/Plugins/Source.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/CPANPLUS/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/CPANPLUS
+@dirrm %%SITE_PERL%%/CPANPLUS/Shell/Default/Plugins
+@dirrm %%SITE_PERL%%/CPANPLUS/Shell/Default
+@dirrm %%SITE_PERL%%/CPANPLUS/Shell
+@dirrm %%SITE_PERL%%/CPANPLUS/Module/Author
+@dirrm %%SITE_PERL%%/CPANPLUS/Module
+@dirrm %%SITE_PERL%%/CPANPLUS/Internals/Source/SQLite
+@dirrm %%SITE_PERL%%/CPANPLUS/Internals/Source
+@dirrm %%SITE_PERL%%/CPANPLUS/Internals/Utils
+@dirrm %%SITE_PERL%%/CPANPLUS/Internals/Constants
+@dirrm %%SITE_PERL%%/CPANPLUS/Internals
+@dirrm %%SITE_PERL%%/CPANPLUS/Dist
+@dirrm %%SITE_PERL%%/CPANPLUS/Config
+@dirrm %%SITE_PERL%%/CPANPLUS/Configure
+@dirrm %%SITE_PERL%%/CPANPLUS/Backend
+@dirrm %%SITE_PERL%%/CPANPLUS
