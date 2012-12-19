@@ -1,0 +1,20 @@
+# Ports collection makefile for:	rubygem-abstract
+# Date created:				07 October 2008
+# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
+#
+# $FreeBSD: ports/devel/rubygem-abstract/Makefile,v 1.6 2012/11/17 05:56:58 svnexp Exp $
+
+PORTNAME=	abstract
+PORTVERSION=	1.0.0
+PORTREVISION=	1
+CATEGORIES=	devel rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Define abstract method in Ruby
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
