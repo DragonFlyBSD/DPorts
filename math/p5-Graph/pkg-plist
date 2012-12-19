@@ -1,0 +1,34 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Graph/.packlist
+%%SITE_PERL%%/Graph.pm
+%%SITE_PERL%%/Graph.pod
+%%SITE_PERL%%/Graph/AdjacencyMap.pm
+%%SITE_PERL%%/Graph/AdjacencyMap/Heavy.pm
+%%SITE_PERL%%/Graph/AdjacencyMap/Light.pm
+%%SITE_PERL%%/Graph/AdjacencyMap/Vertex.pm
+%%SITE_PERL%%/Graph/AdjacencyMatrix.pm
+%%SITE_PERL%%/Graph/Attribute.pm
+%%SITE_PERL%%/Graph/BitMatrix.pm
+%%SITE_PERL%%/Graph/Directed.pm
+%%SITE_PERL%%/Graph/MSTHeapElem.pm
+%%SITE_PERL%%/Graph/Matrix.pm
+%%SITE_PERL%%/Graph/SPTHeapElem.pm
+%%SITE_PERL%%/Graph/TransitiveClosure.pm
+%%SITE_PERL%%/Graph/TransitiveClosure/Matrix.pm
+%%SITE_PERL%%/Graph/Traversal.pm
+%%SITE_PERL%%/Graph/Traversal/BFS.pm
+%%SITE_PERL%%/Graph/Traversal/DFS.pm
+%%SITE_PERL%%/Graph/Undirected.pm
+%%SITE_PERL%%/Graph/UnionFind.pm
+%%SITE_PERL%%/Heap071/Elem.pm
+%%SITE_PERL%%/Heap071/Fibonacci.pm
+%%SITE_PERL%%/auto/Heap071/Elem/autosplit.ix
+%%SITE_PERL%%/auto/Heap071/Fibonacci/autosplit.ix
+@dirrmtry %%SITE_PERL%%/auto/Heap071/Fibonacci
+@dirrmtry %%SITE_PERL%%/auto/Heap071/Elem
+@dirrmtry %%SITE_PERL%%/auto/Heap071
+@dirrmtry %%SITE_PERL%%/Heap071
+@dirrmtry %%SITE_PERL%%/Graph/Traversal
+@dirrmtry %%SITE_PERL%%/Graph/TransitiveClosure
+@dirrmtry %%SITE_PERL%%/Graph/AdjacencyMap
+@dirrmtry %%SITE_PERL%%/Graph
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Graph
