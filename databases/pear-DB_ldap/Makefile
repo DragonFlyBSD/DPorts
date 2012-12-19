@@ -1,0 +1,22 @@
+# Ports collection makefile for:  pear-DB_ldap
+# Date created:			  08 March 2005
+# Whom:				  Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
+#
+# $FreeBSD: ports/databases/pear-DB_ldap/Makefile,v 1.9 2012/11/17 05:55:17 svnexp Exp $
+#
+
+PORTNAME=	DB_ldap
+PORTVERSION=	1.2.1
+CATEGORIES=	databases net pear
+
+MAINTAINER=	miwi@FreeBSD.org
+COMMENT=	PEAR DB compliant interface to LDAP servers
+
+BUILD_DEPENDS=	${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB
+RUN_DEPENDS:=	${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB
+
+PEAR_AUTOINSTALL=	yes
+
+.include <bsd.port.pre.mk>
+.include "${PORTSDIR}/devel/pear/bsd.pear.mk"
+.include <bsd.port.post.mk>
