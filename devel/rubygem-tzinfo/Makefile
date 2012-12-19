@@ -1,0 +1,20 @@
+# Ports collection makefile for:	tzinfo
+# Date created:				9 June 2006
+# Whom:					Rui Lopes (rgl ruilopes com)
+#
+# $FreeBSD: ports/devel/rubygem-tzinfo/Makefile,v 1.35 2012/11/17 05:57:01 svnexp Exp $
+#
+
+PORTNAME=	tzinfo
+PORTVERSION=	0.3.33
+CATEGORIES=	devel rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Daylight-savings aware timezone support for Ruby
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
