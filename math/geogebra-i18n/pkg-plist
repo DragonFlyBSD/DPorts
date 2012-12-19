@@ -1,0 +1,62 @@
+@comment $FreeBSD: ports/math/geogebra-i18n/pkg-plist,v 1.3 2012/11/17 05:59:20 svnexp Exp $
+bin/geogebra
+share/applications/geogebra.desktop
+share/icons/hicolor/128x128/apps/geogebra.png
+share/icons/hicolor/128x128/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/128x128/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/16x16/apps/geogebra.png
+share/icons/hicolor/16x16/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/16x16/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/192x192/apps/geogebra.png
+share/icons/hicolor/192x192/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/192x192/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/22x22/apps/geogebra.png
+share/icons/hicolor/22x22/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/22x22/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/24x24/apps/geogebra.png
+share/icons/hicolor/24x24/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/24x24/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/256x256/apps/geogebra.png
+share/icons/hicolor/256x256/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/256x256/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/32x32/apps/geogebra.png
+share/icons/hicolor/32x32/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/32x32/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/36x36/apps/geogebra.png
+share/icons/hicolor/36x36/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/36x36/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/48x48/apps/geogebra.png
+share/icons/hicolor/48x48/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/48x48/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/64x64/apps/geogebra.png
+share/icons/hicolor/64x64/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/64x64/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/72x72/apps/geogebra.png
+share/icons/hicolor/72x72/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/72x72/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/96x96/apps/geogebra.png
+share/icons/hicolor/96x96/mimetypes/application-vnd.geogebra.file.png
+share/icons/hicolor/96x96/mimetypes/application-vnd.geogebra.tool.png
+share/icons/hicolor/scalable/apps/geogebra.svgz
+share/icons/hicolor/scalable/mimetypes/application-vnd.geogebra.file.svgz
+share/icons/hicolor/scalable/mimetypes/application-vnd.geogebra.tool.svgz
+share/java/geogebra-i18n/geogebra.jar
+share/java/geogebra-i18n/geogebra_cas.jar
+share/java/geogebra-i18n/geogebra_export.jar
+share/java/geogebra-i18n/geogebra_gui.jar
+share/java/geogebra-i18n/geogebra_main.jar
+share/java/geogebra-i18n/geogebra_properties.jar
+share/java/geogebra-i18n/unsigned/geogebra.jar
+share/java/geogebra-i18n/unsigned/geogebra_cas.jar
+share/java/geogebra-i18n/unsigned/geogebra_export.jar
+share/java/geogebra-i18n/unsigned/geogebra_gui.jar
+share/java/geogebra-i18n/unsigned/geogebra_main.jar
+share/java/geogebra-i18n/unsigned/geogebra_properties.jar
+share/java/geogebra-i18n/unsigned/number_of_degs_in_straight_angle.ggb
+share/mime/packages/geogebra.xml
+@dirrm share/java/geogebra-i18n/unsigned
+@dirrm share/java/geogebra-i18n
+@exec %%LOCALBASE%%/bin/update-desktop-database || /usr/bin/true
+@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-mime-database %%LOCALBASE%%/share/mime || /usr/bin/true
