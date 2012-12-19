@@ -1,0 +1,8 @@
+bin/openvas-libnasl-config
+bin/openvas-nasl
+include/openvas/nasl.h
+lib/libopenvasnasl.a
+lib/libopenvasnasl.la
+lib/libopenvasnasl.so
+lib/libopenvasnasl.so.2
+@dirrmtry include/openvas
