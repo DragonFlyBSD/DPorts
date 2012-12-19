@@ -1,0 +1,6 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Template/Plugin/MP3/.packlist
+%%SITE_PERL%%/Template/Plugin/MP3.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Template/Plugin/MP3
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Template/Plugin
+@dirrmtry %%SITE_PERL%%/Template/Plugin
+@dirrmtry %%SITE_PERL%%/Template
