@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/devel/flyspray/files/pkg-install.in,v 1.2 2012/11/17 05:55:43 svnexp Exp $
+
+case $2 in
+	POST-INSTALL)
+		if [ ! -d %%ATTACHMENTDIR%% ]; then
+			%%MKDIR%% %%ATTACHMENTDIR%%
+		fi
+		%%CHMOD%% 750 %%ATTACHMENTDIR%%
+		%%CHOWN%% %%WWWOWN%%:%%WWWGRP%% %%ATTACHMENTDIR%%
+	;;
+esac
