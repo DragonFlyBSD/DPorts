@@ -1,0 +1,31 @@
+# Created by: Cezary Morga <cm@therek.net>
+# $FreeBSD: ports/textproc/p5-PPIx-EditorTools/Makefile,v 1.9 2012/11/17 06:02:06 svnexp Exp $
+
+PORTNAME=	PPIx-EditorTools
+PORTVERSION=	0.11
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:AZAWAWI
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Utility methods and base class for manipulating Perl via PPI
+
+BUILD_DEPENDS=	p5-Class-XSAccessor>=1.02:${PORTSDIR}/devel/p5-Class-XSAccessor \
+		p5-PPI>=1.203:${PORTSDIR}/textproc/p5-PPI
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
+		p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most
+
+PERL_CONFIGURE=	yes
+
+MAN3=		PPIx::EditorTools::RenamePackage.3 \
+		PPIx::EditorTools::RenamePackageFromPath.3 \
+		PPIx::EditorTools::ReturnObject.3 \
+		PPIx::EditorTools::FindVariableDeclaration.3 \
+		PPIx::EditorTools::IntroduceTemporaryVariable.3 \
+		PPIx::EditorTools::RenameVariable.3 \
+		PPIx::EditorTools.3 \
+		PPIx::EditorTools::FindUnmatchedBrace.3
+
+.include <bsd.port.mk>
