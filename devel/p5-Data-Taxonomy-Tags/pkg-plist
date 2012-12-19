@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Data/Taxonomy/Tags.pm
+%%SITE_PERL%%/Data/Taxonomy/Tags/Tag.pm
+@dirrm %%SITE_PERL%%/Data/Taxonomy/Tags
+@dirrmtry %%SITE_PERL%%/Data/Taxonomy
+@dirrmtry %%SITE_PERL%%/Data
