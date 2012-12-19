@@ -1,0 +1,3 @@
+@comment $FreeBSD: ports/net/xipdump/pkg-plist,v 1.2 2012/11/17 06:00:25 svnexp Exp $
+bin/xipdump
+lib/X11/app-defaults/Xipdump
