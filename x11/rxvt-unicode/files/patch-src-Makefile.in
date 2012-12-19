@@ -1,0 +1,18 @@
+--- src/Makefile.in.orig	2010-12-13 17:49:10.000000000 +0100
++++ src/Makefile.in	2010-12-28 10:10:42.000000000 +0100
+@@ -44,6 +44,7 @@
+ 
+ RXVT_BINNAME=$(DESTDIR)$(bindir)/$(RXVTNAME)$(EXEEXT)
+ RXVTC_BINNAME=$(DESTDIR)$(bindir)/$(RXVTNAME)c$(EXEEXT)
++RXVTCD_BINNAME=$(DESTDIR)$(bindir)/$(RXVTNAME)cd$(EXEEXT)
+ RXVTD_BINNAME=$(DESTDIR)$(bindir)/$(RXVTNAME)d$(EXEEXT)
+ 
+ #
+@@ -107,6 +108,7 @@
+ 	$(INSTALL) -d $(DESTDIR)$(bindir)
+ 	$(INSTALL_PROGRAM) rxvt  $(RXVT_BINNAME)
+ 	$(INSTALL_PROGRAM) rxvtc $(RXVTC_BINNAME)
++	$(INSTALL_PROGRAM) urxvtcd $(RXVTCD_BINNAME)
+ 	$(INSTALL_PROGRAM) rxvtd $(RXVTD_BINNAME)
+ 
+ install: install-bin install-perl

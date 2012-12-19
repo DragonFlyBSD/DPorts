@@ -1,0 +1,34 @@
+bin/urxvt
+bin/urxvtc
+bin/urxvtcd
+bin/urxvtd
+%%PERL%%lib/urxvt/perl/bell-command
+%%PERL%%lib/urxvt/perl/block-graphics-to-ascii
+%%PERL%%lib/urxvt/perl/clipboard-osc
+%%PERL%%lib/urxvt/perl/confirm-paste
+%%PERL%%lib/urxvt/perl/digital-clock
+%%PERL%%lib/urxvt/perl/example-refresh-hooks
+%%PERL%%lib/urxvt/perl/keysym-list
+%%PERL%%lib/urxvt/perl/kuake
+%%PERL%%lib/urxvt/perl/macosx-clipboard
+%%PERL%%lib/urxvt/perl/macosx-clipboard-native
+%%PERL%%lib/urxvt/perl/matcher
+%%PERL%%lib/urxvt/perl/option-popup
+%%PERL%%lib/urxvt/perl/overlay-osc
+%%PERL%%lib/urxvt/perl/readline
+%%PERL%%lib/urxvt/perl/remote-clipboard
+%%PERL%%lib/urxvt/perl/searchable-scrollback
+%%PERL%%lib/urxvt/perl/selection
+%%PERL%%lib/urxvt/perl/selection-autotransform
+%%PERL%%lib/urxvt/perl/selection-pastebin
+%%PERL%%lib/urxvt/perl/selection-popup
+%%PERL%%lib/urxvt/perl/tabbed
+%%PERL%%lib/urxvt/perl/urxvt-popup
+%%PERL%%lib/urxvt/perl/xim-onthespot
+%%PERL%%lib/urxvt/urxvt.pm
+%%PERL%%@dirrm lib/urxvt/perl
+%%PERL%%@dirrm lib/urxvt
+@cwd %%LOCALBASE%%
+share/misc/rxvt-unicode.terminfo
+@exec tic %%LOCALBASE%%/share/misc/rxvt-unicode.terminfo
+@comment No unexec tic available
