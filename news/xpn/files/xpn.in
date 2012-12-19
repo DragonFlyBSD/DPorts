@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/news/xpn/files/xpn.in,v 1.2 2012/11/17 06:00:43 svnexp Exp $
+#
+if [ -z "$1" ] ; then
+    export XPN_ARGS=-d
+else
+    export XPN_ARGS="$@"
+fi
+exec %%PYTHON_CMD%% %%DATADIR%%/%%XPN%% ${XPN_ARGS}
