@@ -1,0 +1,57 @@
+# New ports collection makefile for:	dokuwiki
+# Date created:		2005-04-10
+# Whom:			chinsan <chinsan@mail2000.com.tw>
+#
+# $FreeBSD: ports/www/dokuwiki/Makefile,v 1.58 2012/11/17 06:02:31 svnexp Exp $
+#
+
+PORTNAME=	dokuwiki
+PORTVERSION=	${DIST_VER:S/${PORTNAME}//:S/-//g}
+CATEGORIES=	www
+MASTER_SITES=	http://www.splitbrain.org/_media/projects/dokuwiki/ \
+		LOCAL/chinsan/${PORTNAME}
+DISTNAME=	${DIST_VER}
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	delphij@FreeBSD.org
+COMMENT=	A simple and easy to use wiki, no database required
+
+DIST_VER=	${PORTNAME}-2012-10-13
+USE_PHP=	gd mbstring openssl pcre session xml zlib
+NO_BUILD=	YES
+WANT_PHP_WEB=	YES
+
+DOKUWIKI_DIR?=	www/${PORTNAME}
+WRKSRC=		${WRKDIR}/${DIST_VER}
+PLIST_SUB=	DOKUWIKI_DIR=${DOKUWIKI_DIR}
+TEMP_PLIST=	${WRKDIR}/temp-pkg-plist
+SUB_FILES=	pkg-message
+SUB_LIST+=	PORTNAME=${PORTNAME} DOKUWIKI_DIR=${DOKUWIKI_DIR}
+
+REINPLACE_ARGS=	-i ''
+
+.include <bsd.port.pre.mk>
+
+# This target is only meant to be used by the port maintainer.
+x-generate-plist:
+	@cd ${WRKSRC} && ${FIND} -s . -type f | \
+		${SED} -e 's|^./||;s|^|%%DOKUWIKI_DIR%%/|' > ${TEMP_PLIST} \
+		&& ${FIND} -d * -type d | \
+		${SED} -e 's|^|@dirrm %%DOKUWIKI_DIR%%/|' >> ${TEMP_PLIST} \
+		&& ${ECHO_CMD} "@dirrmtry %%DOKUWIKI_DIR%%" >> ${TEMP_PLIST}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/usr/bin|${LOCALBASE}/bin|' ${WRKSRC}/bin/*.php
+	@${FIND} ${WRKSRC} -name '*.orig' -delete
+	@${RM} ${WRKSRC}/data/deleted.files
+
+do-install:
+# Data files
+	-${MKDIR} ${PREFIX}/${DOKUWIKI_DIR}
+	@${CP} -R ${WRKSRC}/ ${PREFIX}/${DOKUWIKI_DIR}
+	@${CHOWN} -R ${WWWOWN}:${WWWGRP} ${PREFIX}/${DOKUWIKI_DIR}
+
+post-install:
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.post.mk>
