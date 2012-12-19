@@ -1,0 +1,14 @@
+%%SITE_PERL%%/Config/Objective.pm
+%%SITE_PERL%%/Config/Objective/List.pm
+%%SITE_PERL%%/Config/Objective/Parser.pm
+%%SITE_PERL%%/Config/Objective/Boolean.pm
+%%SITE_PERL%%/Config/Objective/Table.pm
+%%SITE_PERL%%/Config/Objective/Hash.pm
+%%SITE_PERL%%/Config/Objective/Integer.pm
+%%SITE_PERL%%/Config/Objective/String.pm
+%%SITE_PERL%%/Config/Objective/DataType.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Config/Objective/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Config/Objective
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Config
+@dirrmtry %%SITE_PERL%%/Config/Objective
+@dirrmtry %%SITE_PERL%%/Config
