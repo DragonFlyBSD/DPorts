@@ -1,0 +1,7 @@
+%%SITE_PERL%%/PerlIO/via/symlink.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/PerlIO/via/symlink/.packlist
+@dirrmtry %%SITE_PERL%%/PerlIO/via
+@dirrmtry %%SITE_PERL%%/PerlIO
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/PerlIO/via/symlink
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/PerlIO/via
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/PerlIO
