@@ -1,0 +1,29 @@
+# New ports collection makefile for:	py-twistedWords
+# Date created:		14 April 2005
+# Whom:	      		Neal Nelson <neal@nelson.name>
+#
+# $FreeBSD: ports/net-im/py-twistedWords/Makefile,v 1.14 2012/11/17 06:00:29 svnexp Exp $
+#
+
+PORTNAME=	twistedWords
+PORTVERSION=	12.1.0
+CATEGORIES=	net-im devel python
+MASTER_SITES=	http://twistedmatrix.com/Releases/Words/${PORTVERSION:R}/
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	TwistedWords-${PORTVERSION}
+
+MAINTAINER=	python@FreeBSD.org
+COMMENT=	Twisted Words has more chat than you can handle
+
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}twistedCore>=${PORTVERSION}:${PORTSDIR}/devel/py-twistedCore
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+USE_BZIP2=	yes
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_PKGNAME=	${PORTNAME:S/twisted/Twisted_/}
+
+.include <bsd.port.mk>
