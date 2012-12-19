@@ -1,0 +1,7 @@
+sbin/dirvish
+sbin/dirvish-expire
+sbin/dirvish-locate
+sbin/dirvish-runall
+etc/dirvish/default.conf.dist
+etc/dirvish/master.conf.dist
+@dirrmtry etc/dirvish
