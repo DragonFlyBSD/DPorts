@@ -1,0 +1,6 @@
+bin/js_compactor
+%%SITE_PERL%%/JavaScript/Squish.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/JavaScript/Squish/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/JavaScript/Squish
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/JavaScript
+@dirrmtry %%SITE_PERL%%/JavaScript
