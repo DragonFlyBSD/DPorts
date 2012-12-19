@@ -1,0 +1,23 @@
+# Ports collection makefile for:  pear-Net_Whois
+# Date created:			  2006/12/22
+# Whom:				  chinsan
+#
+# $FreeBSD: ports/net/pear-Net_Whois/Makefile,v 1.9 2012/11/17 06:00:14 svnexp Exp $
+#
+
+PORTNAME=	Net_Whois
+PORTVERSION=	1.0.5
+CATEGORIES=	net pear
+
+MAINTAINER=	miwi@FreeBSD.org
+COMMENT=	A tool to query internet domain name services
+
+BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
+		${PEARDIR}/Net/Socket.php:${PORTSDIR}/net/pear-Net_Socket
+
+PEAR_AUTOINSTALL=	yes
+
+.include <bsd.port.pre.mk>
+.include "${PORTSDIR}/devel/pear/bsd.pear.mk"
+.include <bsd.port.post.mk>
