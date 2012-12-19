@@ -1,0 +1,5 @@
+@comment $FreeBSD: ports/devel/py-celementtree/pkg-plist,v 1.2 2012/11/17 05:56:45 svnexp Exp $
+%%PYTHON_SITELIBDIR%%/cElementTree.so
+%%PORTDOCS%%%%EXAMPLESDIR%%/simple-ns.xml
+%%PORTDOCS%%%%EXAMPLESDIR%%/simple.xml
+%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%
