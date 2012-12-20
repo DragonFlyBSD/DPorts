@@ -1,0 +1,12 @@
+#!/bin/sh
+# $FreeBSD: ports/sysutils/zfs-snapshot-mgmt/pkg-deinstall,v 1.2 2012/11/17 06:01:51 svnexp Exp $
+#
+
+if [ "$2" != "POST-DEINSTALL" ]; then
+    exit 0
+fi
+
+echo
+echo "Remember to remove zfs-snapshot-mgmt entry from cron configuration."
+echo -n "Otherwise the system will be constantly trying to call the deinstalled"
+echo " script."
