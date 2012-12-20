@@ -1,0 +1,4 @@
+%%SITE_PERL%%/Algorithm/MarkovChain.pm
+%%SITE_PERL%%/Algorithm/MarkovChain/Base.pm
+@dirrm %%SITE_PERL%%/Algorithm/MarkovChain
+@dirrmtry %%SITE_PERL%%/Algorithm
