@@ -1,0 +1,26 @@
+# New ports collection makefile for:	p5-Bot-BasicBot
+# Date created:				23 Dec 2006
+# Whom:					Aaron Dalton <aaron@FreeBSD.org>
+#
+# $FreeBSD: ports/irc/p5-Bot-BasicBot/Makefile,v 1.12 2012/11/17 05:58:29 svnexp Exp $
+#
+
+PORTNAME=	Bot-BasicBot
+PORTVERSION=	0.89
+CATEGORIES=	irc perl5
+MASTER_SITES=	CPAN/Bot
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	miwi@FreeBSD.org
+COMMENT=	Simple irc bot baseclass
+
+BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
+		p5-POE-Component-IRC>=0:${PORTSDIR}/irc/p5-POE-Component-IRC
+RUN_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
+		p5-POE-Component-IRC>=0:${PORTSDIR}/irc/p5-POE-Component-IRC
+
+MAN3=	Bot::BasicBot.3
+
+PERL_CONFIGURE=	yes
+
+.include <bsd.port.mk>
