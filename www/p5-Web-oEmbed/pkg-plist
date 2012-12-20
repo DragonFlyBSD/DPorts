@@ -1,0 +1,8 @@
+@comment $FreeBSD: ports/www/p5-Web-oEmbed/pkg-plist,v 1.2 2012/11/17 06:02:56 svnexp Exp $
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Web/oEmbed/.packlist
+%%SITE_PERL%%/Web/oEmbed.pm
+%%SITE_PERL%%/Web/oEmbed/Response.pm
+@dirrmtry %%SITE_PERL%%/Web/oEmbed
+@dirrmtry %%SITE_PERL%%/Web
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Web/oEmbed
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Web
