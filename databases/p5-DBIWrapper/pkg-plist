@@ -1,0 +1,12 @@
+%%SITE_PERL%%/DBIWrapper.pm
+%%SITE_PERL%%/DBIWrapper/ResultSet.pm
+%%SITE_PERL%%/DBIWrapper/XMLParser.pm
+%%SITE_PERL%%/auto/DBIWrapper/autosplit.ix
+%%SITE_PERL%%/auto/DBIWrapper/ResultSet/autosplit.ix
+%%SITE_PERL%%/auto/DBIWrapper/XMLParser/autosplit.ix
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/DBIWrapper/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/DBIWrapper
+@dirrm %%SITE_PERL%%/auto/DBIWrapper/XMLParser
+@dirrm %%SITE_PERL%%/auto/DBIWrapper/ResultSet
+@dirrm %%SITE_PERL%%/auto/DBIWrapper
+@dirrm %%SITE_PERL%%/DBIWrapper
