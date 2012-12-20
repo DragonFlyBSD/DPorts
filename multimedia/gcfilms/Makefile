@@ -1,0 +1,30 @@
+# New ports collection makefile for:	GCFilms
+# Date Created:				01 May 2005
+# Whom:					Remington Lang <MrL0Lz@gmail.com>
+#
+# $FreeBSD: ports/multimedia/gcfilms/Makefile,v 1.15 2012/11/17 05:59:49 svnexp Exp $
+
+PORTNAME=	gcfilms
+PORTVERSION=	6.4
+PORTREVISION=	2
+CATEGORIES=	multimedia perl5
+MASTER_SITES=	http://download.gna.org/gcfilms/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Tool to manage movie collections
+
+BUILD_DEPENDS=	p5-Archive-Tar>=0:${PORTSDIR}/archivers/p5-Archive-Tar \
+		p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple \
+		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
+		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
+		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+WRKSRC=		${WRKDIR}/${PORTNAME}
+
+NO_BUILD=	yes
+
+do-install:
+	cd ${WRKSRC} ; ./install --prefix=${PREFIX}
+
+.include <bsd.port.mk>
