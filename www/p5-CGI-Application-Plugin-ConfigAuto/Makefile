@@ -1,0 +1,25 @@
+# New ports collection makefile for:	p5-CGI-Application-Plugin-ConfigAuto
+# Date created:				February 15th 2009
+# Whom:	      				Alex Kapranoff <alex@kapranoff.ru>
+#
+# $FreeBSD: ports/www/p5-CGI-Application-Plugin-ConfigAuto/Makefile,v 1.8 2012/11/17 06:02:45 svnexp Exp $
+#
+
+PORTNAME=	CGI-Application-Plugin-ConfigAuto
+PORTVERSION=	1.33
+CATEGORIES=	www perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	culot@FreeBSD.org
+COMMENT=	Plugin that adds Config::Auto support to CGI::Application
+
+RUN_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
+		p5-Config-Auto>=0:${PORTSDIR}/devel/p5-Config-Auto
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+
+PERL_MODBUILD=	yes
+
+MAN3=		CGI::Application::Plugin::ConfigAuto.3
+
+.include <bsd.port.mk>
