@@ -1,0 +1,24 @@
+# New ports collection makefile for:	p5-Text-AsciiTex
+# Date created:		2012-02-04
+# Whom:			Steve Wills <swills@FreeBSD.org>
+#
+# $FreeBSD: ports/math/p5-Text-AsciiTeX/Makefile,v 1.3 2012/11/17 05:59:28 svnexp Exp $
+#
+
+PORTNAME=	Text-AsciiTeX
+PORTVERSION=	0.05
+CATEGORIES=	math perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Convert (La)TeX formulas to ASCII art
+
+BUILD_DEPENDS=	p5-ExtUtils-CBuilder>=0:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
+RUN_DEPENDS=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
+
+PERL_MODBUILD=	yes
+
+MAN3=	Text::AsciiTeX.3 Text::AsciiTeX::Syntax.3
+
+.include <bsd.port.mk>
