@@ -1,0 +1,7 @@
+%%SITE_PERL%%/Class/DBI/ToSax.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/DBI/ToSax/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/DBI/ToSax
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class/DBI
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Class
+@dirrmtry %%SITE_PERL%%/Class/DBI
+@dirrmtry %%SITE_PERL%%/Class
