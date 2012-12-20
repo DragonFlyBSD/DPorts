@@ -1,0 +1,4 @@
+%%SITE_PERL%%/Math/Symbolic/Custom/Contains.pm
+@dirrmtry %%SITE_PERL%%/Math/Symbolic/Custom
+@dirrmtry %%SITE_PERL%%/Math/Symbolic
+@dirrmtry %%SITE_PERL%%/Math
