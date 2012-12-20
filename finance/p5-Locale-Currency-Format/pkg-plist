@@ -1,0 +1,7 @@
+%%SITE_PERL%%/Locale/Currency/Format.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Locale/Currency/Format/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Locale/Currency/Format
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Locale/Currency
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Locale
+@dirrmtry %%SITE_PERL%%/Locale/Currency
+@dirrmtry %%SITE_PERL%%/Locale
