@@ -1,0 +1,33 @@
+# New ports collection makefile for:	p5-Net-Domain-ExpireDate
+# Date created:				Mar 4 2005
+# Whom:					clsung
+#
+# $FreeBSD: ports/dns/p5-Net-Domain-ExpireDate/Makefile,v 1.27 2012/11/17 05:57:10 svnexp Exp $
+#
+
+PORTNAME=	Net-Domain-ExpireDate
+PORTVERSION=	1.02
+CATEGORIES=	dns net perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Perl module obtain expiration date of domain names
+
+BUILD_DEPENDS=	p5-Net-Whois-Raw>=0:${PORTSDIR}/net/p5-Net-Whois-Raw
+RUN_DEPENDS=	p5-Net-Whois-Raw>=0:${PORTSDIR}/net/p5-Net-Whois-Raw
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Net::Domain::ExpireDate.3
+
+post-patch:
+		@${FIND} ${WRKSRC} -name "*.orig" -delete
+
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 500905
+RUN_DEPENDS+=	p5-Time-Piece>=0:${PORTSDIR}/devel/p5-Time-Piece
+.endif
+
+.include <bsd.port.post.mk>
