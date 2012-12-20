@@ -1,0 +1,25 @@
+# $FreeBSD: ports/www/py-plone.i18n/Makefile,v 1.5 2012/11/17 06:03:01 svnexp Exp $
+
+PORTNAME=	plone.i18n
+PORTVERSION=	2.0.1
+CATEGORIES=	www python zope
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	zope@FreeBSD.org
+COMMENT=	Advanced i18n/l10n features
+
+LICENSE=	GPLv2
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.component \
+		${PYTHON_PKGNAMEPREFIX}zope.i18n>=0:${PORTSDIR}/devel/py-zope.i18n \
+		${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.interface \
+		${PYTHON_PKGNAMEPREFIX}zope.publisher>=0:${PORTSDIR}/devel/py-zope.publisher \
+		${PYTHON_PKGNAMEPREFIX}unidecode>=0:${PORTSDIR}/converters/py-unidecode
+
+DIST_SUBDIR=	zope
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	easy_install
+USE_ZIP=	yes
+
+.include <bsd.port.mk>
