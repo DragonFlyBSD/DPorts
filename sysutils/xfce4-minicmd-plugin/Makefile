@@ -1,0 +1,25 @@
+# New ports collection makefile for:	minicmd plugin for xfce4
+# Date created:				16 August 2003
+# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
+#
+# $FreeBSD: ports/sysutils/xfce4-minicmd-plugin/Makefile,v 1.30 2012/11/17 06:01:50 svnexp Exp $
+#
+
+PORTNAME=	xfce4-minicmd-plugin
+PORTVERSION=	0.4
+PORTREVISION=	15
+CATEGORIES=	sysutils xfce
+MASTER_SITES=	ftp://ftp.berlios.de/pub/xfce-goodies/panel-plugins/4.4/
+DIST_SUBDIR=	xfce4
+
+MAINTAINER=	demon@FreeBSD.org
+COMMENT=	Displays a mini-command line on the xfce4-panel
+
+GNU_CONFIGURE=	yes
+USE_BZIP2=	yes
+USE_GETTEXT=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gtk20 intltool intlhack pkgconfig
+USE_XFCE=	libgui configenv panel
+
+.include <bsd.port.mk>
