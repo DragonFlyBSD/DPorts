@@ -1,0 +1,20 @@
+bin/xsh
+%%SITE_PERL%%/XML/XSH.pm
+%%SITE_PERL%%/XML/XSH.pod
+%%SITE_PERL%%/XML/XSH/Completion.pm
+%%SITE_PERL%%/XML/XSH/CompletionList.pm
+%%SITE_PERL%%/XML/XSH/DummyXPathContext.pm
+%%SITE_PERL%%/XML/XSH/Functions.pm
+%%SITE_PERL%%/XML/XSH/GDOMECompat.pm
+%%SITE_PERL%%/XML/XSH/Grammar.pm
+%%SITE_PERL%%/XML/XSH/Help.pm
+%%SITE_PERL%%/XML/XSH/Iterators.pm
+%%SITE_PERL%%/XML/XSH/LibXMLCompat.pm
+%%SITE_PERL%%/XML/XSH/Parser.pm
+@dirrm %%SITE_PERL%%/XML/XSH
+@dirrmtry %%SITE_PERL%%/XML
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/XSH/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/XSH
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
+%%SITE_PERL%%/Inline/XSH.pm
+@dirrmtry %%SITE_PERL%%/Inline
