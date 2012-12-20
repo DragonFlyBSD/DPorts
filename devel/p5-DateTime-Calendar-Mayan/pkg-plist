@@ -1,0 +1,4 @@
+%%SITE_PERL%%/DateTime/Calendar/Mayan.pm
+%%SITE_PERL%%/DateTime/Calendar/Mayan.pod
+@dirrmtry %%SITE_PERL%%/DateTime/Calendar
+@dirrmtry %%SITE_PERL%%/DateTime
