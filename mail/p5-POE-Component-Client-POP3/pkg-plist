@@ -1,0 +1,12 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component/Client/POP3/.packlist
+%%SITE_PERL%%/POE/Component/Client/POP3.pm
+%%PORTDOCS%%%%EXAMPLESDIR%%/test.perl
+%%PORTDOCS%%%%EXAMPLESDIR%%/term.perl
+%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component/Client/POP3
+@dirrmtry %%SITE_PERL%%/POE/Component/Client
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component/Client
+@dirrmtry %%SITE_PERL%%/POE/Component
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component
+@dirrmtry %%SITE_PERL%%/POE
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE
