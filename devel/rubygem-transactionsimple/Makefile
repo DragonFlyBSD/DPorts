@@ -1,0 +1,20 @@
+# $FreeBSD: ports/devel/rubygem-transactionsimple/Makefile,v 1.18 2012/11/17 05:57:01 svnexp Exp $
+
+PORTNAME=	transactionsimple
+PORTVERSION=	1.4.0
+CATEGORIES=	devel rubygems
+MASTER_SITES=	RG
+DISTNAME=	transaction-simple-${PORTVERSION}
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Simple object transaction support
+
+RUN_DEPENDS=	rubygem-hoe>=1.3.0:${PORTSDIR}/devel/rubygem-hoe
+
+GEM_NAME=	${DISTNAME}
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
