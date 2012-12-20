@@ -1,0 +1,10 @@
+%%SITE_PERL%%/HTML/TableLayout/TLCore.pm
+%%SITE_PERL%%/HTML/TableLayout/Symbols.pm
+%%SITE_PERL%%/HTML/TableLayout/Component.pm
+%%SITE_PERL%%/HTML/TableLayout/Form.pm
+%%SITE_PERL%%/HTML/TableLayout.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/TableLayout/.packlist
+@dirrm %%SITE_PERL%%/HTML/TableLayout
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/TableLayout
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML
+@dirrmtry %%SITE_PERL%%/HTML
