@@ -1,0 +1,18 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/AMF/Perl/.packlist
+%%SITE_PERL%%/AMF/Perl.pm
+%%SITE_PERL%%/AMF/Perl/App/Executive.pm
+%%SITE_PERL%%/AMF/Perl/IO/Deserializer.pm
+%%SITE_PERL%%/AMF/Perl/IO/InputStream.pm
+%%SITE_PERL%%/AMF/Perl/IO/OutputStream.pm
+%%SITE_PERL%%/AMF/Perl/IO/Serializer.pm
+%%SITE_PERL%%/AMF/Perl/Sql/MysqlRecordSet.pm
+%%SITE_PERL%%/AMF/Perl/Util/Object.pm
+%%SITE_PERL%%/AMF/Perl/Util/RemotingService.pm
+@dirrm %%SITE_PERL%%/AMF/Perl/App
+@dirrm %%SITE_PERL%%/AMF/Perl/IO
+@dirrm %%SITE_PERL%%/AMF/Perl/Sql
+@dirrm %%SITE_PERL%%/AMF/Perl/Util
+@dirrm %%SITE_PERL%%/AMF/Perl
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/AMF/Perl
+@dirrmtry %%SITE_PERL%%/AMF
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/AMF
