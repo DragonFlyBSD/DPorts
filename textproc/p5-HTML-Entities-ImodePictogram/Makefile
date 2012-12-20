@@ -1,0 +1,22 @@
+# New ports collection makefile for:	textproc/p5-HTML-Entities-ImodePictogram
+# Date created:				17 Aug 2007
+# Whom:					Shinsuke Matsui <smatsui@karashi.org>
+#
+# $FreeBSD: ports/textproc/p5-HTML-Entities-ImodePictogram/Makefile,v 1.3 2012/11/17 06:02:04 svnexp Exp $
+#
+
+PORTNAME=	HTML-Entities-ImodePictogram
+PORTVERSION=	0.06
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	smatsui@karashi.org
+COMMENT=	HTML::Entities::ImodePictogram - encode / decode i-mode pictogram
+
+PERL_CONFIGURE=	yes
+
+MAN3=	HTML::Entities::ImodePictogram.3 \
+	HTML::Entities::ImodePictogram.ja.3
+
+.include <bsd.port.mk>
