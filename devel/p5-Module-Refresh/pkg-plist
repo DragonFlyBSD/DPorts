@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Module/Refresh.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Module/Refresh/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Module/Refresh
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Module
+@dirrmtry %%SITE_PERL%%/Module
