@@ -1,0 +1,29 @@
+# New ports collection makefile for:	p5-GPS
+# Date created:			5 December 2000
+# Whom:				Jeremy Shaffner <jeremy@external.org>
+#
+# $FreeBSD: ports/astro/p5-GPS/Makefile,v 1.13 2012/11/17 05:54:25 svnexp Exp $
+
+PORTNAME=	GPS
+PORTVERSION=	0.17
+CATEGORIES=	astro perl5 geography
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+DISTNAME=	perl-GPS-${PORTVERSION}
+
+MAINTAINER=	ehaupt@FreeBSD.org
+COMMENT=	Perl interface to GPS receivers
+
+BUILD_DEPENDS=	p5-Device-SerialPort>=0.07:${PORTSDIR}/comms/p5-Device-SerialPort
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	yes
+
+MAN3=		GPS::Serial.3 \
+		GPS::NMEA.3 \
+		GPS::NMEA::Handler.3 \
+		GPS::Garmin.3 \
+		GPS::Garmin::Handler.3
+
+.include <bsd.port.mk>
