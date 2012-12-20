@@ -1,0 +1,9 @@
+%%SITE_PERL%%/Test/XML.pm
+%%SITE_PERL%%/Test/XML/SAX.pm
+%%SITE_PERL%%/Test/XML/Twig.pm
+%%SITE_PERL%%/Test/XML/XPath.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Test/XML/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Test/XML
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Test
+@dirrmtry %%SITE_PERL%%/Test/XML
+@dirrmtry %%SITE_PERL%%/Test
