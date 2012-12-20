@@ -1,0 +1,5 @@
+bin/chooser
+%%SITE_PERL%%/Chooser.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Chooser/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Chooser
+@dirrmtry %%SITE_PERL%%/Chooser
