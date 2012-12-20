@@ -1,0 +1,42 @@
+# New ports collection makefile for: dtse
+# Date created: 7 Mar 2004
+# Whom: Douglas Thrift <douglas@douglasthrift.net>
+#
+# $FreeBSD: ports/www/dtse/Makefile,v 1.13 2012/11/17 06:02:32 svnexp Exp $
+#
+
+PORTNAME=	dtse
+PORTVERSION=	1.3
+CATEGORIES=	www perl5
+MASTER_SITES=	http://apt.douglasthrift.net/files/${PORTNAME}/ \
+		http://code.douglasthrift.net/files/${PORTNAME}/
+DISTNAME=	${PORTNAME}-${PORTVERSION}-src
+
+MAINTAINER=	douglas@douglasthrift.net
+COMMENT=	An indexing search engine for use on small websites
+
+LICENSE=	AL2
+
+BUILD_DEPENDS=	${LOCALBASE}/share/aclocal/ax_check_gnu_make.m4:${PORTSDIR}/devel/autoconf-archive
+
+.if defined(WITH_OPENSSL)
+USE_OPENSSL=	yes
+CONFIGURE_ARGS+=	--with-openssl=${OPENSSLBASE}
+.endif
+
+USE_PERL5=	yes
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_AUTOTOOLS=	aclocal:env automake:env autoconf:env
+
+HAS_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX}/${PORTNAME}
+
+MAKEFILE=	GNUmakefile
+
+WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+pre-configure:
+	cd ${WRKSRC}; ${SH} autogen.sh
+
+.include <bsd.port.mk>
