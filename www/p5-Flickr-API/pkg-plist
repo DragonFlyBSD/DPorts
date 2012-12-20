@@ -1,0 +1,8 @@
+%%SITE_PERL%%/Flickr/API.pm
+%%SITE_PERL%%/Flickr/API/Request.pm
+%%SITE_PERL%%/Flickr/API/Response.pm
+@dirrm %%SITE_PERL%%/Flickr/API
+@dirrmtry %%SITE_PERL%%/Flickr
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Flickr/API/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Flickr/API
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Flickr
