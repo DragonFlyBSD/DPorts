@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Class/Accessor/Lvalue.pm
+%%SITE_PERL%%/Class/Accessor/Lvalue/Fast.pm
+@dirrmtry %%SITE_PERL%%/Class/Accessor/Lvalue
+@dirrmtry %%SITE_PERL%%/Class/Accessor
+@dirrmtry %%SITE_PERL%%/Class
