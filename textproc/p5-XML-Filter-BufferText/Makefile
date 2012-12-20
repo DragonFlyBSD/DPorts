@@ -1,0 +1,24 @@
+# New ports collection makefile for:	XML-Filter-BufferText
+# Date created:	   17 March 2002
+# Whom:		   Sergey Skvortsov <skv@FreeBSD.org>
+#
+# $FreeBSD: ports/textproc/p5-XML-Filter-BufferText/Makefile,v 1.9 2012/11/17 06:02:12 svnexp Exp $
+#
+
+PORTNAME=	XML-Filter-BufferText
+PORTVERSION=	1.01
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Filter to put all characters() in one event
+
+RUN_DEPENDS=	p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		XML::Filter::BufferText.3
+
+.include <bsd.port.mk>
