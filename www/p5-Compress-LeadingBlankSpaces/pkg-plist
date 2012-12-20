@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Compress/LeadingBlankSpaces.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Compress/LeadingBlankSpaces/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Compress/LeadingBlankSpaces
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Compress
+@dirrmtry %%SITE_PERL%%/Compress
