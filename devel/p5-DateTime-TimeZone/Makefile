@@ -1,0 +1,45 @@
+# Created by: mat
+# $FreeBSD: ports/devel/p5-DateTime-TimeZone/Makefile,v 1.110 2012/12/04 10:35:21 svnexp Exp $
+
+PORTNAME=	DateTime-TimeZone
+PORTVERSION=	1.56
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	jadawin@FreeBSD.org
+COMMENT=	Time zone object base class and factory
+
+RUN_DEPENDS=	p5-Class-Load>0:${PORTSDIR}/devel/p5-Class-Load \
+		p5-Class-Singleton>=1.03:${PORTSDIR}/devel/p5-Class-Singleton \
+		p5-Params-Validate>=0.72:${PORTSDIR}/devel/p5-Params-Validate
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		DateTime::TimeZone.3 DateTime::TimeZone::Floating.3 \
+		DateTime::TimeZone::Local.3 DateTime::TimeZone::Local::Unix.3 \
+   		DateTime::TimeZone::Local::VMS.3 DateTime::TimeZone::Local::Win32.3 \
+	  	DateTime::TimeZone::OffsetOnly.3 DateTime::TimeZone::OlsonDB.3 \
+		DateTime::TimeZone::UTC.3 DateTime::TimeZone::Catalog.3
+
+.if !defined(NOPORTDOCS)
+PORTDOCS=	Changes README
+
+post-install:
+	@${MKDIR} ${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 500806
+RUN_DEPENDS+=	p5-PathTools>=3:${PORTSDIR}/devel/p5-PathTools
+.endif
+
+.if ${PERL_LEVEL} < 501000
+RUN_DEPENDS+=	p5-parent>=0.223:${PORTSDIR}/devel/p5-parent
+.endif
+
+.include <bsd.port.post.mk>
