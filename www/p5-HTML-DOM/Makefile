@@ -1,0 +1,31 @@
+# New ports collection makefile for:	p5-HTML-DOM
+# Date created:				26 Jan 2010
+# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
+#
+# $FreeBSD: ports/www/p5-HTML-DOM/Makefile,v 1.19 2012/11/17 06:02:49 svnexp Exp $
+#
+
+PORTNAME=	HTML-DOM
+PORTVERSION=	0.053
+CATEGORIES=	www perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ehaupt@FreeBSD.org
+COMMENT=	Implementation of the HTML Document Object Model
+
+BUILD_DEPENDS=	p5-CSS-DOM>=0:${PORTSDIR}/www/p5-CSS-DOM \
+		p5-HTML-Element-Library>=0:${PORTSDIR}/www/p5-HTML-Element-Library \
+		p5-HTML-Encoding>=0:${PORTSDIR}/www/p5-HTML-Encoding \
+		p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
+		p5-Hash-Util-FieldHash-Compat>=0:${PORTSDIR}/devel/p5-Hash-Util-FieldHash-Compat \
+		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate \
+		p5-URI>=0:${PORTSDIR}/net/p5-URI \
+		p5-constant-lexical>0:${PORTSDIR}/devel/p5-constant-lexical
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+.include <bsd.port.pre.mk>
+.include "${MASTERDIR}/Makefile.man"
+.include <bsd.port.post.mk>
