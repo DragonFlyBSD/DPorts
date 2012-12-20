@@ -1,0 +1,48 @@
+# New ports collection makefile for:	devel/p5-MooseX-POE
+# Date created:				27 Jul 2008
+# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
+#
+# $FreeBSD: ports/devel/p5-MooseX-POE/Makefile,v 1.22 2012/11/17 05:56:23 svnexp Exp $
+#
+
+PORTNAME=	MooseX-POE
+PORTVERSION=	0.215
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	The Illicit Love Child of Moose and POE
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-Moose>=2.0002:${PORTSDIR}/devel/p5-Moose \
+		p5-POE>=1.310:${PORTSDIR}/devel/p5-POE
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+TEST_DEPENDS=	p5-MooseX-Daemonize>=0:${PORTSDIR}/devel/p5-MooseX-Daemonize \
+		p5-MooseX-Declare>=0:${PORTSDIR}/devel/p5-MooseX-Declare \
+		p5-Test-Fatal>=0.003:${PORTSDIR}/devel/p5-Test-Fatal
+
+PERL_CONFIGURE=	yes
+
+MAN3=		MooseX::POE.3 \
+		MooseX::POE::Aliased.3 \
+		MooseX::POE::Meta::Method::State.3 \
+		MooseX::POE::Meta::Role.3 \
+		MooseX::POE::Meta::Trait.3 \
+		MooseX::POE::Meta::Trait::Class.3 \
+		MooseX::POE::Meta::Trait::Instance.3 \
+		MooseX::POE::Meta::Trait::Object.3 \
+		MooseX::POE::Meta::Trait::SweetArgs.3 \
+		MooseX::POE::Role.3 \
+		MooseX::POE::SweetArgs.3
+
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 501001
+TEST_DEPENDS+=	p5-Test-Simple>=0.90:${PORTSDIR}/devel/p5-Test-Simple
+.endif
+
+.include <bsd.port.post.mk>
