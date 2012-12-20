@@ -1,0 +1,19 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/App/Nopaste/.packlist
+%%SITE_PERL%%/App/Nopaste.pm
+%%SITE_PERL%%/App/Nopaste/Command.pm
+%%SITE_PERL%%/App/Nopaste/Service.pm
+%%SITE_PERL%%/App/Nopaste/Service/Codepeek.pm
+%%SITE_PERL%%/App/Nopaste/Service/Debian.pm
+%%SITE_PERL%%/App/Nopaste/Service/Gist.pm
+%%SITE_PERL%%/App/Nopaste/Service/PastebinCom.pm
+%%SITE_PERL%%/App/Nopaste/Service/Pastie.pm
+%%SITE_PERL%%/App/Nopaste/Service/Shadowcat.pm
+%%SITE_PERL%%/App/Nopaste/Service/Snitch.pm
+%%SITE_PERL%%/App/Nopaste/Service/ssh.pm
+%%SITE_PERL%%/App/Nopaste/Service/Ubuntu.pm
+bin/nopaste
+@dirrm %%SITE_PERL%%/App/Nopaste/Service
+@dirrm %%SITE_PERL%%/App/Nopaste
+@dirrm %%SITE_PERL%%/App
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/App/Nopaste
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/App
