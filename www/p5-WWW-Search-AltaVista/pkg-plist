@@ -1,0 +1,17 @@
+%%SITE_PERL%%/WWW/Search/AltaVista.pm
+%%SITE_PERL%%/WWW/Search/AltaVista/AdvancedNews.pm
+%%SITE_PERL%%/WWW/Search/AltaVista/AdvancedWeb.pm
+%%SITE_PERL%%/WWW/Search/AltaVista/Careers.pm
+%%SITE_PERL%%/WWW/Search/AltaVista/DE.pm
+%%SITE_PERL%%/WWW/Search/AltaVista/Intranet.pm
+%%SITE_PERL%%/WWW/Search/AltaVista/Intranet3.pm
+%%SITE_PERL%%/WWW/Search/AltaVista/NL.pm
+%%SITE_PERL%%/WWW/Search/AltaVista/News.pm
+%%SITE_PERL%%/WWW/Search/AltaVista/Web.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Search/AltaVista/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Search/AltaVista
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Search
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW
+@dirrm %%SITE_PERL%%/WWW/Search/AltaVista
+@dirrmtry %%SITE_PERL%%/WWW/Search
+@dirrmtry %%SITE_PERL%%/WWW
