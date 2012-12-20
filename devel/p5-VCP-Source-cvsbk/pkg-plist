@@ -1,0 +1,9 @@
+%%SITE_PERL%%/VCP/Source/cvsbk.pm
+%%SITE_PERL%%/VCP/Filter/cvsbkchangeset.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/VCP/Source/cvsbk/.packlist
+@dirrmtry %%SITE_PERL%%/VCP/Source
+@dirrmtry %%SITE_PERL%%/VCP/Filter
+@dirrmtry %%SITE_PERL%%/VCP
+@dirrm  %%SITE_PERL%%/%%PERL_ARCH%%/auto/VCP/Source/cvsbk
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/VCP/Source
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/VCP
