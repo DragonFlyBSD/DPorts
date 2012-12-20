@@ -1,0 +1,21 @@
+# New ports collection makefile for:	p5-Lingua-ZH-BPMFConvert
+# Date created:		2006-09-06
+# Whom:			Gea-Suan Lin <gslin@gslin.org>
+#
+# $FreeBSD: ports/chinese/p5-Lingua-ZH-BPMFConvert/Makefile,v 1.5 2012/11/17 05:54:57 svnexp Exp $
+#
+
+PORTNAME=	Lingua-ZH-BPMFConvert
+PORTVERSION=	0.01
+CATEGORIES=	chinese perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Rule-based conversion of BPMF (bopomofo) into Hanyu Pinyin
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Lingua::ZH::BPMFConvert.3
+
+.include <bsd.port.mk>
