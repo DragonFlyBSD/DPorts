@@ -1,0 +1,8 @@
+bin/xrx
+lib/libxrx.a
+lib/libxrx.la
+lib/libxrx.so
+lib/libxrxnest.a
+lib/libxrxnest.la
+lib/libxrxnest.so
+@dirrmtry include/X11/extensions
