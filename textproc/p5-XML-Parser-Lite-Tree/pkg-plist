@@ -1,0 +1,10 @@
+%%SITE_PERL%%/XML/Parser/Lite/Tree.pm
+%%SITE_PERL%%/XML/Parser/LiteCopy.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Parser/Lite/Tree/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Parser/Lite/Tree
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Parser/Lite
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Parser
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
+@dirrmtry %%SITE_PERL%%/XML/Parser/Lite
+@dirrmtry %%SITE_PERL%%/XML/Parser
+@dirrmtry %%SITE_PERL%%/XML
