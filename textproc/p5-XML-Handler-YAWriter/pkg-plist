@@ -1,0 +1,8 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Handler/YAWriter/.packlist
+bin/xmlpretty
+%%SITE_PERL%%/XML/Handler/YAWriter.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Handler/YAWriter
+@dirrmtry %%SITE_PERL%%/XML/Handler
+@dirrmtry %%SITE_PERL%%/XML
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Handler
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
