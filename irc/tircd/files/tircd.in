@@ -1,0 +1,27 @@
+#! /bin/sh
+# $FreeBSD: ports/irc/tircd/files/tircd.in,v 1.2 2012/11/17 05:58:30 svnexp Exp $
+#
+# PROVIDE: tircd
+# REQUIRE: LOGIN syslogd
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# tircd_enable (bool):   Set to NO by default.
+#               Set it to YES to enable tircd.
+
+. /etc/rc.subr
+
+name="tircd"
+rcvar=tircd_enable
+
+command="%%PREFIX%%/bin/$name.pl"
+command_args="> /dev/null &"
+required_files="%%PREFIX%%/etc/tircd.cfg"
+
+load_rc_config $name
+
+: ${tircd_enable="NO"}
+
+run_rc_command "$1"
