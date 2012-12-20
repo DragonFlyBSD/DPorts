@@ -1,0 +1,26 @@
+# New ports collection makefile for:	Business::OnlinePayment::eSec
+# Date created:				24 October 2002
+# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
+#
+# $FreeBSD: ports/finance/p5-Business-OnlinePayment-eSec/Makefile,v 1.13 2012/11/17 05:57:26 svnexp Exp $
+#
+
+PORTNAME=	Business-OnlinePayment-eSec
+PORTVERSION=	0.02
+PORTREVISION=	2
+CATEGORIES=	finance perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	An Business::OnlinePayment backend module for eSec
+
+BUILD_DEPENDS=	p5-Business-CreditCard>=0:${PORTSDIR}/finance/p5-Business-CreditCard \
+		p5-Business-OnlinePayment>=0:${PORTSDIR}/finance/p5-Business-OnlinePayment
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Business::OnlinePayment::eSec.3
+
+.include <bsd.port.mk>
