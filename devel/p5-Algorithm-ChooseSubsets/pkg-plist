@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Algorithm/ChooseSubsets.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Algorithm/ChooseSubsets/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Algorithm/ChooseSubsets
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Algorithm
+@dirrmtry %%SITE_PERL%%/Algorithm
