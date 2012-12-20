@@ -1,0 +1,8 @@
+bin/testcover
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/ExtUtils/MakeMaker/Coverage/.packlist
+%%SITE_PERL%%/ExtUtils/MakeMaker/Coverage.pm
+@dirrmtry %%SITE_PERL%%/ExtUtils/MakeMaker
+@dirrmtry %%SITE_PERL%%/ExtUtils
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/ExtUtils/MakeMaker/Coverage
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/ExtUtils/MakeMaker
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/ExtUtils
