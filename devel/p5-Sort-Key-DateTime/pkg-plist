@@ -1,0 +1,7 @@
+%%SITE_PERL%%/Sort/Key/DateTime.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Sort/Key/DateTime/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Sort/Key/DateTime
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Sort/Key
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Sort
+@dirrmtry %%SITE_PERL%%/Sort/Key
+@dirrmtry %%SITE_PERL%%/Sort
