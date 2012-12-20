@@ -1,0 +1,22 @@
+%%SITE_PERL%%/Log/Dispatch.pm
+%%SITE_PERL%%/Log/Dispatch/ApacheLog.pm
+%%SITE_PERL%%/Log/Dispatch/Base.pm
+%%SITE_PERL%%/Log/Dispatch/Email.pm
+%%SITE_PERL%%/Log/Dispatch/Email/MIMELite.pm
+%%SITE_PERL%%/Log/Dispatch/Email/MailSend.pm
+%%SITE_PERL%%/Log/Dispatch/Email/MailSender.pm
+%%SITE_PERL%%/Log/Dispatch/Email/MailSendmail.pm
+%%SITE_PERL%%/Log/Dispatch/File.pm
+%%SITE_PERL%%/Log/Dispatch/File/Locked.pm
+%%SITE_PERL%%/Log/Dispatch/Handle.pm
+%%SITE_PERL%%/Log/Dispatch/Null.pm
+%%SITE_PERL%%/Log/Dispatch/Output.pm
+%%SITE_PERL%%/Log/Dispatch/Screen.pm
+%%SITE_PERL%%/Log/Dispatch/Syslog.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Log/Dispatch/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Log/Dispatch
+@dirrm %%SITE_PERL%%/Log/Dispatch/File
+@dirrm %%SITE_PERL%%/Log/Dispatch/Email
+@dirrm %%SITE_PERL%%/Log/Dispatch
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Log
+@dirrmtry %%SITE_PERL%%/Log
