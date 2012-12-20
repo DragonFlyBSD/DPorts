@@ -1,0 +1,6 @@
+#
+# $FreeBSD: ports/multimedia/py-pybmp/files/setup.cfg.port,v 1.3 2012/11/17 05:59:53 svnexp Exp $
+#
+[build_ext]
+include-dirs=%%LOCALBASE%%/include
+library-dirs=%%LOCALBASE%%/lib
