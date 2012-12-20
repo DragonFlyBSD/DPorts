@@ -1,0 +1,29 @@
+# New ports collection makefile for:	p5-Gearman-Client-Async
+# Date created:		2007-09-03
+# Whom:			Tomoyuki Sakurai <cherry@trombik.org>
+#
+# $FreeBSD: ports/devel/p5-Gearman-Client-Async/Makefile,v 1.10 2012/11/17 05:56:17 svnexp Exp $
+#
+
+PORTNAME=	Gearman-Client-Async
+PORTVERSION=	0.94
+PORTREVISION=	1
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:BRADFITZ
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Asynchronous client module for Gearman for Danga::Socket applications
+
+RUN_DEPENDS=	\
+	p5-Danga-Socket>=0:${PORTSDIR}/devel/p5-Danga-Socket \
+	p5-Gearman>=0:${PORTSDIR}/devel/p5-Gearman
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+TEST_DEPENDS=	p5-Gearman-Server>=0:${PORTSDIR}/devel/p5-Gearman-Server
+
+PERL_CONFIGURE=	yes
+
+MAN3=	Gearman::Client::Async.3
+
+.include <bsd.port.mk>
