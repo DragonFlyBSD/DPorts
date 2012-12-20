@@ -1,0 +1,53 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Amazon/EC2/.packlist
+%%SITE_PERL%%/Net/Amazon/EC2.pm
+%%SITE_PERL%%/Net/Amazon/EC2/Attachment.pm
+%%SITE_PERL%%/Net/Amazon/EC2/AvailabilityZone.pm
+%%SITE_PERL%%/Net/Amazon/EC2/AvailabilityZoneMessage.pm
+%%SITE_PERL%%/Net/Amazon/EC2/BlockDeviceMapping.pm
+%%SITE_PERL%%/Net/Amazon/EC2/BundleInstanceResponse.pm
+%%SITE_PERL%%/Net/Amazon/EC2/ConfirmProductInstanceResponse.pm
+%%SITE_PERL%%/Net/Amazon/EC2/ConsoleOutput.pm
+%%SITE_PERL%%/Net/Amazon/EC2/CreateVolumePermission.pm
+%%SITE_PERL%%/Net/Amazon/EC2/DescribeAddress.pm
+%%SITE_PERL%%/Net/Amazon/EC2/DescribeImageAttribute.pm
+%%SITE_PERL%%/Net/Amazon/EC2/DescribeImagesResponse.pm
+%%SITE_PERL%%/Net/Amazon/EC2/DescribeInstanceAttributeResponse.pm
+%%SITE_PERL%%/Net/Amazon/EC2/DescribeKeyPairsResponse.pm
+%%SITE_PERL%%/Net/Amazon/EC2/DescribeTags.pm
+%%SITE_PERL%%/Net/Amazon/EC2/EbsBlockDevice.pm
+%%SITE_PERL%%/Net/Amazon/EC2/EbsInstanceBlockDeviceMapping.pm
+%%SITE_PERL%%/Net/Amazon/EC2/Error.pm
+%%SITE_PERL%%/Net/Amazon/EC2/Errors.pm
+%%SITE_PERL%%/Net/Amazon/EC2/GroupSet.pm
+%%SITE_PERL%%/Net/Amazon/EC2/InstanceBlockDeviceMapping.pm
+%%SITE_PERL%%/Net/Amazon/EC2/InstancePassword.pm
+%%SITE_PERL%%/Net/Amazon/EC2/InstanceState.pm
+%%SITE_PERL%%/Net/Amazon/EC2/InstanceStateChange.pm
+%%SITE_PERL%%/Net/Amazon/EC2/IpPermission.pm
+%%SITE_PERL%%/Net/Amazon/EC2/IpRange.pm
+%%SITE_PERL%%/Net/Amazon/EC2/KeyPair.pm
+%%SITE_PERL%%/Net/Amazon/EC2/LaunchPermission.pm
+%%SITE_PERL%%/Net/Amazon/EC2/LaunchPermissionOperation.pm
+%%SITE_PERL%%/Net/Amazon/EC2/MonitoredInstance.pm
+%%SITE_PERL%%/Net/Amazon/EC2/PlacementResponse.pm
+%%SITE_PERL%%/Net/Amazon/EC2/ProductCode.pm
+%%SITE_PERL%%/Net/Amazon/EC2/ProductInstanceResponse.pm
+%%SITE_PERL%%/Net/Amazon/EC2/Region.pm
+%%SITE_PERL%%/Net/Amazon/EC2/ReservationInfo.pm
+%%SITE_PERL%%/Net/Amazon/EC2/ReservedInstance.pm
+%%SITE_PERL%%/Net/Amazon/EC2/ReservedInstanceOffering.pm
+%%SITE_PERL%%/Net/Amazon/EC2/RunningInstances.pm
+%%SITE_PERL%%/Net/Amazon/EC2/SecurityGroup.pm
+%%SITE_PERL%%/Net/Amazon/EC2/Snapshot.pm
+%%SITE_PERL%%/Net/Amazon/EC2/SnapshotAttribute.pm
+%%SITE_PERL%%/Net/Amazon/EC2/StateReason.pm
+%%SITE_PERL%%/Net/Amazon/EC2/TagSet.pm
+%%SITE_PERL%%/Net/Amazon/EC2/UserData.pm
+%%SITE_PERL%%/Net/Amazon/EC2/UserIdGroupPair.pm
+%%SITE_PERL%%/Net/Amazon/EC2/Volume.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Amazon/EC2
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Amazon
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net
+@dirrm %%SITE_PERL%%/Net/Amazon/EC2
+@dirrmtry %%SITE_PERL%%/Net/Amazon
+@dirrmtry %%SITE_PERL%%/Net
