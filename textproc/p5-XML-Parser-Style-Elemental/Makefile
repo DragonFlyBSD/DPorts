@@ -1,0 +1,22 @@
+# New ports collection makefile for:	p5-XML-Parser-Style-Elemental
+# Date created:				2004-05-23
+# Whom:					arved
+#
+# $FreeBSD: ports/textproc/p5-XML-Parser-Style-Elemental/Makefile,v 1.5 2012/11/17 06:02:13 svnexp Exp $
+
+PORTNAME=	XML-Parser-Style-Elemental
+PORTVERSION=	0.50
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	More advanced and flexible object tree style for XML::Parser
+
+BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
+
+PERL_CONFIGURE=	yes
+
+MAN3=	XML::Parser::Style::Elemental.3
+
+.include <bsd.port.mk>
