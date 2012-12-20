@@ -1,0 +1,29 @@
+# New ports collection makefile for:	Net-Frame-IPv6
+# Date created:	   09 Mar 2009
+# Whom:		   Mars G Miro <spry@anarchy.in.the.ph>
+#
+# $FreeBSD: ports/net/p5-Net-Frame-Layer-IPv6/Makefile,v 1.6 2012/11/17 06:00:10 svnexp Exp $
+#
+
+PORTNAME=	Net-Frame-Layer-IPv6
+PORTVERSION=	1.04
+CATEGORIES=	net perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	spry@anarchy.in.the.ph
+COMMENT=	Perl encoding/decoding implementation of the IPv6 layer
+
+BUILD_DEPENDS=	p5-Bit-Vector>=0:${PORTSDIR}/math/p5-Bit-Vector \
+		p5-Net-Frame>=0:${PORTSDIR}/net/p5-Net-Frame \
+    		p5-Net-Pcap>=0.12:${PORTSDIR}/net/p5-Net-Pcap \
+    		p5-Class-Gomor>=1.00:${PORTSDIR}/devel/p5-Class-Gomor
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Net::Frame::Layer::IPv6.3 \
+		Net::Frame::Layer::IPv6::Fragment.3 \
+		Net::Frame::Layer::IPv6::Routing.3
+
+.include <bsd.port.mk>
