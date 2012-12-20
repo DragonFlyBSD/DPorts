@@ -1,0 +1,24 @@
+# New ports collection makefile for:	p5-Class-DBI-Plugin-RetrieveAll
+# Date created:				Apr 2 2004
+# Whom:					Lars Thegler <lars@thegler.dk>
+#
+# $FreeBSD: ports/databases/p5-Class-DBI-Plugin-RetrieveAll/Makefile,v 1.11 2012/11/17 05:55:13 svnexp Exp $
+
+PORTNAME=	Class-DBI-Plugin-RetrieveAll
+PORTVERSION=	1.04
+CATEGORIES=	databases perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	lth@FreeBSD.org
+COMMENT=	More complex retrieve_all() for Class::DBI
+
+BUILD_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Class::DBI::Plugin::RetrieveAll.3
+
+.include <bsd.port.mk>
