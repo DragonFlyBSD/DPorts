@@ -1,0 +1,25 @@
+# New ports collection makefile for:	p5-XML-LibXML-Iterator
+# Date created:				11 Sep 2003
+# Whom:					Oliver Eikemeier <eikemeier@fillmore-labs.com>
+#
+# $FreeBSD: ports/textproc/p5-XML-LibXML-Iterator/Makefile,v 1.9 2012/11/17 06:02:13 svnexp Exp $
+#
+
+PORTNAME=	XML-LibXML-Iterator
+PORTVERSION=	1.04
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	XML::LibXML::Iterator is an iterator for XML::LibXML parsed documents
+
+BUILD_DEPENDS=	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML \
+		p5-XML-NodeFilter>=0:${PORTSDIR}/textproc/p5-XML-NodeFilter
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		XML::LibXML::Iterator.3 XML::LibXML::NodeList::Iterator.3
+
+.include <bsd.port.mk>
