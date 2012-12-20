@@ -1,0 +1,7 @@
+%%SITE_PERL%%/DateTime/Format/Baby.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/DateTime/Format/Baby/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/DateTime/Format/Baby
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/DateTime/Format
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/DateTime
+@dirrmtry %%SITE_PERL%%/DateTime/Format
+@dirrmtry %%SITE_PERL%%/DateTime
