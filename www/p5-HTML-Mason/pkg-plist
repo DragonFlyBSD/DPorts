@@ -1,0 +1,44 @@
+bin/mason.pl
+%%SITE_PERL%%/HTML/Mason.pm
+%%SITE_PERL%%/HTML/Mason/Admin.pod
+%%SITE_PERL%%/HTML/Mason/ApacheHandler.pm
+%%SITE_PERL%%/HTML/Mason/Apache/Request.pm
+%%SITE_PERL%%/HTML/Mason/CGIHandler.pm
+%%SITE_PERL%%/HTML/Mason/Cache/BaseCache.pm
+%%SITE_PERL%%/HTML/Mason/Compiler.pm
+%%SITE_PERL%%/HTML/Mason/Compiler/ToObject.pm
+%%SITE_PERL%%/HTML/Mason/Component.pm
+%%SITE_PERL%%/HTML/Mason/Component/FileBased.pm
+%%SITE_PERL%%/HTML/Mason/Component/Subcomponent.pm
+%%SITE_PERL%%/HTML/Mason/ComponentSource.pm
+%%SITE_PERL%%/HTML/Mason/Devel.pod
+%%SITE_PERL%%/HTML/Mason/Escapes.pm
+%%SITE_PERL%%/HTML/Mason/Exceptions.pm
+%%SITE_PERL%%/HTML/Mason/FakeApache.pm
+%%SITE_PERL%%/HTML/Mason/Handler.pm
+%%SITE_PERL%%/HTML/Mason/Interp.pm
+%%SITE_PERL%%/HTML/Mason/Lexer.pm
+%%SITE_PERL%%/HTML/Mason/MethodMaker.pm
+%%SITE_PERL%%/HTML/Mason/Params.pod
+%%SITE_PERL%%/HTML/Mason/Parser.pm
+%%SITE_PERL%%/HTML/Mason/Plugin.pm
+%%SITE_PERL%%/HTML/Mason/Plugin/Context.pm
+%%SITE_PERL%%/HTML/Mason/Request.pm
+%%SITE_PERL%%/HTML/Mason/Resolver.pm
+%%SITE_PERL%%/HTML/Mason/Resolver/File.pm
+%%SITE_PERL%%/HTML/Mason/Resolver/Null.pm
+%%SITE_PERL%%/HTML/Mason/Subclassing.pod
+%%SITE_PERL%%/HTML/Mason/Tests.pm
+%%SITE_PERL%%/HTML/Mason/Tools.pm
+%%SITE_PERL%%/HTML/Mason/Utils.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Mason/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML/Mason
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML
+@dirrm %%SITE_PERL%%/HTML/Mason/Apache
+@dirrm %%SITE_PERL%%/HTML/Mason/Cache
+@dirrm %%SITE_PERL%%/HTML/Mason/Compiler
+@dirrm %%SITE_PERL%%/HTML/Mason/Component
+@dirrm %%SITE_PERL%%/HTML/Mason/Plugin
+@dirrm %%SITE_PERL%%/HTML/Mason/Resolver
+@dirrm %%SITE_PERL%%/HTML/Mason
+@dirrmtry %%SITE_PERL%%/HTML
