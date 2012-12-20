@@ -1,0 +1,10 @@
+%%SITE_PERL%%/Spreadsheet/WriteExcel/FromXML.pm
+%%SITE_PERL%%/Spreadsheet/WriteExcel/FromXML/Workbook.pm
+%%SITE_PERL%%/Spreadsheet/WriteExcel/FromXML/Worksheet.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Spreadsheet/WriteExcel/FromXML/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Spreadsheet/WriteExcel/FromXML
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Spreadsheet/WriteExcel
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Spreadsheet
+@dirrm %%SITE_PERL%%/Spreadsheet/WriteExcel/FromXML
+@dirrmtry %%SITE_PERL%%/Spreadsheet/WriteExcel
+@dirrmtry %%SITE_PERL%%/Spreadsheet
