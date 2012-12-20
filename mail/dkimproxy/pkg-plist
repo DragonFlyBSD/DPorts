@@ -1,0 +1,12 @@
+bin/dkim_responder.pl
+bin/dkimproxy.in
+bin/dkimproxy.out
+etc/dkimproxy_in.conf.example
+etc/dkimproxy_out.conf.example
+lib/LookupMap.pm
+lib/MSDW/SMTP/Client.pm
+lib/MSDW/SMTP/Server.pm
+lib/MySmtpProxyServer.pm
+lib/MySmtpServer.pm
+@dirrm lib/MSDW/SMTP
+@dirrm lib/MSDW
