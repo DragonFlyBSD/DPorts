@@ -1,0 +1,10 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Google/Analytics/.packlist
+%%SITE_PERL%%/Net/Google/Analytics.pm
+%%SITE_PERL%%/Net/Google/Analytics/OAuth2.pm
+%%SITE_PERL%%/Net/Google/Analytics/Request.pm
+%%SITE_PERL%%/Net/Google/Analytics/Response.pm
+%%SITE_PERL%%/Net/Google/Analytics/Row.pm
+@dirrm %%SITE_PERL%%/Net/Google/Analytics
+@dirrm %%SITE_PERL%%/Net/Google
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Google/Analytics
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Google
