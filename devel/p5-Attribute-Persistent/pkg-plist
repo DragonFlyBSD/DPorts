@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Attribute/Persistent.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Attribute/Persistent/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Attribute/Persistent
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Attribute
+@dirrmtry %%SITE_PERL%%/Attribute
