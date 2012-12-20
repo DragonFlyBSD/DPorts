@@ -1,0 +1,5 @@
+%%SITE_PERL%%/URI/SmartURI.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/URI/SmartURI/.packlist
+@dirrm    %%SITE_PERL%%/%%PERL_ARCH%%/auto/URI/SmartURI
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/URI
+@dirrmtry %%SITE_PERL%%/URI
