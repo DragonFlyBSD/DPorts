@@ -1,0 +1,23 @@
+%%SITE_PERL%%/SVG/Graph.pm
+%%SITE_PERL%%/SVG/Graph/Data.pm
+%%SITE_PERL%%/SVG/Graph/Frame.pm
+%%SITE_PERL%%/SVG/Graph/File.pm
+%%SITE_PERL%%/SVG/Graph/Glyph.pm
+%%SITE_PERL%%/SVG/Graph/Data/Node.pm
+%%SITE_PERL%%/SVG/Graph/Data/Tree.pm
+%%SITE_PERL%%/SVG/Graph/Data/Datum.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/axis.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/bubble.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/bezier.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/pictogram.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/barflex.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/bar.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/wedge.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/line.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/tree.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/heatmap.pm
+%%SITE_PERL%%/SVG/Graph/Glyph/scatter.pm
+@dirrm %%SITE_PERL%%/SVG/Graph/Data
+@dirrm %%SITE_PERL%%/SVG/Graph/Glyph
+@dirrm %%SITE_PERL%%/SVG/Graph
+@dirrmtry %%SITE_PERL%%/SVG
