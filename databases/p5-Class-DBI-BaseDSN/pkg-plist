@@ -1,0 +1,3 @@
+%%SITE_PERL%%/Class/DBI/BaseDSN.pm
+@dirrmtry %%SITE_PERL%%/Class/DBI
+@dirrmtry %%SITE_PERL%%/Class
