@@ -1,0 +1,26 @@
+bin/flv2flv
+bin/flv2mp3
+bin/flv2swf
+bin/flvinfo
+bin/swf2flv
+%%SITE_PERL%%/FLV/AMFReader.pm
+%%SITE_PERL%%/FLV/AMFWriter.pm
+%%SITE_PERL%%/FLV/AudioTag.pm
+%%SITE_PERL%%/FLV/Base.pm
+%%SITE_PERL%%/FLV/Body.pm
+%%SITE_PERL%%/FLV/Cut.pm
+%%SITE_PERL%%/FLV/File.pm
+%%SITE_PERL%%/FLV/FromSWF.pm
+%%SITE_PERL%%/FLV/Header.pm
+%%SITE_PERL%%/FLV/Info.pm
+%%SITE_PERL%%/FLV/MetaTag.pm
+%%SITE_PERL%%/FLV/Splice.pm
+%%SITE_PERL%%/FLV/Tag.pm
+%%SITE_PERL%%/FLV/ToMP3.pm
+%%SITE_PERL%%/FLV/ToSWF.pm
+%%SITE_PERL%%/FLV/Util.pm
+%%SITE_PERL%%/FLV/VideoTag.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/FLV/Info/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/FLV/Info
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/FLV
+@dirrmtry %%SITE_PERL%%/FLV
