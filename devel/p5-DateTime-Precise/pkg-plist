@@ -1,0 +1,7 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/DateTime/Precise/.packlist
+%%SITE_PERL%%/DateTime/Precise.pm
+%%SITE_PERL%%/DateTime/Math/bigint.pl
+%%SITE_PERL%%/DateTime/Math/bigfloat.pl
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/DateTime/Precise
+@dirrmtry %%SITE_PERL%%/DateTime/Math
+@dirrmtry %%SITE_PERL%%/DateTime
