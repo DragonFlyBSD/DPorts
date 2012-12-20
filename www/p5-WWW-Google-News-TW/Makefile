@@ -1,0 +1,27 @@
+# New ports collection makefile for:	p5-WWW-Google-News
+# Date created:		2006-07-17
+# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+#
+# $FreeBSD: ports/www/p5-WWW-Google-News-TW/Makefile,v 1.8 2012/11/17 06:02:55 svnexp Exp $
+#
+
+PORTNAME=	WWW-Google-News-TW
+PORTVERSION=	0.12
+PORTREVISION=	1
+CATEGORIES=	www perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	snowfly@yuntech.edu.tw
+COMMENT=	Access to Google's Taiwan News Service (Not Usenet)
+
+BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
+		p5-URI>=0:${PORTSDIR}/net/p5-URI \
+		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=		WWW::Google::News::TW.3
+
+.include <bsd.port.mk>
