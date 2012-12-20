@@ -1,0 +1,23 @@
+# $FreeBSD: ports/devel/py-collective.z3cform.datetimewidget/Makefile,v 1.5 2012/11/17 05:56:45 svnexp Exp $
+
+PORTNAME=	collective.z3cform.datetimewidget
+PORTVERSION=	1.2.0
+CATEGORIES=	devel python zope
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	zope@FreeBSD.org
+COMMENT=	z3c.form date and datetime widgets
+
+LICENSE=	GPLv2
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.i18n>=0:${PORTSDIR}/devel/py-zope.i18n \
+		${PYTHON_PKGNAMEPREFIX}z3c.form>=0:${PORTSDIR}/devel/py-z3c.form \
+		${PYTHON_PKGNAMEPREFIX}zope.deprecation>=0:${PORTSDIR}/devel/py-zope.deprecation
+
+DIST_SUBDIR=	zope
+USE_PYTHON=	-2.7
+USE_PYDISTUTILS=	easy_install
+USE_ZIP=	yes
+
+.include <bsd.port.mk>
