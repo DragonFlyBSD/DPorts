@@ -1,0 +1,5 @@
+%%SITE_PERL%%/XML/NodeFilter.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/NodeFilter/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/NodeFilter
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
+@dirrmtry %%SITE_PERL%%/XML
