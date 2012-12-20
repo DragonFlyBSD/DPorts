@@ -1,0 +1,84 @@
+#! /bin/sh
+
+ask() {
+    local question default answer
+
+    question=$1
+    default=$2
+    if [ -z "${PACKAGE_BUILDING}" -a -z "${BATCH}" ]; then
+	read -p "${question} [${default}]? " answer
+    fi
+    if [ x${answer} = x ]; then
+	answer=${default}
+    fi
+    echo ${answer}
+}
+
+yesno() {
+    local dflt question answer
+
+    question=$1
+    dflt=$2
+    while :; do
+	answer=$(ask "${question}" "${dflt}")
+	case "${answer}" in
+	[Yy]*)		return 0;;
+	[Nn]*)		return 1;;
+	esac
+	echo "Please answer yes or no."
+    done
+}
+
+stop_process() {
+    STARTSTOP=${PKG_PREFIX}/etc/rc.d/munin-node
+
+    if [ -x $STARTSTOP ]; then
+	$STARTSTOP stop
+    fi
+}
+
+delete_crontab_entries() {
+    local prog
+    prog=$1
+
+    if grep -q "^[^#]*$prog" /etc/crontab; then
+	TMPFILE=`mktemp -t munin` || exit 1
+	grep -v $prog /etc/crontab > $TMPFILE
+	cat $TMPFILE > /etc/crontab
+	rm $/etc/crontab
+    fi
+}
+
+delnewsyslog() {
+    tmp="/etc/#munin-node$$"
+    sed -e '/^\/var\/log\/munin\/munin-node.log[ 	]/d' /etc/newsyslog.conf >${tmp}
+    cat ${tmp} > /etc/newsyslog.conf
+    rm ${tmp}
+}
+
+newsyslog() {
+    ENTRY=`grep /var/log/munin/munin-node.log /etc/newsyslog.conf`
+    DEFAULT='/var/log/munin/munin-node.log			644  7	   *	@T00  Z	/var/run/munin/munin-node.pid'
+    if [ -z "$ENTRY" ]; then
+	exit 0
+    elif [ "$ENTRY" = "$DEFAULT" ]; then
+	delnewsyslog
+    elif yesno "You have changed the default munin-node entry in \"/etc/newsyslog.conf\".
+Do you want me to delete it?" y; then
+	delnewsyslog
+	echo "Done."
+    fi
+}
+
+
+case $2 in
+    DEINSTALL)
+	if [ -z "${PACKAGE_BUILDING}" ]; then
+		delete_crontab_entries ${PKG_PREFIX}/bin/munin-node-revive
+		stop_process
+		newsyslog
+	fi
+	;;
+    POST-DEINSTALL)
+	;;
+esac
