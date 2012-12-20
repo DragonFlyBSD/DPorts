@@ -1,0 +1,8 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Object/Realize/Later/.packlist
+%%SITE_PERL%%/Object/Realize/Later.pm
+%%SITE_PERL%%/Object/Realize/Later.pod
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Object/Realize/Later
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Object/Realize
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Object
+@dirrm %%SITE_PERL%%/Object/Realize
+@dirrmtry %%SITE_PERL%%/Object
