@@ -1,0 +1,7 @@
+%%SITE_PERL%%/HTML/ElementGlob.pm
+%%SITE_PERL%%/HTML/ElementRaw.pm
+%%SITE_PERL%%/HTML/ElementSuper.pm
+%%SITE_PERL%%/HTML/ElementTable.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML-Element-Extended/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML-Element-Extended
+@dirrmtry %%SITE_PERL%%/HTML
