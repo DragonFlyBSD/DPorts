@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Module/Versions/Report.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Module-Versions-Report/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Module-Versions-Report
+@dirrm %%SITE_PERL%%/Module/Versions
+@dirrmtry %%SITE_PERL%%/Module
