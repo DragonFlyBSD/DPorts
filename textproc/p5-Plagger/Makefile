@@ -1,0 +1,559 @@
+# New ports collection makefile for:	plagger
+# Date created:				22 August 2006
+# Whom:					sumikawa@FreeBSD.org
+#
+# $FreeBSD: ports/textproc/p5-Plagger/Makefile,v 1.35 2012/11/17 06:02:06 svnexp Exp $
+#
+
+PORTNAME=	Plagger
+PORTVERSION=	0.7.17
+PORTREVISION=	4
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	sumikawa@FreeBSD.org
+COMMENT=	A pluggable RSS/Atom feed aggregator written in Perl
+
+USE_PERL5=	yes
+
+BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
+		p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
+		p5-DateTime-TimeZone>=0:${PORTSDIR}/devel/p5-DateTime-TimeZone \
+		p5-DateTime-Locale>=0:${PORTSDIR}/devel/p5-DateTime-Locale \
+		p5-DateTime-Format-Mail>=0:${PORTSDIR}/devel/p5-DateTime-Format-Mail \
+		p5-DateTime-Format-Strptime>=0:${PORTSDIR}/devel/p5-DateTime-Format-Strptime \
+		p5-DateTime-Format-W3CDTF>=0:${PORTSDIR}/devel/p5-DateTime-Format-W3CDTF \
+		p5-Cache>=0:${PORTSDIR}/devel/p5-Cache \
+		p5-Cache-Cache>=0:${PORTSDIR}/devel/p5-Cache-Cache \
+		p5-File-Find-Rule>=0:${PORTSDIR}/devel/p5-File-Find-Rule \
+		p5-File-HomeDir>=0:${PORTSDIR}/devel/p5-File-HomeDir \
+		p5-Module-Install>=0:${PORTSDIR}/devel/p5-Module-Install \
+		p5-Module-Pluggable-Fast>=0:${PORTSDIR}/devel/p5-Module-Pluggable-Fast \
+		p5-Term-Encoding>=0:${PORTSDIR}/devel/p5-Term-Encoding \
+		p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require \
+		p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS \
+		p5-MIME-Types>=0:${PORTSDIR}/mail/p5-MIME-Types \
+		p5-Text-Tags>=0:${PORTSDIR}/textproc/p5-Text-Tags \
+		p5-XML-Feed>=0:${PORTSDIR}/textproc/p5-XML-Feed \
+		p5-XML-RSS-LibXML>=0:${PORTSDIR}/textproc/p5-XML-RSS-LibXML \
+		p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit \
+		p5-Template-Provider-Encoding>=0:${PORTSDIR}/www/p5-Template-Provider-Encoding \
+		p5-HTML-ResolveLink>=0:${PORTSDIR}/www/p5-HTML-ResolveLink \
+		p5-URI-Fetch>=0:${PORTSDIR}/www/p5-URI-Fetch \
+		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
+
+OPTIONS=	BETTERENCODING "Better Encoding detection Support" on \
+		PODTESTING "POD Testing Support" off \
+		COOKIESHARING "Cookie sharing with Firefox Support" off \
+		LIBERALXML "Liberal XML parsing Support" on \
+		XPATH "XPath Support" on \
+		BETTERHTML "Better html to text formatter" on \
+		PRSJPNDATE "Parse Japanese datetime format" off \
+		PUBLISHEXCEL "Publish::Excel Support" off \
+		FILTERPIPE "Filter::Pipe Support" off \
+		PUBLISHPLANET "Publish::Planet Support" on \
+		PUBLISHCSV "Publish::CSV Support" off \
+		FILDEGYT "Filter-DegradeYouTube" off \
+		AUTHORNAME "Filter::ExtractAuthorName Support" off \
+		GUESSLANG "Filter::GuessLanguage Support" off \
+		GUESSTZ "Filter::GuessTimeZoneByDomain Support" off \
+		HTMLTIDY "Filter::HTMLTidy Support" off \
+		PUBLISHMT "Publish::MT Support" off \
+		PUBSERLZR "Publish-Serializer Support" off \
+		PUBICAL "Publish::iCal Support" off \
+		ROMANIZE "Filter::Romanize Support" off \
+		JAVASCRIPT "Publish::JavaScript Support" off \
+		EMOTICON "Filter::Emoticon Support" off \
+		FILHATENA "Filter::HatenaFormat Support" off \
+		FILHATKTAG "Filter::HatenaKeywordTag" off \
+		RULEFRESH "Rule::Fresh Support" on \
+		SUBSCOPML "Subscription::OPML Support" on \
+		FLICKRSEARCH "CustomFeed::FlickrSearch Support" off \
+		HATENABKMK "Filter::HatenaBookmarkUsersCount Support" off \
+		PALMDOC "Publish::PalmDoc Support" off \
+		PUBLISHSWF "Publish::SWF Support" off \
+		SUBSCRDBI "Subscription::DBI Support" off \
+		NOTIFYBEEP "Notify::Beep Support" off \
+		FILTERPPT "Filter::TTP Support" off \
+		KINOSEARCH "Search::KinoSearch Support" off \
+		PUBLISHGMAIL "Publish::Gmail Support" on \
+		PUBDELICIOUS "Publish::Delicious Support" off \
+		ESTRAIER "Search::Estraier Support" off \
+		SRCHGREP "Search::Grep" off \
+		PUBJSON "Publish::JSON Support" off \
+		FILSPAMASSN "Filter-SpamAssassin Support" off \
+		PROFANITY "Filter::Profanity Support" off \
+		HATENARSS "Subscription::HatenaRSS Support" off \
+		SUBSCRFOAF "Subscription::FOAF Support" off \
+		NOTIFYIRC "Notify::IRC Support" off \
+		HATENADIARY "Filter::HatenaDiaryKeywordLink Support" off \
+		LIVEDOOR "Subscription::LivedoorReader Support" off \
+		PINGSERVER "Subscription::PingServer Support" off \
+		IMAGEINFO "Filter::ImageInfo Support" off \
+		FILMRKDWN "Filter::Markdown Support" off \
+		PUBLISHIMAP "Publish::IMAP Support" off \
+		PUBLISHPDF "Publish::PDF Support" off \
+		BLOGLINES "Subscription::Bloglines Support" on \
+		BABELFISH "Filter::Babelfish Support" off \
+		CUSFEEDMIXI "CustomFeed::Mixi Support" off \
+		CUSTOMSVNLOG "CustomFeed::SVNLog Support" off \
+		NTFYNETSEND "Notify::NetSend Support" off \
+		FILHTMLSCRB "Filter::HTMLScrubber Support" on \
+		PLANETINI "Subscription::PlanetINI Support" off \
+		SUMMARYENG "Summary-English Support" off \
+		SUMJPN "Summary::Japanes" off \
+		SUMTEXTORG "Summary-TextOriginal Support" off
+
+.include <bsd.port.pre.mk>
+
+.if !defined(WITHOUT_BETTERENCODING)
+BUILD_DEPENDS+=	p5-Encode-Detect>=0:${PORTSDIR}/converters/p5-Encode-Detect
+.endif
+
+.if defined(WITH_PODTESTING)
+BUILD_DEPENDS+=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
+		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
+.endif
+
+.if defined(WITH_COOKIESHARING)
+BUILD_DEPENDS+=	p5-HTTP-Cookies-Mozilla>=0:${PORTSDIR}/www/p5-HTTP-Cookies-Mozilla
+.endif
+
+.if !defined(WITHOUT_LIBERALXML)
+BUILD_DEPENDS+=	p5-XML-Liberal>=0:${PORTSDIR}/textproc/p5-XML-Liberal  \
+		p5-XML-RSS-Liberal>=0:${PORTSDIR}/textproc/p5-XML-RSS-Liberal
+.endif
+
+.if !defined(WITHOUT_XPATH)
+BUILD_DEPENDS+=	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree \
+		p5-HTML-Format>=0:${PORTSDIR}/textproc/p5-HTML-Format
+.endif
+
+.if !defined(WITHOUT_BETTERHTML)
+BUILD_DEPENDS+=	p5-HTML-TreeBuilder-XPath>=0:${PORTSDIR}/www/p5-HTML-TreeBuilder-XPath
+.endif
+
+.if defined(WITH_PRSJPNDATE)
+BUILD_DEPENDS+=	ja-p5-DateTime-Format-Japanese>=0:${PORTSDIR}/japanese/p5-DateTime-Format-Japanese
+.endif
+
+.if defined(WITH_PUBLISHEXCEL)
+BUILD_DEPENDS+=	p5-Spreadsheet-WriteExcel>=0:${PORTSDIR}/textproc/p5-Spreadsheet-WriteExcel
+.endif
+
+.if defined(WITH_FILTERPIPE)
+BUILD_DEPENDS+=	p5-IPC-Run>=0:${PORTSDIR}/devel/p5-IPC-Run
+.endif
+
+.if defined(WITH_PUBLISHPLANET)
+BUILD_DEPENDS+=	p5-File-Copy-Recursive>=0:${PORTSDIR}/devel/p5-File-Copy-Recursive \
+		p5-HTML-Scrubber>=0:${PORTSDIR}/www/p5-HTML-Scrubber
+.endif
+
+.if defined(WITH_PUBLISHCSV)
+BUILD_DEPENDS+=	p5-Text-CSV>=0:${PORTSDIR}/textproc/p5-Text-CSV
+.endif
+
+.if defined(WITH_FILDEGYT)
+BUILD_DEPENDS+=	p5-WebService-YouTube>=0:${PORTSDIR}/www/p5-WebService-YouTube
+.endif
+
+.if defined(WITH_AUTHORNAME)
+BUILD_DEPENDS+=	p5-Email-Address>=0:${PORTSDIR}/mail/p5-Email-Address
+.endif
+
+.if defined(WITH_GUESSLANG)
+BUILD_DEPENDS+=	p5-Lingua-ZH-HanDetect>=0:${PORTSDIR}/chinese/p5-Lingua-ZH-HanDetect \
+		p5-Text-Language-Guess>=0:${PORTSDIR}/textproc/p5-Text-Language-Guess
+.endif
+
+.if defined(WITH_GUESSTZ)
+BUILD_DEPENDS+=	p5-IP-Country>=0:${PORTSDIR}/net/p5-IP-Country
+.endif
+
+.if defined(WITH_HTMLTIDY)
+BUILD_DEPENDS+=	p5-HTML-Tidy>=0:${PORTSDIR}/textproc/p5-HTML-Tidy
+.endif
+
+.if defined(WITH_PUBLISHMT)
+BUILD_DEPENDS+=	p5-Net-MovableType>=0:${PORTSDIR}/net/p5-Net-MovableType
+.endif
+
+.if defined(WITH_PUBSERLZR)
+BUILD_DEPENDS+=	p5-Data-Serializer>=0:${PORTSDIR}/devel/p5-Data-Serializer
+.endif
+
+.if defined(WITH_PUBICAL)
+BUILD_DEPENDS+=	p5-Data-ICal>=0:${PORTSDIR}/deskutils/p5-Data-ICal \
+		p5-DateTime-Format-ICal>=0:${PORTSDIR}/devel/p5-DateTime-Format-ICal
+.endif
+
+.if defined(WITH_ROMANIZE)
+BUILD_DEPENDS+=	ja-p5-Text-Kakasi>=0:${PORTSDIR}/japanese/p5-Text-Kakasi
+.endif
+
+.if defined(WITH_JAVASCRIPT)
+BUILD_DEPENDS+=	p5-Template-Plugin-JavaScript>=0:${PORTSDIR}/www/p5-Template-Plugin-JavaScript
+.endif
+
+.if defined(WITH_EMOTICON)
+BUILD_DEPENDS+=	p5-Text-Emoticon>=0:${PORTSDIR}/textproc/p5-Text-Emoticon
+.endif
+
+.if defined(WITH_FILHATENA)
+BUILD_DEPENDS+=	p5-Text-Hatena>=0:${PORTSDIR}/textproc/p5-Text-Hatena
+.endif
+
+.if defined(WITH_FILHATKTAG)
+BUILD_DEPENDS+=	p5-Hatena-Keyword>=0:${PORTSDIR}/textproc/p5-Hatena-Keyword
+.endif
+
+.if !defined(WITHOUT_RULEFRESH)
+BUILD_DEPENDS+=	p5-Time-Duration-Parse>=0:${PORTSDIR}/devel/p5-Time-Duration-Parse
+.endif
+
+.if !defined(WITHOUT_SUBSCOPML)
+BUILD_DEPENDS+=	p5-XML-OPML>=0:${PORTSDIR}/textproc/p5-XML-OPML
+.endif
+
+.if defined(WITH_FLICKRSEARCH)
+BUILD_DEPENDS+=	p5-Flickr-API>=0:${PORTSDIR}/www/p5-Flickr-API \
+		p5-DateTime-Format-Epoch>=0:${PORTSDIR}/devel/p5-DateTime-Format-Epoch
+.endif
+
+.if defined(WITH_HATENABKMK)
+BUILD_DEPENDS+=	p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite
+.endif
+
+.if defined(WITH_PALMDOC)
+BUILD_DEPENDS+=	p5-Palm-PalmDoc>=0:${PORTSDIR}/palm/p5-Palm-PalmDoc
+.endif
+
+.if defined(WITH_PUBLISHSWF)
+BUILD_DEPENDS+=	p5-SWF-Builder>=0:${PORTSDIR}/graphics/p5-SWF-Builder \
+		libtext-wrapi18n-perl>=0:${PORTSDIR}/textproc/libtext-wrapi18n-perl
+.endif
+
+.if defined(WITH_SUBSCRDBI)
+BUILD_DEPENDS+=	p5-DBIx-Class>=0:${PORTSDIR}/databases/p5-DBIx-Class
+.endif
+
+.if defined(WITH_NOTIFYBEEP)
+BUILD_DEPENDS+=	p5-Audio-Beep>=0:${PORTSDIR}/audio/p5-Audio-Beep
+.endif
+
+.if defined(WITH_FILTERPPT)
+BUILD_DEPENDS+=	p5-URI-Find>=0:${PORTSDIR}/textproc/p5-URI-Find
+.endif
+
+.if defined(WITH_KINOSEARCH)
+BUILD_DEPENDS+=	p5-KinoSearch>=0:${PORTSDIR}/textproc/p5-KinoSearch
+.endif
+
+.if !defined(WITHOUT_PUBLISHGMAIL)
+BUILD_DEPENDS+=	p5-Net-SMTP-TLS>=0:${PORTSDIR}/mail/p5-Net-SMTP-TLS \
+		p5-MIME-Lite>=0:${PORTSDIR}/mail/p5-MIME-Lite \
+		p5-Mail-Tools>=0:${PORTSDIR}/mail/p5-Mail-Tools
+.endif
+
+.if defined(WITH_PUBDELICIOUS)
+BUILD_DEPENDS+=	p5-Net-Delicious>=0:${PORTSDIR}/net/p5-Net-Delicious
+.endif
+
+.if defined(WITH_ESTRAIER)
+BUILD_DEPENDS+=	p5-Search-Estraier>=0:${PORTSDIR}/textproc/p5-Search-Estraier
+.endif
+
+.if defined(WITH_SRCHGREP)
+BUILD_DEPENDS+=	p5-File-Grep>=0:${PORTSDIR}/devel/p5-File-Grep
+.endif
+
+.if defined(WITH_PUBJSON)
+BUILD_DEPENDS+=	p5-YAML-Syck>=0:${PORTSDIR}/textproc/p5-YAML-Syck
+.endif
+
+.if defined(WITH_FILSPAMASSN)
+BUILD_DEPENDS+=	p5-Mail-SpamAssassin>=0:${PORTSDIR}/mail/p5-Mail-SpamAssassin
+.endif
+
+.if defined(WITH_PROFANITY)
+BUILD_DEPENDS+=	p5-Regexp-Common-profanity_us>=0:${PORTSDIR}/textproc/p5-Regexp-Common-profanity_us
+.endif
+
+.if defined(WITH_HATENARSS)
+BUILD_DEPENDS+=	p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize
+.endif
+
+.if defined(WITH_SUBSCRFOAF)
+BUILD_DEPENDS+=	p5-XML-FOAF>=0:${PORTSDIR}/textproc/p5-XML-FOAF
+.endif
+
+.if defined(WITH_NOTIFYIRC)
+BUILD_DEPENDS+=	p5-POE-Component-IRC>=0:${PORTSDIR}/irc/p5-POE-Component-IRC \
+		p5-POE-Component-IKC>=0:${PORTSDIR}/devel/p5-POE-Component-IKC
+.endif
+
+.if defined(WITH_HATENADIARY)
+BUILD_DEPENDS+=	p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite
+.endif
+
+.if defined(WITH_LIVEDOOR)
+BUILD_DEPENDS+=	p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize \
+		p5-YAML-Syck>=0:${PORTSDIR}/textproc/p5-YAML-Syck
+.endif
+
+.if defined(WITH_PINGSERVER)
+BUILD_DEPENDS+=	p5-HTML-RSSAutodiscovery>=0:${PORTSDIR}/www/p5-HTML-RSSAutodiscovery
+.endif
+
+.if defined(WITH_IMAGEINFO)
+BUILD_DEPENDS+=	p5-Image-Info>=0:${PORTSDIR}/graphics/p5-Image-Info
+.endif
+
+.if defined(WITH_FILMRKDWN)
+BUILD_DEPENDS+=	p5-Text-Markdown>=0:${PORTSDIR}/textproc/p5-Text-Markdown
+.endif
+
+.if defined(WITH_PUBLISHIMAP)
+BUILD_DEPENDS+=	p5-Mail-IMAPClient>=0:${PORTSDIR}/mail/p5-Mail-IMAPClient
+.endif
+
+.if defined(WITH_PUBLISHPDF)
+BUILD_DEPENDS+=	p5-PDF-FromHTML>=0:${PORTSDIR}/textproc/p5-PDF-FromHTML
+.endif
+
+.if defined(WITH_BLOGLINES)
+BUILD_DEPENDS+=	p5-WebService-Bloglines>=0:${PORTSDIR}/www/p5-WebService-Bloglines
+.endif
+
+.if defined(WITH_BABELFISH)
+BUILD_DEPENDS+=	p5-WWW-Babelfish>=0:${PORTSDIR}/www/p5-WWW-Babelfish
+.endif
+
+.if defined(WITH_CUSFEEDMIXI)
+BUILD_DEPENDS+=	p5-WWW-Mixi>=0:${PORTSDIR}/www/p5-WWW-Mixi
+.endif
+
+.if defined(WITH_CUSTOMSVNLOG)
+BUILD_DEPENDS+=	p5-subversion>=0:${PORTSDIR}/devel/p5-subversion
+.endif
+
+.if defined(WITH_NTFYNETSEND)
+BUILD_DEPENDS+=	p5-Net-NetSend>=0:${PORTSDIR}/net-im/p5-Net-NetSend
+.endif
+
+.if defined(WITH_FILHTMLSCRB)
+BUILD_DEPENDS+=	p5-HTML-Scrubber>=0:${PORTSDIR}/www/p5-HTML-Scrubber
+.endif
+
+.if defined(WITH_PLANETINI)
+BUILD_DEPENDS+=	p5-Config-INI-Simple>=0:${PORTSDIR}/devel/p5-Config-INI-Simple
+.endif
+
+.if defined(WITH_SUMMARYENG)
+BUILD_DEPENDS+=	p5-Lingua-EN-Summarize>=0:${PORTSDIR}/textproc/p5-Lingua-EN-Summarize
+.endif
+
+.if defined(WITH_SUMJPN)
+BUILD_DEPENDS+=	ja-p5-Lingua-JA-Summarize-Extract>=0:${PORTSDIR}/japanese/p5-Lingua-JA-Summarize-Extract
+.endif
+
+.if defined(WITH_SUMTEXTORG)
+BUILD_DEPENDS+=	p5-Text-Original>=0:${PORTSDIR}/textproc/p5-Text-Original
+.endif
+
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+PERL_CONFIGURE=	yes
+
+MAN3=		Plagger.3 \
+		Plagger::Cookies.3 \
+		Plagger::Date.3 \
+		Plagger::Plugin.3 \
+		Plagger::Plugin::Aggregator::Null.3 \
+		Plagger::Plugin::Aggregator::Simple.3 \
+		Plagger::Plugin::Bundle::Defaults.3 \
+		Plagger::Plugin::Bundle::Planet.3 \
+		Plagger::Plugin::CustomFeed::2chSearch.3 \
+		Plagger::Plugin::CustomFeed::AmazonAssociateReportJP.3 \
+		Plagger::Plugin::CustomFeed::BloglinesCitations.3 \
+		Plagger::Plugin::CustomFeed::Debug.3 \
+		Plagger::Plugin::CustomFeed::FlickrSearch.3 \
+		Plagger::Plugin::CustomFeed::Frepa.3 \
+		Plagger::Plugin::CustomFeed::GoogleNews.3 \
+		Plagger::Plugin::CustomFeed::Mailman.3 \
+		Plagger::Plugin::CustomFeed::Mixi.3 \
+		Plagger::Plugin::CustomFeed::MixiDiarySearch.3 \
+		Plagger::Plugin::CustomFeed::POP3.3 \
+		Plagger::Plugin::CustomFeed::PerlMonks.3 \
+		Plagger::Plugin::CustomFeed::SVNLog.3 \
+		Plagger::Plugin::CustomFeed::Script.3 \
+		Plagger::Plugin::CustomFeed::Simple.3 \
+		Plagger::Plugin::CustomFeed::YouTube.3 \
+		Plagger::Plugin::CustomFeed::iTunesRecentPlay.3 \
+		Plagger::Plugin::Filter::2chNewsokuTitle.3 \
+		Plagger::Plugin::Filter::2chRSSContent.3 \
+		Plagger::Plugin::Filter::AtomLinkRelated.3 \
+		Plagger::Plugin::Filter::Babelfish.3 \
+		Plagger::Plugin::Filter::Base.3 \
+		Plagger::Plugin::Filter::BlogPet.3 \
+		Plagger::Plugin::Filter::BloglinesContentNormalize.3 \
+		Plagger::Plugin::Filter::BreakEntriesToFeeds.3 \
+		Plagger::Plugin::Filter::BulkfeedsTerms.3 \
+		Plagger::Plugin::Filter::CompositeFeed.3 \
+		Plagger::Plugin::Filter::DegradeYouTube.3 \
+		Plagger::Plugin::Filter::Delicious.3 \
+		Plagger::Plugin::Filter::DeliciousFeedTags.3 \
+		Plagger::Plugin::Filter::Emoticon.3 \
+		Plagger::Plugin::Filter::EntryFullText.3 \
+		Plagger::Plugin::Filter::ExtractAuthorName.3 \
+		Plagger::Plugin::Filter::FeedBurnerPermalink.3 \
+		Plagger::Plugin::Filter::FeedFlareStripper.3 \
+		Plagger::Plugin::Filter::FetchEnclosure.3 \
+		Plagger::Plugin::Filter::FetchEnclosure::Curl.3 \
+		Plagger::Plugin::Filter::FetchEnclosure::ParallelUA.3 \
+		Plagger::Plugin::Filter::FetchEnclosure::Wget.3 \
+		Plagger::Plugin::Filter::FindEnclosures.3 \
+		Plagger::Plugin::Filter::FloatingDateTime.3 \
+		Plagger::Plugin::Filter::ForceTimeZone.3 \
+		Plagger::Plugin::Filter::GuessLanguage.3 \
+		Plagger::Plugin::Filter::GuessTimeZoneByDomain.3 \
+		Plagger::Plugin::Filter::HEADEnclosureMetadata.3 \
+		Plagger::Plugin::Filter::HTMLScrubber.3 \
+		Plagger::Plugin::Filter::HTMLTidy.3 \
+		Plagger::Plugin::Filter::HatenaBookmarkTag.3 \
+		Plagger::Plugin::Filter::HatenaBookmarkUsersCount.3 \
+		Plagger::Plugin::Filter::HatenaDiaryKeywordLink.3 \
+		Plagger::Plugin::Filter::HatenaDiaryKeywordUnlink.3 \
+		Plagger::Plugin::Filter::HatenaFormat.3 \
+		Plagger::Plugin::Filter::HatenaKeywordTag.3 \
+		Plagger::Plugin::Filter::ImageInfo.3 \
+		Plagger::Plugin::Filter::Kansai.3 \
+		Plagger::Plugin::Filter::LivedoorClipUsersCount.3 \
+		Plagger::Plugin::Filter::LivedoorKeywordUnlink.3 \
+		Plagger::Plugin::Filter::Markdown.3 \
+		Plagger::Plugin::Filter::POPFile.3 \
+		Plagger::Plugin::Filter::Pipe.3 \
+		Plagger::Plugin::Filter::Profanity.3 \
+		Plagger::Plugin::Filter::RSSLiberalDateTime.3 \
+		Plagger::Plugin::Filter::RSSTimeZoneString.3 \
+		Plagger::Plugin::Filter::Regexp.3 \
+		Plagger::Plugin::Filter::ResolveRelativeLink.3 \
+		Plagger::Plugin::Filter::RewriteEnclosureURL.3 \
+		Plagger::Plugin::Filter::Rule.3 \
+		Plagger::Plugin::Filter::SpamAssassin.3 \
+		Plagger::Plugin::Filter::StripRSSAd.3 \
+		Plagger::Plugin::Filter::StripTagsFromTitle.3 \
+		Plagger::Plugin::Filter::TTP.3 \
+		Plagger::Plugin::Filter::TagsToTitle.3 \
+		Plagger::Plugin::Filter::Thumbnail.3 \
+		Plagger::Plugin::Filter::TruePermalink.3 \
+		Plagger::Plugin::Filter::UnicodeNormalize.3 \
+		Plagger::Plugin::Filter::tDiaryComment.3 \
+		Plagger::Plugin::Namespace::ApplePhotocast.3 \
+		Plagger::Plugin::Namespace::HatenaFotolife.3 \
+		Plagger::Plugin::Namespace::MediaRSS.3 \
+		Plagger::Plugin::Notify::Audio.3 \
+		Plagger::Plugin::Notify::Balloon.3 \
+		Plagger::Plugin::Notify::Beep.3 \
+		Plagger::Plugin::Notify::Campfire.3 \
+		Plagger::Plugin::Notify::Command.3 \
+		Plagger::Plugin::Notify::Eject.3 \
+		Plagger::Plugin::Notify::Eject::darwin.3 \
+		Plagger::Plugin::Notify::Eject::freebsd.3 \
+		Plagger::Plugin::Notify::Eject::linux.3 \
+		Plagger::Plugin::Notify::Eject::mswin32.3 \
+		Plagger::Plugin::Notify::IRC.3 \
+		Plagger::Plugin::Notify::MSAgent.3 \
+		Plagger::Plugin::Notify::NetSend.3 \
+		Plagger::Plugin::Notify::OpenBrowser.3 \
+		Plagger::Plugin::Notify::OpenBrowser::FirefoxRemote.3 \
+		Plagger::Plugin::Notify::SSTP.3 \
+		Plagger::Plugin::Notify::Tiarra.3 \
+		Plagger::Plugin::Notify::UpdatePing.3 \
+		Plagger::Plugin::Publish::2chdat.3 \
+		Plagger::Plugin::Publish::CSV.3 \
+		Plagger::Plugin::Publish::Delicious.3 \
+		Plagger::Plugin::Publish::Excel.3 \
+		Plagger::Plugin::Publish::FOAFRoll.3 \
+		Plagger::Plugin::Publish::Feed.3 \
+		Plagger::Plugin::Publish::Gmail.3 \
+		Plagger::Plugin::Publish::HatenaBookmark.3 \
+		Plagger::Plugin::Publish::IMAP.3 \
+		Plagger::Plugin::Publish::JSON.3 \
+		Plagger::Plugin::Publish::JavaScript.3 \
+		Plagger::Plugin::Publish::LivedoorClip.3 \
+		Plagger::Plugin::Publish::MT.3 \
+		Plagger::Plugin::Publish::MTWidget.3 \
+		Plagger::Plugin::Publish::Maildir.3 \
+		Plagger::Plugin::Publish::OPML.3 \
+		Plagger::Plugin::Publish::OutlineText.3 \
+		Plagger::Plugin::Publish::PDF.3 \
+		Plagger::Plugin::Publish::PalmDoc.3 \
+		Plagger::Plugin::Publish::Pipe.3 \
+		Plagger::Plugin::Publish::Planet.3 \
+		Plagger::Plugin::Publish::Playlog.3 \
+		Plagger::Plugin::Publish::PowerPoint.3 \
+		Plagger::Plugin::Publish::SWF.3 \
+		Plagger::Plugin::Publish::Serializer.3 \
+		Plagger::Plugin::Publish::Speech::MacOSX.3 \
+		Plagger::Plugin::Publish::Takahashi.3 \
+		Plagger::Plugin::Publish::iCal.3 \
+		Plagger::Plugin::Search::Estraier.3 \
+		Plagger::Plugin::Search::Grep.3 \
+		Plagger::Plugin::Search::KinoSearch.3 \
+		Plagger::Plugin::Search::Namazu.3 \
+		Plagger::Plugin::Search::Rast.3 \
+		Plagger::Plugin::Search::Spotlight.3 \
+		Plagger::Plugin::Subscription::Bloglines.3 \
+		Plagger::Plugin::Subscription::Bookmarks.3 \
+		Plagger::Plugin::Subscription::Config.3 \
+		Plagger::Plugin::Subscription::DBI.3 \
+		Plagger::Plugin::Subscription::FOAF.3 \
+		Plagger::Plugin::Subscription::Feed.3 \
+		Plagger::Plugin::Subscription::File.3 \
+		Plagger::Plugin::Subscription::HatenaGroup.3 \
+		Plagger::Plugin::Subscription::HatenaRSS.3 \
+		Plagger::Plugin::Subscription::LivedoorReader.3 \
+		Plagger::Plugin::Subscription::OPML.3 \
+		Plagger::Plugin::Subscription::Odeo.3 \
+		Plagger::Plugin::Subscription::PingServer.3 \
+		Plagger::Plugin::Subscription::Planet.3 \
+		Plagger::Plugin::Subscription::PlanetINI.3 \
+		Plagger::Plugin::Subscription::XOXO.3 \
+		Plagger::Plugin::Subscription::XPath.3 \
+		Plagger::Plugin::Summary::AppleScript.3 \
+		Plagger::Plugin::Summary::Auto.3 \
+		Plagger::Plugin::Summary::English.3 \
+		Plagger::Plugin::Summary::GetSen.3 \
+		Plagger::Plugin::Summary::HatenaBookmark.3 \
+		Plagger::Plugin::Summary::Japanese.3 \
+		Plagger::Plugin::Summary::Simple.3 \
+		Plagger::Plugin::Summary::TextOriginal.3 \
+		Plagger::Plugin::Summary::TrackbackRDF.3 \
+		Plagger::Plugin::UserAgent::AuthenRequest.3 \
+		Plagger::Plugin::UserAgent::RequestHeader.3 \
+		Plagger::Plugin::Widget::BloglinesSubscription.3 \
+		Plagger::Plugin::Widget::BulkfeedsSpamReport.3 \
+		Plagger::Plugin::Widget::Delicious.3 \
+		Plagger::Plugin::Widget::HatenaBookmarkUsersCount.3 \
+		Plagger::Plugin::Widget::Simple.3 \
+		Plagger::Rule::Deduped.3 \
+		Plagger::Rule::Fresh.3 \
+		Plagger::Rule::URLBL.3 \
+		Plagger::Template.3
+
+post-patch:
+	${PERL} -pi -e '$$_ = "" if m|auto_install|' ${WRKSRC}/Makefile.PL
+	${RM} ${WRKSRC}/lib/Plagger/Plugin/Publish/Feed.pm.orig
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/*.yaml ${EXAMPLESDIR}/
+.endif
+	@${MKDIR} ${DATADIR}/assets
+	(cd ${WRKSRC}/assets; ${TAR} cfz - . | ${TAR} zxf - -C ${DATADIR}/assets)
+
+.include <bsd.port.post.mk>
