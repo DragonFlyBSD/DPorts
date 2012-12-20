@@ -1,0 +1,24 @@
+# New ports collection makefile for:	xfindproxy
+# Date Created:				17 Feb 2006
+# Whom:					Florent Thoumie <flz@FreeBSD.org>
+#
+# $FreeBSD: ports/x11/xfindproxy/Makefile,v 1.3 2012/11/17 06:03:21 svnexp Exp $
+#
+
+PORTNAME=	xfindproxy
+PORTVERSION=	1.0.2
+CATEGORIES=	x11
+
+MAINTAINER=	x11@FreeBSD.org
+COMMENT=	Locate available proxy services
+
+LICENSE=	MIT
+
+XORG_CAT=	app
+USE_XORG=	x11 ice xt xproxymngproto
+
+PLIST_FILES=	bin/xfindproxy
+
+MAN1=		xfindproxy.1
+
+.include <bsd.port.mk>
