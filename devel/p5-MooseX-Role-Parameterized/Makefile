@@ -1,0 +1,42 @@
+# New ports collection makefile for:	MooseX-Role-Parameterized
+# Date created:	   18 Aug 2009
+# Whom:		   Sergey Skvortsov <skv@protey.ru>
+#
+# $FreeBSD: ports/devel/p5-MooseX-Role-Parameterized/Makefile,v 1.14 2012/11/17 05:56:23 svnexp Exp $
+#
+
+PORTNAME=	MooseX-Role-Parameterized
+PORTVERSION=	1.00
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:SARTAK
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Roles with composition parameters
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-Moose>=2.0300:${PORTSDIR}/devel/p5-Moose
+RUN_DEPENDS=	p5-Moose>=2.0300:${PORTSDIR}/devel/p5-Moose
+
+TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
+
+PERL_CONFIGURE=	yes
+
+MAN3=		MooseX::Role::Parameterized.3 \
+		MooseX::Role::Parameterized::Extending.3 \
+		MooseX::Role::Parameterized::Meta::Role::Parameterizable.3 \
+		MooseX::Role::Parameterized::Meta::Role::Parameterized.3 \
+		MooseX::Role::Parameterized::Meta::Trait::Parameterized.3 \
+		MooseX::Role::Parameterized::Parameters.3 \
+		MooseX::Role::Parameterized::Tutorial.3
+
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 501400
+TEST_DEPENDS+=	p5-Test-Simple>=0.96:${PORTSDIR}/devel/p5-Test-Simple
+.endif
+
+.include <bsd.port.post.mk>
