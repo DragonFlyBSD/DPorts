@@ -1,0 +1,3 @@
+%%SITE_PERL%%/SQL/Abstract/Limit.pm
+@dirrmtry %%SITE_PERL%%/SQL/Abstract
+@dirrmtry %%SITE_PERL%%/SQL
