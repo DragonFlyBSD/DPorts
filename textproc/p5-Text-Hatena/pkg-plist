@@ -1,0 +1,7 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Text/Hatena/.packlist
+%%SITE_PERL%%/Text/Hatena.pm
+%%SITE_PERL%%/Text/Hatena/AutoLink.pm
+@dirrmtry %%SITE_PERL%%/Text/Hatena
+@dirrmtry %%SITE_PERL%%/Text
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Text/Hatena
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Text

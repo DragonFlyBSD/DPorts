@@ -1,0 +1,28 @@
+# New ports collection makefile for:	p5-Text-Hatena
+# Date created:		2006-07-11
+# Whom:			Gea-Suan Lin <gslin@gslin.org>
+#
+# $FreeBSD: ports/textproc/p5-Text-Hatena/Makefile,v 1.7 2012/11/17 06:02:10 svnexp Exp $
+#
+
+PORTNAME=	Text-Hatena
+PORTVERSION=	0.20
+PORTREVISION=	1
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Perl extension for formatting text with Hatena Style
+
+BUILD_DEPENDS=	p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inheritable \
+		p5-Parse-RecDescent>=1.94:${PORTSDIR}/devel/p5-Parse-RecDescent \
+		p5-Regexp-Assemble>=0.28:${PORTSDIR}/devel/p5-Regexp-Assemble
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Text::Hatena.3 Text::Hatena::AutoLink.3
+
+.include <bsd.port.mk>
