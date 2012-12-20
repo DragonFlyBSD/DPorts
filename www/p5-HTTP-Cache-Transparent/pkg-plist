@@ -1,0 +1,7 @@
+%%SITE_PERL%%/HTTP/Cache/Transparent.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTTP/Cache/Transparent/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTTP/Cache/Transparent
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTTP/Cache
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/HTTP
+@dirrmtry %%SITE_PERL%%/HTTP/Cache
+@dirrmtry %%SITE_PERL%%/HTTP
