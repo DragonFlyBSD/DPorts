@@ -1,0 +1,7 @@
+%%SITE_PERL%%/Catalyst/Controller/ActionRole.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Catalyst/Controller/ActionRole/.packlist
+@dirrmtry %%SITE_PERL%%/Catalyst/Controller
+@dirrmtry %%SITE_PERL%%/Catalyst
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Catalyst/Controller/ActionRole
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Catalyst/Controller
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Catalyst
