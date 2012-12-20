@@ -1,0 +1,11 @@
+%%SITE_PERL%%/POE/Component/Client/Keepalive.pm
+%%SITE_PERL%%/POE/Component/Connection/Keepalive.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component/Client/Keepalive/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component/Client/Keepalive
+@dirrmtry %%SITE_PERL%%/POE/Component/Client
+@dirrmtry %%SITE_PERL%%/POE/Component/Connection
+@dirrmtry %%SITE_PERL%%/POE/Component
+@dirrmtry %%SITE_PERL%%/POE
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component/Client
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE
