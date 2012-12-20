@@ -1,0 +1,4 @@
+%%SITE_PERL%%/HTTP/Server/Simple/Static.pm
+@dirrmtry %%SITE_PERL%%/HTTP/Server/Simple
+@dirrmtry %%SITE_PERL%%/HTTP/Server
+@dirrmtry %%SITE_PERL%%/HTTP
