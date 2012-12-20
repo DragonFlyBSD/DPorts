@@ -1,0 +1,39 @@
+# New ports collection makefile for:    p5-JSAN
+# Date created:		2006/12/23
+# Whom:	      		chinsan
+#
+# $FreeBSD: ports/lang/p5-JSAN/Makefile,v 1.14 2012/11/17 05:58:54 svnexp Exp $
+#
+
+PORTNAME=	JSAN
+PORTVERSION=	0.07
+PORTREVISION=	7
+CATEGORIES=	lang perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:CWEST
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	JavaScript Archive Network (JSAN) Shell
+
+BUILD_DEPENDS=	p5-Class-DBI-SQLite>=0:${PORTSDIR}/databases/p5-Class-DBI-SQLite \
+		p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
+		p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
+		p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
+		p5-Class-DBI-DATA-Schema>=0:${PORTSDIR}/databases/p5-Class-DBI-DATA-Schema \
+		p5-Class-DBI-Loader>=0:${PORTSDIR}/databases/p5-Class-DBI-Loader \
+		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
+		p5-SQL-Translator>=0:${PORTSDIR}/databases/p5-SQL-Translator \
+		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML \
+		p5-XML-XPath>=0:${PORTSDIR}/textproc/p5-XML-XPath
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=	JSAN::Shell.3 JSAN.3 JSAN::Indexer::Creator.3 JSAN::Indexer.3
+
+post-patch:
+	@${REINPLACE_CMD} -e "40 s,new,new(\'jsan\')," ${WRKSRC}/lib/JSAN.pm
+	${FIND} ${WRKSRC}/lib -name "*.bak" -delete
+
+.include <bsd.port.mk>
