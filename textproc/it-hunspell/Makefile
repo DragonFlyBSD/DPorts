@@ -1,0 +1,34 @@
+# New ports collection makefile for:	hunspell
+# Date created:		2011-07-20
+# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
+#
+# $FreeBSD: ports/textproc/it-hunspell/Makefile,v 1.7 2012/11/17 06:02:00 svnexp Exp $
+#
+
+PORTNAME=	hunspell
+PORTVERSION=	2.4.2007.09.01
+PORTREVISION=	1
+CATEGORIES=	textproc
+MASTER_SITES=	SF/linguistico/Dizionario%20italiano%20per%20OOo/${PORTVERSION:S/./_/g}/
+PKGNAMEPREFIX=	it-
+DISTNAME=	italiano_${PORTVERSION:S/./_/g}
+DIST_SUBDIR=	${PORTNAME}
+
+MAINTAINER=	office@FreeBSD.org
+COMMENT=	Italian hunspell dictionaries
+
+LICENSE=	GPLv3
+
+USE_ZIP=	yes
+NO_BUILD=	yes
+NO_WRKSUBDIR=	yes
+
+PLIST_FILES=	%%DATADIR%%/it_IT.aff \
+		%%DATADIR%%/it_IT.dic
+PLIST_DIRSTRY=	%%DATADIR%%
+
+do-install:
+	${MKDIR} ${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/it_IT.aff ${WRKSRC}/it_IT.dic ${DATADIR}/
+
+.include <bsd.port.mk>
