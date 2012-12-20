@@ -1,0 +1,23 @@
+@exec mkdir -p %D/%%WWWDIR%%/imgs
+@exec chown %%WWW_OWNER%%:%%WWW_GROUP%% %D/%%WWWDIR%%/imgs
+@unexec if cmp -s %D/etc/monitorix.conf %D/etc/monitorix.conf.sample; then rm -f %D/etc/monitorix.conf; fi
+etc/monitorix.conf.sample
+@exec if [ ! -f %D/etc/monitorix.conf ]; then cp %B/%f %D/etc/monitorix.conf; fi
+bin/monitorix
+@exec mkdir -p %D/%%DATADIR%%
+@dirrmtry %%DATADIR%%
+@exec mkdir -p %D/%%WWWDIR%%/usage
+@dirrmtry %%WWWDIR%%/usage
+%%CGIDIR%%/monitorix.cgi
+@dirrmtry %%CGIDIR%%
+%%WWWDIR%%/reports/ca.html
+%%WWWDIR%%/reports/de.html
+%%WWWDIR%%/reports/en.html
+%%WWWDIR%%/reports/it.html
+%%WWWDIR%%/reports/pl.html
+@dirrm %%WWWDIR%%/reports
+%%WWWDIR%%/logo_bot.png
+%%WWWDIR%%/logo_top.png
+%%WWWDIR%%/monitorixico.png
+@dirrmtry %%WWWDIR%%/imgs
+@dirrmtry %%WWWDIR%%

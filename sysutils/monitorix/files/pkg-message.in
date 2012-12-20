@@ -1,0 +1,6 @@
+================================================================
+
+ The port has a generic default config, please adjust your
+ settings in file: %%PREFIX%%/etc/monitorix.conf 
+
+================================================================

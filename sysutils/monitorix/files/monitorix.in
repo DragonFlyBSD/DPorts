@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/sysutils/monitorix/files/monitorix.in,v 1.8 2012/11/17 06:01:38 svnexp Exp $
+#
+# PROVIDE: monitorix
+# REQUIRE: DAEMON
+# BEFORE: LOGIN
+# KEYWORD: shutdown
+
+monitorix_enable=${monitorix_enable:-"NO"}
+
+. /etc/rc.subr
+
+name="monitorix"
+rcvar=monitorix_enable
+
+load_rc_config $name
+
+start_cmd="${name}_start"
+
+pidfile="/var/run/${name}.pid"
+command_interpreter="."
+procname="%%PREFIX%%/bin/${name}"
+
+monitorix_start()
+{
+	if [ -z "$rc_fast" -a -n "$rc_pid" ]; then
+		echo 1>&2 "${name} already running? (pid=$rc_pid)."
+		return 1
+	fi
+	echo "Starting ${name}."
+	rc_flags="-c %%PREFIX%%/etc/${name}.conf -p ${pidfile} ${rc_flags}"
+	/usr/bin/env PATH="$PATH:%%PREFIX%%/sbin:%%PREFIX%%/bin" perl %%PREFIX%%/bin/${name} ${rc_flags} ${command_args}
+}
+
+run_rc_command "$1"
