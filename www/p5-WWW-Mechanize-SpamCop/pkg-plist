@@ -1,0 +1,8 @@
+@comment $FreeBSD: ports/www/p5-WWW-Mechanize-SpamCop/pkg-plist,v 1.2 2012/11/17 06:02:55 svnexp Exp $
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Mechanize/SpamCop/.packlist
+%%SITE_PERL%%/WWW/Mechanize/SpamCop.pm
+@dirrmtry %%SITE_PERL%%/WWW/Mechanize
+@dirrmtry %%SITE_PERL%%/WWW
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Mechanize/SpamCop
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Mechanize
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW
