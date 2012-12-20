@@ -1,0 +1,10 @@
+@comment $FreeBSD: ports/finance/p5-Finance-Bitcoin/pkg-plist,v 1.2 2012/11/17 05:57:26 svnexp Exp $
+%%SITE_PERL%%/Finance/Bitcoin/API.pm
+%%SITE_PERL%%/Finance/Bitcoin/Address.pm
+%%SITE_PERL%%/Finance/Bitcoin/Wallet.pm
+%%SITE_PERL%%/Finance/Bitcoin.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Finance/Bitcoin/.packlist
+@dirrm %%SITE_PERL%%/Finance/Bitcoin
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Finance/Bitcoin
+@dirrmtry %%SITE_PERL%%/Finance
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Finance
