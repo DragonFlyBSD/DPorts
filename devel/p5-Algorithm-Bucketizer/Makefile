@@ -1,0 +1,25 @@
+# New ports collection makefile for:	p5-Algorithm-Bucketizer
+# Date created:				06 Jul 2005
+# Whom:				Christopher Boumenot <boumenot@gmail.com>
+#
+# $FreeBSD: ports/devel/p5-Algorithm-Bucketizer/Makefile,v 1.10 2012/11/17 05:56:03 svnexp Exp $
+#
+
+PORTNAME=	Algorithm-Bucketizer
+PORTVERSION=	0.12
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Distribute sized items to buckets with limited size
+
+BUILD_DEPENDS=	p5-Algorithm-Permute>=0:${PORTSDIR}/devel/p5-Algorithm-Permute
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN1=		bucketize.1
+MAN3=		Algorithm::Bucketizer.3
+
+.include <bsd.port.mk>
