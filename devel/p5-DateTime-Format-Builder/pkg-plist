@@ -1,0 +1,13 @@
+%%SITE_PERL%%/DateTime/Format/Builder.pm
+%%SITE_PERL%%/DateTime/Format/Builder.pod
+%%SITE_PERL%%/DateTime/Format/Builder/Parser.pm
+%%SITE_PERL%%/DateTime/Format/Builder/Parser/Dispatch.pm
+%%SITE_PERL%%/DateTime/Format/Builder/Parser/Quick.pm
+%%SITE_PERL%%/DateTime/Format/Builder/Parser/Regex.pm
+%%SITE_PERL%%/DateTime/Format/Builder/Parser/Strptime.pm
+%%SITE_PERL%%/DateTime/Format/Builder/Parser/generic.pm
+%%SITE_PERL%%/DateTime/Format/Builder/Tutorial.pod
+@dirrm %%SITE_PERL%%/DateTime/Format/Builder/Parser
+@dirrm %%SITE_PERL%%/DateTime/Format/Builder
+@dirrmtry %%SITE_PERL%%/DateTime/Format
+@dirrmtry %%SITE_PERL%%/DateTime
