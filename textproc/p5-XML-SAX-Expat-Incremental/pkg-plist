@@ -1,0 +1,9 @@
+%%SITE_PERL%%/XML/SAX/Expat/Incremental.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/SAX/Expat/Incremental/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/SAX/Expat/Incremental
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/SAX/Expat
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/SAX
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
+@dirrmtry %%SITE_PERL%%/XML/SAX/Expat
+@dirrmtry %%SITE_PERL%%/XML/SAX
+@dirrmtry %%SITE_PERL%%/XML
