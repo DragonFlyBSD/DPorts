@@ -1,0 +1,4 @@
+%%SITE_PERL%%/Tie/DB_File/SplitHash.pm
+%%SITE_PERL%%/Tie/DB_File/SplitHash.pod
+@dirrmtry %%SITE_PERL%%/Tie/DB_File
+@dirrmtry %%SITE_PERL%%/Tie
