@@ -1,0 +1,19 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/XMLApplication/.packlist
+%%SITE_PERL%%/CGI/XMLApplication.pm
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/XMLApplication
+@dirrmtry %%SITE_PERL%%/CGI
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI
+%%PORTDOCS%%%%EXAMPLESDIR%%/ex2_finish.xsl
+%%PORTDOCS%%%%EXAMPLESDIR%%/ex2_form.xsl
+%%PORTDOCS%%%%EXAMPLESDIR%%/example1.pl
+%%PORTDOCS%%%%EXAMPLESDIR%%/example1.pm
+%%PORTDOCS%%%%EXAMPLESDIR%%/example2.pl
+%%PORTDOCS%%%%EXAMPLESDIR%%/example2.pm
+%%PORTDOCS%%%%EXAMPLESDIR%%/example3.pl
+%%PORTDOCS%%%%EXAMPLESDIR%%/example3.pm
+%%PORTDOCS%%%%EXAMPLESDIR%%/example4.pl
+%%PORTDOCS%%%%EXAMPLESDIR%%/example4.pm
+%%PORTDOCS%%%%EXAMPLESDIR%%/minimal.pl
+%%PORTDOCS%%%%EXAMPLESDIR%%/minimal.xsl
+%%PORTDOCS%%%%EXAMPLESDIR%%/minimalapp.pm
+%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%
