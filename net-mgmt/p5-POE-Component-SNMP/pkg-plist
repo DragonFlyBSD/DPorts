@@ -1,0 +1,9 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component/SNMP/.packlist
+%%SITE_PERL%%/POE/Component/SNMP.pm
+%%SITE_PERL%%/POE/Component/SNMP/Dispatcher.pm
+@dirrm %%SITE_PERL%%/POE/Component/SNMP
+@dirrmtry %%SITE_PERL%%/POE/Component
+@dirrmtry %%SITE_PERL%%/POE
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component/SNMP
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE/Component
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/POE
