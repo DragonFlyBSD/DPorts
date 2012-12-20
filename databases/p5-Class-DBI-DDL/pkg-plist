@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Class/DBI/DDL.pm
+%%SITE_PERL%%/Class/DBI/DDL/Pg.pm
+@dirrm %%SITE_PERL%%/Class/DBI/DDL
+@dirrmtry %%SITE_PERL%%/Class/DBI
+@dirrmtry %%SITE_PERL%%/Class
