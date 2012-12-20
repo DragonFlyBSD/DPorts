@@ -1,0 +1,20 @@
+# Ports collection makefile for:	rubygem-mixlib-config
+# Date created:				18 Mar 2010
+# Whom:					renchap@cocoa-x.com
+#
+# $FreeBSD: ports/devel/rubygem-mixlib-config/Makefile,v 1.6 2012/11/17 05:57:00 svnexp Exp $
+#
+
+PORTNAME=	mixlib-config
+PORTVERSION=	1.1.2
+CATEGORIES=	devel rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	renchap@cocoa-x.com
+COMMENT=	A class based config mixin, similar to the one found in Chef
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
