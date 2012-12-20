@@ -1,0 +1,30 @@
+# New ports collection makefile for:	py-plone.z3cform
+# Date created:				03 January 2012
+# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
+#
+# $FreeBSD: ports/www/py-plone.z3cform/Makefile,v 1.3 2012/11/17 06:03:01 svnexp Exp $
+#
+
+PORTNAME=	plone.z3cform
+PORTVERSION=	0.7.8
+CATEGORIES=	www python zope
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	zope@FreeBSD.org
+COMMENT=	Library that allows use of z3c.form with Zope 2 and the CMF
+
+LICENSE=	ZPL21
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}z3c.form>=0:${PORTSDIR}/devel/py-z3c.form \
+		${PYTHON_PKGNAMEPREFIX}z3c.batching>=0:${PORTSDIR}/devel/py-z3c.batching \
+		${PYTHON_PKGNAMEPREFIX}zope.i18n>=3.4:${PORTSDIR}/devel/py-zope.i18n \
+		${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.component \
+		${PYTHON_PKGNAMEPREFIX}collective.monkeypatcher>=0:${PORTSDIR}/devel/py-collective.monkeypatcher
+
+DIST_SUBDIR=	zope
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	easy_install
+USE_ZIP=	yes
+
+.include <bsd.port.mk>
