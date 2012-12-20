@@ -1,0 +1,9 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/SAX/Writer/.packlist
+%%SITE_PERL%%/XML/SAX/Writer.pm
+%%SITE_PERL%%/XML/SAX/Writer/XML.pm
+@dirrm %%SITE_PERL%%/XML/SAX/Writer
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/SAX/Writer
+@dirrmtry %%SITE_PERL%%/XML/SAX
+@dirrmtry %%SITE_PERL%%/XML
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/SAX
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
