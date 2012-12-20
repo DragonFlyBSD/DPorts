@@ -1,0 +1,24 @@
+# Ports collection makefile for:	rubygem-devise
+# Date created:				2011-06-16
+# Whom:					rpsfa@rit.edu
+#
+# $FreeBSD: ports/devel/rubygem-devise/Makefile,v 1.14 2012/11/17 05:56:58 svnexp Exp $
+
+PORTNAME=	devise
+PORTVERSION=	2.1.2
+CATEGORIES=	devel rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Flexible authentication solution for Rails with Warden
+
+RUN_DEPENDS=	rubygem-bcrypt-ruby>=3.0:${PORTSDIR}/security/rubygem-bcrypt-ruby \
+		rubygem-warden>=1.2.1:${PORTSDIR}/devel/rubygem-warden \
+		rubygem-orm_adapter>=0.1:${PORTSDIR}/devel/rubygem-orm_adapter \
+		rubygem-railties>=3.1:${PORTSDIR}/www/rubygem-railties
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
