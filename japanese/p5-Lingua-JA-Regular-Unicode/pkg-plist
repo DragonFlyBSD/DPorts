@@ -1,0 +1,4 @@
+%%SITE_PERL%%/Lingua/JA/Regular/Unicode.pm
+@dirrmtry %%SITE_PERL%%/Lingua/JA/Regular
+@dirrmtry %%SITE_PERL%%/Lingua/JA
+@dirrmtry %%SITE_PERL%%/Lingua
