@@ -1,0 +1,10 @@
+@comment $FreeBSD: ports/print/jadetex/pkg-plist,v 1.10 2012/11/17 06:00:51 svnexp Exp $
+bin/jadetex
+bin/pdfjadetex
+share/texmf/tex/jadetex/dsssl.def
+share/texmf/tex/jadetex/jadetex.ltx
+share/texmf/web2c/jadetex.fmt
+share/texmf/web2c/pdfjadetex.fmt
+@dirrmtry share/texmf/tex/jadetex
+@exec %D/bin/mktexlsr %D/%%TEXMFDIR%%
+@unexec %D/bin/mktexlsr %D/%%TEXMFDIR%%
