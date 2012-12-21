@@ -1,0 +1,22 @@
+@comment $FreeBSD: ports/print/texpower/pkg-plist,v 1.4 2012/11/17 06:00:55 svnexp Exp $
+%%TEXMFLOCAL%%/tex/latex/texpower/automata.sty
+%%TEXMFLOCAL%%/tex/latex/texpower/fixseminar.sty
+%%TEXMFLOCAL%%/tex/latex/texpower/powersem.cls
+%%TEXMFLOCAL%%/tex/latex/texpower/texpower.sty
+%%TEXMFLOCAL%%/tex/latex/texpower/tpcolors.cfg
+%%TEXMFLOCAL%%/tex/latex/texpower/tplists.sty
+%%TEXMFLOCAL%%/tex/latex/texpower/tpoptions.cfg
+%%TEXMFLOCAL%%/tex/latex/texpower/tppstcol.sty
+%%TEXMFLOCAL%%/tex/latex/texpower/tpsem-a4.sty
+%%TEXMFLOCAL%%/tex/latex/texpower/tpsettings.cfg
+%%TEXMFLOCAL%%/tex/latex/texpower/tpslifonts/tpslifonts.sty
+@dirrm %%TEXMFLOCAL%%/tex/latex/texpower/tpslifonts
+@dirrm %%TEXMFLOCAL%%/tex/latex/texpower
+%%PORTDOCS%%%%DOCSDIR%%/00readme.txt
+%%PORTDOCS%%%%DOCSDIR%%/01install.txt
+%%PORTDOCS%%%%DOCSDIR%%/manual.pdf
+%%PORTDOCS%%%%DOCSDIR%%/powersem.pdf
+%%PORTDOCS%%%%DOCSDIR%%/texpower.pdf
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@exec %%MKTEXLSR%%
+@unexec %%MKTEXLSR%%
