@@ -1,0 +1,38 @@
+# /usr/local/etc/devd/cups.conf
+#
+# $FreeBSD: ports/print/cups-base/files/ulpt-cupsd.conf.in,v 1.3 2012/11/17 06:00:48 svnexp Exp $
+#
+# Tell cups to pause and unpause the printer when it arrives and departs.
+#
+
+attach 110 {
+device-name "unlpt[0-9]+";
+action "%%PREFIX%%/sbin/ulpt-cupsd.sh enable $device-name";
+};
+
+attach 110 {
+device-name "ulpt[0-9]+";
+action "%%PREFIX%%/sbin/ulpt-cupsd.sh enable $device-name";
+};
+
+attach 110 {
+device-name "lpt[0-9]+";
+action "%%PREFIX%%/sbin/ulpt-cupsd.sh enable $device-name";
+};
+
+detach 110 {
+device-name "unlpt[0-9]+";
+action "%%PREFIX%%/sbin/ulpt-cupsd.sh disable $device-name";
+};
+
+detach 110 {
+device-name "ulpt[0-9]+";
+action "%%PREFIX%%/sbin/ulpt-cupsd.sh disable $device-name";
+};
+
+detach 110 {
+device-name "lpt[0-9]+";
+action "%%PREFIX%%/sbin/ulpt-cupsd.sh disable $device-name";
+};
+
+# eof
