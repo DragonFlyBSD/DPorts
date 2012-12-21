@@ -1,0 +1,18 @@
+#!/bin/sh
+# $FreeBSD: ports/print/pnm2ppa/pkg-install,v 1.2 2012/11/17 06:00:53 svnexp Exp $
+
+sysconfdir=${PKG_PREFIX}/etc
+conffile=pnm2ppa.conf
+
+case $2 in
+POST-INSTALL)
+	if test ! -f ${sysconfdir}/${conffile}; then
+		cp ${sysconfdir}/${conffile}.sample ${sysconfdir}/${conffile};
+	fi
+;;
+DEINSTALL)
+	if cmp -s ${sysconfdir}/${conffile} ${sysconfdir}/${conffile}.sample; then
+		rm -f ${sysconfdir}/${conffile}
+	fi
+;;
+esac
