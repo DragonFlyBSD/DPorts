@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/print/latex-bytefield/pkg-plist,v 1.3 2012/11/17 06:00:51 svnexp Exp $
+%%CLASSDIR%%/bytefield.dtx
+%%CLASSDIR%%/bytefield.sty
+%%CLASSDIR%%/bytefield.ins
+@dirrm %%CLASSDIR%%
+@exec %%MKTEXLSR%% %D/%%TEXMFDIR%%
+@unexec %%MKTEXLSR%% %D/%%TEXMFDIR%%
