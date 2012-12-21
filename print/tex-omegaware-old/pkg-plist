@@ -1,0 +1,5 @@
+@comment $FreeBSD: ports/print/tex-omegaware-old/pkg-plist,v 1.2 2012/11/17 06:00:54 svnexp Exp $
+bin/ovf2ovp-old
+bin/ovp2ovf-old
+bin/ofm2opl-old
+bin/opl2ofm-old
