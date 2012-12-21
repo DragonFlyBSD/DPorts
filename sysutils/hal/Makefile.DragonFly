@@ -1,0 +1,2 @@
+USE_AUTOTOOLS+= autoconf
+PLIST_SUB+= USB2="@comment "

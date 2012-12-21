@@ -1,0 +1,11 @@
+--- policy/Makefile.in.orig	2012-12-21 18:38:23.505090000 +0100
++++ policy/Makefile.in	2012-12-21 21:12:10.204735000 +0100
+@@ -474,7 +474,7 @@
+ @HAVE_POLKIT_TRUE@            echo -n "Validate PolicyKit policy in $$f : "; \
+ @HAVE_POLKIT_TRUE@            $(POLKIT_POLICY_FILE_VALIDATE) $(srcdir)/$$f ; \
+ @HAVE_POLKIT_TRUE@	    ret=$$?; \
+-@HAVE_POLKIT_TRUE@            if  [ "$$ret" == "0" ]; \
++@HAVE_POLKIT_TRUE@            if  [ "$$ret" = "0" ]; \
+ @HAVE_POLKIT_TRUE@	      then \
+ @HAVE_POLKIT_TRUE@                echo ok; \
+ @HAVE_POLKIT_TRUE@            else \

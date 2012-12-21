@@ -1,0 +1,14 @@
+--- tools/hal-luks-teardown.orig	2008-08-10 15:50:10.000000000 +0200
++++ tools/hal-luks-teardown	2012-12-21 19:22:29.329108000 +0100
+@@ -47,9 +47,9 @@
+ # TODO: this is a little sketchy; we should check for hal-storage-crypto-teardown-others?
+ #
+ IS_HOTPLUGGABLE=`hal-get-property --udi $HAL_PROP_BLOCK_STORAGE_DEVICE --key storage.hotpluggable`
+-if [ "$IS_HOTPLUGGABLE" == "true" ] ; then
++if [ "$IS_HOTPLUGGABLE" = "true" ] ; then
+     ACTION="org.freedesktop.hal.storage.crypto-setup-removable"
+-elif [ "$IS_HOTPLUGGABLE" == "false" ] ; then
++elif [ "$IS_HOTPLUGGABLE" = "false" ] ; then
+     ACTION="org.freedesktop.hal.storage.crypto-setup-fixed"
+ else
+     unknown_error
