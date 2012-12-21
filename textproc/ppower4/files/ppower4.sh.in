@@ -1,0 +1,4 @@
+#!/bin/sh
+# $FreeBSD: ports/textproc/ppower4/files/ppower4.sh.in,v 1.2 2012/11/17 06:02:16 svnexp Exp $
+
+JAVA_VERSION="%%JAVA_VERSION%%" exec "%%LOCALBASE%%/bin/java" -jar "%%JARFILE%%" "$@"
