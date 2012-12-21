@@ -1,5 +1,5 @@
 --- src/poudriere.d/test_ports.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/test_ports.sh	2012-12-17 13:33:41.000000000 +0100
++++ src/poudriere.d/test_ports.sh	2012-12-21 02:28:23.000000000 +0100
 @@ -10,11 +10,11 @@
  
  Options:
@@ -31,7 +31,7 @@
  fi
  
  test -z "${JAILNAME}" && err 1 "Don't know on which jail to run please specify -j"
-@@ -94,13 +96,17 @@
+@@ -94,17 +96,21 @@
  
  if [ -z ${ORIGIN} ]; then
  	mkdir -p ${JAILMNT}/${PORTDIRECTORY}
@@ -51,6 +51,11 @@
  
  if ! POUDRIERE_BUILD_TYPE=bulk parallel_build; then
  	failed=$(cat ${JAILMNT}/poudriere/ports.failed | awk '{print $1 ":" $2 }' | xargs echo)
+-	skipped=$(cat ${JAILMNT}/poudriere/ports.skipped | awk '{print $1}' | xargs echo)
++	skipped=$(cat ${JAILMNT}/poudriere/ports.skipped | awk '{print $1}' | sort -u | xargs echo)
+ 	nbfailed=$(zget stats_failed)
+ 	nbskipped=$(zget stats_skipped)
+ 
 @@ -119,7 +125,8 @@
  
  zset status "depends:"

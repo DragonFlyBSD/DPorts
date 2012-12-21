@@ -1,5 +1,5 @@
 --- src/poudriere.d/bulk.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/bulk.sh	2012-12-16 18:57:27.000000000 +0100
++++ src/poudriere.d/bulk.sh	2012-12-21 02:28:34.000000000 +0100
 @@ -10,7 +10,6 @@
  Options:
      -c          -- Clean the previous built binary packages
@@ -38,6 +38,15 @@
  parallel_build || : # Ignore errors as they are handled below
  
  zset status "done:"
+@@ -142,7 +145,7 @@
+ failed=$(cat ${JAILMNT}/poudriere/ports.failed | awk '{print $1 ":" $2 }' | xargs echo)
+ built=$(cat ${JAILMNT}/poudriere/ports.built | xargs echo)
+ ignored=$(cat ${JAILMNT}/poudriere/ports.ignored | awk '{print $1}' | xargs echo)
+-skipped=$(cat ${JAILMNT}/poudriere/ports.skipped | awk '{print $1}' | xargs echo)
++skipped=$(cat ${JAILMNT}/poudriere/ports.skipped | awk '{print $1}' | sort -u | xargs echo)
+ nbfailed=$(zget stats_failed)
+ nbignored=$(zget stats_ignored)
+ nbskipped=$(zget stats_skipped)
 @@ -165,14 +168,14 @@
  	fi
  	msg "Creating pkgng repository"

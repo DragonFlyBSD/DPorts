@@ -1,5 +1,5 @@
 --- src/poudriere.d/ports.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/ports.sh	2012-12-06 03:19:49.000000000 +0100
++++ src/poudriere.d/ports.sh	2012-12-20 23:59:44.000000000 +0100
 @@ -21,12 +21,11 @@
                       them.
      -p name       -- specifies the name of the portstree we workon . If not
@@ -34,7 +34,7 @@
  			;;
  		d)
  			DELETE=1
-@@ -77,166 +78,73 @@
+@@ -77,166 +78,72 @@
  
  [ $(( CREATE + UPDATE + DELETE + LIST )) -lt 1 ] && usage
  
@@ -161,7 +161,7 @@
  			;;
  		esac
 -		pzset method ${METHOD}
- 		sed -i "" "s/__METHOD__/${METHOD}/g" ${POUDRIERED}/portstrees
+-		sed -i "" "s/__METHOD__/${METHOD}/g" ${POUDRIERED}/portstrees
  	fi
  fi
  

@@ -1,6 +1,6 @@
---- /dev/null	2012-12-18 07:36:50.645068709 +0100
-+++ src/poudriere.d/common.sh.hammer	2012-12-18 07:48:21.000000000 +0100
-@@ -0,0 +1,777 @@
+--- /dev/null	2012-12-21 03:01:31.166467248 +0100
++++ src/poudriere.d/common.sh.hammer	2012-12-21 10:29:18.000000000 +0100
+@@ -0,0 +1,820 @@
 +#!/bin/sh
 +
 +zget() {
@@ -75,17 +75,77 @@
 +	return 0
 +}
 +
++zkill() {
++	[ $# -ne 1 ] && eargs pfs-filesystem@snapname
++	if [ $(onlysnap "${1}") -eq 1 ]; then
++		local snap=$(snapname "${1}")
++		[ -L ${HAMMER_SNAPDIR}/${snap} ] && \
++		  hammer snaprm ${HAMMER_SNAPDIR}/${snap}
++	fi
++	return 0
++}
++
 +zsnap() {
 +	[ $# -ne 1 ] && eargs pfs-filesystem@snapname
 +	local snap=$(snapname "${1}")
 +	local pfs=$(extract_pfs ${1})
 +	mkdir -p ${HAMMER_SNAPDIR}
 +	if [ -L ${HAMMER_SNAPDIR}/${snap} ]; then
-+		zkill ${1}
-+	else
-+		hammer snapshot ${pfs} ${HAMMER_SNAPDIR}/${snap} > /dev/null
++	   zkill ${1}
 +	fi
++	hammer snapshot ${pfs} ${HAMMER_SNAPDIR}/${snap} > /dev/null
 +	return 0
++}
++
++vsnap2tmpfs () {
++	[ $# -ne 2 ] && eargs pfs-filesystem master-mount
++	local pfs=${1}
++	local mm=${2}
++	rm -f ${pfs}/.cpignore ${pfs}/usr/.cpignore
++	cat > ${pfs}/.cpignore << EOF
++.cshrc
++.lock
++.profile
++COPYRIGHT
++bin
++boot
++build
++compat
++dev
++gettext
++mnt
++poudriere
++proc
++root
++sbin
++sys
++wrkdirs
++EOF
++
++	cat > ${pfs}/usr/.cpignore << EOF
++Makefile
++distfiles
++dports
++games
++include
++library
++libdata
++libexec
++local
++obj
++packages
++sbin
++share
++src
++EOF
++	local MEMPOINT=${mm}/memory
++	mkdir ${MEMPOINT}
++	mount_tmpfs -s100M tmpfs ${MEMPOINT}
++	msg_n "Creating delta snapshot in memory..."
++	cpdup -VV -x -i0 ${pfs}/ ${MEMPOINT}/
++	cp ${pfs}/.cpignore ${MEMPOINT}/
++	cp ${pfs}/usr/.cpignore ${MEMPOINT}/usr/
++	echo "done"
 +}
 +
 +save_preinstall_state () {
@@ -129,16 +189,6 @@
 +	rm -rf ${POUDRIERE_DATA}/hammer/${1}
 +}
 +
-+zkill() {
-+	[ $# -ne 1 ] && eargs pfs-filesystem@snapname
-+	if [ $(onlysnap "${1}") -eq 1 ]; then
-+		local snap=$(snapname "${1}")
-+		[ -L ${HAMMER_SNAPDIR}/${snap} ] && \
-+		  hammer snaprm ${HAMMER_SNAPDIR}/${snap}
-+	fi
-+	return 0
-+}
-+
 +zdelete() {
 +	[ $# -ne 2 ] && eargs pfs-filesystem subdirectory
 +	# Hammer doesn't use this, no-op
@@ -163,17 +213,14 @@
 +	# rollback only used for starting jail and building world
 +
 +	cpdup -x -VV -i0 ${HAMMER_SNAPDIR}/${snap}/ ${pfs}/
++	cp ${HAMMER_SNAPDIR}/${snap}/.cpignore ${pfs}/
++	cp ${HAMMER_SNAPDIR}/${snap}/usr/.cpignore ${pfs}/usr/
 +}
 +
 +reset_slave () {
-+	[ $# -ne 2 ] && eargs pfs-filesystem@snapname slave-mountpoint
-+	local snap=$(snapname "${1}")
-+	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${2}/etc
-+	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/var       ${2}/var
-+	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/etc       ${2}/etc
-+	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/usr/bin   ${2}/usr/bin
-+	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/usr/local ${2}/usr/local
-+	rm -rf ${2}/tmp/*
++	[ $# -ne 2 ] && eargs master-mountpoint slave-mountpoint
++	# This is tmpfs to tmpfs, we don't need -VV option here
++	cpdup -x -i0 ${1}/memory/ ${2}/
 +}
 +
 +zxdiff () {
@@ -348,24 +395,20 @@
 +		pfs="${JAILFS}.job-${j}"
 +		name="${JAILNAME}-job-${j}"
 +		zset status "starting_jobs:${j}"
-+		mkdir -p "${mnt}"
++		mkdir -p ${mnt}
 +
 +		# Make duplicate of master@prepkg snapshot (one per job)
-+		mount -t tmpfs tmpfs ${mnt}
++		mount_tmpfs tmpfs ${mnt} || err	1 "Failed to mount build/${j}"
 +		msg_n "Creating slave ${j}..."
-+		cpdup -x -i0 ${HAMMER_SNAPDIR}/${snap}/ ${mnt}/
++		cpdup -VV -x -i0 ${HAMMER_SNAPDIR}/${snap}/ ${mnt}/
 +		echo "done"
-+
-+		# This is a bug somewhere in tmpfs -- the directories
-+		# sometimes aren't available for mount right away.
-+		# Wait it out until this is fixed.
-+		sleep 5
 +
 +		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${pfs} do_jail_mounts 0
 +		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${pfs} do_portbuild_mounts 0
 +		MASTERMNT=${JAILMNT} JAILNAME=${name} JAILMNT=${mnt} JAILFS=${pfs} jrun 0
 +		JAILNAME=${name} zset status "idle:"
 +	done
++	vsnap2tmpfs ${JAILFS} ${JAILMNT}
 +}
 +
 +stop_builders() {

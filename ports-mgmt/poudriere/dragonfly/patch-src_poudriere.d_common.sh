@@ -1,5 +1,5 @@
 --- src/poudriere.d/common.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/common.sh	2012-12-17 13:28:22.000000000 +0100
++++ src/poudriere.d/common.sh	2012-12-21 10:57:59.000000000 +0100
 @@ -1,8 +1,6 @@
  #!/bin/sh
  
@@ -77,7 +77,15 @@
  sig_handler() {
  	trap - SIGTERM SIGKILL
  	# Ignore SIGINT while cleaning up
-@@ -168,7 +179,7 @@
+@@ -161,14 +172,14 @@
+ 		queue_width=3
+ 	fi
+ 
+-	printf "[${JAILNAME}] [${status}] [%0${queue_width}d/%0${queue_width}d] Built: %-${queue_width}d Failed: %-${queue_width}d  Ignored: %-${queue_width}d  Skipped: %-${queue_width}d  \n" \
++	printf "[${JAILNAME}] [${status}] [%0${queue_width}d/%0${queue_width}d] Built: %-${queue_width}d Failed: %-${queue_width}d  Ignored: %-${queue_width}d  Skipped: %-${queue_width}d\n" \
+ 	  ${ndone} ${nbq} ${nbb} ${nbf} ${nbi} ${nbs}
+ 
+ 	# Skip if stopping or starting jobs
  	if [ -n "${JOBS}" -a "${status#starting_jobs:}" = "${status}" -a "${status}" != "stopping_jobs:" ]; then
  		for j in ${JOBS}; do
  			# Ignore error here as the zfs dataset may not be cloned yet.
@@ -657,7 +665,7 @@
  EOF
  	cnt=0
  	while read port extra; do
-@@ -818,12 +309,12 @@
+@@ -818,16 +309,22 @@
  		fi
  
  		cat >> ${html_path} << EOF
@@ -674,7 +682,18 @@
  EOF
  		cnt=$(( cnt + 1 ))
  	done <  ${JAILMNT}/poudriere/ports.${type}
-@@ -916,74 +407,6 @@
+-	zset stats_${type} $cnt
++
++	if [ "${type}" = "skipped" ]; then
++	  # Skipped lists the skipped origin for every dependency that wanted it
++	  zset stats_skipped $(awk '{print $1}' ${JAILMNT}/poudriere/ports.skipped | sort -u | wc -l)
++	else
++	  zset stats_${type} $cnt
++	fi
+ 
+ cat >> ${html_path} << EOF
+       </table>
+@@ -916,74 +413,6 @@
  	[ "${html_path}" = "/dev/null" ] || mv ${html_path} ${html_path%.tmp}
  }
  
@@ -749,7 +768,7 @@
  
  # Build ports in parallel
  # Returns when all are built.
-@@ -1066,11 +489,11 @@
+@@ -1066,11 +495,11 @@
  
  	PKGNAME="${pkgname}" # set ASAP so cleanup() can use it
  	port=$(cache_get_origin ${pkgname})
@@ -759,11 +778,11 @@
  	job_msg "Starting build of ${port}"
  	zset status "starting:${port}"
 -	zfs rollback -r ${JAILFS}@prepkg || err 1 "Unable to rollback ${JAILFS}"
-+	reset_slave ${MASTERFS}@prepkg ${JAILMNT}
++	reset_slave ${MASTERMNT} ${JAILMNT}
  
  	# If this port is IGNORED, skip it
  	# This is checked here instead of when building the queue
-@@ -1119,10 +542,12 @@
+@@ -1119,10 +548,12 @@
  			job_msg "Finished build of ${port}: Success"
  			# Cache information for next run
  			pkg_cache_data "${PKGDIR}/All/${PKGNAME}.${PKG_EXT}" ${port} || :
@@ -776,7 +795,7 @@
  		fi
  	fi
  
-@@ -1137,10 +562,10 @@
+@@ -1137,10 +568,10 @@
  	[ $# -ne 1 ] && eargs directory
  	local dir=$1
  	local makeargs="-VPKG_DEPENDS -VBUILD_DEPENDS -VEXTRACT_DEPENDS -VLIB_DEPENDS -VPATCH_DEPENDS -VFETCH_DEPENDS -VRUN_DEPENDS"
@@ -789,7 +808,7 @@
  }
  
  deps_file() {
-@@ -1150,7 +575,7 @@
+@@ -1150,7 +581,7 @@
  
  	if [ ! -f "${depfile}" ]; then
  		if [ "${PKG_EXT}" = "tbz" ]; then
@@ -798,7 +817,7 @@
  		else
  			pkg info -qdF "${pkg}" > "${depfile}"
  		fi
-@@ -1168,7 +593,7 @@
+@@ -1168,7 +599,7 @@
  	if [ ! -f "${originfile}" ]; then
  		if [ -z "${origin}" ]; then
  			if [ "${PKG_EXT}" = "tbz" ]; then
@@ -807,7 +826,7 @@
  			else
  				origin=$(pkg query -F "${pkg}" "%o")
  			fi
-@@ -1188,7 +613,7 @@
+@@ -1188,7 +619,7 @@
  
  	if [ ! -f "${optionsfile}" ]; then
  		if [ "${PKG_EXT}" = "tbz" ]; then
@@ -816,7 +835,7 @@
  		else
  			compiled_options=$(pkg query -F "${pkg}" '%Ov %Ok' | awk '$1 == "on" {print $2}' | sort | tr '\n' ' ')
  		fi
-@@ -1284,7 +709,7 @@
+@@ -1284,7 +715,7 @@
  	o=$(pkg_get_origin ${pkg})
  	v=${pkg##*-}
  	v=${v%.*}
@@ -825,7 +844,7 @@
  		msg "${o} does not exist anymore. Deleting stale ${pkg##*/}"
  		delete_pkg ${pkg}
  		return 0
-@@ -1299,7 +724,7 @@
+@@ -1299,7 +730,7 @@
  
  	# Check if the compiled options match the current options from make.conf and /var/db/options
  	if [ "${CHECK_CHANGED_OPTIONS:-no}" != "no" ]; then
@@ -834,7 +853,7 @@
  		compiled_options=$(pkg_get_options ${pkg})
  
  		if [ "${compiled_options}" != "${current_options}" ]; then
-@@ -1365,7 +790,7 @@
+@@ -1365,7 +796,7 @@
  
  	# Add to cache if not found.
  	if [ -z "${pkgname}" ]; then
@@ -843,7 +862,7 @@
  		# Make sure this origin did not already exist
  		existing_origin=$(cache_get_origin "${pkgname}" 2>/dev/null || :)
  		# It may already exist due to race conditions, it is not harmful. Just ignore.
-@@ -1417,24 +842,6 @@
+@@ -1417,24 +848,6 @@
  	done
  }
  
@@ -868,7 +887,7 @@
  parallel_stop() {
  	wait
  }
-@@ -1508,11 +915,34 @@
+@@ -1508,11 +921,34 @@
  	mkdir -p "${JAILMNT}/poudriere/pool" \
  		"${JAILMNT}/poudriere/deps" \
  		"${JAILMNT}/poudriere/rdeps" \
@@ -903,7 +922,7 @@
  	zset stats_queued "0"
  	:> ${JAILMNT}/poudriere/ports.built
  	:> ${JAILMNT}/poudriere/ports.failed
-@@ -1596,8 +1026,7 @@
+@@ -1596,8 +1032,7 @@
  	export FORCE_PACKAGE=yes
  	export USER=root
  	export HOME=/root
@@ -913,7 +932,7 @@
  	[ -z "${JAILMNT}" ] && err 1 "No path of the base of the jail defined"
  	[ -z "${PORTSDIR}" ] && err 1 "No ports directory defined"
  	[ -z "${PKGDIR}" ] && err 1 "No package directory defined"
-@@ -1620,9 +1049,9 @@
+@@ -1620,9 +1055,9 @@
  
  	msg "Populating LOCALBASE"
  	mkdir -p ${JAILMNT}/${MYBASE:-/usr/local}
@@ -925,7 +944,7 @@
  	if [ -n "${WITH_PKGNG}" ]; then
  		export PKGNG=1
  		export PKG_EXT="txz"
-@@ -1645,26 +1074,40 @@
+@@ -1645,26 +1080,40 @@
  . ${SCRIPTPREFIX}/../../etc/poudriere.conf
  POUDRIERED=${SCRIPTPREFIX}/../../etc/poudriere.d
  
@@ -974,7 +993,7 @@
  case ${ZROOTFS} in
  	[!/]*)
  		err 1 "ZROOTFS shoud start with a /"
-@@ -1679,8 +1122,3 @@
+@@ -1679,8 +1128,3 @@
  	*) err 1 "invalid format for WRKDIR_ARCHIVE_FORMAT: ${WRKDIR_ARCHIVE_FORMAT}" ;;
  esac
  

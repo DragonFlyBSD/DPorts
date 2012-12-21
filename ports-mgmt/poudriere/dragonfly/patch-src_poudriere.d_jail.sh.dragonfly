@@ -1,6 +1,6 @@
---- /dev/null	2012-12-16 13:28:18.947036696 +0100
-+++ src/poudriere.d/jail.sh.dragonfly	2012-12-16 19:11:40.000000000 +0100
-@@ -0,0 +1,243 @@
+--- /dev/null	2012-12-21 03:01:31.166467248 +0100
++++ src/poudriere.d/jail.sh.dragonfly	2012-12-21 10:58:49.000000000 +0100
+@@ -0,0 +1,251 @@
 +#!/bin/sh
 +#
 +# DragonFly specific
@@ -12,7 +12,15 @@
 +		err 1 "Unable to remove jail ${JAILNAME}: it is running"
 +
 +	# In case a jail run modified some files, roll back to last snapshot
++	# Make double sure .cpignores are set correctly
 +	zrollback ${JAILFS}@clean
++
++	# not normally necessary, but in case something went wrong with snap
++	echo "src" > ${JAILFS}/usr/.cpignore
++	echo "sys" > ${JAILFS}/.cpignore
++	rm -rf ${JAILFS}/build
++	rm -rf ${JAILFS}/poudriere
++	rm -rf ${JAILFS}/memory
 +
 +	METHOD=`zget method`
 +	if [ "${METHOD}" = "-" ]; then
@@ -72,7 +80,7 @@
 +	cd ${POUDRIERE_DATA}
 +
 +	############# DELETE WHEN DRAGONFLY HAS THESE IN BASE ############
-+	cp /home/gituser/DeltaPorts/scripts/share-mk/bsd.port.* \
++	cp /usr/gen-dports/DeltaPorts/scripts/share-mk/bsd.port.* \
 +	   ${JAILMNT}/usr/share/mk/
 +	##################################################################
 +}
@@ -193,9 +201,9 @@
 +syslogd_enable=NO
 +update_motd=NO
 +EOF
-+	echo "# dummy" 	            >> ${JAILMNT}/etc/fstab
-+	echo "src"                  >> ${JAILMNT}/usr/.cpignore
-+	echo "sys"                  >> ${JAILMNT}/.cpignore
++	echo "# dummy" 	            > ${JAILMNT}/etc/fstab
++	echo "src"                  > ${JAILMNT}/usr/.cpignore
++	echo "sys"                  > ${JAILMNT}/.cpignore
 +
 +	mkdir -p ${JAILMNT}/${PORTSRC}
 +	mkdir -p ${JAILMNT}/${STD_PACKAGES}
