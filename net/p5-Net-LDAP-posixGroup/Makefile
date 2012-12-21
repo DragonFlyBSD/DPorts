@@ -1,0 +1,24 @@
+# New ports collection makefile for:	sysutils/p5-Net-LDAP-posixGroup
+# Date created:		2009-10-31
+# Whom:			Zane C, Bowers <vvelox@vvelox.net>
+#
+# $FreeBSD: ports/net/p5-Net-LDAP-posixGroup/Makefile,v 1.5 2012/11/17 06:00:11 svnexp Exp $
+#
+
+PORTNAME=	Net-LDAP-posixGroup
+PORTVERSION=	0.0.2
+CATEGORIES=	net perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:VVELOX
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	vvelox@vvelox.net
+COMMENT=	Creates new Net::LDAP::Entry objects for a posixGroup entry
+
+RUN_DEPENDS=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Net::LDAP::posixGroup.3
+
+.include <bsd.port.mk>
