@@ -1,0 +1,11 @@
+@comment $FreeBSD: ports/print/latex-logpap/pkg-plist,v 1.2 2012/11/17 06:00:51 svnexp Exp $
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/example.pdf
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%CLASSDIR%%/example.tex
+%%CLASSDIR%%/logpap.dtx
+%%CLASSDIR%%/logpap.ins
+%%CLASSDIR%%/logpap.sty
+@dirrm %%CLASSDIR%%
+@exec %%MKTEXLSR%%
+@unexec %%MKTEXLSR%%
