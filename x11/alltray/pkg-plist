@@ -1,0 +1,7 @@
+bin/alltray
+lib/liballtray.la
+lib/liballtray.so
+lib/liballtray.so.0
+share/applications/alltray.desktop
+share/pixmaps/alltray.png
+@dirrmtry share/applications
