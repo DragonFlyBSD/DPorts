@@ -1,0 +1,26 @@
+sbin/smbldap-groupadd
+sbin/smbldap-groupdel
+sbin/smbldap-grouplist
+sbin/smbldap-groupmod
+sbin/smbldap-groupshow
+%%MIGRATION_SCRIPTS%%sbin/smbldap-migrate-pwdump-groups
+%%MIGRATION_SCRIPTS%%sbin/smbldap-migrate-unix-accounts
+%%MIGRATION_SCRIPTS%%sbin/smbldap-migrate-unix-groups
+%%MIGRATION_SCRIPTS%%sbin/smbldap-migrate-pwdump-accounts
+sbin/smbldap-passwd
+sbin/smbldap-populate
+sbin/smbldap-useradd
+sbin/smbldap-userdel
+sbin/smbldap-userinfo
+sbin/smbldap-userlist
+sbin/smbldap-usermod
+sbin/smbldap-usershow
+@exec mkdir -p %D/etc/smbldap-tools
+@unexec if cmp -s %D/etc/smbldap-tools/smbldap.conf %D/etc/smbldap-tools/smbldap.conf.sample; then rm -f %D/etc/smbldap-tools/smbldap.conf; fi
+etc/smbldap-tools/smbldap.conf.sample
+@exec [ -f %D/etc/smbldap-tools/smbldap.conf ] || cp %B/%f %D/etc/smbldap-tools/smbldap.conf
+@unexec if cmp -s %D/etc/smbldap-tools/smbldap_bind.conf %D/etc/smbldap-tools/smbldap_bind.conf.sample; then rm -f %D/etc/smbldap-tools/smbldap_bind.conf; fi
+etc/smbldap-tools/smbldap_bind.conf.sample
+@exec [ -f %D/etc/smbldap-tools/smbldap_bind.conf ] || cp %B/%f %D/etc/smbldap-tools/smbldap_bind.conf
+%%SITE_PERL%%/smbldap_tools.pm
+@dirrmtry etc/smbldap-tools
