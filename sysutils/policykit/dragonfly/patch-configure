@@ -1,0 +1,11 @@
+--- configure.orig	2012-12-21 18:03:31.357056000 +0100
++++ configure	2012-12-21 18:17:21.300540000 +0100
+@@ -24985,7 +24985,7 @@
+ _ACEOF
+ 
+ 	;;
+-  *freebsd*)
++  *freebsd*|*dragonfly*)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_FREEBSD 1
