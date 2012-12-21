@@ -1,0 +1,21 @@
+--- configure.intermediate	2012-12-22 00:11:17.000000000 +0100
++++ configure	2012-12-22 00:12:49.000000000 +0100
+@@ -4881,6 +4881,8 @@
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
++#include <curses.h>
++
+ main()
+ {
+  char *tgoto(const char *, int, int);
+@@ -5526,7 +5528,8 @@
+ 
+ #include <time.h> /* to get time_t on SCO */
+ #include <sys/types.h>
+-#if defined(SVR4) && !defined(DGUX)
++#include <sys/param.h>
++#if defined(__DragonFly__)
+ #include <utmpx.h>
+ #define utmp utmpx
+ #define pututline pututxline
