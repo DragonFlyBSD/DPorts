@@ -1,0 +1,11 @@
+--- configure.orig	2012-12-21 16:46:14.810833000 +0100
++++ configure	2012-12-21 17:07:48.944470000 +0100
+@@ -13507,7 +13507,7 @@
+ CK_BACKEND=""
+ KVM_LIBS=""
+ case "$host" in
+-        *-*-freebsd* | *-*-kfreebsd*-gnu)
++        *-*-freebsd* | *-*-kfreebsd*-gnu | *-*-dragonfly*)
+         CK_BACKEND="freebsd"
+         { $as_echo "$as_me:${as_lineno-$LINENO}: checking for kvm_openfiles in -lkvm" >&5
+ $as_echo_n "checking for kvm_openfiles in -lkvm... " >&6; }
