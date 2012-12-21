@@ -1,0 +1,15 @@
+@comment $FreeBSD: ports/print/latex-keystroke/pkg-plist,v 1.2 2012/11/17 06:00:51 svnexp Exp $
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%CLASSDIR%%/key-test.pdf
+%%CLASSDIR%%/key-test.tex
+%%CLASSDIR%%/keystroke.sty
+%%CLASSDIR%%/keystroke_left.eps
+%%CLASSDIR%%/keystroke_left.pdf
+%%CLASSDIR%%/keystroke_middle.eps
+%%CLASSDIR%%/keystroke_middle.pdf
+%%CLASSDIR%%/keystroke_right.eps
+%%CLASSDIR%%/keystroke_right.pdf
+@dirrm %%CLASSDIR%%
+@exec %%MKTEXLSR%%
+@unexec %%MKTEXLSR%%
