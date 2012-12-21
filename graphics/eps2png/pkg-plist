@@ -1,0 +1,3 @@
+bin/eps2png
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/eps2png/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/eps2png
