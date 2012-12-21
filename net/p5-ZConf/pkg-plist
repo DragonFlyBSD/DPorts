@@ -1,0 +1,20 @@
+%%SITE_PERL%%/ZConf.pm
+%%SITE_PERL%%/ZConf/backends/ldap.pm
+%%SITE_PERL%%/ZConf/backends/file.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/ZConf/.packlist
+@dirrmtry %%SITE_PERL%%/ZConf/backends
+@dirrmtry %%SITE_PERL%%/ZConf
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/ZConf/backends
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/ZConf
+bin/zcchooser-edit
+bin/zcchooser-get
+bin/zcchooser-run
+bin/zcchooser-set
+bin/zccreate
+bin/zcget
+bin/zcls
+bin/zcrm
+bin/zcset
+bin/zcvdel
+bin/zcvls
+bin/zccdump
