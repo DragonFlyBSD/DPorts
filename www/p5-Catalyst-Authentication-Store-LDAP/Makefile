@@ -1,0 +1,30 @@
+# New ports collection makefile for:	Catalyst-Authentication-Store-LDAP
+# Date created:	   20 February 2008
+# Whom:		   Sergey Skvortsov <skv@protey.ru>
+#
+# $FreeBSD: ports/www/p5-Catalyst-Authentication-Store-LDAP/Makefile,v 1.14 2012/11/17 06:02:46 svnexp Exp $
+#
+
+PORTNAME=	Catalyst-Authentication-Store-LDAP
+PORTVERSION=	1.012
+CATEGORIES=	www perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Authentication from an LDAP Directory for Catalyst
+
+BUILD_DEPENDS=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap \
+		p5-Catalyst-Plugin-Authentication>=0.10003:${PORTSDIR}/www/p5-Catalyst-Plugin-Authentication
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
+		p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject \
+		p5-Net-LDAP-Server-Test>=0:${PORTSDIR}/net/p5-Net-LDAP-Server-Test
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Catalyst::Authentication::Store::LDAP.3 \
+		Catalyst::Authentication::Store::LDAP::Backend.3 \
+		Catalyst::Authentication::Store::LDAP::User.3
+
+.include <bsd.port.mk>
