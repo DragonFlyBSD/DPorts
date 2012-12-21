@@ -1,0 +1,16 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/GraphViz/.packlist
+%%SITE_PERL%%/GraphViz.pm
+%%SITE_PERL%%/Devel/GraphVizProf.pm
+%%SITE_PERL%%/GraphViz/Small.pm
+%%SITE_PERL%%/GraphViz/Regex.pm
+%%SITE_PERL%%/GraphViz/XML.pm
+%%SITE_PERL%%/GraphViz/No.pm
+%%SITE_PERL%%/GraphViz/Parse/Yapp.pm
+%%SITE_PERL%%/GraphViz/Parse/RecDescent.pm
+%%SITE_PERL%%/GraphViz/Parse/Yacc.pm
+%%SITE_PERL%%/GraphViz/Data/Grapher.pm
+@dirrm %%SITE_PERL%%/GraphViz/Parse
+@dirrm %%SITE_PERL%%/GraphViz/Data
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/GraphViz
+@dirrmtry %%SITE_PERL%%/Devel
+@dirrmtry %%SITE_PERL%%/GraphViz
