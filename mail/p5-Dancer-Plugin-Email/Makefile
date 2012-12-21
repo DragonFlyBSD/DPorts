@@ -1,0 +1,30 @@
+# $FreeBSD: ports/mail/p5-Dancer-Plugin-Email/Makefile,v 1.7 2012/11/17 05:59:07 svnexp Exp $
+
+PORTNAME=	Dancer-Plugin-Email
+PORTVERSION=	1.0000
+CATEGORIES=	mail perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:IRONCAMEL
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	gblach@FreeBSD.org
+COMMENT=	Simple email handling for Dancer applications
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+RUN_DEPENDS=	p5-Dancer>=1.2:${PORTSDIR}/www/p5-Dancer \
+		p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL \
+		p5-Email-Stuff>=2.102:${PORTSDIR}/mail/p5-Email-Stuff \
+		p5-Hash-Merge>=0.12:${PORTSDIR}/textproc/p5-Hash-Merge \
+		p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL \
+		p5-Net-SMTP-SSL>=0:${PORTSDIR}/mail/p5-Net-SMTP-SSL \
+		p5-Net-SMTP-TLS>=0:${PORTSDIR}/mail/p5-Net-SMTP-TLS \
+		p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+
+PERL_CONFIGURE=	yes
+
+MAN3=	Dancer::Plugin::Email.3
+
+.include <bsd.port.mk>
