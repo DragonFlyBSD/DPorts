@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/misc/xdg-menu/files/xdg-menu.in,v 1.2 2012/11/17 05:59:46 svnexp Exp $
+
+echo "XDG-Menu: Starting up..."
+cd "%%DATADIR%%"
+./AppRun
