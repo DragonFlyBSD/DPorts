@@ -1,0 +1,13 @@
+@comment $FreeBSD: ports/graphics/mscgen/pkg-plist,v 1.2 2012/11/17 05:58:15 svnexp Exp $
+bin/mscgen
+%%DOCSDIR%%/COPYING
+%%DOCSDIR%%/ChangeLog
+%%DOCSDIR%%/README
+%%DOCSDIR%%/examples/boxes_example.msc
+%%DOCSDIR%%/examples/client_server.msc
+%%DOCSDIR%%/examples/colour_sample.msc
+%%DOCSDIR%%/examples/msg_types.msc
+%%DOCSDIR%%/examples/simple_prog_desc.msc
+%%DOCSDIR%%/mscgen.lang
+@dirrm %%DOCSDIR%%/examples
+@dirrm %%DOCSDIR%%
