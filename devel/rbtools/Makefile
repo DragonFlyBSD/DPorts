@@ -5,7 +5,7 @@
 # $FreeBSD: ports/devel/rbtools/Makefile,v 1.7 2012/11/17 05:56:56 svnexp Exp $
 #
 
-PORTNAME=	${ORIGNAME:L}
+PORTNAME=	${ORIGNAME:tl}
 DISTVERSION=	0.4.1
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.reviewboard.org/releases/${ORIGNAME}/${DISTVERSION:C|^(...).*|\1|}/

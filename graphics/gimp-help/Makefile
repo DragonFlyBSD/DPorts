@@ -53,13 +53,13 @@ ${lang}_NAME?=		${lang}
 
 OPTIONS=	ALL "All translations" on
 .for lang in ${LANG_ALL}
-OPTIONS+=	${lang:U} "${${lang}_NAME}" off
+OPTIONS+=	${lang:tu} "${${lang}_NAME}" off
 .endfor
 
 .include <bsd.port.options.mk>
 
 .for lang in ${LANG_ALL}
-.if defined(WITH_ALL) || defined(WITH_${lang:U})
+.if defined(WITH_ALL) || defined(WITH_${lang:tu})
 RUN_DEPENDS+=	${${lang}_DETECT}:${PORTSDIR}/${${lang}_PORT}
 .endif
 .endfor

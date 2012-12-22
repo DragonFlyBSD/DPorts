@@ -10,8 +10,8 @@ PORTVERSION=	0.6
 PORTREVISION=	0
 #PORTEPOCH=	0
 CATEGORIES=	textproc www python
-MASTER_SITES=	http://ftp.edgewall.com/pub/${PORTNAME:L}/ \
-		http://nivi.interfree.it/distfiles/${PORTNAME:L}/
+MASTER_SITES=	http://ftp.edgewall.com/pub/${PORTNAME:tl}/ \
+		http://nivi.interfree.it/distfiles/${PORTNAME:tl}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org

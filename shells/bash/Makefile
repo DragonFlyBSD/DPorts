@@ -63,7 +63,7 @@ CONFIGURE_ARGS=		--without-bash-malloc \
 			--disable-rpath \
 			--enable-disabled-builtins
 
-.if defined(WITH_STATIC_BASH) || defined(NO_DYNAMICROOT) || (defined(NOSHARED) && ${NOSHARED:L} != "no")
+.if defined(WITH_STATIC_BASH) || defined(NO_DYNAMICROOT) || (defined(NOSHARED) && ${NOSHARED:tl} != "no")
 .if !defined(WITHOUT_NLS)
 WITHOUT_NLS=yes
 .endif

@@ -16,7 +16,7 @@ MAINTAINER=	mjs@Bur.st
 COMMENT=	Agile dynamic language for the JVM
 
 LICENSE=	AL2
-WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION:U}
+WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION:tu}
 
 USE_ZIP=yes
 USE_JAVA=	yes
@@ -35,7 +35,7 @@ SUB_FILES=	set-groovy_home.sed
 
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${PORTNAME}.jar..."
-	@${INSTALL_DATA} ${WRKSRC}/embeddable/${PORTNAME}-all-${DISTVERSION:U}.jar ${JAVAJARDIR}/${PORTNAME}.jar
+	@${INSTALL_DATA} ${WRKSRC}/embeddable/${PORTNAME}-all-${DISTVERSION:tu}.jar ${JAVAJARDIR}/${PORTNAME}.jar
 	@${ECHO_MSG} " [ DONE ]"
 	@${ECHO_MSG} -n ">> Installing data files in ${DATADIR}..."
 	@cd ${WRKSRC} \

@@ -59,7 +59,7 @@ pre-everything::
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O3||;s|<termio.h>|<termios.h>|' ${WRKSRC}/configure
 # AMD64 prefers position independent code
-.if ${ARCH:L} == "amd64"
+.if ${ARCH:tl} == "amd64"
 	@${REINPLACE_CMD} -e 's|-prefer-non-pic||' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
 .endif

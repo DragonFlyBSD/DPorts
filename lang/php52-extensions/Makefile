@@ -128,7 +128,7 @@ ALL_OPTIONS=	BCMATH BZ2 CALENDAR CTYPE CURL DBA DBASE \
 SEL_OPTIONS=	yes
 .for opt in ${ALL_OPTIONS}
 .	if defined(WITH_${opt}) && !defined(WITHOUT_${opt})
-SEL_OPTIONS+=	${opt:L}
+SEL_OPTIONS+=	${opt:tl}
 .	endif
 .endfor
 USE_PHP=	${SEL_OPTIONS}

@@ -24,7 +24,7 @@ LATEST_LINK=	pear-${PORTNAME}
 
 .for opt in BCMATH GMP
 .    if defined(WITH_${opt})
-USE_PHP+=	${opt:L}
+USE_PHP+=	${opt:tl}
 .    endif
 .endfor
 

@@ -8,7 +8,7 @@
 PORTNAME=	libHX
 PORTVERSION=	3.10.1
 CATEGORIES=	lang
-MASTER_SITES=	SF/${PORTNAME:L}/${PORTNAME}/${PORTVERSION}
+MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	Library C with some additional C++ bindings available
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	*
-DOCSDIR=	${PREFIX}/share/doc/${PORTNAME:L}
+DOCSDIR=	${PREFIX}/share/doc/${PORTNAME:tl}
 .endif
 
 MAN1=		hxdirstamp.1

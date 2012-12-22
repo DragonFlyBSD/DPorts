@@ -97,7 +97,7 @@ USE_ICONV=	yes
 .endif
 
 .for shlib in iconv smtp tls
-.if ${PORT_OPTIONS:M${shlib:U}}
+.if ${PORT_OPTIONS:M${shlib:tu}}
 ELM_SHLIBS+=	${shlib}
 .else
 ELM_UNSHLIBS+=	${shlib}
@@ -123,7 +123,7 @@ ELM_RC=		elm.rc
 LOCAL_CONF_FILES=	${MIME_TYPES} ${MIME_CSETS} ${TERM_INFO} ${ELM_RC}
 DOC_FILES=	MIME.txt README.ME+
 .for shlib in ${ELM_SHLIBS}
-DOC_FILES+=	shared_libs/${shlib:L}/README.${shlib:U}
+DOC_FILES+=	shared_libs/${shlib:tl}/README.${shlib:tu}
 .endfor
 
 # Post-patch
@@ -161,18 +161,18 @@ TEE?=	tee
 configure-shlibs:
 	@${CP} /dev/null ${CONFIG_PATH}
 .for shlib in ${ELM_SYSTEM_SHLIBS}
-	@${ECHO_CMD} "\#  Support for ${shlib:U}" \
-		> ${WRKSRC}/shared_libs/${shlib:L}/config.res
+	@${ECHO_CMD} "\#  Support for ${shlib:tu}" \
+		> ${WRKSRC}/shared_libs/${shlib:tl}/config.res
 .endfor
 .for shlib in ${ELM_SHLIBS}
-	@${ECHO_CMD} "${shlib:L}_ok='define'" \
+	@${ECHO_CMD} "${shlib:tl}_ok='define'" \
 		| ${TEE} -a ${CONFIG_PATH} \
-		>> ${WRKSRC}/shared_libs/${shlib:L}/config.res
+		>> ${WRKSRC}/shared_libs/${shlib:tl}/config.res
 .endfor
 .for shlib in ${ELM_UNSHLIBS}
-	@${ECHO_CMD} "${shlib:L}_ok='undef'" \
+	@${ECHO_CMD} "${shlib:tl}_ok='undef'" \
 		| ${TEE} -a ${CONFIG_PATH} \
-		>> ${WRKSRC}/shared_libs/${shlib:L}/config.res
+		>> ${WRKSRC}/shared_libs/${shlib:tl}/config.res
 .endfor
 
 # Post-configure
@@ -182,9 +182,9 @@ post-configure: rename-readmes
 
 rename-readmes:
 .for shlib in ${ELM_SHLIBS}
-	@if [ -f ${WRKSRC}/shared_libs/${shlib:L}/README.ME+ ]; then \
-		${MV} ${WRKSRC}/shared_libs/${shlib:L}/README.ME+ \
-		       ${WRKSRC}/shared_libs/${shlib:L}/README.${shlib:U}; \
+	@if [ -f ${WRKSRC}/shared_libs/${shlib:tl}/README.ME+ ]; then \
+		${MV} ${WRKSRC}/shared_libs/${shlib:tl}/README.ME+ \
+		       ${WRKSRC}/shared_libs/${shlib:tl}/README.${shlib:tu}; \
 	fi
 .endfor
 

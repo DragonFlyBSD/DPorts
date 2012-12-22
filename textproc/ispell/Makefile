@@ -143,8 +143,8 @@ EXTRACT_ONLY+=	${DADISTFILE}
 .if defined(ISPELL_FI)
 FIDICTFILE=	finnish.dict.bz2
 MASTER_SITES+=	http://ispell-fi.sourceforge.net/:fi
-.if ${ISPELL_FI:L} != yes
-FIAFFIXFILE=	finnish.${ISPELL_FI:L}.aff.bz2
+.if ${ISPELL_FI:tl} != yes
+FIAFFIXFILE=	finnish.${ISPELL_FI:tl}.aff.bz2
 .else
 FIAFFIXFILE=	finnish.medium.aff.bz2
 .endif

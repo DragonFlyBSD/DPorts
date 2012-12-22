@@ -8,7 +8,7 @@
 PORTNAME=	SearchAndRescue
 PORTVERSION=	1.3.0
 CATEGORIES=	games
-MASTER_SITES=	SF/${PORTNAME:L}/Data_Files/
+MASTER_SITES=	SF/${PORTNAME:tl}/Data_Files/
 PKGNAMESUFFIX=	-data
 DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 
@@ -18,7 +18,7 @@ COMMENT=	The data files for SearchAndRescue flight simulator
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
-DATADIR=	${PREFIX}/share/${PORTNAME:L}
+DATADIR=	${PREFIX}/share/${PORTNAME:tl}
 
 do-install:
 	${MKDIR} ${DATADIR}

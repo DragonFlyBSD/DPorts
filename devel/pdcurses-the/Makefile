@@ -31,7 +31,7 @@ XAW3D_DESC=	Link with Xaw3d
 
 .for opt in DEBUG LATIN1
 .   if ${PORT_OPTIONS:M${opt}}
-CONFIGURE_ARGS+=--enable-${opt:L}
+CONFIGURE_ARGS+=--enable-${opt:tl}
 .   endif
 .endfor
 

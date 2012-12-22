@@ -16,9 +16,9 @@ NO_BUILD=	yes
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
 .for plugin in ${GEANY_PLUGINS_ALL}
-OPTIONS_DEFINE+=	${plugin:U}
-${plugin:U}_DESC=	${${plugin}_DESC}
-${plugin:U}_DEP=	geany-plugin-${plugin}>=0:${PORTSDIR}/devel/geany-plugin-${plugin}
+OPTIONS_DEFINE+=	${plugin:tu}
+${plugin:tu}_DESC=	${${plugin}_DESC}
+${plugin:tu}_DEP=	geany-plugin-${plugin}>=0:${PORTSDIR}/devel/geany-plugin-${plugin}
 .endfor
 
 .include <bsd.port.options.mk>

@@ -24,13 +24,13 @@ DATADIR=	${Q1DIR}/${PORTNAME}
 do-install:
 	@${MKDIR} ${DATADIR}
 .for f in Autoexec.cfg PROGS.DAT
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DATADIR}/${f:L}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${DATADIR}/${f:tl}
 .endfor
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
 .   for f in B08chg.txt Dedserv.txt Reaprb80.txt Skinspec.txt
 	@${REINPLACE_CMD} -e "s|`${ECHO_CMD} -e '\r'`$$||" ${WRKSRC}/${f}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/${f:L}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/${f:tl}
 .   endfor
 .endif
 

@@ -112,7 +112,7 @@ DEFAULTPAPERSIZE?=	letter
 .if ${PORT_OPTIONS:MLIBPAPER}
 LIB_DEPENDS+=	paper:${PORTSDIR}/print/libpaper
 CONFIGURE_ARGS+=	--with-libpaper
-.if ${DEFAULTPAPERSIZE:L} == a4
+.if ${DEFAULTPAPERSIZE:tl} == a4
 RUN_DEPENDS+=	${LOCALBASE}/etc/papersize:${PORTSDIR}/print/papersize-default-a4
 .endif
 .else

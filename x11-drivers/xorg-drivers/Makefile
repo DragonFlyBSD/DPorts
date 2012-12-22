@@ -71,20 +71,20 @@ QUIRKS=		keyboard:kbd jamstudio:js_x
 
 .if defined(XORG_COMPLETE)
 . for type in input video
-${type:U}_ON:=	${${type:U}_ON} ${${type:U}_OFF}
-${type:U}_OFF=	# nil
-.  for i in ${${type:U}_EXCL}
+${type:tu}_ON:=	${${type:tu}_ON} ${${type:tu}_OFF}
+${type:tu}_OFF=	# nil
+.  for i in ${${type:tu}_EXCL}
 B=	${i:C/.*://}
-${type:U}_ON:=	${${type:U}_ON:C/${B}//}
-${type:U}_OFF:=	${${type:U}_OFF} ${B}
+${type:tu}_ON:=	${${type:tu}_ON:C/${B}//}
+${type:tu}_OFF:=	${${type:tu}_OFF} ${B}
 .  endfor
 . endfor
 .endif
 
 .for default in on off
 . for type in input video
-.  for i in ${${type:U}_${default:U}}
-OPTIONS+=	${i:U} "Install ${i} ${type} driver" ${default}
+.  for i in ${${type:tu}_${default:tu}}
+OPTIONS+=	${i:tu} "Install ${i} ${type} driver" ${default}
 .  endfor
 . endfor
 .endfor
@@ -94,7 +94,7 @@ OPTIONS+=	${i:U} "Install ${i} ${type} driver" ${default}
 .for i in ${VIDEO_EXCL}
 A=	${i:C/:.*//}
 B=	${i:C/.*://}
-. if defined(WITH_${B:U}) && !defined(WITHOUT_${A:U})
+. if defined(WITH_${B:tu}) && !defined(WITHOUT_${A:tu})
 DRV_CONFLICTS+=	${i}
 . endif
 .endfor
@@ -105,13 +105,13 @@ IGNORE=		can't be installed because of conflicting drivers (${DRV_CONFLICTS}). R
 
 .for default in on off
 . for type in input video
-.  for i in ${${type:U}_${default:U}}
+.  for i in ${${type:tu}_${default:tu}}
 DEFAULT=${default}
-.   if (${DEFAULT} == "on" && !defined(WITHOUT_${i:U})) || (${DEFAULT} == "off" && defined(WITH_${i:U}))
+.   if (${DEFAULT} == "on" && !defined(WITHOUT_${i:tu})) || (${DEFAULT} == "off" && defined(WITH_${i:tu}))
 .    if ${QUIRKS:M${i}\:*:C/.*://} != ""
-RUN_DEPENDS+=	${${type:U}DIR}/${QUIRKS:M${i}\:*:C/.*://}_drv.so:${PORTSDIR}/x11-drivers/xf86-${type}-${i}
+RUN_DEPENDS+=	${${type:tu}DIR}/${QUIRKS:M${i}\:*:C/.*://}_drv.so:${PORTSDIR}/x11-drivers/xf86-${type}-${i}
 .    else
-RUN_DEPENDS+=	${${type:U}DIR}/${i}_drv.so:${PORTSDIR}/x11-drivers/xf86-${type}-${i}
+RUN_DEPENDS+=	${${type:tu}DIR}/${i}_drv.so:${PORTSDIR}/x11-drivers/xf86-${type}-${i}
 .    endif
 .   endif
 .  endfor
