@@ -1,0 +1,9 @@
+@comment $FreeBSD: ports/x11-fonts/code2000/pkg-plist,v 1.7 2012/11/17 06:03:27 svnexp Exp $
+%%FONTSDIR%%/code2000.html
+%%FONTSDIR%%/code2000.ttf
+%%FONTSDIR%%/fonts.dir
+%%FONTSDIR%%/fonts.scale
+@exec %%LOCALBASE%%/bin/fc-cache -f -v %D/%%FONTSDIR%% || true
+@unexec rm %D/%%FONTSDIR%%/fonts.cache-1 2>/dev/null || true
+@unexec %%LOCALBASE%%/bin/fc-cache -f -v %D/%%FONTSDIR%% 2>/dev/null || true
+@dirrm %%FONTSDIR%%
