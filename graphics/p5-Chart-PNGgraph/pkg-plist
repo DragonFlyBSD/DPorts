@@ -1,0 +1,15 @@
+%%SITE_PERL%%/Chart/PNGgraph.pm
+%%SITE_PERL%%/Chart/PNGgraph/Convert.pm
+%%SITE_PERL%%/Chart/PNGgraph/area.pm
+%%SITE_PERL%%/Chart/PNGgraph/axestype.pm
+%%SITE_PERL%%/Chart/PNGgraph/bars.pm
+%%SITE_PERL%%/Chart/PNGgraph/lines.pm
+%%SITE_PERL%%/Chart/PNGgraph/linespoints.pm
+%%SITE_PERL%%/Chart/PNGgraph/mixed.pm
+%%SITE_PERL%%/Chart/PNGgraph/pie.pm
+%%SITE_PERL%%/Chart/PNGgraph/points.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Chart/PNGgraph/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Chart/PNGgraph
+@dirrm %%SITE_PERL%%/Chart/PNGgraph
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Chart
+@dirrmtry %%SITE_PERL%%/Chart
