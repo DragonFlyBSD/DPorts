@@ -1,0 +1,16 @@
+@comment $FreeBSD: ports/chinese/xpdf/pkg-plist,v 1.10 2012/11/17 05:54:58 svnexp Exp $
+%%DATADIR%%/chinese-simplified/Adobe-GB1.cidToUnicode
+%%DATADIR%%/chinese-simplified/EUC-CN.unicodeMap
+%%DATADIR%%/chinese-simplified/GBK.unicodeMap
+%%DATADIR%%/chinese-simplified/ISO-2022-CN.unicodeMap
+%%DATADIR%%/chinese-simplified/README
+%%DATADIR%%/chinese-traditional/Adobe-CNS1.cidToUnicode
+%%DATADIR%%/chinese-traditional/Big5.unicodeMap
+%%DATADIR%%/chinese-traditional/Big5ascii.unicodeMap
+%%DATADIR%%/chinese-traditional/README
+@exec exec < %D/etc/xpdfrc; rm -f %D/etc/xpdfrc; ( grep -v "%%EXTRARC%%"; echo "include %%EXTRARC%%" ) > %D/etc/xpdfrc; chmod 0444 %D/etc/xpdfrc
+@unexec exec < %D/etc/xpdfrc; rm -f %D/etc/xpdfrc; grep -v "%%EXTRARC%%" > %D/etc/xpdfrc; chmod 0444 %D/etc/xpdfrc
+%%DATADIR%%/chinese-traditional/dot.xpdfrc
+@dirrm %%DATADIR%%/chinese-simplified
+@dirrm %%DATADIR%%/chinese-traditional
+@dirrmtry %%DATADIR%%
