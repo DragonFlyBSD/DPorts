@@ -1,0 +1,2 @@
+@comment $FreeBSD: ports/audio/xmms-bonk/pkg-plist,v 1.2 2012/11/17 05:54:48 svnexp Exp $
+lib/xmms/Input/libbonk.so
