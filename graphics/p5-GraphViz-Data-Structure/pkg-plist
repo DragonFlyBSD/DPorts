@@ -1,0 +1,5 @@
+%%SITE_PERL%%/GraphViz/Data/Structure.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/GraphViz/Data/Structure/.packlist
+@dirrmtry %%SITE_PERL%%/GraphViz/Data
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/GraphViz/Data/Structure
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/GraphViz/Data
