@@ -1,0 +1,26 @@
+# Ports collection makefile for:	rubygem-turing
+# Date created:				07 June 2007
+# Whom:					Alexander Logvinov <ports@logvinov.com>
+#
+# $FreeBSD: ports/graphics/rubygem-turing/Makefile,v 1.14 2012/11/17 05:58:22 svnexp Exp $
+
+PORTNAME=	turing
+PORTVERSION=	0.0.11
+PORTREVISION=	3
+CATEGORIES=	graphics rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Easy to use and customize/extend implementation of captcha
+
+RUN_DEPENDS=	rubygem-gd2>=1.0:${PORTSDIR}/graphics/rubygem-gd2
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=  yes
+
+.include <bsd.port.pre.mk>
+.if ${RUBY_VER} == 1.9
+BROKEN=	does not work with ruby 1.9
+.endif
+.include <bsd.port.post.mk>
