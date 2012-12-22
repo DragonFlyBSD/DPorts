@@ -1,0 +1,22 @@
+# $FreeBSD: ports/deskutils/xfce4-xkb-plugin/Makefile,v 1.41 2012/11/17 05:55:31 svnexp Exp $
+
+PORTNAME=	xfce4-xkb-plugin
+PORTVERSION=	0.5.4.3
+PORTREVISION=	2
+CATEGORIES=	deskutils xfce
+MASTER_SITES=	${MASTER_SITE_XFCE}
+MASTER_SITE_SUBDIR=	src/panel-plugins/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+
+MAINTAINER=	xfce@FreeBSD.org
+COMMENT=	Keyboard layout switching plugin for Xfce4
+
+LIB_DEPENDS=	xklavier.12:${PORTSDIR}/x11/libxklavier
+
+GNU_CONFIGURE=	yes
+USE_BZIP2=	yes
+USE_GETTEXT=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gtk20 intltool intlhack pkgconfig librsvg2
+USE_XFCE=	configenv panel
+
+.include <bsd.port.mk>
