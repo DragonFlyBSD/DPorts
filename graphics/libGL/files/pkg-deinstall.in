@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/graphics/libGL/files/pkg-deinstall.in,v 1.1 2012/08/31 15:44:41 kwm Exp $
+#
+
+PREFIX="${PKG_PREFIX-/usr/local}"
+
+case $2 in
+DEINSTALL)
+	/bin/rm -f ${PREFIX}/lib/libGL.so*
+	;;
+esac
