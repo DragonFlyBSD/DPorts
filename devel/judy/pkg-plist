@@ -1,0 +1,17 @@
+include/Judy.h
+lib/libJudy.a
+lib/libJudy.la
+lib/libJudy.so
+lib/libJudy.so.%%SHLIB_MAJOR%%
+%%PORTDOCS%%%%DOCSDIR%%/COPYRIGHT
+%%PORTDOCS%%%%DOCSDIR%%/Judy1_3.htm
+%%PORTDOCS%%%%DOCSDIR%%/Judy1_funcs_3.htm
+%%PORTDOCS%%%%DOCSDIR%%/JudyHS_3.htm
+%%PORTDOCS%%%%DOCSDIR%%/JudyHS_funcs_3.htm
+%%PORTDOCS%%%%DOCSDIR%%/JudyL_3.htm
+%%PORTDOCS%%%%DOCSDIR%%/JudyL_funcs_3.htm
+%%PORTDOCS%%%%DOCSDIR%%/JudySL_3.htm
+%%PORTDOCS%%%%DOCSDIR%%/JudySL_funcs_3.htm
+%%PORTDOCS%%%%DOCSDIR%%/Judy_3.htm
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
