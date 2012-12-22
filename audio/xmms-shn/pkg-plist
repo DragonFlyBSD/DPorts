@@ -1,0 +1,5 @@
+@comment $FreeBSD: ports/audio/xmms-shn/pkg-plist,v 1.6 2012/11/17 05:54:49 svnexp Exp $
+lib/xmms/Input/libshn.la
+lib/xmms/Input/libshn.so
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
