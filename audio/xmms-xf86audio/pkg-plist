@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/audio/xmms-xf86audio/pkg-plist,v 1.2 2012/11/17 05:54:49 svnexp Exp $
+lib/xmms/General/libxf86audio.so
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
