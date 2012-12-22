@@ -19,7 +19,7 @@ MAN1=		netpipe.1
 PORTDOCS=	README netpipe_paper.ps
 PLIST_FILES=	bin/NPtcp bin/NPtcp6
 
-DOCSDIR=	${PREFIX}/share/doc/${PORTNAME:L}
+DOCSDIR=	${PREFIX}/share/doc/${PORTNAME:tl}
 
 do-build:
 	cd ${WRKSRC} \
