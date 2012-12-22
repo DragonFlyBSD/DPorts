@@ -1,0 +1,20 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/Bundle/Xmms.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/Xmms.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/Xmms/Config.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/Xmms/ExtUtils.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/Xmms/Remote.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/Xmms/SongChange.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms-Perl/.packlist
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms/Config/Config.bs
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms/Config/Config.so
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms/Remote/Remote.bs
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms/Remote/Remote.so
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms/SongChange/SongChange.bs
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms/SongChange/SongChange.so
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms/Config
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms/Remote
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms/SongChange
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Xmms-Perl
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/Bundle
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/Xmms
