@@ -1,0 +1,83 @@
+@comment $FreeBSD: ports/sysutils/byobu/pkg-plist,v 1.3 2012/11/17 06:01:26 svnexp Exp $
+%%DATADIR%%/ec2/rates.eu_ie
+%%DATADIR%%/ec2/rates.us_ca
+%%DATADIR%%/ec2/rates.us_va
+%%DATADIR%%/keybindings/common
+%%DATADIR%%/keybindings/f-keys
+%%DATADIR%%/keybindings/none
+%%DATADIR%%/keybindings/screen-escape-keys
+%%DATADIR%%/pixmaps/byobu.svg
+%%DATADIR%%/profiles/NONE
+%%DATADIR%%/profiles/byoburc
+%%DATADIR%%/profiles/common
+%%DATADIR%%/profiles/socketdir
+%%DATADIR%%/profiles/statusrc
+%%DATADIR%%/tests/byobu-time-notifications
+%%DATADIR%%/windows/common
+%%PORTDOCS%%%%DOCSDIR%%/help.txt
+bin/byobu
+bin/byobu-config
+bin/byobu-disable
+bin/byobu-enable
+bin/byobu-export
+bin/byobu-janitor
+bin/byobu-launch
+bin/byobu-launcher
+bin/byobu-launcher-install
+bin/byobu-launcher-uninstall
+bin/byobu-reconnect-sockets
+bin/byobu-select-profile
+bin/byobu-select-session
+bin/byobu-status
+bin/byobu-status-detail
+bin/shell
+lib/byobu/.notify_osd
+lib/byobu/apport
+lib/byobu/arch
+lib/byobu/battery
+lib/byobu/cpu_count
+lib/byobu/cpu_freq
+lib/byobu/cpu_temp
+lib/byobu/custom
+lib/byobu/date
+lib/byobu/disk
+lib/byobu/disk_io
+lib/byobu/ec2_cost
+lib/byobu/fan_speed
+lib/byobu/hostname
+lib/byobu/ip_address
+lib/byobu/load_average
+lib/byobu/logo
+lib/byobu/mail
+lib/byobu/mem_available
+lib/byobu/mem_used
+lib/byobu/menu
+lib/byobu/network
+lib/byobu/notify_osd
+lib/byobu/processes
+lib/byobu/raid
+lib/byobu/rcs_cost
+lib/byobu/reboot_required
+lib/byobu/release
+lib/byobu/services
+lib/byobu/swap
+lib/byobu/time
+lib/byobu/time_binary
+lib/byobu/time_utc
+lib/byobu/trash
+lib/byobu/updates_available
+lib/byobu/uptime
+lib/byobu/users
+lib/byobu/whoami
+lib/byobu/wifi_quality
+share/applications/byobu.desktop
+@dirrmtry share/applications
+@dirrm lib/byobu
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm %%DATADIR%%/windows
+@dirrm %%DATADIR%%/tests
+@dirrm %%DATADIR%%/profiles
+@dirrm %%DATADIR%%/pixmaps
+@dirrm %%DATADIR%%/keybindings
+@dirrm %%DATADIR%%/ec2
+@dirrm %%DATADIR%%
