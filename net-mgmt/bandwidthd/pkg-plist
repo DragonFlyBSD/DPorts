@@ -1,0 +1,9 @@
+@comment $FreeBSD: ports/net-mgmt/bandwidthd/pkg-plist,v 1.3 2012/11/17 06:00:30 svnexp Exp $
+bandwidthd/etc/bandwidthd.conf-dist
+bandwidthd/bandwidthd
+bandwidthd/htdocs/legend.gif
+bandwidthd/htdocs/logo.gif
+etc/rc.d/bandwidthd.sh.sample
+@dirrmtry bandwidthd/etc
+@dirrmtry bandwidthd/htdocs
+@unexec rmdir %D/bandwidthd 2> /dev/null || echo "If you do not plan on reinstalling bandwidthd, you can safely remove %D/bandwidthd"
