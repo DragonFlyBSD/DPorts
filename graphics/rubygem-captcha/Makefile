@@ -1,0 +1,23 @@
+# Ports collection makefile for:	rubygem-captcha
+# Date created:				13 March 2007
+# Whom:					Alexander Logvinov <ports@logvinov.com>
+#
+# $FreeBSD: ports/graphics/rubygem-captcha/Makefile,v 1.13 2012/11/17 05:58:22 svnexp Exp $
+
+PORTNAME=	captcha
+PORTVERSION=	0.1.2
+PORTREVISION=	4
+CATEGORIES=	graphics rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	A simple CAPTCHA written in Ruby
+
+BUILD_DEPENDS=	${RUBY_SITEARCHLIBDIR}/GD.so:${PORTSDIR}/graphics/ruby-gd
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
