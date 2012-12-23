@@ -1,12 +1,8 @@
-# New ports collection makefile for:	zsh
-# Date created:			11 Feb. 1995
-# Whom:				torstenb
-#
-# $FreeBSD: ports/shells/zsh/Makefile,v 1.144 2012/11/17 06:01:24 svnexp Exp $
-#
+# Created by: torstenb
+# $FreeBSD: ports/shells/zsh/Makefile,v 1.147 2012/12/22 02:09:47 svnexp Exp $
 
 PORTNAME=	zsh
-PORTVERSION=	5.0.0
+PORTVERSION=	5.0.2
 CATEGORIES=	shells
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION} \
 		SF/${PORTNAME}/${PORTNAME}-doc/${PORTVERSION}:doc
@@ -38,7 +34,8 @@ EXTRA_PATCHES=	${FILESDIR}/extra-patch-bsdtar
 #EXTRA_COMPLETION_FILES=	_sockstat
 #EXTRA_COMPLETION_DIR=	Completion/BSD/Command
 
-OPTIONS_DEFINE=	GDBM MEM SECURE_FREE MAILDIR MULTIBYTE PCRE STATIC DOCS DEBUG
+OPTIONS_DEFINE=	GDBM MEM SECURE_FREE MAILDIR MULTIBYTE PCRE STATIC DOCS DEBUG \
+		EXAMPLES
 OPTIONS_DEFAULT=	SECURE_FREE MAILDIR MULTIBYTE
 
 GDBM_DESC=	Enable GDBM support (GPL)
@@ -58,7 +55,7 @@ PORTDOCS=	*
 PORTEXAMPLES=	zlogin zshenv zshrc
 SHELLS=		/etc/shells
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 DISTFILES+=	${DISTNAME}-doc${EXTRACT_SUFX}:doc
@@ -74,7 +71,7 @@ PLIST_SUB+=		GDBM="@comment "
 
 .if ${PORT_OPTIONS:MPCRE}
 CONFIGURE_ARGS+=	--enable-pcre
-LIB_DEPENDS+=		pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=		pcre.3:${PORTSDIR}/devel/pcre
 PLIST_SUB+=		PCRE=""
 .else
 CONFIGURE_ARGS+=	--disable-pcre
@@ -149,10 +146,10 @@ INFO=	zsh
 .endif
 
 post-install:
-	${LN} ${PREFIX}/bin/zsh ${PREFIX}/bin/rzsh
+	${LN} -f ${PREFIX}/bin/zsh ${PREFIX}/bin/rzsh
 	${TEST} -d ${ZSH_ETCDIR} || ${MKDIR} ${ZSH_ETCDIR}
 	${TEST} -d ${ZSH_SITEFNDIR} || ${MKDIR} ${ZSH_SITEFNDIR}
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	cd ${WRKSRC}/StartupFiles && ${INSTALL_DATA} ${PORTEXAMPLES} ${EXAMPLESDIR}
 .endif
@@ -173,4 +170,4 @@ post-install:
 			${CHMOD} 644 $$i.zwc ; \
 		done'
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
