@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jeuclid
-# Date created:				11 February 2010
-# Whom:					rfarmer@predatorlabs.net
-#
-# $FreeBSD: ports/math/jeuclid/Makefile,v 1.4 2012/12/06 16:41:47 svnexp Exp $
-#
+# Created by: rfarmer@predatorlabs.net
+# $FreeBSD: ports/math/jeuclid/Makefile,v 1.5 2012/12/10 13:48:06 svnexp Exp $
 
 PORTNAME=	jeuclid
 PORTVERSION=	3.1.9
@@ -15,7 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java based MathML rendering solution
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 JAVA_RUN=	yes
 NO_BUILD=	yes
 
