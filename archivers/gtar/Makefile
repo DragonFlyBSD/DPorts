@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtar
-# Date created:		Sa   6 Jun 1998 10:24:51 CEST
-# Whom:			Andreas Klemm <andreas@klemm.gtn.com>
-#
-# $FreeBSD: ports/archivers/gtar/Makefile,v 1.80 2012/11/17 05:54:20 svnexp Exp $
-#
+# Created by: Andreas Klemm <andreas@klemm.gtn.com>
+# $FreeBSD: ports/archivers/gtar/Makefile,v 1.81 2012/12/18 21:34:11 svnexp Exp $
 
 PORTNAME=	tar
 PORTVERSION=	1.26
@@ -32,14 +28,18 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${LDSTATIC}
 CONFIGURE_ENV=	DEFAULT_ARCHIVE=/dev/sa0 \
 		DEFAULT_RMT_COMMAND=/etc/rmt
 
-.if defined(WANT_STATIC)
+OPTIONS_DEFINE=	STATIC
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MSTATIC}
 LDSTATIC=	-static
 MAKE_ARGS+=	LIBINTL='$$(LTLIBINTL)' LIBICONV='$$(LTLIBICONV)'
 .else
 LDSTATIC=
 .endif
 
-.if !defined(WITHOUT_NLS)
+.if ${PORT_OPTIONS:MNLS}
 USE_GETTEXT=	yes
 PLIST_SUB+=	NLS=""
 .else
