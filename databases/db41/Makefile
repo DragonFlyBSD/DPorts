@@ -37,7 +37,7 @@ PORTDOCS=	*
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == amd64
+.if ${ARCH} == x86_64
 CONFIGURE_ARGS+=	--with-mutex=x86/gcc-assembly
 .endif
 
