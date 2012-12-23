@@ -2,16 +2,17 @@
 # Date created:				22 Dec 1994
 # Whom:					Andrey Chernov <ache@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/zip/Makefile,v 1.43 2012/11/17 05:54:24 svnexp Exp $
+# $FreeBSD: ports/archivers/zip/Makefile,v 1.44 2012/12/16 04:19:55 svnexp Exp $
 #
 
 PORTNAME=	zip
 PORTVERSION=	3.0
 CATEGORIES=	archivers
-MASTER_SITES=	SF/info${PORTNAME}/Zip%203.x%20%28latest%29/${PORTVERSION}
+MASTER_SITES=	SF/info${PORTNAME}/Zip%203.x%20%28latest%29/${PORTVERSION} \
+		ftp://ftp.skysmurf.nl/FreeBSD/distfiles/
 DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	freebsd@skysmurf.nl
 COMMENT=	Create/update ZIP files compatible with PKZIP
 
 MAKEFILE=	unix/Makefile
