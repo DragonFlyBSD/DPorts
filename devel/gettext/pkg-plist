@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/gettext/pkg-plist,v 1.43 2010/09/15 18:34:10 ade Exp $
+@comment $FreeBSD: ports/devel/gettext/pkg-plist,v 1.44 2012/11/17 05:55:45 svnexp Exp $
 bin/autopoint
 bin/envsubst
 bin/gettext

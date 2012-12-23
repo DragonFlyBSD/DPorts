@@ -1,4 +1,4 @@
-$FreeBSD: ports/devel/gettext/files/patch-ak,v 1.4 2005/05/13 03:51:07 ahze Exp $
+$FreeBSD: ports/devel/gettext/files/patch-ak,v 1.5 2012/11/17 05:55:45 svnexp Exp $
 
 --- gettext-tools/misc/po-mode.el.orig	Sun Jan 23 22:35:10 2000
 +++ gettext-tools/misc/po-mode.el	Sun Jan 23 22:35:39 2000
