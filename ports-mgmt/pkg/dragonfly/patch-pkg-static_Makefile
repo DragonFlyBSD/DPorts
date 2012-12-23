@@ -1,0 +1,21 @@
+--- pkg-static/Makefile.orig	2012-12-21 12:57:15.000000000 +0100
++++ pkg-static/Makefile	2012-12-23 19:52:33.245521000 +0100
+@@ -13,17 +13,8 @@
+ 
+ LDADD_STATIC+=	-lsqlite3 \
+ 		-lyaml \
+-		-larchive \
+-		-lsbuf \
+-		-lfetch \
+ 		-lpthread \
+-		-lelf \
+-		-lssl \
+-		-lcrypto \
+-		-lmd \
+-		-lz \
+-		-lbz2 \
+-		-llzma
++		-lelf
+ 
+ .if exists(/usr/include/edit/readline/readline.h)
+ LDADD_STATIC+=	-ledit \

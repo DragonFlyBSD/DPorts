@@ -1,0 +1,29 @@
+--- pkg/Makefile.orig	2012-12-21 12:57:15.000000000 +0100
++++ pkg/Makefile	2012-12-23 22:35:28.439175000 +0100
+@@ -48,6 +48,15 @@
+ 		-lpkg \
+ 		-lutil \
+ 		-lpthread \
++		-larchive \
++		-lsbuf \
++		-lfetch \
++		-lssl \
++		-lcrypto \
++		-lmd \
++		-lz \
++		-lbz2 \
++		-llzma \
+ 		${LDADD_STATIC}
+ 
+ .if !exists(/usr/include/jail.h)
+@@ -56,6 +65,10 @@
+ LDADD+=		-ljail
+ .endif
+ 
++.if !defined(STATIC_PKGNG)
++LDFLAGS+=	-Wl,-rpath=/usr/lib:${PREFIX}/lib
++.endif
++
+ WARNS?=		6
+ MAN=	pkg.8 \
+ 	pkg-add.8 \
