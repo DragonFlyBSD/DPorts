@@ -1,9 +1,5 @@
-# New ports collection makefile for:   bsh
-# Date created:                25 January 2002
-# Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
-#
-# $FreeBSD: ports/lang/bsh/Makefile,v 1.26 2012/11/17 05:58:48 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
+# $FreeBSD: ports/lang/bsh/Makefile,v 1.27 2012/12/10 13:24:59 svnexp Exp $
 
 PORTNAME=	bsh
 PORTVERSION=	2.0.b4
@@ -18,7 +14,7 @@ MAINTAINER=	simon@olofsson.de
 COMMENT=	A Java scripting language
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 SUB_FILES=	${PORTNAME}.sh
