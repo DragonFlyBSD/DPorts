@@ -2,7 +2,7 @@
 # Date created:		11 September 1994
 # Whom:			jkh
 #
-# $FreeBSD: ports/devel/gmake/Makefile,v 1.70 2012/08/21 17:59:42 kwm Exp $
+# $FreeBSD: ports/devel/gmake/Makefile,v 1.71 2012/11/17 05:55:45 svnexp Exp $
 #
 
 PORTNAME=	gmake
