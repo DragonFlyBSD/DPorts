@@ -31,7 +31,7 @@ PORTDOCS=	technote.txt license.txt whatsnew.txt order.htm \
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
 BROKEN=	fails to install on ia64/powerpc/sparc64: File format not recognized
-.elif ${ARCH} == "amd64" || ${ARCH} == "ia64"
+.elif ${ARCH} == "x86_64" || ${ARCH} == "ia64"
 .if !defined(HAVE_COMPAT_IA32_KERN)
 HAVE_COMPAT_IA32_KERN!=	if ${SYSCTL} -n compat.ia32.maxvmem >/dev/null 2>&1; then ${ECHO_CMD} YES; fi
 .endif
