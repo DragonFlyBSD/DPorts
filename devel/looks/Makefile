@@ -1,9 +1,5 @@
-# New ports collection makefile for:	looks
-# Date created:		22 May 2005
-# Whom:			Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/devel/looks/Makefile,v 1.18 2012/11/17 05:55:58 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: ports/devel/looks/Makefile,v 1.19 2012/12/10 11:29:54 svnexp Exp $
 
 PORTNAME=	looks
 PORTVERSION=	2.0.4
@@ -20,7 +16,7 @@ EXPIRATION_DATE=	2012-10-20
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
