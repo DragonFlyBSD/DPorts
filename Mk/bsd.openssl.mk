@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/Mk/bsd.openssl.mk,v 1.52 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.openssl.mk,v 1.53 2012/12/10 17:56:13 svnexp Exp $
 # bsd.openssl.mk - Support for OpenSSL based ports.
 #
 # Use of 'USE_OPENSSL=yes' includes this Makefile after bsd.ports.pre.mk
@@ -153,7 +153,7 @@ OPENSSLINC=		${OPENSSLBASE}/include
 .if defined(USE_OPENSSL_RPATH)
 CFLAGS+=		-Wl,-rpath,${OPENSSLRPATH}
 .endif
-OPENSSL_LDFLAGS+=	-rpath=${OPENSSLRPATH}
+OPENSSL_LDFLAGS+=	-Wl,-rpath=${OPENSSLRPATH}
 
 LDFLAGS+=${OPENSSL_LDFLAGS}
 

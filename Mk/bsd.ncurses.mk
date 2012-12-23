@@ -1,4 +1,4 @@
-# $FreeBSD: ports/Mk/bsd.ncurses.mk,v 1.7 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.ncurses.mk,v 1.8 2012/12/10 17:56:13 svnexp Exp $
 #
 # the user/port can now set this options in the makefiles.
 #
@@ -102,7 +102,7 @@ NCURSESLIB=		${NCURSESBASE}/lib
 .if defined(USE_NCURSES_RPATH)
 CFLAGS+=		-Wl,-rpath,${NCURSESRPATH}
 .endif
-NCURSES_LDFLAGS+=	-rpath=${NCURSESRPATH}
+NCURSES_LDFLAGS+=	-Wl,-rpath=${NCURSESRPATH}
 
 .if defined(LDFLAGS)
 LDFLAGS+=${NCURSES_LDFLAGS}

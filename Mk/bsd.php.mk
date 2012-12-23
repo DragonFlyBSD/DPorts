@@ -7,7 +7,7 @@
 # Please send all suggested changes to the maintainer instead of committing
 # them to CVS yourself.
 #
-# $FreeBSD: ports/Mk/bsd.php.mk,v 1.74 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.php.mk,v 1.75 2012/12/17 13:53:57 svnexp Exp $
 #
 # Adding 'USE_PHP=yes' to a port includes this Makefile after bsd.ports.pre.mk.
 # If the port requires a predefined set of PHP extensions, they can be
@@ -59,19 +59,15 @@ PHP_EXT_INC=	pcre spl
 
 HTTPD?=		${LOCALBASE}/sbin/httpd
 .if exists(${HTTPD})
-APACHE_VERSION!=	${HTTPD} -V | ${SED} -ne 's/^Server version: Apache\/\([0-9]\)\.\([0-9]*\).*/\1\2/p'
-.	if ${APACHE_VERSION} > 13
 APXS?=		${LOCALBASE}/sbin/apxs
 APACHE_MPM!=	${APXS} -q MPM_NAME
-.		if ${APACHE_MPM} == "worker"
-PHP_EXT_DIR:=	${PHP_EXT_DIR}-zts
-.		endif
-.	endif
-.elif defined(APACHE_PORT)
-APACHE_VERSION!=	${ECHO_CMD} ${APACHE_PORT} | ${SED} -ne 's,.*/apache\([0-9]*\).*,\1,p'
-.	if ${APACHE_VERSION} > 13 && defined(WITH_MPM) && ${WITH_MPM} == "worker"
+.	if ${APACHE_MPM} == "worker" || ${APACHE_MPM} == "event"
 PHP_EXT_DIR:=	${PHP_EXT_DIR}-zts
 .	endif
+.elif defined(APACHE_PORT) && (${APACHE_PORT:M*worker*} != "" || ${APACHE_PORT:M*event*} != "")
+PHP_EXT_DIR:=	${PHP_EXT_DIR}-zts
+.elif defined(WITH_MPM) && (${WITH_MPM} == "worker" || ${WITH_MPM} == "event")
+PHP_EXT_DIR:=	${PHP_EXT_DIR}-zts
 .endif
 
 .if defined(WITH_DEBUG)
@@ -81,10 +77,13 @@ PHP_SAPI?=	""
 .endif	# .if exists(${PHPBASE}/etc/php.conf)
 PHP_EXT_INC?=	""
 
+PHP5_LAST_VER=	54
+
 .if defined(IGNORE_WITH_PHP)
 .	for VER in ${IGNORE_WITH_PHP}
 .		if ${PHP_VER} == "${VER}"
-IGNORE=		cannot install: doesn't work with PHP version : ${PHP_VER} (Doesn't support PHP ${IGNORE_WITH_PHP})
+IGNORE=		cannot be installed: doesn't work with lang/php${PHP_VER} port\
+		(doesn't support PHP ${IGNORE_WITH_PHP:C/^5$/${PHP5_LAST_VER}/:C/^5/5./})
 .		endif
 .	endfor
 .endif

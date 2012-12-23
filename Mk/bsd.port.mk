@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.port.mk,v 1.755 2012/12/10 10:20:14 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.port.mk,v 1.757 2012/12/14 15:52:27 svnexp Exp $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -408,6 +408,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # WANT_FAM_SYSTEM
 #				- Legal values are: gamin (default),fam
 #				  If set to an unknown value, the port is marked IGNORE.
+##
+# USE_FUSE		- If set, make sure necessary components unavailable in base
+#				  are installed from ports.
 ##
 # USE_AUTOTOOLS	- If set, this port uses various GNU autotools
 #				  (libtool, autoconf, autoheader, automake et al.)
@@ -1488,7 +1491,7 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .include "${PORTSDIR}/Mk/bsd.wx.mk"
 .endif
 
-.if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER) || defined(USE_GSTREAMER80)
+.if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER) || defined(USE_GSTREAMER1)
 .include "${PORTSDIR}/Mk/bsd.gstreamer.mk"
 .endif
 
@@ -1840,6 +1843,13 @@ IGNORE=		cannot be built with unknown FAM system: ${FAM_SYSTEM}
 .endif
 .endif # USE_FAM
 
+.if defined(USE_FUSE)
+LIB_DEPENDS+=	fuse:${PORTSDIR}/sysutils/fusefs-libs
+.if !exists(/sbin/mount_fusefs)
+RUN_DEPENDS+=	mount_fusefs:${PORTSDIR}/sysutils/fusefs-kmod
+.endif
+.endif
+
 .if defined(USE_RC_SUBR) && ${USE_RC_SUBR:tu} != "YES"
 SUB_FILES+=	${USE_RC_SUBR}
 .endif
@@ -2028,7 +2038,7 @@ IGNORE=	uses unknown USE_BISON construct
 .include "${PORTSDIR}/Mk/bsd.database.mk"
 .endif
 
-.if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER) || defined(USE_GSTREAMER80)
+.if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER) || defined(USE_GSTREAMER1)
 .include "${PORTSDIR}/Mk/bsd.gstreamer.mk"
 .endif
 

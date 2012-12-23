@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.autotools.mk,v 1.47 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.autotools.mk,v 1.49 2012/12/19 20:36:59 svnexp Exp $
 #
 # Please view me with 4 column tabs!
 #
@@ -143,7 +143,7 @@ GNU_CONFIGURE=				yes
 
 .if defined(_AUTOTOOL_automake)
 AUTOMAKE_VERSION=	1.12
-AUTOMAKE_APIVER=	1.12.4
+AUTOMAKE_APIVER=	1.12.6
 AUTOMAKE_PORT=		devel/automake
 
 . if ${_AUTOTOOL_automake} == "yes"

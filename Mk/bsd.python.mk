@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: ports/Mk/bsd.python.mk,v 1.155 2012/11/17 05:54:18 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.python.mk,v 1.157 2012/12/21 15:52:41 svnexp Exp $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
@@ -86,6 +86,9 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 #					  the format "python2.7". Set this in your /etc/make.conf
 #					  in case you want to use an older version as a default.
 #					  default: python2.7
+#
+# PYTHON_MAJOR_VER	- Python version major number. 2 for python-2.x,
+#					  3 for python-3.x and so on.
 #
 # PYTHON_WRKSRC		- The ${WRKSRC} for your python version. Needed for
 #					  extensions like Tkinter, py-gdbm and py-expat, which
@@ -201,7 +204,7 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 #
 
 _PYTHON_PORTBRANCH=		2.7
-_PYTHON_ALLBRANCHES=	2.7 2.6 3.2 3.1	# preferred first
+_PYTHON_ALLBRANCHES=	2.7 2.6 3.3 3.2 3.1	# preferred first
 _ZOPE_PORTBRANCH=		2.13
 _ZOPE_ALLBRANCHES=		2.13
 
@@ -358,8 +361,19 @@ PYTHON_PORTVERSION=	${PYTHON_DEFAULT_PORTVERSION}
 # Propagate the chosen python version to submakes.
 .MAKEFLAGS:	PYTHON_VERSION=python${_PYTHON_VERSION}
 
+# Python-3.3
+.if ${PYTHON_VERSION} == "python3.3"
+PYTHON_PORTVERSION?=3.3.0
+PYTHON_PORTSDIR=	${PORTSDIR}/lang/python33
+PYTHON_REL=			330
+PYTHON_SUFFIX=		33
+PYTHON_VER=			3.3
+.if exists(${PYTHON_CMD}-config)
+PYTHON_ABIVER!=		${PYTHON_CMD}-config --abiflags
+.endif
+
 # Python-3.2
-.if ${PYTHON_VERSION} == "python3.2"
+.elif ${PYTHON_VERSION} == "python3.2"
 PYTHON_PORTVERSION?=3.2.3
 PYTHON_PORTSDIR=	${PORTSDIR}/lang/python32
 PYTHON_REL=			323
@@ -411,8 +425,11 @@ check-makevars::
 	@${ECHO} "  python2.7 (default)"
 	@${ECHO} "  python3.1"
 	@${ECHO} "  python3.2"
+	@${ECHO} "  python3.3"
 	@${FALSE}
 .endif
+
+PYTHON_MAJOR_VER=	${PYTHON_VER:R}
 
 PYTHON_MASTER_SITES=		${MASTER_SITE_PYTHON}
 PYTHON_MASTER_SITE_SUBDIR=	ftp/python/${PYTHON_PORTVERSION:C/rc[0-9]//}

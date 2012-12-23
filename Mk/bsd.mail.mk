@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.mail.mk,v 1.5 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.mail.mk,v 1.6 2012/12/18 14:03:14 svnexp Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -9,7 +9,7 @@
 
 # Please make sure all changes to this file are passed through the maintainer.
 # Do not commit them yourself (unless of course you're the Port's Wraith ;).
-Mail_Include_MAINTAINER=	garga@FreeBSD.org
+Mail_Include_MAINTAINER=	bdrewery@FreeBSD.org
 Mail_Pre_Include=			bsd.mail.mk
 
 

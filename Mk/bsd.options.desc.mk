@@ -1,4 +1,4 @@
-# $FreeBSD: ports/Mk/bsd.options.desc.mk,v 1.149 2012/11/30 08:09:39 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.options.desc.mk,v 1.153 2012/12/15 23:10:33 svnexp Exp $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -29,6 +29,7 @@ ARTS_DESC?=		aRts audio system
 ASM_DESC?=		Use optimized assembly code
 ASPELL_DESC?=		Spell checking via GNU Aspell
 ASSERT_DESC?=		Enable debug assertions
+AUDIOFILE_DESC?=	SGI audio file format support
 AVAHI_DESC?=		Zeroconf via Avahi
 BDB_DESC?=		Berkeley Database
 BDB1_DESC?=		Berkeley DB 1.85
@@ -97,6 +98,7 @@ GEOIP_DESC?=		GeoIP support
 GEOS_DESC?=		GEOS support
 GEOTIFF_DESC?=		GeoTIFF file format
 GGI_DESC?=		General Graphics Interface
+GHOSTSCRIPT_DESC?=	Ghostscript support
 GIF_DESC?=		GIF image format
 GLADE_DESC?=		Glade interface builder
 GLX_DESC?=		X11 OpenGL rendering
@@ -163,13 +165,14 @@ LDAPS_DESC?=		LDAPS support
 LENSFUN_DESC?=		Camera lens database via LensFun
 LFS_DESC?=		Large files support
 LIBBLURAY_DESC?=	Blu-ray discs via libbluray
-LIBEDIT_DESC?=		readline support
+LIBEDIT_DESC?=		Command line editing via libedit
 LIBEV_DESC?=		High-performance events via libev
 LIBEXIF_DESC?=		EXIF metadata via libexif
 LIBEXTRACTOR_DESC?=	libextractor support
 LIBMNG_DESC?=		MNG animated images via libmng
 LIBPAPER_DESC?=		libpaper support
 LIBRSVG2_DESC?=		SVG vector graphics via librsvg2
+LIBVIRT_DESC?=		libvirt support
 LIBVISUAL_DESC?=	Audio visualisation via libvisual
 LIBWMF_DESC?=		libwmf support
 LIBWRAP_DESC?=		TCP wrapper support
@@ -206,6 +209,7 @@ MPLAYER_DESC?=		MPlayer media player
 MPLS_DESC?=		MPLS support
 MPP_DESC?=		Musepack audio format
 MSQL_DESC?=		mSQL database
+MSSQL_DESC?=		Microsoft SQL Server support
 MTP_DESC?=		MTP device
 MULTIBYTE_DESC?=	Multibyte character encoding
 MUSEPACK_DESC?=		MPC audio format
@@ -264,6 +268,7 @@ QT4_DESC?=		Qt 4 toolkit
 QUICKTIME_DESC?=	QuickTime support
 RADIUS_DESC?=		RADIUS protocol
 RAW_DESC?=		RAW support
+READLINE_DESC?=		Command line editing via libreadline
 RESIN3_DESC?=		Resin 3.x
 RTMP_DESC?=		RTMP protocol via librtmp
 RUBY_DESC?=		Ruby binding/support
@@ -281,6 +286,7 @@ SNDFILE_DESC?=		libsndfile support
 SNMP_DESC?=		SNMP protocol
 SOCKS_DESC?=		SOCKS proxy support
 SOUND_DESC?=		Sound (audio)
+SOUNDTOUCH_DESC?=	Sound processing support via SoundTouch
 SPANDSP_DESC?=		Spandsp faxing
 SPEEX_DESC?=		Speex audio format
 SQL_DESC?=		SQL database

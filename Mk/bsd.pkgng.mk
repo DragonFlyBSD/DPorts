@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.pkgng.mk,v 1.12 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.pkgng.mk,v 1.13 2012/12/13 21:27:53 svnexp Exp $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -100,8 +100,28 @@ fake-pkg:
 .    endif
 .  endfor
 .endfor
+.for radio in ${OPTIONS_RADIO}
+.  for opt in ${OPTIONS_RADIO_${radio}}
+.    if empty(PORT_OPTIONS:M${opt})
+	@${ECHO_MSG} -n "${opt}: off, " >> ${MANIFESTF}
+.    else
+	@${ECHO_MSG} -n "${opt}: on, " >> ${MANIFESTF}
+.    endif
+.  endfor
+.endfor
+.for group in ${OPTIONS_GROUP}
+.  for opt in ${OPTIONS_GROUP_${group}}
+.    if empty(PORT_OPTIONS:M${opt})
+	@${ECHO_MSG} -n "${opt}: off, " >> ${MANIFESTF}
+.    else
+	@${ECHO_MSG} -n "${opt}: on, " >> ${MANIFESTF}
+.    endif
+.  endfor
+.endfor
 .undef multi
 .undef single
+.undef radio
+.undef group
 .undef opt
 	@${ECHO_CMD} "}" >> ${MANIFESTF}
 	@[ -f ${PKGINSTALL} ] && ${CP} ${PKGINSTALL} ${METADIR}/+INSTALL; \
