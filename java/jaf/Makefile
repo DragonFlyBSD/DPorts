@@ -1,9 +1,5 @@
-# New ports collection makefile for:    JavaBeans Activation Framework (JAF)
-# Date created:		1999/08/08
-# Whom:			Jose Marques
-#
-# $FreeBSD: ports/java/jaf/Makefile,v 1.20 2012/11/17 05:58:43 svnexp Exp $
-#
+# Created by: Jose Marques
+# $FreeBSD: ports/java/jaf/Makefile,v 1.21 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	jaf
 PORTVERSION=	1.1.1
@@ -16,7 +12,7 @@ COMMENT=	JavaBeansTM Activation Framework
 
 USE_ZIP=	YES
 USE_JAVA=	YES
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 NO_BUILD=	yes
