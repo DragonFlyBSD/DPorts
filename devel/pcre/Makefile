@@ -2,19 +2,18 @@
 # Date created:				08 July 1998
 # Whom:					dom
 #
-# $FreeBSD: ports/devel/pcre/Makefile,v 1.81 2012/11/17 05:56:37 svnexp Exp $
+# $FreeBSD: ports/devel/pcre/Makefile,v 1.85 2012/12/13 14:44:40 svnexp Exp $
 #
 
 PORTNAME=	pcre
-PORTVERSION=	8.31
-PORTREVISION=	1
+PORTVERSION=	8.32
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/%SUBDIR%/ \
 		ftp://ftp.fu-berlin.de/unix/misc/%SUBDIR%/ \
 		ftp://ftp.tin.org/pub/libs/%SUBDIR%/
 MASTER_SITE_SUBDIR=${PORTNAME}
 
-MAINTAINER=	mm@FreeBSD.org
+MAINTAINER=	bf@FreeBSD.org
 COMMENT=	Perl Compatible Regular Expressions library
 
 LICENSE=	BSD
@@ -25,7 +24,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack
 CONFIGURE_ARGS=	--enable-utf --enable-unicode-properties \
-		--enable-pcre8 --enable-pcre16
+		--enable-pcre8 --enable-pcre16 --enable-pcre32
 
 .include <bsd.port.options.mk>
 
@@ -46,7 +45,7 @@ PORTDOCS=	*
 CONFIGURE_ARGS+=	--enable-pcretest-libedit
 .endif
 
-.if ${ARCH} == "amd64" || ${ARCH} == "ia64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
 CFLAGS+=	-fPIC
 .endif
 
@@ -59,6 +58,7 @@ MAN1=		pcre-config.1 \
 		pcretest.1
 MAN3=		pcre.3 \
 		pcre16.3 \
+		pcre32.3 \
 		pcre_assign_jit_stack.3 \
 		pcre_compile.3 \
 		pcre_compile2.3 \
@@ -76,6 +76,7 @@ MAN3=		pcre.3 \
 		pcre_get_stringtable_entries.3 \
 		pcre_get_substring.3 \
 		pcre_get_substring_list.3 \
+		pcre_jit_exec.3 \
 		pcre_jit_stack_alloc.3 \
 		pcre_jit_stack_free.3 \
 		pcre_maketables.3 \
@@ -100,33 +101,62 @@ MAN3=		pcre.3 \
 		pcrestack.3 \
 		pcresyntax.3 \
 		pcre_utf16_to_host_byte_order.3 \
+		pcre_utf32_to_host_byte_order.3 \
 		pcreunicode.3
 
 MLINKS+=	pcre_assign_jit_stack.3 pcre16_assign_jit_stack.3 \
+		pcre_assign_jit_stack.3 pcre32_assign_jit_stack.3 \
 		pcre_compile.3 pcre16_compile.3 \
+		pcre_compile.3 pcre32_compile.3 \
 		pcre_compile2.3 pcre16_compile2.3 \
+		pcre_compile2.3 pcre32_compile2.3 \
 		pcre_config.3 pcre16_config.3 \
+		pcre_config.3 pcre32_config.3 \
 		pcre_copy_named_substring.3 pcre16_copy_named_substring.3 \
+		pcre_copy_named_substring.3 pcre32_copy_named_substring.3 \
 		pcre_copy_substring.3 pcre16_copy_substring.3 \
+		pcre_copy_substring.3 pcre32_copy_substring.3 \
 		pcre_dfa_exec.3 pcre16_dfa_exec.3 \
+		pcre_dfa_exec.3 pcre32_dfa_exec.3 \
 		pcre_exec.3 pcre16_exec.3 \
+		pcre_exec.3 pcre32_exec.3 \
 		pcre_free_study.3 pcre16_free_study.3 \
+		pcre_free_study.3 pcre32_free_study.3 \
 		pcre_free_substring.3 pcre16_free_substring.3 \
+		pcre_free_substring.3 pcre32_free_substring.3 \
 		pcre_free_substring_list.3 pcre16_free_substring_list.3 \
+		pcre_free_substring_list.3 pcre32_free_substring_list.3 \
 		pcre_fullinfo.3 pcre16_fullinfo.3 \
+		pcre_fullinfo.3 pcre32_fullinfo.3 \
 		pcre_get_named_substring.3 pcre16_get_named_substring.3 \
+		pcre_get_named_substring.3 pcre32_get_named_substring.3 \
 		pcre_get_stringnumber.3 pcre16_get_stringnumber.3 \
+		pcre_get_stringnumber.3 pcre32_get_stringnumber.3 \
 		pcre_get_stringtable_entries.3 pcre16_get_stringtable_entries.3 \
+		pcre_get_stringtable_entries.3 pcre32_get_stringtable_entries.3 \
 		pcre_get_substring.3 pcre16_get_substring.3 \
+		pcre_get_substring.3 pcre32_get_substring.3 \
 		pcre_get_substring_list.3 pcre16_get_substring_list.3 \
+		pcre_get_substring_list.3 pcre32_get_substring_list.3 \
+		pcre_jit_exec.3 pcre16_jit_exec.3 \
+		pcre_jit_exec.3 pcre32_jit_exec.3 \
 		pcre_jit_stack_alloc.3 pcre16_jit_stack_alloc.3 \
+		pcre_jit_stack_alloc.3 pcre32_jit_stack_alloc.3 \
 		pcre_jit_stack_free.3 pcre16_jit_stack_free.3 \
+		pcre_jit_stack_free.3 pcre32_jit_stack_free.3 \
 		pcre_maketables.3 pcre16_maketables.3 \
+		pcre_maketables.3 pcre32_maketables.3 \
 		pcre_pattern_to_host_byte_order.3 pcre16_pattern_to_host_byte_order.3 \
+		pcre_pattern_to_host_byte_order.3 pcre32_pattern_to_host_byte_order.3 \
 		pcre_refcount.3 pcre16_refcount.3 \
+		pcre_refcount.3 pcre32_refcount.3 \
 		pcre_study.3 pcre16_study.3 \
+		pcre_study.3 pcre32_study.3 \
 		pcre_utf16_to_host_byte_order.3 pcre16_utf16_to_host_byte_order.3 \
-		pcre_version.3 pcre16_version.3
+		pcre_utf16_to_host_byte_order.3 pcre32_utf16_to_host_byte_order.3 \
+		pcre_utf32_to_host_byte_order.3 pcre32_utf32_to_host_byte_order.3 \
+		pcre_version.3 pcre16_version.3 \
+		pcre_version.3 pcre32_version.3
 post-patch:
 .if defined(NOPORTDOCS)
 	@${REINPLACE_CMD} -E -e '/^install-data-am/,/^$$/ s,install-(dist_doc|dist_html|html)DATA,,g' \
