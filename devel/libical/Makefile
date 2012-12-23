@@ -29,7 +29,7 @@ CONFIGURE_ARGS=	--enable-python=no
 .endif
 
 .include <bsd.port.pre.mk>
-.if ${ARCH} == "amd64" || ${ARCH} == "ia64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
 CFLAGS+=	-fPIC
 .endif
 
