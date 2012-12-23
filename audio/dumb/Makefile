@@ -33,7 +33,7 @@ MAKE_ARGS=	_PORT_ALLEGRO_CFLAGS=
 CONFLICTS=	dumb-allegro-[0-9]*
 .endif
 
-.if ${ARCH} == "amd64" || ${ARCH} == "ia64" || ${ARCH} == "sparc64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "ia64" || ${ARCH} == "sparc64"
 CFLAGS+=	-fPIC
 .endif
 
