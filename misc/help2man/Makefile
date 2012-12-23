@@ -1,12 +1,8 @@
-# Ports collection makefile for:	help2man
-# Date created:			Jan 30, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/misc/help2man/Makefile,v 1.46 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/misc/help2man/Makefile,v 1.47 2012/12/08 16:30:49 svnexp Exp $
 
 PORTNAME=	help2man
-PORTVERSION=	1.40.12
+PORTVERSION=	1.40.13
 CATEGORIES=	misc
 MASTER_SITES=	GNU/${PORTNAME}
 
