@@ -43,7 +43,7 @@ WITH_CPU=	i586
 .elif ${MACHINE_CPU:Mi486}
 WITH_CPU=	i486
 .endif
-.elif ${ARCH} == "amd64"
+.elif ${ARCH} == "x86_64"
 WITH_CPU=	x86-64
 .endif
 
