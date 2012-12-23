@@ -1,13 +1,14 @@
-# $FreeBSD: ports/audio/opus/Makefile,v 1.4 2012/11/17 05:54:40 svnexp Exp $
+# $FreeBSD: ports/audio/opus/Makefile,v 1.6 2012/12/11 13:04:14 svnexp Exp $
 
 PORTNAME=	opus
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/opus/ \
 		https://ftp.mozilla.org/pub/mozilla.org/opus/
 
 MAINTAINER=	naddy@FreeBSD.org
-COMMENT=	Interactive speech and audio codec
+COMMENT=	IETF audio codec
 
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack
