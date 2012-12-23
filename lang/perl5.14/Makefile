@@ -115,7 +115,7 @@ WITH_PERL_MALLOC=	yes
 .endif
 
 .if defined(WITH_THREADS)
-#XXX .if ${ARCH} == "amd64"
+#XXX .if ${ARCH} == "x86_64"
 #XXX IGNORE=	Threaded perl does not pass tests on ${ARCH}
 #XXX .endif
 CONFIGURE_ARGS+=	-Dusethreads=y
