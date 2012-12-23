@@ -1,0 +1,29 @@
+--- configure.intermediate	2012-12-23 14:39:39.228364000 +0100
++++ configure	2012-12-23 14:46:36.828948000 +0100
+@@ -4276,7 +4276,7 @@
+ STATIC_EXTENSION=""
+ OBJECT_EXTENSION=""
+ case "$target_os" in
+-     *bsd*|linux*|beos|irix*|solaris*)
++     *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: .so .a .o" >&5
+ $as_echo ".so .a .o" >&6; }
+ 	STATIC_EXTENSION="a"
+@@ -4328,7 +4328,7 @@
+ 	SPECIFIC_LDFLAGS="-Wl,-soname,libxvidcore.\$(SHARED_EXTENSION).\$(API_MAJOR) -shared -Wl,--version-script=libxvidcore.ld -lc -lm"
+ 	SPECIFIC_CFLAGS="-fPIC"
+ 	;;
+-     *bsd*|irix*)
++     *bsd*|dragonfly*|irix*)
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ok" >&5
+ $as_echo "ok" >&6; }
+ 	STATIC_LIB="libxvidcore.\$(STATIC_EXTENSION)"
+@@ -4554,7 +4554,7 @@
+        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for asm object format" >&5
+ $as_echo_n "checking for asm object format... " >&6; }
+        case "$target_os" in
+-           *bsd*|linux*|beos|irix*|solaris*)
++           *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
+                if test "$ARCHITECTURE" = "X86_64" ; then
+                    { $as_echo "$as_me:${as_lineno-$LINENO}: result: elf64" >&5
+ $as_echo "elf64" >&6; }
