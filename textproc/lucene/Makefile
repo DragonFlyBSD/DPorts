@@ -1,7 +1,5 @@
-# Created by:		Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/textproc/lucene/Makefile,v 1.18 2012/11/17 06:02:02 svnexp Exp $
-#
-# Please don't forget to bump the version in py-lucene if this changes!
+# Created by: Gerrit Beine <gerrit.beine@gmx.de>
+# $FreeBSD: ports/textproc/lucene/Makefile,v 1.19 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	lucene
 PORTVERSION=	3.6.1
@@ -17,7 +15,7 @@ LICENSE=	AL2
 
 USE_JAVA=	yes
 NO_BUILD=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 OPTIONS_DEFINE=	CONTRIB
 CONTRIB_DESC=	Install contributed jars
