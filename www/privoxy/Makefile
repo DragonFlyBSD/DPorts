@@ -2,11 +2,12 @@
 # Date created:				21 November 2002
 # Whom:					John von Essen
 #
-# $FreeBSD: ports/www/privoxy/Makefile,v 1.38 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: ports/www/privoxy/Makefile,v 1.39 2012/12/10 19:24:06 svnexp Exp $
 #
 
 PORTNAME=	privoxy
 PORTVERSION=	3.0.19
+PORTREVISION=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	SF/ijbswa/Sources/${PORTVERSION}%20%28stable%29
 DISTNAME=	privoxy-${PORTVERSION}-stable-src
