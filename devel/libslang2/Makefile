@@ -1,8 +1,8 @@
-# $FreeBSD: ports/devel/libslang2/Makefile,v 1.36 2012/11/17 05:55:56 svnexp Exp $
+# $FreeBSD: ports/devel/libslang2/Makefile,v 1.37 2012/12/10 19:24:00 svnexp Exp $
 
 PORTNAME=	libslang2
 PORTVERSION=	2.2.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v${PORTVERSION:R}/ \
 		ftp://ftp.fu-berlin.de/pub/unix/misc/slang/v${PORTVERSION:R}/ \
