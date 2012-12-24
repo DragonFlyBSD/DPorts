@@ -1,5 +1,5 @@
 # Created by:	Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: ports/devel/apache-ant/Makefile,v 1.58 2012/11/17 05:55:33 svnexp Exp $
+# $FreeBSD: ports/devel/apache-ant/Makefile,v 1.59 2012/12/10 11:29:53 svnexp Exp $
 
 PORTNAME=	apache-ant
 PORTVERSION=	1.8.4
@@ -22,7 +22,7 @@ MANPAGE_DISTFILE=	${PORTNAME}-manpage-${MANPAGE_VERSION}.tgz
 MANPAGE_VERSION=	20030908
 USE_BZIP2=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 NO_BUILD=	YES
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
