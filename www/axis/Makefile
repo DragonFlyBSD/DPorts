@@ -1,6 +1,5 @@
-# Created by:	Kensaku MASUDA <greg@greg.rim.or.jp>
-#
-# $FreeBSD: ports/www/axis/Makefile,v 1.24 2012/11/17 06:02:28 svnexp Exp $
+# Created by: Kensaku MASUDA <greg@greg.rim.or.jp>
+# $FreeBSD: ports/www/axis/Makefile,v 1.25 2012/12/10 13:48:09 svnexp Exp $
 
 PORTNAME=		axis
 PORTVERSION=		1.4
@@ -33,7 +32,7 @@ RUN_DEPENDS+=	${LOCALBASE}/apache-tomcat-7.0/bin/bootstrap.jar:${PORTSDIR}/www/t
 
 NO_BUILD=	YES
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 USER=		www
 GROUP=		www
 
