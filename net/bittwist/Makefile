@@ -1,9 +1,4 @@
-# New ports collection makefile for:	bittwist
-# Date created:			17 April 2006
-# Whom:				Wesley Shields <wxs@csh.rit.edu>
-#
-# $FreeBSD: ports/net/bittwist/Makefile,v 1.14 2012/11/17 05:59:57 svnexp Exp $
-#
+# $FreeBSD: ports/net/bittwist/Makefile,v 1.15 2012/12/12 18:51:46 svnexp Exp $
 
 PORTNAME=	bittwist
 PORTVERSION=	1.1
