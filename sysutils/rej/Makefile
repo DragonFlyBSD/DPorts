@@ -2,7 +2,7 @@
 # Date created:				16 Sep 2005
 # Whom:					Emanuel Haupt <ehaupt@critical.ch>
 #
-# $FreeBSD: ports/sysutils/rej/Makefile,v 1.10 2012/11/17 06:01:43 svnexp Exp $
+# $FreeBSD: ports/sysutils/rej/Makefile,v 1.11 2012/12/16 06:16:59 svnexp Exp $
 #
 
 PORTNAME=	rej
@@ -13,7 +13,7 @@ MASTER_SITES=	CRITICAL
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Merges patch-rejects and runs a merge program to verify the changes
 
-USE_PERL5=	5.8.6+
+USE_PERL5=	yes
 NO_BUILD=	yes
 
 PORTDOCS=	CHANGELOG README vimrc
