@@ -1,11 +1,8 @@
-# New ports collection makefile for:	idnkit
-# Date created:		13 November 2011
-# Whom:			Rafal Lesniak <fbsd@grid.einherjar.de>
-#
-# $FreeBSD: ports/dns/idnkit2/Makefile,v 1.3 2012/11/17 05:57:09 svnexp Exp $
+# Created by: Rafal Lesniak <fbsd@grid.einherjar.de>
+# $FreeBSD: ports/dns/idnkit2/Makefile,v 1.4 2012/12/20 16:54:18 svnexp Exp $
 
 PORTNAME=	idnkit
-PORTVERSION=	2.1
+PORTVERSION=	2.2
 CATEGORIES=	dns
 MASTER_SITES=	http://jprs.co.jp/idn/
 
