@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/sysutils/agedu/Makefile,v 1.8 2012/12/08 16:40:28 svnexp Exp $
+# $FreeBSD: ports/sysutils/agedu/Makefile,v 1.9 2012/12/12 03:26:59 svnexp Exp $
 
 PORTNAME=	agedu
-PORTVERSION=	9722
+PORTVERSION=	9723
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/${PORTNAME}/ \
 		LOCAL/sunpoet
