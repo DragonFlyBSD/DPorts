@@ -1,9 +1,8 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: ports/security/p5-Module-Signature/Makefile,v 1.34 2012/11/23 16:03:35 svnexp Exp $
+# $FreeBSD: ports/security/p5-Module-Signature/Makefile,v 1.36 2012/12/18 09:54:02 svnexp Exp $
 
 PORTNAME=	Module-Signature
-PORTVERSION=	0.69
-PORTREVISION=	1
+PORTVERSION=	0.70
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -37,11 +36,6 @@ RUN_DEPENDS+=	${LOCALBASE}/bin/gpgv:${PORTSDIR}/security/gnupg1
 .if ${PORT_OPTIONS:MGPG2}
 BUILD_DEPENDS+=	${LOCALBASE}/bin/gpgv2:${PORTSDIR}/security/gnupg
 RUN_DEPENDS+=	${LOCALBASE}/bin/gpgv2:${PORTSDIR}/security/gnupg
-.endif
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
-RUN_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
 .endif
 
 .include <bsd.port.post.mk>
