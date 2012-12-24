@@ -1,5 +1,5 @@
 # Created by: Gleb Smirnoff <glebius@FreeBSD.org>
-# $FreeBSD: ports/astro/josm/Makefile,v 1.55 2012/12/07 15:30:15 svnexp Exp $
+# $FreeBSD: ports/astro/josm/Makefile,v 1.56 2012/12/10 13:24:54 svnexp Exp $
 
 PORTNAME=	josm
 PORTVERSION=	5608
@@ -16,7 +16,7 @@ COMMENT=	A comprehensive editor for OpenStreetMap.org database
 NO_WRKSUBDIR=	yes
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 JOSM_MEMORY_LIMIT?=1024
 
