@@ -2,11 +2,11 @@
 # Date created:		04 May 2004
 # Whom:			Daniel Roethlisberger <daniel@roe.ch>
 #
-# $FreeBSD: ports/sysutils/pv/Makefile,v 1.16 2012/11/17 06:01:42 svnexp Exp $
+# $FreeBSD: ports/sysutils/pv/Makefile,v 1.17 2012/12/11 09:50:02 svnexp Exp $
 #
 
 PORTNAME=	pv
-PORTVERSION=	1.3.1
+PORTVERSION=	1.4.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ivarch.com/programs/sources/
 
@@ -56,8 +56,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${doc} ${DOCSDIR}
 .endfor
 .endif
-
-test:
-	cd ${WRKSRC} && make test
 
 .include <bsd.port.post.mk>
