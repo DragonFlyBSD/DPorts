@@ -1,11 +1,11 @@
 # Created by:	Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/java/javavmwrapper/Makefile,v 1.38 2012/11/17 05:58:43 svnexp Exp $
+# $FreeBSD: ports/java/javavmwrapper/Makefile,v 1.39 2012/12/11 05:39:44 svnexp Exp $
 #
 # This port is self contained in the src directory.
 
 PORTNAME=	javavmwrapper
 PORTVERSION=	2.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	java
 MASTER_SITES=	# none
 DISTFILES=	# none
