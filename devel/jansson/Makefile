@@ -1,12 +1,8 @@
-# New ports collection makefile for:	jansson
-# Date created:				January 30 2010
-# Whom:					vanilla@
-#
-# $FreeBSD: ports/devel/jansson/Makefile,v 1.13 2012/11/17 05:55:51 svnexp Exp $
-#
+# Created by: vanilla@
+# $FreeBSD: ports/devel/jansson/Makefile,v 1.14 2012/12/19 16:07:04 svnexp Exp $
 
 PORTNAME=	jansson
-PORTVERSION=	2.3.1
+PORTVERSION=	2.4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.digip.org/jansson/releases/
 
