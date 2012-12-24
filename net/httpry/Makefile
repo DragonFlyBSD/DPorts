@@ -1,9 +1,4 @@
-# New ports collection makefile for:   httpry
-# Date created:        12 June 2008
-# Whom:                Wesley Shields <wxs@FreeBSD.org>
-#
-# $FreeBSD: ports/net/httpry/Makefile,v 1.7 2012/11/17 06:00:02 svnexp Exp $
-#
+# $FreeBSD: ports/net/httpry/Makefile,v 1.8 2012/12/12 18:51:46 svnexp Exp $
 
 PORTNAME=	httpry
 PORTVERSION=	0.1.7
