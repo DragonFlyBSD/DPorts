@@ -1,5 +1,5 @@
 # Created by: Nemo Liu <nemoliu@FreeBSD.org>
-# $FreeBSD: ports/www/tomcat6/Makefile,v 1.70 2012/11/17 22:37:54 svnexp Exp $
+# $FreeBSD: ports/www/tomcat6/Makefile,v 1.71 2012/12/10 13:48:09 svnexp Exp $
 
 PORTNAME=	tomcat
 PORTVERSION=	6.0.36
@@ -15,7 +15,7 @@ LICENSE=	AL2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	YES
 
 USE_RC_SUBR=	tomcat6
