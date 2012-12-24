@@ -1,8 +1,5 @@
-# Ports collection makefile for:	Jaxen
-# Date created:				9 Decemeber 2003
-# Whom:					Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-#
-# $FreeBSD: ports/java/jaxen/Makefile,v 1.10 2012/11/17 05:58:43 svnexp Exp $
+# Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
+# $FreeBSD: ports/java/jaxen/Makefile,v 1.11 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	jaxen
 PORTVERSION=	1.0
@@ -15,7 +12,7 @@ MAINTAINER=	hq@FreeBSD.org
 COMMENT=	Java XPath Engine
 
 USE_JAVA=	YES
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	YES
 
 JARFILES=	jaxen-core.jar jaxen-dom.jar jaxen-dom4j.jar jaxen-exml.jar jaxen-full.jar jaxen-jdom.jar lib/saxpath.jar
