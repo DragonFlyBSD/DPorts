@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xml-commons
-# Date created:				11 February 2010
-# Whom:					rfarmer@predatorlabs.net
-#
-# $FreeBSD: ports/textproc/xml-commons/Makefile,v 1.3 2012/12/06 16:41:50 svnexp Exp $
-#
+# Created by: rfarmer@predatorlabs.net
+# $FreeBSD: ports/textproc/xml-commons/Makefile,v 1.4 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	xml-commons
 PORTVERSION=	1.4.01
@@ -16,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Provides common XML code for Apache projects
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 JAVA_RUN=	yes
 NO_BUILD=	yes
 
