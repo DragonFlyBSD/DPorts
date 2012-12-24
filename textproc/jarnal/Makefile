@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jarnal
-# Date created:		28 August 2010
-# Whom:			Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/jarnal/Makefile,v 1.4 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: ports/textproc/jarnal/Makefile,v 1.5 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	jarnal
 PORTVERSION=	999
@@ -19,7 +15,7 @@ RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 LICENSE=	GPLv2
 
