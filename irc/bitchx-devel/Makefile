@@ -1,12 +1,12 @@
 # Created by: Jimbo Bahooli <griffin@blackhole.iceworld.org>
-# $FreeBSD: ports/irc/bitchx-devel/Makefile,v 1.1 2012/11/19 04:10:45 svnexp Exp $
+# $FreeBSD: ports/irc/bitchx-devel/Makefile,v 1.3 2012/12/16 04:14:00 svnexp Exp $
 
 PORTNAME=	BitchX
 PORTVERSION=	1.2
 CATEGORIES+=	irc
 DISTNAME=	${PORTNAME}-${PORTNAME}${PORTVERSION}-${GH_COMMIT}
 
-MAINTAINER?=	c.petrik.sosa@gmail.com
+MAINTAINER?=	dan.mashal@gmail.com
 COMMENT?=	Feature-rich scriptable IRC client
 
 USE_GITHUB=	yes
@@ -38,7 +38,7 @@ OPTIONS_DEFAULT=	IPV6 PLUGINS SSL
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64" || ${ARCH} == "ia64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
 CFLAGS+=	-fPIC
 .endif
 
