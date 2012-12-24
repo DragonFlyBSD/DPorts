@@ -2,7 +2,7 @@
 # Date created:		18 Dec 2001
 # Whom:			Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/textproc/p5-Pod-POM/Makefile,v 1.12 2012/11/17 06:02:07 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Pod-POM/Makefile,v 1.13 2012/12/17 06:20:49 svnexp Exp $
 #
 
 PORTNAME=	Pod-POM
@@ -44,11 +44,4 @@ MAN3=		Pod::POM.3 \
 		Pod::POM::View::Pod.3 \
 		Pod::POM::View::Text.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
