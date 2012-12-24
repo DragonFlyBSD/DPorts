@@ -1,0 +1,31 @@
+# New ports collection makefile for:	xco
+# Date created:		6 Jun 1997
+# Whom:			Satoshi TAOKA
+#
+# $FreeBSD: ports/x11/xco/Makefile,v 1.14 2012/11/17 06:03:20 svnexp Exp $
+#
+
+PORTNAME=	xco
+PORTVERSION=	1.3
+PORTREVISION=	3
+CATEGORIES=	x11
+DISTNAME=	${PORTNAME}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Display X11 color names and colors
+
+USE_IMAKE=	yes
+USE_XORG=	x11 xext
+MAN1=		xco.1
+MANCOMPRESSED=	yes
+DOCDIR=		${PREFIX}/share/doc/xco
+
+post-patch:
+		@${REINPLACE_CMD} -e 's/extern char \*malloc();//g' \
+			${WRKSRC}/xco.c ${WRKSRC}/xargs.c
+
+post-install:
+		@${MKDIR} ${DOCDIR}
+		@${INSTALL_DATA} ${FILESDIR}/copyright ${DOCDIR}
+
+.include <bsd.port.mk>
