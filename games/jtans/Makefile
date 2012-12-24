@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	jtans
-# Date created:			Apr 3, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/games/jtans/Makefile,v 1.10 2012/11/17 05:57:42 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/games/jtans/Makefile,v 1.11 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	jtans
 PORTVERSION=	1.0
@@ -24,7 +19,7 @@ EXTRACT_CMD=	${CP}
 EXTRACT_BEFORE_ARGS=	# empty
 EXTRACT_AFTER_ARGS=	.
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 SUB_FILES=	jtans.sh
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
