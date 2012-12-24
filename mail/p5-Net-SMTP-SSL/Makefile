@@ -1,5 +1,4 @@
-# Created by: Wesley Shields <wxs@FreeBSD.org>
-# $FreeBSD: ports/mail/p5-Net-SMTP-SSL/Makefile,v 1.9 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: ports/mail/p5-Net-SMTP-SSL/Makefile,v 1.10 2012/12/12 18:51:46 svnexp Exp $
 
 PORTNAME=	Net-SMTP-SSL
 PORTVERSION=	1.01
