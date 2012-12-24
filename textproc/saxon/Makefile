@@ -1,9 +1,5 @@
-# New ports collection makefile for:   saxon
-# Date created:                30 January 2002
-# Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
-#
-# $FreeBSD: ports/textproc/saxon/Makefile,v 1.17 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
+# $FreeBSD: ports/textproc/saxon/Makefile,v 1.18 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	saxon
 PORTVERSION=	6.5.5
@@ -20,7 +16,7 @@ RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
