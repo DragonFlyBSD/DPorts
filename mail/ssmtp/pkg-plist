@@ -1,0 +1,4 @@
+sbin/ssmtp
+etc/ssmtp/revaliases.sample
+etc/ssmtp/ssmtp.conf.sample
+@dirrmtry etc/ssmtp
