@@ -3,11 +3,12 @@
 # Date created:			Jun 27, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/mail/libetpan/Makefile,v 1.66 2012/11/17 05:59:04 svnexp Exp $
+# $FreeBSD: ports/mail/libetpan/Makefile,v 1.67 2012/12/10 15:19:15 svnexp Exp $
 #
 
 PORTNAME=	libetpan
 PORTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	mail ipv6
 MASTER_SITES=	SF
 
@@ -18,7 +19,7 @@ LICENSE=	BSD
 
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		expat:${PORTSDIR}/textproc/expat2 \
-		sasl2.2:${PORTSDIR}/security/cyrus-sasl2
+		sasl2:${PORTSDIR}/security/cyrus-sasl2
 
 USE_ICONV=	yes
 USE_AUTOTOOLS=	libtool autoconf
