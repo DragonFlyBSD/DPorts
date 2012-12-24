@@ -2,7 +2,7 @@
 # Date created:				December-15-2000
 # Whom:	      				Alfred Perlstein <alfred@freebsd.org>
 #
-# $FreeBSD: ports/security/p5-Crypt-SSLeay/Makefile,v 1.41 2012/11/17 06:01:11 svnexp Exp $
+# $FreeBSD: ports/security/p5-Crypt-SSLeay/Makefile,v 1.42 2012/12/17 09:58:11 svnexp Exp $
 #
 
 PORTNAME=	Crypt-SSLeay
@@ -27,14 +27,8 @@ USE_OPENSSL=	yes
 
 MAN3=		Crypt::SSLeay.3 Net::SSL.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e '/LIBS/ s|-lssl32 -lssleay32 -leay32|-L${OPENSSLLIB}|' \
 		-e '/is_live_test_wanted()/d' ${WRKSRC}/Makefile.PL
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
