@@ -2,7 +2,7 @@
 # Date created:				2005-01-16
 # Whom:					Herve Quiroz <hq@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/jsap/Makefile,v 1.9 2012/11/17 05:55:51 svnexp Exp $
+# $FreeBSD: ports/devel/jsap/Makefile,v 1.10 2012/12/10 11:29:54 svnexp Exp $
 #
 
 PORTNAME=	jsap
@@ -16,7 +16,7 @@ MAINTAINER=	hq@FreeBSD.org
 COMMENT=	Java package to parse command-line arguments
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 .if !defined(NOPORTDOCS)
