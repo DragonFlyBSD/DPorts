@@ -41,7 +41,7 @@ LIB_DEPENDS+=	vga:${PORTSDIR}/graphics/svgalib
 .if defined(WITH_OPTIMIZED_FLAGS)
 CFLAGS+=	-O3 -ffast-math -finline-functions -fomit-frame-pointer -funroll-loops -fexpensive-optimizations
 CXXFLAGS+=	-O3 -ffast-math -finline-functions -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -Wno-multichar
-.if (${ARCH} == "i386" && !${ARCH} == "amd64" )
+.if (${ARCH} == "i386" && !${ARCH} == "x86_64" )
 CFLAGS+=	-mfancy-math-387 -mpreferred-stack-boundary=3 -malign-double
 CXXFLAGS+=	-mfancy-math-387 -mpreferred-stack-boundary=3 -malign-double
 .endif # i386
