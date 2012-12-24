@@ -1,9 +1,5 @@
-# New ports collection makefile for:    bzip
-# Date created:         Fr  27 Sep 1996 11:47:35 MET DST
-# Whom:                 Andreas Klemm <andreas@klemm.gtn.com>
-#
-# $FreeBSD: ports/archivers/bzip/Makefile,v 1.36 2012/11/17 05:54:20 svnexp Exp $
-#
+# Created by: Andreas Klemm <andreas@klemm.gtn.com>
+# $FreeBSD: ports/archivers/bzip/Makefile,v 1.37 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	bzip
 PORTVERSION=	0.21
@@ -11,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.42.org/pub/OLD/b/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A block-sorting file compressor
+COMMENT=	Block-sorting file compressor
 
 RESTRICTED=	may be covered by patents
 MAN1=		bzip.1 bunzip.1
@@ -24,8 +20,8 @@ pre-install:
 
 do-install:
 	${RM} -f ${PREFIX}/bin/bzip ${PREFIX}/bin/bunzip
-	${INSTALL_PROGRAM} ${WRKSRC}/bzip ${PREFIX}/bin/bzip
-	${LN} -fs ${PREFIX}/bin/bzip ${PREFIX}/bin/bunzip
+	${INSTALL_PROGRAM} ${WRKSRC}/bzip ${PREFIX}/bin
+	${LN} -fs bzip ${PREFIX}/bin/bunzip
 	${INSTALL_MAN} ${WRKSRC}/bzip.1 ${MAN1PREFIX}/man/man1/bzip.1
 	${INSTALL_MAN} ${WRKSRC}/bzip.1 ${MAN1PREFIX}/man/man1/bunzip.1
 
