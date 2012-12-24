@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geonext
-# Date created:		Mon Dec  6 19:56:58 CET 2004
-# Whom:			Andreas Fehlner (fehlner@gmx.de)
-#
-# $FreeBSD: ports/math/geonext/Makefile,v 1.9 2012/11/17 05:59:20 svnexp Exp $
-#
+# Created by: Andreas Fehlner (fehlner@gmx.de)
+# $FreeBSD: ports/math/geonext/Makefile,v 1.10 2012/12/10 13:48:06 svnexp Exp $
 
 PORTNAME=	geonext
 PORTVERSION=	1.71
@@ -20,7 +16,7 @@ WRKSRC=		${WRKDIR}/geonext_install
 NO_BUILD=	yes
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 DATA=	cacerts didmat.crt geonext.html geonext.jar license.txt index.html\
 	geonext-batik.jar help.jar help_fr.jar help_de.jar help_it.jar \
 	help_uk.jar
