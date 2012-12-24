@@ -2,7 +2,7 @@
 # Date created:		13 February 2005
 # Whom:	      		aturetta@commit.it
 #
-# $FreeBSD: ports/devel/p5-Module-Refresh/Makefile,v 1.12 2012/11/17 05:56:22 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Module-Refresh/Makefile,v 1.13 2012/12/16 06:16:54 svnexp Exp $
 #
 
 PORTNAME=	Module-Refresh
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	p5-ExtUtils-MakeMaker>=6.42:${PORTSDIR}/devel/p5-ExtUtils-MakeMak
 		p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class \
 		p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 
-USE_PERL5=	5.8.1+
 PERL_CONFIGURE=	yes
 
 MAN3=		Module::Refresh.3
