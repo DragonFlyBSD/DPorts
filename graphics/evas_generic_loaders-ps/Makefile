@@ -1,27 +1,27 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/graphics/evas_generic_loaders-ps/Makefile,v 1.3 2012/11/17 05:58:04 svnexp Exp $
+# $FreeBSD: ports/graphics/evas_generic_loaders-ps/Makefile,v 1.4 2012/12/22 21:09:57 svnexp Exp $
 
 PORTNAME=	ps
-DISTVERSION=	1.1.0
+PORTVERSION=	1.7.4
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.org/releases/ \
-		http://files.roorback.net/e17/2011-12-02/base/
+		LOCAL/gblach/e17/
 PKGNAMEPREFIX=	evas_generic_loaders-
-DISTNAME=	${PKGNAMEPREFIX}${DISTVERSION}
+DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
 
 MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	Additional loader for Evas (ps)
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	spectre.1:${PORTSDIR}/print/libspectre
+LIB_DEPENDS=	spectre:${PORTSDIR}/print/libspectre
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_LDCONFIG=	yes
 USE_EFL=	eina
 USE_GNOME=	gnomehack pkgconfig
+USE_LDCONFIG=	yes
 
 BINSRC=		${WRKSRC}/src/bin/${PORTNAME}
 
