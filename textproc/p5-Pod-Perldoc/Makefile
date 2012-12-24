@@ -2,7 +2,7 @@
 # Date created:		2010-05-11
 # Whom:			Ashish SHUKLA <wahjava@gmail.com>
 #
-# $FreeBSD: ports/textproc/p5-Pod-Perldoc/Makefile,v 1.4 2012/11/17 06:02:07 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Pod-Perldoc/Makefile,v 1.5 2012/12/16 06:16:59 svnexp Exp $
 #
 
 PORTNAME=	Pod-Perldoc
@@ -15,7 +15,6 @@ MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Look up Perl documentation in Pod format
 
 PERL_CONFIGURE=	yes
-USE_PERL5=	5.0+
 
 MAN3=		Pod::Perldoc::ToNroff.3 \
 		Pod::Perldoc::ToTk.3 \
