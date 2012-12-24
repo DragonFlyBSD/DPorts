@@ -2,11 +2,12 @@
 # Date created: September 29 2011
 # Whom: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
 #
-# $FreeBSD: ports/lang/ats/Makefile,v 1.9 2012/11/17 05:58:48 svnexp Exp $
+# $FreeBSD: ports/lang/ats/Makefile,v 1.10 2012/12/10 19:24:02 svnexp Exp $
 #
 
 PORTNAME=	ats
 PORTVERSION=	${ATS_VER}
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}-lang/${PORTNAME}-lang/${ATS_IMPL}-${PORTVERSION}
@@ -30,7 +31,7 @@ OPTIONS_DEFAULT=	GMP PCRE
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == amd64
+.if ${ARCH} == x86_64
 PLIST_SUB+=	LIBDIR="lib64"
 .else
 PLIST_SUB+=	LIBDIR="lib"
