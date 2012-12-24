@@ -34,7 +34,7 @@ PLIST_FILES=	sbin/dmidecode
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64" || ${ARCH} == "i386"
+.if ${ARCH} == "x86_64" || ${ARCH} == "i386"
 MAN8+=		biosdecode.8 ownership.8 vpddecode.8
 PLIST_FILES+=	sbin/biosdecode sbin/ownership sbin/vpddecode
 .endif
