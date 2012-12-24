@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/rsync/files/rsyncd.in,v 1.1 2012/08/05 23:19:36 dougb Exp $
+# $FreeBSD: ports/net/rsync/files/rsyncd.in,v 1.2 2012/11/17 06:00:18 svnexp Exp $
 #
 
 # PROVIDE: %%NAME%%

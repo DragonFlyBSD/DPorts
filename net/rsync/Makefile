@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: ports/net/rsync/Makefile,v 1.157 2012/11/03 18:01:22 ehaupt Exp $
+# $FreeBSD: ports/net/rsync/Makefile,v 1.158 2012/11/17 06:00:18 svnexp Exp $
 
 PORTNAME=	rsync
 PORTVERSION=	3.0.9
