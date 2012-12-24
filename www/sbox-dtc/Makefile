@@ -1,9 +1,5 @@
-# Ports collection makefile for:        dtc
-# Date created:                 12 January 2005
-# Whom:                         Thomas Goirand
-#
-# $FreeBSD: ports/www/sbox-dtc/Makefile,v 1.8 2012/11/17 06:03:05 svnexp Exp $
-#
+# Created by: Thomas Goirand
+# $FreeBSD: ports/www/sbox-dtc/Makefile,v 1.9 2012/12/20 03:05:53 svnexp Exp $
 
 PORTNAME=	sbox
 PORTVERSION=	1.10
@@ -11,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://files.bsdroot.lv/my/FreeBSD/distfiles/
 
-MAINTAINER=	graudeejs@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A CGI wrapper for Web site hosting services to safely grant CGI
 
 SBOX_UIDMIN?=	1000
