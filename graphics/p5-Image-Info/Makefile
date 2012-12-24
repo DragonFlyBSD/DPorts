@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Image-Info
-# Date Created:				25 Aug 2001
-# Whom:					Shell Hung <shell@shellhung.org>
-#
-# $FreeBSD: ports/graphics/p5-Image-Info/Makefile,v 1.28 2012/11/17 05:58:17 svnexp Exp $
-#
+# Created by: Shell Hung <shell@shellhung.org>
+# $FreeBSD: ports/graphics/p5-Image-Info/Makefile,v 1.30 2012/12/19 09:41:14 svnexp Exp $
 
 PORTNAME=	Image-Info
-PORTVERSION=	1.32
+PORTVERSION=	1.33
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -35,11 +31,4 @@ MAN3=		Bundle::Image::Info::Everything.3 \
 		Image::Info::XBM.3 \
 		Image::Info::XPM.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-BUILD_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
