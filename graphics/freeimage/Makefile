@@ -30,7 +30,7 @@ PLIST_FILES=	include/FreeImage.h \
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CFLAGS+=	-fPIC
 .endif
 
