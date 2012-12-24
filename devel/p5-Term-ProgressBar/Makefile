@@ -2,7 +2,7 @@
 # Date created:				30 Dec 2001
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/devel/p5-Term-ProgressBar/Makefile,v 1.21 2012/11/17 05:56:31 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Term-ProgressBar/Makefile,v 1.22 2012/12/17 15:16:54 svnexp Exp $
 #
 
 PORTNAME=	Term-ProgressBar
@@ -36,10 +36,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}/
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.80:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
