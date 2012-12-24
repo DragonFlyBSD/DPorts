@@ -91,7 +91,7 @@ CONFIGURE_ARGS+=--disable-zlib
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CONFIGURE_ARGS+=--enable-x86_64
 .endif
 
