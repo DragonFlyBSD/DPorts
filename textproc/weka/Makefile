@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: ports/textproc/weka/Makefile,v 1.18 2012/11/17 06:02:24 svnexp Exp $
+# $FreeBSD: ports/textproc/weka/Makefile,v 1.19 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	weka
 DISTVERSION=	3-6-8
@@ -15,7 +15,7 @@ PORTSCOUT=	limitw:1,even	# Second component is even for stable versions.
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
