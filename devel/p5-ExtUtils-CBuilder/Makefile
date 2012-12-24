@@ -2,7 +2,7 @@
 # Date created:				20 Feb 2004
 # Whom:                			Mathieu Arnold <mat@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-ExtUtils-CBuilder/Makefile,v 1.37 2012/11/17 05:56:15 svnexp Exp $
+# $FreeBSD: ports/devel/p5-ExtUtils-CBuilder/Makefile,v 1.38 2012/12/17 15:02:09 svnexp Exp $
 #
 
 PORTNAME=	ExtUtils-CBuilder
@@ -31,11 +31,6 @@ post-install:
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-IPC-Cmd>=0:${PORTSDIR}/devel/p5-IPC-Cmd
-RUN_DEPENDS+=	p5-IPC-Cmd>=0:${PORTSDIR}/devel/p5-IPC-Cmd
-.endif
 
 .if ${PERL_LEVEL} < 501400
 BUILD_DEPENDS+=	p5-Perl-OSType>=0:${PORTSDIR}/devel/p5-Perl-OSType
