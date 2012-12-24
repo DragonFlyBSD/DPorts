@@ -1,9 +1,5 @@
-# Ports collection makefile for:	jftp
-# Date created:			June 14, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/ftp/jftp/Makefile,v 1.23 2012/11/17 05:57:29 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/ftp/jftp/Makefile,v 1.24 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	jftp
 PORTVERSION=	1.56
@@ -19,7 +15,7 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 USE_JAVA=	yes
 WRKSRC=		${WRKDIR}/j-ftp
