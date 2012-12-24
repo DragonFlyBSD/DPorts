@@ -1,8 +1,5 @@
-# Ports collection makefile for:	Jave
-# Date created:				29 January 2006
-# Whom:					Andreas Daehn <ad001@uni-rostock.de>
-#
-# $FreeBSD: ports/graphics/jave6/Makefile,v 1.8 2012/11/17 05:58:10 svnexp Exp $
+# Created by: Andreas Daehn <ad001@uni-rostock.de>
+# $FreeBSD: ports/graphics/jave6/Makefile,v 1.9 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	jave6
 PORTVERSION=	0.1
@@ -18,7 +15,7 @@ COMMENT=	Java ASCII-Art-Generator
 
 USE_JAVA=	YES
 USE_ZIP=	YES
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	YES
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 LNKTARGET=	${PREFIX}/bin/jave6
