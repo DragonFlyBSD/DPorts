@@ -1,5 +1,5 @@
-# Created by:	Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/graphics/aoi/Makefile,v 1.22 2012/11/17 05:58:01 svnexp Exp $
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: ports/graphics/aoi/Makefile,v 1.23 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	aoi
 PORTVERSION=	2.9.2
@@ -18,7 +18,7 @@ RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 USE_ZIP=	yes
 EXTRACT_BEFORE_ARGS=	-a -q
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/ArtOfIllusion${PORTVERSION:S/.//g}
