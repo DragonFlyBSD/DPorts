@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jrosetta
-# Date created:				11 February 2010
-# Whom:					rfarmer@predatorlabs.net
-#
-# $FreeBSD: ports/java/jrosetta/Makefile,v 1.6 2012/12/06 16:41:47 svnexp Exp $
-#
+# Created by: rfarmer@predatorlabs.net
+# $FreeBSD: ports/java/jrosetta/Makefile,v 1.8 2012/12/13 08:01:56 svnexp Exp $
 
 PORTNAME=	jrosetta
 PORTVERSION=	1.0.4
@@ -17,17 +13,18 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	API for building a graphical console in Swing
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 JAVA_RUN=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/jrosetta-api.jar \
 		%%JAVAJARDIR%%/jrosetta-engine.jar
 
-OPTIONS=	COMPILE	"Download and compile source instead of binaries" off
+OPTIONS_DEFINE=	COMPILE
+COMPILE_DESC=	Download and compile source instead of binaries
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_COMPILE)
+.if ${PORT_OPTIONS:MCOMPILE}
 DISTFILES=	${PORTNAME}-${PORTVERSION}-sources.jar:source
 
 BUILD_DEPENDS=	mvn:${PORTSDIR}/devel/maven3
@@ -45,7 +42,7 @@ EXTRACT_ONLY=
 NO_BUILD=	yes
 .endif
 
-.if defined(WITH_COMPILE)
+.if ${PORT_OPTIONS:MCOMPILE}
 post-patch:
 	${MKDIR} ${WRKDIR}/m2
 	${CP} ${FILESDIR}/settings.xml ${WRKDIR}
@@ -56,7 +53,7 @@ do-build:
 .endif
 
 do-install:
-.if defined(WITH_COMPILE)
+.if ${PORT_OPTIONS:MCOMPILE}
 	${INSTALL_DATA} ${OUTPUT}/jrosetta-api/${PORTVERSION}/jrosetta-api-${PORTVERSION}.jar \
 		${JAVAJARDIR}/jrosetta-api.jar
 	${INSTALL_DATA} ${OUTPUT}/jrosetta-engine/${PORTVERSION}/jrosetta-engine-${PORTVERSION}.jar \
