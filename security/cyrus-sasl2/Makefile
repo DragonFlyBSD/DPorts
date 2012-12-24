@@ -1,13 +1,8 @@
-# New ports collection makefile for:	cyrus-sasl2
-# Date created:				Nov 1 1999
-# Whom:					hetzels@westbend.net
-#
-# $FreeBSD: ports/security/cyrus-sasl2/Makefile,v 1.151 2012/11/17 06:01:03 svnexp Exp $
-#
+# $FreeBSD: ports/security/cyrus-sasl2/Makefile,v 1.154 2012/12/15 19:20:40 svnexp Exp $
 
 PORTNAME=	cyrus-sasl
-PORTVERSION=	2.1.25
-PORTREVISION=	2
+PORTVERSION=	2.1.26
+PORTREVISION=	1
 CATEGORIES=	security ipv6
 MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/
 
@@ -48,6 +43,7 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 		--with-configdir=${PREFIX}/lib/sasl2:${PREFIX}/etc/sasl2 \
 		--with-plugindir=${PREFIX}/lib/sasl2 \
 		--with-dbpath=${PREFIX}/etc/sasldb2 \
+		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
 		--includedir=${PREFIX}/include \
 		--enable-static \
 		--enable-auth-sasldb \
@@ -55,26 +51,27 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 		--with-saslauthd=${SASLAUTHD_RUNPATH} \
 		--disable-krb4
 
-OPTIONS_DEFINE=		BDB MYSQL PGSQL SQLITE SQLITE3 ALWAYSTRUE AUTHDAEMOND \
-			DEV_URANDOM KEEP_DB_OPEN OBSOLETE_CRAM_ATTR CRAM \
-			DIGEST LOGIN NTLM OTP PLAIN SCRAM
+NO_OPTIONS_SORT=	yes
+OPTIONS_DEFINE=		ALWAYSTRUE AUTHDAEMOND KEEP_DB_OPEN \
+			OBSOLETE_CRAM_ATTR BDB MYSQL PGSQL
+OPTIONS_RADIO=		SQLITE
+OPTIONS_RADIO_SQLITE=	SQLITE2 SQLITE3
+OPTIONS_GROUP=		MECH
+OPTIONS_GROUP_MECH=	CRAM DIGEST LOGIN NTLM OTP PLAIN SCRAM
 OPTIONS_DEFAULT=	AUTHDAEMOND OBSOLETE_CRAM_ATTR CRAM DIGEST LOGIN NTLM \
 			OTP PLAIN SCRAM
-NO_OPTIONS_SORT=	yes
-SQLITE_DESC=		Enable SQLite2 backend
-SQLITE3_DESC=		Enable SQLite3 backend
-ALWAYSTRUE_DESC=	Enable the alwaystrue password verifier
-AUTHDAEMOND_DESC=	Enable use of authdaemon
-DEV_URANDOM_DESC=	Use /dev/urandom
+ALWAYSTRUE_DESC=	the alwaystrue password verifier
+AUTHDAEMOND_DESC=	use of authdaemon
 KEEP_DB_OPEN_DESC=	Keep handle to Berkeley DB open
-OBSOLETE_CRAM_ATTR_DESC=Enable cmusaslsecretCRAM-MD5 property
-CRAM_DESC=		Enable CRAM-MD5 authentication
-DIGEST_DESC=		Enable DIGEST-MD5 authentication
-LOGIN_DESC=		Enable LOGIN authentication
-NTLM_DESC=		Enable NTLM authentication
-OTP_DESC=		Enable OTP authentication
-PLAIN_DESC=		Enable PLAIN authentication
-SCRAM_DESC=		Enable SCRAM authentication
+OBSOLETE_CRAM_ATTR_DESC=cmusaslsecretCRAM-MD5 property
+SQLITE2_DESC=		SQLite 2 database
+CRAM_DESC=		CRAM-MD5 authentication
+DIGEST_DESC=		DIGEST-MD5 authentication
+LOGIN_DESC=		LOGIN authentication
+NTLM_DESC=		NTLM authentication
+OTP_DESC=		OTP authentication
+PLAIN_DESC=		PLAIN authentication
+SCRAM_DESC=		SCRAM authentication
 
 .include <bsd.port.pre.mk>
 
@@ -105,11 +102,7 @@ CONFIGURE_ARGS+=--with-pgsql=${LOCALBASE}
 CONFIGURE_ARGS+=--without-pgsql
 .endif
 
-.if ${PORT_OPTIONS:MSQLITE} && ${PORT_OPTIONS:MSQLITE3}
-BROKEN=		SQLITE and SQLITE3 are mutually exclusive.
-.endif
-
-.if ${PORT_OPTIONS:MSQLITE}
+.if ${PORT_OPTIONS:MSQLITE2}
 USE_SQLITE=	2
 CONFIGURE_ARGS+=--with-sqlite=${LOCALBASE}
 .else
@@ -124,14 +117,10 @@ CONFIGURE_ARGS+=--without-sqlite3
 .endif
 
 .if ${PORT_OPTIONS:MMYSQL} || ${PORT_OPTIONS:MPGSQL} || \
-    ${PORT_OPTIONS:MSQLITE} || ${PORT_OPTIONS:MSQLITE3}
+    ${PORT_OPTIONS:MSQLITE2} || ${PORT_OPTIONS:MSQLITE3}
 CONFIGURE_ARGS+=--enable-sql
 .else
 SQL=	"@comment "
-.endif
-
-.if ${PORT_OPTIONS:MDEV_URANDOM}
-CONFIGURE_ARGS+=--with-devrandom=/dev/urandom
 .endif
 
 .if ${PORT_OPTIONS:MALWAYSTRUE}
@@ -190,7 +179,7 @@ CONFIGURE_ARGS+=--disable-scram
 SCRAM=	"@comment "
 .endif
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CPPFLAGS+=	-fPIC
 .endif
 .if !defined(WITHOUT_GSSAPI) && defined(KRB5_HOME) && exists(${KRB5_HOME}/lib/libgssapi_krb5.so)
