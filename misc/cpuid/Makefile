@@ -1,5 +1,5 @@
-# Created by:				ijliao
-# $FreeBSD: ports/misc/cpuid/Makefile,v 1.20 2012/11/17 05:59:33 svnexp Exp $
+# Created by: ijliao
+# $FreeBSD: ports/misc/cpuid/Makefile,v 1.21 2012/12/15 16:08:41 svnexp Exp $
 
 PORTNAME=	cpuid
 PORTVERSION=	3.3
