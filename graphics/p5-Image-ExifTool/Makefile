@@ -1,5 +1,5 @@
 # Created by: Tod McQuillin <devin@spamcop.net>
-# $FreeBSD: ports/graphics/p5-Image-ExifTool/Makefile,v 1.53 2012/11/17 05:58:17 svnexp Exp $
+# $FreeBSD: ports/graphics/p5-Image-ExifTool/Makefile,v 1.54 2012/12/18 15:03:49 svnexp Exp $
 
 # Note: This port tracks the "production release" of ExifTool as given
 # by http://www.sno.phy.queensu.ca/~phil/exiftool/history.html
@@ -10,7 +10,7 @@
 # For development version, please try graphics/p5-Image-ExifTool-devel
 
 PORTNAME=	Image-ExifTool
-PORTVERSION=	9.01
+PORTVERSION=	9.04
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.sno.phy.queensu.ca/~phil/exiftool/ \
 		CPAN
