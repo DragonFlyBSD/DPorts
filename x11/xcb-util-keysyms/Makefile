@@ -1,7 +1,7 @@
-# $FreeBSD: ports/x11/xcb-util-keysyms/Makefile,v 1.4 2012/11/17 06:03:20 svnexp Exp $
+# $FreeBSD: ports/x11/xcb-util-keysyms/Makefile,v 1.5 2012/12/10 19:12:19 svnexp Exp $
 
 PORTNAME=	xcb-util-keysyms
-PORTVERSION=	0.3.8
+PORTVERSION=	0.3.9
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 
