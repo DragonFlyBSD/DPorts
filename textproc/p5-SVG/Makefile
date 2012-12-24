@@ -2,7 +2,7 @@
 # Date created:		21 Nov 2001
 # Whom:			Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/textproc/p5-SVG/Makefile,v 1.17 2012/11/17 06:02:08 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-SVG/Makefile,v 1.18 2012/12/17 06:36:02 svnexp Exp $
 #
 
 PORTNAME=	SVG
@@ -34,11 +34,4 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/* ${EXAMPLESDIR}/
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
