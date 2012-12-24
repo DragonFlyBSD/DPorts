@@ -2,12 +2,12 @@
 # Date created:				27 August 2002
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
-# $FreeBSD: ports/www/pound/Makefile,v 1.28 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: ports/www/pound/Makefile,v 1.29 2012/12/10 19:24:06 svnexp Exp $
 #
 
 PORTNAME=	pound
 PORTVERSION=	2.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www net
 MASTER_SITES=	http://www.apsis.ch/pound/ \
 		ftp://ftp.nuug.no/pub/anders/distfiles/
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--enable-msdav
 .endif
 
 .if !defined(WITHOUT_PCRE)
-LIB_DEPENDS+=		pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=		pcre.3:${PORTSDIR}/devel/pcre
 CFLAGS+=		"-I${LOCALBASE}/include"
 CPPFLAGS+=		"-I${LOCALBASE}/include"
 LDFLAGS+=		"-L${LOCALBASE}/lib"
