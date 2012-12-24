@@ -82,7 +82,7 @@ CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 ARCH=		x86_64
 .endif
 
