@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/astro/gpsprune/Makefile,v 1.1 2012/12/03 23:25:50 svnexp Exp $
+# $FreeBSD: ports/astro/gpsprune/Makefile,v 1.2 2012/12/10 11:29:52 svnexp Exp $
 
 PORTNAME=	gpsprune
 PORTVERSION=	14
@@ -17,7 +17,7 @@ NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 SUB_FILES=	gpsprune.sh
 SUB_LIST=	JARNAME=${DISTNAME}
