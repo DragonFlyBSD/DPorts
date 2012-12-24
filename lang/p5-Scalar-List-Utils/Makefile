@@ -1,12 +1,8 @@
-# New ports collection makefile for:	lang/p5-Scalar-List-Utils
-# Date created:				19 December 2001
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/p5-Scalar-List-Utils/Makefile,v 1.17 2012/11/17 05:58:54 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: ports/lang/p5-Scalar-List-Utils/Makefile,v 1.18 2012/12/17 10:54:51 svnexp Exp $
 
 PORTNAME=	Scalar-List-Utils
-PORTVERSION=	1.25
+PORTVERSION=	1.26
 PORTEPOCH=	1
 CATEGORIES=	lang perl5
 MASTER_SITES=	CPAN
