@@ -1,5 +1,5 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: ports/multimedia/umph/Makefile,v 1.13 2012/12/08 16:26:22 svnexp Exp $
+# $FreeBSD: ports/multimedia/umph/Makefile,v 1.14 2012/12/16 06:16:57 svnexp Exp $
 
 PORTNAME=	umph
 PORTVERSION=	0.2.5
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	p5-Getopt-ArgvFile>=1.11:${PORTSDIR}/devel/p5-Getopt-ArgvFile \
 		p5-XML-DOM>=1.44:${PORTSDIR}/textproc/p5-XML-DOM
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	5.10.1+
+PERL_CONFIGURE=	yes
 
 MAN1=		umph.1
 PLIST_DIRS=	${SITE_PERL_REL}/${PERL_ARCH}/auto/umph
