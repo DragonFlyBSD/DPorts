@@ -2,7 +2,7 @@
 # Date created:				Mon Jan  1 09:33:13 2001
 # Whom:					will
 #
-# $FreeBSD: ports/archivers/p5-Archive-Zip/Makefile,v 1.42 2012/11/17 05:54:22 svnexp Exp $
+# $FreeBSD: ports/archivers/p5-Archive-Zip/Makefile,v 1.43 2012/12/17 15:43:17 svnexp Exp $
 #
 
 PORTNAME=	Archive-Zip
@@ -19,11 +19,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Archive::Zip.3 Archive::Zip::Tree.3 Archive::Zip::FAQ.3 Archive::Zip::MemberRead.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-BUILD_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
