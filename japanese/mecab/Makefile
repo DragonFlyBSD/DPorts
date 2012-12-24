@@ -2,7 +2,7 @@
 # Date created:		2 April 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/japanese/mecab/Makefile,v 1.35 2012/11/17 05:58:36 svnexp Exp $
+# $FreeBSD: ports/japanese/mecab/Makefile,v 1.36 2012/12/16 06:16:56 svnexp Exp $
 #
 
 PORTNAME=	mecab
@@ -15,7 +15,7 @@ COMMENT=	Yet Another Part-of-Speech and Morphological Analyzer
 
 USE_AUTOTOOLS=	libtool
 USE_ICONV=	yes
-USE_PERL5_BUILD=	5.8.0+
+USE_PERL5_BUILD=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
