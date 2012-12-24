@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vorbis-tools
-# Date created:				18 October 2000
-# Whom:					t.vanklaveren@student.utwente.nl
-#
-# $FreeBSD: ports/audio/vorbis-tools/Makefile,v 1.62 2012/11/17 05:54:46 svnexp Exp $
-#
+# Created by: t.vanklaveren@student.utwente.nl
+# $FreeBSD: ports/audio/vorbis-tools/Makefile,v 1.63 2012/12/18 21:34:11 svnexp Exp $
 
 PORTNAME=	vorbis-tools
 PORTVERSION=	1.4.0
@@ -29,7 +25,9 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_JOBS_SAFE=	yes
 
-.if !defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 USE_GETTEXT=    yes
 PLIST_SUB+=     NLS=""
 .else
