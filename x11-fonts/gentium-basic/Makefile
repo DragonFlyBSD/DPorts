@@ -1,72 +1,65 @@
-# New ports collection makefile for:	Gentium Font Family
-# Date created:		March 31 2004
-# Whom:			Matthew Seaman <m.seaman@infracaninophile.co.uk>
-#
-# $FreeBSD: ports/x11-fonts/gentium-basic/Makefile,v 1.11 2012/11/17 06:03:28 svnexp Exp $
-#
-# This port is shamelessly copied from Joe Marcus Clarke's bitstream-vera
-# port.
+# Created by: Matthew Seaman
+# $FreeBSD: ports/x11-fonts/gentium-basic/Makefile,v 1.13 2012/12/15 22:09:51 svnexp Exp $
 
-PORTNAME=	gentium-basic
-PORTVERSION=	1.1.0
+PORTNAME=	GentiumBasic
+PORTVERSION=	110
 CATEGORIES=	x11-fonts
-MASTER_SITES=	http://scripts.sil.org/cms/scripts/render_download.php?site_id=nrsi&format=file&media_id=GentiumBasic_${PORTVERSION:C@\.@@g}_tar&filename=/
-DISTNAME=	ttf-sil-${PORTNAME}_${PORTVERSION:C@\.[[:digit:]]+$@@}.orig
+MASTER_SITES=	http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=${MEDIA_ID}&filename=/
+DISTNAME=	ttf-sil-gentium-basic_1.1.orig
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Gentium Basic and Gentium Book Basic TrueType fonts
 
-BUILD_DEPENDS=	fc-cache:${PORTSDIR}/x11-fonts/fontconfig
-RUN_DEPENDS=	fc-cache:${PORTSDIR}/x11-fonts/fontconfig
+LICENSE=	OFL
+LICENSE_NAME=	SIL Open Font License (OFL)
+LICENSE_FILE=	${WRKSRC}/OFL.txt
+LICENSE_PERMS=	auto-accept
 
+USE_TGZ=	yes
+XORG_CAT=	font
+
+FONTLIBPATH=	lib/X11/fonts
+FONTROOTDIR=	${PREFIX}/${FONTLIBPATH}
+INSTALLS_TTF=	yes
+MEDIA_ID=	${PORTNAME}_${PORTVERSION}_tar
 NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/ttf-sil-${PORTNAME}-${PORTVERSION:C@\.[[:digit:]]+$@@}
+WRKSRC=		${WRKDIR}/${DISTNAME:S,.orig,,:S,_,-,}
 
-PLIST_SUB=	FONTSDIR="${FONTSDIR}" \
-		FONTNAME="${FONTNAME}"
+PLIST_FILES=	${FONTLIBPATH}/${FONTDIR}/GenBasB.ttf \
+		${FONTLIBPATH}/${FONTDIR}/GenBasBI.ttf \
+		${FONTLIBPATH}/${FONTDIR}/GenBasI.ttf \
+		${FONTLIBPATH}/${FONTDIR}/GenBasR.ttf \
+		${FONTLIBPATH}/${FONTDIR}/GenBkBasB.ttf \
+		${FONTLIBPATH}/${FONTDIR}/GenBkBasBI.ttf \
+		${FONTLIBPATH}/${FONTDIR}/GenBkBasI.ttf \
+		${FONTLIBPATH}/${FONTDIR}/GenBkBasR.ttf
 
-SUB_LIST=	"FONTSDIR=${FONTSDIR}"
+SUB_LIST=	"FONTPATH=${FONTROOTDIR}/${FONTDIR}"
 SUB_FILES=	pkg-message
 
-#
-# Local variables
-#
-
-FONTNAME=	${PORTNAME}
-FONTSDIR?=	lib/X11/fonts/${FONTNAME}
-FONTSTGT=	${PREFIX}/${FONTSDIR}
-
 DOCSLIST=	FONTLOG.txt GENTIUM-FAQ.txt OFL-FAQ.txt
-
-.SILENT:
+PORTDOCS=	${DOCSLIST:C,^.*/,,}
 
 .include <bsd.port.options.mk>
 
-#
-# Install
-#
+.SILENT:
+
+do-configure:
+	@${DO_NADA}
 
 do-install: install-fonts install-docs
+	${ECHO_MSG}
+	${CAT} ${PKGMESSAGE}
+	${ECHO_MSG}
 
 install-fonts:
-	${MKDIR} ${FONTSTGT}
-	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTSTGT}
-	${INSTALL_DATA} ${FILESDIR}/fonts.dir ${FONTSTGT}
-	${INSTALL_DATA} ${WRKSRC}/OFL.txt ${FONTSTGT}
+	${MKDIR} ${FONTROOTDIR}/${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTROOTDIR}/${FONTDIR}
 
 install-docs:
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
-	@for doc in ${DOCSLIST} ; do \
-	  ${INSTALL_DATA} ${WRKSRC}/$$doc ${DOCSDIR} ; \
-	done
+	${INSTALL_DATA} ${DOCSLIST:S,^,${WRKSRC}/,} ${DOCSDIR}
 .endif
-
-post-install:
-	${ECHO_MSG} "===> Running fc-cache"
-	-${LOCALBASE}/bin/fc-cache -f -v ${FONTSTGT}
-	${ECHO_MSG}
-	${CAT} ${PKGMESSAGE}
-	${ECHO_MSG}
 
 .include <bsd.port.mk>
