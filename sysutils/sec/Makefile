@@ -1,5 +1,4 @@
-# Created by: Nicolas Jombart <ecu@200ok.org>
-# $FreeBSD: ports/sysutils/sec/Makefile,v 1.18 2012/12/02 20:17:08 svnexp Exp $
+# $FreeBSD: ports/sysutils/sec/Makefile,v 1.19 2012/12/12 21:45:14 svnexp Exp $
 
 PORTNAME=	sec
 PORTVERSION=	2.6.2
