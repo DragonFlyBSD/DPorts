@@ -1,0 +1,4 @@
+bin/dbview
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/dBASE
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
