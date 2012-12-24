@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: ports/www/p5-HTTP-Message/Makefile,v 1.9 2012/11/27 10:35:10 svnexp Exp $
+# $FreeBSD: ports/www/p5-HTTP-Message/Makefile,v 1.10 2012/12/17 12:20:07 svnexp Exp $
 
 PORTNAME=	HTTP-Message
 PORTVERSION=	6.06
@@ -32,16 +32,4 @@ MAN3=		HTTP::Config.3 \
 		HTTP::Response.3 \
 		HTTP::Status.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Compress-Raw-Zlib>=0:${PORTSDIR}/archivers/p5-Compress-Raw-Zlib
-RUN_DEPENDS+=	p5-Compress-Raw-Zlib>=0:${PORTSDIR}/archivers/p5-Compress-Raw-Zlib
-.endif
-
-.if ${PERL_LEVEL} < 501200
-BUILD_DEPENDS+=	p5-IO-Compress>=2.021:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS+=	p5-IO-Compress>=2.021:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
