@@ -2,14 +2,14 @@
 # Date Created:			28 July 1998
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/glib20/Makefile,v 1.184 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: ports/devel/glib20/Makefile,v 1.185 2012/12/10 19:23:59 svnexp Exp $
 #   $MCom: ports/devel/glib20/Makefile,v 1.209 2011/06/11 19:51:14 mezz Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
 PORTVERSION=	2.28.8
-PORTREVISION?=	4
+PORTREVISION?=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
 		ftp://ftp.gtk.org/pub/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
@@ -31,7 +31,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS+=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
 
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
@@ -59,7 +59,7 @@ OPTIONS=	COLLATION_FIX "fix string collation" off
 # Let glib use asm code for implementing atomic ops on i386 and amd64.
 .if ${ARCH} == "i386"
 GLIB_ARCH=	i486
-.elif ${ARCH} == "amd64"
+.elif ${ARCH} == "x86_64"
 GLIB_ARCH=	x86_64
 .else
 GLIB_ARCH=	${ARCH}
