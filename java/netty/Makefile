@@ -1,9 +1,5 @@
-# ports collection makefile for: netty
-# Date created:                  2011-01-16
-# Whom:                          Mikhail T. <michael@fun-box.ru>
-#
-# $FreeBSD: ports/java/netty/Makefile,v 1.5 2012/11/17 05:58:45 svnexp Exp $
-#
+# Created by: Mikhail T. <michael@fun-box.ru>
+# $FreeBSD: ports/java/netty/Makefile,v 1.6 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	netty
 PORTVERSION=	3.5.5
@@ -20,7 +16,7 @@ FETCH_ARGS=	-Fpr
 
 USE_JAVA=	yes
 USE_BZIP2=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 DATADIR=	${PREFIX}/share/${UNIQUENAME}
 DOCSDIR=	${PREFIX}/share/doc/${UNIQUENAME}
