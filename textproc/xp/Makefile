@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xp
-# Date created:        21 September 1999
-# Whom:                mike
-#
-# $FreeBSD: ports/textproc/xp/Makefile,v 1.11 2012/11/17 06:02:25 svnexp Exp $
-#
+# Created by: mike
+# $FreeBSD: ports/textproc/xp/Makefile,v 1.12 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	xp
 PORTVERSION=	0.5
@@ -16,7 +12,7 @@ MAINTAINER=	mike@vee.net
 COMMENT=	An XML parser written in Java
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 NO_WORKSUBDIR=	yes
 NO_BUILD=	yes
