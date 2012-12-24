@@ -26,7 +26,7 @@ CFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "i386" || ${ARCH} == "amd64"
+.if ${ARCH} == "i386" || ${ARCH} == "x86_64"
 CFLAGS+=	-mmmx
 .endif
 
