@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mar
-# Date created:				20 Jun 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/archivers/mar/Makefile,v 1.15 2012/11/17 05:54:21 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: ports/archivers/mar/Makefile,v 1.16 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	mar
 DISTVERSION=	0.5
@@ -12,7 +8,7 @@ MASTER_SITES=	CRITICAL
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A simple binary file format for storing arbitrary meta and user data
+COMMENT=	Simple binary file format for storing arbitrary meta and user data
 
 LICENSE=	MIT
 
