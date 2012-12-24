@@ -1,12 +1,8 @@
-# New ports collection makefile for:	php5
-# Date created:				Tue Feb 18 11:17:13 CET 2003
-# Whom:					Alex Dupre <sysadmin@alexdupre.com>
-#
-# $FreeBSD: ports/lang/php5/Makefile,v 1.177 2012/11/17 05:58:55 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: ports/lang/php5/Makefile,v 1.180 2012/12/20 21:18:31 svnexp Exp $
 
 PORTNAME=	php5
-PORTVERSION=	5.4.7
+PORTVERSION=	5.4.10
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
@@ -26,7 +22,7 @@ NO_OPTIONS_SORT=yes
 .if !defined(PKGNAMESUFFIX)
 USE_AUTOTOOLS=	autoconf
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
 CONFIGURE_ARGS=	\
 		--with-layout=GNU \
