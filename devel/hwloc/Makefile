@@ -1,10 +1,10 @@
-# $FreeBSD: ports/devel/hwloc/Makefile,v 1.6 2012/11/17 05:55:50 svnexp Exp $
+# $FreeBSD: ports/devel/hwloc/Makefile,v 1.7 2012/12/16 10:30:38 svnexp Exp $
 
 PORTNAME=	hwloc
-PORTVERSION=	1.5.1
+PORTVERSION=	1.6
 CATEGORIES=	devel
-MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v1.5/downloads/ \
-		http://icl.cs.utk.edu/open-mpi/software/hwloc/v1.5/downloads/
+MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v1.6/downloads/ \
+		http://icl.cs.utk.edu/open-mpi/software/hwloc/v1.6/downloads/
 
 MAINTAINER=	phd_kimberlite@yahoo.co.jp
 COMMENT=	The Portable Hardware Locality software package
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--enable-static \
 			--enable-libxml2
 USE_BZIP2=	yes
 USE_PKGCONFIG=	build
+USE_ICONV=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	libxml2 gnomehack
 MAKE_JOBS_SAFE=	yes
