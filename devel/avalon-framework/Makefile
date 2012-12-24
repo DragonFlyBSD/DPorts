@@ -1,9 +1,5 @@
-# New ports collection makefile for:	avalon-framework
-# Date created:		2004-03-31
-# Whom:			Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-#
-# $FreeBSD: ports/devel/avalon-framework/Makefile,v 1.8 2012/11/17 05:55:34 svnexp Exp $
-#
+# Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
+# $FreeBSD: ports/devel/avalon-framework/Makefile,v 1.9 2012/12/10 11:29:53 svnexp Exp $
 
 PORTNAME=	avalon-framework
 PORTVERSION=	4.2.0
@@ -16,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Apache Avalon core framework for component programming
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
