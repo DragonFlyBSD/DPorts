@@ -1,8 +1,8 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: ports/x11-fonts/cantarell-fonts/Makefile,v 1.6 2012/11/17 06:03:27 svnexp Exp $
+# $FreeBSD: ports/x11-fonts/cantarell-fonts/Makefile,v 1.7 2012/12/20 17:35:02 svnexp Exp $
 
 PORTNAME=	cantarell-fonts
-PORTVERSION=	0.0.10.1
+PORTVERSION=	0.0.12
 CATEGORIES=	x11-fonts gnome
 MASTER_SITES=	GNOME
 
@@ -11,7 +11,7 @@ COMMENT=	Cantarell, a Humanist sans-serif font family
 
 LIB_DEPENDS=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
-USE_GNOME=	pkgconfig
+USE_PKGCONFIG=	build
 USE_XZ=		yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
