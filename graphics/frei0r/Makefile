@@ -72,7 +72,7 @@ PLIST_FILES+=	"@dirrmtry lib/frei0r-1"
 
 .include <bsd.port.pre.mk>
 
-.if !defined(WITH_MMX) && ${ARCH} != "amd64"
+.if !defined(WITH_MMX) && ${ARCH} != "x86_64"
 CONFIGURE_ARGS+=--disable-cpuflags
 .endif
 
