@@ -290,7 +290,7 @@ SUB_FILES+=	ulpt-cupsd.conf ulpt-cupsd.sh
 .endif
 
 post-patch:
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 	@${REINPLACE_CMD} -e 's|@PIEFLAGS@||' ${WRKSRC}/Makedefs.in
 .endif
 .if  ${PORT_OPTIONS:MXDG_OPEN}
