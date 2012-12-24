@@ -3,11 +3,12 @@
 # Date created:				Tue Oct 08, 2002
 # Whom:					Laurent LEVIER (llevier@argosnet.com)
 #
-# $FreeBSD: ports/security/hydra/Makefile,v 1.41 2012/11/17 06:01:05 svnexp Exp $
+# $FreeBSD: ports/security/hydra/Makefile,v 1.43 2012/12/10 19:24:04 svnexp Exp $
 #
 
 PORTNAME=	hydra
 PORTVERSION=	7.3
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://freeworld.thc.org/releases/ \
 		PACKETSTORM/groups/thc/
