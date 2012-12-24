@@ -1,8 +1,8 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: ports/devel/p5-File-Map/Makefile,v 1.24 2012/12/05 19:01:40 svnexp Exp $
+# $FreeBSD: ports/devel/p5-File-Map/Makefile,v 1.25 2012/12/15 18:28:20 svnexp Exp $
 
 PORTNAME=	File-Map
-PORTVERSION=	0.53
+PORTVERSION=	0.55
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,9 +13,8 @@ COMMENT=	Memory mapping made simple and safe
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Const-Fast>=0:${PORTSDIR}/devel/p5-Const-Fast \
-		p5-PerlIO-Layers>=0:${PORTSDIR}/devel/p5-PerlIO-Layers \
-		p5-Sub-Exporter-Progressive>=0:${PORTSDIR}/devel/p5-Sub-Exporter-Progressive
+BUILD_DEPENDS=	p5-PerlIO-Layers>=0:${PORTSDIR}/devel/p5-PerlIO-Layers \
+		p5-Sub-Exporter-Progressive>=0.001.005:${PORTSDIR}/devel/p5-Sub-Exporter-Progressive
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings \
