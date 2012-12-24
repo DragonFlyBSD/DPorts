@@ -46,7 +46,7 @@ regression-test regression test check:	build
 #
 #.if defined(PACKAGE_BUILDING)
 #.if ${ARCH} != sparc64 || ${OSVERSION} >= 700055
-#.if ${ARCH} != amd64 || ${OSVERSION} < 800000
+#.if ${ARCH} != x86_64 || ${OSVERSION} < 800000
 #pre-install:	test
 #.endif
 #.endif
