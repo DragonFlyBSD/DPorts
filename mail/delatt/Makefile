@@ -2,7 +2,7 @@
 # Date created:				22 Jun 2005
 # Whom:					Emanuel Haupt <ehaupt@critical.ch>
 #
-# $FreeBSD: ports/mail/delatt/Makefile,v 1.12 2012/11/17 05:59:01 svnexp Exp $
+# $FreeBSD: ports/mail/delatt/Makefile,v 1.13 2012/12/16 06:16:56 svnexp Exp $
 #
 
 PORTNAME=	delatt
@@ -18,7 +18,7 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 
-USE_PERL5_RUN=	5.8.6+
+USE_PERL5_RUN=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/delatt
