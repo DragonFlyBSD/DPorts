@@ -1,8 +1,5 @@
-# New ports collection makefile for: ftjava
-# Date created:                      06FEB11
-# Whom:                              peter.thoenen@yahoo.com
-#
-# $FreeBSD: ports/games/ftjava/Makefile,v 1.12 2012/11/17 05:57:39 svnexp Exp $
+# Created by: peter.thoenen@yahoo.com
+# $FreeBSD: ports/games/ftjava/Makefile,v 1.13 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	ftjava
 PORTVERSION=	1.3
@@ -19,7 +16,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Full Thrust PBEM Client
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 USE_ZIP=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
