@@ -3,7 +3,7 @@
 # Date created:			  Thur Sept 25, 1998
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
-# $FreeBSD: ports/misc/cwish/Makefile,v 1.18 2012/11/17 05:59:33 svnexp Exp $
+# $FreeBSD: ports/misc/cwish/Makefile,v 1.19 2012/12/06 16:41:47 svnexp Exp $
 #
 
 PORTNAME=	cwish
@@ -12,7 +12,7 @@ PORTREVISION=	2
 CATEGORIES=	misc shells
 MASTER_SITES=	http://www.predatorlabs.net/dl/
 
-MAINTAINER=	rfarmer@predatorlabs.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Curses based user friendly windowing shell
 
 NO_WRKSUBDIR=	yes
