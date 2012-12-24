@@ -2,7 +2,7 @@
 # Date created:		2011-08-07
 # Whom:			Pierre Guinoiseau <geekounet@poildetroll.net>
 #
-# $FreeBSD: ports/multimedia/gcap/Makefile,v 1.4 2012/11/17 05:59:49 svnexp Exp $
+# $FreeBSD: ports/multimedia/gcap/Makefile,v 1.5 2012/12/16 06:16:57 svnexp Exp $
 #
 
 PORTNAME=	gcap
@@ -26,7 +26,7 @@ RUN_DEPENDS=	p5-Getopt-ArgvFile>=1.11:${PORTSDIR}/devel/p5-Getopt-ArgvFile \
 
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	5.10.1+
+PERL_CONFIGURE=	yes
 
 MAN1=		gcap.1
 PLIST_DIRS=	${SITE_PERL_REL}/${PERL_ARCH}/auto/gcap
