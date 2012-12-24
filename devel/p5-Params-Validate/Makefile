@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: ports/devel/p5-Params-Validate/Makefile,v 1.56 2012/11/18 05:53:50 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Params-Validate/Makefile,v 1.57 2012/12/17 15:43:18 svnexp Exp $
 
 PORTNAME=	Params-Validate
 PORTVERSION=	1.07
@@ -23,12 +23,4 @@ PERL_MODBUILD=	yes
 MAN3=		Attribute::Params::Validate.3 \
 		Params::Validate.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Attribute-Handlers>=0.79:${PORTSDIR}/devel/p5-Attribute-Handlers
-RUN_DEPENDS+=	p5-Attribute-Handlers>=0.79:${PORTSDIR}/devel/p5-Attribute-Handlers
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
