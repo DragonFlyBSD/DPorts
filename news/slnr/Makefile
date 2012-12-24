@@ -2,7 +2,7 @@
 # Date created:		21 July 1996
 # Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
 #
-# $FreeBSD: ports/news/slnr/Makefile,v 1.12 2012/11/17 06:00:43 svnexp Exp $
+# $FreeBSD: ports/news/slnr/Makefile,v 1.13 2012/12/10 01:26:33 svnexp Exp $
 #
 
 PORTNAME=	slnr
@@ -10,7 +10,7 @@ PORTVERSION=	2.3.0
 CATEGORIES=	news
 MASTER_SITES=	# disappeared
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A simplistic reader for SOUP (HDPF) mail and news packets
 
 RUN_DEPENDS=	zip:${PORTSDIR}/archivers/zip
