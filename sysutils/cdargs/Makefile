@@ -1,9 +1,4 @@
-# New ports collection makefile for:   cdargs
-# Date created:        1 May 2004
-# Whom:                Wesley Shields <wxs@csh.rit.edu>
-#
-# $FreeBSD: ports/sysutils/cdargs/Makefile,v 1.14 2012/11/17 06:01:26 svnexp Exp $
-#
+# $FreeBSD: ports/sysutils/cdargs/Makefile,v 1.15 2012/12/12 18:51:48 svnexp Exp $
 
 PORTNAME=	cdargs
 PORTVERSION=	1.35
