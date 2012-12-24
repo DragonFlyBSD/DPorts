@@ -2,19 +2,19 @@
 # Date created: 21 Feburary 2005
 # Whom: Andrew Thompson <andy@fud.org.nz>
 #
-# $FreeBSD: ports/net-mgmt/pads/Makefile,v 1.10 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/pads/Makefile,v 1.11 2012/12/10 19:24:04 svnexp Exp $
 #
 
 PORTNAME=	pads
 PORTVERSION=	1.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/passive/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Passively detect network assets
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
 
