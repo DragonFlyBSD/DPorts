@@ -372,7 +372,7 @@ MAN7=	LAM.7 \
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == amd64 || ${ARCH} == ia64 || ${ARCH} == sparc64
+.if ${ARCH} == x86_64 || ${ARCH} == ia64 || ${ARCH} == sparc64
 # Note: to enable TotalView on 64 bits platforms,
 # --enable-tv-dll-force should be added to CONFIGURE_ARGS
 PLIST_SUB+=	32BIT_ONLY="@comment "
