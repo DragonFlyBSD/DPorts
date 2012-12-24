@@ -1,21 +1,16 @@
-# New ports collection makefile for:	ccze
-# Date Created:				2nd june 2003
-# Whom:					Nicolas Jombart <ecu@ipv42.net>
-#
-# $FreeBSD: ports/sysutils/ccze/Makefile,v 1.7 2012/11/17 06:01:26 svnexp Exp $
-# ex:ts=8
+# $FreeBSD: ports/sysutils/ccze/Makefile,v 1.9 2012/12/12 21:45:14 svnexp Exp $
 
 PORTNAME=	ccze
 PORTVERSION=	0.2.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://falafel.200ok.org/distfiles/ccze/ \
 		http://200ok.org/distfiles/ccze/
 
-MAINTAINER=	ecu@ipv42.net
+MAINTAINER=	ecu@200ok.org
 COMMENT=	Fast log colorizer
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
