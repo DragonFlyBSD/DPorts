@@ -1,3 +1,3 @@
-# $FreeBSD: ports/textproc/aspell/files/aspell.ver.in,v 1.1 2006/07/15 14:28:44 thierry Exp $
+# $FreeBSD: ports/textproc/aspell/files/aspell.ver.in,v 1.2 2012/11/17 06:01:52 svnexp Exp $
 # Installed by textproc/aspell, please don't edit manually!
 VER=	%%VERINST%%
