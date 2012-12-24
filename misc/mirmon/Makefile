@@ -3,11 +3,11 @@
 # Date created:			Jun 15, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/misc/mirmon/Makefile,v 1.12 2012/11/17 05:59:42 svnexp Exp $
+# $FreeBSD: ports/misc/mirmon/Makefile,v 1.13 2012/12/18 09:13:22 svnexp Exp $
 #
 
 PORTNAME=	mirmon
-PORTVERSION=	2.6
+PORTVERSION=	2.7
 CATEGORIES=	misc
 MASTER_SITES=	http://www.staff.science.uu.nl/~penni101/mirmon/
 
