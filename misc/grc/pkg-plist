@@ -1,0 +1,17 @@
+bin/grc
+bin/grcat
+etc/grc.conf
+%%DATADIR%%/conf.configure
+%%DATADIR%%/conf.cvs
+%%DATADIR%%/conf.diff
+%%DATADIR%%/conf.esperanto
+%%DATADIR%%/conf.gcc
+%%DATADIR%%/conf.irclog
+%%DATADIR%%/conf.ldap
+%%DATADIR%%/conf.log
+%%DATADIR%%/conf.netstat
+%%DATADIR%%/conf.ping
+%%DATADIR%%/conf.proftpd
+%%DATADIR%%/conf.traceroute
+%%DATADIR%%/conf.wdiff
+@dirrm %%DATADIR%%
