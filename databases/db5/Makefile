@@ -1,9 +1,5 @@
-# New ports collection makefile for:	db51
-# Date created:		2010-09-15
-# Whom:			Matthias Andree <mandree@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/db5/Makefile,v 1.17 2012/11/17 05:55:06 svnexp Exp $
-#
+# Created by: Matthias Andree <mandree@FreeBSD.org>
+# $FreeBSD: ports/databases/db5/Makefile,v 1.18 2012/12/10 13:24:55 svnexp Exp $
 
 PORTNAME=	db5
 PORTVERSION=	5.3.21.0
@@ -58,7 +54,7 @@ libdb_sql=
 
 .if ${PORT_OPTIONS:MJAVA}
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 CONFIGURE_ARGS+=	--enable-java
 CPPFLAGS+=	"-I${JAVA_HOME}/include"
 CONFIGURE_ENV=	JAVAC="${JAVAC}" JAR="${JAR}" JAVA="${JAVA}"
