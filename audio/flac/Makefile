@@ -1,15 +1,11 @@
-# New ports collection makefile for:	flac
-# Date created:		Mar 18, 2001
-# Whom:			Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/flac/Makefile,v 1.55 2012/11/17 05:54:31 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: ports/audio/flac/Makefile,v 1.57 2012/12/18 21:34:11 svnexp Exp $
 
 PORTNAME=	flac
 PORTVERSION=	1.2.1
 PORTREVISION=	3
 CATEGORIES=	audio
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-src/${PORTNAME}-${PORTVERSION}-src
+MASTER_SITES=	http://downloads.xiph.org/releases/flac/
 
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Free lossless audio codec
@@ -25,7 +21,12 @@ CONFIGURE_ARGS=	--enable-sse \
 CPPFLAGS+=	-I${WRKSRC}/include
 MAKE_JOBS_SAFE=	yes
 
-.if !defined(WITHOUT_ICONV)
+OPTIONS_DEFINE=	ICONV
+OPTIONS_DEFAULT=ICONV
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MICONV}
 USE_ICONV=	yes
 CONFIGURE_ARGS+=--with-libiconv-prefix="${LOCALBASE}"
 .else
@@ -33,10 +34,10 @@ CONFIGURE_ARGS+=--without-libiconv-prefix
 .endif
 
 MAKE_ARGS=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
-.if defined(NOPORTDOCS)
-MAKE_ENV+=	DOC=""
-.else
+.if ${PORT_OPTIONS:MDOCS}
 MAKE_ENV+=	DOC=doc
+.else
+MAKE_ENV+=	DOC=""
 .endif
 
 USE_LDCONFIG=	yes
