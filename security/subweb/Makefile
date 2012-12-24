@@ -1,16 +1,11 @@
-# New ports collection makefile for:    subweb
-# Date created:                         december 30, 2001
-# Whom: 				Nicolas Jombart <Nicolas.Jombart@hsc-labs.com>
-#
-# $FreeBSD: ports/security/subweb/Makefile,v 1.4 2012/11/17 06:01:21 svnexp Exp $
-#
+# $FreeBSD: ports/security/subweb/Makefile,v 1.5 2012/12/12 21:45:14 svnexp Exp $
 
 PORTNAME=	subweb
 PORTVERSION=	1.0
 CATEGORIES=	security www
 MASTER_SITES=	http://www.hsc.fr/ressources/outils/subweb/download/
 
-MAINTAINER=	ecu@ipv42.net
+MAINTAINER=	ecu@200ok.org
 COMMENT=	SubWeb is a (reverse) proxy to inspect HTTP flows on the fly
 
 NO_BUILD=	YES
