@@ -1,19 +1,15 @@
-# New ports collection makefile for:	gzip
-# Date created:				27 July 2002
-# Whom:					cyrille.lefevre@laposte.net
-#
-# $FreeBSD: ports/archivers/gzip/Makefile,v 1.26 2012/11/17 05:54:20 svnexp Exp $
-#
+# Created by: Cyrille Lefevre <cyrille.lefevre@laposte.net>
+# $FreeBSD: ports/archivers/gzip/Makefile,v 1.28 2012/12/20 22:26:09 svnexp Exp $
 
 PORTNAME=	gzip
 PORTVERSION=	1.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	gabor@FreeBSD.org
-COMMENT=	A compression utility designed to be a replacement for compress
+COMMENT=	Compression utility designed to be a replacement for compress
 
 GNU_CONFIGURE=	yes
 
@@ -25,6 +21,7 @@ DOC_FILES=	AUTHORS COPYING ChangeLog ChangeLog-2007 INSTALL NEWS README \
 		THANKS TODO
 
 OPTIONS_DEFINE=	RSYNCABLE
+OPTIONS_DEFAULT=	RSYNCABLE
 RSYNCABLE_DESC=	Include --rsyncable patch
 
 .include <bsd.port.pre.mk>
