@@ -1,5 +1,5 @@
 # Created by:	ijliao
-# $FreeBSD: ports/devel/argouml/Makefile,v 1.34 2012/11/17 05:55:33 svnexp Exp $
+# $FreeBSD: ports/devel/argouml/Makefile,v 1.35 2012/12/10 11:29:53 svnexp Exp $
 
 PORTNAME=	argouml
 PORTVERSION=	0.34
@@ -25,7 +25,7 @@ RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 NO_BUILD=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 SUB_FILES=	argouml.sh
 SUB_LIST=	JAVA_VERSION=${JAVA_VERSION}
