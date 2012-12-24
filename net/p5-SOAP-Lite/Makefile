@@ -2,7 +2,7 @@
 # Date created:				May 28 2001
 # Whom:					vanilla
 #
-# $FreeBSD: ports/net/p5-SOAP-Lite/Makefile,v 1.31 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: ports/net/p5-SOAP-Lite/Makefile,v 1.32 2012/12/17 15:43:22 svnexp Exp $
 #
 
 PORTNAME=	SOAP-Lite
@@ -64,14 +64,8 @@ MAN3=		Apache::SOAP.3 \
 		XMLRPC::Transport::POP3.3 \
 		XMLRPC::Transport::TCP.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|^#!.*perl|#!${PERL}|' \
 		${WRKSRC}/bin/* ${WRKSRC}/t/*.t ${WRKSRC}/t/*.pl
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
