@@ -52,7 +52,7 @@ PLIST_SUB+=	OLD="" NEW="@comment "
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64" || ${ARCH} == "i386" || ${ARCH} == "ia64" || ${ARCH} == "powerpc"
+.if ${ARCH} == "x86_64" || ${ARCH} == "i386" || ${ARCH} == "ia64" || ${ARCH} == "powerpc"
 PLIST_SUB+=     INTEL_DRIVER=""
 PLIST_SUB+=     RADEON_DRIVERS=""
 .else
