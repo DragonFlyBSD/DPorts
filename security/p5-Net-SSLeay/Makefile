@@ -1,8 +1,8 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: ports/security/p5-Net-SSLeay/Makefile,v 1.45 2012/11/17 06:01:13 svnexp Exp $
+# $FreeBSD: ports/security/p5-Net-SSLeay/Makefile,v 1.46 2012/12/18 10:01:33 svnexp Exp $
 
 PORTNAME=	Net-SSLeay
-PORTVERSION=	1.49
+PORTVERSION=	1.51
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
