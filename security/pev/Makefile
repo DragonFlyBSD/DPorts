@@ -1,7 +1,8 @@
-# $FreeBSD: ports/security/pev/Makefile,v 1.2 2012/11/17 06:01:15 svnexp Exp $
+# $FreeBSD: ports/security/pev/Makefile,v 1.3 2012/12/10 19:24:04 svnexp Exp $
 
 PORTNAME=	pev
 PORTVERSION=	0.60
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}/
 
