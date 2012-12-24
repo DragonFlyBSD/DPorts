@@ -2,7 +2,7 @@
 # Date created:		2011-04-12
 # Whom:			Albert Vernon <f3cun3c02@sneakemail.com>
 #
-# $FreeBSD: ports/archivers/zutils/Makefile,v 1.2 2012/11/17 05:54:24 svnexp Exp $
+# $FreeBSD: ports/archivers/zutils/Makefile,v 1.3 2012/12/06 16:41:43 svnexp Exp $
 #
 
 PORTNAME=	zutils
@@ -10,7 +10,7 @@ PORTVERSION=	0.9
 CATEGORIES=	archivers
 MASTER_SITES=	SAVANNAH/zutils
 
-MAINTAINER=	f3cun3c02@sneakemail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utilities for searching in bzip2, gzip, lzip, and xz archives
 
 GNU_CONFIGURE=	yes
