@@ -2,7 +2,7 @@
 # Date created:				10th September 2000
 # Whom:					Ilia Chipitsine <ilia@jane.cgu.chel.su>
 #
-# $FreeBSD: ports/converters/p5-Unicode-String/Makefile,v 1.17 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: ports/converters/p5-Unicode-String/Makefile,v 1.18 2012/12/17 08:35:00 svnexp Exp $
 #
 
 PORTNAME=	Unicode-String
@@ -16,12 +16,6 @@ COMMENT=	These are experimental Perl5 modules to handle various Unicode issues
 
 PERL_CONFIGURE=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500804
-BUILD_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
-.endif
-
 MAN3=		Unicode::CharName.3 Unicode::String.3
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
