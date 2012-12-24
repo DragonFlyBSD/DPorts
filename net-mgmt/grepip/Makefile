@@ -2,12 +2,12 @@
 # Date created:		2 Nov 2005
 # Whom:			Serge Maslov <serge@maslov.biz>
 #
-# $FreeBSD: ports/net-mgmt/grepip/Makefile,v 1.7 2012/11/17 06:00:32 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/grepip/Makefile,v 1.8 2012/12/10 19:24:04 svnexp Exp $
 #
 
 PORTNAME=	grepip
 PORTVERSION=	1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	http://komquats.com/distfiles/ \
 		${MASTER_SITE_LOCAL}/cy/
