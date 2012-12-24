@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: ports/devel/p5-DateTime/Makefile,v 1.68 2012/11/27 18:01:32 svnexp Exp $
+# $FreeBSD: ports/devel/p5-DateTime/Makefile,v 1.69 2012/12/17 15:43:18 svnexp Exp $
 
 PORTNAME=	DateTime
 PORTVERSION=	0.78
@@ -38,10 +38,4 @@ post-install:
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
