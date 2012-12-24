@@ -33,7 +33,7 @@ MAKE_JOBS_SAFE=	yes
 CFLAGS+=	-Wuninitialized -ffast-math -finline-functions -fomit-frame-pointer -fexpensive-optimizations -O3
 .endif
 
-.if ${ARCH} == "amd64" || ${ARCH} == "ia64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
 CFLAGS+=	-fPIC
 .endif
 
