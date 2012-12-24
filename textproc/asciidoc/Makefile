@@ -1,17 +1,14 @@
-# New ports collection makefile for:   asciidoc
-# Date created:        9 Feb 2006
-# Whom:                anholt@FreeBSD.org
-#
-# $FreeBSD: ports/textproc/asciidoc/Makefile,v 1.28 2012/12/01 00:22:25 svnexp Exp $
-#
+# Created by: anholt@FreeBSD.org
+# $FreeBSD: ports/textproc/asciidoc/Makefile,v 1.29 2012/12/19 22:54:27 svnexp Exp $
 
 PORTNAME=	asciidoc
 PORTVERSION=	8.6.8
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A text document format for writing short documents and man pages
+COMMENT=	Text document format for writing short documents and man pages
 
 LICENSE=	GPLv2 MIT
 LICENSE_COMB=	multi
