@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  bzip2
-# Date created:			  19 Nov 1997
-# Whom:				  Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/archivers/bzip2/Makefile,v 1.45 2012/11/17 05:54:20 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: ports/archivers/bzip2/Makefile,v 1.46 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	bzip2
 PORTVERSION=	1.0.6
@@ -12,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://www.bzip.org/${PORTVERSION}/
 
 MAINTAINER=	jharris@widomaker.com
-COMMENT=	A block-sorting file compressor
+COMMENT=	Block-sorting file compressor
 
 USE_LDCONFIG=	yes
 PATCH_STRIP=	-p3
