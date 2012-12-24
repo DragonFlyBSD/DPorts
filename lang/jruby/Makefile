@@ -1,9 +1,5 @@
-# New ports collection makefile for:	JRuby
-# Date created:			20 September 2001
-# Whom:				Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/lang/jruby/Makefile,v 1.41 2012/11/17 05:58:51 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: ports/lang/jruby/Makefile,v 1.42 2012/12/10 13:24:59 svnexp Exp $
 
 PORTNAME=	jruby
 PORTVERSION=	1.6.6
@@ -18,7 +14,7 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 NO_BUILD=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 WRKDIR?=	${WRKDIRPREFIX}${.CURDIR}/work
 JRUBY_HOME?=	${PREFIX}/share/${PORTNAME}
