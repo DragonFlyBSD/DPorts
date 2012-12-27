@@ -2,7 +2,7 @@
 # Date created:	   26 Jan 2010
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-BZ-Client/Makefile,v 1.11 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: ports/devel/p5-BZ-Client/Makefile,v 1.12 2012/12/16 06:16:54 svnexp Exp $
 #
 
 PORTNAME=	BZ-Client
@@ -22,7 +22,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-DateTime-Format-ISO8601>=0:${PORTSDIR}/devel/p5-DateTime-Format-ISO8601
 
-PERL_CONFIGURE=	5.10.1+
+PERL_CONFIGURE=	yes
 
 MAN3=		BZ::Client.3 BZ::Client::API.3 BZ::Client::Bug.3 \
 		BZ::Client::Bugzilla.3 BZ::Client::Exception.3 \
