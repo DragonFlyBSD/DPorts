@@ -31,7 +31,7 @@ post-install:
 
 .include <bsd.port.pre.mk>
 
-.if !(${ARCH} == "x86_64" || ${ARCH} == "i386" || ${ARCH} == "x86_64")
+.if !(${ARCH} == "x86_64" || ${ARCH} == "i386")
 CONFIGURE_ARGS+=--disable-gallium-intel
 .endif
 

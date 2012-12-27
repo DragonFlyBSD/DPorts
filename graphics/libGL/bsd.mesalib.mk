@@ -72,13 +72,14 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-configure-old \
 ALL_TARGET=		default
 
 PATCHDIR=		${.CURDIR}/../../graphics/libGL/files
+DFLY_PATCHDIR=		${.CURDIR}/../../graphics/libGL/dragonfly
 WRKSRC=			${WRKDIR}/Mesa-${MESABASEVERSION}${MESASUBVERSION}
 
 .if !defined(ARCH)
 ARCH!=			uname -p
 .endif
 
-COMPONENT=		${PORTNAME:L:C/^lib//:C/mesa-//}
+COMPONENT=		${PORTNAME:tl:C/^lib//:C/mesa-//}
 
 .if ${COMPONENT:Mglu} == ""
 CONFIGURE_ARGS+=	--disable-glu
