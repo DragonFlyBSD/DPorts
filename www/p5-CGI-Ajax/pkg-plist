@@ -1,0 +1,5 @@
+%%SITE_PERL%%/CGI/Ajax.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/Ajax/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI/Ajax
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/CGI
+@dirrmtry %%SITE_PERL%%/CGI
