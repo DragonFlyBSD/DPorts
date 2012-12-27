@@ -2,7 +2,7 @@
 # Date created:                        3 October 2008
 # Whom:                                Steve Atwell
 #
-# $FreeBSD: ports/sysutils/slack/Makefile,v 1.2 2012/11/17 06:01:46 svnexp Exp $
+# $FreeBSD: ports/sysutils/slack/Makefile,v 1.3 2012/12/16 06:16:59 svnexp Exp $
 #
 
 PORTNAME=	slack
@@ -16,7 +16,7 @@ COMMENT=	Configuration management system designed to appeal to lazy admins
 
 RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync
 
-USE_PERL5=	5.6.0+
+USE_PERL5=	yes
 USE_GMAKE=	yes
 
 MAN1=		slack-diff.1
