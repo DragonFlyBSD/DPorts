@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Mouse/Makefile,v 1.67 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Mouse/Makefile,v 1.68 2012/12/17 14:42:33 svnexp Exp $
 
 PORTNAME=	Mouse
 PORTVERSION=	1.02
@@ -54,17 +54,4 @@ MAN3=		Mouse.3 \
 post-install:
 	@${CAT} ${PKGDIR}/pkg-message
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Devel-PPPort>=3.19:${PORTSDIR}/devel/p5-Devel-PPPort
-RUN_DEPENDS+=	p5-Devel-PPPort>=3.19:${PORTSDIR}/devel/p5-Devel-PPPort
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.if ${PERL_LEVEL} < 501200
-BUILD_DEPENDS+=	p5-ExtUtils-ParseXS>=2.21:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
-RUN_DEPENDS+=	p5-ExtUtils-ParseXS>=2.21:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
