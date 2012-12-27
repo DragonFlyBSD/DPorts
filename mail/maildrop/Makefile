@@ -1,5 +1,5 @@
 # Created by: Tom Hukins <tom@eborcom.com>
-# $FreeBSD: ports/mail/maildrop/Makefile,v 1.74 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: ports/mail/maildrop/Makefile,v 1.75 2012/12/10 19:24:02 svnexp Exp $
 
 # The following compile-time options are available:
 # WITH_AUTHLIB=yes	Enable optional support for Courier Auth Library
@@ -17,7 +17,7 @@
 
 PORTNAME=	maildrop
 PORTVERSION=	2.6.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	SF/courier/${PORTNAME}/${PORTVERSION}
 
