@@ -1,8 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/net/xmlrpc-c/Makefile,v 1.63 2012/11/20 14:25:56 svnexp Exp $
+# $FreeBSD: ports/net/xmlrpc-c/Makefile,v 1.64 2012/12/19 18:45:12 svnexp Exp $
 
 PORTNAME=	xmlrpc-c
-PORTVERSION=	1.16.43
+PORTVERSION=	1.16.44
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/Xmlrpc-c%20Super%20Stable/${PORTVERSION}
 EXTRACT_SUFX=	.tgz
