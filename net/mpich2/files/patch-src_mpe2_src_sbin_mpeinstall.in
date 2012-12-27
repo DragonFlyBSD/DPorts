@@ -1,0 +1,36 @@
+--- src/mpe2/sbin/mpeinstall.in.orig	2009-01-31 00:56:35.000000000 +0100
++++ src/mpe2/sbin/mpeinstall.in	2009-06-24 18:32:04.000000000 +0200
+@@ -522,7 +522,7 @@
+     # so $docdir (with NULL PACKAGE) is appended to dirlist for removal.
+     savedPACKAGE=$PACKAGE
+     PACKAGE=""
+-    MkDir @docdir@
++%%PORTDOCS%%    MkDir @docdir@
+     PACKAGE=$savedPACKAGE
+ fi
+ 
+@@ -570,15 +570,15 @@
+ # ie INSTALL $top_srcdir/doc  $docdir
+ #    INSTALL $top_srcdir/man  $mandir
+ #    INSTALL $top_srcdir/html $htmldir
+-for type in doc man html ; do
+-    typename=${type}dir
+-    eval typevalue=\$"$typename"
+-    if [ -d $top_srcdir/$type ] ; then
+-        MkDir $typevalue
+-        echo "Installing $pkgname $type to $DESTDIR$typevalue"
+-        InstallDirRecur $top_srcdir/$type $typevalue $MODE
+-    fi
+-done
++%%PORTDOCS%%for type in doc man html ; do
++%%PORTDOCS%%    typename=${type}dir
++%%PORTDOCS%%    eval typevalue=\$"$typename"
++%%PORTDOCS%%    if [ -d $top_srcdir/$type ] ; then
++%%PORTDOCS%%        MkDir $typevalue
++%%PORTDOCS%%        echo "Installing $pkgname $type to $DESTDIR$typevalue"
++%%PORTDOCS%%        InstallDirRecur $top_srcdir/$type $typevalue $MODE
++%%PORTDOCS%%    fi
++%%PORTDOCS%%done
+ 
+ # Remove old uninstall file
+ if [ "$appendUninstall" = 0 -a -f $UNINSTALLFILE ] ; then
