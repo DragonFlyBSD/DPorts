@@ -1,0 +1,40 @@
+# New Ports collection makefile for:	sets
+# Date created:		2012-04-21
+# Whom:			nemysis@gmx.ch
+#
+# $FreeBSD: ports/games/sets/Makefile,v 1.3 2012/11/17 05:57:52 svnexp Exp $
+#
+
+PORTNAME=	sets
+PORTVERSION=	1.0.0
+CATEGORIES=	games
+MASTER_SITES=	http://www.linuxmotors.com/sets/downloads/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	nemysis@gmx.ch
+COMMENT=	This is an implementation of the sets game
+
+LICENSE=	GPLv3
+
+USE_GMAKE=	yes
+ALL_TARGET=	${PORTNAME}
+USE_SDL=	sdl image
+
+PLIST_FILES=	bin/${PORTNAME}
+
+PORTDOCS=	README
+
+.include <bsd.port.options.mk>
+
+do-install:
+# Executable
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+
+post-install:
+# Documentation
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
