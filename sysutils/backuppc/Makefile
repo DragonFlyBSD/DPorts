@@ -2,7 +2,7 @@
 # Date created:				19 Aug 2010
 # Whom:					Alexander Moisseev <moiseev@mezonplus.ru>
 #
-# $FreeBSD: ports/sysutils/backuppc/Makefile,v 1.8 2012/11/17 06:01:25 svnexp Exp $
+# $FreeBSD: ports/sysutils/backuppc/Makefile,v 1.9 2012/12/16 06:16:58 svnexp Exp $
 #
 
 PORTNAME=	backuppc
@@ -19,7 +19,7 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
 NO_BUILD=	yes
 
-USE_PERL5=	5.8.0+
+USE_PERL5=	yes
 USE_RC_SUBR=	backuppc
 
 USERS=		backuppc
