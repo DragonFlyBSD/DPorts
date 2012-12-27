@@ -1,0 +1,5 @@
+/* $FreeBSD: ports/japanese/sj3-lib/files/sj3_freebsd.tmpl.in,v 1.2 2012/11/17 05:58:39 svnexp Exp $ */
+
+SJ3TOP=		%%PREFIX%%
+SJ3DICTDIR=	$(SJ3LIBDIR)/sh3/dict
+SJ3VARRUNDIR=	%%DESTDIR%%$(VARDIR)/run/sj3

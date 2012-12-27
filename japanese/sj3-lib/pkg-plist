@@ -1,0 +1,5 @@
+@comment $FreeBSD: ports/japanese/sj3-lib/pkg-plist,v 1.7 2012/11/17 05:58:39 svnexp Exp $
+include/sj3lib.h
+lib/libsj3lib.a
+lib/libsj3lib.so
+lib/libsj3lib.so.1
