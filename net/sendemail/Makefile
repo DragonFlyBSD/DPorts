@@ -2,12 +2,12 @@
 # Date created:				2005-12-17
 # Whom:			Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
 #
-# $FreeBSD: ports/net/sendemail/Makefile,v 1.11 2012/11/17 06:00:20 svnexp Exp $
+# $FreeBSD: ports/net/sendemail/Makefile,v 1.13 2012/12/12 18:56:06 svnexp Exp $
 #
 
 PORTNAME=	sendEmail
 PORTVERSION=	1.56
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://caspian.dotconf.net/menu/Software/SendEmail/ \
 		http://T32.TecNik93.com/FreeBSD/ports/${PORTNAME}/sources/
@@ -22,10 +22,12 @@ USE_PERL5_RUN=	yes
 PLIST_FILES=	bin/sendEmail
 PORTDOCS=	CHANGELOG README TODO
 
-OPTIONS=	SSL "Enable SSL support" off
+OPTIONS_DEFINE=	SSL
+OPTIONS_DEFINE=	DOCS
+SSL_DESC=	SSL/TLS support for communicating with the SMTP server
 
 .include <bsd.port.pre.mk>
-.if defined(WITH_SSL)
+.if ${PORT_OPTIONS:MSSL}
 RUN_DEPENDS+=	p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL
 RUN_DEPENDS+=	p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay
 .endif
@@ -36,7 +38,7 @@ post-patch:
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_SCRIPT} ${PORTNAME} ${PREFIX}/bin
-.ifndef(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} CHANGELOG README TODO ${DOCSDIR}
 .endif
