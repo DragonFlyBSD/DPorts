@@ -1,12 +1,9 @@
-# New ports collection makefile for:	www/p5-URI-Title
-# Date created:				20 June 2008
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-URI-Title/Makefile,v 1.8 2012/11/17 06:02:54 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: ports/www/p5-URI-Title/Makefile,v 1.9 2012/12/18 11:58:44 svnexp Exp $
 
 PORTNAME=	URI-Title
 PORTVERSION=	1.86
+PORTREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	URI
@@ -27,10 +24,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=	URI::Title.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500905
-RUN_DEPENDS+=	p5-Module-Pluggable>=1.2:${PORTSDIR}/devel/p5-Module-Pluggable
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
