@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Petal
-# Date created:				25 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Petal/Makefile,v 1.11 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: ports/textproc/p5-Petal/Makefile,v 1.12 2012/12/22 17:29:12 svnexp Exp $
 
 PORTNAME=	Petal
-PORTVERSION=	2.20
+PORTVERSION=	2.21
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:NINE
