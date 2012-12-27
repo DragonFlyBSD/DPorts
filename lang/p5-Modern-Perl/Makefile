@@ -2,7 +2,7 @@
 # Date created:		2010-04-03
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/lang/p5-Modern-Perl/Makefile,v 1.3 2012/11/17 05:58:54 svnexp Exp $
+# $FreeBSD: ports/lang/p5-Modern-Perl/Makefile,v 1.4 2012/12/16 06:16:56 svnexp Exp $
 #
 
 PORTNAME=	Modern-Perl
@@ -16,7 +16,6 @@ MAINTAINER=	gslin@gslin.org
 COMMENT=	Enable all of the features of Modern Perl with one command
 
 PERL_MODBUILD=	yes
-USE_PERL5=	5.10.0+
 
 MAN3=		Modern::Perl.3
 
