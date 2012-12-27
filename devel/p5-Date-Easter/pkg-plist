@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Date/Easter.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Date/Easter/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Date/Easter
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Date
+@dirrmtry %%SITE_PERL%%/Date
