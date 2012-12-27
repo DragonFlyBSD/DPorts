@@ -2,7 +2,7 @@
 # Date created:				1 September 2008
 # Whom:	      				Jeremy Chadwick <koitsu@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Markup-Perl/Makefile,v 1.8 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: ports/www/p5-Markup-Perl/Makefile,v 1.9 2012/12/17 12:28:02 svnexp Exp $
 #
 
 PORTNAME=	Markup-Perl
@@ -21,10 +21,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Markup::Perl.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500805
-RUN_DEPENDS=	p5-CGI.pm>=0:${PORTSDIR}/www/p5-CGI.pm
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
