@@ -2,7 +2,7 @@
 # Date created:         May 9 2002
 # Whom:                 Brian Somers <brian@FreeBSD.org>
 #
-# $FreeBSD: ports/net/freeradius2/Makefile,v 1.110 2012/12/07 14:47:46 svnexp Exp $
+# $FreeBSD: ports/net/freeradius2/Makefile,v 1.112 2012/12/19 17:56:02 svnexp Exp $
 #
 # $Id$
 #
@@ -171,7 +171,7 @@ PLIST_SUB+=	FIREBIRD="@comment "
 .endif
 
 # Firebird module is still experimental
-.if ${PORT_OPTIONS:MFIREBIRD} && empty(${PORT_OPTIONS:MEXPERIMENTAL}
+.if ${PORT_OPTIONS:MFIREBIRD} && empty(PORT_OPTIONS:MEXPERIMENTAL)
 EXPM=		yes
 .endif
 
@@ -309,7 +309,7 @@ CONFIGURE_ARGS+=--without-rlm_eap_ikev2 \
 		--without-rlm_sql_sybase \
 		--with-vmps
 
-.if ${ARCH} == amd64
+.if ${ARCH} == x86_64
 CONFIGURE_ARGS+=	--with-pic
 .endif
 
@@ -319,7 +319,7 @@ SUB_LIST+=	RADIUS_USER="${RADIUS_USER}" \
 		RADDB="${PREFIX}/etc/raddb" \
 		LOGDIR="${LOGDIR}" \
 		LIBDIR="${PREFIX}/${FREERADIUS_LIBDIR}"
-SUB_FILES+=	pkg-install pkg-deinstall pkg-message
+SUB_FILES+=	pkg-install pkg-message
 
 MAN1=		radclient.1 radeapclient.1 radlast.1 radtest.1 radwho.1 \
 		radzap.1 smbencrypt.1
