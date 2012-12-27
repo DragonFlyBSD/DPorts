@@ -1,12 +1,9 @@
-# New ports collection makefile for:	ipsumdump
-# Date created:				12.01.2004
-# Whom:					krion@FreeBSD.org
-#
-# $FreeBSD: ports/net/ipsumdump/Makefile,v 1.52 2012/11/17 06:00:03 svnexp Exp $
-#
+# Created by: krion@FreeBSD.org
+# $FreeBSD: ports/net/ipsumdump/Makefile,v 1.54 2012/12/17 02:21:55 svnexp Exp $
 
 PORTNAME=	ipsumdump
 PORTVERSION=	1.82
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.cs.ucla.edu/~kohler/ipsumdump/
 
@@ -22,11 +19,11 @@ MAN1=		${PORTNAME}.1 ipaggcreate.1 ipaggmanip.1
 PORTDOCS=	README
 PLIST_FILES=	bin/ipaggcreate bin/ipsumdump bin/ipaggmanip
 
-OPTIONS=	 IPV6	"IPv6 internet support" off \
+OPTIONS_DEFINE=	IPV6 DOCS
 
-.include  <bsd.port.pre.mk>
+.include  <bsd.port.options.mk>
 
-.if defined(WITH_IPV6)
+.if ${PORT_OPTIONS:MIPV6}
 CONFIGURE_ARGS+=--enable-ipv6
 PLIST_SUB+=	IPV6=""
 .else
@@ -35,15 +32,11 @@ PLIST_SUB+=	IPV6="@comment "
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in README
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
 .endfor
 .endif
 
-.if ${OSVERSION} < 700000
-IGNORE=		not supported
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
