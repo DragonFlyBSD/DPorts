@@ -1,9 +1,5 @@
-# ports collection Makefile for: docear
-# Whom:			Matthias Andree <mandree@FreeBSD.org>
-# Date created:		2012-02-17
-#
-# $FreeBSD: ports/deskutils/docear/Makefile,v 1.10 2012/11/24 11:34:22 svnexp Exp $
-#
+# Created by: Matthias Andree <mandree@FreeBSD.org>
+# $FreeBSD: ports/deskutils/docear/Makefile,v 1.11 2012/12/10 16:59:36 svnexp Exp $
 
 PORTNAME=	docear
 PORTVERSION=	1.0.0.b07
@@ -22,7 +18,7 @@ RUN_DEPENDS=	update-mime-database:${PORTSDIR}/misc/shared-mime-info
 
 USE_JAVA=	yes
 USE_GNOME=	desktopfileutils
-JAVA_VENDOR=	freebsd openjdk bsdjava
+JAVA_VENDOR=	openjdk
 JAVA_VERSION=	1.6
 NO_BUILD=	yes
 JDATADIR=	${JAVASHAREDIR}/${PORTNAME}
