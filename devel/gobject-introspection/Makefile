@@ -2,13 +2,13 @@
 # Date created:				19 July 2009
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gobject-introspection/Makefile,v 1.22 2012/11/17 05:55:46 svnexp Exp $
+# $FreeBSD: ports/devel/gobject-introspection/Makefile,v 1.23 2012/12/10 19:56:30 svnexp Exp $
 #   $MCom: ports/devel/gobject-introspection/Makefile,v 1.39 2011/06/11 19:51:15 mezz Exp $
 #
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	0.10.8
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
