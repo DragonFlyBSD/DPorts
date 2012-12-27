@@ -1,9 +1,4 @@
-# New ports collection makefile for:	XML::Code
-# Date created:		1 June 2008
-# Whom:			Wesley Shields <wxs@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Code/Makefile,v 1.3 2012/11/17 06:02:11 svnexp Exp $
-#
+# $FreeBSD: ports/textproc/p5-XML-Code/Makefile,v 1.4 2012/12/12 18:51:48 svnexp Exp $
 
 PORTNAME=	XML-Code
 PORTVERSION=	0.4
