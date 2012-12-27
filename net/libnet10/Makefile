@@ -29,7 +29,7 @@ MAN3=		libnet${PKGNAMESUFFIX}.3
 
 post-patch:
 	${REINPLACE_CMD} -e 's|bpf0|null|' ${WRKSRC}/configure
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 	find ${WRKDIR} -name '*.[hc]' | xargs ${REINPLACE_CMD} -e 's/long/int/g'
 .endif
 
