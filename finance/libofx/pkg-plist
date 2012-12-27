@@ -1,0 +1,16 @@
+bin/ofx2qif
+bin/ofxconnect
+bin/ofxdump
+include/libofx/libofx.h
+lib/libofx.a
+lib/libofx.la
+lib/libofx.so
+lib/libofx.so.5
+libdata/pkgconfig/libofx.pc
+%%DATADIR%%/dtd/ofc.dtd
+%%DATADIR%%/dtd/ofx160.dtd
+%%DATADIR%%/dtd/ofx201.dtd
+%%DATADIR%%/dtd/opensp.dcl
+@dirrm %%DATADIR%%/dtd
+@dirrm %%DATADIR%%
+@dirrm include/libofx
