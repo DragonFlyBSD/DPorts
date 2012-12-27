@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/japanese/kinput2/pkg-plist,v 1.6 2012/11/17 05:58:36 svnexp Exp $
+bin/kinput2
+lib/X11/app-defaults/Kinput2
+@dirrmtry lib/X11/ccdef
