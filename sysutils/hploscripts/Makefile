@@ -2,7 +2,7 @@
 # Date created:				11 Feb 2010
 # Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/hploscripts/Makefile,v 1.6 2012/11/17 06:01:34 svnexp Exp $
+# $FreeBSD: ports/sysutils/hploscripts/Makefile,v 1.7 2012/12/16 06:16:59 svnexp Exp $
 #
 
 PORTNAME=	hploscripts
@@ -17,7 +17,7 @@ COMMENT=	HP Lights-Out management perl scripts
 BUILD_DEPENDS=	p5-IO-Socket-SSL>=1.19:${PORTSDIR}/security/p5-IO-Socket-SSL
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PERL5=	5.8.0+
+USE_PERL5=	yes
 NO_BUILD=	yes
 
 PORTDOCS=	iLO_perl_xml.pdf linux-LOsamplescripts.txt
