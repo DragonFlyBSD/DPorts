@@ -1,8 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/net/xmlrpc-c-devel/Makefile,v 1.64 2012/11/17 06:00:25 svnexp Exp $
+# $FreeBSD: ports/net/xmlrpc-c-devel/Makefile,v 1.65 2012/12/17 16:28:25 svnexp Exp $
 
 PORTNAME=	xmlrpc-c
-PORTVERSION=	1.31.05
+PORTVERSION=	1.32.99
 CATEGORIES=	net
 MASTER_SITES=	LOCAL/garga/xmlrpc-c
 PKGNAMESUFFIX=	-devel
@@ -20,13 +20,12 @@ CPLUSPLUS_DESC=	 Build xmlrpc-c c++ libs and tools
 
 CONFLICTS=	xmlrpc-epi-0.* xmlrpc-c-[0-9]*
 
+USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
-
-WRKSRC=		${WRKDIR}/advanced
 
 .include <bsd.port.pre.mk>
 
