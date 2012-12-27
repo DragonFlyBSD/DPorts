@@ -1,0 +1,11 @@
+--- boostcpp.jam.intermediate	2012-12-23 14:24:46.367117000 +0100
++++ boostcpp.jam	2012-12-23 14:28:01.607390000 +0100
+@@ -154,7 +154,7 @@
+         # suffixes either. Pgi compilers can not accept library with version
+         # suffix.
+         if $(type) = SHARED_LIB &&
+-          ( ! ( [ $(property-set).get <target-os> ] in windows cygwin darwin aix freebsd ) &&
++          ( ! ( [ $(property-set).get <target-os> ] in windows cygwin darwin aix freebsd bsd ) &&
+             ! ( [ $(property-set).get <toolset> ] in pgi ) )
+         {
+             result = $(result).$(BOOST_VERSION)  ;
