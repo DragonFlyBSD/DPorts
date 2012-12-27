@@ -2,7 +2,7 @@
 # Date created:	   08 April 2002
 # Whom:		   Sergey Skvortsov <skv@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-podlators/Makefile,v 1.36 2012/11/17 06:02:14 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-podlators/Makefile,v 1.37 2012/12/17 08:35:06 svnexp Exp $
 #
 
 PORTNAME=	podlators
@@ -26,10 +26,6 @@ MAN3=		Pod::Man.3 Pod::ParseLink.3 Pod::Text.3 Pod::Text::Color.3 \
 post-patch:
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-RUN_DEPENDS+=	p5-Pod-Simple>=3.06:${PORTSDIR}/textproc/p5-Pod-Simple
-.endif
 
 .if ${PERL_LEVEL} < 501400
 MAN1=		perlpodstyle.1
