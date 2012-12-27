@@ -1,0 +1,68 @@
+# New ports collection makefile for: tenebrae
+# Date created:		14 Mar 2004
+# Whom:			Igor Pokrovsky <tiamat@comset.net>
+#
+# $FreeBSD: ports/games/tenebrae/Makefile,v 1.18 2012/11/17 05:57:54 svnexp Exp $
+#
+
+PORTNAME=	tenebrae
+PORTVERSION=	1.04
+PORTREVISION=	8
+CATEGORIES=	games
+MASTER_SITES=	http://tenebrae.sourceforge.net/downloads/
+DISTFILES=	${PORTNAME}_src${EXTRACT_SUFX} \
+		${PORTNAME}data${EXTRACT_SUFX}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Quake 1 source port with advanced graphics
+
+LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+
+USE_ZIP=	yes
+USE_DOS2UNIX=	yes
+USE_GMAKE=	yes
+USE_XORG=	xxf86dga
+USE_GL=		gl
+USE_SDL=	yes
+
+OPTIONS_DEFINE=	X86_ASM DOCS
+OPTIONS_DEFAULT=	X86_ASM
+X86_ASM_DESC=	Enable use of x86 assembly code
+
+WRKSRC=		${WRKDIR}/${PORTNAME}_0
+BUILD_WRKSRC=	${WRKSRC}/linux
+MAKEFILE=	Makefile.i386linux
+MAKE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}"
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MX86_ASM}
+MAKE_ENV+=	USE_ASM=1
+.endif
+
+post-patch:
+	${REINPLACE_CMD} -e 's|png_set_gray_1_2_4_to_8|png_set_expand_gray_1_2_4_to_8|' \
+	${WRKSRC}/gl_warp.c
+
+pre-build:
+	@cd ${BUILD_WRKSRC} && ${LN} -sf Makefile.i386linux Makefile
+
+do-install:
+	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/release/bin/${PORTNAME} \
+		${PREFIX}/bin
+	@${MKDIR} ${Q1DIR}/${PORTNAME}
+	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}/Pak0.pak ${Q1DIR}/${PORTNAME}
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${TR} -d '\r' <${WRKDIR}/Tenebrae_Readme.txt \
+		>${DOCSDIR}/Tenebrae_Readme.txt
+.endif
+
+post-install:
+	@${ECHO_CMD}
+	@${CAT} ${PKGMESSAGE}
+	@${ECHO_CMD}
+
+.include "${.CURDIR}/../quake-data/Makefile.include"
+
+.include <bsd.port.mk>
