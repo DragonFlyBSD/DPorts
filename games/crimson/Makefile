@@ -1,0 +1,24 @@
+# New ports collection makefile for:	crimson
+# Date created:				3 May 2001
+# Whom:					Jan Jungnickel <jan@jungnickel.com>
+#
+# $FreeBSD: ports/games/crimson/Makefile,v 1.41 2012/11/17 05:57:35 svnexp Exp $
+
+PORTNAME=	crimson
+PORTVERSION=	0.5.3
+PORTREVISION=	3
+CATEGORIES=	games
+MASTER_SITES=	http://crimson.seul.org/files/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Tactical war game in the tradition of Battle Isle
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_SDL=	mixer sdl ttf
+
+MAN6=		crimson.6
+
+NO_LATEST_LINK=	yes
+
+.include <bsd.port.mk>
