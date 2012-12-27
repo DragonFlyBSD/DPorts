@@ -1,0 +1,36 @@
+# New ports collection makefile for:	logstalgia
+# Date created:				13 Oct 2011
+# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
+#
+# $FreeBSD: ports/sysutils/logstalgia/Makefile,v 1.8 2012/12/10 19:24:05 svnexp Exp $
+#
+
+PORTNAME=	logstalgia
+PORTVERSION=	1.0.3
+PORTREVISION=	5
+CATEGORIES=	sysutils www
+MASTER_SITES=	GOOGLE_CODE CRITICAL
+
+MAINTAINER=	ehaupt@FreeBSD.org
+COMMENT=	A website access log visualization tool
+
+LICENSE=	GPLv3
+
+LIB_DEPENDS=	ftgl:${PORTSDIR}/graphics/ftgl \
+		png15:${PORTSDIR}/graphics/png \
+		jpeg.11:${PORTSDIR}/graphics/jpeg \
+		pcre.3:${PORTSDIR}/devel/pcre
+
+GNU_CONFIGURE=	yes
+USE_PKGCONFIG=	build
+USE_SDL=	sdl image
+
+CFLAGS+=	-L/usr/local/lib -I/usr/local/include
+
+MANCOMPRESSED=	yes
+
+MAKE_JOBS_SAFE=	yes
+
+MAN1=		logstalgia.1
+
+.include <bsd.port.mk>
