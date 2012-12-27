@@ -45,7 +45,7 @@ OPTIONS=	LATIN2 "ISO-8859-2 fonts support" off
 CONFIGURE_ARGS+=--enable-latin2
 .endif
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CONFIGURE_ARGS+=--with-pic
 .endif
 
