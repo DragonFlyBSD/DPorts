@@ -1,13 +1,13 @@
 # Created by: Laurent Courty
-# $FreeBSD: ports/astro/gpsbabel/Makefile,v 1.18 2012/11/17 05:54:24 svnexp Exp $
+# $FreeBSD: ports/astro/gpsbabel/Makefile,v 1.19 2012/12/15 23:15:57 svnexp Exp $
 
 PORTNAME=	gpsbabel
-PORTVERSION=	1.4.3
+PORTVERSION=	1.4.4
 CATEGORIES=	astro geography
-MASTER_SITES=	${MASTER_SITE_GENTOO}
-MASTER_SITE_SUBDIR=	distfiles
+MASTER_SITES=	https://secure.ohos.nl/downloads/ \
+		LOCAL/beech
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	dev2@heesakkers.info
 COMMENT=	A GPS file translating tool
 
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
