@@ -1,19 +1,14 @@
-# ex:ts=8
-# Ports collection makefile for:	snappy
-# Date created:				Apr 3 2011
-# Whom:					vanilla@
-#
-# $FreeBSD: ports/archivers/snappy/Makefile,v 1.10 2012/11/17 05:54:23 svnexp Exp $
-#
+# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
+# $FreeBSD: ports/archivers/snappy/Makefile,v 1.11 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	snappy
 PORTVERSION=	1.0.5
 PORTREVISION=	0
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
+MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	vanilla@FreeBSD.org
-COMMENT=	A fast compressor/decompressor library
+COMMENT=	Fast compressor/decompressor library
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
