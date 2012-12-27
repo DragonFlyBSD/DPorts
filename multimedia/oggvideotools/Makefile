@@ -1,0 +1,31 @@
+# Created by: Jille Timmermans (jille@quis.cx)
+# $FreeBSD: ports/multimedia/oggvideotools/Makefile,v 1.9 2012/11/17 05:59:52 svnexp Exp $
+
+PORTNAME=	oggvideotools
+PORTVERSION=	0.8
+PORTREVISION=	5
+CATEGORIES=	multimedia
+MASTER_SITES=	SF
+MASTER_SITE_SUBDIR=	oggvideotools/oggvideotools/${DISTNAME}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A toolbox for manipulating Ogg video files
+
+LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd \
+		ogg:${PORTSDIR}/audio/libogg \
+		theora.0:${PORTSDIR}/multimedia/libtheora \
+		vorbis.4:${PORTSDIR}/audio/libvorbis
+
+USE_SDL=	sdl
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+MAKEFILE=	makefile
+
+.for app in oggSplit oggDump oggJoin oggCut oggCat oggLength oggSlideshow oggThumb oggResize oggSilence oggScroll mkThumbs mkSlideshow
+PLIST_FILES+=	bin/${app}
+.endfor
+.for app in oggResize oggSlideshow oggThumb oggSplit oggJoin oggCut oggCat oggSilence
+MAN1+=	${app}.1
+.endfor
+
+.include <bsd.port.mk>
