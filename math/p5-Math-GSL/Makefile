@@ -2,7 +2,7 @@
 # Date created:				15 September 2003
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Math-GSL/Makefile,v 1.31 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: ports/math/p5-Math-GSL/Makefile,v 1.32 2012/12/17 05:34:40 svnexp Exp $
 #
 
 PORTNAME=	Math-GSL
@@ -83,11 +83,6 @@ MAN3=		Math::GSL.3 \
 
 .if ${ARCH} == "sparc64"
 BROKEN=		Does not compile on sparc64
-.endif
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-version>=0.77:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0.77:${PORTSDIR}/devel/p5-version
 .endif
 
 .include <bsd.port.post.mk>
