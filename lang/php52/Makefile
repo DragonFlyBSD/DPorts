@@ -2,12 +2,12 @@
 # Date created:				17 Apr 2010
 # Whom:					Alex Keda <admin@lissyara.su>
 #
-# $FreeBSD: ports/lang/php52/Makefile,v 1.36 2012/11/25 15:53:56 svnexp Exp $
+# $FreeBSD: ports/lang/php52/Makefile,v 1.37 2012/12/10 19:24:02 svnexp Exp $
 #
 
 PORTNAME=	php52
 PORTVERSION=	5.2.17
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
 MASTER_SITE_SUBDIR=	distributions
