@@ -3,19 +3,19 @@
 # Date created:			Apr 29, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/databases/dbtool/Makefile,v 1.25 2012/11/17 05:55:06 svnexp Exp $
+# $FreeBSD: ports/databases/dbtool/Makefile,v 1.26 2012/12/10 19:23:59 svnexp Exp $
 #
 
 PORTNAME=	dbtool
 PORTVERSION=	1.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://www.daemon.de/idisk/Apps/dbtool/
 
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	Store and retrieve data in a key/value format in a hash database
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 .if defined(WITH_BERKELEY_DB)
 LIB_DEPENDS+=	db3.3:${PORTSDIR}/databases/db3
