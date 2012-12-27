@@ -2,7 +2,7 @@
 # Date created:				Nov 30 2001
 # Whom:	      				Clive Lin <clive@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-DBD-ODBC/Makefile,v 1.43 2012/11/17 05:55:14 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBD-ODBC/Makefile,v 1.44 2012/12/17 08:59:15 svnexp Exp $
 #
 
 PORTNAME=	DBD-ODBC
@@ -49,10 +49,6 @@ MYODBC=		unixodbc
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.90:${PORTSDIR}/devel/p5-Test-Simple
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/my $$myodbc/ s|q{}|"${MYODBC}"|' ${WRKSRC}/Makefile.PL
