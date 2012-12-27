@@ -1,9 +1,9 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: ports/lang/php53/Makefile,v 1.183 2012/11/26 21:39:40 svnexp Exp $
+# $FreeBSD: ports/lang/php53/Makefile,v 1.184 2012/12/10 19:24:02 svnexp Exp $
 
 PORTNAME=	php53
 PORTVERSION=	5.3.19
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
 MASTER_SITE_SUBDIR=	distributions
@@ -19,7 +19,7 @@ MAKE_JOBS_SAFE=	yes
 .if !defined(PKGNAMESUFFIX)
 USE_AUTOTOOLS=	autoconf
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 CONFIGURE_ARGS=	\
 		--with-layout=GNU \
