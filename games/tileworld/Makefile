@@ -1,0 +1,29 @@
+# New ports collection makefile for:    tileworld
+# Date created:         08. Oct 02
+# Whom:                 sec@42.org
+#
+# $FreeBSD: ports/games/tileworld/Makefile,v 1.14 2012/11/17 05:57:54 svnexp Exp $
+#
+
+PORTNAME=	tileworld
+PORTVERSION=	1.3.0
+PORTREVISION=	4
+CATEGORIES=	games
+MASTER_SITES=	http://www.muppetlabs.com/~breadbox/pub/software/tworld/
+DISTNAME=	tworld-${PORTVERSION}
+
+MAINTAINER=	sec@42.org
+COMMENT=	An emulation of the game "Chip's Challenge"
+
+USE_SDL=	sdl
+GNU_CONFIGURE=	YES
+USE_GMAKE=	YES
+ALL_TARGET=	tworld
+DATADIR=	share/tworld
+
+MAN6=		tworld.6
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|make|$${MAKE}|g; s|cp -i|cp|' ${WRKSRC}/Makefile.in
+
+.include <bsd.port.mk>
