@@ -2,7 +2,7 @@
 # Date created:		2011-10-25
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/p5-Marpa-PP/Makefile,v 1.6 2012/11/17 05:58:54 svnexp Exp $
+# $FreeBSD: ports/lang/p5-Marpa-PP/Makefile,v 1.7 2012/12/16 06:16:56 svnexp Exp $
 #
 
 PORTNAME=	Marpa-PP
@@ -24,7 +24,7 @@ BUILD_DEPENDS=	p5-PPI>=1.206:${PORTSDIR}/textproc/p5-PPI \
 TEST_DEPENDS=	p5-Test-Weaken>=3.004000:${PORTSDIR}/devel/p5-Test-Weaken
 
 # PERL_CONFIGURE failed on Perl 5.12.4
-PERL_MODBUILD=	5.10.0+
+PERL_MODBUILD=	yes
 
 MAN3=		Marpa::PP.3 \
 		Marpa::PP::Advanced::Bibliography.3 \
