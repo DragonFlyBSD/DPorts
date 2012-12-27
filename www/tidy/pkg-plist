@@ -1,0 +1,6 @@
+bin/tidy4
+%%PORTDOCS%%%%DOCSDIR%%/Overview.html
+%%PORTDOCS%%%%DOCSDIR%%/grid.gif
+%%PORTDOCS%%%%DOCSDIR%%/release-notes.html
+%%PORTDOCS%%%%DOCSDIR%%/tidy.gif
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
