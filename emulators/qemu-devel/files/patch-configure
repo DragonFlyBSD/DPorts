@@ -1,0 +1,46 @@
+--- a/configure
++++ a/configure
+@@ -154,7 +154,7 @@ bigendian="no"
+ mingw32="no"
+ EXESUF=""
+ prefix="/usr/local"
+-mandir="\${prefix}/share/man"
++mandir="\${prefix}/man"
+ datadir="\${prefix}/share"
+ qemu_docdir="\${prefix}/share/doc/qemu"
+ bindir="\${prefix}/bin"
+@@ -974,6 +974,7 @@ i386-bsd-user \
+ x86_64-bsd-user \
+ sparc-bsd-user \
+ sparc64-bsd-user \
++arm-bsd-user \
+ "
+ fi
+ 
+@@ -2511,15 +2511,18 @@ if compile_prog "" "" ; then
+ fi
+ 
+ # Check if tools are available to build documentation.
++#if test "$docs" != "no" ; then
++#  if has makeinfo && has pod2man; then
++#    docs=yes
++#  else
++#    if test "$docs" = "yes" ; then
++#      feature_not_found "docs"
++#    fi
++#    docs=no
++#  fi
++#fi
+ if test "$docs" != "no" ; then
+-  if has makeinfo && has pod2man; then
+-    docs=yes
+-  else
+-    if test "$docs" = "yes" ; then
+-      feature_not_found "docs"
+-    fi
+-    docs=no
+-  fi
++  docs=yes
+ fi
+ 
+ # Search for bswap_32 function
