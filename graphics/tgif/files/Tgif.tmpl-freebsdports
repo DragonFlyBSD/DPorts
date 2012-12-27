@@ -1,0 +1,16 @@
+XCOMM $FreeBSD: ports/graphics/tgif/files/Tgif.tmpl-freebsdports,v 1.2 2012/11/17 05:58:24 svnexp Exp $
+#ifdef WITH_NLS
+#define IHaveSubdirs
+SUBDIRS=		po
+
+LOCALEDIR=		$(PREFIX)/share/locale
+MOREDEFINES= 		-DUSE_XT_INITIALIZE -DENABLE_NLS
+
+LOCAL_LIBRARIES=	$(XLIB) $(XTOOLLIB)
+EXTRA_INCLUDES+=	-I$(LOCALBASE)/include
+EXTRA_LIBRARIES+=	-L$(LOCALBASE)/lib -lintl
+#endif /* WITH_NLS */
+
+#ifdef WITH_A4SIZE
+MOREDEFINES+=		-DA4PAPER
+#endif /* WITH_A4SIZE */
