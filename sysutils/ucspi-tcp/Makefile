@@ -58,7 +58,7 @@ BROKEN=	SSL and LIMITS options cannot coexist, please choose one of them
 .endif
 
 # Restrict optimization to -O - -O2 causes problems at least on amd64
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CFLAGS+=	-O
 .endif
 
