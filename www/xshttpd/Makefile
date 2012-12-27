@@ -2,12 +2,12 @@
 # Date created:				29 June 2005
 # Whom:					Ed Schouten <ed@fxq.nl>
 #
-# $FreeBSD: ports/www/xshttpd/Makefile,v 1.30 2012/11/17 06:03:13 svnexp Exp $
+# $FreeBSD: ports/www/xshttpd/Makefile,v 1.31 2012/12/10 19:24:06 svnexp Exp $
 #
 
 PORTNAME=	xshttpd
 DISTVERSION=	3.6g01
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www ipv6
 MASTER_SITES=	ftp://ftp.stack.nl/pub/xs-httpd/release/ \
 		ftp://mud.stack.nl/pub/xs-httpd/release/
