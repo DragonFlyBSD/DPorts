@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Term-UI
-# Date created:				31 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Term-UI/Makefile,v 1.12 2012/11/17 05:56:31 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: ports/devel/p5-Term-UI/Makefile,v 1.14 2012/12/20 09:01:07 svnexp Exp $
 
 PORTNAME=	Term-UI
-PORTVERSION=	0.30
+PORTVERSION=	0.32
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -18,15 +14,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Term::UI.3 Term::UI::History.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Locale-Maketext-Simple>=0:${PORTSDIR}/devel/p5-Locale-Maketext-Simple \
-		p5-Log-Message-Simple>=0:${PORTSDIR}/devel/p5-Log-Message-Simple \
-		p5-Params-Check>=0:${PORTSDIR}/devel/p5-Params-Check
-RUN_DEPENDS+=	p5-Locale-Maketext-Simple>=0:${PORTSDIR}/devel/p5-Locale-Maketext-Simple \
-		p5-Log-Message-Simple>=0:${PORTSDIR}/devel/p5-Log-Message-Simple \
-		p5-Params-Check>=0:${PORTSDIR}/devel/p5-Params-Check
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
