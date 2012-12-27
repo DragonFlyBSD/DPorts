@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/dns/ddclient/files/ddclient_force.in,v 1.2 2012/11/17 05:57:08 svnexp Exp $
+#
+
+# If there is a global system configuration file, suck it in.
+#
+if [ -r /etc/defaults/periodic.conf ]
+then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+case "$daily_ddclient_force_enable" in
+	[Yy][Ee][Ss])
+		echo
+		echo 'Forcing ddclient update:'
+
+		out=`%%PREFIX%%/sbin/ddclient -force`
+		echo "$out"
+		rc=0
+		;;
+	*)
+		rc=0
+		;;
+esac
+
+exit $rc
