@@ -2,7 +2,7 @@
 # Date created:	   2 july 2003
 # Whom:		   Mathieu Arnold <m@absolight.net>
 #
-# $FreeBSD: ports/textproc/p5-Pod-Simple/Makefile,v 1.36 2012/11/17 06:02:07 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Pod-Simple/Makefile,v 1.37 2012/12/17 08:35:06 svnexp Exp $
 #
 
 PORTNAME=	Pod-Simple
@@ -44,11 +44,4 @@ MAN3=		Pod::Simple.3 \
 		Pod::Simple::XHTML.3 \
 		Pod::Simple::XMLOutStream.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS=	p5-Pod-Escapes>=1.04:${PORTSDIR}/textproc/p5-Pod-Escapes
-BUILD_DEPENDS=	p5-Pod-Escapes>=1.04:${PORTSDIR}/textproc/p5-Pod-Escapes
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
