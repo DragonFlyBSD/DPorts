@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/biology/p5-Bio-GFF3/Makefile,v 1.12 2012/11/17 05:54:52 svnexp Exp $
+# $FreeBSD: ports/biology/p5-Bio-GFF3/Makefile,v 1.13 2012/12/16 04:25:40 svnexp Exp $
 
 PORTNAME=	Bio-GFF3
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	biology perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
