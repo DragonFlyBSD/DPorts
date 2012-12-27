@@ -1,8 +1,8 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: ports/security/p5-Digest-SHA/Makefile,v 1.28 2012/11/26 12:43:38 svnexp Exp $
+# $FreeBSD: ports/security/p5-Digest-SHA/Makefile,v 1.31 2012/12/17 11:02:48 svnexp Exp $
 
 PORTNAME=	Digest-SHA
-PORTVERSION=	5.74
+PORTVERSION=	5.80
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,18 +20,10 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Digest::SHA.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} >= 501000
+# XXX:az - pkg-plist
 PLIST_SUB+=	EXE_FILES="@comment "
-.else
-PLIST_SUB+=	EXE_FILES=""
-MAN1=		shasum.1
-.endif
 
 post-patch:
-.if ${PERL_LEVEL} >= 501000
 	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
