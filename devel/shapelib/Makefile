@@ -37,7 +37,7 @@ PROJ=		-DNO_PROJ4
 .include <bsd.port.pre.mk>
 
 # Ref: /usr/share/mk/bsd.endian.mk
-.if ${ARCH} == "amd64" || ${ARCH} == "arm" || ${ARCH} == "i386" || ${ARCH} == "ia64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "arm" || ${ARCH} == "i386" || ${ARCH} == "ia64"
 ENDIAN=		-D_LITTLE_ENDIAN
 .else
 ENDIAN=		-D_BIG_ENDIAN	# mips*eb, powerpc, powerpc64 and sparc
