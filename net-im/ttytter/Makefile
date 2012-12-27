@@ -2,7 +2,7 @@
 # Date created:		21 March 2009
 # Whom:			Julian C. Dunn <jdunn@aquezada.com>
 #
-# $FreeBSD: ports/net-im/ttytter/Makefile,v 1.27 2012/11/17 06:00:30 svnexp Exp $
+# $FreeBSD: ports/net-im/ttytter/Makefile,v 1.28 2012/12/16 06:16:58 svnexp Exp $
 
 PORTNAME=	ttytter
 PORTVERSION=	2.0.04
@@ -18,7 +18,7 @@ RUN_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	5.8.6+
+USE_PERL5_RUN=	yes
 
 OPTIONS_DEFINE=	READLINE RLTTYTTER
 OPTIONS_DEFAULT=READLINE
