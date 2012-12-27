@@ -2,7 +2,7 @@
 # Date created: 			30 November 2002
 # Whom: 				David Le Brun <david@dyn-ns.net>
 #
-# $FreeBSD: ports/audio/gnupod/Makefile,v 1.34 2012/11/17 05:54:33 svnexp Exp $
+# $FreeBSD: ports/audio/gnupod/Makefile,v 1.35 2012/12/16 06:16:53 svnexp Exp $
 #
 
 PORTNAME=	gnupod
@@ -30,7 +30,7 @@ MAN1=		gnupod_addsong.pl.1 gnupod_check.pl.1 gnupod_INIT.pl.1 \
 		tunes2pod.pl.1
 MANCOMPRESSED=	yes
 
-USE_PERL5=	5.8.0+
+USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
 
