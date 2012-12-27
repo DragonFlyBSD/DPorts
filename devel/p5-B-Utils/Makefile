@@ -2,7 +2,7 @@
 # Date created:				31 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-B-Utils/Makefile,v 1.20 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: ports/devel/p5-B-Utils/Makefile,v 1.21 2012/12/17 15:16:53 svnexp Exp $
 #
 
 PORTNAME=	B-Utils
@@ -24,10 +24,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		B::Utils.3 B::Utils::OP.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-ExtUtils-CBuilder>=0:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
