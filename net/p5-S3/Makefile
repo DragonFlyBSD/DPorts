@@ -2,7 +2,7 @@
 # Date created:		2007-04-30
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-S3/Makefile,v 1.8 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: ports/net/p5-S3/Makefile,v 1.9 2012/12/17 15:43:22 svnexp Exp $
 #
 
 PORTNAME=	S3
@@ -31,10 +31,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/S3.pm ${PREFIX}/${SITE_PERL_REL}
 	${INSTALL_SCRIPT} ${WRKSRC}/s3-*.pl ${PREFIX}/bin
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
