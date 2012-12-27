@@ -1,0 +1,80 @@
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: ports/math/miracl/Makefile,v 1.25 2012/12/12 02:38:22 svnexp Exp $
+
+PORTNAME=	miracl
+PORTVERSION=	5.6
+PORTEPOCH=	1
+CATEGORIES=	math
+MASTER_SITES=	http://mirror.shatow.net/freebsd/${PORTNAME}/ \
+		${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	jase
+
+MAINTAINER=	bdrewery@FreeBSD.org
+COMMENT=	Multiprecision Integer and Rational Arithmetic C/C++ Library
+
+LICENSE=	AGPLv3 COMMERCIAL
+LICENSE_COMB=	dual
+LICENSE_NAME_COMMERCIAL=	Commericial use license to not be bound by AGPLv3
+LICENSE_TEXT_COMMERCIAL=	License available from CertiVox for commercial use and
+LICENSE_TEXT_COMMERCIAL+=	to not be bound by the terms of the AGPLv3. Visit
+LICENSE_TEXT_COMMERCIAL+=	http://certivox.com/index.php/solutions/miracl-crypto-sdk/
+LICENSE_TEXT_COMMERCIAL+=	for more details.
+LICENSE_FILE=	${FILESDIR}/LICENSE
+LICENSE_PERMS_COMMERCIAL=	dist-mirror dist-sell pkg-mirror pkg-sell no-auto-accept
+
+ONLY_FOR_ARCHS=	i386 amd64
+
+USE_ZIP=	yes
+USE_LDCONFIG=	yes
+
+EXTRACT_BEFORE_ARGS=	-j -aa -L -q
+EXTRACT_AFTER_ARGS=	-d ${WRKSRC}
+
+PLIST_FILES=	lib/libmiracl.a \
+		include/miracl.h include/mirdef.h
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "i386"
+BUILDCMD=	linux
+.elif ${ARCH} == "x86_64"
+BUILDCMD=	linux64
+.endif
+
+post-patch:
+# C{C,XX} safeness
+# CFLAGS safeness
+.if ${ARCH} == "i386"
+	@${REINPLACE_CMD} -E \
+		-e 's|gcc|${CC}|' \
+		-e 's|g\+\+|${CXX}|' \
+		-e 's|-O2|${CFLAGS}|' \
+		${WRKSRC}/${BUILDCMD}
+.else
+	@${REINPLACE_CMD} -E \
+		-e 's|gcc|${CC}|' \
+		-e 's|g\+\+|${CXX}|' \
+		-e 's|-O2|${CFLAGS} -fPIC|' \
+		${WRKSRC}/${BUILDCMD}
+.endif
+# Don't error when files not found
+# Fix mrmuldv.cc not existing
+	@${REINPLACE_CMD} -E \
+		-e 's|^rm |${RM} -f |' \
+		-e 's|^cp mrmuldv\.cc mrmuldv\.c|${CP} mrmuldv.gcc mrmuldv.c|' \
+		${WRKSRC}/${BUILDCMD}
+
+do-build:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} -ve ./${BUILDCMD}
+
+do-install:
+# lib
+	@${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.a \
+		${PREFIX}/lib/lib${PORTNAME}.a
+# headers
+	@${INSTALL_DATA} ${WRKSRC}/miracl.h \
+		${PREFIX}/include/miracl.h
+	@${INSTALL_DATA} ${WRKSRC}/mirdef.h \
+		${PREFIX}/include/mirdef.h
+
+.include <bsd.port.post.mk>
