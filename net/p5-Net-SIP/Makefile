@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Net-SIP
-# Date created:		2007-03-01
-# Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-#
-# $FreeBSD: ports/net/p5-Net-SIP/Makefile,v 1.32 2012/11/17 06:00:11 svnexp Exp $
-#
+# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
+# $FreeBSD: ports/net/p5-Net-SIP/Makefile,v 1.33 2012/12/19 07:51:43 svnexp Exp $
 
 PORTNAME=	Net-SIP
-PORTVERSION=	0.67
+PORTVERSION=	0.68
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
