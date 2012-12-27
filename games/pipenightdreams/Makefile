@@ -1,0 +1,37 @@
+# New ports collection makefile for:	pipenightdreams
+# Date created:			Apr 12, 2001
+# Whom:				Mark Pulford <mark@kyne.com.au>
+#
+# $FreeBSD: ports/games/pipenightdreams/Makefile,v 1.26 2012/11/17 05:57:49 svnexp Exp $
+#
+
+PORTNAME=	pipenightdreams
+PORTVERSION=	0.10.0
+PORTREVISION=	11
+CATEGORIES=	games
+MASTER_SITES=	http://www.libsdl.org/projects/pipenightdreams/packages/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A puzzle game similar to PipeMania
+
+USE_SDL=	image sdl
+GNU_CONFIGURE=	yes
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+
+MAN6=		pipenightdreams.6
+
+.include <bsd.port.pre.mk>
+
+post-patch:
+	${REINPLACE_CMD} 's|"SDL/SDL|"SDL|g ; s|<SDL/SDL|<SDL|g; \
+		s|SDL_LIBSS|SDL_LIBS|g; s|datadir/games|datadir|;' \
+		${WRKSRC}/configure
+	${FIND} ${WRKSRC} -name Makefile.in | \
+		${XARGS} ${REINPLACE_CMD} 's|/games/|/|g; \
+			s/^pipenightdreams_LDADD.+//g;'
+	${REINPLACE_CMD} "s|/usr/share/games|${LOCALBASE}/share|g" \
+		${WRKSRC}/src/main.cpp
+
+.include <bsd.port.post.mk>
