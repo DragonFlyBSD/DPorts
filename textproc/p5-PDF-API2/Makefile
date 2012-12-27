@@ -3,7 +3,7 @@
 # Date created:			Feb 2, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/textproc/p5-PDF-API2/Makefile,v 1.57 2012/11/17 06:02:06 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-PDF-API2/Makefile,v 1.58 2012/12/17 06:36:02 svnexp Exp $
 #
 
 PORTNAME=	PDF-API2
@@ -62,11 +62,4 @@ MAN3=	PDF::API2.3 \
 	PDF::API2::Resource::XObject::Image::TIFF.3 \
 	PDF::API2::Util.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-BUILD_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
