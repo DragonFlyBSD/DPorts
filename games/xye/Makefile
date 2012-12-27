@@ -1,0 +1,29 @@
+# New ports collection makefile for: xye
+# Date created:        3 May 2006
+# Whom:                Robert Gogolok <gogo@cs.uni-sb.de>
+#
+# $FreeBSD: ports/games/xye/Makefile,v 1.18 2012/11/17 05:57:59 svnexp Exp $
+#
+
+PORTNAME=	xye
+PORTVERSION=	0.9.1
+PORTREVISION=	6
+CATEGORIES=	games
+MASTER_SITES=	SF
+
+MAINTAINER=	gogo@cs.uni-sb.de
+COMMENT=	A puzzle game for X
+
+USE_SDL=	sdl image ttf
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-docdir=${PREFIX}/share/doc
+USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
+
+.ifdef NOPORTDOCS
+post-patch:
+	@${REINPLACE_CMD} '/install-data-am:/s/install-doceDATA//' \
+		${WRKSRC}/Makefile.in
+.endif
+
+.include <bsd.port.mk>
