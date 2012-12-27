@@ -1,0 +1,42 @@
+# ports collection makefile for:	Mird 1.0.7
+# Date created:				07 November 2001
+# Whom:					Xavier Beaudouin <kiwi@oav.net>
+#
+# $FreeBSD: ports/databases/mird/Makefile,v 1.18 2012/11/17 05:55:10 svnexp Exp $
+#
+
+PORTNAME=	mird
+PORTVERSION=	1.0.7
+PORTREVISION=	3
+CATEGORIES=	databases
+MASTER_SITES=	ftp://ftp.oav.net/pkg_freebsd/distfiles/ \
+		http://grendel.firewall.com/caudium-pkg/ \
+		http://www.mirar.org/mird/
+DISTNAME=	Mird-${PORTVERSION}
+
+MAINTAINER=	kiwi@oav.net
+COMMENT=	A free database library with transaction support
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+USE_AUTOTOOLS=	autoconf:env
+USE_GCC=	any
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--without-debug
+USE_LDCONFIG=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e 's,CFLAGS=,CFLAGS+=,' ${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e 's,-O,,g' ${WRKSRC}/src/configure
+
+post-install:
+	${STRIP_CMD} ${PREFIX}/lib/libmird.so.1
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "sparc64"
+BROKEN=		Does not compile on sparc64
+.endif
+
+.include <bsd.port.post.mk>
