@@ -1,8 +1,9 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: ports/net/yaz/Makefile,v 1.71 2012/12/09 17:52:56 svnexp Exp $
+# $FreeBSD: ports/net/yaz/Makefile,v 1.72 2012/12/18 23:19:36 svnexp Exp $
 
 PORTNAME=	yaz
 PORTVERSION=	4.2.47
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yaz/
 
