@@ -2,11 +2,11 @@
 # Date created:		2012-07-03
 # Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
 #
-# $FreeBSD: ports/emulators/p5-Acme-6502/Makefile,v 1.2 2012/11/17 05:57:22 svnexp Exp $
+# $FreeBSD: ports/emulators/p5-Acme-6502/Makefile,v 1.3 2012/12/10 19:17:12 svnexp Exp $
 #
 
 PORTNAME=	Acme-6502
-PORTVERSION=	0.76
+PORTVERSION=	0.77
 CATEGORIES=	emulators perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
