@@ -2,12 +2,12 @@
 # Date created:				15 June 2000
 # Whom:					Jesse McConnell <jesse@cylant.com>
 #
-# $FreeBSD: ports/devel/entity/Makefile,v 1.25 2012/11/17 05:55:42 svnexp Exp $
+# $FreeBSD: ports/devel/entity/Makefile,v 1.26 2012/12/10 19:23:59 svnexp Exp $
 #
 
 PORTNAME=	entity
 PORTVERSION=	0.7.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/Old%20Entity%20Versions
 
