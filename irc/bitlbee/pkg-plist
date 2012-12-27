@@ -1,0 +1,5 @@
+sbin/bitlbee
+%%DATADIR%%/help.txt
+@dirrm %%DATADIR%%
+@dirrmtry etc/bitlbee
+@exec mkdir -p %D/etc/bitlbee
