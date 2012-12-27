@@ -1,12 +1,9 @@
-# New ports collection Makefile for:	liblrdf
-# Date created:				26 April 2003
-# Whom:					Tilman Linneweh <arved@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/liblrdf/Makefile,v 1.28 2012/11/17 06:02:01 svnexp Exp $
-#
+# Created by: Tilman Linneweh <arved@FreeBSD.org>
+# $FreeBSD: ports/textproc/liblrdf/Makefile,v 1.29 2012/12/20 20:08:23 svnexp Exp $
 
 PORTNAME=	liblrdf
 PORTVERSION=	0.5.0
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	GENTOO/distfiles
 
@@ -14,13 +11,18 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for manipulating RDF files describing LADSPA plugins
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
-LIB_DEPENDS=	raptor2:${PORTSDIR}/textproc/raptor2
+LIB_DEPENDS=	icuuc:${PORTSDIR}/devel/icu \
+		yajl:${PORTSDIR}/devel/yajl \
+		curl:${PORTSDIR}/ftp/curl \
+		raptor2:${PORTSDIR}/textproc/raptor2
 
 USE_AUTOTOOLS=	libtoolize automake autoconf aclocal
 ACLOCAL_ARGS=	-I${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USE_PKGCONFIG=	build
+USE_ICONV=	yes
+USE_GNOME=	gnomehack libxml2 libxslt
 GNOME_MAKEFILEIN=	Makefile.am
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
