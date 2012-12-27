@@ -1,8 +1,8 @@
 # Created by: Mark Murray <markm@FreeBSD.org>
-# $FreeBSD: ports/security/p5-Crypt-CBC/Makefile,v 1.31 2012/11/19 10:02:32 svnexp Exp $
+# $FreeBSD: ports/security/p5-Crypt-CBC/Makefile,v 1.32 2012/12/18 09:41:55 svnexp Exp $
 
 PORTNAME=	Crypt-CBC
-PORTVERSION=	2.31
+PORTVERSION=	2.32
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
