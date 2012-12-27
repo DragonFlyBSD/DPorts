@@ -2,11 +2,12 @@
 # Date created:				Tue Jan  4 11:45:29 PST 2000
 # Whom:					Cy Schubert (Cy.Schubert@uumail.gov.bc.ca)
 #
-# $FreeBSD: ports/security/aide/Makefile,v 1.33 2012/11/17 06:01:00 svnexp Exp $
+# $FreeBSD: ports/security/aide/Makefile,v 1.34 2012/12/12 20:42:48 svnexp Exp $
 #
 
 PORTNAME=	aide
 PORTVERSION=	0.15.1
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	SF \
 		http://www.cs.tut.fi/~rammer/
