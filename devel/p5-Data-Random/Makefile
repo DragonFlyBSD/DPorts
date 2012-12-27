@@ -2,7 +2,7 @@
 # Date created:				2004-07-07
 # Whom:					Anton Berezin <tobez@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Data-Random/Makefile,v 1.12 2012/11/17 05:56:10 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Data-Random/Makefile,v 1.13 2012/12/17 15:16:53 svnexp Exp $
 #
 
 PORTNAME=	Data-Random
@@ -40,10 +40,4 @@ BUILD_DEPENDS+=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD
 RUN_DEPENDS+=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
