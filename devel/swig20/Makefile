@@ -1,8 +1,9 @@
 # Created by: jkh
-# $FreeBSD: ports/devel/swig20/Makefile,v 1.98 2012/11/17 05:57:04 svnexp Exp $
+# $FreeBSD: ports/devel/swig20/Makefile,v 1.99 2012/12/10 19:24:00 svnexp Exp $
 
 PORTNAME=	swig
 PORTVERSION=	2.0.8
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
