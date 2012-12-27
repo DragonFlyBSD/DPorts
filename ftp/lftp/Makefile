@@ -2,7 +2,7 @@
 # Date created:				11 September 1997
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD: ports/ftp/lftp/Makefile,v 1.172 2012/11/17 05:57:29 svnexp Exp $
+# $FreeBSD: ports/ftp/lftp/Makefile,v 1.173 2012/12/12 08:15:41 svnexp Exp $
 #
 
 PORTNAME=	lftp
@@ -38,15 +38,15 @@ PORTDOCS=	AUTHORS BUGS ChangeLog FAQ FEATURES INSTALL \
 		MIRRORS NEWS README README.debug-levels README.modules \
 		THANKS TODO
 
-OPTIONS_DEFINE=	SSL NLS
-OPTIONS_SINGLE=	SSL
-OPTIONS_SINGLE_SSL=	OPENSSL GNUTLS
+OPTIONS_DEFINE=	NLS
+OPTIONS_RADIO=	SSL
+OPTIONS_RADIO_SSL=	OPENSSL GNUTLS
 OPTIONS_DEFAULT=	SSL OPENSSL NLS
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
-.include "${PORTSDIR}/Mk/bsd.openssl.mk"
+USE_OPENSSL=	yes
 CONFIGURE_ARGS+=	--with-openssl
 .else
 CONFIGURE_ARGS+=	--without-openssl
@@ -83,4 +83,4 @@ post-install:
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
