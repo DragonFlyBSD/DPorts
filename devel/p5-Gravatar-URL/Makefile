@@ -2,7 +2,7 @@
 # Date created: 23 December 2009
 # Whom: andrey@kostenko.name
 #
-# $FreeBSD: ports/devel/p5-Gravatar-URL/Makefile,v 1.9 2012/11/17 05:56:18 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Gravatar-URL/Makefile,v 1.10 2012/12/17 14:42:33 svnexp Exp $
 #
 
 PORTNAME=	Gravatar-URL
@@ -25,11 +25,4 @@ PERL_MODBUILD=	yes
 
 MAN3=		Gravatar::URL.3 Libravatar::URL.3 Unicornify::URL.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
-RUN_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
