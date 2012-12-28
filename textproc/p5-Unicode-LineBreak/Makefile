@@ -2,7 +2,7 @@
 # Date created:				05 February 2011
 # Whom:					Olivier Girard <Olivier.Girard@univ-angers.fr>
 #
-# $FreeBSD: ports/textproc/p5-Unicode-LineBreak/Makefile,v 1.3 2012/11/17 06:02:11 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Unicode-LineBreak/Makefile,v 1.4 2012/12/16 06:16:59 svnexp Exp $
 #
 
 PORTNAME=	Unicode-LineBreak
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	p5-MIME-Charset>=0:${PORTSDIR}/mail/p5-MIME-Charset
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
-USE_PERL5=	5.8.0+
 
 CONFIGURE_ARGS+=	--with-bundled-sombok \
 			--disable-libthai
