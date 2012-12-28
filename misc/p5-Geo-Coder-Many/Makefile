@@ -2,7 +2,7 @@
 # Date created:		2011-10-13
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/p5-Geo-Coder-Many/Makefile,v 1.5 2012/11/17 05:59:43 svnexp Exp $
+# $FreeBSD: ports/misc/p5-Geo-Coder-Many/Makefile,v 1.6 2012/12/16 06:16:57 svnexp Exp $
 #
 
 PORTNAME=	Geo-Coder-Many
@@ -34,7 +34,7 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	5.10.0+
+PERL_CONFIGURE=	yes
 
 MAN3=		Geo::Coder::Many.3 \
 		Geo::Coder::Many::Bing.3 \
