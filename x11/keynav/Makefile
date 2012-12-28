@@ -1,9 +1,4 @@
-# New ports collection makefile for:   keynav
-# Date created:        29 June 2007
-# Whom:                Wesley Shields <wxs@atarininja.org>
-#
-# $FreeBSD: ports/x11/keynav/Makefile,v 1.20 2012/11/17 06:03:16 svnexp Exp $
-#
+# $FreeBSD: ports/x11/keynav/Makefile,v 1.21 2012/12/12 18:51:49 svnexp Exp $
 
 PORTNAME=	keynav
 DISTVERSION=	0.20110708.0
