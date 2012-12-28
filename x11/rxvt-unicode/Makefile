@@ -1,5 +1,5 @@
-# Whom:                 gpalmer@FreeBSD.org
-# $FreeBSD: ports/x11/rxvt-unicode/Makefile,v 1.145 2012/12/08 10:24:54 svnexp Exp $
+# Created by: gpalmer@FreeBSD.org
+# $FreeBSD: ports/x11/rxvt-unicode/Makefile,v 1.146 2012/12/10 18:33:57 svnexp Exp $
 
 PORTNAME=	rxvt-unicode
 PORTVERSION=	9.15
