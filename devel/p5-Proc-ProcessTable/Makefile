@@ -1,12 +1,8 @@
-# New ports collection makefile for:    Proc-ProcessTable
-# Date created:                         Tue Jun 26 12:46:19 EDT 2001
-# Whom:                                 Michael Johnson <ahze@ahze.net>
-#
-# $FreeBSD: ports/devel/p5-Proc-ProcessTable/Makefile,v 1.22 2012/11/17 05:56:27 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@ahze.net>
+# $FreeBSD: ports/devel/p5-Proc-ProcessTable/Makefile,v 1.23 2012/12/14 09:59:12 svnexp Exp $
 
 PORTNAME=	Proc-ProcessTable
-PORTVERSION=	0.45
+PORTVERSION=	0.46
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
