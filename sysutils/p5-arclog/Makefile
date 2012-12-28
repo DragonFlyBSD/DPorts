@@ -2,7 +2,7 @@
 # Date created:				2008/05/18
 # Whom:					chinsan
 #
-# $FreeBSD: ports/sysutils/p5-arclog/Makefile,v 1.8 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: ports/sysutils/p5-arclog/Makefile,v 1.9 2012/12/17 15:43:23 svnexp Exp $
 #
 
 PORTNAME=	arclog
@@ -29,10 +29,4 @@ PLIST_FILES=	bin/arclog \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/arclog/.packlist
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/arclog
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
