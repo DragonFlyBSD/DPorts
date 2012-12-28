@@ -1,13 +1,8 @@
-# New ports collection makefile for:	p5-Geo-Point
-# Date created:      			07 January 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/graphics/p5-Geo-Point/Makefile,v 1.9 2012/11/17 05:58:16 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: ports/graphics/p5-Geo-Point/Makefile,v 1.10 2012/12/22 07:17:52 svnexp Exp $
 
 PORTNAME=	Geo-Point
-PORTVERSION=	0.93
-PORTREVISION=	1
+PORTVERSION=	0.94
 CATEGORIES=	graphics devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
