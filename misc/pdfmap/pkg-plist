@@ -1,0 +1,12 @@
+@comment $FreeBSD: ports/misc/pdfmap/pkg-plist,v 1.4 2012/11/17 05:59:43 svnexp Exp $
+bin/pdfmap
+%%PYTHON_SITELIBDIR%%/pdfmap/__init__.py
+%%PYTHON_SITELIBDIR%%/pdfmap/__init__.pyc
+%%PYTHON_SITELIBDIR%%/pdfmap/__init__.pyo
+%%PYTHON_SITELIBDIR%%/pdfmap/maptool.py
+%%PYTHON_SITELIBDIR%%/pdfmap/maptool.pyc
+%%PYTHON_SITELIBDIR%%/pdfmap/maptool.pyo
+%%PYTHON_SITELIBDIR%%/pdfmap/version.py
+%%PYTHON_SITELIBDIR%%/pdfmap/version.pyc
+%%PYTHON_SITELIBDIR%%/pdfmap/version.pyo
+@dirrm %%PYTHON_SITELIBDIR%%/pdfmap
