@@ -2,7 +2,7 @@
 # Date created:				13 August 2001
 # Whom:					Pete Fritchman <petef@databits.net>
 #
-# $FreeBSD: ports/textproc/p5-URI-Find/Makefile,v 1.22 2012/11/17 06:02:11 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-URI-Find/Makefile,v 1.23 2012/12/17 06:36:02 svnexp Exp $
 #
 
 PORTNAME=	URI-Find
@@ -23,10 +23,4 @@ MAN1=		urifind.1
 MAN3=		URI::Find.3 \
 		URI::Find::Schemeless.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
