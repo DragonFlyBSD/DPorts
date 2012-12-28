@@ -2,7 +2,7 @@
 # Date created:		2012-04-03
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-KinoSearch1/Makefile,v 1.2 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-KinoSearch1/Makefile,v 1.3 2012/12/17 08:35:06 svnexp Exp $
 #
 
 PORTNAME=	KinoSearch1
@@ -58,11 +58,4 @@ MAN3=	KinoSearch1.3 \
 	KinoSearch1::Store::InvIndex.3 \
 	KinoSearch1::Store::RAMInvIndex.3 \
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-BUILD_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
