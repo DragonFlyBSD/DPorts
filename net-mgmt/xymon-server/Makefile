@@ -1,8 +1,8 @@
-# $FreeBSD: ports/net-mgmt/xymon-server/Makefile,v 1.34 2012/11/24 01:56:24 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/xymon-server/Makefile,v 1.35 2012/12/10 19:24:04 svnexp Exp $
 
 PORTNAME=	xymon
 PORTVERSION=	4.3.10
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	SF/xymon/Xymon/${PORTVERSION}
 PKGNAMESUFFIX=	-server${PKGNAMESUFFIX2}
