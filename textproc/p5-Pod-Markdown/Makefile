@@ -2,7 +2,7 @@
 # Date created:			18 November, 2011
 # Whom:				Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-Pod-Markdown/Makefile,v 1.5 2012/11/17 06:02:07 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Pod-Markdown/Makefile,v 1.6 2012/12/17 06:36:02 svnexp Exp $
 #
 
 PORTNAME=	Pod-Markdown
@@ -28,12 +28,4 @@ PERL_CONFIGURE=	yes
 MAN1=		pod2markdown.1
 MAN3=		Pod::Markdown.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
