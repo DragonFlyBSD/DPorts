@@ -1,0 +1,11 @@
+--- configure.intermediate	2012-12-28 13:20:04.000000000 +0100
++++ configure	2012-12-28 13:20:23.000000000 +0100
+@@ -7909,7 +7909,7 @@
+ 		;;
+ 	    esac
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="${CC} -shared"
