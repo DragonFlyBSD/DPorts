@@ -2,7 +2,7 @@
 # Date created:		2011-10-25
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-Marpa-HTML/Makefile,v 1.8 2012/11/17 06:02:06 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Marpa-HTML/Makefile,v 1.9 2012/12/16 06:16:59 svnexp Exp $
 #
 
 PORTNAME=	Marpa-HTML
@@ -23,7 +23,7 @@ RUN_DEPENDS=	p5-HTML-Parser>=3.64:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-Marpa-PP>=0.012:${PORTSDIR}/lang/p5-Marpa-PP \
 		p5-Marpa-XS>=0.026:${PORTSDIR}/lang/p5-Marpa-XS
 
-PERL_CONFIGURE=	5.10.0+
+PERL_CONFIGURE=	yes
 
 MAN1=		html_fmt.1 \
 		html_score.1
