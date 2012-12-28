@@ -2,7 +2,7 @@
 # Date created:				2008-01-25
 # Whom:					Darren Pilgrim <ports.maintainer@evilphi.com>
 #
-# $FreeBSD: ports/mail/postfix-policyd-spf-perl/Makefile,v 1.3 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: ports/mail/postfix-policyd-spf-perl/Makefile,v 1.4 2012/12/16 06:16:56 svnexp Exp $
 #
 
 PORTNAME=	postfix-policyd-spf-perl
@@ -17,7 +17,7 @@ RUN_DEPENDS=	p5-Mail-SPF>=0:${PORTSDIR}/mail/p5-Mail-SPF \
 		p5-NetAddr-IP>=4:${PORTSDIR}/net-mgmt/p5-NetAddr-IP \
 		p5-version>=0:${PORTSDIR}/devel/p5-version
 
-USE_PERL5_RUN=	5.6.0+
+USE_PERL5_RUN=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=	sbin/postfix-policyd-spf-perl
