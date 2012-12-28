@@ -1,0 +1,2 @@
+#!/bin/sh
+cd %%PREFIX%%/share/thudboard && %%PYTHON_CMD%% thud.pyc $*
