@@ -2,7 +2,7 @@
 # Date created:				2004-07-08
 # Whom:					Anton Berezin <tobez@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-WWW-Mechanize-Shell/Makefile,v 1.22 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: ports/www/p5-WWW-Mechanize-Shell/Makefile,v 1.23 2012/12/17 12:28:02 svnexp Exp $
 #
 
 PORTNAME=	WWW-Mechanize-Shell
@@ -52,11 +52,4 @@ post-install:
 	@${ECHO_MSG} "===> Documentation installed in ${EXAMPLESDIR}."
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
