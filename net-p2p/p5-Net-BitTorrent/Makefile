@@ -2,7 +2,7 @@
 # Date created:		2008-04-12
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net-p2p/p5-Net-BitTorrent/Makefile,v 1.14 2012/11/17 06:00:40 svnexp Exp $
+# $FreeBSD: ports/net-p2p/p5-Net-BitTorrent/Makefile,v 1.15 2012/12/17 08:59:20 svnexp Exp $
 #
 
 PORTNAME=	Net-BitTorrent
@@ -38,14 +38,5 @@ MAN3=		Net::BitTorrent.3 \
 		Net::BitTorrent::Util.3 \
 		Net::BitTorrent::Version.3
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.mk>
 
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Digest-SHA>=5.45:${PORTSDIR}/security/p5-Digest-SHA \
-		p5-Module-Build>=0.3:${PORTSDIR}/devel/p5-Module-Build \
-		p5-version>=0.74:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-Digest-SHA>=5.45:${PORTSDIR}/security/p5-Digest-SHA \
-		p5-version>=0.74:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
