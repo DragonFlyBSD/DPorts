@@ -2,7 +2,7 @@
 # Date created:				04 Jun 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-WWW-Mechanize-Pluggable/Makefile,v 1.15 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: ports/www/p5-WWW-Mechanize-Pluggable/Makefile,v 1.16 2012/12/17 10:27:26 svnexp Exp $
 #
 
 PORTNAME=	WWW-Mechanize-Pluggable
@@ -33,10 +33,4 @@ MAN3=		WWW::Mechanize::Pluggable.3 \
 		WWW::Mechanize::Plugin::Cookbook.3 \
 		WWW::Mechanize::Plugin::HelloWorld.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500809
-RUN_DEPENDS+=	p5-Module-Pluggable>=0:${PORTSDIR}/devel/p5-Module-Pluggable
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
