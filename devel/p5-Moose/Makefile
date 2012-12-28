@@ -2,7 +2,7 @@
 # Date created:				14 Apr 2006
 # Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Moose/Makefile,v 1.112 2012/11/17 05:56:22 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Moose/Makefile,v 1.113 2012/12/17 14:13:37 svnexp Exp $
 #
 
 PORTNAME=	Moose
@@ -195,13 +195,7 @@ post-extract:
 post-install:
 	@${CAT} ${PKGDIR}/pkg-message
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.else
 # p5-Test-DependentModules is only available on 5.10.1+ (currently)
 TEST_DEPENDS+=	p5-Test-DependentModules>=0.13:${PORTSDIR}/devel/p5-Test-DependentModules
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
