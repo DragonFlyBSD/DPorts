@@ -2,7 +2,7 @@
 # Date created:		2007-10-27
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-Response-Encoding/Makefile,v 1.8 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: ports/www/p5-HTTP-Response-Encoding/Makefile,v 1.9 2012/12/17 12:20:07 svnexp Exp $
 #
 
 PORTNAME=	HTTP-Response-Encoding
@@ -26,10 +26,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		HTTP::Response::Encoding.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500805
-RUN_DEPENDS+=	p5-Encode>=2:${PORTSDIR}/converters/p5-Encode
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
