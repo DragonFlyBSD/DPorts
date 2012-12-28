@@ -2,7 +2,7 @@
 # Date created:	   			Oct 23 2003 \
 # Whom:		   			clsung@dragon2.net
 #
-# $FreeBSD: ports/net/p5-Net-Amazon/Makefile,v 1.40 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: ports/net/p5-Net-Amazon/Makefile,v 1.41 2012/12/17 15:43:22 svnexp Exp $
 #
 
 PORTNAME=	Net-Amazon
@@ -27,14 +27,4 @@ PERL_CONFIGURE=	yes
 
 .include "Makefile.man"
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500805
-RUN_DEPENDS+=	p5-Time-HiRes>=0:${PORTSDIR}/devel/p5-Time-HiRes
-.endif
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-Digest-SHA>=5.47:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
