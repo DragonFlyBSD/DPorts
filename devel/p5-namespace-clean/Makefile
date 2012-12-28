@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-namespace-clean/Makefile,v 1.18 2012/12/05 19:07:27 svnexp Exp $
+# $FreeBSD: ports/devel/p5-namespace-clean/Makefile,v 1.19 2012/12/17 13:43:44 svnexp Exp $
 
 PORTNAME=	namespace-clean
 PORTVERSION=	0.24
@@ -23,10 +23,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		namespace::clean.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
