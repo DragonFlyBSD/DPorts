@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-DBIx-Class/Makefile,v 1.77 2012/11/17 22:27:06 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBIx-Class/Makefile,v 1.78 2012/12/17 09:41:16 svnexp Exp $
 
 PORTNAME=	DBIx-Class
 PORTVERSION=	0.08204
@@ -189,15 +189,6 @@ RUN_DEPENDS+=	p5-SQL-Translator>=0.09.004:${PORTSDIR}/databases/p5-SQL-Translato
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-File-Temp>=0.22:${PORTSDIR}/devel/p5-File-Temp
-RUN_DEPENDS+=	p5-File-Path>=2.07:${PORTSDIR}/devel/p5-File-Path
-.endif
-
-.if ${PERL_LEVEL} < 501200
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
 
 #.if ${PERL_LEVEL} < 501600
 #BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.59:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
