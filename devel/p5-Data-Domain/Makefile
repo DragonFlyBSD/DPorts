@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Data-Domain/Makefile,v 1.5 2012/12/04 17:54:58 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Data-Domain/Makefile,v 1.6 2012/12/16 06:16:54 svnexp Exp $
 
 PORTNAME=	Data-Domain
 PORTVERSION=	1.03
@@ -21,7 +21,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1.04:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_MODBUILD=	5.10.1+
+PERL_MODBUILD=	yes
 
 MAN3=		Data::Domain.3
 
