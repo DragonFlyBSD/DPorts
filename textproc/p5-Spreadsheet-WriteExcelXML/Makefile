@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Spreadsheet::WriteExcelXML
-# Date created:				7 May 2004
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Spreadsheet-WriteExcelXML/Makefile,v 1.11 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: ports/textproc/p5-Spreadsheet-WriteExcelXML/Makefile,v 1.12 2012/12/16 16:03:37 svnexp Exp $
 
 PORTNAME=	Spreadsheet-WriteExcelXML
-PORTVERSION=	0.13
+PORTVERSION=	0.14
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JMCNAMARA
