@@ -1,0 +1,20 @@
+# $FreeBSD: ports/textproc/nltk/Makefile,v 1.24 2012/11/17 06:02:03 svnexp Exp $
+
+PORTNAME=	nltk
+PORTVERSION=	2.0.2
+PORTEPOCH=	2
+CATEGORIES=	textproc python
+MASTER_SITES=	CHEESESHOP
+
+MAINTAINER=	clsung@FreeBSD.org
+COMMENT=	Natural language toolkit written in python
+
+LICENSE=	AL2
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>=0:${PORTSDIR}/x11-toolkits/py-tkinter \
+		${PYTHON_PKGNAMEPREFIX}yaml>=3.09:${PORTSDIR}/devel/py-yaml
+
+USE_PYTHON=	-2.7
+USE_PYDISTUTILS=	easy_install
+
+.include <bsd.port.mk>
