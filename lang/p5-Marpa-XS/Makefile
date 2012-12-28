@@ -2,7 +2,7 @@
 # Date created:		2011-10-25
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/p5-Marpa-XS/Makefile,v 1.12 2012/11/17 05:58:54 svnexp Exp $
+# $FreeBSD: ports/lang/p5-Marpa-XS/Makefile,v 1.13 2012/12/16 06:16:56 svnexp Exp $
 #
 
 PORTNAME=	Marpa-XS
@@ -27,7 +27,7 @@ RUN_DEPENDS=	p5-ExtUtils-PkgConfig>=0:${PORTSDIR}/devel/p5-ExtUtils-PkgConfig \
 
 TEST_DEPENDS=	p5-Test-Weaken>=3.004000:${PORTSDIR}/devel/p5-Test-Weaken
 
-PERL_CONFIGURE=	5.10.0+
+PERL_CONFIGURE=	yes
 
 MAN3=		Marpa::XS.3 \
 		Marpa::XS::Advanced::Bibliography.3 \
