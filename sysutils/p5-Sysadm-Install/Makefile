@@ -1,12 +1,9 @@
-# New ports collection makefile for:	p5-Algorithm-Bucketizer
-# Date created:				28 Nov 2006
-# Whom:				Christopher Boumenot <boumenot@gmail.com>
-#
-# $FreeBSD: ports/sysutils/p5-Sysadm-Install/Makefile,v 1.19 2012/11/17 06:01:40 svnexp Exp $
+# Created by: Christopher Boumenot <boumenot@gmail.com>
+# $FreeBSD: ports/sysutils/p5-Sysadm-Install/Makefile,v 1.20 2012/12/18 14:30:03 svnexp Exp $
 #
 
 PORTNAME=	Sysadm-Install
-PORTVERSION=	0.40
+PORTVERSION=	0.41
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MSCHILLI
