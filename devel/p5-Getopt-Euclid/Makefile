@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: ports/devel/p5-Getopt-Euclid/Makefile,v 1.11 2012/12/05 09:29:40 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Getopt-Euclid/Makefile,v 1.13 2012/12/21 10:49:43 svnexp Exp $
 
 PORTNAME=	Getopt-Euclid
-PORTVERSION=	0.3.8
+PORTVERSION=	0.3.9
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -17,11 +17,4 @@ PERL_MODBUILD=	yes
 
 MAN3=		Getopt::Euclid.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500900
-BUILD_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
