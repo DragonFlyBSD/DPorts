@@ -2,7 +2,7 @@
 # Date created:				15 December 2004
 # Whom:					Anton Berezin <tobez@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Params-Check/Makefile,v 1.14 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Params-Check/Makefile,v 1.15 2012/12/17 12:44:00 svnexp Exp $
 #
 
 PORTNAME=	Params-Check
@@ -29,11 +29,4 @@ post-install:
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Locale-Maketext-Simple>=0:${PORTSDIR}/devel/p5-Locale-Maketext-Simple
-RUN_DEPENDS+=	p5-Locale-Maketext-Simple>=0:${PORTSDIR}/devel/p5-Locale-Maketext-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
