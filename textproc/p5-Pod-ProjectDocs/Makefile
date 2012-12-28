@@ -2,7 +2,7 @@
 # Date created:	   31 August 2005
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/textproc/p5-Pod-ProjectDocs/Makefile,v 1.17 2012/11/17 06:02:07 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Pod-ProjectDocs/Makefile,v 1.18 2012/12/17 06:36:02 svnexp Exp $
 #
 
 PORTNAME=	Pod-ProjectDocs
@@ -32,11 +32,4 @@ PERL_CONFIGURE=	yes
 MAN1=		pod2projdocs.1
 MAN3=		Pod::ProjectDocs.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500808
-BUILD_DEPENDS+=	p5-Pod-Parser>=1.32:${PORTSDIR}/textproc/p5-Pod-Parser
-RUN_DEPENDS+=	p5-Pod-Parser>=1.32:${PORTSDIR}/textproc/p5-Pod-Parser
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
