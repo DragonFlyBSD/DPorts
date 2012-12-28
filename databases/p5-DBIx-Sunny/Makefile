@@ -2,7 +2,7 @@
 # Date created:				18 October 2011
 # Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-DBIx-Sunny/Makefile,v 1.10 2012/12/10 09:42:44 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBIx-Sunny/Makefile,v 1.11 2012/12/17 08:59:15 svnexp Exp $
 #
 
 PORTNAME=	DBIx-Sunny
@@ -33,11 +33,6 @@ MAN3=		DBIx::Sunny.3 \
 		DBIx::Sunny::Schema.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
 
 .if ${PERL_LEVEL} < 501400
 TEST_DEPENDS+=	p5-Test-Simple>=0.96:${PORTSDIR}/devel/p5-Test-Simple
