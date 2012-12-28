@@ -2,7 +2,7 @@
 # Date created:	   18 Feb 2003
 # Whom:		   Dominic Mitchell <dom@happygiraffe.net>
 #
-# $FreeBSD: ports/databases/p5-SQL-Abstract/Makefile,v 1.35 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: ports/databases/p5-SQL-Abstract/Makefile,v 1.36 2012/12/17 09:41:16 svnexp Exp $
 #
 
 PORTNAME=	SQL-Abstract
@@ -31,10 +31,4 @@ MAN3=		DBIx::Class::Storage::Debug::PrettyPrint.3 \
 		SQL::Abstract::Test.3 \
 		SQL::Abstract::Tree.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.92:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
