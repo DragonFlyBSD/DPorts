@@ -2,7 +2,7 @@
 # Date created:		2006-10-23
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/devel/p5-Class-Measure/Makefile,v 1.6 2012/11/17 05:56:07 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Class-Measure/Makefile,v 1.7 2012/12/17 15:43:18 svnexp Exp $
 #
 
 PORTNAME=	Class-Measure
@@ -24,10 +24,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Class::Measure.3 Class::Measure::Length.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.82:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
