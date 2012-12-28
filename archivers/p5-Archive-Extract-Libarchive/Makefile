@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Archive-Extract-Libarchive
-# Date created:		2011-10-23
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/archivers/p5-Archive-Extract-Libarchive/Makefile,v 1.7 2012/11/17 05:54:21 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: ports/archivers/p5-Archive-Extract-Libarchive/Makefile,v 1.8 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	Archive-Extract-Libarchive
 PORTVERSION=	0.38
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A generic archive extracting mechanism (using libarchive)
+COMMENT=	Generic archive extracting mechanism (using libarchive)
 
 BUILD_DEPENDS=	p5-Object-Tiny>=0:${PORTSDIR}/devel/p5-Object-Tiny
 RUN_DEPENDS=	p5-Object-Tiny>=0:${PORTSDIR}/devel/p5-Object-Tiny
