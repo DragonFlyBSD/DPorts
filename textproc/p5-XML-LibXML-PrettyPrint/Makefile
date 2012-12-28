@@ -2,7 +2,7 @@
 # Date created:		2011-10-21
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-XML-LibXML-PrettyPrint/Makefile,v 1.6 2012/11/17 06:02:13 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-XML-LibXML-PrettyPrint/Makefile,v 1.7 2012/12/16 06:16:59 svnexp Exp $
 #
 
 PORTNAME=	XML-LibXML-PrettyPrint
@@ -23,7 +23,7 @@ RUN_DEPENDS=	p5-Pragmatic>=0:${PORTSDIR}/devel/p5-Pragmatic \
 
 TEST_DEPENDS=	p5-Test-Warn>=0.20:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	5.10.0+
+PERL_CONFIGURE=	yes
 
 MAN3=		XML::LibXML::PrettyPrint.3
 
