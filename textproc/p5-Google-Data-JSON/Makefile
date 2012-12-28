@@ -2,7 +2,7 @@
 # Date created:				2007/07/28
 # Whom:					chinsan
 #
-# $FreeBSD: ports/textproc/p5-Google-Data-JSON/Makefile,v 1.10 2012/11/17 06:02:04 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Google-Data-JSON/Makefile,v 1.11 2012/12/17 08:35:06 svnexp Exp $
 #
 
 PORTNAME=	Google-Data-JSON
@@ -33,11 +33,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Google::Data::JSON.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
