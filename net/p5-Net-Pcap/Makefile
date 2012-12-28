@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Net-Pcap
-# Date created:		10 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/net/p5-Net-Pcap/Makefile,v 1.23 2012/11/17 06:00:11 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: ports/net/p5-Net-Pcap/Makefile,v 1.25 2012/12/22 18:13:50 svnexp Exp $
 
 PORTNAME=	Net-Pcap
-PORTVERSION=	0.16
+PORTVERSION=	0.17
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -23,10 +19,4 @@ PERL_CONFIGURE=	yes
 MAN1=		pcapinfo.1
 MAN3=		Net::Pcap.3
 
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} >= 800000
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-t__03-openlive.t
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
