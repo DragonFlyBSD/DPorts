@@ -44,4 +44,5 @@ lib/X11/AuErrorDB
 lib/libaudio.a
 lib/libaudio.so
 lib/libaudio.so.2
+lib/libaudio.so.2.4
 @dirrm include/audio
