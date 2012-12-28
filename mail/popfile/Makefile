@@ -2,7 +2,7 @@
 # Date created:		22 Feb 2004
 # Whom:			matusita@FreeBSD.org
 #
-# $FreeBSD: ports/mail/popfile/Makefile,v 1.26 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: ports/mail/popfile/Makefile,v 1.27 2012/12/16 06:16:56 svnexp Exp $
 #
 
 PORTNAME=	popfile
@@ -25,7 +25,7 @@ NO_WRKSUBDIR=	yes
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
 USE_ZIP=	yes
-USE_PERL5_RUN=	5.8.0+
+USE_PERL5_RUN=	yes
 
 START_SCRIPTS_SUB= DATADIR=${DATADIR}
 
