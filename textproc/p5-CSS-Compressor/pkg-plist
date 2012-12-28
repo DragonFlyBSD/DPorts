@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/textproc/p5-CSS-Compressor/pkg-plist,v 1.1 2012/12/19 13:08:02 svnexp Exp $
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/CSS/Compressor/.packlist
+%%SITE_PERL%%/CSS/Compressor.pm
+@dirrmtry %%SITE_PERL%%/CSS
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/CSS/Compressor
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/CSS
