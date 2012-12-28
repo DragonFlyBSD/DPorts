@@ -2,7 +2,7 @@
 # Date created:				Mon Sep 12
 # Whom:					Erwin Lansing <erwin@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-Inline/Makefile,v 1.31 2012/11/17 05:56:32 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Test-Inline/Makefile,v 1.32 2012/12/17 15:02:09 svnexp Exp $
 #
 
 PORTNAME=	Test-Inline
@@ -41,10 +41,4 @@ MAN3=	Test::Inline.3 \
 	Test::Inline::Script.3 \
 	Test::Inline::Section.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500905
-RUN_DEPENDS+=	p5-Scalar-List-Utils>=1.19:${PORTSDIR}/lang/p5-Scalar-List-Utils
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
