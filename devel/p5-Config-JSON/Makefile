@@ -2,7 +2,7 @@
 # Date created:		2008-07-31
 # Whom:			Tomoyuki Sakurai <cherry@trombik.org>
 #
-# $FreeBSD: ports/devel/p5-Config-JSON/Makefile,v 1.13 2012/11/17 05:56:08 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Config-JSON/Makefile,v 1.14 2012/12/17 15:43:18 svnexp Exp $
 #
 
 PORTNAME=	Config-JSON
@@ -25,10 +25,4 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 PERL_CONFIGURE=	Yes
 MAN3=		Config::JSON.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500905
-RUN_DEPENDS+=	p5-version>=0.72.03:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
