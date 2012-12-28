@@ -2,7 +2,7 @@
 # Date created:				30 July 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-URI-Fetch/Makefile,v 1.20 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: ports/www/p5-URI-Fetch/Makefile,v 1.21 2012/12/17 12:28:02 svnexp Exp $
 #
 
 PORTNAME=	URI-Fetch
@@ -32,12 +32,6 @@ MAN3=	URI::Fetch.3 \
 	URI::Fetch::Response.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MZLIB}
-. if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-. endif
-.endif
 
 .if ${PORT_OPTIONS:MCACHE}
 RUN_DEPENDS+=	p5-Cache>=0:${PORTSDIR}/devel/p5-Cache
