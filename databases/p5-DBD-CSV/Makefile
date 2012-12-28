@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/p5-DBD-CSV/Makefile,v 1.40 2012/11/17 05:55:13 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBD-CSV/Makefile,v 1.41 2012/12/17 08:59:15 svnexp Exp $
 
 PORTNAME=	DBD-CSV
 PORTVERSION=	0.36
@@ -24,10 +24,4 @@ PERL_CONFIGURE=	yes
 MAN3=		Bundle::DBD::CSV.3 \
 		DBD::CSV.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.90:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
