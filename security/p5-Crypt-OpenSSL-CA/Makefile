@@ -2,7 +2,7 @@
 # Date created:		2011/08/25
 # Whom:			Mosconi <mosconi.rmg@gmail.com>
 #
-# $FreeBSD: ports/security/p5-Crypt-OpenSSL-CA/Makefile,v 1.6 2012/11/17 06:01:11 svnexp Exp $
+# $FreeBSD: ports/security/p5-Crypt-OpenSSL-CA/Makefile,v 1.7 2012/12/17 09:58:11 svnexp Exp $
 #
 
 PORTNAME=	Crypt-OpenSSL-CA
@@ -34,10 +34,4 @@ MAN3=		Crypt::OpenSSL::CA.3 \
 		Crypt::OpenSSL::CA::Inline::C.3 \
 		Crypt::OpenSSL::CA::Resources.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Module-Build>=0.2900:${PORTSDIR}/devel/p5-Module-Build
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
