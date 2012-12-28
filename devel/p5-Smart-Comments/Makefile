@@ -2,7 +2,7 @@
 # Date created:				24 May 2005
 # Whom:					Aaron Dalton <aaron@daltons.ca>
 #
-# $FreeBSD: ports/devel/p5-Smart-Comments/Makefile,v 1.12 2012/11/17 05:56:29 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Smart-Comments/Makefile,v 1.13 2012/12/17 14:13:37 svnexp Exp $
 #
 
 PORTNAME=	Smart-Comments
@@ -20,14 +20,4 @@ PERL_MODBUILD=	yes
 
 MAN3=		Smart::Comments.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500900
-RUN_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.if ${PERL_LEVEL} < 500905
-RUN_DEPENDS+=	p5-Text-Balanced>=2:${PORTSDIR}/textproc/p5-Text-Balanced
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
