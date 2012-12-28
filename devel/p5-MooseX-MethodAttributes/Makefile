@@ -2,7 +2,7 @@
 # Date created:	   13 May 2009
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-MooseX-MethodAttributes/Makefile,v 1.20 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: ports/devel/p5-MooseX-MethodAttributes/Makefile,v 1.21 2012/12/17 15:02:09 svnexp Exp $
 #
 
 PORTNAME=	MooseX-MethodAttributes
@@ -42,10 +42,4 @@ MAN3=		MooseX::MethodAttributes.3 \
 		MooseX::MethodAttributes::Role::Meta::Role::Application.3 \
 		MooseX::MethodAttributes::Role::Meta::Role::Application::Summation.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
