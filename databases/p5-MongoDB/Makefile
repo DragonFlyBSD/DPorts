@@ -2,7 +2,7 @@
 # Date created:				23 Dec, 2009
 # Whom:	      				Wen Heping <wen@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-MongoDB/Makefile,v 1.20 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: ports/databases/p5-MongoDB/Makefile,v 1.21 2012/12/17 09:41:16 svnexp Exp $
 #
 
 PORTNAME=	MongoDB
@@ -53,10 +53,4 @@ MAN3=		MongoDB.3 \
 		MongoDB::Timestamp.3 \
 		MongoDB::Tutorial.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500809
-TEST_DEPENDS+=	p5-File-Temp>=0.17:${PORTSDIR}/devel/p5-File-Temp
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
