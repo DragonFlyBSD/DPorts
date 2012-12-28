@@ -2,7 +2,7 @@
 # Date created:		2006-08-09
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/devel/p5-Contextual-Return/Makefile,v 1.10 2012/11/17 05:56:09 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Contextual-Return/Makefile,v 1.11 2012/12/17 15:02:09 svnexp Exp $
 #
 
 PORTNAME=	Contextual-Return
@@ -23,11 +23,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Contextual::Return.3 Contextual::Return::Failure.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
