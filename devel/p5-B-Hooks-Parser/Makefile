@@ -2,7 +2,7 @@
 # Date created:		2009-03-11
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/devel/p5-B-Hooks-Parser/Makefile,v 1.9 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: ports/devel/p5-B-Hooks-Parser/Makefile,v 1.10 2012/12/17 12:44:00 svnexp Exp $
 #
 
 PORTNAME=	B-Hooks-Parser
@@ -24,11 +24,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		B::Hooks::Parser.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
