@@ -3,11 +3,12 @@
 # Date created:			Nov 22, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/textproc/rasqal/Makefile,v 1.45 2012/11/17 06:02:18 svnexp Exp $
+# $FreeBSD: ports/textproc/rasqal/Makefile,v 1.46 2012/12/10 19:24:05 svnexp Exp $
 #
 
 PORTNAME=	rasqal
 PORTVERSION=	0.9.29
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/ \
 		SF/librdf/${PORTNAME}/${PORTVERSION}
@@ -15,8 +16,12 @@ MASTER_SITES=	http://download.librdf.org/source/ \
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	A high-level interface for RDF
 
-LIB_DEPENDS=	raptor2.0:${PORTSDIR}/textproc/raptor2 \
-		pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	icuuc.50:${PORTSDIR}/devel/icu \
+		raptor2.0:${PORTSDIR}/textproc/raptor2 \
+		pcre.3:${PORTSDIR}/devel/pcre \
+		xml2.5:${PORTSDIR}/textproc/libxml2 \
+		xslt.2:${PORTSDIR}/textproc/libxslt \
+		yajl.2:${PORTSDIR}/devel/yajl
 
 USE_GNOME=	gnomehack lthack pkgconfig
 USE_OPENSSL=	yes
