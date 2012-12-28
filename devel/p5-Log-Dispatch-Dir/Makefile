@@ -2,7 +2,7 @@
 # Date created:		2011-07-21
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Log-Dispatch-Dir/Makefile,v 1.6 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Log-Dispatch-Dir/Makefile,v 1.7 2012/12/16 06:16:54 svnexp Exp $
 #
 
 PORTNAME=	Log-Dispatch-Dir
@@ -25,7 +25,7 @@ RUN_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 		p5-Probe-Perl>=0:${PORTSDIR}/sysutils/p5-Probe-Perl \
 		p5-Taint-Util>=0:${PORTSDIR}/devel/p5-Taint-Util
 
-PERL_MODBUILD=	5.10.0+
+PERL_MODBUILD=	yes
 
 MAN3=		Log::Dispatch::Dir.3
 
