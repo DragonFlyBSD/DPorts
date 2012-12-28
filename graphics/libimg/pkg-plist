@@ -1,0 +1,21 @@
+%%DIR%%/pkgIndex.tcl
+%%DIR%%/demo.tcl
+%%DIR%%/tkv.tcl
+%%DIR%%/imgmsg.tcl
+lib/%%SHLIB_NAME%%
+lib/%%SHLIB_LINK%%
+%%DIR%%/msgs/de.msg
+%%DIR%%/msgs/el.msg
+%%DIR%%/msgs/en.msg
+%%DIR%%/msgs/es.msg
+%%DIR%%/msgs/fr.msg
+%%DIR%%/msgs/ja.msg
+%%DIR%%/msgs/nl.msg
+@dirrm %%DIR%%/msgs
+@dirrm %%DIR%%
+%%PORTDOCS%%%%DOCSDIR%%/default.css
+%%PORTDOCS%%%%DOCSDIR%%/formats.htm
+%%PORTDOCS%%%%DOCSDIR%%/index.htm
+%%PORTDOCS%%%%DOCSDIR%%/install.htm
+%%PORTDOCS%%%%DOCSDIR%%/library.htm
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
