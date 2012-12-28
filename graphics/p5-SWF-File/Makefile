@@ -2,7 +2,7 @@
 # Date created:	   20 May 2003
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/graphics/p5-SWF-File/Makefile,v 1.27 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: ports/graphics/p5-SWF-File/Makefile,v 1.28 2012/12/17 06:20:46 svnexp Exp $
 #
 
 PORTNAME=	SWF-File
@@ -32,11 +32,4 @@ post-patch:
 post-configure:
 	@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 --lax/;' ${WRKSRC}/Makefile
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-BUILD_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
