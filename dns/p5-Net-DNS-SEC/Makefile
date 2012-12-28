@@ -2,7 +2,7 @@
 # Date created:			21 July 2002
 # Whom:				Kimura Fuyuki <fuyuki@hadaly.org>
 #
-# $FreeBSD: ports/dns/p5-Net-DNS-SEC/Makefile,v 1.27 2012/11/17 05:57:10 svnexp Exp $
+# $FreeBSD: ports/dns/p5-Net-DNS-SEC/Makefile,v 1.28 2012/12/17 05:50:12 svnexp Exp $
 #
 
 PORTNAME=	Net-DNS-SEC
@@ -33,10 +33,4 @@ MAN3=		Net::DNS::Keyset.3 Net::DNS::RR::DS.3 Net::DNS::RR::KEY.3 \
 		Net::DNS::RR::NSEC.3 Net::DNS::RR::DNSKEY.3 \
 		Net::DNS::RR::NSEC3.3 Net::DNS::RR::NSEC3PARAM.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-Digest-SHA>=5.23:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
