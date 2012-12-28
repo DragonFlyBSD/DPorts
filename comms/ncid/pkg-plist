@@ -1,0 +1,34 @@
+sbin/ncidd
+sbin/ncidsip
+sbin/sip2ncid
+bin/ncid
+bin/ncid2ncid
+bin/cidalias
+bin/cidcall
+bin/cidupdate
+bin/yac2ncid
+etc/logrotate.d/ncid
+@dirrm etc/logrotate.d
+etc/rc.d/ncid-initmodem
+etc/rc.d/ncid-page
+etc/rc.d/ncid-samba
+etc/rc.d/ncid-yac
+etc/rc.d/ncidsip
+etc/rc.d/yac2ncid
+etc/rc.d/ncid-mythtv
+etc/rc.d/ncid-speak
+etc/rc.d/ncidd
+etc/rc.d/ncid2ncid
+etc/rc.d/sip2ncid
+%%DATADIR%%/ncid-initmodem
+%%DATADIR%%/ncidrotate
+%%DATADIR%%/ncid-kpopup
+%%DATADIR%%/ncid-mythtv
+%%DATADIR%%/ncid-page
+%%DATADIR%%/ncid-samba
+%%DATADIR%%/ncid-skel
+%%DATADIR%%/ncid-speak
+%%DATADIR%%/ncid-yac
+@dirrm %%DATADIR%%
+share/pixmaps/ncid/ncid.gif
+@dirrmtry share/pixmaps/ncid
