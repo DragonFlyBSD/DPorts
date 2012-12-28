@@ -2,7 +2,7 @@
 # Date created:				2007/02/14
 # Whom:					chinsan
 #
-# $FreeBSD: ports/devel/p5-List-Rotation-Cycle/Makefile,v 1.10 2012/11/17 05:56:20 svnexp Exp $
+# $FreeBSD: ports/devel/p5-List-Rotation-Cycle/Makefile,v 1.11 2012/12/17 15:02:09 svnexp Exp $
 #
 
 PORTNAME=	List-Rotation-Cycle
@@ -20,11 +20,4 @@ MAN3=		List::Rotation::Cycle.3
 
 PERL_CONFIGURE=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500703
-BUILD_DEPENDS+=	p5-Memoize>=0:${PORTSDIR}/devel/p5-Memoize
-RUN_DEPENDS+=	p5-Memoize>=0:${PORTSDIR}/devel/p5-Memoize
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
