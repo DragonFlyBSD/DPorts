@@ -2,7 +2,7 @@
 # Date created:		2007-06-10
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/devel/p5-IO-Async/Makefile,v 1.40 2012/12/06 09:51:42 svnexp Exp $
+# $FreeBSD: ports/devel/p5-IO-Async/Makefile,v 1.41 2012/12/16 06:16:54 svnexp Exp $
 #
 
 PORTNAME=	IO-Async
@@ -27,7 +27,7 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Refcount>=0:${PORTSDIR}/devel/p5-Test-Refcount
 
-PERL_CONFIGURE=	5.10.0+
+PERL_CONFIGURE=	yes
 
 MAN3=		IO::Async.3 \
 		IO::Async::Channel.3 \
