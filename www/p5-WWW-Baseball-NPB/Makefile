@@ -2,7 +2,7 @@
 # Date created:				2006/07/21
 # Whom:					chinsan <chinsan.tw@gmail.com>
 #
-# $FreeBSD: ports/www/p5-WWW-Baseball-NPB/Makefile,v 1.9 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: ports/www/p5-WWW-Baseball-NPB/Makefile,v 1.10 2012/12/17 12:28:02 svnexp Exp $
 #
 
 PORTNAME=	WWW-Baseball-NPB
@@ -21,10 +21,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		WWW::Baseball::NPB.3 WWW::Baseball::NPB::Game.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500805
-BUILD_DEPENDS+=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
