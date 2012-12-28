@@ -2,7 +2,7 @@
 # Date created:		2011-04-05
 # Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-Prophet/Makefile,v 1.8 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: ports/databases/p5-Prophet/Makefile,v 1.9 2012/12/17 09:41:16 svnexp Exp $
 #
 
 PORTNAME=	Prophet
@@ -95,11 +95,4 @@ MAN3=	Prophet::Web::Result.3 \
 	Prophet::Replica::sqlite.3 \
 	Prophet::Meta::Types.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
-RUN_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
