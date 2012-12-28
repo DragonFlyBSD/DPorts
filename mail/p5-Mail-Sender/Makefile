@@ -1,8 +1,8 @@
 # Created by: Ben Smithurst <ben@FreeBSD.org>
-# $FreeBSD: ports/mail/p5-Mail-Sender/Makefile,v 1.19 2012/11/17 17:25:54 svnexp Exp $
+# $FreeBSD: ports/mail/p5-Mail-Sender/Makefile,v 1.20 2012/12/15 18:19:42 svnexp Exp $
 
 PORTNAME=	Mail-Sender
-PORTVERSION=	0.8.21
+PORTVERSION=	0.8.22
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
