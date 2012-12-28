@@ -1,0 +1,9 @@
+$FreeBSD: ports/textproc/tkxmlive/files/patch-tkxmlive,v 1.3 2012/11/17 06:02:23 svnexp Exp $
+--- tkxmlive	Tue Mar 26 17:21:14 2002
++++ tkxmlive.port	Thu Dec  4 13:49:54 2003
+@@ -1,4 +1,4 @@
+ #!/bin/sh
+ 
+-cd /home/alex/work/aspirantura/tmp
++cd %%DATADIR%%
+ ./interface.tcl
