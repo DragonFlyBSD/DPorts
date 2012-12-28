@@ -1,0 +1,5 @@
+%%SITE_PERL%%/Date/ISO.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Date/ISO/.packlist
+@dirrmtry %%SITE_PERL%%/Date
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Date/ISO
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Date
