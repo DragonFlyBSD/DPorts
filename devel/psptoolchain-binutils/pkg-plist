@@ -1,0 +1,48 @@
+psp/lib/ldscripts/elf_mipsallegrexel_psp.xu
+psp/lib/ldscripts/elf_mipsallegrexel_psp.xs
+psp/lib/ldscripts/elf_mipsallegrexel_psp.xr
+psp/lib/ldscripts/elf_mipsallegrexel_psp.xn
+psp/lib/ldscripts/elf_mipsallegrexel_psp.xd
+psp/lib/ldscripts/elf_mipsallegrexel_psp.xbn
+psp/lib/ldscripts/elf_mipsallegrexel_psp.x
+psp/lib/ldscripts/elf32elmip.xw
+psp/lib/ldscripts/elf32elmip.xu
+psp/lib/ldscripts/elf32elmip.xsw
+psp/lib/ldscripts/elf32elmip.xsc
+psp/lib/ldscripts/elf32elmip.xs
+psp/lib/ldscripts/elf32elmip.xr
+psp/lib/ldscripts/elf32elmip.xn
+psp/lib/ldscripts/elf32elmip.xdw
+psp/lib/ldscripts/elf32elmip.xdc
+psp/lib/ldscripts/elf32elmip.xd
+psp/lib/ldscripts/elf32elmip.xc
+psp/lib/ldscripts/elf32elmip.xbn
+psp/lib/ldscripts/elf32elmip.x
+psp/bin/strip
+psp/bin/ranlib
+psp/bin/objdump
+psp/bin/objcopy
+psp/bin/nm
+psp/bin/ld.bfd
+psp/bin/ld
+psp/bin/as
+psp/bin/ar
+bin/psp-strip
+bin/psp-strings
+bin/psp-size
+bin/psp-readelf
+bin/psp-ranlib
+bin/psp-objdump
+bin/psp-objcopy
+bin/psp-nm
+bin/psp-ld.bfd
+bin/psp-ld
+bin/psp-elfedit
+bin/psp-c++filt
+bin/psp-as
+bin/psp-ar
+bin/psp-addr2line
+@dirrm psp/lib/ldscripts
+@dirrmtry psp/lib
+@dirrmtry psp/bin
+@dirrmtry psp
