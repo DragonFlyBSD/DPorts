@@ -2,7 +2,7 @@
 # Date created:				Nov 4 2003
 # Whom:					Cheng-Lung Sung <clsung@dragon2.net>
 #
-# $FreeBSD: ports/mail/p5-Mail-Graph/Makefile,v 1.20 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: ports/mail/p5-Mail-Graph/Makefile,v 1.21 2012/12/17 05:50:24 svnexp Exp $
 #
 
 PORTNAME=	Mail-Graph
@@ -40,10 +40,4 @@ post-install:
 	${INSTALL_SCRIPT} ${EXAMPLEOUTPUT} ${EXAMPLESDIR}/output && \
 	${INSTALL_SCRIPT} ${EXAMPLEARCHIVE} ${EXAMPLESDIR}/archive
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
