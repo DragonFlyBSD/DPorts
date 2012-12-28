@@ -43,7 +43,7 @@ MAN3=		Text::BibTeX.3 \
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64" || ${ARCH} == "ia64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
 CFLAGS+=	-fPIC
 .endif
 
