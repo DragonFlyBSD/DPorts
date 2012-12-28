@@ -2,7 +2,7 @@
 # Date created:		26 Mar 2006
 # Whom:			Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Data-Visitor/Makefile,v 1.29 2012/11/17 05:56:11 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Data-Visitor/Makefile,v 1.30 2012/12/17 15:16:54 svnexp Exp $
 #
 
 PORTNAME=	Data-Visitor
@@ -29,10 +29,4 @@ PERL_CONFIGURE=	yes
 MAN3=	Data::Visitor.3 \
 	Data::Visitor::Callback.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
