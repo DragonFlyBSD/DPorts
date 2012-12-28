@@ -1,0 +1,2 @@
+bin/qvfb-qt4
+%%DEBUG%%bin/qvfb-qt4.debug
