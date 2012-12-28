@@ -2,7 +2,7 @@
 # Date created:		2010-01-06
 # Whom:			Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
 #
-# $FreeBSD: ports/comms/p5-SMS-Send-TW-chtsns/Makefile,v 1.6 2012/11/17 05:55:01 svnexp Exp $
+# $FreeBSD: ports/comms/p5-SMS-Send-TW-chtsns/Makefile,v 1.7 2012/12/16 06:16:53 svnexp Exp $
 #
 
 PORTNAME=	SMS-Send-TW-chtsns
@@ -21,7 +21,7 @@ RUN_DEPENDS=	p5-SMS-Send>=0:${PORTSDIR}/comms/p5-SMS-Send \
 		p5-Text-Iconv>=0:${PORTSDIR}/converters/p5-Text-Iconv
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	5.10+
+PERL_CONFIGURE=	yes
 
 MAN3=		SMS::Send::TW::chtsns.3
 
