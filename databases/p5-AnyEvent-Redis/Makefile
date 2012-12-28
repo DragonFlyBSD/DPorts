@@ -2,11 +2,11 @@
 # Date created:				25 January 2011
 # Whom:					Anton Berezin <tobez@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-AnyEvent-Redis/Makefile,v 1.4 2012/11/17 05:55:13 svnexp Exp $
+# $FreeBSD: ports/databases/p5-AnyEvent-Redis/Makefile,v 1.5 2012/12/14 09:49:02 svnexp Exp $
 #
 
 PORTNAME=	AnyEvent-Redis
-PORTVERSION=	0.23
+PORTVERSION=	0.24
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DGL
