@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Text-Ngrams
-# Date created:				Dec 27 2003
-# Whom:					Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/textproc/p5-Text-Ngrams/Makefile,v 1.14 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: ports/textproc/p5-Text-Ngrams/Makefile,v 1.15 2012/12/16 15:55:36 svnexp Exp $
 
 PORTNAME=	Text-Ngrams
-PORTVERSION=	2.002
+PORTVERSION=	2.003
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
