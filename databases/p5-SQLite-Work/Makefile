@@ -2,7 +2,7 @@
 # Date created:				2005-10-27
 # Whom:					Chris Larsen <darth@vader.dk>
 #
-# $FreeBSD: ports/databases/p5-SQLite-Work/Makefile,v 1.15 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: ports/databases/p5-SQLite-Work/Makefile,v 1.16 2012/12/17 08:59:15 svnexp Exp $
 #
 
 PORTNAME=	SQLite-Work
@@ -35,10 +35,4 @@ MAN1=		sqlw_mail.1 \
 post-patch:
 		${CHMOD} u+w ${WRKSRC}/Makefile.PL
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500807
-RUN_DEPENDS+=	p5-CGI.pm>=3.10:${PORTSDIR}/www/p5-CGI.pm
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
