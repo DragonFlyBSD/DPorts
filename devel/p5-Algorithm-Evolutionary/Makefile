@@ -2,7 +2,7 @@
 # Date created:			Oct 24, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/p5-Algorithm-Evolutionary/Makefile,v 1.30 2012/11/17 05:56:03 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Algorithm-Evolutionary/Makefile,v 1.31 2012/12/17 13:43:43 svnexp Exp $
 #
 
 PORTNAME=	Algorithm-Evolutionary
@@ -117,11 +117,4 @@ MAN3=		Algorithm::Evolutionary.3 \
 		Algorithm::Evolutionary::Wheel.3 \
 		Algorithm::Evolutionary::XML.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
