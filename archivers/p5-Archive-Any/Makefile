@@ -2,7 +2,7 @@
 # Date created:		2006-08-28
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/archivers/p5-Archive-Any/Makefile,v 1.10 2012/11/17 05:54:21 svnexp Exp $
+# $FreeBSD: ports/archivers/p5-Archive-Any/Makefile,v 1.11 2012/12/17 15:43:17 svnexp Exp $
 #
 
 PORTNAME=	Archive-Any
@@ -31,11 +31,4 @@ PERL_CONFIGURE=	yes
 MAN3=		Archive::Any.3 Archive::Any::Plugin.3 \
 		Archive::Any::Plugin::Tar.3 Archive::Any::Plugin::Zip.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Archive-Tar>=0.22:${PORTSDIR}/archivers/p5-Archive-Tar
-RUN_DEPENDS+=	p5-Archive-Tar>=0.22:${PORTSDIR}/archivers/p5-Archive-Tar
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
