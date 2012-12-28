@@ -2,7 +2,7 @@
 # Date created:	   23 March 2003
 # Whom:		   mat
 #
-# $FreeBSD: ports/devel/p5-Data-Dump-Streamer/Makefile,v 1.33 2012/11/17 05:56:09 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Data-Dump-Streamer/Makefile,v 1.34 2012/12/17 15:02:09 svnexp Exp $
 #
 
 PORTNAME=	Data-Dump-Streamer
@@ -25,11 +25,4 @@ PERL_MODBUILD=	yes
 
 MAN3=		DDS.3 Data::Dump::Streamer.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
