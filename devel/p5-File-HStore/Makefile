@@ -2,7 +2,7 @@
 # Date created:		2006-07-21
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/devel/p5-File-HStore/Makefile,v 1.10 2012/11/17 05:56:16 svnexp Exp $
+# $FreeBSD: ports/devel/p5-File-HStore/Makefile,v 1.11 2012/12/17 13:43:44 svnexp Exp $
 #
 
 PORTNAME=	File-HStore
@@ -19,11 +19,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		File::HStore.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-Digest-SHA>=5.47:${PORTSDIR}/security/p5-Digest-SHA
-BUILD_DEPENDS+=	p5-Digest-SHA>=5.47:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
