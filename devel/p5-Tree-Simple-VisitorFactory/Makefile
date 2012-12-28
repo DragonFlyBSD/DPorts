@@ -2,7 +2,7 @@
 # Date created:				13 August 2004
 # Whom:					Aaron Dalton <aaron@daltons.ca>
 #
-# $FreeBSD: ports/devel/p5-Tree-Simple-VisitorFactory/Makefile,v 1.17 2012/11/17 05:56:35 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Tree-Simple-VisitorFactory/Makefile,v 1.18 2012/12/17 13:43:44 svnexp Exp $
 #
 
 PORTNAME=	Tree-Simple-VisitorFactory
@@ -41,10 +41,4 @@ MAN3=		Tree::Simple::Visitor::BreadthFirstTraversal.3 \
 
 PERL_CONFIGURE=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500703
-BUILD_DEPENDS+=	p5-Scalar-Util>=1.10:${PORTSDIR}/lang/p5-Scalar-List-Utils
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
