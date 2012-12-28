@@ -2,7 +2,7 @@
 # Date created:		2007-05-04
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-Net-OpenID-Consumer/Makefile,v 1.13 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: ports/net/p5-Net-OpenID-Consumer/Makefile,v 1.14 2012/12/17 15:43:22 svnexp Exp $
 #
 
 PORTNAME=	Net-OpenID-Consumer
@@ -31,11 +31,4 @@ regression-test: build
 	cd ${WRKSRC} && ${MAKE} test
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
-RUN_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
