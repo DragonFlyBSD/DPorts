@@ -16,7 +16,8 @@ MASTER_SITES=	http://download.librdf.org/source/ \
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	A high-level interface for RDF
 
-LIB_DEPENDS=	icuuc.50:${PORTSDIR}/devel/icu \
+LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
+		icuuc.50:${PORTSDIR}/devel/icu \
 		raptor2.0:${PORTSDIR}/textproc/raptor2 \
 		pcre.3:${PORTSDIR}/devel/pcre \
 		xml2.5:${PORTSDIR}/textproc/libxml2 \
@@ -26,6 +27,7 @@ LIB_DEPENDS=	icuuc.50:${PORTSDIR}/devel/icu \
 USE_GNOME=	gnomehack lthack pkgconfig
 USE_OPENSSL=	yes
 USE_GMAKE=	yes
+USE_ICONV=	yes
 GNU_CONFIGURE=	yes
 
 USE_LDCONFIG=	yes
