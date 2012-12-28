@@ -1,0 +1,40 @@
+# New ports collection makefile for:    py-Tkinter
+# Date created:         12 Jan 1999
+# Whom:                 Thomas Gellekum <tg@FreeBSD.org>
+#
+# $FreeBSD: ports/x11-toolkits/py-tkinter/Makefile,v 1.25 2012/12/04 14:00:00 svnexp Exp $
+#
+
+PORTNAME=	tkinter
+PORTVERSION=	${PYTHON_PORTVERSION}
+PORTREVISION=	3
+CATEGORIES=	x11-toolkits python
+MASTER_SITES=	${PYTHON_MASTER_SITES}
+MASTER_SITE_SUBDIR=	${PYTHON_MASTER_SITE_SUBDIR}
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTFILES=	${PYTHON_DISTFILE}
+
+MAINTAINER?=	python@FreeBSD.org
+COMMENT=	Python bindings to the Tk widget set
+
+DIST_SUBDIR=	python
+PLIST_FILES=	%%PYTHON_SITELIBDIR%%/_tkinter.so
+USE_PYTHON=	yes
+USE_PYDISTUTILS=yes
+USE_XZ=		yes
+PYDISTUTILS_PKGNAME=	Tkinter
+PYDISTUTILS_PKGVERSION=	0.0.0
+USE_TK=	83+
+WRKSRC=		${PYTHON_WRKSRC}/Modules
+DISTINFO_FILE=	${PORTSDIR}/lang/python${PYTHON_SUFFIX}/distinfo
+
+.include <bsd.port.pre.mk>
+
+post-extract:
+.if ${PYTHON_REL} < 300
+	@${SED} -e "s|%%TK_VER%%|${TK_VER}|" ${FILESDIR}/setup.py > ${WRKSRC}/setup.py
+.else
+	@${SED} -e "s|%%TK_VER%%|${TK_VER}|" ${FILESDIR}/setup3.py > ${WRKSRC}/setup.py
+.endif
+
+.include <bsd.port.post.mk>
