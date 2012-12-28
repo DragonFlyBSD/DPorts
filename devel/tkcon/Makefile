@@ -1,0 +1,30 @@
+# Created by: wghicks@bellsouth.net
+# $FreeBSD: ports/devel/tkcon/Makefile,v 1.25 2012/11/26 23:00:40 svnexp Exp $
+
+PORTNAME=	tkcon
+PORTVERSION=	2.5
+CATEGORIES=	devel tcl tk
+MASTER_SITES=	SF
+
+MAINTAINER=	tcltk@FreeBSD.org
+COMMENT=	Tk console for Tcl
+
+NO_BUILD=	yes
+USE_TK_WRAPPER=	yes
+
+PORTDOCS=	*
+PLIST_FILES=	bin/${PORTNAME}
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|%%DOCSDIR%%|${DOCSDIR}|g' ${WRKSRC}/${PORTNAME}.tcl
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.tcl ${PREFIX}/bin/${PORTNAME}
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${DOCSDIR}/README.${PORTNAME}
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
