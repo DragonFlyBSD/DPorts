@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net/mDNSResponder/files/mdnsd.in,v 1.3 2012/11/17 06:00:05 svnexp Exp $
+
+# PROVIDE: mdnsd
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name=mdnsd
+rcvar=mdnsd_enable
+
+load_rc_config $name
+
+: ${mdnsd_enable="NO"}
+: ${mdnsd_pidfile="/var/run/${name}.pid"}
+
+command="%%PREFIX%%/sbin/${name}"
+pidfile="${mdnsd_pidfile}"
+
+run_rc_command $*
