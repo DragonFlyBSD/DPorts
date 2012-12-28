@@ -2,7 +2,7 @@
 # Date created:		2009-08-05
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-Google-SAML-Response/Makefile,v 1.10 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: ports/net/p5-Google-SAML-Response/Makefile,v 1.11 2012/12/17 15:43:22 svnexp Exp $
 #
 
 PORTNAME=	Google-SAML-Response
@@ -30,13 +30,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Google::SAML::Response.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA \
-		p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA \
-		p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
