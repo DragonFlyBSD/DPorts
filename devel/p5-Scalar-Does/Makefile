@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Scalar-Does/Makefile,v 1.2 2012/12/08 11:16:11 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Scalar-Does/Makefile,v 1.3 2012/12/16 06:16:54 svnexp Exp $
 
 PORTNAME=	Scalar-Does
 PORTVERSION=	0.010
@@ -23,7 +23,7 @@ TEST_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
 # It requires UNIVERSAL::DOES on Perl 5.8
-PERL_CONFIGURE=	5.10+
+PERL_CONFIGURE=	yes
 
 MAN3=		Scalar::Does.3 \
 		Scalar::Does::MooseTypes.3
