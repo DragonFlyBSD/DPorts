@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Web-Scraper
-# Date created:		2007-10-27
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-Web-Scraper/Makefile,v 1.18 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by:			Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: ports/www/p5-Web-Scraper/Makefile,v 1.19 2012/12/19 08:52:27 svnexp Exp $
 
 PORTNAME=	Web-Scraper
-PORTVERSION=	0.36
+PORTVERSION=	0.37
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
