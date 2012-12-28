@@ -2,7 +2,7 @@
 # Date created:				2007/01/16
 # Whom:	      				chinsan
 #
-# $FreeBSD: ports/security/p5-Authen-Bitcard/Makefile,v 1.10 2012/11/17 06:01:10 svnexp Exp $
+# $FreeBSD: ports/security/p5-Authen-Bitcard/Makefile,v 1.11 2012/12/17 09:58:11 svnexp Exp $
 #
 
 PORTNAME=	Authen-Bitcard
@@ -23,10 +23,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Authen::Bitcard.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
