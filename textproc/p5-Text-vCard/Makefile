@@ -1,8 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Text-vCard/Makefile,v 1.22 2012/11/17 06:02:10 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Text-vCard/Makefile,v 1.23 2012/12/21 17:43:55 svnexp Exp $
 
 PORTNAME=		Text-vCard
-PORTVERSION=		2.12
+PORTVERSION=		2.13
 CATEGORIES=		textproc perl5
 MASTER_SITES=		CPAN
 PKGNAMEPREFIX=		p5-
