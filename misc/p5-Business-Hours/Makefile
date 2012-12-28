@@ -1,9 +1,5 @@
-# New ports collection makefile for:   Business-Hours
-# Date created:    23 August 2008
-# Whom:            Matthew Seaman <m.seaman@infracaninophile.co.uk>
-#
-# $FreeBSD: ports/misc/p5-Business-Hours/Makefile,v 1.8 2012/11/17 05:59:43 svnexp Exp $
-#
+# Created by: Matthew Seaman
+# $FreeBSD: ports/misc/p5-Business-Hours/Makefile,v 1.9 2012/12/15 09:34:27 svnexp Exp $
 
 PORTNAME=	Business-Hours
 PORTVERSION=	0.10
