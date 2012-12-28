@@ -2,7 +2,7 @@
 # Date created:				2007-08-27
 # Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-WWW-Facebook-API/Makefile,v 1.16 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: ports/www/p5-WWW-Facebook-API/Makefile,v 1.17 2012/12/17 12:20:07 svnexp Exp $
 #
 
 PORTNAME=	WWW-Facebook-API
@@ -53,10 +53,4 @@ MAN3=		WWW::Facebook::API.3 \
 		WWW::Facebook::API::Users.3 \
 		WWW::Facebook::API::Video.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
