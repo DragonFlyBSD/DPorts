@@ -1,0 +1,51 @@
+bin/fr
+%%DATADIR%%/FontControl.tcl
+%%DATADIR%%/balloon.tcl
+%%DATADIR%%/bitmaps/bitmapeditor
+%%DATADIR%%/bitmaps/cross.bit
+%%DATADIR%%/bitmaps/frterm.bit
+%%DATADIR%%/bitmaps/larger.bit
+%%DATADIR%%/bitmaps/left.bit
+%%DATADIR%%/bitmaps/max.bit
+%%DATADIR%%/bitmaps/pgdown.bit
+%%DATADIR%%/bitmaps/pgup.bit
+%%DATADIR%%/bitmaps/right.bit
+%%DATADIR%%/bitmaps/small-equ.bit
+%%DATADIR%%/bitmaps/small-left.bit
+%%DATADIR%%/bitmaps/small-noeq.bit
+%%DATADIR%%/bitmaps/small-right.bit
+%%DATADIR%%/bitmaps/smaller.bit
+%%DATADIR%%/bitmaps/toggle.bit
+%%DATADIR%%/bitmaps/tree.bit
+%%DATADIR%%/bitmaps/up.bit
+%%DATADIR%%/bitmaps/update.bit
+%%DATADIR%%/bitmaps/xterm.bit
+%%DATADIR%%/chmod.tcl
+%%DATADIR%%/cmd.tcl
+%%DATADIR%%/config.tcl
+%%DATADIR%%/cript.tcl
+%%DATADIR%%/dialog.tcl
+%%DATADIR%%/displays.tcl
+%%DATADIR%%/editfont.tcl
+%%DATADIR%%/font.tcl
+%%DATADIR%%/fr
+%%DATADIR%%/frcolor.tcl
+%%DATADIR%%/frftp
+%%DATADIR%%/frutils.tcl
+%%DATADIR%%/ftp.tcl
+%%DATADIR%%/ftp_control.tcl
+%%DATADIR%%/http.tcl
+%%DATADIR%%/icon.xpm
+%%DATADIR%%/packages/ftp/ftp.tcl
+%%DATADIR%%/packages/ftp/pkgIndex.tcl
+%%DATADIR%%/packages/list
+%%DATADIR%%/packages/log/log.tcl
+%%DATADIR%%/packages/log/pkgIndex.tcl
+%%DATADIR%%/sftp.tcl
+%%DATADIR%%/tclIndex
+%%DATADIR%%/tclmultilistbox.tcl
+@dirrm %%DATADIR%%/packages/log
+@dirrm %%DATADIR%%/packages/ftp
+@dirrm %%DATADIR%%/packages
+@dirrm %%DATADIR%%/bitmaps
+@dirrm %%DATADIR%%
