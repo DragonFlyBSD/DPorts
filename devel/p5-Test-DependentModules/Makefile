@@ -2,7 +2,7 @@
 # Date created:		2012-01-06
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-DependentModules/Makefile,v 1.2 2012/11/17 05:56:32 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Test-DependentModules/Makefile,v 1.3 2012/12/16 06:16:54 svnexp Exp $
 #
 
 PORTNAME=	Test-DependentModules
@@ -25,7 +25,7 @@ BUILD_DEPENDS=	p5-Capture-Tiny>=0:${PORTSDIR}/devel/p5-Capture-Tiny \
 		p5-autodie>=0:${PORTSDIR}/devel/p5-autodie
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	5.10.1+	# CPAN>=1.9402
+PERL_CONFIGURE=	yes
 
 MAN3=		Test::DependentModules.3
 
