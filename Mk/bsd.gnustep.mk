@@ -24,10 +24,10 @@
 #	use gcc 3.4.x with objective C shared libraries.
 #
 # GNUSTEP_WITH_GCC42=yes
-#	use gcc 4.2.x with objective C shared libraries (default).
+#	use base gcc47  with objective C shared libraries (default).
 #
 # GNUSTEP_WITH_GCC46=yes
-#	use gcc 4.6.x with objective C shared libraries.
+#	use base gcc47 with objective C shared libraries.
 #
 # GNUSTEP_WITH_CLANG=yes
 #	use clang with objective C shared libraries.
@@ -196,47 +196,23 @@ PLIST_SUB+=	LIBVERSION=${DEFAULT_LIBVERSION}
 PLIST_SUB+=	MAJORLIBVERSION=${DEFAULT_LIBVERSION:C/([0-9]).*/\1/1}
 
 .if !defined(GNUSTEP_WITH_GCC34) && !defined(GNUSTEP_WITH_GCC42) && !defined(GNUSTEP_WITH_GCC46) && !defined(GNUSTEP_WITH_BASE_GCC)
-.if defined(PACKAGE_BUILDING)
-.if ${OSVERSION} > 900035
-GNUSTEP_WITH_GCC42=yes
-.endif
-.endif
-.if !exists(${DESTDIR}/usr/lib/libobjc.so)
-GNUSTEP_WITH_GCC42=yes
-.endif
+GNUSTEP_WITH_BASE_GCC=yes
 .endif
 
 .if defined(GNUSTEP_WITH_CLANG)
 .if defined(CC) && ${CC:T:Mclang}
 # all done
 .else
-.if !exists(${DESTDIR}/usr/bin/clang)
 BUILD_DEPENDS+=	${LOCALBASE}/bin/clang:${PORTSDIR}/lang/clang
 CC=	clang
 CXX=	clang++
-.else
-# use clang in base
-CC=	clang
-CXX=	clang++
-.endif
 # ignore gcc ports
 GNUSTEP_WITH_BASE_GCC=yes
 .endif
 LIB_DEPENDS+=	objc:${PORTSDIR}/lang/libobjc2
 .else
-.if defined(GNUSTEP_WITH_GCC34) || defined(GNUSTEP_WITH_GCC42) || defined(GNUSTEP_WITH_GCC46)
 .if defined(GNUSTEP_WITH_GCC34)
 GCCSUFFIX=34
-.if ${ARCH} == sparc64
-BROKEN=	gcc34 does not build the required libobjc
-.endif
-.endif
-.if defined(GNUSTEP_WITH_GCC42)
-GCCSUFFIX=42
-.endif
-.if defined(GNUSTEP_WITH_GCC46)
-GCCSUFFIX=46
-.endif
 CC=		gcc${GCCSUFFIX}
 CXX=		g++${GCCSUFFIX}
 GNUSTEP_GCC_PORT?=	lang/gcc${GCCSUFFIX}
@@ -245,6 +221,11 @@ RUN_DEPENDS+=	${TARGLIB}/libobjc.so:${PORTSDIR}/${GNUSTEP_GCC_PORT}
 .else
 GNUSTEP_WITH_BASE_GCC=yes
 .endif
+.endif
+
+.if defined(GNUSTEP_WITH_BASE_GCC)
+CONFIGURE_ENV+= 	CCVER=gcc47
+MAKE_ENV+=		CCVER=gcc47
 .endif
 
 # ---------------------------------------------------------------------------
