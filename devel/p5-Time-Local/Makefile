@@ -2,7 +2,7 @@
 # Date created:	   1 july 2003
 # Whom:		   Mathieu Arnold <m@absolight.net>
 #
-# $FreeBSD: ports/devel/p5-Time-Local/Makefile,v 1.19 2012/11/17 05:56:35 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Time-Local/Makefile,v 1.20 2012/12/17 13:43:44 svnexp Exp $
 #
 
 PORTNAME=	Time-Local
@@ -26,10 +26,6 @@ MAN3=		Time::Local.3
 PORTDOCS=	Changes
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
