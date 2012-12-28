@@ -42,10 +42,6 @@ post-configure:
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
-.if ${ARCH} == "sparc64"
 FPIC=	-fPIC
-.else
-FPIC=	-fpic
-.endif
 
 .include <bsd.port.post.mk>
