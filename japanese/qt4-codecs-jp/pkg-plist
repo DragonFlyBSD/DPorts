@@ -1,0 +1,4 @@
+%%QT_PLUGINDIR_REL%%/codecs/libqjpcodecs.so
+%%DEBUG%%%%QT_PLUGINDIR_REL%%/codecs/libqjpcodecs.so.debug
+@dirrmtry %%QT_PLUGINDIR_REL%%/codecs
+@dirrmtry %%QT_PLUGINDIR_REL%%
