@@ -2,7 +2,7 @@
 # Date created:				Dec 12, 2005
 # Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Authentication/Makefile,v 1.39 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: ports/www/p5-Catalyst-Plugin-Authentication/Makefile,v 1.40 2012/12/17 12:28:02 svnexp Exp $
 #
 
 PORTNAME=	Catalyst-Plugin-Authentication
@@ -52,10 +52,4 @@ MAN3=	Catalyst::Authentication::Credential::Password.3 \
 	Catalyst::Plugin::Authentication::User.3 \
 	Catalyst::Plugin::Authentication::User::Hash.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
