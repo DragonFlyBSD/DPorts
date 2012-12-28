@@ -2,7 +2,7 @@
 # Date created:		2011-01-28
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-Net-Amazon-AWSSign/Makefile,v 1.6 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: ports/net/p5-Net-Amazon-AWSSign/Makefile,v 1.7 2012/12/17 15:43:22 svnexp Exp $
 #
 
 PORTNAME=	Net-Amazon-AWSSign
@@ -21,10 +21,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Net::Amazon::AWSSign.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
