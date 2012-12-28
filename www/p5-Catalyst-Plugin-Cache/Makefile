@@ -2,7 +2,7 @@
 # Date created:			Apr 5, 2007
 # Whom:				lbr@freebsd.org
 #
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Cache/Makefile,v 1.13 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: ports/www/p5-Catalyst-Plugin-Cache/Makefile,v 1.14 2012/12/17 10:27:26 svnexp Exp $
 #
 
 PORTNAME=	Catalyst-Plugin-Cache
@@ -36,10 +36,4 @@ MAN3=	Catalyst::Plugin::Cache.3 \
 post-patch:
 	@${PERL} -i.bak -ne 'print unless m,ok|Test::,' ${WRKSRC}/Makefile.PL
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
