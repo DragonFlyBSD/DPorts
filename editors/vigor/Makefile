@@ -1,0 +1,35 @@
+# New ports collection makefile for:   vigor
+# Date created:        17 Jan 2000
+# Whom:                Bill Fumerola <billf@chc-chimes.com>
+#
+# $FreeBSD: ports/editors/vigor/Makefile,v 1.24 2012/11/17 05:57:18 svnexp Exp $
+#
+
+PORTNAME=	vigor
+PORTVERSION=	0.016
+PORTREVISION=	4
+CATEGORIES=	editors tcl tk
+MASTER_SITES=	SF
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A vi clone inspired by the userfriendly comic strip
+
+USE_TCL=	yes
+USE_TCL_BUILD=	yes
+USE_TK=		yes
+USE_TK_BUILD=	yes
+USE_XORG=	x11
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--program-transform-name="s,0,1,"
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+WRKSRC=		${WRKDIR}/${DISTNAME}/build
+CFLAGS+=	-I${LOCALBASE}/include/tcl${TCL_VER} -I${LOCALBASE}/include/tk${TK_VER}
+
+post-patch:
+	${REINPLACE_CMD} -e 's|tcl80|tcl${TCL_VER:S/.//} -L${LOCALBASE}/lib|; \
+		s|tk80|tk${TK_VER:S/.//}|; \
+		s|^grantpt|XXXgrantpt|;' \
+			${WRKSRC}/configure
+
+.include <bsd.port.mk>
