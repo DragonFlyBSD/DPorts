@@ -2,7 +2,7 @@
 # Date created:				07 Dec 2005
 # Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-View-Mason/Makefile,v 1.17 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: ports/www/p5-Catalyst-View-Mason/Makefile,v 1.18 2012/12/17 12:20:07 svnexp Exp $
 #
 
 PORTNAME=	Catalyst-View-Mason
@@ -26,11 +26,4 @@ PERL_CONFIGURE=	yes
 MAN3=		Catalyst::Helper::View::Mason.3 \
 		Catalyst::View::Mason.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
