@@ -2,7 +2,7 @@
 # Date created:		2010-11-26
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/dns/p5-Net-DNS-Lite/Makefile,v 1.7 2012/11/17 05:57:10 svnexp Exp $
+# $FreeBSD: ports/dns/p5-Net-DNS-Lite/Makefile,v 1.8 2012/12/17 05:50:12 svnexp Exp $
 #
 
 PORTNAME=	Net-DNS-Lite
@@ -26,10 +26,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Net::DNS::Lite.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
