@@ -2,7 +2,7 @@
 # Date created:				October 27, 2000
 # Whom:	      				Marc Fournier <scrappy@FreeBSD.org>
 #
-# $FreeBSD: ports/converters/p5-Convert-ASN1/Makefile,v 1.20 2012/11/17 05:55:03 svnexp Exp $
+# $FreeBSD: ports/converters/p5-Convert-ASN1/Makefile,v 1.21 2012/12/17 08:35:00 svnexp Exp $
 #
 
 PORTNAME=	Convert-ASN1
@@ -24,10 +24,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Convert::ASN1.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.90:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
