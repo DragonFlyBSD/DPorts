@@ -2,7 +2,7 @@
 # Date created:		28 Feb, 2008
 # Whom:			Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/devel/p5-Class-Std-Fast/Makefile,v 1.6 2012/11/17 05:56:08 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Class-Std-Fast/Makefile,v 1.7 2012/12/17 15:16:53 svnexp Exp $
 #
 
 PORTNAME=	Class-Std-Fast
@@ -27,11 +27,4 @@ PERL_CONFIGURE=	yes
 MAN3=		Class::Std::Fast.3 \
 		Class::Std::Fast::Storable.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
