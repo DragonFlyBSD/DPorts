@@ -2,7 +2,7 @@
 # Date created:                                Jul 25 2004
 # Whom:                                Cheng-Lung Sung <clsung@dragon2.net>
 #
-# $FreeBSD: ports/net/p5-Net-SAP/Makefile,v 1.15 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: ports/net/p5-Net-SAP/Makefile,v 1.16 2012/12/17 15:43:22 svnexp Exp $
 #
 
 PORTNAME=	Net-SAP
@@ -25,11 +25,4 @@ PERL_MODBUILD=	YES
 MAN1=		psapd.1
 MAN3=		Net::SAP.3 Net::SAP::Packet.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-BUILD_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
