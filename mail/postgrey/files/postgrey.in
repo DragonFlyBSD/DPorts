@@ -1,0 +1,47 @@
+#!/bin/sh
+# $FreeBSD: ports/mail/postgrey/files/postgrey.in,v 1.9 2012/11/17 05:59:11 svnexp Exp $
+#
+
+# PROVIDE: postgrey
+# REQUIRE: LOGIN
+# BEFORE: mail
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf to enable postgrey:
+#
+# postgrey_enable="YES"
+#
+# See perldoc postgrey for flags
+#
+
+. /etc/rc.subr
+
+name=postgrey
+rcvar=postgrey_enable
+
+command=%%PREFIX%%/sbin/postgrey
+required_dirs=/var/db/postgrey
+extra_commands=reload
+
+stop_postcmd=stop_postcmd
+
+stop_postcmd()
+{
+  rm -f $pidfile
+}
+
+# set defaults
+
+load_rc_config $name
+
+postgrey_enable=${postgrey_enable:-"NO"}
+postgrey_greylist_header=${postgrey_greylist_header:-"X-Greylist: delayed %t seconds by postgrey-%v at %h\; %d"}
+postgrey_pidfile=${postgrey_pidfile:-"/var/run/postgrey.pid"}
+postgrey_flags=${postgrey_flags:-"--pidfile=${postgrey_pidfile} \
+	--inet=10023 -d --user=%%USER%% --group=%%GROUP%% --dbdir=/var/db/postgrey \
+	--x-greylist-header=${postgrey_greylist_header}"}
+
+pidfile="${postgrey_pidfile}"
+
+run_rc_command "$1"
