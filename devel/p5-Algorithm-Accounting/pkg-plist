@@ -1,0 +1,12 @@
+%%SITE_PERL%%/Algorithm/Accounting.pm
+%%SITE_PERL%%/Algorithm/Accounting/Report.pm
+%%SITE_PERL%%/Algorithm/Accounting/Report/Imager.pm
+%%SITE_PERL%%/Algorithm/Accounting/Report/Text.pm
+%%SITE_PERL%%/Algorithm/Accounting/Report/GDGraph.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Algorithm/Accounting/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Algorithm/Accounting
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Algorithm/Accounting
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Algorithm
+@dirrm %%SITE_PERL%%/Algorithm/Accounting/Report
+@dirrmtry %%SITE_PERL%%/Algorithm/Accounting
+@dirrmtry %%SITE_PERL%%/Algorithm
