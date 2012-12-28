@@ -2,7 +2,7 @@
 # Date created:				24 Jan 2002
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/databases/p5-DBD-Excel/Makefile,v 1.13 2012/11/17 05:55:14 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBD-Excel/Makefile,v 1.14 2012/12/11 19:59:24 svnexp Exp $
 #
 
 PORTNAME=	DBD-Excel
@@ -11,7 +11,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	A class for DBI drivers that acts on Excel files
 
 BUILD_DEPENDS=	p5-SQL-Statement>=0:${PORTSDIR}/databases/p5-SQL-Statement \
