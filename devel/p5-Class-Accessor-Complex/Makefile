@@ -2,7 +2,7 @@
 # Date created:		2010-11-28
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/devel/p5-Class-Accessor-Complex/Makefile,v 1.6 2012/11/17 05:56:06 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Class-Accessor-Complex/Makefile,v 1.7 2012/12/16 06:16:54 svnexp Exp $
 #
 
 PORTNAME=	Class-Accessor-Complex
@@ -22,7 +22,6 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
-USE_PERL5_RUN=	5.8.1+
 
 MAN3=		Class::Accessor::Complex.3
 
