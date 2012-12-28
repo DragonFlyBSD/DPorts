@@ -2,7 +2,7 @@
 # Date created:				2004-08-12
 # Whom:					arved
 #
-# $FreeBSD: ports/graphics/p5-Graph-ReadWrite/Makefile,v 1.11 2012/11/17 05:58:17 svnexp Exp $
+# $FreeBSD: ports/graphics/p5-Graph-ReadWrite/Makefile,v 1.12 2012/12/17 06:20:46 svnexp Exp $
 #
 
 PORTNAME=	Graph-ReadWrite
@@ -36,11 +36,4 @@ MAN3=		Graph::Reader.3 \
 post-patch:
 	@${REINPLACE_CMD} -e 's|Graph-ReadWrite|Graph::ReadWrite|' ${WRKSRC}/Makefile.PL
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
