@@ -1,0 +1,54 @@
+# -*-mode: makefile-*-
+# New ports collection makefile for:	qt40
+# Date created:				Wed Jun 29 11:49:42 CEST 2005
+# Whom:					lofi@freebsd.org
+#
+# $FreeBSD: ports/chinese/qt4-codecs-tw/Makefile,v 1.17 2012/11/17 05:54:58 svnexp Exp $
+#
+
+PORTNAME=	codecs
+DISTVERSION=	${QT4_VERSION}
+CATEGORIES?=	chinese
+PKGNAMEPREFIX=	qt4-
+PKGNAMESUFFIX=	-tw
+
+MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Qt Big-5 codec plugin
+
+USE_QT4=	qmake_build corelib
+QT_NONSTANDARD=	yes
+QT_DIST=	yes
+
+HAS_CONFIGURE=	yes
+
+ALL_TARGET=	first
+CONFIGURE_ENV?=	QTDIR=${WRKSRC} PATH=${WRKSRC}/bin:$$PATH
+MAKE_ENV?=	QTDIR=${WRKSRC} LD_LIBRARY_PATH=${WRKSRC}/lib:$$LD_LIBRARY_PATH \
+		PATH=${WRKSRC}/bin:$$PATH
+
+DO_NOT_EXTRACT=	demos doc examples mkspecs qmake tools translations \
+		src/activeqt src/dbus src/gui src/multimedia src/network \
+		src/opengl src/openvg src/phonon src/qt3support \
+		src/s60installs src/s60main src/script src/scripttools src/sql \
+		src/svg src/testlib src/tools src/winmain src/xml \
+		src/xmlpatterns src/3rdparty/clucene src/3rdparty/freetype \
+		src/3rdparty/libjpeg src/3rdparty/libmng src/3rdparty/libpng \
+		src/3rdparty/libtiff src/3rdparty/phonon src/3rdparty/webkit
+EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
+.for dne in ${DO_NOT_EXTRACT}
+EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
+.endfor
+
+BUILD_WRKSRC=	${WRKSRC}/src/plugins/${PORTNAME}/tw
+INSTALL_WRKSRC=	${BUILD_WRKSRC}
+
+EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/mkspecs
+	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
+
+post-configure:
+	${REINPLACE_CMD} -e 's|(test -z.*||g' ${BUILD_WRKSRC}/Makefile
+
+.include <bsd.port.mk>
