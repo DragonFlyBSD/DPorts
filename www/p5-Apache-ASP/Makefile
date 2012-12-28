@@ -2,7 +2,7 @@
 # Date created:				31 December 1999
 # Whom:					Igor Vinokurov <igor@zynaps.ru>
 #
-# $FreeBSD: ports/www/p5-Apache-ASP/Makefile,v 1.35 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: ports/www/p5-Apache-ASP/Makefile,v 1.36 2012/12/17 10:27:26 svnexp Exp $
 #
 
 PORTNAME=	Apache-ASP
@@ -42,10 +42,4 @@ MAN3=		Apache::ASP.3 \
 		Bundle::Apache::ASP.3 \
 		Bundle::Apache::ASP::Extra.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
