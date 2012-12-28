@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/astro/p5-Astro-SpaceTrack/Makefile,v 1.46 2012/11/17 17:09:17 svnexp Exp $
+# $FreeBSD: ports/astro/p5-Astro-SpaceTrack/Makefile,v 1.47 2012/12/17 06:20:42 svnexp Exp $
 
 PORTNAME=	Astro-SpaceTrack
 PORTVERSION=	0.069
@@ -29,15 +29,4 @@ MAN1=		SpaceTrack.1
 MAN3=		Astro::SpaceTrack.3 \
 		Astro::SpaceTrack::BulkData.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
