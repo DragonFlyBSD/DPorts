@@ -2,7 +2,7 @@
 # Date created:				01 May 2008
 # Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-REST-Google/Makefile,v 1.10 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: ports/net/p5-REST-Google/Makefile,v 1.11 2012/12/16 06:16:57 svnexp Exp $
 #
 
 PORTNAME=	REST-Google
@@ -23,7 +23,6 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-JSON-Any>=1.16:${PORTSDIR}/converters/p5-JSON-Any
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-USE_PERL5=	5.6.1+
 PERL_MODBUILD=	yes
 
 MAN3=	REST::Google.3 \
