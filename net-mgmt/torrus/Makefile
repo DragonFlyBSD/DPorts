@@ -1,12 +1,8 @@
-# New ports collection makefile for:	torrus
-# Date created:				July 13th, 2005
-# Whom:	      				Corey Smith <corsmith@gmail.com>
-#
-# $FreeBSD: ports/net-mgmt/torrus/Makefile,v 1.18 2012/11/17 06:00:38 svnexp Exp $
-#
+# Created by: Corey Smith <corsmith@gmail.com>
+# $FreeBSD: ports/net-mgmt/torrus/Makefile,v 1.20 2012/12/21 21:53:31 svnexp Exp $
 
 PORTNAME=	torrus
-PORTVERSION=	2.04
+PORTVERSION=	2.05
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/torrus/torrus/
 
@@ -29,7 +25,7 @@ BUILD_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_GNOME=	libxml2
-USE_PERL5_RUN=	5.8.1+
+USE_PERL5_RUN=	yes
 GNU_CONFIGURE=	YES
 
 USERS=		torrus
