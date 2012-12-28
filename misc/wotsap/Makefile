@@ -1,0 +1,31 @@
+# ex:ts=8
+# Ports collection makefile for:	wotsap
+# Date created:			Jan 6, 2004
+# Whom:				ijliao
+#
+# $FreeBSD: ports/misc/wotsap/Makefile,v 1.8 2012/11/17 05:59:46 svnexp Exp $
+#
+
+PORTNAME=	wotsap
+PORTVERSION=	0.6
+PORTREVISION=	2
+CATEGORIES=	misc
+MASTER_SITES=	http://www.lysator.liu.se/~jc/wotsap/download/ \
+		http://freebsd.unixfreunde.de/sources/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Web of trust statistics and pathfinder
+
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/PIL.pth:${PORTSDIR}/graphics/py-imaging
+
+USE_PYTHON=	yes
+NO_BUILD=	yes
+
+PLIST_FILES=	bin/pks2wot bin/wotsap
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/pks2wot ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/wotsap ${PREFIX}/bin
+
+.include <bsd.port.mk>
