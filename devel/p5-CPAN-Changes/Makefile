@@ -2,7 +2,7 @@
 # Date created:		2012-04-08
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-CPAN-Changes/Makefile,v 1.3 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: ports/devel/p5-CPAN-Changes/Makefile,v 1.4 2012/12/16 06:16:54 svnexp Exp $
 #
 
 PORTNAME=	CPAN-Changes
@@ -14,7 +14,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read and write CPAN Changes files
 
-PERL_CONFIGURE=	5.10.0+
+PERL_CONFIGURE=	yes
 
 MAN3=	CPAN::Changes.3 \
 	CPAN::Changes::Release.3 \
