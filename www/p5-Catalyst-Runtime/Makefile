@@ -2,7 +2,7 @@
 # Date created:			Jul 8, 2006
 # Whom:				lbr
 #
-# $FreeBSD: ports/www/p5-Catalyst-Runtime/Makefile,v 1.56 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: ports/www/p5-Catalyst-Runtime/Makefile,v 1.57 2012/12/17 12:44:05 svnexp Exp $
 #
 
 PORTNAME=	Catalyst-Runtime
@@ -110,11 +110,4 @@ MAN3=	Catalyst.3 \
 post-install:
 	@${CAT} ${PKGDIR}/pkg-message
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-RUN_DEPENDS+=	p5-Module-Pluggable>=3.9:${PORTSDIR}/devel/p5-Module-Pluggable
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
