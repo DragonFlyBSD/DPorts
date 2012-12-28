@@ -2,7 +2,7 @@
 # Date created:		2011-04-05
 # Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Path-Dispatcher/Makefile,v 1.7 2012/11/17 05:56:26 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Path-Dispatcher/Makefile,v 1.8 2012/12/17 12:44:00 svnexp Exp $
 #
 
 PORTNAME=	Path-Dispatcher
@@ -49,10 +49,4 @@ MAN3=	Path::Dispatcher::Path.3 \
 	Path::Dispatcher::Rule::Regex.3 \
 	Path::Dispatcher::Dispatch.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
