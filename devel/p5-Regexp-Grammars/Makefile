@@ -2,7 +2,7 @@
 # Date created:	   Mon Sep 27, 2010
 # Whom:		   Dan Rench <citric@cubicone.tmetic.com>
 #
-# $FreeBSD: ports/devel/p5-Regexp-Grammars/Makefile,v 1.6 2012/11/17 05:56:28 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Regexp-Grammars/Makefile,v 1.7 2012/12/16 06:16:54 svnexp Exp $
 #
 
 PORTNAME=	Regexp-Grammars
@@ -14,7 +14,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	citric@cubicone.tmetic.com
 COMMENT=	Add grammatical parsing features to Perl 5.10 regexes
 
-PERL_MODBUILD=	5.10+
+PERL_MODBUILD=	yes
 
 MAN3=	Regexp::Grammars.3
 
