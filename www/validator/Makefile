@@ -1,5 +1,5 @@
 # Created by: Naram Qashat <cyberbotx@cyberbotx.com>
-# $FreeBSD: ports/www/validator/Makefile,v 1.31 2012/11/17 06:03:10 svnexp Exp $
+# $FreeBSD: ports/www/validator/Makefile,v 1.32 2012/12/16 06:17:00 svnexp Exp $
 
 PORTNAME=	validator
 PORTVERSION=	1.3
@@ -26,7 +26,7 @@ RUN_DEPENDS=	onsgmls:${PORTSDIR}/textproc/opensp \
 		p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	5.8.0+
+USE_PERL5_RUN=	yes
 
 SUB_FILES=	pkg-message validator.conf.sample
 
