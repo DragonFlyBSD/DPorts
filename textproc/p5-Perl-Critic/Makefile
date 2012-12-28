@@ -2,7 +2,7 @@
 # Date created:			Nov 26, 2005
 # Whom:				ijliao
 #
-# $FreeBSD: ports/textproc/p5-Perl-Critic/Makefile,v 1.43 2012/11/17 06:02:06 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Perl-Critic/Makefile,v 1.44 2012/12/17 06:36:02 svnexp Exp $
 #
 
 PORTNAME=	Perl-Critic
@@ -238,11 +238,4 @@ MAN3=	Perl::Critic.3 \
 	Perl::Critic::Violation.3 \
 	Test::Perl::Critic::Policy.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-version>=0.77:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0.77:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
