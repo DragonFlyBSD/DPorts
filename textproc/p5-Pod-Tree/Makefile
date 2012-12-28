@@ -3,7 +3,7 @@
 # Date created:			Aug 10, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/textproc/p5-Pod-Tree/Makefile,v 1.14 2012/11/17 06:02:07 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Pod-Tree/Makefile,v 1.15 2012/12/17 08:35:06 svnexp Exp $
 #
 
 PORTNAME=	Pod-Tree
@@ -41,10 +41,4 @@ post-patch:
 	${REINPLACE_CMD} -e '/pod2html/d' ${WRKSRC}/MANIFEST
 	${RM} ${WRKSRC}/t/pod2html.t
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-Pod-Escapes>=1.02:${PORTSDIR}/textproc/p5-Pod-Escapes
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
