@@ -2,7 +2,7 @@
 # Date created:		2006-07-19
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/security/p5-Data-Entropy/Makefile,v 1.15 2012/11/17 06:01:12 svnexp Exp $
+# $FreeBSD: ports/security/p5-Data-Entropy/Makefile,v 1.16 2012/12/17 09:58:11 svnexp Exp $
 #
 
 PORTNAME=	Data-Entropy
@@ -29,10 +29,4 @@ MAN3=		Data::Entropy.3 \
 		Data::Entropy::RawSource::RandomnumbersInfo.3 \
 		Data::Entropy::Source.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
