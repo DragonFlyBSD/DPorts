@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Config-AutoConf/Makefile,v 1.9 2012/11/18 07:18:13 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Config-AutoConf/Makefile,v 1.10 2012/12/17 15:43:18 svnexp Exp $
 
 PORTNAME=	Config-AutoConf
 PORTVERSION=	0.20
@@ -20,11 +20,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Config::AutoConf.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-ExtUtils-CBuilder>=0.23:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
-RUN_DEPENDS+=	p5-ExtUtils-CBuilder>=0.23:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
