@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/devel/p5-Git-Wrapper/Makefile,v 1.14 2012/11/18 08:01:32 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Git-Wrapper/Makefile,v 1.15 2012/12/17 14:42:33 svnexp Exp $
 
 PORTNAME=	Git-Wrapper
 PORTVERSION=	0.028
@@ -31,11 +31,4 @@ MAN3=		Git::Wrapper.3 \
 		Git::Wrapper::Status.3 \
 		Git::Wrapper::Statuses.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-IPC-Cmd>=0:${PORTSDIR}/devel/p5-IPC-Cmd
-RUN_DEPENDS+=	p5-IPC-Cmd>=0:${PORTSDIR}/devel/p5-IPC-Cmd
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
