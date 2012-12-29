@@ -1,0 +1,1 @@
+LDFLAGS+=	-lopencv_core
