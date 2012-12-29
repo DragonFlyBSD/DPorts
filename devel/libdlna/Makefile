@@ -1,0 +1,46 @@
+# New ports collection makefile for:	devel/libdlna
+# Date created:				Sat Feb  9 20:20:00 UTC 2008
+# Whom:	      				Dave Grochowski <malus.x@gmail.com>
+#
+# $FreeBSD: ports/devel/libdlna/Makefile,v 1.10 2012/11/17 05:55:53 svnexp Exp $
+#
+
+PORTNAME=	libdlna
+PORTVERSION=	0.2.3
+PORTREVISION=	4
+CATEGORIES=	devel
+MASTER_SITES=	http://libdlna.geexbox.org/releases/ \
+		http://critical.ch/distfiles/ \
+		http://energy.critical.ch/distfiles/
+
+MAINTAINER=	malus.x@gmail.com
+COMMENT=	Reference DLNA open-source implementation
+
+LIB_DEPENDS+=	avcodec:${PORTSDIR}/multimedia/ffmpeg
+
+HAS_CONFIGURE=	yes
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_GNOME=	pkgconfig
+USE_LDCONFIG=	yes
+MAKE_JOBS_UNSAFE=	yes
+
+CONFIGURE_ARGS+=	--prefix="${PREFIX}" --disable-optimize \
+			--includedir=${LOCALBASE}/include \
+			--libdir=${LOCALBASE}/lib
+
+CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's#\(PKGCONFIG_DIR = \).*#\1${LOCALBASE}/libdata/pkgconfig#' \
+		${WRKSRC}/Makefile
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "powerpc" && ${OSVERSION} > 900000
+BROKEN=		Does not build on powerpc-9: fails to link
+.endif
+
+.include <bsd.port.post.mk>
