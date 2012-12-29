@@ -75,7 +75,7 @@ OPTIONS=	FIXED_MOUNTPOINTS "use fixed mountpoints" off
 
 .include <bsd.port.pre.mk>
 
-.if (${ARCH}=="i386" || ${ARCH}=="amd64" || ${ARCH}=="ia64")
+.if (${ARCH}=="i386" || ${ARCH}=="x86_64" || ${ARCH}=="ia64")
 RUN_DEPENDS+=	dmidecode:${PORTSDIR}/sysutils/dmidecode
 .endif
 
