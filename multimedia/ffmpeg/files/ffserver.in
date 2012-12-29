@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/multimedia/ffmpeg/files/ffserver.in,v 1.5 2012/11/17 05:59:48 svnexp Exp $
+#
+
+# PROVIDE: ffserver
+# REQUIRE: NETWORKING
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf to enable ffserver:
+#
+#ffserver_enable="YES"
+#
+ffserver_enable="${ffserver_enable-NO}"
+
+. /etc/rc.subr
+
+name=ffserver
+rcvar=ffserver_enable
+
+command="%%PREFIX%%/bin/${name} &"
+required_files=%%PREFIX%%/etc/ffserver.conf
+
+load_rc_config ${name}
+run_rc_command "$1"
