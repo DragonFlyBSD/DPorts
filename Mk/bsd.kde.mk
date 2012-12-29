@@ -31,6 +31,10 @@ ksub=${MASTER_SITE_SUBDIR}
 MASTER_SITE_KDE_kde=	${kmaster:S@%SUBDIR%/@${ksub}/@g}
 .endif # !defined(MASTER_SITE_SUBDIR)
 
+.if defined(KDE_I18N)
+BUILD_DEPENDS+=	mcopidl:${PORTSDIR}/audio/arts
+.endif
+
 # USE_KDEBASE_VER section
 .if defined(USE_KDEBASE_VER)
 .if ${USE_KDEBASE_VER} == CVS
