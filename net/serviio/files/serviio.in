@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# $FreeBSD: ports/net/serviio/files/serviio.in,v 1.3 2012/11/17 06:00:20 svnexp Exp $
+#
+# PROVIDE: serviio
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following line to /etc/rc.conf[.local] to enable serviio:
+#
+# serviio_enable="YES"
+
+. /etc/rc.subr
+
+name=serviio
+rcvar=serviio_enable
+command=%%PREFIX%%/sbin/serviiod
+
+load_rc_config $name
+
+serviio_user=${serviio_user-"dlna"}
+
+_dirs="/var/db/serviio /var/log/serviio"
+start_precmd="mkdir -p $_dirs; chown $serviio_user $_dirs"
+command_args="$serviio_args &"
+
+stop_cmd="$command -stop"
+
+run_rc_command $1
