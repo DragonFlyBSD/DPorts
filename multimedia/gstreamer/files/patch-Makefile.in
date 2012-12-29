@@ -1,0 +1,18 @@
+--- Makefile.in.orig	2009-10-19 00:06:14.000000000 +0200
++++ Makefile.in	2009-10-19 00:07:47.000000000 +0200
+@@ -397,7 +397,6 @@ aclocaldir = $(datadir)/aclocal
+ aclocal_DATA = gst-element-check-@GST_MAJORMINOR@.m4
+ SUBDIRS = pkgconfig \
+ 	gst libs plugins tools tests \
+-	docs \
+ 	po \
+ 	common
+ 
+@@ -405,7 +404,6 @@ SUBDIRS = pkgconfig \
+ # These are all the possible subdirs
+ DIST_SUBDIRS = pkgconfig \
+ 	gst libs plugins tools tests \
+-	docs \
+ 	po \
+ 	common
+ 
