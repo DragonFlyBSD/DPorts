@@ -1,0 +1,28 @@
+--- Makefile.in.orig	Wed Mar 28 07:46:58 2001
++++ Makefile.in	Mon Jul  7 06:24:17 2003
+@@ -8,7 +8,7 @@
+ srcdir=@srcdir@
+ 
+ @SET_MAKE@
+-FLAGS=@TYPESIZES@ @CFLAGS@
++FLAGS=@TYPESIZES@ @CPPFLAGS@ @CFLAGS@ -I./interface
+ OPT=@OPT@ $(FLAGS)
+ DEBUG=@DEBUG@ $(FLAGS)
+ CC=@CC@
+@@ -32,7 +32,7 @@
+ 
+ ifeq ($(STATIC),TRUE)
+ 	LIBS = interface/libcdda_interface.a paranoia/libcdda_paranoia.a \
+-		-static -lm
++		-lm -lcam
+ 	LIBDEP = interface/libcdda_interface.a paranoia/libcdda_paranoia.a
+ else
+ 	LIBS = -lcdda_interface -lcdda_paranoia -lm
+@@ -77,7 +77,6 @@
+ 	$(INSTALL) -m 0644 $(srcdir)/interface/cdda_interface.h $(INCLUDEDIR)
+ 	$(INSTALL) -m 0644 $(srcdir)/interface/libcdda_interface.so.0.$(VERSION) $(LIBDIR)
+ 	$(INSTALL) -m 0644 $(srcdir)/interface/libcdda_interface.a $(LIBDIR)
+-	$(INSTALL) -m 0644 $(srcdir)/utils.h $(INCLUDEDIR)
+ 	ln -fs libcdda_interface.so.0.$(VERSION) \
+ 		$(LIBDIR)/libcdda_interface.so.0
+ 	ln -fs libcdda_interface.so.0.$(VERSION) \
