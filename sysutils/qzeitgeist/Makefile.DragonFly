@@ -1,0 +1,3 @@
+LIB_DEPENDS+=	icuuc.50:${PORTSDIR}/devel/icu \
+		xml2.5:${PORTSDIR}/textproc/libxml2 \
+		yajl.2:${PORTSDIR}/devel/yajl
