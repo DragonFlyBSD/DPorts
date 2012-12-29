@@ -2,7 +2,7 @@
 # Date created:				05 May 2010
 # Whom:					Anton Berezin <tobez@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-Appliance-Session/Makefile,v 1.10 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: ports/net/p5-Net-Appliance-Session/Makefile,v 1.11 2012/12/17 15:43:22 svnexp Exp $
 #
 
 PORTNAME=	Net-Appliance-Session
@@ -27,10 +27,4 @@ PERL_CONFIGURE=	yes
 MAN3=		Net::Appliance::Session.3 \
 		Net::Appliance::Session::APIv2.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
