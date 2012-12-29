@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Servlet API
-# Date created:				October 13, 2005
-# Whom:					Herve Quiroz <hq@FreeBSD.org>
-#
-# $FreeBSD: ports/www/servlet-api/Makefile,v 1.11 2012/11/17 06:03:05 svnexp Exp $
-#
+# Created by: Herve Quiroz <hq@FreeBSD.org>
+# $FreeBSD: ports/www/servlet-api/Makefile,v 1.12 2012/12/10 13:48:09 svnexp Exp $
 
 PORTNAME=	servlet-api
 PORTVERSION=	2.5
@@ -18,7 +14,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The Servlet API
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
