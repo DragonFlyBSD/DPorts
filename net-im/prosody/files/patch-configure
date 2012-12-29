@@ -1,0 +1,10 @@
+--- ./configure.orig	2011-04-05 15:47:05.000000000 +0200
++++ ./configure	2011-04-10 18:09:24.000000000 +0200
+@@ -2,7 +2,6 @@
+ 
+ # Defaults
+ 
+-PREFIX=/usr/local
+ SYSCONFDIR="$PREFIX/etc/prosody"
+ DATADIR="$PREFIX/var/lib/prosody"
+ LUA_SUFFIX=""

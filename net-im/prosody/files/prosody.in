@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# $FreeBSD: ports/net-im/prosody/files/prosody.in,v 1.6 2012/11/17 06:00:29 svnexp Exp $
+#
+# PROVIDE: prosody
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# prosody_enable (bool):   Set to NO by default.
+#                Set it to YES to enable Prosody
+
+. /etc/rc.subr
+
+name="prosody"
+rcvar=prosody_enable
+pidfile="%%PREFIX%%/var/lib/prosody/prosody.pid"
+command="%%PREFIX%%/bin/prosodyctl"
+
+load_rc_config $name
+
+prosody=${prosody_enable-"NO"}
+
+extra_commands="status"
+
+start_cmd="prosody_cmd start"
+stop_cmd="prosody_cmd stop"
+restart_cmd="$stop_cmd; $start_cmd"
+status_cmd="prosody_cmd status"
+
+prosody_cmd()
+{
+	%%PREFIX%%/bin/prosodyctl $1
+}
+
+run_rc_command "$1"
