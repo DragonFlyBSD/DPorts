@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# $FreeBSD: ports/audio/musicpd/files/musicpd.in,v 1.11 2012/11/17 05:54:39 svnexp Exp $
+#
+# PROVIDE: musicpd
+# REQUIRE: mixer LOGIN avahi_daemon oss
+# KEYWORD: shutdown
+
+# Add the following line to /etc/rc.conf to enable mpd:
+#
+# musicpd_enable="YES"
+
+. /etc/rc.subr
+
+name=musicpd
+rcvar=musicpd_enable
+start_precmd="${name}_getpidfile"
+stop_precmd="${name}_getpidfile"
+
+command=%%PREFIX%%/bin/musicpd
+command_args=%%PREFIX%%/etc/%%MPDCONF%%
+required_files=%%PREFIX%%/etc/%%MPDCONF%%
+
+musicpd_getpidfile()
+{
+	if type get_pidfile_from_conf >/dev/null 2>&1 &&
+	    get_pidfile_from_conf pid_file %%PREFIX%%/etc/%%MPDCONF%% ; then
+		pidfile="$_pidfile_from_conf"
+	else
+		pidfile="%%MPDDIR%%/.mpd/pid"
+	fi
+}
+
+load_rc_config $name
+
+: ${musicpd_enable="NO"}
+
+run_rc_command "$1"
