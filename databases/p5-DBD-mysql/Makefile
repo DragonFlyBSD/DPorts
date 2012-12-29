@@ -1,0 +1,41 @@
+# New ports collection makefile for:    DBD::mysql
+# Date created:				27 Nov 2001
+# Whom:	      				Sergey Skvortsov <skv@FreeBSD.org>
+#
+# $FreeBSD: ports/databases/p5-DBD-mysql/Makefile,v 1.84 2012/11/17 05:55:14 svnexp Exp $
+#
+
+PORTNAME=	DBD-mysql
+PORTVERSION=	4.021
+CATEGORIES=	databases perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION:S/00$//}
+
+MAINTAINER=	skv@FreeBSD.org
+COMMENT?=	MySQL driver for the Perl5 Database Interface (DBI)
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-DBI>=1.08:${PORTSDIR}/databases/p5-DBI
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+CONFLICTS?=	p5-Mysql-modules-[0-9]* p5-DBD-mysql[45][0-9]-[0-9]*
+
+USE_MYSQL=	yes
+
+PERL_CONFIGURE=	yes
+
+MAN3=	Bundle::DBD::mysql.3 DBD::mysql.3 DBD::mysql::INSTALL.3
+
+OPTIONS=	SSL	"build with OpenSSL support" off
+
+.include <bsd.port.options.mk>
+
+.if defined(WITH_SSL)
+CONFIGURE_ARGS+=	--ssl
+RUN_DEPENDS+=		p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay
+.endif
+
+.include <bsd.port.mk>
