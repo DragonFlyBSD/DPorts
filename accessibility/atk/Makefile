@@ -1,10 +1,6 @@
-# New ports collection makefile for:	atk
-# Date Created:				14 May 2001
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/accessibility/atk/Makefile,v 1.66 2012/11/17 05:54:19 svnexp Exp $
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: ports/accessibility/atk/Makefile,v 1.67 2012/12/18 09:49:15 svnexp Exp $
 #   $MCom: ports/accessibility/atk/Makefile,v 1.114 2011/06/13 20:32:27 kwm Exp $
-#
 
 PORTNAME=	atk
 PORTVERSION=	2.0.1
@@ -14,7 +10,7 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A GNOME accessibility toolkit (ATK)
+COMMENT=	GNOME accessibility toolkit (ATK)
 
 USE_XZ=		yes
 
