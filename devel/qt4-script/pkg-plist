@@ -1,0 +1,56 @@
+include/qt4/Qt/QtScript
+include/qt4/Qt/qscriptable.h
+include/qt4/Qt/qscriptclass.h
+include/qt4/Qt/qscriptclasspropertyiterator.h
+include/qt4/Qt/qscriptcontext.h
+include/qt4/Qt/qscriptcontextinfo.h
+include/qt4/Qt/qscriptengine.h
+include/qt4/Qt/qscriptengineagent.h
+include/qt4/Qt/qscriptextensioninterface.h
+include/qt4/Qt/qscriptextensionplugin.h
+include/qt4/Qt/qscriptprogram.h
+include/qt4/Qt/qscriptstring.h
+include/qt4/Qt/qscriptvalue.h
+include/qt4/Qt/qscriptvalueiterator.h
+include/qt4/QtScript/QScriptClass
+include/qt4/QtScript/QScriptClassPropertyIterator
+include/qt4/QtScript/QScriptContext
+include/qt4/QtScript/QScriptContextInfo
+include/qt4/QtScript/QScriptContextInfoList
+include/qt4/QtScript/QScriptEngine
+include/qt4/QtScript/QScriptEngineAgent
+include/qt4/QtScript/QScriptExtensionInterface
+include/qt4/QtScript/QScriptExtensionPlugin
+include/qt4/QtScript/QScriptProgram
+include/qt4/QtScript/QScriptString
+include/qt4/QtScript/QScriptSyntaxCheckResult
+include/qt4/QtScript/QScriptValue
+include/qt4/QtScript/QScriptValueIterator
+include/qt4/QtScript/QScriptValueList
+include/qt4/QtScript/QScriptable
+include/qt4/QtScript/QtScript
+include/qt4/QtScript/qscriptable.h
+include/qt4/QtScript/qscriptclass.h
+include/qt4/QtScript/qscriptclasspropertyiterator.h
+include/qt4/QtScript/qscriptcontext.h
+include/qt4/QtScript/qscriptcontextinfo.h
+include/qt4/QtScript/qscriptengine.h
+include/qt4/QtScript/qscriptengineagent.h
+include/qt4/QtScript/qscriptextensioninterface.h
+include/qt4/QtScript/qscriptextensionplugin.h
+include/qt4/QtScript/qscriptprogram.h
+include/qt4/QtScript/qscriptstring.h
+include/qt4/QtScript/qscriptvalue.h
+include/qt4/QtScript/qscriptvalueiterator.h
+lib/qt4/libQtScript.la
+lib/qt4/libQtScript.prl
+lib/qt4/libQtScript.so
+lib/qt4/libQtScript.so.4
+lib/qt4/libQtScript.so.%%SHLIB_SHVER%%
+lib/qt4/libQtScript.so.%%SHLIB_VER%%
+%%DEBUG%%lib/qt4/libQtScript.so.%%SHLIB_VER%%.debug
+libdata/pkgconfig/QtScript.pc
+@dirrmtry lib/qt4
+@dirrm include/qt4/QtScript
+@dirrmtry include/qt4/Qt
+@dirrmtry include/qt4
