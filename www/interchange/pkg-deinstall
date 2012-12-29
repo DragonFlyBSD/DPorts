@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/www/interchange/pkg-deinstall,v 1.4 2012/11/17 06:02:37 svnexp Exp $
+#
+
+if [ "$2" != "POST-DEINSTALL" ]; then
+    exit 0
+fi
+
+USER=interch
+
+# Don't delete it, there may be ${USER} owned files around.
+pw usershow "${USER}" >/dev/null 2>&1 \
+	&& echo -e "\n\
+* To clean up the Interchange from your filesystem,
+* run 'rm -fr ${PKG_PREFIX}/interchange'
+* and 'rm -fr /var/run/interchange'
+*
+* To delete the user '${USER}' permanently,
+* use 'pw userdel ${USER}'.\n"
+
+exit 0
