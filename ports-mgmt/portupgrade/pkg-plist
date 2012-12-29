@@ -1,0 +1,53 @@
+@exec /bin/mkdir -p %D/lib/compat/pkg
+@dirrmtry lib/compat/pkg
+@dirrmtry lib/compat
+sbin/pkg_deinstall
+sbin/pkg_fetch
+sbin/pkg_glob
+sbin/pkg_sort
+sbin/pkg_which
+sbin/pkgdb
+sbin/pkgdu
+sbin/portcvsweb
+sbin/portinstall
+sbin/ports_glob
+sbin/portsclean
+sbin/portsdb
+sbin/portupgrade
+sbin/portversion
+@exec /bin/mkdir -p %D/%%RUBY_SITELIBDIR%%/pkgtools
+%%RUBY_SITELIBDIR%%/pkgtools/pkg.rb
+%%RUBY_SITELIBDIR%%/pkgtools/pkgdb.rb
+%%RUBY_SITELIBDIR%%/pkgtools/pkgdbtools.rb
+%%RUBY_SITELIBDIR%%/pkgtools/pkginfo.rb
+%%RUBY_SITELIBDIR%%/pkgtools/pkgmisc.rb
+%%RUBY_SITELIBDIR%%/pkgtools/pkgtools.rb
+%%RUBY_SITELIBDIR%%/pkgtools/pkgtsort.rb
+%%RUBY_SITELIBDIR%%/pkgtools/pkgversion.rb
+%%RUBY_SITELIBDIR%%/pkgtools/portinfo.rb
+%%RUBY_SITELIBDIR%%/pkgtools/ports.rb
+%%RUBY_SITELIBDIR%%/pkgtools/portsdb.rb
+%%RUBY_SITELIBDIR%%/pkgtools/revision.rb
+%%RUBY_SITELIBDIR%%/pkgtools.rb
+@dirrm %%RUBY_SITELIBDIR%%/pkgtools
+@dirrmtry %%RUBY_SITELIBDIR%%
+@dirrmtry lib/ruby/site_ruby
+@dirrmtry lib/ruby
+%%SCRIPT%%@exec mkdir -p %D/libexec/pkgtools 2> /dev/null
+%%SCRIPT%%libexec/pkgtools/script
+%%SCRIPT%%@dirrm libexec/pkgtools
+@unexec if cmp -s %D/etc/pkgtools.conf %D/etc/pkgtools.conf.sample; then rm -f %D/etc/pkgtools.conf; fi
+etc/pkgtools.conf.sample
+@exec [ -f %B/pkgtools.conf ] || cp %B/%f %B/pkgtools.conf
+etc/pkgtools.status-pkg.sh
+share/zsh/site-functions/_pkgtools
+@unexec [ -f %D/bin/zsh ] || rmdir %D/share/zsh/site-functions 2>/dev/null || true
+@dirrmtry share/zsh
+%%EXAMPLESDIR%%/bash/complete.sample
+%%EXAMPLESDIR%%/tcsh/complete.sample
+%%PORTDOCS%%%%DOCSDIR%%/NEWS.md
+%%PORTDOCS%%%%DOCSDIR%%/README.md
+@dirrm %%EXAMPLESDIR%%/bash
+@dirrm %%EXAMPLESDIR%%/tcsh
+@dirrm %%EXAMPLESDIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
