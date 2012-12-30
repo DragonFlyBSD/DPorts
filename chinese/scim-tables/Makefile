@@ -1,0 +1,39 @@
+# New ports collection makefile for:    zh-scim-tables
+# Date created:		22 May 2004
+# Whom:			Jie Gao	<gaoj@cpsc.ucalgary.ca>
+#
+# $FreeBSD: ports/chinese/scim-tables/Makefile,v 1.27 2012/11/17 05:54:58 svnexp Exp $
+#
+
+PORTNAME=	scim-tables
+PORTVERSION=	0.5.10
+PORTREVISION=	1
+CATEGORIES=	chinese
+MASTER_SITES=	SF/scim/${PORTNAME}/${PORTVERSION}
+
+MAINTAINER=	lx@FreeBSD.org
+COMMENT=	SCIM table based Chinese input methods
+
+BUILD_DEPENDS=	scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
+RUN_DEPENDS=	scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
+
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+
+.include <bsd.port.pre.mk>
+
+CPPFLAGS+=	-I${LOCALBASE}/include -D__STDC_ISO_10646__
+
+CONFIGURE_ENV+=	SCIM_DATADIR=${PREFIX}/share/scim \
+		SCIM_ICONDIR=${PREFIX}/share/scim/icons
+LDFLAGS+=	-L${LOCALBASE}/lib -lintl
+
+CONFIGURE_ARGS+=	--disable-skim-support
+
+post-install:
+	@${CAT} ${PKGMESSAGE}
+	@${ECHO}
+	@${ECHO} To display this message again, type \`pkg_info -D ${PKGNAME}\'
+	@${ECHO}
+
+.include <bsd.port.post.mk>
