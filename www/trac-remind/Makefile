@@ -1,0 +1,31 @@
+# Created by: Gerrit Beine <gerrit.beine@gmx.de>
+# $FreeBSD: ports/www/trac-remind/Makefile,v 1.10 2012/11/17 06:03:08 svnexp Exp $
+
+PORTNAME=	remind
+PORTVERSION=	1
+PORTREVISION=	5
+CATEGORIES=	www devel python
+MASTER_SITES=	http://www.unixmedia.it/
+PKGNAMEPREFIX=	trac-
+DISTNAME=	trac${PORTNAME}
+
+MAINTAINER=	glarkin@FreeBSD.org
+COMMENT=	Trac tickets reminder script
+
+RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
+
+NO_BUILD=	yes
+USE_ZIP=	yes
+USE_PYTHON=	-2.7
+
+PLIST_FILES=	bin/tracremind.py etc/tracremind.conf
+
+post-patch:
+	${REINPLACE_CMD} -e "s,%%PREFIX%%,${PREFIX}," \
+		 -e "s,%%PYTHON%%,${PYTHON_CMD}," ${WRKSRC}/tracremind.py
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/tracremind.py ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/tracremind.conf ${PREFIX}/etc
+
+.include <bsd.port.mk>
