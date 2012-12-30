@@ -2,7 +2,7 @@
 # Date created:				07 June 2005
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/goffice/Makefile,v 1.70 2012/11/17 05:55:46 svnexp Exp $
+# $FreeBSD: ports/devel/goffice/Makefile,v 1.71 2012/12/10 19:23:59 svnexp Exp $
 #   $MCom: ports-stable/devel/goffice/Makefile,v 1.3 2010/06/29 10:56:38 kwm Exp $
 #
 # !!! When updating goffice, don't forget to update pkg-plist in:
@@ -10,7 +10,7 @@
 
 PORTNAME=	goffice
 PORTVERSION=	0.8.17
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -20,7 +20,7 @@ COMMENT=	GLib/GTK+ set of document centric objects and utilities
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 USE_XZ=		yes
 USE_GMAKE=	yes
