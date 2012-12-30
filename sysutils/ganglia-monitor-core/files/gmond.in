@@ -1,0 +1,28 @@
+#!/bin/sh
+# $FreeBSD: ports/sysutils/ganglia-monitor-core/files/gmond.in,v 1.2 2012/11/17 06:01:32 svnexp Exp $
+
+# PROVIDE: gmond
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
+
+bname=`basename $0`
+
+. /etc/rc.subr
+
+name=`echo "${bname}" | tr ".-" "__"`
+rcvar=${name}_enable
+
+command="%%PREFIX%%/sbin/gmond"
+
+load_rc_config ganglia
+
+load_rc_config $bname
+
+eval "${name}_enable=\${${name}_enable-NO}"
+eval "conffile=\${${name}_conf-%%PREFIX%%/etc/${bname}.conf}"
+
+pidfile="/var/run/${bname}.pid"
+command_args="-c ${conffile} -p ${pidfile}"
+required_files=${conffile}
+
+run_rc_command $*
