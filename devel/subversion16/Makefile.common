@@ -1,0 +1,180 @@
+# New ports collection makefile for:	subversion
+# Date created:				10 September 2001
+# Whom:					rooneg@electricjellyfish.net
+#
+# $FreeBSD: ports/devel/subversion16/Makefile.common,v 1.59 2012/12/10 15:19:13 svnexp Exp $
+
+PORTNAME=	subversion
+PORTVERSION=	#please edit Makefile.inc for PORTVERSION, so ../svnmerge can stay in sync.
+PORTREVISION?=	1
+CATEGORIES+=	devel
+MASTER_SITES=	http://subversion.tigris.org/downloads/:main \
+		http://svnbook.red-bean.com/en/1.5/:book
+DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}:main
+DIST_SUBDIR=	subversion
+EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
+
+MAKE_JOBS_SAFE=	yes
+USE_BZIP2=	yes
+USE_AUTOTOOLS=	libtool
+USE_KDE4=	# Used below if KWallet support is enabled
+
+LICENSE=	AL2
+
+CONFLICTS_INSTALL+=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-1.7.[0-9]*
+LATEST_LINK=		${PKGNAMEPREFIX}${PORTNAME}16${PKGNAMESUFFIX}
+
+LIB_DEPENDS+=		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
+			expat:${PORTSDIR}/textproc/expat2
+
+CONFIGURE_ARGS+=	--with-ssl \
+			--without-swig \
+			--with-sqlite=${LOCALBASE} \
+			--with-expat=/usr/local/include:/usr/local/lib:expat
+
+.if defined(SVN_BUILD_BINDINGS)
+CONFLICTS_BUILD+=	${PORTNAME}-1.7.[0-9]*
+LIB_DEPENDS+=		svn_client-1.0:${PORTSDIR}/devel/subversion16
+OPTIONSFILE=		${PORT_DBDIR}/${PORTNAME}16/options
+OPTIONS=		# Dirty hack: if OPTIONS is not defined, OPTIONSFILE will not be included
+.endif
+
+.include <bsd.port.options.mk>
+.include "Makefile.inc"
+
+# Default is "on"
+.if !defined(WITHOUT_NEON)
+LIB_DEPENDS+=	neon.27:${PORTSDIR}/www/neon29
+PLIST_SUB+=	NEON=""
+.else
+CONFIGURE_ARGS+=--without-neon
+PLIST_SUB+=	NEON="@comment "
+.endif
+
+.if defined(WITH_SASL)
+LIB_DEPENDS+=	sasl2:${PORTSDIR}/security/cyrus-sasl2
+CONFIGURE_ARGS+=--with-sasl=${LOCALBASE}
+PLIST_SUB+=	SASL=""
+.else
+CONFIGURE_ARGS+=--without-sasl
+PLIST_SUB+=	SASL="@comment "
+.endif
+
+# Default is "on"
+.if !defined(WITHOUT_BDB)
+USE_BDB=	42+
+PLIST_SUB+=	BDB=""
+.else
+CONFIGURE_ARGS+=--without-berkeley-db
+PLIST_SUB+=	BDB="@comment "
+.endif
+
+.if defined(WITH_MOD_DAV_SVN)
+WITH_APACHE=	yes
+CONFIGURE_ARGS+=--with-apxs=${APXS}
+PLIST_SUB+=	MOD_DAV_SVN=""
+SUB_LIST+=	MOD_DAV_SVN_INSTALL="YES"
+SVNGROUP?=	www
+SVNUSER?=	www
+.if defined(WITH_MOD_DONTDOTHAT)
+PLIST_SUB+=	MOD_DONTDOTHAT=""
+.else
+PLIST_SUB+=	MOD_DONTDOTHAT="@comment "
+.endif
+.else
+CONFIGURE_ARGS+=--with-apxs=no
+PLIST_SUB+=	MOD_DAV_SVN="@comment "
+PLIST_SUB+=	MOD_DONTDOTHAT="@comment "
+SUB_LIST+=	MOD_DAV_SVN_INSTALL="NO"
+SVNGROUP?=	svn
+SVNUSER?=	svn
+.endif
+
+.if defined(WITH_APACHE)
+USE_APACHE=   22+
+.include "${PORTSDIR}/Mk/bsd.apache.mk"
+.if ${APACHE_VERSION} > 20
+LIB_DEPENDS+= apr-1:${PORTSDIR}/devel/apr1
+APR_CONFIG=   ${LOCALBASE}/bin/apr-1-config
+APU_CONFIG=   ${LOCALBASE}/bin/apu-1-config
+.else
+IGNORE=	please update to apache22
+.endif
+.else
+LIB_DEPENDS+= apr-1:${PORTSDIR}/devel/apr1
+APR_CONFIG=   ${LOCALBASE}/bin/apr-1-config
+APU_CONFIG=   ${LOCALBASE}/bin/apu-1-config
+.endif
+
+CONFIGURE_ARGS+=  --with-apr=${APR_CONFIG} --with-apr-util=${APU_CONFIG}
+
+.if defined(WITH_SVNAUTHZ_VALIDATE)
+APR_INCLUDE_DIR!=	${APR_CONFIG} --includedir
+PLIST_SUB+=     SVNAUTHZ_VALIDATE=""
+.else
+PLIST_SUB+=     SVNAUTHZ_VALIDATE="@comment "
+.endif
+
+.if defined(WITH_SERF)
+LIB_DEPENDS+=	serf-1:${PORTSDIR}/www/serf
+CONFIGURE_ARGS+=--with-serf=${LOCALBASE}
+PLIST_SUB+=	SERF=""
+.else
+PLIST_SUB+=	SERF="@comment "
+.endif
+
+.if !defined(WITHOUT_NLS)
+USE_GETTEXT=	yes
+PLIST_SUB+=	WITHOUT_GETTEXT=""
+.else
+CONFIGURE_ARGS+=--disable-nls
+PLIST_SUB+=	WITHOUT_GETTEXT="@comment "
+.endif
+
+.if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
+CFLAGS+=	-fpic -DPIC
+.endif
+
+.if defined(WITH_MAINTAINER_DEBUG)
+CONFIGURE_ARGS+=--enable-maintainer-mode --enable-debug
+CFLAGS+=	-g
+.endif
+
+.if defined(WITH_STATIC)
+CONFIGURE_ARGS+=--enable-all-static
+PLIST_SUB+=	DYNAMIC_ENABLED="@comment "
+.else
+PLIST_SUB+=	DYNAMIC_ENABLED=""
+.endif
+
+.if defined(WITH_GNOME_KEYRING)
+LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
+CONFIGURE_ARGS+=--with-gnome-keyring
+PLIST_SUB+=	GNOME_KEYRING=""
+.else
+CONFIGURE_ARGS+=--without-gnome-keyring
+PLIST_SUB+=	GNOME_KEYRING="@comment "
+.endif
+
+.if defined(WITH_KDE_KWALLET)
+USE_KDE4=	kdelibs runtime
+CONFIGURE_ARGS+=--with-kwallet=${KDE4_PREFIX}
+PLIST_SUB+=	KDE_KWALLET=""
+.else
+CONFIGURE_ARGS+=--without-kwallet
+PLIST_SUB+=	KDE_KWALLET="@comment "
+.endif
+
+.include <bsd.port.pre.mk>
+
+post-patch:
+.if ${PREFIX} != "/usr"
+	@${REINPLACE_CMD} "s#/etc/subversion#${ETCDIR}#g" ${WRKSRC}/subversion/libsvn_subr/config_file.c
+	@${REINPLACE_CMD} "s#/etc/subversion#${ETCDIR}#g" ${WRKSRC}/subversion/libsvn_subr/config_impl.h
+.endif
+	@${REINPLACE_CMD} "s#^swig_pydir =.*#swig_pydir = ${PYTHON_SITELIBDIR}/libsvn#" ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} "s#^swig_pydir_extra =.*#swig_pydir_extra = ${PYTHON_SITELIBDIR}/svn#" ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} "s#^LIBTOOL =.*#LIBTOOL = ${LIBTOOL}#" ${WRKSRC}/Makefile.in
+.if defined(SVN_BUILD_BINDINGS)
+	@${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}
+.endif
