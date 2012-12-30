@@ -1,8 +1,9 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: ports/emulators/tme/Makefile,v 1.17 2012/11/17 05:57:23 svnexp Exp $
+# $FreeBSD: ports/emulators/tme/Makefile,v 1.18 2012/12/10 19:24:01 svnexp Exp $
 
 PORTNAME=	tme
 PORTVERSION=	0.8
+PORTREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://people.csail.mit.edu/fredette/tme/
 
