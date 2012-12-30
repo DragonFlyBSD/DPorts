@@ -1,0 +1,43 @@
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: ports/multimedia/subtitleeditor/Makefile,v 1.28 2012/12/10 19:24:03 svnexp Exp $
+
+PORTNAME=	subtitleeditor
+PORTVERSION=	0.40.0
+PORTREVISION=	1
+CATEGORIES=	multimedia
+MASTER_SITES=	http://download.gna.org/${PORTNAME}/${PORTVERSION:C/\.[0-9]*$//}/ \
+		CRITICAL
+
+MAINTAINER=	ehaupt@FreeBSD.org
+COMMENT=	Subtitle editor
+
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24 \
+		glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
+		gstreamermm-0.10.2:${PORTSDIR}/multimedia/gstreamermm \
+		enchant.1:${PORTSDIR}/textproc/enchant \
+		pcre.3:${PORTSDIR}/devel/pcre
+
+USE_GMAKE=	yes
+USE_GNOME=	gtk20
+USE_GSTREAMER=	good
+USE_GETTEXT=	yes
+INSTALLS_ICONS=	yes
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+PLIST_SUB=	DESKTOPDIR="${DESKTOPDIR:S,^${PREFIX}/,,}"
+MAN1=		subtitleeditor.1
+
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 700043
+BROKEN=		does not compile
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e '/test/s|==|=|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|strtoll|strtoq|g' ${WRKSRC}/plugins/subtitleformats/advancedsubstationalpha/advancedsubstationalpha.cc
+
+.include <bsd.port.post.mk>
