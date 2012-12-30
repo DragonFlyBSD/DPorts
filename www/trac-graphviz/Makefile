@@ -1,0 +1,32 @@
+# Created by: Brooks Davis <brooks@freebsd.org>
+# $FreeBSD: ports/www/trac-graphviz/Makefile,v 1.11 2012/11/17 06:03:08 svnexp Exp $
+
+PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
+PORTVERSION=	0.7.4
+PORTREVISION=	6
+CATEGORIES=	www devel graphics python
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	brooks
+PKGNAMEPREFIX=	trac-
+DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
+
+MAINTAINER=	brooks@FreeBSD.org
+COMMENT=	Graphviz plugin for Trac's wiki
+
+RUN_DEPENDS+=	${LOCALBASE}/lib/X11/fonts/URW/fonts.dir:${PORTSDIR}/x11-fonts/urwfonts \
+		dot:${PORTSDIR}/graphics/graphviz \
+		tracd:${PORTSDIR}/www/trac
+
+USE_PYTHON=	-2.7
+USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_PKGNAME=	graphviz
+WRKSRC=			${WRKDIR}/${PORTNAME}plugin
+PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+
+post-patch:
+	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+	    -e 's|%%PREFIX%%|${PREFIX}|' \
+	    -e 's|%%OSMAJOR%%|${OSREL:C/\..*$//}|' \
+	${WRKSRC}/graphviz/graphviz.py
+
+.include <bsd.port.mk>
