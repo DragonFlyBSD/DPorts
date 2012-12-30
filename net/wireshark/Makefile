@@ -2,11 +2,11 @@
 # Date created:        10 August 1998
 # Whom:                Bill Fumerola <billf@chc-chimes.com>
 #
-# $FreeBSD: ports/net/wireshark/Makefile,v 1.186 2012/11/17 06:00:24 svnexp Exp $
+# $FreeBSD: ports/net/wireshark/Makefile,v 1.189 2012/12/17 06:26:12 svnexp Exp $
 #
 
 PORTNAME?=	wireshark
-PORTVERSION=	1.8.3
+PORTVERSION=	1.8.4
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.wireshark.org/download/src/ \
 		http://ftp.uni-kl.de/pub/wireshark/src/ \
@@ -68,7 +68,8 @@ OPTIONS=	RTP "Enable support for playing back RTP streams" off \
 		IPV6 "Enable IPv6 support" on \
 		GEOIP "Enable GeoIP lookups" on \
 		LUA "Enable LUA scripting integration" off \
-		CARES "Asynchronous DNS resolution via c-ares" off
+		CARES "Asynchronous DNS resolution via c-ares" off \
+		GSSAPI "Enable Kerberos support" on
 .endif
 
 .include <bsd.port.pre.mk>
@@ -166,12 +167,16 @@ LIB_DEPENDS+=	gcrypt:${PORTSDIR}/security/libgcrypt
 CONFIGURE_ARGS+=--with-libgcrypt-prefix=${LOCALBASE}
 .endif
 
+.if defined(WITHOUT_GSSAPI)
+CONFIGURE_ARGS+=--with-krb5=no
+.endif
+
 MAN1+=	dumpcap.1 tshark.1
 MAN4+=	wireshark-filter.4
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|lua5\.1|lua${LUA_VER_STR}|g ; \
-		s|-llua${LUA_VER_STR}|${LUA_LIBDIR}/liblua.a|g' \
+	@${REINPLACE_CMD} -e 's|%%LUA_INCDIR%%|${LUA_INCDIR}|g ; \
+	    	s|%%LUA_LIBDIR%%|${LUA_LIBDIR}|g' \
 		${WRKSRC}/configure
 
 post-install:
