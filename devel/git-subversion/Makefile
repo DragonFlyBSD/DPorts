@@ -1,0 +1,17 @@
+# $FreeBSD: ports/devel/git-subversion/Makefile,v 1.5 2012/12/12 18:51:43 svnexp Exp $
+
+PKGNAMESUFFIX=	-subversion
+
+COMMENT=	Distributed source code management tool with FreeBSD subversion bindings
+
+MASTERDIR=	${.CURDIR}/../git
+
+DESCR=		${.CURDIR}/pkg-descr
+
+WITH_SVN=	yes
+
+CONFLICTS?=	git-[0-9]*
+
+DISTINFO_FILE=	${MASTERDIR}/distinfo
+
+.include "${MASTERDIR}/Makefile"
