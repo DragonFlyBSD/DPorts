@@ -1,9 +1,4 @@
-# New ports collection makefile for:	qemu-launcher
-# Date created:				22 December 2005
-# Whom:					Wesley Shields <wxs@csh.rit.edu>
-#
-# $FreeBSD: ports/emulators/qemu-launcher/Makefile,v 1.19 2012/11/17 05:57:23 svnexp Exp $
-#
+# $FreeBSD: ports/emulators/qemu-launcher/Makefile,v 1.20 2012/12/12 18:51:44 svnexp Exp $
 
 PORTNAME=	qemu-launcher
 PORTVERSION=	1.7.4
