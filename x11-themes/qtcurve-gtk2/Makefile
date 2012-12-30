@@ -23,7 +23,7 @@ USE_GNOME=	gtk20
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800067
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CFLAGS+=	-fPIC
 .endif
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-style-qt_settings.c
