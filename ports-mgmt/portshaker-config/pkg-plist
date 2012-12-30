@@ -1,0 +1,17 @@
+@comment $FreeBSD: ports/ports-mgmt/portshaker-config/pkg-plist,v 1.5 2012/11/17 06:00:46 svnexp Exp $
+etc/portshaker.conf
+etc/portshaker.d/bsd_sharp
+etc/portshaker.d/bsd_sharp_releng_2_0
+etc/portshaker.d/bsd_sharp_releng_2_2
+etc/portshaker.d/bsd_sharp_releng_2_4
+etc/portshaker.d/enlightenment
+etc/portshaker.d/freebsd_texlive
+etc/portshaker.d/freebsd_texlive_ports
+etc/portshaker.d/freebsd_texlive_ports_marcuscom
+etc/portshaker.d/freebsd_texlive_releng
+etc/portshaker.d/haskell
+etc/portshaker.d/marcuscom_ports
+etc/portshaker.d/marcuscom_ports_stable
+etc/portshaker.d/ports
+etc/portshaker.d/redports
+etc/portshaker.d/xorg
