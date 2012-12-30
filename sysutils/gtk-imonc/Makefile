@@ -1,9 +1,9 @@
 # Created by: Steffen Vogelreuter
-# $FreeBSD: ports/sysutils/gtk-imonc/Makefile,v 1.30 2012/11/17 06:01:33 svnexp Exp $
+# $FreeBSD: ports/sysutils/gtk-imonc/Makefile,v 1.31 2012/12/10 19:24:05 svnexp Exp $
 
 PORTNAME=	gtk-imonc
 PORTVERSION=	0.6.4.1
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	sysutils
 MASTER_SITES=	http://stefan-strigler.de/download/
 
