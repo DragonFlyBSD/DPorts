@@ -1,0 +1,39 @@
+# New ports collection makefile for:	p5-Apache-MP3
+# Date created:		23-Jan-2001
+# Whom:			Dominic Mitchell <dom@happygiraffe.net>
+#
+# $FreeBSD: ports/www/p5-Apache-MP3/Makefile,v 1.27 2012/11/17 06:02:44 svnexp Exp $
+#
+
+PORTNAME=	Apache-MP3
+PORTVERSION=	4.00
+PORTREVISION=	1
+CATEGORIES=	www audio perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	MP3 browsing and streaming under mod_perl and Apache
+
+BUILD_DEPENDS=	p5-Audio-Wav>=0:${PORTSDIR}/audio/p5-Audio-Wav \
+		p5-CGI-Session>=0:${PORTSDIR}/www/p5-CGI-Session \
+		p5-MP3-Info>=0:${PORTSDIR}/audio/p5-MP3-Info \
+		p5-Ogg-Vorbis-Header>=0:${PORTSDIR}/audio/p5-Ogg-Vorbis-Header \
+		${APACHE_PKGNAMEPREFIX}mod_perl2>=0:${PORTSDIR}/www/mod_perl2
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+USE_APACHE=	22+
+
+MAN3=		Apache::MP3.3 \
+		Apache::MP3::L10N.3 \
+		Apache::MP3::Playlist.3 \
+		Apache::MP3::Resample.3 \
+		Apache::MP3::Sorted.3
+
+post-install:
+	${MKDIR} ${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/apache_mp3/* ${DATADIR}
+	${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>
