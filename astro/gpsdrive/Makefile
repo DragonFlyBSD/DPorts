@@ -2,12 +2,12 @@
 # Date Created:				16 April 2002
 # Whom:					Marco Molteni <molter@gufi.org>
 #
-# $FreeBSD: ports/astro/gpsdrive/Makefile,v 1.52 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: ports/astro/gpsdrive/Makefile,v 1.53 2012/12/10 19:23:58 svnexp Exp $
 #
 
 PORTNAME=	gpsdrive
 PORTVERSION=	2.09
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	astro geography
 MASTER_SITES=	http://www.gpsdrive.de/packages/ \
 		LOCAL/beech
@@ -15,7 +15,7 @@ MASTER_SITES=	http://www.gpsdrive.de/packages/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A GPS navigation system
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 USE_PERL5=	yes
 USE_GMAKE=	yes
