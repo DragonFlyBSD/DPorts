@@ -1,0 +1,46 @@
+--- driver/XScreenSaver.ad.in.orig	2009-09-07 21:53:15.000000000 -0700
++++ driver/XScreenSaver.ad.in	2009-09-15 02:10:42.000000000 -0700
+@@ -54,7 +54,7 @@
+ *splashDuration:	0:00:05
+ *visualID:		default
+ *captureStderr: 	True
+-*ignoreUninstalledPrograms: False
++*ignoreUninstalledPrograms: True
+ 
+ *textMode:		file
+ *textLiteral:		XScreenSaver
+@@ -151,6 +151,18 @@
+ ! screen savers interactively.
+ !
+ *programs:								      \
++				xaos -root -autopilot -nogui -delay 10000     \
++                                  -maxframerate 30                            \
++                                  -incoloring -1 -outcoloring -1            \n\
++				xdaliclock -root -font BUILTIN3 -cycle	    \n\
++				xearth -nofork -ncolors 50 -night 3	      \
++				  -pos sunrel/38/-30 -wait 0		    \n\
++				xmountains -b -M -Z 0 -r 1		    \n\
++	"XMountains (top)"	xmountains -b -M -Z 0 -r 1 -m		    \n\
++				xplanet -vroot -wait 1 -timewarp 400	      \
++                                  -label -origin moon			    \n\
++-				xsnow -bg SkyBlue3 -solidbg		    \n\
++@GL_KLUDGE@ GL:					fireflies -root                             \n\
+ 				maze -root				    \n\
+ @GL_KLUDGE@ GL: 				superquadrics -root			    \n\
+ 				attraction -root			    \n\
+@@ -246,7 +258,6 @@
+ 				xspirograph -root			    \n\
+ @GL_KLUDGE@ GL: 				circuit -root				    \n\
+ @GL_KLUDGE@ GL: 				dangerball -root			    \n\
+-- GL: 				dnalogo -root				    \n\
+ @GL_KLUDGE@ GL: 				engine -root				    \n\
+ @GL_KLUDGE@ GL: 				flipscreen3d -root			    \n\
+ @GL_KLUDGE@ GL: 				gltext -root				    \n\
+@@ -435,7 +446,6 @@
+ *hacks.cwaves.name:         CWaves
+ *hacks.dangerball.name:     DangerBall
+ *hacks.decayscreen.name:    DecayScreen
+-*hacks.dnalogo.name:        DNA Logo
+ *hacks.euler2d.name:        Euler2D
+ *hacks.fadeplot.name:       FadePlot
+ *hacks.flipflop.name:       FlipFlop

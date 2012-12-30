@@ -1,0 +1,13 @@
+--- driver/Makefile.in.orig	2008-07-16 14:40:49.000000000 -0700
++++ driver/Makefile.in	2008-07-18 16:23:37.000000000 -0700
+@@ -81,8 +81,8 @@
+ 
+ 
+ AD_DIR		= @APPDEFAULTS@
+-PAM_DIR		= /etc/pam.d
+-PAM_CONF	= /etc/pam.conf
++PAM_DIR		= ${prefix}/etc/pam.d
++PAM_CONF	= ${prefix}/etc/pam.conf
+ 
+ UTILS_SRC	= $(srcdir)/../utils
+ UTILS_BIN	= ../utils
