@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pear-Date_Holidays
-# Date created:		2006-06-16
-# Whom:			Thomas Abthorpe <thomas@goodking.ca>
-#
-# $FreeBSD: ports/devel/pear-Date_Holidays/Makefile,v 1.21 2012/11/17 05:56:38 svnexp Exp $
-#
+# Created by: Thomas Abthorpe <thomas@goodking.ca>
+# $FreeBSD: ports/devel/pear-Date_Holidays/Makefile,v 1.22 2012/12/17 02:17:59 svnexp Exp $
 
 PORTNAME=	Date_Holidays
 PORTVERSION=	0.21.6
@@ -20,13 +16,14 @@ RUN_DEPENDS=	${PEARDIR}/Date.php:${PORTSDIR}/devel/pear-Date \
 PEAR_AUTOINSTALL=	yes
 
 LATEST_LINK=	pear-Date_Holidays
-OPTIONS=	PEAR_CONSOLE_GETARGS "devel/pear-Console_Getargs" off
+OPTIONS_DEFINE=	PEAR_CONSOLE_GETARGS
+PEAR_CONSOLE_GETARGS_DESC=	Console::Getargs support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(PEAR_CONSOLE_GETARGS) || defined(WITH_PEAR_CONSOLE_GETARGS)
+.if ${PORT_OPTIONS:MPEAR_CONSOLE_GETARGS}
 BUILD_DEPENDS+=${PEARDIR}/Console/Getargs.php:${PORTSDIR}/devel/pear-Console_Getargs
 .endif
 
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
