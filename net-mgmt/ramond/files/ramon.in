@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net-mgmt/ramond/files/ramon.in,v 1.4 2012/11/17 06:00:37 svnexp Exp $
+#
+# PROVIDE: ramon
+# REQUIRE: DAEMON NETWORKING
+#
+
+. /etc/rc.subr
+
+name="ramon"
+rcvar=ramon_enable
+
+command="%%PREFIX%%/sbin/ramond"
+required_files=%%PREFIX%%/etc/ramond.conf
+
+load_rc_config $name
+
+: ${ramon_enable="NO"}
+
+command_args="-c %%PREFIX%%/etc/ramond.conf"
+
+run_rc_command "$1"
