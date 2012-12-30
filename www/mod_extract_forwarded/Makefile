@@ -1,0 +1,32 @@
+# Created by: Anders Nordby <anders@fix.no>
+# $FreeBSD: ports/www/mod_extract_forwarded/Makefile,v 1.20 2012/11/17 06:02:40 svnexp Exp $
+
+PORTNAME=	mod_extract_forwarded
+PORTVERSION=	2.0.2
+PORTREVISION=	3
+CATEGORIES=	www
+MASTER_SITES=	http://www.openinfo.co.uk/apache/
+DISTNAME=	extract_forwarded-${DISTVERSION}
+
+MAINTAINER=	kuriyama@FreeBSD.org
+COMMENT=	An Apache module that can make proxied requests appear with client IP
+
+USE_APACHE=	22
+WRKSRC=		${WRKDIR}/extract_forwarded
+PORTDOCS=	INSTALL README
+MAKE_JOBS_SAFE=	yes
+CONFLICTS=	mod_extract_forwarded-1.*
+
+AP_FAST_BUILD=	yes
+AP_GENPLIST=	yes
+
+post-install:
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR}/
+.for f in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
+.endfor
+.endif
+	${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>
