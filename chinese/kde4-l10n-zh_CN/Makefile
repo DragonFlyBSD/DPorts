@@ -1,0 +1,18 @@
+# New ports collection makefile for:    kde4-l10n-zh_CN
+# Date created:                         29 July 2008
+# Whom:                                 Martin Wilke <miwi@FreeBSD.org>
+#
+# $FreeBSD: ports/chinese/kde4-l10n-zh_CN/Makefile,v 1.64 2012/11/17 05:54:57 svnexp Exp $
+#
+
+PORTNAME=	kde-l10n
+PORTVERSION=	${KDE4_VERSION}
+CATEGORIES=	chinese kde
+
+MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Simplified Chinese messages and documentation for KDE4
+
+KDE4_L10N=	zh_CN
+
+.include "${.CURDIR}/../../misc/kde4-l10n/files/bsd.l10n.mk"
+.include <bsd.port.mk>
