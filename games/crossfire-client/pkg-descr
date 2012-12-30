@@ -1,0 +1,10 @@
+Crossfire is a highly graphical role-playing adventure game with
+characteristics reminiscent of rogue, nethack, omega, and gauntlet.
+It has multiplayer capability and presently runs under X11.
+
+Client for playing the new client/server based version of Crossfire.
+This package allows you to connect to Crossfire servers around the
+world.  You do not need install the Crossfire server in order to
+use this package.
+
+WWW: http://crossfire.real-time.com/
