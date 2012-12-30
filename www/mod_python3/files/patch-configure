@@ -1,0 +1,11 @@
+--- configure.orig     Sat Aug  5 09:51:23 2006
++++ configure  Sat Aug  5 09:57:47 2006
+@@ -2899,7 +2899,7 @@
+ PyLIBP=${PY_STD_LIB}
+ PyLIBPL=${PyLIBP}/config
+ PyPYTHONLIBS=${PyLIBPL}/libpython${PyVERSION}.a
+-PyLIBS=`grep "^LIB[SMC]=" ${PyLIBPL}/Makefile | cut -f2 -d= | tr '\011\012\015' '   '`
++PyLIBS=`ldd $PYTHON_BIN | sed -n 's,^.* => [^ ]*/lib\(.*\)\.so[^ ]* \((.*)\),-l\1,p' | grep -v '^-lc$' | xargs echo`
+ PyMODLIBS=`grep "^LOCALMODLIBS=" ${PyLIBPL}/Makefile | cut -f2 -d= | tr '\011\012\015' '   '`
+ PyFRAMEWORK=`grep "^PYTHONFRAMEWORK=" ${PyLIBPL}/Makefile | cut -f2 -d= | tr '\011\012\015' '   '`
+ PyFRAMEWORKDIR=`grep "^PYTHONFRAMEWORKDIR=" ${PyLIBPL}/Makefile | cut -f2 -d= | tr '\011\012\015' '   ' | awk '{print $1}'`
