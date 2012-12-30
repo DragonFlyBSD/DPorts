@@ -1,0 +1,7 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache/Profiler/.packlist
+%%SITE_PERL%%/Apache/Profiler.pm
+%%SITE_PERL%%/Apache2/Profiler.pm
+@dirrm %%SITE_PERL%%/Apache2
+@dirrm %%SITE_PERL%%/Apache
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache/Profiler
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache
