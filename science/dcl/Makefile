@@ -1,0 +1,41 @@
+# New ports collection makefile for:	DCL
+# Date created:		30 January 2005
+# Whom:			Shin'ya Murakami <murakami@ahs.scitec.kobe-u.ac.jp>
+#
+# $FreeBSD: ports/science/dcl/Makefile,v 1.15 2012/12/13 02:27:49 svnexp Exp $
+#
+
+PORTNAME=	dcl
+PORTVERSION=	5.4.7
+CATEGORIES=	science graphics
+MASTER_SITES=	http://www.gfd-dennou.org/library/dcl/ \
+		http://dennou-h.gfd-dennou.org/library/dcl/ \
+		http://dennou-q.gfd-dennou.org/library/dcl/
+
+MAINTAINER=	murashin@gfd-dennou.org
+COMMENT=	Scientific graphic library for geoscience
+
+USE_XORG=	x11 xext
+USE_FORTRAN=	yes
+USE_GNOME=	gtk20 gdkpixbuf2
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--prefix=${PREFIX} --with-x
+
+PORTDOCS=	CHECK CREDITS HISTORY README
+PORTEXAMPLES=	*
+
+RESTRICTED=	No commercial use
+
+post-install:
+.if !defined(NOPORTEXAMPLES)
+	@${MKDIR} ${EXAMPLESDIR}
+	(cd ${WRKSRC}/demo/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR})
+.endif
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for i in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}/
+.endfor
+.endif
+
+.include <bsd.port.mk>
