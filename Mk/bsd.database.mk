@@ -57,7 +57,7 @@ Database_Include_MAINTAINER=	ports@FreeBSD.org
 #				  If no version is given (by the maintainer via the port or
 #				  by the user via defined variable), try to find the
 #				  currently installed version.  Fall back to default if
-#				  necessary (db41+).
+#				  necessary (db48).
 # INVALID_BDB_VER
 #				- This variable can be defined when the port does not
 #				  support one or more versions of Berkeley DB.
@@ -73,14 +73,14 @@ Database_Include_MAINTAINER=	ports@FreeBSD.org
 #				- Use the highest installed version of Berkeley DB.
 # BDB_LIB_NAME
 #				- This variable is automatically set to the name of the
-#				  Berkeley DB library (default: db41).
+#				  Berkeley DB library (default: db48).
 # BDB_LIB_CXX_NAME
 #				- This variable is automatically set to the name of the
-#				  Berkeley DB C++ library (default: db41_cxx).
+#				  Berkeley DB C++ library (default: db48_cxx).
 # BDB_INCLUDE_DIR
 #				- This variable is automatically set to the location of
 #				  the Berkeley DB include directory (default:
-#				  ${LOCALBASE}/include/db41).
+#				  ${LOCALBASE}/include/db48).
 # BDB_LIB_DIR
 #				- This variable is automatically set to the location of
 #				  the Berkeley DB library directory.
@@ -312,9 +312,9 @@ USE_BDB=	${WITH_BDB_VER}
 .endif
 _WANT_BDB_VER=	${USE_BDB}
 
-# Assume the default bdb version as 41
+# Assume the default bdb version as 48
 .if ${USE_BDB:tl} == "yes"
-_WANT_BDB_VER=	41+
+_WANT_BDB_VER=	48
 .endif
 
 # Detect bdb version
