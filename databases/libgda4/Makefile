@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libgda2
-# Date created:				02 June 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/libgda4/Makefile,v 1.38 2012/11/17 05:55:09 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: ports/databases/libgda4/Makefile,v 1.39 2012/12/10 16:59:36 svnexp Exp $
 #   $MCom: ports/databases/libgda4/Makefile,v 1.14 2010/11/14 20:57:58 kwm Exp $
-#
 
 PORTNAME=	libgda4
 PORTVERSION?=	4.2.5
@@ -111,7 +107,7 @@ CONFIGURE_ARGS+=	--without-mdb
 
 .if ${LIBGDA4_SLAVE}=="jdbc"
 USE_JAVA=		yes
-JAVA_VENDOR=		bsdjava openjdk
+JAVA_VENDOR=		openjdk
 .else
 CONFIGURE_ARGS+=	--without-java
 .endif
