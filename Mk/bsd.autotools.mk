@@ -68,7 +68,7 @@ _AUTOTOOLS_ALL=	autoconf autoheader autoconf213 autoheader213 \
 _AUTOTOOLS_IGN_autoconf=		autoconf213 autoheader213
 _AUTOTOOLS_IGN_autoheader=		autoconf213 autoheader213
 _AUTOTOOLS_IGN_autoconf213=		autoconf autoheader
-_AUTOTOOLS_IGN_autoheader213=	autoconf autoheader
+_AUTOTOOLS_IGN_autoheader213=		autoconf autoheader
 _AUTOTOOLS_IGN_automake=		automake14 aclocal14
 _AUTOTOOLS_IGN_aclocal=			automake14 aclocal14
 _AUTOTOOLS_IGN_automake14=		automake aclocal
@@ -237,6 +237,8 @@ AUTOM4TE?=			${LOCALBASE}/bin/autom4te-${AUTOCONF_VERSION}
 AUTORECONF=			${LOCALBASE}/bin/autoreconf-${AUTOCONF_VERSION}
 AUTOSCAN=			${LOCALBASE}/bin/autoscan-${AUTOCONF_VERSION}
 AUTOUPDATE=			${LOCALBASE}/bin/autoupdate-${AUTOCONF_VERSION}
+AUTOCONFWRAP=			${LOCALBASE}/bin/autoconf
+AUTOCWPORT=			devel/autoconf-wrapper
 
 AUTOCONF_VARS=		AUTOCONF=${AUTOCONF} \
 					AUTOCONF_DIR=${AUTOCONF_DIR} \
@@ -249,6 +251,7 @@ AUTOCONF_VARS=		AUTOCONF=${AUTOCONF} \
 					AUTOCONF_VERSION=${AUTOCONF_VERSION}
 
 AUTOCONF_DEPENDS=	${AUTOCONF}:${PORTSDIR}/${AUTOCONF_PORT}
+AUTOCONF_DEPENDS+=	${AUTOCONFWRAP}:${PORTSDIR}/${AUTOCWPORT}
 BUILD_DEPENDS+=		${AUTOCONF_DEPENDS}
 .endif
 
