@@ -362,8 +362,8 @@ _BDB_VER=	${dbx}
 .   endif
 .  endfor
 .  if ${_BDB_VER} == "no"
-# No existing db4 version is detected in system
-_BDB_VER=	${_MATCHED_DB_VER}
+# No existing db4 version is detected in system, use the default
+_BDB_VER=	48
 .  endif
 . endif
 .endif
