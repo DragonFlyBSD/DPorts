@@ -1,0 +1,31 @@
+# New ports collection makefile for:	libksane
+# Date created:				5 September 2011
+# Whom:					Alberto Villa <avilla@FreeBSD.org>
+#
+# $FreeBSD: ports/graphics/libksane/Makefile,v 1.7 2012/11/17 05:58:13 svnexp Exp $
+
+PORTNAME=	libksane
+PORTVERSION=	${KDE4_VERSION}
+CATEGORIES=	graphics kde
+MASTER_SITES=	${MASTER_SITE_KDE}
+MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
+DIST_SUBDIR=	KDE
+
+MAINTAINER=	kde@FreeBSD.org
+COMMENT=	SANE library interface for KDE
+
+LIB_DEPENDS=	sane.1:${PORTSDIR}/graphics/sane-backends
+
+CONFLICTS=	kdegraphics-4.[0-6].*
+
+USE_KDE4=	kdehier kdelibs kdeprefix automoc4
+KDE4_BUILDENV=	yes
+USE_QT4=	corelib moc_build qmake_build rcc_build uic_build
+USE_XZ=	yes
+MAKE_JOBS_SAFE=	yes
+
+pre-configure:
+	${REINPLACE_CMD} -e '/pkgconfig/ s/$${LIB_INSTALL_DIR}/libdata/' \
+		${WRKSRC}/CMakeLists.txt
+
+.include <bsd.port.mk>
