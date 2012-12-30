@@ -1,9 +1,5 @@
-# New ports collection makefile for:   trayer
-# Date created: Aug 21, 2006
-# Whom:         Alexey Mikhailov <karma@ez.pereslavl.ru>
-#
-# $FreeBSD: ports/x11/trayer/Makefile,v 1.17 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
+# $FreeBSD: ports/x11/trayer/Makefile,v 1.18 2012/12/10 20:43:19 svnexp Exp $
 
 PORTNAME=	trayer
 PORTVERSION=	1.1.5
