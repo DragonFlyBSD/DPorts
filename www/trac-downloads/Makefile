@@ -1,0 +1,38 @@
+# Created by: Brooks Davis <brooks@freebsd.org>
+# $FreeBSD: ports/www/trac-downloads/Makefile,v 1.6 2012/11/17 06:03:08 svnexp Exp $
+
+PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;:tl}
+PORTVERSION=	${TRAC_VERSION}.${PLUGIN_VERSION}.${SVN_REV}
+PORTREVISION=	1
+CATEGORIES=	www devel python
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	brooks
+PKGNAMEPREFIX=	trac-
+DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
+DIST_SUBDIR=	trac
+
+MAINTAINER=	brooks@FreeBSD.org
+COMMENT=	Trac plugin providing a downloads section
+
+RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
+
+TRAC_VERSION=	0.12
+PLUGIN_VERSION=	0.3
+SVN_REV=	10047
+
+USE_PYTHON=	-2.7
+USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_PKGNAME=	TracDownloads
+PYDISTUTILS_PKGVERSION=	${PLUGIN_VERSION}
+PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+
+.if defined(BOOTSTRAP)
+do-fetch:
+	${MKDIR} ${WRKDIR}
+	svn export -r ${SVN_REV} http://trac-hacks.org/svn/downloadsplugin/${TRAC_VERSION}/ ${WRKSRC}
+	${MKDIR} ${_DISTDIR}
+	cd ${WRKDIR} && \
+	    tar cfvz ${_DISTDIR}/${DISTNAME}.tar.gz ${DISTNAME}
+.endif
+
+.include <bsd.port.mk>
