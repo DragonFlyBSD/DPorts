@@ -1,0 +1,11 @@
+--- Makefile.orig	Sun Mar  4 14:28:26 2007
++++ Makefile	Sun Mar  4 14:30:42 2007
+@@ -1,8 +1,6 @@
+ # Makefile for gxmms2 and gkrellxmms2
+ 
+ # Installation directory
+-PREFIX=/usr/local
+-KRELLPREFIX=/usr
+ 
+ ALLFILES=gkrellxmms2/*.c gkrellxmms2/*.h gkrellxmms2/*.xpm gmedialib/*.c gmedialib/*.h gmedialib/*.xpm gtrackinfo/*.c gtrackinfo/*.h gxmms2src/*.c gxmms2src/*.h gxmms2src/*.xpm sdecode/*.c sdecode/*.h xmms2ctrl/*.c xmms2ctrl/*.h Makefile README COPYING CHANGELOG
+ 
