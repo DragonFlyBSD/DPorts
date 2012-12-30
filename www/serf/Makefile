@@ -1,0 +1,38 @@
+# Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
+# $FreeBSD: ports/www/serf/Makefile,v 1.16 2012/11/17 06:03:05 svnexp Exp $
+
+PORTNAME=	serf
+PORTVERSION=	1.1.1
+CATEGORIES=	www
+MASTER_SITES=	GOOGLE_CODE
+MASTER_SITE_SUBDIR=	db
+
+MAINTAINER=	apache@FreeBSD.org
+COMMENT=	Serf HTTP client library
+
+LIB_DEPENDS+=	apr-1:${PORTSDIR}/devel/apr1
+
+MAKE_JOBS_SAFE=	yes
+
+PROJECTHOST=	serf
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gnomehack
+GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+CONFIGURE_ARGS+=	--with-apr=${LOCALBASE}/bin/apr-1-config \
+			--with-apr-util=${LOCALBASE}/bin/apu-1-config
+
+post-patch:
+	${REINPLACE_CMD} -e '/^Requires.private/d' ${WRKSRC}/serf.pc.in
+
+post-install:
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/design-guide.txt ${DOCSDIR}
+.endif
+
+check:
+	@cd ${WRKSRC}/ && ${MAKE} check
+
+.include <bsd.port.mk>
