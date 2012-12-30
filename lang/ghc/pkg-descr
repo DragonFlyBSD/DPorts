@@ -1,0 +1,16 @@
+Haskell is the standard lazy purely functional programming language.
+The current language version is Haskell 98, agreed in December 1998,
+with a revised version published in January 2003.
+
+The Glasgow Haskell Compiler is a robust, fully-featured, optimising
+compiler for the functional programming language Haskell 98 generating
+good code for a variety of platforms.  GHC is a state-of-the-art
+programming suite for Haskell and compiles Haskell to either native code
+or C.  It implements numerous experimental language extensions to
+Haskell, including concurrency, a foreign language interface, several
+type-system extensions, exceptions, and so on.  GHC comes with a
+generational garbage collector, a space and time profiler, comprehensive
+set of libraries and an interactive system for convenient, quick
+development.
+
+WWW: http://www.haskell.org/ghc/
