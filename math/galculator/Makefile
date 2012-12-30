@@ -1,7 +1,7 @@
-# $FreeBSD: ports/math/galculator/Makefile,v 1.34 2012/11/17 05:59:20 svnexp Exp $
+# $FreeBSD: ports/math/galculator/Makefile,v 1.35 2012/12/17 21:45:11 svnexp Exp $
 
 PORTNAME=	galculator
-PORTVERSION=	2.0
+PORTVERSION=	2.0.1
 CATEGORIES=	math
 MASTER_SITES=	SF
 
