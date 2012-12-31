@@ -1,5 +1,5 @@
 --- src/poudriere.d/ports.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/ports.sh	2012-12-20 23:59:44.000000000 +0100
++++ src/poudriere.d/ports.sh	2012-12-23 18:32:34.347885000 +0100
 @@ -21,12 +21,11 @@
                       them.
      -p name       -- specifies the name of the portstree we workon . If not
@@ -16,15 +16,17 @@
  
  	exit 1
  }
-@@ -37,6 +36,8 @@
+@@ -37,7 +36,9 @@
  DELETE=0
  LIST=0
  QUIET=0
+-while getopts "cFudlp:qf:M:m" FLAG; do
 +METHOD=git
 +PTNAME=default
- while getopts "cFudlp:qf:M:m" FLAG; do
++while getopts "cFudlp:qf:M:m:" FLAG; do
  	case "${FLAG}" in
  		c)
+ 			CREATE=1
 @@ -49,7 +50,7 @@
  			UPDATE=1
  			;;
@@ -167,16 +169,12 @@
  
  if [ ${DELETE} -eq 1 ]; then
  	porttree_exists ${PTNAME} || err 2 "No such ports tree ${PTNAME}"
--	PTMNT=$(porttree_get_base ${PTNAME})
+ 	PTMNT=$(porttree_get_base ${PTNAME})
 -	[ -d "${PTMNT}/ports" ] && PORTSMNT="${PTMNT}/ports"
 -	/sbin/mount -t nullfs | /usr/bin/grep -q "${PORTSMNT:-${PTMNT}} on" \
 -		&& err 1 "Ports tree \"${PTNAME}\" is currently mounted and being used."
-+	PTMNT=$(portree_get_base ${PTNAME})
-+	PTFS=$(portree_get_fs ${PTNAME})
-+	[ -n "$(check_mount ${PTFS})" ] && \
-+		err 1 "Ports tree \"${PTNAME}\" is currently mounted and being used."
- 	msg "Deleting portstree \"${PTNAME}\""
--	PTFS=$(porttree_get_fs ${PTNAME})
+-	msg "Deleting portstree \"${PTNAME}\""
+ 	PTFS=$(porttree_get_fs ${PTNAME})
 -	if [ -n "${PTFS}" ]; then
 -		zfs destroy -r ${PTFS}
 -	else
@@ -184,6 +182,9 @@
 -		sed -i "" "/${PTNAME}/d" \
 -			${POUDRIERED}/portstrees
 -	fi
++	[ -n "$(check_mount ${PTFS})" ] && \
++		err 1 "Ports tree \"${PTNAME}\" is currently mounted and being used."
++	msg "Deleting portstree \"${PTNAME}\""
 +	zkillfs ${PTFS} ports/${PTNAME}
 +	rmdir ${PTMNT}
  fi
