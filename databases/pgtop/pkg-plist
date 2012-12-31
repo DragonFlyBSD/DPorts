@@ -1,0 +1,4 @@
+bin/pgtop
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/pgtop/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/pgtop
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto
