@@ -1,9 +1,5 @@
-# Ports collection makefile for:	mime4j
-# Date created:			3 Sep 2008
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/mime4j/Makefile,v 1.10 2012/11/17 05:59:06 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: ports/mail/mime4j/Makefile,v 1.11 2012/12/10 13:24:59 svnexp Exp $
 
 PORTNAME=	mime4j
 PORTVERSION=	0.7.2
@@ -21,7 +17,7 @@ LICENSE=	AL2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/apache-${PORTNAME}-${PORTVERSION}
 
