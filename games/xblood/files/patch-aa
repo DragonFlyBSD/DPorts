@@ -1,0 +1,19 @@
+--- Makefile~	Fri Nov  3 06:03:40 2000
++++ Makefile	Fri Nov  3 06:06:29 2000
+@@ -1,12 +1,12 @@
+-PREFIX  = /usr/X11R6
+-X11BASE = /usr/X11R6
++#PREFIX  = /usr/X11R6
++#X11BASE = /usr/X11R6
+ INCLUDEDIR = $(X11BASE)/include
+ LIBDIR     = $(X11BASE)/lib
+ BINDIR     = $(PREFIX)/bin
+ MANDIR     = $(PREFIX)/man/man1
+-CC = gcc
++#CC = gcc
+ RM = rm -f
+-CFLAGS = -O
++#CFLAGS = -O
+ LIBS = -lX11
+ PKGNAME = xblood-2.0
+ VERSION = XBlood-2.0
