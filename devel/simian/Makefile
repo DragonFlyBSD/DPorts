@@ -1,9 +1,5 @@
-# New ports collection makefile for:	simian
-# Date created:				July 8, 2005
-# Whom:					andreas@syndrom23.de
-#
-# $FreeBSD: ports/devel/simian/Makefile,v 1.23 2012/11/17 05:57:03 svnexp Exp $
-#
+# Created by: andreas@syndrom23.de
+# $FreeBSD: ports/devel/simian/Makefile,v 1.24 2012/12/10 11:29:55 svnexp Exp $
 
 PORTNAME=	simian
 PORTVERSION=	2.3.33
@@ -28,7 +24,7 @@ NO_WRKSUBDIR=	yes
 
 .if !defined(WITHOUT_JAVA)
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 PLIST_SUB+=	JAVA=""
 SUB_LIST+=	JAVA=""
 .else
