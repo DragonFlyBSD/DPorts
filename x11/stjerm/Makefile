@@ -1,13 +1,8 @@
-# New ports collection makefile for:	stjerm
-# Date created:		2011-03-25
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/x11/stjerm/Makefile,v 1.4 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: ports/x11/stjerm/Makefile,v 1.5 2012/12/16 12:06:04 svnexp Exp $
 
 PORTNAME=	stjerm
-PORTVERSION=	0.15
-PORTREVISION=	1
+PORTVERSION=	0.16
 CATEGORIES=	x11
 MASTER_SITES=	http://stjerm-terminal.googlecode.com/files/
 
