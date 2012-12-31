@@ -1,0 +1,53 @@
+# Created by: Pav Lucistnik <pav@oook.cz>
+# $FreeBSD: ports/textproc/meld/Makefile,v 1.42 2012/11/25 14:08:01 svnexp Exp $
+
+PORTNAME=	meld
+PORTVERSION=	1.7.0
+CATEGORIES=	textproc devel python
+MASTER_SITES=	GNOME
+
+MAINTAINER=	pawel@FreeBSD.org
+COMMENT=	GNOME 2 visual diff and merge tool
+
+LICENSE=	GPLv2
+
+USE_XZ=		yes
+USE_GNOME=	pygnome2
+USE_PYTHON=	yes
+USE_GMAKE=	yes
+MAKE_ARGS=	prefix=${PREFIX}
+INSTALLS_ICONS=	yes
+INSTALLS_OMF=	yes
+
+OPTIONS_DEFINE=		PYGNOMEDESKTOP
+PYGNOMEDESKTOP_DESC=	Code syntax hilighting (many dependencies)
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.else
+EXTRA_PATCHES=	${FILESDIR}/extra-Makefile-without_nls
+PLIST_SUB+=	NLS="@comment "
+.endif
+
+post-patch:
+.for file in Makefile
+	@${REINPLACE_CMD} -e '/docdir_/d' ${WRKSRC}/${file}
+.endfor
+.for file in help/Makefile
+	@${REINPLACE_CMD} -e '/^LANGUAGES/s|de||g' ${WRKSRC}/${file}
+.endfor
+.for file in help/C/Makefile help/es/Makefile help/fr/Makefile
+	@${REINPLACE_CMD} -e \
+		's|$$(localstatedir)/lib/scrollkeeper|/var/db/scrollkeeper|g ; \
+		 s|^LANG :=|LANG_ :=|g ; \
+		 s|$$(LANG)|$$(LANG_)|g' ${WRKSRC}/${file}
+.endfor
+
+.if ${PORT_OPTIONS:MPYGNOMEDESKTOP}
+USE_GNOME+=	pygnomedesktop
+.endif
+
+.include <bsd.port.mk>
