@@ -2,7 +2,7 @@
 # Date created:				31 August 2005
 # Whom:					jamie
 #
-# $FreeBSD: ports/graphics/intergif/Makefile,v 1.2 2012/11/17 05:58:09 svnexp Exp $
+# $FreeBSD: ports/graphics/intergif/Makefile,v 1.3 2012/12/06 16:41:46 svnexp Exp $
 #
 
 PORTNAME=	interGif
@@ -14,7 +14,7 @@ MASTER_SITES=	http://utter.chaos.org.uk/~pdh/software/arc/ \
 DISTNAME=	ig615src
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	jamie@bishopston.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Efficient animated GIF optimiser
 
 WRKSRC=		${WRKDIR}/igsrc
