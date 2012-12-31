@@ -1,0 +1,3 @@
+@comment $FreeBSD: ports/textproc/gladtex/pkg-plist,v 1.3 2012/11/17 06:01:56 svnexp Exp $
+bin/eqn2img
+bin/gladtex
