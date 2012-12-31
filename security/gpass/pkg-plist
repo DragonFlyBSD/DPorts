@@ -1,0 +1,18 @@
+bin/gpass
+bin/gpass-convert
+share/applications/gpass.desktop
+share/pixmaps/gpass-icon.png
+%%DATADIR%%/attribute-editor.glade
+%%DATADIR%%/authentication.glade
+%%DATADIR%%/change-master-password.glade
+%%DATADIR%%/confirm-quit.glade
+%%DATADIR%%/intergradation.glade
+%%DATADIR%%/lock.glade
+%%DATADIR%%/password-generator.glade
+%%DATADIR%%/preferences.glade
+%%DATADIR%%/welcome.glade
+%%DATADIR%%/window.glade
+@dirrm %%DATADIR%%
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@dirrmtry share/applications
