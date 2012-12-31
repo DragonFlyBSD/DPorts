@@ -1,0 +1,11 @@
+@comment $FreeBSD: ports/net-mgmt/nsca/pkg-plist,v 1.4 2012/11/17 06:00:35 svnexp Exp $
+%%PORTDOCS%%%%DOCSDIR%%/Changelog
+%%PORTDOCS%%%%DOCSDIR%%/LEGAL
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/SECURITY
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%SERVER%%etc/nagios/nsca.cfg-sample
+%%SERVER%%sbin/nsca
+%%CLIENT%%etc/nagios/send_nsca.cfg-sample
+%%CLIENT%%sbin/send_nsca
+@dirrmtry etc/nagios
