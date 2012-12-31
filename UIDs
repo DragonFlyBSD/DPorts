@@ -14,7 +14,6 @@ uucp:*:66:66::0:0:UUCP pseudo-user:/var/spool/uucppublic:/usr/libexec/uucp/uucic
 xten:*:67:67::0:0:X-10 daemon:/usr/local/xten:/nonexistent
 pop:*:68:6::0:0:Post Office Owner (popper):/nonexistent:/usr/sbin/nologin
 wnn:*:69:7::0:0:Wnn:/nonexistent:/nonexistent
-pgsql:*:70:70::0:0:PostgreSQL pseudo-user:/usr/local/pgsql:/bin/sh
 oracle:*:71:71::0:0:Oracle:/usr/local/oracle7:/usr/sbin/nologin
 ircd:*:72:72::0:0:IRC daemon:/nonexistent:/nonexistent
 ircservices:*:73:73::0:0:IRC services:/nonexistent:/nonexistent
@@ -89,6 +88,7 @@ webcamd:*:145:145::0:0:Webcamd user:/var/empty:/usr/sbin/nologin
 ventrilo:*:146:146::0:0:& server:/usr/local/ventrilo-server:/usr/sbin/nologin
 kdm:*:147:147::0:0:KDE Display Manager:/nonexistent:/usr/sbin/nologin
 ipv6mon:*:148:148::0:0:IPv6 Address Monitoring Daemon:/nonexistent:/usr/sbin/nologin
+pgsql:*:150:150::0:0:PostgreSQL pseudo-user:/usr/local/pgsql:/bin/sh
 rbldns:*:153:153::0:0:rbldnsd pseudo-user:/nonexistent:/usr/sbin/nologin
 trircd:*:154:154::0:0:& user:/usr/local/etc/tr-ircd:/usr/sbin/nologin
 sfs:*:171:171::0:0:Self-Certifying File System:/nonexistent:/usr/sbin/nologin

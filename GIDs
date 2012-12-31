@@ -13,12 +13,10 @@ uucp:*:66:
 xten:*:67:
 dialer:*:68:
 network:*:69:
-pgsql:*:70:
 ircd:*:72:
 ircservices:*:73:
 simscan:*:74:
 hybserv:*:76:
-audit:*:77:
 virtuoso:*:79:
 www:*:80:
 qnofiles:*:81:
@@ -82,6 +80,8 @@ webcamd:*:145:
 ventrilo:*:146:
 kdm:*:147:
 ipv6mon:*:148:
+audit:*:149:
+pgsql:*:150:
 rbldns:*:153:
 trircd:*:154:
 sfs:*:171:
