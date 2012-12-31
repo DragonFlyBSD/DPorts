@@ -1,9 +1,5 @@
-# New ports collection makefile for:	JavaSVN
-# Date created:				6 Aug 2005
-# Whom:					tux@pinguru.net
-#
-# $FreeBSD: ports/devel/svnkit/Makefile,v 1.21 2012/11/17 05:57:04 svnexp Exp $
-#
+# Created by: tux@pinguru.net
+# $FreeBSD: ports/devel/svnkit/Makefile,v 1.22 2012/12/10 11:29:55 svnexp Exp $
 
 PORTNAME=	svnkit
 PORTVERSION=	1.3.0
@@ -19,7 +15,7 @@ RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 NO_BUILD=	yes
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.5847
 
