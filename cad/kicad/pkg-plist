@@ -1,0 +1,410 @@
+bin/cvpcb
+bin/eeschema
+bin/freeroute.jnlp
+bin/gerbview
+bin/kicad
+bin/minizip
+bin/pcbnew
+lib/kicad/plugins/netlist_form_pads-pcb
+%%DESKTOPDIR%%/eeschema.desktop
+%%DESKTOPDIR%%/kicad.desktop
+%%DOCSDIR%%/INSTALL.txt
+%%PORTDOCS%%%%DOCSDIR%%/74xx/74LS393.pdf
+%%PORTDOCS%%%%DOCSDIR%%/74xx/74f181.pdf
+%%PORTDOCS%%%%DOCSDIR%%/74xx/74hc573.pdf
+%%PORTDOCS%%%%DOCSDIR%%/74xx/74hc_hct74.pdf
+%%PORTDOCS%%%%DOCSDIR%%/74xx/74ls393.pdf
+%%PORTDOCS%%%%DOCSDIR%%/74xx/74ls86.pdf
+%%PORTDOCS%%%%DOCSDIR%%/adc-dac/ad7533.pdf
+%%PORTDOCS%%%%DOCSDIR%%/adc-dac/ad775.pdf
+%%PORTDOCS%%%%DOCSDIR%%/adc-dac/ad7819.pdf
+%%PORTDOCS%%%%DOCSDIR%%/adc-dac/adc0800.pdf
+%%PORTDOCS%%%%DOCSDIR%%/adc-dac/adc08060.pdf
+%%PORTDOCS%%%%DOCSDIR%%/adc-dac/adc1173.pdf
+%%PORTDOCS%%%%DOCSDIR%%/adc-dac/ltc1406.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/AD9283.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/AD9891_9895.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ADuC816.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ad626_c.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ad629_a.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ad9280.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ad9283.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ad9708.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/mat02.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/mat03.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/op275.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ssm2135.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ssm2141.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ssm2142.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ssm2143.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ssm2163.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ssm2165.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog-dev/ssm2402.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog_mux&switches/DG417-DG419.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog_mux&switches/adg636.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog_mux&switches/dg308.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog_mux&switches/dg441.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog_mux&switches/dg611_2_3_0.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog_mux&switches/dg619-620.pdf
+%%PORTDOCS%%%%DOCSDIR%%/analog_mux&switches/dg9421-22.pdf
+%%PORTDOCS%%%%DOCSDIR%%/cmos4000/mc14020.pdf
+%%PORTDOCS%%%%DOCSDIR%%/cmos4000/mc14040.pdf
+%%PORTDOCS%%%%DOCSDIR%%/contrib/fx614ds.pdf
+%%PORTDOCS%%%%DOCSDIR%%/crystal/cs5361.pdf
+%%PORTDOCS%%%%DOCSDIR%%/crystal/cs5396.pdf
+%%PORTDOCS%%%%DOCSDIR%%/digital-audio/DS1267.pdf
+%%PORTDOCS%%%%DOCSDIR%%/digital-audio/cs5361.pdf
+%%PORTDOCS%%%%DOCSDIR%%/digital-audio/cs5396.pdf
+%%PORTDOCS%%%%DOCSDIR%%/digital-audio/cs8406.pdf
+%%PORTDOCS%%%%DOCSDIR%%/digital-audio/cs8413-4.pdf
+%%PORTDOCS%%%%DOCSDIR%%/digital-audio/cs8420.pdf
+%%PORTDOCS%%%%DOCSDIR%%/digital-audio/cs8427-f.pdf
+%%PORTDOCS%%%%DOCSDIR%%/digital-audio/ds1267.pdf
+%%PORTDOCS%%%%DOCSDIR%%/digital-audio/tpa5050.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/D426GWA.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/D426SURWAS530A2.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/HDSP-48xx.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/HDSP-7xxx.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/LTC-6960HR.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/LTC-6980HR.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/MV57164.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/d426gwa.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/display-DA04-11GWA.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/display-DC04-11GWA.pdf
+%%PORTDOCS%%%%DOCSDIR%%/display/mv57164.pdf
+%%PORTDOCS%%%%DOCSDIR%%/elantec/el7242.pdf
+%%PORTDOCS%%%%DOCSDIR%%/elantec/el7243.pdf
+%%PORTDOCS%%%%DOCSDIR%%/gennum/gs9020.pdf
+%%PORTDOCS%%%%DOCSDIR%%/gennum/gs9025a.pdf
+%%PORTDOCS%%%%DOCSDIR%%/gennum/gs9032.pdf
+%%PORTDOCS%%%%DOCSDIR%%/intersil/dg441_2.pdf
+%%PORTDOCS%%%%DOCSDIR%%/intersil/icl7660.pdf
+%%PORTDOCS%%%%DOCSDIR%%/ir/ir2110.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/4607f.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/lt1086.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/lt1108.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/lt1129.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/lt1175.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/lt1611f.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/lt1761.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/lt1932.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/lt3010.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/lt3430f.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/ltc1594-8.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/ltc1624.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/ltc1878.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/ltc2859-2861.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/ltc3442.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/ltc3525.pdf
+%%PORTDOCS%%%%DOCSDIR%%/linear-tec/ltc4007.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/DS1302.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/MAX1647-MAX1648.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/MAX220-MAX249.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/MAX2605-MAX2609.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/MAX5436-MAX5439.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/MAX872-MAX874.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/ds1302.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/ds1621.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/max200-max213.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/max3224-max3245.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/max471-max472.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/max6351-max6360.pdf
+%%PORTDOCS%%%%DOCSDIR%%/maxim/max690-max695.pdf
+%%PORTDOCS%%%%DOCSDIR%%/memory/24xx512.pdf
+%%PORTDOCS%%%%DOCSDIR%%/memory/27c010.pdf
+%%PORTDOCS%%%%DOCSDIR%%/memory/27c020.pdf
+%%PORTDOCS%%%%DOCSDIR%%/memory/27c040.pdf
+%%PORTDOCS%%%%DOCSDIR%%/memory/27c080.pdf
+%%PORTDOCS%%%%DOCSDIR%%/memory/28c256.pdf
+%%PORTDOCS%%%%DOCSDIR%%/micrel/mic2026.pdf
+%%PORTDOCS%%%%DOCSDIR%%/micrel/mic2177.pdf
+%%PORTDOCS%%%%DOCSDIR%%/microchip/PIC16F819.pdf
+%%PORTDOCS%%%%DOCSDIR%%/microchip/pic16c62b-72b.pdf
+%%PORTDOCS%%%%DOCSDIR%%/microchip/pic16f62x.pdf
+%%PORTDOCS%%%%DOCSDIR%%/microchip/pic16f84.pdf
+%%PORTDOCS%%%%DOCSDIR%%/motorola/m68hc12B.pdf
+%%PORTDOCS%%%%DOCSDIR%%/motorola/mmc2114.pdf
+%%PORTDOCS%%%%DOCSDIR%%/ns/DS7830.pdf
+%%PORTDOCS%%%%DOCSDIR%%/ns/ds7830.pdf
+%%PORTDOCS%%%%DOCSDIR%%/ns/lf398.pdf
+%%PORTDOCS%%%%DOCSDIR%%/ns/lm158.pdf
+%%PORTDOCS%%%%DOCSDIR%%/ns/lm1877.pdf
+%%PORTDOCS%%%%DOCSDIR%%/ns/lm193.pdf
+%%PORTDOCS%%%%DOCSDIR%%/ns/lm555.pdf
+%%PORTDOCS%%%%DOCSDIR%%/ns/pc16550d.pdf
+%%PORTDOCS%%%%DOCSDIR%%/onsemi/mc33178.pdf
+%%PORTDOCS%%%%DOCSDIR%%/onsemi/mc34064.pdf
+%%PORTDOCS%%%%DOCSDIR%%/op_amps/lm324.pdf
+%%PORTDOCS%%%%DOCSDIR%%/op_amps/lm358.pdf
+%%PORTDOCS%%%%DOCSDIR%%/op_amps/lmc6062.pdf
+%%PORTDOCS%%%%DOCSDIR%%/op_amps/lmc6082.pdf
+%%PORTDOCS%%%%DOCSDIR%%/opto/cpc1017n.pdf
+%%PORTDOCS%%%%DOCSDIR%%/opto/laa110.pdf
+%%PORTDOCS%%%%DOCSDIR%%/opto/lbb110.pdf
+%%PORTDOCS%%%%DOCSDIR%%/opto/lcc110.pdf
+%%PORTDOCS%%%%DOCSDIR%%/opto/silonex_nsl-32sr3.pdf
+%%PORTDOCS%%%%DOCSDIR%%/philips/HTRC11001T-hitag_reader.pdf
+%%PORTDOCS%%%%DOCSDIR%%/philips/SA605.pdf
+%%PORTDOCS%%%%DOCSDIR%%/philips/dac08.pdf
+%%PORTDOCS%%%%DOCSDIR%%/philips/pca9516.pdf
+%%PORTDOCS%%%%DOCSDIR%%/philips/pca9516_3.pdf
+%%PORTDOCS%%%%DOCSDIR%%/philips/pcf8574.pdf
+%%PORTDOCS%%%%DOCSDIR%%/philips/pcf8591.pdf
+%%PORTDOCS%%%%DOCSDIR%%/philips/sa605.pdf
+%%PORTDOCS%%%%DOCSDIR%%/philips/tda8702.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/LP2985.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lm117.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lm1578a.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lm78lxx.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lm78xx.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lm79lxx.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lm79xx.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lp2985.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lp3963.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lt1372-1377.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lt1373.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/lt3472.pdf
+%%PORTDOCS%%%%DOCSDIR%%/regulator/mc34063.pdf
+%%DOCSDIR%%/scripts/kicad-devel
+%%DOCSDIR%%/scripts/kicad-get-rss
+%%DOCSDIR%%/scripts/packagesrc.sh
+%%DOCSDIR%%/scripts/pcb-dr-adjust/example.brd
+%%DOCSDIR%%/scripts/pcb-dr-adjust/howto.txt
+%%DOCSDIR%%/scripts/pcb-dr-adjust/pcb-dr-adjust.cfg
+%%DOCSDIR%%/scripts/pcb-dr-adjust/pcb-dr-adjust.pl
+%%DOCSDIR%%/scripts/setfont.sh
+%%PORTDOCS%%%%DOCSDIR%%/siliconix/si9986.pdf
+%%PORTDOCS%%%%DOCSDIR%%/temic/tk5550.pdf
+%%PORTDOCS%%%%DOCSDIR%%/temic/u2770B.pdf
+%%PORTDOCS%%%%DOCSDIR%%/texas/pga4311.pdf
+%%PORTDOCS%%%%DOCSDIR%%/texas/tl497a.pdf
+%%PORTDOCS%%%%DOCSDIR%%/texas/tl7702a.pdf
+%%PORTDOCS%%%%DOCSDIR%%/texas/tl7702b.pdf
+%%PORTDOCS%%%%DOCSDIR%%/texas/tms320c240.pdf
+%%PORTDOCS%%%%DOCSDIR%%/texas/tms320f2810.pdf
+%%PORTDOCS%%%%DOCSDIR%%/texas/tms320lf240x/tms320lf2406a.pdf
+%%PORTDOCS%%%%DOCSDIR%%/texas/tms320lf240x/tms320lf240x-periph-spru357.pdf
+%%PORTDOCS%%%%DOCSDIR%%/texas/tms320lf240x/tms320lf240x.pdf
+%%PORTDOCS%%%%DOCSDIR%%/that_corporation/vca-2180x.pdf
+%%PORTDOCS%%%%DOCSDIR%%/that_corporation/vca-2181x.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/bipolar/2n4401.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/bipolar/BC807.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/bipolar/BC817.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/bipolar/MPSA42.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/bipolar/bc237.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/bipolar/bc307.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/bipolar/bc807.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/bipolar/bc817.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/bipolar/mpsa42.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/bipolar/mpsa92.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/mos/2n7000-7002.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/mos/IRFU024.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/mos/irf530.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/mos/irfu024.pdf
+%%PORTDOCS%%%%DOCSDIR%%/transistors/mos/si4569DY.pdf
+%%PORTDOCS%%%%DOCSDIR%%/valves/philips-em84.pdf
+%%PORTDOCS%%%%DOCSDIR%%/video/av9173.pdf
+%%PORTDOCS%%%%DOCSDIR%%/video/cxd3400n.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xicor/x9118.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xicor/x9250.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xicor/x9258.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xicor/x9268.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xicor/x9269.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/9500.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/spartan2/ac_dc_car.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/spartan2/description.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/spartan2/intro.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/spartan2/pinout.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/spartan2e/spartan2e.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/spartan3/spartan3.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/xc18V00proms.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/xc400x-pinout.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/xc95108.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/xc9536.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/xc9572.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/xcr3032xl.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/xcr3064a.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/xcr3064xl.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/xcr3128xl.pdf
+%%PORTDOCS%%%%DOCSDIR%%/xilinx/xcr3256xl.pdf
+share/icons/hicolor/16x16/mimetypes/application-x-kicad-project.png
+share/icons/hicolor/22x22/mimetypes/application-x-kicad-project.png
+share/icons/hicolor/24x24/mimetypes/application-x-kicad-project.png
+share/icons/hicolor/32x32/mimetypes/application-x-kicad-project.png
+share/icons/hicolor/48x48/apps/kicad.png
+share/icons/hicolor/48x48/mimetypes/application-x-kicad-project.png
+share/icons/hicolor/scalable/apps/kicad.svg
+share/icons/hicolor/scalable/mimetypes/application-x-kicad-project.svg
+%%DATADIR%%/demos/complex_hierarchy/ampli_ht.sch
+%%DATADIR%%/demos/complex_hierarchy/complex_hierarchy.brd
+%%DATADIR%%/demos/complex_hierarchy/complex_hierarchy.cmp
+%%DATADIR%%/demos/complex_hierarchy/complex_hierarchy.lib
+%%DATADIR%%/demos/complex_hierarchy/complex_hierarchy.net
+%%DATADIR%%/demos/complex_hierarchy/complex_hierarchy.pro
+%%DATADIR%%/demos/complex_hierarchy/complex_hierarchy.sch
+%%DATADIR%%/demos/ecc83/ecc83-pp.brd
+%%DATADIR%%/demos/ecc83/ecc83-pp.cache.lib
+%%DATADIR%%/demos/ecc83/ecc83-pp.cmp
+%%DATADIR%%/demos/ecc83/ecc83-pp.net
+%%DATADIR%%/demos/ecc83/ecc83-pp.pro
+%%DATADIR%%/demos/ecc83/ecc83-pp.sch
+%%DATADIR%%/demos/ecc83/ecc83-pp_v2.brd
+%%DATADIR%%/demos/ecc83/ecc83-pp_v2.pro
+%%DATADIR%%/demos/ecc83/ecc83-pp_v2.sch
+%%DATADIR%%/demos/electric/electric.cache.lib
+%%DATADIR%%/demos/electric/electric.pro
+%%DATADIR%%/demos/electric/electric.sch
+%%DATADIR%%/demos/flat_hierarchy/flat_hierarchy.brd
+%%DATADIR%%/demos/flat_hierarchy/flat_hierarchy.cache.lib
+%%DATADIR%%/demos/flat_hierarchy/flat_hierarchy.cmp
+%%DATADIR%%/demos/flat_hierarchy/flat_hierarchy.net
+%%DATADIR%%/demos/flat_hierarchy/flat_hierarchy.pro
+%%DATADIR%%/demos/flat_hierarchy/flat_hierarchy.sch
+%%DATADIR%%/demos/flat_hierarchy/pic_programmer.sch
+%%DATADIR%%/demos/flat_hierarchy/pic_sockets.sch
+%%DATADIR%%/demos/interf_u/interf_u-cache.dcm
+%%DATADIR%%/demos/interf_u/interf_u-cache.lib
+%%DATADIR%%/demos/interf_u/interf_u.brd
+%%DATADIR%%/demos/interf_u/interf_u.cmp
+%%DATADIR%%/demos/interf_u/interf_u.net
+%%DATADIR%%/demos/interf_u/interf_u.pro
+%%DATADIR%%/demos/interf_u/interf_u.sch
+%%DATADIR%%/demos/microwave/microwave.brd
+%%DATADIR%%/demos/microwave/microwave.pro
+%%DATADIR%%/demos/microwave/shape1.txt
+%%DATADIR%%/demos/pic_programmer/pic_programmer.brd
+%%DATADIR%%/demos/pic_programmer/pic_programmer.cache.lib
+%%DATADIR%%/demos/pic_programmer/pic_programmer.cmp
+%%DATADIR%%/demos/pic_programmer/pic_programmer.net
+%%DATADIR%%/demos/pic_programmer/pic_programmer.pro
+%%DATADIR%%/demos/pic_programmer/pic_programmer.sch
+%%DATADIR%%/demos/pic_programmer/pic_sockets.sch
+%%DATADIR%%/demos/pspice/pspice.cache.lib
+%%DATADIR%%/demos/pspice/pspice.cir
+%%DATADIR%%/demos/pspice/pspice.pro
+%%DATADIR%%/demos/pspice/pspice.sch
+%%DATADIR%%/demos/sonde xilinx/sonde xilinx.brd
+%%DATADIR%%/demos/sonde xilinx/sonde xilinx.cache.lib
+%%DATADIR%%/demos/sonde xilinx/sonde xilinx.cmp
+%%DATADIR%%/demos/sonde xilinx/sonde xilinx.drl
+%%DATADIR%%/demos/sonde xilinx/sonde xilinx.net
+%%DATADIR%%/demos/sonde xilinx/sonde xilinx.pro
+%%DATADIR%%/demos/sonde xilinx/sonde xilinx.sch
+%%DATADIR%%/demos/test_xil_95108/carte_test.brd
+%%DATADIR%%/demos/test_xil_95108/carte_test.cache.lib
+%%DATADIR%%/demos/test_xil_95108/carte_test.cmp
+%%DATADIR%%/demos/test_xil_95108/carte_test.net
+%%DATADIR%%/demos/test_xil_95108/carte_test.pro
+%%DATADIR%%/demos/test_xil_95108/carte_test.sch
+%%DATADIR%%/demos/video/bus_pci.sch
+%%DATADIR%%/demos/video/esvideo.sch
+%%DATADIR%%/demos/video/graphic.sch
+%%DATADIR%%/demos/video/modul.sch
+%%DATADIR%%/demos/video/muxdata.sch
+%%DATADIR%%/demos/video/pal-ntsc.sch
+%%DATADIR%%/demos/video/rams.sch
+%%DATADIR%%/demos/video/video-cache.lib
+%%DATADIR%%/demos/video/video.brd
+%%DATADIR%%/demos/video/video.cmp
+%%DATADIR%%/demos/video/video.net
+%%DATADIR%%/demos/video/video.pro
+%%DATADIR%%/demos/video/video.sch
+%%NLS%%%%DATADIR%%/internat/ca/kicad.mo
+%%NLS%%%%DATADIR%%/internat/cs/kicad.mo
+%%NLS%%%%DATADIR%%/internat/de/kicad.mo
+%%NLS%%%%DATADIR%%/internat/es/kicad.mo
+%%NLS%%%%DATADIR%%/internat/fi/kicad.mo
+%%NLS%%%%DATADIR%%/internat/fr/kicad.mo
+%%NLS%%%%DATADIR%%/internat/hu/kicad.mo
+%%NLS%%%%DATADIR%%/internat/it/kicad.mo
+%%NLS%%%%DATADIR%%/internat/ko/kicad.mo
+%%NLS%%%%DATADIR%%/internat/nl/kicad.mo
+%%NLS%%%%DATADIR%%/internat/pl/kicad.mo
+%%NLS%%%%DATADIR%%/internat/pt/kicad.mo
+%%NLS%%%%DATADIR%%/internat/ru/kicad.mo
+%%NLS%%%%DATADIR%%/internat/sl/kicad.mo
+%%NLS%%%%DATADIR%%/internat/sv/kicad.mo
+%%NLS%%%%DATADIR%%/internat/zh_CN/kicad.mo
+%%DATADIR%%/template/kicad.pro
+share/mime/packages/kicad.xml
+share/mimelnk/application/x-kicad-project.desktop
+share/mimelnk/application/x-kicad-schematic.desktop
+@dirrmtry share/mimelnk/application
+@dirrmtry share/mimelnk
+@dirrm %%DATADIR%%/template
+%%NLS%%@dirrm %%DATADIR%%/internat/zh_CN
+%%NLS%%@dirrm %%DATADIR%%/internat/sv
+%%NLS%%@dirrm %%DATADIR%%/internat/sl
+%%NLS%%@dirrm %%DATADIR%%/internat/ru
+%%NLS%%@dirrm %%DATADIR%%/internat/pt
+%%NLS%%@dirrm %%DATADIR%%/internat/pl
+%%NLS%%@dirrm %%DATADIR%%/internat/nl
+%%NLS%%@dirrm %%DATADIR%%/internat/ko
+%%NLS%%@dirrm %%DATADIR%%/internat/it
+%%NLS%%@dirrm %%DATADIR%%/internat/hu
+%%NLS%%@dirrm %%DATADIR%%/internat/fr
+%%NLS%%@dirrm %%DATADIR%%/internat/fi
+%%NLS%%@dirrm %%DATADIR%%/internat/es
+%%NLS%%@dirrm %%DATADIR%%/internat/de
+%%NLS%%@dirrm %%DATADIR%%/internat/cs
+%%NLS%%@dirrm %%DATADIR%%/internat/ca
+%%NLS%%@dirrm %%DATADIR%%/internat
+@dirrm %%DATADIR%%/demos/video
+@dirrm %%DATADIR%%/demos/test_xil_95108
+@dirrm %%DATADIR%%/demos/sonde xilinx
+@dirrm %%DATADIR%%/demos/pspice
+@dirrm %%DATADIR%%/demos/pic_programmer
+@dirrm %%DATADIR%%/demos/microwave
+@dirrm %%DATADIR%%/demos/interf_u
+@dirrm %%DATADIR%%/demos/flat_hierarchy
+@dirrm %%DATADIR%%/demos/electric
+@dirrm %%DATADIR%%/demos/ecc83
+@dirrm %%DATADIR%%/demos/complex_hierarchy
+@dirrm %%DATADIR%%/demos
+@dirrmtry %%DATADIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/xilinx/spartan3
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/xilinx/spartan2e
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/xilinx/spartan2
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/xilinx
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/xicor
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/video
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/valves
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/transistors/mos
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/transistors/bipolar
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/transistors
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/that_corporation
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/texas/tms320lf240x
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/texas
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/temic
+@dirrm %%DOCSDIR%%/scripts/pcb-dr-adjust
+@dirrm %%DOCSDIR%%/scripts
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/siliconix
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/regulator
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/philips
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/opto
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/op_amps
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/onsemi
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/ns
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/motorola
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/microchip
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/micrel
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/memory
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/maxim
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/linear-tec
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/ir
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/intersil
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/gennum
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/elantec
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/display
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/digital-audio
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/crystal
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/contrib
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/cmos4000
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/analog_mux&switches
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/analog-dev
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/adc-dac
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/74xx
+@dirrm %%DOCSDIR%%
+@dirrmtry share/applications
+@dirrm lib/kicad/plugins
+@dirrm lib/kicad
