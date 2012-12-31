@@ -1,9 +1,4 @@
-# Ports collection makefile for:  tftpgrab
-# Date created:			  21 Sep 2007
-# Whom:				  Wesley Shields <wxs@atarininja.org>
-#
-# $FreeBSD: ports/net/tftpgrab/Makefile,v 1.4 2012/11/17 06:00:23 svnexp Exp $
-#
+# $FreeBSD: ports/net/tftpgrab/Makefile,v 1.5 2012/12/12 18:51:47 svnexp Exp $
 
 PORTNAME=	tftpgrab
 PORTVERSION=	0.2
