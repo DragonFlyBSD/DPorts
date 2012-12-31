@@ -86,8 +86,13 @@ _GCCVERSION_${v}_V=	${j}
 BUILD_DEPENDS+=	${LOCALBASE}/gcc-aux/bin/gfortran:${PORTSDIR}/lang/gcc-aux
 RUN_DEPENDS+=	${LOCALBASE}/gcc-aux/bin/gfortran:${PORTSDIR}/lang/gcc-aux
 _USE_GCC:=	${DRAGONFLY_MAX_VERSION}  # dummy to avoid further depends
-FC:=	${LOCALBASE}/gcc-aux/bin/gfortran
-F77:=	${LOCALBASE}/gcc-aux/bin/gfortran
+FC:=		${LOCALBASE}/gcc-aux/bin/gfortran
+F77:=		${LOCALBASE}/gcc-aux/bin/gfortran
+CC:=		${LOCALBASE}/gcc-aux/bin/gcc
+CXX:=		${LOCALBASE}/gcc-aux/bin/g++
+CPP:=		${LOCALBASE}/gcc-aux/bin/cpp
+LDFLAGS+=	-L${LOCALBASE}/gcc-aux/lib
+LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/gcc-aux/lib
 
 # Intel Fortran compiler from lang/ifc.
 . elif ${USE_FORTRAN} == ifort
