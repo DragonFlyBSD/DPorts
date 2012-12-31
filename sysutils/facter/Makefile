@@ -23,7 +23,7 @@ MANCOMPRESSED=	yes
 .include <bsd.port.pre.mk>
 
 # Restrict dmidecode dependency to i386 and amd64 systems
-.if ${ARCH} == "amd64" || ${ARCH} == "i386"
+.if ${ARCH} == "x86_64" || ${ARCH} == "i386"
 RUN_DEPENDS=    dmidecode:${PORTSDIR}/sysutils/dmidecode
 .endif
 
