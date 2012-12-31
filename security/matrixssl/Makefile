@@ -28,7 +28,7 @@ MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64" || ${ARCH} == "ia64" || ${ARCH} == "sparc64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "ia64" || ${ARCH} == "sparc64"
 CFLAGS+=	-DPSTM_64BIT
 .endif
 
