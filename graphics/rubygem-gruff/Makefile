@@ -1,0 +1,25 @@
+# ex:ts=8
+# Ports collection makefile for:	rubygem-gruff
+# Date created:			Jan 7, 2007
+# Whom:				ijliao
+#
+# $FreeBSD: ports/graphics/rubygem-gruff/Makefile,v 1.15 2012/11/17 05:58:22 svnexp Exp $
+#
+
+PORTNAME=	gruff
+PORTVERSION=	0.3.6
+PORTREVISION=	2
+CATEGORIES=	graphics rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	A beautiful graphing library for Ruby using RMagick
+
+RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/RMagick2.so:${PORTSDIR}/graphics/ruby-rmagick \
+		sow:${PORTSDIR}/devel/rubygem-hoe
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
