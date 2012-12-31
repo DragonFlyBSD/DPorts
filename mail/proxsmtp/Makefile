@@ -1,17 +1,19 @@
 # Created by: Dario Freni <saturnero@gufi.org>
-# $FreeBSD: ports/mail/proxsmtp/Makefile,v 1.12 2012/12/04 04:34:54 svnexp Exp $
+# $FreeBSD: ports/mail/proxsmtp/Makefile,v 1.13 2012/12/17 03:35:24 svnexp Exp $
 
 PORTNAME=	proxsmtp
-PORTVERSION=	1.8
+PORTVERSION=	1.10
 CATEGORIES=	mail security
-MASTER_SITES=	http://memberwebs.com/stef/software/proxsmtp/
+MASTER_SITES=	http://thewalter.net/stef/software/proxsmtp/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A flexible SMTP filter which can act also as transparent proxy
+COMMENT=	Flexible SMTP filter which can act also as transparent proxy
+
+LICENSE=	BSD
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	PTHREAD_LIBS="${PTHREAD_LIBS}" PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
+MAKE_JOBS_SAFE=	yes
 
 USE_RC_SUBR=	proxsmtpd
 SUB_FILES=	pkg-message
@@ -21,14 +23,22 @@ MAN8=		proxsmtpd.8
 
 PORTDOCS=	ChangeLog NEWS README
 
+post-patch:
+	@${REINPLACE_CMD} -e \
+		'/^acx_pthread_flags/s|=.*|="${PTHREAD_LIBS}"|' \
+		${WRKSRC}/configure
+
 post-install:
-	@${INSTALL_DATA} ${WRKSRC}/doc/proxsmtpd.conf ${PREFIX}/etc/proxsmtpd.conf-sample
-	@if [ ! -f ${PREFIX}/etc/proxsmtpd.conf ]; then \
-	${CP} -p ${PREFIX}/etc/proxsmtpd.conf-sample ${PREFIX}/etc/proxsmtpd.conf ; fi
+	(cd ${WRKSRC}/doc && ${INSTALL_DATA} proxsmtpd.conf \
+		${PREFIX}/etc/proxsmtpd.conf-sample)
+.if !exists(${PREFIX}/etc/proxsmtpd.conf)
+	(cd ${PREFIX}/etc && ${CP} -p proxsmtpd.conf-sample \
+		${PREFIX}/etc/proxsmtpd.conf)
+.endif
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${DOCSDIR}
 .for docs in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${docs} ${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${docs} ${DOCSDIR})
 .endfor
 .endif
 	@${CAT} ${PKGMESSAGE}
