@@ -2,12 +2,12 @@
 # Date created:				15 February 2003
 # Whom:					Rui Lopes <rui@ruilopes.com>
 #
-# $FreeBSD: ports/devel/regexxer/Makefile,v 1.36 2012/11/17 05:56:56 svnexp Exp $
+# $FreeBSD: ports/devel/regexxer/Makefile,v 1.37 2012/12/10 19:24:00 svnexp Exp $
 #
 
 PORTNAME=		regexxer
 PORTVERSION=		0.9
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=		devel textproc gnome
 MASTER_SITES=		SF
 
@@ -16,7 +16,7 @@ COMMENT=		An interactive tool for performing search and replace operations
 
 LIB_DEPENDS=		gconfmm-2.6:${PORTSDIR}/devel/gconfmm26 \
 			glademm-2.4:${PORTSDIR}/devel/libglademm24 \
-			pcre.1:${PORTSDIR}/devel/pcre
+			pcre.3:${PORTSDIR}/devel/pcre
 
 USE_GETTEXT=		yes
 GNU_CONFIGURE=		yes
