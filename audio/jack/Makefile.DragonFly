@@ -1,0 +1,5 @@
+# DragonFly doesn't have ALSA support
+OPTIONS_DEFINE=DOCS
+
+LIB_DEPENDS+=	readline.6:${PORTSDIR}/devel/readline
+
