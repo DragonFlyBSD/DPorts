@@ -1,0 +1,8 @@
+%%SITE_PERL%%/Statistics/R/Legacy.pm
+%%SITE_PERL%%/Statistics/R/Win32.pm
+%%SITE_PERL%%/Statistics/R.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Statistics/R/.packlist
+@dirrmtry %%SITE_PERL%%/Statistics/R
+@dirrmtry %%SITE_PERL%%/Statistics
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Statistics/R
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Statistics
