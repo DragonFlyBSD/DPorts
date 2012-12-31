@@ -1,0 +1,4 @@
+%%LUA_BINDIR%%/tolua
+bin/tolua-%%LUA_VER%%
+%%LUA_INCDIR%%/tolua.h
+%%LUA_LIBDIR%%/libtolua.a
