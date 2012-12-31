@@ -122,7 +122,7 @@ CONFIGURE_ARGS+=	--enable-unicode=ucs2
 CONFIGURE_ARGS+=	--without-pymalloc
 .endif
 
-.if ${ARCH} == amd64 || ${ARCH} == ia64 || ${ARCH} == sparc64
+.if ${ARCH} == x86_64 || ${ARCH} == ia64 || ${ARCH} == sparc64
 PLIST_SUB+=	32BIT_ONLY="@comment "
 .else
 PLIST_SUB+=	32BIT_ONLY=""
