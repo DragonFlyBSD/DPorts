@@ -1,7 +1,5 @@
 # Created by: ijliao
-#
-# $FreeBSD: ports/databases/jrobin/Makefile,v 1.15 2012/11/17 05:55:09 svnexp Exp $
-#
+# $FreeBSD: ports/databases/jrobin/Makefile,v 1.16 2012/12/10 13:24:55 svnexp Exp $
 
 PORTNAME=	jrobin
 PORTVERSION=	1.5.14
@@ -14,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A pure Java alternative to RRDTool
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 CLASSES=	jrobin
