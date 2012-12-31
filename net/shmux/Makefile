@@ -2,12 +2,12 @@
 # Date created:				2 September 2004
 # Whom:					jamundsen
 #
-# $FreeBSD: ports/net/shmux/Makefile,v 1.7 2012/11/17 06:00:20 svnexp Exp $
+# $FreeBSD: ports/net/shmux/Makefile,v 1.8 2012/12/10 19:24:04 svnexp Exp $
 #
 
 PORTNAME=	shmux
 DISTVERSION=	1.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://web.taranis.org/shmux/dist/
 EXTRACT_SUFX=	.tgz
@@ -33,7 +33,7 @@ RUN_DEPENDS+=	fping:${PORTSDIR}/net/fping
 .endif
 
 .if defined(WITH_PCRE)
-LIB_DEPENDS+=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
 CONFIGURE_ARGS+=	--with-pcre=${LOCALBASE}/lib
 .else
 CONFIGURE_ARGS+=	--with-pcre=no
