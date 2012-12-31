@@ -1,8 +1,5 @@
-# Ports collection makefile for:	PCGen
-# Date created:				17 November 2003
-# Whom:					Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-#
-# $FreeBSD: ports/games/pcgen/Makefile,v 1.28 2012/11/17 05:57:48 svnexp Exp $
+# Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
+# $FreeBSD: ports/games/pcgen/Makefile,v 1.29 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	pcgen
 PORTVERSION=	5.16.4
@@ -18,7 +15,7 @@ RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 USE_ZIP=	YES
 WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION:S/.//g}
 USE_JAVA=	YES
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	YES
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
