@@ -34,7 +34,7 @@ SHARED_DESC=	Enable shared objects
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64" || ${ARCH} == "sparc64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "sparc64"
 CONFIGURE_ARGS+=--enable-64bit
 .endif
 
