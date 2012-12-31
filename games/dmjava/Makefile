@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dmjava
-# Date Created:		1 Sep 2002
-# Whom:			Oliver Lehmann <lehmann@ans-netz.de>
-#
-# $FreeBSD: ports/games/dmjava/Makefile,v 1.9 2012/11/17 05:57:36 svnexp Exp $
-#
+# Created by: Oliver Lehmann <lehmann@ans-netz.de>
+# $FreeBSD: ports/games/dmjava/Makefile,v 1.10 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	dmjava
 PORTVERSION=	1.05
@@ -21,7 +17,7 @@ EXTRACT_AFTER_ARGS=	-d ${WRKSRC}
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 do-install:
