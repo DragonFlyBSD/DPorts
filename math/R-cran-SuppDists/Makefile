@@ -1,0 +1,41 @@
+# New ports collection makefile for:	math/R-cran-SuppDists
+# Date created:				April 27, 2010
+# Whom:					b.f. <bf@FreeBSD.org>
+#
+# $FreeBSD: ports/math/R-cran-SuppDists/Makefile,v 1.10 2012/11/17 05:59:18 svnexp Exp $
+#
+
+PORTNAME=	SuppDists
+DISTVERSION=	1.1-8
+PORTREVISION=	7
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_CRAN} \
+		http://r.research.att.com/benchmarks/:benchmark \
+		LOCAL/bf:benchmark
+DISTFILES=	${PORTNAME}_${DISTVERSION}${EXTRACT_SUFX} \
+		${BENCHMARK_SCRIPT}:benchmark
+EXTRACT_ONLY=	${PORTNAME}_${DISTVERSION}${EXTRACT_SUFX}
+
+MAINTAINER=	bf@FreeBSD.org
+COMMENT=	Supplementary distributions and RNG for R
+
+BENCHMARK_SCRIPT=	R-benchmark-25.R
+LICENSE=		GPLv2
+R_MOD_AUTOPLIST=	yes
+USE_R_MOD=		yes
+WRKSRC =		${WRKDIR}/${PORTNAME}
+
+.if defined(MAINTAINER_MODE)
+USE_DOS2UNIX=	../${BENCHMARK_SCRIPT}
+
+post-extract:
+	@${CP} ${_DISTDIR}/${BENCHMARK_SCRIPT} ${WRKDIR}
+
+post-install: benchmark
+
+benchmark:
+	@${LOCALBASE}/bin/Rscript --vanilla ${WRKDIR}/${BENCHMARK_SCRIPT}
+
+.endif
+
+.include <bsd.port.mk>
