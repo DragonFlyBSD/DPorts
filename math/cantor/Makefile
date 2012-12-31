@@ -1,0 +1,56 @@
+# New ports collection Makefile for:	cantor
+# Date created:				5 September 2011
+# Whom:					Alberto Villa <avilla@FreeBSD.org>
+#
+# $FreeBSD: ports/math/cantor/Makefile,v 1.8 2012/11/17 05:59:19 svnexp Exp $
+#
+
+PORTNAME=	cantor
+PORTVERSION=	${KDE4_VERSION}
+CATEGORIES=	math kde
+MASTER_SITES=	${MASTER_SITE_KDE}
+MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
+DIST_SUBDIR=	KDE
+
+MAINTAINER=	kde@FreeBSD.org
+COMMENT=	KDE 4 frontend to mathematical software
+
+LIB_DEPENDS=	spectre.1:${PORTSDIR}/print/libspectre \
+		qalculate.5:${PORTSDIR}/math/libqalculate \
+		analitza.5:${PORTSDIR}/math/analitza
+
+CONFLICTS=	kdeedu-4.[0-6].*
+
+USE_KDE4=	kdehier kdelibs kdeprefix automoc4
+KDE4_BUILDENV=	yes
+USE_QT4=	qtestlib_build xmlpatterns \
+		moc_build qmake_build rcc_build uic_build
+USE_XZ=	yes
+MAKE_JOBS_SAFE=	yes
+
+OPTIONS=	MAXIMA "Maxima backend" off \
+		OCTAVE "Octave backend" off \
+		R "R backend" off
+
+.include <bsd.port.options.mk>
+
+.ifdef(WITH_MAXIMA)
+RUN_DEPENDS+=	maxima:${PORTSDIR}/math/maxima
+.endif
+
+.ifdef(WITH_OCTAVE)
+RUN_DEPENDS+=	octave:${PORTSDIR}/math/octave
+.endif
+
+.ifdef(WITH_R)
+BUILD_DEPENDS+=	R:${PORTSDIR}/math/R
+RUN_DEPENDS+=	R:${PORTSDIR}/math/R
+# Required to set CFLAGS for -lgfortran.
+USE_FORTRAN=	yes
+PLIST_SUB+=	R=""
+.else
+CMAKE_ARGS+=	-DWITH_R:BOOL=FALSE
+PLIST_SUB+=	R="@comment "
+.endif
+
+.include <bsd.port.mk>
