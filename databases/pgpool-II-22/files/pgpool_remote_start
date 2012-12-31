@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/databases/pgpool-II-22/files/pgpool_remote_start,v 1.2 2012/11/17 05:55:18 svnexp Exp $
+
+DEST=pgsql@$1
+
+logger="logger -t pgpool -p local0.info"
+
+/bin/sh <<EOF | ${logger} 2>&1
+
+ssh $DEST '/usr/local/etc/rc.d/postgresql start'
+
+EOF
