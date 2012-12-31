@@ -1,0 +1,34 @@
+# New ports collection makefile for:	SoXt
+# Date created:				24 April 2003
+# Whom:					roland.jesse@gmx.net
+#
+# $FreeBSD: ports/x11-toolkits/SoXt/Makefile,v 1.26 2012/11/17 06:03:34 svnexp Exp $
+#
+
+PORTNAME=	SoXt
+PORTVERSION=	1.3.0
+PORTREVISION=	1
+CATEGORIES=	x11-toolkits
+MASTER_SITES=	http://ftp.coin3d.org/coin/src/all/
+
+MAINTAINER=	5u623l20@gmail.com
+COMMENT=	GUI binding for using Open Inventor with Xt/Motif
+
+LIB_DEPENDS=	Coin.61:${PORTSDIR}/graphics/Coin
+
+USE_GL=		yes
+USE_MOTIF=	yes
+USE_PERL5_BUILD=	yes
+USE_XORG=	xi
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	LIBS="${PTHREAD_LIBS}"
+CONFIGURE_ARGS+=	--with-pthread=yes --with-coin=${LOCALBASE}
+USE_GNOME=	gnomehack
+# avoid renaming of soxt-config and soxt-config.1
+USE_LDCONFIG=	yes
+MAN1=		soxt-config.1
+
+post-patch:
+	${REINPLACE_CMD} -e "s,echo aout, echo elf," ${WRKSRC}/configure
+
+.include <bsd.port.mk>
