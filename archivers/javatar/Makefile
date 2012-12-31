@@ -1,9 +1,5 @@
-# New ports collection makefile for:    Java Tar
-# Date created:				24 Oct 2007
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/archivers/javatar/Makefile,v 1.4 2012/11/17 05:54:20 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: ports/archivers/javatar/Makefile,v 1.6 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	javatar
 PORTVERSION=	2.5
@@ -13,12 +9,12 @@ MASTER_SITES=	http://www.gjt.org/download/time/java/tar/ \
 		ftp://ftp.gjt.org/pub/time/java/tar/
 
 MAINTAINER=	ale@FreeBSD.org
-COMMENT=	A Java tar archive io package
+COMMENT=	Java tar archive I/O package
 
 RUN_DEPENDS=	${JAVALIBDIR}/activation.jar:${PORTSDIR}/java/jaf
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 NO_BUILD=	yes
 
