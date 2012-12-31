@@ -2,11 +2,12 @@
 # Date created:		2006-05-01
 # Whom:			David Thiel <lx@redundancy.redundancy.org>
 #
-# $FreeBSD: ports/security/medusa/Makefile,v 1.14 2012/11/17 06:01:08 svnexp Exp $
+# $FreeBSD: ports/security/medusa/Makefile,v 1.15 2012/12/10 19:24:04 svnexp Exp $
 #
 
 PORTNAME=	medusa
 PORTVERSION=	2.1
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.foofus.net/~jmk/tools/ \
 		http://redundancy.redundancy.org/mirror/
