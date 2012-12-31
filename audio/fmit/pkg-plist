@@ -1,0 +1,12 @@
+bin/fmit
+share/applications/fmit.desktop
+%%DATADIR%%/tr/fmit_de.qm
+%%DATADIR%%/tr/fmit_fr.qm
+share/icons/hicolor/scalable/apps/fmit.svg
+@dirrmtry share/icons/hicolor/scalable/apps
+@dirrmtry share/icons/hicolor/scalable
+@dirrmtry share/icons/hicolor
+@dirrmtry share/icons
+@dirrm %%DATADIR%%/tr
+@dirrm %%DATADIR%%
+@dirrmtry share/applications
