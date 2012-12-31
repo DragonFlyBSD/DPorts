@@ -1,0 +1,55 @@
+--- configure.orig	2012-02-24 11:46:04.000000000 -0500
++++ configure	2012-03-04 13:58:53.000000000 -0500
+@@ -269,7 +269,7 @@
+     echo "  QTDIR environment variable not set!"
+     echo -n "  Checking for Qt..."
+     for d in /usr/{lib,share,qt}/{qt-4,qt4,qt,qt*,4} /usr; do
+-      if test -x "$d/bin/qmake"; then
++      if test -x "$d/bin/qmake-qt4"; then
+         QTDIR=$d
+       fi
+     done
+@@ -280,7 +280,7 @@
+   if test -z "$QTDIR"; then
+     echo "QTDIR not set and Qt not found at standard locations!"
+     echo
+-    echo "Set the QTDIR environment variable such that \$QTDIR/bin/qmake exists."
++    echo "Set the QTDIR environment variable such that \$QTDIR/bin/qmake-qt4 exists."
+     echo "check the Qt installation instructions!"
+     exit 2
+   fi
+@@ -576,7 +576,7 @@
+ fi
+ if test "$f_wizard" = YES; then
+   cat >> .tmakeconfig <<EOF
+-TMAKE_MOC = $QTDIR/bin/moc
++TMAKE_MOC = $QTDIR/bin/moc-qt4
+ EOF
+ fi
+ 
+@@ -586,7 +586,7 @@
+ EOF
+ fi
+ 
+-f_inmakefiles="Makefile.in qtools/Makefile.in src/Makefile.in examples/Makefile.in doc/Makefile.in addon/doxywizard/Makefile.in addon/doxmlparser/src/Makefile.in addon/doxmlparser/test/Makefile.in addon/doxmlparser/examples/metrics/Makefile.in libmd5/Makefile.in addon/doxyapp/Makefile.in"
++f_inmakefiles="Makefile.in qtools/Makefile.in src/Makefile.in examples/Makefile.in doc/Makefile.in addon/doxywizard/Makefile.in addon/doxmlparser/src/Makefile.in addon/doxmlparser/test/Makefile.in addon/doxmlparser/examples/metrics/Makefile.in addon/doxyapp/Makefile.in"
+ 
+ for i in $f_inmakefiles ; do
+      SRC=$i
+@@ -603,7 +603,6 @@
+        echo "" >> $DST
+        echo "all: src/version.cpp " >> $DST
+        echo "	\$(MAKE) -C qtools" >> $DST
+-       echo "	\$(MAKE) -C libmd5" >> $DST
+        echo "	\$(MAKE) -C src" >> $DST
+        if test $f_wizard = YES; then
+          echo "	\$(MAKE) MAN1DIR=\$(MAN1DIR) -C addon/doxywizard" >> $DST
+@@ -629,7 +628,7 @@
+ cat src/libdoxycfg.t.in | sed -e "s|%%FLEX%%|$f_flex|g" -e "s|%%BISON%%|$f_bison|g" > src/libdoxycfg.t
+ cat src/libdoxygen.t.in | sed -e "s|%%FLEX%%|$f_flex|g" -e "s|%%BISON%%|$f_bison|g" > src/libdoxygen.t
+ 
+-f_inprofiles="qtools/qtools.pro.in src/libdoxygen.pro.in src/libdoxycfg.pro.in src/doxygen.pro.in addon/doxywizard/doxywizard.pro.in addon/doxmlparser/src/doxmlparser.pro.in addon/doxmlparser/test/xmlparse.pro.in addon/doxmlparser/examples/metrics/metrics.pro.in libmd5/libmd5.pro.in addon/doxyapp/doxyapp.pro.in" 
++f_inprofiles="qtools/qtools.pro.in src/libdoxygen.pro.in src/libdoxycfg.pro.in src/doxygen.pro.in addon/doxywizard/doxywizard.pro.in addon/doxmlparser/src/doxmlparser.pro.in addon/doxmlparser/test/xmlparse.pro.in addon/doxmlparser/examples/metrics/metrics.pro.in addon/doxyapp/doxyapp.pro.in" 
+ 
+ for i in $f_inprofiles ; do
+      SRC=$i
