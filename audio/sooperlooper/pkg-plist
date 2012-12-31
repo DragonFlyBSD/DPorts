@@ -1,0 +1,10 @@
+bin/slconsole
+bin/slgui
+bin/slregister
+bin/sooperlooper
+share/sooperlooper/presets/bcf2000.slb
+share/sooperlooper/presets/edp4.slb
+share/sooperlooper/presets/midiwizard.slb
+share/sooperlooper/presets/oxy8.slb
+@dirrm share/sooperlooper/presets
+@dirrm share/sooperlooper
