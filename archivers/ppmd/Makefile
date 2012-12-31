@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ppmd
-# Date created:				11 Aug 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/archivers/ppmd/Makefile,v 1.6 2012/11/17 05:54:23 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: ports/archivers/ppmd/Makefile,v 1.7 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	ppmd
 PORTVERSION=	20050811
@@ -11,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A fast archiver with a good compression ratio
+COMMENT=	Fast archiver with good compression ratio
 
 MAKE_JOBS_SAFE=	yes
 
