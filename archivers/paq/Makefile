@@ -1,9 +1,5 @@
-# New ports collection makefile for:   paq
-# Date created:                5 April 2007
-# Whom:                        bf <bf2006a@yahoo.com>
-#
-# $FreeBSD: ports/archivers/paq/Makefile,v 1.30 2012/11/17 05:54:22 svnexp Exp $
-#
+# Created by: bf <bf2006a@yahoo.com>
+# $FreeBSD: ports/archivers/paq/Makefile,v 1.31 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	paq
 PORTVERSION=	20121105
@@ -14,7 +10,7 @@ DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${DISTFILES:M*.zip}
 
 MAINTAINER=	bf@FreeBSD.org
-COMMENT=	A family of archivers with extremely high compression ratios
+COMMENT=	Family of archivers with extremely high compression ratios
 
 LICENSE=	GPLv3 MIT
 LICENSE_COMB=	multi
@@ -29,7 +25,7 @@ SUB_FILES=	pkg-message
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == "amd64" || ( ${ARCH} == "i386" && !empty(MACHINE_CPU:Msse2) )
+.if ${ARCH} == "x86_64" || ( ${ARCH} == "i386" && !empty(MACHINE_CPU:Msse2) )
 ZPAQFLAGS=	-Dunix -msse2
 .else
 ZPAQFLAGS=	-DNOJIT
