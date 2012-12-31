@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/xpdf/Makefile,v 1.110 2012/11/17 05:58:26 svnexp Exp $
+# $FreeBSD: ports/graphics/xpdf/Makefile,v 1.111 2012/12/18 02:48:40 svnexp Exp $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
@@ -15,6 +15,7 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-opi \
