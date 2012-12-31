@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/openproj/Makefile,v 1.11 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: ports/deskutils/openproj/Makefile,v 1.12 2012/12/10 13:24:55 svnexp Exp $
 
 PORTNAME=	openproj
 PORTVERSION=	1.4
@@ -11,7 +11,7 @@ COMMENT=	A free, open source Project Manager
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}-${PORTVERSION}
