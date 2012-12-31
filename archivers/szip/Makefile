@@ -1,9 +1,5 @@
-# New ports collection makefile for:	szip
-# Date created:		15 January 2002
-# Whom:			Igor Pokrovsky <tiamat@telegraph.spb.ru>
-#
-# $FreeBSD: ports/archivers/szip/Makefile,v 1.19 2012/11/17 05:54:23 svnexp Exp $
-#
+# Created by: Igor Pokrovsky <tiamat@telegraph.spb.ru>
+# $FreeBSD: ports/archivers/szip/Makefile,v 1.20 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	szip
 PORTVERSION=	1.12b
@@ -14,7 +10,7 @@ MASTER_SITES=	http://www.compressconsult.com/szip/ \
 DISTNAME=	sz${PORTVERSION:S/.//}_src
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A fast compression utility
+COMMENT=	Fast compression utility
 
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
