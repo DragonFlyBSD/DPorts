@@ -1,0 +1,36 @@
+# New ports collection makefile for:	hybserv
+# Date created:				15 Jan 2003
+# Whom:					Rick Fournier <rick@help-desk.ca>
+#
+# $FreeBSD: ports/irc/hybserv/Makefile,v 1.20 2012/11/17 05:58:28 svnexp Exp $
+#
+
+PORTNAME=	hybserv
+PORTVERSION=	1.9.4
+CATEGORIES=	irc
+MASTER_SITES=	SF/${PORTNAME}2/${PORTNAME}2/Hybserv%20${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	HybServ2 IRCD Services
+
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+
+USERS=		${PORTNAME}
+GROUPS=		${USERS}
+
+WRKSRC=		${WRKDIR}/hybserv
+
+.if defined(WITH_DAEMONTOOLS)
+CONFIGURE_ARGS+=	--with-daemontools
+RUN_DEPENDS+=	supervise:${PORTSDIR}/sysutils/daemontools
+.endif
+
+post-install:
+	@${SED} -e "s#%PREFIX%#${PREFIX}#" ${FILESDIR}/hybserv.sh \
+		> ${WRKDIR}/hybserv.sh
+	@${INSTALL_SCRIPT} ${WRKDIR}/hybserv.sh ${PREFIX}/etc/rc.d
+	${CHOWN} -R hybserv:hybserv ${PREFIX}/hybserv
+	${CHMOD} 700 ${PREFIX}/hybserv
+
+.include <bsd.port.mk>
