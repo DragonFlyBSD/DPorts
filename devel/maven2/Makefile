@@ -1,9 +1,5 @@
-# New ports collection makefile for:	maven2
-# Date created:				18 August 2005
-# Whom:					Herve Quiroz <hq@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/maven2/Makefile,v 1.22 2012/11/17 05:55:59 svnexp Exp $
-#
+# Created by: Herve Quiroz <hq@FreeBSD.org>
+# $FreeBSD: ports/devel/maven2/Makefile,v 1.23 2012/12/10 11:29:54 svnexp Exp $
 
 PORTNAME=	maven2
 DISTVERSION=	2.2.1
@@ -19,7 +15,7 @@ COMMENT=	Java project management tool, 2.0 branch
 RUN_DEPENDS=	mvn:${PORTSDIR}/devel/maven-wrapper
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 SUB_FILES=	m2.sh
