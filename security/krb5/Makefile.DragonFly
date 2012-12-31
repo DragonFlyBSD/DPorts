@@ -1,0 +1,3 @@
+USE_XORG+=	xext
+
+LIB_DEPENDS+=	idn:${PORTSDIR}/dns/libidn
