@@ -1,0 +1,38 @@
+--- config.layout.bak	2011-09-13 10:04:25.217275668 +0100
++++ config.layout	2011-09-13 10:24:01.478295836 +0100
+@@ -97,14 +97,14 @@
+ </Layout>
+ 
+ <Layout FreeBSD>
+-  prefix:		/usr/local
++  prefix:		%%PREFIX%%
+   exec_prefix:		${prefix}
+   bindir:		${exec_prefix}/bin
+   sbindir:		${exec_prefix}/sbin
+   sysconfdir:		${prefix}/etc+
+   mandir:		${prefix}/man
+   plugindir:		${prefix}/plugins
+-  libdir:		${prefix}/lib+
++  libdir:		%%SITE_PERL%%
+   datadir:		${prefix}/share+
+   htmldir:		${datadir}/html
+   lexdir:		${datadir}/po
+@@ -114,12 +114,12 @@
+   localstatedir:	/var/run+
+   masonstatedir:	${localstatedir}/mason_data
+   sessionstatedir:	${localstatedir}/session_data
+-  customdir:		${prefix}/share+
+-  custometcdir:		${customdir}/local/etc
+-  customhtmldir:	${customdir}/local/html
+-  customlexdir:		${customdir}/local/po
+-  customlibdir:		${customdir}/local/lib
+-  customplugindir:  ${customdir}/local/plugins
++  customdir:		${prefix}
++  custometcdir:		${datadir}/etc
++  customhtmldir:	${customdir}/www+
++  customlexdir:		${datadir}/po
++  customlibdir:		${datadir}/lib
++  customplugindir:      ${datadir}/plugins
+ </Layout>
+ 
+ <Layout Win32>
