@@ -1,0 +1,57 @@
+bin/spin
+%%XSPIN%%bin/xspin
+%%PORTDOCS%%%%DOCSDIR%%/Doc/Book.Ch6.add
+%%PORTDOCS%%%%DOCSDIR%%/Doc/Book.Errata
+%%PORTDOCS%%%%DOCSDIR%%/Doc/Book.answers
+%%PORTDOCS%%%%DOCSDIR%%/Doc/Book.samples
+%%PORTDOCS%%%%DOCSDIR%%/Doc/Book2003Errata.html
+%%PORTDOCS%%%%DOCSDIR%%/Doc/Book91_Ch6_add.txt
+%%PORTDOCS%%%%DOCSDIR%%/Doc/Book91_Errata.txt
+%%PORTDOCS%%%%DOCSDIR%%/Doc/Book91_answers.txt
+%%PORTDOCS%%%%DOCSDIR%%/Doc/Book91_samples_bundle
+%%PORTDOCS%%%%DOCSDIR%%/Doc/V1.Updates
+%%PORTDOCS%%%%DOCSDIR%%/Doc/V2.Updates
+%%PORTDOCS%%%%DOCSDIR%%/Doc/V3.Updates
+%%PORTDOCS%%%%DOCSDIR%%/Doc/V4.Updates
+%%PORTDOCS%%%%DOCSDIR%%/Doc/V5.Updates
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.1a
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.1b
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.1c
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.2
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.3
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.4b
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.4c
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.5a
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.5b
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.6
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.7
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.8
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.9
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.9b
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.9c
+%%PORTDOCS%%%%DOCSDIR%%/Examples/ex.readme
+%%PORTDOCS%%%%DOCSDIR%%/Test/README.tests
+%%PORTDOCS%%%%DOCSDIR%%/Test/abp
+%%PORTDOCS%%%%DOCSDIR%%/Test/eratosthenes
+%%PORTDOCS%%%%DOCSDIR%%/Test/hello
+%%PORTDOCS%%%%DOCSDIR%%/Test/leader
+%%PORTDOCS%%%%DOCSDIR%%/Test/leader.ltl
+%%PORTDOCS%%%%DOCSDIR%%/Test/leader2
+%%PORTDOCS%%%%DOCSDIR%%/Test/leader_trace
+%%PORTDOCS%%%%DOCSDIR%%/Test/loops
+%%PORTDOCS%%%%DOCSDIR%%/Test/mobile1
+%%PORTDOCS%%%%DOCSDIR%%/Test/mobile1.ltl
+%%PORTDOCS%%%%DOCSDIR%%/Test/mobile2
+%%PORTDOCS%%%%DOCSDIR%%/Test/mobile2.ltl
+%%PORTDOCS%%%%DOCSDIR%%/Test/pathfinder
+%%PORTDOCS%%%%DOCSDIR%%/Test/peterson
+%%PORTDOCS%%%%DOCSDIR%%/Test/petersonN
+%%PORTDOCS%%%%DOCSDIR%%/Test/pftp
+%%PORTDOCS%%%%DOCSDIR%%/Test/priorities
+%%PORTDOCS%%%%DOCSDIR%%/Test/snoopy
+%%PORTDOCS%%%%DOCSDIR%%/Test/sort
+%%PORTDOCS%%%%DOCSDIR%%/Test/wordcount
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/Test
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/Examples
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/Doc
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
