@@ -1,0 +1,24 @@
+bin/dssi_analyse_plugin
+bin/dssi_list_plugins
+bin/dssi_osc_send
+bin/dssi_osc_update
+bin/jack-dssi-host
+bin/karplong
+bin/less_trivial_synth
+bin/trivial_sampler
+bin/trivial_synth
+include/dssi.h
+lib/dssi/karplong.la
+lib/dssi/karplong.so
+%%QT%%lib/dssi/less_trivial_synth/LTS_qt
+lib/dssi/less_trivial_synth.la
+lib/dssi/less_trivial_synth.so
+%%QT%%lib/dssi/trivial_sampler/trivial_sampler_qt
+lib/dssi/trivial_sampler.la
+lib/dssi/trivial_sampler.so
+lib/dssi/trivial_synth.la
+lib/dssi/trivial_synth.so
+libdata/pkgconfig/dssi.pc
+%%QT%%@dirrm lib/dssi/trivial_sampler
+%%QT%%@dirrm lib/dssi/less_trivial_synth
+@dirrm lib/dssi
