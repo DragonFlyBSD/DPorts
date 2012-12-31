@@ -1,0 +1,36 @@
+--- configure.intermediate	2012-12-31 15:36:11.218422000 +0100
++++ configure	2012-12-31 15:40:15.348763000 +0100
+@@ -1962,7 +1962,7 @@
+ 
+     DEFAULT_DEFAULT_wxUSE_MOTIF=1
+   ;;
+-  *-*-freebsd*)
++  *-*-freebsd*|*-*-dragonfly*)
+     USE_BSD=1
+     USE_FREEBSD=1
+     cat >>confdefs.h <<\_ACEOF
+@@ -39591,7 +39591,7 @@
+                     THREAD_OPTS="-mt $THREAD_OPTS"
+                 fi
+                 ;;
+-          *-*-freebsd*)
++          *-*-freebsd*|*-*-dragonfly*)
+                                                 THREAD_OPTS="${PTHREAD_LIBS}"
+                 ;;
+           *-*-darwin* | *-*-cygwin* )
+@@ -49216,6 +49216,7 @@
+ 
+       powerpc-apple-macos* | \
+       *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
++      *-*-dragonfly* | \
+       *-*-mirbsd* | \
+       *-*-sunos4* | \
+       *-*-osf* | \
+@@ -49259,6 +49260,7 @@
+ 
+     case "${BAKEFILE_HOST}" in
+       *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
++      *-*-dragonfly* | \
+       *-*-k*bsd*-gnu | *-*-mirbsd* )
+         if test "x$SUNCXX" = "xyes"; then
+             SONAME_FLAG="-h "
