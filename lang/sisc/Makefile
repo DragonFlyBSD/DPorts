@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SISC
-# Date created:				18 March 2003
-# Whom:					Kimura Fuyuki <fuyuki@hadaly.org>
-#
-# $FreeBSD: ports/lang/sisc/Makefile,v 1.21 2012/11/17 05:58:56 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@hadaly.org>
+# $FreeBSD: ports/lang/sisc/Makefile,v 1.22 2012/12/10 13:24:59 svnexp Exp $
 
 PORTNAME=	sisc
 PORTVERSION=	1.16.6
@@ -15,7 +11,7 @@ MAINTAINER=	araujo@FreeBSD.org
 COMMENT=	An extensible Java-based Scheme interpreter
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 NO_BUILD=	yes
 PORTDOCS=	COPYING README
