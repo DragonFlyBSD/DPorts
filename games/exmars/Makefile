@@ -35,7 +35,7 @@ do-install:
 .if ${ARCH} != "i386"
 BADCFLAGS+=	-malign-double
 .endif
-.if ${ARCH} != "amd64" && ${ARCH} != "i386"
+.if ${ARCH} != "x86_64" && ${ARCH} != "i386"
 BADCFLAGS+=	-maccumulate-outgoing-args \
 		-minline-all-stringops \
 		-mno-align-stringops
