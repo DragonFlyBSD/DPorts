@@ -2,12 +2,12 @@
 # Date created:				Apr 30, 2003
 # Whom:					Clement Laforet
 #
-# $FreeBSD: ports/net/haproxy/Makefile,v 1.47 2012/11/17 06:00:01 svnexp Exp $
+# $FreeBSD: ports/net/haproxy/Makefile,v 1.48 2012/12/10 19:24:03 svnexp Exp $
 #
 
 PORTNAME=	haproxy
 PORTVERSION=	1.4.22
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net www
 MASTER_SITES=	http://haproxy.1wt.eu/download/1.4/src/
 
