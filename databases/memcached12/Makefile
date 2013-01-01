@@ -2,12 +2,12 @@
 # Date created:		July 21, 2003
 # Whom:			Sean Chittenden <seanc@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/memcached12/Makefile,v 1.11 2012/11/17 05:55:10 svnexp Exp $
+# $FreeBSD: ports/databases/memcached12/Makefile,v 1.12 2012/12/10 15:19:12 svnexp Exp $
 #
 
 PORTNAME=	memcached
 PORTVERSION=	1.2.8
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 		${MASTER_SITE_GENTOO}
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=	--enable-replication --disable-threads
 .endif
 
 .if ${PORT_OPTIONS:MSASL}
-LIB_DEPENDS+=		sasl2.2:${PORTSDIR}/security/cyrus-sasl2
+LIB_DEPENDS+=		sasl2:${PORTSDIR}/security/cyrus-sasl2
 CONFIGURE_ARGS+=	--enable-sasl
 CFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
