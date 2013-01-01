@@ -2,19 +2,19 @@
 # Date created:				01 June 2003
 # Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/pop3vscan/Makefile,v 1.12 2012/11/17 05:59:10 svnexp Exp $
+# $FreeBSD: ports/mail/pop3vscan/Makefile,v 1.13 2012/12/10 19:24:02 svnexp Exp $
 #
 
 PORTNAME=	pop3vscan
 PORTVERSION=	0.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	leeym@FreeBSD.org
 COMMENT=	A transparent POP3-Proxy with virus-scanning capabilities
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 USE_GMAKE=	yes
 MAKE_ENV=	_LDFLAGS="${LDFLAGS}"
