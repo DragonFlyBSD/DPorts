@@ -1,9 +1,5 @@
-# New ports collection makefile for:   shntool
-# Date created:        2 November 2000
-# Whom:                Bill Fenner <fenner@FreeBSD.Org>
-#
-# $FreeBSD: ports/audio/xmms-shn/Makefile,v 1.31 2012/11/17 05:54:49 svnexp Exp $
-#
+# Created by: Bill Fenner <fenner@FreeBSD.Org>
+# $FreeBSD: ports/audio/xmms-shn/Makefile,v 1.32 2012/12/18 21:34:11 svnexp Exp $
 
 PORTNAME=	xmms-shn
 PORTVERSION=	2.4.1
@@ -21,8 +17,10 @@ USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
