@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/games/robocode/Makefile,v 1.43 2012/11/17 05:57:51 svnexp Exp $
+# $FreeBSD: ports/games/robocode/Makefile,v 1.44 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	robocode
 PORTVERSION=	1.7.4.2
@@ -14,7 +14,7 @@ COMMENT=	A game for learning Java[tm] programming language
 LICENSE=	EPL
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 JAVA_EXTRACT=	yes
 JAVA_RUN=	yes
 
