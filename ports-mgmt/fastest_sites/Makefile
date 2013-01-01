@@ -1,9 +1,4 @@
-# Ports collection makefile for:  fastest_sites
-# Date created:			  20 March 2008
-# Whom:				  Wesley Shields <wxs@FreeBSD.org>
-#
-# $FreeBSD: ports/ports-mgmt/fastest_sites/Makefile,v 1.6 2012/11/17 06:00:45 svnexp Exp $
-#
+# $FreeBSD: ports/ports-mgmt/fastest_sites/Makefile,v 1.7 2012/12/12 18:51:47 svnexp Exp $
 
 PORTNAME=	fastest_sites
 PORTVERSION=	20110317
