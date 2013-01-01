@@ -1,0 +1,61 @@
+# New ports collection makefile for:	ophcrack
+# Date created:				14 Mar 2008
+# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
+#
+# $FreeBSD: ports/security/ophcrack/Makefile,v 1.14 2012/11/17 06:01:09 svnexp Exp $
+#
+
+PORTNAME=	ophcrack
+PORTVERSION=	3.4.0
+PORTREVISION=	1
+CATEGORIES=	security
+MASTER_SITES=	SF
+
+MAINTAINER=	danfe@FreeBSD.org
+COMMENT=	Windows password cracker based on rainbow tables
+
+LICENSE=	GPLv2
+
+USE_BZIP2=	yes
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_OPENSSL=	yes
+
+PLIST_FILES=	bin/ophcrack
+PORTDOCS=	*
+
+OPTIONS=	GUI	"Build GUI frontend (Qt4 based)"	on \
+		GRAPH	"Enable graph rendering with Qwt"	on \
+		DEBUG	"Make debug build"			off
+
+.include <bsd.port.options.mk>
+
+.if defined(WITH_GUI) || defined(WITH_GRAPH)
+USE_QT4=	moc_build qmake_build rcc_build uic_build corelib gui
+.else
+CONFIGURE_ARGS+=	--disable-gui
+.endif
+
+.if defined(WITH_GRAPH)
+LIB_DEPENDS=	qwt.5:${PORTSDIR}/x11-toolkits/qwt5
+.else
+CONFIGURE_ARGS+=	--disable-graph
+.endif
+
+.if defined(WITH_DEBUG)
+CONFIGURE_ARGS+=	--enable-debug
+.endif
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${WRKSRC}/README ${DOCSDIR}
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
+BROKEN=		Does not compile on ia64, powerpc, or sparc64
+.endif
+
+.include <bsd.port.post.mk>
