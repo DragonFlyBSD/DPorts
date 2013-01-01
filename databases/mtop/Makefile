@@ -1,0 +1,29 @@
+# ex:ts=8
+# Ports collection makefile for:	mtop
+# Date created:			Dec 17, 2003
+# Whom:	      			ijliao
+#
+# $FreeBSD: ports/databases/mtop/Makefile,v 1.9 2012/11/17 05:55:11 svnexp Exp $
+#
+
+PORTNAME=	mtop
+PORTVERSION=	0.6.6
+PORTREVISION=	2
+CATEGORIES=	databases
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/v${PORTVERSION}
+
+MAINTAINER=	tut@nhamon.com.ua
+COMMENT=	MySQL Monitoring Tool
+
+BUILD_DEPENDS=	p5-Curses>=0:${PORTSDIR}/devel/p5-Curses \
+		p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql \
+		p5-Net>=0:${PORTSDIR}/net/p5-Net
+
+PERL_CONFIGURE=	yes
+
+MAN1=	mkill.1 mtop.1
+
+post-patch:
+	${RM} ${WRKSRC}/cpan2spec.pl
+
+.include <bsd.port.mk>

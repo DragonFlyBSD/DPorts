@@ -1,0 +1,4 @@
+bin/mkill
+bin/mtop
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/mtop/.packlist
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/mtop
