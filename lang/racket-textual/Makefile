@@ -65,7 +65,7 @@ PLIST_SUB+=	ARCH=${ARCH}
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CPPFLAGS+=	-DLONG64
 .endif
 
