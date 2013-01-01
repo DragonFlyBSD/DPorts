@@ -1,9 +1,5 @@
-# New ports collection makefile for:    webscarab
-# Date created:				2010-03-08
-# Whom:					Niels Heinen
-#
-# $FreeBSD: ports/security/webscarab/Makefile,v 1.5 2012/11/17 06:01:22 svnexp Exp $
-#
+# Created by: Niels Heinen
+# $FreeBSD: ports/security/webscarab/Makefile,v 1.6 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	webscarab
 PORTVERSION=	20090427
@@ -17,7 +13,7 @@ COMMENT=	Framework for analysing HTTP and HTTPS web application traffic
 
 USE_ZIP=	YES
 USE_JAVA=	YES
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}-1304
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
