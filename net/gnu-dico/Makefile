@@ -2,11 +2,12 @@
 # Date created:		27-12-2009
 # Whom:			Goran Tal
 #
-# $FreeBSD: ports/net/gnu-dico/Makefile,v 1.9 2012/11/17 06:00:01 svnexp Exp $
+# $FreeBSD: ports/net/gnu-dico/Makefile,v 1.10 2012/12/10 19:24:03 svnexp Exp $
 #
 
 PORTNAME=	dico
 PORTVERSION=	2.2
+PORTREVISION=	1
 CATEGORIES=	net textproc
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -51,7 +52,7 @@ PLIST_SUB+=	GUILE="@comment "
 .endif
 
 .if defined(WITH_PCRE)
-LIB_DEPENDS+=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
 PLIST_SUB+=	PCRE=""
 .else
 CONFIGURE_ARGS+=--without-pcre
