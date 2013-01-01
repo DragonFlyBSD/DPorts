@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: ports/graphics/jalbum/Makefile,v 1.22 2012/11/17 05:58:10 svnexp Exp $
+# $FreeBSD: ports/graphics/jalbum/Makefile,v 1.23 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	jalbum
 PORTVERSION=	10.10.7
@@ -18,7 +18,7 @@ USE_ZIP=	yes
 NO_BUILD=	yes
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 SUB_FILES=	jalbum.sh
