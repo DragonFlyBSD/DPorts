@@ -1,9 +1,5 @@
-# New ports collection makefile for:    jdictionary (plugins)
-# Date created:				15.12.2004
-# Whom:					hq@FreeBSD.org
-#
-# $FreeBSD: ports/textproc/jdictionary/Makefile.plugin,v 1.5 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: hq@FreeBSD.org
+# $FreeBSD: ports/textproc/jdictionary/Makefile.plugin,v 1.6 2012/12/10 14:01:22 svnexp Exp $
 
 EXTRACT_SUFX=	#
 
@@ -15,7 +11,7 @@ RUN_DEPENDS+=	jdictionary:${PORTSDIR}/textproc/jdictionary
 # WARNING: USE_JAVA is set to be able to use JAVASHAREDIR.
 #          Please make sure that JAVA_VERSION here is the same as in Makefile.
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 EXTRACT_CMD=	${CP}
 EXTRACT_BEFORE_ARGS=	#

@@ -1,9 +1,5 @@
-# New ports collection makefile for:    jdictionary
-# Date created:         23.04.2002
-# Whom:                 janos.mohacsi@bsd.hu
-#
-# $FreeBSD: ports/textproc/jdictionary/Makefile,v 1.12 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: janos.mohacsi@bsd.hu
+# $FreeBSD: ports/textproc/jdictionary/Makefile,v 1.13 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	jdictionary
 PORTVERSION=	1.8
@@ -18,7 +14,7 @@ COMMENT=	Platform independent, plugin based dictionary
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
