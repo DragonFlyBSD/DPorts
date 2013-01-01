@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Adobe Flex SDK
-# Date created:		18 Oct 2007
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/flex-sdk/Makefile,v 1.9 2012/11/17 05:55:42 svnexp Exp $
-#
+# Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
+# $FreeBSD: ports/devel/flex-sdk/Makefile,v 1.10 2012/12/10 11:29:54 svnexp Exp $
 
 PORTNAME=	flex-sdk
 PORTVERSION=	4.6.0.23201
@@ -19,7 +15,7 @@ RUN_DEPENDS=	javavm:${PORTSDIR}/java/javavmwrapper
 CONFLICTS=	ja-flex-sdk-2.* flex-sdk-2.* flex-sdk-3.*
 USE_ZIP=	YES
 USE_JAVA=	YES
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 WRKSRC=		${WRKDIR}
 SUB_FILES=	${SCRIPTS:C/\$/.sh/g}
 NO_BUILD=	YES
