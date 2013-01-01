@@ -26,7 +26,7 @@ PLIST_FILES=	bin/aespipe
 
 .include <bsd.port.pre.mk>
 ALL_TARGET=
-.if ${ARCH} == amd64
+.if ${ARCH} == x86_64
 MAKE_ARGS=	amd64
 .endif
 
