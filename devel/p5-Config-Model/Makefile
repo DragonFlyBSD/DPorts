@@ -2,7 +2,7 @@
 # Date created:			Jan 29, 2007
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/p5-Config-Model/Makefile,v 1.99 2012/12/05 11:11:41 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Config-Model/Makefile,v 1.100 2012/12/16 06:16:54 svnexp Exp $
 #
 
 PORTNAME=	Config-Model
@@ -47,7 +47,7 @@ TEST_DEPENDS=	p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class \
 		p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle \
 		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_MODBUILD=	5.10.1+
+PERL_MODBUILD=	yes
 
 MAN1=		cme.1 config-edit.1
 MAN3=		Config::Model.3 \
