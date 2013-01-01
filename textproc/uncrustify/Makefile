@@ -1,30 +1,28 @@
-# New ports collection makefile for:	uncrustify
-# Date created:		03 Jul 2006
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/textproc/uncrustify/Makefile,v 1.33 2012/11/17 06:02:24 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: ports/textproc/uncrustify/Makefile,v 1.34 2012/12/21 10:09:36 svnexp Exp $
 
 PORTNAME=	uncrustify
-PORTVERSION=	0.54
+PORTVERSION=	0.59
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Highly configurable source code beautifier
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+CONFIGURE_ARGS=	--disable-silent-rules
 
 MAN1=		uncrustify.1
 
-.if !defined(NOPORTDOCS)
 PORTDOCS=	*
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	cd ${WRKSRC}/documentation; \
-		${FIND} . -type d -exec ${MKDIR} ${DOCSDIR}/{} \; ; \
-		${FIND} . -type f -exec ${INSTALL_DATA} {} ${DOCSDIR}/{} \;
+	${MKDIR} ${DOCSDIR}
+	cd ${WRKSRC}/documentation && ${COPYTREE_SHARE} '*' ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
