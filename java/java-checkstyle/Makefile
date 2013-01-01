@@ -1,9 +1,5 @@
-# Ports collection makefile for:    Java Checkstyle
-# Date created:         2002/09/02
-# Whom:                 Dave Glowacki <dglo@ssec.wisc.edu>
-#
-# $FreeBSD: ports/java/java-checkstyle/Makefile,v 1.26 2012/11/17 05:58:43 svnexp Exp $
-#
+# Created by: Dave Glowacki <dglo@ssec.wisc.edu>
+# $FreeBSD: ports/java/java-checkstyle/Makefile,v 1.27 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	checkstyle
 PORTVERSION=	5.5
@@ -18,7 +14,7 @@ COMMENT=	Java style checker
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
