@@ -1,13 +1,9 @@
-# New ports collection makefile for:	mapyrus
-# Date created:		2006-04-25
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: ports/graphics/mapyrus/Makefile,v 1.33 2012/11/17 05:58:15 svnexp Exp $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: ports/graphics/mapyrus/Makefile,v 1.35 2012/12/10 14:00:58 svnexp Exp $
 
 PORTNAME=	mapyrus
 PORTVERSION=	1.202
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	graphics print java
 MASTER_SITES=	SF
 
@@ -20,7 +16,7 @@ NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 USE_ZIP=	yes
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
