@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ppower4
-# Date created:		07 November 2003
-# Whom:			Stefan Walter <sw@gegenunendlich.de>
-#
-# $FreeBSD: ports/textproc/ppower4/Makefile,v 1.14 2012/11/17 06:02:16 svnexp Exp $
-#
+# Created by: Stefan Walter <sw@gegenunendlich.de>
+# $FreeBSD: ports/textproc/ppower4/Makefile,v 1.15 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	ppower4
 PORTVERSION=	0.9.4
@@ -23,7 +19,7 @@ RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX \
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
