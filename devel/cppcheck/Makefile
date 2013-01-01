@@ -2,11 +2,12 @@
 # Date created:		March 3, 2009
 # Whom:	      		Gabor Pali <pgj@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/cppcheck/Makefile,v 1.33 2012/11/17 05:55:38 svnexp Exp $
+# $FreeBSD: ports/devel/cppcheck/Makefile,v 1.34 2012/12/10 19:23:59 svnexp Exp $
 #
 
 PORTNAME=	cppcheck
 PORTVERSION=	1.57
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/
 
