@@ -1,12 +1,8 @@
-
-# Date created:		February 2, 2009
-# Whom:			jrhett@netconsonance.com
-#
-# $FreeBSD: ports/sysutils/cfengine34/Makefile,v 1.1 2012/11/28 00:27:17 svnexp Exp $
-#
+# Created by: jrhett@netconsonance.com
+# $FreeBSD: ports/sysutils/cfengine34/Makefile,v 1.4 2012/12/11 03:46:26 svnexp Exp $
 
 PORTNAME=	cfengine
-PORTVERSION=	3.4.0
+PORTVERSION=	3.4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine.com/source-code/download?file=
 
@@ -36,7 +32,7 @@ CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
 		--with-pcre=${LOCALBASE} \
 		--enable-fhs
 
-LIB_DEPENDS+=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
 
 OPTIONS=	TOKYOCABINET	"Enable TokyoCabinet support"		on \
 		QDBM	"Enable QDBM support"				off \
@@ -79,7 +75,7 @@ LDFLAGS+=		-L${LOCALBASE}/lib/mysql
 
 .if defined(WITH_LIBVIRT)
 CONFIGURE_ARGS+=	--with-libvirt=${LOCALBASE}
-LIB_DEPENDS+=		virt:${PORTSDIR}/devel/libvirt
+LIB_DEPENDS+=		virt.1000:${PORTSDIR}/devel/libvirt
 .endif
 
 MAN8=	cf-agent.8	cf-key.8	cf-monitord.8	\
