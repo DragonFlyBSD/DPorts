@@ -1,5 +1,5 @@
-# Created by:	nemysis@gmx.ch
-# $FreeBSD: ports/games/rescue/Makefile,v 1.3 2012/11/17 05:57:51 svnexp Exp $
+# Created by: nemysis@gmx.ch
+# $FreeBSD: ports/games/rescue/Makefile,v 1.4 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	rescue
 PORTVERSION=	1.0.0.2
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME:S/r/R/}
