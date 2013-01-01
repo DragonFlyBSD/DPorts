@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/games/tuxfighter/files/tuxfighter.in,v 1.1 2012/12/02 00:14:35 svnexp Exp $
+#
+
+cd "%%DATADIR%%"
+exec ./TuxFighter54.py "${@}"
