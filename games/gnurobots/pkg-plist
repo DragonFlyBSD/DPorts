@@ -1,0 +1,21 @@
+bin/gnurobots
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/Robots-HOWTO
+%%PORTDOCS%%%%DOCSDIR%%/THANKS
+%%PORTDOCS%%%%DOCSDIR%%/contrib
+%%DATADIR%%/maps/maze.map
+%%DATADIR%%/maps/pattern.map
+%%DATADIR%%/maps/small.map
+%%DATADIR%%/scheme/beep.scm
+%%DATADIR%%/scheme/greedy.scm
+%%DATADIR%%/scheme/mapper.scm
+%%DATADIR%%/scheme/simple.scm
+%%DATADIR%%/scheme/stop.scm
+%%DATADIR%%/scheme/zap.scm
+@dirrm %%DATADIR%%/scheme
+@dirrm %%DATADIR%%/maps
+@dirrm %%DATADIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
