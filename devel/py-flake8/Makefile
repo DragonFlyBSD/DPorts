@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: ports/devel/py-flake8/Makefile,v 1.4 2012/11/28 17:23:13 svnexp Exp $
+# $FreeBSD: ports/devel/py-flake8/Makefile,v 1.5 2012/12/16 18:16:07 svnexp Exp $
 
 PORTNAME=	flake8
-PORTVERSION=	1.6
+PORTVERSION=	1.6.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
