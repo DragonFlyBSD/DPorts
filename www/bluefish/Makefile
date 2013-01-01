@@ -2,13 +2,13 @@
 # Date created:			23 January 2003
 # Whom:				Koop Mast <einekoai@chello.nl>
 #
-# $FreeBSD: ports/www/bluefish/Makefile,v 1.74 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: ports/www/bluefish/Makefile,v 1.75 2012/12/10 19:24:05 svnexp Exp $
 #   $MCom: ports/www/bluefish/Makefile,v 1.6 2007/10/11 03:20:30 mezz Exp $
 #
 
 PORTNAME=	bluefish
 PORTVERSION=	2.2.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www editors
 MASTER_SITES=	http://www.bennewitz.com/bluefish/stable/source/ \
 		http://bluefish.mrball.net/stable/source/ \
@@ -17,7 +17,7 @@ MASTER_SITES=	http://www.bennewitz.com/bluefish/stable/source/ \
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	HTML editor designed for the experienced web designer
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre \
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre \
 		enchant.1:${PORTSDIR}/textproc/enchant \
 		gucharmap.7:${PORTSDIR}/deskutils/gucharmap
 
