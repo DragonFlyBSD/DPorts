@@ -1,13 +1,9 @@
-# New ports collection makefile for:	cpmtools
-# Date created:		31 January 2008
-# Whom:			joerg
-#
-# $FreeBSD: ports/emulators/xcpc/Makefile,v 1.10 2012/11/17 05:57:24 svnexp Exp $
-#
+# Created by: joerg
+# $FreeBSD: ports/emulators/xcpc/Makefile,v 1.12 2012/12/18 23:19:33 svnexp Exp $
 
 PORTNAME=	xcpc
 PORTVERSION=	20070122
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -25,7 +21,7 @@ USE_ICONV=	yes
 USE_GETTEXT=	yes
 
 LIB_DEPENDS+=	icui18n:${PORTSDIR}/devel/icu \
-		pcre.1:${PORTSDIR}/devel/pcre \
+		pcre.3:${PORTSDIR}/devel/pcre \
 		dsk.5:${PORTSDIR}/emulators/libdsk
 
 OPTIONS=	MOTIF "With Motif widget set" on \
