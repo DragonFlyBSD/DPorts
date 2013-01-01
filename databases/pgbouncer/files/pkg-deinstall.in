@@ -1,0 +1,21 @@
+#! /bin/sh
+# $FreeBSD: ports/databases/pgbouncer/files/pkg-deinstall.in,v 1.3 2012/11/17 05:55:18 svnexp Exp $
+
+if [ "$2" != "POST-DEINSTALL" ]; then
+	exit 0
+fi
+
+pgbouncer_user=%%PGBOUNCER_USER%%
+pgbouncer_group=%%PGBOUNCER_GROUP%%
+
+PGBOUNCER_RUNDIR=%%PGBOUNCER_RUNDIR%%
+PGBOUNCER_LOGDIR=%%PGBOUNCER_LOGDIR%%
+
+PW="%%PW%%"
+
+for DIR in ${PGBOUNCER_RUNDIR} ${PGBOUNCER_LOGDIR}; do
+	if test -d "${DIR}"; then
+		echo "==> You should manually remove the directory: ${DIR}"
+	fi
+done
+exit 0
