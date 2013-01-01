@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nstreams
-# Date created:		22 September 1999
-# Whom:			darius@dons.net.au
-#
-# $FreeBSD: ports/net-mgmt/nstreams/Makefile,v 1.15 2012/11/17 06:00:35 svnexp Exp $
-#
+# Created by: darius@dons.net.au
+# $FreeBSD: ports/net-mgmt/nstreams/Makefile,v 1.17 2012/12/13 16:41:47 svnexp Exp $
 
 PORTNAME=	nstreams
 PORTVERSION=	1.0.4
@@ -11,7 +7,7 @@ CATEGORIES=	net-mgmt
 MASTER_SITES=	http://www.hsc.fr/ressources/outils/nstreams/download/ \
 		http://falafel.200ok.org/distfiles/nstreams/
 
-MAINTAINER=	ecu@ipv42.net
+MAINTAINER=	ecu@200ok.org
 COMMENT=	Analyses network traffic and produces ipfw rules to allow it
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
