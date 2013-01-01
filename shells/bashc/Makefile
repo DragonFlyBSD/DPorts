@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bashc
-# Date created:				2008-02-10
-# Whom:					alepulver
-#
-# $FreeBSD: ports/shells/bashc/Makefile,v 1.4 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by: alepulver
+# $FreeBSD: ports/shells/bashc/Makefile,v 1.5 2012/12/03 13:23:46 svnexp Exp $
 
 PORTNAME=	bashc
 PORTVERSION=	3.2.33.0
