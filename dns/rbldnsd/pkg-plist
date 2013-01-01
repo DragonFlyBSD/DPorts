@@ -1,0 +1,13 @@
+sbin/rbldnsd
+etc/rbldnsd/example
+%%PORTDOCS%%%%DOCSDIR%%/CHANGES-0.81
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%%%DOCSDIR%%/changelog
+%%PORTDOCS%%%%DOCSDIR%%/copyright
+%%PORTDOCS%%%%DOCSDIR%%/rbldnsd.default
+%%PORTDOCS%%%%DOCSDIR%%/rbldnsd.init
+%%PORTDOCS%%%%DOCSDIR%%/rbldnsd.spec
+%%PORTDOCS%%%%DOCSDIR%%/rbldnsd.html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrmtry etc/rbldnsd/
