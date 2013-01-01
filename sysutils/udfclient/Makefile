@@ -2,7 +2,7 @@
 # Date created:        3 January 2005
 # Whom:                Andriy Gapon <avg@icyb.net.ua>
 #
-# $FreeBSD: ports/sysutils/udfclient/Makefile,v 1.22 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: ports/sysutils/udfclient/Makefile,v 1.23 2012/12/14 15:53:09 svnexp Exp $
 #
 
 PORTNAME=	udfclient
@@ -46,8 +46,7 @@ MASTER_SITES+=	http://www.icyb.net.ua/~avg/distfiles/:fuse
 DISTFILES+=	${UDFCLIENTFS_NAME}-${UDFCLIENTFS_VERSION}.tgz:fuse
 EXTRA_PATCHES+=	${UDFCLIENTFS_DIR}/${UDFCLIENTFS_NAME}.patch
 
-RUN_DEPENDS+=	${LOCALBASE}/modules/fuse.ko:${PORTSDIR}/sysutils/fusefs-kmod
-LIB_DEPENDS+=	fuse.2:${PORTSDIR}/sysutils/fusefs-libs
+USE_FUSE=	yes
 
 PLIST_FILES+=	bin/${UDFCLIENTFS_NAME}
 .endif
