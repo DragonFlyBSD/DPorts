@@ -1,0 +1,29 @@
+--- ./configure.orig	2008-04-10 11:16:29.000000000 -0400
++++ ./configure	2008-09-02 08:05:29.000000000 -0400
+@@ -34040,7 +34040,7 @@
+ #define MagickLibConfigSubDir "$MagickLibConfigSubDir"
+ _ACEOF
+ 
+-MagickLibConfigPath="${LIB_DIR}/${MagickLibConfigSubDir}"
++MagickLibConfigPath="${DATA_DIR}/GraphicsMagick/config"
+ MagickLibConfigPathDefine="${MagickLibConfigPath}/"
+ if test "$native_win32_build" = 'yes'
+ then
+@@ -34098,7 +34098,7 @@
+ #
+ # Path to GraphicsMagick share files
+ MagickShareSubdir="${PACKAGE_NAME}-${PACKAGE_VERSION}"
+-MagickSharePath="${DATA_DIR}/${MagickShareSubdir}"
++MagickSharePath="${DATA_DIR}/GraphicsMagick/"
+ MagickSharePathDefine="${MagickSharePath}/"
+ if test "$native_win32_build" = 'yes'
+ then
+@@ -34118,7 +34118,7 @@
+ #define MagickShareConfigSubDir "$MagickShareConfigSubDir"
+ _ACEOF
+ 
+-MagickShareConfigPath="${DATA_DIR}/${MagickShareConfigSubDir}"
++MagickShareConfigPath="${MagickLibConfigPath}"
+ MagickShareConfigPathDefine="${MagickShareConfigPath}/"
+ if test "$native_win32_build" = 'yes'
+ then
