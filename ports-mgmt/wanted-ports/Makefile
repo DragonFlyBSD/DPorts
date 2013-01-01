@@ -1,10 +1,5 @@
-# New ports collection makefile for:  wanted-ports
-# Date created:    7 June 2010
-# Whom:            Matthew Seaman <m.seaman@infracaninophile.co.uk>
-#
-# $FreeBSD: ports/ports-mgmt/wanted-ports/Makefile,v 1.5 2012/11/17 06:00:47 svnexp Exp $
-#
-# port is self-contained in the files directory.
+# Created by: Matthew Seaman <m.seaman@infracaninophile.co.uk>
+# $FreeBSD: ports/ports-mgmt/wanted-ports/Makefile,v 1.6 2012/12/15 09:34:28 svnexp Exp $
 
 PORTNAME=	wanted-ports
 PORTVERSION=	0.2
