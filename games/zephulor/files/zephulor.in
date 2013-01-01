@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/games/zephulor/files/zephulor.in,v 1.2 2012/11/17 05:57:59 svnexp Exp $
+#
+
+cd "%%DATADIR%%"
+exec /usr/bin/env python ./zephulor.py
