@@ -1,7 +1,5 @@
-# Created by: Matthew Seaman <m.seaman@infracaninophile.co.uk>
-# $FreeBSD: ports/mail/sa-utils/Makefile,v 1.7 2012/11/17 05:59:14 svnexp Exp $
-#
-# Port is self-contained in the files directory.
+# Created by: Matthew Seaman
+# $FreeBSD: ports/mail/sa-utils/Makefile,v 1.8 2012/12/15 09:34:26 svnexp Exp $
 
 PORTNAME=	sa-utils
 PORTVERSION=	0.02
