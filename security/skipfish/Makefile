@@ -2,10 +2,10 @@
 # Date created:         2010-03-25
 # Whom:                 rpsfa@rit.edu
 #
-# $FreeBSD: ports/security/skipfish/Makefile,v 1.27 2012/11/17 06:01:20 svnexp Exp $
+# $FreeBSD: ports/security/skipfish/Makefile,v 1.28 2012/12/15 03:12:54 svnexp Exp $
 
 PORTNAME=	skipfish
-PORTVERSION=	2.07b
+PORTVERSION=	2.10b
 CATEGORIES=	security www
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 EXTRACT_SUFX=	.tgz
@@ -16,8 +16,10 @@ COMMENT=	A fully automated, active web application security reconnaissance tool
 LICENSE=	AL2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	idn.17:${PORTSDIR}/dns/libidn
+LIB_DEPENDS=	idn:${PORTSDIR}/dns/libidn \
+    		pcre:${PORTSDIR}/devel/pcre
 
+USE_GMAKE=	yes
 SUB_FILES=	pkg-message
 
 MAN1=		skipfish.1
@@ -30,12 +32,12 @@ PORTDOCS=	README COPYING ChangeLog
 
 post-patch:
 	@${REINPLACE_CMD} -e 's:"skipfish.wl":"${DATADIR}/dictionaries/complete.wl":' \
-		-e 's:"assets":"${DATADIR}/assets":' ${WRKSRC}/config.h
+		-e 's:"assets":"${DATADIR}/assets":' ${WRKSRC}/src/config.h
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/skipfish ${PREFIX}/bin/skipfish
-	${INSTALL_SCRIPT} ${WRKSRC}/sfscandiff ${PREFIX}/bin/sfscandiff
-	${INSTALL_MAN} ${WRKSRC}/skipfish.1 ${PREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/sfscandiff ${PREFIX}/bin/sfscandiff
+	${INSTALL_MAN} ${WRKSRC}/doc/skipfish.1 ${PREFIX}/man/man1
 	(cd ${WRKSRC}/assets/ && ${COPYTREE_SHARE} . ${DATADIR}/assets/)
 	(cd ${WRKSRC}/dictionaries/ && ${COPYTREE_SHARE} . ${DATADIR}/dictionaries/)
 .if !defined(NOPORTDOCS)
