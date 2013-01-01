@@ -1,0 +1,15 @@
+--- SConstruct.bak	2012-09-30 14:49:24.000000000 -0500
++++ SConstruct	2012-09-30 14:50:46.000000000 -0500
+@@ -56,9 +56,9 @@
+ else:
+   conf = Configure(env)
+   assert conf.CheckLibWithHeader('z', 'zlib.h', 'C', 'inflate;', 1), "please install: zlib"
+-  if not conf.CheckLib('SDL'):
+-    print 'Did not find libSDL or SDL.lib, exiting!'
+-    Exit(1)
++  ###if not conf.CheckLib('SDL'):
++  ###  print 'Did not find libSDL or SDL.lib, exiting!'
++  ###  Exit(1)
+ 
+   if env['GTK']:
+     # Add compiler and linker flags from pkg-config
