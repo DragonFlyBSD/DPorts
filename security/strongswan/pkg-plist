@@ -1,0 +1,172 @@
+etc/ipsec.conf
+etc/strongswan.conf
+lib/ipsec/libcharon.a
+lib/ipsec/libcharon.la
+lib/ipsec/libcharon.so
+lib/ipsec/libcharon.so.0
+lib/ipsec/libhydra.a
+lib/ipsec/libhydra.la
+lib/ipsec/libhydra.so
+lib/ipsec/libhydra.so.0
+lib/ipsec/libstrongswan.a
+lib/ipsec/libstrongswan.la
+lib/ipsec/libstrongswan.so
+lib/ipsec/libstrongswan.so.0
+lib/ipsec/plugins/libstrongswan-addrblock.a
+lib/ipsec/plugins/libstrongswan-addrblock.la
+lib/ipsec/plugins/libstrongswan-addrblock.so
+lib/ipsec/plugins/libstrongswan-aes.a
+lib/ipsec/plugins/libstrongswan-aes.la
+lib/ipsec/plugins/libstrongswan-aes.so
+lib/ipsec/plugins/libstrongswan-attr.a
+lib/ipsec/plugins/libstrongswan-attr.la
+lib/ipsec/plugins/libstrongswan-attr.so
+lib/ipsec/plugins/libstrongswan-blowfish.a
+lib/ipsec/plugins/libstrongswan-blowfish.la
+lib/ipsec/plugins/libstrongswan-blowfish.so
+lib/ipsec/plugins/libstrongswan-constraints.a
+lib/ipsec/plugins/libstrongswan-constraints.la
+lib/ipsec/plugins/libstrongswan-constraints.so
+lib/ipsec/plugins/libstrongswan-des.a
+lib/ipsec/plugins/libstrongswan-des.la
+lib/ipsec/plugins/libstrongswan-des.so
+lib/ipsec/plugins/libstrongswan-dnskey.a
+lib/ipsec/plugins/libstrongswan-dnskey.la
+lib/ipsec/plugins/libstrongswan-dnskey.so
+lib/ipsec/plugins/libstrongswan-eap-identity.a
+lib/ipsec/plugins/libstrongswan-eap-identity.la
+lib/ipsec/plugins/libstrongswan-eap-identity.so
+lib/ipsec/plugins/libstrongswan-eap-md5.a
+lib/ipsec/plugins/libstrongswan-eap-md5.la
+lib/ipsec/plugins/libstrongswan-eap-md5.so
+lib/ipsec/plugins/libstrongswan-eap-mschapv2.a
+lib/ipsec/plugins/libstrongswan-eap-mschapv2.la
+lib/ipsec/plugins/libstrongswan-eap-mschapv2.so
+lib/ipsec/plugins/libstrongswan-eap-tls.a
+lib/ipsec/plugins/libstrongswan-eap-tls.la
+lib/ipsec/plugins/libstrongswan-eap-tls.so
+lib/ipsec/plugins/libstrongswan-fips-prf.a
+lib/ipsec/plugins/libstrongswan-fips-prf.la
+lib/ipsec/plugins/libstrongswan-fips-prf.so
+lib/ipsec/plugins/libstrongswan-hmac.a
+lib/ipsec/plugins/libstrongswan-hmac.la
+lib/ipsec/plugins/libstrongswan-hmac.so
+lib/ipsec/plugins/libstrongswan-kernel-pfkey.a
+lib/ipsec/plugins/libstrongswan-kernel-pfkey.la
+lib/ipsec/plugins/libstrongswan-kernel-pfkey.so
+lib/ipsec/plugins/libstrongswan-kernel-pfroute.a
+lib/ipsec/plugins/libstrongswan-kernel-pfroute.la
+lib/ipsec/plugins/libstrongswan-kernel-pfroute.so
+lib/ipsec/plugins/libstrongswan-md4.a
+lib/ipsec/plugins/libstrongswan-md4.la
+lib/ipsec/plugins/libstrongswan-md4.so
+lib/ipsec/plugins/libstrongswan-md5.a
+lib/ipsec/plugins/libstrongswan-md5.la
+lib/ipsec/plugins/libstrongswan-md5.so
+lib/ipsec/plugins/libstrongswan-openssl.a
+lib/ipsec/plugins/libstrongswan-openssl.la
+lib/ipsec/plugins/libstrongswan-openssl.so
+lib/ipsec/plugins/libstrongswan-pem.a
+lib/ipsec/plugins/libstrongswan-pem.la
+lib/ipsec/plugins/libstrongswan-pem.so
+lib/ipsec/plugins/libstrongswan-pgp.a
+lib/ipsec/plugins/libstrongswan-pgp.la
+lib/ipsec/plugins/libstrongswan-pgp.so
+lib/ipsec/plugins/libstrongswan-pkcs1.a
+lib/ipsec/plugins/libstrongswan-pkcs1.la
+lib/ipsec/plugins/libstrongswan-pkcs1.so
+lib/ipsec/plugins/libstrongswan-pubkey.a
+lib/ipsec/plugins/libstrongswan-pubkey.la
+lib/ipsec/plugins/libstrongswan-pubkey.so
+lib/ipsec/plugins/libstrongswan-random.a
+lib/ipsec/plugins/libstrongswan-random.la
+lib/ipsec/plugins/libstrongswan-random.so
+lib/ipsec/plugins/libstrongswan-resolve.a
+lib/ipsec/plugins/libstrongswan-resolve.la
+lib/ipsec/plugins/libstrongswan-resolve.so
+lib/ipsec/plugins/libstrongswan-revocation.a
+lib/ipsec/plugins/libstrongswan-revocation.la
+lib/ipsec/plugins/libstrongswan-revocation.so
+lib/ipsec/plugins/libstrongswan-sha1.a
+lib/ipsec/plugins/libstrongswan-sha1.la
+lib/ipsec/plugins/libstrongswan-sha1.so
+lib/ipsec/plugins/libstrongswan-sha2.a
+lib/ipsec/plugins/libstrongswan-sha2.la
+lib/ipsec/plugins/libstrongswan-sha2.so
+lib/ipsec/plugins/libstrongswan-socket-default.a
+lib/ipsec/plugins/libstrongswan-socket-default.la
+lib/ipsec/plugins/libstrongswan-socket-default.so
+lib/ipsec/plugins/libstrongswan-stroke.a
+lib/ipsec/plugins/libstrongswan-stroke.la
+lib/ipsec/plugins/libstrongswan-stroke.so
+lib/ipsec/plugins/libstrongswan-updown.a
+lib/ipsec/plugins/libstrongswan-updown.la
+lib/ipsec/plugins/libstrongswan-updown.so
+lib/ipsec/plugins/libstrongswan-whitelist.a
+lib/ipsec/plugins/libstrongswan-whitelist.la
+lib/ipsec/plugins/libstrongswan-whitelist.so
+lib/ipsec/plugins/libstrongswan-x509.a
+lib/ipsec/plugins/libstrongswan-x509.la
+lib/ipsec/plugins/libstrongswan-x509.so
+lib/ipsec/plugins/libstrongswan-xcbc.a
+lib/ipsec/plugins/libstrongswan-xcbc.la
+lib/ipsec/plugins/libstrongswan-xcbc.so
+libexec/ipsec/_copyright
+libexec/ipsec/_updown
+libexec/ipsec/_updown_espmark
+libexec/ipsec/charon
+libexec/ipsec/starter
+libexec/ipsec/stroke
+libexec/ipsec/whitelist
+sbin/ipsec
+%%EAPAKA3GPP2%%lib/ipsec/plugins/libstrongswan-eap-aka.a
+%%EAPAKA3GPP2%%lib/ipsec/plugins/libstrongswan-eap-aka.la
+%%EAPAKA3GPP2%%lib/ipsec/plugins/libstrongswan-eap-aka.so
+%%EAPAKA3GPP2%%lib/ipsec/plugins/libstrongswan-eap-aka-3gpp2.a
+%%EAPAKA3GPP2%%lib/ipsec/plugins/libstrongswan-eap-aka-3gpp2.la
+%%EAPAKA3GPP2%%lib/ipsec/plugins/libstrongswan-eap-aka-3gpp2.so
+%%EAPAKA3GPP2%%lib/ipsec/plugins/libstrongswan-gmp.a
+%%EAPAKA3GPP2%%lib/ipsec/plugins/libstrongswan-gmp.la
+%%EAPAKA3GPP2%%lib/ipsec/plugins/libstrongswan-gmp.so
+%%EAPSIMFILE%%lib/ipsec/plugins/libstrongswan-eap-sim.a
+%%EAPSIMFILE%%lib/ipsec/plugins/libstrongswan-eap-sim.la
+%%EAPSIMFILE%%lib/ipsec/plugins/libstrongswan-eap-sim.so
+%%EAPSIMFILE%%lib/ipsec/plugins/libstrongswan-eap-sim-file.a
+%%EAPSIMFILE%%lib/ipsec/plugins/libstrongswan-eap-sim-file.la
+%%EAPSIMFILE%%lib/ipsec/plugins/libstrongswan-eap-sim-file.so
+%%CURL%%lib/ipsec/plugins/libstrongswan-curl.a
+%%CURL%%lib/ipsec/plugins/libstrongswan-curl.la
+%%CURL%%lib/ipsec/plugins/libstrongswan-curl.so
+%%MYSQL%%lib/ipsec/plugins/libstrongswan-mysql.a
+%%MYSQL%%lib/ipsec/plugins/libstrongswan-mysql.la
+%%MYSQL%%lib/ipsec/plugins/libstrongswan-mysql.so
+%%SQL%%lib/ipsec/plugins/libstrongswan-attr-sql.a
+%%SQL%%lib/ipsec/plugins/libstrongswan-attr-sql.la
+%%SQL%%lib/ipsec/plugins/libstrongswan-attr-sql.so
+%%SQL%%lib/ipsec/plugins/libstrongswan-sql.a
+%%SQL%%lib/ipsec/plugins/libstrongswan-sql.la
+%%SQL%%lib/ipsec/plugins/libstrongswan-sql.so
+%%SQL%%libexec/ipsec/pool
+%%SQLITE%%lib/ipsec/plugins/libstrongswan-sqlite.a
+%%SQLITE%%lib/ipsec/plugins/libstrongswan-sqlite.la
+%%SQLITE%%lib/ipsec/plugins/libstrongswan-sqlite.so
+@dirrm libexec/ipsec
+@dirrm lib/ipsec/plugins
+@dirrm lib/ipsec
+@dirrm etc/ipsec.d/reqs
+@dirrm etc/ipsec.d/private
+@dirrm etc/ipsec.d/ocspcerts
+@dirrm etc/ipsec.d/crls
+@dirrm etc/ipsec.d/certs
+@dirrm etc/ipsec.d/cacerts
+@dirrm etc/ipsec.d/acerts
+@dirrm etc/ipsec.d/aacerts
+@dirrm etc/ipsec.d
+@exec mkdir -p %D/etc/ipsec.d/reqs
+@exec mkdir -p %D/etc/ipsec.d/private
+@exec mkdir -p %D/etc/ipsec.d/ocspcerts
+@exec mkdir -p %D/etc/ipsec.d/crls
+@exec mkdir -p %D/etc/ipsec.d/certs
+@exec mkdir -p %D/etc/ipsec.d/cacerts
+@exec mkdir -p %D/etc/ipsec.d/acerts
+@exec mkdir -p %D/etc/ipsec.d/aacerts
