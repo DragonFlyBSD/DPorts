@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dojo-shrinksafe
-# Date created:		2008-05-01
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/www/dojo-shrinksafe/Makefile,v 1.15 2012/11/17 06:02:31 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: ports/www/dojo-shrinksafe/Makefile,v 1.16 2012/12/10 13:48:09 svnexp Exp $
 
 PORTNAME=		shrinksafe
 PORTVERSION=		1.4.2
@@ -17,7 +13,7 @@ MAINTAINER=		glarkin@FreeBSD.org
 COMMENT=		JavaScript code compressor
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/${PKGNAMEPREFIX}${PORTNAME} %%DATADIR%%/shrinksafe.jar \
