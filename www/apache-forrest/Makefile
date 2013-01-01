@@ -1,8 +1,5 @@
-# New ports collection makefile for:	apache-forrest
-# Date created:				14 October 2003
-# Whom:					nivit@users.sourceforge.net
-#
-# $FreeBSD: ports/www/apache-forrest/Makefile,v 1.13 2012/11/17 06:02:27 svnexp Exp $
+# Created by: nivit@users.sourceforge.net
+# $FreeBSD: ports/www/apache-forrest/Makefile,v 1.15 2012/12/10 17:42:49 svnexp Exp $
 
 PORTNAME=		apache-forrest
 PORTVERSION=		0.8
@@ -19,7 +16,7 @@ MAINTAINER=		nivit@FreeBSD.org
 COMMENT=		A tool for rapid development of small sites
 
 USE_JAVA=		yes
-JAVA_VERSION=		1.5
+JAVA_VERSION=		1.6
 
 REPLACE_FILES=		${WRKSRC}/bin/forrest ${WRKSRC}/tools/ant/bin/ant
 
