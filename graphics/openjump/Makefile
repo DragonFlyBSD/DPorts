@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openjump
-# Date created:				08 May, 2009
-# Whom:					Wen Heping<wenheping@gmail.com>
-#
-# $FreeBSD: ports/graphics/openjump/Makefile,v 1.6 2012/11/17 05:58:16 svnexp Exp $
-#
+# Created by: Wen Heping<wenheping@gmail.com>
+# $FreeBSD: ports/graphics/openjump/Makefile,v 1.7 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	OpenJUMP
 PORTVERSION=	1.5.1
@@ -43,7 +39,7 @@ LICENSE_PERMS_JYTHON=	auto-accept
 
 TARGET_DIR=	${PREFIX}/${PORTNAME}
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 USE_ZIP=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}-r${PLUS_REV}-PLUS
