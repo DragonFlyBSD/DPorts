@@ -2,12 +2,12 @@
 # Date created:        16 March 2011
 # Whom:                Jakub Lach <jakub_lach@mailplus.pl>
 #
-# $FreeBSD: ports/x11-wm/mcwm/Makefile,v 1.10 2012/11/17 06:03:43 svnexp Exp $
+# $FreeBSD: ports/x11-wm/mcwm/Makefile,v 1.12 2012/12/10 19:28:21 svnexp Exp $
 #
 
 PORTNAME=	mcwm
 PORTVERSION=	20111124
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://hack.org/mc/hacks/mcwm/
 
@@ -17,9 +17,9 @@ COMMENT=	A small window manager inspired by CTWM, evilwm, and tinywm
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	xcb-util.0:${PORTSDIR}/x11/xcb-util \
-		xcb-keysyms.1:${PORTSDIR}/x11/xcb-util-keysyms \
-		xcb-icccm.4:${PORTSDIR}/x11/xcb-util-wm \
+LIB_DEPENDS=	xcb-util:${PORTSDIR}/x11/xcb-util \
+		xcb-keysyms:${PORTSDIR}/x11/xcb-util-keysyms \
+		xcb-icccm:${PORTSDIR}/x11/xcb-util-wm \
 
 MAKE_JOBS_SAFE=	yes
 
