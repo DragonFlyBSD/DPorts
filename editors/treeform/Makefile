@@ -1,9 +1,5 @@
-# New ports collection makefile for:	treeform
-# Date created:				3 July 2007
-# Whom:					buganini@gmail.com
-#
-# $FreeBSD: ports/editors/treeform/Makefile,v 1.5 2012/11/17 05:57:18 svnexp Exp $
-#
+# Created by: buganini@gmail.com
+# $FreeBSD: ports/editors/treeform/Makefile,v 1.6 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	treeform
 PORTVERSION=	1.0.3
@@ -17,7 +13,7 @@ COMMENT=	A Linguistic Syntax/Semantics tree drawing editor
 USE_ZIP=	yes
 NO_BUILD=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 SUB_FILES=	treeform
 
 WRKSRC=		${WRKDIR}/TreeForm
