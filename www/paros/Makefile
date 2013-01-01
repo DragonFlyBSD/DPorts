@@ -1,9 +1,4 @@
-# New ports collection makefile for:	paros
-# Date created:				25 June 2007
-# Whom:					Wesley Shields <wxs@atarininja.org>
-#
-# $FreeBSD: ports/www/paros/Makefile,v 1.7 2012/11/17 06:02:56 svnexp Exp $
-#
+# $FreeBSD: ports/www/paros/Makefile,v 1.10 2012/12/12 18:51:49 svnexp Exp $
 
 PORTNAME=	paros
 PORTVERSION=	3.2.13
@@ -19,7 +14,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_JAVA=	yes
 JAVA_RUN=	yes
-JAVA_VERSION=	1.5
+JAVA_VERSION=	1.6
 
 USE_ZIP=	yes
 NO_BUILD=	yes
