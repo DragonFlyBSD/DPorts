@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	jpatch
-# Date created:			Jun 30, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/graphics/jpatch/Makefile,v 1.11 2012/11/17 05:58:10 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/graphics/jpatch/Makefile,v 1.12 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	jpatch
 DISTVERSION=	0.4p1
@@ -20,7 +15,7 @@ RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}${DISTVERSION}
 
