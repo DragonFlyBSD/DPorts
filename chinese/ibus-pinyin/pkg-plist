@@ -1,0 +1,40 @@
+%%NLS%%share/locale/ru/LC_MESSAGES/ibus-pinyin.mo
+%%NLS%%share/locale/zh_CN/LC_MESSAGES/ibus-pinyin.mo
+%%NLS%%share/locale/zh_HK/LC_MESSAGES/ibus-pinyin.mo
+%%NLS%%share/locale/zh_TW/LC_MESSAGES/ibus-pinyin.mo
+libexec/ibus-engine-pinyin
+libexec/ibus-setup-pinyin
+%%ANDROID_DB%%%%DATADIR%%/db/android.db
+%%OPENPHRASE_DB%%%%DATADIR%%/db/open-phrase.db
+%%DATADIR%%/db/english.db
+%%DATADIR%%/db/create_index.sql
+%%DATADIR%%/icons/chinese.svg
+%%DATADIR%%/icons/english.svg
+%%DATADIR%%/icons/full-punct.svg
+%%DATADIR%%/icons/full.svg
+%%DATADIR%%/icons/half-punct.svg
+%%DATADIR%%/icons/half.svg
+%%DATADIR%%/icons/ibus-bopomofo.svg
+%%DATADIR%%/icons/ibus-pinyin.svg
+%%DATADIR%%/icons/simp-chinese.svg
+%%DATADIR%%/icons/trad-chinese.svg
+%%DATADIR%%/phrases.txt
+%%DATADIR%%/setup/ibus-pinyin-preferences.ui
+%%DATADIR%%/setup/main.py
+%%DATADIR%%/setup/main.pyc
+%%DATADIR%%/setup/main.pyo
+%%DATADIR%%/setup/version.py
+%%DATADIR%%/setup/version.pyc
+%%DATADIR%%/setup/version.pyo
+share/ibus/component/pinyin.xml
+%%NLS%%@dirrmtry share/locale/zh_CN/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/zh_CN
+%%NLS%%@dirrmtry share/locale/ru/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/ru
+%%NLS%%@dirrmtry share/locale
+@dirrmtry share/ibus/component
+@dirrmtry share/ibus
+@dirrm %%DATADIR%%/setup
+@dirrm %%DATADIR%%/icons
+@dirrmtry %%DATADIR%%/db
+@dirrm %%DATADIR%%
