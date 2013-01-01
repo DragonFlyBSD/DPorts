@@ -1,9 +1,5 @@
-# New ports collection makefile for:    Xerces
-# Date created:		2000/08/12
-# Whom:			Marcin Cieslak
-#
-# $FreeBSD: ports/textproc/xerces-j/Makefile,v 1.28 2012/11/17 06:02:24 svnexp Exp $
-#
+# Created by: Marcin Cieslak
+# $FreeBSD: ports/textproc/xerces-j/Makefile,v 1.29 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	xerces-j
 PORTVERSION=	2.11.0
@@ -16,7 +12,7 @@ MAINTAINER=	ale@FreeBSD.org
 COMMENT=	XML parser for Java
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/xerces-${PORTVERSION:S/./_/g}
