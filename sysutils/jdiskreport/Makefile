@@ -1,5 +1,5 @@
 # Created by: jon@witchspace.com
-# $FreeBSD: ports/sysutils/jdiskreport/Makefile,v 1.14 2012/11/17 06:01:35 svnexp Exp $
+# $FreeBSD: ports/sysutils/jdiskreport/Makefile,v 1.15 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	jdiskreport
 PORTVERSION=	1.4.0
@@ -14,7 +14,7 @@ RUN_DEPENDS=	${JAVAVM}:${PORTSDIR}/java/javavmwrapper
 
 USE_ZIP=	YES
 USE_JAVA=	YES
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 PLIST_SUB=	JDISKDIR=${JDISKDIR:S,${PREFIX}/,,g}
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
