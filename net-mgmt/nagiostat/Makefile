@@ -1,0 +1,55 @@
+# New ports collection makefile for:	nagiostat
+# Date created:			20 July 2004
+# Whom:				Janos.Mohacsi@bsd.hu
+#
+# $FreeBSD: ports/net-mgmt/nagiostat/Makefile,v 1.15 2012/11/17 06:00:34 svnexp Exp $
+#
+
+PORTNAME=	nagiostat
+PORTVERSION=	1.0.0
+PORTREVISION=	6
+CATEGORIES=	net-mgmt
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/1.0
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	janos.mohacsi@bsd.hu
+COMMENT=	Nagiostat parses performance-data from Nagios and generates graphs
+
+RUN_DEPENDS=	rrdtool:${PORTSDIR}/databases/rrdtool \
+		nagios:${PORTSDIR}/net-mgmt/nagios
+
+USE_PERL5=	yes
+NO_BUILD=	yes
+NO_WRKSUBDIR=	yes
+NAGIOSDIR?=	/var/spool/nagios
+DOC_FILES=	README GPL.txt
+
+NAGIOSWWWDIR?=	www/nagios
+PLIST_SUB+=	NAGIOSWWWDIR=${NAGIOSWWWDIR}
+
+post-patch:
+	@${REINPLACE_CMD} \
+		-e 's|%%NAGIOSTATCONFDIR%%|${PREFIX}/etc/|' \
+		-e 's|%%NAGIOSTATDIR%%|${PREFIX}/libexec/${PORTNAME}/|' \
+		-e 's|%%NAGIOSTATRRD%%|${NAGIOSDIR}/${PORTNAME}rrd/|' \
+		-e 's|%%PREFIX%%|${PREFIX}|' \
+		${WRKSRC}/nagiostat ${WRKSRC}/nagiostat.conf ${WRKSRC}/README
+do-install:
+	@${MKDIR} ${PREFIX}/libexec/${PORTNAME}
+	@${MKDIR} ${NAGIOSDIR}/${PORTNAME}rrd
+	@${INSTALL_SCRIPT} ${WRKSRC}/nagiostat ${PREFIX}/libexec/${PORTNAME}/
+	@${LN} -fs ${PREFIX}/libexec/${PORTNAME}/nagiostat ${PREFIX}/${NAGIOSWWWDIR}/cgi-bin/nagiostat.cgi
+	@${INSTALL_DATA} ${WRKSRC}/nagiostat.conf ${PREFIX}/etc/nagiostat.conf-sample
+	@${MKDIR} ${PREFIX}/libexec/${PORTNAME}/html-templates/
+	@${INSTALL_DATA} ${WRKSRC}/html-templates/default.html ${PREFIX}/libexec/${PORTNAME}/html-templates/
+	@${INSTALL_DATA} ${WRKSRC}/html-templates/graphindex.html ${PREFIX}/libexec/${PORTNAME}/html-templates/
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for file in ${DOC_FILES}
+	@${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>
