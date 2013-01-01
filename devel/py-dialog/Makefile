@@ -3,12 +3,12 @@
 # Date created:			Sep 12, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/py-dialog/Makefile,v 1.12 2012/11/17 05:56:46 svnexp Exp $
+# $FreeBSD: ports/devel/py-dialog/Makefile,v 1.13 2012/12/12 01:16:39 svnexp Exp $
 #
 
 PORTNAME=	dialog
 PORTVERSION=	2.7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel python
 MASTER_SITES=	SF/python${PORTNAME}/python${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
