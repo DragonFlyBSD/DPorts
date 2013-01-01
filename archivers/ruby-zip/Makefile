@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubyzip
-# Date created:		26 January 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/archivers/ruby-zip/Makefile,v 1.25 2012/11/17 05:54:23 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: ports/archivers/ruby-zip/Makefile,v 1.26 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	zip
 PORTVERSION=	0.9.4
@@ -15,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	A Ruby module for reading and writing zip files
+COMMENT=	Ruby module for reading and writing ZIP files
 
 MAKE_JOBS_SAFE=	yes
 
