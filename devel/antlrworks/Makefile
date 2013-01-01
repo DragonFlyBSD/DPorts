@@ -1,8 +1,5 @@
-# New ports collection makefile for:    antlrworks
-# Date created:                         December, 5th 2006
-# Whom:                                 Matthias Sund <m.sund@arcor.de>
-#
-# $FreeBSD: ports/devel/antlrworks/Makefile,v 1.14 2012/11/17 05:55:33 svnexp Exp $
+# Created by: Matthias Sund <m.sund@arcor.de>
+# $FreeBSD: ports/devel/antlrworks/Makefile,v 1.15 2012/12/10 11:29:53 svnexp Exp $
 
 PORTNAME=	antlrworks
 PORTVERSION=	1.4.2
@@ -17,7 +14,7 @@ COMMENT=	The ANTLR GUI Development Environment
 NO_BUILD=	yes
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 DESKTOP_ENTRIES="ANTLRWorks" \
 	"ANTLR GUI Development Environment" \
