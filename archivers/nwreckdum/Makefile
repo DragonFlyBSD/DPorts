@@ -1,11 +1,10 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: ports/archivers/nwreckdum/Makefile,v 1.9 2012/11/17 05:54:21 svnexp Exp $
+# $FreeBSD: ports/archivers/nwreckdum/Makefile,v 1.11 2012/12/16 15:58:27 svnexp Exp $
 
 PORTNAME=	nwreckdum
 PORTVERSION=	0.0.6
 PORTREVISION=	2
 CATEGORIES=	archivers games
-DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${GH_COMMIT}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility for manipulating of Quake packed data files
@@ -14,7 +13,6 @@ LICENSE=	GPLv2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	danfe
-GH_PROJECT=	${PORTNAME}
 GH_TAGNAME=	master
 GH_COMMIT=	22cbc47
 
