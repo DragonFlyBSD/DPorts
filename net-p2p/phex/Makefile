@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phex
-# Date created:				Mon Nov 19 23:48:51 BRST 2001
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/net-p2p/phex/Makefile,v 1.32 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: ports/net-p2p/phex/Makefile,v 1.33 2012/12/10 13:48:07 svnexp Exp $
 
 PORTNAME=	phex
 PORTVERSION=	3.4.2.116
@@ -15,7 +11,7 @@ MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	A Java multi platform and spyware free gnutella client
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 USE_ZIP=	yes
 NO_BUILD=	yes
 
