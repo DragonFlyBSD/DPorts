@@ -1,8 +1,8 @@
 # Created by: Eric F Crist <ecrist@secure-computing.net>
-# $FreeBSD: ports/security/openvpn-devel/Makefile,v 1.82 2012/11/17 06:01:09 svnexp Exp $
+# $FreeBSD: ports/security/openvpn-devel/Makefile,v 1.83 2012/12/18 20:02:45 svnexp Exp $
 
 PORTNAME=	openvpn
-DISTVERSION=	201240
+DISTVERSION=	201250
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.secure-computing.net/pub/FreeBSD/ports/openvpn-devel/ \
 		ftp://ftp2.secure-computing.net/pub/FreeBSD/ports/openvpn-devel/
