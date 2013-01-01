@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/xmms-xf86audio/Makefile,v 1.8 2012/11/17 05:54:49 svnexp Exp $
+# $FreeBSD: ports/audio/xmms-xf86audio/Makefile,v 1.9 2012/12/18 21:34:11 svnexp Exp $
 
 PORTNAME=	xmms-xf86audio
 PORTVERSION=	0.4.4
@@ -12,10 +12,12 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 
 MAKE_ARGS=	CC="${CC}" OPT="${CFLAGS}" DEBUG=""
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libxf86audio.so \
 		`xmms-config --general-plugin-dir`
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
