@@ -1,8 +1,8 @@
 # New ports collection makefile for:	openresolv
 # Date created:	20 December 2007
-# Whom:	Wesley Shields <wxs@atarininja.org>
+# Whom:	Roy Marples <roy@marples.name>
 #
-# $FreeBSD: ports/dns/openresolv/Makefile,v 1.3 2012/11/17 05:57:09 svnexp Exp $
+# $FreeBSD: ports/dns/openresolv/Makefile,v 1.4 2012/12/12 18:51:44 svnexp Exp $
 #
 
 PORTNAME=	openresolv
