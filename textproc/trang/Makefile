@@ -1,9 +1,5 @@
-# New ports collection makefile for:   Trang
-# Date created:                22 January 2004
-# Whom:                        Kimura Fuyuki <fuyuki@nigredo.org>
-#
-# $FreeBSD: ports/textproc/trang/Makefile,v 1.9 2012/11/17 06:02:23 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@nigredo.org>
+# $FreeBSD: ports/textproc/trang/Makefile,v 1.10 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	trang
 PORTVERSION=	2008.10.28
@@ -16,7 +12,7 @@ COMMENT=	Multi-format schema converter based on RELAX NG
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 .if !defined(NOPORTDOCS)
