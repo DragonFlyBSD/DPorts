@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Apache MyFaces
-# Date created:				October 04, 2005
-# Whom:					Herve Quiroz <hq@FreeBSD.org>
-#
-# $FreeBSD: ports/www/myfaces/Makefile,v 1.7 2012/11/17 06:02:43 svnexp Exp $
-#
+# Created by: Herve Quiroz <hq@FreeBSD.org>
+# $FreeBSD: ports/www/myfaces/Makefile,v 1.8 2012/12/10 13:48:09 svnexp Exp $
 
 PORTNAME=	myfaces
 PORTVERSION=	1.1.1
@@ -16,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free open source JavaServer(tm) Faces implementation
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
