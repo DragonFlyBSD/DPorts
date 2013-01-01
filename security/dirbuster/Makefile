@@ -1,9 +1,5 @@
-# New ports collection makefile for:    dirbuster
-# Date created:				2010-03-08
-# Whom:					Niels Heinen
-#
-# $FreeBSD: ports/security/dirbuster/Makefile,v 1.4 2012/11/17 06:01:03 svnexp Exp $
-#
+# Created by: Niels Heinen
+# $FreeBSD: ports/security/dirbuster/Makefile,v 1.5 2012/12/10 13:48:07 svnexp Exp $
 
 PORTNAME=	dirbuster
 PORTVERSION=	1.0r1
@@ -16,7 +12,7 @@ COMMENT=	DirBuster allows file and directory brute forcing on web servers
 
 USE_ZIP=	YES
 USE_JAVA=	YES
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
