@@ -2,12 +2,12 @@
 # Date created:		24 March 2004
 # Whom:			Stefan Esser <se@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/argus-clients/Makefile,v 1.8 2012/11/17 06:00:30 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/argus-clients/Makefile,v 1.9 2012/12/10 15:19:17 svnexp Exp $
 #
 
 PORTNAME=	argus-clients
 PORTVERSION=	2.0.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-mgmt security
 MASTER_SITES=	http://qosient.com/argus/src/ \
 		ftp://qosient.com/pub/argus/src/
@@ -20,7 +20,7 @@ PORTSCOUT=	ignore:1	# This is the last version of 2.0.x branch
 CONFLICTS=	argus-clients-3* argus-clients-sasl-3*
 
 .if defined(WITH_SASL)
-LIB_DEPENDS+=	sasl2.2:${PORTSDIR}/security/cyrus-sasl2
+LIB_DEPENDS+=	sasl2:${PORTSDIR}/security/cyrus-sasl2
 .endif
 
 USE_BISON=	build
