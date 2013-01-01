@@ -1,9 +1,5 @@
-# New ports collection makefile for:   saxon-devel
-# Date created:                03 July 2004
-# Whom:                        Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-#
-# $FreeBSD: ports/textproc/saxon-he/Makefile,v 1.23 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
+# $FreeBSD: ports/textproc/saxon-he/Makefile,v 1.24 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	saxon-he
 PORTVERSION=	9.3.0.5
@@ -22,7 +18,7 @@ RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
