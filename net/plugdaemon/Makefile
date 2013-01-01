@@ -2,11 +2,11 @@
 # Date created:				Thu Jun 24 12:38:31 PDT 2004
 # Whom:					David Thiel <lx@redundancy.redundancy.org>
 #
-# $FreeBSD: ports/net/plugdaemon/Makefile,v 1.5 2012/11/17 06:00:15 svnexp Exp $
+# $FreeBSD: ports/net/plugdaemon/Makefile,v 1.6 2012/12/13 19:19:44 svnexp Exp $
 #
 
 PORTNAME=	plugdaemon
-PORTVERSION=	2.5.4
+PORTVERSION=	2.5.5
 CATEGORIES=	net
 MASTER_SITES=	SF
 EXTRACT_SUFX=	.tgz
