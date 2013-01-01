@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Java Cryptograph Extension by Cryptix
-# Date created:		2000/02/19
-# Whom:			Kensaku Masuda <greg@greg.rim.or.jp>
-#
-# $FreeBSD: ports/java/cryptix-jce/Makefile,v 1.17 2012/11/17 05:58:41 svnexp Exp $
-#
+# Created by: Kensaku Masuda <greg@greg.rim.or.jp>
+# $FreeBSD: ports/java/cryptix-jce/Makefile,v 1.18 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	cryptix-jce
 PORTVERSION=	20050328
@@ -16,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	JCE (Java Cryptography Extension) by Cryptix
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 USE_ZIP=	yes
 NO_BUILD=	yes
 
