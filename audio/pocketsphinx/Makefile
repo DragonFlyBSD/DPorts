@@ -1,8 +1,8 @@
 # Created by: Richard Neese
-# $FreeBSD: ports/audio/pocketsphinx/Makefile,v 1.9 2012/12/07 22:29:21 svnexp Exp $
+# $FreeBSD: ports/audio/pocketsphinx/Makefile,v 1.10 2012/12/14 17:39:57 svnexp Exp $
 
 PORTNAME=	pocketsphinx
-PORTVERSION=	0.7
+PORTVERSION=	0.8
 CATEGORIES=	audio accessibility
 MASTER_SITES=	SF/cmusphinx/${PORTNAME}/${PORTVERSION}
 
