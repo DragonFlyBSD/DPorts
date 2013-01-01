@@ -2,7 +2,7 @@
 # Date created:				28 Augest 2000
 # Whom:	      				Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
 #
-# $FreeBSD: ports/textproc/p5-XML-Stream/Makefile,v 1.28 2012/11/17 06:02:14 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-XML-Stream/Makefile,v 1.29 2012/12/17 06:36:02 svnexp Exp $
 #
 
 PORTNAME=	XML-Stream
@@ -28,14 +28,4 @@ MAN3=		XML::Stream.3 \
 		XML::Stream::Parser::DTD.3 \
 		XML::Stream::Tree.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.92:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.if ${PERL_LEVEL} < 501200
-BUILD_DEPENDS+=	p5-Module-Build>=0.3603:${PORTSDIR}/devel/p5-Module-Build
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
