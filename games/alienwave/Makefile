@@ -1,9 +1,5 @@
-# New ports collection makefile for:	alienwave
-# Date created:			23 July 2005
-# Whom:				Travis Poppe <tlp@liquidx.org>
-#
-# $FreeBSD: ports/games/alienwave/Makefile,v 1.6 2012/11/17 05:57:31 svnexp Exp $
-#
+# Created by: Travis Poppe <tlp@liquidx.org>
+# $FreeBSD: ports/games/alienwave/Makefile,v 1.8 2012/12/11 14:39:59 svnexp Exp $
 
 PORTNAME=	alienwave
 PORTVERSION=	0.3.0
@@ -23,12 +19,13 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="-c ${CFLAGS}"
 PLIST_FILES=	bin/alienwave
 PORTDOCS=	README STORY TO_DO
 
-OPTIONS_DEFINE=	RANDOM_LEVELS LEVEL DOCS
+OPTIONS_DEFINE=	RANDOM_LEVELS DOCS
+OPTIONS_DEFAULT=LEVEL_MEDIUM
 OPTIONS_SINGLE=	LEVEL
-OPTIONS_SINGLE_LEVEL=	LEVEL_EASY LEVEL_HARD
+OPTIONS_SINGLE_LEVEL=	LEVEL_EASY LEVEL_MEDIUM LEVEL_HARD
 RANDOM_LEVELS_DESC=	Enable random waves
-LEVEL_DESC=	Choose a level different from medium
 LEVEL_EASY_DESC=	Killing Xzarna: easy
+LEVEL_MEDIUM_DESC=	Killing Xzarna: medium
 LEVEL_HARD_DESC=	Killing Xzarna: hard
 
 .include <bsd.port.options.mk>
@@ -48,10 +45,8 @@ CFLAGS+=	-DRANDOM_LEVELS
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/alienwave ${PREFIX}/bin
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-.  for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.  endfor
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
