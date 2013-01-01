@@ -2,11 +2,12 @@
 # Date created:                         5 February 2010
 # Whom:                                 Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/gnugrep/Makefile,v 1.15 2012/11/17 06:01:57 svnexp Exp $
+# $FreeBSD: ports/textproc/gnugrep/Makefile,v 1.16 2012/12/10 19:24:05 svnexp Exp $
 #
 
 PORTNAME=	grep
 PORTVERSION=	2.12
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	GNU
 PKGNAMEPREFIX=	gnu
@@ -40,7 +41,7 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPCRE}
-LIB_DEPENDS+=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
 .else
 CONFIGURE_ARGS+=	--disable-perl-regexp
 .endif
