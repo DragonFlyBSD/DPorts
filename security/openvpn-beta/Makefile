@@ -1,12 +1,11 @@
 # Created by: Eric F Crist <ecrist@secure-computing.net>
-# $FreeBSD: ports/security/openvpn-beta/Makefile,v 1.14 2012/11/17 06:01:09 svnexp Exp $
+# $FreeBSD: ports/security/openvpn-beta/Makefile,v 1.15 2012/12/23 04:41:12 svnexp Exp $
 
 PORTNAME=	openvpn
-DISTVERSION=	2.3_beta1
+DISTVERSION=	2.3_rc2
 CATEGORIES=	security net
 MASTER_SITES=	http://swupdate.openvpn.net/community/releases/
 PKGNAMESUFFIX=	-beta
-PORTREVISION=	1
 
 MAINTAINER=	ecrist@secure-computing.net
 COMMENT=	Secure IP/Ethernet tunnel daemon
