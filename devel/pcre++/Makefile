@@ -3,19 +3,19 @@
 # Date created:			Jan 12, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/pcre++/Makefile,v 1.35 2012/11/17 05:56:37 svnexp Exp $
+# $FreeBSD: ports/devel/pcre++/Makefile,v 1.36 2012/12/10 19:24:00 svnexp Exp $
 #
 
 PORTNAME=	pcre++
 PORTVERSION=	0.9.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.daemon.de/idisk/Apps/pcre++/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A wrapper class around the pcre library
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 PCRE_CONFIG?=	${LOCALBASE}/bin/pcre-config
 
