@@ -1,15 +1,15 @@
 # Created by: r.neese
-# $FreeBSD: ports/audio/sphinxbase/Makefile,v 1.9 2012/12/07 22:29:21 svnexp Exp $
+# $FreeBSD: ports/audio/sphinxbase/Makefile,v 1.10 2012/12/14 17:16:37 svnexp Exp $
 
 PORTNAME=	sphinxbase
-PORTVERSION=	0.7
+PORTVERSION=	0.8
 CATEGORIES=	audio accessibility
 MASTER_SITES=	SF/cmusphinx/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CMU Sphinx Speech recognition system base
 
-BUILD_DEPENDS=	bison:${PORTSDIR}/devel/bison 
+BUILD_DEPENDS=	bison:${PORTSDIR}/devel/bison
 
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
