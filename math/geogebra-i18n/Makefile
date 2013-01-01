@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geogebra-i18n
-# Date created:		2005-08-26
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: ports/math/geogebra-i18n/Makefile,v 1.9 2012/11/17 05:59:20 svnexp Exp $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: ports/math/geogebra-i18n/Makefile,v 1.10 2012/12/10 13:48:06 svnexp Exp $
 
 PORTNAME=	geogebra-i18n
 DISTVERSION=	3-2-47-0
@@ -22,7 +18,7 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 INSTALLS_ICONS=	yes
 
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 NO_BUILD=	yes
 
