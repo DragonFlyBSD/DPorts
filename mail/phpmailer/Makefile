@@ -2,11 +2,11 @@
 # Date created:		6 April 2007
 # Whom:			Zhen REN <bg1tpt@gmail.com>
 #
-# $FreeBSD: ports/mail/phpmailer/Makefile,v 1.11 2012/11/17 05:59:10 svnexp Exp $
+# $FreeBSD: ports/mail/phpmailer/Makefile,v 1.12 2012/12/16 06:22:02 svnexp Exp $
 #
 
 PORTNAME=	phpmailer
-PORTVERSION=	5.2.1
+PORTVERSION=	5.2.2
 CATEGORIES=	mail
 MASTER_SITES=	http://${PORTNAME}.apache-extras.org.codespot.com/files/
 DISTNAME=	PHPMailer_${PORTVERSION}
