@@ -1,9 +1,9 @@
 # Created by:	Kang Liu <liukang@bjpu.edu.cn>
-#
-# $FreeBSD: ports/www/tomcat55/Makefile,v 1.73 2012/11/17 06:03:07 svnexp Exp $
+# $FreeBSD: ports/www/tomcat55/Makefile,v 1.75 2012/12/11 08:27:47 svnexp Exp $
 
 PORTNAME=	tomcat
 PORTVERSION=	5.5.36
+PORTREVISION=	1
 CATEGORIES=	www java
 MASTER_SITES=	${MASTER_SITE_APACHE} \
 	LOCAL/jgh
@@ -13,10 +13,8 @@ DISTNAME=	apache-tomcat-${PORTVERSION}
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Open-source Java web server by Apache, 5.5.x branch
 
-OPTIONS_DEFINE=	LOG
-OPTIONS_SINGLE=	LOG
-OPTIONS_SINGLE_LOG= CRONOLOG CRONOLOG_DEVEL
-LOG_DESC=	Use Log Pre-Processor
+OPTIONS_RADIO=	LOG
+OPTIONS_RADIO_LOG=	CRONOLOG CRONOLOG_DEVEL
 CRONOLOG_DESC=	Use Cronolog for Log Processing
 CRONOLOG_DEVEL_DESC=	Use Cronlog-Devel for Log Processing
 
@@ -24,8 +22,7 @@ DEPRECATED=	EOL approaching, consider www/tomcat{6,7}
 EXPIRATION_DATE=2012-12-31
 
 USE_JAVA=	yes
-JAVA_VERSION?=	1.5+
-JAVA_VENDOR?=	freebsd
+JAVA_VERSION?=	1.6+
 NO_BUILD=	YES
 
 USE_RC_SUBR=	tomcat55
