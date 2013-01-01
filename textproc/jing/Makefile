@@ -1,9 +1,5 @@
-# New ports collection makefile for:   jing
-# Date created:                3 February 2002
-# Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
-#
-# $FreeBSD: ports/textproc/jing/Makefile,v 1.17 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
+# $FreeBSD: ports/textproc/jing/Makefile,v 1.18 2012/12/10 13:48:08 svnexp Exp $
 
 PORTNAME=	jing
 PORTVERSION=	2008.10.28
@@ -16,7 +12,7 @@ COMMENT=	A RELAX NG validator in Java
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 .if !defined(NOPORTDOCS)
