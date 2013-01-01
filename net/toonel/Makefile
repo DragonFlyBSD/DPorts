@@ -1,9 +1,5 @@
-# New ports collection makefile for:	toonel
-# Date created:		2010-02-04
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: ports/net/toonel/Makefile,v 1.2 2012/11/17 06:00:23 svnexp Exp $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: ports/net/toonel/Makefile,v 1.3 2012/12/10 13:48:07 svnexp Exp $
 
 PORTNAME=	toonel
 PORTVERSION=	0.0.50.50
@@ -20,7 +16,7 @@ NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 SUB_FILES=	${PORTNAME}.sh
 SUB_LIST=	JARNAME=${DISTNAME}${EXTRACT_SUFX}
