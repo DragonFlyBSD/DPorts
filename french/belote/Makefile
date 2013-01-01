@@ -1,9 +1,5 @@
-# New ports collection makefile for:	belote
-# Date created:				09 Nov 2006
-# Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
-#
-# $FreeBSD: ports/french/belote/Makefile,v 1.6 2012/11/17 05:57:28 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
+# $FreeBSD: ports/french/belote/Makefile,v 1.7 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	belote
 PORTVERSION=	20061109
@@ -17,7 +13,7 @@ COMMENT=	Un jeu de belote coinchée contre l'ordinateur ou en réseau
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
