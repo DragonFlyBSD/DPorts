@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/games/iceicepenguin/files/iceicepenguin.in,v 1.2 2012/11/17 05:57:41 svnexp Exp $
+#
+echo "Ice Ice Penguin: Starting up..."
+cd "%%DATADIR%%"
+exec /usr/bin/env python ./iceicepengui.py
