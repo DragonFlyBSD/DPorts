@@ -1,10 +1,11 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/databases/cassandra/Makefile,v 1.28 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: ports/databases/cassandra/Makefile,v 1.29 2012/12/12 00:15:41 svnexp Exp $
 
 PORTNAME=	cassandra
 PORTVERSION=	1.0.12
+PORTREVISION=	1
 CATEGORIES=	databases java
-MASTER_SITES=	${MASTER_SITE_APACHE}
+MASTER_SITES=	APACHE
 MASTER_SITE_SUBDIR=	cassandra/${PORTVERSION}
 DISTNAME=	apache-cassandra-${PORTVERSION}
 EXTRACT_SUFX=	-bin.tar.gz
@@ -14,7 +15,7 @@ COMMENT=	Open source distributed database management system
 
 LICENSE=	AL2
 
-JAVA_VERSION=	1.6
+JAVA_VERSION=	1.7
 JAVA_VENDOR=	openjdk
 REINPLACE_ARGS=	-i ''
 USE_JAVA=	yes

@@ -28,7 +28,7 @@
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
 #
-# $FreeBSD: ports/databases/cassandra/files/cassandra.in,v 1.8 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: ports/databases/cassandra/files/cassandra.in,v 1.9 2012/12/12 00:15:41 svnexp Exp $
 
 . /etc/rc.subr
 
@@ -57,7 +57,7 @@ export JVM_OPTS=-javaagent:%%DATADIR%%/lib/jamm-0.2.5.jar
 export JVM_OVERRIDE_OPTS="$cassandra_vmargs"
 
 export JAVA_VENDOR=openjdk
-export JAVA_VERSION=1.6
+export JAVA_VERSION=1.7
 
 cassandra_prestop() {
 	$CASSANDRA_HOME/bin/nodetool -h localhost disablegossip
