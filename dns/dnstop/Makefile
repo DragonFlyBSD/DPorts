@@ -2,11 +2,11 @@
 # Date created:		31 October 2002
 # Whom:			fenner
 #
-# $FreeBSD: ports/dns/dnstop/Makefile,v 1.23 2012/11/17 05:57:08 svnexp Exp $
+# $FreeBSD: ports/dns/dnstop/Makefile,v 1.24 2012/12/12 21:16:13 svnexp Exp $
 #
 
 PORTNAME=	dnstop
-PORTVERSION=	20120611
+PORTVERSION=	20121017
 CATEGORIES=	dns ipv6
 MASTER_SITES=	http://dns.measurement-factory.com/tools/dnstop/src/
 
