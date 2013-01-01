@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/net/py-iplib/pkg-plist,v 1.2 2012/11/17 06:00:16 svnexp Exp $
+%%PYTHON_SITELIBDIR%%/iplib.py
+%%PYTHON_SITELIBDIR%%/iplib.pyc
+%%PYTHON_SITELIBDIR%%/iplib.pyo
+bin/cidrinfo.py
+bin/ipconv.py
+bin/nmconv.py
