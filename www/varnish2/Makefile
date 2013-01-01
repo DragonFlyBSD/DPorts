@@ -1,8 +1,8 @@
-# $FreeBSD: ports/www/varnish2/Makefile,v 1.48 2012/11/17 06:03:10 svnexp Exp $
+# $FreeBSD: ports/www/varnish2/Makefile,v 1.49 2012/12/10 19:24:06 svnexp Exp $
 
 PORTNAME=	varnish
 PORTVERSION=	2.1.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://repo.varnish-cache.org/source/
 
@@ -11,7 +11,7 @@ COMMENT=	The Varnish high-performance HTTP accelerator
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 LATEST_LINK=	varnish2
 CONFLICTS=	varnish-3.*
