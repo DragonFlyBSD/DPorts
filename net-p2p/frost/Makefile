@@ -1,9 +1,5 @@
-# New ports collection makefile for:	frost
-# Date created:				Fri May 2 05:35:53 UTC 2003
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/net-p2p/frost/Makefile,v 1.25 2012/11/17 06:00:39 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: ports/net-p2p/frost/Makefile,v 1.26 2012/12/10 13:48:07 svnexp Exp $
 
 PORTNAME=	frost
 PORTVERSION=	1.2.0.20090314
@@ -16,7 +12,7 @@ MAINTAINER=	peter.thoenen@yahoo.com
 COMMENT=	Frost is a Freenet client that provides messenger and file services
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 JAVA_RUN=	yes
 USE_ZIP=	yes
 NO_BUILD=	yes
