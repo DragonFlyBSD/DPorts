@@ -1,0 +1,29 @@
+# Created by: Neil Blakey-Milner <nbm@FreeBSD.org>
+# $FreeBSD: ports/www/mod_scgi/Makefile,v 1.28 2012/11/17 06:02:41 svnexp Exp $
+
+PORTNAME=	mod_scgi
+PORTVERSION=	1.12
+PORTREVISION=	2
+CATEGORIES=	www
+MASTER_SITES=	http://dryice.name/computer/FreeBSD/distfiles/
+DISTNAME=	scgi-${PORTVERSION:S/.a/a/}
+
+MAINTAINER=	dryice@dryice.name
+COMMENT=	Apache module that implements the client side of the SCGI protocol
+
+MAKE_JOBS_SAFE=	yes
+
+SCGI_DIR=	apache2
+WRKSRC=		${WRKDIR}/${DISTNAME}/${SCGI_DIR}
+
+USE_APACHE=	22
+
+AP_FAST_BUILD=	yes
+AP_GENPLIST=	yes
+
+.include <bsd.port.pre.mk>
+
+post-install:
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.post.mk>
