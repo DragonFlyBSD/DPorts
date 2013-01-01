@@ -1,9 +1,5 @@
-# Ports collection makefile for:	Poseidon
-# Date created:			February 28, 2004
-# Whom:				Gerrit Beine (<tux@pinguru.net>)
-#
-# $FreeBSD: ports/java/poseidon/Makefile,v 1.29 2012/11/17 05:58:46 svnexp Exp $
-#
+# Created by: Gerrit Beine (<tux@pinguru.net>)
+# $FreeBSD: ports/java/poseidon/Makefile,v 1.31 2012/12/10 16:59:39 svnexp Exp $
 
 PORTNAME=	poseidon
 PORTVERSION=	6.0.2
@@ -17,8 +13,8 @@ COMMENT=	A popular UML CASE tool
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
-JAVA_VENDOR=	${_JAVA_VENDOR_LIST:Nsun}	# the port is broken with Sun JDKs
+JAVA_VERSION=	1.6+
+JAVA_VENDOR=	openjdk	# the port is broken with Sun JDKs
 NO_BUILD=	yes
 RESTRICTED=	Redistribution is not permitted
 
