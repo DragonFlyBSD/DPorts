@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/games/smashbattle/files/smashbattle.in,v 1.2 2012/11/17 05:57:53 svnexp Exp $
+
+cd "%%DATADIR%%"
+exec ./smashbattle "${@}"
