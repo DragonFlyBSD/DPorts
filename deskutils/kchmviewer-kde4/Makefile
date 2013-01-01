@@ -1,0 +1,30 @@
+# New ports collection makefile for:	kchmviewer
+# Date created:				Mon Jul 25 10:42:16 CEST 2005
+# Whom:					Markus Brueffer <markus@FreeBSD.org>
+#
+# $FreeBSD: ports/deskutils/kchmviewer-kde4/Makefile,v 1.32 2012/11/17 05:55:28 svnexp Exp $
+#
+
+PORTNAME=	kchmviewer
+PORTVERSION=	6.0
+PORTREVISION=	2
+CATEGORIES=	deskutils kde
+MASTER_SITES=	SF
+
+MAINTAINER=	makc@FreeBSD.org
+COMMENT=	A Qt/KDE viewer for CHM files
+
+LIB_DEPENDS=	chm.0:${PORTSDIR}/misc/chmlib
+
+LATEST_LINK=	${PORTNAME}-kde4
+
+USE_CMAKE=	yes
+USE_KDE4=	kdeprefix kdelibs automoc4
+USE_QT4=	webkit qmake_build moc_build rcc_build uic_build
+MAKE_JOBS_SAFE=	yes
+
+post-install:
+	${MKDIR} ${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${WRKSRC}/packages/kchmviewer.png ${PREFIX}/share/pixmaps
+
+.include <bsd.port.mk>
