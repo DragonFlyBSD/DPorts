@@ -1,4 +1,4 @@
-# $FreeBSD: ports/java/jakarta-bcel/Makefile,v 1.11 2012/11/17 05:58:43 svnexp Exp $
+# $FreeBSD: ports/java/jakarta-bcel/Makefile,v 1.12 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	bcel
 PORTVERSION=	5.2
@@ -13,7 +13,7 @@ COMMENT=	A library for generating Java bytecode
 
 NO_BUILD=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 PLIST_FILES=	%%JAVAJARDIR%%/bcel.jar
 
