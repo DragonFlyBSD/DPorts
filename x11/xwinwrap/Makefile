@@ -25,7 +25,7 @@ PLIST_FILES=	bin/${PORTNAME}
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 MAKE_ARGS+=	ARCH=x86_64
 .endif
 
