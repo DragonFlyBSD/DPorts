@@ -2,12 +2,12 @@
 # Date created:         06.Sep.2000
 # Whom:                 Alexander@Leidinger.net
 #
-# $FreeBSD: ports/textproc/modlogan/Makefile,v 1.61 2012/11/17 06:02:03 svnexp Exp $
+# $FreeBSD: ports/textproc/modlogan/Makefile,v 1.62 2012/12/10 19:24:05 svnexp Exp $
 #
 
 PORTNAME=	modlogan
 PORTVERSION=	0.8.13
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	textproc www
 MASTER_SITES=	http://www.mirrorservice.org/sites/www.ibiblio.org/gentoo/distfiles/
 
@@ -16,7 +16,7 @@ COMMENT=	A modular log file analysis program
 
 LIB_DEPENDS=	adns.1:${PORTSDIR}/dns/adns \
 		gd.4:${PORTSDIR}/graphics/gd \
-		pcre.1:${PORTSDIR}/devel/pcre \
+		pcre.3:${PORTSDIR}/devel/pcre \
 		expat.6:${PORTSDIR}/textproc/expat2
 
 USE_AUTOTOOLS=	libtool
