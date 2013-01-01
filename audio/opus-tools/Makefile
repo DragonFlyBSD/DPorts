@@ -1,7 +1,7 @@
-# $FreeBSD: ports/audio/opus-tools/Makefile,v 1.7 2012/11/17 05:54:40 svnexp Exp $
+# $FreeBSD: ports/audio/opus-tools/Makefile,v 1.9 2012/12/18 16:33:24 svnexp Exp $
 
 PORTNAME=	opus-tools
-PORTVERSION=	0.1.5
+PORTVERSION=	0.1.6
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/opus/ \
 		https://ftp.mozilla.org/pub/mozilla.org/opus/
