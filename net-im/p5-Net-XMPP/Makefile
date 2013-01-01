@@ -2,7 +2,7 @@
 # Date created:				2004-12-3
 # Whom:	      				Lars Eggert <lars.eggert@gmx.net>
 #
-# $FreeBSD: ports/net-im/p5-Net-XMPP/Makefile,v 1.11 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: ports/net-im/p5-Net-XMPP/Makefile,v 1.12 2012/12/17 15:43:22 svnexp Exp $
 #
 
 PORTNAME=	Net-XMPP
@@ -41,14 +41,4 @@ MAN3=		Net::XMPP.3 \
 		Net::XMPP::Roster.3 \
 		Net::XMPP::Stanza.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.92:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.if ${PERL_LEVEL} < 501200
-BUILD_DEPENDS+=	p5-Module-Build>=0.3603:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
