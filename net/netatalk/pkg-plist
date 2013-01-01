@@ -1,0 +1,166 @@
+%%ATFUNCS%%bin/ad
+%%APPLETALK%%bin/add_netatalk_printer
+bin/adv1tov2
+%%APPLETALK%%bin/aecho
+bin/afpldaptest
+bin/afppasswd
+bin/apple_dump
+bin/binheader
+bin/asip-status.pl
+bin/cnid2_create
+bin/dbd
+%%APPLETALK%%bin/getzones
+bin/macusers
+bin/megatron
+@exec cd %B && ln -s megatron hqx2bin
+@exec cd %B && ln -s megatron macbinary
+@exec cd %B && ln -s megatron nadheader
+@exec cd %B && ln -s megatron single2bin
+@exec cd %B && ln -s megatron unbin
+@exec cd %B && ln -s megatron unhex
+@exec cd %B && ln -s megatron unsingle
+@unexec rm -f %B/hqx2bin
+@unexec rm -f %B/macbinary
+@unexec rm -f %B/nadheader
+@unexec rm -f %B/single2bin
+@unexec rm -f %B/unbin
+@unexec rm -f %B/unhex
+@unexec rm -f %B/unsingle
+%%APPLETALK%%bin/nbplkup
+%%APPLETALK%%bin/nbprgstr
+%%APPLETALK%%bin/nbpunrgstr
+bin/netatalk-config
+%%APPLETALK%%bin/pap
+%%APPLETALK%%bin/papstatus
+%%APPLETALK%%bin/psorder
+%%APPLETALK%%bin/showppd
+bin/uniconv
+@unexec if cmp -s %D/etc/AppleVolumes.default %D/etc/AppleVolumes.default.dist; then rm -f %D/etc/AppleVolumes.default; fi
+etc/AppleVolumes.default.dist
+@exec [ ! -f %B/AppleVolumes.default ] && cp %B/%f %B/AppleVolumes.default
+@unexec if cmp -s %D/etc/AppleVolumes.system %D/etc/AppleVolumes.system.dist; then rm -f %D/etc/AppleVolumes.system; fi
+etc/AppleVolumes.system.dist
+@exec [ ! -f %B/AppleVolumes.system ] && cp %B/%f %B/AppleVolumes.system
+@unexec if cmp -s %D/etc/afpd.conf %D/etc/afpd.conf.dist; then rm -f %D/etc/afpd.conf; fi
+etc/afpd.conf.dist
+@exec [ ! -f %B/afpd.conf ] && cp %B/%f %B/afpd.conf
+@unexec if cmp -s %D/etc/afp_ldap.conf %D/etc/afp_ldap.conf.dist; then rm -f %D/etc/afp_ldap.conf; fi
+etc/afp_ldap.conf.dist
+@exec [ ! -f %B/afp_ldap.conf ] && cp %B/%f %B/afp_ldap.conf
+%%APPLETALK%%@unexec if cmp -s %D/etc/atalkd.conf %D/etc/atalkd.conf.dist; then rm -f %D/etc/atalkd.conf; fi
+%%APPLETALK%%etc/atalkd.conf.dist
+%%APPLETALK%%@exec [ ! -f %B/atalkd.conf ] && cp %B/%f %B/atalkd.conf
+@unexec if cmp -s %D/etc/netatalk.conf %D/etc/netatalk.conf.dist; then rm -f %D/etc/netatalk.conf; fi
+etc/netatalk.conf.dist
+@exec [ ! -f %B/netatalk.conf ] && cp %B/%f %B/netatalk.conf
+@unexec if cmp -s %D/etc/papd.conf %D/etc/papd.conf.dist; then rm -f %D/etc/papd.conf; fi
+%%APPLETALK%%etc/papd.conf.dist
+%%APPLETALK%%@exec [ ! -f %B/papd.conf ] && cp %B/%f %B/papd.conf
+libexec/netatalk-uams/uams_clrtxt.so
+libexec/netatalk-uams/uams_dhx.so
+libexec/netatalk-uams/uams_dhx2.so
+%%NETATALKPAM%%libexec/netatalk-uams/uams_dhx2_pam.a
+%%NETATALKPAM%%libexec/netatalk-uams/uams_dhx2_pam.la
+%%NETATALKPAM%%libexec/netatalk-uams/uams_dhx2_pam.so
+libexec/netatalk-uams/uams_dhx2_passwd.a
+libexec/netatalk-uams/uams_dhx2_passwd.la
+libexec/netatalk-uams/uams_dhx2_passwd.so
+%%NETATALKPAM%%libexec/netatalk-uams/uams_dhx_pam.a
+%%NETATALKPAM%%libexec/netatalk-uams/uams_dhx_pam.la
+%%NETATALKPAM%%libexec/netatalk-uams/uams_dhx_pam.so
+libexec/netatalk-uams/uams_dhx_passwd.a
+libexec/netatalk-uams/uams_dhx_passwd.la
+libexec/netatalk-uams/uams_dhx_passwd.so
+%%NETATALKKRB5%%libexec/netatalk-uams/uams_gss.a
+%%NETATALKKRB5%%libexec/netatalk-uams/uams_gss.la
+%%NETATALKKRB5%%libexec/netatalk-uams/uams_gss.so
+libexec/netatalk-uams/uams_guest.a
+libexec/netatalk-uams/uams_guest.la
+libexec/netatalk-uams/uams_guest.so
+%%NETATALKPAM%%libexec/netatalk-uams/uams_pam.a
+%%NETATALKPAM%%libexec/netatalk-uams/uams_pam.la
+%%NETATALKPAM%%libexec/netatalk-uams/uams_pam.so
+libexec/netatalk-uams/uams_passwd.a
+libexec/netatalk-uams/uams_passwd.la
+libexec/netatalk-uams/uams_passwd.so
+libexec/netatalk-uams/uams_randnum.a
+libexec/netatalk-uams/uams_randnum.la
+libexec/netatalk-uams/uams_randnum.so
+include/atalk/acl.h
+include/atalk/adouble.h
+include/atalk/aep.h
+include/atalk/afp.h
+include/atalk/asp.h
+include/atalk/atp.h
+include/atalk/cnid.h
+include/atalk/compat.h
+include/atalk/ddp.h
+include/atalk/directory.h
+include/atalk/dsi.h
+include/atalk/ea.h
+include/atalk/hash.h
+include/atalk/ldapconfig.h
+include/atalk/list.h
+include/atalk/logger.h
+include/atalk/nbp.h
+include/atalk/netddp.h
+include/atalk/queue.h
+include/atalk/pap.h
+include/atalk/paths.h
+include/atalk/rtmp.h
+include/atalk/server_child.h
+include/atalk/server_ipc.h
+include/atalk/tdb.h
+include/atalk/uam.h
+include/atalk/unicode.h
+include/atalk/unix.h
+include/atalk/util.h
+include/atalk/uuid.h
+include/atalk/vfs.h
+include/atalk/volinfo.h
+include/atalk/volume.h
+include/atalk/zip.h
+include/netatalk/aarp.h
+include/netatalk/at.h
+include/netatalk/at_var.h
+include/netatalk/ddp.h
+include/netatalk/ddp_var.h
+include/netatalk/endian.h
+include/netatalk/phase2.h
+lib/libatalk.a
+lib/libatalk.la
+%%APPLETALK%%libexec/etc2ps.sh
+%%APPLETALK%%libexec/ifmpap
+%%APPLETALK%%libexec/ifmpaprev
+%%APPLETALK%%libexec/ifpap
+%%APPLETALK%%libexec/ifpaprev
+%%APPLETALK%%libexec/ifwmpap
+%%APPLETALK%%libexec/ifwmpaprev
+%%APPLETALK%%libexec/ifwpap
+%%APPLETALK%%libexec/ifwpaprev
+%%APPLETALK%%libexec/ofmpap
+%%APPLETALK%%libexec/ofpap
+%%APPLETALK%%libexec/ofwmpap
+%%APPLETALK%%libexec/ofwpap
+%%APPLETALK%%libexec/psa
+%%APPLETALK%%libexec/psf
+%%APPLETALK%%libexec/tfmpap
+%%APPLETALK%%libexec/tfmpaprev
+%%APPLETALK%%libexec/tfpap
+%%APPLETALK%%libexec/tfpaprev
+%%APPLETALK%%libexec/tfwmpap
+%%APPLETALK%%libexec/tfwmpaprev
+%%APPLETALK%%libexec/tfwpap
+%%APPLETALK%%libexec/tfwpaprev
+sbin/afpd
+%%APPLETALK%%sbin/atalkd
+sbin/cnid_dbd
+sbin/cnid_metad
+%%APPLETALK%%sbin/papd
+%%TIMELORD%%sbin/timelord
+share/aclocal/netatalk.m4
+%%APPLETALK%%%%DATADIR%%/pagecount.ps
+%%APPLETALK%%@dirrm share/netatalk
+@dirrm include/netatalk
+@dirrm include/atalk
+@dirrm libexec/netatalk-uams
