@@ -1,9 +1,5 @@
-# New ports collection makefile for:    thinkingrock
-# Date created:                         02 Jan 2008
-# Whom:                                 Beat Gaetzi <beat@chruetertee.ch>
-#
-# $FreeBSD: ports/deskutils/thinkingrock/Makefile,v 1.10 2012/11/17 05:55:31 svnexp Exp $
-#
+# Created by: Beat Gaetzi <beat@chruetertee.ch>
+# $FreeBSD: ports/deskutils/thinkingrock/Makefile,v 1.11 2012/12/10 13:24:55 svnexp Exp $
 
 PORTNAME=	thinkingrock
 PORTVERSION=	2.2.1
@@ -16,7 +12,7 @@ MAINTAINER=	beat@FreeBSD.org
 COMMENT=	Application for collecting and processing your thoughts
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
