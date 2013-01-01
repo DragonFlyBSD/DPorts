@@ -2,12 +2,12 @@
 # Date created:                14 April 2009
 # Whom:                        Mykola Dzham <freebsd@levsha.org.ua>
 #
-# $FreeBSD: ports/textproc/apertium/Makefile,v 1.7 2012/11/17 06:01:52 svnexp Exp $
+# $FreeBSD: ports/textproc/apertium/Makefile,v 1.8 2012/12/10 19:24:05 svnexp Exp $
 #
 
 PORTNAME=	apertium
 PORTVERSION=	${APVER}.${APREV}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${APVER}
 
@@ -19,7 +19,7 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2 \
 		xslt:${PORTSDIR}/textproc/libxslt \
 		lttoolbox3:${PORTSDIR}/textproc/lttoolbox \
-		pcre.1:${PORTSDIR}/devel/pcre
+		pcre.3:${PORTSDIR}/devel/pcre
 
 APVER=	3.2
 APREV=	0
