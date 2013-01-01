@@ -1,0 +1,47 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net/nss-pam-ldapd/files/nslcd.in,v 1.9 2012/11/17 06:00:07 svnexp Exp $
+#
+# PROVIDE: nslcd
+# REQUIRE: ldconfig resolv
+# BEFORE: syslogd
+#
+# Add the following line to /etc/rc.conf to enable the nslcd daemon:
+#
+# nslcd_enable="YES"
+#
+# Optional:
+# nslcd_debug="NO" - start nslcd in debugging mode (does not daemonize).
+#
+
+. /etc/rc.subr
+
+name=nslcd
+rcvar=nslcd_enable
+
+load_rc_config ${name}
+
+: ${nslcd_enable="NO"}
+: ${nslcd_debug="NO"}
+
+command="%%PREFIX%%/sbin/${name}"
+pidfile="/var/run/${name}.pid"
+start_precmd="nslcd_prestart"
+start_postcmd="nslcd_poststart"
+
+nslcd_prestart () {
+	if checkyesno nslcd_debug
+	then
+		command_args="-d"
+	fi
+}
+
+nslcd_poststart () {
+       until $(%%PREFIX%%/sbin/${name} -c); do
+               echo " Waiting for nslcd to start"
+               sleep 1
+       done
+}
+
+
+run_rc_command "$1"
