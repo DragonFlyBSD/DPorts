@@ -31,7 +31,7 @@ DIST_OSVER=	8
 DIST_OSVER=	7
 .endif
 
-.if ${ARCH} == amd64
+.if ${ARCH} == x86_64
 DIST_EXT=	x64
 .else
 DIST_EXT=	x86
