@@ -2,11 +2,12 @@
 # Date created:        June 25th, 2005
 # Whom:                wcarey
 #
-# $FreeBSD: ports/finance/ledger/Makefile,v 1.12 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: ports/finance/ledger/Makefile,v 1.13 2012/12/10 19:24:01 svnexp Exp $
 #
 
 PORTNAME=	ledger
 PORTVERSION=	2.6.3
+PORTREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	http://cloud.github.com/downloads/jwiegley/${PORTNAME}/
 
