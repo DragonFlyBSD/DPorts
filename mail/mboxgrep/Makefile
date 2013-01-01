@@ -2,12 +2,12 @@
 # Date created:				28 October 2001
 # Whom:					Anders Nordby <anders@fix.no>
 #
-# $FreeBSD: ports/mail/mboxgrep/Makefile,v 1.17 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: ports/mail/mboxgrep/Makefile,v 1.18 2012/12/10 19:24:02 svnexp Exp $
 #
 
 PORTNAME=	mboxgrep
 PORTVERSION=	0.7.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	SF
 
@@ -15,7 +15,7 @@ MAINTAINER=	anders@FreeBSD.org
 COMMENT=	Utility to scan mailboxes for messages matching a regular expression
 
 .if defined(WITH_PCRE)
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 .endif
 
 GNU_CONFIGURE=	yes
