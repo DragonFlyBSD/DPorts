@@ -1,9 +1,9 @@
 # Created by: silence <oksala@videotron.ca>
-# $FreeBSD: ports/www/cherokee/Makefile,v 1.110 2012/12/10 01:26:34 svnexp Exp $
+# $FreeBSD: ports/www/cherokee/Makefile,v 1.111 2012/12/10 19:24:05 svnexp Exp $
 
 PORTNAME=	cherokee
 PORTVERSION=	1.2.101
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SAMBA}
 MASTER_SITE_SUBDIR=cherokee/1.2/${PORTVERSION}
