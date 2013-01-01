@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/foswiki/Makefile,v 1.14 2012/11/17 06:02:33 svnexp Exp $
+# $FreeBSD: ports/www/foswiki/Makefile,v 1.15 2012/12/16 06:16:59 svnexp Exp $
 
 PORTNAME=	foswiki
 PORTVERSION=	1.1.5
@@ -17,7 +17,7 @@ RUN_DEPENDS=	p5-Error>=0.15:${PORTSDIR}/lang/p5-Error \
 
 LICENSE=	GPLv2
 
-USE_PERL5=	5.8.4+
+USE_PERL5=	yes
 NO_BUILD=	yes
 
 OPTIONS=	OPTINT "Install Perl modules for intl character support" On \
