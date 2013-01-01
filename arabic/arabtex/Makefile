@@ -1,9 +1,5 @@
-# New ports collection makefile for:	arabtex
-# Date created:		2005-07-15
-# Whom:			Nicola Vitale <nivit@email.it>
-#
-# $FreeBSD: ports/arabic/arabtex/Makefile,v 1.10 2012/11/17 05:54:19 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@email.it>
+# $FreeBSD: ports/arabic/arabtex/Makefile,v 1.11 2012/12/23 07:08:39 svnexp Exp $
 
 PORTNAME=	arabtex
 PORTVERSION=	3.11
@@ -14,7 +10,7 @@ DISTNAME=	arab${PORTVERSION:S/.//}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A TeX/LaTeX package to generate the Arabic writing
+COMMENT=	TeX/LaTeX package to generate Arabic writing
 
 BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX \
 		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
