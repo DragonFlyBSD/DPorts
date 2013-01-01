@@ -51,7 +51,7 @@ PORTDOCS=	protocol.txt readme.txt
 CFLAGS+=	-fstack-protector
 .endif
 
-.if ${ARCH} == amd64
+.if ${ARCH} == x86_64
 CONFIGURE_ARGS+=	--enable-64bit
 .endif
 
