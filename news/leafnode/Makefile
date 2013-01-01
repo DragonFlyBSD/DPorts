@@ -2,12 +2,12 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 # Date created:		1997-06-27
 #
-# $FreeBSD: ports/news/leafnode/Makefile,v 1.85 2012/11/18 02:41:56 svnexp Exp $
+# $FreeBSD: ports/news/leafnode/Makefile,v 1.86 2012/12/10 19:24:04 svnexp Exp $
 #
 
 PORTNAME=	leafnode
 DISTVERSION=	1.11.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	news ipv6
 MASTER_SITES=	SF \
 		http://www.dt.e-technik.uni-dortmund.de/~ma/${PORTNAME}/
@@ -15,7 +15,7 @@ MASTER_SITES=	SF \
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	NNTP package for offline news caching and reading
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 MAKE_JOBS_SAFE=	yes
 
