@@ -1,9 +1,5 @@
-# New ports collection makefile for:	freemind
-# Date created:	22 september 2004
-# Whom:		cartola (Carlos E. G. Carvalho)
-#
-# $FreeBSD: ports/deskutils/freemind/Makefile,v 1.14 2012/11/17 05:55:27 svnexp Exp $
-#
+# Created by: cartola (Carlos E. G. Carvalho)
+# $FreeBSD: ports/deskutils/freemind/Makefile,v 1.15 2012/12/10 13:24:55 svnexp Exp $
 
 PORTNAME=	freemind
 PORTVERSION=	0.9.0
@@ -24,7 +20,7 @@ RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_ZIP=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}-${PORTVERSION}
 DATAFILES=	accessories browser doc lib plugins patterns.xml
