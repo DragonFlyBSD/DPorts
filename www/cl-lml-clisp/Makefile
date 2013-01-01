@@ -1,0 +1,25 @@
+# New ports collection Makefile for:	cl-lml-clisp
+# Date created:				18 May 2003
+# Whom:					Henrik Motakef <henrik.motakef@web.de>
+#
+# $FreeBSD: ports/www/cl-lml-clisp/Makefile,v 1.12 2012/11/17 06:02:30 svnexp Exp $
+
+PORTNAME=	lml
+PORTVERSION=	2.5.7
+PORTREVISION=	3
+CATEGORIES=	www textproc
+PKGNAMEPREFIX=	cl-
+DISTFILES=	# none
+
+MAINTAINER=	olgeni@FreeBSD.org
+COMMENT=	Lisp Markup Language
+
+BUILD_DEPENDS=	${LOCALBASE}/${CL_LIBDIR_REL}/system-registry/lml.asd:${PORTSDIR}/www/cl-lml
+RUN_DEPENDS=	${LOCALBASE}/${CL_LIBDIR_REL}/system-registry/lml.asd:${PORTSDIR}/www/cl-lml
+
+USE_ASDF_FASL=	yes
+FASL_TARGET=	clisp
+FASL_BUILD=	yes
+
+.include "${.CURDIR}/../../devel/cl-asdf/bsd.cl-asdf.mk"
+.include <bsd.port.mk>
