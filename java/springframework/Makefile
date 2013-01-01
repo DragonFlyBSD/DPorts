@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/java/springframework/Makefile,v 1.12 2012/11/17 05:58:46 svnexp Exp $
+# $FreeBSD: ports/java/springframework/Makefile,v 1.13 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	springframework
 PORTVERSION=	3.0.5
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/spring-framework-${PORTVERSION}.RELEASE
 NO_BUILD=	yes
 USE_JAVA=	yes
 USE_ZIP=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 OPTIONS_DEFINE=	DOCS RESRCS
 RESRCS_DESC=	Install resource files
