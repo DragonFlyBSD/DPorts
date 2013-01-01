@@ -34,14 +34,14 @@ pre-fetch:
 post-extract:
 .if ${ARCH} == "i386"
 	@cd ${WRKSRC}/MegaCli_FreeBSD && ${UNZIP_CMD} ${EXTRACT_BEFORE_ARGS} MegaCli.zip
-.elif ${ARCH} == "amd64"
+.elif ${ARCH} == "x86_64"
 	@cd ${WRKSRC}/MegaCli_FreeBSD && ${UNZIP_CMD} ${EXTRACT_BEFORE_ARGS} MegaCli64.zip
 .endif
 
 do-install:
 .if ${ARCH} == "i386"
 		${INSTALL_PROGRAM} ${WRKSRC}/MegaCli_FreeBSD/MegaCli ${PREFIX}/sbin/MegaCli
-.elif ${ARCH} == "amd64"
+.elif ${ARCH} == "x86_64"
 		${INSTALL_PROGRAM} ${WRKSRC}/MegaCli_FreeBSD/MegaCli64 ${PREFIX}/sbin/MegaCli
 .endif
 .include <bsd.port.post.mk>
