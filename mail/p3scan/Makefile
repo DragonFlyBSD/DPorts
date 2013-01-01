@@ -2,19 +2,19 @@
 # Date created:				20 Februari 2003
 # Whom:	      				Edwin Groothuis <edwin@mavetju.org>
 #
-# $FreeBSD: ports/mail/p3scan/Makefile,v 1.19 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: ports/mail/p3scan/Makefile,v 1.20 2012/12/10 19:24:02 svnexp Exp $
 #
 
 PORTNAME=	p3scan
 PORTVERSION=	2.3.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	mail net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	edwin@mavetju.org
 COMMENT=	A transparent POP3-Proxy with virus-scanning capabilities
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 PLIST_FILES=	etc/p3scan/p3scan.conf.sample etc/p3scan/p3scan.mail.sample \
 		sbin/p3scan
