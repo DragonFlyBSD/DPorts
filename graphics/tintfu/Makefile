@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	tintfu
-# Date created:			Nov 10, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/graphics/tintfu/Makefile,v 1.8 2012/11/17 05:58:24 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/graphics/tintfu/Makefile,v 1.9 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	tintfu
 PORTVERSION=	0.0.4
@@ -25,7 +20,7 @@ EXTRACT_BEFORE_ARGS=	# empty
 EXTRACT_AFTER_ARGS=	.
 NO_BUILD=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 
 PLIST_FILES=	%%JAVAJARDIR%%/${DISTNAME}.jar \
 		bin/tintfu
