@@ -1,4 +1,4 @@
-# $FreeBSD: ports/editors/xxe/Makefile,v 1.28 2012/11/17 05:57:19 svnexp Exp $
+# $FreeBSD: ports/editors/xxe/Makefile,v 1.29 2012/12/10 13:24:57 svnexp Exp $
 
 PORTNAME=	xxe
 PORTVERSION=	${XXE_VERSION}
@@ -12,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Validating XML editor featuring a word processor-like view
 
 USE_JAVA=	YES
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	YES
 
 RESTRICTED=	Licensee may not distribute the software, evaluation edition
