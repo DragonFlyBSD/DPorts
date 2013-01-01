@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geoserver
-# Date created:				10 March 2008
-# Whom:					Wen heping<wenheping@gmail.com>
-#
-# $FreeBSD: ports/graphics/geoserver/Makefile,v 1.16 2012/11/17 05:58:07 svnexp Exp $
-#
+# Created by: Wen heping<wenheping@gmail.com>
+# $FreeBSD: ports/graphics/geoserver/Makefile,v 1.17 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	geoserver
 PORTVERSION=	2.1.1
@@ -18,7 +14,7 @@ LICENSE=	GPLv2
 
 USE_JAVA=	yes
 USE_ZIP=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
