@@ -1,9 +1,5 @@
-# New ports collection makefile for:    Struts framework
-# Date created:		Thu Jun 26 15:50:28 EEST 2003
-# Whom:			Anton Yudin <toha@toha.org.ua>
-#
-# $FreeBSD: ports/java/jakarta-struts/Makefile,v 1.9 2012/11/17 05:58:43 svnexp Exp $
-#
+# Created by: Anton Yudin <toha@toha.org.ua>
+# $FreeBSD: ports/java/jakarta-struts/Makefile,v 1.10 2012/12/10 13:24:58 svnexp Exp $
 
 PORTNAME=	jakarta-struts
 PORTVERSION=	1.2.4
@@ -17,7 +13,7 @@ MAINTAINER=	toha@toha.org.ua
 COMMENT=	Struts framework
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	YES
 USE_ZIP=	YES
 
