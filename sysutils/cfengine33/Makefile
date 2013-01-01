@@ -1,9 +1,10 @@
 # Created by:	jrhett@netconsonance.com
-# $FreeBSD: ports/sysutils/cfengine33/Makefile,v 1.5 2012/11/17 06:01:26 svnexp Exp $
+# $FreeBSD: ports/sysutils/cfengine33/Makefile,v 1.7 2012/12/11 00:53:10 svnexp Exp $
 #
 
 PORTNAME=	cfengine
 PORTVERSION=	3.3.8
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine.com/source-code/download?file=
 
@@ -29,7 +30,7 @@ CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
 		--with-pcre=${LOCALBASE} \
 		--enable-fhs
 
-LIB_DEPENDS+=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
 
 OPTIONS_DEFINE=	PGSQL MYSQL LIBVIRT
 OPTIONS_SINGLE=	DB
@@ -68,7 +69,7 @@ LDFLAGS+=		-L${LOCALBASE}/lib/mysql
 
 .if ${PORT_OPTIONS:MLIBVIRT}
 CONFIGURE_ARGS+=	--with-libvirt=${LOCALBASE}
-LIB_DEPENDS+=		virt:${PORTSDIR}/devel/libvirt
+LIB_DEPENDS+=		virt.1000:${PORTSDIR}/devel/libvirt
 .endif
 
 MAN8=	cf-agent.8	cf-key.8	cf-monitord.8	\
