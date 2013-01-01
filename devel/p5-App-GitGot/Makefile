@@ -2,7 +2,7 @@
 # Date created:		2010-11-12
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/devel/p5-App-GitGot/Makefile,v 1.12 2012/11/17 05:56:04 svnexp Exp $
+# $FreeBSD: ports/devel/p5-App-GitGot/Makefile,v 1.13 2012/12/17 14:13:37 svnexp Exp $
 #
 
 PORTNAME=	App-GitGot
@@ -64,10 +64,4 @@ MAN3=		App::GitGot.3 \
 		App::GitGot::Repo.3 \
 		App::GitGot::Repo::Git.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-RUN_DEPENDS+=	p5-autodie>=0:${PORTSDIR}/devel/p5-autodie
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
