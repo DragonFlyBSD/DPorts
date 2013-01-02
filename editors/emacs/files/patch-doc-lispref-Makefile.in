@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/editors/emacs/files/patch-doc-lispref-Makefile.in,v 1.5 2012/11/17 05:57:13 svnexp Exp $
+
+--- doc/lispref/Makefile.in.orig
++++ doc/lispref/Makefile.in
+@@ -31,7 +31,7 @@
+ emacsdir =  $(srcdir)/../emacs
+ 
+ MAKEINFO = @MAKEINFO@
+-MAKEINFO_OPTS = --force --enable-encoding -I $(emacsdir) -I $(srcdir)
++MAKEINFO_OPTS = --force --no-split --enable-encoding -I $(emacsdir) -I $(srcdir)
+ TEXI2DVI = texi2dvi
+ TEXI2PDF = texi2pdf
+ DVIPS = dvips

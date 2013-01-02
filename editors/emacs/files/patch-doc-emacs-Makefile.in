@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/editors/emacs/files/patch-doc-emacs-Makefile.in,v 1.5 2012/11/17 05:57:13 svnexp Exp $
+
+--- doc/emacs/Makefile.in.orig
++++ doc/emacs/Makefile.in
+@@ -38,7 +38,7 @@
+ # The makeinfo program is part of the Texinfo distribution.
+ # Use --force so that it generates output even if there are errors.
+ MAKEINFO = @MAKEINFO@
+-MAKEINFO_OPTS = --force --enable-encoding -I $(srcdir)
++MAKEINFO_OPTS = --force --no-split --enable-encoding -I $(srcdir)
+ 
+ TEXI2DVI = texi2dvi
+ TEXI2PDF = texi2pdf
