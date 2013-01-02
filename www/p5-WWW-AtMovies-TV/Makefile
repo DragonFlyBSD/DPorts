@@ -2,7 +2,7 @@
 # Date created:				2008/08/31
 # Whom:					chinsan
 #
-# $FreeBSD: ports/www/p5-WWW-AtMovies-TV/Makefile,v 1.9 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: ports/www/p5-WWW-AtMovies-TV/Makefile,v 1.10 2012/12/17 12:20:07 svnexp Exp $
 #
 
 PORTNAME=	WWW-AtMovies-TV
@@ -25,10 +25,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		WWW::AtMovies::TV.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-RUN_DEPENDS+=	p5-version>=0.76:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
