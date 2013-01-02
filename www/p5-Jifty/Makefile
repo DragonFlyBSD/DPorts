@@ -2,7 +2,7 @@
 # Date created:				27 Dec 2005
 # Whom:					Anton Berezin <tobez@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Jifty/Makefile,v 1.29 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: ports/www/p5-Jifty/Makefile,v 1.30 2012/12/17 10:27:26 svnexp Exp $
 #
 
 PORTNAME=	Jifty
@@ -110,13 +110,7 @@ PERL_CONFIGURE=	yes
 
 .include "Makefile.man"
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
 post-patch:
 	${REINPLACE_CMD} -e '/auto_install/d' ${WRKSRC}/Makefile.PL
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
