@@ -1,8 +1,9 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/security/py-fail2ban/Makefile,v 1.15 2012/12/02 10:57:40 svnexp Exp $
+# $FreeBSD: ports/security/py-fail2ban/Makefile,v 1.16 2012/12/17 18:50:03 svnexp Exp $
 
 PORTNAME=	fail2ban
 PORTVERSION=	0.8.7.1
+PORTREVISION=   1
 CATEGORIES=	security python
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/tarball/${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
