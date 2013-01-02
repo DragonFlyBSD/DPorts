@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/pear-channel-horde/bsd.horde.mk,v 1.9 2012/11/17 05:56:40 svnexp Exp $
+# $FreeBSD: ports/devel/pear-channel-horde/bsd.horde.mk,v 1.16 2012/12/18 07:33:46 svnexp Exp $
 
 MASTER_SITES?=	http://pear.horde.org/get/
 
@@ -10,6 +10,8 @@ RUN_DEPENDS+=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 
 PKGNAMEPREFIX?=	pear-
 HORDE_DIR?=	www/horde
+
+CONFLICTS+=	horde3-*.[0-9]*
 
 DIST_SUBDIR=	Horde
 PEAR_CHANNEL=	horde
@@ -29,8 +31,8 @@ horde-Horde_Constraint-DEPEND=	${PEARDIR}/Horde/Constraint.php:${PORTSDIR}/devel
 horde-Horde_Controller-DEPEND=	${PEARDIR}/Horde/Controller.php:${PORTSDIR}/devel/pear-Horde_Controller
 horde-Horde_Core-DEPEND=	${PEARDIR}/Horde.php:${PORTSDIR}/devel/pear-Horde_Core
 horde-Horde_Crypt-DEPEND=	${PEARDIR}/Horde/Crypt.php:${PORTSDIR}/security/pear-Horde_Crypt
+horde-Horde_Crypt_Blowfish-DEPEND=	${PEARDIR}/Horde/Crypt/Blowfish.php:${PORTSDIR}/security/pear-Horde_Crypt_Blowfish
 horde-Horde_Data-DEPEND=	${PEARDIR}/Horde/Data.php:${PORTSDIR}/devel/pear-Horde_Data
-horde-Horde_DataTree-DEPEND=	${PEARDIR}/Horde/DataTree.php:${PORTSDIR}/devel/pear-Horde_DataTree
 horde-Horde_Date-DEPEND=	${PEARDIR}/Horde/Date.php:${PORTSDIR}/devel/pear-Horde_Date
 horde-Horde_Date_Parser-DEPEND=	${PEARDIR}/Horde/Date/Parser.php:${PORTSDIR}/devel/pear-Horde_Date_Parser
 horde-Horde_Db-DEPEND=		${PEARDIR}/Horde/Db.php:${PORTSDIR}/databases/pear-Horde_Db
@@ -52,10 +54,11 @@ horde-Horde_Kolab_Server-DEPEND=	${PEARDIR}/Horde/Kolab/Server/Factory.php:${POR
 horde-Horde_Kolab_Session-DEPEND=	${PEARDIR}/Horde/Kolab/Session.php:${PORTSDIR}/net/pear-Horde_Kolab_Session
 horde-Horde_Kolab_Storage-DEPEND=	${PEARDIR}/Horde/Kolab/Storage.php:${PORTSDIR}/mail/pear-Horde_Kolab_Storage
 horde-Horde_Ldap-DEPEND=	${PEARDIR}/Horde/Ldap.php:${PORTSDIR}/net/pear-Horde_Ldap
+horde-Horde_ListHeaders-DEPEND=	${PEARDIR}/Horde/ListHeaders.php:${PORTSDIR}/mail/pear-Horde_ListHeaders
 horde-Horde_Lock-DEPEND=	${PEARDIR}/Horde/Lock.php:${PORTSDIR}/devel/pear-Horde_Lock
 horde-Horde_Log-DEPEND=		${PEARDIR}/Horde/Log.php:${PORTSDIR}/sysutils/pear-Horde_Log
 horde-Horde_LoginTasks-DEPEND=	${PEARDIR}/Horde/LoginTasks.php:${PORTSDIR}/devel/pear-Horde_LoginTasks
-horde-Horde_Mail-DEPEND=	${PEARDIR}/Horde/Mail.php:${PORTSDIR}/mail/pear-Horde_Mail
+horde-Horde_Mail-DEPEND=	${PEARDIR}/Horde/Mail/Transport.php:${PORTSDIR}/mail/pear-Horde_Mail
 horde-Horde_Memcache-DEPEND=	${PEARDIR}/Horde/Memcache.php:${PORTSDIR}/databases/pear-Horde_Memcache
 horde-Horde_Mime-DEPEND=	${PEARDIR}/Horde/Mime.php:${PORTSDIR}/mail/pear-Horde_Mime
 horde-Horde_Mime_Viewer-DEPEND=	${PEARDIR}/Horde/Mime/Viewer.php:${PORTSDIR}/mail/pear-Horde_Mime_Viewer
@@ -76,6 +79,7 @@ horde-Horde_Scheduler-DEPEND=	${PEARDIR}/Horde/Scheduler.php:${PORTSDIR}/devel/p
 horde-Horde_Scribe-DEPEND=	${PEARDIR}/Horde/Scribe.php:${PORTSDIR}/net/pear-Horde_Scribe
 horde-Horde_Share-DEPEND=	${PEARDIR}/Horde/Share/Base.php:${PORTSDIR}/security/pear-Horde_Share
 horde-Horde_SpellChecker-DEPEND=	${PEARDIR}/Horde/SpellChecker.php:${PORTSDIR}/textproc/pear-Horde_SpellChecker
+horde-Horde_Stream-DEPEND=	${PEARDIR}/Horde/Stream.php:${PORTSDIR}/devel/pear-Horde_Stream
 horde-Horde_Stream_Filter-DEPEND=	${PEARDIR}/Horde/Stream/Filter/Crc32.php:${PORTSDIR}/devel/pear-Horde_Stream_Filter
 horde-Horde_Stream_Wrapper-DEPEND=	${PEARDIR}/Horde/Stream/Wrapper/StringStream.php:${PORTSDIR}/devel/pear-Horde_Stream_Wrapper
 horde-Horde_Service_Facebook-DEPEND=	${PEARDIR}/Horde/Service/Facebook.php:${PORTSDIR}/www/pear-Horde_Service_Facebook
@@ -92,6 +96,7 @@ horde-Horde_Text_Filter-DEPEND=	${PEARDIR}/Horde/Text/Filter.php:${PORTSDIR}/tex
 horde-Horde_Text_Filter_Csstidy-DEPEND=	${PEARDIR}/Horde/Text/Filter/Csstidy.php:${PORTSDIR}/textproc/pear-Horde_Text_Filter_Csstidy
 horde-Horde_Text_Flowed-DEPEND=	${PEARDIR}/Horde/Text/Flowed.php:${PORTSDIR}/textproc/pear-Horde_Text_Flowed
 horde-Horde_Thrift-DEPEND=	${PEARDIR}/Horde/Thrift.php:${PORTSDIR}/devel/pear-Horde_Thrift
+horde-Horde_Timezone-DEPEND=	${PEARDIR}/Horde/Timezone.php:${PORTSDIR}/devel/pear-Horde_Timezone
 horde-Horde_Token-DEPEND=	${PEARDIR}/Horde/Token.php:${PORTSDIR}/devel/pear-Horde_Token
 horde-Horde_Translation-DEPEND=	${PEARDIR}/Horde/Translation.php:${PORTSDIR}/devel/pear-Horde_Translation
 horde-Horde_Tree-DEPEND=	${PEARDIR}/Horde/Tree.php:${PORTSDIR}/devel/pear-Horde_Tree
@@ -99,15 +104,15 @@ horde-Horde_Vfs-DEPEND=		${PEARDIR}/Horde/Vfs.php:${PORTSDIR}/sysutils/pear-Hord
 horde-Horde_View-DEPEND=	${PEARDIR}/Horde/View.php:${PORTSDIR}/devel/pear-Horde_View
 horde-Horde_Xml_Element-DEPEND=	${PEARDIR}/Horde/Xml/Element.php:${PORTSDIR}/textproc/pear-Horde_Xml_Element
 horde-Horde_Xml_Wbxml-DEPEND=	${PEARDIR}/Horde/Xml/Wbxml.php:${PORTSDIR}/textproc/pear-Horde_Xml_Wbxml
-horde-content-DEPEND=		${LOCALBASE}/${HORDE_DIR}/content/lib/Tagger.php:${PORTSDIR}/devel/horde4-content
-horde-horde-DEPEND=		${LOCALBASE}/${HORDE_DIR}/index.php:${PORTSDIR}/www/horde4-base
-horde-imp-DEPEND=		${LOCALBASE}/${HORDE_DIR}/imp/index.php:${PORTSDIR}/mail/horde4-imp
-horde-ingo-DEPEND=		${LOCALBASE}/${HORDE_DIR}/ingo/index.php:${PORTSDIR}/mail/horde4-ingo
-horde-kronolith-DEPEND=		${LOCALBASE}/${HORDE_DIR}/kronolith/index.php:${PORTSDIR}/deskutils/horde4-kronolith
-horde-mnemo-DEPEND=		${LOCALBASE}/${HORDE_DIR}/mnemo/index.php:${PORTSDIR}/deskutils/horde4-mnemo
-horde-nag-DEPEND=		${LOCALBASE}/${HORDE_DIR}/nag/index.php:${PORTSDIR}/deskutils/horde4-nag
-horde-timeobjects-DEPEND=	${LOCALBASE}/${HORDE_DIR}/timeobjects/lib/Driver.php:${PORTSDIR}/devel/horde4-timeobjects
-horde-turba-DEPEND=		${LOCALBASE}/${HORDE_DIR}/turba/index.php:${PORTSDIR}/mail/horde4-turba
+horde-content-DEPEND=		${LOCALBASE}/${HORDE_DIR}/content/lib/Tagger.php:${PORTSDIR}/devel/horde-content
+horde-horde-DEPEND=		${LOCALBASE}/${HORDE_DIR}/index.php:${PORTSDIR}/www/horde-base
+horde-imp-DEPEND=		${LOCALBASE}/${HORDE_DIR}/imp/index.php:${PORTSDIR}/mail/horde-imp
+horde-ingo-DEPEND=		${LOCALBASE}/${HORDE_DIR}/ingo/index.php:${PORTSDIR}/mail/horde-ingo
+horde-kronolith-DEPEND=		${LOCALBASE}/${HORDE_DIR}/kronolith/index.php:${PORTSDIR}/deskutils/horde-kronolith
+horde-mnemo-DEPEND=		${LOCALBASE}/${HORDE_DIR}/mnemo/index.php:${PORTSDIR}/deskutils/horde-mnemo
+horde-nag-DEPEND=		${LOCALBASE}/${HORDE_DIR}/nag/index.php:${PORTSDIR}/deskutils/horde-nag
+horde-timeobjects-DEPEND=	${LOCALBASE}/${HORDE_DIR}/timeobjects/lib/Driver.php:${PORTSDIR}/devel/horde-timeobjects
+horde-turba-DEPEND=		${LOCALBASE}/${HORDE_DIR}/turba/index.php:${PORTSDIR}/mail/horde-turba
 
 .if defined(USE_HORDE_RUN)
 . for DEP in ${USE_HORDE_RUN}
