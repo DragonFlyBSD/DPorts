@@ -29,7 +29,7 @@ WRKSRC=	${WRKDIR}/ChartDirector
 
 DISTVERSION=	${PORTVERSION:C/\.//g}
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 DISTNAME=	chartdir_php_freebsd_${DISTVERSION}_64
 .else
 DISTNAME=	chartdir_php_freebsd_${DISTVERSION}a
