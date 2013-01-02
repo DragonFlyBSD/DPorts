@@ -1,0 +1,20 @@
+--- src/Makefile.orig	2012-04-20 23:05:25.000000000 +0200
++++ src/Makefile	2012-04-20 23:05:25.000000000 +0200
+@@ -72,6 +72,7 @@
+ 	image.o \
+ 	itemGroup.o \
+ 	label.o \
++	labelEntry.o \
+ 	language.o \
+ 	layout.o \
+ 	linkButton.o \
+@@ -88,7 +89,9 @@
+ 	pageSetup.o \
+ 	pageSetupDialog.o \
+ 	paned.o \
++	parseMarkup.o \
+ 	parseOptions.o \
++	pbar.o \
+ 	pixBuf.o \
+ 	pixBufFilters.o \
+ 	pixMap.o \
