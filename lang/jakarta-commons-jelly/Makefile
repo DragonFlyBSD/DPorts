@@ -1,8 +1,5 @@
-# Ports collection makefile for:	Jakarta Commons Jelly
-# Date created:				29 July 2005
-# Whom:					Herve Quiroz <hq@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/jakarta-commons-jelly/Makefile,v 1.6 2012/11/17 05:58:51 svnexp Exp $
+# Created by: Herve Quiroz <hq@FreeBSD.org>
+# $FreeBSD: ports/lang/jakarta-commons-jelly/Makefile,v 1.7 2012/12/10 13:24:59 svnexp Exp $
 
 PORTNAME=	commons-jelly
 PORTVERSION=	1.0
@@ -18,7 +15,7 @@ COMMENT=	XML based scripting engine
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
