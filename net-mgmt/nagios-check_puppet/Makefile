@@ -2,11 +2,11 @@
 # Date created:				Wed 27 May 2009
 # Whom:					Alexey V. Degtyarev
 #
-# $FreeBSD: ports/net-mgmt/nagios-check_puppet/Makefile,v 1.3 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/nagios-check_puppet/Makefile,v 1.4 2012/12/17 16:25:56 svnexp Exp $
 #
 
 PORTNAME=	check_puppet
-PORTVERSION=	1.2
+PORTVERSION=	1.3
 CATEGORIES=	net-mgmt
 MASTER_SITES=	ftp://ftp.renatasystems.org/pub/FreeBSD/ports/distfiles/
 PKGNAMEPREFIX=	nagios-
