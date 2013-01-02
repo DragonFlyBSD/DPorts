@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/mail/quickml/files/quickml.in,v 1.4 2012/11/17 05:59:13 svnexp Exp $
+#
+
+# PROVIDE: quickml
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# quickml_enable (bool):	Set to NO by default.
+
+. /etc/rc.subr
+
+name="quickml"
+rcvar=quickml_enable
+
+command="%%PREFIX%%/sbin/${name}"
+command_interpreter="%%RUBY%%"
+pidfile="/var/run/${name}.pid"
+required_files=%%PREFIX%%/etc/quickmlrc
+
+load_rc_config $name
+
+: ${quickml_enable="NO"}
+
+run_rc_command "$1"
