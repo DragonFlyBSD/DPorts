@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MooseX-App/Makefile,v 1.6 2012/12/04 17:20:07 svnexp Exp $
+# $FreeBSD: ports/devel/p5-MooseX-App/Makefile,v 1.7 2012/12/16 06:16:54 svnexp Exp $
 
 PORTNAME=	MooseX-App
 PORTVERSION=	1.09
@@ -25,7 +25,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most \
 		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_CONFIGURE=	5.10.0+
+PERL_CONFIGURE=	yes
 
 MAN3=		MooseX::App.3 \
 		MooseX::App::Command.3 \
