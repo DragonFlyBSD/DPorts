@@ -2,7 +2,7 @@
 # Date created:				2011-07-19
 # Whom:					milki <milki@rescomp.berkeley.edu>
 #
-# $FreeBSD: ports/misc/p5-Bot-Training-StarCraft/Makefile,v 1.4 2012/11/17 05:59:42 svnexp Exp $
+# $FreeBSD: ports/misc/p5-Bot-Training-StarCraft/Makefile,v 1.5 2012/12/16 06:16:57 svnexp Exp $
 #
 
 PORTNAME=	Bot-Training-StarCraft
@@ -22,7 +22,7 @@ BUILD_DEPENDS=	p5-File-ShareDir-Install>=0.03:${PORTSDIR}/devel/p5-File-ShareDir
 RUN_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-Bot-Training>=0:${PORTSDIR}/misc/p5-Bot-Training
 
-PERL_CONFIGURE=	5.10.0+
+PERL_CONFIGURE=	yes
 
 MAN3=	Bot::Training::StarCraft.3
 
