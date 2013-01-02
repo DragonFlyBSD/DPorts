@@ -1,23 +1,19 @@
-# New ports collection makefile for:	perdition
-# Date created:				28 April 2001
-# Whom:					Konstantinos Konstantinidis <kkonstan@daemon.gr>
-#
-# $FreeBSD: ports/mail/perdition/Makefile,v 1.43 2012/11/17 05:59:10 svnexp Exp $
-#
+# Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
+# $FreeBSD: ports/mail/perdition/Makefile,v 1.44 2012/12/11 14:29:18 svnexp Exp $
 
 PORTNAME=	perdition
 PORTVERSION=	1.17.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	mail net security
 MASTER_SITES=	http://www.vergenet.net/linux/perdition/download/${PORTVERSION}/
 
 MAINTAINER=	thomas@bsdunix.ch
-COMMENT=	A POP3 & IMAP4 proxy that can map users to multiple backend servers
+COMMENT=	POP3 & IMAP4 proxy that can map users to multiple backend servers
 
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
-		vanessa_logger.0:${PORTSDIR}/devel/libvanessa_logger \
-		vanessa_socket.0:${PORTSDIR}/devel/libvanessa_socket \
-		vanessa_adt.0:${PORTSDIR}/devel/libvanessa_adt
+LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt \
+		vanessa_logger:${PORTSDIR}/devel/libvanessa_logger \
+		vanessa_socket:${PORTSDIR}/devel/libvanessa_socket \
+		vanessa_adt:${PORTSDIR}/devel/libvanessa_adt
 
 MAN5=		perditiondb.5
 MAN8=		perdition.8
