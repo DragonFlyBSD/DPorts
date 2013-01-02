@@ -1,0 +1,40 @@
+# Ports collection makefile for:  pear-Horde_Db
+# Date created:			  7 July 2011
+# Whom:				  Martin Matuska <mm@FreeBSD.org>
+#
+# $FreeBSD: ports/databases/pear-Horde_Db/Makefile,v 1.15 2012/12/12 15:19:46 svnexp Exp $
+
+PORTNAME=	Horde_Db
+PORTVERSION=	2.0.1
+CATEGORIES=	databases www pear
+PKGNAMEPREFIX=	pear-
+
+MAINTAINER=	horde@FreeBSD.org
+COMMENT=	Horde Database Libraries
+
+OPTIONS_DEFAULT=	MYSQL
+OPTIONS_DEFINE=		MYSQL MYSQLI PDO
+MYSQL_DESC=		Depend on mysql PHP extension
+MYSQLI_DESC=		Depend on mysqli PHP extension
+PDO_DESC=		Depend on PDO PHP extension
+
+USE_HORDE_RUN=	Horde_Date \
+		Horde_Exception \
+		Horde_Support
+
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MMYSQL}
+USE_PHP+=	mysql
+.endif
+
+.if ${PORT_OPTIONS:MMYSQLI}
+USE_PHP+=	mysqli
+.endif
+
+.if ${PORT_OPTIONS:MPDO}
+USE_PHP+=	pdo
+.endif
+
+.include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
+.include <bsd.port.post.mk>
