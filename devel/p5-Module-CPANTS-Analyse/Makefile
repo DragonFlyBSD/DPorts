@@ -2,7 +2,7 @@
 # Date created:				Feb 13 2007
 # Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Module-CPANTS-Analyse/Makefile,v 1.15 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Module-CPANTS-Analyse/Makefile,v 1.16 2012/12/17 14:13:37 svnexp Exp $
 #
 
 PORTNAME=	Module-CPANTS-Analyse
@@ -59,20 +59,4 @@ MAN3=		Module::CPANTS::Analyse.3 \
 		Module::CPANTS::Kwalitee::Uses.3 \
 		Module::CPANTS::Kwalitee::Version.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Module-Pluggable>=2.96:${PORTSDIR}/devel/p5-Module-Pluggable \
-		p5-Pod-Simple>=0:${PORTSDIR}/textproc/p5-Pod-Simple \
-		p5-version>=0.73:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-Module-Pluggable>=2.96:${PORTSDIR}/devel/p5-Module-Pluggable \
-		p5-Pod-Simple>=0:${PORTSDIR}/textproc/p5-Pod-Simple \
-		p5-version>=0.73:${PORTSDIR}/devel/p5-version
-.endif
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Archive-Tar>=1.48:${PORTSDIR}/archivers/p5-Archive-Tar
-RUN_DEPENDS+=	p5-Archive-Tar>=1.48:${PORTSDIR}/archivers/p5-Archive-Tar
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
