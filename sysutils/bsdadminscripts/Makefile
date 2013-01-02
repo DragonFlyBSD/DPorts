@@ -1,13 +1,9 @@
-# New ports collection makefile for:	bsdadminscripts
-# Date created:		15 May 2006
-# Whom:			Dominic Fandrey <lon_kamikaze@gmx.de>
-#
-# $FreeBSD: ports/sysutils/bsdadminscripts/Makefile,v 1.26 2012/11/17 06:01:25 svnexp Exp $
-#
+# Created by: Dominic Fandrey <lon_kamikaze@gmx.de>
+# $FreeBSD: ports/sysutils/bsdadminscripts/Makefile,v 1.28 2012/12/14 17:46:31 svnexp Exp $
 
 PORTNAME=	bsdadminscripts
 PORTVERSION=	6.1.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	sysutils ports-mgmt
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
