@@ -2,7 +2,7 @@
 # Date created:				28 Oct 2008
 # Whom:	      				chinsan
 #
-# $FreeBSD: ports/audio/p5-Audio-MPD/Makefile,v 1.18 2012/11/17 05:54:40 svnexp Exp $
+# $FreeBSD: ports/audio/p5-Audio-MPD/Makefile,v 1.20 2012/12/17 09:58:06 svnexp Exp $
 #
 
 PORTNAME=	Audio-MPD
@@ -29,7 +29,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Corpus-Audio-MPD>=1.113282:${PORTSDIR}/audio/p5-Test-Corpus-Audio-MPD
 
-PERL_MODBUILD=	5.10.0+
+PERL_MODBUILD=	yes
 
 MAN1=		mpd-dynamic.1 \
 		mpd-rate.1
@@ -38,10 +38,4 @@ MAN3=		Audio::MPD.3 \
 		Audio::MPD::Playlist.3 \
 		Audio::MPD::Types.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
