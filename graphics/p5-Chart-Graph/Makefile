@@ -1,0 +1,34 @@
+# ex:ts=8
+# Ports collection makefile for:	p5-Chart-Graph
+# Date Created:			Aug 30, 2004
+# Whom:				ijliao
+#
+# $FreeBSD: ports/graphics/p5-Chart-Graph/Makefile,v 1.13 2012/11/17 05:58:16 svnexp Exp $
+#
+
+PORTNAME=	Chart-Graph
+PORTVERSION=	3.2
+PORTREVISION=	5
+CATEGORIES=	graphics perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Perl extension for a front-end to gnuplot, XRT, and Xmgrace
+
+RUN_DEPENDS=	gnuplot:${PORTSDIR}/math/gnuplot \
+		xmgrace:${PORTSDIR}/math/grace \
+		ppmtogif:${PORTSDIR}/graphics/netpbm
+
+PERL_CONFIGURE=	yes
+
+MAN3=	Chart::Graph.3 \
+	Chart::Graph::Gnuplot.3 \
+	Chart::Graph::Xmgrace.3 \
+	Chart::Graph::Xrt2d.3 \
+	Chart::Graph::Xrt3d.3
+
+post-patch:
+	@${REINPLACE_CMD} -e "s,%%LOCALBASE%%,${LOCALBASE}," ${WRKSRC}/Makefile.PL
+
+.include <bsd.port.mk>
