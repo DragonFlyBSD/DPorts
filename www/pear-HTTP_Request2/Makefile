@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-HTTP_Request2
-# Date created:			  08 Jan 2009
-# Whom:				  Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/pear-HTTP_Request2/Makefile,v 1.13 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: ports/www/pear-HTTP_Request2/Makefile,v 1.14 2012/12/17 02:18:04 svnexp Exp $
 
 PORTNAME=	HTTP_Request2
 PORTVERSION=	2.1.1
@@ -16,25 +12,26 @@ COMMENT=	PEAR classes providing an easy way to perform HTTP requests
 BUILD_DEPENDS=	${PEARDIR}/Net/URL2.php:${PORTSDIR}/net/pear-Net_URL2
 RUN_DEPENDS=	${PEARDIR}/Net/URL2.php:${PORTSDIR}/net/pear-Net_URL2
 
-OPTIONS=	CURL "PHP CURL extension support" off \
-		FILEINFO "PHP FILEINFO extension support" off \
-		ZLIB "PECL ZLIB support" off
+OPTIONS_DEFINE=	CURL FILEINFO ZLIB
+CURL_DESC=	PHP CURL extension support
+FILEINF_DESC=	PHP FILEINFO extension support
+ZLI_DESC=	PECL ZLIB support
 
 PEAR_AUTOINSTALL=	yes
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_CURL)
+.if ${PORT_OPTIONS:MCURL}
 USE_PHP+=	curl
 .endif
 
-.if defined(WITH_FILEINFO)
+.if ${PORT_OPTIONS:MFILEINFO}
 USE_PHP+=	fileinfo
 .endif
 
-.if defined(WITH_ZLIB)
+.if ${PORT_OPTIONS:MZLIB}
 USE_PHP+=	zlib
 .endif
 
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
