@@ -2,7 +2,7 @@
 # Date created:				28 Jul 2008
 # Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-MooseX-Types-Path-Class/Makefile,v 1.9 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: ports/devel/p5-MooseX-Types-Path-Class/Makefile,v 1.10 2012/12/17 14:42:33 svnexp Exp $
 #
 
 PORTNAME=	MooseX-Types-Path-Class
@@ -26,10 +26,4 @@ MAN3=	MooseX::Types::Path::Class.3
 post-extract:
 	@${PERL} -i -ne 'print unless m,build_requires,' ${WRKSRC}/Makefile.PL
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
