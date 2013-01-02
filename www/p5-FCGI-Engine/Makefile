@@ -2,7 +2,7 @@
 # Date created:		2010-12-03
 # Whom:			Anes Muhametov <anes@anes.su>
 #
-# $FreeBSD: ports/www/p5-FCGI-Engine/Makefile,v 1.6 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: ports/www/p5-FCGI-Engine/Makefile,v 1.7 2012/12/17 10:27:26 svnexp Exp $
 #
 
 PORTNAME=	FCGI-Engine
@@ -44,10 +44,4 @@ MAN3=		FCGI::Engine.3 \
 		Plack::Server::FCGI::Engine.3 \
 		Plack::Server::FCGI::Engine::ProcManager.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
