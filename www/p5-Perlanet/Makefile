@@ -2,7 +2,7 @@
 # Date created:		2010-12-11
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/p5-Perlanet/Makefile,v 1.8 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: ports/www/p5-Perlanet/Makefile,v 1.9 2012/12/17 12:28:02 svnexp Exp $
 #
 
 PORTNAME=	Perlanet
@@ -47,11 +47,4 @@ MAN3=		Perlanet.3 \
 		Perlanet::Trait::Tidy.3 \
 		Perlanet::Trait::YAMLConfig.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
