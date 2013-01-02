@@ -35,7 +35,7 @@ WRKSRC=		${WRKDIR}/V${CLI_VER}_${CLI_REV}
 do-install:
 .if ${ARCH} == "i386"
 		${INSTALL_PROGRAM} ${WRKSRC}/${ARCH}/cli32 ${PREFIX}/sbin/areca-cli
-.elif ${ARCH} == "amd64"
+.elif ${ARCH} == "x86_64"
 		${INSTALL_PROGRAM} ${WRKSRC}/x86_64/cli64 ${PREFIX}/sbin/areca-cli
 .endif
 		@${MKDIR} ${PREFIX}/etc/periodic/daily
