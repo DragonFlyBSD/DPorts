@@ -1,8 +1,4 @@
-# Ports collection makefile for:	zfstools
-# Date created:				26 April 2012
-# Whom:					Bryan Drewery <bryan@shatow.net>
-#
-# $FreeBSD: ports/sysutils/zfstools/Makefile,v 1.3 2012/11/17 06:01:51 svnexp Exp $
+# $FreeBSD: ports/sysutils/zfstools/Makefile,v 1.4 2012/12/12 02:38:24 svnexp Exp $
 
 PORTNAME=	zfstools
 PORTVERSION=	0.2.1
