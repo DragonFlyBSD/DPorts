@@ -11,7 +11,6 @@ CXXFLAGS+=	-I${DRIVER} \
 LDADD=		-L${QT_LIBDIR} -L${LOCALBASE}/lib -L${LOCALBASE}/lib/mysql ${PTHREAD_LIBS} -lQtSql -lmysqlclient_r 
 MOC?=		${LOCALBASE}/bin/moc-qt4
 SRCS=		main.cpp qsql_${DB}.cpp moc_qsql_${DB}.cpp 
-#qsql_${DB}.moc
 
 LIBDIR=		${PREFIX}/lib/qt4/plugins/sqldrivers
 
@@ -23,12 +22,9 @@ moc_qsql_${DB}.cpp: qsql_${DB}.h
 
 
 qsql_${DB}.moc:
-	${MOC} $(.ALLSRC) -o ${DRIVER}/$(.TARGET)
+	${MOC} ${DRIVER}/qsql_${DB}.cpp -o ${DRIVER}/$(.TARGET)
 
 qsql_${DB}.cpp: qsql_${DB}.moc
-
-#qsql_${DB}.moc: qsql_${DB}.cpp
-#	${MOC} $(.ALLSRC) -o ${DRIVER}/$(.TARGET)
 
 beforeinstall:	${LIBDIR}
 
