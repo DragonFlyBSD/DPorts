@@ -1,9 +1,5 @@
-# Ports collection makefile for:	Jakarta Commons JXPATH
-# Date created:                         February 08, 2007
-# Whom:                                 Nemo Liu <nemoliu@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/jakarta-commons-jxpath/Makefile,v 1.10 2012/11/17 05:55:51 svnexp Exp $
-#
+# Created by: Nemo Liu <nemoliu@FreeBSD.org>
+# $FreeBSD: ports/devel/jakarta-commons-jxpath/Makefile,v 1.11 2012/12/10 11:29:54 svnexp Exp $
 
 PORTNAME=	commons-jxpath
 PORTVERSION=	1.3
@@ -17,7 +13,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utilities for manipulating Java Beans using the XPath syntax
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.5+
+JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 .include <bsd.port.pre.mk>
