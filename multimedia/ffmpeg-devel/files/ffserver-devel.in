@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/multimedia/ffmpeg-devel/files/ffserver-devel.in,v 1.2 2012/11/17 05:59:48 svnexp Exp $
+#
+
+# PROVIDE: ffserver-head
+# REQUIRE: NETWORKING
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf to enable ffserver:
+#
+#ffserver_head_enable="YES"
+#
+ffserver_head_enable="${ffserver_head_enable-NO}"
+
+. /etc/rc.subr
+
+name=ffserver_head
+rcvar=ffserver_head_enable
+
+command="%%PREFIX%%/bin/${name} &"
+required_files=%%PREFIX%%/etc/ffserver-head.conf
+
+load_rc_config ${name}
+run_rc_command "$1"
