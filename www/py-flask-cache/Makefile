@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-flask-cache
-# Date created:				2011-04-13
-# Whom:					Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/www/py-flask-cache/Makefile,v 1.4 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: ports/www/py-flask-cache/Makefile,v 1.5 2012/12/16 07:43:15 svnexp Exp $
 
 PORTNAME=	Flask-Cache
-PORTVERSION=	0.4.0
+PORTVERSION=	0.9.2
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +14,8 @@ LICENSE=	BSD
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0.8:${PORTSDIR}/www/py-flask
 
-USE_PYTHON=	2.6+
-USE_PYDISTUTILS=easy_install
+USE_PYTHON=		2.6+
+USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_PKGNAME=	Flask_Cache
 
 .include <bsd.port.mk>
