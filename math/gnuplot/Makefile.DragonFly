@@ -1,0 +1,8 @@
+CONFIGURE_ARGS+=	--with-readline=bsd
+
+LIB_DEPENDS+=		readline.6:${PORTSDIR}/devel/readline
+LIB_DEPENDS+=		ncurses:${PORTSDIR}/devel/ncurses
+
+LDFLAGS+=		-L${LOCALBASE}/lib -liconv
+
+USE_ICONV=		yes
