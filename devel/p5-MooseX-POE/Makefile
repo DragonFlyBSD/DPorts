@@ -2,7 +2,7 @@
 # Date created:				27 Jul 2008
 # Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-MooseX-POE/Makefile,v 1.22 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: ports/devel/p5-MooseX-POE/Makefile,v 1.23 2012/12/17 15:16:54 svnexp Exp $
 #
 
 PORTNAME=	MooseX-POE
@@ -39,10 +39,4 @@ MAN3=		MooseX::POE.3 \
 		MooseX::POE::Role.3 \
 		MooseX::POE::SweetArgs.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.90:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
