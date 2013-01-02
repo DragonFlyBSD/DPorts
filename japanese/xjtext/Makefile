@@ -1,0 +1,38 @@
+# Created by: sada
+# $FreeBSD: ports/japanese/xjtext/Makefile,v 1.24 2012/11/17 05:58:41 svnexp Exp $
+
+PORTNAME=	xjtext
+PORTVERSION=	1.3
+PORTREVISION=	11
+CATEGORIES=	japanese
+MASTER_SITES=	http://plaza.harmonix.ne.jp/~onizuka/
+DISTNAME=	XJTEXT-${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A text viewer for Japanese vertical writings
+
+USE_BISON=	build
+USE_GNOME=	imlib
+MAKE_JOBS_SAFE=	yes
+
+SUB_FILES=	pkg-message
+
+PORTDOCS=	README.txt
+PORTEXAMPLES=	FSS README YAMA Ao.png Back2.png Brown.png Royal.png Royal2.png
+PLIST_FILES=	bin/xjtext
+
+.include <bsd.port.options.mk>
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/xjtext ${PREFIX}/bin
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+.endif
+.if ${PORT_OPTIONS:MEXAMPLES}
+	@${MKDIR} ${EXAMPLESDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTEXAMPLES} ${EXAMPLESDIR}
+.endif
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>
