@@ -2,7 +2,7 @@
 # Date created:          2007-06-04
 # Whom:                     Tomoyuki Sakurai <cherry@trombik.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-View-Email/Makefile,v 1.21 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: ports/www/p5-Catalyst-View-Email/Makefile,v 1.22 2012/12/17 12:20:07 svnexp Exp $
 #
 
 PORTNAME=	Catalyst-View-Email
@@ -36,11 +36,4 @@ MAN3=		Catalyst::Helper::View::Email.3 \
 		Catalyst::View::Email.3 \
 		Catalyst::View::Email::Template.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
