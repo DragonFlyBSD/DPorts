@@ -1,0 +1,36 @@
+# New ports collection makefile for:	mingw32-pthreads
+# Date created:				28 April 2006
+# Whom:					Ed Schouten <ed@fxq.nl>
+#
+# $FreeBSD: ports/devel/mingw32-pthreads/Makefile,v 1.4 2012/11/17 05:56:00 svnexp Exp $
+#
+
+PORTNAME=	pthreads
+PORTVERSION=	2.8.0
+CATEGORIES=	devel
+MASTER_SITES=	ftp://sources.redhat.com/pub/${PORTNAME}-win32/
+PKGNAMEPREFIX=	mingw32-
+DISTNAME=	${PORTNAME}-w32-${PORTVERSION:S/./-/g}-release
+
+MAINTAINER=	ed@FreeBSD.org
+COMMENT=	POSIX threads library for Windows compiled with MinGW32
+
+BUILD_DEPENDS=	${PKGNAMEPREFIX}gcc:${PORTSDIR}/devel/${PKGNAMEPREFIX}gcc \
+		mingwm10.dll:${PORTSDIR}/devel/mingw32-bin-msvcrt
+
+USE_GMAKE=	yes
+
+do-build:
+	@${GMAKE} -C ${WRKSRC} CROSS=${PKGNAMEPREFIX} GC
+
+do-install:
+.for f in pthread.h sched.h semaphore.h
+	${INSTALL_DATA} ${WRKSRC}/$f ${PREFIX}/mingw32/include/$f
+.endfor
+
+.for f in libpthreadGC2.a pthreadGC2.dll
+	${INSTALL_DATA} ${WRKSRC}/$f ${PREFIX}/mingw32/lib/$f
+.endfor
+	${LN} -sf libpthreadGC2.a ${PREFIX}/mingw32/lib/libpthread.a
+
+.include <bsd.port.mk>
