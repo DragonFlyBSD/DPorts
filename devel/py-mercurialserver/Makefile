@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	mercurialserver
-# Date Created:				12 Sep 2010
-# Whom:					Aldis Berjoza <aldis@bsdroot.lv>
-#
-# $FreeBSD: ports/devel/py-mercurialserver/Makefile,v 1.6 2012/11/17 05:56:48 svnexp Exp $
-#
+# Created by: Aldis Berjoza <aldis@bsdroot.lv>
+# $FreeBSD: ports/devel/py-mercurialserver/Makefile,v 1.7 2012/12/20 03:05:44 svnexp Exp $
 
 PORTNAME=	mercurialserver
 PORTVERSION=	1.2.0
@@ -12,7 +8,7 @@ MASTER_SITES=	http://dev.lshift.net/paul/mercurial-server/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	${SNAME}_${SVERSION}
 
-MAINTAINER=	graudeejs@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Software for hosting mercurial repositories
 
 LICENSE=	GPLv2
