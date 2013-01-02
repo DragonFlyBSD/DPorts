@@ -2,7 +2,7 @@
 # Date created:	   04 Jun 2008
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-MooseX-Singleton/Makefile,v 1.21 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: ports/devel/p5-MooseX-Singleton/Makefile,v 1.22 2012/12/17 14:42:33 svnexp Exp $
 #
 
 PORTNAME=	MooseX-Singleton
@@ -31,10 +31,4 @@ MAN3=		MooseX::Singleton.3 \
 		MooseX::Singleton::Role::Meta::Method::Constructor.3 \
 		MooseX::Singleton::Role::Object.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
