@@ -1,8 +1,9 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-channel-theseer/Makefile,v 1.1 2012/12/03 13:21:16 svnexp Exp $
+# $FreeBSD: ports/devel/pear-channel-theseer/Makefile,v 1.2 2012/12/17 07:43:41 svnexp Exp $
 
 PORTNAME=	theseer
 PORTVERSION=	20120501
+PORTREVISION=	1
 CATEGORIES=	devel www pear
 
 MAINTAINER=	gasol.wu@gmail.com
