@@ -1,0 +1,49 @@
+# New ports collection makefile for:	structuresynth
+# Date created:		06 Apr 2008
+# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
+#
+# $FreeBSD: ports/graphics/structuresynth/Makefile,v 1.15 2012/11/17 05:58:23 svnexp Exp $
+#
+
+PORTNAME=	structuresynth
+PORTVERSION=	1.5.0
+PORTREVISION=	2
+CATEGORIES=	graphics
+MASTER_SITES=	SF/${PORTNAME}/Structure%20Synth/Version%201.5%20%28Hinxton%29
+DISTNAME=	StructureSynth-Source-v${PORTVERSION}
+
+MAINTAINER=	amdmi3@FreeBSD.org
+COMMENT=	Rule-based 3D structure generator
+
+USE_GL=		glu
+USE_ZIP=	yes
+USE_QT4=	qmake_build corelib gui opengl moc_build rcc_build xml script
+MAKE_JOBS_SAFE=	yes
+WRKSRC=		${WRKDIR}/structure-synth
+
+post-extract:
+	@${MV} "${WRKDIR}/Structure Synth Source Code" ${WRKSRC}
+	@${RM} -rf ${WRKSRC}/Examples/DontDeploy
+
+post-patch:
+	@${REINPLACE_CMD} -e '/examplesDir/ s|"Examples"|"${DATADIR}/Examples"|; \
+		/miscDir/ s|"Misc"|"${DATADIR}/Misc"|' \
+		${WRKSRC}/StructureSynth/GUI/MainWindow.cpp
+
+do-configure:
+	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} -project \
+		-after "CONFIG+=opengl" -after "QT+=xml opengl script" \
+		-after "LIBS+=-lGLU"
+	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/structure-synth ${PREFIX}/bin/
+	${MKDIR} ${DATADIR}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} "Examples Misc" ${DATADIR}/
+	${MKDIR} ${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/structure-synth.desktop \
+		${PREFIX}/share/applications/
+	${INSTALL_DATA} ${WRKSRC}/images/fileicons/StructureSynth-256.png \
+		${PREFIX}/share/pixmaps/structure-synth.png
+
+.include <bsd.port.mk>
