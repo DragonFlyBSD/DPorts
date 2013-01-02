@@ -1,8 +1,9 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-channel-pirum/Makefile,v 1.1 2012/11/18 07:06:05 svnexp Exp $
+# $FreeBSD: ports/devel/pear-channel-pirum/Makefile,v 1.2 2012/12/17 07:39:18 svnexp Exp $
 
 PORTNAME=	pirum
 PORTVERSION=	20110921
+PORTREVISION=	1
 CATEGORIES=	devel www pear
 
 MAINTAINER=	gasol.wu@gmail.com
