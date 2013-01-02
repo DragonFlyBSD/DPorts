@@ -2,7 +2,7 @@
 # Date created:	   2011-07-19
 # Whom:		   milki <milki@rescomp.berkeley.edu>
 #
-# $FreeBSD: ports/misc/p5-Bot-Training/Makefile,v 1.5 2012/11/17 05:59:42 svnexp Exp $
+# $FreeBSD: ports/misc/p5-Bot-Training/Makefile,v 1.6 2012/12/16 06:16:57 svnexp Exp $
 #
 
 PORTNAME=	Bot-Training
@@ -30,7 +30,7 @@ BUILD_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-namespace-clean>=0:${PORTSDIR}/devel/p5-namespace-clean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	5.10+
+PERL_CONFIGURE=	yes
 
 MAN1=	bot-training.1
 MAN3=	Bot::Training.3
