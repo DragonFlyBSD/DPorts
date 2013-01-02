@@ -2,7 +2,7 @@
 # Date created:		2011-10-10
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/p5-Tk-Role-HasWidgets/Makefile,v 1.4 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: ports/x11-toolkits/p5-Tk-Role-HasWidgets/Makefile,v 1.5 2012/12/16 06:17:00 svnexp Exp $
 #
 
 PORTNAME=	Tk-Role-HasWidgets
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	p5-Moose>=0.92:${PORTSDIR}/devel/p5-Moose \
 RUN_DEPENDS=	p5-Moose>=0.92:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-Has-Sugar>=0:${PORTSDIR}/devel/p5-MooseX-Has-Sugar
 
-PERL_MODBUILD=	5.10.0+
+PERL_MODBUILD=	yes
 
 MAN3=		Tk::Role::HasWidgets.3
 
