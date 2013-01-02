@@ -1,0 +1,26 @@
+# New ports collection makefile for:	dbd_mysql for DBD-for-Ruby
+# Date created:		3 June 2001
+# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
+#
+# $FreeBSD: ports/databases/ruby-dbd_mysql/Makefile,v 1.18 2012/11/17 05:55:24 svnexp Exp $
+#
+
+PORTNAME=	dbd_mysql
+PORTVERSION=	0.4.4
+CATEGORIES=	databases ruby
+MASTER_SITES=	RF
+MASTER_SITE_SUBDIR=	ruby-dbi
+PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
+DISTNAME=	dbd-mysql-${PORTVERSION}
+DIST_SUBDIR=	ruby
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	MySQL driver for DBI-for-Ruby
+
+RUN_DEPENDS=	${RUBY_SITELIBDIR}/dbi.rb:${PORTSDIR}/databases/ruby-dbi \
+		${RUBY_SITEARCHLIBDIR}/mysql.so:${PORTSDIR}/databases/ruby-mysql
+
+USE_RUBY=	yes
+USE_RUBY_SETUP=	yes
+
+.include <bsd.port.mk>
