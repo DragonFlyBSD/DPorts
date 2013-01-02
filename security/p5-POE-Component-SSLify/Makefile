@@ -2,7 +2,7 @@
 # Date created:	   05 November 2004
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/security/p5-POE-Component-SSLify/Makefile,v 1.18 2012/11/17 06:01:13 svnexp Exp $
+# $FreeBSD: ports/security/p5-POE-Component-SSLify/Makefile,v 1.19 2012/12/17 09:58:11 svnexp Exp $
 #
 
 PORTNAME=	POE-Component-SSLify
@@ -28,16 +28,4 @@ MAN3=		POE::Component::SSLify.3 \
 		POE::Component::SSLify::ClientHandle.3 \
 		POE::Component::SSLify::ServerHandle.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500809
-BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.31:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
-RUN_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.31:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
-.endif
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-IO>=1.28:${PORTSDIR}/devel/p5-IO
-RUN_DEPENDS+=	p5-IO>=1.28:${PORTSDIR}/devel/p5-IO
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
