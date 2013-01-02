@@ -1,0 +1,6 @@
+LIB_DEPENDS+=	readline.6:${PORTSDIR}/devel/readline
+LIB_DEPENDS+=	ncurses:${PORTSDIR}/devel/ncurses
+LDFLAGS+=	-L${LOCALBASE}/lib -lncurses
+
+CONFIGURE_ENV+=	config_TARGET_READLINE_INC="-I${LOCALBASE}/include"
+
