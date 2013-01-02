@@ -2,7 +2,7 @@
 # Date created:		29 Apr 2001
 # Whom:			Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-POE/Makefile,v 1.70 2012/11/17 05:56:24 svnexp Exp $
+# $FreeBSD: ports/devel/p5-POE/Makefile,v 1.71 2012/12/17 15:16:54 svnexp Exp $
 #
 
 PORTNAME=	POE
@@ -53,12 +53,6 @@ MAN3=		POE.3 POE::Component.3 POE::Component::Client::TCP.3 \
 		POE::Wheel::ReadWrite.3 POE::Wheel::Run.3 \
 		POE::Wheel::SocketFactory.3
 
-.include <bsd.port.pre.mk>
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-IO>=1.24:${PORTSDIR}/devel/p5-IO
-RUN_DEPENDS+=	p5-IO>=1.24:${PORTSDIR}/devel/p5-IO
-.endif
-
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
@@ -69,4 +63,4 @@ post-install:
 test: build
 	@(cd ${WRKSRC}; make test)
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
