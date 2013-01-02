@@ -2,7 +2,7 @@
 # Date created:				16th March, 2010
 # Whom:					Wen Heping <wen@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-Class-DBI-Lite/Makefile,v 1.32 2012/11/17 05:55:13 svnexp Exp $
+# $FreeBSD: ports/databases/p5-Class-DBI-Lite/Makefile,v 1.33 2012/12/17 08:59:15 svnexp Exp $
 #
 
 PORTNAME=	Class-DBI-Lite
@@ -42,10 +42,4 @@ MAN3=		Class::DBI::Lite.3 \
 		Class::DBI::Lite::TableInfo.3 \
 		Class::DBI::Lite::Tutorial.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.77:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
