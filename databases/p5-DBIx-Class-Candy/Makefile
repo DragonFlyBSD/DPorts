@@ -1,17 +1,13 @@
-# New ports collection makefile for:	DBIx-Class-Candy
-# Date created:				09 Jun, 2012
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-Candy/Makefile,v 1.3 2012/11/17 05:55:14 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: ports/databases/p5-DBIx-Class-Candy/Makefile,v 1.4 2012/12/22 13:28:19 svnexp Exp $
 
 PORTNAME=	DBIx-Class-Candy
-PORTVERSION=	0.002101
+PORTVERSION=	0.002102
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	wen@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Sugar for your favorite ORM, DBIx::Class
 
 RUN_DEPENDS=	p5-DBIx-Class>=0.08123:${PORTSDIR}/databases/p5-DBIx-Class \
