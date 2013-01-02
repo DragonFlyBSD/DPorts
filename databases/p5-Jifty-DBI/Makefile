@@ -2,7 +2,7 @@
 # Date created:				27 Dec 2005
 # Whom:					Anton Berezin <tobez@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-Jifty-DBI/Makefile,v 1.38 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: ports/databases/p5-Jifty-DBI/Makefile,v 1.39 2012/12/17 09:41:16 svnexp Exp $
 #
 
 PORTNAME=	Jifty-DBI
@@ -82,11 +82,4 @@ MAN3=	Jifty::DBI.3 \
 	Jifty::DBI::Schema.3 \
 	Jifty::DBI::SchemaGenerator.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
