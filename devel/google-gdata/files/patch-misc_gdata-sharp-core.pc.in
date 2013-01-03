@@ -1,0 +1,11 @@
+
+$FreeBSD: ports/devel/google-gdata/files/patch-misc_gdata-sharp-core.pc.in,v 1.2 2012/11/17 05:55:46 svnexp Exp $
+
+--- misc/gdata-sharp-core.pc.in.orig
++++ misc/gdata-sharp-core.pc.in
+@@ -5,4 +5,4 @@
+ Description: CLI bindings to Google's online services (Core libraries)
+ Version: @VERSION@
+ 
+-Libs: -r:${libdir}/mono/GData-Sharp/Google.GData.Client.dll -r${libdir}/mono/GData-Sharp/Google.GData.Extensions.dll
++Libs: -r:${libdir}/mono/GData-Sharp/Google.GData.Client.dll -r:${libdir}/mono/GData-Sharp/Google.GData.Extensions.dll
