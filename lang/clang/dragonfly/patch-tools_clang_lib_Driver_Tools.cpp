@@ -15,7 +15,7 @@ $NetBSD: patch-tools_clang_lib_Driver_Tools.cpp,v 1.2 2012/11/29 11:42:25 marino
                                     const InputInfoList &Inputs,
                                     const ArgList &Args,
                                     const char *LinkingOutput) const {
-+  bool UseGCC47;
++  bool UseGCC47 = false;
    const Driver &D = getToolChain().getDriver();
    ArgStringList CmdArgs;
  
