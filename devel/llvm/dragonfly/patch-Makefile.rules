@@ -1,0 +1,23 @@
+--- Makefile.rules.orig	2012-05-16 00:06:08.000000000 +0200
++++ Makefile.rules	2013-01-03 13:51:21.595322000 +0100
+@@ -276,9 +276,11 @@
+   # Don't use -fomit-frame-pointer on Darwin or FreeBSD.
+   ifneq ($(HOST_OS),FreeBSD)
+   ifneq ($(HOST_OS),Darwin)
++  ifneq ($(HOST_OS),DragonFly)
+     OmitFramePointer := -fomit-frame-pointer
+   endif
+   endif
++  endif
+ 
+   # Darwin requires -fstrict-aliasing to be explicitly enabled.
+   # Avoid -fstrict-aliasing on Darwin for now, there are unresolved issues
+@@ -1433,7 +1435,7 @@
+ endif
+ endif
+ 
+-ifeq ($(HOST_OS), $(filter $(HOST_OS), Linux NetBSD FreeBSD GNU))
++ifeq ($(HOST_OS), $(filter $(HOST_OS), Linux NetBSD DragonFly FreeBSD GNU))
+ ifneq ($(ARCH), Mips)
+   LD.Flags += -Wl,--version-script=$(LLVM_SRC_ROOT)/autoconf/ExportMap.map
+ endif
