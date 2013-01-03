@@ -1,0 +1,18 @@
+--- config.h.in.orig	2009-10-31 12:40:18.000000000 +0100
++++ config.h.in	2013-01-03 04:00:05.815769000 +0100
+@@ -20,6 +20,15 @@
+ /* Define to 1 if you have the <dev/usb/usb_ioctl.h> header file. */
+ #undef HAVE_DEV_USB_USB_IOCTL_H
+ 
++/* Define to 1 if you have the <bus/usb/usbhid.h> header file. */
++#undef HAVE_BUS_USB_USBHID_H
++
++/* Define to 1 if you have the <bus/usb/usb.h> header file. */
++#undef HAVE_BUS_USB_USB_H
++
++/* Define to 1 if you have the <bus/usb/usb_ioctl.h> header file. */
++#undef HAVE_BUS_USB_USB_IOCTL_H
++
+ /* Define to 1 if you have the <dlfcn.h> header file. */
+ #undef HAVE_DLFCN_H
+ 

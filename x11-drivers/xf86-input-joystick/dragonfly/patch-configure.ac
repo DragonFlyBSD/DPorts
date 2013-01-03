@@ -1,0 +1,24 @@
+--- configure.ac.orig	2009-10-31 12:40:04.000000000 +0100
++++ configure.ac	2013-01-03 03:55:44.385404000 +0100
+@@ -92,16 +92,16 @@
+ fi
+ 
+ bsd_backend=yes
+-AC_CHECK_HEADERS([dev/usb/usb.h])
+-AC_CHECK_HEADERS([usbhid.h dev/usb/usbhid.h],, [bsd_backend=no],
+-[[#if HAVE_DEV_USB_USB_H
+-#include <dev/usb/usb.h>
++AC_CHECK_HEADERS([bus/usb/usb.h])
++AC_CHECK_HEADERS([usbhid.h bus/usb/usbhid.h],, [bsd_backend=no],
++[[#if HAVE_BUS_USB_USB_H
++#include <bus/usb/usb.h>
+ #endif
+ ]])
+ AC_CHECK_LIB([usbhid],[hid_get_item],, [bsd_backend=no])
+ AM_CONDITIONAL(BSD_BACKEND, [test "x$bsd_backend" = xyes])
+ if test "x$bsd_backend" = xyes; then
+-    AC_CHECK_HEADERS([dev/usb/usb_ioctl.h])
++    AC_CHECK_HEADERS([bus/usb/usb_ioctl.h])
+     AC_DEFINE(BSD_BACKEND, 1, [Compile BSD usbhid backend])
+ fi
+ 
