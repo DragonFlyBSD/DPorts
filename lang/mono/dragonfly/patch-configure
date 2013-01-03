@@ -1,0 +1,39 @@
+--- configure.orig	2013-01-03 20:50:14.080428000 +0100
++++ configure	2013-01-03 21:21:18.363032000 +0100
+@@ -3875,7 +3875,7 @@
+ 		mono_cv_clang=no
+ 		if test "x$cross_compiling" = "xno"; then
+ 			target_win32=yes
+-			if test "x$host" == "x$build" -a "x$host" == "x$target"; then
++			if test "x$host" = "x$build" -a "x$host" = "x$target"; then
+ 
+ $as_echo "#define TARGET_WIN32 1" >>confdefs.h
+ 
+@@ -3932,7 +3932,7 @@
+ 		with_sigaltstack=no
+ 		use_sigposix=yes
+ 		;;
+-	*-*-*freebsd*)
++	*-*-*freebsd*|*-*-dragonfly*)
+ 		host_win32=no
+ 		if test "x$PTHREAD_CFLAGS" = "x"; then
+ 			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
+@@ -3948,7 +3948,8 @@
+ 			LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
+ 			libmono_ldflags="$PTHREAD_LIBS"
+ 		fi
+-		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
++		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD -DPLATFORM_BSD6 -D_GNU_SOURCE -D_REENTRANT -DUSE_MMAP -DUSE_MUNMAP"
++		libmono_cflags="$libmono_cflags -D_REENTRANT"
+ 		need_link_unlink=yes
+ 
+ $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
+@@ -24502,7 +24503,7 @@
+ 	LIBC="libc.so.12"
+ 	INTL="libintl.so.0"
+ 	;;
+-    *-*-*freebsd*)
++    *-*-*freebsd*|*-*-dragonfly*)
+     	LIBC="libc.so"
+ 	INTL="libintl.so"
+ 	SQLITE="libsqlite.so"
