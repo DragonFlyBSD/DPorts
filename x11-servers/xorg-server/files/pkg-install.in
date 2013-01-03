@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/x11-servers/xorg-server/files/pkg-install.in,v 1.1 2012/08/31 15:44:41 kwm Exp $
+#
+
+PREFIX="${PKG_PREFIX-/usr/local}"
+
+case $2 in
+POST-INSTALL)
+	if [ -f ${PREFIX}/lib/xorg/modules/extensions/.nvidia/libglx.so.1 ]; then
+	  /bin/ln -f ${PREFIX}/lib/xorg/modules/extensions/.nvidia/libglx.so.1 \
+		${PREFIX}/lib/xorg/modules/extensions/libglx.so
+	  /bin/ln -f ${PREFIX}/lib/xorg/modules/extensions/.nvidia/libglx.so.1 \
+		${PREFIX}/lib/xorg/modules/extensions/libglx.so.1
+	else
+	  /bin/ln -f ${PREFIX}/lib/xorg/modules/extensions/.xorg/libglx.so \
+		${PREFIX}/lib/xorg/modules/extensions/libglx.so
+	fi
+	;;
+esac
