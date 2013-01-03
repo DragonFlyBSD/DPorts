@@ -1,0 +1,20 @@
+# New ports collection makefile for:	xf86-video-vesa
+# Date Created:				17 Feb 2006
+# Whom:					Florent Thoumie <flz@FreeBSD.org>
+#
+# $FreeBSD: ports/x11-drivers/xf86-video-vesa/Makefile,v 1.14 2012/11/17 06:03:26 svnexp Exp $
+#
+
+PORTNAME=	xf86-video-vesa
+PORTVERSION=	2.3.0
+PORTREVISION=	2
+CATEGORIES=	x11-drivers
+
+MAINTAINER=	x11@FreeBSD.org
+COMMENT=	X.Org vesa display driver
+
+XORG_CAT=	driver
+USE_XORG=	xextproto videoproto
+MAN4=		vesa.4x
+
+.include <bsd.port.mk>
