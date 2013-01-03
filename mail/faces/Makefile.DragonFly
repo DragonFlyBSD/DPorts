@@ -1,0 +1,5 @@
+.if !defined(WITHOUT_X11)
+USE_XORG+=	x11
+.endif
+
+USE_GETTEXT=	yes
