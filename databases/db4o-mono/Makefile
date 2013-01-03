@@ -1,0 +1,43 @@
+# New ports collection makefile for:		Castle.ActiveRecord
+# Date created:                         	17 Dec 2005
+# Whom:                                 	pneumann@gmail.com
+#
+# $FreeBSD: ports/databases/db4o-mono/Makefile,v 1.8 2012/11/17 05:55:06 svnexp Exp $
+#   $Id: Makefile,v 1.3 2006/10/09 16:27:03 killfill Exp $
+#
+
+PORTNAME=	db4o
+PORTVERSION=	${REALVERSION}.20
+PORTREVISION=	1
+CATEGORIES=	databases
+MASTER_SITES=	http://www.db4o.com/downloads/
+PKGNAMESUFFIX=	-mono
+DISTNAME=	${PORTNAME}-${REALVERSION}${PKGNAMESUFFIX}
+DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
+
+MAINTAINER=	pneumann@gmail.com
+COMMENT=	A database engine for storing object into files
+
+RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
+
+REALVERSION=	5.5
+
+NO_BUILD=	yes
+WRKSRC=		${WRKDIR}/${PORTNAME}-${REALVERSION}
+
+do-install:
+	@(cd ${WRKSRC}/dll ; ${SETENV} MONO_SHARED_DIR=${WRKDIR} ${LOCALBASE}/bin/gacutil /root ${PREFIX}/lib /gacdir ${PREFIX}/lib /package 1.0 /i db4o.dll)
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+	@cd ${WRKSRC}/doc/; ${FIND} api \
+		| ${CPIO} -pdmv -R ${DOCOWN}:${DOCGRP} ${DOCSDIR}
+	@cd ${WRKSRC}/doc/; ${FIND} tutorial \
+		| ${CPIO} -pdmv -R ${DOCOWN}:${DOCGRP} ${DOCSDIR}
+	@${CHMOD} -R ugo-w,ugo+rX ${DOCSDIR}
+.endif
+
+.include <bsd.port.pre.mk>
+.include "${PORTSDIR}/lang/mono/bsd.mono.mk"
+.include <bsd.port.post.mk>
