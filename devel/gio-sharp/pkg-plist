@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/devel/gio-sharp/pkg-plist,v 1.2 2012/11/17 05:55:45 svnexp Exp $
+lib/gio-sharp/gio-sharp.dll
+lib/gio-sharp/gio-sharp.dll.config
+lib/gio-sharp/gio-sharp.dll.mdb
+libdata/pkgconfig/gio-sharp-2.0.pc
+share/gapi-2.0/gio-api.xml
+@dirrm lib/gio-sharp
