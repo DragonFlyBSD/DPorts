@@ -1,0 +1,3 @@
+@comment $FreeBSD: ports/www/mod_mono/pkg-plist,v 1.3 2012/11/17 06:02:41 svnexp Exp $
+%%MOD_MONOCONFDIR%%/mod_mono.conf
+%%APACHEMODDIR%%/%%AP_MODULE%%
