@@ -1,0 +1,5 @@
+USE_XORG+=	xt sm ice
+
+post-patch:
+	cp ${WRKSRC}/config/Makefile.freebsd \
+	   ${WRKSRC}/config/Makefile.dragonfly
