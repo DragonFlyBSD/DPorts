@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/astro/openmap/files/openmap.sh.in,v 1.2 2012/11/17 05:54:25 svnexp Exp $
+#
+
+cd "%%DATADIR%%"
+JAVA_VERSION="%%JAVA_VERSION%%" \
+    exec "%%LOCALBASE%%/bin/java" \
+    -classpath $(%%LOCALBASE%%/bin/classpath) \
+    com.bbn.openmap.app.OpenMap "%@"
