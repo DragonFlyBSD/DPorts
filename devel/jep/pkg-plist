@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/devel/jep/pkg-plist,v 1.6 2012/11/17 05:55:51 svnexp Exp $
+lib/libjep.a
+lib/libjep.la
+lib/libjep.so.2
+lib/libjep.so
+%%JAVAJARDIR%%/jep.jar
