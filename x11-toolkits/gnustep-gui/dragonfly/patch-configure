@@ -1,0 +1,11 @@
+--- configure.orig	2013-01-04 15:33:53.354601000 +0100
++++ configure	2013-01-04 15:53:39.506258000 +0100
+@@ -2386,7 +2386,7 @@
+ ADDITIONAL_INCLUDE_DIRS="$CPPFLAGS"
+ ADDITIONAL_LIB_DIRS="$LDFLAGS"
+ case "$target_os" in
+-  freebsd* | openbsd* )
++  freebsd* | dragonfly* | openbsd* )
+ 	      CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+               LDFLAGS="$LDFLAGS -L/usr/local/lib";;
+   netbsd*)    CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
