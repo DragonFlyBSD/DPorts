@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/java/jlex/files/jlex.sh.in,v 1.2 2012/11/17 05:58:45 svnexp Exp $
+
+"%%LOCALBASE%%/bin/java" -cp "%%JAVAJARDIR%%/jlex.jar" JLex.Main "$@"
