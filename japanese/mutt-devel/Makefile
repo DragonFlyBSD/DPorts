@@ -2,14 +2,14 @@
 # Date created:		4 Sep 2000
 # Whom:			IWASHITA Yoji <shuna@pop16.odn.ne.jp>
 #
-# $FreeBSD: ports/japanese/mutt-devel/Makefile,v 1.80 2012/11/17 05:58:37 svnexp Exp $
+# $FreeBSD: ports/japanese/mutt-devel/Makefile,v 1.81 2012/12/10 15:19:15 svnexp Exp $
 #
 # WITH_MUTT_CYRUS_SASL2:	if defined, 'Cyrus sasl' support.
 #
 
 PORTNAME=	mutt
 PORTVERSION=	${VERSION}.j${JP_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	japanese mail
 MASTER_SITES=	ftp://ftp.mutt.org/mutt/devel/:body \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/mutt/devel/:body \
@@ -90,7 +90,7 @@ OPTIONS=	MUTT_CYRUS_SASL2		"Enable SASL2 authentication"	off \
 USE_GETTEXT=	yes
 .endif
 .if defined(WITH_MUTT_CYRUS_SASL2)
-LIB_DEPENDS+=	sasl2.2:${PORTSDIR}/security/cyrus-sasl2
+LIB_DEPENDS+=	sasl2:${PORTSDIR}/security/cyrus-sasl2
 .endif
 .if defined(WITH_MUTT_MAILDIR_HEADER_CACHE)
 WITH_MUTT_IMAP_HEADER_CACHE=	yes
