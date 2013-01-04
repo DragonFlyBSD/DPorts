@@ -1,0 +1,43 @@
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: ports/textproc/jalingo/Makefile,v 1.7 2012/12/10 13:48:08 svnexp Exp $
+
+PORTNAME=	jalingo
+PORTVERSION=	0.6.0
+PORTREVISION=	2
+#PORTREVISION=	0
+CATEGORIES=	textproc java
+MASTER_SITES=	SF/${PORTNAME}/JaLingo/${PORTVERSION}
+DISTNAME=	${PORTNAME}-${PORTVERSION}-src
+EXTRACT_SUFX=	.7z
+
+MAINTAINER=	nivit@FreeBSD.org
+COMMENT=	Free OS independent dictionary application
+
+EXTRACT_DEPENDS=	7z:${PORTSDIR}/archivers/p7zip
+
+USE_ANT=	yes
+USE_JAVA=	yes
+JAVA_VERSION=	1.6+
+
+ALL_TARGET=	dist
+
+P7ZIP_CMD=	${LOCALBASE}/bin/7z
+P7ZIP_ARGS=	x -o${WRKDIR}
+
+SUB_FILES=	${PORTNAME}
+SUB_LIST=	JALINGOJAR=${JALINGOJAR}
+PLIST_SUB=	JALINGOJAR=${JALINGOJAR}
+
+DATADIR=	${JAVASHAREDIR}/${PORTNAME}
+
+JALINGOJAR=	${PORTNAME}.jar
+
+do-extract:
+	@${MKDIR} ${WRKDIR} && ${P7ZIP_CMD} ${P7ZIP_ARGS} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+
+do-install:
+	@${MKDIR} ${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/dist/${JALINGOJAR} ${DATADIR}/${JALINGOJAR}
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
+
+.include <bsd.port.mk>
