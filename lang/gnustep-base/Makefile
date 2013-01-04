@@ -57,6 +57,8 @@ EXTRA_PATCHES+=	${FILESDIR}/NSFileManager.m.patch
 LIB_DEPENDS+=	objc:${PORTSDIR}/${PKGCATEGORY}/libobjc2
 CFLAGS+=	-I${LOCALBASE}/include -DOBJC2RUNTIME=1
 PLIST_SUB+=	WITH_LIB1="@comment "
+.elif ${OPSYS} == "DragonFly"
+PLIST_SUB+=	WITH_LIB1="@comment "
 .else
 PLIST_SUB+=	WITH_LIB1=""
 .endif

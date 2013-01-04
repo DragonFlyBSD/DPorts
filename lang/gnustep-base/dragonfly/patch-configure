@@ -1,0 +1,19 @@
+--- configure.orig	2013-01-04 13:44:35.495441000 +0100
++++ configure	2013-01-04 13:46:15.875581000 +0100
+@@ -5606,7 +5606,7 @@
+ # This is just for configuring. Later, in config.make, INCLUDE_FLAGS
+ # goes in CONFIG_SYSTEM_INCL and LIBS goes in CONFIG_SYSTEM_LIBS
+ case "$target_os" in
+-  freebsd* | openbsd* )
++  freebsd* | dragonfly* | openbsd* )
+ 	        CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+ 		LDFLAGS="$LDFLAGS -L/usr/local/lib";;
+   netbsd*)	CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
+@@ -21758,6 +21758,7 @@
+   case "$target_os" in
+     freebsd2*)	enable_fake_main=yes;;
+     freebsd*)	;;
++    dragonfly*) ;;
+     netbsd*)	enable_fake_main=yes;;
+     openbsd*)	enable_fake_main=yes;;
+     *sysv*)	enable_fake_main=yes;;

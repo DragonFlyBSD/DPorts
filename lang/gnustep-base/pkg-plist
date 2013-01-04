@@ -819,7 +819,6 @@ GNUstep/System/Library/Libraries/gnustep-base/Versions/%%BASEVERSION%%/Resources
 GNUstep/System/Library/Libraries/gnustep-base/Versions/%%BASEVERSION%%/Resources/Spanish.lproj/Localizable.strings
 GNUstep/System/Library/Libraries/gnustep-base/Versions/%%BASEVERSION%%/Resources/TraditionalChinese.lproj/Localizable.strings
 GNUstep/System/Library/Libraries/libgnustep-base.so
-GNUstep/System/Library/Libraries/libgnustep-base.so.%%BASEVERSION%%
 GNUstep/System/Library/Libraries/libgnustep-base.so.%%VERSION%%
 GNUstep/System/Library/Makefiles/Additional/base.make
 GNUstep/System/Tools/HTMLLinker

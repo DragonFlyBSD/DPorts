@@ -1,0 +1,12 @@
+--- SSL/configure.orig	2011-12-15 10:42:39.000000000 +0100
++++ SSL/configure	2013-01-04 13:49:01.485812000 +0100
+@@ -3243,7 +3243,8 @@
+ # specific target_os options
+ #--------------------------------------------------------------------
+ case "$target_os" in
+-  freebsd*)	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
++  freebsd*|dragonfly*)
++  		CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+ 		LIBS="$LIBS -L/usr/local/lib";;
+ 
+ esac
