@@ -1,0 +1,21 @@
+# $FreeBSD: ports/www/grr/Makefile,v 1.4 2012/11/17 06:02:34 svnexp Exp $
+
+PORTNAME=	grr
+PORTVERSION=	1.0
+CATEGORIES=	www gnustep
+MASTER_SITES=	${MASTER_SITE_SAVANNAH}
+MASTER_SITE_SUBDIR=	gap
+DISTNAME=	Grr-${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Rss reader for GNUstep
+
+USE_GNUSTEP=	yes
+USE_GNUSTEP_BACK=	yes
+USE_GNUSTEP_BUILD=	yes
+USE_GNUSTEP_INSTALL=	yes
+USE_GNUSTEP_LOCAL_LIBS+=	RSSKit:${RSSKIT_PORT}
+
+RSSKIT_PORT?=	www/rsskit
+
+.include <bsd.port.mk>
