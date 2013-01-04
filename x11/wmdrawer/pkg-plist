@@ -1,0 +1,11 @@
+bin/wmdrawer
+%%DATADIR%%/beastie.png
+%%DOCSDIR%%/AUTHORS
+%%DOCSDIR%%/COPYING
+%%DOCSDIR%%/ChangeLog
+%%DOCSDIR%%/INSTALL
+%%DOCSDIR%%/README
+%%DOCSDIR%%/TODO
+%%DOCSDIR%%/wmdrawerrc.example
+@dirrm %%DOCSDIR%%
+@dirrm %%DATADIR%%
