@@ -1,0 +1,21 @@
+# $FreeBSD: ports/print/gspdf/Makefile,v 1.13 2012/11/17 06:00:50 svnexp Exp $
+
+PORTNAME=	gspdf
+PORTVERSION=	0.5
+CATEGORIES=	print gnustep
+MASTER_SITES=	${MASTER_SITE_SAVANNAH}
+MASTER_SITE_SUBDIR=	gap
+DISTNAME=	GSPdf-${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A Postscript and Pdf Viewer for GNUstep
+
+USE_GNUSTEP=	yes
+USE_GNUSTEP_BACK=	yes
+USE_GNUSTEP_BUILD=	yes
+USE_GNUSTEP_INSTALL=	yes
+USE_GHOSTSCRIPT=	yes
+
+MAKE_ENV+=	GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
+
+.include <bsd.port.mk>
