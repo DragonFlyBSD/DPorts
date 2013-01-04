@@ -1,0 +1,19 @@
+# $FreeBSD: ports/www/rsskit/Makefile,v 1.4 2012/11/17 06:03:03 svnexp Exp $
+
+PORTNAME=	rsskit
+PORTVERSION=	0.4
+CATEGORIES=	www gnustep
+MASTER_SITES=	${MASTER_SITE_SAVANNAH}
+MASTER_SITE_SUBDIR=	gap
+DISTNAME=	RSSKit-${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Etoile Project RSSKit framework
+
+USE_GNUSTEP=	yes
+USE_GNUSTEP_BACK=	yes
+USE_GNUSTEP_BUILD=	yes
+USE_GNUSTEP_INSTALL=	yes
+USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
+
+.include <bsd.port.mk>
