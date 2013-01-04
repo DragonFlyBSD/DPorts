@@ -1,0 +1,42 @@
+# Created by: Stephen Hurd <shurd@sasktel.net>
+# $FreeBSD: ports/misc/freeguide/Makefile,v 1.17 2012/12/10 13:48:06 svnexp Exp $
+
+PORTNAME=	freeguide
+PORTVERSION=	0.11
+PORTREVISION=	1
+CATEGORIES=	misc java
+MASTER_SITES=	SF/${PORTNAME}-tv/${PORTNAME}-source/${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	An interactive TV guide which will create personalized TV listings
+
+RUN_DEPENDS=	tv_cat:${PORTSDIR}/textproc/p5-xmltv
+
+LICENSE=	GPLv2
+
+USE_JAVA=	yes
+JAVA_VERSION=	1.6+
+USE_ANT=	yes
+MANCOMPRESSED=	yes
+MAN1=		freeguide.1
+
+MAKE_ARGS=	-Dinstall_share_dir=${PREFIX}/share \
+		-Dinstall_man1_dir=${MAN1PREFIX} \
+		-Dinstall_java_bin=${JAVA} \
+		-Dinstall_real_doc_dir=${DOCSDIR} \
+		-Dinstall_bin_dir=${PREFIX}/bin \
+		-Dinstall_doc_dir=${DOCSDIR} \
+		-Dinstall_java_share_dir=${JAVASHAREDIR} \
+		-Dinstall_jar_dir=${JAVAJARDIR}/freeguide
+INSTALL_TARGET=	install
+
+post-patch:
+	@${REINPLACE_CMD} 's|__ANT_INSTALL_DIRECTORY__|${JAVAJARDIR}/freeguide|; \
+		s|=java|=${JAVA}|;' \
+		${WRKSRC}/install/linux/freeguide
+
+do-install:
+	@(cd ${BUILD_WRKSRC}; \
+		${ANT} ${MAKE_ARGS} ${INSTALL_TARGET})
+
+.include <bsd.port.mk>
