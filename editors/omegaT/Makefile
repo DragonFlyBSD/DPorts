@@ -1,0 +1,48 @@
+# New ports collection makefile for: 	OmegaT
+# Date created:				11 May 2008
+# Whom:					Rodrigo OSORIO <rodrigo@bebik.net>
+# $FreeBSD: ports/editors/omegaT/Makefile,v 1.15 2012/11/17 05:57:17 svnexp Exp $
+#
+
+PORTNAME=	omegaT
+DISTVERSION=	2.5.5_01
+CATEGORIES=	editors java x11
+MASTER_SITES=	SF/${PORTNAME:tl}/OmegaT%20-%20Standard/OmegaT%202.5.5%20update%201/
+DISTNAME=	OmegaT_2.5.5_01_Source
+DIST_SUBDIR=	${PORTNAME}
+
+MAINTAINER=	rodrigo@bebik.net
+COMMENT=	Powerful translation memory application written in Java
+
+LICENSE=	GPLv2
+
+BUILD_DEPENDS=	ant:${PORTSDIR}/devel/apache-ant
+RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
+
+USE_ZIP=	yes
+USE_ANT=	yes
+USE_JAVA=	yes
+JAVA_VENDOR=openjdk
+JAVA_VERSION=	1.7+
+JAVA_BUILD=	yes
+JAVA_RUN=	yes
+NO_WRKSUBDIR=	yes
+USE_LDCONFIG=	${DATADIR}/native
+
+DATADIR=	${JAVASHAREDIR}/${PORTNAME}
+SUB_FILES=	omegaT.sh omegat.prefs
+
+DESKTOP_ENTRIES="OmegaT" "Translation memory application" \
+		"${DATADIR}/images/OmegaT.png" \
+		"omegaT" "Application;Office;WordProcessor;" \
+		${FALSE}
+
+post-build:
+	@cd ${WRKDIR} && ${MV} 'dist' ${PORTNAME}
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/omegaT.sh ${PREFIX}/bin/${PORTNAME}
+	@cd ${WRKDIR} && ${COPYTREE_BIN}  ${PORTNAME}  ${JAVASHAREDIR}/
+	${INSTALL_SCRIPT} ${WRKDIR}/omegat.prefs ${JAVASHAREDIR}/${PORTNAME}
+
+.include <bsd.port.mk>
