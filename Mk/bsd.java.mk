@@ -157,9 +157,12 @@ SUB_LIST+=		JAVA_OS="${JAVA_OS}"
 
 # The complete list of Java versions, os and vendors supported.
 __JAVA_VERSION_LIST=	1.5 1.6 1.7
-_JAVA_VERSION_LIST=		${__JAVA_VERSION_LIST} ${__JAVA_VERSION_LIST:S/$/+/}
-_JAVA_OS_LIST=			native linux
-_JAVA_VENDOR_LIST=		sun openjdk
+_JAVA_VERSION_LIST=	${__JAVA_VERSION_LIST} ${__JAVA_VERSION_LIST:S/$/+/}
+#_JAVA_OS_LIST=		native linux
+#_JAVA_VENDOR_LIST=	sun openjdk
+
+_JAVA_OS_LIST=		native
+_JAVA_VENDOR_LIST=	openjdk
 
 # Set all meta-information about JDK ports:
 # port location, corresponding JAVA_HOME, JDK version, OS, vendor
@@ -167,9 +170,9 @@ _JAVA_PORT_NATIVE_OPENJDK_JDK_1_7_INFO=		PORT=java/openjdk7			HOME=${LOCALBASE}/
 											VERSION=1.7.0	OS=native	VENDOR=openjdk
 _JAVA_PORT_NATIVE_OPENJDK_JDK_1_6_INFO=		PORT=java/openjdk6			HOME=${LOCALBASE}/openjdk6 \
 											VERSION=1.6.0	OS=native	VENDOR=openjdk
-_JAVA_PORT_LINUX_SUN_JDK_1_6_INFO=			PORT=java/linux-sun-jdk16		HOME=${LOCALBASE}/linux-sun-jdk1.6.0 \
+_JAVA_PORT_LINUX_SUN_JDK_1_6_INFO=		PORT=java/linux-sun-jdk16		HOME=${LOCALBASE}/linux-sun-jdk1.6.0 \
 											VERSION=1.6.0	OS=linux	VENDOR=sun
-_JAVA_PORT_LINUX_SUN_JDK_1_7_INFO=			PORT=java/linux-sun-jdk17		HOME=${LOCALBASE}/linux-sun-jdk1.7.0 \
+_JAVA_PORT_LINUX_SUN_JDK_1_7_INFO=		PORT=java/linux-sun-jdk17		HOME=${LOCALBASE}/linux-sun-jdk1.7.0 \
 											VERSION=1.7.0	OS=linux	VENDOR=sun
 
 # Verbose description for each VENDOR
@@ -181,16 +184,21 @@ _JAVA_OS_native=	Native
 _JAVA_OS_linux=		Linux
 
 # Enforce preferred Java ports according to OS
-_JAVA_PREFERRED_PORTS+=	JAVA_PORT_NATIVE_OPENJDK_JDK_1_6
+_JAVA_PREFERRED_PORTS+=	JAVA_PORT_NATIVE_OPENJDK_JDK_1_7
 
 # List all JDK ports
-__JAVA_PORTS_ALL=	JAVA_PORT_NATIVE_OPENJDK_JDK_1_7 \
-					JAVA_PORT_NATIVE_OPENJDK_JDK_1_6 \
-					JAVA_PORT_LINUX_SUN_JDK_1_7 \
-					JAVA_PORT_LINUX_SUN_JDK_1_6
-_JAVA_PORTS_ALL=	${JAVA_PREFERRED_PORTS} \
-					${_JAVA_PREFERRED_PORTS} \
-					${__JAVA_PORTS_ALL}
+#__JAVA_PORTS_ALL=	JAVA_PORT_NATIVE_OPENJDK_JDK_1_7 \
+#					JAVA_PORT_NATIVE_OPENJDK_JDK_1_6 \
+#					JAVA_PORT_LINUX_SUN_JDK_1_7 \
+#					JAVA_PORT_LINUX_SUN_JDK_1_6
+
+__JAVA_PORTS_ALL=	JAVA_PORT_NATIVE_OPENJDK_JDK_1_7
+
+#_JAVA_PORTS_ALL=	${JAVA_PREFERRED_PORTS} \
+#					${_JAVA_PREFERRED_PORTS} \
+#					${__JAVA_PORTS_ALL}
+
+_JAVA_PORTS_ALL=	${__JAVA_PORTS_ALL}
 
 # Set the name of the file that indicates that a JDK is indeed installed, as a
 # relative path within the JAVA_HOME directory.
@@ -252,7 +260,8 @@ JAVA_RUN=	jre
 .		undef _JAVA_PORTS_INSTALLED
 .		undef _JAVA_PORTS_POSSIBLE
 .		if defined(JAVA_VERSION)
-_JAVA_VERSION=	${JAVA_VERSION:S/1.5/1.6/:S/1.5+/1.6+/:S/1.6+/1.6 1.7+/:S/1.7+/1.7/}
+#_JAVA_VERSION=	${JAVA_VERSION:S/1.5/1.6/:S/1.5+/1.6+/:S/1.6+/1.6 1.7+/:S/1.7+/1.7/}
+_JAVA_VERSION=	${JAVA_VERSION:S/1.5/1.7/:S/1.6/1.7/:S/1.5+/1.7/:S/1.6+/1.7/:S/1.7+/1.7/}
 .		else
 _JAVA_VERSION=	${__JAVA_VERSION_LIST}
 .		endif
@@ -273,6 +282,7 @@ A_JAVA_PORT_HOME=			${A_JAVA_PORT_INFO:MHOME=*:S,HOME=,,}
 A_JAVA_PORT_VERSION=		${A_JAVA_PORT_INFO:MVERSION=*:C/VERSION=([0-9])\.([0-9])(.*)/\1.\2/}
 A_JAVA_PORT_OS=				${A_JAVA_PORT_INFO:MOS=*:S,OS=,,}
 A_JAVA_PORT_VENDOR=			${A_JAVA_PORT_INFO:MVENDOR=*:S,VENDOR=,,}
+
 .if !defined(_JAVA_PORTS_INSTALLED)
 .if exists(${A_JAVA_PORT_HOME}/${_JDK_FILE})
 A_JAVA_PORT_INSTALLED=	${A_JAVA_PORT}
@@ -289,8 +299,8 @@ __JAVA_PORTS_INSTALLED!=	${ECHO_CMD} "${__JAVA_PORTS_INSTALLED} ${A_JAVA_PORT_IN
 # 
 # We can't do this in make because it doesn't allow nested modifiers ${foo:${bar}}
 #
-.if "${_JAVA_VERSION:S/${A_JAVA_PORT_VERSION}//}" != "${_JAVA_VERSION}" && \
-    "${_JAVA_OS:S/${_A_JAVA_PORT_OS}//}"          != "${_JAVA_OS}" && \
+.if "${_JAVA_VERSION:S/${A_JAVA_PORT_VERSION}//}" != "${_JAVA_VERSION}" || \
+    "${_JAVA_OS:S/${_A_JAVA_PORT_OS}//}"          != "${_JAVA_OS}" || \
     "${_JAVA_VENDOR:S/${_A_JAVA_PORT_VENDOR}//}"  != "${_JAVA_VENDOR}"
 A_JAVA_PORT_POSSIBLE=	${A_JAVA_PORT}
 .else
@@ -340,14 +350,14 @@ _JAVA_PORTS_POSSIBLE_shortcircuit=	1
 .		endif
 
 _JAVA_PORT_INFO:=		${_JAVA_PORT:S/^/\${_/:S/$/_INFO}/}
-JAVA_PORT=				${_JAVA_PORT_INFO:MPORT=*:S,PORT=,,}
-JAVA_HOME=				${_JAVA_PORT_INFO:MHOME=*:S,HOME=,,}
+JAVA_PORT=			${_JAVA_PORT_INFO:MPORT=*:S,PORT=,,}
+JAVA_HOME=			${_JAVA_PORT_INFO:MHOME=*:S,HOME=,,}
 JAVA_PORT_VERSION=		${_JAVA_PORT_INFO:MVERSION=*:S,VERSION=,,}
 JAVA_PORT_OS=			${_JAVA_PORT_INFO:MOS=*:S,OS=,,}
 JAVA_PORT_VENDOR=		${_JAVA_PORT_INFO:MVENDOR=*:S,VENDOR=,,}
 
 JAVA_PORT_VENDOR_DESCRIPTION:=	${JAVA_PORT_VENDOR:S/^/\${_JAVA_VENDOR_/:S/$/}/}
-JAVA_PORT_OS_DESCRIPTION:=		${JAVA_PORT_OS:S/^/\${_JAVA_OS_/:S/$/}/}
+JAVA_PORT_OS_DESCRIPTION:=	${JAVA_PORT_OS:S/^/\${_JAVA_OS_/:S/$/}/}
 
 #-------------------------------------------------------------------------------
 # Stage 4: Add any dependencies if necessary
