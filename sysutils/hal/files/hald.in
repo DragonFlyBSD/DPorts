@@ -107,7 +107,7 @@ hald_start()
     echo "Starting ${name}."
 
     ( iter=0
-    while ! ps -axoargs | grep "^/usr/libexec/getty " | grep -qv grep >/dev/null 2>&1; do
+    while ! ps -axocommand | grep "^/usr/libexec/getty " | grep -qv grep >/dev/null 2>&1; do
 	if [ ${iter} -eq 60 ]; then
 	    break
 	fi
