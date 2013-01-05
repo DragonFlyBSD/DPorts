@@ -28,7 +28,6 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-authfw=pam \
 		--with-pam-include=system \
-		--with-os-type=freebsd \
 		--enable-introspection \
 		--localstatedir=/var
 CONFIGURE_ENV=	GTKDOC="false"
