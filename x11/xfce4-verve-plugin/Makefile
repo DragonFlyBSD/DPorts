@@ -1,9 +1,9 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: ports/x11/xfce4-verve-plugin/Makefile,v 1.24 2012/11/17 06:03:21 svnexp Exp $
+# $FreeBSD: ports/x11/xfce4-verve-plugin/Makefile,v 1.26 2012/12/14 17:53:13 svnexp Exp $
 
 PORTNAME=	verve-plugin
 PORTVERSION=	1.0.0
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	x11 xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=/src/panel-plugins/${PKGNAMEPREFIX}${PORTNAME}/${PORTVERSION:R}
@@ -14,14 +14,15 @@ DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	A command line plugin for Xfce4
 
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack glib20 intltool intlhack pkgconfig
+USE_GNOME=	gnomehack glib20 intltool intlhack
 USE_XFCE=	configenv panel libexo libgui libutil
+USE_PKGCONFIG=	build
 
 CONFIGURE_ARGS=	--disable-debug
 
@@ -39,7 +40,7 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MDBUS}
-LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS+=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 CONFIGURE_ARGS+=--enable-dbus
 PLIST_SUB+=	DBUS=""
 .else
