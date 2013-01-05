@@ -33,11 +33,11 @@ VIDEO_ON=	ati \
 
 .if ${ARCH} == "sparc64"
 VIDEO_ON+=	sunffb
-.elif ${ARCH} == "amd64" || ${ARCH} == "i386" || ${ARCH} == "ia64"
+.elif ${ARCH} == "x86_64" || ${ARCH} == "i386" || ${ARCH} == "ia64"
 VIDEO_ON+=	openchrome
 .endif
 
-.if (${ARCH} == "amd64" || ${ARCH} == "i386") && !defined(WITH_NEW_XORG)
+.if (${ARCH} == "x86_64" || ${ARCH} == "i386") && !defined(WITH_NEW_XORG)
 VIDEO_ON+=	intel
 .endif
 
