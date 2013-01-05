@@ -1,12 +1,10 @@
-# New ports collection makefile for:	screenshooter plugin for xfce4
-# Date created:				29 April 2006
-# Whom:					Martin Wilke (miwi@FreeBSD.org)
-#
-# $FreeBSD: ports/x11/xfce4-screenshooter-plugin/Makefile,v 1.35 2012/11/17 06:03:21 svnexp Exp $
+# Created by: Martin Wilke (miwi@FreeBSD.org)
+# $FreeBSD: ports/x11/xfce4-screenshooter-plugin/Makefile,v 1.36 2012/12/14 17:53:13 svnexp Exp $
 #
 
 PORTNAME=	xfce4-screenshooter-plugin
 PORTVERSION=	1.8.1
+PORTREVISION=	1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=/src/apps/xfce4-screenshooter/${PORTVERSION:R}
@@ -22,8 +20,10 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
-USE_GNOME=	glib20 gtk20 intltool intlhack pkgconfig
-USE_XFCE=	configenv panel libutil libgui
+USE_GNOME=	glib20 gtk20 intltool intlhack
+USE_XFCE=	configenv libexo libmenu libutil panel
+USE_PKGCONFIG=	build
+
 MAN1=		xfce4-screenshooter.1
 
 .include <bsd.port.options.mk>
