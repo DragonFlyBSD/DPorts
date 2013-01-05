@@ -24,10 +24,10 @@ plain fail to build on DragonFly, the update will not be carried forward.
 The last working DPort will remain in place until a manual fix is provided
 that allows the FreeBSD update to work on DragonFly as well.
 
-A slightly modified version of Tinderbox will be used to confirm good
-builds.  Upon success, a hook in Tinderbox will update the patches
+Another project of Baptiste's, Poudriere, will be used to confirm good
+builds.  Upon the event of successly build, a hook will update the patches
 repository to indicate a good build, and then another script will generate
 the DPort, place it here, and commit the change.  Theoretically, every
 single DPort should build on DragonFly.
 
-This project was conceived and implemented by John Marino
+This project was conceived and implemented by John Marino.
