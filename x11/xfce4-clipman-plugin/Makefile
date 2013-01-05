@@ -1,9 +1,9 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: ports/x11/xfce4-clipman-plugin/Makefile,v 1.61 2012/11/17 06:03:21 svnexp Exp $
+# $FreeBSD: ports/x11/xfce4-clipman-plugin/Makefile,v 1.62 2012/12/14 17:53:13 svnexp Exp $
 
 PORTNAME=	xfce4-clipman-plugin
 PORTVERSION=	1.2.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
@@ -22,9 +22,10 @@ GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtk20 intltool intlhack pkgconfig glib20 desktopfileutils
+USE_GNOME=	gnomehack gtk20 intltool intlhack glib20 desktopfileutils
 USE_XFCE=	configenv libexo libmenu libutil panel xfconf
 USE_XORG=	xtst
+USE_PKGCONFIG=	build
 
 INSTALLS_ICONS=	yes
 
