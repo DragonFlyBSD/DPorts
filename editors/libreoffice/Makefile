@@ -2,10 +2,6 @@
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTVERSION=	3.6.4
-RCVER=		3
-LOVERSION=	${PORTVERSION}.${RCVER}
-
 MASTER_SITE_SUBDIR=	src/${PORTVERSION}/
 MASTER_SITES+=	http://dev-www.libreoffice.org/src/:ext \
 		http://download.go-oo.org/src/:GoOOSrc \
@@ -125,7 +121,8 @@ CONFIGURE_ARGS+=	--disable-ccache \
 			--disable-strip-solver \
 			--disable-systray
 
-CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX} \
+			--mandir=${PREFIX}/man
 
 CONFIGURE_ARGS+=	--with-alloc=system \
 			--with-build-version="FreeBSD ports ${PKGVERSION}" \

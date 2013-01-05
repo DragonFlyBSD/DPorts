@@ -1,8 +1,8 @@
 # $FreeBSD: ports/editors/libreoffice/Makefile.common,v 1.6 2012/11/17 05:57:15 svnexp Exp $
 
 PORTNAME=	libreoffice
-PORTVERSION=	3.5.7
-RCVER=		2
+PORTVERSION=	3.6.4
+RCVER=		3
 #PRERELEASE=	yes
 LOVERSION=	${PORTVERSION}.${RCVER}
 CATEGORIES?=	editors
