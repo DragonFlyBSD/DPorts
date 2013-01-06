@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/x11/kdebase3/files/pkg-install.in,v 1.12 2012/11/17 06:03:16 svnexp Exp $
+#
+
+if [ "$2" != "POST-INSTALL" ]; then
+        exit 0
+fi
+
+boguscreatenewentry=%%PREFIX%%/share/templates/.keep_me
+
+if [ -f $boguscreatenewentry ]; then
+	rm -f $boguscreatenewentry
+fi
+
+exit 0
