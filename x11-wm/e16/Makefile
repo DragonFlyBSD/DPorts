@@ -1,0 +1,55 @@
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: ports/x11-wm/e16/Makefile,v 1.151 2012/11/17 06:03:41 svnexp Exp $
+
+PORTNAME=	e16
+PORTVERSION=	1.0.11
+CATEGORIES=	x11-wm enlightenment
+MASTER_SITES=	SF/enlightenment/${PORTNAME}/${PORTVERSION}/
+
+MAINTAINER=	gahr@FreeBSD.org
+COMMENT=	A very artistic X window manager
+
+OPTIONS_DEFINE=	ESOUND
+OPTIONS_DEFAULT=ESOUND
+
+USE_XORG=	compositeproto damageproto xextproto x11 xbitmaps xcomposite xdamage \
+		xext xfixes xft xinerama xrandr xrender xxf86vm
+USE_ICONV=	yes
+USE_GMAKE=	yes
+USE_EFL=	imlib2
+USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-esdtest --disable-dependency-tracking \
+		--disable-rpath --enable-mans SHELL=/bin/sh
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MESOUND}
+USE_GNOME=	esound
+.else
+CONFIGURE_ARGS+=--disable-sound
+.endif
+
+.if ${PORT_OPTIONS:MNLS}
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MDOCS}
+MAN1=		e16.1
+CONFIGURE_ARGS+=--enable-docs=yes
+.else
+CONFIGURE_ARGS+=--enable-docs=no
+post-patch:
+	${REINPLACE_CMD} -e '/^SUBDIRS/s|docs ||' \
+	    ${WRKSRC}/Makefile.am ${WRKSRC}/Makefile.in
+.endif
+
+post-patch:
+	${REINPLACE_CMD} -e 's|$$(USER)|${SHAREOWN}:${SHAREGRP}|g' \
+	    ${WRKSRC}/themes/Makefile.am ${WRKSRC}/themes/Makefile.in
+
+.include <bsd.port.mk>
