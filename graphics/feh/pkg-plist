@@ -1,0 +1,20 @@
+bin/feh
+bin/feh-cam
+bin/gen-cam-menu
+%%EXAMPLESDIR%%/buttons
+%%EXAMPLESDIR%%/keys
+%%EXAMPLESDIR%%/themes
+%%DATADIR%%/fonts/black.style
+%%DATADIR%%/fonts/menu.style
+%%DATADIR%%/fonts/yudit.ttf
+%%DATADIR%%/images/logo.svg
+%%DATADIR%%/images/menubg_aluminium.png
+%%DATADIR%%/images/menubg_aqua.png
+%%DATADIR%%/images/menubg_black.png
+%%DATADIR%%/images/menubg_brushed.png
+%%DATADIR%%/images/menubg_default.png
+%%DATADIR%%/images/menubg_sky.png
+@dirrm %%DATADIR%%/images
+@dirrm %%DATADIR%%/fonts
+@dirrm %%DATADIR%%
+@dirrm %%EXAMPLESDIR%%
