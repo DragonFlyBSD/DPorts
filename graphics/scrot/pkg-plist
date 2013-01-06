@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/graphics/scrot/pkg-plist,v 1.4 2012/11/17 05:58:22 svnexp Exp $
+bin/scrot
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
