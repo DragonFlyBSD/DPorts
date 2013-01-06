@@ -1,0 +1,40 @@
+--- Makefile.orig	1998-12-03 16:33:58.000000000 +0100
++++ Makefile	2013-01-06 13:55:45.507748000 +0100
+@@ -12,12 +12,15 @@
+ INCDIR = -I${X11BASE}/include
+ 
+ .c.o :
+-	cc -c -g -O1 -Wall ${INCDIR} $< -o $*.o
++	$(CC) $(CFLAGS) -c ${INCDIR} $< -o $*.o
+ 
+-all :: wmnet
++all :: wminet
+ 
+-wmnet : $(OBJS)
+-	cc -o wmnet $(OBJS) $(LIBDIR) $(LIBS) ${INCDIR}
++wminet : $(OBJS)
++	$(CC) $(LDFLAGS) -o wminet $(OBJS) $(LIBDIR) $(LIBS) ${INCDIR}
++
++wminet.1 : wmnet.1
++	sed -e 's/wmnet/wminet/g' wmnet.1 > wminet.1
+ 
+ main.o : wmnet-mask.xbm wmnet-master.xpm wmnet.h wmgeneral.h
+ 
+@@ -26,12 +29,12 @@
+ wmgeneral.o : wmgeneral.c wmgeneral.h
+ 
+ clean :
+-	rm -f $(OBJS) wmnet
++	rm -f $(OBJS) wminet
+ 
+-install.man : wmnet.1
+-	install -c -m 644 -o man -g man wmnet.1 ${MANDIR}/man1
++install.man : wminet.1
++	install -c -m 644 -o man -g man wminet.1 ${MANDIR}/man1
+ 
+-install.bin : wmnet
+-	install -s -c -m 2555 -o bin -g kmem wmnet ${BINDIR}
++install.bin : wminet
++	install -s -c -m 2555 -o bin -g kmem wminet ${BINDIR}
+ 
+ install : install.bin install.man
