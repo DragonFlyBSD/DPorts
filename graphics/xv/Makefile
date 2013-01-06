@@ -32,7 +32,6 @@ USE_IMAKE=	yes
 USE_XORG=	xext x11 xt
 .if !defined(NOMAN)
 MAN1=		bggen.1 vdcomp.1 xcmap.1 xv.1 xvp2p.1
-MANCOMPRESSED=	no
 .endif
 
 XVDIST=		${DISTDIR}/${DIST_SUBDIR}
@@ -47,7 +46,6 @@ post-patch:
 		${SED} -e "s@%%LOCALBASE%%@${LOCALBASE}@" > ${WRKSRC}/config.h
 .for i in ${MAN1}
 	@${CP} ${WRKSRC}/docs/${i:R}.man ${WRKSRC}
-#	@${CP} ${WRKSRC}/docs/${i:R}.man ${WRKSRC}/${i:R}._man
 .endfor
 .if defined(NOMAN)
 	${REINPLACE_CMD} -e 's,^InstallManPage.*$$,/\* $$& \*/,' \
