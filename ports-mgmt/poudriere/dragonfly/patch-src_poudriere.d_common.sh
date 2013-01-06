@@ -1,5 +1,5 @@
 --- src/poudriere.d/common.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/common.sh	2012-12-21 10:57:59.000000000 +0100
++++ src/poudriere.d/common.sh	2013-01-06 01:30:27.000000000 +0100
 @@ -1,8 +1,6 @@
  #!/bin/sh
  
@@ -460,7 +460,7 @@
  }
  
  sanity_check_pkgs() {
-@@ -560,128 +225,6 @@
+@@ -560,135 +225,13 @@
  	return $ret
  }
  
@@ -589,6 +589,15 @@
  
  # Save wrkdir and return path to file
  save_wrkdir() {
+ 	[ $# -ne 3 ] && eargs port portdir phase
+ 	local port="$1"
+-	local phase="$2"
+-	local portdir="$2"
++	local phase="$3"
++	local portdir=$(echo "$2" | sed -e "s|${PORTSRC}/||g")
+ 	local tardir=${POUDRIERE_DATA}/wrkdirs/${JAILNAME%-job-*}/${PTNAME}
+ 	local tarname=${tardir}/${PKGNAME}.${WRKDIR_ARCHIVE_FORMAT}
+ 	local mnted_portdir=${JAILMNT}/wrkdirs/${portdir}
 @@ -716,58 +259,6 @@
  	fi
  }
@@ -853,6 +862,15 @@
  		compiled_options=$(pkg_get_options ${pkg})
  
  		if [ "${compiled_options}" != "${current_options}" ]; then
+@@ -1328,7 +759,7 @@
+ next_in_queue() {
+ 	local p
+ 	[ ! -d ${JAILMNT}/poudriere/pool ] && err 1 "Build pool is missing"
+-	p=$(lockf -k -t 60 ${JAILMNT}/poudriere/.lock.pool find ${JAILMNT}/poudriere/pool -type d -depth 1 -empty -print -quit || :)
++	p=$(lockf -k -t 30 ${JAILMNT}/poudriere/.lock.pool find ${JAILMNT}/poudriere/pool -type d -depth 1 -empty -print -quit || :)
+ 	[ -n "$p" ] || return 0
+ 	touch ${p}/.building
+ 	# pkgname
 @@ -1365,7 +796,7 @@
  
  	# Add to cache if not found.
@@ -887,7 +905,7 @@
  parallel_stop() {
  	wait
  }
-@@ -1508,11 +921,34 @@
+@@ -1508,11 +921,35 @@
  	mkdir -p "${JAILMNT}/poudriere/pool" \
  		"${JAILMNT}/poudriere/deps" \
  		"${JAILMNT}/poudriere/rdeps" \
@@ -908,6 +926,7 @@
 +./etc/spwd.db
 +./tmp/*
 +./usr/local/lib/charset.alias
++./usr/local/share/applications/mimeinfo.cache
 +./usr/local/share/nls/POSIX
 +./usr/local/share/nls/en_US.US-ASCII
 +./var/db/fontconfig/*
@@ -922,7 +941,7 @@
  	zset stats_queued "0"
  	:> ${JAILMNT}/poudriere/ports.built
  	:> ${JAILMNT}/poudriere/ports.failed
-@@ -1596,8 +1032,7 @@
+@@ -1596,8 +1033,7 @@
  	export FORCE_PACKAGE=yes
  	export USER=root
  	export HOME=/root
@@ -932,7 +951,7 @@
  	[ -z "${JAILMNT}" ] && err 1 "No path of the base of the jail defined"
  	[ -z "${PORTSDIR}" ] && err 1 "No ports directory defined"
  	[ -z "${PKGDIR}" ] && err 1 "No package directory defined"
-@@ -1620,9 +1055,9 @@
+@@ -1620,9 +1056,9 @@
  
  	msg "Populating LOCALBASE"
  	mkdir -p ${JAILMNT}/${MYBASE:-/usr/local}
@@ -944,7 +963,7 @@
  	if [ -n "${WITH_PKGNG}" ]; then
  		export PKGNG=1
  		export PKG_EXT="txz"
-@@ -1645,26 +1080,40 @@
+@@ -1645,26 +1081,40 @@
  . ${SCRIPTPREFIX}/../../etc/poudriere.conf
  POUDRIERED=${SCRIPTPREFIX}/../../etc/poudriere.d
  
@@ -993,7 +1012,7 @@
  case ${ZROOTFS} in
  	[!/]*)
  		err 1 "ZROOTFS shoud start with a /"
-@@ -1679,8 +1128,3 @@
+@@ -1679,8 +1129,3 @@
  	*) err 1 "invalid format for WRKDIR_ARCHIVE_FORMAT: ${WRKDIR_ARCHIVE_FORMAT}" ;;
  esac
  

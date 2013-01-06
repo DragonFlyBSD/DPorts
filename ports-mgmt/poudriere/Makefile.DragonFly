@@ -31,3 +31,5 @@ PLIST_FILES+=	share/poudriere/common.sh.dragonfly \
 		etc/hooks_poudriere/hook_test_port_start.sh.sample
 
 PLIST_DIRS+=	etc/hooks_poudriere
+
+PORTREVISION=	1
