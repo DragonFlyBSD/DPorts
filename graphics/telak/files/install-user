@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# Emanuel Haupt <ehaupt@critical.ch>
+#
+# $FreeBSD: ports/graphics/telak/files/install-user,v 1.2 2012/11/17 05:58:24 svnexp Exp $
+
+writeconf()
+{
+cat << "EOF" > $HOME/.telak/telakrc
+# telakrc - see telak(1) for more config options
+
+[example]
+url = http://www.critical.ch/telak/d-mon.gif
+x = 15
+y = 15
+
+EOF
+}
+
+if [ ! -d $HOME/.telak/cache ]; then
+	mkdir -p $HOME/.telak/cache
+	if [ ! -f $HOME/.telak/telakrc ]; then
+		writeconf
+		echo "Example config successfully installed under $HOME/.telak/"
+	else
+		echo "$HOME/.telak/telakrc does already exist."
+	fi
+else
+	echo "$HOME/.telak does already exist."
+fi
