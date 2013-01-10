@@ -46,6 +46,9 @@ OPTIONSMKINCLUDED=	bsd.options.mk
 
 OPTIONSFILE?=	${PORT_DBDIR}/${UNIQUENAME}/options
 
+OPTIONS_EXCLUDE_i386+=		ALSA
+OPTIONS_EXCLUDE_x86_64+=	ALSA
+
 #ALL_OPTIONS=	DOCS \
 #		NLS
 
@@ -136,6 +139,22 @@ PORT_OPTIONS:=	 ${PORT_OPTIONS:N${O}}
 #XXX end of compatibility
 
 ALL_OPTIONS:=	${ALL_OPTIONS:O:u}
+
+# exclude illegal options
+.for opt in ${OPTIONS_EXCLUDE_${ARCH}}
+.  for single in ${OPTIONS_SINGLE}
+OPTIONS_SINGLE_${single}:= ${OPTIONS_SINGLE_${single}:N${opt}}
+.  endfor
+.  for radio in ${OPTIONS_RADIO}
+OPTIONS_RADIO_${radio}:= ${OPTIONS_RADIO_${radio}:N${opt}}
+.  endfor
+.  for multi in ${OPTIONS_MULTI}
+OPTIONS_MULTI_${multi}:= ${OPTIONS_MULTI_${multi}:N${opt}}
+.  endfor
+.  for group in ${OPTIONS_GROUP}
+OPTIONS_GROUP_${group}:= ${OPTIONS_GROUP_${group}:N${opt}}
+.  endfor
+.endfor
 
 # complete list
 COMPLETE_OPTIONS_LIST=	${ALL_OPTIONS}
