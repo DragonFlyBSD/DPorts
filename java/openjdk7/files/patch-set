@@ -2063,19 +2063,6 @@
      ifeq ($(USE_PTHREADS),true)
        LDLIBS += -lpthread
      endif # USE_PTHREADS 
---- jdk/make/java/net/FILES_c.gmk	2012-08-10 10:21:36.000000000 -0700
-+++ jdk/make/java/net/FILES_c.gmk	2012-08-19 12:39:46.000000000 -0700
-@@ -47,6 +47,10 @@
-     FILES_c += bsd_close.c
- endif
- 
-+ifeq ($(OS_VENDOR), FreeBSD)
-+    FILES_c += bsd_close.c
-+endif
-+
- ifeq ($(PLATFORM), windows)
-     FILES_c += TwoStacksPlainSocketImpl.c
-     FILES_c += DualStackPlainSocketImpl.c
 --- jdk/make/java/net/Makefile	2012-08-10 10:21:36.000000000 -0700
 +++ jdk/make/java/net/Makefile	2012-08-19 12:39:46.000000000 -0700
 @@ -91,7 +91,7 @@

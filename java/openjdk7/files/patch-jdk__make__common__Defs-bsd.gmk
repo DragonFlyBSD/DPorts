@@ -1,6 +1,6 @@
---- jdk/make/common/Defs-bsd.gmk.orig	2013-01-03 20:05:32.257234000 +0100
-+++ jdk/make/common/Defs-bsd.gmk	2013-01-03 20:35:47.710925000 +0100
-@@ -0,0 +1,535 @@
+--- jdk/make/common/Defs-bsd.gmk.orig	2013-01-08 13:05:26.678388000 +0100
++++ jdk/make/common/Defs-bsd.gmk	2013-01-08 13:39:33.868718000 +0100
+@@ -0,0 +1,534 @@
 +#
 +# Copyright (c) 1999, 2012, Oracle and/or its affiliates. All rights reserved.
 +# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
@@ -339,8 +339,7 @@
 +
 +LDFLAG_Z_ORIGIN = $(Z_ORIGIN_FLAG/$(ARCH_FAMILY))
 +
-+LDFLAGS_COMMON += $(LDFLAG_Z_ORIGIN) -Xlinker -rpath -Xlinker \$$ORIGIN
-+LDFLAGS_COMMON += $(LD_RUNPATH_EXTRAS:%=$(LDFLAG_Z_ORIGIN) -Xlinker -rpath -Xlinker \$$ORIGIN/%)
++LDFLAGS_COMMON += -Xlinker -rpath -Xlinker ${PREFIX}/openjdk7/jre/lib/${LIBARCH}/server -Xlinker -rpath -Xlinker ${PREFIX}/openjdk7/jre/lib/${LIBARCH}
 +
 +#
 +# -L paths for finding and -ljava
@@ -406,7 +405,7 @@
 +# the library itself should not.
 +#
 +VM_NAME         = server
-+JVMLIB          = -Xlinker -rpath -Xlinker $(LIBDIR)/$(LIBARCH)/$(VM_NAME) -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME) -ljvm
++JVMLIB          = -Xlinker -rpath -Xlinker ${PREFIX}/openjdk7/jre/lib/${LIBARCH} -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME) -ljvm
 +JAVALIB         = -ljava $(JVMLIB)
 +
 +#
