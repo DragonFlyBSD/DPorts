@@ -1,0 +1,71 @@
+@comment $FreeBSD: ports/mail/opendkim/pkg-plist,v 1.11 2012/12/13 21:46:47 svnexp Exp $
+%%REPUTE%%%%JANSSON%%bin/autobuild
+%%LUA%%bin/miltertest
+%%REPRRD%%bin/opendkim-reprrdimport
+%%ODBX%%%%STATS%%bin/opendkim-spam
+etc/mail/opendkim.conf.sample
+%%DKIMREP%%include/dkim-rep/dkim-rep.h
+include/opendkim/dkim.h
+%%RBL%%include/rbl/rbl.h
+%%REPRRD%%include/reprrd/reprrd.h
+%%REPUTE%%include/repute/repute.h
+%%REPUTE%%include/ut/ut.h
+%%VBR%%include/vbr/vbr.h
+%%DKIMREP%%lib/libdkimrep.a
+%%DKIMREP%%lib/libdkimrep.la
+%%DKIMREP%%lib/libdkimrep.so
+%%DKIMREP%%lib/libdkimrep.so.1
+lib/libopendkim.a
+lib/libopendkim.la
+lib/libopendkim.so
+lib/libopendkim.so.8
+%%RBL%%lib/librbl.a
+%%RBL%%lib/librbl.la
+%%RBL%%lib/librbl.so
+%%RBL%%lib/librbl.so.1
+%%REPRRD%%lib/libreprrd.a
+%%REPRRD%%lib/libreprrd.la
+%%REPRRD%%lib/libreprrd.so
+%%REPRRD%%lib/libreprrd.so.1
+%%REPUTE%%lib/librepute.a
+%%REPUTE%%lib/librepute.la
+%%REPUTE%%lib/librepute.so
+%%REPUTE%%lib/librepute.so.1
+%%REPUTE%%lib/libut.a
+%%REPUTE%%lib/libut.la
+%%REPUTE%%lib/libut.so
+%%REPUTE%%lib/libut.so.1
+%%VBR%%lib/libvbr.a
+%%VBR%%lib/libvbr.la
+%%VBR%%lib/libvbr.so
+%%VBR%%lib/libvbr.so.2
+%%DKIMREP%%libdata/pkgconfig/dkim-rep.pc
+libdata/pkgconfig/opendkim.pc
+%%RBL%%libdata/pkgconfig/rbl.pc
+%%REPUTE%%libdata/pkgconfig/repute.pc
+%%REPUTE%%libdata/pkgconfig/ut.pc
+%%VBR%%libdata/pkgconfig/vbr.pc
+%%FILTER%%sbin/opendkim
+%%ATPS%%sbin/opendkim-atpszone
+%%STATS%%sbin/opendkim-expire
+%%STATS%%sbin/opendkim-gengraphs
+sbin/opendkim-genkey
+%%REPUTE%%sbin/opendkim-genrates
+%%STATS%%sbin/opendkim-genstats
+sbin/opendkim-genzone
+%%ODBX%%%%STATS%%sbin/opendkim-importstats
+%%REPUTE%%sbin/opendkim-modtotals
+%%REPUTE%%sbin/opendkim-rephistory
+%%STATS%%sbin/opendkim-reportstats
+%%STATS%%sbin/opendkim-stats
+sbin/opendkim-testadsp
+sbin/opendkim-testkey
+sbin/opendkim-testmsg
+%%VBR%%@dirrm include/vbr
+%%REPUTE%%@dirrm include/ut
+%%REPUTE%%@dirrm include/repute
+%%REPRRD%%@dirrm include/reprrd
+%%RBL%%@dirrm include/rbl
+@dirrm include/opendkim
+%%DKIMREP%%@dirrm include/dkim-rep
+@dirrmtry etc/mail
