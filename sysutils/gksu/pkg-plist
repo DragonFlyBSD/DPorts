@@ -1,0 +1,12 @@
+bin/gksu
+bin/gksudo
+lib/nautilus/extensions-2.0/libnautilus-gksu.la
+lib/nautilus/extensions-2.0/libnautilus-gksu.so
+lib/nautilus/extensions-2.0/libnautilus-gksu.a
+share/applications/gksu.desktop
+share/pixmaps/gksu-icon.png
+share/pixmaps/gksu-root-terminal.png
+share/gksu/gksu-migrate-conf.sh
+man/man1/gksudo.1
+@dirrm share/gksu
+@dirrmtry share/applications
