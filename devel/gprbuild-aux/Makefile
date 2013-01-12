@@ -28,8 +28,8 @@ MAKE_ENV+=	ADA_PROJECT_PATH=${PREFIX}/lib/gnat
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "x86_64"
-CONFIGURE_TARGET=	x86_64-portbld-freebsd${OSREL}
+.if ${ARCH:S///} == "amd64"
+CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 .endif
 
 .include <bsd.port.post.mk>

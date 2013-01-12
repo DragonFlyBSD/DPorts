@@ -161,7 +161,6 @@ share/gprconfig/targetset.xml
 @dirrmtry %%EXAMPLESDIR%%/libraries/obj
 @dirrmtry %%EXAMPLESDIR%%/libraries/obj1
 @dirrmtry %%EXAMPLESDIR%%/libraries/obj2
-@dirrmtry %%EXAMPLESDIR%%/libraries/obj3
 @dirrmtry %%EXAMPLESDIR%%/libraries
 @dirrmtry %%EXAMPLESDIR%%/matrix/obj
 @dirrmtry %%EXAMPLESDIR%%/matrix/src
@@ -185,7 +184,6 @@ share/gprconfig/targetset.xml
 @dirrmtry %%EXAMPLESDIR%%/subsystems/util_src
 @dirrmtry %%EXAMPLESDIR%%/subsystems
 @dirrmtry %%EXAMPLESDIR%%
-@dirrmtry share/gprbuild
 @dirrmtry share/gpr
 @dirrmtry share/gprconfig
 @dirrmtry libexec/gprbuild
