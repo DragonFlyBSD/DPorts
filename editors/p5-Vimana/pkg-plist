@@ -1,0 +1,38 @@
+%%SITE_PERL%%/Vimana.pm
+%%SITE_PERL%%/Vimana/Archive.pm
+%%SITE_PERL%%/Vimana/Command.pm
+%%SITE_PERL%%/Vimana/Command/Download.pm
+%%SITE_PERL%%/Vimana/Command/Rate.pm
+%%SITE_PERL%%/Vimana/Command/Help.pm
+%%SITE_PERL%%/Vimana/Command/Info.pm
+%%SITE_PERL%%/Vimana/Command/Install.pm
+%%SITE_PERL%%/Vimana/Command/Installed.pm
+%%SITE_PERL%%/Vimana/Command/Remove.pm
+%%SITE_PERL%%/Vimana/Command/Search.pm
+%%SITE_PERL%%/Vimana/Command/Update.pm
+%%SITE_PERL%%/Vimana/Command/Upgrade.pm
+%%SITE_PERL%%/Vimana/GitInstall.pm
+%%SITE_PERL%%/Vimana/Index.pm
+%%SITE_PERL%%/Vimana/Installer.pm
+%%SITE_PERL%%/Vimana/Installer/Auto.pm
+%%SITE_PERL%%/Vimana/Installer/Makefile.pm
+%%SITE_PERL%%/Vimana/Installer/Meta.pm
+%%SITE_PERL%%/Vimana/Installer/Rakefile.pm
+%%SITE_PERL%%/Vimana/Installer/Text.pm
+%%SITE_PERL%%/Vimana/Installer/Vimball.pm
+%%SITE_PERL%%/Vimana/Logger.pm
+%%SITE_PERL%%/Vimana/Manual.pm
+%%SITE_PERL%%/Vimana/Record.pm
+%%SITE_PERL%%/Vimana/Recursive.pm
+%%SITE_PERL%%/Vimana/Util.pm
+%%SITE_PERL%%/Vimana/VimOnline.pm
+%%SITE_PERL%%/Vimana/VimOnline/ScriptPage.pm
+%%SITE_PERL%%/Vimana/VimOnline/Search.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Vimana/.packlist
+bin/vimana
+bin/vim_record
+@dirrmtry %%SITE_PERL%%/Vimana/VimOnline
+@dirrmtry %%SITE_PERL%%/Vimana/Installer
+@dirrmtry %%SITE_PERL%%/Vimana/Command
+@dirrmtry %%SITE_PERL%%/Vimana
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Vimana
