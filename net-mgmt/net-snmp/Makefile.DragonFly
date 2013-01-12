@@ -1,0 +1,14 @@
+# Port requires libssp*
+# This is only available on the gcc 4.7 base compiler
+
+USE_GCC=		4.7
+
+MAKE_ENV+=		OPSYS=${OPSYS}
+MAKE_ENV+=		MIB_SYSTEM_LIBS="-lkinfo"
+
+CONFIGURE_ARGS+=	--with-out-mib-modules="sctp-mib"
+
+post-extract:
+	cp ${DFLY_FILESDIR}/cpu_dragonfly.c \
+	   ${WRKSRC}/agent/mibgroup/hardware/cpu/cpu_nlist.c
+
