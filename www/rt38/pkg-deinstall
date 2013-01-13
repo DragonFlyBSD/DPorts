@@ -1,0 +1,20 @@
+#!/bin/sh
+# $FreeBSD: ports/www/rt38/pkg-deinstall,v 1.2 2012/11/17 06:03:03 svnexp Exp $
+#
+
+if [ "$2" != "POST-DEINSTALL" ]; then
+    exit 0
+fi
+
+GROUP=rt
+
+if ! pw groupshow "${GROUP}" 2>/dev/null 1>&2; then
+    if pw groupdel ${GROUP}; then
+        echo "Removed group \"${GROUP}\"."
+    else
+        echo "Removing group \"${GROUP}\" failed..."
+        exit 1
+    fi
+fi
+
+exit 0
