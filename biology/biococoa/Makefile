@@ -1,0 +1,23 @@
+# $FreeBSD: ports/biology/biococoa/Makefile,v 1.9 2012/11/17 05:54:51 svnexp Exp $
+
+PORTNAME=	biococoa
+PORTVERSION=	1.6.0
+PORTREVISION=	2
+CATEGORIES=	biology gnustep
+MASTER_SITES=	${MASTER_SITE_DEBIAN}
+MASTER_SITE_SUBDIR=	pool/main/b/biococoa.app
+DISTNAME=	biococoa.app_${PORTVERSION}.orig
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Bioinformatics framework
+
+LICENSE=	LGPL21
+
+USE_GNUSTEP=	yes
+USE_GNUSTEP_BACK=	yes
+USE_GNUSTEP_BUILD=	yes
+USE_GNUSTEP_INSTALL=	yes
+
+WRKSRC=		${WRKDIR}/biococoa
+
+.include <bsd.port.mk>
