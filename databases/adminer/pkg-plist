@@ -1,0 +1,193 @@
+%%WWWDIR%%/adminer/call.inc.php
+%%WWWDIR%%/adminer/create.inc.php
+%%WWWDIR%%/adminer/database.inc.php
+%%WWWDIR%%/adminer/db.inc.php
+%%WWWDIR%%/adminer/download.inc.php
+%%WWWDIR%%/adminer/drivers/mssql.inc.php
+%%WWWDIR%%/adminer/drivers/mysql.inc.php
+%%WWWDIR%%/adminer/drivers/oracle.inc.php
+%%WWWDIR%%/adminer/drivers/pgsql.inc.php
+%%WWWDIR%%/adminer/drivers/sqlite.inc.php
+%%WWWDIR%%/adminer/dump.inc.php
+%%WWWDIR%%/adminer/edit.inc.php
+%%WWWDIR%%/adminer/event.inc.php
+%%WWWDIR%%/adminer/file.inc.php
+%%WWWDIR%%/adminer/foreign.inc.php
+%%WWWDIR%%/adminer/include/adminer.inc.php
+%%WWWDIR%%/adminer/include/auth.inc.php
+%%WWWDIR%%/adminer/include/bootstrap.inc.php
+%%WWWDIR%%/adminer/include/connect.inc.php
+%%WWWDIR%%/adminer/include/coverage.inc.php
+%%WWWDIR%%/adminer/include/design.inc.php
+%%WWWDIR%%/adminer/include/editing.inc.php
+%%WWWDIR%%/adminer/include/functions.inc.php
+%%WWWDIR%%/adminer/include/lang.inc.php
+%%WWWDIR%%/adminer/include/pdo.inc.php
+%%WWWDIR%%/adminer/include/version.inc.php
+%%WWWDIR%%/adminer/include/xxtea.inc.php
+%%WWWDIR%%/adminer/index.php
+%%WWWDIR%%/adminer/indexes.inc.php
+%%WWWDIR%%/adminer/lang/ar.inc.php
+%%WWWDIR%%/adminer/lang/bn.inc.php
+%%WWWDIR%%/adminer/lang/ca.inc.php
+%%WWWDIR%%/adminer/lang/cs.inc.php
+%%WWWDIR%%/adminer/lang/de.inc.php
+%%WWWDIR%%/adminer/lang/en.inc.php
+%%WWWDIR%%/adminer/lang/es.inc.php
+%%WWWDIR%%/adminer/lang/et.inc.php
+%%WWWDIR%%/adminer/lang/fa.inc.php
+%%WWWDIR%%/adminer/lang/fr.inc.php
+%%WWWDIR%%/adminer/lang/hu.inc.php
+%%WWWDIR%%/adminer/lang/id.inc.php
+%%WWWDIR%%/adminer/lang/it.inc.php
+%%WWWDIR%%/adminer/lang/ja.inc.php
+%%WWWDIR%%/adminer/lang/lt.inc.php
+%%WWWDIR%%/adminer/lang/nl.inc.php
+%%WWWDIR%%/adminer/lang/pl.inc.php
+%%WWWDIR%%/adminer/lang/pt.inc.php
+%%WWWDIR%%/adminer/lang/ro.inc.php
+%%WWWDIR%%/adminer/lang/ru.inc.php
+%%WWWDIR%%/adminer/lang/sk.inc.php
+%%WWWDIR%%/adminer/lang/sl.inc.php
+%%WWWDIR%%/adminer/lang/sr.inc.php
+%%WWWDIR%%/adminer/lang/ta.inc.php
+%%WWWDIR%%/adminer/lang/tr.inc.php
+%%WWWDIR%%/adminer/lang/uk.inc.php
+%%WWWDIR%%/adminer/lang/xx.inc.php
+%%WWWDIR%%/adminer/lang/zh-tw.inc.php
+%%WWWDIR%%/adminer/lang/zh.inc.php
+%%WWWDIR%%/adminer/plugin.php
+%%WWWDIR%%/designs/brade/adminer.css
+%%WWWDIR%%/designs/bueltge/adminer.css
+%%WWWDIR%%/designs/cvicebni-ubor/adminer.css
+%%WWWDIR%%/designs/haeckel/adminer.css
+%%WWWDIR%%/designs/hever/adminer.css
+%%WWWDIR%%/designs/jukin/adminer.css
+%%WWWDIR%%/designs/kahi/adminer.css
+%%WWWDIR%%/designs/konya/adminer.css
+%%WWWDIR%%/designs/ng9/adminer.css
+%%WWWDIR%%/designs/paranoiq/adminer.css
+%%WWWDIR%%/designs/pilot/adminer.css
+%%WWWDIR%%/designs/pokorny/adminer.css
+%%WWWDIR%%/designs/readme.txt
+%%WWWDIR%%/adminer/privileges.inc.php
+%%WWWDIR%%/adminer/procedure.inc.php
+%%WWWDIR%%/adminer/processlist.inc.php
+%%WWWDIR%%/adminer/schema.inc.php
+%%WWWDIR%%/adminer/scheme.inc.php
+%%WWWDIR%%/adminer/select.inc.php
+%%WWWDIR%%/adminer/script.inc.php
+%%WWWDIR%%/adminer/sequence.inc.php
+%%WWWDIR%%/adminer/sql.inc.php
+%%WWWDIR%%/adminer/static/arrow.gif
+%%WWWDIR%%/adminer/static/cross.gif
+%%WWWDIR%%/adminer/static/default.css
+%%WWWDIR%%/adminer/static/down.gif
+%%WWWDIR%%/adminer/static/editing.js
+%%WWWDIR%%/adminer/static/favicon.ico
+%%WWWDIR%%/adminer/static/functions.js
+%%WWWDIR%%/adminer/static/plus.gif
+%%WWWDIR%%/adminer/static/up.gif
+%%WWWDIR%%/adminer/table.inc.php
+%%WWWDIR%%/adminer/trigger.inc.php
+%%WWWDIR%%/adminer/type.inc.php
+%%WWWDIR%%/adminer/user.inc.php
+%%WWWDIR%%/adminer/variables.inc.php
+%%WWWDIR%%/adminer/view.inc.php
+%%WWWDIR%%/changes.txt
+%%WWWDIR%%/compile.php
+%%WWWDIR%%/coverage.php
+%%WWWDIR%%/editor/db.inc.php
+%%WWWDIR%%/editor/example.php
+%%WWWDIR%%/editor/include/adminer.inc.php
+%%WWWDIR%%/editor/include/connect.inc.php
+%%WWWDIR%%/editor/include/editing.inc.php
+%%WWWDIR%%/editor/index.php
+%%WWWDIR%%/editor/script.inc.php
+%%WWWDIR%%/editor/static/editing.js
+%%WWWDIR%%/externals/JsShrink/jsShrink.php
+%%WWWDIR%%/externals/jush/jush.css
+%%WWWDIR%%/externals/jush/jush.js
+%%WWWDIR%%/lang.php
+%%WWWDIR%%/readme.txt
+%%WWWDIR%%/plugins/database-hide.php
+%%WWWDIR%%/plugins/dump-date.php
+%%WWWDIR%%/plugins/dump-xml.php
+%%WWWDIR%%/plugins/dump-zip.php
+%%WWWDIR%%/plugins/edit-calendar.php
+%%WWWDIR%%/plugins/edit-foreign.php
+%%WWWDIR%%/plugins/edit-textarea.php
+%%WWWDIR%%/plugins/email-table.php
+%%WWWDIR%%/plugins/enum-option.php
+%%WWWDIR%%/plugins/file-upload.php
+%%WWWDIR%%/plugins/foreign-system.php
+%%WWWDIR%%/plugins/frames.php
+%%WWWDIR%%/plugins/login-servers.php
+%%WWWDIR%%/plugins/login-table.php
+%%WWWDIR%%/plugins/password-sha1.php
+%%WWWDIR%%/plugins/plugin.php
+%%WWWDIR%%/plugins/readme.txt
+%%WWWDIR%%/plugins/tables-filter.php
+%%WWWDIR%%/plugins/slugify.php
+%%WWWDIR%%/plugins/sql-log.php
+%%WWWDIR%%/plugins/tinymce.php
+%%WWWDIR%%/plugins/translation.php
+%%WWWDIR%%/plugins/version-noverify.php
+%%WWWDIR%%/plugins/wymeditor.php
+%%WWWDIR%%/tests/0-login.html
+%%WWWDIR%%/tests/1-create-database.html
+%%WWWDIR%%/tests/10-clone.html
+%%WWWDIR%%/tests/11-reference.html
+%%WWWDIR%%/tests/12-update.html
+%%WWWDIR%%/tests/13-delete.html
+%%WWWDIR%%/tests/14-truncate.html
+%%WWWDIR%%/tests/15-privileges.html
+%%WWWDIR%%/tests/16-processlist.html
+%%WWWDIR%%/tests/17-export.html
+%%WWWDIR%%/tests/18-events.html
+%%WWWDIR%%/tests/19-procedures.html
+%%WWWDIR%%/tests/2-create-table.html
+%%WWWDIR%%/tests/20-partitioning.html
+%%WWWDIR%%/tests/21-variables.html
+%%WWWDIR%%/tests/22-history.html
+%%WWWDIR%%/tests/23-editor.html
+%%WWWDIR%%/tests/24-explain.html
+%%WWWDIR%%/tests/3-create-index.html
+%%WWWDIR%%/tests/4-create-table-2.html
+%%WWWDIR%%/tests/5-foreign-key.html
+%%WWWDIR%%/tests/6-alter-table.html
+%%WWWDIR%%/tests/7-create-trigger.html
+%%WWWDIR%%/tests/8-create-view.html
+%%WWWDIR%%/tests/9-insert.html
+%%WWWDIR%%/tests/iexplore.bat
+%%WWWDIR%%/tests/logout.html
+%%WWWDIR%%/tests/selenium.html
+%%WWWDIR%%/todo.txt
+@dirrm %%WWWDIR%%/adminer/drivers
+@dirrm %%WWWDIR%%/adminer/include
+@dirrm %%WWWDIR%%/adminer/lang
+@dirrm %%WWWDIR%%/adminer/static
+@dirrm %%WWWDIR%%/adminer
+@dirrm %%WWWDIR%%/designs/brade
+@dirrm %%WWWDIR%%/designs/bueltge
+@dirrm %%WWWDIR%%/designs/cvicebni-ubor
+@dirrm %%WWWDIR%%/designs/haeckel
+@dirrm %%WWWDIR%%/designs/hever
+@dirrm %%WWWDIR%%/designs/jukin
+@dirrm %%WWWDIR%%/designs/kahi
+@dirrm %%WWWDIR%%/designs/konya
+@dirrm %%WWWDIR%%/designs/ng9
+@dirrm %%WWWDIR%%/designs/paranoiq
+@dirrm %%WWWDIR%%/designs/pilot
+@dirrm %%WWWDIR%%/designs/pokorny
+@dirrm %%WWWDIR%%/designs
+@dirrm %%WWWDIR%%/editor/include
+@dirrm %%WWWDIR%%/editor/static
+@dirrm %%WWWDIR%%/editor
+@dirrm %%WWWDIR%%/externals/JsShrink
+@dirrm %%WWWDIR%%/externals/jsmin-php
+@dirrm %%WWWDIR%%/externals/jush
+@dirrm %%WWWDIR%%/externals
+@dirrm %%WWWDIR%%/plugins
+@dirrm %%WWWDIR%%/tests
+@dirrm %%WWWDIR%%
