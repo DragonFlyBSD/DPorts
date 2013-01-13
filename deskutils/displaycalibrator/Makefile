@@ -1,0 +1,17 @@
+# $FreeBSD: ports/deskutils/displaycalibrator/Makefile,v 1.10 2012/11/17 05:55:26 svnexp Exp $
+
+PORTNAME=	displaycalibrator
+PORTVERSION=	0.7
+PORTREVISION=	2
+CATEGORIES=	deskutils gnustep
+MASTER_SITES=	http://gnu.ethz.ch/linuks.mine.nu/displaycalibrator/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Frontend to xgamma
+
+USE_GNUSTEP=	yes
+USE_GNUSTEP_BACK=	yes
+USE_GNUSTEP_BUILD=	yes
+USE_GNUSTEP_INSTALL=	yes
+
+.include <bsd.port.mk>
