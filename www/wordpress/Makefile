@@ -2,11 +2,11 @@
 # Date created:		2004-07-29
 # Whom:			Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
 #
-# $FreeBSD: ports/www/wordpress/Makefile,v 1.80 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: ports/www/wordpress/Makefile,v 1.81 2012/12/12 20:56:27 svnexp Exp $
 #
 
 PORTNAME=	wordpress
-PORTVERSION=	3.4.2
+PORTVERSION=	3.5
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://wordpress.org/
