@@ -1,8 +1,8 @@
-# $FreeBSD: ports/www/varnish/Makefile,v 1.56 2012/11/17 06:03:10 svnexp Exp $
+# $FreeBSD: ports/www/varnish/Makefile,v 1.57 2012/12/10 19:24:06 svnexp Exp $
 
 PORTNAME=	varnish
 PORTVERSION=	3.0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://repo.varnish-cache.org/source/
 
