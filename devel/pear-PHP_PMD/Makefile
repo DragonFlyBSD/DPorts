@@ -1,8 +1,8 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-PHP_PMD/Makefile,v 1.1 2012/12/03 16:05:08 svnexp Exp $
+# $FreeBSD: ports/devel/pear-PHP_PMD/Makefile,v 1.2 2012/12/17 19:02:23 svnexp Exp $
 
 PORTNAME=	PHP_PMD
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.1
 CATEGORIES=	devel pear
 MASTER_SITES=	http://pear.phpmd.org/get/
 PKGNAMEPREFIX=	pear-
