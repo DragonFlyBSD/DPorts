@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net-mgmt/nagios-devel/files/pkg-deinstall.in,v 1.2 2012/11/17 06:00:33 svnexp Exp $
+#
+
+NAGIOSDIR=%%NAGIOSDIR%%
+NAGIOSUSER=%%NAGIOSUSER%%
+NAGIOSGROUP=%%NAGIOSGROUP%%
+
+if [ "$2" = "POST-DEINSTALL" ]; then
+  if /usr/sbin/pw group show "${NAGIOSGROUP}" 2>&1 >/dev/null; then
+    echo "You should manually remove the \"${NAGIOSGROUP}\" group."
+  fi
+
+  if /usr/sbin/pw user show "${NAGIOSUSER}" 2>&1 >/dev/null; then
+    echo "You should manually remove the \"${NAGIOSUSER}\" user."
+  fi
+
+  if [ -e "${NAGIOSDIR}" ]; then
+    echo "You should manually remove the \"${NAGIOSDIR}\" directory."
+  fi
+fi
