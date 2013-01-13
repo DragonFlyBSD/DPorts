@@ -2,11 +2,12 @@
 # Date created:					20 May 2004
 # Whom:						k@123.org
 #
-# $FreeBSD: ports/www/lighttpd/Makefile,v 1.120 2012/11/21 14:39:11 svnexp Exp $
+# $FreeBSD: ports/www/lighttpd/Makefile,v 1.121 2012/12/10 19:24:05 svnexp Exp $
 #
 
 PORTNAME?=	lighttpd
 PORTVERSION=	1.4.32
+PORTREVISION=	1
 CATEGORIES?=	www
 MASTER_SITES?=	http://download.lighttpd.net/lighttpd/releases-1.4.x/
 
@@ -18,7 +19,7 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 .endif
 
-LIB_DEPENDS+=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
