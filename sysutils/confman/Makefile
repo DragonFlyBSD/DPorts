@@ -1,0 +1,31 @@
+# New ports collection makefile for:   confman
+# Date created:        6 May 2009
+# Whom:                ccowart@timesinks.net
+#
+# $FreeBSD: ports/sysutils/confman/Makefile,v 1.13 2012/11/21 17:05:03 svnexp Exp $
+#
+
+PORTNAME=	confman
+PORTVERSION=	1.9.4b
+PORTREVISION=	1
+CATEGORIES=	sysutils
+MASTER_SITES=	http://www.timesinks.net/distfiles/
+
+MAINTAINER=	ccowart@timesinks.net
+COMMENT=	A revision controlled configuration manager
+
+RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
+		svn:${PORTSDIR}/devel/subversion16 \
+		sudo:${PORTSDIR}/security/sudo \
+		greadlink:${PORTSDIR}/sysutils/coreutils \
+		wget:${PORTSDIR}/ftp/wget
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+
+GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--localstatedir=/var
+
+MAN5=		confman.conf.5
+MAN8=		confadmin.8 confaudit.8 confexport.8 confman.8 confsync.8
+
+.include <bsd.port.mk>
