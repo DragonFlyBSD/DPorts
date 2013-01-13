@@ -1,0 +1,11 @@
+bin/mgp
+bin/mgp2ps
+bin/mgpembed
+bin/mgpnet
+bin/xwintoppm
+bin/xmindpath
+lib/X11/mgp/default.mgp
+lib/X11/mgp/mgp1.jpg
+lib/X11/mgp/mgp2.jpg
+lib/X11/mgp/mgp3.jpg
+@dirrm lib/X11/mgp
