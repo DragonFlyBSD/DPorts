@@ -1,0 +1,83 @@
+# New ports collection makefile for:	treeline
+# Date created:		Wed Jul  7 20:50:24 CEST 2004
+# Whom:			Tobias Roth <ports@fsck.ch>
+#
+# $FreeBSD: ports/deskutils/treeline/Makefile,v 1.34 2012/11/17 05:55:31 svnexp Exp $
+#
+
+PORTNAME=	treeline
+PORTVERSION=	1.4.1
+PORTREVISION=	3
+CATEGORIES=	deskutils python
+MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}/:treeline \
+		http://treeline.bellz.org/plugins/:plugins \
+		http://depot.fsck.ch/mirror/distfiles/:treeline,plugins
+MASTER_SITE_SUBDIR=treeline/:treeline
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:treeline
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+MAINTAINER=	pawel@FreeBSD.org
+COMMENT=	TreeLine is a structured information storage program
+
+LICENSE=	GPLv2
+
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/PyQt4/QtGui.so:${PORTSDIR}/x11-toolkits/py-qt4-gui \
+		${PYTHON_SITELIBDIR}/PyQt4/QtNetwork.so:${PORTSDIR}/net/py-qt4-network
+
+WRKSRC=		${WRKDIR}/TreeLine
+USE_QT4=	# empty
+USE_PYTHON=	2.5+
+NO_BUILD=	yes
+
+DESKTOP_ENTRIES=	"TreeLine" "Structured information storage program" \
+			"${DATADIR}/icons/tree/treeline.png" "treeline" \
+			"Utility;" false
+
+OPTIONS_DEFINE=		HTTPLOAD PYXML
+OPTIONS_SINGLE=		SPELLER
+OPTIONS_SINGLE_SPELLER=	ASPELL ISPELL
+
+ASPELL_DESC=	Install with aspell support
+HTTPLOAD_DESC=	Install httpLoad plugin
+ISPELL_DESC=	Install with ispell support
+PYXML_DESC=	Use pythons py-xml instead of textproc/expat2
+
+OPTIONS_DEFAULT=	ASPELL PYXML
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MASPELL}
+BUILD_DEPENDS+=	aspell:${PORTSDIR}/textproc/aspell
+.endif
+
+.if ${PORT_OPTIONS:MISPELL}
+BUILD_DEPENDS+=	ispell:${PORTSDIR}/textproc/ispell
+.endif
+
+.if !${PORT_OPTIONS:MPYXML}
+LIB_DEPENDS+=	expat.6:${PORTSDIR}/textproc/expat2
+.endif
+
+.if ${PORT_OPTIONS:MHTTPLOAD}
+DISTFILES+=	httpload2.py:plugins
+PLIST_SUB+=	HTTPLOAD=""
+.else
+PLIST_SUB+=	HTTPLOAD="@comment "
+.endif
+
+do-install:
+	@cd ${WRKSRC} && ${PYTHON_CMD} install.py \
+	-p ${PREFIX} -d ${DOCSDIR} -i ${DATADIR}/icons -x
+.if ${PORT_OPTIONS:MHTTPLOAD}
+	@${INSTALL_DATA} -d ${PREFIX}/lib/${PORTNAME}/plugins/
+	@${INSTALL_DATA} ${DISTDIR}/httpload2.py ${PREFIX}/lib/${PORTNAME}/plugins/
+.endif
+
+post-install:
+	${RM} ${DOCSDIR}/INSTALL ${DOCSDIR}/LICENSE
+.if !${PORT_OPTIONS:MDOCS}
+	${RM} ${DOCSDIR}/*
+	${RMDIR} ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
