@@ -1,8 +1,8 @@
 # Created by: johnpupu <johnpupu@gmail.com>
-# $FreeBSD: ports/www/pecl-yaf/Makefile,v 1.18 2012/11/27 07:38:29 svnexp Exp $
+# $FreeBSD: ports/www/pecl-yaf/Makefile,v 1.20 2012/12/20 06:44:04 svnexp Exp $
 
 PORTNAME=	yaf
-PORTVERSION=	2.2.7
+PORTVERSION=	2.2.8
 CATEGORIES=	www
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
