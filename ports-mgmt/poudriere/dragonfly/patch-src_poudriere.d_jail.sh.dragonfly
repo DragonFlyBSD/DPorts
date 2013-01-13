@@ -1,5 +1,5 @@
---- /dev/null	2012-12-21 03:01:31.166467248 +0100
-+++ src/poudriere.d/jail.sh.dragonfly	2012-12-21 10:58:49.000000000 +0100
+--- /dev/null	2013-01-13 00:57:22.120219888 +0100
++++ src/poudriere.d/jail.sh.dragonfly	2013-01-12 22:47:47.136450000 +0100
 @@ -0,0 +1,251 @@
 +#!/bin/sh
 +#
@@ -45,7 +45,7 @@
 +	local JLOGBASE=${POUDRIERE_DATA}/jailbuild/${JAILNAME}
 +	local ncpus=$(zget slaves)
 +	local factor=`expr ${ncpus} \* 2 - 1`
-+	local options="-DNO_GCC47 -DNO_GAMES -DNOPROFILE -DNO_BINUTILS221"
++	local options="-DNO_GAMES -DNOPROFILE -DNO_BINUTILS221"
 +	local directive
 +	mkdir -p ${JLOGBASE}
 +

@@ -1,6 +1,6 @@
---- /dev/null	2012-12-21 03:01:31.166467248 +0100
-+++ src/poudriere.d/common.sh.dragonfly	2012-12-21 01:57:30.000000000 +0100
-@@ -0,0 +1,110 @@
+--- /dev/null	2013-01-13 04:46:51.754149689 +0100
++++ src/poudriere.d/common.sh.dragonfly	2013-01-13 04:35:06.775559000 +0100
+@@ -0,0 +1,109 @@
 +#!/bin/sh
 +#
 +# DragonFly-specific
@@ -32,7 +32,6 @@
 +	mount | awk -v mnt="${mnt}/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount || :
 +	umount ${mnt} || :
 +
-+	zset status "idle:"
 +	export STATUS=0
 +}
 +

@@ -1,5 +1,5 @@
 --- src/poudriere.d/common.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/common.sh	2013-01-06 01:30:27.000000000 +0100
++++ src/poudriere.d/common.sh	2013-01-13 04:50:50.106877000 +0100
 @@ -1,8 +1,6 @@
  #!/bin/sh
  
@@ -77,7 +77,7 @@
  sig_handler() {
  	trap - SIGTERM SIGKILL
  	# Ignore SIGINT while cleaning up
-@@ -161,14 +172,14 @@
+@@ -161,381 +172,35 @@
  		queue_width=3
  	fi
  
@@ -94,7 +94,10 @@
  			# Skip builders not started yet
  			[ -z "${status}" ] && continue
  			# Hide idle workers
-@@ -178,364 +189,18 @@
+-			[ "${status}" = "idle:" ] && continue
++			[ "${status}" = "idle:" -o "${status}" = "-" ] && continue
+ 			echo -e "\t[${j}]: ${status}"
+ 		done
  	fi
  }
  
@@ -777,7 +780,7 @@
  
  # Build ports in parallel
  # Returns when all are built.
-@@ -1066,11 +495,11 @@
+@@ -1066,11 +495,10 @@
  
  	PKGNAME="${pkgname}" # set ASAP so cleanup() can use it
  	port=$(cache_get_origin ${pkgname})
@@ -785,13 +788,23 @@
 +	portdir="${PORTSRC}/${port}"
  
  	job_msg "Starting build of ${port}"
- 	zset status "starting:${port}"
+-	zset status "starting:${port}"
 -	zfs rollback -r ${JAILFS}@prepkg || err 1 "Unable to rollback ${JAILFS}"
-+	reset_slave ${MASTERMNT} ${JAILMNT}
++	create_slave ${MASTERMNT} ${MY_JOBID}
  
  	# If this port is IGNORED, skip it
  	# This is checked here instead of when building the queue
-@@ -1119,10 +548,12 @@
+@@ -1078,9 +506,6 @@
+ 	# is a less-common check
+ 	ignore="$(injail make -C ${portdir} -VIGNORE)"
+ 
+-	msg "Cleaning up wrkdir"
+-	rm -rf ${JAILMNT}/wrkdirs/*
+-
+ 	msg "Building ${port}"
+ 	log_start $(log_path)/${PKGNAME}.log
+ 	buildlog_start ${portdir}
+@@ -1119,10 +544,12 @@
  			job_msg "Finished build of ${port}: Success"
  			# Cache information for next run
  			pkg_cache_data "${PKGDIR}/All/${PKGNAME}.${PKG_EXT}" ${port} || :
@@ -804,7 +817,14 @@
  		fi
  	fi
  
-@@ -1137,10 +568,10 @@
+@@ -1131,16 +558,17 @@
+ 	zset status "done:${port}"
+ 	buildlog_stop ${portdir}
+ 	log_stop $(log_path)/${PKGNAME}.log
++	destroy_slave ${MASTERMNT} ${MY_JOBID}
+ }
+ 
+ list_deps() {
  	[ $# -ne 1 ] && eargs directory
  	local dir=$1
  	local makeargs="-VPKG_DEPENDS -VBUILD_DEPENDS -VEXTRACT_DEPENDS -VLIB_DEPENDS -VPATCH_DEPENDS -VFETCH_DEPENDS -VRUN_DEPENDS"
@@ -817,7 +837,7 @@
  }
  
  deps_file() {
-@@ -1150,7 +581,7 @@
+@@ -1150,7 +578,7 @@
  
  	if [ ! -f "${depfile}" ]; then
  		if [ "${PKG_EXT}" = "tbz" ]; then
@@ -826,7 +846,7 @@
  		else
  			pkg info -qdF "${pkg}" > "${depfile}"
  		fi
-@@ -1168,7 +599,7 @@
+@@ -1168,7 +596,7 @@
  	if [ ! -f "${originfile}" ]; then
  		if [ -z "${origin}" ]; then
  			if [ "${PKG_EXT}" = "tbz" ]; then
@@ -835,7 +855,7 @@
  			else
  				origin=$(pkg query -F "${pkg}" "%o")
  			fi
-@@ -1188,7 +619,7 @@
+@@ -1188,7 +616,7 @@
  
  	if [ ! -f "${optionsfile}" ]; then
  		if [ "${PKG_EXT}" = "tbz" ]; then
@@ -844,7 +864,7 @@
  		else
  			compiled_options=$(pkg query -F "${pkg}" '%Ov %Ok' | awk '$1 == "on" {print $2}' | sort | tr '\n' ' ')
  		fi
-@@ -1284,7 +715,7 @@
+@@ -1284,7 +712,7 @@
  	o=$(pkg_get_origin ${pkg})
  	v=${pkg##*-}
  	v=${v%.*}
@@ -853,7 +873,7 @@
  		msg "${o} does not exist anymore. Deleting stale ${pkg##*/}"
  		delete_pkg ${pkg}
  		return 0
-@@ -1299,7 +730,7 @@
+@@ -1299,7 +727,7 @@
  
  	# Check if the compiled options match the current options from make.conf and /var/db/options
  	if [ "${CHECK_CHANGED_OPTIONS:-no}" != "no" ]; then
@@ -862,7 +882,7 @@
  		compiled_options=$(pkg_get_options ${pkg})
  
  		if [ "${compiled_options}" != "${current_options}" ]; then
-@@ -1328,7 +759,7 @@
+@@ -1328,7 +756,7 @@
  next_in_queue() {
  	local p
  	[ ! -d ${JAILMNT}/poudriere/pool ] && err 1 "Build pool is missing"
@@ -871,7 +891,7 @@
  	[ -n "$p" ] || return 0
  	touch ${p}/.building
  	# pkgname
-@@ -1365,7 +796,7 @@
+@@ -1365,7 +793,7 @@
  
  	# Add to cache if not found.
  	if [ -z "${pkgname}" ]; then
@@ -880,7 +900,7 @@
  		# Make sure this origin did not already exist
  		existing_origin=$(cache_get_origin "${pkgname}" 2>/dev/null || :)
  		# It may already exist due to race conditions, it is not harmful. Just ignore.
-@@ -1417,24 +848,6 @@
+@@ -1417,24 +845,6 @@
  	done
  }
  
@@ -905,7 +925,7 @@
  parallel_stop() {
  	wait
  }
-@@ -1508,11 +921,35 @@
+@@ -1508,11 +918,35 @@
  	mkdir -p "${JAILMNT}/poudriere/pool" \
  		"${JAILMNT}/poudriere/deps" \
  		"${JAILMNT}/poudriere/rdeps" \
@@ -941,7 +961,7 @@
  	zset stats_queued "0"
  	:> ${JAILMNT}/poudriere/ports.built
  	:> ${JAILMNT}/poudriere/ports.failed
-@@ -1596,8 +1033,7 @@
+@@ -1596,8 +1030,7 @@
  	export FORCE_PACKAGE=yes
  	export USER=root
  	export HOME=/root
@@ -951,7 +971,7 @@
  	[ -z "${JAILMNT}" ] && err 1 "No path of the base of the jail defined"
  	[ -z "${PORTSDIR}" ] && err 1 "No ports directory defined"
  	[ -z "${PKGDIR}" ] && err 1 "No package directory defined"
-@@ -1620,9 +1056,9 @@
+@@ -1620,9 +1053,9 @@
  
  	msg "Populating LOCALBASE"
  	mkdir -p ${JAILMNT}/${MYBASE:-/usr/local}
@@ -963,7 +983,7 @@
  	if [ -n "${WITH_PKGNG}" ]; then
  		export PKGNG=1
  		export PKG_EXT="txz"
-@@ -1645,26 +1081,40 @@
+@@ -1645,26 +1078,40 @@
  . ${SCRIPTPREFIX}/../../etc/poudriere.conf
  POUDRIERED=${SCRIPTPREFIX}/../../etc/poudriere.d
  
@@ -1012,7 +1032,7 @@
  case ${ZROOTFS} in
  	[!/]*)
  		err 1 "ZROOTFS shoud start with a /"
-@@ -1679,8 +1129,3 @@
+@@ -1679,8 +1126,3 @@
  	*) err 1 "invalid format for WRKDIR_ARCHIVE_FORMAT: ${WRKDIR_ARCHIVE_FORMAT}" ;;
  esac
  
