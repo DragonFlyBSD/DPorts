@@ -1,0 +1,25 @@
+# $FreeBSD: ports/deskutils/cartotheque/Makefile,v 1.10 2012/11/17 05:55:26 svnexp Exp $
+
+PORTNAME=	cartotheque
+PORTVERSION=	0.1
+PORTREVISION=	2
+CATEGORIES=	deskutils gnustep
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=dinoex
+DISTNAME=	Cartotheque-${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Managing notes on small cards
+
+LICENSE=	LGPL21
+
+USE_GNUSTEP=	yes
+USE_GNUSTEP_BACK=	yes
+USE_GNUSTEP_BUILD=	yes
+USE_GNUSTEP_INSTALL=	yes
+
+post-patch:
+	${REINPLACE_CMD} -e 's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
+		${WRKSRC}/GNUmakefile
+
+.include <bsd.port.mk>
