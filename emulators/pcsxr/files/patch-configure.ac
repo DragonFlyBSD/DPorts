@@ -1,0 +1,10 @@
+--- configure.ac.orig	2011-01-25 06:54:07.000000000 +0100
++++ configure.ac	2011-01-26 14:35:39.236296066 +0100
+@@ -8,6 +8,7 @@
+ AC_CONFIG_HEADERS([include/config.h:include/config.h.in])
+ 
+ AC_PROG_CC
++AC_PROG_CXX
+ AM_PROG_CC_C_O
+ AC_PROG_INSTALL
+ AC_STDC_HEADERS

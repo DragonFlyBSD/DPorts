@@ -1,0 +1,65 @@
+bin/pcsxr
+%%NLS%%share/locale/fr_FR/LC_MESSAGES/pcsxr.mo
+%%NLS%%share/locale/it/LC_MESSAGES/pcsxr.mo
+%%NLS%%share/locale/pt_BR/LC_MESSAGES/pcsxr.mo
+%%NLS%%share/locale/ru_RU/LC_MESSAGES/pcsxr.mo
+%%NLS%%share/locale/hu_HU/LC_MESSAGES/pcsxr.mo
+%%NLS%%share/locale/zh_TW/LC_MESSAGES/pcsxr.mo
+%%NLS%%share/locale/zh_CN/LC_MESSAGES/pcsxr.mo
+%%NLS%%@dirrmtry share/locale/hu_HU/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/hu_HU
+%%NLS%%@dirrmtry share/locale/ru_RU/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/ru_RU
+share/pcsxr/peopsxgl.ui
+share/pcsxr/dfinput.ui
+share/pcsxr/dfnet.ui
+share/pcsxr/dfxvideo.ui
+share/pcsxr/dfcdrom.ui
+share/pcsxr/sio1.ui
+share/pcsxr/gpu.png
+share/pcsxr/dfsound.ui
+share/pcsxr/spu.png
+share/pcsxr/cd.png
+share/pcsxr/iso-reopen.png
+share/pcsxr/cdr.png
+share/pcsxr/pcsxr.ui
+share/pcsxr/iso-open.png
+share/pcsxr/play.png
+share/pcsxr/pad.png
+share/pcsxr/memcard.png
+share/pcsxr/pcsxr.png
+@dirrm share/pcsxr
+share/pixmaps/pcsxr-icon.png
+share/applications/pcsxr.desktop
+@dirrmtry share/applications
+lib/pcsxr/cfgDFXVideo
+lib/pcsxr/cfgpeopsxgl
+lib/pcsxr/cfgDFInput
+lib/pcsxr/cfgDFCdrom
+lib/pcsxr/cfgDFSound
+lib/pcsxr/cfgDFNet
+lib/pcsxr/cfgBladeSio1
+lib/pcsxr/libDFXVideo.a
+lib/pcsxr/libDFXVideo.la
+lib/pcsxr/libDFXVideo.so
+lib/pcsxr/libpeopsxgl.a
+lib/pcsxr/libpeopsxgl.la
+lib/pcsxr/libpeopsxgl.so
+lib/pcsxr/libDFInput.a
+lib/pcsxr/libDFInput.la
+lib/pcsxr/libDFInput.so
+lib/pcsxr/libDFSound.a
+lib/pcsxr/libDFSound.la
+lib/pcsxr/libDFSound.so
+lib/pcsxr/libDFCdrom.a
+lib/pcsxr/libDFCdrom.la
+lib/pcsxr/libDFCdrom.so
+lib/pcsxr/libDFNet.a
+lib/pcsxr/libDFNet.la
+lib/pcsxr/libDFNet.so
+lib/pcsxr/libBladeSio1.a
+lib/pcsxr/libBladeSio1.la
+lib/pcsxr/libBladeSio1.so
+@dirrm lib/pcsxr
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
