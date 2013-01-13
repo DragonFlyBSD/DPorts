@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-rar
-# Date created:			2006/09/07
-# Whom:				chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/archivers/pecl-rar/Makefile,v 1.10 2012/11/17 05:54:22 svnexp Exp $
-#
+# Created by: Chin-San Huang <chinsan.tw@gmail.com>
+# $FreeBSD: ports/archivers/pecl-rar/Makefile,v 1.11 2012/12/18 08:04:12 svnexp Exp $
 
 PORTNAME=	rar
 PORTVERSION=	3.0.0
@@ -14,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	PECL
 
 MAINTAINER=	miwi@FreeBSD.org
-COMMENT=	A PECL extension to create and read rar files
+COMMENT=	PECL extension to create and read RAR files
 
 LICENSE=	PHP301
 
