@@ -1,0 +1,21 @@
+bin/pgpsplit
+bin/pks-mail.sh
+bin/pks-queue-run.sh
+bin/pksclient
+sbin/pksd
+bin/pksdctl
+etc/pksd.conf.sample
+%%DATADIR%%/mail_intro
+%%DATADIR%%/pks-commands.html
+%%DATADIR%%/pks-commands.php
+%%PORTDOCS%%%%DOCSDIR%%/mail_intro
+%%PORTDOCS%%%%DOCSDIR%%/pks_help.en
+%%PORTDOCS%%%%DOCSDIR%%/pks_help.es
+%%PORTDOCS%%%%DOCSDIR%%/pks_help.fr
+%%PORTDOCS%%%%DOCSDIR%%/pks_help.de
+%%PORTDOCS%%%%DOCSDIR%%/pks_help.cz
+%%PORTDOCS%%%%DOCSDIR%%/pks_help.ja
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%EXAMPLESDIR%%/pksd.conf
+@dirrm %%EXAMPLESDIR%%
+@dirrm share/pks

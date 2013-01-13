@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/security/pks/files/pkg-deinstall.in,v 1.2 2012/11/17 06:01:16 svnexp Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove the
+following directories and files:
+
+        %%PREFIX%%/etc/pksd.conf
+	/var/pks
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
