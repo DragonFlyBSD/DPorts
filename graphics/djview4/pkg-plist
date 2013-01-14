@@ -1,0 +1,5 @@
+bin/djview
+bin/djview4
+lib/djview4/plugins/nsdejavu.so
+@dirrm lib/djview4/plugins
+@dirrm lib/djview4
