@@ -1,0 +1,5 @@
+USE_PKGCONFIG=	yes
+
+LIB_DEPENDS+=	expat:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS+=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig
