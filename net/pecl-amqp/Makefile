@@ -2,11 +2,11 @@
 # Date created:		2011-09-19
 # Whom:			Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
 #
-# $FreeBSD: ports/net/pecl-amqp/Makefile,v 1.2 2012/11/17 06:00:15 svnexp Exp $
+# $FreeBSD: ports/net/pecl-amqp/Makefile,v 1.3 2012/12/17 15:31:11 svnexp Exp $
 #
 
 PORTNAME=	amqp
-PORTVERSION=	0.3.1
+PORTVERSION=	1.0.9
 CATEGORIES=	net pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
