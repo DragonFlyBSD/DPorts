@@ -2,7 +2,7 @@
 # Date created:		2006-10-08
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net/p5-Net-Amazon-S3/Makefile,v 1.28 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: ports/net/p5-Net-Amazon-S3/Makefile,v 1.29 2012/12/17 15:43:22 svnexp Exp $
 #
 
 PORTNAME=	Net-Amazon-S3
@@ -58,10 +58,4 @@ MAN3=		Net::Amazon::S3.3 Net::Amazon::S3::Bucket.3 \
 		Net::Amazon::S3::Request.3 \
 		Net::Amazon::S3::Request::CreateBucket.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500904
-RUN_DEPENDS+=	p5-IO>=1.14:${PORTSDIR}/devel/p5-IO
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
