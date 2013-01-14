@@ -1,0 +1,7 @@
+include/discid/discid.h
+lib/libdiscid.a
+lib/libdiscid.la
+lib/libdiscid.so
+lib/libdiscid.so.0
+libdata/pkgconfig/libdiscid.pc
+@dirrm include/discid
