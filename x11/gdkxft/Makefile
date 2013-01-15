@@ -1,0 +1,56 @@
+# New ports collection makefile for:	gdkxft
+# Date created:				3 September 2001
+# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
+#
+# $FreeBSD: ports/x11/gdkxft/Makefile,v 1.43 2012/11/17 06:03:15 svnexp Exp $
+#
+
+PORTNAME=	gdkxft
+PORTVERSION=	1.5
+PORTREVISION=	7
+CATEGORIES=	x11
+MASTER_SITES=	SF
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	An anti-aliased font support for gtk+
+
+LIB_DEPENDS=	Xft.2:${PORTSDIR}/x11-fonts/libXft
+LIB_DEPENDS+=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig
+LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2
+
+USE_AUTOTOOLS=	libtool
+USE_GNOME=	gtk12
+USE_ICONV=	yes
+GNU_CONFIGURE=	yes
+USE_GETTEXT=	yes
+USE_XORG+=	x11 xft
+LDFLAGS+=	-L${LOCALBASE}/lib -liconv
+CFLAGS+=	`pkg-config xft --cflags`
+CONFIGURE_ARGS=	--sbindir=${PREFIX}/bin \
+		--without-gnome
+USE_LDCONFIG=	yes
+
+MAN8=		gdkxft_sysinstall.8
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|gtk-config --prefix|$$GTK_CONFIG --prefix|g ; \
+		 s|libgdk.la|libgdk-12.so|g ; \
+		 s|libgdk.so|libgdk-12.so|g ; \
+		 s|GDK_DLOPEN_NAME=.*$$|GDK_DLOPEN_NAME="libgdk-12.so"|g' \
+			${WRKSRC}/configure
+	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
+		's|src capplet|src @BUILD_CAPPLET_TRUE@capplet|g ; \
+		 s|DESTDIR)\$$(datadir|DESTDIR)\$$(pkgdatadir|g ; \
+		 s|la_LDFLAGS =.*$$|la_LDFLAGS = -module -avoid-version|g'
+.for file in gdkxft_sysinstall.in gdkxft.c generate.pl
+	@${REINPLACE_CMD} -e 's|gtk-config |${GTK_CONFIG:T} |g' \
+	  ${WRKSRC}/src/${file}
+.endfor
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
