@@ -148,13 +148,13 @@ MAKE_ARGS+=	CONF_OPT_GUI="--enable-gui=athena" ${I18N}
 .  elif defined(WITH_GTK2)
 USE_GNOME=	gtk20
 MAKE_ARGS+=	CONF_OPT_GUI="--enable-gui=gtk2 --with-gtk-prefix=${LOCALBASE}" ${I18N}
-MAKE_ARGS+=	X_LIBS="$(X_LIBS) -lXt"
+MAKE_ARGS+=	X_LIBS="$(X_LIBS) -lXt -lX11"
 USE_XORG+=	xt
 .  elif defined(WITH_GNOME2)
 USE_GNOME=	libgnomeui
 PKGNAMESUFFIX=	-gnome2
 MAKE_ARGS+=	CONF_OPT_GUI="--enable-gui=gnome2" ${I18N}
-MAKE_ARGS+=	X_LIBS="$(X_LIBS) -lXt"
+MAKE_ARGS+=	X_LIBS="$(X_LIBS) -lXt -X11"
 USE_XORG+=	xt glproto
 .  elif defined(WITH_MOTIF)
 USE_MOTIF=	yes
