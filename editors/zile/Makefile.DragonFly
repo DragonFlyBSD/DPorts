@@ -1,0 +1,3 @@
+# Override lgnuregex on FreeBSD
+
+LDFLAGS= -L${LOCALBASE}/lib
