@@ -1,0 +1,34 @@
+samba3-3.4-honor-all-loopback-ips.patch
+
+commit b6afe7ef236a454d8a6abf104b8846f817378f73
+Author: Björn Jacke <bj@sernet.de>
+Date:   Thu Oct 15 02:02:30 2009 +0200
+
+    util: cope the all loopback addresses IPv4 knows
+    
+    The fact that we just recogniced 127.0.0.1 as loopback IP address and not the
+    rest of the 127.0.0.0/8 IP address range we used the lo interface for sending
+    packages even though we should send them to some more physical interface. This
+    way we ended up with failing WINS registration and so on like in #6348.
+    On the lo interface sendto() returned "Invalid Argument" (EINVAL).
+
+diff --git a/lib/util/util_net.c b/lib/util/util_net.c
+index 0ce495e..0511a28 100644
+--- a/lib/util/util_net.c
++++ b/lib/util/util_net.c
+@@ -353,13 +353,11 @@
+ }
+ 
+ /**
+- * Check if an IPv7 is 127.0.0.1
++ * Check if an IPv4 is in IN_LOOPBACKNET (127.0.0.0/8)
+  */
+ bool is_loopback_ip_v4(struct in_addr ip)
+ {
+-	struct in_addr a;
+-	a.s_addr = htonl(INADDR_LOOPBACK);
+-	return(ip.s_addr == a.s_addr);
++	return ((ntohl(ip.s_addr) & IN_CLASSA_NET) == (IN_LOOPBACKNET << IN_CLASSA_NSHIFT));
+ }
+ 
+ /**
