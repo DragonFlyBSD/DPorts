@@ -1,0 +1,3 @@
+USE_GCC=	4.4
+
+BUILD_DEPENDS+= gm4:${PORTSDIR}/devel/m4
