@@ -111,7 +111,9 @@ opt:=	${O}
 optname:=	${O}
 ALL_OPTIONS+=	${O}
 .if !defined(OPTIONS_DEFINE) || empty(OPTIONS_DEFINE:M${O})
+.  if empty(OPTIONS_EXCLUDE:M${O}) && empty(OPTIONS_EXCLUDE_${ARCH}:M${O})
 OPTIONS_DEFINE+=	${O}
+.  endif
 .endif
 PORT_OPTIONS+=	${O}
 .    elif !defined(optdesc)
