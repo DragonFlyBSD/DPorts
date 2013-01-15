@@ -1,0 +1,29 @@
+# New ports collection makefile for: conglomerate
+# Date created:			Jun 26, 2003
+# Whom:				Pav Lucistnik <pav@oook.cz>
+#
+# $FreeBSD: ports/editors/conglomerate/Makefile,v 1.41 2012/11/17 05:57:12 svnexp Exp $
+
+PORTNAME=	conglomerate
+PORTVERSION=	0.9.1
+PORTREVISION=	11
+CATEGORIES=	editors
+MASTER_SITES=	SF/${PORTNAME}/Conglomerate%20XML%20Editor/${PORTVERSION}
+
+MAINTAINER=	pav@FreeBSD.org
+COMMENT=	GNOME2 visual XML editor with emphasis on DocBook editing
+
+INSTALLS_OMF=	yes
+USE_GMAKE=	yes
+USE_GNOME=	libgnomeui gtksourceview gnomeprefix gnomehack intlhack
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+.include <bsd.port.pre.mk>
+
+.if exists(${LOCALBASE}/libdata/pkgconfig/enchant.pc) || defined(WITH_ENCHANT)
+LIB_DEPENDS+=	enchant.1:${PORTSDIR}/textproc/enchant
+.endif
+
+.include <bsd.port.post.mk>
