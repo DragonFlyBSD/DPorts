@@ -1,0 +1,2 @@
+CONFIGURE_ARGS+=	--disable-dvdread-internal
+CONFIGURE_ARGS+=	--with-dvdread-config=${PREFIX}/bin/dvdread-config

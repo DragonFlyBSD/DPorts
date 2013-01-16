@@ -1,0 +1,47 @@
+# Contains the build infrastructural definitions for both
+# mplayer and mencoder....the variables that we need to set
+# before we include bsd.port.pre.mk
+#
+# $FreeBSD: ports/multimedia/mplayer/Makefile.shared,v 1.21 2012/11/17 05:59:51 svnexp Exp $
+
+MPLAYER_SNAPSHOT_DATE=	2012-07-21
+MPLAYER_PORT_VERSION=	1.1.r${MPLAYER_SNAPSHOT_DATE:S/-//g}
+CATEGORIES?=	multimedia audio
+MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
+DISTNAME=	mplayer-${MPLAYER_PORT_VERSION:S/.r/./g}
+WRKSRC=		${WRKDIR}/mplayer-export-${MPLAYER_SNAPSHOT_DATE}
+
+PROJECTHOST=	bsdistfiles
+
+MAINTAINER?=	thomas.e.zander@googlemail.com
+
+LICENSE=	GPLv2
+
+LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
+		freetype:${PORTSDIR}/print/freetype2
+
+BUILD_DEPENDS=	${LOCALBASE}/bin/yasm:${PORTSDIR}/devel/yasm
+
+USE_XZ=		yes
+USE_GMAKE=	yes
+USE_ICONV=	yes
+USE_NCURSES=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
+		PTHREAD_LIBS="${PTHREAD_LIBS}" \
+		TMPDIR="${WRKSRC}"
+CONFIGURE_ARGS=	--cc="${CC}" \
+		--host-cc="${CC}" \
+		--as="${AS}" \
+		--extra-cflags="-I${PREFIX}/include -I${LOCALBASE}/include" \
+		--extra-libs="-L${PREFIX}/lib" \
+		--disable-bitmap-font \
+		--disable-liba52 \
+		--disable-alsa \
+		--disable-libbs2b \
+		--enable-ass-internal
+
+WANT_GNOME=	yes
+WANT_SDL=	yes
+
+MAKE_JOBS_SAFE=	yes
