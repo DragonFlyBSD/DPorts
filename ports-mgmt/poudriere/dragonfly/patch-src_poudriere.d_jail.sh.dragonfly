@@ -1,6 +1,6 @@
---- /dev/null	2013-01-13 00:57:22.120219888 +0100
-+++ src/poudriere.d/jail.sh.dragonfly	2013-01-12 22:47:47.136450000 +0100
-@@ -0,0 +1,251 @@
+--- /dev/null	2013-01-18 00:32:27.113911335 +0100
++++ src/poudriere.d/jail.sh.dragonfly	2013-01-18 00:32:45.408799000 +0100
+@@ -0,0 +1,244 @@
 +#!/bin/sh
 +#
 +# DragonFly specific
@@ -43,8 +43,7 @@
 +build_and_install_world() {
 +	[ $# -ne 1 ] && eargs quick
 +	local JLOGBASE=${POUDRIERE_DATA}/jailbuild/${JAILNAME}
-+	local ncpus=$(zget slaves)
-+	local factor=`expr ${ncpus} \* 2 - 1`
++	local factor=${PARALLEL_JOBS}
 +	local options="-DNO_GAMES -DNOPROFILE -DNO_BINUTILS221"
 +	local directive
 +	mkdir -p ${JLOGBASE}
@@ -58,31 +57,25 @@
 +	else
 +	   directive=buildworld
 +	fi
-+	msg "${JAILNAME}: making ${directive}"
-+	cd ${JAILMNT}/usr/src && \
-+	  make -j${factor} ${options} ${directive} > \
++	msg "${JAILNAME}: making ${directive} with ${factor} jobs"
++	make -C ${JAILMNT}/usr/src -j${factor} ${options} ${directive} > \
 +	  ${JLOGBASE}/build.log 2>&1 || err 1 "Fail to ${directive}"
 +
 +	msg "${JAILNAME}: making installworld"
-+	cd ${JAILMNT}/usr/src && make ${options} installworld > \
++	make -C ${JAILMNT}/usr/src ${options} installworld > \
 +	  ${JLOGBASE}/install.log 2>&1 || err 1 "Fail to install world"
 +
 +	msg "${JAILNAME}: making distribution"
-+	cd ${JAILMNT}/usr/src/etc && make distribution > \
++	make -C ${JAILMNT}/usr/src/etc distribution > \
 +	  ${JLOGBASE}/distrib.log 2>&1 || err 1 "Fail to make distribution"
 +
 +	# make upgrade required to link device drives (e.g. </dev/video/...)
 +	msg "${JAILNAME}: making world upgrade"
-+	cd ${JAILMNT}/usr/src && make upgrade > \
++	make -C ${JAILMNT}/usr/src upgrade > \
 +	  ${JLOGBASE}/upgrade.log 2>&1 || err 1 "Fail to make world upgrade"
 +
 +	# get out of JAILMNT so we can unmount it if necessary
 +	cd ${POUDRIERE_DATA}
-+
-+	############# DELETE WHEN DRAGONFLY HAS THESE IN BASE ############
-+	cp /usr/gen-dports/DeltaPorts/scripts/share-mk/bsd.port.* \
-+	   ${JAILMNT}/usr/share/mk/
-+	##################################################################
 +}
 +
 +convert_property_version () {

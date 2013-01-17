@@ -1,5 +1,5 @@
 --- src/poudriere.d/jail.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/jail.sh	2012-12-08 13:38:58.420144000 +0100
++++ src/poudriere.d/jail.sh	2013-01-18 00:36:39.729127000 +0100
 @@ -16,70 +16,32 @@
      -q            -- quiet (remove the header in list)
      -J n          -- Run buildworld in parallell with n jobs.
@@ -411,12 +411,13 @@
  ARCH=`uname -m`
  REALARCH=${ARCH}
  START=0
-@@ -416,12 +59,15 @@
+@@ -416,27 +59,28 @@
  QUIET=0
  INFO=0
  UPDATE=0
 +QUICK=0
 +METHOD=git
++JOB_OVERRIDE="0"
  
  SCRIPTPATH=`realpath $0`
  SCRIPTPREFIX=`dirname ${SCRIPTPATH}`
@@ -428,7 +429,12 @@
  	case "${FLAG}" in
  		j)
  			JAILNAME=${OPTARG}
-@@ -433,10 +79,7 @@
+ 			;;
+ 		J)
+-			PARALLEL_JOBS=${OPTARG}
++			JOB_OVERRIDE=${OPTARG}
+ 			;;
+ 		v)
  			VERSION=${OPTARG}
  			;;
  		a)
@@ -440,7 +446,7 @@
  			;;
  		m)
  			METHOD=${OPTARG}
-@@ -447,6 +90,9 @@
+@@ -447,6 +91,9 @@
  		M)
  			JAILMNT=${OPTARG}
  			;;
@@ -450,7 +456,7 @@
  		s)
  			START=1
  			;;
-@@ -480,7 +126,6 @@
+@@ -480,12 +127,16 @@
  	esac
  done
  
@@ -458,7 +464,17 @@
  if [ -n "${JAILNAME}" ] && [ ${CREATE} -eq 0 ]; then
  	JAILFS=`jail_get_fs ${JAILNAME}`
  	JAILMNT=`jail_get_base ${JAILNAME}`
-@@ -505,7 +150,7 @@
+ fi
+ 
++if [ "${JOB_OVERRIDE}" = "0" ]; then
++	PARALLEL_JOBS=$(zget slaves)
++else
++	PARALLEL_JOBS=${JOB_OVERRIDE}
++fi
+ 
+ [ $(( CREATE + LIST + STOP + START + DELETE + INFO + UPDATE )) -lt 1 ] && usage
+ 
+@@ -505,7 +156,7 @@
  		export SET_STATUS_ON_START=0
  		test -z ${JAILNAME} && usage
  		jail_start
@@ -467,7 +483,7 @@
  		jrun 1
  		;;
  	0000100)
-@@ -518,6 +163,6 @@
+@@ -518,6 +169,6 @@
  		;;
  	0000001)
  		test -z ${JAILNAME} && usage
