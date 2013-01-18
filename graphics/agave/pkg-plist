@@ -1,0 +1,40 @@
+bin/agave
+share/applications/agave.desktop
+share/agave/palettes/Gnome-Palette.gpl
+share/agave/palettes/Tango-Palette.gpl
+share/agave/palettes/Visibone.gpl
+share/agave/palettes/Web.gpl
+share/agave/pixmaps/darken.png
+share/agave/pixmaps/desaturate.png
+share/agave/pixmaps/lighten.png
+share/agave/pixmaps/saturate.png
+share/agave/ui/agave.glade
+share/agave/ui/agave.ui
+share/agave/ui/bookmarkspopup.ui
+share/gnome/help/agave/C/agave.xml
+share/gnome/help/agave/C/figures/gtk-color-selector.png
+share/gnome/help/agave/C/figures/main-window.png
+share/gnome/help/agave/C/legal.xml
+share/omf/agave/agave-C.omf
+share/icons/hicolor/48x48/apps/agave-icon.png
+share/icons/hicolor/scalable/apps/agave-icon.svg
+share/locale/bg/LC_MESSAGES/agave.mo
+share/locale/ca/LC_MESSAGES/agave.mo
+share/locale/cs/LC_MESSAGES/agave.mo
+share/locale/de/LC_MESSAGES/agave.mo
+share/locale/es_ES/LC_MESSAGES/agave.mo
+share/locale/it/LC_MESSAGES/agave.mo
+share/locale/nl/LC_MESSAGES/agave.mo
+share/locale/pt_BR/LC_MESSAGES/agave.mo
+share/locale/ru/LC_MESSAGES/agave.mo
+share/locale/sv/LC_MESSAGES/agave.mo
+share/locale/zh_TW/LC_MESSAGES/agave.mo
+@dirrm share/omf/agave
+@dirrm share/gnome/help/agave/C/figures
+@dirrm share/gnome/help/agave/C
+@dirrm share/gnome/help/agave
+@dirrm share/agave/ui
+@dirrm share/agave/pixmaps
+@dirrm share/agave/palettes
+@dirrm share/agave
+@dirrmtry share/applications
