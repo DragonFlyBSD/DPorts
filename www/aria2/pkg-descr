@@ -1,0 +1,19 @@
+aria2 has a segmented downloading engine in its core. Therefore, it
+can download files a lot faster than ordinary browsers. Currently it
+has following features:
+* HTTP/HTTPS GET support
+* HTTP Proxy support
+* HTTP BASIC authentication support
+* HTTP Proxy authentication support
+* FTP support (active, passive mode)
+* FTP through HTTP proxy (GET command or tunneling)
+* Segmented download
+* Cookie support (currently aria2 ignores "expires")
+* It can run as a daemon process
+* BitTorrent protocol support with fast extension
+* Selective download in multi-file torrent
+* Metalink version 3.0 support (HTTP/FTP/BitTorrent)
+* Limiting download/upload speed
+
+Author: Tatsuhiro Tsujikawa <tujikawa at users dot sourceforge dot net>
+WWW: http://aria2.sourceforge.net/
