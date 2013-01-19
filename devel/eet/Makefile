@@ -1,11 +1,11 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: ports/devel/eet/Makefile,v 1.36 2012/12/22 21:09:44 svnexp Exp $
+# $FreeBSD: ports/devel/eet/Makefile,v 1.37 2013/01/15 17:45:58 svnexp Exp $
 
 PORTNAME=	eet
-PORTVERSION=	1.7.4
+PORTVERSION=	1.7.5
 PORTEPOCH=	2
 CATEGORIES=	devel enlightenment
-MASTER_SITES=	http://download.enlightenment.org/releases/ \
+MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
 
 MAINTAINER=	gblach@FreeBSD.org
