@@ -467,7 +467,7 @@
  fi
  
 +if [ "${JOB_OVERRIDE}" = "0" ]; then
-+	PARALLEL_JOBS=$(zget slaves)
++	PARALLEL_JOBS=$(sysctl -n hw.ncpu)
 +else
 +	PARALLEL_JOBS=${JOB_OVERRIDE}
 +fi
