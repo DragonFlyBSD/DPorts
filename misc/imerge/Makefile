@@ -2,11 +2,11 @@
 # Date created:		18 January 2007
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/misc/imerge/Makefile,v 1.4 2012/12/05 03:27:34 svnexp Exp $
+# $FreeBSD: ports/misc/imerge/Makefile,v 1.5 2012/12/25 19:44:22 svnexp Exp $
 #
 
 PORTNAME=	imerge
-PORTVERSION=	0.2.3
+PORTVERSION=	0.2.4
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.iDaemons.org/pub/distfiles/ \
 		${MASTER_SITE_LOCAL}
