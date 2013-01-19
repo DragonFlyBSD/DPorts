@@ -2,12 +2,12 @@
 # Date created:			        Oct 14, 2008
 # Whom:				        Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/glog/Makefile,v 1.11 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: ports/devel/glog/Makefile,v 1.12 2013/01/10 22:43:08 svnexp Exp $
 #
 
 PORTNAME=	glog
 PORTVERSION=	0.3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
@@ -15,7 +15,7 @@ MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	A library of C++ classes for flexible logging
 
 LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
-		gflags.2:${PORTSDIR}/devel/gflags
+		gflags:${PORTSDIR}/devel/gflags
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack
