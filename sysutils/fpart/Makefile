@@ -2,11 +2,11 @@
 # Date created:		24 Nov 2011
 # Whom:			Ganael Laplanche <ganael.laplanche@martymac.org>
 #
-# $FreeBSD: ports/sysutils/fpart/Makefile,v 1.5 2012/11/17 06:01:30 svnexp Exp $
+# $FreeBSD: ports/sysutils/fpart/Makefile,v 1.6 2013/01/09 15:18:59 svnexp Exp $
 #
 
 PORTNAME=	fpart
-PORTVERSION=	0.4
+PORTVERSION=	0.5
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 		http://contribs.martymac.org/fpart/
