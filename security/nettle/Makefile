@@ -1,13 +1,8 @@
-# ex:ts=8
-# New ports collection makefile for:	nettle
-# Date created:			Dec 6, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/nettle/Makefile,v 1.36 2012/11/17 06:01:08 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/security/nettle/Makefile,v 1.37 2013/01/17 20:42:39 svnexp Exp $
 
 PORTNAME=	nettle
-PORTVERSION=	2.5
+PORTVERSION=	2.6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNU} \
 		http://www.lysator.liu.se/~nisse/archive/:liu \
