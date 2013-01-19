@@ -54,7 +54,7 @@ EXTRA_PATCHES+=	${WITH_JDK_PATCH}
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64" || ${ARCH} == "sparc64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "sparc64"
 CONFIGURE_ARGS+=	--with-pic
 .endif
 
