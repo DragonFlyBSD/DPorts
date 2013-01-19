@@ -1,6 +1,6 @@
---- /dev/null	2013-01-13 11:28:41.706888515 +0100
-+++ src/poudriere.d/common.sh.hammer	2013-01-13 11:28:47.752742000 +0100
-@@ -0,0 +1,810 @@
+--- /dev/null	2013-01-19 01:59:17.084496842 +0100
++++ src/poudriere.d/common.sh.hammer	2013-01-19 01:57:53.266620000 +0100
+@@ -0,0 +1,815 @@
 +#!/bin/sh
 +
 +zget() {
@@ -629,7 +629,12 @@
 +check_jobs() {
 +	case ${PARALLEL_JOBS} in
 +	''|*[!0-9]*)
-+		PARALLEL_JOBS=$(zget slaves)
++		local nslaves=$(zget slaves)
++		if [ -n "${JOBS_LIMIT}" ]; then
++			PARALLEL_JOBS=`expr ${nslaves} / ${JOBS_LIMIT}`
++		else
++			PARALLEL_JOBS=${nslaves}
++		fi
 +		;;
 +	esac
 +}

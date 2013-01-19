@@ -1,5 +1,5 @@
 --- src/poudriere.d/ports.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/ports.sh	2012-12-23 18:32:34.347885000 +0100
++++ src/poudriere.d/ports.sh	2013-01-19 01:57:53.266620000 +0100
 @@ -21,12 +21,11 @@
                       them.
      -p name       -- specifies the name of the portstree we workon . If not
@@ -36,7 +36,7 @@
  			;;
  		d)
  			DELETE=1
-@@ -77,166 +78,72 @@
+@@ -77,175 +78,79 @@
  
  [ $(( CREATE + UPDATE + DELETE + LIST )) -lt 1 ] && usage
  
@@ -235,4 +235,14 @@
 + 		;;
  	git)
  		msg "Pulling from ${GIT_URL}"
- 		cd ${PORTSMNT:-${PTMNT}} && git pull
+-		cd ${PORTSMNT:-${PTMNT}} && git pull
++		cd ${PTFS} && git pull
+ 		echo " done"
+ 		;;
+ 	*)
+ 		err 1 "Undefined upgrade method"
+ 		;;
+ 	esac
+-
+-	date +%s > ${PORTSMNT:-${PTMNT}}/.poudriere.stamp
+ fi

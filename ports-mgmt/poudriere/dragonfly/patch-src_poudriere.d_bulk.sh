@@ -1,5 +1,5 @@
 --- src/poudriere.d/bulk.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/bulk.sh	2013-01-13 11:58:18.345215000 +0100
++++ src/poudriere.d/bulk.sh	2013-01-19 01:57:53.266620000 +0100
 @@ -10,12 +10,12 @@
  Options:
      -c          -- Clean the previous built binary packages
@@ -48,7 +48,7 @@
  export SKIPSANITY
  
  STATUS=0 # out of jail #
-@@ -123,16 +129,18 @@
+@@ -123,15 +129,21 @@
  	rm -f ${LOGD}/*.log 2>/dev/null
  fi
  
@@ -65,11 +65,13 @@
  fi
  
 -zfs snapshot ${JAILFS}@prepkg
--
++if [ -n "${JOBS_LIMIT}" ]; then
++	echo "MAKE_JOBS_NUMBER=${JOBS_LIMIT}" >> ${JAILMNT}/etc/make.conf
++fi
+ 
  parallel_build || : # Ignore errors as they are handled below
  
- zset status "done:"
-@@ -142,7 +150,7 @@
+@@ -142,7 +154,7 @@
  failed=$(cat ${JAILMNT}/poudriere/ports.failed | awk '{print $1 ":" $2 }' | xargs echo)
  built=$(cat ${JAILMNT}/poudriere/ports.built | xargs echo)
  ignored=$(cat ${JAILMNT}/poudriere/ports.ignored | awk '{print $1}' | xargs echo)
@@ -78,7 +80,7 @@
  nbfailed=$(zget stats_failed)
  nbignored=$(zget stats_ignored)
  nbskipped=$(zget stats_skipped)
-@@ -159,20 +167,22 @@
+@@ -159,20 +171,22 @@
  		msg "No package built, no need to update INDEX"
  	fi
  elif [ $PKGNG -eq 1 ]; then
@@ -115,7 +117,7 @@
  	fi
  else
  	if [ -n "${NO_RESTRICTED}" ]; then
-@@ -319,4 +329,7 @@
+@@ -319,4 +333,7 @@
  
  set +e
  
