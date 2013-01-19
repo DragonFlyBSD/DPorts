@@ -1,8 +1,7 @@
-# $FreeBSD: ports/mail/sendmail/Makefile,v 1.150 2012/12/10 15:19:15 svnexp Exp $
+# $FreeBSD: ports/mail/sendmail/Makefile,v 1.151 2012/12/25 13:59:29 svnexp Exp $
 
 PORTNAME=	sendmail
-PORTVERSION=	8.14.5
-PORTREVISION=	1
+PORTVERSION=	8.14.6
 CATEGORIES=	mail ipv6
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		${MASTER_SITE_RINGSERVER:S,%SUBDIR%,net/mail/sendmail/&,}
