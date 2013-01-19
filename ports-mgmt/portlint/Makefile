@@ -1,12 +1,11 @@
-# Created by:			Jun-ichiro itojun Hagino <itojun@itojun.org>
-#
-# $FreeBSD: ports/ports-mgmt/portlint/Makefile,v 1.155 2012/11/17 06:00:46 svnexp Exp $
+# Created by: Jun-ichiro itojun Hagino <itojun@itojun.org>
+# $FreeBSD: ports/ports-mgmt/portlint/Makefile,v 1.157 2012/12/30 06:28:27 svnexp Exp $
 #
 # This port is self contained in the src directory.
 #
 
 PORTNAME=	portlint
-PORTVERSION=	2.13.13
+PORTVERSION=	2.14.1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none
