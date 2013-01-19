@@ -1,6 +1,7 @@
-@comment $FreeBSD: ports/devel/distcc/pkg-plist,v 1.16 2012/11/17 05:55:40 svnexp Exp $
+@comment $FreeBSD: ports/devel/distcc/pkg-plist,v 1.17 2013/01/02 23:47:06 svnexp Exp $
 bin/distcc
 bin/distccmon-text
+bin/lsdistcc
 %%WITH_GNOME%%bin/distccmon-gnome
 sbin/distccd
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS

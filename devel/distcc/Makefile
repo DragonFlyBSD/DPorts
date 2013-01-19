@@ -2,13 +2,13 @@
 # Date created:				25 June 2002
 # Whom:					Frerich Raabe <frerich.raabe@gmx.de>
 #
-# $FreeBSD: ports/devel/distcc/Makefile,v 1.74 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: ports/devel/distcc/Makefile,v 1.75 2013/01/02 23:47:06 svnexp Exp $
 #   $MCom: ports/devel/distcc/Makefile,v 1.3 2007/10/21 02:46:13 ahze Exp $
 #
 
 PORTNAME=	distcc
 PORTVERSION=	3.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
@@ -89,6 +89,7 @@ DOC_FILES=	AUTHORS INSTALL NEWS README \
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/distcc ${PREFIX}/bin
 	@${INSTALL_PROGRAM} ${WRKSRC}/distccmon-text ${PREFIX}/bin
+	@${INSTALL_PROGRAM} ${WRKSRC}/lsdistcc ${PREFIX}/bin
 .if defined(WITH_GNOME) || defined(WITH_GTK)
 	@${INSTALL_PROGRAM} ${WRKSRC}/distccmon-gnome ${PREFIX}/bin
 .endif
