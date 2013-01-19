@@ -1,9 +1,9 @@
-# Created by: Matt Lancereau <ports@FreeBSD.org>
-# $FreeBSD: ports/x11/libexo/Makefile,v 1.56 2012/12/14 17:44:02 svnexp Exp $
+# Created by: Matt Lancereau
+# $FreeBSD: ports/x11/libexo/Makefile,v 1.57 2012/12/31 00:57:47 svnexp Exp $
 #
 
 PORTNAME=	libexo
-PORTVERSION=	0.10.1
+PORTVERSION=	0.10.2
 CATEGORIES=	x11 xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/xfce/exo/${PORTVERSION:R}
