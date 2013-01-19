@@ -1,12 +1,8 @@
-# New ports collection makefile for:	cakephp2
-# Date created:        			20 February 2012
-# Whom:                			Christoph Theis <theis@gmx.at>
-#
-# $FreeBSD: ports/www/cakephp22/Makefile,v 1.4 2012/11/17 06:02:29 svnexp Exp $
-#
+# Created by: Christoph Theis <theis@gmx.at>
+# $FreeBSD: ports/www/cakephp22/Makefile,v 1.5 2013/01/18 23:56:04 svnexp Exp $
 
 PORTNAME=	cakephp
-PORTVERSION=	2.2.2
+PORTVERSION=	2.2.5
 CATEGORIES=	www
 
 MAINTAINER=	pphillips@experts-exchange.com
@@ -16,7 +12,7 @@ LICENSE=	MIT
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	${PORTNAME}
-GH_COMMIT=	ac41b42
+GH_COMMIT=	26b5425
 
 PORTDOCS=	README.md
 
