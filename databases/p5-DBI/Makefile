@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-DBI/Makefile,v 1.90 2012/11/17 05:55:14 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBI/Makefile,v 1.91 2013/01/03 09:47:58 svnexp Exp $
 
 PORTNAME=	DBI
-PORTVERSION=	1.622
+PORTVERSION=	1.623
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
