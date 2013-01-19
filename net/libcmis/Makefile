@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libcmis
-# Date created:		2012-01-22
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/net/libcmis/Makefile,v 1.3 2012/11/17 06:00:04 svnexp Exp $
-#
+# $FreeBSD: ports/net/libcmis/Makefile,v 1.4 2013/01/08 17:12:37 svnexp Exp $
 
 PORTNAME=	libcmis
 PORTVERSION=	0.1.0
+PORTREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	SF/${PORTNAME}
 
@@ -16,7 +12,7 @@ COMMENT=	Client library for the CMIS interface
 LICENSE=	LGPL20 MPL GPLv2
 LICENSE_COMB=	dual
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 BUILD_DEPENDS=	${LOCALBASE}/lib/libcppunit.so:${PORTSDIR}/devel/cppunit \
 		${LOCALBASE}/lib/libboost_regex.a:${PORTSDIR}/devel/boost-libs
 
@@ -24,5 +20,7 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	libxml2 gnomehack
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+
+CONFIGURE_ARGS=	--disable-client
 
 .include <bsd.port.mk>
