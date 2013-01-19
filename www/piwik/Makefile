@@ -1,8 +1,8 @@
-# Created by:	Wen heping <wenheping@gmail.com>
-# $FreeBSD: ports/www/piwik/Makefile,v 1.47 2012/11/17 06:02:58 svnexp Exp $
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: ports/www/piwik/Makefile,v 1.49 2013/01/18 07:59:08 svnexp Exp $
 
 PORTNAME=	piwik
-PORTVERSION=	1.9.2
+PORTVERSION=	1.10.1
 CATEGORIES=	www
 MASTER_SITES=	http://builds.piwik.org/
 
