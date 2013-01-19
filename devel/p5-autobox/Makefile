@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-autobox
-# Date created:				25 July 2009
-# Whom:					Bill Brinzer <bill.brinzer@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-autobox/Makefile,v 1.8 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Bill Brinzer <bill.brinzer@gmail.com>
+# $FreeBSD: ports/devel/p5-autobox/Makefile,v 1.9 2013/01/13 20:53:48 svnexp Exp $
 
 PORTNAME=	autobox
-PORTVERSION=	2.75
+PORTVERSION=	2.77
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:CHOCOLATE
