@@ -1,8 +1,8 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: ports/mail/opendkim/Makefile,v 1.19 2012/12/13 21:46:47 svnexp Exp $
+# $FreeBSD: ports/mail/opendkim/Makefile,v 1.20 2013/01/07 19:44:35 svnexp Exp $
 
 PORTNAME=		opendkim
-PORTVERSION=		2.7.3
+PORTVERSION=		2.7.4
 CATEGORIES=		mail security
 MASTER_SITES=		SF
 MASTER_SITE_SUBDIR=	${PORTNAME} \
