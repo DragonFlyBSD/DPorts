@@ -1,13 +1,13 @@
-# $FreeBSD: ports/www/dojo/Makefile,v 1.19 2012/11/17 06:02:31 svnexp Exp $
+# $FreeBSD: ports/www/dojo/Makefile,v 1.20 2013/01/16 20:21:06 svnexp Exp $
 
 PORTNAME=		dojo
-PORTVERSION=		1.8.1
+PORTVERSION=		1.8.3
 CATEGORIES=		www
 MASTER_SITES=		http://download.dojotoolkit.org/release-${PORTVERSION}/
 DISTNAME=		dojo-release-${PORTVERSION}
 
 MAINTAINER=		glarkin@FreeBSD.org
-COMMENT=		An open-source DHTML toolkit written in JavaScript
+COMMENT=		Open-source DHTML toolkit written in JavaScript
 
 NO_BUILD=		yes
 
