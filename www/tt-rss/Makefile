@@ -1,9 +1,9 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
 #
-# $FreeBSD: ports/www/tt-rss/Makefile,v 1.21 2012/11/17 15:56:07 svnexp Exp $
+# $FreeBSD: ports/www/tt-rss/Makefile,v 1.22 2012/12/23 22:17:35 svnexp Exp $
 
 PORTNAME=	tt-rss
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.2
 CATEGORIES=	www
 MASTER_SITES=	http://tt-rss.org/download/
 
