@@ -1,12 +1,9 @@
-# New ports collection makefile for:	intercal
-# Date created:        20 March 1998
-# Whom:                Matthew Hunt <mph@freebsd.org>
-#
-# $FreeBSD: ports/lang/intercal/Makefile,v 1.15 2012/11/17 05:58:51 svnexp Exp $
-#
+# Created by: Matthew Hunt <mph@freebsd.org>
+# $FreeBSD: ports/lang/intercal/Makefile,v 1.16 2012/12/31 15:23:18 svnexp Exp $
 
 PORTNAME=	intercal
 PORTVERSION=	0.29
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.catb.org/~esr/intercal/
 
@@ -25,4 +22,10 @@ post-patch:
 	@${REINPLACE_CMD} -e '/ICK_SPECIFIC_SUBDIR/s/-@PACKAGE_VERSION@// ' \
 		${WRKSRC}/buildaux/Makefile.in
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 900000
+USE_GCC=	4.6+
+.endif
+
+.include <bsd.port.post.mk>
