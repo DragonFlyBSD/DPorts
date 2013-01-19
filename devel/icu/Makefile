@@ -1,8 +1,8 @@
 # Created by: dwm
-# $FreeBSD: ports/devel/icu/Makefile,v 1.54 2012/12/18 23:07:59 svnexp Exp $
+# $FreeBSD: ports/devel/icu/Makefile,v 1.57 2013/01/08 20:41:59 svnexp Exp $
 
 PORTNAME=	icu
-PORTVERSION=	50.1
+PORTVERSION=	50.1.1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.icu-project.org/files/icu4c/${PORTVERSION}/ \
 		SF/${PORTNAME}/ICU4C/${PORTVERSION}/
@@ -53,12 +53,8 @@ MAN8+=	genccode.8
 MAN8+=	gencmn.8
 MAN8+=	gensprep.8
 
-ICUMAJOR=	50
-ICUMINOR=	1
-.if ${ICUMINOR} == ""
-ICUMINOR=	0
-.endif
-PLIST_SUB+=	ICUMAJOR=${ICUMAJOR} ICUMINOR=${ICUMINOR} ICUVER=${PORTVERSION}
+ICUMAJOR=	${PORTVERSION:C/\..*//}
+PLIST_SUB+=	ICUMAJOR=${ICUMAJOR} ICUVER=${PORTVERSION}
 
 .include <bsd.port.pre.mk>
 
@@ -88,6 +84,6 @@ iotest cintltst intltest:
 	    LD_LIBRARY_PATH=${WRKSRC}/lib:${WRKSRC}/tools/ctestfw \
 	    ./${.TARGET}
 
-post-build test regression-test: iotest cintltst intltest
+test regression-test: iotest cintltst intltest
 
 .include <bsd.port.post.mk>
