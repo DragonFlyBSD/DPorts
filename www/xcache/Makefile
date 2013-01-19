@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/www/xcache/Makefile,v 1.20 2012/12/10 14:59:33 svnexp Exp $
+# $FreeBSD: ports/www/xcache/Makefile,v 1.21 2013/01/10 13:02:37 svnexp Exp $
 
 PORTNAME=	xcache
-DISTVERSION=	3.0.0
+DISTVERSION=	3.0.1-rc1
 CATEGORIES=	www
 MASTER_SITES=	http://xcache.lighttpd.net/pub/Releases/${DISTVERSION}/
 
@@ -15,7 +15,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
 USE_PHP=	yes
 USE_PHPIZE=	yes
-USE_GMAKE=	yes
 
 CONFIGURE_ARGS=	--enable-xcache=shared
 
