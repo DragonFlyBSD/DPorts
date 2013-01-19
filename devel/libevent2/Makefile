@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libevent2
-# Date created:				22 February 2011
-# Whom:					Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libevent2/Makefile,v 1.15 2012/11/17 05:55:54 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: ports/devel/libevent2/Makefile,v 1.17 2013/01/07 11:43:39 svnexp Exp $
 
 PORTNAME=	libevent2
-DISTVERSION=	2.0.20
+PORTVERSION=	2.0.21
 CATEGORIES=	devel
 MASTER_SITES=	http://cloud.github.com/downloads/libevent/libevent/
 DISTNAME=	${PORTNAME:S/2//}-${DISTVERSION}-stable
@@ -22,32 +18,30 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LDFLAGS="${LDFLAGS}"
 USE_LDCONFIG=	${PREFIX}/lib/event2
 
-OPTIONS=	OPENSSL "Enable OpenSSL support" on \
-		THREADS "Enable threads support" on
+OPTIONS_DEFINE=	OPENSSL THREADS
+OPTIONS_DEFAULT=	OPENSSL THREADS
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/event2
 
 .include <bsd.port.options.mk>
 
-.if !defined(WITH_OPENSSL)
-CONFIGURE_ARGS+=	--disable-openssl
-PLIST_SUB+=		OPENSSL="@comment "
-.else
+.if ${PORT_OPTIONS:MOPENSSL}
 USE_OPENSSL=	yes
 CPPFLAGS+=	-I${OPENSSLINC}
 LDFLAGS+=	-L${OPENSSLLIB}
 PLIST_SUB+=		OPENSSL=""
+.else
+CONFIGURE_ARGS+=	--disable-openssl
+PLIST_SUB+=		OPENSSL="@comment "
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if !defined(WITH_THREADS)
-CONFIGURE_ARGS+=	--disable-thread-support
-PLIST_SUB+=		THREADS="@comment "
-.else
+.if ${PORT_OPTIONS:MTHREADS}
 CONFIGURE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 			PTHREAD_LIBS="${PTHREAD_LIBS}"
 PLIST_SUB+=		THREADS=""
+.else
+CONFIGURE_ARGS+=	--disable-thread-support
+PLIST_SUB+=		THREADS="@comment "
 .endif
 
 post-patch:
@@ -61,4 +55,4 @@ post-install:
 regression-test: build
 	@(${SH} ${WRKSRC}/test/regress)
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
