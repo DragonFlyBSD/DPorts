@@ -1,0 +1,11 @@
+$FreeBSD: ports/www/bluefish/pkg-message,v 1.1 2013/01/10 21:56:24 svnexp Exp $
+----------------------------------------------------------------------------
+WARNING:
+
+DUE CHANGE OF tidy to tidy4
+
+If ~/.bluefish exists, the commands should be manually fixed opening the 
+preferences window (Edit->Preferences) and then changing tidy to tidy4 in
+"External filters" and "Output parser" preferences.
+
+----------------------------------------------------------------------------
