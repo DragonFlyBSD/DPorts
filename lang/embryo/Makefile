@@ -1,12 +1,12 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: ports/lang/embryo/Makefile,v 1.36 2012/11/17 05:58:49 svnexp Exp $
+# $FreeBSD: ports/lang/embryo/Makefile,v 1.38 2013/01/15 17:46:00 svnexp Exp $
 
 PORTNAME=	embryo
-DISTVERSION=	1.1.0
+PORTVERSION=	1.7.5
 PORTEPOCH=	2
 CATEGORIES=	lang enlightenment
-MASTER_SITES=	http://download.enlightenment.org/releases/ \
-		http://files.roorback.net/e17/2011-12-02/base/
+MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+		LOCAL/gblach/e17/
 
 MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	A C like scripting language used in Enlightenment
@@ -20,4 +20,10 @@ USE_EFL=	eina libtool_hack librt_hack
 USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 803000
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-src-lib-embryo_float.c
+.endif
+
+.include <bsd.port.post.mk>
