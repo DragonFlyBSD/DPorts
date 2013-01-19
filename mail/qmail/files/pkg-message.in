@@ -1,0 +1,7 @@
+	ATTENTION:
+
+You should also add %%PREFIX%%/man to your MANPATH (see manpath(1)
+or login.conf(5)).
+
+You can enable qmail as your default mailer executing:
+> %%PREFIX%%/scripts/enable-qmail
