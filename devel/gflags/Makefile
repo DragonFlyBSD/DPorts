@@ -2,11 +2,11 @@
 # Date created:				19 December 2006
 # Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gflags/Makefile,v 1.15 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: ports/devel/gflags/Makefile,v 1.16 2013/01/09 19:16:47 svnexp Exp $
 #
 
 PORTNAME=	gflags
-PORTVERSION=	1.6
+PORTVERSION=	1.7
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
