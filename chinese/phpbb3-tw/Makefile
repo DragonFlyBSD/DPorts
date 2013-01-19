@@ -1,12 +1,8 @@
-# New ports collection makefile for:	phpbb3-tw
-# Date created:		2010-11-08
-# Whom:			Bo-Yi Wu <appleboy.tw@gmail.com>
-#
-# $FreeBSD: ports/chinese/phpbb3-tw/Makefile,v 1.6 2012/11/17 05:54:58 svnexp Exp $
-#
+# Created by: Bo-Yi Wu <appleboy.tw@gmail.com>
+# $FreeBSD: ports/chinese/phpbb3-tw/Makefile,v 1.7 2012/12/29 07:46:12 svnexp Exp $
 
 PORTNAME=	phpbb
-PORTVERSION=	3.0.10
+PORTVERSION=	3.0.11
 CATEGORIES=	chinese www
 MASTER_SITES=	http://www.phpbb-tw.net/phpbb/download/ \
 		http://freebsd.ee.ccu.edu.tw/phpBB/
