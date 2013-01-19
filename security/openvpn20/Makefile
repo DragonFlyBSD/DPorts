@@ -1,13 +1,9 @@
-# New ports collection makefile for:	openvpn
-# Date created:		2002-06-23
-# Whom:			Matthias Andree <matthias.andree@gmx.de>
-#
-# $FreeBSD: ports/security/openvpn20/Makefile,v 1.51 2012/11/17 06:01:09 svnexp Exp $
-#
+# Created by: Matthias Andree <matthias.andree@gmx.de>
+# $FreeBSD: ports/security/openvpn20/Makefile,v 1.53 2013/01/11 23:43:25 svnexp Exp $
 
 PORTNAME=	openvpn
 PORTVERSION=	2.0.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security net
 # MASTER_SITES points to hosts in distinct data centers,
 # so just one MASTER_SITES entry should be OK.
@@ -15,6 +11,9 @@ MASTER_SITES=	http://openvpn.net/release/
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Secure IP/Ethernet tunnel daemon
+
+DEPRECATED=		Please migrate to a newer OpenVPN version
+EXPIRATION_DATE=	2013-07-11
 
 LATEST_LINK=	openvpn20
 CONFLICTS_INSTALL=	openvpn-2.[!0]* openvpn-beta-[0-9]* openvpn-devel-[0-9]*
@@ -26,12 +25,13 @@ CONFIGURE_ARGS=	--with-lzo-lib=${LOCALBASE}/lib \
 
 MAN8=		openvpn.8
 
-OPTIONS=	PW_SAVE "Interactive passwords may be read from a file" off
+OPTIONS_DEFINE=	PW_SAVE
+PW_SAVE_DESC=	Interactive passwords may be read from a file
 
 USE_RC_SUBR=	openvpn
 USE_LDCONFIG=	${PREFIX}/lib
 
-LIB_DEPENDS+=	lzo2.2:${PORTSDIR}/archivers/lzo2
+LIB_DEPENDS+=	lzo2:${PORTSDIR}/archivers/lzo2
 
 SUB_FILES=	pkg-message
 SUB_LIST+=	OSVERSION=${OSVERSION}
@@ -58,8 +58,10 @@ pre-fetch:
 	@${ECHO} ""
 .endif
 
-.if defined(WITH_PW_SAVE)
+.if ${PORT_OPTIONS:MPW_SAVE}
 CONFIGURE_ARGS+=	--enable-password-save
+.else
+CONFIGURE_ARGS+=	--disable-password-save
 .endif
 
 post-patch:
@@ -79,7 +81,7 @@ post-install:
 	${MKDIR} ${PREFIX}/lib
 	${INSTALL_PROGRAM} ${WRKSRC}/plugin/down-root/openvpn-down-root.so ${PREFIX}/lib
 	${INSTALL_PROGRAM} ${WRKSRC}/plugin/auth-pam/openvpn-auth-pam.so ${PREFIX}/lib
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/plugin/down-root/README ${DOCSDIR}/README.openvpn-down-root
 	${INSTALL_DATA} ${WRKSRC}/plugin/auth-pam/README ${DOCSDIR}/README.openvpn-auth-pam
