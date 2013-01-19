@@ -55,6 +55,8 @@ post-patch:
 		-e 's|RELEASE}.0|RELEASE}|' \
 		-e 's|LIBDIR}/pkgconfig|LIBDIR}data/pkgconfig|' \
 		${WRKSRC}/CMakeLists.txt
+	cp ${WRKSRC}/scripts/makefile.freebsd \
+	   ${WRKSRC}/scripts/makefile.dragonfly
 
 post-build:
 	@(cd ${BUILD_WRKSRC}; if ! ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS} test; then \
