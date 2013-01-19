@@ -1,8 +1,8 @@
 # Created by: Jeremy Norris <ishmael127@home.com>
-# $FreeBSD: ports/graphics/feh/Makefile,v 1.57 2012/11/17 05:58:05 svnexp Exp $
+# $FreeBSD: ports/graphics/feh/Makefile,v 1.58 2013/01/15 16:46:54 svnexp Exp $
 
 PORTNAME=	feh
-PORTVERSION=	2.7
+PORTVERSION=	2.8
 CATEGORIES=	graphics
 MASTER_SITES=	http://feh.finalrewind.org/ \
 		${MASTER_SITE_LOCAL}
