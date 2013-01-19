@@ -1,26 +1,23 @@
-# New ports collection makefile for:	cxref
-# Date created:		23 October 1996
-# Whom:			Thomas Gellekum <tg@freebsd.org>
-#
-# $FreeBSD: ports/devel/cxref/Makefile,v 1.35 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@freebsd.org>
+# $FreeBSD: ports/devel/cxref/Makefile,v 1.36 2013/01/16 09:01:56 svnexp Exp $
 
 PORTNAME=	cxref
-PORTVERSION=	1.6c
-PORTREVISION=	0
+PORTVERSION=	1.6d
 CATEGORIES=	devel
 MASTER_SITES=	http://www.gedanken.demon.co.uk/download-cxref/ \
-		${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	devel/lang/c
+		http://fossies.org/linux/misc/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C program cross-referencing & documentation tool
 
+LICENSE=	GPLv2
+
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-cxref-cpp
 ALL_TARGET=	programs
+MAKE_JOBS_SAFE=	yes
 
 MAN1=		cxref.1 cxref-query.1
 
