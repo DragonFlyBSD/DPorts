@@ -1,8 +1,8 @@
 # Created by: Dominic Marks <d.marks@student.umist.ac.uk>
-# $FreeBSD: ports/devel/ccache/Makefile,v 1.74 2012/11/17 05:55:36 svnexp Exp $
+# $FreeBSD: ports/devel/ccache/Makefile,v 1.76 2013/01/15 13:46:53 svnexp Exp $
 
 PORTNAME=	ccache
-PORTVERSION=	3.1.8
+PORTVERSION=	3.1.9
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/ccache/ CRITICAL
 
@@ -21,7 +21,7 @@ MAN1=		ccache.1
 
 PORTDOCS=	ccache-howto-freebsd.txt MANUAL.html
 
-OPTIONS_DEFINE=	CLANGLINK LLVMLINK STATIC
+OPTIONS_DEFINE=	CLANGLINK LLVMLINK STATIC DOCS
 
 CLANGLINK_DESC=	Create clang compiler links if clang is installed
 LLVMLINK_DESC=	Create llvm compiler links if llvm is installed
@@ -75,7 +75,7 @@ do-install:
 		${PREFIX}/bin/ccache-update-links
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.tar ${DATADIR}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/MANUAL.html ${DOCSDIR}
 	${INSTALL_DATA} ${WRKDIR}/${HOWTO} ${DOCSDIR}
