@@ -1,12 +1,8 @@
-# New ports collection makefile for:	freexl
-# Date created:				19 May 2012
-# Whom:					lbartoletti <coder@tuxfamily.org>
-#
-# $FreeBSD: ports/textproc/freexl/Makefile,v 1.4 2012/11/17 06:01:56 svnexp Exp $
-#
+# Created by: lbartoletti <coder@tuxfamily.org>
+# $FreeBSD: ports/textproc/freexl/Makefile,v 1.5 2012/12/26 19:37:43 svnexp Exp $
 
 PORTNAME=	freexl
-DISTVERSION=	1.0.0d
+DISTVERSION=	1.0.0e
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/freexl-sources/
 
@@ -25,4 +21,5 @@ USE_LDCONFIG=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 		${WRKSRC}/Makefile.in
+
 .include <bsd.port.mk>
