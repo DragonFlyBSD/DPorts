@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/squid32/Makefile,v 1.6 2012/12/10 15:19:19 svnexp Exp $
+# $FreeBSD: ports/www/squid32/Makefile,v 1.8 2013/01/11 10:13:30 svnexp Exp $
 #
 # Note:
 # Starting with Squid 3.1 SQUID_LANGUAGES and SQUID_DEFAULT_LANG are no longer
@@ -37,7 +37,6 @@
 
 PORTNAME=	squid
 PORTVERSION=	3.2.${SQUID_STABLE_VER}
-PORTREVISION=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	ftp://ftp.squid-cache.org/pub/%SUBDIR%/ \
 		http://mirrors.ccs.neu.edu/Squid/ \
@@ -66,7 +65,7 @@ PATCH_SITES=	http://www.squid-cache.org/%SUBDIR%/ \
 		http://www1.jp.squid-cache.org/%SUBDIR%/ \
 		http://www2.tw.squid-cache.org/%SUBDIR%/
 PATCH_SITE_SUBDIR=	Versions/v3/3.2/changesets
-PATCHFILES=	squid-3.2-11738.patch
+PATCHFILES=
 
 MAINTAINER=	tmseck@web.de
 COMMENT=	HTTP Caching Proxy
@@ -76,7 +75,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	squid32
 
-SQUID_STABLE_VER=	4
+SQUID_STABLE_VER=	6
 
 CONFLICTS_INSTALL=	squid-2.[0-9].* squid-3.[!2].* cacheboy-[0-9]* lusca-head-[0-9]*
 GNU_CONFIGURE=	yes
