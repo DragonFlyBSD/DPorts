@@ -2,12 +2,11 @@
 # Date created:		10 November 2006
 # Whom:			Ivan Lago <ivan.lago@ifom-ieo-campus.it>
 #
-# $FreeBSD: ports/sysutils/syslog-ng/Makefile,v 1.66 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: ports/sysutils/syslog-ng/Makefile,v 1.67 2013/01/18 21:54:21 svnexp Exp $
 #
 
 PORTNAME=	syslog-ng
-PORTVERSION=	3.3.7
-PORTREVISION=	4
+PORTVERSION=	3.3.8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/sources/$(PORTVERSION)/source/
 DISTFILES=	$(PORTNAME)_$(PORTVERSION).tar.gz
@@ -92,7 +91,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 .if defined(WITH_PCRE)
 CONFIGURE_ARGS+=	--enable-pcre
-LIB_DEPENDS+=		pcre.3:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=		pcre:${PORTSDIR}/devel/pcre
 .else
 CONFIGURE_ARGS+=	--disable-pcre
 .endif
