@@ -1,19 +1,15 @@
-# New ports collection makefile for:	flickcurl
-# Date created:				2007-07-27
-# Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
-#
-# $FreeBSD: ports/www/flickcurl/Makefile,v 1.32 2012/11/17 06:02:33 svnexp Exp $
-#
+# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
+# $FreeBSD: ports/www/flickcurl/Makefile,v 1.33 2012/12/27 16:54:56 svnexp Exp $
 
 PORTNAME=	flickcurl
-PORTVERSION=	1.22
+PORTVERSION=	1.23
 CATEGORIES=	www
 MASTER_SITES=	http://download.dajobe.org/flickcurl/
 
-MAINTAINER=	vanilla@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C library for the Flickr API
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack ltverhack libxml2 pkgconfig
