@@ -55,7 +55,7 @@ OPTIONS_DEFINE=	ESOUND NAS
 .include "${.CURDIR}/../../x11/kde3/Makefile.kde"
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "i386" || ${ARCH} == "amd64"
+.if ${ARCH} == "i386" || ${ARCH} == "x86_64"
 LIB_DEPENDS+=	jack:${PORTSDIR}/audio/jack
 .endif
 
