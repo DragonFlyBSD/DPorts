@@ -1,10 +1,10 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/devel/eina/Makefile,v 1.9 2012/12/22 21:09:44 svnexp Exp $
+# $FreeBSD: ports/devel/eina/Makefile,v 1.10 2013/01/15 17:45:58 svnexp Exp $
 
 PORTNAME=	eina
-PORTVERSION=	1.7.4
+PORTVERSION=	1.7.5
 CATEGORIES=	devel enlightenment
-MASTER_SITES=	http://download.enlightenment.org/releases/ \
+MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
 
 MAINTAINER=	gblach@FreeBSD.org
