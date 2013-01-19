@@ -1,14 +1,9 @@
-# New ports collection makefile for:	freetype
-# Date created:		January 24, 1998
-# Whom:			jseger@FreeBSD.org
-#
-# $FreeBSD: ports/print/freetype2/Makefile,v 1.101 2012/11/17 06:00:49 svnexp Exp $
+# Created by: jseger@FreeBSD.org
+# $FreeBSD: ports/print/freetype2/Makefile,v 1.103 2012/12/29 05:07:59 svnexp Exp $
 #   $MCom: ports/print/freetype2/Makefile,v 1.28 2011/10/25 18:31:21 kwm Exp $
-#
 
 PORTNAME=	freetype2
-PORTVERSION=	2.4.9
-PORTREVISION=	1
+PORTVERSION=	2.4.11
 CATEGORIES=	print
 MASTER_SITES=	SF/freetype/${PORTNAME}/${PORTVERSION} \
 		http://sunsite.cnlab-switch.ch/ftp/mirror/freetype/freetype2/ \
@@ -65,6 +60,7 @@ pre-configure:
 	    	${WRKSRC}/builds/unix/unix-cc.in
 
 post-configure:
-	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} setup)
+	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} \
+		${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} setup)
 
 .include <bsd.port.mk>
