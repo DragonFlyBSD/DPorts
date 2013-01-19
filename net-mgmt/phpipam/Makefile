@@ -2,11 +2,11 @@
 # Date created:				10 June 2012
 # Whom:					Jake Smith <jake@xz.cx>
 #
-# $FreeBSD: ports/net-mgmt/phpipam/Makefile,v 1.2 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/phpipam/Makefile,v 1.3 2012/12/26 18:58:35 svnexp Exp $
 #
 
 PORTNAME=	phpipam
-PORTVERSION=	0.6
+PORTVERSION=	0.7
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}
