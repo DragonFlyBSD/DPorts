@@ -2,10 +2,10 @@
 # Date created:		Mi  21 Okt 1998 13:53:18 CEST
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $FreeBSD: ports/lang/gawk/Makefile,v 1.38 2012/11/17 05:58:49 svnexp Exp $
+# $FreeBSD: ports/lang/gawk/Makefile,v 1.39 2012/12/27 09:07:21 svnexp Exp $
 
 PORTNAME=	gawk
-PORTVERSION=	4.0.1
+PORTVERSION=	4.0.2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	gawk
@@ -23,7 +23,7 @@ CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
 		--with-libintl-prefix=${LOCALBASE} \
 		AWK=${AWK}
 
-MAN1=		gawk.1 igawk.1 pgawk.1
+MAN1=		gawk.1 dgawk.1 igawk.1 pgawk.1
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
