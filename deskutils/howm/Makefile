@@ -1,7 +1,7 @@
-# $FreeBSD: ports/deskutils/howm/Makefile,v 1.35 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: ports/deskutils/howm/Makefile,v 1.36 2013/01/14 12:49:48 svnexp Exp $
 
 PORTNAME=	howm
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.1
 CATEGORIES=	deskutils
 MASTER_SITES=	http://howm.sourceforge.jp/a/
 
