@@ -1,8 +1,8 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: ports/textproc/po4a/Makefile,v 1.16 2012/11/17 06:02:16 svnexp Exp $
+# $FreeBSD: ports/textproc/po4a/Makefile,v 1.17 2013/01/09 00:58:49 svnexp Exp $
 
 PORTNAME=	po4a
-PORTVERSION=	0.41
+PORTVERSION=	0.44
 CATEGORIES=	textproc perl5
 MASTER_SITES=	http://alioth.debian.org/frs/download.php/3341/
 
