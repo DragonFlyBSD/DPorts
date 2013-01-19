@@ -1,12 +1,8 @@
-# New ports collection makefile for: 	pmacct
-# Date created:				Thu May  8 16:03:11 CEST 2003
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/net-mgmt/pmacct/Makefile,v 1.84 2012/11/17 06:00:36 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: ports/net-mgmt/pmacct/Makefile,v 1.85 2013/01/15 19:44:21 svnexp Exp $
 
 PORTNAME=	pmacct
-DISTVERSION=	0.14.1
+DISTVERSION=	0.14.2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	http://www.pmacct.net/ \
 		http://mirrors.rit.edu/zi/
@@ -104,7 +100,7 @@ post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
 .endif
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${DOCSDIR}
 .for i in ChangeLog FAQS README TOOLS CONFIG-KEYS KNOWN-BUGS
