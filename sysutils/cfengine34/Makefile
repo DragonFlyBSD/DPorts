@@ -1,5 +1,5 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: ports/sysutils/cfengine34/Makefile,v 1.4 2012/12/11 03:46:26 svnexp Exp $
+# $FreeBSD: ports/sysutils/cfengine34/Makefile,v 1.5 2013/01/08 14:43:14 svnexp Exp $
 
 PORTNAME=	cfengine
 PORTVERSION=	3.4.1
@@ -10,7 +10,11 @@ MAINTAINER=	cy@FreeBSD.org
 #		gjb@FreeBSD.org is also committer for this port
 COMMENT=	A systems administration tool for networks
 
+.if !defined(MASTERDIR)
+PKGNAMESUFFIX=	34
 LATEST_LINK=	cfengine34
+.endif
+
 FETCH_BEFORE_ARGS=	-o ${DISTDIR}/${DISTFILES}
 
 CONFLICTS=	cfengine-2* cfengine-3.[23]* cfengine-devel-*
