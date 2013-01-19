@@ -1,12 +1,8 @@
-# Ports collection makefile for:  nmap
-# Date created:			  Tue Aug 04, 1998
-# Whom:				  David O'Brien (obrien@NUXI.com)
-#
-# $FreeBSD: ports/security/nmap/Makefile,v 1.139 2012/12/10 19:24:04 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@NUXI.com)
+# $FreeBSD: ports/security/nmap/Makefile,v 1.141 2013/01/13 22:50:20 svnexp Exp $
 
 PORTNAME=	nmap
-DISTVERSION=	6.01
+DISTVERSION=	6.25
 PORTREVISION=	1
 CATEGORIES=	security ipv6
 MASTER_SITES=	http://nmap.org/dist/ \
@@ -18,7 +14,7 @@ COMMENT=	Port scanning utility for large networks
 # http://nmap.org/book/man-legal.html
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
 USE_LUA=	5.1
 LUA_COMPS=	lua
@@ -34,7 +30,7 @@ CONFIGURE_ARGS=	--without-localdirs \
 CONFIGURE_ENV=	LUA_INCDIR="${LUA_INCDIR}" LUA_LIBDIR="${LUA_LIBDIR}"
 
 # fix for gcc from ports
-.if ${CC} != "cc"
+.if ${CC} != "cc" && ${CC} !="clang"
 GCCLIBDIR_CMDS=	${CC} -print-file-name=libstdc++.so | ${SED} -e 's/libstdc++.so//'
 CONFIGURE_ARGS+=LDFLAGS="-L$$(${GCCLIBDIR_CMDS})"
 NDCC=	true
@@ -62,7 +58,7 @@ PLIST_SUB+=		WITHSSL="@comment "
 #  be defined as param -DWITHOUT_INET6 during build time
 #  since the port system has no access to src.conf
 .if defined(WITHOUT_INET6)
-LIB_DEPENDS+=		pcap.1:${PORTSDIR}/net/libpcap
+LIB_DEPENDS+=		pcap:${PORTSDIR}/net/libpcap
 CONFIGURE_ARGS+=	--with-libpcap=${LOCALBASE}
 .endif
 
@@ -73,6 +69,19 @@ PORTEXAMPLES=	${EXAMPLES:T}
 # XXX limit results if we do a grep in the sources!
 post-extract:
 	@${RM} -rf ${WRKSRC}/mswin32
+
+# reflect new mailing addreses
+pre-patch:
+	@for f in $$(${GREP} -Rl "nmap-dev@insecure.org" ${WRKSRC}); do\
+		${SED} -i '' -e 's|nmap-dev@insecure.org|dev@nmap.org|g' $${f} ;\
+	done
+	@for f in $$(${GREP} -Rl "http://cgi.insecure.org/mailman" ${WRKSRC}); do\
+		${SED} -i '' -e 's|http://cgi.insecure.org/mailman/listinfo/nmap-dev|http://nmap.org/mailman/listinfo/dev|g' $${f} ;\
+	done
+
+post-patch:
+# fix from r30346
+	@${REINPLACE_CMD} -e 's|~0L;|0xffffffffL;|' ${WRKSRC}/nbase/nbase_misc.c
 
 post-configure:
 	@${REINPLACE_CMD} -e "s|^DESTDIR *=|& ${DESTDIR}|" ${WRKSRC}/Makefile
