@@ -1,12 +1,8 @@
-# New ports collection makefile for: Prima
-# Date created:        25 Sept 2001
-# Whom:                dmitry@karasik.eu.org
-#
-# $FreeBSD: ports/x11-toolkits/p5-Prima/Makefile,v 1.31 2012/11/17 06:03:37 svnexp Exp $
-#
+# Created by: dmitry@karasik.eu.org
+# $FreeBSD: ports/x11-toolkits/p5-Prima/Makefile,v 1.32 2013/01/11 12:56:54 svnexp Exp $
 
 PORTNAME=	Prima
-PORTVERSION=	1.35
+PORTVERSION=	1.36
 CATEGORIES=	x11-toolkits graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
