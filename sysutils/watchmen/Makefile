@@ -2,11 +2,12 @@
 # Date created:		2009-07-16
 # Whom:			Oleg Alexeenkov <proler@gmail.com>
 #
-# $FreeBSD: ports/sysutils/watchmen/Makefile,v 1.8 2012/11/17 06:01:49 svnexp Exp $
+# $FreeBSD: ports/sysutils/watchmen/Makefile,v 1.9 2012/12/28 19:22:03 svnexp Exp $
 #
 
 PORTNAME=	watchmen
 PORTVERSION=	0.07
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	GOOGLE_CODE
 
@@ -43,7 +44,7 @@ RUN_DEPENDS+=	p5-Time-HiRes>=0:${PORTSDIR}/devel/p5-Time-HiRes
 
 .if ${PORT_OPTIONS:MMYSQL}
 USE_MYSQL=	yes
-RUN_DEPENDS+=	p5-DBD-mysql${MYSQL_VER}>=0:${PORTSDIR}/databases/p5-DBD-mysql${MYSQL_VER}
+RUN_DEPENDS+=	p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql
 .endif
 
 .if ${PORT_OPTIONS:MPGSQL}
