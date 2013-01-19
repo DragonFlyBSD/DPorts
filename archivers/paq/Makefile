@@ -1,11 +1,11 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: ports/archivers/paq/Makefile,v 1.31 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: ports/archivers/paq/Makefile,v 1.32 2012/12/31 12:26:40 svnexp Exp $
 
 PORTNAME=	paq
-PORTVERSION=	20121105
+PORTVERSION=	20121214
 CATEGORIES=	archivers
 MASTER_SITES=	http://mattmahoney.net/dc/ LOCAL/bf/paq/
-DISTFILES=	wbpe110.zip zpaq616.zip zpipe.201.zip
+DISTFILES=	wbpe110.zip zpaq618.zip zpipe.201.zip
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${DISTFILES:M*.zip}
 
@@ -69,11 +69,8 @@ PORTDATA=	${WDATA} ${DDATA} zpsfx
 .endif
 
 .if ${PORT_OPTIONS:MOPENMP}
-.if !empty(CC:T:M*clang*)
-IGNORE =        : clang does not support OpenMP. Disable the OPENMP option or\
-use another compiler
-.endif
 PTHREAD_CFLAGS+=	-fopenmp
+USE_GCC=		any
 .endif
 
 post-extract:
