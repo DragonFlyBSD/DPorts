@@ -1,10 +1,10 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: ports/ftp/yafc/Makefile,v 1.47 2012/11/28 00:06:57 svnexp Exp $
+# $FreeBSD: ports/ftp/yafc/Makefile,v 1.48 2013/01/16 22:46:31 svnexp Exp $
 
 PORTNAME=	yafc
-PORTVERSION=	1.2.3
+PORTVERSION=	1.2.4
 CATEGORIES=	ftp ipv6
-MASTER_SITES=	GHC
+MASTER_SITES=	http://www.yafc-ftp.com/upload/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet another ftp client. Similar to ftp(1)
@@ -13,10 +13,6 @@ LICENSE=	GPLv2 # (or later)
 
 OPTIONS_DEFINE=	NLS SSH EXAMPLES
 OPTIONS_DEFAULT=NLS SSH
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	sebastinas
-WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_XZ=		yes
 USE_OPENSSL=	yes
