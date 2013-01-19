@@ -1,8 +1,9 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: ports/polish/ekg/Makefile,v 1.38 2012/12/21 18:31:16 svnexp Exp $
+# $FreeBSD: ports/polish/ekg/Makefile,v 1.39 2013/01/05 14:44:25 svnexp Exp $
 
 PORTNAME=	ekg
 DISTVERSION=	1.8rc2
+PORTREVISION=	1
 PORTEPOCH=	3
 CATEGORIES=	polish net-im
 MASTER_SITES=	http://ekg.chmurka.net/
@@ -16,7 +17,6 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_PKGCONFIG=	build
-USE_NCURSES=	yes
 USE_GNOME=	gnomehack
 USE_LDCONFIG=	yes
 
@@ -24,8 +24,8 @@ CONFIGURE_ARGS= --without-libungif \
 		--without-libjpeg \
 		--disable-ui-gtk
 
-CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lexecinfo ${PTHREAD_LIBS}
+CFLAGS+=	-I/usr/include -I${LOCALBASE}/include
+LDFLAGS+=	-L/usr/lib -lncurses -L${LOCALBASE}/lib -lexecinfo ${PTHREAD_LIBS}
 
 MAN1=		ekg.1
 MANLANG=	"" pl
