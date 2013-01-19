@@ -1,12 +1,8 @@
-# New ports collection makefile for:	bgpq3
-# Date created:		27 October 2009
-# Whom:			Alexandre Snarskii <snar@snar.spb.ru>
-#
-# $FreeBSD: ports/net-mgmt/bgpq3/Makefile,v 1.5 2012/11/17 06:00:30 svnexp Exp $
-#
+# Created by: Alexandre Snarskii <snar@snar.spb.ru>
+# $FreeBSD: ports/net-mgmt/bgpq3/Makefile,v 1.6 2013/01/12 19:20:53 svnexp Exp $
 
 PORTNAME=	bgpq3
-PORTVERSION=	0.1.12
+PORTVERSION=	0.1.18
 CATEGORIES=	net-mgmt
 MASTER_SITES=	http://snar.spb.ru/prog/bgpq3/
 EXTRACT_SUFX=	.tgz
