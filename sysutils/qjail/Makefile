@@ -1,8 +1,8 @@
 # Created by: Joe Barbish
-# $FreeBSD: ports/sysutils/qjail/Makefile,v 1.12 2012/12/22 20:56:43 svnexp Exp $
+# $FreeBSD: ports/sysutils/qjail/Makefile,v 1.13 2013/01/02 10:42:03 svnexp Exp $
 
 PORTNAME=	qjail
-PORTVERSION=	1.9
+PORTVERSION=	2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}
 
