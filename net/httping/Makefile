@@ -1,8 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/net/httping/Makefile,v 1.38 2012/12/10 10:12:07 svnexp Exp $
+# $FreeBSD: ports/net/httping/Makefile,v 1.39 2013/01/12 00:15:43 svnexp Exp $
 
 PORTNAME=	httping
-PORTVERSION=	1.5.6
+PORTVERSION=	1.5.7
 CATEGORIES=	net
 MASTER_SITES=	http://www.vanheusden.com/httping/ \
 		CRITICAL
