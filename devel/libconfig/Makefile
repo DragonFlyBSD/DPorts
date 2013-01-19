@@ -1,22 +1,18 @@
-# New ports collection makefile for:   libconfig
-# Date created:                September 26, 2007
-# Whom:                        Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-#
-# $FreeBSD: ports/devel/libconfig/Makefile,v 1.11 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
+# $FreeBSD: ports/devel/libconfig/Makefile,v 1.12 2012/12/31 12:10:43 svnexp Exp $
 
 PORTNAME=	libconfig
-PORTVERSION=	1.4.8
+PORTVERSION=	1.4.9
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hyperrealm.com/libconfig/
 
-MAINTAINER=	ntarmos@cs.uoi.gr
-COMMENT=	A simple library for manipulating structured configuration files
+MAINTAINER=	ntarmos@ceid.upatras.gr
+COMMENT=	Simple library for manipulating structured configuration files
 
 CONFLICTS=	wand-libconfig-[0-9]*
 
-USE_GNOME=	gnomehack pkgconfig
-HAS_CONFIGURE=	yes
+USE_GNOME=	gnomehack
+GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --infodir=${PREFIX}/${INFO_PATH}
