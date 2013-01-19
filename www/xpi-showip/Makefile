@@ -1,9 +1,9 @@
 # Created by:	Barbara Guida <bar@FreeBSD.org>
-# $FreeBSD: ports/www/xpi-showip/Makefile,v 1.9 2012/12/01 14:51:43 svnexp Exp $
+# $FreeBSD: ports/www/xpi-showip/Makefile,v 1.10 2013/01/19 08:48:37 svnexp Exp $
 
 PORTNAME=	showip
-PORTVERSION=	1.8.1
-DISTVERSIONSUFFIX=	-tb+sm+fx
+PORTVERSION=	1.9
+DISTVERSIONSUFFIX=	-fx+tb+sm
 CATEGORIES=	www
 
 MAINTAINER=	bar@FreeBSD.org
