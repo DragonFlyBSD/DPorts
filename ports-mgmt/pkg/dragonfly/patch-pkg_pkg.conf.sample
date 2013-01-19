@@ -1,0 +1,11 @@
+--- pkg/pkg.conf.sample.orig	2012-12-21 12:57:15.000000000 +0100
++++ pkg/pkg.conf.sample	2013-01-19 11:51:06.246337000 +0100
+@@ -7,7 +7,7 @@
+ #SRV_MIRRORS	    : NO
+ #PKG_DBDIR	    : /var/db/pkg
+ #PKG_CACHEDIR	    : /var/cache/pkg
+-#PORTSDIR	    : /usr/ports
++#PORTSDIR	    : /usr/dports
+ #PUBKEY		    : /etc/ssl/pkg.conf
+ #HANDLE_RC_SCRIPTS   : NO
+ #PKG_MULTIREPOS	    : NO
