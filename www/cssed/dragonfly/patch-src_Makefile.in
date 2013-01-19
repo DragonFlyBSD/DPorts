@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2013-01-19 04:30:24.409402000 +0100
++++ src/Makefile.in	2013-01-19 04:31:40.939509000 +0100
+@@ -322,7 +322,7 @@
+ 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+ cssed$(EXEEXT): $(cssed_OBJECTS) $(cssed_DEPENDENCIES) 
+ 	@rm -f cssed$(EXEEXT)
+-	$(cssed_LINK) $(cssed_LDFLAGS) $(cssed_OBJECTS) $(cssed_LDADD) $(LIBS)
++	$(cssed_LINK) $(cssed_LDFLAGS) $(cssed_OBJECTS) $(cssed_LDADD) $(LIBS) $(INTLLIBS)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
