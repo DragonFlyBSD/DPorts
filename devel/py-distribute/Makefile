@@ -1,15 +1,15 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: ports/devel/py-distribute/Makefile,v 1.15 2012/11/17 05:56:46 svnexp Exp $
+# $FreeBSD: ports/devel/py-distribute/Makefile,v 1.17 2013/01/04 01:42:48 svnexp Exp $
 
 PORTNAME=	distribute
-PORTVERSION=	0.6.28
+PORTVERSION=	0.6.34
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	python
 
 MAINTAINER=	python@FreeBSD.org
-COMMENT=	A Python packages installer and Setuptools replacement
+COMMENT=	Python packages installer and Setuptools replacement
 
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}setuptools-[0-9]*
 
