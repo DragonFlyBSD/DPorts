@@ -2,11 +2,11 @@
 # Date created:         2 July 1994
 # Whom:                 jmz
 #
-# $FreeBSD: ports/math/lapack/Makefile,v 1.60 2012/11/17 05:59:22 svnexp Exp $
+# $FreeBSD: ports/math/lapack/Makefile,v 1.61 2013/01/05 12:47:44 svnexp Exp $
 #
 
 PORTNAME?=	lapack
-PORTVERSION=	3.4.1
+PORTVERSION=	3.4.2
 CATEGORIES=	math
 MASTER_SITES=	NL/lapack/
 DISTFILES=	lapack-${PORTVERSION}.tgz
