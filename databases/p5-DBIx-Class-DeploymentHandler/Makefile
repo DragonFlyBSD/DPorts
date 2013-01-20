@@ -1,12 +1,7 @@
-# New ports collection makefile for:	DBIx::Class::DeploymentHandler
-# Date created:		10 Dec 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-DeploymentHandler/Makefile,v 1.9 2012/11/17 05:55:14 svnexp Exp $
-#
+# $FreeBSD: ports/databases/p5-DBIx-Class-DeploymentHandler/Makefile,v 1.10 2013/01/14 11:42:15 svnexp Exp $
 
 PORTNAME=	DBIx-Class-DeploymentHandler
-PORTVERSION=	0.002202
+PORTVERSION=	0.002204
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
