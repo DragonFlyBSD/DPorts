@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p6-Test-Harness
-# Date Created:				13 Aug 2001
-# Whom:					Shell Hung <shell@shellhung.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Harness/Makefile,v 1.50 2012/11/17 05:56:32 svnexp Exp $
-#
+# Created by: Shell Hung <shell@shellhung.org>
+# $FreeBSD: ports/devel/p5-Test-Harness/Makefile,v 1.51 2013/01/16 15:52:37 svnexp Exp $
 
 PORTNAME=	Test-Harness
-PORTVERSION=	3.25
+PORTVERSION=	3.26
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
