@@ -1,7 +1,7 @@
-# $FreeBSD: ports/japanese/ajaxzip2-data/Makefile,v 1.6 2012/11/17 05:58:31 svnexp Exp $
+# $FreeBSD: ports/japanese/ajaxzip2-data/Makefile,v 1.7 2013/01/06 17:08:34 svnexp Exp $
 
 PORTNAME=	ajaxzip2
-PORTVERSION=	20121031
+PORTVERSION=	20121228
 CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	kuriyama
