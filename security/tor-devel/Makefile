@@ -1,12 +1,8 @@
-# ports collection makefile for:	tor-devel
-# Date created:				2005.10.20
-# Whom:					peter.thoenen@yahoo.com
-#
-# $FreeBSD: ports/security/tor-devel/Makefile,v 1.144 2012/11/22 11:33:13 svnexp Exp $
-#
+# Created by: peter.thoenen@yahoo.com
+# $FreeBSD: ports/security/tor-devel/Makefile,v 1.146 2013/01/16 14:41:43 svnexp Exp $
 
 PORTNAME=	tor
-DISTVERSION=	0.2.4.6-alpha
+DISTVERSION=	0.2.4.9-alpha
 CATEGORIES=	security net ipv6
 MASTER_SITES=	https://www.torproject.org/dist/ \
 		ftp://ftp.bit.nl/mirror/tor/ \
@@ -27,12 +23,10 @@ MASTER_SITES=	https://www.torproject.org/dist/ \
 		http://tor.ccc.de/dist/ \
 		http://tor.cyberarmy.at/dist/ \
 		http://tor.dont-know-me.at/dist/ \
-		http://tor.factor.cc/dist/ \
 		http://tor.homosu.net/dist/ \
 		http://tor.idnr.ws/dist/ \
 		http://tor.myrl.net/dist/ \
 		http://tor.kamagurka.org/dist/ \
-		http://tor.searchprivate.com/dist/ \
 		http://tor.spline.de/dist/ \
 		http://tor.taiga-san.net/dist/ \
 		http://tor.vesta.nu/dist/ \
@@ -47,8 +41,6 @@ MASTER_SITES=	https://www.torproject.org/dist/ \
 		http://torua.reactor-xg.kiev.ua/dist/ \
 		https://www.coevoet.nl/tor/dist/ \
 		http://www.oignon.net/dist/ \
-		http://www.torproject.nl/dist/ \
-		http://www.torproject.org.in/dist/ \
 		http://www.torproject.org.nyud.net/dist/ \
 		http://www.torproject.us/dist/ \
 		http://www.torservers.net/mirrors/torproject.org/dist/
