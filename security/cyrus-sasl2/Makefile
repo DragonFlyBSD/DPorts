@@ -1,8 +1,8 @@
-# $FreeBSD: ports/security/cyrus-sasl2/Makefile,v 1.154 2012/12/15 19:20:40 svnexp Exp $
+# $FreeBSD: ports/security/cyrus-sasl2/Makefile,v 1.158 2013/01/08 15:45:29 svnexp Exp $
 
 PORTNAME=	cyrus-sasl
 PORTVERSION=	2.1.26
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security ipv6
 MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/
 
@@ -13,6 +13,8 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	${PORTNAME}2
+
+MAKE_JOBS_SAFE=	yes
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
@@ -43,6 +45,7 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 		--with-configdir=${PREFIX}/lib/sasl2:${PREFIX}/etc/sasl2 \
 		--with-plugindir=${PREFIX}/lib/sasl2 \
 		--with-dbpath=${PREFIX}/etc/sasldb2 \
+		--with-lib-subdir=lib \
 		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
 		--includedir=${PREFIX}/include \
 		--enable-static \
@@ -184,6 +187,7 @@ CPPFLAGS+=	-fPIC
 .endif
 .if !defined(WITHOUT_GSSAPI) && defined(KRB5_HOME) && exists(${KRB5_HOME}/lib/libgssapi_krb5.so)
 CONFIGURE_ARGS+=--enable-gssapi=${KRB5_HOME} --with-gss_impl=mit
+LDFLAGS+=	"-R${KRB5_HOME}/lib"
 .elif !defined(WITHOUT_GSSAPI) && defined(HEIMDAL_HOME) && exists(${HEIMDAL_HOME}/lib/libgssapi.a)
 CONFIGURE_ARGS+=--enable-gssapi=${HEIMDAL_HOME} --with-gss_impl=heimdal
 .elif !defined(WITHOUT_GSSAPI) && exists(/usr/lib/libkrb5.a)
