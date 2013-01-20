@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/ports-mgmt/portupgrade/Makefile,v 1.285 2012/12/11 17:07:46 svnexp Exp $
+# $FreeBSD: ports/ports-mgmt/portupgrade/Makefile,v 1.286 2013/01/15 06:41:36 svnexp Exp $
 
 PORTNAME=	portupgrade
-PORTVERSION=	2.4.10.3
+PORTVERSION=	2.4.10.4
 PORTEPOCH=	2
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	SF/portupgrade/pkgtools/dist/ \
