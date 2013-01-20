@@ -1,15 +1,11 @@
-# New ports collection makefile for:    ca-root-nss
-# Date created:				Thu Jan 25 13:02:14 CST 2007
-# Whom:	      				Brooks Davis <brooks@FreeBSD.org>
-#
-# $FreeBSD: ports/security/ca_root_nss/Makefile,v 1.27 2012/11/17 06:01:01 svnexp Exp $
-#
+# Created by: Brooks Davis <brooks@FreeBSD.org>
+# $FreeBSD: ports/security/ca_root_nss/Makefile,v 1.29 2013/01/09 23:56:32 svnexp Exp $
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	security/nss/releases/NSS_${PORTVERSION:S/./_/g}_RTM/src
+MASTER_SITE_SUBDIR=	security/nss/releases/NSS_${PORTVERSION:S/./_/g}_WITH_CKBI_${CKBI_VER:S/./_/}_RTM/src
 DISTNAME=	nss-${VERSION_NSS}${NSS_SUFFIX}
 
 MAINTAINER=	gecko@FreeBSD.org
@@ -29,7 +25,9 @@ PLIST_SUB+=	CERTDIR=${CERTDIR}
 # !!!  Please DO NOT submit patches for new version until it has !!!
 # !!!  been committed there first.                               !!!
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-VERSION_NSS=	3.14
+VERSION_NSS=	3.14.1
+CKBI_VER=	1.93
+NSS_SUFFIX=	.with.ckbi.${CKBI_VER}
 CERTDATA_TXT_PATH=	nss-${VERSION_NSS}/mozilla/security/nss/lib/ckfw/builtins/certdata.txt
 BUNDLE_PROCESSOR=	MAca-bundle.pl
 
