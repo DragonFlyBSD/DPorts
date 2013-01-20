@@ -1,5 +1,8 @@
 # DragonFly doesn't have ALSA support, so WEBRTC is gone too
 OPTIONS_EXCLUDE+= WEBRTC
 
+CONFIGURE_ARGS+=--disable-webrtc
+
 BUILD_DEPENDS=		gm4:${PORTSDIR}/devel/m4
 BUILD_DEPENDS+=		unzip:${PORTSDIR}/archivers/unzip
+
