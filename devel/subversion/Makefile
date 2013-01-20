@@ -1,8 +1,5 @@
-# New ports collection makefile for:	subversion
-# Date created:				10 September 2001
-# Whom:					rooneg@electricjellyfish.net
-#
-# $FreeBSD: ports/devel/subversion/Makefile,v 1.148 2012/11/17 05:57:03 svnexp Exp $
+# Created by: rooneg@electricjellyfish.net
+# $FreeBSD: ports/devel/subversion/Makefile,v 1.149 2013/01/13 23:41:32 svnexp Exp $
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
@@ -253,7 +250,7 @@ pre-configure:
 # takes a long time, and will fail but gives maintainer a good oversight
 .if ${PORT_OPTIONS:MTEST}
 test:
-	make check -C ${WRKSRC}
+	-@make check -C ${WRKSRC}
 .endif
 
 pre-install:
