@@ -1,13 +1,13 @@
 # Created by: Chris Howey <howeyc@gmail.com>
-# $FreeBSD: ports/sysutils/parallel/Makefile,v 1.30 2012/12/04 23:45:36 svnexp Exp $
+# $FreeBSD: ports/sysutils/parallel/Makefile,v 1.31 2013/01/04 20:43:10 svnexp Exp $
 
 PORTNAME=	parallel
-PORTVERSION=	20121122
+PORTVERSION=	20121222
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU
 
 MAINTAINER=	howeyc@gmail.com
-COMMENT=	GNU parallel is a shell tool for executing jobs in parallel
+COMMENT=	Shell tool for executing jobs in parallel
 
 LICENSE=	GPLv3
 
