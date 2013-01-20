@@ -1,9 +1,9 @@
 # Created by: Marc Abramowitz (http://marc.abramowitz.info)
-# $FreeBSD: ports/graphics/opencv/Makefile,v 1.45 2012/12/12 07:45:44 svnexp Exp $
+# $FreeBSD: ports/graphics/opencv/Makefile,v 1.46 2013/01/17 16:48:39 svnexp Exp $
 
 PORTNAME?=	opencv
 PORTVERSION=	2.3.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}library/${PORTNAME}-unix/${PORTVERSION}
 DISTNAME=	OpenCV-${DISTVERSION}a
