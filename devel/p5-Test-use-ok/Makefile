@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-Test-use-ok
-# Date created:				26 Mar 2006
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-use-ok/Makefile,v 1.7 2012/11/17 05:56:34 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: ports/devel/p5-Test-use-ok/Makefile,v 1.8 2012/12/31 16:49:50 svnexp Exp $
 
 PORTNAME=	Test-use-ok
-PORTVERSION=	0.02
+PORTVERSION=	0.11
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
