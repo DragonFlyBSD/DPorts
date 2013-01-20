@@ -2,7 +2,7 @@
 # Date created:		2012-01-19
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-DBIx-Class-Schema-PopulateMore/Makefile,v 1.6 2012/11/17 05:55:15 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBIx-Class-Schema-PopulateMore/Makefile,v 1.7 2012/12/17 08:59:15 svnexp Exp $
 #
 
 PORTNAME=	DBIx-Class-Schema-PopulateMore
@@ -53,13 +53,6 @@ MAN3=	DBIx::Class::Schema::PopulateMore.3 \
 	DBIx::Class::Schema::PopulateMore::Visitor.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Module-Pluggable>=3.9:${PORTSDIR}/devel/p5-Module-Pluggable \
-		p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-Module-Pluggable>=3.9:${PORTSDIR}/devel/p5-Module-Pluggable \
-		p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
 
 .if ${PERL_LEVEL} < 501400
 TEST_DEPENDS+=	p5-Test-Simple>=0.98:${PORTSDIR}/devel/p5-Test-Simple
