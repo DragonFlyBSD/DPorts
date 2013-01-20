@@ -1,8 +1,8 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: ports/devel/p5-File-Map/Makefile,v 1.25 2012/12/15 18:28:20 svnexp Exp $
+# $FreeBSD: ports/devel/p5-File-Map/Makefile,v 1.26 2012/12/23 13:40:36 svnexp Exp $
 
 PORTNAME=	File-Map
-PORTVERSION=	0.55
+PORTVERSION=	0.56
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
