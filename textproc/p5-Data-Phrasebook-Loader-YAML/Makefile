@@ -1,12 +1,8 @@
-# New ports collection makefile for:	textproc/p5-Data-Phrasebook-Loader-YAML
-# Date created:				05 May 2010
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Data-Phrasebook-Loader-YAML/Makefile,v 1.5 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: ports/textproc/p5-Data-Phrasebook-Loader-YAML/Makefile,v 1.6 2012/12/26 14:10:54 svnexp Exp $
 
 PORTNAME=	Data-Phrasebook-Loader-YAML
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
