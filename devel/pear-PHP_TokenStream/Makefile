@@ -1,8 +1,8 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-PHP_TokenStream/Makefile,v 1.1 2012/11/18 07:36:33 svnexp Exp $
+# $FreeBSD: ports/devel/pear-PHP_TokenStream/Makefile,v 1.2 2013/01/03 11:54:16 svnexp Exp $
 
 PORTNAME=	PHP_TokenStream
-PORTVERSION=	1.1.3
+PORTVERSION=	1.1.5
 CATEGORIES=	devel pear
 MASTER_SITES=	http://pear.phpunit.de/get/
 PKGNAMEPREFIX=	pear-
@@ -19,9 +19,6 @@ RUN_DEPENDS=	pear>=1.9.4:${PORTSDIR}/devel/pear \
 
 PEAR_CHANNEL=	phpunit
 PEAR_AUTOINSTALL=	yes
-
-DEFAULT_PHP_VER=5
-IGNORE_WITH_PHP=4
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
