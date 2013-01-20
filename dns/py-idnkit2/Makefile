@@ -1,11 +1,8 @@
-# New ports collection makefile for:	idnkit
-# Date created:		13 November 2011
-# Whom:			Rafal Lesniak <fbsd@grid.einherjar.de>
-#
-# $FreeBSD: ports/dns/py-idnkit2/Makefile,v 1.3 2012/11/17 05:57:10 svnexp Exp $
+# Created by: Rafal Lesniak <fbsd@grid.einherjar.de>
+# $FreeBSD: ports/dns/py-idnkit2/Makefile,v 1.4 2013/01/12 11:42:04 svnexp Exp $
 
 PORTNAME=	idnkit-python
-PORTVERSION=	2.1
+PORTVERSION=	2.2
 CATEGORIES=	dns
 MASTER_SITES=	http://jprs.co.jp/idn/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
