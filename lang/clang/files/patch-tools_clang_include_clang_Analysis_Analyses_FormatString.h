@@ -1,15 +1,23 @@
 
-$FreeBSD: ports/lang/clang/files/patch-tools_clang_include_clang_Analysis_Analyses_FormatString.h,v 1.4 2012/11/17 05:58:48 svnexp Exp $
+$FreeBSD: ports/lang/clang/files/patch-tools_clang_include_clang_Analysis_Analyses_FormatString.h,v 1.5 2013/01/10 18:01:27 svnexp Exp $
 
 --- tools/clang/include/clang/Analysis/Analyses/FormatString.h.orig
 +++ tools/clang/include/clang/Analysis/Analyses/FormatString.h
-@@ -143,6 +143,10 @@
+@@ -117,7 +117,7 @@
+       // C99 conversion specifiers.
+     cArg,
+     dArg,
+-    DArg, // Apple extension
++    DArg, // Apple and FreeBSD extension
+     iArg,
+     IntArgBeg = dArg, IntArgEnd = iArg,
+ 
+@@ -148,6 +148,9 @@
  
      // ** Printf-specific **
  
 +    // FreeBSD specific specifiers
 +    bArg,
-+    DArg,
 +
      // Objective-C specific specifiers.
      ObjCObjArg,  // '@'
