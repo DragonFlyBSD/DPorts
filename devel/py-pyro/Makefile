@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/py-pyro/Makefile,v 1.25 2012/11/17 05:56:49 svnexp Exp $
+# $FreeBSD: ports/devel/py-pyro/Makefile,v 1.26 2012/12/31 13:14:08 svnexp Exp $
 
 PORTNAME=	pyro
-PORTVERSION=	4.15
+PORTVERSION=	4.17
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,7 +22,7 @@ PYDISTUTILS_PKGNAME=	Pyro4
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
-.include "${FILESDIR}/py3k-fix-pkg-plist.inc"
+.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
 .endif
 
 post-install:
