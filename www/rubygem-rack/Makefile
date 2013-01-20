@@ -2,7 +2,7 @@
 # Date created:		2 Dec 2007
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/rubygem-rack/Makefile,v 1.25 2012/11/17 06:03:04 svnexp Exp $
+# $FreeBSD: ports/www/rubygem-rack/Makefile,v 1.26 2013/01/09 04:43:48 svnexp Exp $
 #
 
 # XXX: If updating this port, please check compatibality with at least the following ports,
@@ -13,7 +13,7 @@
 # 	www/rubygem-innate
 
 PORTNAME=	rack
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.3
 PORTEPOCH=	3
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
