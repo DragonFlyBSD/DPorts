@@ -2,10 +2,10 @@
 # Date created:				1 September 2010
 # Whom:						Philip M. Gollucci <pgollucci@p6m7g8.com>
 #
-# $FreeBSD: ports/databases/rubygem-activemodel/Makefile,v 1.17 2012/11/17 05:55:24 svnexp Exp $
+# $FreeBSD: ports/databases/rubygem-activemodel/Makefile,v 1.18 2013/01/09 04:43:41 svnexp Exp $
 
 PORTNAME=	activemodel
-PORTVERSION=	3.2.8
+PORTVERSION=	3.2.11
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
