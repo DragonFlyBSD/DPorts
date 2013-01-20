@@ -1,9 +1,10 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: ports/x11-fm/thunar/Makefile,v 1.49 2012/12/14 21:45:14 svnexp Exp $
+# $FreeBSD: ports/x11-fm/thunar/Makefile,v 1.53 2013/01/14 21:52:43 svnexp Exp $
 #
 
 PORTNAME=	Thunar
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.2
+PORTREVISION=	2
 CATEGORIES=	x11-fm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/xfce/${PORTNAME:tl}/${PORTVERSION:R}
