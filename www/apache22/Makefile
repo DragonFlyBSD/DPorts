@@ -1,8 +1,8 @@
-# $FreeBSD: ports/www/apache22/Makefile,v 1.312 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: ports/www/apache22/Makefile,v 1.313 2013/01/02 02:17:56 svnexp Exp $
 
 PORTNAME=	apache22
 PORTVERSION=	2.2.23
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www ipv6
 MASTER_SITES=	${MASTER_SITE_APACHE_HTTPD}
 DISTNAME=	httpd-${PORTVERSION}
