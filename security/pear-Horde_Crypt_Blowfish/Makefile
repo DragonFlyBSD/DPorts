@@ -2,11 +2,11 @@
 # Date created:			  12 December 2012
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/security/pear-Horde_Crypt_Blowfish/Makefile,v 1.1 2012/12/12 14:49:43 svnexp Exp $
+# $FreeBSD: ports/security/pear-Horde_Crypt_Blowfish/Makefile,v 1.2 2013/01/10 10:41:48 svnexp Exp $
 #
 
 PORTNAME=	Horde_Crypt_Blowfish
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.2
 CATEGORIES=	security www pear
 PKGNAMEPREFIX=	pear-
 
