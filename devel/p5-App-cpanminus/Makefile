@@ -1,12 +1,7 @@
-# New ports collection makefile for:	App::cpanminus
-# Date created:		06 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-App-cpanminus/Makefile,v 1.26 2012/11/17 05:56:04 svnexp Exp $
-#
+# $FreeBSD: ports/devel/p5-App-cpanminus/Makefile,v 1.27 2013/01/17 22:50:14 svnexp Exp $
 
 PORTNAME=	App-cpanminus
-PORTVERSION=	1.5018
+PORTVERSION=	1.5019
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
