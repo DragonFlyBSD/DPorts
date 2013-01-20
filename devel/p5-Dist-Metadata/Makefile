@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Dist::Metadata
-# Date created:		26 May 2012
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Dist-Metadata/Makefile,v 1.4 2012/11/17 05:56:14 svnexp Exp $
-#
+# $FreeBSD: ports/devel/p5-Dist-Metadata/Makefile,v 1.5 2013/01/12 15:28:30 svnexp Exp $
 
 PORTNAME=	Dist-Metadata
-PORTVERSION=	0.923
+PORTVERSION=	0.924
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
