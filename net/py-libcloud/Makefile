@@ -2,11 +2,11 @@
 # Date created:				2010-12-16
 # Whom:					Greg Larkin <glarkin@FreeBSD.org>
 #
-# $FreeBSD: ports/net/py-libcloud/Makefile,v 1.14 2012/11/17 06:00:16 svnexp Exp $
+# $FreeBSD: ports/net/py-libcloud/Makefile,v 1.15 2013/01/03 13:43:43 svnexp Exp $
 #
 
 PORTNAME=	libcloud
-PORTVERSION=	0.11.3
+PORTVERSION=	0.11.4
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
