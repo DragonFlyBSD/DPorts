@@ -1,9 +1,9 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: ports/x11-fm/thunar-vfs/Makefile,v 1.9 2012/12/14 21:29:11 svnexp Exp $
+# $FreeBSD: ports/x11-fm/thunar-vfs/Makefile,v 1.11 2012/12/31 06:21:32 svnexp Exp $
 
 PORTNAME=	thunar-vfs
 PORTVERSION=	1.2.0
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	x11-fm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/archive/${PORTNAME}/${PORTVERSION:R}
