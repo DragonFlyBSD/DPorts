@@ -2,14 +2,14 @@
 # Date created:		10 November 2006
 # Whom:			Ivan Lago <ivan.lago@ifom-ieo-campus.it>
 #
-# $FreeBSD: ports/sysutils/syslog-ng-devel/Makefile,v 1.65 2012/12/21 06:52:31 svnexp Exp $
+# $FreeBSD: ports/sysutils/syslog-ng-devel/Makefile,v 1.67 2013/01/18 21:57:54 svnexp Exp $
 #
 
 PORTNAME=	syslog-ng
-PORTVERSION=	3.4.0b1
+PORTVERSION=	3.4.0r2
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
-DISTVERSION=	$(PORTVERSION:S/b/beta/)
+DISTVERSION=	$(PORTVERSION:S/a/alpha/:S/b/beta/:S/r/rc/)
 DISTFILES=	syslog-ng_${DISTVERSION}.tar.gz
 MASTER_SITES=	http://www.balabit.com/downloads/files?path=/syslog-ng/open-source-edition/${DISTVERSION}/source/
 
@@ -29,6 +29,7 @@ OPTIONS=	SYS_SSL "Build with OpenSSL support (from system)" off \
 		PCRE "Build with PCRE support" on \
 		SMTP "Build with SMTP support" off \
 		JSON "Build with JSON-C support" off \
+		GEOIP "Build with GeoIP support" off \
 
 .include <bsd.port.options.mk>
 
@@ -100,6 +101,15 @@ CONFIGURE_ARGS+=	--enable-pcre
 LIB_DEPENDS+=		pcre:${PORTSDIR}/devel/pcre
 .else
 CONFIGURE_ARGS+=	--disable-pcre
+.endif
+
+.if defined(WITH_GEOIP)
+CONFIGURE_ARGS+=	--enable-geoip
+LIB_DEPENDS+=		GeoIP.5:${PORTSDIR}/net/GeoIP
+CONFIGURE_ENV+=		GEOIP_LIBS="-lGeoIP"
+PLIST_FILES+=		lib/syslog-ng/libtfgeoip.la lib/syslog-ng/libtfgeoip.so
+.else
+CONFIGURE_ARGS+=	--disable-geoip
 .endif
 
 .if defined(WITH_SMTP)
