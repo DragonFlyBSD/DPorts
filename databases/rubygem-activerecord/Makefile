@@ -1,11 +1,8 @@
-# Ports collection makefile for:	gem-activerecord
-# Date created:				27 May 2005
-# Whom:					Jonathan Weiss (<jw@innerewut.de>)
-#
-# $FreeBSD: ports/databases/rubygem-activerecord/Makefile,v 1.45 2012/11/17 05:55:24 svnexp Exp $
+# Created by: Jonathan Weiss (<jw@innerewut.de>)
+# $FreeBSD: ports/databases/rubygem-activerecord/Makefile,v 1.47 2013/01/11 23:12:56 svnexp Exp $
 
 PORTNAME=	activerecord
-PORTVERSION=	3.2.8
+PORTVERSION=	3.2.11
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
@@ -21,23 +18,23 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-OPTIONS= \
-	NATIVE_MYSQL 		"Use native MySQL bindings" 		Off \
-	NATIVE_POSTGRESQL 	"Use native PostgreSQL bindings" 	Off \
-	NATIVE_SQLITE3 		"Use native SQLite3 bindings" 		Off
+OPTIONS_DEFINE=	MYSQL PGSQL SQLITE3
+MYSQL_DESC=	Use native MySQL bindings
+PGSQL_DESC=	Use native PostgreSQL bindings
+SQLITE3_DESC=	Use native SQLite3 bindings
 OPTIONSFILE=	${PORT_DBDIR}/rubygem-${PORTNAME}/options
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_NATIVE_MYSQL)
+.if ${PORT_OPTIONS:MMYSQL}
 RUN_DEPENDS+=	${RUBY_PKGNAMEPREFIX}mysql>0:${PORTSDIR}/databases/ruby-mysql
 .endif
 
-.if defined(WITH_NATIVE_POSTGRESQL)
+.if ${PORT_OPTIONS:MPGSQL}
 RUN_DEPENDS+=	rubygem-pg>=0:${PORTSDIR}/databases/rubygem-pg
 .endif
 
-.if defined(WITH_NATIVE_SQLITE3)
+.if ${PORT_OPTIONS:MSQLITE3}
 RUN_DEPENDS+=	rubygem-sqlite3>=1.2.1:${PORTSDIR}/databases/rubygem-sqlite3
 .endif
 
