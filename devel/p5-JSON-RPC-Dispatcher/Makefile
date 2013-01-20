@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-JSON-RPC-Dispatcher
-# Date created:				21 April, 2010
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-JSON-RPC-Dispatcher/Makefile,v 1.9 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: ports/devel/p5-JSON-RPC-Dispatcher/Makefile,v 1.10 2012/12/26 14:56:58 svnexp Exp $
 
 PORTNAME=	JSON-RPC-Dispatcher
-PORTVERSION=	0.0505
+PORTVERSION=	0.0506
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
