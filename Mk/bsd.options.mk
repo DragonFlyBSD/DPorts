@@ -75,6 +75,12 @@ OPTIONS_DEFINE:=	${OPTIONS_DEFINE:N${opt}}
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:N${opt}}
 .endfor
 
+# Exclude global options
+.for opt in ${OPTIONS_EXCLUDE}
+OPTIONS_DEFINE:=	${OPTIONS_DEFINE:N${opt}}
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:N${opt}}
+.endfor
+
 # Add per arch options
 .for opt in ${OPTIONS_DEFINE_${ARCH}}
 .if empty(OPTIONS_DEFINE:M${opt})
