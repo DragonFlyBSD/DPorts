@@ -2,10 +2,10 @@
 # Date created:				27 May 2005
 # Whom:					Jonathan Weiss (<jw@innerewut.de>)
 #
-# $FreeBSD: ports/devel/rubygem-activesupport/Makefile,v 1.39 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-activesupport/Makefile,v 1.40 2013/01/09 04:43:42 svnexp Exp $
 
 PORTNAME=	activesupport
-PORTVERSION=	3.2.8
+PORTVERSION=	3.2.11
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
