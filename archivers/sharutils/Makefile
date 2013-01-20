@@ -1,9 +1,8 @@
 # Created by: ache
-# $FreeBSD: ports/archivers/sharutils/Makefile,v 1.50 2012/11/17 05:54:23 svnexp Exp $
+# $FreeBSD: ports/archivers/sharutils/Makefile,v 1.52 2013/01/09 00:45:33 svnexp Exp $
 
 PORTNAME=	sharutils
-PORTVERSION=	4.11.1
-PORTREVISION=	1
+PORTVERSION=	4.13.3
 CATEGORIES=	archivers
 MASTER_SITES=	GNU
 
@@ -14,7 +13,7 @@ LICENSE=	GPLv3
 
 OPTIONS_DEFINE=	NLS
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
