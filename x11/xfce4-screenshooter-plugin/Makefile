@@ -1,13 +1,13 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: ports/x11/xfce4-screenshooter-plugin/Makefile,v 1.36 2012/12/14 17:53:13 svnexp Exp $
+# $FreeBSD: ports/x11/xfce4-screenshooter-plugin/Makefile,v 1.37 2012/12/31 01:05:49 svnexp Exp $
 #
 
 PORTNAME=	xfce4-screenshooter-plugin
 PORTVERSION=	1.8.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
-MASTER_SITE_SUBDIR=/src/apps/xfce4-screenshooter/${PORTVERSION:R}
+MASTER_SITE_SUBDIR=src/apps/xfce4-screenshooter/${PORTVERSION:R}
 DISTNAME=	xfce4-screenshooter-${PORTVERSION}
 DIST_SUBDIR=	xfce4
 
