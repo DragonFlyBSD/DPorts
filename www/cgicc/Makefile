@@ -3,12 +3,11 @@
 # Date created:			Mar 26, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/www/cgicc/Makefile,v 1.36 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: ports/www/cgicc/Makefile,v 1.37 2013/01/14 18:42:27 svnexp Exp $
 #
 
 PORTNAME=	cgicc
-PORTVERSION=	3.2.9
-PORTREVISION=	2
+PORTVERSION=	3.2.10
 CATEGORIES=	www devel
 MASTER_SITES=	GNU
 
@@ -22,6 +21,8 @@ MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOHEADER="${TRUE}" \
 USE_LDCONFIG=	yes
 
 PORTDOCS=	*
+CXXFLAGS+=	-Wno-unknown-pragmas
+MAKE_JOBS_SAFE=	yes
 
 .if !defined(NOPORTDOCS)
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
@@ -42,5 +43,6 @@ post-install:
 	@${MKDIR} ${DOCSDIR}
 	@(cd ${WRKSRC}/doc/html && ${COPYTREE_SHARE} . ${DOCSDIR})
 .endif
+	${RM} -f ${PREFIX}/lib/libcgicc.la
 
 .include <bsd.port.mk>
