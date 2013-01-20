@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Test-DBIx-Class/Makefile,v 1.9 2012/11/17 05:56:31 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Test-DBIx-Class/Makefile,v 1.10 2012/12/17 15:43:19 svnexp Exp $
 
 PORTNAME=	Test-DBIx-Class
 PORTVERSION=	0.35
@@ -59,11 +59,6 @@ MAN3=	Test::DBIx::Class.3 \
 	Test::DBIx::Class::Types.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Digest-MD5>=2.39:${PORTSDIR}/security/p5-Digest-MD5
-RUN_DEPENDS+=	p5-Digest-MD5>=2.39:${PORTSDIR}/security/p5-Digest-MD5
-.endif
 
 .if ${PERL_LEVEL} < 501400
 BUILD_DEPENDS+=	p5-Scalar-List-Utils>=1.23:${PORTSDIR}/lang/p5-Scalar-List-Utils
