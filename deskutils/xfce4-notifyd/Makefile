@@ -1,9 +1,9 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/deskutils/xfce4-notifyd/Makefile,v 1.19 2012/12/14 17:52:33 svnexp Exp $
+# $FreeBSD: ports/deskutils/xfce4-notifyd/Makefile,v 1.20 2012/12/31 01:05:43 svnexp Exp $
 
 PORTNAME=	xfce4-notifyd
 PORTVERSION=	0.2.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE
 MASTER_SITE_SUBDIR=	src/apps/${PORTNAME}/${PORTVERSION:R}
