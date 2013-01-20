@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Plack::Middleware::IEnosniff
-# Date created:		01 Feb 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Plack-Middleware-IEnosniff/Makefile,v 1.4 2012/11/17 06:02:53 svnexp Exp $
-#
+# $FreeBSD: ports/www/p5-Plack-Middleware-IEnosniff/Makefile,v 1.5 2013/01/14 22:54:02 svnexp Exp $
 
 PORTNAME=	Plack-Middleware-IEnosniff
-PORTVERSION=	0.01
+PORTVERSION=	0.02
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BAYASHI
