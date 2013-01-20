@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Net-Frame-ICMPv6
-# Date created:	   09 Mar 2009
-# Whom:		   Mars G Miro <spry@anarchy.in.the.ph>
-#
-# $FreeBSD: ports/net/p5-Net-Frame-Layer-ICMPv6/Makefile,v 1.7 2012/11/17 06:00:10 svnexp Exp $
-#
+# Created by: Mars G Miro <spry@anarchy.in.the.ph>
+# $FreeBSD: ports/net/p5-Net-Frame-Layer-ICMPv6/Makefile,v 1.8 2012/12/28 22:58:01 svnexp Exp $
 
 PORTNAME=	Net-Frame-Layer-ICMPv6
-PORTVERSION=	1.06
+PORTVERSION=	1.08
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
