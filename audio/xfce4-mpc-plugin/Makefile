@@ -1,10 +1,10 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: ports/audio/xfce4-mpc-plugin/Makefile,v 1.35 2012/12/14 17:52:28 svnexp Exp $
+# $FreeBSD: ports/audio/xfce4-mpc-plugin/Makefile,v 1.36 2012/12/31 01:05:42 svnexp Exp $
 #
 
 PORTNAME=	xfce4-mpc-plugin
 PORTVERSION=	0.4.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
