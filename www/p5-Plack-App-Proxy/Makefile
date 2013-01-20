@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Plack::App::Proxy
-# Date created:		04 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Plack-App-Proxy/Makefile,v 1.7 2012/11/17 06:02:52 svnexp Exp $
-#
+# $FreeBSD: ports/www/p5-Plack-App-Proxy/Makefile,v 1.8 2013/01/14 14:56:12 svnexp Exp $
 
 PORTNAME=	Plack-App-Proxy
-PORTVERSION=	0.22
+PORTVERSION=	0.25
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:LEEDO
