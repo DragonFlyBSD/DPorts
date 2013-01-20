@@ -1,5 +1,5 @@
 # Created by:	jrhett@netconsonance.com
-# $FreeBSD: ports/sysutils/cfengine33/Makefile,v 1.7 2012/12/11 00:53:10 svnexp Exp $
+# $FreeBSD: ports/sysutils/cfengine33/Makefile,v 1.8 2013/01/08 14:43:14 svnexp Exp $
 #
 
 PORTNAME=	cfengine
@@ -7,6 +7,7 @@ PORTVERSION=	3.3.8
 PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine.com/source-code/download?file=
+PKGNAMESUFFIX=	33
 
 MAINTAINER=	cy@FreeBSD.org
 #		gjb@FreeBSD.org is also committer for this port
