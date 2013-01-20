@@ -1,13 +1,13 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: ports/archivers/thunar-archive-plugin/Makefile,v 1.19 2012/12/14 21:29:03 svnexp Exp $
+# $FreeBSD: ports/archivers/thunar-archive-plugin/Makefile,v 1.21 2012/12/31 06:21:25 svnexp Exp $
 #
 
 PORTNAME=	thunar-archive-plugin
 PORTVERSION=	0.3.0
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	archivers xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
-MASTER_SITE_SUBDIR=src/thunar-plugins//${PORTNAME}/${PORTVERSION:R}
+MASTER_SITE_SUBDIR=src/thunar-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
