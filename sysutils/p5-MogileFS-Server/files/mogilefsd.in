@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/sysutils/p5-MogileFS-Server/files/mogilefsd.in,v 1.3 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: ports/sysutils/p5-MogileFS-Server/files/mogilefsd.in,v 1.4 2013/01/16 15:44:25 svnexp Exp $
 #
 # PROVIDE: mogilefsd
 # REQUIRE: LOGIN cleanvar
@@ -17,6 +17,7 @@ load_rc_config mogilefsd
 
 required_files=%%PREFIX%%/etc/mogtracker.conf
 
+command="%%PREFIX%%/bin/${name}"
 command_args="--config=%%PREFIX%%/etc/mogtracker.conf"
 
 run_rc_command "$1"
