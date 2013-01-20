@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-decorator
-# Date created:		Thu Jun 21 14:49:52 MSD 2007
-# Whom:			Denis Shaposhnikov <dsh@vlink.ru>
-#
-# $FreeBSD: ports/devel/py-decorator/Makefile,v 1.11 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: Denis Shaposhnikov <dsh@vlink.ru>
+# $FreeBSD: ports/devel/py-decorator/Makefile,v 1.12 2013/01/13 20:50:17 svnexp Exp $
 
 PORTNAME=	decorator
-PORTVERSION=	3.3.3
+PORTVERSION=	3.4.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
