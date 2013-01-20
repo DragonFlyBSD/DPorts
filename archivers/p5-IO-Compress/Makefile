@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/archivers/p5-IO-Compress/Makefile,v 1.21 2012/12/04 06:53:26 svnexp Exp $
+# $FreeBSD: ports/archivers/p5-IO-Compress/Makefile,v 1.22 2012/12/23 19:11:10 svnexp Exp $
 
 PORTNAME=	IO-Compress
-PORTVERSION=	2.058
+PORTVERSION=	2.059
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PMQS
