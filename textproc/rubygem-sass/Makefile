@@ -2,11 +2,11 @@
 # Date created:		2011-05-06
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/rubygem-sass/Makefile,v 1.15 2012/11/17 06:02:20 svnexp Exp $
+# $FreeBSD: ports/textproc/rubygem-sass/Makefile,v 1.16 2013/01/09 04:43:47 svnexp Exp $
 #
 
 PORTNAME=	sass
-PORTVERSION=	3.2.1
+PORTVERSION=	3.2.5
 CATEGORIES=	textproc ruby
 MASTER_SITES=	RG
 
