@@ -2,11 +2,11 @@
 # Date created:			  7 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/horde-timeobjects/Makefile,v 1.2 2012/12/18 13:28:40 svnexp Exp $
+# $FreeBSD: ports/devel/horde-timeobjects/Makefile,v 1.3 2013/01/10 18:34:43 svnexp Exp $
 #
 
 PORTNAME=	timeobjects
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	horde-
 
