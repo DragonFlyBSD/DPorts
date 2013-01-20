@@ -1,0 +1,34 @@
+# New ports collection makefile for:	simplegroupware
+# Date created:				7 January 2011
+# Whom:					jamrich.majo@gmail.com
+#
+# $FreeBSD: ports/deskutils/simplegroupware/Makefile,v 1.10 2012/11/17 05:55:30 svnexp Exp $
+#
+
+PORTNAME=	simplegroupware
+PORTVERSION=	0.745
+CATEGORIES=	deskutils
+MASTER_SITES=	SF/simplgroup/${PORTNAME}/${PORTVERSION}/ \
+		GOOGLE_CODE
+DISTNAME=	SimpleGroupware_${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Simple Groupware is an open source enterprise application
+
+NO_BUILD=	yes
+USE_APACHE_RUN=	22
+USE_MYSQL=	yes
+USE_PHP=	mysql
+
+PKGMESSAGE=	${WRKDIR}/${PORTNAME}/pkg-message
+SUB_FILES=	pkg-message
+
+do-install:
+	${MKDIR} ${WWWDIR}/
+	cd ${WRKSRC}/ && ${COPYTREE_SHARE} . ${WWWDIR}/
+	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}/
+
+post-install:
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>
