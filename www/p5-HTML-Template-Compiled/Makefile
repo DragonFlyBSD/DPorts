@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-HTML-Template-Compiled
-# Date Created:				09 Sep 2005
-# Whom:					Zach Thompson <hideo@lastamericanempire.com>
-#
-# $FreeBSD: ports/www/p5-HTML-Template-Compiled/Makefile,v 1.44 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: Zach Thompson <hideo@lastamericanempire.com>
+# $FreeBSD: ports/www/p5-HTML-Template-Compiled/Makefile,v 1.45 2012/12/31 00:27:38 svnexp Exp $
 
 PORTNAME=	HTML-Template-Compiled
-PORTVERSION=	0.99
+PORTVERSION=	1.000
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
