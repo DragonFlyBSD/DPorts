@@ -1,12 +1,8 @@
-# New ports collection makefile for:	InlineX::CPP2XS
-# Date created:				30 Jan, 2010
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-InlineX-CPP2XS/Makefile,v 1.10 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: ports/devel/p5-InlineX-CPP2XS/Makefile,v 1.11 2013/01/15 12:46:51 svnexp Exp $
 
 PORTNAME=	InlineX-CPP2XS
-PORTVERSION=	0.23
+PORTVERSION=	0.24
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SISYPHUS
