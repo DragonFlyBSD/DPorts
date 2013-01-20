@@ -3,11 +3,11 @@
 # Date created:			Jan 7, 2007
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/rubygem-builder/Makefile,v 1.12 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-builder/Makefile,v 1.13 2013/01/09 04:43:42 svnexp Exp $
 #
 
 PORTNAME=	builder
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
