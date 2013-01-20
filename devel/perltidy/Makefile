@@ -1,12 +1,8 @@
-# New ports collection makefile for:	perltidy
-# Date created:			Mar 4, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/perltidy/Makefile,v 1.40 2012/11/17 05:56:41 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: ports/devel/perltidy/Makefile,v 1.41 2013/01/14 09:43:59 svnexp Exp $
 
 PORTNAME=	perltidy
-PORTVERSION=	20120714
+PORTVERSION=	20121207
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/%SUBDIR%/Perl/} \
 		SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
