@@ -2,7 +2,7 @@
 # Date created:	   2011-07-19
 # Whom:		   milki <milki@rescomp.berkeley.edu>
 #
-# $FreeBSD: ports/textproc/p5-Hailo/Makefile,v 1.6 2012/11/17 06:02:04 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Hailo/Makefile,v 1.7 2012/12/16 06:16:59 svnexp Exp $
 #
 
 PORTNAME=	Hailo
@@ -47,7 +47,7 @@ TEST_DEPENDS=	p5-DBD-SQLite>=1.29:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Test-Script-Run>=0.04:${PORTSDIR}/devel/p5-Test-Script-Run \
 		p5-Test-Synopsis>=0.06:${PORTSDIR}/devel/p5-Test-Synopsis
 
-PERL_CONFIGURE=	5.10.0+
+PERL_CONFIGURE=	yes
 
 MAN1=		hailo.1
 
