@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/pear-Horde_Core/Makefile,v 1.23 2012/12/20 23:31:48 svnexp Exp $
+# $FreeBSD: ports/devel/pear-Horde_Core/Makefile,v 1.25 2013/01/10 10:41:44 svnexp Exp $
 
 PORTNAME=	Horde_Core
-PORTVERSION=	2.1.2
+PORTVERSION=	2.1.5
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	pear-
 
