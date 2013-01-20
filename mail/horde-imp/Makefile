@@ -2,11 +2,11 @@
 # Date created:			  Mon Oct 08, 2001
 # Whom:				  Thierry Thomas (<thierry@thomas.as>)
 #
-# $FreeBSD: ports/mail/horde-imp/Makefile,v 1.78 2012/12/18 13:28:43 svnexp Exp $
+# $FreeBSD: ports/mail/horde-imp/Makefile,v 1.79 2013/01/10 18:35:13 svnexp Exp $
 #
 
 PORTNAME=	imp
-PORTVERSION=	6.0.2
+PORTVERSION=	6.0.3
 CATEGORIES=	mail www pear
 PKGNAMEPREFIX=	horde-
 
