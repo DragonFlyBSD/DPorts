@@ -1,8 +1,8 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: ports/dns/fpdns/Makefile,v 1.16 2012/11/17 05:57:09 svnexp Exp $
+# $FreeBSD: ports/dns/fpdns/Makefile,v 1.17 2013/01/14 21:43:51 svnexp Exp $
 
 PORTNAME=	fpdns
-PORTVERSION=	0.9.3.20120719
+PORTVERSION=	0.9.3.20121019
 CATEGORIES=	dns net perl5
 DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${GH_COMMIT}
 
@@ -13,7 +13,8 @@ RUN_DEPENDS=	p5-Net-DNS>0:${PORTSDIR}/dns/p5-Net-DNS
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	kirei
-GH_COMMIT=	9eb38df
+GH_COMMIT=	24a2f18
+GH_TAGNAME=	${GH_COMMIT}
 
 PERL_CONFIGURE=	yes
 
