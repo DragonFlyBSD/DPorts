@@ -1,8 +1,8 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/print/texinfo/Makefile,v 1.43 2012/12/13 19:02:24 svnexp Exp $
+# $FreeBSD: ports/print/texinfo/Makefile,v 1.44 2013/01/13 12:41:34 svnexp Exp $
 
 PORTNAME=	texinfo
-PORTVERSION=	4.13.20121116
+PORTVERSION=	4.13.20130102
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNU} \
 		ftp://ftp.stack.nl/pub/users/johans/texinfo/${PORTVERSION:E}/
