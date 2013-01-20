@@ -1,8 +1,8 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: ports/www/py-django/Makefile,v 1.48 2012/11/17 06:02:59 svnexp Exp $
+# $FreeBSD: ports/www/py-django/Makefile,v 1.49 2013/01/06 19:57:11 svnexp Exp $
 
 PORTNAME=	django
-PORTVERSION=	1.4.2
+PORTVERSION=	1.4.3
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PORTVERSION:R}/ \
 		CHEESESHOP
