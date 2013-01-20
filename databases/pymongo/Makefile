@@ -1,12 +1,8 @@
-# Ports collection makefile for:	pymongo
-# Date created:				23 Nov, 2009
-# Whom:					wen@FreeBSD.org
-#
-# $FreeBSD: ports/databases/pymongo/Makefile,v 1.22 2012/11/17 05:55:23 svnexp Exp $
-#
+# Created by: wen@FreeBSD.org
+# $FreeBSD: ports/databases/pymongo/Makefile,v 1.23 2013/01/11 13:28:18 svnexp Exp $
 
 PORTNAME=	pymongo
-PORTVERSION=	2.3
+PORTVERSION=	2.4.1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 
