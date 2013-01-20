@@ -1,14 +1,14 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: ports/devel/p5-Devel-NYTProf/Makefile,v 1.19 2012/12/16 06:16:54 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Devel-NYTProf/Makefile,v 1.21 2013/01/03 16:00:00 svnexp Exp $
 
 PORTNAME=	Devel-NYTProf
-PORTVERSION=	4.09
+PORTVERSION=	4.23
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vovkasm@gmail.com
-COMMENT=	Powerful feature-rich perl source code profiler
+COMMENT=	Powerful feature-rich Perl source code profiler
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
@@ -23,7 +23,8 @@ MAN1=	nytprofhtml.1 \
 	nytprofcg.1 \
 	nytprofmerge.1
 
-MAN3=	Devel::NYTProf.3 \
+MAN3=	Devel::MemoryProfiling.3 \
+	Devel::NYTProf.3 \
 	Devel::NYTProf::Apache.3 \
 	Devel::NYTProf::Core.3 \
 	Devel::NYTProf::Data.3 \
