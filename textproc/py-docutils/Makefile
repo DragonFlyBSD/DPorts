@@ -1,13 +1,9 @@
-# ex:ts=8
-# Ports collection makefile for:	py-docutils
-# Date created:			Sep 14, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/py-docutils/Makefile,v 1.19 2012/11/17 06:02:17 svnexp Exp $
+# Created by: ijliao
+# $FreeBSD: ports/textproc/py-docutils/Makefile,v 1.20 2012/12/26 09:50:06 svnexp Exp $
 #
 
 PORTNAME=	docutils
-PORTVERSION=	0.9.1
+PORTVERSION=	0.10
 CATEGORIES=	textproc python
 MASTER_SITES=	SF \
 		CHEESESHOP
