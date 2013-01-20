@@ -1,8 +1,8 @@
 # Created by: Aliaksandr Zahatski <zahatski@gmail.com>
-# $FreeBSD: ports/lang/rakudo/Makefile,v 1.36 2012/12/18 23:19:34 svnexp Exp $
+# $FreeBSD: ports/lang/rakudo/Makefile,v 1.37 2013/01/10 15:12:58 svnexp Exp $
 
 PORTNAME=	rakudo
-PORTVERSION=	2012.09
+PORTVERSION=	2012.11
 PORTEPOCH=	4
 CATEGORIES=	lang
 MASTER_SITES=	http://cloud.github.com/downloads/rakudo/star/
