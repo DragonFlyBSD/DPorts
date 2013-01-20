@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Path::Class
-# Date created:		2004-07-25
-# Whom:			Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-#
-# $FreeBSD: ports/devel/p5-Path-Class/Makefile,v 1.26 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
+# $FreeBSD: ports/devel/p5-Path-Class/Makefile,v 1.27 2013/01/04 09:55:27 svnexp Exp $
 
 PORTNAME=	Path-Class
-PORTVERSION=	0.26
+PORTVERSION=	0.29
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:KWILLIAMS
@@ -32,8 +28,8 @@ PORTDOCS=	Changes README
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
+	${MKDIR} ${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
