@@ -1,8 +1,9 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/devel/deforaos-libsystem/Makefile,v 1.1 2012/12/19 00:52:49 svnexp Exp $
+# $FreeBSD: ports/devel/deforaos-libsystem/Makefile,v 1.2 2013/01/03 16:06:42 svnexp Exp $
 
 PORTNAME=	libsystem
 PORTVERSION=	0.1.6
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.defora.org/os/download/download/3527/
 DISTNAME=	libSystem-${PORTVERSION}
@@ -15,6 +16,7 @@ LICENSE=	GPLv3
 
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
+MAKE_ARGS+=	PREFIX=${PREFIX}
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/lib/|/libdata/|g' \
