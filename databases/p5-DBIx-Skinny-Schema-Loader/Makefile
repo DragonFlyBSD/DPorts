@@ -1,12 +1,7 @@
-# New ports collection makefile for:	DBIx::Skinny::Schema::Loader
-# Date created:		20 Nov 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Skinny-Schema-Loader/Makefile,v 1.9 2012/11/17 05:55:15 svnexp Exp $
-#
+# $FreeBSD: ports/databases/p5-DBIx-Skinny-Schema-Loader/Makefile,v 1.10 2013/01/12 16:17:36 svnexp Exp $
 
 PORTNAME=	DBIx-Skinny-Schema-Loader
-PORTVERSION=	0.24
+PORTVERSION=	0.25
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:NEKOYA
