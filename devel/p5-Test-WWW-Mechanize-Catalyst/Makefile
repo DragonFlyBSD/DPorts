@@ -2,7 +2,7 @@
 # Date created:				Nov 16, 2005
 # Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-WWW-Mechanize-Catalyst/Makefile,v 1.29 2012/11/17 05:56:34 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Test-WWW-Mechanize-Catalyst/Makefile,v 1.30 2012/12/17 15:02:09 svnexp Exp $
 #
 
 PORTNAME=	Test-WWW-Mechanize-Catalyst
@@ -31,10 +31,5 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Test::WWW::Mechanize::Catalyst.3
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.mk>
 
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
