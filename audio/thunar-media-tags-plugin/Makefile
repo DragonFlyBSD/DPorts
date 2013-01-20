@@ -1,13 +1,13 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: ports/audio/thunar-media-tags-plugin/Makefile,v 1.29 2012/12/14 21:29:03 svnexp Exp $
+# $FreeBSD: ports/audio/thunar-media-tags-plugin/Makefile,v 1.31 2012/12/31 06:21:25 svnexp Exp $
 #
 
 PORTNAME=	thunar-media-tags-plugin
 PORTVERSION=	0.2.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	audio xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
-MASTER_SITE_SUBDIR=src/thunar-plugins//${PORTNAME}/${PORTVERSION:R}
+MASTER_SITE_SUBDIR=src/thunar-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
