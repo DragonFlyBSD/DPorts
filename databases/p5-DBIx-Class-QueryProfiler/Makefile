@@ -2,7 +2,7 @@
 # Date created: 25 December 2009
 # Whom: andrey@kostenko.name
 #
-# $FreeBSD: ports/databases/p5-DBIx-Class-QueryProfiler/Makefile,v 1.11 2012/11/17 05:55:15 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBIx-Class-QueryProfiler/Makefile,v 1.12 2012/12/17 08:59:15 svnexp Exp $
 
 PORTNAME=	DBIx-Class-QueryProfiler
 PORTVERSION=	0.05
@@ -26,12 +26,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		DBIx::Class::QueryProfiler.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
