@@ -2,11 +2,12 @@
 # Date created:		2011-09-12
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-coffee-rails/Makefile,v 1.8 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-coffee-rails/Makefile,v 1.9 2013/01/09 04:43:42 svnexp Exp $
 #
 
 PORTNAME=	coffee-rails
 PORTVERSION=	3.2.2
+PORTREVISION=	1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -14,7 +15,7 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Coffee Script adapter for the Rails asset pipeline
 
 RUN_DEPENDS=	rubygem-coffee-script>=2.2.0:${PORTSDIR}/devel/rubygem-coffee-script \
-		rubygem-railties>=3.2.0:${PORTSDIR}/www/rubygem-railties
+		rubygem-railties>=3.2.10:${PORTSDIR}/www/rubygem-railties
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
