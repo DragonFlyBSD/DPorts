@@ -2,10 +2,10 @@
 # Date created:				27 May 2005
 # Whom:					Jonathan Weiss (<jw@innerewut.de>)
 #
-# $FreeBSD: ports/devel/rubygem-rake/Makefile,v 1.26 2012/11/17 05:57:00 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-rake/Makefile,v 1.27 2013/01/09 04:43:42 svnexp Exp $
 
 PORTNAME=	rake
-PORTVERSION=	0.9.2.2
+PORTVERSION=	10.0.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
