@@ -1,8 +1,8 @@
-# $FreeBSD: ports/audio/musicpd/Makefile,v 1.88 2012/11/18 14:37:58 svnexp Exp $
+# $FreeBSD: ports/audio/musicpd/Makefile,v 1.90 2013/01/03 16:36:34 svnexp Exp $
 
 PORTNAME=	musicpd
 PORTVERSION=	0.17.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio ipv6
 MASTER_SITES=	SF/${PORTNAME}/mpd/${PORTVERSION}
 DISTNAME=	mpd-${PORTVERSION}
@@ -236,6 +236,14 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,^#\([^"]*"\)~/,\1${MPDDIR}/,g' \
 		-e 's,^#\(user[^"]*"\)nobody,\1${MPDUSER},g' \
 		${WRKSRC}/doc/mpdconf.example
+# Uncomment OSS audio output part from MPDCONF; dragons!
+	start=$$(expr $$(${SED} -n '/^#	type	*"oss"/=' \
+		${WRKSRC}/doc/mpdconf.example) - 1); \
+	 finish=$$(for n in $$(${JOT} 10 $$start); do \
+	 	     [ "$$(${SED} -n $${n}p ${WRKSRC}/doc/mpdconf.example)" = \
+				"#}" ] && echo $$n || true; done); \
+	 ${REINPLACE_CMD} -e "$${start},$${finish}s,^#,," \
+		${WRKSRC}/doc/mpdconf.example
 # Fix man pages for executable names
 	@${REINPLACE_CMD} -e 's/^\(\.B m\)pd/\1usicpd/' \
 		-e 's#^\(\.BI \)/etc/mpd.conf#\1${PREFIX}/etc/${MPDCONF}#' \
@@ -267,8 +275,7 @@ post-install:
 		${CP} -p ${PREFIX}/etc/${MPDCONF}.sample \
 			${PREFIX}/etc/${MPDCONF} ; \
 	fi
-	@${MKDIR} ${MPDDIR}
-	@${INSTALL} -d -o ${MPDUSER} -g ${MPDGROUP} ${MPDDIR}
+	@${INSTALL} -d -o ${MPDUSER} -g ${MPDGROUP} ${MPDDIR} ${MPDDIR}/.mpd
 	@${ECHO_MSG}
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO_MSG}
