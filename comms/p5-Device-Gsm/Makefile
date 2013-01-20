@@ -2,11 +2,11 @@
 # Date created:				09 May 2006
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
-# $FreeBSD: ports/comms/p5-Device-Gsm/Makefile,v 1.12 2012/11/17 05:55:00 svnexp Exp $
+# $FreeBSD: ports/comms/p5-Device-Gsm/Makefile,v 1.13 2012/12/31 12:47:29 svnexp Exp $
 #
 
 PORTNAME=	Device-Gsm
-PORTVERSION=	1.58
+PORTVERSION=	1.60
 CATEGORIES=	comms perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
