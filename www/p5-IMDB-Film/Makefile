@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-IMDB-Film
-# Date created:		2006-08-02
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-IMDB-Film/Makefile,v 1.34 2012/11/17 06:02:51 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: ports/www/p5-IMDB-Film/Makefile,v 1.35 2013/01/05 16:47:54 svnexp Exp $
 
 PORTNAME=	IMDB-Film
-PORTVERSION=	0.52
+PORTVERSION=	0.53
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:STEPANOV
