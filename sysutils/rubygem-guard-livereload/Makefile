@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/sysutils/rubygem-guard-livereload/Makefile,v 1.7 2012/12/04 07:46:13 svnexp Exp $
+# $FreeBSD: ports/sysutils/rubygem-guard-livereload/Makefile,v 1.8 2012/12/23 20:23:54 svnexp Exp $
 
 PORTNAME=	guard-livereload
-PORTVERSION=	1.1.2
+PORTVERSION=	1.1.3
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
