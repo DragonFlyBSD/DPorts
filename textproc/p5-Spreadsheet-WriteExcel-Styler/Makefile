@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Spreadsheet-WriteExcel-Styler
-# Date created:				April 19 2010
-# Whom:					jupengfei <jupengfei@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-Spreadsheet-WriteExcel-Styler/Makefile,v 1.3 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: jupengfei <jupengfei@gmail.com>
+# $FreeBSD: ports/textproc/p5-Spreadsheet-WriteExcel-Styler/Makefile,v 1.4 2012/12/13 17:49:59 svnexp Exp $
 
 PORTNAME=	Spreadsheet-WriteExcel-Styler
-PORTVERSION=	1.00
+PORTVERSION=	1.02
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
