@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Mail-Box
-# Date created:				Wed Jan  3 12:54:59 2001
-# Whom:					will
-#
-# $FreeBSD: ports/mail/p5-Mail-Box/Makefile,v 1.43 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: ports/mail/p5-Mail-Box/Makefile,v 1.44 2012/12/31 16:43:58 svnexp Exp $
 
 PORTNAME=	Mail-Box
-PORTVERSION=	2.106
+PORTVERSION=	2.107
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MARKOV
