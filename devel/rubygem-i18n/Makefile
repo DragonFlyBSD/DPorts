@@ -2,10 +2,10 @@
 # Date created:				1 September 2010
 # Whom:						Philip M. Gollucci <pgollucci@p6m7g8.com>
 #
-# $FreeBSD: ports/devel/rubygem-i18n/Makefile,v 1.9 2012/11/17 05:56:59 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-i18n/Makefile,v 1.10 2013/01/09 04:43:42 svnexp Exp $
 
 PORTNAME=	i18n
-PORTVERSION=	0.6.0
+PORTVERSION=	0.6.1
 PORTEPOCH=	2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
