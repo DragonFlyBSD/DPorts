@@ -2,11 +2,11 @@
 # Date created:				18 Mar 2010
 # Whom:					renchap@cocoa-x.com
 #
-# $FreeBSD: ports/devel/rubygem-mixlib-authentication/Makefile,v 1.8 2012/11/17 05:57:00 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-mixlib-authentication/Makefile,v 1.9 2013/01/08 00:51:21 svnexp Exp $
 #
 
 PORTNAME=	mixlib-authentication
-PORTVERSION=	1.1.4
+PORTVERSION=	1.3.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
