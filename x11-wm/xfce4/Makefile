@@ -2,11 +2,12 @@
 # Date created:		9 June 2003
 # Whom:			James Earl <jdearl@telus.net>
 #
-# $FreeBSD: ports/x11-wm/xfce4/Makefile,v 1.126 2012/11/17 06:03:44 svnexp Exp $
+# $FreeBSD: ports/x11-wm/xfce4/Makefile,v 1.127 2013/01/06 17:50:53 svnexp Exp $
 #
 
 PORTNAME=	xfce
 PORTVERSION=	4.10
+PORTREVISION=	1
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -59,7 +60,7 @@ RUN_DEPENDS+=	mousepad:${PORTSDIR}/editors/mousepad
 .endif
 
 .if ${PORT_OPTIONS:MTERMINAL}
-RUN_DEPENDS+=	Terminal:${PORTSDIR}/x11/Terminal
+RUN_DEPENDS+=	xfce4-terminal:${PORTSDIR}/x11/xfce4-terminal
 .endif
 
 .if ${PORT_OPTIONS:MAPPFINDER}
