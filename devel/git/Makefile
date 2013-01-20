@@ -2,11 +2,11 @@
 # Date created:				7 Feb 2006
 # Whom:					Eric Anholt
 #
-# $FreeBSD: ports/devel/git/Makefile,v 1.151 2012/12/12 19:25:45 svnexp Exp $
+# $FreeBSD: ports/devel/git/Makefile,v 1.154 2013/01/16 16:48:17 svnexp Exp $
 #
 
 PORTNAME=	git
-PORTVERSION=	1.8.0.2
+PORTVERSION=	1.8.1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
