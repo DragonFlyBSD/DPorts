@@ -1,0 +1,3 @@
+#!/bin/sh
+# $FreeBSD: ports/www/pylot/files/pylot.in,v 1.2 2012/11/17 06:03:02 svnexp Exp $
+%%PYTHON_CMD%% %%DATADIR%%/run.py $@
