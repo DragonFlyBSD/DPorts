@@ -2,10 +2,10 @@
 # Date created:			  7 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/pear-Horde_Image/Makefile,v 1.11 2012/12/12 15:19:49 svnexp Exp $
+# $FreeBSD: ports/graphics/pear-Horde_Image/Makefile,v 1.12 2013/01/10 10:41:45 svnexp Exp $
 
 PORTNAME=	Horde_Image
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 CATEGORIES=	graphics www pear
 PKGNAMEPREFIX=	pear-
 
