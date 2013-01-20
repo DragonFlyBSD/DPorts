@@ -1,9 +1,9 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: ports/deskutils/orage/Makefile,v 1.37 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: ports/deskutils/orage/Makefile,v 1.38 2012/12/30 12:10:38 svnexp Exp $
 
 PORTNAME=	orage
 PORTVERSION=	4.8.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=/src/apps/${PORTNAME}/${PORTVERSION:R}
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=--with-bdb4=no
 
 .if ${PORT_OPTIONS:MICAL}
 CONFIGURE_ARGS+=--enable-libical
-LIB_DEPENDS+=	ical.44:${PORTSDIR}/devel/libical
+LIB_DEPENDS+=	ical:${PORTSDIR}/devel/libical
 CFLAGS+=	-I${LOCALBASE}/include/libical
 PLIST_SUB+=	WITH_ICAL="@comment "
 .else
