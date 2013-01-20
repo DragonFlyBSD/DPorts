@@ -1,9 +1,9 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: ports/x11/xfce4-clipman-plugin/Makefile,v 1.62 2012/12/14 17:53:13 svnexp Exp $
+# $FreeBSD: ports/x11/xfce4-clipman-plugin/Makefile,v 1.63 2012/12/31 01:05:49 svnexp Exp $
 
 PORTNAME=	xfce4-clipman-plugin
 PORTVERSION=	1.2.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11 xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
