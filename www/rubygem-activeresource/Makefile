@@ -2,10 +2,10 @@
 # Date created:				30 Jan 2009
 # Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/www/rubygem-activeresource/Makefile,v 1.22 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: ports/www/rubygem-activeresource/Makefile,v 1.23 2013/01/09 04:43:48 svnexp Exp $
 
 PORTNAME=	activeresource
-PORTVERSION=	3.2.8
+PORTVERSION=	3.2.11
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
