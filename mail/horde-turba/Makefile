@@ -2,11 +2,11 @@
 # Date created:			  Sat Nov 16, 2001
 # Whom:				  Thierry Thomas (<thierry@thomas.as>)
 #
-# $FreeBSD: ports/mail/horde-turba/Makefile,v 1.76 2012/12/18 13:28:43 svnexp Exp $
+# $FreeBSD: ports/mail/horde-turba/Makefile,v 1.77 2013/01/10 18:35:13 svnexp Exp $
 #
 
 PORTNAME=	turba
-PORTVERSION=	4.0.1
+PORTVERSION=	4.0.2
 PKGNAMEPREFIX=	horde-
 CATEGORIES=	mail www pear
 
