@@ -1,8 +1,9 @@
 # Created by: gary@hotlava.com
-# $FreeBSD: ports/graphics/sane-backends/Makefile,v 1.108 2012/12/20 05:44:16 svnexp Exp $
+# $FreeBSD: ports/graphics/sane-backends/Makefile,v 1.109 2013/01/08 00:45:34 svnexp Exp $
 
 PORTNAME=	sane-backends
 PORTVERSION=	1.0.23
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://alioth.debian.org/frs/download.php/3752/:3752 \
 		http://alioth.debian.org/frs/download.php/3753/:3753 \
@@ -119,6 +120,8 @@ post-patch:
 		${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e '/^pkgconfigdir/s|@libdir@|@prefix@/libdata|' \
 		${WRKSRC}/tools/Makefile.in
+	@${REINPLACE_CMD} -e '/^export PKG_CONFIG_LIBDIR=/s|@libdir@|@prefix@/libdata|' \
+		${WRKSRC}/tools/sane-config.in
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
