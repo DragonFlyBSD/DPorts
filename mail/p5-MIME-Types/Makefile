@@ -1,7 +1,7 @@
-# $FreeBSD: ports/mail/p5-MIME-Types/Makefile,v 1.30 2012/11/27 16:30:37 svnexp Exp $
+# $FreeBSD: ports/mail/p5-MIME-Types/Makefile,v 1.32 2013/01/12 18:29:30 svnexp Exp $
 
 PORTNAME=	MIME-Types
-PORTVERSION=	1.36
+PORTVERSION=	1.38
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MARKOV
