@@ -1,12 +1,7 @@
-# New ports collection makefile for:	percona-toolkit
-# Date created:				15 September 2011
-# Whom:	      				Florian Smeets <flo@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/percona-toolkit/Makefile,v 1.11 2012/11/17 05:55:18 svnexp Exp $
-#
+# $FreeBSD: ports/databases/percona-toolkit/Makefile,v 1.12 2013/01/05 11:44:03 svnexp Exp $
 
 PORTNAME=	percona-toolkit
-PORTVERSION=	2.1.5
+PORTVERSION=	2.1.7
 CATEGORIES=	databases
 MASTER_SITES=	http://www.percona.com/downloads/percona-toolkit/${PORTVERSION}/
 
