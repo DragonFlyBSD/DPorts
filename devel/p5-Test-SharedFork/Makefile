@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Test::SharedFork
-# Date created:		28 Mar 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-SharedFork/Makefile,v 1.15 2012/11/17 05:56:33 svnexp Exp $
-#
+# $FreeBSD: ports/devel/p5-Test-SharedFork/Makefile,v 1.16 2013/01/12 16:51:30 svnexp Exp $
 
 PORTNAME=	Test-SharedFork
-PORTVERSION=	0.20
+PORTVERSION=	0.21
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TOKUHIROM
