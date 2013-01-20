@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Test::Mock::Guard
-# Date created:		22 Aug 2012
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Mock-Guard/Makefile,v 1.2 2012/11/17 05:56:33 svnexp Exp $
-#
+# $FreeBSD: ports/devel/p5-Test-Mock-Guard/Makefile,v 1.3 2013/01/12 16:34:30 svnexp Exp $
 
 PORTNAME=	Test-Mock-Guard
-PORTVERSION=	0.08
+PORTVERSION=	0.09
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
