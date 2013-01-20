@@ -2,15 +2,15 @@
 # Date created:	        21 December 2008
 # Whom:                 Cristiano Rolim Pereira <cristianorolim@hotmail.com>
 #
-# $FreeBSD: ports/sysutils/loganalyzer/Makefile,v 1.12 2012/11/17 06:01:37 svnexp Exp $
+# $FreeBSD: ports/sysutils/loganalyzer/Makefile,v 1.13 2012/12/26 15:41:13 svnexp Exp $
 #
 
 PORTNAME=	loganalyzer
-PORTVERSION=	3.0.0
+PORTVERSION=	3.4.5
 CATEGORIES=	sysutils www
 MASTER_SITES=	http://download.adiscon.com/loganalyzer/
 
-MAINTAINER=	cristianorolim@hotmail.com
+MAINTAINER=	cristianorolim@outlook.com
 COMMENT=	Web based Syslog browsing and analysis
 
 NO_BUILD=	YES
@@ -37,7 +37,6 @@ DEFAULT_PHP_VER=5
 .endif
 
 .include <bsd.port.pre.mk>
-
 
 .if !defined(WITHOUT_PHP_DEPENDS)
 .if defined(WITH_PHP_MYSQL)
