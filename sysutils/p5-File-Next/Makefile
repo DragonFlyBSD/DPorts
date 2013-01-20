@@ -1,12 +1,8 @@
-# New ports collection makefile for:    p5-File-Next
-# Date created:				2006/09/08
-# Whom:	      				chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/sysutils/p5-File-Next/Makefile,v 1.17 2012/11/17 06:01:39 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: ports/sysutils/p5-File-Next/Makefile,v 1.18 2012/12/26 14:42:01 svnexp Exp $
 
 PORTNAME=	File-Next
-PORTVERSION=	1.10
+PORTVERSION=	1.12
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
