@@ -2,11 +2,11 @@
 # Date created:				Jan 18 2007
 # Whom:					Rong-En Fan <rafan@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-AutoLoader/Makefile,v 1.14 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: ports/devel/p5-AutoLoader/Makefile,v 1.15 2012/12/23 12:58:39 svnexp Exp $
 #
 
 PORTNAME=	AutoLoader
-PORTVERSION=	5.72
+PORTVERSION=	5.73
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
