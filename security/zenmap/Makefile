@@ -1,12 +1,11 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: ports/security/zenmap/Makefile,v 1.60 2012/12/19 20:45:00 svnexp Exp $
+# $FreeBSD: ports/security/zenmap/Makefile,v 1.62 2013/01/11 21:16:59 svnexp Exp $
 
 PORTNAME=	zenmap
-PORTVERSION=	6.01
+PORTVERSION=	6.25
 PORTREVISION=	1
 CATEGORIES=	security ipv6
 MASTER_SITES=	http://nmap.org/dist/
-PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	nmap-${PORTVERSION}
 
 MAINTAINER=	nemysis@gmx.ch
@@ -15,13 +14,13 @@ COMMENT=	GUI frontend for the Nmap scanning utility
 LICENSE=	GPLv2
 
 RUN_DEPENDS=	${LOCALBASE}/bin/nmap:${PORTSDIR}/security/nmap \
-		${PYTHON_PACKAGENAMEPREFIX}sqlite3>:${PORTSDIR}/databases/py-sqlite3
+		${PYTHON_PACKAGENAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PORTNAME}
 
 USE_BZIP2=	yes
 USE_GNOME=	pygtk2
-USE_PYTHON=	2.5+
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 
 MLINKS=	zenmap.1 xnmap.1
@@ -38,7 +37,13 @@ PLIST_SUB+=	NLS=""
 PLIST_SUB+=	NLS="@comment "
 .endif
 
+post-extract:
+	@${RM} -f ${WRKSRC}/install_scripts/unix/su-to-zenmap.sh
+	@${CP} -a ${FILESDIR}/pc-su ${WRKSRC}/install_scripts/unix/su-to-zenmap.sh
+
 post-patch:
+	@${REINPLACE_CMD} -e 's|su-to-zenmap.sh %F|su-to-zenmap.sh ${PORTNAME}|' \
+		${WRKSRC}/install_scripts/unix/zenmap-root.desktop
 	@${REINPLACE_CMD} \
 		-e '/self.create_uninstaller/s|^|#|' ${WRKSRC}/setup.py
 	@${REINPLACE_CMD} \
