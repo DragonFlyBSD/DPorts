@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Package-Stash-XS
-# Date created:				2011-02-09
-# Whom:					milki <milki@rescomp.berkeley.edu>
-#
-# $FreeBSD: ports/devel/p5-Package-Stash-XS/Makefile,v 1.8 2012/11/17 05:56:25 svnexp Exp $
-#
+# $FreeBSD: ports/devel/p5-Package-Stash-XS/Makefile,v 1.9 2013/01/13 20:43:17 svnexp Exp $
 
 PORTNAME=	Package-Stash-XS
-PORTVERSION=	0.25
+PORTVERSION=	0.26
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DOY
@@ -18,7 +13,8 @@ COMMENT=	Faster and more correct implementation of the Package::Stash API
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
+TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
+	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
 PERL_CONFIGURE=	yes
 
