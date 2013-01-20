@@ -2,11 +2,11 @@
 # Date created:				9 June 2006
 # Whom:					Rui Lopes (rgl ruilopes com)
 #
-# $FreeBSD: ports/devel/rubygem-tzinfo/Makefile,v 1.35 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-tzinfo/Makefile,v 1.36 2013/01/09 04:43:42 svnexp Exp $
 #
 
 PORTNAME=	tzinfo
-PORTVERSION=	0.3.33
+PORTVERSION=	0.3.35
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
