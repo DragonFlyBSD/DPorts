@@ -1,7 +1,7 @@
-# $FreeBSD: ports/irc/weechat-devel/Makefile,v 1.98 2012/11/18 13:49:50 svnexp Exp $
+# $FreeBSD: ports/irc/weechat-devel/Makefile,v 1.101 2013/01/17 00:44:50 svnexp Exp $
 
 PORTNAME=	weechat
-PORTVERSION=	20121118
+PORTVERSION=	20130114
 CATEGORIES=	irc
 MASTER_SITES=	http://perturb.me.uk/distfiles/ \
 		${MASTER_SITE_LOCAL}
@@ -26,7 +26,9 @@ WANT_PERL=	yes
 LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
-GITREV=	57293ff
+GITDESC=	v0.4.0-rc3-2-g8e587f7
+GITREV!=	echo "${GITDESC}" | sed -E 's/^.*-g(.{7})$$/\1/'
+#GITREV=	01a1316
 WRKSRC=	${WRKDIR}/${PORTNAME}-${GITREV}
 
 # Please note: the DEBUG option is *NOT* empty, it is utilised by
@@ -73,7 +75,7 @@ PLIST_SUB+=	ASPELL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
-USE_PYTHON=	-2.7
+USE_PYTHON=	2.6-
 CMAKE_ARGS+=	-DBSD_PYTHON_CMD=${PYTHON_CMD} \
 		-DBSD_PYTHON_VER=${PYTHON_VERSION}
 PLIST_SUB+=	PYTHON=""
@@ -159,6 +161,7 @@ MAN1=	weechat-curses.1
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${LIBDIR}/../pkgconfig|$${CMAKE_INSTALL_PREFIX}/libdata/pkgconfig|' ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e 's|INSTALL|#INSTALL|' ${WRKSRC}/doc/CMakeLists.txt
+	@${REINPLACE_CMD} -e 's|GIT_VERSION=""|GIT_VERSION="${GITDESC}"|' ${WRKSRC}/git-version.sh
 .for f in src/CMakeLists.txt src/core/CMakeLists.txt cmake/*.cmake
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/${f}
 .endfor
