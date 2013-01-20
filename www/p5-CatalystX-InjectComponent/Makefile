@@ -2,7 +2,7 @@
 # Date created:		2011-05-08
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CatalystX-InjectComponent/Makefile,v 1.6 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: ports/www/p5-CatalystX-InjectComponent/Makefile,v 1.7 2012/12/17 10:27:26 svnexp Exp $
 #
 
 PORTNAME=	CatalystX-InjectComponent
@@ -26,11 +26,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		CatalystX::InjectComponent.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
