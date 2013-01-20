@@ -1,8 +1,9 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/textproc/the_silver_searcher/Makefile,v 1.3 2012/12/03 17:23:19 svnexp Exp $
+# $FreeBSD: ports/textproc/the_silver_searcher/Makefile,v 1.4 2012/12/10 19:24:05 svnexp Exp $
 
 PORTNAME=	the_silver_searcher
 PORTVERSION=	0.13.1
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://cloud.github.com/downloads/ggreer/${PORTNAME}/
 
