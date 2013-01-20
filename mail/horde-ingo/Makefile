@@ -2,11 +2,11 @@
 # Date created:			  Dec 3, 2004
 # Whom:				  Thierry Thomas (<thierry@pompo.net>)
 #
-# $FreeBSD: ports/mail/horde-ingo/Makefile,v 1.46 2012/12/18 13:28:43 svnexp Exp $
+# $FreeBSD: ports/mail/horde-ingo/Makefile,v 1.47 2013/01/10 18:35:13 svnexp Exp $
 #
 
 PORTNAME=	ingo
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	mail www pear
 PKGNAMEPREFIX=	horde-
 
