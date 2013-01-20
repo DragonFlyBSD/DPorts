@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Net-Server
-# Date created:				24 Apr 2001
-# Whom:					Jesse McConnell <jesse@gallup.com>
-#
-# $FreeBSD: ports/net/p5-Net-Server/Makefile,v 1.37 2012/11/17 06:00:12 svnexp Exp $
-#
+# Created by: Jesse McConnell <jesse@gallup.com>
+# $FreeBSD: ports/net/p5-Net-Server/Makefile,v 1.39 2013/01/13 12:45:04 svnexp Exp $
 
 PORTNAME=	Net-Server
-PORTVERSION=	2.006
+PORTVERSION=	2.007
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
