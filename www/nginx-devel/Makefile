@@ -1,9 +1,8 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: ports/www/nginx-devel/Makefile,v 1.519 2012/12/21 05:49:56 svnexp Exp $
+# $FreeBSD: ports/www/nginx-devel/Makefile,v 1.523 2013/01/17 04:21:02 svnexp Exp $
 
 PORTNAME=	nginx
-PORTVERSION=	1.3.8
-PORTREVISION=	1
+PORTVERSION=	1.3.11
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	${MASTER_SITE_LOCAL}
@@ -74,7 +73,6 @@ OPTIONS_DEFINE=	\
 	HTTP_UPSTREAM_STICKY \
 	HTTP_ZIP \
 	ARRAYVAR \
-	CHUNKIN \
 	DRIZZLE \
 	ENCRYPTSESSION \
 	FORMINPUT \
@@ -162,7 +160,6 @@ HTTP_UPSTREAM_HASH_DESC=	3rd party upstream hash module
 HTTP_UPSTREAM_STICKY_DESC=	3rd party upstream sticky module
 HTTP_ZIP_DESC=			3rd party http_zip module
 ARRAYVAR_DESC=			3rd party array_var module
-CHUNKIN_DESC=			3rd party chunkin module
 DRIZZLE_DESC=			3rd party drizzlie module
 ENCRYPTSESSION_DESC=		3rd party encrypted_session module
 FORMINPUT_DESC=			3rd party form_input module
@@ -493,6 +490,7 @@ CONFIGURE_ARGS+=--with-http_sub_module
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_UPLOAD}
+IGNORE=	incompatible with nginx_upload_module-2.2.0
 NGINX_UPLOAD_VERSION=	2.2.0
 MASTER_SITES+=	http://www.grid.net.ru/nginx/download/:upload
 DISTFILES+=	nginx_upload_module-${NGINX_UPLOAD_VERSION}.tar.gz:upload
@@ -542,15 +540,6 @@ NGINX_ZIP_VERSION=	1.1.6
 MASTER_SITES+=	http://mod-zip.googlecode.com/files/:zip
 DISTFILES+=	mod_zip-${NGINX_ZIP_VERSION}.tar.gz:zip
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/mod_zip-${NGINX_ZIP_VERSION}
-.endif
-
-.if ${PORT_OPTIONS:MCHUNKIN}
-NGINX_CHUNKIN_VERSION=	0.22rc1
-GIT_CHUNKIN_VERSION=	0-gb0a3ee3
-FETCH_ARGS=	-pRr
-MASTER_SITES+=	https://github.com/agentzh/chunkin-nginx-module/tarball/v${NGINX_CHUNKIN_VERSION}/:chunkin
-DISTFILES+=	agentzh-chunkin-nginx-module-v${NGINX_CHUNKIN_VERSION}-${GIT_CHUNKIN_VERSION}.tar.gz:chunkin
-CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-chunkin-nginx-module-${GIT_CHUNKIN_VERSION:S/^0-g//}
 .endif
 
 .if ${PORT_OPTIONS:MDRIZZLE}
@@ -636,7 +625,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	3.0.17
+PASSENGER_VERSION=	3.0.19
 MASTER_SITES+=	RF/passenger/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/ext/nginx
@@ -684,8 +673,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-redis2-nginx-module-${GIT_REDIS2_
 .endif
 
 .if ${PORT_OPTIONS:MRTMP}
-NGINX_RTMP_VERSION=	0.8.4
-GIT_RTMP_VERSION=	0-g2aeefa3
+NGINX_RTMP_VERSION=	0.8.7
+GIT_RTMP_VERSION=	0-g544c73b
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/arut/nginx-rtmp-module/tarball/v${NGINX_RTMP_VERSION}/:rtmp
 DISTFILES+=	arut-rtmp-nginx-module-v${NGINX_RTMP_VERSION}-${GIT_RTMP_VERSION}.tar.gz:rtmp
@@ -736,6 +725,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_supervisord-${NGINX_SUPERVISORD_VERSI
 .endif
 
 .if ${PORT_OPTIONS:MSYSLOG_SUPPORT}
+IGNORE=	incompatible with syslog_support patch
 NGINX_SYSLOG_SUPPORT_FACILITY?=	LOG_DAEMON
 CONFIGURE_ARGS+=--with-syslog --with-syslog-facility=${NGINX_SYSLOG_SUPPORT_FACILITY}
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-syslog_support
@@ -778,9 +768,11 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-xss-nginx-module-${GIT_XSS_VERSIO
 .if ${PORT_OPTIONS:MSPDY}
 USE_OPENSSL_PORT=	yes
 USE_HTTP_SSL=	yes
-NGINX_SPDY_VERSION=	53
+NGINX_SPDY_VERSION=	58
 PATCH_SITES=	http://nginx.org/patches/spdy/:spdy
-PATCHFILES=	patch.spdy-${NGINX_SPDY_VERSION}.txt:spdy
+PATCHFILES=	patch.spdy-${NGINX_SPDY_VERSION}_${PORTVERSION}.txt:spdy
+PATCH_DIST_STRIP=	-p1
+CONFIGURE_ARGS+=--with-http_spdy_module
 .endif
 
 .if ${PORT_OPTIONS:MWWW}
@@ -935,6 +927,16 @@ post-patch:
 	@${REINPLACE_CMD} \
 		's!%%PREFIX%%!${LOCALBASE}!g' \
 		${WRKDIR}/nginx-sflow-module-${NGINX_SFLOW_VERSION}/ngx_http_sflow_config.h
+.endif
+.if ${PORT_OPTIONS:MSPDY}
+.if ${PORT_OPTIONS:MDRIZZLE}
+	@${REINPLACE_CMD} '584d' \
+		${WRKDIR}/chaoslawful-drizzle-nginx-module-${GIT_DRIZZLE_VERSION:S/^0-g//}/src/ngx_http_drizzle_util.c
+.endif
+.if ${PORT_OPTIONS:MLUA}
+	@${REINPLACE_CMD} '437d' \
+		${WRKDIR}/chaoslawful-lua-nginx-module-${GIT_LUA_VERSION:S/^0-g//}/src/ngx_http_lua_socket_tcp.c
+.endif
 .endif
 .if ${PORT_OPTIONS:MSUPERVISORD}
 	( cd ${WRKDIR}/nginx_upstream_fair-${NGINX_UPSTREAM_FAIR_VERSION} && \
