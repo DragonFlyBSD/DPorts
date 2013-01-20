@@ -2,11 +2,11 @@
 # Date created:			  Sun Oct 07, 2001
 # Whom:				  Thierry Thomas (<thierry@thomas.as>)
 #
-# $FreeBSD: ports/www/horde-base/Makefile,v 1.96 2012/12/18 13:28:46 svnexp Exp $
+# $FreeBSD: ports/www/horde-base/Makefile,v 1.97 2013/01/10 18:35:43 svnexp Exp $
 #
 
 PORTNAME=	horde
-PORTVERSION=	5.0.2
+PORTVERSION=	5.0.3
 CATEGORIES=	www pear
 PKGNAMEPREFIX=
 
