@@ -1,11 +1,11 @@
---- tools/llvm-shlib/Makefile.orig	2012-04-25 20:27:12.000000000 +0200
-+++ tools/llvm-shlib/Makefile	2013-01-03 13:37:23.384152000 +0100
+--- tools/llvm-shlib/Makefile.orig	2012-08-06 22:52:18.000000000 +0200
++++ tools/llvm-shlib/Makefile	2013-01-03 15:21:12.752853000 +0100
 @@ -63,13 +63,13 @@
      endif
  endif
  
--ifeq ($(HOST_OS), $(filter $(HOST_OS), Linux FreeBSD OpenBSD GNU))
-+ifeq ($(HOST_OS), $(filter $(HOST_OS), Linux DragonFly FreeBSD OpenBSD GNU))
+-ifeq ($(HOST_OS), $(filter $(HOST_OS), Linux FreeBSD OpenBSD GNU Bitrig))
++ifeq ($(HOST_OS), $(filter $(HOST_OS), Linux DragonFly FreeBSD OpenBSD GNU Bitrig))
      # Include everything from the .a's into the shared library.
      LLVMLibsOptions := -Wl,--whole-archive $(LLVMLibsOptions) \
                         -Wl,--no-whole-archive
