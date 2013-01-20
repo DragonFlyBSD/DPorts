@@ -1,9 +1,4 @@
-# New ports collection makefile for:	transmission-web
-# Date created:				14 July 2008
-# Whom:					Mezz <mezz@FreeBSD.org>
-#
-# $FreeBSD: ports/www/transmission-web/Makefile,v 1.11 2012/11/17 06:03:09 svnexp Exp $
-#
+# $FreeBSD: ports/www/transmission-web/Makefile,v 1.13 2012/12/31 17:09:13 svnexp Exp $
 
 PORTREVISION=	0
 CATEGORIES=	www net-p2p
