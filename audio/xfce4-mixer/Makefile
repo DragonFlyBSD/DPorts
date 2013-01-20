@@ -1,9 +1,10 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: ports/audio/xfce4-mixer/Makefile,v 1.65 2012/11/17 05:54:48 svnexp Exp $
+# $FreeBSD: ports/audio/xfce4-mixer/Makefile,v 1.68 2012/12/26 12:15:35 svnexp Exp $
 #
 
 PORTNAME=	xfce4-mixer
 PORTVERSION=	4.10.0
+PORTREVISION=	3
 CATEGORIES=	audio xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/apps/${PORTNAME}/${PORTVERSION:R}
@@ -23,13 +24,13 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20 gtk20 intltool intlhack desktopfileutils
 USE_XFCE=	configenv libmenu libutil panel xfconf
 USE_PKGCONFIG=	build
-USE_GSTREAMER=	yes
+USE_GSTREAMER=	good
 
 MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFINE=	KEYBIND
 
-KEYBIND_DESC=	Global keyboard shortcuts
+KEYBIND_DESC=	Multimedia keyboard shortcuts
 
 MAN1=	xfce4-mixer.1
 
@@ -43,8 +44,8 @@ CONFIGURE_ARGS+=--disable-keybinder
 .endif
 
 post-patch:
-	@${FIND} ${WRKSRC} -name 'Makefile.in' -type f \
-		| ${XARGS} ${REINPLACE_CMD} -e \
+	@${FIND} ${WRKSRC} -name 'Makefile.in' -or -name 'xfce-mixer-track.c' \
+		-type f | ${XARGS} ${REINPLACE_CMD} -e \
 		's|(pkgdatadir)/icons|(datadir)/icons| ; \
 		s|pixmaps/xfce4-mixer|pixmaps|'
 
