@@ -2,11 +2,11 @@
 # Date created:				August 8th, 1999
 # Whom:	      				wolman@cs.washington.edu
 #
-# $FreeBSD: ports/databases/p5-SQL-Statement/Makefile,v 1.36 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: ports/databases/p5-SQL-Statement/Makefile,v 1.37 2012/12/27 16:23:50 svnexp Exp $
 #
 
 PORTNAME=	SQL-Statement
-PORTVERSION=	1.401
+PORTVERSION=	1.402
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
