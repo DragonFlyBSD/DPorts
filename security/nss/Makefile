@@ -1,16 +1,12 @@
-# Ports collection Makefile for:	nss
-# Date created:				18 December 2001
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/security/nss/Makefile,v 1.71 2012/11/17 06:01:08 svnexp Exp $
-#    $MCom ports-experimental/security/nss/Makefile,v 1.4 2008/02/23 15:47:28 ahze Exp $
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: ports/security/nss/Makefile,v 1.73 2013/01/09 23:56:33 svnexp Exp $
 
 PORTNAME=	nss
-PORTVERSION=	${_MAJOR}.${_MINOR} #.${_PATCH}
+PORTVERSION=	${_MAJOR}.${_MINOR}.${_PATCH}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	security/nss/releases/NSS_${PORTVERSION:S/./_/g}_RTM/src
-DISTNAME=	nss-${PORTVERSION}
+MASTER_SITE_SUBDIR=	security/nss/releases/NSS_${PORTVERSION:S/./_/g}_WITH_CKBI_${CKBI_VER:S/./_/}_RTM/src
+DISTNAME=	nss-${PORTVERSION}.with.ckbi.${CKBI_VER}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Libraries to support development of security-enabled applications
@@ -22,8 +18,9 @@ LIB_DEPENDS=	nspr4.1:${PORTSDIR}/devel/nspr \
 
 _MAJOR=	3
 _MINOR=	14
-_PATCH=	0
+_PATCH=	1
 
+CKBI_VER=	1.93
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/mozilla/security/nss
 
 MAKE_JOBS_UNSAFE=	yes
@@ -80,6 +77,8 @@ post-patch:
 .for i in MAJOR MINOR PATCH
 	@${SED} -i.${i} -e 's|@${i}@|${_${i}}|' ${WRKDIR}/nss-config
 .endfor
+	@${REINPLACE_CMD} '/NSS_DEFAULT_SYSTEM/s,/etc,${PREFIX}&,' \
+		${WRKSRC}/lib/sysinit/nsssysinit.c
 	@cd ${WRKSRC} && \
 		${FIND} . -name "*.c" -o -name "*.h" | \
 		${XARGS} ${REINPLACE_CMD} -e 's|"nspr.h"|<nspr.h>|'
