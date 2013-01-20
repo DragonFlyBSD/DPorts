@@ -1,8 +1,8 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: ports/devel/pep8/Makefile,v 1.9 2012/12/20 17:51:15 svnexp Exp $
+# $FreeBSD: ports/devel/pep8/Makefile,v 1.10 2013/01/09 10:12:15 svnexp Exp $
 
 PORTNAME=	pep8
-PORTVERSION=	1.3.4
+PORTVERSION=	1.4
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
