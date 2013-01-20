@@ -1,8 +1,8 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: ports/www/firefox/Makefile,v 1.284 2012/12/05 14:23:40 svnexp Exp $
+# $FreeBSD: ports/www/firefox/Makefile,v 1.287 2013/01/11 11:12:40 svnexp Exp $
 
 PORTNAME=	firefox
-DISTVERSION=	17.0.1
+DISTVERSION=	18.0
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -12,17 +12,18 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}.source
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
-BUILD_DEPENDS=	nspr>=4.9:${PORTSDIR}/devel/nspr \
-		nss>=3.13.6_1:${PORTSDIR}/security/nss \
-		sqlite3>=3.7.12.1:${PORTSDIR}/databases/sqlite3 \
+BUILD_DEPENDS=	nspr>=4.9.3:${PORTSDIR}/devel/nspr \
+		nss>=3.14.1:${PORTSDIR}/security/nss \
+		sqlite3>=3.7.14.1:${PORTSDIR}/databases/sqlite3 \
 		${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3 \
 		cairo>=1.10.2_1,1:${PORTSDIR}/graphics/cairo \
 		unzip:${PORTSDIR}/archivers/unzip
 
 USE_AUTOTOOLS=	autoconf213:env
 USE_PYTHON_BUILD=-2.7
+OBJDIR_BUILD=	# in-tree build broken after bug 789837
 USE_GECKO=	gecko
-CONFLICTS=	firefox-10.*
+CONFLICTS=	firefox-1[07].*
 MOZ_PKGCONFIG_FILES=	# empty
 USE_MOZILLA=	# empty
 MOZILLA_NAME=	Firefox
@@ -36,6 +37,7 @@ GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GL=		gl
+USE_DOS2UNIX=	media/webrtc/trunk/src/system_wrappers/source/spreadsortlib/spreadsort.hpp
 NO_MOZPKGINSTALL=yes
 
 FIREFOX_ICON=		${MOZILLA}.png
@@ -44,8 +46,8 @@ MOZ_OPTIONS=	--program-transform-name='s/firefox/${MOZILLA}/' \
 		--enable-application=browser \
 		--enable-official-branding
 
-OPTIONS_DEFINE=	GSTREAMER PGO
-OPTIONS_DEFAULT=GIO
+OPTIONS_DEFINE=	GSTREAMER PGO WEBRTC
+OPTIONS_DEFAULT=GIO WEBRTC
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 
@@ -86,6 +88,8 @@ post-extract:
 		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${MOZILLA}.desktop
 
 post-patch:
+	@${REINPLACE_CMD} -e '/MOZPNG/s/=[0-9]*/=10511/' \
+		${WRKSRC}/configure.in
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/browser/app/nsBrowserApp.cpp
 

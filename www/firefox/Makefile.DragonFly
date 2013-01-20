@@ -1,5 +1,5 @@
-# DragonFly doesn't have ALSA support
-OPTIONS_SINGLE_AUDIO:=${OPTIONS_SINGLE_AUDIO:S/ALSA//}
+# DragonFly doesn't have ALSA support, so WEBRTC is gone too
+OPTIONS_EXCLUDE+= WEBRTC
 
 BUILD_DEPENDS=		gm4:${PORTSDIR}/devel/m4
 BUILD_DEPENDS+=		unzip:${PORTSDIR}/archivers/unzip
