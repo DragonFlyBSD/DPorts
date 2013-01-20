@@ -1,9 +1,9 @@
 # Created by: markand
-# $FreeBSD: ports/archivers/squeeze/Makefile,v 1.14 2012/12/14 21:29:03 svnexp Exp $
+# $FreeBSD: ports/archivers/squeeze/Makefile,v 1.15 2012/12/31 06:21:25 svnexp Exp $
 
 PORTNAME=	squeeze
 PORTVERSION=	0.2.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	archivers xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/apps/${PORTNAME}/${PORTVERSION:R}
