@@ -1,12 +1,8 @@
-# New ports collection makefile for:	lang/p5-Try-Tiny
-# Date created:				01 September 2009
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/p5-Try-Tiny/Makefile,v 1.9 2012/11/17 05:58:54 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: ports/lang/p5-Try-Tiny/Makefile,v 1.10 2013/01/04 09:41:45 svnexp Exp $
 
 PORTNAME=	Try-Tiny
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	lang perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DOY
