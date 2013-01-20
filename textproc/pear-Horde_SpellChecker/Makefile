@@ -2,10 +2,10 @@
 # Date created:			  7 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/pear-Horde_SpellChecker/Makefile,v 1.5 2012/12/12 15:19:53 svnexp Exp $
+# $FreeBSD: ports/textproc/pear-Horde_SpellChecker/Makefile,v 1.6 2013/01/10 18:35:40 svnexp Exp $
 
 PORTNAME=	Horde_SpellChecker
-PORTVERSION=	2.0.1
+PORTVERSION=	2.1.0
 CATEGORIES=	textproc www pear
 
 MAINTAINER=	horde@FreeBSD.org
