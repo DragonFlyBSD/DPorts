@@ -1,28 +1,32 @@
 # Created by: Ruben van Staveren
-# $FreeBSD: ports/devel/p5-Thread-Suspend/Makefile,v 1.6 2012/11/17 05:56:34 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Thread-Suspend/Makefile,v 1.7 2013/01/14 02:43:18 svnexp Exp $
 
 PORTNAME=	Thread-Suspend
-PORTVERSION=	1.21
+PORTVERSION=	1.22
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN}
 MASTER_SITE_SUBDIR=	Thread
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	linpc@cs.nctu.edu.tw
 COMMENT=	Suspend and resume operations for threads
-
-RUN_DEPENDS=	p5-threads>=1.39:${PORTSDIR}/devel/p5-threads \
-		p5-threads-shared>=1.01:${PORTSDIR}/devel/p5-threads-shared
-BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 PERL_CONFIGURE=	yes
 
 MAN3=	Thread::Suspend.3
 
-pre-everything::
-	@${ECHO_MSG} "--------------------------------------------------------"
-	@${ECHO_MSG} "This module requires a threaded perl.  If your install"
-	@${ECHO_MSG} "is not threaded please install lang/perl5.8 with threads"
-	@${ECHO_MSG} "--------------------------------------------------------"
+.include <bsd.port.pre.mk>
 
-.include <bsd.port.mk>
+.if ${PERL_LEVEL} < 500809
+RUN_DEPENDS+=	p5-threads>=1.39:${PORTSDIR}/devel/p5-threads \
+		p5-threads-shared>=1.01:${PORTSDIR}/devel/p5-threads-shared
+BUILD_DEPENDS:=	${RUN_DEPENDS}
+.endif
+
+pre-everything::
+	@${ECHO_MSG} "----------------------------------------------------------"
+	@${ECHO_MSG} "This module requires a threaded perl.  If your install"
+	@${ECHO_MSG} "is not threaded please install lang/${PERL_PORT} with threads"
+	@${ECHO_MSG} "----------------------------------------------------------"
+
+.include <bsd.port.post.mk>
