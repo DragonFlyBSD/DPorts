@@ -1,10 +1,10 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/x11/deforaos-libdesktop/Makefile,v 1.1 2012/12/19 01:00:05 svnexp Exp $
+# $FreeBSD: ports/x11/deforaos-libdesktop/Makefile,v 1.2 2013/01/03 16:11:15 svnexp Exp $
 
 PORTNAME=	libdesktop
-PORTVERSION=	0.0.8
+PORTVERSION=	0.0.9
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/3699/
+MASTER_SITES=	http://www.defora.org/os/download/download/4011/
 DISTNAME=	libDesktop-${PORTVERSION}
 PKGNAMEPREFIX=	deforaos-
 
@@ -18,6 +18,7 @@ LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem
 USE_GNOME=	gtk20
 USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
+MAKE_ARGS+=	PREFIX=${PREFIX}
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/lib/|/libdata/|g' \
