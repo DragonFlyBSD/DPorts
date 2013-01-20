@@ -1,7 +1,7 @@
-# $FreeBSD: ports/graphics/p5-Color-Scheme/Makefile,v 1.4 2012/11/17 14:18:48 svnexp Exp $
+# $FreeBSD: ports/graphics/p5-Color-Scheme/Makefile,v 1.5 2013/01/07 09:51:30 svnexp Exp $
 
 PORTNAME=	Color-Scheme
-PORTVERSION=	1.03
+PORTVERSION=	1.04
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Color
