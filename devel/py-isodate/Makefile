@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-isodate
-# Date created:		2012-02-07
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-isodate/Makefile,v 1.3 2012/11/17 05:56:47 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: ports/devel/py-isodate/Makefile,v 1.4 2012/12/23 21:08:00 svnexp Exp $
 
 PORTNAME=	isodate
-PORTVERSION=	0.4.8
+PORTVERSION=	0.4.9
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
