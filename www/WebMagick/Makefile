@@ -2,13 +2,12 @@
 # Date created:                         20 May 1998
 # Whom:                                 ache
 #
-# $FreeBSD: ports/www/WebMagick/Makefile,v 1.113 2012/12/11 20:58:21 svnexp Exp $
+# $FreeBSD: ports/www/WebMagick/Makefile,v 1.114 2013/01/08 02:43:01 svnexp Exp $
 #
 
 PORTNAME=	WebMagick
-PORTVERSION=	2.03p17
-PORTREVISION=	1
-DISTVERSION=	2.03pre17
+PORTVERSION=	2.03p18
+DISTVERSION=	2.03pre18
 PORTEPOCH=	1
 CATEGORIES=	www graphics
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}-beta/${DISTVERSION}
