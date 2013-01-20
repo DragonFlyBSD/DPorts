@@ -2,23 +2,25 @@
 # Date created:		2012-05-13
 # Whom:			Ashish SHUKLA <ashish@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/opensmtpd/Makefile,v 1.13 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: ports/mail/opensmtpd/Makefile,v 1.16 2013/01/18 15:03:04 svnexp Exp $
 #
 
 PORTNAME=	opensmtpd
-PORTVERSION=	201210090136
+PORTVERSION=	201301111154
 CATEGORIES=	mail
 MASTER_SITES=	http://www.opensmtpd.org/archives/ \
 		http://distfiles.pirateparty.in/ashish/
+DISTNAME=	${PORTNAME}-${PORTVERSION}p1
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	OpenSMTPD is a free MTA
 
-LIB_DEPENDS=	event-1.4:${PORTSDIR}/devel/libevent
+LIB_DEPENDS=	event-1:${PORTSDIR}/devel/libevent \
+		sqlite3:${PORTSDIR}/databases/sqlite3
 
 LICENSE_NAME=	ISCL
 
-WRKSRC=		${WRKDIR}/${PORTNAME}
+WRKSRC=		${WRKDIR}/${PORTNAME}-5.2.xp1
 
 USE_AUTOTOOLS=	autoconf:env automake:env libtool:env
 GNU_CONFIGURE=	yes
@@ -30,7 +32,7 @@ SUB_FILES=	pkg-install pkg-deinstall
 CONFLICTS=	postfix-[0-9]* sendmail-[0-9]*
 
 MAN8=		makemap.8 newaliases.8 smtpctl.8 smtpd.8
-MAN5=		smtpd.conf.5
+MAN5=		smtpd.conf.5 aliases.5 forward.5
 
 USERS=		_smtpd
 GROUPS=		_smtpd
