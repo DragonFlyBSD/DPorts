@@ -1,12 +1,8 @@
-# New ports collection makefile for:    p5-Devel-Required
-# Date created:				2007/04/15
-# Whom:	      				chinsan
-#
-# $FreeBSD: ports/devel/p5-Devel-Required/Makefile,v 1.9 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: ports/devel/p5-Devel-Required/Makefile,v 1.10 2012/12/23 13:56:08 svnexp Exp $
 
 PORTNAME=	Devel-Required
-PORTVERSION=	0.13
+PORTVERSION=	0.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
