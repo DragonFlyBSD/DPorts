@@ -1,10 +1,11 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/graphics/evas-core/Makefile,v 1.16 2012/12/22 21:09:57 svnexp Exp $
+# $FreeBSD: ports/graphics/evas-core/Makefile,v 1.18 2013/01/15 17:46:00 svnexp Exp $
 
 PORTNAME=	core
-PORTVERSION=	1.7.4
+PORTVERSION=	1.7.5
+PORTREVISION=	1
 CATEGORIES=	graphics enlightenment
-MASTER_SITES=	http://download.enlightenment.org/releases/ \
+MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
 PKGNAMEPREFIX=	evas-
 DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
@@ -19,6 +20,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USE_GCC=	any
 USE_EFL=	librt_hack libtool_hack
 USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
