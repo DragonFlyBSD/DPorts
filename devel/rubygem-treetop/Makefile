@@ -2,11 +2,11 @@
 # Date created:		11 Oct, 2009
 # Whom:			Wen Heping <ruby@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-treetop/Makefile,v 1.9 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-treetop/Makefile,v 1.10 2013/01/09 04:43:42 svnexp Exp $
 #
 
 PORTNAME=	treetop
-PORTVERSION=	1.4.10
+PORTVERSION=	1.4.12
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
