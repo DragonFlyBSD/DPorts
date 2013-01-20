@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Perl-Metrics-Simple/Makefile,v 1.5 2012/11/17 05:56:26 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Perl-Metrics-Simple/Makefile,v 1.6 2013/01/14 15:08:50 svnexp Exp $
 
 PORTNAME=	Perl-Metrics-Simple
-PORTVERSION=	0.16
+PORTVERSION=	0.17
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
