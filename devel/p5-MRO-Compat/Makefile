@@ -1,15 +1,11 @@
-# New ports collection makefile for:	devel/p5-MRO-Compat
-# Date created:				Jun 18, 2007
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-MRO-Compat/Makefile,v 1.12 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: lbr
+# $FreeBSD: ports/devel/p5-MRO-Compat/Makefile,v 1.13 2013/01/03 10:44:32 svnexp Exp $
 
 PORTNAME=	MRO-Compat
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:FLORA
+MASTER_SITE_SUBDIR=	CPAN:BOBTFISH
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
