@@ -2,11 +2,11 @@
 # Date created:				Mar  2004
 # Whom:					Autrijus Tang <autrijus@autrijus.org>
 #
-# $FreeBSD: ports/devel/p5-PerlIO-via-dynamic/Makefile,v 1.10 2012/11/17 05:56:26 svnexp Exp $
+# $FreeBSD: ports/devel/p5-PerlIO-via-dynamic/Makefile,v 1.11 2012/12/23 13:10:35 svnexp Exp $
 #
 
 PORTNAME=	PerlIO-via-dynamic
-PORTVERSION=	0.13
+PORTVERSION=	0.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
