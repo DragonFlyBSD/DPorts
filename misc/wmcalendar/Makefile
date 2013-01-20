@@ -2,19 +2,19 @@
 # Date created:				24 Apr 2003
 # Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
 #
-# $FreeBSD: ports/misc/wmcalendar/Makefile,v 1.30 2012/11/17 05:59:46 svnexp Exp $
+# $FreeBSD: ports/misc/wmcalendar/Makefile,v 1.31 2012/12/30 12:10:42 svnexp Exp $
 #
 
 PORTNAME=	wmcalendar
 PORTVERSION=	0.5.2
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	misc windowmaker
 MASTER_SITES=	SF
 
 MAINTAINER=	xride@FreeBSD.org
 COMMENT=	A dockable calendar with interface to iCalendar based calendars
 
-LIB_DEPENDS=	ical.44:${PORTSDIR}/devel/libical
+LIB_DEPENDS=	ical:${PORTSDIR}/devel/libical
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Src
 
