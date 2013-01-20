@@ -2,11 +2,12 @@
 # Date created:				28/Mar/2010
 # Whom:					Alex Deiter <alex.deiter@gmail.com>
 #
-# $FreeBSD: ports/sysutils/openipmi/Makefile,v 1.13 2012/11/17 06:01:39 svnexp Exp $
+# $FreeBSD: ports/sysutils/openipmi/Makefile,v 1.14 2013/01/13 21:43:22 svnexp Exp $
 #
 
 PORTNAME=	openipmi
 PORTVERSION=	2.0.19
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/OpenIPMI%202.0%20Library
 DISTNAME=	OpenIPMI-${PORTVERSION}
