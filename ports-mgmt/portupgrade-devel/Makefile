@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/ports-mgmt/portupgrade-devel/Makefile,v 1.300 2012/12/06 16:54:16 svnexp Exp $
+# $FreeBSD: ports/ports-mgmt/portupgrade-devel/Makefile,v 1.301 2013/01/14 16:52:17 svnexp Exp $
 
 PORTNAME=	portupgrade
-PORTVERSION=	20121206
+PORTVERSION=	20130114
 PORTEPOCH=	3
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	GH \
@@ -22,7 +22,7 @@ CONFLICTS_INSTALL=	portupgrade-[0-9]*
 USE_GITHUB=	yes
 GH_ACCOUNT=	pkgtools
 GH_PROJECT=	pkgtools
-GH_COMMIT=	312c71a
+GH_COMMIT=	fb8519c
 GH_TAGNAME=	${GH_COMMIT}
 
 DIST_SUBDIR=	${PORTNAME}
