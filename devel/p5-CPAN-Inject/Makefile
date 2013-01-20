@@ -1,14 +1,17 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-CPAN-Inject/Makefile,v 1.5 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: ports/devel/p5-CPAN-Inject/Makefile,v 1.6 2013/01/14 16:41:34 svnexp Exp $
 
 PORTNAME=	CPAN-Inject
-PORTVERSION=	1.13
+PORTVERSION=	1.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	5u623l20@gmail.com
 COMMENT=	Base class for injecting distributions into CPAN sources
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-File-chmod>=0.30:${PORTSDIR}/devel/p5-File-chmod \
 		p5-Params-Util>=0.21:${PORTSDIR}/devel/p5-Params-Util \
