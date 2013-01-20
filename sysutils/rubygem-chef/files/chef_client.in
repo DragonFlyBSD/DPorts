@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/rubygem-chef/files/chef_client.in,v 1.5 2012/11/17 06:01:44 svnexp Exp $
+# $FreeBSD: ports/sysutils/rubygem-chef/files/chef_client.in,v 1.6 2013/01/08 00:51:25 svnexp Exp $
 #
 
 # PROVIDE: chef_client
@@ -25,7 +25,14 @@ load_rc_config $name
 : ${chef_client_splay="0"}
 : ${chef_client_logfile="/var/log/chef-client.log"}
 : ${chef_client_loglevel="info"}
-: ${chef_client_pidfile="/var/run/chef-client.pid"}
+
+if [ -f "$chef_client_configfile" ]
+	then
+		pidfile=`awk '/^[ \t]*pid_file[ \t]+/ { print $2 }' ${chef_client_configfile}`
+		: ${chef_client_pidfile=$pidfile}
+	else
+		: ${chef_client_pidfile="/var/run/chef-client.pid"}
+fi
 
 if [ -n "$chef_client_nodename" ]
 	then
