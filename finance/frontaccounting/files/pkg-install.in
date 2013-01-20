@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/finance/frontaccounting/files/pkg-install.in,v 1.1 2012/12/24 22:04:13 svnexp Exp $
+#
+# Works around a deficiency in pkg_install; directory ownerships
+# are not preserved.  This should be removed when ports-mgmt/pkg rules
+# the Ports Tree.
+
+FAWEB=%%WWWDIR%%
+WWWOWN=%%WWWOWN%%
+WWWGRP=%%WWWGRP%%
+CHOWN=%%CHOWN%%
+
+case $2 in
+POST-INSTALL)
+	if [ -e ${FAWEB} ]; then
+		${CHOWN} -R ${WWWOWN}:${WWWGRP} ${FAWEB}
+	fi
+	;;
+*)
+	;;
+esac
