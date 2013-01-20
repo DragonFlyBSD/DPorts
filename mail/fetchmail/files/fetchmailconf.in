@@ -3,9 +3,9 @@
 # Wrapper for the real fetchmailconf.  Checks whether Python and Tkinter are
 # installed, and runs the real fetchmailconf or alerts the user, as appropriate.
 #
-# $FreeBSD: ports/mail/fetchmail/files/fetchmailconf,v 1.8 2012/11/17 05:59:03 svnexp Exp $
+# $FreeBSD: ports/mail/fetchmail/files/fetchmailconf.in,v 1.2 2013/01/10 02:12:35 svnexp Exp $
 
-LOCALBASE=@LOCALBASE@
+LOCALBASE=%%LOCALBASE%%
 
 if [ -x $LOCALBASE/bin/python ] ; then
 	PYTHON_VERSION=python$(${LOCALBASE}/bin/python -c 'import sys; print sys.version[:3]' 2>/dev/null)
