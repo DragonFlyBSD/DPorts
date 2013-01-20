@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/archivers/p5-IO-Compress-Lzop/Makefile,v 1.16 2012/12/04 06:44:26 svnexp Exp $
+# $FreeBSD: ports/archivers/p5-IO-Compress-Lzop/Makefile,v 1.17 2012/12/23 19:56:57 svnexp Exp $
 
 PORTNAME=	IO-Compress-Lzop
-PORTVERSION=	2.058
+PORTVERSION=	2.059
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PMQS
