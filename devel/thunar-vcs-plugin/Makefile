@@ -1,10 +1,10 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: ports/devel/thunar-vcs-plugin/Makefile,v 1.27 2012/12/14 21:29:05 svnexp Exp $
+# $FreeBSD: ports/devel/thunar-vcs-plugin/Makefile,v 1.29 2012/12/31 06:21:27 svnexp Exp $
 #
 
 PORTNAME=	thunar-vcs-plugin
 PORTVERSION=	0.1.4
-PORTREVISION=	7
+PORTREVISION=	9
 CATEGORIES=	devel xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/thunar-plugins/${PORTNAME}/${PORTVERSION:R}
