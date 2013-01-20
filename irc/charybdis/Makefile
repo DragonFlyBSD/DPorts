@@ -1,17 +1,12 @@
-# New ports collection Makefile for:	charybdis
-# Date created:	 	6th March 2011
-# Whom:			Chris Rees <utisoft@gmail.com>
-#
-# $FreeBSD: ports/irc/charybdis/Makefile,v 1.5 2012/11/17 05:58:28 svnexp Exp $
-#
+# $FreeBSD: ports/irc/charybdis/Makefile,v 1.7 2013/01/02 15:47:03 svnexp Exp $
 
 PORTNAME=	charybdis
-PORTVERSION=	3.3.0
+PORTVERSION=	3.4.2
 PORTREVISION=	1
 CATEGORIES=	irc net
 MASTER_SITES=	http://www.stack.nl/~jilles/irc/ \
 		http://www.bayofrum.net/dist/${PORTNAME}/
-DISTFILES=	${DISTNAME}.tbz2
+DISTFILES=	${DISTNAME}.tbz2 ${DOCSDIST}
 EXTRACT_ONLY=	${DISTFILES:M*tbz2}
 
 MAINTAINER=	crees@FreeBSD.org
@@ -25,35 +20,33 @@ CONFLICTS=	ircd-ratbox-[0-9]* ircd-ratbox-devel-[0-9]* \
 		expect-[0-9]* whois-[0-9]* undernet-ircu-[0-9]* \
 		ru-ircd-hybrid-[0-9]* \
 
+.for s in ${MASTER_SITES}
+MASTER_SITES+=	$scharybdis-stable-oper-guide/:pdf
+.endfor
+
 MAN8=		ircd.8
-PORTDOCS=	*
+PORTDOCS=	charybdis-oper-guide.pdf
 
 USE_LDCONFIG=	yes
+USE_AUTOTOOLS=	autoconf
+USE_GNOME=	gnomehack
 USE_RC_SUBR=	${PORTNAME}
 GNU_CONFIGURE=	yes
+USERS=	ircd
+GROUPS=	ircd
 CONFIGURE_ARGS=	--with-confdir=${ETCDIR} \
 		--with-helpdir=${DATADIR}/help \
 		--with-logdir=/var/log/${PORTNAME} \
 		--with-moduledir=${DATADIR}/modules \
 		--enable-kqueue
 
-USERS=	ircd
-GROUPS=	ircd
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
-DISTFILES+=	charybdis-oper-guide.pdf:pdf
-MASTER_SITES+=	http://www.stack.nl/~jilles/irc/charybdis-stable-oper-guide/:pdf
+. for d in ${PORTDOCS}
+DOCSDIST+=	$d:pdf
+. endfor
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e \
-		's#(libdir)/pkgconfig#${PREFIX}/libdata/pkgconfig#' \
-		${WRKSRC}/libratbox/Makefile.in
-# Fix BANDB path madness
-	@${REINPLACE_CMD} -e 's#bandb_dpath != NULL#0#' \
-		${WRKSRC}/bandb/rsdb_sqlite3.c
 
 pre-su-install:
 	@${MKDIR} ${DATADIR}
@@ -61,5 +54,9 @@ pre-su-install:
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${DISTDIR}/charybdis-oper-guide.pdf ${DOCSDIR}
 .endif
+	@${MKDIR} ${ETCDIR}
+	@${INSTALL_DATA} ${WRKSRC}/doc/ircd.motd ${ETCDIR}/ircd.motd.sample
+	@[ -f ${ETCDIR}/ircd.motd ] || ${CP} -p ${ETCDIR}/ircd.motd.sample \
+		${ETCDIR}/ircd.motd
 
 .include <bsd.port.mk>

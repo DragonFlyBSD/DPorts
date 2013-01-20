@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/irc/charybdis/files/charybdis.in,v 1.3 2012/11/17 05:58:28 svnexp Exp $
+# $FreeBSD: ports/irc/charybdis/files/charybdis.in,v 1.5 2013/01/02 15:47:03 svnexp Exp $
 #
 # PROVIDE: charybdis
 # REQUIRE: LOGIN
@@ -13,25 +13,25 @@
 
 . /etc/rc.subr
 
-name="charybdis"
+name=charybdis
 rcvar=charybdis_enable
 
 load_rc_config $name
 
-: ${charybdis_enable="NO"}
-: ${charybdis_user="ircd"}
-: ${charybdis_group="ircd"}
+: ${charybdis_enable:=NO}
+: ${charybdis_user=ircd}
+: ${charybdis_group=ircd}
 
-command="%%PREFIX%%/bin/ircd"
-pidfile="/var/run/${name}/${name}.pid"
+command=%%PREFIX%%/bin/ircd
+pidfile=/var/run/${name}/${name}.pid
 command_args="-configfile %%ETCDIR%%/ircd.conf -pidfile ${pidfile}"
 
-start_precmd="${name}_prestart"
+start_precmd=${name}_prestart
 
 charybdis_prestart()
 {
-	install -d -o ircd -m755 /var/run/${name} /var/log/${name}
+	install -d -o ircd -m755 /var/run/${name} /var/log/${name} /var/db/${name}
 	chown -R ircd %%ETCDIR%%
 }
 
-run_rc_command "$1"
+run_rc_command $1
