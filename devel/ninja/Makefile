@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/devel/ninja/Makefile,v 1.10 2012/11/17 05:56:01 svnexp Exp $
+# $FreeBSD: ports/devel/ninja/Makefile,v 1.11 2013/01/04 18:42:56 svnexp Exp $
 
 PORTNAME=	ninja
-PORTVERSION=	1.0.0
+PORTVERSION=	1.1.0
 PORTEPOCH=	1
 CATEGORIES=	devel
 
@@ -14,7 +14,7 @@ LICENSE=	AL2
 USE_GITHUB=	yes
 GH_ACCOUNT=	martine
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	7096bf1
+GH_COMMIT=	2c953d1
 
 CONFLICTS=	irc/ninja-[0-9]*
 USE_PYTHON=	yes
@@ -29,7 +29,7 @@ do-build:
 		CXX=${CXX} CFLAGS="${CXXFLAGS}" ./bootstrap.py --verbose)
 
 do-install:
-	@${INSTALL} -m 755 ${WRKSRC}/ninja ${PREFIX}/bin
+	@${INSTALL_PROGRAM} ${WRKSRC}/ninja ${PREFIX}/bin
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@(cd ${WRKSRC} && \
