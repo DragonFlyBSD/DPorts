@@ -1,12 +1,7 @@
-# New ports collection makefile for:	gitolite
-# Date created:				07-28-2011
-# Whom:					milki <milki@rescomp.berkeley.edu>
-#
-# $FreeBSD: ports/devel/gitolite/Makefile,v 1.12 2012/11/17 05:55:45 svnexp Exp $
-#
+# $FreeBSD: ports/devel/gitolite/Makefile,v 1.13 2013/01/13 20:46:46 svnexp Exp $
 
 PORTNAME=	gitolite
-PORTVERSION=	3.1
+PORTVERSION=	3.2
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://milki.github.com/${PORTNAME}/ \
@@ -43,6 +38,9 @@ post-patch:
 	@${FIND} ${WRKSRC} \
 		-exec ${GREP} -qs \#\!/usr/bin/perl {} \; \
 		-exec ${REINPLACE_CMD} -Ee 's|#!/usr/bin/perl|#!${PERL}|' {} \;
+	@${FIND} ${WRKSRC} \
+		-exec ${GREP} -qs \#\!/bin/bash {} \; \
+		-exec ${REINPLACE_CMD} -Ee 's|#!/bin/bash|#!${LOCALBASE}/bin/bash|' {} \;
 
 do-build:
 	@${MKDIR} ${WRKSRC}/lib
@@ -53,6 +51,7 @@ do-build:
 
 post-build:
 	@${FIND} ${WRKSRC} -name "*.bak" -delete
+	@${FIND} ${WRKSRC} -name "*.orig" -delete
 
 do-install:
 	@(cd ${WRKSRC}/src && ${COPYTREE_BIN} \* ${PREFIX}/libexec/gitolite)
