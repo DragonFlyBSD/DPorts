@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Text::Sass
-# Date created:		07 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Sass/Makefile,v 1.10 2012/11/17 06:02:10 svnexp Exp $
-#
+# $FreeBSD: ports/textproc/p5-Text-Sass/Makefile,v 1.11 2013/01/14 22:51:31 svnexp Exp $
 
 PORTNAME=	Text-Sass
-PORTVERSION=	0.96
+PORTVERSION=	0.97
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RPETTETT
