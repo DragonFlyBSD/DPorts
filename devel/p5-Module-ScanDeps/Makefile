@@ -2,11 +2,11 @@
 # Date created:				Aug 27 2003
 # Whom:					Autrijus Tang <autrijus@autrijus.org>
 #
-# $FreeBSD: ports/devel/p5-Module-ScanDeps/Makefile,v 1.55 2012/11/17 05:56:22 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Module-ScanDeps/Makefile,v 1.56 2012/12/23 13:25:37 svnexp Exp $
 #
 
 PORTNAME=	Module-ScanDeps
-PORTVERSION=	1.08
+PORTVERSION=	1.10
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RSCHUPP
