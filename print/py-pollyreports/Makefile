@@ -1,8 +1,8 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD: ports/print/py-pollyreports/Makefile,v 1.3 2012/11/17 06:00:54 svnexp Exp $
+# $FreeBSD: ports/print/py-pollyreports/Makefile,v 1.4 2013/01/17 15:50:29 svnexp Exp $
 
 PORTNAME=	PollyReports
-PORTVERSION=	1.6.7
+PORTVERSION=	1.7.2
 CATEGORIES=	print python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
