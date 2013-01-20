@@ -1,18 +1,15 @@
-# New ports collection makefile for:	Text::MicroTemplate
-# Date created:		02 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-MicroTemplate/Makefile,v 1.6 2012/11/17 06:02:10 svnexp Exp $
-#
+# $FreeBSD: ports/textproc/p5-Text-MicroTemplate/Makefile,v 1.7 2013/01/14 22:56:42 svnexp Exp $
 
 PORTNAME=	Text-MicroTemplate
-PORTVERSION=	0.18
+PORTVERSION=	0.19
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for standalone, fast and intelligent template engine
+
+TEST_DEPENDS=	p5-IO-stringy>0:${PORTSDIR}/devel/p5-IO-stringy
 
 PERL_CONFIGURE=	yes
 
