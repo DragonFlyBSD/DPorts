@@ -2,7 +2,7 @@
 # Date created:		18 Jan 2008
 # Whom:			Makoto Matsushita <matusita@FreeBSD.ORG>
 #
-# $FreeBSD: ports/irc/keitairc2/Makefile,v 1.10 2012/11/17 05:58:29 svnexp Exp $
+# $FreeBSD: ports/irc/keitairc2/Makefile,v 1.11 2012/12/16 06:16:56 svnexp Exp $
 #
 
 PORTNAME=		keitairc
@@ -28,8 +28,7 @@ RUN_DEPENDS=	p5-POE-Component-IRC>=0:${PORTSDIR}/irc/p5-POE-Component-IRC \
 
 CONFLICTS=	keitairc-1.*
 NO_BUILD=	yes
-USE_PERL5=	5.8.0+
-USE_PERL5_REASON= runs on perl 5.8 or later
+USE_PERL5=	yes
 
 post-extract:
 	${FIND} ${WRKSRC} -name .cvsignore | ${XARGS} ${RM} -rf
