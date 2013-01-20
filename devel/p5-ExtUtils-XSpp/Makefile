@@ -1,17 +1,17 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-ExtUtils-XSpp/Makefile,v 1.9 2012/11/17 05:56:15 svnexp Exp $
+# $FreeBSD: ports/devel/p5-ExtUtils-XSpp/Makefile,v 1.10 2013/01/04 10:02:56 svnexp Exp $
 
 PORTNAME=	ExtUtils-XSpp
-PORTVERSION=	0.15
+PORTVERSION=	0.16.03
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	linpc@cs.nctu.edu.tw
 COMMENT=	XS for C++ in Perl
 
-BUILD_DEPENDS=	p5-ExtUtils-ParseXS>=2.22.02:${PORTSDIR}/devel/p5-ExtUtils-ParseXS \
-		p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base \
+BUILD_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base \
 		p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences
 
 PERL_MODBUILD=	yes
@@ -40,4 +40,10 @@ MAN3=		ExtUtils::XSpp.3 \
 		ExtUtils::XSpp::Plugin.3 \
 		ExtUtils::XSpp::Typemap.3
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 501301
+BUILD_DEPENDS+=	p5-ExtUtils-ParseXS>=2.22.02:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
+.endif
+
+.include <bsd.port.post.mk>
