@@ -2,12 +2,12 @@
 # Date created:		25 September 2007
 # Whom:			Daniel O'Connor <darius@dons.net.au>
 #
-# $FreeBSD: ports/graphics/pfstools/Makefile,v 1.25 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: ports/graphics/pfstools/Makefile,v 1.26 2013/01/17 16:48:39 svnexp Exp $
 #
 
 PORTNAME=	pfstools
 PORTVERSION=	1.6.4
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
