@@ -1,6 +1,7 @@
-# $FreeBSD: ports/graphics/ImageMagick/Makefile,v 1.363 2012/12/10 08:23:33 svnexp Exp $
+# $FreeBSD: ports/graphics/ImageMagick/Makefile,v 1.364 2013/01/17 16:48:38 svnexp Exp $
 
 PORTNAME=	ImageMagick
+PORTREVISION=	1
 DISTVERSION=	6.8.0-7
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.imagemagick.org/download/ \
