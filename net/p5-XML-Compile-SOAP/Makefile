@@ -1,8 +1,8 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: ports/net/p5-XML-Compile-SOAP/Makefile,v 1.31 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: ports/net/p5-XML-Compile-SOAP/Makefile,v 1.33 2013/01/14 12:42:27 svnexp Exp $
 
 PORTNAME=	XML-Compile-SOAP
-PORTVERSION=	2.30
+PORTVERSION=	2.35
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
