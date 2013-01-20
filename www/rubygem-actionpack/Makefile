@@ -2,10 +2,10 @@
 # Date created:				27 May 2005
 # Whom:					Jonathan Weiss (<jw@innerewut.de>)
 #
-# $FreeBSD: ports/www/rubygem-actionpack/Makefile,v 1.45 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: ports/www/rubygem-actionpack/Makefile,v 1.46 2013/01/09 04:43:48 svnexp Exp $
 
 PORTNAME=	actionpack
-PORTVERSION=	3.2.8
+PORTVERSION=	3.2.11
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -20,7 +20,7 @@ RUN_DEPENDS=	rubygem-activesupport>=${PORTVERSION}:${PORTSDIR}/devel/rubygem-act
 		rubygem-rack>=1.4.0:${PORTSDIR}/www/rubygem-rack \
 		rubygem-rack-cache>=1.2:${PORTSDIR}/www/rubygem-rack-cache \
 		rubygem-rack-test>=0.6.1:${PORTSDIR}/www/rubygem-rack-test \
-		rubygem-sprockets>=2.1.3:${PORTSDIR}/devel/rubygem-sprockets
+		rubygem-sprockets>=2.2.2:${PORTSDIR}/devel/rubygem-sprockets
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
