@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Starman
-# Date created:		29 Mar 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Starman/Makefile,v 1.15 2012/11/17 06:02:54 svnexp Exp $
-#
+# $FreeBSD: ports/www/p5-Starman/Makefile,v 1.16 2013/01/14 12:44:48 svnexp Exp $
 
 PORTNAME=	Starman
-PORTVERSION=	0.3003
+PORTVERSION=	0.3006
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
