@@ -1,8 +1,9 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: ports/net/exabgp/Makefile,v 1.1 2012/11/17 16:40:37 svnexp Exp $
+# $FreeBSD: ports/net/exabgp/Makefile,v 1.3 2013/01/07 12:51:28 svnexp Exp $
 
 PORTNAME=	exabgp
-PORTVERSION=	3.0.10
+PORTVERSION=	3.1.1
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 EXTRACT_SUFX=	.tgz
@@ -44,5 +45,8 @@ do-install:
 	@if [ ! -f ${ETCDIR}/exabgp.env ]; then \
 	    	${CP} ${FILESDIR}/exabgp.env ${ETCDIR} ; \
 	fi
+
+post-install:
+	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
