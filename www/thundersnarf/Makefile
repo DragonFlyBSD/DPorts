@@ -1,0 +1,64 @@
+# $FreeBSD: ports/www/thundersnarf/Makefile,v 1.10 2012/11/17 06:03:07 svnexp Exp $
+
+PORTNAME=	thundersnarf
+PORTVERSION=	1.3
+PORTREVISION=	2
+PORTEPOCH=	1
+CATEGORIES=	www
+MASTER_SITES=	http://www.tracanelli.com.br/l/dev/thunder/ \
+		${MASTER_SITE_LOCAL}/jmelo
+
+MAINTAINER=	eksffa@freebsdbrasil.com.br
+COMMENT=	Web reporting and trending analysis for Thunder Cache Pro
+
+OPTIONS=	APACHE "Install apache for reporting viewing" on \
+		PHP "Install PHP for reporting generating" on \
+		PGSQL "Install PostgreSQL (report data storing)" on
+
+USE_BZIP2=	yes
+
+NO_BUILD=	yes
+WRKSRC=		${WRKDIR}/${PORTNAME:R}
+
+.include <bsd.port.pre.mk>
+
+.if defined (WITH_APACHE)
+USE_APACHE_RUN=	22+
+.endif
+
+.if defined (WITH_PGSQL)
+USE_PGSQL=	yes
+WANT_PGSQL_VER=	84+
+RUN_DEPENDS+=	postgresql-server>=0:${PORTSDIR}/databases/postgresql${PGSQL_VER}-server
+.endif
+
+.if defined(WITH_PHP) && defined(WITH_PGSQL)
+RUN_DEPENDS+=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/pdo_pgsql.so:${PORTSDIR}/databases/php5-pdo_pgsql
+.endif
+
+.if defined(WITH_PHP)
+USE_PHP+=	curl pcre bcmath pdo mcrypt mhash session pgsql spl dom xmlrpc ctype openssl simplexml soap json
+.endif
+
+LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl:install
+
+SUB_FILES=	pkg-message
+
+do-install:
+	@${CP} -R ${WRKSRC} ${WWWDIR}
+	@${INSTALL_SCRIPT} -m 555 ${WRKSRC}/protected/data/bin/thundersnarf ${PREFIX}/bin/
+	@${INSTALL_SCRIPT} -m 555 ${WRKSRC}/protected/data/bin/thundersnarf-poll ${PREFIX}/bin/
+	@${CHGRP} -R ${WWWGRP}	${WWWDIR}/protected/runtime \
+		${WWWDIR}/assets
+	@${CHMOD} -R g+rwx ${WWWDIR}/protected/runtime \
+		${WWWDIR}/assets
+
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+	@${CP} -Rv ${WRKSRC}/README ${DOCSDIR}/README.pt_BR
+.endif
+
+post-install:
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.post.mk>
