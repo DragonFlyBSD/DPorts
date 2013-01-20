@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Text::DHCPLeases
-# Date created:		31 Jan 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-DHCPLeases/Makefile,v 1.2 2012/11/17 06:02:09 svnexp Exp $
-#
+# $FreeBSD: ports/textproc/p5-Text-DHCPLeases/Makefile,v 1.3 2013/01/14 22:46:39 svnexp Exp $
 
 PORTNAME=	Text-DHCPLeases
-PORTVERSION=	0.9
+PORTVERSION=	1.0
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
