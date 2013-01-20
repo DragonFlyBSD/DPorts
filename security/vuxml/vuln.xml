@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE vuxml PUBLIC "-//vuxml.org//DTD VuXML 1.1//EN" "http://www.vuxml.org/dtd/vuxml-1/vuxml-11.dtd">
 <!--
-Copyright 2003-2012 Jacques Vidrine and contributors
+Copyright 2003-2013 Jacques Vidrine and contributors
 
 Redistribution and use in source (VuXML) and 'compiled' forms (SGML,
 HTML, PDF, PostScript, RTF and so forth) with or without modification,
@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: ports/security/vuxml/vuln.xml,v 1.2911 2012/12/05 23:55:45 svnexp Exp $
+  $FreeBSD: ports/security/vuxml/vuln.xml,v 1.2944 2013/01/16 19:56:49 svnexp Exp $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -51,8 +51,1016 @@ Note:  Please add new entries to the beginning of this file.
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
-  <vuln vid="f599dfc4-3ec2-11e2-8ae1-001a8056d0b5">
-    <topic>tomcat -- multiple vulnerabilities</topic>
+  <vuln vid="1b9b199f-5efd-11e2-a1ee-c48508086173">
+    <topic>ettercap -- buffer overflow in target list parsing</topic>
+    <affects>
+      <package>
+        <name>ettercap</name>
+        <range><lt>0.7.4.1</lt></range>
+        <range><ge>0.7.5</ge></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>Host target list parsing routine in ettercap
+          0.7.4-series prior to 0.7.4.1 and 0.7.5-series
+          is prone to the stack-based buffer overflow that
+          may lead to the code execution with the privileges
+          of the ettercap process.</p>
+        <p>In order to trigger this vulnerability, user or service
+          that use ettercap should be tricked to pass the crafted list
+          of targets via the "-j" option.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-0722</cvename>
+      <url>http://www.exploit-db.com/exploits/23945/</url>
+      <url>https://secunia.com/advisories/51731/</url>
+    </references>
+    <dates>
+      <discovery>2013-01-07</discovery>
+      <entry>2013-01-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d5e0317e-5e45-11e2-a113-c48508086173">
+    <topic>java 7.x -- security manager bypass</topic>
+    <affects>
+      <package>
+        <name>openjdk7</name>
+        <range><gt>0</gt></range>
+      </package>
+      <package>
+        <name>linux-sun-jdk</name>
+        <range><ge>7.0</ge><lt>7.11</lt></range>
+      </package>
+      <package>
+        <name>linux-sun-jre</name>
+        <range><ge>7.0</ge><lt>7.11</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>US CERT reports:</p>
+        <blockquote cite="http://www.kb.cert.org/vuls/id/625617">
+          <p>Java 7 Update 10 and earlier versions of Java 7 contain a
+            vulnerability that can allow a remote, unauthenticated
+            attacker to execute arbitrary code on a vulnerable
+            system.</p>
+          <p>The Java JRE plug-in provides its own Security Manager.
+            Typically, a web applet runs with a security manager
+            provided by the browser or Java Web Start plugin. Oracle's
+            document states, "If there is a security manager already
+            installed, this method first calls the security manager's
+            checkPermission method with a
+            RuntimePermission("setSecurityManager") permission to ensure
+            it's safe to replace the existing security manager.  This may
+            result in throwing a SecurityException".</p>
+          <p>By leveraging the vulnerability in the Java Management
+            Extensions (JMX) MBean components, unprivileged Java code
+            can access restricted classes.  By using that vulnerability
+            in conjunction with a second vulnerability involving the
+            Reflection API and the invokeWithArguments method of the
+            MethodHandle class, an untrusted Java applet can escalate
+            its privileges by calling the the setSecurityManager()
+            function to allow full privileges, without requiring code
+            signing.  Oracle Java 7 update 10 and earlier Java 7 versions
+            are affected. The invokeWithArguments method was introduced
+            with Java 7, so therefore Java 6 is not affected.</p>
+          <p>This vulnerability is being attacked in the wild, and is
+            reported to be incorporated into exploit kits. Exploit code
+            for this vulnerability is also publicly available.</p>
+        </blockquote>
+        <p>Esteban Guillardoy from Immunity Inc. additionally clarifies
+          on the recursive reflection exploitation technique:</p>
+        <blockquote cite="https://partners.immunityinc.com/idocs/Java%20MBeanInstantiator.findClass%200day%20Analysis.pdf">
+          <p>The real issue is in the native
+            sun.reflect.Reflection.getCallerClass method.</p>
+          <p>We can see the following information in the Reflection
+            source code:</p>
+          <p>Returns the class of the method realFramesToSkip frames
+            up the stack (zero-based), ignoring frames associated with
+            java.lang.reflect.Method.invoke() and its
+            implementation.</p>
+          <p>So what is happening here is that they forgot to skip the
+          frames related to the new Reflection API and only the old
+          reflection API is taken into account.</p>
+        </blockquote>
+        <p>This exploit does not only affect Java applets, but every
+          piece of software that relies on the Java Security Manager for
+          sandboxing executable code is affected: malicious code can
+          totally disable Security Manager.</p>
+        <p>For users who are running native Web browsers with enabled
+          Java plugin, the workaround is to remove the java/icedtea-web
+          port and restart all browser instances.</p>
+        <p>For users who are running Linux Web browser flavors, the
+          workaround is either to disable the Java plugin in browser
+          or to upgrade linux-sun-* packages to the non-vulnerable
+          version.</p>
+        <p>It is not recommended to run untrusted applets using
+          appletviewer, since this may lead to the execution of the
+          malicious code on vulnerable versions on JDK/JRE.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-0433</cvename>
+      <certvu>625617</certvu>
+      <url>http://www.oracle.com/technetwork/topics/security/alert-cve-2013-0422-1896849.html</url>
+      <url>https://partners.immunityinc.com/idocs/Java%20MBeanInstantiator.findClass%200day%20Analysis.pdf</url>
+    </references>
+    <dates>
+      <discovery>2013-01-10</discovery>
+      <entry>2013-01-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="97c22a94-5b8b-11e2-b131-000c299b62e1">
+    <topic>nagios -- buffer overflow in history.cgi</topic>
+    <affects>
+      <package>
+	<name>nagios</name>
+	<range><lt>3.4.3_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>full disclosure reports:</p>
+	<blockquote cite="http://archives.neohapsis.com/archives/fulldisclosure/2012-12/0108.html">
+	  <p>history.cgi is vulnerable to a buffer overflow due to the use of
+	     sprintf with user supplied data that has not been restricted in size.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-6096</cvename>
+      <url>http://archives.neohapsis.com/archives/fulldisclosure/2012-12/0108.html</url>
+      <url>http://nagios.svn.sourceforge.net/viewvc/nagios?view=revision&amp;revision=2547</url>
+    </references>
+    <dates>
+      <discovery>2012-12-21</discovery>
+      <entry>2013-01-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="46bd747b-5b84-11e2-b06d-00262d5ed8ee">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>24.0.1312.52</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/search/label/Stable%20updates">
+	  <p>[162494] High CVE-2012-5145: Use-after-free in SVG layout. Credit
+	    to Atte Kettunen of OUSPG.</p>
+	  <p>[165622] High CVE-2012-5146: Same origin policy bypass with
+	    malformed URL. Credit to Erling A Ellingsen and Subodh Iyengar,
+	    both of Facebook.</p>
+	  <p>[165864] High CVE-2012-5147: Use-after-free in DOM handling.
+	    Credit to José A. Vázquez.</p>
+	  <p>[167122] Medium CVE-2012-5148: Missing filename sanitization in
+	    hyphenation support. Credit to Google Chrome Security Team (Justin
+	    Schuh).</p>
+	  <p>[166795] High CVE-2012-5149: Integer overflow in audio IPC
+	    handling. Credit to Google Chrome Security Team (Chris Evans).</p>
+	  <p>[165601] High CVE-2012-5150: Use-after-free when seeking video.
+	    Credit to Google Chrome Security Team (Inferno).</p>
+	  <p>[165538] High CVE-2012-5151: Integer overflow in PDF JavaScript.
+	    Credit to Mateusz Jurczyk, with contribution from Gynvael Coldwind,
+	    both of Google Security Team.</p>
+	  <p>[165430] Medium CVE-2012-5152: Out-of-bounds read when seeking
+	    video. Credit to Google Chrome Security Team (Inferno).</p>
+	  <p>[164565] High CVE-2012-5153: Out-of-bounds stack access in v8.
+	    Credit to Andreas Rossberg of the Chromium development
+	    community.</p>
+	  <p>[Mac only] [163208] Medium CVE-2012-5155: Missing Mac sandbox for
+	    worker processes. Credit to Google Chrome Security Team (Julien
+	    Tinnes).</p>
+	  <p>[162778] High CVE-2012-5156: Use-after-free in PDF fields. Credit
+	    to Mateusz Jurczyk, with contribution from Gynvael Coldwind, both
+	    of Google Security Team.</p>
+	  <p>[162776] [162156] Medium CVE-2012-5157: Out-of-bounds reads in PDF
+	    image handling. Credit to Mateusz Jurczyk, with contribution from
+	    Gynvael Coldwind, both of Google Security Team.</p>
+	  <p>[162153] High CVE-2013-0828: Bad cast in PDF root handling. Credit
+	    to Mateusz Jurczyk, with contribution from Gynvael Coldwind, both
+	    of Google Security Team.</p>
+	  <p>[162114] High CVE-2013-0829: Corruption of database metadata
+	    leading to incorrect file access. Credit to Google Chrome Security
+	    Team (Jüri Aedla).</p>
+	  <p>[161836] Low CVE-2013-0831: Possible path traversal from extension
+	    process. Credit to Google Chrome Security Team (Tom Sepez).</p>
+	  <p>[160380] Medium CVE-2013-0832: Use-after-free with printing.
+	    Credit to Google Chrome Security Team (Cris Neckar).</p>
+	  <p>[154485] Medium CVE-2013-0833: Out-of-bounds read with printing.
+	    Credit to Google Chrome Security Team (Cris Neckar).</p>
+	  <p>[154283] Medium CVE-2013-0834: Out-of-bounds read with glyph
+	    handling. Credit to Google Chrome Security Team (Cris Neckar).</p>
+	  <p>[152921] Low CVE-2013-0835: Browser crash with geolocation. Credit
+	    to Arthur Gerkis.</p>
+	  <p>[150545] High CVE-2013-0836: Crash in v8 garbage collection.
+	    Credit to Google Chrome Security Team (Cris Neckar).</p>
+	  <p>[145363] Medium CVE-2013-0837: Crash in extension tab handling.
+	    Credit to Tom Nielsen.</p>
+	  <p>[Linux only] [143859] Low CVE-2013-0838: Tighten permissions on
+	    shared memory segments. Credit to Google Chrome Security Team
+	    (Chris Palmer).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-5145</cvename>
+      <cvename>CVE-2012-5146</cvename>
+      <cvename>CVE-2012-5147</cvename>
+      <cvename>CVE-2012-5148</cvename>
+      <cvename>CVE-2012-5149</cvename>
+      <cvename>CVE-2012-5150</cvename>
+      <cvename>CVE-2012-5151</cvename>
+      <cvename>CVE-2012-5152</cvename>
+      <cvename>CVE-2012-5153</cvename>
+      <cvename>CVE-2012-5155</cvename>
+      <cvename>CVE-2012-5156</cvename>
+      <cvename>CVE-2012-5157</cvename>
+      <cvename>CVE-2013-0828</cvename>
+      <cvename>CVE-2013-0829</cvename>
+      <cvename>CVE-2013-0831</cvename>
+      <cvename>CVE-2013-0832</cvename>
+      <cvename>CVE-2013-0833</cvename>
+      <cvename>CVE-2013-0834</cvename>
+      <cvename>CVE-2013-0835</cvename>
+      <cvename>CVE-2013-0836</cvename>
+      <cvename>CVE-2013-0837</cvename>
+      <cvename>CVE-2013-0838</cvename>
+      <url>http://googlechromereleases.blogspot.nl/search/label/Stable%20updates</url>
+    </references>
+    <dates>
+      <discovery>2013-01-10</discovery>
+      <entry>2013-01-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a4ed6632-5aa9-11e2-8fcb-c8600054b392">
+    <topic>mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><gt>11.0,1</gt><lt>17.0.2,1</lt></range>
+	<range><lt>10.0.12,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>17.0.2,1</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.15</lt></range>
+      </package>
+      <package>
+	<name>linux-thunderbird</name>
+	<range><lt>17.0.2</lt></range>
+      </package>
+      <package>
+	<name>seamonkey</name>
+	<range><lt>2.15</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><gt>11.0</gt><lt>17.0.2</lt></range>
+	<range><lt>10.0.12</lt></range>
+      </package>
+      <package>
+	<name>libxul</name>
+	<range><gt>1.9.2.*</gt><lt>10.0.12</lt></range>
+      </package>
+      <package>
+	<name>ca_root_nss</name>
+	<range><lt>3.14.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="http://www.mozilla.org/security/known-vulnerabilities/">
+	  <p>MFSA 2013-01 Miscellaneous memory safety hazards (rv:18.0/
+	    rv:10.0.12 / rv:17.0.2)</p>
+	  <p>MFSA 2013-02 Use-after-free and buffer overflow issues found using
+	    Address Sanitizer</p>
+	  <p>MFSA 2013-03 Buffer Overflow in Canvas</p>
+	  <p>MFSA 2013-04 URL spoofing in addressbar during page loads</p>
+	  <p>MFSA 2013-05 Use-after-free when displaying table with many
+	    columns and column groups</p>
+	  <p>MFSA 2013-06 Touch events are shared across iframes</p>
+	  <p>MFSA 2013-07 Crash due to handling of SSL on threads</p>
+	  <p>MFSA 2013-08 AutoWrapperChanger fails to keep objects alive during
+	    garbage collection</p>
+	  <p>MFSA 2013-09 Compartment mismatch with quickstubs returned values</p>
+	  <p>MFSA 2013-10 Event manipulation in plugin handler to bypass
+	    same-origin policy</p>
+	  <p>MFSA 2013-11 Address space layout leaked in XBL objects</p>
+	  <p>MFSA 2013-12 Buffer overflow in Javascript string concatenation</p>
+	  <p>MFSA 2013-13 Memory corruption in XBL with XML bindings containing
+	    SVG</p>
+	  <p>MFSA 2013-14 Chrome Object Wrapper (COW) bypass through changing
+	    prototype</p>
+	  <p>MFSA 2013-15 Privilege escalation through plugin objects</p>
+	  <p>MFSA 2013-16 Use-after-free in serializeToStream</p>
+	  <p>MFSA 2013-17 Use-after-free in ListenerManager</p>
+	  <p>MFSA 2013-18 Use-after-free in Vibrate</p>
+	  <p>MFSA 2013-19 Use-after-free in Javascript Proxy objects</p>
+	  <p>MFSA 2013-20 Mis-issued TURKTRUST certificates</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+	<cvename>CVE-2012-5829</cvename>
+	<cvename>CVE-2013-0743</cvename>
+	<cvename>CVE-2013-0744</cvename>
+	<cvename>CVE-2013-0745</cvename>
+	<cvename>CVE-2013-0746</cvename>
+	<cvename>CVE-2013-0747</cvename>
+	<cvename>CVE-2013-0748</cvename>
+	<cvename>CVE-2013-0749</cvename>
+	<cvename>CVE-2013-0750</cvename>
+	<cvename>CVE-2013-0751</cvename>
+	<cvename>CVE-2013-0752</cvename>
+	<cvename>CVE-2013-0753</cvename>
+	<cvename>CVE-2013-0754</cvename>
+	<cvename>CVE-2013-0755</cvename>
+	<cvename>CVE-2013-0756</cvename>
+	<cvename>CVE-2013-0757</cvename>
+	<cvename>CVE-2013-0758</cvename>
+	<cvename>CVE-2013-0759</cvename>
+	<cvename>CVE-2013-0760</cvename>
+	<cvename>CVE-2013-0761</cvename>
+	<cvename>CVE-2013-0762</cvename>
+	<cvename>CVE-2013-0763</cvename>
+	<cvename>CVE-2013-0764</cvename>
+	<cvename>CVE-2013-0766</cvename>
+	<cvename>CVE-2013-0767</cvename>
+	<cvename>CVE-2013-0768</cvename>
+	<cvename>CVE-2013-0769</cvename>
+	<cvename>CVE-2013-0770</cvename>
+	<cvename>CVE-2013-0771</cvename>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-01.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-02.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-03.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-04.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-05.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-06.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-07.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-08.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-09.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-10.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-11.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-12.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-13.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-14.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-15.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-16.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-17.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-18.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-19.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-20.html</url>
+	<url>http://www.mozilla.org/security/known-vulnerabilities/</url>
+    </references>
+    <dates>
+      <discovery>2013-01-08</discovery>
+      <entry>2013-01-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ca5d3272-59e3-11e2-853b-00262d5ed8ee">
+    <topic>rubygem-rails -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+        <name>rubygem-rails</name>
+        <range><lt>3.2.11</lt></range>
+      </package>
+      <package>
+        <name>rubygem-actionpack</name>
+        <range><lt>3.2.11</lt></range>
+      </package>
+      <package>
+        <name>rubygem-activerecord</name>
+        <range><lt>3.2.11</lt></range>
+      </package>
+      <package>
+        <name>rubygem-activesupport</name>
+        <range><lt>3.2.11</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>Ruby on Rails team reports:</p>
+        <blockquote cite="http://weblog.rubyonrails.org/2013/1/8/Rails-3-2-11-3-1-10-3-0-19-and-2-3-15-have-been-released/">
+          <p>Two high-risk vulnerabilities have been discovered:</p>
+          <p>(CVE-2013-0155) There is a vulnerability when Active Record is
+             used in conjunction with JSON parameter parsing.</p>
+          <p>Due to the way Active Record interprets parameters in combination
+             with the way that JSON parameters are parsed, it is possible for an
+             attacker to issue unexpected database queries with "IS NULL" or
+             empty "WHERE" clauses. This issue does not let an attacker insert
+             arbitrary values into an SQL query, however they can cause the
+             query to check for NULL or eliminate a WHERE clause when most users
+             would not expect it.</p>
+          <p>(CVE-2013-0156) There are multiple weaknesses in the parameter
+             parsing code for Ruby on Rails which allows attackers to bypass
+             authentication systems, inject arbitrary SQL, inject and execute
+             arbitrary code, or perform a DoS attack on a Rails application.</p>
+          <p>The parameter parsing code of Ruby on Rails allows applications to
+             automatically cast values from strings to certain data types.
+             Unfortunately the type casting code supported certain conversions
+             which were not suitable for performing on user-provided data
+             including creating Symbols and parsing YAML. These unsuitable
+             conversions can be used by an attacker to compromise a Rails
+             application.</p>
+        </blockquote>
+      </body>
+    </description>
+    <references>
+        <cvename>CVE-2013-0155</cvename>
+        <cvename>CVE-2013-0156</cvename>
+        <url>http://weblog.rubyonrails.org/2013/1/8/Rails-3-2-11-3-1-10-3-0-19-and-2-3-15-have-been-released/</url>
+        <url>https://groups.google.com/forum/?fromgroups#!topic/rubyonrails-security/t1WFuuQyavI</url>
+        <url>https://groups.google.com/forum/?fromgroups#!topic/rubyonrails-security/61bkgvnSGTQ</url>
+    </references>
+    <dates>
+      <discovery>2013-01-08</discovery>
+      <entry>2013-01-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b4051b52-58fa-11e2-853b-00262d5ed8ee">
+    <topic>rubygem-rails -- SQL injection vulnerability</topic>
+    <affects>
+      <package>
+        <name>rubygem-rails</name>
+        <range><lt>3.2.10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>Ruby on Rails team reports:</p>
+        <blockquote cite="https://groups.google.com/forum/?fromgroups=#!topic/rubyonrails-security/DCNTNp_qjFM">
+          <p>There is a SQL injection vulnerability in Active Record in ALL
+             versions. Due to the way dynamic finders in Active Record extract
+             options from method parameters, a method parameter can mistakenly
+             be used as a scope. Carefully crafted requests can use the scope
+             to inject arbitrary SQL.</p>
+        </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-5664</cvename>
+      <url>https://groups.google.com/forum/?fromgroups=#!topic/rubyonrails-security/DCNTNp_qjFM</url>
+    </references>
+    <dates>
+      <discovery>2013-01-02</discovery>
+      <entry>2013-01-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3a65d33b-5950-11e2-b66b-00e0814cab4e">
+    <topic>jenkins -- HTTP access to the server to retrieve the master cryptographic key</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>1.498</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory reports:</p>
+	<blockquote cite="https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2013-01-04">
+	  <p>This advisory announces a security vulnerability that was found
+	     in Jenkins core.</p>
+	  <p>An attacker can then use this master cryptographic key to mount
+	     remote code execution attack against the Jenkins master, or
+	     impersonate arbitrary users in making REST API calls.</p>
+	  <p>There are several factors that mitigate some of these problems
+	     that may apply to specific installations.</p>
+	    <ul>
+	      <li>The particular attack vector is only applicable on Jenkins
+	          instances that have slaves attached to them, and allow
+	          anonymous read access.</li>
+	      <li>Jenkins allows users to re-generate the API tokens. Those
+	          re-generated API tokens cannot be impersonated by the
+	          attacker.</li>
+	    </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+	    <url>https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2013-01-04</url>
+    </references>
+    <dates>
+      <discovery>2013-01-04</discovery>
+      <entry>2013-01-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1b769b72-582b-11e2-b66b-00e0814cab4e">
+    <topic>django -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+        <name>django</name>
+        <range><lt>1.4.3</lt></range>
+      </package>
+      <package>
+        <name>django13</name>
+        <range><lt>1.3.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>The Django Project reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2012/dec/10/security/">
+        <ol>
+          <li>
+          <p>Host header poisoning</p>
+	  <p>Several earlier Django security releases focused on the issue of
+	      poisoning the HTTP Host header, causing Django to generate URLs
+	      pointing to arbitrary, potentially-malicious domains.</p>
+	  <p>In response to further input received and reports of continuing
+	      issues following the previous release, we're taking additional
+	      steps to tighten Host header validation. Rather than attempt to
+	      accommodate all features HTTP supports here, Django's Host header
+	      validation attempts to support a smaller, but far more common, subset:</p>
+	    <ul>
+		<li>Hostnames must consist of characters [A-Za-z0-9] plus hyphen
+		    ('-') or dot ('.').</li>
+		<li>IP addresses -- both IPv4 and IPv6 -- are permitted.</li>
+		<li>Port, if specified, is numeric.</li>
+	    </ul>
+	  <p>Any deviation from this will now be rejected, raising the exception
+	      django.core.exceptions.SuspiciousOperation.</p>
+          </li>
+          <li>
+          <p>Redirect poisoning</p>
+	  <p>Also following up on a previous issue: in July of this year, we made
+	      changes to Django's HTTP redirect classes, performing additional
+	      validation of the scheme of the URL to redirect to (since, both
+	      within Django's own supplied applications and many third-party
+	      applications, accepting a user-supplied redirect target is a common
+	      pattern).</p>
+	  <p>Since then, two independent audits of the code turned up further
+	      potential problems. So, similar to the Host-header issue, we are
+	      taking steps to provide tighter validation in response to reported
+	      problems (primarily with third-party applications, but to a certain
+	      extent also within Django itself). This comes in two parts:</p>
+	    <ol>
+		<li>A new utility function, django.utils.http.is_safe_url, is
+		    added; this function takes a URL and a hostname, and checks
+		    that the URL is either relative, or if absolute matches the
+		    supplied hostname. This function is intended for use whenever
+		    user-supplied redirect targets are accepted, to ensure that
+		    such redirects cannot lead to arbitrary third-party sites.</li>
+		<li>All of Django's own built-in views -- primarily in the
+		    authentication system -- which allow user-supplied redirect
+		    targets now use is_safe_url to validate the supplied URL.</li>
+	    </ol>
+          </li>
+          </ol>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+	<url>https://www.djangoproject.com/weblog/2012/dec/10/security/</url>
+    </references>
+    <dates>
+      <discovery>2012-12-10</discovery>
+      <entry>2013-01-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1ae613c3-5728-11e2-9483-14dae938ec40">
+    <topic>freetype -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>freetype2</name>
+	<range><lt>2.4.11</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The FreeType Project reports:</p>
+	<blockquote cite="http://sourceforge.net/projects/freetype/files/freetype2/2.4.11/README/view">
+	  <p>Some vulnerabilities in the  BDF implementation have been fixed.
+	    Users of this font format should upgrade.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://sourceforge.net/projects/freetype/files/freetype2/2.4.11/README/view</url>
+    </references>
+    <dates>
+      <discovery>2012-12-20</discovery>
+      <entry>2013-01-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a264b1b0-5726-11e2-9483-14dae938ec40">
+    <topic>moinmoin -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>moinmoin</name>
+	<range><lt>1.9.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MoinMoin developers report the following vulnerabilities
+	  as fixed in version 1.9.6:</p>
+	<blockquote cite="http://hg.moinmo.in/moin/1.9/raw-file/1.9.6/docs/CHANGES">
+	  <ul>
+	    <li>remote code execution vulnerability in
+	      twikidraw/anywikidraw action,</li>
+	    <li>path traversal vulnerability in AttachFile action,</li>
+	    <li>XSS issue, escape page name in rss link.</li>
+	  </ul>
+	</blockquote>
+	<p>CVE entries at MITRE furher clarify:</p>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2012-6081">
+	  <p>Multiple unrestricted file upload vulnerabilities in the
+	    (1) twikidraw (action/twikidraw.py) and (2) anywikidraw
+	    (action/anywikidraw.py) actions in MoinMoin before 1.9.6
+	    allow remote authenticated users with write permissions to
+	    execute arbitrary code by uploading a file with an
+	    executable extension, then accessing it via a direct request
+	    to the file in an unspecified directory, as exploited in the
+	    wild in July 2012.</p>
+	</blockquote>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2012-6080">
+	  <p>Directory traversal vulnerability in the
+	    _do_attachment_move function in the AttachFile action
+	    (action/AttachFile.py) in MoinMoin 1.9.3 through 1.9.5
+	    allows remote attackers to overwrite arbitrary files via a
+	    .. (dot dot) in a file name.</p>
+	</blockquote>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2012-6082">
+	  <p>Cross-site scripting (XSS) vulnerability in the rsslink
+	    function in theme/__init__.py in MoinMoin 1.9.5 allows
+	    remote attackers to inject arbitrary web script or HTML
+	    via the page name in a rss link.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-6081</cvename>
+      <cvename>CVE-2012-6080</cvename>
+      <cvename>CVE-2012-6082</cvename>
+      <url>http://hg.moinmo.in/moin/1.9/raw-file/1.9.6/docs/CHANGES</url>
+      <url>http://www.debian.org/security/2012/dsa-2593</url>
+    </references>
+    <dates>
+      <discovery>2012-12-29</discovery>
+      <entry>2013-01-05</entry>
+      <modified>2013-01-06</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="f7c87a8a-55d5-11e2-a255-c8600054b392">
+    <topic>asterisk -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>asterisk11</name>
+	<range><gt>11.*</gt><lt>11.1.2</lt></range>
+      </package>
+      <package>
+	<name>asterisk10</name>
+	<range><gt>10.*</gt><lt>10.11.1</lt></range>
+      </package>
+      <package>
+	<name>asterisk18</name>
+	<range><gt>1.8.*</gt><lt>1.8.19.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Asterisk project reports:</p>
+	<blockquote cite="https://www.asterisk.org/security">
+	  <p>Crashes due to large stack allocations when using TCP</p>
+	  <p>Denial of Service Through Exploitation of Device State Caching</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-5976</cvename>
+      <cvename>CVE-2012-5977</cvename>
+      <url>http://downloads.digium.com/pub/security/AST-2012-014.html</url>
+      <url>http://downloads.digium.com/pub/security/AST-2012-015.html</url>
+      <url>https://www.asterisk.org/security</url>
+    </references>
+    <dates>
+      <discovery>2013-01-02</discovery>
+      <entry>2013-01-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4108cc57-54d7-11e2-9483-14dae938ec40">
+    <topic>ircd-ratbox and charybdis -- remote DoS vulnerability</topic>
+    <affects>
+      <package>
+	<name>ircd-ratbox</name>
+	<range><gt>2.*</gt><lt>3.0.8</lt></range>
+      </package>
+      <package>
+	<name>charybdis</name>
+	<range><lt>3.4.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>atheme.org reports:</p>
+	<blockquote cite="http://www.ratbox.org/ASA-2012-12-31.txt">
+	  <p>All versions of Charybdis are vulnerable to a remotely-triggered
+	    crash bug caused by code originating from ircd-ratbox 2.0.
+	    (Incidentally, this means all versions since ircd-ratbox 2.0 are
+	    also vulnerable.)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.ratbox.org/ASA-2012-12-31.txt</url>
+    </references>
+    <dates>
+      <discovery>2012-12-31</discovery>
+      <entry>2013-01-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="101f0aae-52d1-11e2-87fe-f4ce46b9ace8">
+    <topic>puppet -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>puppet</name>
+	<range><gt>2.6.*</gt><lt>2.6.17</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>puppet -- multiple vulnerabilities</p>
+	<blockquote cite="http://projects.puppetlabs.com/projects/puppet/wiki/Release_Notes#2.6.17">
+          <p>Arbitrary file read on the puppet master from authenticated clients (high). It is possible to construct an HTTP get request from an authenticated client with a valid certificate that will return the contents of an arbitrary file on the Puppet master that the master has read-access to.</p>
+          <p>Arbitrary file delete/D.O.S on Puppet Master from authenticated clients (high). Given a Puppet master with the "Delete" directive allowed in auth.conf for an authenticated host, an attacker on that host can send a specially crafted Delete request that can cause an arbitrary file deletion on the Puppet master, potentially causing a denial of service attack. Note that this vulnerability does *not* exist in Puppet as configured by default.</p>
+          <p>Insufficient input validation for agent hostnames (low). An attacker could trick the administrator into signing an attacker's certificate rather than the intended one by constructing specially crafted certificate requests containing specific ANSI control sequences. It is possible to use the sequences to rewrite the order of text displayed to an administrator such that display of an invalid certificate and valid certificate are transposed. If the administrator signs the attacker's certificate, the attacker can then man-in-the-middle the agent.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+        <cvename>CVE-2012-3864</cvename>
+        <cvename>CVE-2012-3865</cvename>
+        <cvename>CVE-2012-3867</cvename>
+        <url>http://projects.puppetlabs.com/projects/puppet/wiki/Release_Notes#2.6.17</url>
+        <url>http://puppetlabs.com/security/cve/cve-2012-3864/</url>
+        <url>http://puppetlabs.com/security/cve/cve-2012-3865/</url>
+        <url>http://puppetlabs.com/security/cve/cve-2012-3867/</url>
+    </references>
+    <dates>
+      <discovery>2012-07-10</discovery>
+      <entry>2012-12-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="13320091-52a6-11e2-a289-1c4bd681f0cf">
+    <topic>otrs -- XSS vulnerability</topic>
+    <affects>
+      <package>
+	<name>otrs</name>
+	<range><lt>3.1.11</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OTRS Security Advisory reports:</p>
+	<blockquote cite="http://www.otrs.com/open-source/community-news/security-advisories/security-advisory-2012-03/">
+	  <p>This advisory covers vulnerabilities discovered in the OTRS core
+system. This is a variance of the XSS vulnerability, where an attacker could
+send a specially prepared HTML email to OTRS which would cause JavaScript code
+to be executed in your browser while displaying the email. In this case this is
+achieved by using javascript source attributes with whitespaces.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+ <cvename>CVE-2012-4751</cvename>
+      <url>http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2012-03/</url>
+<url>http://www.kb.cert.org/vuls/id/603276</url>
+    </references>
+    <dates>
+      <discovery>2012-10-16</discovery>
+      <entry>2012-12-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="95a69d1a-52a5-11e2-a289-1c4bd681f0cf">
+    <topic>otrs -- XSS vulnerability in Firefox and Opera</topic>
+    <affects>
+      <package>
+	<name>otrs</name>
+	<range><lt>3.1.10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OTRS Security Advisory reports:</p>
+	<blockquote cite="http://www.otrs.com/open-source/community-news/security-advisories/security-advisory-2012-02/">
+	  <p>This advisory covers vulnerabilities discovered in the OTRS core
+system. This is a variance of the XSS vulnerability, where an attacker could
+send a specially prepared HTML email to OTRS which would cause JavaScript code
+to be executed in your browser while displaying the email in Firefox and Opera.
+In this case this is achieved with an invalid HTML structure with nested tags.
+</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+<cvename>CVE-2012-4600</cvename>
+      <url>http://www.otrs.com/open-source/community-news/security-advisories/security-advisory-2012-02/</url>
+    </references>
+    <dates>
+      <discovery>2012-08-30</discovery>
+      <entry>2012-12-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="49a6026a-52a3-11e2-a289-1c4bd681f0cf">
+    <topic>otrs -- XSS vulnerability in Internet Explorer</topic>
+    <affects>
+      <package>
+	<name>otrs</name>
+	<range><lt>3.1.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OTRS Security Advisory reports:</p>
+	<blockquote cite="http://www.otrs.com/open-source/community-news/security-advisories/security-advisory-2012-01/">
+	  <p>This advisory covers vulnerabilities discovered in the OTRS core
+system. Due to the XSS vulnerability in Internet Explorer an attacker could send
+a specially prepared HTML email to OTRS which would cause JavaScript code to be
+executed in your Internet Explorer while displaying the email.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-2582</cvename>
+      <url>http://www.otrs.com/open-source/community-news/security-advisories/security-advisory-2012-01/</url>
+    </references>
+    <dates>
+      <discovery>2012-08-22</discovery>
+      <entry>2012-12-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c37de843-488e-11e2-a5c9-0019996bc1f7">
+    <topic>squid -- denial of service</topic>
+    <affects>
+      <package>
+        <name>squid</name>
+        <range><lt>3.1.23</lt></range>
+        <range><ge>3.2</ge><lt>3.2.6</lt></range>
+        <range><ge>3.3</ge><lt>3.3.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>Squid developers report:</p>
+        <blockquote cite="http://www.squid-cache.org/Advisories/SQUID-2012_1.txt">
+          <p>Due to missing input validation Squid cachemgr.cgi tool
+          is vulnerable to a denial of service attack when processing
+          specially crafted requests.</p>
+          <p>This problem allows any client able to reach the
+          cachemgr.cgi to perform a denial of service attack on the
+          service host.</p>
+          <p>The nature of the attack may cause secondary effects
+          through resource consumption on the host server.</p>
+        </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-5643</cvename>
+      <cvename>CVE-2013-0189</cvename>
+      <url>http://www.squid-cache.org/Advisories/SQUID-2012_1.txt</url>
+    </references>
+    <dates>
+      <discovery>2012-12-17</discovery>
+      <entry>2012-12-28</entry>
+      <modified>2013-01-11</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="85f33a8d-492f-11e2-aa75-003067c2616f">
+    <topic>opera -- execution of arbitrary code</topic>
+    <affects>
+      <package>
+        <name>opera</name>
+        <name>opera-devel</name>
+        <name>linux-opera</name>
+        <name>linux-opera-devel</name>
+        <range><lt>12.12</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>Opera reports:</p>
+        <blockquote cite="http://www.opera.com/support/kb/view/1038/">
+          <p>When loading GIF images into memory, Opera should allocate the
+            correct amount of memory to store that image. Specially crafted
+            image files can cause Opera to allocate the wrong amount of memory.
+            Subsequent data may then overwrite unrelated memory with
+            attacker-controlled data. This can lead to a crash, which may also
+            execute that data as code.</p>
+        </blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.opera.com/support/kb/view/1038/</url>
+      <url>http://www.opera.com/support/kb/view/1039/</url>
+    </references>
+    <dates>
+      <discovery>2012-12-18</discovery>
+      <entry>2012-12-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1657a3e6-4585-11e2-a396-10bf48230856">
+    <topic>linux-flashplugin -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-f10-flashplugin</name>
+	<range><lt>11.2r202.258</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="https://www.adobe.com/support/security/bulletins/apsb12-27.html">
+	  <p>These updates address vulnerabilities that could cause a crash
+	    and potentially allow an attacker to take control of the affected system.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-5676</cvename>
+      <cvename>CVE-2012-5677</cvename>
+      <cvename>CVE-2012-5678</cvename>
+      <url>https://www.adobe.com/support/security/bulletins/apsb12-27.html</url>
+    </references>
+    <dates>
+      <discovery>2012-12-11</discovery>
+      <entry>2012-12-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="51f84e28-444e-11e2-8306-00262d5ed8ee">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>23.0.1271.97</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/search/label/Stable%20updates">
+	  <p>[158204] High CVE-2012-5139: Use-after-free with visibility
+	    events. Credit to Chamal de Silva.</p>
+	  <p>[159429] High CVE-2012-5140: Use-after-free in URL loader. Credit
+	    to Chamal de Silva.</p>
+	  <p>[160456] Medium CVE-2012-5141: Limit Chromoting client plug-in
+	    instantiation. Credit to Google Chrome Security Team (Jüri
+	    Aedla).</p>
+	  <p>[160803] Critical CVE-2012-5142: Crash in history navigation.
+	    Credit to Michal Zalewski of Google Security Team.</p>
+	  <p>[160926] Medium CVE-2012-5143: Integer overflow in PPAPI image
+	    buffers. Credit to Google Chrome Security Team (Cris Neckar).</p>
+	  <p>[161639] High CVE-2012-5144: Stack corruption in AAC decoding.
+	    Credit to pawlkt.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-5139</cvename>
+      <cvename>CVE-2012-5140</cvename>
+      <cvename>CVE-2012-5141</cvename>
+      <cvename>CVE-2012-5142</cvename>
+      <cvename>CVE-2012-5143</cvename>
+      <cvename>CVE-2012-5144</cvename>
+      <url>http://googlechromereleases.blogspot.nl/search/label/Stable%20updates</url>
+    </references>
+    <dates>
+      <discovery>2012-12-11</discovery>
+      <entry>2012-12-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="953911fe-51ef-11e2-8e34-0022156e8794">
+    <topic>tomcat -- bypass of CSRF prevention filter</topic>
     <affects>
       <package>
 	<name>tomcat6</name>
@@ -65,32 +1073,90 @@ Note:  Please add new entries to the beginning of this file.
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
-	<p>The Apache Software Foundation reports:</p>
-	<blockquote cite="http://tomcat.apache.org/security.html">
-	  <p>When using the NIO connector with sendfile and HTTPS enabled, if a
-	     client breaks the connection while reading the response an infinite loop
-	     is entered leading to a denial of service.</p>
-	  <p>When using FORM authentication it was possible to bypass the security
-	     constraint checks in the FORM authenticator by appending
-	     "/j_security_check" to the end of the URL if some other component
-	     (such as the Single-Sign-On valve) had called request.setUserPrincipal()
-	     before the call to FormAuthenticator#authenticate().</p>
+        <p>The Apache Software Foundation reports:</p>
+        <blockquote cite="http://tomcat.apache.org/security-7.html">
 	  <p>The CSRF prevention filter could be bypassed if a request was made to a
 	     protected resource without a session identifier present in the request.</p>
-	</blockquote>
+        </blockquote>
       </body>
     </description>
     <references>
-      <cvename>CVE-2012-3546</cvename>
       <cvename>CVE-2012-4431</cvename>
-      <cvename>CVE-2012-4534</cvename>
-      <url>http://tomcat.apache.org/security.html</url>
       <url>http://tomcat.apache.org/security-6.html</url>
       <url>http://tomcat.apache.org/security-7.html</url>
     </references>
     <dates>
       <discovery>2012-12-04</discovery>
       <entry>2012-12-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="134acaa2-51ef-11e2-8e34-0022156e8794">
+    <topic>tomcat -- denial of service</topic>
+    <affects>
+      <package>
+	<name>tomcat6</name>
+	<range><ge>6.0.0</ge><le>6.0.35</le></range>
+      </package>
+      <package>
+	<name>tomcat7</name>
+	<range><ge>7.0.0</ge><le>7.0.27</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>The Apache Software Foundation reports:</p>
+        <blockquote cite="http://tomcat.apache.org/security-7.html">
+	  <p>When using the NIO connector with sendfile and HTTPS enabled, if a
+	     client breaks the connection while reading the response an infinite loop
+	     is entered leading to a denial of service.</p>
+        </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-4534</cvename>
+      <url>http://tomcat.apache.org/security-6.html</url>
+      <url>http://tomcat.apache.org/security-7.html</url>
+    </references>
+    <dates>
+      <discovery>2012-12-04</discovery>
+      <entry>2012-12-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f599dfc4-3ec2-11e2-8ae1-001a8056d0b5">
+    <topic>tomcat -- bypass of security constraints</topic>
+    <affects>
+      <package>
+        <name>tomcat6</name>
+        <range><ge>6.0.0</ge><le>6.0.35</le></range>
+      </package>
+      <package>
+        <name>tomcat7</name>
+        <range><ge>7.0.0</ge><le>7.0.29</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>The Apache Software Foundation reports:</p>
+        <blockquote cite="http://tomcat.apache.org/security-7.html">
+          <p>When using FORM authentication it was possible to bypass the security
+             constraint checks in the FORM authenticator by appending
+             "/j_security_check" to the end of the URL if some other component
+             (such as the Single-Sign-On valve) had called request.setUserPrincipal()
+             before the call to FormAuthenticator#authenticate().</p>
+        </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-3546</cvename>
+      <url>http://tomcat.apache.org/security-6.html</url>
+      <url>http://tomcat.apache.org/security-7.html</url>
+    </references>
+    <dates>
+      <discovery>2012-12-04</discovery>
+      <entry>2012-12-04</entry>
+      <modified>2012-12-29</modified>
     </dates>
   </vuln>
 
@@ -1126,7 +2192,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="3decc87d-2498-11e2-b0c7-000d601460a4">
-    <topic>ruby - Unintentional file creation caused by inserting an illegal NUL character</topic>
+    <topic>ruby -- Unintentional file creation caused by inserting an illegal NUL character</topic>
     <affects>
       <package>
 	<name>ruby</name>
@@ -1162,7 +2228,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="2a093853-2495-11e2-b0c7-000d601460a4">
-    <topic>ruby - $SAFE escaping vulnerability about Exception#to_s/NameError#to_s</topic>
+    <topic>ruby -- $SAFE escaping vulnerability about Exception#to_s/NameError#to_s</topic>
     <affects>
       <package>
 	<name>ruby</name>
@@ -1620,7 +2686,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="f94befcd-1289-11e2-a25e-525400272390">
-    <topic>gitolite - path traversal vulnerability</topic>
+    <topic>gitolite -- path traversal vulnerability</topic>
     <affects>
       <package>
 	<name>gitolite</name>
@@ -4667,6 +5733,8 @@ Note:  Please add new entries to the beginning of this file.
       <package>
 	<name>php5</name>
 	<range><gt>5.4</gt><lt>5.4.5</lt></range>
+	<range><ge>5.3</ge><lt>5.3.15</lt></range>
+	<range><ge>5.2</ge><lt>5.2.17_10</lt></range>
       </package>
       <package>
 	<name>php53</name>
@@ -4693,7 +5761,7 @@ Note:  Please add new entries to the beginning of this file.
     <dates>
       <discovery>2012-07-19</discovery>
       <entry>2012-07-23</entry>
-      <modified>2012-09-19</modified>
+      <modified>2013-01-15</modified>
     </dates>
   </vuln>
 
@@ -4807,7 +5875,7 @@ Note:  Please add new entries to the beginning of this file.
      <affects>
         <package>
            <name>puppet</name>
-           <range><lt>2.7.18</lt></range>
+           <range><gt>2.7.*</gt><lt>2.7.18</lt></range>
         </package>
      </affects>
      <description>
@@ -7195,7 +8263,7 @@ Note:  Please add new entries to the beginning of this file.
     <affects>
       <package>
 	<name>puppet</name>
-	<range><lt>2.7.12_1</lt></range>
+	<range><gt>2.7.*</gt><lt>2.7.12_1</lt></range>
       </package>
     </affects>
     <description>
@@ -9055,7 +10123,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="6e7ad1d7-4e27-11e1-8e12-90e6ba8a36a2">
-    <topic>mathopd - directory traversal vulnerability</topic>
+    <topic>mathopd -- directory traversal vulnerability</topic>
     <affects>
       <package>
 	<name>mathopd</name>
@@ -10736,7 +11804,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="bbd5f486-24f1-11e1-95bc-080027ef73ec">
-    <topic>PuTTY 0.59 - 0.61 -- Password vulnerability</topic>
+    <topic>PuTTY -- Password vulnerability</topic>
     <affects>
       <package>
 	<name>putty</name>
@@ -11321,7 +12389,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="9dde9dac-08f4-11e1-af36-003067b2972c">
-    <topic>caml-light - insecure use of temporary files</topic>
+    <topic>caml-light -- insecure use of temporary files</topic>
     <affects>
       <package>
 	<name>caml-light</name>
@@ -35565,7 +36633,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="9f581778-e3d4-11dc-bb89-000bcdc1757a">
-    <topic>coppermine - multiple vulnerabilities</topic>
+    <topic>coppermine -- multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>coppermine</name>
@@ -35597,7 +36665,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="f113bbeb-e3ac-11dc-bb89-000bcdc1757a">
-    <topic>moinmoin - multiple vulnerabilities</topic>
+    <topic>moinmoin -- multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>moinmoin</name>
@@ -41091,7 +42159,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="0ac89b39-f829-11db-b55c-000e0c6d38a9">
-    <topic>qemu - several vulnerabilities</topic>
+    <topic>qemu -- several vulnerabilities</topic>
     <affects>
       <package>
 	<name>qemu</name>
@@ -41145,7 +42213,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="632c98be-aad2-4af2-849f-41a6862afd6a">
-    <topic>p5-Imager - possibly exploitable buffer overflow</topic>
+    <topic>p5-Imager -- possibly exploitable buffer overflow</topic>
     <affects>
       <package>
 	<name>p5-Imager</name>
@@ -46352,7 +47420,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="76562594-1f19-11db-b7d4-0008743bf21a">
-    <topic>ruby - multiple vulnerabilities</topic>
+    <topic>ruby -- multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>ruby</name>
@@ -47857,7 +48925,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="4645b98c-e46e-11da-9ae7-00123fcc6e5c">
-    <topic>vnc - authentication bypass vulnerability</topic>
+    <topic>vnc -- authentication bypass vulnerability</topic>
     <affects>
       <package>
 	<name>vnc</name>
@@ -54004,7 +55072,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="6e27f3b6-189b-11da-b6be-0090274e8dbb">
-    <topic>fswiki - command injection vulnerability</topic>
+    <topic>fswiki -- command injection vulnerability</topic>
     <affects>
       <package>
 	<name>fswiki</name>
@@ -60692,7 +61760,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="4a0b334d-8d8d-11d9-afa0-003048705d5a">
-    <topic>phpbb - Insuffient check against HTML code in usercp_register.php</topic>
+    <topic>phpbb -- Insuffient check against HTML code in usercp_register.php</topic>
     <affects>
       <package>
 	<name>phpbb</name>
