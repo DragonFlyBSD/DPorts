@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rbtools
-# Date created:				Jul 15 2009
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rbtools/Makefile,v 1.7 2012/11/17 05:56:56 svnexp Exp $
-#
+# Created by: Florent Thoumie <flz@FreeBSD.org>
+# $FreeBSD: ports/devel/rbtools/Makefile,v 1.8 2013/01/08 14:45:40 svnexp Exp $
 
 PORTNAME=	${ORIGNAME:tl}
-DISTVERSION=	0.4.1
+DISTVERSION=	0.4.2
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.reviewboard.org/releases/${ORIGNAME}/${DISTVERSION:C|^(...).*|\1|}/
 DISTNAME=	${ORIGNAME}-${DISTVERSION}
