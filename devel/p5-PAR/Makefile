@@ -2,11 +2,11 @@
 # Date created:				Aug 27 2003
 # Whom:					Autrijus Tang <autrijus@autrijus.org>
 #
-# $FreeBSD: ports/devel/p5-PAR/Makefile,v 1.55 2012/11/17 05:56:24 svnexp Exp $
+# $FreeBSD: ports/devel/p5-PAR/Makefile,v 1.56 2012/12/23 15:58:52 svnexp Exp $
 #
 
 PORTNAME=	PAR
-PORTVERSION=	1.00.5
+PORTVERSION=	1.00.7
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
