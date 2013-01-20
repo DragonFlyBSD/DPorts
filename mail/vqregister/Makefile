@@ -1,0 +1,34 @@
+# New ports collection makefile for:  vqregister
+# Date created:        2003-11-15
+# Whom:                Dan Caescu <daniel@freebsd.ro>
+#
+# $FreeBSD: ports/mail/vqregister/Makefile,v 1.9 2012/11/17 05:59:17 svnexp Exp $
+#
+
+PORTNAME=	vqregister
+PORTVERSION=	2.6
+PORTREVISION=	3
+CATEGORIES=	mail www
+MASTER_SITES=	http://www.inter7.com/vqregister/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	An extremely admin-configurable email user signup CGI
+
+BUILD_DEPENDS=	${VPOPMAIL_DIR}:${PORTSDIR}/mail/vpopmail
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+USE_APACHE_RUN=	22+
+VPOPMAIL_DIR?=	${LOCALBASE}/vpopmail
+
+USE_MYSQL=	yes
+MAKE_ENV=	VDIR=${VPOPMAIL_DIR} WWWDIR=${WWWDIR}
+
+DOCS=		CONFIG CONTRIBUTORS FORM HISTORY TEMPLATE
+
+.if !defined(NOPORTDOCS)
+post-install:
+	@${MKDIR} ${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
