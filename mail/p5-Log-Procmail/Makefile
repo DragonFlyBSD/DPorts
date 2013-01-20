@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Log-Procmail
-# Date created:				2004-04-26
-# Whom:	      				mat
-#
-# $FreeBSD: ports/mail/p5-Log-Procmail/Makefile,v 1.7 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: ports/mail/p5-Log-Procmail/Makefile,v 1.8 2013/01/04 09:43:45 svnexp Exp $
 
 PORTNAME=	Log-Procmail
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	mail devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
