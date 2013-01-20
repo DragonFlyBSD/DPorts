@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Locale::SubCountry
-# Date created:				30 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/misc/p5-Locale-SubCountry/Makefile,v 1.26 2012/11/17 05:59:43 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: ports/misc/p5-Locale-SubCountry/Makefile,v 1.27 2013/01/18 10:29:20 svnexp Exp $
 
 PORTNAME=	Locale-SubCountry
-PORTVERSION=	1.56
+PORTVERSION=	1.57
 CATEGORIES=	misc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
