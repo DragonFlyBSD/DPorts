@@ -1,7 +1,7 @@
-# $FreeBSD: ports/databases/p5-DBD-CSV/Makefile,v 1.41 2012/12/17 08:59:15 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBD-CSV/Makefile,v 1.42 2013/01/11 11:27:25 svnexp Exp $
 
 PORTNAME=	DBD-CSV
-PORTVERSION=	0.36
+PORTVERSION=	0.38
 PORTEPOCH=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
