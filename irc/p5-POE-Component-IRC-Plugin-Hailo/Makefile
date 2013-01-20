@@ -2,10 +2,10 @@
 # Date created:	   2011-07-19
 # Whom:		   milki <milki@rescomp.berkeley.edu>
 #
-# $FreeBSD: ports/irc/p5-POE-Component-IRC-Plugin-Hailo/Makefile,v 1.3 2012/11/17 05:58:29 svnexp Exp $
+# $FreeBSD: ports/irc/p5-POE-Component-IRC-Plugin-Hailo/Makefile,v 1.4 2013/01/13 21:45:04 svnexp Exp $
 
 PORTNAME=	POE-Component-IRC-Plugin-Hailo
-PORTVERSION=	0.17
+PORTVERSION=	0.18
 CATEGORIES=	irc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:HINRIK
@@ -23,7 +23,6 @@ BUILD_DEPENDS=	p5-IRC-Utils>=0.05:${PORTSDIR}/irc/p5-IRC-Utils \
 		p5-POE-Component-Hailo>=0:${PORTSDIR}/devel/p5-POE-Component-Hailo \
 		p5-POE-Component-IRC>=6.22:${PORTSDIR}/irc/p5-POE-Component-IRC
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-Script>=1.07:${PORTSDIR}/devel/p5-Test-Script
 
 PERL_CONFIGURE=	yes
