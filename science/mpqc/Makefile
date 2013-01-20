@@ -2,12 +2,12 @@
 # Date created:				27 April 2001
 # Whom:					batman <batman@udel.edu>
 #
-# $FreeBSD: ports/science/mpqc/Makefile,v 1.64 2012/11/17 06:00:58 svnexp Exp $
+# $FreeBSD: ports/science/mpqc/Makefile,v 1.65 2013/01/08 05:42:05 svnexp Exp $
 #
 
 PORTNAME=	mpqc
 PORTVERSION=	2.3.1
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	science parallel
 MASTER_SITES=	SF
 
@@ -43,11 +43,14 @@ LIB_DEPENDS+=	mpich:${PORTSDIR}/net/mpich2
 LIB_DEPENDS+=	int.1:${PORTSDIR}/science/libint
 .if !defined(NOPORTDOCS)
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
+BUILD_DEPENDS+=	dot:${PORTSDIR}/graphics/graphviz
+BUILD_DEPENDS+=	latex:${PORTSDIR}/print/teTeX-base
+BUILD_DEPENDS+=	${LOCALBASE}/bin/gsed:${PORTSDIR}/textproc/gsed
+LIB_DEPENDS+=	execinfo.1:${PORTSDIR}/devel/libexecinfo
 .endif
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf
-
 USE_FORTRAN=	yes
 
 .if defined(WITH_ICC)
@@ -114,11 +117,12 @@ do-install:
 		${TAR} -xf - -C ${PREFIX}/share/mpqc/validate
 	${FIND} ${PREFIX}/share/mpqc/validate | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
 	${FIND} ${PREFIX}/share/mpqc/validate -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
-
-post-install:
 .if !defined(NOPORTDOCS)
-	(cd ${WRKSRC}/doc/man/man3 ; ${INSTALL_MAN} * ${PREFIX}/man/man3)
-	(cd ${WRKSRC}/doc/man/man1 ; ${INSTALL_MAN} * ${PREFIX}/man/man1)
+	rm -f ${WRKSRC}/doc/man/man1/_*mpqc_*.1
+	rm -f ${WRKSRC}/doc/man/man3/_*mpqc_*.3
+	rm -f ${WRKSRC}/doc/man/man3/sc_PsiCCSD_T.3* #somehow this file is not generated in tinderbox
+	(cd ${WRKSRC}/doc/man/man3 ; ${INSTALL_MAN} *3 ${PREFIX}/man/man3)
+	(cd ${WRKSRC}/doc/man/man1 ; ${INSTALL_MAN} *1 ${PREFIX}/man/man1)
 	${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC}/doc/html ; ${TAR} -chf - . | ${TAR} -xf - -C ${DOCSDIR}
 	${FIND} ${DOCSDIR} | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
