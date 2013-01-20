@@ -1,17 +1,13 @@
-# New ports collection makefile for: py-waitress
-# Date created:		2012-01-02
-# Whom:		Olivier Duchateau <duchateau.olivier@gmail.com>
-#
-# $FreeBSD: ports/www/py-waitress/Makefile,v 1.4 2012/11/17 06:03:02 svnexp Exp $
+# $FreeBSD: ports/www/py-waitress/Makefile,v 1.5 2012/12/26 16:06:36 svnexp Exp $
 #
 
 PORTNAME=	waitress
-PORTVERSION=	0.8.1
+PORTVERSION=	0.8.2
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	duchateau.olivier@gmail.com
+MAINTAINER=	olivierd@FreeBSD.org
 COMMENT=	Python WSGI server
 
 LICENSE=	ZPL21
