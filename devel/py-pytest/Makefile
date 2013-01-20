@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-pytest/Makefile,v 1.11 2012/11/17 05:56:49 svnexp Exp $
+# $FreeBSD: ports/devel/py-pytest/Makefile,v 1.12 2012/12/31 13:25:30 svnexp Exp $
 
 PORTNAME=	pytest
-PORTVERSION=	2.3.2
+PORTVERSION=	2.3.4
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,7 +11,7 @@ COMMENT=	Cross-project testing tool for Python
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pylib>=1.4.8:${PORTSDIR}/devel/py-pylib
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pylib>=1.4.12:${PORTSDIR}/devel/py-pylib
 
 # Python 3 ready
 USE_PYTHON=		yes
