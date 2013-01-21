@@ -2,12 +2,12 @@
 # Date created:				2004 11 July
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/fyre/Makefile,v 1.29 2012/11/17 05:58:06 svnexp Exp $
+# $FreeBSD: ports/graphics/fyre/Makefile,v 1.30 2013/01/17 04:09:20 svnexp Exp $
 #
 
 PORTNAME=	fyre
 PORTVERSION=	1.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://releases.navi.cx/fyre/
 
@@ -36,7 +36,7 @@ CFLAGS+=	-march=native -O3 -ffast-math -fomit-frame-pointer
 .endif
 
 .if ${PORT_OPTIONS:MOPENEXR}
-LIB_DEPENDS+=	IlmImf.6:${PORTSDIR}/graphics/OpenEXR
+LIB_DEPENDS+=	IlmImf:${PORTSDIR}/graphics/OpenEXR
 .else
 CONFIGURE_ARGS+=--disable-openexr
 .endif
