@@ -3,12 +3,12 @@
 # Date created:				19 January 2008
 # Whom:					arved@FreeBSD.org
 #
-# $FreeBSD: ports/x11/kdelibs4/Makefile,v 1.278 2012/12/10 19:24:06 svnexp Exp $
+# $FreeBSD: ports/x11/kdelibs4/Makefile,v 1.279 2013/01/17 04:09:24 svnexp Exp $
 #
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
@@ -17,7 +17,7 @@ DIST_SUBDIR=	KDE
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Base set of libraries needed by KDE programs
 
-LIB_DEPENDS=	IlmImf.6:${PORTSDIR}/graphics/OpenEXR \
+LIB_DEPENDS=	IlmImf:${PORTSDIR}/graphics/OpenEXR \
 		aspell.16:${PORTSDIR}/textproc/aspell \
 		jasper.4:${PORTSDIR}/graphics/jasper \
 		pcre.3:${PORTSDIR}/devel/pcre \
