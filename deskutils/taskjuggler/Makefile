@@ -1,0 +1,94 @@
+# New ports collection makefile for: taskjuggler
+# Date created:	23 February 2004
+# Whom:	 	Dean Povey <povey@wedgetail.com>
+#
+# $FreeBSD: ports/deskutils/taskjuggler/Makefile,v 1.48 2012/12/30 18:55:45 svnexp Exp $
+#
+
+PORTNAME=	taskjuggler
+PORTVERSION=	2.4.3
+PORTREVISION=	6
+CATEGORIES=	deskutils
+MASTER_SITES=	http://www.taskjuggler.org/download/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A project management tool for UNIX based operating systems
+
+BUILD_DEPENDS=	p5-Class-MethodMaker>=0:${PORTSDIR}/devel/p5-Class-MethodMaker \
+		p5-Date-Calc>=0:${PORTSDIR}/devel/p5-Date-Calc \
+		p5-PostScript-Simple>=0:${PORTSDIR}/print/p5-PostScript-Simple \
+		poster:${PORTSDIR}/print/poster \
+		bash:${PORTSDIR}/shells/bash \
+		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
+
+OPTIONS_DEFINE=	DOCS KDE3
+OPTIONS_DEFAULT=	KDE3
+
+USE_BZIP2=	yes
+USE_QT_VER=	3
+USE_PERL5_RUN=	yes
+USE_GMAKE=	yes
+USE_AUTOTOOLS=	autoconf:env automake:env libtool
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_CFLAGS}
+CONFIGURE_ARGS=	--with-docdir=${EXAMPLESDIR}/
+USE_LDCONFIG=	yes
+
+AUTOTOOLSFILES=	admin/cvs.sh
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
+BUILD_DEPENDS+=	xsltproc:${PORTSDIR}/textproc/libxslt
+.else
+CONFIGURE_ARGS+=--disable-docs
+.endif
+
+.if ${PORT_OPTIONS:MKDE3}
+LIB_DEPENDS+=	kimproxy:${PORTSDIR}/x11/kdelibs3 \
+		kcal.2:${PORTSDIR}/deskutils/kdepim3
+PLIST_SUB+=	KDE=""
+.else
+CONFIGURE_ARGS+=--with-kde-support=no
+PLIST_SUB+=	KDE="@comment "
+.endif
+
+.if defined(SESSION_MANAGER)
+BROKEN=		please unset SESSION_MANAGER
+.endif
+
+post-patch:
+	@cd ${WRKSRC}/admin && ${REINPLACE_CMD} -e \
+		's|="autoconf"|="${AUTOCONF:T}"|g ; \
+		 s|="autoheader"|="${AUTOHEADER:T}"|g ; \
+		 s|="autom4te"|="${AUTOM4TE:T}"|g ; \
+		 s|="automake"|="${AUTOMAKE:T}"|g ; \
+		 s|="aclocal"|="${ACLOCAL:T}"|g' detect-autoconf.sh
+	@${REINPLACE_CMD} -e 's| /bin/bash| ${LOCALBASE}/bin/bash|g ; \
+		 s|^exit $$errors|exit 0|g' ${WRKSRC}/TestSuite/runtests
+	@${REINPLACE_CMD} -e 's|exit 1|${ECHO_CMD} "*** Error detected - continue anyway ***"|' \
+		${WRKSRC}/TestSuite/Misc/export/runtest
+	@${FIND} ${WRKSRC}/TestSuite -name testdir | ${XARGS} \
+			${REINPLACE_CMD} -e 's|exit $$errors|exit 0|'
+
+pre-configure:
+	@cd ${WRKSRC}/admin && ${RM} -f ltmain.sh && ${CP} -f ${LTMAIN} .
+	@cd ${WRKSRC}/admin && ${RM} -f libtool.m4.in && ${CP} -f ${LIBTOOL_M4}  libtool.m4.in
+	@cd ${WRKSRC} && ${GMAKE} -f admin/Makefile.common
+
+post-build:
+	@${RMDIR} -p ~/.kde/share/config ~/.qt 2>/dev/null || ${TRUE}
+
+post-install:
+	@${RMDIR} -p ${EXAMPLESDIR} 2>/dev/null || ${TRUE}
+
+regression-test:
+	@(cd ${BUILD_WRKSRC}/TestSuite;	\
+	${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET})
+
+.include <bsd.port.mk>
