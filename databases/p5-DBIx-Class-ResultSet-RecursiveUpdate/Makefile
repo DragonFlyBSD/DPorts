@@ -2,7 +2,7 @@
 # Date created:		25 Mar 2009
 # Whom:			Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-DBIx-Class-ResultSet-RecursiveUpdate/Makefile,v 1.14 2012/11/17 05:55:15 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBIx-Class-ResultSet-RecursiveUpdate/Makefile,v 1.15 2012/12/17 09:41:16 svnexp Exp $
 #
 
 PORTNAME=	DBIx-Class-ResultSet-RecursiveUpdate
@@ -37,10 +37,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		DBIx::Class::ResultSet::RecursiveUpdate.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
