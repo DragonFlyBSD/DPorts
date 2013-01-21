@@ -2,7 +2,7 @@
 # Date created: 22 December 2009
 # Whom: andrey@kostenko.name
 #
-# $FreeBSD: ports/www/p5-Catalyst-Authentication-Credential-OpenID/Makefile,v 1.7 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: ports/www/p5-Catalyst-Authentication-Credential-OpenID/Makefile,v 1.8 2012/12/17 10:27:26 svnexp Exp $
 #
 
 PORTNAME=	Catalyst-Authentication-Credential-OpenID
@@ -33,14 +33,7 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Catalyst::Authentication::Credential::OpenID.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e '/Module::Install::AuthorTests/d' ${WRKSRC}/Makefile.PL
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
