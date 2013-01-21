@@ -1,9 +1,9 @@
 # Created by: Yeti <yeti@gwyddion.net>
-# $FreeBSD: ports/science/gwyddion/Makefile,v 1.29 2012/12/10 19:24:04 svnexp Exp $
+# $FreeBSD: ports/science/gwyddion/Makefile,v 1.30 2013/01/17 16:48:41 svnexp Exp $
 
 PORTNAME=	gwyddion
 PORTVERSION=	2.30
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science graphics
 MASTER_SITES=	SF
 
