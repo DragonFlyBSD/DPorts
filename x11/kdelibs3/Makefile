@@ -3,12 +3,12 @@
 # Date created:				2 November 2001
 # Whom:					will@cvs.kde.org
 #
-# $FreeBSD: ports/x11/kdelibs3/Makefile,v 1.255 2012/12/10 19:24:06 svnexp Exp $
+# $FreeBSD: ports/x11/kdelibs3/Makefile,v 1.257 2013/01/17 16:48:43 svnexp Exp $
 #
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE_VERSION}
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	x11 kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTVERSION:S/.0//}/src
@@ -47,6 +47,9 @@ PLIST=		${.CURDIR}/../kdelibs3-nocups/pkg-plist
 CONFLICTS+=	kdelibs-nocups-[0-9]*
 LIB_DEPENDS+=	cups:${PORTSDIR}/print/cups-client
 .endif
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_BZIP2=	yes
 USE_FAM=	yes
