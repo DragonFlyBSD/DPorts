@@ -2,11 +2,12 @@
 # Date created:				10 October 2010
 # Whom:					James Bowman <jamesb-bsd@excamera.com>
 #
-# $FreeBSD: ports/graphics/py-openexr/Makefile,v 1.2 2012/11/17 05:58:20 svnexp Exp $
+# $FreeBSD: ports/graphics/py-openexr/Makefile,v 1.3 2013/01/17 04:09:20 svnexp Exp $
 #
 
 PORTNAME=	openexr
 PORTVERSION=	1.2.0
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	http://excamera.com/files/ \
 		CHEESESHOP
@@ -16,7 +17,7 @@ DISTNAME=	OpenEXR-${PORTVERSION}
 MAINTAINER=	jamesb-bsd@excamera.com
 COMMENT=	Python module for ILM's OpenEXR image format and library
 
-LIB_DEPENDS=	IlmImf.6:${PORTSDIR}/graphics/OpenEXR
+LIB_DEPENDS=	IlmImf:${PORTSDIR}/graphics/OpenEXR
 
 post-extract:
 	${REINPLACE_CMD} -e 's#/usr/local#${LOCALBASE}#g' ${WRKSRC}/setup.py
