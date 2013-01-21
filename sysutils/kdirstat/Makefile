@@ -1,0 +1,30 @@
+# New ports collection makefile for:	kdirstat
+# Date created:		25 Jun 2002
+# Whom:			Stefan Jahn <stefan.jahn@nemesis-sektor.de>
+#
+# $FreeBSD: ports/sysutils/kdirstat/Makefile,v 1.25 2012/12/30 18:56:25 svnexp Exp $
+#
+
+PORTNAME=	kdirstat
+PORTVERSION=	2.4.4
+PORTREVISION=	7
+CATEGORIES=	sysutils kde
+MASTER_SITES=	http://kdirstat.sourceforge.net/download/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A small KDE utility that sums up disk usage for directory trees
+
+EXTRA_PATCHES=	${.CURDIR}/../../x11/kde3/files/extrapatch-configure
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
+
+USE_BZIP2=	yes
+USE_KDELIBS_VER=3
+USE_AUTOTOOLS=	libtool
+USE_GMAKE=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-O2||g' ${WRKSRC}/${CONFIGURE_SCRIPT}
+
+.include <bsd.port.mk>
