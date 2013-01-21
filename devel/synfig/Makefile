@@ -1,9 +1,9 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/devel/synfig/Makefile,v 1.34 2012/12/13 18:44:01 svnexp Exp $
+# $FreeBSD: ports/devel/synfig/Makefile,v 1.35 2013/01/17 16:48:38 svnexp Exp $
 
 PORTNAME=	synfig
 DISTVERSION=	0.63.05
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel graphics multimedia
 MASTER_SITES=	SF
 
