@@ -2,12 +2,12 @@
 # Date created:			19 september 2004
 # Whom:				cartola@openit.com.br
 #
-# $FreeBSD: ports/graphics/enblend/Makefile,v 1.29 2012/11/17 05:58:04 svnexp Exp $
+# $FreeBSD: ports/graphics/enblend/Makefile,v 1.30 2013/01/17 16:48:39 svnexp Exp $
 #
 
 PORTNAME=	enblend
 PORTVERSION=	4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	enblend/enblend-enfuse/enblend-enfuse-${PORTVERSION}
