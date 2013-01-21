@@ -2,7 +2,7 @@
 # Date created:	   13 May 2009
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-MooseX-Method-Signatures/Makefile,v 1.13 2012/11/26 12:33:25 svnexp Exp $
+# $FreeBSD: ports/devel/p5-MooseX-Method-Signatures/Makefile,v 1.14 2012/12/17 15:43:18 svnexp Exp $
 #
 
 PORTNAME=	MooseX-Method-Signatures
@@ -46,10 +46,4 @@ MAN3=		MooseX::Method::Signatures.3 \
 		MooseX::Method::Signatures::Types.3 \
 		MooseX::Method::Signatures::Meta::Method.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.89:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
