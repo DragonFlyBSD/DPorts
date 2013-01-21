@@ -1,0 +1,30 @@
+# New ports collection makefile for:	libkexif
+# Date created:				Mon Oct 18 19:41:36 CEST 2004
+# Whom:					Markus Brueffer <markus@FreeBSD.org>
+#
+# $FreeBSD: ports/graphics/libkexif/Makefile,v 1.24 2012/11/17 05:58:13 svnexp Exp $
+
+PORTNAME=	libkexif
+PORTVERSION=	0.2.5
+PORTREVISION=	10
+CATEGORIES=	graphics devel
+MASTER_SITES=	SF/kipi/OldFiles
+
+MAINTAINER=	ale@FreeBSD.org
+COMMENT=	Library for manipulating EXIF information embedded in images
+
+LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif
+
+USE_BZIP2=	yes
+USE_KDELIBS_VER=3
+USE_GNOME=	gnomehack pkgconfig
+USE_GMAKE=	yes
+USE_AUTOTOOLS=	libtool
+USE_LDCONFIG=	yes
+USE_GETTEXT=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-O2||g;s|-fno-schedule-insns -fno-inline||g' \
+		${WRKSRC}/${CONFIGURE_SCRIPT}
+
+.include <bsd.port.mk>
