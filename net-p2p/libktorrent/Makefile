@@ -1,7 +1,8 @@
-# $FreeBSD: ports/net-p2p/libktorrent/Makefile,v 1.16 2012/11/17 06:00:40 svnexp Exp $
+# $FreeBSD: ports/net-p2p/libktorrent/Makefile,v 1.17 2013/01/08 17:18:48 svnexp Exp $
 
 PORTNAME=	libktorrent
 DISTVERSION=	1.3.0
+PORTREVISION=	1
 CATEGORIES=	net-p2p kde
 MASTER_SITES=	http://ktorrent.org/downloads/${DISTVERSION:C,^1,4,:C,-.*,,}/
 
