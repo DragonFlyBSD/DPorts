@@ -3,12 +3,12 @@
 # Date created:				22 Januar 2008
 # Whom:					kde@FreeBSD.org
 #
-# $FreeBSD: ports/x11/kde4-runtime/Makefile,v 1.258 2012/11/17 06:03:16 svnexp Exp $
+# $FreeBSD: ports/x11/kde4-runtime/Makefile,v 1.259 2013/01/17 04:09:24 svnexp Exp $
 #
 
 PORTNAME=	kde-runtime
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
@@ -17,7 +17,7 @@ DIST_SUBDIR=	KDE
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Basic applications for the KDE system
 
-LIB_DEPENDS=	IlmImf.6:${PORTSDIR}/graphics/OpenEXR \
+LIB_DEPENDS=	IlmImf:${PORTSDIR}/graphics/OpenEXR \
 		jpeg.11:${PORTSDIR}/graphics/jpeg \
 		exiv2.12:${PORTSDIR}/graphics/exiv2 \
 		xine.2:${PORTSDIR}/multimedia/libxine \
