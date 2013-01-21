@@ -2,12 +2,12 @@
 # Date created:		19 December 2003
 # Whom:			Lev Serebryakov <lev@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/vips/Makefile,v 1.42 2012/11/17 05:58:24 svnexp Exp $
+# $FreeBSD: ports/graphics/vips/Makefile,v 1.43 2013/01/17 16:48:39 svnexp Exp $
 #
 
 PORTNAME=	vips
 PORTVERSION=	7.26.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.vips.ecs.soton.ac.uk/supported/${PORTVERSION:R}/
 
