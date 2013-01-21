@@ -2,12 +2,12 @@
 # Date created:				15 Aug 2005
 # Whom:					Emanuel Haupt <ehaupt@critical.ch>
 #
-# $FreeBSD: ports/graphics/exrtools/Makefile,v 1.22 2012/11/17 05:58:05 svnexp Exp $
+# $FreeBSD: ports/graphics/exrtools/Makefile,v 1.23 2013/01/17 04:15:05 svnexp Exp $
 #
 
 PORTNAME=	exrtools
 PORTVERSION=	0.4
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	http://scanline.ca/exrtools/ \
 		CRITICAL
@@ -24,6 +24,8 @@ LIB_DEPENDS=	IlmImf:${PORTSDIR}/graphics/OpenEXR \
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
+
+USE_PKGCONFIG=	build
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
