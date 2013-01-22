@@ -1,0 +1,3 @@
+post-extract:
+	${CP} ${WRKSRC}/build/platform-freebsd.mk \
+	      ${WRKSRC}/build/platform-dragonfly.mk
