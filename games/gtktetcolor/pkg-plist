@@ -1,0 +1,13 @@
+bin/gtktetcolor
+etc/sound/events/gtktetcolor.soundlist
+share/applications/gtktetcolor.desktop
+share/games/gtktetcolor.scores
+share/pixmaps/gtktetcolor.xpm
+share/sounds/gtktetcolor/bonus.wav
+share/sounds/gtktetcolor/gameover.wav
+share/sounds/gtktetcolor/linerem.wav
+share/locale/de/LC_MESSAGES/gtktetcolor.mo
+share/locale/fr/LC_MESSAGES/gtktetcolor.mo
+share/locale/ru/LC_MESSAGES/gtktetcolor.mo
+@dirrm share/sounds/gtktetcolor
+@dirrmtry share/applications
