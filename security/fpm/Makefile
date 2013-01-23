@@ -1,0 +1,43 @@
+# New ports collection makefile for:	fpm
+# Date created:				10 June 2001
+# Whom:					Anders Nordby <anders@fix.no>
+#
+# $FreeBSD: ports/security/fpm/Makefile,v 1.26 2012/11/17 06:01:03 svnexp Exp $
+#
+
+PORTNAME=	fpm
+PORTVERSION=	0.60
+PORTREVISION=	8
+CATEGORIES=	security
+MASTER_SITES=	SF
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Figaro's Password Manager, an app to securely store your passwords
+
+USE_GNOME=	gnomeprefix gnomehack gnomelibs
+GNU_CONFIGURE=	yes
+#CONFIGURE_ARGS+=	--without-included-gettext
+LDFLAGS+=	-L${LOCALBASE}/lib
+CFLAGS+=	-I${LOCALBASE}/include
+
+MAN1=		fpm.1
+PORTDOCS=	AUTHORS ChangeLog README TODO
+PLIST_FILES=	bin/fpm share/pixmaps/fpm/logo.xpm
+PLIST_DIRS=	share/pixmaps/fpm
+
+pre-build:
+	${REINPLACE_CMD} -E -e "s@encrypt\(@bfishencrypt\(@g" ${WRKSRC}/src/blowfish.c
+
+post-install:
+.if !defined(NOPORTDOCS)
+	${INSTALL} -d -o root -g wheel -m 0755 ${PREFIX}/share/doc/fpm
+.for f in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/fpm
+.endfor
+.endif
+	@${ECHO} "========================================================================="
+	@${ECHO} "Make sure you set up a few IRQ's for random generation with rndcontrol before"
+	@${ECHO} "expecting password generation to work well."
+	@${ECHO} "========================================================================="
+
+.include <bsd.port.mk>
