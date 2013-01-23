@@ -1,0 +1,26 @@
+# New ports collection makefile for:	gnmm
+# Date created:				19 January 2003
+# Whom:					Simon Barner <barner@gmx.de>
+#
+# $FreeBSD: ports/games/gnmm/Makefile,v 1.20 2012/11/17 05:57:40 svnexp Exp $
+#
+
+PORTNAME=	gnmm
+PORTVERSION=	0.1.2
+PORTREVISION=	12
+CATEGORIES=	games gnome
+MASTER_SITES=	SF
+DIST_SUBDIR=	gnome
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A "nine mens' morris" implementation for the GNOME Desktop Environment
+
+USE_GETTEXT=	yes
+USE_ICONV=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gnomeprefix gnomehack gnomelibs gdkpixbuf
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	"--with-libiconv-prefix=${LOCALBASE}"
+
+.include <bsd.port.mk>
