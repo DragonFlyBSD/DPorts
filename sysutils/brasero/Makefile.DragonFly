@@ -1,0 +1,1 @@
+LIB_DEPENDS+=	ltdl:${PORTSDIR}/devel/libltdl
