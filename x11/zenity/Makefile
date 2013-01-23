@@ -2,7 +2,7 @@
 # Date created:				01 Mar 2003
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
-# $FreeBSD: ports/x11/zenity/Makefile,v 1.53 2012/11/17 06:03:23 svnexp Exp $
+# $FreeBSD: ports/x11/zenity/Makefile,v 1.54 2012/12/29 07:04:32 svnexp Exp $
 #   $MCom: ports/x11/zenity/Makefile,v 1.111 2010/11/16 10:25:21 kwm Exp $
 #
 
@@ -27,6 +27,7 @@ GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
 MAN1=		zenity.1
 
