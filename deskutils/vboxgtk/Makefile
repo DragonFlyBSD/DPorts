@@ -1,0 +1,39 @@
+# New ports collection makefile for:	vboxgtk
+# Date created:				13 June 2009
+# Whom:					Alexander Logvinov <avl@FreeBSD.org>
+#
+# $FreeBSD: ports/deskutils/vboxgtk/Makefile,v 1.15 2012/11/17 05:55:31 svnexp Exp $
+#
+
+PORTNAME=	vboxgtk
+PORTVERSION=	0.7.0
+PORTREVISION=	2
+CATEGORIES=	deskutils emulators gnome
+MASTER_SITES=	SF
+
+MAINTAINER=	avl@FreeBSD.org
+COMMENT=	GTK frontend for VirtualBox
+
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/xpcom/vboxxpcom.py:${PORTSDIR}/emulators/virtualbox-ose-legacy
+
+USE_PYTHON=	yes
+USE_GNOME=	pygtk2
+USE_PYDISTUTILS=	yes
+INSTALLS_ICONS=	yes
+
+.if !defined(WITHOUT_NLS)
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.else
+PLIST_SUB+=	NLS="@comment "
+.endif
+
+post-patch:
+.if defined(WITHOUT_NLS)
+	@${REINPLACE_CMD} -e '/self.add_mo_files/d' \
+		-e '/os.system("intltool/d' ${WRKSRC}/setup.py
+.endif
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g ; \
+		s|%%PYTHON_SITELIBDIR%%|${PYTHON_SITELIBDIR}|g' ${WRKSRC}/bin/${PORTNAME}
+
+.include <bsd.port.mk>
