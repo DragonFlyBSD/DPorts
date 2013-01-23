@@ -1,0 +1,31 @@
+# New ports collection makefile for:	yamt
+# Date created:			9 January 2000
+# Whom:				Dmitry Sivachenko <dima@Chg.RU>
+#
+# $FreeBSD: ports/audio/yamt/Makefile,v 1.28 2012/11/17 05:54:49 svnexp Exp $
+#
+
+PORTNAME=	yamt
+PORTVERSION=	0.5
+PORTREVISION=	11
+CATEGORIES=	audio gnome
+MASTER_SITES=	SF \
+		ftp://ftp.gpad.ac.ru/pub/FreeBSD/distfiles/
+
+
+MAINTAINER=	demon@FreeBSD.org
+COMMENT=	Yet Another Mp3 Tool which helps you to organize your mp3s
+
+USE_GMAKE=	yes
+USE_GNOME=	gnomelibs gnomehack gnomeprefix
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		 s|DATADIRNAME=lib|DATADIRNAME=share|g ; \
+		 s|USE_INCLUDED_LIBINTL=yes|#USE_INCLUDED_LIBINTL=yes|g ; \
+		 s|\$$\(top_builddir\)/intl/libintl.a|-lintl|g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>
