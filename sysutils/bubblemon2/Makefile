@@ -1,0 +1,37 @@
+# New ports collection makefile for:	sysutils/bubblemon2
+# Date created:				08 Jul 2002
+# Whom:					Juan Salaverria <rael@vectorstar.net>
+#
+# $FreeBSD: ports/sysutils/bubblemon2/Makefile,v 1.28 2012/11/17 06:01:26 svnexp Exp $
+#
+
+PORTNAME=	bubblemon2
+PORTVERSION=	2.0.17
+PORTREVISION=	7
+CATEGORIES=	sysutils gnome
+MASTER_SITES=	SAVANNAH/bubblemon
+DISTNAME=	bubblemon-${PORTVERSION}
+
+MAINTAINER=	5u623l20@gmail.com
+COMMENT=	A system CPU and memory load monitor for GNOME2
+
+LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop
+
+USE_GNOME=	gnomehack gnomepanel gnomeprefix intlhack libgnomeui
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags libgnomeui-2.0`
+LDFLAGS+=	-L${LOCALBASE}/lib `pkg-config --libs libgnomeui-2.0`
+
+MAN1=		bubblemon-gnome2.1
+MANLANG=	"" hu sv
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for file in AUTHORS ChangeLog FAQ PROFILING TRANSLATIONS NEWS README TODO
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>
