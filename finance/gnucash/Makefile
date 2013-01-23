@@ -1,9 +1,9 @@
-# $FreeBSD: ports/finance/gnucash/Makefile,v 1.171 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: ports/finance/gnucash/Makefile,v 1.172 2012/12/30 06:14:27 svnexp Exp $
 #   $MCom: ports/finance/gnucash/Makefile,v 1.26 2008/12/31 03:25:18 mezz Exp $
 
 PORTNAME=	gnucash
 PORTVERSION=	2.4.11
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	finance gnome
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTVERSION}
 
@@ -106,7 +106,7 @@ LIB_DEPENDS+=	webkitgtk-1.0:${PORTSDIR}/www/webkit-gtk2
 USE_GNOME+=	gtkhtml3
 .endif
 
-.if${PORT_OPTIONS:MPYTHON}
+.if ${PORT_OPTIONS:MPYTHON}
 CONFIGURE_ARGS+=--enable-python-bindings
 USE_PYTHON=	yes
 PLIST_SUB+=	PYTHON=""
@@ -115,6 +115,12 @@ PLIST_SUB+=	PYTHON="@comment "
 .endif
 
 post-install:
+.if ${PORT_OPTIONS:MPYTHON}
+	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
+		${PYTHON_SITELIBDIR:S|${LOCALBASE}|${PREFIX}|}/${PORTNAME}
+	@${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
+		${PYTHON_SITELIBDIR:S|${LOCALBASE}|${PREFIX}|}/${PORTNAME}
+.endif
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
