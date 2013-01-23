@@ -1,0 +1,1 @@
+LIB_DEPENDS+= gnome-keyring:${PORTSDIR}/security/libgnome-keyring
