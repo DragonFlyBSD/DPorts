@@ -1,0 +1,10 @@
+--- builds/posix/prefix.freebsd_amd64.orig	2013-01-23 18:01:09.255532000 +0100
++++ builds/posix/prefix.freebsd_amd64	2013-01-23 20:01:01.625578000 +0100
+@@ -28,5 +28,5 @@
+ CLIENT_UTIL_TARGETS=gstat gsec fbguard nbackup fb_lock_print fbsvcmgr fbtracemgr
+ 
+ Physical_IO_Module=os/posix/unix.cpp
+-# This is needed due to broken port of gcc
+-STATIC_CXXSUPPORT_LIB = -lstdc++ -lgcc_s
++# This is needed because libsupc++.a is not compiled with -fPIC
++STATIC_CXXSUPPORT_LIB = -lstdc++ -lgcc_pic

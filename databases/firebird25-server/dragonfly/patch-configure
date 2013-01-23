@@ -1,0 +1,65 @@
+--- configure.orig	2011-10-01 09:09:42.000000000 +0200
++++ configure	2013-01-23 17:43:47.194076000 +0100
+@@ -2411,7 +2411,7 @@
+     SHRLIB_EXT=so
+     ;;
+ 
+-  amd64-*-freebsd* | x86_64*-*-freebsd* | x86_64*-*-k*bsd*-gnu)
++  amd64-*-freebsd* | x86_64*-*-freebsd* | x86_64-*-dragonfly* | x86_64*-*-k*bsd*-gnu)
+     MAKEFILE_PREFIX=freebsd_amd64
+     case "$target" in
+         x86_64*-*-k*bsd-gnu)      # Debian/kFreeBSD
+@@ -2449,7 +2449,7 @@
+     SHRLIB_EXT=so
+     ;;
+ 
+-  *-*-freebsd* | *-*-k*bsd*-gnu)
++  *-*-freebsd* | *-*-dragonfly* | *-*-k*bsd*-gnu)
+     MAKEFILE_PREFIX=freebsd
+     case "$target" in
+         *-*-k*bsd-gnu)      # Debian/kFreeBSD
+@@ -4419,7 +4419,7 @@
+ $as_echo_n "checking if more special flags are required for pthreads... " >&6; }
+         flag=no
+         case "${host_cpu}-${host_os}" in
+-                *-aix* | *-freebsd* | *-darwin*) flag="-D_THREAD_SAFE";;
++                *-aix* | *-freebsd* | *-dragonfly* | *-darwin*) flag="-D_THREAD_SAFE";;
+                 *solaris* | *-osf* | *-hpux*) flag="-D_REENTRANT";;
+         esac
+         { $as_echo "$as_me:$LINENO: result: ${flag}" >&5
+@@ -11499,7 +11499,7 @@
+     shlibpath_overrides_runpath=no
+     hardcode_into_libs=yes
+     ;;
+-  freebsd*) # from 4.6 on
++  freebsd*|dragonfly*) # from 4.6 on
+     shlibpath_overrides_runpath=yes
+     hardcode_into_libs=yes
+     ;;
+@@ -15491,7 +15491,7 @@
+     shlibpath_overrides_runpath=no
+     hardcode_into_libs=yes
+     ;;
+-  freebsd*) # from 4.6 on
++  freebsd*|dragonfly*) # from 4.6 on
+     shlibpath_overrides_runpath=yes
+     hardcode_into_libs=yes
+     ;;
+@@ -18119,7 +18119,7 @@
+     shlibpath_overrides_runpath=no
+     hardcode_into_libs=yes
+     ;;
+-  freebsd*) # from 4.6 on
++  freebsd*|dragonfly*) # from 4.6 on
+     shlibpath_overrides_runpath=yes
+     hardcode_into_libs=yes
+     ;;
+@@ -20754,7 +20754,7 @@
+     shlibpath_overrides_runpath=no
+     hardcode_into_libs=yes
+     ;;
+-  freebsd*) # from 4.6 on
++  freebsd*|dragonfly*) # from 4.6 on
+     shlibpath_overrides_runpath=yes
+     hardcode_into_libs=yes
+     ;;
