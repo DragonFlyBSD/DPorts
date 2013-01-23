@@ -1,0 +1,14 @@
+@comment $FreeBSD: ports/audio/sox/pkg-plist,v 1.14 2012/11/17 05:54:44 svnexp Exp $
+bin/play
+bin/rec
+bin/sox
+bin/soxi
+include/sox.h
+include/soxstdint.h
+lib/libsox.a
+lib/libsox.la
+lib/libsox.so
+lib/libsox.so.1
+@exec mkdir -p %D/lib/sox
+@dirrm lib/sox
+libdata/pkgconfig/sox.pc
