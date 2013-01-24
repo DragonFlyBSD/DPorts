@@ -1,0 +1,5 @@
+PKGNAMEPREFIX= ja-
+
+USE_PKGCONFIG= yes
+
+BUILD_DEPENDS+= scim:${PORTSDIR}/textproc/scim
