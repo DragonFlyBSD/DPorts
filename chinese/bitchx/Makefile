@@ -8,6 +8,7 @@
 PORTNAME=	BitchX
 PORTREVISION=	5
 CATEGORIES=	chinese
+PKGNAMEPREFIX=	zh-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A zh-tw cursor movement friendly, wrapping clean BitchX
