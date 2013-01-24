@@ -1,0 +1,19 @@
+bin/joe
+bin/jmacs
+bin/jstar
+bin/rjoe
+bin/jpico
+bin/termidx
+etc/joe/joerc
+etc/joe/jmacsrc
+etc/joe/jstarrc
+etc/joe/rjoerc
+etc/joe/jpicorc
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/CommandList
+%%PORTDOCS%%%%DOCSDIR%%/INFO
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/README.cvs
+%%PORTDOCS%%@dirrmtry %%DOCSDIR%%
+@dirrmtry etc/joe
