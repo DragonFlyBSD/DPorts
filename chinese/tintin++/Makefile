@@ -2,6 +2,7 @@
 # $FreeBSD: ports/chinese/tintin++/Makefile,v 1.15 2012/11/17 05:54:58 svnexp Exp $
 
 CATEGORIES=	chinese
+PKGNAMEPREFIX=	zh-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 
