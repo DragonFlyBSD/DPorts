@@ -1,0 +1,11 @@
+--- configure.orig	2013-01-24 01:25:54.472806000 +0100
++++ configure	2013-01-24 01:34:02.413488000 +0100
+@@ -3281,7 +3281,7 @@
+ fi
+ 
+     case "$host" in
+-      *-linux*|*-gnu*|*-freebsd*)
++      *-linux*|*-gnu*|*-dragonfly*|*-freebsd*)
+ 	if test "$GCC" = yes; then
+ 	  
+   
