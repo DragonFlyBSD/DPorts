@@ -1,0 +1,5 @@
+CONFIGURE_TARGET=	${MACHINE_ARCH}-dports-dragonfly
+LDFLAGS+=		-z,nocombreloc
+
+post-extract:
+	${CP} ${DFLY_FILESDIR}/dragonfly.h ${WRKSRC}/src/s/
