@@ -1,0 +1,29 @@
+bin/jpilot
+bin/jpilot-dump
+bin/jpilot-merge
+bin/jpilot-sync
+share/applications/jpilot.desktop
+%%NLS%%share/locale/ca/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/cs/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/da/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/de/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/es/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/fr/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/it/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/ja/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/ko/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/nl/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/ru/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/rw/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/sv/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/tr/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/uk/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/vi/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/zh_CN/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/zh_TW/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/nb/LC_MESSAGES/jpilot.mo
+%%NLS%%share/locale/pt_BR/LC_MESSAGES/jpilot.mo
+
+@dirrmtry share/applications
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
