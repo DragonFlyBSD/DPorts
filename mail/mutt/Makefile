@@ -1,9 +1,6 @@
-# ex:ts=8
-# Ports collection makefile for:  mutt development
-# Date created:			  6 Jun 2001
-# Whom:				  Udo Schweigert
+# Created by: Udo Schweigert
 #
-# $FreeBSD: ports/mail/mutt/Makefile,v 1.198 2012/11/17 05:59:06 svnexp Exp $
+# $FreeBSD: ports/mail/mutt/Makefile,v 1.200 2013/01/08 05:46:31 svnexp Exp $
 #
 # There are several knobs which are used to define additions to the core
 # mutt functionality.
@@ -124,6 +121,7 @@
 
 PORTNAME=	mutt
 PORTVERSION=	1.5.21
+PORTREVISION=	1
 CATEGORIES+=	mail ipv6
 .if defined(WITH_MUTT_NNTP)
 CATEGORIES+=	news
@@ -321,7 +319,7 @@ CFLAGS+=	-I${NCURSESINC}
 LIB_DEPENDS+=	slang.2:${PORTSDIR}/devel/libslang2
 .endif
 .if defined(WITH_MUTT_CYRUS_SASL2)
-LIB_DEPENDS+=	sasl2.2:${PORTSDIR}/security/cyrus-sasl2
+LIB_DEPENDS+=	sasl2:${PORTSDIR}/security/cyrus-sasl2
 .endif
 .if exists(${LOCALBASE}/lib/libidn.so) && !defined(WITHOUT_MUTT_IDN)
 WITH_MUTT_IDN=	yes
@@ -592,7 +590,6 @@ pre-install:
 	@${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/generate-plist > ${PLIST}
 
 post-install:
-	@${ECHO} > ${PKGMESSAGE}
 	${INSTALL_DATA} ${WRKSRC}/doc/Muttrc ${PREFIX}/etc/Muttrc.dist
 .if !defined(NOPORTDOCS)
 	@${ECHO} "===>   Installing Mutt documentation"
@@ -615,7 +612,7 @@ post-install:
 	@${ECHO} "environment." >> ${PKGMESSAGE}
 	@${ECHO} "=====================================================" >> ${PKGMESSAGE}
 .endif
-.if !defined(BATCH)
+.if !defined(BATCH) && defined(MUTT_USES_SLANG)
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO}
 .endif
