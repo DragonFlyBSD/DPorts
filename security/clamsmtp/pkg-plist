@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/security/clamsmtp/pkg-plist,v 1.5 2012/11/17 06:01:02 svnexp Exp $
+@unexec [ ! -f %%CLAMAV_PID_DIR%%/clamsmtpd.pid ] || %%PREFIX%%/etc/rc.d/clamsmtpd.sh stop || true
+sbin/clamsmtpd
+etc/clamsmtpd.conf-sample
+%%EXAMPLESDIR%%/virus_action.sh
+@dirrm %%EXAMPLESDIR%%
