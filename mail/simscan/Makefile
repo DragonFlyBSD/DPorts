@@ -1,0 +1,163 @@
+# New ports collection makefile for:	simscan
+# Date created:        1 Apr 2005
+# Whom:                Anton Karpov <toxa@toxahost.ru>
+#
+# $FreeBSD: ports/mail/simscan/Makefile,v 1.21 2012/11/17 05:59:14 svnexp Exp $
+#
+
+PORTNAME=	simscan
+PORTVERSION=	1.4.0
+PORTREVISION=	6
+CATEGORIES=	mail security
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
+DISTNAME=	${PORTNAME}-${PORTVERSION:S/.r/rc/}
+
+MAINTAINER=	lippe@FreeBSD.org
+COMMENT=	Fast Content/Anti-virus Scanner for qmail Written in C
+
+USE_QMAIL_BUILD=	yes
+
+GNU_CONFIGURE=	yes
+
+USERS=		${PORTNAME}
+GROUPS=		${USERS}
+
+WORKDIR?=	${QMAIL_PREFIX}/${PORTNAME}
+QMAIL_QUEUE=	${QMAIL_PREFIX}/bin/qmail-queue
+
+SUB_FILES=	pkg-message \
+		pkg-install
+SUB_LIST=	QMAIL_PREFIX=${QMAIL_PREFIX} \
+		SIMSCAN_DIR=${PORTNAME}
+PLIST_SUB=	QMAIL_PREFIX=${QMAIL_PREFIX} \
+		SIMSCAN_DIR=${PORTNAME}
+
+OPTIONS=	CLAMAV "Support for ClamAV Virus Scanning" on \
+		RIPMIME "Ripmime Processing (if Clamav ScanMail disabled)" on \
+		SPAMD "Support for SpamAssassin Spam Filtering" off \
+		USER "Turn On Per User SpamAssassin (required SPAMD)" off \
+		DOMAIN "Turn On Per Domain Based Checking" off \
+		ATTACH "Turn On Attachment Scanning (required CLAMAV)" off \
+		DROPMSG "Drop Message in Case of Virus Found" off \
+		PASSTHRU "Pass Spam Thru, Do Not Reject (required SPAMD)" off \
+		HEADERS "Add a Received Line With Versions of Scanners" off \
+		DSPAM "Turn on DSPAM scanning" off
+
+.include <bsd.port.pre.mk>
+
+CONFIGURE_ARGS=--enable-clamavdb-path=/var/db/clamav \
+		--enable-qmaildir=${QMAIL_PREFIX} \
+	  	--enable-spamc-user=n \
+		--enable-workdir=${WORKDIR} \
+		--enable-user=nobody
+
+.if defined(WITHOUT_CLAMAV)
+CONFIGURE_ARGS+=	--enable-clamav=n
+.else
+BUILD_DEPENDS+=	clamdscan:${PORTSDIR}/security/clamav
+.endif
+
+.if defined(WITHOUT_RIPMIME)
+CONFIGURE_ARGS+=--disable-ripmime
+.else
+BUILD_DEPENDS+=	ripmime:${PORTSDIR}/mail/ripmime
+.endif
+
+.if defined(WITH_SPAMD)
+BUILD_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
+CONFIGURE_ARGS+=--enable-spam=y
+CONFIGURE_ARGS+=--enable-spamassassin-path=${LOCALBASE}/bin/spamassassin
+.endif
+
+.if defined(WITH_USER)
+CONFIGURE_ARGS+=--enable-spamc-user=y
+.endif
+
+.if defined(WITH_DOMAIN)
+CONFIGURE_ARGS+=--enable-per-domain=y
+.endif
+
+.if defined(WITH_ATTACH)
+CONFIGURE_ARGS+=--enable-attach=y
+.endif
+
+.if defined(WITH_DROPMSG)
+CONFIGURE_ARGS+=--enable-dropmsg=y
+.endif
+
+.if defined(WITH_PASSTHRU)
+CONFIGURE_ARGS+=--enable-spam-passthru=y
+.endif
+
+.if defined(WITH_HEADERS)
+CONFIGURE_ARGS+=--enable-received=y
+CONFIGURE_ARGS+=--enable-sigtool-path=${LOCALBASE}/bin/sigtool
+.endif
+
+.if defined(WITH_DSPAM)
+CONFIGURE_ARGS+=--enable-dspam=y
+BUILD_DEPENDS+=	dspam:${PORTSDIR}/mail/dspam
+.endif
+
+.if defined(SPAM_HITS)
+CONFIGURE_ARGS+=--enable-spam-hits=${SPAM_HITS}
+.endif
+
+.if defined(QUARANTINE_DIR)
+CONFIGURE_ARGS+=--enable-quarantinedir=${QUARANTINE_DIR}
+.endif
+
+.if defined(SPAMC_ARGS)
+CONFIGURE_ARGS+=--enable-spamc-args=${SPAMC_ARGS}
+.endif
+
+.if defined(QMAIL_QUEUE)
+CONFIGURE_ARGS+=--enable-qmail-queue=${QMAIL_QUEUE}
+.endif
+
+PORTDOCS=	AUTHORS ChangeLog README TODO
+
+if ! ${TEST} -f ${QMAIL_QUEUE}; then \
+	${ECHO_MSG} "Unable to found qmail-queue binary trying '${QMAIL_QUEUE}'.";  \
+	${ECHO_MSG} "Please set QMAIL_PREFIX to your qmail installation directory !"; \
+	exit 1; \
+fi
+
+post-patch:
+	@${REINPLACE_CMD} -E 's,($f/daily.cvd"),\1 || test -d "$$f/daily.inc",' \
+		${WRKSRC}/configure
+
+pre-configure:
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~="
+	@${ECHO_MSG} "You may also use the following build options:"
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "QMAIL_PREFIX	Base qmail directory. Default is ${QMAIL_PREFIX}"
+	@${ECHO_MSG} "WORKDIR		Directory to unpack emails. Default is ${QMAIL_PREFIX}/${PORTNAME}"
+	@${ECHO_MSG} "QMAIL_QUEUE	Define full path and name of the qmail-queue program"
+	@${ECHO_MSG} "		Incoming mail is passed to this program after being"
+	@${ECHO_MSG} "		scanned by SimScan. Default is ${QMAIL_PREFIX}/bin/qmail-queue"
+	@${ECHO_MSG} "SPAMC_ARGS	Define the arguments to pass to spamc."
+	@${ECHO_MSG} "		Be sure to place quotes around the options you define"
+	@${ECHO_MSG} "SPAM_HITS	Reject spam only above this hit level"
+	@${ECHO_MSG} "		Default is 10.0. Useful without PASSTHRU option"
+	@${ECHO_MSG} "QUARANTINE_DIR	Directory to keep spam and/or infected emails"
+	@${ECHO_MSG} "		Default is disabled"
+	@${ECHO_MSG} "=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~="
+	@${ECHO_MSG} ""
+
+pre-install:
+	@${REINPLACE_CMD} -e 's|nobody|simscan|g' ${WRKSRC}/Makefile
+	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
+
+post-install:
+	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for i in ${PORTDOCS}
+	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+.endfor
+.endif
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.post.mk>

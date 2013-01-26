@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/mail/simscan/files/pkg-install.in,v 1.3 2012/11/17 05:59:14 svnexp Exp $
+
+USER=simscan
+GROUP=${USER}
+SIMDIR=%%QMAIL_PREFIX%%/%%SIMSCAN_DIR%%
+
+if [ "$2" = "POST-INSTALL" ]; then
+
+	if [ ! -d "$SIMDIR" ]; then
+		/bin/mkdir -p "$SIMDIR" || exit 1
+		/usr/sbin/chown "$USER:$GROUP" "$SIMDIR" || exit 1
+		/bin/chmod 0750 "$SIMDIR" || exit 1
+		/bin/chmod 04711 %%QMAIL_PREFIX%%/bin/simscan
+		/usr/sbin/chown $USER:$GROUP %%QMAIL_PREFIX%%/bin/simscan %%QMAIL_PREFIX%%/bin/simscanmk
+	fi
+fi
+
+exit 0
