@@ -6,6 +6,7 @@
 #
 
 CATEGORIES=	japanese www
+PKGNAMEPREFIX=	ja-
 
 MAINTAINER=	ports@FreeBSD.org
 
