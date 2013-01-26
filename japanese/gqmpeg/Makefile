@@ -7,6 +7,7 @@
 
 PORTREVISION=	2
 CATEGORIES=	japanese
+PKGNAMEPREFIX=	ja-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Another gtk-based MP3 frontend with Japanese support
