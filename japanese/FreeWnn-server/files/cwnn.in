@@ -1,0 +1,32 @@
+#!/bin/sh
+# $FreeBSD: ports/japanese/FreeWnn-server/files/cwnn.in,v 1.2 2012/11/17 05:58:31 svnexp Exp $
+#
+# PROVIDE: cwnn
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+
+. /etc/rc.subr
+
+name=cwnn
+rcvar=cwnn_enable
+command=%%PREFIX%%/bin/cWnn4/cserver
+procname=%%PREFIX%%/bin/cWnn4/cserver
+start_precmd=start_precmd
+stop_postcmd=stop_postcmd
+WTCMD=%%PREFIX%%/bin/cWnn4/cwnntouch
+
+start_precmd()
+{
+	rm -f /tmp/cd_sockV4
+	install -d -o wnn -m 755 %%PREFIX%%/lib/wnn/zh_CN/dic/usr
+	%%PREFIX%%/lib/wnn/zh_CN/dic/sys/*
+}
+
+stop_postcmd()
+{
+	rm -f /tmp/cd_sockV4
+}
+
+load_rc_config ${name}
+run_rc_command $1
