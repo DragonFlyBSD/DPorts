@@ -8,6 +8,7 @@
 MASTERDIR=	${.CURDIR}/../../palm/jpilot
 
 CATEGORIES=	japanese
+PKGNAMEPREFIX=	ja-
 
 MAINTAINER=	sumikawa@FreeBSD.org
 COMMENT=	Desktop Organizer Software for the Palm Pilot (Japanized)
