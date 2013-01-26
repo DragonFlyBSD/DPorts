@@ -1,0 +1,2 @@
+pre-configure:
+	mv ${WRKDIR}/amd64 ${WRKDIR}/x86_64
