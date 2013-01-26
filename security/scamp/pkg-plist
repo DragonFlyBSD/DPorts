@@ -1,0 +1,11 @@
+bin/scamp.sh
+%%PORTDOCS%%%%DOCSDIR%%/CHANGE.LOG
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/Release.html
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@unexec if cmp -s %D/%%ETCDIR%%/default.sample %D/%%ETCDIR%%/default; then rm -f %D/%%ETCDIR%%/default; fi
+%%ETCDIR%%/default.sample
+@exec if [ ! -f %D/%%ETCDIR%%/default ] ; then cp -p %D/%F %B/default; fi
+@exec mkdir -p %D/%%ETCDIR%%
+@dirrmtry %%ETCDIR%%
