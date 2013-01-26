@@ -7,6 +7,7 @@
 
 CATEGORIES=	chinese
 PKGNAMESUFFIX=	-server
+PKGNAMEPREFIX=	zh-
 
 COMMENT=	A Japanese/Chinese/Korean input method (Chinese server)
 
