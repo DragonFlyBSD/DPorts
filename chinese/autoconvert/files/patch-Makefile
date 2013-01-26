@@ -1,0 +1,33 @@
+--- Makefile.orig	2001-04-28 09:45:46.000000000 +0800
++++ Makefile	2010-06-30 10:13:29.000000000 +0800
+@@ -1,7 +1,6 @@
+ 
+-CC=gcc
+-CFLAG=-O2 -g -Wall -Iinclude
+-LIBS= -Llib -lhz
++CFLAG+=-Iinclude
++LIBS+=-Llib -lhz
+ 
+ .PHONY: all hzlib clean install-home install
+ 
+@@ -30,12 +29,11 @@ install-home:
+ 	ln -s $(HOME)/bin/autogb $(HOME)/bin/autob5
+ 	chmod 755 $(HOME)/bin/autogb 
+ install:
+-	install -m 755 autogb $(DESTDIR)/usr/bin
+-	install -m 755 lib/libhz.so.0.0 $(DESTDIR)/usr/lib
+-	cd $(DESTDIR)/usr/lib;ln -s  libhz.so.0.0 libhz.so.0
+-	cd $(DESTDIR)/usr/lib;ln -s  libhz.so.0 libhz.so
+-	install -m 755 lib/libhz.a $(DESTDIR)/usr/lib
+-	install -m 755 contrib/xchat-plugins/xchat-autogb.so $(DESTDIR)/usr/share/zh-autoconvert
+-	install -m 755 contrib/xchat-plugins/xchat-autob5.so $(DESTDIR)/usr/share/zh-autoconvert
+-	install -m 644 include/*.h  $(DESTDIR)/usr/include
+-	ln -s autogb $(DESTDIR)/usr/bin/autob5
++	${BSD_INSTALL_PROGRAM} autogb $(PREFIX)/bin
++	${BSD_INSTALL_PROGRAM} lib/libhz.so.0.0 $(PREFIX)/lib/libhz.so.0
++	cd $(PREFIX)/lib;ln -s  libhz.so.0 libhz.so
++	${BSD_INSTALL_PROGRAM} lib/libhz.a $(PREFIX)/lib
++	#${BSD_INSTALL_PROGRAM} contrib/xchat-plugins/xchat-autogb.so $(PREFIX)/share/autoconvert
++	#${BSD_INSTALL_PROGRAM} contrib/xchat-plugins/xchat-autob5.so $(PREFIX)/share/autoconvert
++	${BSD_INSTALL_DATA} include/*.h  $(PREFIX)/include
++	ln -s autogb $(PREFIX)/bin/autob5
