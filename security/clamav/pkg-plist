@@ -1,0 +1,37 @@
+@comment $FreeBSD: ports/security/clamav/pkg-plist,v 1.41 2012/11/17 06:01:01 svnexp Exp $
+bin/clamav-config
+bin/clambc
+bin/clamconf
+bin/clamdtop
+bin/clamscan
+bin/clamdscan
+bin/freshclam
+bin/sigtool
+%%CLAMAV-MILTER%%sbin/clamav-milter
+sbin/clamd
+include/clamav.h
+include/clamav-config.h
+lib/libclamav.la
+lib/libclamav.so
+lib/libclamav.so.7
+%%UNRAR%%lib/libclamunrar.la
+%%UNRAR%%lib/libclamunrar.so
+%%UNRAR%%lib/libclamunrar.so.7
+%%UNRAR%%lib/libclamunrar_iface.la
+%%UNRAR%%lib/libclamunrar_iface.so
+%%UNRAR%%lib/libclamunrar_iface.so.7
+libdata/pkgconfig/libclamav.pc
+@unexec if cmp -s %D/etc/clamd.conf %D/etc/clamd.conf.default; then rm -f %D/etc/clamd.conf; fi
+etc/clamd.conf.default
+@exec [ -f %B/clamd.conf ] || cp %B/%f %B/clamd.conf
+@unexec if cmp -s %D/etc/freshclam.conf %D/etc/freshclam.conf.default; then rm -f %D/etc/freshclam.conf; fi
+etc/freshclam.conf.default
+%%CLAMAV-MILTER%%@unexec if cmp -s %D/etc/clamav-milter.conf %D/etc/clamav-milter.conf.default; then rm -f %D/etc/clamav-milter.conf; fi
+%%CLAMAV-MILTER%%etc/clamav-milter.conf.default
+@exec [ -f %B/freshclam.conf ] || cp %B/%f %B/freshclam.conf
+@unexec [ -s %%DBDIR%%/daily.cvd ] || rm -f %%DBDIR%%/daily.cvd || true
+@unexec [ -s %%DBDIR%%/main.cvd ] || rm -f %%DBDIR%%/main.cvd || true
+@cwd /
+@dirrmtry %%DBDIR%%
+@dirrmtry %%LOGDIR%%
+@dirrmtry %%RUNDIR%%

@@ -1,0 +1,2 @@
+# remove hardcodes -lthr
+LDFLAGS=

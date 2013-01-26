@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/security/clamav/files/clamav-freshclam.in,v 1.5 2012/11/17 06:01:01 svnexp Exp $
+#
+
+# PROVIDE: freshclam
+# REQUIRE: LOGIN clamd
+# BEFORE: mail
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf to enable the freshclam daemon:
+#
+# clamav_freshclam_enable="YES"
+# clamav_freshclam_flags="<set as needed>"
+#
+# See freshclam(1) for flags
+#
+
+. /etc/rc.subr
+
+name=clamav_freshclam
+rcvar=clamav_freshclam_enable
+
+command=%%PREFIX%%/bin/freshclam
+pidfile=%%RUNDIR%%/freshclam.pid
+command_args="--daemon -p ${pidfile}"
+required_dirs=%%DBDIR%%
+required_files=%%PREFIX%%/etc/freshclam.conf
+
+# read settings, set default values
+load_rc_config "$name"
+: ${clamav_freshclam_enable="NO"}
+
+run_rc_command "$1"
