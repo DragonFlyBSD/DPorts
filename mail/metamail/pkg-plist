@@ -1,0 +1,34 @@
+bin/audiocompose
+bin/audiosend
+bin/extcompose
+bin/getfilename
+bin/mailserver
+bin/mailto
+%%X11%%bin/mailto-hebrew
+bin/metamail
+bin/metasend
+bin/mimencode
+bin/mmencode
+bin/patch-metamail
+bin/rcvAppleSingle
+bin/richtext
+bin/richtoatk
+bin/showaudio
+bin/showexternal
+%%X11%%bin/shownonascii
+bin/showpartial
+bin/showpicture
+bin/sndAppleSingle
+bin/splitmail
+bin/sun-audio-file
+bin/sun-message.csh
+bin/sun-to-mime
+bin/sun2mime
+%%X11%%lib/metamail/fonts/heb6x13.pcf
+%%X11%%lib/metamail/fonts/heb8x13.pcf
+%%X11%%lib/metamail/fonts/heb8x13B.pcf
+%%X11%%lib/metamail/fonts/fonts.dir
+%%X11%%lib/metamail/fonts/fonts.alias
+etc/mailcap
+@dirrmtry lib/metamail/fonts
+@dirrmtry lib/metamail
