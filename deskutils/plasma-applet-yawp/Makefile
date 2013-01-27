@@ -1,0 +1,27 @@
+# New ports collection makefile for:	plasma-applet-yawp
+# Date Created:				2009-01-15
+# Whom:					Jason E. Hale <bsdkaffee@gmail.com>
+#
+# $FreeBSD: ports/deskutils/plasma-applet-yawp/Makefile,v 1.24 2012/11/17 05:55:30 svnexp Exp $
+#
+
+PORTNAME=	yawp
+PORTVERSION=	0.4.3
+PORTREVISION=	1
+CATEGORIES=	deskutils kde
+MASTER_SITES=	SF
+PKGNAMEPREFIX=	plasma-applet-
+
+MAINTAINER=	jhale@FreeBSD.org
+COMMENT=	Weather plasma applet for KDE4
+
+LICENSE=	GPLv2
+
+USE_BZIP2=	yes
+USE_CMAKE=	yes
+USE_KDE4=	automoc4 kdeprefix workspace
+USE_QT4=	qmake_build moc_build rcc_build uic_build
+USE_GETTEXT=	yes
+MAKE_JOBS_SAFE=	yes
+
+.include <bsd.port.mk>
