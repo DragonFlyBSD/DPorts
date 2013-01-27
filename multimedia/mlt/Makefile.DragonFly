@@ -1,0 +1,3 @@
+CONFIGURE_ARGS+= --target-os=FreeBSD
+
+CFLAGS+= -D__FreeBSD__=1
