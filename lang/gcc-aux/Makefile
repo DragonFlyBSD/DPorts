@@ -39,7 +39,7 @@ OPTIONS+=	NLS        "Native Language Support" off
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == "FreeBSD"
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 BLD_TARGET=		x86_64-aux-freebsd${OSREL}
 OS_LABEL4VERS=		[FreeBSD64]
 BOOTSTRAP_TRIPLET=	x86_64-bootstrap-freebsd8.1/4.6.0
