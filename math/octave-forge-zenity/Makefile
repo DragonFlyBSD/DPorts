@@ -1,0 +1,21 @@
+# New ports collection makefile for:	octave-forge-zenity
+# Date created:		8 September 2008
+# Whom:			Stephen Montgomery-Smith <stephen@math.missouri.edu>
+#
+# $FreeBSD: ports/math/octave-forge-zenity/Makefile,v 1.14 2012/11/17 05:59:25 svnexp Exp $
+#
+
+PORTNAME=	octave-forge-zenity
+PORTVERSION=	0.5.7
+PORTREVISION=	7
+CATEGORIES=	math
+
+MAINTAINER=	stephen@FreeBSD.org
+COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
+GNU_CONFIGURE=	yes
+
+RUN_DEPENDS+=	zenity:${PORTSDIR}/x11/zenity
+
+.include <bsd.port.pre.mk>
+.include "${PORTSDIR}/Mk/bsd.octave.mk"
+.include <bsd.port.post.mk>
