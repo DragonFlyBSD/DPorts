@@ -1,4 +1,0 @@
-bin/scrollz
-bin/scrollz-%%SCROLLZ_VER%%
-@exec /bin/mkdir -p %%PREFIX%%/%%DATADIR%%/script
-@dirrm %%DATADIR%%/script
