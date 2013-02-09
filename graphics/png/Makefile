@@ -1,8 +1,8 @@
 # Created by: ache
-# $FreeBSD: ports/graphics/png/Makefile,v 1.131 2012/12/09 21:35:17 svnexp Exp $
+# $FreeBSD: ports/graphics/png/Makefile,v 1.132 2013/01/26 17:26:33 svnexp Exp $
 
 PORTNAME=	png
-PORTVERSION=	1.5.13
+PORTVERSION=	1.5.14
 CATEGORIES=	graphics
 MASTER_SITES=	SF/lib${PORTNAME}/lib${PORTNAME}15/${PORTVERSION}
 DISTNAME=	lib${PORTNAME}-${PORTVERSION}
@@ -55,8 +55,6 @@ post-patch:
 		-e 's|RELEASE}.0|RELEASE}|' \
 		-e 's|LIBDIR}/pkgconfig|LIBDIR}data/pkgconfig|' \
 		${WRKSRC}/CMakeLists.txt
-	cp ${WRKSRC}/scripts/makefile.freebsd \
-	   ${WRKSRC}/scripts/makefile.dragonfly
 
 post-build:
 	@(cd ${BUILD_WRKSRC}; if ! ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS} test; then \
