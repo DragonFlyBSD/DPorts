@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: ports/graphics/jpeg/Makefile,v 1.64 2012/12/09 22:20:58 svnexp Exp $
+# $FreeBSD: ports/graphics/jpeg/Makefile,v 1.65 2013/02/08 13:27:06 svnexp Exp $
 
 PORTNAME=	jpeg
 PORTVERSION=	8
@@ -34,6 +34,8 @@ CONFIGURE_ARGS+=	--enable-maxmem=${J_MAXMEM}
 
 MAN1=		cjpeg.1 djpeg.1 jpegtran.1 rdjpgcom.1 wrjpgcom.1
 
+.include <bsd.port.options.mk>
+
 post-extract:
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/jpegexiforient.c ${WRKSRC}/
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/exifautotran.txt ${WRKSRC}/exifautotran
@@ -47,7 +49,7 @@ test: build
 regression-test:	test
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${PREFIX}/share/doc/jpeg
 	@${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/jpeg/
 	@${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/jpeg/
