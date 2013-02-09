@@ -4,7 +4,7 @@
 # Date created:		12 Nov 2005
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/Mk/bsd.gecko.mk,v 1.72 2012/11/20 23:17:49 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.gecko.mk,v 1.74 2013/01/10 23:02:42 svnexp Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -179,9 +179,9 @@ Gecko_Pre_Include=			bsd.gecko.mk
 #                         is given by the maintainer via the port or by the
 #                         user via defined variable try to find the highest
 #                         stable installed version.
-#                         Available values: yes 10+ 17+ 10 17+
+#                         Available values: yes 17+ 18+ 17 18+
 #                         NOTE:
-#                         default value 10 is used in case of USE_FIREFOX=yes
+#                         default value 17 is used in case of USE_FIREFOX=yes
 #
 # USE_FIREFOX_BUILD       Add buildtime dependency on Firefox.
 #                         Available values: see USE_FIREFOX
@@ -190,9 +190,9 @@ Gecko_Pre_Include=			bsd.gecko.mk
 #                         version is given by the maintainer via the port 
 #                         or by the user via defined variable try to find
 #                         the highest stable installed version.
-#                         Available values: yes 14+ 14
+#                         Available values: yes 15+ 15
 #                         NOTE:
-#                         default value 14 is used in case of USE_SEAMONKEY=yes
+#                         default value 15 is used in case of USE_SEAMONKEY=yes
 #
 # USE_SEAMONKEY_BUILD     Add buildtime dependency on SeaMonkey.
 #                         Available values: see USE_SEAMONKEY
@@ -203,7 +203,7 @@ Gecko_Pre_Include=			bsd.gecko.mk
 #                         the highest stable installed version.
 #                         Available values: yes 10+ 17+ 10 17
 #                         NOTE:
-#                         default value 10 is used in case of USE_THUNDERBIRD=yes
+#                         default value 17 is used in case of USE_THUNDERBIRD=yes
 #
 # USE_THUNDERBIRD_BUILD   Add buildtime dependency on Thunderbird.
 #                         Available values: see USE_THUNDERBIRD
@@ -220,13 +220,13 @@ USE_FIREFOX:=				${USE_FIREFOX_BUILD}
 _FIREFOX_BUILD_DEPENDS=		yes
 .endif
 
-_FIREFOX_DEFAULT_VERSION=	10
-_FIREFOX_VERSIONS=			10 17
-_FIREFOX_RANGE_VERSIONS=	10+ 17+
+_FIREFOX_DEFAULT_VERSION=	17
+_FIREFOX_VERSIONS=			17 18
+_FIREFOX_RANGE_VERSIONS=	17+ 18+
 
-# For specifying [10, ..]+
-_FIREFOX_17P=	17 ${_FIREFOX_10P}
-_FIREFOX_10P=	10
+# For specifying [17, ..]+
+_FIREFOX_18P=	18 ${_FIREFOX_17P}
+_FIREFOX_17P=	17
 
 # Set the default Firefox version and check if USE_FIREFOX=yes was given
 .if ${USE_FIREFOX} == "yes"
@@ -271,8 +271,8 @@ IGNORE=			cannot install: unknown Firefox version: firefox-${USE_FIREFOX:C/([0-9
 .endif
 
 # Dependence lines for different Firefox versions
-10_DEPENDS=		${LOCALBASE}/lib/firefox/firefox:${PORTSDIR}/www/firefox-esr
-17_DEPENDS=		${LOCALBASE}/lib/firefox/firefox:${PORTSDIR}/www/firefox
+17_DEPENDS=		${LOCALBASE}/lib/firefox/firefox:${PORTSDIR}/www/firefox-esr
+18_DEPENDS=		${LOCALBASE}/lib/firefox/firefox:${PORTSDIR}/www/firefox
 
 # Add dependencies
 .if defined(USE_FIREFOX)
@@ -294,12 +294,12 @@ USE_SEAMONKEY:=				${USE_SEAMONKEY_BUILD}
 _SEAMONKEY_BUILD_DEPENDS=	yes
 .endif
 
-_SEAMONKEY_DEFAULT_VERSION=	14
-_SEAMONKEY_VERSIONS=		14
-_SEAMONKEY_RANGE_VERSIONS=	14+
+_SEAMONKEY_DEFAULT_VERSION=	15
+_SEAMONKEY_VERSIONS=		15
+_SEAMONKEY_RANGE_VERSIONS=	15+
 
-# For specifying [14, ..]+
-_SEAMONKEY_14P=	14
+# For specifying [15, ..]+
+_SEAMONKEY_15P=	15
 
 # Set the default SeaMonkey version and check if USE_SEAMONKEY=yes was given
 .if ${USE_SEAMONKEY} == "yes"
@@ -341,7 +341,7 @@ IGNORE=			cannot install: unknown SeaMonkey version: seamonkey-2.${USE_SEAMONKEY
 .endif
 
 # Dependence lines for different SeaMonkey versions
-14_DEPENDS=		${LOCALBASE}/lib/seamonkey/seamonkey:${PORTSDIR}/www/seamonkey
+15_DEPENDS=		${LOCALBASE}/lib/seamonkey/seamonkey:${PORTSDIR}/www/seamonkey
 
 # Add dependencies
 .if defined(USE_SEAMONKEY)
@@ -441,7 +441,7 @@ Gecko_Pre_Include=	bsd.gecko.mk
 #
 # Ports can use the following:
 #
-# USE_MOZILLA			By default, it enables the denendencies: cairo, dbm,
+# USE_MOZILLA			By default, it enables the denendencies: cairo,
 # 						event, ffi, hunspell, jpeg, nspr, nss, png, sqlite,
 # 						vpx and zip. Search for '_ALL_DEPENDS' below to see
 # 						the list. If your port doesn't need one of list then
@@ -554,10 +554,10 @@ LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}
 .if ${MOZILLA_VER:R:R} >= 16 || exists(${.CURDIR}/files/patch-bug788955)
 .if ${OSVERSION} > 1000011
 # use jemalloc 3.0.0 API in libc
-MOZ_EXPORT+=	MOZ_JEMALLOC=1
+MOZ_EXPORT+=	MOZ_JEMALLOC=1 MOZ_JEMALLOC3=1
 .elif ${OSVERSION} > 701106
 MOZ_OPTIONS+=	--enable-jemalloc
-MOZ_EXPORT+=	MOZ_JEMALLOC=1
+MOZ_EXPORT+=	MOZ_JEMALLOC=1 MOZ_JEMALLOC3=1
 .endif
 .endif
 
@@ -568,13 +568,11 @@ MOZ_EXPORT+=	ac_cv_thread_keyword=no \
 .endif
 
 # Standard depends
-_ALL_DEPENDS=	cairo dbm event ffi hunspell jpeg nspr nss png sqlite vpx zip
+_ALL_DEPENDS=	cairo event ffi hunspell jpeg nspr nss png sqlite vpx zip
 
 cairo_LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
 cairo_MOZ_OPTIONS=	--enable-system-cairo --enable-system-pixman
 cairo_EXTRACT_AFTER_ARGS=	--exclude mozilla*/gfx/cairo
-
-dbm_EXTRACT_AFTER_ARGS=		--exclude mozilla*/dbm
 
 event_LIB_DEPENDS=	event-2.0:${PORTSDIR}/devel/libevent2
 event_MOZ_OPTIONS=	--with-system-libevent
@@ -598,7 +596,8 @@ nspr_MOZ_OPTIONS=	--with-system-nspr
 
 nss_LIB_DEPENDS=	nss3:${PORTSDIR}/security/nss
 nss_MOZ_OPTIONS=	--with-system-nss
-nss_EXTRACT_AFTER_ARGS=	--exclude mozilla*/security/coreconf \
+nss_EXTRACT_AFTER_ARGS=	--exclude mozilla*/dbm \
+						--exclude mozilla*/security/coreconf \
 						--exclude mozilla*/security/nss
 
 png_LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
@@ -607,6 +606,9 @@ png_EXTRACT_AFTER_ARGS=	--exclude mozilla*/media/libpng
 
 sqlite_LIB_DEPENDS=	sqlite3:${PORTSDIR}/databases/sqlite3
 sqlite_MOZ_OPTIONS=	--enable-system-sqlite
+.if ${MOZILLA_VER:R:R} >= 20 || exists(${.CURDIR}/files/patch-bug787804)
+sqlite_EXTRACT_AFTER_ARGS=	--exclude mozilla*/db/sqlite3
+.endif
 
 vpx_LIB_DEPENDS=	vpx:${PORTSDIR}/multimedia/libvpx
 vpx_MOZ_OPTIONS=	--with-system-libvpx
@@ -663,12 +665,10 @@ MOZ_OPTIONS+=	--with-system-zlib		\
 LIBS+=		-Wl,--as-needed,-lcxxrt,--no-as-needed
 .endif
 
-.if ${PORT_OPTIONS:MQT4}
-MOZ_TOOLKIT=	cairo-qt
-USE_MOZILLA+=	-cairo # ports/169343
-.endif
-
 .if ${MOZ_TOOLKIT:Mcairo-qt}
+# don't use - transparent backgrounds (bug 521582),
+USE_MOZILLA+=	-cairo # ports/169343
+USE_DISPLAY=yes # install
 USE_GNOME+=	pango
 USE_QT4+=	moc_build gui network opengl
 MOZ_OPTIONS+=	--with-qtdir= # pkg-config
@@ -733,6 +733,16 @@ LIB_DEPENDS+=	proxy:${PORTSDIR}/net/libproxy
 MOZ_OPTIONS+=	--enable-libproxy
 .else
 MOZ_OPTIONS+=	--disable-libproxy
+.endif
+
+.if ${PORT_OPTIONS:MWEBRTC}
+BUILD_DEPENDS+=	v4l_compat>0:${PORTSDIR}/multimedia/v4l_compat
+LIB_DEPENDS+=	v4l2:${PORTSDIR}/multimedia/libv4l
+. if ! ${PORT_OPTIONS:MALSA}
+IGNORE=		WEBRTC works only with ALSA audio backend
+. endif
+.else
+MOZ_OPTIONS+=	--disable-webrtc
 .endif
 
 .if ${PORT_OPTIONS:MALSA}
@@ -842,13 +852,17 @@ gecko-post-patch:
 		${PATCH} ${PATCH_ARGS} -d ${MOZSRC}/nsprpub/build < $$i; \
 	done
 	@${REINPLACE_CMD} -e '/DLL_SUFFIX/s/so\.1$$/so/' \
-		${WRKSRC}/nsprpub/configure
+		${MOZSRC}/nsprpub/configure
 .endif
 .if ${USE_MOZILLA:M-nss}
 	@${ECHO_MSG} "===>  Applying NSS patches"
 	@for i in ${.CURDIR}/../../security/nss/files/patch-*; do \
 		${PATCH} ${PATCH_ARGS} -d ${MOZSRC}/security/nss < $$i; \
 	done
+	@${REINPLACE_CMD} -e '/DLL_SUFFIX/d' \
+		${MOZSRC}/security/coreconf/FreeBSD.mk
+	@${REINPLACE_CMD} -e '/\.so/d' \
+		${MOZSRC}/security/coreconf/rules.mk
 .endif
 .for subdir in "" nsprpub js/src
 	@if [ -f ${MOZSRC}/${subdir}/config/system-headers ] ; then \

@@ -675,11 +675,6 @@ IGNORE=	cannot install: Unknown component ${component}
 _USE_GNOME+=	${${component}_USE_GNOME_IMPL} ${component}
 . endfor
 
-# Build on LDFLAGS when libintl is specified
-.if ${USE_GNOME:Mintltool} != "" || ${USE_GNOME:Mintlhack} != ""
-LDFLAGS+= -L${LOCALBASE}/lib -lintl
-.endif
-
 # Setup the GTK+ API version for pixbuf loaders, input method modules,
 # and theme engines.
 PLIST_SUB+=			GTK2_VERSION="${GTK2_VERSION}" \

@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: ports/Mk/bsd.database.mk,v 1.82 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.database.mk,v 1.86 2013/02/07 02:21:00 svnexp Exp $
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Database_Post_Include)
@@ -108,12 +108,25 @@ DEFAULT_MYSQL_VER?=	55
 MYSQL41_LIBVER=		14
 MYSQL50_LIBVER=		15
 MYSQL51_LIBVER=		16
-MYSQL53_LIBVER=		16
+MYSQL53m_LIBVER=	16
 MYSQL55_LIBVER=		18
+MYSQL55m_LIBVER=	18
+MYSQL55p_LIBVER=	18
+MYSQL56p_LIBVER=	18
 
 # Setting/finding MySQL version we want.
 .if exists(${LOCALBASE}/bin/mysql)
-_MYSQL_VER!=	${LOCALBASE}/bin/mysql --version | ${SED} -e 's/.*Distrib \([0-9]\)\.\([0-9]*\).*/\1\2/'
+_MYSQL!=	${LOCALBASE}/bin/mysql --version | ${SED} -e 's/.*Distrib \([0-9]\)\.\([0-9]*\).*/\1\2/'
+_PERCONA!=	${LOCALBASE}/bin/mysql --version | ${GREP} Percona | wc -l
+_MARIADB!=	${LOCALBASE}/bin/mysql --version | ${GREP} MariaDB | wc -l
+
+.if ${_PERCONA} == 1
+_MYSQL_VER=	${_MYSQL}p
+.elif ${_MARIADB} == 1
+_MYSQL_VER=	${_MYSQL}m
+.else
+_MYSQL_VER=	${_MYSQL}
+.endif
 .endif
 
 .if defined(WANT_MYSQL_VER)
@@ -137,9 +150,18 @@ IGNORE=		cannot install: MySQL versions mismatch: mysql${_MYSQL_VER}-client is i
 .endif
 .endif
 
-.if (${MYSQL_VER} == "53")
+.if (${MYSQL_VER} == "53m")
 _MYSQL_CLIENT=	databases/mariadb-client
 _MYSQL_SERVER=	databases/mariadb-server
+.elif (${MYSQL_VER} == "55m")
+_MYSQL_CLIENT=	databases/mariadb55-client
+_MYSQL_SERVER=	databases/mariadb55-server
+.elif (${MYSQL_VER} == "55p")
+_MYSQL_CLIENT=	databases/percona55-client
+_MYSQL_SERVER=	databases/percona55-server
+.elif (${MYSQL_VER} == "56p")
+_MYSQL_CLIENT=	databases/percona56-client
+_MYSQL_SERVER=	databases/percona56-server
 .else
 _MYSQL_CLIENT=	databases/mysql${MYSQL_VER}-client
 _MYSQL_SERVER=	databases/mysql${MYSQL_VER}-server
@@ -295,7 +317,8 @@ _DB_43P=	43 ${_DB_44P}
 _DB_44P=	44 ${_DB_46P}
 _DB_46P=	46 ${_DB_47P}
 _DB_47P=	47 ${_DB_48P}
-_DB_48P=	48
+_DB_48P=	48 ${_DB_5P}
+_DB_5P=		5
 
 # Override the global WITH_BDB_VER with the
 # port specific <UNIQUENAME>_WITH_BDB_VER

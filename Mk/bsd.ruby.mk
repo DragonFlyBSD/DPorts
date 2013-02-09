@@ -3,7 +3,7 @@
 #
 # Created by: Akinori MUSHA <knu@FreeBSD.org>
 #
-# $FreeBSD: ports/Mk/bsd.ruby.mk,v 1.224 2012/11/17 05:54:18 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.ruby.mk,v 1.225 2013/01/11 23:12:46 svnexp Exp $
 #
 
 .if !defined(Ruby_Include)
@@ -370,7 +370,7 @@ ruby-shebang-patch:
 	done
 .endif
 
-.if defined(DEBUG)
+.if ${PORT_OPTIONS:MDEBUG}
 RUBY_FLAGS+=	-d
 .endif
 
