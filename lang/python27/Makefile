@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: ports/lang/python27/Makefile,v 1.199 2013/01/14 18:45:02 svnexp Exp $
+# $FreeBSD: ports/lang/python27/Makefile,v 1.200 2013/01/29 00:50:17 svnexp Exp $
 
 PORTNAME=	python27
 PORTVERSION=	2.7.3
@@ -95,7 +95,7 @@ PLIST_SUB+=	THREADS=""
 CONFIGURE_ARGS+=	--with-pth --with-system-ffi
 EXTRA_PATCHES+=		${PATCHDIR}/extra-patch-configure-pth
 LIB_DEPENDS+=		pth:${PORTSDIR}/devel/pth \
-			ffi.5:${PORTSDIR}/devel/libffi
+			ffi:${PORTSDIR}/devel/libffi
 _PTH_CPPFLAGS=		"-I${LOCALBASE}/include/pth"
 _PTH_LDFLAGS=		"-L${LOCALBASE}/lib/pth"
 CPPFLAGS:=		${_PTH_CPPFLAGS} ${CPPFLAGS}
