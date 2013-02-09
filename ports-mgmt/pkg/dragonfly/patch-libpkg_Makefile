@@ -1,0 +1,30 @@
+--- libpkg/Makefile.orig	2013-01-28 19:13:23.000000000 +0100
++++ libpkg/Makefile	2013-02-09 19:52:52.822395000 +0100
+@@ -116,20 +116,22 @@
+ NO_MAN=		yes
+ NOMAN=		yes
+ 
+-.include <bsd.lib.mk>
+-
+ .SUFFIXES: .pc.in .pc
+ 
+ .PHONY:	set-version ${_snapshot}
+ 
+ set-version: ${PKGH} ${PC}
+ 
++${SRCS}: ${PKGH}
++
+ ${PKGH}: ${PKGH:S,$,.in,} ${NEWVERS} ${_snapshot}
+ 	sed -e 's,%%PKGVERSION%%,$(PKGVERSION),'   \
+ 	    -e 's,%%PORTVERSION%%,$(PORTVERSION),' \
+ 	    ${.TARGET:S,$,.in,} > ${.TARGET} 
+ 
+-.pc.in.pc: ${NEWVERS} ${_snapshot}
++${PC}: ${PC:S,$,.in,} ${NEWVERS} ${_snapshot}
+ 	sed -e "s,__PREFIX__,${PREFIX},g" \
+-		-e "s,__VERSION__,${PKGVERSION},g" \
+-		${.IMPSRC} > ${.TARGET}
++	    -e "s,__VERSION__,${PKGVERSION},g" \
++	    ${.TARGET:S,$,.in,} > ${.TARGET}
++
++.include <bsd.lib.mk>
