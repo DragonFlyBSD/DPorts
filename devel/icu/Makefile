@@ -1,8 +1,8 @@
 # Created by: dwm
-# $FreeBSD: ports/devel/icu/Makefile,v 1.57 2013/01/08 20:41:59 svnexp Exp $
+# $FreeBSD: ports/devel/icu/Makefile,v 1.58 2013/01/31 16:48:54 svnexp Exp $
 
 PORTNAME=	icu
-PORTVERSION=	50.1.1
+PORTVERSION=	50.1.2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.icu-project.org/files/icu4c/${PORTVERSION}/ \
 		SF/${PORTNAME}/ICU4C/${PORTVERSION}/
