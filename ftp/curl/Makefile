@@ -2,12 +2,12 @@
 # Date created:		12 December 1998
 # Whom:			Neil Blakey-Milner <nbm@rucus.ru.ac.za>
 #
-# $FreeBSD: ports/ftp/curl/Makefile,v 1.122 2012/11/17 05:57:29 svnexp Exp $
+# $FreeBSD: ports/ftp/curl/Makefile,v 1.123 2013/02/05 16:54:22 svnexp Exp $
 #
 
 PORTNAME=	curl
 PORTVERSION=	7.24.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	ftp ipv6 www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		LOCAL/sunpoet
