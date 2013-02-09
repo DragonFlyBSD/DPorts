@@ -1,6 +1,6 @@
---- /dev/null	2013-01-18 00:32:27.113911335 +0100
-+++ src/poudriere.d/jail.sh.dragonfly	2013-01-18 00:32:45.408799000 +0100
-@@ -0,0 +1,244 @@
+--- /dev/null	2013-02-09 18:36:47.110850337 +0100
++++ src/poudriere.d/jail.sh.dragonfly	2013-02-09 18:35:53.684016000 +0100
+@@ -0,0 +1,248 @@
 +#!/bin/sh
 +#
 +# DragonFly specific
@@ -8,8 +8,9 @@
 +update_jail() {
 +	[ $# -ne 1 ] && eargs quick
 +	jail_exists ${JAILNAME} || err 1 "No such jail: ${JAILNAME}"
-+	jail_runs && \
-+		err 1 "Unable to remove jail ${JAILNAME}: it is running"
++	# jail_runs logic is broken, disable for now
++	#jail_runs && \
++	#	err 1 "Unable to remove jail ${JAILNAME}: it is running"
 +
 +	# In case a jail run modified some files, roll back to last snapshot
 +	# Make double sure .cpignores are set correctly
@@ -31,6 +32,7 @@
 +	case ${METHOD} in
 +	git)
 +		install_from_git ${1}
++		umount ${JAILMNT}/dev
 +		umount ${JAILMNT}
 +		zsnap ${JAILFS}@clean
 +		;;
@@ -110,6 +112,7 @@
 +	if [ -z "${mounted}" ]; then
 +		${NULLMOUNT} ${JAILFS} "${JAILMNT}" || \
 +		  err 1 "Failed to mount the PFS"
++		mount -t devfs devfs ${JAILMNT}/dev
 +	fi
 +	[ -d ${JAILMNT}/usr/src ] && UPDATE=1
 +	mkdir -p ${JAILMNT}/usr/src
@@ -208,6 +211,7 @@
 +	unset CLEANUP_HOOK
 +
 +	msg "Jail ${JAILNAME} ${VERSION} ${ARCH} is ready to be used"
++	umount ${JAILMNT}/dev
 +	umount ${JAILMNT}
 +}
 +
