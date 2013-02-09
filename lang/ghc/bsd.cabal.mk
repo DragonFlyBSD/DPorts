@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/lang/ghc/bsd.cabal.mk,v 1.16 2012/12/20 02:32:28 svnexp Exp $
+# $FreeBSD: ports/lang/ghc/bsd.cabal.mk,v 1.20 2013/02/05 22:47:11 svnexp Exp $
 #
 # bsd.cabal.mk -- Support for ports based on Haskell Cabal.
 #
@@ -8,9 +8,6 @@
 #
 # Maintained by: haskell@FreeBSD.org
 #
-
-HSPREFIX=	hs-
-PKGNAMEPREFIX?=	${HSPREFIX}
 
 .if !defined(METAPORT)
 MASTER_SITES?=	http://hackage.haskell.org/packages/archive/${PORTNAME}/${PORTVERSION}/
@@ -82,10 +79,6 @@ BUILD_DEPENDS+=	ghc>=${GHC_VERSION}:${PORTSDIR}/lang/ghc
 
 USE_BINUTILS=	yes
 USE_GCC=	4.6+
-
-.if ${PORT_OPTIONS:MDYNAMIC}
-LIB_DEPENDS+=	ffi.5:${PORTSDIR}/devel/libffi
-.endif
 
 CONFIGURE_ARGS+=	--with-gcc=${CC} --with-ld=${LD} --with-ar=${AR} \
 			--with-ranlib=${RANLIB}

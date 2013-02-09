@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/lang/ghc/bsd.cabal.options.mk,v 1.3 2012/12/20 02:32:28 svnexp Exp $
+# $FreeBSD: ports/lang/ghc/bsd.cabal.options.mk,v 1.4 2013/02/02 13:59:39 svnexp Exp $
 #
 # bsd.cabal.options.mk -- Support options for ports based on Haskell Cabal.
 #
@@ -9,6 +9,9 @@
 #
 
 CABALOPTIONSMKINCLUDED=	yes
+
+HSPREFIX=		hs-
+PKGNAMEPREFIX?=		${HSPREFIX}
 
 LOCALBASE?=	/usr/local
 GHC_CMD?=	${LOCALBASE}/bin/ghc
