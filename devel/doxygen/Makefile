@@ -1,8 +1,8 @@
 # Created by: Joep Grooten <joep@di.nl>
-# $FreeBSD: ports/devel/doxygen/Makefile,v 1.89 2012/12/31 14:20:40 svnexp Exp $
+# $FreeBSD: ports/devel/doxygen/Makefile,v 1.90 2013/01/24 21:52:58 svnexp Exp $
 
 PORTNAME=	doxygen
-PORTVERSION=	1.8.3
+PORTVERSION=	1.8.3.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/ \
 		http://ftp.stack.nl/pub/users/dimitri/
