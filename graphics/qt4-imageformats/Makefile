@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/graphics/qt4-imageformats/Makefile,v 1.27 2012/11/17 05:58:21 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/graphics/qt4-imageformats/Makefile,v 1.28 2013/02/03 21:43:24 svnexp Exp $
 
 PORTNAME=	imageformats
 DISTVERSION=	${QT4_VERSION}
@@ -12,7 +7,7 @@ CATEGORIES?=	graphics
 PKGNAMEPREFIX=	qt4-
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Qt imageformat plugins for GIF, JPEG, MNG, and SVG
+COMMENT=	Qt imageformat plugins for GIF, JPEG, MNG and SVG
 
 LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		mng:${PORTSDIR}/graphics/libmng \
