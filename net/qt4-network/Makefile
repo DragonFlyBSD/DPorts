@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/net/qt4-network/Makefile,v 1.21 2012/11/17 06:00:17 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/net/qt4-network/Makefile,v 1.22 2013/02/03 21:43:47 svnexp Exp $
 
 PORTNAME=	network
 DISTVERSION=	${QT4_VERSION}
