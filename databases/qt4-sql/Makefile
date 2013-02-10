@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/databases/qt4-sql/Makefile,v 1.20 2012/11/17 05:55:23 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/databases/qt4-sql/Makefile,v 1.21 2013/02/03 21:42:50 svnexp Exp $
 
 PORTNAME=	sql
 DISTVERSION=	${QT4_VERSION}
