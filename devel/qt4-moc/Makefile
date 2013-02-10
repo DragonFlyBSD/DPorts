@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/devel/qt4-moc/Makefile,v 1.16 2012/11/17 05:56:55 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/devel/qt4-moc/Makefile,v 1.17 2013/02/03 21:43:08 svnexp Exp $
 
 PORTNAME=	moc
 DISTVERSION=	${QT4_VERSION}
@@ -57,7 +52,7 @@ pre-build:
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "arm"
-BROKEN=		Does not compile on arm
+BROKEN=		does not compile on arm
 .endif
 
 .include <bsd.port.post.mk>
