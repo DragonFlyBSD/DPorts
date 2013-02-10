@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/devel/qt4-linguist/Makefile,v 1.27 2012/11/17 05:56:55 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/devel/qt4-linguist/Makefile,v 1.28 2013/02/03 21:43:08 svnexp Exp $
 
 PORTNAME=	linguist
 DISTVERSION=	${QT4_VERSION}
@@ -29,7 +24,7 @@ MAKE_ENV?=	QTDIR=${WRKSRC} LD_LIBRARY_PATH=${WRKSRC}/lib:$$LD_LIBRARY_PATH \
 
 DESKTOP_ENTRIES="Qt Linguist" "${COMMENT}" \
 		"${PREFIX}/share/pixmaps/linguist-qt4.png" \
-		"${PREFIX}/bin/linguist-qt4" "" false
+		"${PREFIX}/bin/linguist-qt4" "Development;Qt;" true
 
 DO_NOT_EXTRACT=	demos doc examples mkspecs qmake translations \
 		src/activeqt src/dbus src/multimedia src/network src/opengl \
