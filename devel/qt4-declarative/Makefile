@@ -1,9 +1,4 @@
-# New ports collection makefile for:	qt4-declarative
-# Date created:				23 May 2010
-# Whom:					avilla@FreeBSD.org
-#
-# $FreeBSD: ports/devel/qt4-declarative/Makefile,v 1.5 2012/11/17 05:56:55 svnexp Exp $
-#
+# $FreeBSD: ports/devel/qt4-declarative/Makefile,v 1.6 2013/02/03 21:43:08 svnexp Exp $
 
 PORTNAME=	declarative
 DISTVERSION=	${QT4_VERSION}
