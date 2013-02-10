@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libdrm
-# Date created:				29 Dec 2005
-# Whom:					lesi@FreeBSD.org
-#
-# $FreeBSD: ports/graphics/libdrm/Makefile,v 1.28 2012/11/17 05:58:12 svnexp Exp $
-#
+# Created by: lesi@FreeBSD.org
+# $FreeBSD: ports/graphics/libdrm/Makefile,v 1.29 2013/01/05 23:45:42 svnexp Exp $
 
 PORTNAME=	libdrm
 PORTVERSION=	${LIBDRM_VERSION}
@@ -15,8 +11,8 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Userspace interface to kernel Direct Rendering Module services
 
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/pthread-stubs.pc:${PORTSDIR}/devel/libpthread-stubs
-LIB_DEPENDS=	pciaccess.0:${PORTSDIR}/devel/libpciaccess \
-		pthread-stubs.0:${PORTSDIR}/devel/libpthread-stubs
+LIB_DEPENDS=	pciaccess:${PORTSDIR}/devel/libpciaccess \
+		pthread-stubs:${PORTSDIR}/devel/libpthread-stubs
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/pthread-stubs.pc:${PORTSDIR}/devel/libpthread-stubs
 
 USE_BZIP2=	yes
@@ -29,11 +25,12 @@ MAKE_JOBS_SAFE=	yes
 
 .if defined(WITH_NEW_XORG)
 
-OPTIONS=	KMS "Enable KMS support (very experimental)" off
+OPTIONS_DEFINE=	KMS
+KMS_DESC=	Enable experimental KMS support
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_KMS)
+.if ${PORT_OPTIONS:MKMS}
 CONFIGURE_ARGS+=--enable-libkms
 EXTRA_PATCHES+=	${FILESDIR}/extra-xf86drmMode.c
 PLIST_SUB+=	KMS=""
@@ -53,11 +50,11 @@ PLIST_SUB+=	OLD="" NEW="@comment "
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "i386" || ${ARCH} == "ia64" || ${ARCH} == "powerpc"
-PLIST_SUB+=     INTEL_DRIVER=""
-PLIST_SUB+=     RADEON_DRIVERS=""
+PLIST_SUB+=	INTEL_DRIVER=""
+PLIST_SUB+=	RADEON_DRIVERS=""
 .else
-PLIST_SUB+=     INTEL_DRIVER="@comment "
-PLIST_SUB+=     RADEON_DRIVERS="@comment "
+PLIST_SUB+=	INTEL_DRIVER="@comment "
+PLIST_SUB+=	RADEON_DRIVERS="@comment "
 .endif
 
 pre-patch:
