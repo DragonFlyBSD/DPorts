@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qt4-help-tools
-# Date created:				Sun May 11 23:30:38 CEST 2008
-# Whom:					danny@ricin.com
-#
-# $FreeBSD: ports/devel/qt4-help-tools/Makefile,v 1.12 2012/11/17 05:56:55 svnexp Exp $
-#
+# Created by: danny@ricin.com
+# $FreeBSD: ports/devel/qt4-help-tools/Makefile,v 1.13 2013/02/03 21:43:08 svnexp Exp $
 
 PORTNAME=	help
 DISTVERSION=	${QT4_VERSION}
