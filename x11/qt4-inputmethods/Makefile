@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/x11/qt4-inputmethods/Makefile,v 1.23 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/x11/qt4-inputmethods/Makefile,v 1.24 2013/02/03 21:44:16 svnexp Exp $
 
 PORTNAME=	inputmethods
 DISTVERSION=	${QT4_VERSION}
