@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/chinese/qt4-codecs-cn/Makefile,v 1.16 2012/11/17 05:54:58 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/chinese/qt4-codecs-cn/Makefile,v 1.17 2013/02/03 21:42:46 svnexp Exp $
 
 PORTNAME=	codecs
 DISTVERSION=	${QT4_VERSION}
