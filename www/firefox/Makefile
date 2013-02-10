@@ -1,8 +1,8 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: ports/www/firefox/Makefile,v 1.287 2013/01/11 11:12:40 svnexp Exp $
+# $FreeBSD: ports/www/firefox/Makefile,v 1.289 2013/02/06 20:32:01 svnexp Exp $
 
 PORTNAME=	firefox
-DISTVERSION=	18.0
+DISTVERSION=	18.0.2
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
