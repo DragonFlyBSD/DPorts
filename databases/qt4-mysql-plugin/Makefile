@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt-mysql-plugin
-# Date created:				20 April 2003
-# Whom:					Kay Lehmann <kay_lehmann@web.de>
-#
-# $FreeBSD: ports/databases/qt4-mysql-plugin/Makefile,v 1.18 2012/11/17 05:55:23 svnexp Exp $
-#
+# Created by: Kay Lehmann <kay_lehmann@web.de>
+# $FreeBSD: ports/databases/qt4-mysql-plugin/Makefile,v 1.19 2013/02/03 21:42:50 svnexp Exp $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
