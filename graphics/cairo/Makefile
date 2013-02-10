@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: ports/graphics/cairo/Makefile,v 1.64 2012/12/10 19:11:53 svnexp Exp $
+# $FreeBSD: ports/graphics/cairo/Makefile,v 1.65 2013/01/16 11:43:57 svnexp Exp $
 #   $MCom: ports/graphics/cairo/Makefile,v 1.101 2010/10/29 15:40:04 kwm Exp $
 
 PORTNAME=	cairo
@@ -52,7 +52,7 @@ PLIST_SUB+=	X11="@comment "
 
 .if ${PORT_OPTIONS:MOPENGL}
 USE_GL=		gl
-USE_XORG+=	glproto:both
+USE_XORG+=	glproto:both dri2proto:both
 CONFIGURE_ARGS+=	--enable-gl
 PLIST_SUB+=	GL=""
 .else
