@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qt4-xmlpatterns
-# Date created:				Fri May  9 15:30:23 CEST 2008
-# Whom:					danny@ricin.com
-#
-# $FreeBSD: ports/textproc/qt4-xmlpatterns/Makefile,v 1.9 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: danny@ricin.com
+# $FreeBSD: ports/textproc/qt4-xmlpatterns/Makefile,v 1.10 2013/02/03 21:44:07 svnexp Exp $
 
 PORTNAME=	xmlpatterns
 DISTVERSION=	${QT4_VERSION}
