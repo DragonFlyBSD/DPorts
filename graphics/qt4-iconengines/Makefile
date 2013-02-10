@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/graphics/qt4-iconengines/Makefile,v 1.25 2012/11/17 05:58:21 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/graphics/qt4-iconengines/Makefile,v 1.26 2013/02/03 21:43:24 svnexp Exp $
 
 PORTNAME=	iconengines
 DISTVERSION=	${QT4_VERSION}
