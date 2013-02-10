@@ -1,25 +1,20 @@
-# New ports collection makefile for:	graphviz
-# Date created:		03 Feb 1998
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/graphviz/Makefile,v 1.144 2012/11/17 05:58:08 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: ports/graphics/graphviz/Makefile,v 1.147 2013/02/08 13:19:46 svnexp Exp $
 
 PORTNAME=	graphviz
-PORTVERSION=	2.28.0
-PORTREVISION=	1
+PORTVERSION=	2.30.0
 CATEGORIES=	graphics tk
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Graph Visualization Software from AT&T and Bell Labs
 
-LIB_DEPENDS+=	jpeg.11:${PORTSDIR}/graphics/jpeg \
+LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png \
-		freetype.9:${PORTSDIR}/print/freetype2 \
-		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig \
-		expat.6:${PORTSDIR}/textproc/expat2 \
-		gd.4:${PORTSDIR}/graphics/gd
+		freetype:${PORTSDIR}/print/freetype2 \
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
+		expat:${PORTSDIR}/textproc/expat2 \
+		gd:${PORTSDIR}/graphics/gd
 
 USE_BISON=	build
 USE_GMAKE=	yes
@@ -33,10 +28,10 @@ PLIST_SUB=	PORTVERSION="${PORTVERSION}"
 MAKE_ENV=	EXPR_COMPAT=yes MISSING=${TRUE}
 
 MAN1=		acyclic.1 bcomps.1 ccomps.1 cluster.1 diffimg.1 dijkstra.1 \
-		dot.1 dotty.1 gc.1 gml2gv.1 gv2gxl.1 gvedit.1 gvmap.1 \
-		gvmap.sh.1 gvgen.1 mm2gv.1 gvcolor.1 gvpack.1 gvpr.1 \
-		lneato.1 nop.1 osage.1 patchwork.1 prune.1 sccmap.1 smyrna.1 \
-		tred.1 unflatten.1 vimdot.1
+		dot.1 dotty.1 gc.1 graphml2gv.1 gml2gv.1 gv2gxl.1 gvmap.1 \
+		gvmap.sh.1 gvgen.1 mm2gv.1 gvcolor.1 gvpack.1 gvpr.1 lneato.1 \
+		nop.1 osage.1 patchwork.1 prune.1 sccmap.1 smyrna.1 tred.1 \
+		unflatten.1 vimdot.1
 MAN3=		cdt.3 expr.3 cgraph.3 graph.3 gvc.3 pack.3 pathplan.3 xdot.3
 MAN7=		graphviz.7
 MLINKS=		dot.1 circo.1 \
@@ -44,6 +39,7 @@ MLINKS=		dot.1 circo.1 \
 		dot.1 neato.1 \
 		dot.1 sfdp.1 \
 		dot.1 twopi.1 \
+		gml2gv.1 gv2gml.1 \
 		gv2gxl.1 gxl2gv.1
 
 FIX_INCLUDE=	ast_common.h \
@@ -67,7 +63,7 @@ PDOCS_HTML=	doc/*.html doc/info/*.gif
 
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 
-OPTIONS_DEFINE=	XPM DIGCOLA IPSEPCOLA ICONV NLS PANGOCAIRO LIBRSVG2 GTK2 GDK_PIXBUF GNOMEUI SMYRNA GVEDIT MING DEVIL GHOSTSCRIPT PERL PHP PYTHON RUBY LUA TCL GUILE TK
+OPTIONS_DEFINE=	XPM DIGCOLA IPSEPCOLA ICONV NLS PANGOCAIRO LIBRSVG2 GTK2 GDK_PIXBUF GNOMEUI SMYRNA GVEDIT MING DEVIL GHOSTSCRIPT PERL PHP PYTHON RUBY LUA TCL GUILE TK NVTHREADS
 OPTIONS_DEFAULT?=	XPM DIGCOLA IPSEPCOLA ICONV NLS PANGOCAIRO
 NO_OPTIONS_SORT=yes
 DIGCOLA_DESC=	neato layout engine wiwth DIGCOLA features
@@ -89,6 +85,7 @@ LUA_DESC=	Lua bindings (swig)
 TCL_DESC=	TCL bindings (swig)
 GUILE_DESC=	Guile bindings (swig)
 TK_DESC=	TK toolkit support
+NVTHREADS_DESC=	Link with threads (needed for nvidia)
 
 .include <bsd.port.options.mk>
 
@@ -228,21 +225,21 @@ CONFIGURE_ARGS+=	--without-glade
 
 .if ${PORT_OPTIONS:MSMYRNA}
 CONFIGURE_ARGS+=	 --with-gtkgl=yes
-LIB_DEPENDS+=		gtkgl-2.0.1:${PORTSDIR}/x11-toolkits/gtkglarea2
+LIB_DEPENDS+=		gtkgl-2:${PORTSDIR}/x11-toolkits/gtkglarea2
 .else
 CONFIGURE_ARGS+=	--without-gtkgl
 .endif
 
 .if ${PORT_OPTIONS:MSMYRNA}
 CONFIGURE_ARGS+=	 --with-gtkglext=yes
-LIB_DEPENDS+=		gtkglext-x11-1.0:${PORTSDIR}/x11-toolkits/gtkglext
+LIB_DEPENDS+=		gtkglext-x11-1:${PORTSDIR}/x11-toolkits/gtkglext
 .else
 CONFIGURE_ARGS+=	--without-gtkglext
 .endif
 
 .if ${PORT_OPTIONS:MSMYRNA}
 CONFIGURE_ARGS+=	 --with-gts=yes
-LIB_DEPENDS+=		gts.5:${PORTSDIR}/graphics/gts
+LIB_DEPENDS+=		gts:${PORTSDIR}/graphics/gts
 .else
 CONFIGURE_ARGS+=	--without-gts
 .endif
@@ -273,6 +270,7 @@ CONFIGURE_ARGS+=	--without-smyrna
 .if ${PORT_OPTIONS:MGVEDIT}
 CONFIGURE_ARGS+=	--with-gvedit=yes
 PLIST_SUB+=		WITH_GVEDIT=""
+MAN1+=			gvedit.1
 .else
 PLIST_SUB+=		WITH_GVEDIT="@comment "
 CONFIGURE_ARGS+=	--with-qt=no
@@ -281,7 +279,7 @@ CONFIGURE_ARGS+=	--with-qt=no
 .if ${PORT_OPTIONS:MMING}
 CONFIGURE_ARGS+=	--with-ming
 PLIST_SUB+=		WITH_MING=""
-LIB_DEPENDS+=		ming.5:${PORTSDIR}/graphics/ming
+LIB_DEPENDS+=		ming:${PORTSDIR}/graphics/ming
 .else
 CONFIGURE_ARGS+=	--without-ming
 PLIST_SUB+=		WITH_MING="@comment "
@@ -385,8 +383,9 @@ PLIST_SUB+=		WITH_TCL="@comment "
 .if ${PORT_OPTIONS:MGUILE}
 CONFIGURE_ARGS+=	--enable-guile
 PLIST_SUB+=		WITH_GUILE=""
-LIB_DEPENDS+=		guile.21:${PORTSDIR}/lang/guile
+LIB_DEPENDS+=		guile:${PORTSDIR}/lang/guile
 MAN3+=			gv.3guile
+BROKEN=			the guile plugin needs a new version of guile
 .else
 CONFIGURE_ARGS+=	--disable-guile
 PLIST_SUB+=		WITH_GUILE="@comment "
@@ -398,6 +397,11 @@ PLIST_SUB+=		WITH_GHOSTSCRIPT=""
 .else
 CONFIGURE_ARGS+=	--with-ghostscript=no
 PLIST_SUB+=		WITH_GHOSTSCRIPT="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MNVTHREADS}
+CFLAGS+=	${PTHREAD_CFLAGS}
+LDFLAGS+=	${PTHREAD_LIBS}
 .endif
 
 post-patch:
@@ -428,7 +432,8 @@ post-patch:
 		-e "s|-lruby|-lruby${RUBY_SUFFIX}|g" ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|#include "gui.h"|#include "gui/gui.h"|' \
 		${WRKSRC}/cmd/smyrna/tvnodes.h
-.if defined(NOPORTDOCS)
+	${CP} ${WRKSRC}/lib/cgraph/cgraph.h ${WRKSRC}/plugin/ming/
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's| install-txtDATA$$||' \
 		${WRKSRC}/Makefile.in
 .endif
@@ -438,7 +443,7 @@ post-install: install-ldconfig-file
 		${MAKE} ${INSTALL_TARGET}
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} ${FIX_INCLUDE} ${PREFIX}/include/graphviz/
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${MKDIR} ${DOCSDIR}/html
 	@${MKDIR} ${DOCSDIR}/pdf
@@ -447,7 +452,7 @@ post-install: install-ldconfig-file
 		${INSTALL_DATA} ${PDOCS_PDF} ${DOCSDIR}/pdf/ && \
 		${INSTALL_DATA} ${PDOCS_HTML} ${DOCSDIR}/html/
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${ECHO_MSG} "Installing demo data..."
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_SCRIPT} \
