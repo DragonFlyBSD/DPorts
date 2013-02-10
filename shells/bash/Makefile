@@ -3,11 +3,11 @@
 # Date created:				30 Jul 2004
 # Whom:					Oliver Eikemeier
 #
-# $FreeBSD: ports/shells/bash/Makefile,v 1.136 2012/11/17 06:01:23 svnexp Exp $
+# $FreeBSD: ports/shells/bash/Makefile,v 1.138 2013/01/22 17:44:10 svnexp Exp $
 #
 
 PORTNAME=		bash
-PATCHLEVEL=		37
+PATCHLEVEL=		42
 PORTVERSION=		4.2.${PATCHLEVEL:S/^0//g}
 PORTREVISION?=		0
 CATEGORIES=		shells
@@ -69,10 +69,10 @@ WITHOUT_NLS=yes
 .endif
 CONFIGURE_ARGS+=	--enable-static-link
 PKGNAMESUFFIX=	-static
-CONFLICTS+=	bash-[0-9]* bash3-[0-9]* bash3-static-[0-9]*
+CONFLICTS+=	bash-[0-9]* bash-devel-[0-9]* bash-static-devel-[0-9]*
 .else
 CONFIGURE_ARGS+=	--enable-static-link=no
-CONFLICTS+=	bash-static-[0-9]* bash3-[0-9]* bash3-static-[0-9]*
+CONFLICTS+=	bash-static-[0-9]* bash-devel-[0-9]* bash-static-devel-[0-9]*
 .endif
 
 .if defined(WITHOUT_HELP)
