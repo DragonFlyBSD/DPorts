@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: ports/misc/pciids/Makefile,v 1.51 2012/12/08 16:54:31 svnexp Exp $
+# $FreeBSD: ports/misc/pciids/Makefile,v 1.52 2013/02/02 03:47:38 svnexp Exp $
 
 PORTNAME=	pciids
-PORTVERSION=	20121208
+PORTVERSION=	20130201
 CATEGORIES=	misc
 MASTER_SITES=	LOCAL/sunpoet
 
