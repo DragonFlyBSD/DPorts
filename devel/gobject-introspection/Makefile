@@ -2,7 +2,7 @@
 # Date created:				19 July 2009
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gobject-introspection/Makefile,v 1.23 2012/12/10 19:56:30 svnexp Exp $
+# $FreeBSD: ports/devel/gobject-introspection/Makefile,v 1.24 2013/01/29 00:50:15 svnexp Exp $
 #   $MCom: ports/devel/gobject-introspection/Makefile,v 1.39 2011/06/11 19:51:15 mezz Exp $
 #
 
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Generate interface introspection data for GObject libraries
 
-LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi
+LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
