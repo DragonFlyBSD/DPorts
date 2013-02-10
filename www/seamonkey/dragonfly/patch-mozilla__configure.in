@@ -1,0 +1,12 @@
+--- mozilla/configure.in.fbsd_patched	2013-01-20 15:38:32.556770000 +0100
++++ mozilla/configure.in	2013-01-20 15:39:58.655529000 +0100
+@@ -3087,6 +3087,9 @@
+ case $target in
+ *-hpux11.*)
+ 	;;
++*-dragonfly*)
++	AC_CHECK_LIB(c, gethostbyname_r)
++	;;
+ *)
+ 	AC_CHECK_LIB(c_r, gethostbyname_r)
+ 	;;

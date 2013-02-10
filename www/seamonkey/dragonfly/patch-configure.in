@@ -1,0 +1,12 @@
+--- configure.in.freebsd_patched	2013-01-20 16:49:33.374796000 +0100
++++ configure.in	2013-01-20 16:51:38.192973000 +0100
+@@ -2796,6 +2796,9 @@
+ case $target in
+ *-hpux11.*)
+ 	;;
++*-dragonfly*)
++	AC_CHECK_LIB(c, gethostbyname_r)
++	;;
+ *)
+ 	AC_CHECK_LIB(c_r, gethostbyname_r)
+ 	;;
