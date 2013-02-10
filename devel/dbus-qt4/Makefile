@@ -1,10 +1,5 @@
-### -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/devel/dbus-qt4/Makefile,v 1.27 2012/11/17 05:55:40 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/devel/dbus-qt4/Makefile,v 1.28 2013/02/03 21:42:54 svnexp Exp $
 
 PORTNAME=	dbus
 DISTVERSION=	${QT4_VERSION}
