@@ -1,9 +1,4 @@
-# New ports collection makefile for:	qt4-scripttools
-# Date created:		2009-04-28
-# Whom:			Max Brazhnikov <makc@freebsd.org>
-#
-# $FreeBSD: ports/devel/qt4-scripttools/Makefile,v 1.11 2012/11/17 05:56:55 svnexp Exp $
-#
+# $FreeBSD: ports/devel/qt4-scripttools/Makefile,v 1.12 2013/02/03 21:43:08 svnexp Exp $
 
 PORTNAME=	scripttools
 DISTVERSION=	${QT4_VERSION}
