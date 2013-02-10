@@ -1,9 +1,4 @@
-# New ports collection makefile for:	qt4-graphicssystems-opengl
-# Date created:		2010-11-07
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/qt4-graphicssystems-opengl/Makefile,v 1.5 2012/11/17 06:03:19 svnexp Exp $
-#
+# $FreeBSD: ports/x11/qt4-graphicssystems-opengl/Makefile,v 1.6 2013/02/03 21:44:16 svnexp Exp $
 
 PORTNAME=	graphicssystems
 DISTVERSION=	${QT4_VERSION}
