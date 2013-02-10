@@ -1,19 +1,15 @@
-# New ports collection makefile for:	qmake-4
-# Date created:				Tue Jul 12 16:04:29 UTC 2005
-# Whom:					lofi@freebsd.org,
-#					mi@aldan.algebra.com
-#
-# $FreeBSD: ports/devel/qmake4/Makefile,v 1.28 2012/11/17 05:56:55 svnexp Exp $
+# Created by: lofi@freebsd.org, mi@aldan.algebra.com
+# $FreeBSD: ports/devel/qmake4/Makefile,v 1.29 2013/02/03 21:43:07 svnexp Exp $
 
 PORTNAME=	qmake
 DISTVERSION=	${QT4_VERSION}
-PORTREVISION=	3
 CATEGORIES=	devel
 PKGNAMEPREFIX=	qt4-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	The build utility of the Qt project
 
+USE_QT4=	#empty
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
 REINPLACE_ARGS=	-i ""
@@ -80,14 +76,7 @@ do-configure:
 	${ECHO} '/* empty */' > ${WRKSRC}/qconfig.h
 	${LN} ${WRKSRC}/qconfig.h ${WRKSRC}/../src/corelib/global/qconfig.h
 
-.include <bsd.port.pre.mk>
-.include "${.CURDIR}/../../Mk/bsd.qt.mk"
-
-.if ${ARCH} == "alpha"
-CXXFLAGS+=	-mieee
-.endif
-
 post-install:
 	${LN} -sf ${PREFIX}/share/qt4/mkspecs/freebsd-${QMAKE_BASE_COMPILER} ${PREFIX}/share/qt4/mkspecs/default
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
