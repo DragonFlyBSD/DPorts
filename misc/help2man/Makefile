@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: ports/misc/help2man/Makefile,v 1.47 2012/12/08 16:30:49 svnexp Exp $
+# $FreeBSD: ports/misc/help2man/Makefile,v 1.48 2013/01/30 17:44:40 svnexp Exp $
 
 PORTNAME=	help2man
-PORTVERSION=	1.40.13
+PORTVERSION=	1.41.1
 CATEGORIES=	misc
 MASTER_SITES=	GNU/${PORTNAME}
 
