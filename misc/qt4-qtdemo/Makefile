@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/misc/qt4-qtdemo/Makefile,v 1.25 2012/11/17 05:59:44 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/misc/qt4-qtdemo/Makefile,v 1.26 2013/02/03 21:43:40 svnexp Exp $
 
 PORTNAME=	qtdemo
 DISTVERSION=	${QT4_VERSION}
@@ -28,6 +23,11 @@ ALL_TARGET=	first
 CONFIGURE_ENV?=	QTDIR=${WRKSRC} PATH=${WRKSRC}/bin:$$PATH
 MAKE_ENV?=	QTDIR=${WRKSRC} LD_LIBRARY_PATH=${WRKSRC}/lib:$$LD_LIBRARY_PATH \
 		PATH=${WRKSRC}/bin:$$PATH
+
+# qtlogo.png is installed by qt4-gui
+DESKTOP_ENTRIES="Qt Examples and Demos" "${COMMENT}" \
+		"${LOCALBASE}/share/pixmaps/qtlogo.png" \
+		"${PREFIX}/bin/qtdemo" "Development;Qt;" true
 
 DO_NOT_EXTRACT=	doc mkspecs qmake translations \
 		src/activeqt src/openvg src/s60installs src/s60main src/tools \
