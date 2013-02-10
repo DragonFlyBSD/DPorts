@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:		qt-odbc-plugin
-# Date created:                         	31 December 2003
-# Whom:					Michael Nottebrock <lofi@freebsd.org>
-#
-# $FreeBSD: ports/databases/qt4-odbc-plugin/Makefile,v 1.18 2012/11/17 05:55:23 svnexp Exp $
-#
+# Created by: Michael Nottebrock <lofi@freebsd.org>
+# $FreeBSD: ports/databases/qt4-odbc-plugin/Makefile,v 1.19 2013/02/03 21:42:50 svnexp Exp $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
