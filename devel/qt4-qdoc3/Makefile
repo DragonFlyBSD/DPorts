@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qdoc3
-# Date created:		2009-08-20
-# Whom:			Maxim Ignatenko <gelraen.ua@gmail.com>
-#
-# $FreeBSD: ports/devel/qt4-qdoc3/Makefile,v 1.10 2012/11/17 05:56:55 svnexp Exp $
-#
+# Created by: Maxim Ignatenko <gelraen.ua@gmail.com>
+# $FreeBSD: ports/devel/qt4-qdoc3/Makefile,v 1.11 2013/02/03 21:43:08 svnexp Exp $
 
 PORTNAME=	qdoc3
 DISTVERSION=	${QT4_VERSION}
