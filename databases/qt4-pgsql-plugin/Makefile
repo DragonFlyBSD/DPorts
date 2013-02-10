@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:		qt-pgsql-plugin
-# Date created:                         	5 August 2003
-# Whom:                                        	Lauri Watts <lauri@kde.org>
-#
-# $FreeBSD: ports/databases/qt4-pgsql-plugin/Makefile,v 1.19 2012/11/17 05:55:23 svnexp Exp $
-#
+# Created by: Lauri Watts <lauri@kde.org>
+# $FreeBSD: ports/databases/qt4-pgsql-plugin/Makefile,v 1.20 2013/02/03 21:42:50 svnexp Exp $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
