@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/textproc/qt4-xml/Makefile,v 1.19 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/textproc/qt4-xml/Makefile,v 1.20 2013/02/03 21:44:07 svnexp Exp $
 
 PORTNAME=	xml
 DISTVERSION=	${QT4_VERSION}
