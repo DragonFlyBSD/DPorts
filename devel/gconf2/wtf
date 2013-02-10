@@ -1,0 +1,1017 @@
+====>> Mounting system devices for master-2
+/etc/resolv.conf -> /usr/local/poudriere/jails/master-2/etc/resolv.conf
+====>> Mounting ports from: /pfs/poudriere.ports.potential
+====>> Mounting packages from: /usr/local/poudriere/data/packages/master-2-potential
+====>> Populating LOCALBASE
+====>> Calculating ports order and dependencies
+====>> Computing deps for devel/gmake
+====>> Computing deps for textproc/intltool
+====>> Computing deps for ports-mgmt/pkg
+====>> Computing deps for devel/libtool
+====>> Computing deps for devel/gettext
+====>> Computing deps for textproc/p5-XML-Parser
+====>> Computing deps for devel/pkgconf
+====>> Computing deps for devel/dbus-glib
+====>> Computing deps for converters/libiconv
+====>> Computing deps for lang/perl5.14
+====>> Computing deps for sysutils/polkit
+====>> Computing deps for devel/dbus
+====>> Computing deps for devel/gobject-introspection
+====>> Computing deps for textproc/expat2
+====>> Computing deps for x11/libICE
+====>> Computing deps for accessibility/atk
+====>> Computing deps for x11/xtrans
+====>> Computing deps for lang/python27
+====>> Computing deps for devel/glib20
+====>> Computing deps for x11-toolkits/gtk20
+====>> Computing deps for x11/xproto
+====>> Computing deps for devel/bison
+====>> Computing deps for devel/pcre
+====>> Computing deps for x11/libXext
+====>> Computing deps for devel/m4
+====>> Computing deps for x11/libSM
+====>> Computing deps for x11/xextproto
+====>> Computing deps for devel/xorg-macros
+====>> Computing deps for devel/libffi
+====>> Computing deps for devel/gio-fam-backend
+====>> Computing deps for x11/libX11
+====>> Computing deps for devel/gamin
+====>> Computing deps for x11/libxcb
+====>> Computing deps for textproc/docbook-410
+====>> Computing deps for textproc/libxml2
+====>> Computing deps for devel/libIDL
+====>> Computing deps for devel/libcheck
+====>> Computing deps for archivers/unzip
+====>> Computing deps for sysutils/gnome_subr
+====>> Computing deps for textproc/libxslt
+====>> Computing deps for textproc/iso8879
+====>> Computing deps for devel/ORBit2
+====>> Computing deps for x11-toolkits/pango
+====>> Computing deps for security/libgcrypt
+====>> Computing deps for textproc/xmlcatmgr
+====>> Computing deps for devel/dconf
+====>> Computing deps for print/freetype2
+====>> Computing deps for textproc/docbook-xsl
+====>> Computing deps for security/libgpg-error
+====>> Computing deps for lang/vala
+====>> Computing deps for x11-fonts/libXft
+====>> Computing deps for textproc/docbook
+====>> Computing deps for x11/xcb-proto
+====>> Computing deps for misc/gnomehier
+====>> Computing deps for textproc/docbook-420
+====>> Computing deps for x11-fonts/fontconfig
+====>> Computing deps for devel/libpthread-stubs
+====>> Computing deps for devel/libgee
+====>> Computing deps for textproc/docbook-430
+====>> Computing deps for x11/libXau
+====>> Computing deps for x11/libXrender
+====>> Computing deps for textproc/docbook-440
+====>> Computing deps for x11/libXdmcp
+====>> Computing deps for x11/renderproto
+====>> Computing deps for textproc/docbook-450
+====>> Computing deps for x11/bigreqsproto
+====>> Computing deps for x11/xcmiscproto
+====>> Computing deps for textproc/docbook-sk
+====>> Computing deps for x11/kbproto
+====>> Computing deps for graphics/cairo
+====>> Computing deps for x11/inputproto
+====>> Computing deps for x11/xcb-util-renderutil
+====>> Computing deps for textproc/docbook-xml
+====>> Computing deps for x11-fonts/xf86bigfontproto
+====>> Computing deps for x11/xcb-util
+====>> Computing deps for textproc/docbook-xml-430
+====>> Computing deps for devel/gperf
+====>> Computing deps for x11/libXinerama
+====>> Computing deps for textproc/docbook-xml-440
+====>> Computing deps for x11/xineramaproto
+====>> Computing deps for textproc/docbook-xml-450
+====>> Computing deps for graphics/png
+====>> Computing deps for x11/libXi
+====>> Computing deps for textproc/docbook-500
+====>> Computing deps for devel/cmake
+====>> Computing deps for x11/libXrandr
+====>> Computing deps for devel/cmake-modules
+====>> Computing deps for textproc/xmlcharent
+====>> Computing deps for x11/randrproto
+====>> Computing deps for x11/pixman
+====>> Computing deps for devel/eggdbus
+====>> Computing deps for x11/libXcursor
+====>> Computing deps for x11-fonts/xorg-fonts-truetype
+====>> Computing deps for x11/fixesproto
+====>> Computing deps for x11-fonts/font-bh-ttf
+====>> Computing deps for x11/libXfixes
+====>> Computing deps for x11-fonts/mkfontdir
+====>> Computing deps for x11-fonts/mkfontscale
+====>> Computing deps for x11/libXdamage
+====>> Computing deps for x11-fonts/libfontenc
+====>> Computing deps for x11/damageproto
+====>> Computing deps for x11-fonts/font-misc-meltho
+====>> Computing deps for x11/libXcomposite
+====>> Computing deps for x11-fonts/font-misc-ethiopic
+====>> Computing deps for x11/compositeproto
+====>> Computing deps for x11-fonts/encodings
+====>> Computing deps for x11-fonts/bdftopcf
+====>> Computing deps for graphics/gtk-update-icon-cache
+====>> Computing deps for x11-fonts/libXfont
+====>> Computing deps for graphics/gdk-pixbuf2
+====>> Computing deps for x11-fonts/fontsproto
+====>> Computing deps for x11-toolkits/libXt
+====>> Computing deps for x11-fonts/font-util
+====>> Computing deps for x11-fonts/bitstream-vera
+====>> Computing deps for graphics/jasper
+====>> Computing deps for graphics/jpeg
+====>> Computing deps for graphics/tiff
+====>> Computing deps for graphics/jbigkit
+====>> Computing deps for misc/shared-mime-info
+====>> Computing deps for misc/hicolor-icon-theme
+====>> Computing deps for print/cups-client
+====>> Deleting stale symlinks
+====>> Cleaning the build queue
+===>   gconf2-2.32.0_3 depends on file: /usr/local/sbin/pkg - not found
+===>    Verifying install for /usr/local/sbin/pkg in /usr/dports/ports-mgmt/pkg
+===>   Installing existing package /usr/packages/All/pkg-1.0.3_1.txz
+Installing pkg-1.0.3_1... done
+If you are upgrading from the old package format, first run:
+
+  # pkg2ng
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on package: libtool>=2.4 - not found
+===>    Verifying install for libtool>=2.4 in /usr/dports/devel/libtool
+===>   Installing existing package /usr/packages/All/libtool-2.4.2.txz
+Installing libtool-2.4.2... done
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on executable: gmake - not found
+===>    Verifying install for gmake in /usr/dports/devel/gmake
+===>   Installing existing package /usr/packages/All/gmake-3.82_1.txz
+Installing gmake-3.82_1...Installing gettext-0.18.1.1...Installing libiconv-1.14... done
+ done
+ done
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on package: libtool>=2.4 - found
+===>   gconf2-2.32.0_3 depends on file: /usr/local/bin/intltool-extract - not found
+===>    Verifying install for /usr/local/bin/intltool-extract in /usr/dports/textproc/intltool
+===>   Installing existing package /usr/packages/All/intltool-0.41.1.txz
+Installing intltool-0.41.1...Installing expat-2.0.1_2... done
+Installing p5-XML-Parser-2.41...Installing perl-5.14.2_2...Removing stale symlinks from /usr/bin...
+    Skipping /usr/bin/perl
+    Skipping /usr/bin/perl5
+Done.
+Creating various symlinks in /usr/bin...
+    Symlinking /usr/local/bin/perl5.14.2 to /usr/bin/perl
+    Symlinking /usr/local/bin/perl5.14.2 to /usr/bin/perl5
+Done.
+Cleaning up /etc/make.conf... Done.
+Spamming /etc/make.conf... Done.
+ done
+ done
+ done
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on executable: pkgconf - not found
+===>    Verifying install for pkgconf in /usr/dports/devel/pkgconf
+===>   Installing existing package /usr/packages/All/pkgconf-0.8.9.txz
+Installing pkgconf-0.8.9... done
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on shared library: dbus-glib-1.2 - not found
+===>    Verifying install for dbus-glib-1.2 in /usr/dports/devel/dbus-glib
+===>   Installing existing package /usr/packages/All/dbus-glib-0.94.txz
+Installing dbus-glib-0.94...Installing dbus-1.4.14_4...Installing gnome_subr-1.0... done
+Installing kbproto-1.0.5... done
+Installing libICE-1.0.7,1...Installing xproto-7.0.22... done
+ done
+Installing libSM-1.2.0,1... done
+Installing libX11-1.4.4,1...Installing libXau-1.0.6... done
+Installing libXdmcp-1.1.0... done
+Installing libpthread-stubs-0.3_3... done
+Installing libxcb-1.7... done
+ done
+Installing libxml2-2.7.8_5... done
+===> Creating users and/or groups.
+Creating group 'messagebus' with gid '556'.
+Creating user 'messagebus' with uid '556'.
+ done
+Installing gamin-0.1.10_4...Installing glib-2.28.8_4...Installing pcre-8.31_1... done
+Installing python27-2.7.3_3... done
+No schema files found: doing nothing.
+ done
+ done
+Installing gio-fam-backend-2.28.8_1... done
+ done
+====
+Note that some of the standard modules are provided as separate
+ports since they require extra dependencies:
+
+bsddb           databases/py-bsddb
+gdbm            databases/py-gdbm
+sqlite3		databases/py-sqlite3
+tkinter         x11-toolkits/py-tkinter
+
+Install them as needed.
+====
+===============================================================================
+
+Gamin will only provide realtime notification of changes for at most n files,
+where n is the minimum value between (kern.maxfiles * 0.7) and
+(kern.maxfilesperproc - 200). Beyond that limit, files will be polled.
+
+If you often open several large folders with Nautilus, you might want to
+increase the kern.maxfiles tunable (you do not need to set
+kern.maxfilesperproc, since it is computed at boot time from kern.maxfiles).
+
+For a typical desktop, add the following line to /boot/loader.conf, then
+reboot the system:
+
+    kern.maxfiles="25000"
+
+The behavior of gamin can be controlled via the various gaminrc files.
+See http://www.gnome.org/~veillard/gamin/config.html on how to create
+these files.  In particular, if you find gam_server is taking up too much
+CPU time polling for changes, something like the following may help
+in one of the gaminrc files:
+
+# reduce polling frequency to once per 10 seconds
+# for UFS file systems in order to lower CPU load
+fsset ufs poll 10
+
+===============================================================================
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on shared library: polkit-gobject-1.0 - not found
+===>    Verifying install for polkit-gobject-1.0 in /usr/dports/sysutils/polkit
+===>   Installing existing package /usr/packages/All/polkit-0.99.txz
+Installing polkit-0.99...Installing eggdbus-0.6_1... done
+Installing gobject-introspection-0.10.8_2...Installing libffi-3.0.9... done
+ done
+ done
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on shared library: intl - found
+===>   gconf2-2.32.0_3 depends on shared library: atk-1.0.0 - not found
+===>    Verifying install for atk-1.0.0 in /usr/dports/accessibility/atk
+===>   Installing existing package /usr/packages/All/atk-2.0.1.txz
+Installing atk-2.0.1... done
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on shared library: glib-2.0.0 - found
+===>   gconf2-2.32.0_3 depends on shared library: gtk-x11-2.0.0 - not found
+===>    Verifying install for gtk-x11-2.0.0 in /usr/dports/x11-toolkits/gtk20
+===>   Installing existing package /usr/packages/All/gtk-2.24.6_2.txz
+Installing gtk-2.24.6_2...Installing bitstream-vera-1.10_5...Installing fontconfig-2.9.0,1...Installing freetype2-2.4.9_1... done
+Running fc-cache to build fontconfig cache...
+/usr/local/share/fonts: skipping, no such directory
+/usr/local/lib/X11/fonts: caching, new cache contents: 0 fonts, 1 dirs
+/usr/local/lib/X11/fonts/local: caching, new cache contents: 0 fonts, 0 dirs
+/root/.fonts: skipping, no such directory
+/var/db/fontconfig: cleaning cache directory
+/root/.fontconfig: not cleaning non-existent cache directory
+fc-cache: succeeded
+ done
+/usr/local/lib/X11/fonts/bitstream-vera: caching, new cache contents: 10 fonts, 0 dirs
+/var/db/fontconfig: cleaning cache directory
+/var/db/fontconfig: invalid cache file: deea84fa067eec67b69dab1b2344175b-le64.cache-3
+/root/.fontconfig: not cleaning non-existent cache directory
+/usr/local/bin/fc-cache: succeeded
+ done
+Installing cairo-1.10.2_4,2...Installing libXrender-0.9.6...Installing renderproto-0.11.1... done
+ done
+Installing pixman-0.24.2... done
+Installing png-1.5.13... done
+Installing xcb-util-renderutil-0.3.8...Installing xcb-util-0.3.8,1... done
+ done
+ done
+Installing compositeproto-0.4.2... done
+Installing cups-client-1.5.4... done
+Installing damageproto-1.2.1... done
+Installing encodings-1.0.4,1...Installing font-util-1.2.0... done
+ done
+Installing fixesproto-5.0... done
+Installing font-bh-ttf-1.0.3...Installing libfontenc-1.1.0... done
+Installing mkfontdir-1.0.6...Installing mkfontscale-1.0.9... done
+ done
+ done
+Installing font-misc-ethiopic-1.0.3... done
+Installing font-misc-meltho-1.0.3... done
+Installing gdk-pixbuf-2.23.5_3...Installing inputproto-2.0.2... done
+Installing jasper-1.900.1_10...Installing jpeg-8_4... done
+ done
+Installing jbigkit-1.6... done
+Installing libXext-1.3.0_1,1...Installing xextproto-7.2.0... done
+ done
+Installing libXi-1.4.5,1... done
+Installing libXt-1.1.1,1... done
+Installing tiff-4.0.3... done
+ done
+Installing gtk-update-icon-cache-2.24.6_1...Installing hicolor-icon-theme-0.12... done
+Installing libXcomposite-0.4.3,1...Installing libXfixes-5.0... done
+ done
+Installing libXcursor-1.1.12... done
+Installing libXdamage-1.1.3... done
+Installing libXft-2.1.14... done
+Installing libXinerama-1.1.1,1...Installing xineramaproto-1.2.1... done
+ done
+Installing libXrandr-1.3.2...Installing randrproto-1.3.2... done
+ done
+Installing pango-1.28.4_1...Installing xorg-fonts-truetype-7.5.1... done
+ done
+Installing shared-mime-info-1.0_1... done
+ done
+ done
+IMPORTANT - READ CAREFULLY: Please read the COPYRIGHT included with these fonts
+before using.  The copyright can be found at /usr/local/lib/X11/fonts/bitstream-vera/COPYRIGHT.TXT.  To
+use these fonts, follow the instructions below.
+
+Make sure that the freetype module is loaded.  If it is not, add the following
+line to the "Modules" section of your X Windows configuration file:
+
+	Load "freetype"
+
+Add the following line to the "Files" section of X Windows configuration file:
+
+	FontPath "/usr/local/lib/X11/fonts/bitstream-vera/"
+
+Note: your X Windows configuration file is typically /etc/X11/xorg.conf
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on shared library: IDL-2.0 - not found
+===>    Verifying install for IDL-2.0 in /usr/dports/devel/libIDL
+===>   Installing existing package /usr/packages/All/libIDL-0.8.14_1.txz
+Installing libIDL-0.8.14_1... done
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on shared library: xml2.5 - found
+===>   gconf2-2.32.0_3 depends on shared library: ORBit-2.0 - not found
+===>    Verifying install for ORBit-2.0 in /usr/dports/devel/ORBit2
+===>   Installing existing package /usr/packages/All/ORBit2-2.14.19.txz
+Installing ORBit2-2.14.19... done
+===>   Returning to build of gconf2-2.32.0_3
+===>   gconf2-2.32.0_3 depends on shared library: pango-1.0.0 - found
+===>   gconf2-2.32.0_3 depends on shared library: dconf.0 - not found
+===>    Verifying install for dconf.0 in /usr/dports/devel/dconf
+===>   Installing existing package /usr/packages/All/dconf-0.5.1_4.txz
+Installing dconf-0.5.1_4...Installing libgee-0.6.2.1... done
+ done
+===>   Returning to build of gconf2-2.32.0_3
+====>> Building with flags: NO_DEPENDS=yes PREFIX=/usr/local
+====>> Cleaning workspace
+===>  Cleaning for gconf2-2.32.0_3
+====>> Removing existing /usr/local
+====>> Populating PREFIX
+build started at Fri Dec 21 16:06:52 CET 2012
+port directory: /usr/dports/devel/gconf2
+building for: 3.3-DEVELOPMENT x86_64
+maintained by: gnome@FreeBSD.org
+Makefile ident:      $FreeBSD: ports/devel/gconf2/Makefile,v 1.99 2012/11/17 05:55:44 svnexp Exp $
+---Begin Environment---
+PREFIX=/usr/local
+NO_DEPENDS=yes
+PKGREPOSITORY=/tmp/pkgs
+PACKAGES=/tmp/pkgs
+STATUS=1
+PKG_EXT=txz
+FORCE_PACKAGE=yes
+tpid=86007
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/pkg/bin:/usr/pkg/sbin:/usr/local/sbin:/usr/local/bin:/root/bin
+POUDRIERE_BUILD_TYPE=testport
+PKGNG=1
+PKG_DELETE=/usr/local/sbin/pkg delete -y -f
+PKG_ADD=/usr/local/sbin/pkg add
+PWD=/usr/ports/devel/gconf2
+LOGS=/usr/local/poudriere/data/logs
+DEVELOPER_MODE=yes
+HOME=/root
+USER=root
+SKIPSANITY=1
+LOCALBASE=/usr/local
+PACKAGE_BUILDING=yes
+---End Environment---
+
+---Begin OPTIONS List---
+===> The following configuration options are available for gconf2-2.32.0_3:
+     LDAP=off: Enable LDAP support
+===> Use 'make config' to modify these settings
+---End OPTIONS List---
+=======================<phase: check-config>==========================
+======================================================================
+=======================<phase: fetch       >==========================
+===>  License LGPL20 accepted by the user
+======================================================================
+=======================<phase: checksum    >==========================
+===>  License LGPL20 accepted by the user
+=> SHA256 Checksum OK for gnome2/GConf-2.32.0.tar.bz2.
+======================================================================
+=======================<phase: extract     >==========================
+===>  License LGPL20 accepted by the user
+===>  Extracting for gconf2-2.32.0_3
+=> SHA256 Checksum OK for gnome2/GConf-2.32.0.tar.bz2.
+======================================================================
+=======================<phase: patch       >==========================
+===>  Patching for gconf2-2.32.0_3
+===>  Applying ports patches for gconf2-2.32.0_3
+======================================================================
+=======================<phase: configure   >==========================
+===>  Configuring for gconf2-2.32.0_3
+checking for a BSD-compatible install... /usr/bin/install -c -o root -g wheel
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether gmake sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... x86_64-dports-dragonfly3.3
+checking host system type... x86_64-dports-dragonfly3.3
+checking for gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for style of include used by gmake... GNU
+checking dependency style of cc... gcc3
+checking whether we are using the GNU C++ compiler... yes
+checking whether c++ accepts -g... yes
+checking dependency style of c++... gcc3
+checking for library containing strerror... none required
+checking for gcc... (cached) cc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to accept ISO C89... (cached) none needed
+checking dependency style of cc... (cached) gcc3
+checking how to run the C preprocessor... cpp
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by cc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... (cached) 262144
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... no
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether c++ accepts -g... (cached) yes
+checking dependency style of c++... (cached) gcc3
+checking how to run the C++ preprocessor... c++ -E
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... dragonfly3.3 ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for ld used by c++... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking whether the c++ linker (/usr/bin/ld) supports shared libraries... yes
+checking for c++ option to produce PIC... -fPIC -DPIC
+checking if c++ PIC flag -fPIC -DPIC works... yes
+checking if c++ static flag -static works... yes
+checking if c++ supports -c -o file.o... yes
+checking if c++ supports -c -o file.o... (cached) yes
+checking whether the c++ linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... dragonfly3.3 ld.so
+checking how to hardcode library paths into programs... immediate
+checking for glib-genmarshal... /usr/local/bin/glib-genmarshal
+configure: Will build with debug checks but no debug spew
+checking for pkg-config... /usr/local/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for gtkdoc-check... no
+checking for gtkdoc-rebase... no
+checking for gtkdoc-mkpdf... no
+checking whether to build gtk-doc documentation... no
+checking for DEPENDENT... yes
+checking for DEPENDENT_WITH_XML... yes
+checking for DEPENDENT_WITH_GTK... yes
+checking for DEPENDENT_WITH_XML_AND_GTK... yes
+checking for DEPENDENT_DBUS... yes
+checking for DEFAULTS... yes
+checking for GSETTINGS... yes
+checking for gio-querymodules... /usr/local/bin/gio-querymodules
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking sys/wait.h usability... yes
+checking sys/wait.h presence... yes
+checking for sys/wait.h... yes
+checking for getuid... yes
+checking for sigaction... yes
+checking for fsync... yes
+checking for fchmod... yes
+checking for fdwalk... no
+checking whether NLS is requested... yes
+checking for intltool >= 0.35.0... 0.41.1 found
+checking for intltool-update... /usr/local/bin/intltool-update
+checking for intltool-merge... /usr/local/bin/intltool-merge
+checking for intltool-extract... /usr/local/bin/intltool-extract
+checking for xgettext... /usr/local/bin/xgettext
+checking for msgmerge... /usr/local/bin/msgmerge
+checking for msgfmt... /usr/local/bin/msgfmt
+checking for gmsgfmt... /usr/local/bin/msgfmt
+checking for perl... /usr/bin/perl
+checking for perl >= 5.8.1... 5.14.2
+checking for XML::Parser... ok
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for LC_MESSAGES... yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking for ngettext in libc... no
+checking for bindtextdomain in -lintl... yes
+checking for ngettext in -lintl... yes
+checking for dgettext in -lintl... yes
+checking for bind_textdomain_codeset... yes
+checking for msgfmt... (cached) /usr/local/bin/msgfmt
+checking for dcgettext... yes
+checking if msgfmt accepts -c... yes
+checking for gmsgfmt... (cached) /usr/local/bin/msgfmt
+checking for xgettext... (cached) /usr/local/bin/xgettext
+checking for bind_textdomain_codeset... (cached) yes
+checking for gobject-introspection... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating gconf-2.m4
+config.status: creating gconf-zip
+config.status: creating gconf/Makefile
+config.status: creating backends/Makefile
+config.status: creating po/Makefile.in
+config.status: creating doc/Makefile
+config.status: creating doc/gconf/Makefile
+config.status: creating examples/Makefile
+config.status: creating tests/Makefile
+config.status: creating defaults/Makefile
+config.status: creating gsettings/Makefile
+config.status: creating gconf-2.0.pc
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing default-1 commands
+config.status: executing po/stamp-it commands
+
+	sysconfsubdir:	gconf
+
+	gtk+:		yes
+	ldap:		no
+	policykit:	yes
+	gsettings:	yes
+	introspection:  yes
+
+
+======================================================================
+=======================<phase: build       >==========================
+===>  Building for gconf2-2.32.0_3
+gmake  all-recursive
+gmake[1]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0'
+Making all in gconf
+gmake[2]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf'
+/usr/local/bin/orbit-idl-2 ./GConfX.idl
+orbit-idl-2 2.14.19 compiling
+  mode, hide preprocessor errors, passes: stubs skels common headers 
+
+Processing file ./GConfX.idl
+/usr/local/bin/glib-genmarshal gconfmarshal.list --header --prefix=gconf_marshal > gconfmarshal.h
+echo "#include \"gconfmarshal.h\"" > gconfmarshal.c && \
+/usr/local/bin/glib-genmarshal gconfmarshal.list --body --prefix=gconf_marshal >> gconfmarshal.c
+gmake  all-am
+gmake[3]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf'
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-internals.lo -MD -MP -MF .deps/gconf-internals.Tpo -c -o gconf-internals.lo gconf-internals.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-internals.lo -MD -MP -MF .deps/gconf-internals.Tpo -c gconf-internals.c  -fPIC -DPIC -o .libs/gconf-internals.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-internals.lo -MD -MP -MF .deps/gconf-internals.Tpo -c gconf-internals.c -o gconf-internals.o >/dev/null 2>&1
+mv -f .deps/gconf-internals.Tpo .deps/gconf-internals.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-backend.lo -MD -MP -MF .deps/gconf-backend.Tpo -c -o gconf-backend.lo gconf-backend.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-backend.lo -MD -MP -MF .deps/gconf-backend.Tpo -c gconf-backend.c  -fPIC -DPIC -o .libs/gconf-backend.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-backend.lo -MD -MP -MF .deps/gconf-backend.Tpo -c gconf-backend.c -o gconf-backend.o >/dev/null 2>&1
+mv -f .deps/gconf-backend.Tpo .deps/gconf-backend.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-changeset.lo -MD -MP -MF .deps/gconf-changeset.Tpo -c -o gconf-changeset.lo gconf-changeset.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-changeset.lo -MD -MP -MF .deps/gconf-changeset.Tpo -c gconf-changeset.c  -fPIC -DPIC -o .libs/gconf-changeset.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-changeset.lo -MD -MP -MF .deps/gconf-changeset.Tpo -c gconf-changeset.c -o gconf-changeset.o >/dev/null 2>&1
+mv -f .deps/gconf-changeset.Tpo .deps/gconf-changeset.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-error.lo -MD -MP -MF .deps/gconf-error.Tpo -c -o gconf-error.lo gconf-error.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-error.lo -MD -MP -MF .deps/gconf-error.Tpo -c gconf-error.c  -fPIC -DPIC -o .libs/gconf-error.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-error.lo -MD -MP -MF .deps/gconf-error.Tpo -c gconf-error.c -o gconf-error.o >/dev/null 2>&1
+mv -f .deps/gconf-error.Tpo .deps/gconf-error.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-listeners.lo -MD -MP -MF .deps/gconf-listeners.Tpo -c -o gconf-listeners.lo gconf-listeners.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-listeners.lo -MD -MP -MF .deps/gconf-listeners.Tpo -c gconf-listeners.c  -fPIC -DPIC -o .libs/gconf-listeners.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-listeners.lo -MD -MP -MF .deps/gconf-listeners.Tpo -c gconf-listeners.c -o gconf-listeners.o >/dev/null 2>&1
+mv -f .deps/gconf-listeners.Tpo .deps/gconf-listeners.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-locale.lo -MD -MP -MF .deps/gconf-locale.Tpo -c -o gconf-locale.lo gconf-locale.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-locale.lo -MD -MP -MF .deps/gconf-locale.Tpo -c gconf-locale.c  -fPIC -DPIC -o .libs/gconf-locale.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-locale.lo -MD -MP -MF .deps/gconf-locale.Tpo -c gconf-locale.c -o gconf-locale.o >/dev/null 2>&1
+mv -f .deps/gconf-locale.Tpo .deps/gconf-locale.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-schema.lo -MD -MP -MF .deps/gconf-schema.Tpo -c -o gconf-schema.lo gconf-schema.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-schema.lo -MD -MP -MF .deps/gconf-schema.Tpo -c gconf-schema.c  -fPIC -DPIC -o .libs/gconf-schema.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-schema.lo -MD -MP -MF .deps/gconf-schema.Tpo -c gconf-schema.c -o gconf-schema.o >/dev/null 2>&1
+mv -f .deps/gconf-schema.Tpo .deps/gconf-schema.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-sources.lo -MD -MP -MF .deps/gconf-sources.Tpo -c -o gconf-sources.lo gconf-sources.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-sources.lo -MD -MP -MF .deps/gconf-sources.Tpo -c gconf-sources.c  -fPIC -DPIC -o .libs/gconf-sources.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-sources.lo -MD -MP -MF .deps/gconf-sources.Tpo -c gconf-sources.c -o gconf-sources.o >/dev/null 2>&1
+mv -f .deps/gconf-sources.Tpo .deps/gconf-sources.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-value.lo -MD -MP -MF .deps/gconf-value.Tpo -c -o gconf-value.lo gconf-value.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-value.lo -MD -MP -MF .deps/gconf-value.Tpo -c gconf-value.c  -fPIC -DPIC -o .libs/gconf-value.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-value.lo -MD -MP -MF .deps/gconf-value.Tpo -c gconf-value.c -o gconf-value.o >/dev/null 2>&1
+mv -f .deps/gconf-value.Tpo .deps/gconf-value.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf.lo -MD -MP -MF .deps/gconf.Tpo -c -o gconf.lo gconf.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf.lo -MD -MP -MF .deps/gconf.Tpo -c gconf.c  -fPIC -DPIC -o .libs/gconf.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf.lo -MD -MP -MF .deps/gconf.Tpo -c gconf.c -o gconf.o >/dev/null 2>&1
+mv -f .deps/gconf.Tpo .deps/gconf.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-client.lo -MD -MP -MF .deps/gconf-client.Tpo -c -o gconf-client.lo gconf-client.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-client.lo -MD -MP -MF .deps/gconf-client.Tpo -c gconf-client.c  -fPIC -DPIC -o .libs/gconf-client.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-client.lo -MD -MP -MF .deps/gconf-client.Tpo -c gconf-client.c -o gconf-client.o >/dev/null 2>&1
+mv -f .deps/gconf-client.Tpo .deps/gconf-client.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-enum-types.lo -MD -MP -MF .deps/gconf-enum-types.Tpo -c -o gconf-enum-types.lo gconf-enum-types.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-enum-types.lo -MD -MP -MF .deps/gconf-enum-types.Tpo -c gconf-enum-types.c  -fPIC -DPIC -o .libs/gconf-enum-types.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT gconf-enum-types.lo -MD -MP -MF .deps/gconf-enum-types.Tpo -c gconf-enum-types.c -o gconf-enum-types.o >/dev/null 2>&1
+mv -f .deps/gconf-enum-types.Tpo .deps/gconf-enum-types.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT GConfX-common.lo -MD -MP -MF .deps/GConfX-common.Tpo -c -o GConfX-common.lo GConfX-common.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT GConfX-common.lo -MD -MP -MF .deps/GConfX-common.Tpo -c GConfX-common.c  -fPIC -DPIC -o .libs/GConfX-common.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT GConfX-common.lo -MD -MP -MF .deps/GConfX-common.Tpo -c GConfX-common.c -o GConfX-common.o >/dev/null 2>&1
+mv -f .deps/GConfX-common.Tpo .deps/GConfX-common.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT GConfX-skels.lo -MD -MP -MF .deps/GConfX-skels.Tpo -c -o GConfX-skels.lo GConfX-skels.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT GConfX-skels.lo -MD -MP -MF .deps/GConfX-skels.Tpo -c GConfX-skels.c  -fPIC -DPIC -o .libs/GConfX-skels.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT GConfX-skels.lo -MD -MP -MF .deps/GConfX-skels.Tpo -c GConfX-skels.c -o GConfX-skels.o >/dev/null 2>&1
+mv -f .deps/GConfX-skels.Tpo .deps/GConfX-skels.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT GConfX-stubs.lo -MD -MP -MF .deps/GConfX-stubs.Tpo -c -o GConfX-stubs.lo GConfX-stubs.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT GConfX-stubs.lo -MD -MP -MF .deps/GConfX-stubs.Tpo -c GConfX-stubs.c  -fPIC -DPIC -o .libs/GConfX-stubs.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include -O -pipe -Wall -MT GConfX-stubs.lo -MD -MP -MF .deps/GConfX-stubs.Tpo -c GConfX-stubs.c -o GConfX-stubs.o >/dev/null 2>&1
+mv -f .deps/GConfX-stubs.Tpo .deps/GConfX-stubs.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall -version-info 5:5:1 -no-undefined -L/usr/local/lib -o libgconf-2.la -rpath /usr/local/lib gconf-internals.lo gconf-backend.lo gconf-changeset.lo gconf-error.lo gconf-listeners.lo gconf-locale.lo gconf-schema.lo gconf-sources.lo gconf-value.lo gconf.lo gconf-client.lo gconf-enum-types.lo GConfX-common.lo GConfX-skels.lo GConfX-stubs.lo  -lintl  -lgio-2.0 -Wl,--export-dynamic -lgmodule-2.0 -lORBit-2 -lgobject-2.0 -lgthread-2.0 -pthread -L/usr/local/lib -lglib-2.0   
+gnome-libtool: link: cc -shared  -fPIC -DPIC  .libs/gconf-internals.o .libs/gconf-backend.o .libs/gconf-changeset.o .libs/gconf-error.o .libs/gconf-listeners.o .libs/gconf-locale.o .libs/gconf-schema.o .libs/gconf-sources.o .libs/gconf-value.o .libs/gconf.o .libs/gconf-client.o .libs/gconf-enum-types.o .libs/GConfX-common.o .libs/GConfX-skels.o .libs/GConfX-stubs.o   -Wl,-rpath -Wl,/usr/local/lib -Wl,-rpath -Wl,/usr/local/lib -L/usr/local/lib /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libORBit-2.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so /usr/local/lib/libpcre.so  -O -Wl,--export-dynamic -pthread   -pthread -Wl,-soname -Wl,libgconf-2.so.4 -o .libs/libgconf-2.so.4
+gnome-libtool: link: (cd ".libs" && rm -f "libgconf-2.so" && ln -s "libgconf-2.so.4" "libgconf-2.so")
+gnome-libtool: link: (cd ".libs" && rm -f "libgconf-2.so" && ln -s "libgconf-2.so.4" "libgconf-2.so")
+gnome-libtool: link: ar cru .libs/libgconf-2.a  gconf-internals.o gconf-backend.o gconf-changeset.o gconf-error.o gconf-listeners.o gconf-locale.o gconf-schema.o gconf-sources.o gconf-value.o gconf.o gconf-client.o gconf-enum-types.o GConfX-common.o GConfX-skels.o GConfX-stubs.o
+gnome-libtool: link: ranlib .libs/libgconf-2.a
+gnome-libtool: link: ( cd ".libs" && rm -f "libgconf-2.la" && ln -s "../libgconf-2.la" "libgconf-2.la" )
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconftool.o -MD -MP -MF .deps/gconftool.Tpo -c -o gconftool.o gconftool.c
+mv -f .deps/gconftool.Tpo .deps/gconftool.Po
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall  -L/usr/local/lib -o gconftool-2 gconftool.o libgconf-2.la  -lintl  -lgio-2.0 -Wl,--export-dynamic -lgmodule-2.0 -lORBit-2 -lgobject-2.0 -lgthread-2.0 -pthread -lglib-2.0 -L/usr/local/lib -lxml2   
+gnome-libtool: link: cc -O -pipe -Wall -o .libs/gconftool-2 gconftool.o -Wl,--export-dynamic -pthread  -L/usr/local/lib ./.libs/libgconf-2.so /usr/local/lib/libgio-2.0.so /usr/local/lib/libORBit-2.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libpcre.so /usr/local/lib/libxml2.so -lz /usr/local/lib/libiconv.so -lm -pthread -Wl,-rpath -Wl,/usr/local/lib
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"  -I/usr/local/include/dbus-1.0 -I/usr/local/include/dbus-1.0/include -D_REENTRANT -I/usr/local/include/glib-2.0   -O -pipe -Wall -MT gconfd_2-gconf-database.o -MD -MP -MF .deps/gconfd_2-gconf-database.Tpo -c -o gconfd_2-gconf-database.o `test -f 'gconf-database.c' || echo './'`gconf-database.c
+mv -f .deps/gconfd_2-gconf-database.Tpo .deps/gconfd_2-gconf-database.Po
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"  -I/usr/local/include/dbus-1.0 -I/usr/local/include/dbus-1.0/include -D_REENTRANT -I/usr/local/include/glib-2.0   -O -pipe -Wall -MT gconfd_2-gconfd.o -MD -MP -MF .deps/gconfd_2-gconfd.Tpo -c -o gconfd_2-gconfd.o `test -f 'gconfd.c' || echo './'`gconfd.c
+mv -f .deps/gconfd_2-gconfd.Tpo .deps/gconfd_2-gconfd.Po
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"  -I/usr/local/include/dbus-1.0 -I/usr/local/include/dbus-1.0/include -D_REENTRANT -I/usr/local/include/glib-2.0   -O -pipe -Wall  -L/usr/local/lib -o gconfd-2 gconfd_2-gconf-database.o gconfd_2-gconfd.o libgconf-2.la  -lintl  -lgio-2.0 -Wl,--export-dynamic -lgmodule-2.0 -lORBit-2 -lgobject-2.0 -lgthread-2.0 -pthread -L/usr/local/lib -lglib-2.0   -ldbus-glib-1 -ldbus-1 -lgobject-2.0 -lgthread-2.0 -pthread -L/usr/local/lib -lglib-2.0   
+gnome-libtool: link: cc -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\"/usr/local\" -DGCONF_LOCALE_DIR=\"/usr/local/share/locale\" -DGCONF_SRCDIR=\"/wrkdirs/devel/gconf2/work/GConf-2.32.0\" -DGCONF_CONFDIR=\"/usr/local/etc/gconf/2\" -DGCONF_ETCDIR=\"/usr/local/etc/gconf\" -DGCONF_BINDIR=\"/usr/local/bin\" -DGCONF_SERVERDIR=\"/usr/local/libexec\" -DGCONF_BUILDDIR=\"..\" -DGCONF_BACKEND_DIR=\"/usr/local/lib/GConf/2\" -DVERSION=\"2.32.0\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\"gconfd-2\" -I/usr/local/include/dbus-1.0 -I/usr/local/include/dbus-1.0/include -D_REENTRANT -I/usr/local/include/glib-2.0 -O -pipe -Wall -o .libs/gconfd-2 gconfd_2-gconf-database.o gconfd_2-gconfd.o -Wl,--export-dynamic -pthread -pthread  -L/usr/local/lib ./.libs/libgconf-2.so /usr/local/lib/libORBit-2.so /usr/local/lib/libdbus-glib-1.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libdbus-1.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so /usr/local/lib/libpcre.so -pthread -Wl,-rpath -Wl,/usr/local/lib
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   -I/usr/local/include  -O -pipe -Wall -MT gconf-sanity-check.o -MD -MP -MF .deps/gconf-sanity-check.Tpo -c -o gconf-sanity-check.o gconf-sanity-check.c
+mv -f .deps/gconf-sanity-check.Tpo .deps/gconf-sanity-check.Po
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall  -L/usr/local/lib -o gconf-sanity-check-2 gconf-sanity-check.o libgconf-2.la  -lintl  -Wl,--export-dynamic -lORBit-2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXcomposite -lXdamage -lXfixes -lX11 -latk-1.0 -lcairo -lgdk_pixbuf-2.0  -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lm -lgobject-2.0 -lgthread-2.0 -lgmodule-2.0 -pthread -lglib-2.0 -lfreetype -lfontconfig -L/usr/local/lib -lxml2   
+gnome-libtool: link: cc -O -pipe -Wall -o .libs/gconf-sanity-check-2 gconf-sanity-check.o -Wl,--export-dynamic -pthread  -L/usr/local/lib ./.libs/libgconf-2.so /usr/local/lib/libORBit-2.so /usr/local/lib/libgtk-x11-2.0.so /usr/local/lib/libgdk-x11-2.0.so /usr/local/lib/libpangocairo-1.0.so /usr/local/lib/libXinerama.so /usr/local/lib/libXi.so /usr/local/lib/libXrandr.so /usr/local/lib/libXext.so /usr/local/lib/libXcursor.so /usr/local/lib/libXcomposite.so /usr/local/lib/libXdamage.so /usr/local/lib/libXfixes.so /usr/local/lib/libatk-1.0.so /usr/local/lib/libcairo.so /usr/local/lib/libpixman-1.so -lpng15 /usr/local/lib/libxcb-shm.so /usr/local/lib/libxcb-render.so /usr/local/lib/libXrender.so /usr/local/lib/libX11.so /usr/local/lib/libxcb.so /usr/local/lib/libXau.so /usr/local/lib/libXdmcp.so -lrpcsvc /usr/local/lib/libgdk_pixbuf-2.0.so /usr/local/lib/libgio-2.0.so /usr/local/lib/libpangoft2-1.0.so /usr/local/lib/libpango-1.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libpcre.so /usr/local/lib/libfontconfig.so /usr/local/lib/libfreetype.so -lbz2 /usr/local/lib/libexpat.so /usr/local/lib/libxml2.so -lz /usr/local/lib/libiconv.so -lm -pthread -Wl,-rpath -Wl,/usr/local/lib
+/usr/local/bin/g-ir-scanner  --warn-all --add-include-path=. --namespace=GConf --nsversion=2.0 --libtool="/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool"  --include=GObject-2.0   --library=libgconf-2.la --identifier-prefix=GConf --symbol-prefix=gconf -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include   -DG_LOG_DOMAIN=\"GConf\" -DPREFIX=\""/usr/local"\" -DGCONF_LOCALE_DIR=\""/usr/local/share/locale"\" -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_CONFDIR=\""/usr/local/etc/gconf/2"\" -DGCONF_ETCDIR=\""/usr/local/etc/gconf"\" -DGCONF_BINDIR=\""/usr/local/bin"\" -DGCONF_SERVERDIR=\""/usr/local/libexec"\" -DGCONF_BUILDDIR=\"".."\" -DGCONF_BACKEND_DIR=\""/usr/local/lib/GConf/2"\" -DVERSION=\""2.32.0"\" -DGCONF_ENABLE_INTERNALS=1 -DGCONFD=\""gconfd-2"\"   gconf.h gconf-changeset.h gconf-listeners.h gconf-schema.h gconf-value.h gconf-error.h gconf-engine.h gconf-client.h gconf-enum-types.h gconf-internals.c gconf-backend.c gconf-changeset.c gconf-error.c gconf-listeners.c gconf-locale.c gconf-schema.c gconf-sources.c gconf-value.c gconf.c gconf-client.c gconf-enum-types.c GConfX-common.c GConfX-skels.c GConfX-stubs.c libgconf-2.la Makefile --output GConf-2.0.gir
+/usr/include/machine/endian.h:169: syntax error, unexpected '{' in ' return (__extension__ ({ register __uint64_t __X = (_x); __asm ("bswap %0" : "+r" (__X)); __X; }));' at '{'
+/usr/include/machine/endian.h:169: syntax error, unexpected ';' in ' return (__extension__ ({ register __uint64_t __X = (_x); __asm ("bswap %0" : "+r" (__X)); __X; }));' at ';'
+/usr/include/machine/endian.h:176: syntax error, unexpected '{' in ' return (__extension__ ({ register __uint32_t __X = (_x); __asm ("bswap %0" : "+r" (__X)); __X; }));' at '{'
+/usr/include/machine/endian.h:176: syntax error, unexpected ';' in ' return (__extension__ ({ register __uint32_t __X = (_x); __asm ("bswap %0" : "+r" (__X)); __X; }));' at ';'
+/usr/include/machine/endian.h:183: syntax error, unexpected '{' in ' return (__extension__ ({ register __uint16_t __X = (_x); __asm ("xchgb %h0, %b0" : "+Q" (__X)); __X; }));' at '{'
+/usr/include/machine/endian.h:183: syntax error, unexpected ';' in ' return (__extension__ ({ register __uint16_t __X = (_x); __asm ("xchgb %h0, %b0" : "+Q" (__X)); __X; }));' at ';'
+gconf.c:2403: Warning: GConf: gconf_debug_shutdown: unknown parameter 'void' in documentation comment
+gconf-error.h:55: Warning: GConf: gconf_error_quark: Couldn't find corresponding enumeration
+g-ir-scanner: compile: cc -D_REENTRANT -I/usr/local/include/glib-2.0 -O -pipe -Wall -I.. -I.. -I/usr/local/include/orbit-2.0 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include/libxml2 -I/usr/local/include -I/usr/local/include/glib-2.0 -c -o /wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf/tmp-introspectmUAboG/GConf-2.0.o /wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf/tmp-introspectmUAboG/GConf-2.0.c
+g-ir-scanner: link: /bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool --mode=link --tag=CC --silent cc -o /wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf/tmp-introspectmUAboG/GConf-2.0 -export-dynamic -O -pipe -Wall -L. libgconf-2.la -lgio-2.0 -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -pthread -L/usr/local/lib -lglib-2.0 /wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf/tmp-introspectmUAboG/GConf-2.0.o
+sed -e 's,[@]libexecdir[@],/usr/local/libexec,g' \
+	<./org.gnome.GConf.service.in >org.gnome.GConf.service
+/usr/local/bin/g-ir-compiler --includedir=. --includedir=. GConf-2.0.gir -o GConf-2.0.typelib
+gmake[3]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf'
+gmake[2]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf'
+Making all in backends
+gmake[2]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/backends'
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include   -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\"  -I/usr/local/include  -O -pipe -Wall -MT markup-backend.lo -MD -MP -MF .deps/markup-backend.Tpo -c -o markup-backend.lo markup-backend.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT markup-backend.lo -MD -MP -MF .deps/markup-backend.Tpo -c markup-backend.c  -fPIC -DPIC -o .libs/markup-backend.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT markup-backend.lo -MD -MP -MF .deps/markup-backend.Tpo -c markup-backend.c -o markup-backend.o >/dev/null 2>&1
+mv -f .deps/markup-backend.Tpo .deps/markup-backend.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include   -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\"  -I/usr/local/include  -O -pipe -Wall -MT markup-tree.lo -MD -MP -MF .deps/markup-tree.Tpo -c -o markup-tree.lo markup-tree.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT markup-tree.lo -MD -MP -MF .deps/markup-tree.Tpo -c markup-tree.c  -fPIC -DPIC -o .libs/markup-tree.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT markup-tree.lo -MD -MP -MF .deps/markup-tree.Tpo -c markup-tree.c -o markup-tree.o >/dev/null 2>&1
+mv -f .deps/markup-tree.Tpo .deps/markup-tree.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall -avoid-version -module -no-undefined -L/usr/local/lib -o libgconfbackend-xml.la -rpath /usr/local/lib/GConf/2 markup-backend.lo markup-tree.lo -lgio-2.0 -Wl,--export-dynamic -lgmodule-2.0 -lORBit-2 -lgobject-2.0 -lgthread-2.0 -pthread -L/usr/local/lib -lglib-2.0   ../gconf/libgconf-2.la -lintl  
+gnome-libtool: link: cc -shared  -fPIC -DPIC  .libs/markup-backend.o .libs/markup-tree.o   -Wl,-rpath -Wl,/wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf/.libs -Wl,-rpath -Wl,/usr/local/lib -Wl,-rpath -Wl,/usr/local/lib -L/usr/local/lib ../gconf/.libs/libgconf-2.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libORBit-2.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libpcre.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so  -O -Wl,--export-dynamic -pthread   -pthread -Wl,-soname -Wl,libgconfbackend-xml.so -o .libs/libgconfbackend-xml.so
+gnome-libtool: link: ar cru .libs/libgconfbackend-xml.a  markup-backend.o markup-tree.o
+gnome-libtool: link: ranlib .libs/libgconfbackend-xml.a
+gnome-libtool: link: ( cd ".libs" && rm -f "libgconfbackend-xml.la" && ln -s "../libgconfbackend-xml.la" "libgconfbackend-xml.la" )
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include   -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\"  -I/usr/local/include  -O -pipe -Wall -MT xml-cache.lo -MD -MP -MF .deps/xml-cache.Tpo -c -o xml-cache.lo xml-cache.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT xml-cache.lo -MD -MP -MF .deps/xml-cache.Tpo -c xml-cache.c  -fPIC -DPIC -o .libs/xml-cache.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT xml-cache.lo -MD -MP -MF .deps/xml-cache.Tpo -c xml-cache.c -o xml-cache.o >/dev/null 2>&1
+mv -f .deps/xml-cache.Tpo .deps/xml-cache.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include   -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\"  -I/usr/local/include  -O -pipe -Wall -MT xml-dir.lo -MD -MP -MF .deps/xml-dir.Tpo -c -o xml-dir.lo xml-dir.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT xml-dir.lo -MD -MP -MF .deps/xml-dir.Tpo -c xml-dir.c  -fPIC -DPIC -o .libs/xml-dir.o
+xml-dir.c: In function 'dir_load_doc':
+xml-dir.c:1059: warning: pointer targets in passing argument 3 of 'xmlNewDocNode' differ in signedness
+/usr/local/include/libxml2/libxml/tree.h:782: note: expected 'const xmlChar *' but argument is of type 'char *'
+xml-dir.c: In function 'dir_fill_cache_from_doc':
+xml-dir.c:1156: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+/usr/include/string.h:86: note: expected 'const char *' but argument is of type 'xmlChar *'
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT xml-dir.lo -MD -MP -MF .deps/xml-dir.Tpo -c xml-dir.c -o xml-dir.o >/dev/null 2>&1
+mv -f .deps/xml-dir.Tpo .deps/xml-dir.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include   -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\"  -I/usr/local/include  -O -pipe -Wall -MT xml-entry.lo -MD -MP -MF .deps/xml-entry.Tpo -c -o xml-entry.lo xml-entry.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT xml-entry.lo -MD -MP -MF .deps/xml-entry.Tpo -c xml-entry.c  -fPIC -DPIC -o .libs/xml-entry.o
+xml-entry.c: In function 'my_xmlGetProp':
+xml-entry.c:1291: warning: pointer targets in return differ in signedness
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT xml-entry.lo -MD -MP -MF .deps/xml-entry.Tpo -c xml-entry.c -o xml-entry.o >/dev/null 2>&1
+mv -f .deps/xml-entry.Tpo .deps/xml-entry.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include   -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\"  -I/usr/local/include  -O -pipe -Wall -MT xml-backend.lo -MD -MP -MF .deps/xml-backend.Tpo -c -o xml-backend.lo xml-backend.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT xml-backend.lo -MD -MP -MF .deps/xml-backend.Tpo -c xml-backend.c  -fPIC -DPIC -o .libs/xml-backend.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\" -I/usr/local/include -O -pipe -Wall -MT xml-backend.lo -MD -MP -MF .deps/xml-backend.Tpo -c xml-backend.c -o xml-backend.o >/dev/null 2>&1
+mv -f .deps/xml-backend.Tpo .deps/xml-backend.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall -avoid-version -module -no-undefined -L/usr/local/lib -o libgconfbackend-oldxml.la -rpath /usr/local/lib/GConf/2 xml-cache.lo xml-dir.lo xml-entry.lo xml-backend.lo -lgio-2.0 -Wl,--export-dynamic -lgmodule-2.0 -lORBit-2 -lgobject-2.0 -lgthread-2.0 -pthread -lglib-2.0 -L/usr/local/lib -lxml2   ../gconf/libgconf-2.la -lintl  
+gnome-libtool: link: cc -shared  -fPIC -DPIC  .libs/xml-cache.o .libs/xml-dir.o .libs/xml-entry.o .libs/xml-backend.o   -Wl,-rpath -Wl,/usr/local/lib -Wl,-rpath -Wl,/wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf/.libs -Wl,-rpath -Wl,/usr/local/lib -L/usr/local/lib /usr/local/lib/libxml2.so -lm ../gconf/.libs/libgconf-2.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libORBit-2.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libpcre.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so  -O -Wl,--export-dynamic -pthread   -pthread -Wl,-soname -Wl,libgconfbackend-oldxml.so -o .libs/libgconfbackend-oldxml.so
+gnome-libtool: link: ar cru .libs/libgconfbackend-oldxml.a  xml-cache.o xml-dir.o xml-entry.o xml-backend.o
+gnome-libtool: link: ranlib .libs/libgconfbackend-oldxml.a
+gnome-libtool: link: ( cd ".libs" && rm -f "libgconfbackend-oldxml.la" && ln -s "../libgconfbackend-oldxml.la" "libgconfbackend-oldxml.la" )
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include   -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\"  -I/usr/local/include  -O -pipe -Wall -MT gconf-merge-tree.o -MD -MP -MF .deps/gconf-merge-tree.Tpo -c -o gconf-merge-tree.o gconf-merge-tree.c
+mv -f .deps/gconf-merge-tree.Tpo .deps/gconf-merge-tree.Po
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall  -L/usr/local/lib -o gconf-merge-tree gconf-merge-tree.o -lgio-2.0 -Wl,--export-dynamic -lgmodule-2.0 -lORBit-2 -lgobject-2.0 -lgthread-2.0 -pthread -L/usr/local/lib -lglib-2.0   ../gconf/libgconf-2.la 
+gnome-libtool: link: cc -O -pipe -Wall -o .libs/gconf-merge-tree gconf-merge-tree.o -Wl,--export-dynamic -pthread  -L/usr/local/lib ../gconf/.libs/libgconf-2.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libORBit-2.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so /usr/local/lib/libpcre.so -pthread -Wl,-rpath -Wl,/usr/local/lib
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I../gconf -I/usr/local/include/orbit-2.0 -DORBIT2=1 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/libxml2 -I/usr/local/include   -DGCONF_ENABLE_INTERNALS=1 -DG_LOG_DOMAIN=\"GConf-Backends\"  -I/usr/local/include  -O -pipe -Wall -MT xml-test.o -MD -MP -MF .deps/xml-test.Tpo -c -o xml-test.o xml-test.c
+mv -f .deps/xml-test.Tpo .deps/xml-test.Po
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall  -L/usr/local/lib -o xml-test xml-test.o -lgio-2.0 -Wl,--export-dynamic -lgmodule-2.0 -lORBit-2 -lgobject-2.0 -lgthread-2.0 -pthread -lglib-2.0 -L/usr/local/lib -lxml2   ../gconf/libgconf-2.la libgconfbackend-oldxml.la 
+
+*** Warning: Linking the executable xml-test against the loadable module
+*** libgconfbackend-oldxml.so is not portable!
+gnome-libtool: link: cc -O -pipe -Wall -o .libs/xml-test xml-test.o -Wl,--export-dynamic -pthread  -L/usr/local/lib ../gconf/.libs/libgconf-2.so ./.libs/libgconfbackend-oldxml.so /usr/local/lib/libxml2.so -lm /wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf/.libs/libgconf-2.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libORBit-2.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libpcre.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so -pthread -Wl,-rpath -Wl,/usr/local/lib -Wl,-rpath -Wl,/usr/local/lib/GConf/2
+gmake[2]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/backends'
+Making all in po
+gmake[2]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/po'
+file=`echo am | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file am.po
+file=`echo ar | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ar.po
+file=`echo as | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file as.po
+file=`echo ast | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ast.po
+file=`echo az | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file az.po
+file=`echo be | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file be.po
+file=`echo bg | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file bg.po
+file=`echo bn | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file bn.po
+file=`echo bn_IN | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file bn_IN.po
+file=`echo bs | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file bs.po
+file=`echo ca | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ca.po
+file=`echo ca@valencia | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ca@valencia.po
+file=`echo cs | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file cs.po
+file=`echo cy | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file cy.po
+file=`echo da | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file da.po
+file=`echo de | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file de.po
+file=`echo dz | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file dz.po
+file=`echo el | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file el.po
+file=`echo en_CA | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file en_CA.po
+file=`echo en_GB | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file en_GB.po
+file=`echo en@shaw | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file en@shaw.po
+file=`echo es | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file es.po
+file=`echo et | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file et.po
+file=`echo eu | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file eu.po
+file=`echo fa | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file fa.po
+file=`echo fi | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file fi.po
+file=`echo fr | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file fr.po
+file=`echo ga | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ga.po
+file=`echo gl | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file gl.po
+file=`echo gu | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file gu.po
+file=`echo he | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file he.po
+file=`echo hi | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file hi.po
+file=`echo hr | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file hr.po
+file=`echo hu | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file hu.po
+file=`echo hy | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file hy.po
+file=`echo id | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file id.po
+file=`echo is | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file is.po
+file=`echo it | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file it.po
+file=`echo ja | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ja.po
+file=`echo ka | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ka.po
+file=`echo kn | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file kn.po
+file=`echo ko | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ko.po
+file=`echo ku | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ku.po
+file=`echo lt | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file lt.po
+file=`echo lv | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file lv.po
+file=`echo mai | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file mai.po
+file=`echo mg | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file mg.po
+file=`echo mk | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file mk.po
+file=`echo ml | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ml.po
+file=`echo mn | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file mn.po
+file=`echo mr | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file mr.po
+file=`echo ms | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ms.po
+file=`echo nb | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file nb.po
+file=`echo ne | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ne.po
+file=`echo nl | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file nl.po
+file=`echo nn | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file nn.po
+file=`echo oc | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file oc.po
+file=`echo or | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file or.po
+file=`echo pa | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file pa.po
+file=`echo pl | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file pl.po
+file=`echo pt | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file pt.po
+file=`echo pt_BR | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file pt_BR.po
+file=`echo ro | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ro.po
+file=`echo ru | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ru.po
+file=`echo rw | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file rw.po
+file=`echo si | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file si.po
+file=`echo sk | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file sk.po
+file=`echo sl | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file sl.po
+file=`echo sq | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file sq.po
+file=`echo sr | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file sr.po
+file=`echo sr@latin | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file sr@latin.po
+file=`echo sv | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file sv.po
+file=`echo ta | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file ta.po
+file=`echo te | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file te.po
+file=`echo th | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file th.po
+file=`echo tr | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file tr.po
+file=`echo uk | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file uk.po
+file=`echo vi | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file vi.po
+file=`echo xh | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file xh.po
+file=`echo yi | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file yi.po
+file=`echo zh_CN | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file zh_CN.po
+file=`echo zh_HK | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file zh_HK.po
+file=`echo zh_TW | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/local/bin/msgfmt -o $file zh_TW.po
+gmake[2]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/po'
+Making all in doc
+gmake[2]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/doc'
+Making all in gconf
+gmake[3]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/doc/gconf'
+gmake[3]: Nothing to be done for `all'.
+gmake[3]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/doc/gconf'
+gmake[3]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/doc'
+gmake[3]: Nothing to be done for `all-am'.
+gmake[3]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/doc'
+gmake[2]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/doc'
+Making all in examples
+gmake[2]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/examples'
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include   -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_SYSCONFDIR=\""/usr/local/etc/gconf"\"  -I/usr/local/include  -O -pipe -Wall -MT basic-gconf-app.o -MD -MP -MF .deps/basic-gconf-app.Tpo -c -o basic-gconf-app.o basic-gconf-app.c
+basic-gconf-app.c: In function 'create_prefs_dialog':
+basic-gconf-app.c:460: warning: passing argument 1 of 'gtk_dialog_get_content_area' from incompatible pointer type
+/usr/local/include/gtk-2.0/gtk/gtkdialog.h:178: note: expected 'struct GtkDialog *' but argument is of type 'struct GtkWidget *'
+mv -f .deps/basic-gconf-app.Tpo .deps/basic-gconf-app.Po
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall  -L/usr/local/lib -o basic-gconf-app basic-gconf-app.o  -lintl  -Wl,--export-dynamic -lORBit-2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXcomposite -lXdamage -lXfixes -lX11 -latk-1.0 -lcairo -lgdk_pixbuf-2.0  -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lm -lgobject-2.0 -lgthread-2.0 -lgmodule-2.0 -pthread -lglib-2.0 -lfreetype -L/usr/local/lib -lfontconfig   ../gconf/libgconf-2.la  
+gnome-libtool: link: cc -O -pipe -Wall -o .libs/basic-gconf-app basic-gconf-app.o -Wl,--export-dynamic -pthread  -L/usr/local/lib /usr/local/lib/libgtk-x11-2.0.so /usr/local/lib/libgdk-x11-2.0.so /usr/local/lib/libpangocairo-1.0.so /usr/local/lib/libXinerama.so /usr/local/lib/libXi.so /usr/local/lib/libXrandr.so /usr/local/lib/libXext.so /usr/local/lib/libXcursor.so /usr/local/lib/libXcomposite.so /usr/local/lib/libXdamage.so /usr/local/lib/libXfixes.so /usr/local/lib/libatk-1.0.so /usr/local/lib/libcairo.so /usr/local/lib/libpixman-1.so -lpng15 /usr/local/lib/libxcb-shm.so /usr/local/lib/libxcb-render.so /usr/local/lib/libXrender.so /usr/local/lib/libX11.so /usr/local/lib/libxcb.so /usr/local/lib/libXau.so /usr/local/lib/libXdmcp.so -lrpcsvc /usr/local/lib/libgdk_pixbuf-2.0.so /usr/local/lib/libpangoft2-1.0.so /usr/local/lib/libpango-1.0.so -lm /usr/local/lib/libfontconfig.so /usr/local/lib/libfreetype.so -lbz2 /usr/local/lib/libexpat.so ../gconf/.libs/libgconf-2.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libORBit-2.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so /usr/local/lib/libpcre.so -pthread -Wl,-rpath -Wl,/usr/local/lib
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include   -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_SYSCONFDIR=\""/usr/local/etc/gconf"\"  -I/usr/local/include  -O -pipe -Wall -MT simple-view.o -MD -MP -MF .deps/simple-view.Tpo -c -o simple-view.o simple-view.c
+mv -f .deps/simple-view.Tpo .deps/simple-view.Po
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall  -L/usr/local/lib -o simple-view simple-view.o  -lintl  -Wl,--export-dynamic -lORBit-2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXcomposite -lXdamage -lXfixes -lX11 -latk-1.0 -lcairo -lgdk_pixbuf-2.0  -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lm -lgobject-2.0 -lgthread-2.0 -lgmodule-2.0 -pthread -lglib-2.0 -lfreetype -L/usr/local/lib -lfontconfig   ../gconf/libgconf-2.la  
+gnome-libtool: link: cc -O -pipe -Wall -o .libs/simple-view simple-view.o -Wl,--export-dynamic -pthread  -L/usr/local/lib /usr/local/lib/libgtk-x11-2.0.so /usr/local/lib/libgdk-x11-2.0.so /usr/local/lib/libpangocairo-1.0.so /usr/local/lib/libXinerama.so /usr/local/lib/libXi.so /usr/local/lib/libXrandr.so /usr/local/lib/libXext.so /usr/local/lib/libXcursor.so /usr/local/lib/libXcomposite.so /usr/local/lib/libXdamage.so /usr/local/lib/libXfixes.so /usr/local/lib/libatk-1.0.so /usr/local/lib/libcairo.so /usr/local/lib/libpixman-1.so -lpng15 /usr/local/lib/libxcb-shm.so /usr/local/lib/libxcb-render.so /usr/local/lib/libXrender.so /usr/local/lib/libX11.so /usr/local/lib/libxcb.so /usr/local/lib/libXau.so /usr/local/lib/libXdmcp.so -lrpcsvc /usr/local/lib/libgdk_pixbuf-2.0.so /usr/local/lib/libpangoft2-1.0.so /usr/local/lib/libpango-1.0.so -lm /usr/local/lib/libfontconfig.so /usr/local/lib/libfreetype.so -lbz2 /usr/local/lib/libexpat.so ../gconf/.libs/libgconf-2.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libORBit-2.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so /usr/local/lib/libpcre.so -pthread -Wl,-rpath -Wl,/usr/local/lib
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -I/usr/local/include/orbit-2.0 -DORBIT2=1 -I/usr/local/include/gtk-2.0 -I/usr/local/include/gio-unix-2.0/ -I/usr/local/include/atk-1.0 -I/usr/local/include/cairo -I/usr/local/include/pixman-1 -I/usr/local/include/gdk-pixbuf-2.0 -I/usr/local/include/libpng15 -I/usr/local/include/pango-1.0 -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include/freetype2 -I/usr/local/include   -DGCONF_SRCDIR=\""/wrkdirs/devel/gconf2/work/GConf-2.32.0"\" -DGCONF_SYSCONFDIR=\""/usr/local/etc/gconf"\"  -I/usr/local/include  -O -pipe -Wall -MT simple-controller.o -MD -MP -MF .deps/simple-controller.Tpo -c -o simple-controller.o simple-controller.c
+mv -f .deps/simple-controller.Tpo .deps/simple-controller.Po
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall  -L/usr/local/lib -o simple-controller simple-controller.o  -lintl  -Wl,--export-dynamic -lORBit-2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXcomposite -lXdamage -lXfixes -lX11 -latk-1.0 -lcairo -lgdk_pixbuf-2.0  -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lm -lgobject-2.0 -lgthread-2.0 -lgmodule-2.0 -pthread -lglib-2.0 -lfreetype -L/usr/local/lib -lfontconfig   ../gconf/libgconf-2.la  
+gnome-libtool: link: cc -O -pipe -Wall -o .libs/simple-controller simple-controller.o -Wl,--export-dynamic -pthread  -L/usr/local/lib /usr/local/lib/libgtk-x11-2.0.so /usr/local/lib/libgdk-x11-2.0.so /usr/local/lib/libpangocairo-1.0.so /usr/local/lib/libXinerama.so /usr/local/lib/libXi.so /usr/local/lib/libXrandr.so /usr/local/lib/libXext.so /usr/local/lib/libXcursor.so /usr/local/lib/libXcomposite.so /usr/local/lib/libXdamage.so /usr/local/lib/libXfixes.so /usr/local/lib/libatk-1.0.so /usr/local/lib/libcairo.so /usr/local/lib/libpixman-1.so -lpng15 /usr/local/lib/libxcb-shm.so /usr/local/lib/libxcb-render.so /usr/local/lib/libXrender.so /usr/local/lib/libX11.so /usr/local/lib/libxcb.so /usr/local/lib/libXau.so /usr/local/lib/libXdmcp.so -lrpcsvc /usr/local/lib/libgdk_pixbuf-2.0.so /usr/local/lib/libpangoft2-1.0.so /usr/local/lib/libpango-1.0.so -lm /usr/local/lib/libfontconfig.so /usr/local/lib/libfreetype.so -lbz2 /usr/local/lib/libexpat.so ../gconf/.libs/libgconf-2.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libORBit-2.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so /usr/local/lib/libpcre.so -pthread -Wl,-rpath -Wl,/usr/local/lib
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall  -L/usr/local/lib -o complex-gconf-app basic-gconf-app.o  -lintl  -Wl,--export-dynamic -lORBit-2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXcomposite -lXdamage -lXfixes -lX11 -latk-1.0 -lcairo -lgdk_pixbuf-2.0  -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lm -lgobject-2.0 -lgthread-2.0 -lgmodule-2.0 -pthread -lglib-2.0 -lfreetype -L/usr/local/lib -lfontconfig   ../gconf/libgconf-2.la  
+gnome-libtool: link: cc -O -pipe -Wall -o .libs/complex-gconf-app basic-gconf-app.o -Wl,--export-dynamic -pthread  -L/usr/local/lib /usr/local/lib/libgtk-x11-2.0.so /usr/local/lib/libgdk-x11-2.0.so /usr/local/lib/libpangocairo-1.0.so /usr/local/lib/libXinerama.so /usr/local/lib/libXi.so /usr/local/lib/libXrandr.so /usr/local/lib/libXext.so /usr/local/lib/libXcursor.so /usr/local/lib/libXcomposite.so /usr/local/lib/libXdamage.so /usr/local/lib/libXfixes.so /usr/local/lib/libatk-1.0.so /usr/local/lib/libcairo.so /usr/local/lib/libpixman-1.so -lpng15 /usr/local/lib/libxcb-shm.so /usr/local/lib/libxcb-render.so /usr/local/lib/libXrender.so /usr/local/lib/libX11.so /usr/local/lib/libxcb.so /usr/local/lib/libXau.so /usr/local/lib/libXdmcp.so -lrpcsvc /usr/local/lib/libgdk_pixbuf-2.0.so /usr/local/lib/libpangoft2-1.0.so /usr/local/lib/libpango-1.0.so -lm /usr/local/lib/libfontconfig.so /usr/local/lib/libfreetype.so -lbz2 /usr/local/lib/libexpat.so ../gconf/.libs/libgconf-2.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libORBit-2.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so /usr/local/lib/libpcre.so -pthread -Wl,-rpath -Wl,/usr/local/lib
+gmake[2]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/examples'
+Making all in defaults
+gmake[2]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/defaults'
+gmake  all-am
+gmake[3]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/defaults'
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -DSYSGCONFDIR=\"/usr/local/etc/gconf\" -I/usr/local/include/dbus-1.0 -I/usr/local/include/dbus-1.0/include -I/usr/local/include/polkit-1 -D_REENTRANT -I/usr/local/include/glib-2.0    -I/usr/local/include  -O -pipe -Wall -MT gconf-defaults.o -MD -MP -MF .deps/gconf-defaults.Tpo -c -o gconf-defaults.o gconf-defaults.c
+gconf-defaults.c: In function 'register_mechanism':
+gconf-defaults.c:231: warning: 'polkit_authority_get' is deprecated (declared at /usr/local/include/polkit-1/polkit/polkitauthority.h:50)
+mv -f .deps/gconf-defaults.Tpo .deps/gconf-defaults.Po
+cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -DSYSGCONFDIR=\"/usr/local/etc/gconf\" -I/usr/local/include/dbus-1.0 -I/usr/local/include/dbus-1.0/include -I/usr/local/include/polkit-1 -D_REENTRANT -I/usr/local/include/glib-2.0    -I/usr/local/include  -O -pipe -Wall -MT gconf-defaults-main.o -MD -MP -MF .deps/gconf-defaults-main.Tpo -c -o gconf-defaults-main.o gconf-defaults-main.c
+mv -f .deps/gconf-defaults-main.Tpo .deps/gconf-defaults-main.Po
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall  -L/usr/local/lib -o gconf-defaults-mechanism gconf-defaults.o gconf-defaults-main.o ../gconf/libgconf-2.la -ldbus-glib-1 -ldbus-1 -lpolkit-gobject-1 -lgio-2.0 -lgobject-2.0 -lgthread-2.0 -lgmodule-2.0 -pthread -L/usr/local/lib -lglib-2.0   
+gnome-libtool: link: cc -O -pipe -Wall -o .libs/gconf-defaults-mechanism gconf-defaults.o gconf-defaults-main.o -pthread  -L/usr/local/lib ../gconf/.libs/libgconf-2.so /usr/local/lib/libORBit-2.so /usr/local/lib/libdbus-glib-1.so /usr/local/lib/libdbus-1.so /usr/local/lib/libpolkit-gobject-1.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so /usr/local/lib/libpcre.so -pthread -Wl,-rpath -Wl,/usr/local/lib
+sed -e "s|\@LIBEXECDIR\@|/usr/local/libexec|" org.gnome.GConf.Defaults.service.in > org.gnome.GConf.Defaults.service
+LC_ALL=C /usr/local/bin/intltool-merge -x -u -c ../po/.intltool-merge-cache ../po org.gnome.gconf.defaults.policy.in org.gnome.gconf.defaults.policy
+Generating and caching the translation database
+Merging translations into org.gnome.gconf.defaults.policy.
+CREATED org.gnome.gconf.defaults.policy
+gmake[3]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/defaults'
+gmake[2]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/defaults'
+Making all in gsettings
+gmake[2]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/gsettings'
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I.. -I.. -DDATADIR=\"/usr/local/share\" -D_REENTRANT -I/usr/local/include/glib-2.0   -I/usr/local/include -I.. -I.. -D_REENTRANT -I/usr/local/include/glib-2.0   -O -pipe -Wall -MT libgsettingsgconfbackend_la-gconfsettingsbackend-module.lo -MD -MP -MF .deps/libgsettingsgconfbackend_la-gconfsettingsbackend-module.Tpo -c -o libgsettingsgconfbackend_la-gconfsettingsbackend-module.lo `test -f 'gconfsettingsbackend-module.c' || echo './'`gconfsettingsbackend-module.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -DDATADIR=\"/usr/local/share\" -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include -I.. -I.. -D_REENTRANT -I/usr/local/include/glib-2.0 -O -pipe -Wall -MT libgsettingsgconfbackend_la-gconfsettingsbackend-module.lo -MD -MP -MF .deps/libgsettingsgconfbackend_la-gconfsettingsbackend-module.Tpo -c gconfsettingsbackend-module.c  -fPIC -DPIC -o .libs/libgsettingsgconfbackend_la-gconfsettingsbackend-module.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -DDATADIR=\"/usr/local/share\" -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include -I.. -I.. -D_REENTRANT -I/usr/local/include/glib-2.0 -O -pipe -Wall -MT libgsettingsgconfbackend_la-gconfsettingsbackend-module.lo -MD -MP -MF .deps/libgsettingsgconfbackend_la-gconfsettingsbackend-module.Tpo -c gconfsettingsbackend-module.c -o libgsettingsgconfbackend_la-gconfsettingsbackend-module.o >/dev/null 2>&1
+mv -f .deps/libgsettingsgconfbackend_la-gconfsettingsbackend-module.Tpo .deps/libgsettingsgconfbackend_la-gconfsettingsbackend-module.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I.. -I.. -DDATADIR=\"/usr/local/share\" -D_REENTRANT -I/usr/local/include/glib-2.0   -I/usr/local/include -I.. -I.. -D_REENTRANT -I/usr/local/include/glib-2.0   -O -pipe -Wall -MT libgsettingsgconfbackend_la-gconfsettingsbackend.lo -MD -MP -MF .deps/libgsettingsgconfbackend_la-gconfsettingsbackend.Tpo -c -o libgsettingsgconfbackend_la-gconfsettingsbackend.lo `test -f 'gconfsettingsbackend.c' || echo './'`gconfsettingsbackend.c
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -DDATADIR=\"/usr/local/share\" -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include -I.. -I.. -D_REENTRANT -I/usr/local/include/glib-2.0 -O -pipe -Wall -MT libgsettingsgconfbackend_la-gconfsettingsbackend.lo -MD -MP -MF .deps/libgsettingsgconfbackend_la-gconfsettingsbackend.Tpo -c gconfsettingsbackend.c  -fPIC -DPIC -o .libs/libgsettingsgconfbackend_la-gconfsettingsbackend.o
+gnome-libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I.. -DDATADIR=\"/usr/local/share\" -D_REENTRANT -I/usr/local/include/glib-2.0 -I/usr/local/include -I.. -I.. -D_REENTRANT -I/usr/local/include/glib-2.0 -O -pipe -Wall -MT libgsettingsgconfbackend_la-gconfsettingsbackend.lo -MD -MP -MF .deps/libgsettingsgconfbackend_la-gconfsettingsbackend.Tpo -c gconfsettingsbackend.c -o libgsettingsgconfbackend_la-gconfsettingsbackend.o >/dev/null 2>&1
+mv -f .deps/libgsettingsgconfbackend_la-gconfsettingsbackend.Tpo .deps/libgsettingsgconfbackend_la-gconfsettingsbackend.Plo
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc -I.. -I.. -D_REENTRANT -I/usr/local/include/glib-2.0   -O -pipe -Wall -export_dynamic -avoid-version -module -no-undefined -export-symbols-regex '^g_io_module_(load|unload|query)'  -L/usr/local/lib -o libgsettingsgconfbackend.la -rpath /usr/local/lib/gio/modules libgsettingsgconfbackend_la-gconfsettingsbackend-module.lo libgsettingsgconfbackend_la-gconfsettingsbackend.lo ../gconf/libgconf-2.la -lgio-2.0 -lgobject-2.0 -lgthread-2.0 -lgmodule-2.0 -pthread -L/usr/local/lib -lglib-2.0    
+gnome-libtool: link: /usr/bin/nm -B  .libs/libgsettingsgconfbackend_la-gconfsettingsbackend-module.o .libs/libgsettingsgconfbackend_la-gconfsettingsbackend.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' | /usr/bin/sed 's/.* //' | sort | uniq > .libs/libgsettingsgconfbackend.exp
+gnome-libtool: link: /usr/bin/grep -E -e "^g_io_module_(load|unload|query)" ".libs/libgsettingsgconfbackend.exp" > ".libs/libgsettingsgconfbackend.expT"
+gnome-libtool: link: mv -f ".libs/libgsettingsgconfbackend.expT" ".libs/libgsettingsgconfbackend.exp"
+gnome-libtool: link: cc -shared  -fPIC -DPIC  .libs/libgsettingsgconfbackend_la-gconfsettingsbackend-module.o .libs/libgsettingsgconfbackend_la-gconfsettingsbackend.o   -Wl,-rpath -Wl,/wrkdirs/devel/gconf2/work/GConf-2.32.0/gconf/.libs -Wl,-rpath -Wl,/usr/local/lib -Wl,-rpath -Wl,/usr/local/lib -L/usr/local/lib ../gconf/.libs/libgconf-2.so /usr/local/lib/libORBit-2.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so /usr/local/lib/libpcre.so  -O -pthread   -pthread -Wl,-soname -Wl,libgsettingsgconfbackend.so -Wl,-retain-symbols-file -Wl,.libs/libgsettingsgconfbackend.exp -o .libs/libgsettingsgconfbackend.so
+gnome-libtool: link: ar cru .libs/libgsettingsgconfbackend.a  libgsettingsgconfbackend_la-gconfsettingsbackend-module.o libgsettingsgconfbackend_la-gconfsettingsbackend.o
+gnome-libtool: link: ranlib .libs/libgsettingsgconfbackend.a
+gnome-libtool: link: ( cd ".libs" && rm -f "libgsettingsgconfbackend.la" && ln -s "../libgsettingsgconfbackend.la" "libgsettingsgconfbackend.la" )
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I.. -DDATADIR=\"/usr/local/share\" -D_REENTRANT -I/usr/local/include/glib-2.0   -I/usr/local/include  -O -pipe -Wall -MT gsettings-data-convert.o -MD -MP -MF .deps/gsettings-data-convert.Tpo -c -o gsettings-data-convert.o gsettings-data-convert.c
+mv -f .deps/gsettings-data-convert.Tpo .deps/gsettings-data-convert.Po
+/bin/sh /wrkdirs/devel/gconf2/work/gnome-libtool  --tag=CC   --mode=link cc  -O -pipe -Wall  -L/usr/local/lib -o gsettings-data-convert gsettings-data-convert.o ../gconf/libgconf-2.la -lgio-2.0 -lgobject-2.0 -lgthread-2.0 -lgmodule-2.0 -pthread -L/usr/local/lib -lglib-2.0    
+gnome-libtool: link: cc -O -pipe -Wall -o .libs/gsettings-data-convert gsettings-data-convert.o -pthread  -L/usr/local/lib ../gconf/.libs/libgconf-2.so /usr/local/lib/libORBit-2.so /usr/local/lib/libgio-2.0.so -lz /usr/local/lib/libgobject-2.0.so /usr/local/lib/libgthread-2.0.so /usr/local/lib/libgmodule-2.0.so /usr/local/lib/libglib-2.0.so /usr/local/lib/libintl.so /usr/local/lib/libiconv.so /usr/local/lib/libpcre.so -pthread -Wl,-rpath -Wl,/usr/local/lib
+gmake[2]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0/gsettings'
+gmake[2]: Entering directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0'
+gmake[2]: Nothing to be done for `all-am'.
+gmake[2]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0'
+gmake[1]: Leaving directory `/wrkdirs/devel/gconf2/work/GConf-2.32.0'
+======================================================================
+=======================<phase: run-depends >==========================
+======================================================================
+=======================<phase: install     >==========================
+===>  Installing for gconf2-2.32.0_3
+===>   Generating temporary packing list
+===>  Checking if devel/gconf2 already installed
+mtree: /usr/local/etc/mtree/BSD.gnome.dist: No such file or directory
+*** Error code 1
+
+Stop.
+make: stopped in /usr/dports/devel/gconf2
+====>> Cleaning up
+====>> Umounting file systems
