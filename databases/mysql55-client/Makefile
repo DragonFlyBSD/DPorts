@@ -2,7 +2,7 @@
 # Date created:				28 Jan 2006
 # Whom:					Alex Dupre <ale@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/mysql55-client/Makefile,v 1.112 2012/11/17 05:55:12 svnexp Exp $
+# $FreeBSD: ports/databases/mysql55-client/Makefile,v 1.113 2013/01/17 16:56:02 svnexp Exp $
 #
 
 PORTNAME=	mysql
@@ -18,7 +18,7 @@ PLIST=		${.CURDIR}/pkg-plist
 
 LATEST_LINK=	mysql55-client
 
-CONFLICTS_INSTALL=	mysql-client-[34].* mysql-client-5.[0-46-9].*
+CONFLICTS_INSTALL=	mysql-client-[34].* mysql-client-5.[0-46-9].* mariadb-client-5.* percona-client-5.*
 
 CMAKE_ARGS+=	-DWITHOUT_SERVER=1
 
