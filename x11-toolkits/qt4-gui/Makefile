@@ -1,14 +1,8 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/x11-toolkits/qt4-gui/Makefile,v 1.45 2012/11/17 06:03:39 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/x11-toolkits/qt4-gui/Makefile,v 1.46 2013/02/03 21:44:19 svnexp Exp $
 
 PORTNAME=	gui
 DISTVERSION=	${QT4_VERSION}
-PORTREVISION=	1
 CATEGORIES?=	x11-toolkits
 PKGNAMEPREFIX=	qt4-
 
@@ -106,6 +100,8 @@ post-configure:
 		${WRKSRC}/lib/pkgconfig/QtGui.pc
 
 post-install:
+	${INSTALL_DATA} ${BUILD_WRKSRC}/dialogs/images/qtlogo-64.png \
+		${PREFIX}/share/pixmaps/qtlogo.png
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>
