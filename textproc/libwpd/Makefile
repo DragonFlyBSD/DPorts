@@ -2,12 +2,11 @@
 # Date created:         Mon May 19 09:09:10 PDT 2003
 # Whom:                 reed@pugetsoundtechnology.com
 #
-# $FreeBSD: ports/textproc/libwpd/Makefile,v 1.34 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: ports/textproc/libwpd/Makefile,v 1.35 2013/02/04 19:46:06 svnexp Exp $
 #
 
 PORTNAME=	libwpd
-PORTVERSION=	0.9.4
-PORTREVISION=	1
+PORTVERSION=	0.9.6
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
