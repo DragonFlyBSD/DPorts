@@ -1,9 +1,4 @@
-# New ports collection makefile for:	analitza
-# Date created:		2012-02-23
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/math/analitza/Makefile,v 1.3 2012/11/17 05:59:19 svnexp Exp $
-#
+# $FreeBSD: ports/math/analitza/Makefile,v 1.4 2013/02/04 01:04:18 svnexp Exp $
 
 PORTNAME=	analitza
 PORTVERSION=	${KDE4_VERSION}
