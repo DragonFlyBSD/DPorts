@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdegames
-# Date created:				2008-02-08
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/games/kdegames4/Makefile,v 1.132 2012/11/17 05:57:42 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/games/kdegames4/Makefile,v 1.133 2013/02/04 01:03:59 svnexp Exp $
 
 PORTNAME=	kdegames
 PORTVERSION=	${KDE4_VERSION}
@@ -31,16 +28,13 @@ USE_XZ=		yes
 CMAKE_ARGS+=	-DBUILD_kajongg:BOOL=FALSE
 MAKE_JOBS_SAFE=	yes
 
-OPTIONS=	FREEBSD "Install FreeBSD card deck" off \
-		KAJONGG "Install the classical Mah Jongg for four players" off
+OPTIONS_DEFINE=	KAJONGG
+
+KAJONGG_DESC=	Install the classical Mah Jongg for four players
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_FREEBSD)
-RUN_DEPENDS+=	kde4-freebsd-carddeck>=1.0:${PORTSDIR}/games/freebsd-carddeck-kde4
-.endif
-
-.if defined(WITH_KAJONGG)
+.if ${PORT_OPTIONS:MKAJONGG}
 RUN_DEPENDS+=	${KDE4_PREFIX}/bin/kajongg:${PORTSDIR}/games/kajongg
 .endif
 
