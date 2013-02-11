@@ -1,8 +1,4 @@
-# New ports collection Makefile for:	ktimer
-# Date created:				2012-02-23
-# Whom:					Max Brazhikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-clocks/ktimer/Makefile,v 1.3 2012/11/17 06:03:24 svnexp Exp $
+# $FreeBSD: ports/x11-clocks/ktimer/Makefile,v 1.4 2013/02/04 01:04:53 svnexp Exp $
 
 PORTNAME=	ktimer
 PORTVERSION=	${KDE4_VERSION}
