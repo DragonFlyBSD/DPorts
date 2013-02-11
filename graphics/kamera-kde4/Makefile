@@ -1,9 +1,4 @@
-# New ports collection makefile for:	kamera
-# Date created:				5 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/kamera-kde4/Makefile,v 1.37 2012/11/17 05:58:11 svnexp Exp $
-#
+# $FreeBSD: ports/graphics/kamera-kde4/Makefile,v 1.38 2013/02/04 01:04:05 svnexp Exp $
 
 PORTNAME=	kamera
 PORTVERSION=	${KDE4_VERSION}
