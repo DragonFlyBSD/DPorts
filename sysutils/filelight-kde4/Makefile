@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	filelight
-# Date created:				2009-10-09
-# Whom:					Rusty Nejdl <rnejdl@ringofsaturn.com>
-#
-# $FreeBSD: ports/sysutils/filelight-kde4/Makefile,v 1.31 2012/11/17 06:01:30 svnexp Exp $
-#
+# Created by: Rusty Nejdl <rnejdl@ringofsaturn.com>
+# $FreeBSD: ports/sysutils/filelight-kde4/Makefile,v 1.32 2013/02/04 01:04:39 svnexp Exp $
 
 PORTNAME=	filelight
 PORTVERSION=	${KDE4_VERSION}
