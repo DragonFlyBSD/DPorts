@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: ports/graphics/netpbm/Makefile,v 1.210 2012/12/10 05:05:51 svnexp Exp $
+# $FreeBSD: ports/graphics/netpbm/Makefile,v 1.211 2012/12/30 18:35:36 svnexp Exp $
 
 PORTNAME=	netpbm
 PORTVERSION=	10.35.87
@@ -8,7 +8,7 @@ MASTER_SITES=	SF/netpbm/super_stable/${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dinoex@FreeBSD.org
-COMMENT=	A toolkit for conversion of images between different formats
+COMMENT=	Toolkit for conversion of images between different formats
 
 LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff \
 		jpeg:${PORTSDIR}/graphics/jpeg \
