@@ -1,9 +1,5 @@
-# New ports collection makefile for:	giflib
-# Date created:		03 May 1997
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/giflib/Makefile,v 1.55 2012/11/17 05:58:07 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: ports/graphics/giflib/Makefile,v 1.56 2013/01/26 16:56:10 svnexp Exp $
 
 PORTNAME=	giflib
 PORTVERSION=	4.2.0
