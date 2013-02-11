@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdeutils
-# Date created:				2008-01-31
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/comms/kremotecontrol/Makefile,v 1.162 2012/11/17 05:55:00 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/comms/kremotecontrol/Makefile,v 1.163 2013/02/04 01:03:26 svnexp Exp $
 
 PORTNAME=	kremotecontrol
 PORTVERSION=	${KDE4_VERSION}
