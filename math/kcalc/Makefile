@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdeutils
-# Date created:				2008-01-31
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/math/kcalc/Makefile,v 1.162 2012/11/17 05:59:22 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/math/kcalc/Makefile,v 1.163 2013/02/04 01:04:19 svnexp Exp $
 
 PORTNAME=	kcalc
 PORTVERSION=	${KDE4_VERSION}
