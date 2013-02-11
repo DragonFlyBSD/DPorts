@@ -1,9 +1,4 @@
-# New ports collection makefile for:	kolourpaint
-# Date created:				5 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/kolourpaint/Makefile,v 1.10 2012/11/17 05:58:11 svnexp Exp $
-#
+# $FreeBSD: ports/graphics/kolourpaint/Makefile,v 1.11 2013/02/04 01:04:05 svnexp Exp $
 
 PORTNAME=	kolourpaint
 PORTVERSION=	${KDE4_VERSION}
