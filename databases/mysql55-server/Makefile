@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/databases/mysql55-server/Makefile,v 1.295 2012/12/21 22:23:25 svnexp Exp $
+# $FreeBSD: ports/databases/mysql55-server/Makefile,v 1.297 2013/02/06 12:17:43 svnexp Exp $
 
 PORTNAME?=	mysql
-PORTVERSION=	5.5.29
+PORTVERSION=	5.5.30
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	${MASTER_SITE_MYSQL}
@@ -61,7 +61,7 @@ WANT_MYSQL_VER=	55
 
 LATEST_LINK=	mysql55-server
 
-CONFLICTS_INSTALL=	mysql-server-[34].* mysql-server-5.[0-46-9].*
+CONFLICTS_INSTALL=	mysql-server-[34].* mysql-server-5.[0-46-9].* mariadb-server-5.* percona-server-5.*
 
 USE_RC_SUBR=	mysql-server
 
