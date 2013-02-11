@@ -16,7 +16,7 @@
  
 +#if defined(__DragonFly__)
 +	snprintf(dest, sz, "%s:%d.%d:%s:%s",
-+	    osname, version / 100000, version / 100 % 1000,
++	    osname, version / 100000, (((version / 100 % 1000)+1)/2)*2,
 +#else
  	snprintf(dest, sz, "%s:%d:%s:%s",
  	    osname, version / 100000,
