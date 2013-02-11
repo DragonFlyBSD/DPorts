@@ -1,8 +1,4 @@
-# New ports collection Makefile for:	konsole
-# Date created:				30 July 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/konsole/Makefile,v 1.8 2012/11/17 06:03:17 svnexp Exp $
+# $FreeBSD: ports/x11/konsole/Makefile,v 1.9 2013/02/04 01:04:52 svnexp Exp $
 
 PORTNAME=	konsole
 PORTVERSION=	${KDE4_VERSION}
