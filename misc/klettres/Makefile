@@ -1,9 +1,4 @@
-# New ports collection Makefile for:	klettres
-# Date created:				6 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/klettres/Makefile,v 1.7 2012/11/17 05:59:41 svnexp Exp $
-#
+# $FreeBSD: ports/misc/klettres/Makefile,v 1.8 2013/02/04 01:04:22 svnexp Exp $
 
 PORTNAME=	klettres
 PORTVERSION=	${KDE4_VERSION}
