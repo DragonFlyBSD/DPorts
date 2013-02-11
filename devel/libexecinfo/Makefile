@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libexecinfo
-# Date created:				10 August 2003
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libexecinfo/Makefile,v 1.10 2012/11/17 05:55:54 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: ports/devel/libexecinfo/Makefile,v 1.11 2013/02/05 15:52:09 svnexp Exp $
 
 PORTNAME=	libexecinfo
 PORTVERSION=	1.1
