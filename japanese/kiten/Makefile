@@ -1,9 +1,4 @@
-# New ports collection Makefile for:	kiten
-# Date created:				6 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/kiten/Makefile,v 1.7 2012/11/17 05:58:36 svnexp Exp $
-#
+# $FreeBSD: ports/japanese/kiten/Makefile,v 1.8 2013/02/04 01:04:10 svnexp Exp $
 
 PORTNAME=	kiten
 PORTVERSION=	${KDE4_VERSION}
