@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdeadmin
-# Date created:				2008-01-30
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/kdeadmin4/Makefile,v 1.87 2012/11/17 06:01:35 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/sysutils/kdeadmin4/Makefile,v 1.88 2013/02/04 01:04:39 svnexp Exp $
 
 PORTNAME=	kdeadmin
 PORTVERSION=	${KDE4_VERSION}
@@ -26,11 +23,12 @@ MAKE_JOBS_SAFE=	yes
 # print/system-config-printer-kde.
 CMAKE_ARGS+=	-DBUILD_system-config-printer-kde:BOOL=Off
 
-OPTIONS=	PRINTER_CONFIG "Install printer configuration utility" off
+OPTIONS_DEFINE=	PRINTER_CONFIG
+PRINTER_CONFIG_DESC=	Install printer configuration utility
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_PRINTER_CONFIG)
+.if ${PORT_OPTIONS:MPRINTER_CONFIG}
 RUN_DEPENDS+=	${KDE4_PREFIX}/share/apps/system-config-printer-kde/system-config-printer-kde.py:${PORTSDIR}/print/system-config-printer-kde
 .endif
 
