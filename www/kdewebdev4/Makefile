@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdewebdev
-# Date created:				2008-01-31
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/www/kdewebdev4/Makefile,v 1.97 2012/11/17 06:02:38 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/www/kdewebdev4/Makefile,v 1.99 2013/02/04 01:04:46 svnexp Exp $
 
 PORTNAME=	kdewebdev
 PORTVERSION=	${KDE4_VERSION}
@@ -15,7 +12,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Comprehensive html/website development environment
 
 LIB_DEPENDS=	tidy-0.99.0:${PORTSDIR}/www/tidy-lib \
-		boost_thread.4:${PORTSDIR}/devel/boost-libs
+		boost_thread:${PORTSDIR}/devel/boost-libs
 
 LATEST_LINK=	${PORTNAME}4
 
