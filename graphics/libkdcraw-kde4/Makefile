@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libkdcraw-kde4
-# Date created:			Sat 13 Aug 2011, 23:48:30
-# Whom:				Dima Panov <fluffy@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/libkdcraw-kde4/Makefile,v 1.25 2012/11/17 05:58:13 svnexp Exp $
+# Created by: Dima Panov <fluffy@FreeBSD.org>
+# $FreeBSD: ports/graphics/libkdcraw-kde4/Makefile,v 1.26 2013/02/04 01:04:05 svnexp Exp $
 
 PORTNAME=	libkdcraw
 PORTVERSION=	${KDE4_VERSION}
