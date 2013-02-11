@@ -1,9 +1,4 @@
-# New ports collection Makefile for:	ktouch
-# Date created:				6 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/ktouch/Makefile,v 1.7 2012/11/17 05:59:41 svnexp Exp $
-#
+# $FreeBSD: ports/misc/ktouch/Makefile,v 1.8 2013/02/04 01:04:22 svnexp Exp $
 
 PORTNAME=	ktouch
 PORTVERSION=	${KDE4_VERSION}
