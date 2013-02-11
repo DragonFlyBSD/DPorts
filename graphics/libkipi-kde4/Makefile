@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libkipi-kde4
-# Date created:			Sun 14 Aug 2011, 00:52:06
-# Whom:				Dima Panov <fluffy@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/libkipi-kde4/Makefile,v 1.29 2012/11/17 05:58:13 svnexp Exp $
+# Created by: Dima Panov <fluffy@FreeBSD.org>
+# $FreeBSD: ports/graphics/libkipi-kde4/Makefile,v 1.30 2013/02/04 01:04:05 svnexp Exp $
 
 PORTNAME=	libkipi
 PORTVERSION=	${KDE4_VERSION}
