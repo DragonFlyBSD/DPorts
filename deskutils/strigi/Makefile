@@ -1,12 +1,9 @@
-# New ports collection Makefile for:	strigi
-# Date created:				2008-01-11
-# Whom:					arved
-#
-# $FreeBSD: ports/deskutils/strigi/Makefile,v 1.19 2012/11/17 05:55:30 svnexp Exp $
+# Created by: Tilman Keskinoz <arved@FreeBSD.org>
+# $FreeBSD: ports/deskutils/strigi/Makefile,v 1.21 2013/01/31 14:01:26 svnexp Exp $
 
 PORTNAME=	strigi
 PORTVERSION=	0.7.7
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	deskutils
 MASTER_SITES=	http://rdieter.fedorapeople.org/strigi/
 #MASTER_SITES=	http://www.vandenoever.info/software/strigi/ \
@@ -16,7 +13,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Desktop searching program
 
 LIB_DEPENDS=	avcodec.1:${PORTSDIR}/multimedia/ffmpeg \
-		clucene.0:${PORTSDIR}/textproc/clucene \
+		clucene-core:${PORTSDIR}/textproc/clucene \
 		dbus-1:${PORTSDIR}/devel/dbus \
 		exiv2.12:${PORTSDIR}/graphics/exiv2 \
 		boost_thread:${PORTSDIR}/devel/boost-libs
