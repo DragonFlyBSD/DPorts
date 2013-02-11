@@ -1,9 +1,4 @@
-# New ports collection Makefile for:	kbruch
-# Date created:				6 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/math/kbruch/Makefile,v 1.7 2012/11/17 05:59:22 svnexp Exp $
-#
+# $FreeBSD: ports/math/kbruch/Makefile,v 1.8 2013/02/04 01:04:19 svnexp Exp $
 
 PORTNAME=	kbruch
 PORTVERSION=	${KDE4_VERSION}
