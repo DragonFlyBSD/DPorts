@@ -1,12 +1,7 @@
-# New ports collection makefile for:	xmessage
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xmessage/Makefile,v 1.5 2012/11/17 06:03:22 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xmessage/Makefile,v 1.6 2013/02/04 04:47:08 svnexp Exp $
 
 PORTNAME=	xmessage
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.4
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
