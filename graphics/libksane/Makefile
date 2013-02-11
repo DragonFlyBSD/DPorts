@@ -1,8 +1,4 @@
-# New ports collection makefile for:	libksane
-# Date created:				5 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/libksane/Makefile,v 1.7 2012/11/17 05:58:13 svnexp Exp $
+# $FreeBSD: ports/graphics/libksane/Makefile,v 1.8 2013/02/04 01:04:05 svnexp Exp $
 
 PORTNAME=	libksane
 PORTVERSION=	${KDE4_VERSION}
