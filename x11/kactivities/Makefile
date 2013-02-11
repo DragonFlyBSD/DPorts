@@ -1,9 +1,4 @@
-# New ports collection makefile for:	kactivities
-# Date created:		2012-02-22
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/kactivities/Makefile,v 1.3 2012/11/17 06:03:16 svnexp Exp $
-#
+# $FreeBSD: ports/x11/kactivities/Makefile,v 1.4 2013/02/04 01:04:51 svnexp Exp $
 
 PORTNAME=	kactivities
 PORTVERSION=	${KDE4_VERSION}
