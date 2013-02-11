@@ -2,7 +2,7 @@
 # Date created:				Jan 10 2001
 # Whom:					Mikhail Teterin <mi@aldan.algebra.com>
 #
-# $FreeBSD: ports/graphics/libfpx/Makefile,v 1.25 2012/11/17 05:58:12 svnexp Exp $
+# $FreeBSD: ports/graphics/libfpx/Makefile,v 1.26 2013/02/07 13:46:16 svnexp Exp $
 #
 
 PORTNAME=	libfpx
@@ -26,7 +26,7 @@ PLIST_FILES=	lib/libfpx.so.2 lib/libfpx.so lib/libfpx.a include/fpxlib.h
 USE_LDCONFIG=	yes
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 MAKE_JOBS_SAFE=	yes
-
+USE_GCC=	any
 post-patch:
 	${SED} -i '' -e '/^#include "fpxlib-config.h"/d'	\
 		${WRKSRC}/basics/filename.cpp	\
