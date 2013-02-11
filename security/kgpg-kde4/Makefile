@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdeutils
-# Date created:				2008-01-31
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/security/kgpg-kde4/Makefile,v 1.162 2012/11/17 06:01:06 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/security/kgpg-kde4/Makefile,v 1.163 2013/02/04 01:04:36 svnexp Exp $
 
 PORTNAME=	kgpg
 PORTVERSION=	${KDE4_VERSION}
