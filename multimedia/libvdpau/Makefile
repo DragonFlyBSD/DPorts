@@ -1,8 +1,7 @@
-# $FreeBSD: ports/multimedia/libvdpau/Makefile,v 1.7 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: ports/multimedia/libvdpau/Makefile,v 1.8 2013/02/04 22:46:21 svnexp Exp $
 
 PORTNAME=	libvdpau
-PORTVERSION=	0.5
-PORTREVISION=	1
+PORTVERSION=	0.6
 CATEGORIES=	multimedia
 MASTER_SITES=	http://cgit.freedesktop.org/~aplattner/libvdpau/snapshot/
 
