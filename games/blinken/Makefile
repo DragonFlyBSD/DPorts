@@ -1,9 +1,4 @@
-# New ports collection Makefile for:	blinken
-# Date created:				5 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/games/blinken/Makefile,v 1.7 2012/11/17 05:57:33 svnexp Exp $
-#
+# $FreeBSD: ports/games/blinken/Makefile,v 1.8 2013/02/04 01:03:57 svnexp Exp $
 
 PORTNAME=	blinken
 PORTVERSION=	${KDE4_VERSION}
