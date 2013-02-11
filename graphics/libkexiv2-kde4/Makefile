@@ -1,13 +1,7 @@
-# New ports collection makefile for:	libkexiv2
-# Date created:				9 August 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/libkexiv2-kde4/Makefile,v 1.29 2012/11/17 05:58:13 svnexp Exp $
-#
+# $FreeBSD: ports/graphics/libkexiv2-kde4/Makefile,v 1.30 2013/02/04 01:04:05 svnexp Exp $
 
 PORTNAME=	libkexiv2
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
 CATEGORIES=	graphics kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
