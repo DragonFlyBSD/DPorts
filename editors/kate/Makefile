@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kate
-# Date created:				Tue  9 Aug 2011, 00:58:45
-# Whom:					fluffy@
-#
-# $FreeBSD: ports/editors/kate/Makefile,v 1.7 2012/11/17 05:57:14 svnexp Exp $
-#
+# Created by: fluffy@
+# $FreeBSD: ports/editors/kate/Makefile,v 1.8 2013/02/04 01:03:53 svnexp Exp $
 
 PORTNAME=	kate
 PORTVERSION=	${KDE4_VERSION}
