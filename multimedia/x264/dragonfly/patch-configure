@@ -1,11 +1,13 @@
---- configure.orig	2012-12-29 12:22:42.190835000 +0100
-+++ configure	2012-12-29 12:23:08.480872000 +0100
-@@ -461,7 +461,7 @@
+--- configure.orig	2013-02-11 11:35:05.893344000 +0100
++++ configure	2013-02-11 11:36:48.514303000 +0100
+@@ -461,6 +461,10 @@
              cc_check "" -mdynamic-no-pic && CFLAGS="$CFLAGS -mdynamic-no-pic"
          fi
          ;;
--    freebsd*)
-+    freebsd*|dragonfly*)
++    dragonfly*)
++        SYS="DRAGONFLY"
++        LDFLAGS="$LDFLAGS -lm"
++        ;;
+     freebsd*)
          SYS="FREEBSD"
          LDFLAGS="$LDFLAGS -lm"
-         ;;

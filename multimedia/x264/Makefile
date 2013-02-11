@@ -38,10 +38,9 @@ USE_LDCONFIG=	yes
 HAS_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
-OPTIONS_DEFINE=	ASM DEBUG PGO GCC44 GPAC X11_OUTPUT
+OPTIONS_DEFINE=	ASM DEBUG PGO GPAC X11_OUTPUT
 OPTIONS_DEFAULT=	ASM PGO GPAC
-ASM_DESC=		Assembly optimizations (devel/binutils)
-GCC44_DESC=		Use gcc 4.4+ (implies WITH_ASM)
+ASM_DESC=		Assembly optimizations
 GPAC_DESC=		Enable MPEG-4 Output
 X11_OUTPUT_DESC=	Enable X11 Output
 
@@ -52,26 +51,10 @@ CONFIGURE_ARGS+=	--extra-cflags="${CPPFLAGS} ${CFLAGS} -fPIC -I${LOCALBASE}/incl
 PLIST_SUB+=	X264_BUILD=${X264_BUILD}
 
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MGCC44}
-USE_GCC?=	4.4+
-.endif
-
 .include <bsd.port.pre.mk>
 
-.if ${PORT_OPTIONS:MASM} || ${PORT_OPTIONS:MGCC44}
-BUILD_DEPENDS+=		${LOCALBASE}/bin/as:${PORTSDIR}/devel/binutils
-CONFIGURE_ENV+=		COMPILER_PATH=${LOCALBASE}/bin
-MAKE_ENV+=		COMPILER_PATH=${LOCALBASE}/bin
-.else
+.if ${PORT_OPTIONS:MASM} == ""
 CONFIGURE_ARGS+=		--disable-asm
-.endif
-
-# Around the time GCC stack protection (aka Propolice) for userland
-# was enabled on src/share/mk/bsd.sys.mk
-# SVN rev 180012 on 2008-06-25 21:33:28Z by ru
-.if ${OSVERSION} >= 800040
-LDFLAGS+=	-fstack-protector
 .endif
 
 CONFIGURE_ENV+=	ARCH= \
@@ -123,11 +106,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|${PREFIX}/libdata/pkgconfig|; \
 		s|$${libdir}/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile
-.if ${PORT_OPTIONS:MGCC44}
-	@${REINPLACE_CMD} -e 's|$$(CC) -shared -o|COMPILER_PATH= $$(CC) -shared -o|g' \
-		-e 's|$$(CC) -o|COMPILER_PATH= $$(CC) -o|g' \
-		${WRKSRC}/Makefile
-.endif
 
 .if ${SLAVE_PORT:tl}=="no"
 .if 0 # BROKEN
