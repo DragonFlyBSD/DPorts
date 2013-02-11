@@ -1,9 +1,4 @@
-# New ports collection makefile for:	kstars
-# Date created:				6 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/astro/kstars/Makefile,v 1.17 2012/11/17 05:54:25 svnexp Exp $
-#
+# $FreeBSD: ports/astro/kstars/Makefile,v 1.18 2013/02/04 01:03:20 svnexp Exp $
 
 PORTNAME=	kstars
 PORTVERSION=	${KDE4_VERSION}
