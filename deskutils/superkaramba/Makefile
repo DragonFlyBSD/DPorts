@@ -1,8 +1,4 @@
-# New ports collection Makefile for:	superkaramba
-# Date created:				2012-02-23
-# Whom:					Max Brazhikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/deskutils/superkaramba/Makefile,v 1.26 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: ports/deskutils/superkaramba/Makefile,v 1.27 2013/02/04 01:03:33 svnexp Exp $
 
 PORTNAME=	superkaramba
 PORTVERSION=	${KDE4_VERSION}
