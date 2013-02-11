@@ -1,0 +1,5 @@
+CONFIGURE_ARGS+=	--with-readline=${LOCALBASE}
+CONFIGURE_ENV+=		ac_cv_lib_readline_readline=yes
+
+LIB_DEPENDS+=	readline:${PORTSDIR}/devel/readline
+
