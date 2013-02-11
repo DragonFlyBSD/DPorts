@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdeutils
-# Date created:				2008-01-31
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/sweeper/Makefile,v 1.162 2012/11/17 06:01:47 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/sysutils/sweeper/Makefile,v 1.163 2013/02/04 01:04:41 svnexp Exp $
 
 PORTNAME=	sweeper
 PORTVERSION=	${KDE4_VERSION}
