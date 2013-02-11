@@ -1,9 +1,4 @@
-# New ports collection makefile for:	kde4-xdg-env
-# Date created:		2008-06-30
-# Whom:			Max Brazhnikov <makc@issp.ac.ru>
-#
-# $FreeBSD: ports/misc/kde4-xdg-env/Makefile,v 1.15 2012/11/17 05:59:40 svnexp Exp $
-#
+# $FreeBSD: ports/misc/kde4-xdg-env/Makefile,v 1.16 2013/02/04 01:04:22 svnexp Exp $
 
 PORTNAME=	xdg
 PORTVERSION=	1.0.1
