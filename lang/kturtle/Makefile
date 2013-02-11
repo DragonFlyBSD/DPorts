@@ -1,9 +1,4 @@
-# New ports collection Makefile for:	kturtle
-# Date created:				6 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/kturtle/Makefile,v 1.7 2012/11/17 05:58:52 svnexp Exp $
-#
+# $FreeBSD: ports/lang/kturtle/Makefile,v 1.8 2013/02/04 01:04:13 svnexp Exp $
 
 PORTNAME=	kturtle
 PORTVERSION=	${KDE4_VERSION}
