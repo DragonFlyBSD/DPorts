@@ -1,12 +1,7 @@
-# New ports collection makefile for:	xauth
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xauth/Makefile,v 1.7 2012/11/17 06:03:20 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xauth/Makefile,v 1.8 2013/02/04 00:44:25 svnexp Exp $
 
 PORTNAME=	xauth
-PORTVERSION=	1.0.6
+PORTVERSION=	1.0.7
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
