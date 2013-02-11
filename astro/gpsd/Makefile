@@ -2,7 +2,7 @@
 # Date created:				Jan, 10. 2006
 # Whom:					Anton Karpov <toxa@toxahost.ru>
 #
-# $FreeBSD: ports/astro/gpsd/Makefile,v 1.38 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: ports/astro/gpsd/Makefile,v 1.39 2013/02/08 03:22:30 svnexp Exp $
 #
 
 PORTNAME=	gpsd
@@ -272,9 +272,6 @@ PLIST_SUB+=	CURSES=""
 .if defined(WITH_PROFILING)
 SCONS_ARGS+=	profiling=yes
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/Qgpsmm.pc.in
 
 # generates .py[co] files for installed modules
 # if that's not done, ${PYTHON_SITELIBDIR}/gps will be polluted
