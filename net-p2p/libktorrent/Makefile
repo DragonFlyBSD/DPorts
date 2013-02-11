@@ -1,15 +1,15 @@
-# $FreeBSD: ports/net-p2p/libktorrent/Makefile,v 1.17 2013/01/08 17:18:48 svnexp Exp $
+# $FreeBSD: ports/net-p2p/libktorrent/Makefile,v 1.19 2013/02/04 03:04:09 svnexp Exp $
 
 PORTNAME=	libktorrent
-DISTVERSION=	1.3.0
-PORTREVISION=	1
+DISTVERSION=	1.3.1
 CATEGORIES=	net-p2p kde
 MASTER_SITES=	http://ktorrent.org/downloads/${DISTVERSION:C,^1,4,:C,-.*,,}/
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Torrent library split from KTorrent
 
-LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp \
+LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
+		gmp:${PORTSDIR}/math/gmp \
 		qca:${PORTSDIR}/devel/qca \
 		boost_thread:${PORTSDIR}/devel/boost-libs
 
@@ -21,7 +21,7 @@ USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
-SHLIB_VER=	5.0.0
+SHLIB_VER=	5.0.1
 PLIST_SUB+=	SHLIB_VER=${SHLIB_VER} \
 		SHLIB_SHVER=${SHLIB_VER:R:R}
 
