@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdetoys
-# Date created:				2008-01-31
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-clocks/kdetoys4/Makefile,v 1.101 2012/11/17 06:03:24 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/x11-clocks/kdetoys4/Makefile,v 1.102 2013/02/04 01:04:53 svnexp Exp $
 
 PORTNAME=	kdetoys
 PORTVERSION=	${KDE4_VERSION}
