@@ -1,9 +1,4 @@
-# New ports collection makefile for:	kdegraphics-svgpart
-# Date created:				5 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/kdegraphics4-svgpart/Makefile,v 1.7 2012/11/17 05:58:11 svnexp Exp $
-#
+# $FreeBSD: ports/graphics/kdegraphics4-svgpart/Makefile,v 1.8 2013/02/04 01:04:05 svnexp Exp $
 
 PORTNAME=	svgpart
 PORTVERSION=	${KDE4_VERSION}
