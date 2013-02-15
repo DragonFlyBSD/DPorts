@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdepimp4
-# Date created:				2008-31-05
-# Whom:					miwi
-#
-# $FreeBSD: ports/deskutils/kdepim44-runtime/Makefile,v 1.24 2012/11/17 05:55:28 svnexp Exp $
+# Created by: miwi
+# $FreeBSD: ports/deskutils/kdepim44-runtime/Makefile,v 1.26 2013/02/04 01:03:32 svnexp Exp $
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	4.4.11.1
