@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdeartwork
-# Date created:				2008-01-31
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/kdeartwork4/Makefile,v 1.86 2012/11/17 06:03:33 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/x11-themes/kdeartwork4/Makefile,v 1.87 2013/02/04 01:04:54 svnexp Exp $
 
 PORTNAME=	kdeartwork
 PORTVERSION=	${KDE4_VERSION}
@@ -30,11 +27,12 @@ USE_QT4=	gui opengl \
 USE_XORG=	x11 xt
 MAKE_JOBS_SAFE=	yes
 
-OPTIONS=	GNOME "Use Gnome screensavers" off
+OPTIONS_DEFINE=	GNOME
+GNOME_DESC=	Use Gnome screensavers
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_GNOME)
+.if ${PORT_OPTIONS:MGNOME}
 BUILD_DEPENDS+=	${LOCALBASE}/share/applications/xscreensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome
 RUN_DEPENDS+=	${LOCALBASE}/share/applications/xscreensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome
 .else
