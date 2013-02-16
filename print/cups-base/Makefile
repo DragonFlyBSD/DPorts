@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: ports/print/cups-base/Makefile,v 1.183 2012/12/09 22:09:14 svnexp Exp $
+# $FreeBSD: ports/print/cups-base/Makefile,v 1.185 2013/02/05 16:54:25 svnexp Exp $
 
 PORTNAME=	cups
 PORTVERSION=	1.5.4
@@ -55,17 +55,17 @@ CUPSSYSGRP=	wheel
 
 # UNIQUENAME must be set before bsd.port.pre.mk so OPTIONSFILE can be included
 .if defined(CUPS_CLIENT)
-PORTREVISION=	0
+PORTREVISION=	1
 LICENSE=	LGPL21
 CUPS_SUFFIX=	-client
 OPTIONS_DEFINE=	GNUTLS
 .elif defined(CUPS_IMAGE)
-PORTREVISION=	0
+PORTREVISION=	1
 CUPS_SUFFIX=	-image
 LICENSE=	LGPL21
 OPTIONS_DEFINE=	GNUTLS
 .else
-PORTREVISION=	0
+PORTREVISION=	1
 CUPS_SUFFIX=	-base
 CONFLICTS+=	cupsddk-*
 OPTIONS_DEFINE=	GNUTLS LIBPAPER PHP PYTHON PAM LDAP DBUS LIBUSB XDG_OPEN GHOSTSCRIPT XPDF AVAHI MDNSRESPONDER
@@ -227,11 +227,6 @@ LIB_DEPENDS+=		usb:${PORTSDIR}/devel/libusb
 CONFIGURE_ARGS+=	--disable-libusb
 .endif
 
-DFLY_GCC!=	gcc -dumpversion
-.if ${DFLY_GCC} != "4.4.7"
-CONFIGURE_ARGS+=	LIBS="-lssp_nonshared"
-.endif
-
 .if defined(CUPS_CLIENT)
 MAN1=	cups-config.1
 .elif defined(CUPS_IMAGE)
@@ -292,6 +287,10 @@ SUB_FILES+=	ulpt-cupsd.conf ulpt-cupsd.sh
 post-patch:
 .if ${ARCH} == "x86_64"
 	@${REINPLACE_CMD} -e 's|@PIEFLAGS@||' ${WRKSRC}/Makedefs.in
+.endif
+.if ${PORT_OPTIONS:MMDNSRESPONDER}
+	@${REINPLACE_CMD} -e 's|Darwin|FreeBSD|' \
+		${WRKSRC}/backend/Makefile
 .endif
 .if  ${PORT_OPTIONS:MXDG_OPEN}
 	@${REINPLACE_CMD} -e 's|htmlview|xdg-open|' ${WRKSRC}/desktop/cups.desktop.in
