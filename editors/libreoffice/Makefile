@@ -1,17 +1,16 @@
-# $FreeBSD: ports/editors/libreoffice/Makefile,v 1.71 2012/12/18 23:19:33 svnexp Exp $
+# $FreeBSD: ports/editors/libreoffice/Makefile,v 1.77 2013/02/08 08:08:41 svnexp Exp $
 
 .include "${.CURDIR}/Makefile.common"
 
+PORTREVISION=	1
+
 MASTER_SITE_SUBDIR=	src/${PORTVERSION}/
-MASTER_SITES+=	http://dev-www.libreoffice.org/src/:ext \
-		http://download.go-oo.org/src/:GoOOSrc \
-		http://download.go-oo.org/extern/:GoOOExtern \
-		http://www.numbertext.org/linux/:OOoDTP
+MASTER_SITES+=	http://dev-www.libreoffice.org/src/:src \
+		http://dev-www.libreoffice.org/extern/:ext
 
 COMMENT=	Full integrated office productivity suite
 
-BUILD_DEPENDS=	aclocal:${PORTSDIR}/devel/automake \
-		zip:${PORTSDIR}/archivers/zip \
+BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
 		gpatch:${PORTSDIR}/devel/patch \
 		gtar:${PORTSDIR}/archivers/gtar \
 		${LOCALBASE}/lib/libcppunit.so:${PORTSDIR}/devel/cppunit \
@@ -20,14 +19,13 @@ BUILD_DEPENDS=	aclocal:${PORTSDIR}/devel/automake \
 		p5-Archive-Zip>=0:${PORTSDIR}/archivers/p5-Archive-Zip \
 		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf \
 		sane-backends>=1.0.23:${PORTSDIR}/graphics/sane-backends \
+		${LOCALBASE}/lib/libboost_regex.a:${PORTSDIR}/devel/boost-libs \
+		${LOCALBASE}/include/mdds/global.hpp:${PORTSDIR}/devel/mdds \
 		vigra-config:${PORTSDIR}/graphics/vigra
-# The boost port is broken
-#		${LOCALBASE}/lib/libboost_regex.a:${PORTSDIR}/devel/boost-libs \
-# Ports mdds needs ports boost
-#		${LOCALBASE}/include/mdds/global.hpp:${PORTSDIR}/devel/mdds \
 
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo \
-		cdr-0.0.0:${PORTSDIR}/graphics/libcdr \
+		cdr:${PORTSDIR}/graphics/libcdr \
+		clucene-core:${PORTSDIR}/textproc/clucene \
 		xml2.5:${PORTSDIR}/textproc/libxml2 \
 		xslt.2:${PORTSDIR}/textproc/libxslt \
 		expat.6:${PORTSDIR}/textproc/expat2 \
@@ -50,19 +48,19 @@ LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo \
 		graphite2:${PORTSDIR}/graphics/graphite2 \
 		nss3.1:${PORTSDIR}/security/nss \
 		SampleICC.2:${PORTSDIR}/graphics/sampleicc \
-		png15:${PORTSDIR}/graphics/png \
-		gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20
+		gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20 \
+		png15:${PORTSDIR}/graphics/png
 
 RUN_DEPENDS=	${LOCALBASE}/lib/X11/fonts/Liberation/LiberationMono-Bold.ttf:${PORTSDIR}/x11-fonts/liberation-fonts-ttf \
 		${LOCALBASE}/lib/X11/fonts/LinLibertineG/LinLibertine_DR_G.ttf:${PORTSDIR}/x11-fonts/linuxlibertine-g \
 		${LOCALBASE}/lib/X11/fonts/dejavu/DejaVuSans.ttf:${PORTSDIR}/x11-fonts/dejavu \
 		${LOCALBASE}/lib/X11/fonts/GentiumBasic/GenBasI.ttf:${PORTSDIR}/x11-fonts/gentium-basic
 
-CONFLICTS_BUILD=	boost-libs-[0-9]* libcmis-[0-9]*
+CONFLICTS_BUILD=	libcmis-[0-9]*
 CONFLICTS_INSTALL=	libreoffice-legacy-[0-9]*
 
 #LO_COMPONENTS=	binfilter dictionaries help translations
-LO_COMPONENTS=	dictionaries help
+LO_COMPONENTS=	help
 
 USE_GCC=	4.4
 USE_XZ=	yes
@@ -80,14 +78,13 @@ DISTFILES+=	${PORTNAME}-${components}-${LOVERSION}${EXTRACT_SUFX}
 
 EXTRACT_ONLY:=	${DISTFILES}
 
-DISTFILES+=	f02578f5218f217a9f20e9c30e119c6a-boost_1_44_0.tar.bz2:ext \
-		48d647fbd8ef8889e5a7f422c1bfda94-clucene-core-2.3.3.4.tar.gz:ext \
-		86261f06c097d3e425a2f6d0b0635380-hyphen-2.8.3.tar.gz:ext \
-		0d2dcdfbf28d6208751b33057f5361f0-libcmis-0.2.3.tar.gz:ext \
-		9f9e15966b5624834157fe3d748312bc-mdds_0.6.1.tar.bz2:ext \
-		e1e255dc43dbcbb34cb19e8a0eba90ae-mythes-1.2.2.tar.gz:ext \
-		1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz:ext
+DISTFILES+=	0d2dcdfbf28d6208751b33057f5361f0-libcmis-0.2.3.tar.gz:src
+DISTFILES+=	86261f06c097d3e425a2f6d0b0635380-hyphen-2.8.3.tar.gz:src \
+		9f9e15966b5624834157fe3d748312bc-mdds_0.6.1.tar.bz2:src \
+		e1e255dc43dbcbb34cb19e8a0eba90ae-mythes-1.2.2.tar.gz:src \
+		1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz:src
 
+USE_AUTOTOOLS=	autoconf aclocal
 USE_BDB=	yes
 USE_PERL5_BUILD=	yes
 GNU_CONFIGURE=	yes
@@ -95,9 +92,9 @@ USE_GMAKE=	yes
 USE_BISON=	build
 
 USE_XORG=	xaw xrandr
+MAKE_JOBS_SAFE=	yes
 USE_GETTEXT=	yes
 USE_PKGCONFIG=	build
-USE_AUTOTOOLS=	autoconf
 
 OPTIONS_DEFINE=	MMEDIA
 
@@ -106,8 +103,7 @@ MMEDIA_DESC=	Enable multimedia backend for impress
 CONFIGURE_ENV=		GPERF=${LOCALBASE}/bin/gperf
 
 
-CONFIGURE_ARGS+=	--disable-ccache \
-			--disable-epm \
+CONFIGURE_ARGS+=	--disable-epm \
 			--disable-ext-presenter-console \
 			--disable-fetch-external \
 			--disable-gconf \
@@ -128,7 +124,7 @@ CONFIGURE_ARGS+=	--with-alloc=system \
 			--with-build-version="FreeBSD ports ${PKGVERSION}" \
 			--with-external-tar=${DISTDIR}/${DIST_SUBDIR} \
 			--with-gnu-patch=${LOCALBASE}/bin/gpatch \
-			--with-num-cpus=${MAKE_JOBS} \
+			--with-num-cpus=${MAKE_JOBS_NUMBER} \
 			--with-system-headers \
 			--with-system-libs \
 			--with-unix-wrapper="libreoffice" \
@@ -137,13 +133,11 @@ CONFIGURE_ARGS+=	--with-alloc=system \
 CONFIGURE_ARGS+=	--without-afms \
 			--without-fonts \
 			--without-java \
+			--without-myspell-dicts \
 			--without-ppds \
 			--without-system-altlinuxhyph	\
-			--without-system-boost \
-			--without-system-clucene \
 			--without-system-jars \
 			--without-system-libcmis	\
-			--without-system-mdds \
 			--without-system-mozilla-headers \
 			--without-system-sampleicc
 
@@ -166,6 +160,7 @@ MANCOMPRESSED=	yes
 
 .if ${PORT_OPTIONS:MMMEDIA}
 USE_GSTREAMER=	yes
+CONFIGURE_ARGS+=	--enable-gstreamer
 .else
 CONFIGURE_ARGS+=	--disable-gstreamer
 .endif
