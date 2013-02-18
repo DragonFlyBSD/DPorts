@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gccmakedep
-# Date created:				Nov 18 2006
-# Whom:					Dave Grochowski
-#
-# $FreeBSD: ports/devel/gccmakedep/Makefile,v 1.2 2012/11/17 05:55:44 svnexp Exp $
-#
+# Created by:				Dave Grochowski
+# $FreeBSD: ports/devel/gccmakedep/Makefile,v 1.4 2013/01/08 03:41:47 svnexp Exp $
 
 PORTNAME=	gccmakedep
 PORTVERSION=	1.0.2
@@ -18,4 +14,18 @@ MAN1=		gccmakedep.1
 
 PLIST_FILES=	bin/gccmakedep
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if defined(CC) && ${CC:T:M*clang*} == "clang" || ${OSVERSION} >= 1000024
+BUILD_DEPENDS+=	ucpp:${PORTSDIR}/devel/ucpp
+RUN_DEPENDS+=	ucpp:${PORTSDIR}/devel/ucpp
+CONFIGURE_ENV+=	ac_cv_path_RAWCPP="ucpp -s"
+
+post-build:
+	${REINPLACE_CMD} -e 's|^CC= *|CC=|' \
+		-e 's|^RM= *|RM=|' \
+		-e 's|^LN= *|LN=|' \
+		-e 's|^MV= *|MV=|' ${WRKSRC}/gccmakedep
+.endif
+
+.include <bsd.port.post.mk>
