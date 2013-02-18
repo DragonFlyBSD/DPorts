@@ -2,7 +2,7 @@
 # Date created:				2 March 2001
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/kdesdk3/Makefile,v 1.81 2012/11/17 05:55:52 svnexp Exp $
+# $FreeBSD: ports/devel/kdesdk3/Makefile,v 1.82 2012/12/30 18:55:48 svnexp Exp $
 #
 
 PORTNAME=	kdesdk
@@ -20,6 +20,9 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 LIB_DEPENDS=	svn_client-1.0:${PORTSDIR}/devel/subversion
 
 CONFLICTS=	umbrello-[0-9]* kcachegrind-[0-9]*
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDEBASE_VER=3
 
