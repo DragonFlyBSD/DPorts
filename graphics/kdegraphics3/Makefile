@@ -3,7 +3,7 @@
 # Date created:				Saturday 2 September 2000
 # Whom:					Will Andrews <will@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/kdegraphics3/Makefile,v 1.142 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: ports/graphics/kdegraphics3/Makefile,v 1.143 2012/12/30 18:56:02 svnexp Exp $
 #
 
 PORTNAME=	kdegraphics
@@ -26,6 +26,9 @@ LIB_DEPENDS=	art_lgpl_2.5:${PORTSDIR}/graphics/libart_lgpl \
 		paper.2:${PORTSDIR}/print/libpaper
 
 CONFLICTS=	kolourpaint-[0-9]*
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 PREFIX=		${KDE_PREFIX}
