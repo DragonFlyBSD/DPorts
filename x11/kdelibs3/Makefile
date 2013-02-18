@@ -3,12 +3,12 @@
 # Date created:				2 November 2001
 # Whom:					will@cvs.kde.org
 #
-# $FreeBSD: ports/x11/kdelibs3/Makefile,v 1.257 2013/01/17 16:48:43 svnexp Exp $
+# $FreeBSD: ports/x11/kdelibs3/Makefile,v 1.258 2013/02/01 14:53:50 svnexp Exp $
 #
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE_VERSION}
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	x11 kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTVERSION:S/.0//}/src
