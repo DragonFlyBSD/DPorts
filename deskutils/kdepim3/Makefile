@@ -2,7 +2,7 @@
 # Date created:				2 March 2001
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/kdepim3/Makefile,v 1.102 2012/12/10 15:19:12 svnexp Exp $
+# $FreeBSD: ports/deskutils/kdepim3/Makefile,v 1.103 2012/12/30 18:55:45 svnexp Exp $
 #
 
 PORTNAME=	kdepim
@@ -19,6 +19,9 @@ COMMENT=	Personal Information Management tools for KDE
 LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme \
 		pisock:${PORTSDIR}/palm/pilot-link \
 		sasl2:${PORTSDIR}/security/cyrus-sasl2
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 CONFLICTS=	akregator-[0-9]* kdenetwork-3.1.* kdeaddons-kontact-plugins-[0-9]* kdepim-kpilot-3.2.3
 
