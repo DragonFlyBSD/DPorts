@@ -2,7 +2,7 @@
 # Date created:				Sun 14 May 2000 02:47:57
 # Whom:					Will Andrews <will@FreeBSD.org>
 #
-# $FreeBSD: ports/games/kdegames3/Makefile,v 1.113 2012/11/17 05:57:42 svnexp Exp $
+# $FreeBSD: ports/games/kdegames3/Makefile,v 1.114 2012/12/30 18:55:58 svnexp Exp $
 #
 
 PORTNAME=	kdegames
@@ -15,6 +15,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Games for the KDE integrated X11 desktop
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 PREFIX=		${KDE_PREFIX}
