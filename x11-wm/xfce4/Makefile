@@ -1,13 +1,10 @@
-# New ports collection makefile for:	xfce4
-# Date created:		9 June 2003
-# Whom:			James Earl <jdearl@telus.net>
-#
-# $FreeBSD: ports/x11-wm/xfce4/Makefile,v 1.127 2013/01/06 17:50:53 svnexp Exp $
+# Created by: James Earl <jdearl@telus.net>
+# $FreeBSD: ports/x11-wm/xfce4/Makefile,v 1.128 2013/02/02 10:47:50 svnexp Exp $
 #
 
 PORTNAME=	xfce
 PORTVERSION=	4.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	# empty
 DISTFILES=	# empty
