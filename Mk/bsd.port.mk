@@ -1706,12 +1706,14 @@ RUN_DEPENDS+=	pkgconf:${PORTSDIR}/devel/pkgconf
 .if defined(USE_GCC) || defined(USE_FORTRAN)
 .include "${PORTSDIR}/Mk/bsd.gcc.mk"
 .else
-.  if defined(DRAGONFLY_CCVER)
+.  if !defined(USE_GNUSTEP)
+.    if defined(DRAGONFLY_CCVER)
 CONFIGURE_ENV+= 	CCVER=${DRAGONFLY_CCVER}
 MAKE_ENV+=		CCVER=${DRAGONFLY_CCVER}
-.  else
+.    else
 CONFIGURE_ENV+= 	CCVER=gcc44
 MAKE_ENV+=		CCVER=gcc44
+.    endif
 .  endif
 .endif
 
