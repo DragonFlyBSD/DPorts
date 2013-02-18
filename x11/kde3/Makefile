@@ -3,7 +3,7 @@
 # Date created:				Sun May 14 2000 00:50:02
 # Whom:					Will Andrews <will@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/kde3/Makefile,v 1.113 2012/11/17 06:03:16 svnexp Exp $
+# $FreeBSD: ports/x11/kde3/Makefile,v 1.114 2012/12/30 18:56:33 svnexp Exp $
 #
 
 PORTNAME?=	kde
@@ -21,6 +21,9 @@ COMMENT?=	The "meta-port" for KDE
 .if defined(IS_INTERACTIVE)
 CONFLICTS?=	kde-lite-[0-9]*
 .endif
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 ## This is the file where the selections made in the interactive dialog
 ## are saved in and initialized from.
