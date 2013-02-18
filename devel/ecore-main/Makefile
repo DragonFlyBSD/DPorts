@@ -1,8 +1,9 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/devel/ecore-main/Makefile,v 1.12 2013/01/15 17:45:58 svnexp Exp $
+# $FreeBSD: ports/devel/ecore-main/Makefile,v 1.13 2013/01/31 22:44:40 svnexp Exp $
 
 PORTNAME=	main
 PORTVERSION=	1.7.5
+PORTREVISION=	1
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
