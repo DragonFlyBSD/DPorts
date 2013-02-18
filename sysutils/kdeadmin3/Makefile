@@ -3,7 +3,7 @@
 # Date created:				2 November 2001
 # Whom:					will@cvs.kde.org
 #
-# $FreeBSD: ports/sysutils/kdeadmin3/Makefile,v 1.62 2012/11/17 06:01:35 svnexp Exp $
+# $FreeBSD: ports/sysutils/kdeadmin3/Makefile,v 1.63 2012/12/30 18:56:25 svnexp Exp $
 #
 
 PORTNAME=	kdeadmin
@@ -16,6 +16,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	KDE applications related to system administration
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 PREFIX=		${KDE_PREFIX}
