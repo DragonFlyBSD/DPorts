@@ -2,7 +2,7 @@
 # Date created:				19 Jan 2004 18:40:32 EST
 # Whom:					Will Andrews <will@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/kdeaccessibility/Makefile,v 1.37 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: ports/accessibility/kdeaccessibility/Makefile,v 1.38 2012/12/30 18:55:35 svnexp Exp $
 #
 
 PORTNAME=	kdeaccessibility
@@ -15,6 +15,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Accessibility applications for KDE
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 
