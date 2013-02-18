@@ -1,0 +1,9 @@
+genpatch is a simple tool written in sh(1) for generating patches for use
+in dports.  If only passed one path, it will automatically look for a
+similar file with .intermediate or .orig extension and use them (in that
+order) as the original file of which to be compared.
+
+If the path is inside the WRKDIR, then genpatch assumes that the current
+directory is $WRKSRC and will create a patch with the proper name rather
+than sending the results to stdout.  These patches can be used directly
+in the files or dragonfly directories of dports.
