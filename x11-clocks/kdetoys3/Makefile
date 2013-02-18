@@ -3,7 +3,7 @@
 # Date created:				14 May 2000 02:45:53
 # Whom:					Will Andrews <will@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-clocks/kdetoys3/Makefile,v 1.82 2012/11/17 06:03:24 svnexp Exp $
+# $FreeBSD: ports/x11-clocks/kdetoys3/Makefile,v 1.83 2012/12/30 18:56:34 svnexp Exp $
 #
 
 PORTNAME=	kdetoys
@@ -18,6 +18,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small applications for KDE
 
 MAKE_JOBS_UNSAFE=	yes
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 PREFIX=		${KDE_PREFIX}
