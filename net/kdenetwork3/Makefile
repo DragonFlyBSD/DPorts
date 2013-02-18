@@ -3,7 +3,7 @@
 # Date created:				2 November 2001
 # Whom:					will@cvs.kde.org
 #
-# $FreeBSD: ports/net/kdenetwork3/Makefile,v 1.145 2012/11/17 06:00:03 svnexp Exp $
+# $FreeBSD: ports/net/kdenetwork3/Makefile,v 1.146 2012/12/30 18:56:14 svnexp Exp $
 #
 
 PORTNAME=	kdenetwork
@@ -18,6 +18,9 @@ MAINTAINER?=	ports@FreeBSD.org
 COMMENT=	Network-related programs and modules for KDE
 
 LIB_DEPENDS=	slp:${PORTSDIR}/net/openslp
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 OPTIONS_DEFINE=	KOPETE
 KOPETE_DESC=	Install kopete multi-protocol instant messenger
