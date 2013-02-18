@@ -1,0 +1,62 @@
+# Created by: Stanislav Sedov <stas@FreeBSD.org>
+# $FreeBSD: ports/devel/ecore-file/Makefile,v 1.15 2013/01/15 17:45:58 svnexp Exp $
+
+PORTNAME=	file
+PORTVERSION=	1.7.5
+CATEGORIES=	devel enlightenment
+MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+		LOCAL/gblach/e17/
+PKGNAMEPREFIX=	ecore-
+DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
+
+MAINTAINER=	gblach@FreeBSD.org
+COMMENT=	Enlightenment core abstraction library (file module)
+
+LICENSE=	BSD
+
+DIST_SUBDIR=	e17
+USE_BZIP2=	yes
+GNU_CONFIGURE=	yes
+USE_EFL=	ecore libtool_hack
+USE_GNOME=	gnomehack pkgconfig
+USE_LDCONFIG=	yes
+BUILD_WRKSRC=	${WRKSRC}/src/lib/ecore_file
+INSTALL_WRKSRC=	${BUILD_WRKSRC}
+
+.include "../ecore-main/Makefile.inc"
+
+CONFIGURE_ARGS+=--enable-ecore-file
+
+OPTIONS_DEFINE=	CURL
+OPTIONS_DEFAULT=CURL
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MCURL}
+USE_EFL_ECORE=	con
+CONFIGURE_ARGS+=--enable-ecore-con \
+		--enable-curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
+.else
+CONFIGURE_ARGS+=--disable-curl
+.endif
+
+LDFLAGS+=	-L${LOCALBASE}/lib -lecore
+
+post-patch:
+	@${REINPLACE_CMD} -E \
+		-e 's,\$$\(top_builddir\)/src/lib/ecore/\.libs,${LOCALBASE}/lib,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,,'\
+		${BUILD_WRKSRC}/Makefile.in
+.if !defined(WITHOUT_CURL)
+	@${REINPLACE_CMD} -E \
+		-e 's,\$$\(top_builddir\)/src/lib/ecore_con/\.libs,${LOCALBASE}/lib,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore_con/libecore_con\.la,,'\
+		${BUILD_WRKSRC}/Makefile.in
+.endif
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/ecore-file.pc \
+		${PREFIX}/libdata/pkgconfig/
+
+.include <bsd.port.mk>
