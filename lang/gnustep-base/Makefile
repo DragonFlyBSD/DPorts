@@ -2,11 +2,12 @@
 # Date created:         17 April 2001
 # Whom:                 Thomas Gellekum <tg@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/gnustep-base/Makefile,v 1.124 2012/11/17 05:58:51 svnexp Exp $
+# $FreeBSD: ports/lang/gnustep-base/Makefile,v 1.126 2013/02/05 16:54:23 svnexp Exp $
 #
 
 PORTNAME=	gnustep-base
 PORTVERSION=	1.24.0
+PORTREVISION=	1
 CATEGORIES=	lang devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP}
 MASTER_SITE_SUBDIR=	core
@@ -14,7 +15,7 @@ MASTER_SITE_SUBDIR=	core
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNUstep Foundation library
 
-LIB_DEPENDS+=	ffi.5:${PORTSDIR}/devel/libffi
+LIB_DEPENDS+=	ffi:${PORTSDIR}/devel/libffi
 LIB_DEPENDS+=	xml2.5:${PORTSDIR}/textproc/libxml2
 LIB_DEPENDS+=	xslt.2:${PORTSDIR}/textproc/libxslt
 LIB_DEPENDS+=	gmp.10:${PORTSDIR}/math/gmp
@@ -58,7 +59,6 @@ LIB_DEPENDS+=	objc:${PORTSDIR}/${PKGCATEGORY}/libobjc2
 CFLAGS+=	-I${LOCALBASE}/include -DOBJC2RUNTIME=1
 PLIST_SUB+=	WITH_LIB1="@comment "
 .elif ${OPSYS} == "DragonFly"
-CFLAGS+=	-DOBJC2RUNTIME=1
 PLIST_SUB+=	WITH_LIB1="@comment "
 .else
 PLIST_SUB+=	WITH_LIB1=""
