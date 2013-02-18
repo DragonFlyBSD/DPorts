@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dbus-qt3
-# Date created:				2006-10-18
-# Whom:					Maxim Samsonov <xors@sendmail.ru>
-#
-# $FreeBSD: ports/devel/dbus-qt3/Makefile,v 1.11 2012/11/17 05:55:40 svnexp Exp $
-#
+# Created by: Maxim Samsonov <xors@sendmail.ru>
+# $FreeBSD: ports/devel/dbus-qt3/Makefile,v 1.12 2012/12/30 12:34:14 svnexp Exp $
 
 PORTNAME=	dbus
 PORTVERSION=	0.70
@@ -14,10 +10,10 @@ MASTER_SITE_SUBDIR=	distfiles
 PKGNAMESUFFIX=	-qt3
 DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 
-MAINTAINER=	xors@mne.ru
+MAINTAINER=	xors@mailup.net
 COMMENT=	Qt3 bindings for the D-BUS messaging system
 
-LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
+LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus \
 		qt-mt:${PORTSDIR}/x11-toolkits/qt33
 
 USE_BZIP2=	yes
