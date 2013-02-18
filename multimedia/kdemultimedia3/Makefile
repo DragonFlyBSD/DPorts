@@ -3,7 +3,7 @@
 # Date created:				Saturday 7 December 2002
 # Whom:					Alan Eldridge <alane@freebsd.org>
 #
-# $FreeBSD: ports/multimedia/kdemultimedia3/Makefile,v 1.155 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: ports/multimedia/kdemultimedia3/Makefile,v 1.156 2012/12/30 18:56:12 svnexp Exp $
 #
 
 PORTNAME=	kdemultimedia
@@ -27,6 +27,9 @@ LIB_DEPENDS+=	audiofile:${PORTSDIR}/audio/libaudiofile \
 		theora:${PORTSDIR}/multimedia/libtheora \
 		vorbis:${PORTSDIR}/audio/libvorbis
 RUN_DEPENDS=	oggenc:${PORTSDIR}/audio/vorbis-tools
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 PREFIX=		${KDE_PREFIX}
