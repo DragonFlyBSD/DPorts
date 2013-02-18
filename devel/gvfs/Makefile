@@ -2,7 +2,7 @@
 # Date created:		2007-11-06
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gvfs/Makefile,v 1.43 2012/12/14 15:52:37 svnexp Exp $
+# $FreeBSD: ports/devel/gvfs/Makefile,v 1.44 2012/12/29 05:32:28 svnexp Exp $
 #   $MCom: ports/devel/gvfs/Makefile,v 1.70 2011/01/31 19:06:42 kwm Exp $
 #
 
@@ -28,7 +28,8 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--disable-obexftp
+CONFIGURE_ARGS=	--disable-obexftp \
+		--disable-afc
 OPTIONS=	FUSE "Enable fuse" off \
 		AVAHI "Enable AVAHI" on \
 		SAMBA "Enable Samba" on \
