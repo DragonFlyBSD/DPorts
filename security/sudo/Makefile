@@ -1,8 +1,8 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: ports/security/sudo/Makefile,v 1.157 2013/01/16 15:59:00 svnexp Exp $
+# $FreeBSD: ports/security/sudo/Makefile,v 1.158 2013/01/24 18:51:44 svnexp Exp $
 
 PORTNAME=	sudo
-DISTVERSION=	1.8.6p4
+DISTVERSION=	1.8.6p5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SUDO}
 
