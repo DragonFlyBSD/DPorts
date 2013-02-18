@@ -1,13 +1,9 @@
-# New ports collection makefile for:	kdeedu3
-# Date created:				2 November 2001
-# Whom:					will@cvs.kde.org
-#
-# $FreeBSD: ports/misc/kdeedu3/Makefile,v 1.56 2012/11/17 05:59:41 svnexp Exp $
-#
+# Created by: will@cvs.kde.org
+# $FreeBSD: ports/misc/kdeedu3/Makefile,v 1.58 2013/01/31 14:01:30 svnexp Exp $
 
 PORTNAME=	kdeedu
 PORTVERSION=	${KDE_VERSION}
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES?=	misc kde
 MASTER_SITES=		${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTVERSION:S/.0//}/src
@@ -19,6 +15,9 @@ COMMENT=	Collection of entertaining, educational programs for KDE
 LIB_DEPENDS=	boost_python:${PORTSDIR}/devel/boost-python-libs
 
 CONFLICTS+=	kwordquiz-[0-9]* kgeography-[0-9]*
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 PREFIX=		${KDE_PREFIX}
