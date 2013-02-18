@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/security/nettle/Makefile,v 1.37 2013/01/17 20:42:39 svnexp Exp $
+# $FreeBSD: ports/security/nettle/Makefile,v 1.38 2013/01/26 15:05:06 svnexp Exp $
 
 PORTNAME=	nettle
 PORTVERSION=	2.6
@@ -33,6 +33,12 @@ EXAMPLES=	examples/*.c examples/*.h
 
 INFO=		nettle
 
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "sparc64"
+CONFIGURE_ENV+=	CCPIC=-fPIC
+.endif
+
 .include <bsd.port.options.mk>
 
 post-install:
@@ -45,4 +51,4 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
