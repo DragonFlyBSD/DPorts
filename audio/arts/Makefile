@@ -1,5 +1,5 @@
 # Created by: will@cvs.kde.org
-# $FreeBSD: ports/audio/arts/Makefile,v 1.79 2012/12/10 22:28:27 svnexp Exp $
+# $FreeBSD: ports/audio/arts/Makefile,v 1.80 2012/12/30 18:55:37 svnexp Exp $
 
 PORTNAME=	arts
 PORTVERSION=	1.5.10
@@ -29,6 +29,9 @@ LIB_DEPENDS+=	\
 		expat:${PORTSDIR}/textproc/expat2 \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
 		xcb:${PORTSDIR}/x11/libxcb
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 PREFIX=		${KDE_PREFIX}
 WANT_GNOME=	yes
