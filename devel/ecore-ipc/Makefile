@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--disable-openssl
 CONFIGURE_ARGS+=	--enable-ecore-con \
 			--enable-ecore-ipc
 
-LDFLAGS+=	-L${LOCALBASE}/lib -lecore
+LDFLAGS+=	-L${LOCALBASE}/lib -lecore -lecore_con
 
 post-patch:
 	@${REINPLACE_CMD} -E \
