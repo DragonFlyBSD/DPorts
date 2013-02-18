@@ -1,0 +1,11 @@
+--- Source/cairo/GNUmakefile.preamble.orig	2013-01-04 17:38:46.265067000 +0100
++++ Source/cairo/GNUmakefile.preamble	2013-01-04 17:39:06.315095000 +0100
+@@ -37,7 +37,7 @@
+ #ADDITIONAL_CFLAGS = 
+ 
+ # Additional include directories the compiler should search
+-ADDITIONAL_INCLUDE_DIRS = -I../../Headers \
++ADDITIONAL_INCLUDE_DIRS += -I../../Headers \
+ 	-I../$(GNUSTEP_TARGET_DIR) $(GRAPHIC_CFLAGS) \
+ 
+ # Additional LDFLAGS to pass to the linker
