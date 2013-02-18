@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/kdebase3/Makefile,v 1.233 2012/12/10 15:19:19 svnexp Exp $
+# $FreeBSD: ports/x11/kdebase3/Makefile,v 1.234 2012/12/30 18:56:33 svnexp Exp $
 
 PORTNAME=	kdebase
 PORTVERSION=	${KDE_VERSION}
@@ -21,6 +21,9 @@ LIB_DEPENDS=	sasl2:${PORTSDIR}/security/cyrus-sasl2 \
 		smbclient:${PORTSDIR}/net/samba-libsmbclient
 
 CONFLICTS=	kdeartwork-3.[2-3]* kdelibs-3.[0-4]* kdeutils-3.[0-2]*
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 
