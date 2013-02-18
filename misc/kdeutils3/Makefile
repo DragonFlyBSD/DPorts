@@ -2,7 +2,7 @@
 # Date created:				3 November 2001
 # Whom:					will@cvs.kde.org
 #
-# $FreeBSD: ports/misc/kdeutils3/Makefile,v 1.138 2012/11/17 05:59:41 svnexp Exp $
+# $FreeBSD: ports/misc/kdeutils3/Makefile,v 1.139 2012/12/30 18:56:11 svnexp Exp $
 #
 
 PORTNAME=	kdeutils
@@ -22,6 +22,9 @@ RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg \
 		gtar:${PORTSDIR}/archivers/gtar
 
 CONFLICTS=	kgpg-[0-9]* superkaramba-[0-9]*
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 USE_KDEBASE_VER=3
