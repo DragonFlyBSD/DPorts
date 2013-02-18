@@ -3,7 +3,7 @@
 # Date created:				2 November 2001
 # Whom:					will@cvs.kde.org
 #
-# $FreeBSD: ports/x11-toolkits/qt33/Makefile,v 1.235 2012/11/17 06:03:39 svnexp Exp $
+# $FreeBSD: ports/x11-toolkits/qt33/Makefile,v 1.238 2012/12/31 06:28:42 svnexp Exp $
 #
 
 PORTNAME=	qt
@@ -16,6 +16,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multiplatform C++ application framework
+
+DEPRECATED=	No upstream activity since 2008; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
 
@@ -73,8 +76,6 @@ PATCH_COOKIE=	${WRKDIR}/.patch_done.${PORTNAME}.${PREFIX:S/\//_/g}
 PACKAGE_COOKIE=	${WRKDIR}/.package_done.${PORTNAME}.${PREFIX:S/\//_/g}
 
 .include <bsd.port.pre.mk>
-
-PREFIX_REAL!=	/bin/realpath ${PREFIX}
 
 # The previous Qt port versions installed qmake and qmake's specs under LOCALBASE
 # The new devel/qmake port installs them under LOCALBASE. We can use
@@ -192,8 +193,10 @@ post-build:
 	@cd ${WRKSRC}/tools/${tool}; ${SETENV} ${MAKE_ENV} ${MAKE}
 .endfor
 	@${RM} -f ${WRKSRC}/doc/html/qmake*
-	${REINPLACE_CMD} -e 's|${PREFIX_REAL}/include/q.*h||g' \
-			-e 's|${PREFIX_REAL}/include/private/q.*h||g' \
+
+	PREFIX_REAL=$$(/bin/realpath ${PREFIX}); \
+	    ${REINPLACE_CMD} -e "s|$${PREFIX_REAL}/include/q.*h||g" \
+			-e "s|$${PREFIX_REAL}/include/private/q.*h||g" \
 		${WRKSRC}/src/Makefile
 
 # Work around qmake generated dependencies
