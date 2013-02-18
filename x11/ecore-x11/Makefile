@@ -87,7 +87,7 @@ USE_XORG+=	xscrnsaver
 WITH_X11=	yes
 .endif
 
-LDFLAGS+=	-L${LOCALBASE}/lib -lecore
+LDFLAGS+=	-L${LOCALBASE}/lib -lecore -lecore_input
 
 post-patch:
 	@${REINPLACE_CMD} -E \
