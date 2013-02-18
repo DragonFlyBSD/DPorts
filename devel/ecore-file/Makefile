@@ -41,7 +41,7 @@ LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 CONFIGURE_ARGS+=--disable-curl
 .endif
 
-LDFLAGS+=	-L${LOCALBASE}/lib -lecore
+LDFLAGS+=	-L${LOCALBASE}/lib -lecore -lecore_con
 
 post-patch:
 	@${REINPLACE_CMD} -E \
