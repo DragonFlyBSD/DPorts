@@ -2,7 +2,7 @@
 # Date created:				July 09 2004
 # Whom:					Michael Nottebrock <lofi@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-wm/kompmgr/Makefile,v 1.31 2012/11/17 06:03:43 svnexp Exp $
+# $FreeBSD: ports/x11-wm/kompmgr/Makefile,v 1.32 2012/12/30 18:56:37 svnexp Exp $
 #
 
 PORTNAME=	kompmgr
@@ -17,6 +17,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility needed to enable XComposite support in KDE
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 PREFIX=		${KDE_PREFIX}
