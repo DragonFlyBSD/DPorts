@@ -1,4 +1,1 @@
 BUILD_DEPENDS+= ${LOCALBASE}/bin/update-mime-database:${PORTSDIR}/misc/shared-mime-info
-
-# V4L2 not supported on DragonFly yet
-CMAKE_ARGS+= -DDISABLE_VIDEOSUPPORT:BOOL=ON
