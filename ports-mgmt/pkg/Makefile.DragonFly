@@ -1,4 +1,4 @@
 MAKE_ENV+= WITH_BUNDLED_LIBELF=yes
 
-# for ABI logic change
-PORTREVISION=	1
+# for ABI logic change, libarchive deprecated functions
+PORTREVISION=	2
