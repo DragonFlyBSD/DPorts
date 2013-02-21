@@ -58,8 +58,7 @@ PLIST_SUB+=	RADEON_DRIVERS="@comment "
 .endif
 
 pre-patch:
-	@${REINPLACE_CMD} 's|{libdir}/pkgconfig|{prefix}/libdata/pkgconfig|g; \
-			   12661s/x86_/amd/g' \
+	@${REINPLACE_CMD} 's|{libdir}/pkgconfig|{prefix}/libdata/pkgconfig|g;' \
 		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
