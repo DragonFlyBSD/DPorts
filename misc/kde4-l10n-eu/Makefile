@@ -1,9 +1,4 @@
-# New ports collection makefile for:	misc/kde4-l10n-eu
-# Date created:		2009-01-25
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/kde4-l10n-eu/Makefile,v 1.45 2012/11/17 05:59:39 svnexp Exp $
-#
+# $FreeBSD: ports/misc/kde4-l10n-eu/Makefile,v 1.46 2013/02/04 01:04:22 svnexp Exp $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
@@ -15,4 +10,4 @@ COMMENT=	Basque messages and documentation for KDE4
 KDE4_L10N=	eu
 
 .include "${.CURDIR}/../../misc/kde4-l10n/files/bsd.l10n.mk"
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
