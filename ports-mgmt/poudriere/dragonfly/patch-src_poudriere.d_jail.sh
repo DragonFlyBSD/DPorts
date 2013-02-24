@@ -1,6 +1,12 @@
---- src/poudriere.d/jail.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/jail.sh	2013-01-18 00:36:39.729127000 +0100
-@@ -16,70 +16,32 @@
+--- src/poudriere.d/jail.sh.orig	2012-12-01 00:15:48.000000000 +0000
++++ src/poudriere.d/jail.sh
+@@ -11,75 +11,38 @@ Parameters:
+     -k            -- kill (stop) a jail
+     -u            -- update a jail
+     -i            -- show informations
++    -D            -- Dismount all jail mounts (contingency cleanup)
+ 
+ Options:
      -q            -- quiet (remove the header in list)
      -J n          -- Run buildworld in parallell with n jobs.
      -j jailname   -- Specifies the jailname
@@ -85,7 +91,7 @@
  }
  
  cleanup_new_jail() {
-@@ -87,325 +49,6 @@
+@@ -87,325 +50,6 @@ cleanup_new_jail() {
  	delete_jail
  }
  
@@ -411,11 +417,12 @@
  ARCH=`uname -m`
  REALARCH=${ARCH}
  START=0
-@@ -416,27 +59,28 @@
+@@ -416,27 +60,29 @@ CREATE=0
  QUIET=0
  INFO=0
  UPDATE=0
 +QUICK=0
++DISMOUNT=0
 +METHOD=git
 +JOB_OVERRIDE="0"
  
@@ -425,7 +432,7 @@
 +. ${SCRIPTPREFIX}/jail.sh.${BSDPLATFORM}
  
 -while getopts "J:j:v:a:z:m:n:f:M:sdklqciut:" FLAG; do
-+while getopts "J:j:v:a:z:m:n:f:M:sdklqciut:Q" FLAG; do
++while getopts "J:j:v:a:z:m:n:f:M:Dsdklqciut:Q" FLAG; do
  	case "${FLAG}" in
  		j)
  			JAILNAME=${OPTARG}
@@ -446,7 +453,13 @@
  			;;
  		m)
  			METHOD=${OPTARG}
-@@ -447,6 +91,9 @@
+@@ -444,9 +90,15 @@ while getopts "J:j:v:a:z:m:n:f:M:sdklqci
+ 		f)
+ 			JAILFS=${OPTARG}
+ 			;;
++		D)
++			DISMOUNT=1
++			;;
  		M)
  			JAILMNT=${OPTARG}
  			;;
@@ -456,7 +469,7 @@
  		s)
  			START=1
  			;;
-@@ -480,12 +127,16 @@
+@@ -480,44 +132,52 @@ while getopts "J:j:v:a:z:m:n:f:M:sdklqci
  	esac
  done
  
@@ -472,9 +485,27 @@
 +	PARALLEL_JOBS=${JOB_OVERRIDE}
 +fi
  
- [ $(( CREATE + LIST + STOP + START + DELETE + INFO + UPDATE )) -lt 1 ] && usage
+-[ $(( CREATE + LIST + STOP + START + DELETE + INFO + UPDATE )) -lt 1 ] && usage
++[ $(( CREATE + LIST + STOP + START + DELETE + INFO + UPDATE + DISMOUNT )) -lt 1 ] && usage
  
-@@ -505,7 +156,7 @@
+-case "${CREATE}${LIST}${STOP}${START}${DELETE}${INFO}${UPDATE}" in
+-	1000000)
++case "${CREATE}${LIST}${STOP}${START}${DELETE}${INFO}${UPDATE}${DISMOUNT}" in
++	10000000)
+ 		test -z ${JAILNAME} && usage
+ 		create_jail
+ 		;;
+-	0100000)
++	01000000)
+ 		list_jail
+ 		;;
+-	0010000)
++	00100000)
+ 		test -z ${JAILNAME} && usage
+ 		jail_stop
+ 		;;
+-	0001000)
++	00010000)
  		export SET_STATUS_ON_START=0
  		test -z ${JAILNAME} && usage
  		jail_start
@@ -482,12 +513,24 @@
 +		jail_soft_stop ${JAILNAME}
  		jrun 1
  		;;
- 	0000100)
-@@ -518,6 +169,6 @@
+-	0000100)
++	00001000)
+ 		test -z ${JAILNAME} && usage
+ 		delete_jail
  		;;
- 	0000001)
+-	0000010)
++	00000100)
+ 		test -z ${JAILNAME} && usage
+ 		info_jail
+ 		;;
+-	0000001)
++	00000010)
++		test -z ${JAILNAME} && usage
++		update_jail ${QUICK}
++		;;
++	00000001)
  		test -z ${JAILNAME} && usage
 -		update_jail
-+		update_jail ${QUICK}
++		jail_dismount
  		;;
  esac

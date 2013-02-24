@@ -1,5 +1,5 @@
---- src/poudriere.d/common.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/common.sh	2013-01-13 04:50:50.106877000 +0100
+--- src/poudriere.d/common.sh.orig	2012-12-01 00:15:48.000000000 +0000
++++ src/poudriere.d/common.sh
 @@ -1,8 +1,6 @@
  #!/bin/sh
  
@@ -10,7 +10,7 @@
  
  dir_empty() {
  	find $1 -maxdepth 0 -empty
-@@ -49,6 +47,39 @@
+@@ -49,11 +47,44 @@ eargs() {
  	esac
  }
  
@@ -50,7 +50,13 @@
  log_start() {
  	local logfile=$1
  
-@@ -103,26 +134,6 @@
+ 	# Make sure directory exists
+-	mkdir -p ${logfile%/*}
++	mkdir -p ${logfile%/*}/success
+ 
+ 	exec 3>&1 4>&2
+ 	[ ! -e ${logfile}.pipe ] && mkfifo ${logfile}.pipe
+@@ -103,26 +134,6 @@ log_stop() {
  	fi
  }
  
@@ -77,7 +83,7 @@
  sig_handler() {
  	trap - SIGTERM SIGKILL
  	# Ignore SIGINT while cleaning up
-@@ -161,381 +172,35 @@
+@@ -161,381 +172,35 @@ siginfo_handler() {
  		queue_width=3
  	fi
  
@@ -463,7 +469,7 @@
  }
  
  sanity_check_pkgs() {
-@@ -560,135 +225,13 @@
+@@ -560,135 +225,13 @@ sanity_check_pkgs() {
  	return $ret
  }
  
@@ -601,7 +607,7 @@
  	local tardir=${POUDRIERE_DATA}/wrkdirs/${JAILNAME%-job-*}/${PTNAME}
  	local tarname=${tardir}/${PKGNAME}.${WRKDIR_ARCHIVE_FORMAT}
  	local mnted_portdir=${JAILMNT}/wrkdirs/${portdir}
-@@ -716,58 +259,6 @@
+@@ -716,58 +259,6 @@ save_wrkdir() {
  	fi
  }
  
@@ -660,7 +666,7 @@
  build_stats_list() {
  	[ $# -ne 3 ] && eargs html_path type display_name
  	local html_path="$1"
-@@ -792,12 +283,12 @@
+@@ -792,12 +283,12 @@ cat >> ${html_path} << EOF
      <div id="${type}">
        <h2>${display_name} ports </h2>
        <table>
@@ -677,7 +683,7 @@
  EOF
  	cnt=0
  	while read port extra; do
-@@ -818,16 +309,22 @@
+@@ -818,16 +309,22 @@ EOF
  		fi
  
  		cat >> ${html_path} << EOF
@@ -705,7 +711,7 @@
  
  cat >> ${html_path} << EOF
        </table>
-@@ -916,74 +413,6 @@
+@@ -916,74 +413,6 @@ EOF
  	[ "${html_path}" = "/dev/null" ] || mv ${html_path} ${html_path%.tmp}
  }
  
@@ -780,9 +786,15 @@
  
  # Build ports in parallel
  # Returns when all are built.
-@@ -1066,11 +495,10 @@
+@@ -1063,14 +492,16 @@ build_pkg() {
+ 	local failed_status failed_phase
+ 	local clean_rdepends=0
+ 	local ignore
++	local zip_log=0
++	local PKGLOG
  
  	PKGNAME="${pkgname}" # set ASAP so cleanup() can use it
++	PKGLOG=$(log_path)/${PKGNAME}.log
  	port=$(cache_get_origin ${pkgname})
 -	portdir="/usr/ports/${port}"
 +	portdir="${PORTSRC}/${port}"
@@ -794,7 +806,7 @@
  
  	# If this port is IGNORED, skip it
  	# This is checked here instead of when building the queue
-@@ -1078,9 +506,6 @@
+@@ -1078,11 +509,8 @@ build_pkg() {
  	# is a less-common check
  	ignore="$(injail make -C ${portdir} -VIGNORE)"
  
@@ -802,25 +814,39 @@
 -	rm -rf ${JAILMNT}/wrkdirs/*
 -
  	msg "Building ${port}"
- 	log_start $(log_path)/${PKGNAME}.log
+-	log_start $(log_path)/${PKGNAME}.log
++	log_start ${PKGLOG}
  	buildlog_start ${portdir}
-@@ -1119,10 +544,12 @@
+ 
+ 	if [ -n "${ignore}" ]; then
+@@ -1116,13 +544,17 @@ build_pkg() {
+ 		if [ ${build_failed} -eq 0 ]; then
+ 			echo "${port}" >> "${MASTERMNT:-${JAILMNT}}/poudriere/ports.built"
+ 
++			zip_log=1
  			job_msg "Finished build of ${port}: Success"
  			# Cache information for next run
  			pkg_cache_data "${PKGDIR}/All/${PKGNAME}.${PKG_EXT}" ${port} || :
 +			firehook port_build_success "${JAILNAME}" "${PTNAME}" "${JAILMNT}/${portdir}"
  		else
  			echo "${port} ${failed_phase}" >> "${MASTERMNT:-${JAILMNT}}/poudriere/ports.failed"
++			echo "${port} ${failed_phase}" >> $(log_path)/last_run.failed
  			job_msg "Finished build of ${port}: Failed: ${failed_phase}"
  			clean_rdepends=1
 +			firehook port_build_failure "${JAILNAME}" "${PTNAME}" "${JAILMNT}/${portdir}" "${failed_phase}"
  		fi
  	fi
  
-@@ -1131,16 +558,17 @@
+@@ -1130,17 +562,22 @@ build_pkg() {
+ 
  	zset status "done:${port}"
  	buildlog_stop ${portdir}
- 	log_stop $(log_path)/${PKGNAME}.log
+-	log_stop $(log_path)/${PKGNAME}.log
++	log_stop ${PKGLOG}
++	if [ ${zip_log} -eq 1 ]; then
++		bzip2 ${PKGLOG}
++		mv ${PKGLOG}.bz2 $(log_path)/success/
++	fi
 +	destroy_slave ${MASTERMNT} ${MY_JOBID}
  }
  
@@ -837,7 +863,7 @@
  }
  
  deps_file() {
-@@ -1150,7 +578,7 @@
+@@ -1150,7 +587,7 @@ deps_file() {
  
  	if [ ! -f "${depfile}" ]; then
  		if [ "${PKG_EXT}" = "tbz" ]; then
@@ -846,7 +872,7 @@
  		else
  			pkg info -qdF "${pkg}" > "${depfile}"
  		fi
-@@ -1168,7 +596,7 @@
+@@ -1168,7 +605,7 @@ pkg_get_origin() {
  	if [ ! -f "${originfile}" ]; then
  		if [ -z "${origin}" ]; then
  			if [ "${PKG_EXT}" = "tbz" ]; then
@@ -855,7 +881,7 @@
  			else
  				origin=$(pkg query -F "${pkg}" "%o")
  			fi
-@@ -1188,7 +616,7 @@
+@@ -1188,7 +625,7 @@ pkg_get_options() {
  
  	if [ ! -f "${optionsfile}" ]; then
  		if [ "${PKG_EXT}" = "tbz" ]; then
@@ -864,7 +890,7 @@
  		else
  			compiled_options=$(pkg query -F "${pkg}" '%Ov %Ok' | awk '$1 == "on" {print $2}' | sort | tr '\n' ' ')
  		fi
-@@ -1284,7 +712,7 @@
+@@ -1284,7 +721,7 @@ delete_old_pkg() {
  	o=$(pkg_get_origin ${pkg})
  	v=${pkg##*-}
  	v=${v%.*}
@@ -873,7 +899,7 @@
  		msg "${o} does not exist anymore. Deleting stale ${pkg##*/}"
  		delete_pkg ${pkg}
  		return 0
-@@ -1299,7 +727,7 @@
+@@ -1299,7 +736,7 @@ delete_old_pkg() {
  
  	# Check if the compiled options match the current options from make.conf and /var/db/options
  	if [ "${CHECK_CHANGED_OPTIONS:-no}" != "no" ]; then
@@ -882,7 +908,7 @@
  		compiled_options=$(pkg_get_options ${pkg})
  
  		if [ "${compiled_options}" != "${current_options}" ]; then
-@@ -1328,7 +756,7 @@
+@@ -1328,7 +765,7 @@ delete_old_pkgs() {
  next_in_queue() {
  	local p
  	[ ! -d ${JAILMNT}/poudriere/pool ] && err 1 "Build pool is missing"
@@ -891,7 +917,7 @@
  	[ -n "$p" ] || return 0
  	touch ${p}/.building
  	# pkgname
-@@ -1365,7 +793,7 @@
+@@ -1365,7 +802,7 @@ cache_get_pkgname() {
  
  	# Add to cache if not found.
  	if [ -z "${pkgname}" ]; then
@@ -900,7 +926,7 @@
  		# Make sure this origin did not already exist
  		existing_origin=$(cache_get_origin "${pkgname}" 2>/dev/null || :)
  		# It may already exist due to race conditions, it is not harmful. Just ignore.
-@@ -1417,24 +845,6 @@
+@@ -1417,24 +854,6 @@ compute_deps() {
  	done
  }
  
@@ -925,7 +951,7 @@
  parallel_stop() {
  	wait
  }
-@@ -1508,11 +918,35 @@
+@@ -1508,11 +927,35 @@ prepare_ports() {
  	mkdir -p "${JAILMNT}/poudriere/pool" \
  		"${JAILMNT}/poudriere/deps" \
  		"${JAILMNT}/poudriere/rdeps" \
@@ -961,7 +987,7 @@
  	zset stats_queued "0"
  	:> ${JAILMNT}/poudriere/ports.built
  	:> ${JAILMNT}/poudriere/ports.failed
-@@ -1596,8 +1030,7 @@
+@@ -1596,8 +1039,7 @@ prepare_jail() {
  	export FORCE_PACKAGE=yes
  	export USER=root
  	export HOME=/root
@@ -971,7 +997,7 @@
  	[ -z "${JAILMNT}" ] && err 1 "No path of the base of the jail defined"
  	[ -z "${PORTSDIR}" ] && err 1 "No ports directory defined"
  	[ -z "${PKGDIR}" ] && err 1 "No package directory defined"
-@@ -1620,9 +1053,9 @@
+@@ -1620,9 +1062,9 @@ prepare_jail() {
  
  	msg "Populating LOCALBASE"
  	mkdir -p ${JAILMNT}/${MYBASE:-/usr/local}
@@ -983,7 +1009,7 @@
  	if [ -n "${WITH_PKGNG}" ]; then
  		export PKGNG=1
  		export PKG_EXT="txz"
-@@ -1645,26 +1078,40 @@
+@@ -1645,26 +1087,40 @@ test -f ${SCRIPTPREFIX}/../../etc/poudri
  . ${SCRIPTPREFIX}/../../etc/poudriere.conf
  POUDRIERED=${SCRIPTPREFIX}/../../etc/poudriere.d
  
@@ -1032,7 +1058,7 @@
  case ${ZROOTFS} in
  	[!/]*)
  		err 1 "ZROOTFS shoud start with a /"
-@@ -1679,8 +1126,3 @@
+@@ -1679,8 +1135,3 @@ case "${WRKDIR_ARCHIVE_FORMAT}" in
  	*) err 1 "invalid format for WRKDIR_ARCHIVE_FORMAT: ${WRKDIR_ARCHIVE_FORMAT}" ;;
  esac
  

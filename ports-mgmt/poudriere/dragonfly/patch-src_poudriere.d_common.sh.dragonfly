@@ -1,6 +1,6 @@
---- /dev/null	2013-01-13 04:46:51.754149689 +0100
-+++ src/poudriere.d/common.sh.dragonfly	2013-01-13 04:35:06.775559000 +0100
-@@ -0,0 +1,109 @@
+--- src/poudriere.d/common.sh.dragonfly.orig	2013-02-22 22:25:46.000000000 +0000
++++ src/poudriere.d/common.sh.dragonfly
+@@ -0,0 +1,120 @@
 +#!/bin/sh
 +#
 +# DragonFly-specific
@@ -33,6 +33,17 @@
 +	umount ${mnt} || :
 +
 +	export STATUS=0
++}
++
++jail_dismount() {
++	[ $# -ne 0 ] && eargs
++	local mnt
++
++	cd /
++	msg "Umounting file systems"
++	mnt=`realpath ${JAILMNT}`
++	mount | awk -v mnt="${mnt}/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount -v || :
++	mount | awk -v mnt="${mnt}" '{ if ($3 == mnt) { print $3 }}' | xargs umount -v || :
 +}
 +
 +jail_start() {

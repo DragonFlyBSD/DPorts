@@ -1,6 +1,6 @@
---- /dev/null	2013-01-19 01:59:17.084496842 +0100
-+++ src/poudriere.d/common.sh.hammer	2013-01-19 01:57:53.266620000 +0100
-@@ -0,0 +1,815 @@
+--- src/poudriere.d/common.sh.hammer.orig	2013-02-22 22:25:46.000000000 +0000
++++ src/poudriere.d/common.sh.hammer
+@@ -0,0 +1,820 @@
 +#!/bin/sh
 +
 +zget() {
@@ -346,7 +346,7 @@
 +	
 +	zset name "${name}"	
 +	zset status "genesis:"
-+	mount_tmpfs tmpfs ${mnt} || err	1 "Failed to mount build/${j}"
++	[ -n "${USE_TMPFS}" ] && mount_tmpfs tmpfs ${mnt}
 +	job_msg "Creating slave jail"
 +	# Make duplicate of master@prepkg snapshot
 +	cpdup -VV -x -i0 ${HAMMER_SNAPDIR}/${snap}/ ${mnt}/
@@ -382,7 +382,11 @@
 +	[ -d "${CCACHE_DIR:-/nonexistent}" ] && umount ${ccmnt}
 +
 +	# destroy jail
-+	umount ${mnt}
++	if [ -n "${USE_TMPFS}" ]; then
++	    umount ${mnt}
++	else
++	    rm -rf ${mnt}/*
++	fi
 +	
 +	# wipe out hammer info
 +	kill_metadata jails/${name}
@@ -418,6 +422,7 @@
 +	local AWKCMD='{ if ($1 != "PID") print $1 }'
 +	local pidfile running
 +
++	rm -f $(log_path)/last_run.failed
 +	read_queue=1
 +	should_build_stats=1 # Always build stats on first pass
 +	while :; do

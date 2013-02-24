@@ -1,6 +1,11 @@
---- src/poudriere.d/bulk.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/bulk.sh	2013-01-19 01:57:53.266620000 +0100
-@@ -10,12 +10,12 @@
+--- src/poudriere.d/bulk.sh.orig	2012-12-01 00:15:48.000000000 +0000
++++ src/poudriere.d/bulk.sh
+@@ -6,16 +6,17 @@ usage() {
+ 
+ Parameters:
+     -f file     -- Give the list of ports to build
++    -x          -- List all failed ports in last or ongoing build
+ 
  Options:
      -c          -- Clean the previous built binary packages
      -C          -- Clean previous packages for the given list to build
@@ -14,22 +19,39 @@
      -v          -- Be verbose; show more information. Use twice to enable debug output.
      -w          -- Save WRKDIR on failed builds
      -z set      -- Specify which SET to use
-@@ -31,12 +31,13 @@
+@@ -24,6 +25,15 @@ Options:
+ 	exit 1
+ }
+ 
++list_failures() {
++	local FLIST=$(log_path)/last_run.failed
++	if [ -f ${FLIST} ]; then
++	    cat ${FLIST}
++	else
++	    msg "There are no logged failures."	
++	fi
++}
++
+ SCRIPTPATH=`realpath $0`
+ SCRIPTPREFIX=`dirname ${SCRIPTPATH}`
+ PTNAME="default"
+@@ -31,12 +41,14 @@ SKIPSANITY=0
  SETNAME=""
  CLEAN=0
  CLEAN_LISTED=0
 +EXEC_REPO=0
++LISTFAIL=0
  ALL=0
  . ${SCRIPTPREFIX}/common.sh
  
  [ $# -eq 0 ] && usage
  
 -while getopts "f:j:J:Ccn:p:tsvwz:a" FLAG; do
-+while getopts "f:j:J:Ccn:p:tsvwz:ar" FLAG; do
++while getopts "f:j:J:Cc:p:tsvwz:arx" FLAG; do
  	case "${FLAG}" in
  		t)
  			export PORTTESTING=1
-@@ -61,6 +62,9 @@
+@@ -61,6 +73,9 @@ while getopts "f:j:J:Ccn:p:tsvwz:a" FLAG
  		p)
  			PTNAME=${OPTARG}
  			;;
@@ -39,39 +61,81 @@
  		s)
  			SKIPSANITY=1
  			;;
-@@ -94,6 +98,8 @@
+@@ -77,6 +92,9 @@ while getopts "f:j:J:Ccn:p:tsvwz:a" FLAG
+ 		v)
+ 			VERBOSE=$((${VERBOSE:-0} + 1))
+ 			;;
++		x)
++			LISTFAIL=1
++			;;
+ 		*)
+ 			usage
+ 			;;
+@@ -85,6 +103,7 @@ done
+ 
+ shift $((OPTIND-1))
+ 
++if [ ${LISTFAIL} -eq 0 ]; then
+ if [ $# -eq 0 ]; then
+ 	[ -n "${LISTPKGS}" -o ${ALL} -eq 1 ] || err 1 "No packages specified"
+ 	[ ${ALL} -eq 1 -o -f "${LISTPKGS}" ] || err 1 "No such list of packages: ${LISTPKGS}"
+@@ -93,6 +112,7 @@ else
+ 	[ -z "${LISTPKGS}" ] || err 1 "command line arguments and list of ports cannot be used at the same time"
  	LISTPORTS="$@"
  fi
++fi
+ 
+ export SKIPSANITY
+ 
+@@ -111,27 +131,41 @@ fi
+ JAILFS=`jail_get_fs ${JAILNAME}`
+ JAILMNT=`jail_get_base ${JAILNAME}`
  
 +check_jobs
 +
- export SKIPSANITY
+ export POUDRIERE_BUILD_TYPE=bulk
  
- STATUS=0 # out of jail #
-@@ -123,15 +129,21 @@
- 	rm -f ${LOGD}/*.log 2>/dev/null
- fi
- 
-+zsnap ${JAILFS}@prepkg
++if [ ${LISTFAIL} -eq 1 ]; then
++	export LOGS=${POUDRIERE_DATA}/logs
++	list_failures
++	exit 0
++fi
 +
- prepare_ports
+ jail_start
  
-+firehook bulk_build_start "${JAILNAME}" "${PTNAME}" `zget stats_queued`
+ prepare_jail
+ 
++if [ -z "${PORTTESTING}" -a -z "${ALLOW_MAKE_JOBS}" ]; then
++	echo "DISABLE_MAKE_JOBS=yes" >> ${JAILMNT}/etc/make.conf
++fi
 +
- zset status "building:"
- 
- if [ -z "${PORTTESTING}" -a -z "${ALLOW_MAKE_JOBS}" ]; then
- 	echo "DISABLE_MAKE_JOBS=yes" >> ${JAILMNT}/etc/make.conf
- fi
- 
--zfs snapshot ${JAILFS}@prepkg
 +if [ -n "${JOBS_LIMIT}" ]; then
 +	echo "MAKE_JOBS_NUMBER=${JOBS_LIMIT}" >> ${JAILMNT}/etc/make.conf
 +fi
++
+ LOGD=`log_path`
+ if [ -d ${LOGD} -a ${CLEAN} -eq 1 ]; then
+ 	msg "Cleaning up old logs"
+ 	rm -f ${LOGD}/*.log 2>/dev/null
+ fi
+ 
+-prepare_ports
++zsnap ${JAILFS}@prepkg
+ 
+-zset status "building:"
++prepare_ports
+ 
+-if [ -z "${PORTTESTING}" -a -z "${ALLOW_MAKE_JOBS}" ]; then
+-	echo "DISABLE_MAKE_JOBS=yes" >> ${JAILMNT}/etc/make.conf
+-fi
++firehook bulk_build_start "${JAILNAME}" "${PTNAME}" `zget stats_queued`
+ 
+-zfs snapshot ${JAILFS}@prepkg
++zset status "building:"
  
  parallel_build || : # Ignore errors as they are handled below
  
-@@ -142,7 +154,7 @@
+@@ -142,7 +176,7 @@ build_stats 0
  failed=$(cat ${JAILMNT}/poudriere/ports.failed | awk '{print $1 ":" $2 }' | xargs echo)
  built=$(cat ${JAILMNT}/poudriere/ports.built | xargs echo)
  ignored=$(cat ${JAILMNT}/poudriere/ports.ignored | awk '{print $1}' | xargs echo)
@@ -80,7 +144,7 @@
  nbfailed=$(zget stats_failed)
  nbignored=$(zget stats_ignored)
  nbskipped=$(zget stats_skipped)
-@@ -159,20 +171,22 @@
+@@ -159,20 +193,22 @@ if [ $nbbuilt -eq 0 ]; then
  		msg "No package built, no need to update INDEX"
  	fi
  elif [ $PKGNG -eq 1 ]; then
@@ -117,7 +181,7 @@
  	fi
  else
  	if [ -n "${NO_RESTRICTED}" ]; then
-@@ -319,4 +333,7 @@
+@@ -319,4 +355,7 @@ msg "$nbbuilt packages built, $nbfailed
  
  set +e
  
