@@ -1,6 +1,6 @@
 --- src/poudriere.d/common.sh.hammer.orig	2013-02-22 22:25:46.000000000 +0000
 +++ src/poudriere.d/common.sh.hammer
-@@ -0,0 +1,820 @@
+@@ -0,0 +1,823 @@
 +#!/bin/sh
 +
 +zget() {
@@ -164,6 +164,9 @@
 +	# rollback only used for starting jail and building world
 +
 +	cpdup -x -VV -i0 ${HAMMER_SNAPDIR}/${snap}/ ${pfs}/
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/etc/ ${pfs}/etc/
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/var/ ${pfs}/var/
++	cpdup -VV -i0 ${HAMMER_SNAPDIR}/${snap}/usr/local/ ${pfs}/usr/local/
 +	cp ${HAMMER_SNAPDIR}/${snap}/.cpignore ${pfs}/
 +	cp ${HAMMER_SNAPDIR}/${snap}/usr/.cpignore ${pfs}/usr/
 +}
@@ -334,6 +337,7 @@
 +	for j in ${JOBS}; do
 +		mnt="${JAILMNT}/build/${j}"
 +		mkdir -p ${mnt}
++		touch ${mnt}/virgin
 +	done	
 +}
 +
@@ -342,54 +346,56 @@
 +	local j="${2}"
 +	local mnt="${1}/build/${j}"
 +	local name="${JAILNAME}"
-+	local snap=$(snapname "${JAILFS%.job-*}@prepkg")
++	local snap=$(snapname "${JAILFS%.job-*}@clean")
++	local BASEIMG=${HAMMER_SNAPDIR}/${JAILNAME%-job-*}
 +	
 +	zset name "${name}"	
 +	zset status "genesis:"
-+	[ -n "${USE_TMPFS}" ] && mount_tmpfs tmpfs ${mnt}
-+	job_msg "Creating slave jail"
-+	# Make duplicate of master@prepkg snapshot
-+	cpdup -VV -x -i0 ${HAMMER_SNAPDIR}/${snap}/ ${mnt}/
++	if [ -f ${mnt}/virgin ]; then
++	    job_msg "Creating slave jail"
++	    # Make one-time readonly duplicate of base image
++	    rm ${mnt}/virgin
++	    ${NULLMOUNT} -o rdonly ${BASEIMG} ${mnt}
++	    JAILNAME=${name} MASTERMNT=${1} JAILMNT=${mnt} do_jail_mounts 0
++	    JAILNAME=${name} MASTERMNT=${1} JAILMNT=${mnt} do_portbuild_mounts 0
++	else
++	    job_msg "Refreshing slave jail"
++	fi
++	# Refresh /usr/local and /etc and /var
++	mount_tmpfs tmpfs ${mnt}/tmp
++	mount_tmpfs tmfps ${mnt}/wrkdirs
++	[ -n "${USE_TMPFS}" ] && mount_tmpfs tmpfs ${mnt}/var
++	[ -n "${USE_TMPFS}" ] && mount_tmpfs tmpfs ${mnt}/etc
++	[ -n "${USE_TMPFS}" ] && mount_tmpfs tmpfs ${mnt}/usr/local
++	cp -a ${HAMMER_SNAPDIR}/${snap}/etc/* ${mnt}/etc/
++	cp -a ${HAMMER_SNAPDIR}/${snap}/var/* ${mnt}/var/
 +
-+	JAILNAME=${name} MASTERMNT=${1} JAILMNT=${mnt} do_jail_mounts 0
-+	JAILNAME=${name} MASTERMNT=${1} JAILMNT=${mnt} do_portbuild_mounts 0
++	JAILMNT=${mnt} injail /usr/sbin/mtree -q -U -f \
++	   ${PORTSRC}/Templates/BSD.local.dist -d -e -p /usr/local >/dev/null
 +}
 +
 +destroy_slave() {
 +	[ $# -ne 2 ] && eargs master-mountpoint job-number
 +	local j="${2}"
 +	local mnt="${1}/build/${j}"
-+	local name="${JAILNAME}"
-+	local ccmnt="${mnt}/${CCACHE_DIR}"
-+	local linux="${mnt}/compat/linux/proc"
 +	zset status "dismounting:${j}"	
-+	JAILNAME=${name} zset status "grave:"
++	JAILNAME=${name} zset status "cleaning:"
 +
 +	# make sure cwd is not on mount
 +	cd /
 +
-+	# porttree dismounts
-+	umount ${mnt}/${PORTSRC}
-+	umount ${mnt}/${STD_PACKAGES} 
-+	umount ${mnt}/${STD_DISTFILES}
-+
-+	# slave jail dismounts
-+	umount ${mnt}/proc
-+	umount ${mnt}/dev
-+	
-+	# optional dismounts 
-+	[ -d "${linux}" ] && umount ${linux}
-+	[ -d "${CCACHE_DIR:-/nonexistent}" ] && umount ${ccmnt}
-+
 +	# destroy jail
++	umount ${mnt}/tmp
++	umount ${mnt}/wrkdirs
 +	if [ -n "${USE_TMPFS}" ]; then
-+	    umount ${mnt}
++	    umount ${mnt}/etc
++	    umount ${mnt}/var
++	    umount ${mnt}/usr/local
 +	else
-+	    rm -rf ${mnt}/*
++	    rm -rf ${mng}/etc/*
++	    rm -rf ${mnt}/var/*
++	    rm -rf ${mnt}/usr/local/*
 +	fi
-+	
-+	# wipe out hammer info
-+	kill_metadata jails/${name}
 +}
 +
 +stop_builders() {
@@ -405,6 +411,7 @@
 +
 +	for j in ${JOBS}; do
 +		jail_soft_stop ${JAILNAME}-job-${j} || :
++		kill_metadata jails/${JAILNAME}-job-${j}
 +		JAILNAME=${JAILNAME}-job-${j} zset status "available"
 +	done
 +
@@ -523,8 +530,9 @@
 +	fi
 +	wait
 +
-+	zkill ${BASEJFS}@prepkg
 +	jail_stop
++	[ -n "${USE_TMPFS}" ] && umount ${HAMMER_SNAPDIR}/${BASEJNAME}
++	rm -rf ${HAMMER_SNAPDIR}/${BASEJNAME}
 +	rm -rf ${POUDRIERE_DATA}/hammer/jails/${BASEJNAME}-job-*
 +	export CLEANED_UP=1
 +}
@@ -645,15 +653,10 @@
 +}
 +
 +do_jail_mounts() {
++	# should_mkdir no longer used
 +	[ $# -ne 1 ] && eargs should_mkdir
 +	local should_mkdir=$1
 +	local arch=$(zget arch)
-+
-+	# only the master jail is mounted
-+	# The slaves are created on the fly on a new tmpfs mount
-+	if [ ${should_mkdir} -eq 1 ]; then
-+	   mount_jailport ${JAILFS} ${JAILMNT}
-+	fi
 +
 +	mount -t devfs devfs ${JAILMNT}/dev
 +	mount -t procfs proc ${JAILMNT}/proc

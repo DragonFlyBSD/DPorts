@@ -987,6 +987,15 @@
  	zset stats_queued "0"
  	:> ${JAILMNT}/poudriere/ports.built
  	:> ${JAILMNT}/poudriere/ports.failed
+@@ -1555,7 +998,7 @@ prepare_ports() {
+ 
+ 	zset status "cleaning:"
+ 	msg "Cleaning the build queue"
+-	export LOCALBASE=${MYBASE:-/usr/local}
++	export LOCALBASE=/usr/local
+ 	for pn in $(ls ${JAILMNT}/poudriere/deps/); do
+ 		if [ -f "${PKGDIR}/All/${pn}.${PKG_EXT}" ]; then
+ 			# Cleanup rdeps/*/${pn}
 @@ -1596,8 +1039,7 @@ prepare_jail() {
  	export FORCE_PACKAGE=yes
  	export USER=root
@@ -997,19 +1006,27 @@
  	[ -z "${JAILMNT}" ] && err 1 "No path of the base of the jail defined"
  	[ -z "${PORTSDIR}" ] && err 1 "No ports directory defined"
  	[ -z "${PKGDIR}" ] && err 1 "No package directory defined"
-@@ -1620,9 +1062,9 @@ prepare_jail() {
+@@ -1619,15 +1061,14 @@ prepare_jail() {
+ 	fi
  
  	msg "Populating LOCALBASE"
- 	mkdir -p ${JAILMNT}/${MYBASE:-/usr/local}
+-	mkdir -p ${JAILMNT}/${MYBASE:-/usr/local}
 -	injail /usr/sbin/mtree -q -U -f /usr/ports/Templates/BSD.local.dist -d -e -p ${MYBASE:-/usr/local} >/dev/null
-+	injail /usr/sbin/mtree -q -U -f ${PORTSRC}/Templates/BSD.local.dist -d -e -p ${MYBASE:-/usr/local} >/dev/null
++	injail /usr/sbin/mtree -q -U -f ${PORTSRC}/Templates/BSD.local.dist -d -e -p /usr/local >/dev/null
  
 -	WITH_PKGNG=$(injail make -f /usr/ports/Mk/bsd.port.mk -V WITH_PKGNG)
 +	WITH_PKGNG=$(injail make -f ${PORTSRC}/Mk/bsd.port.mk -V WITH_PKGNG)
  	if [ -n "${WITH_PKGNG}" ]; then
  		export PKGNG=1
  		export PKG_EXT="txz"
-@@ -1645,26 +1087,40 @@ test -f ${SCRIPTPREFIX}/../../etc/poudri
+-		export PKG_ADD="${MYBASE:-/usr/local}/sbin/pkg add"
+-		export PKG_DELETE="${MYBASE:-/usr/local}/sbin/pkg delete -y -f"
++		export PKG_ADD="/usr/local/sbin/pkg add"
++		export PKG_DELETE="/usr/local/sbin/pkg delete -y -f"
+ 	else
+ 		export PKGNG=0
+ 		export PKG_ADD=pkg_add
+@@ -1645,26 +1086,40 @@ test -f ${SCRIPTPREFIX}/../../etc/poudri
  . ${SCRIPTPREFIX}/../../etc/poudriere.conf
  POUDRIERED=${SCRIPTPREFIX}/../../etc/poudriere.d
  
@@ -1058,7 +1075,7 @@
  case ${ZROOTFS} in
  	[!/]*)
  		err 1 "ZROOTFS shoud start with a /"
-@@ -1679,8 +1135,3 @@ case "${WRKDIR_ARCHIVE_FORMAT}" in
+@@ -1679,8 +1134,3 @@ case "${WRKDIR_ARCHIVE_FORMAT}" in
  	*) err 1 "invalid format for WRKDIR_ARCHIVE_FORMAT: ${WRKDIR_ARCHIVE_FORMAT}" ;;
  esac
  

@@ -32,4 +32,4 @@ PLIST_FILES+=	share/poudriere/common.sh.dragonfly \
 
 PLIST_DIRS+=	etc/hooks_poudriere
 
-PORTREVISION=	7
+PORTREVISION=	8

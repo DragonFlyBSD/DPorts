@@ -1,6 +1,6 @@
 --- src/poudriere.d/common.sh.dragonfly.orig	2013-02-22 22:25:46.000000000 +0000
 +++ src/poudriere.d/common.sh.dragonfly
-@@ -0,0 +1,120 @@
+@@ -0,0 +1,142 @@
 +#!/bin/sh
 +#
 +# DragonFly-specific
@@ -38,18 +38,23 @@
 +jail_dismount() {
 +	[ $# -ne 0 ] && eargs
 +	local mnt
++	local mnt2
 +
 +	cd /
 +	msg "Umounting file systems"
 +	mnt=`realpath ${JAILMNT}`
-+	mount | awk -v mnt="${mnt}/" 'BEGIN{ gsub(/\//, "\\\/", mnt); } { if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount -v || :
-+	mount | awk -v mnt="${mnt}" '{ if ($3 == mnt) { print $3 }}' | xargs umount -v || :
++	mnt2=${HAMMER_SNAPDIR}/${JAILNAME}
++	mount | awk -v mnt="${mnt}" '{ if ($3 ~ mnt && $1 !~ /\/dev\/md/ ) { print $3 }}' |  sort -r | xargs umount -v || :
++	mount | awk -v mnt="${mnt2}" '{ if ($3 == mnt) { print $3 }}' | xargs umount -v || :
 +}
 +
 +jail_start() {
 +	[ $# -ne 0 ] && eargs
 +	local arch=$(zget arch)
 +	local NEEDFS="${NULLFSREF} procfs"
++	local snap=$(snapname "${JAILFS%.job-*}@clean")
++	local BASEIMG=${HAMMER_SNAPDIR}/${JAILNAME}
++
 +	if [ -z "${NOLINUX}" ]; then
 +		if [ "${arch}" = "i386" ]; then
 +			NEEDFS="${NEEDFS} linprocfs linsysfs"
@@ -65,8 +70,25 @@
 +
 +	zrollback ${JAILFS}@clean
 +
++	rm -rf ${BASEIMG}
++	mkdir -p ${BASEIMG}
++	[ -n "${USE_TMPFS}" ] && \
++	    mount_tmpfs -s 400M tmpfs ${BASEIMG}
++	cpdup -x -VV -i0 ${HAMMER_SNAPDIR}/${snap}/ ${BASEIMG}/
++	mkdir ${BASEIMG}/etc ${BASEIMG}/var ${BASEIMG}/usr/local
++
++	# The master jail is malleable so /etc/ can be modified later
++	# The slave jails are read only.  All have same source
++
++	${NULLMOUNT} ${BASEIMG} ${JAILMNT}
++	mount_tmpfs tmpfs ${JAILMNT}/etc
++	mount_tmpfs tmpfs ${JAILMNT}/var
++	mount_tmpfs tmpfs ${JAILMNT}/usr/local
++	cp -a ${HAMMER_SNAPDIR}/${snap}/etc/* ${JAILMNT}/etc/
++	cp -a ${HAMMER_SNAPDIR}/${snap}/var/* ${JAILMNT}/var/
++
 +	msg "Mounting system devices for ${JAILNAME}"
-+	do_jail_mounts 1
++	do_jail_mounts 0
 +
 +	test -n "${RESOLV_CONF}" && cp -v "${RESOLV_CONF}" "${JAILMNT}/etc/"
 +

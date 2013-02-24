@@ -1,6 +1,6 @@
---- /dev/null	2013-02-09 18:36:47.110850337 +0100
-+++ src/poudriere.d/jail.sh.dragonfly	2013-02-09 18:35:53.684016000 +0100
-@@ -0,0 +1,248 @@
+--- src/poudriere.d/jail.sh.dragonfly.orig	2013-02-22 22:25:46.000000000 +0000
++++ src/poudriere.d/jail.sh.dragonfly
+@@ -0,0 +1,254 @@
 +#!/bin/sh
 +#
 +# DragonFly specific
@@ -18,7 +18,10 @@
 +
 +	# not normally necessary, but in case something went wrong with snap
 +	echo "src" > ${JAILFS}/usr/.cpignore
-+	echo "sys" > ${JAILFS}/.cpignore
++	echo "local" >> ${JAILFS}/usr/.cpignore
++	echo "etc" > ${JAILFS}/.cpignore
++	echo "sys" >> ${JAILFS}/.cpignore
++	echo "var" >> ${JAILFS}/.cpignore
 +	rm -rf ${JAILFS}/build
 +	rm -rf ${JAILFS}/poudriere
 +	rm -rf ${JAILFS}/memory
@@ -199,7 +202,10 @@
 +EOF
 +	echo "# dummy" 	            > ${JAILMNT}/etc/fstab
 +	echo "src"                  > ${JAILMNT}/usr/.cpignore
-+	echo "sys"                  > ${JAILMNT}/.cpignore
++	echo "local"               >> ${JAILMNT}/usr/.cpignore
++	echo "etc"                  > ${JAILMNT}/.cpignore
++	echo "sys"                 >> ${JAILMNT}/.cpignore
++	echo "var"                 >> ${JAILMNT}/.cpignore
 +
 +	mkdir -p ${JAILMNT}/${PORTSRC}
 +	mkdir -p ${JAILMNT}/${STD_PACKAGES}

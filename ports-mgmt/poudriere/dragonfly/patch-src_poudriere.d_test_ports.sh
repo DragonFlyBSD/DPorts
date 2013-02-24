@@ -1,6 +1,6 @@
---- src/poudriere.d/test_ports.sh.orig	2012-12-01 01:15:48.000000000 +0100
-+++ src/poudriere.d/test_ports.sh	2012-12-21 02:28:23.000000000 +0100
-@@ -10,11 +10,11 @@
+--- src/poudriere.d/test_ports.sh.orig	2012-12-01 00:15:48.000000000 +0000
++++ src/poudriere.d/test_ports.sh
+@@ -10,11 +10,11 @@ Parameters:
  
  Options:
      -c          -- Run make config for the given port
@@ -13,14 +13,7 @@
      -v          -- Be verbose; show more information. Use twice to enable debug output."
  	exit 1
  }
-@@ -70,13 +70,15 @@
- 
- test -z ${HOST_PORTDIRECTORY} && test -z ${ORIGIN} && usage
- 
-+check_jobs
-+
- export SKIPSANITY
- 
+@@ -75,8 +75,8 @@ export SKIPSANITY
  if [ -z ${ORIGIN} ]; then
  	PORTDIRECTORY=`basename ${HOST_PORTDIRECTORY}`
  else
@@ -31,7 +24,16 @@
  fi
  
  test -z "${JAILNAME}" && err 1 "Don't know on which jail to run please specify -j"
-@@ -94,17 +96,21 @@
+@@ -86,6 +86,8 @@ PKGDIR=${POUDRIERE_DATA}/packages/${JAIL
+ JAILFS=`jail_get_fs ${JAILNAME}`
+ JAILMNT=`jail_get_base ${JAILNAME}`
+ 
++check_jobs
++
+ export POUDRIERE_BUILD_TYPE=testport
+ 
+ jail_start
+@@ -94,17 +96,19 @@ prepare_jail
  
  if [ -z ${ORIGIN} ]; then
  	mkdir -p ${JAILMNT}/${PORTDIRECTORY}
@@ -40,8 +42,6 @@
 +	  err 1 "Failed to null-mount ${HOST_PORTDIRECTORY} to jail"
  fi
  
-+zsnap ${JAILFS}@prepkg
-+
  LISTPORTS=$(list_deps ${PORTDIRECTORY} )
  prepare_ports
  
@@ -56,17 +56,16 @@
  	nbfailed=$(zget stats_failed)
  	nbskipped=$(zget stats_skipped)
  
-@@ -119,7 +125,8 @@
+@@ -119,8 +123,6 @@ fi
  
  zset status "depends:"
  
 -zfs destroy -r ${JAILFS}@prepkg
-+# This line isn't necessary, it's taken care of in the cleanup
-+# zkill ${JAILFS}@prepkg
- 
+-
  injail make -C ${PORTDIRECTORY} pkg-depends extract-depends \
  	fetch-depends patch-depends build-depends lib-depends
-@@ -150,7 +157,7 @@
+ 
+@@ -150,7 +152,7 @@ fi
  
  msg "Populating PREFIX"
  mkdir -p ${JAILMNT}${PREFIX}
@@ -75,7 +74,7 @@
  
  [ $ZVERSION -lt 28 ] && \
  	find ${JAILMNT}${LOCALBASE}/ -type d | sed "s,^${JAILMNT}${LOCALBASE}/,," | sort > ${JAILMNT}${PREFIX}.PLIST_DIRS.before
-@@ -166,7 +173,10 @@
+@@ -166,7 +168,10 @@ if ! build_port ${PORTDIRECTORY}; then
  	failed_phase=${failed_status%:*}
  
  	save_wrkdir "${PKGNAME}" "${PORTDIRECTORY}" "${failed_phase}" || :
@@ -86,7 +85,7 @@
  fi
  
  msg "Installing from package"
-@@ -185,4 +195,8 @@
+@@ -185,4 +190,8 @@ log_stop $(log_path)/${PKGNAME}.log
  cleanup
  set +e
  

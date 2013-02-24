@@ -87,7 +87,7 @@
  
  export SKIPSANITY
  
-@@ -111,27 +131,41 @@ fi
+@@ -111,12 +131,28 @@ fi
  JAILFS=`jail_get_fs ${JAILNAME}`
  JAILMNT=`jail_get_base ${JAILNAME}`
  
@@ -116,15 +116,12 @@
  LOGD=`log_path`
  if [ -d ${LOGD} -a ${CLEAN} -eq 1 ]; then
  	msg "Cleaning up old logs"
- 	rm -f ${LOGD}/*.log 2>/dev/null
- fi
+@@ -125,13 +161,9 @@ fi
  
--prepare_ports
-+zsnap ${JAILFS}@prepkg
+ prepare_ports
  
 -zset status "building:"
-+prepare_ports
- 
+-
 -if [ -z "${PORTTESTING}" -a -z "${ALLOW_MAKE_JOBS}" ]; then
 -	echo "DISABLE_MAKE_JOBS=yes" >> ${JAILMNT}/etc/make.conf
 -fi
@@ -135,7 +132,7 @@
  
  parallel_build || : # Ignore errors as they are handled below
  
-@@ -142,7 +176,7 @@ build_stats 0
+@@ -142,7 +174,7 @@ build_stats 0
  failed=$(cat ${JAILMNT}/poudriere/ports.failed | awk '{print $1 ":" $2 }' | xargs echo)
  built=$(cat ${JAILMNT}/poudriere/ports.built | xargs echo)
  ignored=$(cat ${JAILMNT}/poudriere/ports.ignored | awk '{print $1}' | xargs echo)
@@ -144,7 +141,7 @@
  nbfailed=$(zget stats_failed)
  nbignored=$(zget stats_ignored)
  nbskipped=$(zget stats_skipped)
-@@ -159,20 +193,22 @@ if [ $nbbuilt -eq 0 ]; then
+@@ -159,20 +191,22 @@ if [ $nbbuilt -eq 0 ]; then
  		msg "No package built, no need to update INDEX"
  	fi
  elif [ $PKGNG -eq 1 ]; then
@@ -181,7 +178,7 @@
  	fi
  else
  	if [ -n "${NO_RESTRICTED}" ]; then
-@@ -319,4 +355,7 @@ msg "$nbbuilt packages built, $nbfailed
+@@ -319,4 +353,7 @@ msg "$nbbuilt packages built, $nbfailed
  
  set +e
  

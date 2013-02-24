@@ -4,7 +4,7 @@
      -k            -- kill (stop) a jail
      -u            -- update a jail
      -i            -- show informations
-+    -D            -- Dismount all jail mounts (contingency cleanup)
++    -C            -- Cleanup jail mounts (contingency cleanup)
  
  Options:
      -q            -- quiet (remove the header in list)
@@ -432,7 +432,7 @@
 +. ${SCRIPTPREFIX}/jail.sh.${BSDPLATFORM}
  
 -while getopts "J:j:v:a:z:m:n:f:M:sdklqciut:" FLAG; do
-+while getopts "J:j:v:a:z:m:n:f:M:Dsdklqciut:Q" FLAG; do
++while getopts "J:j:v:a:z:m:n:f:M:Csdklqciut:Q" FLAG; do
  	case "${FLAG}" in
  		j)
  			JAILNAME=${OPTARG}
@@ -457,7 +457,7 @@
  		f)
  			JAILFS=${OPTARG}
  			;;
-+		D)
++		C)
 +			DISMOUNT=1
 +			;;
  		M)
