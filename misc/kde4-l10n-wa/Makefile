@@ -1,9 +1,5 @@
-# New ports collection makefile for:    kde4-l10n-wa
-# Date created:                         29 July 2008
-# Whom:                                 Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/kde4-l10n-wa/Makefile,v 1.23 2012/11/17 05:59:40 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/misc/kde4-l10n-wa/Makefile,v 1.24 2013/02/04 01:04:22 svnexp Exp $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
@@ -15,4 +11,4 @@ COMMENT=	Walloon messages and documentation for KDE4
 KDE4_L10N=	wa
 
 .include "${.CURDIR}/../../misc/kde4-l10n/files/bsd.l10n.mk"
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
