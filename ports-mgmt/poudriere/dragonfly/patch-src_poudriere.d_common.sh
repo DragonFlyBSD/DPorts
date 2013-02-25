@@ -843,11 +843,11 @@
  	buildlog_stop ${portdir}
 -	log_stop $(log_path)/${PKGNAME}.log
 +	log_stop ${PKGLOG}
++	destroy_slave ${MASTERMNT} ${MY_JOBID}
 +	if [ ${zip_log} -eq 1 ]; then
 +		bzip2 ${PKGLOG}
 +		mv ${PKGLOG}.bz2 $(log_path)/success/
 +	fi
-+	destroy_slave ${MASTERMNT} ${MY_JOBID}
  }
  
  list_deps() {

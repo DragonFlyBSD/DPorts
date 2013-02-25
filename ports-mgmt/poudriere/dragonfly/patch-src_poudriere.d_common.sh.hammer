@@ -1,6 +1,6 @@
 --- src/poudriere.d/common.sh.hammer.orig	2013-02-22 22:25:46.000000000 +0000
 +++ src/poudriere.d/common.sh.hammer
-@@ -0,0 +1,823 @@
+@@ -0,0 +1,824 @@
 +#!/bin/sh
 +
 +zget() {
@@ -372,6 +372,8 @@
 +
 +	JAILMNT=${mnt} injail /usr/sbin/mtree -q -U -f \
 +	   ${PORTSRC}/Templates/BSD.local.dist -d -e -p /usr/local >/dev/null
++
++	job_msg "Jail ready"
 +}
 +
 +destroy_slave() {
@@ -379,23 +381,22 @@
 +	local j="${2}"
 +	local mnt="${1}/build/${j}"
 +	zset status "dismounting:${j}"	
-+	JAILNAME=${name} zset status "cleaning:"
 +
 +	# make sure cwd is not on mount
 +	cd /
 +
 +	# destroy jail
-+	umount ${mnt}/tmp
-+	umount ${mnt}/wrkdirs
 +	if [ -n "${USE_TMPFS}" ]; then
++	    umount ${mnt}/usr/local
 +	    umount ${mnt}/etc
 +	    umount ${mnt}/var
-+	    umount ${mnt}/usr/local
 +	else
 +	    rm -rf ${mng}/etc/*
 +	    rm -rf ${mnt}/var/*
 +	    rm -rf ${mnt}/usr/local/*
 +	fi
++	umount ${mnt}/tmp
++	umount ${mnt}/wrkdirs
 +}
 +
 +stop_builders() {
@@ -412,7 +413,7 @@
 +	for j in ${JOBS}; do
 +		jail_soft_stop ${JAILNAME}-job-${j} || :
 +		kill_metadata jails/${JAILNAME}-job-${j}
-+		JAILNAME=${JAILNAME}-job-${j} zset status "available"
++		JAILNAME=${JAILNAME}-job-${j} zset status "available:"
 +	done
 +
 +	cd /
