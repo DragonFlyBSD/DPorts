@@ -1,7 +1,7 @@
-# $FreeBSD: ports/ports-mgmt/pkg/Makefile,v 1.55 2013/01/28 20:48:38 svnexp Exp $
+# $FreeBSD$
 
 PORTNAME=	pkg
-DISTVERSION=	1.0.7
+DISTVERSION=	1.0.8
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	LOCAL/portmgr \
 		http://files.etoilebsd.net/pkg/
