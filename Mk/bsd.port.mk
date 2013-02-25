@@ -1583,7 +1583,9 @@ PLIST_REINPLACE_STOPDAEMON=s!^@stopdaemon \(.*\)!@unexec %D/etc/rc.d/\1 forcesto
 
 # kludge to strip trailing whitespace from CFLAGS;
 # sub-configure will not # survive double space
-CFLAGS:=	${CFLAGS:C/ $//}
+# remove -O from /usr/share/mk/sys.mk and replace with -O2
+CFLAGS:=	${CFLAGS:C/ $//:N-O}
+CFLAGS+=	-O2
 
 .if defined(WITHOUT_CPU_CFLAGS)
 .if defined(_CPUCFLAGS)
