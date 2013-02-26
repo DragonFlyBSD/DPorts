@@ -2,11 +2,11 @@
 # Date created:		02 Nov 1999
 # Whom:			Domas Mituzas <midom@dammit.lt>
 #
-# $FreeBSD: ports/databases/freetds/Makefile,v 1.65 2012/11/17 05:55:08 svnexp Exp $
+# $FreeBSD: ports/databases/freetds/Makefile,v 1.66 2013/02/05 16:54:20 svnexp Exp $
 
 PORTNAME=	freetds
 PORTVERSION=	0.64
-PORTREVISION=	8
+PORTREVISION=	9
 PORTEPOCH=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SUNSITE}
