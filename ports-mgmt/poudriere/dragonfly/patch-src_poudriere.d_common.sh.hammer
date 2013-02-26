@@ -1,6 +1,6 @@
 --- src/poudriere.d/common.sh.hammer.orig	2013-02-22 22:25:46.000000000 +0000
 +++ src/poudriere.d/common.sh.hammer
-@@ -0,0 +1,824 @@
+@@ -0,0 +1,829 @@
 +#!/bin/sh
 +
 +zget() {
@@ -341,6 +341,11 @@
 +	done	
 +}
 +
++double_dismount() {
++	[ $# -ne 1 ] && eargs mountpoint
++	umount ${1} || sleep 3 && umount ${1} || :
++}
++
 +create_slave() {
 +	[ $# -ne 2 ] && eargs master-mountpoint job-number
 +	local j="${2}"
@@ -362,10 +367,10 @@
 +	    job_msg "Refreshing slave jail"
 +	fi
 +	# Refresh /usr/local and /etc and /var
-+	mount_tmpfs tmpfs ${mnt}/tmp
++	mount_tmpfs -s 100M tmpfs ${mnt}/tmp
 +	mount_tmpfs tmfps ${mnt}/wrkdirs
-+	[ -n "${USE_TMPFS}" ] && mount_tmpfs tmpfs ${mnt}/var
-+	[ -n "${USE_TMPFS}" ] && mount_tmpfs tmpfs ${mnt}/etc
++	[ -n "${USE_TMPFS}" ] && mount_tmpfs -s 15M tmpfs ${mnt}/etc
++	[ -n "${USE_TMPFS}" ] && mount_tmpfs -s 100M tmpfs ${mnt}/var
 +	[ -n "${USE_TMPFS}" ] && mount_tmpfs tmpfs ${mnt}/usr/local
 +	cp -a ${HAMMER_SNAPDIR}/${snap}/etc/* ${mnt}/etc/
 +	cp -a ${HAMMER_SNAPDIR}/${snap}/var/* ${mnt}/var/
@@ -385,18 +390,18 @@
 +	# make sure cwd is not on mount
 +	cd /
 +
++	double_dismount ${mnt}/tmp
++	double_dismount ${mnt}/wrkdirs
 +	# destroy jail
 +	if [ -n "${USE_TMPFS}" ]; then
-+	    umount ${mnt}/usr/local
-+	    umount ${mnt}/etc
-+	    umount ${mnt}/var
++	    double_dismount ${mnt}/etc
++	    double_dismount ${mnt}/var
++	    double_dismount ${mnt}/usr/local
 +	else
 +	    rm -rf ${mng}/etc/*
 +	    rm -rf ${mnt}/var/*
 +	    rm -rf ${mnt}/usr/local/*
 +	fi
-+	umount ${mnt}/tmp
-+	umount ${mnt}/wrkdirs
 +}
 +
 +stop_builders() {

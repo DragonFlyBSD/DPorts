@@ -1,6 +1,6 @@
 --- src/poudriere.d/common.sh.dragonfly.orig	2013-02-22 22:25:46.000000000 +0000
 +++ src/poudriere.d/common.sh.dragonfly
-@@ -0,0 +1,142 @@
+@@ -0,0 +1,143 @@
 +#!/bin/sh
 +#
 +# DragonFly-specific
@@ -57,7 +57,7 @@
 +
 +	if [ -z "${NOLINUX}" ]; then
 +		if [ "${arch}" = "i386" ]; then
-+			NEEDFS="${NEEDFS} linprocfs linsysfs"
++			NEEDFS="${NEEDFS} linprocfs"
 +			sysctl -n compat.linux.osrelease >/dev/null 2>&1 || kldload linux
 +		fi
 +	fi
@@ -68,22 +68,23 @@
 +	jail_exists ${JAILNAME} || err 1 "No such jail: ${JAILNAME}"
 +	zset status "start:"
 +
-+	zrollback ${JAILFS}@clean
-+
 +	rm -rf ${BASEIMG}
 +	mkdir -p ${BASEIMG}
 +	[ -n "${USE_TMPFS}" ] && \
 +	    mount_tmpfs -s 400M tmpfs ${BASEIMG}
 +	cpdup -x -VV -i0 ${HAMMER_SNAPDIR}/${snap}/ ${BASEIMG}/
-+	mkdir ${BASEIMG}/etc ${BASEIMG}/var ${BASEIMG}/usr/local
++	mkdir ${BASEIMG}/etc ${BASEIMG}/var ${BASEIMG}/usr/local \
++	      ${BASEIMG}/compat/linprocfs ${BASEIMG}/compat/svr4
 +
 +	# The master jail is malleable so /etc/ can be modified later
 +	# The slave jails are read only.  All have same source
 +
 +	${NULLMOUNT} ${BASEIMG} ${JAILMNT}
-+	mount_tmpfs tmpfs ${JAILMNT}/etc
-+	mount_tmpfs tmpfs ${JAILMNT}/var
++	mount_tmpfs -s 15M tmpfs ${JAILMNT}/etc
++	mount_tmpfs -s 100M tmpfs ${JAILMNT}/tmp
++	mount_tmpfs -s 200M tmpfs ${JAILMNT}/var
 +	mount_tmpfs tmpfs ${JAILMNT}/usr/local
++	mount_tmpfs tmpfs ${JAILMNT}/wrkdirs
 +	cp -a ${HAMMER_SNAPDIR}/${snap}/etc/* ${JAILMNT}/etc/
 +	cp -a ${HAMMER_SNAPDIR}/${snap}/var/* ${JAILMNT}/var/
 +

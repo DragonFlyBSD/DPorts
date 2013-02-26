@@ -47,7 +47,7 @@
  [ $# -eq 0 ] && usage
  
 -while getopts "f:j:J:Ccn:p:tsvwz:a" FLAG; do
-+while getopts "f:j:J:Cc:p:tsvwz:arx" FLAG; do
++while getopts "f:j:J:p:tsvwz:arxcC" FLAG; do
  	case "${FLAG}" in
  		t)
  			export PORTTESTING=1
