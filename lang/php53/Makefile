@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: ports/lang/php53/Makefile,v 1.186 2013/01/09 23:11:43 svnexp Exp $
+# $FreeBSD: ports/lang/php53/Makefile,v 1.187 2013/01/22 22:44:06 svnexp Exp $
 
 PORTNAME=	php53
-PORTVERSION=	5.3.20
+PORTVERSION=	5.3.21
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
@@ -63,7 +63,7 @@ PATCH_SITES+=	${MASTER_SITE_LOCAL} \
 PATCH_SITE_SUBDIR=	flo
 
 .if ${PORT_OPTIONS:MSUHOSIN}
-PATCHFILES+=	suhosin-patch-5.3.x-0.9.10.1.patch.gz
+PATCHFILES+=	suhosin-patch-5.3.x-0.9.10.2.patch.gz
 PLIST_SUB+=	SUHOSIN=""
 .else
 PLIST_SUB+=	SUHOSIN="@comment "
