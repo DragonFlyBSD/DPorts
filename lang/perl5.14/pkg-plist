@@ -16,6 +16,8 @@ bin/json_pp
 bin/libnetcfg
 bin/perl
 bin/perl%%PERL_VER%%
+@exec ln -fs %D/%F %B/perl5
+@unexec rm -f %B/perl5 2>&1 >/dev/null || true
 bin/perl-after-upgrade
 bin/perlbug
 bin/perldoc
