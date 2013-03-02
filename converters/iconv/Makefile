@@ -22,6 +22,8 @@ MANCOMPRESSED=	yes
 MAN1=		biconv.1
 MAN3=		biconv.3 biconv_open.3 biconv_close.3
 
+REPLACE_PERL=	iconv_builtin ccs/iconv_mktbl
+
 .if defined(NO_PROFILE) || defined(NOPROFILE) || defined(WITHOUT_PROFILE)
 PLIST_SUB=	PROFILE:="@comment "
 .else
