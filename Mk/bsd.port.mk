@@ -1171,6 +1171,7 @@ NOPROFILE=		yes
 .export NOPROFILE
 
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
+.include "${PORTSDIR}/Mk/bsd.interpreter.mk"
 
 #
 # DESTDIR section to start a chrooted process if invoked with DESTDIR set
