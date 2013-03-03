@@ -1,6 +1,6 @@
---- src/poudriere.d/common.sh.dragonfly.orig	2013-02-22 22:25:46.000000000 +0000
+--- src/poudriere.d/common.sh.dragonfly.orig	2013-03-03 17:31:36.620173000 +0000
 +++ src/poudriere.d/common.sh.dragonfly
-@@ -0,0 +1,143 @@
+@@ -0,0 +1,142 @@
 +#!/bin/sh
 +#
 +# DragonFly-specific
@@ -84,7 +84,6 @@
 +	mount_tmpfs -s 100M tmpfs ${JAILMNT}/tmp
 +	mount_tmpfs -s 200M tmpfs ${JAILMNT}/var
 +	mount_tmpfs tmpfs ${JAILMNT}/usr/local
-+	mount_tmpfs tmpfs ${JAILMNT}/wrkdirs
 +	cp -a ${HAMMER_SNAPDIR}/${snap}/etc/* ${JAILMNT}/etc/
 +	cp -a ${HAMMER_SNAPDIR}/${snap}/var/* ${JAILMNT}/var/
 +

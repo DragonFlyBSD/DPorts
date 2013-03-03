@@ -83,14 +83,13 @@
  sig_handler() {
  	trap - SIGTERM SIGKILL
  	# Ignore SIGINT while cleaning up
-@@ -161,381 +172,35 @@ siginfo_handler() {
+@@ -161,122 +172,21 @@ siginfo_handler() {
  		queue_width=3
  	fi
  
 -	printf "[${JAILNAME}] [${status}] [%0${queue_width}d/%0${queue_width}d] Built: %-${queue_width}d Failed: %-${queue_width}d  Ignored: %-${queue_width}d  Skipped: %-${queue_width}d  \n" \
-+	printf "[${JAILNAME}] [${status}] [%0${queue_width}d/%0${queue_width}d] Built: %-${queue_width}d Failed: %-${queue_width}d  Ignored: %-${queue_width}d  Skipped: %-${queue_width}d\n" \
- 	  ${ndone} ${nbq} ${nbb} ${nbf} ${nbi} ${nbs}
- 
+-	  ${ndone} ${nbq} ${nbb} ${nbf} ${nbi} ${nbs}
+-
  	# Skip if stopping or starting jobs
  	if [ -n "${JOBS}" -a "${status#starting_jobs:}" = "${status}" -a "${status}" != "stopping_jobs:" ]; then
  		for j in ${JOBS}; do
@@ -105,7 +104,7 @@
  			echo -e "\t[${j}]: ${status}"
  		done
  	fi
- }
+-}
  
 -jail_exists() {
 -	[ $# -ne 1 ] && eargs jailname
@@ -206,10 +205,12 @@
 -		-o mountpoint=${BASEFS}/data \
 -		${ZPOOL}${ZROOTFS}/data
 -	echo "${BASEFS}/data"
--}
--
++	printf "[${JAILNAME}] [${status}] [%0${queue_width}d/%0${queue_width}d] Built: %-${queue_width}d Failed: %-${queue_width}d  Ignored: %-${queue_width}d  Skipped: %-${queue_width}d\n" \
++	  ${ndone} ${nbq} ${nbb} ${nbf} ${nbi} ${nbs}
+ }
+ 
  fetch_file() {
- 	[ $# -ne 2 ] && eargs destination source
+@@ -284,258 +194,13 @@ fetch_file() {
  	fetch -p -o $1 $2 || fetch -p -o $1 $2
  }
  
@@ -908,15 +909,20 @@
  		compiled_options=$(pkg_get_options ${pkg})
  
  		if [ "${compiled_options}" != "${current_options}" ]; then
-@@ -1328,7 +765,7 @@ delete_old_pkgs() {
+@@ -1327,10 +764,10 @@ delete_old_pkgs() {
+ 
  next_in_queue() {
  	local p
- 	[ ! -d ${JAILMNT}/poudriere/pool ] && err 1 "Build pool is missing"
+-	[ ! -d ${JAILMNT}/poudriere/pool ] && err 1 "Build pool is missing"
 -	p=$(lockf -k -t 60 ${JAILMNT}/poudriere/.lock.pool find ${JAILMNT}/poudriere/pool -type d -depth 1 -empty -print -quit || :)
-+	p=$(lockf -k -t 30 ${JAILMNT}/poudriere/.lock.pool find ${JAILMNT}/poudriere/pool -type d -depth 1 -empty -print -quit || :)
++	[ ! -d ${JAILMNT}/poudriere/pool0 ] && err 1 "Build pool is missing"
++	p=$(find ${JAILMNT}/poudriere/pool9 ${JAILMNT}/poudriere/pool8 ${JAILMNT}/poudriere/pool7 ${JAILMNT}/poudriere/pool6 ${JAILMNT}/poudriere/pool5 ${JAILMNT}/poudriere/pool4 ${JAILMNT}/poudriere/pool3 ${JAILMNT}/poudriere/pool2 ${JAILMNT}/poudriere/pool1 ${JAILMNT}/poudriere/pool0 -type d -depth 1 -empty -print -quit || :)
  	[ -n "$p" ] || return 0
- 	touch ${p}/.building
+-	touch ${p}/.building
++	mv ${p} ${JAILMNT}/poudriere/running
  	# pkgname
+ 	echo ${p##*/}
+ }
 @@ -1365,7 +802,7 @@ cache_get_pkgname() {
  
  	# Add to cache if not found.
@@ -951,8 +957,22 @@
  parallel_stop() {
  	wait
  }
-@@ -1508,11 +927,35 @@ prepare_ports() {
- 	mkdir -p "${JAILMNT}/poudriere/pool" \
+@@ -1505,14 +924,48 @@ prepare_ports() {
+ 	[ -n "${TMPFS_DATA}" ] && mount -t tmpfs tmpfs "${JAILMNT}/poudriere"
+ 	rm -rf "${JAILMNT}/poudriere/var/cache/origin-pkgname" \
+ 	       "${JAILMNT}/poudriere/var/cache/pkgname-origin" 2>/dev/null || :
+-	mkdir -p "${JAILMNT}/poudriere/pool" \
++	mkdir -p "${JAILMNT}/poudriere/pool0" \
++		"${JAILMNT}/poudriere/pool1" \
++		"${JAILMNT}/poudriere/pool2" \
++		"${JAILMNT}/poudriere/pool3" \
++		"${JAILMNT}/poudriere/pool4" \
++		"${JAILMNT}/poudriere/pool5" \
++		"${JAILMNT}/poudriere/pool6" \
++		"${JAILMNT}/poudriere/pool7" \
++		"${JAILMNT}/poudriere/pool8" \
++		"${JAILMNT}/poudriere/pool9" \
++		"${JAILMNT}/poudriere/running" \
  		"${JAILMNT}/poudriere/deps" \
  		"${JAILMNT}/poudriere/rdeps" \
 +		"${JAILMNT}/poudriere/trees" \
@@ -987,7 +1007,7 @@
  	zset stats_queued "0"
  	:> ${JAILMNT}/poudriere/ports.built
  	:> ${JAILMNT}/poudriere/ports.failed
-@@ -1555,7 +998,7 @@ prepare_ports() {
+@@ -1555,7 +1008,7 @@ prepare_ports() {
  
  	zset status "cleaning:"
  	msg "Cleaning the build queue"
@@ -996,7 +1016,16 @@
  	for pn in $(ls ${JAILMNT}/poudriere/deps/); do
  		if [ -f "${PKGDIR}/All/${pn}.${PKG_EXT}" ]; then
  			# Cleanup rdeps/*/${pn}
-@@ -1596,8 +1039,7 @@ prepare_jail() {
+@@ -1578,7 +1031,7 @@ prepare_ports() {
+ 	zset stats_queued "${nbq##* }"
+ 
+ 	# Create a pool of ready-to-build from the deps pool
+-	find "${JAILMNT}/poudriere/deps" -type d -empty|xargs -J % mv % "${JAILMNT}/poudriere/pool"
++	find "${JAILMNT}/poudriere/deps" -type d -empty|xargs -J % mv % "${JAILMNT}/poudriere/pool0"
+ }
+ 
+ append_make() {
+@@ -1596,8 +1049,7 @@ prepare_jail() {
  	export FORCE_PACKAGE=yes
  	export USER=root
  	export HOME=/root
@@ -1006,7 +1035,7 @@
  	[ -z "${JAILMNT}" ] && err 1 "No path of the base of the jail defined"
  	[ -z "${PORTSDIR}" ] && err 1 "No ports directory defined"
  	[ -z "${PKGDIR}" ] && err 1 "No package directory defined"
-@@ -1619,15 +1061,14 @@ prepare_jail() {
+@@ -1619,15 +1071,14 @@ prepare_jail() {
  	fi
  
  	msg "Populating LOCALBASE"
@@ -1026,7 +1055,7 @@
  	else
  		export PKGNG=0
  		export PKG_ADD=pkg_add
-@@ -1645,26 +1086,40 @@ test -f ${SCRIPTPREFIX}/../../etc/poudri
+@@ -1645,26 +1096,40 @@ test -f ${SCRIPTPREFIX}/../../etc/poudri
  . ${SCRIPTPREFIX}/../../etc/poudriere.conf
  POUDRIERED=${SCRIPTPREFIX}/../../etc/poudriere.d
  
@@ -1075,7 +1104,7 @@
  case ${ZROOTFS} in
  	[!/]*)
  		err 1 "ZROOTFS shoud start with a /"
-@@ -1679,8 +1134,3 @@ case "${WRKDIR_ARCHIVE_FORMAT}" in
+@@ -1679,8 +1144,3 @@ case "${WRKDIR_ARCHIVE_FORMAT}" in
  	*) err 1 "invalid format for WRKDIR_ARCHIVE_FORMAT: ${WRKDIR_ARCHIVE_FORMAT}" ;;
  esac
  
