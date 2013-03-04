@@ -7,7 +7,7 @@
 #
 # !!! Here be dragons !!! (yeah, here as well...)
 #
-# $FreeBSD: ports/Mk/bsd.xorg.mk,v 1.18 2012/11/17 05:54:18 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.xorg.mk,v 1.19 2013/02/19 18:50:14 svnexp Exp $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Xorg_Pre_Include)
@@ -49,6 +49,11 @@ USE_GNOME+=	pkgconfig
 . if ${XORG_CAT} == "driver"
 USE_GNOME+=	pkgconfig
 USE_XORG+=	xorg-server xproto randrproto xi
+# work around a llvm bug on i386, llvm bug #15806 
+# reproduced with clang 3.2 (current release) and 3.1
+.  if ${ARCH} == i386
+CFLAGS+=	-fno-optimize-sibling-calls
+.  endif
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4x DRIVER_MAN_DIR='$$(mandir)/man4'
 .  if ${PORTNAME:M*input*}x != x
 USE_XORG+=	inputproto renderproto

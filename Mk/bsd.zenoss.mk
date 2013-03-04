@@ -1,13 +1,13 @@
 #-*- mode: makefile; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.zenoss.mk,v 1.5 2012/11/17 05:54:18 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.zenoss.mk,v 1.6 2013/02/14 05:50:49 svnexp Exp $
 #
 # bsd.zenoss.mk - Support for Zenoss ports and Zenpacks.
 #
 # For FreeBSD committers:
 # Please send all suggested changes to the maintainer instead of committing
-# them to CVS yourself.
+# them yourself.
 
 bsd_zenoss_mk_MAINTAINER=	zenoss@experts-exchange.com
 

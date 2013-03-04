@@ -1,4 +1,4 @@
-# $FreeBSD: ports/Mk/bsd.options.desc.mk,v 1.162 2013/02/02 10:53:06 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.options.desc.mk,v 1.165 2013/02/26 18:03:58 svnexp Exp $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -132,6 +132,7 @@ HTTPD_DESC?=		httpd output streaming
 HTTPS_DESC?=		https protocol
 ICONS_DESC?=		Install icons theme
 ICONV_DESC?=		Encoding conversion via iconv
+ICU_DESC?=		Unicode support via ICU
 ID3_DESC?=		ID3 tags
 ID3TAG_DESC?=		ID3 v1/v2 tags
 IDN_DESC?=		International Domain Names
@@ -142,6 +143,7 @@ INI_DESC?=		INI file/format/parser
 IODBC_DESC?=		ODBC backend via iODBC
 IPV4_DESC?=		IPv4 protocol
 IPV6_DESC?=		IPv6 protocol
+ISPELL_DESC?=		Spell checking via Ispell
 JABBER_DESC?=		Jabber support
 JACK_DESC?=		JACK audio server
 JASPER_DESC?=		JPEG 2000 via JasPer
@@ -263,7 +265,7 @@ POPPLER_DESC?=		PDF and PS file
 PORTAUDIO_DESC?=	PortAudio library
 POSTGIS_DESC?=		PostGIS support
 PRINT_DESC?=		Printer support
-PROFILE_DESC?=		Profiling library
+PROFILE_DESC?=		Build with profiling support
 PROJ_DESC?=		PROJ.4 cartographic projections library
 PROXY_DESC?=		Proxy support
 PTH_DESC?=		Threading/multiprocessing via GNU Pth
@@ -279,7 +281,7 @@ RESIN3_DESC?=		Resin 3.x
 RTMP_DESC?=		RTMP protocol via librtmp
 RUBY_DESC?=		Ruby binding/support
 SAMPLERATE_DESC?=	Sample rate conversion
-SANE_DESC?=		Sane Scanner support
+SANE_DESC?=		SANE API scanner support
 SASL_DESC?=		SASL support
 SCHROEDINGER_DESC?=	Dirac codec via libschroedinger
 SCIPY_DESC?=		SciPy scientific computing
@@ -327,6 +329,7 @@ TREMOR_DESC?=		Tremor audio decoder
 TWOLAME_DESC?=		TwoLAME MP2 audio encoder
 UCS2_DESC?=		Unicode UCS-2 encoding
 UCS4_DESC?=		Unicode UCS-4 encoding
+UNICODE_DESC?=		Unicode support
 UNIXODBC_DESC?=		ODBC backend via unixODBC
 UNZIP_DESC?=		UnZip compression
 UPNP_DESC?=		UPnP support

@@ -1,7 +1,7 @@
 #-*- mode: makefile; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.drupal.mk,v 1.14 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.drupal.mk 313219 2013-03-02 09:27:34Z miwi $
 #
 # bsd.drupal.mk - Support for Drupal ports and modules.
 #
@@ -9,7 +9,7 @@
 # Please send all suggested changes to the maintainer instead of committing
 # them to CVS yourself.
 
-bsd_drupal_mk_MAINTAINER=       nick@foobar.org
+bsd_drupal_mk_MAINTAINER=       miwi@FreeBSD.org
 
 # Make sure we cannot define any combination of DRUPAL{5,6}
 .if (defined(DRUPAL5_MODULE) && defined(DRUPAL6_MODULE))

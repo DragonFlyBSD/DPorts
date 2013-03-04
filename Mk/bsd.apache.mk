@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.apache.mk,v 1.44 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.apache.mk 313296 2013-03-02 20:49:03Z ohauer $
 #
 # bsd.apache.mk - Apache related macros.
 # Author: Clement Laforet <clement@FreeBSD.org>
@@ -455,7 +455,11 @@ ap-gen-plist:
 # apache22
 	@${ECHO} "@unexec ${SED} -i '' -E '/LoadModule[[:blank:]]+%%AP_NAME%%_module/d' %D/%%APACHEETCDIR%%/httpd.conf" >> ${PLIST}
 	@${ECHO} "%%APACHEMODDIR%%/%%AP_MODULE%%" >> ${PLIST}
+.if defined(AP_MODENABLE)
+	@${ECHO} "@exec %D/sbin/apxs -e -a -n %%AP_NAME%% %D/%F" >> ${PLIST}
+.else
 	@${ECHO} "@exec %D/sbin/apxs -e -A -n %%AP_NAME%% %D/%F" >> ${PLIST}
+.endif
 	@${ECHO} "@unexec echo \"Don't forget to remove all ${MODULENAME}-related directives in your httpd.conf\"">> ${PLIST}
 .	endif
 .else
@@ -470,7 +474,11 @@ do-build: ap-gen-plist
 
 .if !target(do-install)
 do-install:
+.if defined(AP_MODENABLE)
+	@${APXS} -i -a -n ${SHORTMODNAME} ${WRKSRC}/${MODULENAME}.${AP_BUILDEXT}
+.else
 	@${APXS} -i -A -n ${SHORTMODNAME} ${WRKSRC}/${MODULENAME}.${AP_BUILDEXT}
+.endif
 .endif
 .endif
 .endif

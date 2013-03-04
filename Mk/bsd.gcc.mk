@@ -29,7 +29,7 @@
 # If you are wondering what your port exactly does, use "make test-gcc"
 # to see some debugging.
 #
-# $FreeBSD: ports/Mk/bsd.gcc.mk,v 1.72 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.gcc.mk 313323 2013-03-03 03:21:29Z gerald $
 #
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org
@@ -166,6 +166,9 @@ _DFLY_CCVER=gcc${DRAGONFLY_MIN_VERSION}
 _BASE_VER=${DRAGONFLY_MIN_VERSION}
 .endif
 
+#
+# Initialize _GCC_FOUND${v}.
+#
 .for v in ${GCCVERSIONS}
 . if ${DFLYVERSION} >= ${_GCCVERSION_${v}_L} \
   && ${DFLYVERSION} < ${_GCCVERSION_${v}_R} \
@@ -176,9 +179,6 @@ _GCCVERSION:=		${v}
 _GCC_FOUND${v}=	port
 . endif
 .endfor
-.if !defined(_GCCVERSION)
-IGNORE=		Couldn't find your current GCCVERSION (OSVERSION=${OSVERSION})
-.endif
 
 #
 # If the GCC package defined in USE_GCC does not exist, but a later
@@ -247,13 +247,13 @@ FFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 # ever telling us; to be fixed.
 _GCC_BUILD_DEPENDS:=	${_GCC_PORT_DEPENDS}
 .   endif # ${_USE_GCC} != 3.4
-.  else # ${DFLYVERSION} < ${_GCCVERSION_${v}_L} || ${DFLYVERSION} > ${_GCCVERSION_${v}_R}
+.  else # Use GCC in base.
 CC:=			gcc
 CXX:=			g++
 CPP:=			cpp
 CONFIGURE_ENV+= 	CCVER=${_DFLY_CCVER}
 MAKE_ENV+=		CCVER=${_DFLY_CCVER}
-.  endif # ${DFLYVERSION} < ${_GCCVERSION_${v}_L} || ${DFLYVERSION} > ${_GCCVERSION_${v}_R}
+.  endif # Use GCC in base.
 . endif # ${_USE_GCC} == ${_GCCVERSION_${v}_V}
 .endfor
 .undef V

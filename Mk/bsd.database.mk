@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: ports/Mk/bsd.database.mk,v 1.86 2013/02/07 02:21:00 svnexp Exp $
+# $FreeBSD: ports/Mk/bsd.database.mk,v 1.87 2013/02/14 15:55:31 svnexp Exp $
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Database_Post_Include)
@@ -112,6 +112,7 @@ MYSQL53m_LIBVER=	16
 MYSQL55_LIBVER=		18
 MYSQL55m_LIBVER=	18
 MYSQL55p_LIBVER=	18
+MYSQL56_LIBVER=		18
 MYSQL56p_LIBVER=	18
 
 # Setting/finding MySQL version we want.
