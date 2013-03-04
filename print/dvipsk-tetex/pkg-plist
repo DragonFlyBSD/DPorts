@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/print/dvipsk-tetex/pkg-plist,v 1.5 2012/11/17 06:00:49 svnexp Exp $
+@comment $FreeBSD: print/dvipsk-tetex/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/afm2tfm
 bin/dvips
 bin/odvips
