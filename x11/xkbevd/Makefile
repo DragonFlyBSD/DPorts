@@ -1,12 +1,7 @@
-# New ports collection makefile for:	xkbevd
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xkbevd/Makefile,v 1.5 2012/11/17 06:03:21 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xkbevd/Makefile,v 1.6 2013/02/04 04:31:10 svnexp Exp $
 
 PORTNAME=	xkbevd
-PORTVERSION=	1.1.2
+PORTVERSION=	1.1.3
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
