@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: ports-mgmt/pkg/Makefile 313035 2013-02-27 07:05:52Z bapt $
 
 PORTNAME=	pkg
 DISTVERSION=	1.0.8
@@ -20,7 +20,7 @@ NO_CCACHE=	yes
 USE_LDCONFIG=	yes
 MANCOMPRESSED=	yes
 
-MAKE_ENV+=	WITHOUT_PROFILE=yes
+MAKE_ENV+=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 USE_STAGE=	yes
 
 MAN8=	pkg.8 \
