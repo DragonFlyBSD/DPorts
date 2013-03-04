@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/print/teTeX-base/files/texdoctk.wrapper.in,v 1.2 2012/11/17 06:00:54 svnexp Exp $
+# $FreeBSD: print/teTeX-base/files/texdoctk.wrapper.in 300897 2012-07-14 14:29:18Z beat $
 
 # Check if Tk module installed or not.
 %%PREFIX%%/bin/perl -MTk -e '' 2>/dev/null
