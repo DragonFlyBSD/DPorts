@@ -2,7 +2,7 @@
 # Date Created:			28 July 1998
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/glib20/Makefile,v 1.185 2012/12/10 19:23:59 svnexp Exp $
+# $FreeBSD: ports/devel/glib20/Makefile,v 1.186 2013/02/14 10:22:07 svnexp Exp $
 #   $MCom: ports/devel/glib20/Makefile,v 1.209 2011/06/11 19:51:14 mezz Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
@@ -47,8 +47,6 @@ CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu \
 		--disable-dtrace \
 		--with-pcre=system \
 		--disable-fam
-CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
