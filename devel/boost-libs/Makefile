@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: ports/devel/boost-libs/Makefile,v 1.19 2013/02/07 01:07:11 svnexp Exp $
+# $FreeBSD: ports/devel/boost-libs/Makefile,v 1.20 2013/02/14 10:22:05 svnexp Exp $
 
 PORTNAME=	boost-libs
 COMMENT=	Free portable C++ libraries (without Boost.Python)
@@ -53,7 +53,6 @@ post-install:
 
 	@${REINPLACE_CMD} \
 		-e "s|%%LOCALBASE%%|${LOCALBASE}|g" \
-		-e "s|%%PTHREAD_LIBS%%|${PTHREAD_LIBS}|g" \
 		-e "s|%%PYTHON_INCLUDEDIR%%|${PYTHON_INCLUDEDIR}|g" \
 		-e "s|%%PYTHON_LIBDIR%%|${PYTHON_LIBDIR}|g" \
 		-e "s|%%PYTHON_VERSION%%|${PYTHON_VERSION}|g" ${PKGMESSAGE}
