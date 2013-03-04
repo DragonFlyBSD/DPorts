@@ -1,12 +1,8 @@
-# New ports collection makefile for:    xorg-apps
-# Date created:				Jun 22 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xorg-apps/Makefile,v 1.13 2012/11/17 06:03:22 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xorg-apps/Makefile,v 1.16 2013/02/04 05:58:18 svnexp Exp $
 
 PORTNAME=	xorg-apps
 PORTVERSION=	7.5.2
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -19,7 +15,7 @@ COMPONENTS=	appres bitmap xf86dga:dga iceauth luit \
 		x11-fonts/mkfontdir:mkfontdir \
 		x11-fonts/mkfontscale:mkfontscale sessreg \
 		setxkbmap smproxy x11perf xauth xbacklight xcalc \
-		xcmsdb xcursorgen xdpyinfo xdriinfo xev xgamma xgc \
+		xcmsdb xconsole xcursorgen xdpyinfo xdriinfo xev xgamma xgc \
 		xhost xinput xkbcomp xkbevd xkbutils:xkbvleds xkill \
 		xlsatoms xlsclients xmodmap xpr xprop xrandr xrdb \
 		xrefresh xset xsetmode xsetroot xvinfo xwd xwininfo \
@@ -35,13 +31,15 @@ do-install:
 		${TOUCH} ${PREFIX}/libdata/xorg/apps
 
 .for comp in ${COMPONENTS}
-OPTIONS+=	${comp:C/:.*//:C/.*\///:tu} "Install ${comp:C/:.*//:C/.*\///} application" on
+OPTIONS_DEFINE+=	${comp:C/:.*//:C/.*\///:tu}
+OPTIONS_DEFAULT+=	${comp:C/:.*//:C/.*\///:tu}
+${comp:C/:.*//:C/.*\///:tu}_DESC=	Install ${comp:C/:.*//:C/.*\///} application
 .endfor
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .for comp in ${COMPONENTS}
-. if !defined(WITHOUT_${comp:C/:.*//:C/.*\///:tu})
+. if ${PORT_OPTIONS:M${comp:C/:.*//:C/.*\///:tu}}
 .  if ${comp:M:}==""
 port=${comp}
 check=${comp:C/.*\///} # doesn't work
@@ -56,4 +54,4 @@ RUN_DEPENDS:=	${RUN_DEPENDS} ${check}:${PORTSDIR}/${port}
 . endif
 .endfor
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
