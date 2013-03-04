@@ -14,7 +14,7 @@
 #    - graphics/libGLw
 #    - graphics/dri
 #
-# $FreeBSD: ports/graphics/libGL/bsd.mesalib.mk,v 1.25 2012/11/17 05:58:12 svnexp Exp $
+# $FreeBSD: graphics/libGL/bsd.mesalib.mk 304226 2012-09-13 18:07:55Z swills $
 #
 
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}

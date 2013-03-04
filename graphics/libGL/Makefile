@@ -1,13 +1,9 @@
-# New ports collection makefile for:    xorg-server
-# Date created:		7 May 2004
-# Whom:			anholt@FreeBSD.org
-#
-# $FreeBSD: ports/graphics/libGL/Makefile,v 1.23 2012/11/17 05:58:12 svnexp Exp $
-#
+# Created by: anholt@FreeBSD.org
+# $FreeBSD: graphics/libGL/Makefile 313300 2013-03-02 21:32:51Z swills $
 
 PORTNAME=	libGL
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL library that renders using GLX or DRI
