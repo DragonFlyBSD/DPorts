@@ -2,7 +2,7 @@
 # Date Created:			07 October 2006
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/dbus-glib/Makefile,v 1.19 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: ports/devel/dbus-glib/Makefile,v 1.20 2013/02/14 10:22:06 svnexp Exp $
 #
 
 PORTNAME=	dbus-glib
@@ -25,7 +25,7 @@ CONFIGURE_ARGS=	--with-test-socket-dir=${WRKDIR} \
 		--disable-gtk-doc \
 		--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION="1.0"
 
