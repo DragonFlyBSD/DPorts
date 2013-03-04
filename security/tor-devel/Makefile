@@ -1,8 +1,8 @@
 # Created by: peter.thoenen@yahoo.com
-# $FreeBSD: ports/security/tor-devel/Makefile,v 1.146 2013/01/16 14:41:43 svnexp Exp $
+# $FreeBSD: ports/security/tor-devel/Makefile,v 1.147 2013/02/06 19:51:32 svnexp Exp $
 
 PORTNAME=	tor
-DISTVERSION=	0.2.4.9-alpha
+DISTVERSION=	0.2.4.10-alpha
 CATEGORIES=	security net ipv6
 MASTER_SITES=	https://www.torproject.org/dist/ \
 		ftp://ftp.bit.nl/mirror/tor/ \
