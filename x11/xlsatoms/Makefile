@@ -1,12 +1,7 @@
-# New ports collection makefile for:	xlsatoms
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xlsatoms/Makefile,v 1.4 2012/11/17 06:03:22 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xlsatoms/Makefile,v 1.5 2013/02/04 04:42:43 svnexp Exp $
 
 PORTNAME=	xlsatoms
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
