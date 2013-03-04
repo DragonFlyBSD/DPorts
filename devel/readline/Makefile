@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: ports/devel/readline/Makefile,v 1.30 2012/11/17 05:56:56 svnexp Exp $
+# $FreeBSD: ports/devel/readline/Makefile,v 1.31 2013/02/20 22:42:58 svnexp Exp $
 
 PORTNAME=	readline
 PORTVERSION=	6.2
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNU} \
 		ftp://ftp.cwru.edu/pub/bash/
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	eadler@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A library for editing command lines as they are typed
 
 LICENSE=	GPLv3
