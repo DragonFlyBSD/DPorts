@@ -2,7 +2,7 @@
 # Date created:		7 May 2004
 # Whom:			anholt@FreeBSD.org
 #
-# $FreeBSD: ports/x11-servers/xorg-server/Makefile,v 1.94 2012/12/14 11:08:04 svnexp Exp $
+# $FreeBSD: ports/x11-servers/xorg-server/Makefile,v 1.96 2013/02/02 22:43:46 svnexp Exp $
 #
 
 PORTNAME?=	xorg-server
@@ -111,6 +111,10 @@ CONFIGURE_ARGS+=	--enable-aiglx=no
 CONFIGURE_ARGS+=--enable-install-setuid=yes
 .else
 CONFIGURE_ARGS+=--enable-install-setuid=no
+.endif
+
+.if ${ARCH} == i386
+EXTRA_PATCHES+=	${FILESDIR}/extra-arch-i386
 .endif
 
 .if ${ARCH} == ia64
