@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ilmbase
-# Date created:				2007-10-07
-# Whom:					nork@FreeBSD.org
-#
-# $FreeBSD: ports/graphics/ilmbase/Makefile,v 1.15 2013/01/17 03:46:42 svnexp Exp $
-#
+# Created by: nork@FreeBSD.org
+# $FreeBSD: ports/graphics/ilmbase/Makefile,v 1.16 2013/02/12 14:15:59 svnexp Exp $
 
 PORTNAME=	ilmbase
 PORTVERSION=	1.0.3
