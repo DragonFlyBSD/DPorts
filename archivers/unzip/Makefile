@@ -2,7 +2,7 @@
 # Date created:		17 October 1994
 # Whom:			jmz
 #
-# $FreeBSD: ports/archivers/unzip/Makefile,v 1.75 2012/11/17 05:54:24 svnexp Exp $
+# $FreeBSD: archivers/unzip/Makefile 313182 2013-03-02 03:55:25Z eadler $
 #
 
 PORTNAME=	unzip
@@ -18,7 +18,7 @@ MAINTAINER?=	ehaupt@FreeBSD.org
 COMMENT?=	List, test, and extract compressed files in a ZIP archive
 
 LICENSE=	Info-ZIP
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_NAME=	Info-ZIP license
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
