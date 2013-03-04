@@ -1,5 +1,5 @@
 # Created by: Maxim Samsonov <xors@sendmail.ru>
-# $FreeBSD: ports/devel/dbus-qt3/Makefile,v 1.12 2012/12/30 12:34:14 svnexp Exp $
+# $FreeBSD: ports/devel/dbus-qt3/Makefile,v 1.13 2013/02/14 10:22:06 svnexp Exp $
 
 PORTNAME=	dbus
 PORTVERSION=	0.70
@@ -22,7 +22,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	QTDIR=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION="1.0"
 
