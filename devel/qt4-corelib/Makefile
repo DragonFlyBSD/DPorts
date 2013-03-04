@@ -1,8 +1,9 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: ports/devel/qt4-corelib/Makefile,v 1.29 2013/02/03 21:43:07 svnexp Exp $
+# $FreeBSD: devel/qt4-corelib/Makefile 313048 2013-02-27 12:25:18Z makc $
 
 PORTNAME=	corelib
 DISTVERSION=	${QT4_VERSION}
+PORTREVISION=	1
 CATEGORIES?=	devel
 PKGNAMEPREFIX=	qt4-
 
@@ -44,6 +45,18 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
 .include "${.CURDIR}/../../devel/qt4/files/Makefile.options"
+
+.if empty(QT4_OPTIONS:MCUPS)
+CONFIGURE_ARGS+=	-no-cups
+.endif
+
+.if empty(QT4_OPTIONS:MNAS)
+CONFIGURE_ARGS+=	-no-nas-sound
+.endif
+
+.if empty(QT4_OPTIONS:MQGTKSTYLE)
+CONFIGURE_ARGS+=	-no-gtkstyle
+.endif
 
 pre-everything::
 	@${CAT} ${PKGMESSAGE}
