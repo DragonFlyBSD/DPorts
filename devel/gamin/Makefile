@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: ports/devel/gamin/Makefile,v 1.44 2013/01/18 00:10:12 svnexp Exp $
+# $FreeBSD: ports/devel/gamin/Makefile,v 1.45 2013/02/14 10:22:07 svnexp Exp $
 #    $MCom: ports/devel/gamin/Makefile,v 1.11 2012/08/04 16:55:24 kwm Exp $
 
 PORTNAME=	gamin
@@ -19,8 +19,8 @@ USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS?=--with-html-dir=${PREFIX}/share/doc \
 		--without-python
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
-CPPFLAGS+=	-DHAVE_LINUX -I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-DHAVE_LINUX -I${LOCALBASE}/include
 
 CONFLICTS=	fam-[0-9]*
 
