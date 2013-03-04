@@ -1,12 +1,7 @@
-# New ports collection makefile for:	xcmsdb
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xcmsdb/Makefile,v 1.5 2012/11/17 06:03:20 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xcmsdb/Makefile,v 1.6 2013/02/04 02:44:41 svnexp Exp $
 
 PORTNAME=	xcmsdb
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.4
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
