@@ -1,12 +1,11 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/math/gmp/Makefile,v 1.51 2013/02/06 12:34:36 svnexp Exp $
+# $FreeBSD: ports/math/gmp/Makefile,v 1.53 2013/02/14 15:36:10 svnexp Exp $
 
 PORTNAME=	gmp
-PORTVERSION=	5.1.0
+PORTVERSION=	5.1.1
 CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	gmp
-DISTFILES=	${PORTNAME}-${PORTVERSION}a${EXTRACT_SUFX}
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	A free library for arbitrary precision arithmetic
