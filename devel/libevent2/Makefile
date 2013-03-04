@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/devel/libevent2/Makefile,v 1.17 2013/01/07 11:43:39 svnexp Exp $
+# $FreeBSD: ports/devel/libevent2/Makefile,v 1.18 2013/02/14 10:22:09 svnexp Exp $
 
 PORTNAME=	libevent2
 PORTVERSION=	2.0.21
@@ -36,8 +36,6 @@ PLIST_SUB+=		OPENSSL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MTHREADS}
-CONFIGURE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-			PTHREAD_LIBS="${PTHREAD_LIBS}"
 PLIST_SUB+=		THREADS=""
 .else
 CONFIGURE_ARGS+=	--disable-thread-support
