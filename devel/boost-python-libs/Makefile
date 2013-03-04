@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: ports/devel/boost-python-libs/Makefile,v 1.15 2013/01/31 13:51:19 svnexp Exp $
+# $FreeBSD: ports/devel/boost-python-libs/Makefile,v 1.16 2013/02/14 10:22:05 svnexp Exp $
 
 PORTNAME=	boost-python-libs
 COMMENT=	Framework for interfacing Python and C++
@@ -49,7 +49,6 @@ post-install:
 	@${ECHO_CMD} >> ${PKGMESSAGE}
 	@${REINPLACE_CMD} \
 		-e "s|%%LOCALBASE%%|${LOCALBASE}|g" \
-		-e "s|%%PTHREAD_LIBS%%|${PTHREAD_LIBS}|g" \
 		-e "s|%%PYTHON_INCLUDEDIR%%|${PYTHON_INCLUDEDIR}|g" \
 		-e "s|%%PYTHON_LIBDIR%%|${PYTHON_LIBDIR}|g" \
 		-e "s|%%PYTHON_VERSION%%|${PYTHON_VERSION}|g" ${PKGMESSAGE}
