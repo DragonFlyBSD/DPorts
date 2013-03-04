@@ -1,13 +1,9 @@
-# New ports collection makefile for:	teTeX
-# Date created:		5 December 1996
-# Whom:			Bernd Rosauer <br@netland.inka.de>
-#
-# $FreeBSD: ports/print/teTeX/Makefile,v 1.77 2012/11/17 06:00:54 svnexp Exp $
-#
+# Created by: Bernd Rosauer <br@netland.inka.de>
+# $FreeBSD: print/teTeX/Makefile 313378 2013-03-03 20:49:34Z hrs $
 
 PORTNAME=	teTeX
 PORTVERSION=	3.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -34,7 +30,10 @@ RUN_DEPENDS+=	xdvi:${PORTSDIR}/print/xdvik
 #      in print/teTeX-base.
 DEPENDS_ARGS+=	BATCH=yes
 
-CONFLICTS=	latex2e-[0-9]* tex-[0-9]* dvips-[0-9]* xdvi-[0-9]*
+CONFLICTS=	latex2e-[0-9]* tex-[0-9]* dvips-[0-9]* xdvi-[0-9]* \
+		texlive-[0-9]* tex-web2c-[0-9]* \
+		tex-kpathsea-[0-9]* tex-xdvik-[0-9]* \
+		tex-dvipsk-[0-9]* tex-dvipdfmx-[0-9]*
 
 .if defined(WITH_LETTERSIZE)
 FLAVOR+=	letter
