@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/sampleicc/Makefile,v 1.3 2012/11/17 05:58:22 svnexp Exp $
+# $FreeBSD: graphics/sampleicc/Makefile 313182 2013-03-02 03:55:25Z eadler $
 
 PORTNAME=	sampleicc
 PORTVERSION=	1.6.6
@@ -12,7 +12,7 @@ COMMENT=	Library for reading, writing, manipulating, and applying ICC profiles
 LICENSE=	ICC
 LICENSE_NAME=	The ICC Software License, Version 0.2
 LICENSE_FILE=	${WRKSRC}/COPYING
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack
