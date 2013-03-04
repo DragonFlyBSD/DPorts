@@ -1,19 +1,14 @@
-# New ports collection makefile for:	xev
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xev/Makefile,v 1.5 2012/11/17 06:03:21 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xev/Makefile,v 1.6 2013/02/04 03:37:46 svnexp Exp $
 
 PORTNAME=	xev
-PORTVERSION=	1.1.0
+PORTVERSION=	1.2.1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Print contents of X events
 
 XORG_CAT=	app
-USE_XORG=	x11
+USE_XORG=	x11 xrandr
 
 PLIST_FILES=	bin/xev
 
