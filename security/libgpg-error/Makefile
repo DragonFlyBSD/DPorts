@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libgpg-error
-# Date created:		2003-10-12
-# Whom:			Sergei Kolobov <sergei@kolobov.com>
-#
-# $FreeBSD: ports/security/libgpg-error/Makefile,v 1.33 2012/11/17 06:01:06 svnexp Exp $
-#
+# Created by: Sergei Kolobov <sergei@kolobov.com>
+# $FreeBSD: security/libgpg-error/Makefile 313222 2013-03-02 10:56:34Z novel $
 
 PORTNAME=	libgpg-error
-PORTVERSION=	1.10
+PORTVERSION=	1.11
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -21,20 +17,22 @@ USE_LDCONFIG=		yes
 GNU_CONFIGURE=		yes
 MAKE_JOBS_UNSAFE=	yes
 
-.if defined(WITHOUT_NLS)
-CONFIGURE_ARGS=	--disable-nls
-PLIST_SUB=	NLS="@comment "
-.else
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 USE_ICONV=	yes
 USE_GETTEXT=	yes
 CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
 		--with-libintl-prefix=${LOCALBASE}
 PLIST_SUB=	NLS=""
+.else
+CONFIGURE_ARGS=	--disable-nls
+PLIST_SUB=	NLS="@comment "
 .endif
 
 DOCS=		AUTHORS ChangeLog NEWS README
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
