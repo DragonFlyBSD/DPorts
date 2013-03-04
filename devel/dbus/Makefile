@@ -2,7 +2,7 @@
 # Date Created:			22 June 2004
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/dbus/Makefile,v 1.90 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: ports/devel/dbus/Makefile,v 1.91 2013/02/14 10:22:06 svnexp Exp $
 #   $MCom: ports/devel/dbus/Makefile,v 1.51 2011/08/30 08:13:48 kwm Exp $
 #
 
@@ -28,9 +28,8 @@ CONFIGURE_ARGS=--localstatedir=/var \
 		--with-session-socket-dir=/tmp \
 		--disable-doxygen-docs \
 		--disable-xml-docs
-CONFIGURE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 USE_RC_SUBR=	dbus
 USE_GNOME_SUBR=	yes
