@@ -1,12 +1,7 @@
-# New ports collection makefile for:	xpr
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xpr/Makefile,v 1.3 2012/11/17 06:03:22 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xpr/Makefile,v 1.4 2013/02/04 05:01:49 svnexp Exp $
 
 PORTNAME=	xpr
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.4
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
