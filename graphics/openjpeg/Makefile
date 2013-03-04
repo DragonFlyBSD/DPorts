@@ -1,20 +1,21 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: ports/graphics/openjpeg/Makefile,v 1.23 2012/12/17 17:21:29 svnexp Exp $
+# $FreeBSD: ports/graphics/openjpeg/Makefile,v 1.24 2013/02/08 21:43:53 svnexp Exp $
 
 PORTNAME=	openjpeg
 PORTVERSION=	1.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An open-source JPEG 2000 codec
+COMMENT=	Open-source JPEG 2000 codec
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff \
-		png15:${PORTSDIR}/graphics/png
+		png15:${PORTSDIR}/graphics/png \
+		lcms2:${PORTSDIR}/graphics/lcms2
 
 GNU_CONFIGURE=	yes
 USE_CMAKE=	yes
