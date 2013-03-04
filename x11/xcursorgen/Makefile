@@ -1,13 +1,7 @@
-# New ports collection makefile for:	xcursorgen
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xcursorgen/Makefile,v 1.9 2012/11/17 06:03:21 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xcursorgen/Makefile,v 1.10 2013/02/04 03:35:58 svnexp Exp $
 
 PORTNAME=	xcursorgen
-PORTVERSION=	1.0.4
-PORTREVISION=	1
+PORTVERSION=	1.0.5
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -23,9 +17,5 @@ USE_XORG=	x11 xcursor xextproto
 PLIST_FILES=	bin/xcursorgen
 
 MAN1=		xcursorgen.1
-
-post-patch:
-	${REINPLACE_CMD} -e 's|libpng12|libpng14|g' \
-		${WRKSRC}/configure
 
 .include <bsd.port.mk>
