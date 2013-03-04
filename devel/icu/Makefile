@@ -1,5 +1,5 @@
 # Created by: dwm
-# $FreeBSD: ports/devel/icu/Makefile,v 1.58 2013/01/31 16:48:54 svnexp Exp $
+# $FreeBSD: ports/devel/icu/Makefile,v 1.59 2013/02/14 10:22:08 svnexp Exp $
 
 PORTNAME=	icu
 PORTVERSION=	50.1.2
@@ -73,7 +73,7 @@ post-patch:
 	@${REINPLACE_CMD} -e '/CXXFLAGS=/s/-ansi//' \
 		${WRKSRC}/configure
 .if ! ${PORT_OPTIONS:MTHREADS}
-	@${REINPLACE_CMD} -e 's,\(THREADSC.*FLAGS\).*,\1=${PTHREAD_CFLAGS},g' ${WRKSRC}/config/mh-bsd-gcc
+	@${REINPLACE_CMD} -e 's,\(THREADSC.*FLAGS\).*,\1=,g' ${WRKSRC}/config/mh-bsd-gcc
 .endif
 	@${REINPLACE_CMD} -e 's,$$(libdir)/pkgconfig,${PREFIX}/libdata/pkgconfig,g' ${WRKSRC}/Makefile.in
 
