@@ -2,11 +2,11 @@
 # Date created:				18 December 2001
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/nspr/Makefile,v 1.57 2012/11/27 00:21:27 svnexp Exp $
+# $FreeBSD: ports/devel/nspr/Makefile,v 1.59 2013/02/20 00:52:17 svnexp Exp $
 #    $MCom: ports-experimental/devel/nspr/Makefile,v 1.6 2008/03/12 13:06:56 ahze Exp $
 
 PORTNAME=	nspr
-DISTVERSION=	4.9.4
+DISTVERSION=	4.9.5
 CATEGORIES=	devel
 MASTER_SITES=	MOZILLA
 MASTER_SITE_SUBDIR=	nspr/releases/v${PORTVERSION}/src
