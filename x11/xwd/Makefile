@@ -1,12 +1,7 @@
-# New ports collection makefile for:	xwd
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xwd/Makefile,v 1.6 2012/11/17 06:03:23 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xwd/Makefile,v 1.7 2013/02/04 05:12:43 svnexp Exp $
 
 PORTNAME=	xwd
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.5
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
