@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/print/xdvik/files/pkg-install.in,v 1.4 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: print/xdvik/files/pkg-install.in 300897 2012-07-14 14:29:18Z beat $
 
 PAPERSIZE=%%PAPERSIZE%%
 XDVIDIR=%%XDVIDIR%%

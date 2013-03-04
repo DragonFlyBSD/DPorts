@@ -1,13 +1,9 @@
-# New ports collection makefile for:   xdvik
-# Date created:        26 Feb 1998
-# Whom:                Kentaro Inagaki <JBD01226@niftyserve.ne.jp>
-#
-# $FreeBSD: ports/print/xdvik/Makefile,v 1.37 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: Kentaro Inagaki <JBD01226@niftyserve.ne.jp>
+# $FreeBSD: print/xdvik/Makefile 313378 2013-03-03 20:49:34Z hrs $
 
 PORTNAME=	xdvik
 PORTVERSION=	22.84.16
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	SF/xdvi/${PORTNAME}/${PORTVERSION}
 PKGNAMESUFFIX=	-tetex
@@ -39,7 +35,10 @@ INSTALL_WRKSRC=	${WRKSRC}/texk/xdvik
 
 PLIST_SUB=	TEXMFDIR=${TEXMFDIR} TEXMFCONFIGDIR=${TEXMFDIR}-config
 CONFLICTS_INSTALL=	xdvi-[0-9]* xdvi-*-[0-9]* *-xdvi-[0-9]* \
-			*-xdvik-[0-9]* ja-xdvik-*-[0-9]*
+			*-xdvik-[0-9]* ja-xdvik-*-[0-9]* \
+			texlive-[0-9]* tex-web2c-[0-9]* \
+			tex-kpathsea-[0-9]* tex-xdvik-[0-9]* \
+			tex-dvipsk-[0-9]* tex-dvipdfmx-[0-9]*
 
 MAN1=		xdvi.1
 MLINKS=		xdvi.1 oxdvi.1
