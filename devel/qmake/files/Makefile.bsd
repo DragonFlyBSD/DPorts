@@ -1,11 +1,11 @@
-# $FreeBSD: ports/devel/qmake/files/Makefile.bsd,v 1.4 2012/11/17 05:56:55 svnexp Exp $
+# $FreeBSD: ports/devel/qmake/files/Makefile.bsd,v 1.5 2013/02/12 02:46:15 svnexp Exp $
 
 _OBJS!=	${MAKE} -f Makefile.unix -V OBJS -V QOBJS
 # We'd like to avoid using qconfig.cpp, but can't -- see the comment
 # next to -DHAVE_CONFIG_CPP below: 
 #_OBJS:=	${_OBJS:S/qconfig.o//}
 SRCS:=	${_OBJS:.o=.cpp}
-NOMAN=	true	# qmake.1 anyone?
+NO_MAN=	true	# qmake.1 anyone?
 
 .PATH:	${.CURDIR} ${.CURDIR:H}/src/tools
 CXXFLAGS+=-I${.CURDIR:H}/mkspecs/freebsd-g++
