@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org, mi@aldan.algebra.com
-# $FreeBSD: ports/devel/qmake4/Makefile,v 1.29 2013/02/03 21:43:07 svnexp Exp $
+# $FreeBSD: ports/devel/qmake4/Makefile,v 1.30 2013/02/14 10:22:21 svnexp Exp $
 
 PORTNAME=	qmake
 DISTVERSION=	${QT4_VERSION}
@@ -42,8 +42,6 @@ post-patch:
 		-e 's|/usr/local|${LOCALBASE}|' \
 		-e 's|/usr/X11R6|${LOCALBASE}|' \
 		-e 's|release|release thread|' \
-		-e 's|-pthread -D_THREAD_SAFE|${PTHREAD_CFLAGS}|' \
-		-e 's|-pthread|${PTHREAD_LIBS}|' \
 		-e 's|uic|uic-qt4|' \
 		-e 's|moc|moc-qt4|' \
 		${WRKSRC}/../mkspecs/freebsd-*/qmake.conf
