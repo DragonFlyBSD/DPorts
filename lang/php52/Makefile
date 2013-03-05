@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php52
-# Date created:				17 Apr 2010
-# Whom:					Alex Keda <admin@lissyara.su>
-#
-# $FreeBSD: ports/lang/php52/Makefile,v 1.37 2012/12/10 19:24:02 svnexp Exp $
-#
+# Created by: Alex Keda <admin@lissyara.su>
+# $FreeBSD: ports/lang/php52/Makefile,v 1.39 2013/02/18 07:18:25 svnexp Exp $
 
 PORTNAME=	php52
 PORTVERSION=	5.2.17
@@ -18,7 +14,7 @@ COMMENT=	PHP Scripting Language
 
 DEPRECATED=		PHP 5.2 series is strongly discouraged for new \
 			installations, migrate now
-EXPIRATION_DATE=	2013-03-01
+EXPIRATION_DATE=	2013-09-01
 
 LATEST_LINK=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 
