@@ -2,7 +2,7 @@
 # Date created:                         8 November 2006
 # Whom:                                 Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/textproc/bbe/Makefile,v 1.5 2012/11/17 06:01:52 svnexp Exp $
+# $FreeBSD: ports/textproc/bbe/Makefile,v 1.6 2013/02/20 16:45:26 svnexp Exp $
 #
 
 PORTNAME=	bbe
@@ -10,7 +10,7 @@ PORTVERSION=	0.2.2
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}-/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A sed-like editor for binary files
 
 MAKE_JOBS_SAFE=	yes
