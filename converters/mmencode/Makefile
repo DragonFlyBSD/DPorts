@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mmencode
-# Date created:		30 September 1999
-# Whom:			kbyanc
-#
-# $FreeBSD: ports/converters/mmencode/Makefile,v 1.10 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: kbyanc
+# $FreeBSD: ports/converters/mmencode/Makefile,v 1.11 2012/12/31 12:35:21 svnexp Exp $
 
 PORTNAME=	mmencode
 PORTVERSION=	2.7
@@ -13,7 +9,7 @@ MASTER_SITES=	ftp://ftp.delegate.org/pub/mime/mm2.7/ \
 DISTNAME=	mm${PORTVERSION}
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Translate to and from mail-oriented encoding formats
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/metamail
