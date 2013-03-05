@@ -1,8 +1,9 @@
-# Created by:	ijliao
-# $FreeBSD: ports/devel/argouml/Makefile,v 1.35 2012/12/10 11:29:53 svnexp Exp $
+# Created by: ijliao
+# $FreeBSD: ports/devel/argouml/Makefile,v 1.37 2013/01/23 15:05:32 svnexp Exp $
 
 PORTNAME=	argouml
 PORTVERSION=	0.34
+PORTREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	http://argouml-downloads.tigris.org/nonav/argouml-${PORTVERSION}/
 DISTNAME=	ArgoUML-${PORTVERSION}
@@ -39,7 +40,7 @@ DESKTOP_ENTRIES=	"ArgoUML" \
 			"Create advanced UML diagrams" \
 			"${DATADIR}/icon/ArgoIcon128x128.png" \
 			"argouml" \
-			"Application;Development;Building;Java;" \
+			"Development;Building;Java;" \
 			false
 
 do-install:
