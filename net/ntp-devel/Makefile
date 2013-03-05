@@ -2,11 +2,11 @@
 # Date created:		Di   5 Mai 1998 21:31:03 CEST
 # Whom:			andreas
 #
-# $FreeBSD: ports/net/ntp-devel/Makefile,v 1.93 2012/11/17 06:00:08 svnexp Exp $
+# $FreeBSD: net/ntp-devel/Makefile 313036 2013-02-27 07:13:03Z cy $
 #
 
 PORTNAME=	ntp
-PORTVERSION=	4.2.7p304
+PORTVERSION=	4.2.7p357
 CATEGORIES=	net ipv6
 MASTER_SITES=	ftp://ftp.udel.edu/pub/ntp/ntp4/ntp-dev/ \
 		http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-dev/ \
@@ -44,9 +44,15 @@ PLIST_SUB+=		SSL=""
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
+.if !defined(WITH_NTP_SIGND)
+CONFIGURE_ARGS+=	--enable-ntp-signd
+.endif
+
 .if defined(WITH_NTPSNMPD)
 PLIST_FILES+=		sbin/ntpsnmpd
+MAN8+=			ntpsnmpd.8
 BUILD_DEPENDS+=		${LOCALBASE}/include/net-snmp/net-snmp-config.h:${PORTSDIR}/net-mgmt/net-snmp
+LIB_DEPENDS=		netsnmp:${PORTSDIR}/net-mgmt/net-snmp
 RUN_DEPENDS+=		${LOCALBASE}/include/net-snmp/net-snmp-config.h:${PORTSDIR}/net-mgmt/net-snmp
 .else
 CONFIGURE_ARGS+=	--without-ntpsnmpd
@@ -70,17 +76,6 @@ pre-everything::
 	@${ECHO} sure that the net-mgmt/net-snmp port is installed before
 	@${ECHO} building and installing this port.
 	@${ECHO}
-
-.if exists(${LOCALBASE}/bin/net-snmp-config)
-# NTP autodects net-snmp and if found builds and installs a binary that
-# uses it. If detected, modify dependencies and package list.
-BUILD_DEPENDS=	${LOCALBASE}/bin/net-snmp-config:${PORTSDIR}/net-mgmt/net-snmp
-LIB_DEPENDS=	netsnmp.30:${PORTSDIR}/net-mgmt/net-snmp
-PLIST_SUB+=	NETSNMP=""
-MAN8+=		ntpsnmpd.8
-.else
-PLIST_SUB+=	NETSNMP="@comment "
-.endif
 
 AUTOTOOLSFILES=	aclocal.m4
 
