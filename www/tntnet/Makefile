@@ -2,11 +2,12 @@
 # Date created:		Wed Apr 14 18:11:42 CEST 2010
 # Whom:			Juergen Lock <nox@freebsd.org>
 #
-# $FreeBSD: ports/www/tntnet/Makefile,v 1.8 2012/11/17 06:03:07 svnexp Exp $
+# $FreeBSD: ports/www/tntnet/Makefile,v 1.10 2013/02/07 14:08:11 svnexp Exp $
 #
 
 PORTNAME=	tntnet
 PORTVERSION=	2.1
+PORTREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	http://www.tntnet.org/download/
 
@@ -20,15 +21,15 @@ USE_ICONV=	yes
 USE_CSTD=	gnu89
 PATCH_STRIP=	-p1
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 CONFIGURE_ARGS+=	--localstatedir=/var
 
 .if defined(WITH_GNUTLS)
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS} -lgnutls
+LDFLAGS+=	-lgnutls
 CONFIGURE_ARGS+=	--with-ssl=gnutls
 LIB_DEPENDS+=	gnutls:${PORTSDIR}/security/gnutls
 .else
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 CONFIGURE_ARGS+=	--with-ssl=openssl
 .endif
 
