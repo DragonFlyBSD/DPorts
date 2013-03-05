@@ -1,9 +1,9 @@
 # Created by: erik@habatech.no
-# $FreeBSD: ports/devel/sdts++/Makefile,v 1.30 2012/11/17 05:57:02 svnexp Exp $
+# $FreeBSD: ports/devel/sdts++/Makefile,v 1.31 2013/01/31 14:01:27 svnexp Exp $
 
 PORTNAME=	sdts++
 PORTVERSION=	1.5.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://thor-f5.er.usgs.gov/sdts/sdtsxx/ \
 		http://lychnobite.org/sdts/
