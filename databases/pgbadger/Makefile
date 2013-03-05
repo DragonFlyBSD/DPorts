@@ -1,15 +1,14 @@
 # Created by: Palle Girgensohn <girgen@FreeBSD.org>
-# $FreeBSD: ports/databases/pgbadger/Makefile,v 1.6 2013/01/09 18:12:09 svnexp Exp $
+# $FreeBSD: ports/databases/pgbadger/Makefile,v 1.10 2013/02/22 11:44:45 svnexp Exp $
 
 PORTNAME=	pgbadger
-PORTVERSION=	2.2
-PORTREVISION=	1
+PORTVERSION=	3.1
 CATEGORIES=	databases
-MASTER_SITES=	http://cloud.github.com/downloads/dalibo/pgbadger/
-DISTFILES=	${DISTNAME}-1${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
+MASTER_SITE_SUBDIR=${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	girgen@FreeBSD.org
-COMMENT=	Very comptent log analyzer for PostgreSQL
+COMMENT=	Very competent log analyzer for PostgreSQL
 
 PERL_CONFIGURE= yes
 MAN1=		pgbadger.1
