@@ -1,7 +1,7 @@
-# $FreeBSD: ports/math/galculator/Makefile,v 1.35 2012/12/17 21:45:11 svnexp Exp $
+# $FreeBSD: ports/math/galculator/Makefile,v 1.37 2013/02/14 00:38:43 svnexp Exp $
 
 PORTNAME=	galculator
-PORTVERSION=	2.0.1
+PORTVERSION=	2.1
 CATEGORIES=	math
 MASTER_SITES=	SF
 
@@ -16,6 +16,10 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-gtk3
 MAKE_JOBS_SAFE=	yes
+
+# The existence of libquadmath with sinhq() on a system does not
+# guarantee that the compiler actually supports GCC libquadmath.
+CONFIGURE_ENV=	ac_cv_lib_quadmath_sinhq=no
 
 MAN1=		galculator.1
 

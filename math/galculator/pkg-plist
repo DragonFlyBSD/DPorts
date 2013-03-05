@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/math/galculator/pkg-plist,v 1.16 2012/11/17 05:59:20 svnexp Exp $
+@comment $FreeBSD: ports/math/galculator/pkg-plist,v 1.17 2013/02/12 18:58:49 svnexp Exp $
 bin/galculator
 share/applications/galculator.desktop
 %%DATADIR%%/ui/about.ui
@@ -28,6 +28,7 @@ share/locale/ro/LC_MESSAGES/galculator.mo
 share/locale/ru/LC_MESSAGES/galculator.mo
 share/locale/sk/LC_MESSAGES/galculator.mo
 share/locale/sv/LC_MESSAGES/galculator.mo
+share/locale/tr/LC_MESSAGES/galculator.mo
 share/locale/zh_CN/LC_MESSAGES/galculator.mo
 share/locale/zh_TW/LC_MESSAGES/galculator.mo
 share/pixmaps/galculator.xpm
