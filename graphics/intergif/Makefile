@@ -1,17 +1,11 @@
-# New ports collection makefile for:	interGif
-# Date created:				31 August 2005
-# Whom:					jamie
-#
-# $FreeBSD: ports/graphics/intergif/Makefile,v 1.3 2012/12/06 16:41:46 svnexp Exp $
-#
+# Created by: jamie
+# $FreeBSD: ports/graphics/intergif/Makefile,v 1.4 2013/02/04 14:57:30 svnexp Exp $
 
 PORTNAME=	interGif
 PORTVERSION=	6.15
 CATEGORIES=	graphics
-MASTER_SITES=	http://utter.chaos.org.uk/~pdh/software/arc/ \
-		http://ftp.bishopston.net/freebsd/distfiles/ \
-		ftp://ftp.bishopston.net/freebsd/distfiles/
-DISTNAME=	ig615src
+MASTER_SITES=	http://utter.chaos.org.uk/~pdh/software/arc/
+DISTNAME=	ig${PORTVERSION:S,.,,}src
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
@@ -19,13 +13,20 @@ COMMENT=	Efficient animated GIF optimiser
 
 WRKSRC=		${WRKDIR}/igsrc
 
-PLIST_FILES=	bin/intergif
+MAKEFILE=	makefile.ix
 ALL_TARGET=	intergif
+MAKE_JOBS_SAFE=	yes
 
-pre-patch:
-	${CP} -f ${WRKSRC}/makefile.ix ${WRKSRC}/Makefile
+PLIST_FILES=	bin/intergif
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|=.*cc|= $$(CC)| ; \
+		 s|-O6|$$(CFLAGS)| ; \
+		 s|@echo|@true| ; \
+		 s|@$$(cc)|$$(cc)|' ${WRKSRC}/src/makefile.ix
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/intergif ${PREFIX}/bin/intergif
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} intergif ${PREFIX}/bin)
 
 .include <bsd.port.mk>
