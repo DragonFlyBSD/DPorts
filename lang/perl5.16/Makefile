@@ -2,7 +2,7 @@
 # Date created:		16 April 1995
 # Whom:			markm
 #
-# $FreeBSD: ports/lang/perl5.16/Makefile,v 1.144 2012/11/17 05:58:54 svnexp Exp $
+# $FreeBSD: ports/lang/perl5.16/Makefile,v 1.145 2013/02/24 17:07:12 svnexp Exp $
 #
 
 PORTNAME=	perl
@@ -23,9 +23,7 @@ COMMENT=	Practical Extraction and Report Language
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-CONFLICTS=	perl-5.6.* perl-5.8.* perl-threaded-5.8.* \
-		perl-5.10.* perl-threaded-5.10.* \
-		perl-5.12.* perl-threaded-5.12.* \
+CONFLICTS=	perl-5.12.* perl-threaded-5.12.* \
 		perl-5.14.* perl-threaded-5.14.*
 
 OPTIONS=	DEBUGGING	"Build with debugging support"		off \
