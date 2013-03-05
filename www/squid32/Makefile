@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/squid32/Makefile,v 1.8 2013/01/11 10:13:30 svnexp Exp $
+# $FreeBSD: ports/www/squid32/Makefile,v 1.10 2013/02/07 14:08:10 svnexp Exp $
 #
 # Note:
 # Starting with Squid 3.1 SQUID_LANGUAGES and SQUID_DEFAULT_LANG are no longer
@@ -75,7 +75,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	squid32
 
-SQUID_STABLE_VER=	6
+SQUID_STABLE_VER=	7
 
 CONFLICTS_INSTALL=	squid-2.[0-9].* squid-3.[!2].* cacheboy-[0-9]* lusca-head-[0-9]*
 GNU_CONFIGURE=	yes
@@ -238,6 +238,10 @@ CONFIGURE_ARGS=	--with-default-user=squid \
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 
+.if ${OSVERSION} >= 1000024
+USE_GCC=any
+.endif
+
 # Authentication methods and modules:
 
 basic_auth=	DB MSNT MSNT-multi-domain NCSA PAM POP3 RADIUS \
@@ -334,8 +338,7 @@ EXTRA_PATCHES+=		${PATCHDIR}/extra-patch-src-cf.data.pre.aufs
 .endif
 # Nil aufs threads is default, set any other value via SQUID_CONFIGURE_ARGS,
 # e.g. SQUID_CONFIGURE_ARGS=--with-aufs-threads=N
-CFLAGS+=	${PTHREAD_CFLAGS}
-LDFLAGS+=	${PTHREAD_LIBS}
+LDFLAGS+=	-pthread
 .else
 CONFIGURE_ARGS+=	--without-pthreads
 .endif
