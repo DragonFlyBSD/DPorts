@@ -2,7 +2,7 @@
 # Date created:				23 March 2009
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/mail/gml/Makefile,v 1.3 2012/11/17 05:59:03 svnexp Exp $
+# $FreeBSD: ports/mail/gml/Makefile,v 1.4 2013/02/20 16:45:24 svnexp Exp $
 #
 
 PORTNAME=	gml
@@ -13,7 +13,7 @@ MASTER_SITES=	http://marklyon.org/gmail/old/ \
 DISTNAME=	${PORTNAME}
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Mbox & Maildir to Gmail loader
 
 USE_PYTHON_RUN=	yes
