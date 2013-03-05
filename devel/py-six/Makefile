@@ -1,12 +1,8 @@
-# New ports collection makefile for:	six
-# Date created:				15 Nov 2011
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-six/Makefile,v 1.3 2012/11/17 05:56:50 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: ports/devel/py-six/Makefile,v 1.4 2013/01/31 14:04:03 svnexp Exp $
 
 PORTNAME=	six
-PORTVERSION=	1.1.0
+PORTVERSION=	1.2.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
