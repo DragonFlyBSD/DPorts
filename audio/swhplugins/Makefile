@@ -2,7 +2,7 @@
 # Date created:			12 May 2002
 # Whom:				Tilman Linneweh <arved@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/swhplugins/Makefile,v 1.48 2012/11/17 05:54:45 svnexp Exp $
+# $FreeBSD: ports/audio/swhplugins/Makefile,v 1.49 2013/02/21 02:55:15 svnexp Exp $
 
 PORTNAME=	swhplugins
 PORTVERSION=	0.4.15
@@ -22,6 +22,7 @@ LIB_DEPENDS=	fftw3f:${PORTSDIR}/math/fftw3-float
 # includes assembler code
 ONLY_FOR_ARCHS=	i386 amd64
 
+USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
