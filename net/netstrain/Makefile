@@ -1,16 +1,12 @@
-# New ports collection makefile for:	netstrain
-# Date created:		10 July 2003
-# Whom:			Janos.Mohacsi@bsd.hu
-#
-# $FreeBSD: ports/net/netstrain/Makefile,v 1.3 2012/11/17 06:00:07 svnexp Exp $
-#
+# Created by: Janos.Mohacsi@bsd.hu
+# $FreeBSD: ports/net/netstrain/Makefile,v 1.4 2013/01/09 20:05:00 svnexp Exp $
 
 PORTNAME=	netstrain
 PORTVERSION=	3.0
 CATEGORIES=	net ipv6
 MASTER_SITES=	SF
 
-MAINTAINER=	Janos.Mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Tool to measure practical TCP throughput between two machines
 
 DOC_FILES=	README
