@@ -2,12 +2,12 @@
 # Date created:			24 April 2006
 # Whom:				trasz
 #
-# $FreeBSD: ports/textproc/iksemel/Makefile,v 1.25 2012/11/17 06:01:59 svnexp Exp $
+# $FreeBSD: ports/textproc/iksemel/Makefile,v 1.26 2013/02/05 16:54:26 svnexp Exp $
 #
 
 PORTNAME=	iksemel
 PORTVERSION=	1.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
