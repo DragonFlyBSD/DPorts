@@ -2,12 +2,12 @@
 # Date created:		27 May 2006
 # Whom:			Thierry Thomas <thierry@pompo.net>
 #
-# $FreeBSD: ports/math/digitizer/Makefile,v 1.17 2012/11/17 05:59:20 svnexp Exp $
+# $FreeBSD: ports/math/digitizer/Makefile,v 1.18 2013/01/23 15:05:36 svnexp Exp $
 #
 
 PORTNAME=	digitizer
 PORTVERSION=	4.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	math graphics
 MASTER_SITES=	SF/${PORTNAME}/Engauge%20Digitizer/${PORTNAME}-${PORTVERSION}
 DISTNAME=	digit-src-${PORTVERSION:S/./_/}
