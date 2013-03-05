@@ -1,24 +1,18 @@
-# Ports collection makefile for:  pear-Image_Color
-# Date created:			  01 June 2004
-# Whom:				  Gerrit Beine (<tux@pinguru.net>)
-#
-# $FreeBSD: ports/graphics/pear-Image_Color/Makefile,v 1.9 2012/11/17 05:58:18 svnexp Exp $
-#
+# Created by: Gerrit Beine (<tux@pinguru.net>)
+# $FreeBSD: ports/graphics/pear-Image_Color/Makefile,v 1.10 2013/02/03 17:33:12 svnexp Exp $
 
 PORTNAME=	Image_Color
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.4
 CATEGORIES=	graphics www pear
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR::Image_Color manages and handles color data and conversions
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PHP=	gd
-
-CATEGORY=	Image
-FILES=		Color.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
