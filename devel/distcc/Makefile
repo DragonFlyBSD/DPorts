@@ -2,7 +2,7 @@
 # Date created:				25 June 2002
 # Whom:					Frerich Raabe <frerich.raabe@gmx.de>
 #
-# $FreeBSD: ports/devel/distcc/Makefile,v 1.75 2013/01/02 23:47:06 svnexp Exp $
+# $FreeBSD: ports/devel/distcc/Makefile,v 1.76 2013/02/14 10:22:06 svnexp Exp $
 #   $MCom: ports/devel/distcc/Makefile,v 1.3 2007/10/21 02:46:13 ahze Exp $
 #
 
@@ -25,7 +25,6 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-gprof --disable-Werror
 WANT_GNOME=	yes
-CONFIGURE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 DISTCCD_PIDFILE=/var/run/distccd.pid
