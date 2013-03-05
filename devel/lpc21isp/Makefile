@@ -1,25 +1,27 @@
 # Created by: Steve Franks <stevefranks@ieee.org>
-# $FreeBSD: ports/devel/lpc21isp/Makefile,v 1.6 2012/11/17 05:55:58 svnexp Exp $
+# $FreeBSD: ports/devel/lpc21isp/Makefile,v 1.7 2013/02/08 08:37:06 svnexp Exp $
 
 PORTNAME=	lpc21isp
-PORTVERSION=	1.64
+PORTVERSION=	1.85
 CATEGORIES=	devel
 MASTER_SITES=	SF
+DISTNAME=	${PORTNAME}_${PORTVERSION:S/.//}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ISP programmer tool for flashing NXP & Analog Devices ARM7 CPUs
 
-LICENSE=	GPLv3 LGPL3
-LICENSE_COMB=	dual
+LICENSE=	LGPL3 # (or later)
 
-MAKE_ENV=	RM="${RM}"
-ALL_TARGET=	clean all
+NO_WRKSUBDIR=	yes
 
-PLIST_FILES=	bin/${PORTNAME}
+USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
+
+PLIST_FILES=	bin/lpc21isp
 
 post-patch:
-# Respect CC, remove some apparently old and GNU make spelled conditional
-	@${REINPLACE_CMD} -e '4,8d' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e \
+		's|^CC .*=|CC ?=|' ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
