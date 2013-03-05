@@ -1,11 +1,5 @@
-# New ports collection makefile for:	outguess
-# Date created:        			2000-12-31
-# Whom:					trevor
-# based on the OpenBSD port by Dug Song <dugsong@monkey.org>
-#
-# $OpenBSD: Makefile,v 1.7 2000/10/22 15:43:25 espie Exp $
-# $FreeBSD: ports/security/outguess/Makefile,v 1.10 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/security/outguess/Makefile,v 1.11 2013/01/27 06:41:41 svnexp Exp $
 
 PORTNAME=	outguess
 PORTVERSION=	0.2
