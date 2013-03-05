@@ -1,9 +1,5 @@
-# New ports collection makefile for:	filelight
-# Date created:		Fri Aug 29 21:16:39 CEST 2003
-# Whom:			Markus Brueffer <brueffer@phoenix-systems.de>
-#
-# $FreeBSD: ports/sysutils/filelight/Makefile,v 1.27 2012/11/17 06:01:30 svnexp Exp $
-#
+# Created by: Markus Brueffer <brueffer@phoenix-systems.de>
+# $FreeBSD: sysutils/filelight/Makefile 313088 2013-02-28 10:51:58Z gahr $
 
 PORTNAME=	filelight
 PORTVERSION=	1.0
@@ -11,7 +7,7 @@ PORTREVISION=	7
 CATEGORIES=	sysutils kde
 MASTER_SITES=	http://www.methylblue.com/filelight/packages/
 
-MAINTAINER=	shanjobe@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Represent a file system as a set of concentric segmented-rings
 
 USE_KDELIBS_VER=3
@@ -21,7 +17,6 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 
 post-patch:
-	@${REINPLACE_CMD} -e 's/-O2//g; s/-lpthread/${PTHREAD_LIBS}/g' \
-		${WRKSRC}/${CONFIGURE_SCRIPT}
+	@${REINPLACE_CMD} -e 's/-O2//g' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
 .include <bsd.port.mk>
