@@ -1,5 +1,5 @@
-@comment $FreeBSD: ports/mail/qmail/pkg-plist,v 1.19 2012/11/17 05:59:12 svnexp Exp $
-%%RCDLINK%%@unexec rm -f %%LOCALBASE%%/etc/rc.d/qmail.sh
+@comment $FreeBSD: ports/mail/qmail/pkg-plist,v 1.20 2013/02/23 19:42:18 svnexp Exp $
+%%RCDLINK%%@unexec rm -f %%LOCALBASE%%/etc/rc.d/qmailsmtpd
 %%LDAP%%bin/auth_imap
 %%LDAP%%bin/auth_pop
 %%LDAP%%bin/auth_smtp
@@ -78,7 +78,7 @@ bin/tcp-env
 %%NOT_LDAP%%boot/maildir
 %%NOT_LDAP%%boot/proc
 %%NOT_LDAP%%boot/proc+df
-%%NOT_LDAP%%boot/qmail-smtpd.rcNG
+%%NOT_LDAP%%boot/qmailsmtpd
 %%LDAP%%boot/qmail/log/run
 %%LDAP%%boot/qmail/run
 %%LDAP%%boot/qmail-smtpd/log/run

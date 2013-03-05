@@ -1,9 +1,9 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br>
-# $FreeBSD: ports/mail/qmail/Makefile,v 1.164 2012/12/18 14:03:18 svnexp Exp $
+# $FreeBSD: ports/mail/qmail/Makefile,v 1.167 2013/02/23 19:42:18 svnexp Exp $
 
 PORTNAME=	qmail
 PORTVERSION?=	${QMAIL_VERSION}
-PORTREVISION?=	7
+PORTREVISION?=	8
 CATEGORIES=	mail
 MASTER_SITES+=	${MASTER_SITE_QMAIL}
 DISTNAME=	${PORTNAME}-${QMAIL_VERSION}
@@ -11,7 +11,7 @@ DISTFILES?=	${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_ONLY?=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	bdrewery@FreeBSD.org
-COMMENT?=	A secure, reliable, efficient, simple, and fast MTA
+COMMENT?=	Secure, reliable, efficient, simple, and fast MTA
 
 DIST_SUBDIR=	qmail
 
@@ -60,7 +60,7 @@ QMAILQUEUE_PATCH_DESC=		Run a QMAILQUEUE program
 QMQP_COMPRESS_DESC=		QMQP on the fly compression
 QMTPC_PATCH_DESC=		Send email using qmtp protocol
 QUOTATRASH_DESC=		Include the Trash in the quota
-RCDLINK_DESC=			Create rc.d/qmail.sh symlink
+RCDLINK_DESC=			Create rc.d/qmail symlink
 SENDERCHECK4_DESC=		LOOSE checks exclusively for RELAY clients
 SMTPAUTHUSER_DESC=		Create env SMTPAUTHUSER containing authuser
 SMTPEXECCHECK_DESC=		Smtp DOS/Windows executable detection
@@ -289,6 +289,10 @@ PKGMESSAGE?=	${WRKDIR}/pkg-message-${PKGMESSAGE_SUFFIX}
 SUB_FILES+=	pkg-message
 .endif
 
+.if !defined(SLAVE_LDAP)
+SUB_FILES+=	qmailsmtpd
+.endif
+
 WRKDIR_doc=	${WRKDIR}/doc
 
 PORTDOCS=	*
@@ -334,6 +338,12 @@ CONFIGURESCRIPTS=	config config-fast
 
 WANT_QMAIL=	yes
 
+.include <bsd.port.options.mk>
+
+.if defined(SLAVE_LDAP) && ${PORT_OPTIONS:MTLS}
+USE_OPENSSL=	yes
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${PREFIX} != ${LOCALBASE}
@@ -358,11 +368,6 @@ CFLAGS+=	-DDEBUG
 .endif
 
 .if defined(SLAVE_LDAP)
-
-. if ${PORT_OPTIONS:MTLS}
-# we can't use USE_OPENSSL=yes after including bsd.port.pre.mk
-.include "${PORTSDIR}/Mk/bsd.openssl.mk"
-. endif
 
 . for param in ${LDAP_PARAMS}
 .  if ${PORT_OPTIONS:M${param}}
@@ -702,6 +707,7 @@ post-patch:
 . endif
 . if ${PORT_OPTIONS:MSMTPEXTFORK}
 	@${PATCH} -d ${WRKSRC} < ${DISTDIR}/${DIST_SUBDIR}/${SMTPEXTFORK_PATCH}
+	@${PATCH} -d ${WRKSRC} < ${FILESDIR}/extra-patch-smtpextfork-qmail-smtpd.c
 .  if ${PORT_OPTIONS:MXF_QUITASAP}
 	@${REINPLACE_CMD} 's!//#define XF_QUITASAP!#define XF_QUITASAP!g' \
 		${WRKSRC}/qmail-smtpd.c
@@ -811,7 +817,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${i:T} ${PREFIX}/boot
 .endfor
 .if !defined(SLAVE_LDAP)
-	${INSTALL_SCRIPT} ${FILESDIR}/qmail-smtpd.rcNG ${PREFIX}/boot
+	${INSTALL_SCRIPT} ${WRKDIR}/qmailsmtpd ${PREFIX}/boot
 .endif
 .for i in 1 5 7 8
 	@${MKDIR} ${PREFIX}/man/man$i

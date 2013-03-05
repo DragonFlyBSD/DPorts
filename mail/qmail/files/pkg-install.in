@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/qmail/files/pkg-install.in,v 1.11 2012/11/17 05:59:12 svnexp Exp $
+# $FreeBSD: ports/mail/qmail/files/pkg-install.in,v 1.12 2013/02/23 19:42:18 svnexp Exp $
 #
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
@@ -12,10 +12,10 @@ if [ "$2" = "POST-INSTALL" ]; then
 
 	[ -e ${PREFIX}/control/me ] || (cd ${PREFIX}/configure && ./config)
 
-	%%RCDLINK%%ln -s ${PREFIX}/rc %%LOCALBASE%%/etc/rc.d/qmail.sh
+	%%RCDLINK%%ln -s ${PREFIX}/rc %%LOCALBASE%%/etc/rc.d/qmailsmtpd
 
 	%%RCDLINK%%echo ""
-	%%RCDLINK%%echo "A %%LOCALBASE%%/etc/rc.d/qmail.sh symlink was created.  To enable qmail at boot"
+	%%RCDLINK%%echo "A %%LOCALBASE%%/etc/rc.d/qmailsmtpd symlink was created.  To enable qmail at boot"
 	%%RCDLINK%%echo "time you need to copy a script to %%PREFIX%%/rc.  There are some examples at"
 	%%RCDLINK%%echo "%%PREFIX%%/boot"
 	%%RCDLINK%%echo ""
