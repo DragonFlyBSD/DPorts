@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/www/aria2/Makefile,v 1.74 2012/12/09 10:51:49 svnexp Exp $
+# $FreeBSD: ports/www/aria2/Makefile,v 1.76 2013/02/18 19:26:32 svnexp Exp $
 
 PORTNAME=	aria2
-PORTVERSION=	1.16.0
+PORTVERSION=	1.16.3
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/stable/${PORTNAME}-${PORTVERSION}
 
