@@ -2,12 +2,12 @@
 # Date created:				08 July 2003
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/loudmouth/Makefile,v 1.59 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: ports/net-im/loudmouth/Makefile,v 1.60 2013/02/05 16:54:24 svnexp Exp $
 #
 
 PORTNAME=	loudmouth
 PORTVERSION=	1.4.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -32,7 +32,7 @@ OPTIONS=	GNUTLS "Enable SSL (via GnuTLS) support" on \
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_GNUTLS)
-LIB_DEPENDS+=	gnutls.47:${PORTSDIR}/security/gnutls
+LIB_DEPENDS+=	gnutls.26:${PORTSDIR}/security/gnutls
 RUN_DEPENDS+=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 .endif
 
