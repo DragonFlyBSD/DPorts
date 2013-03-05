@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	cl-lml
-# Date created:				18 May 2003
-# Whom:					Henrik Motakef <henrik.motakef@web.de>
-#
-# $FreeBSD: ports/www/cl-lml/Makefile,v 1.16 2012/11/17 06:02:30 svnexp Exp $
+# Created by: Henrik Motakef <henrik.motakef@web.de>
+# $FreeBSD: ports/www/cl-lml/Makefile,v 1.17 2013/02/18 14:40:04 svnexp Exp $
 
 PORTNAME=	lml
 PORTVERSION=	2.5.7
