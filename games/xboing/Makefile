@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xboing
-# Date created:		31 January 1995
-# Whom:			janek
-#
-# $FreeBSD: ports/games/xboing/Makefile,v 1.29 2012/11/17 05:57:56 svnexp Exp $
+# Created by: janek
+# $FreeBSD: ports/games/xboing/Makefile,v 1.30 2013/01/26 16:56:09 svnexp Exp $
 
 PORTNAME=	xboing
 PORTVERSION=	2.4
