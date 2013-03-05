@@ -1,8 +1,8 @@
 # Created by: Thomas Abthorpe <thomas@goodking.ca>
-# $FreeBSD: ports/devel/pear-Date_Holidays/Makefile,v 1.22 2012/12/17 02:17:59 svnexp Exp $
+# $FreeBSD: ports/devel/pear-Date_Holidays/Makefile,v 1.23 2013/02/04 09:16:52 svnexp Exp $
 
 PORTNAME=	Date_Holidays
-PORTVERSION=	0.21.6
+PORTVERSION=	0.21.8
 CATEGORIES=	devel www pear
 
 MAINTAINER=	miwi@FreeBSD.org
