@@ -2,7 +2,7 @@
 # Date created:		Wed Apr 14 18:11:42 CEST 2010
 # Whom:			Juergen Lock <nox@freebsd.org>
 #
-# $FreeBSD: ports/devel/cxxtools/Makefile,v 1.11 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: ports/devel/cxxtools/Makefile,v 1.12 2013/02/14 10:22:06 svnexp Exp $
 #
 
 PORTNAME=	cxxtools
@@ -17,8 +17,8 @@ PATCH_STRIP=	-p1
 USE_ICONV=	yes
 USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
