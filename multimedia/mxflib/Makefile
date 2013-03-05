@@ -1,9 +1,4 @@
-# New ports collection makefile for:	mxflib
-# Date created:		2011-09-17
-# Whom:			Jimmy Olgeni <olgeni@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/mxflib/Makefile,v 1.2 2012/11/17 05:59:52 svnexp Exp $
-#
+# $FreeBSD: ports/multimedia/mxflib/Makefile,v 1.3 2013/01/26 15:07:27 svnexp Exp $
 
 PORTNAME=	mxflib
 PORTVERSION=	1.0.1
