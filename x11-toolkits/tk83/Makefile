@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: ports/x11-toolkits/tk83/Makefile,v 1.86 2012/11/26 18:26:00 svnexp Exp $
+# $FreeBSD: ports/x11-toolkits/tk83/Makefile,v 1.87 2013/02/04 15:47:53 svnexp Exp $
 
 PORTNAME=	tk
 PORTVERSION=	8.3.5
@@ -10,6 +10,9 @@ DISTNAME=	${PORTNAME}${PORTVERSION}-src
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Graphical toolkit for TCL
+
+DEPRECATED=	No longer maintained upstream
+EXPIRATION_DATE=2013-04-04
 
 USE_TCL=	83
 USE_TCL_BUILD=	83
