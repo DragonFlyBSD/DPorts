@@ -1,18 +1,14 @@
-# New ports collection makefile for:	XaoS
-# Date created:				24 February 1996
-# Whom:					Joseph Koshy <koshy@india.hp.com>
-#
-# $FreeBSD: ports/graphics/xaos/Makefile,v 1.43 2012/11/17 05:58:25 svnexp Exp $
-#
+# Created by: Joseph Koshy <koshy@india.hp.com>
+# $FreeBSD: ports/graphics/xaos/Makefile,v 1.45 2013/01/23 15:05:35 svnexp Exp $
 
 PORTNAME=	xaos
 PORTVERSION=	3.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics math
 MASTER_SITES=	SF/${PORTNAME}/XaoS/${PORTVERSION}
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	A real-time fractal browser for X11 and ASCII terminals
+COMMENT=	Real-time fractal browser
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
@@ -35,7 +31,7 @@ INFO=		xaos
 
 PLIST_SUB+=	XAOSDIR="share/XaoS"
 
-DESKTOP_ENTRIES=	"XaoS" "Fractal zoomer" "" "xaos" "" false
+DESKTOP_ENTRIES=	"XaoS" "${COMMENT}" "" "xaos" "" false
 
 .include <bsd.port.options.mk>
 
