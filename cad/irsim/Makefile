@@ -1,14 +1,14 @@
 # Created by: swallace
-# $FreeBSD: ports/cad/irsim/Makefile,v 1.44 2012/12/14 18:06:45 svnexp Exp $
+# $FreeBSD: ports/cad/irsim/Makefile,v 1.46 2013/02/08 00:50:51 svnexp Exp $
 
 PORTNAME=	irsim
-PORTVERSION=	9.7.78
+PORTVERSION=	9.7.79
 CATEGORIES=	cad
 MASTER_SITES=	http://opencircuitdesign.com/irsim/archive/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An event-driven logic-level simulator for MOS circuis
+COMMENT=	Event-driven logic-level simulator for MOS circuis
 
 LICENSE=	GPLv2
 
@@ -62,7 +62,6 @@ post-patch:
 	@${REINPLACE_CMD} -e \
 		's|FreeBSD-\*|*-*-freebsd*| ; \
 		 s|wish |${WISH:T} | ; \
-		 s|-lpthread|${PTHREAD_LIBS}| ; \
 		 s|"-fpic"|"-fPIC"| ; \
 		 /-l\/usr\/X11R6\/include/d' ${CONFIGURE_WRKSRC}/configure
 
