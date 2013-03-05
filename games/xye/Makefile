@@ -1,8 +1,9 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: ports/games/xye/Makefile,v 1.20 2013/01/15 13:50:26 svnexp Exp $
+# $FreeBSD: ports/games/xye/Makefile,v 1.21 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	xye
 PORTVERSION=	0.12.1
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF:game \
 		http://xye.sourceforge.net/levels/ \
