@@ -1,9 +1,5 @@
-# New ports collection makefile for:	l0phtcrack
-# Date created:				2000-10-31
-# Whom:					Trevor Johnson
-#
-# $FreeBSD: ports/security/l0phtcrack/Makefile,v 1.18 2012/11/17 06:01:06 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/security/l0phtcrack/Makefile,v 1.19 2013/01/27 06:41:41 svnexp Exp $
 
 PORTNAME=	l0phtcrack
 PORTVERSION=	1.5
