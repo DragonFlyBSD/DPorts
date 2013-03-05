@@ -2,7 +2,7 @@
 # Date created:		Di   5 Mai 1998 21:31:03 CEST
 # Whom:			andreas
 #
-# $FreeBSD: ports/net/ntp/Makefile,v 1.74 2012/11/17 06:00:08 svnexp Exp $
+# $FreeBSD: ports/net/ntp/Makefile,v 1.75 2013/02/18 21:54:14 svnexp Exp $
 #
 
 PORTNAME=	ntp
@@ -54,6 +54,10 @@ PLIST_SUB+=		SSL=""
 
 .if !defined(DISABLE_IPV6)
 CONFIGURE_ARGS+=        --enable-ipv6
+.endif
+
+.if !defined(WITH_NTP_SIGND)
+CONFIGURE_ARGS+=        --enable-ntp-signd
 .endif
 
 .for D in ${NTP_DRIVERS}
