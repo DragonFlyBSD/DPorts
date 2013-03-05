@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	cl-split-sequence
-# Date created:				10 May 2003
-# Whom:					Henrik Motakef <henrik.motakef@web.de>
-#
-# $FreeBSD: ports/devel/cl-split-sequence/Makefile,v 1.11 2012/11/17 05:55:37 svnexp Exp $
+# Created by: Henrik Motakef <henrik.motakef@web.de>
+# $FreeBSD: ports/devel/cl-split-sequence/Makefile,v 1.12 2013/02/18 14:39:09 svnexp Exp $
 
 PORTNAME=	split-sequence
 PORTVERSION=	20011114.1
