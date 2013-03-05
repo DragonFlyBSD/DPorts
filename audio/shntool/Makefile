@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.org>
-# $FreeBSD: ports/audio/shntool/Makefile,v 1.28 2012/12/17 11:13:57 svnexp Exp $
+# $FreeBSD: audio/shntool/Makefile 313033 2013-02-27 04:02:00Z danfe $
 
 PORTNAME=	shntool
 PORTVERSION=	3.0.10
@@ -28,7 +28,7 @@ BONK_DESC=	Bonk lossy/lossless audio support
 KXS_DESC=	Kexis support
 
 RDEP=	AIFF:sox SHN:shorten FLAC APE:mac OFR:ofr:optimfrog LPAC WV:wavpack \
-	ALAC:alac LA:laudio TTA:ttaenc:tta BONK KXS:kexis
+	ALAC:alac LA:linux-laudio TTA:ttaenc:tta BONK KXS:kexis
 
 .include <bsd.port.options.mk>
 
