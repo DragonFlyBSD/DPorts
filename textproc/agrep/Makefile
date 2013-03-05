@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  agrep
-# Date created:			  Fri May 23, 1997
-# Whom:				  David O'Brien (obrien@FreeBSD.org)
-#
-# $FreeBSD: ports/textproc/agrep/Makefile,v 1.18 2012/11/17 06:01:51 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@FreeBSD.org)
+# $FreeBSD: ports/textproc/agrep/Makefile,v 1.19 2013/01/26 16:56:13 svnexp Exp $
 
 PORTNAME=	agrep
 PORTVERSION=	2.04
