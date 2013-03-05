@@ -1,12 +1,8 @@
-# New ports collection makefile for:	moodle
-# Date created:				30 September 2005
-# Whom:					Javier Martin Rueda <jmrueda@diatel.upm.es>
-#
-# $FreeBSD: ports/www/moodle22/Makefile,v 1.4 2012/12/05 07:31:46 svnexp Exp $
-#
+# Created by: Javier Martin Rueda <jmrueda@diatel.upm.es>
+# $FreeBSD: ports/www/moodle22/Makefile,v 1.5 2013/01/20 13:56:49 svnexp Exp $
 
 PORTNAME=	moodle
-PORTVERSION=	2.2.5
+PORTVERSION=	2.2.7
 CATEGORIES=	www
 MASTER_SITES=	SF/moodle/Moodle/stable22/
 EXTRACT_SUFX=	.tgz
