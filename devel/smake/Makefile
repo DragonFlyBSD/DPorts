@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/devel/smake/Makefile,v 1.23 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: devel/smake/Makefile 313309 2013-03-02 23:56:09Z eadler $
 
 PORTNAME=	smake
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.3
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.berlios.de/pub/smake/
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/.a./a/}
@@ -10,16 +10,17 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.a./a/}
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Highly portable make program with automake features
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:C/.a.*//g}
-
 LICENSE=	CDDL GPLv2
 LICENSE_COMB=	multi
 LICENSE_FILE_CDDL=	${WRKSRC}/CDDL.Schily.txt
-LICENSE_FILE_GPLv2=	${WRKSRC}/GPL-2.0.txt
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:C/.a.*//g}
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-MAKE_ARGS=	INS_BASE=${PREFIX}
+MAKE_ARGS=	INS_BASE=${PREFIX} DEFMANBASE=.
+
+MAKE_JOBS_SAFE=	yes
 
 MAN1=		smake.1
 MAN5=		makefiles.5 makerules.5
