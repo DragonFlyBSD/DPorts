@@ -3,7 +3,7 @@
 # Date created:			May 1, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/clint/Makefile,v 1.26 2012/11/17 05:55:38 svnexp Exp $
+# $FreeBSD: ports/devel/clint/Makefile,v 1.27 2013/02/14 10:22:06 svnexp Exp $
 #
 
 PORTNAME=	clint
@@ -25,7 +25,6 @@ USE_LDCONFIG=	yes
 INFO=		clint
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|-pedantic||g ; \
 		 s|-ldl||g'
