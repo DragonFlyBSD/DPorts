@@ -1,30 +1,27 @@
-# ex:ts=8
-# Ports collection makefile for:	typetools
-# Date created:			Dec 5, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/print/typetools/Makefile,v 1.45 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: print/typetools/Makefile 313256 2013-03-02 14:57:42Z miwi $
 
 PORTNAME=	typetools
-PORTVERSION=	2.92
-PORTREVISION=	1
+PORTVERSION=	2.97
 CATEGORIES=	print
 MASTER_SITES=	http://www.lcdf.org/type/
 DISTNAME=	lcdf-${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	miwi@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tools for manipulating fonts
+
+LICENSE=	GPLv2
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libkpathsea.a:${PORTSDIR}/print/teTeX-base
 
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	ac_cv_header_kpathsea_kpathsea_h=yes
 CONFIGURE_ARGS=	--with-kpathsea=${LOCALBASE}
+MAKE_JOBS_SAFE=	yes
 
 MAN1=		cfftot1.1 mmafm.1 mmpfb.1 otfinfo.1 otftotfm.1 t1dotlessj.1 \
 		t1lint.1 t1rawafm.1 t1reencode.1 t1testpage.1 ttftotype42.1
 
 DATADIR=	${PREFIX}/share/lcdf-${PORTNAME}
-
+ 
 .include <bsd.port.mk>
