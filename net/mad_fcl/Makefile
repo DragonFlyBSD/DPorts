@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mad_fcl
-# Date created:				03.02.2003
-# Whom:					Janos.Mohacsi@bsd.hu
-#
-# $FreeBSD: ports/net/mad_fcl/Makefile,v 1.14 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Janos.Mohacsi@bsd.hu
+# $FreeBSD: ports/net/mad_fcl/Makefile,v 1.15 2013/01/09 20:05:00 svnexp Exp $
 
 PORTNAME=	mad_fcl
 PORTVERSION=	1.3
@@ -12,7 +8,7 @@ CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.atm.tut.fi/mad/download/
 DISTNAME=	${PORTNAME}_v${PORTVERSION}_src
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	FLUTE - File Delivery over Unidirectional Transport implementation
 
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
