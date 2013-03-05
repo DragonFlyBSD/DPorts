@@ -1,9 +1,5 @@
-# New ports collection makefile for:	evilwm
-# Date created:				2000-11-04
-# Whom:					trevor
-#
-# $FreeBSD: ports/x11-wm/evilwm/Makefile,v 1.21 2012/11/17 06:03:42 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/x11-wm/evilwm/Makefile,v 1.22 2013/01/27 06:41:43 svnexp Exp $
 
 PORTNAME=	evilwm
 PORTVERSION=	1.1.0
