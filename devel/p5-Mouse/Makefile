@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Mouse/Makefile,v 1.69 2013/01/12 17:57:45 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Mouse/Makefile,v 1.70 2013/02/09 09:14:27 svnexp Exp $
 
 PORTNAME=	Mouse
-PORTVERSION=	1.04
+PORTVERSION=	1.05
 PORTEPOCH=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
