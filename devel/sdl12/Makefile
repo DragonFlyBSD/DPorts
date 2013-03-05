@@ -2,7 +2,7 @@
 # Date created:				1 April 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/sdl12/Makefile,v 1.131 2012/11/17 05:57:02 svnexp Exp $
+# $FreeBSD: ports/devel/sdl12/Makefile,v 1.132 2013/02/14 10:22:23 svnexp Exp $
 #
 
 PORTNAME=	sdl
@@ -25,11 +25,9 @@ GNU_CONFIGURE=	yes
 WANT_GNOME=	yes
 USE_GNOME=	gnomehack pkgconfig
 USE_ICONV=	yes
-CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"	\
-		PTHREAD_LIBS="${PTHREAD_LIBS}"		\
-		ac_cv_header_libusbhid_h=no
+CONFIGURE_ENV=	ac_cv_header_libusbhid_h=no
 
-CFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
+CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 CONFIGURE_ARGS+=--disable-alsa --disable-alsatest
