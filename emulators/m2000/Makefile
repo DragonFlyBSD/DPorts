@@ -1,10 +1,5 @@
-#
-# New ports collection makefile for:	m2000
-# Date created:				2005-08-23
-# Whom:					Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: ports/emulators/m2000/Makefile,v 1.8 2012/11/17 05:57:21 svnexp Exp $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: emulators/m2000/Makefile 313092 2013-02-28 15:04:48Z miwi $
 
 PORTNAME=	m2000
 PORTVERSION=	0.6
@@ -24,7 +19,7 @@ EXTRACT_ONLY=	${PORTNAME:tu}${EXTRACT_SUFX}
 MAINTAINER=	edwin@mavetju.org
 COMMENT=	A portable emulator for the Philips P2000 home computer
 
-EXTRACT_DEPENDS=unzip:${PORTSDIR}/archivers/unzip
+EXTRACT_DEPENDS=${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 
 M2000TAPES=	3DDoolhof2.cas		\
 		BrickWall.cas		\
