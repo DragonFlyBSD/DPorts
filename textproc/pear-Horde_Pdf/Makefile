@@ -2,11 +2,11 @@
 # Date created:			  7 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/pear-Horde_Pdf/Makefile,v 1.7 2013/01/10 10:41:48 svnexp Exp $
+# $FreeBSD: ports/textproc/pear-Horde_Pdf/Makefile,v 1.8 2013/02/12 17:39:03 svnexp Exp $
 #
 
 PORTNAME=	Horde_Pdf
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.3
 CATEGORIES=	textproc www pear
 
 MAINTAINER=	horde@FreeBSD.org
