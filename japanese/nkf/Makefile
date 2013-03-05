@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nkf
-# Date created:		5 February 1995
-# Whom:			asami
-#
-# $FreeBSD: ports/japanese/nkf/Makefile,v 1.42 2012/11/17 05:58:38 svnexp Exp $
-#
+# Created by: asami
+# $FreeBSD: ports/japanese/nkf/Makefile,v 1.43 2013/02/04 11:36:18 svnexp Exp $
 
 PORTNAME=	nkf
 PORTVERSION=	2.1.2
@@ -15,6 +11,9 @@ PKGNAMEPREFIX?=	ja-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT?=	Network Kanji code conversion Filter
+
+LICENSE?=	ZLIB
+LICENSE_FILE?=	${WRKSRC}/nkf.c
 
 .if ${PKGNAMEPREFIX} != "ja-p5-"
 MAN1=		nkf.1
