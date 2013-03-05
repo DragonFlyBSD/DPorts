@@ -1,8 +1,5 @@
-# New ports collection makefile for:	uffi
-# Date created:				19 August 2004
-# Whom:					Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-#
-# $FreeBSD: ports/devel/cl-uffi/Makefile,v 1.17 2012/11/17 05:55:37 svnexp Exp $
+# Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
+# $FreeBSD: ports/devel/cl-uffi/Makefile,v 1.18 2013/02/18 14:39:09 svnexp Exp $
 
 PORTNAME=	uffi
 PORTVERSION=	2.0.0
