@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/lang/jruby/Makefile,v 1.42 2012/12/10 13:24:59 svnexp Exp $
+# $FreeBSD: lang/jruby/Makefile 313244 2013-03-02 14:44:37Z miwi $
 
 PORTNAME=	jruby
-PORTVERSION=	1.6.6
+PORTVERSION=	1.7.3
 CATEGORIES=	lang ruby java
 MASTER_SITES=	http://jruby.org.s3.amazonaws.com/downloads/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-bin-${PORTVERSION}
@@ -62,9 +62,6 @@ do-install:
 	@cd ${WRKSRC}/lib \
 	  && ${FIND} . -type d -exec ${MKDIR} ${JRUBY_HOME}/lib/{} \; \
 	  && ${FIND} . -type f -exec ${INSTALL_DATA} {} ${JRUBY_HOME}/lib/{} \;
-	@cd ${WRKSRC}/share \
-	  && ${FIND} . -type d -exec ${MKDIR} ${JRUBY_HOME}/share/{} \; \
-	  && ${FIND} . -type f -exec ${INSTALL_DATA} {} ${JRUBY_HOME}/share/{} \;
 
 	@${ECHO_MSG} " [ DONE ]"
 
