@@ -1,8 +1,5 @@
-# New ports collection makefile for:	ftnchek
-# Date created:		4 May 1998
-# Whom:			kargl@apl.washington.edu
-#
-# $FreeBSD: ports/devel/ftnchek/Makefile,v 1.32 2012/11/17 05:55:43 svnexp Exp $
+# Created by: kargl@apl.washington.edu
+# $FreeBSD: ports/devel/ftnchek/Makefile,v 1.33 2013/01/17 08:44:24 svnexp Exp $
 
 PORTNAME=	ftnchek
 PORTVERSION=	3.3.1
@@ -22,6 +19,7 @@ MAN1=		dcl2inc.1 ftnchek.1
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/share
-MAKE_ARGS=	OPT="${CFLAGS}" CC="${CC}"
+CONFIGURE_ENV=	ac_cv_path_CC="${CC}" ac_cv_path_EMACS="${TRUE}"
+MAKE_ARGS=	OPT="${CFLAGS}"
 
 .include <bsd.port.mk>
