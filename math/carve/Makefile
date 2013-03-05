@@ -1,9 +1,9 @@
 # Created by: gahr
-# $FreeBSD: ports/math/carve/Makefile,v 1.4 2012/11/17 05:59:19 svnexp Exp $
+# $FreeBSD: ports/math/carve/Makefile,v 1.5 2013/01/31 14:01:29 svnexp Exp $
 
 PORTNAME=	carve
 PORTVERSION=	1.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 EXTRACT_SUFX=	.tgz
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	A fast, robust constructive solid geometry library
 
-LIB_DEPENDS=	boost_filesystem.4:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	boost_filesystem:${PORTSDIR}/devel/boost-libs
 
 OPTIONS_DEFINE=	GUI
 
