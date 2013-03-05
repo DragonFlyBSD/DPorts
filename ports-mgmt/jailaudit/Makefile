@@ -1,12 +1,8 @@
-# New ports collection makefile for:	jailaudit
-# Date created:				21 October 2005
-# Whom:					cryx
-#
-# $FreeBSD: ports/ports-mgmt/jailaudit/Makefile,v 1.6 2012/11/17 06:00:45 svnexp Exp $
-#
+# Created by: Philipp Wuensche <cryx-ports@h3q.com>
+# $FreeBSD: ports-mgmt/jailaudit/Makefile 313050 2013-02-27 13:03:46Z culot $
 
 PORTNAME=	jailaudit
-PORTVERSION=	1.2
+PORTVERSION=	1.3
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://outpost.h3q.com/software/jailaudit/
 
