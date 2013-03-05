@@ -1,9 +1,8 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: ports/misc/getopt/Makefile,v 1.20 2012/11/17 05:59:37 svnexp Exp $
+# $FreeBSD: misc/getopt/Makefile 313310 2013-03-03 00:13:19Z eadler $
 
 PORTNAME=	getopt
-PORTVERSION=	1.1.4
-PORTREVISION=	2
+PORTVERSION=	1.1.5
 CATEGORIES=	misc
 MASTER_SITES=	http://software.frodo.looijaard.name/getopt/files/
 
@@ -15,7 +14,7 @@ USE_GMAKE=		yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
-MAKE_ENV=	LIBCGETOPT=0
+MAKE_ENV+=	LIBCGETOPT=0
 
 MAN1=		getopt.1
 DOCS=		Changelog README
