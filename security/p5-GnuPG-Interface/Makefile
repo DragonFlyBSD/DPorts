@@ -1,5 +1,5 @@
-# Created by: Trevor Johnson
-# $FreeBSD: ports/security/p5-GnuPG-Interface/Makefile,v 1.37 2012/11/29 17:37:59 svnexp Exp $
+# Created by: trevor
+# $FreeBSD: ports/security/p5-GnuPG-Interface/Makefile,v 1.38 2013/01/27 06:41:41 svnexp Exp $
 
 PORTNAME=	GnuPG-Interface
 PORTVERSION=	0.46
