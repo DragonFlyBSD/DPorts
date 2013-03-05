@@ -1,9 +1,5 @@
-# New ports collection makefile for:	highlnk
-# Date created:				20 Jun 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/sysutils/highlnk/Makefile,v 1.10 2012/11/17 06:01:34 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: ports/sysutils/highlnk/Makefile,v 1.11 2013/01/15 13:46:58 svnexp Exp $
 
 PORTNAME=	highlnk
 DISTVERSION=	0.2
@@ -22,6 +18,10 @@ PLIST_FILES=	bin/highlnk
 PORTDOCS=	README
 MAN1=		highlnk.1
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|linux/limits.h|sys/syslimits.h|' \
 		${WRKSRC}/finder.c \
@@ -33,7 +33,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
