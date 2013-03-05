@@ -2,12 +2,12 @@
 # Date created:		2010-06-15
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/deskutils/epoch/Makefile,v 1.5 2012/11/17 05:55:27 svnexp Exp $
+# $FreeBSD: ports/deskutils/epoch/Makefile,v 1.6 2013/01/23 15:05:32 svnexp Exp $
 #
 
 PORTNAME=	epoch
 PORTVERSION=	1.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}${PORTVERSION}src
