@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	liboop
-# Date created:			Jun 1, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/liboop/Makefile,v 1.36 2012/11/17 05:55:55 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/devel/liboop/Makefile,v 1.37 2013/01/12 13:02:14 svnexp Exp $
 
 PORTNAME=	liboop
 PORTVERSION=	1.0
@@ -13,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	GENTOO/distfiles \
 		http://download.ofb.net/liboop/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	A low-level event loop management library for POSIX-based OS
 
 LIB_DEPENDS=	adns.1:${PORTSDIR}/dns/adns \
