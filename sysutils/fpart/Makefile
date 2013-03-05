@@ -1,19 +1,15 @@
-# New ports collection makefile for:	fpart
-# Date created:		24 Nov 2011
-# Whom:			Ganael Laplanche <ganael.laplanche@martymac.org>
-#
-# $FreeBSD: ports/sysutils/fpart/Makefile,v 1.6 2013/01/09 15:18:59 svnexp Exp $
-#
+# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
+# $FreeBSD: ports/sysutils/fpart/Makefile,v 1.8 2013/02/18 09:58:59 svnexp Exp $
 
 PORTNAME=	fpart
-PORTVERSION=	0.5
+PORTVERSION=	0.7
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 		http://contribs.martymac.org/fpart/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	martymac@FreeBSD.org
-COMMENT=	Sort files and divide them into partitions
+COMMENT=	Sort and pack files into partitions
 
 LICENSE=	BSD
 
