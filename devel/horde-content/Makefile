@@ -2,11 +2,11 @@
 # Date created:			  7 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/horde-content/Makefile,v 1.2 2012/12/18 13:28:40 svnexp Exp $
+# $FreeBSD: ports/devel/horde-content/Makefile,v 1.3 2013/02/12 17:38:58 svnexp Exp $
 #
 
 PORTNAME=	content
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	horde-
 
