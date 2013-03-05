@@ -2,7 +2,7 @@
 # Date created:        Tue Sep  2 23:34:32 BST 2003
 # Whom:                Alex Trull <freebsd.alex@trull.org>
 #
-# $FreeBSD: ports/games/bass/Makefile,v 1.15 2012/11/17 05:57:32 svnexp Exp $
+# $FreeBSD: games/bass/Makefile 313182 2013-03-02 03:55:25Z eadler $
 #
 
 PORTNAME=	bass
@@ -17,7 +17,7 @@ COMMENT=	Beneath a Steel Sky: a post-apocalyptic futuristic graphical adventure
 
 LICENSE=	unknown
 LICENSE_NAME=	no name
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_FILE=	${WRKSRC}/readme.txt
 
 RUN_DEPENDS=	scummvm:${PORTSDIR}/games/scummvm
