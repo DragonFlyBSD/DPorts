@@ -1,12 +1,8 @@
-# New ports collection makefile for:	isync
-# Date created:				2000-12-23
-# Whom:					eivind
-#
-# $FreeBSD: ports/mail/isync/Makefile,v 1.26 2012/11/17 05:59:04 svnexp Exp $
-#
+# Created by: eivind
+# $FreeBSD: ports/mail/isync/Makefile,v 1.28 2013/02/22 15:46:43 svnexp Exp $
 
 PORTNAME=	isync
-PORTVERSION=	1.0.5
+PORTVERSION=	1.0.6
 CATEGORIES=	mail
 MASTER_SITES=	SF
 
@@ -27,11 +23,15 @@ PLIST_FILES=	bin/get-cert bin/isync bin/mbsync bin/mdconvert
 CPPFLAGS+=	-I${BDB_INCLUDE_DIR} -I${OPENSSLINC}
 LDFLAGS+=	-L${BDB_LIB_DIR} -L${OPENSSLLIB} -lssl -lcrypto
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|: install-docDATA|:|g' ${WRKSRC}/Makefile.in
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for file in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
