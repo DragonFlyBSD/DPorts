@@ -2,7 +2,7 @@
 # Date created:		2011-03-17
 # Whom:			Zhihao Yuan <lichray@gmail.com>
 #
-# $FreeBSD: ports/lang/pure/Makefile,v 1.11 2012/11/17 05:58:55 svnexp Exp $
+# $FreeBSD: ports/lang/pure/Makefile,v 1.13 2013/01/22 02:45:01 svnexp Exp $
 #
 
 PORTNAME=	pure
@@ -18,8 +18,8 @@ LICENSE_COMB=	dual
 
 LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp \
 		mpfr:${PORTSDIR}/math/mpfr
-BUILD_DEPENDS=	llvm>=2.9:${PORTSDIR}/devel/llvm
-RUN_DEPENDS=	llvm>=2.9:${PORTSDIR}/devel/llvm
+BUILD_DEPENDS=	llvm31>=3.1:${PORTSDIR}/devel/llvm31
+RUN_DEPENDS=	llvm31>=3.1:${PORTSDIR}/devel/llvm31
 
 MAN1=		pure.1
 SUB_FILES=	pkg-message
