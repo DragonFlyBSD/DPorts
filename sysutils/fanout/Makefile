@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fanout
-# Date created:				20.01.2005
-# Whom:					janos.mohacsi@bsd.hu
-#
-# $FreeBSD: ports/sysutils/fanout/Makefile,v 1.3 2012/11/17 06:01:30 svnexp Exp $
-#
+# Created by: janos.mohacsi@bsd.hu
+# $FreeBSD: ports/sysutils/fanout/Makefile,v 1.4 2013/01/09 20:05:10 svnexp Exp $
 
 PORTNAME=	fanout
 PORTVERSION=	0.6.1
@@ -12,7 +8,7 @@ MASTER_SITES=	http://www.stearns.org/fanout/ \
 		ftp://ftp.bascom.com/pub/wstearns/fanout/ \
 		http://www.linuxgrill.com/anonymous/mirrors/wstearns/fanout/
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Tool to run commands on multiple machines
 
 USE_PERL5_RUN=	yes
