@@ -1,8 +1,9 @@
 # Created by: Yuri <yuri@tsoft.com>
-# $FreeBSD: ports/multimedia/assimp/Makefile,v 1.1 2012/12/22 18:27:52 svnexp Exp $
+# $FreeBSD: ports/multimedia/assimp/Makefile,v 1.2 2013/01/31 14:01:30 svnexp Exp $
 
 PORTNAME=	assimp
 PORTVERSION=	3.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}-3.0
