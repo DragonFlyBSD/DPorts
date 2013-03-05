@@ -2,7 +2,7 @@
 # Date created:		21 January 2000
 # Whom:			Michael Vasilenko <acid@stu.cn.ua>
 #
-# $FreeBSD: ports/www/elinks/Makefile,v 1.65 2012/11/17 06:02:32 svnexp Exp $
+# $FreeBSD: ports/www/elinks/Makefile,v 1.66 2013/01/31 19:48:38 svnexp Exp $
 #
 
 PORTNAME=	elinks
@@ -23,7 +23,7 @@ USE_OPENSSL=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 
-SAMBA_PORT?=	net/samba34
+SAMBA_PORT?=	net/samba36
 
 MAN1=		elinks.1
 MAN5=		elinkskeys.5 elinks.conf.5
