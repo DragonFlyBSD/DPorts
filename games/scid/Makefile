@@ -3,7 +3,7 @@
 # Date created:			Mar 4, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/games/scid/Makefile,v 1.17 2012/11/17 05:57:51 svnexp Exp $
+# $FreeBSD: ports/games/scid/Makefile,v 1.18 2013/02/06 19:12:11 svnexp Exp $
 #
 
 PORTNAME=	scid
@@ -23,7 +23,7 @@ USE_PYTHON=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 
-TCL_LIBRARY=	-L${LOCALBASE}/lib -ltcl${USE_TCL}${_TCL_THREADS_SUFFIX}
+TCL_LIBRARY=	-L${LOCALBASE}/lib -ltcl${USE_TCL}
 
 CONFIGURE_ARGS=	\
     BINDIR="${PREFIX}/bin" \
@@ -31,7 +31,7 @@ CONFIGURE_ARGS=	\
     TCL_VERSION="${TCL_VER}" \
     TCL_INCLUDE="-I${TCL_INCLUDEDIR} -I${TK_INCLUDEDIR} -I${LOCALBASE}/include" \
     TCL_LIBRARY="${TCL_LIBRARY}" \
-    TK_LIBRARY="${TCL_LIBRARY} -ltk${USE_TK}${_TCL_THREADS_SUFFIX} -lX11" \
+    TK_LIBRARY="${TCL_LIBRARY} -ltk${USE_TK} -lX11" \
     OPTIMIZE="${CXXFLAGS} -fno-rtti -fno-exceptions" \
     WARNINGS=""
 
@@ -39,10 +39,4 @@ ALL_TARGET=	all strip
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-.include <bsd.port.pre.mk>
-
-.if defined(USE_TCL_THREADS)
-TCL_LIBRARY+=	${PTHREAD_LIBS}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
