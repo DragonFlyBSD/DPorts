@@ -1,16 +1,13 @@
-# New ports collection makefile for:	rand
-# Date created:			Mon Jul 26 1999
-# Whom:				domi@saargate.de
-#
-# $FreeBSD: ports/textproc/rand/Makefile,v 1.16 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: domi@saargate.de
+# $FreeBSD: textproc/rand/Makefile 313108 2013-02-28 16:33:38Z miwi $
 
 PORTNAME=	rand
-PORTVERSION=	1.8
+PORTVERSION=	1.9
 CATEGORIES=	textproc
-MASTER_SITES=	http://bzflag.bz/~erik/files/
+MASTER_SITES=	http://bzflag.bz/~erik/files/ \
+		http://elfga.com/~erik/files/
 
-MAINTAINER=	domi@saargate.de
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Utility to display files or streams in random order
 
 USE_GMAKE=	yes
