@@ -1,5 +1,5 @@
-# Created by:	jfitz@FreeBSD.org
-# $FreeBSD: ports/x11-wm/afterstep/Makefile,v 1.60 2012/11/17 06:03:40 svnexp Exp $
+# Created by: jfitz@FreeBSD.org
+# $FreeBSD: ports/x11-wm/afterstep/Makefile,v 1.61 2013/01/26 15:29:09 svnexp Exp $
 
 PORTNAME=	afterstep
 PORTVERSION=	1.0
