@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mscgen
-# Date created:		2011-01-23
-# Whom:			Romain Tartiere <romain@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/mscgen/Makefile,v 1.4 2012/11/17 05:58:15 svnexp Exp $
-#
+# Created by: Romain Tartiere <romain@FreeBSD.org>
+# $FreeBSD: ports/graphics/mscgen/Makefile,v 1.5 2012/12/30 06:16:26 svnexp Exp $
 
 PORTNAME=	mscgen
 PORTVERSION=	0.20
@@ -16,11 +12,12 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	A Message Sequence Chart Renderer
 
-OPTIONS=	PNG "Enable PNG support" on
+OPTIONS_DEFINE=	PNG
+OPTIONS_DEFAULT=	PNG
 
 .include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_PNG)
+.if ${PORT_OPTIONS:MPNG}
 CONFIGURE_ARGS+=--with-png
 LIB_DEPENDS+=	gd.4:${PORTSDIR}/graphics/gd
 .else
