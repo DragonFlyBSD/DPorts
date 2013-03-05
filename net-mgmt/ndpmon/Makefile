@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/net-mgmt/ndpmon/Makefile,v 1.13 2012/11/17 06:00:34 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/ndpmon/Makefile,v 1.14 2013/01/09 20:05:03 svnexp Exp $
 
 PORTNAME=	ndpmon
 PORTVERSION=	1.4.0
@@ -8,7 +8,7 @@ CATEGORIES=	net-mgmt ipv6
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-1.4/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	On-link icmpv6 message monitoring and reporting daemon
 
 LICENSE=	LGPL21
