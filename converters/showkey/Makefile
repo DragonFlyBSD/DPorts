@@ -1,9 +1,5 @@
-# New ports collection makefile for:	showkey
-# Date created:				2003-10-24
-# Whom:					trevor
-#
-# $FreeBSD: ports/converters/showkey/Makefile,v 1.6 2012/11/17 05:55:05 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/converters/showkey/Makefile,v 1.7 2013/01/27 06:41:37 svnexp Exp $
 
 PORTNAME=	showkey
 PORTVERSION=	1.5
