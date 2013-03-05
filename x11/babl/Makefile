@@ -2,7 +2,7 @@
 # Date created:		2008-04-14
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/babl/Makefile,v 1.13 2012/11/17 06:03:14 svnexp Exp $
+# $FreeBSD: ports/x11/babl/Makefile,v 1.14 2013/02/05 13:04:20 svnexp Exp $
 #
 
 PORTNAME=	babl
@@ -27,6 +27,7 @@ USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	pkgconfig gnomehack ltverhack
 USE_GMAKE=	yes
+MAKE_JOBS_UNSAFE=yes
 
 OPTIONS=	SIMD "Use cpu-specific optimizations if available" off
 
