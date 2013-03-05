@@ -1,9 +1,9 @@
 # Created by: Willem van Engen <wvengen@stack.nl>
-# $FreeBSD: ports/misc/sword/Makefile,v 1.56 2012/12/18 23:19:35 svnexp Exp $
+# $FreeBSD: ports/misc/sword/Makefile,v 1.58 2013/01/28 22:41:54 svnexp Exp $
 
 PORTNAME=	sword
 PORTVERSION=	1.6.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.crosswire.org/pub/sword/source/v1.6/ \
 		http://crosswire.org/ftpmirror/pub/sword/source/v1.6/ \
@@ -45,10 +45,10 @@ CONFIGURE_ARGS+=	--without-curl
 .endif
 
 .if ${PORT_OPTIONS:MCLUCENE}
-LIB_DEPENDS+=	clucene:${PORTSDIR}/textproc/clucene \
+LIB_DEPENDS+=	clucene-core:${PORTSDIR}/textproc/clucene \
 		icudata:${PORTSDIR}/devel/icu
-CONFIGURE_ARGS+=	--with-clucene --with-icu
-PLIST_SUB+=		ICU=""
+CONFIGURE_ARGS+=	--with-clucene=${LOCALBASE} --with-icu
+PLIST_SUB+=		ICU="" ICUVER="`${LOCALBASE}/bin/icu-config --version`"
 .else
 CONFIGURE_ARGS+=	--without-clucene --without-icu
 PLIST_SUB+=		ICU="@comment "
