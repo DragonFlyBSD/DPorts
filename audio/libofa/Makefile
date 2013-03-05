@@ -2,7 +2,7 @@
 # Date created:		2006-04-01
 # Whom:			Alexander Botero-Lowry <alex@foxybanana.com>
 #
-# $FreeBSD: ports/audio/libofa/Makefile,v 1.25 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/libofa/Makefile 313182 2013-03-02 03:55:25Z eadler $
 #
 
 PORTNAME=	libofa
@@ -19,7 +19,7 @@ LICENSE_COMB=		dual
 LICENSE_GROUPS_APL1=	OSI
 LICENSE_NAME_APL1=	Adaptive Public License version 1.0
 LICENSE_FILE_APL1=	${WRKSRC}/COPYING
-LICENSE_PERMS_APL1=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS_APL1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3 \
 		expat:${PORTSDIR}/textproc/expat2 \
