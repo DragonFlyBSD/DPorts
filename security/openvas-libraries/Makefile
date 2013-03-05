@@ -2,19 +2,19 @@
 # Date created:		2008-04-26
 # Whom:			Tomoyuki Sakurai <cherry@trombik.org>
 #
-# $FreeBSD: ports/security/openvas-libraries/Makefile,v 1.11 2012/11/17 06:01:09 svnexp Exp $
+# $FreeBSD: ports/security/openvas-libraries/Makefile,v 1.12 2013/02/05 16:54:25 svnexp Exp $
 #
 
 PORTNAME=	openvas-libraries
 PORTVERSION=	2.0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/600/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Libraries for OpenVAS
 
-LIB_DEPENDS=	gnutls.47:${PORTSDIR}/security/gnutls \
+LIB_DEPENDS=	gnutls.26:${PORTSDIR}/security/gnutls \
 		gcrypt.18:${PORTSDIR}/security/libgcrypt
 
 GNU_CONFIGURE=	yes
