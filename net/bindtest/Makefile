@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bindtest
-# Date created:		2004-08-19
-# Whom:			Janos Mohacsi <janos.mohacsi@bsd.hu>
-#
-# $FreeBSD: ports/net/bindtest/Makefile,v 1.4 2012/11/17 05:59:57 svnexp Exp $
-#
+# Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
+# $FreeBSD: ports/net/bindtest/Makefile,v 1.5 2013/01/09 20:04:59 svnexp Exp $
 
 PORTNAME=	bindtest
 PORTVERSION=	1.56
@@ -17,7 +13,7 @@ DISTNAME=	${PORTNAME}
 EXTRACT_SUFX=	.tgz
 IGNOREFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Test bind() semantics of IPv6 sockets
 
 MAN1=		bindtest.1
