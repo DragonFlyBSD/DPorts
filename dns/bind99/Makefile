@@ -1,4 +1,4 @@
-# $FreeBSD: ports/dns/bind99/Makefile,v 1.24 2012/12/14 10:52:09 svnexp Exp $
+# $FreeBSD: ports/dns/bind99/Makefile,v 1.28 2013/01/10 10:43:43 svnexp Exp $
 
 PORTNAME=	bind99
 PORTVERSION=	9.9.2.1
@@ -9,6 +9,8 @@ DISTNAME=	bind-${ISCVERSION}
 
 MAINTAINER=	erwin@FreeBSD.org
 COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
+
+LICENSE=	ISCL
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
 ISCVERSION=	9.9.2-P1
@@ -25,7 +27,7 @@ CONFLICTS=	bind9*-9.[45678].* bind9*-sdb-9.[45678].* bind-tools-9.*
 
 OPTIONS_DEFAULT=	IPV6 SSL LINKS XML THREADS
 OPTIONS_DEFINE=		SSL LINKS XML IDN REPLACE_BASE LARGE_FILE \
-			FIXED_RRSET RPZ_NSIP RPZ_NSDNAME \
+			FIXED_RRSET RPZ_NSIP RPZ_NSDNAME RPZRRL_PATCH \
 			SIGCHASE IPV6 THREADS
 OPTIONS_GROUP=		DLZ
 OPTIONS_GROUP_DLZ=	DLZ_POSTGRESQL DLZ_MYSQL DLZ_BDB \
@@ -40,6 +42,7 @@ SIGCHASE_DESC=		dig/host/nslookup will do DNSSEC validation
 FIXED_RRSET_DESC=	Enable fixed rrset ordering
 RPZ_NSIP_DESC=		Enable RPZ NSIP trigger rules
 RPZ_NSDNAME_DESC=	Enable RPZ NSDNAME policy records
+RPZRRL_PATCH_DESC=	RPZ improvements + RRL patch (experimental)
 DLZ_DESC=		Dynamically Loadable Zones
 DLZ_POSTGRESQL_DESC=	DLZ Postgres driver
 DLZ_MYSQL_DESC=		DLZ MySQL driver (no threading)
@@ -109,6 +112,11 @@ CONFIGURE_ARGS+=	--enable-rpz-nsip
 
 .if ${PORT_OPTIONS:MRPZ_NSDNAME}
 CONFIGURE_ARGS+=	--enable-rpz-nsdname
+.endif
+
+.if ${PORT_OPTIONS:MRPZRRL_PATCH}
+PATCHFILES=		rpz+rl-9.9.2-P1.patch
+PATCH_SITES=		http://ss.vix.com/~vjs/
 .endif
 
 .if ${PORT_OPTIONS:MDLZ_MYSQL}
