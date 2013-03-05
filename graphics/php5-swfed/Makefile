@@ -1,11 +1,11 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/php5-swfed/Makefile,v 1.33 2012/11/23 02:51:48 svnexp Exp $
+# $FreeBSD: ports/graphics/php5-swfed/Makefile,v 1.34 2013/02/12 16:33:29 svnexp Exp $
 
 PORTNAME=	swfed
-PORTVERSION=	0.59
+PORTVERSION=	0.60
 CATEGORIES=	graphics www
 MASTER_SITES=	SFJP
-MASTER_SITE_SUBDIR=	${PORTNAME}/57469
+MASTER_SITE_SUBDIR=	${PORTNAME}/58104
 PKGNAMEPREFIX=	php5-
 
 MAINTAINER=	yoya@awm.jp
@@ -25,17 +25,19 @@ USE_PHPEXT=	yes
 WRKSRC=	${WRKDIR}/${DISTNAME}/src
 CONFIGURE_ARGS=	--with-png-dir=${LOCALBASE} --with-gif-dir=${LOCALBASE}
 
+PLIST_SUB=	WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
+
 PORTDOCS=	readme.txt
 PORTEXAMPLES=	*
 
-PLIST_SUB=	WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
+.include <bsd.port.options.mk>
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/${PORTDOCS} ${DOCSDIR}
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	@${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/sample/${PORTEXAMPLES} ${EXAMPLESDIR}
 .endif
