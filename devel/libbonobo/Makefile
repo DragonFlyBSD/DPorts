@@ -2,7 +2,7 @@
 # Date Created:			14 February 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libbonobo/Makefile,v 1.74 2012/11/17 05:55:53 svnexp Exp $
+# $FreeBSD: ports/devel/libbonobo/Makefile,v 1.75 2013/02/14 10:22:09 svnexp Exp $
 #   $MCom: ports/devel/libbonobo/Makefile,v 1.84 2010/09/26 20:57:33 kwm Exp $
 #
 
@@ -32,7 +32,7 @@ USE_GNOME=	gnomehack intlhack libxml2 orbit2 referencehack
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 MAKE_ENV=	gnomelocaledir=${PREFIX}/share/locale
 
 MAN1=		bonobo-activation-server.1
