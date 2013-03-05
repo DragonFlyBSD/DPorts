@@ -1,0 +1,4 @@
+@comment $FreeBSD: ports/databases/liquibase/pkg-plist,v 1.1 2013/02/12 11:36:48 svnexp Exp $
+%%DATADIR%%/liquibase.jar
+bin/liquibase
+@dirrmtry %%DATADIR%%
