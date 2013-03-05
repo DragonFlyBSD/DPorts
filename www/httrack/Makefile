@@ -2,7 +2,7 @@
 # Date created:		Sun Jun 17 10:28:52 CEST 2001
 # Whom:			Dirk Froemberg <dirk@FreeBSD.org>
 #
-# $FreeBSD: ports/www/httrack/Makefile,v 1.56 2012/11/17 06:02:37 svnexp Exp $
+# $FreeBSD: ports/www/httrack/Makefile,v 1.57 2013/02/07 14:08:06 svnexp Exp $
 #
 
 PORTNAME=	httrack
@@ -34,7 +34,7 @@ MAN1=		htsserver.1 httrack.1 proxytrack.1 webhttrack.1
 
 post-patch:
 	@${REINPLACE_CMD} -e '/DEFAULT_CFLAGS=/ s|-O -g3 ||g' \
-		-e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
+		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e '/ install-data-hook/d' ${WRKSRC}/html/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|' \
 		${WRKSRC}/html/server/div/WebHTTrack.desktop \
