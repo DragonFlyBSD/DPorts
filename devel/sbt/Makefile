@@ -1,8 +1,9 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/devel/sbt/Makefile,v 1.2 2012/11/17 05:57:02 svnexp Exp $
+# $FreeBSD: ports/devel/sbt/Makefile,v 1.4 2013/02/23 17:46:41 svnexp Exp $
 
 PORTNAME=	sbt
-PORTVERSION=	0.12.1
+PORTVERSION=	0.12.2
+PORTREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt/${PORTVERSION}/
 DISTNAME=	${PORTNAME}
@@ -37,7 +38,7 @@ SUB_FILES=	sbt.sh
 
 post-patch:
 	@${REINPLACE_CMD} "s|%%PREFIX%%|${PREFIX}|g" \
-		${WRKSRC}/bin/sbt ${WRKSRC}/bin/sbt-launch-lib.bash
+		${WRKSRC}/bin/sbt
 
 do-install:
 	${MKDIR} ${DATADIR}
