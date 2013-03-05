@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	cl-port
-# Date created:				12 May 2003
-# Whom:					Henrik Motakef <henrik.motakef@web.de>
-#
-# $FreeBSD: ports/devel/cl-port/Makefile,v 1.11 2012/11/17 05:55:37 svnexp Exp $
+# Created by: Henrik Motakef <henrik.motakef@web.de>
+# $FreeBSD: ports/devel/cl-port/Makefile,v 1.12 2013/02/18 14:39:09 svnexp Exp $
 
 PORTNAME=	port
 PORTVERSION=	2002.10.02.1
