@@ -1,17 +1,12 @@
-# New ports collection makefile for:	minised
-# Date created:		2 September 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/minised/Makefile,v 1.9 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: ports/textproc/minised/Makefile,v 1.10 2013/02/16 23:44:06 svnexp Exp $
 
 PORTNAME=	minised
-PORTVERSION=	1.13
+PORTVERSION=	1.14
 CATEGORIES=	textproc
-MASTER_SITES=	http://dl.exactcode.de/oss/minised/ CENKES \
-		http://people.freebsd.org/~wen/distfiles/
+MASTER_SITES=	http://dl.exactcode.de/oss/minised/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Smaller, cheaper, faster sed implementation
 
 ALL_TARGET=	${PORTNAME}
@@ -19,7 +14,7 @@ PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
 
 post-patch:
-	@${REINPLACE_CMD} -e 's/LFLAGS/LDFLAGS/' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's|-O1||' ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
