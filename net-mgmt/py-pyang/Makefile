@@ -1,8 +1,8 @@
 # Created by: Bruce Simpson
-# $FreeBSD: ports/net-mgmt/py-pyang/Makefile,v 1.5 2012/11/27 03:24:28 svnexp Exp $
+# $FreeBSD: net-mgmt/py-pyang/Makefile 313215 2013-03-02 06:41:11Z miwi $
 
 PORTNAME=	pyang
-PORTVERSION=	1.2
+PORTVERSION=	1.3
 CATEGORIES=	net-mgmt python
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,14 +15,12 @@ LICENSE=	BSD
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 
-MAKE_ENV+=	YANG_INSTALL=${PREFIX}
+DATADIR=	${PREFIX}/share/yang
+
 MAN1=		pyang.1 yang2dsdl.1
 
-# TODO: Sed YANG_INSTALL into pyang itself.
-
-post-install:
-	@${ECHO_MSG}
-	@${ECHO_MSG} "Don't forget to set YANG_INSTALL to ${PREFIX} in your environment."
-	@${ECHO_MSG}
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|share/man|man|' ${WRKSRC}/setup.py
 
 .include <bsd.port.mk>
