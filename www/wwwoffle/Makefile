@@ -2,11 +2,12 @@
 # Date created:		1 Jun 1998
 # Whom:			Peter Mutsaers
 #
-# $FreeBSD: ports/www/wwwoffle/Makefile,v 1.64 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: ports/www/wwwoffle/Makefile,v 1.65 2013/02/05 16:54:26 svnexp Exp $
 #
 
 PORTNAME=	wwwoffle
 PORTVERSION=	2.9i
+PORTREVISION=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	http://www.gedanken.demon.co.uk/download-wwwoffle/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +15,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A caching proxy server for HTTP and FTP designed for dial-up hosts
 
-LIB_DEPENDS=	gnutls.47:${PORTSDIR}/security/gnutls
+LIB_DEPENDS=	gnutls.26:${PORTSDIR}/security/gnutls
 
 USE_PERL5=	yes
 USE_GMAKE=	yes
