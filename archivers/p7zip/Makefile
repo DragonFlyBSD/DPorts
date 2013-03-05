@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: ports/archivers/p7zip/Makefile,v 1.48 2012/11/25 23:00:25 svnexp Exp $
+# $FreeBSD: ports/archivers/p7zip/Makefile,v 1.49 2013/02/07 15:31:55 svnexp Exp $
 
 PORTNAME=	p7zip
 PORTVERSION=	9.20.1
@@ -61,12 +61,11 @@ CFLAGS+=	-fPIC
 .endif
 
 post-patch:
-	${SED} -e 's!-O!${CFLAGS} ${PTHREAD_CFLAGS}!' \
+	${SED} -e 's!-O!${CFLAGS}!' \
 	       -e 's!g\+\+!${CXX}!' \
 	       -e 's!gcc!${CC}!' \
 	       -e 's/-D_LARGEFILE_SOURCE//' \
 	       -e 's/-D_FILE_OFFSET_BITS=64//' \
-	       -e 's/-lpthread/${PTHREAD_LIBS}/' \
 	       ${WRKSRC}/makefile.freebsd6 > ${WRKSRC}/makefile.machine
 	${REINPLACE_CMD} -e 's|{DEST_SHARE_DOC}|${DOCSDIR}|' \
 		${WRKSRC}/man1/*
