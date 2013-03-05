@@ -2,7 +2,7 @@
 # Date created:         15 May 1996
 # Whom:                 ache
 #
-# $FreeBSD: ports/archivers/rar/Makefile,v 1.80 2012/11/17 05:54:23 svnexp Exp $
+# $FreeBSD: archivers/rar/Makefile 313182 2013-03-02 03:55:25Z eadler $
 #
 
 PORTNAME=	rar
@@ -18,7 +18,7 @@ COMMENT=	File archiver (binary port)
 LICENSE=	RAR
 LICENSE_NAME=	RAR license
 LICENSE_FILE=	${WRKSRC}/license.txt
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 RESTRICTED=	only unmodified original package can be distributed
 NO_BUILD=	yes
