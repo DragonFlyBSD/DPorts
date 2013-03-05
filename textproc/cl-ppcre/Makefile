@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	cl-ppcre
-# Date created:				16 May 2003
-# Whom:					Henrik Motakef <henrik.motakef@web.de>
-#
-# $FreeBSD: ports/textproc/cl-ppcre/Makefile,v 1.10 2012/11/17 06:01:53 svnexp Exp $
+# Created by: Henrik Motakef <henrik.motakef@web.de>
+# $FreeBSD: ports/textproc/cl-ppcre/Makefile,v 1.11 2013/02/18 14:40:00 svnexp Exp $
 
 PORTNAME=	cl-ppcre
 PORTVERSION=	2.0.3
