@@ -1,9 +1,5 @@
-# New ports collection makefile for:    libhash
-# Date created:                         14 Jan 2002
-# Whom:                                 Andrew <andrew@ugh.net.au>
-#
-# $FreeBSD: ports/devel/libhash/Makefile,v 1.10 2012/11/17 05:55:54 svnexp Exp $
-#
+# Created by: Andrew <andrew@ugh.net.au>
+# $FreeBSD: ports/devel/libhash/Makefile,v 1.11 2013/01/12 13:02:14 svnexp Exp $
 
 PORTNAME=	libhash
 PORTVERSION=	1.0.3
@@ -11,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GENTOO}
 MASTER_SITE_SUBDIR=	distfiles
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	A library for manipulating hash tables
 
 WRKSRC=		${WRKDIR}/libhash
