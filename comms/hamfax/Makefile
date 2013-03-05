@@ -1,5 +1,5 @@
-# Created by:	Carl Makin <carl@stagecraft.cx>
-# $FreeBSD: ports/comms/hamfax/Makefile,v 1.21 2012/12/06 21:23:42 svnexp Exp $
+# Created by: Carl Makin <carl@stagecraft.cx>
+# $FreeBSD: ports/comms/hamfax/Makefile,v 1.22 2012/12/25 19:20:26 svnexp Exp $
 
 PORTNAME=	hamfax
 PORTVERSION=	0.8.1
