@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libcii
-# Date created:		21 April 1998
-# Whom:			J Han <hjh@photino.com>
-#
-# $FreeBSD: ports/devel/libcii/Makefile,v 1.11 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: J Han <hjh@photino.com>
+# $FreeBSD: ports/devel/libcii/Makefile,v 1.12 2013/01/12 13:02:13 svnexp Exp $
 
 PORTNAME=	libcii
 PORTVERSION=	1.1
@@ -11,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.cs.princeton.edu/pub/packages/cii/
 DISTNAME=	cii11
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Library from "C Interfaces and Implementations" by David Hanson
 
 NO_WRKSUBDIR=	yes
