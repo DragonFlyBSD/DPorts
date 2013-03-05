@@ -1,12 +1,7 @@
-# New ports collection makefile for:	rgb
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/rgb/Makefile,v 1.4 2012/11/17 06:03:19 svnexp Exp $
-#
+# $FreeBSD: ports/x11/rgb/Makefile,v 1.5 2013/02/04 06:16:03 svnexp Exp $
 
 PORTNAME=	rgb
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.5
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
