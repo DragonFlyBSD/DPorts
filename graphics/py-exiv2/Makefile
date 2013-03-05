@@ -1,8 +1,9 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: ports/graphics/py-exiv2/Makefile,v 1.13 2012/12/26 10:04:55 svnexp Exp $
+# $FreeBSD: ports/graphics/py-exiv2/Makefile,v 1.14 2013/01/31 14:01:28 svnexp Exp $
 
 PORTNAME=	exiv2
 PORTVERSION=	0.3.2
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	https://launchpadlibrarian.net/83595798/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
