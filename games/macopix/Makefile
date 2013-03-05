@@ -2,12 +2,12 @@
 # Date created:				15 Apr 2003
 # Whom:					Shinya Esu <esu@yk.rim.or.jp>
 #
-# $FreeBSD: ports/games/macopix/Makefile,v 1.45 2012/11/17 05:57:45 svnexp Exp $
+# $FreeBSD: ports/games/macopix/Makefile,v 1.46 2013/02/05 16:54:22 svnexp Exp $
 #
 
 PORTNAME=	macopix
 PORTVERSION=	1.7.4
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	http://rosegray.sakura.ne.jp/macopix/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${RESTRICTED_FILES}
@@ -44,7 +44,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 .if defined(WITH_GNUTLS)
-LIB_DEPENDS+=	gnutls.47:${PORTSDIR}/security/gnutls
+LIB_DEPENDS+=	gnutls.26:${PORTSDIR}/security/gnutls
 CONFIGURE_ARGS+=	--with-gnutls
 .else
 USE_OPENSSL=	yes
