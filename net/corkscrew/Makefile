@@ -1,9 +1,5 @@
-# New ports collection makefile for:	corkscrew
-# Date created:			Apr 12, 2001
-# Whom:				Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/net/corkscrew/Makefile,v 1.12 2012/11/17 05:59:58 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: ports/net/corkscrew/Makefile,v 1.13 2013/01/15 13:46:57 svnexp Exp $
 
 PORTNAME=	corkscrew
 PORTVERSION=	2.0
@@ -19,8 +15,12 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for file in NEWS README TODO
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
