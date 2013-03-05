@@ -1,12 +1,10 @@
-# New ports collection makefile for:    st
-# Date created:         Sun Feb 18 2001
-# Whom:                 tobez@tobez.org
-#
-# $FreeBSD: ports/devel/st/Makefile,v 1.15 2012/11/17 05:57:03 svnexp Exp $
+# Created by: tobez
+# $FreeBSD: ports/devel/st/Makefile,v 1.16 2013/02/08 05:39:06 svnexp Exp $
 #
 
 PORTNAME=	st
 PORTVERSION=	1.9
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}ate-threads/${PORTNAME}ate-threads/${PORTVERSION}
 
@@ -30,9 +28,11 @@ post-patch:
 
 post-install:
 	@${CP} ${WRKSRC}/public.h ${PREFIX}/include/st.h
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${DOCS:S,^,${WRKSRC}/docs/,} ${DOCSDIR}/
+.endif
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	@${INSTALL_DATA} ${EXAMPLES:S,^,${WRKSRC}/examples/,} ${EXAMPLESDIR}/
 .endif
