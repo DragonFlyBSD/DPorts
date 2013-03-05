@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	sscalc
-# Date created:				Wed Nov 29 15:08:00 PST 2000
-# Whom:					Keith Walker <kew@icehouse.net>
-#
-# $FreeBSD: ports/astro/sscalc/Makefile,v 1.7 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: Keith Walker <kew@icehouse.net>
+# $FreeBSD: ports/astro/sscalc/Makefile,v 1.9 2013/02/25 11:44:09 svnexp Exp $
 
 PORTNAME=	sscalc
 PORTVERSION=	1.0
@@ -11,9 +7,11 @@ CATEGORIES=	astro
 MASTER_SITES=	http://www.icehouse.net/kew/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A sunrise/sunset time calculator
+COMMENT=	Sunrise and sunset time calculator
 
 MAN1=		sscalc.1
+
+.include <bsd.port.options.mk>
 
 pre-fetch:
 .if !defined(LAT)
@@ -25,7 +23,7 @@ pre-fetch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/sscalc ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/sscalc.1 ${MAN1PREFIX}/man/man1
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/cities.txt ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
