@@ -2,7 +2,7 @@
 # Date created:					2012-08-14
 # Whom:						Colin Percival
 #
-# $FreeBSD: ports/sysutils/ec2-scripts/Makefile,v 1.5 2012/11/17 06:01:29 svnexp Exp $
+# $FreeBSD: ports/sysutils/ec2-scripts/Makefile,v 1.7 2013/02/26 10:46:26 svnexp Exp $
 #
 
 PORTNAME=	ec2-scripts
