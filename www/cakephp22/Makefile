@@ -1,8 +1,8 @@
 # Created by: Christoph Theis <theis@gmx.at>
-# $FreeBSD: ports/www/cakephp22/Makefile,v 1.5 2013/01/18 23:56:04 svnexp Exp $
+# $FreeBSD: ports/www/cakephp22/Makefile,v 1.6 2013/02/08 12:21:44 svnexp Exp $
 
 PORTNAME=	cakephp
-PORTVERSION=	2.2.5
+PORTVERSION=	2.2.7
 CATEGORIES=	www
 
 MAINTAINER=	pphillips@experts-exchange.com
@@ -12,7 +12,7 @@ LICENSE=	MIT
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	${PORTNAME}
-GH_COMMIT=	26b5425
+GH_COMMIT=	1bb28d3
 
 PORTDOCS=	README.md
 
