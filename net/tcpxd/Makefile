@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tcpxd
-# Date created:		2006-10-29
-# Whom:			Babak Farrokhi <babak@farrokhi.net>
-#
-# $FreeBSD: ports/net/tcpxd/Makefile,v 1.7 2012/11/17 06:00:23 svnexp Exp $
-#
+# Created by: Babak Farrokhi <babak@farrokhi.net>
+# $FreeBSD: ports/net/tcpxd/Makefile,v 1.8 2013/02/18 14:39:48 svnexp Exp $
 
 PORTNAME=	tcpxd
 PORTVERSION=	1.4
