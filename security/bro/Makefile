@@ -1,12 +1,12 @@
 # Created by: David O'Brien <obrien@FreeBSD.org>
-# $FreeBSD: ports/security/bro/Makefile,v 1.51 2012/12/03 05:25:43 svnexp Exp $
+# $FreeBSD: ports/security/bro/Makefile,v 1.52 2013/01/10 02:56:22 svnexp Exp $
 
 PORTNAME=	bro
 PORTVERSION=	2.1
 CATEGORIES=	security
 MASTER_SITES=	http://www.bro-ids.org/downloads/release/
 
-MAINTAINER=	kevlo@FreeBSD.org
+MAINTAINER=	leres@ee.lbl.gov
 COMMENT=	System for detecting network intruders in real-time
 
 BUILD_DEPENDS=	bison:${PORTSDIR}/devel/bison \
