@@ -1,16 +1,12 @@
-# New ports collection makefile for:	sipcalc
-# Date created:				24.03.2002
-# Whom:					Janos.Mohacsi@dante.org.uk
-#
-# $FreeBSD: ports/net-mgmt/sipcalc/Makefile,v 1.11 2012/11/17 06:00:37 svnexp Exp $
-#
+# Created by: Janos.Mohacsi@dante.org.uk
+# $FreeBSD: ports/net-mgmt/sipcalc/Makefile,v 1.12 2013/01/09 20:05:04 svnexp Exp $
 
 PORTNAME=	sipcalc
 PORTVERSION=	1.1.5
 CATEGORIES=	net-mgmt ipv6
 MASTER_SITES=	http://www.routemeister.net/projects/sipcalc/files/
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Sipcalc is an IP subnet calculator with IPv6 support
 
 GNU_CONFIGURE=	yes
