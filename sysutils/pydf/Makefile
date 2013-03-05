@@ -2,7 +2,7 @@
 # Date created:				29 November 2007
 # Whom:					Baptiste Grenier <gwarf@gwarf.org>
 #
-# $FreeBSD: ports/sysutils/pydf/Makefile,v 1.8 2012/11/17 06:01:43 svnexp Exp $
+# $FreeBSD: sysutils/pydf/Makefile 313182 2013-03-02 03:55:25Z eadler $
 #
 
 PORTNAME=	pydf
@@ -17,7 +17,7 @@ COMMENT=	A python implementation of df
 LICENSE=	unknown
 LICENSE_NAME=	Public Domain
 LICENSE_FILE=	${WRKSRC}/COPYING
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 SUB_FILES=	pkg-message
 
