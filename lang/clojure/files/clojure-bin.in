@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/lang/clojure/files/clojure-bin.in,v 1.10 2012/11/17 05:58:48 svnexp Exp $
+# $FreeBSD: lang/clojure/files/clojure-bin.in 300896 2012-07-14 13:54:48Z beat $
 
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -cp "%%JAVAJARDIR%%/jline.jar:%%JAVAJARDIR%%/clojure.jar:%%JAVAJARDIR%%/swank-clojure-1.4.2.jar:$CLASSPATH" %%CLOJURE_JLINE_RUNNER%% clojure.main "$@"

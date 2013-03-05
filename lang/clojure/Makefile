@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: ports/lang/clojure/Makefile,v 1.16 2012/12/10 13:24:59 svnexp Exp $
+# $FreeBSD: lang/clojure/Makefile 313330 2013-03-03 07:51:57Z beech $
 
 PORTNAME=	clojure
-PORTVERSION=	1.4.0
+PORTVERSION=	1.5.0
 PORTEPOCH=	2
 CATEGORIES=	lang lisp java
 MASTER_SITES=	http://repo1.maven.org/maven2/org/clojure/clojure/${PORTVERSION}/
