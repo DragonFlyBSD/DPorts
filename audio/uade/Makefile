@@ -1,5 +1,5 @@
 # Created by: Martin Blapp <mbr@freebsd.org>
-# $FreeBSD: ports/audio/uade/Makefile,v 1.43 2012/12/14 15:52:30 svnexp Exp $
+# $FreeBSD: ports/audio/uade/Makefile,v 1.44 2013/01/15 13:46:53 svnexp Exp $
 
 PORTNAME=	uade
 PORTVERSION=	2.13
@@ -32,7 +32,7 @@ PORTDOCS=	BUGS PLANS REDUNDANT_REPLAYERS UAE-CREDITS UAE-README \
 		play_loop_state_diagram.dia play_loop_state_diagram.eps \
 		play_loop_state_diagram.txt uade.html
 
-OPTIONS_DEFINE=	TEXTSCOPE FUSE XMMS
+OPTIONS_DEFINE=	TEXTSCOPE FUSE XMMS DOCS
 
 TEXTSCOPE_DESC=	Audio register debug mode
 XMMS_DESC=	XMMS plugin
@@ -67,7 +67,7 @@ post-patch:
 post-install:
 	@${RM} -rf ${DATADIR}/players/S
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCSDIR}
