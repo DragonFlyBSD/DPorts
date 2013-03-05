@@ -2,7 +2,7 @@
 # Date created:			Feb 21, 2004
 # Whom:				Thomas-Martin Seck <tmseck@netcologne.de>
 #
-# $FreeBSD: ports/www/gatling/Makefile,v 1.20 2012/12/10 07:00:00 svnexp Exp $
+# $FreeBSD: ports/www/gatling/Makefile,v 1.21 2013/02/07 14:08:06 svnexp Exp $
 #
 
 PORTNAME=	gatling
@@ -24,7 +24,6 @@ CFLAGS+=	-I${LOCALBASE}/include/libowfat -I${OPENSSLINC} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -L${OPENSSLLIB}
 
 MAKEFILE=	GNUmakefile
-MAKE_ENV+=	PTHREAD_LIBS="${PTHREAD_LIBS}"
 
 bin=		dl
 sbin=		gatling
