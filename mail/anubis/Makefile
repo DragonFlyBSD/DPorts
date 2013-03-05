@@ -2,12 +2,12 @@
 # Date created:			Jul 31, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/mail/anubis/Makefile,v 1.47 2012/11/17 05:58:58 svnexp Exp $
+# $FreeBSD: ports/mail/anubis/Makefile,v 1.49 2013/02/05 16:54:23 svnexp Exp $
 #
 
 PORTNAME=	anubis
 PORTVERSION=	4.1.1
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
