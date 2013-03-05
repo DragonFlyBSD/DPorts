@@ -1,9 +1,5 @@
-# New ports collection makefile for:	siege
-# Date created:			Jun 2, 2001
-# Whom:				Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/benchmarks/siege/Makefile,v 1.33 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: ports/benchmarks/siege/Makefile,v 1.34 2012/12/31 13:56:42 svnexp Exp $
 
 PORTNAME=	siege
 PORTVERSION=	2.70
@@ -15,7 +11,6 @@ MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	A http regression testing and benchmarking utility
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
