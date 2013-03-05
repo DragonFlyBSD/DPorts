@@ -2,7 +2,7 @@
 # Date created:				19 October 2006
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/misc/umodunpack/Makefile,v 1.3 2012/11/17 05:59:45 svnexp Exp $
+# $FreeBSD: ports/misc/umodunpack/Makefile,v 1.4 2013/02/20 16:45:24 svnexp Exp $
 #
 
 PORTNAME=	umodunpack
@@ -13,7 +13,7 @@ DISTNAME=	${PORTNAME}.pl
 EXTRACT_SUFX=
 EXTRACT_ONLY=
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unpack umod files for Unreal and/or Unreal Tournament
 
 USE_PERL5_RUN=	yes
