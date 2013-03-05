@@ -2,7 +2,7 @@
 # Date created:		4 January 2000
 # Whom:			mwest@uct.ac.za
 #
-# $FreeBSD: ports/devel/libgii/Makefile,v 1.31 2012/11/17 05:55:54 svnexp Exp $
+# $FreeBSD: ports/devel/libgii/Makefile,v 1.32 2013/02/14 10:22:09 svnexp Exp $
 #
 
 PORTNAME=	libgii
@@ -207,9 +207,6 @@ PLIST_SUB+=	VGL="@comment "
 .else
 PLIST_SUB+=	VGL=""
 .endif
-
-pre-configure:
-	${REINPLACE_CMD} -e 's/-lpthread/${PTHREAD_LIBS}/' ${WRKSRC}/configure
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/libgii.conf ${PREFIX}/etc/ggi/libgii.conf.dist
