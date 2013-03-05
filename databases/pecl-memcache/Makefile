@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: ports/databases/pecl-memcache/Makefile,v 1.26 2012/12/12 03:29:09 svnexp Exp $
+# $FreeBSD: ports/databases/pecl-memcache/Makefile,v 1.27 2013/02/08 01:12:05 svnexp Exp $
 
 PORTNAME=	memcache
 PORTVERSION=	3.0.7
@@ -20,6 +20,7 @@ USE_PHP=	zlib session
 USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
 USE_PHPIZE=	yes
+USE_CSTD=	gnu89
 
 .include <bsd.port.options.mk>
 
