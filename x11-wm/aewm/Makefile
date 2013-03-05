@@ -1,9 +1,5 @@
-# New ports collection makefile for:	aewm
-# Date created:				2000-12-16
-# Whom:					Trevor Johnson <trevor@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-wm/aewm/Makefile,v 1.28 2012/11/17 06:03:40 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/x11-wm/aewm/Makefile,v 1.29 2013/01/27 06:41:43 svnexp Exp $
 
 PORTNAME=	aewm
 PORTVERSION=	1.2.7
