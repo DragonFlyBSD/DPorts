@@ -2,7 +2,7 @@
 # Date created:        13 September 1999
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/librep/Makefile,v 1.88 2012/11/17 05:58:52 svnexp Exp $
+# $FreeBSD: ports/lang/librep/Makefile,v 1.89 2013/01/29 00:50:17 svnexp Exp $
 #    $MCom: ports/lang/librep/Makefile,v 1.2 2006/09/10 00:51:12 mezz Exp $
 
 PORTNAME=	librep
@@ -16,7 +16,7 @@ COMMENT=	An Emacs Lisp like runtime library
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	gdbm.4:${PORTSDIR}/databases/gdbm \
-		ffi.5:${PORTSDIR}/devel/libffi \
+		ffi:${PORTSDIR}/devel/libffi \
     		gmp.10:${PORTSDIR}/math/gmp
 RUN_DEPENDS=	gtar:${PORTSDIR}/archivers/gtar
 
