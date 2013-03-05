@@ -1,8 +1,5 @@
-# New ports collection makefile for:	infix
-# Date created:				19 August 2006
-# Whom:					Pedro F. Giffuni
-#
-# $FreeBSD: ports/devel/cl-infix/Makefile,v 1.9 2012/11/17 05:55:37 svnexp Exp $
+# Created by: Pedro F. Giffuni
+# $FreeBSD: ports/devel/cl-infix/Makefile,v 1.10 2013/02/18 14:39:08 svnexp Exp $
 
 PORTNAME=	infix
 PORTVERSION=	19960628
