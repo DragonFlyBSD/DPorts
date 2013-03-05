@@ -1,8 +1,8 @@
 # Created by: Castor Fu
-# $FreeBSD: ports/devel/cscope/Makefile,v 1.37 2012/11/17 05:55:38 svnexp Exp $
+# $FreeBSD: ports/devel/cscope/Makefile,v 1.38 2013/02/05 09:50:13 svnexp Exp $
 
 PORTNAME=	cscope
-PORTVERSION=	15.8
+PORTVERSION=	15.8a
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
@@ -12,7 +12,6 @@ COMMENT=	An interactive C program browser
 OPTIONS_DEFINE=	XCSCOPE
 XCSCOPE_DESC=	Install (X)Emacs package
 
-USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
 EMACSLISPDIR=	${PREFIX}/share/emacs/site-lisp
