@@ -2,7 +2,7 @@
 # Date created:				Jun 13 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/security/openbsm/Makefile,v 1.13 2012/11/17 06:01:09 svnexp Exp $
+# $FreeBSD: ports/security/openbsm/Makefile,v 1.14 2013/02/15 07:37:08 svnexp Exp $
 #
 
 PORTNAME=	openbsm
@@ -14,6 +14,8 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	flz@FreeBSD.org
 COMMENT=	Open Source Basic Security Module (BSM) Audit Implementation
+
+CONFLICTS=	openbsm-devel-1.[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
