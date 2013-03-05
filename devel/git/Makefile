@@ -2,11 +2,11 @@
 # Date created:				7 Feb 2006
 # Whom:					Eric Anholt
 #
-# $FreeBSD: ports/devel/git/Makefile,v 1.154 2013/01/16 16:48:17 svnexp Exp $
+# $FreeBSD: ports/devel/git/Makefile,v 1.157 2013/02/14 10:22:07 svnexp Exp $
 #
 
 PORTNAME=	git
-PORTVERSION=	1.8.1.1
+PORTVERSION=	1.8.1.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
@@ -200,7 +200,7 @@ USE_OPENSSL=	yes
 USE_RC_SUBR=	git_daemon
 WANT_PERL=	yes
 
-CONFIGURE_ARGS=	--enable-pthreads=${PTHREAD_LIBS}
+CONFIGURE_ARGS=	--enable-pthreads=-pthread
 
 OPTIONS_DEFINE=	GUI SVN GITWEB CONTRIB P4 CVS HTMLDOCS PERL ICONV CURL \
 		ETCSHELLS NLS
