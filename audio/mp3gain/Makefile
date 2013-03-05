@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mp3gain
-# Date created:		5 September 2002
-# Whom:			Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-#
-# $FreeBSD: ports/audio/mp3gain/Makefile,v 1.17 2012/11/17 05:54:38 svnexp Exp $
-#
+# Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
+# $FreeBSD: ports/audio/mp3gain/Makefile,v 1.18 2013/01/26 16:56:07 svnexp Exp $
 
 PORTNAME=	mp3gain
 PORTVERSION=	1.5.2
