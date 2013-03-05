@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rsynth
-# Date created:		03 Jan 1995
-# Whom:			faulkner@mpd.tandem.com
-#
-# $FreeBSD: ports/audio/rsynth/Makefile,v 1.32 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: faulkner@mpd.tandem.com
+# $FreeBSD: ports/audio/rsynth/Makefile,v 1.34 2013/02/25 19:55:46 svnexp Exp $
 
 PORTNAME=	rsynth
 PORTVERSION=	2.0
@@ -11,7 +7,7 @@ PORTREVISION=	4
 CATEGORIES=	audio accessibility
 MASTER_SITES=	ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/synthesis/
 
-MAINTAINER=	dinoex@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Speech synthesizer
 
 LIB_DEPENDS=	gdbm:${PORTSDIR}/databases/gdbm	\
