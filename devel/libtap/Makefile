@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libtap
-# Date created:				21 December 2004
-# Whom:					Nik Clayton <nik@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libtap/Makefile,v 1.12 2012/11/17 05:55:56 svnexp Exp $
-#
+# Created by: Nik Clayton <nik@FreeBSD.org>
+# $FreeBSD: ports/devel/libtap/Makefile,v 1.13 2013/01/12 13:02:14 svnexp Exp $
 
 PORTNAME=	libtap
 PORTVERSION=	1.01
@@ -13,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	nik
 DISTNAME=	tap-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Library implementing the Test Anything Protocol
 
 USE_AUTOTOOLS=	libtool
