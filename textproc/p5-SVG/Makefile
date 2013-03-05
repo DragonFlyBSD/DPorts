@@ -1,12 +1,8 @@
-# New ports collection makefile for:	SVG
-# Date created:		21 Nov 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-SVG/Makefile,v 1.18 2012/12/17 06:36:02 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: ports/textproc/p5-SVG/Makefile,v 1.19 2013/02/16 16:48:00 svnexp Exp $
 
 PORTNAME=	SVG
-PORTVERSION=	2.53
+PORTVERSION=	2.54
 CATEGORIES=	textproc graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
