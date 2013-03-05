@@ -1,13 +1,13 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/devel/rudiments/Makefile,v 1.46 2012/12/13 07:10:28 svnexp Exp $
+# $FreeBSD: devel/rudiments/Makefile 313204 2013-03-02 06:25:51Z miwi $
 
 PORTNAME=	rudiments
-PORTVERSION=	0.38
+PORTVERSION=	0.41
 CATEGORIES=	devel
-MASTER_SITES=	SF
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.50
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A utility C++ class library for daemons, clients, servers, and more
+COMMENT=	C++ class library for daemons, clients, servers, and more
 
 LICENSE=	LGPL20
 
@@ -16,8 +16,6 @@ OPTIONS_DEFINE=	DOCS
 USE_OPENSSL=	yes
 USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ENV=	PTHREADINCLUDES="${PTHREAD_CFLAGS}" \
-		PTHREADLIB="${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--with-ssl-includes=-I${OPENSSLINC} \
 		--with-ssl-libs=-L${OPENSSLLIB} \
 		--disable-pcre
