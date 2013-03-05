@@ -2,7 +2,7 @@
 # Date created:                10 Mar 2001
 # Whom:                        Shen Chuan-Hsing
 #
-# $FreeBSD: ports/chinese/qterm/Makefile,v 1.46 2012/11/17 05:54:58 svnexp Exp $
+# $FreeBSD: ports/chinese/qterm/Makefile,v 1.47 2012/12/30 18:55:41 svnexp Exp $
 #
 
 PORTNAME=	qterm
@@ -13,6 +13,9 @@ MASTER_SITES=	 SF/qterm/qterm/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	QTerm is a BBS client for BSD/Linux
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_XORG=	x11 ice xext xt xaw xpm xi xproto xextproto
 USE_BZIP2=	yes
