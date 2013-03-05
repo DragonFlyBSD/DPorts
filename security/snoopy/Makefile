@@ -1,7 +1,5 @@
-# New ports collection makefile for:   snoopy
-# Date created:                3 February 2007
-# Whom:                        Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: ports/security/snoopy/Makefile,v 1.14 2012/11/17 06:01:20 svnexp Exp $
+# Created by: Philippe Audeoud <jadawin@tuxaco.net>
+# $FreeBSD: ports/security/snoopy/Makefile,v 1.15 2012/12/31 14:53:07 svnexp Exp $
 
 PORTNAME=	snoopy
 PORTVERSION=	1.8.0
@@ -20,6 +18,8 @@ PORTDOCS=	README
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/local|${PREFIX}|g' ${WRKSRC}/README
 	@${REINPLACE_CMD} '/^LIBS.*/d' ${WRKSRC}/Makefile.in
@@ -27,7 +27,7 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/snoopy.so ${PREFIX}/lib
 	${INSTALL_PROGRAM} ${WRKSRC}/detect ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
