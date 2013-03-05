@@ -1,9 +1,5 @@
-# New ports collection makefile for:	brag
-# Date created:				19 Jul 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/news/brag/Makefile,v 1.8 2012/11/17 06:00:41 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: ports/news/brag/Makefile,v 1.9 2013/01/15 13:46:57 svnexp Exp $
 
 PORTNAME=	brag
 PORTVERSION=	1.4.1
@@ -25,6 +21,10 @@ PORTDOCS=	CHANGES README
 
 TCLSH=		tclsh8.4
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|^\(exec\ \)tclsh|\1${TCLSH}|' \
 		${WRKSRC}/${PORTNAME}
@@ -33,7 +33,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
