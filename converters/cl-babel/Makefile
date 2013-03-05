@@ -1,8 +1,4 @@
-# New ports collection makefile for:	cl-babel
-# Date created:				20 January 2010
-# Whom:					Jimmy Olgeni <olgeni@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/cl-babel/Makefile,v 1.4 2012/11/17 05:55:02 svnexp Exp $
+# $FreeBSD: ports/converters/cl-babel/Makefile,v 1.5 2013/01/26 15:07:23 svnexp Exp $
 
 PORTNAME=	babel
 PORTVERSION=	2010.01.16
