@@ -2,7 +2,7 @@
 # Date created:        9 August 2004
 # Whom:                Andrej Zverev (az@inec.ru)
 #
-# $FreeBSD: ports/devel/esvn/Makefile,v 1.26 2012/11/17 05:55:42 svnexp Exp $
+# $FreeBSD: ports/devel/esvn/Makefile,v 1.27 2012/12/30 18:55:47 svnexp Exp $
 #
 
 PORTNAME=	esvn
@@ -17,6 +17,9 @@ COMMENT=	GUI frontend for the Subversion revision system
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
 RUN_DEPENDS=	svn:${PORTSDIR}/devel/subversion
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 ESVN_DIST=	esvn
 ESVNPRO=	esvn.pro esvn-diff-wrapper.pro
