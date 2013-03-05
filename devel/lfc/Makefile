@@ -1,8 +1,8 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: ports/devel/lfc/Makefile,v 1.25 2013/01/07 18:42:51 svnexp Exp $
+# $FreeBSD: ports/devel/lfc/Makefile,v 1.27 2013/02/06 16:57:06 svnexp Exp $
 
 PORTNAME=	lfc
-PORTVERSION=	1.3.7
+PORTVERSION=	1.4.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.lemke-it.com/
 
