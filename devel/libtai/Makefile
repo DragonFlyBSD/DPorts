@@ -1,9 +1,5 @@
-# New ports collection makefile for: libtai
-# Date created:		15 June 2000
-# Whom:			Mario S F Ferreira <lioux@linf.unb.br> et al.
-#
-# $FreeBSD: ports/devel/libtai/Makefile,v 1.19 2012/11/17 05:55:56 svnexp Exp $
-#
+# Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
+# $FreeBSD: ports/devel/libtai/Makefile,v 1.20 2013/01/12 13:02:14 svnexp Exp $
 
 PORTNAME=	libtai
 PORTVERSION=	0.60
@@ -13,7 +9,7 @@ MASTER_SITES=	http://cr.yp.to/libtai/ \
 		ftp://ftp.sunsite.auc.dk/disk1/qmail/ \
 		ftp://ftp.task.gda.pl/mirror/mirror.qmail.org/koobera/pub/software/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	A library for storing and manipulating dates and times in second/attosecond
 
 ALL_TARGET=	it
