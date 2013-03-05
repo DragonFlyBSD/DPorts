@@ -2,12 +2,12 @@
 # Date created:		7 November 2010
 # Whom:			johans
 #
-# $FreeBSD: ports/games/tbe/Makefile,v 1.5 2012/11/17 05:57:54 svnexp Exp $
+# $FreeBSD: ports/games/tbe/Makefile,v 1.7 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	tbe
 PORTVERSION=	8.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Milestone%20${PORTVERSION}
 DISTNAME=	TheButterflyEffect-m${PORTVERSION}.src
@@ -25,7 +25,7 @@ WRKSRC=		${WRKDIR}/TheButterflyEffect-m${PORTVERSION}
 
 DESKTOP_ENTRIES="The Butterfly Effect" "Inspired by The Incredible Machine" \
 		"${DATADIR}/images/tbe-icon.png" \
-		"${PREFIX}/bin/tbe" "Application;LogicGame;Game;" false
+		"${PREFIX}/bin/tbe" "LogicGame;Game;" false
 
 post-patch:
 		@${REINPLACE_CMD} 's/ make/ ${GMAKE}/' \
