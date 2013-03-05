@@ -1,8 +1,5 @@
-# ports collection makefile for:	fec
-# Date created:		7 July 2006
-# Whom:			db
-#
-# $FreeBSD: ports/comms/libfec/Makefile,v 1.9 2012/11/17 05:55:00 svnexp Exp $
+# Created by: db
+# $FreeBSD: ports/comms/libfec/Makefile,v 1.10 2013/02/18 14:39:01 svnexp Exp $
 
 PORTNAME=	libfec
 PORTVERSION=	3.0.1
