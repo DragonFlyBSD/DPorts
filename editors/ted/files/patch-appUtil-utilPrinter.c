@@ -1,8 +1,8 @@
- $FreeBSD: ports/editors/ted/files/patch-appUtil::utilPrinter.c,v 1.2 2012/11/17 05:57:18 svnexp Exp $
+ $FreeBSD: ports/editors/ted/files/patch-appUtil-utilPrinter.c,v 1.1 2013/02/18 15:00:31 svnexp Exp $
  
  --- appUtil/utilPrinter.c	Sun Aug 17 19:14:01 2003
  +++ appUtil/utilPrinter.c	Sun Aug 17 19:15:54 2003
- @@ -281,14 +281,14 @@
+ @@ -331,14 +331,14 @@
       /*  1  */
       if  ( count == 0 )
   	{
