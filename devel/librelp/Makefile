@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/devel/librelp/Makefile,v 1.10 2012/11/17 05:55:56 svnexp Exp $
+# $FreeBSD: ports/devel/librelp/Makefile,v 1.11 2013/02/14 10:22:10 svnexp Exp $
 
 PORTNAME=	librelp
 PORTVERSION=	1.0.1
@@ -23,7 +23,5 @@ PORT_VERBS=	relp
 post-patch:
 	@${REINPLACE_CMD} -e '/CFLAGS/s| -g||g' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e '/^PTHREADS/s|= .*|= ${PTHREAD_LIBS}|g' \
-		${WRKSRC}/src/Makefile.in
 
 .include <bsd.port.mk>
