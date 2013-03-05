@@ -1,14 +1,14 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: ports/games/gtklife/Makefile,v 1.20 2012/11/17 05:57:40 svnexp Exp $
+# $FreeBSD: ports/games/gtklife/Makefile,v 1.22 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	gtklife
 PORTVERSION=	5.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://ironphoenix.org/tril/gtklife/
 
 MAINTAINER=	eadler@FreeBSD.org
-COMMENT=	A GTK+ implementation of Conway's Game of Life
+COMMENT=	GTK+ implementation of Conway's Game of Life
 
 LICENSE=	GPLv2
 
@@ -29,7 +29,7 @@ DESKTOP_ENTRIES="GtkLife" \
 		"Play Conway's Game of Life" \
 		"gtklife" \
 		"gtklife" \
-		"Application;Game;Simulation;" \
+		"Game;Simulation;" \
 		${STARTUP_NOTIFY}
 
 OPTIONS_DEFINE=	GTK2
