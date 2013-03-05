@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmsolar
-# Date created:				Tue Jan 15 17:28:49 EST 2002
-# Whom:					pat
-#
-# $FreeBSD: ports/astro/wmsolar/Makefile,v 1.10 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: Patrick Li <pat@FreeBSD.org>
+# $FreeBSD: ports/astro/wmsolar/Makefile,v 1.11 2013/02/25 11:44:09 svnexp Exp $
 
 PORTNAME=	wmsolar
 PORTVERSION=	1.0
@@ -12,7 +8,7 @@ CATEGORIES=	astro windowmaker
 MASTER_SITES=	http://www.inxsoft.net/wmsolar/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A dockapp that displays the solar system viewed from top
+COMMENT=	Dockapp that displays the Solar System viewed from the top
 
 PLIST_FILES=	bin/wmSolar
 WRKSRC=		${WRKDIR}/wmSolar
