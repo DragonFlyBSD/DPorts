@@ -1,12 +1,8 @@
-# New ports collection makefile for:	global
-# Date created:		20 June 2000
-# Whom:			chuckr@freebsd.org
-#
-# $FreeBSD: ports/devel/global/Makefile,v 1.50 2012/11/17 05:55:45 svnexp Exp $
-#
+# Created by: chuckr@freebsd.org
+# $FreeBSD: ports/devel/global/Makefile,v 1.51 2013/02/12 17:21:12 svnexp Exp $
 
 PORTNAME=	global
-PORTVERSION=	6.2.4
+PORTVERSION=	6.2.7
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
