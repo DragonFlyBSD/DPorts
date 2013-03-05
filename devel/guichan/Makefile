@@ -2,7 +2,7 @@
 # Date created:				2005-10-03
 # Whom:					Tobias Gion <freebsd@gionet.de>
 #
-# $FreeBSD: ports/devel/guichan/Makefile,v 1.30 2012/11/17 05:55:46 svnexp Exp $
+# $FreeBSD: ports/devel/guichan/Makefile,v 1.31 2013/02/14 10:22:08 svnexp Exp $
 #
 
 PORTNAME=	guichan
@@ -21,7 +21,7 @@ USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack
 
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS=	SDL	"Enable SDL support" On \
 		ALLEGRO	"Enable Allegro support" Off \
