@@ -1,9 +1,9 @@
 # Created by: asami
-# $FreeBSD: ports/games/xbill/Makefile,v 1.38 2012/12/01 09:40:58 svnexp Exp $
+# $FreeBSD: ports/games/xbill/Makefile,v 1.39 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	xbill
 PORTVERSION=	2.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	http://www.xbill.org/download/ \
 		http://mirror.amdmi3.ru/distfiles/
