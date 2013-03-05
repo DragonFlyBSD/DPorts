@@ -1,8 +1,9 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: ports/security/py-gnutls/Makefile,v 1.25 2012/11/17 06:01:16 svnexp Exp $
+# $FreeBSD: ports/security/py-gnutls/Makefile,v 1.26 2013/02/05 16:54:25 svnexp Exp $
 
 PORTNAME=	gnutls
 PORTVERSION=	1.2.4
+PORTREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,7 +12,7 @@ DISTNAME=	python-gnutls-${PORTVERSION}
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Python wrapper for the GNUTLS library
 
-LIB_DEPENDS=	gnutls.47:${PORTSDIR}/security/gnutls
+LIB_DEPENDS=	gnutls.26:${PORTSDIR}/security/gnutls
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
