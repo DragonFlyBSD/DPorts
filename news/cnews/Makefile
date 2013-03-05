@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cnews
-# Date created:		28 September 1994
-# Whom:			adam
-#
-# $FreeBSD: ports/news/cnews/Makefile,v 1.65 2012/11/17 06:00:41 svnexp Exp $
-#
+# Created by: adam
+# $FreeBSD: ports/news/cnews/Makefile,v 1.66 2013/01/27 13:25:26 svnexp Exp $
 
 PORTNAME=	cnews
 PORTVERSION=	cr.g
