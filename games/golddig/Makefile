@@ -1,26 +1,27 @@
 # Created by: jmz
-# $FreeBSD: ports/games/golddig/Makefile,v 1.20 2012/11/17 05:57:40 svnexp Exp $
+# $FreeBSD: games/golddig/Makefile 313189 2013-03-02 05:41:16Z miwi $
 
 PORTNAME=	golddig
-PORTVERSION=	2.0
-PORTREVISION=	3
+PORTVERSION=	3.1
 CATEGORIES=	games
-MASTER_SITES=	ftp://qiclab.scn.rain.com/pub/games/
-DISTNAME=	golddig2
-EXTRACT_SUFX=	.tar.Z
+MASTER_SITES=	http://www.NetBSD.org/~chuck/gz/
+DISTNAME=	${PORTNAME}C${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Getting the Gold and Avoiding Death
 
-MAN6=		golddig.6
 USE_XORG=	x11
+MAKE_ENV=	X11BASE="${LOCALBASE}"
+MAKE_JOBS_SAFE=	yes
 
-pre-patch:
-	@(cd ${WRKSRC}; for i in 245 244 246 247; do \
-	    ${AWK} '{if (/^#!/) x++} {if(x) print $$0'} $$i| /bin/sh; \
-	  done; ${MV} golddig2/* .)
+LDFLAGS+=	-L${LOCALBASE}/lib
 
-pre-install:
-	@${MKDIR} ${PREFIX}/lib/golddig
+MAN6=		gdedit.6 golddig.6
+
+DESKTOP_ENTRIES="Gold Digger" "" "" "${PORTNAME}" "" ""
+
+post-patch:
+	@${GREP} -lR "@PREFIX@" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
+		's|@PREFIX@|${PREFIX}|'
 
 .include <bsd.port.mk>
