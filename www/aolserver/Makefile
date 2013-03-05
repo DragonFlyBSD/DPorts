@@ -1,5 +1,5 @@
 # Created by: Matthew Braithwaite <mab@red-bean.com>
-# $FreeBSD: ports/www/aolserver/Makefile,v 1.42 2012/11/17 06:02:27 svnexp Exp $
+# $FreeBSD: ports/www/aolserver/Makefile,v 1.43 2013/02/06 19:12:45 svnexp Exp $
 
 PORTNAME=	aolserver
 PORTVERSION=	4.5.1
@@ -40,7 +40,6 @@ SUB_LIST+=	${SUB_VARS} AOLSERVERBASE="${PREFIX}/${AOLSERVERBASE}"
 PLIST_SUB+=	${SUB_VARS} AOLSERVERBASE="${AOLSERVERBASE}"
 
 USE_TCL=		84+
-USE_TCL_THREADS=	yes
 INVALID_TCL_VER=	86
 
 ONLY_FOR_ARCHS=	i386 amd64
