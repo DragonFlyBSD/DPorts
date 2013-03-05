@@ -1,9 +1,5 @@
-# New ports collection makefile for:   cgoban
-# Date created:        28 October 1996
-# Whom:                simonm@dcs.gla.ac.uk
-#
-# $FreeBSD: ports/games/cgoban/Makefile,v 1.38 2012/11/17 05:57:34 svnexp Exp $
-#
+# Created by: simonm@dcs.gla.ac.uk
+# $FreeBSD: ports/games/cgoban/Makefile,v 1.39 2013/02/04 07:33:09 svnexp Exp $
 
 PORTNAME=	cgoban
 PORTVERSION=	1.9.14
