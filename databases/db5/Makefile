@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: ports/databases/db5/Makefile,v 1.18 2012/12/10 13:24:55 svnexp Exp $
+# $FreeBSD: ports/databases/db5/Makefile,v 1.19 2013/02/07 00:32:18 svnexp Exp $
 
 PORTNAME=	db5
 PORTVERSION=	5.3.21.0
@@ -30,11 +30,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 USE_LDCONFIG=	yes
 PLIST_SUB=	BDBMAJ=${BDBMAJ} BDBVER=${BDBVER}
 
-.if !defined(NOPORTDOCS)
-INSTALL_TARGET+=	install_docs docdir=${DOCSDIR}
-PORTDOCS=		*
-.endif
-
 OPTIONS_DEFINE=	CRYPTO L10N SQL JAVA
 OPTIONS_DEFAULT=CRYPTO
 CRYPTO_DESC=	Cryptography support
@@ -42,6 +37,11 @@ L10N_DESC=	Localization support (EXPERIMENTAL)
 SQL_DESC=	Enable SQL API (EXPERIMENTAL)
 
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
+INSTALL_TARGET+=install_docs docdir=${DOCSDIR}
+PORTDOCS=	*
+.endif
 
 .if ${PORT_OPTIONS:MSQL}
 CONFIGURE_ARGS+=	--enable-sql_codegen --enable-sql
