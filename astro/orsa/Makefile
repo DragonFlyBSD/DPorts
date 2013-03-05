@@ -3,7 +3,7 @@
 # Date created:			Dec 9, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/astro/orsa/Makefile,v 1.48 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: ports/astro/orsa/Makefile,v 1.49 2012/12/30 18:55:36 svnexp Exp $
 #
 
 PORTNAME=	orsa
@@ -19,6 +19,9 @@ LIB_DEPENDS=	gsl.16:${PORTSDIR}/math/gsl \
 		cln.6:${PORTSDIR}/math/cln \
 		fftw.2:${PORTSDIR}/math/fftw \
 		ginac.3:${PORTSDIR}/math/GiNaC
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 USE_GL=		gl
