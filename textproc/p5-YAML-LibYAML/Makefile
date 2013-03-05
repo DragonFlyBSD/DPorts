@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-YAML-LibYAML
-# Date created:		2009-04-28
-# Whom:			TERAMOTO Masahiro <markun@onohara.to>
-#
-# $FreeBSD: ports/textproc/p5-YAML-LibYAML/Makefile,v 1.7 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: TERAMOTO Masahiro <markun@onohara.to>
+# $FreeBSD: ports/textproc/p5-YAML-LibYAML/Makefile,v 1.8 2013/02/16 09:48:13 svnexp Exp $
 
 PORTNAME=	YAML-LibYAML
-PORTVERSION=	0.38
+PORTVERSION=	0.39
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
