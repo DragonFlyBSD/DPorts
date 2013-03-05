@@ -1,8 +1,7 @@
-# $FreeBSD: ports/www/owncloud/Makefile,v 1.13 2013/01/10 03:08:36 svnexp Exp $
+# $FreeBSD: www/owncloud/Makefile 313136 2013-03-01 05:18:42Z kevlo $
 
 PORTNAME=	owncloud
-PORTVERSION=	4.5.5
-PORTREVISION=	1
+PORTVERSION=	4.5.7
 CATEGORIES=	www
 MASTER_SITES=	http://owncloud.org/releases/
 
