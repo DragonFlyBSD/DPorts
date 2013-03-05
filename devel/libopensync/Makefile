@@ -2,7 +2,7 @@
 # Date created:		2005-06-19
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libopensync/Makefile,v 1.24 2012/11/17 05:55:55 svnexp Exp $
+# $FreeBSD: ports/devel/libopensync/Makefile,v 1.25 2013/02/20 16:45:21 svnexp Exp $
 #
 
 PORTNAME=	libopensync
@@ -11,7 +11,7 @@ PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opensync.org/download/releases/${PORTVERSION}/
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A PIM data synchronization framework
 
 BUILD_DEPENDS=	swig1.3:${PORTSDIR}/devel/swig13
