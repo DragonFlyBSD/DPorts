@@ -2,7 +2,7 @@
 # Date created:				19 May 2003
 # Whom:					Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: ports/sysutils/pwg/Makefile,v 1.25 2012/12/30 18:56:25 svnexp Exp $
+# $FreeBSD: sysutils/pwg/Makefile 313088 2013-02-28 10:51:58Z gahr $
 #
 
 PORTNAME=	pwg
@@ -24,7 +24,6 @@ USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-O2||g' -e 's|-lpthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/${CONFIGURE_SCRIPT}
+	@${REINPLACE_CMD} -e 's|-O2||g' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
 .include <bsd.port.mk>
