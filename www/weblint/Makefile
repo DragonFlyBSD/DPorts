@@ -1,9 +1,5 @@
-# New ports collection makefile for:	weblint
-# Date created:		Oct 14, 1995
-# Whom:			pst
-#
-# $FreeBSD: ports/www/weblint/Makefile,v 1.19 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: pst
+# $FreeBSD: ports/www/weblint/Makefile,v 1.20 2013/01/26 16:56:14 svnexp Exp $
 
 PORTNAME=	weblint
 PORTVERSION=	1.020
