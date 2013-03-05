@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bcrypt
-# Date created:				11 Aug 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/security/bcrypt/Makefile,v 1.9 2012/11/17 06:01:01 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: ports/security/bcrypt/Makefile,v 1.10 2013/01/15 13:46:57 svnexp Exp $
 
 PORTNAME=	bcrypt
 PORTVERSION=	1.1
@@ -24,6 +20,10 @@ PORTDOCS=	README
 MAN1=		bcrypt.1
 PLIST_FILES=	bin/bcrypt
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -E 's/^(CC|CFLAGS|LDFLAGS|PREFIX)\ /\1?/' \
 		${WRKSRC}/Makefile
@@ -32,7 +32,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
 .endif
