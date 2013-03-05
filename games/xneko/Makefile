@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xneko
-# Date created:		22 December 1995
-# Whom:			markm
-#
-# $FreeBSD: ports/games/xneko/Makefile,v 1.25 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: markm
+# $FreeBSD: ports/games/xneko/Makefile,v 1.26 2013/01/26 16:56:10 svnexp Exp $
 
 PORTNAME=	xneko
 PORTVERSION=	1.0
