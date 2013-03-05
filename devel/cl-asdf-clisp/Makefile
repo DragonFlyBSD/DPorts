@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	cl-asdf-clisp
-# Date created:				10 May 2003
-# Whom:					Henrik Motakef <henrik.motakef@web.de>
-#
-# $FreeBSD: ports/devel/cl-asdf-clisp/Makefile,v 1.13 2012/11/17 05:55:37 svnexp Exp $
+# Created by: Henrik Motakef <henrik.motakef@web.de>
+# $FreeBSD: ports/devel/cl-asdf-clisp/Makefile,v 1.14 2013/02/18 14:39:08 svnexp Exp $
 
 PORTNAME=	asdf
 PORTVERSION=	2.017
