@@ -1,13 +1,9 @@
-# New ports collection makefile for:	pdfedit
-# Date created:				2007-12-20
-# Whom:					alepulver
-#
-# $FreeBSD: ports/editors/pdfedit/Makefile,v 1.17 2012/11/17 05:57:17 svnexp Exp $
-#
+# Created by: alepulver
+# $FreeBSD: ports/editors/pdfedit/Makefile,v 1.19 2013/01/31 14:01:27 svnexp Exp $
 
 PORTNAME=	pdfedit
 PORTVERSION=	0.4.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	SF
 
@@ -15,8 +11,11 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free editor for manipulating PDF documents (QT3 GUI and CLI)
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
-LIB_DEPENDS=	boost_filesystem.4:${PORTSDIR}/devel/boost-libs \
+LIB_DEPENDS=	boost_filesystem:${PORTSDIR}/devel/boost-libs \
 		t1.5:${PORTSDIR}/devel/t1lib
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE.GPL
