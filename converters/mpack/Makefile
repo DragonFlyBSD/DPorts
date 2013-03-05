@@ -1,9 +1,5 @@
-# New ports collection makefile for:    mpack
-# Date created:         1 May 1995
-# Whom:                 ache
-#
-# $FreeBSD: ports/converters/mpack/Makefile,v 1.24 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: ports/converters/mpack/Makefile,v 1.25 2013/01/26 16:56:08 svnexp Exp $
 
 PORTNAME=	mpack
 PORTVERSION=	1.6
