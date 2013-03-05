@@ -1,12 +1,8 @@
-# New ports collection makefile for:	add
-# Date created:				20 August 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/math/add/Makefile,v 1.15 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: math/add/Makefile 313118 2013-02-28 17:19:30Z culot $
 
 PORTNAME=	add
-PORTVERSION=	20110306
+PORTVERSION=	20130226
 CATEGORIES=	math
 MASTER_SITES=	ftp://dickey.his.com/add/
 EXTRACT_SUFX=	.tgz
