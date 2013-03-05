@@ -1,10 +1,11 @@
 # Created by: Alexander Novitsky <alecn2002@yandex.ru>
-# $FreeBSD: ports/x11-toolkits/fox16/Makefile,v 1.47 2012/11/27 11:19:30 svnexp Exp $
+# $FreeBSD: ports/x11-toolkits/fox16/Makefile,v 1.48 2013/02/25 08:43:43 svnexp Exp $
 
 PORTNAME=	fox
 PORTVERSION=	${MAJORVER}.${SHVER}
 CATEGORIES=	x11-toolkits
-MASTER_SITES=	ftp://ftp.fox-toolkit.org/pub/
+MASTER_SITES=	ftp://ftp.fox-toolkit.org/pub/ \
+    		http://ftp.fox-toolkit.org/pub/
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Fast and extensive C++ GUI toolkit -- ver.1.6
