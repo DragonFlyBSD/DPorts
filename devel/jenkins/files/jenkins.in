@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/devel/jenkins/files/jenkins.in,v 1.5 2012/11/17 05:55:51 svnexp Exp $
+# $FreeBSD: devel/jenkins/files/jenkins.in 304673 2012-09-22 13:24:33Z lwhsu $
 #
 # PROVIDE: jenkins
 # REQUIRE: LOGIN
