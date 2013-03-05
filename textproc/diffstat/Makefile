@@ -1,12 +1,8 @@
-# New ports collection makefile for:	diffstat
-# Date created:		Oct 23, 1999
-# Whom:			Trevor Johnson
-#
-# $FreeBSD: ports/textproc/diffstat/Makefile,v 1.35 2012/11/17 06:01:54 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/textproc/diffstat/Makefile,v 1.37 2013/02/12 16:45:00 svnexp Exp $
 
 PORTNAME=	diffstat
-PORTVERSION=	1.55
+PORTVERSION=	1.56
 CATEGORIES=	textproc devel
 MASTER_SITES=	ftp://invisible-island.net/${PORTNAME}/
 EXTRACT_SUFX=	.tgz
