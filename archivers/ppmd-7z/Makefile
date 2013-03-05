@@ -2,7 +2,7 @@
 # Date created:		1 September 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/ppmd-7z/Makefile,v 1.14 2012/11/17 05:54:23 svnexp Exp $
+# $FreeBSD: ports/archivers/ppmd-7z/Makefile,v 1.15 2013/02/07 15:31:56 svnexp Exp $
 #
 
 PORTNAME=	ppmd
@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/p7zip_${DISTVERSION}
 BUILD_WRKSRC=	${WRKSRC}/CPP/7zip/Compress/PPMD_Alone
 MAKEFILE=	makefile
 PLIST_FILES=	bin/${PKGBASE}
-MAKE_ARGS=	PROG=${PORTNAME} CXX="${CXX}" LIB="${PTHREAD_LIBS}"
+MAKE_ARGS=	PROG=${PORTNAME} CXX="${CXX}" LIB="-pthread"
 
 post-patch:
 	@${REINPLACE_CMD} -e '/bool Open(LPCTSTR fileName, DWORD creationDisposition)/,/}/d'\
