@@ -1,15 +1,11 @@
-# New ports collection makefile for:	hexinject
-# Date created:		2010-10-24
-# Whom:			Sofian Brabez <sbrabez@gmail.com>
-#
-# $FreeBSD: ports/net/hexinject/Makefile,v 1.7 2012/11/17 06:00:01 svnexp Exp $
-#
+# Created by: Sofian Brabez <sbrabez@gmail.com>
+# $FreeBSD: ports/net/hexinject/Makefile,v 1.8 2013/02/25 10:46:52 svnexp Exp $
 
 PORTNAME=	hexinject
-PORTVERSION=	1.4.1
+PORTVERSION=	1.5
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
-MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}-${PORTVERSION:C/.1$//}
+MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	HexInject is a very versatile packet injector and sniffer
