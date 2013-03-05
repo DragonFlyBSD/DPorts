@@ -1,12 +1,8 @@
-# Ports collection makefile for:	Astro
-# Date created:			18 May, 2009
-# Whom:				Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/astro/p5-Astro/Makefile,v 1.4 2012/11/17 05:54:25 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: ports/astro/p5-Astro/Makefile,v 1.5 2013/02/19 14:11:44 svnexp Exp $
 
 PORTNAME=	Astro
-PORTVERSION=	0.74
+PORTVERSION=	0.75
 CATEGORIES=	astro perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
