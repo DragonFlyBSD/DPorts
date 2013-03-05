@@ -2,7 +2,7 @@
 # Date created:		26 March 2003
 # Whom:			Kevin Lo <kevlo@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/synergy/Makefile,v 1.27 2012/11/17 06:01:47 svnexp Exp $
+# $FreeBSD: sysutils/synergy/Makefile 313088 2013-02-28 10:51:58Z gahr $
 #
 
 PORTNAME=	synergy
@@ -16,8 +16,6 @@ COMMENT=	Mouse and keyboard sharing utility
 
 USE_CMAKE=	yes
 USE_XORG=	ice xtst x11 sm
-MAKE_ENV+=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
 CFLAGS+=	-L${LOCALBASE}/lib -I${LOCALBASE}/include
 
