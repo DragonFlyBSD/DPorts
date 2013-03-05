@@ -2,17 +2,17 @@
 # Date created:		3 Jul 2007
 # Whom:                	Yinghong.Liu <liu_yinghong@yahoo.com.cn>
 #
-# $FreeBSD: ports/multimedia/gmimms/Makefile,v 1.8 2012/11/17 05:59:49 svnexp Exp $
+# $FreeBSD: ports/multimedia/gmimms/Makefile,v 1.10 2013/01/23 15:05:36 svnexp Exp $
 #
 
 PORTNAME=	gmimms
 DISTVERSION=	0.0.9
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	multimedia net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	liu_yinghong@yahoo.com.cn
-COMMENT=	A frontend to MiMMS (Multimedia Stream ripper)
+COMMENT=	Frontend to MiMMS (Multimedia Stream ripper)
 
 RUN_DEPENDS=	mimms:${PORTSDIR}/multimedia/mimms
 
@@ -27,10 +27,10 @@ PLIST_FILES=	bin/gmimms
 PORTDOCS=	AUTHORS ChangeLog COPYING INSTALL NEWS README
 
 DESKTOP_ENTRIES=	"GIMMS" \
-			"A GTK+ frontend for MiMMS" \
+			"Multimedia Stream ripper" \
 			"" \
 			"gmimms" \
-			"Application;GTK;AudioVideo;Network;" \
+			"GTK;AudioVideo;Network;" \
 			"false"
 
 post-install:
