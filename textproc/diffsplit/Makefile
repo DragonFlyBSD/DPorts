@@ -1,9 +1,5 @@
-# New ports collection makefile for:	diffsplit
-# Date created:				2002-10-10
-# Whom:					trevor
-#
-# $FreeBSD: ports/textproc/diffsplit/Makefile,v 1.11 2012/12/06 16:41:50 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/textproc/diffsplit/Makefile,v 1.12 2013/01/27 06:41:42 svnexp Exp $
 
 PORTNAME=	diffsplit
 PORTVERSION=	1.0
