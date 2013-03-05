@@ -3,7 +3,7 @@
 # Date Created:			 	24 December 2001
 # Whom:					Paul Marquis <pmarquis@pobox.com>
 #
-# $FreeBSD: ports/devel/kprof/Makefile,v 1.23 2012/12/30 18:55:48 svnexp Exp $
+# $FreeBSD: ports/devel/kprof/Makefile,v 1.24 2013/02/14 10:22:09 svnexp Exp $
 #
 
 PORTNAME=	kprof
@@ -19,7 +19,7 @@ DEPRECATED=	Depends on QT3; unmaintained
 EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
-USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	KDB2HTML=${PREFIX}/bin/kdb2html
 USE_GMAKE=	yes
 MAKE_ENV=	${CONFIGURE_ENV}
