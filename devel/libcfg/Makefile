@@ -1,9 +1,5 @@
-# ports collection makefile for:	libcfg
-# Date created:				30 April 2007
-# Whom:					Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libcfg/Makefile,v 1.10 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: ports/devel/libcfg/Makefile,v 1.11 2013/01/12 13:02:13 svnexp Exp $
 
 PORTNAME=	libcfg
 PORTVERSION=	0.6.2
@@ -12,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://platon.sk/upload/_projects/00003/
 DISTNAME=	${PORTNAME}+-${DISTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Library for command line and configuration file parsing
 
 LICENSE=	GPLv2
