@@ -3,7 +3,7 @@
 # Who:					Greg 'groggy' Lehey <grog@FreeBSD.org>
 # Whom: is grammatically incorrect in this context.
 #
-# $FreeBSD: ports/devel/ptmalloc/Makefile,v 1.14 2012/11/17 05:56:43 svnexp Exp $
+# $FreeBSD: ports/devel/ptmalloc/Makefile,v 1.15 2013/02/14 10:22:19 svnexp Exp $
 
 PORTNAME=	ptmalloc
 PORTVERSION=	3.0
@@ -23,10 +23,6 @@ ALL_TARGET=	posix
 
 INCDIR=	include/${PORTNAME}
 PLIST_SUB=	INCDIR=${INCDIR}
-
-post-patch:
-	@${REINPLACE_CMD} -e 's+-pthread+${PTHREAD_LIBS}+g ;'   \
-		${WRKSRC}/Makefile
 
 do-install:	all
 	${MKDIR} ${PREFIX}/${INCDIR}
