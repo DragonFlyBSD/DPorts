@@ -1,9 +1,5 @@
-# New ports collection makefile for:	swm
-# Date created:				2000-12-16
-# Whom:					trevor
-#
-# $FreeBSD: ports/x11-wm/swm/Makefile,v 1.25 2012/11/17 06:03:43 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/x11-wm/swm/Makefile,v 1.26 2013/01/27 06:41:43 svnexp Exp $
 
 PORTNAME=	swm
 PORTVERSION=	1.3.4c
