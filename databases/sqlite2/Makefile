@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	sqlite
-# Date created:			Feb 21, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/sqlite2/Makefile,v 1.51 2012/11/17 05:55:25 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: ports/databases/sqlite2/Makefile,v 1.52 2013/02/12 12:57:56 svnexp Exp $
 
 PORTNAME=	sqlite
 PORTVERSION=	2.8.17
@@ -85,7 +80,7 @@ post-install:
 	@(cd ${WRKSRC} && ${GMAKE} install-tcl)
 	${INSTALL_DATA} ${FILESDIR}/pkgIndex.tcl ${PREFIX}/lib/sqlite/
 .endif
-.if ${PORT_OPTIONS:MTCL}
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${DOCSDIR}
 .endif
