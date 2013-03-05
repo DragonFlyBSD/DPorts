@@ -2,7 +2,7 @@
 # Date created:        06 January 2001
 # Whom:                George Reid <greid@ukug.uk.freebsd.org>
 #
-# $FreeBSD: ports/dns/dnrd/Makefile,v 1.33 2012/11/17 05:57:08 svnexp Exp $
+# $FreeBSD: ports/dns/dnrd/Makefile,v 1.34 2013/02/07 14:28:41 svnexp Exp $
 #
 
 PORTNAME=		dnrd
@@ -16,7 +16,6 @@ COMMENT=		A proxy DNS daemon
 USE_GMAKE=		yes
 USE_RC_SUBR=		${PORTNAME}
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV=		PTHREAD_CFLAGS=${PTHREAD_CFLAGS} PTHREAD_LIBS=${PTHREAD_LIBS}
 
 MAN8=		dnrd.8
 DOCS=		AUTHORS COPYING ChangeLog INSTALL NEWS README
