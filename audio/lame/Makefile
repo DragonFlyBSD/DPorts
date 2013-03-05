@@ -2,11 +2,12 @@
 # Date created:        11 January 1998
 # Whom:                yoshiaki Uchikawa
 #
-# $FreeBSD: ports/audio/lame/Makefile,v 1.60 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: ports/audio/lame/Makefile,v 1.61 2013/02/10 23:36:39 svnexp Exp $
 #
 
 PORTNAME=	lame
 PORTVERSION=	3.99.5
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/3.99
 
@@ -17,6 +18,7 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+USE_ICONV=	yes
 MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--enable-nasm --enable-mp3rtp --disable-gtktest
 
