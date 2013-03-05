@@ -1,12 +1,7 @@
-# New ports collection makefile for:	xmag
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xmag/Makefile,v 1.6 2012/11/17 06:03:22 svnexp Exp $
-#
+# $FreeBSD: ports/x11/xmag/Makefile,v 1.7 2013/02/14 00:20:31 svnexp Exp $
 
 PORTNAME=	xmag
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.5
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -16,6 +11,8 @@ LICENSE=	MIT
 
 XORG_CAT=	app
 USE_XORG=	xt xaw
+
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
 
 MAN1=		xmag.1
 
