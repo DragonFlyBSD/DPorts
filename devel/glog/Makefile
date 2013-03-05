@@ -1,20 +1,15 @@
-# New ports collection makefile for:	google-glog
-# Date created:			        Oct 14, 2008
-# Whom:				        Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/glog/Makefile,v 1.12 2013/01/10 22:43:08 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: ports/devel/glog/Makefile,v 1.13 2013/02/12 12:15:26 svnexp Exp $
 
 PORTNAME=	glog
-PORTVERSION=	0.3.1
-PORTREVISION=	2
+PORTVERSION=	0.3.2
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	A library of C++ classes for flexible logging
 
-LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
+LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 		gflags:${PORTSDIR}/devel/gflags
 
 GNU_CONFIGURE=	yes
