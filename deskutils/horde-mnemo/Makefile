@@ -2,11 +2,11 @@
 # Date created:			  Sun May 19, 2002
 # Whom:				  Thierry Thomas (<thierry@pompo.net>)
 #
-# $FreeBSD: ports/deskutils/horde-mnemo/Makefile,v 1.51 2013/01/10 18:34:39 svnexp Exp $
+# $FreeBSD: ports/deskutils/horde-mnemo/Makefile,v 1.52 2013/02/12 17:38:58 svnexp Exp $
 #
 
 PORTNAME=	mnemo
-PORTVERSION=	4.0.2
+PORTVERSION=	4.0.3
 CATEGORIES=	deskutils www pear
 PKGNAMEPREFIX=	horde-
 
