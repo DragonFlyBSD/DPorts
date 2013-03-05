@@ -2,7 +2,7 @@
 # Date created:				16 December 2004
 # Whom:					Raphael Langerhorst <raphael-langerhorst@gmx.at>
 #
-# $FreeBSD: ports/science/gsystem/Makefile,v 1.14 2012/11/17 06:00:57 svnexp Exp $
+# $FreeBSD: ports/science/gsystem/Makefile,v 1.15 2012/12/30 18:56:21 svnexp Exp $
 #
 
 PORTNAME=	gsystem
@@ -16,6 +16,9 @@ MAINTAINER=	raphael-langerhorst@gmx.at
 COMMENT=	A multi-user virtual reality evolution and life simulation framework
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_BZIP2=	yes
 
