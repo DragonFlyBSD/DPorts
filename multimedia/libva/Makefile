@@ -1,8 +1,8 @@
-# $FreeBSD: ports/multimedia/libva/Makefile,v 1.13 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: ports/multimedia/libva/Makefile,v 1.14 2013/02/20 22:27:06 svnexp Exp $
 
 PORTNAME=	libva
 PORTVERSION=	1.1.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://cgit.freedesktop.org/${PORTNAME}/snapshot/
 
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l
 LIB_DEPENDS=	drm:${PORTSDIR}/graphics/libdrm
 
 USE_BZIP2=	yes
-USE_XORG=	pciaccess xext xfixes
+USE_XORG=	glproto pciaccess xext xfixes 
 USE_GL=		gl
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtoolize
 ACLOCAL_ARGS=	-I.
