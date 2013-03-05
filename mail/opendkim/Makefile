@@ -1,8 +1,8 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: ports/mail/opendkim/Makefile,v 1.20 2013/01/07 19:44:35 svnexp Exp $
+# $FreeBSD: mail/opendkim/Makefile 313038 2013-02-27 08:42:44Z beech $
 
 PORTNAME=		opendkim
-PORTVERSION=		2.7.4
+PORTVERSION=		2.8.0
 CATEGORIES=		mail security
 MASTER_SITES=		SF
 MASTER_SITE_SUBDIR=	${PORTNAME} \
@@ -108,7 +108,7 @@ CONFIGURE_ARGS+=	--with-db-lib=c
 CONFIGURE_ARGS+=	--with-db-incdir=${BDB_INCLUDE_DIR} \
 			--with-db-libdir=${BDB_LIB_DIR} \
 			--with-db-lib=${BDB_LIB_NAME}
-USE_BDB=		41+
+USE_BDB=		40+
 . endif
 .endif
 .if ${PORT_OPTIONS:MUNBOUND}
@@ -152,6 +152,17 @@ PLIST_SUB+=		LUA=""
 USE_LUA=		5.1
 .else
 PLIST_SUB+=		LUA="@comment "
+.endif
+
+pre-configure:
+	${REINPLACE_CMD} -e '/PKG_CONFIG/s/lua5/lua-5/' \
+	${WRKSRC}/configure
+
+post-patch:
+.if ${PORT_OPTIONS:MLCOV}
+	${CP} ${FILESDIR}/lcov-helper.sh ${WRKSRC}/libopendkim/tests/
+	${CP} ${FILESDIR}/lcov-helper.sh ${WRKSRC}/opendkim/tests/
+	${FIND} ${WRKSRC} -type f -name \*-helper.sh -exec ${CHMOD} 755 {} +
 .endif
 
 post-install:
