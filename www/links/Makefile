@@ -2,11 +2,12 @@
 # Date created:		21 January 2000
 # Whom:			Michael Vasilenko <acid@stu.cn.ua>
 #
-# $FreeBSD: ports/www/links/Makefile,v 1.85 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: ports/www/links/Makefile,v 1.87 2013/01/23 15:05:38 svnexp Exp $
 #
 
 PORTNAME=	links
 DISTVERSION=	2.7
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	http://links.twibright.com/download/ LOCAL/bf
@@ -84,9 +85,9 @@ USE_XORG=	x11 xproto
 CONFIGURE_ARGS+=	--with-x
 DESKTOP_ENTRIES="links" \
 		"Lynx-like text WWW browser" \
-		"links" \
+		"${PREFIX}/share/pixmaps/links.xpm" \
 		"links -g" \
-		"Application;Network;WebBrowser;" \
+		"Network;WebBrowser;" \
 		false
 PLIST_FILES+=	share/pixmaps/links.xpm
 .else
