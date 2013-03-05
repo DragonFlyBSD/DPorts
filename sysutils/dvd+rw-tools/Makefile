@@ -2,7 +2,7 @@
 # Date created:        2003-6-15
 # Whom:                chuck@pkix.net
 #
-# $FreeBSD: ports/sysutils/dvd+rw-tools/Makefile,v 1.29 2012/12/18 08:19:24 svnexp Exp $
+# $FreeBSD: sysutils/dvd+rw-tools/Makefile 313088 2013-02-28 10:51:58Z gahr $
 
 PORTNAME=	dvd+rw-tools
 PORTVERSION=	7.1
@@ -29,12 +29,7 @@ PLIST_FILES=	${BIN_FILES:S|^|bin/|}
 PORTDOCS=	index.html
 
 post-patch:
-	@${REINPLACE_CMD} -E \
-		-e 's/-D_THREAS_SAFE/-D_THREAD_SAFE/' \
-		-e 's/-D_THREAD_SAFE/-D_THREAD_SAFE ${PTHREAD_CFLAGS}/' \
-		-e 's/-pthread/${PTHREAD_LIBS}/' \
-		-e 's/-O2//' \
-		${WRKSRC}/Makefile.m4
+	@${REINPLACE_CMD} -e 's/-O2//' ${WRKSRC}/Makefile.m4
 
 do-install:
 .for i in ${BIN_FILES}
