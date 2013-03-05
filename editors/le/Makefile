@@ -1,12 +1,8 @@
-# New ports collection makefile for:	le
-# Date created:				16 October 1997
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/editors/le/Makefile,v 1.50 2012/11/17 05:57:15 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: ports/editors/le/Makefile,v 1.51 2013/02/05 01:53:31 svnexp Exp $
 
 PORTNAME=	le
-PORTVERSION=	1.14.7
+PORTVERSION=	1.14.8
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.yar.ru/pub/source/le/%SUBDIR%/ \
 		http://mirrors.rit.edu/zi/
