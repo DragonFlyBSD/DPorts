@@ -2,13 +2,16 @@
 # Date created:         3 October 2002
 # Whom:                 Eugeney Ryzhyk
 #
-# $FreeBSD: ports/x11-themes/qt-bluecurve-theme/Makefile,v 1.22 2012/11/17 06:03:33 svnexp Exp $
+# $FreeBSD: ports/x11-themes/qt-bluecurve-theme/Makefile,v 1.23 2012/12/30 18:56:35 svnexp Exp $
 #
 
 PORTNAME=	qt-bluecurve-theme
 COMMENT=	The Bluecurve QT theme
 
 MASTERDIR=	${.CURDIR}/../bluecurve-themes
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 BUILD_WRKSRC=	${WRKSRC}/art/qt/Bluecurve
