@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fatback
-# Date created:				18 Jun 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/sysutils/fatback/Makefile,v 1.6 2012/11/17 06:01:30 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: ports/sysutils/fatback/Makefile,v 1.7 2013/01/15 13:46:58 svnexp Exp $
 
 PORTNAME=	fatback
 PORTVERSION=	1.3
@@ -23,12 +19,16 @@ EXTRACT_AFTER_ARGS+=	|${TAR} -xpf -	\
 	--exclude 'getopt*'	\
 	--exclude 'set[yl].c'
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
 	${INSTALL_DATA} ${WRKSRC}/fatback-manual.info ${PREFIX}/${INFO_PATH}
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in fatback-manual.texi texinfo.tex ChangeLog AUTHORS
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
