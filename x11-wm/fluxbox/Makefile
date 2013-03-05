@@ -1,8 +1,8 @@
 # Created by: spn
-# $FreeBSD: ports/x11-wm/fluxbox/Makefile,v 1.68 2013/01/02 15:44:34 svnexp Exp $
+# $FreeBSD: ports/x11-wm/fluxbox/Makefile,v 1.69 2013/02/15 09:31:41 svnexp Exp $
 
 PORTNAME=	fluxbox
-PORTVERSION=	1.3.3
+PORTVERSION=	1.3.5
 CATEGORIES=	x11-wm
 MASTER_SITES=	SF
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
