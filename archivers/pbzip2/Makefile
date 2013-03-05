@@ -3,7 +3,7 @@
 # Date created:			Dec 7, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/archivers/pbzip2/Makefile,v 1.28 2012/11/17 05:54:22 svnexp Exp $
+# $FreeBSD: ports/archivers/pbzip2/Makefile,v 1.29 2013/02/07 15:31:56 svnexp Exp $
 #
 
 PORTNAME=	pbzip2
@@ -28,8 +28,7 @@ PLIST_FILES=	bin/pbzip2 bin/pbunzip2
 
 post-patch:
 	@${REINPLACE_CMD} \
-		-e 's,-pthread -lpthread,${PTHREAD_LIBS},g; \
-		s,-O2,${CXXFLAGS},; \
+		-e 's,-O2,${CXXFLAGS},; \
 		s,^CC,#CC,; \
 		s,CC,CXX,' ${WRKSRC}/Makefile
 
