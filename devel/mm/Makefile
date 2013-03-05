@@ -1,9 +1,5 @@
-# New ports collection makefile for:   mm
-# Date Created:			14 March 1999
-# Whom:				Ralf S. Engelschall
-#
-# $FreeBSD: ports/devel/mm/Makefile,v 1.42 2012/11/17 05:56:00 svnexp Exp $
-#
+# Created by: Ralf S. Engelschall
+# $FreeBSD: ports/devel/mm/Makefile,v 1.43 2013/01/12 13:02:14 svnexp Exp $
 
 PORTNAME=	mm
 PORTVERSION=	1.4.2
@@ -11,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_OSSP}
 MASTER_SITE_SUBDIR=	lib/${PORTNAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Shared memory allocation library for pre-forked process models
 
 USE_LDCONFIG=	yes
