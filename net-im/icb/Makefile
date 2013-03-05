@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  icb
-# Date created:			  Tue Feb 03, 1998
-# Whom:				  David O'Brien (obrien@NUXI.ucdavis.edu)
-#
-# $FreeBSD: ports/net-im/icb/Makefile,v 1.20 2012/11/17 06:00:26 svnexp Exp $
-#
+# Created by: David O'Brien (obrien@NUXI.ucdavis.edu)
+# $FreeBSD: ports/net-im/icb/Makefile,v 1.21 2013/02/07 20:52:46 svnexp Exp $
 
 PORTNAME=	icb
 PORTVERSION=	5.1.0
@@ -18,6 +13,7 @@ COMMENT=	Internet CB - a mostly-defunct chat client
 
 USE_TK_BUILD=	yes
 USE_TK=		yes
+USE_READLINE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-tclinclude=${TCL_INCLUDEDIR} \
 		--with-tcllib=${LOCALBASE}/lib
@@ -27,11 +23,13 @@ PORTEXAMPLES=	bartender confuse echofunctions sample.icbrc
 PLIST_FILES=	bin/icb %%DATADIR%%/icbserverdb
 PLIST_DIRS=	%%DATADIR%%
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/icb/icb ${PREFIX}/bin
 	@${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/icbserverdb ${DATADIR}
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 .for f in ${PORTEXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/contrib/${f} ${EXAMPLESDIR}
