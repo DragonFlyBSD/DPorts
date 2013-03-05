@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/sysutils/tmux/Makefile,v 1.40 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: ports/sysutils/tmux/Makefile,v 1.41 2012/12/28 00:28:46 svnexp Exp $
 
 PORTNAME=	tmux
 PORTVERSION=	1.7
@@ -33,18 +33,22 @@ BACKSPACE_DESC=	Build with tty/keys patch
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBEVENT2}
-LIB_DEPENDS=	event-2.0:${PORTSDIR}/devel/libevent2
 CONFIGURE_ENV+=	LIBEVENT_CFLAGS="-I${LOCALBASE}/include/event2/compat" \
 		LIBEVENT_LIBS="-L${LOCALBASE}/lib/event2 -levent"
 . if ${PORT_OPTIONS:MLIBEVENT_STATIC}
+BUILD_DEPENDS+=	${LOCALBASE}/lib/event2/libevent.a:${PORTSDIR}/devel/libevent2
 LESTATIC=	${LOCALBASE}/lib/event2/libevent.a
+. else
+LIB_DEPENDS=	event-2.0:${PORTSDIR}/devel/libevent2
 . endif
 .else
-LIB_DEPENDS=	event-1.4:${PORTSDIR}/devel/libevent
 CONFIGURE_ENV+=	LIBEVENT_CFLAGS="-I${LOCALBASE}/include" \
 		LIBEVENT_LIBS="-L${LOCALBASE}/lib -levent"
-. if defined(WITH_LIBEVENT_STATIC)
+. if ${PORT_OPTIONS:MLIBEVENT_STATIC}
+BUILD_DEPENDS+=	${LOCALBASE}/lib/libevent.a:${PORTSDIR}/devel/libevent
 LESTATIC=	${LOCALBASE}/lib/libevent.a
+. else
+LIB_DEPENDS=	event-1.4:${PORTSDIR}/devel/libevent
 . endif
 .endif
 
