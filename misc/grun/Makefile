@@ -1,9 +1,5 @@
-# New ports collection makefile for:	grun
-# Date created:			Sun Jul 18 1999
-# Whom:				domi@saargate.de
-#
-# $FreeBSD: ports/misc/grun/Makefile,v 1.15 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: domi@saargate.de
+# $FreeBSD: ports/misc/grun/Makefile,v 1.16 2012/12/29 04:51:46 svnexp Exp $
 
 PORTNAME=	grun
 PORTVERSION=	0.8.1
@@ -11,7 +7,7 @@ PORTREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://www.brettnacher.org/users/dominik/FreeBSD/
 
-MAINTAINER=	domi@saargate.de
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gtk-launcher similar to the Windows(tm) "Run..." dialog
 
 USE_GNOME=	gtk12
