@@ -1,5 +1,5 @@
 # Created by: Wen heping<wenheping@gmail.com>
-# $FreeBSD: ports/graphics/geoserver/Makefile,v 1.17 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: ports/graphics/geoserver/Makefile,v 1.18 2013/02/20 16:45:23 svnexp Exp $
 
 PORTNAME=	geoserver
 PORTVERSION=	2.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	graphics geography java
 MASTER_SITES=	SF/${PORTNAME}/GeoServer/${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An Open Source GIS Server
 
 LICENSE=	GPLv2
