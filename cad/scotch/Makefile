@@ -2,7 +2,7 @@
 # Date created:		Thu 2 feb 2006
 # Whom:			thierry@pompo.net
 #
-# $FreeBSD: ports/cad/scotch/Makefile,v 1.17 2012/11/17 05:54:55 svnexp Exp $
+# $FreeBSD: ports/cad/scotch/Makefile,v 1.18 2013/02/08 00:50:51 svnexp Exp $
 #
 
 PORTNAME=	scotch
@@ -55,7 +55,7 @@ PKGMESSAGE=	${WRKSRC}/LICENSE_en.txt
 LIB_DEPENDS+=	mpich.2:${PORTSDIR}/net/mpich2
 
 ALL_TARGET+=	ptscotch
-MAKE_ENV+=	PATH=${PATH}:${LOCALBASE}/mpich2/bin PTHREAD_LIBS=${PTHREAD_LIBS}
+MAKE_ENV+=	PATH=${PATH}:${LOCALBASE}/mpich2/bin
 
 INCS+=		ptscotch.h ptscotchf.h
 LIBS+=		libptesmumps.a libptscotch.a libptscotcherr.a libptscotcherrexit.a	\
@@ -83,7 +83,7 @@ pre-everything::
 .endif
 
 pre-configure:
-	${REINPLACE_CMD} -e 's/-lthread/$(PTHREAD_LIBS)/;s/-lpthread/$(PTHREAD_LIBS)/'	\
+	${REINPLACE_CMD} -e 's/-lthread/-pthread/;s/-lpthread/-pthread/'	\
 		-e 's/CLIBFLAGS	=/CLIBFLAGS	= -fPIC/'	\
 		${WRKSRC}/src/Make.inc/Makefile.inc.${MF}_pc_freebsd
 	${LN} -sf ${WRKSRC}/src/Make.inc/Makefile.inc.${MF}_pc_freebsd	\
