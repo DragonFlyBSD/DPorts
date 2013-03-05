@@ -2,7 +2,7 @@
 # Date created:				12 April 2009
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/security/libssh/Makefile,v 1.20 2012/11/17 06:01:07 svnexp Exp $
+# $FreeBSD: ports/security/libssh/Makefile,v 1.21 2013/02/19 14:35:27 svnexp Exp $
 #
 
 PORTNAME=	libssh
@@ -11,7 +11,7 @@ CATEGORIES=	security devel
 MASTER_SITES=	http://www.libssh.org/files/0.5/ \
 		LOCAL/avl
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	A library implementing the SSH1 and SSH2 protocol
 
 OPTIONS=	GCRYPT	"Build with libgcrypt"		off \
