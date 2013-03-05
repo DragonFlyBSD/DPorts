@@ -2,12 +2,12 @@
 # Date created:				2 December 2003
 # Whom:					Nosov Artem <chip-set@mail.ru>
 #
-# $FreeBSD: ports/ftp/wput/Makefile,v 1.26 2012/11/17 05:57:31 svnexp Exp $
+# $FreeBSD: ports/ftp/wput/Makefile,v 1.27 2013/02/05 16:54:22 svnexp Exp $
 #
 
 PORTNAME=	wput
 PORTVERSION=	0.6.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	ftp
 MASTER_SITES=	SF
 EXTRACT_SUFX=	.tgz
@@ -32,7 +32,7 @@ MAN1=		wdel.1 wput.1
 .include <bsd.port.pre.mk>
 
 .if !defined(WITHOUT_TLS)
-LIB_DEPENDS+=	gnutls.47:${PORTSDIR}/security/gnutls
+LIB_DEPENDS+=	gnutls.26:${PORTSDIR}/security/gnutls
 CONFIGURE_ARGS+=	--with-ssl
 .else
 CONFIGURE_ARGS+=	--without-ssl
