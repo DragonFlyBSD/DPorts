@@ -2,7 +2,7 @@
 # Date created:		28 March 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/stfl/Makefile,v 1.15 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: ports/devel/stfl/Makefile,v 1.16 2013/02/14 10:22:23 svnexp Exp $
 #
 
 PORTNAME=	stfl
@@ -32,7 +32,7 @@ MAKE_ENV=	LDLIBS="${LDLIBS}"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|\.a|.so|g;/ranlib/d;\
-	s|ar qc|$${CC} $${CFLAGS} ${PTHREAD_LIBS} $${LDLIBS} -shared -fPIC -o|;\
+	s|ar qc|$${CC} $${CFLAGS} $${LDLIBS} -pthread -shared -fPIC -o|;\
 	s|sed -r|sed -E|;s|-Os||;/gcc/d;/-MM/s|-I.|$${CFLAGS}|'\
 		${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|alloca.h|stdlib.h|' ${WRKSRC}/widgets/*.c
