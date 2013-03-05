@@ -1,10 +1,10 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/deskutils/nagaina/Makefile,v 1.12 2012/12/10 19:23:59 svnexp Exp $
+# $FreeBSD: ports/deskutils/nagaina/Makefile,v 1.14 2013/01/23 15:05:32 svnexp Exp $
 
 PORTNAME=	nagaina
 PORTVERSION=	0.1.2
 DISTVERSIONSUFFIX=	-sources
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	deskutils
 MASTER_SITES=	GOOGLE_CODE
 
@@ -37,9 +37,9 @@ PLIST_FILES=	bin/${PORTNAME} share/pixmaps/${PORTNAME}.png
 
 DESKTOP_ENTRIES=	"Nagaina" \
 			"${COMMENT}" \
+			"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
 			"${PORTNAME}" \
-			"${PORTNAME}" \
-			"Qt;KDE;Office;Utility;" \
+			"Qt;Office;Utility;" \
 			"false"
 
 .include <bsd.port.options.mk>
