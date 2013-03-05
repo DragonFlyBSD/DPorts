@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rmap
-# Date created:				29 Mar 2000
-# Whom:					Trevor Johnson
-#
-# $FreeBSD: ports/astro/rmap/Makefile,v 1.19 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/astro/rmap/Makefile,v 1.20 2013/01/27 06:41:36 svnexp Exp $
 
 PORTNAME=	rmap
 PORTVERSION=	1.2
