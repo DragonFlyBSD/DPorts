@@ -1,12 +1,12 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/net-mgmt/nfdump/Makefile,v 1.36 2012/12/02 02:51:52 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/nfdump/Makefile,v 1.37 2013/01/09 20:05:03 svnexp Exp $
 
 PORTNAME=	nfdump
 PORTVERSION=	1.6.8
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/${PORTNAME}/stable/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Command-line tools to collect and process NetFlow data
 
 LICENSE=	BSD
