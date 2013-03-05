@@ -2,11 +2,12 @@
 # Date created:				Tue Sep  2 23:34:32 BST 2003
 # Whom:				Alex Trull <freebsd.alex@trull.org>
 #
-# $FreeBSD: ports/games/scummvm/Makefile,v 1.70 2012/11/17 05:57:52 svnexp Exp $
+# $FreeBSD: ports/games/scummvm/Makefile,v 1.72 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	scummvm
 DISTVERSION=	1.5.0
+PORTREVISION=	1
 CATEGORIES=	games emulators
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${DISTVERSION}
@@ -51,7 +52,7 @@ DESKTOP_ENTRIES="ScummVM" \
 		"ScummVM - Run classic adventure games" \
 		"${DATADIR}/scummvm.svg" \
 		"scummvm" \
-		"Application;Game;" \
+		"Game;AdventureGame;" \
 		false
 
 PLIST_FILES=	bin/scummvm \
