@@ -1,13 +1,8 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-aliased
-# Date created:			Jul 29, 2006
-# Whom:	      			ijliao
-#
-# $FreeBSD: ports/devel/p5-aliased/Makefile,v 1.7 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/devel/p5-aliased/Makefile,v 1.8 2013/02/19 13:49:32 svnexp Exp $
 
 PORTNAME=	aliased
-PORTVERSION=	0.30
+PORTVERSION=	0.31
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:OVID
