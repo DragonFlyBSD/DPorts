@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/gitolite/Makefile,v 1.13 2013/01/13 20:46:46 svnexp Exp $
+# $FreeBSD: ports/devel/gitolite/Makefile,v 1.14 2013/02/17 20:28:13 svnexp Exp $
 
 PORTNAME=	gitolite
-PORTVERSION=	3.2
+PORTVERSION=	3.3
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://milki.github.com/${PORTNAME}/ \
@@ -59,7 +59,7 @@ do-install:
 	@${LN} -s ${PREFIX}/libexec/gitolite/gitolite ${PREFIX}/bin/gitolite
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	-@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${DOCSDIR}
@@ -67,7 +67,7 @@ post-install:
 
 	@${CAT} ${PKGMESSAGE}
 
-.if !defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	README.txt CHANGELOG
 .endif
 
