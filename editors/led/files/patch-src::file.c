@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/editors/led/files/patch-src::file.c,v 1.4 2012/11/17 05:57:15 svnexp Exp $
+$FreeBSD: editors/led/files/patch-src::file.c 300896 2012-07-14 13:54:48Z beat $
 
 --- src/file.c	2002/07/15 11:40:21	1.1
 +++ src/file.c	2002/07/15 11:42:31

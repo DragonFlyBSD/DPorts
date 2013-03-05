@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/editors/led/files/patch-src_color.c,v 1.2 2012/11/17 05:57:15 svnexp Exp $
+$FreeBSD: editors/led/files/patch-src_color.c 300896 2012-07-14 13:54:48Z beat $
 
 --- src/color.c.orig	Mon Aug 23 17:16:34 2004
 +++ src/color.c	Mon Aug 23 17:16:57 2004
