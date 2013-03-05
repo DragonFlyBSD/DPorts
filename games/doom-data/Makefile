@@ -1,18 +1,16 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: ports/games/doom-data/Makefile,v 1.14 2012/12/10 01:26:30 svnexp Exp $
+# $FreeBSD: ports/games/doom-data/Makefile,v 1.15 2013/01/29 23:44:09 svnexp Exp $
 
 PORTNAME=	data
 PORTVERSION=	1.0
 PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.ijs.si/~lesi/distfiles/doom/
-
 PKGNAMEPREFIX=	${DMPKGNAMEPREFIX}
 EXTRACT_SUFX=	.bz2
-DISTFILES=	#
 DIST_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jakub_lach@mailplus.pl
 COMMENT=	Shareware data files for Doom, Doom II, Hexen, Heretic, and Strife
 
 USE_BZIP2=	yes
