@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/apache22/Makefile.modules,v 1.47 2012/11/17 06:02:28 svnexp Exp $
+# $FreeBSD: www/apache22/Makefile.modules 313287 2013-03-02 19:31:49Z ohauer $
 #
 # Note by Clement Laforet: (to generate PLIST_SUB entries for modules)
 #	gsed 's/^\(.*\)mod\(.*\)\.so/%%\MOD\U\2%%\L\1mod\2\.so/' pkg-plist > tmp
@@ -60,16 +60,6 @@ PLIST_SUB+=		WORKER="@comment " EVENT=""
 PLIST_SUB+=		WORKER="@comment " EVENT="@comment "
 .elif ${WITH_MPM} == "itk"
 PLIST_SUB+=		WORKER="@comment " EVENT="@comment "
-EXTRA_PATCHES+=		${PATCHDIR}/mpm-itk-${MPM_ITK_VERSION}
-.  if defined (WITH_ITK_PERDIR_REGEX) && defined (WITH_ITK_LIMITS)
-IGNORE=	Use only one patch option not both (WITH_ITK_PERDIR_REGEX or WITH_ITK_LIMITS)
-.  endif
-.  if defined (WITH_ITK_PERDIR_REGEX)
-EXTRA_PATCHES+=		${PATCHDIR}/mpm-itk-perdir-regex
-.  endif
-.  if defined (WITH_ITK_LIMITS)
-EXTRA_PATCHES+=		${PATCHDIR}/mpm-itk-limits
-.  endif
 .else
 IGNORE=	Unknown MPM: ${WITH_MPM}
 .endif	# MPM prefork
@@ -137,8 +127,7 @@ IGNORE=	AUTH_BASIC need at last one AUTHZ provider
 .endif
 
 .if defined(APR_HAS_THREADS)
-CFLAGS+=	${PTHREAD_CFLAGS}
-LDFLAGS+=	${PTHREAD_LIBS}
+LDFLAGS+=	-pthread
 .else
 .  if exists(${APR_CONFIG}) && ${PORT_OPTIONS:MMEM_CACHE}
 IGNORE=	MEM_CACHE requires APR threads. Please rebuild APR with THREAD support

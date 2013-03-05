@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/apache22/pkg-plist,v 1.103 2012/11/17 06:02:28 svnexp Exp $
+@comment $FreeBSD: www/apache22/pkg-plist 303550 2012-09-02 14:31:58Z ohauer $
 @exec mkdir -p %D/%%ETCDIR%%/extra 2> /dev/null
 @exec mkdir -p %D/%%ETCDIR%%/Includes 2> /dev/null || true
 @exec mkdir -p %D/%%ETCDIR%%/envvars.d 2> /dev/null || true

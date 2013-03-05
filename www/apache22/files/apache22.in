@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/apache22/files/apache22.in,v 1.15 2012/11/18 18:53:02 svnexp Exp $
+# $FreeBSD: www/apache22/files/apache22.in 313287 2013-03-02 19:31:49Z ohauer $
 #
 
 # PROVIDE: apache22
-# REQUIRE: LOGIN cleanvar
+# REQUIRE: LOGIN cleanvar sshd
 # KEYWORD: shutdown
 
 #

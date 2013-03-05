@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/apache22/Makefile.doc,v 1.22 2012/11/17 06:02:28 svnexp Exp $
+# $FreeBSD: www/apache22/Makefile.doc 306878 2012-11-02 18:45:31Z ohauer $
 #
 # Author:				Clement Laforet <clement@FreeBSD.org>
 #

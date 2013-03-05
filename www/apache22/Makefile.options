@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/apache22/Makefile.options,v 1.14 2012/11/17 06:02:28 svnexp Exp $
+# $FreeBSD: www/apache22/Makefile.options 303674 2012-09-04 21:17:06Z ohauer $
 
 # XXX The follwing params are used for special buils,
 #     they will be not converted to an OPTION.
