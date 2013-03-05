@@ -2,12 +2,12 @@
 # Date created:		01 Sep 2008
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/tkdvd/Makefile,v 1.6 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: ports/sysutils/tkdvd/Makefile,v 1.7 2013/01/23 15:05:38 svnexp Exp $
 #
 
 PORTNAME=	tkdvd
 PORTVERSION=	4.0.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://regis.damongeot.free.fr/tkdvd/dl/ \
 		http://mirror.amdmi3.ru/distfiles/
