@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libroxml
-# Date created:         2010-04-16
-# Whom:                 Hung-Yi Chen <gaod@hychen.org>
-#
-# $FreeBSD: ports/textproc/libroxml/Makefile,v 1.6 2012/11/17 06:02:01 svnexp Exp $
-#
+# Created by: Hung-Yi Chen <gaod@hychen.org>
+# $FreeBSD: ports/textproc/libroxml/Makefile,v 1.7 2013/02/07 01:32:55 svnexp Exp $
 
 PORTNAME=	libroxml
-PORTVERSION=	2.2.0
+PORTVERSION=	2.2.1
 CATEGORIES=	textproc
 MASTER_SITES=	GOOGLE_CODE
 
