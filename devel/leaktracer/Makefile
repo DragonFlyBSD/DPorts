@@ -2,7 +2,7 @@
 # Date created:				04 Feb 2004
 # Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
 #
-# $FreeBSD: ports/devel/leaktracer/Makefile,v 1.6 2012/11/17 05:55:52 svnexp Exp $
+# $FreeBSD: ports/devel/leaktracer/Makefile,v 1.7 2013/02/14 10:22:09 svnexp Exp $
 #
 
 PORTNAME=	leaktracer
@@ -18,8 +18,6 @@ COMMENT=	Trace and analyze memory leaks in C++ programs
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_PERL5_RUN=	yes
-MAKE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}"
 PLIST_FILES=	bin/LeakCheck bin/leak-analyze lib/LeakTracer.so
 PORTDOCS=	README README.html
 
