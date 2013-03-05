@@ -1,9 +1,5 @@
-# New ports collection makefile for: jgraph
-# Date created:		6 August 1999
-# Whom:			wolman@cs.washington.edu
-#
-# $FreeBSD: ports/graphics/jgraph/Makefile,v 1.8 2012/11/17 05:58:10 svnexp Exp $
-#
+# Created by: wolman@cs.washington.edu
+# $FreeBSD: ports/graphics/jgraph/Makefile,v 1.9 2013/02/19 11:34:01 svnexp Exp $
 
 PORTNAME=	jgraph
 PORTVERSION=	8.3
@@ -17,10 +13,14 @@ COMMENT=	A program that generates postscript graphs
 NO_LATEST_LINK=	yes
 EXTRACT_CMD=	uncompress
 EXTRACT_BEFORE_ARGS=	-c
-EXTRACT_AFTER_ARGS=	| sh
+EXTRACT_AFTER_ARGS=	| ${SH}
 
 NO_WRKSUBDIR=	yes
 MAN1=		jgraph.1
 MAKEFILE=	makefile
+
+MAKE_ENV+=	DATADIR=${DATADIR}
+
+CFLAGS+=	-Wno-return-type
 
 .include <bsd.port.mk>
