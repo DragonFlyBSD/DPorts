@@ -2,7 +2,7 @@
 # Date created:				Thu 02 Sep 2004 18:00:00 CEST
 # Whom:					Michael Nottebrock <lofi@freebsd.org>
 #
-# $FreeBSD: ports/devel/qsa/Makefile,v 1.24 2012/11/17 05:56:55 svnexp Exp $
+# $FreeBSD: ports/devel/qsa/Makefile,v 1.25 2012/12/30 18:55:53 svnexp Exp $
 #
 
 PORTNAME=	qsa
@@ -18,6 +18,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cross-platform scripting toolkit for Qt applications
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 QT_NONSTANDARD=	yes
