@@ -1,12 +1,8 @@
-# New ports collection makefile for:   osh
-# Date created:        29 December 2000
-# Whom:                George Reid <greid@ukug.uk.freebsd.org>
-#
-# $FreeBSD: ports/shells/osh/Makefile,v 1.34 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by: George Reid <greid@ukug.uk.freebsd.org>
+# $FreeBSD: ports/shells/osh/Makefile,v 1.35 2013/02/03 20:12:28 svnexp Exp $
 
 PORTNAME=	osh
-DISTVERSION=	20120102
+DISTVERSION=	20120604
 CATEGORIES=	shells
 MASTER_SITES=	http://v6shell.org/src/
 
