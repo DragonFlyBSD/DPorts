@@ -1,8 +1,8 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: ports/sysutils/sg3_utils/Makefile,v 1.9 2012/11/17 06:01:45 svnexp Exp $
+# $FreeBSD: ports/sysutils/sg3_utils/Makefile,v 1.10 2013/01/21 03:56:33 svnexp Exp $
 
 PORTNAME=	sg3_utils
-PORTVERSION=	1.34
+PORTVERSION=	1.35
 CATEGORIES=	sysutils
 MASTER_SITES=	http://sg.danny.cz/sg/p/
 EXTRACT_SUFX=	.tgz
@@ -22,6 +22,7 @@ MAN8+=		scsi_start.8
 MAN8+=		scsi_stop.8
 MAN8+=		scsi_temperature.8
 MAN8+=		sg3_utils.8
+MAN8+=		sg_compare_and_write.8
 MAN8+=		sg_decode_sense.8
 MAN8+=		sg_format.8
 MAN8+=		sg_get_config.8
