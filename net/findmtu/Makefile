@@ -1,16 +1,12 @@
-# New ports collection makefile for:	findmtu
-# Date created:		13 July 2004
-# Whom:			janos.mohacsi@bsd.hu
-#
-# $FreeBSD: ports/net/findmtu/Makefile,v 1.3 2012/11/17 06:00:00 svnexp Exp $
-#
+# Created by: janos.mohacsi@bsd.hu
+# $FreeBSD: ports/net/findmtu/Makefile,v 1.4 2013/01/09 20:04:59 svnexp Exp $
 
 PORTNAME=	findmtu
 PORTVERSION=	0.9
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.dia.uniroma3.it/~compunet/tunneldiscovery/findmtu/
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	A tool for performing IPv6 path MTU discovery on *NIX
 
 SUB_FILES=	findmtu
