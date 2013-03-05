@@ -3,7 +3,7 @@
 # Whom:			Stanislav Sedov <stas@FreeBSD.org>
 #
 # $MBSDlabs$
-# $FreeBSD: ports/devel/fga/Makefile,v 1.10 2012/11/17 05:55:42 svnexp Exp $
+# $FreeBSD: ports/devel/fga/Makefile,v 1.11 2013/02/14 10:22:07 svnexp Exp $
 #
 
 PORTNAME=	fga
@@ -17,8 +17,6 @@ COMMENT=	Fast Genetic Algorithm library
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_GMAKE=	yes
-CFLAGS+=	${PTHREAD_CFLAGS}
-LDFLAGS+=	${PTHREAD_LIBS}
 
 EXAMPLES=	graph_gen maxbit tsp tsp_bf
 
