@@ -2,12 +2,12 @@
 # Date created:				11 Oct 1998
 # Whom:					mph
 #
-# $FreeBSD: ports/net-im/climm/Makefile,v 1.89 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: ports/net-im/climm/Makefile,v 1.90 2013/02/05 16:54:24 svnexp Exp $
 #
 
 PORTNAME=	climm
 PORTVERSION=	0.7.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.climm.org/source/ \
 		http://http.bg.climm.org/source/
