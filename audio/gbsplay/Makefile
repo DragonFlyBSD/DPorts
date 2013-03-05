@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/audio/gbsplay/Makefile,v 1.18 2012/11/17 05:54:32 svnexp Exp $
+# $FreeBSD: ports/audio/gbsplay/Makefile,v 1.19 2013/01/15 13:46:52 svnexp Exp $
 
 PORTNAME=	gbsplay
 PORTVERSION=	0.0.8
@@ -27,7 +27,7 @@ MAN1=		gbsplay.1 gbsinfo.1
 MAN5=		gbsplayrc.5
 PORTDOCS=	COPYRIGHT HISTORY README
 
-OPTIONS_DEFINE=	NAS
+OPTIONS_DEFINE=	NAS DOCS
 
 .endif
 
@@ -85,7 +85,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/po/${l}.mo ${PREFIX}/share/locale/${l}/LC_MESSAGES/gbsplay.mo
 .endfor
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
