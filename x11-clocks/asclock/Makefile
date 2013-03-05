@@ -1,9 +1,5 @@
-# New ports collection makefile for:   asclock
-# Date created:        20 June 1997
-# Whom:                Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/x11-clocks/asclock/Makefile,v 1.26 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: ports/x11-clocks/asclock/Makefile,v 1.27 2013/01/26 15:02:46 svnexp Exp $
 
 PORTNAME=	asclock
 PORTVERSION=	1.0
@@ -19,6 +15,8 @@ COMMENT=	Afterstep clock with some language extensions
 
 CONFLICTS=	asclock-gtk-[0-9]* asclock-xlib-[0-9]*
 
+# clang's cpp destroys whitespace, particularly hard tabs in makefiles,
+# which is fatal for imake.
 USE_GCC=	any
 USE_IMAKE=	yes
 USE_XORG=	xpm xext x11
