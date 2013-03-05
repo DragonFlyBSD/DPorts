@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: ports/shells/zsh/Makefile,v 1.147 2012/12/22 02:09:47 svnexp Exp $
+# $FreeBSD: shells/zsh/Makefile 313182 2013-03-02 03:55:25Z eadler $
 
 PORTNAME=	zsh
 PORTVERSION=	5.0.2
@@ -14,7 +14,7 @@ COMMENT=	The Z shell
 LICENSE=	ZSH
 LICENSE_NAME=	ZSH license
 LICENSE_FILE=	${WRKSRC}/LICENCE
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 MAKE_JOBS_UNSAFE=	yes
 
