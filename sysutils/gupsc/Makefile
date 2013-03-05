@@ -2,7 +2,7 @@
 # Date created:				13 March 2001
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gupsc/Makefile,v 1.22 2012/11/17 06:01:33 svnexp Exp $
+# $FreeBSD: sysutils/gupsc/Makefile 313088 2013-02-28 10:51:58Z gahr $
 #
 
 PORTNAME=	gupsc
@@ -23,8 +23,7 @@ CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 pre-patch:
-	@${PERL} -pi -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
-		 s|/usr/local|${PREFIX}|; \
+	@${PERL} -pi -e 's|/usr/local|${PREFIX}|; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure \
 		${WRKSRC}/src/Makefile.in
 
