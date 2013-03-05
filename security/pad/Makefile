@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pad
-# Date created:				8 July 2000
-# Whom:					Trevor Johnson
-#
-# $FreeBSD: ports/security/pad/Makefile,v 1.15 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/security/pad/Makefile,v 1.16 2013/01/27 06:41:41 svnexp Exp $
 
 PORTNAME=	pad
 PORTVERSION=	1.0.4
