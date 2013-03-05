@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IO-Async-SSL
-# Date created:		2011-03-07
-# Whom:			<ports@c0decafe.net>
-#
-# $FreeBSD: ports/security/p5-IO-Async-SSL/Makefile,v 1.4 2012/11/17 06:01:13 svnexp Exp $
-#
+# Created by: <ports@c0decafe.net>
+# $FreeBSD: ports/security/p5-IO-Async-SSL/Makefile,v 1.5 2013/02/21 17:52:10 svnexp Exp $
 
 PORTNAME=	IO-Async-SSL
 PORTVERSION=	0.06
@@ -12,14 +8,16 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PEVANS
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Use SSL/TLS with IO::Async
 
-RUN_DEPENDS=	p5-IO-Async>=0.29:${PORTSDIR}/devel/p5-IO-Async\
+BUILD_DEPENDS=	p5-IO-Async>=0.29:${PORTSDIR}/devel/p5-IO-Async\
 		p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
 
-MAN3=	IO::Async::SSLStream.3 IO::Async::SSL.3
+MAN3=		IO::Async::SSL.3 \
+		IO::Async::SSLStream.3
 
 .include <bsd.port.mk>
