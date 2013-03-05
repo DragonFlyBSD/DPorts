@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/netpgp/Makefile,v 1.12 2012/11/30 10:49:47 svnexp Exp $
+# $FreeBSD: ports/security/netpgp/Makefile,v 1.13 2012/12/31 14:49:54 svnexp Exp $
 
 PORTNAME=	netpgp
 PORTVERSION=	20101107
@@ -9,7 +9,6 @@ MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	PGP signing, verification, encryption, and decryption program
 
 LICENSE=	BSD
-LICENSE_FILE=	${WRKSRC}/Licence
 
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
