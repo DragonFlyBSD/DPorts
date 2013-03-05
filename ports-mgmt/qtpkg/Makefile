@@ -2,7 +2,7 @@
 # Date created:				Wed Jan 3 2001
 # Whom:					Trenton Schulz <twschulz@cord.edu>
 #
-# $FreeBSD: ports/ports-mgmt/qtpkg/Makefile,v 1.18 2012/12/10 01:26:33 svnexp Exp $
+# $FreeBSD: ports/ports-mgmt/qtpkg/Makefile,v 1.19 2012/12/30 18:56:19 svnexp Exp $
 #
 
 PORTNAME=	qtpkg
@@ -17,6 +17,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Qt based package removal tool
 CFLAGS+=	${PTHREAD_CFLAGS}
 MAKE_ENV=	LIBS="-lqt-mt ${PTHREAD_LIBS}"
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 PLIST_FILES=	sbin/qtpkg
 USE_QT_VER=	3
