@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Geo-IP
-# Date created:				10 August 2002
-# Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-Geo-IP/Makefile,v 1.34 2012/11/17 06:00:09 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: net/p5-Geo-IP/Makefile 313270 2013-03-02 16:34:42Z eadler $
 
 PORTNAME=	Geo-IP
-PORTVERSION=	1.40
+PORTVERSION=	1.41
 CATEGORIES=	net geography perl5
 MASTER_SITES=	CPAN \
 		http://www.maxmind.com/download/geoip/api/perl/
