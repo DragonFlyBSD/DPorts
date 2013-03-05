@@ -1,8 +1,8 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: ports/ports-mgmt/portshaker/Makefile,v 1.11 2013/01/13 14:43:20 svnexp Exp $
+# $FreeBSD: ports/ports-mgmt/portshaker/Makefile,v 1.12 2013/01/30 12:45:50 svnexp Exp $
 
 PORTNAME?=	portshaker
-PORTVERSION=	1.0.7
+PORTVERSION=	1.0.8
 PORTREVISION?=	0
 CATEGORIES?=	ports-mgmt
 MASTER_SITES=	http://bsd-sharp.googlecode.com/files/ \
@@ -22,10 +22,11 @@ MAN5=		portshaker.conf.5 \
 		portshaker.d.5
 MAN8=		portshaker.8
 .else
-OPTIONS_DEFINE=	BSDSHARP ENLIGHTENMENT HASKELL MARCUSCOM TEXLIVE XORG
+OPTIONS_DEFINE=	BSDSHARP ENLIGHTENMENT GECKO HASKELL MARCUSCOM TEXLIVE XORG
 OPTIONS_DEFAULT=	BSDSHARP
 BSDSHARP_DESC=		Enable BSD-sharp ports
 ENLIGHTENMENT_DESC=	Enable Enlightnement ports
+GECKO_DESC=		Enable Gecko ports
 HASKELL_DESC=		Enable Haskell ports
 MARCUSCOM_DESC=		Enable GNOME development ports
 TEXLIVE_DESC=		Enable TeXLive ports (Experimental)
@@ -56,6 +57,9 @@ MAKE_ENV+=	WITH_BSDSHARP=1
 . endif
 . if ${PORT_OPTIONS:MENLIGHTENMENT}
 MAKE_ENV+=	WITH_ENLIGHTENMENT=1
+. endif
+. if ${PORT_OPTIONS:MGECKO}
+MAKE_ENV+=	WITH_GECKO=1
 . endif
 . if ${PORT_OPTIONS:MHASKELL}
 MAKE_ENV+=	WITH_HASKELL=1
