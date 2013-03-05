@@ -1,9 +1,4 @@
-# New ports collection makefile for:	bsdbuild
-# Date created:		2011-02-28
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/bsdbuild/Makefile,v 1.5 2012/11/17 05:55:35 svnexp Exp $
-#
+# $FreeBSD: ports/devel/bsdbuild/Makefile,v 1.6 2012/12/31 14:02:05 svnexp Exp $
 
 PORTNAME=	bsdbuild
 PORTVERSION=	3.0
