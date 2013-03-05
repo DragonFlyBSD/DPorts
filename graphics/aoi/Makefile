@@ -1,8 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/graphics/aoi/Makefile,v 1.23 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: ports/graphics/aoi/Makefile,v 1.25 2013/01/23 15:05:35 svnexp Exp $
 
 PORTNAME=	aoi
 PORTVERSION=	2.9.2
+PORTREVISION=	1
 CATEGORIES=	graphics java
 MASTER_SITES=	SF/${PORTNAME}/ArtOfIllusion/${PORTVERSION}
 DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
@@ -29,8 +30,9 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 SUB_FILES=	${PORTNAME} \
 		pkg-message
 
-DESKTOP_ENTRIES="Art of Illusion" "${COMMENT}" "${PORTNAME}" \
-		"${PORTNAME}" "Application;Graphics;" ${FALSE}
+DESKTOP_ENTRIES="Art of Illusion" "3D modelling and rendering studio" \
+		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
+		"${PORTNAME}" "Graphics;3DGraphics;" false
 
 .include <bsd.port.options.mk>
 
