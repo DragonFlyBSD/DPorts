@@ -1,9 +1,5 @@
-# New ports collection makefile for:	streamripper
-# Date created:		6 Apr 2000
-# Whom:			Trevor Johnson
-#
-# $FreeBSD: ports/audio/streamripper/Makefile,v 1.49 2012/11/17 05:54:45 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/audio/streamripper/Makefile,v 1.50 2013/01/27 06:41:36 svnexp Exp $
 
 PORTNAME=	streamripper
 PORTVERSION=	1.64.6
