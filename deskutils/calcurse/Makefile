@@ -1,8 +1,8 @@
 # Created by: Herbert J. Skuhra <h.skuhra@gmail.com>
-# $FreeBSD: ports/deskutils/calcurse/Makefile,v 1.26 2013/01/02 13:42:42 svnexp Exp $
+# $FreeBSD: ports/deskutils/calcurse/Makefile,v 1.28 2013/02/17 08:59:35 svnexp Exp $
 
 PORTNAME=	calcurse
-PORTVERSION=	3.1.2
+PORTVERSION=	3.1.4
 CATEGORIES=	deskutils
 MASTER_SITES=	http://calcurse.org/files/
 
