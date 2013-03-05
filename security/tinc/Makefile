@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	tinc
-# Date created:			Jul 11, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/tinc/Makefile,v 1.49 2012/11/17 06:01:21 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/security/tinc/Makefile,v 1.50 2013/01/26 16:45:51 svnexp Exp $
 
 PORTNAME=	tinc
 PORTVERSION=	1.0.19
@@ -16,7 +11,7 @@ MASTER_SITES=	http://www.tinc-vpn.org/packages/ \
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	A Virtual Private Network (VPN) daemon
 
-LIB_DEPENDS=	lzo2.2:${PORTSDIR}/archivers/lzo2
+LIB_DEPENDS=	lzo2:${PORTSDIR}/archivers/lzo2
 
 LICENSE=	GPLv3
 
