@@ -1,31 +1,31 @@
-# New ports collection makefile for:	slump
-# Date created:				2006-10-09
-# Whom:					alepulver
-#
-# $FreeBSD: ports/games/slump/Makefile,v 1.3 2012/11/17 05:57:53 svnexp Exp $
-#
+# Created by: alepulver
+# $FreeBSD: games/slump/Makefile 313188 2013-03-02 05:39:00Z miwi $
 
 PORTNAME=	slump
-PORTVERSION=	0.003.01
+PORTVERSION=	0.003.02
 CATEGORIES=	games
-MASTER_SITES=	http://www.samiam.org/software/
+MASTER_SITES=	http://www.samiam.org/slump/old/slump/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fork of SLIGE that is optimized for making FreeDoom maps
 
+LICENSE=	GPLv2 # (or later)
+
+OPTIONS_DEFINE=	DOCS
+
 USE_BZIP2=	yes
+MAKE_ARGS=	FLAGS="${CFLAGS}"
 
-PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README
+PLIST_FILES=	bin/${PORTNAME}
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|^FLAGS =|& $${CFLAGS}|' ${WRKSRC}/${MAKEFILE}
+.include <bsd.port.options.mk>
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${PREFIX}/bin)
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} README ${DOCSDIR})
 .endif
 
 .include <bsd.port.mk>
