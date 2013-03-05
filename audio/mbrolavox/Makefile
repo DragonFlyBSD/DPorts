@@ -1,9 +1,5 @@
-# New ports collection makefile for:		mbrolavox
-# Date created:					2003-10-05
-# Whom:						trevor
-#
-# $FreeBSD: ports/audio/mbrolavox/Makefile,v 1.17 2012/11/17 05:54:38 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/audio/mbrolavox/Makefile,v 1.18 2013/01/27 06:41:36 svnexp Exp $
 
 PORTNAME=	mbrolavox
 PORTVERSION=	3.0.1
