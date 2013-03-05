@@ -1,18 +1,18 @@
-# $FreeBSD: ports/www/baikal/Makefile,v 1.2 2012/12/16 16:44:18 svnexp Exp $
+# $FreeBSD: ports/www/baikal/Makefile,v 1.3 2013/01/23 21:58:53 svnexp Exp $
 # Created by:	Adam Weinberger <adamw@FreeBSD.org>
 
 PORTNAME=		baikal
 PORTVERSION=	0.2.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=		www
-MASTER_SITES=	http://baikal.codr.fr/get/
+MASTER_SITES=	http://baikal-server.com/get/
 DISTNAME=		${PORTNAME}-regular-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=		adamw@FreeBSD.org
 COMMENT=		Lightweight CalDAV/CardDAV server
 
-USE_PHP=		ctype filter xml pdo_sqlite
+USE_PHP=		ctype filter xml pdo_sqlite session mbstring dom
 
 WRKSRC=			${WRKDIR}/${PORTNAME}-regular
 NO_BUILD=		yes
