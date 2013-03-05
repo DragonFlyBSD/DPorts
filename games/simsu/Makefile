@@ -1,8 +1,9 @@
-# $FreeBSD: ports/games/simsu/Makefile,v 1.6 2012/11/17 05:57:52 svnexp Exp $
+# Created by: nemysis@gmx.ch
+# $FreeBSD: ports/games/simsu/Makefile,v 1.8 2013/02/23 19:47:52 svnexp Exp $
 
 PORTNAME=	simsu
-PORTVERSION=	1.2.2
-PORTREVISION=	2
+PORTVERSION=	1.2.3
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://gottcode.org/${PORTNAME}/
 EXTRACT_SUFX=	-src.tar.bz2
@@ -17,7 +18,6 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build iconengines imageformats
 INSTALLS_ICONS=	yes
 MAKE_JOBS_SAFE=	yes
 
-PORTDATA=	*
 PORTDOCS=	CREDITS ChangeLog
 
 .include <bsd.port.options.mk>
@@ -27,15 +27,11 @@ do-configure:
 		${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX}
 
 post-install:
-# Pixmaps
-	${INSTALL_DATA} ${WRKSRC}/icons/hicolor/48x48/apps/simsu.png ${PREFIX}/share/pixmaps/
+	${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png ${PREFIX}/share/pixmaps/
 
-# Documentation
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
-.  for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.  endfor
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
