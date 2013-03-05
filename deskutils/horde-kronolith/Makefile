@@ -2,11 +2,11 @@
 # Date created:			  Sun Dec 02, 2001
 # Whom:				  Thierry Thomas (<thierry@thomas.as>)
 #
-# $FreeBSD: ports/deskutils/horde-kronolith/Makefile,v 1.71 2013/01/10 18:34:39 svnexp Exp $
+# $FreeBSD: ports/deskutils/horde-kronolith/Makefile,v 1.72 2013/02/12 17:38:58 svnexp Exp $
 #
 
 PORTNAME=	kronolith
-PORTVERSION=	4.0.3
+PORTVERSION=	4.0.4
 CATEGORIES=	deskutils www pear
 PKGNAMEPREFIX=	horde-
 
