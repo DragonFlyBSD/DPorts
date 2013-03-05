@@ -2,7 +2,7 @@
 # Date created:		02 March 2002
 # Whom:			Bob Bomar <bob@fly.homeunix.org>
 #
-# $FreeBSD: ports/x11-toolkits/qwt4/Makefile,v 1.26 2012/11/17 06:03:39 svnexp Exp $
+# $FreeBSD: ports/x11-toolkits/qwt4/Makefile,v 1.27 2012/12/30 18:56:36 svnexp Exp $
 #
 
 PORTNAME=	qwt
@@ -15,6 +15,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Qwt widget library for technical purposes (old version)
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 USE_BZIP2=	yes
