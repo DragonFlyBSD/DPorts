@@ -3,7 +3,7 @@
 # Date created:			Mar 21, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/graphics/divxcalc/Makefile,v 1.42 2012/11/17 05:58:03 svnexp Exp $
+# $FreeBSD: ports/graphics/divxcalc/Makefile,v 1.43 2012/12/30 18:56:01 svnexp Exp $
 #
 
 PORTNAME=	divxcalc
@@ -14,6 +14,9 @@ MASTER_SITES=	http://www.axllent.org/uploads/files/divxcalc/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DivX Calculator
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_XORG=	x11 ice xext
 USE_BZIP2=	yes
