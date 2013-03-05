@@ -1,13 +1,8 @@
-# New ports collection makefile for:	upnp
-# Date created:				02 August 2002
-# Whom:	      				Yen-Ming Lee <leeym@leeym.com>
-#
-# $FreeBSD: ports/devel/upnp/Makefile,v 1.42 2012/11/17 05:57:06 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@leeym.com>
+# $FreeBSD: ports/devel/upnp/Makefile,v 1.45 2013/02/14 10:22:24 svnexp Exp $
 
 PORTNAME=	upnp
-PORTVERSION=	1.6.17
-PORTREVISION=	1
+PORTVERSION=	1.6.18
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/p${PORTNAME}/p${PORTNAME}/libUPnP%20${PORTVERSION}
@@ -23,11 +18,6 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
-
-CONFIGURE_ENV+=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}"
-
-OPTIONS_DEFINE=	DEBUG
 
 .include <bsd.port.options.mk>
 
