@@ -1,9 +1,4 @@
-# New ports collection makefile for:    urwfonts
-# Date created:         Sat Aug 12 15:02:03 CEST 2000
-# Whom:                 olgeni@uli.it
-#
-# $FreeBSD: ports/x11-fonts/urwfonts/Makefile,v 1.14 2012/11/17 06:03:29 svnexp Exp $
-#
+# $FreeBSD: ports/x11-fonts/urwfonts/Makefile,v 1.15 2013/01/26 15:07:30 svnexp Exp $
 
 PORTNAME=	urwfonts
 PORTVERSION=	1.0
