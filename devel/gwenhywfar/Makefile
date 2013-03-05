@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/gwenhywfar/Makefile,v 1.37 2012/11/17 05:55:46 svnexp Exp $
+# $FreeBSD: ports/devel/gwenhywfar/Makefile,v 1.38 2013/02/14 10:22:08 svnexp Exp $
 
 PORTNAME=	gwenhywfar
 PORTVERSION=	4.3.3
@@ -57,8 +57,8 @@ INSTALL_WRKSRC=	${WRKSRC}/gui/${SLAVEPORT}
 
 .if ${SLAVEPORT}=="fox16"
 LIB_DEPENDS+=	FOX-1.6:${PORTSDIR}/x11-toolkits/fox16
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 .endif
 
 .if ${SLAVEPORT}=="gtk2"
