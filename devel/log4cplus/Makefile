@@ -2,7 +2,7 @@
 # Date created:				16 November 2004
 # Whom:					Petri Totterman <petri.totterman@hmv.fi>
 #
-# $FreeBSD: ports/devel/log4cplus/Makefile,v 1.16 2012/11/17 05:55:58 svnexp Exp $
+# $FreeBSD: ports/devel/log4cplus/Makefile,v 1.17 2013/02/14 10:22:11 svnexp Exp $
 #
 
 PORTNAME=	log4cplus
@@ -14,19 +14,16 @@ DISTFILES=	log4cplus-${PORTVERSION}.tar.bz2
 MAINTAINER=	reed@reedmedia.net
 COMMENT=	A logging library for C++
 
+USE_GCC=	any
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-LDFLAGS+=	${PTHREAD_LIBS}
-CFLAGS+=	${PTHREAD_CFLAGS}
+CONFIGURE_ARGS+=--enable-threads=yes
 MAKE_JOBS_UNSAFE=	yes
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	*
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/include/log4cplus
