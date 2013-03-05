@@ -3,7 +3,7 @@
 #       python setup.py install
 #
 
-__version__ = "$FreeBSD: ports/x11-toolkits/py-tkinter/files/setup3.py,v 1.2 2012/11/17 06:03:38 svnexp Exp $"
+__version__ = "$FreeBSD: x11-toolkits/py-tkinter/files/setup3.py 313167 2013-03-01 20:12:01Z lwhsu $"
 
 import os, string
 
@@ -14,6 +14,8 @@ try:
     from distutils.core import setup, Extension
 except:
     raise SystemExit("Distutils problem")
+
+install.sub_commands = [x for x in install.sub_commands if 'egg' not in x[0]]
 
 tkversion = "%%TK_VER%%"
 prefix = sysconfig.PREFIX
@@ -31,7 +33,7 @@ libs = ["tcl" + tkversion.replace(".", ""),
 
 setup(name = "Tkinter",
       description = "Tk Extension to Python",
-      
+
       ext_modules = [Extension('_tkinter', ['_tkinter.c', 'tkappinit.c'],
                                define_macros=[('WITH_APPINIT', 1)],
                                include_dirs = inc_dirs,
