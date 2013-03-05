@@ -1,8 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/archivers/gzrecover/Makefile,v 1.13 2012/11/17 05:54:20 svnexp Exp $
+# $FreeBSD: ports/archivers/gzrecover/Makefile,v 1.15 2013/02/05 16:43:50 svnexp Exp $
 
 PORTNAME=	gzrecover
-PORTVERSION=	0.6
+PORTVERSION=	0.7
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.urbanophile.com/arenn/hacking/gzrt/ \
 		CRITICAL
@@ -20,12 +20,16 @@ CFLAGS+=	-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -lz
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 do-build:
 	${CC} -o ${WRKSRC}/${PORTNAME} ${CFLAGS} ${WRKSRC}/${PORTNAME}.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
