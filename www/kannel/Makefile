@@ -2,7 +2,7 @@
 # Date created:		19 Jun 2000
 # Whom:			Domas Mituzas <midom@dammit.lt>
 #
-# $FreeBSD: ports/www/kannel/Makefile,v 1.41 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: ports/www/kannel/Makefile,v 1.42 2013/02/07 14:08:06 svnexp Exp $
 
 PORTNAME=	kannel
 PORTVERSION=	1.5.0
@@ -35,8 +35,8 @@ OPTIONS_DEFINE=	MYSQL PGSQL SQLITE3
 
 .include <bsd.port.options.mk>
 
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 
 .if ${PORT_OPTIONS:MMYSQL}
 USE_MYSQL=	yes
@@ -62,11 +62,6 @@ CONFIGURE_ARGS+=--without-sqlite3
 .if ${ARCH} == "alpha"
 BROKEN=		Does not compile on alpha
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|-pthread||g ; \
-		 s|-lc_r||g ; \
-		 s|-lkse||g' ${WRKSRC}/configure
 
 post-install:
 .for filename in wapkannel.conf smskannel.conf
