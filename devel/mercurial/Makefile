@@ -1,8 +1,8 @@
 # Created by: Andreas Kohn
-# $FreeBSD: ports/devel/mercurial/Makefile,v 1.79 2013/01/02 16:42:27 svnexp Exp $
+# $FreeBSD: ports/devel/mercurial/Makefile,v 1.80 2013/02/12 22:09:20 svnexp Exp $
 
 PORTNAME=	mercurial
-PORTVERSION=	2.4.2
+PORTVERSION=	2.5.1
 CATEGORIES=	devel python
 MASTER_SITES=	http://mercurial.selenic.com/release/
 
