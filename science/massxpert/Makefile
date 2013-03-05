@@ -1,8 +1,8 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/science/massxpert/Makefile,v 1.9 2012/12/16 21:05:09 svnexp Exp $
+# $FreeBSD: ports/science/massxpert/Makefile,v 1.10 2013/02/09 15:01:33 svnexp Exp $
 
 PORTNAME=	massxpert
-PORTVERSION=	3.3.0
+PORTVERSION=	3.4.0
 CATEGORIES=	science
 MASTER_SITES=	http://download.tuxfamily.org/massxpert/source/
 
@@ -19,6 +19,8 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 
 LICENSE=	GPLv3
 
+USE_GCC=	any
+USE_BZIP2=	yes
 USE_CMAKE=	yes
 USE_GETTEXT=	yes
 USE_ICONV=	yes
