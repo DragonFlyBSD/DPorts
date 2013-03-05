@@ -3,11 +3,12 @@
 # Date created:			Aug 12, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/finance/quantlib/Makefile,v 1.34 2012/11/17 05:57:26 svnexp Exp $
+# $FreeBSD: finance/quantlib/Makefile 313067 2013-02-27 16:15:17Z miwi $
 #
 
 PORTNAME=	quantlib
 PORTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	SF/${PORTNAME}/QuantLib/${PORTVERSION}
 DISTNAME=	QuantLib-${PORTVERSION}
@@ -15,7 +16,7 @@ DISTNAME=	QuantLib-${PORTVERSION}
 MAINTAINER=	dikshie@sfc.wide.ad.jp
 COMMENT=	A comprehensive software framework for quantitative finance
 
-LIB_DEPENDS=	boost_thread.4:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
 
 WRKSRC=		${WRKDIR}/QuantLib-${PORTVERSION}
 
