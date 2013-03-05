@@ -2,12 +2,12 @@
 # Date created:		25 Aug 2006
 # Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
 #
-# $FreeBSD: ports/games/dangen/Makefile,v 1.17 2012/11/17 05:57:35 svnexp Exp $
+# $FreeBSD: ports/games/dangen/Makefile,v 1.18 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	dangen
 PORTVERSION=	0.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://www.interq.or.jp/libra/oohara/dangen/ \
 		http://mirror.amdmi3.ru/distfiles/
