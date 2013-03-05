@@ -2,11 +2,12 @@
 # Date created:		23 June 1996
 # Whom:			markm@FreeBSD.org
 #
-# $FreeBSD: ports/mail/exim/Makefile,v 1.267 2012/11/17 05:59:02 svnexp Exp $
+# $FreeBSD: ports/mail/exim/Makefile,v 1.271 2013/02/05 16:54:23 svnexp Exp $
 #
 
 PORTNAME=	exim
 PORTVERSION?=	${EXIM_VERSION}
+PORTREVISION=	2
 CATEGORIES=	mail ipv6
 MASTER_SITES=	${MASTER_SITE_EXIM:S/$/:exim/}
 MASTER_SITE_SUBDIR=	exim4/:exim
@@ -164,7 +165,7 @@ WITH_DEFAULT_CHARSET?=	ISO-8859-1
 
 # You should not need to fiddle with anything below this point.
 
-LIB_DEPENDS+=	pcre.1:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
 
 .if defined(WITHOUT_DKIM)
 SEDLIST+=	-e 's,^\# (DISABLE_DKIM=),\1,'
@@ -334,7 +335,7 @@ SEDLIST+=	-e 's,^\# (AUTH_SPA=),\1,'
 .endif
 
 .if defined(WITH_AUTH_SASL)
-LIB_DEPENDS+=	sasl2.2:${PORTSDIR}/security/cyrus-sasl2
+LIB_DEPENDS+=	sasl2:${PORTSDIR}/security/cyrus-sasl2
 SEDLIST+=	-e 's,^\# (AUTH_CYRUS_SASL=),\1,' \
 		-e 's,^\# (AUTH_LIBS=.*-lsasl2),\1,'
 .endif
@@ -525,6 +526,7 @@ post-extract:
 .endif
 .if defined(WITH_SO_1024)
 	@cd ${WRKDIR} && ${GZIP_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/spamooborona1024-src-${SO_1024_VERSION}.tar.gz ${EXTRACT_AFTER_ARGS}
+	@cd ${WRKDIR} && ${PATCH} --quiet < ${FILESDIR}/extra-patch-so_1024-delimiter
 .endif
 
 do-configure:
