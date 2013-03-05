@@ -1,2 +1,2 @@
-# remove hardcodes -lthr
+# remove hardcoded -lthr
 LDFLAGS=

@@ -1,5 +1,5 @@
 # Created by: markun@onohara.to
-# $FreeBSD: ports/security/clamav/Makefile,v 1.177 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: ports/security/clamav/Makefile,v 1.178 2013/02/11 01:21:52 svnexp Exp $
 
 PORTNAME=	clamav
 PORTVERSION=	0.97.6
@@ -30,6 +30,7 @@ OPTIONS_DEFAULT=	ARC ARJ LHA UNZOO UNRAR LLVM TESTS DOCS
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
+USE_GCC=	any
 USE_RC_SUBR=	clamav-clamd clamav-freshclam
 CLAM_CONF_FILES=	clamd freshclam
 
