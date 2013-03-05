@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/archivers/ppmd/Makefile,v 1.7 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: ports/archivers/ppmd/Makefile,v 1.8 2013/01/15 13:46:52 svnexp Exp $
 
 PORTNAME=	ppmd
 PORTVERSION=	20050811
@@ -15,11 +15,15 @@ MAN1=		ppmd.1
 PORTDOCS=	read_me.txt
 PLIST_FILES=	bin/ppmd
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
 .endif
