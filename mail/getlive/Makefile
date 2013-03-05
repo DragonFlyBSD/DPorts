@@ -2,13 +2,14 @@
 # Date created:				20 April 2008
 # Whom:					ayunyan <ayunyan@gmail.com>
 #
-# $FreeBSD: ports/mail/getlive/Makefile,v 1.6 2012/11/17 05:59:03 svnexp Exp $
+# $FreeBSD: mail/getlive/Makefile 313139 2013-03-01 07:45:13Z beech $
 #
 
 PORTNAME=	getlive
-DISTVERSION=	0_59
+DISTVERSION=	2_7
 CATEGORIES=	mail
-MASTER_SITES=	SF/${PORTNAME}/GetLive/${PORTVERSION}%20%28Beta%29
+MASTER_SITES=	http://tardisi.com/distfiles/ \
+		http://lawrencechen.net/distfiles/
 DISTNAME=	GetLive_${DISTVERSION}
 EXTRACT_SUFX=	.tgz
 
