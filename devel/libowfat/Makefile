@@ -2,7 +2,7 @@
 # Date created:			Feb 21, 2004
 # Whom:				Thomas-Martin Seck <tmseck@netcologne.de>
 #
-# $FreeBSD: ports/devel/libowfat/Makefile,v 1.18 2012/12/12 21:22:23 svnexp Exp $
+# $FreeBSD: ports/devel/libowfat/Makefile,v 1.19 2013/02/07 13:25:22 svnexp Exp $
 #
 
 PORTNAME=	libowfat
@@ -47,6 +47,10 @@ post-extract:
 .for i in ${MAN3}
 	@${MV} ${WRKSRC}/*/${i:S/libowfat_//} ${WRKSRC}/man/${i}
 .endfor
+
+post-patch:
+# Clang cries when void functions return a value
+	${REINPLACE_CMD} -e '56s|return ||' ${WRKSRC}/CAS.h
 
 post-install:
 .if !defined(NOPORTDOCS)
