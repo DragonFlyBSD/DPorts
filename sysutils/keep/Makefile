@@ -2,14 +2,14 @@
 # Date created:				26 March 2007
 # Whom:					Daniel W. Steinbrook
 #
-# $FreeBSD: ports/sysutils/keep/Makefile,v 1.11 2012/11/17 06:01:35 svnexp Exp $
+# $FreeBSD: ports/sysutils/keep/Makefile,v 1.12 2013/02/04 08:25:30 svnexp Exp $
 #
 
 PORTNAME=	keep
 PORTVERSION=	0.4.0
 PORTREVISION=	7
 CATEGORIES=	sysutils kde
-MASTER_SITES=	http://jr.falleri.free.fr/files/devel/keep/
+MASTER_SITES=	http://fossies.org/unix/privat/old/
 
 MAINTAINER=	dsteinbrook@gmail.com
 COMMENT=	A backup system for KDE
