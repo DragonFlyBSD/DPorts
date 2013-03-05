@@ -1,9 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  lrzsz
-# Date created:			  29 Sept 1996
-# Whom:				  David O'Brien <obrien@cs.ucdavis.edu>
-#
-# $FreeBSD: ports/comms/lrzsz/Makefile,v 1.32 2012/11/17 05:55:00 svnexp Exp $
+# Created by: David O'Brien <obrien@cs.ucdavis.edu>
+# $FreeBSD: ports/comms/lrzsz/Makefile,v 1.33 2013/01/26 16:56:08 svnexp Exp $
 
 PORTNAME=	lrzsz
 PORTVERSION=	0.12.20
