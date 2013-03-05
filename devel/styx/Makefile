@@ -3,7 +3,7 @@
 # Date created:			Apr 17, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/styx/Makefile,v 1.29 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: ports/devel/styx/Makefile,v 1.30 2013/02/14 10:22:23 svnexp Exp $
 #
 
 PORTNAME=	styx
@@ -19,8 +19,8 @@ USE_AUTOTOOLS=	libtool
 USE_ICONV=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib -liconv ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -liconv
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/${PORTNAME}
 USE_LDCONFIG=	yes
 
