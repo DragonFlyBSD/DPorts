@@ -1,8 +1,8 @@
-# $FreeBSD: ports/security/shishi/Makefile,v 1.52 2012/11/17 06:01:20 svnexp Exp $
+# $FreeBSD: ports/security/shishi/Makefile,v 1.54 2013/02/06 21:57:32 svnexp Exp $
 
 PORTNAME=	shishi
 PORTVERSION=	1.0.1
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	GNU
 
