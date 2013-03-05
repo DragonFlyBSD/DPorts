@@ -2,7 +2,7 @@
 # Date created:		13 Nov 1998
 # Whom:			Dom Mitchell <dom@happygiraffe.net>
 #
-# $FreeBSD: ports/sysutils/npadmin/Makefile,v 1.16 2012/11/17 06:01:39 svnexp Exp $
+# $FreeBSD: sysutils/npadmin/Makefile 313088 2013-02-28 10:51:58Z gahr $
 #
 
 PORTNAME=	npadmin
@@ -18,9 +18,6 @@ MAN1=		npadmin.1
 PLIST_FILES=	bin/npadmin
 
 GNU_CONFIGURE=	yes
-
-pre-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
 
 pre-configure:
 	${RM} ${WRKSRC}/getopt.h ${WRKSRC}/getopt1.c
