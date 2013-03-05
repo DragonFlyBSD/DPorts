@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: ports/devel/libburn/Makefile,v 1.13 2012/11/17 05:55:53 svnexp Exp $
+# $FreeBSD: ports/devel/libburn/Makefile,v 1.14 2013/02/14 10:22:09 svnexp Exp $
 
 PORTNAME=	libburn
 PORTVERSION=	1.2.4
@@ -16,8 +16,5 @@ USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN1=		cdrskin.1
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
