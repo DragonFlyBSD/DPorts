@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/net-mgmt/flowd/Makefile,v 1.20 2012/11/17 06:00:31 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/flowd/Makefile,v 1.21 2013/01/09 20:05:03 svnexp Exp $
 
 PORTNAME=	flowd
 PORTVERSION=	0.9.1
@@ -8,7 +8,7 @@ CATEGORIES=	net-mgmt ipv6
 MASTER_SITES=	GOOGLE_CODE \
 		http://www2.mindrot.org/files/flowd/
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Small, fast, and secure NetFlow collector
 
 OPTIONS_DEFINE=	PERL PYTHON
