@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xzip
-# Date created:				28 June 1998
-# Whom:					Matthew Hunt <mph@FreeBSD.org>
-#
-# $FreeBSD: ports/games/xzip/Makefile,v 1.23 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: Matthew Hunt <mph@FreeBSD.org>
+# $FreeBSD: ports/games/xzip/Makefile,v 1.24 2013/01/26 16:56:10 svnexp Exp $
 
 PORTNAME=	xzip
 PORTVERSION=	1.8.2
