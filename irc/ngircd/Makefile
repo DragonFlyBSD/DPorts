@@ -1,8 +1,9 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: ports/irc/ngircd/Makefile,v 1.43 2012/11/17 05:58:29 svnexp Exp $
+# $FreeBSD: ports/irc/ngircd/Makefile,v 1.44 2013/02/05 16:54:22 svnexp Exp $
 
 PORTNAME=	ngircd
 PORTVERSION=	0.19.2
+PORTREVISION=	1
 CATEGORIES=	irc ipv6
 MASTER_SITES=	ftp://ftp.berlios.de/pub/%SUBDIR%/ \
 		http://arthur.barton.de/pub/%SUBDIR%/
