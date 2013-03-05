@@ -2,12 +2,12 @@
 # Date created:				29 March 1998
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD: ports/games/xtron/Makefile,v 1.20 2012/11/17 05:57:58 svnexp Exp $
+# $FreeBSD: ports/games/xtron/Makefile,v 1.21 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	xtron
 PORTVERSION=	1.1a
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	games/arcade
