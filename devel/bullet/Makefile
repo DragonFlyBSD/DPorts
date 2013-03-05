@@ -2,7 +2,7 @@
 # Date created:		2008-01-09
 # Whom:			Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/bullet/Makefile,v 1.18 2012/11/17 05:55:36 svnexp Exp $
+# $FreeBSD: ports/devel/bullet/Makefile,v 1.19 2013/02/14 10:22:05 svnexp Exp $
 #
 
 PORTNAME=	bullet
@@ -23,7 +23,7 @@ MAKE_JOBS_SAFE=	yes
 USE_CMAKE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	${PTHREAD_LIBS}
+LDFLAGS+=	-pthread
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
