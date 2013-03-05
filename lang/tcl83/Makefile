@@ -1,5 +1,5 @@
 # created by: jkh
-# $FreeBSD: ports/lang/tcl83/Makefile,v 1.86 2012/11/26 18:25:55 svnexp Exp $
+# $FreeBSD: ports/lang/tcl83/Makefile,v 1.87 2013/02/04 15:47:50 svnexp Exp $
 
 PORTNAME=	tcl
 PORTVERSION=	8.3.5
@@ -10,6 +10,9 @@ DISTNAME=	${PORTNAME}${PORTVERSION}-src
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Tool Command Language
+
+DEPRECATED=	No longer maintained upstream
+EXPIRATION_DATE=2013-04-04
 
 PORTSCOUT=	limit:^8\.3\.
 
