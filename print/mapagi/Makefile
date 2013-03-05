@@ -2,7 +2,7 @@
 # Date created:				Mon Oct 27 02:39:47 UTC 2003
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/print/mapagi/Makefile,v 1.19 2012/11/17 06:00:52 svnexp Exp $
+# $FreeBSD: ports/print/mapagi/Makefile,v 1.20 2012/12/30 18:56:20 svnexp Exp $
 #
 
 PORTNAME=	mapagi
@@ -15,6 +15,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Pagination utility that prints your images/comics in 'in folio' format
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 USE_GMAKE=	yes
