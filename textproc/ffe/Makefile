@@ -1,12 +1,8 @@
-# New ports collection makefile for:	ffe
-# Date created:		19 September 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/ffe/Makefile,v 1.21 2012/11/17 06:01:56 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: ports/textproc/ffe/Makefile,v 1.22 2013/02/03 19:52:24 svnexp Exp $
 
 PORTNAME=	ffe
-PORTVERSION=	0.3.2
+PORTVERSION=	0.3.3
 CATEGORIES=	textproc
 MASTER_SITES=	SF/ff-extractor/ff-extractor/${PORTVERSION}
 
