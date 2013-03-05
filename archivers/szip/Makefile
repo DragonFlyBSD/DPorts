@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@telegraph.spb.ru>
-# $FreeBSD: ports/archivers/szip/Makefile,v 1.20 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: ports/archivers/szip/Makefile,v 1.21 2012/12/31 15:37:23 svnexp Exp $
 
 PORTNAME=	szip
 PORTVERSION=	1.12b
@@ -20,6 +20,8 @@ WRKSRC=		${WRKDIR}
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*.txt
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's,more logfile,cat logfile,' \
 			  -e "s,^CFLAGS.*,CFLAGS= ${CFLAGS}," \
@@ -30,7 +32,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKDIR}/*.txt ${DOCSDIR}
 .endif
