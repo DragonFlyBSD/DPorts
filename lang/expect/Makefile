@@ -2,7 +2,7 @@
 # Date created:		20 November 1994
 # Whom:			pst
 #
-# $FreeBSD: ports/lang/expect/Makefile,v 1.82 2012/11/17 05:58:49 svnexp Exp $
+# $FreeBSD: ports/lang/expect/Makefile,v 1.83 2013/02/01 02:44:31 svnexp Exp $
 
 PORTNAME=	expect
 PORTVERSION=	5.43.0
@@ -23,6 +23,7 @@ LIBEXPECT_VER=	543
 WRKSRC=		${WRKDIR}/expect-${EXPECT_VER}
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
+MAKE_JOBS_UNSAFE=	yes
 
 PLIST_SUB+=	EXPECT_VER="${EXPECT_VER}"
 PLIST_SUB+=	LIBEXPECT_VER="${LIBEXPECT_VER}"
