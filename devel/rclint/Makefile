@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/rclint/Makefile,v 1.5 2012/11/17 19:11:39 svnexp Exp $
+# $FreeBSD: ports/devel/rclint/Makefile,v 1.7 2013/02/18 18:07:45 svnexp Exp $
 
 PORTNAME=	rclint
-PORTVERSION=	0.0.3
+PORTVERSION=	0.0.5
 CATEGORIES=	devel textproc python
 MASTER_SITES=	http://www.bayofrum.net/dist/rclint/	\
 		LOCAL/crees/
