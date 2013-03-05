@@ -2,7 +2,7 @@
 # Date created:                2006-08-02
 # Whom:                        Max Brazhnikov <makc@issp.ac.ru>
 #
-# $FreeBSD: ports/audio/kid3/Makefile,v 1.33 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: ports/audio/kid3/Makefile,v 1.34 2012/12/30 18:55:38 svnexp Exp $
 #
 
 PORTNAME=	kid3
@@ -20,6 +20,9 @@ LIB_DEPENDS=	id3-3.8.3:${PORTSDIR}/audio/id3lib \
 		vorbis.4:${PORTSDIR}/audio/libvorbis \
 		mp4v2.10:${PORTSDIR}/multimedia/mp4v2 \
 		tag:${PORTSDIR}/audio/taglib
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 PORTSCOUT=	limit:^1\.
 
