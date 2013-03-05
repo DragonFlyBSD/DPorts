@@ -2,11 +2,11 @@
 # Date created:		2010-02-10
 # Whom:			Bapt <baptiste.daroussin@gmail.com>
 #
-# $FreeBSD: ports/textproc/libsoldout/Makefile,v 1.7 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: ports/textproc/libsoldout/Makefile,v 1.8 2013/01/23 13:44:09 svnexp Exp $
 #
 
 PORTNAME=	libsoldout
-DISTVERSION=	1.2
+DISTVERSION=	1.3
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://instinctive.eu/code/
 
@@ -29,6 +29,7 @@ BROKEN=		does not compile on 6.X
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/libsoldout.so.1 ${PREFIX}/lib
 	${INSTALL_PROGRAM} ${WRKSRC}/mkd2html ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mkd2latex ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/mkd2man ${PREFIX}/bin
 	cd ${PREFIX}/lib && ${LN} -s libsoldout.so.1 libsoldout.so
 	${MKDIR} ${PREFIX}/include/soldout
