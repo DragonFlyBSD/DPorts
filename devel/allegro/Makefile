@@ -1,5 +1,5 @@
 # Created by: Jimmy Olgeni <olgeni@FreeBSD.org>
-# $FreeBSD: ports/devel/allegro/Makefile,v 1.46 2012/11/17 05:55:33 svnexp Exp $
+# $FreeBSD: ports/devel/allegro/Makefile,v 1.47 2013/02/14 10:22:04 svnexp Exp $
 
 PORTNAME=	allegro
 DISTVERSION=	4.2.2
@@ -93,8 +93,7 @@ PLIST_SUB+=	PROFILE="@comment "
 
 .if ${PORT_OPTIONS:MTHREADS}
 CONFIGURE_ARGS+=--enable-pthreads
-CPPFLAGS+=	${PTHREAD_CFLAGS} -DHAVE_LIBPTHREAD
-LDFLAGS+=	${PTHREAD_LIBS}
+CPPFLAGS+=	-DHAVE_LIBPTHREAD
 .else
 CONFIGURE_ARGS+=--disable-pthreads
 .endif
