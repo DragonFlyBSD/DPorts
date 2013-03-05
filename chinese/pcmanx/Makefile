@@ -1,18 +1,13 @@
-# New ports collection makefile for:   pcmanx
-# Date created:                2005/07/16
-# Whom:                        chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/chinese/pcmanx/Makefile,v 1.41 2012/11/17 05:54:58 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: ports/chinese/pcmanx/Makefile,v 1.43 2013/02/23 07:41:51 svnexp Exp $
 
 PORTNAME=	pcmanx
-PORTVERSION=	1.1
-PORTREVISION=	1
+PORTVERSION=	1.2
 CATEGORIES=	chinese net gnome
 MASTER_SITES=	http://pcmanx-gtk2.googlecode.com/files/
 DISTNAME=	${PORTNAME}-gtk2-${PORTVERSION}
 
-MAINTAINER=	linpc@cs.nctu.edu.tw
+MAINTAINER=	pclin@FreeBSD.org
 COMMENT=	BBS client using GTK+ 2.x
 
 LICENSE=	GPLv2
@@ -22,7 +17,6 @@ USE_GNOME=	gtk20 intlhack
 USE_GMAKE=	yes
 USE_ICONV=	yes
 GNU_CONFIGURE=	yes
-USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	NLS DEBUG DOCKLET NOTIFIER LIBNOTIFY NANCY MOUSE EXTERNAL IPLOOKUP PROXY
 OPTIONS_DEFAULT=	DOCKLET NOTIFIER NANCY MOUSE EXTERNAL
@@ -64,7 +58,7 @@ CONFIGURE_ARGS+=--disable-notifier
 
 .if ${PORT_OPTIONS:MLIBNOTIFY}
 CONFIGURE_ARGS+=--enable-libnotify
-BUILD_DEPENDS=	libnotify>0:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
 .endif
 
 .if empty(PORT_OPTIONS:MNANCY)
@@ -86,5 +80,9 @@ CONFIGURE_ARGS+=--enable-iplookup
 .if ${PORT_OPTIONS:MPROXY}
 CONFIGURE_ARGS+=--enable-proxy
 .endif
+
+post-install:
+	@# create directory for user friendly
+	${MKDIR} ${DATADIR}/script/
 
 .include <bsd.port.mk>
