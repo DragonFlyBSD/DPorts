@@ -1,12 +1,8 @@
-# New ports collection makefile for:	peg-e
-# Date created:		28 Jan 2009
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/games/peg-e/Makefile,v 1.8 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: ports/games/peg-e/Makefile,v 1.9 2013/02/25 04:43:48 svnexp Exp $
 
 PORTNAME=	peg-e
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.2
 CATEGORIES=	games
 MASTER_SITES=	http://gottcode.org/peg-e/ \
 		http://mirror.amdmi3.ru/distfiles/
