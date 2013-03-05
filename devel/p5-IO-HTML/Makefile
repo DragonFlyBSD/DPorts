@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-IO-HTML
-# Date created:				2012-06-14
-# Whom:					Frederic Culot <culot@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-IO-HTML/Makefile,v 1.2 2012/11/17 05:56:18 svnexp Exp $
-#
+# Created by: Frederic Culot <culot@FreeBSD.org>
+# $FreeBSD: devel/p5-IO-HTML/Makefile 313085 2013-02-28 10:27:28Z culot $
 
 PORTNAME=	IO-HTML
-PORTVERSION=	0.04
+PORTVERSION=	1.00
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -21,10 +17,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		IO::HTML.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
