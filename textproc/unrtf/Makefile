@@ -1,11 +1,8 @@
-# New ports collection makefile for:	unrtf
-# Date created:		26 March 2002
-# Whom:			Oliver Braun <obraun@informatik.unibw-muenchen.de>
-#
-# $FreeBSD: ports/textproc/unrtf/Makefile,v 1.27 2012/11/17 06:02:24 svnexp Exp $
+# Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
+# $FreeBSD: ports/textproc/unrtf/Makefile,v 1.28 2013/01/29 01:44:36 svnexp Exp $
 
 PORTNAME=	unrtf
-PORTVERSION=	0.21.2
+PORTVERSION=	0.21.3
 CATEGORIES=	textproc
 MASTER_SITES=	GNU
 
@@ -26,6 +23,7 @@ PLIST_FILES=	bin/unrtf \
 		%%DATADIR%%/latex.conf \
 		%%DATADIR%%/rtf.conf \
 		%%DATADIR%%/text.conf \
+		%%DATADIR%%/troff_mm.conf \
 		%%DATADIR%%/vt.conf
 PLIST_DIRS=	%%DATADIR%%
 
