@@ -1,8 +1,8 @@
 # Created by: Bruce M. Simpson <bms@FreeBSD.org>
-# $FreeBSD: ports/devel/k8048/Makefile,v 1.11 2013/01/16 09:04:18 svnexp Exp $
+# $FreeBSD: ports/devel/k8048/Makefile,v 1.12 2013/02/07 19:11:24 svnexp Exp $
 
 PORTNAME=	k8048
-PORTVERSION=	2.11
+PORTVERSION=	2.12
 CATEGORIES=	devel
 MASTER_SITES=	http://dev.kewl.org/k8048/
 
