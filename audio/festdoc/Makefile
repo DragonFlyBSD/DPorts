@@ -1,11 +1,5 @@
-# New ports collection makefile for:	festdoc
-# Date created:        			2000-06-16
-# Whom:					Trevor Johnson
-# based on the NetBSD port
-#
-# $NetBSD: Makefile,v 1.7 2000/01/05 17:56:46 wiz Exp $
-# $FreeBSD: ports/audio/festdoc/Makefile,v 1.12 2012/11/17 05:54:30 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/audio/festdoc/Makefile,v 1.13 2013/01/27 06:41:36 svnexp Exp $
 
 PORTNAME=	festdoc
 PORTVERSION=	1.4.0.1
