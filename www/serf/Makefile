@@ -1,8 +1,8 @@
 # Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
-# $FreeBSD: ports/www/serf/Makefile,v 1.16 2012/11/17 06:03:05 svnexp Exp $
+# $FreeBSD: www/serf/Makefile 313125 2013-02-28 20:32:19Z ohauer $
 
 PORTNAME=	serf
-PORTVERSION=	1.1.1
+PORTVERSION=	1.2.0
 CATEGORIES=	www
 MASTER_SITES=	GOOGLE_CODE
 MASTER_SITE_SUBDIR=	db
