@@ -1,7 +1,8 @@
-# $FreeBSD: ports/games/bzflag/Makefile,v 1.55 2012/11/17 05:57:34 svnexp Exp $
+# $FreeBSD: ports/games/bzflag/Makefile,v 1.56 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	bzflag
 PORTVERSION=	2.4.2
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20source/${PORTVERSION}
 
