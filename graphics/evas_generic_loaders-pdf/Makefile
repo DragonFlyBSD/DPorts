@@ -1,10 +1,10 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/graphics/evas_generic_loaders-pdf/Makefile,v 1.4 2012/12/22 21:09:57 svnexp Exp $
+# $FreeBSD: ports/graphics/evas_generic_loaders-pdf/Makefile,v 1.5 2013/01/15 17:46:00 svnexp Exp $
 
 PORTNAME=	pdf
-PORTVERSION=	1.7.4
+PORTVERSION=	1.7.5
 CATEGORIES=	graphics enlightenment
-MASTER_SITES=	http://download.enlightenment.org/releases/ \
+MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
 PKGNAMEPREFIX=	evas_generic_loaders-
 DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
