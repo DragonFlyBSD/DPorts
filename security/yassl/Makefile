@@ -1,7 +1,7 @@
-# $FreeBSD: ports/security/yassl/Makefile,v 1.12 2012/12/27 08:23:56 svnexp Exp $
+# $FreeBSD: ports/security/yassl/Makefile,v 1.13 2013/02/05 18:44:32 svnexp Exp $
 
 PORTNAME=	cyassl
-PORTVERSION=	2.4.6
+PORTVERSION=	2.5.0
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.yassl.com/
 
