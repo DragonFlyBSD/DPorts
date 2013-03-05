@@ -3,7 +3,7 @@
 # Date created:			Apr 17, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/deskutils/krss/Makefile,v 1.30 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: ports/deskutils/krss/Makefile,v 1.31 2012/12/30 18:55:45 svnexp Exp $
 #
 
 PORTNAME=	krss
@@ -14,6 +14,9 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	KDE Rich Site Summary viewer
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDEBASE_VER=3
 USE_GMAKE=	yes
