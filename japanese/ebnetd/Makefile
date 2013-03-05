@@ -1,4 +1,4 @@
-# $FreeBSD: ports/japanese/ebnetd/Makefile,v 1.46 2012/11/17 05:58:32 svnexp Exp $
+# $FreeBSD: ports/japanese/ebnetd/Makefile,v 1.47 2013/01/12 17:05:02 svnexp Exp $
 
 PORTNAME=	ebnetd
 PORTVERSION=	1.0
@@ -8,6 +8,9 @@ MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/
 
 MAINTAINER=	yasu@utahime.org
 COMMENT=	Servers for accessing CD-ROM books via TCP/IP
+
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	eb:${PORTSDIR}/japanese/eb
 
