@@ -3,7 +3,7 @@
 # Date created:			April 3, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/cad/vipec/Makefile,v 1.19 2012/11/17 05:54:55 svnexp Exp $
+# $FreeBSD: ports/cad/vipec/Makefile,v 1.20 2012/12/30 18:55:40 svnexp Exp $
 #
 
 PORTNAME=	vipec
@@ -19,6 +19,9 @@ COMMENT=	Analyze high frequency, linear electrical networks
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 USE_GMAKE=	yes
