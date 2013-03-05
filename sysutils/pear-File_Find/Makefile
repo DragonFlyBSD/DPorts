@@ -1,9 +1,5 @@
-# Ports collection makefile for:	pear-File_Find
-# Date created:				29 November 2002
-# Whom:					Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/sysutils/pear-File_Find/Makefile,v 1.14 2012/11/17 06:01:41 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: sysutils/pear-File_Find/Makefile 313226 2013-03-02 11:53:19Z miwi $
 
 PORTNAME=	File_Find
 PORTVERSION=	1.3.1
@@ -13,13 +9,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR class that facilitates the search of filesystems
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS:=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-PEAR_CATSRC=	yes
-CATEGORY=	File
-FILES=		Find.php
-TESTS=		setup.php 01glob.phpt 02maptree.phpt 03maptreemultiple.phpt \
-		04search.phpt 05search_inside.phpt bug2773.phpt
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
