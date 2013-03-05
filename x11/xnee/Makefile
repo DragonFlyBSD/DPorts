@@ -1,8 +1,9 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: ports/x11/xnee/Makefile,v 1.45 2012/12/28 00:02:42 svnexp Exp $
+# $FreeBSD: ports/x11/xnee/Makefile,v 1.46 2013/01/23 15:05:39 svnexp Exp $
 
 PORTNAME=	xnee
 PORTVERSION=	3.15
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	GNU
 
