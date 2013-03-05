@@ -1,16 +1,10 @@
-# Ports collection makefile for: komclean
-# Date created:		23 March 2010
-# Whom: 		smyru@heron.pl
-#
-# $FreeBSD: ports/net-im/komclean/Makefile,v 1.7 2012/11/17 06:00:27 svnexp Exp $
-#
+# Created by: smyru@heron.pl
+# $FreeBSD: ports/net-im/komclean/Makefile,v 1.10 2013/02/21 00:59:38 svnexp Exp $
 
 PORTNAME=	komclean
-PORTVERSION=	1.2.0
-PORTREVISION=	1
+PORTVERSION=	1.2.1
 CATEGORIES=	net-im
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
-MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME:S/kom/KOM/}-${PORTVERSION}
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME:S/kom/KOM/}-${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	smyru@heron.pl
@@ -30,10 +24,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 DESKTOP_ENTRIES="KOMclean" \
 		"${COMMENT}" \
-		"komclean.xpm" \
+		"${PREFIX}/share/pixmaps/komclean.xpm" \
 		"komclean" \
 		"" \
-		${FALSE}
+		false
 
 .include <bsd.port.pre.mk>
 
