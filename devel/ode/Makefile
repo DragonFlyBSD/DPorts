@@ -2,7 +2,7 @@
 # Date created:				11 Oct 2003
 # Whom:					David Yeske <dyeske@yahoo.com>
 #
-# $FreeBSD: ports/devel/ode/Makefile,v 1.29 2012/11/17 05:56:02 svnexp Exp $
+# $FreeBSD: ports/devel/ode/Makefile,v 1.30 2013/02/14 10:22:12 svnexp Exp $
 #
 
 PORTNAME=	ode
@@ -65,7 +65,7 @@ post-patch:
 		-e 's|^\( *CPPFLAGS=\)|#\1|' -e 's|^\( *CXXFLAGS=\)|#\1|' \
 		-e 's|CPPFLAGS+=" |CPPFLAGS="$$CPPFLAGS |' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|__isnanf||g; s|__isnan||g' -e 's|-lpthread|${PTHREAD_LIBS}|g' \
+	@${REINPLACE_CMD} -e 's|__isnanf||g; s|__isnan||g' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e '/^traplib_PROGRAMS / d' ${WRKSRC}/ode/src/Makefile.in
 	@${FIND} ${WRKSRC} -type f -name Makefile.in -print0 | ${XARGS} -0 ${REINPLACE_CMD} \
