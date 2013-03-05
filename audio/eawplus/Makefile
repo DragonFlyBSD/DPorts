@@ -1,9 +1,5 @@
-# New ports collection makefile for:	eawplus
-# Date created:				2004/07/04
-# Whom:					nork@FreeBSD.org
-#
-# $FreeBSD: ports/audio/eawplus/Makefile,v 1.9 2012/11/17 05:54:30 svnexp Exp $
-#
+# Created by: nork@FreeBSD.org
+# $FreeBSD: ports/audio/eawplus/Makefile,v 1.10 2012/12/31 16:40:32 svnexp Exp $
 
 PORTNAME=	eawplus
 PORTVERSION=	12.1
@@ -26,6 +22,8 @@ NO_WRKSUBDIR=	yes
 TIMIDITY_DATADIR=	share/timidity
 PLIST_SUB=	TIMIDITY_DATADIR=${TIMIDITY_DATADIR}
 
+.include <bsd.port.options.mk>
+
 post-extract:
 	@${RM} -f ${WRKSRC}/timidity/inst/GUS/power/h-hihatp.pat.orig
 	@${RM} -f ${WRKSRC}/timidity/inst/GUS/power/h-snare.pat.orig
@@ -41,7 +39,7 @@ do-install:
 	@${MKDIR} ${PREFIX}/${TIMIDITY_DATADIR}
 	@${INSTALL_DATA} ${WRKDIR}/timidity.cfg \
 			${PREFIX}/${TIMIDITY_DATADIR}/timidity.cfg-eawplus
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_MAN} ${WRKSRC}/doc/*/*.txt.gz ${DOCSDIR}
 .endif
