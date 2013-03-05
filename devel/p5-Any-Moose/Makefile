@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Any-Moose/Makefile,v 1.15 2013/01/14 14:50:09 svnexp Exp $
+# $FreeBSD: devel/p5-Any-Moose/Makefile 313348 2013-03-03 13:44:53Z kuriyama $
 
 PORTNAME=	Any-Moose
-PORTVERSION=	0.20
+PORTVERSION=	0.21
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SARTAK
