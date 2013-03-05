@@ -1,5 +1,5 @@
-# Created by: Kubilay Kocak <koobs.freebsd@gmail.com>
-# $FreeBSD: ports/security/py-pysha3/Makefile,v 1.3 2012/11/17 06:01:17 svnexp Exp $
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/security/py-pysha3/Makefile,v 1.4 2013/02/09 15:59:42 svnexp Exp $
 
 PORTNAME=	pysha3
 PORTVERSION=	0.3
@@ -7,7 +7,7 @@ CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	SHA-3 (Keccak) for Python
 
 # Python3 ready
