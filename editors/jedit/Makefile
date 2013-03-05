@@ -1,12 +1,8 @@
-# New ports collection makefile for:    jedit
-# Date created:				22 June 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/editors/jedit/Makefile,v 1.40 2012/11/17 05:57:14 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: ports/editors/jedit/Makefile,v 1.41 2013/01/04 07:41:59 svnexp Exp $
 
 PORTNAME=	jedit
-PORTVERSION=	4.5.2
+PORTVERSION=	5.0.0
 PORTEPOCH=	1
 CATEGORIES=	editors java
 MASTER_SITES=	SF
