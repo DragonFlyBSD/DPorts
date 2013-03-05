@@ -1,5 +1,5 @@
-# Created by:	Barbara Guida <bar@FreeBSD.org>
-# $FreeBSD: ports/www/xpi-showip/Makefile,v 1.10 2013/01/19 08:48:37 svnexp Exp $
+# Created by: Barbara Guida <bar@FreeBSD.org>
+# $FreeBSD: ports/www/xpi-showip/Makefile,v 1.11 2013/01/20 12:56:08 svnexp Exp $
 
 PORTNAME=	showip
 PORTVERSION=	1.9
