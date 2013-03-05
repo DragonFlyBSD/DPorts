@@ -1,12 +1,8 @@
-# Ports collection makefile for:	PmWiki
-# Date created:		Sat Feb 26 06:16:50 CST 2005
-# Whom:				Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-#
-# $FreeBSD: ports/www/pmwiki/Makefile,v 1.41 2012/11/17 06:02:58 svnexp Exp $
-#
+# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
+# $FreeBSD: ports/www/pmwiki/Makefile,v 1.43 2013/02/19 18:29:22 svnexp Exp $
 
 PORTNAME=	pmwiki
-PORTVERSION=	2.2.38
+PORTVERSION=	2.2.48
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.pmwiki.org/pub/pmwiki/
