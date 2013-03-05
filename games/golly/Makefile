@@ -1,8 +1,9 @@
-# $FreeBSD: ports/games/golly/Makefile,v 1.1 2013/01/10 18:18:02 svnexp Exp $
+# $FreeBSD: ports/games/golly/Makefile,v 1.2 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	golly
 PORTVERSION=	2.4
 DISTVERSIONSUFFIX=	-src
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
