@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cksfv
-# Date created:				18 October 2000
-# Whom:					Johann Visagie <johann@egenetics.com>
-#
-# $FreeBSD: ports/security/cksfv/Makefile,v 1.26 2012/11/17 06:01:01 svnexp Exp $
-#
+# Created by: Johann Visagie <johann@egenetics.com>
+# $FreeBSD: ports/security/cksfv/Makefile,v 1.27 2013/01/15 13:46:57 svnexp Exp $
 
 PORTNAME=	cksfv
 PORTVERSION=	1.3.14
@@ -24,6 +20,10 @@ MAN1=		cksfv.1
 PLIST_FILES=	bin/cksfv
 PORTDOCS=	README ChangeLog
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|^\(CC\)=|\1?=|' ${WRKSRC}/src/Makefile.in
 
@@ -31,7 +31,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
