@@ -1,9 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: ports/net/exabgp/Makefile,v 1.3 2013/01/07 12:51:28 svnexp Exp $
+# $FreeBSD: ports/net/exabgp/Makefile,v 1.5 2013/02/26 13:45:09 svnexp Exp $
 
 PORTNAME=	exabgp
-PORTVERSION=	3.1.1
-PORTREVISION=	1
+PORTVERSION=	3.1.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 EXTRACT_SUFX=	.tgz
