@@ -2,13 +2,13 @@
 # Date Created:				13 June 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/archivers/py-librtfcomp/Makefile,v 1.4 2012/11/17 05:54:23 svnexp Exp $
+# $FreeBSD: ports/archivers/py-librtfcomp/Makefile,v 1.5 2013/02/20 16:45:20 svnexp Exp $
 #
 
 CATEGORIES=	archivers python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python bindings for the LZRTF compression library
 
 LIB_DEPENDS=	rtfcomp.0:${PORTSDIR}/archivers/librtfcomp
