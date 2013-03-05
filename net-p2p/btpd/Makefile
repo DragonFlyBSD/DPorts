@@ -1,9 +1,4 @@
-# New ports collection makefile for:	btpd
-# Date created:		2008-11-14
-# Whom:			bapt <baptiste.daroussin@gmail.com>
-#
-# $FreeBSD: ports/net-p2p/btpd/Makefile,v 1.9 2012/11/17 06:00:39 svnexp Exp $
-#
+# $FreeBSD: ports/net-p2p/btpd/Makefile,v 1.10 2012/12/31 14:47:21 svnexp Exp $
 
 PORTNAME=	btpd
 PORTVERSION=	0.16
@@ -15,7 +10,6 @@ MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Bittorrent client consisting of a daemon and client commands
 
 LICENSE=	BSD
-LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 USE_AUTOTOOLS=	autoconf aclocal
 GNU_CONFIGURE=	yes
@@ -30,8 +24,10 @@ MAN1=		btcli.1 \
 
 PORTDOCS=	README
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
 .endif
