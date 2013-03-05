@@ -2,7 +2,7 @@
 # Date Created:				2012-08-12
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: ports/devel/npth/Makefile,v 1.3 2012/11/17 05:56:01 svnexp Exp $
+# $FreeBSD: ports/devel/npth/Makefile,v 1.4 2013/02/14 10:22:11 svnexp Exp $
 #
 
 PORTNAME=	npth
@@ -20,9 +20,6 @@ LICENSE_COMB=	dual
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	ac_cv_search_pthread_create=""
-CFLAGS+=	${PTHREAD_CFLAGS}
-LDFLAGS+=	${PTHREAD_LIBS}
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
