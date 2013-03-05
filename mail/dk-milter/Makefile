@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dk-milter
-# Date created:				22 May 2005
-# Whom:					ache
-#
-# $FreeBSD: ports/mail/dk-milter/Makefile,v 1.34 2012/11/17 05:59:01 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: ports/mail/dk-milter/Makefile,v 1.35 2013/01/26 16:56:10 svnexp Exp $
 
 PORTNAME=	dk-milter
 PORTVERSION=	1.0.2
