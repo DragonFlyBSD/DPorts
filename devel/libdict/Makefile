@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libdict
-# Date created:				Apr 19 2003
-# Whom:					Alex Semenyaka <alex@rinet.ru>
-#
-# $FreeBSD: ports/devel/libdict/Makefile,v 1.7 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: Alex Semenyaka <alex@rinet.ru>
+# $FreeBSD: ports/devel/libdict/Makefile,v 1.8 2013/01/12 13:02:13 svnexp Exp $
 
 PORTNAME=	libdict
 PORTVERSION=	0.2.1
@@ -14,7 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:source treap_insert.pdf:doc \
 		avl_insert.pdf:doc empty.pdf:doc
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Library providing access to ``dictionary'' data structures
 
 USE_GMAKE=	yes
