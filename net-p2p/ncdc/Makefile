@@ -1,9 +1,9 @@
 # Created by: Dmitriy Limonov
-# $FreeBSD: ports/net-p2p/ncdc/Makefile,v 1.11 2012/12/10 19:24:04 svnexp Exp $
+# $FreeBSD: ports/net-p2p/ncdc/Makefile,v 1.12 2013/02/05 16:54:25 svnexp Exp $
 
 PORTNAME=	ncdc
 PORTVERSION=	1.14
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-p2p
 MASTER_SITES=	SF \
 		http://dev.yorhel.nl/download/
