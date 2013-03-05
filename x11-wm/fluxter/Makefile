@@ -1,16 +1,12 @@
-# New ports collection makefile for:	fluxter
-# Date created:				18 Aug 2003
-# Whom:					Adam Weinberger
-#
-# $FreeBSD: ports/x11-wm/fluxter/Makefile,v 1.10 2012/11/17 06:03:42 svnexp Exp $
-#
+# Created by: Adam Weinberger
+# $FreeBSD: x11-wm/fluxter/Makefile 313037 2013-02-27 07:52:50Z jgh $
 
 PORTNAME=	fluxter
 PORTVERSION=	0.2.0
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://www.hydrus.org.uk/downloads/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Desktop pager for the Fluxbox Slit
 
 USE_XORG=	x11 ice xproto xt xaw xext
