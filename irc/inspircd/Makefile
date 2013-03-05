@@ -1,16 +1,9 @@
-# New ports collection makefile for:   inspircd
-# Date created:        25 August 2006
-# Whom:                brain
-#
-# $FreeBSD: ports/irc/inspircd/Makefile,v 1.27 2012/12/10 19:24:02 svnexp Exp $
-#
+# Created by: Craig Edwards <brain@mail1.chatspike.net>
+# $FreeBSD: ports/irc/inspircd/Makefile,v 1.31 2013/02/18 01:11:39 svnexp Exp $
 
 PORTNAME=	inspircd
-PORTVERSION=	2.0.9
-PORTREVISION=	1
+PORTVERSION=	2.0.10
 CATEGORIES=	irc
-MASTER_SITES=	http://cloud.github.com/downloads/inspircd/inspircd/
-DISTNAME=	InspIRCd-${PORTVERSION}
 
 MAINTAINER=	feld@feld.me
 COMMENT=	A modular C++ IRC daemon
@@ -20,7 +13,12 @@ LICENSE_FILE=	${WRKSRC}/docs/COPYING
 
 CONFLICTS=	inspircd-1.*
 
-USE_BZIP2=	yes
+USE_GITHUB=	yes
+GH_ACCOUNT=	inspircd
+GH_PROJECT=	${GH_ACCOUNT}
+GH_TAGNAME=	v${PORTVERSION}
+GH_COMMIT=	d1cc59f
+
 USE_RC_SUBR=	${PORTNAME}
 MAKEFILE=	BSDmakefile
 
@@ -58,9 +56,6 @@ PCRE_DESC=	Build m_regex_pcre module
 POSIX_DESC=	Build m_regex_posix module
 
 .include <bsd.port.options.mk>
-
-post-extract:
-	@(cd ${WRKDIR} && ${MV} ${PORTNAME} ${DISTNAME})
 
 .if ${PORT_OPTIONS:MLDAPAUTH}
 USE_OPENLDAP=	yes
@@ -103,8 +98,8 @@ PLIST_SUB+=	SQLITE="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGNUTLS}
-LIB_DEPENDS+=	gnutls.47:${PORTSDIR}/security/gnutls \
-		gcrypt.18:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS+=	gnutls:${PORTSDIR}/security/gnutls \
+		gcrypt:${PORTSDIR}/security/libgcrypt
 CONFIGURE_ARGS+=	--enable-gnutls
 EXTRAS:=${EXTRAS},m_ssl_gnutls.cpp
 PLIST_SUB+=	GNUTLS=""
