@@ -1,8 +1,8 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: ports/archivers/snappy/Makefile,v 1.11 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: ports/archivers/snappy/Makefile,v 1.13 2013/02/20 22:18:58 svnexp Exp $
 
 PORTNAME=	snappy
-PORTVERSION=	1.0.5
+PORTVERSION=	1.1.0
 PORTREVISION=	0
 CATEGORIES=	archivers
 MASTER_SITES=	GOOGLE_CODE
@@ -10,11 +10,16 @@ MASTER_SITES=	GOOGLE_CODE
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Fast compressor/decompressor library
 
+OPTIONS_DEFINE=	DOCS
+
+CONFIGURE_ARGS=	--disable-gtest
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
+.include <bsd.port.options.mk>
+
 post-patch:
-.if defined(NOPORTDOCS)
+.if empty(PORT_OPTIONS:MDOCS)
 	${REINPLACE_CMD} -e \
 		'/^install-data-am:/ s|install-dist_docDATA||' \
 		${WRKSRC}/Makefile.in
