@@ -2,7 +2,7 @@
 # Date created:				17.10.2003
 # Whom:					krion
 #
-# $FreeBSD: ports/dns/dnsflood/Makefile,v 1.16 2012/11/17 05:57:08 svnexp Exp $
+# $FreeBSD: ports/dns/dnsflood/Makefile,v 1.17 2013/02/07 14:28:41 svnexp Exp $
 #
 
 PORTNAME=	dnsflood
@@ -25,8 +25,6 @@ USE_RC_SUBR=	dnsflood
 PORTDOCS=	README
 
 pre-patch:
-	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/makefiles/Makefile-FreeBSD
 	@${LN} -sf ${WRKSRC}/makefiles/Makefile-FreeBSD ${WRKSRC}/Makefile
 
 do-install:
