@@ -3,7 +3,7 @@
 # Date created:				Feb 13 2008
 # Whom:					vanilla
 #
-# $FreeBSD: ports/devel/log4shib/Makefile,v 1.9 2012/11/17 05:55:58 svnexp Exp $
+# $FreeBSD: ports/devel/log4shib/Makefile,v 1.10 2013/02/14 10:22:11 svnexp Exp $
 #
 
 PORTNAME=	log4shib
@@ -18,8 +18,6 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	pkgconfig gnomehack
-CPPFLAGS+=	${PTHREAD_CFLAGS}
-LDFLAGS+=	${PTHREAD_LIBS}
 CONFIGURE_ARGS=	--with-pthreads --disable-html-docs --disable-doxygen
 USE_LDCONFIG=	yes
 
