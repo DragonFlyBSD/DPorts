@@ -2,7 +2,7 @@
 # Date created:                         20 December 2006
 # Whom:                                 Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/textproc/svn2cl/Makefile,v 1.13 2012/11/17 06:02:22 svnexp Exp $
+# $FreeBSD: ports/textproc/svn2cl/Makefile,v 1.14 2013/02/20 16:45:26 svnexp Exp $
 #
 
 PORTNAME=	svn2cl
@@ -11,7 +11,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://arthurdejong.org/svn2cl/ \
 		LOCAL/avl
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Subversion ChangeLog generator
 
 RUN_DEPENDS=	${LOCALBASE}/bin/xsltproc:${PORTSDIR}/textproc/libxslt \
