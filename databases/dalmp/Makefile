@@ -1,12 +1,8 @@
-# New ports collection makefile for:	dalmp
-# Date created:		06 Nov 2010
-# Whom:			Nicolas de Bari Embriz <nbari@dalmp.com>
-#
-# $FreeBSD: ports/databases/dalmp/Makefile,v 1.17 2012/11/17 05:55:06 svnexp Exp $
-#
+# Created by: Nicolas de Bari Embriz <nbari@dalmp.com>
+# $FreeBSD: ports/databases/dalmp/Makefile,v 1.18 2013/01/22 14:46:28 svnexp Exp $
 
 PORTNAME=	dalmp
-PORTVERSION=	2.0
+PORTVERSION=	2.1
 CATEGORIES=	databases
 MASTER_SITES=	GOOGLE_CODE
 
