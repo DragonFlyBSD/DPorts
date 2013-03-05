@@ -1,9 +1,5 @@
-# New ports collection makefile for:   mlclock
-# Date created:        December 05 1997
-# Whom:                Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/x11-clocks/mlclock/Makefile,v 1.18 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: ports/x11-clocks/mlclock/Makefile,v 1.19 2013/02/10 10:45:37 svnexp Exp $
 
 PORTNAME=	mlclock
 PORTVERSION=	1.1
@@ -15,10 +11,16 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Clock for mlvwm window manager
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
+
 USE_XORG=	x11 xau xdmcp
 
 PLIST_FILES=	bin/mlclock %%DATADIR%%/mlclockrc %%DATADIR%%/mlclockrc-kanji
 PLIST_DIRS=	%%DATADIR%%
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|^void main|int main| ; \
+		 s|log|logical|' ${WRKSRC}/mlclock.c
 
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -I${LOCALBASE}/include \
