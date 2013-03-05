@@ -2,7 +2,7 @@
 # Date created:					2004-07-05
 # Whom:						arved
 #
-# $FreeBSD: ports/net/kphone/Makefile,v 1.19 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: ports/net/kphone/Makefile,v 1.20 2012/12/30 18:56:15 svnexp Exp $
 
 PORTNAME=	kphone
 PORTVERSION=	4.2
@@ -14,6 +14,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A voice over internet phone
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 USE_OPENSSL=	yes
