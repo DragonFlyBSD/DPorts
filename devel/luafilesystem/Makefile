@@ -1,5 +1,5 @@
 # Created by: Kelly Hays <kelly.hays@jkhfamily.org>
-# $FreeBSD: ports/devel/luafilesystem/Makefile,v 1.4 2013/01/18 00:47:53 svnexp Exp $
+# $FreeBSD: ports/devel/luafilesystem/Makefile,v 1.5 2013/01/20 04:00:56 svnexp Exp $
 
 PORTNAME=	luafilesystem
 PORTVERSION=	1.5.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	GH
 PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	fiziologus@gmail.com
 COMMENT=	Library to access directory structure and file attributes
 
 LICENSE=	MIT
