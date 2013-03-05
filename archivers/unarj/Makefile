@@ -1,9 +1,5 @@
-# New ports collection makefile for:    unarj
-# Date created:         28 Dec 1994
-# Whom:                 ache
-#
-# $FreeBSD: ports/archivers/unarj/Makefile,v 1.25 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: ports/archivers/unarj/Makefile,v 1.26 2012/12/31 15:46:45 svnexp Exp $
 
 PORTNAME=	unarj
 PORTVERSION=	2.65
@@ -19,12 +15,13 @@ COMMENT=	Allows files to be extracted from ARJ archives
 PLIST_FILES=	bin/unarj
 PORTDOCS=	unarj.txt technote.txt
 
+.include <bsd.port.options.mk>
 post-patch:
 	${CP} ${FILESDIR}/sanitize.c ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unarj ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${INSTALL} -d -m 755 -o ${SHAREOWN} -g ${SHAREGRP} ${DOCSDIR}
 .for i in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
