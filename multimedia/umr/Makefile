@@ -1,16 +1,12 @@
-# New ports collection makefile for:	umr
-# Date created:				19 October 2006
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/multimedia/umr/Makefile,v 1.4 2012/11/17 05:59:54 svnexp Exp $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: multimedia/umr/Makefile 313245 2013-03-02 14:45:34Z miwi $
 
 PORTNAME=	umr
 PORTVERSION=	0.3
 CATEGORIES=	multimedia
-MASTER_SITES=	http://pages.cthome.net/chrismp/umr/
+MASTER_SITES=	http://www.oldunreal.com/mods/other/
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unreal Media Ripper
 
 MAKE_JOBS_SAFE=	yes
