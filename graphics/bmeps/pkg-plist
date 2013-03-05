@@ -1,6 +1,0 @@
-@comment $FreeBSD: ports/graphics/bmeps/pkg-plist,v 1.5 2012/11/17 05:58:01 svnexp Exp $
-bin/bmeps
-%%DATADIR%%/bmeps.stt.bz2
-%%DATADIR%%/bmeps.str
-%%DATADIR%%/bmeps.txt
-@dirrm %%DATADIR%%
