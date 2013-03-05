@@ -2,7 +2,7 @@
 # Date created:		2003-08-03
 # Whom:			Sergei Kolobov <sergei@kolobov.com>
 #
-# $FreeBSD: ports/devel/poslib/Makefile,v 1.21 2012/11/17 05:56:43 svnexp Exp $
+# $FreeBSD: ports/devel/poslib/Makefile,v 1.22 2013/02/14 10:22:19 svnexp Exp $
 #
 
 PORTNAME=	poslib
@@ -16,7 +16,6 @@ COMMENT=	Posadis C++ DNS library
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
