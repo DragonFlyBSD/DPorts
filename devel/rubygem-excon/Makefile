@@ -2,11 +2,11 @@
 # Date created:		2012-08-05
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-excon/Makefile,v 1.4 2012/11/17 05:56:59 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-excon/Makefile,v 1.5 2013/01/23 21:48:10 svnexp Exp $
 #
 
 PORTNAME=	excon
-PORTVERSION=	0.16.2
+PORTVERSION=	0.16.5
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
