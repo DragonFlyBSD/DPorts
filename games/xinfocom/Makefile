@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xinfocom
-# Date created:				7 May 1998
-# Whom:					Matthew Hunt <mph@FreeBSD.org>
-#
-# $FreeBSD: ports/games/xinfocom/Makefile,v 1.15 2012/11/17 05:57:57 svnexp Exp $
-#
+# Created by: Matthew Hunt <mph@FreeBSD.org>
+# $FreeBSD: ports/games/xinfocom/Makefile,v 1.16 2013/01/26 16:56:09 svnexp Exp $
 
 PORTNAME=	xinfocom
 PORTVERSION=	1.8m
