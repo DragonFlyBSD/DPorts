@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Nora
-# Date created:		8 December 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/www/ruby-nora/Makefile,v 1.13 2012/11/17 06:03:03 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: www/ruby-nora/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	nora
 PORTVERSION=	0.0.20041114
@@ -14,6 +10,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	A rich set of Ruby libraries for Web applications
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
