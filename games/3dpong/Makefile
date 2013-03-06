@@ -1,8 +1,8 @@
-# $FreeBSD: ports/games/3dpong/Makefile,v 1.25 2012/11/17 05:57:31 svnexp Exp $
+# $FreeBSD: ports/games/3dpong/Makefile,v 1.26 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	3dpong
 PORTVERSION=	0.5
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/3dpong/src/ \
 		ftp://ftp.billsgames.com/unix/x/3dpong/src/ \
