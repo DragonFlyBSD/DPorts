@@ -1,19 +1,16 @@
-# New ports collection makefile for:	trigger
-# Date created:			31 Mar 2005
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/games/trigger/Makefile,v 1.28 2012/11/17 05:57:54 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: ports/games/trigger/Makefile,v 1.30 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	trigger
 PORTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}-rally/${PORTNAME}-rally/${PORTNAME}-${PORTVERSION}
 DISTFILES=	trigger-rally-${PORTVERSION}-src${EXTRACT_SUFX} \
 		trigger-rally-${DATAVERSION}-data${EXTRACT_SUFX}
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	A rally car racing game
+COMMENT=	Rally car racing game
 
 BUILD_DEPENDS=	jam:${PORTSDIR}/devel/jam
 LIB_DEPENDS=	physfs.1:${PORTSDIR}/devel/physfs
@@ -31,7 +28,7 @@ DATASRC=	${WRKDIR}/trigger-rally-${DATAVERSION}-data
 
 DATAVERSION=	0.6.0
 
-DESKTOP_ENTRIES="Trigger" "Car racing game" "" \
+DESKTOP_ENTRIES="Trigger" "${COMMENT}" "" \
 		"trigger" "" false
 
 PORTDOCS=	README-stereo.txt README.txt
