@@ -1,27 +1,28 @@
-# New ports collection makefile for:	wmtictactoe
-# Date created:			28 Apr 1999
-# Whom:				Jim Mock <jim@FreeBSD.org>
-#
-# $FreeBSD: ports/games/wmtictactoe/Makefile,v 1.17 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: Jim Mock <jim@FreeBSD.org>
+# $FreeBSD: ports/games/wmtictactoe/Makefile,v 1.18 2013/02/07 23:50:54 svnexp Exp $
 
 PORTNAME=	wmtictactoe
 PORTVERSION=	1.1
 PORTREVISION=	3
 CATEGORIES=	games windowmaker afterstep
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	jim
-DISTNAME=	wmtictactoe-1.1-1
+MASTER_SITES=	LOCAL/jim
+DISTNAME=	${PORTNAME}-${PORTVERSION}-1
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A dockable TicTacToe game for WindowMaker and AfterStep
+COMMENT=	Dockable TicTacToe game for WindowMaker and AfterStep
+
+WRKSRC=		${WRKDIR}/wmtictactoe.app/wmtictactoe
+
+USE_XORG=	xpm
+USE_GMAKE=	yes
 
 PLIST_FILES=	bin/wmtictactoe
-USE_GMAKE=	yes
-WRKSRC=		${WRKDIR}/wmtictactoe.app/wmtictactoe
-USE_XORG=	xpm
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|^void .*main|int main|' ${WRKSRC}/wmtictactoe.c
 
 post-install:
-	@${ECHO} "===>   Run 'wmtictactoe --help' for the available options"
+	@${ECHO_MSG} "===>   Run 'wmtictactoe --help' for the available options"
 
 .include <bsd.port.mk>
