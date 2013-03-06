@@ -1,9 +1,4 @@
-# New ports collection makefile for:	jtransforms
-# Date created:		2010-10-01
-# Whom:			Jimmy Olgeni <olgeni@FreeBSD.org>
-#
-# $FreeBSD: ports/math/jtransforms/Makefile,v 1.3 2012/11/17 05:59:22 svnexp Exp $
-#
+# $FreeBSD: ports/math/jtransforms/Makefile,v 1.4 2013/01/26 15:07:27 svnexp Exp $
 
 PORTNAME=	jtransforms
 PORTVERSION=	2.4
