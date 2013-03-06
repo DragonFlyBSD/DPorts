@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/dns/zonecheck/Makefile,v 1.18 2012/11/17 05:57:11 svnexp Exp $
+# $FreeBSD: ports/dns/zonecheck/Makefile,v 1.19 2013/01/09 20:04:41 svnexp Exp $
 
 PORTNAME=	zonecheck
 PORTVERSION=	3.0.5
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.zonecheck.fr/download/ \
 		ftp://ftp.nic.fr/pub/mirror/zonecheck/src/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Perform consistency checks on DNS zones
 
 LICENSE=	GPLv3
