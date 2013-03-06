@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/games/apricots/Makefile,v 1.16 2012/12/05 02:35:26 svnexp Exp $
+# $FreeBSD: ports/games/apricots/Makefile,v 1.17 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	apricots
 PORTVERSION=	0.2.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://www.fishies.org.uk/ \
 		http://mirror.amdmi3.ru/distfiles/
