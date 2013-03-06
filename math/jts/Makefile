@@ -1,16 +1,12 @@
-# New ports collection makefile for:	jts
-# Date created:		22 May 2005
-# Whom:			Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/math/jts/Makefile,v 1.9 2012/11/17 05:59:22 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: ports/math/jts/Makefile,v 1.10 2013/02/17 00:51:35 svnexp Exp $
 
 PORTNAME=	jts
-PORTVERSION=	1.12
+PORTVERSION=	1.13
 CATEGORIES=	math databases
 MASTER_SITES=	SF/${PORTNAME}-topo-suite/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	wen@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	JTS Topology Suite
 
 RUN_DEPENDS=	${JAVALIBDIR}/jdom.jar:${PORTSDIR}/java/jdom		\
@@ -25,12 +21,14 @@ NO_WRKSUBDIR=	yes
 VER=		${PORTVERSION:tl}
 JARFILES=	JTS_Test acme jts-${VER}
 
+.include <bsd.port.options.mk>
+
 do-install:
 .for jar in ${JARFILES}
 	${INSTALL_DATA} ${WRKSRC}/lib/${jar}.jar	\
 		${JAVAJARDIR}/${jar:S|-${VER}||}.jar
 .endfor
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	@cd ${WRKDIR}/doc && ${COPYTREE_SHARE} . ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
