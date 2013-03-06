@@ -2,10 +2,10 @@
 # Date created:				5 December 2006
 # Whom:					Jonathan Weiss (<jw@innerewut.de>)
 #
-# $FreeBSD: ports/devel/rubygem-hoe/Makefile,v 1.42 2012/11/17 05:56:59 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-hoe/Makefile,v 1.43 2013/01/23 22:11:03 svnexp Exp $
 
 PORTNAME=	hoe
-PORTVERSION=	3.0.6
+PORTVERSION=	3.5.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
