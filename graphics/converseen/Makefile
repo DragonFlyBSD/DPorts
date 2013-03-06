@@ -1,8 +1,8 @@
 # Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
-# $FreeBSD: ports/graphics/converseen/Makefile,v 1.2 2013/01/10 13:52:52 svnexp Exp $
+# $FreeBSD: ports/graphics/converseen/Makefile,v 1.3 2013/02/13 22:56:12 svnexp Exp $
 
 PORTNAME=	converseen
-PORTVERSION=	0.5.2
+PORTVERSION=	0.5.3
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Converseen/Converseen%200.5/${PORTVERSION}
 
