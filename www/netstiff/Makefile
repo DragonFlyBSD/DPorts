@@ -2,7 +2,7 @@
 # Date created:				23 March 2007
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/www/netstiff/Makefile,v 1.5 2012/11/17 06:02:43 svnexp Exp $
+# $FreeBSD: ports/www/netstiff/Makefile,v 1.6 2013/02/20 16:45:27 svnexp Exp $
 #
 
 PORTNAME=	netstiff
@@ -11,7 +11,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://pkqs.net/~sbeyer/tools/netstiff/
 DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A powerful web page update checker
 
 NO_BUILD=	yes
