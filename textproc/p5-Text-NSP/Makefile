@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Text-NSP
-# Date created:				Sep 30 2004
-# Whom:					Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/textproc/p5-Text-NSP/Makefile,v 1.18 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: ports/textproc/p5-Text-NSP/Makefile,v 1.19 2013/02/18 12:50:30 svnexp Exp $
 
 PORTNAME=	Text-NSP
-PORTVERSION=	1.25
+PORTVERSION=	1.27
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
