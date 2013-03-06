@@ -1,13 +1,9 @@
-# New ports collection makefile for:	sysutils/openipmi
-# Date created:				28/Mar/2010
-# Whom:					Alex Deiter <alex.deiter@gmail.com>
-#
-# $FreeBSD: ports/sysutils/openipmi/Makefile,v 1.14 2013/01/13 21:43:22 svnexp Exp $
-#
+# Created by: Alex Deiter <alex.deiter@gmail.com>
+# $FreeBSD: sysutils/openipmi/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
 
 PORTNAME=	openipmi
 PORTVERSION=	2.0.19
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/OpenIPMI%202.0%20Library
 DISTNAME=	OpenIPMI-${PORTVERSION}
@@ -69,7 +65,7 @@ CONFIGURE_ARGS+=	--with-openssl=no
 WITH_TCL=		yes
 USE_PYTHON=		yes
 WITH_PYTHON=		yes
-BUILD_DEPENDS+=		${PYTHON_SITELIBDIR}/_tkinter.so:${PORTSDIR}/x11-toolkits/py-tkinter \
+BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter \
 			${LOCALBASE}/lib/Tix8.4.3/Tix.tcl:${PORTSDIR}/x11-toolkits/tix
 CONFIGURE_ARGS+=	--with-tkinter
 PLIST_SUB+=		TKINTER=""
@@ -107,7 +103,6 @@ CONFIGURE_ARGS+=	--with-swig=no
 
 .if defined(WITH_TCL)
 USE_TCL=		84
-USE_TCL_THREADS=	yes
 CONFIGURE_ARGS+=	--with-tcl \
 			--with-tclcflags=-I${TCL_INCLUDEDIR} \
 			--with-tcllibs=-ltcl${TCL_VER:S/.//}
