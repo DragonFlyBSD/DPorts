@@ -1,8 +1,5 @@
-# New ports collection makefile for:	XChat fish
-# Date created:		Mon Jan 17 03:22:41 UTC 2005
-# Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/irc/xchat-fish/Makefile,v 1.16 2012/11/17 05:58:30 svnexp Exp $
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: ports/irc/xchat-fish/Makefile,v 1.17 2013/01/26 16:56:10 svnexp Exp $
 #    $MCom: ports/irc/xchat-fish/Makefile,v 1.1 2006/10/04 22:30:07 ahze Exp $
 
 PORTNAME=	fish
