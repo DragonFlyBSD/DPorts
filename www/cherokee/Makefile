@@ -1,5 +1,5 @@
 # Created by: silence <oksala@videotron.ca>
-# $FreeBSD: ports/www/cherokee/Makefile,v 1.111 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: ports/www/cherokee/Makefile,v 1.112 2013/02/07 14:08:05 svnexp Exp $
 
 PORTNAME=	cherokee
 PORTVERSION=	1.2.101
@@ -20,8 +20,8 @@ USE_RC_SUBR=	cherokee
 SUB_FILES=	pkg-install pkg-message
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 
 PORTSCOUT=	limit:^1\.2\.102
 
