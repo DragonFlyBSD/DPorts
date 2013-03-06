@@ -2,7 +2,7 @@
 # Date created:		January 24, 1998
 # Whom:			jseger@FreeBSD.org
 #
-# $FreeBSD: ports/print/freetype/Makefile,v 1.45 2012/12/05 12:55:44 svnexp Exp $
+# $FreeBSD: ports/print/freetype/Makefile,v 1.46 2013/01/06 21:42:19 svnexp Exp $
 #
 
 PORTNAME=	freetype
@@ -16,10 +16,8 @@ MASTER_SITES=	SF \
 		${MASTER_SITE_RINGSERVER:S,%SUBDIR%,graphics/freetype/&,} \
 		ftp://ftp.freetype.org/freetype/freetupe1/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	doceng@FreeBSD.org
 COMMENT=	A free and portable TrueType font rendering engine
-
-DEPRECATED=	Last release in 2000, unsupported by developers
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
