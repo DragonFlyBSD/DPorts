@@ -2,11 +2,11 @@
 # Date created:		2011-11-16
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-kgio/Makefile,v 1.6 2012/11/17 05:56:59 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-kgio/Makefile,v 1.7 2013/01/25 22:42:56 svnexp Exp $
 #
 
 PORTNAME=	kgio
-PORTVERSION=	2.7.4
+PORTVERSION=	2.8.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
