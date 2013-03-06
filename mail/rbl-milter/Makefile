@@ -1,9 +1,5 @@
-# New ports collection makefile for:   rbl-milter
-# Date created:        15 November 2002
-# Whom:                wolpert
-#
-# $FreeBSD: ports/mail/rbl-milter/Makefile,v 1.10 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: wolpert
+# $FreeBSD: ports/mail/rbl-milter/Makefile,v 1.11 2013/01/26 16:56:11 svnexp Exp $
 
 PORTNAME=	rbl-milter
 PORTVERSION=	0.30
