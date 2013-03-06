@@ -1,12 +1,8 @@
-# New ports collection makefile for:	pecl-automap
-# Date created:			21 Jan 2007
-# Whom:				Ditesh Shashikant Gathani <ditesh@gathani.org>
-#
-# $FreeBSD: ports/devel/pecl-automap/Makefile,v 1.5 2012/11/17 05:56:40 svnexp Exp $
-#
+# Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
+# $FreeBSD: ports/devel/pecl-automap/Makefile,v 1.6 2013/02/01 16:47:42 svnexp Exp $
 
 PORTNAME=	automap
-PORTVERSION=	1.1.0
+PORTVERSION=	2.1.0
 CATEGORIES=	devel pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -22,8 +18,6 @@ USE_PHP=	spl
 USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	automap
-DEFAULT_PHP_VER=53
-IGNORE_WITH_PHP=5
 
 CONFIGURE_ARGS=	--enable-automap
 
