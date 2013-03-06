@@ -2,12 +2,12 @@
 # Date created:		19 May, 2009
 # Whom:			Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/databases/sqliteman/Makefile,v 1.8 2012/11/17 05:55:25 svnexp Exp $
+# $FreeBSD: ports/databases/sqliteman/Makefile,v 1.9 2013/02/03 22:42:53 svnexp Exp $
 #
 
 PORTNAME=	sqliteman
 PORTVERSION=	1.2.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	SF
 
