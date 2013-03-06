@@ -1,8 +1,9 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/multimedia/clipgrab/Makefile,v 1.11 2012/11/17 05:59:48 svnexp Exp $
+# $FreeBSD: ports/multimedia/clipgrab/Makefile,v 1.12 2013/01/23 15:05:36 svnexp Exp $
 
 PORTNAME=	clipgrab
 PORTVERSION=	3.2.0.9
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://clipgrab.de/download/ \
 		http://vanbittern.org/
