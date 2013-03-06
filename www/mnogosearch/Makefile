@@ -2,7 +2,7 @@
 # Date created:         27.01.2001
 # Whom:                 ache
 #
-# $FreeBSD: ports/www/mnogosearch/Makefile,v 1.88 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: ports/www/mnogosearch/Makefile,v 1.89 2013/02/07 14:08:06 svnexp Exp $
 #
 
 PORTNAME=	mnogosearch
@@ -55,8 +55,7 @@ USE_OPENSSL=	yes
 
 .if ${PORT_OPTIONS:MTHREADS}
 CONFIGURE_ARGS+=	--enable-pthreads
-CFLAGS+=	${PTHREAD_CFLAGS}
-CONFIGURE_ENV+=	LIBS="${PTHREAD_LIBS}"
+CONFIGURE_ENV+=	LIBS="-pthread"
 .else
 CONFIGURE_ARGS+=	--disable-pthreads
 CFLAGS+=	-DCONSOLE
