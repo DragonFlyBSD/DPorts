@@ -2,11 +2,11 @@
 # Date created:		18 Feburary 2012
 # Whom:			Evan Sarmiento <bsdports@wayfair.com>
 #
-# $FreeBSD: ports/devel/rubygem-bson/Makefile,v 1.3 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-bson/Makefile,v 1.4 2013/01/23 20:44:58 svnexp Exp $
 #
 
 PORTNAME=       bson
-PORTVERSION=	1.6.4
+PORTVERSION=	1.8.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
