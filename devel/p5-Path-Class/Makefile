@@ -1,8 +1,8 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: ports/devel/p5-Path-Class/Makefile,v 1.27 2013/01/04 09:55:27 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Path-Class/Makefile,v 1.28 2013/02/07 14:50:11 svnexp Exp $
 
 PORTNAME=	Path-Class
-PORTVERSION=	0.29
+PORTVERSION=	0.31
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:KWILLIAMS
