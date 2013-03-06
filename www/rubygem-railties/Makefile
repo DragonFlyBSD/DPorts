@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-railties
-# Date created:				1 September 2010
-# Whom:						Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/www/rubygem-railties/Makefile,v 1.22 2013/01/09 04:43:48 svnexp Exp $
+# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
+# $FreeBSD: ports/www/rubygem-railties/Makefile,v 1.23 2013/02/16 21:49:47 svnexp Exp $
 
 PORTNAME=	railties
-PORTVERSION=	3.2.11
+PORTVERSION=	3.2.12
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
