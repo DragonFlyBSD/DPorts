@@ -2,11 +2,11 @@
 # Date created:		2012-02-07
 # Whom:			Shin-ya MURAKAMI <murashin@gfd-dennou.org>
 #
-# $FreeBSD: ports/devel/rubygem-racc/Makefile,v 1.3 2012/11/17 05:57:00 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-racc/Makefile,v 1.4 2013/01/22 03:21:32 svnexp Exp $
 #
 
 PORTNAME=	racc
-PORTVERSION=	1.4.8
+PORTVERSION=	1.4.9
 CATEGORIES=	devel ruby
 MASTER_SITES=	RG
 
