@@ -2,7 +2,7 @@
 # Date created:				24 Aug 2010
 # Whom:					Anonymous
 #
-# $FreeBSD: ports/devel/lua-alien/Makefile,v 1.9 2012/11/17 05:55:58 svnexp Exp $
+# $FreeBSD: ports/devel/lua-alien/Makefile,v 1.10 2013/01/29 00:50:15 svnexp Exp $
 #
 
 PORTNAME=	alien
@@ -18,7 +18,7 @@ COMMENT=	Lua -> C FFI
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi
+LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi
 
 USE_LUA=	5.1
 
