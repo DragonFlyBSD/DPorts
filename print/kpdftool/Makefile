@@ -1,9 +1,9 @@
 # Created by: Yuan, Jue <yuanjue@yuanjue.net>
-# $FreeBSD: ports/print/kpdftool/Makefile,v 1.16 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: ports/print/kpdftool/Makefile,v 1.18 2013/01/23 15:05:37 svnexp Exp $
 
 PORTNAME=	kpdftool
 PORTVERSION=	0.23.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://www.kde-apps.org/CONTENT/content-files/
 DISTFILES=	33194-${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
@@ -19,7 +19,7 @@ USE_GHOSTSCRIPT_RUN=	yes
 MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES=	"KPDFTool" "${COMMENT}" "kpdftool" \
-			"kpdftool" "Application;Qt;Utility;" false
+			"kpdftool" "Qt;Utility;" false
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
