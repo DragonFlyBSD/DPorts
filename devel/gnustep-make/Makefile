@@ -2,7 +2,7 @@
 # Date created:         17 April 2001
 # Whom:                 Thomas Gellekum <tg@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gnustep-make/Makefile,v 1.100 2012/11/17 05:55:46 svnexp Exp $
+# $FreeBSD: ports/devel/gnustep-make/Makefile,v 1.101 2013/02/14 10:22:07 svnexp Exp $
 #
 
 PORTNAME=	gnustep-make
@@ -20,9 +20,8 @@ USE_GNUSTEP=	yes
 GNU_CONFIGURE=	yes
 
 MAKE_FLAGS=	OPTFLAG="${CFLAGS}"
-CFLAGS+=	${PTHREAD_CFLAGS}
 CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL} -c" INSTALL_DATA="${INSTALL} -c"
-CONFIGURE_ARGS+=	--with-thread-lib="${PTHREAD_LIBS}"
+CONFIGURE_ARGS+=	--with-thread-lib=-pthread
 CONFIGURE_ARGS+=	--with-config-file=${GNUSTEP_PREFIX}/GNUstep.conf
 CONFIGURE_ARGS+=	--with-layout=gnustep
 .if defined(GNUSTEP_WITH_LIBOBJC2) || defined(GNUSTEP_WITH_CLANG)
