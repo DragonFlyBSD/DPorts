@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Rack, a Ruby Webserver Interface
-# Date created:		2 Dec 2007
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rubygem-rack/Makefile,v 1.26 2013/01/09 04:43:48 svnexp Exp $
-#
+# Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
+# $FreeBSD: ports/www/rubygem-rack/Makefile,v 1.28 2013/02/16 21:49:47 svnexp Exp $
 
 # XXX: If updating this port, please check compatibality with at least the following ports,
 # XXX: preferably, the full rubygem-* tree.  rack version requirements are specified with ~>
@@ -13,7 +9,7 @@
 # 	www/rubygem-innate
 
 PORTNAME=	rack
-PORTVERSION=	1.4.3
+PORTVERSION=	1.4.5
 PORTEPOCH=	3
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
