@@ -2,7 +2,7 @@
 # Date created:				08/08/08
 # Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
 #
-# $FreeBSD: ports/security/switzerland/Makefile,v 1.7 2012/11/17 06:01:21 svnexp Exp $
+# $FreeBSD: ports/security/switzerland/Makefile,v 1.8 2012/12/30 19:06:22 svnexp Exp $
 #
 
 PORTNAME=	switzerland
@@ -11,7 +11,7 @@ CATEGORIES=	security python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/zero%20point%20one
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	beat@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Test the integrity of communications over networks and firewalls
 
 USE_PYTHON=	yes
