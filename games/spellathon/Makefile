@@ -1,9 +1,9 @@
 # Created by: Girish <girish.rao.dev@gmail.com>
-# $FreeBSD: ports/games/spellathon/Makefile,v 1.19 2012/12/10 19:24:01 svnexp Exp $
+# $FreeBSD: ports/games/spellathon/Makefile,v 1.21 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	spellathon
 PORTVERSION=	6.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Spellathon%20${PORTVERSION}
 
@@ -29,7 +29,7 @@ USE_XORG=	ice sm x11 xau xdmcp xext xrender
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
-DESKTOP_ENTRIES="Spellathon" "${COMMENT}" "" "${PORTNAME}" "" "true"
+DESKTOP_ENTRIES="Spellathon" "${COMMENT}" "" "${PORTNAME}" "Education;Languages;" "true"
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile" | ${XARGS} ${REINPLACE_CMD} -e \
