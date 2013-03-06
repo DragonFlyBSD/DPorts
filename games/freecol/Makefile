@@ -1,8 +1,9 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/games/freecol/Makefile,v 1.29 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: ports/games/freecol/Makefile,v 1.32 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	freecol
-PORTVERSION=	0.10.5
+PORTVERSION=	0.10.7
+PORTREVISION=	1
 CATEGORIES=	games java
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -13,7 +14,7 @@ LICENSE=	GPLv2
 
 USE_ZIP=	yes
 NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/${PORTNAME}
+SUB_FILES=	freecol
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 
@@ -27,18 +28,19 @@ PORTDOCS=	*
 
 DESKTOP_ENTRIES="FreeCol" "${COMMENT}" "${DATADIR}/freecol.xpm" "freecol" "Game;StrategyGame;" "false"
 
-post-patch:
-	@${REINPLACE_CMD} 's|%%DATADIR%%|${DATADIR}|g' \
-		${WRKSRC}/freecol
+.include <bsd.port.options.mk>
+
+post-extract:
+	@${MV} ${WRKDIR}/freecol ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/freecol ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKDIR}/freecol ${PREFIX}/bin/
 	@${MKDIR} ${DATADIR}
 	@${INSTALL_DATA} ${WRKSRC}/FreeCol.jar ${DATADIR}/
 	@${INSTALL_DATA} ${WRKSRC}/freecol.xpm ${DATADIR}/
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} data ${DATADIR}/)
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} jars ${DATADIR}/)
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/FreeCol.pdf ${DOCSDIR}/
 .endif
