@@ -1,8 +1,9 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: ports/misc/nut/Makefile,v 1.108 2012/11/26 05:02:38 svnexp Exp $
+# $FreeBSD: ports/misc/nut/Makefile,v 1.110 2013/01/23 15:05:36 svnexp Exp $
 
 PORTNAME=	nut
 PORTVERSION=	18.4
+PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	SF
 PKGNAMEPREFIX=	health-
@@ -40,7 +41,7 @@ USE_XORG+=	x11 xau xdmcp xext xft xinerama xrender
 MAKE_ENV+=	HAVE_FLTK=1 FLTK_NUT="fltk/Nut"
 PLIST_FILES+=	bin/Nut
 DESKTOP_ENTRIES="Nut" "${COMMENT}" "" "Nut" \
-		"Application;Science;Biology;MedicalSoftware;" "false"
+		"Science;Biology;MedicalSoftware;" "false"
 .else
 MAKE_ENV+=	HAVE_FLTK=0 FLTK_NUT=""
 .endif
