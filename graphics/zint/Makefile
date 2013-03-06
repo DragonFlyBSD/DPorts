@@ -2,12 +2,12 @@
 # Date created:		2010-03-13
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/graphics/zint/Makefile,v 1.7 2012/11/17 05:58:27 svnexp Exp $
+# $FreeBSD: ports/graphics/zint/Makefile,v 1.8 2013/01/23 15:05:35 svnexp Exp $
 #
 
 PORTNAME=	zint
 PORTVERSION=	2.4.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/
 
