@@ -1,4 +1,3 @@
-@comment $FreeBSD: ports/editors/nano-devel/pkg-plist,v 1.6 2012/11/17 05:57:16 svnexp Exp $
 bin/nano
 bin/rnano
 %%NLS%%share/locale/bg/LC_MESSAGES/nano.mo
@@ -52,7 +51,6 @@ bin/rnano
 %%DATADIR%%/java.nanorc
 %%DATADIR%%/makefile.nanorc
 %%DATADIR%%/mgp.nanorc
-
 %%NLS%%%%DATADIR%%/man-html/fr/nano.1.html
 %%NLS%%%%DATADIR%%/man-html/fr/nanorc.5.html
 %%NLS%%%%DATADIR%%/man-html/fr/rnano.1.html

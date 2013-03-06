@@ -1,10 +1,9 @@
-# $FreeBSD: ports/editors/nano-devel/Makefile,v 1.19 2012/11/17 05:57:16 svnexp Exp $
+# $FreeBSD: editors/nano-devel/Makefile 313163 2013-03-01 19:14:31Z eadler $
 
 PORTNAME=	nano
 PORTVERSION=	2.3.1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.nano-editor.org/dist/v${PORTVERSION:R}/
-
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	eadler@FreeBSD.org
