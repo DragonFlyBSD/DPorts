@@ -2,12 +2,12 @@
 # Date created:		2003-10-22
 # Whom:			Roman Bogorodskiy
 #
-# $FreeBSD: ports/ftp/wzdftpd/Makefile,v 1.72 2012/12/11 13:14:25 svnexp Exp $
+# $FreeBSD: ports/ftp/wzdftpd/Makefile,v 1.73 2013/02/05 16:54:22 svnexp Exp $
 #
 
 PORTNAME=	wzdftpd
 PORTVERSION=	0.8.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	ftp ipv6
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-sources/${PORTNAME}-0.8
 
@@ -65,7 +65,7 @@ CONFIGURE_ARGS+=	--disable-openssl
 .endif
 
 .if ${PORT_OPTIONS:MGNUTLS}
-LIB_DEPENDS+=	gnutls.47:${PORTSDIR}/security/gnutls
+LIB_DEPENDS+=	gnutls.26:${PORTSDIR}/security/gnutls
 .else
 CONFIGURE_ARGS+=	--disable-gnutls
 .endif
