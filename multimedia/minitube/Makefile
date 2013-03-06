@@ -1,7 +1,7 @@
-# $FreeBSD: ports/multimedia/minitube/Makefile,v 1.23 2012/11/17 05:59:51 svnexp Exp $
+# $FreeBSD: ports/multimedia/minitube/Makefile,v 1.24 2013/02/25 16:44:26 svnexp Exp $
 
 PORTNAME=	minitube
-PORTVERSION=	1.9
+PORTVERSION=	2.0
 CATEGORIES=	multimedia www
 MASTER_SITES=	http://flavio.tordini.org/files/minitube/
 
