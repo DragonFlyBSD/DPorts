@@ -1,19 +1,15 @@
-# New ports collection makefile for:	qdevelop
-# Date created:				4 Jul 2007
-# Whom:					Yinghong.Liu <liu_yinghong@yahoo.com.cn>
-#
-# $FreeBSD: ports/devel/qdevelop/Makefile,v 1.19 2012/11/17 05:56:54 svnexp Exp $
-#
+# Created by: Yinghong.Liu <liu_yinghong@yahoo.com.cn>
+# $FreeBSD: ports/devel/qdevelop/Makefile,v 1.21 2013/01/23 15:05:33 svnexp Exp $
 
 PORTNAME=	qdevelop
 PORTVERSION=	0.28
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel kde
 MASTER_SITES=	http://biord-software.org/downloads/
 DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	A development environment entirely dedicated to Qt4
+COMMENT=	Development environment entirely dedicated to Qt4
 
 RUN_DEPENDS=	exctags:${PORTSDIR}/devel/ctags
 
@@ -31,7 +27,7 @@ DESKTOP_ENTRIES=	"QDevelop" \
 			"Qt4 development environment" \
 			"${PREFIX}/share/pixmaps/qdevelop.png" \
 			"qdevelop" \
-			"Qt;KDE;Development;" \
+			"Development;IDE;Qt;" \
 			"false"
 
 OPTIONS_DEFINE=	TOOLS
