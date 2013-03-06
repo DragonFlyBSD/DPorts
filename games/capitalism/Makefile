@@ -1,9 +1,9 @@
 # Created by:	nemysis@gmx.ch
-# $FreeBSD: ports/games/capitalism/Makefile,v 1.2 2012/12/10 19:24:01 svnexp Exp $
+# $FreeBSD: ports/games/capitalism/Makefile,v 1.3 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	capitalism
 PORTVERSION=	0.5.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.linux-ecke.de/Capitalism/packages/0.5/
 DISTNAME=	${PORTNAME}_${DISTVERSION}
