@@ -2,7 +2,7 @@
 # Date created:                         2003/04/12
 # Whom:                                 Heiner <h.eichmann@gmx.de>
 #
-# $FreeBSD: ports/deskutils/kbirthday/Makefile,v 1.26 2012/12/30 18:55:45 svnexp Exp $
+# $FreeBSD: ports/deskutils/kbirthday/Makefile,v 1.27 2013/02/09 12:21:18 svnexp Exp $
 
 PORTNAME=	kbirthday
 PORTVERSION=	0.7.3
@@ -24,7 +24,7 @@ USE_LDCONFIG=	yes
 # may or may not solve the alpha compilation issue....
 CONFIGURE_ARGS=	--with-pic
 
-# necesary to access the second master site by getting rid of the default switch -A
+# necessary to access the second master site by getting rid of the default switch -A
 FETCH_CMD ?=/usr/bin/fetch -Rr
 
 post-patch:
