@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-formatador
-# Date created:		2012-08-05
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-formatador/Makefile,v 1.2 2012/11/17 05:56:59 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: ports/devel/rubygem-formatador/Makefile,v 1.3 2013/01/23 22:07:51 svnexp Exp $
 
 PORTNAME=	formatador
-PORTVERSION=	0.2.3
+PORTVERSION=	0.2.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
