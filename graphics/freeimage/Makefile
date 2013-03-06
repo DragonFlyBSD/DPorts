@@ -1,12 +1,8 @@
-# New ports collection makefile for:	FreeImage
-# Date created:				2005-09-01
-# Whom:					Choe, Cheng-Dae <whitekid@gmail.com>
-#
-# $FreeBSD: ports/graphics/freeimage/Makefile,v 1.18 2012/11/17 05:58:06 svnexp Exp $
-#
+# Created by: Choe, Cheng-Dae <whitekid@gmail.com>
+# $FreeBSD: ports/graphics/freeimage/Makefile,v 1.19 2013/01/30 14:46:04 svnexp Exp $
 
 PORTNAME=	freeimage
-PORTVERSION=	3.15.1
+PORTVERSION=	3.15.4
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Source%20Distribution/${PORTVERSION}
 DISTNAME=	FreeImage${PORTVERSION:S/.//g}
