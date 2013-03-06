@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pinentry
-# Date created:		29 Jan 2003
-# Whom:			michaelnottebrock@gmx.net
-#
-# $FreeBSD: ports/security/pinentry/Makefile,v 1.65 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Michael Nottebrock <lofi@freebsd.org>
+# $FreeBSD: ports/security/pinentry/Makefile,v 1.66 2013/02/06 13:14:25 svnexp Exp $
 
 PORTNAME=	pinentry
 PORTVERSION=	0.8.1
@@ -13,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	pinentry
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT?=	A collection of simple PIN or passphrase entry dialogs
+COMMENT?=	Collection of simple PIN or passphrase entry dialogs
 
 LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt \
 		ksba.19:${PORTSDIR}/security/libksba
@@ -54,7 +50,9 @@ PLIST_SUB+=	WITH_QT3="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MQT4}
-USE_QT4=	gui moc_build
+# bsd.kde.mk overrides MOC from bsd.qt.mk
+USE_QT4=	gui # moc_build
+BUILD_DEPENDS+=	${MOC4}:${PORTSDIR}/devel/qt4-moc
 PLIST_SUB+=	WITH_QT4=""
 MOC4=		${LOCALBASE}/bin/moc-qt4
 LDFLAGS+=	${PTHREAD_LIBS}
