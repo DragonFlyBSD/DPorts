@@ -1,30 +1,35 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: ports/databases/py-bsddb/Makefile,v 1.20 2012/11/17 05:55:21 svnexp Exp $
+# $FreeBSD: databases/py-bsddb/Makefile 313167 2013-03-01 20:12:01Z lwhsu $
 
 PORTNAME=	bsddb
 PORTVERSION=	${PYTHON_PORTVERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases python
 MASTER_SITES=	${PYTHON_MASTER_SITES}
 MASTER_SITE_SUBDIR=	${PYTHON_MASTER_SITE_SUBDIR}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	${PYTHON_DISTFILE}
 
-MAINTAINER?=	python@FreeBSD.org
-COMMENT=	Python bindings to the Berkeley DB library
+MAINTAINER=	python@FreeBSD.org
+COMMENT=	Standard Python bindings to the Berkeley DB library
 
 USE_BDB=	yes
-USE_PYTHON?=	yes
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 USE_XZ=		yes
-PYDISTUTILS_PKGNAME=	_bsddb
-PYDISTUTILS_PKGVERSION=	0.0.0
+
 DIST_SUBDIR=	python
-WRKSRC=		${PYTHON_WRKSRC}/Modules
 DISTINFO_FILE=	${PORTSDIR}/lang/python${PYTHON_SUFFIX}/distinfo
+WRKSRC=		${PYTHON_WRKSRC}/Modules
+
+PYDISTUTILS_INSTALLARGS+=	--install-lib ${PYTHON_LIBDIR}/lib-dynload
+PYDISTUTILS_NOEGGINFO=	yes
+PYDISTUTILS_PKGNAME=	_bsddb
+
 MAKE_ENV=	BSDDB_VERSION=${BDB_LIB_NAME}
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/_bsddb.so
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-py${PYTHON_SUFFIX}-_bsddb.c
+
+PLIST_FILES=	%%PYTHON_LIBDIR%%/lib-dynload/_bsddb.so
 
 .include <bsd.port.pre.mk>
 
