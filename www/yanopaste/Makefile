@@ -1,9 +1,5 @@
-# New ports collection makefile for:	yanopaste
-# Date created:		2008-09-15
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/www/yanopaste/Makefile,v 1.5 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/www/yanopaste/Makefile,v 1.6 2013/02/18 08:44:55 svnexp Exp $
 
 PORTNAME=	yanopaste
 PORTVERSION=	1.3.0
