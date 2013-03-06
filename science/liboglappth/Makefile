@@ -2,15 +2,14 @@
 # Date created:			2008/8/21
 # Whom:				Nakata Maho <maho@FreeBSD.org>
 #
-# $FreeBSD: ports/science/liboglappth/Makefile,v 1.8 2012/11/17 06:00:58 svnexp Exp $
+# $FreeBSD: ports/science/liboglappth/Makefile,v 1.9 2013/01/08 07:53:22 svnexp Exp $
 
 PORTNAME=	liboglappth
-PORTVERSION=	0.98
-PORTREVISION=	4
+PORTVERSION=	1.0.0
 CATEGORIES=	science
-MASTER_SITES=	http://www.uku.fi/~thassine/projects/download/current/ \
-		http://bioinformatics.org/ghemical/download/
-
+MASTER_SITES=	http://bioinformatics.org/ghemical/download/release20111012/	\
+		http://bioinformatics.org/ghemical/download/current
+	
 MAINTAINER=	maho@FreeBSD.org
 COMMENT=	Support libraries of science/ghemical port
 
