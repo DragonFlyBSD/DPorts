@@ -2,11 +2,11 @@
 # Date created:		2004-01-22
 # Whom:			Matt Dawson <matt@mattsnetwork.co.uk>
 #
-# $FreeBSD: ports/comms/gpredict/Makefile,v 1.24 2012/11/17 05:54:59 svnexp Exp $
+# $FreeBSD: ports/comms/gpredict/Makefile,v 1.25 2013/01/23 15:05:32 svnexp Exp $
 
 PORTNAME=	gpredict
 PORTVERSION=	1.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	comms hamradio
 MASTER_SITES=	SF/gpredict/Gpredict/${PORTVERSION}
 
