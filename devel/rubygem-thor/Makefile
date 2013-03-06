@@ -2,10 +2,10 @@
 # Date created:				1 September 2010
 # Whom:						Philip M. Gollucci <pgollucci@p6m7g8.com>
 #
-# $FreeBSD: ports/devel/rubygem-thor/Makefile,v 1.11 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-thor/Makefile,v 1.12 2013/01/24 22:06:44 svnexp Exp $
 
 PORTNAME=	thor
-PORTVERSION=	0.16.0
+PORTVERSION=	0.17.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
