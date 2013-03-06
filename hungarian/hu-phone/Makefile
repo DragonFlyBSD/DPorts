@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Phone codes in Hungary
-# Date created:         2002-06-22
-# Whom:                 janos.mohacsi@bsd.hu
-#
-# $FreeBSD: ports/hungarian/hu-phone/Makefile,v 1.7 2012/11/17 05:58:27 svnexp Exp $
-#
+# Created by: janos.mohacsi@bsd.hu
+# $FreeBSD: ports/hungarian/hu-phone/Makefile,v 1.8 2013/01/09 20:04:49 svnexp Exp $
 
 PORTNAME=	phone
 PORTVERSION=	20020622
@@ -13,7 +9,7 @@ PKGNAMEPREFIX=	hu-
 DISTNAME=	korzetszam.2002.06.22
 EXTRACT_SUFX=	.gz
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Phone codes in Hungary / Magyarorszagi korzetszamok
 
 PLIST_FILES=	share/misc/hu.phone
