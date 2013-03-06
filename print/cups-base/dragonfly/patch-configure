@@ -1,5 +1,5 @@
---- configure.orig	2012-07-27 22:57:23.000000000 +0200
-+++ configure	2012-11-05 20:13:13.000000000 +0100
+--- configure.orig	2012-07-25 22:43:58.000000000 +0200
++++ configure	2013-02-15 17:12:44.214907000 +0100
 @@ -566,6 +566,7 @@
  # Factoring default headers for most tests.
  ac_includes_default="\
@@ -8,7 +8,7 @@
  #ifdef HAVE_SYS_TYPES_H
  # include <sys/types.h>
  #endif
-@@ -5660,7 +5661,7 @@
+@@ -5595,7 +5596,7 @@
  		CFLAGS="$CFLAGS `$PKGCONFIG --cflags dbus-1` -DDBUS_API_SUBJECT_TO_CHANGE"
  		SERVERLIBS="$SERVERLIBS `$PKGCONFIG --libs dbus-1`"
  		DBUS_NOTIFIER="dbus"
@@ -17,7 +17,25 @@
  		SAVELIBS="$LIBS"
  		LIBS="$LIBS $DBUS_NOTIFIERLIBS"
  		ac_fn_c_check_func "$LINENO" "dbus_message_iter_init_append" "ac_cv_func_dbus_message_iter_init_append"
-@@ -8302,7 +8303,7 @@
+@@ -6331,7 +6332,7 @@
+ # Locale data
+ if test "$localedir" = "\${datarootdir}/locale"; then
+ 	case "$uname" in
+-		Linux | GNU | *BSD* | Darwin*)
++		Linux | GNU | *BSD* | Darwin* | DragonFly*)
+ 			CUPS_LOCALEDIR="$datarootdir/locale"
+ 			;;
+ 
+@@ -6389,7 +6390,7 @@
+ 
+ # Server executables...
+ case "$uname" in
+-	*BSD* | Darwin*)
++	*BSD* | Darwin* | DragonFly*)
+ 		# *BSD and Darwin (MacOS X)
+ 		INSTALL_SYSV=""
+ 		CUPS_SERVERBIN="$exec_prefix/libexec/cups"
+@@ -9364,7 +9365,7 @@
  
  
  	if test x$ac_cv_header_pthread_h = xyes; then
