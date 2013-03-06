@@ -2,7 +2,7 @@
 # Date created:				26 December 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/www/anyremote2html/Makefile,v 1.9 2012/11/17 06:02:27 svnexp Exp $
+# $FreeBSD: ports/www/anyremote2html/Makefile,v 1.10 2013/02/20 16:45:26 svnexp Exp $
 #
 
 PORTNAME=	anyremote2html
@@ -10,7 +10,7 @@ PORTVERSION=	1.4
 CATEGORIES=	www deskutils
 MASTER_SITES=	SF/anyremote/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A web interface for anyRemote
 
 RUN_DEPENDS=	anyremote:${PORTSDIR}/comms/anyremote
