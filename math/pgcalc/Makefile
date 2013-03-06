@@ -2,7 +2,7 @@
 # Date created:				20 Mar 2005
 # Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
 #
-# $FreeBSD: ports/math/pgcalc/Makefile,v 1.22 2012/11/17 05:59:28 svnexp Exp $
+# $FreeBSD: ports/math/pgcalc/Makefile,v 1.23 2012/12/30 18:56:10 svnexp Exp $
 #
 
 PORTNAME=	pgcalc2
@@ -13,6 +13,9 @@ MASTER_SITES=	http://www.pgcalc.net/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A powerful scientific skinnable calculator
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 USE_KDELIBS_VER=	3
