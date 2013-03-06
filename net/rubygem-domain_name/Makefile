@@ -2,10 +2,10 @@
 # Date created:				31 Mar 2012
 # Whom:					MIHIRA Yoshiro <sanpei@FreeBSD.org>
 #
-# $FreeBSD: ports/net/rubygem-domain_name/Makefile,v 1.3 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: ports/net/rubygem-domain_name/Makefile,v 1.4 2013/01/22 00:50:48 svnexp Exp $
 
 PORTNAME=	domain_name
-PORTVERSION=	0.5.3
+PORTVERSION=	0.5.7
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
