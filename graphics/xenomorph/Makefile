@@ -3,7 +3,7 @@
 # Date created:			Apr 3, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/graphics/xenomorph/Makefile,v 1.12 2012/11/17 05:58:25 svnexp Exp $
+# $FreeBSD: ports/graphics/xenomorph/Makefile,v 1.13 2012/12/30 18:56:03 svnexp Exp $
 #
 
 PORTNAME=	xenomorph
@@ -17,6 +17,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An image filter system based on volterra and morphologic filters
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_BZIP2=	yes
 USE_QT_VER=	3
