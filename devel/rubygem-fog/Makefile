@@ -2,11 +2,11 @@
 # Date created:		2012-08-05
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-fog/Makefile,v 1.3 2012/11/17 05:56:59 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-fog/Makefile,v 1.4 2013/01/23 22:05:01 svnexp Exp $
 #
 
 PORTNAME=	fog
-PORTVERSION=	1.6.0
+PORTVERSION=	1.9.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
