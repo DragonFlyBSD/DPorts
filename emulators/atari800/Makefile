@@ -1,9 +1,5 @@
-# New ports collection makefile for:   Atari800
-# Date created:		29th April, 1997
-# Whom:			Joel Sutton <jsutton@webnet.com.au>
-#
-# $FreeBSD: ports/emulators/atari800/Makefile,v 1.47 2012/11/17 05:57:19 svnexp Exp $
-#
+# Created by: Joel Sutton <jsutton@webnet.com.au>
+# $FreeBSD: emulators/atari800/Makefile 313080 2013-02-28 03:48:37Z miwi $
 
 PORTNAME=	atari800
 PORTVERSION=	2.0.3
@@ -17,7 +13,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	gamato@users.sf.net
 COMMENT=	Atari 8-bit computer emulator
 
-BUILD_DEPENDS=	unzip:${PORTSDIR}/archivers/unzip
+BUILD_DEPENDS=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
 RESTRICTED=	"xf25 contains copyright ROMs and cannot be distributed."
