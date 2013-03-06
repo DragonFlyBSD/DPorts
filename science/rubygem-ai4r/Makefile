@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rubygem-ai4r
-# Date created:				19 Mar 2011
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/science/rubygem-ai4r/Makefile,v 1.2 2012/11/17 06:01:00 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: ports/science/rubygem-ai4r/Makefile,v 1.3 2013/02/26 02:47:10 svnexp Exp $
 
 PORTNAME=	ai4r
 PORTVERSION=	1.9
