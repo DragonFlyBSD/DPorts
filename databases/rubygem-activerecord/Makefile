@@ -1,8 +1,8 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: ports/databases/rubygem-activerecord/Makefile,v 1.47 2013/01/11 23:12:56 svnexp Exp $
+# $FreeBSD: ports/databases/rubygem-activerecord/Makefile,v 1.48 2013/02/16 21:49:41 svnexp Exp $
 
 PORTNAME=	activerecord
-PORTVERSION=	3.2.11
+PORTVERSION=	3.2.12
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
@@ -23,6 +23,8 @@ MYSQL_DESC=	Use native MySQL bindings
 PGSQL_DESC=	Use native PostgreSQL bindings
 SQLITE3_DESC=	Use native SQLite3 bindings
 OPTIONSFILE=	${PORT_DBDIR}/rubygem-${PORTNAME}/options
+
+GEM_ENV+=	LANG=en_US.UTF-8
 
 .include <bsd.port.options.mk>
 
