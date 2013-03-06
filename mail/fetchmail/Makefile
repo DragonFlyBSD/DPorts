@@ -1,5 +1,5 @@
 # Created by: Ville Eerola <ve@sci.fi>
-# $FreeBSD: ports/mail/fetchmail/Makefile,v 1.225 2013/01/10 01:55:48 svnexp Exp $
+# $FreeBSD: mail/fetchmail/Makefile 313331 2013-03-03 08:13:07Z beech $
 #
 # NOTE:  The fetchmailconf program (an interactive program for
 # writing .fetchmailrc files) requires Python, Tk, X11, etc..
@@ -9,6 +9,7 @@
 
 PORTNAME=	fetchmail
 PORTVERSION=	6.3.24
+PORTREVISION=	1
 CATEGORIES=	mail ipv6
 MASTER_SITES=	SF/${PORTNAME}/branch_6.3/ \
 		http://mandree.home.pages.de/${PORTNAME}/

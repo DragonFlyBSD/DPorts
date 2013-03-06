@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/fetchmail/files/fetchmail.in,v 1.12 2012/11/17 05:59:03 svnexp Exp $
+# $FreeBSD: mail/fetchmail/files/fetchmail.in 300896 2012-07-14 13:54:48Z beat $
 #
 
 # PROVIDE: fetchmail

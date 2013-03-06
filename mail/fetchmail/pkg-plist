@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/mail/fetchmail/pkg-plist,v 1.33 2013/01/10 01:55:48 svnexp Exp $
+@comment $FreeBSD: mail/fetchmail/pkg-plist 310167 2013-01-10 01:36:21Z mandree $
 bin/fetchmail
 bin/fetchmailconf
 %%NOX11%%libexec/fetchmailconf.py
