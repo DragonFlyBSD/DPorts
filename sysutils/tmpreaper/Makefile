@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tmpreaper
-# Date created:				21 Jul 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/sysutils/tmpreaper/Makefile,v 1.14 2012/11/17 06:01:48 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: ports/sysutils/tmpreaper/Makefile,v 1.15 2013/01/15 13:46:58 svnexp Exp $
 
 PORTNAME=	tmpreaper
 PORTVERSION=	1.6.13
@@ -23,7 +19,11 @@ PLIST_FILES=	sbin/tmpreaper
 PORTDOCS=	README
 MAN8=		tmpreaper.8
 
-.if !defined(NOPORTDOCS)
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
