@@ -1,5 +1,5 @@
 # Created by: Vsevolod Lobko <seva@sevasoft.kiev.ua>
-# $FreeBSD: ports/mail/py-milter/Makefile,v 1.18 2013/01/13 20:48:34 svnexp Exp $
+# $FreeBSD: ports/mail/py-milter/Makefile,v 1.19 2013/02/13 06:44:05 svnexp Exp $
 
 PORTNAME=	milter
 PORTVERSION=	0.9.7
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	${PYPORTNAME}/${PYPORTNAME}/${DISTNAME}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	${PYPORTNAME}-${PORTVERSION}
 
-MAINTAINER=	linpc@cs.nctu.edu.tw
+MAINTAINER=	pclin@FreeBSD.org
 COMMENT=	Python interface to Sendmail milter API
 
 LICENSE=	GPLv2
