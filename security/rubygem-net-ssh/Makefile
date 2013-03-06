@@ -1,10 +1,10 @@
 # Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-# $FreeBSD: ports/security/rubygem-net-ssh/Makefile,v 1.33 2013/01/08 00:51:25 svnexp Exp $
+# $FreeBSD: security/rubygem-net-ssh/Makefile 313019 2013-02-27 02:13:43Z swills $
 #
 # Remeber to check sysutils/rubygem-chef
 
 PORTNAME=	net-ssh
-PORTVERSION=	2.2.2
+PORTVERSION=	2.6.5
 PORTEPOCH=	2
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
