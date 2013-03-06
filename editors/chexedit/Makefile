@@ -2,11 +2,12 @@
 # Date Created:				8 Jul 2000
 # Whom:					Roman Shterenzon <roman@xpert.com>
 #
-# $FreeBSD: ports/editors/chexedit/Makefile,v 1.15 2012/11/17 05:57:12 svnexp Exp $
+# $FreeBSD: ports/editors/chexedit/Makefile,v 1.16 2013/01/28 18:41:50 svnexp Exp $
 #
 
 PORTNAME=	chexedit
 PORTVERSION=	0.9.7
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.rogoyski.com/adam/programs/hexedit/ \
 		http://mirror.amdmi3.ru/distfiles/
