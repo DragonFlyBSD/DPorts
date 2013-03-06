@@ -1,9 +1,5 @@
-# New ports collection makefile for:	elmo
-# Date created:				2003-09-27
-# Whom:					trevor
-#
-# $FreeBSD: ports/mail/elmo-devel/Makefile,v 1.29 2012/11/17 05:59:01 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/mail/elmo-devel/Makefile,v 1.30 2013/01/27 06:41:39 svnexp Exp $
 
 PORTNAME=	elmo
 PORTVERSION=	1.3.2
