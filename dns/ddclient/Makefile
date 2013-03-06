@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: ports/dns/ddclient/Makefile,v 1.33 2012/12/12 19:23:44 svnexp Exp $
+# $FreeBSD: ports/dns/ddclient/Makefile,v 1.34 2013/01/11 20:26:46 svnexp Exp $
 
 PORTNAME=	ddclient
 PORTVERSION=	3.8.1
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	dns
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	simon.krenz@ghostbsd.org
 COMMENT=	Update dynamic DNS entries
 
 LICENSE=	GPLv2
