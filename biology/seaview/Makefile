@@ -1,8 +1,9 @@
 # Created by: frankch@waru.life.nthu.edu.tw
-# $FreeBSD: ports/biology/seaview/Makefile,v 1.49 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: ports/biology/seaview/Makefile,v 1.51 2013/01/23 15:05:31 svnexp Exp $
 
 PORTNAME=	seaview
 PORTVERSION=	4.4.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://pbil.univ-lyon1.fr/software/seaview_data/archive/
@@ -37,8 +38,8 @@ MAKE_ENV=	HELPFILE='-DDEFAULT_HELPFILE=\"${DATADIR}/seaview.html\"' \
 ALL_TARGET=	${PORTNAME}
 MAKE_JOBS_SAFE=	yes
 
-DESKTOP_ENTRIES="${PORTNAME}" "${COMMENT}" "" "${PORTNAME}" \
-		"Application;Science;Biology;" "true"
+DESKTOP_ENTRIES="SeaView" "${COMMENT}" "" \
+		"${PORTNAME}" "Biology;Science;" "true"
 
 PLIST_FILES=	bin/seaview %%DATADIR%%/seaview.html
 PLIST_DIRS=	%%DATADIR%%
