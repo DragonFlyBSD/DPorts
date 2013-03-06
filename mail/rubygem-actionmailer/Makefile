@@ -1,11 +1,8 @@
-# Ports collection makefile for:	gem-actionmailer
-# Date created:				27 May 2005
-# Whom:					Jonathan Weiss (<jw@innerewut.de>)
-#
-# $FreeBSD: ports/mail/rubygem-actionmailer/Makefile,v 1.42 2013/01/09 04:43:44 svnexp Exp $
+# Created by: Jonathan Weiss (<jw@innerewut.de>)
+# $FreeBSD: ports/mail/rubygem-actionmailer/Makefile,v 1.43 2013/02/16 21:49:44 svnexp Exp $
 
 PORTNAME=	actionmailer
-PORTVERSION=	3.2.11
+PORTVERSION=	3.2.12
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 
