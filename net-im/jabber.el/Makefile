@@ -2,11 +2,11 @@
 # Date created:                         26 May 2006
 # Whom:                                 Max N. Boyarov <m.boyarov@bsd.by>
 #
-# $FreeBSD: ports/net-im/jabber.el/Makefile,v 1.17 2012/11/17 06:00:27 svnexp Exp $
+# $FreeBSD: ports/net-im/jabber.el/Makefile,v 1.18 2013/02/05 16:54:24 svnexp Exp $
 
 PORTNAME=	jabber.el
 PORTVERSION=	0.8.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	net-im elisp
 MASTER_SITES=	SF/emacs-jabber/emacs-jabber/${PORTVERSION}
 DISTNAME=		emacs-jabber-${PORTVERSION}
