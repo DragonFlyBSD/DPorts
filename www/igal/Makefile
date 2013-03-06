@@ -1,9 +1,5 @@
-# New ports collection makefile for:   igal
-# Date created:                        14 Aug 2002
-# Whom:                                Dylan Carlson  <absinthe@pobox.com>
-#
-# $FreeBSD: ports/www/igal/Makefile,v 1.14 2012/11/17 06:02:37 svnexp Exp $
-#
+# Created by: Dylan Carlson  <absinthe@pobox.com>
+# $FreeBSD: ports/www/igal/Makefile,v 1.16 2013/01/27 11:52:37 svnexp Exp $
 
 PORTNAME=	igal
 PORTVERSION=	1.4
@@ -11,8 +7,11 @@ PORTREVISION=	7
 CATEGORIES=	www graphics
 MASTER_SITES=	http://www.stanford.edu/~epop/igal/
 
-MAINTAINER=	absinthe@pobox.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A static html image gallery generator for *nix
+
+DEPRECATED=	No more upstream, no more public distfiles, consider using www/llgal
+EXPIRATION_DATE=	2013-02-27
 
 RUN_DEPENDS=	${LOCALBASE}/bin/cjpeg:${PORTSDIR}/graphics/jpeg \
 		convert:${PORTSDIR}/graphics/ImageMagick
