@@ -2,10 +2,10 @@
 # Date created:				7 November 2009
 # Whom:					Robert Gogolok <gogo@cs.uni-sb.de>
 #
-# $FreeBSD: ports/sysutils/rubygem-bundler/Makefile,v 1.19 2012/11/17 06:01:44 svnexp Exp $
+# $FreeBSD: ports/sysutils/rubygem-bundler/Makefile,v 1.20 2013/01/22 03:17:54 svnexp Exp $
 
 PORTNAME=	bundler
-PORTVERSION=	1.1.5
+PORTVERSION=	1.2.3
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
