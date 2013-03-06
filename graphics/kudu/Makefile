@@ -2,12 +2,12 @@
 # Date created:		28 Mar 2006
 # Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
 #
-# $FreeBSD: ports/graphics/kudu/Makefile,v 1.20 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: ports/graphics/kudu/Makefile,v 1.22 2013/01/23 15:05:35 svnexp Exp $
 #
 
 PORTNAME=	kudu
 PORTVERSION=	0.1.2
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -31,7 +31,7 @@ DESKTOP_ENTRIES="Kudu" \
 		"Edit 3D models" \
 		"${DATADIR}/images/logo.png" \
 		"kudu" \
-		"Application;Graphics;" \
+		"Graphics;3DGraphics;GTK;" \
 		true
 
 post-patch:
