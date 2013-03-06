@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt40
-# Date created:				Wed Jun 29 11:49:42 CEST 2005
-# Whom:					lofi@freebsd.org
-#
-# $FreeBSD: ports/devel/qt4-libqtassistantclient/Makefile,v 1.23 2012/11/17 05:56:55 svnexp Exp $
-#
+# Created by: lofi@freebsd.org
+# $FreeBSD: ports/devel/qt4-libqtassistantclient/Makefile,v 1.24 2013/02/03 21:43:08 svnexp Exp $
 
 PORTNAME=	libQtAssistantClient
 PORTVERSION=	4.6.3
