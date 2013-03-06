@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xv-m17n
-# Date created:		07 Oct 1998
-# Whom:			Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/xv-m17n/Makefile,v 1.13 2012/11/17 05:58:26 svnexp Exp $
-#
+# Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
+# $FreeBSD: ports/graphics/xv-m17n/Makefile,v 1.14 2013/01/26 15:44:00 svnexp Exp $
 
 PKGNAMESUFFIX=	-m17n
 
@@ -15,7 +11,7 @@ PKGDIR=		${.CURDIR}
 
 MAKE_ENV=	LOCALE_EXTENSION=-DTV_MULTILINGUAL
 
-RUN_DEPENDS=	xv:${PORTSDIR}/graphics/xv
+RUN_DEPENDS=	xv:${PORTSDIR}/${PKGCATEGORY}/xv
 
 NOMAN=		yes
 
