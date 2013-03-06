@@ -2,11 +2,12 @@
 # Date created:		2009-11-27
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/sysutils/hfsexplorer/Makefile,v 1.3 2012/11/17 06:01:34 svnexp Exp $
+# $FreeBSD: ports/sysutils/hfsexplorer/Makefile,v 1.4 2013/01/23 15:05:38 svnexp Exp $
 #
 
 PORTNAME=	hfsexplorer
 PORTVERSION=	0.21
+PORTREVISION=	1
 CATEGORIES=	sysutils java
 MASTER_SITES=	SF/catacombae/HFSExplorer/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-0_21-src
