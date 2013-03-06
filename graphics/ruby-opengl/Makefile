@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/OpenGL
-# Date created:		24 Aug 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/graphics/ruby-opengl/Makefile,v 1.24 2012/11/17 05:58:21 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: graphics/ruby-opengl/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	opengl
 PORTVERSION=	0.32b
@@ -17,6 +13,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	OpenGL/GLU/GLUT interface modules for Ruby
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
