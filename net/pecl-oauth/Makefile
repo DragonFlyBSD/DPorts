@@ -1,12 +1,8 @@
-# New ports collection makefile for:	pecl-oauth
-# Date created:			25 Nov 2008
-# Whom:				Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/net/pecl-oauth/Makefile,v 1.9 2012/11/17 06:00:15 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: ports/net/pecl-oauth/Makefile,v 1.10 2013/02/01 07:57:37 svnexp Exp $
 
 PORTNAME=	oauth
-PORTVERSION=	1.2.2
+PORTVERSION=	1.2.3
 CATEGORIES=	net pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
