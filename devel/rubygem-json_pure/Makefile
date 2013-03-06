@@ -2,11 +2,11 @@
 # Date created:		Oct 7, 2008
 # Whom:			Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-json_pure/Makefile,v 1.24 2012/11/17 05:56:59 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-json_pure/Makefile,v 1.26 2013/02/16 03:47:16 svnexp Exp $
 #
 
 PORTNAME=	json_pure
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.7
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
