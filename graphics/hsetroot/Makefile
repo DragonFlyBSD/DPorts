@@ -1,9 +1,5 @@
-# New ports collection makefile for:  hsetroot
-# Date created:        30 November 2003
-# Whom:                Vincent Tantardini <vinc@freebsd-fr.org>
-#
-# $FreeBSD: ports/graphics/hsetroot/Makefile,v 1.18 2012/11/17 05:58:09 svnexp Exp $
-#
+# Created by: Vincent Tantardini <vinc@freebsd-fr.org>
+# $FreeBSD: ports/graphics/hsetroot/Makefile,v 1.19 2013/01/24 11:56:09 svnexp Exp $
 
 PORTNAME=	hsetroot
 PORTVERSION=	1.0.2
@@ -12,12 +8,14 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://cdn.thegraveyard.org/releases/hsetroot/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Utility to compose wallpapers for X
+COMMENT=	Wallpaper manipulation utility for X11
 
-PLIST_FILES=	bin/hsetroot
+LICENSE=	GPLv2
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
 USE_EFL=	imlib2
 
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+PLIST_FILES=	bin/hsetroot
 
-.include 	<bsd.port.mk>
+.include <bsd.port.mk>
