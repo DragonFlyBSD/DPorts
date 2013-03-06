@@ -1,11 +1,11 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: ports/astro/stellarium/Makefile,v 1.47 2012/11/17 05:54:26 svnexp Exp $
+# $FreeBSD: ports/astro/stellarium/Makefile,v 1.48 2013/02/21 04:42:21 svnexp Exp $
 
 PORTNAME=	stellarium
-PORTVERSION=	0.11.4
+PORTVERSION=	0.12.0
 CATEGORIES=	astro
 MASTER_SITES=	SF/${PORTNAME}/Stellarium-sources/${PORTVERSION}
-DISTFILES=	${DISTNAME}a${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_ONLY:=	${DISTFILES}
 
 MAINTAINER=	danfe@FreeBSD.org
