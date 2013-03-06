@@ -1,5 +1,5 @@
-# Created by:	Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: ports/net-p2p/amule/Makefile,v 1.63 2012/12/02 14:07:36 svnexp Exp $
+# Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
+# $FreeBSD: ports/net-p2p/amule/Makefile,v 1.64 2013/01/20 12:48:51 svnexp Exp $
 
 PORTNAME=	amule
 PORTVERSION=	2.3.1
@@ -23,7 +23,7 @@ CONFLICTS=	amule-devel-[0-9]*
 
 USE_BZIP2=	yes
 USE_BISON=	build
-USE_GNOME=	pkgconfig
+USE_PKGCONFIG=	yes
 USE_GMAKE=	yes
 USE_WX=		2.8
 WX_CONF_ARGS=	absolute
@@ -61,7 +61,6 @@ PORTDOCS=	ABOUT-NLS Changelog EC_Protocol.txt INSTALL README TODO \
 		amulesig.txt license.txt
 
 FLEX?=		${LOCALBASE}/bin/flex
-PKG_CONFIG?=	${LOCALBASE}/bin/pkg-config
 
 .include <bsd.port.options.mk>
 
