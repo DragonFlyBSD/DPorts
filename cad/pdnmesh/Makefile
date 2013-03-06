@@ -1,14 +1,14 @@
 # Created by: Sarod Yatawatta <sarod@cs.pdn.ac.lk>
-# $FreeBSD: ports/cad/pdnmesh/Makefile,v 1.30 2012/12/10 19:23:58 svnexp Exp $
+# $FreeBSD: ports/cad/pdnmesh/Makefile,v 1.32 2013/01/23 15:05:31 svnexp Exp $
 
 PORTNAME=	pdnmesh
 PORTVERSION=	0.2.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-source/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Finite element program
+COMMENT=	Mesh generator and solver for Finite Element problems
 
 LICENSE=	GPLv2 # (or later)
 
@@ -43,7 +43,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		pdnmesh.1
 MAN5=		pdnmesh_input.5
 
-DESKTOP_ENTRIES="${PORTNAME}" "${COMMENT}" "" "${PORTNAME}" "" "true"
+DESKTOP_ENTRIES="pdnMesh" "${COMMENT}" "" "${PORTNAME}" "" "true"
 
 .include <bsd.port.options.mk>
 
