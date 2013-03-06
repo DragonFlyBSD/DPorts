@@ -1,11 +1,8 @@
-# Ports collection makefile for:	gem-actionpack
-# Date created:				27 May 2005
-# Whom:					Jonathan Weiss (<jw@innerewut.de>)
-#
-# $FreeBSD: ports/www/rubygem-actionpack/Makefile,v 1.46 2013/01/09 04:43:48 svnexp Exp $
+# Created by: Jonathan Weiss (<jw@innerewut.de>)
+# $FreeBSD: ports/www/rubygem-actionpack/Makefile,v 1.47 2013/02/16 21:49:47 svnexp Exp $
 
 PORTNAME=	actionpack
-PORTVERSION=	3.2.11
+PORTVERSION=	3.2.12
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
