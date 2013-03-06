@@ -2,11 +2,11 @@
 # Date created:		2011-06-16
 # Whom:			Ryan Steinmetz <rpsfa@rit.edu>
 #
-# $FreeBSD: ports/devel/rubygem-delayed_job/Makefile,v 1.8 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-delayed_job/Makefile,v 1.9 2013/01/23 21:01:47 svnexp Exp $
 #
 
 PORTNAME=	delayed_job
-PORTVERSION=	3.0.3
+PORTVERSION=	3.0.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
