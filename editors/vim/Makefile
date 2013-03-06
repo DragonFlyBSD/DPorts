@@ -3,7 +3,7 @@
 # Date created:			  Sat June 29, 1996
 # Whom:				  David O'Brien (obrien@cs.ucdavis.edu)
 #
-# $FreeBSD: ports/editors/vim/Makefile,v 1.401 2012/11/17 05:57:19 svnexp Exp $
+# $FreeBSD: ports/editors/vim/Makefile,v 1.402 2013/01/29 17:43:39 svnexp Exp $
 #
 
 PORTNAME?=	vim
@@ -38,10 +38,11 @@ SLAVEDIRS=	editors/vim-lite
 .include <bsd.port.options.mk>
 .endif
 
+CONFLICTS=	vim6* vim*-gnome libsysinfo
 .if defined(LITE)
-CONFLICTS=	vim6* vim* vim*-gnome
+CONFLICTS+=	vim*
 .else
-CONFLICTS=	vim6* vim*-lite vim*-gnome
+CONFLICTS+=	vim*-lite
 .endif
 MAKE_JOBS_UNSAFE=	yes
 USE_BZIP2=	yes
