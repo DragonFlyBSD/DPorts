@@ -1,5 +1,4 @@
-# Created by: Jeremy Messenger <mezz7@cox.net>
-# $FreeBSD: ports/accessibility/ruby-atk/Makefile,v 1.21 2012/12/18 09:49:15 svnexp Exp $
+# $FreeBSD: ports/accessibility/ruby-atk/Makefile,v 1.22 2012/12/31 17:19:58 svnexp Exp $
 #   $MCom: ports/accessibility/ruby-atk/Makefile,v 1.2 2005/10/17 07:05:39 mezz Exp $
 
 PORTNAME=	atk
