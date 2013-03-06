@@ -1,8 +1,9 @@
 # Created by: Leinier Cruz Salfran <salfrancl@yahoo.es>
-# $FreeBSD: ports/deskutils/fet/Makefile,v 1.7 2012/11/17 05:55:27 svnexp Exp $
+# $FreeBSD: ports/deskutils/fet/Makefile,v 1.9 2013/01/23 15:05:32 svnexp Exp $
 
 PORTNAME=	fet
 PORTVERSION=	5.18.2
+PORTREVISION=	1
 CATEGORIES=	deskutils kde
 MASTER_SITES=	http://lalescu.ro/liviu/fet/download/ \
 		http://lalescu.ro/liviu/fet/download/old/ \
@@ -29,7 +30,7 @@ DESKTOP_ENTRIES="FET" \
 		"Free timetable software" \
 		"" \
 		"fet" \
-		"Application;Education;Qt;" \
+		"Education;Qt;" \
 		true
 
 .include <bsd.port.options.mk>
