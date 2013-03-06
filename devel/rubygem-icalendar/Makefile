@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-icalendar
-# Date created:		7 April 2009
-# Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/rubygem-icalendar/Makefile,v 1.8 2012/11/17 05:56:59 svnexp Exp $
-#
+# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
+# $FreeBSD: ports/devel/rubygem-icalendar/Makefile,v 1.9 2013/01/24 04:07:48 svnexp Exp $
 
 PORTNAME=	icalendar
-PORTVERSION=	1.1.6
+PORTVERSION=	1.2.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
