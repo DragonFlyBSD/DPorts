@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-sass
-# Date created:		2011-05-06
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/rubygem-sass/Makefile,v 1.16 2013/01/09 04:43:47 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: ports/textproc/rubygem-sass/Makefile,v 1.17 2013/02/24 19:46:12 svnexp Exp $
 
 PORTNAME=	sass
-PORTVERSION=	3.2.5
+PORTVERSION=	3.2.6
 CATEGORIES=	textproc ruby
 MASTER_SITES=	RG
 
