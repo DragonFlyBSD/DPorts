@@ -2,7 +2,7 @@
 # Date created:				04 March 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/py-orbit/Makefile,v 1.27 2012/11/17 05:56:48 svnexp Exp $
+# $FreeBSD: ports/devel/py-orbit/Makefile,v 1.28 2013/02/14 10:22:21 svnexp Exp $
 #   $MCom: ports/devel/py-orbit/Makefile,v 1.1 2008/09/23 20:08:04 mezz Exp $
 #
 
@@ -26,6 +26,5 @@ USE_GNOME=	gnomehack orbit2
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 ORBIT_CONFIG=	${LOCALBASE}/bin/orbit2-config
-LDFLAGS+=	${PTHREAD_LIBS}
 
 .include <bsd.port.mk>
