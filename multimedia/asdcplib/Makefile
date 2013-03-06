@@ -1,12 +1,7 @@
-# New ports collection makefile for:	asdcplib
-# Date created:		2011-09-17
-# Whom:			Jimmy Olgeni <olgeni@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/asdcplib/Makefile,v 1.6 2012/11/17 05:59:47 svnexp Exp $
-#
+# $FreeBSD: multimedia/asdcplib/Makefile 313121 2013-02-28 17:35:18Z olgeni $
 
 PORTNAME=	asdcplib
-PORTVERSION=	1.9.45
+PORTVERSION=	1.10.48
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.cinecert.com/asdcplib/
 
