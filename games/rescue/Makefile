@@ -1,8 +1,9 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: ports/games/rescue/Makefile,v 1.4 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: ports/games/rescue/Makefile,v 1.5 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	rescue
 PORTVERSION=	1.0.0.2
+PORTREVISION=	1
 CATEGORIES=	games java
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME:S/r/R/}%21%20Max/${PORTVERSION}/
 DISTNAME=	${PORTNAME:S/r/R/}_${PORTVERSION}
