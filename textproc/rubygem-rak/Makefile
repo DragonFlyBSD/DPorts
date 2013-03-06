@@ -2,14 +2,14 @@
 # Date created:				12 November 2007
 # Whom:					Robert Gogolok <gogo@cs.uni-sb.de>
 #
-# $FreeBSD: ports/textproc/rubygem-rak/Makefile,v 1.8 2012/11/17 06:02:20 svnexp Exp $
+# $FreeBSD: ports/textproc/rubygem-rak/Makefile,v 1.9 2013/01/22 02:55:10 svnexp Exp $
 
 PORTNAME=	rak
-PORTVERSION=	1.0
+PORTVERSION=	1.4
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	gogo@cs.uni-sb.de
+MAINTAINER=	gogolok+freebsd@gmail.com
 COMMENT=	A grep replacement in pure Ruby
 
 RUN_DEPENDS=	rubygem-hoe>=1.3.0:${PORTSDIR}/devel/rubygem-hoe
