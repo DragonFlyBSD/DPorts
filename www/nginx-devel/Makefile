@@ -1,8 +1,8 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: ports/www/nginx-devel/Makefile,v 1.523 2013/01/17 04:21:02 svnexp Exp $
+# $FreeBSD: ports/www/nginx-devel/Makefile,v 1.535 2013/02/24 07:41:40 svnexp Exp $
 
 PORTNAME=	nginx
-PORTVERSION=	1.3.11
+PORTVERSION=	1.3.13
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	${MASTER_SITE_LOCAL}
@@ -63,6 +63,7 @@ OPTIONS_DEFINE=	\
 	HTTP_MOGILEFS \
 	HTTP_NOTICE \
 	HTTP_PUSH \
+	HTTP_PUSH_STREAM \
 	HTTP_REDIS \
 	HTTP_RESPONSE \
 	HTTP_SUBS_FILTER \
@@ -150,6 +151,7 @@ HTTP_MOGILEFS_DESC=		3rd party mogilefs module
 HTTP_MP4_H264_DESC=		3rd party mp4/h264 module
 HTTP_NOTICE_DESC=		3rd party notice module
 HTTP_PUSH_DESC=			3rd party push module
+HTTP_PUSH_STREAM_DESC=		3rd party push stream module
 HTTP_REDIS_DESC=		3rd party http_redis module
 HTTP_RESPONSE_DESC=		3rd party http_response module
 HTTP_SUBS_FILTER_DESC=		3rd party subs filter module
@@ -292,7 +294,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/samizdatco-nginx-http-auth-digest-${GIT_A
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_AUTH_LDAP}
-GIT_HTTP_AUTH_LDAP_VERSION=	c2c3d5ea4919
+# WWW: https://github.com/kvspb/nginx-auth-ldap
+GIT_HTTP_AUTH_LDAP_VERSION=  c4dc7c9153
 MASTER_SITES+=	LOCAL/rm:http_auth_ldap
 DISTFILES+=	http_auth_ldap-${GIT_HTTP_AUTH_LDAP_VERSION}.tar.gz:http_auth_ldap
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/http_auth_ldap-${GIT_HTTP_AUTH_LDAP_VERSION}
@@ -333,8 +336,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_ctpp2-${NGINX_CTPP2_VERSION}
 .endif
 
 .if ${PORT_OPTIONS:MECHO}
-NGINX_ECHO_VERSION=	0.41
-GIT_ECHO_VERSION=	0-gd3eb42d
+NGINX_ECHO_VERSION=	0.42
+GIT_ECHO_VERSION=	0-gfb90d17
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/agentzh/echo-nginx-module/tarball/v${NGINX_ECHO_VERSION}/:echo
 DISTFILES+=	agentzh-echo-nginx-module-v${NGINX_ECHO_VERSION}-${GIT_ECHO_VERSION}.tar.gz:echo
@@ -342,8 +345,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-echo-nginx-module-${GIT_ECHO_VERS
 .endif
 
 .if ${PORT_OPTIONS:MHEADERS_MORE}
-NGINX_HEADERS_MORE_VERSION=	0.18
-GIT_HEADERS_MORE_VERSION=	0-g6586984
+NGINX_HEADERS_MORE_VERSION=	0.19
+GIT_HEADERS_MORE_VERSION=	0-g27bcbd2
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/agentzh/headers-more-nginx-module/tarball/v${NGINX_HEADERS_MORE_VERSION}/:headers_more
 DISTFILES+=	agentzh-headers-more-nginx-module-v${NGINX_HEADERS_MORE_VERSION}-${GIT_HEADERS_MORE_VERSION}.tar.gz:headers_more
@@ -445,6 +448,15 @@ DISTFILES+=	nginx_http_push_module-${NGINX_PUSH_VERSION}.tar.gz:push
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx_http_push_module-${NGINX_PUSH_VERSION}
 .endif
 
+.if ${PORT_OPTIONS:MHTTP_PUSH_STREAM}
+NGINX_PUSH_STREAM_VERSION=	0.3.4
+GIT_PUSH_STREAM_VERSION=	0-g28d9df7
+FETCH_ARGS=	-pRr
+MASTER_SITES+=	https://github.com/wandenberg/nginx-push-stream-module/tarball/${NGINX_PUSH_STREAM_VERSION}/:pushstream
+DISTFILES+=	wandenberg-nginx-push-stream-module-${NGINX_PUSH_STREAM_VERSION}-${GIT_PUSH_STREAM_VERSION}.tar.gz:pushstream
+CONFIGURE_ARGS+=--add-module=${WRKDIR}/wandenberg-nginx-push-stream-module-${GIT_PUSH_STREAM_VERSION:S/^0-g//}
+.endif
+
 .if ${PORT_OPTIONS:MHTTP_RANDOM_INDEX}
 CONFIGURE_ARGS+=--with-http_random_index_module
 .endif
@@ -490,11 +502,11 @@ CONFIGURE_ARGS+=--with-http_sub_module
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_UPLOAD}
-IGNORE=	incompatible with nginx_upload_module-2.2.0
 NGINX_UPLOAD_VERSION=	2.2.0
 MASTER_SITES+=	http://www.grid.net.ru/nginx/download/:upload
 DISTFILES+=	nginx_upload_module-${NGINX_UPLOAD_VERSION}.tar.gz:upload
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx_upload_module-${NGINX_UPLOAD_VERSION}
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_upload_module.c
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_UPLOAD_PROGRESS}
@@ -553,8 +565,16 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/chaoslawful-drizzle-nginx-module-${GIT_DR
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-chaoslawful-drizzle-nginx-module-config
 .endif
 
+.if ${PORT_OPTIONS:MARRAYVAR} || ${PORT_OPTIONS:MENCRYPTSESSION} || ${PORT_OPTIONS:MFORMINPUT} || ${PORT_OPTIONS:MICONV} || ${PORT_OPTIONS:MLUA} || ${PORT_OPTIONS:MSET_MISC}
+NGINX_DEVEL_KIT_VERSION=	0.2.18
+GIT_DEVEL_KIT_VERSION=	0-g48bc5dd
+FETCH_ARGS=	-pRr
+MASTER_SITES+=	https://github.com/simpl/ngx_devel_kit/tarball/v${NGINX_DEVEL_KIT_VERSION}/:devel_kit
+DISTFILES+=	simpl-ngx_devel_kit-v${NGINX_DEVEL_KIT_VERSION}-${GIT_DEVEL_KIT_VERSION}.tar.gz:devel_kit
+CONFIGURE_ARGS+=--add-module=${WRKDIR}/simpl-ngx_devel_kit-${GIT_DEVEL_KIT_VERSION:S/^0-g//}
+.endif
+
 .if ${PORT_OPTIONS:MENCRYPTSESSION}
-USE_NGINX_DEVEL_KIT=	yes
 NGINX_ENCRYPTSESSION_VERSION=	0.02
 GIT_ENCRYPTSESSION_VERSION=	0-gc752861
 FETCH_ARGS=	-pRr
@@ -589,9 +609,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/arut-nginx-let-module-${GIT_LET_VERSION:S
 LIB_DEPENDS+=	luajit-5.1:${PORTSDIR}/lang/luajit
 CONFIGURE_ENV+=	"LUAJIT_INC=${LOCALBASE}/include/luajit-2.0"
 CONFIGURE_ENV+=	"LUAJIT_LIB=${LOCALBASE}/lib"
-USE_NGINX_DEVEL_KIT=	yes
-NGINX_LUA_VERSION=	0.6.10
-GIT_LUA_VERSION=	0-g73d8dd2
+NGINX_LUA_VERSION=	0.7.15
+GIT_LUA_VERSION=	0-g57a6471
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/chaoslawful/lua-nginx-module/tarball/v${NGINX_LUA_VERSION}/:lua
 DISTFILES+=	chaoslawful-lua-nginx-module-v${NGINX_LUA_VERSION}-${GIT_LUA_VERSION}.tar.gz:lua
@@ -673,8 +692,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-redis2-nginx-module-${GIT_REDIS2_
 .endif
 
 .if ${PORT_OPTIONS:MRTMP}
-NGINX_RTMP_VERSION=	0.8.7
-GIT_RTMP_VERSION=	0-g544c73b
+NGINX_RTMP_VERSION=	0.9.8
+GIT_RTMP_VERSION=	0-g568ce8f
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/arut/nginx-rtmp-module/tarball/v${NGINX_RTMP_VERSION}/:rtmp
 DISTFILES+=	arut-rtmp-nginx-module-v${NGINX_RTMP_VERSION}-${GIT_RTMP_VERSION}.tar.gz:rtmp
@@ -682,7 +701,6 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/arut-nginx-rtmp-module-${GIT_RTMP_VERSION
 .endif
 
 .if ${PORT_OPTIONS:MSET_MISC}
-USE_NGINX_DEVEL_KIT=	yes
 NGINX_SET_MISC_VERSION=	0.22rc8
 GIT_SET_MISC_VERSION=	0-g658c235
 FETCH_ARGS=	-pRr
@@ -709,8 +727,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_slowfs_cache-${NGINX_SLOWFS_CACHE_VER
 .endif
 
 .if ${PORT_OPTIONS:MSRCACHE}
-NGINX_SRCACHE_VERSION=	0.16
-GIT_SRCACHE_VERSION=	0-g9350a49
+NGINX_SRCACHE_VERSION=	0.19
+GIT_SRCACHE_VERSION=	0-gf957c0f
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/agentzh/srcache-nginx-module/tarball/v${NGINX_SRCACHE_VERSION}/:srcache
 DISTFILES+=	agentzh-srcache-nginx-module-v${NGINX_SRCACHE_VERSION}-${GIT_SRCACHE_VERSION}.tar.gz:srcache
@@ -768,7 +786,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-xss-nginx-module-${GIT_XSS_VERSIO
 .if ${PORT_OPTIONS:MSPDY}
 USE_OPENSSL_PORT=	yes
 USE_HTTP_SSL=	yes
-NGINX_SPDY_VERSION=	58
+NGINX_SPDY_VERSION=	65
 PATCH_SITES=	http://nginx.org/patches/spdy/:spdy
 PATCHFILES=	patch.spdy-${NGINX_SPDY_VERSION}_${PORTVERSION}.txt:spdy
 PATCH_DIST_STRIP=	-p1
@@ -808,17 +826,7 @@ NGINX_OPENSSL=	yes
 CONFIGURE_ARGS+=--with-http_ssl_module
 .endif
 
-.if defined(USE_NGINX_DEVEL_KIT)
-NGINX_DEVEL_KIT_VERSION=	0.2.17
-GIT_DEVEL_KIT_VERSION=	0-gbc97eea
-FETCH_ARGS=	-pRr
-MASTER_SITES+=	https://github.com/simpl/ngx_devel_kit/tarball/v${NGINX_DEVEL_KIT_VERSION}/:devel_kit
-DISTFILES+=	simpl-ngx_devel_kit-v${NGINX_DEVEL_KIT_VERSION}-${GIT_DEVEL_KIT_VERSION}.tar.gz:devel_kit
-CONFIGURE_ARGS+=--add-module=${WRKDIR}/simpl-ngx_devel_kit-${GIT_DEVEL_KIT_VERSION:S/^0-g//}
-.endif
-
 .if ${PORT_OPTIONS:MARRAYVAR}
-USE_NGINX_DEVEL_KIT=	yes
 NGINX_ARRAYVAR_VERSION=	0.03rc1
 GIT_ARRAYVAR_VERSION=	0-gfed751a
 FETCH_ARGS=	-pRr
@@ -828,9 +836,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-array-var-nginx-module-${GIT_ARRA
 .endif
 
 .if ${PORT_OPTIONS:MFORMINPUT}
-USE_NGINX_DEVEL_KIT=	yes
-NGINX_FORMINPUT_VERSION=	0.07rc5
-GIT_FORMINPUT_VERSION=	0-gd41681d
+NGINX_FORMINPUT_VERSION=	0.07
+GIT_FORMINPUT_VERSION=	0-g78de845
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/calio/form-input-nginx-module/tarball/v${NGINX_FORMINPUT_VERSION}/:forminput
 DISTFILES+=	calio-form-input-nginx-module-v${NGINX_FORMINPUT_VERSION}-${GIT_FORMINPUT_VERSION}.tar.gz:forminput
@@ -839,7 +846,6 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/calio-form-input-nginx-module-${GIT_FORMI
 
 .if ${PORT_OPTIONS:MICONV}
 LIB_DEPENDS+=	iconv:${PORTSDIR}/converters/libiconv
-USE_NGINX_DEVEL_KIT=	yes
 NGINX_ICONV_VERSION=	0.10rc7
 GIT_ICONV_VERSION=	0-gabdac17
 FETCH_ARGS=	-pRr
@@ -903,8 +909,6 @@ post-patch:
 		${WRKDIR}/mdirolf-nginx-gridfs-${GIT_GRIDFS_VERSION:S/^0-g//}/config
 .endif
 .if ${PORT_OPTIONS:MPASSENGER}
-	@${REINPLACE_CMD} 's!-lpthread!${PTHREAD_LIBS}!g' \
-		${WRKDIR}/passenger-${PASSENGER_VERSION}/ext/nginx/config
 	@${REINPLACE_CMD} 's!-Wall!!g; \
 		s!#{PlatformInfo.debugging_cflags}!${CFLAGS}!g; \
 		s!-O2!!g; \
@@ -915,8 +919,6 @@ post-patch:
 		s!-lev!!; \
 		s!-Iext/libev!!' \
 		${WRKDIR}/passenger-${PASSENGER_VERSION}/build/common_library.rb
-	@${REINPLACE_CMD} 's!-lpthread!${PTHREAD_LIBS}!g' \
-		${WRKDIR}/passenger-${PASSENGER_VERSION}/lib/phusion_passenger/platform_info/compiler.rb
 .endif
 .if ${PORT_OPTIONS:MPOSTGRES}
 	@${REINPLACE_CMD} \
