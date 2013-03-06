@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/x11-toolkits/scintilla/Makefile,v 1.77 2013/01/18 12:48:56 svnexp Exp $
+# $FreeBSD: x11-toolkits/scintilla/Makefile 313046 2013-02-27 11:47:26Z makc $
 
 PORTNAME=	scintilla
-PORTVERSION=	3.2.4
+PORTVERSION=	3.2.5
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/scintilla/SciTE/${PORTVERSION}
 DISTNAME=	scite${PORTVERSION:S/.//g}
