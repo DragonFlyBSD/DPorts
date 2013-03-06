@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/multimedia/ruby-flvtool2/pkg-plist,v 1.2 2012/11/17 05:59:53 svnexp Exp $
+@comment $FreeBSD: multimedia/ruby-flvtool2/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%RUBY_SITELIBDIR%%/flv.rb
 %%RUBY_SITELIBDIR%%/flv/amf_string_buffer.rb
 %%RUBY_SITELIBDIR%%/flv/audio_tag.rb

@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-flvtool2
-# Date created:		2007-05-07
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/multimedia/ruby-flvtool2/Makefile,v 1.3 2012/11/17 05:59:53 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: multimedia/ruby-flvtool2/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	flvtool2
 PORTVERSION=	1.0.6
@@ -15,6 +11,9 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Manipulation tool for Macromedia Flash Video files
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
