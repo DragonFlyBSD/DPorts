@@ -1,9 +1,9 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/graphics/autoq3d/Makefile,v 1.16 2012/12/18 13:35:30 svnexp Exp $
+# $FreeBSD: ports/graphics/autoq3d/Makefile,v 1.18 2013/01/23 15:05:35 svnexp Exp $
 
 PORTNAME=	autoq3d
 PORTVERSION=	1.40
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/AutoQ3D%20${PORTVERSION}
 DISTNAME=	AutoQ3DCommunity${PORTVERSION:C/\./-/}qt4source
@@ -27,7 +27,7 @@ DESKTOP_ENTRIES="AutoQ3D" \
 		"${COMMENT}" \
 		"AutoQ3D" \
 		"AutoQ3D" \
-		"Qt;KDE;Graphics;" \
+		"Graphics;3DGraphics;Qt;" \
 		false
 
 .include <bsd.port.options.mk>
