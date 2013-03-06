@@ -1,9 +1,5 @@
-# New ports collection makefile for:    freefonts
-# Date created:         Thu Aug  1 21:32:14 CDT 1996
-# Whom:                 erich@FreeBSD.org
-#
-# $FreeBSD: ports/x11-fonts/freefonts/Makefile,v 1.24 2012/11/17 06:03:28 svnexp Exp $
-#
+# Created by: erich@FreeBSD.org
+# $FreeBSD: ports/x11-fonts/freefonts/Makefile,v 1.25 2013/02/18 14:40:13 svnexp Exp $
 
 PORTNAME=	freefonts
 PORTVERSION=	0.10
