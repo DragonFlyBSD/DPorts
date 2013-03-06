@@ -1,10 +1,5 @@
-# New ports collection makefile for:	digest
-# Date created:				2001-03-09
-# Whom:					trevor
-#
-# $NetBSD: Makefile,v 1.37 2003/07/17 22:52:13 grant Exp $
-# $FreeBSD: ports/security/digest/Makefile,v 1.23 2012/11/17 06:01:03 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/security/digest/Makefile,v 1.24 2013/01/27 06:41:41 svnexp Exp $
 
 PORTNAME?=	digest
 PORTVERSION?=	20050323
