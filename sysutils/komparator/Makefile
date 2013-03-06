@@ -2,7 +2,7 @@
 # Date created:				18 Jan 2006
 # Whom:			Alexander V. Ribchansky <triosoft@triosoft.com.ua>
 #
-# $FreeBSD: ports/sysutils/komparator/Makefile,v 1.18 2012/11/17 06:01:36 svnexp Exp $
+# $FreeBSD: sysutils/komparator/Makefile 313088 2013-02-28 10:51:58Z gahr $
 
 PORTNAME=	komparator
 PORTVERSION=	0.9
@@ -23,8 +23,7 @@ INSTALLS_ICONS=	yes
 DOCSDIR=	${PREFIX}/share/doc/HTML/en/komparator
 
 post-patch:
-	${REINPLACE_CMD} -e 's,-O2,,g ; \
-		s,-lpthread,${PTHREAD_LIBS},g' ${WRKSRC}/${CONFIGURE_SCRIPT}
+	${REINPLACE_CMD} -e 's,-O2,,g' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
 post-configure:
 .if defined(NOPORTDOCS)
