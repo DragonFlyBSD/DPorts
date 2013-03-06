@@ -2,7 +2,7 @@
 # Date created:		2010-01-09
 # Whom:			Jaap Akkerhuis <jaap@nlnetlabs.nl>
 #
-# $FreeBSD: ports/dns/autotrust/Makefile,v 1.8 2012/11/17 05:57:07 svnexp Exp $
+# $FreeBSD: ports/dns/autotrust/Makefile,v 1.9 2013/02/07 14:28:41 svnexp Exp $
 #
 
 PORTNAME=	autotrust
@@ -18,8 +18,8 @@ LIB_DEPENDS+=	ldns:${PORTSDIR}/dns/ldns \
 		unbound:${PORTSDIR}/dns/unbound
 
 GNU_CONFIGURE=	yes
-CFLAGS=		-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CFLAGS=		-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 
 MAN8=		autotrust.8
 
