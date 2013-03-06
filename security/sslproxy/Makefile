@@ -2,7 +2,7 @@
 # Date created:		11 February 1999
 # Whom:			Alex Le Heux
 #
-# $FreeBSD: ports/security/sslproxy/Makefile,v 1.15 2012/11/17 06:01:21 svnexp Exp $
+# $FreeBSD: ports/security/sslproxy/Makefile,v 1.16 2013/01/27 07:43:24 svnexp Exp $
 #
 
 PORTNAME=	sslproxy
@@ -20,6 +20,9 @@ PORTDOCS=	README.txt dummyCert.pem
 PLIST_FILES=	bin/sslproxy
 
 USE_OPENSSL=	YES
+
+DEPRECATED=	Abandoned upstream
+EXPIRATION_DATE=	2013-02-28
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sslproxy ${PREFIX}/bin/sslproxy
