@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/ImageMagick/Makefile,v 1.364 2013/01/17 16:48:38 svnexp Exp $
+# $FreeBSD: graphics/ImageMagick/Makefile 313328 2013-03-03 05:15:16Z beech $
 
 PORTNAME=	ImageMagick
 PORTREVISION=	1
@@ -27,7 +27,7 @@ MASTER_SITES=	http://www.imagemagick.org/download/ \
 		ftp://ftp.is.co.za/pub/imagemagick/ \
 		ftp://ftp.fifi.org/pub/ImageMagick/
 
-MAINTAINER=	beech@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Image processing tools
 
 LICENSE=	AL2
