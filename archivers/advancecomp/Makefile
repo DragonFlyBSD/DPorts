@@ -1,16 +1,12 @@
-# New ports collection makefile for:	advancecomp
-# Date created:		11 May 2004
-# Whom:			Radim Kolar
-#
-# $FreeBSD: ports/archivers/advancecomp/Makefile,v 1.18 2012/11/17 05:54:20 svnexp Exp $
-#
+# Created by: Radim Kolar
+# $FreeBSD: archivers/advancecomp/Makefile 313382 2013-03-03 21:51:57Z beech $
 
 PORTNAME=	advancecomp
-PORTVERSION=	1.15
+PORTVERSION=	1.16
 CATEGORIES=	archivers
 MASTER_SITES=	SF/advancemame/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Recompression utilities for .ZIP, .PNG, .MNG, and .GZ files
 
 USE_GMAKE=	yes
