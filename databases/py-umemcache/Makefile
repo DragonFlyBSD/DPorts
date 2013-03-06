@@ -1,5 +1,5 @@
-# Created by: Kubilay Kocak <koobs.freebsd@gmail.com>
-# $FreeBSD: ports/databases/py-umemcache/Makefile,v 1.4 2012/11/26 20:38:56 svnexp Exp $
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/databases/py-umemcache/Makefile,v 1.5 2013/02/09 15:58:53 svnexp Exp $
 
 PORTNAME=	umemcache
 PORTVERSION=	1.6
@@ -7,7 +7,7 @@ CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Memcache client written in highly optimized C++ with Python bindings
 
 LICENSE=	BSD
