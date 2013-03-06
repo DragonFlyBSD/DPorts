@@ -1,8 +1,9 @@
 # Created by: jmz
-# $FreeBSD: ports/graphics/netpbm/Makefile,v 1.211 2012/12/30 18:35:36 svnexp Exp $
+# $FreeBSD: ports/graphics/netpbm/Makefile,v 1.214 2013/02/25 19:07:10 svnexp Exp $
 
 PORTNAME=	netpbm
-PORTVERSION=	10.35.87
+PORTVERSION=	10.35.88
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF/netpbm/super_stable/${PORTVERSION}
 EXTRACT_SUFX=	.tgz
@@ -31,7 +32,9 @@ USE_LDCONFIG=	yes
 
 MAN1=		netpbm.1
 
-.if defined(WITH_X11)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MX11}
 USE_XORG=	x11
 MAKE_ENV+=	WITH_X11="${WITH_X11}"
 PLIST_SUB+=	X11=''
@@ -41,8 +44,9 @@ PLIST_SUB+=	X11='@comment '
 
 pre-configure:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
-		 -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-		 ${WRKSRC}/pm_config.in.h
+		-e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		${WRKSRC}/pm_config.in.h
+	@${REINPLACE_CMD} -e 's|^SCRIPTS =.*|SCRIPTS =|' ${WRKSRC}/GNUmakefile
 	@${REINPLACE_CMD} -e 's|<shhopt.h>|<pm_shhopt.h>|g' ${WRKSRC}/lib/pm.h
 	@${REINPLACE_CMD} -e 's| jpeg2000||g' \
 		${WRKSRC}/converter/other/Makefile
@@ -67,8 +71,8 @@ post-install:
 	@${REINPLACE_CMD} -e 's|doc/USERDOC|${DOCSDIR}/USERDOC|g' \
 		${WRKSRC}/doc/netpbm.1
 	${INSTALL_MAN} ${WRKSRC}/doc/netpbm.1 ${MANPREFIX}/man/man1
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/USERDOC ${DOCSDIR}/
 .endif
 
