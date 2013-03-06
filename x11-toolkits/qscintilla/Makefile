@@ -2,7 +2,7 @@
 # Date created:				2003-08-02
 # Whom:					arved
 #
-# $FreeBSD: ports/x11-toolkits/qscintilla/Makefile,v 1.32 2012/11/17 06:03:38 svnexp Exp $
+# $FreeBSD: ports/x11-toolkits/qscintilla/Makefile,v 1.35 2013/02/05 11:52:14 svnexp Exp $
 
 PORTNAME=	qscintilla
 PORTVERSION=	1.7.1
@@ -16,6 +16,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	QT port of the Scintilla C++ editor class
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 MAKE_ENV=	QTDIR="${QT_PREFIX}"
