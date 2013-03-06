@@ -2,10 +2,10 @@
 # Date created:				8 October 2008
 # Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-extlib/Makefile,v 1.10 2012/11/17 05:56:59 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-extlib/Makefile,v 1.11 2013/01/23 21:53:32 svnexp Exp $
 
 PORTNAME=	extlib
-PORTVERSION=	0.9.15
+PORTVERSION=	0.9.16
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
