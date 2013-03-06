@@ -1,9 +1,9 @@
 # Created by: Jason Harris <jharris@widomaker.com>
-# $FreeBSD: ports/sysutils/coreutils/Makefile,v 1.40 2012/11/17 06:01:27 svnexp Exp $
+# $FreeBSD: ports/sysutils/coreutils/Makefile,v 1.41 2013/02/08 03:26:20 svnexp Exp $
 
 PORTNAME=	coreutils
 PORTVERSION=	8.20
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils textproc
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
