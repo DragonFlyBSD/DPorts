@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-passlib
-# Date created:		2012-06-11
-# Whom:			koobs <koobs.freebsd@gmail.com>
-#
-# $FreeBSD: ports/security/py-passlib/Makefile,v 1.3 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/security/py-passlib/Makefile,v 1.4 2013/02/09 15:59:42 svnexp Exp $
 
 PORTNAME=	passlib
 PORTVERSION=	1.6.1
@@ -11,7 +7,7 @@ CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Python password hashing framework supporting over 30 schemes
 
 LICENSE=	BSD
