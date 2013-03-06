@@ -1,11 +1,12 @@
 # New ports collection makefile for: 	OmegaT
 # Date created:				11 May 2008
 # Whom:					Rodrigo OSORIO <rodrigo@bebik.net>
-# $FreeBSD: ports/editors/omegaT/Makefile,v 1.15 2012/11/17 05:57:17 svnexp Exp $
+# $FreeBSD: ports/editors/omegaT/Makefile,v 1.17 2013/01/23 15:05:33 svnexp Exp $
 #
 
 PORTNAME=	omegaT
 DISTVERSION=	2.5.5_01
+PORTREVISION=	1
 CATEGORIES=	editors java x11
 MASTER_SITES=	SF/${PORTNAME:tl}/OmegaT%20-%20Standard/OmegaT%202.5.5%20update%201/
 DISTNAME=	OmegaT_2.5.5_01_Source
@@ -34,8 +35,8 @@ SUB_FILES=	omegaT.sh omegat.prefs
 
 DESKTOP_ENTRIES="OmegaT" "Translation memory application" \
 		"${DATADIR}/images/OmegaT.png" \
-		"omegaT" "Application;Office;WordProcessor;" \
-		${FALSE}
+		"omegaT" "Office;WordProcessor;Java;" \
+		false
 
 post-build:
 	@cd ${WRKDIR} && ${MV} 'dist' ${PORTNAME}
