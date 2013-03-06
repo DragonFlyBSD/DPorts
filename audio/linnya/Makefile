@@ -1,7 +1,7 @@
-# $FreeBSD: ports/audio/linnya/Makefile,v 1.3 2012/11/17 05:54:37 svnexp Exp $
+# $FreeBSD: ports/audio/linnya/Makefile,v 1.4 2013/02/16 10:08:35 svnexp Exp $
 
 PORTNAME=	linnya
-PORTVERSION=	2.2.1
+PORTVERSION=	2.3.0
 CATEGORIES=	audio
 
 MAINTAINER=	ghw@7axu.com
@@ -13,7 +13,7 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	herenvarno
-GH_COMMIT=	5b0f38a
+GH_COMMIT=	90cf6b8
 
 USE_AUTOTOOLS=	libtoolize libtool
 GNU_CONFIGURE=	yes
@@ -21,18 +21,19 @@ USE_GMAKE=	yes
 USE_PKGCONFIG=	build
 USE_GNOME=	gtk30
 USE_SQLITE=	3
-USE_GSTREAMER=	good mp3 ogg
+USE_GSTREAMER=	good mp3
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 
 LIBTOOLIZE_ARGS=--copy --force
 
+OPTIONS_DEFINE=	NLS
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
 USE_GETTEXT=	yes
-CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
