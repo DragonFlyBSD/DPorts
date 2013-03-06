@@ -1,8 +1,5 @@
-# New ports collection makefile for:	wine-mono-devel
-# Date created:				2012-08-08
-# Whom:					David Naylor <naylor.b.david@gmail.com>
-#
-# $FreeBSD: ports/emulators/wine-mono/Makefile,v 1.3 2012/11/17 05:57:24 svnexp Exp $
+# Created by: David Naylor <naylor.b.david@gmail.com>
+# $FreeBSD: ports/emulators/wine-mono/Makefile,v 1.4 2013/01/16 20:24:41 svnexp Exp $
 
 PORTNAME=	wine-mono
 DISTVERSION=	0.0.8
@@ -11,7 +8,7 @@ MASTER_SITES=	SF/wine/Wine%20Mono/${DISTVERSION}
 EXTRACT_SUFX=	.msi
 EXTRACT_ONLY=
 
-MAINTAINER=	naylor.b.david@gmail.com
+MAINTAINER=	dbn@FreeBSD.org
 COMMENT=	Mono .NET implementation for Wine development branch (HTML support)
 
 LICENSE=	MIT GPLv2 LGPL20
