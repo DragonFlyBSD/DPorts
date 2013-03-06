@@ -2,17 +2,17 @@
 # Date created:				15 Jul 2003
 # Whom:					Koop Mast <einekoai@chello.nl>
 #
-# $FreeBSD: ports/x11/workrave/Makefile,v 1.44 2012/11/17 06:03:20 svnexp Exp $
+# $FreeBSD: ports/x11/workrave/Makefile,v 1.46 2013/01/23 15:05:39 svnexp Exp $
 #
 
 PORTNAME=	workrave
 PORTVERSION=	1.9.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	SF
 
 MAINTAINER=	lx@FreeBSD.org
-COMMENT=	An RSI prevention tool
+COMMENT=	RSI prevention tool
 
 BUILD_DEPENDS=	gdome-config:${PORTSDIR}/textproc/gdome2
 
@@ -20,11 +20,11 @@ OPTIONS=	GNOME "Build with Gnome support" off \
 		NETWORK "Build with network support" off
 
 INSTALLS_ICONS=	yes
-DESKTOP_ENTRIES=	"Workrave" "An RSI prevention tool" \
+DESKTOP_ENTRIES=	"Workrave" "RSI prevention tool" \
 					"${DATADIR}/images/workrave-icon-small.png" \
 					"workrave" \
-					"Application;Utility;" \
-					${FALSE}
+					"Utility;" \
+					false
 
 USE_XORG=	x11 xmu recordproto xtst xext
 USE_GMAKE=	yes
