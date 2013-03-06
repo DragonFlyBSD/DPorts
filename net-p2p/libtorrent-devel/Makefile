@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: ports/net-p2p/libtorrent-devel/Makefile,v 1.36 2013/01/16 06:43:54 svnexp Exp $
+# $FreeBSD: ports/net-p2p/libtorrent-devel/Makefile,v 1.37 2013/02/16 12:18:49 svnexp Exp $
 
 PORTNAME=	libtorrent-devel
 PORTVERSION=	0.13.3
@@ -37,7 +37,7 @@ KQUEUE_DESC=	Use kqueue(2) support
 CONFIGURE_ENV=	OPENSSL_LIBS="-L/usr/lib -ssl -crypto" OPENSSL_CFLAGS="-I/usr/include"
 .endif
 
-CONFIGURE_ARGS+=	--disable-debug --with-openssl=${OPENSSLBASE}
+CONFIGURE_ARGS+=	--disable-debug
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/-O3/${CFLAGS}/' ${WRKSRC}/configure
