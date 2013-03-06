@@ -3,7 +3,7 @@
 # Date created:				Sun Nov 30 19:55 EST 2003
 # Whom:					Will Andrews <will@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/kde-lite/Makefile,v 1.7 2012/11/17 06:03:16 svnexp Exp $
+# $FreeBSD: ports/x11/kde-lite/Makefile,v 1.8 2012/12/30 18:56:33 svnexp Exp $
 #
 
 PKGNAMESUFFIX=		-lite
@@ -17,6 +17,9 @@ MASTERDIR=		${.CURDIR}/../../x11/kde3
 .if defined(IS_INTERACTIVE)
 CONFLICTS=		kde-[0-9]*
 .endif
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 WITHOUT_KDEVELOP=	yes
 WITHOUT_KDEEDU=		yes
