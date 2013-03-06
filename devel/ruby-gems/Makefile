@@ -1,12 +1,8 @@
-# New ports collection makefile for:	RubyGems
-# Date created:		07 July 2004
-# Whom:			Alexander Novitsky <alecn2002@yandex.ru>
-#
-# $FreeBSD: ports/devel/ruby-gems/Makefile,v 1.51 2012/11/17 05:56:57 svnexp Exp $
-#
+# Created by: Alexander Novitsky <alecn2002@yandex.ru>
+# $FreeBSD: ports/devel/ruby-gems/Makefile,v 1.52 2013/02/24 19:42:48 svnexp Exp $
 
 PORTNAME=	gems
-PORTVERSION=	1.8.24
+PORTVERSION=	1.8.25
 CATEGORIES=	devel ruby
 MASTER_SITES=	${MASTER_SITE_RUBYGEMS:S/\/gems\//\/rubygems\//}
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
