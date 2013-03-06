@@ -1,4 +1,4 @@
-# $FreeBSD: ports/japanese/zipcodes/files/Makefile,v 1.3 2012/11/17 05:58:41 svnexp Exp $
+# $FreeBSD: japanese/zipcodes/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 .SUFFIXES: .csv .euc-csv
 
 CSV=	ken_all.csv

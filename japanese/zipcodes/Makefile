@@ -1,7 +1,7 @@
-# $FreeBSD: ports/japanese/zipcodes/Makefile,v 1.88 2013/01/06 17:08:35 svnexp Exp $
+# $FreeBSD: japanese/zipcodes/Makefile 313181 2013-03-02 03:07:10Z kuriyama $
 
 PORTNAME=	zipcodes
-PORTVERSION=	20121228
+PORTVERSION=	20130228
 CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	kuriyama
