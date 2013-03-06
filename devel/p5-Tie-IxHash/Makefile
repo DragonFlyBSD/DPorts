@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Tie-IxHash
-# Date created:				Mon Jan  1 06:56:59 2001
-# Whom:					will
-#
-# $FreeBSD: ports/devel/p5-Tie-IxHash/Makefile,v 1.12 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: ports/devel/p5-Tie-IxHash/Makefile,v 1.13 2013/02/24 16:44:18 svnexp Exp $
 
 PORTNAME=	Tie-IxHash
-PORTVERSION=	1.22
+PORTVERSION=	1.23
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
