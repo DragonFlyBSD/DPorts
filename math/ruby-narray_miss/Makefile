@@ -2,11 +2,11 @@
 # Date created:		15 Febrary 2004
 # Whom:			Shin'ya Murakami <murakami@ahs.scitec.kobe-u.ac.jp>
 #
-# $FreeBSD: ports/math/ruby-narray_miss/Makefile,v 1.10 2012/11/17 05:59:30 svnexp Exp $
+# $FreeBSD: ports/math/ruby-narray_miss/Makefile,v 1.11 2013/01/22 04:42:57 svnexp Exp $
 #
 
 PORTNAME=	narray_miss
-PORTVERSION=	1.2.6
+PORTVERSION=	1.2.8
 CATEGORIES=	math ruby
 MASTER_SITES=	http://ruby.gfd-dennou.org/products/narray_miss/ \
 		http://dennou-h.gfd-dennou.org/library/ruby/products/narray_miss/ \
@@ -18,7 +18,7 @@ MAINTAINER=	murashin@gfd-dennou.org
 COMMENT=	Additional class with processing of missing value to NArray
 
 LICENSE=	BSD
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+LICENSE_FILE=	${WRKSRC}/${PORTNAME}/LICENSE.txt
 
 RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/narray.so:${PORTSDIR}/math/ruby-narray
 
@@ -31,11 +31,11 @@ NO_BUILD=	yes
 DOCS=		LICENSE.txt README.rdoc
 
 do-install:
-	cd ${WRKSRC} && ${RAKE_BIN} nongeminstall
+	cd ${WRKSRC}/${PORTNAME} && ${RAKE_BIN} nongeminstall
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODDOCDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_MODDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}/${f} ${RUBY_MODDOCDIR}
 .endfor
 .endif
 
