@@ -3,12 +3,12 @@
 # Date created:			Dec 30, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/www/retawq/Makefile,v 1.40 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: ports/www/retawq/Makefile,v 1.42 2013/02/07 14:08:10 svnexp Exp $
 #
 
 PORTNAME=	retawq
 DISTVERSION=	0.2.6c
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	www ipv6
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-0.2.6c
 
@@ -28,11 +28,11 @@ PLIST_FILES=	bin/retawq \
 		share/locale/pt_BR/LC_MESSAGES/retawq.mo
 PORTDOCS=	*
 
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 
 .if defined(WITH_GNUTLS)
-LIB_DEPENDS+=	gnutls.47:${PORTSDIR}/security/gnutls
+LIB_DEPENDS+=	gnutls.26:${PORTSDIR}/security/gnutls
 CONFIGURE_ARGS+=	--set-tls=1
 .elif defined(WITH_OPENSSL)
 USE_OPENSSL=	yes
