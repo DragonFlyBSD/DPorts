@@ -2,7 +2,7 @@
 # Date created:		Tue Jun 22 21:17:03 MET DST 1999
 # Whom:			Juergen Lock <nox@jelal.kn-bremen.de>
 #
-# $FreeBSD: ports/sysutils/gcombust/Makefile,v 1.53 2012/11/17 06:01:32 svnexp Exp $
+# $FreeBSD: sysutils/gcombust/Makefile 313088 2013-02-28 10:51:58Z gahr $
 #
 
 PORTNAME=	gcombust
@@ -29,9 +29,9 @@ CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 pre-patch:
-	@${PERL} -pi -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
-		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
-	@${PERL} -pi -e 's|==|=|g' ${WRKSRC}/po/Makefile.in.in
+	@${REINPLACE_CMD} -e 's|DATADIRNAME=lib|DATADIRNAME=share|g' \
+	    ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|==|=|g' ${WRKSRC}/po/Makefile.in.in
 
 post-configure:
 	cd ${WRKSRC}/po && ${MAKE} update-po
