@@ -1,13 +1,9 @@
-# New ports collection makefile for:	pdfcube
-# Date created:		Apr. 20, 2007
-# Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
-#
-# $FreeBSD: ports/print/pdfcube/Makefile,v 1.19 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# $FreeBSD: ports/print/pdfcube/Makefile,v 1.20 2013/01/31 14:01:31 svnexp Exp $
 
 PORTNAME=	pdfcube
 DISTVERSION=	0.0.4-beta
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://code.100allora.it/releases/pdfcube/
 
