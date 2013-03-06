@@ -1,11 +1,8 @@
-# New ports collection makefile for:    tdiary
-# Date created:                 21 May 2003
-# Whom:                         Fumihiko Kimura <jfkimura@yahoo.co.jp>
-#
-# $FreeBSD: ports/japanese/tdiary/Makefile,v 1.11 2012/11/17 05:58:40 svnexp Exp $
-#
+# Created by: Fumihiko Kimura <jfkimura@yahoo.co.jp>
+# $FreeBSD: ports/japanese/tdiary/Makefile,v 1.12 2013/01/29 13:44:11 svnexp Exp $
 
 CATEGORIES=	japanese www ruby
+PKGNAMEPREFIX=	ja-
 
 MAINTAINER=	tota@FreeBSD.org
 
