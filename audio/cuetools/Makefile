@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cuetools
-# Date created:		30 December 2003
-# Whom:			Vincent Tantardini <vinc@FreeBSD-fr.org>
-#
-# $FreeBSD: ports/audio/cuetools/Makefile,v 1.19 2012/11/17 05:54:29 svnexp Exp $
-#
+# Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
+# $FreeBSD: ports/audio/cuetools/Makefile,v 1.20 2012/12/31 16:28:31 svnexp Exp $
 
 PORTNAME=	cuetools
 PORTVERSION=	1.3.1
@@ -25,12 +21,14 @@ PORTDOCS=	README
 PORTEXAMPLES=	cuetag.sh
 PLIST_FILES=	bin/cuebreakpoints bin/cueconvert bin/cueprint
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}/
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}/
 	${INSTALL_SCRIPT} ${WRKSRC}/extras/cuetag.sh ${EXAMPLESDIR}/
 .endif
