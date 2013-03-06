@@ -3,7 +3,7 @@
 # Date created:			Aug 30, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/math/qwtplot3d/Makefile,v 1.16 2012/11/17 05:59:30 svnexp Exp $
+# $FreeBSD: ports/math/qwtplot3d/Makefile,v 1.17 2012/12/30 18:56:10 svnexp Exp $
 #
 
 PORTNAME=	qwtplot3d
@@ -17,6 +17,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A 3D plotting widget for scientific data and mathematical expressions
 
 BUILD_DEPENDS=	qmake:${PORTSDIR}/devel/qmake
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 USE_GL=		yes
