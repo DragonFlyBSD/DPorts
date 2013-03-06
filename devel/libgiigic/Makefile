@@ -2,7 +2,7 @@
 # Date created:				7 December 2004
 # Whom:					antoine.brodin@laposte.net
 #
-# $FreeBSD: ports/devel/libgiigic/Makefile,v 1.12 2012/11/17 05:55:54 svnexp Exp $
+# $FreeBSD: ports/devel/libgiigic/Makefile,v 1.13 2013/02/14 10:22:09 svnexp Exp $
 #
 
 PORTNAME=	libgiigic
@@ -23,9 +23,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-
-CPPFLAGS+=	${PTHREAD_CFLAGS}
-LDFLAGS+=	${PTHREAD_LIBS}
 
 MAN3=		gicActionLazyAction.3 \
 		gicActionWrite.3 \
