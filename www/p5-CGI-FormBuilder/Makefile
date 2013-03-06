@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero
-# $FreeBSD: ports/www/p5-CGI-FormBuilder/Makefile,v 1.11 2013/01/19 03:58:01 svnexp Exp $
+# $FreeBSD: ports/www/p5-CGI-FormBuilder/Makefile,v 1.12 2013/02/13 06:44:08 svnexp Exp $
 
 PORTNAME=	CGI-FormBuilder
 PORTVERSION=	3.0800
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:S,00$,,}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	linpc@cs.nctu.edu.tw
+MAINTAINER=	pclin@FreeBSD.org
 COMMENT=	FormBuilder for CGI
 
 LICENSE=	ART10 GPLv1
