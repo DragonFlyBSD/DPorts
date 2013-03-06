@@ -2,7 +2,7 @@
 # Date created:				2 May 1998
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD: ports/games/affenspiel/Makefile,v 1.17 2012/11/17 05:57:31 svnexp Exp $
+# $FreeBSD: games/affenspiel/Makefile 313182 2013-03-02 03:55:25Z eadler $
 #
 
 PORTNAME=	affenspiel
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Little puzzle game with monkey for X Window System
 
 LICENSE=	unknown
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 LICENSE_NAME=	just Copyright
 
