@@ -2,7 +2,7 @@
 # Date created:    28 April 2010
 # Whom:	Christoph Kick
 #
-# $FreeBSD: ports/devel/rubygem-ffi/Makefile,v 1.14 2012/11/17 05:56:59 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-ffi/Makefile,v 1.15 2013/01/29 00:50:15 svnexp Exp $
 #
 
 PORTNAME=	ffi
@@ -13,7 +13,7 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Extension for dynamic libraries & binding functions
 
-LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi
+LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi
 
 USE_RUBY=	yes
 USE_RAKE=	yes
