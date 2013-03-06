@@ -1,0 +1,14 @@
+#!/bin/sh
+# $FreeBSD: ports/www/wordpress/files/pkg-install.in,v 1.1 2013/01/30 02:41:55 svnexp Exp $
+
+case $2 in
+	PRE-INSTALL)
+		;;
+	POST-INSTALL)
+		%%CHOWN%% -R %%WWWOWN%% %%WWWDIR%%/wp-content
+		%%FIND%% %%WWWDIR%% -type d -print | xargs %%CHGRP%% %%WWWGRP%%
+		%%FIND%% %%WWWDIR%% -type d -print | xargs %%CHMOD%% g+w
+		;;
+	*)
+	;;
+esac
