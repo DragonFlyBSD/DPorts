@@ -1,11 +1,5 @@
-# New ports collection makefile for:	august
-# Date created:				2000-12-31
-# Whom:					trevor
-#
-# based on the OpenBSD port by Kevin Lo <kevlo@openbsd.org>
-# $OpenBSD: Makefile,v 1.6 2000/12/10 15:00:14 kevlo Exp $
-# $FreeBSD: ports/www/august/Makefile,v 1.15 2012/11/17 06:02:28 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/www/august/Makefile,v 1.16 2013/01/27 06:41:42 svnexp Exp $
 
 PORTNAME=	august
 PORTVERSION=	0.63b
