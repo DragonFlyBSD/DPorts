@@ -1,5 +1,5 @@
 # Created by: Gabor Pali <pgj@FreeBSD.org>
-# $FreeBSD: ports/devel/cppcheck/Makefile,v 1.35 2013/01/16 18:42:49 svnexp Exp $
+# $FreeBSD: ports/devel/cppcheck/Makefile,v 1.36 2013/02/14 10:22:06 svnexp Exp $
 
 PORTNAME=	cppcheck
 PORTVERSION=	1.58
@@ -17,7 +17,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 
 ALL_TARGET=	cppcheck
-LDFLAGS+=	${PTHREAD_LIBS} -L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV+=	TINYXML=-ltinyxml
 
 OPTIONS_DEFINE=		MATCHCOMPILER RULES
