@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: ports/net/jakarta-commons-net/Makefile,v 1.13 2012/12/10 13:48:06 svnexp Exp $
+# $FreeBSD: ports/net/jakarta-commons-net/Makefile,v 1.14 2013/02/21 16:49:56 svnexp Exp $
 
 PORTNAME=	commons-net
 PORTVERSION=	1.4.1
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME:S,commons-,,}
 PKGNAMEPREFIX=	jakarta-
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
-MAINTAINER=	sem@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Collection of network protocol implementations for Java
 
 BUILD_DEPENDS=	${JAVALIBDIR}/junit.jar:${PORTSDIR}/java/junit \
