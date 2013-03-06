@@ -1,9 +1,5 @@
-# Ports collection makefile for:	libsexymm
-# Date created:				2005-11-07
-# Whom:					Andreas Kohn <andreas@syndrom23.de>
-#
-# $FreeBSD: ports/x11-toolkits/libsexymm/Makefile,v 1.19 2012/11/17 06:03:36 svnexp Exp $
-#
+# Created by: Andreas Kohn <andreas@syndrom23.de>
+# $FreeBSD: ports/x11-toolkits/libsexymm/Makefile,v 1.20 2012/12/29 10:30:07 svnexp Exp $
 
 PORTNAME=	libsexymm
 PORTVERSION=	0.1.9
@@ -11,10 +7,12 @@ PORTREVISION=	6
 CATEGORIES=	x11-toolkits devel
 MASTER_SITES=	http://releases.chipx86.com/libsexy/libsexymm/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	nemysis@gmx.ch
 COMMENT=	C++ bindings for libsexy
 
-LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24 \
+LICENSE=	LGPL21
+
+LIB_DEPENDS=	gtkmm-2:${PORTSDIR}/x11-toolkits/gtkmm24 \
 		sexy:${PORTSDIR}/x11-toolkits/libsexy
 
 USE_AUTOTOOLS=	libtool
