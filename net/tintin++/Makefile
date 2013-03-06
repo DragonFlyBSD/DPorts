@@ -1,9 +1,8 @@
 # Created by: ache
-# $FreeBSD: ports/net/tintin++/Makefile,v 1.41 2012/12/10 19:24:04 svnexp Exp $
+# $FreeBSD: ports/net/tintin++/Makefile,v 1.42 2013/01/30 17:47:33 svnexp Exp $
 
 PORTNAME=	tintin++
-PORTVERSION=	2.00.8
-PORTREVISION=	2
+PORTVERSION=	2.00.9
 CATEGORIES+=	net games
 MASTER_SITES=	SF/tintin/TinTin%2B%2B%20Source%20Code/${PORTVERSION}/
 DISTNAME=	tintin-${PORTVERSION}
