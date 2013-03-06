@@ -1,7 +1,8 @@
-# $FreeBSD: ports/games/xgalaga++/Makefile,v 1.4 2012/11/17 05:57:57 svnexp Exp $
+# $FreeBSD: ports/games/xgalaga++/Makefile,v 1.5 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	xgalaga++
 PORTVERSION=	0.8.3
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://marc.mongenet.ch/OSS/XGalaga/ \
 		SF/nemysisfreebsdp/:icons
