@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cream
-# Date created:				2004-08-25
-# Whom:					Janos Mohacsi <janos.mohacsi@bsd.hu>
-#
-# $FreeBSD: ports/editors/cream/Makefile,v 1.19 2012/11/17 05:57:12 svnexp Exp $
-#
+# Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
+# $FreeBSD: ports/editors/cream/Makefile,v 1.20 2013/01/09 20:04:41 svnexp Exp $
 
 PORTNAME=	cream
 PORTVERSION=	0.42
@@ -11,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	SF/${PORTNAME}/Cream/${PORTVERSION}
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Gvim extension with many features
 
 RUN_DEPENDS=	${LOCALBASE}/bin/gvim:${PORTSDIR}/editors/vim
