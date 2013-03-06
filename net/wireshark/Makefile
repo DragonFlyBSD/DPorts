@@ -2,11 +2,11 @@
 # Date created:        10 August 1998
 # Whom:                Bill Fumerola <billf@chc-chimes.com>
 #
-# $FreeBSD: ports/net/wireshark/Makefile,v 1.189 2012/12/17 06:26:12 svnexp Exp $
+# $FreeBSD: ports/net/wireshark/Makefile,v 1.192 2013/02/04 18:43:56 svnexp Exp $
 #
 
 PORTNAME?=	wireshark
-PORTVERSION=	1.8.4
+PORTVERSION=	1.8.5
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.wireshark.org/download/src/ \
 		http://ftp.uni-kl.de/pub/wireshark/src/ \
@@ -176,6 +176,7 @@ MAN4+=	wireshark-filter.4
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LUA_INCDIR%%|${LUA_INCDIR}|g ; \
+	    	s|-Wl,--as-needed|| ; \
 	    	s|%%LUA_LIBDIR%%|${LUA_LIBDIR}|g' \
 		${WRKSRC}/configure
 
