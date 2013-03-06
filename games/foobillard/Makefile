@@ -2,12 +2,12 @@
 # Date created:				26 October 2002
 # Whom:					Thomas Vogt <thomas.vogt@bsdunix.ch>
 #
-# $FreeBSD: ports/games/foobillard/Makefile,v 1.31 2012/11/17 05:57:38 svnexp Exp $
+# $FreeBSD: ports/games/foobillard/Makefile,v 1.32 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	foobillard
 PORTVERSION=	3.0a
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	http://foobillard.sunsite.dk/dnl/
 
