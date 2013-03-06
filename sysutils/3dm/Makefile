@@ -1,11 +1,11 @@
 # Created by: Daniel Baker <dbaker@FreeBSD.org>
-# $FreeBSD: ports/sysutils/3dm/Makefile,v 1.30 2012/11/17 06:01:24 svnexp Exp $
+# $FreeBSD: ports/sysutils/3dm/Makefile,v 1.31 2013/02/16 16:32:27 svnexp Exp $
 
 PORTNAME=	3dm
 PORTVERSION=	2.11.00.019
 PORTEPOCH=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://shibboleet.com/3dm2/ \
+MASTER_SITES=	http://a.aranea.brtsvcs.net/3dm2/ \
 		http://b.aranea.brtsvcs.net/3dm2/
 DISTFILES=	tdmCliBSD_${PORTVERSION}.tar.gz
 DIST_SUBDIR=	3dm2
