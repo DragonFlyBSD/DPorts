@@ -2,11 +2,11 @@
 # Date created:                         23 October 2003
 # Whom:                                 Rob Evers <rob@debank.tv>
 #
-# $FreeBSD: ports/mail/postfixadmin/Makefile,v 1.38 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: ports/mail/postfixadmin/Makefile,v 1.39 2013/02/23 21:41:56 svnexp Exp $
 #
 
 PORTNAME=	postfixadmin
-PORTVERSION=	2.3.5
+PORTVERSION=	2.3.6
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
