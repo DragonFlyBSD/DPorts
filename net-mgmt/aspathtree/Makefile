@@ -1,8 +1,5 @@
-# New ports collection makefile for:    aspathtree
-# Date created:         06.05.2002
-# Whom: Janos Mohacsi <janos.mohacsi@bsd.hu>
-#
-# $FreeBSD: ports/net-mgmt/aspathtree/Makefile,v 1.11 2012/11/17 06:00:30 svnexp Exp $
+# Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
+# $FreeBSD: ports/net-mgmt/aspathtree/Makefile,v 1.12 2013/01/09 20:05:03 svnexp Exp $
 
 PORTNAME=	aspathtree
 PORTVERSION=	4.2
@@ -11,7 +8,7 @@ CATEGORIES=	net-mgmt ipv6
 MASTER_SITES=	http://ipv6.niif.hu/~mohacsi/downloads/
 DISTNAME=	ASpath-tree-v${PORTVERSION}
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Checks IPv6 routes' stability and correctness on IPv6 internet
 
 RUN_DEPENDS=	p5-Net-Telnet>=0:${PORTSDIR}/net/p5-Net-Telnet \
