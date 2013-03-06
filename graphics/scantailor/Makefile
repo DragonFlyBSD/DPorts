@@ -1,13 +1,8 @@
-# New ports collection makefile for:	scantailor
-# Date created:		2010-04-13
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: ports/graphics/scantailor/Makefile,v 1.7 2012/11/17 05:58:22 svnexp Exp $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: ports/graphics/scantailor/Makefile,v 1.9 2013/01/31 14:01:28 svnexp Exp $
 
 PORTNAME=	scantailor
-PORTVERSION=	0.9.10
-PORTREVISION=	1
+PORTVERSION=	0.9.11
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
