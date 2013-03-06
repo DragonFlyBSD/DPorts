@@ -1,15 +1,12 @@
-# New ports collection makefile for:	nettop
-# Date created:				21 April 2006
-# Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: ports/net-mgmt/nettop/Makefile,v 1.7 2012/11/17 06:00:34 svnexp Exp $
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: ports/net-mgmt/nettop/Makefile,v 1.8 2013/02/02 02:41:52 svnexp Exp $
 #
 
 PORTNAME=	nettop
 PORTVERSION=	0.2.3
 PORTREVISION=	3
 CATEGORIES=	net-mgmt
-MASTER_SITES=	http://srparish.net/scripts/
+MASTER_SITES=	http://fossies.org/unix/privat/old/
 
 MAINTAINER=	leeym@FreeBSD.org
 COMMENT=	A program which looks like top, but is for network packets
@@ -24,6 +21,11 @@ LDFLAGS+=	-lcurses
 PLIST_FILES=	bin/nettop
 PORTDOCS=	README THANKS ChangeLog
 
+DEPRECATED=	Dead upstream
+EXPIRATION_DATE=2013-03-01
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	${REINPLACE_CMD} -e '/count.*size/s/(int) //g' ${WRKSRC}/nettop.c
 .if !exists(/usr/lib/libpthread.so)
@@ -32,7 +34,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
 .endif
