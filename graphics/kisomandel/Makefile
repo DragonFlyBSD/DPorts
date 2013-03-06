@@ -3,7 +3,7 @@
 # Date created:			Jun 10, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/graphics/kisomandel/Makefile,v 1.24 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: ports/graphics/kisomandel/Makefile,v 1.25 2012/12/30 18:56:02 svnexp Exp $
 #
 
 PORTNAME=	kisomandel
@@ -16,6 +16,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fractal rendering program with nice 3D-display in realtime
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 PLIST_FILES=	bin/kisomandel
 USE_BZIP2=	yes
