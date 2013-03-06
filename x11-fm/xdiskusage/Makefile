@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xdiskusage
-# Date created:				2000-09-23
-# Whom:					Trevor Johnson
-#
-# $FreeBSD: ports/x11-fm/xdiskusage/Makefile,v 1.34 2012/11/17 06:03:26 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/x11-fm/xdiskusage/Makefile,v 1.35 2013/01/27 06:41:43 svnexp Exp $
 
 PORTNAME=	xdiskusage
 PORTVERSION=	1.48
