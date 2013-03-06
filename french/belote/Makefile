@@ -1,9 +1,9 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: ports/french/belote/Makefile,v 1.7 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: ports/french/belote/Makefile,v 1.8 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	belote
 PORTVERSION=	20061109
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	french games java
 MASTER_SITES=	http://coincher.free.fr/
 DISTNAME=	belote
