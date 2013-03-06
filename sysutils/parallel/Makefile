@@ -1,8 +1,8 @@
 # Created by: Chris Howey <howeyc@gmail.com>
-# $FreeBSD: ports/sysutils/parallel/Makefile,v 1.31 2013/01/04 20:43:10 svnexp Exp $
+# $FreeBSD: ports/sysutils/parallel/Makefile,v 1.33 2013/02/26 02:44:19 svnexp Exp $
 
 PORTNAME=	parallel
-PORTVERSION=	20121222
+PORTVERSION=	20130222
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU
 
