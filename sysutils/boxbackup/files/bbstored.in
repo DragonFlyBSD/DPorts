@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/sysutils/boxbackup/files/bbstored.in,v 1.4 2012/11/17 06:01:25 svnexp Exp $
+# $FreeBSD: ports/sysutils/boxbackup/files/bbstored.in,v 1.7 2013/02/23 12:46:34 svnexp Exp $
 #
 # PROVIDE: bbstored
 # REQUIRE: NETWORKING
@@ -18,11 +18,11 @@ rcvar=bbstored_enable
 load_rc_config $name
 
 : ${bbstored_enable:="NO"}
-: ${bbstored_flags:="%%PREFIX%%/etc/box/bbstored.conf"}
+: ${bbstored_flags:="%%ETCDIR%%/bbstored.conf"}
 
 pidfile=${bbstored_pidfile:-"/var/run/bbstored.pid"}
 
-command="%%PREFIX%%/bin/bbstored"
+command="%%PREFIX%%/sbin/bbstored"
 extra_commands="reload"
 
 run_rc_command "$1"

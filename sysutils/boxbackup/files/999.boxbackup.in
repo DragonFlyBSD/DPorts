@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/boxbackup/files/999.boxbackup.in,v 1.2 2012/11/17 06:01:25 svnexp Exp $
+# $FreeBSD: ports/sysutils/boxbackup/files/999.boxbackup.in,v 1.3 2013/02/09 12:22:31 svnexp Exp $
 #
 # Box Backup monthly store compare
 #
@@ -49,7 +49,7 @@ case "$monthly_boxbackup_compare_enable" in
 		# Return codes:
 		#  1    Comparison was exact
 		#  2    Differences were found
-		#  3    An error occured
+		#  3    An error occurred
 		if [ $? -eq 2 ]; then
 			echo
 			echo "Differences were found. Please check the output."

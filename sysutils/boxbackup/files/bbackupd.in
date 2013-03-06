@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/sysutils/boxbackup/files/bbackupd.in,v 1.4 2012/11/17 06:01:25 svnexp Exp $
+# $FreeBSD: ports/sysutils/boxbackup/files/bbackupd.in,v 1.6 2013/02/21 19:41:55 svnexp Exp $
 #
 # PROVIDE: bbackupd
 # REQUIRE: NETWORKING
@@ -18,11 +18,11 @@ rcvar=bbackupd_enable
 load_rc_config $name
 
 : ${bbackupd_enable:="NO"}
-: ${bbackupd_flags:="%%PREFIX%%/etc/box/bbackupd.conf"}
+: ${bbackupd_flags:="%%PREFIX%%/etc/boxbackup/bbackupd.conf"}
 
 pidfile=${bbackupd_pidfile:-"/var/run/bbackupd.pid"}
 
-command="%%PREFIX%%/bin/bbackupd"
+command="%%PREFIX%%/sbin/bbackupd"
 extra_commands="reload"
 
 run_rc_command "$1"
