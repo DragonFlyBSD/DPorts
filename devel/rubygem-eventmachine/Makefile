@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-eventmachine
-# Date created:				01 April 2007
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/devel/rubygem-eventmachine/Makefile,v 1.16 2012/11/17 05:56:59 svnexp Exp $
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: devel/rubygem-eventmachine/Makefile 313016 2013-02-27 01:38:46Z swills $
 
 PORTNAME=	eventmachine
-PORTVERSION=	0.12.10
+PORTVERSION=	1.0.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
