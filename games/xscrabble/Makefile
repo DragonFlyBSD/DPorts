@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xscrabble
-# Date created:		27 July 1997
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/games/xscrabble/Makefile,v 1.29 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: ports/games/xscrabble/Makefile,v 1.30 2013/01/26 16:56:10 svnexp Exp $
 
 PORTNAME=	xscrabble
 PORTVERSION=	2.12
