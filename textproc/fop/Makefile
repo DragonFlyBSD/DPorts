@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko <kiri@FreeBSD.org>
-# $FreeBSD: ports/textproc/fop/Makefile,v 1.27 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: ports/textproc/fop/Makefile,v 1.28 2013/02/06 11:16:08 svnexp Exp $
 
 PORTNAME=	fop
 PORTVERSION=	1.1
@@ -14,7 +14,7 @@ EXTRACT_ONLY=	${DISTNAME}.tar.gz
 MAINTAINER=	geoff@sea-incorporated.com
 COMMENT=	Print formatter driven by XSL formatting
 
-EXTRACT_DEPENDS+=	unzip:${PORTSDIR}/archivers/unzip
+EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
