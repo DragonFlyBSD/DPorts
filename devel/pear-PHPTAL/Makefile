@@ -2,7 +2,7 @@
 # Date created:			  2010-10-4
 # Whom:				  Tom Judge <tom@tomjudge.com>
 #
-# $FreeBSD: ports/devel/pear-PHPTAL/Makefile,v 1.3 2012/11/17 05:56:39 svnexp Exp $
+# $FreeBSD: ports/devel/pear-PHPTAL/Makefile,v 1.4 2013/02/04 17:51:56 svnexp Exp $
 
 PORTNAME=	PHPTAL
 PORTVERSION=	1.2.2
@@ -15,21 +15,24 @@ COMMENT=	PEAR PHPTAL is a XML/XHTML template library for PHP
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-OPTIONS=	GETTEXT "Enable GetText Support" off \
-		SIMPLEXML "Enable SimpleXML Support" off \
-		JSON "Enable JSON Support" off
+OPTIONS_DEFINE=	GETTEXT SIMPLEXML JSON
+GETTEXT_DESC=	"Enable GetText Support"
+SIMPLEXML_DESC=	"Enable SimpleXML Support"
+JSON_DESC=	"Enable JSON Support"
+
+.include <bsd.port.options.mk>
 
 USE_PHP=	ctype hash
 
-.if defined(WITH_GETTEXT)
+.if ${PORT_OPTIONS:MGETTEXT}
 USE_PHP+=	gettext
 .endif
 
-.if defined(WITH_SIMPLEXML)
+.if ${PORT_OPTIONS:MSIMPLEXML}
 USE_PHP+=	simplexml
 .endif
 
-.if defined(WITH_JSON)
+.if ${PORT_OPTIONS:MJSON}
 USE_PHP+=	json
 .endif
 
