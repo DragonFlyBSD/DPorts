@@ -2,12 +2,12 @@
 # Date created:				September 17, 2005
 # Whom:					delphij@FreeBSD.org
 #
-# $FreeBSD: ports/mail/libvmime/Makefile,v 1.32 2012/11/17 05:59:04 svnexp Exp $
+# $FreeBSD: ports/mail/libvmime/Makefile,v 1.33 2013/02/05 16:54:23 svnexp Exp $
 #
 
 PORTNAME=	libvmime
 PORTVERSION=	0.9.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	SF/vmime/vmime/0.9
 
