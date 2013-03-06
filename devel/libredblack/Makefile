@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libredblack
-# Date created:		15 April 2002
-# Whom:			smace@freebsd.org
-#
-# $FreeBSD: ports/devel/libredblack/Makefile,v 1.16 2012/11/17 05:55:56 svnexp Exp $
-#
+# Created by: smace@freebsd.org
+# $FreeBSD: ports/devel/libredblack/Makefile,v 1.17 2013/01/12 13:02:14 svnexp Exp $
 
 PORTNAME=	libredblack
 PORTVERSION=	1.3
@@ -11,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Library that provides the red-black balanced tree algorithm
 
 USE_AUTOTOOLS=	libtool
