@@ -2,7 +2,7 @@
 # Date created:				24 Nov 2005
 # Whom:					Alexander Logvinov <info@logvinov.com>
 #
-# $FreeBSD: ports/www/lightsquid/Makefile,v 1.13 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: ports/www/lightsquid/Makefile,v 1.14 2013/02/19 14:35:38 svnexp Exp $
 #
 
 PORTNAME=	lightsquid
@@ -12,7 +12,7 @@ CATEGORIES=	www
 MASTER_SITES=	SF
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	A light and fast web based squid proxy traffic analyser
 
 OPTIONS=	GDSUPPORT	"Graphics report support"	on
