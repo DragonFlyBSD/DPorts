@@ -1,23 +1,19 @@
-# Ports collection makefile for:	coppermine
-# Date created:				05 April 2004
-# Whom:					Brooks Davis <brooks@FreeBSD.org>
-#
-# $FreeBSD: ports/www/coppermine/Makefile,v 1.34 2012/12/10 01:26:34 svnexp Exp $
-#
+# Created by: Brooks Davis <brooks@FreeBSD.org>
+# $FreeBSD: ports/www/coppermine/Makefile,v 1.35 2013/02/13 19:18:02 svnexp Exp $
 
 PORTNAME=	coppermine
-PORTVERSION=	1.5.20
+PORTVERSION=	1.5.22
 CATEGORIES=	www
-MASTER_SITES=	SF/eenemeenemuu.u
+MASTER_SITES=	SF/${PORTNAME}/Coppermine/1.5.x/
 DISTNAME=	cpg${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	A web picture gallery script
 
 OPTIONS_DEFINE=	DOCS IMAGEMAGICK
 IMAGEMAGICK_DESC=	Use ImageMagick instead of PHP GD extension
 
-USE_PHP=	mysql pcre
+USE_PHP=	mysql pcre ctype
 USE_ZIP=	yes
 
 NO_BUILD=	yes
