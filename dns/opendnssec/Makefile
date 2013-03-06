@@ -1,8 +1,8 @@
 # Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-# $FreeBSD: ports/dns/opendnssec/Makefile,v 1.24 2012/12/04 09:13:57 svnexp Exp $
+# $FreeBSD: ports/dns/opendnssec/Makefile,v 1.25 2013/02/21 00:49:36 svnexp Exp $
 
 PORTNAME=	opendnssec
-PORTVERSION=	1.3.12
+PORTVERSION=	1.3.13
 CATEGORIES=	dns
 MASTER_SITES=	http://dist.opendnssec.org/source/
 
