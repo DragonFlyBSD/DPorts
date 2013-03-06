@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/io-reactor
-# Date created:		26 December 2004
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/ruby-io-reactor/Makefile,v 1.7 2012/11/17 05:56:57 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-io-reactor/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	io-reactor
 PORTVERSION=	1.0.4
@@ -16,6 +12,9 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby module that implements an asynchronous multiplexed IO Reactor
 
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
+
 USE_RUBY=	yes
 USE_RAKE=	yes
 
@@ -23,6 +22,8 @@ NO_BUILD=	yes
 
 DOCS=		ChangeLog README
 EXAMPLES=	examples/*
+
+BUILD_DEPENDS=	rubygem-rdoc>=0:${PORTSDIR}/devel/rubygem-rdoc
 
 do-install:
 	cd ${WRKSRC}; ${RUBY} ${RAKE_BIN} install
