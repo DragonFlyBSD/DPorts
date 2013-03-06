@@ -2,7 +2,7 @@
 # Date created:				06 May 2009
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/sysutils/flashrom/Makefile,v 1.14 2012/11/17 06:01:30 svnexp Exp $
+# $FreeBSD: ports/sysutils/flashrom/Makefile,v 1.15 2013/02/19 18:23:55 svnexp Exp $
 #
 
 PORTNAME=	flashrom
@@ -26,8 +26,8 @@ FTDI_DESC=	Enable external FT2232SPI flasher support
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-CPPFLAGS+=      -I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=       -L${LOCALBASE}/lib ${PTHREAD_LIBS} -lc
+CPPFLAGS+=      -I${LOCALBASE}/include
+LDFLAGS+=       -L${LOCALBASE}/lib -lc
 
 ONLY_FOR_ARCHS=	amd64 i386
 
