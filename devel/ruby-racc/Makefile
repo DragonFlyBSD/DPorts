@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-Racc
-# Date created:		7 Aug 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/ruby-racc/Makefile,v 1.45 2012/11/17 05:56:57 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-racc/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	racc
 PORTVERSION=	1.4.5
@@ -16,6 +12,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	An LALR(1) parser generator for Ruby
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
