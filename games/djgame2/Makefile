@@ -1,9 +1,5 @@
-# New ports collection makefile for:	djgame2
-# Date created:		4 May 2007
-# Whom:			Yinghong Liu <relaxbsd@gmail.com>
-#
-# $FreeBSD: ports/games/djgame2/Makefile,v 1.13 2012/11/17 05:57:36 svnexp Exp $
-#
+# Created by: Yinghong Liu <relaxbsd@gmail.com>
+# $FreeBSD: ports/games/djgame2/Makefile,v 1.14 2013/02/12 13:17:57 svnexp Exp $
 
 PORTNAME=	djgame2
 PORTVERSION=	3.2.0
