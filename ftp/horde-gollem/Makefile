@@ -2,11 +2,11 @@
 # Date created:			  Oct 11, 2011
 # Whom:				  Martin Matuska (mm@FreeBSD.org)
 #
-# $FreeBSD: ports/ftp/horde-gollem/Makefile,v 1.35 2013/01/10 18:34:57 svnexp Exp $
+# $FreeBSD: ports/ftp/horde-gollem/Makefile,v 1.36 2013/02/12 17:38:59 svnexp Exp $
 #
 
 PORTNAME=	gollem
-DISTVERSION=	3.0.0RC2
+PORTVERSION=	3.0.0
 CATEGORIES=	ftp www pear
 PKGNAMEPREFIX=	horde-
 
