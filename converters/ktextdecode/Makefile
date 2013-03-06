@@ -2,7 +2,7 @@
 # Date created:				08.05.2003
 # Whom:					Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: ports/converters/ktextdecode/Makefile,v 1.27 2012/12/30 18:55:42 svnexp Exp $
+# $FreeBSD: ports/converters/ktextdecode/Makefile,v 1.28 2013/02/08 03:24:27 svnexp Exp $
 
 PORTNAME=	ktextdecode
 PORTVERSION=	3.0
@@ -22,7 +22,7 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-O2||g; s|-lpthread|${PTHREAD_LIBS}|g' \
+	@${REINPLACE_CMD} -e 's|-O2||g' \
 		${WRKSRC}/${CONFIGURE_SCRIPT}
 
 .include <bsd.port.mk>
