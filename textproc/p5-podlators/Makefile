@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-podlators/Makefile,v 1.38 2013/01/04 09:49:11 svnexp Exp $
+# $FreeBSD: textproc/p5-podlators/Makefile 313141 2013-03-01 07:49:51Z culot $
 
 PORTNAME=	podlators
-PORTVERSION=	2.5.0
+PORTVERSION=	2.5.1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Pod
