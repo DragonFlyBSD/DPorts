@@ -2,7 +2,7 @@
 # Date created:				Sun Apr 27 15:48:16 CEST 2003
 # Whom:					Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: ports/www/middleman/Makefile,v 1.30 2012/11/17 06:02:39 svnexp Exp $
+# $FreeBSD: ports/www/middleman/Makefile,v 1.31 2013/02/07 14:08:06 svnexp Exp $
 #
 
 PORTNAME=	middleman
@@ -18,8 +18,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 
 MAN8=		mman.8
 
