@@ -1,4 +1,4 @@
-# $FreeBSD: ports/japanese/ruby-eb/Makefile,v 1.29 2012/11/17 05:58:39 svnexp Exp $
+# $FreeBSD: japanese/ruby-eb/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	eb
 PORTVERSION=	2.6
@@ -11,6 +11,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby bind of EB library
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 LIB_DEPENDS=	eb:${PORTSDIR}/japanese/eb
 
