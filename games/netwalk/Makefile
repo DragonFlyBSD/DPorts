@@ -1,7 +1,8 @@
-# $FreeBSD: ports/games/netwalk/Makefile,v 1.2 2012/11/17 05:57:47 svnexp Exp $
+# $FreeBSD: ports/games/netwalk/Makefile,v 1.3 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	netwalk
 PORTVERSION=	0.4.10
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	GITHUB \
 		GOOGLE_CODE:icons
