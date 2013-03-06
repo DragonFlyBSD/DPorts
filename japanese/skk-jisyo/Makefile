@@ -1,12 +1,8 @@
-# New ports collection makefile for:	skk-jisyo
-# Date created:		31 Oct 1998
-# Whom:			Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-#
-# $FreeBSD: ports/japanese/skk-jisyo/Makefile,v 1.51 2012/12/09 18:13:48 svnexp Exp $
-#
+# Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
+# $FreeBSD: ports/japanese/skk-jisyo/Makefile,v 1.52 2013/02/17 20:04:46 svnexp Exp $
 
 PORTNAME=	skk-jisyo
-PORTVERSION=	201212
+PORTVERSION=	201302
 #PORTREVISION=	0
 CATEGORIES=	japanese
 MASTER_SITES=	LOCAL/matusita/${PORTNAME}
