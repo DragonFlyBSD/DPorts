@@ -1,12 +1,9 @@
-# New ports collection makefile for:	py-gato
-# Date created:		31 August 2001
-# Whom:	      		Johann Visagie <wjv@FreeBSD.org>
-#
-# $FreeBSD: ports/math/py-gato/Makefile,v 1.13 2012/11/17 05:59:29 svnexp Exp $
-#
+# Created by: Johann Visagie <wjv@FreeBSD.org>
+# $FreeBSD: math/py-gato/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
 
 PORTNAME=	gato
 PORTVERSION=	1.02
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://gato.sourceforge.net/Download/
 MASTER_SITE_SUBDIR=	gato
@@ -16,7 +13,7 @@ DISTNAME=	Gato-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Python-based toolbox to visualise algorithms on graphs
 
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_tkinter.so:${PORTSDIR}/x11-toolkits/py-tkinter
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
 
 WRKSRC=		${WRKDIR}/Gato
 
