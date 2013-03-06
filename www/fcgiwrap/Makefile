@@ -1,9 +1,4 @@
-# New ports collection makefile for:	fcgiwrap
-# Date created:		2010-06-15
-# Whom:			Bapt <baptiste.daroussin@gmail.com>
-#
-# $FreeBSD: ports/www/fcgiwrap/Makefile,v 1.10 2012/11/18 16:55:50 svnexp Exp $
-#
+# $FreeBSD: ports/www/fcgiwrap/Makefile,v 1.11 2012/12/31 15:14:21 svnexp Exp $
 
 PORTNAME=	fcgiwrap
 PORTVERSION=	1.0.3
@@ -16,7 +11,7 @@ COMMENT=	Simple FastCGI wrapper for CGI scripts
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	fcgi.0:${PORTSDIR}/www/fcgi
+LIB_DEPENDS=	fcgi:${PORTSDIR}/www/fcgi
 
 WRKSRC=		${WRKDIR}/gnosek-fcgiwrap-2e301c8
 
