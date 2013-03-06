@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Template-Toolkit
-# Date Created:				3 Mar, 2001
-# Whom:					clive
-#
-# $FreeBSD: ports/www/p5-Template-Toolkit/Makefile,v 1.39 2012/11/17 06:02:54 svnexp Exp $
-#
+# Created by: clive
+# $FreeBSD: ports/www/p5-Template-Toolkit/Makefile,v 1.40 2013/02/12 13:57:22 svnexp Exp $
 
 PORTNAME=	Template-Toolkit
 PORTVERSION=	2.24
