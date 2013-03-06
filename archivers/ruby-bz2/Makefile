@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/archivers/ruby-bz2/Makefile,v 1.25 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: archivers/ruby-bz2/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	bz2
 PORTVERSION=	0.2.2
@@ -11,6 +11,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby extension to use libbz2
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
