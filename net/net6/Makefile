@@ -2,11 +2,12 @@
 # Date created:				2005-10-14
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
-# $FreeBSD: ports/net/net6/Makefile,v 1.32 2012/11/17 06:00:06 svnexp Exp $
+# $FreeBSD: ports/net/net6/Makefile,v 1.33 2013/02/05 16:54:24 svnexp Exp $
 #
 
 PORTNAME=	net6
 PORTVERSION=	1.3.14
+PORTREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	http://releases.0x539.de/net6/
 
@@ -16,7 +17,7 @@ COMMENT=	Network access framework for IPv4/IPv6
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20 \
-		gnutls.47:${PORTSDIR}/security/gnutls
+		gnutls.26:${PORTSDIR}/security/gnutls
 
 USE_GNOME=	gnomehack
 USE_AUTOTOOLS=	libtool
