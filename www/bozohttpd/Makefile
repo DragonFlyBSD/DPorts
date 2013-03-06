@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/www/bozohttpd/Makefile,v 1.23 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: ports/www/bozohttpd/Makefile,v 1.24 2013/01/09 20:05:15 svnexp Exp $
 
 PORTNAME=	bozohttpd
 PORTVERSION=	20100920
@@ -7,7 +7,7 @@ CATEGORIES=	www ipv6
 MASTER_SITES=	http://www.eterna.com.au/bozohttpd/ \
 		${MASTER_SITE_NETBSD}
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	The bozotic HTTP server
 
 LICENSE=	BSD
