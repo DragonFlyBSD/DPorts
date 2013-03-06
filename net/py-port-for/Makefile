@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-port-for
-# Date created:		2012-06-18
-# Whom:			koobs <koobs.freebsd@gmail.com>
-#
-# $FreeBSD: ports/net/py-port-for/Makefile,v 1.2 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/net/py-port-for/Makefile,v 1.3 2013/02/09 15:59:33 svnexp Exp $
 
 PORTNAME=	port-for
 PORTVERSION=	0.3
@@ -11,7 +7,7 @@ CATEGORIES=	net devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Python utility and library that helps with TCP ports management
 
 LICENSE=	MIT
