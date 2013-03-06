@@ -2,7 +2,7 @@
 # Date created:        3 January 2005
 # Whom:                Andriy Gapon <avg@icyb.net.ua>
 #
-# $FreeBSD: ports/sysutils/udfclient/Makefile,v 1.23 2012/12/14 15:53:09 svnexp Exp $
+# $FreeBSD: sysutils/udfclient/Makefile 313088 2013-02-28 10:51:58Z gahr $
 #
 
 PORTNAME=	udfclient
@@ -21,8 +21,6 @@ COMMENT=	Tools for UDF filesystem
 WRKSRC=		${WRKDIR}/UDFclient.${PORTVERSION}
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	with_pthread_cflags="${PTHREAD_CFLAGS}" \
-		with_thread_libs="${PTHREAD_LIBS}"
 MAKE_ARGS+=	INSTALL="${INSTALL_PROGRAM}"
 
 OPTIONS=	FUSE	"udfclientfs via FUSE"	off \
