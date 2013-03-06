@@ -1,8 +1,9 @@
 # Created by: clement
-# $FreeBSD: ports/irc/weechat/Makefile,v 1.65 2012/11/18 13:48:04 svnexp Exp $
+# $FreeBSD: ports/irc/weechat/Makefile,v 1.67 2013/02/05 16:54:22 svnexp Exp $
 
 PORTNAME=	weechat
-PORTVERSION=	0.3.9.2
+PORTVERSION=	0.4.0
+PORTREVISION=	1
 CATEGORIES=	irc
 MASTER_SITES=	http://weechat.org/files/src/
 
