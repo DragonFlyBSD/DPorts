@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/deskutils/launchy/Makefile,v 1.16 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: ports/deskutils/launchy/Makefile,v 1.17 2013/01/31 14:01:26 svnexp Exp $
 
 PORTNAME=	launchy
 PORTVERSION=	2.5
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/Launchy%20on%20Linux/${PORTVERSION}
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	An open source keystroke launcher
 
-BUILD_DEPENDS=	${LOCALBASE}/include/boost/spirit/core.hpp:${PORTSDIR}/devel/boost-libs
+BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
 RUN_DEPENDS=	${LOCALBASE}/bin/xdg-open:${PORTSDIR}/devel/xdg-utils
 
 USE_DOS2UNIX=	readme.lyx readme.txt
