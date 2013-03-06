@@ -16,7 +16,7 @@
 # This code now mainly supports FreeBSD, but patches to update support for
 # OpenBSD and NetBSD will be accepted.
 #
-# $FreeBSD: ports/ports-mgmt/portlint/src/portlint.pl,v 1.134 2012/12/30 06:28:27 svnexp Exp $
+# $FreeBSD: ports-mgmt/portlint/src/portlint.pl 313176 2013-03-02 00:40:53Z tota $
 # $MCom: portlint/portlint.pl,v 1.266 2012/12/29 23:23:32 marcus Exp $
 #
 
@@ -161,7 +161,7 @@ foreach my $i (@osdep) {
 
 # The PORTSDIR environment variable overrides our defaults.
 $portsdir = $ENV{PORTSDIR} if ( defined $ENV{'PORTSDIR'} );
-$ENV{'PL_CVS_IGNORE'} //= '';
+$ENV{'PL_SVN_IGNORE'} //= '';
 my $mfile_moved = "${portsdir}/MOVED";
 my $mfile_uids = "${portsdir}/UIDs";
 my $mfile_gids = "${portsdir}/GIDs";
