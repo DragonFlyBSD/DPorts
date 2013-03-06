@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/rubygem-htmltools/Makefile,v 1.9 2012/11/17 06:02:20 svnexp Exp $
+# $FreeBSD: textproc/rubygem-htmltools/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	htmltools
 PORTVERSION=	1.10
@@ -8,6 +8,9 @@ DISTNAME=	htmltools-${PORTVERSION}
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Tools for parsing and manipulating HTML text in Ruby
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
