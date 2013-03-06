@@ -2,11 +2,12 @@
 # Date created:         2012-05-15
 # Whom:                 Stephen Hurd <shurd@sasktel.net>
 #
-# $FreeBSD: ports/comms/fl_moxgen/Makefile,v 1.2 2012/11/17 05:54:59 svnexp Exp $
+# $FreeBSD: ports/comms/fl_moxgen/Makefile,v 1.3 2013/01/23 15:05:32 svnexp Exp $
 #
 
 PORTNAME=	fl_moxgen
 PORTVERSION=	0.05
+PORTREVISION=	1
 CATEGORIES=	comms hamradio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	flmoxgen
