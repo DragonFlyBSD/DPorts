@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: ports/textproc/html2text/Makefile,v 1.15 2012/11/17 06:01:59 svnexp Exp $
+# $FreeBSD: textproc/html2text/Makefile 313311 2013-03-03 00:21:22Z eadler $
 
 PORTNAME=	html2text
 PORTVERSION=	1.3.2a
@@ -19,20 +19,22 @@ MAN5=		html2textrc.5
 PORTDOCS=	CHANGES CREDITS KNOWN_BUGS README TODO
 PLIST_FILES=	bin/html2text
 
+MAKE_JOBS_SAFE=	yes
+
 CONFLICTS=	py27-html2text-[0-9]*
 
-PORTSCOUT=	skipb:0
+PORTSCOUT=	skipb:0 skipv:1.3.2
 
 .include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e '/echo=/s/ -e//' ${WRKSRC}/configure
-.for file in Makefile.in libstd/Makefile.in
+.for fle in Makefile.in libstd/Makefile.in
 	@${REINPLACE_CMD} -e '/^DEBUG/s/^/#/; \
-		 /^CXXFLAGS/s/=/+=/' ${WRKSRC}/${file}
+		 /^CXXFLAGS/s/=/+=/' ${WRKSRC}/${fle}
 .endfor
-.for file in Area.h HTMLControl.h Properties.h format.h
-	@${REINPLACE_CMD} -e 's/<istream>/<iostream>/' ${WRKSRC}/${file}
+.for fle in Area.h HTMLControl.h Properties.h format.h
+	@${REINPLACE_CMD} -e 's/<istream>/<iostream>/' ${WRKSRC}/${fle}
 .endfor
 
 do-install:
@@ -41,8 +43,8 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/html2textrc.5.gz ${MANPREFIX}/man/man5
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
-.for file in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+.for fle in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${fle} ${DOCSDIR}
 .endfor
 .endif
 
