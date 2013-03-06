@@ -3,7 +3,7 @@
 #       python setup.py install
 #
 
-__version__ = "$FreeBSD: ports/databases/py-gdbm/files/setup.py,v 1.2 2012/11/17 05:55:22 svnexp Exp $"
+__version__ = "$FreeBSD: databases/py-gdbm/files/setup.py 313167 2013-03-01 20:12:01Z lwhsu $"
 
 try:
     import distutils
@@ -13,6 +13,9 @@ try:
 except:
     raise SystemExit, "Distutils problem"
 
+install.sub_commands = filter(lambda (cmd, avl): 'egg' not in cmd,
+                              install.sub_commands)
+
 prefix = sysconfig.PREFIX
 inc_dirs = [prefix + "/include"]
 lib_dirs = [prefix + "/lib"]
@@ -20,7 +23,7 @@ libs = ["gdbm"]
 
 setup(name = "gdbm",
       description = "GDBM Extension to Python",
-      
+
       ext_modules = [Extension('gdbm', ['gdbmmodule.c'],
                                include_dirs = inc_dirs,
                                libraries = libs,
