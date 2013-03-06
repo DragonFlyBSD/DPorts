@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-mime-types
-# Date created:				7 Oct 2008
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/rubygem-mime-types/Makefile,v 1.11 2012/11/17 05:59:44 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: ports/misc/rubygem-mime-types/Makefile,v 1.12 2013/02/16 21:49:44 svnexp Exp $
 
 PORTNAME=	mime-types
-PORTVERSION=	1.19
+PORTVERSION=	1.21
 CATEGORIES=	misc rubygems
 MASTER_SITES=	RG
 
