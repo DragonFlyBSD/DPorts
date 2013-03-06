@@ -1,9 +1,5 @@
-# New ports collection makefile for:    sharefonts
-# Date created:         Thu Mar 26 04:50:00 PST 1998
-# Whom:                 dburr@FreeBSD.org
-#
-# $FreeBSD: ports/x11-fonts/sharefonts/Makefile,v 1.17 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: dburr@FreeBSD.org
+# $FreeBSD: ports/x11-fonts/sharefonts/Makefile,v 1.18 2013/02/18 14:40:13 svnexp Exp $
 
 PORTNAME=	sharefonts
 PORTVERSION=	0.10
