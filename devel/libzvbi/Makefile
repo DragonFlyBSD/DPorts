@@ -2,7 +2,7 @@
 # Date created:				15 May 2003
 # Whom:					Oliver Lehmann <oliver@freebsd.org>
 #
-# $FreeBSD: ports/devel/libzvbi/Makefile,v 1.49 2012/11/17 05:55:57 svnexp Exp $
+# $FreeBSD: ports/devel/libzvbi/Makefile,v 1.50 2013/02/14 10:22:10 svnexp Exp $
 #
 
 PORTNAME=	libzvbi
@@ -29,7 +29,6 @@ CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -L/usr/lib"
 CFLAGS+=	-I${LOCALBASE}/include
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|#cpu (\([^)]*\))|defined(__\1__)|g' \
 		${WRKSRC}/src/misc.h \
 		${WRKSRC}/src/exp-gfx.c
