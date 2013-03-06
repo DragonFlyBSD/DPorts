@@ -2,11 +2,12 @@
 # Date created:		2010-02-04
 # Whom:			Bernhard Froehlich <decke@bluelife.at>
 #
-# $FreeBSD: ports/games/paintown/Makefile,v 1.7 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: ports/games/paintown/Makefile,v 1.8 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	paintown
 PORTVERSION=	3.6.0
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF
 
