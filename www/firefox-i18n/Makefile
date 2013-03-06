@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/www/firefox-i18n/Makefile,v 1.83 2013/01/10 23:03:35 svnexp Exp $
+# $FreeBSD: ports/www/firefox-i18n/Makefile,v 1.85 2013/02/20 00:52:22 svnexp Exp $
 
 PORTNAME=	firefox-i18n
-PORTVERSION=	18.0
+PORTVERSION=	19.0
 CATEGORIES=	www
 MASTER_SITE_SUBDIR=	firefox/releases/${PORTVERSION}/linux-i686/xpi
 PKGNAMEPREFIX=
@@ -14,7 +14,7 @@ COMMENT=	Localized interface for Firefox
 
 EXTRACT_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 
-USE_FIREFOX=	18
+USE_FIREFOX=	19
 USE_XPI=	firefox linux-firefox
 
 USE_SUBMAKE=	yes
