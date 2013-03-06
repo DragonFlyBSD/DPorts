@@ -2,11 +2,11 @@
 # Date created:				10 September 2001
 # Whom:					rooneg@electricjellyfish.net
 #
-# $FreeBSD: ports/devel/subversion16/Makefile.common,v 1.59 2012/12/10 15:19:13 svnexp Exp $
+# $FreeBSD: ports/devel/subversion16/Makefile.common,v 1.60 2013/01/23 17:42:38 svnexp Exp $
 
 PORTNAME=	subversion
 PORTVERSION=	#please edit Makefile.inc for PORTVERSION, so ../svnmerge can stay in sync.
-PORTREVISION?=	1
+PORTREVISION?=	0
 CATEGORIES+=	devel
 MASTER_SITES=	http://subversion.tigris.org/downloads/:main \
 		http://svnbook.red-bean.com/en/1.5/:book
