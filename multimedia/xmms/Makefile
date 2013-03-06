@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: ports/multimedia/xmms/Makefile,v 1.128 2012/12/10 01:26:32 svnexp Exp $
+# $FreeBSD: ports/multimedia/xmms/Makefile,v 1.129 2013/02/09 07:59:36 svnexp Exp $
 
 PORTNAME=	xmms
 PORTVERSION=	1.2.11
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.xmms.org/files/1.2.x/ \
 		LOCAL/beech
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER?=	ports@FreeBSD.org
+MAINTAINER?=	c.petrik.sosa@gmail.com
 COMMENT?=	X Multimedia System -- An audio player with Winamp GUI
 
 USE_BZIP2=	yes
