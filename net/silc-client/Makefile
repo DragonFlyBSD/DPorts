@@ -2,7 +2,7 @@
 # Date created:				Thu Nov 8 01:50:05 BRST 2001
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/net/silc-client/Makefile,v 1.70 2012/11/25 03:33:58 svnexp Exp $
+# $FreeBSD: ports/net/silc-client/Makefile,v 1.71 2013/01/02 13:50:30 svnexp Exp $
 #
 
 PORTNAME=	silc
@@ -97,7 +97,7 @@ CONFIGURE_ARGS+=	--without-iconv
 
 .if ${PORT_OPTIONS:MPERL}
 USE_PERL5=		yes
-PERL_ARCHNAME!=		perl -V:archname
+PERL_ARCHNAME!=		perl -V:archname 2>/dev/null || true
 PLIST_SUB+=		WITH_PERL="" PERL_ARCHNAME="${PERL_ARCHNAME:S/archname='//:S/';//}"
 CONFIGURE_ARGS+=	--with-perl-lib=${PREFIX}/lib/${PORTNAME}/perl
 .else
