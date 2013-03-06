@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	mp3asm
-# Date created:			Jul 20, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/audio/mp3asm/Makefile,v 1.13 2012/11/17 05:54:38 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/audio/mp3asm/Makefile,v 1.14 2013/01/26 16:56:07 svnexp Exp $
 
 PORTNAME=	mp3asm
 PORTVERSION=	0.1.3.1
