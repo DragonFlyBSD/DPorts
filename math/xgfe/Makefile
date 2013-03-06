@@ -2,7 +2,7 @@
 # Date created:        24 March 1998
 # Whom:                Matthew Hunt <mph@pobox.com>
 #
-# $FreeBSD: ports/math/xgfe/Makefile,v 1.34 2012/11/17 05:59:32 svnexp Exp $
+# $FreeBSD: ports/math/xgfe/Makefile,v 1.35 2012/12/30 18:56:10 svnexp Exp $
 #
 
 PORTNAME=	xgfe
@@ -16,6 +16,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An X11 front-end for Gnuplot
 
 RUN_DEPENDS=	gnuplot:${PORTSDIR}/math/gnuplot
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 
