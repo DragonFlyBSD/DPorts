@@ -1,33 +1,39 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: ports/x11-wm/e16/Makefile,v 1.151 2012/11/17 06:03:41 svnexp Exp $
+# $FreeBSD: ports/x11-wm/e16/Makefile,v 1.152 2013/02/18 13:55:13 svnexp Exp $
 
 PORTNAME=	e16
-PORTVERSION=	1.0.11
+PORTVERSION=	1.0.11.001
 CATEGORIES=	x11-wm enlightenment
-MASTER_SITES=	SF/enlightenment/${PORTNAME}/${PORTVERSION}/
+MASTER_SITES=	SF/enlightenment/${PORTNAME}/Snapshots/
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	A very artistic X window manager
 
-OPTIONS_DEFINE=	ESOUND
-OPTIONS_DEFAULT=ESOUND
+OPTIONS_DEFINE=	SOUND
+SOUND_DESC=	Sound support via pulseaudio/libsndfile
 
 USE_XORG=	compositeproto damageproto xextproto x11 xbitmaps xcomposite xdamage \
 		xext xfixes xft xinerama xrandr xrender xxf86vm
 USE_ICONV=	yes
+USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_EFL=	imlib2
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-esdtest --disable-dependency-tracking \
+CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--disable-rpath --enable-mans SHELL=/bin/sh
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MESOUND}
-USE_GNOME=	esound
+.if ${PORT_OPTIONS:MSOUND}
+LIB_DEPENDS+=	pulse:${PORTSDIR}/audio/pulseaudio \
+		sndfile:${PORTSDIR}/audio/libsndfile
+CONFIGURE_ARGS+=--enable-sound \
+		--enable-sound-pulse \
+		--with-sndldr=sndfile
 .else
-CONFIGURE_ARGS+=--disable-sound
+CONFIGURE_ARGS+=--disable-sound \
+		--with-sndldr=none
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
