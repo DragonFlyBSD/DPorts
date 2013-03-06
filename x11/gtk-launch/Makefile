@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtk-launch
-# Date created:				22 Jul 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/x11/gtk-launch/Makefile,v 1.11 2012/11/17 06:03:16 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: ports/x11/gtk-launch/Makefile,v 1.12 2013/01/15 13:46:59 svnexp Exp $
 
 PORTNAME=	gtk-launch
 DISTVERSION=	1.1b
@@ -23,6 +19,10 @@ PORTDOCS=	INSTALL
 
 PORTSCOUT=	skipv:1.1
 
+OPTIONS_DEFINE=DOCS
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	${ECHO_CMD} >> ${WRKSRC}/launch.c
 
@@ -33,7 +33,7 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
 .endif
