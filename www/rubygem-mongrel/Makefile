@@ -1,8 +1,5 @@
-# Ports collection makefile for:	mongrel
-# Date created:				20 May 2006
-# Whom:					Rui Lopes (<rgl ruilopes com>)
-#
-# $FreeBSD: ports/www/rubygem-mongrel/Makefile,v 1.27 2012/11/17 06:03:04 svnexp Exp $
+# Created by: Rui Lopes (<rgl ruilopes com>)
+# $FreeBSD: www/rubygem-mongrel/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	mongrel
 PORTVERSION=	1.1.5
@@ -12,6 +9,9 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Fast HTTP 1.1 library and server for Ruby web applications
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 RUN_DEPENDS=	rubygem-gem_plugin>=0.2.3:${PORTSDIR}/devel/rubygem-gem_plugin \
 		rubygem-daemons>=1.0.3:${PORTSDIR}/devel/rubygem-daemons \
