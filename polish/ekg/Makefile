@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: ports/polish/ekg/Makefile,v 1.39 2013/01/05 14:44:25 svnexp Exp $
+# $FreeBSD: ports/polish/ekg/Makefile,v 1.40 2013/02/08 03:35:06 svnexp Exp $
 
 PORTNAME=	ekg
 DISTVERSION=	1.8rc2
@@ -25,7 +25,7 @@ CONFIGURE_ARGS= --without-libungif \
 		--disable-ui-gtk
 
 CFLAGS+=	-I/usr/include -I${LOCALBASE}/include
-LDFLAGS+=	-L/usr/lib -lncurses -L${LOCALBASE}/lib -lexecinfo ${PTHREAD_LIBS}
+LDFLAGS+=	-L/usr/lib -lncurses -L${LOCALBASE}/lib -lexecinfo -pthread
 
 MAN1=		ekg.1
 MANLANG=	"" pl
