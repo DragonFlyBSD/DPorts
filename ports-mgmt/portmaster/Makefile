@@ -1,8 +1,8 @@
-# $FreeBSD: ports/ports-mgmt/portmaster/Makefile,v 2.69 2012/12/06 17:49:56 svnexp Exp $
+# $FreeBSD: ports/ports-mgmt/portmaster/Makefile,v 2.70 2013/01/25 19:43:26 svnexp Exp $
 
 PORTNAME=	portmaster
 PORTVERSION=	3.14
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	GH \
   		http://mirror.shatow.net/freebsd/portmaster/
@@ -33,9 +33,6 @@ MAN8=		portmaster.8
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPKGNGPATCH}
-.  if ${OSVERSION} >= 800505
-RUN_DEPENDS+=	pkg>0:${PORTSDIR}/ports-mgmt/pkg
-.  endif
 PATCH_SITES+=	http://mirror.shatow.net/freebsd/portmaster/
 PATCHFILES+=	patch-portmaster-pkgng.gz
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-files::with_pkgng_current

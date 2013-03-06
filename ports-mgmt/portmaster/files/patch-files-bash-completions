@@ -3,7 +3,7 @@ index 2293183..d5bf298 100644
 --- files/bash-completions
 +++ files/bash-completions
 @@ -1,13 +1,25 @@
- # $FreeBSD: ports/ports-mgmt/portmaster/files/patch-files-bash-completions,v 1.1 2012/12/06 17:49:56 svnexp Exp $
+ # $FreeBSD: ports/ports-mgmt/portmaster/files/patch-files-bash-completions,v 1.2 2013/02/01 15:41:58 svnexp Exp $
  #
 +_pkgs_list() {
 +	local dbdir="$1"
