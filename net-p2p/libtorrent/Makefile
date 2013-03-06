@@ -1,7 +1,7 @@
-# $FreeBSD: ports/net-p2p/libtorrent/Makefile,v 1.62 2012/11/19 08:05:27 svnexp Exp $
+# $FreeBSD: ports/net-p2p/libtorrent/Makefile,v 1.64 2013/02/16 12:18:49 svnexp Exp $
 
-PORTNAME?=	libtorrent
-PORTVERSION?=	0.13.2
+PORTNAME=	libtorrent
+PORTVERSION=	0.13.2
 PORTREVISION=	1
 CATEGORIES=	net-p2p
 MASTER_SITES=	http://libtorrent.rakshasa.no/downloads/ \
@@ -37,7 +37,7 @@ KQUEUE_DESC=	Use kqueue(2) support
 CONFIGURE_ENV=	OPENSSL_LIBS="-L/usr/lib -ssl -crypto" OPENSSL_CFLAGS="-I/usr/include"
 .endif
 
-CONFIGURE_ARGS+=	--disable-debug --with-openssl=${OPENSSLBASE}
+CONFIGURE_ARGS+=	--disable-debug
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/-O3/${CFLAGS}/' ${WRKSRC}/configure
