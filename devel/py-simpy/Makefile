@@ -1,12 +1,9 @@
-# ex:ts=8
-# Ports collection makefile for:	py-simpy
-# Date created:			Jun 29, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/py-simpy/Makefile,v 1.20 2012/11/17 05:56:50 svnexp Exp $
+# Created by: ijliao
+# $FreeBSD: devel/py-simpy/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
 
 PORTNAME=	simpy
 PORTVERSION=	2.3.1
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP \
 		SF/${PORTNAME}/${PORTNAME}/SimPy-${PORTVERSION}
@@ -26,7 +23,7 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_TKINTER)
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/_tkinter.so:${PORTSDIR}/x11-toolkits/py-tkinter
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
 .endif
 
 post-install:
