@@ -2,11 +2,11 @@
 # Date created:        19 January 2005
 # Whom:                geo
 #
-# $FreeBSD: ports/dns/poweradmin/Makefile,v 1.9 2012/11/17 05:57:10 svnexp Exp $
+# $FreeBSD: ports/dns/poweradmin/Makefile,v 1.10 2013/02/04 08:04:02 svnexp Exp $
 #
 
 PORTNAME=	poweradmin
-PORTVERSION=	2.1.5
+PORTVERSION=	2.1.6
 CATEGORIES=	dns www
 MASTER_SITES=	SF/${PORTNAME} \
 		https://www.poweradmin.org/download/
