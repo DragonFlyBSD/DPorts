@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-CPANPLUS
-# Date created:				2 February 2005
-# Whom:					Alex Kapranoff <kappa@rambler-co.ru>
-#
-# $FreeBSD: ports/devel/p5-CPANPLUS/Makefile,v 1.24 2012/12/17 14:13:37 svnexp Exp $
-#
+# Created by: Alex Kapranoff <kappa@rambler-co.ru>
+# $FreeBSD: ports/devel/p5-CPANPLUS/Makefile,v 1.26 2013/01/24 13:55:50 svnexp Exp $
 
 PORTNAME=	CPANPLUS
-PORTVERSION=	0.9130
+PORTVERSION=	0.9134
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
