@@ -1,8 +1,9 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: ports/deskutils/vym/Makefile,v 1.22 2012/12/22 01:55:57 svnexp Exp $
+# $FreeBSD: ports/deskutils/vym/Makefile,v 1.23 2013/01/23 15:05:32 svnexp Exp $
 
 PORTNAME=	vym
 PORTVERSION=	2.2.4
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/vym/${PORTVERSION}
 
