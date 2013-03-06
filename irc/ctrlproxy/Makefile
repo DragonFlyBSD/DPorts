@@ -3,12 +3,12 @@
 # Date created:			Oct 22, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/irc/ctrlproxy/Makefile,v 1.34 2012/11/17 05:58:28 svnexp Exp $
+# $FreeBSD: ports/irc/ctrlproxy/Makefile,v 1.35 2013/02/05 16:54:22 svnexp Exp $
 #
 
 PORTNAME=	ctrlproxy
 PORTVERSION=	3.0.8
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	irc
 MASTER_SITES=	http://launchpadlibrarian.net/50016234/ \
 		LOCAL/ashish/
@@ -16,7 +16,7 @@ MASTER_SITES=	http://launchpadlibrarian.net/50016234/ \
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Flexible IRC proxy
 
-LIB_DEPENDS=	gnutls.47:${PORTSDIR}/security/gnutls
+LIB_DEPENDS=	gnutls.26:${PORTSDIR}/security/gnutls
 
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
