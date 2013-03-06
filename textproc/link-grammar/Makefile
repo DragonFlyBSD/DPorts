@@ -1,9 +1,4 @@
-# New ports collection makefile for:	link-grammar
-# Date created:				22 May 2005
-# Whom:					Mezz <mezz@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/link-grammar/Makefile,v 1.16 2012/11/17 06:02:02 svnexp Exp $
-#
+# $FreeBSD: ports/textproc/link-grammar/Makefile,v 1.17 2012/12/31 17:09:12 svnexp Exp $
 
 PORTNAME=	link-grammar
 PORTVERSION=	4.7.4
