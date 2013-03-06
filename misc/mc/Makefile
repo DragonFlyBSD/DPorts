@@ -2,11 +2,11 @@
 # Date created:		15 Jul 1995
 # Whom:			torstenb@FreeBSD.org
 #
-# $FreeBSD: ports/misc/mc/Makefile,v 1.151 2012/11/17 05:59:41 svnexp Exp $
+# $FreeBSD: ports/misc/mc/Makefile,v 1.152 2013/01/26 06:44:54 svnexp Exp $
 #
 
 PORTNAME=	mc
-PORTVERSION=	4.8.1.6
+PORTVERSION=	4.8.1.7
 PORTREVISION=	0
 CATEGORIES=	misc shells
 MASTER_SITES=	http://www.midnight-commander.org/downloads/ \
