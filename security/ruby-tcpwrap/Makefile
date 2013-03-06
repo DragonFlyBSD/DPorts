@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-tcpwrap
-# Date created:		15 Aug 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/security/ruby-tcpwrap/Makefile,v 1.19 2012/11/17 06:01:19 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: security/ruby-tcpwrap/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	tcpwrap
 PORTVERSION=	0.6
@@ -16,6 +12,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	TCP wrappers library for Ruby
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 LIB_DEPENDS=	ident.0:${PORTSDIR}/security/libident
 
