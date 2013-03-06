@@ -1,8 +1,8 @@
 # Created by: Renaud Chaput <renchap@cocoa-x.com>
-# $FreeBSD: ports/sysutils/rubygem-chef/Makefile,v 1.16 2013/01/08 00:51:25 svnexp Exp $
+# $FreeBSD: sysutils/rubygem-chef/Makefile 313021 2013-02-27 02:18:10Z swills $
 
 PORTNAME=	chef
-PORTVERSION=	10.16.4
+PORTVERSION=	10.24.0
 CATEGORIES=	sysutils
 MASTER_SITES=	RG
 

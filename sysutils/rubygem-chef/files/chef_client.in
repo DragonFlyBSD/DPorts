@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/rubygem-chef/files/chef_client.in,v 1.6 2013/01/08 00:51:25 svnexp Exp $
+# $FreeBSD: sysutils/rubygem-chef/files/chef_client.in 310059 2013-01-08 00:35:19Z jgh $
 #
 
 # PROVIDE: chef_client
