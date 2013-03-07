@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Module-Util/Makefile,v 1.6 2012/11/17 05:56:22 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Module-Util/Makefile,v 1.7 2013/02/02 15:50:59 svnexp Exp $
 
 PORTNAME=	Module-Util
-PORTVERSION=	1.08
+PORTVERSION=	1.09
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Module
