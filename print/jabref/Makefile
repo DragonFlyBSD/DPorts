@@ -1,8 +1,8 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/print/jabref/Makefile,v 1.14 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: ports/print/jabref/Makefile,v 1.20 2013/01/20 16:47:36 svnexp Exp $
 
 PORTNAME=	jabref
-PORTVERSION=	2.8.1
+PORTVERSION=	2.9.2
 PORTEPOCH=	1
 CATEGORIES=	print java editors
 MASTER_SITES=	SF
@@ -10,7 +10,7 @@ DISTNAME=	JabRef-${PORTVERSION}
 EXTRACT_SUFX=	.jar
 EXTRACT_ONLY=	#
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	BibTeX native bibliographic reference manager
 
 LICENSE=	GPLv2 GPLv3
@@ -21,17 +21,20 @@ JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
+icon=		${DATADIR}/${PORTNAME}-icon48x48.png
 
-SUB_FILES=	${PORTNAME}.sh
+SUB_FILES=	${PORTNAME}.sh ${PORTNAME}.desktop
 SUB_LIST=	JARNAME=${PORTNAME}.jar
 
-PLIST_FILES=	%%DATADIR%%/${PORTNAME}.jar \
-		bin/${PORTNAME}
-PLIST_DIRS=	%%DATADIR%%
+USE_GNOME=	desktopfileutils
 
 do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${DISTDIR}/${DISTFILES} ${DATADIR}/${PORTNAME}.jar
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_DATA} ${FILESDIR}/JabRef-icon-48.png "${icon}"
+	${MKDIR} ${DESKTOPDIR}
+	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.desktop ${DESKTOPDIR}
+	-${LOCALBASE}/bin/update-desktop-database -q
 
 .include <bsd.port.mk>
