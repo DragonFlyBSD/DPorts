@@ -2,7 +2,7 @@
 # Date created:                         May 24, 2006
 # Whom:                                	Michael Nottebrock <lofi@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/kde3-i18n-br/Makefile,v 1.17 2012/11/17 05:59:38 svnexp Exp $
+# $FreeBSD: ports/misc/kde3-i18n-br/Makefile,v 1.18 2012/12/30 18:56:11 svnexp Exp $
 #
 
 PORTNAME=	kde-i18n
@@ -16,6 +16,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Breton messages and documentation for KDE3
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 USE_BZIP2=	yes
