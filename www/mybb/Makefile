@@ -1,24 +1,21 @@
-# New ports collection makefile for:	www/mybb
-# Date created:		2008-09-15
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/www/mybb/Makefile,v 1.17 2012/11/17 06:02:43 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: ports/www/mybb/Makefile,v 1.18 2013/02/19 18:15:05 svnexp Exp $
 
 PORTNAME=	mybb
-PORTVERSION=	1.6.6
+PORTVERSION=	1.6.9
 CATEGORIES=	www
-MASTER_SITES=	http://cloud.github.com/downloads/mybb/mybb16/
-DISTNAME=	${PORTNAME}_1606
 
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	A PHP-based bulletin board / discussion forum system
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	${PORTNAME}
+GH_TAGNAME=	${PORTNAME}_1609
+GH_COMMIT=	67cf4c0
+
 NO_BUILD=	yes
-USE_ZIP=	yes
 USE_PHP=	xsl mysql iconv gd xml
 USE_MYSQL=	yes
-WRKSRC=		${WRKDIR}/Upload/
 SUB_FILES=	pkg-message
 WWWDIR?=	${PREFIX}/www/${PORTNAME}
 
