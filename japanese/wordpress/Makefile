@@ -1,13 +1,13 @@
 # Created by: Takefu
-# $FreeBSD: ports/japanese/wordpress/Makefile,v 1.8 2012/11/17 05:58:41 svnexp Exp $
+# $FreeBSD: ports/japanese/wordpress/Makefile,v 1.11 2013/01/30 02:44:10 svnexp Exp $
 
 PORTNAME=	wordpress
-PORTVERSION=	3.4.2
+PORTVERSION=	3.5.1
 CATEGORIES=	japanese www
 MASTER_SITES=	http://ja.wordpress.org/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-ja
 
-MAINTAINER=	takefu@airport.fm
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A state-of-the-art semantic personal publishing platform
 
 LICENSE=	GPLv2
@@ -25,6 +25,8 @@ SUB_LIST=	CHGRP="${CHGRP}" CHOWN="${CHOWN}" CHMOD="${CHMOD}"\
 		FIND="${FIND}" WWWGRP="${WWWGRP}" WWWOWN="${WWWOWN}"
 PLIST=		${WRKDIR}/pkg-plist
 PORTDOCS=	license.txt readme.html
+
+OPTIONS_DEFINE=	DOCS
 
 pre-everything::
 	@${ECHO_CMD} "If you want to upgrade, you must read upgrade document."
