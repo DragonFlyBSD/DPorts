@@ -1,8 +1,9 @@
 # Created by: Rodrigo OSORIO <rodrigo@bebik.net>
-# $FreeBSD: ports/textproc/p5-libsoldout/Makefile,v 1.4 2012/12/16 06:16:59 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-libsoldout/Makefile,v 1.5 2013/01/23 13:46:26 svnexp Exp $
 
 PORTNAME=	libsoldout
 PORTVERSION=	0.02
+PORTREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ROS
