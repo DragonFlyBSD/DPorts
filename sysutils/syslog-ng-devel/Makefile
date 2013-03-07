@@ -2,16 +2,16 @@
 # Date created:		10 November 2006
 # Whom:			Ivan Lago <ivan.lago@ifom-ieo-campus.it>
 #
-# $FreeBSD: ports/sysutils/syslog-ng-devel/Makefile,v 1.67 2013/01/18 21:57:54 svnexp Exp $
+# $FreeBSD: ports/sysutils/syslog-ng-devel/Makefile,v 1.70 2013/02/18 22:13:14 svnexp Exp $
 #
 
 PORTNAME=	syslog-ng
-PORTVERSION=	3.4.0r2
+PORTVERSION=	3.4.1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 DISTVERSION=	$(PORTVERSION:S/a/alpha/:S/b/beta/:S/r/rc/)
 DISTFILES=	syslog-ng_${DISTVERSION}.tar.gz
-MASTER_SITES=	http://www.balabit.com/downloads/files?path=/syslog-ng/open-source-edition/${DISTVERSION}/source/
+MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/open-source-edition/${DISTVERSION}/source/
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	A powerful syslogd replacement
@@ -81,8 +81,8 @@ CONFIGURE_ARGS+=	--disable-tcp-wrapper
 .endif
 
 .if defined(WITH_SPOOF)
-BUILD_DEPENDS=		${LIBNET_CONFIG}:${PORTSDIR}/net/libnet-devel
-LIBNET_CONFIG?=		${LOCALBASE}/bin/libnet116-config
+BUILD_DEPENDS=		${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
+LIBNET_CONFIG?=		${LOCALBASE}/bin/libnet11-config
 CONFIGURE_ARGS+=	--enable-spoof-source --with-libnet=${LOCALBASE}/bin
 CFLAGS+=		`${LIBNET_CONFIG} --cflags` -I${LOCALBASE}/include
 LDFLAGS+=		`${LIBNET_CONFIG} --libs`
@@ -142,7 +142,7 @@ CONFIGURE_ARGS+=        --disable-linux-caps
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's:libnet-config:libnet115-config:g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's:libnet-config:libnet11-config:g' ${WRKSRC}/configure
 	@${LN} ${WRKSRC}/scl/syslog-ng.conf ${WRKSRC}/scl/syslog-ng.conf.dist
 
 post-install:
