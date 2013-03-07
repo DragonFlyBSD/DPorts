@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/astro/p5-Astro-SpaceTrack/Makefile,v 1.48 2013/01/01 13:11:58 svnexp Exp $
+# $FreeBSD: ports/astro/p5-Astro-SpaceTrack/Makefile,v 1.50 2013/02/21 22:16:27 svnexp Exp $
 
 PORTNAME=	Astro-SpaceTrack
-PORTVERSION=	0.070
+PORTVERSION=	0.073
 CATEGORIES=	astro perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:WYANT
