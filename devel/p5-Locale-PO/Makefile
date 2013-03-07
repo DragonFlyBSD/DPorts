@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Locale-PO
-# Date created:		2008-12-22
-# Whom:			Thomas Abthorpe <tabthorpe@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Locale-PO/Makefile,v 1.6 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: tabthorpe
+# $FreeBSD: ports/devel/p5-Locale-PO/Makefile,v 1.7 2013/02/16 01:46:31 svnexp Exp $
 
 PORTNAME=	Locale-PO
-PORTVERSION=	0.22
+PORTVERSION=	0.23
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
