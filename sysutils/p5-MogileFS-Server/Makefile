@@ -1,9 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/sysutils/p5-MogileFS-Server/Makefile,v 1.36 2013/01/16 15:44:25 svnexp Exp $
+# $FreeBSD: ports/sysutils/p5-MogileFS-Server/Makefile,v 1.37 2013/02/09 16:10:24 svnexp Exp $
 
 PORTNAME=	MogileFS-Server
-PORTVERSION=	2.66
-PORTREVISION=	1
+PORTVERSION=	2.67
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DORMANDO
