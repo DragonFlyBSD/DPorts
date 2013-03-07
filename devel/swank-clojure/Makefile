@@ -1,5 +1,4 @@
-# Created by: olgeni
-# $FreeBSD: ports/devel/swank-clojure/Makefile,v 1.6 2012/12/10 11:29:55 svnexp Exp $
+# $FreeBSD: ports/devel/swank-clojure/Makefile,v 1.7 2013/01/26 15:26:00 svnexp Exp $
 
 PORTNAME=	swank-clojure
 PORTVERSION=	1.2.1
