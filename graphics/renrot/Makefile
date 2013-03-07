@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/graphics/renrot/Makefile,v 1.5 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: ports/graphics/renrot/Makefile,v 1.6 2013/02/17 12:05:20 svnexp Exp $
 
 PORTNAME=	renrot
 PORTVERSION=	1.1
@@ -25,14 +25,13 @@ PORTDOCS=	AUTHORS README ChangeLog NEWS TODO
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIMAGEMAGICK}
-RUN_DEPENDS+=	${SITE_PERL}/${PERL_ARCH}/Image/Magick.pm:${PORTSDIR}/graphics/ImageMagick
+RUN_DEPENDS+=	convert:${PORTSDIR}/graphics/ImageMagick
 .endif
 
 post-install:
-	@${MKDIR} ${PREFIX}/etc/${PORTNAME}
+	@${MKDIR} ${ETCDIR}
 .for conf in colors.conf copyright.tag renrot.conf tags.conf
-	${INSTALL_DATA} ${WRKSRC}/etc/${conf} \
-		${PREFIX}/etc/${PORTNAME}/${conf}.sample
+	${INSTALL_DATA} ${WRKSRC}/etc/${conf} ${ETCDIR}/${conf}.sample
 .endfor
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
