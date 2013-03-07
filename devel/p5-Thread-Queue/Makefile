@@ -1,14 +1,17 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Thread-Queue/Makefile,v 1.7 2013/01/14 02:45:04 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Thread-Queue/Makefile,v 1.9 2013/02/25 04:47:25 svnexp Exp $
 
 PORTNAME=	Thread-Queue
-PORTVERSION=	3.01
+PORTVERSION=	3.02
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	linpc@cs.nctu.edu.tw
+MAINTAINER=	pclin@FreeBSD.org
 COMMENT=	Perl5 thread-safe queues
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 PERL_CONFIGURE=	yes
 
@@ -16,7 +19,7 @@ MAN3=	Thread::Queue.3
 
 .include <bsd.port.pre.mk>
 
-.if ${PERL_LEVEL} < 501100
+.if ${PERL_LEVEL} < 501001
 BUILD_DEPENDS+=	p5-threads-shared>=1.21:${PORTSDIR}/devel/p5-threads-shared
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 .endif
