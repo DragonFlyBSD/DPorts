@@ -1,13 +1,9 @@
-# New ports collection makefile for:	octave
-# Date created:		8 September 1998
-# Whom:			chuckr@freebsd.org
-#
-# $FreeBSD: ports/math/octave/Makefile,v 1.145 2013/01/03 08:46:59 svnexp Exp $
-#
+# Created by: chuckr@freebsd.org
+# $FreeBSD: ports/math/octave/Makefile,v 1.146 2013/01/31 13:43:58 svnexp Exp $
 
 PORTNAME=	octave
 PORTVERSION=	3.6.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/octave/ \
 		ftp://ftp.u-aizu.ac.jp/pub/SciEng/numanal/Octave/bleeding-edge/
@@ -35,7 +31,7 @@ LIB_DEPENDS=	GraphicsMagick:${PORTSDIR}/graphics/GraphicsMagick \
 		qhull.5:${PORTSDIR}/math/qhull5 \
 		qrupdate:${PORTSDIR}/math/qrupdate \
 		umfpack.1:${PORTSDIR}/math/suitesparse \
-		glpk.32:${PORTSDIR}/math/glpk
+		glpk:${PORTSDIR}/math/glpk
 
 USE_BZIP2=	yes
 USE_PERL5_BUILD=yes
@@ -79,6 +75,8 @@ LAPACK=		-lalapack -lptcblas
 
 USE_FORTRAN=	yes
 
+OCTAVE_VERSION=	${PORTVERSION}
+GNU_HOST=	${ARCH}-portbld-freebsd${OSREL}
 PLIST_SUB=	OCTAVE_VERSION=${OCTAVE_VERSION} GNU_HOST=${GNU_HOST}
 INCLUDES=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}

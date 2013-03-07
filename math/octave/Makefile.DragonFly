@@ -1,8 +1,0 @@
-PORTVERSION=		3.6.4
-GNU_HOST=		${ARCH}-dports-${OPSYS:tl}${OSREL}
-OCTAVE_VERSION= 	${PORTVERSION}-rc1
-DISTNAME=		${PKGNAME}-rc1
-MASTER_SITES=		http://alpha.gnu.org/gnu/octave/
-PORTREVISION=
-
-.undef USE_BZIP2
