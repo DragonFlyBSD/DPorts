@@ -2,7 +2,7 @@
 # Date created:                         05 April 2002
 # Whom:                                 Lauri Watts <lauri@kde.org>
 #
-# $FreeBSD: ports/vietnamese/kde3-i18n/Makefile,v 1.58 2012/11/17 06:02:26 svnexp Exp $
+# $FreeBSD: ports/vietnamese/kde3-i18n/Makefile,v 1.59 2012/12/30 18:56:28 svnexp Exp $
 #
 
 PORTNAME=	kde-i18n
@@ -15,6 +15,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER?=	ports@FreeBSD.org
 COMMENT=	Vietnamese messages and documentation for KDE3
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 USE_BZIP2=	yes
