@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/databases/redis-devel/Makefile,v 1.33 2013/01/12 17:22:31 svnexp Exp $
+# $FreeBSD: ports/databases/redis-devel/Makefile,v 1.35 2013/02/11 19:04:37 svnexp Exp $
 
 PORTNAME=	redis
-DISTVERSION=	2.6.8
+DISTVERSION=	2.6.10
 CATEGORIES=	databases
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMESUFFIX=	-devel
