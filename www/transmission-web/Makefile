@@ -1,11 +1,11 @@
-# $FreeBSD: ports/www/transmission-web/Makefile,v 1.13 2012/12/31 17:09:13 svnexp Exp $
+# $FreeBSD: www/transmission-web/Makefile 313230 2013-03-02 13:48:31Z crees $
 
 PORTREVISION=	0
 CATEGORIES=	www net-p2p
 PKGNAMESUFFIX=	-web
 
 MAINTAINER=	crees@FreeBSD.org
-COMMENT=	A fast and lightweight WebUI for Transmission BitTorrent client
+COMMENT=	Fast and lightweight WebUI for Transmission BitTorrent client
 
 DESCR=		${.CURDIR}/pkg-descr
 MASTERDIR=	${.CURDIR}/../../net-p2p/transmission-cli
