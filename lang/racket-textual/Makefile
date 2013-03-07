@@ -1,9 +1,5 @@
-# New ports collection Makefile for:    DrScheme
-# Date created:         21 Jun 2001
-# Whom:                 Joseph Koshy <jkoshy@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/racket-textual/Makefile,v 1.29 2012/11/17 05:58:55 svnexp Exp $
-#
+# Created by: Joseph Koshy <jkoshy@FreeBSD.org>
+# $FreeBSD: ports/lang/racket-textual/Makefile,v 1.30 2013/02/18 14:39:35 svnexp Exp $
 
 PORTNAME=	racket-textual
 PORTVERSION=	5.3.1
