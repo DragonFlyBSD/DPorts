@@ -1,5 +1,5 @@
-# Created by: Kubilay Kocak <koobs.freebsd@gmail.com>
-# $FreeBSD: ports/devel/py-pygithub/Makefile,v 1.6 2012/11/17 05:56:49 svnexp Exp $
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/devel/py-pygithub/Makefile,v 1.7 2013/02/09 15:59:06 svnexp Exp $
 
 PORTNAME=	pygithub
 PORTVERSION=	1.8.0
@@ -8,7 +8,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	PyGithub-${PORTVERSION}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Use the full Github API v3 with Python
 
 LICENSE=	LGPL3
