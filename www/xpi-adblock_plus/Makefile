@@ -1,9 +1,9 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/www/xpi-adblock_plus/Makefile,v 1.32 2012/11/26 09:02:41 svnexp Exp $
+# $FreeBSD: ports/www/xpi-adblock_plus/Makefile,v 1.34 2013/02/19 12:18:36 svnexp Exp $
 
 PORTNAME=	adblock_plus
-PORTVERSION=	2.2.1
-DISTVERSIONSUFFIX=	-sm+tb+an+fx
+PORTVERSION=	2.2.3
+DISTVERSIONSUFFIX=	-tb+an+sm+fx
 CATEGORIES=	www
 
 MAINTAINER=	ale@FreeBSD.org
