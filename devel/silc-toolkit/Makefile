@@ -2,7 +2,7 @@
 # Date created:				2003.12.15
 # Whom:					Evgueni V. Gavrilov <aquatique@rusunix.org>
 #
-# $FreeBSD: ports/devel/silc-toolkit/Makefile,v 1.35 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: ports/devel/silc-toolkit/Makefile,v 1.36 2013/02/14 10:22:23 svnexp Exp $
 #
 
 PORTNAME=	silc
@@ -45,8 +45,6 @@ PLIST_SUB+=	PORTDOCS="@comment "
 
 .ifndef(WITH_PTHREADS)
 CONFIGURE_ARGS+=	--without-pthreads
-.else
-CFLAGS+=	${PTHREAD_CFLAGS} ${PTHREAD_LIBS}
 .endif
 
 pre-everything::
