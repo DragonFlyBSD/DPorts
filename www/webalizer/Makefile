@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/webalizer/Makefile,v 1.95 2012/11/17 06:03:10 svnexp Exp $
+# $FreeBSD: ports/www/webalizer/Makefile,v 1.97 2012/12/30 13:00:40 svnexp Exp $
 
 PORTNAME=	webalizer
 PORTVERSION=	2.23.5
@@ -34,7 +34,7 @@ OPTIONS_DEFINE=	GEOIP GEODB BDB1 BDB WEBALIZER_CONV \
 OPTIONS_DEFAULT=
 NO_OPTIONS_SORT=yes
 GEODB_DESC=Enable Webalizers IP-Database support
-WEBALIZER_CONV_DESC=Use character code convert patch
+WEBALIZER_CONV_DESC=Japanese character code convert patch
 FULL_CGI_REFS_DESC=Show full cgi parameters in referers
 CLICKABLE_REFERER_DESC=Make referers clickable
 LARGE_URL_DESC=Enable URLs longer 512 bytes
@@ -45,16 +45,16 @@ LARGE_URL_DESC=Enable URLs longer 512 bytes
 DISTFILES+=	webalizer-flags.tgz:main
 .endif
 .if ${PORT_OPTIONS:MGEODB} || make(makesum) || defined(FETCH_ALL)
-DISTFILES+=	webalizer-geodb-20120901.tgz:geodb
+DISTFILES+=	webalizer-geodb-20121201.tgz:geodb
 .endif
 
 # slave ports override with languages specific gd
 .if !defined(LIB_DEPENDS)
-LIB_DEPENDS=	gd.4:${PORTSDIR}/${GD_PORT}
+LIB_DEPENDS=	gd:${PORTSDIR}/${GD_PORT}
 .endif
 
 .if ${PORT_OPTIONS:MGEOIP}
-LIB_DEPENDS+=	GeoIP.5:${PORTSDIR}/net/GeoIP
+LIB_DEPENDS+=	GeoIP:${PORTSDIR}/net/GeoIP
 .endif
 
 .if ${PORT_OPTIONS:MGEODB}
