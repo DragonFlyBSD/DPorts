@@ -1,5 +1,5 @@
 # Created by: shigeri <shigeri@m10.alpha-net.ne.jp>
-# $FreeBSD: ports/mail/sylpheed/Makefile,v 1.135 2012/11/17 05:59:16 svnexp Exp $
+# $FreeBSD: ports/mail/sylpheed/Makefile,v 1.136 2013/01/15 13:46:56 svnexp Exp $
 
 PORTNAME=	sylpheed
 PORTVERSION=	3.3.0
@@ -31,7 +31,7 @@ CONFIGURE_ARGS=	--enable-ipv6 \
 
 CONFLICTS=	sylpheed-1.[0-8]* sylpheed-2.[0-9]* sylpheed-gtk2-[0-9]*
 
-OPTIONS_DEFINE=	GPGME COMPFACE JPILOT LDAP SSL GTKSPELL ONIGURUMA
+OPTIONS_DEFINE=	GPGME COMPFACE JPILOT LDAP SSL GTKSPELL ONIGURUMA DOCS
 
 GPGME_DESC=	GnuPG support using GPGME
 COMPFACE_DESC=	X-Face support
@@ -114,7 +114,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|^\(DEFS.*\.\.\)$$|\1 -I../libsylph|' \
 		${WRKSRC}/src/Makefile.in
 
-.if defined(NOPORTDOCS)
+.if empty(PORT_OPTIONS:MDOCS)
 	@${REINPLACE_CMD} -e 's|^SUBDIRS = ac libsylph src plugin po manual faq nsis$$|SUBDIRS = ac libsylph src plugin po nsis|g' \
 		${WRKSRC}/Makefile.in
 .else
@@ -126,7 +126,7 @@ post-patch:
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in ChangeLog INSTALL README TODO
 	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
