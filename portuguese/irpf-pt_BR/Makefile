@@ -2,11 +2,12 @@
 # Date created:		Ter  6 Mar 2007 01:50:17 UTC
 # Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/portuguese/irpf-pt_BR/Makefile,v 1.18 2012/11/17 06:00:47 svnexp Exp $
+# $FreeBSD: ports/portuguese/irpf-pt_BR/Makefile,v 1.19 2013/01/23 15:05:37 svnexp Exp $
 #
 
 PORTNAME=	irpf
 PORTVERSION=	2010.1.0
+PORTREVISION=	1
 CATEGORIES=	portuguese finance java
 MASTER_SITES=	http://www.receita.fazenda.gov.br/publico/programas/IRPF/2010/PGDIrpf2010/Java/zip/
 PKGNAMEPREFIX?=	pt_BR-
