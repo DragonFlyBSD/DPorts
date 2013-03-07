@@ -1,9 +1,5 @@
-# Ports collection makefile for:  uucp
-# Date created:			  08 Sep 2001
-# Whom:				  Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/net/freebsd-uucp/Makefile,v 1.45 2012/11/17 06:00:00 svnexp Exp $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: ports/net/freebsd-uucp/Makefile,v 1.46 2013/01/26 16:56:11 svnexp Exp $
 
 PORTNAME=	freebsd-uucp
 PORTVERSION=	1.07.3
