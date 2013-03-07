@@ -1,8 +1,8 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: ports/sysutils/cfengine34/Makefile,v 1.5 2013/01/08 14:43:14 svnexp Exp $
+# $FreeBSD: ports/sysutils/cfengine34/Makefile,v 1.6 2013/01/30 20:24:28 svnexp Exp $
 
 PORTNAME=	cfengine
-PORTVERSION=	3.4.1
+PORTVERSION=	3.4.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine.com/source-code/download?file=
 
@@ -36,7 +36,7 @@ CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
 		--with-pcre=${LOCALBASE} \
 		--enable-fhs
 
-LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
 
 OPTIONS=	TOKYOCABINET	"Enable TokyoCabinet support"		on \
 		QDBM	"Enable QDBM support"				off \
