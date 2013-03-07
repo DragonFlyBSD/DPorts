@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-xmpp4r
-# Date created:				21 Nov 2005
-# Whom:					Stephan Maka <stephan@spaceboyz.net>
-#
-# $FreeBSD: ports/net-im/rubygem-xmpp4r/Makefile,v 1.14 2012/11/17 06:00:29 svnexp Exp $
-#
+# Created by: Stephan Maka <stephan@spaceboyz.net>
+# $FreeBSD: net-im/rubygem-xmpp4r/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	xmpp4r
 PORTVERSION=	0.5
@@ -13,6 +9,9 @@ MASTER_SITES=	RG
 
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	XMPP/Jabber library for Ruby
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=		yes
 USE_RUBYGEMS=		yes
