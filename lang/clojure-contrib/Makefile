@@ -1,5 +1,4 @@
-# Created by: olgeni
-# $FreeBSD: ports/lang/clojure-contrib/Makefile,v 1.5 2012/12/10 13:24:59 svnexp Exp $
+# $FreeBSD: ports/lang/clojure-contrib/Makefile,v 1.6 2013/01/26 15:26:01 svnexp Exp $
 
 PORTNAME=	clojure-contrib
 PORTVERSION=	1.2.0
