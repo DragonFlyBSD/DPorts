@@ -1,8 +1,9 @@
 # Created by: Matthias Sund <m.sund@arcor.de>
-# $FreeBSD: ports/devel/antlrworks/Makefile,v 1.15 2012/12/10 11:29:53 svnexp Exp $
+# $FreeBSD: ports/devel/antlrworks/Makefile,v 1.17 2013/01/23 15:05:32 svnexp Exp $
 
 PORTNAME=	antlrworks
 PORTVERSION=	1.4.2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel java
 MASTER_SITES=	http://www.antlr.org/download/
@@ -18,9 +19,9 @@ JAVA_VERSION=	1.6+
 
 DESKTOP_ENTRIES="ANTLRWorks" \
 	"ANTLR GUI Development Environment" \
-	"antlrworks.png" \
+	"${PREFIX}/share/pixmaps/antlrworks.png" \
 	"antlrworks" \
-	"Application;Development;" \
+	"Development;Java;" \
 	true
 
 PLIST_FILES=	bin/antlrworks \
