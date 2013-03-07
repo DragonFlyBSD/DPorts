@@ -1,9 +1,5 @@
-# Ports collection makefile for:  libnet
-# Date created:			Sun Feb 3, 1999
-# Whom:				shipley@dis.org
-#
-# $FreeBSD: ports/net/libnet10/Makefile,v 1.31 2012/11/17 06:00:04 svnexp Exp $
-#
+# Created by: shipley@dis.org
+# $FreeBSD: ports/net/libnet10/Makefile,v 1.32 2013/01/26 16:56:11 svnexp Exp $
 
 PORTNAME=	libnet
 PORTVERSION=	1.0.2a
