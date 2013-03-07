@@ -2,12 +2,12 @@
 # Date created:		27 Mar 2009
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/games/xorgramana/Makefile,v 1.10 2012/11/17 05:57:58 svnexp Exp $
+# $FreeBSD: ports/games/xorgramana/Makefile,v 1.11 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	xorgramana
 PORTVERSION=	0.0.8
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	http://www.jwm-art.net/XorGramana/ \
 		http://mirror.amdmi3.ru/distfiles/
