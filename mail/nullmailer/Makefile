@@ -1,8 +1,9 @@
 # Created by: clive
-# $FreeBSD: ports/mail/nullmailer/Makefile,v 1.26 2013/01/16 19:42:10 svnexp Exp $
+# $FreeBSD: ports/mail/nullmailer/Makefile,v 1.27 2013/02/05 16:54:23 svnexp Exp $
 
 PORTNAME=	nullmailer
 PORTVERSION=	1.11
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://untroubled.org/nullmailer/ \
