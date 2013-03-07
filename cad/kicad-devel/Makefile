@@ -1,13 +1,9 @@
-# New ports collection makefile for:  kicad-devel
-# Date created:               27 October 2009
-# Whom:                       Michael Reifenberger <mr@FreeBSD.org>
-#
-# $FreeBSD: ports/cad/kicad-devel/Makefile,v 1.42 2012/11/17 05:54:54 svnexp Exp $
-#
+# Created by: Michael Reifenberger <mr@FreeBSD.org>
+# $FreeBSD: ports/cad/kicad-devel/Makefile,v 1.43 2013/01/31 14:01:26 svnexp Exp $
 
 PORTNAME=		kicad
 DISTVERSION=    r${BZR_SRC_REV}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=		cad
 DIST_SUBDIR=		${PORTNAME}
 MASTER_SITES=   ${MASTER_SITE_LOCAL}
@@ -18,7 +14,7 @@ PKGNAMESUFFIX=  -devel
 MAINTAINER=		mr@FreeBSD.org
 COMMENT=		Schematic and PCB editing software
 
-LIB_DEPENDS=	boost_thread.4:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
 
 CONFLICTS=      kicad-2008*
 
