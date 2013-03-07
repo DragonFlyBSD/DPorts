@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-p2p/transmission-cli/files/transmission.in,v 1.8 2013/01/16 19:47:25 svnexp Exp $
+# $FreeBSD: net-p2p/transmission-cli/files/transmission.in 313230 2013-03-02 13:48:31Z crees $
 #
 # PROVIDE: transmission
 # REQUIRE: DAEMON 
@@ -53,7 +53,7 @@ transmission_prestart()
 	install -d -o $transmission_user ${pidfile%/*}
 	mkdir -p $transmission_conf_dir $transmission_download_dir
 	chown $transmission_user:$transmission_group $transmission_download_dir
-	chown -R $transmission_user:$transmission_group $transmission_conf_dir/*
+	chown -R $transmission_user:$transmission_group $transmission_conf_dir
 	chgrp $transmission_group $transmission_conf_dir
 	chmod 750 $transmission_conf_dir
 	if [ -n "$transmission_web_home" ]; then

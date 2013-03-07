@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-p2p/transmission-cli/Makefile,v 1.97 2013/01/16 19:47:25 svnexp Exp $
+# $FreeBSD: net-p2p/transmission-cli/Makefile 313230 2013-03-02 13:48:31Z crees $
 
 PORTNAME=	transmission
 PORTVERSION=	2.77
@@ -9,7 +9,7 @@ MASTER_SITES=	http://transmission.cachefly.net/
 PKGNAMESUFFIX?=	-cli
 
 MAINTAINER?=	crees@FreeBSD.org
-COMMENT?=	A lightweight CLI (command line) BitTorrent client and utilities
+COMMENT?=	Lightweight CLI (command line) BitTorrent client and utilities
 
 SLAVEPORT?=	cli
 
@@ -28,7 +28,7 @@ GEN_LIB_DEPENDS=curl.6:${PORTSDIR}/ftp/curl \
 GEN_RUN_DEPENDS=${LOCALBASE}/share/transmission/web/index.html:${PORTSDIR}/www/transmission-web
 
 USE_GMAKE=	yes
-USE_GNOME?=	pkgconfig
+USE_PKGCONFIG=	build
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
