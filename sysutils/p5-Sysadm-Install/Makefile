@@ -1,9 +1,9 @@
 # Created by: Christopher Boumenot <boumenot@gmail.com>
-# $FreeBSD: ports/sysutils/p5-Sysadm-Install/Makefile,v 1.20 2012/12/18 14:30:03 svnexp Exp $
+# $FreeBSD: ports/sysutils/p5-Sysadm-Install/Makefile,v 1.21 2013/01/23 08:53:00 svnexp Exp $
 #
 
 PORTNAME=	Sysadm-Install
-PORTVERSION=	0.41
+PORTVERSION=	0.42
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MSCHILLI
