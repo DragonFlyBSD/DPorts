@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/sysutils/rubygem-guard/Makefile,v 1.15 2012/12/23 20:09:39 svnexp Exp $
+# $FreeBSD: ports/sysutils/rubygem-guard/Makefile,v 1.16 2013/01/30 19:54:10 svnexp Exp $
 
 PORTNAME=	guard
-PORTVERSION=	1.6.0
+PORTVERSION=	1.6.2
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
@@ -12,6 +12,7 @@ COMMENT=	Command line tool to easily handle events on file system modifications
 RUN_DEPENDS=	rubygem-listen>=0.6.0:${PORTSDIR}/devel/rubygem-listen \
 		rubygem-lumberjack>=1.0.2:${PORTSDIR}/devel/rubygem-lumberjack \
 		rubygem-pry>=0.9.10:${PORTSDIR}/devel/rubygem-pry \
+		rubygem-terminal-table>=1.4.3:${PORTSDIR}/textproc/rubygem-terminal-table \
 		rubygem-thor>=0.14.6:${PORTSDIR}/devel/rubygem-thor
 
 USE_RUBY=	yes
