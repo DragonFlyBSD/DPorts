@@ -1,9 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-CPAN-Mini/Makefile,v 1.35 2012/12/18 12:05:50 svnexp Exp $
+# $FreeBSD: ports/devel/p5-CPAN-Mini/Makefile,v 1.36 2013/02/11 10:55:18 svnexp Exp $
 
 PORTNAME=	CPAN-Mini
-PORTVERSION=	1.111010
-PORTREVISION=	1
+PORTVERSION=	1.111011
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RJBS
