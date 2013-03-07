@@ -1,8 +1,9 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: ports/math/convertall/Makefile,v 1.26 2012/11/17 05:59:19 svnexp Exp $
+# $FreeBSD: ports/math/convertall/Makefile,v 1.29 2013/02/03 22:43:39 svnexp Exp $
 
 PORTNAME=	convertall
 PORTVERSION=	0.5.2
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
@@ -19,7 +20,7 @@ WRKSRC=		${WRKDIR}/ConvertAll
 
 USE_PYTHON=	2.4+
 
-DESKTOP_ENTRIES="ConvertAll" "${COMMENT}" "${DATADIR}/icons/${PORTNAME}.svg" \
+DESKTOP_ENTRIES="ConvertAll" "Unit converter" "${DATADIR}/icons/${PORTNAME}.svg" \
 		"${PORTNAME}" "Utility;Calculator;" true
 
 .include <bsd.port.options.mk>
