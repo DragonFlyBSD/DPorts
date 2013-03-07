@@ -1,9 +1,9 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: ports/devel/cvs2svn/Makefile,v 1.37 2012/11/17 05:55:39 svnexp Exp $
+# $FreeBSD: devel/cvs2svn/Makefile 313346 2013-03-03 13:04:22Z ohauer $
 
 PORTNAME=	cvs2svn
 PORTVERSION=	2.4.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://cvs2svn.tigris.org/files/documents/1462/49237/ \
 		LOCAL/ohauer
@@ -17,7 +17,7 @@ PATCHFILES=	${PORTNAME}-${PORTVERSION}-r${PATCHREV}.diff.bz2
 MAINTAINER=	ohauer@FreeBSD.org
 COMMENT=	CVS to Subversion Repository Converter
 
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gdbm.so:${PORTSDIR}/databases/py-gdbm
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gdbm>0:${PORTSDIR}/databases/py-gdbm
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAKE_JOBS_SAFE=	yes
