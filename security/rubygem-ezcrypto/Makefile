@@ -2,7 +2,7 @@
 # Date created:				15 April 2008
 # Whom:					Steven Kreuzer
 #
-# $FreeBSD: ports/security/rubygem-ezcrypto/Makefile,v 1.6 2012/11/17 06:01:19 svnexp Exp $
+# $FreeBSD: security/rubygem-ezcrypto/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	ezcrypto
