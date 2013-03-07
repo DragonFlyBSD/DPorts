@@ -1,13 +1,9 @@
-# New ports collection makefile for:	p5-String-Approx
-# Date created:				April 15th 2000
-# Whom:	      				Ilia Chipitsine <ilia@cgu.chel.su>
-#
-# $FreeBSD: ports/devel/p5-String-Approx/Makefile,v 1.14 2012/11/17 05:56:29 svnexp Exp $
+# Created by: Ilia Chipitsine <ilia@cgu.chel.su>
+# $FreeBSD: ports/devel/p5-String-Approx/Makefile,v 1.15 2013/01/23 14:55:35 svnexp Exp $
 #
 
 PORTNAME=	String-Approx
-PORTVERSION=	3.26
-PORTREVISION=	1
+PORTVERSION=	3.27
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
