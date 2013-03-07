@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Hungary zipcodes
-# Date created:         2002-06-22
-# Whom:                 janos.mohacsi@bsd.hu
-#
-# $FreeBSD: ports/hungarian/hu-zipcodes/Makefile,v 1.7 2012/11/17 05:58:27 svnexp Exp $
-#
+# Created by: janos.mohacsi@bsd.hu
+# $FreeBSD: ports/hungarian/hu-zipcodes/Makefile,v 1.8 2013/01/09 20:04:49 svnexp Exp $
 
 PORTNAME=	zipcodes
 PORTVERSION=	20020622
@@ -13,7 +9,7 @@ PKGNAMEPREFIX=	hu-
 DISTNAME=	iranyitoszamok.2002.06.22
 EXTRACT_SUFX=	.gz
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Postal codes in Hungary / Magyarorszagi iranyitoszamok
 
 PLIST_FILES=	share/misc/hu.zipcodes
