@@ -2,7 +2,7 @@
 # Date created:		2005-02-01
 # Whom:			Anton Karpov <toxa@toxahost.ru>
 #
-# $FreeBSD: ports/sysutils/graveman/Makefile,v 1.29 2012/11/17 06:01:33 svnexp Exp $
+# $FreeBSD: sysutils/graveman/Makefile 313088 2013-02-28 10:51:58Z gahr $
 #
 
 PORTNAME=	graveman
@@ -24,8 +24,8 @@ GNU_CONFIGURE=	yes
 USE_CDRTOOLS=	yes
 USE_PKGCONFIG=	build
 USE_GNOME=	libglade2 intlhack gnomehack gnomeprefix
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 MAN1=		graveman.1
 
