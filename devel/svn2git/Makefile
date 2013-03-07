@@ -1,11 +1,12 @@
-# $FreeBSD: ports/devel/svn2git/Makefile,v 1.6 2012/11/17 05:57:04 svnexp Exp $
+# Created by: David Naylor <naylor.b.david@gmail.com>
+# $FreeBSD: ports/devel/svn2git/Makefile,v 1.8 2013/02/12 04:43:43 svnexp Exp $
 
 PORTNAME=	svn2git
-DISTVERSION=	1.0.5
+DISTVERSION=	1.0.8
 CATEGORIES=	devel kde
-MASTER_SITES=	http://cloud.github.com/downloads/DragonSA/${PORTNAME}/
+MASTER_SITES=	LOCAL/dbn/svn2git
 
-MAINTAINER=	naylor.b.david@gmail.com
+MAINTAINER=	dbn@FreeBSD.org
 COMMENT=	Imports svn repositories into git
 
 LICENSE=	GPLv3
@@ -19,7 +20,16 @@ USE_XZ=		yes
 USE_QT4=	corelib qmake_build
 MAKE_JOBS_SAFE=	yes
 
+OPTIONS_DEFINE=	FREEBSD_REPO
+FREEBSD_REPO_DESC=	FreeBSD-repo only mode
+
 PLIST_FILES=	bin/svn2git
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MFREEBSD_REPO}
+EXTRA_PATCHES=	${PATCHDIR}/freebsd-export-patch
+.endif
 
 post-patch:
 	${REINPLACE_CMD} "s|/usr/local|${LOCALBASE}|" ${WRKSRC}/src/src.pro
