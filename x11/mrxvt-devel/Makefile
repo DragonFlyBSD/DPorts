@@ -2,12 +2,12 @@
 # Date created:				24 Apr 2005
 # Whom:					Lars Engels <lars.engels@0x20.net>
 #
-# $FreeBSD: ports/x11/mrxvt-devel/Makefile,v 1.24 2012/11/17 06:03:18 svnexp Exp $
+# $FreeBSD: ports/x11/mrxvt-devel/Makefile,v 1.25 2013/01/23 15:05:39 svnexp Exp $
 #
 
 PORTNAME=	mrxvt-devel
 PORTVERSION=	0.5.4
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	SF/materm/mrxvt%20source/${PORTVERSION}
 DISTNAME=	mrxvt-${PORTVERSION}
