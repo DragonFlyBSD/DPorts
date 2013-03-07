@@ -1,9 +1,9 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: ports/security/secpanel/Makefile,v 1.32 2012/12/03 06:52:28 svnexp Exp $
+# $FreeBSD: ports/security/secpanel/Makefile,v 1.34 2013/01/23 15:05:37 svnexp Exp $
 
 PORTNAME=	secpanel
 PORTVERSION=	0.6.1
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	security tcl tk
 MASTER_SITES=	SF/${PORTNAME} \
@@ -25,8 +25,8 @@ NO_BUILD=	yes
 
 USE_TK_WRAPPER=	yes
 
-DESKTOP_ENTRIES="SecPanel" "${COMMENT}" "${PORTNAME}" \
-		"${PORTNAME}" "Application;System;" "false"
+DESKTOP_ENTRIES="SecPanel" "${COMMENT}" "${PREFIX}/share/pixmaps/${PORTNAME}.png" \
+		"${PORTNAME}" "" "false"
 
 post-patch:
 	@${REINPLACE_CMD} \
