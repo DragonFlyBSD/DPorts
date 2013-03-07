@@ -1,8 +1,9 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: ports/graphics/boxer/Makefile,v 1.8 2012/11/17 05:58:01 svnexp Exp $
+# $FreeBSD: ports/graphics/boxer/Makefile,v 1.10 2013/01/23 15:05:35 svnexp Exp $
 
 PORTNAME=	boxer
 PORTVERSION=	0.3.8
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF/boxc/${PORTNAME:C/^b/B/}%20-%20the%20Box%20GUI/${DISTNAME}/ \
 		http://boxc.sourceforge.net/_images/:icons
@@ -25,8 +26,9 @@ USE_GNOME=	pygtk2
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 
-DESKTOP_ENTRIES="Boxer" "${COMMENT}" "${PORTNAME}" \
-		"${PORTNAME}" "Application;Graphics;" ${FALSE}
+DESKTOP_ENTRIES="Boxer" "${COMMENT}" \
+		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
+		"${PORTNAME}" "Graphics;VectorGraphics;" false
 
 post-extract:
 	@(cd ${WRKSRC} && \
