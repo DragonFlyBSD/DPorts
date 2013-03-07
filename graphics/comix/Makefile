@@ -1,10 +1,5 @@
-# New ports collection makefile for:	comix
-# Date created:				26 November 2005
-# Whom:					Mezz <mezz@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/comix/Makefile,v 1.44 2012/11/17 05:58:02 svnexp Exp $
+# $FreeBSD: ports/graphics/comix/Makefile,v 1.45 2012/12/31 17:09:08 svnexp Exp $
 #   $MCom: ports-stable/graphics/comix/Makefile,v 1.1 2006/10/21 18:39:46 mezz Exp $
-#
 
 PORTNAME=	comix
 PORTVERSION=	4.0.4
