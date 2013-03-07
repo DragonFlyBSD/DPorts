@@ -1,5 +1,5 @@
 # Created by: Kirill Bezzubets <kirill@solaris.ru>
-# $FreeBSD: ports/comms/gammu/Makefile,v 1.67 2012/11/17 05:54:59 svnexp Exp $
+# $FreeBSD: ports/comms/gammu/Makefile,v 1.68 2013/02/11 12:23:58 svnexp Exp $
 
 PORTNAME=	gammu
 PORTVERSION=	1.32.0
@@ -14,8 +14,7 @@ RUN_DEPENDS=	cdialog:${PORTSDIR}/devel/cdialog
 
 CONFLICTS=	gammu-devel-[1-9]* gammu-python-[1-9]*
 
-OPTIONS_DEFINE=	BASHCS
-BASHCS_DESC=	BASH completion script
+OPTIONS_DEFINE=	BASH
 
 CMAKE_ARGS+=	-DINSTALL_LIBDATA_DIR=${LOCALBASE}/libdata
 
@@ -38,7 +37,7 @@ post-install:
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MBASHCS}
+.if ${PORT_OPTIONS:MBASH}
 BUILD_DEPENDS+=	bash:${PORTSDIR}/shells/bash
 RUN_DEPENDS+=	bash:${PORTSDIR}/shells/bash
 PLIST_FILES+=	etc/bash_completion.d/gammu
