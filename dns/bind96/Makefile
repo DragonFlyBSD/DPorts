@@ -1,4 +1,4 @@
-# $FreeBSD: ports/dns/bind96/Makefile,v 1.135 2012/12/14 10:52:09 svnexp Exp $
+# $FreeBSD: ports/dns/bind96/Makefile,v 1.136 2013/01/04 11:42:54 svnexp Exp $
 
 PORTNAME=	bind96
 PORTVERSION=	9.6.3.1.ESV.R8
@@ -9,6 +9,8 @@ DISTNAME=	bind-${ISCVERSION}
 
 MAINTAINER=	erwin@FreeBSD.org
 COMMENT=	BIND DNS suite with updated DNSSEC and threads
+
+LICENSE=	ISCL
 
 # ISC releases things like 9.4.0b3, which our versioning doesn't like
 ISCVERSION=	9.6-ESV-R8
