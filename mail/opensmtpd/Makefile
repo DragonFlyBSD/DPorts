@@ -2,11 +2,11 @@
 # Date created:		2012-05-13
 # Whom:			Ashish SHUKLA <ashish@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/opensmtpd/Makefile,v 1.16 2013/01/18 15:03:04 svnexp Exp $
+# $FreeBSD: ports/mail/opensmtpd/Makefile,v 1.23 2013/02/23 11:54:35 svnexp Exp $
 #
 
 PORTNAME=	opensmtpd
-PORTVERSION=	201301111154
+PORTVERSION=	201302212015
 CATEGORIES=	mail
 MASTER_SITES=	http://www.opensmtpd.org/archives/ \
 		http://distfiles.pirateparty.in/ashish/
