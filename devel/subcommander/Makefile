@@ -1,13 +1,9 @@
-# New ports collection makefile for:	subcommander
-# Date created:		22 July 2007
-# Whom:			sutra
-#
-# $FreeBSD: ports/devel/subcommander/Makefile,v 1.26 2012/11/17 05:57:03 svnexp Exp $
-#
+# Created by: sutra
+# $FreeBSD: ports/devel/subcommander/Makefile,v 1.28 2013/02/14 10:22:23 svnexp Exp $
 
 PORTNAME=	subcommander
 PORTVERSION=	1.2.3
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	http://subcommander.tigris.org/files/documents/1759/42385/
 DISTNAME=	Subcommander-${PORTVERSION}
@@ -16,7 +12,7 @@ MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Qt based multiplatform subversion client, diff & merge tool
 
 LIB_DEPENDS=	neon.27:${PORTSDIR}/www/neon29 \
-		boost_thread.4:${PORTSDIR}/devel/boost-libs \
+		boost_thread:${PORTSDIR}/devel/boost-libs \
 		svn_client-1.0:${PORTSDIR}/devel/subversion16
 
 CONFLICTS_BUILD=subversion-1.7.[0-9]*
@@ -30,7 +26,7 @@ CONFIGURE_ARGS+=--with-boost=${LOCALBASE} --with-neon=${LOCALBASE} \
 		--with-subversion=${LOCALBASE}
 CONFIGURE_ENV=	QTDIR=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 
 NO_LATEST_LINK=	yes
 
