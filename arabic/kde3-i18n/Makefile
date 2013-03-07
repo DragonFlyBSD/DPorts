@@ -1,5 +1,5 @@
 # Created by: Lauri Watts <lauri@kde.org>
-# $FreeBSD: ports/arabic/kde3-i18n/Makefile,v 1.60 2012/12/23 07:08:39 svnexp Exp $
+# $FreeBSD: ports/arabic/kde3-i18n/Makefile,v 1.61 2012/12/30 18:55:35 svnexp Exp $
 
 PORTNAME=	kde-i18n
 PORTVERSION=	${KDE_VERSION}
@@ -11,6 +11,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Arabic messages and documentation for KDE3
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 USE_BZIP2=	yes
