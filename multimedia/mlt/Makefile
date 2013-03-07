@@ -1,7 +1,7 @@
-# $FreeBSD: ports/multimedia/mlt/Makefile,v 1.45 2013/01/13 10:43:20 svnexp Exp $
+# $FreeBSD: ports/multimedia/mlt/Makefile,v 1.46 2013/02/09 03:43:35 svnexp Exp $
 
 PORTNAME=	mlt
-PORTVERSION=	0.8.6
+PORTVERSION=	0.8.8
 PORTREVISION?=	0
 CATEGORIES?=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
@@ -176,9 +176,7 @@ pre-configure:
 		${WRKSRC}/src/modules/frei0r/factory.c \
 		${WRKSRC}/src/modules/jackrack/plugin_mgr.c \
 		${WRKSRC}/src/modules/linsys/Makefile
-	@${REINPLACE_CMD} -e 's,-pthread,${PTHREAD_LIBS},' \
-		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's,-lpthread,${PTHREAD_LIBS},' \
+	@${REINPLACE_CMD} -e 's,-lpthread,-pthread,' \
 		${WRKSRC}/src/framework/Makefile \
 		${WRKSRC}/src/melt/Makefile \
 		${WRKSRC}/src/modules/*/Makefile
