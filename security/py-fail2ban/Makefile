@@ -1,9 +1,9 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/security/py-fail2ban/Makefile,v 1.16 2012/12/17 18:50:03 svnexp Exp $
+# $FreeBSD: ports/security/py-fail2ban/Makefile,v 1.19 2013/02/25 22:55:56 svnexp Exp $
 
 PORTNAME=	fail2ban
-PORTVERSION=	0.8.7.1
-PORTREVISION=   1
+PORTVERSION=	0.8.8
+PORTREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/tarball/${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,9 +14,9 @@ COMMENT=	Scans log files and bans IP that makes too many password failures
 
 LICENSE=	GPLv2
 
-GITVERSION=	0-g0b5c66f
+GITVERSION=	0-g51a3be2
 FETCH_ARGS=	-pRr
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-e59babb
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-ff91bd4
 
 MAKE_JOBS_SAFE=	yes
 
@@ -28,7 +28,7 @@ SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 
 PYDISTUTILS_INSTALLARGS+=	--install-purelib=${PYTHON_SITELIBDIR} \
 				--install-data=${ETCDIR}
-PYDISTUTILS_PKGVERSION=	0.8.7
+PYDISTUTILS_PKGVERSION=	0.8.8
 
 FILES=	${WRKSRC}/fail2ban-regex \
 		${WRKSRC}/man/fail2ban-client.1 \
@@ -39,6 +39,8 @@ FILES=	${WRKSRC}/fail2ban-regex \
 
 post-patch:
 	@${ECHO_CMD} ${FILES} | ${XARGS} ${REINPLACE_CMD} -e 's,/etc/fail2ban,${ETCDIR},g'
+	@${REINPLACE_CMD} -e 's,/bin/grep,grep,g' \
+		${WRKSRC}/config/action.d/sendmail-whois-lines.conf
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
