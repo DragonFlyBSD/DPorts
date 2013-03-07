@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/security/shibboleth2-sp/files/shibboleth-sp.in,v 1.6 2012/11/17 06:01:20 svnexp Exp $
+#
+# PROVIDE: shibboleth_sp
+# REQUIRE: DAEMON
+#
+
+. /etc/rc.subr
+
+name="shibboleth_sp"
+rcvar=shibboleth_sp_enable
+
+command=${shibboleth_sp_program:-%%PREFIX%%/sbin/shibd}
+pidfile="${shibboleth_sp_pidfile:-/var/run/${name}.pid}"
+command_args="-f -p ${pidfile}"
+
+load_rc_config $name
+run_rc_command "$1"
