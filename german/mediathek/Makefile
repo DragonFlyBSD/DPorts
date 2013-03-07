@@ -2,11 +2,12 @@
 # Date created:		2010-10-17
 # Whom:			Lars Engels <lme@FreeBSD.org>
 #
-# $FreeBSD: ports/german/mediathek/Makefile,v 1.8 2012/11/17 05:57:59 svnexp Exp $
+# $FreeBSD: ports/german/mediathek/Makefile,v 1.10 2013/01/23 15:05:35 svnexp Exp $
 #
 
 PORTNAME=	mediathek
-PORTVERSION=	3.0.0
+PORTVERSION=	3.1.0
+PORTREVISION=	1
 CATEGORIES=	german java
 MASTER_SITES=	SF/zdfmediathk/Mediathek/Mediathek%20${PORTVERSION}
 DISTNAME=	MediathekView_${PORTVERSION}
@@ -22,10 +23,9 @@ USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 SUB_FILES=	mediathek
 
-INSTALLFILES=	MediathekView.jar
+INSTALLFILES=	MediathekView.jar MediathekView.ico
 INSTALLDOCS=	Anleitung.pdf
-INSTALLLIBS=	commons-compress-1.4.jar commons-lang3-3.1.jar \
-		jdom-2.0.0.jar
+INSTALLLIBS=	commons-compress-1.4.jar commons-lang3-3.1.jar
 
 OPTIONS_MULTI=		BACKEND
 OPTIONS_MULTI_BACKEND=	MPLAYER VLC
@@ -43,6 +43,13 @@ RUN_DEPENDS+=	mplayer:${PORTSDIR}/multimedia/mplayer
 .if ${PORT_OPTIONS:MVLC}
 RUN_DEPENDS+=	vlc:${PORTSDIR}/multimedia/vlc
 .endif
+
+DESKTOP_ENTRIES="MediathekView" \
+		"Filme der oeff. rechtlichen Sender herunterladen und ansehen" \
+		"${DATADIR}/MediathekView.ico" \
+		"mediathek" \
+		"Video;AudioVideo;Java;" \
+		false
 
 do-extract:
 	@${RM} -rf ${WRKDIR}
