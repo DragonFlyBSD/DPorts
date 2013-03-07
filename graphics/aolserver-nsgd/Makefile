@@ -2,7 +2,7 @@
 # Date created:		12 Oct 2006
 # Whom:			Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/aolserver-nsgd/Makefile,v 1.15 2012/11/17 05:58:01 svnexp Exp $
+# $FreeBSD: ports/graphics/aolserver-nsgd/Makefile,v 1.16 2013/02/06 19:12:12 svnexp Exp $
 #
 
 PORTNAME=	nsgd
@@ -30,7 +30,6 @@ RUN_DEPENDS+=	${LOCALBASE}/${AOLSERVERBASE}/bin/nsd:${PORTSDIR}/www/aolserver
 USE_GMAKE=	yes
 
 USE_TCL=	84+
-USE_TCL_THREADS=	yes
 
 .include <bsd.port.pre.mk>
 
