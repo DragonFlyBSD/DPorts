@@ -1,13 +1,8 @@
-# New ports collection makefile for:	octave-forge-optiminterp
-# Date created:		8 September 2008
-# Whom:			Stephen Montgomery-Smith <stephen@math.missouri.edu>
-#
-# $FreeBSD: ports/math/octave-forge-optiminterp/Makefile,v 1.16 2012/11/17 05:59:24 svnexp Exp $
-#
+# Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
+# $FreeBSD: ports/math/octave-forge-optiminterp/Makefile,v 1.17 2013/02/22 02:43:59 svnexp Exp $
 
 PORTNAME=	octave-forge-optiminterp
-PORTVERSION=	0.3.3
-PORTREVISION=	4
+PORTVERSION=	0.3.4
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
