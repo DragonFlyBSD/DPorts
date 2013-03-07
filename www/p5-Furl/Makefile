@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/p5-Furl/Makefile,v 1.10 2013/01/15 03:48:12 svnexp Exp $
+# $FreeBSD: www/p5-Furl/Makefile 313354 2013-03-03 14:52:24Z kuriyama $
 
 PORTNAME=	Furl
-PORTVERSION=	1.03
+PORTVERSION=	2.07
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TOKUHIROM
