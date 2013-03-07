@@ -1,8 +1,8 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: ports/sysutils/p5-Tie-Syslog/Makefile,v 1.7 2013/01/03 23:44:33 svnexp Exp $
+# $FreeBSD: ports/sysutils/p5-Tie-Syslog/Makefile,v 1.8 2013/02/01 10:46:49 svnexp Exp $
 
 PORTNAME=	Tie-Syslog
-PORTVERSION=	2.03
+PORTVERSION=	2.04.02
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
