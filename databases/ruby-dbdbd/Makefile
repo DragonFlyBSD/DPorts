@@ -2,7 +2,7 @@
 # Date created:					08 December 2004
 # Whom:						Brooks Davis <brooks@aero.org>
 #
-# $FreeBSD: ports/databases/ruby-dbdbd/Makefile,v 1.4 2012/11/17 05:55:24 svnexp Exp $
+# $FreeBSD: ports/databases/ruby-dbdbd/Makefile,v 1.5 2013/01/23 00:05:00 svnexp Exp $
 #
 
 PORTNAME=	dbdbd
@@ -15,6 +15,9 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	David Black's DataBase Definer
+
+DEPRECATED=	Dead project, apparently unused
+EXPIRATION_DATE=2013-03-01
 
 RESTRICTED=	License only allows unchanged distributions
 
