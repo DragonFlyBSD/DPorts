@@ -2,11 +2,11 @@
 # Date created:		2012-06-04
 # Whom:			Charlie & <root@meatwad.mouf.net>
 #
-# $FreeBSD: ports/devel/rubygem-bacon/Makefile,v 1.2 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-bacon/Makefile,v 1.3 2013/01/23 20:13:46 svnexp Exp $
 #
 
 PORTNAME=	bacon
-PORTVERSION=	1.1.0
+PORTVERSION=	1.2.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
