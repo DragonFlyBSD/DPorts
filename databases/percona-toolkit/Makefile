@@ -1,7 +1,7 @@
-# $FreeBSD: ports/databases/percona-toolkit/Makefile,v 1.12 2013/01/05 11:44:03 svnexp Exp $
+# $FreeBSD: ports/databases/percona-toolkit/Makefile,v 1.13 2013/02/16 12:54:27 svnexp Exp $
 
 PORTNAME=	percona-toolkit
-PORTVERSION=	2.1.7
+PORTVERSION=	2.1.9
 CATEGORIES=	databases
 MASTER_SITES=	http://www.percona.com/downloads/percona-toolkit/${PORTVERSION}/
 
