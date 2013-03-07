@@ -1,8 +1,9 @@
 # Created by:   nemysis@gmx.ch
-# $FreeBSD: ports/multimedia/pymp/Makefile,v 1.1 2012/11/23 15:06:33 svnexp Exp $
+# $FreeBSD: ports/multimedia/pymp/Makefile,v 1.3 2013/01/23 15:05:36 svnexp Exp $
 
 PORTNAME=	pymp
 PORTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	multimedia python
 MASTER_SITES=	http://jdolan.dyndns.org/files/
 DIST_SUBDIR=	python
@@ -20,8 +21,9 @@ USE_GNOME=	pygtk2
 
 PORTDOCS=	CHANGELOG README
 
-DESKTOP_ENTRIES="Pymp" "${COMMENT}" "${PORTNAME}" \
-		"${PORTNAME}" "Application;AudioVideo;" "false"
+DESKTOP_ENTRIES="Pymp" "MPlayer frontend" \
+		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
+		"${PORTNAME}" "AudioVideo;Player;" "false"
 
 .include <bsd.port.options.mk>
 
