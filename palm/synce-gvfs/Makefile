@@ -2,7 +2,7 @@
 # Date created:                28 August 2003
 # Whom:                        Sam Lawrance <boris@brooknet.com.au>
 #
-# $FreeBSD: ports/palm/synce-gvfs/Makefile,v 1.40 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: ports/palm/synce-gvfs/Makefile,v 1.41 2013/02/20 16:45:25 svnexp Exp $
 #
 
 PORTNAME=	synce-gvfs
@@ -11,7 +11,7 @@ PORTREVISION=	4
 CATEGORIES=	palm
 MASTER_SITES=	SF/synce/SynCE-GNOME/0.14
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GVFS module for access Windows Mobile devices
 
 EXTRACT_DEPENDS=${NONEXISTENT}:${GVFS_PORTDIR}:patch
