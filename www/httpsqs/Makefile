@@ -2,7 +2,7 @@
 # Date created:		2011-04-22
 # Whom:			Zhihao Yuan <lichray@gmail.com>
 #
-# $FreeBSD: ports/www/httpsqs/Makefile,v 1.5 2012/11/17 06:02:36 svnexp Exp $
+# $FreeBSD: ports/www/httpsqs/Makefile,v 1.6 2013/02/07 14:08:06 svnexp Exp $
 #
 
 PORTNAME=	httpsqs
@@ -19,7 +19,6 @@ LIB_DEPENDS+=	tokyocabinet:${PORTSDIR}/databases/tokyocabinet \
 	event-2.0:${PORTSDIR}/devel/libevent2
 
 USE_PKGCONFIG=	yes
-MAKE_ENV=	LIBS="${PTHREAD_LIBS}"
 
 PLIST_FILES=	bin/${PORTNAME}
 
