@@ -2,12 +2,12 @@
 # Date created:			26 Mar 1999
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/finch/Makefile,v 1.31 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: ports/net-im/finch/Makefile,v 1.32 2013/02/25 17:44:11 svnexp Exp $
 #   $MCom: ports-stable/net-im/gaim-consoleui-devel/Makefile,v 1.2 2006/10/29 18:55:28 marcus Exp $
 #
 
 PORTNAME=	finch
-PORTREVISION=	0
+PORTREVISION=	1
 
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Finch multi-protocol messaging client (Console UI)
