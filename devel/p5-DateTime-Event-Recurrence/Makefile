@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Event-Recurrence
-# Date created:	   1 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Event-Recurrence/Makefile,v 1.20 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: ports/devel/p5-DateTime-Event-Recurrence/Makefile,v 1.21 2013/02/05 19:01:46 svnexp Exp $
 
 PORTNAME=	DateTime-Event-Recurrence
 DISTVERSION=	0.16
@@ -18,16 +14,19 @@ BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Set>=0:${PORTSDIR}/devel/p5-DateTime-Set
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
+OPTIONS_DEFINE=	DOCS
+
 PERL_CONFIGURE=	yes
 
 MAN3=		DateTime::Event::Recurrence.3
-
-.if !defined(NOPORTDOCS)
 PORTDOCS=	CREDITS Changes README TODO
 
+.include <bsd.port.options.mk>
+
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${DOCSDIR}/
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
