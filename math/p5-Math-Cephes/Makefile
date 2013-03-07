@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/math/p5-Math-Cephes/Makefile,v 1.14 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: ports/math/p5-Math-Cephes/Makefile,v 1.15 2013/01/28 11:00:08 svnexp Exp $
 
 PORTNAME=	Math-Cephes
-PORTVERSION=	0.52
+PORTVERSION=	0.5302
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
