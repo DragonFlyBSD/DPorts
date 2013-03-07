@@ -1,0 +1,24 @@
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: ports/devel/p5-Path-Tiny/Makefile,v 1.8 2013/02/21 10:01:13 svnexp Exp $
+
+PORTNAME=	Path-Tiny
+PORTVERSION=	0.012
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:DAGOLDEN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	tobez@FreeBSD.org
+COMMENT=	File path utility
+
+BUILD_DEPENDS=	p5-PathTools>=3.4000:${PORTSDIR}/devel/p5-PathTools
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
+		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
+		p5-Devel-Hide>=0:${PORTSDIR}/devel/p5-Devel-Hide
+
+PERL_CONFIGURE=	yes
+
+MAN3=	Path::Tiny.3
+
+.include <bsd.port.mk>
