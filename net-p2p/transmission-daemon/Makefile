@@ -1,10 +1,10 @@
-# $FreeBSD: ports/net-p2p/transmission-daemon/Makefile,v 1.33 2012/12/31 17:09:11 svnexp Exp $
+# $FreeBSD: net-p2p/transmission-daemon/Makefile 313230 2013-03-02 13:48:31Z crees $
 
-PORTREVISION=	0
+PORTREVISION=	1
 PKGNAMESUFFIX=	-daemon
 
 MAINTAINER=	crees@FreeBSD.org
-COMMENT=	A fast and lightweight daemon BitTorrent client
+COMMENT=	Fast and lightweight daemon BitTorrent client
 
 RUN_DEPENDS=	${GEN_RUN_DEPENDS}
 
