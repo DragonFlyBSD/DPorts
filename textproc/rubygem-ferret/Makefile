@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ferret
-# Date created:		2006-08-10
-# Whom:			Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/rubygem-ferret/Makefile,v 1.17 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: textproc/rubygem-ferret/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	ferret
 PORTVERSION=	0.11.6
@@ -12,6 +8,9 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ferret is a ruby port of Lucene
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RAKE=	yes
