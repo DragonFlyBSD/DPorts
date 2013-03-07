@@ -1,8 +1,9 @@
 # Created by: jon@witchspace.com
-# $FreeBSD: ports/sysutils/jdiskreport/Makefile,v 1.15 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: ports/sysutils/jdiskreport/Makefile,v 1.16 2013/01/23 15:05:38 svnexp Exp $
 
 PORTNAME=	jdiskreport
 PORTVERSION=	1.4.0
+PORTREVISION=	1
 CATEGORIES=	sysutils java
 MASTER_SITES=	http://www.jGoodies.com/download/${PORTNAME}/
 DISTNAME=	${PORTNAME}-${PORTVERSION:S,.,_,g}
