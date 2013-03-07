@@ -2,7 +2,7 @@
 # Date created:				31 May 2008
 # Whom:					Lukasz Wasikowski <lukasz@wasikowski.net>
 #
-# $FreeBSD: ports/www/mod_macro22/Makefile,v 1.9 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_macro22/Makefile 313182 2013-03-02 03:55:25Z eadler $
 #
 
 PORTNAME=	mod_macro
@@ -16,7 +16,7 @@ COMMENT=	Apache 2.2.x module for use macros in config files
 LICENSE=	mod_macro
 LICENSE_NAME=	mod_macro license (apache with postcard request)
 LICENSE_FILE=	${WRKSRC}/LICENSE
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 MAKE_JOBS_SAFE=	yes
 
