@@ -2,12 +2,12 @@
 # Date created:		1 October 2008
 # Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
 #
-# $FreeBSD: ports/textproc/m17n-im-config/Makefile,v 1.13 2012/11/17 06:02:02 svnexp Exp $
+# $FreeBSD: ports/textproc/m17n-im-config/Makefile,v 1.14 2013/01/23 15:05:38 svnexp Exp $
 #
 
 PORTNAME=	m17n-im-config
 PORTVERSION=	0.9.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.m17n.org/common/im-config/ \
 		http://anthesphoria.net/FreeBSD/ports/distfiles/
