@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/rubygem-listen/Makefile,v 1.5 2012/12/04 07:22:48 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-listen/Makefile,v 1.6 2013/01/30 18:54:04 svnexp Exp $
 
 PORTNAME=	listen
-PORTVERSION=	0.6.0
+PORTVERSION=	0.7.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
