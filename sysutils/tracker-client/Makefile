@@ -2,7 +2,7 @@
 # Date created:		2006-12-09
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/tracker-client/Makefile,v 1.50 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/tracker-client/Makefile 313088 2013-02-28 10:51:58Z gahr $
 #   $MCom: ports/sysutils/tracker-client/Makefile,v 1.14 2010/05/10 04:21:19 marcus Exp $
 #
 
@@ -46,7 +46,7 @@ USE_GSTREAMER=	core
 INSTALLS_ICONS=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -L${LOCALBASE}/lib/tracker ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib -L${LOCALBASE}/lib/tracker
 CONFIGURE_ARGS=	--enable-video-extractor=gstreamer \
 		--enable-file-monitoring=fam \
 		--with-session-bus-services-dir=${LOCALBASE}/share/dbus-1/services \
