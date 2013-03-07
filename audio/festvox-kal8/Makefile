@@ -1,11 +1,5 @@
-# New ports collection makefile for:	festvox-kal8
-# Date created:        			2000-06-19
-# Whom:					Trevor Johnson
-# based on the NetBSD port
-#
-# $NetBSD: Makefile,v 1.10 2000/02/15 09:26:15 agc Exp $
-# $FreeBSD: ports/audio/festvox-kal8/Makefile,v 1.15 2012/11/17 05:54:31 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/audio/festvox-kal8/Makefile,v 1.16 2013/01/27 06:41:36 svnexp Exp $
 
 PORTNAME=	festvox-kal8
 PORTVERSION=	1.4.0
