@@ -2,13 +2,13 @@
 # Date created:		03 May 2011
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/astro/mkgmap-splitter/Makefile,v 1.3 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: ports/astro/mkgmap-splitter/Makefile,v 1.4 2013/02/20 19:17:43 svnexp Exp $
 #
 
 PORTNAME=	splitter
-PORTVERSION=	r198
+PORTVERSION=	r289
 CATEGORIES=	astro converters java
-MASTER_SITES=	http://www.mkgmap.org.uk/splitter/ \
+MASTER_SITES=	http://www.mkgmap.org.uk/download/ \
 		http://mirror.amdmi3.ru/distfiles/
 PKGNAMEPREFIX=	mkgmap-
 
@@ -26,12 +26,14 @@ PORTDOCS=	*
 
 DATADIR=	${PREFIX}/share/${PKGNAMEPREFIX}${PORTNAME}
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${MKDIR} ${DATADIR}/lib
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.jar ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/lib/*.jar ${DATADIR}/lib/
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PKGNAMEPREFIX}${PORTNAME}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/intro.txt ${DOCSDIR}/
