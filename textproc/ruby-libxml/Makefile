@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-libxml
-# Date created:		09 July 2002
-# Whom:	      		Sean Chittenden <seanc@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/ruby-libxml/Makefile,v 1.34 2012/11/17 06:02:19 svnexp Exp $
-#
+# Created by: Sean Chittenden <seanc@FreeBSD.org>
+# $FreeBSD: textproc/ruby-libxml/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	libxml
 PORTVERSION=	1.1.3
@@ -15,6 +11,9 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	A friendly API to libxml for Ruby
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
 
