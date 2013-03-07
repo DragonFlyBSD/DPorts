@@ -2,14 +2,14 @@
 # Date created:			26 August 2007
 # Whom:				Xavier Beaudouin <kiwi@oav.net>
 #
-# $FreeBSD: ports/mail/ovs/Makefile,v 1.12 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: ports/mail/ovs/Makefile,v 1.13 2013/02/04 08:01:38 svnexp Exp $
 #
 
 PORTNAME=	ovs
-PORTVERSION=	1.03
-PORTREVISION=	2
+PORTVERSION=	1.05
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.oav.net/openvisp/stats/
+MASTER_SITES=	ftp://ftp.oav.net/openvisp/stats/ \
+		http://mirror.amdmi3.ru/distfiles/
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	A RRDtool frontend for mail statistics
