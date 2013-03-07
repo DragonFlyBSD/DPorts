@@ -2,7 +2,7 @@
 # mplayer and mencoder....the variables that we need to set
 # before we include bsd.port.pre.mk
 #
-# $FreeBSD: ports/multimedia/mplayer/Makefile.shared,v 1.21 2012/11/17 05:59:51 svnexp Exp $
+# $FreeBSD: ports/multimedia/mplayer/Makefile.shared,v 1.22 2013/02/13 12:38:28 svnexp Exp $
 
 MPLAYER_SNAPSHOT_DATE=	2012-07-21
 MPLAYER_PORT_VERSION=	1.1.r${MPLAYER_SNAPSHOT_DATE:S/-//g}
@@ -39,6 +39,7 @@ CONFIGURE_ARGS=	--cc="${CC}" \
 		--disable-liba52 \
 		--disable-alsa \
 		--disable-libbs2b \
+		--disable-mp3lib \
 		--enable-ass-internal
 
 WANT_GNOME=	yes

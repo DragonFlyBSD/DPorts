@@ -4,7 +4,7 @@
 # Some of the knobs are not tunable by the OPTIONS framework. These are
 # explained here in detail.
 #
-# $FreeBSD: ports/multimedia/mplayer/Makefile.options,v 1.34 2012/11/17 05:59:51 svnexp Exp $
+# $FreeBSD: ports/multimedia/mplayer/Makefile.options,v 1.35 2013/02/13 12:38:28 svnexp Exp $
 #
 # Feature options:
 # These options influence some general behaviour of mplayer. Almost all of the featues,
@@ -52,7 +52,7 @@ CFLAGS+=	-O3 -fomit-frame-pointer -ffast-math
 .endif #WITH_DEBUG
 
 #Supported architectures for clang
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "i386" || ${ARCH} == "amd64"
 MPLAYER_CLANG_SUPPORTED_ARCH=	yes
 .endif
 

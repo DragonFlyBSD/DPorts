@@ -1,13 +1,9 @@
-# New ports collection makefile for:	mplayer
-# Date created:		10 August 2001
-# Whom:			Thomas E. Zander
-#			with lots of help from Vladimir Kushnir
-# $FreeBSD: ports/multimedia/mplayer/Makefile,v 1.221 2012/11/17 05:59:51 svnexp Exp $
-#
+# Created by: Thomas E. Zander with help from Vladimir Kushnir
+# $FreeBSD: ports/multimedia/mplayer/Makefile,v 1.224 2013/02/13 12:38:28 svnexp Exp $
 
 PORTNAME=	mplayer
 PORTVERSION=	${MPLAYER_PORT_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	High performance media player supporting many formats
 
@@ -93,6 +89,11 @@ CONFIGURE_ARGS+=	--disable-directfb \
 			--disable-mencoder \
 			--disable-mpg123 \
 			--disable-musepack
+
+# Fix a problem with unknown assembly opcodes in embedded ffmpeg
+.if ${ARCH} == "ppc"
+CONFIGURE_ARGS+=	--disable-asm
+.endif
 
 .include "${.CURDIR}/Makefile.options"
 
