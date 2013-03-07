@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Object-Accessor
-# Date created:	   30 September 2005
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Object-Accessor/Makefile,v 1.12 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: ports/devel/p5-Object-Accessor/Makefile,v 1.13 2013/01/25 05:50:29 svnexp Exp $
 
 PORTNAME=	Object-Accessor
-PORTVERSION=	0.44
+PORTVERSION=	0.46
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
