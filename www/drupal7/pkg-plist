@@ -736,6 +736,7 @@
 %%DRUPAL_BASE%%/modules/simpletest/tests/update_test_3.info
 %%DRUPAL_BASE%%/modules/simpletest/tests/update_test_3.install
 %%DRUPAL_BASE%%/modules/simpletest/tests/update_test_3.module
+%%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/update.aggregator.test
 %%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/update.user.test
 %%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/update.field.test
 %%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/update.trigger.test
@@ -751,6 +752,7 @@
 %%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/drupal-6.upload.database.php
 %%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/drupal-6.user-no-password-token.database.php
 %%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/drupal-6.user-password-token.database.php
+%%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/drupal-7.aggregator.database.php
 %%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/drupal-7.bare.minimal.database.php.gz
 %%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/drupal-7.bare.standard_all.database.php.gz
 %%DRUPAL_BASE%%/modules/simpletest/tests/upgrade/drupal-7.field.database.php
@@ -938,7 +940,6 @@
 %%DRUPAL_BASE%%/scripts/password-hash.sh
 %%DRUPAL_BASE%%/scripts/run-tests.sh
 %%DRUPAL_BASE%%/scripts/test.script
-%%DRUPAL_BASE%%/sites/all/README.txt
 %%DRUPAL_BASE%%/sites/all/modules/README.txt
 %%DRUPAL_BASE%%/sites/all/themes/README.txt
 %%DRUPAL_BASE%%/sites/default/default.settings.php
@@ -1157,13 +1158,6 @@
 @dirrm %%DRUPAL_BASE%%/profiles/testing
 @dirrm %%DRUPAL_BASE%%/profiles
 @dirrm %%DRUPAL_BASE%%/scripts
-@dirrm %%DRUPAL_BASE%%/sites/all/libraries
-@dirrm %%DRUPAL_BASE%%/sites/all/modules
-@dirrm %%DRUPAL_BASE%%/sites/all/themes
-@dirrm %%DRUPAL_BASE%%/sites/all
-@dirrm %%DRUPAL_BASE%%/sites/default/files
-@dirrm %%DRUPAL_BASE%%/sites/default
-@dirrm %%DRUPAL_BASE%%/sites
 @dirrm %%DRUPAL_BASE%%/themes/bartik/color
 @dirrm %%DRUPAL_BASE%%/themes/bartik/css
 @dirrm %%DRUPAL_BASE%%/themes/bartik/images
@@ -1178,10 +1172,10 @@
 @dirrm %%DRUPAL_BASE%%/themes/seven
 @dirrm %%DRUPAL_BASE%%/themes/stark
 @dirrm %%DRUPAL_BASE%%/themes
+@dirrmtry %%DRUPAL_BASE%%/sites/all/libraries
 @dirrmtry %%DRUPAL_BASE%%/sites/all/modules
 @dirrmtry %%DRUPAL_BASE%%/sites/all/themes
 @dirrmtry %%DRUPAL_BASE%%/sites/all
-@dirrmtry %%DRUPAL_BASE%%/sites/default/files/styles
 @dirrmtry %%DRUPAL_BASE%%/sites/default/files
 @dirrmtry %%DRUPAL_BASE%%/sites/default
 @dirrmtry %%DRUPAL_BASE%%/sites

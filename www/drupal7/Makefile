@@ -1,14 +1,14 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: ports/www/drupal7/Makefile,v 1.74 2012/11/17 06:02:32 svnexp Exp $
+# $FreeBSD: www/drupal7/Makefile 313262 2013-03-02 15:06:31Z miwi $
 
 PORTNAME=	drupal7
-PORTVERSION=	7.16
+PORTVERSION=	7.20
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 DISTNAME=	drupal-${PORTVERSION}
 DIST_SUBDIR=	drupal
 
-MAINTAINER=	nick@foobar.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Database driven web content management system (CMS)
 
 LICENSE=	GPLv2 GPLv3
