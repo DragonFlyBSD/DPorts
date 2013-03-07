@@ -1,9 +1,9 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/graphics/eos-movrec/Makefile,v 1.8 2012/11/17 05:58:04 svnexp Exp $
+# $FreeBSD: ports/graphics/eos-movrec/Makefile,v 1.10 2013/01/23 15:05:35 svnexp Exp $
 
 PORTNAME=	eos-movrec
 DISTVERSION=	0.3.1_beta
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.3_beta/ \
 		SF/nemysisfreebsdp/:icons
@@ -26,8 +26,9 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build gui
 PLIST_FILES=	bin/eos_movrec \
 		share/pixmaps/${PORTNAME}.png
 
-DESKTOP_ENTRIES=	"EOS Camera Movie Record" "${COMMENT}" "${PORTNAME}" \
-			"${PORTNAME:S/-/_/}" "Application;Graphics;" false
+DESKTOP_ENTRIES=	"eos_movrec" "EOS Camera Movie Recorder" \
+			"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
+			"eos_movrec" "Graphics;Photography;Qt;" false
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,GLIBC,${OPSYS},' ${WRKSRC}/os_api.h
