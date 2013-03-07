@@ -2,7 +2,7 @@
 # Date created:			18 April 2008
 # Whom:				Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/www/xpi-cookiesafe/Makefile,v 1.5 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: ports/www/xpi-cookiesafe/Makefile,v 1.6 2013/02/20 16:45:27 svnexp Exp $
 #
 
 PORTNAME=	cookiesafe
@@ -10,7 +10,7 @@ PORTVERSION=	3.0.5
 DISTVERSIONSUFFIX=	-fx+tb+sm
 CATEGORIES=	www
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Control cookie permissions
 
 XPI_ID=		{9D23D0AA-D8F5-11DA-B3FC-0928ABF316DD}
