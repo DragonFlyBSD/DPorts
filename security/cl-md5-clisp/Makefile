@@ -1,8 +1,4 @@
-# New ports collection makefile for:	cl-md5-clisp
-# Date created:				16 January 2010
-# Whom:					Jimmy Olgeni <olgeni@FreeBSD.org>
-#
-# $FreeBSD: ports/security/cl-md5-clisp/Makefile,v 1.5 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: ports/security/cl-md5-clisp/Makefile,v 1.6 2013/01/26 15:07:28 svnexp Exp $
 
 PORTNAME=	md5
 PORTVERSION=	1.8.5
