@@ -1,16 +1,12 @@
-# New ports collection makefile for:	wbar
-# Date created:		2007-01-16
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/wbar/Makefile,v 1.13 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: ports/x11/wbar/Makefile,v 1.14 2013/02/06 17:51:19 svnexp Exp $
 
 PORTNAME=	wbar
-PORTVERSION=	2.3.0
+PORTVERSION=	2.3.4
 PORTREVISION=	0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
-DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	A quick launch bar for fluxbox, WindowMaker, Xfce, etc
