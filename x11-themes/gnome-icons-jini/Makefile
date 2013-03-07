@@ -1,9 +1,4 @@
-# New ports collection makefile for:	gnome-icons-jini
-# Date created:		2008-09-29
-# Whom:			Jimmy Olgeni <olgeni@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/gnome-icons-jini/Makefile,v 1.3 2012/11/17 06:03:31 svnexp Exp $
-#
+# $FreeBSD: ports/x11-themes/gnome-icons-jini/Makefile,v 1.4 2013/01/26 15:07:30 svnexp Exp $
 
 PORTNAME=	jini
 PORTVERSION=	0.8
