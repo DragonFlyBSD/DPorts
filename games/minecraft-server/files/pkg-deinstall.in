@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ "$2" != "POST-DEINSTALL" ]; then
+    exit 0
+fi
+
+if [ -d %%DATADIR%% ]; then
+        echo "There are some files (like your world and your server.log)"
+		echo "left in %%DATADIR%%."
+		echo "Use 'rm -rf %%DATADIR%%' to delete them."
+		echo
+fi
+
+if [ -d %%ETCDIR%% ]; then
+        echo "There are some changed config files left in %%ETCDIR%%."
+		echo "Use 'rm -rf %%ETCDIR%%' to delete them."
+		echo
+fi
+
+exit 0
+
