@@ -1,13 +1,9 @@
-# New ports collection makefile for:	pecl-spread
-# Date created:			10 June 2008
-# Whom:				Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/pecl-spread/Makefile,v 1.8 2012/11/17 05:56:41 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/pecl-spread/Makefile 313372 2013-03-03 18:12:06Z ohauer $
 
 PORTNAME=	spread
 PORTVERSION=	2.1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
