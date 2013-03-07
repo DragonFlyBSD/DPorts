@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-sysvipc
-# Date created:		12 May 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/ruby-sysvipc/Makefile,v 1.18 2012/11/17 05:56:58 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-sysvipc/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	sysvipc
 PORTVERSION=	0.7
@@ -14,6 +10,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	Ruby interface to use System V IPC system calls
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
