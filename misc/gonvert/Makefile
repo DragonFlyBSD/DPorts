@@ -1,14 +1,8 @@
-# ex:ts=8
-# New ports collection makefile for:	gonvert
-# Date created:			Apr 9, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/gonvert/Makefile,v 1.44 2012/12/07 04:05:47 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: ports/misc/gonvert/Makefile,v 1.46 2013/02/10 13:03:38 svnexp Exp $
 
 PORTNAME=	gonvert
-PORTVERSION=	0.2.25
-PORTREVISION=	2
+PORTVERSION=	0.2.32
 CATEGORIES=	misc python gnome
 MASTER_SITES=	http://www.unihedron.com/projects/gonvert/downloads/
 
