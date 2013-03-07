@@ -1,16 +1,19 @@
-# $FreeBSD: ports/www/youtube_dl/Makefile,v 1.67 2012/12/17 09:38:52 svnexp Exp $
+# $FreeBSD: ports/www/youtube_dl/Makefile,v 1.70 2013/02/19 07:00:53 svnexp Exp $
 
 PORTNAME=	youtube_dl
-PORTVERSION=	2012.12.11
+PORTVERSION=	2013.02.02
 CATEGORIES=	www
-MASTER_SITES=	https://cloud.github.com/downloads/rg3/youtube-dl/ \
-		CRITICAL
-DISTNAME=	youtube-dl.${PORTVERSION}
+MASTER_SITES=	http://youtube-dl.org/downloads/${PORTVERSION}/ \
+		http://ftp.de.netbsd.org/pub/unix/Linux/MIRROR.gentoo/distfiles/
+DISTNAME=	youtube-dl-${PORTVERSION}
 
 MAINTAINER=	araujo@FreeBSD.org
 COMMENT=	A program for downloading videos from YouTube.com
 
-LICENSE=	GPLv2
+LICENSE=	UNLICENSE
+LICENSE_NAME=	The Unlicense
+LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 
@@ -35,7 +38,6 @@ RUN_DEPENDS+=	rtmpdump:${PORTSDIR}/multimedia/rtmpdump
 .endif
 
 .if ${PORT_OPTIONS:MBASH}
-ALL_TARGET+=	youtube-dl.bash-completion
 PLIST_FILES+=	etc/bash_completion.d/youtube-dl.sh
 .endif
 
@@ -47,6 +49,10 @@ RUN_DEPENDS+=	ffprobe:${PORTSDIR}/multimedia/ffmpeg-devel
 RUN_DEPENDS+=	ffprobe:${PORTSDIR}/multimedia/ffmpeg
 . endif
 .endif
+
+post-extract:
+	@# remove tarball provided version, build our own
+	@${RM} -f ${WRKSRC}/youtube-dl
 
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/youtube-dl ${PREFIX}/bin/youtube-dl
