@@ -1,8 +1,7 @@
-# $FreeBSD: ports/net/libcmis/Makefile,v 1.4 2013/01/08 17:12:37 svnexp Exp $
+# $FreeBSD: ports/net/libcmis/Makefile,v 1.6 2013/02/12 23:57:39 svnexp Exp $
 
 PORTNAME=	libcmis
-PORTVERSION=	0.1.0
-PORTREVISION=	1
+PORTVERSION=	0.3.1
 CATEGORIES=	net devel
 MASTER_SITES=	SF/${PORTNAME}
 
@@ -20,7 +19,12 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	libxml2 gnomehack
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+MAKE_JOBS_SAFE=	yes
 
-CONFIGURE_ARGS=	--disable-client
+CONFIGURE_ARGS=	--disable-werror --with-boost=${LOCALBASE} --without-man
+
+post-patch:
+	@${REINPLACE_CMD} -e "s|@WITH_LIBCMIS_MAN_FALSE@|#|g" \
+	    ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
