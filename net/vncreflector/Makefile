@@ -1,9 +1,4 @@
-# Ports collection makefile for:	vncreflector
-# Date created:				Wed, Jan 19 2005
-# Whom:					Brooks Davis <brooks@freebsd.org>
-#
-# $FreeBSD: ports/net/vncreflector/Makefile,v 1.10 2012/11/17 06:00:24 svnexp Exp $
-#
+# $FreeBSD: net/vncreflector/Makefile 313119 2013-02-28 17:28:09Z brooks $
 
 PORTNAME=	vncreflector
 PORTVERSION=	1.2.4
@@ -12,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	SF/vnc-reflector/vnc-reflector/${PORTVERSION}
 DISTNAME=	vnc_reflector-${PORTVERSION}
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	paul@it.ca
 COMMENT=	Multi-client VNC proxy server
 
 LIB_DEPENDS+=	jpeg.11:${PORTSDIR}/graphics/jpeg

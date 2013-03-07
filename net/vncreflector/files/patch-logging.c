@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/vncreflector/files/patch-logging.c,v 1.3 2012/11/17 06:00:24 svnexp Exp $
+$FreeBSD: net/vncreflector/files/patch-logging.c 300897 2012-07-14 14:29:18Z beat $
 
 --- logging.c
 +++ logging.c

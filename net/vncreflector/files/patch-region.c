@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/vncreflector/files/patch-region.c,v 1.2 2012/11/17 06:00:24 svnexp Exp $
+$FreeBSD: net/vncreflector/files/patch-region.c 300897 2012-07-14 14:29:18Z beat $
 
 --- region.c.orig
 +++ region.c
