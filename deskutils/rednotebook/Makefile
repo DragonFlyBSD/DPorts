@@ -1,8 +1,8 @@
 # Created by: Hon-Yu Lawrence Cheung (cheunghonyu@gmail.com)
-# $FreeBSD: ports/deskutils/rednotebook/Makefile,v 1.12 2013/01/02 07:43:58 svnexp Exp $
+# $FreeBSD: deskutils/rednotebook/Makefile 313290 2013-03-02 20:04:15Z beech $
 
 PORTNAME=	rednotebook
-PORTVERSION=	1.6.5
+PORTVERSION=	1.7.1
 CATEGORIES=	deskutils python
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	rednotebook

@@ -37,6 +37,9 @@
 %%PYTHON_SITELIBDIR%%/rednotebook/external/txt2tags.py
 %%PYTHON_SITELIBDIR%%/rednotebook/external/txt2tags.pyc
 %%PYTHON_SITELIBDIR%%/rednotebook/external/txt2tags.pyo
+%%PYTHON_SITELIBDIR%%/rednotebook/external/argparse.py
+%%PYTHON_SITELIBDIR%%/rednotebook/external/argparse.pyc
+%%PYTHON_SITELIBDIR%%/rednotebook/external/argparse.pyo
 %%PYTHON_SITELIBDIR%%/rednotebook/files/default.cfg
 %%PYTHON_SITELIBDIR%%/rednotebook/files/main_window.glade
 %%PYTHON_SITELIBDIR%%/rednotebook/gui/__init__.py
@@ -154,6 +157,7 @@ share/locale/ja/LC_MESSAGES/rednotebook.mo
 share/locale/ka/LC_MESSAGES/rednotebook.mo
 share/locale/kk/LC_MESSAGES/rednotebook.mo
 share/locale/ko/LC_MESSAGES/rednotebook.mo
+share/locale/ky/LC_MESSAGES/rednotebook.mo
 share/locale/lt/LC_MESSAGES/rednotebook.mo
 share/locale/mn/LC_MESSAGES/rednotebook.mo
 share/locale/ms/LC_MESSAGES/rednotebook.mo
@@ -246,6 +250,8 @@ bin/rednotebook
 @dirrmtry share/locale/kk
 @dirrmtry share/locale/ko/LC_MESSAGES
 @dirrmtry share/locale/ko
+@dirrmtry share/locale/ky/LC_MESSAGES
+@dirrmtry share/locale/ky
 @dirrmtry share/locale/lt/LC_MESSAGES
 @dirrmtry share/locale/lt
 @dirrmtry share/locale/mn/LC_MESSAGES
