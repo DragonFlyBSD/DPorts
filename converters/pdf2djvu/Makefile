@@ -2,7 +2,7 @@
 # Date created:			7 Mar 2008
 # Whom:					Denise H. G. <darcsis@gmail.com>
 #
-# $FreeBSD: ports/converters/pdf2djvu/Makefile,v 1.24 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: ports/converters/pdf2djvu/Makefile,v 1.25 2013/02/08 03:24:27 svnexp Exp $
 #
 
 PORTNAME=	pdf2djvu
@@ -20,7 +20,7 @@ LIB_DEPENDS=	poppler.18:${PORTSDIR}/graphics/poppler
 LIB_DEPENDS+=	djvulibre:${PORTSDIR}/graphics/djvulibre
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	LIBS=${PTHREAD_LIBS}
+CONFIGURE_ENV=	LIBS=-pthread
 CPPFLAGS+=	-I${LOCALBASE}/include
 USE_GMAKE=	yes
 
