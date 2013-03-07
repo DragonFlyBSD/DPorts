@@ -1,5 +1,4 @@
-# Created by: Jimmy Olgeni <olgeni@FreeBSD.org>
-# $FreeBSD: ports/textproc/plover/Makefile,v 1.2 2012/11/17 06:02:16 svnexp Exp $
+# $FreeBSD: ports/textproc/plover/Makefile,v 1.3 2013/01/26 15:26:04 svnexp Exp $
 
 PORTNAME=	plover
 PORTVERSION=	2.2.0
