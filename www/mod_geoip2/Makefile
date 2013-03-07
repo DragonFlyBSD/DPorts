@@ -1,8 +1,8 @@
 # Created by: Jukka A. Ukkonen <jau@iki.fi>
-# $FreeBSD: ports/www/mod_geoip2/Makefile,v 1.19 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: ports/www/mod_geoip2/Makefile,v 1.20 2013/01/21 00:59:05 svnexp Exp $
 
 PORTNAME=	mod_geoip2
-PORTVERSION=	1.2.7
+PORTVERSION=	1.2.8
 CATEGORIES=	www geography
 MASTER_SITES=	http://geolite.maxmind.com/download/geoip/api/mod_geoip2/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
