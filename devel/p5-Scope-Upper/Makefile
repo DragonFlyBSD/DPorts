@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Scope-Upper
-# Date created:	   12 мая 2009
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Scope-Upper/Makefile,v 1.13 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: ports/devel/p5-Scope-Upper/Makefile,v 1.14 2013/01/31 20:12:05 svnexp Exp $
 
 PORTNAME=	Scope-Upper
-PORTVERSION=	0.21
+PORTVERSION=	0.22
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
