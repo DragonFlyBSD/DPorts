@@ -1,9 +1,9 @@
 # Created by:	Mathias Monnerville <mathias@monnerville.com>
 #
-# $FreeBSD: ports/www/glpi/Makefile,v 1.26 2012/11/17 06:02:34 svnexp Exp $
+# $FreeBSD: ports/www/glpi/Makefile,v 1.27 2013/02/14 08:09:26 svnexp Exp $
 
 PORTNAME=	glpi
-PORTVERSION=	0.83.5
+PORTVERSION=	0.83.7
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://droidng.free.fr/freebsd/ \
