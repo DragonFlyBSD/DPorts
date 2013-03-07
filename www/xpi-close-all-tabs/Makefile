@@ -2,7 +2,7 @@
 # Date created:			18 April 2008
 # Whom:				Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/www/xpi-close-all-tabs/Makefile,v 1.3 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: ports/www/xpi-close-all-tabs/Makefile,v 1.4 2013/02/20 16:45:27 svnexp Exp $
 #
 
 PORTNAME=	close-all-tabs
@@ -10,7 +10,7 @@ PORTVERSION=	1.1
 DISTVERSIONSUFFIX=	-fx
 CATEGORIES=	www
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A toolbar button to close all open tabs
 
 XPI_DISTNAME=	close_all_tabs
