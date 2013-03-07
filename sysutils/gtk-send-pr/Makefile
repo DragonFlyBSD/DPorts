@@ -1,9 +1,9 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: ports/sysutils/gtk-send-pr/Makefile,v 1.43 2012/12/07 09:41:48 svnexp Exp $
+# $FreeBSD: ports/sysutils/gtk-send-pr/Makefile,v 1.45 2013/01/23 15:05:38 svnexp Exp $
 
 PORTNAME=	gtk-send-pr
 PORTVERSION=	0.4.9
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_BERLIOS}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -19,9 +19,9 @@ MAN1=		gtk-send-pr.1
 PLIST_FILES=	bin/gtk-send-pr share/pixmaps/ladybird64.xpm
 DESKTOP_ENTRIES="Send Problem Report" \
 		"Send a FreeBSD PR" \
-		"ladybird64.xpm" \
+		"${PREFIX}/share/pixmaps/ladybird64.xpm" \
 		"gtk-send-pr" \
-		"Application;System;" \
+		"System;" \
 		true
 
 do-install:
