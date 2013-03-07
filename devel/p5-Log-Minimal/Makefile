@@ -1,8 +1,8 @@
 # Created by: clsung
-# $FreeBSD: ports/devel/p5-Log-Minimal/Makefile,v 1.7 2012/12/05 17:45:39 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Log-Minimal/Makefile,v 1.8 2013/01/30 15:48:03 svnexp Exp $
 
 PORTNAME=	Log-Minimal
-PORTVERSION=	0.13
+PORTVERSION=	0.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
