@@ -1,18 +1,17 @@
-# New ports collection makefile for:	dailystrips
-# Date created:				13 July 2001
-# Whom:					Pete Fritchman <petef@databits.net>
-#
-# $FreeBSD: ports/deskutils/dailystrips/Makefile,v 1.20 2012/11/17 05:55:26 svnexp Exp $
-#
+# Created by: Pete Fritchman <petef@databits.net>
+# $FreeBSD: deskutils/dailystrips/Makefile 313075 2013-02-28 01:43:31Z jgh $
 
 PORTNAME=	dailystrips
 PORTVERSION=	1.0.28
-PORTREVISION=	2
+PORTREVISION=	1
+PORTEPOCH=	1
 CATEGORIES=	deskutils www
 MASTER_SITES=	SF
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Utility to download or view your favorite online comic strips daily
+
+LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate
@@ -20,11 +19,22 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 NO_BUILD=	yes
 USE_PERL5=	yes
 
+PORTDOCS=	*
+PLIST_FILES=	bin/dailystrips \
+		bin/dailystrips-clean \
+		bin/dailystrips-update \
+		share/dailystrips/strips.def
+PLIST_DIRS=	share/dailystrips
+
+PORTSCOUT=	limit:^1\.0\.
+
 post-patch:
 	@${REINPLACE_CMD} 's|^#!/usr/bin/perl|#!${PERL}|; \
 		s!/usr/share/dailystrips/strips.def!${DATADIR}/strips.def!' \
 		${WRKSRC}/dailystrips ${WRKSRC}/dailystrips-clean \
 		${WRKSRC}/dailystrips-update
+
+.include <bsd.port.options.mk>
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips ${PREFIX}/bin
@@ -32,10 +42,10 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips-update ${PREFIX}/bin
 	@${MKDIR} ${DATADIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/strips.def ${DATADIR}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for file in README README.DEFS README.LOCAL README.dailystrips-clean \
-    README.dailystrips-update
+	README.dailystrips-update
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
 .endfor
 .endif
