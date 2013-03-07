@@ -1,13 +1,7 @@
-# New ports collection makefile for:	markdown-mode.el
-# Date created:				30 Ago 2011
-# Whom:					olgeni@FreeBSD.org
-#
-# $FreeBSD: ports/textproc/markdown-mode.el/Makefile,v 1.8 2012/11/17 06:02:02 svnexp Exp $
-#
+# $FreeBSD: ports/textproc/markdown-mode.el/Makefile,v 1.10 2013/01/26 15:07:29 svnexp Exp $
 
 PORTNAME=	markdown-mode.el
-PORTVERSION=	1.8.1
-PORTREVISION=	6
+PORTVERSION=	1.9
 CATEGORIES=	textproc
 MASTER_SITES=	http://jblevins.org/projects/markdown-mode/
 DISTNAME=	markdown-mode.el
