@@ -1,4 +1,4 @@
-# $FreeBSD: ports/finance/expense/Makefile,v 1.9 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: ports/finance/expense/Makefile,v 1.10 2013/02/03 22:03:11 svnexp Exp $
 
 PORTNAME=	expense
 PORTVERSION=	0.1
@@ -18,5 +18,7 @@ USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/Expense
+
+PORTSCOUT=	ignore:1
 
 .include <bsd.port.mk>
