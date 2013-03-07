@@ -1,9 +1,5 @@
-# New ports collection makefile for:	aolserver-nszlib
-# Date created:		12 Oct 2006
-# Whom:			Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/archivers/aolserver-nszlib/Makefile,v 1.7 2012/11/17 05:54:20 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: ports/archivers/aolserver-nszlib/Makefile,v 1.8 2012/12/31 15:29:23 svnexp Exp $
 
 PORTNAME=	nszlib
 PORTVERSION=	1.1
@@ -35,17 +31,16 @@ PLIST_FILES=	${AOLSERVERBASE}/bin/nszlib.so \
 		${AOLSERVERBASE}/lib/libnszlib.a \
 		${AOLSERVERBASE}/lib/libnszlib.so
 
-.if !defined(NOPORTDOCS)
 PORTDOCS=	ChangeLog README example.tcl
-.endif
 
+.include <bsd.port.options.mk>
 post-patch:
 	@${REINPLACE_CMD} -e 's/^MODLIBS  =/MODLIBS +=/g' \
 		-e '/^OBJS     =.*/{n;s/.*/MODOBJS  = $$(OBJS)/g;G;}' \
 		${WRKSRC}/Makefile
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@ ${MKDIR} ${DOCSDIR}
 .for FILE in ${PORTDOCS}
 	@ ${INSTALL_DATA} ${WRKSRC}/${FILE} ${DOCSDIR}
