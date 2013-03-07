@@ -2,7 +2,7 @@
 # Date created:				08 November 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/deskutils/ganyremote/Makefile,v 1.17 2012/11/17 05:55:27 svnexp Exp $
+# $FreeBSD: ports/deskutils/ganyremote/Makefile,v 1.18 2013/02/20 16:45:21 svnexp Exp $
 #
 
 PORTNAME=	ganyremote
@@ -11,7 +11,7 @@ PORTREVISION=	1
 CATEGORIES=	deskutils comms gnome
 MASTER_SITES=	SF/anyremote/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNOME frontend for anyRemote
 
 RUN_DEPENDS=	anyremote:${PORTSDIR}/comms/anyremote
