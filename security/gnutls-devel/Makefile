@@ -2,11 +2,12 @@
 # Date created:				8 Jan 2009
 # Whom:					Roman Bogorodskiy <novel@FreeBSD.org>
 #
-# $FreeBSD: ports/security/gnutls-devel/Makefile,v 1.81 2012/11/17 06:01:04 svnexp Exp $
+# $FreeBSD: ports/security/gnutls-devel/Makefile,v 1.82 2013/02/06 21:57:30 svnexp Exp $
 #
 
 PORTNAME=	gnutls
 PORTVERSION=	2.99.4
+PORTREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	http://alpha.gnu.org/gnu/gnutls/ \
 		ftp://ftp.gnutls.org/pub/gnutls/devel/
@@ -36,8 +37,8 @@ MANCOMPRESSED=	no
 
 .include <bsd.port.pre.mk>
 
-.if (defined(WITH_LIBTASN1) || exists(${LOCALBASE}/lib/libtasn1.so.4)) && !defined(WITHOUT_LIBTASN1)
-LIB_DEPENDS+=	tasn1.4:${PORTSDIR}/security/libtasn1
+.if (defined(WITH_LIBTASN1) || exists(${LOCALBASE}/lib/libtasn1.so.5)) && !defined(WITHOUT_LIBTASN1)
+LIB_DEPENDS+=	tasn1.5:${PORTSDIR}/security/libtasn1
 .else
 CONFIGURE_ARGS+=	--with-included-libtasn1
 .endif
