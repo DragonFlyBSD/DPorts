@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-main
-# Date created:		07, Nov 2008
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/rubygem-main/Makefile,v 1.15 2012/11/17 05:57:00 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: ports/devel/rubygem-main/Makefile,v 1.16 2013/01/25 22:45:23 svnexp Exp $
 
 PORTNAME=	main
-PORTVERSION=	5.0.1
+PORTVERSION=	5.1.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
