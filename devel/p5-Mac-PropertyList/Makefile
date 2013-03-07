@@ -2,11 +2,11 @@
 # Date created:	24 December 2010
 # Whom:		Nobutaka Mantani <nobutaka@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Mac-PropertyList/Makefile,v 1.7 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Mac-PropertyList/Makefile,v 1.8 2013/01/26 17:37:34 svnexp Exp $
 #
 
 PORTNAME=	Mac-PropertyList
-PORTVERSION=	1.37
+PORTVERSION=	1.38
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -23,6 +23,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 PERL_CONFIGURE=	yes
 
 MAN3=	Mac::PropertyList.3 \
-	Mac::PropertyList::ReadBinary.3
+	Mac::PropertyList::ReadBinary.3 \
+	Mac::PropertyList::WriteBinary.3
 
 .include <bsd.port.mk>
