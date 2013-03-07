@@ -1,9 +1,4 @@
-# New ports collection makefile for:    jmk-x11-fonts
-# Date created:         Sat Aug 19 20:36:34 CEST 2000
-# Whom:                 olgeni@uli.it
-#
-# $FreeBSD: ports/x11-fonts/jmk-x11-fonts/Makefile,v 1.12 2012/11/17 06:03:28 svnexp Exp $
-#
+# $FreeBSD: ports/x11-fonts/jmk-x11-fonts/Makefile,v 1.13 2013/01/26 15:07:30 svnexp Exp $
 
 PORTNAME=	jmk-x11-fonts
 PORTVERSION=	3.0
