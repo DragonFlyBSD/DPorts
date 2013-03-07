@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IO-Socket-Multicast
-# Date created:		21 March 2002
-# Whom:	      		Janos.Mohacsi@dante.org.uk
-#
-# $FreeBSD: ports/net/p5-IO-Socket-Multicast/Makefile,v 1.17 2012/11/17 06:00:09 svnexp Exp $
-#
+# Created by: Janos.Mohacsi@dante.org.uk
+# $FreeBSD: ports/net/p5-IO-Socket-Multicast/Makefile,v 1.18 2013/01/09 20:05:01 svnexp Exp $
 
 PORTNAME=	IO-Socket-Multicast
 PORTVERSION=	1.12
@@ -11,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Perl module to send and receive multicast messages
 
 RUN_DEPENDS=	p5-IO-Interface>=0:${PORTSDIR}/net/p5-IO-Interface
