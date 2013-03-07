@@ -1,9 +1,9 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: ports/multimedia/gstreamer-qt4/Makefile,v 1.12 2012/11/17 05:59:49 svnexp Exp $
+# $FreeBSD: ports/multimedia/gstreamer-qt4/Makefile,v 1.13 2013/01/31 14:01:30 svnexp Exp $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/qt-${PORTNAME}/
 PKGNAMESUFFIX=	-qt4
