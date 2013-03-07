@@ -1,9 +1,4 @@
-# Ports collection makefile for:	clisp-hyperspec
-# Date created:				18 Aug 2003
-# Whom:					olgeni@FreeBSD.org
-#
-# $FreeBSD: ports/devel/clisp-hyperspec/Makefile,v 1.4 2012/11/17 05:55:38 svnexp Exp $
-#
+# $FreeBSD: ports/devel/clisp-hyperspec/Makefile,v 1.5 2013/01/26 15:07:24 svnexp Exp $
 
 PORTNAME=	clisp-hyperspec
 PORTVERSION=	7.0
