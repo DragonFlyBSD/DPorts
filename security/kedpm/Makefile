@@ -2,17 +2,17 @@
 # Date created:				25 April 2006
 # Whom:					Tim Welch <ports@thepentagon.org>
 #
-# $FreeBSD: ports/security/kedpm/Makefile,v 1.11 2012/11/17 06:01:06 svnexp Exp $
+# $FreeBSD: ports/security/kedpm/Makefile,v 1.13 2013/01/23 15:05:37 svnexp Exp $
 #
 
 PORTNAME=	kedpm
 PORTVERSION=	0.4.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	security
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@thepentagon.org
-COMMENT=	A simple application for managing personal data
+COMMENT=	Simple application for managing personal data
 
 RUN_DEPENDS=	${PYTHONPREFIX_SITELIBDIR}/Crypto/__init__.py:${PORTSDIR}/security/py-pycrypto
 
@@ -22,9 +22,9 @@ USE_PYDISTUTILS=	YES
 
 DESKTOP_ENTRIES="Ked Password Manager" \
 		"Secure Password Management" \
-		"${LOCALBASE}/share/${PORTNAME}/glade/logo.png" \
+		"${PREFIX}/share/${PORTNAME}/glade/logo.png" \
 		"kedpm" \
-		"Application;System;" \
+		"" \
 		true
 
 .include <bsd.port.mk>
