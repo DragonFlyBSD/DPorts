@@ -2,11 +2,10 @@
 # Date created:		Sun May  1 20:46:59 UTC 2005
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/ffmpeg/Makefile,v 1.162 2012/11/17 05:59:48 svnexp Exp $
+# $FreeBSD: ports/multimedia/ffmpeg/Makefile,v 1.163 2013/02/23 22:44:15 svnexp Exp $
 
 PORTNAME=	ffmpeg
-PORTVERSION=	0.7.13
-PORTREVISION=	6
+PORTVERSION=	0.7.15
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
