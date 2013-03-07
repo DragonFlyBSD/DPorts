@@ -1,9 +1,5 @@
-# New ports collection makefile for:	eruby
-# Date created:			14 Aug 2000
-# Whom:				Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/textproc/eruby/Makefile,v 1.44 2012/11/17 06:01:55 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: ports/textproc/eruby/Makefile,v 1.45 2013/01/26 15:18:35 svnexp Exp $
 
 PORTNAME=	eruby
 PORTVERSION=	1.0.5
