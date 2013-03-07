@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: ports/devel/p5-Log-Dispatch/Makefile,v 1.50 2012/12/09 16:24:01 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Log-Dispatch/Makefile,v 1.51 2013/01/23 08:45:53 svnexp Exp $
 
 PORTNAME=	Log-Dispatch
-PORTVERSION=	2.34
+PORTVERSION=	2.35
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
