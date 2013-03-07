@@ -1,9 +1,9 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: ports/databases/freetds-devel/Makefile,v 1.75 2012/12/12 07:37:43 svnexp Exp $
+# $FreeBSD: ports/databases/freetds-devel/Makefile,v 1.76 2013/02/05 16:54:20 svnexp Exp $
 
 PORTNAME=	freetds
 PORTVERSION=	0.91
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.freetds.org/pub/freetds/stable/
