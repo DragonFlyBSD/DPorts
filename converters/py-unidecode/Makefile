@@ -1,8 +1,8 @@
-# Created by: Douglas Thrift
-# $FreeBSD: ports/converters/py-unidecode/Makefile,v 1.10 2012/12/02 05:44:02 svnexp Exp $
+# Created by: Douglas Thrift <douglas@douglasthrift.net>
+# $FreeBSD: ports/converters/py-unidecode/Makefile,v 1.12 2013/01/29 07:52:41 svnexp Exp $
 
 PORTNAME=	unidecode
-PORTVERSION=	0.04.10
+PORTVERSION=	0.04.12
 CATEGORIES=	converters python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
