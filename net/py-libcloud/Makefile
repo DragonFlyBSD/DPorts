@@ -1,12 +1,8 @@
-# Ports collection makefile for:	py-libcloud
-# Date created:				2010-12-16
-# Whom:					Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/net/py-libcloud/Makefile,v 1.15 2013/01/03 13:43:43 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: net/py-libcloud/Makefile 313225 2013-03-02 11:38:19Z novel $
 
 PORTNAME=	libcloud
-PORTVERSION=	0.11.4
+PORTVERSION=	0.12.1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
