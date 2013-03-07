@@ -1,7 +1,7 @@
-# $FreeBSD: ports/irc/weechat-devel/Makefile,v 1.101 2013/01/17 00:44:50 svnexp Exp $
+# $FreeBSD: irc/weechat-devel/Makefile 313156 2013-03-01 15:51:57Z jase $
 
 PORTNAME=	weechat
-PORTVERSION=	20130114
+PORTVERSION=	20130301
 CATEGORIES=	irc
 MASTER_SITES=	http://perturb.me.uk/distfiles/ \
 		${MASTER_SITE_LOCAL}
@@ -20,13 +20,14 @@ USE_ICONV=	yes
 USE_LDCONFIG=	yes
 USE_NCURSES=	yes
 USE_CMAKE=	yes
+CMAKE_ARGS+=	-DENABLE_GUILE=no
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 WANT_PERL=	yes
 
 LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
-GITDESC=	v0.4.0-rc3-2-g8e587f7
+GITDESC=	v0.4.0-85-g11396b3
 GITREV!=	echo "${GITDESC}" | sed -E 's/^.*-g(.{7})$$/\1/'
 #GITREV=	01a1316
 WRKSRC=	${WRKDIR}/${PORTNAME}-${GITREV}
@@ -35,13 +36,12 @@ WRKSRC=	${WRKDIR}/${PORTNAME}-${GITREV}
 # bsd.cmake.mk to set the cmake build type to Debug instead of
 # Release.
 
-OPTIONS_DEFINE=	RUBY PYTHON PERL TCL LUA GUILE CHARSET BACKTRACE DEBUG ASPELL GNUTLS NLS DOCUMENTATION COLOR256
+OPTIONS_DEFINE=	RUBY PYTHON PERL TCL LUA CHARSET BACKTRACE DEBUG ASPELL GNUTLS NLS DOCUMENTATION COLOR256
 OPTIONS_DEFAULT=CHARSET BACKTRACE DEBUG
 
 BACKTRACE_DESC=	Provide crash backtraces
 CHARSET_DESC=	Charset conversion support
 DOCUMENTATION_DESC=	Build and install documentation
-GUILE_DESC=	Guile scripting support
 LUA_DESC=	Lua scripting support
 PERL_DESC=	Perl scripting support
 PYTHON_DESC=	Python scripting support
@@ -95,6 +95,7 @@ PLIST_SUB+=	RUBY="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGNUTLS}
+USE_PKGCONFIG=	yes
 LIB_DEPENDS+=	gnutls:${PORTSDIR}/security/gnutls
 .else
 CMAKE_ARGS+=	-DENABLE_GNUTLS=no
@@ -128,14 +129,6 @@ PLIST_SUB+=	LUA=""
 .else
 CMAKE_ARGS+=	-DENABLE_LUA=no
 PLIST_SUB+=	LUA="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MGUILE}
-LIB_DEPENDS+=	guile:${PORTSDIR}/lang/guile
-PLIST_SUB+=	GUILE=""
-.else
-CMAKE_ARGS+=	-DENABLE_GUILE=no
-PLIST_SUB+=	GUILE="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MDOCUMENTATION}
@@ -175,7 +168,7 @@ pre-configure:
 	@${ECHO_MSG} "==> You have selected the ncurses 256 color option. Please ensure that"
 	@${ECHO_MSG} "==> the devel/ncurses port is built with the EXTCOLORS option enabled."
 	@${ECHO_MSG} "==>"
-	@${ECHO_MSG} "==> Ctrl-C now if you'd like to reconfigure."
+	@${ECHO_MSG} "==> Press Ctrl-C now if you want to re-configure."
 	@${ECHO_MSG} ""
 	@sleep 5
 .endif
