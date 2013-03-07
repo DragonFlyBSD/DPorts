@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/www/tomcat-native/Makefile,v 1.17 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: ports/www/tomcat-native/Makefile,v 1.18 2013/02/14 23:02:11 svnexp Exp $
 
 PORTNAME=	tomcat-native
-PORTVERSION=	1.1.24
+PORTVERSION=	1.1.27
 CATEGORIES=	www java
 MASTER_SITES=	APACHE
 MASTER_SITE_SUBDIR=	tomcat/tomcat-connectors/native/${PORTVERSION}/source
