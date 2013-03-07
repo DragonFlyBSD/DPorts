@@ -2,12 +2,12 @@
 # Date created:		24 September 2011
 # Whom:			Peter Vereshagin <peter@vereshagin.org>
 #
-# $FreeBSD: ports/www/links-hacked/Makefile,v 1.3 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: ports/www/links-hacked/Makefile,v 1.5 2013/01/23 15:05:38 svnexp Exp $
 #
 
 PORTNAME=	links-hacked
 DISTVERSION=	101110
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES?=	www
 MASTER_SITES=	http://xray.sai.msu.ru/~karpov/links-hacked/downloads/ http://links-hacked.nm.ru/
 
@@ -67,9 +67,9 @@ USE_XORG=	x11 xproto
 CONFIGURE_ARGS+=	--with-x
 DESKTOP_ENTRIES="Links" \
 		"Lynx-like hacked WWW browser" \
-		"links" \
+		"${PREFIX}/share/pixmaps/links.xpm" \
 		"links -g" \
-		"Application;Network;WebBrowser;" \
+		"Network;WebBrowser;" \
 		false
 PLIST_FILES+=	share/pixmaps/links.xpm
 .else
