@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pinentry-gtk2
-# Date created:			27 Oct 2004
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/security/pinentry-gtk2/Makefile,v 1.5 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: ports/security/pinentry-gtk2/Makefile,v 1.6 2013/02/06 13:14:25 svnexp Exp $
 
 PORTNAME=	pinentry
 
