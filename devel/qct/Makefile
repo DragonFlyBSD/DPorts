@@ -2,12 +2,12 @@
 # Date created:				10 Apr 2007
 # Whom:					Boris Samorodov <bsam@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/qct/Makefile,v 1.21 2012/11/17 05:56:54 svnexp Exp $
+# $FreeBSD: ports/devel/qct/Makefile,v 1.22 2013/02/03 22:43:10 svnexp Exp $
 #
 
 PORTNAME=	qct
 PORTVERSION=	1.7
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	devel python
 MASTER_SITES=	http://qct.sourceforge.net/ \
 		ftp://ftp.ipt.ru/pub/download/${PORTNAME}/
