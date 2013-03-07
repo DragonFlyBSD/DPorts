@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/www/limesurvey/Makefile,v 1.25 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: ports/www/limesurvey/Makefile,v 1.27 2013/02/09 12:22:44 svnexp Exp $
 
 PORTNAME=	limesurvey
 PORTVERSION=	1.91
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/1._LimeSurvey_stable/${PORTVERSION}+/
 DISTNAME=	${PORTNAME}${PORTVERSION:S^.^^}plus-build10232-20110608
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	A PHP-based survey building and runing system
 
 LICENSE=	GPLv2
@@ -28,7 +28,7 @@ ZIP_DESC=		Install PHP zip extension
 USE_PGSQL=	yes
 USE_PHP=	pgsql
 .else
-# server is not neccesery on this host.
+# server is not necessary on this host.
 #USE_MYSQL=	server
 USE_MYSQL=	client
 USE_PHP=	mysql
