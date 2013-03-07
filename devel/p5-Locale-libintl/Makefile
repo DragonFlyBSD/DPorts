@@ -1,13 +1,8 @@
-# New ports collection makefile for:	p5-Locale-libintl
-# Date created:			April 20th, 2004
-# Whom:				Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Locale-libintl/Makefile,v 1.17 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: ports/devel/p5-Locale-libintl/Makefile,v 1.18 2013/01/25 09:52:15 svnexp Exp $
 
 PORTNAME=	Locale-libintl
-PORTVERSION=	1.20
-PORTREVISION=	2
+PORTVERSION=	1.23
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -164,6 +159,7 @@ MAN3=		Locale::Messages.3 \
 		Locale::RecodeData::_Encode.3 \
 		Locale::TextDomain.3 \
 		Locale::Util.3 \
+		Locale::gettext_dumb.3 \
 		Locale::gettext_pp.3 \
 		Locale::gettext_xs.3 \
 		Locale::libintlFAQ.3
