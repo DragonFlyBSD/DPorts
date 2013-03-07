@@ -1,9 +1,4 @@
-# New ports collection makefile for:   yasnippet
-# Date created:		30 Jun 2010
-# Whom:			olgeni@FreeBSD.org
-#
-# $FreeBSD: ports/editors/yasnippet/Makefile,v 1.9 2012/11/17 05:57:19 svnexp Exp $
-#
+# $FreeBSD: ports/editors/yasnippet/Makefile,v 1.10 2013/01/26 15:07:25 svnexp Exp $
 
 PORTNAME=	yasnippet
 PORTVERSION=	0.6.1c
