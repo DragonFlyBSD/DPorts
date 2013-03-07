@@ -1,5 +1,5 @@
 # Created by: Michael Lednev <liettneff@bk.ru>
-# $FreeBSD: ports/net/abills/Makefile,v 1.20 2012/11/17 05:59:56 svnexp Exp $
+# $FreeBSD: ports/net/abills/Makefile,v 1.21 2013/02/04 16:05:27 svnexp Exp $
 
 PORTNAME=	abills
 PORTVERSION=	0.54
@@ -13,7 +13,7 @@ COMMENT=	Billing system for dialup, VPN, and VoIP management
 
 LICENSE=	GPLv2
 
-RUN_DEPENDS=	radiusd:${PORTSDIR}/net/freeradius \
+RUN_DEPENDS=	radiusd:${PORTSDIR}/net/freeradius2 \
 		p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql \
 		p5-Digest-MD4>=0:${PORTSDIR}/security/p5-Digest-MD4 \
 		p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
