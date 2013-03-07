@@ -1,8 +1,8 @@
-# $FreeBSD: ports/games/traindirector/Makefile,v 1.27 2012/12/10 20:43:14 svnexp Exp $
+# $FreeBSD: ports/games/traindirector/Makefile,v 1.28 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	traindirector
 PORTVERSION=	3.6
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://www.backerstreet.com/traindir/
 DISTNAME=	tdir36src
