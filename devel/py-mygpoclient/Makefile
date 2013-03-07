@@ -1,19 +1,14 @@
-# New ports collection makefile for:	py-mygpoclient
-# Date created:				01 May 2012
-# Whom:					Ruslan Mahmatkhanov <rm@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-mygpoclient/Makefile,v 1.2 2012/11/17 05:56:48 svnexp Exp $
-#
+# $FreeBSD: ports/devel/py-mygpoclient/Makefile,v 1.3 2013/02/12 19:09:13 svnexp Exp $
 
 PORTNAME=	mygpoclient
-PORTVERSION=	1.6
+PORTVERSION=	1.7
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP \
 		http://thp.io/2010/mygpoclient/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rm@FreeBSD.org
-COMMENT=	The gpodder.net API Client Library for Python
+COMMENT=	gpodder.net API client library for Python
 
 LICENSE=	GPLv3
 
