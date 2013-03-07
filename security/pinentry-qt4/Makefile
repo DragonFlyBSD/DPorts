@@ -1,9 +1,4 @@
-# New ports collection makefile for:	pinentry-qt4
-# Date created:		2009-06-23
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pinentry-qt4/Makefile,v 1.3 2012/11/17 06:01:15 svnexp Exp $
-#
+# $FreeBSD: ports/security/pinentry-qt4/Makefile,v 1.4 2013/02/06 13:14:25 svnexp Exp $
 
 PORTNAME=	pinentry
 
