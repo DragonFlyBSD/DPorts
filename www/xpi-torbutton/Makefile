@@ -1,14 +1,10 @@
-# New ports collection makefile for:	xpi-torbutton
-# Date created:		02 January 2008
-# Whom:			Andreas Donig <a.donig@gmx.net>
-#
-# $FreeBSD: ports/www/xpi-torbutton/Makefile,v 1.10 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Andreas Donig <a.donig@gmx.net>
+# $FreeBSD: www/xpi-torbutton/Makefile 313261 2013-03-02 15:04:17Z miwi $
 
 PORTNAME=	torbutton
-PORTVERSION=	1.4.4.1
+PORTVERSION=	1.5.0
 CATEGORIES=	www
-MASTER_SITES=	http://www.torproject.org/dist/torbutton/
+MASTER_SITES=	https://www.torproject.org/dist/torbutton/
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Quickly toggle use of the Tor network
