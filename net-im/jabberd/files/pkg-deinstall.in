@@ -1,0 +1,13 @@
+#!/bin/sh
+# $FreeBSD: ports/net-im/jabberd/files/pkg-deinstall.in,v 1.3 2012/11/17 06:00:27 svnexp Exp $
+
+if [ "$2" != "POST-DEINSTALL" ]; then
+    exit 0
+fi
+
+RUNDIR="%%JABBER_RUNDIR%%"
+
+echo "===> You should manually delete the following directories:"
+echo "${RUNDIR}"
+
+exit 0
