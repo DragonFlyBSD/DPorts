@@ -1,12 +1,8 @@
-# New ports collection makefile for:	tsshbatch
-# Date created:	06 January 2012
-# Whom:	Tim Daneliuk <tsshbatch@tundraware.com>
-#
-# $FreeBSD: ports/security/tsshbatch/Makefile,v 1.2 2012/11/17 06:01:21 svnexp Exp $
-#
+# Created by: Tim Daneliuk <tsshbatch@tundraware.com>
+# $FreeBSD: security/tsshbatch/Makefile 313034 2013-02-27 05:50:20Z jgh $
 
 PORTNAME=	tsshbatch
-PORTVERSION=	1.134
+PORTVERSION=	1.137
 CATEGORIES=	security python
 MASTER_SITES=	http://www.tundraware.com/Software/tsshbatch/
 
@@ -32,12 +28,14 @@ PORTDOCS=	WHATSNEW.txt \
 		tsshbatch.ps \
 		tsshbatch.rst
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tsshbatch.py ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/tsshbatch.1.gz ${MAN1PREFIX}/man/man1
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for i in ${PORTDOCS}
 	cd ${WRKSRC} && ${INSTALL_DATA} $i ${DOCSDIR}
