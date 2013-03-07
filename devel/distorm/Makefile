@@ -1,9 +1,9 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: ports/devel/distorm/Makefile,v 1.17 2013/01/04 22:45:25 svnexp Exp $
+# $FreeBSD: ports/devel/distorm/Makefile,v 1.18 2013/01/31 21:44:56 svnexp Exp $
 
 PORTNAME?=	distorm
 DISTVERSION=	20121220-r230
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel
 .if defined(PYTHON_SLAVEPORT)
 CATEGORIES+=	python
@@ -90,7 +90,7 @@ check regression-test test: build
 do-install:
 	@(cd ${BUILD_WRKSRC}; ${INSTALL_LIB} libdistorm3.a ${PREFIX}/lib; \
 	${INSTALL_LIB} libdistorm3.so ${PREFIX}/lib/libdistorm3.so.1; \
-	${LN} -sf ${PREFIX}/lib/libdistorm3.so.0 ${PREFIX}/lib/libdistorm3.so; \
+	${LN} -sf libdistorm3.so.1 ${PREFIX}/lib/libdistorm3.so; \
 	${INSTALL_PROGRAM} disasm ${PREFIX}/bin)
 	@${INSTALL_DATA} ${WRKSRC}/include/*.h ${PREFIX}/include
 
