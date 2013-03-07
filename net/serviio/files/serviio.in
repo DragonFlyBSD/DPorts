@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net/serviio/files/serviio.in,v 1.3 2012/11/17 06:00:20 svnexp Exp $
+# $FreeBSD: ports/net/serviio/files/serviio.in,v 1.4 2013/01/28 20:45:49 svnexp Exp $
 #
 # PROVIDE: serviio
 # REQUIRE: LOGIN
@@ -25,5 +25,15 @@ start_precmd="mkdir -p $_dirs; chown $serviio_user $_dirs"
 command_args="$serviio_args &"
 
 stop_cmd="$command -stop"
+
+status_cmd=${name}_status
+serviio_status() {
+	serviio_pid=$(ps -aU ${serviio_user} | awk '/java/ {print $1}')
+	if [ -n "${serviio_pid}" ]; then
+		echo "${name} is running as pid ${serviio_pid}"
+	else
+		echo "${name} is not running"
+	fi
+}
 
 run_rc_command $1
