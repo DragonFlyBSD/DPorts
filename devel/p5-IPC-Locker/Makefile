@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-IPC-Locker
-# Date created:				11 September 2002
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-IPC-Locker/Makefile,v 1.31 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: ports/devel/p5-IPC-Locker/Makefile,v 1.32 2013/02/02 15:48:05 svnexp Exp $
 
 PORTNAME=	IPC-Locker
-PORTVERSION=	1.491
+PORTVERSION=	1.492
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
