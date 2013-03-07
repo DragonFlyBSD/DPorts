@@ -1,21 +1,26 @@
-# New ports collection makefile for:	octave-forge-econometrics
-# Date created:		8 September 2008
-# Whom:			Stephen Montgomery-Smith <stephen@math.missouri.edu>
-#
-# $FreeBSD: ports/math/octave-forge-econometrics/Makefile,v 1.14 2012/11/17 05:59:24 svnexp Exp $
-#
+# Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
+# $FreeBSD: ports/math/octave-forge-econometrics/Makefile,v 1.16 2013/02/17 20:23:11 svnexp Exp $
 
 PORTNAME=	octave-forge-econometrics
-PORTVERSION=	1.0.8
-PORTREVISION=	7
+PORTVERSION=	1.1.1
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
-GNU_CONFIGURE=	yes
+
+# OCTSRC is the name of the directory of the package.
+# It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
+OCTSRC=		${OCTAVE_PKGNAME}
+
+WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
 RUN_DEPENDS+=	${TARBALLS_DIR}/optim.tar.gz:${PORTSDIR}/math/octave-forge-optim
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/Mk/bsd.octave.mk"
+
+post-build:
+	${RM} -f ${WRKSRC}/Makefile ${WRKSRC}/configure
+	cd ${WRKDIR} && ${TAR} cfz ${DISTNAME}.tar.gz ${OCTSRC}
+
 .include <bsd.port.post.mk>
