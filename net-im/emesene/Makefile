@@ -2,12 +2,12 @@
 # Date created:				31 May 2007
 # Whom:					Yinghong Liu <relaxbsd@gmail.com>
 #
-# $FreeBSD: ports/net-im/emesene/Makefile,v 1.20 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: ports/net-im/emesene/Makefile,v 1.21 2013/01/23 15:05:37 svnexp Exp $
 #
 
 PORTNAME=	emesene
 PORTVERSION=	1.6.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-im python
 #MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MASTER_SITES=	${MASTER_SITE_LOCAL:S,$,acm/${PORTNAME}/,} \
