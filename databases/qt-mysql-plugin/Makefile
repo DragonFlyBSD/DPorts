@@ -3,7 +3,7 @@
 # Date created:				20 April 2003
 # Whom:					Kay Lehmann <kay_lehmann@web.de>
 #
-# $FreeBSD: ports/databases/qt-mysql-plugin/Makefile,v 1.25 2012/11/17 05:55:23 svnexp Exp $
+# $FreeBSD: ports/databases/qt-mysql-plugin/Makefile,v 1.26 2012/12/30 18:55:44 svnexp Exp $
 #
 
 PORTNAME=	qt-${DB}-plugin
@@ -20,6 +20,9 @@ COMMENT=	A plugin for QT to connect to MySQL-Databases
 DB=		mysql
 
 LIB_DEPENDS+=	qt-mt:${PORTSDIR}/x11-toolkits/qt33
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_MYSQL=	yes
 USE_BZIP2=	yes
