@@ -2,7 +2,7 @@
 # Date created:		19 Apr 2003
 # Whom:			Pedro Giffuni <giffunip@asme.org>
 #
-# $FreeBSD: ports/cad/tochnog/Makefile,v 1.20 2012/11/17 05:54:55 svnexp Exp $
+# $FreeBSD: ports/cad/tochnog/Makefile,v 1.21 2013/02/08 00:50:51 svnexp Exp $
 #
 
 PORTNAME=	tochnog
@@ -63,7 +63,6 @@ GCCLIBDIR=	-L`${CAT} ${WRKSRC}/LIBDIR` -L`${CAT} ${WRKSRC}/LIBDIR`/../../..
 pre-build:
 	@${DIRNAME} `${FC} -print-libgcc-file-name` > ${WRKSRC}/LIBDIR
 	@${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},g ; \
-	s,%%PTHREAD_CFLAGS%%,${PTHREAD_CFLAGS},g ; s,%%PTHREAD_LIBS%%,${PTHREAD_LIBS},g ; \
 	s,%%SUPERLU%%,${SUPERLU},g ; \
 	s,%%FORTRANLIBS%%,${FORTRANLIBS},g ; \
 	s,%%GCCLIBDIR%%,${GCCLIBDIR},g ; \
