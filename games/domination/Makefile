@@ -1,7 +1,8 @@
-# $FreeBSD: ports/games/domination/Makefile,v 1.6 2012/12/10 13:24:57 svnexp Exp $
+# $FreeBSD: ports/games/domination/Makefile,v 1.7 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	domination
 PORTVERSION=	1.1.1.2
+PORTREVISION=	1
 CATEGORIES=	games java
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME:S/d/D/}/${PORTVERSION}/:game  \
 		http://domination.sourceforge.net/maps/
