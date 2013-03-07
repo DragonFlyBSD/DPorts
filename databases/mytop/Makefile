@@ -1,9 +1,9 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: ports/databases/mytop/Makefile,v 1.32 2012/12/15 09:34:23 svnexp Exp $
+# $FreeBSD: ports/databases/mytop/Makefile,v 1.33 2013/01/22 22:46:33 svnexp Exp $
 
 PORTNAME=	mytop
 PORTVERSION=	1.6
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	databases
 MASTER_SITES=	http://jeremy.zawodny.com/mysql/mytop/
 
