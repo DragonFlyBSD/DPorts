@@ -2,11 +2,12 @@
 # Date created:		20 Nov 2008
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/hgview/Makefile,v 1.22 2012/11/17 05:55:47 svnexp Exp $
+# $FreeBSD: ports/devel/hgview/Makefile,v 1.23 2013/02/03 22:42:58 svnexp Exp $
 #
 
 PORTNAME=	hgview
 PORTVERSION=	1.6.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	LOGILAB
 
