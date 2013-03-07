@@ -1,7 +1,7 @@
-# $FreeBSD: ports/math/libmissing/Makefile,v 1.1 2012/12/20 19:44:17 svnexp Exp $
+# $FreeBSD: ports/math/libmissing/Makefile,v 1.2 2012/12/31 12:32:09 svnexp Exp $
 
 PORTNAME=	libmissing
-DISTVERSION=	20121220
+DISTVERSION=	20121222
 CATEGORIES=	math
 MASTER_SITES=	LOCAL/bf
 
