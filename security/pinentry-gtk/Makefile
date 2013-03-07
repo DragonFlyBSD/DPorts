@@ -1,9 +1,5 @@
-# New ports collection makefile for:    pinentry-gtk
-# Date created:                         03 May 2004
-# Whom:					Michael Nottebrock <lofi@freebsd.org>
-#
-# $FreeBSD: ports/security/pinentry-gtk/Makefile,v 1.5 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Michael Nottebrock <lofi@freebsd.org>
+# $FreeBSD: ports/security/pinentry-gtk/Makefile,v 1.6 2013/02/06 13:14:25 svnexp Exp $
 
 PORTNAME=	pinentry
 
