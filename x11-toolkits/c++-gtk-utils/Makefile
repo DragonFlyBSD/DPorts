@@ -1,8 +1,8 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: ports/x11-toolkits/c++-gtk-utils/Makefile,v 1.14 2013/01/02 19:42:11 svnexp Exp $
+# $FreeBSD: ports/x11-toolkits/c++-gtk-utils/Makefile,v 1.15 2013/02/15 21:48:23 svnexp Exp $
 
 PORTNAME=	c++-gtk-utils
-PORTVERSION=	2.0.14
+PORTVERSION=	2.0.15
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/cxx-gtk-utils/cxx-gtk-utils/${PORTVERSION}/
 DISTNAME=	c%2B%2B-gtk-utils-${PORTVERSION}
