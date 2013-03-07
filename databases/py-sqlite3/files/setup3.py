@@ -3,7 +3,7 @@
 #       python setup.py install
 #
 
-__version__ = "$FreeBSD: ports/databases/py-sqlite3/files/setup3.py,v 1.3 2012/11/17 05:55:23 svnexp Exp $"
+__version__ = "$FreeBSD: databases/py-sqlite3/files/setup3.py 313167 2013-03-01 20:12:01Z lwhsu $"
 
 try:
     import distutils
@@ -39,7 +39,7 @@ except AttributeError:
 
 setup(name = "_sqlite3",
       description = "SQLite 3 extension to Python",
-      
+
       ext_modules = [Extension('_sqlite3', sqlite_srcs,
                                include_dirs = inc_dirs,
                                libraries = libs,
