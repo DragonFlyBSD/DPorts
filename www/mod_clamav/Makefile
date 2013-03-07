@@ -2,7 +2,7 @@
 # Date created:				Sun Oct 19
 # Whom:					Clement Laforet <clement@FreeBSD.org>
 #
-# $FreeBSD: ports/www/mod_clamav/Makefile,v 1.30 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: ports/www/mod_clamav/Makefile,v 1.31 2013/02/07 14:08:07 svnexp Exp $
 #
 
 PORTNAME=	mod_clamav
@@ -36,10 +36,9 @@ LIB_DEPENDS+=	clamav.7:${PORTSDIR}/security/clamav
 CONFIGURE_ARGS=	--with-apxs=${APXS} \
 		--libdir=${PREFIX}/lib/apache2
 CFLAGS+=	-I${LOCALBASE}/include
-CPPFLAGS+=	-I${LOCALBASE}/include \
-		${PTHREAD_CFLAGS}
+CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib \
-		${PTHREAD_LIBS}
+		-pthread
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,REG_EXTENDED,AP_REG_EXTENDED,' \
