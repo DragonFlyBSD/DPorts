@@ -2,11 +2,11 @@
 # Date created:		2008-06-12
 # Whom:			Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: ports/www/xpi-foxyproxy/Makefile,v 1.20 2012/11/17 06:03:12 svnexp Exp $
+# $FreeBSD: ports/www/xpi-foxyproxy/Makefile,v 1.21 2013/01/20 17:48:32 svnexp Exp $
 #
 
 PORTNAME=	foxyproxy
-PORTVERSION=	3.6.2
+PORTVERSION=	4.1.1
 DISTVERSIONSUFFIX=	-sm+tb+fx
 CATEGORIES=	www
 
@@ -24,8 +24,8 @@ xpi-post-extract:
 	@${FIND} ${WRKSRC} -type f -name '*.js' |${XARGS} ${SED} -i '' -e 's/[[:space:]]*$$//g'
 
 pre-install:
-	@${FIND} ${WRKSRC} -type f -name '*.orig' |${XARGS} ${RM} -f
-	@${FIND} ${WRKSRC} -type f -name '*.bak' |${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC} -type f -name '*.orig' -delete
+	@${FIND} ${WRKSRC} -type f -name '*.bak' -delete
 
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
