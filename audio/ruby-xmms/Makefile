@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Xmms-Ruby
-# Date created:		12 May 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/audio/ruby-xmms/Makefile,v 1.18 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: audio/ruby-xmms/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	xmms
 PORTVERSION=	0.1.2
@@ -18,6 +14,9 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	XMMS bindings for Ruby
 
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
