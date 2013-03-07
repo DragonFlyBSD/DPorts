@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MogileFS-Client
-# Date created:		2007-04-22
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/sysutils/p5-MogileFS-Client/Makefile,v 1.13 2012/11/17 06:01:40 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: ports/sysutils/p5-MogileFS-Client/Makefile,v 1.14 2013/01/16 15:44:25 svnexp Exp $
 
 PORTNAME=	MogileFS-Client
 PORTVERSION=	1.16
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DORMANDO
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	perl@FreeBSD.org
+MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Client library for the MogileFS distributed file system
 
 BUILD_DEPENDS=	p5-IO-stringy>=2.102:${PORTSDIR}/devel/p5-IO-stringy \
