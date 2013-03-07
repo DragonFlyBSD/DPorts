@@ -2,17 +2,16 @@
 # Date created:				06 FEB 2006
 # Whom:					Babak Farrokhi <babak@farrokhi.net>
 #
-# $FreeBSD: ports/x11-fonts/farsifonts/Makefile,v 1.9 2012/11/17 06:03:27 svnexp Exp $
+# $FreeBSD: x11-fonts/farsifonts/Makefile 313279 2013-03-02 16:51:44Z miwi $
 #
 
 PORTNAME=	farsifonts
 PORTVERSION=	0.4
 PORTREVISION=	2
 CATEGORIES=	x11-fonts
-MASTER_SITES=	http://www.unixified.net/distfiles/ \
-		http://www.farsiweb.info/font/
+MASTER_SITES=	SF/farsi-fonts/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	javad.kouhi@gmail.com
 COMMENT=	Standard set of Unicode Persian fonts
 
 BUILD_DEPENDS=	ttmkfdir:${PORTSDIR}/x11-fonts/ttmkfdir
