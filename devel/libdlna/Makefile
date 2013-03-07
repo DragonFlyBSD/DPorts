@@ -2,7 +2,7 @@
 # Date created:				Sat Feb  9 20:20:00 UTC 2008
 # Whom:	      				Dave Grochowski <malus.x@gmail.com>
 #
-# $FreeBSD: ports/devel/libdlna/Makefile,v 1.10 2012/11/17 05:55:53 svnexp Exp $
+# $FreeBSD: ports/devel/libdlna/Makefile,v 1.11 2013/02/14 10:22:09 svnexp Exp $
 #
 
 PORTNAME=	libdlna
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--prefix="${PREFIX}" --disable-optimize \
 			--libdir=${LOCALBASE}/lib
 
 CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 post-patch:
 	@${REINPLACE_CMD} -e \
