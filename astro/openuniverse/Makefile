@@ -2,7 +2,7 @@
 # Date created:				4 August 1998
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD: ports/astro/openuniverse/Makefile,v 1.37 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: ports/astro/openuniverse/Makefile,v 1.38 2013/02/08 03:22:30 svnexp Exp $
 #
 
 PORTNAME=	openuniverse
@@ -25,9 +25,8 @@ USE_GMAKE=	yes
 CONFIGURE_ARGS=	--includedir="${LOCALBASE}/include" \
 		--libdir="${LOCALBASE}/lib" \
 
-CONFIGURE_ENV=	LIBS="-lcompat" PTHREAD_LIBS="${PTHREAD_LIBS}"
+CONFIGURE_ENV=	LIBS="-lcompat"
 CPPFLAGS+=	-I${LOCALBASE}/include/GL -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lm
-MAKE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}"
 
 .include <bsd.port.mk>
