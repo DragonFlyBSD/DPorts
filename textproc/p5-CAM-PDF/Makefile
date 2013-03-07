@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-CAM-PDF
-# Date created:		2006-07-13
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/textproc/p5-CAM-PDF/Makefile,v 1.20 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: ports/textproc/p5-CAM-PDF/Makefile,v 1.21 2013/01/30 09:44:05 svnexp Exp $
 
 PORTNAME=	CAM-PDF
-PORTVERSION=	1.58
+PORTVERSION=	1.59
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:CDOLAN
