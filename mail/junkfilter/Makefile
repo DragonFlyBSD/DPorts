@@ -1,10 +1,5 @@
-# New ports collection makefile for:	junkfilter
-# Date created:				20000523
-# Whom:					Gregory Sutter <gsutter@zer0.org>
-
-#
-# $FreeBSD: ports/mail/junkfilter/Makefile,v 1.11 2012/11/17 05:59:04 svnexp Exp $
-#
+# Created by: Gregory Sutter <gsutter@zer0.org>
+# $FreeBSD: ports/mail/junkfilter/Makefile,v 1.12 2012/12/26 20:35:33 svnexp Exp $
 
 PORTNAME=	junkfilter
 PORTVERSION=	20030115
@@ -17,6 +12,8 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	gsutter@zer0.org
 COMMENT=	Spam filtering software for procmail
+
+PORTSCOUT=	limit:^20
 
 RUN_DEPENDS=	procmail:${PORTSDIR}/mail/procmail
 
