@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-liblzma
-# Date created:		09 Dec 2008
-# Whom:			David Naylor <naylor.b.david@gmail.com>
-#
-# $FreeBSD: ports/archivers/py-liblzma/Makefile,v 1.11 2012/11/17 05:54:23 svnexp Exp $
+# Created by: David Naylor <naylor.b.david@gmail.com>
+# $FreeBSD: ports/archivers/py-liblzma/Makefile,v 1.12 2013/01/16 20:24:39 svnexp Exp $
 
 PORTNAME=	liblzma
 PORTVERSION=	0.5.3
@@ -13,7 +10,7 @@ MASTER_SITE_SUBDIR=	source/p/py${PORTNAME}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	${PYDISTUTILS_PKGNAME}-${PORTVERSION}
 
-MAINTAINER=	naylor.b.david@gmail.com
+MAINTAINER=	dbn@FreeBSD.org
 COMMENT=	Python binding for the LZMA compression library
 
 USE_PKGCONFIG=	yes
