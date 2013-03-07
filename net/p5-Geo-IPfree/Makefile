@@ -1,7 +1,7 @@
-# $FreeBSD: ports/net/p5-Geo-IPfree/Makefile,v 1.23 2012/11/17 17:43:27 svnexp Exp $
+# $FreeBSD: ports/net/p5-Geo-IPfree/Makefile,v 1.25 2013/02/15 10:52:43 svnexp Exp $
 
 PORTNAME=	Geo-IPfree
-PORTVERSION=	1.122880
+PORTVERSION=	1.130450
 CATEGORIES=	net perl5 geography
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
