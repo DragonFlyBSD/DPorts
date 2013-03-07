@@ -1,14 +1,10 @@
-# New ports collection makefile for:	latex-beamer
-# Date created:		24 Jan 2004
-# Whom:			hrs@FreeBSD.org
-#
-# $FreeBSD: ports/print/latex-beamer/Makefile,v 1.19 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-beamer/Makefile 313377 2013-03-03 20:43:52Z hrs $
 
 PORTNAME=	latex-beamer
 PORTVERSION=	3.07
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	print
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/version%20${PORTVERSION}
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/Version%20${PORTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX class to create a beamer presentation
