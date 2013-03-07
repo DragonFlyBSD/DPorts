@@ -1,20 +1,20 @@
-# New ports collection makefile for:	p5-HTTP-Proxy
-# Date created:				16 April 2003
-# Whom:	      				mat
-#
-# $FreeBSD: ports/www/p5-HTTP-Proxy/Makefile,v 1.19 2012/11/17 06:02:51 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: ports/www/p5-HTTP-Proxy/Makefile,v 1.20 2013/02/08 11:39:07 svnexp Exp $
 
 PORTNAME=	HTTP-Proxy
-PORTVERSION=	0.25
+PORTVERSION=	0.26
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A pure Perl HTTP proxy
+COMMENT=	Pure Perl HTTP proxy
 
-RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+RUN_DEPENDS=	p5-HTTP-Daemon>=1.25:${PORTSDIR}/www/p5-HTTP-Daemon \
+		p5-libwww>=6:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 PERL_MODBUILD=	yes
