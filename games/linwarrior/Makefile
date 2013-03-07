@@ -2,12 +2,12 @@
 # Date created:		31 Dec 2008
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/games/linwarrior/Makefile,v 1.12 2012/11/17 05:57:44 svnexp Exp $
+# $FreeBSD: ports/games/linwarrior/Makefile,v 1.13 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	linwarrior
 PORTVERSION=	20100320
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.hackcraft.de/games/linwarrior_3d/downloads/ \
 		http://mirror.amdmi3.ru/distfiles/
