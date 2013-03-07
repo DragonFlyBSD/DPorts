@@ -1,8 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSD.edu>
-# $FreeBSD: ports/math/octave-forge-queueing/Makefile,v 1.7 2012/11/17 05:59:25 svnexp Exp $
+# $FreeBSD: ports/math/octave-forge-queueing/Makefile,v 1.8 2013/02/05 00:46:42 svnexp Exp $
 
 PORTNAME=	octave-forge-queueing
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.1
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -14,6 +14,7 @@ OCTSRC=		${OCTAVE_PKGNAME}
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/Mk/bsd.octave.mk"
+
 do-build:
 	${DO_NADA}
 
