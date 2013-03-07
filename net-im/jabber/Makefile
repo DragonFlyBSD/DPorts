@@ -2,12 +2,12 @@
 # Date created:			5 February 2001
 # Whom:				joe
 #
-# $FreeBSD: ports/net-im/jabber/Makefile,v 1.62 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: ports/net-im/jabber/Makefile,v 1.64 2013/02/06 21:57:24 svnexp Exp $
 #
 
 PORTNAME=	jabber
 PORTVERSION=	1.6.1.1
-PORTREVISION=	10
+PORTREVISION=	12
 PORTEPOCH=	1
 CATEGORIES=	net-im ipv6
 MASTER_SITES=	http://download.jabberd.org/jabberd14/ \
