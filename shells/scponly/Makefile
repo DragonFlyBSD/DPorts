@@ -1,5 +1,5 @@
 # Created by: mcglk@artlogix.com
-# $FreeBSD: ports/shells/scponly/Makefile,v 1.40 2012/12/16 18:28:02 svnexp Exp $
+# $FreeBSD: ports/shells/scponly/Makefile,v 1.41 2013/02/26 03:43:26 svnexp Exp $
 
 PORTNAME=	scponly
 PORTVERSION=	4.8.20110526
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}-snapshots
 DISTNAME=	${PORTNAME}-20110526
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	gjb@FreeBSD.org
 COMMENT=	A tiny shell that only permits scp and sftp
 
 MAN8=		scponly.8
