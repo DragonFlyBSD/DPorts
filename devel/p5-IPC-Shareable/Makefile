@@ -2,12 +2,11 @@
 # Date created:				May 25th 2000
 # Whom:	      				Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-IPC-Shareable/Makefile,v 1.14 2012/11/17 05:56:19 svnexp Exp $
+# $FreeBSD: ports/devel/p5-IPC-Shareable/Makefile,v 1.15 2013/01/19 20:48:29 svnexp Exp $
 #
 
 PORTNAME=	IPC-Shareable
-PORTVERSION=	0.60
-PORTREVISION=	1
+PORTVERSION=	0.61
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
