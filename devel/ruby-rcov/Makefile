@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rcov
-# Date created:				25 May 2006
-# Whom:					Rui Lopes (rgl ruilopes com)
-#
-# $FreeBSD: ports/devel/ruby-rcov/Makefile,v 1.9 2012/11/17 05:56:57 svnexp Exp $
-#
+# Created by: Rui Lopes (rgl ruilopes com)
+# $FreeBSD: devel/ruby-rcov/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	rcov
 PORTVERSION=	0.8.1.2
@@ -14,6 +10,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	A tool for simple code coverage analysis in Ruby
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
