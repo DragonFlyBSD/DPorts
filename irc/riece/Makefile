@@ -1,21 +1,26 @@
-# $FreeBSD: ports/irc/riece/Makefile,v 1.60 2012/12/03 15:17:21 svnexp Exp $
+# Created by: KIMURA Yasuhiro <yasu@utahime.org>
+# $FreeBSD: ports/irc/riece/Makefile,v 1.61 2013/01/15 00:46:11 svnexp Exp $
 
 PORTNAME=	riece
 PORTVERSION=	9.0.0
 PORTEPOCH=	1
 CATEGORIES=	irc elisp
-MASTER_SITES=	${MASTER_SITE_SAVANNAH}
+MASTER_SITES=	SAVANNAH
 MASTER_SITE_SUBDIR=	${PORTNAME}
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
 
 MAINTAINER=	yasu@utahime.org
 COMMENT=	IRC client for Emacs
 
+LICENSE=	GPLv3
+
 USE_EMACS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-emacs=${EMACS_CMD} \
 		--with-lispdir=${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 USE_GMAKE=	yes
+
+OPTIONS_DEFINE=	DOCS
 
 INFO=	riece-en riece-ja
 
