@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-chef-solr
-# Date created:				13 Dec 2011
-# Whom:					Scott Sanders <scott@jssjr.com>
-#
-# $FreeBSD: ports/sysutils/rubygem-chef-solr/Makefile,v 1.2 2012/11/17 06:01:44 svnexp Exp $
-#
+# Created by: Scott Sanders <scott@jssjr.com>
+# $FreeBSD: sysutils/rubygem-chef-solr/Makefile 313021 2013-02-27 02:18:10Z swills $
 
 PORTNAME=	chef-solr
-PORTVERSION=	0.10.8
+PORTVERSION=	10.24.0
 CATEGORIES=	sysutils
 MASTER_SITES=	RG
 
