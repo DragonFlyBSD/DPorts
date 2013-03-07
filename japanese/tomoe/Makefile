@@ -28,26 +28,8 @@ BUILD_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/glib2.so:${PORTSDIR}/devel/ruby-glib2 \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/glib2.so:${PORTSDIR}/devel/ruby-glib2
 
-# We cannot use ${ARCH} nor ${UNAME} which are defined in bsd.port.mk, here.
-UNAME?=		/usr/bin/uname
-ARCH!=		${UNAME} -p
-.if !defined(OSVERSION)
-AWK?=		/usr/bin/awk
-SYSCTL?=	/sbin/sysctl
-.if exists(/usr/include/sys/param.h)
-OSVERSION!=	${AWK} '/^\#define __FreeBSD_version/ {print $$3}' < /usr/include/sys/param.h
-.elif exists(/usr/src/sys/sys/param.h)
-OSVERSION!=	${AWK} '/^\#define __FreeBSD_version/ {print $$3}' < /usr/src/sys/sys/param.h
-.else
-OSVERSION!=	${SYSCTL} -n kern.osreldate
-.endif
-.endif
-
 OPTIONS_DEFINE=		DICT_RUBY EST MYSQL PYTHON UNIHAN
 OPTIONS_DEFAULT=	PYTHON
-.if ${ARCH} != "sparc64" && ${OSVERSION} < 700042
-OPTIONS_DEFAULT+=	UNIHAN
-.endif
 DICT_RUBY_DESC=		Enable Ruby based dictionary module
 EST_DESC=		Enable Hyper Estraier dictionary module
 MYSQL_DESC=		Enable MySQL dictionary module
@@ -91,9 +73,6 @@ PLIST_SUB+=	PYTHON="@comment "
 .if ${PORT_OPTIONS:MUNIHAN}
 .if ${OSVERSION} >= 700042
 BROKEN=		Broken with Unihan with gcc 4.2
-.endif
-.if ${ARCH} == "sparc64"
-BROKEN=	Not buildable with Unihan on sparc64
 .endif
 MASTER_SITES+=	ftp://ftp.unicode.org/Public/UNIDATA/:unihan
 DISTFILES+=	Unihan.zip:unihan
