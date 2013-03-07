@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: ports/graphics/pornview/Makefile,v 1.47 2012/11/17 05:58:19 svnexp Exp $
+# $FreeBSD: ports/graphics/pornview/Makefile,v 1.48 2013/01/26 17:14:33 svnexp Exp $
 
 PORTNAME=	pornview
 PORTVERSION=	0.2.0.p.1
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.p./pre/}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PornView is an image viewer/manager
 
-LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
+LIB_DEPENDS=	exif:${PORTSDIR}/graphics/libexif \
 		png15:${PORTSDIR}/graphics/png \
 		xcb-render-util:${PORTSDIR}/x11/xcb-util-renderutil
 
