@@ -1,8 +1,5 @@
-# New ports collection makefile for:	thrift
-# Date created:	   27 September 2007
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/rubygem-thrift/Makefile,v 1.9 2012/11/17 05:57:01 svnexp Exp $
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: ports/devel/rubygem-thrift/Makefile,v 1.10 2013/02/26 17:18:30 svnexp Exp $
 #
 
 PORTNAME=	thrift
