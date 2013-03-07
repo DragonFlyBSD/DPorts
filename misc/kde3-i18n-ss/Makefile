@@ -2,7 +2,7 @@
 # Date created:                         12 March 2002
 # Whom:                                 Lauri Watts <lauri@kde.org>
 #
-# $FreeBSD: ports/misc/kde3-i18n-ss/Makefile,v 1.36 2012/11/17 05:59:39 svnexp Exp $
+# $FreeBSD: ports/misc/kde3-i18n-ss/Makefile,v 1.37 2012/12/30 18:56:11 svnexp Exp $
 #
 
 PORTNAME=	kde-i18n
@@ -16,6 +16,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Swati messages and documentation for KDE3
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 USE_BZIP2=	yes
