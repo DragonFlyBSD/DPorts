@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+#
+# This module contains the configuration of the individual eric4 installation
+#
+
+cfg = {
+    'ericDir'              : 'PYTHON_SITELIBDIR/eric4',
+    'ericPixDir'           : 'PYTHON_SITELIBDIR/eric4/pixmaps',
+    'ericIconDir'          : 'PYTHON_SITELIBDIR/eric4/icons',
+    'ericDTDDir'           : 'PYTHON_SITELIBDIR/eric4/DTDs',
+    'ericCSSDir'           : 'PYTHON_SITELIBDIR/eric4/CSSs',
+    'ericStylesDir'        : 'PYTHON_SITELIBDIR/eric4/Styles',
+    'ericDocDir'           : 'DOCSDIR',
+    'ericExamplesDir'      : 'EXAMPLESDIR',
+    'ericTranslationsDir'  : 'PYTHON_SITELIBDIR/eric4/i18n',
+    'ericTemplatesDir'     : 'PYTHON_SITELIBDIR/eric4/DesignerTemplates',
+    'ericCodeTemplatesDir' : 'PYTHON_SITELIBDIR/eric4/CodeTemplates',
+    'ericOthersDir'        : 'PYTHON_SITELIBDIR/eric4',
+    'bindir'               : 'PREFIX/bin',
+    'mdir'                 : 'PYTHON_SITELIBDIR',
+    'apidir'               : 'LOCALBASE/share/qt4/qsci/api',
+}
