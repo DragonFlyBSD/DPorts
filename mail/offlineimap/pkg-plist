@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/mail/offlineimap/pkg-plist,v 1.13 2012/11/17 05:59:07 svnexp Exp $
+@comment $FreeBSD: mail/offlineimap/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/offlineimap
 %%PYTHON_SITELIBDIR%%/offlineimap/folder/__init__.py
 %%PYTHON_SITELIBDIR%%/offlineimap/folder/__init__.pyc
