@@ -1,8 +1,9 @@
 # Created by: Beni Keller <navigium@grindcore.ch>
-# $FreeBSD: ports/net/heybuddy/Makefile,v 1.6 2012/11/30 05:17:47 svnexp Exp $
+# $FreeBSD: ports/net/heybuddy/Makefile,v 1.7 2013/01/23 15:05:36 svnexp Exp $
 
 PORTNAME=	heybuddy
 PORTVERSION=	0.2.4
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://launchpad.net/${PORTNAME}/${PORTVERSION:R}/${PORTVERSION}/+download/ \
 		http://freebsd.grindcore.ch/distfiles/
