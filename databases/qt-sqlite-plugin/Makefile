@@ -3,7 +3,7 @@
 # Date created:                         	27 February 2004
 # Whom:                                        	Michael Nottebrock <lofi@freebsd.org>
 #
-# $FreeBSD: ports/databases/qt-sqlite-plugin/Makefile,v 1.21 2012/11/17 05:55:23 svnexp Exp $
+# $FreeBSD: ports/databases/qt-sqlite-plugin/Makefile,v 1.22 2012/12/30 18:55:44 svnexp Exp $
 #
 
 PORTNAME=	qt-${DB}-plugin
@@ -21,6 +21,9 @@ DB=		sqlite
 
 LIB_DEPENDS+=	qt-mt:${PORTSDIR}/x11-toolkits/qt33 \
 		sqlite.2:${PORTSDIR}/databases/sqlite2
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_BZIP2=	yes
 PLUGIN=		plugins/src/sqldrivers/${DB}
