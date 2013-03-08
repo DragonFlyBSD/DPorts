@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/p5-Plack/Makefile,v 1.52 2013/01/19 11:34:52 svnexp Exp $
+# $FreeBSD: ports/www/p5-Plack/Makefile,v 1.53 2013/02/18 00:15:46 svnexp Exp $
 
 PORTNAME=	Plack
-PORTVERSION=	1.0015
+PORTVERSION=	1.0016
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
