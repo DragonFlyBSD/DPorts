@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: ports/security/vuxml/Makefile,v 1.20 2012/11/17 06:01:22 svnexp Exp $
+# $FreeBSD: security/vuxml/Makefile 306878 2012-11-02 18:45:31Z ohauer $
 
 PORTNAME=	vuxml
 PORTVERSION=	1.1
