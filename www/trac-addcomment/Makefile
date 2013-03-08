@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/www/trac-addcomment/Makefile,v 1.14 2012/11/17 06:03:07 svnexp Exp $
+# $FreeBSD: www/trac-addcomment/Makefile 313115 2013-02-28 17:06:36Z brooks $
 
 PORTNAME=	addcomment
 PORTVERSION=	0.3
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.gerritbeine.de/download/trac/
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}macro-${PORTVERSION}
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Add formatted comments to wiki pages
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \
