@@ -1,12 +1,9 @@
-# New ports collection makefile for:	p5-Log-Message-Simple
-# Date created:				31 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Log-Message-Simple/Makefile,v 1.10 2012/11/17 05:56:21 svnexp Exp $
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: ports/devel/p5-Log-Message-Simple/Makefile,v 1.11 2013/01/23 15:11:05 svnexp Exp $
 #
 
 PORTNAME=	Log-Message-Simple
-PORTVERSION=	0.08
+PORTVERSION=	0.10
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
