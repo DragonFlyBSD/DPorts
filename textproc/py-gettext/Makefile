@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-gettext
-# Date created:				Nov 11, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/textproc/py-gettext/Makefile,v 1.3 2012/11/17 06:02:17 svnexp Exp $
-#
+# $FreeBSD: ports/textproc/py-gettext/Makefile,v 1.4 2013/02/12 19:30:34 svnexp Exp $
 
 PORTNAME=	gettext
-PORTVERSION=	2.0
+PORTVERSION=	2.1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
