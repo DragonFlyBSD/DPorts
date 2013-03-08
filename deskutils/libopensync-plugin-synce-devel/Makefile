@@ -2,14 +2,14 @@
 # Date created:				27 September 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/deskutils/libopensync-plugin-synce-devel/Makefile,v 1.3 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: ports/deskutils/libopensync-plugin-synce-devel/Makefile,v 1.4 2013/02/20 16:45:21 svnexp Exp $
 #
 
 PORTNAME=	libopensync-plugin-synce
 CATEGORIES=	deskutils palm
 PKGNAMESUFFIX=	-devel
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SynCE plugin for the OpenSync framework
 
 RUN_DEPENDS=	sync-engine:${PORTSDIR}/palm/synce-sync-engine \
