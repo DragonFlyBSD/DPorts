@@ -1,10 +1,11 @@
 # Created by: Shawn Webb <bsdports@wayfair.com>
-# $FreeBSD: ports/www/drupal7-jailadmin/Makefile,v 1.4 2012/11/17 06:02:32 svnexp Exp $
+# $FreeBSD: ports/www/drupal7-jailadmin/Makefile,v 1.6 2013/02/19 18:37:55 svnexp Exp $
 
 PORTNAME=	jailadmin
-DISTVERSION=	7.x-0.4.1
+DISTVERSION=	7.x-0.5.2
 CATEGORIES=	www
-MASTER_SITES=	http://ftp.freebsd.org/pub/FreeBSD/distfiles/drupal/
+MASTER_SITES=	http://0xfeedface.org/~shawn/projects/jailadmin/ \
+    		http://mirrors.rit.edu/zi/
 
 MAINTAINER=	lattera@gmail.com
 COMMENT=	Drupal 7 module for administering FreeBSD vnet jails
