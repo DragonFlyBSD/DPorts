@@ -1,12 +1,8 @@
-# New ports collection makefile for:	databases/p5-Jifty-DBI
-# Date created:				27 Dec 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-Jifty-DBI/Makefile,v 1.39 2012/12/17 09:41:16 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: ports/databases/p5-Jifty-DBI/Makefile,v 1.40 2013/01/31 09:48:04 svnexp Exp $
 
 PORTNAME=	Jifty-DBI
-PORTVERSION=	0.74
+PORTVERSION=	0.75
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
