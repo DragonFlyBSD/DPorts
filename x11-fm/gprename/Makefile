@@ -1,10 +1,5 @@
-# New ports collection makefile for:	gprename
-# Date created:				2004-03-15
-# Whom:					trevor
-#
-#
-# $FreeBSD: ports/x11-fm/gprename/Makefile,v 1.26 2012/11/17 06:03:26 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/x11-fm/gprename/Makefile,v 1.27 2013/01/27 06:41:43 svnexp Exp $
 
 PORTNAME=	gprename
 PORTVERSION=	2.7
