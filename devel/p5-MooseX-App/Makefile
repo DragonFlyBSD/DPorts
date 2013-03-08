@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MooseX-App/Makefile,v 1.7 2012/12/16 06:16:54 svnexp Exp $
+# $FreeBSD: ports/devel/p5-MooseX-App/Makefile,v 1.8 2013/01/30 18:18:02 svnexp Exp $
 
 PORTNAME=	MooseX-App
-PORTVERSION=	1.09
+PORTVERSION=	1.15
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -38,7 +38,6 @@ MAN3=		MooseX::App.3 \
 		MooseX::App::Plugin::Config.3 \
 		MooseX::App::Plugin::ConfigHome.3 \
 		MooseX::App::Plugin::Env.3 \
-		MooseX::App::Plugin::Fuzzy.3 \
 		MooseX::App::Plugin::Typo.3 \
 		MooseX::App::Plugin::Version.3 \
 		MooseX::App::Role.3 \
