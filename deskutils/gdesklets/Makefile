@@ -1,9 +1,4 @@
-# New ports collection makefile for:	gdesklets
-# Date created:				11 August 2003
-# Whom:					Mezz <mezz7@cox.net>
-#
-# $FreeBSD: ports/deskutils/gdesklets/Makefile,v 1.66 2012/11/17 05:55:27 svnexp Exp $
-#
+# $FreeBSD: ports/deskutils/gdesklets/Makefile,v 1.67 2012/12/31 17:20:08 svnexp Exp $
 
 PORTNAME=	gdesklets
 PORTVERSION=	0.36.2
