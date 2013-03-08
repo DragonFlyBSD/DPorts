@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nagiostat
-# Date created:			20 July 2004
-# Whom:				Janos.Mohacsi@bsd.hu
-#
-# $FreeBSD: ports/net-mgmt/nagiostat/Makefile,v 1.15 2012/11/17 06:00:34 svnexp Exp $
-#
+# Created by: Janos.Mohacsi@bsd.hu
+# $FreeBSD: ports/net-mgmt/nagiostat/Makefile,v 1.16 2013/01/09 20:05:03 svnexp Exp $
 
 PORTNAME=	nagiostat
 PORTVERSION=	1.0.0
@@ -12,7 +8,7 @@ CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/1.0
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Nagiostat parses performance-data from Nagios and generates graphs
 
 RUN_DEPENDS=	rrdtool:${PORTSDIR}/databases/rrdtool \
