@@ -1,9 +1,4 @@
-# New ports collection makefile for:	gdesklets-clock
-# Date created:				02 September 2003
-# Whom:					Mezz <mezz7@cox.net>
-#
-# $FreeBSD: ports/x11-clocks/gdesklets-clock/Makefile,v 1.21 2012/11/17 06:03:24 svnexp Exp $
-#
+# $FreeBSD: ports/x11-clocks/gdesklets-clock/Makefile,v 1.22 2012/12/31 17:20:47 svnexp Exp $
 
 PORTNAME=	clock
 PORTVERSION=	0.32
