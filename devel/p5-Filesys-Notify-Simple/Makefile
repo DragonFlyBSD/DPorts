@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Filesys::Notify::Simple
-# Date created:		28 Oct 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Filesys-Notify-Simple/Makefile,v 1.7 2012/11/17 05:56:17 svnexp Exp $
-#
+# $FreeBSD: ports/devel/p5-Filesys-Notify-Simple/Makefile,v 1.8 2013/02/16 12:02:05 svnexp Exp $
 
 PORTNAME=	Filesys-Notify-Simple
-PORTVERSION=	0.08
+PORTVERSION=	0.10
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
