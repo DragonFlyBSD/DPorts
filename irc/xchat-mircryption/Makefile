@@ -1,10 +1,6 @@
-# New ports collection makefile for:	XChat encryption
-# Date created:		Sat Jan  8 21:48:41 UTC 2005
-# Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/irc/xchat-mircryption/Makefile,v 1.18 2012/11/17 05:58:30 svnexp Exp $
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: ports/irc/xchat-mircryption/Makefile,v 1.19 2013/01/26 16:56:10 svnexp Exp $
 #    $MCom: ports/irc/xchat-mircryption/Makefile,v 1.2 2006/10/10 20:22:11 mezz Exp $
-#
 
 PORTNAME=	mircryption
 DISTVERSION=	0.3.3
