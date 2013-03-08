@@ -1,12 +1,8 @@
-# New ports collection makefile for:	fetchyahoo
-# Date created:				2003-09-27
-# Whom:					trevor
-#
-# $FreeBSD: ports/mail/fetchyahoo/Makefile,v 1.35 2012/11/17 05:59:03 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/mail/fetchyahoo/Makefile,v 1.37 2013/02/08 10:03:56 svnexp Exp $
 
 PORTNAME=	fetchyahoo
-PORTVERSION=	2.13.9
+PORTVERSION=	2.14.8
 CATEGORIES=	mail
 MASTER_SITES=	http://fetchyahoo.twizzler.org/
 
