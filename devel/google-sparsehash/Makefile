@@ -2,15 +2,16 @@
 # Date created:				23 June 2005
 # Whom:					Vasil Dimov <vd@datamax.bg>
 #
-# $FreeBSD: ports/devel/google-sparsehash/Makefile,v 1.18 2012/11/17 05:55:46 svnexp Exp $
+# $FreeBSD: ports/devel/google-sparsehash/Makefile,v 1.19 2013/01/28 03:51:40 svnexp Exp $
 #
 
 PORTNAME=	google-sparsehash
-PORTVERSION=	1.1
+PORTVERSION=	2.0.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 		${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	vd/${PORTNAME}
+PROJECTHOST=	sparsehash
 DISTNAME=	sparsehash-${PORTVERSION}
 
 MAINTAINER=	vd@FreeBSD.org
@@ -21,6 +22,9 @@ GNU_CONFIGURE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
+	${REINPLACE_CMD} -e \
+		's|^pkgconfigdir = .*|pkgconfigdir = ${LOCALBASE}/libdata/pkgconfig|' \
+		${WRKSRC}/Makefile.in
 .if !defined(NOPORTDOCS)
 	${REINPLACE_CMD} -e \
 		's|^docdir = .*|docdir = ${DOCSDIR}|' \
