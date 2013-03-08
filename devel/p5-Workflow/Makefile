@@ -1,5 +1,5 @@
 # Created by: Sergei Vyshenski
-# $FreeBSD: ports/devel/p5-Workflow/Makefile,v 1.23 2012/12/10 17:45:22 svnexp Exp $
+# $FreeBSD: devel/p5-Workflow/Makefile 313266 2013-03-02 15:55:17Z miwi $
 
 PORTNAME=	Workflow
 PORTVERSION=	1.35
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	svysh@pn.sinp.msu.ru
+MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Simple, flexible system to implement workflows
 
 LICENSE=	ART10 GPLv1
