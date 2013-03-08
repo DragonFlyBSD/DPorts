@@ -1,5 +1,5 @@
-# Created by: Kubilay Kocak <koobs.freebsd@gmail.com>
-# $FreeBSD: ports/www/py-rackspace-monitoring/Makefile,v 1.6 2012/11/17 06:03:01 svnexp Exp $
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/www/py-rackspace-monitoring/Makefile,v 1.7 2013/02/09 15:59:54 svnexp Exp $
 
 PORTNAME=	rackspace-monitoring
 PORTVERSION=	0.3.2
@@ -7,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Python client library for Rackspace Cloud Monitoring
 
 LICENSE=	AL2
