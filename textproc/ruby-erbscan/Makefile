@@ -1,9 +1,5 @@
-# New ports collection makefile for:	erbscan
-# Date created:		17 November 2006
-# Whom:				Shinsuke Matsui (<smatsui@karashi.org>)
-#
-# $FreeBSD: ports/textproc/ruby-erbscan/Makefile,v 1.3 2012/11/17 06:02:19 svnexp Exp $
-#
+# Created by: Shinsuke Matsui (<smatsui@karashi.org>)
+# $FreeBSD: textproc/ruby-erbscan/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	erbscan
 PORTVERSION=	0.0.20030723b
@@ -14,6 +10,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	smatsui@karashi.org
 COMMENT=	ERB compiler accelerator
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
