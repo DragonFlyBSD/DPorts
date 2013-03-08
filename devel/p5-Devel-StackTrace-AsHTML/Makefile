@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Devel::StackTrace::AsHTML
-# Date created:		13 Oct 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Devel-StackTrace-AsHTML/Makefile,v 1.8 2012/11/17 05:56:14 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Devel-StackTrace-AsHTML/Makefile 313352 2013-03-03 14:43:51Z kuriyama $
 
 PORTNAME=	Devel-StackTrace-AsHTML
-PORTVERSION=	0.11
+PORTVERSION=	0.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
