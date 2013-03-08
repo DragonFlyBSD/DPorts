@@ -2,7 +2,7 @@
 # Date created:				July 08 2004
 # Whom:					Michael Nottebrock <lofi@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/xscreensaver-kde/Makefile,v 1.46 2012/11/17 06:03:23 svnexp Exp $
+# $FreeBSD: ports/x11/xscreensaver-kde/Makefile,v 1.47 2012/12/30 18:56:34 svnexp Exp $
 #
 
 PORTNAME=	xscreensaver-kde
@@ -17,6 +17,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Support for xscreensaver blankers in KDE
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 USE_BZIP2=	yes
