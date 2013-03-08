@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/net/lanbrowsing/files/lisa.in,v 1.3 2012/11/17 06:00:04 svnexp Exp $
+#
+
+# PROVIDE: lisa
+# REQUIRE: LOGIN
+
+# Add the following lines to /etc/rc.conf to enable lisa:
+#
+# lisa_enable="YES"
+#
+
+. /etc/rc.subr
+
+name="lisa"
+rcvar=lisa_enable
+
+command="%%PREFIX%%/bin/lisa"
+
+load_rc_config $name
+
+: ${lisa_enable="NO"}
+: ${lisa_conffile="%%PREFIX%%/etc/lisarc"}
+
+command_args="-q -c ${lisa_conffile}"
+required_files="${lisa_conffile}"
+
+run_rc_command "$1"
