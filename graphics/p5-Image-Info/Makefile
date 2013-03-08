@@ -1,8 +1,8 @@
 # Created by: Shell Hung <shell@shellhung.org>
-# $FreeBSD: ports/graphics/p5-Image-Info/Makefile,v 1.30 2012/12/19 09:41:14 svnexp Exp $
+# $FreeBSD: ports/graphics/p5-Image-Info/Makefile,v 1.31 2013/01/31 08:47:23 svnexp Exp $
 
 PORTNAME=	Image-Info
-PORTVERSION=	1.33
+PORTVERSION=	1.34
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -28,6 +28,7 @@ MAN3=		Bundle::Image::Info::Everything.3 \
 		Image::Info::PPM.3 \
 		Image::Info::SVG.3 \
 		Image::Info::TIFF.3 \
+		Image::Info::WBMP.3 \
 		Image::Info::XBM.3 \
 		Image::Info::XPM.3
 
