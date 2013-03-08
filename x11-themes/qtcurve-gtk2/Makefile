@@ -1,12 +1,8 @@
-# New ports collection makefile for:    qtcurve-gtk2
-# Date created:                         23 May 2008
-# Whom:                                 Dmitry Klimov <lazyklimm@gmail.com>
-#
-# $FreeBSD: ports/x11-themes/qtcurve-gtk2/Makefile,v 1.29 2012/11/17 06:03:33 svnexp Exp $
-#
+# Created by: Dmitry Klimov <lazyklimm@gmail.com>
+# $FreeBSD: ports/x11-themes/qtcurve-gtk2/Makefile,v 1.30 2013/02/11 14:10:02 svnexp Exp $
 
 PORTNAME=	qtcurve
-PORTVERSION=	1.8.15
+PORTVERSION=	1.8.16
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://craigd.wikispaces.com/file/view/
 PKGNAMEPREFIX=	gtk2-
