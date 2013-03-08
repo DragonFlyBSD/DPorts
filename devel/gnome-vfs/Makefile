@@ -2,7 +2,7 @@
 # Date created:				28th June 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gnome-vfs/Makefile,v 1.151 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: ports/devel/gnome-vfs/Makefile,v 1.153 2013/02/14 10:22:07 svnexp Exp $
 #   $MCom: ports/devel/gnome-vfs/Makefile,v 1.191 2010/09/29 12:30:29 kwm Exp $
 #
 
@@ -34,8 +34,8 @@ CONFIGURE_ARGS=	--enable-openssl \
 		--disable-howl \
 		--with-hal-mount=/sbin/mount \
 		--with-hal-umount=/sbin/umount
-CPPFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include -DPTHREAD_LIB="${PTHREAD_LIBS}"
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PKGINSTALL=	${WRKDIR}/pkg-install
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
@@ -80,16 +80,15 @@ CONFIGURE_ARGS+=--disable-avahi
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|@PTHREAD_LIB@|${PTHREAD_LIBS}|' \
-		${WRKSRC}/gnome-vfs-2.0.pc.in ${WRKSRC}/gnome-vfs-module-2.0.pc.in
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/libgnomevfs/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
 		s|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/libgnomevfs/xdgmime.c \
 		${WRKSRC}/libgnomevfs/gnome-vfs-hal-mounts.c
-	@${REINPLACE_CMD} -e 's|-lacl||g' \
-		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|-lacl||g ; \
+		s|inotify_support=yes|inotify_support=no|g' \
+			${WRKSRC}/configure
 	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
 	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
