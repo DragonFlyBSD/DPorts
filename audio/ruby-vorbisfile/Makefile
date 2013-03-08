@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-vorbisfile
-# Date created:		5 October 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/audio/ruby-vorbisfile/Makefile,v 1.12 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: audio/ruby-vorbisfile/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	vorbisfile
 PORTVERSION=	0.2
@@ -16,6 +12,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A Ruby extension wrapping libvorbisfile
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 LIB_DEPENDS=	vorbisfile.6:${PORTSDIR}/audio/libvorbis
 
