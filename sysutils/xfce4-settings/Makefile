@@ -1,10 +1,10 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: ports/sysutils/xfce4-settings/Makefile,v 1.27 2012/12/31 01:05:48 svnexp Exp $
+# $FreeBSD: sysutils/xfce4-settings/Makefile 313362 2013-03-03 15:41:59Z olivierd $
 #
 
 PORTNAME=	xfce4-settings
 PORTVERSION=	4.10.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 DIST_SUBDIR=	xfce4
