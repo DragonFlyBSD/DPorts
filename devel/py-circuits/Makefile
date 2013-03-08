@@ -1,5 +1,5 @@
-# Created by: Kubilay Kocak <koobs.freebsd@gmail.com>
-# $FreeBSD: ports/devel/py-circuits/Makefile,v 1.1 2012/12/10 03:14:22 svnexp Exp $
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/devel/py-circuits/Makefile,v 1.2 2013/02/09 15:59:05 svnexp Exp $
 
 PORTNAME=	circuits
 PORTVERSION=	2.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Asynchronous Component-based Event Application Framework
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:${PORTSDIR}/devel/py-pytest \
