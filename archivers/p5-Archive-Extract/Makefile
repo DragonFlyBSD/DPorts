@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/archivers/p5-Archive-Extract/Makefile,v 1.36 2013/01/10 15:42:03 svnexp Exp $
+# $FreeBSD: ports/archivers/p5-Archive-Extract/Makefile,v 1.39 2013/02/16 17:01:34 svnexp Exp $
 
 PORTNAME=	Archive-Extract
-PORTVERSION=	0.62
+PORTVERSION=	0.68
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
