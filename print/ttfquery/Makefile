@@ -1,25 +1,23 @@
-# ex:ts=8
-# Ports collection makefile for:	TTFQuery
-# Date created:			Jan 5, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/print/ttfquery/Makefile,v 1.5 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: print/ttfquery/Makefile 313191 2013-03-02 05:45:11Z miwi $
 
 PORTNAME=	ttfquery
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.5
 CATEGORIES=	print
-MASTER_SITES=	SF
+MASTER_SITES=	CHEESESHOP
 DISTNAME=	TTFQuery-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	FontTools-based package for querying system fonts
 
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/FontTools.pth:${PORTSDIR}/print/py-fonttools \
+LICENSE=	BSD
+LICENSE_FILE=	${WRKSRC}/license.txt
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fonttools>0:${PORTSDIR}/print/py-fonttools \
 		${PYNUMPY}
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TTFQuery
 
 .include <bsd.port.mk>
