@@ -1,5 +1,5 @@
 # Created by: Lupe Christoph <lupe@lupe-christoph.de>
-# $FreeBSD: ports/sysutils/munin-master/Makefile,v 1.41 2012/12/06 14:29:46 svnexp Exp $
+# $FreeBSD: ports/sysutils/munin-master/Makefile,v 1.42 2013/02/16 14:10:56 svnexp Exp $
 
 PORTNAME=	munin
 PORTVERSION=	${MUNIN_VERSION}
@@ -57,6 +57,7 @@ MAN3=		Munin::Master::Config.3 \
 		Munin::Master::GroupRepository.3 \
 		Munin::Master::HTMLOld.3 \
 		Munin::Master::Host.3 \
+		Munin::Master::LimitsOld.3 \
 		Munin::Master::Logger.3 \
 		Munin::Master::Node.3 \
 		Munin::Master::ProcessManager.3 \
