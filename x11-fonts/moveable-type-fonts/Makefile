@@ -1,9 +1,4 @@
-# New ports collection makefile for:	moveable-type-fonts
-# Date created:				30 July 2010
-# Whom:					Jimmy Olgeni <olgeni@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/moveable-type-fonts/Makefile,v 1.5 2012/11/17 06:03:29 svnexp Exp $
-#
+# $FreeBSD: ports/x11-fonts/moveable-type-fonts/Makefile,v 1.6 2013/01/26 15:07:30 svnexp Exp $
 
 PORTNAME=	moveable-type-fonts
 PORTVERSION=	20100801
