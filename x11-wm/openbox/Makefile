@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openbox (based on the blackbox port)
-# Date created:				2002-04-28
-# Whom:					Trevor Johnson <trevor@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-wm/openbox/Makefile,v 1.103 2012/11/17 06:03:43 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/x11-wm/openbox/Makefile,v 1.104 2013/01/27 06:41:43 svnexp Exp $
 
 PORTNAME=	openbox
 PORTVERSION=	3.5.0
