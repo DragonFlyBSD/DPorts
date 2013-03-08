@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Catalyst-Action-REST
-# Date created:	   08 August 2007
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Action-REST/Makefile,v 1.35 2012/12/17 12:28:02 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: ports/www/p5-Catalyst-Action-REST/Makefile,v 1.36 2013/02/04 12:31:46 svnexp Exp $
 
 PORTNAME=	Catalyst-Action-REST
-PORTVERSION=	1.05
+PORTVERSION=	1.06
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
