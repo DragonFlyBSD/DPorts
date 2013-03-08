@@ -1,9 +1,5 @@
-# New ports collection makefile for:    jdictionary-int-eng
-# Date created:         20.06.2002
-# Whom:                 janos.mohacsi@bsd.hu
-#
-# $FreeBSD: ports/textproc/jdictionary-int-eng/Makefile,v 1.8 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: janos.mohacsi@bsd.hu
+# $FreeBSD: ports/textproc/jdictionary-int-eng/Makefile,v 1.9 2013/01/09 20:05:13 svnexp Exp $
 
 PORTNAME=	jdictionary-int-eng
 PORTVERSION=	1.0
