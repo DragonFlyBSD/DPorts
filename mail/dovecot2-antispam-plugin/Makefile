@@ -1,9 +1,9 @@
 # Created by: Denis Shaposhnikov <dsh@bamus.cz>
-# $FreeBSD: ports/mail/dovecot2-antispam-plugin/Makefile,v 1.9 2012/12/03 17:43:42 svnexp Exp $
+# $FreeBSD: ports/mail/dovecot2-antispam-plugin/Makefile,v 1.10 2013/02/14 08:23:29 svnexp Exp $
 
 PORTNAME=	dovecot2-antispam-plugin
 PORTVERSION=	20101222
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	http://www.bamus.cz/distfiles/
 DISTFILES=	dovecot-antispam-plugin-${DISTVERSION}${EXTRACT_SUFX}
