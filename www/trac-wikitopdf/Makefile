@@ -1,5 +1,4 @@
-# Created by: Brooks Davis <brooks@freebsd.org>
-# $FreeBSD: ports/www/trac-wikitopdf/Makefile,v 1.9 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-wikitopdf/Makefile 313115 2013-02-28 17:06:36Z brooks $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	2.2.2
@@ -10,7 +9,7 @@ MASTER_SITE_SUBDIR=	brooks
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugin to generate PDF documents from the Wiki
 
 RUN_DEPENDS+=	htmldoc:${PORTSDIR}/textproc/htmldoc \
