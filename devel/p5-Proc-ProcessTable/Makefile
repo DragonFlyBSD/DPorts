@@ -1,10 +1,11 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: ports/devel/p5-Proc-ProcessTable/Makefile,v 1.23 2012/12/14 09:59:12 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Proc-ProcessTable/Makefile,v 1.24 2013/02/16 19:46:51 svnexp Exp $
 
 PORTNAME=	Proc-ProcessTable
-PORTVERSION=	0.46
+PORTVERSION=	0.47
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:JWB
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
