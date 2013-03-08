@@ -1,9 +1,5 @@
-# New ports collection makefile for:    jdictionary-fre-hun
-# Date created:         20.06.2002
-# Whom:                 janos.mohacsi@bsd.hu
-#
-# $FreeBSD: ports/french/jdictionary-fre-hun/Makefile,v 1.8 2012/11/17 05:57:28 svnexp Exp $
-#
+# Created by: janos.mohacsi@bsd.hu
+# $FreeBSD: ports/french/jdictionary-fre-hun/Makefile,v 1.9 2013/01/09 20:04:43 svnexp Exp $
 
 PORTNAME=	jdictionary-fre-hun
 PORTVERSION=	1.0
