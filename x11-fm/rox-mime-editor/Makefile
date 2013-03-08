@@ -1,9 +1,4 @@
-# Ports collection Makefile for:	rox-mime-editor
-# Date created:				Mar 24 2003
-# Whom:					olgeni@FreeBSD.org
-#
-# $FreeBSD: ports/x11-fm/rox-mime-editor/Makefile,v 1.23 2012/11/17 06:03:26 svnexp Exp $
-#
+# $FreeBSD: ports/x11-fm/rox-mime-editor/Makefile,v 1.24 2013/01/26 15:07:30 svnexp Exp $
 
 PORTNAME=	rox-mime-editor
 PORTVERSION=	0.6
