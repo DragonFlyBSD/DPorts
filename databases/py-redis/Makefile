@@ -1,12 +1,12 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/databases/py-redis/Makefile,v 1.8 2012/12/10 03:00:04 svnexp Exp $
+# $FreeBSD: ports/databases/py-redis/Makefile,v 1.9 2013/02/09 15:58:53 svnexp Exp $
 
 PORTNAME=	redis
 PORTVERSION=	2.7.2
 CATEGORIES=	databases python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Python client for Redis key-value store
 
 LICENSE=	MIT
