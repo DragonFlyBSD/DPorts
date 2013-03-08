@@ -1,11 +1,8 @@
-# New ports collection makefile for:	Config-MVP
-# Date created: 			27 December 2009
-# Whom:					andrey@kostenko.name
-#
-# $FreeBSD: ports/devel/p5-Config-MVP/Makefile,v 1.12 2012/11/17 05:56:08 svnexp Exp $
+# Created by: andrey@kostenko.name
+# $FreeBSD: ports/devel/p5-Config-MVP/Makefile,v 1.13 2013/02/01 10:59:45 svnexp Exp $
 
 PORTNAME=	Config-MVP
-PORTVERSION=	2.200002
+PORTVERSION=	2.200003
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
