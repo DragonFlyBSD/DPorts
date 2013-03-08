@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MooseX-TransactionalMethods
-# Date created:		2012-04-25
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-MooseX-TransactionalMethods/Makefile,v 1.2 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: ports/devel/p5-MooseX-TransactionalMethods/Makefile,v 1.3 2013/02/08 02:51:26 svnexp Exp $
 
 PORTNAME=	MooseX-TransactionalMethods
 PORTVERSION=	0.008
@@ -19,12 +15,11 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Moose>=1.21:${PORTSDIR}/devel/p5-Moose \
 		p5-aliased>=0:${PORTSDIR}/devel/p5-aliased
-RUN_DEPENDS=	p5-Moose>=1.21:${PORTSDIR}/devel/p5-Moose \
-		p5-aliased>=0:${PORTSDIR}/devel/p5-aliased
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
 
-MAN3=		MooseX::TransactionalMethods.3 \
-		MooseX::Meta::Method::Transactional.3
+MAN3=		MooseX::Meta::Method::Transactional.3 \
+		MooseX::TransactionalMethods.3
 
 .include <bsd.port.mk>
