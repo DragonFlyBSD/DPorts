@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/libdap/Makefile,v 1.15 2012/12/09 03:41:54 svnexp Exp $
+# $FreeBSD: ports/devel/libdap/Makefile,v 1.16 2013/02/14 10:22:09 svnexp Exp $
 
 PORTNAME=	libdap
 PORTVERSION=	3.11.7
@@ -14,11 +14,10 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		xml2:${PORTSDIR}/textproc/libxml2
 
-CFLAGS+=	${PTHREAD_CFLAGS}
 CONFIGURE_ARGS=	--with-zlib=/usr
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack
 USE_LDCONFIG=	yes
