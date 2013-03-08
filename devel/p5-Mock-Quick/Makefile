@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Mock-Quick
-# Date Created:				17 Feb, 2011
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Mock-Quick/Makefile,v 1.9 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: ports/devel/p5-Mock-Quick/Makefile,v 1.10 2013/01/31 16:52:36 svnexp Exp $
 
 PORTNAME=	Mock-Quick
-PORTVERSION=	1.104
+PORTVERSION=	1.105
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:EXODIST
