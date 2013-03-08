@@ -1,0 +1,38 @@
+--- plugin/Makefile.in.orig	2011-02-14 08:52:57.000000000 -0500
++++ plugin/Makefile.in	2011-03-02 09:02:20.000000000 -0500
+@@ -12,6 +12,10 @@
+ INSTALL = @INSTALL@
+ LN = @LN_S@
+ 
++CPPFLAGS = @CPPFLAGS@
++LDFLAGS = @LDFLAGS@
++INTL_LIBS = @LTLIBINTL@
++
+ build_gui = @build_gui@
+ build_mailer = @build_mailer@
+ have_odbc = @have_odbc@
+@@ -198,7 +202,7 @@
+ 
+ override CFLAGS += $(GRETLINC) $(GTK_CFLAGS) $(GMP_CFLAGS) $(MPFR_CFLAGS) \
+ 	$(XML_CFLAGS) $(GRETL_LIBOLE2_CFLAGS) $(ZIP_CFLAGS) $(AUDIO_CFLAGS) \
+-	$(ODBC_CFLAGS) -I. 
++	$(ODBC_CFLAGS) -I. $(CPPFLAGS)
+ 
+ %.lo: %.c
+ 	$(CCECHO)
+@@ -340,13 +344,13 @@
+ .PHONY: 
+ 
+ install: $(GRETLLIB) $(PLUGINS) $(URCDATA) $(DWDATA) installdirs 
+-	$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) \
++	$(LIBTOOL) --mode=install $(INSTALL_DATA) \
+ 	$(PLUGINS) $(DESTDIR)$(plugindir)
+ 	$(INSTALL_DATA) $(URCDATA) $(DESTDIR)$(plugindir)/data
+ 	$(INSTALL_DATA) $(DWDATA) $(DESTDIR)$(plugindir)/data
+ 
+ install-strip: $(GRETLLIB) $(PLUGINS) installdirs
+-	$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) -s \
++	$(LIBTOOL) --mode=install $(INSTALL_DATA) -s \
+ 	$(PLUGINS) $(DESTDIR)$(plugindir)
+ 
+ installdirs:
