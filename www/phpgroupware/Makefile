@@ -1,8 +1,4 @@
-# New ports collection makefile for:	phpgroupware
-# Date created:        27 March 2001
-# Whom:                Jimmy Olgeni <olgeni@uli.it>
-#
-# $FreeBSD: ports/www/phpgroupware/Makefile,v 1.3 2012/11/17 06:02:57 svnexp Exp $
+# $FreeBSD: ports/www/phpgroupware/Makefile,v 1.4 2013/01/26 15:07:29 svnexp Exp $
 
 PORTNAME=	phpgroupware
 PORTVERSION=	0.9.16.017
