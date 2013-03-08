@@ -1,0 +1,32 @@
+# New ports collection makefile for:	mingw32-zlib
+# Date created:		3 December 2011
+# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
+#
+# $FreeBSD: ports/devel/mingw32-zlib/Makefile,v 1.5 2013/02/25 16:18:09 svnexp Exp $
+#
+
+PORTNAME=	zlib
+PORTVERSION=	1.2.7
+PORTREVISION=	1
+CATEGORIES=	devel archivers
+MASTER_SITES=	http://zlib.net/ \
+		${MASTER_SITE_SOURCEFORGE}
+MASTER_SITE_SUBDIR=	libpng/${PORTNAME}/${PORTVERSION}
+PKGNAMEPREFIX=	mingw32-
+
+MAINTAINER=	knu@FreeBSD.org
+COMMENT=	The zlib library cross-compiled for MinGW32
+
+BUILD_DEPENDS=	${PKGNAMEPREFIX}gcc:${PORTSDIR}/devel/${PKGNAMEPREFIX}gcc \
+		${LOCALBASE}/mingw32/include/sys/types.h:${PORTSDIR}/devel/${PKGNAMEPREFIX}bin-msvcrt
+
+USE_XZ=		yes
+USE_GMAKE=	yes
+MAKEFILE=	win32/Makefile.gcc
+MAKE_ARGS=	PREFIX=${PKGNAMEPREFIX} \
+		BINARY_PATH=${CROSS_BASE}/bin \
+		INCLUDE_PATH=${CROSS_BASE}/include \
+		LIBRARY_PATH=${CROSS_BASE}/lib
+CROSS_BASE=	${PREFIX}/mingw32
+
+.include <bsd.port.mk>
