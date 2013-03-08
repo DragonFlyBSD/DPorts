@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tinyerp
-# Date created:		22 February 2006
-# Whom:			Jordi Haarman
-#
-# $FreeBSD: ports/finance/tinyerp-server/Makefile,v 1.11 2012/11/17 05:57:26 svnexp Exp $
-#
+# Created by: Jordi Haarman
+# $FreeBSD: ports/finance/tinyerp-server/Makefile,v 1.13 2013/01/27 11:52:33 svnexp Exp $
 
 PORTNAME=	tinyerp-server
 PORTVERSION=	3.2.1
@@ -14,8 +10,11 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}			\
 MASTER_SITE_SUBDIR=	thierry
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	jhaarman-keyword-tinyerpPort.fd583c@projects.synantics.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source application ERP & CRM in Python using Postgresql
+
+DEPRECATED=	No more upstream, no more public distfiles, consider using finance/openerp-server
+EXPIRATION_DATE=	2013-02-27
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging \
 		${PYTHON_SITELIBDIR}/libxml2.py:${PORTSDIR}/textproc/py-libxml2 \
