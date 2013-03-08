@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MooX-Types-MooseLike/Makefile,v 1.12 2012/12/04 09:55:55 svnexp Exp $
+# $FreeBSD: ports/devel/p5-MooX-Types-MooseLike/Makefile,v 1.13 2013/02/18 19:08:24 svnexp Exp $
 
 PORTNAME=	MooX-Types-MooseLike
-PORTVERSION=	0.16
+PORTVERSION=	0.21
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
