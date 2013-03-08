@@ -1,9 +1,4 @@
-# New ports collection makefile for:	gdesklets-recentlyused
-# Date created:				02 September 2003
-# Whom:					Mezz <mezz7@cox.net>
-#
-# $FreeBSD: ports/deskutils/gdesklets-recentlyused/Makefile,v 1.20 2012/11/17 05:55:27 svnexp Exp $
-#
+# $FreeBSD: ports/deskutils/gdesklets-recentlyused/Makefile,v 1.21 2012/12/31 17:20:08 svnexp Exp $
 
 PORTNAME=	recentlyused
 PORTVERSION=	0.6
