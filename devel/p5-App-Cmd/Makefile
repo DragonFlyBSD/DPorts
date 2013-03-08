@@ -1,8 +1,8 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/devel/p5-App-Cmd/Makefile,v 1.10 2012/11/17 05:56:04 svnexp Exp $
+# $FreeBSD: ports/devel/p5-App-Cmd/Makefile,v 1.12 2013/02/01 10:41:49 svnexp Exp $
 
 PORTNAME=	App-Cmd
-PORTVERSION=	0.318
+PORTVERSION=	0.320
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -18,7 +18,6 @@ BUILD_DEPENDS=	p5-Capture-Tiny>=0.13:${PORTSDIR}/devel/p5-Capture-Tiny \
 		p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter \
 		p5-Sub-Install>=0:${PORTSDIR}/devel/p5-Sub-Install
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 PERL_CONFIGURE=	yes
