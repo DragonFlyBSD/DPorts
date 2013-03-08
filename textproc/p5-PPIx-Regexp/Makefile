@@ -2,11 +2,11 @@
 # Date created:		2010-05-25
 # Whom:			Ashish SHUKLA <wahjava@gmail.com>
 #
-# $FreeBSD: ports/textproc/p5-PPIx-Regexp/Makefile,v 1.15 2012/11/17 06:02:06 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-PPIx-Regexp/Makefile,v 1.16 2013/01/20 18:06:04 svnexp Exp $
 #
 
 PORTNAME=	PPIx-Regexp
-PORTVERSION=	0.028
+PORTVERSION=	0.029
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:WYANT
