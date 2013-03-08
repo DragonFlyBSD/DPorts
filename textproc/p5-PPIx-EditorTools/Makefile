@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/textproc/p5-PPIx-EditorTools/Makefile,v 1.10 2013/01/19 04:20:46 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-PPIx-EditorTools/Makefile,v 1.11 2013/02/13 06:44:08 svnexp Exp $
 
 PORTNAME=	PPIx-EditorTools
 PORTVERSION=	0.18
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SZABGAB
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	linpc@cs.nctu.edu.tw
+MAINTAINER=	pclin@FreeBSD.org
 COMMENT=	Utility methods and base class for manipulating Perl via PPI
 
 LICENSE=	ART10 GPLv1
