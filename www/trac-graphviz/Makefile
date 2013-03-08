@@ -1,5 +1,4 @@
-# Created by: Brooks Davis <brooks@freebsd.org>
-# $FreeBSD: ports/www/trac-graphviz/Makefile,v 1.11 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-graphviz/Makefile 313115 2013-02-28 17:06:36Z brooks $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.7.4
@@ -10,7 +9,7 @@ MASTER_SITE_SUBDIR=	brooks
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphviz plugin for Trac's wiki
 
 RUN_DEPENDS+=	${LOCALBASE}/lib/X11/fonts/URW/fonts.dir:${PORTSDIR}/x11-fonts/urwfonts \
