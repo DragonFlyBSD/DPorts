@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DBM-Deep
-# Date created:		09 August 2004
-# Whom:	      		Janos.Mohacsi@bsd.hu
-#
-# $FreeBSD: ports/databases/p5-DBM-Deep/Makefile,v 1.17 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: Janos.Mohacsi@bsd.hu
+# $FreeBSD: ports/databases/p5-DBM-Deep/Makefile,v 1.18 2013/01/09 20:04:28 svnexp Exp $
 
 PORTNAME=	DBM-Deep
 PORTVERSION=	2.0008
@@ -11,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	janos.mohacsi@bsd.hu
+MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	A pure perl persistent multi-level hash/array DBM
 
 BUILD_DEPENDS=	p5-Clone>=0:${PORTSDIR}/devel/p5-Clone \
