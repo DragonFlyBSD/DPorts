@@ -1,8 +1,8 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: ports/irc/py-irc/Makefile,v 1.2 2013/01/18 08:08:30 svnexp Exp $
+# $FreeBSD: ports/irc/py-irc/Makefile,v 1.3 2013/02/19 09:45:21 svnexp Exp $
 
 PORTNAME=	irc
-PORTVERSION=	8.0
+PORTVERSION=	8.0.1
 CATEGORIES=	irc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
