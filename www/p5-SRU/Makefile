@@ -1,12 +1,8 @@
-# New ports collection makefile for:	SRU
-# Date created:				23 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-SRU/Makefile,v 1.12 2012/11/17 06:02:53 svnexp Exp $
-#
+# $FreeBSD: ports/www/p5-SRU/Makefile,v 1.13 2013/01/23 16:48:23 svnexp Exp $
 
 PORTNAME=	SRU
-PORTVERSION=	0.99
+PORTVERSION=	1.00
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BRICAS
