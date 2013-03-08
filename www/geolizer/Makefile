@@ -1,9 +1,5 @@
-# New ports collection makefile for:    geolizer
-# Date created:         23 July 2004
-# Whom:                 ache@FreeBSD.org
-#
-# $FreeBSD: ports/www/geolizer/Makefile,v 1.12 2012/11/17 06:02:34 svnexp Exp $
-#
+# Created by: ache@FreeBSD.org
+# $FreeBSD: ports/www/geolizer/Makefile,v 1.13 2013/01/26 16:56:13 svnexp Exp $
 
 CATEGORIES=
 
