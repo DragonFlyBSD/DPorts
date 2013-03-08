@@ -1,13 +1,8 @@
-# New ports collection makefile for:	py-relatorio
-# Date created:		23 April,2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/print/py-relatorio/Makefile,v 1.10 2012/11/17 06:00:54 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: ports/print/py-relatorio/Makefile,v 1.11 2013/02/15 15:03:52 svnexp Exp $
 
 PORTNAME=	relatorio
-PORTVERSION=	0.5.6
-PORTREVISION=	1
+PORTVERSION=	0.5.7
 CATEGORIES=	print python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
