@@ -2,10 +2,11 @@
 # Date created:			Sun Aug 4 19:31:17 CEST 2002
 # Whom:				Clement Laforet <sheepkiller@cultdeadsheep.org>
 #
-# $FreeBSD: ports/security/prelude-manager/Makefile,v 1.72 2012/12/15 22:28:08 svnexp Exp $
+# $FreeBSD: ports/security/prelude-manager/Makefile,v 1.73 2013/02/05 16:54:25 svnexp Exp $
 
 PORTNAME=	prelude-manager
 PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.prelude-ids.org/attachments/download/243/
 
