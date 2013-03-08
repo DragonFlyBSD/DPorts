@@ -1,20 +1,20 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/py-seqdiag/Makefile,v 1.23 2012/11/18 05:38:31 svnexp Exp $
+# $FreeBSD: ports/graphics/py-seqdiag/Makefile,v 1.24 2013/02/11 02:50:27 svnexp Exp $
 
 PORTNAME=	seqdiag
-PORTVERSION=	0.8.1
+PORTVERSION=	0.8.2
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	tota@FreeBSD.org
-COMMENT=	A simple sequence-diagram image generator
+COMMENT=	Simple sequence-diagram image generator
 
 LICENSE=	AL2
 
 RUN_DEPENDS=	${PKGNAMEPREFIX}imaging>=1.1.5:${PORTSDIR}/graphics/py-imaging \
 		${PKGNAMEPREFIX}funcparserlib>=0.3.4:${PORTSDIR}/devel/py-funcparserlib \
-		${PKGNAMEPREFIX}blockdiag>=1.2.0:${PORTSDIR}/graphics/py-blockdiag
+		${PKGNAMEPREFIX}blockdiag>=1.2.4:${PORTSDIR}/graphics/py-blockdiag
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
@@ -27,8 +27,10 @@ MAN1=	${PORTNAME}.1
 PORTDOCS=	README.txt
 PORTEXAMPLES=	*
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${INSTALL_WRKSRC}/src/${PORTDOCS} ${DOCSDIR}
 .endif
