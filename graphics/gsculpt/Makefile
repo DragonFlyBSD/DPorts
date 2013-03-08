@@ -1,14 +1,9 @@
-# New ports collection makefile for:	gSculpt
-# Date created:			Oct 10, 2001
-# Whom:				ijliao
-#
-# $Carpetsmoker: ports/graphics/gsculpt/Makefile,v 1.4 2007/08/02 13:13:45 carpetsmoker Exp $
-# $FreeBSD: ports/graphics/gsculpt/Makefile,v 1.40 2012/11/17 05:58:09 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/graphics/gsculpt/Makefile,v 1.41 2013/01/31 14:01:28 svnexp Exp $
 
 PORTNAME=	gsculpt
 PORTVERSION=	0.99.47
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTNAME:S,-src,,}
 DISTNAME=	gSculpt-${PORTVERSION}-alpha-src
@@ -18,7 +13,7 @@ COMMENT=	An Opensource 3D modelling application
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	boost_python.4:${PORTSDIR}/devel/boost-python-libs
+LIB_DEPENDS=	boost_python:${PORTSDIR}/devel/boost-python-libs
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}opengl>0:${PORTSDIR}/graphics/py-opengl \
 		${PYTHON_PKGNAMEPREFIX}gtkglext>0:${PORTSDIR}/x11-toolkits/py-gtkglext
 
