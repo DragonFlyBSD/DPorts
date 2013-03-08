@@ -1,9 +1,5 @@
-# New ports collection makefile for: py-requests
-# Date created:		2011-07-30
-# Whom:		Olivier Duchateau <duchateau.olivier@gmail.com>
-#
-# $FreeBSD: ports/www/py-requests/Makefile,v 1.24 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
+# $FreeBSD: ports/www/py-requests/Makefile,v 1.25 2013/02/09 15:59:54 svnexp Exp $
 
 PORTNAME=	requests
 PORTVERSION=	0.14.1
@@ -11,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	HTTP library written in Python for human beings
 
 LICENSE=	ISCL
