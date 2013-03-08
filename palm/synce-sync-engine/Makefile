@@ -2,7 +2,7 @@
 # Date created:				27 September 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/palm/synce-sync-engine/Makefile,v 1.7 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: ports/palm/synce-sync-engine/Makefile,v 1.8 2013/02/20 16:45:25 svnexp Exp $
 
 PORTNAME?=	sync-engine
 PORTVERSION=	0.14
@@ -10,7 +10,7 @@ CATEGORIES?=	palm
 MASTER_SITES=	SF/synce/SynCE/${PORTVERSION}
 DISTNAME=	synce-sync-engine-${PORTVERSION}
 
-MAINTAINER?=	avl@FreeBSD.org
+MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	Synchronization Engine for Windows Mobile devices
 
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus \
