@@ -1,12 +1,8 @@
-# Ports collection makefile for:	py-wtforms
-# Date created:				14 April 2012
-# Whom:					Moggie <moggie@elasticmind.net>
-#
-# $FreeBSD: ports/textproc/py-wtforms/Makefile,v 1.2 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: Moggie <moggie@elasticmind.net>
+# $FreeBSD: ports/textproc/py-wtforms/Makefile,v 1.3 2013/02/06 07:41:39 svnexp Exp $
 
 PORTNAME=	WTForms
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.3
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
