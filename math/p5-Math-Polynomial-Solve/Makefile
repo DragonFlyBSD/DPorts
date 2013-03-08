@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/math/p5-Math-Polynomial-Solve/Makefile,v 1.14 2012/12/28 10:49:13 svnexp Exp $
+# $FreeBSD: ports/math/p5-Math-Polynomial-Solve/Makefile,v 1.15 2013/01/31 09:45:21 svnexp Exp $
 
 PORTNAME=	Math-Polynomial-Solve
-PORTVERSION=	2.65
+PORTVERSION=	2.66
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Math
