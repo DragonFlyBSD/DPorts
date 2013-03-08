@@ -2,7 +2,7 @@
 # Date created:				01 April 2007
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/devel/rubygem-analogger/Makefile,v 1.10 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: devel/rubygem-analogger/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 PORTNAME=	analogger
 PORTVERSION=	0.5.0
