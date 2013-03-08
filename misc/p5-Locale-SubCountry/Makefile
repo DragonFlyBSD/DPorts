@@ -1,8 +1,8 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: ports/misc/p5-Locale-SubCountry/Makefile,v 1.27 2013/01/18 10:29:20 svnexp Exp $
+# $FreeBSD: ports/misc/p5-Locale-SubCountry/Makefile,v 1.30 2013/02/15 10:11:43 svnexp Exp $
 
 PORTNAME=	Locale-SubCountry
-PORTVERSION=	1.57
+PORTVERSION=	1.61
 CATEGORIES=	misc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
