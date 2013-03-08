@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-grequests
-# Date created:		2012-05-31
-# Whom:			koobs <koobs.freebsd@gmail.com>
-#
-# $FreeBSD: ports/www/py-grequests/Makefile,v 1.2 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/www/py-grequests/Makefile,v 1.3 2013/02/09 15:59:54 svnexp Exp $
 
 PORTNAME=	grequests
 PORTVERSION=	0.1.0
@@ -11,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Pythons Requests + Gevent
 
 LICENSE=	BSD
