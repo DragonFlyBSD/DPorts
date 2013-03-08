@@ -2,11 +2,11 @@
 # Date created:				26 December 2009
 # Whom:					Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/security/pam_ssh_agent_auth/Makefile,v 1.5 2012/11/17 06:01:14 svnexp Exp $
+# $FreeBSD: ports/security/pam_ssh_agent_auth/Makefile,v 1.7 2013/02/19 18:31:42 svnexp Exp $
 #
 
 PORTNAME=	pam_ssh_agent_auth
-PORTVERSION=	0.9.3
+PORTVERSION=	0.9.4
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	SF/pamsshagentauth/${PORTNAME}/v${PORTVERSION}/
