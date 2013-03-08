@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-setproctitle
-# Date created:		2010-03-12
-# Whom:			Sofian Brabez <sbrabez@gmail.com>
-#
-# $FreeBSD: ports/devel/py-setproctitle/Makefile,v 1.10 2012/11/17 05:56:50 svnexp Exp $
-#
+# Created by: Sofian Brabez <sbrabez@gmail.com>
+# $FreeBSD: ports/devel/py-setproctitle/Makefile,v 1.11 2013/02/25 10:44:30 svnexp Exp $
 
 PORTNAME=	setproctitle
-PORTVERSION=	1.1.6
+PORTVERSION=	1.1.7
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,8 +19,10 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/${PORTNAME}.so
 
 PORTDOCS=	COPYRIGHT HISTORY.rst README.rst
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
