@@ -1,14 +1,14 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: ports/devel/p5-Module-CoreList/Makefile,v 1.66 2012/12/26 15:25:24 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Module-CoreList/Makefile,v 1.68 2013/02/21 09:44:55 svnexp Exp $
 
 PORTNAME=	Module-CoreList
-PORTVERSION=	2.79
+PORTVERSION=	2.82
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	See what modules shipped with versions of perl
+COMMENT=	See what modules shipped with versions of Perl
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
