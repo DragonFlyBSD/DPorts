@@ -1,7 +1,8 @@
-# $FreeBSD: ports/games/speakinghangman/Makefile,v 1.2 2012/11/17 05:57:53 svnexp Exp $
+# $FreeBSD: ports/games/speakinghangman/Makefile,v 1.4 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	speakinghangman
 PORTVERSION=	1.0.0
+PORTREVISION=	1
 CATEGORIES=	games java
 MASTER_SITES=	http://www.athenasoft.net/hangman/ \
 		http://www.athenasoft.net/assets/images/hangman/:icons
@@ -28,9 +29,9 @@ SUB_FILES=	${PORTNAME}
 
 DESKTOP_ENTRIES="Speaking Hangman" \
 		"Educational game to practice and expand English and Spanish" \
-		"${PORTNAME}.png" \
+		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
 		"${PORTNAME}" \
-		"Game;LogicGame;" \
+		"Game;Education;Languages;" \
 		false
 
 do-install:
