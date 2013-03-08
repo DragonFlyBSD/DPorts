@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Compress-Snappy
-# Date created:		2012-01-07
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/archivers/p5-Compress-Snappy/Makefile,v 1.3 2012/11/17 05:54:22 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: archivers/p5-Compress-Snappy/Makefile 313265 2013-03-02 15:46:05Z sunpoet $
 
 PORTNAME=	Compress-Snappy
 PORTVERSION=	0.19
@@ -23,10 +19,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Compress::Snappy.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.82:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
