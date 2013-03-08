@@ -1,9 +1,4 @@
-# New ports collection makefile for:	check_postgres_replication
-# Date created:		2011-06-10
-# Whom:			Brooks Davis <brooks@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/nagios-check_postgres_replication/Makefile,v 1.2 2012/11/17 05:55:12 svnexp Exp $
-#
+# $FreeBSD: databases/nagios-check_postgres_replication/Makefile 313119 2013-02-28 17:28:09Z brooks $
 
 PORTNAME=	check_postgres_replication
 PORTVERSION=	2010.12.16
@@ -15,7 +10,7 @@ PKGNAMEPREFIX=	nagios-
 DISTNAME=	check_postgres_replication.py
 EXTRACT_SUFX=
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	paul@it.ca
 COMMENT=	Nagios plugin to check the lag between a postgresql replica and master
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nagiosplugin>=0:${PORTSDIR}/sysutils/py-nagiosplugin \
