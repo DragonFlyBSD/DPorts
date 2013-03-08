@@ -1,14 +1,9 @@
-# New ports collection makefile for:	gnote
-# Date created:				20 July 2009
-# Whom:					Mezz <mezz@FreeBSD.org>
-#
-# $FreeBSD: ports/deskutils/gnote/Makefile,v 1.16 2012/12/10 19:23:59 svnexp Exp $
+# $FreeBSD: ports/deskutils/gnote/Makefile,v 1.18 2013/01/31 14:01:26 svnexp Exp $
 #   $MCom: ports/deskutils/gnote/Makefile,v 1.14 2010/11/15 16:21:49 kwm Exp $
-#
 
 PORTNAME=	gnote
 PORTVERSION=	0.7.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -21,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24 \
 		pcre.3:${PORTSDIR}/devel/pcre \
 		gtkspell.0:${PORTSDIR}/textproc/gtkspell \
-		boost_filesystem.4:${PORTSDIR}/devel/boost-libs \
+		boost_filesystem:${PORTSDIR}/devel/boost-libs \
 		uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 USE_GMAKE=	yes
