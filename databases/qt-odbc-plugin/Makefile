@@ -3,7 +3,7 @@
 # Date created:                         	31 December 2003
 # Whom:					Michael Nottebrock <lofi@freebsd.org>
 #
-# $FreeBSD: ports/databases/qt-odbc-plugin/Makefile,v 1.23 2012/11/17 05:55:23 svnexp Exp $
+# $FreeBSD: ports/databases/qt-odbc-plugin/Makefile,v 1.24 2012/12/30 18:55:44 svnexp Exp $
 #
 
 PORTNAME=	qt-${DB}-plugin
@@ -22,6 +22,9 @@ DB=		odbc
 LIB_DEPENDS+=	odbc:${PORTSDIR}/databases/unixODBC \
 		qt-mt:${PORTSDIR}/x11-toolkits/qt33
 BUILD_DEPENDS=	unixODBC>=2.2.14_1:${PORTSDIR}/databases/unixODBC
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_BZIP2=	yes
 PLUGIN=		plugins/src/sqldrivers/${DB}
