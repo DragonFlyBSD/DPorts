@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hobbes-icons-xpm3
-# Date created:		19 October 1996
-# Whom:			pgs
-#
-# $FreeBSD: ports/graphics/hobbes-icons-xpm/Makefile,v 1.26 2012/11/17 05:58:09 svnexp Exp $
-#
+# Created by: pgs
+# $FreeBSD: ports/graphics/hobbes-icons-xpm/Makefile,v 1.27 2013/01/26 16:56:10 svnexp Exp $
 
 PORTNAME=	hobbes-icons-xpm3
 PORTVERSION=	1.0
