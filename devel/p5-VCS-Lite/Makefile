@@ -1,19 +1,16 @@
-# ex:ts=8
-# Ports collection makefile for:	VCS::Lite
-# Date created:			Jan 2, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/p5-VCS-Lite/Makefile,v 1.6 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/devel/p5-VCS-Lite/Makefile,v 1.7 2013/01/22 08:14:11 svnexp Exp $
 
 PORTNAME=	VCS-Lite
-PORTVERSION=	0.09
+PORTVERSION=	0.10
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Minimal version control system
+
+LICENSE=	ART20
 
 BUILD_DEPENDS=	p5-Algorithm-Diff>=1.13:${PORTSDIR}/devel/p5-Algorithm-Diff
 RUN_DEPENDS:=	${BUILD_DEPENDS}
