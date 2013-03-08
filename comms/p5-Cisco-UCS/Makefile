@@ -1,15 +1,15 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: ports/comms/p5-Cisco-UCS/Makefile,v 1.3 2012/11/27 15:51:54 svnexp Exp $
+# $FreeBSD: comms/p5-Cisco-UCS/Makefile 313216 2013-03-02 08:27:18Z culot $
 
 PORTNAME=	Cisco-UCS
-PORTVERSION=	0.29
+PORTVERSION=	0.30
 PORTEPOCH=	1
 CATEGORIES=	comms perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	snowfly@yuntech.edu.tw
-COMMENT=	A Perl interface to the Cisco UCS XML API
+COMMENT=	Perl interface to the Cisco UCS XML API
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
