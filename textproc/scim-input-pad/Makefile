@@ -2,12 +2,12 @@
 # Date created:		2005/05/06
 # Whom:			chinsan	<chinsan@mail2000.com.tw>
 #
-# $FreeBSD: ports/textproc/scim-input-pad/Makefile,v 1.31 2012/11/17 06:02:21 svnexp Exp $
+# $FreeBSD: ports/textproc/scim-input-pad/Makefile,v 1.32 2013/01/23 15:05:38 svnexp Exp $
 #
 
 PORTNAME=	scim-input-pad
 PORTVERSION=	0.1.3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	SF/scim/${PORTNAME}/0.1.3/ \
 		http://anthesphoria.net/FreeBSD/ports/distfiles/
