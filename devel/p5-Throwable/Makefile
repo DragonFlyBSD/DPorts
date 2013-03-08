@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/devel/p5-Throwable/Makefile,v 1.7 2012/12/20 09:27:28 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Throwable/Makefile,v 1.8 2013/02/24 16:47:21 svnexp Exp $
 
 PORTNAME=	Throwable
-PORTVERSION=	0.200003
+PORTVERSION=	0.200004
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RJBS
