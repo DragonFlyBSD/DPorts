@@ -1,5 +1,5 @@
-# Created by:	Barbara Guida <bar@FreeBSD.org>
-# $FreeBSD: ports/www/xpi-clear_cache_button/Makefile,v 1.5 2012/12/01 14:51:43 svnexp Exp $
+# Created by: Barbara Guida <bar@FreeBSD.org>
+# $FreeBSD: ports/www/xpi-clear_cache_button/Makefile,v 1.6 2013/01/20 12:56:08 svnexp Exp $
 
 PORTNAME=	clear_cache_button
 PORTVERSION=	0.9f
