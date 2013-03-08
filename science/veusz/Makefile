@@ -2,12 +2,12 @@
 # Date created:		04 Jan 2011
 # Whom:			Stas Timokhin <devel@stasyan.com>
 #
-# $FreeBSD: ports/science/veusz/Makefile,v 1.6 2012/11/17 06:01:00 svnexp Exp $
+# $FreeBSD: ports/science/veusz/Makefile,v 1.7 2013/02/03 22:43:59 svnexp Exp $
 #
 
 PORTNAME=	veusz
 PORTVERSION=	1.12
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	science kde
 MASTER_SITES=	http://download.gna.org/veusz/
 
