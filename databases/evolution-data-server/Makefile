@@ -2,13 +2,13 @@
 # Date created:				09 December 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/evolution-data-server/Makefile,v 1.87 2012/12/30 12:10:38 svnexp Exp $
+# $FreeBSD: ports/databases/evolution-data-server/Makefile,v 1.88 2013/02/06 21:56:42 svnexp Exp $
 #   $MCom: ports/databases/evolution-data-server/Makefile,v 1.203 2010/11/15 17:19:55 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.32.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -21,7 +21,7 @@ LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		ical:${PORTSDIR}/devel/libical \
 		nss3.1:${PORTSDIR}/security/nss \
-		tasn1.4:${PORTSDIR}/security/libtasn1 \
+		tasn1.5:${PORTSDIR}/security/libtasn1 \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 
