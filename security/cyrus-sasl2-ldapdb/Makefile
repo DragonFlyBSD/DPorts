@@ -1,13 +1,10 @@
-# $FreeBSD: ports/security/cyrus-sasl2-ldapdb/Makefile,v 1.17 2012/12/10 15:19:17 svnexp Exp $
+# $FreeBSD: ports/security/cyrus-sasl2-ldapdb/Makefile,v 1.20 2013/02/17 17:24:21 svnexp Exp $
 
 PORTNAME=	ldapdb
 PORTVERSION=	2.1.26
 #PORTREVISION=	0
 CATEGORIES=	security ipv6
-MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/%SUBDIR%/ \
-		ftp://ftp.westbend.net/pub/cyrus-mail/%SUBDIR%/ \
-		http://www.transit.hanse.de/mirror/ftp.andrew.cmu.edu/pub/cyrus-mail/%SUBDIR%/
-MASTER_SITE_SUBDIR=	. OLD-VERSIONS/sasl
+MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/
 PKGNAMEPREFIX=	cyrus-sasl-
 DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
 
@@ -24,6 +21,8 @@ DISTINFO_FILE=	${CYRUS_SASL2_DIR}/distinfo
 PATCHDIR=	${CYRUS_SASL2_DIR}/files
 INSTALL_WRKSRC=	${WRKSRC}/plugins
 
+MAKE_JOBS_SAFE=	yes
+
 USE_LDCONFIG=	yes
 
 USE_AUTOTOOLS=	libtool
@@ -38,6 +37,7 @@ USE_OPENLDAP=	yes
 CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 		--with-plugindir=${PREFIX}/lib/sasl2 \
 		--with-dbpath=${PREFIX}/etc/sasldb2 \
+		--with-lib-subdir=lib \
 		--includedir=${PREFIX}/include \
 		--enable-static \
 		--with-rc4=openssl
