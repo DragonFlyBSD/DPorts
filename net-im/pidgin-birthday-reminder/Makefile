@@ -2,7 +2,7 @@
 # Date created:				11 April 2009
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/net-im/pidgin-birthday-reminder/Makefile,v 1.23 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: ports/net-im/pidgin-birthday-reminder/Makefile,v 1.24 2013/02/20 16:45:25 svnexp Exp $
 #
 
 PORTNAME=	pidgin-birthday-reminder
@@ -11,7 +11,7 @@ PORTREVISION=	4
 CATEGORIES=	net-im
 MASTER_SITES=	http://launchpadlibrarian.net/56075754/
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The birthday reminder for Pidgin
 
 LIB_DEPENDS=	purple.10:${PORTSDIR}/net-im/libpurple
