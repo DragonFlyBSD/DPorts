@@ -2,7 +2,7 @@
 # Date created:		12 Oct 2006
 # Whom:			Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/security/aolserver-nsmcrypt/Makefile,v 1.12 2012/11/17 06:01:00 svnexp Exp $
+# $FreeBSD: ports/security/aolserver-nsmcrypt/Makefile,v 1.13 2013/02/06 19:12:36 svnexp Exp $
 #
 
 PORTNAME=	nsmcrypt
@@ -33,7 +33,6 @@ USE_GMAKE=	yes
 MAKEFILE=	Makefile.ns
 
 USE_TCL=	84+
-USE_TCL_THREADS=	yes
 
 PLIST_FILES=	${AOLSERVERBASE}/bin/nsmcrypt.so \
 		${AOLSERVERBASE}/lib/libnsmcrypt.a \
