@@ -1,7 +1,7 @@
-# $FreeBSD: ports/databases/p5-DBIx-Class-DeploymentHandler/Makefile,v 1.10 2013/01/14 11:42:15 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-Class-DeploymentHandler/Makefile 313336 2013-03-03 10:14:17Z kuriyama $
 
 PORTNAME=	DBIx-Class-DeploymentHandler
-PORTVERSION=	0.002204
+PORTVERSION=	0.002205
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
