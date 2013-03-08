@@ -1,13 +1,15 @@
-@comment $FreeBSD: ports/databases/openark-kit/pkg-plist,v 1.3 2012/11/17 05:55:12 svnexp Exp $
+@comment $FreeBSD: ports/databases/openark-kit/pkg-plist,v 1.4 2013/02/08 12:33:07 svnexp Exp $
 bin/oak-apply-ri
 bin/oak-block-account
 bin/oak-chunk-update
 bin/oak-get-slave-lag
+bin/oak-hook-general-log
 bin/oak-kill-slow-queries
 bin/oak-modify-charset
 bin/oak-online-alter-table
 bin/oak-prepare-shutdown
 bin/oak-purge-master-logs
+bin/oak-repeat-query
 bin/oak-security-audit
 bin/oak-show-limits
 bin/oak-show-replication-status
