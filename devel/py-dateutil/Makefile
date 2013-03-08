@@ -1,22 +1,26 @@
-# New ports collection makefile for:	py-datetime
-# Date created:		Sun May  8 06:34:45 UTC 2005
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-dateutil/Makefile,v 1.16 2012/11/17 05:56:45 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: ports/devel/py-dateutil/Makefile,v 1.17 2013/01/24 07:51:55 svnexp Exp $
 
 PORTNAME=	dateutil
-PORTVERSION=	1.5
+PORTVERSION=	2.1
 CATEGORIES=	devel python
-MASTER_SITES=	http://labix.org/download/python-dateutil/
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	python-dateutil-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Provides powerful extensions to the standard datetime module
 
-USE_PYTHON=		yes
+LICENSE=	BSD
+
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six
+RUN_DEPENDS+=	${BUILD_DEPENDS}
+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	python-dateutil
+
+regression-test: build
+	@cd ${WRKSRC} && ${PYTHON_CMD} test.py
 
 .include <bsd.port.mk>
