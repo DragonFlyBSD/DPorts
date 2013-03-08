@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/databases/p5-ORLite/Makefile,v 1.19 2013/01/01 19:59:00 svnexp Exp $
+# $FreeBSD: ports/databases/p5-ORLite/Makefile,v 1.20 2013/02/13 06:44:02 svnexp Exp $
 
 PORTNAME=	ORLite
 PORTVERSION=	1.98
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ADAMK
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	linpc@cs.nctu.edu.tw
+MAINTAINER=	pclin@FreeBSD.org
 COMMENT=	Perl5 extremely light weight SQLite-specific ORM
 
 BUILD_DEPENDS:=	p5-DBI>=1.60.7:${PORTSDIR}/databases/p5-DBI \
