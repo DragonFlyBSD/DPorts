@@ -1,18 +1,15 @@
-# New ports collection makefile for: libdssialsacompat
-# Date created: 14 July 2006
-# Whom:	mahonmesr@googlemail.com
-#
-# $FreeBSD: ports/audio/libdssialsacompat/Makefile,v 1.7 2012/11/17 05:54:36 svnexp Exp $
-#
+# Created by: mahonmesr@googlemail.com
+# $FreeBSD: ports/audio/libdssialsacompat/Makefile,v 1.10 2013/02/15 04:11:05 svnexp Exp $
 
 PORTNAME=	libdssialsacompat
 PORTVERSION=	1.0.8a
 CATEGORIES=	audio
-MASTER_SITES=	http://www.smbolton.com/linux/
+MASTER_SITES=	http://smbolton.com/linux/
 
-MAINTAINER=	freebsd-ports@coreland.ath.cx
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Alsa compatibility library to build DSSI
 
+FETCH_ARGS?=	-Fpr
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
