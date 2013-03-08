@@ -1,8 +1,8 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Test-Compile/Makefile,v 1.10 2012/11/17 14:58:16 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Test-Compile/Makefile,v 1.12 2013/02/22 17:43:02 svnexp Exp $
 
 PORTNAME=	Test-Compile
-PORTVERSION=	0.22
+PORTVERSION=	0.24
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:EGILES
