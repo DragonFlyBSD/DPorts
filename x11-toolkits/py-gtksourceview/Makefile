@@ -1,10 +1,5 @@
-# New ports collection makefile for:	py-gtksourceview
-# Date created:				25 June 2007
-# Whom:					Mezz <mezz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/py-gtksourceview/Makefile,v 1.15 2012/11/17 06:03:38 svnexp Exp $
+# $FreeBSD: ports/x11-toolkits/py-gtksourceview/Makefile,v 1.16 2012/12/31 17:09:13 svnexp Exp $
 #   $MCom: ports/x11-toolkits/py-gtksourceview/Makefile,v 1.24 2010/04/19 11:30:28 kwm Exp $
-#
 
 PORTNAME=	gtksourceview
 PORTVERSION=	2.10.1
