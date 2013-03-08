@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: ports/graphics/cbrpager/Makefile,v 1.28 2012/12/03 17:01:18 svnexp Exp $
+# $FreeBSD: ports/graphics/cbrpager/Makefile,v 1.30 2013/01/23 15:05:35 svnexp Exp $
 
 PORTNAME=	cbrpager
 PORTVERSION=	0.9.22
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 		http://jcoppens.com/soft/cbrpager/img/:icons
@@ -30,8 +30,9 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	bin/${PORTNAME} \
 		share/pixmaps/${PORTNAME}.png
 
-DESKTOP_ENTRIES="cbrPager" "${COMMENT}" "${PORTNAME}" \
-		"${PORTNAME}" "Application;Graphics;Viewer;" true
+DESKTOP_ENTRIES="cbrPager" "Comic book viewer" \
+		"${PREFIX}/share/pixmaps/${PORTNAME}.png" \
+		"${PORTNAME}" "Graphics;Viewer;GNOME;" true
 
 .include <bsd.port.options.mk>
 
