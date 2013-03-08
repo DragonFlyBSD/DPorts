@@ -1,9 +1,5 @@
-# New ports collection makefile for:	thumbnail_index
-# Date created:		Aug 14, 2000
-# Whom:			Yoshiro MIHIRA <sanpei@FreeBSD.org>
-#
-# $FreeBSD: ports/www/thumbnail_index/Makefile,v 1.13 2012/11/17 06:03:07 svnexp Exp $
-#
+# Created by: Yoshiro MIHIRA <sanpei@FreeBSD.org>
+# $FreeBSD: ports/www/thumbnail_index/Makefile,v 1.14 2013/01/26 16:56:14 svnexp Exp $
 
 PORTNAME=	thumbnail_index
 PORTVERSION=	1998.08.10
