@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: ports/irc/p5-POE-Component-IRC/Makefile,v 1.72 2012/11/17 05:58:29 svnexp Exp $
+# $FreeBSD: ports/irc/p5-POE-Component-IRC/Makefile,v 1.73 2013/02/04 10:37:22 svnexp Exp $
 
 PORTNAME=	POE-Component-IRC
-PORTVERSION=	6.80
+PORTVERSION=	6.81
 CATEGORIES=	irc devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
@@ -66,8 +66,10 @@ MAN3=		POE::Component::IRC.3 \
 		POE::Filter::IRC.3 \
 		POE::Filter::IRC::Compat.3
 
+.include <bsd.port.options.mk>
+
 post-install:
-.ifndef(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
 .endif
