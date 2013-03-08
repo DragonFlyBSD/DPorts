@@ -1,13 +1,10 @@
-# New ports collection makefile for:	p5-Mail-SpamAssassin
-# Date created:				Nov 26 2001
-# Whom:					Anthony Kim
-#
-# $FreeBSD: ports/mail/p5-Mail-SpamAssassin/Makefile,v 1.159 2012/11/17 05:59:09 svnexp Exp $
+# Created by: Anthony Kim
+# $FreeBSD: ports/mail/p5-Mail-SpamAssassin/Makefile,v 1.161 2013/02/26 22:00:42 svnexp Exp $
 #
 
 PORTNAME=	Mail-SpamAssassin
 PORTVERSION=	3.3.2
-PORTREVISION?=	6		# committer: please bump PORTREVISION on Slaves
+PORTREVISION?=	7		# committer: please bump PORTREVISION on Slaves
 CATEGORIES?=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:S/$/:apache/} ${MASTER_SITE_PERL_CPAN:S/$/:cpan/}
 MASTER_SITE_SUBDIR=	spamassassin/source/:apache Mail/:cpan
@@ -29,8 +26,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS?=	ja-p5-Mail-SpamAssassin-[0-9]* p5-Mail-SpamAssassin-devel-[0-9]* p5-Mail-SpamAssassin-Alt-[0-9]*
 
-PERL_CONFIGURE=	yes
-USE_PERL5=	5.12+
+PERL_CONFIGURE=	5.12+
 USE_LDCONFIG=	yes
 DBDIR?=		/var/db
 ETCDIR?=	${PREFIX}/etc/mail/spamassassin
