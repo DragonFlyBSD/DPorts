@@ -1,8 +1,9 @@
 # Created by: Beech Rintoul <beech@FreeBSD.org>
-# $FreeBSD: ports/games/py-mnemosyne/Makefile,v 1.22 2013/01/10 21:22:16 svnexp Exp $
+# $FreeBSD: ports/games/py-mnemosyne/Makefile,v 1.23 2013/02/03 22:43:20 svnexp Exp $
 
 PORTNAME=	mnemosyne
 PORTVERSION=	2.2a
+PORTREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	SF/mnemosyne-proj/${PORTNAME}/${PORTNAME}-2.2
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
