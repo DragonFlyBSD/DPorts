@@ -1,12 +1,12 @@
 # Created by: whitekid@gmail.com
-# $FreeBSD: ports/www/drupal6-zeropoint/Makefile,v 1.7 2012/11/17 06:02:32 svnexp Exp $
+# $FreeBSD: www/drupal6-zeropoint/Makefile 313224 2013-03-02 11:20:15Z miwi $
 
 PORTNAME=	zeropoint
 DISTVERSION=	6.x-2.3
 PORTREVISION=	1
 CATEGORIES=	www
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	The zeropoint drupal theme
 
 USE_PHP=	ctype
