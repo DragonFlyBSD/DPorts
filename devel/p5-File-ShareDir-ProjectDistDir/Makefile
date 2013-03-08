@@ -1,12 +1,7 @@
-# New ports collection makefile for:	File::ShareDir::ProjectDistDir
-# Date created:		19 Mar 2012
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-File-ShareDir-ProjectDistDir/Makefile,v 1.4 2012/11/17 05:56:16 svnexp Exp $
-#
+# $FreeBSD: ports/devel/p5-File-ShareDir-ProjectDistDir/Makefile,v 1.5 2013/02/16 11:42:40 svnexp Exp $
 
 PORTNAME=	File-ShareDir-ProjectDistDir
-PORTVERSION=	0.3.2
+PORTVERSION=	0.4.1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
