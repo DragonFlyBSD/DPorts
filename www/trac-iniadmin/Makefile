@@ -2,7 +2,7 @@
 # Date created:                      May 18 2007
 # Whom:                              Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: ports/www/trac-iniadmin/Makefile,v 1.13 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-iniadmin/Makefile 313115 2013-02-28 17:06:36Z brooks $
 #
 
 PORTNAME=	iniadmin
@@ -13,7 +13,7 @@ MASTER_SITES=	http://people.freebsd.org/~mm/trac/
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Edit all trac.ini option via the WebAdminPlugin
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
