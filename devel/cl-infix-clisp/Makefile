@@ -1,8 +1,4 @@
-# New ports collection Makefile for:	cl-infix-clisp
-# Date created:				20 Jan 2010
-# Whom:					Jimmy Olgeni <olgeni@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/cl-infix-clisp/Makefile,v 1.4 2012/11/17 05:55:37 svnexp Exp $
+# $FreeBSD: ports/devel/cl-infix-clisp/Makefile,v 1.5 2013/01/26 15:07:24 svnexp Exp $
 
 PORTNAME=	infix
 PORTVERSION=	19960628
