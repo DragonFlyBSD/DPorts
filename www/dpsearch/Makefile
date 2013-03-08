@@ -1,5 +1,5 @@
 # Created by: Maxim Zakharov <maxime@maxime.net.ru>
-# $FreeBSD: ports/www/dpsearch/Makefile,v 1.48 2012/11/17 06:02:31 svnexp Exp $
+# $FreeBSD: ports/www/dpsearch/Makefile,v 1.49 2013/02/07 14:08:05 svnexp Exp $
 
 PORTNAME=	dpsearch
 PORTVERSION=	4.53
@@ -41,8 +41,7 @@ CONFIGURE_ENV+=	PORTNAME="${PORTNAME}"
 
 .if ${PORT_OPTIONS:MTHREADS}
 CONFIGURE_ARGS+=--enable-pthreads
-CFLAGS+=	${PTHREAD_CFLAGS}
-CONFIGURE_ENV+=	LIBS="${PTHREAD_LIBS}"
+CONFIGURE_ENV+=	LIBS="-pthread"
 .else
 CONFIGURE_ARGS+=--disable-pthreads
 .endif
