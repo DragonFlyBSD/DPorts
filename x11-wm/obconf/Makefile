@@ -1,9 +1,5 @@
-# New ports collection makefile for:	obconf
-# Date created:				2002-10-13
-# Whom:					trevor
-#
-# $FreeBSD: ports/x11-wm/obconf/Makefile,v 1.33 2012/11/17 06:03:43 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/x11-wm/obconf/Makefile,v 1.34 2013/01/27 06:41:43 svnexp Exp $
 
 PORTNAME=	obconf
 PORTVERSION=	2.0.3
