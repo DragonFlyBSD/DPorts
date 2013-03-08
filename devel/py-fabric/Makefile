@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: ports/devel/py-fabric/Makefile,v 1.15 2012/12/02 01:34:17 svnexp Exp $
+# $FreeBSD: ports/devel/py-fabric/Makefile,v 1.16 2013/02/09 15:59:05 svnexp Exp $
 
 PORTNAME=	fabric
 PORTVERSION=	1.5.1
@@ -9,7 +9,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	${PYDISTUTILS_PKGNAME}-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	A simple pythonic remote deployment tool
 
 LICENSE=	BSD
