@@ -1,12 +1,8 @@
-# New ports collection makefile for:	ExtUtils-PkgConfig
-# Date created:	   18 October 2003
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-ExtUtils-PkgConfig/Makefile,v 1.20 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: ports/devel/p5-ExtUtils-PkgConfig/Makefile,v 1.21 2013/02/06 15:37:02 svnexp Exp $
 
 PORTNAME=	ExtUtils-PkgConfig
-PORTVERSION=	1.13
+PORTVERSION=	1.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
