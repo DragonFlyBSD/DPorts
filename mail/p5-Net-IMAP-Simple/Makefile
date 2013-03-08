@@ -1,12 +1,8 @@
-# New ports collection makefile for:	mail/p5-Net-IMAP-Simple
-# Date created:				30 December 2004
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/p5-Net-IMAP-Simple/Makefile,v 1.27 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: ports/mail/p5-Net-IMAP-Simple/Makefile,v 1.28 2013/01/30 15:01:09 svnexp Exp $
 
 PORTNAME=	Net-IMAP-Simple
-PORTVERSION=	1.2030
+PORTVERSION=	1.2034
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JETTERO
