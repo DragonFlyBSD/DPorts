@@ -1,12 +1,9 @@
-# New ports collection makefile for:	Net-Amazon
-# Date created:	   			Oct 23 2003 \
-# Whom:		   			clsung@dragon2.net
-#
-# $FreeBSD: ports/net/p5-Net-Amazon/Makefile,v 1.41 2012/12/17 15:43:22 svnexp Exp $
+# Created by: clsung@dragon2.net
+# $FreeBSD: ports/net/p5-Net-Amazon/Makefile,v 1.42 2013/01/28 00:51:24 svnexp Exp $
 #
 
 PORTNAME=	Net-Amazon
-PORTVERSION=	0.61
+PORTVERSION=	0.62
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
