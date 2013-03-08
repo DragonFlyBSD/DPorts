@@ -1,12 +1,8 @@
-# New ports collection makefile for:	www/p5-Catalyst-View-TT
-# Date created:				04 May 2005
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-View-TT/Makefile,v 1.29 2012/11/17 06:02:48 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-View-TT/Makefile 313150 2013-03-01 11:27:32Z tobez $
 
 PORTNAME=	Catalyst-View-TT
-PORTVERSION=	0.39
+PORTVERSION=	0.41
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
