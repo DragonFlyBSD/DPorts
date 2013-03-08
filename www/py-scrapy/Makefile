@@ -1,8 +1,8 @@
 # Created by: Qing Feng <qingfeng@douban.com>
-# $FreeBSD: ports/www/py-scrapy/Makefile,v 1.7 2012/12/02 11:08:26 svnexp Exp $
+# $FreeBSD: ports/www/py-scrapy/Makefile,v 1.8 2013/02/12 16:09:05 svnexp Exp $
 
 PORTNAME=	Scrapy
-PORTVERSION=	0.16.2
+PORTVERSION=	0.16.4
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
