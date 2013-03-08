@@ -2,11 +2,11 @@
 # Date created:		23 Aug, 2009
 # Whom:			Wen Heping<wenheping@gmail.com>
 #
-# $FreeBSD: ports/devel/rubygem-deprecated/Makefile,v 1.5 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-deprecated/Makefile,v 1.6 2013/01/23 21:05:46 svnexp Exp $
 #
 
 PORTNAME=	deprecated
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
