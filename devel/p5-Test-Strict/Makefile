@@ -1,14 +1,17 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: ports/devel/p5-Test-Strict/Makefile,v 1.13 2013/01/02 08:53:47 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Strict/Makefile 313149 2013-03-01 11:21:53Z tobez $
 
 PORTNAME=	Test-Strict
-PORTVERSION=	0.17
+PORTVERSION=	0.22
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Test and report on use strict/warnings coverage
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Devel-Cover>=0.43:${PORTSDIR}/devel/p5-Devel-Cover
 RUN_DEPENDS:=	${BUILD_DEPENDS}
