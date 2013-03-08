@@ -1,12 +1,8 @@
-# New ports collection makefile for:	databases/p5-DBIx-Class-DateTime-Epoch
-# Date created:				29 Mar 2009
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-DateTime-Epoch/Makefile,v 1.11 2012/11/17 05:55:14 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: ports/databases/p5-DBIx-Class-DateTime-Epoch/Makefile,v 1.12 2013/01/21 10:05:17 svnexp Exp $
 
 PORTNAME=	DBIx-Class-DateTime-Epoch
-PORTVERSION=	0.09
+PORTVERSION=	0.10
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
