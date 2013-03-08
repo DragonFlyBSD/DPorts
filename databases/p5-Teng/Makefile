@@ -1,7 +1,7 @@
-# $FreeBSD: ports/databases/p5-Teng/Makefile,v 1.11 2013/01/14 15:03:02 svnexp Exp $
+# $FreeBSD: databases/p5-Teng/Makefile 313142 2013-03-01 07:51:12Z kuriyama $
 
 PORTNAME=	Teng
-PORTVERSION=	0.17
+PORTVERSION=	0.18
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:NEKOKAK
