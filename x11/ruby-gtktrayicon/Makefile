@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-gtktrayicon
-# Date created:		29 June 2004
-# Whom:			Hye-Shik Chang
-#
-# $FreeBSD: ports/x11/ruby-gtktrayicon/Makefile,v 1.19 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: Hye-Shik Chang
+# $FreeBSD: x11/ruby-gtktrayicon/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	gtktrayicon
 PORTVERSION=	0.1.0
@@ -16,6 +12,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby binding for GtkTrayIcon
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 BUILD_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gtk2.so:${PORTSDIR}/x11-toolkits/ruby-gtk2
 RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gtk2.so:${PORTSDIR}/x11-toolkits/ruby-gtk2
