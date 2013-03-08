@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-DBIx-Class-Candy/Makefile,v 1.4 2012/12/22 13:28:19 svnexp Exp $
+# $FreeBSD: ports/databases/p5-DBIx-Class-Candy/Makefile,v 1.5 2013/01/21 09:58:01 svnexp Exp $
 
 PORTNAME=	DBIx-Class-Candy
-PORTVERSION=	0.002102
+PORTVERSION=	0.002103
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
