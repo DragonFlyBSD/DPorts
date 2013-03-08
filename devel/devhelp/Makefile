@@ -2,7 +2,7 @@
 # Date created:				29 May 2003
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/devhelp/Makefile,v 1.52 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: ports/devel/devhelp/Makefile,v 1.53 2013/02/14 10:22:06 svnexp Exp $
 #   $MCom: ports/devel/devhelp/Makefile,v 1.38 2010/09/28 09:09:20 kwm Exp $
 
 PORTNAME=	devhelp
@@ -29,8 +29,8 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GCONF_SCHEMAS=	devhelp.schemas
-CPPFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
-LDFLAGS+=	${PTHREAD_LIBS} -L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS=		GEDIT "Enable GEdit plug-in support" off
 
