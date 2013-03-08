@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/rsyslog6-devel/Makefile,v 1.42 2012/11/17 06:01:44 svnexp Exp $
+# $FreeBSD: sysutils/rsyslog6-devel/Makefile 313088 2013-02-28 10:51:58Z gahr $
 
 PORTNAME=	rsyslog
 PORTVERSION=	6.5.0
@@ -66,7 +66,6 @@ SUB_FILES=	pkg-message
 CONFIGURE_ARGS+=	--enable-imfile --enable-mail --enable-imtemplate --enable-testbench=no
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/lib/rsyslog/|${PREFIX}/lib/rsyslog/|'\
 		${WRKSRC}/tools/syslogd.c
 	@${GREP} -rl '/etc/rsyslog.conf' ${WRKSRC}|${XARGS} ${REINPLACE_CMD} -e\
