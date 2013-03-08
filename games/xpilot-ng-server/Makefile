@@ -1,19 +1,15 @@
-# New ports collection makefile for:	xpilot-ng
-# Date created:			11 Sep 2003
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/games/xpilot-ng-server/Makefile,v 1.27 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: ports/games/xpilot-ng-server/Makefile,v 1.29 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	xpilot-ng
 PORTVERSION=	4.7.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF/xpilot/xpilot_ng/${PORTNAME}-${PORTVERSION}
 PKGNAMESUFFIX?=	-server
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT?=	An enhanced version of XPilot (server program)
+COMMENT?=	Enhanced version of XPilot (server program)
 
 LICENSE=	GPLv2
 
