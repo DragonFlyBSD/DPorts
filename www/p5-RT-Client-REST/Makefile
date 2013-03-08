@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-RT-Client-REST
-# Date created:				21 Mar 2007
-# Whom:					svysh
-#
-# $FreeBSD: ports/www/p5-RT-Client-REST/Makefile,v 1.12 2012/11/17 06:02:53 svnexp Exp $
-#
+# $FreeBSD: www/p5-RT-Client-REST/Makefile 313272 2013-03-02 16:38:36Z miwi $
 
 PORTNAME=	RT-Client-REST
 PORTVERSION=	0.43
@@ -12,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	svysh@pn.sinp.msu.ru
+MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Perl modules designed to talk to RT installation using REST protocol
 
 BUILD_DEPENDS=	p5-Error>=0:${PORTSDIR}/lang/p5-Error \
