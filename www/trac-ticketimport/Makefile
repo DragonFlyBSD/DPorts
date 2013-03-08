@@ -1,5 +1,4 @@
-# Created by: Brooks Davis <brooks@freebsd.org>
-# $FreeBSD: ports/www/trac-ticketimport/Makefile,v 1.6 2012/12/12 06:45:50 svnexp Exp $
+# $FreeBSD: www/trac-ticketimport/Makefile 313115 2013-02-28 17:06:36Z brooks $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.7c
@@ -9,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	brooks
 PKGNAMEPREFIX=	trac-
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Import or update tickets from a CSV file or Excel file
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \
