@@ -1,5 +1,5 @@
 # Created by: Po-Chien Lin <linpc@cs.nctu.edu.tw>
-# $FreeBSD: ports/devel/p5-syntax/Makefile,v 1.1 2013/01/14 03:45:01 svnexp Exp $
+# $FreeBSD: ports/devel/p5-syntax/Makefile,v 1.2 2013/02/13 06:44:03 svnexp Exp $
 
 PORTNAME=	syntax
 PORTVERSION=	0.004
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PHAYLON
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	linpc@cs.nctu.edu.tw
+MAINTAINER=	pclin@FreeBSD.org
 COMMENT=	Activate syntax extensions in Perl
 
 LICENSE=	ART10 GPLv1
