@@ -1,9 +1,4 @@
-# New ports collection makefile for:	gnome-icons-dropline-nou
-# Date created:		2008-09-29
-# Whom:			Jimmy Olgeni <olgeni@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/gnome-icons-dropline-nou/Makefile,v 1.4 2012/11/17 06:03:31 svnexp Exp $
-#
+# $FreeBSD: ports/x11-themes/gnome-icons-dropline-nou/Makefile,v 1.5 2013/01/26 15:07:30 svnexp Exp $
 
 PORTNAME=	dropline-nou
 PORTVERSION=	090208
