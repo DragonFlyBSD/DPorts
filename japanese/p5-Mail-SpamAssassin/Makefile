@@ -1,11 +1,8 @@
-# New ports collection makefile for:	ja-p5-Mail-SpamAssassin
-# Date created:				Jun 24 2007
-# Whom:					TAOKA Fumiyoshi
-#
-# $FreeBSD: ports/japanese/p5-Mail-SpamAssassin/Makefile,v 1.33 2012/11/17 05:58:38 svnexp Exp $
+# Created by: TAOKA Fumiyoshi
+# $FreeBSD: japanese/p5-Mail-SpamAssassin/Makefile 313053 2013-02-27 13:57:09Z scheidell $
 #
 
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	japanese mail perl5
 PKGNAMEPREFIX=	ja-p5-
 
