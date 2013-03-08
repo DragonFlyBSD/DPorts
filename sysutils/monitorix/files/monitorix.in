@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/monitorix/files/monitorix.in,v 1.8 2012/11/17 06:01:38 svnexp Exp $
+# $FreeBSD: sysutils/monitorix/files/monitorix.in 304448 2012-09-18 17:32:48Z crees $
 #
 # PROVIDE: monitorix
 # REQUIRE: DAEMON
