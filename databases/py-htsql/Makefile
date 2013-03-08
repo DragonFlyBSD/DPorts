@@ -1,5 +1,5 @@
 # Created by: jpaetzel
-# $FreeBSD: ports/databases/py-htsql/Makefile,v 1.12 2012/11/17 05:55:22 svnexp Exp $
+# $FreeBSD: ports/databases/py-htsql/Makefile,v 1.13 2013/02/09 15:58:53 svnexp Exp $
 
 PORTNAME=	htsql
 PORTVERSION=	2.3.2
@@ -8,7 +8,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	${PORTNAME:tu}-${PORTVERSION}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Python HTSQL
 
 USE_PYTHON=		2.6-2.7
