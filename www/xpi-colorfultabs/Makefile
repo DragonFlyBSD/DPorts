@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/www/xpi-colorfultabs/Makefile,v 1.40 2012/11/17 23:33:25 svnexp Exp $
+# $FreeBSD: ports/www/xpi-colorfultabs/Makefile,v 1.41 2013/02/04 11:21:19 svnexp Exp $
 
 PORTNAME=	colorfultabs
-PORTVERSION=	16.4
+PORTVERSION=	17.6
 DISTVERSIONSUFFIX=	-fx+sm
 PORTEPOCH=	1
 CATEGORIES=	www
