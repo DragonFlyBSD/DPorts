@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: ports/textproc/p5-XML-Feed/Makefile,v 1.34 2013/01/05 16:50:24 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-Feed/Makefile 313179 2013-03-02 02:15:03Z tobez $
 
 PORTNAME=	XML-Feed
-PORTVERSION=	0.51
+PORTVERSION=	0.52
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
