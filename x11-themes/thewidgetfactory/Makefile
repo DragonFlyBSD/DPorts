@@ -1,5 +1,4 @@
-# Created by: Jeremy Messenger <mezz@FreeBSD.org>
-# $FreeBSD: ports/x11-themes/thewidgetfactory/Makefile,v 1.11 2012/11/17 06:03:33 svnexp Exp $
+# $FreeBSD: ports/x11-themes/thewidgetfactory/Makefile,v 1.12 2012/12/31 17:09:13 svnexp Exp $
 
 PORTNAME=	thewidgetfactory
 PORTVERSION=	0.2.1
