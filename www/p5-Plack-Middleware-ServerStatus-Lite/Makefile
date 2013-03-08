@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Plack::Middleware::ServerStatus::Lite
-# Date created:		29 Jan 2012
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Plack-Middleware-ServerStatus-Lite/Makefile,v 1.7 2012/11/17 06:02:53 svnexp Exp $
-#
+# $FreeBSD: ports/www/p5-Plack-Middleware-ServerStatus-Lite/Makefile,v 1.9 2013/02/05 06:41:39 svnexp Exp $
 
 PORTNAME=	Plack-Middleware-ServerStatus-Lite
-PORTVERSION=	0.09
+PORTVERSION=	0.11
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
