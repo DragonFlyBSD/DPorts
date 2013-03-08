@@ -2,7 +2,7 @@
 # Date created:                         05 April 2002
 # Whom:                                 Lauri Watts <lauri@kde.org>
 #
-# $FreeBSD: ports/chinese/kde3-i18n-zh_CN/Makefile,v 1.51 2012/11/17 05:54:57 svnexp Exp $
+# $FreeBSD: ports/chinese/kde3-i18n-zh_CN/Makefile,v 1.52 2012/12/30 18:55:41 svnexp Exp $
 #
 
 PORTNAME=	kde-i18n
@@ -16,6 +16,9 @@ DIST_SUBDIR=	KDE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simplified Chinese messages and documentation for KDE3
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 USE_BZIP2=	yes
