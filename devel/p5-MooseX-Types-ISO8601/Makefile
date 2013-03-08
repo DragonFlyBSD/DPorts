@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-MooseX-Types-ISO8601/Makefile,v 1.5 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Types-ISO8601/Makefile 313168 2013-03-01 21:34:33Z des $
 
 PORTNAME=	MooseX-Types-ISO8601
-PORTVERSION=	0.10
+PORTVERSION=	0.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
