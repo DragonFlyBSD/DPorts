@@ -2,12 +2,12 @@
 # Date created:		Fri 19 dec 2010
 # Whom:			thierry@pompo.net
 #
-# $FreeBSD: ports/french/tvdownloader/Makefile,v 1.6 2012/11/17 05:57:28 svnexp Exp $
+# $FreeBSD: ports/french/tvdownloader/Makefile,v 1.7 2013/02/03 22:43:17 svnexp Exp $
 #
 
 PORTNAME=	tvdownloader
 PORTVERSION=	0.7.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	french multimedia
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 MASTER_SITE_SUBDIR=
