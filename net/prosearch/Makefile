@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/prosearch/Makefile,v 1.22 2012/11/17 06:00:15 svnexp Exp $
+# $FreeBSD: ports/net/prosearch/Makefile,v 1.23 2013/01/31 19:48:37 svnexp Exp $
 
 PORTNAME=	prosearch
 PORTVERSION=	0.19.2
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 SEARCHDIR?=	www/search
 PLIST_SUB+=	SEARCHDIR=${SEARCHDIR}
 
-SAMBA_PORT?=	net/samba34
+SAMBA_PORT?=	net/samba36
 
 USE_PERL5_RUN=	YES
 
