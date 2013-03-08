@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/trac-downloads/files/patch-tracdownloads_consoleadmin.py,v 1.2 2012/11/17 06:03:08 svnexp Exp $
+$FreeBSD: www/trac-downloads/files/patch-tracdownloads_consoleadmin.py 300897 2012-07-14 14:29:18Z beat $
 
 --- tracdownloads/consoleadmin.py.orig
 +++ tracdownloads/consoleadmin.py
