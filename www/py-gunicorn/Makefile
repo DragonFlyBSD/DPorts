@@ -1,12 +1,12 @@
 # Created by: Kristaps Kulis <kristaps.kulis@gmail.com>
-# $FreeBSD: ports/www/py-gunicorn/Makefile,v 1.9 2012/12/01 21:27:31 svnexp Exp $
+# $FreeBSD: ports/www/py-gunicorn/Makefile,v 1.10 2013/02/09 15:59:54 svnexp Exp $
 
 PORTNAME=	gunicorn
 PORTVERSION=	0.16.1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Python WSGI server for unix
 
 LICENSE=	MIT
