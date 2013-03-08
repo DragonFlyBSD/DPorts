@@ -2,12 +2,12 @@
 # Date created:		2010-07-24
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/multimedia/mediadownloader/Makefile,v 1.6 2012/11/17 05:59:51 svnexp Exp $
+# $FreeBSD: ports/multimedia/mediadownloader/Makefile,v 1.7 2013/01/23 15:05:36 svnexp Exp $
 #
 
 PORTNAME=	mediadownloader
 PORTVERSION=	1.5.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia www
 MASTER_SITES=	SF/googleimagedown/project/${PORTVERSION}/
 DISTNAME=	${PORTNAME}_${PORTVERSION}-src
