@@ -1,16 +1,12 @@
-# New ports collection makefile for:	py-rauth
-# Date created:				2012-06-17
-# Whom:					koobs <koobs.freebsd@gmail.com>
-#
-# $FreeBSD: ports/devel/py-rauth/Makefile,v 1.5 2012/11/24 19:21:40 svnexp Exp $
-#
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/devel/py-rauth/Makefile,v 1.6 2013/02/09 15:59:06 svnexp Exp $
 
 PORTNAME=	rauth
 PORTVERSION=	0.4.17
 CATEGORIES=	devel www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	A Python library for OAuth 1.0/a, 2.0, and Ofly consumers
 
 LICENSE=	MIT
