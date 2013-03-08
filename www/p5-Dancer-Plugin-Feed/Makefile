@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/www/p5-Dancer-Plugin-Feed/Makefile,v 1.10 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: ports/www/p5-Dancer-Plugin-Feed/Makefile,v 1.11 2013/01/22 18:48:59 svnexp Exp $
 
 PORTNAME=	Dancer-Plugin-Feed
-PORTVERSION=	0.8
+PORTVERSION=	1.123370
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
