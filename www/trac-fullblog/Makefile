@@ -1,5 +1,4 @@
-# Created by: Brooks Davis <brooks@freebsd.org>
-# $FreeBSD: ports/www/trac-fullblog/Makefile,v 1.10 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-fullblog/Makefile 313115 2013-02-28 17:06:36Z brooks $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.1.1
@@ -11,7 +10,7 @@ PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 DIST_SUBDIR=	trac
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugin that provides a project Blog
 
 RUN_DEPENDS+=	htmldoc:${PORTSDIR}/textproc/htmldoc \
