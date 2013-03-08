@@ -1,14 +1,13 @@
-# Created by: Brooks Davis <brooks@freebsd.org>
-# $FreeBSD: ports/www/trac-themeengine/Makefile,v 1.8 2012/12/26 10:34:16 svnexp Exp $
+# $FreeBSD: www/trac-themeengine/Makefile 313242 2013-03-02 14:42:01Z miwi $
 
 PORTNAME=	themeengine
-PORTVERSION=	2.1.0
+PORTVERSION=	2.1.3
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PYDISTUTILS_PKGNAME}-${PORTVERSION}
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugin to simplify distributing and deploying themes and styles
 
 LICENSE=	BSD
