@@ -1,12 +1,11 @@
 # Created by:	Palle Girgensohn <girgen@pingpong.net>
 #
-# $FreeBSD: ports/databases/postgresql84-contrib/Makefile,v 1.6 2012/11/17 05:55:20 svnexp Exp $
+# $FreeBSD: ports/databases/postgresql84-contrib/Makefile,v 1.7 2013/02/08 11:28:24 svnexp Exp $
 #
 
 PORTNAME=	postgresql
 PKGNAMESUFFIX=	-contrib
 CATEGORIES=	databases
-PORTREVISION=	0
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	The contrib utilities from the PostgreSQL distribution
