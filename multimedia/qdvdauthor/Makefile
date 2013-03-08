@@ -2,17 +2,17 @@
 # Date created:        05/07/04
 # Whom:                oz@nixil.net
 #
-# $FreeBSD: ports/multimedia/qdvdauthor/Makefile,v 1.34 2012/11/17 05:59:53 svnexp Exp $
+# $FreeBSD: ports/multimedia/qdvdauthor/Makefile,v 1.36 2013/01/23 15:05:36 svnexp Exp $
 #
 
 PORTNAME=	qdvdauthor
 PORTVERSION=	1.1.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
 
 MAINTAINER=	oz@nixil.net
-COMMENT=	QT graphical frontend for dvdauthor
+COMMENT=	Qt graphical frontend for dvdauthor
 
 BUILD_DEPENDS=	dvdauthor:${PORTSDIR}/multimedia/dvdauthor \
 		mpeg2enc:${PORTSDIR}/multimedia/mjpegtools \
@@ -46,7 +46,7 @@ DESKTOP_ENTRIES="QDVDAuthor" \
 		"DVD Author GUI" \
 		"${PREFIX}/share/pixmaps/qdvdauthor.png" \
 		"QDVDAuthor" \
-		"Application;AudioVideo;Qt;KDE;" \
+		"AudioVideo;Qt;" \
 		"false"
 
 HAS_CONFIGURE=	yes
