@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/openldap24-server/pkg-plist.client,v 1.24 2012/11/17 06:00:08 svnexp Exp $
+@comment $FreeBSD: net/openldap24-server/pkg-plist.client 305599 2012-10-09 18:33:17Z delphij $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/openldap24-server/files/pkg-deinstall.in,v 1.4 2012/11/17 06:00:08 svnexp Exp $
+# $FreeBSD: net/openldap24-server/files/pkg-deinstall.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 ECHO_CMD=echo

@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/net/openldap24-server/files/manpages,v 1.28 2012/11/17 06:00:08 svnexp Exp $
+# $FreeBSD: net/openldap24-server/files/manpages 300897 2012-07-14 14:29:18Z beat $
 #
 
 MAN1+=	ldapcompare.1 \

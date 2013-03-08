@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: ports/net/openldap24-server/Makefile,v 1.212 2012/12/17 08:20:01 svnexp Exp $
+# $FreeBSD: net/openldap24-server/Makefile 313182 2013-03-02 03:55:25Z eadler $
 
 PORTNAME=		openldap
 DISTVERSION=		2.4.33
@@ -39,7 +39,7 @@ COMMENT?=		Open source LDAP server implementation
 LICENSE=		OPENLDAP
 LICENSE_NAME=		OpenLDAP Public License
 LICENSE_FILE=		${WRKSRC}/LICENSE
-LICENSE_PERMS=		${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=		dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 LATEST_LINK?=		${PKGNAMEPREFIX}openldap24${PKGNAMESUFFIX}
 USE_OPENSSL=		yes
