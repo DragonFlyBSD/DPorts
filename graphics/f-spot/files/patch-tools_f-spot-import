@@ -1,0 +1,13 @@
+
+$FreeBSD: ports/graphics/f-spot/files/patch-tools_f-spot-import,v 1.2 2012/11/17 05:58:05 svnexp Exp $
+
+--- tools/f-spot-import.orig
++++ tools/f-spot-import
+@@ -1,4 +1,6 @@
+-#!/bin/bash -x
++#!/usr/bin/env bash
++
++set -x
+ 
+ udi="$1"
+ #xmessage $udi
