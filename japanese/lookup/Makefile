@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lookup for Mule 2.3
-# Date created:		98/11/19
-# Whom:			Satoshi Taoka <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/lookup/Makefile,v 1.46 2012/11/17 05:58:36 svnexp Exp $
-#
+# Created by: Satoshi Taoka <taoka@FreeBSD.org>
+# $FreeBSD: ports/japanese/lookup/Makefile,v 1.47 2013/02/04 08:30:28 svnexp Exp $
 
 PORTNAME=	lookup
 PORTVERSION=	1.4.1
@@ -12,8 +8,10 @@ CATEGORIES=	japanese elisp
 MASTER_SITES=	http://openlab.ring.gr.jp/edict/lookup/dist/
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	yasu@utahime.org
 COMMENT=	Search interface on ${EMACS_PORT_NAME} for CD-ROM books, etc
+
+LICENSE=	GPLv2
 
 USE_EMACS=	yes
 
