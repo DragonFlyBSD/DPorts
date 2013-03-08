@@ -1,27 +1,24 @@
-# New ports collection makefile for:	drupal6-menu_block
-# Date created:				2 May 2009
-# Whom:					Nick Hilliard <nick@foobar.org>
-#
-# $FreeBSD: ports/www/drupal6-menu_block/Makefile,v 1.5 2012/11/17 06:02:31 svnexp Exp $
-#
+# Created by: Nick Hilliard <nick@foobar.org>
+# $FreeBSD: www/drupal6-menu_block/Makefile 313233 2013-03-02 14:37:20Z miwi $
 
 PORTNAME=	menu_block
-DISTVERSION=	6.x-2.2
-PORTREVISION=	1
+DISTVERSION=	6.x-2.4
 CATEGORIES=	www
 
-MAINTAINER=	nick@foobar.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Drupal module to provide configurable menu tree blocks
 
 USE_DRUPAL=	yes
 DRUPAL6_MODULE=	yes
-MODULE_FILES=	translations/menu_block.pot menu-block-admin.css \
-		menu-block-wrapper.tpl.php menu-block.js \
-		menu_block.admin.inc menu_block.book.inc \
-		menu_block.follow.inc menu_block.info menu_block.install \
-		menu_block.module menu_block.pages.inc menu_block.sort.inc
-MODULE_DIRS=	translations
-
+MODULE_FILES=	menu-block-wrapper.tpl.php menu_block.admin.inc menu_block.book.inc menu_block.info \
+		menu_block.module menu_block.sort.inc menu-block-admin.css menu-block.js menu_block.api.php \
+		menu_block.follow.inc menu_block.install menu_block.pages.inc \
+		plugins/content_types/menu_tree/icon_contrib_booknavigation.png \
+		plugins/content_types/menu_tree/icon_contrib_menu.png \
+		plugins/content_types/menu_tree/icon_contrib_navigation.png \
+		plugins/content_types/menu_tree/icon_contrib_primarylinks.png  \
+		plugins/content_types/menu_tree/menu_tree.inc
+MODULE_DIRS=	plugins/content_types/menu_tree plugins/content_types plugins
 DOC_FILES=	CHANGELOG.txt README.txt LICENSE.txt
 
 .include <bsd.port.mk>
