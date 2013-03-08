@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Exception-Class/Makefile,v 1.40 2012/12/17 14:13:37 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Exception-Class/Makefile,v 1.41 2013/02/25 12:50:01 svnexp Exp $
 
 PORTNAME=	Exception-Class
-PORTVERSION=	1.36
+PORTVERSION=	1.37
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
