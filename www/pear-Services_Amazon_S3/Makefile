@@ -1,12 +1,8 @@
-# Ports collection makefile for:  pear-Services_Amazon_S3
-# Date created:			  23 Nov ,2009
-# Whom:				  Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/www/pear-Services_Amazon_S3/Makefile,v 1.5 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: ports/www/pear-Services_Amazon_S3/Makefile,v 1.6 2013/02/04 09:37:12 svnexp Exp $
 
 PORTNAME=	Services_Amazon_S3
-PORTVERSION=	0.3.5
+PORTVERSION=	0.4.0
 CATEGORIES=	www pear
 
 MAINTAINER=	miwi@FreeBSD.org
