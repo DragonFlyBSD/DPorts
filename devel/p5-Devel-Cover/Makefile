@@ -1,8 +1,8 @@
 # Created by: mat
-# $FreeBSD: ports/devel/p5-Devel-Cover/Makefile,v 1.53 2013/01/06 14:55:29 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Devel-Cover/Makefile,v 1.54 2013/02/11 10:34:32 svnexp Exp $
 
 PORTNAME=	Devel-Cover
-PORTVERSION=	0.99
+PORTVERSION=	1.00
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -64,6 +64,7 @@ MAN3=		Devel::Cover.3 \
 		Devel::Cover::Time.3 \
 		Devel::Cover::Truth_Table.3 \
 		Devel::Cover::Tutorial.3 \
+		Devel::Cover::Util.3 \
 		Devel::Cover::Web.3
 PORTDOCS=	README
 
