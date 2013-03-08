@@ -1,10 +1,4 @@
-# New ports collection makefile for:	bless
-# Date created:				24 October 2004
-# Whom:					Mezz <mezz@FreeBSD.org>
-#
-# $FreeBSD: ports/editors/bless/Makefile,v 1.32 2012/11/17 05:57:11 svnexp Exp $
-#   $Id: Makefile,v 1.22 2006/11/01 02:49:57 tmclau02 Exp $
-#
+# $FreeBSD: ports/editors/bless/Makefile,v 1.33 2012/12/31 17:09:08 svnexp Exp $
 
 PORTNAME=	bless
 PORTVERSION=	0.6.0
