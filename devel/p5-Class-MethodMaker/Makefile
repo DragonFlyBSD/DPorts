@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-MethodMaker
-# Date created:				2000-07-09
-# Whom:					Trevor Johnson
-#
-# $FreeBSD: ports/devel/p5-Class-MethodMaker/Makefile,v 1.23 2012/11/17 05:56:07 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/devel/p5-Class-MethodMaker/Makefile,v 1.24 2013/01/27 06:41:37 svnexp Exp $
 
 PORTNAME=		Class-MethodMaker
 PORTVERSION=		2.18
