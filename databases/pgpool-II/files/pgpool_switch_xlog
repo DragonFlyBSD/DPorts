@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/databases/pgpool-II/files/pgpool_switch_xlog,v 1.2 2012/11/17 05:55:18 svnexp Exp $
+# $FreeBSD: databases/pgpool-II/files/pgpool_switch_xlog 300896 2012-07-14 13:54:48Z beat $
 
 logger="logger -t pgpool -p local0.info"
 psql=/usr/local/bin/psql

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/databases/pgpool-II/files/pgpool_copy_backup,v 1.3 2012/11/17 05:55:18 svnexp Exp $
+# $FreeBSD: databases/pgpool-II/files/pgpool_copy_backup 300896 2012-07-14 13:54:48Z beat $
 #
 # In postgresql.conf:
 #   archive_command = 'test -f /proj/pgsql/data/archive_log/%f || cp %p /proj/pgsql/data/archive_log/%f'
