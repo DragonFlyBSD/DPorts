@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-termtter
-# Date created:		2009-07-12
-# Whom:			Dennis Herrmann <dhn@FreeBSD.org>
-#
-# $FreeBSD: ports/net-im/rubygem-termtter/Makefile,v 1.18 2012/11/17 06:00:29 svnexp Exp $
-#
+# Created by: Dennis Herrmann <dhn@FreeBSD.org>
+# $FreeBSD: net-im/rubygem-termtter/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	termtter
 PORTVERSION=	1.11.0
@@ -12,6 +8,9 @@ MASTER_SITES=	RG
 
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	Terminal based Twitter client
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 RUN_DEPENDS=	rubygem-json>=1.1.3:${PORTSDIR}/devel/rubygem-json \
 		rubygem-termcolor>=1.0.0:${PORTSDIR}/textproc/rubygem-termcolor \
