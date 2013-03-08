@@ -2,12 +2,12 @@
 # Date created:		2005-10-12
 # Whom:			Nicola Vitale <nivit@email.it>
 #
-# $FreeBSD: ports/editors/spe/Makefile,v 1.21 2012/11/29 14:37:47 svnexp Exp $
+# $FreeBSD: ports/editors/spe/Makefile,v 1.22 2013/01/23 15:05:33 svnexp Exp $
 #
 
 PORTNAME=	SPE
 PORTVERSION=	0.8.4.h
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	editors devel python
 MASTER_SITES=	${MASTER_SITE_BERLIOS}
 MASTER_SITE_SUBDIR=	python
