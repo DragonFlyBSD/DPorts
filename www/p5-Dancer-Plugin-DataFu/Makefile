@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/www/p5-Dancer-Plugin-DataFu/Makefile,v 1.4 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: ports/www/p5-Dancer-Plugin-DataFu/Makefile,v 1.5 2013/02/16 00:55:05 svnexp Exp $
 
 PORTNAME=	Dancer-Plugin-DataFu
 PORTVERSION=	1.103070
@@ -10,6 +10,9 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	Dancer HTML Form and Grid/Table engine with Input Validation
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=2013-03-31
 
 RUN_DEPENDS=    p5-Dancer>=1.2:${PORTSDIR}/www/p5-Dancer \
                 p5-Array-Unique>0:${PORTSDIR}/devel/p5-Array-Unique \
