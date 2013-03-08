@@ -1,27 +1,24 @@
-# New ports collection makefile for:	datetimer plugin for xfce4
-# Date created:				02 February 2007
-# Whom:					Martin Wilke (miwi@FreeBSD.org)
-#
-# $FreeBSD: ports/x11-clocks/xfce4-datetime-plugin/Makefile,v 1.44 2012/11/17 06:03:24 svnexp Exp $
+# Created by: Martin Wilke (miwi@FreeBSD.org)
+# $FreeBSD: ports/x11-clocks/xfce4-datetime-plugin/Makefile,v 1.45 2013/02/15 09:53:41 svnexp Exp $
 #
 
 PORTNAME=	xfce4-datetime-plugin
-PORTVERSION=	0.6.1
-PORTREVISION=	11
+PORTVERSION=	0.6.2
 CATEGORIES=	x11-clocks xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
-MASTER_SITE_SUBDIR=/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITE_SUBDIR=src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
-COMMENT=	A datetime plugin for Xfce
+COMMENT=	Datetime panel plugin for the Xfce desktop
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gtk20 intltool intlhack pkgconfig
-USE_XFCE=	configenv libgui libutil panel
+USE_GNOME=	gtk20 intltool intlhack
+USE_XFCE=	configenv libmenu libutil panel
+USE_PKGCONFIG=	build
 
 .include <bsd.port.mk>
