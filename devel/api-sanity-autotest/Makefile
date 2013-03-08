@@ -1,8 +1,8 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: ports/devel/api-sanity-autotest/Makefile,v 1.15 2013/01/16 15:41:39 svnexp Exp $
+# $FreeBSD: ports/devel/api-sanity-autotest/Makefile,v 1.16 2013/02/08 06:41:24 svnexp Exp $
 
 PORTNAME=	api-sanity-checker
-PORTVERSION=	1.98.2
+PORTVERSION=	1.98.3
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://github.com/lvc/${PORTNAME}/archive/ \
 		LOCAL/bf/${DIST_SUBDIR}
