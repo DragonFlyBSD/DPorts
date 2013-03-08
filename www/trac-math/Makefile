@@ -1,5 +1,4 @@
-# Created by: Brooks Davis <brooks@freebsd.org>
-# $FreeBSD: ports/www/trac-math/Makefile,v 1.10 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-math/Makefile 313115 2013-02-28 17:06:36Z brooks $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.1
@@ -9,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	brooks
 PKGNAMEPREFIX=	trac-
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Support for LaTeX math formulas in wiki pages
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \

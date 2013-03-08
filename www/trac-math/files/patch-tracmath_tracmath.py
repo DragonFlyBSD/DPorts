@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/trac-math/files/patch-tracmath_tracmath.py,v 1.2 2012/11/17 06:03:08 svnexp Exp $
+$FreeBSD: www/trac-math/files/patch-tracmath_tracmath.py 300897 2012-07-14 14:29:18Z beat $
 
 --- tracmath/tracmath.py.orig
 +++ tracmath/tracmath.py
