@@ -2,11 +2,11 @@
 # Date created:				August 10, 2003
 # Whom:					Erwin Lansing <erwin@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Filesys-SmbClient/Makefile,v 1.8 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: ports/net/p5-Filesys-SmbClient/Makefile,v 1.9 2012/12/31 12:58:53 svnexp Exp $
 #
 
 PORTNAME=	Filesys-SmbClient
-PORTVERSION=	3.1
+PORTVERSION=	3.2
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
