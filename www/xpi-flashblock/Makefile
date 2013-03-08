@@ -1,5 +1,5 @@
-# Created by:	Simon Olofsson
-# $FreeBSD: ports/www/xpi-flashblock/Makefile,v 1.20 2012/12/01 14:51:43 svnexp Exp $
+# Created by: Simon Olofsson
+# $FreeBSD: ports/www/xpi-flashblock/Makefile,v 1.21 2013/01/20 12:56:08 svnexp Exp $
 
 PORTNAME=	flashblock
 PORTVERSION=	1.5.15.1
