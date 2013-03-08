@@ -2,11 +2,11 @@
 # Date created:				24 April 2012
 # Whom:					Bryan Drewery <bryan@shatow.net>
 #
-# $FreeBSD: ports/devel/rubygem-backports/Makefile,v 1.7 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-backports/Makefile,v 1.8 2013/01/23 20:08:28 svnexp Exp $
 #
 
 PORTNAME=	backports
-PORTVERSION=	2.6.4
+PORTVERSION=	2.7.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
