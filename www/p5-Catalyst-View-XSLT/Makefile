@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Catalyst-View-XSLT
-# Date created:	   10 Apr 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-Catalyst-View-XSLT/Makefile,v 1.10 2012/11/17 06:02:48 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: ports/www/p5-Catalyst-View-XSLT/Makefile,v 1.11 2013/02/09 09:31:55 svnexp Exp $
 
 PORTNAME=	Catalyst-View-XSLT
-PORTVERSION=	0.08
+PORTVERSION=	0.09
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JANUS
