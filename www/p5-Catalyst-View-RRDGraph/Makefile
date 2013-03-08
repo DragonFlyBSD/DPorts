@@ -1,13 +1,8 @@
-# New ports collection makefile for:	p5-Catalyst-View-RRDGraph
-# Date created:		2008-12-22
-# Whom:			Andrej Zverev <az@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-View-RRDGraph/Makefile,v 1.11 2012/11/17 06:02:48 svnexp Exp $
-#
+# Created by: Andrej Zverev <az@FreeBSD.org>
+# $FreeBSD: ports/www/p5-Catalyst-View-RRDGraph/Makefile,v 1.12 2013/02/09 14:03:38 svnexp Exp $
 
 PORTNAME=	Catalyst-View-RRDGraph
-PORTVERSION=	0.05
-PORTREVISION=	2
+PORTVERSION=	0.08
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,8 +15,7 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		rrdtool>=0:${PORTSDIR}/databases/rrdtool \
 		p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-Test-MockObject>=1.07:${PORTSDIR}/devel/p5-Test-MockObject \
-		p5-Catalyst-Plugin-ConfigLoader>=0.22:${PORTSDIR}/www/p5-Catalyst-Plugin-ConfigLoader
+TEST_DEPENDS=	p5-Test-MockObject>=1.07:${PORTSDIR}/devel/p5-Test-MockObject
 
 PERL_CONFIGURE=	yes
 
