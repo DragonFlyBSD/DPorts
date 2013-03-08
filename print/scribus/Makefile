@@ -1,14 +1,9 @@
-# Ports collection makefile for:	scribus
-# Date created:			Mar 15, 2002
-# Whom:				ijliao
-#
-# $Carpetsmoker: ports/print/scribus/Makefile,v 1.2 2007/09/24 08:06:52 carpetsmoker Exp $
-# $FreeBSD: ports/print/scribus/Makefile,v 1.72 2012/11/17 06:00:54 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: print/scribus/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
 
 PORTNAME=	scribus
 PORTVERSION=	1.4.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	print editors
 MASTER_SITES=	SF \
 		http://www.scribus.net/downloads/${PORTVERSION}/
@@ -23,13 +18,13 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
 		cups.2:${PORTSDIR}/print/cups-client \
 		freetype.9:${PORTSDIR}/print/freetype2 \
 		podofo.0:${PORTSDIR}/graphics/podofo \
-		boost_thread.4:${PORTSDIR}/devel/boost-libs \
+		boost_thread:${PORTSDIR}/devel/boost-libs \
 		aspell.16:${PORTSDIR}/textproc/aspell \
 		cairo.2:${PORTSDIR}/graphics/cairo \
 		hyphen:${PORTSDIR}/textproc/hyphen \
 		execinfo:${PORTSDIR}/devel/libexecinfo \
 		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_tkinter.so:${PORTSDIR}/x11-toolkits/py-tkinter \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter \
 		${PYTHON_SITELIBDIR}/PIL/_imaging.so:${PORTSDIR}/graphics/py-imaging \
 		update-mime-database:${PORTSDIR}/misc/shared-mime-info
 
