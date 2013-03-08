@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <esarmiento@wayfair.com>
-# $FreeBSD: ports/www/py-graphite-web/Makefile,v 1.7 2012/11/17 06:03:00 svnexp Exp $
+# $FreeBSD: ports/www/py-graphite-web/Makefile,v 1.8 2013/02/01 15:56:52 svnexp Exp $
 
 PORTNAME=	graphite-web
 PORTVERSION=	0.9.10
@@ -30,6 +30,6 @@ post-install:
 	@${ECHO} ${PYTHON_SITELIBDIR}
 	${CHOWN} ${WWWOWN} ${PREFIX}/graphite/storage
 	${CHOWN} ${WWWOWN} ${PREFIX}/graphite/storage/log/webapp
-	@${CAT} pkg-message
+	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
