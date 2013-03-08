@@ -1,9 +1,4 @@
-# New ports collection makefile for:	postgresql_autodoc
-# Date created:				Fri Aug 23 22:22:36 CEST 2002
-# Whom:					olgeni@FreeBSD.org
-#
-# $FreeBSD: ports/databases/postgresql_autodoc/Makefile,v 1.29 2012/11/17 05:55:21 svnexp Exp $
-#
+# $FreeBSD: ports/databases/postgresql_autodoc/Makefile,v 1.30 2013/01/26 15:07:23 svnexp Exp $
 
 PORTNAME=	postgresql_autodoc
 PORTVERSION=	1.41
