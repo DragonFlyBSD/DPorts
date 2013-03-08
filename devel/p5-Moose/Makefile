@@ -2,7 +2,7 @@
 # Date created:				14 Apr 2006
 # Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Moose/Makefile,v 1.113 2012/12/17 14:13:37 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Moose/Makefile,v 1.114 2013/01/20 19:49:35 svnexp Exp $
 #
 
 PORTNAME=	Moose
@@ -53,8 +53,6 @@ TEST_DEPENDS=	\
 CFLAGS+=	-I.	# mop.h
 MAKE_JOBS_UNSAFE=	yes
 PERL_CONFIGURE=	yes
-
-CONFLICTS=	p5-Class-MOP-[0-9]*
 
 MAN3=	Class::MOP.3 \
 	Class::MOP::Attribute.3 \
