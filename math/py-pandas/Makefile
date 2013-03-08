@@ -1,7 +1,7 @@
-# $FreeBSD: ports/math/py-pandas/Makefile,v 1.5 2012/12/20 06:41:15 svnexp Exp $
+# $FreeBSD: ports/math/py-pandas/Makefile,v 1.6 2013/01/25 10:04:05 svnexp Exp $
 
 PORTNAME=	pandas
-PORTVERSION=	0.10.0
+PORTVERSION=	0.10.1
 CATEGORIES=	math devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
