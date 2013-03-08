@@ -1,6 +1,6 @@
-# $FreeBSD: ports/mail/p5-Mail-SpamAssassin-Alt/Makefile,v 1.3 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-SpamAssassin-Alt/Makefile 313009 2013-02-26 21:49:59Z scheidell $
 
-PORTREVISION=	0
+PORTREVISION=	1
 PKGNAMESUFFIX=	-Alt
 
 MAINTAINER=	ports@FreeBSD.org
