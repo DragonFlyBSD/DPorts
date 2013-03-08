@@ -1,0 +1,2 @@
+@comment $FreeBSD: ports/deskutils/tomboy-plugin-todo/pkg-plist,v 1.2 2012/11/17 05:55:31 svnexp Exp $
+lib/tomboy/addins/tomboy-todo.dll
