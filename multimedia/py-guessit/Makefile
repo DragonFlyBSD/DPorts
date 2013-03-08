@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: ports/multimedia/py-guessit/Makefile,v 1.2 2013/01/18 08:19:57 svnexp Exp $
+# $FreeBSD: ports/multimedia/py-guessit/Makefile,v 1.3 2013/02/19 18:53:16 svnexp Exp $
 
 PORTNAME=	guessit
-PORTVERSION=	0.5.3
+PORTVERSION=	0.5.4
 CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
