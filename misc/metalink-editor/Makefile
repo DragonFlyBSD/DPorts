@@ -2,12 +2,12 @@
 # Date created:		Sun 10 Aug 2008 10:50:59 UTC
 # Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/metalink-editor/Makefile,v 1.8 2012/11/17 05:59:42 svnexp Exp $
+# $FreeBSD: ports/misc/metalink-editor/Makefile,v 1.9 2013/01/23 15:05:36 svnexp Exp $
 #
 
 PORTNAME=	metalink
 PORTVERSION=	1.2.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	SF/${PORTNAME}s/Metalink%20Editor/${PORTVERSION}
 PKGNAMESUFFIX?=	-editor
