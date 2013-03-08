@@ -2,7 +2,7 @@
 # Date created:				1 March 2001
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/kde3-i18n/Makefile,v 1.61 2012/11/17 05:59:38 svnexp Exp $
+# $FreeBSD: ports/misc/kde3-i18n/Makefile,v 1.62 2012/12/30 18:56:11 svnexp Exp $
 #
 
 PORTNAME=	kde-i18n
@@ -43,6 +43,9 @@ ${LOCALBASE}/share/locale/pt_BR/entry.desktop:${PORTSDIR}/portuguese/kde3-i18n-p
 RUN_DEPENDS+=\
 ${LOCALBASE}/share/locale/${ZH}/entry.desktop:${PORTSDIR}/chinese/kde3-i18n-${ZH}
 .endfor
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 NO_BUILD=	yes
