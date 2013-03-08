@@ -1,4 +1,4 @@
-# $FreeBSD: ports/comms/spandsp-devel/Makefile,v 1.33 2012/11/17 05:55:01 svnexp Exp $
+# $FreeBSD: ports/comms/spandsp-devel/Makefile,v 1.34 2013/02/15 19:50:19 svnexp Exp $
 
 PORTNAME=	spandsp
 DISTVERSION=	0.0.6pre21
@@ -32,7 +32,9 @@ OPTIONS_DEFINE=	DOXYGEN
 
 .if ${PORT_OPTIONS:MDOXYGEN}
 CONFIGURE_ARGS+=--enable-doc
-BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
+BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen \
+		docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
+USE_GNOME+=	libxslt
 PORTDOCS=	*
 .else
 CONFIGURE_ARGS+=--disable-doc
