@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nagiosplugin
-# Date created:		2011-06-10
-# Whom:			Brooks Davis <brooks@FreeBSD.org
-#
-# $FreeBSD: ports/sysutils/py-nagiosplugin/Makefile,v 1.4 2012/11/17 06:01:43 svnexp Exp $
-#
+# Created by: Brooks Davis <brooks@FreeBSD.org
+# $FreeBSD: ports/sysutils/py-nagiosplugin/Makefile,v 1.5 2013/02/09 15:59:45 svnexp Exp $
 
 PORTNAME=	nagiosplugin
 PORTVERSION=	0.4.5
@@ -11,7 +7,7 @@ CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Class library for writing Nagios (Icinga) plugins
 
 LICENSE=	ZPL21
