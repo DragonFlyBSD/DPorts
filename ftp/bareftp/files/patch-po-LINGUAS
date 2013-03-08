@@ -1,0 +1,28 @@
+--- po/LINGUAS.bak	2012-10-09 15:03:53.000000000 +0000
++++ po/LINGUAS	2012-10-09 15:05:12.000000000 +0000
+@@ -1,13 +1,13 @@
+-ca
+-de
+-es
+-fr
+-hu
+-it
+-ja
+-nb
+-pl
+-pt_BR
+-ru
+-sk
++ca \
++de \
++es \
++fr \
++hu \
++it \
++ja \
++nb \
++pl \
++pt_BR \
++ru \
++sk \
+ sv
