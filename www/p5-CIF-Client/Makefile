@@ -1,8 +1,8 @@
 # Created by: pauls@utdallas.edu
-# $FreeBSD: ports/www/p5-CIF-Client/Makefile,v 1.8 2012/11/29 10:03:51 svnexp Exp $
+# $FreeBSD: ports/www/p5-CIF-Client/Makefile,v 1.9 2013/02/19 16:48:36 svnexp Exp $
 
 PORTNAME=	CIF-Client
-PORTVERSION=	0.19
+PORTVERSION=	0.21
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SAXJAZMAN/cif
