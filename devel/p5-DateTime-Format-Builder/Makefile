@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Format-Builder
-# Date created:	   2 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Format-Builder/Makefile,v 1.20 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: ports/devel/p5-DateTime-Format-Builder/Makefile,v 1.22 2013/02/05 11:36:13 svnexp Exp $
 
 PORTNAME=	DateTime-Format-Builder
 PORTVERSION=	0.80
@@ -20,9 +16,10 @@ BUILD_DEPENDS=	p5-Class-Factory-Util>=1.6:${PORTSDIR}/devel/p5-Class-Factory-Uti
 		p5-Params-Validate>=0.72:${PORTSDIR}/devel/p5-Params-Validate \
 		p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Devel-Cycle>=1.07:${PORTSDIR}/devel/p5-Devel-Cycle \
 		p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 PERL_MODBUILD=	yes
 
@@ -37,16 +34,18 @@ MAN3=		DateTime::Format::Builder.3 DateTime::Format::Builder::Parser.3 \
 PORTDOCS=	CREDITS Changes README
 PORTEXAMPLES=	Apache.pm Fall.pm ICal.pm MySQL.pm Simple.pm Tivoli.pm W3CDTF.pm
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
-	${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}/
 	cd ${WRKSRC}/examples/ && ${INSTALL_DATA} ${PORTEXAMPLES} ${EXAMPLESDIR}/
-	${ECHO_MSG} "===> Examples installed in ${EXAMPLESDIR}."
+	@${ECHO_MSG} "===> Examples installed in ${EXAMPLESDIR}."
 .endif
 
 .include <bsd.port.mk>
