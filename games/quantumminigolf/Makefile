@@ -2,12 +2,12 @@
 # Date created:		13 Sep 2007
 # Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
 #
-# $FreeBSD: ports/games/quantumminigolf/Makefile,v 1.10 2012/11/17 05:57:51 svnexp Exp $
+# $FreeBSD: ports/games/quantumminigolf/Makefile,v 1.11 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	quantumminigolf
 PORTVERSION=	1.1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
