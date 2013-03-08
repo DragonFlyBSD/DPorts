@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Log-Dispatch-Configurator-YAML
-# Date created:				28 May 2008
-# Whom:					Andrey Kostenko <andrey@kostenko.name>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-QueryLog/Makefile,v 1.9 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: Andrey Kostenko <andrey@kostenko.name>
+# $FreeBSD: ports/databases/p5-DBIx-Class-QueryLog/Makefile,v 1.10 2013/01/21 10:10:50 svnexp Exp $
 
 PORTNAME=	DBIx-Class-QueryLog
-PORTVERSION=	1.3.2
+PORTVERSION=	1.3.3
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
