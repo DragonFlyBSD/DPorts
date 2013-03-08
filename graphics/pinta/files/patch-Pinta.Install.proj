@@ -1,0 +1,13 @@
+
+$FreeBSD: ports/graphics/pinta/files/patch-Pinta.Install.proj,v 1.2 2012/11/17 05:58:19 svnexp Exp $
+
+--- Pinta.Install.proj.orig
++++ Pinta.Install.proj
+@@ -8,7 +8,7 @@
+     <BinDir>/usr/local/bin</BinDir>
+     <LibDir>/usr/local/lib</LibDir>
+     <DataRootDir>/usr/local/share</DataRootDir>
+-    <ManDir>/usr/local/share/man</ManDir>
++    <ManDir>/usr/local/man</ManDir>
+     <LocaleDir>/usr/local/share/locale</LocaleDir>
+   </PropertyGroup>
