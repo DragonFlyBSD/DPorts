@@ -2,7 +2,7 @@
 # Date created:		2006-07-11
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gnome-vfs-monikers/Makefile,v 1.11 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: ports/devel/gnome-vfs-monikers/Makefile,v 1.12 2013/02/14 10:22:07 svnexp Exp $
 #    $MCom: ports/devel/gnome-vfs-monikers/Makefile,v 1.4 2006/07/18 11:37:57 ahze Exp $
 
 PORTNAME=	gnome-vfs-monikers
@@ -18,6 +18,6 @@ USE_GNOME=	gnomevfs2 libbonobo
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib #-pthread
 
 .include <bsd.port.mk>
