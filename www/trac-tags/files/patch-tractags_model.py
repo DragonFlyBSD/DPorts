@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/trac-tags/files/patch-tractags_model.py,v 1.2 2012/11/17 06:03:08 svnexp Exp $
+$FreeBSD: www/trac-tags/files/patch-tractags_model.py 300897 2012-07-14 14:29:18Z beat $
 
 --- tractags/model.py.orig
 +++ tractags/model.py

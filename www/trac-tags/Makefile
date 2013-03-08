@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/www/trac-tags/Makefile,v 1.16 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-tags/Makefile 313115 2013-02-28 17:06:36Z brooks $
 
 PORTNAME=	tags
 DISTVERSION=	0.7.r${SVN_REV}
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	brooks
 PKGNAMEPREFIX=	trac-
 DIST_SUBDIR=	trac
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generic tags frontend for trac
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
