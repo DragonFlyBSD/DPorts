@@ -1,12 +1,8 @@
-# Ports collection makefile for:	p5-Catalyst-Runtime
-# Date created:			Jul 8, 2006
-# Whom:				lbr
-#
-# $FreeBSD: ports/www/p5-Catalyst-Runtime/Makefile,v 1.57 2012/12/17 12:44:05 svnexp Exp $
-#
+# Created by: lbr
+# $FreeBSD: ports/www/p5-Catalyst-Runtime/Makefile,v 1.59 2013/02/25 12:42:59 svnexp Exp $
 
 PORTNAME=	Catalyst-Runtime
-PORTVERSION=	5.90016
+PORTVERSION=	5.90020
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JJNAPIORK
@@ -66,6 +62,7 @@ MAN3=	Catalyst.3 \
 	Catalyst::Action.3 \
 	Catalyst::ActionChain.3 \
 	Catalyst::ActionContainer.3 \
+	Catalyst::ActionRole::HTTPMethods.3 \
 	Catalyst::Base.3 \
 	Catalyst::ClassData.3 \
 	Catalyst::Component.3 \
