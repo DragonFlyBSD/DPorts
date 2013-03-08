@@ -1,12 +1,8 @@
-# Ports collection makefile for:	p5-Catalyst-Plugin-Cache
-# Date created:			Apr 5, 2007
-# Whom:				lbr@freebsd.org
-#
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Cache/Makefile,v 1.14 2012/12/17 10:27:26 svnexp Exp $
-#
+# Created by: lbr@freebsd.org
+# $FreeBSD: ports/www/p5-Catalyst-Plugin-Cache/Makefile,v 1.15 2013/02/26 10:07:08 svnexp Exp $
 
 PORTNAME=	Catalyst-Plugin-Cache
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
