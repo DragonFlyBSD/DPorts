@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-beanstalkc
-# Date created:		2011-03-18
-# Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
-#
-# $FreeBSD: ports/net/py-beanstalkc/Makefile,v 1.5 2012/11/17 06:00:16 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# $FreeBSD: ports/net/py-beanstalkc/Makefile,v 1.6 2013/02/09 15:59:33 svnexp Exp $
 
 PORTNAME=	beanstalkc
 PORTVERSION=	0.3.0
@@ -11,7 +7,7 @@ CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	A simple beanstalkd client library for Python
 
 LICENSE=	AL2
