@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Dist-Zilla/Makefile,v 1.5 2012/11/17 05:56:14 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Dist-Zilla/Makefile,v 1.6 2013/02/04 00:03:12 svnexp Exp $
 
 PORTNAME=	Dist-Zilla
-PORTVERSION=	4.300028
+PORTVERSION=	4.300030
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Dist
