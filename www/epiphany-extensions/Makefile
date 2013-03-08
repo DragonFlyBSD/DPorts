@@ -2,7 +2,7 @@
 # Date created:				30 December 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/www/epiphany-extensions/Makefile,v 1.72 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: ports/www/epiphany-extensions/Makefile,v 1.73 2013/02/07 14:08:05 svnexp Exp $
 #   $MCom: ports/www/epiphany-extensions/Makefile,v 1.132 2010/09/19 15:40:33 kwm Exp $
 #
 
@@ -27,8 +27,8 @@ USE_GNOME=	gnomeprefix gnomehack intlhack
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -pthread"
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 EPHY_EXTENSIONS=really-all
 EPHY_VERSION=	${PORTVERSION:R}
