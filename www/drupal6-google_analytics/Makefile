@@ -1,29 +1,18 @@
-# New ports collection makefile for:	drupal6-google_analytics
-# Date created:				31 Mar 2007
-# Whom:					Nick Hilliard <nick@foobar.org>
-#
-# $FreeBSD: ports/www/drupal6-google_analytics/Makefile,v 1.10 2012/11/17 06:02:31 svnexp Exp $
-#
+# Created by: Nick Hilliard <nick@foobar.org>
+# $FreeBSD: www/drupal6-google_analytics/Makefile 313234 2013-03-02 14:37:54Z miwi $
 
 PORTNAME=	google_analytics
-DISTVERSION=	6.x-2.2
-PORTREVISION=	1
+DISTVERSION=	6.x-3.5
 CATEGORIES=	www
 
-MAINTAINER=	nick@foobar.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Adds the Google Analytics web stats tracking system to your website
 
 USE_DRUPAL=	yes
 DRUPAL6_MODULE=	yes
 
-MODULE_FILES=	tests/googleanalytics_basic.test googleanalytics.admin.inc \
-		googleanalytics.info googleanalytics.install \
-		googleanalytics.js googleanalytics.module translations/de.po \
-		translations/el.po translations/fr.po translations/ja.po \
-		translations/googleanalytics.pot translations/pl.po \
-		translations/sk.po
-
-MODULE_DIRS=	tests translations
+MODULE_FILES=	googleanalytics.admin.inc googleanalytics.install googleanalytics.module \
+		googleanalytics.info googleanalytics.js googleanalytics.test
 
 DOC_FILES=	LICENSE.txt README.txt
 
