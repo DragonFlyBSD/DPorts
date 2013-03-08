@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Class-Method-Modifiers/Makefile,v 1.14 2013/01/11 14:55:50 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Class-Method-Modifiers/Makefile,v 1.16 2013/02/03 11:41:58 svnexp Exp $
 
 PORTNAME=	Class-Method-Modifiers
-PORTVERSION=	2.00
+PORTVERSION=	2.03
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
