@@ -2,11 +2,12 @@
 # Date created:     			10 May 2009
 # Whom:             			Takashi Kato <townwear@gmail.com>
 #
-# $FreeBSD: ports/japanese/jd/Makefile,v 1.27 2012/11/17 05:58:35 svnexp Exp $
+# $FreeBSD: ports/japanese/jd/Makefile,v 1.28 2013/02/05 16:54:23 svnexp Exp $
 #
 
 PORTNAME=		jd
 PORTVERSION=		2.8.5
+PORTREVISION=		1
 CATEGORIES=		japanese www
 MASTER_SITES=		SFJP
 MASTER_SITE_SUBDIR=	jd4linux/56721
