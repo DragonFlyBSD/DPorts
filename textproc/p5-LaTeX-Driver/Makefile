@@ -1,13 +1,8 @@
-# New ports collection makefile for:	LaTeX-Driver
-# Date created:				1st June, 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-LaTeX-Driver/Makefile,v 1.9 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: ports/textproc/p5-LaTeX-Driver/Makefile,v 1.10 2013/02/01 16:00:33 svnexp Exp $
 
 PORTNAME=	LaTeX-Driver
-PORTVERSION=	0.10
-PORTREVISION=	1
+PORTVERSION=	0.12
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
