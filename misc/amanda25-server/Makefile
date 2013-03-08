@@ -2,7 +2,7 @@
 # Date created:				28th Feb 1995
 # Whom:					gpalmer
 #
-# $FreeBSD: ports/misc/amanda25-server/Makefile,v 1.117 2012/11/17 05:59:32 svnexp Exp $
+# $FreeBSD: ports/misc/amanda25-server/Makefile,v 1.118 2013/01/31 19:48:36 svnexp Exp $
 #
 
 PORTNAME=	amanda
@@ -32,7 +32,7 @@ CONFIGURE_ARGS=	--libexecdir=${PREFIX}/libexec/amanda \
 USE_LDCONFIG=	yes
 WANT_PERL=	yes
 
-SAMBA_PORT?=	net/samba34
+SAMBA_PORT?=	net/samba36
 
 OPTIONS=	GNUTAR "use GNU tar" on \
 		SSH "enable ssh-auth" off
@@ -143,7 +143,7 @@ PLIST_SUB+=	PLOT='@comment '
 .if defined (WITH_SAMBA)
 BUILD_DEPENDS+=	smbclient:${PORTSDIR}/${SAMBA_PORT}
 RUN_DEPENDS+=	smbclient:${PORTSDIR}/${SAMBA_PORT}
-CONFIGURE_ARGS+=	--with-smbclient=${PREFIX}/bin/smbclient
+CONFIGURE_ARGS+=	--with-smbclient=${LOCALBASE}/bin/smbclient
 .endif
 
 .if defined (WITH_MTX)
