@@ -1,5 +1,4 @@
-# Created by: Mezz <mezz@FreeBSD.org>
-# $FreeBSD: ports/graphics/cbview/Makefile,v 1.17 2012/12/03 18:53:54 svnexp Exp $
+# $FreeBSD: ports/graphics/cbview/Makefile,v 1.18 2012/12/31 17:09:08 svnexp Exp $
 
 PORTNAME=	cbview
 PORTVERSION=	0.06
