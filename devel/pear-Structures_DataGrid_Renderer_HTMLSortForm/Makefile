@@ -2,14 +2,14 @@
 # Date created:				26 Jun 2008
 # Whom:					Nick Hilliard <nick@foobar.org>
 #
-# $FreeBSD: ports/devel/pear-Structures_DataGrid_Renderer_HTMLSortForm/Makefile,v 1.2 2012/11/17 05:56:40 svnexp Exp $
+# $FreeBSD: ports/devel/pear-Structures_DataGrid_Renderer_HTMLSortForm/Makefile,v 1.3 2013/01/26 19:10:03 svnexp Exp $
 #
 
 PORTNAME=	Structures_DataGrid_Renderer_HTMLSortForm
 PORTVERSION=	0.1.3
 CATEGORIES=	devel www pear
 
-MAINTAINER=	nick@foobar.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTMLSortForm Renderer for pear-Structures_DataGrid
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
