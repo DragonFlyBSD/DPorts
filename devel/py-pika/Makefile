@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-pika
-# Date created:				2011-03-04
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-pika/Makefile,v 1.3 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: ports/devel/py-pika/Makefile,v 1.4 2013/01/31 07:43:55 svnexp Exp $
 
 PORTNAME=	pika
-PORTVERSION=	0.9.5
+PORTVERSION=	0.9.9
 CATEGORIES=	devel net
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
