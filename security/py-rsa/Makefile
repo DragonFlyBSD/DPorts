@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-rsa
-# Date created:		2012-05-24
-# Whom:			koobs <koobs.freebsd@gmail.com>
-#
-# $FreeBSD: ports/security/py-rsa/Makefile,v 1.4 2012/11/17 06:01:17 svnexp Exp $
-#
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/security/py-rsa/Makefile,v 1.5 2013/02/09 15:59:42 svnexp Exp $
 
 PORTNAME=	rsa
 PORTVERSION=	3.1.1
@@ -11,7 +7,7 @@ CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Pure-Python RSA implementation
 
 LICENSE=	AL2
