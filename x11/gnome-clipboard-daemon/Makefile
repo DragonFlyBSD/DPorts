@@ -1,5 +1,4 @@
-# Created by: Mezz <mezz7@cox.net>
-# $FreeBSD: ports/x11/gnome-clipboard-daemon/Makefile,v 1.18 2012/11/17 06:03:15 svnexp Exp $
+# $FreeBSD: ports/x11/gnome-clipboard-daemon/Makefile,v 1.19 2012/12/31 17:20:47 svnexp Exp $
 
 PORTNAME=	gnome-clipboard-daemon
 PORTVERSION=	1.0
