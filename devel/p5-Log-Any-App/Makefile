@@ -1,8 +1,8 @@
 # Created by: Evgeniy Kosov <evgeniy@kosov.su>
-# $FreeBSD: ports/devel/p5-Log-Any-App/Makefile,v 1.11 2013/01/06 15:11:58 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Log-Any-App/Makefile,v 1.12 2013/01/21 09:51:28 svnexp Exp $
 
 PORTNAME=	Log-Any-App
-PORTVERSION=	0.42
+PORTVERSION=	0.43
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
