@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-interbase
-# Date created:		8 Nov 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/databases/ruby-interbase/Makefile,v 1.10 2012/11/17 05:55:24 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: databases/ruby-interbase/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	interbase
 PORTVERSION=	0.5.2
@@ -15,6 +11,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	skv@FreeBSD.org
 COMMENT=	Ruby interface to Firebird/Interbase library
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 USE_FIREBIRD=	yes
 USE_RUBY=	yes
