@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Dist-Metadata/Makefile,v 1.5 2013/01/12 15:28:30 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Dist-Metadata/Makefile,v 1.6 2013/02/16 11:22:46 svnexp Exp $
 
 PORTNAME=	Dist-Metadata
-PORTVERSION=	0.924
+PORTVERSION=	0.925
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
