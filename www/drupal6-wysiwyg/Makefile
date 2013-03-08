@@ -1,16 +1,12 @@
-# New ports collection makefile for:	drupal6-wysiwyg
-# Date created:				2 June 2009
-# Whom:					Nick Hilliard <nick@foobar.org>
-#
-# $FreeBSD: ports/www/drupal6-wysiwyg/Makefile,v 1.6 2012/11/17 06:02:32 svnexp Exp $
-#
+# Created by: Nick Hilliard <nick@foobar.org>
+# $FreeBSD: www/drupal6-wysiwyg/Makefile 313224 2013-03-02 11:20:15Z miwi $
 
 PORTNAME=	wysiwyg
 DISTVERSION=	6.x-2.0
 PORTREVISION=	1
 CATEGORIES=	www
 
-MAINTAINER=	nick@foobar.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Allows implementation of WYSIWYG editors for editing Drupal content
 
 TINYMCEDIR=	www/tinymce
