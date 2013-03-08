@@ -1,9 +1,5 @@
-# New ports collection makefile for:    jdictionary-ger-hun
-# Date created:         		20.12.2004
-# Whom:                 		hq@FreeBSD.org
-#
-# $FreeBSD: ports/german/jdictionary-ger-hun/Makefile,v 1.5 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: hq@FreeBSD.org
+# $FreeBSD: ports/german/jdictionary-ger-hun/Makefile,v 1.6 2013/01/09 20:04:46 svnexp Exp $
 
 PORTNAME=	jdictionary-ger-hun
 PORTVERSION=	1.4
