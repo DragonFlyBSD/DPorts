@@ -1,11 +1,11 @@
 # Created by: whitekid@gmail.com
-# $FreeBSD: ports/www/drupal6-services/Makefile,v 1.5 2012/11/17 06:02:31 svnexp Exp $
+# $FreeBSD: www/drupal6-services/Makefile 313224 2013-03-02 11:20:15Z miwi $
 
 PORTNAME=	services
 DISTVERSION=	6.x-2.2
 CATEGORIES=	www
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Provide an API for creating drupal web services.
 
 USE_DRUPAL=	yes
