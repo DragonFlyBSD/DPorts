@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/py-amqp/pkg-plist,v 1.2 2012/11/17 06:00:15 svnexp Exp $
+@comment $FreeBSD: ports/net/py-amqp/pkg-plist,v 1.3 2013/02/14 15:09:04 svnexp Exp $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt
@@ -22,6 +22,9 @@
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/amqp/exceptions.py
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/amqp/exceptions.pyc
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/amqp/exceptions.pyo
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/amqp/five.py
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/amqp/five.pyc
+%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/amqp/five.pyo
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/amqp/method_framing.py
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/amqp/method_framing.pyc
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/amqp/method_framing.pyo
