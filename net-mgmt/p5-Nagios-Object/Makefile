@@ -2,11 +2,11 @@
 # Date created:		2010-10-18
 # Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/p5-Nagios-Object/Makefile,v 1.6 2012/11/17 06:00:35 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/p5-Nagios-Object/Makefile,v 1.7 2013/02/04 21:44:17 svnexp Exp $
 #
 
 PORTNAME=	Nagios-Object
-PORTVERSION=	0.21.16
+PORTVERSION=	0.21.18
 CATEGORIES=	net-mgmt perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
