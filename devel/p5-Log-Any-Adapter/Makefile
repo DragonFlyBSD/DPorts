@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Log-Any-Adapter/Makefile,v 1.9 2012/11/17 05:56:20 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Log-Any-Adapter/Makefile,v 1.10 2013/02/16 12:08:31 svnexp Exp $
 
 PORTNAME=	Log-Any-Adapter
-PORTVERSION=	0.10
+PORTVERSION=	0.11
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
