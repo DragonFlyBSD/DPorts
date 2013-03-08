@@ -1,8 +1,8 @@
-# Created By: will
-# $FreeBSD: ports/devel/viewvc/Makefile,v 1.67 2012/11/17 05:57:06 svnexp Exp $
+# Created by: will
+# $FreeBSD: devel/viewvc/Makefile 313137 2013-03-01 06:14:51Z ohauer $
 
 PORTNAME=	viewvc
-PORTVERSION=	1.1.17
+PORTVERSION=	1.1.18
 #PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.viewvc.org/ \
