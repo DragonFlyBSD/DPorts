@@ -2,7 +2,7 @@
 # Date created:				July 09 2004
 # Whom:					Michael Nottebrock <lofi@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/kamera/Makefile,v 1.31 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: ports/graphics/kamera/Makefile,v 1.32 2012/12/30 18:56:02 svnexp Exp $
 #
 
 PORTNAME=	kamera
@@ -21,6 +21,9 @@ COMMENT=	Digital camera support for KDE
 LIB_DEPENDS+=	gphoto2:${PORTSDIR}/graphics/libgphoto2
 
 CONFLICTS=	kdegraphics-3.1.* kdegraphics-3.2.[0-3]
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 PREFIX=		${KDE_PREFIX}
