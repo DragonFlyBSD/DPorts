@@ -2,11 +2,11 @@
 # Date created:				29 June 2003
 # Whom:                			Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-ExtUtils-ParseXS/Makefile,v 1.26 2012/11/17 05:56:15 svnexp Exp $
+# $FreeBSD: ports/devel/p5-ExtUtils-ParseXS/Makefile,v 1.27 2013/02/06 16:38:36 svnexp Exp $
 #
 
 PORTNAME=	ExtUtils-ParseXS
-PORTVERSION=	3.15
+PORTVERSION=	3.18
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SMUELLER
