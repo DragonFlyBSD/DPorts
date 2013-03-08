@@ -2,7 +2,7 @@
 # Date created:				18 July 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/deskutils/libopensync-plugin-evolution2-devel/Makefile,v 1.16 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: ports/deskutils/libopensync-plugin-evolution2-devel/Makefile,v 1.17 2013/02/20 16:45:21 svnexp Exp $
 #
 
 PORTNAME=	libopensync-plugin-evolution2
@@ -12,7 +12,7 @@ CATEGORIES=	deskutils
 MASTER_SITES=	http://www.opensync.org/download/releases/${PORTVERSION}/
 PKGNAMESUFFIX=	-devel
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Evolution 2 plugin for the OpenSync framework
 
 LIB_DEPENDS=	opensync.1:${PORTSDIR}/devel/libopensync
