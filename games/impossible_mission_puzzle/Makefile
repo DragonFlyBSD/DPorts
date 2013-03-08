@@ -1,8 +1,8 @@
-# $FreeBSD: ports/games/impossible_mission_puzzle/Makefile,v 1.4 2012/11/17 05:57:41 svnexp Exp $
+# $FreeBSD: ports/games/impossible_mission_puzzle/Makefile,v 1.5 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	impossible_mission_puzzle
 PORTVERSION=	1.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.linuxmotors.com/puzzle/downloads/ \
 		SF/nemysisfreebsdp/:icons
