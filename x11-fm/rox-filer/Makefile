@@ -1,8 +1,4 @@
-# New ports collection makefile for:	rox-filer
-# Date created:        13 November 2000
-# Whom:                Jimmy Olgeni <olgeni@uli.it>
-#
-# $FreeBSD: ports/x11-fm/rox-filer/Makefile,v 1.85 2012/11/17 06:03:26 svnexp Exp $
+# $FreeBSD: ports/x11-fm/rox-filer/Makefile,v 1.86 2013/01/26 15:07:30 svnexp Exp $
 
 PORTNAME=	rox-filer
 PORTVERSION=	2.11
