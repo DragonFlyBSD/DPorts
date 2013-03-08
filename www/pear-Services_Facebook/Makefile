@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Services_Facebook
-# Date created:			  13 April 2008
-# Whom:				  Wen heping <wenheping@gmail.com>)
-#
-# $FreeBSD: ports/www/pear-Services_Facebook/Makefile,v 1.21 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>)
+# $FreeBSD: ports/www/pear-Services_Facebook/Makefile,v 1.22 2013/02/18 10:39:14 svnexp Exp $
 
 PORTNAME=	Services_Facebook
 PORTVERSION=	0.2.14
