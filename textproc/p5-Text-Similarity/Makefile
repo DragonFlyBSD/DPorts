@@ -2,11 +2,11 @@
 # Date created:				Oct 28 2004
 # Whom:					clsung
 #
-# $FreeBSD: ports/textproc/p5-Text-Similarity/Makefile,v 1.9 2012/11/17 06:02:10 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Text-Similarity/Makefile,v 1.10 2013/01/23 14:52:38 svnexp Exp $
 #
 
 PORTNAME=	Text-Similarity
-PORTVERSION=	0.08
+PORTVERSION=	0.09
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
