@@ -1,14 +1,13 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/www/trac-email2trac/Makefile,v 1.20 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-email2trac/Makefile 313241 2013-03-02 14:41:33Z miwi $
 
 PORTNAME=	email2trac
-PORTVERSION=	2.4.5
-PORTREVISION=	1
+PORTVERSION=	2.6.2
 CATEGORIES=	www devel python
 MASTER_SITES=	ftp://ftp.sara.nl/pub/outgoing/
 PKGNAMEPREFIX=	trac-
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert email to trac tickets
 
 LICENSE=	GPLv2 GPLv3
@@ -26,7 +25,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-trac-user=${TRACUSER} --with-mta-user=${MTAUSER}
 USE_PYTHON=	-2.7
 
-PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL README
+PORTDOCS=	AUTHORS ChangeLog INSTALL README
 
 .include <bsd.port.options.mk>
 
