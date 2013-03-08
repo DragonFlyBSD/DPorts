@@ -1,8 +1,8 @@
-# Created by: antoine@FreeBSD.org
-# $FreeBSD: ports/security/regripperplugins/Makefile,v 1.2 2012/12/02 12:32:27 svnexp Exp $
+# Created by: Antoine Brodin <antoine@FreeBSD.org>
+# $FreeBSD: security/regripperplugins/Makefile 313277 2013-03-02 16:48:11Z miwi $
 
 PORTNAME=	regripperplugins
-DISTVERSION=	20120926
+DISTVERSION=	20130218
 CATEGORIES=	security
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}_${DISTVERSION}
