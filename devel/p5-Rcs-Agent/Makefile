@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Rcs-Agent
-# Date created:				28 October 2002
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Rcs-Agent/Makefile,v 1.7 2012/11/17 05:56:27 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: ports/devel/p5-Rcs-Agent/Makefile,v 1.9 2013/01/27 17:43:00 svnexp Exp $
 
 PORTNAME=	Rcs-Agent
 PORTVERSION=	1.05
