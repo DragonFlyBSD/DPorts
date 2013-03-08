@@ -2,11 +2,11 @@
 # Date created:		2010-09-20
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/www/p5-WebService-Linode/Makefile,v 1.3 2012/11/17 06:02:56 svnexp Exp $
+# $FreeBSD: ports/www/p5-WebService-Linode/Makefile,v 1.4 2013/01/20 18:22:49 svnexp Exp $
 #
 
 PORTNAME=	WebService-Linode
-PORTVERSION=	0.07
+PORTVERSION=	0.11
 CATEGORIES=	www
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	WebService
