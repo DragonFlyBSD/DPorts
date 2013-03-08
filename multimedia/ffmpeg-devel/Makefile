@@ -2,12 +2,12 @@
 # Date created:		2009-08-12
 # Whom:			Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/ffmpeg-devel/Makefile,v 1.170 2012/11/17 05:59:48 svnexp Exp $
+# $FreeBSD: ports/multimedia/ffmpeg-devel/Makefile,v 1.171 2013/02/05 16:54:24 svnexp Exp $
 #
 
 PORTNAME=	ffmpeg
 DISTVERSION=	2012-10-13
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://git.videolan.org/
 PKGNAMESUFFIX=	-devel
