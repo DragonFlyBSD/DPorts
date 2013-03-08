@@ -1,8 +1,6 @@
-# New ports collection makefile for:	py-reddit
-# Date created:		2012-06-25
-# Whom:			koobs <koobs.freebsd@gmail.com>
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/py-reddit/Makefile,v 1.2 2012/11/17 05:56:50 svnexp Exp $
+# $FreeBSD: ports/devel/py-reddit/Makefile,v 1.3 2013/02/09 15:59:06 svnexp Exp $
 #
 
 PORTNAME=	reddit
@@ -11,11 +9,10 @@ CATEGORIES=	devel python www
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	A Python wrapper for the Reddit API
 
 LICENSE=	GPLv3
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/six.py:${PORTSDIR}/devel/py-six
 
