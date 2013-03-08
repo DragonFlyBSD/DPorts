@@ -1,0 +1,30 @@
+# New ports collection makefile for:	py-enchant
+# Date created:		2006-04-03
+# Whom:			Nicola Vitale	<nivit@email.it>
+#
+# $FreeBSD: ports/textproc/py-enchant/Makefile,v 1.24 2012/11/17 06:02:17 svnexp Exp $
+#
+
+PORTNAME=	enchant
+PORTVERSION=	1.6.5
+PORTREVISION=	1
+CATEGORIES=	textproc devel python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	py${PORTNAME}-${PORTVERSION}
+
+MAINTAINER=	nivit@FreeBSD.org
+COMMENT=	A spellchecking library for Python based on the Enchant library
+
+LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	easy_install
+USE_WX=	2.8
+WX_COMPS=	python:run
+
+PYDISTUTILS_PKGNAME=	pyenchant
+
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+.include <bsd.port.mk>
