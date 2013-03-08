@@ -1,8 +1,8 @@
-# Created by:				Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/net/py-tweepy/Makefile,v 1.4 2012/11/17 06:00:16 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: ports/net/py-tweepy/Makefile,v 1.5 2013/02/12 17:02:33 svnexp Exp $
 
 PORTNAME=	tweepy
-PORTVERSION=	1.10
+PORTVERSION=	1.13
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
