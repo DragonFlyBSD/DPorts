@@ -1,15 +1,16 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/net-p2p/frost/Makefile,v 1.26 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: ports/net-p2p/frost/Makefile,v 1.28 2013/01/23 15:05:37 svnexp Exp $
 
 PORTNAME=	frost
 PORTVERSION=	1.2.0.20090314
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	net-p2p java
 MASTER_SITES=	SF/jtc${PORTNAME}/${PORTNAME}/14-Mar-2009
 DISTNAME=	${PORTNAME}-14-Mar-2009
 
 MAINTAINER=	peter.thoenen@yahoo.com
-COMMENT=	Frost is a Freenet client that provides messenger and file services
+COMMENT=	Freenet client that provides messenger and file services
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
@@ -54,9 +55,9 @@ PLIST_DIRS+=	\
 		%%JAR_DIR%% \
 		%%DATADIR%%
 
-DESKTOP_ENTRIES=	"Frost" "A Freenet Client" \
+DESKTOP_ENTRIES=	"Frost" "Freenet Client" \
 			"${JAVASHAREDIR}/${PORTNAME}/jtc.ico" \
-			"frost" "Application;P2P;Network;" \
+			"frost" "P2P;Network;Java;" \
 			false
 
 pre-everything::
