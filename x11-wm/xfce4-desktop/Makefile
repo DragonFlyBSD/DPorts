@@ -1,12 +1,12 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: ports/x11-wm/xfce4-desktop/Makefile,v 1.76 2012/12/31 06:21:33 svnexp Exp $
+# $FreeBSD: x11-wm/xfce4-desktop/Makefile 313366 2013-03-03 16:48:41Z olivierd $
 #
 
 PORTNAME=	xfce4-desktop
-PORTVERSION=	4.10.0
-PORTREVISION=	5
+PORTVERSION=	4.10.1
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
+MASTER_SITE_SUBDIR=	src/xfce/xfdesktop/${PORTVERSION:R}
 DISTNAME=	xfdesktop-${PORTVERSION}
 DIST_SUBDIR=	xfce4
 
@@ -24,6 +24,7 @@ USE_GMAKE=	yes
 USE_GNOME=	glib20 gnomehack gtk20 intltool intlhack desktopfileutils
 USE_XFCE=	configenv garcon libmenu libutil libexo xfconf
 USE_PKGCONFIG=	build
+USE_XORG=	x11 sm
 
 CONFIGURE_ARGS+=--enable-gio-unix \
 	--enable-notifications
@@ -50,6 +51,11 @@ PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
+.endif
+
+post-patch:
+.if !${PORT_OPTIONS:MNLS}
+	@${REINPLACE_CMD} -e 's|po ||' ${WRKSRC}/Makefile.in
 .endif
 
 post-install:
