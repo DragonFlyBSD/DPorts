@@ -1,12 +1,9 @@
-# New ports collection makefile for:	paida
-# Date created:		2005-07-17
-# Whom:			Vsevolod Stakhov <vsevolod@highsecure.ru>
-#
-# $FreeBSD: ports/science/py-paida/Makefile,v 1.9 2012/11/17 06:00:59 svnexp Exp $
-#
+# Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
+# $FreeBSD: science/py-paida/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
 
 PORTNAME=	paida
 PORTVERSION=	3.2.1.2.10
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-3.2.1_2.10.1
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +13,7 @@ MAINTAINER=	wenheping@gmail.com
 COMMENT=	Pure Python scientific analysis package
 
 .if !defined(NO_GUI)
-BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/_tkinter.so:${PORTSDIR}/x11-toolkits/py-tkinter
+BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
 .endif
 
 USE_PYTHON=	yes
