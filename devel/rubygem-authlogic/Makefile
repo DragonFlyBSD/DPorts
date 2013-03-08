@@ -2,10 +2,10 @@
 # Date created:				24 June 2009
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/rubygem-authlogic/Makefile,v 1.14 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: ports/devel/rubygem-authlogic/Makefile,v 1.15 2013/01/23 20:05:28 svnexp Exp $
 
 PORTNAME=	authlogic
-PORTVERSION=	3.1.3
+PORTVERSION=	3.2.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
