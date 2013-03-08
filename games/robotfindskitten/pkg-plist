@@ -1,4 +1,6 @@
-@comment $FreeBSD: ports/games/robotfindskitten/pkg-plist,v 1.3 2013/01/13 02:54:06 svnexp Exp $
+@comment $FreeBSD: ports/games/robotfindskitten/pkg-plist,v 1.4 2013/02/08 18:58:09 svnexp Exp $
 bin/robotfindskitten
 %%DATADIR%%/vanilla.nki
+%%EXTRANKI%%%%DATADIR%%/freebsd.nki
+%%EXTRANKI%%%%DATADIR%%/nethack.nki
 @dirrmtry %%DATADIR%%
