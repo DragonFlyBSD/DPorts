@@ -1,11 +1,8 @@
-# New ports collection makefile for:	Catalyst-Plugin-ErrorCatcher
-# Date created:				17 November 2010
-# Whom:					andrey@kostenko.name
-#
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-ErrorCatcher/Makefile,v 1.7 2012/11/17 06:02:47 svnexp Exp $
+# Created by: andrey@kostenko.name
+# $FreeBSD: ports/www/p5-Catalyst-Plugin-ErrorCatcher/Makefile,v 1.8 2013/02/08 12:38:56 svnexp Exp $
 
 PORTNAME=	Catalyst-Plugin-ErrorCatcher
-PORTVERSION=	0.0.8.12
+PORTVERSION=	0.0.8.13
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:CHISEL
@@ -52,6 +49,7 @@ MAN3=		Catalyst::Plugin::ErrorCatcher.3 \
 		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::Pg::ForeignKeyConstraint.3 \
 		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::Pg::MissingColumn.3 \
 		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::Pg::TransactionAborted.3 \
+		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::Pg::UniqueConstraintViolation.3 \
 		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::TxnDo.3
 
 .include <bsd.port.mk>
