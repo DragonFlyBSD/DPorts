@@ -2,7 +2,7 @@
 # Date created:				08 March 2009
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/databases/geoserver-mysql-plugin/Makefile,v 1.10 2012/11/17 05:55:08 svnexp Exp $
+# $FreeBSD: ports/databases/geoserver-mysql-plugin/Makefile,v 1.11 2013/02/20 16:45:20 svnexp Exp $
 #
 
 PORTNAME=	geoserver
@@ -12,7 +12,7 @@ MASTER_SITES=	SF/${PORTNAME}/GeoServer%20Extensions/${PORTVERSION}
 PKGNAMESUFFIX=	-mysql-plugin
 DISTNAME=	${PORTNAME}-${PORTVERSION}${PKGNAMESUFFIX}
 
-MAINTAINER=	avl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A MySQL DataStore implementation for GeoServer
 
 RUN_DEPENDS=	${LOCALBASE}/geoserver/start.jar:${PORTSDIR}/graphics/geoserver
