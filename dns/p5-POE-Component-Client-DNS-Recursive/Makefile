@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-POE-Component-Client-DNS-Recursive
-# Date created:		2012-02-28
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/dns/p5-POE-Component-Client-DNS-Recursive/Makefile,v 1.3 2012/11/17 05:57:10 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: ports/dns/p5-POE-Component-Client-DNS-Recursive/Makefile,v 1.4 2013/01/25 09:57:06 svnexp Exp $
 
 PORTNAME=	POE-Component-Client-DNS-Recursive
-PORTVERSION=	1.04
+PORTVERSION=	1.06
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
