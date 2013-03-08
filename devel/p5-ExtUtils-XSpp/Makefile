@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-ExtUtils-XSpp/Makefile,v 1.10 2013/01/04 10:02:56 svnexp Exp $
+# $FreeBSD: ports/devel/p5-ExtUtils-XSpp/Makefile,v 1.11 2013/02/13 06:44:03 svnexp Exp $
 
 PORTNAME=	ExtUtils-XSpp
 PORTVERSION=	0.16.03
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
-MAINTAINER=	linpc@cs.nctu.edu.tw
+MAINTAINER=	pclin@FreeBSD.org
 COMMENT=	XS for C++ in Perl
 
 BUILD_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base \
