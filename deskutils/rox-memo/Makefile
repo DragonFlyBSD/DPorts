@@ -1,9 +1,4 @@
-# Ports collection Makefile for:	rox-memo
-# Date created:				Jan 12 2003
-# Whom:					olgeni@FreeBSD.org
-#
-# $FreeBSD: ports/deskutils/rox-memo/Makefile,v 1.25 2012/11/17 05:55:30 svnexp Exp $
-#
+# $FreeBSD: ports/deskutils/rox-memo/Makefile,v 1.26 2013/01/26 15:07:24 svnexp Exp $
 
 PORTNAME=	rox-memo
 PORTVERSION=	2.1
