@@ -1,8 +1,5 @@
-# Ports collection makefile for:	rubygem-parsetree
-# Date created:				13 April 2007
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-parsetree/Makefile,v 1.21 2012/11/17 05:57:00 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/rubygem-parsetree/Makefile 313317 2013-03-03 01:43:02Z swills $
 
 PORTNAME=	parsetree
 PORTVERSION=	3.0.8
@@ -12,6 +9,9 @@ DISTNAME=	ParseTree-${PORTVERSION}
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby parse tree tools
+
+DEPRECATED=	Does not work with Ruby 1.9
+EXPIRATION_DATE=	2013-05-02
 
 RUN_DEPENDS=	rubygem-inline>=3.7.0:${PORTSDIR}/devel/rubygem-inline \
 		rubygem-sexp_processor>=3.0.1:${PORTSDIR}/devel/rubygem-sexp_processor
