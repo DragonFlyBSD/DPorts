@@ -1,9 +1,5 @@
-# New ports collection makefile for:	urwfonts-ttf
-# Date created:				18 February 2003
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/urwfonts-ttf/Makefile,v 1.10 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: ports/x11-fonts/urwfonts-ttf/Makefile,v 1.11 2013/02/18 14:40:13 svnexp Exp $
 
 PORTNAME=	urwfonts-ttf
 PORTVERSION=	1.0.7b18
