@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MooseX-Getopt/Makefile,v 1.37 2013/01/03 09:56:32 svnexp Exp $
+# $FreeBSD: ports/devel/p5-MooseX-Getopt/Makefile,v 1.41 2013/02/16 17:11:03 svnexp Exp $
 
 PORTNAME=	MooseX-Getopt
-PORTVERSION=	0.50
+PORTVERSION=	0.56
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ETHER
@@ -18,14 +18,15 @@ BUILD_DEPENDS=	p5-Getopt-Long-Descriptive>=0.081:${PORTSDIR}/devel/p5-Getopt-Lon
 		p5-Moose>=0.56:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-Role-Parameterized>=0:${PORTSDIR}/devel/p5-MooseX-Role-Parameterized
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-MooseX-SimpleConfig>=0.07:${PORTSDIR}/devel/p5-MooseX-SimpleConfig \
+TEST_DEPENDS=	p5-MooseX-ConfigFromFile>=0:${PORTSDIR}/devel/p5-MooseX-ConfigFromFile \
+		p5-MooseX-SimpleConfig>=0.07:${PORTSDIR}/devel/p5-MooseX-SimpleConfig \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-CheckDeps>=0:${PORTSDIR}/devel/p5-Test-CheckDeps \
 		p5-Test-Fatal>=0.003:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Requires>=0.05:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-Trap>=0:${PORTSDIR}/devel/p5-Test-Trap \
 		p5-Test-Warn>=0.21:${PORTSDIR}/devel/p5-Test-Warn \
-		p5-YAML-LibYAML>=0:${PORTSDIR}/textproc/p5-YAML-LibYAML
+		p5-Path-Tiny>=0:${PORTSDIR}/devel/p5-Path-Tiny
 
 PERL_CONFIGURE=	yes
 
