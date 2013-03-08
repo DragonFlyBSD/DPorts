@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/www/linkchecker/Makefile,v 1.45 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: ports/www/linkchecker/Makefile,v 1.46 2012/12/30 19:06:23 svnexp Exp $
 
 PORTNAME=	linkchecker
 PORTVERSION=	6.6
@@ -7,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}/
 DISTNAME=	LinkChecker-${PORTVERSION}
 
-MAINTAINER=	beat@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Check HTML documents for broken links
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cssutils>=0.9.5:${PORTSDIR}/www/py-cssutils \
