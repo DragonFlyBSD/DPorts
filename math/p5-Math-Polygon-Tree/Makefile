@@ -2,11 +2,11 @@
 # Date created:		03 Mar 2011
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Math-Polygon-Tree/Makefile,v 1.4 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: ports/math/p5-Math-Polygon-Tree/Makefile,v 1.5 2013/01/30 21:42:37 svnexp Exp $
 #
 
 PORTNAME=	Math-Polygon-Tree
-PORTVERSION=	0.041
+PORTVERSION=	0.05
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:LIOSHA
