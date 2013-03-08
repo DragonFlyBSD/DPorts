@@ -1,16 +1,11 @@
-# New ports collection makefile for:	drupal6-seo_checklist
-# Date created:				2 May 2009
-# Whom:					Nick Hilliard <nick@foobar.org>
-#
-# $FreeBSD: ports/www/drupal6-seo_checklist/Makefile,v 1.6 2012/11/17 06:02:31 svnexp Exp $
-#
+# Created by: Nick Hilliard <nick@foobar.org>
+# $FreeBSD: www/drupal6-seo_checklist/Makefile 313240 2013-03-02 14:41:10Z miwi $
 
 PORTNAME=	seo_checklist
-DISTVERSION=	6.x-2.0
-PORTREVISION=	1
+DISTVERSION=	6.x-3.0
 CATEGORIES=	www
 
-MAINTAINER=	nick@foobar.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Drupal module to provide checklist of actions for SEO
 
 USE_DRUPAL=	yes
