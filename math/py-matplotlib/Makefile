@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: ports/math/py-matplotlib/Makefile,v 1.49 2013/01/11 20:42:35 svnexp Exp $
+# $FreeBSD: math/py-matplotlib/Makefile 313305 2013-03-02 23:04:45Z lwhsu $
 
 PORTNAME=	matplotlib
 PORTVERSION=	1.2.0
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://cloud.github.com/downloads/matplotlib/matplotlib/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -61,8 +62,8 @@ PLIST_SUB+=	GTKAGGBACKEND="@comment "
 .endif
 
 .if defined(WITH_TKAGGBACKEND)
-BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/_tkinter.so:${PORTSDIR}/x11-toolkits/py-tkinter
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/_tkinter.so:${PORTSDIR}/x11-toolkits/py-tkinter
+BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
 
 USE_TCL_RUN=	yes
 USE_TK_RUN=	yes
