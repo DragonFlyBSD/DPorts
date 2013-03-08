@@ -1,0 +1,9 @@
+@comment $FreeBSD: ports/net/p5-Net-OpenStack-Attack/pkg-plist,v 1.1 2013/02/07 07:45:15 svnexp Exp $
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/OpenStack/Attack/.packlist
+%%SITE_PERL%%/Net/OpenStack/Attack.pm
+bin/stackattack
+@dirrmtry %%SITE_PERL%%/Net/OpenStack
+@dirrmtry %%SITE_PERL%%/Net
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/OpenStack/Attack
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/OpenStack
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net
