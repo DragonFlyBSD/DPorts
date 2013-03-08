@@ -1,5 +1,5 @@
 # Create by: Palle Girgensohn <girgen@partitur.se>
-# $FreeBSD: ports/databases/postgresql-odbc/Makefile,v 1.24 2013/01/13 22:53:46 svnexp Exp $
+# $FreeBSD: ports/databases/postgresql-odbc/Makefile,v 1.25 2013/02/13 06:44:02 svnexp Exp $
 
 PORTNAME=	postgresql
 PORTVERSION=	09.01.0200
@@ -10,7 +10,7 @@ PKGNAMESUFFIX=	-odbc
 DISTNAME=	psqlodbc-${PORTVERSION}
 DIST_SUBDIR=	postgresql
 
-MAINTAINER=	linpc@cs.nctu.edu.tw
+MAINTAINER=	pclin@FreeBSD.org
 COMMENT=	PostgreSQL ODBC driver
 
 LICENSE=	LGPL20
