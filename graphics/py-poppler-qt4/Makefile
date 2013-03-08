@@ -1,7 +1,8 @@
-# $FreeBSD: ports/graphics/py-poppler-qt4/Makefile,v 1.3 2012/12/16 16:10:40 svnexp Exp $
+# $FreeBSD: ports/graphics/py-poppler-qt4/Makefile,v 1.4 2013/02/03 22:43:27 svnexp Exp $
 
 PORTNAME=	poppler-qt4
 PORTVERSION=	0.16.3
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	GOOGLE_CODE
 PROJECTHOST=	python-poppler-qt4
