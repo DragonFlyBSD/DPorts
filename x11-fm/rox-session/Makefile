@@ -1,8 +1,4 @@
-# New ports collection makefile for:	rox-session
-# Date created:        11 March 2001
-# Whom:                Jimmy Olgeni <olgeni@uli.it>
-#
-# $FreeBSD: ports/x11-fm/rox-session/Makefile,v 1.35 2012/11/17 06:03:26 svnexp Exp $
+# $FreeBSD: ports/x11-fm/rox-session/Makefile,v 1.36 2013/01/26 15:07:30 svnexp Exp $
 
 PORTNAME=	rox-session
 PORTVERSION=	0.40.0
