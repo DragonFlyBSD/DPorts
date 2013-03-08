@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Petal/Makefile,v 1.12 2012/12/22 17:29:12 svnexp Exp $
+# $FreeBSD: ports/textproc/p5-Petal/Makefile,v 1.13 2013/02/24 17:00:15 svnexp Exp $
 
 PORTNAME=	Petal
-PORTVERSION=	2.21
+PORTVERSION=	2.22
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:NINE
