@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/security/p5-Dancer-Plugin-Passphrase/Makefile,v 1.3 2012/11/17 06:01:12 svnexp Exp $
+# $FreeBSD: ports/security/p5-Dancer-Plugin-Passphrase/Makefile,v 1.4 2013/02/08 18:52:13 svnexp Exp $
 
 PORTNAME=	Dancer-Plugin-Passphrase
-PORTVERSION=	1.0.0
+PORTVERSION=	2.0.0
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JAITKEN
