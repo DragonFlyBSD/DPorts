@@ -1,14 +1,14 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Olson-Abbreviations/Makefile,v 1.6 2012/11/17 05:56:24 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Olson-Abbreviations/Makefile,v 1.7 2013/02/24 17:09:57 svnexp Exp $
 
 PORTNAME=	Olson-Abbreviations
-PORTVERSION=	0.03
+PORTVERSION=	0.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ECARROLL
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Globally unique timezones abbreviation handling
 
 RUN_DEPENDS=	p5-Moose>=0.41:${PORTSDIR}/devel/p5-Moose \
