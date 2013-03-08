@@ -1,11 +1,7 @@
-# New ports collection makefile for:	opengtl
-# Date created:				28 September 2009
-# Whom:					Alberto Villa <villa.alberto@gmail.com>
-#
-# $FreeBSD: ports/graphics/opengtl/Makefile,v 1.21 2012/11/17 05:58:15 svnexp Exp $
+# $FreeBSD: ports/graphics/opengtl/Makefile,v 1.24 2013/02/19 06:00:35 svnexp Exp $
 
 PORTNAME=	opengtl
-PORTVERSION=	0.9.17
+PORTVERSION=	0.9.18
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://download.${PORTNAME}.org/
 DISTNAME=	OpenGTL-${PORTVERSION}
@@ -14,12 +10,9 @@ MAINTAINER=	avilla@FreeBSD.org
 COMMENT=	Graphics Transformation Languages
 
 LICENSE=	LGPL20
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
-
-BUILD_DEPENDS=	${LOCALBASE}/lib/libLLVM-3.1.so:${PORTSDIR}/devel/llvm
-
+BUILD_DEPENDS=	${LOCALBASE}/lib/libLLVM-3.2.so:${PORTSDIR}/devel/llvm
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	yes
@@ -28,13 +21,16 @@ USE_CMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
-OPTIONS=	SHIVA	"Install filters and generators" on
+OPTIONS_DEFINE=	SHIVA
+OPTIONS_DEFAULT=SHIVA
+
+SHIVA_DESC=	Install filters and generators
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
 .include <bsd.port.options.mk>
 
-.ifndef(WITHOUT_SHIVA)
+.if ${PORT_OPTIONS:MSHIVA}
 RUN_DEPENDS+=	${LOCALBASE}/share/OpenGTL/shiva/kernels/oilify.shiva:${PORTSDIR}/graphics/shiva-collections
 .endif
 
