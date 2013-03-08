@@ -1,0 +1,39 @@
+# $FreeBSD: ports/games/gbrainy/Makefile,v 1.24 2012/11/17 05:57:39 svnexp Exp $
+
+PORTNAME=	gbrainy
+PORTVERSION=	2.1.5
+PORTEPOCH=	1
+CATEGORIES=	games
+MASTER_SITES=	http://gent.softcatala.org/jmas/gbrainy/
+
+MAINTAINER=	kevlo@FreeBSD.org
+COMMENT=	Brain teaser game and trainer
+
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
+
+BUILD_DEPENDS=	mautil:${PORTSDIR}/devel/mono-addins \
+		${LOCALBASE}/bin/bash:${PORTSDIR}/shells/bash
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+USE_GNOME=	desktopfileutils gnomehack gtksharp20 gnomesharp20
+USE_GMAKE=	yes
+USE_GETTEXT=	yes
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+MAN6=		gbrainy.6
+INSTALLS_ICONS=	yes
+
+.include <bsd.port.pre.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
+		${WRKSRC}/src/Clients/Classical/gbrainy.in
+
+post-install:
+	@-update-desktop-database
+
+.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
+.include <bsd.port.post.mk>
