@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-POE-Component-Server-DNS
-# Date created:		2007-02-23
-# Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-#
-# $FreeBSD: ports/dns/p5-POE-Component-Server-DNS/Makefile,v 1.12 2012/11/17 05:57:10 svnexp Exp $
-#
+# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
+# $FreeBSD: ports/dns/p5-POE-Component-Server-DNS/Makefile,v 1.13 2013/01/28 10:53:30 svnexp Exp $
 
 PORTNAME=	POE-Component-Server-DNS
-PORTVERSION=	0.22
+PORTVERSION=	0.28
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
