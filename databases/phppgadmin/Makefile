@@ -1,9 +1,5 @@
-# New ports collection makefile for: phpPgAdmin
-# Date created:		19 Jan 2001
-# Whom:			nbm
-#
-# $FreeBSD: ports/databases/phppgadmin/Makefile,v 1.52 2012/11/17 05:55:20 svnexp Exp $
-#
+# Created by: nbm
+# $FreeBSD: ports/databases/phppgadmin/Makefile,v 1.53 2013/01/26 16:56:08 svnexp Exp $
 
 PORTNAME=	phppgadmin
 PORTVERSION=	5.0.4
