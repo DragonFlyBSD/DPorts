@@ -1,5 +1,5 @@
 # Created by: Jean-Baptiste Quenot <jb.quenot@caraldi.com>
-# $FreeBSD: ports/comms/efax-gtk/Makefile,v 1.52 2013/01/02 19:42:04 svnexp Exp $
+# $FreeBSD: ports/comms/efax-gtk/Makefile,v 1.53 2013/02/08 03:35:02 svnexp Exp $
 
 PORTNAME=	efax-gtk
 PORTVERSION=	3.2.11
@@ -8,7 +8,7 @@ MASTER_SITES=	SF
 EXTRACT_SUFX=	.src.tgz
 
 MAINTAINER=	pawel@FreeBSD.org
-COMMENT=	GUI front end for the efax fax program
+COMMENT=	GUI frontend for efax program
 
 LICENSE=	GPLv2
 
@@ -41,8 +41,8 @@ CONFLICTS=	efax-[0-9]*
 
 MAN1=		efax.1 efix.1 efax-gtk.1
 
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS} -lintl
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread -lintl
 
 CONFIGURE_ARGS+=--with-gtk-version=gtk2
 
