@@ -2,7 +2,7 @@
 # Date created:				13 08 2006
 # Whom:					Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: ports/net-mgmt/p5-Nagios-Plugin/Makefile,v 1.25 2012/11/17 06:00:35 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/p5-Nagios-Plugin/Makefile,v 1.26 2013/02/26 03:41:38 svnexp Exp $
 #
 
 PORTNAME=	Nagios-Plugin
@@ -12,7 +12,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TONVOON
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	gjb@FreeBSD.org
 COMMENT=	Modules to streamline writing Nagios plugins
 
 BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
