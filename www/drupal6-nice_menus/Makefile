@@ -1,29 +1,24 @@
-# New ports collection makefile for:	drupal6-nice_menus
-# Date created:				20 October 2006
-# Whom:					Nick Hilliard <nick@foobar.org>
-#
-# $FreeBSD: ports/www/drupal6-nice_menus/Makefile,v 1.15 2012/11/17 06:02:31 svnexp Exp $
-#
+# Created by: Nick Hilliard <nick@foobar.org>
+# $FreeBSD: www/drupal6-nice_menus/Makefile 313235 2013-03-02 14:38:21Z miwi $
 
 PORTNAME=	nice_menus
-DISTVERSION=	6.x-1.3
-PORTREVISION=	2
+DISTVERSION=	6.x-2.1
 CATEGORIES=	www
 
-MAINTAINER=	nick@foobar.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	CSS / JavaScript pull-down menus for Drupal
 
 USE_DRUPAL=	yes
 DRUPAL6_MODULE=	yes
 
-MODULE_DIRS=	po translations
-MODULE_FILES=	po/ja.po po/nice_menus.pot arrow-down.png arrow-left.png \
-		arrow-right.png nice_menus.css nice_menus.info \
-		nice_menus.install nice_menus.js nice_menus.module \
-		nice_menus_default.css screenshot-drupal.org.png \
-		translations/nice_menus.pot translations/sk.po \
-		translations/sv.po
-
+MODULE_DIRS=	superfish/js superfish translations
+MODULE_FILES=	arrow-right.png nice_menus.install nice_menus_default-rtl.css \
+		arrow-down.png nice_menus.css nice_menus.js nice_menus_default.css \
+		arrow-left.png nice_menus.info nice_menus.module screenshot-drupal.org.png \
+		translations/nice_menus.pot translations/de.po translations/sv.po \
+		superfish/js/jquery.bgiframe.min.js \
+		superfish/js/jquery.hoverIntent.minified.js \
+		superfish/js/superfish.js
 DOC_FILES=	CHANGELOG.txt README.txt UPGRADE.txt LICENSE.txt
 
 .include <bsd.port.mk>
