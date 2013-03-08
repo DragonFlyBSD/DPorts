@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-App-Nopaste
-# Date created:		2009-03-10
-# Whom:			bapt <baptiste.daroussin@gmail.com>
-#
-# $FreeBSD: ports/www/p5-App-Nopaste/Makefile,v 1.24 2012/11/17 06:02:44 svnexp Exp $
-#
+# Created by: bapt <baptiste.daroussin@gmail.com>
+# $FreeBSD: ports/www/p5-App-Nopaste/Makefile,v 1.26 2013/01/29 09:48:35 svnexp Exp $
 
 PORTNAME=	App-Nopaste
-PORTVERSION=	0.35
+PORTVERSION=	0.91
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SARTAK
@@ -19,11 +15,12 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
-		p5-Moose>=0.74:${PORTSDIR}/devel/p5-Moose \
-		p5-MooseX-Getopt>=0.17:${PORTSDIR}/devel/p5-MooseX-Getopt \
+		p5-Class-Load>=0:${PORTSDIR}/devel/p5-Class-Load \
+		p5-Getopt-Long-Descriptive>=0:${PORTSDIR}/devel/p5-Getopt-Long-Descriptive \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
 
 OPTIONS_DEFINE=	CLIPBOARD GITHUB PASTEBIN
 OPTIONS_DEFAULT=CLIPBOARD GITHUB PASTEBIN
