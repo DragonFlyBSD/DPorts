@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-argh/Makefile,v 1.3 2012/11/17 05:56:45 svnexp Exp $
+# $FreeBSD: ports/devel/py-argh/Makefile,v 1.4 2013/02/03 15:57:52 svnexp Exp $
 
 PORTNAME=	argh
-PORTVERSION=	0.15.1
+PORTVERSION=	0.23.0
 #PORTREVISION=	0
 CATEGORIES=	devel
 MASTER_SITES=	CHEESESHOP
