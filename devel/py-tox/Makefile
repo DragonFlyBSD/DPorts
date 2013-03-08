@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-tox
-# Date created:		2012-07-19
-# Whom:			Kubilay Kocak <koobs.freebsd@gmail.com>
-#
-# $FreeBSD: ports/devel/py-tox/Makefile,v 1.2 2012/11/17 05:56:51 svnexp Exp $
-#
+# Created by: Kubilay Kocak <koobs@FreeBSD.org>
+# $FreeBSD: ports/devel/py-tox/Makefile,v 1.3 2013/02/09 15:59:06 svnexp Exp $
 
 PORTNAME=	tox
 PORTVERSION=	1.4.2
@@ -11,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	koobs.freebsd@gmail.com
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Python virtualenv-based automation of test activities
 
 LICENSE=	GPLv2 GPLv3
