@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cvsgraph
-# Date created:				2001-02-21
-# Whom:					trevor
-#
-# $FreeBSD: ports/devel/cvsgraph/Makefile,v 1.35 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: trevor
+# $FreeBSD: ports/devel/cvsgraph/Makefile,v 1.36 2013/01/27 06:41:37 svnexp Exp $
 
 PORTNAME=	cvsgraph
 PORTVERSION=	1.7.0
@@ -31,7 +27,7 @@ SUB_FILES=	pkg-message
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gd-inc=${LOCALBASE}/include \
 		--with-gd-lib=${LOCALBASE}/lib CFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${PREFIX}/lib"
+		LDFLAGS="-lm -L${PREFIX}/lib"
 REINPLACE_ARGS=	-i ""
 
 pre-patch:
