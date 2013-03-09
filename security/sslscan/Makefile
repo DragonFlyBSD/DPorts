@@ -15,7 +15,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	matthieu@labs.fr
 COMMENT=	SSLScan is a fast SSL port scanner
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
+MAKE_ARGS=	CC="${CC}" CFLAGS="-I${LOCALBASE}/include"
+MAKE_ARGS+=	LDFLAGS="-lcrypto -L${LOCALBASE}/lib"
 
 MAN1=	sslscan.1
 PLIST_FILES=	bin/sslscan
