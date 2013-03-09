@@ -1,6 +1,6 @@
---- src/poudriere.d/common.sh.hammer.orig	2013-03-03 22:51:09.056995000 +0000
+--- src/poudriere.d/common.sh.hammer.orig	2013-03-07 00:13:03.000000000 +0000
 +++ src/poudriere.d/common.sh.hammer
-@@ -0,0 +1,866 @@
+@@ -0,0 +1,868 @@
 +#!/bin/sh
 +
 +zget() {
@@ -373,6 +373,7 @@
 +	[ -n "${USE_TMPFS}" ] && mount_tmpfs tmpfs ${mnt}/usr/local
 +	cp -a ${HAMMER_SNAPDIR}/${snap}/etc/* ${mnt}/etc/
 +	cp -a ${HAMMER_SNAPDIR}/${snap}/var/* ${mnt}/var/
++	[ -n "${RESOLV_CONF}" ] && cp -v "${RESOLV_CONF}" ${mnt}/etc/
 +
 +	JAILMNT=${mnt} injail /usr/sbin/mtree -q -U -f \
 +	   ${PORTSRC}/Templates/BSD.local.dist -d -e -p /usr/local >/dev/null
@@ -412,6 +413,7 @@
 +	    dismount ${mnt}/usr/local
 +	fi
 +
++	zset status "available:"
 +}
 +
 +stop_builders() {

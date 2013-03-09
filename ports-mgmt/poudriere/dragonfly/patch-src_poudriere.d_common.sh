@@ -100,8 +100,9 @@
  			[ -z "${status}" ] && continue
  			# Hide idle workers
 -			[ "${status}" = "idle:" ] && continue
+-			echo -e "\t[${j}]: ${status}"
 +			[ "${status}" = "idle:" -o "${status}" = "-" ] && continue
- 			echo -e "\t[${j}]: ${status}"
++			echo -e "       t[${j}]: ${status}"
  		done
  	fi
 -}
@@ -205,7 +206,7 @@
 -		-o mountpoint=${BASEFS}/data \
 -		${ZPOOL}${ZROOTFS}/data
 -	echo "${BASEFS}/data"
-+	printf "[${JAILNAME}] [${status}] [%0${queue_width}d/%0${queue_width}d] Built: %-${queue_width}d Failed: %-${queue_width}d  Ignored: %-${queue_width}d  Skipped: %-${queue_width}d\n" \
++	printf "[${JAILNAME}] [${status}] [%0${queue_width}d/%0${queue_width}d]\nBuilt: %-${queue_width}d Failed: %-${queue_width}d  Ignored: %-${queue_width}d  Skipped: %-${queue_width}d\n" \
 +	  ${ndone} ${nbq} ${nbb} ${nbf} ${nbi} ${nbs}
  }
  
