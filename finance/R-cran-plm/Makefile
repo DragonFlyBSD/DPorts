@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/finance/R-cran-plm/Makefile,v 1.7 2012/12/15 23:23:00 svnexp Exp $
+# $FreeBSD: ports/finance/R-cran-plm/Makefile,v 1.8 2013/01/04 18:45:33 svnexp Exp $
 
 PORTNAME=	plm
 DISTVERSION=	1.3-1
+PORTREVISION=	1
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
