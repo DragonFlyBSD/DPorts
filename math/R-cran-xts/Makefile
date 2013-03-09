@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/math/R-cran-xts/Makefile,v 1.11 2012/11/17 05:59:19 svnexp Exp $
+# $FreeBSD: ports/math/R-cran-xts/Makefile,v 1.15 2013/01/22 13:42:33 svnexp Exp $
 
 PORTNAME=	xts
-DISTVERSION=	0.8-8
+DISTVERSION=	0.9-3
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
