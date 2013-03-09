@@ -1,13 +1,9 @@
-# New ports collection makefile for:	R-cran-reshape
-# Date created:		2011-08-30
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/R-cran-reshape/Makefile,v 1.9 2012/11/17 05:55:32 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: ports/devel/R-cran-reshape/Makefile,v 1.10 2013/01/04 18:45:32 svnexp Exp $
 
 PORTNAME=	reshape
 PORTVERSION=	0.8.4
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
