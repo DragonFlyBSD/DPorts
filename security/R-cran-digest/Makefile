@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/security/R-cran-digest/Makefile,v 1.12 2012/11/26 23:10:31 svnexp Exp $
+# $FreeBSD: ports/security/R-cran-digest/Makefile,v 1.16 2013/02/17 20:51:56 svnexp Exp $
 
 PORTNAME=	digest
-PORTVERSION=	0.6.0
+PORTVERSION=	0.6.3
 CATEGORIES=	security
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
