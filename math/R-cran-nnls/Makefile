@@ -1,11 +1,9 @@
-# New ports collection makefile for:	nnls
-# Date created:		2012-08-21
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: ports/math/R-cran-nnls/Makefile,v 1.2 2012/11/17 05:59:18 svnexp Exp $
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: ports/math/R-cran-nnls/Makefile,v 1.3 2013/01/04 18:45:35 svnexp Exp $
 
 PORTNAME=	nnls
 PORTVERSION=	1.4
+PORTREVISION=	1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
