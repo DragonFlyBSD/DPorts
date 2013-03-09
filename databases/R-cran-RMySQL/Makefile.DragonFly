@@ -1,0 +1,5 @@
+RARGS+= --with-mysql-inc=${LOCALBASE}/include/mysql
+RARGS+= --with-mysql-lib=${LOCALBASE}/lib/mysql
+
+R_POSTCMD_INSTALL_OPTIONS+=--configure-args='${RARGS}'
+
