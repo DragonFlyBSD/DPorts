@@ -1,12 +1,9 @@
-# New ports collection makefile for:	R-cran-sqldf
-# Date created:		2012-08-21
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/R-cran-sqldf/Makefile,v 1.2 2012/11/17 05:55:05 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: ports/databases/R-cran-sqldf/Makefile,v 1.3 2013/01/04 18:45:32 svnexp Exp $
 
 PORTNAME=	sqldf
 DISTVERSION=	0.4-6.4
+PORTREVISION=	1
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
