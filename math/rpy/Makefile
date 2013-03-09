@@ -1,14 +1,9 @@
-# ex:ts=8
-# Ports collection makefile for:	rpy
-# Date created:			Jan 14, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/math/rpy/Makefile,v 1.35 2012/11/17 05:59:30 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: ports/math/rpy/Makefile,v 1.36 2013/01/04 18:45:35 svnexp Exp $
 
 PORTNAME=	rpy
 PORTVERSION=	1.0.3
-PORTREVISION=	25
+PORTREVISION=	26
 CATEGORIES=	math
 MASTER_SITES=	SF
 
