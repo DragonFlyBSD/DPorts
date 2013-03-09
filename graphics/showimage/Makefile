@@ -1,13 +1,9 @@
-# New ports collection makefile for:	showimage
-# Date Created:				2011-11-26
-# Whom:					Rusty Nejdl <rnejdl@ringofsaturn.com>
-#
-# $FreeBSD: ports/graphics/showimage/Makefile,v 1.5 2012/11/17 05:58:23 svnexp Exp $
-#
+# Created by: Rusty Nejdl <rnejdl@ringofsaturn.com>
+# $FreeBSD: ports/graphics/showimage/Makefile,v 1.6 2013/02/25 14:04:15 svnexp Exp $
 
 PORTNAME=	showimage
 PORTVERSION=	1.6.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics kde
 MASTER_SITES=	http://www.kde-apps.org/CONTENT/content-files/
 DISTNAME=	143977-${PORTNAME}-${PORTVERSION}
