@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/R-cran-png/Makefile,v 1.1 2012/11/25 06:49:04 svnexp Exp $
+# $FreeBSD: ports/graphics/R-cran-png/Makefile,v 1.2 2013/01/04 18:45:34 svnexp Exp $
 
 PORTNAME=	png
 DISTVERSION=	0.1-4
+PORTREVISION=	1
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
