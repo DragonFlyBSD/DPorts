@@ -1,13 +1,9 @@
-# New ports collection makefile for:	R-cran-DBI
-# Date created:		2011-08-16
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/R-cran-DBI/Makefile,v 1.9 2012/11/17 05:55:05 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: ports/databases/R-cran-DBI/Makefile,v 1.10 2013/01/04 18:45:32 svnexp Exp $
 
 PORTNAME=	DBI
 DISTVERSION=	0.2-5
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
