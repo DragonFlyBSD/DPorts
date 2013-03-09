@@ -1,13 +1,13 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/science/R-cran-Epi/Makefile,v 1.13 2012/11/17 06:00:56 svnexp Exp $
+# $FreeBSD: ports/science/R-cran-Epi/Makefile,v 1.15 2013/02/09 01:55:41 svnexp Exp $
 
 PORTNAME=	Epi
-PORTVERSION=	1.1.40
+PORTVERSION=	1.1.44
 CATEGORIES=	science
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
-COMMENT=	A package for statistical analysis in epidemiology
+COMMENT=	Package for statistical analysis in epidemiology
 
 LICENSE=	GPLv2
 
