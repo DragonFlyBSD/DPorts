@@ -1,12 +1,9 @@
-# New ports collection makefile for:	RUnit
-# Date created:		2012-08-21
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/R-cran-RUnit/Makefile,v 1.2 2012/11/17 05:55:32 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: ports/devel/R-cran-RUnit/Makefile,v 1.3 2013/01/04 18:45:32 svnexp Exp $
 
 PORTNAME=	RUnit
 PORTVERSION=	0.4.26
+PORTREVISION=	1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
