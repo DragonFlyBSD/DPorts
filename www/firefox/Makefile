@@ -1,8 +1,8 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: ports/www/firefox/Makefile,v 1.289 2013/02/06 20:32:01 svnexp Exp $
+# $FreeBSD: www/firefox/Makefile 313335 2013-03-03 10:09:08Z flo $
 
 PORTNAME=	firefox
-DISTVERSION=	18.0.2
+DISTVERSION=	19.0
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -12,10 +12,10 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}.source
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
-BUILD_DEPENDS=	nspr>=4.9.3:${PORTSDIR}/devel/nspr \
+BUILD_DEPENDS=	nspr>=4.9.4:${PORTSDIR}/devel/nspr \
 		nss>=3.14.1:${PORTSDIR}/security/nss \
 		sqlite3>=3.7.14.1:${PORTSDIR}/databases/sqlite3 \
-		${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3 \
+		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		cairo>=1.10.2_1,1:${PORTSDIR}/graphics/cairo \
 		unzip:${PORTSDIR}/archivers/unzip
 
@@ -56,7 +56,7 @@ OPTIONS_DEFAULT=GIO WEBRTC
 WRKSRC:=	${WRKDIR}/mozilla-release
 
 .if ${PORT_OPTIONS:MPGO}
-BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3
+USE_GCC?=	yes
 USE_DISPLAY=		yes
 .include "${PORTSDIR}/Mk/bsd.python.mk"
 
