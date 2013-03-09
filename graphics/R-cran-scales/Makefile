@@ -1,7 +1,8 @@
-# $FreeBSD: ports/graphics/R-cran-scales/Makefile,v 1.7 2012/12/06 22:18:03 svnexp Exp $
+# $FreeBSD: ports/graphics/R-cran-scales/Makefile,v 1.8 2013/01/04 18:45:34 svnexp Exp $
 
 PORTNAME=	scales
 PORTVERSION=	0.2.3
+PORTREVISION=	1
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
