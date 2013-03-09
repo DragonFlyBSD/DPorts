@@ -2,7 +2,7 @@
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	1
+PORTREVISION=	2
 
 MASTER_SITE_SUBDIR=	src/${PORTVERSION}/
 MASTER_SITES+=	http://dev-www.libreoffice.org/src/:src \
@@ -36,6 +36,7 @@ LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo \
 		mythes-1.2.0:${PORTSDIR}/textproc/mythes \
 		odbc.2:${PORTSDIR}/databases/unixODBC \
 		rsvg-2.2:${PORTSDIR}/graphics/librsvg2 \
+		hyphen.2:${PORTSDIR}/textproc/hyphen \
 		poppler-glib.8:${PORTSDIR}/graphics/poppler-glib \
 		wpd-0.9.9:${PORTSDIR}/textproc/libwpd \
 		wpg-0.2.2:${PORTSDIR}/graphics/libwpg \
@@ -62,7 +63,7 @@ CONFLICTS_INSTALL=	libreoffice-legacy-[0-9]*
 #LO_COMPONENTS=	binfilter dictionaries help translations
 LO_COMPONENTS=	help
 
-USE_GCC=	4.4
+USE_GCC=	4.7
 USE_XZ=	yes
 USE_PYTHON=	yes
 
@@ -78,10 +79,7 @@ DISTFILES+=	${PORTNAME}-${components}-${LOVERSION}${EXTRACT_SUFX}
 
 EXTRACT_ONLY:=	${DISTFILES}
 
-DISTFILES+=	0d2dcdfbf28d6208751b33057f5361f0-libcmis-0.2.3.tar.gz:src
-DISTFILES+=	86261f06c097d3e425a2f6d0b0635380-hyphen-2.8.3.tar.gz:src \
-		9f9e15966b5624834157fe3d748312bc-mdds_0.6.1.tar.bz2:src \
-		e1e255dc43dbcbb34cb19e8a0eba90ae-mythes-1.2.2.tar.gz:src \
+DISTFILES+=	0d2dcdfbf28d6208751b33057f5361f0-libcmis-0.2.3.tar.gz:src \
 		1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz:src
 
 USE_AUTOTOOLS=	autoconf aclocal
@@ -123,6 +121,9 @@ CONFIGURE_ARGS+=	--exec-prefix=${PREFIX} \
 CONFIGURE_ARGS+=	--with-alloc=system \
 			--with-build-version="FreeBSD ports ${PKGVERSION}" \
 			--with-external-tar=${DISTDIR}/${DIST_SUBDIR} \
+			--with-external-thes-dir=${LOCALBASE}/share/mythes \
+			--with-external-hyph-dir=${LOCALBASE}/share/hyphen \
+			--with-external-dict-dir=${LOCALBASE}/share/hunspell \
 			--with-gnu-patch=${LOCALBASE}/bin/gpatch \
 			--with-num-cpus=${MAKE_JOBS_NUMBER} \
 			--with-system-headers \

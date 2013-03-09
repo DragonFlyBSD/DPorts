@@ -1,5 +1,5 @@
---- solenv/gbuild/platform/unxgcc.mk.orig	2012-11-28 09:29:53.000000000 +0100
-+++ solenv/gbuild/platform/unxgcc.mk	2013-01-01 23:36:24.337386000 +0100
+--- ./solenv/gbuild/platform/unxgcc.mk.orig	2013-01-16 04:41:51.000000000 -0500
++++ ./solenv/gbuild/platform/unxgcc.mk	2013-02-12 20:48:19.000000000 -0500
 @@ -297,7 +297,7 @@
  	$(foreach lib,$(gb_Library_EXTENSIONLIBS),$(lib):OXT) \
  
