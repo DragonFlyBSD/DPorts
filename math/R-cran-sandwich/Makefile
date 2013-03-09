@@ -1,13 +1,9 @@
-# New ports collection makefile for:	R-cran-sandwich
-# Date created:		2011-09-23
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/math/R-cran-sandwich/Makefile,v 1.11 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: ports/math/R-cran-sandwich/Makefile,v 1.12 2013/01/04 18:45:35 svnexp Exp $
 
 PORTNAME=	sandwich
 DISTVERSION=	2.2-9
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
