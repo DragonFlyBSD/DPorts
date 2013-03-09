@@ -20,6 +20,8 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-fPIC
 
+REPLACE_PERL=	pmerge
+
 MAN1=		hspell.1
 MAN3=		hspell.3
 SUB_FILES=	pkg-message
