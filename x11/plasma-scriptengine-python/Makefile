@@ -1,9 +1,4 @@
-# New ports collection makefile for:	plasma-scriptengine-python
-# Date created:		2010-03-14
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/plasma-scriptengine-python/Makefile,v 1.13 2012/11/17 06:03:19 svnexp Exp $
-#
+# $FreeBSD: ports/x11/plasma-scriptengine-python/Makefile,v 1.14 2013/02/04 01:04:52 svnexp Exp $
 
 PORTNAME=	plasma-scriptengine-python
 PORTVERSION=	${KDE4_VERSION}
