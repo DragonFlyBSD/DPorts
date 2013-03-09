@@ -1,13 +1,8 @@
-# New ports collection makefile for:	R-cran-memisc
-# Date created:		2011-08-16
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/math/R-cran-memisc/Makefile,v 1.6 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: math/R-cran-memisc/Makefile 313064 2013-02-27 15:49:02Z tota $
 
 PORTNAME=	memisc
-DISTVERSION=	0.95-38
-PORTREVISION=	3
+DISTVERSION=	0.96-3
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
