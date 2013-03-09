@@ -1,2 +1,0 @@
-CFLAGS+=		-D__FreeBSD__=1
-CFLAGS+=		-DNONETWORK=0
