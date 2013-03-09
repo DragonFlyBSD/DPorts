@@ -1,13 +1,9 @@
-# New ports collection makefile for:	R-cran-memoise
-# Date created:		2012-03-05
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/R-cran-memoise/Makefile,v 1.4 2012/11/17 05:55:32 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: ports/devel/R-cran-memoise/Makefile,v 1.5 2013/01/04 18:45:32 svnexp Exp $
 
 PORTNAME=	memoise
 PORTVERSION=	0.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
