@@ -1,12 +1,9 @@
-# New ports collection makefile for:	chron
-# Date created:		2012-08-22
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/R-cran-chron/Makefile,v 1.3 2012/12/11 22:37:48 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: ports/devel/R-cran-chron/Makefile,v 1.4 2013/01/04 18:45:32 svnexp Exp $
 
 PORTNAME=	chron
 DISTVERSION=	2.3-43
+PORTREVISION=	1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
