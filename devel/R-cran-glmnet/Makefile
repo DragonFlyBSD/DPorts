@@ -1,9 +1,9 @@
-# $FreeBSD: ports/devel/R-cran-glmnet/Makefile,v 1.2 2012/11/17 05:55:32 svnexp Exp $
+# $FreeBSD: ports/devel/R-cran-glmnet/Makefile,v 1.4 2013/01/28 14:49:36 svnexp Exp $
 
 PORTNAME=	glmnet
-PORTVERSION=	1.8
+DISTVERSION=	1.8-5
 CATEGORIES=	devel
-DISTNAME=	${PORTNAME}_${PORTVERSION}
+DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Lasso and elastic-net regularized generalized linear models
