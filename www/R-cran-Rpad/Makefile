@@ -1,13 +1,9 @@
-# New ports collection makefile for:	R-cran-Rpad
-# Date created:		2011-09-04
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/www/R-cran-Rpad/Makefile,v 1.9 2012/11/17 06:02:27 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: ports/www/R-cran-Rpad/Makefile,v 1.10 2013/01/04 18:45:38 svnexp Exp $
 
 PORTNAME=	Rpad
 PORTVERSION=	1.3.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	www
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
