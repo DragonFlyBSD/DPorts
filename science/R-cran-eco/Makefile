@@ -1,13 +1,9 @@
-# New ports collection makefile for:	R-cran-eco
-# Date created:				Sep 28, 2011
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/science/R-cran-eco/Makefile,v 1.9 2012/11/17 06:00:56 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: ports/science/R-cran-eco/Makefile,v 1.10 2013/01/04 18:45:37 svnexp Exp $
 
 PORTNAME=	eco
 PORTVERSION=	3.1.5
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	science
 DISTNAME=	${PORTNAME}_${PORTVERSION:C/\./-/g:C/-/\./1}
 
