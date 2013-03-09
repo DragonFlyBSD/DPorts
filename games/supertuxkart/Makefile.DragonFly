@@ -1,0 +1,2 @@
+CFLAGS+= -D__FreeBSD__=1
+LDFLAGS+= -lz
