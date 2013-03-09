@@ -1,8 +1,8 @@
-# $FreeBSD: ports/french/calligra-l10n/Makefile,v 1.39 2012/11/17 05:57:28 svnexp Exp $
+# $FreeBSD: ports/french/calligra-l10n/Makefile,v 1.40 2013/02/05 12:23:33 svnexp Exp $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
-CATEGORIES?=	french editors kde
+CATEGORIES=	french editors kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	French messages and documentation for Calligra
