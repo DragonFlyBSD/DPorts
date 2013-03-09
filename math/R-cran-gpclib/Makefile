@@ -1,12 +1,9 @@
-# New ports collection makefile for:	gpclib
-# Date created:		2009-03-27
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/math/R-cran-gpclib/Makefile,v 1.22 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: ports/math/R-cran-gpclib/Makefile,v 1.23 2013/01/04 18:45:35 svnexp Exp $
 
 PORTNAME=	gpclib
 DISTVERSION=	1.5-3
+PORTREVISION=	1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
