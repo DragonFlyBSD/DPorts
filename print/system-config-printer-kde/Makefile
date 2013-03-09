@@ -1,9 +1,4 @@
-# New ports collection makefile for:	system-config-printer-kde
-# Date created:		2009-05-04
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/print/system-config-printer-kde/Makefile,v 1.25 2012/11/17 06:00:54 svnexp Exp $
-#
+# $FreeBSD: ports/print/system-config-printer-kde/Makefile,v 1.26 2013/02/04 01:04:34 svnexp Exp $
 
 PORTNAME=	system-config-printer-kde
 PORTVERSION=	${KDE4_VERSION}
