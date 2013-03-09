@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/devel/R-cran-reshape2/Makefile,v 1.6 2012/12/06 13:23:41 svnexp Exp $
+# $FreeBSD: ports/devel/R-cran-reshape2/Makefile,v 1.7 2013/01/04 18:45:32 svnexp Exp $
 
 PORTNAME=	reshape2
 PORTVERSION=	1.2.2
+PORTREVISION=	1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
