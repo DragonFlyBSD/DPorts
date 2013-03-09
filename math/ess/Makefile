@@ -1,12 +1,8 @@
-# New ports collection makefile for:	ess
-# Date created:				06 March 2010
-# Whom:					Christopher J. Ruwe
-#
-# $FreeBSD: ports/math/ess/Makefile,v 1.21 2012/11/17 05:59:20 svnexp Exp $
-#
+# Created by: Christopher J. Ruwe
+# $FreeBSD: ports/math/ess/Makefile,v 1.24 2013/01/29 03:43:52 svnexp Exp $
 
 PORTNAME=	ess
-DISTVERSION=	12.09
+DISTVERSION=	12.09-2
 CATEGORIES=	math
 MASTER_SITES=	http://ess.r-project.org/downloads/ess/
 EXTRACT_SUFX=	.tgz
@@ -21,11 +17,13 @@ RUN_DEPENDS=	R:${PORTSDIR}/math/R
 USE_EMACS=	yes
 USE_GMAKE=	yes
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 INFO=	ess
 .endif
 
-post-patch:
+post-patch: .SILENT
 	${REINPLACE_CMD} -e "\|^PREFIX=|d" -e "\|^INSTALL=|d" \
 		-e "\|^EMACS=|s|=.*|=${EMACS_NAME}|" \
 		-e "\|^ETCDIR=|s|=.*|=${PREFIX}/${EMACS_LIBDIR}/etc/ess|" \
@@ -39,19 +37,19 @@ post-patch:
 	${REINPLACE_CMD} -e "s|\$$(INSTALL)|${INSTALL_SCRIPT}|g" \
 		${WRKSRC}/lisp/Makefile
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-build:
 	@(cd ${WRKSRC}/doc; ${SETENV} ${MAKE_ENV} ${GMAKE} ${_MAKE_JOBS} \
-	${MAKE_ARGS} info)
+		${MAKE_ARGS} info)
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@(cd ${WRKSRC}/doc; ${SETENV} ${MAKE_ENV} ${GMAKE} ${_MAKE_JOBS} \
-	${MAKE_ARGS} install-info)
+		${MAKE_ARGS} install-info)
 .endif
-	@${ECHO_MSG} ""
+	@${ECHO_MSG}
 	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG} ""
+	@${ECHO_MSG}
 
 .include <bsd.port.mk>
