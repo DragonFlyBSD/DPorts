@@ -1,15 +1,10 @@
-# New ports collection makefile for:	R-cran-ccgarch
-# Date created:		2011-09-23
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/finance/R-cran-ccgarch/Makefile,v 1.5 2012/11/17 05:57:25 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: ports/finance/R-cran-ccgarch/Makefile,v 1.7 2013/01/16 11:41:35 svnexp Exp $
 
 PORTNAME=	ccgarch
-PORTVERSION=	0.2.0
-PORTREVISION=	3
+DISTVERSION=	0.2.0-2
 CATEGORIES=	finance
-DISTNAME=	${PORTNAME}_${PORTVERSION}
+DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Conditional Correlation GARCH models
