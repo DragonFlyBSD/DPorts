@@ -1,13 +1,9 @@
-# New ports collection makefile for:	R-cran-mvtnorm
-# Date created:				March 08, 2011
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/math/R-cran-mvtnorm/Makefile,v 1.11 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: ports/math/R-cran-mvtnorm/Makefile,v 1.12 2013/01/04 18:45:35 svnexp Exp $
 
 PORTNAME=	mvtnorm
 PORTVERSION=	0.9.96
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION:C/\./-/g:C/-/\./1}
 
