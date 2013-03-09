@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/R-cran-gbm/Makefile,v 1.2 2012/11/17 05:55:32 svnexp Exp $
+# $FreeBSD: ports/devel/R-cran-gbm/Makefile,v 1.4 2013/01/28 14:46:41 svnexp Exp $
 
 PORTNAME=	gbm
-DISTVERSION=	1.6-3.2
+DISTVERSION=	2.0-8
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
