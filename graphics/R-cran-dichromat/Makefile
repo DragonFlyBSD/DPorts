@@ -1,13 +1,8 @@
-# New ports collection makefile for:	R-cran-dichromat
-# Date created:		2012-02-08
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/R-cran-dichromat/Makefile,v 1.5 2012/11/17 05:58:00 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: ports/graphics/R-cran-dichromat/Makefile,v 1.7 2013/01/25 14:46:06 svnexp Exp $
 
 PORTNAME=	dichromat
-DISTVERSION=	1.2-4
-PORTREVISION=	3
+DISTVERSION=	2.0-0
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
