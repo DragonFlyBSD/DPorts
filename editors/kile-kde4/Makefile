@@ -1,9 +1,5 @@
-# New ports collection makefile for: kile
-# Date created:		21 Jun 2002
-# Whom:			Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-#
-# $FreeBSD: ports/editors/kile-kde4/Makefile,v 1.59 2012/11/17 05:57:14 svnexp Exp $
-#
+# Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
+# $FreeBSD: ports/editors/kile-kde4/Makefile,v 1.60 2013/02/04 15:59:45 svnexp Exp $
 
 PORTNAME=	kile
 PORTVERSION=	2.1.3
@@ -11,7 +7,7 @@ CATEGORIES=	editors kde
 MASTER_SITES=	SF/${PORTNAME}/stable/${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	A LaTeX source editor for KDE
+COMMENT=	LaTeX source editor for KDE
 
 RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
 		identify:${PORTSDIR}/graphics/ImageMagick
