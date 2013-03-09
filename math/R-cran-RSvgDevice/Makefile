@@ -1,17 +1,12 @@
-# New ports collection makefile for:	RSvgDevice
-# Date created:		14 April 2009
-# Whom:			David Naylor <naylor.b.david@gmail.com>
-#
-# $FreeBSD: ports/math/R-cran-RSvgDevice/Makefile,v 1.20 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: David Naylor <naylor.b.david@gmail.com>
+# $FreeBSD: ports/math/R-cran-RSvgDevice/Makefile,v 1.23 2013/02/14 04:42:03 svnexp Exp $
 
 PORTNAME=	RSvgDevice
-PORTVERSION=	0.6.4.1
-PORTREVISION=	14
+PORTVERSION=	0.6.4.2
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
-MAINTAINER=	naylor.b.david@gmail.com
+MAINTAINER=	dbn@FreeBSD.org
 COMMENT=	A R SVG graphics device
 
 USE_R_MOD=	yes
