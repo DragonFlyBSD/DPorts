@@ -1,8 +1,8 @@
-# $FreeBSD: ports/russian/calligra-l10n/Makefile,v 1.43 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: ports/russian/calligra-l10n/Makefile,v 1.44 2013/02/05 12:23:36 svnexp Exp $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
-CATEGORIES?=	russian editors kde
+CATEGORIES=	russian editors kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Russian messages and documentation for Calligra
