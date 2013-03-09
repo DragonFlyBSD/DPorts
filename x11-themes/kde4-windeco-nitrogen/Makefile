@@ -1,9 +1,5 @@
-# New ports collection makefile for:   nitrogen
-# Date created:                        29th October, 2009
-# Whom:                                kmoore
-#
-# $FreeBSD: ports/x11-themes/kde4-windeco-nitrogen/Makefile,v 1.14 2012/11/17 06:03:33 svnexp Exp $
-#
+# Created by: kmoore
+# $FreeBSD: ports/x11-themes/kde4-windeco-nitrogen/Makefile,v 1.15 2013/02/08 10:55:15 svnexp Exp $
 
 PORTNAME=	nitrogen
 PORTVERSION=	3.3.3
@@ -13,7 +9,7 @@ MASTER_SITES=	http://www.kde-look.org/CONTENT/content-files/
 PKGNAMEPREFIX=	kde4-windeco-
 DISTNAME=	99551-${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}-Source
 
-MAINTAINER=	shanjobe@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	KDE4 window decoration
 
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4 workspace
