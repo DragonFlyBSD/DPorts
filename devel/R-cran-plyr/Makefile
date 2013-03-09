@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/devel/R-cran-plyr/Makefile,v 1.12 2012/12/06 22:33:41 svnexp Exp $
+# $FreeBSD: ports/devel/R-cran-plyr/Makefile,v 1.13 2013/01/04 18:45:32 svnexp Exp $
 
 PORTNAME=	plyr
 PORTVERSION=	1.8
+PORTREVISION=	1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
