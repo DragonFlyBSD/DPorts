@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: ports/multimedia/dragon/Makefile,v 1.1 2013/02/04 01:04:23 svnexp Exp $
+# $FreeBSD: ports/multimedia/dragon/Makefile,v 1.2 2013/02/13 19:37:52 svnexp Exp $
 
 PORTNAME=		dragon
 PORTVERSION=		${KDE4_VERSION}
@@ -13,6 +13,8 @@ COMMENT=		A KDE multimedia player with a focus on simplicity instead of features
 
 LICENSE=		GPLv2
 
+# Avoid clash with devel/dragon
+LATEST_LINK=		kdemultimedia-dragon
 CONFLICTS_INSTALL=	kdemultimedia-4.[1-8].*
 
 MAKE_JOBS_SAFE=		yes
