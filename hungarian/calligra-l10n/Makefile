@@ -1,8 +1,8 @@
-# $FreeBSD: ports/hungarian/calligra-l10n/Makefile,v 1.7 2012/11/17 05:58:27 svnexp Exp $
+# $FreeBSD: ports/hungarian/calligra-l10n/Makefile,v 1.8 2013/02/05 12:23:34 svnexp Exp $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
-CATEGORIES?=	hungarian editors kde
+CATEGORIES=	hungarian editors kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Hungarian messages and documentation for Calligra
