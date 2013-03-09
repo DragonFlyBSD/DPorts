@@ -1,8 +1,4 @@
-# New ports collection Makefile for:	kajongg
-# Date created:				3 September 2011
-# Whom:					Alberto Villa <avilla@FreeBSD.org>
-#
-# $FreeBSD: ports/games/kajongg/Makefile,v 1.7 2012/11/17 05:57:42 svnexp Exp $
+# $FreeBSD: ports/games/kajongg/Makefile,v 1.8 2013/02/04 01:03:59 svnexp Exp $
 
 PORTNAME=	kajongg
 PORTVERSION=	${KDE4_VERSION}
