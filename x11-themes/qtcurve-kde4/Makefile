@@ -1,12 +1,7 @@
-# New ports collection makefile for:	qtcurve
-# Date created:		2008-08-31
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/qtcurve-kde4/Makefile,v 1.33 2012/11/17 06:03:33 svnexp Exp $
-#
+# $FreeBSD: ports/x11-themes/qtcurve-kde4/Makefile,v 1.34 2013/02/11 14:20:18 svnexp Exp $
 
 PORTNAME=	qtcurve
-PORTVERSION=	1.8.13
+PORTVERSION=	1.8.14
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://craigd.wikispaces.com/file/view/
 PKGNAMEPREFIX=	kde4-style-
