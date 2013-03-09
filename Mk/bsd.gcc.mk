@@ -86,6 +86,7 @@ _GCCVERSION_${v}_V=	${j}
 BUILD_DEPENDS+=	${LOCALBASE}/gcc-aux/bin/gfortran:${PORTSDIR}/lang/gcc-aux
 RUN_DEPENDS+=	${LOCALBASE}/gcc-aux/bin/gfortran:${PORTSDIR}/lang/gcc-aux
 _USE_GCC:=	${DRAGONFLY_MAX_VERSION}  # dummy to avoid further depends
+_GCC_RUNTIME:=	${LOCALBASE}/gcc-aux/lib
 FC:=		${LOCALBASE}/gcc-aux/bin/gfortran
 F77:=		${LOCALBASE}/gcc-aux/bin/gfortran
 CC:=		${LOCALBASE}/gcc-aux/bin/gcc
@@ -116,7 +117,7 @@ MAKE_ENV+=		F77="${F77}" FC="${FC}" FFLAGS="${FFLAGS}"
 
 
 .if defined(USE_GCC) && !defined(FORCE_BASE_CC_FOR_TESTING)
-. if empty(USE_GCC) || ${USE_GCC} == any
+. if empty(USE_GCC) || ${USE_GCC} == any || ${USE_GCC:tl} == "yes"
 
 # enable the clang-is-cc workaround.  default to the oldest gcc in base
 _USE_GCC:=	4.4
