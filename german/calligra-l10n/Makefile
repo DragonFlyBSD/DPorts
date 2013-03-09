@@ -1,8 +1,8 @@
-# $FreeBSD: ports/german/calligra-l10n/Makefile,v 1.40 2012/11/17 05:57:59 svnexp Exp $
+# $FreeBSD: ports/german/calligra-l10n/Makefile,v 1.41 2013/02/05 12:23:33 svnexp Exp $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
-CATEGORIES?=	german editors kde
+CATEGORIES=	german editors kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	German messages and documentation for Calligra
