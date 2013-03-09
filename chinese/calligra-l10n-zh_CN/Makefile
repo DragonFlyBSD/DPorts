@@ -1,8 +1,8 @@
-# $FreeBSD: ports/chinese/calligra-l10n-zh_CN/Makefile,v 1.35 2012/11/17 05:54:55 svnexp Exp $
+# $FreeBSD: ports/chinese/calligra-l10n-zh_CN/Makefile,v 1.36 2013/02/05 12:23:31 svnexp Exp $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
-CATEGORIES?=	chinese editors kde
+CATEGORIES=	chinese editors kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Simplified Chinese messages and documentation for Calligra
