@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/finance/R-cran-gmm/Makefile,v 1.14 2012/11/24 06:16:49 svnexp Exp $
+# $FreeBSD: ports/finance/R-cran-gmm/Makefile,v 1.16 2013/01/13 22:48:31 svnexp Exp $
 
 PORTNAME=	gmm
-DISTVERSION=	1.4-4
+DISTVERSION=	1.4-5
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
