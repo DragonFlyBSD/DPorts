@@ -2,11 +2,12 @@
 # Date created:				Jan 23, 2009
 # Whom:					Kris Moore
 #
-# $FreeBSD: ports/graphics/kipi-plugins-kde4/Makefile,v 1.79 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: ports/graphics/kipi-plugins-kde4/Makefile,v 1.80 2013/02/04 01:23:54 svnexp Exp $
 #
 
 PORTNAME=	kipi-plugins
 PORTVERSION=	${DIGIKAM_VER}
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	graphics kde
 
