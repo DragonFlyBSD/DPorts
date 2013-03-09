@@ -1,8 +1,8 @@
-# $FreeBSD: ports/portuguese/calligra-l10n-pt_BR/Makefile,v 1.38 2012/11/17 06:00:47 svnexp Exp $
+# $FreeBSD: ports/portuguese/calligra-l10n-pt_BR/Makefile,v 1.39 2013/02/05 12:23:36 svnexp Exp $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
-CATEGORIES?=	portuguese editors kde
+CATEGORIES=	portuguese editors kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Brazilian messages and documentation for Calligra
