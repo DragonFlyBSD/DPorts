@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: ports/Mk/bsd.python.mk,v 1.158 2012/12/23 21:22:56 svnexp Exp $
+# $FreeBSD: Mk/bsd.python.mk 313723 2013-03-09 15:58:45Z sunpoet $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
@@ -15,7 +15,7 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 # is defined in the ports' makefile. Define PYTHON_VERSION to override the
 # defaults that USE_PYTHON would give you. If your port requires only some
 # set of Python versions, you can define USE_PYTHON as [min]-[max] or
-# min+. (eg. 2.1-2.3, 2.0+ or -2.2)
+# min+. (eg. 3.1-3.2, 2.7+ or -3.2)
 #
 # The variables:
 #
@@ -462,13 +462,8 @@ PYTHONPREFIX_SITELIBDIR=	${PYTHON_SITELIBDIR:S;${PYTHONBASE};${PREFIX};}
 
 # setuptools support
 .if defined(USE_PYDISTUTILS) && ${USE_PYDISTUTILS} == "easy_install"
-.if ${PYTHON_SUFFIX} < 30
-BUILD_DEPENDS+=		${PYEASYINSTALL_CMD}:${PORTSDIR}/devel/py-setuptools
-RUN_DEPENDS+=		${PYEASYINSTALL_CMD}:${PORTSDIR}/devel/py-setuptools
-.else
 BUILD_DEPENDS+=		${PYEASYINSTALL_CMD}:${PORTSDIR}/devel/py-distribute
 RUN_DEPENDS+=		${PYEASYINSTALL_CMD}:${PORTSDIR}/devel/py-distribute
-.endif
 
 PYDISTUTILS_BUILD_TARGET?=		bdist_egg
 PYDISTUTILS_INSTALL_TARGET?=	easy_install
@@ -555,7 +550,7 @@ ZOPEPRODUCTDIR?=		Products
 .endif
 
 # Python 3rd-party modules
-PYGAME=		${PYTHON_PKGNAMEPREFIX}game>0:${PORTSDIR}/devel/py-game
+PYGAME=			${PYTHON_PKGNAMEPREFIX}game>0:${PORTSDIR}/devel/py-game
 PYNUMERIC=		${PYTHON_SITELIBDIR}/Numeric/Numeric.py:${PORTSDIR}/math/py-numeric
 PYNUMPY=		${PYTHON_SITELIBDIR}/numpy/core/numeric.py:${PORTSDIR}/math/py-numpy
 PYXML=			${PYTHON_SITELIBDIR}/_xmlplus/__init__.py:${PORTSDIR}/textproc/py-xml

@@ -85,7 +85,7 @@ REPLACE_FILES.sys-ksh=	${REPLACE_KSH}
 .if !empty(REPLACE_PERL:M*)
 REPLACE_INTERPRETER+=	sys-Perl
 REPLACE.sys-Perl.old=	.*perl[^[:space:]]*
-REPLACE.sys-Perl.new=	${PERL5}
+REPLACE.sys-Perl.new=	${LOCALBASE}/bin/perl
 REPLACE_FILES.sys-Perl=	${REPLACE_PERL}
 .endif
 

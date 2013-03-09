@@ -5,7 +5,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: ports/Mk/bsd.commands.mk,v 1.16 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.commands.mk 313600 2013-03-07 17:08:13Z miwi $
 #
 # DO NOT COMMIT CHANGES TO THIS FILE BY YOURSELF, EVEN IF YOU DID NOT GET
 # A RESPONSE FROM THE MAINTAINER(S) WITHIN A REASONABLE TIMEFRAME! ALL
@@ -54,6 +54,7 @@ ID?=		/usr/bin/id
 IDENT?=		/usr/bin/ident
 JOT?=		/usr/bin/jot
 LDCONFIG?=	/sbin/ldconfig
+LHA_CMD?=	${LOCALBASE}/bin/lha
 LN?=		/bin/ln
 LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p

@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.pkgng.mk,v 1.13 2012/12/13 21:27:53 svnexp Exp $
+# $FreeBSD: Mk/bsd.pkgng.mk 313713 2013-03-09 14:14:40Z bdrewery $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -22,8 +22,8 @@ PLIST_REINPLACE:=	${PLIST_REINPLACE:Nstopdaemon}
 
 ACTUAL-PACKAGE-DEPENDS?= \
 	if [ "${_LIB_RUN_DEPENDS}" != "  " ]; then \
-		${PKG_QUERY} "%n: {origin: %o, version: \"%v\"}" " " ${_LIB_RUN_DEPENDS:C,[^:]*:([^:]*):?.*,\1,:C,${PORTSDIR}/,,} ; \
-		${PKG_QUERY} "%dn: {origin: %do, version: \"%dv\"}" " " ${_LIB_RUN_DEPENDS:C,[^:]*:([^:]*):?.*,\1,:C,${PORTSDIR}/,,} ; \
+		${PKG_QUERY} "%n: {origin: %o, version: \"%v\"}" " " ${_LIB_RUN_DEPENDS:C,[^:]*:([^:]*):?.*,\1,:C,${PORTSDIR}/,,} 2>/dev/null || : ; \
+		${PKG_QUERY} "%dn: {origin: %do, version: \"%dv\"}" " " ${_LIB_RUN_DEPENDS:C,[^:]*:([^:]*):?.*,\1,:C,${PORTSDIR}/,,} 2>/dev/null || : ; \
 	fi
 
 
@@ -153,7 +153,7 @@ fake-pkg:
 check-build-conflicts:
 .if ( defined(CONFLICTS) || defined(CONFLICTS_BUILD) ) && !defined(DISABLE_CONFLICTS) && !defined(DEFER_CONFLICTS_CHECK)
 	@conflicts_with=$$( \
-	${PKG_QUERY} -g "%n-%v %p %o" ${CONFLICTS:C/.+/'&'/} ${CONFLICTS_BUILD:C/.+/'&'/} 2>/dev/null \
+	${PKG_QUERY} -g "%n-%v %p %o" ${CONFLICTS:C/.+/'&'/} ${CONFLICTS_BUILD:C/.+/'&'/} 2>/dev/null || : \
 		| while read pkgname prfx orgn; do \
 		if [ "/${PREFIX}" = "/$${prfx}" -a "/${PKGORIGIN}" != "/$${orgn}" ]; then \
 			${ECHO_CMD} -n " $${pkgname}"; \
@@ -177,7 +177,7 @@ check-build-conflicts:
 identify-install-conflicts:
 .if ( defined(CONFLICTS) || defined(CONFLICTS_INSTALL) ) && !defined(DISABLE_CONFLICTS)
 	@conflicts_with=$$( \
-	${PKG_QUERY} -g "%n-%v %p %o" ${CONFLICTS:C/.+/'&'/} ${CONFLICTS_INSTALL:C/.+/'&'/} 2>/dev/null \
+	${PKG_QUERY} -g "%n-%v %p %o" ${CONFLICTS:C/.+/'&'/} ${CONFLICTS_INSTALL:C/.+/'&'/} 2>/dev/null || : \
 		| while read pkgname prfx orgn; do \
 		if [ "/${PREFIX}" = "/$${prfx}" -a "/${PKGORIGIN}" != "/$${orgn}" ]; then \
 			${ECHO_CMD} -n " $${pkgname}"; \
@@ -202,7 +202,7 @@ check-install-conflicts:
 .if ( defined(CONFLICTS) || defined(CONFLICTS_INSTALL) || ( defined(CONFLICTS_BUILD) && defined(DEFER_CONFLICTS_CHECK) ) ) && !defined(DISABLE_CONFLICTS) 
 .if defined(DEFER_CONFLICTS_CHECK)
 	@conflicts_with=$$( \
-	${PKG_QUERY} -g "%n-%v %p %o" ${CONFLICTS:C/.+/'&'/} ${CONFLICTS_BUILD:C/.+/'&'/} ${CONFLICTS_INSTALL:C/.+/'&'/} 2>/dev/null \
+	${PKG_QUERY} -g "%n-%v %p %o" ${CONFLICTS:C/.+/'&'/} ${CONFLICTS_BUILD:C/.+/'&'/} ${CONFLICTS_INSTALL:C/.+/'&'/} 2>/dev/null || : \
 	       	| while read pkgname prfx orgn; do \
 		if [ "/${PREFIX}" = "/$${prfx}" -a "/${PKGORIGIN}" != "/$${orgn}" ]; then \
 			${ECHO_CMD} -n " $${pkgname}"; \
@@ -220,7 +220,7 @@ check-install-conflicts:
 	fi
 .else
 	@conflicts_with=$$( \
-	${PKG_QUERY} -g "%n-%v %p %o" ${CONFLICTS:C/.+/'&'/} ${CONFLICTS_INSTALL:C/.+/'&'/} 2>/dev/null \
+	${PKG_QUERY} -g "%n-%v %p %o" ${CONFLICTS:C/.+/'&'/} ${CONFLICTS_INSTALL:C/.+/'&'/} 2>/dev/null || : \
 	       	| while read pkgname prfx orgn; do \
 		if [ "/${PREFIX}" = "/$${prfx}" -a "/${PKGORIGIN}" != "/$${orgn}" ]; then \
 			${ECHO_CMD} -n " $${pkgname}"; \
