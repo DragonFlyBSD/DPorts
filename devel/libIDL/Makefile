@@ -1,10 +1,6 @@
-# New ports collection makefile for:   libIDL
-# Date Created:			12 February 2002
-# Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libIDL/Makefile,v 1.57 2012/11/17 05:55:52 svnexp Exp $
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: devel/libIDL/Makefile 313635 2013-03-08 11:32:11Z bapt $
 #   $MCom: ports/devel/libIDL/Makefile,v 1.7 2010/04/02 17:27:42 kwm Exp $
-#
 
 PORTNAME=	libIDL
 PORTVERSION=	0.8.14
@@ -16,11 +12,12 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A library for creating trees of CORBA IDL files
 
+USES=		bison pathfix
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_BISON=	build
-USE_GNOME=	gnomehack glib20
+USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
