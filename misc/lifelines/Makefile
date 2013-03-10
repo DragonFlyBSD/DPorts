@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lifelines
-# Date created:		10 August 2000
-# Whom:			Matt Emmerton <matt@gsicomp.on.ca>
-#
-# $FreeBSD: ports/misc/lifelines/Makefile,v 1.20 2012/11/17 05:59:41 svnexp Exp $
-#
+# Created by: Matt Emmerton <matt@gsicomp.on.ca>
+# $FreeBSD: misc/lifelines/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	lifelines
 PORTVERSION=	3.0.51
@@ -17,7 +13,7 @@ COMMENT=	An advanced genealogical system
 GNU_CONFIGURE=	yes
 USE_ICONV=	yes
 USE_BZIP2=	yes
-USE_BISON=	build
+USES=		bison
 
 MAN1=		btedit.1 dbverify.1 llines.1
 
