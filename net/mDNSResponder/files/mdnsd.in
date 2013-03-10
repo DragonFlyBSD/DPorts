@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/mDNSResponder/files/mdnsd.in,v 1.3 2012/11/17 06:00:05 svnexp Exp $
+# $FreeBSD: net/mDNSResponder/files/mdnsd.in 300897 2012-07-14 14:29:18Z beat $
 
 # PROVIDE: mdnsd
 # REQUIRE: DAEMON

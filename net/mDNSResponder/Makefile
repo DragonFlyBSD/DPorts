@@ -1,9 +1,5 @@
-# Ports collection makefile for:  mDNSResponder
-# Date created:		Tues Mar 2, 2004
-# Whom:			Alfred Perlstein <alfred@freebsd.org>
-#
-# $FreeBSD: ports/net/mDNSResponder/Makefile,v 1.39 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Alfred Perlstein <alfred@freebsd.org>
+# $FreeBSD: net/mDNSResponder/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	mDNSResponder
 PORTVERSION=	333.10
@@ -21,7 +17,7 @@ CONFLICTS=	avahi-libdns-[0-9]*
 BUILD_WRKSRC=	${WRKSRC}/mDNSPosix
 INSTALL_WRKSRC=	${WRKSRC}/mDNSPosix
 MAKE_ARGS=	os=freebsd LOCALBASE=${PREFIX} MANPATH=${MANPREFIX}/man
-USE_BISON=	build
+USES=		bison
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	mdnsd
