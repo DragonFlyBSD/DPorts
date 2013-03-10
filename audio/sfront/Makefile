@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sfront
-# Date created:				Nov 4, 2001
-# Whom:					ijliao
-#
-# $FreeBSD: ports/audio/sfront/Makefile,v 1.35 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: audio/sfront/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	sfront
 PORTVERSION=	0.99
@@ -11,11 +7,11 @@ CATEGORIES=	audio
 MASTER_SITES=	CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A translator that converts MP4-SA files into efficient C programs
+COMMENT=	Translator that converts MP4-SA files into efficient C programs
 
 LICENSE=	BSD
 
-USE_BISON=	build
+USES=		bison
 MAKE_JOBS_SAFE=	yes
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
