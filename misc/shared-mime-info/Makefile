@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: ports/misc/shared-mime-info/Makefile,v 1.68 2012/12/30 12:39:29 svnexp Exp $
+# $FreeBSD: misc/shared-mime-info/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/misc/shared-mime-info/Makefile,v 1.16 2009/11/28 05:59:02 mezz Exp $
 
 PORTNAME=	shared-mime-info
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-update-mimedb
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	glib20 libxml2 intltool gnomehack intlhack pkgconfig
+USE_GNOME=	glib20 libxml2 intltool gnomehack intlhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_JOBS_UNSAFE=	yes
