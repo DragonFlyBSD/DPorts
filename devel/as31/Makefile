@@ -1,9 +1,5 @@
-# New ports collection makefile for:	as31
-# Date created:			Nov 21, 2003
-# Whom:				Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-#
-# $FreeBSD: ports/devel/as31/Makefile,v 1.11 2012/11/17 05:55:33 svnexp Exp $
-#
+# Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
+# $FreeBSD: devel/as31/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	as31
 PORTVERSION=	2.0.b3
@@ -22,7 +18,7 @@ PLIST_SUB+=	X11=""
 ALL_TARGET=	as31
 PLIST_SUB+=	X11="@comment "
 .endif
-USE_BISON=	build
+USES=		bison
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
