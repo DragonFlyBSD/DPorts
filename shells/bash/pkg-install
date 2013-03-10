@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/shells/bash/pkg-install,v 1.7 2012/11/17 06:01:23 svnexp Exp $
+# $FreeBSD: shells/bash/pkg-install 300897 2012-07-14 14:29:18Z beat $
 #
 
 BASH="$(echo ${PKG_PREFIX-/usr/local}/bin/bash | /usr/bin/sed -e 's|//|/|g')"
