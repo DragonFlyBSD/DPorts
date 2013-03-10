@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: ports/devel/mingw32-gcc/Makefile,v 1.48 2013/01/19 03:49:21 svnexp Exp $
+# $FreeBSD: devel/mingw32-gcc/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}
@@ -22,7 +22,7 @@ GCCVERSION=	4.7.2
 
 ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 sparc64
 USE_LDCONFIG=	yes
-USE_BISON=	build
+USES=		bison
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_ICONV=	yes
