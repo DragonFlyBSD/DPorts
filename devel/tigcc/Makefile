@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tigcc
-# Date created:		15 February 2004
-# Whom:			Ben Haga <tuximus@tuximus.mine.nu>
-#
-# $FreeBSD: ports/devel/tigcc/Makefile,v 1.20 2012/11/17 05:57:05 svnexp Exp $
-#
+# Created by: Ben Haga <tuximus@tuximus.mine.nu>
+# $FreeBSD: devel/tigcc/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	tigcc
 PORTVERSION=	0.96.b8
@@ -23,7 +19,7 @@ COMMENT=	C compiler for the TI89, 92, and 92+ calculators
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison
 NO_WRKSUBDIR=	yes
 
 do-extract:
