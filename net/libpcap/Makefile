@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libpcap
-# Date created:		10 December 2003
-# Whom:			Bruce M Simpson <bms@FreeBSD.org>
-#
-# $FreeBSD: ports/net/libpcap/Makefile,v 1.28 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Bruce M Simpson <bms@FreeBSD.org>
+# $FreeBSD: net/libpcap/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	libpcap
 PORTVERSION=	1.3.0
@@ -16,7 +12,7 @@ COMMENT=	Ubiquitous network traffic capture library
 MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison
 USE_LDCONFIG=	yes
 
 .if defined(LIBPCAP_OVERWRITE_BASE)
