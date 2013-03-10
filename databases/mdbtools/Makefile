@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mdbtools
-# Date created:				25 April 2001
-# Whom:	      				Anders Nordby <anders@fix.no>
-#
-# $FreeBSD: ports/databases/mdbtools/Makefile,v 1.35 2012/11/17 05:55:10 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@fix.no>
+# $FreeBSD: databases/mdbtools/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	mdbtools
 PORTVERSION=	0.5
@@ -18,8 +14,9 @@ COMMENT=	Utilities and libraries to export data from MS Access databases (.mdb)
 BUILD_DEPENDS=	gawk:${PORTSDIR}/lang/gawk
 
 USE_AUTOTOOLS=	libtool
-USE_BISON=	build
+USES=		bison
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -31,7 +28,8 @@ MAN1=		mdb-ver.1 mdb-tables.1 mdb-schema.1 mdb-sql.1 mdb-export.1
 
 .if ${HAVE_GNOME:Mlibgnomeui}!=""
 USE_XORG=	x11
-USE_GNOME+=	gnomeprefix gnomehack libgnomeui
+USES+=		pathfix
+USE_GNOME+=	gnomeprefix libgnomeui
 PKGNAMESUFFIX=	-gnome
 .endif
 
