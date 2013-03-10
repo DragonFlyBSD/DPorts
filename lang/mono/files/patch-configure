@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/mono/files/patch-configure,v 1.19 2013/02/04 22:49:38 svnexp Exp $
+$FreeBSD$
 
 --- configure.orig
 +++ configure

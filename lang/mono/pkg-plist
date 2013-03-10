@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/lang/mono/pkg-plist,v 1.43 2013/01/11 08:41:45 svnexp Exp $
+@comment $FreeBSD: lang/mono/pkg-plist 310220 2013-01-11 08:31:54Z romain $
 bin/al
 bin/al2
 bin/caspol

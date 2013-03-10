@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/mono/files/patch-mcs_class_System_System.IO_KeventWatcher.cs,v 1.2 2012/11/17 05:58:53 svnexp Exp $
+$FreeBSD: lang/mono/files/patch-mcs_class_System_System.IO_KeventWatcher.cs 300896 2012-07-14 13:54:48Z beat $
 
 https://bugzilla.novell.com/show_bug.cgi?id=542485
 

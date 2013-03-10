@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: ports/lang/mono/Makefile,v 1.108 2013/02/04 22:49:38 svnexp Exp $
+# $FreeBSD: lang/mono/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	mono
 PORTVERSION=	3.0.3
@@ -14,8 +14,8 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
     		bash:${PORTSDIR}/shells/bash
 
 USE_BZIP2=	yes
-USE_BISON=	build
-USE_GNOME=	gnomehack glib20
+USES=		bison pathfix
+USE_GNOME=	glib20
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes

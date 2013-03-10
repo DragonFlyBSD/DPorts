@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/mono/files/patch-mono_io-layer_sockets.c,v 1.6 2012/11/17 05:58:53 svnexp Exp $
+$FreeBSD: lang/mono/files/patch-mono_io-layer_sockets.c 300896 2012-07-14 13:54:48Z beat $
 
 --- mono/io-layer/sockets.c.orig
 +++ mono/io-layer/sockets.c
