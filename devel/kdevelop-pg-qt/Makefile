@@ -1,5 +1,5 @@
 # Created by: Douglas Carmichael <dcarmich@dcarmichael.net>
-# $FreeBSD: ports/devel/kdevelop-pg-qt/Makefile,v 1.8 2013/02/05 12:32:51 svnexp Exp $
+# $FreeBSD: devel/kdevelop-pg-qt/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	kdevelop
 PORTVERSION=	1.0.0
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
 
 USE_GCC=	4.6+
 USE_BZIP2=	yes
-USE_BISON=	build
+USES=		bison
 USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
 KDE4_BUILDENV=	yes
 USE_QT4=	qmake_build moc_build uic_build rcc_build
