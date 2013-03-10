@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/irrtoolset/Makefile,v 1.41 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/irrtoolset/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	irrtoolset
 PORTVERSION=	5.0.1
@@ -10,7 +10,7 @@ COMMENT=	A suite of routing policy tools to interact with the IRR
 
 PLIST_FILES=	bin/rpslcheck bin/peval bin/rtconfig
 
-USE_BISON=	build
+USES=		bison
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
