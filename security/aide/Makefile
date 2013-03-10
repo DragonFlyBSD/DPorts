@@ -1,9 +1,5 @@
-# New ports collection makefile for:	aide
-# Date created:				Tue Jan  4 11:45:29 PST 2000
-# Whom:					Cy Schubert (Cy.Schubert@uumail.gov.bc.ca)
-#
-# $FreeBSD: ports/security/aide/Makefile,v 1.34 2012/12/12 20:42:48 svnexp Exp $
-#
+# Created by: Cy Schubert (Cy.Schubert@uumail.gov.bc.ca)
+# $FreeBSD: security/aide/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	aide
 PORTVERSION=	0.15.1
@@ -21,7 +17,7 @@ LIB_DEPENDS=	mhash.2:${PORTSDIR}/security/mhash
 .include <bsd.port.pre.mk>
 
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison
 USE_AUTOTOOLS=	autoconf
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-mhash \
