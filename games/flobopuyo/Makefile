@@ -1,13 +1,9 @@
-# New ports collection makefile for:	flobopuyo
-# Date created:		24 Feb 2006
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/flobopuyo/Makefile,v 1.20 2012/11/17 05:57:38 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/flobopuyo/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	flobopuyo
 PORTVERSION=	0.20
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	games
 MASTER_SITES=	http://www.ios-software.com/flobopuyo/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -16,7 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Clone of the famous PuyoPuyo
 
-USE_BISON=	build
+USES=		bison
 USE_GMAKE=	yes
 USE_SDL=	sdl mixer image
 MAKE_JOBS_SAFE=	yes
