@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-corelib/Makefile 313048 2013-02-27 12:25:18Z makc $
+# $FreeBSD: devel/qt4-corelib/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	corelib
 DISTVERSION=	${QT4_VERSION}
@@ -13,6 +13,7 @@ COMMENT=	Qt core library
 LIB_DEPENDS=	icui18n:${PORTSDIR}/devel/icu
 
 USE_GNOME=	_glib20
+USE_PKGCONFIG=	build
 USE_QT4=	qmake_build moc_build
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
