@@ -1,9 +1,5 @@
-# Ports collection makefile for:	nessus-libraries
-# Date created:				07 November 1999
-# Whom:					Anders Nordby <anders@fix.no>
-#
-# $FreeBSD: ports/security/nessus-libraries/Makefile,v 1.66 2012/11/17 06:01:08 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@fix.no>
+# $FreeBSD: security/nessus-libraries/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 # Define NESSUS_CLIENT_ONLY if you only want to build this for the nessus
 # client.
@@ -25,7 +21,7 @@ COMMENT=	Libraries for Nessus, the security scanner
 DIST_SUBDIR=	nessus
 WRKSRC=		${WRKDIR}/nessus-libraries
 
-USE_BISON=	build
+USES=		bison
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-cipher
 .if defined(WITH_NESSUS_BPF_SHARE)
