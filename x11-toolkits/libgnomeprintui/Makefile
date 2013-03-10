@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libgnomeprintui
-# Date created:				12 April 2002
-# Whom:					Maxim Sobolev <sobomax@FreBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.67 2012/11/17 06:03:36 svnexp Exp $
+# Created by: Maxim Sobolev <sobomax@FreBSD.org>
+# $FreeBSD: x11-toolkits/libgnomeprintui/Makefile 313635 2013-03-08 11:32:11Z bapt $
 #   $MCom: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.75 2010/09/28 16:07:36 kwm Exp $
-#
 
 PORTNAME=	libgnomeprintui
 PORTVERSION=	2.18.6
@@ -22,7 +18,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 USE_BZIP2=	yes
 USE_XORG=	x11 xpm
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack libgnomeprint libgnomecanvas \
+USES=		bison pathfix
+USE_GNOME=	gnomeprefix libgnomeprint libgnomecanvas \
 		intlhack ltverhack
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
