@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Verilog-Perl
-# Date created:		11 Apr 2009
-# Whom:			Otacilio de Araujo Ramos Neto <otacilio.neto@ee.ufcg.edu.br>
-#
-# $FreeBSD: ports/cad/p5-Verilog-Perl/Makefile,v 1.12 2012/11/17 05:54:54 svnexp Exp $
-#
+# Created by: Otacilio de Araujo Ramos Neto <otacilio.neto@ee.ufcg.edu.br>
+# $FreeBSD: cad/p5-Verilog-Perl/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	Verilog-Perl
 PORTVERSION=	3.316
@@ -18,7 +14,7 @@ BUILD_DEPENDS=	flex>=2.5.35:${PORTSDIR}/textproc/flex
 
 USE_GMAKE=	yes
 USE_PERL5=	yes
-USE_BISON=	build
+USES=		bison
 
 PERL_CONFIGURE=	yes
 
