@@ -255,9 +255,9 @@ IGNORE=	Only ruby 1.8, 1.9 and 2.0 are supported
 . endif
 .endif # defined(RUBY_VER)
 
-CONFIGURE_TARGET?=	${ARCH}-portbld-freebsd${OSREL:C/\..*//}
+CONFIGURE_TARGET?=	${ARCH}-dports-${OPSYS:tl}${OSREL:C/\..*//}
 
-RUBY_ARCH?=		${ARCH}-freebsd${OSREL:C/\..*//}
+RUBY_ARCH?=		${ARCH}-${OPSYS:tl}${OSREL:C/\..*//}
 RUBY_NAME?=		ruby${RUBY_SUFFIX}
 
 _RUBY_SYSLIBDIR?=	${PREFIX}/lib
