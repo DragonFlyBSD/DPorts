@@ -1,5 +1,5 @@
 # Created by: ag@muwiinfa.geschichte.uni-mainz.de Albert Graef
-# $FreeBSD: ports/lang/q/Makefile,v 1.53 2012/12/13 14:18:50 svnexp Exp $
+# $FreeBSD: lang/q/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	q
 PORTVERSION=	7.11
@@ -20,7 +20,7 @@ LIB_DEPENDS=	MagickWand:${PORTSDIR}/graphics/ImageMagick \
 		xslt.2:${PORTSDIR}/textproc/libxslt \
 		ggi.2:${PORTSDIR}/graphics/libggi
 
-USE_BISON=	build
+USES=		bison
 USE_GCC=	any
 USE_ICONV=	yes
 USE_TK=		84+
