@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xrn
-# Date created:		13 September 2001
-# Whom:			Anders Nordby <anders@fix.no>
-#
-# $FreeBSD: ports/news/xrn/Makefile,v 1.15 2012/11/17 06:00:43 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@fix.no>
+# $FreeBSD: news/xrn/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	xrn
 DISTVERSION=	10.00-beta-3
@@ -18,7 +14,7 @@ MAN1=		xrn.1
 MANCOMPRESSED=	no
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 
 DOCS=		COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog
