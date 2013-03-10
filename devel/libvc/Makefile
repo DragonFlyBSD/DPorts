@@ -1,5 +1,5 @@
 # Created by: Oliver Braun
-# $FreeBSD: ports/devel/libvc/Makefile,v 1.15 2013/01/08 22:55:07 svnexp Exp $
+# $FreeBSD: devel/libvc/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	libvc
 PORTVERSION=	003
@@ -12,7 +12,7 @@ COMMENT=	vCard library
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
-USE_BISON=	build
+USES=		bison
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
