@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	iverilog
-# Date created:		Feb 13, 2001
-# Whom:			Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/cad/iverilog/Makefile,v 1.41 2012/11/17 05:54:54 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: cad/iverilog/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	iverilog
 PORTVERSION=	0.9.6
@@ -19,7 +14,7 @@ COMMENT=	A Verilog simulation and synthesis tool
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-USE_BISON=	build
+USES=		bison
 USE_GMAKE=	yes
 
 CONFIGURE_ARGS=	--disable-suffix
