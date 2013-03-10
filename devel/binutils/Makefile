@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/devel/binutils/Makefile,v 1.25 2012/12/09 13:43:18 svnexp Exp $
+# $FreeBSD: devel/binutils/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	binutils
 PORTVERSION=	2.23.1
@@ -23,7 +23,7 @@ OPTIONS_DEFINE=	NLS
 LICENSE_FILE_GPLv3=	${WRKSRC}/COPYING3
 LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING3.LIB
 
-USE_BISON=	build
+USES=		bison
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
