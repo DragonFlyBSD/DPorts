@@ -1,9 +1,5 @@
-# New ports collection makefile for:	avr-gcc-devel
-# Date created:		22 Mar 2006
-# Whom:			Joerg Wunsch <joerg@freebsd.org>
-#
-# $FreeBSD: ports/devel/avr-gcc/Makefile,v 1.78 2012/11/17 05:55:34 svnexp Exp $
-#
+# Created by: Joerg Wunsch <joerg@freebsd.org>
+# $FreeBSD: devel/avr-gcc/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	gcc
 PORTVERSION=	4.5.1
@@ -39,7 +35,7 @@ CONFIGURE_SCRIPT=	../gcc-${PORTVERSION}/configure
 USE_PERL5_BUILD=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 
