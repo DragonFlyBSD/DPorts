@@ -2,12 +2,12 @@
 # Date created:         		25 December 2008
 # Whom:                 		Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/json-glib/Makefile,v 1.12 2012/11/17 05:55:51 svnexp Exp $
-#   $MCom: ports/devel/json-glib/Makefile,v 1.17 2011/06/15 13:34:36 kwm Exp $
+# $FreeBSD: devel/json-glib/Makefile 313633 2013-03-08 10:51:34Z kwm $
+#   $MCom: ports/devel/json-glib/Makefile,v 1.22 2012/09/01 23:02:09 mezz Exp $
 #
 
 PORTNAME=	json-glib
-PORTVERSION=	0.12.6
+PORTVERSION=	0.14.2
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
@@ -20,6 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-i
 USE_GMAKE=	yes
 USE_XZ=		yes
 USE_GNOME=	glib20 gnomehack gnomeprefix ltverhack
+USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
