@@ -1,5 +1,5 @@
 # Created by: Patrick Seal <patseal@hyperhost.net>
-# $FreeBSD: ports/misc/boxes/Makefile,v 1.17 2012/12/02 23:01:22 svnexp Exp $
+# $FreeBSD: misc/boxes/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	boxes
 PORTVERSION=	1.1.1
@@ -15,7 +15,7 @@ COMMENT=	Draws ASCII-art configurable boxes around text or code
 LICENSE=	GPLv2
 
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison
 ALL_TARGET=	boxes
 MAKE_ARGS=	CC="${CC}" GLOBALCONF=${GLOBALCONF} CFLAGS="${CFLAGS} -ansi -I. -Iregexp"
 
