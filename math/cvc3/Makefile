@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cvc3
-# Date created:		Mar. 24, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/math/cvc3/Makefile,v 1.8 2012/11/17 05:59:20 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: math/cvc3/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	cvc3
 PORTVERSION=	2.4.1
@@ -22,7 +18,7 @@ CONFIGURE_ARGS=	--enable-dynamic \
 		--with-extra-libs=${LOCALBASE}/lib
 CXXFLAGS+=	-fPIC
 GNU_CONFIGURE=	yes
-USE_BISON=	build
+USES=		bison
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_PERL5=	yes
