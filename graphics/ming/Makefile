@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ming
-# Date created:		14 October 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/graphics/ming/Makefile,v 1.34 2012/11/17 05:58:15 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: graphics/ming/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	ming
 PORTVERSION=	0.4.4
@@ -26,9 +22,8 @@ CPPFLAGS+=	-I. -I.. -I${LOCALBASE}/include
 LDFLAGS+=	-L. -L.. -L${LOCALBASE}/lib
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
-USE_BISON=	build
+USES=		bison pathfix
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
 USE_LDCONFIG=	yes
 
 DOCS=		HISTORY NEWS README TODO
