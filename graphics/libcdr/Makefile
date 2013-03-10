@@ -1,7 +1,7 @@
-# $FreeBSD: ports/graphics/libcdr/Makefile,v 1.4 2013/02/02 01:43:09 svnexp Exp $
+# $FreeBSD: graphics/libcdr/Makefile 313488 2013-03-06 00:37:52Z jkim $
 
 PORTNAME=	libcdr
-PORTVERSION=	0.0.10
+PORTVERSION=	0.0.11
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 
