@@ -1,9 +1,5 @@
-# New ports collection makefile for:	msp430-gcc
-# Date created:		15 October 2002
-# Whom:			Lev Serebryakov <lev@serebryakov.spb.ru>
-#
-# $FreeBSD: ports/devel/msp430-gcc/Makefile,v 1.47 2012/11/17 05:56:01 svnexp Exp $
-#
+# Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
+# $FreeBSD: devel/msp430-gcc/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}.${LTSVERSION}
@@ -51,7 +47,7 @@ PATCH_WRKSRC=	${SRCDIR}
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison
 USE_ICONV=	yes
 USE_PERL5_BUILD=yes
 MAKE_JOBS_SAFE=	yes
