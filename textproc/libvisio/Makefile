@@ -1,7 +1,7 @@
-# $FreeBSD: ports/textproc/libvisio/Makefile,v 1.19 2012/12/18 11:14:02 svnexp Exp $
+# $FreeBSD: textproc/libvisio/Makefile 313489 2013-03-06 00:38:16Z jkim $
 
 PORTNAME=	libvisio
-PORTVERSION=	0.0.24
+PORTVERSION=	0.0.25
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://dev-www.libreoffice.org/src/ \
 		LOCAL/sunpoet
