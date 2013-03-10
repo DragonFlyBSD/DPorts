@@ -1,7 +1,5 @@
 # Created by:	Palle Girgensohn <girgen@pingpong.net>
-#
-# $FreeBSD: ports/databases/postgresql90-contrib/Makefile,v 1.9 2012/11/17 05:55:20 svnexp Exp $
-#
+# $FreeBSD: databases/postgresql90-contrib/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	postgresql
 PORTREVISION=	0
@@ -18,7 +16,7 @@ USE_PGSQL=	yes
 DEFAULT_PGSQL_VER=90
 MASTERDIR=	${.CURDIR}/../postgresql${DEFAULT_PGSQL_VER}-server
 
-USE_BISON=	build
+USES=		bison
 
 BUILD_DIRS=	src/port contrib
 INSTALL_DIRS=	contrib
