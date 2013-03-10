@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rbison
-# Date created:		2 Nov 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/ruby-rbison/Makefile,v 1.11 2012/11/17 05:56:57 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-rbison/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	rbison
 PORTVERSION=	0.0.7
@@ -16,7 +12,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Generates a Ruby parser class from a Bison-like specification file
 
-USE_BISON=	run
+USES=		bison
 USE_RUBY=	yes
 
 RUBY_SHEBANG_FILES=	${WRKSRC}/rbison
