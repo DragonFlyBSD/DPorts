@@ -1,0 +1,2 @@
+# for libid3tag
+LDFLAGS+= -lz
