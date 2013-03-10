@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openvas-libnasl
-# Date created:		2008-04-27
-# Whom:			Tomoyuki Sakurai <cherry@trombik.org>
-#
-# $FreeBSD: ports/security/openvas-libnasl/Makefile,v 1.19 2013/02/06 21:57:30 svnexp Exp $
-#
+# Created by: Tomoyuki Sakurai <cherry@trombik.org>
+# $FreeBSD: security/openvas-libnasl/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	openvas-libnasl
 PORTVERSION=	2.0.1
@@ -25,7 +21,7 @@ LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt \
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_ICONV=	yes
-USE_BISON=	build
+USES=		bison
 
 MAN1=		openvas-libnasl-config.1 openvas-nasl.1
 
