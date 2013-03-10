@@ -1,9 +1,5 @@
-# Ports collection makefile for:  postgresql-plproxy
-# Date created:    27 July 2007
-# Whom:            Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/databases/postgresql-plproxy/Makefile,v 1.9 2012/11/17 05:55:20 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: databases/postgresql-plproxy/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	plproxy
 PORTVERSION=	2.4
@@ -16,7 +12,7 @@ COMMENT=	PL/Proxy is database partitioning system
 
 USE_PGSQL=	yes
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison
 
 PORTSCOUT=	site:http://pgfoundry.org/frs/?group_id=1000207
 
