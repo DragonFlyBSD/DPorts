@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/dict/pkg-plist,v 1.8 2012/11/17 06:01:54 svnexp Exp $
+@comment $FreeBSD: textproc/dict/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/dict
 bin/dict_lookup
 bin/dictl
