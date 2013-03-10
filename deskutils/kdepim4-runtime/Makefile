@@ -1,8 +1,5 @@
-# New ports collection Makefile for:	kdepimp4
-# Date created:				2008-31-05
-# Whom:					miwi
-#
-# $FreeBSD: ports/deskutils/kdepim4-runtime/Makefile,v 1.25 2012/11/17 05:55:28 svnexp Exp $
+# Created by: miwi
+# $FreeBSD: ports/deskutils/kdepim4-runtime/Makefile,v 1.27 2013/02/04 01:03:32 svnexp Exp $
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	${KDE4_VERSION}
@@ -14,9 +11,12 @@ DIST_SUBDIR=	KDE
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Libraries for KDE-PIM applications
 
-LIB_DEPENDS=	boost_thread.4:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs \
+		kgapi.0:${PORTSDIR}/devel/libkgapi \
+		kolab:${PORTSDIR}/devel/libkolab
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 
+CONFLICTS=		akonadi-google-0.*
 CONFLICTS_INSTALL=	kdepim-runtime-4.4.*
 
 USE_XZ=	yes
