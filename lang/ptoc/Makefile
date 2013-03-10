@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ptoc
-# Date created:				10 December 1997
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/lang/ptoc/Makefile,v 1.28 2012/11/17 05:58:55 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: lang/ptoc/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	ptoc
 PORTVERSION=	3.58
@@ -16,7 +12,7 @@ COMMENT=	ANSI/Turbo Pascal to C/C++ converter
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_XORG=	x11
-USE_BISON=	build
+USES=		bison
 
 EXAMPLES=	arr.pas bgidemo.pas ccall.pas coord.txt dos.h dos.pas \
 		func.pas hello.pas impact.pas lister.pas makefile.bsd \
