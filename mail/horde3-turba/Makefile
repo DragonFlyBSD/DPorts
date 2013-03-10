@@ -1,0 +1,28 @@
+# Ports collection makefile for:  turba
+# Date created:			  Sat Nov 16, 2001
+# Whom:				  Thierry Thomas (<thierry@thomas.as>)
+#
+# $FreeBSD: ports/mail/horde3-turba/Makefile,v 1.2 2012/12/16 12:14:29 svnexp Exp $
+#
+
+PORTNAME=	turba
+PORTVERSION=	2.3.6
+DISTVERSIONSUFFIX=
+PORTREVISION=	1
+CATEGORIES=	mail www
+
+MAINTAINER=	horde@FreeBSD.org
+COMMENT=	Contact management application
+
+USE_HORDE=	base
+USE_PHP=	ldap
+USE_GETTEXT=	yes
+
+PORTDOCS=	README CHANGES CREDITS INSTALL LDAP RELEASE_NOTES TODO UPGRADING
+
+pre-patch:
+	@${REINPLACE_CMD} -e "s:/usr/bin/ldapadd:${LOCALBASE}/bin/ldapadd:"	\
+		${WRKSRC}/scripts/ldap/addou.pl
+
+.include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
+.include <bsd.port.mk>
