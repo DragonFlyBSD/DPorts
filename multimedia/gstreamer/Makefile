@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gstreamer
-# Date created:		Tue Jul 9 20:24:02 UTC 2002
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/gstreamer/Makefile,v 1.93 2012/11/17 05:59:49 svnexp Exp $
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: multimedia/gstreamer/Makefile 313635 2013-03-08 11:32:11Z bapt $
 #    $MCom: ports/multimedia/gstreamer/Makefile,v 1.74 2010/03/09 10:11:45 kwm Exp $
-#
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.36
@@ -21,11 +17,10 @@ RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-i
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 CFLAGS:=	${CFLAGS} -O2 -Wno-format
-USE_BISON=	build
+USES=		bison pathfix
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-WANT_GNOME=	yes
-USE_GNOME=	gnomehack glib20 libxml2 ltverhack ltasneededhack
+USE_GNOME=	glib20 libxml2 ltverhack ltasneededhack
 USE_PKGCONFIG=	build
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
