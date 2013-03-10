@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/net/dictd/files/dictd.in,v 1.4 2012/11/17 05:59:59 svnexp Exp $
+# $FreeBSD: net/dictd/files/dictd.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: dictd
 # REQUIRE: DAEMON
