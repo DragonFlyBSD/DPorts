@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	mairix
-# Date created:				2003-03-27
-# Whom:					Oliver Braun <obraun@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/mairix/Makefile,v 1.31 2012/11/17 05:59:05 svnexp Exp $
-#
+# Created by: Oliver Braun <obraun@FreeBSD.org>
+# $FreeBSD: mail/mairix/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	mairix
 PORTVERSION=	0.22
@@ -15,7 +11,7 @@ COMMENT=	Indexing and searching in Maildir, MH, or mbox folders
 
 USE_GMAKE=	yes
 HAS_CONFIGURE=	yes
-USE_BISON=	build
+USES=		bison
 
 MAN1=	mairix.1
 MAN5=	mairixrc.5
