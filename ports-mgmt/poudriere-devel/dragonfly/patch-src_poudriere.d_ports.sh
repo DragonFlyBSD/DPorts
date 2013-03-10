@@ -248,8 +248,9 @@
 + 		echo " done"
 + 		;;
  	git)
- 		msg "Pulling from ${GIT_URL}"
+-		msg "Pulling from ${GIT_URL}"
 -		cd ${PORTSMNT:-${PTMNT}} && git pull
++		msg "Pulling from ${DPORTS_URL}"
 +		cd ${PTFS} && git pull
 +		bhack=$(date "+%Y-%m-%d %H:%M:%S")
 +		pzset timestamp "${bhack}"
