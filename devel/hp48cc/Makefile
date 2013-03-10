@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hp48cc
-# Date created:				Sun Aug 12 04:33:37 EDT 2001
-# Whom:					Patrick Li <pat@databits.net>
-#
-# $FreeBSD: ports/devel/hp48cc/Makefile,v 1.11 2012/11/17 05:55:47 svnexp Exp $
-#
+# Created by: Patrick Li <pat@databits.net>
+# $FreeBSD: devel/hp48cc/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	hp48cc
 PORTVERSION=	1.3
@@ -17,7 +13,7 @@ COMMENT=	C-like compiler that translates input code to the HP48 RPL language
 
 LICENSE=	GPLv2
 
-USE_BISON=	build
+USES=		bison
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 
