@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libgnomeprint
-# Date created:				15 Jan 1999
-# Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
-#
-# $FreeBSD: ports/print/libgnomeprint/Makefile,v 1.126 2012/11/17 06:00:52 svnexp Exp $
+# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
+# $FreeBSD: print/libgnomeprint/Makefile 313635 2013-03-08 11:32:11Z bapt $
 #   $MCom: ports/print/libgnomeprint/Makefile,v 1.77 2010/09/28 16:38:29 kwm Exp $
 #
 # NOTE: Remind to update comms/gfax plist when PORTVERSION change.
@@ -24,9 +21,9 @@ USE_BZIP2=	yes
 LIB_DEPENDS=	fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig \
 		popt.0:${PORTSDIR}/devel/popt
 
-USE_BISON=	build
+USES=		bison pathfix
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier glib20 pango libxml2 \
+USE_GNOME=	gnomeprefix intlhack gnomehier glib20 pango libxml2 \
 		libartlgpl2 ltverhack
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
