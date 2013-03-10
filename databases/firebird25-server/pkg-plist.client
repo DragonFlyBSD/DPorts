@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/firebird25-server/pkg-plist.client,v 1.2 2012/11/17 05:55:07 svnexp Exp $
+@comment $FreeBSD: databases/firebird25-server/pkg-plist.client 300896 2012-07-14 13:54:48Z beat $
 bin/gpre
 bin/isql-fb
 bin/qli

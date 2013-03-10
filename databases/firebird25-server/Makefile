@@ -1,5 +1,5 @@
 # Created by: Alonso Cárdenas Márquez <acm@FreeBSD.org>
-# $FreeBSD: ports/databases/firebird25-server/Makefile,v 1.9 2012/12/18 23:19:31 svnexp Exp $
+# $FreeBSD: databases/firebird25-server/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	firebird
 PORTVERSION=	2.5.1
@@ -17,7 +17,7 @@ LIB_DEPENDS=	icuuc:${PORTSDIR}/devel/icu
 
 LATEST_LINK=	${PORTNAME}25${PKGNAMESUFFIX}
 
-USE_BISON=	build
+USES=		bison
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes

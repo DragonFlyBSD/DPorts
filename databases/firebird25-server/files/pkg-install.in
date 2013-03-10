@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/databases/firebird25-server/files/pkg-install.in,v 1.3 2012/11/17 05:55:07 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/databases/firebird25-server/files/pkg-install.in,v 1.2 2011-07-10 17:37:11 crees Exp $
 
 PATH=/bin:/usr/bin:/usr/sbin
 
