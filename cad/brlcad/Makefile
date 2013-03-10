@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: ports/cad/brlcad/Makefile,v 1.59 2013/02/08 00:50:50 svnexp Exp $
+# $FreeBSD: cad/brlcad/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	brlcad
 PORTVERSION=	7.22.0
@@ -26,7 +26,7 @@ USE_GL=		gl glu
 USE_XORG=	ice inputproto sm x11 xau xdamage xdmcp xext xfixes xft xi \
 		xproto xrender xscrnsaver xt xxf86vm
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison
 USE_TCL=	85
 USE_TK=		85
 USE_LDCONFIG=	yes

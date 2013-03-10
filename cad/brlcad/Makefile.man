@@ -1,4 +1,4 @@
-# $FreeBSD: ports/cad/brlcad/Makefile.man,v 1.1 2013/01/10 19:06:06 svnexp Exp $
+# $FreeBSD: cad/brlcad/Makefile.man 310193 2013-01-10 18:12:45Z jgh $
 # This file defines the man pages to not bloat Makefile
 
 MAN1=	aliastorle.1 anim_script.1 anim_sort.1 anim_time.1 anim_track.1		\
