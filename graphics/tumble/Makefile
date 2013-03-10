@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lcdtest
-# Date created:				12 Jan 2010
-# Whom:					Rob Farmer <rfarmer@predatorlabs.net>
-#
-# $FreeBSD: ports/graphics/tumble/Makefile,v 1.7 2012/12/04 21:46:19 svnexp Exp $
-#
+# Created by: Rob Farmer <rfarmer@predatorlabs.net>
+# $FreeBSD: graphics/tumble/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	tumble
 PORTVERSION=	0.33
@@ -20,6 +16,7 @@ LIB_DEPENDS=	tiff.4:${PORTSDIR}/graphics/tiff \
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
 
 USE_GMAKE=	yes
+USES=		bison
 USE_BISON=	build
 
 MAKE_JOBS_SAFE=	yes
