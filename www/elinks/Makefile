@@ -1,9 +1,5 @@
-# New ports collection makefile for:	links
-# Date created:		21 January 2000
-# Whom:			Michael Vasilenko <acid@stu.cn.ua>
-#
-# $FreeBSD: ports/www/elinks/Makefile,v 1.66 2013/01/31 19:48:38 svnexp Exp $
-#
+# Created by: Michael Vasilenko <acid@stu.cn.ua>
+# $FreeBSD: www/elinks/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	elinks
 DISTVERSION=	0.11.7
@@ -17,7 +13,7 @@ COMMENT=	Elinks - links text WWW browser with enhancements
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_BISON=	build
+USES=		bison
 USE_OPENSSL=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
