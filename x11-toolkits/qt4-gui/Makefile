@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: ports/x11-toolkits/qt4-gui/Makefile,v 1.46 2013/02/03 21:44:19 svnexp Exp $
+# $FreeBSD: x11-toolkits/qt4-gui/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	gui
 DISTVERSION=	${QT4_VERSION}
@@ -19,6 +19,7 @@ QT_DIST=	yes
 MAKE_JOBS_SAFE=	yes
 
 HAS_CONFIGURE=	yes
+USE_PKGCONFIG=	build
 USE_LDCONFIG=	${PREFIX}/lib/qt4
 USE_XORG=	xrender xrandr xinerama inputproto xfixes \
 		sm xcursor xext x11 ice xi xt
