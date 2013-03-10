@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: ports/www/webkit-gtk2/Makefile,v 1.48 2012/12/18 23:19:38 svnexp Exp $
+# $FreeBSD: www/webkit-gtk2/Makefile 313635 2013-03-08 11:32:11Z bapt $
 #   $MCom: ports/www/webkit-gtk2/Makefile,v 1.80 2011/07/11 10:14:46 kwm Exp $
 PORTNAME=	webkit
 PORTVERSION=	1.4.3
@@ -24,10 +24,11 @@ USE_GETTEXT=	yes
 USE_GSTREAMER=	yes
 MAKE_JOBS_SAFE=	yes
 USE_XORG=	xt xrender
-USE_BISON=	build
+USES=		bison
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk20 libxslt ltverhack
+USE_PKGCONFIG=	build
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
