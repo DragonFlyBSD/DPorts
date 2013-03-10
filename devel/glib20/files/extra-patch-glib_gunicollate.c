@@ -1,5 +1,5 @@
---- glib/gunicollate.c.orig
-+++ glib/gunicollate.c
+--- glib/gunicollate.c.orig	2012-11-24 20:50:39.000000000 +0000
++++ glib/gunicollate.c	2013-03-08 12:16:59.000000000 +0000
 @@ -26,6 +26,10 @@
  #include <wchar.h>
  #endif
@@ -11,11 +11,12 @@
  #ifdef HAVE_CARBON
  #include <CoreServices/CoreServices.h>
  #endif
-@@ -36,10 +40,53 @@
+@@ -36,11 +40,54 @@
  #include "gstring.h"
  #include "gstrfuncs.h"
  #include "gtestutils.h"
 +#include "gthread.h"
+ #include "gcharset.h"
  #ifndef __STDC_ISO_10646__
  #include "gconvert.h"
  #endif
@@ -34,7 +35,7 @@
 +
 +      icu_collator = ucol_open(NULL, &error);
 +      if (icu_collator == NULL)
-+	g_warning("unable to initialize the ICU collator (%s), FreeBSD collation routines will be used", u_errorName(error));
++      g_warning("unable to initialize the ICU collator (%s), FreeBSD collation routines will be used", u_errorName(error));
 +
 +      icu_collator_initialized = TRUE;
 +    }
@@ -54,10 +55,10 @@
 +      result = g_new(UChar, *result_len);
 +      u_strFromUTF8(result, *result_len, NULL, str, len, &error);
 +      if (error > U_ZERO_ERROR)
-+	{
-+	  g_free(result);
-+	  result = NULL;
-+	}
++      {
++        g_free(result);
++        result = NULL;
++      }
 +    }
 +
 +  return result;
@@ -65,7 +66,7 @@
  
  #ifdef _MSC_VER
  /* Workaround for bug in MSVCR80.DLL */
-@@ -127,6 +174,28 @@
+@@ -128,6 +175,28 @@
    g_return_val_if_fail (str1 != NULL, 0);
    g_return_val_if_fail (str2 != NULL, 0);
  
