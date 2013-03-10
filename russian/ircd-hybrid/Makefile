@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ircd-hybrid-ru
-# Date Created:				2003.12.14
-# Whom:					Evgueni V. Gavrilov <aquatique@rusunix.org>
-#
-# $FreeBSD: ports/russian/ircd-hybrid/Makefile,v 1.25 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: Evgueni V. Gavrilov <aquatique@rusunix.org>
+# $FreeBSD: russian/ircd-hybrid/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	ircd
 PORTVERSION=	7.2.4
@@ -24,7 +20,7 @@ CONFLICTS=	ircd-[0-9]*
 
 WRKSRC=		${WRKDIR}/${PORTNAME}${PKGNAMESUFFIX}-ru
 USE_OPENSSL=	yes
-USE_BISON=	build
+USES=		bison
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/ircd-hybrid-ru
 
