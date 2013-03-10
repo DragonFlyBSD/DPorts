@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hugs
-# Date created:		22 September 1997
-# Whom:			Torsten Teg Grust (Torsten.Grust@uni-konstanz.de)
-#
-# $FreeBSD: ports/lang/hugs/Makefile,v 1.54 2012/11/17 05:58:51 svnexp Exp $
-#
+# Created by: Torsten Teg Grust (Torsten.Grust@uni-konstanz.de)
+# $FreeBSD: lang/hugs/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	hugs98
 PORTVERSION=	200609
@@ -21,7 +17,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 
 #OPTIONS=	HUGS_OPENGL "OpenGL/GLUT support" off
 HUGS_DATE=	Sep2006
-USE_BISON=	build
+USES=		bison
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 #CONFIGURE_ARGS+=	--prefix=${PREFIX} --enable-ffi
