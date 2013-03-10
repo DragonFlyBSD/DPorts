@@ -1,5 +1,5 @@
 # Created by: Aliaksandr Zahatski <zahatski@gmail.com>
-# $FreeBSD: ports/lang/rakudo/Makefile,v 1.37 2013/01/10 15:12:58 svnexp Exp $
+# $FreeBSD: lang/rakudo/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	rakudo
 PORTVERSION=	2012.11
@@ -41,7 +41,7 @@ CONFIGURE_ARGS=	--with-parrot=${PREFIX}/bin/parrot \
 BROKEN=		Does not compile on ia64, powerpc, or sparc64
 .endif
 
-USE_BISON=	build
+USES+=		bison
 USE_PERL5_BUILD=	yes
 USE_GMAKE=	yes
 
