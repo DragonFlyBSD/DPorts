@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: security/openssl/Makefile 313383 2013-03-03 22:37:47Z dinoex $
+# $FreeBSD: security/openssl/Makefile 313480 2013-03-05 20:47:17Z dinoex $
 
 PORTNAME=	openssl
 PORTVERSION=	1.0.1
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.openssl.org/%SUBDIR%/ \
 		ftp://ftp.openssl.org/%SUBDIR%/ \
 		ftp://ftp.cert.dfn.de/pub/tools/net/openssl/%SUBDIR%/
 MASTER_SITE_SUBDIR=	source
-DIST_SUBDIR=	${DISTNAME}
+DIST_SUBDIR=	${DISTNAME}2
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	SSL and crypto library
