@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/py-distribute/files/pkg-message.in,v 1.2 2012/11/17 05:56:46 svnexp Exp $
+@comment $FreeBSD: devel/py-distribute/files/pkg-message.in 300896 2012-07-14 13:54:48Z beat $
 *********************************************************************
 
     The script %%PREFIX%%/bin/easy_install was already installed

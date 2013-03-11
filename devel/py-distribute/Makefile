@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: ports/devel/py-distribute/Makefile,v 1.17 2013/01/04 01:42:48 svnexp Exp $
+# $FreeBSD: devel/py-distribute/Makefile 313436 2013-03-05 06:20:28Z rm $
 
 PORTNAME=	distribute
-PORTVERSION=	0.6.34
+PORTVERSION=	0.6.35
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -54,6 +54,9 @@ post-patch:
 	@${REINPLACE_CMD} -e '/easy_install = / s|".*"||' ${WRKSRC}/setup.py
 .endif
 
+regression-test: build
+	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
+
 pre-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
 
@@ -62,6 +65,7 @@ post-install:
 	${PYTHON_CMD} -m py_compile ${SITE_PY}
 	${PYTHON_CMD} -OO -m py_compile ${SITE_PY}
 	${CP} ${EASYINSTALL_PTH} ${EASYINSTALL_PTH}.dist
+	${LN} ${EASYINSTALL_PTH}.dist ${PYTHON_SITELIBDIR}/distribute.pth
 	PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 	if [ -f ${PKGMESSAGE} ]; then ${CAT} ${PKGMESSAGE}; fi
 

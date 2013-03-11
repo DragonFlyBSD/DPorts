@@ -1,7 +1,8 @@
-@comment $FreeBSD: ports/devel/py-distribute/pkg-plist,v 1.6 2012/11/17 05:56:46 svnexp Exp $
+@comment $FreeBSD: devel/py-distribute/pkg-plist 313436 2013-03-05 06:20:28Z rm $
 %%IF_DEFAULT%%bin/easy_install
 bin/easy_install-%%PYVER%%
 %%PYTHON_SITELIBDIR%%/distribute-%%VERSION%%-py%%PYVER%%.egg
+%%PYTHON_SITELIBDIR%%/distribute.pth
 @unexec if cmp -s %B/easy-install.pth %B/easy-install.pth.dist; then rm %B/easy-install.pth; fi
 %%PYTHON_SITELIBDIR%%/easy-install.pth.dist
 @exec if [ ! -f %B/easy-install.pth ]; then cp %B/%f %B/easy-install.pth; fi
