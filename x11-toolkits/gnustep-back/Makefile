@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-toolkits/gnustep-back/Makefile,v 1.90 2012/11/17 06:03:34 svnexp Exp $
+# $FreeBSD: x11-toolkits/gnustep-back/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	gnustep-back
 PORTVERSION=	0.22.0
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNUSTEP}
 MASTER_SITE_SUBDIR=	core
 PKGNAMESUFFIX?=	${BACK_SUFFIX}${PKGNAMESUFFIX2}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	GNUstep GUI backend
 
 LIB_DEPENDS+=	jpeg.11:${PORTSDIR}/graphics/jpeg
