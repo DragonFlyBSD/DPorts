@@ -2,7 +2,7 @@
 # Date created:        15 February 2003
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/gnet2/Makefile,v 1.43 2012/11/17 06:00:01 svnexp Exp $
+# $FreeBSD: net/gnet2/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	gnet
@@ -17,6 +17,7 @@ COMMENT=	A simple network library built upon Glib-2
 
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack glib20
+USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
