@@ -1,8 +1,8 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
-# $FreeBSD: ports/math/R/Makefile,v 1.123 2013/01/04 18:45:35 svnexp Exp $
+# $FreeBSD: math/R/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME?=	R
-PORTVERSION=	2.15.2
+PORTVERSION=	2.15.3
 CATEGORIES=	math lang
 MASTER_SITES=	http://cran.r-project.org/src/base/R-2/ \
 		ftp://cran.r-project.org/pub/R/src/base/R-2/ \
