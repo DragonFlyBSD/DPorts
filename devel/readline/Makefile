@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: ports/devel/readline/Makefile,v 1.31 2013/02/20 22:42:58 svnexp Exp $
+# $FreeBSD: devel/readline/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	readline
 PORTVERSION=	6.2
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GNU} \
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A library for editing command lines as they are typed
+COMMENT=	Library for editing command lines as they are typed
 
 LICENSE=	GPLv3
 
