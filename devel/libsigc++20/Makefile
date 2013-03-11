@@ -1,10 +1,6 @@
-# New ports collection makefile for:   libsigc++2
-# Date created:        14 Feb 2004
-# Whom:                Alexander Nedotsukov <bland@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libsigc++20/Makefile,v 1.62 2012/11/17 05:55:56 svnexp Exp $
+# Created by: Alexander Nedotsukov <bland@FreeBSD.org>
+# $FreeBSD: devel/libsigc++20/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/devel/libsigc++20/Makefile,v 1.17 2011/07/25 09:19:14 kwm Exp $
-#
 
 PORTNAME=	libsigc++
 PORTVERSION=	2.2.10
@@ -22,7 +18,7 @@ USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 LATEST_LINK=	libsigc++20
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig
+USE_GNOME=	gnomehack
 GNU_CONFIGURE=	yes
 
 PLIST_SUB=	VERSION="2.0" API_VERSION="2.0"
