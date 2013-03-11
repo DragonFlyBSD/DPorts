@@ -1,5 +1,5 @@
 # Created by: Frank Mayhar <frank@exit.com>
-# $FreeBSD: ports/devel/kscope/Makefile,v 1.37 2013/02/14 10:22:09 svnexp Exp $
+# $FreeBSD: devel/kscope/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	kscope
 PORTVERSION=	1.6.1
@@ -20,7 +20,7 @@ EXPIRATION_DATE=	2013-07-01
 
 DOCSDIR=	${PREFIX}/share/doc/HTML/en/${PORTNAME}
 
-USE_BISON=	build
+USES=		bison
 USE_KDEBASE_VER=3
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
