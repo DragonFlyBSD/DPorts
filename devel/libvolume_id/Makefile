@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libvolume_id
-# Date created:		04 November 2006
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libvolume_id/Makefile,v 1.9 2012/11/17 05:55:57 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: devel/libvolume_id/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	libvolume_id
 PORTVERSION=	0.81.1
@@ -14,7 +11,6 @@ COMMENT=	Library to provide file system type information
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	pkgconfig
 USE_LDCONFIG=	yes
 MAKE_ENV=	E=${ECHO_MSG} RANLIB=${RANLIB} AR=${AR} Q=@ \
 		prefix=${PREFIX}
