@@ -2,7 +2,7 @@
 # Date created:				Sat Jun  9 19:34:09 PDT 2007
 # Whom:					Matt Peterson <matt@peterson.org>
 #
-# $FreeBSD: ports/net-mgmt/gsnmp/Makefile,v 1.6 2012/11/17 06:00:32 svnexp Exp $
+# $FreeBSD: net-mgmt/gsnmp/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	gsnmp
@@ -19,6 +19,7 @@ COMMENT=	SNMP library written on top of glib and gnet2
 LIB_DEPENDS=	gnet:${PORTSDIR}/net/gnet2
 
 USE_GNOME=	gnomehack glib20
+USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
