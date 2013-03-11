@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cvm
-# Date created:		2003-12-24
-# Whom:			Sergei Kolobov <sergei@FreeBSD.org>
-#
-# $FreeBSD: ports/security/cvm/Makefile,v 1.20 2012/11/17 06:01:03 svnexp Exp $
-#
+# Created by: Sergei Kolobov <sergei@FreeBSD.org>
+# $FreeBSD: security/cvm/Makefile 313460 2013-03-05 17:07:43Z miwi $
 
 PORTNAME=	cvm
 PORTVERSION=	0.96
@@ -26,13 +22,14 @@ BGLIBS_LIB=	${LOCALBASE}/lib/bglibs
 
 DOCS=		NEWS README TODO *.html
 
-OPTIONS=	VCHKPW "Compile cvm-vchkpw" off
+OPTIONS_DEFINE=	VCHKPW
+VCHKPW_DESC=	Compile cvm-vchkpw
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 ALL_TARGET=all
 
-.if defined(WITH_VCHKPW)
+.if ${PORT_OPTIONS:MVCHKPW}
 BUILD_DEPENDS+=	${LOCALBASE}/vpopmail/lib/libvpopmail.a:${PORTSDIR}/mail/vpopmail
 ALL_TARGET+=	cvm-vchkpw
 PLIST_SUB=	VCHKPW=""
@@ -53,10 +50,10 @@ do-configure:
 	${ECHO_CMD} "${BGLIBS_INC}"	> ${WRKSRC}/conf-bgincs
 	${ECHO_CMD} "${BGLIBS_LIB}"	> ${WRKSRC}/conf-bglibs
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
