@@ -2,7 +2,7 @@
 #
 # Author: Emanuel Haupt <ehaupt@FreeBSD.org>
 #
-# $FreeBSD: ports/net/socat/files/socat.in,v 1.6 2012/11/17 06:00:21 svnexp Exp $
+# $FreeBSD: net/socat/files/socat.in 313620 2013-03-08 06:40:12Z ehaupt $
 #
 
 # PROVIDE: socat
@@ -22,9 +22,13 @@ load_rc_config $name
 
 : ${socat_enable="NO"}
 
-socat_flags="%%PREFIX%%/bin/socat ${socat_flags} &"
-command="%%PREFIX%%/sbin/socat_wrapper"
-command_interpreter="/bin/sh -T"
-pidfile=/var/run/socat_wrapper.pid
+start_cmd="${name}_start"
+pidfile=/var/run/socat.pid
+command="%%PREFIX%%/bin/socat"
+
+socat_start() {
+	echo "Starting ${name}."
+	/usr/sbin/daemon -f -p ${pidfile} ${command} ${socat_flags}
+}
 
 run_rc_command "$1"
