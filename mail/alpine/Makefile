@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/alpine/Makefile,v 1.19 2012/11/17 05:58:58 svnexp Exp $
+# $FreeBSD: mail/alpine/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME?=	alpine
 PORTVERSION=	2.00
@@ -7,7 +7,7 @@ CATEGORIES?=	mail news ipv6
 MASTER_SITES=	ftp://ftp.cac.washington.edu/alpine/
 DIST_SUBDIR=	alpine-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT?=	Mail and news client descended from Pine
 
 OPTIONS+=	THREADS "Compile with thread support" on \
