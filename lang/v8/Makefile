@@ -1,8 +1,8 @@
 # Created by: siasia
-# $FreeBSD: ports/lang/v8/Makefile,v 1.24 2012/12/14 13:43:59 svnexp Exp $
+# $FreeBSD: lang/v8/Makefile 313707 2013-03-09 11:45:26Z vanilla $
 
 PORTNAME=	v8
-PORTVERSION=	3.15.10
+PORTVERSION=	3.17.9
 PORTREVISION=	0
 CATEGORIES=	lang
 MASTER_SITES=	LOCAL/vanilla
@@ -13,17 +13,20 @@ COMMENT=	Google\'s open source JavaScript engine
 LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
 
 USE_GMAKE=	yes
-USE_PYTHON=	2.7+
 USE_XZ=		yes
+USE_PYTHON=	2.6+
 USE_LDCONFIG=	yes
 ALL_TARGET=	native
-
 MAKE_ENV+=	GYPFLAGS=-DOS=freebsd
 MAKE_ENV+=	library=shared
 USE_GCC=	4.7
 
 .include <bsd.port.pre.mk>
 ONLY_FOR_ARCHS=	i386 amd64
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
+		${WRKSRC}/build/common.gypi ${WRKSRC}/tools/gyp/v8.gyp
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/out/native/d8 ${PREFIX}/bin/d8
