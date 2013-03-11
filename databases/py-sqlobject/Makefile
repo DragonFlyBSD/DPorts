@@ -1,5 +1,5 @@
 # Created by: "Choe, Cheng-Dae" whitekid
-# $FreeBSD: ports/databases/py-sqlobject/Makefile,v 1.54 2012/11/17 05:55:23 svnexp Exp $
+# $FreeBSD: databases/py-sqlobject/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
 
 PORTNAME=	sqlobject
 PORTVERSION=	1.3.2
@@ -42,7 +42,7 @@ RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/psycopg2/__init__.py:${PORTSDIR}/databases/py
 .endif
 
 .if ${PORT_OPTIONS:MSQLITE}
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 .endif
 
 .if ${PORT_OPTIONS:MMSSQL}
