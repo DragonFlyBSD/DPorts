@@ -2,7 +2,7 @@
 # Date created:				09 May 2006
 # Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/glibmm-reference/Makefile,v 1.10 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: devel/glibmm-reference/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTREVISION=	0
@@ -12,6 +12,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/glibmm-2.4.pc:${PORTSDIR}/devel/gl
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+USE_PKGCONFIG=	build
 
 DOCSDIR=	${PREFIX}/share/doc/glibmm-2.4
 
