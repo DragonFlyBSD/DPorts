@@ -1,9 +1,5 @@
-# New ports collection makefile for:	quake-data
-# Date created:				11 Sep 2005
-# Whom:					Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/games/quake-data/Makefile,v 1.10 2012/11/17 05:57:50 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: ports/games/quake-data/Makefile,v 1.11 2013/02/05 12:55:45 svnexp Exp $
 
 PORTNAME=	data
 PORTVERSION=	1.0.6
@@ -19,7 +15,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Quake data files
 
-BUILD_DEPENDS=	unzip:${PORTSDIR}/archivers/unzip
+BUILD_DEPENDS=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
