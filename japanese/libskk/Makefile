@@ -2,11 +2,12 @@
 # Date created:	21 December 2011
 # Whom:		Hiroto Kagotani <hiroto.kagotani@gmail.com>
 #
-# $FreeBSD: ports/japanese/libskk/Makefile,v 1.8 2012/11/17 05:58:36 svnexp Exp $
+# $FreeBSD: japanese/libskk/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	libskk
 PORTVERSION=	1.0.0
+PORTREVISION=	1
 CATEGORIES=	japanese
 MASTER_SITES=	http://cloud.github.com/downloads/ueno/libskk/
 
@@ -14,12 +15,13 @@ MAINTAINER=	hiroto.kagotani@gmail.com
 COMMENT=	Library to deal with Japanese Kana-to-Kanji conversion method
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	gee:${PORTSDIR}/devel/libgee \
+LIB_DEPENDS=	gee:${PORTSDIR}/devel/libgee06 \
 		json-glib-1.0:${PORTSDIR}/devel/json-glib
 
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_GNOME=	intltool gnomehack
+USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	DATADIRNAME=share
 MAN1=		skk.1
