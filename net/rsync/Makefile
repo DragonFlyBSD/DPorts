@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: ports/net/rsync/Makefile,v 1.160 2013/01/15 13:46:57 svnexp Exp $
+# $FreeBSD: net/rsync/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	rsync
 PORTVERSION=	3.0.9
@@ -15,7 +15,7 @@ MASTER_SITE_SUBDIR=	rsync
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A network file distribution/synchronization utility
+COMMENT=	Network file distribution/synchronization utility
 
 LICENSE=	GPLv3
 
