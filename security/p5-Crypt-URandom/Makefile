@@ -1,7 +1,7 @@
-# $FreeBSD: ports/security/p5-Crypt-URandom/Makefile,v 1.1 2013/02/04 23:02:08 svnexp Exp $
+# $FreeBSD: security/p5-Crypt-URandom/Makefile 313693 2013-03-09 07:29:53Z kuriyama $
 
 PORTNAME=	Crypt-URandom
-PORTVERSION=	0.28
+PORTVERSION=	0.31
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
