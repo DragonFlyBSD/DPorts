@@ -2,12 +2,12 @@
 # Date created:         26 Jan 2002
 # Whom:                 Pedro Giffuni <giffunip@asme.org>
 #
-# $FreeBSD: ports/math/spooles/Makefile,v 1.17 2012/11/17 05:59:31 svnexp Exp $
+# $FreeBSD: math/spooles/Makefile 313492 2013-03-06 00:56:02Z maho $
 #
 
 PORTNAME=	spooles
 PORTVERSION=	2.2
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	math
 MASTER_SITES=	http://www.netlib.org/linalg/spooles/
 .ifdef WITH_MPI
