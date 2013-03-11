@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: ports/audio/xmp/Makefile,v 1.64 2013/02/16 14:37:03 svnexp Exp $
+# $FreeBSD: audio/xmp/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	xmp
 PORTVERSION=	4.0.1
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	SF
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A player for many different Amiga and PC module formats
+COMMENT=	Player for many different Amiga and PC module formats
 
 LICENSE=	GPLv2
 
