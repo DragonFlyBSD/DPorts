@@ -1,9 +1,9 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: ports/multimedia/xmms/Makefile,v 1.129 2013/02/09 07:59:36 svnexp Exp $
+# $FreeBSD: multimedia/xmms/Makefile 313644 2013-03-08 13:03:13Z gahr $
 
 PORTNAME=	xmms
 PORTVERSION=	1.2.11
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES+=	multimedia audio ipv6
 MASTER_SITES=	http://www.xmms.org/files/1.2.x/ \
 		http://legacy.xmms2.org/ \
@@ -24,7 +24,6 @@ USE_AUTOTOOLS=	automake autoconf libtool
 AUTOTOOLSFILES=	aclocal.m4
 AUTOMAKE_ARGS=	--add-missing
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}" \
 		INPUT_PLUGINS="${INPUT_PLUGINS}" \
 		OUTPUT_PLUGINS="${OUTPUT_PLUGINS}" \
 		VISUALIZATION_PLUGINS="${VISUALIZATION_PLUGINS}"
