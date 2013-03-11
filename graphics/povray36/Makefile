@@ -2,12 +2,12 @@
 # Date created:         3 Dec 1996
 # Whom:                 paulo@isr.uc.pt
 #
-# $FreeBSD: ports/graphics/povray36/Makefile,v 1.65 2012/11/17 05:58:19 svnexp Exp $
+# $FreeBSD: graphics/povray36/Makefile 313434 2013-03-05 03:10:10Z maho $
 #
 
 PORTNAME=	povray
 PORTVERSION=	3.6.1
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.povray.org/pub/povray/%SUBDIR%/ \
 		ftp://ftp.mirrorservice.org/sites/ftp.povray.org/pub/povray/%SUBDIR%/ \
