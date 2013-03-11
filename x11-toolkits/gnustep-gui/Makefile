@@ -1,9 +1,5 @@
-# New ports collection makefile for:    gnustep-gui
-# Date created:         19 April 2001
-# Whom:                 Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/gnustep-gui/Makefile,v 1.128 2012/11/17 06:03:34 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: x11-toolkits/gnustep-gui/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	gnustep-gui
 PORTVERSION=	0.22.0
@@ -11,7 +7,7 @@ CATEGORIES=	x11-toolkits gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP}
 MASTER_SITE_SUBDIR=	core
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	GNUstep GUI library
 
 .if !defined(NOPORTDOCS)
