@@ -1,28 +1,24 @@
-# New ports collection makefile for:	ruby-opengl
-# Date created:		2011-03-14
 # Whom:			Steve Wills <steve@meatwad.mouf.net>
-#
-# $FreeBSD: ports/graphics/rubygem-opengl/Makefile,v 1.3 2012/11/17 05:58:22 svnexp Exp $
-#
+# $FreeBSD: graphics/rubygem-opengl/Makefile 313315 2013-03-03 01:31:15Z swills $
 
 PORTNAME=	opengl
-PORTVERSION=	0.60.1
-PORTREVISION=	1
+PORTVERSION=	0.8.0
+PORTEPOCH=	1
 CATEGORIES=	graphics ruby
 MASTER_SITES=	RG
-DISTNAME=	ruby-${PORTNAME}-${PORTVERSION}
 DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	OpenGL/GLU/GLUT interface modules for Ruby
-
-RUN_DEPENDS=	rubygem-mkrf>=0.2.3:${PORTSDIR}/devel/rubygem-mkrf
+COMMENT=	OpenGL wrapper for Ruby
 
 USE_RUBY=	yes
 USE_RAKE=	yes
-GEM_NAME=	ruby-${PORTNAME}-${PORTVERSION}
 USE_RUBYGEMS=	yes
 USE_GL=		glut
 RUBYGEM_AUTOPLIST=	yes
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+.if ${RUBY_VER} == 1.8
+IGNORE=	Does not work with Ruby 1.8
+.endif
+.include <bsd.port.post.mk>
