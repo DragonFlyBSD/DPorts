@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/www/plugger/pkg-install,v 1.7 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: www/plugger/pkg-install 300897 2012-07-14 14:29:18Z beat $
 
 [ $# != 2 ] && exit 1
 PKGNAME=$1
