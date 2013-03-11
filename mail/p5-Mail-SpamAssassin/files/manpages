@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/p5-Mail-SpamAssassin/files/manpages,v 1.3 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-SpamAssassin/files/manpages 300896 2012-07-14 13:54:48Z beat $
 MAN3+=		Mail::SpamAssassin.3 \
 		Mail::SpamAssassin::AICache.3 \
 		Mail::SpamAssassin::ArchiveIterator.3 \

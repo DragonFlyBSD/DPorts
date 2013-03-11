@@ -1,10 +1,10 @@
 # Created by: Anthony Kim
-# $FreeBSD: ports/mail/p5-Mail-SpamAssassin/Makefile,v 1.161 2013/02/26 22:00:42 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-SpamAssassin/Makefile 313565 2013-03-07 06:20:38Z scheidell $
 #
 
 PORTNAME=	Mail-SpamAssassin
 PORTVERSION=	3.3.2
-PORTREVISION?=	7		# committer: please bump PORTREVISION on Slaves
+PORTREVISION?=	8		# committer: please bump PORTREVISION on Slaves
 CATEGORIES?=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:S/$/:apache/} ${MASTER_SITE_PERL_CPAN:S/$/:cpan/}
 MASTER_SITE_SUBDIR=	spamassassin/source/:apache Mail/:cpan

@@ -1,4 +1,4 @@
-$FreeBSD: ports/mail/p5-Mail-SpamAssassin/files/patch-bug6655,v 1.2 2012/11/17 05:59:09 svnexp Exp $
+$FreeBSD: mail/p5-Mail-SpamAssassin/files/patch-bug6655 300896 2012-07-14 13:54:48Z beat $
 
 https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6655
 
