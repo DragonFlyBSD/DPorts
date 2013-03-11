@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: ports/devel/varconf/Makefile,v 1.25 2013/01/19 11:20:22 svnexp Exp $
+# $FreeBSD: devel/varconf/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	varconf
 PORTVERSION=	1.0.0
@@ -14,6 +14,7 @@ LIB_DEPENDS=	sigc-2.0:${PORTSDIR}/devel/libsigc++20
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack
+USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 
 .include <bsd.port.options.mk>
