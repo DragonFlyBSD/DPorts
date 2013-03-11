@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: databases/sqlite3/Makefile 313182 2013-03-02 03:55:25Z eadler $
+# $FreeBSD: databases/sqlite3/Makefile 313423 2013-03-04 21:19:46Z jsa $
 
 PORTNAME=	sqlite3
 PORTVERSION=	3.7.14.1
@@ -15,7 +15,7 @@ LICENSE_NAME=	Public Domain
 LICENSE_TEXT=	Description of the license can be obtained from the following URL: http://www.sqlite.org/copyright.html
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-CONFLICTS=	sqlite34-[0-9]*
+CONFLICTS=	sqlite34-[0-9]* sqlcipher-*
 
 USE_GNOME=	pkgconfig
 USE_LDCONFIG=	YES
