@@ -2,7 +2,7 @@
 # Date created:		2009-05-20
 # Whom:			Hiroto Kagotani <hiroto.kagotani@gmail.com>
 #
-# $FreeBSD: ports/graphics/ocropus/Makefile,v 1.19 2012/11/17 05:58:15 svnexp Exp $
+# $FreeBSD: graphics/ocropus/Makefile 313563 2013-03-07 04:38:30Z bf $
 #
 
 PORTNAME=	ocropus
@@ -44,7 +44,7 @@ USE_SDL=	sdl
 .if !defined(WITH_LEPTONICA)
 CONFIGURE_ARGS+=--without-leptonica
 .else
-LIB_DEPENDS+=	lept.2:${PORTSDIR}/graphics/leptonica
+LIB_DEPENDS+=	lept:${PORTSDIR}/graphics/leptonica
 .endif
 
 pre-configure:
