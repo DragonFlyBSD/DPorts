@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/dbus-sharp/pkg-plist,v 1.14 2012/11/17 05:55:40 svnexp Exp $
+@comment $FreeBSD: devel/dbus-sharp/pkg-plist 304823 2012-09-25 08:51:38Z romain $
 lib/mono/dbus-sharp-1.0/dbus-sharp.dll
 lib/mono/gac/dbus-sharp/1.0.0.0__5675b0c3093115b5/dbus-sharp.dll
 lib/mono/gac/dbus-sharp/1.0.0.0__5675b0c3093115b5/dbus-sharp.dll.config
