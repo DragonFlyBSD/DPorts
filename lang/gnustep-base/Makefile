@@ -1,9 +1,5 @@
-# New ports collection makefile for:    gnustep-base
-# Date created:         17 April 2001
-# Whom:                 Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/gnustep-base/Makefile,v 1.126 2013/02/05 16:54:23 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: lang/gnustep-base/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	gnustep-base
 PORTVERSION=	1.24.0
@@ -12,7 +8,7 @@ CATEGORIES=	lang devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP}
 MASTER_SITE_SUBDIR=	core
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	GNUstep Foundation library
 
 LIB_DEPENDS+=	ffi:${PORTSDIR}/devel/libffi
