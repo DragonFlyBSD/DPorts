@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gnomemimedata
-# Date created:				22 January 2002
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/gnome-mime-data/Makefile,v 1.45 2012/11/17 05:59:37 svnexp Exp $
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: misc/gnome-mime-data/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #    $MCom: ports/misc/gnome-mime-data/Makefile,v 1.14 2007/05/22 04:59:18 marcus Exp $
 
 PORTNAME=	gnome-mime-data
@@ -19,7 +16,7 @@ COMMENT=	A MIME and Application database for GNOME
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack pkgconfig
+USE_GNOME=	gnomeprefix gnomehack intlhack
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl"
 CPPFLAGS+=	-I${LOCALBASE}/include
