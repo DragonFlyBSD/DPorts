@@ -1,5 +1,5 @@
 # Created by: Horance Chou <horance@freedom.ie.cycu.edu.tw>
-# $FreeBSD: devel/libffi/Makefile 313337 2013-03-03 10:27:00Z koobs $
+# $FreeBSD: devel/libffi/Makefile 313643 2013-03-08 12:59:10Z zeising $
 
 PORTNAME=	libffi
 PORTVERSION=	3.0.12
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	SOURCEWARE
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	zeising@FreeBSD.org
 COMMENT=	Foreign Function Interface
 
 TEST_DEPENDS=	runtest:${PORTSDIR}/misc/dejagnu
