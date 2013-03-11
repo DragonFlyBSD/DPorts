@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/hwloc/Makefile.man,v 1.3 2012/12/16 10:30:38 svnexp Exp $
+# $FreeBSD: devel/hwloc/Makefile.man 308991 2012-12-16 10:27:48Z pawel $
 
 MAN1=		hwloc-annotate.1 \
 		hwloc-assembler-remote.1 \

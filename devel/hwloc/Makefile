@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/hwloc/Makefile,v 1.7 2012/12/16 10:30:38 svnexp Exp $
+# $FreeBSD: devel/hwloc/Makefile 313415 2013-03-04 16:53:12Z pawel $
 
 PORTNAME=	hwloc
-PORTVERSION=	1.6
+PORTVERSION=	1.6.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v1.6/downloads/ \
 		http://icl.cs.utk.edu/open-mpi/software/hwloc/v1.6/downloads/
@@ -11,6 +11,8 @@ COMMENT=	The Portable Hardware Locality software package
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+LIB_DEPENDS=	pciaccess:${PORTSDIR}/devel/libpciaccess
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-static \
