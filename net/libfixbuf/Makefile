@@ -2,7 +2,7 @@
 # Date created:		2008-04-13
 # Whom:			David Thiel <lx@redundancy.redundancy.org>
 #
-# $FreeBSD: ports/net/libfixbuf/Makefile,v 1.9 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/libfixbuf/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	libfixbuf
@@ -16,6 +16,7 @@ COMMENT=	Library for using the IP Flow Information Export protocol
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 
 post-patch:

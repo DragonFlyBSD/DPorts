@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/libfixbuf/pkg-plist,v 1.7 2012/11/17 06:00:04 svnexp Exp $
+@comment $FreeBSD: net/libfixbuf/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 include/fixbuf/autoinc.h
 include/fixbuf/public.h
 include/fixbuf/private.h
