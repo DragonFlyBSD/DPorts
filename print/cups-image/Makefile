@@ -1,8 +1,8 @@
-# $FreeBSD: ports/print/cups-image/Makefile,v 1.7 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: print/cups-image/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 CATEGORIES=	print
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 
 MASTERDIR?=	${.CURDIR}/../cups-base
  
