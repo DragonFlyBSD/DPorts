@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-mgmt/net-snmp/files/snmptrapd.in,v 1.2 2012/11/17 06:00:34 svnexp Exp $
+# $FreeBSD: net-mgmt/net-snmp/files/snmptrapd.in 302141 2012-08-05 23:19:36Z dougb $
 #
 # PROVIDE: snmptrapd
 # REQUIRE: DAEMON

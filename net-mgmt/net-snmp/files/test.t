@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 #
-# $FreeBSD: ports/net-mgmt/net-snmp/files/test.t,v 1.2 2012/11/17 06:00:34 svnexp Exp $
+# $FreeBSD: net-mgmt/net-snmp/files/test.t 300897 2012-07-14 14:29:18Z beat $
 
 use strict;
 use Test::More tests => 1;

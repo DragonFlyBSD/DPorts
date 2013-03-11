@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: ports/net-mgmt/net-snmp/Makefile,v 1.216 2013/02/13 01:26:57 svnexp Exp $
+# $FreeBSD: net-mgmt/net-snmp/Makefile 313439 2013-03-05 07:12:24Z rm $
 
 PORTNAME=	snmp
 PORTVERSION=	5.7.2
@@ -67,8 +67,8 @@ PYEASYUNINSTALL_UNINSTALLARGS?=	-q -N -m -S ${PYTHON_SITELIBDIR} \
 				-s ${PYEASYINSTALL_BINDIR} \
 				${PYDISTUTILS_PKGNAME}
 USE_PYTHON=	yes
-RUN_DEPENDS+=	easy_install:${PORTSDIR}/devel/py-setuptools
-BUILD_DEPENDS+=	easy_install:${PORTSDIR}/devel/py-setuptools
+RUN_DEPENDS+=	easy_install:${PORTSDIR}/devel/py-distribute
+BUILD_DEPENDS+=	easy_install:${PORTSDIR}/devel/py-distribute
 CONFIGURE_ARGS+=--with-python-modules
 PLIST_SUB+=	WITH_PYTHON="" PYTHON_VER=${PYTHON_VER}
 PLIST_SUB+=	PYDISTUTILS_PKGVERSION=${PYDISTUTILS_PKGVERSION}
