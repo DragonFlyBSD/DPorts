@@ -2,7 +2,7 @@
 # Date created:		2009-08-25
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD: ports/irc/smartirc4net/Makefile,v 1.4 2012/11/17 05:58:30 svnexp Exp $
+# $FreeBSD: irc/smartirc4net/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	smartirc4net
@@ -17,6 +17,7 @@ BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 GNU_CONFIGURE=	yes
+USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack
 
