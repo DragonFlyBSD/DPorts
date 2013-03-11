@@ -1,15 +1,12 @@
-# New ports collection makefile for:	libnice
-# Date created:				27 February 2009
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/net-im/libnice/Makefile,v 1.23 2012/11/17 06:00:27 svnexp Exp $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: net-im/libnice/Makefile 313638 2013-03-08 12:21:07Z miwi $
+#    $MCom$
 
 PORTNAME=	libnice
-PORTVERSION=	0.0.13
-PORTREVISION=	3
+PORTVERSION=	0.1.3
 CATEGORIES=	net-im devel
-MASTER_SITES=	http://nice.freedesktop.org/releases/
+MASTER_SITES=	http://nice.freedesktop.org/releases/ \
+		http://miwibox.org/distfiles/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library and transmitter that implements ICE-19
@@ -17,25 +14,18 @@ COMMENT=	Library and transmitter that implements ICE-19
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig glib20 ltverhack
+USE_GNOME=	gnomehack glib20 ltverhack
+USE_PKGCONFIG=	build
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool
+CONFIGURE_ARGS=	--without-gstreamer --with-gstreamer-0.10
 CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_GETIFADDRS
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|__BYTE_ORDER|_BYTE_ORDER|g ; \
-	    	s|__BIG_ENDIAN|_BIG_ENDIAN|g' \
-		${WRKSRC}/stun/md5.c \
-		${WRKSRC}/stun/sha1.c
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 	    	's|-Wno-missing-field-initializers|#|g'
 	@${REINPLACE_CMD} -e 's|-Wno-missing-field-initializers|#|g' \
 	    	${WRKSRC}/common.mk
-
-post-configure:
-	@${TOUCH} -f ${WRKSRC}/config.h ${WRKSRC}/aclocal.m4 \
-	    	${WRKSRC}/configure ${WRKSRC}/Makefile.in \
-		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>
