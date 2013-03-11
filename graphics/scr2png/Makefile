@@ -1,5 +1,5 @@
 # Created by: nik
-# $FreeBSD: ports/graphics/scr2png/Makefile,v 1.24 2012/11/17 05:58:22 svnexp Exp $
+# $FreeBSD: graphics/scr2png/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	scr2png
 PORTVERSION=	1.2
@@ -18,6 +18,8 @@ NO_WRKSUBDIR=	yes
 MAN1=		scr2png.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/scr2png
+
+MAKE_JOBS_SAFE=	yes
 
 post-extract:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/Makefile
