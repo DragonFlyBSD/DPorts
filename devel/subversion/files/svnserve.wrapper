@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/subversion/files/svnserve.wrapper,v 1.3 2012/11/17 05:57:04 svnexp Exp $
+# $FreeBSD: devel/subversion/files/svnserve.wrapper 300896 2012-07-14 13:54:48Z beat $
 
 SVNSERVE=$(dirname $(realpath $0))/svnserve.bin
 

@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: ports/devel/subversion/Makefile,v 1.149 2013/01/13 23:41:32 svnexp Exp $
+# $FreeBSD: devel/subversion/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
@@ -105,7 +105,7 @@ PLIST_SUB+=	BOOK="@comment "
 
 # testsuite will fail until PR156076 is committed
 .if ${PORT_OPTIONS:MTEST}
-TEST_DEPENDS=	${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 .endif
 
 #.if ${PORT_OPTIONS:MASVN}

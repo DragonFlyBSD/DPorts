@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: ports/devel/subversion/Makefile.common,v 1.70 2013/01/13 23:41:32 svnexp Exp $
+# $FreeBSD: devel/subversion/Makefile.common 310350 2013-01-13 23:25:34Z ohauer $
 
 PORTNAME=	subversion
 PORTVERSION=	1.7.8
