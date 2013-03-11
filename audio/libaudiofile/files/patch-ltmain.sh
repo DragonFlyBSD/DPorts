@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/libaudiofile/files/patch-ltmain.sh,v 1.2 2012/11/17 05:54:36 svnexp Exp $
+$FreeBSD: audio/libaudiofile/files/patch-ltmain.sh 300895 2012-07-14 12:56:14Z beat $
 
 --- ltmain.sh.orig	Wed Jan 23 11:38:40 2002
 +++ ltmain.sh	Sun Feb  3 01:44:17 2002
