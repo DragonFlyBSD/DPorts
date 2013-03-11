@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-version
-# Date created:				Aug 27 2003
-# Whom:					Autrijus Tang <autrijus@autrijus.org>
-#
-# $FreeBSD: ports/devel/p5-version/Makefile,v 1.52 2012/11/17 05:56:37 svnexp Exp $
-#
+# Created by: Autrijus Tang <autrijus@autrijus.org>
+# $FreeBSD: devel/p5-version/Makefile 313579 2013-03-07 12:20:42Z tobez $
 
 PORTNAME=	version
-PORTVERSION=	0.99.01
+PORTVERSION=	0.99.02
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
