@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/x11/xclip/Makefile,v 1.19 2012/11/17 06:03:20 svnexp Exp $
+# $FreeBSD: x11/xclip/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	xclip
 PORTVERSION=	0.12
@@ -14,6 +14,7 @@ USE_AUTOTOOLS=	autoconf:env aclocal:env automake:env
 USE_XORG=	x11 xmu
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	yes
 
 MAN1=		xclip.1 xclip-copyfile.1
 PLIST_FILES=	bin/xclip bin/xclip-copyfile bin/xclip-cutfile bin/xclip-pastefile
