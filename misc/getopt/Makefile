@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: misc/getopt/Makefile 313310 2013-03-03 00:13:19Z eadler $
+# $FreeBSD: misc/getopt/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	getopt
 PORTVERSION=	1.1.5
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://software.frodo.looijaard.name/getopt/files/
 
 MAINTAINER=	eadler@FreeBSD.org
-COMMENT=	A getopt(1) replacement that supports GNU-style long options
+COMMENT=	Replacement for getopt(1) that supports GNU-style long options
 
 USE_GETTEXT=		yes
 USE_GMAKE=		yes
@@ -18,6 +18,8 @@ MAKE_ENV+=	LIBCGETOPT=0
 
 MAN1=		getopt.1
 DOCS=		Changelog README
+
+MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
