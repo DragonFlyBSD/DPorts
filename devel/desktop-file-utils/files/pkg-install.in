@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/desktop-file-utils/files/pkg-install.in,v 1.3 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: devel/desktop-file-utils/files/pkg-install.in 300896 2012-07-14 13:54:48Z beat $
 #
 # Initialize the desktop directories and MIME cache.
 
