@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: ports/sysutils/upower/Makefile,v 1.10 2013/02/09 18:07:13 svnexp Exp $
+# $FreeBSD: sysutils/upower/Makefile 311989 2013-02-09 17:53:53Z avilla $
 #   $MCom: ports/sysutils/upower/Makefile,v 1.19 2010/10/05 08:30:15 kwm Exp $
 
 PORTNAME=	upower
