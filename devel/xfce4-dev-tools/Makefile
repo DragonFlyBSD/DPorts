@@ -2,7 +2,7 @@
 # Date created:		19 April 2006
 # Whom:			Oliver Lehmann <oliver@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/xfce4-dev-tools/Makefile,v 1.15 2012/11/17 05:57:06 svnexp Exp $
+# $FreeBSD: devel/xfce4-dev-tools/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	xfce4-dev-tools
@@ -20,5 +20,6 @@ GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_XFCE=	configenv	# to get MASTER_SITE_SUBDIR something has to be defined
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 
 .include <bsd.port.mk>
