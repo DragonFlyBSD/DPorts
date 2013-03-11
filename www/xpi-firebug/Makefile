@@ -1,8 +1,8 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: ports/www/xpi-firebug/Makefile,v 1.27 2012/12/15 00:31:59 svnexp Exp $
+# $FreeBSD: www/xpi-firebug/Makefile 313498 2013-03-06 03:37:25Z bar $
 
 PORTNAME=	firebug
-PORTVERSION=	1.11.1
+PORTVERSION=	1.11.2
 DISTVERSIONSUFFIX=	-fx
 PORTEPOCH=	3
 CATEGORIES=	www
