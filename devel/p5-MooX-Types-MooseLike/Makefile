@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MooX-Types-MooseLike/Makefile,v 1.13 2013/02/18 19:08:24 svnexp Exp $
+# $FreeBSD: devel/p5-MooX-Types-MooseLike/Makefile 313748 2013-03-09 19:23:32Z sunpoet $
 
 PORTNAME=	MooX-Types-MooseLike
-PORTVERSION=	0.21
+PORTVERSION=	0.23
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -22,9 +22,7 @@ TEST_DEPENDS=	p5-Set-Object>=1:${PORTSDIR}/devel/p5-Set-Object \
 PERL_CONFIGURE=	yes
 
 MAN3=		MooX::Types::MooseLike.3 \
-		MooX::Types::MooseLike::Base.3 \
-		MooX::Types::MooseLike::Numeric.3 \
-		MooX::Types::SetObject.3
+		MooX::Types::MooseLike::Base.3
 
 post-patch:
 	@${REINPLACE_CMD} -e '/NAME/ s|MooX-Types-MooseLike|MooX::Types::MooseLike|' ${WRKSRC}/Makefile.PL
