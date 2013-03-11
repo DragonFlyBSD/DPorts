@@ -1,9 +1,5 @@
-# New ports collection makefile for:   glib12
-# Date Created:			28 July 1998
-# Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/glib12/Makefile,v 1.70 2013/02/14 10:22:07 svnexp Exp $
-#
+# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
+# $FreeBSD: devel/glib12/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	glib
 PORTVERSION=	1.2.10
@@ -16,7 +12,6 @@ COMMENT=	Some useful routines of C programming (previous stable version)
 
 USE_CSTD=	gnu89
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/glib12

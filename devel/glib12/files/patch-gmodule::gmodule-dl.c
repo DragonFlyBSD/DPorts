@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/glib12/files/patch-gmodule::gmodule-dl.c,v 1.2 2012/11/17 05:55:45 svnexp Exp $
+$FreeBSD: devel/glib12/files/patch-gmodule::gmodule-dl.c 300896 2012-07-14 13:54:48Z beat $
 
 --- gmodule/gmodule-dl.c	2001/12/12 04:39:42	1.1
 +++ gmodule/gmodule-dl.c	2001/12/12 04:41:05
