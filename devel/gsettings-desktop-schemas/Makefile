@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gsettings-desktop-schemas
-# Date created:				14 Aug 2010
-# Whom:					Koop Mast <kwm@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/gsettings-desktop-schemas/Makefile,v 1.3 2012/11/17 05:55:46 svnexp Exp $
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD: devel/gsettings-desktop-schemas/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.13 2011/04/27 21:18:30 kwm Exp $
-#
 
 PORTNAME=	gsettings-desktop-schemas
 PORTVERSION=	3.0.1
@@ -24,6 +20,7 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_PERL5_BUILD=	yes
 USE_GNOME=	gnomehack intltool glib20
+USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 
 GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
