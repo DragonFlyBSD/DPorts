@@ -1,9 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-IPC-Cmd/Makefile,v 1.25 2012/12/18 12:18:11 svnexp Exp $
+# $FreeBSD: devel/p5-IPC-Cmd/Makefile 313412 2013-03-04 15:49:13Z tobez $
 
 PORTNAME=	IPC-Cmd
-PORTVERSION=	0.78
-PORTREVISION=	1
+PORTVERSION=	0.80
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
