@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/www/nginx/files/nginx.in,v 1.4 2013/02/13 10:53:47 svnexp Exp $
+# $FreeBSD: www/nginx/files/nginx.in 312147 2013-02-13 09:23:58Z osa $
 
 # PROVIDE: nginx
 # REQUIRE: LOGIN cleanvar

@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: ports/www/nginx/Makefile,v 1.384 2013/02/24 07:41:40 svnexp Exp $
+# $FreeBSD: www/nginx/Makefile 313591 2013-03-07 14:30:47Z osa $
 
 PORTNAME=	nginx
 PORTVERSION=	1.2.7
@@ -733,7 +733,7 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_sflow_config.c \
 .endif
 
 .if ${PORT_OPTIONS:MSLOWFS_CACHE}
-NGINX_SLOWFS_CACHE_VERSION=	1.9
+NGINX_SLOWFS_CACHE_VERSION=	1.10
 MASTER_SITES+=	http://labs.frickle.com/files/:slowfs_cache
 DISTFILES+=	ngx_slowfs_cache-${NGINX_SLOWFS_CACHE_VERSION}.tar.gz:slowfs_cache
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_slowfs_cache-${NGINX_SLOWFS_CACHE_VERSION}

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/nginx/pkg-plist,v 1.16 2012/11/17 06:02:43 svnexp Exp $
+@comment $FreeBSD: www/nginx/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 @unexec if cmp -s %D/%%ETCDIR%%/fastcgi_params-dist %D/%%ETCDIR%%/fastcgi_params; then rm -f %D/%%ETCDIR%%/fastcgi_params; fi
 %%ETCDIR%%/fastcgi_params-dist
 @exec if [ ! -f %D/%%ETCDIR%%/fastcgi_params ] ; then cp -p %D/%F %B/fastcgi_params; fi
