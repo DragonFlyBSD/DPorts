@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/libxml/files/patch-configure,v 1.2 2012/11/17 06:02:01 svnexp Exp $
+$FreeBSD: textproc/libxml/files/patch-configure 300897 2012-07-14 14:29:18Z beat $
 
 --- configure	2002/04/30 21:56:31	1.1
 +++ configure	2002/04/30 21:56:55

@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libxml
-# Date created:				28 September 1998
-# Whom:					Yukihiro Nakai <Nakai@technologist.com>
-#
-# $FreeBSD: ports/textproc/libxml/Makefile,v 1.64 2012/12/05 12:55:45 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@technologist.com>
+# $FreeBSD: textproc/libxml/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	libxml
 PORTVERSION=	1.8.17
@@ -18,7 +14,6 @@ DEPRECATED=	Last release in 2002, unsupported by developers
 
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USE_GNOME=	pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes

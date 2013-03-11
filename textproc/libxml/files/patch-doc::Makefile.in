@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/libxml/files/patch-doc::Makefile.in,v 1.2 2012/11/17 06:02:01 svnexp Exp $
+$FreeBSD: textproc/libxml/files/patch-doc::Makefile.in 300897 2012-07-14 14:29:18Z beat $
 
 --- doc/Makefile.in	2002/04/30 21:49:33	1.1
 +++ doc/Makefile.in	2002/04/30 21:51:26
