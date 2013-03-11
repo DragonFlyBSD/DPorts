@@ -1,15 +1,14 @@
 # Created by: Brian Handy <handy@physics.montana.edu>
-# $FreeBSD: ports/x11-wm/windowmaker/Makefile,v 1.176 2013/02/08 09:54:25 svnexp Exp $
+# $FreeBSD: x11-wm/windowmaker/Makefile 313478 2013-03-05 20:23:57Z hrs $
 
 PORTNAME?=	windowmaker
 PORTVERSION=	0.95.4
-PORTREVISION?=	0
 CATEGORIES=	x11-wm windowmaker
 MASTER_SITES=	http://windowmaker.org/pub/%SUBDIR%/
 MASTER_SITE_SUBDIR=	source/release
 DISTNAME=	WindowMaker-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	hrs@FreeBSD.org
 COMMENT?=	GNUstep-compliant NeXTstep window manager clone
 
 LICENSE?=	GPLv2
