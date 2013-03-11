@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Text-vCard/Makefile,v 1.23 2012/12/21 17:43:55 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-vCard/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=		Text-vCard
 PORTVERSION=		2.13
@@ -8,7 +8,7 @@ MASTER_SITES=		CPAN
 PKGNAMEPREFIX=		p5-
 
 MAINTAINER=		ehaupt@FreeBSD.org
-COMMENT=		A package to parse, edit and create multiple vCards (RFC 2426)
+COMMENT=		Package to parse, edit and create multiple vCards (RFC 2426)
 
 BUILD_DEPENDS=		p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 			p5-Text-vFile-asData>=0:${PORTSDIR}/devel/p5-Text-vFile-asData
