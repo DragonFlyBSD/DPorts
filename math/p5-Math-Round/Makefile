@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: ports/math/p5-Math-Round/Makefile,v 1.6 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: math/p5-Math-Round/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	Math-Round
 PORTVERSION=	0.06
@@ -11,6 +11,8 @@ MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Perl extension for rounding numbers
 
 PERL_CONFIGURE=	yes
+
+MAKE_JOBS_SAFE=	yes
 
 MAN3=		Math::Round.3
 
