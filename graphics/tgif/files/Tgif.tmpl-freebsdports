@@ -1,4 +1,4 @@
-XCOMM $FreeBSD: ports/graphics/tgif/files/Tgif.tmpl-freebsdports,v 1.2 2012/11/17 05:58:24 svnexp Exp $
+XCOMM $FreeBSD: graphics/tgif/files/Tgif.tmpl-freebsdports 300896 2012-07-14 13:54:48Z beat $
 #ifdef WITH_NLS
 #define IHaveSubdirs
 SUBDIRS=		po
