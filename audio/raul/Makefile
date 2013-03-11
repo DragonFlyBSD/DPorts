@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: ports/audio/raul/Makefile,v 1.11 2013/01/31 14:01:25 svnexp Exp $
+# $FreeBSD: audio/raul/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	raul
 PORTVERSION=	0.8.0
@@ -17,6 +17,7 @@ LIB_DEPENDS=	boost_date_time:${PORTSDIR}/devel/boost-libs
 
 USE_BZIP2=	yes
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 USE_PYTHON_BUILD=yes
 USE_LDCONFIG=	yes
 
