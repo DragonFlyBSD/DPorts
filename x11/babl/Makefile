@@ -1,9 +1,5 @@
-# New ports collection makefile for:	babl
-# Date created:		2008-04-14
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/babl/Makefile,v 1.14 2013/02/05 13:04:20 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: x11/babl/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	babl
 PORTVERSION=	0.1.6
@@ -25,7 +21,8 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	pkgconfig gnomehack ltverhack
+USE_GNOME=	gnomehack ltverhack
+USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=yes
 
