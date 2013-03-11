@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unzoo
-# Date created:				20 Jun 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/archivers/unzoo/Makefile,v 1.15 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: archivers/unzoo/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	unzoo
 PORTVERSION=	4.4
@@ -17,7 +13,7 @@ PATCHFILES=	unzoo_4.4-4.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A zoo archive extractor
+COMMENT=	ZOO archive extractor
 
 MAKE_JOBS_SAFE=	yes
 
