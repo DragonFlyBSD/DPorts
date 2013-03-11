@@ -2,7 +2,7 @@
 # Date created:					Sun May  4 21:40:06 CDT 1997
 # Whom:						jmacd
 #
-# $FreeBSD: ports/misc/xdelta/Makefile,v 1.45 2012/11/17 05:59:46 svnexp Exp $
+# $FreeBSD: misc/xdelta/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	xdelta
@@ -16,6 +16,7 @@ COMMENT=	A diff/patch utility for binary files
 
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
