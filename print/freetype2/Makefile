@@ -1,5 +1,5 @@
 # Created by: jseger@FreeBSD.org
-# $FreeBSD: ports/print/freetype2/Makefile,v 1.103 2012/12/29 05:07:59 svnexp Exp $
+# $FreeBSD: print/freetype2/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/print/freetype2/Makefile,v 1.28 2011/10/25 18:31:21 kwm Exp $
 
 PORTNAME=	freetype2
@@ -23,7 +23,7 @@ MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	TOP=""
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig ltverhack:9
+USE_GNOME=	ltverhack:9
 LIBTOOLFILES=	builds/unix/configure
 CONFIGURE_WRKSRC=	${WRKSRC}/builds/unix
 
