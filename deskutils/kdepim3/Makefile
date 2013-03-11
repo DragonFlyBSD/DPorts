@@ -1,9 +1,5 @@
-# New ports collection makefile for:	KDE PIM
-# Date created:				2 March 2001
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: ports/deskutils/kdepim3/Makefile,v 1.103 2012/12/30 18:55:45 svnexp Exp $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: deskutils/kdepim3/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	kdepim
 PORTVERSION=	${KDE_VERSION}
@@ -30,7 +26,7 @@ PREFIX=		${KDE_PREFIX}
 _NO_KDE_FINAL=	yes
 
 USE_BZIP2=	yes
-USE_BISON=	build
+USES=		bison
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
