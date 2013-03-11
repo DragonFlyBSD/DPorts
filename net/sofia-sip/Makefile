@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/sofia-sip/Makefile,v 1.1 2012/12/19 01:55:37 svnexp Exp $
+# $FreeBSD: net/sofia-sip/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	sofia-sip
 PORTVERSION=	1.12.11
@@ -11,6 +11,7 @@ COMMENT=	Open-source SIP User-Agent library
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USE_GNOME=	glib20 gnomehack
+USE_PKGCONFIG=	build
 
 MAN1=	sip-date.1 \
 	sip-options.1 \
