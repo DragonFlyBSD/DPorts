@@ -1,9 +1,5 @@
-# Ports collection makefile for: libumidi
-# Date created: 21 June 2011
-# Whom:         Hans Petter Selasky <hselasky@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/libumidi/Makefile,v 1.6 2012/11/17 05:54:36 svnexp Exp $
-#
+# Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
+# $FreeBSD: audio/libumidi/Makefile 313460 2013-03-05 17:07:43Z miwi $
 
 PORTNAME=	libumidi
 PORTVERSION=	2.0.5
@@ -19,19 +15,17 @@ USE_BZIP2=	yes
 MAN3=		umidi20.3
 MANCOMPRESSED=	yes
 
-OPTIONS=	DEBUG "Build with debugging support" Off \
-		JACK "Build with Jack support" On
-
+OPTIONS_DEFINE=	DEBUG JACK
 .include <bsd.port.options.mk>
 
 MAKE_ARGS+=" PTHREAD_LIBS=${PTHREAD_LIBS}"
 
-.if defined(WITH_JACK)
+.if ${PORT_OPTIONS:MJACK}
 MAKE_ARGS+=" HAVE_JACK=YES"
 LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack
 .endif
 
-.if defined(WITH_DEBUG)
+.if ${PORT_OPTIONS:MDEBUG}
 MAKE_ARGS+=" HAVE_DEBUG=YES"
 .endif
 
