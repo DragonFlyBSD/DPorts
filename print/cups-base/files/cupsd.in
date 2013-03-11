@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/print/cups-base/files/cupsd.in,v 1.5 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: print/cups-base/files/cupsd.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: cupsd
 # REQUIRE: DAEMON

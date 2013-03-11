@@ -1,6 +1,6 @@
 # /usr/local/etc/devd/cups.conf
 #
-# $FreeBSD: ports/print/cups-base/files/ulpt-cupsd.conf.in,v 1.3 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: print/cups-base/files/ulpt-cupsd.conf.in 300897 2012-07-14 14:29:18Z beat $
 #
 # Tell cups to pause and unpause the printer when it arrives and departs.
 #

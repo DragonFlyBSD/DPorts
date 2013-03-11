@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: ports/print/cups-base/Makefile,v 1.185 2013/02/05 16:54:25 svnexp Exp $
+# $FreeBSD: print/cups-base/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	cups
 PORTVERSION=	1.5.4
@@ -9,7 +9,7 @@ MASTER_SITES=	EASYSW/${PORTNAME}/${DISTVERSION}
 PKGNAMESUFFIX=	${CUPS_SUFFIX}${PKGNAMESUFFIX2}
 UNIQUENAME=	${PORTNAME}${PKGNAMESUFFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Common UNIX Printing System: ${COMMENT2}
 
 LICENSE=	GPLv2
