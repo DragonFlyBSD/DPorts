@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libtelepathy
-# Date created:				Apr 16 2007
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/net-im/libtelepathy/Makefile,v 1.13 2012/11/17 06:00:27 svnexp Exp $
+# Created by: Florent Thoumie <flz@FreeBSD.org>
+# $FreeBSD: net-im/libtelepathy/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #    $MCom: ports/net-im/libtelepathy/Makefile,v 1.3 2008/02/27 14:00:06 ahze Exp $
 
 PORTNAME=	libtelepathy
@@ -24,7 +21,7 @@ RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig glib20 ltverhack
+USE_GNOME=	gnomehack glib20 ltverhack
 USE_AUTOTOOLS=	libtool
 
 .include <bsd.port.mk>
