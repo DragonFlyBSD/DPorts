@@ -1,5 +1,5 @@
-# Created by:	chinsan
-# $FreeBSD: ports/devel/pipestatus/Makefile,v 1.8 2012/11/17 05:56:42 svnexp Exp $
+# Created by: chinsan
+# $FreeBSD: devel/pipestatus/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	pipestatus
 PORTVERSION=	0.6.0
