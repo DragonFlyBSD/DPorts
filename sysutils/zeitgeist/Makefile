@@ -1,9 +1,5 @@
-# New ports collection makefile for:   zeitgeist
-# Date Created:			31 Mar 2011
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/zeitgeist/Makefile,v 1.5 2012/11/17 06:01:51 svnexp Exp $
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD: sysutils/zeitgeist/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
 
 PORTNAME=	zeitgeist
 PORTVERSION=	0.8.2
@@ -16,7 +12,7 @@ COMMENT=	Event logging framework - engine
 
 BUILD_DEPENDS=	rapper:${PORTSDIR}/textproc/raptor2 \
 		${PYTHON_SITELIBDIR}/rdflib/__init__.py:${PORTSDIR}/textproc/py-rdflib
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3 \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg \
 		${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
 
