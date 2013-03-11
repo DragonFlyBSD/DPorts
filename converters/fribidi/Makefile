@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	fribidi
-# Date created:			Apr 19, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/converters/fribidi/Makefile,v 1.26 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: converters/fribidi/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	fribidi
 PORTVERSION=	0.19.2
@@ -16,7 +11,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A Free Implementation of the Unicode Bidirectional Algorithm
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack pkgconfig
+USE_GNOME=	gnomehack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-glib
