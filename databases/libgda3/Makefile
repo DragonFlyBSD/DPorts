@@ -2,7 +2,7 @@
 # Date created:				02 June 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgda3/Makefile,v 1.96 2012/11/17 05:55:09 svnexp Exp $
+# $FreeBSD: databases/libgda3/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/databases/libgda3/Makefile,v 1.11 2008/03/01 02:35:38 mezz Exp $
 #
 
@@ -34,7 +34,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-bdb --without-sybase
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl"
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 
 .include <bsd.port.pre.mk>
 
