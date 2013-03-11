@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/mercurial/pkg-plist,v 1.51 2013/02/12 22:09:20 svnexp Exp $
+@comment $FreeBSD: devel/mercurial/pkg-plist 312133 2013-02-12 21:56:54Z olivierd $
 bin/hg
 %%PYTHON_SITELIBDIR%%/hgext/__init__.py
 %%PYTHON_SITELIBDIR%%/hgext/__init__.pyc
