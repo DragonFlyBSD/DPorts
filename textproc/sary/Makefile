@@ -2,7 +2,7 @@
 # Date created:		8 October 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/textproc/sary/Makefile,v 1.27 2012/11/17 06:02:20 svnexp Exp $
+# $FreeBSD: textproc/sary/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	sary
@@ -15,6 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A suffix array library and tools, which provide fast full-text search
 
 USE_GNOME=	glib20 gnomehack
+USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
