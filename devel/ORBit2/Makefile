@@ -1,10 +1,6 @@
-# New ports collection makefile for:   orbit2
-# Date Created:			16 Aug 1998
-# Whom:				Chia-liang Kao <clkao@CirX.ORG>
-#
-# $FreeBSD: ports/devel/ORBit2/Makefile,v 1.144 2012/11/17 05:55:32 svnexp Exp $
+# Created by: Chia-liang Kao <clkao@CirX.ORG>
+# $FreeBSD: devel/ORBit2/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/devel/ORBit2/Makefile,v 1.57 2010/09/29 14:08:02 kwm Exp $
-#
 
 PORTNAME=	ORBit2
 PORTVERSION=	2.14.19
@@ -25,6 +21,7 @@ USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack libidl ltverhack referencehack
+USE_PKGCONFIG=	build
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 CPPFLAGS+=	-I${LOCALBASE}/include
