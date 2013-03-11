@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/py-sqlalchemy/pkg-plist,v 1.22 2012/11/17 05:55:23 svnexp Exp $
+@comment $FreeBSD: databases/py-sqlalchemy/pkg-plist 313418 2013-03-04 18:17:28Z lippe $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt
@@ -415,6 +415,7 @@
 %%PORTDOCS%%%%DOCSDIR%%/dialects/sqlite.html
 %%PORTDOCS%%%%DOCSDIR%%/dialects/sybase.html
 %%PORTDOCS%%%%DOCSDIR%%/genindex.html
+%%PORTDOCS%%%%DOCSDIR%%/glossary.html
 %%PORTDOCS%%%%DOCSDIR%%/index.html
 %%PORTDOCS%%%%DOCSDIR%%/intro.html
 %%PORTDOCS%%%%DOCSDIR%%/orm/collections.html

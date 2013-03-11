@@ -1,12 +1,8 @@
-# Ports collection makefile for:	py-sqlalchemy
-# Date created:				12 August 2004
-# Whom:					Dryice Dong Liu <dryice@dryice.name>
-#
-# $FreeBSD: ports/databases/py-sqlalchemy/Makefile,v 1.48 2012/11/17 05:55:23 svnexp Exp $
-#
+# Created by: Dryice Dong Liu <dryice@dryice.name>
+# $FreeBSD: databases/py-sqlalchemy/Makefile 313539 2013-03-06 20:20:35Z nivit $
 
 PORTNAME=	sqlalchemy
-PORTVERSION=	0.7.8
+PORTVERSION=	0.7.10
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,28 +13,29 @@ COMMENT=	A Python SQL toolkit and Object Relational Mapper
 
 LICENSE=	MIT
 
+TEST_DEPENDS:=	${RUN_DEPENDS} \
+		${PYTHON_PKGNAMEPREFIX}nose>0:${PORTSDIR}/devel/py-nose
+
 # Python3 ready
-USE_PYTHON=	yes
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	SQLAlchemy
 PYDISTUTILS_PKGVERSION=	${DISTVERSION}
 PYDISTUTILS_NOEGGINFO=	yes
 PYEASYINSTALL_ARCHDEP=	yes
 
-# bypass infrastructure bug
-OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
-
-OPTIONS_DEFINE=	DOCS EXAMPLES NOSE
-
-OPTIONS_MULTI=	BACKEND
+OPTIONS_DEFINE=		DOCS EXAMPLES TESTS
+OPTIONS_MULTI=		BACKEND
 OPTIONS_MULTI_BACKEND=	FIREBIRD MSSQL MYSQL PGSQL SQLITE SYBASE
-
 OPTIONS_DEFAULT=	MYSQL PGSQL SQLITE
 
 FIREBIRD_DESC=	Firebird backend
 MSSQL_DESC=	MS SQL Server backend
-NOSE_DESC=	Use Nose for unit tests
+TESTS_DESC=	Include nose for unit tests
 SYBASE_DESC=	Sybase backend
+
+# bypass infrastructure bug
+OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
 .include <bsd.port.options.mk>
 
@@ -70,8 +67,8 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}MySQLdb>=1.2.2:${PORTSDIR}/databases/py-MyS
 .endif
 .endif
 
-.if ${PORT_OPTIONS:MNOSE}
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}nose-1.0.0:${PORTSDIR}/devel/py-nose
+.if ${PORT_OPTIONS:MTESTS}
+BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}nose>0:${PORTSDIR}/devel/py-nose
 .endif
 
 .if ${PORT_OPTIONS:MPGSQL}
@@ -79,7 +76,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}psycopg2>=2.0.8:${PORTSDIR}/databases/py-ps
 .endif
 
 .if ${PORT_OPTIONS:MSQLITE}
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 .endif
 
 .if ${PORT_OPTIONS:MSYBASE}
@@ -114,21 +111,11 @@ easyinstall-setopt:
 	${DO_NADA}
 .endif
 
-# When Python version is 3.2+ we rewrite all the filenames
-# of TMPPLIST that end with .py[co], so that they conform
-# to PEP 3147 (see http://www.python.org/dev/peps/pep-3147/)
 .if ${PYTHON_REL} >= 320
-PYMAGICTAG=	${PYTHON_CMD} -c 'import imp; print(imp.get_tag())'
-add-plist-post:
-	@${AWK} '\
-		/\.py[co]$$/ && !($$0 ~ "/" pc "/") {id = match($$0, /\/[^\/]+\.py[co]$$/); if (id != 0) {d = substr($$0, 1, RSTART - 1); dirs[d] = 1}; sub(/\.py[co]$$/,  "." mt "&"); sub(/[^\/]+\.py[co]$$/, pc "/&"); print; next} \
-		/^@dirrm / {d = substr($$0, 8); if (d in dirs) {print $$0 "/" pc}; print $$0; next} \
-		{print} \
-		END {if (sp in dirs) {print "@dirrm " sp "/" pc}} \
-		' \
-		pc="__pycache__" mt="$$(${PYMAGICTAG})" sp="${PYTHON_SITELIBDIR:S,${PYTHONBASE}/,,g}" \
-		${TMPPLIST} > ${TMPPLIST}.pyc_tmp
-	@${MV} ${TMPPLIST}.pyc_tmp ${TMPPLIST}
+.include "${PORTSDIR}/devel/py-virtualenv/files/p3k-fix-pkg-plist.inc"
 .endif
+
+regression-test: build
+	@cd ${WRKSRC} && ${PYTHON_CMD} sqla_nose.py
 
 .include <bsd.port.post.mk>

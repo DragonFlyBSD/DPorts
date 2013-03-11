@@ -1,4 +1,4 @@
-$FreeBSD: ports/databases/py-sqlalchemy/files/patch-setup.py,v 1.2 2012/11/17 05:55:23 svnexp Exp $
+$FreeBSD: databases/py-sqlalchemy/files/patch-setup.py 300896 2012-07-14 13:54:48Z beat $
 --- setup.py.orig	2012-03-15 05:23:20.000000000 +0100
 +++ setup.py	2012-04-10 19:19:38.000000000 +0200
 @@ -128,7 +128,7 @@
