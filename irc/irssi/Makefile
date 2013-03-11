@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/irc/irssi/Makefile,v 1.116 2012/11/17 05:58:29 svnexp Exp $
+# $FreeBSD: irc/irssi/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	irssi
@@ -17,6 +17,7 @@ CONFLICTS=	irssi-devel-[0-9]* zh-irssi-[0-9]*
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 USE_NCURSES=	yes
 WANT_PERL=	yes
