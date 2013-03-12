@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: ports/devel/eric4/Makefile.inc,v 1.56 2012/11/17 05:55:42 svnexp Exp $
+# $FreeBSD: devel/eric4/Makefile.inc 305911 2012-10-15 12:07:36Z bsam $
 #
 # This is a set of Makefile macros which allow to build the core and
 # localized language packages for devel/eric4:
