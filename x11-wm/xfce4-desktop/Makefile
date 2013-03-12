@@ -1,9 +1,10 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-desktop/Makefile 313366 2013-03-03 16:48:41Z olivierd $
+# $FreeBSD: x11-wm/xfce4-desktop/Makefile 313702 2013-03-09 10:59:44Z olivierd $
 #
 
 PORTNAME=	xfce4-desktop
 PORTVERSION=	4.10.1
+PORTREVISION=	1
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/xfce/xfdesktop/${PORTVERSION:R}
