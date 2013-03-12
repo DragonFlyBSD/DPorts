@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/R-cran-munsell/Makefile,v 1.7 2013/01/04 18:45:34 svnexp Exp $
+# $FreeBSD: graphics/R-cran-munsell/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	munsell
 PORTVERSION=	0.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
