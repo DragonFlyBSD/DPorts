@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/devel/libgsf/Makefile,v 1.70 2013/02/25 01:43:51 svnexp Exp $
+# $FreeBSD: devel/libgsf/Makefile 313549 2013-03-06 22:50:17Z kwm $
 #   $MCom: ports/devel/libgsf/Makefile,v 1.35 2010/04/10 08:51:15 kwm Exp $
 
 PORTNAME=	libgsf
@@ -38,9 +38,9 @@ OPTIONS_DEFAULT=	GCONF
 
 .if ${PORT_OPTIONS:MGCONF}
 USE_GNOME+=	gconf2
-PLIST_FILES+=	bin/gsf-office-thumbnailer
 . if !defined(GSF_SLAVE)
 GCONF_SCHEMAS=	gsf-office-thumbnailer.schemas
+PLIST_FILES+=	bin/gsf-office-thumbnailer
 . endif
 .else
 CONFIGURE_ARGS+=	--without-gconf
