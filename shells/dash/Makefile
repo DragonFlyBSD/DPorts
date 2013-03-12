@@ -1,4 +1,4 @@
-# $FreeBSD: ports/shells/dash/Makefile,v 1.8 2012/11/17 06:01:23 svnexp Exp $
+# $FreeBSD: shells/dash/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	dash
 PORTVERSION=	0.5.7
@@ -6,11 +6,13 @@ CATEGORIES=	shells
 MASTER_SITES=	http://gondor.apana.org.au/~herbert/dash/files/
 
 MAINTAINER=	eadler@FreeBSD.org
-COMMENT=	A POSIX-compliant implementation of /bin/sh
+COMMENT=	POSIX-compliant implementation of /bin/sh
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CFLAGS+=	-DUNUSABLE_RT_SIGNALS
+
+MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/dash
 MAN1=		dash.1
