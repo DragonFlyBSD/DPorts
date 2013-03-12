@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/R-cran-dichromat/Makefile,v 1.7 2013/01/25 14:46:06 svnexp Exp $
+# $FreeBSD: graphics/R-cran-dichromat/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	dichromat
 DISTVERSION=	2.0-0
+PORTREVISION=	1
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
