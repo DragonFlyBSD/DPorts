@@ -1,12 +1,12 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: editors/tea/Makefile 313117 2013-02-28 17:12:40Z makc $
+# $FreeBSD: editors/tea/Makefile 313753 2013-03-09 19:59:21Z eadler $
 
 PORTNAME=	tea
 DISTVERSION=	34.0.1
 CATEGORIES=	editors
 MASTER_SITES=	SF/${PORTNAME}-editor/${PORTNAME}-editor/${PORTVERSION}
 
-MAINTAINER=	davide.italiano@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple and powerful Qt4-based text editor
 
 LICENSE=	GPLv3
