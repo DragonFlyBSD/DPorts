@@ -1,10 +1,6 @@
-# New ports collection makefile for:	evolution-data-server
-# Date created:				09 December 2003
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/evolution-data-server/Makefile,v 1.88 2013/02/06 21:56:42 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: databases/evolution-data-server/Makefile 313635 2013-03-08 11:32:11Z bapt $
 #   $MCom: ports/databases/evolution-data-server/Makefile,v 1.203 2010/11/15 17:19:55 kwm Exp $
-#
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.32.1
@@ -16,22 +12,22 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
-LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
+LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
 		gdata.7:${PORTSDIR}/devel/libgdata \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		ical:${PORTSDIR}/devel/libical \
-		nss3.1:${PORTSDIR}/security/nss \
-		tasn1.5:${PORTSDIR}/security/libtasn1 \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
-		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
+		nss3:${PORTSDIR}/security/nss \
+		tasn1:${PORTSDIR}/security/libtasn1 \
+		sqlite3:${PORTSDIR}/databases/sqlite3 \
+		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 
 BUILD_DEPENDS+=	gperf:${PORTSDIR}/devel/gperf
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison pathfix
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack ltverhack ltasneededhack gconf2 \
+USE_GNOME=	gnomeprefix intlhack ltverhack ltasneededhack gconf2 \
 		libxml2
 USE_OPENLDAP=	yes
 USE_AUTOTOOLS=	libtool
@@ -85,6 +81,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g ; \
 		s|heimlibs=".*"|heimlibs="${KRB5_LIB}"|g ; \
 		s|-DGTK_DISABLE_DEPRECATED||g ; \
+		s|-DG_DISABLE_DEPRECATED||g ; \
 		s|-Wl,--no-undefined||g ; \
 		s|-Wmissing-include-dirs||g' \
 			${WRKSRC}/configure
