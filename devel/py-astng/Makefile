@@ -1,8 +1,8 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: ports/devel/py-astng/Makefile,v 1.28 2012/11/17 05:56:45 svnexp Exp $
+# $FreeBSD: devel/py-astng/Makefile 313545 2013-03-06 22:13:19Z mva $
 
 PORTNAME=	astng
-PORTVERSION=	0.24.1
+PORTVERSION=	0.24.2
 CATEGORIES=	devel python
 MASTER_SITES=	LOGILAB
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
