@@ -1,7 +1,7 @@
-# $FreeBSD: ports/multimedia/gmtk/Makefile,v 1.2 2013/02/22 19:55:11 svnexp Exp $
+# $FreeBSD: multimedia/gmtk/Makefile 313541 2013-03-06 20:49:41Z jkim $
 
 PORTNAME=	gmtk
-PORTVERSION=	1.0.7
+PORTVERSION=	1.0.8
 CATEGORIES=	multimedia gnome devel
 MASTER_SITES=	GOOGLE_CODE
 
@@ -14,11 +14,12 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	glib20 gnomehack
+USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 USE_PERL5_BUILD=	yes
 USE_PKGCONFIG=	build
 USE_XORG=	x11
+USES=		pathfix
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README
 
