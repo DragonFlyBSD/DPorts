@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/databases/R-cran-DBI/Makefile,v 1.10 2013/01/04 18:45:32 svnexp Exp $
+# $FreeBSD: databases/R-cran-DBI/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	DBI
 DISTVERSION=	0.2-5
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
