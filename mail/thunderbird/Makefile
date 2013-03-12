@@ -1,8 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: mail/thunderbird/Makefile 313335 2013-03-03 10:09:08Z flo $
+# $FreeBSD: mail/thunderbird/Makefile 313676 2013-03-08 22:27:39Z flo $
 
 PORTNAME=	thunderbird
-DISTVERSION=	17.0.3
+DISTVERSION=	17.0.4
 CATEGORIES=	mail ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	${PORTNAME}/releases/${DISTVERSION}esr/source
