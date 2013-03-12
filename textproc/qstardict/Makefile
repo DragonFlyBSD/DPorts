@@ -2,7 +2,7 @@
 # Date created:		12 Jul 2007
 # Whom:			Yinghong.Liu <relaxbsd@gmail.com>
 #
-# $FreeBSD: ports/textproc/qstardict/Makefile,v 1.20 2012/11/17 06:02:18 svnexp Exp $
+# $FreeBSD: textproc/qstardict/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	qstardict
@@ -46,6 +46,7 @@ post-patch:
 		${WRKSRC}/qstardict.pro
 .endif
 	@${REINPLACE_CMD} -e "s|/usr/share/stardict/dic|${DICPATH}|g" \
+		-e "s|glib.*\.h|glib.h|g" \
 		${WRKSRC}/plugins/stardict/stardict.cpp
 
 do-configure:
