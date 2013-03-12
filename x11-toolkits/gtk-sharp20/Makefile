@@ -2,7 +2,7 @@
 # Date created:         2003-01-01
 # Whom:                 Juli Mallett
 #
-# $FreeBSD: ports/x11-toolkits/gtk-sharp20/Makefile,v 1.68 2012/11/17 06:03:35 svnexp Exp $
+# $FreeBSD: x11-toolkits/gtk-sharp20/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $Id: Makefile,v 1.27 2007/10/03 00:48:49 killfill Exp $
 #
 
@@ -30,6 +30,8 @@ USE_GNOME=	gnomehack gtk20 libglade2
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.pl' | ${XARGS} ${REINPLACE_CMD} -e \
 		's|^#!/usr/bin/perl|#!${PERL}|'
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/glib/glue/*.c
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
