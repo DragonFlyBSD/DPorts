@@ -2,7 +2,7 @@
 # Date created:				02 June 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgnomedb/Makefile,v 1.64 2012/11/17 05:55:10 svnexp Exp $
+# $FreeBSD: databases/libgnomedb/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/databases/libgnomedb/Makefile,v 1.32 2008/02/05 13:09:24 kwm Exp $
 #
 
@@ -28,7 +28,7 @@ USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	libgnomedb-3.0.schemas
