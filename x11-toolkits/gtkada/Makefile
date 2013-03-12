@@ -2,7 +2,7 @@
 # Date created:                       12 December 2010
 # Whom:                               John Marino <draco@marino.st>
 #
-# $FreeBSD: ports/x11-toolkits/gtkada/Makefile,v 1.29 2012/11/17 06:03:35 svnexp Exp $
+# $FreeBSD: x11-toolkits/gtkada/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	gtkada
@@ -26,5 +26,8 @@ USE_LDCONFIG=	yes
 CC=		gnatgcc
 
 CONFIGURE_ARGS+=	--disable-nls
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' ${WRKSRC}/src/misc.c
 
 .include <bsd.port.mk>
