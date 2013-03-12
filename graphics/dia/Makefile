@@ -2,7 +2,7 @@
 # Date created:        21 December 1999
 # Whom:                saper@system.pl
 #
-# $FreeBSD: ports/graphics/dia/Makefile,v 1.80 2012/11/17 05:58:03 svnexp Exp $
+# $FreeBSD: graphics/dia/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/graphics/dia/Makefile,v 1.16 2007/10/11 02:49:12 mezz Exp $
 #
 
@@ -71,6 +71,10 @@ PLIST_SUB+=		GNOME="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/lib/intl.c
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/objects/custom/shape_typeinfo.c \
+		${WRKSRC}/tests/test-objects.c \
+		${WRKSRC}/tests/test-boundingbox.c
 .if defined(NOPORTDOCS)
 	@${FIND} ${WRKSRC}/doc -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 		's|$$(examples)||g ; s|$$(mkinstalldirs) $$(sysdoc)/examples||g ; \
