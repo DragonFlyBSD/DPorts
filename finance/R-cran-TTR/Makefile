@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/finance/R-cran-TTR/Makefile,v 1.6 2013/01/04 18:45:33 svnexp Exp $
+# $FreeBSD: finance/R-cran-TTR/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	TTR
 DISTVERSION=	0.21-1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
