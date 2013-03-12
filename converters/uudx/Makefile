@@ -2,7 +2,7 @@
 # Date created:		2 June 1996
 # Whom:			ABURAYER Rewsirow <pcs51674@asciinet.or.jp>
 #
-# $FreeBSD: ports/converters/uudx/Makefile,v 1.21 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: converters/uudx/Makefile 313600 2013-03-07 17:08:13Z miwi $
 #
 
 PORTNAME=	uudx
@@ -10,18 +10,13 @@ PORTVERSION=	2.99
 CATEGORIES=	converters
 MASTER_SITES=	http://ftp.vector.co.jp/pack/dos/util/bin/conv/
 DISTNAME=	${PORTNAME}_${PORTVERSION:S/.//}
-EXTRACT_SUFX=	.lzh
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extractor from uuencoded files
 
-EXTRACT_DEPENDS=lha:${PORTSDIR}/archivers/lha
 BUILD_DEPENDS=	nkf:${PORTSDIR}/japanese/nkf
 
-EXTRACT_CMD=	lha
-EXTRACT_BEFORE_ARGS=	xfqw=${WRKDIR}
-EXTRACT_AFTER_ARGS=	# empty
-
+USE_LHA=	yes
 NO_WRKSUBDIR=	yes
 MANLANG=	ja
 MAN1=		uudx.1
