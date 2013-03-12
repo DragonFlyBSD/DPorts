@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/x11/wbar/pkg-plist,v 1.7 2013/02/06 17:51:19 svnexp Exp $
+@comment $FreeBSD: x11/wbar/pkg-plist 311772 2013-02-06 14:52:39Z nivit $
 bin/wbar
 %%WBARCONFIG%%bin/wbar-config
 etc/bash_completion.d/wbar

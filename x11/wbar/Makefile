@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: ports/x11/wbar/Makefile,v 1.14 2013/02/06 17:51:19 svnexp Exp $
+# $FreeBSD: x11/wbar/Makefile 311772 2013-02-06 14:52:39Z nivit $
 
 PORTNAME=	wbar
 PORTVERSION=	2.3.4
