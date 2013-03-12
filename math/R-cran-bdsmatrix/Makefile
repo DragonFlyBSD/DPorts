@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/math/R-cran-bdsmatrix/Makefile,v 1.6 2013/01/04 18:45:35 svnexp Exp $
+# $FreeBSD: math/R-cran-bdsmatrix/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	bdsmatrix
 PORTVERSION=	1.3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
