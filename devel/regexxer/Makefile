@@ -2,7 +2,7 @@
 # Date created:				15 February 2003
 # Whom:					Rui Lopes <rui@ruilopes.com>
 #
-# $FreeBSD: ports/devel/regexxer/Makefile,v 1.37 2012/12/10 19:24:00 svnexp Exp $
+# $FreeBSD: devel/regexxer/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=		regexxer
@@ -31,5 +31,9 @@ INSTALLS_ICONS=		regexxer.png
 # This target is only meant to be used by the port maintainer.
 x-generate-plist:
 	(${PORTSDIR}/Tools/scripts/plist -d -m ${MTREE_FILE} ${PREFIX}|${GREP} regexxer) > temp-pkg-plist
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/src/globalstrings.h ${WRKSRC}/src/translation.h
 
 .include <bsd.port.mk>
