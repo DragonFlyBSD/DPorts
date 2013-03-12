@@ -2,7 +2,7 @@
 # Date created:				15 July 2001
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/planner/Makefile,v 1.61 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/planner/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports-stable/deskutils/planner/Makefile,v 1.4 2009/04/16 00:34:24 kwm Exp $
 #
 
@@ -29,7 +29,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--disable-python \
 		--disable-python-plugin
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	planner.schemas
