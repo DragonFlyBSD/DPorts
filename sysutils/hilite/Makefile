@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hilite
-# Date created:				21 Sep 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/sysutils/hilite/Makefile,v 1.5 2012/11/17 06:01:34 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: sysutils/hilite/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	hilite
 PORTVERSION=	1.5
@@ -13,7 +9,7 @@ DISTNAME=	${PORTNAME}
 EXTRACT_SUFX=	.c
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A command-line utility to highlight anything printed to stderr
+COMMENT=	Command-line utility to highlight anything printed to stderr
 
 MAKE_JOBS_SAFE=	yes
 
