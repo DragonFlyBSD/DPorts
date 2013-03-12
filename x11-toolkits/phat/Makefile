@@ -2,7 +2,7 @@
 # Date created:		2007-03-06
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: ports/x11-toolkits/phat/Makefile,v 1.13 2012/11/17 06:03:38 svnexp Exp $
+# $FreeBSD: x11-toolkits/phat/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	phat
@@ -23,6 +23,7 @@ USE_PKGCONFIG=	build
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' \
+		-e 's|-Werror||g' \
 	    ${WRKSRC}/configure
 
 .include <bsd.port.mk>
