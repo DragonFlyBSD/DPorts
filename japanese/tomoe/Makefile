@@ -2,7 +2,7 @@
 # Date created:				18 Dec 2005
 # Whom:					Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: ports/japanese/tomoe/Makefile,v 1.23 2012/11/17 05:58:40 svnexp Exp $
+# $FreeBSD: japanese/tomoe/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	tomoe
@@ -98,5 +98,12 @@ post-extract:
 	cd ${WRKSRC}/module/dict && \
 		${UNZIP_CMD} -qo ${DISTDIR}/Unihan.zip -d ${WRKSRC}/module/dict
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/ge.*\.h>|glib.h>|g' \
+		-e 's|glib/ga.*\.h>|glib.h>|g' \
+		${WRKSRC}/lib/glib-compat-key-file.h \
+		${WRKSRC}/lib/tomoe.c \
+		${WRKSRC}/lib/glib-utils.h
 
 .include <bsd.port.post.mk>
