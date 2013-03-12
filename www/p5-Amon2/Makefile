@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/p5-Amon2/Makefile,v 1.1 2013/01/20 06:59:56 svnexp Exp $
+# $FreeBSD: www/p5-Amon2/Makefile 313425 2013-03-04 22:36:38Z kuriyama $
 
 PORTNAME=	Amon2
-PORTVERSION=	3.66
+PORTVERSION=	3.74
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -52,6 +52,7 @@ MAN3=	Amon2.3 \
 	Amon2::Plugin::Web::WebSocket.3 \
 	Amon2::Setup::Flavor.3 \
 	Amon2::Setup::Flavor::Basic.3 \
+	Amon2::Setup::Flavor::Large.3 \
 	Amon2::Setup::Flavor::Minimum.3 \
 	Amon2::Trigger.3 \
 	Amon2::Util.3 \
