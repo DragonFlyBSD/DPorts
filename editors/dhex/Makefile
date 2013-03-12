@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/editors/dhex/Makefile,v 1.11 2012/11/17 05:57:12 svnexp Exp $
+# $FreeBSD: editors/dhex/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	dhex
 PORTVERSION=	0.68
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.dettus.net/dhex/ \
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A ncurses-based hex-editor with diff mode
+COMMENT=	Ncurses-based hex-editor with diff mode
 
 LICENSE=	GPLv2
 
