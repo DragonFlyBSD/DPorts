@@ -1,13 +1,9 @@
-# New ports collection makefile for:	telepathy-mission-control
-# Date created:		2007-10-29
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/net-im/telepathy-mission-control/Makefile,v 1.19 2012/11/17 06:00:29 svnexp Exp $
-#    $MCom: ports/net-im/telepathy-mission-control/Makefile,v 1.14 2010/09/22 12:13:31 avl Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: net-im/telepathy-mission-control/Makefile 313651 2013-03-08 14:46:22Z kwm $
+#    $MCom: ports/net-im/telepathy-mission-control/Makefile,v 1.23 2012/08/17 19:06:46 kwm Exp $
 
 PORTNAME=	telepathy-mission-control
-PORTVERSION=	5.6.1
-PORTREVISION=	1
+PORTVERSION=	5.12.0
 CATEGORIES=	net-im devel
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-mission-control/
 
@@ -17,13 +13,14 @@ COMMENT=	Telepathy component to apps to abstract details of connection managers
 LIB_DEPENDS=	telepathy.2:${PORTSDIR}/net-im/libtelepathy \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
-USE_GNOME=	gnomeprefix pkgconfig gconf2 libxslt gnomehack ltverhack
+USE_GNOME=	gnomeprefix libxslt gnomehack ltverhack
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_UNSAFE=yes
+GLIB_SCHEMAS=	im.telepathy.MissionControl.FromEmpathy.gschema.xml
+CONFIGURE_ARGS=	--disable-upower
 
 MAN1=		mc-tool.1 mc-wait-for-name.1
 MAN8=		mission-control-5.8
