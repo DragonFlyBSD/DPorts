@@ -1,8 +1,8 @@
-# $FreeBSD: ports/games/krank/Makefile,v 1.6 2013/01/15 13:48:41 svnexp Exp $
+# $FreeBSD: ports/games/krank/Makefile,v 1.7 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	krank
 PORTVERSION=	07
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
