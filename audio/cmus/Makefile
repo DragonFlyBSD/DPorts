@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger
-# $FreeBSD: ports/audio/cmus/Makefile,v 1.47 2012/12/02 21:10:27 svnexp Exp $
+# $FreeBSD: audio/cmus/Makefile 313556 2013-03-06 23:21:55Z beech $
 
 PORTNAME=	cmus
 PORTVERSION=	2.5.0
@@ -16,6 +16,7 @@ USE_ICONV=	yes
 USE_NCURSES=	yes
 USE_PKGCONFIG=	build
 HAS_CONFIGURE=	yes
+CONFIGURE_ENV+=	HOSTCC=${CC}
 CONFIGURE_ARGS+=prefix=${PREFIX} mandir=${MANPREFIX}/man \
 		exampledir=${EXAMPLESDIR} \
 		CONFIG_ALSA=n CONFIG_ROAR=n
@@ -114,9 +115,9 @@ PLIST_SUB+=	WAVPACK="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MFFMPEG}
-FFMPEG_SUFFIX=	-011
-BUILD_DEPENDS+=	ffmpeg${FFMPEG_SUFFIX}>0.11:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFIX}
-RUN_DEPENDS+=	ffmpeg${FFMPEG_SUFFIX}>0.11:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFIX}
+FFMPEG_SUFFIX=	1
+BUILD_DEPENDS+=	ffmpeg${FFMPEG_SUFFIX}>=1:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFIX}
+RUN_DEPENDS+=	ffmpeg${FFMPEG_SUFFIX}>=1:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFIX}
 CONFIGURE_ARGS+=CONFIG_FFMPEG=y
 PLIST_SUB+=	FFMPEG=""
 .else
