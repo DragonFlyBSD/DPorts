@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/archivers/rvm/Makefile,v 1.30 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: archivers/rvm/Makefile 313753 2013-03-09 19:59:21Z eadler $
 
 PORTNAME=	rvm
 PORTVERSION=	1.07
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
-MAINTAINER=	davide.italiano@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Archive manager that uses rsync to manage backups
 
 BUILD_DEPENDS=	rsync:${PORTSDIR}/net/rsync
