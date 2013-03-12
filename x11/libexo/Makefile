@@ -1,9 +1,10 @@
 # Created by: Matt Lancereau
-# $FreeBSD: ports/x11/libexo/Makefile,v 1.57 2012/12/31 00:57:47 svnexp Exp $
+# $FreeBSD: x11/libexo/Makefile 313704 2013-03-09 11:12:54Z olivierd $
 #
 
 PORTNAME=	libexo
 PORTVERSION=	0.10.2
+PORTREVISION=	1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/xfce/exo/${PORTVERSION:R}
@@ -56,8 +57,6 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-patch:
-# Downgrade GLib to 2.28
-	@${REINPLACE_CMD} -e 's|2.30.|2.28.|g' ${WRKSRC}/configure
 .if empty(PORT_OPTIONS:MNLS)
 	@${REINPLACE_CMD} -e 's|	po||' ${WRKSRC}/Makefile.in
 .endif
