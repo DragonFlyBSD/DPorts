@@ -1,8 +1,8 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: ports/devel/py-logilab-common/Makefile,v 1.49 2012/12/09 13:46:45 svnexp Exp $
+# $FreeBSD: devel/py-logilab-common/Makefile 313542 2013-03-06 22:09:43Z mva $
 
 PORTNAME=	logilab-common
-PORTVERSION=	0.58.3
+PORTVERSION=	0.59.0
 CATEGORIES=	devel python
 MASTER_SITES=	LOGILAB/common
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
