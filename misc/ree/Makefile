@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/misc/ree/Makefile,v 1.9 2013/01/15 13:46:56 svnexp Exp $
+# $FreeBSD: misc/ree/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	ree
 PORTVERSION=	1.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://gnu.ethz.ch/linuks.mine.nu/ree/ \
 		CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A tool to dump your ROM extensions
+COMMENT=	Tool to dump your ROM extensions
 
 PLIST_FILES=	bin/rom-ree bin/fontdump
 PORTDOCS=	readme
