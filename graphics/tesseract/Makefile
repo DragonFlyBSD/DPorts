@@ -1,12 +1,9 @@
-# New ports collection makefile for:	tesseract
-# Date created:		18 July 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/tesseract/Makefile,v 1.24 2012/11/17 05:58:24 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: graphics/tesseract/Makefile 313487 2013-03-06 00:30:39Z bf $
 
 PORTNAME=	tesseract
 PORTVERSION=	3.02.02
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	tesseract-ocr-${PORTVERSION}${EXTRACT_SUFX}
