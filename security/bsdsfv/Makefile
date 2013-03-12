@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/security/bsdsfv/Makefile,v 1.7 2013/01/15 13:46:57 svnexp Exp $
+# $FreeBSD: security/bsdsfv/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	bsdsfv
 PORTVERSION=	1.18
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	SF
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A flexible SFV checksum utility
+COMMENT=	Flexible SFV checksum utility
 
 MAKE_JOBS_SAFE=	yes
 
