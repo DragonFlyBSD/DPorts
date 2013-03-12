@@ -1,9 +1,9 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: ports/finance/R-cran-fBasics/Makefile,v 1.3 2013/01/16 20:24:41 svnexp Exp $
+# $FreeBSD: finance/R-cran-fBasics/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	fBasics
 PORTVERSION=	2160.85
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
