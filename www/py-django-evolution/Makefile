@@ -1,8 +1,9 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: ports/www/py-django-evolution/Makefile,v 1.9 2013/02/17 02:51:11 svnexp Exp $
+# $FreeBSD: www/py-django-evolution/Makefile 313467 2013-03-05 18:09:08Z lwhsu $
 
 PORTNAME=	django-evolution
 PORTVERSION=	0.6.8
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +14,7 @@ COMMENT=	A database schema evolution tool for the Django web framework
 
 LICENSE=	BSD
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.1.1:${PORTSDIR}/www/py-django
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.1.1<1.5:${PORTSDIR}/www/py-django14
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
