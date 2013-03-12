@@ -2,7 +2,7 @@
 # Date created:		2006-11-11
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/libgtksourceviewmm/Makefile,v 1.12 2012/11/17 06:03:36 svnexp Exp $
+# $FreeBSD: x11-toolkits/libgtksourceviewmm/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #    $MCom: ports/x11-toolkits/libgtksourceviewmm/Makefile,v 1.4 2008/08/08 21:59:44 kwm Exp $
 
 PORTNAME=	libgtksourceviewmm
@@ -24,5 +24,10 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBAS}/lib
 CONFIGURE_ARGS=	--disable-docs
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/gtksourceview/gtksourceviewmm/sourceiter.cc \
+		${WRKSRC}/tests/test-search.cpp
 
 .include <bsd.port.mk>
