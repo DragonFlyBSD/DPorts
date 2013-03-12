@@ -1,10 +1,6 @@
-# New ports collection makefile for:	goffice
-# Date created:				07 June 2005
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/goffice1/Makefile,v 1.26 2012/11/17 05:55:46 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: devel/goffice1/Makefile 313751 2013-03-09 19:52:49Z kwm $
 #   $MCom: ports/devel/goffice1/Makefile,v 1.1 2007/07/23 21:36:19 mezz Exp $
-#
 
 PORTNAME=	goffice
 PORTVERSION=	0.2.2
@@ -19,7 +15,8 @@ NO_LATEST_LINK=	yes
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprint libglade2 \
+USES=		pathfix
+USE_GNOME=	gnomeprefix intlhack libgnomeprint libglade2 \
 		libgsf_gnome ltverhack
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
@@ -28,5 +25,15 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION=${PORTVERSION}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/goffice/utils/go-math.h \
+		${WRKSRC}/goffice/utils/go-regression.h \
+		${WRKSRC}/goffice/utils/go-regression.c \
+		${WRKSRC}/goffice/utils/go-regression.c \
+		${WRKSRC}/goffice/app/goffice-app.h \
+		${WRKSRC}/goffice/ms-compat/god-drawing-ms.c \
+		${WRKSRC}/goffice/ms-compat/go-ms-parser.c
 
 .include <bsd.port.mk>
