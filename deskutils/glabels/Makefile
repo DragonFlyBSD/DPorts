@@ -2,7 +2,7 @@
 # Date created:		29 September 2002
 # Whom:			Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
-# $FreeBSD: ports/deskutils/glabels/Makefile,v 1.59 2012/11/17 05:55:27 svnexp Exp $
+# $FreeBSD: deskutils/glabels/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/deskutils/glabels/Makefile,v 1.10 2010/04/03 19:25:49 kwm Exp $
 #
 
@@ -24,7 +24,7 @@ USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		glabels.1
