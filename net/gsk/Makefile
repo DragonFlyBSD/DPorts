@@ -2,7 +2,7 @@
 # Date created:				May 1, 2001
 # Whom:					ijliao
 #
-# $FreeBSD: ports/net/gsk/Makefile,v 1.40 2012/11/17 06:00:01 svnexp Exp $
+# $FreeBSD: net/gsk/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	gsk
@@ -14,6 +14,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A C library for writing servers
 
 USE_GNOME=	glib20 gnomehack
+USE_PKGCONFIG=	build
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-gtk-doc
