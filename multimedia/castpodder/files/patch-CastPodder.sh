@@ -1,4 +1,4 @@
-$FreeBSD: ports/multimedia/castpodder/files/patch-CastPodder.sh,v 1.2 2012/11/17 05:59:48 svnexp Exp $
+$FreeBSD: multimedia/castpodder/files/patch-CastPodder.sh 300896 2012-07-14 13:54:48Z beat $
 
 --- CastPodder.sh	Sat Apr 29 16:39:22 2006
 +++ CastPodder.sh.port	Mon May  1 18:33:50 2006
