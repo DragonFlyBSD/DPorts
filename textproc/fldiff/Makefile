@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/textproc/fldiff/Makefile,v 1.19 2013/01/15 13:46:58 svnexp Exp $
+# $FreeBSD: textproc/fldiff/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	fldiff
 PORTVERSION=	1.1
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.easysw.com/~mike/fldiff/ \
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A graphical diff program using FLTK
+COMMENT=	Graphical diff program using FLTK
 
 LICENSE=	GPLv2
 
