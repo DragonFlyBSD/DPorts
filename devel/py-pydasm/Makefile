@@ -1,30 +1,29 @@
-# New ports collection makefile for:	pydasm
-# Date created:				23 March 2006
-# Whom:					antoine.brodin@laposte.net
-#
-# $FreeBSD: ports/devel/py-pydasm/Makefile,v 1.4 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Antoine Brodin <antoine@FreeBSD.org>
+# $FreeBSD: devel/py-pydasm/Makefile 313747 2013-03-09 19:10:07Z rm $
 
 PORTNAME=	pydasm
 PORTVERSION=	1.5
 CATEGORIES=	devel python
-MASTER_SITES=	http://www.klake.org/~jt/misc/
+MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	libdasm-${PORTVERSION}
 
 MAINTAINER=	antoine@FreeBSD.org
-COMMENT=	A python interface to libdasm
+COMMENT=	Python interface to libdasm
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PORTNAME}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
+PROJECTHOST=	libdasm
+
+.include <bsd.port.options.mk>
 
 post-install:
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/das.py ${EXAMPLESDIR}
 .endif
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DOCSDIR}
 .endif
