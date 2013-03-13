@@ -1,9 +1,5 @@
-# New ports collection makefile for:	most
-# Date created:				31 May 1997
-# Whom:					rhwang@bigpanda.com
-#
-# $FreeBSD: ports/sysutils/most/Makefile,v 1.33 2012/11/17 06:01:39 svnexp Exp $
-#
+# Created by: rhwang@bigpanda.com
+# $FreeBSD: sysutils/most/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	most
 PORTVERSION=	5.0.0
@@ -13,7 +9,7 @@ MASTER_SITES=	ftp://space.mit.edu/pub/davis/most/ \
 		CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A pager (like less) which has support for windows and binary files
+COMMENT=	Pager (like less) which has support for windows and binary files
 
 LICENSE=	GPLv2
 
