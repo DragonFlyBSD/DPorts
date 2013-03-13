@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/archivers/gzrecover/Makefile,v 1.15 2013/02/05 16:43:50 svnexp Exp $
+# $FreeBSD: archivers/gzrecover/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	gzrecover
 PORTVERSION=	0.7
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.urbanophile.com/arenn/hacking/gzrt/ \
 DISTNAME=	gzrt-${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A gzip recovery toolkit
+COMMENT=	GZIP recovery toolkit
 
 LICENSE=	GPLv2
 
