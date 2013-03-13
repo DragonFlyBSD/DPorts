@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/devel/libxs/Makefile,v 1.1 2013/02/17 14:30:28 svnexp Exp $
+# $FreeBSD: devel/libxs/Makefile 313673 2013-03-08 20:29:35Z beech $
 
 PORTNAME=	libxs
 PORTVERSION=	1.2.0
@@ -31,7 +31,8 @@ CONFIGURE_ARGS+=	--enable-debug
 
 .if ${PORT_OPTIONS:MDOCS}
 BUILD_DEPENDS=	asciidoc:${PORTSDIR}/textproc/asciidoc \
-		xmlto:${PORTSDIR}/textproc/xmlto
+		xmlto:${PORTSDIR}/textproc/xmlto \
+		${LOCALBASE}/share/xml/docbook/4.5/docbookx.dtd:${PORTSDIR}/textproc/docbook-xml-450
 
 MAN3=	\
 	xs_bind.3 \
