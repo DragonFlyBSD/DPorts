@@ -1,9 +1,5 @@
-# New ports collection makefile for:    untar
-# Date created:         14 Jul 2002
-# Whom:                 KIMURA Shigekazu <rikimura@a011.broada.jp>
-#
-# $FreeBSD: ports/archivers/untar/Makefile,v 1.12 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: KIMURA Shigekazu <rikimura@a011.broada.jp>
+# $FreeBSD: archivers/untar/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	untar
 PORTVERSION=	1.4
@@ -14,7 +10,7 @@ DISTNAME=	${PORTNAME}
 EXTRACT_SUFX=	.c
 EXTRACT_ONLY=
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Lists/Extracts files from a "*.tgz" or "*.gz" archive
 
 MAKEFILE=	/usr/share/mk/bsd.prog.mk
