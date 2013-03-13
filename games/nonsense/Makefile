@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: ports/games/nonsense/Makefile,v 1.12 2012/11/17 05:57:47 svnexp Exp $
+# $FreeBSD: games/nonsense/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	nonsense
 PORTVERSION=	0.6
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	SF
 
 MAINTAINER=	eadler@FreeBSD.org
-COMMENT=	A nonsense text generator
+COMMENT=	Nonsense text generator
 
 NO_BUILD=	defined
 
