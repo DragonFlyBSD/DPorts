@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/net/httping/Makefile,v 1.41 2013/02/23 16:24:16 svnexp Exp $
+# $FreeBSD: net/httping/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	httping
 PORTVERSION=	1.6
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.vanheusden.com/httping/ \
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A ping-like tool for HTTP requests
+COMMENT=	Ping-like tool for HTTP requests
 
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
