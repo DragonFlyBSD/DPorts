@@ -1,9 +1,5 @@
-# New ports collection makefile for:	biniax2
-# Date created:		16 Apr 2008
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/biniax2/Makefile,v 1.12 2012/11/17 05:57:32 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: ports/games/biniax2/Makefile,v 1.13 2013/02/04 07:33:08 svnexp Exp $
 
 PORTNAME=	biniax2
 PORTVERSION=	1.30
