@@ -1,16 +1,12 @@
-# New ports collection makefile for:	cgit
-# Date created:				Oct 16 2008
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/cgit/Makefile,v 1.27 2012/11/17 05:55:37 svnexp Exp $
-#
+# Created by: Florent Thoumie <flz@FreeBSD.org>
+# $FreeBSD: devel/cgit/Makefile 313575 2013-03-07 11:21:11Z bapt $
 
 PORTNAME=	cgit
-PORTVERSION=	0.9.0.3
+PORTVERSION=	0.9.1
+PORTREVISION=	1
 CATEGORIES=	devel www
-MASTER_SITES=	http://hjemli.net/git/cgit/snapshot/:cgit \
-		${MASTER_SITE_KERNEL_ORG:S/$/:git/g}
-MASTER_SITE_SUBDIR=	software/scm/git/:git
+MASTER_SITES=	http://git.zx2c4.com/cgit/snapshot/:cgit \
+		http://mirror.linux.org.au/software/scm/git/:git
 DISTFILES=	cgit-${PORTVERSION}${EXTRACT_SUFX}:cgit \
 		git-${GIT_VERSION}.tar.bz2:git
 
@@ -18,9 +14,8 @@ MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	A fast webinterface for git
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
-GIT_VERSION=	1.7.4
+GIT_VERSION=	1.7.4.4
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_ICONV=	yes
@@ -36,21 +31,22 @@ SUB_FILES=	pkg-message
 SUB_LIST+=	PORTNAME=${PORTNAME}
 PLIST_SUB+=	PORTNAME=${PORTNAME}
 
+.include <bsd.port.options.mk>
+
 post-extract:
 	@${RMDIR} ${WRKSRC}/git
 	@${MV} ${WRKDIR}/git-${GIT_VERSION} ${WRKSRC}/git
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^CC =/d' ${WRKSRC}/git/Makefile
-	@${REINPLACE_CMD} -e 's/-pthread/${PTHREAD_LIBS}/' \
-		-e 's,/usr,${PREFIX},g' \
+	@${REINPLACE_CMD} -e 's,/usr,${PREFIX},g' \
 		-e 's,-Igit,-I.,g' ${WRKSRC}/Makefile
 
 post-install:
 	@${MKDIR} /var/cache/${PORTNAME}
 	@${CHOWN} ${WWWOWN}:${WWWGRP} /var/cache/${PORTNAME}
 	@${CAT} ${PKGMESSAGE}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}rc.5.txt ${DOCSDIR}/
 .endif
