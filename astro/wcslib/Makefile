@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonymaher@optusnet.com.au>
-# $FreeBSD: ports/astro/wcslib/Makefile,v 1.6 2013/01/08 17:04:59 svnexp Exp $
+# $FreeBSD: astro/wcslib/Makefile 313463 2013-03-05 17:24:04Z wxs $
 
 PORTNAME=		wcslib
 PORTVERSION=	4.13.4
@@ -46,7 +46,7 @@ post-patch:
 		${WRKSRC}/GNUmakefile
 
 post-install:
-.if ! ${PORT_OPTIONS:MDOCS}
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	(cd ${WRKSRC}/ && ${INSTALL_DATA} CHANGES README COPYING COPYING.LESSER wcslib.pdf ${DOCSDIR})
 	@${MKDIR} ${DOCSDIR}/html
