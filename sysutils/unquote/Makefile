@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: ports/sysutils/unquote/Makefile,v 1.9 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/unquote/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	unquote
 PORTVERSION=	1.0.b4
@@ -13,6 +13,8 @@ COMMENT=	Execute a command with safely quoted arguments
 MAN1=		unquote.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/unquote
+
+MAKE_JOBS_SAFE=	yes
 
 .if		!defined(NO_RELEASE)
 MAKE_ENV+=	RELEASE=yes
