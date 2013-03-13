@@ -1,9 +1,5 @@
-# New ports collection makefile for:	claroline
-# Date created:		29 Feb 2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/claroline/Makefile,v 1.11 2012/11/17 06:02:30 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: www/claroline/Makefile 313599 2013-03-07 16:53:45Z miwi $
 
 PORTNAME=	claroline
 PORTVERSION=	1.10.2
@@ -19,21 +15,20 @@ USE_PHP=	mysql
 WRKSRC=		${WRKDIR}/${DISTNAME}
 SUB_FILES=	pkg-message
 
-OPTIONS=	LDAP    "Add LDAP authentication functionality" Off \
-		GD      "Add GD functionality" On \
-		OPENSSL "Add OpenSSL functionality" Off
+OPTIONS_DEFINE=		LDAP GD SSL
+OPTIONS_DEFAULT=	GD
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_GD)
+.if ${PORT_OPTIONS:MGD}
 USE_PHP+=	gd
 .endif
 
-.if defined(WITH_OPENSSL)
+.if ${PORT_OPTIONS:MSSL}
 USE_PHP+=	openssl
 .endif
 
-.if defined(WITH_LDAP)
+.if ${PORT_OPTIONS:MLDAP}
 USE_PHP+=	ldap
 .endif
 
@@ -48,4 +43,4 @@ do-install:
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
