@@ -2,7 +2,7 @@
 # Date created:				29 July 2004
 # Whom:					ryo
 #
-# $FreeBSD: ports/japanese/jstrings/Makefile,v 1.5 2012/11/17 05:58:35 svnexp Exp $
+# $FreeBSD: japanese/jstrings/Makefile 313600 2013-03-07 17:08:13Z miwi $
 #
 
 PORTNAME=	jstrings
@@ -11,23 +11,18 @@ CATEGORIES=	japanese
 MASTER_SITES=	http://openmya.hacker.jp/hasegawa/jstrings/ \
 		http://devel.aquahill.net/ports/jstrings/ \
 		http://www.kokone.to/~ryo/lib/ports/jstrings/
-EXTRACT_SUFX=	.lzh
 
 MAINTAINER=	ryo@aquahill.net
 COMMENT=	Japanese enhancement of strings(1) command
 
-EXTRACT_DEPENDS=lha:${PORTSDIR}/archivers/lha \
-		nkf:${PORTSDIR}/japanese/nkf
+EXTRACT_DEPENDS=nkf:${PORTSDIR}/japanese/nkf
 
 MAN1=		jstrings.1
 MANLANG=	ja
 PLIST_FILES=	bin/jstrings
 
-EXTRACT_CMD=	lha
-EXTRACT_BEFORE_ARGS=	xfqw=${WRKDIR}
-EXTRACT_AFTER_ARGS=#	empty
-
 USE_GMAKE=	yes
+USE_LHA=	yes
 MAKEFILE=	makefile.gcc
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" BINDIR="${PREFIX}/bin"
 ALL_TARGET=	jstrings
