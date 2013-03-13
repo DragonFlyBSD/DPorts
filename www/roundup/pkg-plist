@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/roundup/pkg-plist,v 1.23 2013/01/09 12:35:18 svnexp Exp $
+@comment $FreeBSD: www/roundup/pkg-plist 310138 2013-01-09 12:11:53Z sbz $
 bin/roundup-admin
 bin/roundup-demo
 bin/roundup-gettext
