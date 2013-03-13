@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/comix/Makefile,v 1.45 2012/12/31 17:09:08 svnexp Exp $
+# $FreeBSD: graphics/comix/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
 #   $MCom: ports-stable/graphics/comix/Makefile,v 1.1 2006/10/21 18:39:46 mezz Exp $
 
 PORTNAME=	comix
@@ -12,7 +12,7 @@ COMMENT=	GTK2 comic book viewer for .cbz, .cbr, and .cbt files
 
 RUN_DEPENDS=	unrar:${PORTSDIR}/archivers/unrar \
 		${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging \
-		${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3
+		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 
 NO_BUILD=	yes
 USE_GNOME=	desktopfileutils pygtk2
