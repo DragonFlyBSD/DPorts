@@ -1,5 +1,5 @@
 # Created by: Juan Salaverria <rael@vectorstar.net>
-# $FreeBSD: ports/textproc/sagasu/Makefile,v 1.32 2012/12/07 16:24:03 svnexp Exp $
+# $FreeBSD: textproc/sagasu/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	sagasu
 PORTVERSION=	2.0.12
@@ -28,6 +28,7 @@ post-patch:
 		's|: install-docDATA|:|g' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e \
 		's|-D.*_DISABLE_DEPRECATED||g' ${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' ${WRKSRC}/src/util.h
 
 post-install:
 .if !defined(NOPORTDOCS)
