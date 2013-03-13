@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/graphics/telak/Makefile,v 1.29 2012/11/17 05:58:24 svnexp Exp $
+# $FreeBSD: graphics/telak/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	telak
 PORTVERSION=	0.6
@@ -9,7 +9,7 @@ MASTER_SITES=	http://julien.danjou.info/telak/ \
 		CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A tool to draw pictures on your root window
+COMMENT=	Tool to draw pictures on your root window
 
 LICENSE=	GPLv2
 

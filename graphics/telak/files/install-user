@@ -2,7 +2,7 @@
 #
 # Emanuel Haupt <ehaupt@critical.ch>
 #
-# $FreeBSD: ports/graphics/telak/files/install-user,v 1.2 2012/11/17 05:58:24 svnexp Exp $
+# $FreeBSD: graphics/telak/files/install-user 300896 2012-07-14 13:54:48Z beat $
 
 writeconf()
 {
