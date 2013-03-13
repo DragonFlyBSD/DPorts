@@ -2,12 +2,12 @@
 # Date created:		30 Jul 2006
 # Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
 #
-# $FreeBSD: ports/games/agame/Makefile,v 1.17 2012/11/17 05:57:31 svnexp Exp $
+# $FreeBSD: ports/games/agame/Makefile,v 1.18 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	agame
 PORTVERSION=	1577
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	games
 MASTER_SITES=	http://zevv.nl/play/code/game/ \
 		http://critical.ch/distfiles/ \
