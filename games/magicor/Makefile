@@ -1,13 +1,9 @@
-# New ports collection makefile for:	magicor
-# Date created:		09 Jul 2008
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/games/magicor/Makefile,v 1.7 2012/11/17 05:57:45 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: games/magicor/Makefile 313182 2013-03-02 03:55:25Z eadler $
 
 PORTNAME=	magicor
 PORTVERSION=	1.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	SF
 DISTFILES=	${PORTNAME}-source-${PORTVERSION}${EXTRACT_SUFX} \
@@ -18,7 +14,7 @@ COMMENT=	Old-school, puzzle game similar to Solomon's Key
 
 LICENSE=	unknown
 LICENSE_NAME=	Public Domain
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pygame/__init__.py:${PORTSDIR}/devel/py-game
@@ -35,11 +31,13 @@ DESKTOP_ENTRIES="Magicor" \
 		"Game;LogicGame;" \
 		false
 
-OPTIONS=	EDITOR	"Enable editor"	on
+OPTIONS_DEFINE=	EDITOR DOCS
+OPTIONS_DEFAULT=EDITOR
+EDITOR_DESC=	Enable editor
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_EDITOR)
+.if ${PORT_OPTIONS:MEDITOR}
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/gtk-2.0/gtk/__init__.py:${PORTSDIR}/x11-toolkits/py-gtk2
 PLIST_SUB+=	EDITOR=""
 .else
@@ -69,7 +67,7 @@ do-install:
 		${INSTALL_DATA} ${PREFIX}/etc/magicor/magicor.conf.dist \
 			${PREFIX}/etc/magicor/magicor.conf; \
 	fi
-.if !defined(WITHOUT_EDITOR)
+.if ${PORT_OPTIONS:MEDITOR}
 	${INSTALL_SCRIPT} ${WRKSRC}/Magicor-LevelEditor.py ${PREFIX}/bin/magicor-editor
 	${INSTALL_DATA} ${WRKSRC}/etc/magicor-editor.conf \
 		${PREFIX}/etc/magicor/magicor-editor.conf.dist
@@ -79,9 +77,9 @@ do-install:
 	fi
 .endif
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
