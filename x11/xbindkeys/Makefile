@@ -1,5 +1,5 @@
-# Created by:				ijliao
-# $FreeBSD: ports/x11/xbindkeys/Makefile,v 1.57 2012/11/17 06:03:20 svnexp Exp $
+# Created by: ijliao
+# $FreeBSD: x11/xbindkeys/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	xbindkeys
 PORTVERSION=	1.8.3
@@ -22,6 +22,8 @@ PLIST_FILES=	bin/xbindkeys %%EXAMPLESDIR%%/xbindkeysrc
 PLIST_DIRS=	%%EXAMPLESDIR%%
 
 WISH=		${LOCALBASE}/bin/wish8.4
+
+MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
