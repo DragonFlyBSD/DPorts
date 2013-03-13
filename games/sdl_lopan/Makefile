@@ -1,8 +1,8 @@
-# $FreeBSD: ports/games/sdl_lopan/Makefile,v 1.5 2012/11/17 05:57:52 svnexp Exp $
+# $FreeBSD: ports/games/sdl_lopan/Makefile,v 1.6 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	sdl_lopan
 PORTVERSION=	10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.linuxmotors.com/sdllopan/downloads/ \
 		http://www.linuxmotors.com/sdllopan/:icons
