@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/security/pkcrack/Makefile,v 1.9 2013/01/15 13:46:58 svnexp Exp $
+# $FreeBSD: security/pkcrack/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	pkcrack
 PORTVERSION=	1.2.2
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack/ \
 		CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A utility for breaking pkzip encryption
+COMMENT=	Utility for breaking pkzip encryption
 
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
