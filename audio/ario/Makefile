@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/audio/ario/Makefile,v 1.22 2013/02/05 16:54:19 svnexp Exp $
+# $FreeBSD: audio/ario/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	ario
 PORTVERSION=	1.5.1
@@ -46,5 +46,12 @@ CONFIGURE_ARGS+=	--enable-nls
 .else
 CONFIGURE_ARGS+=	--disable-nls
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/gslist.h|glib.h|g ; \
+		 s|glib/gkeyfile.h>|glib.h>|g' \
+		${WRKSRC}/src/ario-util.h \
+		${WRKSRC}/src/plugins/ario-plugin-info.c \
+		${WRKSRC}/src/ario-profiles.h
 
 .include <bsd.port.mk>
