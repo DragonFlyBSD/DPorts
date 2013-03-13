@@ -1,19 +1,15 @@
-# New ports collection makefile for:	glaxium
-# Date created:		21 Jan 2006
-# Whom:			Igor Pokrovsky <ip@doom.homeunix.org>
-#
-# $FreeBSD: ports/games/glaxium/Makefile,v 1.20 2012/11/17 05:57:39 svnexp Exp $
-#
+# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
+# $FreeBSD: ports/games/glaxium/Makefile,v 1.22 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	glaxium
 PORTVERSION=	0.5
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	games
 MASTER_SITES=	http://xhosxe.free.fr/glaxium/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	An OpenGL based space-ship "shoot-em-up" game
+COMMENT=	OpenGL based space-ship "shoot-em-up" game
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
