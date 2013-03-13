@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/net-im/bsflite/Makefile,v 1.14 2013/01/15 13:46:57 svnexp Exp $
+# $FreeBSD: net-im/bsflite/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	bsflite
 DISTVERSION=	0.85
@@ -7,7 +7,7 @@ CATEGORIES=	net-im
 MASTER_SITES=	SF
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A lightweight command line AIM client
+COMMENT=	Lightweight command line AIM client
 
 MAKE_JOBS_SAFE=	yes
 
