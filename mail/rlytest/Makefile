@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rlytest
-# Date created:		16 January 1999
-# Whom:			Paul Chvostek <paul@it.ca>
-#
-# $FreeBSD: ports/mail/rlytest/Makefile,v 1.18 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: Paul Chvostek <paul@it.ca>
+# $FreeBSD: mail/rlytest/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	rlytest
 PORTVERSION=	1.22
@@ -11,7 +7,7 @@ CATEGORIES=	mail security
 MASTER_SITES=	http://www.unicom.com/files/
 EXTRACT_SUFX=	.gz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Test remote system for unsecured mail relay
 
 EXTRACT_CMD=	${GZIP_CMD}
