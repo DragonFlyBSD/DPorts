@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: ports/net/corkscrew/Makefile,v 1.13 2013/01/15 13:46:57 svnexp Exp $
+# $FreeBSD: net/corkscrew/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	corkscrew
 PORTVERSION=	2.0
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.agroman.net/corkscrew/ \
 		CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A HTTP tunnelling utility for SSH
+COMMENT=	HTTP tunnelling utility for SSH
 
 LICENSE=	GPLv2
 
