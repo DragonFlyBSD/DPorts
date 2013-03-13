@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: ports/www/dillo/Makefile,v 1.51 2013/02/07 14:08:05 svnexp Exp $
+# $FreeBSD: www/dillo/Makefile 313740 2013-03-09 18:09:24Z tmseck $
 #
 # Tunables:
 # WITH_DILLO_SSL: enable experimental SSL support
@@ -11,7 +11,7 @@ PORTREVISION=	7
 CATEGORIES=	www ipv6
 MASTER_SITES=	http://www.dillo.org/download/
 
-MAINTAINER=	tmseck@netcologne.de
+MAINTAINER=	tmseck@FreeBSD.org
 COMMENT=	A fast, small graphical Web browser built upon GTK+
 
 RUN_DEPENDS=	wget:${PORTSDIR}/ftp/wget
