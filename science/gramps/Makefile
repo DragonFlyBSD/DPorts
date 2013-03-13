@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: ports/science/gramps/Makefile,v 1.53 2012/11/17 06:00:57 svnexp Exp $
+# $FreeBSD: science/gramps/Makefile 313404 2013-03-04 11:19:40Z lwhsu $
 
 PORTNAME=	gramps
 PORTVERSION=	3.3.0
@@ -14,7 +14,7 @@ COMMENT=	A GTK/GNOME-based genealogy program
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_bsddb.so:${PORTSDIR}/databases/py-bsddb \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bsddb>0:${PORTSDIR}/databases/py-bsddb \
 		${PYXML}
 
 USE_BDB=	43
