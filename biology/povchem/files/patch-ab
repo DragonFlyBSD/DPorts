@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/biology/povchem/files/patch-ab,v 1.4 2012/11/17 05:54:52 svnexp Exp $
+$FreeBSD: ports/biology/povchem/files/patch-ab,v 1.5 2013/02/10 11:05:56 svnexp Exp $
 
 --- povchem.c.orig	Fri Jul 11 11:49:07 2003
 +++ povchem.c	Fri Jul 11 11:59:23 2003
@@ -177,3 +177,12 @@ $FreeBSD: ports/biology/povchem/files/patch-ab,v 1.4 2012/11/17 05:54:52 svnexp 
                eye.x,eye.y,eye.z);
  
    fputs(      "camera{\n",pov);
+@@ -2317,7 +2317,7 @@
+ 
+ /*-------------------- the main program body --------------------------*/
+ 
+-void main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ {
+   char *pdbName, *configName=NULL;
+   char *tgaName=NULL, *leftTga=NULL, *rightTga=NULL;
