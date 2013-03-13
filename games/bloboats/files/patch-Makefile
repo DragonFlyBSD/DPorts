@@ -1,0 +1,36 @@
+--- ./Makefile.orig	2010-11-23 20:27:16.000000000 +0100
++++ ./Makefile	2010-11-24 10:56:25.000000000 +0100
+@@ -7,16 +7,13 @@
+ ### Installation directory (Installation prefix)
+ # If you don't have root privileges, set this to /home/tentacleman/bloboats/
+ # for example, otherwise /. Don't use ~ or other environment variables!
+-PREFIX = /
+ 
+ ### Or if you don't want to run make install at all, uncomments the next line
+ # and comment the line below. Compile and run with './bin/bloboats'
+ #DATADIR = data
+ 
+-DATADIR = $(PREFIX)/usr/games/bloboats/data
+-
+ ### If you do make install, you may perhaps want to set these
+-BINARYDIR = $(PREFIX)/usr/bin
++BINARYDIR = $(PREFIX)/bin
+ CONFIGDIR = $(PREFIX)/etc
+ 
+ PRIVATEDIR = ~/.bloboats
+@@ -53,13 +50,13 @@
+ 
+ 
+ ### C++ compiler to be used
+-CXX_DEFAULT = g++
++CXX_DEFAULT ?= g++
+ CXX_FREEBSD = g++
+ CXX_NETBSD = g++
+ CXX_MACOSX = g++
+ CXX_CROSS = i586-mingw32msvc-g++
+ 
+-CXX = $(CXX_$(TARGET))
++CXX ?= g++
+ 
+ 
+ ### SDL-Config in your system
