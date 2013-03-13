@@ -1,12 +1,12 @@
 # Created by: Chris Petrik (chris@officialunix.com)
-# $FreeBSD: ports/ftp/bareftp/Makefile,v 1.22 2012/12/10 01:26:29 svnexp Exp $
+# $FreeBSD: ftp/bareftp/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	bareftp
 PORTVERSION=	0.3.9
 CATEGORIES=	ftp
 MASTER_SITES=	http://www.bareftp.org/release/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Ftp client made in C sharp
 
 GNU_CONFIGURE=	yes
