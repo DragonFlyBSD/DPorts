@@ -1,8 +1,8 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/textproc/uncrustify/Makefile,v 1.34 2012/12/21 10:09:36 svnexp Exp $
+# $FreeBSD: textproc/uncrustify/Makefile 313389 2013-03-04 02:17:55Z amdmi3 $
 
 PORTNAME=	uncrustify
-PORTVERSION=	0.59
+PORTVERSION=	0.60
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
