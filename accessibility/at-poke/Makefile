@@ -2,7 +2,7 @@
 # Date created:				24 Oct 2006
 # Whom:					Marcus von Appen <mva@sysfault.org>
 #
-# $FreeBSD: ports/accessibility/at-poke/Makefile,v 1.13 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: accessibility/at-poke/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	at-poke
@@ -20,5 +20,8 @@ USE_GNOME=	gnomeprefix libglade2 libgailgnome
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' ${WRKSRC}/src/eventlog.h
 
 .include <bsd.port.mk>
