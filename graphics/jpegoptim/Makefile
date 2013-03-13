@@ -1,12 +1,8 @@
-# New ports collection makefile for:	DirectFB
-# Date created:				24 January 2003
-# Whom:					Devaux Fabien <fab@gcu.info>
-#
-# $FreeBSD: ports/graphics/jpegoptim/Makefile,v 1.12 2012/11/17 05:58:10 svnexp Exp $
-#
+# Created by: Devaux Fabien <fab@gcu.info>
+# $FreeBSD: graphics/jpegoptim/Makefile 313516 2013-03-06 14:03:24Z ehaupt $
 
 PORTNAME=	jpegoptim
-PORTVERSION=	1.2.4
+PORTVERSION=	1.2.5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kokkonen.net/tjko/src/ \
 		CRITICAL
