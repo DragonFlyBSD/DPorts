@@ -1,18 +1,14 @@
-# New ports collection makefile for:	pystemmer
-# Date created:		2009-03-17
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/textproc/pystemmer/Makefile,v 1.4 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: textproc/pystemmer/Makefile 313714 2013-03-09 14:28:46Z wen $
 
 PORTNAME=	pystemmer
-PORTVERSION=	1.2.0
+PORTVERSION=	1.3.0
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP \
 		http://snowball.tartarus.org/wrappers/
 DISTNAME=	PyStemmer-${PORTVERSION}
 
-MAINTAINER=	wen@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Snowball Stemming Algorithms for Information Retrieval
 
 USE_PYTHON=	yes
