@@ -1,5 +1,5 @@
 # Created by: Chip Marshall <chip@eboai.org>
-# $FreeBSD: ports/audio/icecast/Makefile,v 1.34 2012/12/13 04:37:33 svnexp Exp $
+# $FreeBSD: audio/icecast/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	icecast
 PORTVERSION=	1.3.12
@@ -7,8 +7,8 @@ PORTREVISION=	2
 CATEGORIES=	audio net
 MASTER_SITES=	http://downloads.xiph.org/releases/icecast/
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A streaming mp3 audio server
+MAINTAINER=	c.petrik.sosa@gmail.com
+COMMENT=	Streaming mp3 audio server
 
 LICENSE=	GPLv2 # (or later)
 
