@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/misc/cpuid/Makefile,v 1.21 2012/12/15 16:08:41 svnexp Exp $
+# $FreeBSD: misc/cpuid/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	cpuid
 PORTVERSION=	3.3
@@ -12,6 +12,8 @@ COMMENT=	CPU identification utility
 
 PLIST_FILES=	bin/cpuid
 ONLY_FOR_ARCHS=	i386 amd64
+
+MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak && \
