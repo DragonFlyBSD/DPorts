@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/hextools/Makefile,v 1.5 2012/11/17 06:01:34 svnexp Exp $
+# $FreeBSD: sysutils/hextools/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	hextools
 PORTVERSION=	1.1
@@ -16,6 +16,8 @@ ALL_TARGET=	build
 
 #not strictly true - it uses a self-styled license
 #LICENSE=	BSD
+
+MAKE_JOBS_SAFE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hex2bin ${PREFIX}/bin/hex2bin
