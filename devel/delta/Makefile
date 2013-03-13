@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/delta/Makefile,v 1.4 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: devel/delta/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	delta
 PORTVERSION=	2006.08.03
@@ -13,6 +13,7 @@ LICENSE=	BSD
 PLIST_FILES=	bin/delta bin/multidelta bin/topformflat
 
 USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
 
 do-install:
 .for file in delta multidelta
