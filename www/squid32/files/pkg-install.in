@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/squid32/files/pkg-install.in,v 1.2 2012/11/17 06:03:06 svnexp Exp $
+# $FreeBSD: www/squid32/files/pkg-install.in 306729 2012-10-30 23:05:50Z flo $
 #
 
 PATH=/bin:/usr/bin:/usr/sbin

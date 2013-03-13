@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/squid32/files/squid.in,v 1.5 2012/11/18 16:55:52 svnexp Exp $
+# $FreeBSD: www/squid32/files/squid.in 307542 2012-11-18 16:33:31Z hrs $
 #
 # PROVIDE: squid
 # REQUIRE: LOGIN
