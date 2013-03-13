@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/xmlroff/pkg-plist,v 1.16 2012/11/17 06:02:25 svnexp Exp $
+@comment $FreeBSD: textproc/xmlroff/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/xmlroff
 include/libfo-0.6/libfo/area/fo-area.h
 include/libfo-0.6/libfo/fo/fo-fo.h

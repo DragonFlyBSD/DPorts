@@ -2,7 +2,7 @@
 # Date created:		1 January 2005
 # Whom:			James Earl
 #
-# $FreeBSD: ports/textproc/xmlroff/Makefile,v 1.29 2012/11/17 06:02:25 svnexp Exp $
+# $FreeBSD: textproc/xmlroff/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	xmlroff
@@ -26,5 +26,9 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/libfo/fo-libfo-basic.h
 
 .include <bsd.port.mk>
