@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/lua-lgi/Makefile,v 1.1 2012/12/22 14:08:13 svnexp Exp $
+# $FreeBSD: devel/lua-lgi/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	lgi
 PORTVERSION=	0.6.2
@@ -18,6 +18,7 @@ GH_ACCOUNT=	pavouk
 
 USE_LUA=	5.1+
 USE_GMAKE=	yes
+USE_PKGCONFIG=	build
 
 CPPFLAGS+=	-I${LOCALBASE}/include/${LUA_SUBDIR}
 
