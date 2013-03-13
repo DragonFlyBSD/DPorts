@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/sysutils/highlnk/Makefile,v 1.11 2013/01/15 13:46:58 svnexp Exp $
+# $FreeBSD: sysutils/highlnk/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	highlnk
 DISTVERSION=	0.2
@@ -8,7 +8,7 @@ MASTER_SITES=	http://perli.net/projekte/highlnk/ \
 		CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A tool to save disk space on hard disks by using hardlinks
+COMMENT=	Tool to save disk space on hard disks by using hardlinks
 
 LICENSE=	GPLv2
 
