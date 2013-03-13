@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/dns/credns/files/pkg-install.in,v 1.1 2012/08/12 21:00:32 scheidell Exp $
+# $FreeBSD: ports/dns/nsd/files/pkg-install.in,v 1.1 2010/02/11 19:37:10 pgollucci Exp $
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 
