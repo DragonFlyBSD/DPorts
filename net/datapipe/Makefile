@@ -1,5 +1,5 @@
 # Created by: Daniel Baker <dbaker@FreeBSD.org> <dbaker@cuckoo.com>
-# $FreeBSD: ports/net/datapipe/Makefile,v 1.12 2012/11/17 05:59:58 svnexp Exp $
+# $FreeBSD: net/datapipe/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	datapipe
 PORTVERSION=	1.0
@@ -17,6 +17,8 @@ OPTIONS_DEFINE=	REUSEADDR NOFORK
 OPTIONS_DEFAULT=	REUSEADDR
 REUSEADDR_DESC=	Reuse the listening socket address
 NOFORK_DESC=	Do not fork and background
+
+MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
