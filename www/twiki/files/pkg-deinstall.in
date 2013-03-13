@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/twiki/files/pkg-deinstall.in,v 1.2 2012/11/17 06:03:09 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/www/twiki/files/pkg-deinstall.in,v 1.1 2008-04-22 08:36:40 sat Exp $
 #
 
 TWDIR=%%TWDIR%%

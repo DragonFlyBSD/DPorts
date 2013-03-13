@@ -1,9 +1,5 @@
-# Ports collection makefile for:	TWiki
-# Date created:			Fri Mar  7 14:36:05 CST 2003
-# Whom:				Justin Hawkins <justin@hawkins.id.au>
-#
-# $FreeBSD: ports/www/twiki/Makefile,v 1.30 2012/11/17 06:03:09 svnexp Exp $
-#
+# Created by: Justin Hawkins <justin@hawkins.id.au>
+# $FreeBSD: www/twiki/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	twiki
 PORTVERSION=	4.2.4
@@ -14,7 +10,7 @@ MASTER_SITES=	http://twiki.org/p/pub/Codev/Release/
 DISTNAME=	TWiki-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Flexible, powerful, and easy to use enterprise wiki
 
 RUN_DEPENDS=	\

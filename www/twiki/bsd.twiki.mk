@@ -4,7 +4,7 @@
 # Date created:		17 April 2008
 # Whom:				Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/www/twiki/bsd.twiki.mk,v 1.9 2012/11/17 06:03:09 svnexp Exp $
+# $FreeBSD: www/twiki/bsd.twiki.mk 300897 2012-07-14 14:29:18Z beat $
 #
 
 #
