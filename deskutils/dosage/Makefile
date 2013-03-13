@@ -1,8 +1,8 @@
-# Created by: antoine@FreeBSD.org
-# $FreeBSD: ports/deskutils/dosage/Makefile,v 1.4 2013/02/16 17:24:23 svnexp Exp $
+# Created by: Antoine Brodin <antoine@FreeBSD.org>
+# $FreeBSD: deskutils/dosage/Makefile 313727 2013-03-09 16:33:21Z rm $
 
 PORTNAME=	dosage
-PORTVERSION=	1.10
+PORTVERSION=	1.12
 CATEGORIES=	deskutils python
 
 MAINTAINER=	antoine@FreeBSD.org
@@ -15,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>0:${PORTSDIR}/www/py-requests
 USE_GITHUB=	yes
 GH_ACCOUNT=	wummel
 GH_TAGNAME=	upstream/${PORTVERSION}
-GH_COMMIT=	3cb8a96
+GH_COMMIT=	9d6f4ee
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
