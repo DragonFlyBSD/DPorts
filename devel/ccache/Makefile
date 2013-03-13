@@ -1,13 +1,13 @@
 # Created by: Dominic Marks <d.marks@student.umist.ac.uk>
-# $FreeBSD: ports/devel/ccache/Makefile,v 1.76 2013/01/15 13:46:53 svnexp Exp $
+# $FreeBSD: devel/ccache/Makefile 313577 2013-03-07 11:54:19Z bdrewery $
 
 PORTNAME=	ccache
 PORTVERSION=	3.1.9
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/ccache/ CRITICAL
 
-MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A tool to minimize the compile time of C/C++ programs
+MAINTAINER=	bdrewery@FreeBSD.org
+COMMENT=	Tool to minimize the compile time of C/C++ programs
 
 LICENSE=	GPLv3
 

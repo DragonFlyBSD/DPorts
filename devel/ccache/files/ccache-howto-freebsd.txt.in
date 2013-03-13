@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/devel/ccache/files/ccache-howto-freebsd.txt.in,v 1.17 2012/11/17 05:55:36 svnexp Exp $
+# $FreeBSD: devel/ccache/files/ccache-howto-freebsd.txt.in 300896 2012-07-14 13:54:48Z beat $
 #
 
 To use ccache add the following to /etc/make.conf.
