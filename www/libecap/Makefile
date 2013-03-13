@@ -2,7 +2,7 @@
 # Date created:			2009/06/02
 # Whom:				Thomas-Martin Seck <tmseck@web.de>
 #
-# $FreeBSD: ports/www/libecap/Makefile,v 1.6 2012/11/25 13:22:34 svnexp Exp $
+# $FreeBSD: www/libecap/Makefile 313740 2013-03-09 18:09:24Z tmseck $
 #
 
 PORTNAME=	libecap
@@ -11,7 +11,7 @@ PORTREVISION=	1
 CATEGORIES=	www security
 MASTER_SITES=	http://www.measurement-factory.com/tmp/ecap/
 
-MAINTAINER=	tmseck@web.de
+MAINTAINER=	tmseck@FreeBSD.org
 COMMENT=	Library for module based network content analysis
 
 GNU_CONFIGURE=	yes

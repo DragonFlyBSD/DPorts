@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/libecap/pkg-plist,v 1.5 2012/11/25 13:22:34 svnexp Exp $
+@comment $FreeBSD: www/libecap/pkg-plist 307742 2012-11-25 13:19:26Z flo $
 include/libecap/adapter/service.h
 include/libecap/adapter/xaction.h
 include/libecap/common/area.h
