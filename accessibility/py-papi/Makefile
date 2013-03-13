@@ -2,7 +2,7 @@
 # Date created:		2006-12-19
 # Whom:			Marcus von Appen
 #
-# $FreeBSD: ports/accessibility/py-papi/Makefile,v 1.14 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: accessibility/py-papi/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	papi
@@ -15,6 +15,7 @@ MAINTAINER=	mva@FreeBSD.org
 COMMENT=	ATK accessibility wrapper for python
 
 USE_GNOME=	atk
+USE_PKGCONFIG=	build
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
