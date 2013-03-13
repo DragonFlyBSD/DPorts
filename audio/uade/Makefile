@@ -1,5 +1,5 @@
 # Created by: Martin Blapp <mbr@freebsd.org>
-# $FreeBSD: ports/audio/uade/Makefile,v 1.44 2013/01/15 13:46:53 svnexp Exp $
+# $FreeBSD: audio/uade/Makefile 313527 2013-03-06 16:52:02Z bapt $
 
 PORTNAME=	uade
 PORTVERSION=	2.13
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=--with-text-scope
 .endif
 
 .if ${PORT_OPTIONS:MFUSE}
-USE_FUSE=	yes
+USES+=		fuse
 MAN1+=		uadefs.1
 PLIST_SUB+=	FUSE=""
 .else
