@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rtf2html
-# Date created:				6 Jul 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/textproc/rtf2html/Makefile,v 1.7 2012/11/17 06:02:19 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: textproc/rtf2html/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	rtf2html
 DISTVERSION=	1.1b
@@ -11,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A simple rtf2html converter
+COMMENT=	Simple rtf2html converter
 
 MAKE_JOBS_SAFE=	yes
 
