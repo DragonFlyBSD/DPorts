@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/audio/sidplayer/Makefile,v 1.17 2013/01/15 13:46:53 svnexp Exp $
+# $FreeBSD: audio/sidplayer/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	sidplayer
 PORTVERSION=	4.4
@@ -10,7 +10,7 @@ MASTER_SITES=	http://sidplayer.cebix.net/downloads/ \
 DISTNAME=	SIDPlayer-${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A C64 SID tune player
+COMMENT=	C64 SID tune player
 
 LICENSE=	GPLv2
 
