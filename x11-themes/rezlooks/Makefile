@@ -2,7 +2,7 @@
 # Date created:		2006-07-02
 # Whom:			brandoncash@gmail.com
 #
-# $FreeBSD: ports/x11-themes/rezlooks/Makefile,v 1.12 2012/11/17 06:03:33 svnexp Exp $
+# $FreeBSD: x11-themes/rezlooks/Makefile 313721 2013-03-09 15:25:08Z kwm $
 #
 
 PORTNAME=	rezlooks
@@ -25,5 +25,9 @@ OPTIONS+=	ANIMATION "Animation support" On
 .if !defined(WITHOUT_ANIMATION)
 CONFIGURE_ARGS+=	--enable-animation
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/src/animation.c
 
 .include <bsd.port.mk>
