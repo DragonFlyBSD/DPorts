@@ -1,10 +1,6 @@
-# New ports collection makefile for:	glitz
-# Date created:		2004-10-06
-# Whom:			Michael Johnson <ahze@ahze.net>
-#
-# $FreeBSD: ports/graphics/glitz/Makefile,v 1.17 2012/11/17 05:58:08 svnexp Exp $
+# Created by: Michael Johnson <ahze@ahze.net>
+# $FreeBSD: graphics/glitz/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/graphics/glitz/Makefile,v 1.8 2006/09/10 00:51:10 mezz Exp $
-#
 
 PORTNAME=	glitz
 PORTVERSION=	0.5.6
@@ -17,7 +13,7 @@ COMMENT=	OpenGL image compositing library
 
 USE_GL=		yes
 USE_XORG=	xt
-USE_GNOME=	pkgconfig gnomehack
+USE_GNOME=	gnomehack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
