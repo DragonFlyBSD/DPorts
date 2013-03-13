@@ -1,9 +1,5 @@
-# New ports collection makefile for:	BTQueue
-# Date created:				04 Jun 2004
-# Whom:					Stefan Walter <sw@gegenunendlich.de>
-#
-# $FreeBSD: ports/net-p2p/btqueue/Makefile,v 1.21 2012/11/17 06:00:39 svnexp Exp $
-#
+# Created by: Stefan Walter <sw@gegenunendlich.de>
+# $FreeBSD: net-p2p/btqueue/Makefile 313404 2013-03-04 11:19:40Z lwhsu $
 
 PORTNAME=	btqueue
 PORTVERSION=	0.1.3
@@ -15,7 +11,7 @@ DISTNAME=	BTQueue-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Alternative BitTorrent client with queuing functionality
 
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_bsddb.so:${PORTSDIR}/databases/py-bsddb
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bsddb>0:${PORTSDIR}/databases/py-bsddb
 
 CONFLICTS=	py??-*[Bb]it[Tt]ornado* py??-*[Bb]it[Tt]orrent*
 USE_PYTHON=	yes
