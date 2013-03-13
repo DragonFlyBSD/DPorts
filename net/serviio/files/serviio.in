@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net/serviio/files/serviio.in,v 1.4 2013/01/28 20:45:49 svnexp Exp $
+# $FreeBSD: net/serviio/files/serviio.in 311134 2013-01-28 19:56:45Z netchild $
 #
 # PROVIDE: serviio
 # REQUIRE: LOGIN
