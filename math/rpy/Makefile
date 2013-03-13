@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: ports/math/rpy/Makefile,v 1.36 2013/01/04 18:45:35 svnexp Exp $
+# $FreeBSD: math/rpy/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	rpy
 PORTVERSION=	1.0.3
-PORTREVISION=	26
+PORTREVISION=	27
 CATEGORIES=	math
 MASTER_SITES=	SF
 
