@@ -1,12 +1,8 @@
-# Ports collection makefile for:	pecl-http
-# Date created:		23 July 2008
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/pecl-http/Makefile,v 1.13 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: www/pecl-http/Makefile 313734 2013-03-09 17:26:27Z miwi $
 
 PORTNAME=	http
-PORTVERSION=	1.7.4
+PORTVERSION=	1.7.5
 CATEGORIES=	www
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
