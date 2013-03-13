@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tcpreplay
-# Date created:				2 November 2000
-# Whom:					cnh@ivmg.net
-#
-# $FreeBSD: ports/net-mgmt/tcpreplay/Makefile,v 1.37 2012/11/17 06:00:38 svnexp Exp $
-#
+# Created by: cnh@ivmg.net
+# $FreeBSD: net-mgmt/tcpreplay/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	tcpreplay
 PORTVERSION=	3.4.4
@@ -11,7 +7,7 @@ CATEGORIES=	net-mgmt
 MASTER_SITES=	SF
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A tool to replay saved packet capture files
+COMMENT=	Tool to replay saved packet capture files
 
 BUILD_DEPENDS=	pcapnav-config:${PORTSDIR}/net/libpcapnav
 
