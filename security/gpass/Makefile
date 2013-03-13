@@ -2,7 +2,7 @@
 # Date created:		2006-07-24
 # Whom:			ports@c0decafe.net <ports@c0decafe.net>
 #
-# $FreeBSD: ports/security/gpass/Makefile,v 1.15 2012/11/17 06:01:04 svnexp Exp $
+# $FreeBSD: security/gpass/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	gpass
@@ -29,6 +29,9 @@ GCONF_SCHEMAS=	gpass.schemas
 post-patch:
 	@${REINPLACE_CMD} -e 's|{packageprefix}/share|{datadir}|g' \
 		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/include/gpass/error.h \
+		${WRKSRC}/src/helper.h
 
 post-install:
 	@-update-desktop-database
