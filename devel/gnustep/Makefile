@@ -1,9 +1,5 @@
-# New ports collection makefile for:    gnustep
-# Date created:         03 October 1998
-# Whom:                 Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/gnustep/Makefile,v 1.85 2012/11/17 05:55:46 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: devel/gnustep/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	gnustep
 PORTVERSION=	1.24.0
@@ -12,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Objective-C libraries based on the OpenStep standard
 
 NO_BUILD=	yes
