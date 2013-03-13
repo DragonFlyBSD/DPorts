@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bumprace
-# Date created:		14 Feb 2007
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/bumprace/Makefile,v 1.16 2012/11/17 05:57:34 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: ports/games/bumprace/Makefile,v 1.17 2013/02/04 06:41:36 svnexp Exp $
 
 PORTNAME=	bumprace
 PORTVERSION=	1.5.3
@@ -24,10 +20,12 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PORTDOCS=	FAQ README
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e '/LIBS/ s|-lSDL_[a-z]*|& $${SDL_LIBS}|' ${WRKSRC}/configure
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
