@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/csmith/Makefile,v 1.6 2012/11/17 05:55:38 svnexp Exp $
+# $FreeBSD: devel/csmith/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	csmith
 PORTVERSION=	2.1.0
@@ -13,6 +13,7 @@ LICENSE=	BSD
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	autoconf
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
