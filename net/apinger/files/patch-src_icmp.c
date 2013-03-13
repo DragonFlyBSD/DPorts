@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/apinger/files/patch-src_icmp.c,v 1.2 2012/11/17 05:59:56 svnexp Exp $
+$FreeBSD: net/apinger/files/patch-src_icmp.c 300897 2012-07-14 14:29:18Z beat $
 
 --- src/icmp.c.orig
 +++ src/icmp.c
