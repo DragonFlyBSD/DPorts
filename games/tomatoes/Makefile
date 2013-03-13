@@ -2,12 +2,12 @@
 # Date created:				2005 07 Feb
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/games/tomatoes/Makefile,v 1.22 2012/11/17 05:57:54 svnexp Exp $
+# $FreeBSD: ports/games/tomatoes/Makefile,v 1.23 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	tomatoes
 PORTVERSION=	1.5
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	games
 MASTER_SITES=	SF
 DISTFILES=	${PORTNAME}-linux-src-${PORTVERSION}5${EXTRACT_SUFX} \
