@@ -2,7 +2,7 @@
 # Date created:				25 Aug 2004
 # Whom:					Philippe Rocques
 #
-# $FreeBSD: ports/security/gtkpasman/Makefile,v 1.31 2012/11/17 06:01:05 svnexp Exp $
+# $FreeBSD: security/gtkpasman/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	gtkpasman
@@ -32,6 +32,9 @@ ACLOCAL_ARGS?=	--acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal
 .if !defined(NOPORTDOCS)
 PORTDOCS=	README gpasman4.sample
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-Werror||g' ${WRKSRC}/src/Makefile.*
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/gtkpasman ${PREFIX}/bin
