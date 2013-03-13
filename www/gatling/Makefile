@@ -2,7 +2,7 @@
 # Date created:			Feb 21, 2004
 # Whom:				Thomas-Martin Seck <tmseck@netcologne.de>
 #
-# $FreeBSD: ports/www/gatling/Makefile,v 1.21 2013/02/07 14:08:06 svnexp Exp $
+# $FreeBSD: www/gatling/Makefile 313740 2013-03-09 18:09:24Z tmseck $
 #
 
 PORTNAME=	gatling
@@ -10,7 +10,7 @@ PORTVERSION=	0.13
 CATEGORIES=	www benchmarks ftp ipv6
 MASTER_SITES=	http://dl.fefe.de/
 
-MAINTAINER=	tmseck@netcologne.de
+MAINTAINER=	tmseck@FreeBSD.org
 COMMENT=	A high performance webserver with scalability benchmark tools
 
 BUILD_DEPENDS=	libowfat>=0.29:${PORTSDIR}/devel/libowfat
