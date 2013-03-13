@@ -1,5 +1,5 @@
 # Created by: roam@orbitel.bg
-# $FreeBSD: ports/misc/bogosort/Makefile,v 1.13 2012/11/17 05:59:33 svnexp Exp $
+# $FreeBSD: misc/bogosort/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	bogosort
 PORTVERSION=	0.4.2
@@ -20,6 +20,8 @@ GNU_CONFIGURE=	yes
 MAN1=		bogosort.1
 INFO=		bogosort
 PLIST_FILES=	bin/bogosort
+
+MAKE_JOBS_SAFE=	yes
 
 test:		all
 		${PRINTF} "a\nb\nc\nd\n" > ${WRKDIR}/sorted
