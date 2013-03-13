@@ -1,9 +1,10 @@
 # Created by:	nemysis@gmx.ch
 #
-# $FreeBSD: ports/games/tuxfighter/Makefile,v 1.1 2012/12/02 00:14:35 svnexp Exp $
+# $FreeBSD: ports/games/tuxfighter/Makefile,v 1.2 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	tuxfighter
 PORTVERSION=	54
+PORTREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	SF/pygamebook/TuxFighter/TuxFighter${PORTVERSION}_source/ \
 		SF/nemysisfreebsdp/:icons
