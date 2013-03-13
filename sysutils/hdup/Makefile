@@ -2,7 +2,7 @@
 # Date created:				6 March 2005
 # Whom:					Sergey Matveychuk <sem@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/hdup/Makefile,v 1.26 2012/11/17 06:01:34 svnexp Exp $
+# $FreeBSD: sysutils/hdup/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	hdup
@@ -28,6 +28,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	autoconf
 
 MAN1=		hdup.1
