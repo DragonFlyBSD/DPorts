@@ -1,5 +1,5 @@
 # Created by: Joel Sutton <sutton@aardvark.apana.org.au>
-# $FreeBSD: ports/emulators/prodosemu/Makefile,v 1.20 2013/02/04 12:15:59 svnexp Exp $
+# $FreeBSD: emulators/prodosemu/Makefile 311583 2013-02-04 08:50:18Z araujo $
 
 PORTNAME=	prodosemu
 PORTVERSION=	0.1
