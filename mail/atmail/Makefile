@@ -1,9 +1,5 @@
-# New ports collection makefile for:   atmail
-# Date created:		18 June 2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/mail/atmail/Makefile,v 1.5 2012/11/17 05:58:59 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: mail/atmail/Makefile 313599 2013-03-07 16:53:45Z miwi $
 
 PORTNAME=	atmail
 PORTVERSION=	1.0.4
@@ -20,20 +16,20 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
-OPTIONS=	LDAP   "Add support for a LDAP" Off \
-		MBSTRING "Add support for UTF8 folder names" Off \
-		ICONV "Add support encoding conversion" Off
+OPTIONS_DEFINE=	LDAP MBSTRING
+MBSTRING_DESC= Support for UTF8 folder names
 
-.include <bsd.port.pre.mk>
-.if defined(WITH_LDAP)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MLDAP}
 USE_PHP+=	ldap
 .endif
 
-.if defined(WITH_MBSTRING)
+.if ${PORT_OPTIONS:MMBSTRING}
 USE_PHP+=	mbstring
 .endif
 
-.if defined(WITH_ICONV)
+.if ${PORT_OPTIONS:MICONV}
 USE_PHP+=	iconv
 .endif
 
@@ -49,4 +45,4 @@ post-install:
 		>> ${TMPPLIST}
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
