@@ -1,14 +1,13 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: ports/irc/ngircd/Makefile,v 1.44 2013/02/05 16:54:22 svnexp Exp $
+# $FreeBSD: irc/ngircd/Makefile 313612 2013-03-08 02:55:27Z beech $
 
 PORTNAME=	ngircd
-PORTVERSION=	0.19.2
-PORTREVISION=	1
+PORTVERSION=	20.2
+PORTEPOCH=	1
 CATEGORIES=	irc ipv6
 MASTER_SITES=	ftp://ftp.berlios.de/pub/%SUBDIR%/ \
 		http://arthur.barton.de/pub/%SUBDIR%/
 MASTER_SITE_SUBDIR=	${PORTNAME}
-DISTVERSION=	${PORTVERSION:S/0.//}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free open source daemon for Internet Relay Chat (IRC)
