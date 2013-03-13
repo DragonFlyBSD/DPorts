@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: ports/www/tikiwiki/Makefile,v 1.27 2012/12/10 01:26:34 svnexp Exp $
+# $FreeBSD: www/tikiwiki/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	tikiwiki
 PORTVERSION=	9.2
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/Tiki_9.x_Herbig_Haro/${PORTVERSION}/
 DISTNAME=	tiki-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Powerful PHP based Wiki/CMS/Groupware
 
 USE_PHP=	gettext pcre posix session xml zlib
