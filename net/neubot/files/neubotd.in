@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: ports/net/neubot/files/neubotd.in,v 1.4 2012/11/17 06:00:07 svnexp Exp $
+# $FreeBSD: net/neubot/files/neubotd.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # PROVIDE: neubotd
