@@ -2,7 +2,7 @@
 # Date created:			Thu Feb 26 23:13:12 CET 2004
 # Whom:				Koop Mast <kwm@rainbow-runner.nl>
 #
-# $FreeBSD: ports/deskutils/drivel/Makefile,v 1.56 2012/11/17 05:55:26 svnexp Exp $
+# $FreeBSD: deskutils/drivel/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	drivel
@@ -31,6 +31,7 @@ USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 MAKE_JOBS_SAFE=	yes
+CONFIGURE_ARGS=	--disable-error-on-warning
 
 GCONF_SCHEMAS=	drivel.schemas
 
