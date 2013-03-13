@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: ports/games/gtklife/Makefile,v 1.22 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/gtklife/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	gtklife
 PORTVERSION=	5.1
@@ -34,6 +34,8 @@ DESKTOP_ENTRIES="GtkLife" \
 
 OPTIONS_DEFINE=	GTK2
 GTK2_DESC=	GTK2 gui toolkit support (beta)
+
+MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
