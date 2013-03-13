@@ -1,5 +1,5 @@
 # Created by: Robert Withrow <witr@rwwa.com>
-# $FreeBSD: ports/misc/findutils/Makefile,v 1.49 2013/02/17 05:41:36 svnexp Exp $
+# $FreeBSD: misc/findutils/Makefile 312401 2013-02-17 05:33:16Z rm $
 
 PORTNAME=	findutils
 PORTVERSION=	4.5.11
