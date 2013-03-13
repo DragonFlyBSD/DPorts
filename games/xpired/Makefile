@@ -1,0 +1,31 @@
+# New ports collection makefile for:	xpired
+# Date created:				2 July 2002
+# Whom:					Edwin Groothuis <edwin@mavetju.org>
+#
+# $FreeBSD: ports/games/xpired/Makefile,v 1.27 2012/11/17 05:57:58 svnexp Exp $
+#
+
+PORTNAME=	xpired
+PORTVERSION=	1.22
+PORTREVISION=	17
+CATEGORIES=	games
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-linux/${PORTVERSION}
+DISTNAME=	${PORTNAME}-${PORTVERSION}-linux_source
+
+MAINTAINER=	edwin@mavetju.org
+COMMENT=	An action-puzzle maze escape game (SDL)
+
+USE_SDL=	gfx image mixer sdl
+WRKSRC=		${WRKDIR}/src
+
+do-install:
+	@${INSTALL_PROGRAM} ${WRKSRC}/xpired ${WRKSRC}/xpiredit ${PREFIX}/bin
+	@${MKDIR} ${DATADIR}/img
+	@${MKDIR} ${DATADIR}/snd
+.for files in xpired.lvl xpired.cfg bgimages.txt readme.txt xpired.dmo
+	@${INSTALL_DATA} ${WRKSRC}/${files} ${DATADIR}
+.endfor
+	@${INSTALL_DATA} ${WRKSRC}/img/* ${DATADIR}/img
+	@${INSTALL_DATA} ${WRKSRC}/snd/* ${DATADIR}/snd
+
+.include <bsd.port.mk>
