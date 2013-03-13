@@ -2,7 +2,7 @@
 # Date created:				4 Jan 2005
 # Whom:					Vlad V. Teterya <vlad@vlad.uz.ua>
 #
-# $FreeBSD: ports/x11/tilda/Makefile,v 1.16 2012/11/17 06:03:20 svnexp Exp $
+# $FreeBSD: x11/tilda/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	tilda
@@ -25,6 +25,8 @@ DOCS=		AUTHORS ChangeLog README TODO
 post-patch:
 	@${REINPLACE_CMD} -e 's|ps -C tilda -o pid=|pgrep tilda|' \
 		${WRKSRC}/src/tilda.c
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/src/tomboykeybinder.h
 
 post-install:
 .if !defined (NOPORTDOCS)
