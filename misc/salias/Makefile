@@ -3,7 +3,7 @@
 # Date created:			May 16, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/misc/salias/Makefile,v 1.16 2012/11/17 05:59:44 svnexp Exp $
+# $FreeBSD: misc/salias/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	salias
@@ -17,6 +17,7 @@ COMMENT=	A command-line tool to alias arguments of other programs
 
 USE_BZIP2=	yes
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 
 MAN1=		salias.1
