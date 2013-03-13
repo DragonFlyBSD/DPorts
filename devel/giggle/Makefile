@@ -2,7 +2,7 @@
 # Date created:		2008-10-01
 # Whom:			Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: ports/devel/giggle/Makefile,v 1.18 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: devel/giggle/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	giggle
@@ -28,7 +28,7 @@ USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lintl
+LDFLAGS+=	-L${LOCALBASE}/lib -lintl `pkg-config -libs gmodule-2.0`
 PLIST_SUB+=	GIGGLE_VER=${PORTVERSION}
 
 .include <bsd.port.options.mk>
