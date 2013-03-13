@@ -1,5 +1,5 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: ports/net-p2p/amule/Makefile,v 1.64 2013/01/20 12:48:51 svnexp Exp $
+# $FreeBSD: net-p2p/amule/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	amule
 PORTVERSION=	2.3.1
@@ -22,7 +22,7 @@ BUILD_DEPENDS=	${FLEX}:${PORTSDIR}/textproc/flex \
 CONFLICTS=	amule-devel-[0-9]*
 
 USE_BZIP2=	yes
-USE_BISON=	build
+USES=		bison
 USE_PKGCONFIG=	yes
 USE_GMAKE=	yes
 USE_WX=		2.8

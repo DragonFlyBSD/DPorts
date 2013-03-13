@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net-p2p/amule/files/amuled.in,v 1.2 2012/11/17 06:00:39 svnexp Exp $
+# $FreeBSD: net-p2p/amule/files/amuled.in 302141 2012-08-05 23:19:36Z dougb $
 #
 # aMule RCng startup script
 # Ogirinal work from Gabriele Cecchetti (amule.org forum)
