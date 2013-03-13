@@ -1,9 +1,5 @@
-# New ports collection makefile for:	thinglaunch
-# Date created:				22 Jul 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/x11/thinglaunch/Makefile,v 1.12 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: x11/thinglaunch/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	thinglaunch
 PORTVERSION=	1.8
@@ -11,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A very fast launcher program for X
+COMMENT=	Very fast launcher program for X
 
 USE_XORG=	x11 xproto
 MAKE_JOBS_SAFE=	yes
