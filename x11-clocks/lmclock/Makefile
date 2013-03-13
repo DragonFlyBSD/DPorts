@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lmclock
-# Date created:				18 June 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/x11-clocks/lmclock/Makefile,v 1.9 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: x11-clocks/lmclock/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	lmclock
 PORTVERSION=	1.2
@@ -12,7 +8,7 @@ CATEGORIES=	x11-clocks
 MASTER_SITES=	CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A Xerox Lisp machine clock clone
+COMMENT=	Xerox Lisp machine clock clone
 
 USE_IMAKE=	yes
 USE_XORG=	x11 xext
