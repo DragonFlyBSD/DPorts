@@ -2,7 +2,7 @@
 # Date created:		21 August 1998
 # Whom:			issei <issei@jp.FreeBSD.org>
 #
-# $FreeBSD: ports/games/xchadance/Makefile,v 1.22 2012/11/17 05:57:56 svnexp Exp $
+# $FreeBSD: games/xchadance/Makefile 313600 2013-03-07 17:08:13Z miwi $
 #
 
 PORTNAME=	xchadance
@@ -15,15 +15,10 @@ DISTFILES=	xchada01.lzh
 MAINTAINER=	motoyuki@FreeBSD.org
 COMMENT=	Display a dancing girl "ChaCha."
 
-EXTRACT_DEPENDS=lha:${PORTSDIR}/archivers/lha
-
+USE_LHA=	yes
 USE_XORG=	x11
 MAKEFILE=	makefile
 NO_WRKSUBDIR=	yes
-
-EXTRACT_CMD=	lha
-EXTRACT_BEFORE_ARGS=	e
-EXTRACT_AFTER_ARGS=
 
 RESTRICTED=	'contains commercial character data'
 
