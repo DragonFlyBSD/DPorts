@@ -2,7 +2,7 @@
 # Date created:				5 June 2009
 # Whom:					Ryan Steinmetz
 #
-# $FreeBSD: ports/net-mgmt/jnettop/Makefile,v 1.8 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/jnettop/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	jnettop
@@ -17,6 +17,7 @@ MAN8=		jnettop.8
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 
 LICENSE=	GPLv2
