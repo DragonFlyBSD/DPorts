@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/cfengine34/files/cf-serverd.in,v 1.1 2012/11/28 00:27:17 svnexp Exp $
+# $FreeBSD: sysutils/cfengine34/files/cf-serverd.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: cf-serverd
 # REQUIRE: LOGIN
