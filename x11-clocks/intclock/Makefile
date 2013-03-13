@@ -1,9 +1,5 @@
-# New ports collection makefile for:	intclock
-# Date created:		6 August 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-clocks/intclock/Makefile,v 1.14 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: x11-clocks/intclock/Makefile 313753 2013-03-09 19:59:21Z eadler $
 
 PORTNAME=	intclock
 PORTVERSION=	2.13
@@ -11,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	x11-clocks perl5
 MASTER_SITES=	http://www.peterverthez.net/projects/${PORTNAME}/ CENKES
 
-MAINTAINER=	davide.italiano@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multi-timezone clock
 
 BUILD_DEPENDS=	p5-Gtk2>=1.144:${PORTSDIR}/x11-toolkits/p5-Gtk2
