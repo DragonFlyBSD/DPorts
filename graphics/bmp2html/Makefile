@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bmp2html
-# Date created:				10 Aug 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/graphics/bmp2html/Makefile,v 1.11 2012/11/17 05:58:01 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: graphics/bmp2html/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	bmp2html
 PORTVERSION=	0.1
@@ -13,7 +9,7 @@ MASTER_SITES=	CRITICAL
 DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A bmp to html converter
+COMMENT=	BMP to HTML converter
 
 USE_SDL=	yes
 MAKE_JOBS_SAFE=	yes
