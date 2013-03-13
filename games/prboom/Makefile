@@ -1,9 +1,5 @@
-# New ports collection makefile for:	prboom
-# Date created:				10 June 2001
-# Whom:					Jordan DeLong <fracture@allusion.net>
-#
-# $FreeBSD: ports/games/prboom/Makefile,v 1.37 2012/12/10 01:26:30 svnexp Exp $
-#
+# Created by: Jordan DeLong <fracture@allusion.net>
+# $FreeBSD: games/prboom/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	prboom
 PORTVERSION=	2.5.0
@@ -11,8 +7,8 @@ PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20stable/${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A multiplayer-capable and modified version of ID's classic DOOM game
+MAINTAINER=	c.petrik.sosa@gmail.com
+COMMENT=	Multiplayer-capable and modified version of ID's classic DOOM game
 
 LIB_DEPENDS=	smpeg.1:${PORTSDIR}/multimedia/smpeg
 
