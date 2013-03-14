@@ -2,7 +2,7 @@
 # Date Created:				02 Jan 2006
 # Whom:					Remington Lang <MrL0Lz@gmail.com>
 #
-# $FreeBSD: ports/deskutils/superswitcher/Makefile,v 1.16 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/superswitcher/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	superswitcher
@@ -34,5 +34,7 @@ post-patch:
 		's/x11//g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e \
 		'/_DISABLE_DEPRECATED/d' ${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/src/dbus-object.h ${WRKSRC}/src/forward_declarations.h
 
 .include <bsd.port.mk>
