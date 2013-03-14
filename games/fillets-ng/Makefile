@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/games/fillets-ng/Makefile,v 1.37 2012/12/05 02:31:36 svnexp Exp $
+# $FreeBSD: ports/games/fillets-ng/Makefile,v 1.38 2013/01/23 15:05:34 svnexp Exp $
 
 PORTNAME=	fillets-ng
 PORTVERSION=	1.0.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF/fillets/Fish%20Fillets%20-%20Next%20Generation/${PORTVERSION}:source \
 		SF/fillets/Fish%20Fillets%20-%20Next%20Generation/${DATAVERSION}:data
