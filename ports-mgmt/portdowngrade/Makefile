@@ -1,8 +1,9 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: ports-mgmt/portdowngrade/Makefile 313338 2013-03-03 10:30:46Z crees $
+# $FreeBSD: ports-mgmt/portdowngrade/Makefile 313540 2013-03-06 20:49:22Z crees $
 
 PORTNAME=	portdowngrade
-PORTVERSION=	1.0
+PORTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# empty
 DISTFILES=	# none
