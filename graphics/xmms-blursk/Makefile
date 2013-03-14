@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: ports/graphics/xmms-blursk/Makefile,v 1.20 2012/12/10 01:26:30 svnexp Exp $
+# $FreeBSD: graphics/xmms-blursk/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	blursk
 PORTVERSION=	1.3
@@ -9,7 +9,7 @@ MASTER_SITES=	http://web.cecs.pdx.edu/~kirkenda/blursk/
 PKGNAMEPREFIX=	xmms-
 DISTNAME=	Blursk-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	XMMS plugin inspired by "Blur Scope"
 
 BUILD_DEPENDS=	xmms-config:${PORTSDIR}/multimedia/xmms
