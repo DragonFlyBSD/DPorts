@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: ports/www/py-django13/Makefile,v 1.52 2013/02/24 14:54:05 svnexp Exp $
+# $FreeBSD: www/py-django13/Makefile 313466 2013-03-05 17:34:55Z lwhsu $
 
 PORTNAME=	django
 PORTVERSION=	1.3.7
@@ -13,6 +13,9 @@ DIST_SUBDIR=	python
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	High-level Python Web framework
 
+DEPRECATED=	Unsupported version
+EXPIRATION_DATE=	2013-07-01
+
 LICENSE=	BSD
 
 LATEST_LINK=	${PYTHON_PKGNAMEPREFIX}django13
@@ -22,7 +25,7 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Django
 
-CONFLICTS=	py2[0-9]-django-devel-[0-9]* py2[0-9]-django-1.[24]*
+CONFLICTS=	py[23][0-9]-django-devel-[0-9]* py[23][0-9]-django-1.[0-24-9]*
 
 DOCSDIR=	${PREFIX}/share/doc/py-django
 
@@ -56,7 +59,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}flup>0:${PORTSDIR}/www/py-flup
 .endif
 
 .if ${PORT_OPTIONS:MHTMLDOCS}
-.	if empty(PORT_OPTIONS:MDOCS)
+.	if ! ${PORT_OPTIONS:MDOCS}
 IGNORE=	you cannot build documentation while setting NOPORTDOCS
 .	endif
 BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}sphinx>0:${PORTSDIR}/textproc/py-sphinx
