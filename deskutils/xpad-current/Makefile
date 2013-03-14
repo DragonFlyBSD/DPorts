@@ -1,5 +1,5 @@
 # Created by: Jaosn Helfman <jgh@FreeBSD.org>
-# $FreeBSD: ports/deskutils/xpad-current/Makefile,v 1.6 2012/12/16 01:35:18 svnexp Exp $
+# $FreeBSD: deskutils/xpad-current/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	xpad
 PORTVERSION=	4.1
@@ -29,5 +29,9 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 
 MAN1=		xpad.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/glist.h|glib.h|g' \
+		${WRKSRC}/src/xpad-undo.c
 
 .include <bsd.port.mk>
