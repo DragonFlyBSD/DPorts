@@ -2,7 +2,7 @@
 # Date created:			Sept 13, 2010
 # Whom:				jpaetzel
 #
-# $FreeBSD: ports/www/py-dojango/Makefile,v 1.7 2012/11/17 06:02:59 svnexp Exp $
+# $FreeBSD: www/py-dojango/Makefile 313599 2013-03-07 16:53:45Z miwi $
 #
 
 PORTNAME=	dojango
@@ -20,13 +20,13 @@ PYDISTUTILS_PKGNAME=	${PORTNAME}
 
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/django/bin/django-admin.py:${PORTSDIR}/www/py-django
 
-OPTIONS=	JAVA	"Java support needed to build dojo libraries"	off
+OPTIONS_DEFINE=		JAVA
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_JAVA)
+.if ${PORT_OPTIONS:MJAVA}
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
