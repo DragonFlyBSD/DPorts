@@ -1,9 +1,4 @@
-# New ports collection makefile for:	libgalago
-# Date created:				Apr 27 2007
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libgalago/Makefile,v 1.7 2012/11/17 05:55:54 svnexp Exp $
-#
+# $FreeBSD: devel/libgalago/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	libgalago
 PORTVERSION=	0.5.2
@@ -19,7 +14,7 @@ LIB_PC_DEPENDS=	dbus-glib-1.pc:${PORTSDIR}/devel/dbus-glib
 BUILD_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 
-USE_GNOME=	gnomehack pkgconfig
+USE_GNOME=	gnomehack
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
