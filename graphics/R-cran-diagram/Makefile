@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/R-cran-diagram/Makefile,v 1.11 2013/01/04 18:45:34 svnexp Exp $
+# $FreeBSD: graphics/R-cran-diagram/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	diagram
 PORTVERSION=	1.6
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
