@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/sysutils/magicrescue/Makefile,v 1.17 2013/01/15 13:46:58 svnexp Exp $
+# $FreeBSD: sysutils/magicrescue/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	magicrescue
 PORTVERSION=	1.1.9
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.itu.dk/people/jobr/magicrescue/release/ \
 		CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A file recovery tool which recovers deleted files from a block device
+COMMENT=	File recovery tool which recovers deleted files from a block device
 
 LICENSE=	GPLv2
 
