@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: ports/devel/libevt/Makefile,v 1.2 2013/02/12 15:14:29 svnexp Exp $
+# $FreeBSD: devel/libevt/Makefile 313728 2013-03-09 16:34:20Z rm $
 
 PORTNAME=	libevt
-DISTVERSION=	alpha-20130209
+DISTVERSION=	alpha-20130303
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
@@ -14,7 +14,7 @@ LICENSE=	LGPL3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack
+USES=		pathfix
 USE_ICONV=	yes
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
