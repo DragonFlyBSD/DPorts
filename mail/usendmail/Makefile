@@ -2,7 +2,7 @@
 # Date created:		2004-02-19
 # Whom:			Thomas Seck <tmseck@netcologne.de>
 #
-# $FreeBSD: ports/mail/usendmail/Makefile,v 1.10 2012/11/17 05:59:17 svnexp Exp $
+# $FreeBSD: mail/usendmail/Makefile 313740 2013-03-09 18:09:24Z tmseck $
 #
 
 PORTNAME=	usendmail
@@ -11,7 +11,7 @@ PORTREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.ohse.de/uwe/usendmail/
 
-MAINTAINER=	tmseck@netcologne.de
+MAINTAINER=	tmseck@FreeBSD.org
 COMMENT=	A replacement for qmail's sendmail drop-in
 
 USE_QMAIL=	yes
