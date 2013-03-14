@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/textproc/elasticsearch/files/elasticsearch.in,v 1.1 2012/12/08 20:54:03 svnexp Exp $
+# $FreeBSD: textproc/elasticsearch/files/elasticsearch.in 308491 2012-12-08 20:48:41Z tj $
 #
 # PROVIDE: elasticsearch
 # REQUIRE: NETWORKING SERVERS
