@@ -2,7 +2,7 @@
 # Date created:         30 Nov 2008
 # Whom:                 Koji Yokota <yokota@res.otaru-uc.ac.jp>
 #
-# $FreeBSD: ports/www/firefox-esr-i18n/Makefile.option,v 1.7 2012/11/17 06:02:33 svnexp Exp $
+# $FreeBSD: www/firefox-esr-i18n/Makefile.option 300897 2012-07-14 14:29:18Z beat $
 #
 OPTIONS=        LANG_AF  "Africaans"              off \
                 LANG_AK  "Akan"                   off \
