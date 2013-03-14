@@ -2,11 +2,11 @@
 # Date created:		2011-02-26
 # Whom:			Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/debootstrap/Makefile,v 1.9 2012/11/17 06:01:28 svnexp Exp $
+# $FreeBSD: sysutils/debootstrap/Makefile 313594 2013-03-07 14:57:44Z mm $
 #
 
 PORTNAME=	debootstrap
-PORTVERSION=	1.0.42
+PORTVERSION=	1.0.46
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN}
 MASTER_SITE_SUBDIR=	pool/main/d/${PORTNAME}
@@ -15,7 +15,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Install Debian base system into a directory
 
-RUN_DEPENDS=	${LOCALBASE}/bin/wget:${PORTSDIR}/ftp/wget
+RUN_DEPENDS=	wget:${PORTSDIR}/ftp/wget
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 NO_BUILD=	yes
