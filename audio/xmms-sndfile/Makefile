@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: ports/audio/xmms-sndfile/Makefile,v 1.28 2012/12/10 01:26:27 svnexp Exp $
+# $FreeBSD: audio/xmms-sndfile/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	xmms
 PORTVERSION=	1.2
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.mega-nerd.com/xmms_sndfile/
 PKGNAMESUFFIX=	-sndfile
 DISTNAME=	xmms_sndfile-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	XMMS plugin to allow playing libsndfile supported files
 
 LIB_DEPENDS=	sndfile.1:${PORTSDIR}/audio/libsndfile \
