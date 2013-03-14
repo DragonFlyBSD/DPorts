@@ -1,12 +1,12 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: ports/mail/assp/Makefile,v 1.53 2012/11/17 05:58:59 svnexp Exp $
+# $FreeBSD: mail/assp/Makefile 313496 2013-03-06 03:04:32Z bdrewery $
 
 PORTNAME=	assp
-PORTVERSION=	1.9.4.8
+PORTVERSION=	1.9.8.13056
 PORTEPOCH=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.ringofsaturn.com/distfiles/
-DISTNAME=	${PORTNAME:tu}_${PORTVERSION}-Install
+DISTNAME=	${PORTNAME:tu}_${PORTVERSION}_Install
 
 MAINTAINER=	rnejdl@ringofsaturn.com
 COMMENT=	Anti-Spam SMTP Proxy
@@ -54,7 +54,7 @@ IPV6_DESC=	IPv6 sockets support
 
 OPTIONS_DEFAULT=	EMVALID SPF SRS SEND FBACKW ZLIB CLAMAV DNSBL MATCHRE SENDERB MIMEMOD SSL IPV6
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/${DISTNAME}/${PORTNAME:tu}
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/ASSP_1.98_13056_install/${PORTNAME:tu}
 
 .include <bsd.port.pre.mk>
 

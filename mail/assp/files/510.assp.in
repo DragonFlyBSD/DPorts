@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/assp/files/510.assp.in,v 1.8 2012/11/17 05:58:59 svnexp Exp $
+# $FreeBSD: mail/assp/files/510.assp.in 300896 2012-07-14 13:54:48Z beat $
 #
 # Run ASSP's nightly housekeeping script, rebuildspamdb.pl
 # Delete old ASSP log files

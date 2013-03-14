@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/assp/files/assp.in,v 1.6 2012/11/17 05:58:59 svnexp Exp $
+# $FreeBSD: mail/assp/files/assp.in 300896 2012-07-14 13:54:48Z beat $
 #
 
 # PROVIDE: assp

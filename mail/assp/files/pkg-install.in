@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/mail/assp/files/pkg-install.in,v 1.10 2012/11/17 05:58:59 svnexp Exp $
+# $FreeBSD: mail/assp/files/pkg-install.in 300896 2012-07-14 13:54:48Z beat $
 
 if [ "${2}" = "POST-INSTALL" ]; then
     ASSP_USER=%%ASSP_USER%%
