@@ -2,7 +2,7 @@
 # Date created:		Fri 29 apr 2005
 # Whom:			thierry@pompo.net
 #
-# $FreeBSD: ports/games/monsterz/Makefile,v 1.12 2012/11/17 05:57:46 svnexp Exp $
+# $FreeBSD: games/monsterz/Makefile 313182 2013-03-02 03:55:25Z eadler $
 #
 
 PORTNAME=	monsterz
@@ -17,7 +17,7 @@ COMMENT=	Monsterz - arcade puzzle game
 LICENSE=	WTFPL
 LICENSE_NAME=	Do What The [expletive] You Want To Public License, Version 2
 LICENSE_FILE=	${WRKSRC}/COPYING
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/pygame/__init__.py:${PORTSDIR}/devel/py-game
 RUN_DEPENDS:=	${BUILD_DEPENDS}
