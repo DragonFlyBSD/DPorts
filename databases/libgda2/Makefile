@@ -2,7 +2,7 @@
 # Date created:				02 June 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgda2/Makefile,v 1.90 2012/11/17 05:55:09 svnexp Exp $
+# $FreeBSD: databases/libgda2/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $MCom: ports/databases/libgda2/Makefile,v 1.44 2008/03/11 04:21:46 mezz Exp $
 #
 
@@ -36,7 +36,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-bdb
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl"
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 
 MAN1=		gda-config-tool.1
 MAN5=		gda-config.5
