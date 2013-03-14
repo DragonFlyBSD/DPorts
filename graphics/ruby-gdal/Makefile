@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/graphics/ruby-gdal/Makefile,v 1.3 2012/12/09 06:32:14 svnexp Exp $
+# $FreeBSD: graphics/ruby-gdal/Makefile 313731 2013-03-09 16:56:58Z sunpoet $
 
 PORTNAME=	gdal
 PORTVERSION=	1.9.2
@@ -12,7 +12,10 @@ PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby binding for GDAL
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/swig:${PORTSDIR}/devel/swig13
+LICENSE=	MIT
+
+#BUILD_DEPENDS=	${LOCALBASE}/bin/swig:${PORTSDIR}/devel/swig13
+BUILD_DEPENDS=	${LOCALBASE}/bin/swig2.0:${PORTSDIR}/devel/swig20
 LIB_DEPENDS=	gdal:${PORTSDIR}/graphics/gdal
 
 LIBTOOLFILES=	# empty
@@ -24,13 +27,15 @@ USE_RUBY=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/swig/ruby
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|Config::CONFIG|Rb&|' ${WRKSRC}/RubyMakefile.mk
+	@${REINPLACE_CMD} -e '/^SWIG = swig/ s|$$|2.0|' ${WRKSRC}/../SWIGmake.base
+	@${REINPLACE_CMD} -e 's|Config::CONFIG|Rb&|g' ${WRKSRC}/RubyMakefile.mk
 
 do-configure:
 	@${DO_NADA}
 
+# include/cpl_config.h will exist after build phase
 pre-build:
-	${SED} -e '/^GDAL_ROOT/d' ${DATADIR}/GDALmake.opt > ${WRKSRC}/../../GDALmake.opt
-	${CP} ${LOCALBASE}/include/cpl_config.h ${WRKSRC}/../../port/
+	@${SED} -e '/^GDAL_ROOT/d' ${DATADIR}/GDALmake.opt > ${WRKSRC}/../../GDALmake.opt
+	@${CP} ${LOCALBASE}/include/cpl_config.h ${WRKSRC}/../../port/
 
 .include <bsd.port.mk>
