@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/audio/schism/Makefile,v 1.31 2012/12/22 17:58:44 svnexp Exp $
+# $FreeBSD: audio/schism/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	schism
 PORTVERSION=	20100101
@@ -10,7 +10,7 @@ MASTER_SITES=	http://schismtracker.org/dl/ \
 DISTNAME=	schismtracker-${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A module tracker editor/player resembling impulse tracker
+COMMENT=	Module tracker editor/player resembling impulse tracker
 
 LICENSE=	GPLv2
 
