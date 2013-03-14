@@ -1,8 +1,8 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/pylint/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: devel/pylint/Makefile 313546 2013-03-06 22:15:16Z mva $
 
 PORTNAME=	pylint
-PORTVERSION=	0.26.0
+PORTVERSION=	0.27.0
 PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	LOGILAB
