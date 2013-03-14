@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-wm/wmanager/files/patch-aa,v 1.11 2012/11/17 06:03:44 svnexp Exp $
+$FreeBSD: x11-wm/wmanager/files/patch-aa 300897 2012-07-14 14:29:18Z beat $
 
 diff -urN -urN -x .svn ../vendor/wmanager/Makefile ./Makefile
 --- ../vendor/wmanager/Makefile	2007-12-11 12:42:04.000000000 +0200
