@@ -1,9 +1,5 @@
-# Ports collection makefile for:	xstroke
-# Date created:			May 14, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/x11/xstroke/Makefile,v 1.26 2012/11/17 06:03:23 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: x11/xstroke/Makefile 313635 2013-03-08 11:32:11Z bapt $
 
 PORTNAME=	xstroke
 PORTVERSION=	0.5.12
@@ -17,7 +13,7 @@ COMMENT=	Fullscreen gesture recognition
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USE_BISON=	build
+USES=		bison
 USE_XORG=	xft x11 xext xi xtst
 USE_IMAKE=	yes
 
