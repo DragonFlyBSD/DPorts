@@ -1,5 +1,5 @@
 # Created by: Christian Laursen <xi@borderworlds.dk>
-# $FreeBSD: ports/net/nbd-server/Makefile,v 1.23 2012/11/17 06:00:06 svnexp Exp $
+# $FreeBSD: net/nbd-server/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	nbd-server
 PORTVERSION=	2.8.5
@@ -14,6 +14,7 @@ COMMENT=	Server for the Linux network block device (nbd)
 
 USE_BZIP2=	yes
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --enable-lfs --enable-syslog
 
