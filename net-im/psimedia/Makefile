@@ -2,7 +2,7 @@
 # Date created:		2009-08-10
 # Whom:			Max Brazhnikov <makc@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/psimedia/Makefile,v 1.4 2012/11/17 06:00:29 svnexp Exp $
+# $FreeBSD: net-im/psimedia/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	psimedia
@@ -35,6 +35,13 @@ PLIST_SUB+=	DEBUG="@comment "
 CONFIGURE_ARGS+=	--debug
 PLIST_SUB+=	DEBUG=""
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/gstprovider/rwcontrol.h \
+		${WRKSRC}/gstprovider/gstthread.h \
+		${WRKSRC}/gstprovider/gstelements/static/gstelements.h \
+		${WRKSRC}/gstprovider/gstcustomelements/gstcustomelements.h	
 
 do-install:
 	${MKDIR} ${PREFIX}/${PSI_PLUGIN_DIR}
