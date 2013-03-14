@@ -1,5 +1,5 @@
 # Created by: smyru@heron.pl
-# $FreeBSD: ports/polish/gnugadu2/Makefile,v 1.60 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: polish/gnugadu2/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	gnugadu2
 PORTVERSION=	2.3.0
@@ -162,6 +162,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,=.*},=${PREFIX},' ${WRKSRC}/src/plugins/dbus/org.freedesktop.im.GG.service
 	@${REINPLACE_CMD} -e 's, -ldl,, ; s,(libdir)/pkgconfig,(prefix)/libdata/pkgconfig,' ${WRKSRC}/lib/Makefile.in
 	@${REINPLACE_CMD} -e 's,(datadir)/pixmaps,(datadir)/icons/hicolor/48x48/apps,' ${WRKSRC}/pixmaps/Makefile.in
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' ${WRKSRC}/src/plugins/GUI/gtkimhtml.c
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/applications
