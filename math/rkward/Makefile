@@ -1,9 +1,9 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: ports/math/rkward/Makefile,v 1.44 2013/01/04 18:45:35 svnexp Exp $
+# $FreeBSD: math/rkward/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	rkward
 DISTVERSION=	0.4.9a
-PORTREVISION=	18
+PORTREVISION=	19
 PORTEPOCH=	3
 CATEGORIES=	math
 MASTER_SITES=	SF/${PORTNAME}/Historical_Releases/0.4.x_and_earlier/0.4.9a%20%28KDE3%29
