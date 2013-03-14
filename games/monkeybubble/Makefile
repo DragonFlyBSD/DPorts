@@ -2,7 +2,7 @@
 # Date created:				06 October 2003
 # Whom:					Adam Weinberger
 #
-# $FreeBSD: ports/games/monkeybubble/Makefile,v 1.38 2012/11/17 05:57:46 svnexp Exp $
+# $FreeBSD: games/monkeybubble/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	monkeybubble
@@ -32,5 +32,9 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|-g -O2||g ; \
 		 s|-Werror||g'
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/src/net/message-handler.c \
+		${WRKSRC}/src/net/simple-server.c \
+		${WRKSRC}/src/ui/main.c
 
 .include <bsd.port.post.mk>
