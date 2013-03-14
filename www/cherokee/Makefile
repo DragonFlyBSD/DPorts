@@ -1,5 +1,5 @@
 # Created by: silence <oksala@videotron.ca>
-# $FreeBSD: ports/www/cherokee/Makefile,v 1.112 2013/02/07 14:08:05 svnexp Exp $
+# $FreeBSD: www/cherokee/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	cherokee
 PORTVERSION=	1.2.101
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SAMBA}
 MASTER_SITE_SUBDIR=cherokee/1.2/${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Extremely fast and flexible web server
 
 USE_GNOME=	gnomehack
