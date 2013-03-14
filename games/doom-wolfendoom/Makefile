@@ -1,9 +1,5 @@
-# New ports collection makefile for:	doom-wolfendoom
-# Date created:				21 Sep 2005
-# Whom:					Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/games/doom-wolfendoom/Makefile,v 1.7 2012/12/10 01:26:30 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: games/doom-wolfendoom/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	wolfendoom
 PORTVERSION=	1.0
@@ -12,7 +8,7 @@ MASTER_SITES=	http://www.ijs.si/~lesi/distfiles/doom/
 PKGNAMEPREFIX=	${DMPKGNAMEPREFIX}
 DISTNAME=	${PORTNAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Wolfenstein 3D levels ported to Doom II
 
 USE_BZIP2=	yes
