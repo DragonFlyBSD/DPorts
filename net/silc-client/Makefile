@@ -2,7 +2,7 @@
 # Date created:				Thu Nov 8 01:50:05 BRST 2001
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/net/silc-client/Makefile,v 1.71 2013/01/02 13:50:30 svnexp Exp $
+# $FreeBSD: net/silc-client/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	silc
@@ -28,6 +28,7 @@ MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
@@ -74,6 +75,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/--libtool-enable-shared//' \
 		${WRKSRC}/lib/silccrypt/Makefile.in
 	@${REINPLACE_CMD} -e 's/^MODULESDIR="$$silc_prefix/MODULESDIR="$$silc_prefix\/share\/silc/' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|glib/.*\.h|glib.h|g' \
+		${WRKSRC}/apps/irssi/src/silc/core/silc-core.c
 
 post-install:
 .ifndef(IRSSI_PLUGIN)
