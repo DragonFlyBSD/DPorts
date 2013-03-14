@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/link-grammar/Makefile,v 1.17 2012/12/31 17:09:12 svnexp Exp $
+# $FreeBSD: textproc/link-grammar/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	link-grammar
 PORTVERSION=	4.7.4
@@ -8,9 +8,9 @@ MASTER_SITES=	http://www.abisource.com/downloads/${PORTNAME}/${PORTVERSION}/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A grammar checking library
 
-LIB_DEPENDS=	pspell.16:${PORTSDIR}/textproc/aspell
+LIB_DEPENDS=	pspell:${PORTSDIR}/textproc/aspell
 
-USE_GNOME=	gnomehack ltverhack pkgconfig
+USE_GNOME=	gnomehack ltverhack
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
