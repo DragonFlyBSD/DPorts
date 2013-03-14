@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------
 # Post-installation instructions for the FreeBSD port/package of Mailman
-# $FreeBSD: ports/mail/mailman/files/FreeBSD-post-install-notes,v 1.7 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/mailman/files/FreeBSD-post-install-notes 300896 2012-07-14 13:54:48Z beat $
 # ----------------------------------------------------------------------
 
 
