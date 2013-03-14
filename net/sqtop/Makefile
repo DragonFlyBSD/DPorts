@@ -2,7 +2,7 @@
 # Date created:		2010-09-05
 # Whom:			Marco Steinbach <coco@webdev.c0c0.intra>
 #
-# $FreeBSD: ports/net/sqtop/Makefile,v 1.4 2012/11/17 06:00:21 svnexp Exp $
+# $FreeBSD: net/sqtop/Makefile 313460 2013-03-05 17:07:43Z miwi $
 #
 
 PORTNAME=	sqtop
@@ -22,12 +22,14 @@ PLIST_FILES=	bin/sqtop
 MAN1=		sqtop.1
 
 GNU_CONFIGURE=	yes
+USE_NCURSES=	yes
 
-OPTIONS=	NCURSES	"Enable ncurses user interface"	On
+OPTIONS_DEFINE=		NCURSES
+OPTIONS_DEFAULT=	NCURSES
 
 .include <bsd.port.options.mk>
 
-.if defined(WITHOUT_NCURSES)
+.if ! ${PORT_OPTIONS:MNCURSES}
 CONFIGURE_ARGS=	--disable-ui
 .endif
 
