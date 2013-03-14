@@ -1,5 +1,4 @@
-# Create by: asami
-# $FreeBSD: ports/sysutils/xsysstats/Makefile,v 1.32 2012/12/10 01:26:33 svnexp Exp $
+# $FreeBSD: sysutils/xsysstats/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	xsysstats
 PORTVERSION=	1.51
@@ -9,8 +8,8 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	utilities
 DISTNAME=	${PORTNAME}${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A system information display tool
+MAINTAINER=	c.petrik.sosa@gmail.com
+COMMENT=	System information display tool
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
