@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/ndesk-options/Makefile,v 1.1 2013/01/21 14:47:29 svnexp Exp $
+# $FreeBSD: devel/ndesk-options/Makefile 313633 2013-03-08 10:51:34Z kwm $
 
 PORTNAME=	ndesk-options
 PORTVERSION=	0.2.1
@@ -12,6 +12,7 @@ BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 
 GNU_CONFIGURE=	yes
+USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 
 post-patch:

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/ndesk-options/pkg-plist,v 1.1 2013/01/21 14:47:29 svnexp Exp $
+@comment $FreeBSD: devel/ndesk-options/pkg-plist 310769 2013-01-21 14:14:17Z romain $
 lib/monodoc/sources/ndesk-options-docs.source
 lib/monodoc/sources/ndesk-options-docs.tree
 lib/monodoc/sources/ndesk-options-docs.zip
