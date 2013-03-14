@@ -1,13 +1,9 @@
-# New ports collection makefile for:	bmp-festalon
-# Date created:				15 Jul 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/audio/bmp-festalon/Makefile,v 1.6 2012/11/17 05:54:28 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: audio/bmp-festalon/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PKGNAMEPREFIX=	bmp-
 
-COMMENT=	A beep-media-player plugin for playing .nsf and .hes audio files
+COMMENT=	Beep-media-player plugin for playing .nsf and .hes audio files
 
 LICENSE=	GPLv2
 
