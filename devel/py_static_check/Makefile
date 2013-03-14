@@ -2,7 +2,7 @@
 # Date created:		2011-12-20
 # Whom:			Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
 #
-# $FreeBSD: ports/devel/py_static_check/Makefile,v 1.2 2012/11/17 05:56:54 svnexp Exp $
+# $FreeBSD: devel/py_static_check/Makefile 313690 2013-03-09 06:29:32Z ak $
 #
 
 PORTNAME=	py_static_check
@@ -16,7 +16,7 @@ COMMENT=	Statically check your python code
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flakes>=0.5:${PORTSDIR}/devel/py-flakes
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyflakes>=0.5:${PORTSDIR}/devel/py-pyflakes
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
