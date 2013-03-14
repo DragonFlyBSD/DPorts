@@ -1,8 +1,8 @@
 # Created by: clive@FreeBSD.org
-# $FreeBSD: ports/databases/p5-DBD-ODBC/Makefile,v 1.45 2013/01/25 14:51:18 svnexp Exp $
+# $FreeBSD: databases/p5-DBD-ODBC/Makefile 313580 2013-03-07 12:23:00Z tobez $
 
 PORTNAME=	DBD-ODBC
-PORTVERSION=	1.41
+PORTVERSION=	1.43
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MJEVANS
