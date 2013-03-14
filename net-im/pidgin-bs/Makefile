@@ -2,7 +2,7 @@
 # Date created:				15 Mar 2010
 # Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/pidgin-bs/Makefile,v 1.11 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: net-im/pidgin-bs/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	pidgin-bs
@@ -22,6 +22,7 @@ RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
+USE_GMAKE=	yes
 USE_GNOME=	gtk20
 USE_LDCONFIG=	${PREFIX}/lib/pidgin
 
