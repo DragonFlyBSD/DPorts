@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/science/R-cran-som/Makefile,v 1.5 2013/01/04 18:45:37 svnexp Exp $
+# $FreeBSD: science/R-cran-som/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	som
 DISTVERSION=	0.3-5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	science
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
