@@ -2,7 +2,7 @@
 # Date created:         2003-01-01
 # Whom:                 Juli Mallett
 #
-# $FreeBSD: ports/x11-toolkits/gtk-sharp10/Makefile,v 1.69 2012/11/17 06:03:35 svnexp Exp $
+# $FreeBSD: x11-toolkits/gtk-sharp10/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #   $Id: Makefile,v 1.13 2006/10/08 01:57:16 killfill Exp $
 #
 
@@ -34,6 +34,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|enable_gda=yes|enable_gda=no|g ; \
 		s|enable_gnomedb=yes|enable_gnomedb=no|g ; \
 		s|libgtkhtml-3.8|libgtkhtml-3.14|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/glib/glue/slist.c ${WRKSRC}/glib/glue/list.c
 
 pre-su-install:
 	${MKDIR} ${LOCALBASE}/share/gapi
