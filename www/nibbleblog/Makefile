@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nibbleblog
-# Date created:				15 January 2011
-# Whom:		Marek Holienka	<marekholienka@gmail.com>
-#
-# $FreeBSD: ports/www/nibbleblog/Makefile,v 1.5 2012/11/17 06:02:43 svnexp Exp $
-#
+# Created by: Marek Holienka	<marekholienka@gmail.com>
+# $FreeBSD: www/nibbleblog/Makefile 313460 2013-03-05 17:07:43Z miwi $
 
 PORTNAME=	nibbleblog
 PORTVERSION=	3.0.2
@@ -17,8 +13,8 @@ COMMENT=	A lightweight blog system for general use
 
 RUN_DEPENDS=	pear:${PORTSDIR}/devel/pear
 
-OPTIONS=	APACHE "Enable Apache Support" on \
-		LIGHTTPD "Enable Lighttpd Support" off
+OPTIONS_DEFINE=	APACHE LIGHTTPD
+OPTIONS_DEFAULT=	APACHE
 
 USE_ZIP=	yes
 NO_BUILD=	yes
@@ -28,10 +24,10 @@ SUB_FILES=	pkg-message
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_APACHE)
+.if ${PORT_OPTIONS:MAPACHE}
 USE_APACHE_RUN=	22+
 .endif
-.if defined(WITH_LIGHTTPD)
+.if ${PORT_OPTIONS:MLIGHTTPD}
 RUN_DEPENDS+=	lighttpd:${PORTSDIR}/www/lighttpd
 .endif
 
