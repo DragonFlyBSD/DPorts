@@ -2,7 +2,7 @@
 # Date created:		12 Jul 2007
 # Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
 #
-# $FreeBSD: ports/games/memonix/Makefile,v 1.16 2012/11/17 05:57:45 svnexp Exp $
+# $FreeBSD: games/memonix/Makefile 313182 2013-03-02 03:55:25Z eadler $
 #
 
 PORTNAME=	memonix
@@ -21,7 +21,7 @@ COMMENT=	Brain teasers, puzzle, and memory games for kids in one pack
 LICENSE=	unknown GPLv2
 LICENSE_COMB=	dual
 LICENSE_NAME_unknown=	Freeware License
-LICENSE_PERMS_unknown=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS_unknown=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_FILE_unknown=	${WRKDIR}/Memonix/License
 LICENSE_DISTFILE_unknown=	memx16.tar.gz
 LICENSE_DISTFILE_GPLv2=	${DISTNAME}${EXTRACT_SUFX}
