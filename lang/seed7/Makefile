@@ -1,8 +1,8 @@
 # Created by: gahr
-# $FreeBSD: ports/lang/seed7/Makefile,v 1.56 2013/02/20 10:47:18 svnexp Exp $
+# $FreeBSD: lang/seed7/Makefile 313572 2013-03-07 09:54:34Z gahr $
 
 PORTNAME=	seed7
-DISTVERSION=	05_20130217
+DISTVERSION=	05_20130303
 CATEGORIES=	lang
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTNAME}/
 DISTNAME=	${PORTNAME}_${DISTVERSION}
