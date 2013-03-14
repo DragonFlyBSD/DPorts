@@ -1,9 +1,5 @@
-# New ports collection makefile for:	micro_proxy
-# Date created:				 2 Sep 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/net/micro_proxy/Makefile,v 1.8 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: net/micro_proxy/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	micro_proxy
 PORTVERSION=	20021030
@@ -13,7 +9,7 @@ MASTER_SITES=	http://www.acme.com/software/micro_proxy/ \
 DISTNAME=	${PORTNAME}_30oct2002
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A really small HTTP/HTTPS proxy
+COMMENT=	Really small HTTP/HTTPS proxy
 
 MAKE_JOBS_SAFE=	yes
 
