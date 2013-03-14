@@ -1,8 +1,8 @@
 # Created by: Nikolay Pavlov <qpadla@gmail.com>
-# $FreeBSD: net-im/openfire/Makefile 313098 2013-02-28 15:40:55Z gahr $
+# $FreeBSD: net-im/openfire/Makefile 313505 2013-03-06 08:39:55Z gahr $
 
 PORTNAME=	openfire
-PORTVERSION=	3.8.0
+PORTVERSION=	3.8.1
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net-im java
@@ -66,6 +66,10 @@ do-install:
 
 	(cd ${INSTALL_WRKSRC}/resources && ${FIND} . \! -path ./security\* \
 	| ${CPIO} -pvdmu -R ${SHAREOWN}:${SHAREGRP} ${DATADIR}/resources)
+
+#	always install admin interface
+	(cd ${INSTALL_WRKSRC}/plugins/admin && ${FIND} . \
+	| ${CPIO} -pvdmu -R ${SHAREOWN}:${SHAREGRP} ${DATADIR}/plugins/admin)
 
 .if ${PORT_OPTIONS:MPLUGINS}
 	(cd ${INSTALL_WRKSRC}/plugins && ${FIND} . \
