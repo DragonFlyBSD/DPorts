@@ -1,9 +1,5 @@
-# New ports collection makefile for:	clamassassin
-# Date created:				16 October 2004
-# Whom:					Matt <matt@xtaz.net>
-#
-# $FreeBSD: ports/security/clamassassin/Makefile,v 1.20 2012/11/17 06:01:01 svnexp Exp $
-#
+# Created by: Matt <matt@xtaz.net>
+# $FreeBSD: security/clamassassin/Makefile 313460 2013-03-05 17:07:43Z miwi $
 
 PORTNAME=	clamassassin
 PORTVERSION=	1.2.4
@@ -22,17 +18,19 @@ PLIST_FILES=	bin/clamassassin
 
 GNU_CONFIGURE=	yes
 
-OPTIONS=	CLAMDSCAN "Scanning using clamd" on \
-		SUBREWRITE "Mail subject rewriting" off
+OPTIONS_DEFINE=	CLAMDSCAN SUBREWRITE
+OPTIONS_DEFAULT=	CLAMDSCAN
+CLAMDSCAN_DESC=		Scanning using clamd
+SUBREWRITE_DESC=	Mail subject rewriting
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined (WITHOUT_CLAMDSCAN)
+.if ${PORT_OPTIONS:MCLAMDSCAN}
 CONFIGURE_ARGS+=	--enable-clamdscan
 .endif
 
-.if defined (WITH_SUBREWRITE)
+.if ${PORT_OPTIONS:MSUBREWRITE}
 CONFIGURE_ARGS+=	--enable-subject-rewrite
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
