@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/www/firefox-i18n/Makefile,v 1.85 2013/02/20 00:52:22 svnexp Exp $
+# $FreeBSD: www/firefox-i18n/Makefile 313676 2013-03-08 22:27:39Z flo $
 
 PORTNAME=	firefox-i18n
-PORTVERSION=	19.0
+PORTVERSION=	19.0.2
 CATEGORIES=	www
 MASTER_SITE_SUBDIR=	firefox/releases/${PORTVERSION}/linux-i686/xpi
 PKGNAMEPREFIX=
