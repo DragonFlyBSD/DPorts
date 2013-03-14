@@ -1,8 +1,8 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: ports/www/p5-URI-Encode/Makefile,v 1.7 2012/11/19 14:42:09 svnexp Exp $
+# $FreeBSD: www/p5-URI-Encode/Makefile 313573 2013-03-07 10:33:32Z culot $
 
 PORTNAME=	URI-Encode
-PORTVERSION=	0.08
+PORTVERSION=	0.09
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MITHUN
