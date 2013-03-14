@@ -1,0 +1,59 @@
+# New ports collection makefile for:	bugsquish
+# Date created:				2004 05 July
+# Whom:					Adam Weinberger <adamw@FreeBSD.org>
+#
+# $FreeBSD: ports/games/bugsquish/Makefile,v 1.16 2012/11/17 05:57:33 svnexp Exp $
+#
+
+PORTNAME=	bugsquish
+PORTVERSION=	0.0.6
+PORTREVISION=	10
+CATEGORIES=	games
+MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/bugsquish/src/ \
+		ftp://ftp.billsgames.com/unix/x/bugsquish/src/
+
+MAINTAINER=	nemysis@gmx.ch
+COMMENT=	Action game not unlike light gun arcade games
+
+LICENSE=	GPLv2
+
+USE_SDL=	image mixer sdl
+USE_GMAKE=	yes
+
+PLIST_FILES=	bin/${PORTNAME} \
+		share/pixmaps/${PORTNAME}.png
+
+PORTDATA=	*
+PORTDOCS=	AUTHORS.txt CHANGES.txt README.txt TODO.txt
+
+post-patch:
+# Fix data location
+	@${REINPLACE_CMD} -e 's|/usr/share/bugsquish/|${DATADIR}/|' ${WRKSRC}/Makefile
+# Fix CFLAGS/LDFLAGS
+	@${REINPLACE_CMD} -e 's|CFLAGS=-Wall -O2|CFLAGS+=|' \
+	-e 's|SDL_CFLAGS :=|SDL_CFLAGS+=|' \
+	-e 's|SDL_LDFLAGS :=|SDL_LDFLAGS+=|' ${WRKSRC}/Makefile
+
+.include <bsd.port.options.mk>
+
+do-install:
+# Executable
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
+
+# Data
+.  for d in embedded images music sounds
+	@(cd ${WRKSRC}/data && ${COPYTREE_SHARE} ${d} ${DATADIR})
+.  endfor
+
+# Pixmaps
+	${INSTALL_DATA} ${WRKSRC}/data/images/icon.png ${PREFIX}/share/pixmaps/${PORTNAME}.png
+
+# Documentation
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${DOCSDIR}
+.  for f in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+.  endfor
+.endif
+
+.include <bsd.port.mk>
