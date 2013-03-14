@@ -1,4 +1,4 @@
-# $FreeBSD: editors/nano-devel/Makefile 313163 2013-03-01 19:14:31Z eadler $
+# $FreeBSD: editors/nano-devel/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	nano
 PORTVERSION=	2.3.1
@@ -27,6 +27,8 @@ PLIST_SUB+=	NLS="@comment "
 INFO=		nano
 MAN1=		nano.1 rnano.1
 MAN5=		nanorc.5
+
+MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
