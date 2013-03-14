@@ -1,9 +1,5 @@
-# New ports collection makefile for:	brickshooter
-# Date created:		09 May 2008
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/brickshooter/Makefile,v 1.11 2012/11/17 05:57:33 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: ports/games/brickshooter/Makefile,v 1.12 2013/02/04 06:44:10 svnexp Exp $
 
 PORTNAME=	brickshooter
 PORTVERSION=	0.04
@@ -18,6 +14,8 @@ COMMENT=	Push blocks on to the playing field, match block colors to remove them
 USE_SDL=	sdl mixer image
 
 PORTDOCS=	*
+
+.include <bsd.port.options.mk>
 
 post-patch:
 .for dir in gfx levels snd
@@ -35,7 +33,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${dir}/* ${DATADIR}/${dir}
 .endfor
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
