@@ -1,8 +1,8 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: ports/www/nginx-devel/Makefile,v 1.535 2013/02/24 07:41:40 svnexp Exp $
+# $FreeBSD: www/nginx-devel/Makefile 313591 2013-03-07 14:30:47Z osa $
 
 PORTNAME=	nginx
-PORTVERSION=	1.3.13
+PORTVERSION=	1.3.14
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	${MASTER_SITE_LOCAL}
@@ -720,7 +720,7 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_sflow_config.c \
 .endif
 
 .if ${PORT_OPTIONS:MSLOWFS_CACHE}
-NGINX_SLOWFS_CACHE_VERSION=	1.9
+NGINX_SLOWFS_CACHE_VERSION=	1.10
 MASTER_SITES+=	http://labs.frickle.com/files/:slowfs_cache
 DISTFILES+=	ngx_slowfs_cache-${NGINX_SLOWFS_CACHE_VERSION}.tar.gz:slowfs_cache
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_slowfs_cache-${NGINX_SLOWFS_CACHE_VERSION}
@@ -786,7 +786,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-xss-nginx-module-${GIT_XSS_VERSIO
 .if ${PORT_OPTIONS:MSPDY}
 USE_OPENSSL_PORT=	yes
 USE_HTTP_SSL=	yes
-NGINX_SPDY_VERSION=	65
+NGINX_SPDY_VERSION=	66
 PATCH_SITES=	http://nginx.org/patches/spdy/:spdy
 PATCHFILES=	patch.spdy-${NGINX_SPDY_VERSION}_${PORTVERSION}.txt:spdy
 PATCH_DIST_STRIP=	-p1
