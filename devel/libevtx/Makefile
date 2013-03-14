@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libevtx/Makefile 313170 2013-03-01 22:36:14Z pawel $
+# $FreeBSD: devel/libevtx/Makefile 313730 2013-03-09 16:35:59Z rm $
 
 PORTNAME=	libevtx
-DISTVERSION=	alpha-20130226
+DISTVERSION=	alpha-20130303
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
@@ -14,7 +14,7 @@ LICENSE=	LGPL3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack
+USES=		pathfix
 USE_ICONV=	yes
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
