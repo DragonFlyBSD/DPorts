@@ -1,9 +1,5 @@
-# Ports collection makefile for:	databases/py-sqlkit
-# Date created:				2011-05-09
-# Whom:					bsam
-#
-# $FreeBSD: ports/databases/py-sqlkit/Makefile,v 1.6 2012/11/17 05:55:23 svnexp Exp $
-#
+# Created by: bsam
+# $FreeBSD: databases/py-sqlkit/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
 
 PORTNAME=	sqlkit
 PORTVERSION=	0.9.5.1
@@ -61,7 +57,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}psycopg2>=2.0.8:${PORTSDIR}/databases/py-ps
 .endif
 
 .if ${PORT_OPTIONS:MSQLITE}
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 .endif
 
 .if ${PORT_OPTIONS:MSYBASE}
