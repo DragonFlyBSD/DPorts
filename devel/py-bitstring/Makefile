@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-bitstring
-# Date created:		2010-11-29
-# Whom:			Sofian Brabez <sbrabez@gmail.com>
-#
-# $FreeBSD: ports/devel/py-bitstring/Makefile,v 1.10 2012/11/17 05:56:45 svnexp Exp $
-#
+# Created by: Sofian Brabez <sbrabez@gmail.com>
+# $FreeBSD: devel/py-bitstring/Makefile 313451 2013-03-05 13:24:13Z sbz $
 
 PORTNAME=	bitstring
-PORTVERSION=	3.0.2
+PORTVERSION=	3.1.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,13 +20,15 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 
 PORTDOCS=	PKG-INFO README.txt release_notes.txt
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
 .endif
 
-regression-test:
+regression-test: extract
 	@(cd ${WRKSRC}/test && ${PYTHON_CMD} -c 'import unittest, test_${PORTNAME}; unittest.main(test_${PORTNAME})')
 
 .include <bsd.port.mk>
