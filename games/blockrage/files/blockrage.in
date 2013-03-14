@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/games/blockrage/files/blockrage.in,v 1.3 2013/02/01 15:41:55 svnexp Exp $
+
+echo "Block Rage: Starting up..."
+cd "%%DATADIR%%"
+./blockrage
