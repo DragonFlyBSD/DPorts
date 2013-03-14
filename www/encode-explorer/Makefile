@@ -1,9 +1,5 @@
-# New ports collection makefile for:	encode-explorer
-# Date created:			Thu Apr 22 11:24:23 CEST 2010
-# Whom:				Frank Wall <fw@moov.de>
-#
-# $FreeBSD: ports/www/encode-explorer/Makefile,v 1.2 2012/11/17 06:02:32 svnexp Exp $
-#
+# Created by: Frank Wall <fw@moov.de>
+# $FreeBSD: www/encode-explorer/Makefile 313599 2013-03-07 16:53:45Z miwi $
 
 PORTNAME=	encode
 PORTVERSION=	5.0
@@ -21,15 +17,16 @@ WANT_PHP_WEB=	yes
 USE_ZIP=	yes
 NO_BUILD=	yes
 
-OPTIONS=	EXPERIMENTAL "Enable experimental features" off
+OPTIONS_DEFINE=	EXPERIMENTAL
+EXPERIMENTAL_DESC=	Experimental features
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 WWWDIR=		${PREFIX}/www/${PORTNAME}${PKGNAMESUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_EXPERIMENTAL)
+.if ${PORT_OPTIONS:MEXPERIMENTAL}
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-index-php-experimental
 .endif
 
@@ -43,4 +40,4 @@ post-install:
 	${CP} ${WRKSRC}/README.txt ${DOCSDIR}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
