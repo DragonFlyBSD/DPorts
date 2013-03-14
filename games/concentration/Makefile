@@ -1,0 +1,30 @@
+# New ports collection makefile for:	concentration
+# Date created:				10 Nov 2005
+# Whom:					Dmitry Marakasov <amdmi3@amdmi3.ru>
+#
+# $FreeBSD: ports/games/concentration/Makefile,v 1.19 2012/11/17 05:57:34 svnexp Exp $
+#
+
+PORTNAME=	concentration
+PORTVERSION=	1.2
+PORTREVISION=	10
+CATEGORIES=	games
+MASTER_SITES=	http://www.shiftygames.com/concentration/ \
+		http://mirror.amdmi3.ru/distfiles/
+
+MAINTAINER=	amdmi3@FreeBSD.org
+COMMENT=	Find all matching pairs of icons as fast as possible
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_SDL=	sdl mixer image ttf
+
+CPPFLAGS+=	`${SDL_CONFIG} --cflags`
+LDFLAGS+=	`${SDL_CONFIG} --libs`
+
+MAN6=		concentration.6
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-std=gnu99 ||g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>
