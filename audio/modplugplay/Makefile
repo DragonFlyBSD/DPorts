@@ -1,9 +1,5 @@
-# New ports collection makefile for:   modplugplay
-# Date created:		3 February 2004
-# Whom:			Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/audio/modplugplay/Makefile,v 1.13 2012/11/17 05:54:38 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: audio/modplugplay/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	modplugplay
 PORTVERSION=	1.0
@@ -14,7 +10,7 @@ MASTER_SITES=	http://gnu.ethz.ch/linuks.mine.nu/modplugplay/ \
 		http://energy.critical.ch/distfiles/
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A commandline music mod player using libmodplug
+COMMENT=	Command-line music mod player using libmodplug
 
 LICENSE=	GPLv2
 
