@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/py-GinGin/pkg-plist,v 1.3 2012/11/17 06:02:58 svnexp Exp $
+@comment $FreeBSD: www/py-GinGin/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/GinGin_host.py
 %%PYTHON_SITELIBDIR%%/GinGin/GinGin_CGI.py
 %%PYTHON_SITELIBDIR%%/GinGin/GinGin_CGI.pyc
