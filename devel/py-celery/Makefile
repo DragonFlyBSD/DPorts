@@ -1,5 +1,5 @@
 # Created by: Alexandros Kosiaris <akosiaris+ports@gmail.com>
-# $FreeBSD: ports/devel/py-celery/Makefile,v 1.4 2012/11/17 05:56:45 svnexp Exp $
+# $FreeBSD: devel/py-celery/Makefile 306363 2012-10-25 01:24:44Z wen $
 
 PORTNAME=	celery
 PORTVERSION=	2.5.5
