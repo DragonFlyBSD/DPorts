@@ -1,9 +1,5 @@
-# New ports collection makefile for:    bytebench
-# Date created:         28 December 1995
-# Whom:                 se
-#
-# $FreeBSD: ports/benchmarks/unixbench/Makefile,v 1.26 2012/11/17 05:54:51 svnexp Exp $
-#
+# Created by: se
+# $FreeBSD: benchmarks/unixbench/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	unixbench
 PORTVERSION=	4.1.0
@@ -12,7 +8,7 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.tux.org/pub/tux/benchmarks/System/unixbench/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	The BYTE magazine's Public Domain benchmark for UNIX
 
 SUB_FILES=	unixbench
