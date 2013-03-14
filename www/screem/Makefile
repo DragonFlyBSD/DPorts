@@ -2,7 +2,7 @@
 # Date created:		05 Nov 1999
 # Whom:			Will Andrews <andrews@technologist.com>
 #
-# $FreeBSD: ports/www/screem/Makefile,v 1.82 2012/11/17 06:03:05 svnexp Exp $
+# $FreeBSD: www/screem/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	screem
@@ -49,5 +49,30 @@ post-patch:
 		s|-DGTK_DISABLE_DEPRECATED||g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|\&\& make|\&\& $$(MAKE)|g' \
 		${WRKSRC}/tests/Makefile.in
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/include/screem-markup.h \
+		${WRKSRC}/include/screem-mdi.h \
+		${WRKSRC}/include/screem-tagtree.h \
+		${WRKSRC}/libegg/util/egg-macros.h \
+		${WRKSRC}/src/screem-cvs.c \
+		${WRKSRC}/src/screem-dtd-db.c \
+		${WRKSRC}/src/screem-file-browser.c \
+		${WRKSRC}/src/screem-markup.c \
+		${WRKSRC}/src/screem-site-parse.c
+	@${REINPLACE_CMD} -e 's|glib/glist.h>|glib.h>|g' \
+		-e 's|glib/gconvert.h>|glib.h>|g' \
+		-e 's|glib/gunicode.h>|glib.h>|g' \
+		-e 's|glib/gstrfuncs.h>|glib.h>|g' \
+		-e 's|glib/gfileutils.h>|glib.h>|g' \
+		-e 's|glib/ghash.h>|glib.h>|g' \
+		${WRKSRC}/plugins/entityWizard/entityWizard.c \
+		${WRKSRC}/src/screem-mdi.c \
+		${WRKSRC}/src/screem-page.c \
+		${WRKSRC}/src/screem-search.c \
+		${WRKSRC}/src/screem-site-ui.c \
+		${WRKSRC}/src/screem-site.c \
+		${WRKSRC}/src/screem-window-menus.c \
+		${WRKSRC}/src/fileops.c \
+		${WRKSRC}/src/support.c
 
 .include <bsd.port.mk>
