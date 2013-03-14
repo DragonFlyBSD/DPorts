@@ -2,12 +2,12 @@
 # Date created:                      Oct 26 2009
 # Whom:                              Tim Niemueller <tim@niemueller.de>
 #
-# $FreeBSD: ports/devel/trac-bitten/Makefile,v 1.3 2012/11/17 05:57:05 svnexp Exp $
+# $FreeBSD: devel/trac-bitten/Makefile 313439 2013-03-05 07:12:24Z rm $
 #
 
 PORTNAME=	bitten
 PORTVERSION=	0.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel www python
 MASTER_SITES=	http://ftp.edgewall.com/pub/bitten/ \
 		LOCAL/glarkin
@@ -29,7 +29,7 @@ BITTEN_GID=	952
 OPTIONS=	BITTEN_MASTER "Build bitten master" ON
 .include <bsd.port.options.mk>
 
-BUILD_DEPENDS+=	easy_install:${PORTSDIR}/devel/py-setuptools
+BUILD_DEPENDS+=	easy_install:${PORTSDIR}/devel/py-distribute
 .if defined(WITH_BITTEN_MASTER)
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 .endif

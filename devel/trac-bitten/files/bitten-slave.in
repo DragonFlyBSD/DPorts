@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/trac-bitten/files/bitten-slave.in,v 1.3 2012/11/17 05:57:05 svnexp Exp $
+# $FreeBSD: devel/trac-bitten/files/bitten-slave.in 300896 2012-07-14 13:54:48Z beat $
 #
 # PROVIDE: bitten_slave
 # REQUIRE: LOGIN
