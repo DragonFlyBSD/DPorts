@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/R-cran-rgdal/Makefile,v 1.23 2013/02/08 16:02:53 svnexp Exp $
+# $FreeBSD: graphics/R-cran-rgdal/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	rgdal
 DISTVERSION=	0.8-5
+PORTREVISION=	1
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
