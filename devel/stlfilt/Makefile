@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/devel/stlfilt/Makefile,v 1.13 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: devel/stlfilt/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	stlfilt
 PORTVERSION=	20080203
@@ -9,7 +9,7 @@ DISTNAME=	g${PORTNAME}
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	eadler@FreeBSD.org
-COMMENT=	An STL Error Message Decryptor for C++
+COMMENT=	STL Error Message Decryptor for C++
 
 EXTRACT_CMD=	${TAR}
 EXTRACT_BEFORE_ARGS=	-xf
