@@ -2,7 +2,7 @@
 # Date created:		2005-06-13
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/present/Makefile,v 1.19 2012/11/17 05:56:43 svnexp Exp $
+# $FreeBSD: ports/devel/present/Makefile,v 1.20 2013/02/14 10:22:19 svnexp Exp $
 #   $MCom: ports/devel/present/Makefile,v 1.8 2006/01/31 22:17:59 ahze Exp $
 #
 
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GNOME=	gnomehack intlhack ltverhack
 
 .include <bsd.port.mk>
