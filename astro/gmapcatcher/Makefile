@@ -1,4 +1,4 @@
-# $FreeBSD: ports/astro/gmapcatcher/Makefile,v 1.12 2012/12/12 09:51:40 svnexp Exp $
+# $FreeBSD: astro/gmapcatcher/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
 
 PORTNAME=	gmapcatcher
 PORTVERSION=	0.8.0.0
@@ -10,7 +10,7 @@ MAINTAINER=	kevlo@FreeBSD.org
 COMMENT=	Offline map viewer
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging \
-		${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3
+		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/g}
 USE_GNOME=	pygtk2
