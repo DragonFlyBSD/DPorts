@@ -1,0 +1,24 @@
+# New ports collection makefile for:	rubygem-cinch
+# Date created:		October 30, 2011
+# Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
+#
+# $FreeBSD: ports/irc/rubygem-cinch/Makefile,v 1.3 2012/11/17 05:58:30 svnexp Exp $
+#
+
+PORTNAME=	cinch
+PORTVERSION=	1.1.3
+CATEGORIES=	irc rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	The IRC Bot Building Framework
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+.include <bsd.port.pre.mk>
+.if ${RUBY_VER} == 1.8
+IGNORE=	only works with Ruby 1.9
+.endif
+.include <bsd.port.post.mk>
