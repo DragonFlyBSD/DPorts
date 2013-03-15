@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/ports-mgmt/portupgrade-devel/Makefile,v 1.301 2013/01/14 16:52:17 svnexp Exp $
+# $FreeBSD: ports-mgmt/portupgrade-devel/Makefile 313587 2013-03-07 13:30:37Z bdrewery $
 
 PORTNAME=	portupgrade
-PORTVERSION=	20130114
+PORTVERSION=	20130307
 PORTEPOCH=	3
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	GH \
@@ -22,7 +22,7 @@ CONFLICTS_INSTALL=	portupgrade-[0-9]*
 USE_GITHUB=	yes
 GH_ACCOUNT=	pkgtools
 GH_PROJECT=	pkgtools
-GH_COMMIT=	fb8519c
+GH_COMMIT=	6c357b3
 GH_TAGNAME=	${GH_COMMIT}
 
 DIST_SUBDIR=	${PORTNAME}
@@ -54,6 +54,11 @@ DOCSDIR=	${PREFIX}/share/doc/pkgtools
 INSTALL_TARGET=		install
 .if ${PORT_OPTIONS:MDOCS}
 INSTALL_TARGET+=	install-doc
+.endif
+
+# parsedate is needed for date globbing
+.if ${RUBY_VER} == 1.9
+RUN_DEPENDS+=	${RUBY_SITELIBDIR}/parsedate.rb:${PORTSDIR}/devel/ruby-date2
 .endif
 
 # Need to install working script(1)
