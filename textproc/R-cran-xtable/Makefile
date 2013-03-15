@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: textproc/R-cran-xtable/Makefile 313066 2013-02-27 15:50:51Z tota $
+# $FreeBSD: textproc/R-cran-xtable/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	xtable
 DISTVERSION=	1.7-1
+PORTREVISION=	1
 CATEGORIES=	textproc
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
