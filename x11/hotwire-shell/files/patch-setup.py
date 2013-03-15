@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/hotwire-shell/files/patch-setup.py,v 1.2 2012/11/17 06:03:16 svnexp Exp $
+$FreeBSD: x11/hotwire-shell/files/patch-setup.py 300897 2012-07-14 14:29:18Z beat $
 
 --- setup.py.orig
 +++ setup.py

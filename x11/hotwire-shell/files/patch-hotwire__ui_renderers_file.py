@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/hotwire-shell/files/patch-hotwire__ui_renderers_file.py,v 1.2 2012/11/17 06:03:16 svnexp Exp $
+$FreeBSD: x11/hotwire-shell/files/patch-hotwire__ui_renderers_file.py 300897 2012-07-14 14:29:18Z beat $
 
 --- hotwire_ui/renderers/file.py.orig
 +++ hotwire_ui/renderers/file.py
