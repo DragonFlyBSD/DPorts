@@ -2,7 +2,7 @@
 # Date created:				28th Feb 1995
 # Whom:					gpalmer
 #
-# $FreeBSD: ports/misc/amanda26-server/Makefile,v 1.124 2013/01/31 19:48:36 svnexp Exp $
+# $FreeBSD: misc/amanda26-server/Makefile 311324 2013-01-31 19:14:08Z timur $
 #
 
 PORTNAME=	amanda
