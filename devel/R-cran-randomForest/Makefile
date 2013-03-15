@@ -1,7 +1,8 @@
-# $FreeBSD: ports/devel/R-cran-randomForest/Makefile,v 1.4 2013/01/28 14:57:45 svnexp Exp $
+# $FreeBSD: devel/R-cran-randomForest/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	randomForest
 DISTVERSION=	4.6-7
+PORTREVISION=	1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
