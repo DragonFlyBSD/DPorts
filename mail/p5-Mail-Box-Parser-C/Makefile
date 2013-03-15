@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Mail-Box-Parser-C
-# Date created:	   08 August 2003
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/mail/p5-Mail-Box-Parser-C/Makefile,v 1.10 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: mail/p5-Mail-Box-Parser-C/Makefile 313446 2013-03-05 11:11:50Z tobez $
 
 PORTNAME=	Mail-Box-Parser-C
-PORTVERSION=	3.006
+PORTVERSION=	3.007
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
