@@ -32,10 +32,6 @@ CONFIGURE_SCRIPT=../configure
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == "i386"
-MANUAL_PACKAGE_BUILD=	i386 requires kern.maxdsiz="640M" to build
-.endif
-
 LIB_DEPENDS+=	ffi:${PORTSDIR}/devel/libffi
 
 .if ${PORT_OPTIONS:MRACKET_PLACES}

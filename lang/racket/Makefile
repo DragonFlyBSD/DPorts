@@ -36,10 +36,6 @@ CONFIGURE_SCRIPT=../configure
 IGNORE=		requires X11; use lang/racket-textual instead
 .endif
 
-.if ${ARCH} == "i386"
-MANUAL_PACKAGE_BUILD=	i386 requires kern.maxdsiz="640M" to build
-.endif
-
 USE_GNOME=	pango
 
 LIB_DEPENDS+=	ffi:${PORTSDIR}/devel/libffi		\
