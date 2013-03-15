@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/science/R-cran-DCluster/Makefile,v 1.12 2013/01/08 12:47:25 svnexp Exp $
+# $FreeBSD: science/R-cran-DCluster/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	DCluster
 DISTVERSION=	0.2-6
+PORTREVISION=	1
 CATEGORIES=	science
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
