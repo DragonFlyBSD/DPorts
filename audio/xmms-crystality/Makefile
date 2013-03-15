@@ -1,5 +1,4 @@
-# Create by: Patrick Li <pat@databits.net>
-# $FreeBSD: ports/audio/xmms-crystality/Makefile,v 1.28 2012/12/10 01:26:27 svnexp Exp $
+# $FreeBSD: audio/xmms-crystality/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	crystality
 PORTVERSION=	0.92
@@ -10,7 +9,7 @@ MASTER_SITES=	http://ftp.ussg.iu.edu/FreeBSD/distfiles/ \
 PKGNAMEPREFIX=	xmms-
 DISTNAME=	${PORTNAME}-plugin-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Realtime XMMS plugin for remastering mp3 sound
 
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
