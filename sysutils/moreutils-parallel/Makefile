@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: ports/sysutils/moreutils-parallel/Makefile,v 1.8 2012/11/17 06:01:39 svnexp Exp $
+# $FreeBSD: sysutils/moreutils-parallel/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	moreutils-parallel
 PORTVERSION=	0.44
@@ -18,6 +18,8 @@ WRKSRC=		${WRKDIR}/moreutils
 MAN1=		parallel.1
 MANCOMPRESSED=	no
 PLIST_FILES=	bin/parallel
+
+MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	cd ${FILESDIR} && ${CP} ${MAN1} ${WRKSRC}/
