@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/xmms-paranormal/files/patch-paranormal.c,v 1.2 2012/11/17 05:58:26 svnexp Exp $
+$FreeBSD: graphics/xmms-paranormal/files/patch-paranormal.c 300896 2012-07-14 13:54:48Z beat $
 
 --- paranormal.c.orig	Sun Aug 22 17:56:22 2004
 +++ paranormal.c	Sun Aug 22 17:56:36 2004
