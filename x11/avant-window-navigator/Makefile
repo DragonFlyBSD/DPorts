@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/x11/avant-window-navigator/Makefile,v 1.19 2012/12/31 06:21:32 svnexp Exp $
+# $FreeBSD: x11/avant-window-navigator/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	avant-window-navigator
@@ -69,5 +69,11 @@ post-patch:
 		${WRKSRC}/awn-manager/awnManager.py
 	@${REINPLACE_CMD} -e '1 s|bash|sh|' \
 		${WRKSRC}/awn-manager/awn-launcher-editor.in
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/libawn/egg/eggchecksum.h \
+		${WRKSRC}/libawn/awn-config-client-shared.c \
+		${WRKSRC}/libawn/awn-config-client-gconf.c
+	@${REINPLACE_CMD} -e 's|glib/gutils.h>|glib.h>|g' \
+		${WRKSRC}/libawn/awn-config-client-gkeyfile.c
 
 .include <bsd.port.post.mk>
