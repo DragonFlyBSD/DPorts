@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/opensmtpd/files/smtpd.in,v 1.3 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: mail/opensmtpd/files/smtpd.in 302567 2012-08-15 07:26:24Z ashish $
 #
 # PROVIDE: smtpd mail
 # REQUIRE: LOGIN

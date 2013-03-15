@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/mail/opensmtpd/files/patch-smtpd_Makefile.am,v 1.1 2013/01/02 13:47:17 svnexp Exp $
+$FreeBSD$
 
 --- smtpd/Makefile.am.orig
 +++ smtpd/Makefile.am
