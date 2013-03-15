@@ -1,8 +1,8 @@
 # Created by: TAOKA Fumiyoshi
-# $FreeBSD: japanese/p5-Mail-SpamAssassin/Makefile 313053 2013-02-27 13:57:09Z scheidell $
+# $FreeBSD: japanese/p5-Mail-SpamAssassin/Makefile 313565 2013-03-07 06:20:38Z scheidell $
 #
 
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	japanese mail perl5
 PKGNAMEPREFIX=	ja-p5-
 
