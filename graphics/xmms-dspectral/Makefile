@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: ports/graphics/xmms-dspectral/Makefile,v 1.13 2012/12/10 01:26:30 svnexp Exp $
+# $FreeBSD: graphics/xmms-dspectral/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	dspectral
 PORTVERSION=	1.2.1
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	alepulver
 PKGNAMEPREFIX=	xmms-
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/^/v/}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Dual Spectralizer visualization plugin for XMMS
 
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
