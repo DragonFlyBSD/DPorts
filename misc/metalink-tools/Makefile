@@ -2,7 +2,7 @@
 # Date created:		Sun 10 Aug 2008 04:22:51 UTC
 # Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/metalink-tools/Makefile,v 1.11 2012/11/17 05:59:42 svnexp Exp $
+# $FreeBSD: misc/metalink-tools/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	metalink
@@ -25,6 +25,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
+USE_PKGCONFIG=	build
 CONFIGURE_ENV+=	AWK="${AWK}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
