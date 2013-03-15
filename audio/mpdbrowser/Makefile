@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-mpdbrowser
-# Date created:	2008-12-26
-# Whom:		Henrik Friedrichsen <hrkfdn@gmail.com>
-#
-# $FreeBSD: ports/audio/mpdbrowser/Makefile,v 1.9 2012/11/17 05:54:39 svnexp Exp $
-#
+# Created by: Henrik Friedrichsen <hrkfdn@gmail.com>
+# $FreeBSD: audio/mpdbrowser/Makefile 313460 2013-03-05 17:07:43Z miwi $
 
 PORTNAME=	mpdbrowser
 PORTVERSION=	0.9.15
@@ -26,12 +22,14 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_GNOME=	intltool pygtk2
 
-OPTIONS=		MPD	"Install Music Player Daemon" on
+OPTIONS_DEFINE=		MPD
+OPTIONS_DEFAULT=	MPD
+MPD_DESC=	Install Music Player Daemon
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined (WITH_MPD)
+.if ${PORT_OPTIONS:MMPD}
 RUN_DEPENDS+=	musicpd:${PORTSDIR}/audio/musicpd
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
