@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/databases/R-cran-RMySQL/Makefile,v 1.11 2013/01/04 18:45:32 svnexp Exp $
+# $FreeBSD: databases/R-cran-RMySQL/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	RMySQL
 DISTVERSION=	0.9-3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
