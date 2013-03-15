@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/finance/R-cran-PerformanceAnalytics/Makefile,v 1.6 2013/02/01 23:49:35 svnexp Exp $
+# $FreeBSD: finance/R-cran-PerformanceAnalytics/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	PerformanceAnalytics
 PORTVERSION=	1.1.0
+PORTREVISION=	1
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
