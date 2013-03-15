@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-Dancer-Plugin-Database/Makefile,v 1.14 2013/01/21 11:46:54 svnexp Exp $
+# $FreeBSD: databases/p5-Dancer-Plugin-Database/Makefile 313447 2013-03-05 11:15:37Z tobez $
 
 PORTNAME=	Dancer-Plugin-Database
-PORTVERSION=	2.03
+PORTVERSION=	2.04
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
