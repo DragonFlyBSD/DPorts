@@ -1,9 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/science/R-cran-bayesm/Makefile,v 1.12 2013/01/04 18:45:37 svnexp Exp $
+# $FreeBSD: science/R-cran-bayesm/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	bayesm
 PORTVERSION=	2.2.4
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	science
 DISTNAME=	${PORTNAME}_${PORTVERSION:C/\./-/g:C/-/\./1}
 
