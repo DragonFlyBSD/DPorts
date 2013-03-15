@@ -1,9 +1,5 @@
-# New ports collection makefile for:	eaccelerator
-# Date created:			Sat Mar 1 13:55:55 CET 2003
-# Whom:				Alex Dupre <sysadmin@alexdupre.com>
-#
-# $FreeBSD: ports/www/eaccelerator/Makefile,v 1.45 2012/11/17 06:02:32 svnexp Exp $
-#
+# Created by: Alex Dupre <sysadmin@alexdupre.com>
+# $FreeBSD: www/eaccelerator/Makefile 313599 2013-03-07 16:53:45Z miwi $
 
 PORTNAME=	eaccelerator
 PORTVERSION=	0.9.6.1
@@ -15,7 +11,8 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/eAccelerator%20${PORTVERSION}/ \
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	A free open-source PHP accelerator & optimizer
 
-OPTIONS=	DOCCOMM "Retain doc-comments in internal php structures" off
+OPTIONS_DEFINE=	DOCCOMM
+DOCCOMM_DESC=	Retain doc-comments in internal php structures
 
 USE_PHP=	yes
 USE_PHPIZE=	yes
@@ -36,9 +33,9 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 PORTDOCS=	*
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_DOCCOMM)
+.if ${PORT_OPTIONS:MDOCCOMM}
 CONFIGURE_ARGS+=--with-eaccelerator-doc-comment-inclusion
 .endif
 
@@ -48,7 +45,7 @@ do-install:
 	       ${PREFIX}/lib/php/${PHP_EXT_DIR}
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
@@ -58,4 +55,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/dasm.php ${EXAMPLESDIR}
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
