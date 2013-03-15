@@ -2,7 +2,7 @@
 # Date created:				18 Nov 2011
 # Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/deadbeef-mpris-plugin/Makefile,v 1.6 2012/11/17 05:54:30 svnexp Exp $
+# $FreeBSD: audio/deadbeef-mpris-plugin/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	deadbeef-mpris-plugin
@@ -23,5 +23,8 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
 
 WRKSRC=		${WRKDIR}/deadbeef-${PORTVERSION}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-Werror||g' ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
