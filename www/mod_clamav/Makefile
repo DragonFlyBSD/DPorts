@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mod_clamav
-# Date created:				Sun Oct 19
-# Whom:					Clement Laforet <clement@FreeBSD.org>
-#
-# $FreeBSD: ports/www/mod_clamav/Makefile,v 1.31 2013/02/07 14:08:07 svnexp Exp $
-#
+# Created by: Clement Laforet <clement@FreeBSD.org>
+# $FreeBSD: www/mod_clamav/Makefile 313460 2013-03-05 17:07:43Z miwi $
 
 PORTNAME=	mod_clamav
 PORTVERSION=	0.23
@@ -22,11 +18,12 @@ USE_AUTOTOOLS=	libtool
 USE_APACHE=	22
 GNU_CONFIGURE=	yes
 
-OPTIONS=	CLAMAVDEVEL	"Use development version of CLAMAV" off
+OPTIONS_DEFINE=		CLAMAVDEVEL
+CLAMAVDEVEL_DESC=	development version of CLAMAV
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_CLAMAVDEVEL)
+.if ${PORT_OPTIONS:MCLAMAVDEVEL}
 LIB_DEPENDS+=	clamav.7:${PORTSDIR}/security/clamav-devel
 .else
 CLAMAV_PORT=	security/clamav
