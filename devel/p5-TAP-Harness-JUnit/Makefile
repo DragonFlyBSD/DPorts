@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-TAP-Harness-JUnit/Makefile,v 1.9 2012/11/17 05:56:31 svnexp Exp $
+# $FreeBSD: devel/p5-TAP-Harness-JUnit/Makefile 313699 2013-03-09 09:33:11Z kuriyama $
 
 PORTNAME=	TAP-Harness-JUnit
-PORTVERSION=	0.38
+PORTVERSION=	0.41
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
