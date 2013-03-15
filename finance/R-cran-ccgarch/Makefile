@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/finance/R-cran-ccgarch/Makefile,v 1.7 2013/01/16 11:41:35 svnexp Exp $
+# $FreeBSD: finance/R-cran-ccgarch/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	ccgarch
 DISTVERSION=	0.2.0-2
+PORTREVISION=	1
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
