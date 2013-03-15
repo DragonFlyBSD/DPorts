@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-File-Append-TempFile/Makefile,v 1.13 2012/11/17 05:56:15 svnexp Exp $
+# $FreeBSD: devel/p5-File-Append-TempFile/Makefile 313672 2013-03-08 20:23:38Z eadler $
 
 PORTNAME=	File-Append-TempFile
 PORTVERSION=	0.05
@@ -18,6 +18,8 @@ PERL_CONFIGURE=	yes
 MAN3=		File::Append::TempFile.3
 
 PORTDOCS=	Changes README
+
+MAKE_JOBS_SAFE=	yes
 
 test:		build
 		@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test
