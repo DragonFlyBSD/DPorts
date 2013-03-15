@@ -1,8 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: ports/www/p5-WWW-Scraper-ISBN-Amazon_Driver/Makefile,v 1.21 2012/12/19 08:34:59 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Scraper-ISBN-Amazon_Driver/Makefile 313448 2013-03-05 11:18:13Z tobez $
 
 PORTNAME=	WWW-Scraper-ISBN-Amazon_Driver
-PORTVERSION=	0.28
+PORTVERSION=	0.29
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
