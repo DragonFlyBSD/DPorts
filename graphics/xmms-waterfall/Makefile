@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: ports/graphics/xmms-waterfall/Makefile,v 1.15 2012/12/10 01:26:30 svnexp Exp $
+# $FreeBSD: graphics/xmms-waterfall/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
 
 PORTNAME=	waterfall
 PORTVERSION=	0.11
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.sethoscope.net/waterfall/
 PKGNAMEPREFIX=	xmms-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Yet another XMMS spectrum analyzer
 
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
