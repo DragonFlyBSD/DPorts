@@ -1,9 +1,9 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/audio/xmms-gbsplay/Makefile,v 1.7 2012/11/17 05:54:48 svnexp Exp $
+# $FreeBSD: audio/xmms-gbsplay/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PKGNAMEPREFIX=	xmms-
 
-COMMENT=	A XMMS plugin for playing Nintendo Game Boy(TM) audio
+COMMENT=	XMMS plugin for playing Nintendo Game Boy(TM) audio
 
 MASTERDIR=	${.CURDIR}/../gbsplay
 
