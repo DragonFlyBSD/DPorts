@@ -1,11 +1,8 @@
-# New ports collection makefile for: unknown-horizons
-# Date created:      26 May 2012
-# Whom:              GreenDog <fiziologus@gmail.com>
-#
-# $FreeBSD: ports/games/unknown-horizons/Makefile,v 1.3 2012/11/17 05:57:55 svnexp Exp $
+# Created by: GreenDog <fiziologus@gmail.com>
+# $FreeBSD: games/unknown-horizons/Makefile 313567 2013-03-07 07:47:55Z beech $
 
 PORTNAME=		unknown-horizons
-PORTVERSION=		2012.1
+PORTVERSION=		2013.1
 CATEGORIES=		games
 MASTER_SITES=		SF/unknownhorizons/Unknown%20Horizons/${PORTVERSION}/
 
@@ -15,9 +12,9 @@ COMMENT=		Real time simulation game
 BUILD_DEPENDS=		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl \
 			${LOCALBASE}/bin/xsltproc:${PORTSDIR}/textproc/libxslt
 RUN_DEPENDS=		${PYTHON_SITELIBDIR}/fife/__init__.py:${PORTSDIR}/games/py-fife \
-			${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3 \
+			${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 			${PYTHON_SITELIBDIR}/yaml/__init__.py:${PORTSDIR}/devel/py-yaml \
-			${PYTHON_SITELIBDIR}/gdbm.so:${PORTSDIR}/databases/py-gdbm
+			${PYTHON_PKGNAMEPREFIX}gdbm>0:${PORTSDIR}/databases/py-gdbm
 
 WRKSRC=			${WRKDIR}/${PORTNAME}
 
@@ -35,12 +32,14 @@ MAN6=			unknown-horizons.6
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == i386
+ENET_DIR=	x86
 PLIST_SUB+=	X86_ONLY=""
 .else
 PLIST_SUB+=	X86_ONLY="@comment "
 .endif
 
 .if ${ARCH} == x86_64
+ENET_DIR=	x64
 PLIST_SUB+=	X64_ONLY=""
 .else
 PLIST_SUB+=	X64_ONLY="@comment "
@@ -49,5 +48,12 @@ PLIST_SUB+=	X64_ONLY="@comment "
 post-patch:
 	${REINPLACE_CMD} -e "s|http://docbook.sourceforge.net/release/xsl/current|${LOCALBASE}/share/xsl/docbook|" \
 		-e "s|share/man/man6|man/man6|" ${WRKSRC}/setup.py
+
+# Install multiplayer lib (enet+pyenet)
+post-install:
+	${MKDIR} ${PYTHON_SITELIBDIR}/horizons/network/libs
+	${MKDIR} ${PYTHON_SITELIBDIR}/horizons/network/libs/freebsd-${ENET_DIR}
+	${INSTALL} ${WRKSRC}/horizons/network/libs/freebsd-${ENET_DIR}/enet.so \
+		${PYTHON_SITELIBDIR}/horizons/network/libs/freebsd-${ENET_DIR}/enet.so
 
 .include <bsd.port.post.mk>
