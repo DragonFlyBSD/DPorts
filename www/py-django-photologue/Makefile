@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-django-photologue
-# Date created:				12 January 2012
-# Whom:					Kevin Golding <ports@caomhin.org>
-#
-# $FreeBSD: ports/www/py-django-photologue/Makefile,v 1.2 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: Kevin Golding <ports@caomhin.org>
+# $FreeBSD: www/py-django-photologue/Makefile 313460 2013-03-05 17:07:43Z miwi $
 
 PORTNAME=	django-photologue
 PORTVERSION=	2.2
@@ -25,16 +21,17 @@ USE_ZIP=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 
-OPTIONS=	TAGGING "Enable tagging" On
+OPTIONS_DEFINE=		TAGGING DOCS
+OPTIONS_DEFAULT=	TAGGING
 
 .include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_TAGGING)
+.if ${PORT_OPTIONS:MTAGGING}
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/tagging/models.py:${PORTSDIR}/www/py-django-tagging
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DOCSDIR}
 .endif
