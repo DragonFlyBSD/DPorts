@@ -1,8 +1,8 @@
-# $FreeBSD: ports/devel/R-cran-Hmisc/Makefile,v 1.4 2013/01/04 18:45:32 svnexp Exp $
+# $FreeBSD: devel/R-cran-Hmisc/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	Hmisc
 DISTVERSION=	3.10-1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
