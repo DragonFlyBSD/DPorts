@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Mail-OpenDKIM
-# Date created:				Wed Apr 27 14:36:42 EDT 2011
-# Whom:					Vivek Khera <vivek@khera.org>
-#
-# $FreeBSD: ports/mail/p5-Mail-OpenDKIM/Makefile,v 1.6 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: Vivek Khera <vivek@khera.org>
+# $FreeBSD: mail/p5-Mail-OpenDKIM/Makefile 313416 2013-03-04 17:05:06Z culot $
 
 PORTNAME=	Mail-OpenDKIM
-PORTVERSION=	3680
+PORTVERSION=	4003
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,10 +10,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	vivek@khera.org
 COMMENT=	Perl interface to OpenDKIM C library
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	opendkim>=2.5.0:${PORTSDIR}/mail/opendkim
 LIB_DEPENDS=	opendkim:${PORTSDIR}/mail/opendkim
 RUN_DEPENDS=	opendkim>=2.5.0:${PORTSDIR}/mail/opendkim
-
 TEST_DEPENDS=	p5-Error>=0:${PORTSDIR}/lang/p5-Error \
 		p5-Test-Kwalitee>=0:${PORTSDIR}/devel/p5-Test-Kwalitee
 
