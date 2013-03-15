@@ -1,13 +1,13 @@
-# $FreeBSD: ports/graphics/R-cran-ggplot2/Makefile,v 1.15 2013/01/04 18:45:34 svnexp Exp $
+# $FreeBSD: graphics/R-cran-ggplot2/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	ggplot2
-PORTVERSION=	0.9.3
+PORTVERSION=	0.9.3.1
 PORTREVISION=	1
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
-COMMENT=	An implementation of the Grammar of Graphics
+COMMENT=	Implementation of the Grammar of Graphics
 
 LICENSE=	GPLv2
 
