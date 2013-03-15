@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/finance/p5-Finance-Currency-Convert-XE/Makefile,v 1.19 2012/12/08 21:42:52 svnexp Exp $
+# $FreeBSD: finance/p5-Finance-Currency-Convert-XE/Makefile 313581 2013-03-07 12:25:44Z tobez $
 
 PORTNAME=	Finance-Currency-Convert-XE
-PORTVERSION=	0.22
+PORTVERSION=	0.23
 CATEGORIES=	finance perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
