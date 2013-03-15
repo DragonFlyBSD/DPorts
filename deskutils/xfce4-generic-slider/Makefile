@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xfce4-generic-slider
-# Date created:				04 Jun 2010
-# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/deskutils/xfce4-generic-slider/Makefile,v 1.11 2012/11/17 05:55:31 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: deskutils/xfce4-generic-slider/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
 
 PORTNAME=	xfce4-generic-slider
 PORTVERSION=	0.0.20100827
@@ -12,7 +8,7 @@ CATEGORIES=	deskutils
 MASTER_SITES=	CRITICAL/
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	A slider plugin to adjust and/or monitor any numeric variable
+COMMENT=	Slider plugin to adjust and/or monitor any numeric variable
 
 LICENSE=	GPLv3
 
