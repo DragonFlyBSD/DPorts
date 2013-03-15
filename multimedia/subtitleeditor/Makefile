@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/multimedia/subtitleeditor/Makefile,v 1.28 2012/12/10 19:24:03 svnexp Exp $
+# $FreeBSD: multimedia/subtitleeditor/Makefile 313721 2013-03-09 15:25:08Z kwm $
 
 PORTNAME=	subtitleeditor
 PORTVERSION=	0.40.0
@@ -39,5 +39,6 @@ BROKEN=		does not compile
 post-patch:
 	@${REINPLACE_CMD} -e '/test/s|==|=|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|strtoll|strtoq|g' ${WRKSRC}/plugins/subtitleformats/advancedsubstationalpha/advancedsubstationalpha.cc
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' ${WRKSRC}/plugins/actions/findandreplace/findandreplace.cc
 
 .include <bsd.port.post.mk>
