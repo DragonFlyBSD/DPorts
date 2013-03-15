@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: ports/math/geogebra-i18n/Makefile,v 1.11 2013/01/05 15:42:47 svnexp Exp $
+# $FreeBSD: math/geogebra-i18n/Makefile 313719 2013-03-09 15:05:43Z nivit $
 
 PORTNAME=	geogebra
-PORTVERSION=	4.2.13.0
+PORTVERSION=	4.2.23.0
 #PORTREVISION=	0
 CATEGORIES=	math java
 MASTER_SITES=	GOOGLE_CODE

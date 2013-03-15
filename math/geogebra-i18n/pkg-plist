@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/math/geogebra-i18n/pkg-plist,v 1.4 2013/01/05 15:42:47 svnexp Exp $
+@comment $FreeBSD: math/geogebra-i18n/pkg-plist 309963 2013-01-05 14:54:06Z nivit $
 bin/geogebra
 share/applications/geogebra.desktop
 share/icons/hicolor/128x128/apps/geogebra.png
