@@ -1,8 +1,9 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: ports/finance/R-cran-tseries/Makefile,v 1.4 2013/01/25 15:43:35 svnexp Exp $
+# $FreeBSD: finance/R-cran-tseries/Makefile 313562 2013-03-07 04:21:34Z bf $
 
 PORTNAME=	tseries
 DISTVERSION=	0.10-30
+PORTREVISION=	1
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
