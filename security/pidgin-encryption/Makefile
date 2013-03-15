@@ -2,7 +2,7 @@
 # Date created:		2004-05-01
 # Whom:			ports@c0decafe.net
 #
-# $FreeBSD: ports/security/pidgin-encryption/Makefile,v 1.66 2012/11/17 06:01:15 svnexp Exp $
+# $FreeBSD: security/pidgin-encryption/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	pidgin
@@ -43,5 +43,6 @@ PLIST_SUB+=	NLS="@comment "
 
 post-extract:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|glib/.*\.h"|glib.h"|g' ${WRKSRC}/rsa_nss.c
 
 .include <bsd.port.mk>
