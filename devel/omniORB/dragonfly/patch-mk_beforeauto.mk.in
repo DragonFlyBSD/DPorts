@@ -1,0 +1,18 @@
+--- mk/beforeauto.mk.in.orig	2013-03-16 12:32:10.339697000 +0000
++++ mk/beforeauto.mk.in
+@@ -1063,6 +1063,15 @@ endef
+ endif
+ 
+ ###################
++ifdef DragonFly
++IMPORT_CPPFLAGS += -D__freebsd__
++
++OMNITHREAD_CPPFLAGS = -D_REENTRANT -D_THREAD_SAFE
++OMNITHREAD_POSIX_CPPFLAGS = -DUsePthread -DPthreadDraftVersion=10
++OMNITHREAD_LIB += -pthread
++endif
++
++###################
+ ifdef FreeBSD
+ IMPORT_CPPFLAGS += -D__freebsd__
+ 
