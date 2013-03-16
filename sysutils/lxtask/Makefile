@@ -1,9 +1,5 @@
-# New ports collection makefile for:   lxtask
-# Date created:                2008/06/20
-# Whom:                        chinsan
-#
-# $FreeBSD: ports/sysutils/lxtask/Makefile,v 1.13 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: sysutils/lxtask/Makefile 313753 2013-03-09 19:59:21Z eadler $
 
 PORTNAME=	lxtask
 PORTVERSION=	0.1.4
@@ -11,8 +7,8 @@ PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	SF/lxde/LXTask%20%28task%20manager%29/LXTask%20${PORTVERSION}
 
-MAINTAINER=	davide.italiano@gmail.com
-COMMENT=	A lightweight desktop-independent task manager
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Lightweight desktop-independent task manager
 
 USE_GNOME=	gtk20 intlhack
 USE_GMAKE=	yes
