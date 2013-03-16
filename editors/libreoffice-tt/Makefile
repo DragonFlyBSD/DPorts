@@ -1,4 +1,4 @@
-# $FreeBSD: ports/editors/libreoffice-tt/Makefile,v 1.3 2012/11/17 05:57:16 svnexp Exp $
+# $FreeBSD: editors/libreoffice-tt/Makefile 306473 2012-10-26 20:24:07Z jkim $
 
 LO_I18N=	tt
 
