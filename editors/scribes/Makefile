@@ -1,0 +1,32 @@
+# New ports collection makefile for:	scribes
+# Date created:				24 November 2006
+# Whom:					Pav Lucistnik <pav@FreeBSD.org>
+#
+# $FreeBSD: ports/editors/scribes/Makefile,v 1.18 2012/11/17 05:57:18 svnexp Exp $
+#
+
+PORTNAME=	scribes
+PORTVERSION=	0.3.3.3
+PORTREVISION=	7
+CATEGORIES=	editors
+MASTER_SITES=	SF/${PORTNAME}/Stable%20Branch/${PORTNAME}-${PORTVERSION}
+
+MAINTAINER=	pav@FreeBSD.org
+COMMENT=	Slick yet powerful text editor for GNOME
+
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
+
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_GNOME=	pygnomedesktop pygnomeextras gnomeprefix
+USE_PYTHON=	yes
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+GCONF_SCHEMAS=	scribes.schemas
+INSTALLS_ICONS=	yes
+INSTALLS_OMF=	yes
+
+.include <bsd.port.mk>
