@@ -1,4 +1,4 @@
-# $FreeBSD: ports/editors/libreoffice-bn_IN/Makefile,v 1.1 2013/02/04 20:44:25 svnexp Exp $
+# $FreeBSD: editors/libreoffice-bn_IN/Makefile 311644 2013-02-04 20:03:49Z jkim $
 
 LO_I18N=	bn_IN
 LO_HAS_HELPPACK=	yes
