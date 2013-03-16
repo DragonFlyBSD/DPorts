@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ibus-table
-# Date created:		20 November 2009
-# Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
-#
-# $FreeBSD: ports/textproc/ibus-table/Makefile,v 1.10 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
+# $FreeBSD: textproc/ibus-table/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
 
 PORTNAME=	ibus-table
 PORTVERSION=	1.3.9.20110827
@@ -15,11 +11,11 @@ MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 MAINTAINER=	nikola.lecic@anthesphoria.net
 COMMENT=	Table based input method framework for IBus
 
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 LIB_DEPENDS=	ibus-1.0:${PORTSDIR}/textproc/ibus
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_GNOME=	pkgconfig pygtk2
 
 GNU_CONFIGURE=	yes
