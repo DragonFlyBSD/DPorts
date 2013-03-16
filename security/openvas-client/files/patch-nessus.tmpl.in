@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/security/openvas-client/files/patch-nessus.tmpl.in,v 1.3 2012/11/17 06:01:09 svnexp Exp $
+
+--- nessus.tmpl.in.orig
++++ nessus.tmpl.in
+@@ -38,7 +38,7 @@
+ make_bindir=${rootdir}/bin
+ libsdir=${rootdir}/libs
+ top_builddir = @PWDD@
+-include= -I. -I$(rootdir)/include
++include= -I. -I$(rootdir)/include -I$(includedir)
+ INSTALL=@INSTALL@
+ INSTALL_DIR=@INSTALL_DIR@
+ installuser=@installuser@
