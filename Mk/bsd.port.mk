@@ -1166,7 +1166,6 @@ NOPROFILE=		yes
 .export NOPROFILE
 
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
-.include "${PORTSDIR}/Mk/bsd.interpreter.mk"
 
 #
 # DESTDIR section to start a chrooted process if invoked with DESTDIR set
@@ -1277,6 +1276,8 @@ USE_SUBMAKE=	yes
 .include "${MASTERDIR}/Makefile.local"
 USE_SUBMAKE=	yes
 .endif
+
+.include "${PORTSDIR}/Mk/bsd.interpreter.mk"
 
 # where 'make config' records user configuration options
 PORT_DBDIR?=	/var/db/ports
