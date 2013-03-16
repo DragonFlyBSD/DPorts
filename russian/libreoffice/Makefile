@@ -1,4 +1,4 @@
-# $FreeBSD: ports/russian/libreoffice/Makefile,v 1.3 2012/11/17 06:00:56 svnexp Exp $
+# $FreeBSD: russian/libreoffice/Makefile 306473 2012-10-26 20:24:07Z jkim $
 
 LO_I18N=	ru
 LO_HAS_HELPPACK=	yes
