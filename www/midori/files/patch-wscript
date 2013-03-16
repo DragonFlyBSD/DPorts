@@ -1,27 +1,10 @@
---- ./wscript.orig	2012-09-19 21:17:43.000000000 +0000
-+++ ./wscript	2012-09-20 06:32:04.000000000 +0000
-@@ -106,8 +106,8 @@
-     conf.check_tool ('compiler_cc')
-     conf.check_tool ('vala')
-     conf.check_tool ('glib2')
--    if not check_version (conf.env['VALAC_VERSION'], 0, 14, 0):
--        Utils.pprint ('RED', 'Vala 0.14.0 or later is required.')
-+    if not check_version (conf.env['VALAC_VERSION'], 0, 12, 0):
-+        Utils.pprint ('RED', 'Vala 0.12.0 or later is required.')
-         sys.exit (1)
- 
-     if option_enabled ('nls'):
-@@ -184,11 +184,8 @@
-         return conf.env['HAVE_' + var]
- 
-     if option_enabled ('gtk3'):
--        gcr_pkg = 'gcr-3'
--    else:
--        gcr_pkg = 'gcr-3-gtk2'
--    check_pkg (gcr_pkg, '2.32', mandatory=False)
--    conf.define ('GCR_VERSION', ['No',conf.check_cfg(modversion=gcr_pkg)][conf.env['HAVE_GCR'] == 1])
-+        check_pkg ('gcr-3', '2.32', mandatory=False)
-+        conf.define ('GCR_VERSION', ['No',conf.check_cfg(modversion='gcr-3')][conf.env['HAVE_GCR'] == 1])
- 
-     if option_enabled ('unique'):
-         if option_enabled('gtk3'): unique_pkg = 'unique-3.0'
+--- ./wscript.orig	2013-03-07 17:44:14.000000000 +0000
++++ ./wscript	2013-03-10 16:54:29.000000000 +0000
+@@ -267,7 +267,6 @@
+     else:
+         check_pkg ('gtk+-2.0', '2.16.0', var='GTK')
+         check_pkg ('webkit-1.0', '1.1.17', args=args)
+-        check_pkg ('gcr-3-gtk2', '2.32', mandatory=False)
+         if check_version (conf.env['WEBKIT_VERSION'], 1, 5, 1):
+             check_pkg ('javascriptcoregtk-1.0', '1.5.1', args=args)
+         if check_version (conf.env['GTK_VERSION'], 2, 20, 0):

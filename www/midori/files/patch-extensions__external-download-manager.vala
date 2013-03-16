@@ -1,50 +1,38 @@
---- ./extensions/external-download-manager.vala.orig	2012-09-19 21:17:43.000000000 +0000
-+++ ./extensions/external-download-manager.vala	2012-09-21 16:54:03.000000000 +0000
-@@ -134,17 +134,23 @@
+--- ./extensions/external-download-manager.vala.orig	2013-03-07 17:44:14.000000000 +0000
++++ ./extensions/external-download-manager.vala	2013-03-11 06:50:27.000000000 +0000
+@@ -16,7 +16,7 @@
+ using WebKit;
  
-     private class Aria2 : ExternalDownloadManager {
+ namespace EDM {
+-#if !HAVE_WIN32
++#if !HAVE_WIN32 || HAVE_GTK3
+     [DBus (name = "net.launchpad.steadyflow.App")]
+     interface SteadyflowInterface : GLib.Object {
+         public abstract void AddFile (string url) throws IOError;
+@@ -183,6 +183,7 @@
+         }
+     }
+ 
++#if HAVE_GTK3
+     private class SteadyFlow : ExternalDownloadManager {
          public override bool download (DownloadRequest dlReq) {
--            var url = value_array_new ();
--            value_array_insert (url, 0, typeof (string), dlReq.uri);
-+            var url = new GLib.ValueArray (2);
-+
-+            var uri = new GLib.Value (typeof (string));
-+            uri.set_string (dlReq.uri);
-+
-+            url.insert (0, uri);
- 
-             GLib.HashTable<string, GLib.Value?> options = value_hash_new ();
-             var referer = new GLib.Value (typeof (string));
-             referer.set_string (dlReq.referer);
-             options.insert ("referer", referer);
- 
--            var headers = value_array_new ();
-+            var headers = new GLib.ValueArray (2);
-             if (dlReq.cookie_header != null) {
--                value_array_insert (headers, 0, typeof (string), "Cookie: %s".printf(dlReq.cookie_header));
-+                var cookie = new GLib.Value (typeof (string)); 
-+                cookie.set_string ("Cookie: %s".printf(dlReq.cookie_header));
-+                headers.insert (0, cookie);
-             }
- 
-             if (headers.n_values > 0)
-@@ -158,8 +164,8 @@
-             session.send_message (message);
- 
              try {
--                Value v;
--                XMLRPC.parse_method_response ((string) message.response_body.flatten ().data, -1, out v);
-+                var v = new GLib.Value (typeof(string));
-+                XMLRPC.parse_method_response ((string) message.response_body.flatten ().data, -1, v);
-                 return true;
-             } catch (Error e) {
-                 this.handle_exception (e);
-@@ -293,7 +299,7 @@
-                          authors: "André Stösel <andre@stoesel.de>",
-                          key: "commandline");
+@@ -210,6 +211,7 @@
+         }
+     }
+ #endif
++#endif
  
--            this.install_string ("commandline", "wget --no-check-certificate --referer={REFERER} --header={COOKIES} {URL}");
-+            this.install_string ("commandline", "fetch {URL}");
- 
-             this.activate.connect (activated);
-             this.deactivate.connect (deactivated);
+     private class CommandLinePreferences : Gtk.Dialog {
+         protected Entry input;
+@@ -339,8 +341,10 @@
+     var extensions = new Katze.Array( typeof (Midori.Extension));
+     #if !HAVE_WIN32
+     extensions.add_item (new EDM.Aria2 ());
++    #if HAVE_GTK3
+     extensions.add_item (new EDM.SteadyFlow ());
+     #endif
++    #endif
+     extensions.add_item (new EDM.CommandLine ());
+     return extensions;
+ }

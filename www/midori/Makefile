@@ -1,9 +1,10 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: ports/www/midori/Makefile,v 1.40 2012/11/20 11:35:34 svnexp Exp $
+# $FreeBSD: www/midori/Makefile 314102 2013-03-13 18:16:50Z olivierd $
 #
 
 PORTNAME=	midori
-PORTVERSION=	0.4.7
+PORTVERSION=	0.4.9
+PORTREVISION=	1
 CATEGORIES=	www xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/apps/${PORTNAME}/${PORTVERSION:R}
@@ -46,14 +47,14 @@ INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
 
-PLIST_SUB=	VERSION="${PORTVERSION:R}" \
-	PORTVERSION="${PORTVERSION}"
+PLIST_SUB=	VERSION="${PORTVERSION:R}"
 
-OPTIONS_DEFINE=	APIDOCS NLS UNIQUE
+OPTIONS_DEFINE=	APIDOCS NLS UNIQUE ZEITGEIST
 OPTIONS_DEFAULT=	NLS UNIQUE
 
 APIDOCS_DESC=	Build API documentation
 UNIQUE_DESC=	Single instance support
+ZEITGEIST_DESC=	User logs activities
 
 .include <bsd.port.options.mk>
 
@@ -84,9 +85,12 @@ CONFIGURE_ARGS+=--enable-unique
 CONFIGURE_ARGS+=--disable-unique
 .endif
 
-pre-patch:
-# Disable HTTP Strict Transport Security (hsts)
-	@cd ${WRKSRC}/katze && ${RM} midori-hsts.vala
+.if ${PORT_OPTIONS:MZEITGEIST}
+LIB_DEPENDS+=	zeitgeist-1:${PORTSDIR}/sysutils/libzeitgeist
+CONFIGURE_ARGS+=--enable-zeitgeist
+.else
+CONFIGURE_ARGS+=--disable-zeitgeist
+.endif
 
 post-install:
 	@-update-desktop-database
