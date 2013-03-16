@@ -1,0 +1,51 @@
+# New ports collection makefile for: osmo
+# Date created:                      29 Sep 2009
+# Whom:                              Charlie Kester <corky1951#comcast.net>
+#
+# $FreeBSD: ports/deskutils/osmo/Makefile,v 1.15 2012/12/30 12:10:38 svnexp Exp $
+#
+
+PORTNAME=	osmo
+PORTVERSION=	0.2.10
+PORTREVISION=	5
+CATEGORIES=	deskutils
+MASTER_SITES=	SF/${PORTNAME}-pim/${PORTNAME}-pim/${PORTNAME}-${PORTVERSION}/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A personal organizer
+
+LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2 \
+		notify:${PORTSDIR}/devel/libnotify \
+		ical:${PORTSDIR}/devel/libical \
+		tar:${PORTSDIR}/devel/libtar \
+		gringotts:${PORTSDIR}/security/libgringotts \
+		gtkhtml:${PORTSDIR}/www/libgtkhtml
+
+USE_GNOME=	gtk20
+USE_GETTEXT=	yes
+INSTALLS_ICONS=	yes
+
+GNU_CONFIGURE=	yes
+LDFLAGS+=	-L${LOCALBASE}/lib
+CFLAGS+=	-I${LOCALBASE}/include/libical
+
+USE_GMAKE=	yes
+
+MAN1=		osmo.1
+
+POFILES=	bg ca cs da de el en_GB es fi fr hu it ja lt nl pl pt \
+		ru sv tr uk zh_CN
+
+MSGFMT=		${LOCALBASE}/bin/msgfmt
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g' \
+		${WRKSRC}/src/Makefile.in
+
+pre-install:
+# workaround to problem in po makefile
+.for p in ${POFILES}
+	${MSGFMT} -c ${WRKSRC}/po/$p.po -o ${WRKSRC}/po/$p.mo
+.endfor
+
+.include <bsd.port.mk>
