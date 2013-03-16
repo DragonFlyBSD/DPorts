@@ -1,0 +1,1 @@
+LDFLAGS+= -lz -L${LOCALBASE}/lib -lintl
