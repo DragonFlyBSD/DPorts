@@ -1,4 +1,4 @@
-# $FreeBSD: ports/arabic/libreoffice/Makefile,v 1.4 2012/12/23 07:08:39 svnexp Exp $
+# $FreeBSD: arabic/libreoffice/Makefile 309416 2012-12-23 06:54:04Z danfe $
 
 LO_I18N=	ar
 CATEGORIES=	arabic editors
