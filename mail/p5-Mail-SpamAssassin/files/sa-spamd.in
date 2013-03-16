@@ -31,6 +31,7 @@ load_rc_config $name
 pidfile=${spamd_pidfile:-"/var/run/spamd/spamd.pid"}
 command=%%PREFIX%%/bin/spamd
 command_args="-d -r ${pidfile}"
+command_interpreter=%%PREFIX%%/bin/perl
 required_dirs=%%PREFIX%%/share/spamassassin
 
 stop_postcmd=stop_postcmd
