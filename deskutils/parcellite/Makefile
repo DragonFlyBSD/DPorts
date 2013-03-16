@@ -1,0 +1,33 @@
+# Created by: Joey Mingrone <joey@mingrone.org>
+# $FreeBSD: deskutils/parcellite/Makefile 313633 2013-03-08 10:51:34Z kwm $
+
+PORTNAME=	parcellite
+PORTVERSION=	1.0.1
+PORTEPOCH=	1
+CATEGORIES=	deskutils
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
+
+MAINTAINER=	jrm@ftfl.ca
+COMMENT=	A lightweight GTK+ clipboard manager
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gtk20
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=	--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.endif
+
+MAN1=	parcellite.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g'\
+		${WRKSRC}/src/keybinder.h
+
+.include <bsd.port.mk>
