@@ -1,6 +1,6 @@
-# $FreeBSD: ports/editors/libreoffice-tr/Makefile,v 1.3 2012/11/17 05:57:16 svnexp Exp $
+# $FreeBSD: editors/libreoffice-tr/Makefile 313667 2013-03-08 19:01:45Z jkim $
 
-LO_I18N=	tr	
+LO_I18N=	tr
 LO_HAS_HELPPACK=	yes
 
 .include "${.CURDIR}/../../editors/libreoffice/Makefile.common"
