@@ -4,7 +4,7 @@
    *-*-irix*)     plat_name="IRIX";     plat_def="__irix__";     os_v="6";;
    *-*-aix*)      plat_name="AIX";      plat_def="__aix__";      os_v="4";;
    *-*-darwin*)   plat_name="Darwin";   plat_def="__darwin__";   os_v="1";;
-+  *-*-dragonfly*) plat_name="DragonFly"; plat_def="__freebsd__"; os_v="9";;
++  *-*-dragonfly*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="9";;
    *-*-freebsd3.*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="3";;
    *-*-freebsd4.*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="4";;
    *-*-freebsd5.*) plat_name="FreeBSD";  plat_def="__freebsd__";  os_v="5";;
