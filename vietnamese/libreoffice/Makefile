@@ -1,6 +1,6 @@
-# $FreeBSD: ports/vietnamese/libreoffice/Makefile,v 1.4 2012/11/17 06:02:26 svnexp Exp $
+# $FreeBSD: vietnamese/libreoffice/Makefile 313667 2013-03-08 19:01:45Z jkim $
 
-LO_I18N=	vi	
+LO_I18N=	vi
 LO_HAS_HELPPACK=	yes
 CATEGORIES=	vietnamese editors
 
