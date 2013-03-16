@@ -1,21 +1,21 @@
 # Created by: Olivier Smedts <olivier@gid0.org>
-# $FreeBSD: ports/audio/abraca/Makefile,v 1.18 2012/12/10 20:43:11 svnexp Exp $
+# $FreeBSD: audio/abraca/Makefile 313683 2013-03-09 00:40:46Z madpilot $
 
 PORTNAME=	abraca
-PORTVERSION=	0.7.0
-PORTREVISION=	1
+PORTVERSION=	0.7.1
 CATEGORIES=	audio
 MASTER_SITES=	http://cloud.github.com/downloads/Abraca/Abraca/
 
 MAINTAINER=	madpilot@FreeBSD.org
-COMMENT=	Abraca is a GTK2 client for the XMMS2 music player
+COMMENT=	GTK2 client for the XMMS2 music player
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/valac:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	xmmsclient:${PORTSDIR}/audio/xmms2 \
-		gee:${PORTSDIR}/devel/libgee
+		gee:${PORTSDIR}/devel/libgee06
 
 USE_SCONS=	yes
 USE_GNOME=	gtk30
+USE_PKGCONFIG=	build
 
 SCONS_ARGS=	MANDIR=${MANPREFIX}/man
 
