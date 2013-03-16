@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/dbus/pkg-deinstall,v 1.1 2012/09/08 11:05:41 kwm Exp $
+# $FreeBSD$
 #
 
 case $2 in
@@ -9,7 +9,7 @@ DEINSTALL)
 	echo "To really remove the dbus port, please remove the following"
 	echo "directories and the content manualy:"
 	echo ""
-	echo "/var/run/dbus /var/db/dbus"
+	echo "/var/run/dbus and /var/db/dbus"
 	echo ""
 	;;
 esac
