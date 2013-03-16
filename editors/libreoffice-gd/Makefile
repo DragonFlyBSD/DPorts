@@ -1,6 +1,6 @@
-# $FreeBSD: ports/editors/libreoffice-gd/Makefile,v 1.3 2012/11/17 05:57:15 svnexp Exp $
+# $FreeBSD: editors/libreoffice-gd/Makefile 313667 2013-03-08 19:01:45Z jkim $
 
-LO_I18N=	gd	
+LO_I18N=	gd
 
 .include "${.CURDIR}/../../editors/libreoffice/Makefile.common"
 
