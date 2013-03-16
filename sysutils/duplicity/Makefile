@@ -1,8 +1,8 @@
 # Created by: Gerhard Häring <gh@ghaering.de>
-# $FreeBSD: ports/sysutils/duplicity/Makefile,v 1.45 2012/11/17 06:01:29 svnexp Exp $
+# $FreeBSD: ports/sysutils/duplicity/Makefile,v 1.46 2013/01/23 17:21:51 svnexp Exp $
 
 PORTNAME=	duplicity
-PORTVERSION=	0.6.20
+PORTVERSION=	0.6.21
 CATEGORIES=	sysutils
 MASTER_SITES=	http://launchpad.net/duplicity/0.6-series/${PORTVERSION}/+download/
 
