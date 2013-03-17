@@ -1,0 +1,12 @@
+REPLACE_PERL=	app/TeX/sfd2map \
+		app/TeX/cjk-latex-config \
+		other/showdf \
+		other/lst.pl \
+		other/cntstems.pl \
+		other/showg \
+		scripts/forceiso \
+		scripts/frommap \
+		scripts/inst_dir \
+		scripts/html2man \
+		scripts/t1fdir \
+		scripts/trans
