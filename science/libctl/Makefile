@@ -25,10 +25,6 @@ MAN1=		gen-ctl-io.1
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "i386" || ${ARCH} == "sparc64"
-BROKEN=		Does not compile on i386 or sparc64
-.endif
-
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
