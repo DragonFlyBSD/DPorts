@@ -1,0 +1,81 @@
+# Created by: Jesper Skriver <jesper@FreeBSD.org>
+# $FreeBSD: ports/net/p5-Net-SSH-Perl/Makefile,v 1.28 2012/12/19 08:12:49 svnexp Exp $
+
+PORTNAME=	Net-SSH-Perl
+PORTVERSION=	1.35
+CATEGORIES=		net perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Perl5 module implements both the SSH1 and SSH2 protocols
+
+BUILD_DEPENDS=	p5-String-CRC32>=0:${PORTSDIR}/devel/p5-String-CRC32 \
+		p5-Math-GMP>=0:${PORTSDIR}/math/p5-Math-GMP \
+		p5-Digest-HMAC>=0:${PORTSDIR}/security/p5-Digest-HMAC \
+		p5-Digest-HMAC>=0:${PORTSDIR}/security/p5-Digest-HMAC \
+		p5-Crypt-DSA>=0:${PORTSDIR}/security/p5-Crypt-DSA \
+		p5-Crypt-DH>=0:${PORTSDIR}/security/p5-Crypt-DH \
+		p5-Math-Pari>=0:${PORTSDIR}/math/p5-Math-Pari \
+		p5-Convert-PEM>=0:${PORTSDIR}/converters/p5-Convert-PEM \
+		p5-Crypt-IDEA>=0:${PORTSDIR}/security/p5-Crypt-IDEA \
+		p5-Digest-BubbleBabble>=0:${PORTSDIR}/security/p5-Digest-BubbleBabble \
+		p5-Crypt-RSA>=0:${PORTSDIR}/security/p5-Crypt-RSA
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+MAN3=	Net::SSH::Perl.3 \
+	Net::SSH::Perl::Agent.3 \
+	Net::SSH::Perl::Auth.3 \
+	Net::SSH::Perl::Auth::KeyboardInt.3 \
+	Net::SSH::Perl::Auth::Password.3 \
+	Net::SSH::Perl::Auth::PublicKey.3 \
+	Net::SSH::Perl::Auth::RSA.3 \
+	Net::SSH::Perl::Auth::Rhosts.3 \
+	Net::SSH::Perl::Auth::Rhosts_RSA.3 \
+	Net::SSH::Perl::AuthMgr.3 \
+	Net::SSH::Perl::Buffer.3 \
+	Net::SSH::Perl::Channel.3 \
+	Net::SSH::Perl::ChannelMgr.3 \
+	Net::SSH::Perl::Cipher.3 \
+	Net::SSH::Perl::Cipher::Blowfish.3 \
+	Net::SSH::Perl::Cipher::CBC.3 \
+	Net::SSH::Perl::Cipher::CFB.3 \
+	Net::SSH::Perl::Cipher::DES.3 \
+	Net::SSH::Perl::Cipher::DES3.3 \
+	Net::SSH::Perl::Cipher::IDEA.3 \
+	Net::SSH::Perl::Cipher::RC4.3 \
+	Net::SSH::Perl::Comp.3 \
+	Net::SSH::Perl::Comp::Zlib.3 \
+	Net::SSH::Perl::Config.3 \
+	Net::SSH::Perl::Constants.3 \
+	Net::SSH::Perl::Handle.3 \
+	Net::SSH::Perl::Kex.3 \
+	Net::SSH::Perl::Kex::DH1.3 \
+	Net::SSH::Perl::Key.3 \
+	Net::SSH::Perl::Key::DSA.3 \
+	Net::SSH::Perl::Key::RSA.3 \
+	Net::SSH::Perl::Key::RSA1.3 \
+	Net::SSH::Perl::Mac.3 \
+	Net::SSH::Perl::Packet.3 \
+	Net::SSH::Perl::SSH1.3 \
+	Net::SSH::Perl::SSH2.3 \
+	Net::SSH::Perl::Subsystem::Client.3 \
+	Net::SSH::Perl::Subsystem::Server.3 \
+	Net::SSH::Perl::Util.3
+
+CONFIGURE_ENV+=	PERL_MM_USE_DEFAULT="1"
+PERL_CONFIGURE=	yes
+
+OPTIONS_DEFINE=	GMP
+OPTIONS_DEFAULT=	GMP
+GMP_DESC=	Use the optimized Math::BigInt::GMP backend
+
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MGMP}
+GMP_DEPEND=	p5-Math-BigInt-GMP>=0:${PORTSDIR}/math/p5-Math-BigInt-GMP
+BUILD_DEPENDS+=	${GMP_DEPEND}
+RUN_DEPENDS+=	${GMP_DEPEND}
+.endif
+
+.include <bsd.port.post.mk>
