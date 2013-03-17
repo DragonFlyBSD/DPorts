@@ -1,5 +1,5 @@
 # Created by: patrick, trevor
-# $FreeBSD: ports/print/lilypond/Makefile,v 1.111 2012/11/27 08:44:32 svnexp Exp $
+# $FreeBSD: print/lilypond/Makefile 313876 2013-03-11 12:37:09Z gahr $
 
 PORTNAME=	lilypond
 PORTVERSION=	2.16.1
@@ -17,11 +17,11 @@ BUILD_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
 		${LOCALBASE}/share/ghostscript/fonts/c059033l.pfb:${PORTSDIR}/print/gsfonts
 
 LIB_DEPENDS=	guile:${PORTSDIR}/lang/guile \
-    		gmp:${PORTSDIR}/math/gmp \
+		gmp:${PORTSDIR}/math/gmp \
 		freetype:${PORTSDIR}/print/freetype2
 
 RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-    		mftrace:${PORTSDIR}/print/mftrace \
+		mftrace:${PORTSDIR}/print/mftrace \
 		${LOCALBASE}/lib/X11/fonts/dejavu/DejaVuSans-Bold.ttf:${PORTSDIR}/x11-fonts/dejavu
 
 MAN1=		lilymidi.1 lilypond-book.1 lilypond-invoke-editor.1 \
@@ -41,7 +41,7 @@ INFO=		lilypond-notation \
 		music-glossary \
 		internals
 
-USE_BISON=	build
+USES=		bison:build
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GHOSTSCRIPT=9
@@ -65,22 +65,22 @@ NOCCACHE=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITHOUT_NLS)
-PLIST_SUB+=	NLS="@comment "
-.else
+.if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
+.else
+PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-patch:
 	${REINPLACE_CMD} -e 's|<FlexLexer.h>|"/usr/include/FlexLexer.h"|' \
 	    ${WRKSRC}/lily/include/includable-lexer.hh
-.if defined(WITHOUT_NLS)
-	${REINPLACE_CMD} -e '/^PO_FILES/s|= |= #|' ${WRKSRC}/${MAKEFILE}
+.if empty(${PORT_OPTIONS:MNLS})
+	${REINPLACE_CMD} -e '/^PO_FILES/s|= |= #|' ${WRKSRC}/${MAKEFILE}.in
 .endif
 
 post-install:
 	@${LN} -fs ${DATADIR}/${PORTVERSION} ${DATADIR}/current
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
