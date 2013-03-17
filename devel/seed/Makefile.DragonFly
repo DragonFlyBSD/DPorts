@@ -1,0 +1,1 @@
+LIB_DEPENDS+= readline:${PORTSDIR}/devel/readline
