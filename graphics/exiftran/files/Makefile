@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/exiftran/files/Makefile,v 1.2 2012/11/17 05:58:05 svnexp Exp $
+# $FreeBSD: graphics/exiftran/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 SUBDIR= build/exiftran build/thumbnail.cgi
 
