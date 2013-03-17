@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/audio/pacpl/Makefile,v 1.37 2012/11/17 05:54:41 svnexp Exp $
+# $FreeBSD: audio/pacpl/Makefile 313033 2013-02-27 04:02:00Z danfe $
 
 PORTNAME=	pacpl
 PORTVERSION=	4.0.5
@@ -111,7 +111,7 @@ RUN_DEPENDS+=	lame:${PORTSDIR}/audio/lame
 .endif
 
 .if ${PORT_OPTIONS:MLAUDIO}
-RUN_DEPENDS+=	laudio:${PORTSDIR}/audio/laudio
+RUN_DEPENDS+=	laudio:${PORTSDIR}/audio/linux-laudio
 .endif
 
 .if ${PORT_OPTIONS:MSNDFILE}
