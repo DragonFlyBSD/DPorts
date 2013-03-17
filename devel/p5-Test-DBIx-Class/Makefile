@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Test-DBIx-Class/Makefile,v 1.10 2012/12/17 15:43:19 svnexp Exp $
+# $FreeBSD: ports/devel/p5-Test-DBIx-Class/Makefile,v 1.11 2013/01/22 09:45:35 svnexp Exp $
 
 PORTNAME=	Test-DBIx-Class
-PORTVERSION=	0.35
+PORTVERSION=	0.38
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
