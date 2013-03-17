@@ -1,0 +1,33 @@
+# Ports collection Makefile for:	fluxconf
+# Date created:				29/04/2002
+# Whom:					hendrik@scholz.net
+#
+# $FreeBSD: ports/x11-wm/fluxconf/Makefile,v 1.28 2012/11/17 06:03:42 svnexp Exp $
+#
+
+PORTNAME=	fluxconf
+PORTVERSION=	0.9.9
+PORTREVISION=	7
+CATEGORIES=	x11-wm
+MASTER_SITES=	http://devaux.fabien.free.fr/flux/
+
+MAINTAINER=	alfredoj69@gmail.com
+COMMENT=	A configuration program for the fluxbox window manager
+
+USE_GNOME=	gtk20
+GNU_CONFIGURE=	yes
+
+PORTDOCS=	fluxconf.png fluxkeys.png fluxmenu.png index.html
+PLIST_FILES=	bin/fluxbare bin/fluxconf bin/fluxkeys bin/fluxmenu \
+		share/locale/fi/LC_MESSAGES/fluxconf.mo \
+		share/locale/fr/LC_MESSAGES/fluxconf.mo
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for file in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/docs/${file} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>
