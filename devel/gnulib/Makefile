@@ -34,7 +34,6 @@ PLIST_FILES+=	%%DOCSDIR%%/${PORTNAME}.html
 
 post-patch:
 	${REINPLACE_CMD} -e 's/date -u.*/stat -f %Sa -t "@set UPDATED %F %T" `ls -t $$^ | sed 1q` > $$@/' \
-		-e 's: makeinfo$$: ${LOCALBASE}/bin/makeinfo:' \
 		${WRKSRC}/doc/Makefile
 
 do-build:
