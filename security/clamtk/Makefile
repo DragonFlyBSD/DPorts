@@ -2,11 +2,11 @@
 # Date created:		24 February 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/security/clamtk/Makefile,v 1.54 2012/12/09 06:38:15 svnexp Exp $
+# $FreeBSD: ports/security/clamtk/Makefile,v 1.55 2013/02/02 20:44:08 svnexp Exp $
 #
 
 PORTNAME=	clamtk
-PORTVERSION=	4.43
+PORTVERSION=	4.44
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}/ClamTk/${PORTVERSION}
 
