@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	snownews
-# Date created:			Nov 3 2003
-# Whom:				Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/www/snownews/Makefile,v 1.34 2012/11/17 06:03:06 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: www/snownews/Makefile 313462 2013-03-05 17:16:48Z miwi $
 
 PORTNAME=	snownews
 PORTVERSION=	1.5.12
@@ -20,16 +15,20 @@ USE_GMAKE=	yes
 USE_GNOME=	libxml2
 HAS_CONFIGURE=	yes
 
-OPTIONS=	OPML		"Outline Processor Markup Support" on
+OPTIONS_DEFINE=	OPML NLS
+OPTIONS_DEFAULT=	OPML
+OPML_DESC=		Outline Processor Markup Support
 
-.if !defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 USE_GETTEXT=	yes
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
 .endif
 
-.if defined(WITHOUT_OPML)
+.if ! ${PORT_OPTIONS:MOPML}
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-Makefile
 PLIST_SUB+=	OPML="@comment "
 .else
@@ -43,12 +42,12 @@ MAN1=		snownews.1
 MANLANG=	"" de nl fr it ru_RU.KOI8-R
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|#!/usr/local/bin/perl|#!${PERL}|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|#!/usr/bin/perl|#!${PERL}|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|ncurses|ncursesw|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|gcc|${CC}|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|make|${GMAKE}|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|share/man|man|' ${WRKSRC}/Makefile
-.if defined(WITHOUT_NLS)
+.if ! ${PORT_OPTIONS:MNLS}
 	${REINPLACE_CMD} -e 's/ install-locales / /g' ${WRKSRC}/Makefile
 	${REINPLACE_CMD} -e 's/ locales$$//g' ${WRKSRC}/Makefile
 .endif
