@@ -2,7 +2,7 @@
 # Date created:				2006/06/01
 # Whom:					chinsan <chinsan.tw@gmail.com>
 #
-# $FreeBSD: ports/graphics/epdfview/Makefile,v 1.38 2012/11/17 05:58:04 svnexp Exp $
+# $FreeBSD: graphics/epdfview/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	epdfview
@@ -52,6 +52,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/src/gtk/StockIcons.h
 
 post-install:
 	${REINPLACE_CMD} -e 's,Icon.*,Icon=${DATADIR}/pixmaps/icon_epdfview-48.png,' ${WRKSRC}/data/${PORTNAME}.desktop
