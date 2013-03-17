@@ -1,0 +1,4 @@
+REPLACE_PERL=	contrib/ib_backup.pl \
+		contrib/fsfind.pl \
+		fsbackup.pl \
+		install.pl
