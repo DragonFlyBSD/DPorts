@@ -1,5 +1,1 @@
-# Indirect linking failure
-LDFLAGS+=	-lintl
-
-# pkg-config configuration failure
-USE_GNOME+=	gtk20
+LDFLAGS+= -L${LOCALBASE}/lib -lintl
