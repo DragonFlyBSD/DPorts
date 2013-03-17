@@ -1,0 +1,41 @@
+# New ports collection makefile for:	pongix
+# Date created:		2006-04-01
+# Whom:			Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
+#
+# $FreeBSD: ports/games/pongix/Makefile,v 1.18 2012/11/17 05:57:49 svnexp Exp $
+#
+
+PORTNAME=	pongix
+PORTVERSION=	0.4
+PORTREVISION=	10
+CATEGORIES=	games
+MASTER_SITES=	http://www.losersjuegos.com.ar/_media/juegos/pongix/descargas/
+
+MAINTAINER=	acm@FreeBSD.org
+COMMENT=	Free pong-like game
+
+LICENSE=	GPLv2
+
+USE_SDL=	sdl image net
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD}
+
+do-install:
+	${MKDIR} ${DATADIR}
+	@cd ${WRKSRC}/src && \
+		${INSTALL_PROGRAM} pongix  ${PREFIX}/bin
+	@cd ${WRKSRC}/data && \
+		${FIND} * -type d -exec ${MKDIR} "${DATADIR}/{}" \; && \
+			${FIND} -E * -type f -iregex ".*\.(jpg|bmp)" \
+				-exec ${INSTALL_DATA} "{}" "${DATADIR}/{}" \;
+
+post-install:
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR}
+	@cd ${WRKSRC} && \
+	${INSTALL_DATA} AUTHORS ChangeLog README ${DOCSDIR}
+.endif
+
+.include <bsd.port.mk>
