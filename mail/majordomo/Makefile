@@ -39,11 +39,6 @@ RUN_DEPENDS+=	p5-Digest-MD5>=0:${PORTSDIR}/security/p5-Digest-MD5
 . endif
 .endif
 
-pre-fetch:
-.if !defined(BATCH) && !defined(PACKAGE_BUILDING)
-	${DIALOG} --yesno "WARNING: Majordomo is a really old mail list manager. The last version was released in january 2000, and there does not seem to be any updates coming. You might want to consider using mailman instead. Are you sure you want to install majordomo?" 8 70 no || ${FALSE}
-.endif
-
 post-patch:
 .if defined(WITH_POSTFIX_APPROVE_PATCH)
 	@cd ${WRKSRC} && ${PATCH} < ${FILESDIR}/postfix-approve-patch 2>/dev/null
