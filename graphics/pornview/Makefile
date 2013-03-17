@@ -1,9 +1,9 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: ports/graphics/pornview/Makefile,v 1.48 2013/01/26 17:14:33 svnexp Exp $
+# $FreeBSD: graphics/pornview/Makefile 314141 2013-03-14 08:17:39Z pclin $
 
 PORTNAME=	pornview
 PORTVERSION=	0.2.0.p.1
-PORTREVISION=	26
+PORTREVISION=	27
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/OldFiles
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/.p./pre/}
