@@ -25,7 +25,7 @@ MAKE_ARGS=	CC="${CC}" \
 		CFLAGS="${CFLAGS}" \
 		INCDIR="`pkg-config --cflags gtk+-2.0` -I${LOCALBASE}/include" \
 		LIBDIR="" \
-		LIBS="-lical -lXpm"
+		LIBS="-lical -lXpm -lm"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
