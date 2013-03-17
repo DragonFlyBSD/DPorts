@@ -35,9 +35,9 @@ PNG2PNM_SRCS=	png22pnm.c
 do-build:
 	cd ${WRKSRC} \
 		&& ${CC} ${CFLAGS} -DNDEBUG -I${LOCALBASE}/include \
-		${TIF22PNM_SRCS} -o tif22pnm -L${LOCALBASE}/lib -ltiff \
+		${TIF22PNM_SRCS} -o tif22pnm -lm -L${LOCALBASE}/lib -ltiff \
 		&& ${CC} ${CFLAGS} -DNDEBUG `pkg-config libpng15 --cflags` \
-		${PNG2PNM_SRCS} -o png22pnm `pkg-config libpng15 --libs`
+		${PNG2PNM_SRCS} -o png22pnm -lm `pkg-config libpng15 --libs`
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/png22pnm ${PREFIX}/bin
