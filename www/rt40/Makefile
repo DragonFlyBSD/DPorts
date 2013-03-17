@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/rt40/Makefile,v 1.64 2013/01/17 21:14:16 svnexp Exp $
+# $FreeBSD: ports/www/rt40/Makefile,v 1.66 2013/02/10 23:15:40 svnexp Exp $
 
 PORTNAME=	rt
-PORTVERSION=	4.0.9
+PORTVERSION=	4.0.10
 PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/ \
