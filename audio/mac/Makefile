@@ -21,10 +21,6 @@ GNU_CONFIGURE=	yes
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "i386" || ${ARCH} == "amd64"
-BUILD_DEPENDS=	yasm:${PORTSDIR}/devel/yasm
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O3||' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e '/nRetVal = 0/s|int|intptr_t|' \
