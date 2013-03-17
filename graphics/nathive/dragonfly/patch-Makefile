@@ -1,0 +1,8 @@
+--- Makefile.intermediate	2013-03-17 21:51:18.804328000 +0000
++++ Makefile
+@@ -11,4 +11,4 @@ debug: compile
+ 	gdb nathive
+ 
+ compile:
+-	$(CC) main.c -o nathive $(CFLAGS)
++	$(CC) main.c -o nathive -lm $(CFLAGS)
