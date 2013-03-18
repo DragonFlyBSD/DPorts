@@ -1,0 +1,30 @@
+# Created by: Olivier Cochard-Labbe <olivier@cochard.me>
+# $FreeBSD: ports/comms/deforaos-phone/Makefile,v 1.2 2013/02/10 19:12:49 svnexp Exp $
+
+PORTNAME=	phone
+PORTVERSION=	0.3.11
+CATEGORIES=	comms
+MASTER_SITES=	http://www.defora.org/os/download/download/3721/
+PKGNAMEPREFIX=	deforaos-
+DISTNAME=	Phone-${PORTVERSION}
+
+MAINTAINER=	olivier@cochard.me
+COMMENT=	DeforaOS telephony application
+
+LICENSE=	GPLv3
+
+LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem \
+		Desktop:${PORTSDIR}/x11/deforaos-libdesktop \
+		pulse:${PORTSDIR}/audio/pulseaudio \
+		purple:${PORTSDIR}/net-im/libpurple \
+		sofia-sip-ua:${PORTSDIR}/net/sofia-sip
+BUILD_DEPENDS=	locker:${PORTSDIR}/x11/deforaos-locker \
+		${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l_compat
+
+USE_GNOME=	gtk20 desktopfileutils
+USE_PKGCONFIG=	build
+USE_GETTEXT=	yes
+INSTALLS_ICONS=	yes
+MAKE_ARGS+=	PREFIX=${PREFIX}
+
+.include <bsd.port.mk>

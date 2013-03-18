@@ -1,0 +1,10 @@
+--- src/Makefile.orig	2012-11-09 12:54:24.000000000 +0000
++++ src/Makefile
+@@ -10,6 +10,7 @@ CPPFLAGS=
+ CFLAGSF	= -W `pkg-config --cflags libSystem libDesktop`
+ CFLAGS	= -Wall -g -O2 -pedantic
+ LDFLAGSF= `pkg-config --libs libSystem libDesktop`
++LDFLAGS = -lintl
+ RM	?= rm -f
+ LN	?= ln -f
+ MKDIR	?= mkdir -p
