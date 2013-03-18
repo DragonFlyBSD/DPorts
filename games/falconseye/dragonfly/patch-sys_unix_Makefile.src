@@ -1,0 +1,11 @@
+--- sys/unix/Makefile.src.intermediate	2013-03-18 10:24:31.008091000 +0000
++++ sys/unix/Makefile.src
+@@ -265,7 +265,7 @@ WINGEMLIB = -le_gem -lgem
+ # libraries for BeOS 
+ WINBELIB = -lbe
+ 
+-WINLIB = $(WINTTYLIB) $(WINJTPLIB) $(WINX11LIB)
++WINLIB = $(WINTTYLIB) $(WINJTPLIB) $(WINX11LIB) -lm
+ 
+ # any other strange libraries your system needs (for Sysunix only -- the more
+ # specialized targets should already be right)
