@@ -1,0 +1,11 @@
+--- Makefile.orig	2013-03-18 08:42:28.655446000 +0000
++++ Makefile
+@@ -27,7 +27,7 @@ EXENAME=rockdodger
+ #SOUNDLIBRARIES=
+ SOUNDLIBRARIES=-lSDL_mixer
+ 
+-LIBRARIES=`sdl-config --libs` -lSDL_image $(SOUNDLIBRARIES)
++LIBRARIES=`sdl-config --libs` -lm -lSDL_image $(SOUNDLIBRARIES)
+ 
+ all:	$(EXENAME)
+ 
