@@ -1,0 +1,15 @@
+
+$FreeBSD: ports/games/uhexen/files/patch-src::i_video.c,v 1.2 2012/11/17 05:57:55 svnexp Exp $
+
+--- src/i_video.c	2003/02/10 15:10:49	1.1
++++ src/i_video.c	2003/02/10 15:11:08
+@@ -54,7 +54,8 @@
+ }
+ 
+ void I_ShutdownGraphics(void) {
+-  SW_ShutdownGraphics();
++  if (SW_ShutdownGraphics)
++    SW_ShutdownGraphics();
+ }
+ 
+ void I_StartTic(void) {
