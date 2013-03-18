@@ -1,0 +1,5 @@
+bin/node
+lib/dtrace/node.d
+lib/node_modules/.keepme
+@dirrm lib/node_modules
+@dirrm lib/dtrace
