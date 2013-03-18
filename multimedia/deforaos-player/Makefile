@@ -1,0 +1,25 @@
+# Created by: Olivier Cochard-Labbe <olivier@cochard.me>
+# $FreeBSD: ports/multimedia/deforaos-player/Makefile,v 1.2 2013/02/10 16:43:42 svnexp Exp $
+
+PORTNAME=	player
+PORTVERSION=	0.1.4
+CATEGORIES=	multimedia
+MASTER_SITES=	http://www.defora.org/os/download/download/3708/
+PKGNAMEPREFIX=	deforaos-
+DISTNAME=	Player-${PORTVERSION}
+
+MAINTAINER=	olivier@cochard.me
+COMMENT=	DeforaOS desktop media player
+
+LICENSE=	GPLv3
+
+LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem \
+		Desktop:${PORTSDIR}/x11/deforaos-libdesktop
+RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer
+
+MAKE_ARGS+=	PREFIX=${PREFIX}
+USE_GNOME=	gtk20 desktopfileutils
+USE_PKGCONFIG=	build
+USE_GETTEXT=	yes
+
+.include <bsd.port.mk>
