@@ -1,8 +1,8 @@
 # Created by: eivind/dima/jseger
-# $FreeBSD: www/seamonkey/Makefile 313335 2013-03-03 10:09:08Z flo $
+# $FreeBSD: www/seamonkey/Makefile 313857 2013-03-11 07:28:17Z flo $
 
 PORTNAME=	seamonkey
-DISTVERSION=	2.16
+DISTVERSION=	2.16.1
 CATEGORIES?=	www ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	${PORTNAME}/releases/${DISTVERSION}/source
