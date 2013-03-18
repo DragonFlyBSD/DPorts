@@ -1,7 +1,5 @@
-@comment $FreeBSD: ports/devel/newfile/pkg-plist,v 1.6 2012/11/17 05:56:01 svnexp Exp $
+@comment $FreeBSD: devel/newfile/pkg-plist 312736 2013-02-21 20:55:11Z eadler $
 bin/newfile
-%%PORTDOCS%%%%DOCSDIR%%/newfile.html
-%%PORTDOCS%%@dirrm %%DOCSDIR%%
 %%DATADIR%%/fileproc.rb
 %%DATADIR%%/licenses/Artistic@Artistic
 %%DATADIR%%/licenses/Artistic@README
