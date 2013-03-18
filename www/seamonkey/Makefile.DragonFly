@@ -10,3 +10,4 @@ CONFIGURE_ARGS+=	--disable-ldap
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:S/ALSA/OSS/}
 
 EM_XPI_FILE=		${MOZ_OBJDIR}/mozilla/dist/bin/${EM_DISTNAME}-${OPSYS:tl}-${ARCH:S/amd64/x86_64/}.xpi
+XPI_FILE=		${MOZ_OBJDIR}/mozilla/dist/xpi-stage/lightning-${L_VERSION}.en-US.${OPSYS:tl}${OSREL}-${ARCH:S/amd64/x86_64/}.xpi
