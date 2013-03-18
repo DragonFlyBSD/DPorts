@@ -28,10 +28,12 @@ MAKEDIRS=	${WRKSRC}/src/modules/loaders/svg
 .include "../evas-core/Makefile.inc"
 CONFIGURE_ARGS+=	--enable-image-loader-svg
 
+LDFLAGS+=	-L${LOCALBASE}/lib -levas
+
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's,\$$\(top_builddir\)/src/lib/\.libs,${LOCALBASE}/lib,' \
-		-e 's,\$$\(top_builddir\)/src/lib/libevas\.la,-levas,' \
+		-e 's,\$$\(top_builddir\)/src/lib/libevas\.la,,' \
 		${MAKEDIRS:S,$,/Makefile.in,}
 
 do-build:
