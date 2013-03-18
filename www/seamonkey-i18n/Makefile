@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/www/seamonkey-i18n/Makefile,v 1.35 2013/02/20 22:45:24 svnexp Exp $
+# $FreeBSD: www/seamonkey-i18n/Makefile 313857 2013-03-11 07:28:17Z flo $
 
 PORTNAME=	seamonkey-i18n
-PORTVERSION=	2.16
+PORTVERSION=	2.16.1
 CATEGORIES=	www
 MASTER_SITE_SUBDIR=	seamonkey/releases/${PORTVERSION}/langpack
 PKGNAMEPREFIX=

@@ -2,7 +2,7 @@
 # Date created:         30 Nov 2008
 # Whom:                 Koji Yokota <yokota@res.otaru-uc.ac.jp>
 #
-# $FreeBSD: ports/www/seamonkey-i18n/Makefile.option,v 1.4 2012/11/17 06:03:05 svnexp Exp $
+# $FreeBSD: www/seamonkey-i18n/Makefile.option 303831 2012-09-07 22:10:01Z flo $
 #
 
 OPTIONS=		LANG_CA "Catalan"               off \
