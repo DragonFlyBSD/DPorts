@@ -1,0 +1,29 @@
+# New ports collection makefile for:	rgbpaint
+# Date created:		4 April 2007
+# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
+#
+# $FreeBSD: ports/graphics/rgbpaint/Makefile,v 1.13 2012/11/17 05:58:21 svnexp Exp $
+#
+
+PORTNAME=	rgbpaint
+PORTVERSION=	0.8.7
+PORTREVISION=	6
+CATEGORIES=	graphics
+MASTER_SITES=	SF/mtpaint/${PORTNAME}/${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Very basic painting program
+
+USE_GETTEXT=	yes
+USE_BZIP2=	yes
+USE_GNOME=	gtk20
+HAS_CONFIGURE=	yes
+CONFIGURE_ARGS=	--prefix=${PREFIX} --mandir=${MAN1PREFIX}/man/man1 \
+		--locale=${PREFIX}/share/locale cflags slow intl man
+MAN1=		${PORTNAME}.1
+MANCOMPRESSED=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e '/if \[/s|==|=|g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>
