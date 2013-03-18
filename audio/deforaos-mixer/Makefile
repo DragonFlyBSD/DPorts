@@ -1,0 +1,30 @@
+# Created by: Olivier Cochard-Labbe <olivier@cochard.me>
+# $FreeBSD: ports/audio/deforaos-mixer/Makefile,v 1.2 2013/02/10 19:56:52 svnexp Exp $
+
+PORTNAME=	mixer
+PORTVERSION=	0.1.1
+CATEGORIES=	audio
+MASTER_SITES=	http://www.defora.org/os/download/download/3705/
+DISTNAME=	Mixer-${PORTVERSION}
+PKGNAMEPREFIX=	deforaos-
+
+MAINTAINER=	olivier@cochard.me
+COMMENT=	DeforaOS desktop audio mixer
+
+LICENSE=	GPLv3
+
+LIB_DEPENDS=	Desktop:${PORTSDIR}/x11/deforaos-libdesktop
+
+MAKE_ARGS=	PREFIX=${PREFIX}
+USE_GNOME=	gtk20 desktopfileutils
+USE_PKGCONFIG=	build
+USE_GETTEXT=	yes
+PLIST_FILES=	bin/mixer \
+		share/applications/mixer.desktop \
+		share/locale/fr/LC_MESSAGES/Mixer.mo
+
+post-patch:
+	${REINPLACE_CMD} -e 's|Exec=mixer|Exec=${LOCALBASE}/bin/mixer|g' \
+		${WRKSRC}/data/mixer.desktop
+
+.include <bsd.port.mk>
