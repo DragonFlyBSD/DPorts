@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/ports-mgmt/porttools/pkg-plist,v 1.7 2012/11/17 06:00:46 svnexp Exp $
+@comment $FreeBSD: ports-mgmt/porttools/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/port
 %%DATADIR%%/cmd_commit
 %%DATADIR%%/cmd_create
