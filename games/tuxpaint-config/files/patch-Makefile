@@ -1,0 +1,12 @@
+--- Makefile.orig	2009-05-29 07:08:08.000000000 +0900
++++ Makefile	2010-10-19 01:39:29.000000000 +0900
+@@ -340,7 +340,8 @@
+ INSTALLED_MOFILES:=$(patsubst trans/%.mo,$(LOCALE_PREFIX)/%/LC_MESSAGES/tuxpaint-config.mo,$(MOFILES))
+ 
+ $(INSTALLED_MOFILES): $(LOCALE_PREFIX)/%/LC_MESSAGES/tuxpaint-config.mo: trans/%.mo
+-	install -D -m 644 $< $@
++	test -d `dirname $@` || mkdir -p `dirname $@`
++	$(BSD_INSTALL_DATA) $< $@
+ 
+ .PHONY: uninstall-i18n
+ uninstall-i18n:
