@@ -1,0 +1,11 @@
+--- Imakefile.in.orig	2007-12-03 09:08:40.000000000 +0000
++++ Imakefile.in
+@@ -23,7 +23,7 @@ OPTFLAGS=	@OPTFLAGS@ ${CPPFLAGS}
+ DEFS=	@DEFS@ -DMGPLIBDIR=\"$(LIBDIR)/mgp\"
+ #DEFS+=	-DGLYPHEDGE
+ 
+-SYS_LIBRARIES=	-L$(srcdir)/image -lmgpimage @LIBS@
++SYS_LIBRARIES=	-L$(srcdir)/image -lmgpimage @LIBS@ -liconv
+ EXTRA_DEPLIBS=	@DEPLIBS@
+ 
+ #undef DefaultCDebugFlags
