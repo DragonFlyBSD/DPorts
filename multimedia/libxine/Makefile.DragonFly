@@ -1,2 +1,9 @@
 CONFIGURE_ARGS:= ${CONFIGURE_ARGS:S/--enable-dvb//}
 LDFLAGS+=	-lintl
+
+# gcc 4.4 assembler has some kind of bug in it
+# Using it results in this error on i386
+# greedy2frame_template_sse2.c:169: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+# greedy2frame_template_sse2.c:169: error: 'asm' operand has impossible constraints
+
+USE_GCC= 4.7
