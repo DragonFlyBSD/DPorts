@@ -1,0 +1,11 @@
+--- tools/Makefile.orig	2012-10-14 17:21:29.000000000 +0000
++++ tools/Makefile
+@@ -7,7 +7,7 @@ CPPFLAGSF= -I ../src
+ CPPFLAGS?=
+ CFLAGSF	= -W
+ CFLAGS	= -Wall -g -O2 -pedantic
+-LDFLAGS	= 
++LDFLAGS	= -lintl
+ RM	?= rm -f
+ LN	?= ln -f
+ MKDIR	?= mkdir -p
