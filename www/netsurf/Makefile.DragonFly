@@ -1,0 +1,2 @@
+LIB_DEPENDS+=	ssl:${PORTSDIR}/security/openssl
+LDFLAGS+=	-L${LOCALBASE}/lib -liconv
