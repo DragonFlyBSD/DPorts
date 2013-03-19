@@ -2,11 +2,11 @@
 # Date created:		Sun Oct 17 00:24:28 PDT 1999
 # Whom:			adsharma@sharmas.dhs.org
 #
-# $FreeBSD: ports/x11-toolkits/py-qt/Makefile,v 1.68 2012/11/17 06:03:38 svnexp Exp $
+# $FreeBSD: ports/x11-toolkits/py-qt/Makefile,v 1.70 2013/02/03 22:44:21 svnexp Exp $
 
 PORTNAME=	qt
 PORTVERSION=	3.18.2
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	2
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/PyQt3/ \
@@ -21,6 +21,9 @@ LIB_DEPENDS=	qscintilla.7:${PORTSDIR}/x11-toolkits/qscintilla
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sip>=${SIP_VERSION}:${PORTSDIR}/devel/py-sip
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sip>=${SIP_VERSION}:${PORTSDIR}/devel/py-sip \
 		qmake:${PORTSDIR}/devel/qmake
+
+DEPRECATED=	Depends on QT3; unmaintained
+EXPIRATION_DATE=	2013-07-01
 
 USE_QT_VER=	3
 USE_PYTHON=	2.5+
