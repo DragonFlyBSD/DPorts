@@ -1,0 +1,18 @@
+# Created by: dd
+# $FreeBSD: textproc/syck/Makefile 313647 2013-03-08 13:21:31Z miwi $
+
+PORTNAME=	syck
+PORTVERSION=	0.70
+PORTREVISION=	1
+CATEGORIES=	textproc devel
+MASTER_SITES=	http://cloud.github.com/downloads/indeyets/syck/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A library for reading and writing YAML 1.0
+
+GNU_CONFIGURE=	yes
+USES=		bison
+CFLAGS+=	-fPIC
+MAKE_JOBS_UNSAFE=	yes
+
+.include <bsd.port.mk>
