@@ -2,7 +2,7 @@
 # Date created:				28th Feb 1995
 # Whom:					gpalmer
 #
-# $FreeBSD: ports/misc/amanda-server/Makefile,v 1.130 2012/11/17 05:59:32 svnexp Exp $
+# $FreeBSD: ports/misc/amanda-server/Makefile,v 1.131 2013/01/31 19:48:36 svnexp Exp $
 #
 
 PORTNAME=	amanda
@@ -135,10 +135,10 @@ CONFIGURE_ARGS+=	--without-gnuplot
 .endif
 
 .if defined (WITH_SAMBA)
-SAMBA_PORT?=	samba34
+SAMBA_PORT?=	samba36
 BUILD_DEPENDS+=	smbclient:${PORTSDIR}/net/${SAMBA_PORT}
 RUN_DEPENDS+=	smbclient:${PORTSDIR}/net/${SAMBA_PORT}
-CONFIGURE_ARGS+=	--with-smbclient=${PREFIX}/bin/smbclient
+CONFIGURE_ARGS+=	--with-smbclient=${LOCALBASE}/bin/smbclient
 .endif
 
 # If configure founds libcurl, automatically enabled it (with plist change).
