@@ -12,7 +12,7 @@
 #
 
 PORTNAME=	genpatch
-PORTVERSION=	1.00
+PORTVERSION=	1.10
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -21,10 +21,11 @@ MAINTAINER=	draco@marino.st
 COMMENT=	Patch generator tool for dports
 
 NO_BUILD=	yes
-SUB_FILES=	genpatch.sh
-PLIST_FILES=	bin/genpatch
+SUB_FILES=	genpatch.sh dupe.sh
+PLIST_FILES=	bin/genpatch bin/dupe
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/genpatch.sh ${PREFIX}/bin/genpatch
+	${INSTALL_SCRIPT} ${WRKDIR}/dupe.sh ${PREFIX}/bin/dupe
 
 .include <bsd.port.mk>
