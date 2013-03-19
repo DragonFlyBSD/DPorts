@@ -1,0 +1,11 @@
+--- configure.orig	2013-03-19 09:35:34.957519000 +0000
++++ configure
+@@ -9308,7 +9308,7 @@ $as_echo "#define _XOPEN_SOURCE 600" >>c
+ 	*)
+ 		# Some platforms don't need _XOPEN_SOURCE
+ 		case ${host_os} in
+-			*freebsd*) ;;
++			*freebsd*|*dragonfly*) ;;
+ 			*)
+ 
+ $as_echo "#define _XOPEN_SOURCE 600" >>confdefs.h
