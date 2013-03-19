@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: ports/misc/amanda32-server/files/pkg-install.in,v 1.2 2012/11/17 05:59:32 svnexp Exp $
-
-if [ "$2" != "POST-INSTALL" ]; then
-	exit 0
-fi
-
-%%PERL%% -i -pe "s|\" client amrecover ndmp\"|\" server restore client amrecover ndmp\"|" ${PKG_PREFIX}/%%SITE_PERL_REL%%/Amanda/Constants.pm
