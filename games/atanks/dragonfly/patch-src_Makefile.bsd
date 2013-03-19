@@ -1,0 +1,11 @@
+--- src/Makefile.bsd.orig	2010-05-29 20:45:50.000000000 +0000
++++ src/Makefile.bsd
+@@ -14,7 +14,7 @@ FLAGS += -DDATA_DIR=\"${INSTALLDIR}\" -D
+ OUTPUT = ../atanks
+ WFLAGS = 
+ OFLAGS = 
+-LFLAGS +=
++LFLAGS += -lpthread
+ LDFLAGS =  `allegro-config --libs`
+ 
+ CFLAGS += -g -Wall -Iinclude -I/usr/local/include 
