@@ -1,12 +1,8 @@
-# New ports collection makefile for:	sieverues
-# Date created:				Mon 17 Mar 2011
-# Whom:					Anes Muhametov
-#
-# $FreeBSD: ports/mail/roundcube-sieverules/Makefile,v 1.6 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: Anes Muhametov <anes@anes.su>
+# $FreeBSD: ports/mail/roundcube-sieverules/Makefile,v 1.7 2013/02/19 04:02:52 svnexp Exp $
 
 PORTNAME=	sieverules
-PORTVERSION=	1.17
+PORTVERSION=	1.17.1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.tehinterweb.co.uk/roundcube/plugins/
 PKGNAMEPREFIX=	roundcube-
