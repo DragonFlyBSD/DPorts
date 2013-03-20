@@ -1,32 +1,30 @@
-# New ports collection makefile for:	enblend
-# Date created:			19 september 2004
-# Whom:				cartola@openit.com.br
-#
-# $FreeBSD: ports/graphics/enblend/Makefile,v 1.30 2013/01/17 16:48:39 svnexp Exp $
-#
+# Created by: cartola@openit.com.br
+# $FreeBSD: graphics/enblend/Makefile 313180 2013-03-02 02:25:47Z edwin $
 
 PORTNAME=	enblend
-PORTVERSION=	4.0
-PORTREVISION=	2
+PORTVERSION=	4.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
-MASTER_SITE_SUBDIR=	enblend/enblend-enfuse/enblend-enfuse-${PORTVERSION}
+# Care: the directory is the minor release number
+MASTER_SITE_SUBDIR=	enblend/enblend-enfuse/enblend-enfuse-4.1
 DISTNAME=	enblend-enfuse-${PORTVERSION}
 
 MAINTAINER=	grog@FreeBSD.org
 COMMENT=	A tool for image blending with multiresolution splines
 
-BUILD_DEPENDS=	${LOCALBASE}/include/boost/pool/pool.hpp:${PORTSDIR}/devel/boost-libs \
-		${LOCALBASE}/bin/makeinfo:${PORTSDIR}/print/texinfo \
+BUILD_DEPENDS=	${LOCALBASE}/bin/makeinfo:${PORTSDIR}/print/texinfo \
 		OpenEXR>=1.0:${PORTSDIR}/graphics/OpenEXR
 LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
-		lcms:${PORTSDIR}/graphics/lcms \
+		lcms2:${PORTSDIR}/graphics/lcms2 \
 		xmi:${PORTSDIR}/graphics/plotutils \
-		tiff:${PORTSDIR}/graphics/tiff
+		tiff:${PORTSDIR}/graphics/tiff \
+		boost_filesystem:${PORTSDIR}/devel/boost-libs \
+		vigraimpex:${PORTSDIR}/graphics/vigra \
+		gsl:${PORTSDIR}/math/gsl
 RUN_DEPENDS=	OpenEXR>=1.0:${PORTSDIR}/graphics/OpenEXR
 
-WRKSRC=		${WRKDIR}/enblend-enfuse-4.0-753b534c819d
-
+INFO=		enfuse enblend
+MAKE_JOBS_SAFE= yes
 USE_AUTOTOOLS=	automake:env autoconf:env
 USE_GMAKE=	yes
 # We need a newer version of makinfo for this.
@@ -39,14 +37,16 @@ CONFIGURE_ARGS=	MAKEINFO="${LOCALBASE}/bin/makeinfo"
 USE_GCC=	4.4+
 USE_GL=		glew glut
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	"LIBS=-lboost_system"
+CONFIGURE_ARGS+=	--with-boost-filesystem
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		enblend.1 enfuse.1
 PLIST_FILES=	bin/enblend bin/enfuse
 
-# run autotools
-#pre-configure:
-#	cd ${WRKSRC} && ${MAKE} -f Makefile.cvs
+post-install:
+		${MKDIR} ${DOCSDIR}
+		${INSTALL_DATA} ${WRKSRC}/doc/*.info ${PREFIX}/${INFO_PATH}
 
 .include <bsd.port.mk>
