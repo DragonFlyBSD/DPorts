@@ -1,0 +1,13 @@
+--- configure.orig	2005-07-28 11:01:07.000000000 +0000
++++ configure
+@@ -6240,6 +6240,10 @@ case "$target" in
+ 		LD_RXLIB1="${CC} -shared"
+ 		LD_RXTRANSLIB1="$LD_RXLIB1"
+ 		;;
++	*dragonfly*)
++		LD_RXLIB1="${CC} -shared"
++		LD_RXTRANSLIB1="$LD_RXLIB1"
++		;;
+ 	*freebsd*)
+ 		LD_RXLIB1="ld -Bdynamic -Bshareable"
+ 		LD_RXTRANSLIB1="$LD_RXLIB1"
