@@ -29,7 +29,7 @@
 # If you are wondering what your port exactly does, use "make test-gcc"
 # to see some debugging.
 #
-# $FreeBSD: Mk/bsd.gcc.mk 313323 2013-03-03 03:21:29Z gerald $
+# $FreeBSD: Mk/bsd.gcc.mk 314352 2013-03-16 13:01:12Z gerald $
 #
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org
@@ -93,7 +93,7 @@ CC:=		${LOCALBASE}/gcc-aux/bin/gcc
 CXX:=		${LOCALBASE}/gcc-aux/bin/g++
 CPP:=		${LOCALBASE}/gcc-aux/bin/cpp
 LDFLAGS+=	-L${LOCALBASE}/gcc-aux/lib
-LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/gcc-aux/lib
+LDFLAGS+=	-Wl,-rpath,${LOCALBASE}/gcc-aux/lib
 
 # Intel Fortran compiler from lang/ifc.
 . elif ${USE_FORTRAN} == ifort
@@ -236,12 +236,12 @@ CXX:=			g++${V}
 CPP:=			cpp${V}
 .   if ${_USE_GCC} != 3.4
 _GCC_RUNTIME:=		${LOCALBASE}/lib/gcc${V}
-CFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
-CXXFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
-LDFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
+CFLAGS+=		-Wl,-rpath,${_GCC_RUNTIME}
+CXXFLAGS+=		-Wl,-rpath,${_GCC_RUNTIME}
+LDFLAGS+=		-Wl,-rpath,${_GCC_RUNTIME}
 .    if defined (USE_FORTRAN)
 .    if ${USE_FORTRAN} == yes
-FFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
+FFLAGS+=		-Wl,-rpath,${_GCC_RUNTIME}
 .    endif
 .    endif
 # The following is for the sakes of some ports which use this without
@@ -271,6 +271,9 @@ RUN_DEPENDS+=	${_GCC_PORT_DEPENDS}:${PORTSDIR}/lang/${_GCC_PORT}
 test-gcc:
 	@echo USE_GCC=${USE_GCC}
 	@echo USE_FORTRAN=${USE_FORTRAN}
+.if defined(IGNORE)
+	@echo "IGNORE: ${IGNORE}"
+.else
 .if defined(USE_GCC)
 .if defined(_GCC_ORLATER)
 	@echo Port can use later versions.
@@ -294,5 +297,4 @@ test-gcc:
 	@echo MAKE_ENV=${MAKE_ENV}
 	@echo "BUILD_DEPENDS=${BUILD_DEPENDS}"
 	@echo "RUN_DEPENDS=${RUN_DEPENDS}"
-	@echo "IGNORE=${IGNORE}"
-
+.endif
