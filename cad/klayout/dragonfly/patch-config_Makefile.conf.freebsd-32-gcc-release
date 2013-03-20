@@ -1,0 +1,11 @@
+--- config/Makefile.conf.freebsd-32-gcc-release.intermediate	2013-03-20 02:20:27.350403000 +0000
++++ config/Makefile.conf.freebsd-32-gcc-release
+@@ -31,7 +31,7 @@ LINK=g++
+ LOPT=-g -Wl,-E -o
+ LOPT_SO=-g -shared -fPIC -o
+ 
+-LIBS=-L$(QTLIB) -lQtGui -lQtCore -lQtXml -lrt -lstdc++ -lcrypt
++LIBS=-L$(QTLIB) -lQtGui -lQtCore -lQtXml -lrt -lstdc++ -lcrypt -lz
+ 
+ .PHONY: install
+ install:
