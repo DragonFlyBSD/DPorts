@@ -1,5 +1,5 @@
 # Created by: Deni Shaposhnikov <dsh@bamus.cz>
-# $FreeBSD: ports/x11-themes/gtk-equinox-engine/Makefile,v 1.8 2012/11/17 06:03:31 svnexp Exp $
+# $FreeBSD: x11-themes/gtk-equinox-engine/Makefile 314462 2013-03-17 16:45:03Z kwm $
 
 PORTNAME=	equinox
 PORTVERSION=	1.50
@@ -45,6 +45,8 @@ post-patch:
 	@${FIND} ${WRKDIR} -name 'gtkrc' -exec \
 	    ${REINPLACE_CMD} -e 's!^include "apps/nautilus\.rc"!#&!' {} +
 	@${FIND} ${WRKDIR} -type f -name 'gtkrc.bak' -exec ${RM} -f {} +
+	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
+		${WRKSRC}/src/animation.c
 
 post-install:
 	@${MKDIR} ${DATADIR}
