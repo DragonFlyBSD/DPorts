@@ -1,0 +1,11 @@
+--- Makefile.intermediate	2013-03-20 12:16:46.522058000 +0000
++++ Makefile
+@@ -13,7 +13,7 @@ DIST = SGMLSpm-1.03ii.tar.gz
+ #
+ 
+ # Where is the binary for perl5 located on your system?
+-PERL = /usr/bin/perl
++PERL = /usr/local/bin/perl
+ 
+ # Where do you want the sgmlspl executable script to be installed?
+ BINDIR = /usr/local/bin
