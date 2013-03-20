@@ -1,7 +1,7 @@
-# $FreeBSD: ports/japanese/ajaxzip2-data/Makefile,v 1.7 2013/01/06 17:08:34 svnexp Exp $
+# $FreeBSD: japanese/ajaxzip2-data/Makefile 313600 2013-03-07 17:08:13Z miwi $
 
 PORTNAME=	ajaxzip2
-PORTVERSION=	20121228
+PORTVERSION=	20130228
 CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	kuriyama
@@ -11,14 +11,11 @@ DISTFILES=	ken_all-${PORTVERSION_K}.lzh jigyosyo-${PORTVERSION_J}.lzh
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	ajaxzip2 (Japanese ZIP code utility) ZIP data
 
-EXTRACT_DEPENDS=lha:${PORTSDIR}/archivers/lha
 BUILD_DEPENDS=	ja-ajaxzip2-core>0:${PORTSDIR}/japanese/ajaxzip2-core \
 		p5-JSON>0:${PORTSDIR}/converters/p5-JSON
 
-EXTRACT_CMD=	lha
-EXTRACT_BEFORE_ARGS=	x
-EXTRACT_AFTER_ARGS=
 NO_WRKSUBDIR=	yes
+USE_LHA=	yes
 USE_PERL5_BUILD=yes
 PORTVERSION_K?=	${PORTVERSION}
 PORTVERSION_J?=	${PORTVERSION}
