@@ -1,9 +1,10 @@
-# $FreeBSD: ports/devel/pkgconf/Makefile,v 1.16 2012/11/17 05:56:42 svnexp Exp $
+# $FreeBSD: devel/pkgconf/Makefile 314501 2013-03-17 23:10:18Z bapt $
 
 PORTNAME=	pkgconf
-PORTVERSION=	0.8.9
+PORTVERSION=	0.9.1
+PORTREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://tortois.es/~nenolod/distfiles/ \
+MASTER_SITES=	http://rabbit.dereferenced.org/~nenolod/distfiles/ \
 		http://files.etoilebsd.net/pkgconf/
 
 MAINTAINER=	bapt@FreeBSD.org
