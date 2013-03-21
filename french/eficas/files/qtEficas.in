@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/french/eficas/files/qtEficas.in,v 1.2 2012/11/17 05:57:28 svnexp Exp $
+#
+# $1 = comm
+# $2 = com0
+# $3 = com1
+# $4 = com2
+
+cd %%EFICASDIR%%/Aster
+exec %%PYTHON_CMD%% qtEficas_aster.pyo $1 $2 $3 $4
