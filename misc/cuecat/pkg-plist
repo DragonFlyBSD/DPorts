@@ -1,0 +1,6 @@
+bin/cuecat
+bin/xcuecat
+%%PYTHON_SITELIBDIR%%/barcode.py
+%%PYTHON_SITELIBDIR%%/barcode.pyo
+%%PYTHON_SITELIBDIR%%/cuecat.py
+%%PYTHON_SITELIBDIR%%/cuecat.pyo
