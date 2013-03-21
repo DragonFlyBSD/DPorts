@@ -1,0 +1,3 @@
+lib/%%TKPKG%%/lib%%TKPKG%%.so
+lib/%%TKPKG%%/pkgIndex.tcl
+@dirrm lib/%%TKPKG%%
