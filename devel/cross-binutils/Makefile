@@ -87,22 +87,7 @@ PATCHFILES+=	${PORTNAME}-${PORTVERSION}-rtems4.11-20110107.diff
 
 .if !defined(TGTARCH) || !defined(TGTABI)
 PKGNAMEPREFIX=	cross-
-.  if defined(PACKAGE_BUILDING)
-PLIST_FILES:=	
-NO_BUILD=		yes
-NO_INSTALL=		yes
-#INFO:=
-#MAN1:=
-
-do-configure:
-
-add-plist-info:
-
-generate-plist:
-
-.  else
 IGNORE=		you should define TGTARCH and TGTABI to build port
-.  endif
 .endif
 .if defined(TGTARCH) && (${TGTABI} == "elf" && ${TGTARCH} == "powerpc")
 IGNORE=		will not build with TGTARCH=powerpc and TGTABI=elf
@@ -157,11 +142,9 @@ post-install:
 # Add some plist items (we don't list them directly, since the set vary
 # accross different targets
 #
-.if defined(TGTARCH) && defined(TGTABI)
 	@${FIND} -ds ${PREFIX}/${OURTARGET} ! -type d | \
 		${SED} -e 's,^${PREFIX}/,,' >> ${TMPPLIST}
 	@${FIND} -ds ${PREFIX}/${OURTARGET} -type d | \
 		${SED} -e 's,^${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
-.endif
 
 .include <bsd.port.post.mk>
