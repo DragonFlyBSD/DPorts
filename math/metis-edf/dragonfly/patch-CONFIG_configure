@@ -1,0 +1,20 @@
+--- CONFIG/configure.intermediate	2013-03-21 08:45:42.246168000 +0000
++++ CONFIG/configure
+@@ -20,7 +20,7 @@ if [ $OS_TYPE = "SunOS" ]; then
+    if [ -z "$rtn" ] || [ "$rtn" = "y" -o "$rtn" = "Y" ]; then
+       OS_TYPE=SunOS64
+    fi
+-elif [ $OS_TYPE != "OSF1" -a $OS_TYPE != "IRIX64" -a $OS_TYPE != "Linux" -a $OS_TYPE != "FreeBSD" -a $OS_TYPE != "CYGWIN_NT-5.1" ]; then
++elif [ $OS_TYPE != "DragonFly" -a $OS_TYPE != "IRIX64" -a $OS_TYPE != "Linux" -a $OS_TYPE != "FreeBSD" -a $OS_TYPE != "CYGWIN_NT-5.1" ]; then
+    echo " Operating system $OS_TYPE unknown on this distribution"
+    echo " Installation failed !"
+    exit 8
+@@ -52,7 +52,7 @@ if [ $OS_TYPE = "Linux" ]; then
+     F90_TEMP="g77"
+     LD_TEMP="g77"
+   fi
+-elif [ $OS_TYPE = "FreeBSD" ]; then
++elif [ $OS_TYPE = "FreeBSD" -o $OS_TYPE = "DragonFly" ]; then
+    CC_TEMP="$CC"
+    F90_TEMP="$F77"
+    LD_TEMP="$CC -v"
