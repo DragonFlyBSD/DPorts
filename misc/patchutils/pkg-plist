@@ -1,0 +1,15 @@
+@comment $FreeBSD: ports/misc/patchutils/pkg-plist,v 1.8 2012/11/17 05:59:43 svnexp Exp $
+bin/combinediff
+bin/dehtmldiff
+bin/editdiff
+bin/espdiff
+bin/filterdiff
+bin/fixcvsdiff
+bin/flipdiff
+bin/grepdiff
+bin/interdiff
+bin/lsdiff
+bin/recountdiff
+bin/rediff
+bin/splitdiff
+bin/unwrapdiff
