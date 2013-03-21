@@ -64,7 +64,7 @@ USE_HORDE_RUN=	Horde_Role \
 RUN_DEPENDS+=	${PEARDIR}/Date/Holidays.php:${PORTSDIR}/devel/pear-Date_Holidays
 .endif
 
-.if ${PORT_OPTIONS:MTIMEOBJECTS
+.if ${PORT_OPTIONS:MTIMEOBJECTS}
 USE_HORDE_RUN+=	timeobjects
 .endif
 
