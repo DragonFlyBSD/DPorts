@@ -112,12 +112,13 @@ RUN_DEPENDS+=		ldb>=1.1.15:${PORTSDIR}/databases/ldb
 SAMBA4_BUNDLED_LIBS+=	!ldb
 ##############################################################################
 # Options
-OPTIONS_DEFINE=		ADS AIO_SUPPORT AVAHI CUPS DEBUG \
+OPTIONS_DEFINE=		ACL_SUPPORT ADS AIO_SUPPORT AVAHI CUPS DEBUG \
 			DNSUPDATE FAM_SUPPORT LDAP PAM_SMBPASS \
 			PTHREADPOOL QUOTAS SWAT SYSLOG UTMP WINBIND
 
 OPTIONS_DEFAULT:=	${OPTIONS_DEFINE}
 
+ACL_SUPPORT_DESC=	File system ACL support
 ADS_DESC=		Active Directory support
 AIO_SUPPORT_DESC=	Asyncronous IO support
 DNSUPDATE_DESC=		Dynamic DNS update(require ADS)
@@ -224,7 +225,16 @@ WANT_EXP_MODULES=	idmap_ad vfs_cacheprime gpext_scripts gpext_security gpext_reg
 .	endif
 .endif
 
+.if ${PORT_OPTIONS:MACL_SUPPORT}
+.	if ${OSVERSION} > 800000
+LIB_DEPENDS+=		sunacl:${PORTSDIR}/sysutils/libsunacl
+WANT_EXP_MODULES+=	vfs_zfsacl
+SAMBA4_MODULES+=	vfs_zfsacl
+.	endif
+CONFIGURE_ARGS+=	--with-acl-support
+.else
 CONFIGURE_ARGS+=	--without-acl-support
+.endif
 
 .if ${PORT_OPTIONS:MADS}
 SAMBA4_WANT_ADS=	yes
