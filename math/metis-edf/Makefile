@@ -1,9 +1,5 @@
-# New ports collection makefile for:	metis-edf
-# Date created:		Thu Jun 26 2003
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/math/metis-edf/Makefile,v 1.26 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: math/metis-edf/Makefile 314689 2013-03-19 20:34:49Z thierry $
 
 PORTNAME=	metis-edf
 DISTVERSION=	4.1-2
