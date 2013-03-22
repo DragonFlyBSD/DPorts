@@ -1,0 +1,14 @@
+--- CMakeLists.txt.intermediate	2013-03-22 21:09:50.868357000 +0000
++++ CMakeLists.txt
+@@ -208,9 +208,9 @@ IF(NOT WIN32)
+ ENDIF(NOT WIN32)
+ 
+ STRING(TOLOWER ${CMAKE_SYSTEM_NAME} node_platform)
+-IF(${node_platform} MATCHES freebsd)
++IF(${node_platform} MATCHES dragonfly)
+     FIND_LIBRARY(KVM_LIBRARY NAMES kvm)
+-ENDIF(${node_platform} MATCHES freebsd)
++ENDIF(${node_platform} MATCHES dragonfly)
+ 
+ #-------------------------------------------------------------------------------------
+ 
