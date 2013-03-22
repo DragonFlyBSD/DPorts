@@ -7,3 +7,9 @@ If the path is inside the WRKDIR, then genpatch assumes that the current
 directory is $WRKSRC and will create a patch with the proper name rather
 than sending the results to stdout.  These patches can be used directly
 in the files or dragonfly directories of dports.
+
+The "dupe" program quickly makes a properly named copy.
+The "portfix" wrapper will run dupe, editor, and genpatch in sequence.
+
+The editor is determined by PORTEDITOR or EDITOR environment variables,
+and fails back to vi if neither are set.
