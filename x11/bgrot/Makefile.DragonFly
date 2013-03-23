@@ -1,0 +1,4 @@
+REPLACE_PERL=	createconfig.pl \
+		setconfdir.pl \
+		bgrotman.pl \
+		bgrandom.pl
