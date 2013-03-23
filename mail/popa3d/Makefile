@@ -104,10 +104,6 @@ post-install:
 	@ ${CAT} ${PKGMESSAGE}
 .endif
 
-.if exists(${LOCALBASE}/share/sendmail/cf/mailer/uucp.m4)
 CFDIR=		${LOCALBASE}/share/sendmail/cf
-.else
-CFDIR=		/usr/share/sendmail/cf
-.endif
 
 .include <bsd.port.post.mk>
