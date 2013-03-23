@@ -2,7 +2,7 @@
 # Date created:				2012-09-05
 # Whom:					Masaki TAGAWA <masaki@club.kyutech.ac.jp>
 #
-# $FreeBSD: ports/net/packter-agent/Makefile,v 1.2 2012/11/17 06:00:14 svnexp Exp $
+# $FreeBSD: net/packter-agent/Makefile 313633 2013-03-08 10:51:34Z kwm $
 #
 
 PORTNAME=	packter-agent
@@ -19,6 +19,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL LICENSE NEWS README
 
