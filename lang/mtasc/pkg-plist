@@ -1,0 +1,9 @@
+@comment $FreeBSD: ports/lang/mtasc/pkg-plist,v 1.2 2012/11/17 05:58:53 svnexp Exp $
+bin/mtasc
+%%PORTDOCS%%%%DOCSDIR%%/CHANGES.txt
+%%PORTDOCS%%%%DOCSDIR%%/Future.txt
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL.txt
+%%PORTDOCS%%%%DOCSDIR%%/Readme.txt
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/HelloWorld.as
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%
