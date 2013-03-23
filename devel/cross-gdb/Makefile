@@ -22,10 +22,12 @@ COMMENT=	GNU gdb port for cross-target development
 # Temporary hack to dial with dependencies during package builds for
 # slave ports.
 #
+.if defined(TGTARCH) && defined(TGTABI)
 .if defined(PACKAGE_BUILDING)
 BUILD_DEPENDS=	${OURTARGET}-as:${PORTSDIR}/devel/${OURTARGET}-binutils
 .else
 BUILD_DEPENDS=	${OURTARGET}-as:${PORTSDIR}/devel/cross-binutils
+.endif
 .endif
 
 USE_BZIP2=	yes
