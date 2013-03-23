@@ -1,0 +1,18 @@
+--- SConstruct.intermediate	2013-03-23 12:10:49.869505000 +0000
++++ SConstruct
+@@ -195,12 +195,9 @@ if not env.GetOption('clean'):
+           or update PKG_CONFIG_PATH to point to libkate's source folder
+       """
+ 
+-  if conf.CheckCHeader('iconv.h'):
+-      env.Append(CCFLAGS=[
+-        '-DHAVE_ICONV'
+-      ])
+-      if conf.CheckLib('iconv'):
+-          env.Append(LIBS=['iconv'])
++  env.Append(CCFLAGS=['-DHAVE_ICONV', '-fPIC'])
++  env.Append(LIBS=['iconv'])
++  env.Append(LINKFLAGS=["-shared"])
+ 
+   if env['crossmingw']:
+       env.Append(CCFLAGS=['-Wl,-subsystem,windows'])
