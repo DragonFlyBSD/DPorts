@@ -2,7 +2,7 @@
 # Date created:				2011.09.30
 # Whom:					Aldis Berjoza <graudeejs@gmail.com>
 #
-# $FreeBSD: ports/audio/shairport/Makefile,v 1.4 2012/11/17 05:54:43 svnexp Exp $
+# $FreeBSD: ports/audio/shairport/Makefile,v 1.5 2012/12/16 06:16:53 svnexp Exp $
 #
 
 PORTNAME=	shairport
@@ -25,7 +25,7 @@ RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64 \
 		avahi-publish-service:${PORTSDIR}/net/avahi-app
 
 USE_GMAKE=	yes
-USE_PERL5_RUN=	5.10.0+
+USE_PERL5_RUN=	yes
 USE_OPENSSL=	yes
 USE_GNOME=	pkgconfig
 

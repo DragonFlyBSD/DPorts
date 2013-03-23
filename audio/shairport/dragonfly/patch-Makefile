@@ -1,0 +1,9 @@
+--- Makefile.orig	2012-01-02 10:57:00.000000000 +0000
++++ Makefile
+@@ -1,5 +1,5 @@
+ CFLAGS:=-O2 -Wall $(shell pkg-config --cflags ao)
+-LDFLAGS:=-lm -lpthread $(shell pkg-config --libs ao) -lssl
++LDFLAGS:=-lm -lpthread $(shell pkg-config --libs ao) -lssl -lcrypto
+ OBJS=socketlib.o shairport.o alac.o hairtunes.o
+ all: hairtunes shairport
+ 
