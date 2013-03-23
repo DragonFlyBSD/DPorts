@@ -1,0 +1,6 @@
+@comment $FreeBSD: ports/devel/ocamlweb/pkg-plist,v 1.8 2012/11/17 05:56:02 svnexp Exp $
+bin/ocamlweb
+%%TEXMFDIR%%/tex/latex/ocamlweb/ocamlweb.sty
+@dirrm %%TEXMFDIR%%/tex/latex/ocamlweb
+@exec %%MKTEXLSR%% %D/%%TEXMFDIR%%
+@unexec %%MKTEXLSR%% %D/%%TEXMFDIR%%
