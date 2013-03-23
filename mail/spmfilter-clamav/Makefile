@@ -2,7 +2,7 @@
 # Date created:				2010-04-30
 # Whom:					Axel Steiner <ast@treibsand.com>
 #
-# $FreeBSD: ports/mail/spmfilter-clamav/Makefile,v 1.3 2012/11/17 05:59:15 svnexp Exp $
+# $FreeBSD: mail/spmfilter-clamav/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	spmfilter-clamav
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	spmfilter>=0.4:${PORTSDIR}/mail/spmfilter
 
 RUN_DEPENDS=	spmfilter>=0.4:${PORTSDIR}/mail/spmfilter
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH="${LOCALBASE}/include" \
 		-DCMAKE_LIBRARY_PATH="${LOCALBASE}/lib"
 
