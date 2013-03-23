@@ -1,0 +1,39 @@
+--- configure.orig	2013-03-22 08:30:46.000000000 +0000
++++ configure
+@@ -3373,7 +3373,7 @@ $as_echo_n "checking availability of nat
+      binaryExists ocamldep.opt && \
+      binaryExists ocamlopt.opt; then
+     veropt=`ocamlc.opt -v | grep version | sed 's/^.*version //'`
+-    if [ "$ver" == "$veropt" ]; then
++    if [ "$ver" = "$veropt" ]; then
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: ok" >&5
+ $as_echo "ok" >&6; }
+       HAS_OCAML_NATIVE_TOOLS=1
+@@ -3431,6 +3431,8 @@ $as_echo_n "checking for Perl... " >&6;
+         ;;
+     linux)
+         ;;
++    dragonfly)
++        ;;
+     freebsd)
+         ;;
+     openbsd)
+@@ -4693,6 +4695,18 @@ $as_echo "configuring for OpenBSD/x86" >
+     ARCHOS=x86_OPENBSD
+     ;;
+ 
++  *86*dragonfly*)
++
++    if test x"${ARCH}" = x""; then
++       ARCH=`uname -p`
++    fi
++
++    { $as_echo "$as_me:${as_lineno-$LINENO}: result: configuring for DragonFly/${ARCH}" >&5
++$as_echo "configuring for DragonFly/${ARCH}" >&6; }
++
++    ARCHOS=${ARCH}_DRAGONFLY
++    ;;
++    
+   *i386*freebsd*|*amd64*freebsd*)
+ 
+     if test x"${ARCH}" = x""; then
