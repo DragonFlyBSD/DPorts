@@ -1,0 +1,6 @@
+REPLACE_PERL=	utils/ucsnews.pl \
+		templates/old/make_olist.pl \
+		templates/src/makedeps.pl \
+		templates/src/build_index.pl \
+		templates/src/build_map_index.pl \
+		templates/cam/make_olist.pl
