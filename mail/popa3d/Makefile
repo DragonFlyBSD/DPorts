@@ -87,6 +87,7 @@ do-install:
 	    ${WRKSRC}/popa3d ${PREFIX}/libexec/popa3d
 	${INSTALL_MAN} ${WRKSRC}/popa3d.8 ${MANPREFIX}/man/man8/
 .if ${PORT_OPTIONS:MSMTP_AFTER_POP3} && !defined(WITHOUT_POPAUTH_M4)
+	mkdir -p ${CFDIR}/hack
 	${INSTALL_DATA} ${FILESDIR}/popauth.m4 ${CFDIR}/hack/
 .endif
 
