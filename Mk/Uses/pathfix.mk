@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/pathfix.mk 313652 2013-03-08 15:04:18Z bapt $
+# $FreeBSD: Mk/Uses/pathfix.mk 313855 2013-03-11 06:43:13Z az $
 #
 # Lookup in Makefile.in and configure for common incorrect paths and set them
 # to respect FreeBSD hier
@@ -7,11 +7,11 @@
 #
 # Feature:	pathfix
 # Usage:	USES=pathfix
-# Valid ARGS	does not require args
+# Valid ARGS:	does not require args
 #
 #
-.if !defined(_INCLUDE_PATHFIX_MK)
-_INCLUDE_PATHFIX_MK=	yes
+.if !defined(_INCLUDE_USES_PATHFIX_MK)
+_INCLUDE_USES_PATHFIX_MK=	yes
 
 .if defined(pathfix_ARGS)
 IGNORE=	USES=pathfix does not require args

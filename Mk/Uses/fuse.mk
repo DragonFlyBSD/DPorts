@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/fuse.mk 313652 2013-03-08 15:04:18Z bapt $
+# $FreeBSD: Mk/Uses/fuse.mk 313855 2013-03-11 06:43:13Z az $
 #
 # handle dependency on the fuse port
 #
@@ -6,11 +6,11 @@
 #
 # Feature:	fuse
 # Usage:	USES=fuse
-# Valid ARGS	does not require args
+# Valid ARGS:	does not require args
 #
 #
-.if !defined(_INCLUDE_FUSE_MK)
-_INCLUDE_FUSE_MK=	yes
+.if !defined(_INCLUDE_USES_FUSE_MK)
+_INCLUDE_USES_FUSE_MK=	yes
 
 .if defined(fuse_ARGS)
 IGNORE=	USES=fuse does not require args

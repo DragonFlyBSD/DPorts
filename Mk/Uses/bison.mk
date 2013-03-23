@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/bison.mk 313675 2013-03-08 22:17:53Z bapt $
+# $FreeBSD: Mk/Uses/bison.mk 313855 2013-03-11 06:43:13Z az $
 #
 # handle dependency on the bison port
 #
@@ -6,11 +6,11 @@
 #
 # Feature:	bison
 # Usage:	USES=bison or USES=bison:ARGS
-# Valid ARGS	build (default, implicit), run, both
+# Valid ARGS:	build (default, implicit), run, both
 #
 #
-.if !defined(_INCLUDE_BISON_MK)
-_INCLUDE_BISON_MK=	yes
+.if !defined(_INCLUDE_USES_BISON_MK)
+_INCLUDE_USES_BISON_MK=	yes
 
 _BISON_DEPENDS=	bison:${PORTSDIR}/devel/bison
 
