@@ -1,0 +1,15 @@
+REPLACE_PERL=	bin/dic2iso.pl \
+		bin/b4spell \
+		bin/sq.pl \
+		bin/b3spell \
+		bin/cspell \
+		bin/lcfirst.pl \
+		bin/extractlines.pl \
+		bin/hunspell-optimize-roothelper.pl \
+		bin/unsq.pl \
+		bin/bbspell \
+		bin/bspell \
+		bin/myspellfixprefix.pl \
+		bin/clear_affix.pl \
+		bin/uniqflag.pl \
+		ligature/rmligs.skel
