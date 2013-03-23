@@ -1,5 +1,5 @@
 # Created by: <trasz@FreeBSD.org>
-# $FreeBSD: ports/audio/calf/Makefile,v 1.11 2012/12/13 18:33:37 svnexp Exp $
+# $FreeBSD: ports/audio/calf/Makefile,v 1.12 2012/12/31 16:18:05 svnexp Exp $
 
 PORTNAME=	calf
 PORTVERSION=	0.0.19
@@ -60,7 +60,7 @@ post-patch:
 		${WRKSRC}/Makefile.in
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} \
 		${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} install-data-local)
 .endif
