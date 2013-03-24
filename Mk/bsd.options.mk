@@ -71,8 +71,8 @@ PORT_OPTIONS+=	IPV6
 
 # Exclude per arch options
 .for opt in ${OPTIONS_EXCLUDE_${ARCH}}
-OPTIONS_DEFINE:=	${OPTIONS_DEFINE:N${opt}}
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:N${opt}}
+OPTIONS_DEFINE_${ARCH}:=	${OPTIONS_DEFINE_${ARCH}:N${opt}}
+OPTIONS_DEFAULT_${ARCH}:=	${OPTIONS_DEFAULT_${ARCH}:N${opt}}
 .endfor
 
 # Exclude global options
