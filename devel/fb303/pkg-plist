@@ -1,0 +1,35 @@
+include/thrift/fb303/FacebookBase.h
+include/thrift/fb303/FacebookService.h
+include/thrift/fb303/ServiceTracker.h
+include/thrift/fb303/fb303_constants.h
+include/thrift/fb303/fb303_types.h
+lib/libfb303.a
+%%SITE_PERL%%/Facebook/FB303/Constants.pm
+%%SITE_PERL%%/Facebook/FB303/FacebookService.pm
+%%SITE_PERL%%/Facebook/FB303/Types.pm
+%%PYTHON_SITELIBDIR%%/fb303/FacebookBase.py
+%%PYTHON_SITELIBDIR%%/fb303/FacebookBase.pyc
+%%PYTHON_SITELIBDIR%%/fb303/FacebookService.py
+%%PYTHON_SITELIBDIR%%/fb303/FacebookService.pyc
+%%PYTHON_SITELIBDIR%%/fb303/__init__.py
+%%PYTHON_SITELIBDIR%%/fb303/__init__.pyc
+%%PYTHON_SITELIBDIR%%/fb303/constants.py
+%%PYTHON_SITELIBDIR%%/fb303/constants.pyc
+%%PYTHON_SITELIBDIR%%/fb303/ttypes.py
+%%PYTHON_SITELIBDIR%%/fb303/ttypes.pyc
+%%PYTHON_SITELIBDIR%%/fb303_scripts/__init__.py
+%%PYTHON_SITELIBDIR%%/fb303_scripts/__init__.pyc
+%%PYTHON_SITELIBDIR%%/fb303_scripts/fb303_simple_mgmt.py
+%%PYTHON_SITELIBDIR%%/fb303_scripts/fb303_simple_mgmt.pyc
+%%PYTHON_SITELIBDIR%%/thrift-%%PORTVERSION%%-py2.7.egg-info
+%%DATADIR%%/if/fb303.thrift
+@dirrm %%DATADIR%%/if
+@dirrm %%DATADIR%%
+@dirrm %%PYTHON_SITELIBDIR%%/fb303_scripts
+@dirrm %%PYTHON_SITELIBDIR%%/fb303
+@dirrm %%PYTHON_SITELIBDIR%%
+@dirrm lib/python2.7
+@dirrm %%SITE_PERL%%/Facebook/FB303
+@dirrm %%SITE_PERL%%/Facebook
+@dirrm include/thrift/fb303
+@dirrm include/thrift
