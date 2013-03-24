@@ -1,0 +1,19 @@
+lib/libbac.la
+lib/libbac.so
+lib/libbac.so.%%MAJOR%%
+lib/libbaccfg.la
+lib/libbaccfg.so
+lib/libbaccfg.so.%%MAJOR%%
+lib/libbacfind.la
+lib/libbacfind.so
+lib/libbacfind.so.%%MAJOR%%
+lib/libbacpy.la
+lib/libbacpy.so
+lib/libbacpy.so.%%MAJOR%%
+lib/bpipe-fd.so
+sbin/bacula-fd
+sbin/bconsole
+@unexec /usr/bin/killall bacula-fd > /dev/null 2>&1 || true
+@exec mkdir -p %%BACULA_DIR%%
+@dirrmtry %%BACULA_DIR%%
+@dirrmtry share/bacula
