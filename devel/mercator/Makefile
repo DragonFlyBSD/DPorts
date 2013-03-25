@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: ports/devel/mercator/Makefile,v 1.17 2013/01/19 11:20:22 svnexp Exp $
+# $FreeBSD: devel/mercator/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	mercator
 PORTVERSION=	0.3.2
@@ -11,7 +11,7 @@ COMMENT=	A procedural terrain library
 
 LIB_DEPENDS=	wfmath-1.0.1:${PORTSDIR}/math/wfmath
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
