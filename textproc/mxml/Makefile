@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/textproc/mxml/Makefile,v 1.9 2013/02/16 16:39:02 svnexp Exp $
+# $FreeBSD: textproc/mxml/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	mxml
 PORTVERSION=	2.7
@@ -18,7 +18,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 CONFIGURE_ARGS=	--with-docdir=no
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
