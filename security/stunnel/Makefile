@@ -1,8 +1,8 @@
 # Created by: Martti Kuparinen <martti.kuparinen@ericsson.com>
-# $FreeBSD: security/stunnel/Makefile 313376 2013-03-03 20:19:08Z zi $
+# $FreeBSD: security/stunnel/Makefile 314977 2013-03-23 00:19:53Z zi $
 
 PORTNAME=	stunnel
-PORTVERSION=	4.55
+PORTVERSION=	4.56
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.stunnel.org/stunnel/%SUBDIR%/ \
 		http://mirrors.zerg.biz/stunnel/%SUBDIR%/ \
