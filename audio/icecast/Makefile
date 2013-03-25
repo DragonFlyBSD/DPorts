@@ -1,5 +1,5 @@
 # Created by: Chip Marshall <chip@eboai.org>
-# $FreeBSD: audio/icecast/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: audio/icecast/Makefile 314987 2013-03-23 05:14:41Z eadler $
 
 PORTNAME=	icecast
 PORTVERSION=	1.3.12
@@ -12,6 +12,9 @@ COMMENT=	Streaming mp3 audio server
 
 LICENSE=	GPLv2 # (or later)
 
+EXPIRATION_DATE=	2013-04-17
+DEPRECATED=		Unmaintained upstream since 2004. Use audio/icecast2 instead
+
 OPTIONS_DEFINE=	DOCS
 
 USE_READLINE=	yes
@@ -21,6 +24,8 @@ MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	${PTHREAD_CFLAGS}
 LDFLAGS+=	${PTHREAD_LIBS}
+
+PORTSCOUT=	limit:^1\.3\.12
 
 SUB_FILES=	pkg-message
 
