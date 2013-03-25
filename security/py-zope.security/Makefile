@@ -1,18 +1,14 @@
-# New ports collection makefile for:	py-zope.security
-# Date created:				Nov 11, 2011
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/security/py-zope.security/Makefile,v 1.2 2012/11/17 06:01:18 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: security/py-zope.security/Makefile 314810 2013-03-21 06:38:01Z wen $
 
 PORTNAME=	zope.security
-PORTVERSION=	3.8.3
+PORTVERSION=	3.9.0
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	zope
 
-MAINTAINER=	wen@FreeBSD.org
+MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Zope Security Framework
 
 LICENSE=	ZPL21
