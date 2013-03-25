@@ -1,8 +1,8 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: ports/devel/p5-AnyEvent-I3/Makefile,v 1.6 2012/12/29 01:40:58 svnexp Exp $
+# $FreeBSD: devel/p5-AnyEvent-I3/Makefile 314331 2013-03-16 01:31:35Z bapt $
 
 PORTNAME=	AnyEvent-I3
-PORTVERSION=	0.14
+PORTVERSION=	0.15
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
