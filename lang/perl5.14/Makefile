@@ -2,12 +2,12 @@
 # Date created:		16 April 1995
 # Whom:			markm
 #
-# $FreeBSD: ports/lang/perl5.14/Makefile,v 1.143 2012/11/17 05:58:54 svnexp Exp $
+# $FreeBSD: lang/perl5.14/Makefile 313838 2013-03-10 19:04:00Z rea $
 #
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	CPAN \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
