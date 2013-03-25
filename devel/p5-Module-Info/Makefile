@@ -2,11 +2,11 @@
 # Date created:				29 June 2003
 # Whom:                			Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Module-Info/Makefile,v 1.15 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Info/Makefile 313867 2013-03-11 11:34:25Z demon $
 #
 
 PORTNAME=	Module-Info
-PORTVERSION=	0.32
+PORTVERSION=	0.33
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
