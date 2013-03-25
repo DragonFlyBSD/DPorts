@@ -2,7 +2,7 @@
 # Date created:				2007/06/09
 # Whom:					kftseng@iyard.org
 #
-# $FreeBSD: ports/security/p5-Crypt-OpenSSL-X509/Makefile,v 1.10 2012/11/17 06:01:11 svnexp Exp $
+# $FreeBSD: security/p5-Crypt-OpenSSL-X509/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Crypt-OpenSSL-X509
