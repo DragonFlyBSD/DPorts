@@ -2,7 +2,7 @@
 # Date Created:			24 March 2005
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/py-gamin/Makefile,v 1.12 2012/11/17 05:56:46 svnexp Exp $
+# $FreeBSD: devel/py-gamin/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTREVISION=	2
@@ -22,7 +22,7 @@ WANT_FAM_SYSTEM=gamin
 
 GAMIN_SLAVE=	yes
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PYTHON=	yes
 CONFIGURE_ARGS=	--with-python=${LOCALBASE} \
 		--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc
