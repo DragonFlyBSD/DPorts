@@ -2,7 +2,7 @@
 # Date Created:				29 Dec 1999
 # Whom:					Yuan-Chen Cheng <ycheng@sinica.edu.tw>
 #
-# $FreeBSD: ports/devel/popt/Makefile,v 1.50 2012/11/17 05:56:43 svnexp Exp $
+# $FreeBSD: devel/popt/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	popt
@@ -19,7 +19,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_ICONV=	yes
 USE_LDCONFIG=	yes
 
