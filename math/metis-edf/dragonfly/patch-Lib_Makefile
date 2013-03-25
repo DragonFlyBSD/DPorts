@@ -5,7 +5,7 @@
  ../libmetis.a: $(OBJS)
  	$(AR) $@ $(OBJS)
 -	%%SHLIB%%$(LD) -Wl,-Bshareable -Wl,-o,../libmetis.so.1 -Wl,-x -Wl,-soname,libmetis.so.1 -Wl,--whole-archive ../libmetis.a -Wl,-no-whole-archive
-+	%%SHLIB%%$(LD) -Wl,-Bshareable -Wl,-o,../libmetis.so.1 -Wl,-soname,libmetis.so.1 -Wl,--whole-archive ../libmetis.a -Wl,-no-whole-archive
++	$(CC) -shared -o libmetis.so $(OBJS)
  	%%SHLIB%%(cd .. && ln -sf libmetis.so.1 libmetis.so)
  
  clean:
