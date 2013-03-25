@@ -1,9 +1,5 @@
-# New ports collection makefile for:	weather
-# Date created:		2010-05-25
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-#
-# $FreeBSD: ports/astro/weather/Makefile,v 1.7 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
+# $FreeBSD: astro/weather/Makefile 315046 2013-03-23 16:31:13Z sunpoet $
 
 PORTNAME=	weather
 PORTVERSION=	2.0
@@ -13,6 +9,8 @@ MASTER_SITES=	http://fungi.yuggoth.org/weather/src/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	An utility to provide current weather conditions and forecasts
+
+LICENSE=	ISCL
 
 CONFLICTS=	expect-[0-9]* expect-nox11-[0-9]*
 
