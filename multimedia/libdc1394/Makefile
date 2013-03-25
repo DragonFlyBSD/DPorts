@@ -2,7 +2,7 @@
 # Date created:		2009-04-23
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/multimedia/libdc1394/Makefile,v 1.8 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/libdc1394/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libdc1394
@@ -16,7 +16,7 @@ COMMENT=	1394-based DC Control Library
 LICENSE=	LGPL21
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 MAN1=		dc1394_multiview.1 \
