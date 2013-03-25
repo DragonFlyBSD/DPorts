@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-p2p/libtorrent-rasterbar-16/Makefile,v 1.15 2013/02/06 23:41:15 svnexp Exp $
+# $FreeBSD: net-p2p/libtorrent-rasterbar-16/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libtorrent-rasterbar
 PORTVERSION=	0.16.7
@@ -20,7 +20,7 @@ LIB_DEPENDS+=	boost_date_time:${PORTSDIR}/devel/boost-libs \
 		GeoIP:${PORTSDIR}/net/GeoIP
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_ICONV=	yes
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
