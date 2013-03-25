@@ -1,8 +1,8 @@
 # Created by: mat
-# $FreeBSD: ports/devel/p5-Data-Dumper/Makefile,v 1.13 2013/02/26 09:51:46 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Dumper/Makefile 314293 2013-03-15 10:42:50Z tobez $
 
 PORTNAME=	Data-Dumper
-PORTVERSION=	2.143
+PORTVERSION=	2.145
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
