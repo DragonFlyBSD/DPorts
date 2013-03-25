@@ -1,9 +1,5 @@
-# New ports collection makefile for: mp3rename
-# Date created:         6 Januari 2000
-# Whom:                 Sander Janssen <janssen@rendo.dekooi.nl>
-#
-# $FreeBSD: ports/audio/mp3rename/Makefile,v 1.14 2012/11/17 05:54:39 svnexp Exp $
-#
+# Created by: Sander Janssen <janssen@rendo.dekooi.nl>
+# $FreeBSD: audio/mp3rename/Makefile 314074 2013-03-13 11:54:25Z danfe $
 
 PORTNAME=	mp3rename
 PORTVERSION=	0.6
@@ -12,10 +8,11 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN_POOL}
 DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A renaming program for mp3 files based on their id3tag
+COMMENT=	Renaming program for MP3 files based on their ID3 tag
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.orig
 
 PLIST_FILES=	bin/mp3rename
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.orig
 
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o mp3rename mp3rename.c
