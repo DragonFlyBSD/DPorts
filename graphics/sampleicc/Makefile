@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/sampleicc/Makefile 313182 2013-03-02 03:55:25Z eadler $
+# $FreeBSD: graphics/sampleicc/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	sampleicc
 PORTVERSION=	1.6.6
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
