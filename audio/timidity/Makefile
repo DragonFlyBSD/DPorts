@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/timidity/Makefile,v 1.33 2012/11/17 05:54:45 svnexp Exp $
+# $FreeBSD: audio/timidity/Makefile 314098 2013-03-13 17:23:05Z pawel $
 
 PORTNAME=	timidity
 PORTVERSION=	0.2i
@@ -9,8 +9,8 @@ MASTER_SITES=	http://www.onicos.com/staff/iz/timidity/dist/:timidity	\
 DISTFILES=	${TIINS}:tiins ${DISTNAME}.tar.gz:timidity
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	MIDI to WAV renderer and player
+MAINTAINER=	kevinz5000@gmail.com
+COMMENT=	MIDI to PCM software synthesizer
 
 CONFLICTS=	timidity++-2.13.*
 
