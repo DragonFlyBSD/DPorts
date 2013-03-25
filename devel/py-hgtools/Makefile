@@ -1,8 +1,8 @@
 # Created by: William Grzybowski
-# $FreeBSD: ports/devel/py-hgtools/Makefile,v 1.1 2012/11/17 18:09:35 svnexp Exp $
+# $FreeBSD: devel/py-hgtools/Makefile 314156 2013-03-14 13:17:51Z miwi $
 
 PORTNAME=	hgtools
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
