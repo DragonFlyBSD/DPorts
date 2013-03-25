@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: ports/audio/libogg/Makefile,v 1.42 2012/12/18 21:34:11 svnexp Exp $
+# $FreeBSD: audio/libogg/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libogg
 PORTVERSION=	1.3.0
@@ -12,7 +12,7 @@ COMMENT=	Ogg bitstream library
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 

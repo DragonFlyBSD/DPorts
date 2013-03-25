@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/libogg/files/patch-Makefile.in,v 1.9 2012/11/17 05:54:36 svnexp Exp $
+$FreeBSD: audio/libogg/files/patch-Makefile.in 300895 2012-07-14 12:56:14Z beat $
 
 --- Makefile.in.orig	2011-01-15 22:03:35.000000000 +0100
 +++ Makefile.in	2011-01-15 22:03:52.000000000 +0100

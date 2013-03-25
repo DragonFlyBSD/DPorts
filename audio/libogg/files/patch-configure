@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/libogg/files/patch-configure,v 1.7 2012/11/17 05:54:36 svnexp Exp $
+$FreeBSD: audio/libogg/files/patch-configure 300895 2012-07-14 12:56:14Z beat $
 
 --- configure.orig	Mon Nov 17 17:34:08 2003
 +++ configure	Mon Nov 24 18:26:28 2003
