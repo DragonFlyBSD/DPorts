@@ -1,8 +1,8 @@
 # Created by: Devaux Fabien <fab@gcu.info>
-# $FreeBSD: graphics/jpegoptim/Makefile 313516 2013-03-06 14:03:24Z ehaupt $
+# $FreeBSD: graphics/jpegoptim/Makefile 314882 2013-03-21 23:17:48Z ehaupt $
 
 PORTNAME=	jpegoptim
-PORTVERSION=	1.2.5
+PORTVERSION=	1.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kokkonen.net/tjko/src/ \
 		CRITICAL
@@ -13,7 +13,7 @@ COMMENT=	Utility to optimize jpeg files
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libjpeg=${LOCALBASE}
