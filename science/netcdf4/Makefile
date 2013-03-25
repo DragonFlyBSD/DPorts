@@ -2,7 +2,7 @@
 # Date created:		2008-11-11
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
 #
-# $FreeBSD: ports/science/netcdf4/Makefile,v 1.49 2012/11/17 06:00:58 svnexp Exp $
+# $FreeBSD: science/netcdf4/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	netcdf
@@ -31,7 +31,7 @@ GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 LIB_DEPENDS=	hdf5.7:${PORTSDIR}/science/hdf5-18
 MAKE_ENV=	INFODIR="${PREFIX}/${INFO_PATH}" MAKEINFOFLAGS="--no-split"
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 INFO=		netcdf netcdf-c netcdf-cxx netcdf-f77 netcdf-f90 \
