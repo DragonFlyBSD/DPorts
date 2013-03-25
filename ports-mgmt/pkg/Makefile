@@ -1,7 +1,8 @@
-# $FreeBSD: ports-mgmt/pkg/Makefile 313035 2013-02-27 07:05:52Z bapt $
+# $FreeBSD: ports-mgmt/pkg/Makefile 314562 2013-03-18 13:04:26Z bdrewery $
 
 PORTNAME=	pkg
-DISTVERSION=	1.0.8
+DISTVERSION=	1.0.9
+PORTREVISION=	2
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	LOCAL/portmgr \
 		http://files.etoilebsd.net/pkg/
@@ -20,8 +21,12 @@ NO_CCACHE=	yes
 USE_LDCONFIG=	yes
 MANCOMPRESSED=	yes
 
-MAKE_ENV+=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
+MAKE_ENV+=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null \
+		PORTREVISION=${PORTREVISION}
 USE_STAGE=	yes
+# Use a submake as 'deinstall install' needs to reevaluate PKG_CMD
+# so that pkg-static is used from the wrkdir
+USE_SUBMAKE=	yes
 
 MAN8=	pkg.8 \
 	pkg-add.8 \
