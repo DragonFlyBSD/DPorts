@@ -3,7 +3,7 @@
 # Date created:			Fab 21, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/make++/Makefile,v 1.14 2012/11/17 05:55:59 svnexp Exp $
+# $FreeBSD: devel/make++/Makefile 313795 2013-03-10 03:11:05Z linimon $
 #
 
 PORTNAME=	make++
@@ -13,7 +13,7 @@ MASTER_SITES=	SF/${PORTNAME:S/+/p/g}/${PORTVERSION}
 DISTNAME=	${PORTNAME:S/+/p/g}-${PORTVERSION}
 EXTRACT_SUFX=	.txz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	gavin@16degrees.com.au
 COMMENT=	A drop-in replacement for GNU make
 
 LICENSE=	ART10 GPLv1 GPLv2 GPLv3
