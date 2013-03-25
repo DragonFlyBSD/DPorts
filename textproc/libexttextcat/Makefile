@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/libexttextcat/Makefile,v 1.11 2012/12/18 23:11:59 svnexp Exp $
+# $FreeBSD: textproc/libexttextcat/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libexttextcat
 PORTVERSION=	3.4.0
@@ -13,7 +13,7 @@ LICENSE=	BSD
 USE_XZ=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 PORTDOCS=	README README.libtextcat TODO
