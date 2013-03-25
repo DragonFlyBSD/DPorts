@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libunistring
-# Date created:				2011-05-17
-# Whom:					Takefu
-#
-# $FreeBSD: ports/devel/libunistring/Makefile,v 1.2 2012/11/17 05:55:57 svnexp Exp $
-#
+# Created by: Takefu
+# $FreeBSD: devel/libunistring/Makefile 314556 2013-03-18 11:40:04Z bapt $
 
 PORTNAME=	libunistring
 PORTVERSION=	0.9.3
@@ -18,6 +14,7 @@ LICENSE_COMB=	dual
 LICENSE_FILE_GPLv3=	${WRKSRC}/COPYING
 LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING.LIB
 
+USES=		charsetfix
 USE_GMAKE=	yes
 USE_ICONV=	yes
 USE_LDCONFIG=	yes

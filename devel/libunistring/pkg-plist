@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/libunistring/pkg-plist,v 1.2 2012/11/17 05:55:57 svnexp Exp $
+@comment $FreeBSD: devel/libunistring/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%PORTDOCS%%%%DOCSDIR%%/libunistring_1.html
 %%PORTDOCS%%%%DOCSDIR%%/libunistring_10.html
 %%PORTDOCS%%%%DOCSDIR%%/libunistring_11.html
