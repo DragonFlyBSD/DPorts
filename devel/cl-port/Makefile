@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: ports/devel/cl-port/Makefile,v 1.12 2013/02/18 14:39:09 svnexp Exp $
+# $FreeBSD: devel/cl-port/Makefile 312502 2013-02-18 12:34:39Z olgeni $
 
 PORTNAME=	port
 PORTVERSION=	2002.10.02.1
