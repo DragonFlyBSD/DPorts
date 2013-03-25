@@ -3,7 +3,7 @@
 # Date created:                Jan 28, 2001
 # Whom:                        Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/dotconf/Makefile,v 1.31 2012/11/17 05:55:41 svnexp Exp $
+# $FreeBSD: devel/dotconf/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	dotconf
@@ -16,7 +16,7 @@ COMMENT=	A simple, powerful configuration-file parser
 
 LICENSE=	LGPL21
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
