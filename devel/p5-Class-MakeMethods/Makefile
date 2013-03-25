@@ -2,7 +2,7 @@
 # Date created:				24 Jan 2002
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/devel/p5-Class-MakeMethods/Makefile,v 1.9 2012/11/17 05:56:07 svnexp Exp $
+# $FreeBSD: devel/p5-Class-MakeMethods/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	Class-MakeMethods
