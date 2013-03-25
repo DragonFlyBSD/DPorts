@@ -1,12 +1,8 @@
-# Ports collection makefile for:	p5-indirect
-# Date created:	   Fri Aug 13, 2010
-# Whom:		   Dan Rench <citric@cubicone.tmetic.com>
-#
-# $FreeBSD: ports/devel/p5-indirect/Makefile,v 1.6 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Dan Rench <citric@cubicone.tmetic.com>
+# $FreeBSD: devel/p5-indirect/Makefile 313860 2013-03-11 08:27:24Z culot $
 
 PORTNAME=	indirect
-PORTVERSION=	0.26
+PORTVERSION=	0.29
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:VPIT
@@ -14,6 +10,9 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	citric@cubicone.tmetic.com
 COMMENT=	Lexically warn about using the indirect object syntax
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 PERL_CONFIGURE=	yes
 
