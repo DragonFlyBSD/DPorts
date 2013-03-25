@@ -1,11 +1,11 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Moo/Makefile,v 1.26 2012/12/05 00:49:36 svnexp Exp $
+# $FreeBSD: devel/p5-Moo/Makefile 314554 2013-03-18 11:35:51Z tobez $
 
 PORTNAME=	Moo
-PORTVERSION=	1.000006
+PORTVERSION=	1.001000
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:ILMARI
+MASTER_SITE_SUBDIR=	CPAN:MSTROUT
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
