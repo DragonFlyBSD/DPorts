@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/lang/perl5.12/files/use.perl,v 1.19 2012/11/17 05:58:54 svnexp Exp $
+# $FreeBSD: lang/perl5.12/files/use.perl 300896 2012-07-14 13:54:48Z beat $
 
 this=`echo -n $0 | /usr/bin/sed -e 's!^.*/!!'`
 PERL_VERSION="%%PERL_VERSION%%"
