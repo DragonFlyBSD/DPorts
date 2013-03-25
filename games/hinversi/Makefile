@@ -2,7 +2,7 @@
 # Date created:		2 April 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/games/hinversi/Makefile,v 1.8 2012/11/17 05:57:41 svnexp Exp $
+# $FreeBSD: games/hinversi/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	hinversi
@@ -18,7 +18,7 @@ OPTIONS_DEFINE=	NLS
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
