@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: ports/math/p5-Bit-Vector/Makefile,v 1.22 2013/01/22 09:50:13 svnexp Exp $
+# $FreeBSD: math/p5-Bit-Vector/Makefile 310821 2013-01-22 09:45:55Z tobez $
 
 PORTNAME=	Bit-Vector
 PORTVERSION=	7.2
