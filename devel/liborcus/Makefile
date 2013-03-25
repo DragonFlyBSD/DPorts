@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/liborcus/Makefile,v 1.2 2013/02/20 07:50:37 svnexp Exp $
+# $FreeBSD: devel/liborcus/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	liborcus
 PORTVERSION=	0.3.0
@@ -18,7 +18,7 @@ LIB_DEPENDS=	zip:${PORTSDIR}/archivers/libzip \
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
 
