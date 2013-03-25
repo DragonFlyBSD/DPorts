@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rman
-# Date created:         27 Dec 1994
-# Whom:                 Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/rman/Makefile,v 1.35 2012/11/17 06:02:19 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: textproc/rman/Makefile 314601 2013-03-18 21:06:42Z eadler $
 
 PORTNAME=	rman
 PORTVERSION=	3.2
