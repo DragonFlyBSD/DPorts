@@ -2,7 +2,7 @@
 # Date created:					20040828
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/www/xsp/Makefile,v 1.10 2012/11/17 06:03:13 svnexp Exp $
+# $FreeBSD: www/xsp/Makefile 315033 2013-03-23 13:48:48Z miwi $
 #
 
 PORTNAME=	xsp
@@ -18,9 +18,10 @@ RUN_DEPENDS=	${LOCALBASE}/bin/mono:${PORTSDIR}/lang/mono
 
 MAKE_JOBS_UNSAFE=	yes
 
+USE_PKGCONFIG=		yes
 USE_SQLITE=	3
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
