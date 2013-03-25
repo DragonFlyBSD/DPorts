@@ -3,7 +3,7 @@
 # Date created:			Aug 8, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/multimedia/libdvbpsi/Makefile,v 1.27 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/libdvbpsi/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libdvbpsi
@@ -18,7 +18,7 @@ COMMENT=	A library for MPEG TS and DVB PSI tables decoding and generation
 LICENSE=	LGPL21
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 .if defined(WITH_DEBUG)
