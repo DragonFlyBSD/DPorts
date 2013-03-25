@@ -2,14 +2,13 @@
 # Date created:				14 Jun 2005
 # Whom:					Thomas Quinot <thomas@cuivre.fr.eu.org>
 #
-# $FreeBSD: ports/security/calife-devel/Makefile,v 1.20 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: security/calife-devel/Makefile 314760 2013-03-20 20:32:10Z thomas $
 #
 
 PORTNAME=	calife
 PORTVERSION=	3.0.1
 CATEGORIES=	security
-MASTER_SITES=	http://dev.keltia.net/attachments/download/8/ \
-		http://static.keltia.net/download/
+MASTER_SITES=	http://assets.keltia.net/calife/
 DISTNAME=	calife-3.0.1
 
 MAKE_JOBS_SAFE=yes
