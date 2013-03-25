@@ -1,9 +1,5 @@
-# New ports collection makefile for:   w3m
-# Date Created:			7 Oct 1999
-# Whom:				MANTANI Nobutaka <nobutaka@nobutaka.com>
-#
-# $FreeBSD: ports/www/w3m/Makefile,v 1.98 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
+# $FreeBSD: www/w3m/Makefile 314918 2013-03-22 12:23:46Z bapt $
 
 PORTNAME=	w3m
 PORTVERSION=	0.5.3
@@ -31,25 +27,26 @@ DOCS=		FAQ.html HISTORY MANUAL.html README \
 		keymap.lynx menu.default menu.submenu
 
 .if !defined(MASTERDIR)
-OPTIONS=	M17N "Multilingualization support" off \
-		JAPANESE "Japanese messages and migemo support" off \
-		INLINE_IMAGE "Inline image support" off \
-		KEY_LYNX "Keymap like lynx browser" off
-
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	M17N JAPANESE INLINE_IMAGE KEY_LYNX DOCS
+M17N_DESC=		Multilingualization support
+JAPANESE_DESC=		Japanese messages and migemo support
+INLINE_IMAGE_DESC=	Inline image support
+KEY_LYNX_DESC=		Keymap like lynx browser
 .endif
 
-.if defined(WITH_M17N)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MM17N}
 CONFIGURE_ARGS+=	--enable-m17n
 PLIST_SUB+=	M17N=""
 .else
-.if !defined(WITH_JAPANESE)
+.if ! ${PORT_OPTIONS:MJAPANESE}
 CONFIGURE_ARGS+=	--disable-m17n
 PLIST_SUB+=	M17N="@comment "
 .endif
 .endif
 
-.if defined(WITH_JAPANESE)
+.if ${PORT_OPTIONS:MJAPANESE}
 USE_GETTEXT=		yes
 CONFIGURE_ARGS+=	--enable-m17n --enable-japanese=E --with-migemo=yes gt_cv_func_gnugettext1_libintl=yes
 DOCS_JP=	${DOCS} README.SSL README.cookie README.keymap README.mailcap \
@@ -61,7 +58,7 @@ CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	JAPANESE="@comment "
 .endif
 
-.if defined(WITH_INLINE_IMAGE)
+.if ${PORT_OPTIONS:MINLINE_IMAGE}
 USE_GNOME=	gtk20
 CONFIGURE_ARGS+=	--with-imagelib=gtk2 --enable-image=fb,x11
 
@@ -78,7 +75,7 @@ PLIST_SUB+=	INLINE_IMAGE="@comment "
 PKGMESSAGE=	${NONEXISTENT}
 .endif
 
-.if defined(WITH_KEY_LYNX)
+.if ${PORT_OPTIONS:MKEY_LYNX}
 CONFIGURE_ARGS+=	--enable-keymap=lynx
 .endif
 
@@ -93,8 +90,8 @@ post-patch:
 		-exec ${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' {} +
 
 post-install:
-.if !defined(NOPORTDOCS)
-.if defined(WITH_JAPANESE)
+.if ${PORT_OPTIONS:MDOCS}
+.if ${PORT_OPTIONS:MJAPANESE}
 	@${MKDIR} ${PREFIX}/share/doc/ja/w3m
 	@cd ${WRKSRC}/doc-jp; \
 	for i in ${DOCS_JP} ; do \
@@ -106,12 +103,12 @@ post-install:
 	for i in ${DOCS} ; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/doc/w3m/ ; \
 	done
-.if defined(WITH_M17N) || defined(WITH_JAPANESE)
+.if ${PORT_OPTIONS:MM17N} || ${PORT_OPTIONS:MJAPANESE}
 	@${INSTALL_DATA} ${WRKSRC}/doc/README.m17n ${PREFIX}/share/doc/w3m
 .endif
 .endif
 	@${INSTALL_MAN} ${WRKSRC}/scripts/w3mman/w3mman.1 ${PREFIX}/man/ja/man1
-.if defined(WITH_INLINE_IMAGE)
+.if ${PORT_OPTIONS:MINLINE_IMAGE}
 	@${CAT} ${PKGMESSAGE}
 .endif
 
