@@ -2,7 +2,7 @@
 # Date created:		2006-12-04
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: ports/audio/liblo/Makefile,v 1.14 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/liblo/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	liblo
@@ -16,6 +16,6 @@ COMMENT=	Lightweight Open Sound Control implementation
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 .include <bsd.port.mk>
