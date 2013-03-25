@@ -3,7 +3,7 @@
 # Date created:			May 5, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/jclassinfo/Makefile,v 1.16 2012/11/17 05:55:51 svnexp Exp $
+# $FreeBSD: devel/jclassinfo/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	jclassinfo
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shows information about Java class, dependencies, and more
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
