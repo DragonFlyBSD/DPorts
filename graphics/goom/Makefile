@@ -2,7 +2,7 @@
 # Date created:				12 February 2005
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/goom/Makefile,v 1.19 2012/11/17 05:58:08 svnexp Exp $
+# $FreeBSD: graphics/goom/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	goom
@@ -17,7 +17,7 @@ COMMENT=	Visual effects library
 
 USE_AUTOTOOLS=	libtool
 WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION:S|.|-|}
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
