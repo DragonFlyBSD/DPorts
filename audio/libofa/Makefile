@@ -2,7 +2,7 @@
 # Date created:		2006-04-01
 # Whom:			Alexander Botero-Lowry <alex@foxybanana.com>
 #
-# $FreeBSD: audio/libofa/Makefile 313182 2013-03-02 03:55:25Z eadler $
+# $FreeBSD: audio/libofa/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libofa
@@ -28,7 +28,7 @@ LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3 \
 PROJECTHOST=	musicip-libofa
 USE_DOS2UNIX=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
