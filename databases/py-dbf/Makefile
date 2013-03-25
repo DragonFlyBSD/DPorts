@@ -1,12 +1,8 @@
-# New ports collection makefile for:	dbf
-# Date created:				9th Jan, 2010
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/py-dbf/Makefile,v 1.14 2012/11/17 05:55:22 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: databases/py-dbf/Makefile 313802 2013-03-10 04:27:16Z wen $
 
 PORTNAME=	dbf
-PORTVERSION=	0.94.005
+PORTVERSION=	0.95.001
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
