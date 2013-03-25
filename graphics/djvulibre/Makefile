@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: graphics/djvulibre/Makefile 313484 2013-03-06 00:03:13Z bf $
+# $FreeBSD: graphics/djvulibre/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	djvulibre
 PORTVERSION=	3.5.25.3
@@ -16,7 +16,7 @@ LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg \
 		tiff:${PORTSDIR}/graphics/tiff
 
 USE_ICONV=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	JPEG_CFLAGS="-I${LOCALBASE}/include" \
 		JPEG_LIBS="-L${LOCALBASE}/lib -ljpeg" \
