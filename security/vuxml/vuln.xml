@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: security/vuxml/vuln.xml 313676 2013-03-08 22:27:39Z flo $
+  $FreeBSD: security/vuxml/vuln.xml 314596 2013-03-18 20:46:51Z flo $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -51,6 +51,388 @@ Note:  Please add new entries to the beginning of this file.
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="1d23109a-9005-11e2-9602-d43d7e0c7c02">
+    <topic>php5 -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>php5</name>
+	<range><lt>5.4.13</lt></range>
+      </package>
+      <package>
+	<name>php53</name>
+	<range><lt>5.3.23</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PHP development team reports:</p>
+	<blockquote cite="http://www.php.net/ChangeLog-5.php">
+	  <p>PHP does not validate the relationship between the soap.wsdl_cache_dir
+	    directive and the open_basedir directive, which allows remote attackers to
+	    bypass intended access restrictions by triggering the creation of cached
+	    SOAP WSDL files in an arbitrary directory.</p>
+	  <p>The SOAP parser in PHP allows remote attackers to read arbitrary files
+	    via a SOAP WSDL file containing an XML external entity declaration in
+	    conjunction with an entity reference, related to an XML External Entity
+	    (XXE) issue in the soap_xmlParseFile and soap_xmlParseMemory functions.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1635</cvename>
+      <cvename>CVE-2013-1643</cvename>
+    </references>
+    <dates>
+      <discovery>2013-03-04</discovery>
+      <entry>2013-03-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="edd201a5-8fc3-11e2-b131-000c299b62e1">
+    <topic>piwigo -- CSRF/Path Traversal</topic>
+    <affects>
+      <package>
+	<name>piwigo</name>
+	<range><lt>2.4.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>High-Tech Bridge Security Research Lab reports:</p>
+	<blockquote cite="http://piwigo.org/releases/2.4.7">
+	  <p>The CSRF vulnerability exists due to insufficient verification of the
+	     HTTP request origin in "/admin.php" script. A remote attacker can trick
+	     a logged-in administrator to visit a specially crafted webpage and
+	     create arbitrary PHP file on the remote server.</p>
+	  <p>The path traversal vulnerability exists due to insufficient filtration
+	     of user-supplied input in "dl" HTTP GET parameter passed to
+	     "/install.php" script. The script is present on the system after
+	     installation by default, and can be accessed by attacker without any
+	     restrictions.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1468</cvename>
+      <cvename>CVE-2013-1469</cvename>
+      <url>http://piwigo.org/bugs/view.php?id=0002843</url>
+      <url>http://piwigo.org/bugs/view.php?id=0002844</url>
+      <url>http://dl.packetstormsecurity.net/1302-exploits/piwigo246-traversalxsrf.txt</url>
+    </references>
+    <dates>
+      <discovery>2013-02-06</discovery>
+      <entry>2013-03-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d881d254-70c6-11e2-862d-080027a5ec9a">
+    <topic>libexif -- multiple remote vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libexif</name>
+	<range><lt>0.6.21</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>libexif project security advisory:</p>
+        <blockquote cite="http://sourceforge.net/mailarchive/message.php?msg_id=29534027">
+	  <p>A number of remotely exploitable issues were discovered in libexif
+	    and exif, with effects ranging from information leakage to potential
+	    remote code execution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2012-2812</cvename>
+      <cvename>CVE-2012-2813</cvename>
+      <cvename>CVE-2012-2814</cvename>
+      <cvename>CVE-2012-2836</cvename>
+      <cvename>CVE-2012-2837</cvename>
+      <cvename>CVE-2012-2840</cvename>
+      <cvename>CVE-2012-2841</cvename>
+      <cvename>CVE-2012-2845</cvename>
+      <bid>54437</bid>
+    </references>
+    <dates>
+      <discovery>2012-07-12</discovery>
+      <entry>2013-03-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5ff40cb4-8b92-11e2-bdb6-001060e06fd4">
+    <topic>linux-flashplugin -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-f10-flashplugin</name>
+	<range><lt>11.2r202.275</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="http://www.adobe.com/support/security/bulletins/apsb13-09.html">
+	  <p>These updates address vulnerabilities that could cause a crash
+	    and potentially allow an attacker to take control of the affected system.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-0646</cvename>
+      <cvename>CVE-2013-0650</cvename>
+      <cvename>CVE-2013-1371</cvename>
+      <cvename>CVE-2013-1375</cvename>
+    </references>
+    <dates>
+      <discovery>2013-03-12</discovery>
+      <entry>2013-03-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cda566a0-2df0-4eb0-b70e-ed7a6fb0ab3c">
+    <topic>puppet27 and puppet -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>puppet</name>
+	<range><ge>3.0</ge><lt>3.1.1</lt></range>
+      </package>
+      <package>
+	<name>puppet27</name>
+	<range><ge>2.7</ge><lt>2.7.21</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Moses Mendoza reports:</p>
+	<blockquote cite="https://puppetlabs.com/blog/security-updates-new-releases-of-puppet-and-puppet-enterprise/">
+	  <p>A vulnerability found in Puppet could allow an authenticated client
+	     to cause the master to execute arbitrary code while responding to a
+	     catalog request. Specifically, in order to exploit the
+	     vulnerability, the puppet master must be made to invoke the
+             'template' or 'inline_template' functions during catalog compilation.
+          </p>
+	  <p>A vulnerability found in Puppet could allow an authenticated client
+	     to connect to a puppet master and perform unauthorized actions.
+	     Specifically, given a valid certificate and private key, an agent
+	     could retrieve catalogs from the master that it is not authorized
+	     to access or it could poison the puppet master's caches for any
+	     puppet-generated data that supports caching such as catalogs,
+	     nodes, facts, and resources. The extent and severity of this
+	     vulnerability varies depending on the specific configuration of the
+	     master: for example, whether it is using storeconfigs or not, which
+             version, whether it has access to the cache or not, etc.
+          </p>
+	  <p>A vulnerability has been found in Puppet which could allow
+	     authenticated clients to execute arbitrary code on agents that have
+	     been configured to accept kick connections. This vulnerability is
+	     not present in the default configuration of puppet agents, but if
+	     they have been configured to listen for incoming connections
+	     ('listen=true'), and the agent's auth.conf has been configured to
+	     allow access to the `run` REST endpoint, then a client could
+	     construct an HTTP request which could execute arbitrary code. The
+	     severity of this issue is exacerbated by the fact that puppet
+             agents typically run as root.
+          </p>
+	  <p>A vulnerability has been found in Puppet that could allow a client
+	     negotiating a connection to a master to downgrade the master's
+	     SSL protocol to SSLv2. This protocol has been found to contain
+	     design weaknesses. This issue only affects systems running older
+	     versions (pre 1.0.0) of openSSL. Newer versions explicitly disable
+             SSLv2.
+          </p>
+	  <p>A vulnerability found in Puppet could allow unauthenticated clients
+	     to send requests to the puppet master which would cause it to load
+	     code unsafely. While there are no reported exploits, this
+	     vulnerability could cause issues like those described in Rails
+	     CVE-2013-0156. This vulnerability only affects puppet masters
+             running Ruby 1.9.3 and higher.
+          </p>
+	  <p>This vulnerability affects puppet masters 0.25.0 and above. By
+	     default, auth.conf allows any authenticated node to submit a report
+	     for any other node. This can cause issues with compliance. The
+             defaults in auth.conf have been changed.
+          </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1640</cvename>
+      <cvename>CVE-2013-1652</cvename>
+      <cvename>CVE-2013-1653</cvename>
+      <cvename>CVE-2013-1654</cvename>
+      <cvename>CVE-2013-1655</cvename>
+      <cvename>CVE-2013-2275</cvename>
+      <url>https://puppetlabs.com/security/cve/cve-2013-1640/</url>
+      <url>https://puppetlabs.com/security/cve/cve-2013-1652/</url>
+      <url>https://puppetlabs.com/security/cve/cve-2013-1653/</url>
+      <url>https://puppetlabs.com/security/cve/cve-2013-1654/</url>
+      <url>https://puppetlabs.com/security/cve/cve-2013-1655/</url>
+      <url>https://puppetlabs.com/security/cve/cve-2013-2275/</url>
+      <url>https://groups.google.com/forum/?fromgroups=#!topic/puppet-announce/f_gybceSV6E</url>
+      <url>https://groups.google.com/forum/?fromgroups=#!topic/puppet-announce/kgDyaPhHniw</url>
+    </references>
+    <dates>
+      <discovery>2013-03-13</discovery>
+      <entry>2013-03-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="04042f95-14b8-4382-a8b9-b30e365776cf">
+    <topic>puppet26 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>puppet26</name>
+	<range><ge>2.6</ge><lt>2.6.18</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Moses Mendoza reports:</p>
+	<blockquote cite="https://puppetlabs.com/blog/security-updates-new-releases-of-puppet-and-puppet-enterprise/">
+	  <p>A vulnerability found in Puppet could allow an authenticated client
+	     to cause the master to execute arbitrary code while responding to a
+	     catalog request. Specifically, in order to exploit the
+	     vulnerability, the puppet master must be made to invoke the
+             'template' or 'inline_template' functions during catalog compilation.
+          </p>
+	  <p>A vulnerability found in Puppet could allow an authenticated client
+	     to connect to a puppet master and perform unauthorized actions.
+	     Specifically, given a valid certificate and private key, an agent
+	     could retrieve catalogs from the master that it is not authorized
+	     to access or it could poison the puppet master's caches for any
+	     puppet-generated data that supports caching such as catalogs,
+	     nodes, facts, and resources. The extent and severity of this
+	     vulnerability varies depending on the specific configuration of the
+	     master: for example, whether it is using storeconfigs or not, which
+             version, whether it has access to the cache or not, etc.
+          </p>
+	  <p>A vulnerability has been found in Puppet that could allow a client
+	     negotiating a connection to a master to downgrade the master's
+	     SSL protocol to SSLv2. This protocol has been found to contain
+	     design weaknesses. This issue only affects systems running older
+	     versions (pre 1.0.0) of openSSL. Newer versions explicitly disable
+             SSLv2.
+          </p>
+	  <p>A vulnerability found in Puppet could allow an authenticated client
+	     to execute arbitrary code on a puppet master that is running in the
+	     default configuration, or an agent with `puppet kick` enabled.
+	     Specifically, a properly authenticated and connected puppet agent
+	     could be made to construct an HTTP PUT request for an authorized
+	     report that actually causes the execution of arbitrary code on the
+             master.
+          </p>
+	  <p>This vulnerability affects puppet masters 0.25.0 and above. By
+	     default, auth.conf allows any authenticated node to submit a report
+	     for any other node. This can cause issues with compliance. The
+             defaults in auth.conf have been changed.
+          </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1640</cvename>
+      <cvename>CVE-2013-1652</cvename>
+      <cvename>CVE-2013-1654</cvename>
+      <cvename>CVE-2013-2274</cvename>
+      <cvename>CVE-2013-2275</cvename>
+      <url>https://puppetlabs.com/security/cve/cve-2013-1640/</url>
+      <url>https://puppetlabs.com/security/cve/cve-2013-1652/</url>
+      <url>https://puppetlabs.com/security/cve/cve-2013-1654/</url>
+      <url>https://puppetlabs.com/security/cve/cve-2013-2274/</url>
+      <url>https://puppetlabs.com/security/cve/cve-2013-2275/</url>
+    </references>
+    <dates>
+      <discovery>2013-03-13</discovery>
+      <entry>2013-03-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="68c1f75b-8824-11e2-9996-c48508086173">
+    <topic>perl -- denial of service via algorithmic complexity attack on hashing routines</topic>
+    <affects>
+      <package>
+        <name>perl</name>
+        <range><lt>5.12.4_5</lt></range>
+        <range><ge>5.14.0</ge><lt>5.14.2_3</lt></range>
+        <range><ge>5.16.0</ge><lt>5.16.2_1</lt></range>
+      </package>
+      <package>
+        <name>perl-threaded</name>
+        <range><lt>5.12.4_5</lt></range>
+        <range><ge>5.14.0</ge><lt>5.14.2_3</lt></range>
+        <range><ge>5.16.0</ge><lt>5.16.2_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>Perl developers report:</p>
+        <blockquote cite="http://www.nntp.perl.org/group/perl.perl5.porters/2013/03/msg199755.html">
+          <p>In order to prevent an algorithmic complexity attack
+            against its hashing mechanism, perl will sometimes
+            recalculate keys and redistribute the contents of a hash.
+            This mechanism has made perl robust against attacks that
+            have been demonstrated against other systems.</p>
+          <p>Research by Yves Orton has recently uncovered a flaw in
+            the rehashing code which can result in pathological
+            behavior.  This flaw could be exploited to carry out a
+            denial of service attack against code that uses arbitrary
+            user input as hash keys.</p>
+          <p>Because using user-provided strings as hash keys is a
+            very common operation, we urge users of perl to update their
+            perl executable as soon as possible.</p>
+        </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1667</cvename>
+      <url>http://www.nntp.perl.org/group/perl.perl5.porters/2013/03/msg199755.html</url>
+    </references>
+    <dates>
+      <discovery>2013-03-04</discovery>
+      <entry>2013-03-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="549787c1-8916-11e2-8549-68b599b52a02">
+    <topic>libpurple -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libpurple</name>
+	<range><lt>2.10.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Pidgin reports:</p>
+	<blockquote cite="https://developer.pidgin.im/wiki/ChangeLog">
+	  <p>libpurple</p>
+	  <p>Fix a crash when receiving UPnP responses with abnormally long values.</p>
+	  <p>MXit</p>
+	  <p>Fix two bugs where a remote MXit user could possibly specify a local file
+	    path to be written to.</p>
+	  <p>Fix a bug where the MXit server or a man-in-the-middle could potentially
+	    send specially crafted data that could overflow a buffer and lead to a crash
+	    or remote code execution.</p>
+	  <p>Sametime</p>
+	  <p>Fix a crash in Sametime when a malicious server sends us an abnormally long
+	    user ID.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-0274</cvename>
+      <cvename>CVE-2013-0271</cvename>
+      <cvename>CVE-2013-0272</cvename>
+      <cvename>CVE-2013-0273</cvename>
+      <url>https://developer.pidgin.im/wiki/ChangeLog</url>
+    </references>
+    <dates>
+      <discovery>2013-02-13</discovery>
+      <entry>2013-03-10</entry>
+      <modified>2013-03-16</modified>
+    </dates>
+  </vuln>
+
   <vuln vid="630c8c08-880f-11e2-807f-d43d7e0c7c02">
     <topic>mozilla -- Use-after-free in HTML Editor</topic>
     <affects>
@@ -381,8 +763,8 @@ Note:  Please add new entries to the beginning of this file.
       <body xmlns="http://www.w3.org/1999/xhtml">
 	<p>Mark Evans reports:</p>
 	<blockquote cite="https://groups.google.com/forum/?fromgroups=#!topic/dragonfly-users/3c3WIU3VQTo">
-	  <p>Unfortunately there is a security vulnerability in Dragonfly when
-	     used with Rails which would potentially allow an attacker to run
+	  <p>Unfortnately there is a security vulnerability in Dragonfly when
+	      used with Rails which would potentially allow an attacker to run
 	     arbitrary code on a host machine using carefully crafted
              requests.
           </p>
