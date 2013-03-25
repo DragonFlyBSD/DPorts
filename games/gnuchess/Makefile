@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Gnu Chess
-# Date created:		04 July 1996
-# Whom:			markm
-#
-# $FreeBSD: ports/games/gnuchess/Makefile,v 1.36 2012/11/17 05:57:40 svnexp Exp $
-#
+# Created by: markm
+# $FreeBSD: games/gnuchess/Makefile 314105 2013-03-13 18:57:12Z johans $
 
 PORTNAME=	gnuchess
-PORTVERSION=	6.0.2
+PORTVERSION=	6.0.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	chess
