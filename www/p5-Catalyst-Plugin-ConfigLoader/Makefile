@@ -1,14 +1,11 @@
-# New ports collection makefile for:	www/p5-Catalyst-Plugin-ConfigLoader
-# Date created:				July 11, 2006
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-ConfigLoader/Makefile,v 1.22 2012/11/17 06:02:47 svnexp Exp $
-#
+# Changes: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Plugin-ConfigLoader/Makefile 314286 2013-03-15 09:53:40Z tobez $
 
 PORTNAME=	Catalyst-Plugin-ConfigLoader
-PORTVERSION=	0.30
+PORTVERSION=	0.32
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:BOBTFISH
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
