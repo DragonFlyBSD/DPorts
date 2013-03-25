@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-HTML-Location
-# Date created:                                08 September 2007
-# Whom:                                        coryking
-#
-# $FreeBSD: ports/www/p5-HTML-Location/Makefile,v 1.5 2012/11/17 06:02:49 svnexp Exp $
-#
+# Created by: coryking
+# $FreeBSD: www/p5-HTML-Location/Makefile 314067 2013-03-13 11:13:45Z bapt $
 
 PORTNAME=	HTML-Location
 PORTVERSION=	1.03
