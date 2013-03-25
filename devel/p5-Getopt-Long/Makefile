@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-Getopt-Long
-# Date created:				31 May 2001
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/devel/p5-Getopt-Long/Makefile,v 1.14 2012/11/17 05:56:17 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: devel/p5-Getopt-Long/Makefile 314046 2013-03-13 09:33:38Z tobez $
 
 PORTNAME=	Getopt-Long
-PORTVERSION=	2.38
+PORTVERSION=	2.39
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
