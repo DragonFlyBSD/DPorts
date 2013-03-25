@@ -2,11 +2,11 @@
 # Date created:				31 May 2007
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-MARC-Lint/Makefile,v 1.8 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: textproc/p5-MARC-Lint/Makefile 313971 2013-03-12 11:47:59Z demon $
 #
 
 PORTNAME=	MARC-Lint
-PORTVERSION=	1.44
+PORTVERSION=	1.46
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,6 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN1=		marclint.1
 MAN3=		MARC::Lint.3 MARC::Lint::CodeData.3
+
+WRKSRC=		${WRKDIR}/marc-lint
 
 PERL_CONFIGURE=	yes
 
