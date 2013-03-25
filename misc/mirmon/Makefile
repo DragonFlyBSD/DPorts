@@ -1,13 +1,8 @@
-# ex:ts=8
-# Ports collection makefile for:	mirmon
-# Date created:			Jun 15, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/misc/mirmon/Makefile,v 1.13 2012/12/18 09:13:22 svnexp Exp $
-#
+# Created by:	ijliao
+# $FreeBSD: misc/mirmon/Makefile 314089 2013-03-13 14:08:24Z jadawin $
 
 PORTNAME=	mirmon
-PORTVERSION=	2.7
+PORTVERSION=	2.8
 CATEGORIES=	misc
 MASTER_SITES=	http://www.staff.science.uu.nl/~penni101/mirmon/
 
