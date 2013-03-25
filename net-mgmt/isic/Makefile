@@ -2,12 +2,12 @@
 # Date created:                25 February 2000
 # Whom:                        Brad Hendrickse <bradh@uunet.co.za>
 #
-# $FreeBSD: ports/net-mgmt/isic/Makefile,v 1.15 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/isic/Makefile,v 1.16 2013/02/18 21:46:32 svnexp Exp $
 #
 
 PORTNAME=	isic
 PORTVERSION=	0.07
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/ISIC%20v${PORTVERSION}
 EXTRACT_SUFX=	.tgz
@@ -15,7 +15,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	IP Stack Integrity Checker
 
-BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
+LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
