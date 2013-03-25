@@ -2,7 +2,7 @@
 # Date created:		2008-08-27
 # Whom:			Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: ports/x11/xpyb/Makefile,v 1.10 2012/11/17 06:03:22 svnexp Exp $
+# $FreeBSD: x11/xpyb/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	xpyb
@@ -21,7 +21,7 @@ LIB_DEPENDS=	xcb.2:${PORTSDIR}/x11/libxcb
 
 USE_BZIP2=	yes
 USE_PYTHON=	2.5+
-USE_GNOME=	gnomehack
+USES=	pathfix
 PORTDOCS=	README COPYING INSTALL NEWS XcbPythonBinding.txt
 
 GNU_CONFIGURE=	yes
