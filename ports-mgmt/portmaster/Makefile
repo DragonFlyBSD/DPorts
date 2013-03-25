@@ -1,4 +1,4 @@
-# $FreeBSD: ports/ports-mgmt/portmaster/Makefile,v 2.70 2013/01/25 19:43:26 svnexp Exp $
+# $FreeBSD: ports-mgmt/portmaster/Makefile 315023 2013-03-23 11:21:50Z bdrewery $
 
 PORTNAME=	portmaster
 PORTVERSION=	3.14
@@ -19,18 +19,14 @@ GH_COMMIT=	31009f6
 GH_TAGNAME=	${GH_COMMIT}
 
 OPTIONS_DEFINE=	BASH ZSH PKGNGPATCH
-.if defined(WITH_PKGNG)
 OPTIONS_DEFAULT+=	PKGNGPATCH
-.endif
-BASH_DESC=	Install programmable completions for Bash
-ZSH_DESC=	Install programmable completions for zsh
 PKGNGPATCH_DESC=Enable PKGNG support
 
 PLIST_FILES=	sbin/portmaster etc/portmaster.rc.sample
 
 MAN8=		portmaster.8
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPKGNGPATCH}
 PATCH_SITES+=	http://mirror.shatow.net/freebsd/portmaster/
@@ -79,4 +75,4 @@ post-install:
 	${CAT} ${PKGMESSAGE}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
