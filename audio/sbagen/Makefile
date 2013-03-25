@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@FreeBSD.org>
-# $FreeBSD: audio/sbagen/Makefile 313395 2013-03-04 06:43:04Z danfe $
+# $FreeBSD: audio/sbagen/Makefile 314551 2013-03-18 11:04:01Z gahr $
 
 PORTNAME=	sbagen
 PORTVERSION=	1.4.5
@@ -19,12 +19,8 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.options.mk>
 
-post-patch:
-	@${REINPLACE_CMD} -e 's,linux/soundcard\.h,sys/soundcard.h,g' \
-		${WRKSRC}/sbagen.c
-
 do-build:
-	(cd ${WRKSRC} && ${CC} ${CFLAGS} -DT_LINUX ${PTHREAD_LIBS} -lm \
+	(cd ${WRKSRC} && ${CC} ${CFLAGS} -DT_LINUX -pthread -lm \
 		sbagen.c -o sbagen)
 
 do-install:
