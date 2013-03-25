@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/print/texinfo/pkg-install,v 1.3 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: print/texinfo/pkg-install 300897 2012-07-14 14:29:18Z beat $
 
 [ $# != 2 ] && exit 1
 PKGNAME=$1

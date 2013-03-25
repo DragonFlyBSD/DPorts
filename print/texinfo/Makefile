@@ -1,8 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/print/texinfo/Makefile,v 1.47 2013/02/23 11:51:37 svnexp Exp $
+# $FreeBSD: print/texinfo/Makefile 315109 2013-03-24 10:11:49Z johans $
 
 PORTNAME=	texinfo
-PORTVERSION=	5.0.20130223
+PORTVERSION=	5.1.20130313
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNU} \
 		ftp://ftp.stack.nl/pub/users/johans/texinfo/${PORTVERSION:E}/
@@ -24,7 +25,6 @@ INSTALL_TARGET=	install install-tex
 PKGDEINSTALL=	${PKGINSTALL}
 MAKE_JOBS_SAFE=	yes
 
-PORTDATA=	*
 MAKE_ARGS=	TEXMF=${PREFIX}/${TEXMF}
 CPPFLAGS+=	-I${LOCALBASE}/lib
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
