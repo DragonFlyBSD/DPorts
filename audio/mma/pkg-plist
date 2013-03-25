@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/audio/mma/pkg-plist,v 1.9 2012/11/17 05:54:38 svnexp Exp $
+@comment $FreeBSD: audio/mma/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/mma
 %%PORTDOCS%%%%DOCSDIR%%/html/README
 %%PORTDOCS%%%%DOCSDIR%%/html/lib/black.gif

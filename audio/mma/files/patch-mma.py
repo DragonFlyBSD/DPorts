@@ -1,4 +1,4 @@
-$FreeBSD: ports/audio/mma/files/patch-mma.py,v 1.3 2012/11/17 05:54:38 svnexp Exp $
+$FreeBSD: audio/mma/files/patch-mma.py 300895 2012-07-14 12:56:14Z beat $
 --- ./mma.py.orig	2012-04-28 14:45:21.000000000 +0200
 +++ ./mma.py	2012-04-28 14:46:09.000000000 +0200
 @@ -67,6 +67,9 @@
