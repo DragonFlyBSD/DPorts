@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-CQL-Parser/Makefile,v 1.9 2012/12/31 00:43:31 svnexp Exp $
+# $FreeBSD: textproc/p5-CQL-Parser/Makefile 309673 2012-12-30 14:12:19Z tobez $
 
 PORTNAME=	CQL-Parser
 PORTVERSION=	1.12
