@@ -2,7 +2,7 @@
 # Date created:				14 January 2008
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
-# $FreeBSD: devel/ndesk-dbus-glib/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/ndesk-dbus-glib/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #   $MCom: ports/devel/ndesk-dbus-glib/Makefile,v 1.2 2008/01/14 22:35:41 mezz Exp $
 #
 
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-1.0.pc:${PORTSDIR}/devel/
 
 USE_GMAKE=	yes
 USE_PKGCONFIG=	build
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 
 DOCS=		AUTHORS COPYING README
