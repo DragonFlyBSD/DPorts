@@ -2,7 +2,7 @@
 # Date created:        2007-05-14
 # Whom:                nicolai@catpipe.net
 #
-# $FreeBSD: ports/net-mgmt/snmp++/Makefile,v 1.7 2012/11/17 06:00:38 svnexp Exp $
+# $FreeBSD: net-mgmt/snmp++/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	snmp++
