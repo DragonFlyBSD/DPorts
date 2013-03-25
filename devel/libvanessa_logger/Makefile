@@ -1,5 +1,5 @@
 # Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
-# $FreeBSD: ports/devel/libvanessa_logger/Makefile,v 1.23 2012/12/11 14:18:02 svnexp Exp $
+# $FreeBSD: devel/libvanessa_logger/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libvanessa_logger
 PORTVERSION=	0.0.10
@@ -12,7 +12,7 @@ COMMENT=	Library that provides a generic logging layer
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
