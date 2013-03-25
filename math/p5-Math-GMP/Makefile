@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math-GMP
-# Date created:				Wed Jan  3 11:09:25 2001
-# Whom:					will
-#
-# $FreeBSD: ports/math/p5-Math-GMP/Makefile,v 1.20 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: math/p5-Math-GMP/Makefile 314566 2013-03-18 14:40:29Z sunpoet $
 
 PORTNAME=	Math-GMP
 PORTVERSION=	2.06
