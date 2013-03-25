@@ -2,11 +2,12 @@
 # Date created:		16 February 2008
 # Whom:			Prudhvi Krishna <prudhvikrishna@gmail.com>
 #
-# $FreeBSD: ports/net/rtpbreak/Makefile,v 1.7 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: ports/net/rtpbreak/Makefile,v 1.8 2013/02/18 21:46:32 svnexp Exp $
 #
 
 PORTNAME=	rtpbreak
 PORTVERSION=	1.3a
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://dallachiesa.com/code/rtpbreak/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +15,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
 COMMENT=	Detects, reconstructs, and analyzes any RTP session
 
-BUILD_DEPENDS=	libnet11-config:${PORTSDIR}/net/libnet
+LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 
 MAKE_ARGS+=	CFLAGS="-Wall -O3 -I${LOCALBASE}/include/libnet11" \
 		LIBS="-L${LOCALBASE}/lib/libnet11 -lpcap -lnet"
