@@ -2,11 +2,12 @@
 # Date created:		2011-02-24
 # Whom:			Ayumi Mitsui <ayu@commun.jp>
 #
-# $FreeBSD: ports/audio/umurmur/Makefile,v 1.4 2012/11/17 05:54:46 svnexp Exp $
+# $FreeBSD: audio/umurmur/Makefile 314580 2013-03-18 15:14:27Z vanilla $
 #
 
 PORTNAME=	umurmur
 PORTVERSION=	0.2.8
+PORTREVISION=	1
 CATEGORIES=	audio net
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
