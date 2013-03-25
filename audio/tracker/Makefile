@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tracker
-# Date created:		2 Oct 1994
-# Whom:			swallace
-#
-# $FreeBSD: ports/audio/tracker/Makefile,v 1.50 2012/11/17 05:54:46 svnexp Exp $
-#
+# Created by: swallace
+# $FreeBSD: audio/tracker/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	tracker
 PORTVERSION=	5.3
@@ -14,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MOD player
 
-RESTRICTED=	"Non-redistributable beta"
+RESTRICTED=	Non-redistributable beta
 
 LATEST_LINK=	tracker-player
 WRKSRC=		${WRKDIR}/tracker
