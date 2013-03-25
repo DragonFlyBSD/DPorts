@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: textproc/p5-Text-ParseWords/Makefile 313068 2013-02-27 18:19:16Z tobez $
+# $FreeBSD: textproc/p5-Text-ParseWords/Makefile 314553 2013-03-18 11:33:28Z tobez $
 
 PORTNAME=	Text-ParseWords
-PORTVERSION=	3.28
+PORTVERSION=	3.29
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
