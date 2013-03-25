@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: audio/libaudiofile/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: audio/libaudiofile/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libaudiofile
 PORTVERSION=	0.2.7
@@ -13,7 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A sound library for SGI audio file
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
