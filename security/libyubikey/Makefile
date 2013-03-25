@@ -1,7 +1,7 @@
-# $FreeBSD: ports/security/libyubikey/Makefile,v 1.1 2013/01/26 01:44:50 svnexp Exp $
+# $FreeBSD: security/libyubikey/Makefile 314693 2013-03-19 20:36:34Z pawel $
 
 PORTNAME=	libyubikey
-PORTVERSION=	1.9
+PORTVERSION=	1.10
 CATEGORIES=	security devel
 MASTER_SITES=	GOOGLE_CODE
 
