@@ -2,7 +2,7 @@
 # Date Created:				17 Feb 2006
 # Whom:					Dejan Lesjak <lesi@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/xbitmaps/Makefile,v 1.6 2012/11/17 06:03:20 svnexp Exp $
+# $FreeBSD: x11/xbitmaps/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	xbitmaps
@@ -14,7 +14,7 @@ COMMENT=	X.Org bitmaps data
 
 LICENSE=	MIT
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 XORG_CAT=	data
 
