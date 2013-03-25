@@ -2,11 +2,11 @@
 # Date created:				31 December 2004
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-MARC-Record/Makefile,v 1.5 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: textproc/p5-MARC-Record/Makefile 313972 2013-03-12 11:50:08Z demon $
 #
 
 PORTNAME=	MARC-Record
-PORTVERSION=	2.0.3
+PORTVERSION=	2.0.5
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
