@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/graphics/sane-backends/files/saned.in,v 1.5 2012/11/17 05:58:22 svnexp Exp $
+# $FreeBSD: graphics/sane-backends/files/saned.in 300896 2012-07-14 13:54:48Z beat $
 #
 # PROVIDE: saned
 # REQUIRE: LOGIN

@@ -1,5 +1,5 @@
 # Created by: gary@hotlava.com
-# $FreeBSD: ports/graphics/sane-backends/Makefile,v 1.109 2013/01/08 00:45:34 svnexp Exp $
+# $FreeBSD: graphics/sane-backends/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	sane-backends
 PORTVERSION=	1.0.23
@@ -30,7 +30,7 @@ USB_DESC=	USB support
 GPHOTO2_DESC=	gPhoto2 support
 IEEE1284_DESC=	libieee1284 support
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
