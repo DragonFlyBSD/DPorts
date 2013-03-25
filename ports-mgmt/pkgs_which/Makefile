@@ -1,14 +1,8 @@
-# New ports collection makefile for:	pkgs_which
-# Date created:				12 March 2011
-# Whom:					Matthias Andree <mandree@FreeBSD.org>
-#
-# $FreeBSD: ports/ports-mgmt/pkgs_which/Makefile,v 1.3 2012/11/17 06:00:45 svnexp Exp $
-#
-# This port is self contained in the files directory.
-#
+# Created by: Matthias Andree <mandree@FreeBSD.org>
+# $FreeBSD: ports-mgmt/pkgs_which/Makefile 313945 2013-03-11 23:13:18Z mandree $
 
 PORTNAME=	pkgs_which
-PORTVERSION=	0.2.0
+PORTVERSION=	0.3.0
 CATEGORIES=	ports-mgmt perl5
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -22,14 +16,16 @@ NO_BUILD=	yes
 USE_PERL5=	yes
 PLIST_FILES=	bin/${PORTNAME}
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 MAN1=		${PORTNAME}.1
 .endif
 
 do-install:
 		${MKDIR} ${PREFIX}/bin
 		${INSTALL_SCRIPT} ${FILESDIR}/${PORTNAME} ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 		${MKDIR} ${PREFIX}/man/man1
 		${LOCALBASE}/bin/pod2man ${FILESDIR}/${PORTNAME} >${PREFIX}/man/man1/${MAN1}
 .endif
