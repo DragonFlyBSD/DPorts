@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/devel/libdatrie/Makefile,v 1.1 2013/02/01 05:42:14 svnexp Exp $
+# $FreeBSD: devel/libdatrie/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libdatrie
 PORTVERSION=	0.2.6
@@ -13,7 +13,7 @@ LICENSE=	LGPL21
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_ICONV=	yes
 USE_LDCONFIG=	yes
 
