@@ -1,5 +1,5 @@
 # Created by:			Michael Johnson <ahze@ahze.net>
-# $FreeBSD: ports/audio/libcddb/Makefile,v 1.30 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/libcddb/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libcddb
 PORTVERSION=	1.3.2
@@ -12,7 +12,7 @@ COMMENT=	A library to access data on a CDDB server
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	build
 USE_ICONV=	yes
 USE_LDCONFIG=	yes
