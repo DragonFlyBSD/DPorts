@@ -1,9 +1,5 @@
-# New ports collection makefile for:   giftool
-# Date created:        14 October 1996
-# Whom:                Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/graphics/giftool/Makefile,v 1.18 2012/11/17 05:58:07 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: graphics/giftool/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	giftool
 PORTVERSION=	1.0
@@ -15,7 +11,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A tool for GIF89a transparent option and interlace mode
 
-NO_CDROM=	"Shareware"
+NO_CDROM=	Shareware
 
 NO_WRKSUBDIR=	yes
 ALL_TARGET=	giftool
