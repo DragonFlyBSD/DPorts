@@ -1,5 +1,5 @@
 # Created by: Shell Hung <shell@shellhung.org>
-# $FreeBSD: ports/devel/p5-Test-Harness/Makefile,v 1.51 2013/01/16 15:52:37 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Harness/Makefile 310497 2013-01-16 15:19:07Z tobez $
 
 PORTNAME=	Test-Harness
 PORTVERSION=	3.26
