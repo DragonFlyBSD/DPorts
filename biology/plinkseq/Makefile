@@ -1,8 +1,9 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: ports/biology/plinkseq/Makefile,v 1.2 2012/11/17 05:54:52 svnexp Exp $
+# $FreeBSD: biology/plinkseq/Makefile 314580 2013-03-18 15:14:27Z vanilla $
 
 PORTNAME=	plinkseq
 PORTVERSION=	0.08
+PORTREVISION=	1
 CATEGORIES=	biology science
 MASTER_SITES=	http://atgu.mgh.harvard.edu/${PORTNAME}/dist/version-${PORTVERSION}/
 
