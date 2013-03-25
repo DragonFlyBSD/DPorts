@@ -1,9 +1,5 @@
-# New ports collection makefile for:    patch
-# Date created:         21 Jan 1998
-# Whom:                 ache
-#
-# $FreeBSD: ports/devel/patch/Makefile,v 1.29 2012/11/17 05:56:37 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: devel/patch/Makefile 314556 2013-03-18 11:40:04Z bapt $
 
 PORTNAME=	patch
 PORTVERSION=	2.7
@@ -21,6 +17,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--program-prefix=g
 USE_GMAKE=	yes
 USE_XZ=		yes
+USES=		charsetfix
 
 MAN1=		gpatch.1
 PLIST_FILES=	bin/gpatch
