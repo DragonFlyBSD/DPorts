@@ -2,18 +2,19 @@
 # Date created:				2011.05.16
 # Whom:					Aaron Hurt <ahurt@anbcs.com>
 #
-# $FreeBSD: ports/devel/protobuf-c/Makefile,v 1.4 2012/11/17 05:56:43 svnexp Exp $
+# $FreeBSD: devel/protobuf-c/Makefile 314580 2013-03-18 15:14:27Z vanilla $
 #
 
 PORTNAME=	protobuf-c
 PORTVERSION=	0.15
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
 MAINTAINER=	ahurt@anbcs.com
 COMMENT=	This package provides a code generator and runtime libraries to use Protocol Buffers from pure C (not C++)
 
-LIB_DEPENDS=	protobuf.7:${PORTSDIR}/devel/protobuf
+LIB_DEPENDS=	protobuf:${PORTSDIR}/devel/protobuf
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
