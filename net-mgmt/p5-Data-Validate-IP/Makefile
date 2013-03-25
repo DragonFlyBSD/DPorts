@@ -1,9 +1,5 @@
-# New ports collection makefile for:	net-mgmt/p5-Data-Validate-IP
-# Date created:				02 January 2008
-# Whom:					Tuc <freebsd-ports@t-b-o-h.net>
-#
-# $FreeBSD: ports/net-mgmt/p5-Data-Validate-IP/Makefile,v 1.8 2012/11/17 06:00:35 svnexp Exp $
-#
+# Created by: Tuc <freebsd-ports@t-b-o-h.net>
+# $FreeBSD: net-mgmt/p5-Data-Validate-IP/Makefile 314056 2013-03-13 10:50:51Z bapt $
 
 PORTNAME=	Data-Validate-IP
 PORTVERSION=	0.14
