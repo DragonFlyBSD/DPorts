@@ -2,11 +2,12 @@
 # Date created:				25 December 1998
 # Whom:					Dima Sivachenko <dima@Chg.RU>
 #
-# $FreeBSD: ports/www/calamaris/Makefile,v 1.32 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: www/calamaris/Makefile 313883 2013-03-11 12:56:11Z demon $
 #
 
 PORTNAME=	calamaris
 PORTVERSION=	2.59
+PORTREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	http://cord.de/tools/squid/calamaris/
 
