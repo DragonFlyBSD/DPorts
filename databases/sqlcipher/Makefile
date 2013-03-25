@@ -1,4 +1,4 @@
-# $FreeBSD: databases/sqlcipher/Makefile 313423 2013-03-04 21:19:46Z jsa $
+# $FreeBSD: databases/sqlcipher/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	sqlcipher
 PORTVERSION=	2.1.1
@@ -12,7 +12,7 @@ LICENSE=	BSD
 USE_LDCONFIG=	yes
 USE_TCL_BUILD=	85
 USE_GITHUB=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 GH_ACCOUNT=	sqlcipher
 GH_TAGNAME=	v${PORTVERSION}
 GH_COMMIT=	ee2ce3e
