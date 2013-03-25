@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-MooseX-LazyRequire/Makefile,v 1.10 2013/02/14 12:08:39 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-LazyRequire/Makefile 314558 2013-03-18 11:51:19Z tobez $
 
 PORTNAME=	MooseX-LazyRequire
-PORTVERSION=	0.09
+PORTVERSION=	0.10
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
