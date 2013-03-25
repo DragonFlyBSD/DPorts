@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: ports/devel/gflags/Makefile,v 1.18 2013/01/30 20:45:46 svnexp Exp $
+# $FreeBSD: devel/gflags/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	gflags
 PORTVERSION=	2.0
@@ -15,7 +15,7 @@ OPTIONS_DEFINE=	DOCS
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README README_windows.txt \
