@@ -2,7 +2,7 @@
 # Date created:				27 Jul 2008
 # Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-MooseX-AttributeHelpers/Makefile,v 1.15 2012/11/17 05:56:22 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-AttributeHelpers/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	MooseX-AttributeHelpers
