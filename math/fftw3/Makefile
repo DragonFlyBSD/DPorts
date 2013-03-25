@@ -1,13 +1,13 @@
 # Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: ports/math/fftw3/Makefile,v 1.76 2013/02/14 12:48:34 svnexp Exp $
+# $FreeBSD: math/fftw3/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #    $MCom: ports-experimental/math/fftw3/Makefile,v 1.1 2006/03/28 00:08:57 ahze Exp $
 
 PORTNAME=	fftw3
 PORTVERSION=	3.3.3
 PORTREVISION?=	1
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/ \
-		ftp://ftp.fftw.org/pub/fftw/old/
+MASTER_SITES=	http://www.fftw.org/ \
+		ftp://ftp.fftw.org/pub/fftw/
 PKGNAMESUFFIX=	${FFTW3_PKGNAMESUFFIX}
 DISTNAME=	fftw-${PORTVERSION}
 
@@ -19,7 +19,7 @@ FFTW3_FLAVOR?=	default
 FFTW3_SUFX=
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PERL5_BUILD=yes
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	yes
