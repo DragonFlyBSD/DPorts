@@ -1,12 +1,8 @@
-# New ports collection makefile for:	pip
-# Date created:		2009-01-19
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-pip/Makefile,v 1.19 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: devel/py-pip/Makefile 313848 2013-03-10 23:01:26Z nivit $
 
 PORTNAME=	pip
-PORTVERSION=	1.2.1
+PORTVERSION=	1.3.1
 PORTREVISION=	0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP \
@@ -42,4 +38,10 @@ post-install:
 	@cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${DOCSDIR}
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PYTHON_REL} >= 320
+.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
+.endif
+
+.include <bsd.port.post.mk>
