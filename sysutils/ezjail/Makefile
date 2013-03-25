@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/ezjail/Makefile,v 1.19 2012/11/17 06:01:30 svnexp Exp $
+# $FreeBSD: sysutils/ezjail/Makefile 304770 2012-09-24 07:17:45Z culot $
 
 PORTNAME=	ezjail
 PORTVERSION=	3.2.3
