@@ -1,8 +1,8 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: security/p5-Digest-SHA/Makefile 313444 2013-03-05 11:00:27Z tobez $
+# $FreeBSD: security/p5-Digest-SHA/Makefile 313901 2013-03-11 13:53:37Z sunpoet $
 
 PORTNAME=	Digest-SHA
-PORTVERSION=	5.83
+PORTVERSION=	5.84
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -19,9 +19,6 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 PERL_CONFIGURE=	yes
 
 MAN3=		Digest::SHA.3
-
-# XXX:az - pkg-plist
-PLIST_SUB+=	EXE_FILES="@comment "
 
 post-patch:
 	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
