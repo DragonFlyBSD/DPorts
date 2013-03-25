@@ -1,9 +1,5 @@
-# New ports collection makefile for:	diffutils
-# Date created:				5 September 2001
-# Whom:				Garrett Rooney <rooneg@electricjellyfish.net>
-#
-# $FreeBSD: ports/textproc/diffutils/Makefile,v 1.16 2012/11/17 06:01:54 svnexp Exp $
-#
+# Created by: Garrett Rooney <rooneg@electricjellyfish.net>
+# $FreeBSD: textproc/diffutils/Makefile 314556 2013-03-18 11:40:04Z bapt $
 
 PORTNAME=	diffutils
 PORTVERSION=	3.2
@@ -16,6 +12,7 @@ COMMENT=	The GNU diff utilities
 
 LIB_DEPENDS=	sigsegv:${PORTSDIR}/devel/libsigsegv
 
+USES=		charsetfix
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-prefix=g
 
