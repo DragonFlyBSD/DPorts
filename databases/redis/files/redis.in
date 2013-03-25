@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/databases/redis/files/redis.in,v 1.4 2012/11/17 05:55:23 svnexp Exp $
+# $FreeBSD: databases/redis/files/redis.in 306622 2012-10-29 16:44:40Z osa $
 #
 
 # PROVIDE: redis
