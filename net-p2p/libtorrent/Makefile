@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-p2p/libtorrent/Makefile,v 1.64 2013/02/16 12:18:49 svnexp Exp $
+# $FreeBSD: net-p2p/libtorrent/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libtorrent
 PORTVERSION=	0.13.2
@@ -18,7 +18,7 @@ CONFLICTS?=	libtorrent-devel-[0-9]* \
 		rblibtorrent-devel-[0-9]*
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	build
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
