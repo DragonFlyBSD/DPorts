@@ -1,4 +1,4 @@
-# $FreeBSD: ports/astro/jday/Makefile,v 1.18 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: astro/jday/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	jday
 PORTVERSION=	2.4
@@ -9,7 +9,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Astronomical Julian date calculator
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
