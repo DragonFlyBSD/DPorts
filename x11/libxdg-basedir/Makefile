@@ -1,10 +1,10 @@
 # Created by: Nikos Ntarmos <ntarmos@cs.uoi.gr>
-# $FreeBSD: ports/x11/libxdg-basedir/Makefile,v 1.7 2012/12/31 07:32:09 svnexp Exp $
+# $FreeBSD: x11/libxdg-basedir/Makefile 313940 2013-03-11 21:19:35Z eadler $
 
 PORTNAME=	libxdg-basedir
 PORTVERSION=	1.2.0
 CATEGORIES=	x11
-MASTER_SITES=	http://n.ethz.ch/student/nevillm/download/libxdg-basedir/
+MASTER_SITES=	http://nevill.ch/libxdg-basedir/downloads/
 
 MAINTAINER=	ntarmos@ceid.upatras.gr
 COMMENT=	Implementation of the XDG Base Directory specification
