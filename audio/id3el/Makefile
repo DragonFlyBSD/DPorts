@@ -1,9 +1,5 @@
-# New ports collection makefile for:	id3el
-# Date created:		Sep 26, 2000
-# Whom:			Satoshi Taoka <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/id3el/Makefile,v 1.5 2012/11/17 05:54:35 svnexp Exp $
-#
+# Created by: Satoshi Taoka <taoka@FreeBSD.org>
+# $FreeBSD: audio/id3el/Makefile 314074 2013-03-13 11:54:25Z danfe $
 
 PORTNAME=	id3el
 PORTVERSION=	0.05
@@ -12,7 +8,7 @@ MASTER_SITES=	http://www.gentei.org/~yuuji/software/mpg123el/
 DISTNAME=	id3el-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An add-on to edit an id3 tag for mpg123-mode (mpg123.el) on Emacsen
+COMMENT=	Add-on to edit ID3 tags for mpg123-mode (mpg123.el) on Emacsen
 
 RUN_DEPENDS=	${LOCALBASE}/lib/xemacs/site-lisp/mpg123.el:${PORTSDIR}/audio/mpg123.el
 
@@ -22,11 +18,11 @@ ELISPDIR=	${PREFIX}/share/emacs/site-lisp
 XELISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 
 do-install:
-	${MKDIR} ${ELISPDIR}
+	@${MKDIR} ${ELISPDIR}
 	${INSTALL_DATA} ${WRKSRC}/id3.el ${ELISPDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/id3put ${PREFIX}/bin
 # For XEmacs
-	${MKDIR} ${XELISPDIR}
+	@${MKDIR} ${XELISPDIR}
 	${LN} -sf ${ELISPDIR}/id3.el ${XELISPDIR}
 
 .include <bsd.port.mk>
