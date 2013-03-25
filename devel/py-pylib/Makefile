@@ -1,8 +1,8 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: ports/devel/py-pylib/Makefile,v 1.15 2012/12/31 13:20:40 svnexp Exp $
+# $FreeBSD: devel/py-pylib/Makefile 314620 2013-03-19 06:57:47Z rm $
 
 PORTNAME=	pylib
-PORTVERSION=	1.4.12
+PORTVERSION=	1.4.13
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +17,6 @@ LICENSE=	MIT
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	py
-USE_ZIP=		yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PORTDOCS=	CHANGELOG README.txt
