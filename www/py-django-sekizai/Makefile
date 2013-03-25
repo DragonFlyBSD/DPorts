@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-django-sekizai
-# Date created:				30 Jan 2012
-# Whom:					Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-#
-# $FreeBSD: ports/www/py-django-sekizai/Makefile,v 1.3 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
+# $FreeBSD: www/py-django-sekizai/Makefile 314898 2013-03-22 09:22:16Z culot $
 
 PORTNAME=	django-sekizai
-PORTVERSION=	0.6.1
+PORTVERSION=	0.7
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
