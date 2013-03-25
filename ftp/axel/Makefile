@@ -3,7 +3,7 @@
 # Date created:			Jul 23, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/ftp/axel/Makefile,v 1.32 2012/11/17 05:57:28 svnexp Exp $
+# $FreeBSD: ftp/axel/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	axel
