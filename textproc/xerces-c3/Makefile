@@ -2,7 +2,7 @@
 # Date created:				23 June 2010
 # Whom:					gahr@FreeBSD.org
 #
-# $FreeBSD: ports/textproc/xerces-c3/Makefile,v 1.6 2012/11/17 06:02:24 svnexp Exp $
+# $FreeBSD: textproc/xerces-c3/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	xerces-c3
@@ -19,7 +19,7 @@ COMMENT=	Validating XML parser from the Apache XML Project
 CONFLICTS=	xerces_c-[0-9]* xerces-c2-[0-9]*
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
