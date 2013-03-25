@@ -1,4 +1,5 @@
-# $FreeBSD: www/squid32/Makefile 313535 2013-03-06 18:47:55Z sunpoet $
+# Created by: Thomas-Martin Seck <tmseck@FreeBSD.org>
+# $FreeBSD: www/squid32/Makefile 314111 2013-03-13 19:46:38Z tmseck $
 #
 # Note:
 # Starting with Squid 3.1 SQUID_LANGUAGES and SQUID_DEFAULT_LANG are no longer
@@ -65,7 +66,7 @@ PATCH_SITES=	http://www.squid-cache.org/%SUBDIR%/ \
 		http://www1.jp.squid-cache.org/%SUBDIR%/ \
 		http://www2.tw.squid-cache.org/%SUBDIR%/
 PATCH_SITE_SUBDIR=	Versions/v3/3.2/changesets
-PATCHFILES=
+PATCHFILES=	#empty
 
 MAINTAINER=	tmseck@FreeBSD.org
 COMMENT=	HTTP Caching Proxy
@@ -75,7 +76,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	squid32
 
-SQUID_STABLE_VER=	8
+SQUID_STABLE_VER=	9
 
 CONFLICTS_INSTALL=	squid-2.[0-9].* squid-3.[!2].* cacheboy-[0-9]* lusca-head-[0-9]*
 GNU_CONFIGURE=	yes
