@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/devcpu-data/files/microcode_update.in,v 1.3 2012/11/17 06:01:28 svnexp Exp $
+# $FreeBSD: sysutils/devcpu-data/files/microcode_update.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # PROVIDE:	microcode_update
