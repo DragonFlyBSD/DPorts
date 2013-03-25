@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/dbh/pkg-plist,v 1.10 2012/11/17 05:55:06 svnexp Exp $
+@comment $FreeBSD: databases/dbh/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 include/dbh/dbh.h
 lib/libdbh2.so
 lib/libdbh2.so.0

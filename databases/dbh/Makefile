@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/databases/dbh/Makefile,v 1.29 2012/11/17 05:55:06 svnexp Exp $
+# $FreeBSD: databases/dbh/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	dbh
 PORTVERSION=	4.6.2
@@ -12,7 +12,7 @@ COMMENT=	Disk Based Hashtables
 
 CONFLICTS=	dbh-[0-3]*
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
