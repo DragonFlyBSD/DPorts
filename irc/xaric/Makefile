@@ -2,7 +2,7 @@
 # Date created:		14 Oct 01
 # Whom:			alanp@unixpower.org
 #
-# $FreeBSD: ports/irc/xaric/Makefile,v 1.21 2012/11/17 05:58:30 svnexp Exp $
+# $FreeBSD: irc/xaric/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	xaric
@@ -13,7 +13,7 @@ MASTER_SITES=	http://xaric.org/software/xaric/releases/
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	IRC Client similer to BitchX or ircII
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
