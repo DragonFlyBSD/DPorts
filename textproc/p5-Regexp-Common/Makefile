@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-Regexp-Common
-# Date created:				25 November 2001
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Regexp-Common/Makefile,v 1.19 2012/11/17 06:02:07 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-Regexp-Common/Makefile 314292 2013-03-15 10:41:22Z tobez $
 
 PORTNAME=	Regexp-Common
-PORTVERSION=	2011121001
+PORTVERSION=	2013031301
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
