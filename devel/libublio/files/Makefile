@@ -1,6 +1,6 @@
 # BSD Makefile for libublio
 #
-# $FreeBSD: ports/devel/libublio/files/Makefile,v 1.2 2012/11/17 05:55:57 svnexp Exp $
+# $FreeBSD: devel/libublio/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 SRCS=	ublio.c
