@@ -2,7 +2,7 @@
 # Date created:		23 oktober 2004
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/libvisual/Makefile,v 1.26 2012/11/17 05:58:14 svnexp Exp $
+# $FreeBSD: graphics/libvisual/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 # WARNING: when updating this port check if the ports that use libvisual
@@ -17,7 +17,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Abstraction library that sits between apps and visual plugin
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	yes
