@@ -1,5 +1,5 @@
 # Created by: Thawatchai Piyawat <piyawat@usablelabs.com>
-# $FreeBSD: ports/devel/libthai/Makefile,v 1.21 2013/02/01 14:50:32 svnexp Exp $
+# $FreeBSD: devel/libthai/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libthai
 PORTVERSION=	0.1.19
@@ -16,7 +16,7 @@ LIB_DEPENDS=	datrie:${PORTSDIR}/devel/libdatrie
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
 
