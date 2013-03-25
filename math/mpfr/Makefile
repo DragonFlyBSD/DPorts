@@ -1,12 +1,8 @@
-# New ports collection makefile for:	mpfr
-# Date created:			28 Aug 2005
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/math/mpfr/Makefile,v 1.27 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: math/mpfr/Makefile 314161 2013-03-14 13:55:46Z ale $
 
 PORTNAME=	mpfr
-PORTVERSION=	3.1.1
+PORTVERSION=	3.1.2
 CATEGORIES=	math devel
 MASTER_SITES=	http://www.mpfr.org/mpfr-current/
 DIST_SUBDIR=	${DISTNAME}
@@ -45,7 +41,7 @@ PORTDOCS=	*
 CONFIGURE_ARGS+=	--disable-thread-safe
 .endif
 
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 post-patch:
 	@${REINPLACE_CMD} 's/install-nobase_dist_docDATA$$//' \
 		${WRKSRC}/Makefile.in
