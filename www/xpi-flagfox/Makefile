@@ -1,5 +1,5 @@
 # Created by: Oleg Sidorkin <osidorkin@gmail.com>
-# $FreeBSD: ports/www/xpi-flagfox/Makefile,v 1.2 2012/11/17 06:03:12 svnexp Exp $
+# $FreeBSD: www/xpi-flagfox/Makefile 306625 2012-10-29 17:49:54Z flo $
 
 PORTNAME=	flagfox
 PORTVERSION=	4.2.2
