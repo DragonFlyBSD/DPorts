@@ -2,11 +2,11 @@
 # Date created:				6 August 2009
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-MARC-XML/Makefile,v 1.4 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: textproc/p5-MARC-XML/Makefile 313973 2013-03-12 12:02:36Z demon $
 #
 
 PORTNAME=	MARC-XML
-PORTVERSION=	0.93
+PORTVERSION=	1.0.1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	p5-MARC-Record>=2:${PORTSDIR}/textproc/p5-MARC-Record \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN1=		marc2xml.1 xml2marc.1
-MAN3=		MARC::File::SAX.3 MARC::File::XML.3
+MAN3=		MARC::File::XML.3
 
 PERL_CONFIGURE=	yes
 
