@@ -2,7 +2,7 @@
 # Date created:				3 February 2005
 # Whom:					Janni <jannisan@t-online.de>
 #
-# $FreeBSD: ports/devel/atlas-devel/Makefile,v 1.37 2012/11/17 05:55:33 svnexp Exp $
+# $FreeBSD: devel/atlas-devel/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	Atlas
@@ -17,7 +17,7 @@ COMMENT=	A C++ reference implementation of the Atlas protocol
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	YES
 USE_BZIP2=	YES
-USE_GNOME=	gnomehack
+USES=	pathfix
 NO_LATEST_LINK=	YES
 
 CONFIGURE_ARGS+=--program-transform-name=
