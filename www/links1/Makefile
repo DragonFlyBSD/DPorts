@@ -2,16 +2,14 @@
 # Date created:		21 January 2000
 # Whom:			Michael Vasilenko <acid@stu.cn.ua>
 #
-# $FreeBSD: ports/www/links1/Makefile,v 1.8 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: www/links1/Makefile 314037 2013-03-13 08:04:02Z demon $
 #
 
 PORTNAME=	links
-PORTVERSION=	0.98
+PORTVERSION=	1.03
 PORTEPOCH=	1
 CATEGORIES=	www
-MASTER_SITES=	http://artax.karlin.mff.cuni.cz/~mikulas/vyplody/links/download/ \
-		SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}		
-
+MASTER_SITES=	http://www.jikos.cz/~mikulas/links/download/
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Lynx-like text WWW browser
