@@ -2,7 +2,7 @@
 # Date Created:			27 Aug 2009
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/mm-common/Makefile,v 1.4 2012/11/17 05:56:00 svnexp Exp $
+# $FreeBSD: devel/mm-common/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #   $MCom: ports/devel/mm-common/Makefile,v 1.11 2010/05/03 00:54:20 avl Exp $
 #
 
@@ -17,7 +17,7 @@ COMMENT=	Common build infrastructure for the GNOME C++ binding libraries
 
 LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
