@@ -2,12 +2,12 @@
 # Date created:        Sun Apr  6 10:12:16 CEST 2003
 # Whom:                Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: ports/net/nast/Makefile,v 1.23 2012/11/17 06:00:06 svnexp Exp $
+# $FreeBSD: ports/net/nast/Makefile,v 1.24 2013/02/18 21:46:32 svnexp Exp $
 #
 
 PORTNAME=	nast
 PORTVERSION=	0.2.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	BERLIOS
 
@@ -17,7 +17,7 @@ COMMENT=	A packet sniffer
 LICENSE=	GPLv2 # (or later)
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
+LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
