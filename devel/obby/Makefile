@@ -2,7 +2,7 @@
 # Date created:				2005-10-14
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
-# $FreeBSD: devel/obby/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/obby/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	obby
@@ -18,7 +18,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20 \
 		net6:${PORTSDIR}/net/net6
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
