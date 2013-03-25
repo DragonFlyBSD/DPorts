@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: ports/polish/ekg/Makefile,v 1.40 2013/02/08 03:35:06 svnexp Exp $
+# $FreeBSD: polish/ekg/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	ekg
 DISTVERSION=	1.8rc2
@@ -17,7 +17,7 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_PKGCONFIG=	build
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS= --without-libungif \
