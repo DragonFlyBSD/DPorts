@@ -1,5 +1,5 @@
 # Created by: Jerry Hicks
-# $FreeBSD: ports/devel/bison/Makefile,v 1.71 2013/02/24 18:44:14 svnexp Exp $
+# $FreeBSD: devel/bison/Makefile 314556 2013-03-18 11:40:04Z bapt $
 
 PORTNAME=	bison
 PORTVERSION=	2.7
@@ -14,6 +14,7 @@ COMMENT=	A parser generator from FSF, (mostly) compatible with Yacc
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 RUN_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
+USES=		charsetfix
 USE_XZ=		yes
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
