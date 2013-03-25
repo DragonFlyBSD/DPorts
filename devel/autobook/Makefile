@@ -2,7 +2,7 @@
 # Date created:        13 December 2001
 # Whom:                Edwin Groothuis (edwin@mavetju.org)
 #
-# $FreeBSD: ports/devel/autobook/Makefile,v 1.6 2012/11/17 05:55:34 svnexp Exp $
+# $FreeBSD: devel/autobook/Makefile 301510 2012-07-25 06:32:06Z cs $
 #
 
 PORTNAME=	autobook
