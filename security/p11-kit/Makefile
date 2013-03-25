@@ -2,24 +2,30 @@
 # Date created:				2011-07-24
 # Whom:				Roman Bogorodskiy <novel@FreeBSD.org>
 #
-# $FreeBSD: ports/security/p11-kit/Makefile,v 1.13 2012/11/17 06:01:10 svnexp Exp $
+# $FreeBSD: security/p11-kit/Makefile 313923 2013-03-11 18:01:08Z novel $
 #
 
 PORTNAME=	p11-kit
-PORTVERSION=	0.14
+PORTVERSION=	0.16.3
 CATEGORIES=	security devel
 MASTER_SITES=	http://p11-glue.freedesktop.org/releases/
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Library for loading and enumerating of PKCS\#11 modules
 
+RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+LIB_DEPENDS=	tasn1:${PORTSDIR}/security/libtasn1
+
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-gtk-doc --disable-nls --enable-debug=no
+CONFIGURE_ARGS=	--disable-nls --enable-debug=no \
+		--with-system-anchors=${LOCALBASE}/share/certs/ca-root-nss.crt
 MAKE_ENV=	exampledir=${EXAMPLESDIR}
 
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	ltverhack gnomehack
 USE_LDCONFIG=	yes
+USE_GMAKE=	yes
 
 pre-configure:
 	@${REINPLACE_CMD} -e \
