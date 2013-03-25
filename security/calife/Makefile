@@ -2,14 +2,13 @@
 # Date created:				13 Jun 2000
 # Whom:					Thomas Quinot <thomas@cuivre.fr.eu.org>
 #
-# $FreeBSD: ports/security/calife/Makefile,v 1.14 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: security/calife/Makefile 314760 2013-03-20 20:32:10Z thomas $
 #
 
 PORTNAME=	calife
 PORTVERSION=	2.8.6.5
 CATEGORIES=	security
-MASTER_SITES=	ftp://postfix.eu.org/pub/calife/ \
-		ftp://frmug.org/pub/calife/
+MASTER_SITES=	http://assets.keltia.net/calife/
 DISTNAME=	calife-2.8.6-p5
 
 MAINTAINER=	thomas@FreeBSD.org
