@@ -2,11 +2,11 @@
 # Date created:		3 April 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/ts/Makefile,v 1.11 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/ts/Makefile 313892 2013-03-11 13:33:02Z demon $
 #
 
 PORTNAME=	ts
-PORTVERSION=	0.6.4
+PORTVERSION=	0.7.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://vicerveza.homeunix.net/~viric/soft/ts/ CENKES
 
