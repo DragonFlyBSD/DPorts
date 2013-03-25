@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Moose
-# Date created:				14 Apr 2006
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Moose/Makefile,v 1.114 2013/01/20 19:49:35 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: devel/p5-Moose/Makefile 314136 2013-03-14 07:18:55Z az $
 
 PORTNAME=	Moose
 PORTVERSION=	2.0604
@@ -48,7 +44,8 @@ TEST_DEPENDS=	\
 	p5-Test-LeakTrace>=0:${PORTSDIR}/devel/p5-Test-LeakTrace \
 	p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle \
 	p5-Test-Output>=0:${PORTSDIR}/devel/p5-Test-Output \
-	p5-Test-Requires>=0.05:${PORTSDIR}/devel/p5-Test-Requires
+	p5-Test-Requires>=0.05:${PORTSDIR}/devel/p5-Test-Requires \
+	p5-Test-DependentModules>=0.13:${PORTSDIR}/devel/p5-Test-DependentModules
 
 CFLAGS+=	-I.	# mop.h
 MAKE_JOBS_UNSAFE=	yes
@@ -192,8 +189,5 @@ post-extract:
 
 post-install:
 	@${CAT} ${PKGDIR}/pkg-message
-
-# p5-Test-DependentModules is only available on 5.10.1+ (currently)
-TEST_DEPENDS+=	p5-Test-DependentModules>=0.13:${PORTSDIR}/devel/p5-Test-DependentModules
 
 .include <bsd.port.mk>
