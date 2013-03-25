@@ -2,7 +2,7 @@
 # Date Created:			28 Oct, 2003
 # Whom:				Eric Anholt <anholt@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/libXtrans/Makefile,v 1.12 2012/11/17 06:03:17 svnexp Exp $
+# $FreeBSD: x11/libXtrans/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libXtrans
@@ -17,6 +17,6 @@ COMMENT=	Network API translation layer for X applications and libraries
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 .include <bsd.port.mk>
