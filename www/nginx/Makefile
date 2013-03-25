@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: www/nginx/Makefile 313591 2013-03-07 14:30:47Z osa $
+# $FreeBSD: www/nginx/Makefile 314947 2013-03-22 16:41:10Z osa $
 
 PORTNAME=	nginx
 PORTVERSION=	1.2.7
@@ -322,7 +322,7 @@ CONFIGURE_ARGS+=--without-http-cache
 .endif
 
 .if ${PORT_OPTIONS:MCACHE_PURGE}
-NGINX_CACHE_PURGE_VERSION=	2.0
+NGINX_CACHE_PURGE_VERSION=	2.1
 MASTER_SITES+=	http://labs.frickle.com/files/:cache_purge
 DISTFILES+=	ngx_cache_purge-${NGINX_CACHE_PURGE_VERSION}.tar.gz:cache_purge
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_cache_purge-${NGINX_CACHE_PURGE_VERSION}
@@ -559,8 +559,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/mod_zip-${NGINX_ZIP_VERSION}
 .endif
 
 .if ${PORT_OPTIONS:MCHUNKIN}
-NGINX_CHUNKIN_VERSION=	0.22rc1
-GIT_CHUNKIN_VERSION=	0-gb0a3ee3
+NGINX_CHUNKIN_VERSION=	0.23
+GIT_CHUNKIN_VERSION=	0-g81c04f6
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/agentzh/chunkin-nginx-module/tarball/v${NGINX_CHUNKIN_VERSION}/:chunkin
 DISTFILES+=	agentzh-chunkin-nginx-module-v${NGINX_CHUNKIN_VERSION}-${GIT_CHUNKIN_VERSION}.tar.gz:chunkin
@@ -640,11 +640,10 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-memc-nginx-module-${GIT_MEMC_VERS
 .endif
 
 .if ${PORT_OPTIONS:MNAXSI}
-NGINX_NAXSI_VERSION=	0.46-1
+NGINX_NAXSI_VERSION=	0.50
 MASTER_SITES+=	http://naxsi.googlecode.com/files/:naxsi
-DISTFILES+=	naxsi-${NGINX_NAXSI_VERSION}.tgz:naxsi
-CONFIGURE_ARGS+=--add-module=${WRKDIR}/naxsi-${NGINX_NAXSI_VERSION}/naxsi_src
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-naxsi_runtime.c
+DISTFILES+=	naxsi-core-${NGINX_NAXSI_VERSION}.tgz:naxsi
+CONFIGURE_ARGS+=--add-module=${WRKDIR}/naxsi-core-${NGINX_NAXSI_VERSION}/naxsi_src
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_REWRITE} || defined(USE_HTTP_REWRITE)
@@ -705,8 +704,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-redis2-nginx-module-${GIT_REDIS2_
 .endif
 
 .if ${PORT_OPTIONS:MRTMP}
-NGINX_RTMP_VERSION=	0.9.8
-GIT_RTMP_VERSION=	0-g568ce8f
+NGINX_RTMP_VERSION=	0.9.13
+GIT_RTMP_VERSION=	0-gb631008
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/arut/nginx-rtmp-module/tarball/v${NGINX_RTMP_VERSION}/:rtmp
 DISTFILES+=	arut-rtmp-nginx-module-v${NGINX_RTMP_VERSION}-${GIT_RTMP_VERSION}.tar.gz:rtmp
@@ -756,7 +755,6 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_supervisord-${NGINX_SUPERVISORD_VERSI
 .endif
 
 .if ${PORT_OPTIONS:MSYSLOG_SUPPORT}
-IGNORE= incompatible with syslog_support patch
 NGINX_SYSLOG_SUPPORT_FACILITY?=	LOG_DAEMON
 CONFIGURE_ARGS+=--with-syslog --with-syslog-facility=${NGINX_SYSLOG_SUPPORT_FACILITY}
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-syslog_support
@@ -988,7 +986,7 @@ do-install:
 
 .if ${PORT_OPTIONS:MNAXSI}
 	${INSTALL_DATA} \
-	${WRKDIR}/naxsi-${NGINX_NAXSI_VERSION}/naxsi_config/naxsi_core.rules \
+	${WRKDIR}/naxsi-core-${NGINX_NAXSI_VERSION}/naxsi_config/naxsi_core.rules \
 	${ETCDIR}
 .endif
 
