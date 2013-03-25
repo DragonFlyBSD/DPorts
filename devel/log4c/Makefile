@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/devel/log4c/Makefile,v 1.32 2013/01/12 13:02:14 svnexp Exp $
+# $FreeBSD: devel/log4c/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	log4c
 PORTVERSION=	1.2.2
@@ -14,7 +14,7 @@ LICENSE=	LGPL21
 OPTIONS_DEFINE=	EXPAT
 OPTIONS_DEFAULT=EXPAT
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
