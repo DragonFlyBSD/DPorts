@@ -2,7 +2,7 @@
 # Date created:				Apr 1, 2001
 # Whom:					Mark Pulford <mark@kyne.com.au>
 #
-# $FreeBSD: ports/audio/id3tool/Makefile,v 1.9 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: audio/id3tool/Makefile 315036 2013-03-23 14:44:02Z gavin $
 #
 
 PORTNAME=	id3tool
@@ -10,7 +10,7 @@ PORTVERSION=	1.2a
 CATEGORIES=	audio
 MASTER_SITES=	http://nekohako.xware.cx/id3tool/
 
-MAINTAINER=	gavin.atkinson@ury.york.ac.uk
+MAINTAINER=	gavin@FreeBSD.org
 COMMENT=	A utility for manipulating mp3 ID3 Tags
 
 GNU_CONFIGURE=	yes
