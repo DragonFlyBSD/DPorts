@@ -2,7 +2,7 @@
 # Date Created:				2006-08-23
 # Whom:					Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: ports/x11/libxcb/Makefile,v 1.31 2012/11/17 06:03:18 svnexp Exp $
+# $FreeBSD: x11/libxcb/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libxcb
@@ -25,7 +25,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_XORG=	xau xdmcp
