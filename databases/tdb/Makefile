@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/tdb/Makefile,v 1.24 2013/01/31 15:49:58 svnexp Exp $
+# $FreeBSD: databases/tdb/Makefile 314856 2013-03-21 17:43:46Z bapt $
 
 PORTNAME=		tdb
 PORTVERSION=		1.2.11
@@ -27,7 +27,8 @@ MAKE_JOBS_SAFE=		yes
 PKGCONFIGDIR?=		${PREFIX}/libdata/pkgconfig
 PLIST_SUB+=		PKGCONFIGDIR=${PKGCONFIGDIR:S;${PREFIX}/;;}
 
-OPTIONS=		PYTHON		"Python bindings"	on
+OPTIONS_DEFINE=		PYTHON
+OPTIONS_DEFAULT=	PYTHON
 
 .include <bsd.port.options.mk>
 
@@ -58,7 +59,7 @@ _MAKE_JOBS=		--jobs=${MAKE_JOBS_NUMBER}
 .endif
 .endif
 
-.if defined(WITH_PYTHON)
+.if ${PORT_OPTIONS:MPYTHON}
 USE_PYTHON_RUN=		yes
 PLIST_FILES+=		%%PYTHON_SITELIBDIR%%/tdb.so
 PLIST_DIRSTRY+=		%%PYTHON_SITELIBDIR%% \
