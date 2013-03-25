@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Image-Math-Constrain
-# Date created:		8 September 2007
-# Whom:			coryking
-#
-# $FreeBSD: ports/graphics/p5-Image-Math-Constrain/Makefile,v 1.5 2012/11/17 05:58:17 svnexp Exp $
-#
+# Created by: coryking
+# $FreeBSD: graphics/p5-Image-Math-Constrain/Makefile 314065 2013-03-13 11:10:10Z bapt $
 
 PORTNAME=	Image-Math-Constrain
 PORTVERSION=	1.02
