@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	cvsps
-# Date Created:			Feb 9, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/cvsps/Makefile,v 1.13 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/cvsps/Makefile 313763 2013-03-09 22:14:53Z eadler $
 
 PORTNAME=	cvsps
 PORTVERSION=	2.1
@@ -15,12 +10,14 @@ MASTER_SITES=	http://www.cobite.com/cvsps/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Create patchset information from CVS
 
-CONFLICTS=	cvsps-devel-*
+CONFLICTS=	cvsps-devel-[0-9]*
 
 MAN1=		cvsps.1
 PLIST_FILES=	bin/cvsps
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	README
 .endif
 
@@ -28,7 +25,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cvsps ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cvsps.1 ${MANPREFIX}/man/man1
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
