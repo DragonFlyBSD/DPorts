@@ -2,7 +2,7 @@
 # Date Created:				10 January 2005
 # Whom:					Sam Lawrance <boris@brooknet.com.au>
 #
-# $FreeBSD: ports/archivers/libdynamite/Makefile,v 1.18 2013/02/20 16:45:20 svnexp Exp $
+# $FreeBSD: archivers/libdynamite/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libdynamite
@@ -17,7 +17,7 @@ MAKE_JOBS_SAFE=	yes
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 MAN1=		dynamite.1
