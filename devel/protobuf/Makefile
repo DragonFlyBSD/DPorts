@@ -1,13 +1,8 @@
-# ex:ts=8
-# Ports collection makefile for:	protobuf
-# Date created:				Aug 9, 2008
-# Whom:					vanilla
-#
-# $FreeBSD: ports/devel/protobuf/Makefile,v 1.13 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: vanilla
+# $FreeBSD: devel/protobuf/Makefile 314705 2013-03-20 02:12:31Z vanilla $
 
 PORTNAME=	protobuf
-PORTVERSION=	2.4.1
+PORTVERSION=	2.5.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
@@ -18,7 +13,9 @@ USE_GMAKE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig
+USE_PKGCONFIG=	yes
+USES+=		pathfix
+ONLY_FOR_ARCHS=	i386 amd64
 
 tests: build
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} check)
