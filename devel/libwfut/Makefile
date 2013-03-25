@@ -2,7 +2,7 @@
 # Date created:				4th April 2007
 # Whom:					Oliver Lehmann
 #
-# $FreeBSD: devel/libwfut/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/libwfut/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libwfut
@@ -18,7 +18,7 @@ LIB_DEPENDS=	sigc-2.0:${PORTSDIR}/devel/libsigc++20 \
 
 CONFIGURE_ARGS+=--without-python
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 MAN1=		wfut.1
