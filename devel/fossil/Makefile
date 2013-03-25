@@ -1,7 +1,8 @@
-# $FreeBSD: ports/devel/fossil/Makefile,v 1.30 2013/02/18 22:41:13 svnexp Exp $
+# $FreeBSD: devel/fossil/Makefile 314549 2013-03-18 10:23:23Z bapt $
 
 PORTNAME=	fossil
 PORTVERSION=	20130216000435
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	devel www
 MASTER_SITES=	http://www.fossil-scm.org/download/
