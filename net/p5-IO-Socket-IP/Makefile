@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/net/p5-IO-Socket-IP/Makefile,v 1.14 2012/12/05 02:37:23 svnexp Exp $
+# $FreeBSD: net/p5-IO-Socket-IP/Makefile 313952 2013-03-12 08:03:58Z sunpoet $
 
 PORTNAME=	IO-Socket-IP
-PORTVERSION=	0.18
+PORTVERSION=	0.19
 CATEGORIES=	net ipv6 perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
