@@ -1,8 +1,5 @@
-# New ports collection makefile for: yaf
-# Date created:		2009-06-29
-# Whom:			Dikshie <dikshie@sfc.wide.ad.jp>
-#
-# $FreeBSD: ports/net-mgmt/yaf/Makefile,v 1.6 2012/12/10 19:24:04 svnexp Exp $
+# Created by: Dikshie <dikshie@sfc.wide.ad.jp>
+# $FreeBSD: net-mgmt/yaf/Makefile 315130 2013-03-24 15:51:03Z bdrewery $
 
 PORTNAME=	yaf
 PORTVERSION=	2.1.1
@@ -25,6 +22,7 @@ USE_LDCONFIG=	yes
 USE_PERL5=	yes
 MAKE_JOBS_SAFE=	yes
 CONFIOGURE_ARGS+=	--disable-doxygen
+USE_PKGCONFIG=	build
 
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
 
