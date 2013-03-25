@@ -2,7 +2,7 @@
 # Date created:         5 May 2002
 # Whom:                 NAKATA Maho <chat95@mbox.kyoto-inet.or.jp>
 #
-# $FreeBSD: ports/math/lapack++/Makefile,v 1.33 2012/11/17 05:59:22 svnexp Exp $
+# $FreeBSD: math/lapack++/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	lapack++
@@ -24,7 +24,7 @@ MAINTAINER=	maho@FreeBSD.org
 COMMENT=	Linear Algebra PACKage in C++, a wrapper for LAPACK
 
 WANT_GNOME=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 .include <bsd.port.pre.mk>
 
