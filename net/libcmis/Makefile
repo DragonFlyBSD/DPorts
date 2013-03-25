@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/libcmis/Makefile,v 1.6 2013/02/12 23:57:39 svnexp Exp $
+# $FreeBSD: net/libcmis/Makefile 313777 2013-03-09 23:29:17Z bapt $
 
 PORTNAME=	libcmis
 PORTVERSION=	0.3.1
@@ -16,9 +16,11 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libcppunit.so:${PORTSDIR}/devel/cppunit \
 		${LOCALBASE}/lib/libboost_regex.a:${PORTSDIR}/devel/boost-libs
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	libxml2 gnomehack
+USES=		pathfix
+USE_GNOME=	libxml2
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+USE_PKGCONFIG=	build
 MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS=	--disable-werror --with-boost=${LOCALBASE} --without-man
