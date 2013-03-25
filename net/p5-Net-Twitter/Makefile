@@ -1,8 +1,8 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-Twitter/Makefile 313147 2013-03-01 11:01:38Z tobez $
+# $FreeBSD: net/p5-Net-Twitter/Makefile 313957 2013-03-12 10:27:15Z tobez $
 
 PORTNAME=	Net-Twitter
-PORTVERSION=	4.00003
+PORTVERSION=	4.00004
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -36,7 +36,7 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+PERL_MODBUILD=	yes
 
 MAN3=		Net::Identica.3 \
 		Net::Twitter.3 \
