@@ -2,7 +2,7 @@
 # Date created:		2011-06-18
 # Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/hyphen/Makefile,v 1.11 2012/11/17 06:01:59 svnexp Exp $
+# $FreeBSD: textproc/hyphen/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	hyphen
@@ -17,7 +17,7 @@ COMMENT=	Library for high quality hyphenation and justification
 BUILD_DEPENDS=	gawk:${PORTSDIR}/lang/gawk
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_PERL5_BUILD=	yes
 
