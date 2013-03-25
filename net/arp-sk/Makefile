@@ -3,12 +3,12 @@
 # Date Created:			Apr 14, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/net/arp-sk/Makefile,v 1.6 2012/11/17 05:59:56 svnexp Exp $
+# $FreeBSD: ports/net/arp-sk/Makefile,v 1.7 2013/02/18 21:46:31 svnexp Exp $
 #
 
 PORTNAME=	arp-sk
 PORTVERSION=	0.0.16
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://sid.rstack.org/arp-sk/files/
 EXTRACT_SUFX=	.tgz
@@ -16,7 +16,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A tool designed to manipulate ARP tables of all kinds of equipment
 
-BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
+LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 
 GNU_CONFIGURE=	yes
 CFLAGS+=	`${LIBNET_CONFIG} --cflags`
