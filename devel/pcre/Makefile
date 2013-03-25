@@ -1,5 +1,5 @@
 # Created by: dom
-# $FreeBSD: ports/devel/pcre/Makefile,v 1.86 2013/01/16 20:10:00 svnexp Exp $
+# $FreeBSD: devel/pcre/Makefile 314967 2013-03-22 21:23:37Z bf $
 
 PORTNAME=	pcre
 PORTVERSION=	8.32
@@ -19,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/LICENCE
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 CONFIGURE_ARGS=	--enable-utf --enable-unicode-properties \
 		--enable-pcre8 --enable-pcre16 --enable-pcre32
 
@@ -167,8 +167,14 @@ post-patch:
 post-install:
 	@${STRIP_CMD} ${PREFIX}/bin/pcregrep ${PREFIX}/bin/pcretest
 
-test: build
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} test
+#prevent regression test coredumps from causing failures on the
+#package-building cluster:
+.ifndef(MAINTAINER_MODE)
+CORELIMIT?=	/usr/bin/limits -Sc 0
+.endif
+
+check test: build
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${CORELIMIT} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} test
 
 regression-test: test
 
