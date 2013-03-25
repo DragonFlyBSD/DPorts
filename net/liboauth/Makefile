@@ -1,12 +1,7 @@
-# New ports collection makefile for:	liboauth
-# Date created:		30 October 2010
-# Whom:			johans
-#
-# $FreeBSD: ports/net/liboauth/Makefile,v 1.11 2012/11/17 18:38:51 svnexp Exp $
-#
+# $FreeBSD: net/liboauth/Makefile 314475 2013-03-17 17:57:15Z johans $
 
 PORTNAME=	liboauth
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.1
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}
 
