@@ -2,7 +2,7 @@
 # Date created:        12 October 2011
 # Whom:                Neeraj Verma <neeraj.verma.ports@vermatech.com>
 #
-# $FreeBSD: ports/sysutils/autojump/Makefile,v 1.2 2012/11/17 06:01:25 svnexp Exp $
+# $FreeBSD: sysutils/autojump/Makefile 314144 2013-03-14 11:20:54Z miwi $
 #
 
 PORTNAME=	autojump
@@ -31,11 +31,12 @@ PLIST_FILES=	bin/autojump \
 		share/autojump/icon.png
 MAN1=		autojump.1
 
-OPTIONS=	ZSH "Install zsh version as well." On
+OPTIONS_DEFINE=		ZSH
+OPTIONS_DEFAULT=	ZSH
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_ZSH)
+.if ${PORT_OPTIONS:MZSH}
 RUN_DEPENDS+=	${LOCALBASE}/bin/zsh:${PORTSDIR}/shells/zsh
 PLIST_FILES+=	 share/zsh/site-functions/_j
 .endif
@@ -48,7 +49,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr$$|${PREFIX}|' -e 's|/usr/local|${PREFIX}|' -e 's|/bin/zsh|${PREFIX}/bin/zsh|' ${WRKSRC}/install.zsh
 
 do-install:
-.if defined(WITH_ZSH)
+.if ${PORT_OPTIONS:MZSH}
 	@(cd ${INSTALL_WRKSRC} && ${SETENV} PREFIX=${PREFIX} ./install.zsh )
 .else
 	@(cd ${INSTALL_WRKSRC} && ${SETENV} PREFIX=${PREFIX} ./install.sh )
