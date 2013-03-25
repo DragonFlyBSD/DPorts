@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IO-Multiplex
-# Date created:		04 June 2002
-# Whom:	      		Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-IO-Multiplex/Makefile,v 1.13 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-IO-Multiplex/Makefile 314017 2013-03-13 03:14:55Z miwi $
 
 PORTNAME=	IO-Multiplex
 PORTVERSION=	1.13
