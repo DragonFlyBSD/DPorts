@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Devel-PatchPerl/Makefile,v 1.9 2013/02/26 10:12:54 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-PatchPerl/Makefile 313882 2013-03-11 12:53:40Z tobez $
 
 PORTNAME=	Devel-PatchPerl
-PORTVERSION=	0.82
+PORTVERSION=	0.84
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
