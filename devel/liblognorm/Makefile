@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/liblognorm/Makefile,v 1.1 2013/01/15 16:41:33 svnexp Exp $
+# $FreeBSD: devel/liblognorm/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	liblognorm
 PORTVERSION=	0.3.5
@@ -14,7 +14,7 @@ LIB_DEPENDS=	ee:${PORTSDIR}/devel/libee \
 		estr:${PORTSDIR}/devel/libestr
 
 USE_PKGCONFIG=	build
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
