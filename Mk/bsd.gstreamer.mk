@@ -6,7 +6,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # Date:		4 Oct 2004
 #
-# $FreeBSD: ports/Mk/bsd.gstreamer.mk,v 1.53 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.gstreamer.mk 315020 2013-03-23 09:58:02Z kwm $
 #    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.43 2008/03/21 04:14:18 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
@@ -58,7 +58,7 @@ _USE_GSTREAMER10_ALL=	a52dec aalib amrnb amrwbdec annodex bz2 cairo \
 			ffmpeg flac flite gconf gio gl gme gnomevfs gnonlin \
 			gsm hal jack jpeg ladspa lame libcaca libmms \
 			libpng libvisual mm mp3 mpeg2enc mpeg2dec musepack \
-			nas neon ogg opencv pango pulse python resindvd schroedinger \
+			nas neon ogg opencv opus pango pulse python resindvd schroedinger \
 			sdl shout2 sidplay sndfile spc soundtouch soup \
 			speex taglib theora twolame v4l2 vorbis vdpau \
 			vp8 wavpack x264 xvid
@@ -135,6 +135,8 @@ nas_DEPENDS=	audio/gstreamer-plugins-nas
 neon_DEPENDS=	www/gstreamer-plugins-neon
 
 ogg_DEPENDS=	audio/gstreamer-plugins-ogg
+
+opus_DEPENDS=	audio/gstreamer-plugins-opus
 
 polyp_DEPENDS=	audio/gstreamer-plugins-polyp
 

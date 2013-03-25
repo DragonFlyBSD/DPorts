@@ -5,7 +5,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.commands.mk 313600 2013-03-07 17:08:13Z miwi $
+# $FreeBSD: Mk/bsd.commands.mk 314628 2013-03-19 09:27:52Z bapt $
 #
 # DO NOT COMMIT CHANGES TO THIS FILE BY YOURSELF, EVEN IF YOU DID NOT GET
 # A RESPONSE FROM THE MAINTAINER(S) WITHIN A REASONABLE TIMEFRAME! ALL
@@ -34,6 +34,7 @@ CPIO?=		/usr/bin/cpio
 CUT?=		/usr/bin/cut
 DC?=		/usr/bin/dc
 DIALOG?=	/usr/bin/dialog
+DIALOG4PORTS?=	${LOCALBASE}/bin/dialog4ports
 DIFF?=		/usr/bin/diff
 DIRNAME?=	/usr/bin/dirname
 EGREP?=		/usr/bin/egrep

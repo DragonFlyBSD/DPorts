@@ -1,7 +1,10 @@
-# $FreeBSD: ports/Mk/bsd.pbi.mk,v 1.2 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.pbi.mk 313850 2013-03-11 00:51:39Z bdrewery $
 #
 # Creates a PBI file from a port with just 'make pbi'
 #
+.if !defined(_INCLUDE_PBI_MK)
+
+_INCLUDE_PBI_MK=	yes
 PBI_MAINTAINER=		kmoore@FreeBSD.org
 
 _PBIMAKEPORT=	pbi_makeport
@@ -49,3 +52,5 @@ pbi-generate: check-pbimanager
 clean-pbi:
 	@${ECHO_MSG} "===> Cleaning PBI for ${PORTNAME}"
 	@${RM} -rf ${_PBIDIR}
+
+.endif

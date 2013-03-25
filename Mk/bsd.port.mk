@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 313636 2013-03-08 11:34:33Z bapt $
+# $FreeBSD: Mk/bsd.port.mk 314848 2013-03-21 15:43:29Z bapt $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -1524,6 +1524,14 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 
 .include "${PORTSDIR}/Mk/bsd.pbi.mk"
 
+.if defined(USE_CMAKE)
+. if defined(CMAKE_OUTSOURCE)
+USES+=	cmake:outsource
+. else
+USES+=	cmake
+. endif
+.endif
+
 # You can force skipping these test by defining IGNORE_PATH_CHECKS
 .if !defined(IGNORE_PATH_CHECKS)
 .if (${PREFIX:C,(^.).*,\1,} != "/")
@@ -2127,10 +2135,6 @@ RUN_DEPENDS+=	${_GL_${_component}_RUN_DEPENDS}
 .include "${PORTSDIR}/Mk/bsd.kde4.mk"
 .endif
 
-.if defined(USE_CMAKE)
-.include "${PORTSDIR}/Mk/bsd.cmake.mk"
-.endif
-
 .if exists(${PORTSDIR}/Makefile.inc)
 .include "${PORTSDIR}/Makefile.inc"
 USE_SUBMAKE=	yes
@@ -2441,6 +2445,7 @@ COPYTREE_SHARE=	${SH} -c '(${FIND} -d $$0 $$2 | ${CPIO} -dumpl $$1 >/dev/null \
 
 DESCR?=			${PKGDIR}/pkg-descr
 PLIST?=			${PKGDIR}/pkg-plist
+PKGHELP?=		${PKGDIR}/pkg-help
 PKGINSTALL?=	${PKGDIR}/pkg-install
 PKGDEINSTALL?=	${PKGDIR}/pkg-deinstall
 PKGREQ?=		${PKGDIR}/pkg-req
@@ -4349,7 +4354,7 @@ _PKG_DEP=		check-sanity
 _PKG_SEQ=		pkg-depends
 _FETCH_DEP=		pkg
 _FETCH_SEQ=		fetch-depends pre-fetch pre-fetch-script \
-				do-fetch post-fetch post-fetch-script
+				do-fetch fetch-specials post-fetch post-fetch-script
 _EXTRACT_DEP=	fetch
 _EXTRACT_SEQ=	check-build-conflicts extract-message checksum extract-depends \
 				pre-extract pre-extract-script do-extract \
@@ -5220,6 +5225,7 @@ lib-depends:
 
 _UNIFIED_DEPENDS=${PKG_DEPENDS} ${EXTRACT_DEPENDS} ${PATCH_DEPENDS} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS} ${RUN_DEPENDS}
 _DEPEND_DIRS=	${_UNIFIED_DEPENDS:C,^[^:]*:([^:]*).*$,\1,}
+_DEPEND_SPECIALS=	${_UNIFIED_DEPENDS:M*\:*\:*:C,^[^:]*:([^:]*):.*$,\1,}
 
 all-depends-list:
 	@${ALL-DEPENDS-LIST}
@@ -5352,6 +5358,14 @@ limited-clean-depends:
 deinstall-depends:
 	@for dir in $$(${ALL-DEPENDS-LIST}); do \
 		(cd $$dir; ${MAKE} deinstall); \
+	done
+.endif
+
+.if !target(fetch-specials)
+fetch-specials:
+	@${ECHO_MSG} "===> Fetching all distfiles required by ${PKGNAME} for building"
+	@for dir in ${_DEPEND_SPECIALS}; do \
+		(cd $$dir; ${MAKE} fetch); \
 	done
 .endif
 
@@ -6137,47 +6151,53 @@ sanity-config: _check-config
 
 .if !target(pre-config)
 pre-config:
+D4P_ENV=	PKGNAME="${PKGNAME}" \
+		PORT_OPTIONS="${PORT_OPTIONS}" \
+		ALL_OPTIONS="${ALL_OPTIONS}" \
+		OPTIONS_MULTI="${OPTIONS_MULTI}" \
+		OPTIONS_SINGLE="${OPTIONS_SINGLE}" \
+		OPTIONS_RADIO="${OPTIONS_RADIO}" \
+		OPTIONS_GROUP="${OPTIONS_GROUP}" \
+		DIALOG4PORTS="${DIALOG4PORTS}" \
+		PREFIX="${PREFIX}" \
+		LOCALBASE="${LOCALBASE}" \
+		PORTSDIR="${PORTSDIR}" \
+		MAKE="${MAKE}" \
+		D4PHEIGHT="${D4PHEIGHT}" \
+		D4PWIDTH="${D4PWIDTH}" \
+		D4PFULLSCREEN="${D4PFULLSCREEN}"
+.if exists(${PKGHELP})
+D4P_ENV+=	PKGHELP="${PKGHELP}"
+.endif
 .for opt in ${ALL_OPTIONS}
-.  if empty(PORT_OPTIONS:M${opt})
-DEFOPTIONS+=	${opt} ""${${opt}_DESC:Q} off
-.  else
-DEFOPTIONS+=	${opt} ""${${opt}_DESC:Q} on
-.  endif
+D4P_ENV+=	 ${opt}_DESC=""${${opt}_DESC:Q}""
 .endfor
 .for multi in ${OPTIONS_MULTI}
+D4P_ENV+=	OPTIONS_MULTI_${multi}="${OPTIONS_MULTI_${multi}}" \
+		${multi}_DESC=""${${multi}_DESC:Q}""
 .  for opt in ${OPTIONS_MULTI_${multi}}
-.    if empty(PORT_OPTIONS:M${opt})
-DEFOPTIONS+=	${opt} "M(${multi}): "${${opt}_DESC:Q} off
-.    else
-DEFOPTIONS+=    ${opt} "M(${multi}): "${${opt}_DESC:Q} on
-.    endif
+D4P_ENV+=	 ${opt}_DESC=""${${opt}_DESC:Q}""
 .  endfor
 .endfor
 .for single in ${OPTIONS_SINGLE}
+D4P_ENV+=	OPTIONS_SINGLE_${single}="${OPTIONS_SINGLE_${single}}" \
+		${single}_DESC=""${${single}_DESC:Q}""
 .  for opt in ${OPTIONS_SINGLE_${single}}
-.    if empty(PORT_OPTIONS:M${opt})
-DEFOPTIONS+=	${opt} "S(${single}): "${${opt}_DESC:Q} off
-.    else
-DEFOPTIONS+=	${opt} "S(${single}): "${${opt}_DESC:Q} on
-.    endif
+D4P_ENV+=	 ${opt}_DESC=""${${opt}_DESC:Q}""
 .  endfor
 .endfor
 .for radio in ${OPTIONS_RADIO}
+D4P_ENV+=	OPTIONS_RADIO_${radio}="${OPTIONS_RADIO_${radio}}" \
+		${radio}_DESC=""${${radio}_DESC:Q}""
 .  for opt in ${OPTIONS_RADIO_${radio}}
-.    if empty(PORT_OPTIONS:M${opt})
-DEFOPTIONS+=	${opt} "R(${radio}): "${${opt}_DESC:Q} off
-.    else
-DEFOPTIONS+=	${opt} "R(${radio}): "${${opt}_DESC:Q} on
-.    endif
+D4P_ENV+=	 ${opt}_DESC=""${${opt}_DESC:Q}""
 .  endfor
 .endfor
 .for group in ${OPTIONS_GROUP}
+D4P_ENV+=	OPTIONS_GROUP_${group}="${OPTIONS_GROUP_${group}}" \
+		${group}_DESC=""${${group}_DESC:Q}""
 .  for opt in ${OPTIONS_GROUP_${group}}
-.    if empty(PORT_OPTIONS:M${opt})
-DEFOPTIONS+=	${opt} "G(${group}): "${${opt}_DESC:Q} off
-.    else
-DEFOPTIONS+=	${opt} "G(${group}): "${${opt}_DESC:Q} on
-.    endif
+D4P_ENV+=	 ${opt}_DESC=""${${opt}_DESC:Q}""
 .  endfor
 .endfor
 .undef multi
@@ -6204,11 +6224,12 @@ do-config:
 .endif
 	@TMPOPTIONSFILE=$$(mktemp -t portoptions); \
 	trap "${RM} -f $${TMPOPTIONSFILE}; exit 1" 1 2 3 5 10 13 15; \
-	${DIALOG} --checklist "Options for ${PKGNAME:C/-([^-]+)$/ \1/}" 21 70 15 ${DEFOPTIONS} 2> $${TMPOPTIONSFILE} || { \
+	${SETENV} ${D4P_ENV} ${SH} ${PORTSDIR}/Tools/scripts/dialog4ports.sh $${TMPOPTIONSFILE} || { \
 		${RM} -f $${TMPOPTIONSFILE}; \
 		${ECHO_MSG} "===> Options unchanged"; \
 		exit 0; \
 	}; \
+	${ECHO_CMD}; \
 	if [ ! -e $${TMPOPTIONSFILE} ]; then \
 		${ECHO_MSG} "===> No user-specified options to save for ${PKGNAME}"; \
 		exit 0; \
@@ -6241,7 +6262,12 @@ do-config:
 .endif # do-config
 
 .if !target(config)
+.if !defined(NO_DIALOG)
 config: pre-config do-config
+.else
+config:
+	@${ECHO_MSG} "===> Skipping 'config' as NO_DIALOG is defined"
+.endif
 .endif # config
 
 .if !target(config-recursive)
