@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/math/p5-Math-Spline/Makefile,v 1.5 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: math/p5-Math-Spline/Makefile 305130 2012-10-01 14:45:16Z tabthorpe $
 
 PORTNAME=	Math-Spline
 PORTVERSION=	0.01
