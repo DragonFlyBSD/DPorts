@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/libdap/Makefile,v 1.16 2013/02/14 10:22:09 svnexp Exp $
+# $FreeBSD: devel/libdap/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libdap
 PORTVERSION=	3.11.7
@@ -19,7 +19,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 MAN1=		dap-config.1 \
