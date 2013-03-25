@@ -2,7 +2,7 @@
 # Date Created:				08 Aug 2005
 # Whom:					Dejan Lesjak <lesi@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/fixesproto/Makefile,v 1.5 2012/11/17 06:03:15 svnexp Exp $
+# $FreeBSD: x11/fixesproto/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	fixesproto
