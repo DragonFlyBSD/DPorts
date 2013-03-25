@@ -68,7 +68,7 @@ CMAKE_BUILD_TYPE?=	Debug
 CMAKE_BUILD_TYPE?=	Release
 .endif #defined(WITH_DEBUG)
 
-PLIST_SUB+=		CMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE:L}"
+PLIST_SUB+=		CMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE:tl}"
 
 .if defined(STRIP) && ${STRIP} != ""
 INSTALL_TARGET?=	install/strip

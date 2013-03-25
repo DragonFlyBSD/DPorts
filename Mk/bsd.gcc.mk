@@ -29,7 +29,7 @@
 # If you are wondering what your port exactly does, use "make test-gcc"
 # to see some debugging.
 #
-# $FreeBSD: Mk/bsd.gcc.mk 314352 2013-03-16 13:01:12Z gerald $
+# $FreeBSD: Mk/bsd.gcc.mk 314673 2013-03-19 18:37:30Z gerald $
 #
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org
@@ -174,14 +174,13 @@ _BASE_VER=${DRAGONFLY_MIN_VERSION}
 . if ${DFLYVERSION} >= ${_GCCVERSION_${v}_L} \
   && ${DFLYVERSION} < ${_GCCVERSION_${v}_R} \
   && ${_BASE_VER} == ${_GCCVERSION_${v}_V:S/.//}
-_GCC_FOUND${v}:=	base
+_GCC_FOUND${v}=	base
 _GCCVERSION:=		${v}
 . elif exists(${LOCALBASE}/bin/gcc${_GCCVERSION_${v}_V:S/.//})
 _GCC_FOUND${v}=	port
 . endif
 .endfor
 
-#
 # If the GCC package defined in USE_GCC does not exist, but a later
 # version is allowed (for example 4.2+), see if there is a later.
 # First check if the base installed version is good enough, otherwise
