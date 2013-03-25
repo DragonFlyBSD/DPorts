@@ -2,7 +2,7 @@
 # Date created:         25 November 2003
 # Whom:                 Thomas Gellekum <tg@FreeBSD.org>
 #
-# $FreeBSD: ports/finance/ktoblzcheck/Makefile,v 1.44 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: finance/ktoblzcheck/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	ktoblzcheck
@@ -15,7 +15,7 @@ COMMENT=	Check bank codes of German banks
 
 LICENSE=	GPLv2
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
