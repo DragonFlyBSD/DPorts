@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-virtualenv/Makefile,v 1.31 2013/02/04 02:23:37 svnexp Exp $
+# $FreeBSD: devel/py-virtualenv/Makefile 313914 2013-03-11 15:01:32Z nivit $
 
 PORTNAME=	virtualenv
-PORTVERSION=	1.8.4
+PORTVERSION=	1.9.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,17 +11,18 @@ COMMENT=	Virtual Python Environment builder
 
 LICENSE=	MIT
 
+OPTIONS_DEFINE=	DOCS
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
 PLIST_SUB=	PYVER=${PYTHON_VER} PIPVER=${PIPVER} DISTRIBUTEVER=${DISTRIBUTEVER} \
 		PY2X=${PY2X}
 
 # Python3 ready
-USE_PYTHON=	yes
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
-PIPVER=	1.2.1
-DISTRIBUTEVER=	0.6.31
+PIPVER=	1.3.1
+DISTRIBUTEVER=	0.6.34
 
 .include <bsd.port.options.mk>
 
