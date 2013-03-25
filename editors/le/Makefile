@@ -1,8 +1,8 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ports/editors/le/Makefile,v 1.51 2013/02/05 01:53:31 svnexp Exp $
+# $FreeBSD: editors/le/Makefile 315168 2013-03-24 22:00:39Z zi $
 
 PORTNAME=	le
-PORTVERSION=	1.14.8
+PORTVERSION=	1.14.9
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.yar.ru/pub/source/le/%SUBDIR%/ \
 		http://mirrors.rit.edu/zi/
