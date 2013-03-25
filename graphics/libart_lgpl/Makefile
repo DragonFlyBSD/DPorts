@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: graphics/libart_lgpl/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: graphics/libart_lgpl/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libart_lgpl
 PORTVERSION=	2.3.21
@@ -15,7 +15,7 @@ COMMENT=	Library for high-performance 2D graphics
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
