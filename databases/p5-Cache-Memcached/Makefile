@@ -2,7 +2,7 @@
 # Date created:		2004-04-15
 # Whom:			michael johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/databases/p5-Cache-Memcached/Makefile,v 1.27 2012/11/17 05:55:13 svnexp Exp $
+# $FreeBSD: databases/p5-Cache-Memcached/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	Cache-Memcached
