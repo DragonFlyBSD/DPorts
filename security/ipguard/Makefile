@@ -2,18 +2,19 @@
 # Date created:                         6 Oct 2008
 # Whom:                                 SeaD
 #
-# $FreeBSD: ports/security/ipguard/Makefile,v 1.10 2012/11/17 06:01:05 svnexp Exp $
+# $FreeBSD: ports/security/ipguard/Makefile,v 1.11 2013/02/18 21:46:33 svnexp Exp $
 #
 
 PORTNAME=	ipguard
 PORTVERSION=	1.04
+PORTREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	http://ipguard.deep.perm.ru/files/ http://deep.perm.ru/files/ipguard/
 
 MAINTAINER=	sead@deep.perm.ru
 COMMENT=	Tool designed to protect LAN IP address space by ARP spoofing
 
-BUILD_DEPENDS=	${LOCALBASE}/lib/libnet11/libnet.a:${PORTSDIR}/net/libnet
+LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 
 USE_RC_SUBR=	${PORTNAME}
 MAN8=		${PORTNAME}.8
