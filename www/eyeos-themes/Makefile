@@ -1,9 +1,5 @@
-# New ports collection makefile for:	eyeOS-themes
-# Date created:		2006-04-06
-# Whom:			Nicola Vitale	<nivit@email.it>
-#
-# $FreeBSD: ports/www/eyeos-themes/Makefile,v 1.10 2012/11/17 06:02:33 svnexp Exp $
-#
+# Created by: Nicola Vitale	<nivit@email.it>
+# $FreeBSD: www/eyeos-themes/Makefile 314916 2013-03-22 11:57:19Z bapt $
 
 PORTNAME=	themes
 PORTVERSION=	1.2
