@@ -2,7 +2,7 @@
 # Date created:				1 Oct 2005
 # Whom:					Vaida Bogdan
 #
-# $FreeBSD: ports/shells/ibsh/Makefile,v 1.4 2012/11/17 06:01:23 svnexp Exp $
+# $FreeBSD: shells/ibsh/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	ibsh
