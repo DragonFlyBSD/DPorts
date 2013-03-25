@@ -2,7 +2,7 @@
 # Date created:                         	17 Dec 2005
 # Whom:                                 	pneumann@gmail.com
 #
-# $FreeBSD: ports/databases/db4o-mono/Makefile,v 1.8 2012/11/17 05:55:06 svnexp Exp $
+# $FreeBSD: databases/db4o-mono/Makefile 300896 2012-07-14 13:54:48Z beat $
 #   $Id: Makefile,v 1.3 2006/10/09 16:27:03 killfill Exp $
 #
 
