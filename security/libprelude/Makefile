@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: ports/security/libprelude/Makefile,v 1.71 2013/02/05 16:54:25 svnexp Exp $
+# $FreeBSD: security/libprelude/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libprelude
 PORTVERSION=	1.0.1
@@ -27,7 +27,7 @@ USE_GMAKE=	yes
 USE_PKGCONFIG=	build
 USE_ICONV=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
