@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/libxs/Makefile 313673 2013-03-08 20:29:35Z beech $
+# $FreeBSD: devel/libxs/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libxs
 PORTVERSION=	1.2.0
@@ -11,7 +11,7 @@ COMMENT=	Open source lightweight messaging layer
 
 GNU_CONFIGURE=	yes
 USE_PKGCONFIG=	build
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DEBUG DOCS PLUGINS ZMQ
