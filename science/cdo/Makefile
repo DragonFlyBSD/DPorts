@@ -2,7 +2,7 @@
 # Date created:			29 May 2006
 # Whom:				Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
 #
-# $FreeBSD: ports/science/cdo/Makefile,v 1.42 2012/11/17 06:00:56 svnexp Exp $
+# $FreeBSD: science/cdo/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	cdo
@@ -22,7 +22,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS=	--enable-cdi-lib --program-transform-name="" --with-zlib=/usr
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 HDF5_VER?=	18
