@@ -1,10 +1,10 @@
 # Created by: Devon H. O'Dell <devon.odell@coyotepoint.com>
-# $FreeBSD: ports/comms/ser2net/Makefile,v 1.7 2012/11/17 05:55:01 svnexp Exp $
+# $FreeBSD: comms/ser2net/Makefile 315143 2013-03-24 16:22:09Z miwi $
 
 PORTNAME=	ser2net
-PORTVERSION=	2.7
+PORTVERSION=	2.8
 CATEGORIES=	comms net
-MASTER_SITES=	SF
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Allows to access serial ports over IP
