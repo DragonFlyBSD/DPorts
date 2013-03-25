@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/devel/glog/Makefile,v 1.13 2013/02/12 12:15:26 svnexp Exp $
+# $FreeBSD: devel/glog/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	glog
 PORTVERSION=	0.3.2
@@ -13,7 +13,7 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 		gflags:${PORTSDIR}/devel/gflags
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_GCC=	4.2+
 PROJECTHOST=	google-glog
