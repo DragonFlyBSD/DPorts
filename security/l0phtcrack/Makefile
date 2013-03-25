@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/security/l0phtcrack/Makefile,v 1.19 2013/01/27 06:41:41 svnexp Exp $
+# $FreeBSD: security/l0phtcrack/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	l0phtcrack
 PORTVERSION=	1.5
@@ -13,7 +13,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cracks SAMBA or Windows NT passwords
 
 DOCDIR=		share/doc/${PORTNAME}
-RESTRICTED=	"uses GNU getopt with BSDish-licensed code from OpenSSL"
+RESTRICTED=	uses GNU getopt with BSDish-licensed code from OpenSSL
 NO_WRKSUBDIR=	yes
 PLIST=		${WRKDIR}/pkg-plist
 USE_PERL5_BUILD=yes
