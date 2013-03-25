@@ -1,4 +1,4 @@
-# $FreeBSD: ports/finance/aqbanking/Makefile,v 1.38 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: finance/aqbanking/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	aqbanking
 PORTVERSION=	5.0.25
@@ -25,7 +25,7 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-release="yes"
