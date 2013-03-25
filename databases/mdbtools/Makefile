@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: databases/mdbtools/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: databases/mdbtools/Makefile 313856 2013-03-11 06:59:19Z bapt $
 
 PORTNAME=	mdbtools
 PORTVERSION=	0.5
@@ -13,8 +13,8 @@ COMMENT=	Utilities and libraries to export data from MS Access databases (.mdb)
 # To build man-pages
 BUILD_DEPENDS=	gawk:${PORTSDIR}/lang/gawk
 
-USE_AUTOTOOLS=	libtool
 USES=		bison
+USE_AUTOTOOLS=	libtool
 USE_GNOME=	glib20
 USE_PKGCONFIG=	build
 WANT_GNOME=	yes
