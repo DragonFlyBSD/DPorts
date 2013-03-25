@@ -1,9 +1,5 @@
-# New ports collection makefile for: play
-# Date created:		20 May 1998
-# Whom:			Masanori Kiriake <seiken@nbs.co.jp>
-#
-# $FreeBSD: ports/audio/play/Makefile,v 1.19 2012/11/17 05:54:41 svnexp Exp $
-#
+# Created by: Masanori Kiriake <seiken@nbs.co.jp>
+# $FreeBSD: audio/play/Makefile 314074 2013-03-13 11:54:25Z danfe $
 
 PORTNAME=	play
 PORTVERSION=	1.0
@@ -12,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_PORTS_JP}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A simple audio file player
+COMMENT=	Simple audio file player
 
 CONFLICTS=	sox-[0-9]*
 
@@ -25,7 +21,7 @@ PLIST_FILES=	bin/play
 
 post-patch:
 .for file in play_audio.c mixer_ctl.c encode_sun.c encode_riff.c speed.c
-	@${REINPLACE_CMD} 's,machine/soundcard.h,sys/soundcard.h,' ${WRKSRC}/${file}
+	@${REINPLACE_CMD} '/soundcard\.h/s,machine,sys,' ${WRKSRC}/${file}
 .endfor
 
 .include <bsd.port.mk>
