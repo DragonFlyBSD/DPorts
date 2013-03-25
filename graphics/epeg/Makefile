@@ -2,7 +2,7 @@
 # Date created:		05/09/2005
 # Whom:			vanilla
 #
-# $FreeBSD: ports/graphics/epeg/Makefile,v 1.22 2012/11/17 05:58:04 svnexp Exp $
+# $FreeBSD: graphics/epeg/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	epeg
@@ -20,7 +20,7 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
