@@ -2,7 +2,7 @@
 # Date created:				10 July 2000
 # Whom:					Kim Scarborough <user@unknown.nu>
 #
-# $FreeBSD: ports/misc/brs/Makefile,v 1.11 2012/11/17 05:59:33 svnexp Exp $
+# $FreeBSD: misc/brs/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	brs
