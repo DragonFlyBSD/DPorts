@@ -2,11 +2,12 @@
 # Date created:                22 Jun 2005
 # Whom:                        Corey Smith
 #
-# $FreeBSD: ports/net/pynids/Makefile,v 1.8 2012/11/17 06:00:17 svnexp Exp $
+# $FreeBSD: ports/net/pynids/Makefile,v 1.9 2013/02/18 21:46:32 svnexp Exp $
 #
 
 PORTNAME=	pynids
 PORTVERSION=	0.6.1
+PORTREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	http://jon.oberheide.org/pynids/downloads/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +17,7 @@ MAINTAINER=	corsmith@gmail.com
 COMMENT=	Python interface to libnids
 
 PATCH_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
-BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
+LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 
 USE_GNOME=	pkgconfig glib20
 USE_PYTHON=	yes
