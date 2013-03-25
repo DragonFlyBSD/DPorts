@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/quake2-data/files/Makefile,v 1.2 2012/11/17 05:57:50 svnexp Exp $
+# $FreeBSD: games/quake2-data/files/Makefile 314353 2013-03-16 13:33:12Z danfe $
 
 SHLIB=		game
 SHLIB_NAME=	game.so
@@ -53,11 +53,6 @@ SRCS=		g_ai.c \
 		q_shared.c
 
 CFLAGS+=	-Dstricmp=strcasecmp
-.if defined(WITH_OPTIMIZED_CFLAGS)
-CFLAGS+=	-ffast-math -funroll-loops -fomit-frame-pointer \
-		-fexpensive-optimizations
-.endif
-
 LDFLAGS+=	-L/lib -L/usr/lib -lm
 
 .include <bsd.lib.mk>
