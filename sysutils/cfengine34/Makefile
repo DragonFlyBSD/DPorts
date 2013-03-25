@@ -1,8 +1,8 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine34/Makefile 313495 2013-03-06 01:24:25Z gjb $
+# $FreeBSD: sysutils/cfengine34/Makefile 314382 2013-03-16 19:01:35Z gjb $
 
 PORTNAME=	cfengine
-PORTVERSION=	3.4.3
+PORTVERSION=	3.4.4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine.com/source-code/download?file=
 
