@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/emulators/libspectrum/pkg-plist,v 1.8 2012/11/17 05:57:21 svnexp Exp $
+@comment $FreeBSD: emulators/libspectrum/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 include/libspectrum.h
 lib/libspectrum.a
 lib/libspectrum.la
