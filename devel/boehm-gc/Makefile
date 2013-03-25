@@ -2,7 +2,7 @@
 # Date created:		15 November 1996
 # Whom:			Mike McGaughey <mmcg@cs.monash.edu.au>
 #
-# $FreeBSD: ports/devel/boehm-gc/Makefile,v 1.67 2012/11/17 05:55:35 svnexp Exp $
+# $FreeBSD: devel/boehm-gc/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	boehm-gc
@@ -16,7 +16,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Garbage collection and memory leak detection for C and C++
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-cplusplus --disable-static --disable-threads
 MAKE_JOBS_UNSAFE=	yes
