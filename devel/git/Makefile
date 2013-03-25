@@ -2,11 +2,11 @@
 # Date created:				7 Feb 2006
 # Whom:					Eric Anholt
 #
-# $FreeBSD: ports/devel/git/Makefile,v 1.157 2013/02/14 10:22:07 svnexp Exp $
+# $FreeBSD: devel/git/Makefile 314579 2013-03-18 15:10:43Z wxs $
 #
 
 PORTNAME=	git
-PORTVERSION=	1.8.1.3
+PORTVERSION=	1.8.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
@@ -34,6 +34,7 @@ MAN1=		git.1 \
 		git-bundle.1 \
 		git-cat-file.1 \
 		git-check-attr.1 \
+		git-check-ignore.1 \
 		git-check-ref-format.1 \
 		git-checkout-index.1 \
 		git-checkout.1 \
@@ -119,7 +120,6 @@ MAN1=		git.1 \
 		git-relink.1 \
 		git-remote-ext.1 \
 		git-remote-fd.1 \
-		git-remote-helpers.1 \
 		git-remote-testgit.1 \
 		git-remote.1 \
 		git-repack.1 \
@@ -164,6 +164,7 @@ MAN1=		git.1 \
 		git-web--browse.1 \
 		git-whatchanged.1 \
 		git-write-tree.1 \
+		gitremote-helpers.1 \
 		gitweb.1
 MAN5=		gitattributes.5 \
 		githooks.5 \
