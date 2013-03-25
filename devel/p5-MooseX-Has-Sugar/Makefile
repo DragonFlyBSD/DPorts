@@ -2,7 +2,7 @@
 # Date created:				16 Nov, 2009
 # Whom:					Wen Heping <wen@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-MooseX-Has-Sugar/Makefile,v 1.6 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Has-Sugar/Makefile 304389 2012-09-17 07:59:30Z lth $
 #
 
 PORTNAME=	MooseX-Has-Sugar
