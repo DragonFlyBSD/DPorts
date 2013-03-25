@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-DBI/Makefile,v 1.91 2013/01/03 09:47:58 svnexp Exp $
+# $FreeBSD: databases/p5-DBI/Makefile 315071 2013-03-23 19:18:59Z sunpoet $
 
 PORTNAME=	DBI
-PORTVERSION=	1.623
+PORTVERSION=	1.624
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -70,6 +70,7 @@ MAN3=		Bundle::DBI.3 \
 		DBI::Util::CacheMemory.3 \
 		DBI::W32ODBC.3 \
 		Win32::DBIODBC.3
+PORTDOCS=	Changes README
 
 .include <bsd.port.options.mk>
 
@@ -78,12 +79,10 @@ BUILD_DEPENDS+=	p5-PlRPC>=0.2001:${PORTSDIR}/net/p5-PlRPC
 RUN_DEPENDS+=	p5-PlRPC>=0.2001:${PORTSDIR}/net/p5-PlRPC
 .endif
 
-.if ${PORT_OPTIONS:MDOCS}
-PORTDOCS=	Changes README
-
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${DOCSDIR}/
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
