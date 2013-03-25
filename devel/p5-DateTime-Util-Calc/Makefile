@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Util-Calc
-# Date created:		2007-06-16
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Util-Calc/Makefile,v 1.6 2012/11/17 05:56:13 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: devel/p5-DateTime-Util-Calc/Makefile 314287 2013-03-15 09:56:16Z bapt $
 
 PORTNAME=	DateTime-Util-Calc
 PORTVERSION=	0.13002
