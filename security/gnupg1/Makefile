@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/gnupg1/Makefile,v 1.114 2012/12/27 14:10:29 svnexp Exp $
+# $FreeBSD: security/gnupg1/Makefile 314556 2013-03-18 11:40:04Z bapt $
 # Created by: kuriyama@FreeBSD.org
 
 PORTNAME=	gnupg
@@ -12,6 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	The GNU Privacy Guard
 
+USES=		charsetfix
 USE_BZIP2=	YES
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
