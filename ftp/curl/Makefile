@@ -2,7 +2,7 @@
 # Date created:		12 December 1998
 # Whom:			Neil Blakey-Milner <nbm@rucus.ru.ac.za>
 #
-# $FreeBSD: ports/ftp/curl/Makefile,v 1.123 2013/02/05 16:54:22 svnexp Exp $
+# $FreeBSD: ftp/curl/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	curl
@@ -40,7 +40,7 @@ CONFIGURE_ENV=	LOCALBASE="${LOCALBASE}"
 GNU_CONFIGURE=	yes
 MAKE_ENV=	SHLIB_VER="${SHLIB_VER}"
 MAKE_JOBS_SAFE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PERL5_BUILD=	yes
 USE_XZ=		yes
 
