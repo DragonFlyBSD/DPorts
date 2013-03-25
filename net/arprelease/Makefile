@@ -2,19 +2,19 @@
 # Date created:		02 Aug 2001
 # Whom:			nbm
 #
-# $FreeBSD: ports/net/arprelease/Makefile,v 1.10 2012/11/17 05:59:56 svnexp Exp $
+# $FreeBSD: ports/net/arprelease/Makefile,v 1.11 2013/02/18 21:46:32 svnexp Exp $
 #
 
 PORTNAME=	arprelease
 PORTVERSION=	1.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Libnet tool to flush arp cache entries from devices (eg. routers)
 
-BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
+LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
