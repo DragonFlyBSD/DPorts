@@ -2,11 +2,12 @@
 # Date created:			Mon Sep  1 17:03:41 CEST 1997
 # Whom:				Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $FreeBSD: ports/devel/p5-TimeDate/Makefile,v 1.25 2012/11/17 05:56:35 svnexp Exp $
+# $FreeBSD: devel/p5-TimeDate/Makefile 313967 2013-03-12 11:15:32Z demon $
 #
 
 PORTNAME=	TimeDate
-PORTVERSION=	1.20
+PORTVERSION=	2.30
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
@@ -18,10 +19,7 @@ COMMENT=	Perl5 module containing a better/faster date parser for absolute dates
 
 PERL_CONFIGURE=	YES
 
-MAN3=		Date::Format.3 \
-		Date::Language.3 \
-		Date::Language::Hungarian.3 \
-		Date::Parse.3 \
-		Time::Zone.3
+MAN3=		Date::Format.3 Date::Language.3 Date::Language::Bulgarian.3 \
+		Date::Language::Hungarian.3 Date::Parse.3 Time::Zone.3
 
 .include <bsd.port.mk>
