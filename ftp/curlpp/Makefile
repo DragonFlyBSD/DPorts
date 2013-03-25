@@ -3,7 +3,7 @@
 # Date created:			Nov 27, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/ftp/curlpp/Makefile,v 1.28 2012/11/17 05:57:29 svnexp Exp $
+# $FreeBSD: ftp/curlpp/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	curlpp
@@ -23,7 +23,7 @@ CONFIGURE_ARGS=	--disable-ewarning
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 .include <bsd.port.options.mk>
