@@ -1,6 +1,6 @@
 # Makefile for games/cre (Corewars Redcode Evolver).
 #
-# $FreeBSD: ports/games/cre/files/Makefile,v 1.2 2012/11/17 05:57:35 svnexp Exp $
+# $FreeBSD: games/cre/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PROG=	cre
