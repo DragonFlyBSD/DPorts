@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-Rose-DateTime
-# Date created:				09 June 2006
-# Whom:					Zach Thompson <hideo@lastamericanempire.com>
-#
-# $FreeBSD: ports/devel/p5-Rose-DateTime/Makefile,v 1.13 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Zach Thompson <hideo@lastamericanempire.com>
+# $FreeBSD: devel/p5-Rose-DateTime/Makefile 314829 2013-03-21 09:24:06Z tobez $
 
 PORTNAME=	Rose-DateTime
-PORTVERSION=	0.537
+PORTVERSION=	0.538
 PORTEPOCH=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
