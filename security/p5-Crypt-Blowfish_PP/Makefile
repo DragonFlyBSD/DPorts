@@ -2,7 +2,7 @@
 # Date created:				Sep 30, 2002
 # Whom:					Jim Geovedi <jim@corebsd.or.id>
 #
-# $FreeBSD: ports/security/p5-Crypt-Blowfish_PP/Makefile,v 1.7 2012/11/17 06:01:10 svnexp Exp $
+# $FreeBSD: security/p5-Crypt-Blowfish_PP/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Crypt-Blowfish_PP
