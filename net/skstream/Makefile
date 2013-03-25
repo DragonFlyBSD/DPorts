@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: ports/net/skstream/Makefile,v 1.14 2013/01/19 11:20:25 svnexp Exp $
+# $FreeBSD: net/skstream/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	skstream
 PORTVERSION=	0.3.9
@@ -10,7 +10,7 @@ MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	An iostream based C++ socket library
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
