@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Convert-TNEF
-# Date created:                         Nov 14 2000
-# Whom:                                 roman@xpert.com
-#
-# $FreeBSD: ports/converters/p5-Convert-TNEF/Makefile,v 1.18 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: roman@xpert.com
+# $FreeBSD: converters/p5-Convert-TNEF/Makefile 314287 2013-03-15 09:56:16Z bapt $
 
 PORTNAME=	Convert-TNEF
 PORTVERSION=	0.18
