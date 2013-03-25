@@ -1,12 +1,13 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ports/devel/cdk/Makefile,v 1.48 2013/01/29 13:51:36 svnexp Exp $
+# $FreeBSD: devel/cdk/Makefile 315072 2013-03-23 19:19:55Z bapt $
 
 PORTNAME=	cdk
 PORTVERSION=	5.0.20120323
 PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://invisible-island.net/cdk/
+MASTER_SITES=	ftp://invisible-island.net/cdk/ \
+		http://fossies.org/linux/misc/
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}-${PORTVERSION:E}
 EXTRACT_SUFX=	.tgz
 
@@ -40,13 +41,6 @@ post-patch:
 		-e 's|gcc|${CC}|g' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's|$$(INSTALL_DATA) cdk-config|$(INSTALL_SCRIPT) cdk-config|g' \
 		${WRKSRC}/Makefile.in
-
-pre-install:
-.if ${PORT_OPTIONS:MEXAMPLES}
-PLIST_SUB+=	EXAMPLES=""
-.else
-PLIST_SUB+=	EXAMPLES="@comment "
-.endif
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
