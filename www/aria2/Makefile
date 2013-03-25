@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/www/aria2/Makefile,v 1.76 2013/02/18 19:26:32 svnexp Exp $
+# $FreeBSD: www/aria2/Makefile 315146 2013-03-24 16:50:27Z sunpoet $
 
 PORTNAME=	aria2
-PORTVERSION=	1.16.3
+PORTVERSION=	1.16.4
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/stable/${PORTNAME}-${PORTVERSION}
 
@@ -11,25 +11,36 @@ COMMENT=	Yet another download tool
 
 LICENSE=	GPLv2
 
-OPTIONS_DEFINE=	DOCS NLS SQLITE
+OPTIONS_DEFINE=	CA_BUNDLE DOCS NLS SQLITE
 OPTIONS_DEFAULT=SQLITE
+CA_BUNDLE_DESC=	Use CA bundle from Mozilla Project
 
-CONFIGURE_ARGS=	--enable-bittorrent --disable-epoll --enable-metalink --enable-threads=pth \
-		--with-libz --with-libxml2 --with-openssl \
-		--without-gnutls --without-libcares
+CONFIGURE_ARGS=	--disable-epoll --enable-bittorrent --enable-metalink \
+		--enable-shared --enable-threads=posix --with-libz \
+		--with-libxml2 --with-openssl --without-gnutls \
+		--without-libcares --without-libexpat --without-libgcrypt \
+		--without-libgmp --without-libnettle
 CONFIGURE_ENV=	OPENSSL_CFLAGS=-I${OPENSSLINC} OPENSSL_LIBS="-L${OPENSSLLIB} -lssl" \
 		ZLIB_CFLAGS=-I${INCLUDEDIR} ZLIB_LIBS="-L${LIBDIR} -lz"
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
-USE_BZIP2=	yes
-USE_GNOME=	gnomehack libxml2
+USE_GNOME=	libxml2
 USE_OPENSSL=	yes
+USE_XZ=		yes
+USES=		pathfix
 
 MAN1=		aria2c.1
 MANLANG=	"" ru
 PLIST_FILES=	bin/aria2c
 
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MCA_BUNDLE}
+RUN_DEPENDS+=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+CONFIGURE_ARGS+=--with-ca-bundle=${LOCALBASE}/share/certs/ca-root-nss.crt
+.else
+CONFIGURE_ARGS+=--without-ca-bundle
+.endif
 
 .if ${PORT_OPTIONS:MDOCS}
 PLIST_FILES+=	%%DOCSDIR%%/README \
@@ -70,8 +81,7 @@ CONFIGURE_ARGS+=--without-sqlite3
 .endif
 
 post-patch:
-.if ${PORT_OPTIONS:MDOCS}
-.else
+.if !${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's|\(install-exec-am\) install-data-am|\1|' ${WRKSRC}/Makefile.in ${WRKSRC}/doc/Makefile.in
 .endif
 
