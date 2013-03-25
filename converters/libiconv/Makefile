@@ -1,8 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/converters/libiconv/Makefile,v 1.60 2012/12/09 20:11:27 svnexp Exp $
+# $FreeBSD: converters/libiconv/Makefile 314581 2013-03-18 15:51:39Z bapt $
 
 PORTNAME=	libiconv
 PORTVERSION=	1.14
+PORTREVISION=	1
 CATEGORIES=	converters devel
 MASTER_SITES=	GNU
 
@@ -50,5 +51,9 @@ PATCH_DIST_STRIP+=	-p1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's:ei_ksc5601:ei_euc_kr:g' ${WRKSRC}/lib/aliases.h
+	@${REINPLACE_CMD} -e 's:gawk:awk:g' ${WRKSRC}/configure \
+		${WRKSRC}/libcharset/configure \
+		${WRKSRC}/preload/configure
+
 
 .include <bsd.port.mk>
