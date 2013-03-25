@@ -2,11 +2,11 @@
 # Date created:				28 July 2007
 # Whom:					Sergey Matveychuk <sem@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-Ping/Makefile,v 1.6 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-Ping/Makefile 314548 2013-03-18 10:21:48Z sem $
 #
 
 PORTNAME=	Net-Ping
-PORTVERSION=	2.36
+PORTVERSION=	2.40
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
