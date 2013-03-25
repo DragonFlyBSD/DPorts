@@ -1,17 +1,16 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: ports/textproc/dwdiff/Makefile,v 1.25 2013/02/21 15:44:18 svnexp Exp $
+# $FreeBSD: textproc/dwdiff/Makefile 314110 2013-03-13 19:38:29Z pawel $
 
 PORTNAME=	dwdiff
-PORTVERSION=	1.9
-PORTREVISION=	1
+PORTVERSION=	2.0.4
 CATEGORIES=	textproc
 MASTER_SITES=	http://os.ghalkes.nl/dist/ \
-		http://www.logvinov.ru/files/dist/ \
+ 		http://fossies.org/unix/privat/ \
 		LOCAL/avl
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A delimited word diff program
+COMMENT=	Delimited word diff program
 
 LICENSE=	GPLv3
 
