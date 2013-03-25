@@ -2,7 +2,7 @@
 # Date created:		2009-02-11
 # Whom:			Edward Tomasz Napierala <trasz@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/celt/Makefile,v 1.12 2012/11/17 05:54:29 svnexp Exp $
+# $FreeBSD: audio/celt/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	celt
@@ -23,6 +23,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ogg=${LOCALBASE}
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 .include <bsd.port.mk>
