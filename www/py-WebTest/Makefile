@@ -1,8 +1,8 @@
 # Created by: Wen Heping
-# $FreeBSD: ports/www/py-WebTest/Makefile,v 1.12 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: www/py-WebTest/Makefile 315148 2013-03-24 17:32:26Z cs $
 
 PORTNAME=	WebTest
-PORTVERSION=	1.4.0
+PORTVERSION=	2.0.2
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP \
 		http://www.c-s.li/ports/
@@ -13,9 +13,12 @@ COMMENT=	Helper to test WSGI applications
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}webob>=0.9.6.1:${PORTSDIR}/www/py-webob
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}webob>=0.9.6.1:${PORTSDIR}/www/py-webob
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}webob>=1.2:${PORTSDIR}/www/py-webob \
+		${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six \
+		${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4:${PORTSDIR}/www/py-beautifulsoup \
+		${PYTHON_PKGNAMEPREFIX}waitress>0:${PORTSDIR}/www/py-waitress
 
+USE_ZIP=		yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
