@@ -2,7 +2,7 @@
 # Date created:		2011-06-18
 # Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/mythes/Makefile,v 1.8 2012/11/17 06:02:03 svnexp Exp $
+# $FreeBSD: textproc/mythes/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	mythes
@@ -16,7 +16,7 @@ COMMENT=	Simple thesaurus library
 
 LIB_DEPENDS=	hunspell-1.3:${PORTSDIR}/textproc/hunspell
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 
