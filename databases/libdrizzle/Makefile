@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libdrizzle
-# Date created:		2010-03-03
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/libdrizzle/Makefile,v 1.5 2012/11/17 05:55:09 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: databases/libdrizzle/Makefile 314857 2013-03-21 17:46:11Z bapt $
 
 PORTNAME=	libdrizzle
 PORTVERSION=	0.8
@@ -17,7 +13,7 @@ COMMENT=	Client and protocol library for the Drizzle database
 
 LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3
 
-OPTIONS=	DOCS "Build documentation with doxygen" Off
+OPTIONS_DEFINE=	DOXYGEN EXAMPLES
 
 USE_GCC=	4.2+
 GNU_CONFIGURE=	yes
@@ -28,10 +24,9 @@ USE_LDCONFIG=	yes
 SAMPLE_PROGS=	client pipe_query proxy server simple \
 		simple_multi sqlite_server
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(NOPORTDOCS)
-.if defined(WITH_DOCS)
+.if ${PORT_OPTIONS:MDOCS} && ${PORT_OPTIONS:MDOXYGEB}
 BUILD_DEPENDS+=	doxygen>=0:${PORTSDIR}/devel/doxygen
 ALL_TARGET=	all doxygen
 PLIST_SUB+=	PORTDOCS=""
@@ -42,9 +37,8 @@ post-install::
 .else
 PLIST_SUB+=	PORTDOCS="@comment "
 .endif
-.endif
 
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 post-install::
 	@${INSTALL} -d ${EXAMPLESDIR}
 .for i in ${SAMPLE_PROGS}
@@ -56,4 +50,4 @@ post-install::
 CONFIGURE_ARGS+=--disable-64bit
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
