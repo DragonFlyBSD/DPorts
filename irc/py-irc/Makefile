@@ -1,8 +1,9 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: ports/irc/py-irc/Makefile,v 1.3 2013/02/19 09:45:21 svnexp Exp $
+# $FreeBSD: irc/py-irc/Makefile 314954 2013-03-22 19:36:52Z rm $
 
 PORTNAME=	irc
 PORTVERSION=	8.0.1
+PORTREVISION=	1
 CATEGORIES=	irc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +17,8 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
-BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}hgtools>0:${PORTSDIR}/devel/py-hgtools
+BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}hgtools>0:${PORTSDIR}/devel/py-hgtools \
+		${PYTHON_PKGNAMEPREFIX}pytest-runner>0:${PORTSDIR}/devel/py-pytest-runner
 
 EXAMPLEFILES=	irccat.py irccat2.py servermap.py testbot.py \
 		dccreceive.py dccsend.py
