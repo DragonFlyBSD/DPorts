@@ -2,7 +2,7 @@
 # Date created:		03 July 1996
 # Whom:			ABURAYER Rewsirow <rewsirow@ff.iij4u.or.jp>
 #
-# $FreeBSD: ports/astro/luna/Makefile,v 1.19 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: astro/luna/Makefile 314560 2013-03-18 12:37:40Z miwi $
 #
 
 PORTNAME=	luna
@@ -10,17 +10,12 @@ PORTVERSION=	1.9
 CATEGORIES=	astro games
 MASTER_SITES=	http://ftp.vector.co.jp/pack/dos/edu/science/space/
 DISTNAME=	luna19s
-EXTRACT_SUFX=	.lzh
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Display the moon's phase
 
-EXTRACT_DEPENDS=	lha:${PORTSDIR}/archivers/lha
-
-EXTRACT_CMD=	lha
-EXTRACT_BEFORE_ARGS=	xtfqw=${WRKDIR}
-EXTRACT_AFTER_ARGS=	# empty
-
+USE_DOS2UNIX=	yes
+USE_LHA=	yes
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/luna
 MAKEFILE=	makefile
