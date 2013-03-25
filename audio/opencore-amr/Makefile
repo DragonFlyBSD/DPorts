@@ -2,7 +2,7 @@
 # Date created:		2009-07-20
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/audio/opencore-amr/Makefile,v 1.7 2012/11/17 05:54:40 svnexp Exp $
+# $FreeBSD: audio/opencore-amr/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	opencore-amr
@@ -17,7 +17,7 @@ LICENSE=	AL2
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
