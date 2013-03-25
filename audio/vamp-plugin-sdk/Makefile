@@ -1,16 +1,12 @@
-# New ports collection makefile for:   vamp-plugin-sdk
-# Date created:        2012-01-08
-# Whom:                mathias.picker@gmx.de
-#
-# $FreeBSD: ports/audio/vamp-plugin-sdk/Makefile,v 1.2 2012/11/17 05:54:46 svnexp Exp $
-#
+# Created by: mathias.picker@gmx.de
+# $FreeBSD: audio/vamp-plugin-sdk/Makefile 314460 2013-03-17 16:44:03Z eadler $
 
 PORTNAME=	vamp-plugin-sdk
 PORTVERSION=	2.3
 CATEGORIES=	audio
 MASTER_SITES=	http://code.soundsoftware.ac.uk/attachments/download/224/
 
-MAINTAINER=	miwi@freebsd.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Vamp audio analysis plugin SDK
 
 LICENSE=	BSD
