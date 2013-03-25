@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: converters/fribidi/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: converters/fribidi/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	fribidi
 PORTVERSION=	0.19.2
@@ -11,7 +11,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A Free Implementation of the Unicode Bidirectional Algorithm
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-glib
