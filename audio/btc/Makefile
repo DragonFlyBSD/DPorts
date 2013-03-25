@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chimesnet.com>
-# $FreeBSD: ports/audio/btc/Makefile,v 1.9 2012/12/31 16:14:48 svnexp Exp $
+# $FreeBSD: audio/btc/Makefile 314074 2013-03-13 11:54:25Z danfe $
 
 PORTNAME=	btc
 PORTVERSION=	258
@@ -8,12 +8,14 @@ MASTER_SITES=	ftp://ftp.SpringDaemons.com/soft/
 DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A tool for creating bass tablature
+COMMENT=	Tool for creating bass tablature
 
 WRKSRC=		${WRKDIR}
 
 PLIST_FILES=	bin/btc
 PORTDOCS=	btc.doc
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
