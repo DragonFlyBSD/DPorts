@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mail/dcc-dccd
-# Date created:		Wed Oct 9 19:30:00 WST 2002
-# Whom:			Dean Hollister <dean@odyssey.apana.org.au>
-#
-# $FreeBSD: ports/mail/dcc-dccd/Makefile,v 1.52 2012/11/17 05:59:00 svnexp Exp $
-#
+# Created by: Dean Hollister <dean@odyssey.apana.org.au>
+# $FreeBSD: mail/dcc-dccd/Makefile 314852 2013-03-21 16:02:03Z eadler $
 
 PORTNAME=	dcc-dccd
 PORTVERSION=	1.3.141
