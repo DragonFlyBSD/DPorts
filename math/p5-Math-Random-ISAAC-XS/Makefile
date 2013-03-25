@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math::Random::ISAAC::XS
-# Date created:				07 Dec, 2009
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-Random-ISAAC-XS/Makefile,v 1.5 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Random-ISAAC-XS/Makefile 314052 2013-03-13 09:53:23Z bapt $
 
 PORTNAME=	Math-Random-ISAAC-XS
 PORTVERSION=	1.004
