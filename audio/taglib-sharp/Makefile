@@ -3,7 +3,7 @@
 # Date Created:				Aug 25 2008
 # Whom:				 	Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: audio/taglib-sharp/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: audio/taglib-sharp/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	taglib-sharp
@@ -21,7 +21,7 @@ RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|}
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	build
 
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}" \
