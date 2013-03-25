@@ -1,5 +1,5 @@
 # Created by: <dmagda+libsamplerate@ee.ryerson.ca>
-# $FreeBSD: ports/audio/libsamplerate/Makefile,v 1.32 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/libsamplerate/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libsamplerate
 PORTVERSION=	0.1.8
@@ -13,7 +13,7 @@ COMMENT=	Secret Rabbit Code: a Sample Rate Converter for audio
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
