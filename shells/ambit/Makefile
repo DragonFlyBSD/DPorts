@@ -2,7 +2,7 @@
 # Date created:				2011-08-09
 # Whom:					Sascha Klauder <sklauder@trimind.de>
 #
-# $FreeBSD: ports/shells/ambit/Makefile,v 1.2 2012/11/17 06:01:23 svnexp Exp $
+# $FreeBSD: shells/ambit/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	ambit
