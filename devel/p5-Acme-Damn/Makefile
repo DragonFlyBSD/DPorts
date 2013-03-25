@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Acme-Damn
-# Date created:				8 March 2010
-# Whom:					Warner Losh <imp@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Acme-Damn/Makefile,v 1.6 2012/11/17 05:56:03 svnexp Exp $
-#
+# Created by: Warner Losh <imp@FreeBSD.org>
+# $FreeBSD: devel/p5-Acme-Damn/Makefile 314061 2013-03-13 11:01:26Z bapt $
 
 PORTNAME=	Acme-Damn
 PORTVERSION=	0.05
