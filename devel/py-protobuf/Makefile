@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-protobuf
-# Date created:				May 27 2009
-# Whom:					vanilla@
-#
-# $FreeBSD: ports/devel/py-protobuf/Makefile,v 1.6 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: vanilla@
+# $FreeBSD: devel/py-protobuf/Makefile 314580 2013-03-18 15:14:27Z vanilla $
 
 PORTNAME=	protobuf
-PORTVERSION=	2.4.1
+PORTVERSION=	2.5.0
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,5 +17,8 @@ PROJECTHOST=	protobuf
 USE_BZIP2=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+
+pre-build:
+	@${MKDIR} ${WRKSRC}/google/protobuf/compiler
 
 .include <bsd.port.mk>
