@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/libvorbis/files/patch-configure,v 1.9 2012/11/17 05:54:36 svnexp Exp $
+$FreeBSD: audio/libvorbis/files/patch-configure 300895 2012-07-14 12:56:14Z beat $
 
 --- configure.orig	2010-06-05 15:16:53.000000000 +0200
 +++ configure	2010-06-05 15:20:42.000000000 +0200

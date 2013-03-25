@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/audio/libvorbis/pkg-plist,v 1.17 2012/11/17 05:54:36 svnexp Exp $
+@comment $FreeBSD: audio/libvorbis/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 include/vorbis/codec.h
 include/vorbis/vorbisenc.h
 include/vorbis/vorbisfile.h

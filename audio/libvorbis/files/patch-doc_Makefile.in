@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/libvorbis/files/patch-doc_Makefile.in,v 1.8 2012/11/17 05:54:36 svnexp Exp $
+$FreeBSD: audio/libvorbis/files/patch-doc_Makefile.in 300895 2012-07-14 12:56:14Z beat $
 
 --- doc/Makefile.in.orig	2010-03-26 08:00:08.000000000 +0100
 +++ doc/Makefile.in	2010-06-05 15:26:43.000000000 +0200
