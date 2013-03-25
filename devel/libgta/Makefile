@@ -2,7 +2,7 @@
 # Date created:		2012-06-10
 # Whom:			lbartoletti <coder@tuxfamily.org>
 #
-# $FreeBSD: ports/devel/libgta/Makefile,v 1.3 2012/11/17 05:55:54 svnexp Exp $
+# $FreeBSD: devel/libgta/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libgta
@@ -18,7 +18,7 @@ OPTIONS_DEFINE=	DOCS
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 .include <bsd.port.options.mk>
