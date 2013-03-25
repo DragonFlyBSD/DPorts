@@ -2,7 +2,7 @@
 # Date created:		11 February 2004
 # Whom:			Robert Schlotterbeck <robert@rs.tarrant.tx.us>
 #
-# $FreeBSD: ports/devel/vstr/Makefile,v 1.20 2012/11/17 05:57:06 svnexp Exp $
+# $FreeBSD: devel/vstr/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	vstr
@@ -21,7 +21,7 @@ GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_CSTD=	gnu89
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	yes
 
