@@ -2,7 +2,7 @@
 # Date created:		2007-01-24
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: ports/audio/libgig/Makefile,v 1.6 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/libgig/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libgig
@@ -22,7 +22,7 @@ LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \
 		uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
