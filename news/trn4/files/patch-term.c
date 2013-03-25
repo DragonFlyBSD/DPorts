@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/news/trn4/files/patch-term.c,v 1.2 2012/11/17 06:00:43 svnexp Exp $
+$FreeBSD: news/trn4/files/patch-term.c 300897 2012-07-14 14:29:18Z beat $
 
 --- term.c.orig
 +++ term.c
