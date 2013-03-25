@@ -2,7 +2,7 @@
 # Date created:				June 26th 1997
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-WWW-Search/Makefile,v 1.63 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Search/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	WWW-Search
