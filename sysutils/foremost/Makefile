@@ -1,14 +1,10 @@
-# Ports collection makefile for:  foremost
-# Date created:			  16 June 2004
-# Whom:				  Yonatan <Yonatan@xpert.com>
-#
-# $FreeBSD: ports/sysutils/foremost/Makefile,v 1.15 2012/11/17 06:01:30 svnexp Exp $
-#
+# Created by: Yonatan <Yonatan@xpert.com>
+# $FreeBSD: sysutils/foremost/Makefile 314904 2013-03-22 11:18:39Z rm $
 
 PORTNAME=	foremost
-PORTVERSION=	1.5.5
+PORTVERSION=	1.5.7
 CATEGORIES=	sysutils
-MASTER_SITES=	SF
+MASTER_SITES=	http://foremost.sourceforge.net/pkg/
 
 MAINTAINER=	onatan@gmail.com
 COMMENT=	Console program to recover files based on their headers and footers
