@@ -2,7 +2,7 @@
 # Date created:				08 April 2004
 # Whom:					Stefan Esser <se@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/unshield/Makefile,v 1.16 2012/11/17 05:54:24 svnexp Exp $
+# $FreeBSD: archivers/unshield/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	unshield
@@ -16,7 +16,7 @@ COMMENT=	Extract data from InstallShield CAB files
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 MAN1=		${PORTNAME}.1
