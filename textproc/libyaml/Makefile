@@ -3,7 +3,7 @@
 # Date created:			Aug 31, 2006
 # Whom:				ijliao
 #
-# $FreeBSD: ports/textproc/libyaml/Makefile,v 1.12 2012/11/17 06:02:02 svnexp Exp $
+# $FreeBSD: textproc/libyaml/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libyaml
@@ -18,7 +18,7 @@ MAINTAINER=	jpaetzel@FreeBSD.org
 COMMENT=	A YAML 1.1 parser and emitter written in C
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
