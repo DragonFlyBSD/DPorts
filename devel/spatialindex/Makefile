@@ -1,10 +1,8 @@
-# New ports collection makefile for:	spatialindex
-# Date created:				15 June 2008
-# Whom:					Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/spatialindex/Makefile,v 1.10 2012/11/17 05:57:03 svnexp Exp $
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/spatialindex/Makefile 314826 2013-03-21 08:15:36Z wen $
 
 PORTNAME=	spatialindex
-PORTVERSION=	1.7.1
+PORTVERSION=	1.8.0
 CATEGORIES=	devel
 MASTER_SITES=	http://download.osgeo.org/libspatialindex/
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
