@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	clint
-# Date created:			May 1, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/clint/Makefile,v 1.27 2013/02/14 10:22:06 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/clint/Makefile 313764 2013-03-09 22:17:35Z eadler $
 
 PORTNAME=	clint
 PORTVERSION=	0.1.2
@@ -12,8 +7,8 @@ PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A static source code checker for C++
+MAINTAINER=	eadler@FreeBSD.org
+COMMENT=	Static source code checker for C++
 
 USE_AUTOTOOLS=	libtool
 USE_PYTHON=	yes
