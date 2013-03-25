@@ -2,11 +2,11 @@
 # Date created:				8 Nov 2002
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/net/yaz++/Makefile,v 1.17 2012/11/17 06:00:25 svnexp Exp $
+# $FreeBSD: net/yaz++/Makefile 313969 2013-03-12 11:40:45Z demon $
 #
 
 PORTNAME=	yaz++
-PORTVERSION=	1.3.3
+PORTVERSION=	1.4.0
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yazpp/
 DISTNAME=	yazpp-${PORTVERSION}
