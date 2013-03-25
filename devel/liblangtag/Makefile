@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/liblangtag/Makefile,v 1.1 2013/02/20 07:44:09 svnexp Exp $
+# $FreeBSD: devel/liblangtag/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	liblangtag
 PORTVERSION=	0.4.0
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
 
