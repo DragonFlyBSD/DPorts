@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Object-Event
-# Date created:		2009-07-15
-# Whom:			Mons Anderson <mons@cpan.org>
-#
-# $FreeBSD: ports/devel/p5-Object-Event/Makefile,v 1.7 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: Mons Anderson <mons@cpan.org>
+# $FreeBSD: devel/p5-Object-Event/Makefile 314048 2013-03-13 09:38:54Z bapt $
 
 PORTNAME=	Object-Event
 PORTVERSION=	1.220
