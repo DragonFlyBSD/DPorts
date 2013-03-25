@@ -3,7 +3,7 @@
 # Date created:			Nov 11, 2003
 # Whom:	      			ijliao
 #
-# $FreeBSD: ports/lang/rexx-wrapper/Makefile,v 1.8 2012/11/17 05:58:56 svnexp Exp $
+# $FreeBSD: lang/rexx-wrapper/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	wrapper
