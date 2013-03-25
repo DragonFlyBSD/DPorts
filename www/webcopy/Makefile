@@ -1,9 +1,5 @@
-# New ports collection makefile for:    webcopy
-# Date created:         14 Sep 1996
-# Whom:                 ache
-#
-# $FreeBSD: ports/www/webcopy/Makefile,v 1.23 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: www/webcopy/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	webcopy
 PORTVERSION=	0.98b7
@@ -14,7 +10,7 @@ MASTER_SITE_SUBDIR=	cy
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	A Web Mirroring Program
 
-RESTRICTED=	"This program cannot be distributed if modified in any way.  Don't sell for profit without written permission"
+RESTRICTED=	This program cannot be distributed if modified in any way.  Don't sell for profit without written permission
 ALL_TARGET=
 
 do-install:
