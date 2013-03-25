@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sed
-# Date created:				12 October 2000
-# Whom:					Cyrille Lefevre <clefevre@citeweb.net>
-#
-# $FreeBSD: ports/textproc/gsed/Makefile,v 1.32 2012/11/17 06:01:57 svnexp Exp $
-#
+# Created by: Cyrille Lefevre <clefevre@citeweb.net>
+# $FreeBSD: textproc/gsed/Makefile 314556 2013-03-18 11:40:04Z bapt $
 
 PORTNAME=	sed
 PORTVERSION=	4.2.1
@@ -19,6 +15,7 @@ COMMENT=	The GNU stream editor
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	MAKEINFO="makeinfo --no-split"
 
+USES=		charsetfix
 PATCH_SUBDIRS=	. doc lib sed
 DATADIR=	${PREFIX}/share/${PKGBASE}
 SAMP_FILES=	binary*.sed dc.sed
