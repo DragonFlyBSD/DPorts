@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: ports/devel/p5-Getopt-Euclid/Makefile,v 1.14 2013/02/11 15:49:09 svnexp Exp $
+# $FreeBSD: devel/p5-Getopt-Euclid/Makefile 312064 2013-02-11 14:51:06Z skreuzer $
 
 PORTNAME=	Getopt-Euclid
 PORTVERSION=	0.4.0
