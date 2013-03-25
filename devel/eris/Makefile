@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: devel/eris/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/eris/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	eris
 PORTVERSION=	1.3.21
@@ -18,7 +18,7 @@ LIB_DEPENDS=	Atlas-0.6.1:${PORTSDIR}/devel/atlas-devel \
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 CXXFLAGS+=	-include wchar.h
 CONFIGURE_ARGS+="CXXFLAGS=${CXXFLAGS}"
