@@ -2,7 +2,7 @@
 # Date created:				10 Jun 2004
 # Whom:					Vaida Bogdan <vaida.bogdan@gmail.com>
 #
-# $FreeBSD: ports/sysutils/jailuser/Makefile,v 1.6 2012/11/17 06:01:35 svnexp Exp $
+# $FreeBSD: sysutils/jailuser/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	jailuser
