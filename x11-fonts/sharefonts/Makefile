@@ -1,5 +1,5 @@
 # Created by: dburr@FreeBSD.org
-# $FreeBSD: ports/x11-fonts/sharefonts/Makefile,v 1.18 2013/02/18 14:40:13 svnexp Exp $
+# $FreeBSD: x11-fonts/sharefonts/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	sharefonts
 PORTVERSION=	0.10
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/fonts/
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	A collection of shareware ATM fonts from the CICA archives
 
-RESTRICTED=	"Shareware.  Cannot be distributed w/o prior authorization."
+RESTRICTED=	Shareware.  Cannot be distributed w/o prior authorization.
 
 NO_BUILD=	yes
 
