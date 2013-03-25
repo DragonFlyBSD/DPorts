@@ -1,5 +1,5 @@
 # Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
-# $FreeBSD: ports/devel/libvanessa_socket/Makefile,v 1.23 2012/12/11 14:25:12 svnexp Exp $
+# $FreeBSD: devel/libvanessa_socket/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libvanessa_socket
 PORTVERSION=	0.0.12
@@ -17,7 +17,7 @@ MAN1=		vanessa_socket_pipe.1
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
