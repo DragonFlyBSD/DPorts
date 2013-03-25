@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ladder
-# Date created:        18 Feb 1998
-# Whom:                Stefan Zehl <sec@42.org>
-#
-# $FreeBSD: ports/games/ladder/Makefile,v 1.7 2012/11/17 05:57:43 svnexp Exp $
-#
+# Created by: Stefan Zehl <sec@42.org>
+# $FreeBSD: games/ladder/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	ladder
 PORTVERSION=	1.00
@@ -16,7 +12,7 @@ DISTFILES=	ladder.tar
 MAINTAINER=	sec@42.org
 COMMENT=	The old "ladder" game
 
-RESTRICTED=	"possible copyright problems ?"
+RESTRICTED=	possible copyright problems ?
 
 NO_WRKSUBDIR=	true
 EXTRACT_CMD=		${TAR}
