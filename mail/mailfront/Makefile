@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: ports/mail/mailfront/Makefile,v 1.30 2013/02/12 18:07:15 svnexp Exp $
+# $FreeBSD: mail/mailfront/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
 
 PORTNAME=	mailfront
 PORTVERSION=	1.21
@@ -14,7 +14,8 @@ LIB_DEPENDS=	cvm-v2client:${PORTSDIR}/security/cvm
 
 OPTIONS_DEFINE=	LUA
 
-WANT_QMAIL=	yes
+USES=		qmail:vars
+
 CFLAGS+=	-I${CVM_INC}
 CFLAGS_SO=	${CFLAGS} -fPIC -shared -L${CVM_LIB}
 LDFLAGS+=	-g -L${CVM_LIB}
