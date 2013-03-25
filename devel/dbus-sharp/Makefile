@@ -2,7 +2,7 @@
 # Date Created:					20041011
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: devel/dbus-sharp/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/dbus-sharp/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	dbus-sharp
@@ -19,7 +19,7 @@ RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	build
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
