@@ -2,7 +2,7 @@
 # Date created:	   07 June 2002
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-Data-Serializer/Makefile,v 1.29 2012/11/17 05:56:10 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Serializer/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	Data-Serializer
