@@ -1,8 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net/httping/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: net/httping/Makefile 315026 2013-03-23 12:38:08Z ehaupt $
 
 PORTNAME=	httping
-PORTVERSION=	1.6
+PORTVERSION=	2.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.vanheusden.com/httping/ \
 		CRITICAL
@@ -16,8 +16,6 @@ MAKE_JOBS_SAFE=	yes
 
 MAN1=		httping.1
 PLIST_FILES=	bin/httping
-
-CFLAGS+=	-D_GNU_SOURCE
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
