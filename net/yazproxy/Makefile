@@ -2,11 +2,11 @@
 # Date created:				3 May 2004
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/net/yazproxy/Makefile,v 1.11 2012/11/17 06:00:25 svnexp Exp $
+# $FreeBSD: net/yazproxy/Makefile 313970 2013-03-12 11:42:56Z demon $
 #
 
 PORTNAME=	yazproxy
-PORTVERSION=	1.3.7
+PORTVERSION=	1.3.8
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yazproxy/
 
