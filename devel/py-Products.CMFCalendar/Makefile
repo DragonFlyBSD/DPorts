@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-Products.CMFCalendar
-# Date created:				20 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-Products.CMFCalendar/Makefile,v 1.3 2012/11/17 05:56:44 svnexp Exp $
-#
+# $FreeBSD: devel/py-Products.CMFCalendar/Makefile 314754 2013-03-20 18:52:36Z rm $
 
 PORTNAME=	Products.CMFCalendar
 PORTVERSION=	2.2.2
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,12 +12,13 @@ COMMENT=	Calendar product for the Zope Content Management Framework
 
 LICENSE=	ZPL21
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}eggtestinfo>0:${PORTSDIR}/devel/py-eggtestinfo
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.CMFCore>=0:${PORTSDIR}/devel/py-Products.CMFCore \
 		${PYTHON_PKGNAMEPREFIX}Products.CMFDefault>=0:${PORTSDIR}/devel/py-Products.CMFDefault \
 		${PYTHON_PKGNAMEPREFIX}Products.GenericSetup>=0:${PORTSDIR}/devel/py-Products.GenericSetup
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
 .include <bsd.port.mk>
