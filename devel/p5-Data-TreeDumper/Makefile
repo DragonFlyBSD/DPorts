@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Data::TreeDumper
-# Date created:				1 August 2004
-# Whom:					Aaron Dalton <aaron@daltons.ca>
-#
-# $FreeBSD: ports/devel/p5-Data-TreeDumper/Makefile,v 1.22 2012/11/19 13:38:55 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@daltons.ca>
+# $FreeBSD: devel/p5-Data-TreeDumper/Makefile 314287 2013-03-15 09:56:16Z bapt $
 
 PORTNAME=	Data-TreeDumper
 PORTVERSION=	0.40
