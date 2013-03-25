@@ -1,12 +1,9 @@
-# New ports collection makefile for:   gettext
-# Date created:        16 March 1998
-# Whom:                Yukihiro Nakai <Nakai@technologist.com>
-#
-# $FreeBSD: ports/devel/gettext/Makefile,v 1.92 2012/11/17 05:55:45 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@technologist.com>
+# $FreeBSD: devel/gettext/Makefile 314581 2013-03-18 15:51:39Z bapt $
 
 PORTNAME=	gettext
 PORTVERSION=	0.18.1.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	gettext
@@ -17,6 +14,7 @@ MASTER_SITE_SUBDIR=	gettext
 MAINTAINER=	autotools@FreeBSD.org
 COMMENT=	GNU gettext package
 
+USES=		charsetfix
 USE_ICONV=	yes
 LIBTOOLFILES=	gettext-runtime/configure \
 		gettext-runtime/libasprintf/configure gettext-tools/configure
@@ -64,7 +62,7 @@ pre-extract:
 
 post-patch:
 	@${FIND} ${WRKSRC} -name configure -print | ${XARGS} \
-	    ${REINPLACE_CMD} -e 's|mkdir gmkdir|mkdir|'
+	    ${REINPLACE_CMD} -e 's|mkdir gmkdir|mkdir|; s|gawk|awk|'
 .if defined (NOPORTDOCS)
 .for dir in runtime tools
 	@${REINPLACE_CMD} -e 's|^SUBDIRS = doc|SUBDIRS =|' \
