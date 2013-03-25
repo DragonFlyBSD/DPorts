@@ -2,7 +2,7 @@
 # Date created:				2005-10-14
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
-# $FreeBSD: ports/net/net6/Makefile,v 1.33 2013/02/05 16:54:24 svnexp Exp $
+# $FreeBSD: net/net6/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	net6
@@ -19,7 +19,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20 \
 		gnutls.26:${PORTSDIR}/security/gnutls
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_AUTOTOOLS=	libtool
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
