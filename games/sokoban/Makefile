@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sokoban
-# Date created:				2 July 1997
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/sokoban/Makefile,v 1.11 2012/11/17 05:57:53 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/sokoban/Makefile 314610 2013-03-18 23:48:12Z bdrewery $
 
 PORTNAME=		sokoban
 PORTVERSION=		1.0
