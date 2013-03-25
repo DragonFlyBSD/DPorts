@@ -1,16 +1,12 @@
-# New ports collection makefile for:   rubberband
-# Date created:        2012-01-08
-# Whom:                mathias.picker@gmx.de
-#
-# $FreeBSD: ports/audio/rubberband/Makefile,v 1.3 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: mathias.picker@gmx.de
+# $FreeBSD: audio/rubberband/Makefile 314460 2013-03-17 16:44:03Z eadler $
 
 PORTNAME=	rubberband
 PORTVERSION=	1.7.0
 CATEGORIES=	audio
 MASTER_SITES=	http://code.breakfastquay.com/attachments/download/23/
 
-MAINTAINER=	miwi@freebsd.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Vamp audio analysis plugin SDK
 
 LICENSE=	GPLv2
