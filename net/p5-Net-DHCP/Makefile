@@ -1,18 +1,14 @@
-# New ports collection makefile for:   p5-Net-DHCP
-# Date created:                2006-07-13
-# Whom:                        Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-#
-# $FreeBSD: ports/net/p5-Net-DHCP/Makefile,v 1.9 2012/11/17 06:00:10 svnexp Exp $
-#
+# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
+# $FreeBSD: net/p5-Net-DHCP/Makefile 314035 2013-03-13 07:55:46Z culot $
 
 PORTNAME=	Net-DHCP
-PORTVERSION=	0.691
+PORTVERSION=	0.693
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	tjs@cdpa.nsysu.edu.tw
-COMMENT=	A DHCP set of classes designed to handle basic DHCP handling
+COMMENT=	DHCP set of classes designed to handle basic DHCP handling
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
