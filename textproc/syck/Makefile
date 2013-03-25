@@ -1,9 +1,8 @@
 # Created by: dd
-# $FreeBSD: textproc/syck/Makefile 313647 2013-03-08 13:21:31Z miwi $
+# $FreeBSD: textproc/syck/Makefile 315052 2013-03-23 17:51:36Z miwi $
 
 PORTNAME=	syck
 PORTVERSION=	0.70
-PORTREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://cloud.github.com/downloads/indeyets/syck/
 
