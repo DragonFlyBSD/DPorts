@@ -2,7 +2,7 @@
 # Date created:		2004-04-27
 # Whom:			michael johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/lang/libjit/Makefile,v 1.29 2012/11/30 14:32:26 svnexp Exp $
+# $FreeBSD: lang/libjit/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libjit
@@ -16,7 +16,7 @@ COMMENT=	Libjit implements Just-In-Time compilation functionality
 LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
