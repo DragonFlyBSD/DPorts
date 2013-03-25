@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/tor/files/tor.in,v 1.10 2012/11/20 15:11:50 svnexp Exp $
+# $FreeBSD: security/tor/files/tor.in 307588 2012-11-20 15:08:34Z bf $
 #
 # PROVIDE: tor
 # REQUIRE: NETWORKING SERVERS USR
