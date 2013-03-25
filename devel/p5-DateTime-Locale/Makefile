@@ -2,7 +2,7 @@
 # Date created:	   30 july 2003
 # Whom:		   Mathieu Arnold <m@absolight.net>
 #
-# $FreeBSD: ports/devel/p5-DateTime-Locale/Makefile,v 1.31 2012/11/17 05:56:13 svnexp Exp $
+# $FreeBSD: devel/p5-DateTime-Locale/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	DateTime-Locale
