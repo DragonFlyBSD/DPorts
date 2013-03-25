@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Convert-BinHex
-# Date created:         2004-03-23
-# Whom:                 Jan-Peter Koopmann <j.koopmann@seceidos.de>
-#
-# $FreeBSD: ports/converters/p5-Convert-BinHex/Makefile,v 1.5 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: Jan-Peter Koopmann <j.koopmann@seceidos.de>
+# $FreeBSD: converters/p5-Convert-BinHex/Makefile 314058 2013-03-13 10:54:56Z bapt $
 
 PORTNAME=	Convert-BinHex
 PORTVERSION=	1.119
