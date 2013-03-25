@@ -2,11 +2,11 @@
 # Date created:				4 June 2008
 # Whom:					George V. Neville-Neil <gnn@FreeBSD.org>
 #
-# $FreeBSD: ports/ftp/uftp/Makefile,v 1.31 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/uftp/Makefile 314528 2013-03-18 06:46:36Z demon $
 #
 
 PORTNAME=	uftp
-PORTVERSION=	3.7.1
+PORTVERSION=	3.7.2
 PORTEPOCH=	1
 CATEGORIES=	ftp
 MASTER_SITES=	http://www.tcnj.edu/~bush/downloads/
