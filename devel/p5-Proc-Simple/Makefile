@@ -2,11 +2,11 @@
 # Date created:				June 26th 1997
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Proc-Simple/Makefile,v 1.24 2012/11/17 05:56:27 svnexp Exp $
+# $FreeBSD: devel/p5-Proc-Simple/Makefile 313868 2013-03-11 11:39:25Z demon $
 #
 
 PORTNAME=	Proc-Simple
-PORTVERSION=	1.28
+PORTVERSION=	1.31
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
