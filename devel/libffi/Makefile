@@ -1,8 +1,8 @@
 # Created by: Horance Chou <horance@freedom.ie.cycu.edu.tw>
-# $FreeBSD: devel/libffi/Makefile 313643 2013-03-08 12:59:10Z zeising $
+# $FreeBSD: devel/libffi/Makefile 314838 2013-03-21 12:01:28Z zeising $
 
 PORTNAME=	libffi
-PORTVERSION=	3.0.12
+PORTVERSION=	3.0.13
 CATEGORIES=	devel
 MASTER_SITES=	SOURCEWARE
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -23,7 +23,7 @@ BUILD_DEPENDS:=	${TEST_DEPENDS}
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	build
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
