@@ -1,9 +1,4 @@
-# New ports collection makefile for:	sdcc
-# Date created:		3 May 2004
-# Whom:			Tijl Coosemans <tijl@ulyssis.org>
-#
-# $FreeBSD: ports/lang/sdcc/Makefile,v 1.31 2012/11/17 05:58:56 svnexp Exp $
-#
+# $FreeBSD: lang/sdcc/Makefile 314948 2013-03-22 16:54:51Z tijl $
 
 PORTNAME=	sdcc
 PORTVERSION=	3.2.0
