@@ -3,7 +3,7 @@
 # Date created:			Nov 10, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/libcwd/Makefile,v 1.31 2012/11/17 05:55:53 svnexp Exp $
+# $FreeBSD: devel/libcwd/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libcwd
@@ -14,7 +14,7 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The C++ Debugging Support Library
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GMAKE=	yes
 USE_PKGCONFIG=	yes
 USE_AUTOTOOLS=	libtool
