@@ -2,7 +2,7 @@
 # Date created:        3 January 2001
 # Whom:                George Reid <greid@ukug.uk.freebsd.org>
 #
-# $FreeBSD: ports/devel/zziplib/Makefile,v 1.36 2012/11/17 05:57:07 svnexp Exp $
+# $FreeBSD: devel/zziplib/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	zziplib
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 OPTIONS_DEFINE=	SDL
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PYTHON_BUILD=	yes
 USE_AUTOTOOLS=	libtool
 USE_PKGCONFIG=	yes
