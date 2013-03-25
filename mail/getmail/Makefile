@@ -1,8 +1,8 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: mail/getmail/Makefile 313273 2013-03-02 16:43:09Z miwi $
+# $FreeBSD: mail/getmail/Makefile 314157 2013-03-14 13:28:31Z miwi $
 
 PORTNAME=	getmail
-PORTVERSION=	4.39.0
+PORTVERSION=	4.39.1
 CATEGORIES=	mail python
 MASTER_SITES=	http://pyropus.ca/software/getmail/old-versions/ \
 		http://mirrors.closedsrc.org/getmail/
