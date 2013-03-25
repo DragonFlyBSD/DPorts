@@ -2,7 +2,7 @@
 # Date created:		2011-04-08
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/archivers/lrzip/Makefile,v 1.7 2012/11/17 05:54:21 svnexp Exp $
+# $FreeBSD: archivers/lrzip/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	lrzip
@@ -25,7 +25,7 @@ GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PERL5_BUILD=	yes
 USE_LDCONFIG=	yes
 

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/archivers/lrzip/pkg-plist,v 1.4 2012/11/17 05:54:21 svnexp Exp $
+@comment $FreeBSD: archivers/lrzip/pkg-plist 302121 2012-08-05 18:24:25Z scheidell $
 %%DOCSDIR%%/AUTHORS
 %%DOCSDIR%%/BUGS
 %%DOCSDIR%%/COPYING
