@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/gitolite/Makefile,v 1.14 2013/02/17 20:28:13 svnexp Exp $
+# $FreeBSD: devel/gitolite/Makefile 314145 2013-03-14 11:31:58Z miwi $
 
 PORTNAME=	gitolite
-PORTVERSION=	3.3
+PORTVERSION=	3.4
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://milki.github.com/${PORTNAME}/ \
