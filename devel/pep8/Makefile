@@ -1,8 +1,8 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/pep8/Makefile 313452 2013-03-05 13:24:46Z sbz $
+# $FreeBSD: devel/pep8/Makefile 314171 2013-03-14 17:04:32Z sbz $
 
 PORTNAME=	pep8
-PORTVERSION=	1.4.4
+PORTVERSION=	1.4.5
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
