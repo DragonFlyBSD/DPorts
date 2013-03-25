@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net/exabgp/files/exabgp.in,v 1.2 2013/01/06 21:36:22 svnexp Exp $
+# $FreeBSD: net/exabgp/files/exabgp.in 310014 2013-01-06 21:01:02Z zi $
 #
 # PROVIDE: exabgp
 # REQUIRE: LOGIN

@@ -1,10 +1,11 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: ports/net/exabgp/Makefile,v 1.5 2013/02/26 13:45:09 svnexp Exp $
+# $FreeBSD: net/exabgp/Makefile 315169 2013-03-24 22:06:39Z zi $
 
 PORTNAME=	exabgp
-PORTVERSION=	3.1.5
+PORTVERSION=	3.1.8
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
+MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
+		http://mirrors.rit.edu/zi/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	zi@FreeBSD.org
@@ -27,7 +28,6 @@ MAN1=		${PORTNAME}.1
 
 post-extract:
 	@${MV} -f ${WRKSRC}/etc/systemd ${WRKSRC}
-	@${MV} -f ${WRKSRC}/lib/forwarding ${WRKSRC}
 
 do-build:
 	${PYTHON_CMD} -m compileall ${WRKSRC}/lib
