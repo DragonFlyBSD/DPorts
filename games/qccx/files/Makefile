@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/games/qccx/files/Makefile,v 1.2 2012/11/17 05:57:50 svnexp Exp $
+# $FreeBSD: games/qccx/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 OBJS =	cmdlib.o hash.o pr_comp.o pr_lex.o qcc.o
 
