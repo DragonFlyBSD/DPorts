@@ -2,7 +2,7 @@
 # Date created:				12 Nov 2000
 # Whom:					Jeremy Norris <ishmael27@home.com>
 #
-# $FreeBSD: ports/graphics/giblib/Makefile,v 1.38 2012/11/17 05:58:07 svnexp Exp $
+# $FreeBSD: graphics/giblib/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	giblib
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A utility library that includes a wrapper for imlib2
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_EFL=	imlib2
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
