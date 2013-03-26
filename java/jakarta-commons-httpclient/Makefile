@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/java/jakarta-commons-httpclient/Makefile,v 1.13 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-commons-httpclient/Makefile 313961 2013-03-12 10:39:30Z ale $
 
 PORTNAME=	commons-httpclient
 DISTVERSION=	3.1
@@ -32,15 +32,18 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
 PORTDOCS=	*
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@LANG=C ${REINPLACE_CMD} 's/Ortwin Gl.*ck/Ortwin Glueck/' \
 		${WRKSRC}/src/java/org/apache/commons/httpclient/*.java \
 		${WRKSRC}/src/java/org/apache/commons/httpclient/*/*.java
+
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR file as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${INSTALL_DATA} ${WRKSRC}/dist/${PORTNAME}.jar ${JAVAJARDIR}/
 	@${ECHO_MSG} " [DONE]"
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${ECHO_MSG} -n ">> Installing documentation..."
 	@${MKDIR} ${DOCSDIR}
 	@cd ${WRKSRC}/dist/docs && ${FIND} api \
