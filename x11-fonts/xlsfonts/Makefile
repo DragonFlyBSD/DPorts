@@ -1,19 +1,14 @@
-# New ports collection makefile for:	xlsfonts
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/xlsfonts/Makefile,v 1.3 2012/11/17 06:03:30 svnexp Exp $
-#
+# $FreeBSD: x11-fonts/xlsfonts/Makefile 313938 2013-03-11 20:01:19Z zeising $
 
 PORTNAME=	xlsfonts
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.4
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Server font list displayer for X
 
 XORG_CAT=	app
-USE_XORG=	x11
+USE_XORG=	x11 xorg-macros
 
 PLIST_FILES=	bin/xlsfonts
 
