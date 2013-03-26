@@ -2,7 +2,7 @@
 # Date Created:				26 Aug 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/consolekit/Makefile,v 1.22 2012/11/17 06:01:27 svnexp Exp $
+# $FreeBSD: sysutils/consolekit/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #    $MCom: ports/sysutils/consolekit/Makefile,v 1.25 2010/10/23 10:12:30 kwm Exp $
 
 PORTNAME=	consolekit
@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/ConsoleKit-${PORTVERSION}
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_XORG=	x11
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
