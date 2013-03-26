@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ports/graphics/png/Makefile,v 1.132 2013/01/26 17:26:33 svnexp Exp $
+# $FreeBSD: graphics/png/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	png
 PORTVERSION=	1.5.14
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=	yes
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 
 CMAKE_ARGS+=	-DPNG_MAN_DIR:STRING=man
