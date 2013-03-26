@@ -1,5 +1,5 @@
 # Created by: Eoin Lawless (eoin@maths.tcd.ie)
-# $FreeBSD: math/parmetis/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: math/parmetis/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	ParMetis
 PORTVERSION=	4.0
@@ -20,7 +20,7 @@ LICENSE_PERMS=	auto-accept
 OPTIONS_DEFINE=	OPENMPI DOCS
 OPENMPI_DESC=	Use openmpi instead of mpich2
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_GMAKE=	yes
 
 PORTDOCS=	manual.pdf
