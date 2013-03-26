@@ -2,7 +2,7 @@
 # Date created:		20 Nov 2005
 # Whom:			Hye-Shik Chang
 #
-# $FreeBSD: ports/devel/llvm-devel/Makefile,v 1.67 2013/02/13 16:46:45 svnexp Exp $
+# $FreeBSD: devel/llvm-devel/Makefile 314179 2013-03-14 19:19:50Z brooks $
 #
 
 PORTNAME=	llvm
@@ -25,7 +25,7 @@ BUILD_DEPENDS+=	bash:${PORTSDIR}/shells/bash
 BUILD_DEPENDS+=	f2c:${PORTSDIR}/lang/f2c
 .endif
 
-CONFLICTS=	llvm-[23]* llvm29-* llvm31-*
+CONFLICTS=	llvm-[23]* llvm31-[3]*
 
 GNU_CONFIGURE=	yes
 USE_GCC=	4.2+
@@ -53,6 +53,7 @@ MAN1=		bugpoint.1 lit.1 llc.1 lli.1 llvm-ar.1 llvm-as.1 \
 		llvm-bcanalyzer.1 llvm-config.1 llvm-cov.1 llvm-diff.1 \
 		llvm-dis.1 llvm-extract.1 llvm-link.1 llvm-nm.1 \
 		llvm-prof.1 llvm-ranlib.1 llvm-stress.1 opt.1 tblgen.1
+MLINKS=		lit.1 llvm-lit.1
 
 LLVM_RELEASE=	${PORTVERSION:C/\.r[0-9]*//}
 PLIST_SUB+=	LLVM_RELEASE=${LLVM_RELEASE}
@@ -141,14 +142,19 @@ post-build:
 post-install:
 	${MV} ${PREFIX}/lib/${LIBNAME} ${PREFIX}/lib/${LIBNAME}.0
 	${LN} -s ${LIBNAME}.0 ${PREFIX}/lib/${LIBNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/utils/lit/lit.py ${PREFIX}/bin/lit
+	${LN} -s lit ${PREFIX}/bin/llvm-lit
+	${MKDIR} ${PYTHON_SITELIBDIR}/lit
+	${INSTALL_DATA} ${WRKSRC}/utils/lit/lit/*.py ${PYTHON_SITELIBDIR}/lit
+	${INSTALL_PROGRAM} ${WRKSRC}/Release/bin/FileCheck ${PREFIX}/bin/
 	${MKDIR} ${DATADIR}/cmake
 	${INSTALL_DATA} ${WRKSRC}/cmake/modules/*.cmake ${DATADIR}/cmake/
 	${INSTALL_DATA} ${WRKDIR}/cmake/share/llvm/cmake/*.cmake \
 	    ${DATADIR}/cmake/
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}/html
-	find ${WRKSRC}/docs/_build/html -type f | \
-	    xargs -I _DOC_ ${INSTALL_DATA} _DOC_ ${DOCSDIR}/html/
+	${FIND} ${WRKSRC}/docs/_build/html -type f | \
+	    ${XARGS} -I _DOC_ ${INSTALL_DATA} _DOC_ ${DOCSDIR}/html/
 .endif
 .for man in ${MAN1}
 	@${INSTALL_MAN} ${WRKSRC}/docs/_build/man/${man} \
@@ -164,7 +170,9 @@ regression-test: ${BUILD_COOKIE}
 		${SH} -c ${TEST_CMD}; \
 	fi
 
-PLIST_FILE_LIST=	bin/bugpoint \
+PLIST_FILE_LIST=	bin/FileCheck \
+			bin/bugpoint \
+			bin/lit \
 			bin/llc \
 			bin/lli \
 			bin/llvm* \
@@ -178,19 +186,23 @@ PLIST_FILE_LIST=	bin/bugpoint \
 			lib/libprofile_rt.so
 PLIST_DIR_LIST=		include/llvm-c \
 			include/llvm \
+			${PYTHON_SITELIBDIR:S;${PYTHONBASE}/;;}/lit \
 			${DATADIR_REL}
 build-plist:
 	${RM} -f ${PLIST}
 	cd ${PREFIX} && \
-	    (ls ${PLIST_FILE_LIST}; ${FIND} ${PLIST_DIR_LIST} -type f) | \
+	    (ls ${PLIST_FILE_LIST}; \
+	     ${FIND} ${PLIST_DIR_LIST} -type f -o -type l) | \
 	    ${SED} -e 's|${LLVM_RELEASE}|%%LLVM_RELEASE%%|' \
-	    -e 's|${DATADIR_REL}|%%DATADIR%%|' | \
+	    -e 's|${DATADIR_REL}|%%DATADIR%%|' \
+	    -e 's|${PYTHON_SITELIBDIR:S;${PYTHONBASE}/;;}|%%PYTHON_SITELIBDIR%%|' | \
 	    ${SORT} >> ${PLIST}
 	${FIND} ${DOCSDIR} -type f | \
 	    ${SED} -e 's|${DOCSDIR}|%%PORTDOCS%%%%DOCSDIR%%|' | \
 	    ${SORT} >> ${PLIST}
 	cd ${PREFIX} && \
 	    ${FIND} ${PLIST_DIR_LIST} -type d | \
+	    ${SED} -e 's|${PYTHON_SITELIBDIR:S;${PYTHONBASE}/;;}|%%PYTHON_SITELIBDIR%%|' | \
 	    ${SORT} -r | ${SED} -e 's|^|@dirrm |' >> ${PLIST}
 	${FIND} ${DOCSDIR} -type d | ${SORT} -r | \
 	    ${SED} -e 's|${DOCSDIR}|%%DOCSDIR%%|' \

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/llvm-devel/files/patch-lib_Target_Mips_MipsTargetMachine.cpp,v 1.3 2013/01/10 18:51:49 svnexp Exp $
+$FreeBSD: devel/llvm-devel/files/patch-lib_Target_Mips_MipsTargetMachine.cpp 310192 2013-01-10 18:01:28Z brooks $
 
 --- lib/Target/Mips/MipsTargetMachine.cpp.orig
 +++ lib/Target/Mips/MipsTargetMachine.cpp
