@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: ports/x11-toolkits/Xaw3d/Makefile,v 1.62 2012/11/17 06:03:34 svnexp Exp $
+# $FreeBSD: x11-toolkits/Xaw3d/Makefile 313760 2013-03-09 21:43:02Z bapt $
 
 PORTNAME=	Xaw3d
 PORTVERSION=	1.5E
@@ -20,6 +20,7 @@ USE_XORG=	x11 xext xmu xt sm ice xpm
 USE_LDCONFIG=	yes
 
 SUB_FILES=	pkg-message
+XAWVER=		8
 SUB_LIST=	XAWVER="${XAWVER}"
 
 .include <bsd.port.pre.mk>
