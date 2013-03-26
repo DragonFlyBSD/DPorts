@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/databases/mysql55-server/Makefile,v 1.297 2013/02/06 12:17:43 svnexp Exp $
+# $FreeBSD: databases/mysql55-server/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME?=	mysql
 PORTVERSION=	5.5.30
@@ -13,7 +13,7 @@ MAINTAINER=	ale@FreeBSD.org
 COMMENT?=	Multithreaded SQL database (server)
 
 SLAVEDIRS=	databases/mysql55-client
-USE_CMAKE=	yes
+USES=		cmake
 USE_READLINE=	yes
 MAKE_JOBS_SAFE=	yes
 NO_OPTIONS_SORT=yes

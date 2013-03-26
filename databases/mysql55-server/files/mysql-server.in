@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/databases/mysql55-server/files/mysql-server.in,v 1.2 2012/11/17 05:55:12 svnexp Exp $
+# $FreeBSD: databases/mysql55-server/files/mysql-server.in 302141 2012-08-05 23:19:36Z dougb $
 #
 
 # PROVIDE: mysql
