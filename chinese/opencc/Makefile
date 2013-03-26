@@ -2,7 +2,7 @@
 # Date created:				28 Nov 2011
 # Whom:			Zhihao Yuan <lichray@gmail.com>
 #
-# $FreeBSD: ports/chinese/opencc/Makefile,v 1.5 2012/11/17 05:54:57 svnexp Exp $
+# $FreeBSD: chinese/opencc/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	opencc
@@ -17,7 +17,7 @@ LICENSE=	AL2
 
 MAN1=	opencc.1 opencc_dict.1
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 
 .if !defined(WITHOUT_NLS)
