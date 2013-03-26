@@ -1,4 +1,4 @@
-# $FreeBSD: databases/mariadb55-server/Makefile 314329 2013-03-16 00:35:47Z flo $
+# $FreeBSD: databases/mariadb55-server/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME?=	mariadb
 PORTVERSION=	5.5.30
@@ -19,7 +19,7 @@ MAINTAINER=	never@nevermind.kiev.ua
 COMMENT?=	Multithreaded SQL database (server)
 
 SLAVEDIRS=	databases/mariadb55-client
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 NO_OPTIONS_SORT=yes
 
