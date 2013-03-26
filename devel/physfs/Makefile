@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: ports/devel/physfs/Makefile,v 1.20 2013/01/30 08:52:09 svnexp Exp $
+# $FreeBSD: devel/physfs/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	physfs
 PORTVERSION=	2.0.3
@@ -10,7 +10,7 @@ MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	A library to provide abstract access to various archives
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
