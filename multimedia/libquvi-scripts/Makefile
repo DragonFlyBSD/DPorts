@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/multimedia/libquvi-scripts/Makefile,v 1.12 2012/12/09 06:04:38 svnexp Exp $
+# $FreeBSD: multimedia/libquvi-scripts/Makefile 315017 2013-03-23 09:18:41Z sunpoet $
 
 PORTNAME=	libquvi-scripts
-PORTVERSION=	0.4.10
+PORTVERSION=	0.4.14
 CATEGORIES=	multimedia devel
 MASTER_SITES=	SF/quvi/${PORTVERSION:R}/${PORTNAME}/ \
 		GOOGLE_CODE
@@ -14,8 +14,8 @@ OPTIONS_DEFINE=	NSFW
 NSFW_DESC=	Enable adult website support
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack pkgconfig
 USE_XZ=		yes
+USES=		pathfix
 
 MAN7=		libquvi-scripts.7
 
