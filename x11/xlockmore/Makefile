@@ -1,12 +1,11 @@
-# Created by: smace
-#
-# $FreeBSD: ports/x11/xlockmore/Makefile,v 1.133 2012/12/20 23:28:04 svnexp Exp $
+# Created by: Scott Mace <smace@FreeBSD.org>
+# $FreeBSD: x11/xlockmore/Makefile 315000 2013-03-23 06:05:08Z jgh $
 
 PORTNAME=	xlockmore
-PORTVERSION=	5.41
+PORTVERSION=	5.42
 CATEGORIES?=	x11
-MASTER_SITES=	ftp://ibiblio.org/pub/Linux/X11/screensavers/ \
-		http://www.tux.org/~bagleyd/xlock/${PORTNAME}-${PORTVERSION}/ \
+MASTER_SITES=	http://www.tux.org/~bagleyd/xlock/${PORTNAME}-${PORTVERSION}/ \
+		ftp://ibiblio.org/pub/Linux/X11/screensavers/ \
 		CRITICAL
 
 MAINTAINER=	jgh@FreeBSD.org
