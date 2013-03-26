@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-themes/kde4-icons-oxygen/Makefile,v 1.9 2013/02/04 01:04:54 svnexp Exp $
+# $FreeBSD: x11-themes/kde4-icons-oxygen/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	oxygen
 PORTVERSION=	${KDE4_VERSION}
@@ -14,7 +14,7 @@ COMMENT=	The Oxygen icon theme for KDE
 
 USE_XZ=	yes
 USE_KDE4=	kdeprefix kdehier
-USE_CMAKE=	yes
+USES=		cmake
 INSTALL_TARGET=	install
 EXTRACT_AFTER_ARGS+=	| ${TAR} -xf - --exclude '${DISTNAME}/scalable'
 
