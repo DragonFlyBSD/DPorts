@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: ports/textproc/soprano/Makefile,v 1.26 2013/02/04 01:04:44 svnexp Exp $
+# $FreeBSD: textproc/soprano/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	soprano
 PORTVERSION=	2.9.0
@@ -17,7 +17,7 @@ USE_QT4=	corelib dbus qtestlib network \
 		qmake_build moc_build uic_build rcc_build
 USE_PKGCONFIG=	both
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DSOPRANO_DISABLE_CLUCENE_INDEX=yes \
 		-DSOPRANO_DISABLE_SESAME2_BACKEND=yes
 MAKE_JOBS_SAFE=	yes
