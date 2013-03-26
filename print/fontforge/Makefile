@@ -1,5 +1,5 @@
 # Created by: KANOU Hiroki <kanou@khdd.net>
-# $FreeBSD: ports/print/fontforge/Makefile,v 1.132 2013/02/08 15:50:15 svnexp Exp $
+# $FreeBSD: print/fontforge/Makefile 311940 2013-02-08 14:48:58Z pawel $
 
 PORTNAME=	fontforge
 DISTVERSION=	20120731-b
