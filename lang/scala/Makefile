@@ -1,8 +1,8 @@
 # Created by: Mitsuru YOSHIDA <mitsuru@riken.jp>
-# $FreeBSD: ports/lang/scala/Makefile,v 1.11 2013/01/16 16:51:11 svnexp Exp $
+# $FreeBSD: lang/scala/Makefile 314862 2013-03-21 18:55:22Z pawel $
 
 PORTNAME=	scala
-PORTVERSION=	2.10.0
+PORTVERSION=	2.10.1
 CATEGORIES=	lang java
 MASTER_SITES=	http://www.scala-lang.org/downloads/distrib/files/
 EXTRACT_SUFX=	.tgz
