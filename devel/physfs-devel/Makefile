@@ -2,7 +2,7 @@
 # Date Created:		26 July 2003
 # Whom:			Oliver Lehmann <oliver@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/physfs-devel/Makefile,v 1.20 2012/11/17 05:56:42 svnexp Exp $
+# $FreeBSD: devel/physfs-devel/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	physfs
@@ -14,7 +14,7 @@ MASTER_SITES=	http://offload1.icculus.org/${PORTNAME}/downloads/
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	A library to provide abstract access to various archives
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 NO_LATEST_LINK=	yes
