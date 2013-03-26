@@ -2,7 +2,7 @@
 # Date Created:				2007-05-17
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: ports/audio/libmusicbrainz4/Makefile,v 1.51 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/libmusicbrainz4/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	libmusicbrainz
@@ -19,7 +19,7 @@ LIB_DEPENDS=	neon:${PORTSDIR}/www/neon29
 
 LATEST_LINK=	${PORTNAME}4
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 
 MAKE_JOBS_SAFE=	yes
