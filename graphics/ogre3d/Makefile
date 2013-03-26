@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: ports/graphics/ogre3d/Makefile,v 1.62 2013/01/30 08:45:38 svnexp Exp $
+# $FreeBSD: graphics/ogre3d/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	ogre3d
 PORTVERSION=	1.8.1
@@ -18,7 +18,7 @@ OPTIONS_DEFINE=	BOOST
 
 USE_LDCONFIG=	YES
 USE_BZIP2=	YES
-USE_CMAKE=	YES
+USES=		cmake
 USE_SDL=	sdl
 USE_XORG=	xaw
 MAKE_JOBS_SAFE=	yes
