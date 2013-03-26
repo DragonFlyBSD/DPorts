@@ -2,11 +2,12 @@
 # Date created:		24 Oct 2009
 # Whom:			Brooks Davis
 #
-# $FreeBSD: ports/lang/clang/Makefile,v 1.22 2013/01/10 18:01:27 svnexp Exp $
+# $FreeBSD: lang/clang/Makefile 314092 2013-03-13 15:40:34Z brooks $
 #
 
 PORTNAME=	clang
 PORTVERSION=	3.2
+PORTREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
@@ -15,7 +16,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 EXTRACT_ONLY=	${LLVM_SOURCE}
 
 MAINTAINER=	brooks@FreeBSD.org
-COMMENT=	C, Objective-C, and (alpha-quality) C++ compiler
+COMMENT=	C, Objective-C, and C++ compiler
 
 CONFLICTS=	clang-devel-[23]* clang31-*
 
@@ -148,6 +149,7 @@ PLIST_FILE_LIST=	bin/ccc-analyzer \
 			bin/c++-analyzer \
 			bin/clang \
 			bin/clang++ \
+			bin/clang-check \
 			bin/clang-tblgen \
 			bin/c-index-test \
 			bin/scan-build \
