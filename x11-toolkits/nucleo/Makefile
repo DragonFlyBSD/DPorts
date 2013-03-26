@@ -1,9 +1,9 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/x11-toolkits/nucleo/Makefile,v 1.25 2013/02/05 16:54:27 svnexp Exp $
+# $FreeBSD: x11-toolkits/nucleo/Makefile 314141 2013-03-14 08:17:39Z pclin $
 
 PORTNAME=	nucleo
 PORTVERSION=	0.7.6
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://insitu.lri.fr/metisse/download/nucleo/
 
