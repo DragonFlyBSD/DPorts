@@ -1,5 +1,5 @@
 # Created by: gpalmer@FreeBSD.org
-# $FreeBSD: ports/x11/rxvt-unicode/Makefile,v 1.148 2012/12/31 07:17:19 svnexp Exp $
+# $FreeBSD: x11/rxvt-unicode/Makefile 315132 2013-03-24 15:52:23Z thierry $
 
 PORTNAME=	rxvt-unicode
 PORTVERSION=	9.16
@@ -21,7 +21,7 @@ USE_GNOME=		pkgconfig
 USE_XORG=		xpm xft xrender
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include
-CONFIGURE_ENV=		LIBS="-lstdc++ -lutil"
+CONFIGURE_ENV=		LIBS="-lstdc++ -lutil" TIC=${LOCALBASE}/bin/tic
 CONFIGURE_ARGS=		--enable-everything --with-term=rxvt	\
 			--with-terminfo=${LOCALBASE}/share/misc/terminfo.db
 USE_BZIP2=		yes
