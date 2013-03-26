@@ -2,7 +2,7 @@
 # Date created:				2010-04-12
 # Whom:					Frank Wall <fw@moov.de>
 #
-# $FreeBSD: mail/spmfilter/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: mail/spmfilter/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	spmfilter
@@ -24,7 +24,7 @@ RUN_DEPENDS=	gmime-24>=2.4:${PORTSDIR}/mail/gmime24 \
 
 LICENSE=	LGPL3
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH="${LOCALBASE}/include" \
 		-DCMAKE_LIBRARY_PATH="${LOCALBASE}/lib"
 USE_PKGCONFIG=	build
