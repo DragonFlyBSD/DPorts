@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/games/freecell-solver/Makefile,v 1.66 2013/01/16 08:46:38 svnexp Exp $
+# $FreeBSD: games/freecell-solver/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	freecell-solver
 PORTVERSION=	3.16.0
@@ -17,7 +17,7 @@ TCMALLOC_DESC=	Use Google's TCMalloc
 
 USE_BZIP2=	yes
 USE_PERL5_BUILD=yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
