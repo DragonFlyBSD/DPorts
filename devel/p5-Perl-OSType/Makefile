@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Perl-OSType
-# Date created:	   03 Mar 2011
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Perl-OSType/Makefile,v 1.2 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Perl-OSType/Makefile 314828 2013-03-21 09:20:32Z tobez $
 
 PORTNAME=	Perl-OSType
-PORTVERSION=	1.002
+PORTVERSION=	1.003
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
