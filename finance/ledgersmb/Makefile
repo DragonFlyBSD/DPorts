@@ -1,5 +1,5 @@
 # Created by: anarcat@anarcat.ath.cx
-# $FreeBSD: ports/finance/ledgersmb/Makefile,v 1.7 2012/11/20 19:16:19 svnexp Exp $
+# $FreeBSD: finance/ledgersmb/Makefile 307595 2012-11-20 19:06:23Z tabthorpe $
 
 PORTNAME=	ledger-smb
 PORTVERSION=	1.1.12
