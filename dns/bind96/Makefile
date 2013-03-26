@@ -1,4 +1,4 @@
-# $FreeBSD: ports/dns/bind96/Makefile,v 1.136 2013/01/04 11:42:54 svnexp Exp $
+# $FreeBSD: dns/bind96/Makefile 313955 2013-03-12 08:07:01Z erwin $
 
 PORTNAME=	bind96
 PORTVERSION=	9.6.3.1.ESV.R8
@@ -22,6 +22,8 @@ CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
 		--with-randomdev=/dev/random
 
 CONFLICTS=	bind9*-9.[45789].* bind9*-sdb-9.[45789].* bind-tools-9.*
+DEPRECATED=	EOL in June 2013, consider moving to Bind 9.8 or 9.9
+EXPIRATION_DATE=	2013-06-30
 
 OPTIONS_DEFAULT=	IPV6 SSL LINKS XML THREADS
 OPTIONS_DEFINE=		SSL LINKS XML IDN REPLACE_BASE LARGE_FILE \
