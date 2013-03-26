@@ -1,5 +1,5 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: ports/multimedia/cclive/Makefile,v 1.48 2013/01/31 14:01:30 svnexp Exp $
+# $FreeBSD: multimedia/cclive/Makefile 314544 2013-03-18 09:34:44Z bapt $
 
 PORTNAME=	cclive
 PORTVERSION=	0.7.11
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-boost=${LOCALBASE}
 MAKE_JOBS_SAFE=	yes
 USE_XZ=		yes
+USE_PKGCONFIG=	build
 
 MAN1=		cclive.1
 PLIST_FILES=	bin/ccl \
