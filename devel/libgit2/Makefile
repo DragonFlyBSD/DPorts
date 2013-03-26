@@ -1,21 +1,20 @@
-# New ports collection makefile for:	libgit2
-# Date created:		2011-05-27
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/libgit2/Makefile,v 1.10 2012/11/17 05:55:54 svnexp Exp $
-#
+# $FreeBSD: devel/libgit2/Makefile 315068 2013-03-23 19:12:58Z bapt $
 
 PORTNAME=	libgit2
 PORTVERSION=	0.17.0
 CATEGORIES=	devel
-MASTER_SITES=	http://cloud.github.com/downloads/libgit2/libgit2/
+MASTER_SITES=	GHC
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Portable, pure C implementation of the Git core
 
 LICENSE=	GPLv2
 
-USE_CMAKE=	yes
+USE_GITHUB=	yes
+GH_ACCOUNT=	libgit2
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+USES=		cmake
 USE_LDCONFIG=	yes
 USE_PYTHON_BUILD=	yes
 
