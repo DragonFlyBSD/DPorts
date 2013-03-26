@@ -2,7 +2,7 @@
 # Date created:				26 Apr 2001
 # Whom:					Randall Hopper <aa8vb@nc.rr.com>
 #
-# $FreeBSD: ports/graphics/osg/Makefile,v 1.64 2013/01/17 16:48:39 svnexp Exp $
+# $FreeBSD: graphics/osg/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	osg
@@ -24,7 +24,7 @@ CONFLICTS=	osg-devel-[0-9]*
 
 USE_GCC=	any
 USE_ZIP=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_GL=		gl glu
 USE_GNOME=	pkgconfig
 USE_XORG=	x11
