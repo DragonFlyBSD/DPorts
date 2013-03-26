@@ -1,19 +1,14 @@
-# New ports collection makefile for:	xfontsel
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/xfontsel/Makefile,v 1.4 2012/11/17 06:03:29 svnexp Exp $
-#
+# $FreeBSD: x11-fonts/xfontsel/Makefile 313937 2013-03-11 19:55:33Z zeising $
 
 PORTNAME=	xfontsel
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.4
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Point and click selection of X11 font names
 
 XORG_CAT=	app
-USE_XORG=	xt xaw
+USE_XORG=	xt xaw xorg-macros
 
 MAN1=		xfontsel.1
 
