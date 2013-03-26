@@ -2,7 +2,7 @@
 # Date created:				Nov 28 2005
 # Whom:					vanilla@
 #
-# $FreeBSD: ports/databases/libzdb/Makefile,v 1.30 2012/11/17 05:55:10 svnexp Exp $
+# $FreeBSD: databases/libzdb/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libzdb
@@ -24,7 +24,7 @@ OPTIONS_DEFAULT=MYSQL SQLITE PGSQL
 
 .include <bsd.port.options.mk>
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
