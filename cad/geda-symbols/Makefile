@@ -2,7 +2,7 @@
 # Date created:			4 April 2001
 # Whom:				bruno schwander <bruno@tinkerbox.org>
 #
-# $FreeBSD: ports/cad/geda-symbols/Makefile,v 1.18 2012/11/17 05:54:54 svnexp Exp $
+# $FreeBSD: cad/geda-symbols/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	symbols
