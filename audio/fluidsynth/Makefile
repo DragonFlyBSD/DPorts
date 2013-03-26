@@ -1,5 +1,5 @@
 # Created by: Juha Nygard <juha.nygard1@netikka.fi>
-# $FreeBSD: ports/audio/fluidsynth/Makefile,v 1.26 2013/02/04 12:47:17 svnexp Exp $
+# $FreeBSD: audio/fluidsynth/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	fluidsynth
 PORTVERSION=	1.1.6
@@ -17,7 +17,7 @@ OPTIONS_DEFAULT=	JACK
 USE_BZIP2=	yes
 USE_GNOME=	glib20
 USE_PKGCONFIG=	build
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-Denable-ladcca:BOOL=FALSE \
 		-Denable-midishare:BOOL=FALSE
 USE_LDCONFIG=	yes
