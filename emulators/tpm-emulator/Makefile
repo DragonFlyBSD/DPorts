@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: ports/emulators/tpm-emulator/Makefile,v 1.12 2013/02/07 19:51:43 svnexp Exp $
+# $FreeBSD: emulators/tpm-emulator/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	tpm-emulator
 PORTVERSION=	0.7.4
@@ -19,8 +19,7 @@ CONFLICTS=	trousers-tddl-[0-9d]*
 
 USE_RC_SUBR=	tpmd
 
-USE_CMAKE=	yes
-CMAKE_OUTSOURCE=yes
+USES=		cmake:outsource
 CMAKE_ENV=	PREFIX="${PREFIX}"
 CMAKE_ARGS=	-DTPM_INCLUDE_DIRS:STRING="${LOCALBASE}/include" \
 		-DTPM_LIBRARY_DIRS:STRING="${LOCALBASE}/lib"
