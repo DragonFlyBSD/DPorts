@@ -1,5 +1,5 @@
 # Created by:                cartola (Carlos E. G. Carvalho)
-# $FreeBSD: graphics/vigra/Makefile 314085 2013-03-13 13:53:29Z fluffy $
+# $FreeBSD: graphics/vigra/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	vigra
 PORTVERSION=	1.9.0
@@ -15,7 +15,7 @@ LICENSE=	MIT
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DDEPENDENCY_SEARCH_PREFIX:PATH=${LOCALBASE} \
 		-DDOCINSTALL:PATH=${DOCSDIR_REL}
 
