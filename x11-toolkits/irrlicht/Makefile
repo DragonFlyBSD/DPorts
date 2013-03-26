@@ -1,9 +1,5 @@
-# New ports collection makefile for:	irrlicht
-# Date created:				19 September 2004
-# Whom:					Simon Barner <barner@gmx.de>
-#
-# $FreeBSD: ports/x11-toolkits/irrlicht/Makefile,v 1.31 2012/11/17 06:03:36 svnexp Exp $
-#
+# Created by: Simon Barner <barner@gmx.de>
+# $FreeBSD: x11-toolkits/irrlicht/Makefile 314894 2013-03-22 08:16:07Z bapt $
 
 PORTNAME=	irrlicht
 PORTVERSION=	1.7.3
@@ -35,11 +31,10 @@ EXAMPLEDIRS=	01.HelloWorld 02.Quake3Map 03.CustomSceneNode 04.Movement 05.UserIn
 		11.PerPixelLighting 12.TerrainRendering 13.RenderToTexture 15.LoadIrrFile \
 		Demo
 
-OPTIONS=	DEBUG	"Compile with debugging simbols" off \
-		EXAMPLES	"Install example files"	on \
-		JOYSTICK	"Support for Linux Joystick" off
+OPTIONS_DEFINE=	DEBUG EXAMPLES JOYSTICK
+JOYSTICK_DESC=	Support for Linux Joystick
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if (${ARCH} == "x86_64") || (${ARCH} == "ia64")
 CFLAGS+=	-fPIC
@@ -49,18 +44,18 @@ CFLAGS+=	-fPIC
 BROKEN=		Does not compile on sparc64
 .endif
 
-.if !defined(WITHOUT_EXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 PLIST_SUB+=	EXAMPLES=""
 .else
 PLIST_SUB+=	EXAMPLES="@comment "
 .endif
 
-.if defined(WITH_JOYSTICK)
+.if ${PORT_OPTIONS:MJOYSTICK}
 BUILD_DEPENDS+=	${LOCALBASE}/include/linux/joystick.h:${PORTSDIR}/devel/linux-js
 HAVE_JOYSTICK=	true
 .endif
 
-.if !defined(WITH_DEBUG)
+.if ${PORT_OPTIONS:MDEBUG}
 MAKE_ENV+=	NDEBUG=1
 .endif
 
@@ -87,7 +82,7 @@ do-install:
 		${PREFIX}/lib && ${LN} -s libIrrlicht.so.${SHARED_LIB_VER} \
 			${PREFIX}/lib/libIrrlicht.so
 
-.if !defined(WITHOUT_EXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 .for DIRE in ${EXAMPLEDIRS}
 	${MKDIR} ${EXAMPLESDIR}/${DIRE}
 	${INSTALL_DATA} ${WRKSRC}/examples/${DIRE}/Makefile \
@@ -103,4 +98,4 @@ do-install:
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
