@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: ports/devel/libast/Makefile,v 1.38 2013/01/12 13:02:13 svnexp Exp $
+# $FreeBSD: devel/libast/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libast
 PORTVERSION=	0.7
@@ -14,7 +14,7 @@ COMMENT=	A library of assorted spiffy things
 LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_EFL=	imlib2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
