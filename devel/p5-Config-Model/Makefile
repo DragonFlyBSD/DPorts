@@ -1,12 +1,8 @@
-# Ports collection makefile for:	Config::Model
-# Date created:			Jan 29, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/p5-Config-Model/Makefile,v 1.100 2012/12/16 06:16:54 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-Config-Model/Makefile 315069 2013-03-23 19:15:01Z sunpoet $
 
 PORTNAME=	Config-Model
-PORTVERSION=	2.029
+PORTVERSION=	2.030
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DDUMONT
