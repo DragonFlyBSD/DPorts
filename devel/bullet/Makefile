@@ -2,7 +2,7 @@
 # Date created:		2008-01-09
 # Whom:			Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/bullet/Makefile,v 1.19 2013/02/14 10:22:05 svnexp Exp $
+# $FreeBSD: devel/bullet/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	bullet
@@ -20,7 +20,7 @@ USE_XORG=	x11
 USE_GCC=	any
 MAKE_JOBS_SAFE=	yes
 
-USE_CMAKE=	yes
+USES=		cmake
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-pthread
