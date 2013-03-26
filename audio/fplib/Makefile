@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/audio/fplib/Makefile,v 1.4 2012/11/17 05:54:31 svnexp Exp $
+# $FreeBSD: audio/fplib/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	fplib
 PORTVERSION=	20120911
@@ -18,7 +18,7 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 REINPLACE_ARGS=	-i ''
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 
