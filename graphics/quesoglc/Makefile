@@ -2,7 +2,7 @@
 # Date created:		04 Jun 2009
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/quesoglc/Makefile,v 1.7 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/quesoglc/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	quesoglc
@@ -21,7 +21,7 @@ LIB_DEPENDS=	fribidi.3:${PORTSDIR}/converters/fribidi \
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GL=		gl glu glut
 USE_LDCONFIG=	yes
 
