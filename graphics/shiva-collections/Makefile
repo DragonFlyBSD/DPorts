@@ -2,7 +2,7 @@
 # Date created:				26 February 2011
 # Whom:					Alberto Villa <avilla@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/shiva-collections/Makefile,v 1.3 2012/11/17 05:58:23 svnexp Exp $
+# $FreeBSD: graphics/shiva-collections/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	shiva-collections
@@ -14,7 +14,7 @@ MAINTAINER=	avilla@FreeBSD.org
 COMMENT=	Collection of kernels for OpenGTL
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 NO_BUILD=	yes
 
 .include <bsd.port.mk>
