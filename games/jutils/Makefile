@@ -2,7 +2,7 @@
 # Date created:                        Mar 25 2012
 # Whom:                                loader <loader@freebsdmall.com>
 #
-# $FreeBSD: ports/games/jutils/Makefile,v 1.3 2012/12/10 16:37:21 svnexp Exp $
+# $FreeBSD: games/jutils/Makefile 313987 2013-03-12 17:16:37Z sunpoet $
 #
 
 PORTNAME=	jutils
@@ -10,7 +10,7 @@ PORTVERSION=	20070610.r26
 CATEGORIES=	games java
 MASTER_SITES=	LOCAL/loader
 
-MAINTAINER=	ports@freebsd.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Common utilities for Java Game Technology Group projects
 
 USE_BZIP2=	yes
