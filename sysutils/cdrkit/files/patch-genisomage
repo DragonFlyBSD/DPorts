@@ -1,4 +1,4 @@
-$FreeBSD: ports/sysutils/cdrkit/files/patch-genisomage,v 1.1 2012/08/24 09:14:01 pav Exp $
+$FreeBSD$
 
 Use <sys/endian.h> instead of the linux-ish <endian.h>
 
