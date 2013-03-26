@@ -2,7 +2,7 @@
 # Date created:				07 January 2007
 # Whom:					Yuri Victorovich <yuri@tsoft.com>
 #
-# $FreeBSD: ports/devel/google-perftools/Makefile,v 1.18 2012/11/17 05:55:46 svnexp Exp $
+# $FreeBSD: devel/google-perftools/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	google-perftools
@@ -22,7 +22,7 @@ MAN1=		pprof.1
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 post-patch:
 .if defined(NOPORTDOCS)
