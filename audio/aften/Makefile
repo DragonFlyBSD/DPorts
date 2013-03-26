@@ -1,5 +1,5 @@
 # Created by: Gabor Zahemszky <Gabor@Zahemszky.HU>
-# $FreeBSD: ports/audio/aften/Makefile,v 1.3 2012/11/17 05:54:27 svnexp Exp $
+# $FreeBSD: audio/aften/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	aften
 PORTVERSION=	0.0.8
@@ -11,12 +11,7 @@ COMMENT=	ATSC A/52 audio encoder
 
 USE_BZIP2=	yes
 
-BUILDDIR=	${WRKSRC}/portbuild
-BUILD_WRKSRC=	${BUILDDIR}
-INSTALL_WRKSRC=	${BUILDDIR}
-
-USE_CMAKE=	yes
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"
+USES=		cmake:outsource
 
 OPTIONS_DEFINE=		SHARED_LIB CXX_BINDINGS DOUBLE
 OPTIONS_DEFAULT=	
@@ -49,9 +44,5 @@ PLIST_SUB+=	LIBS="@comment "
 .if ${PORT_OPTIONS:MDOUBLE}
 CMAKE_ARGS+=	-DDOUBLE:BOOL=ON
 .endif
-
-do-configure:
-	@${MKDIR} ${BUILDDIR}
-	@cd ${BUILDDIR}; ${SETENV} ${CMAKE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} ..
 
 .include <bsd.port.mk>

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/audio/aften/pkg-plist,v 1.2 2012/11/17 05:54:27 svnexp Exp $
+@comment $FreeBSD: audio/aften/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/aften
 bin/wavfilter
 bin/wavinfo
