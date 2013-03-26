@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xkbutils/Makefile,v 1.7 2013/02/14 13:10:01 svnexp Exp $
+# $FreeBSD: x11/xkbutils/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	xkbutils
 PORTVERSION=	1.0.4
@@ -10,9 +10,7 @@ COMMENT=	XKB utility demos
 LICENSE=	MIT
 
 XORG_CAT=	app
-USE_XORG=	xkbfile x11 xaw inputproto
-
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
+USE_XORG=	xkbfile x11 xaw inputproto xorg-macros
 
 MAN1=		xkbbell.1 xkbvleds.1 xkbwatch.1
 
