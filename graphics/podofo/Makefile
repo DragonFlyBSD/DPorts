@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: ports/graphics/podofo/Makefile,v 1.12 2013/02/24 00:48:55 svnexp Exp $
+# $FreeBSD: graphics/podofo/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	podofo
 PORTVERSION=	0.9.2
@@ -20,7 +20,7 @@ OPTIONS_DEFINE=	JPEG TIFF PNG IMPOSE
 OPTIONS_DEFAULT=	JPEG TIFF PNG
 IMPOSE_DESC=	Build impose tool (needs Lua)
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DPODOFO_BUILD_SHARED:BOOL=TRUE \
 		-DPODOFO_BUILD_STATIC:BOOL=FALSE \
 		-DOPENSSL_INCLUDE_DIR:PATH="${OPENSSLINC}" \
