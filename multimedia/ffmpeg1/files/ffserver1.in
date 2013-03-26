@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/multimedia/ffmpeg1/files/ffserver1.in,v 1.2 2012/11/17 05:59:48 svnexp Exp $
+# $FreeBSD: multimedia/ffmpeg1/files/ffserver1.in 305892 2012-10-14 20:30:00Z mm $
 #
 
 # PROVIDE: ffserver-head
