@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/devel/avro-cpp/Makefile,v 1.2 2013/01/31 14:01:26 svnexp Exp $
+# $FreeBSD: devel/avro-cpp/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	avro
 PORTVERSION=	1.7.3
@@ -15,7 +15,7 @@ COMMENT=	Data serialization system for C++
 
 LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 
