@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/colord/Makefile 313859 2013-03-11 08:23:46Z kwm $
+# $FreeBSD: graphics/colord/Makefile 314380 2013-03-16 17:36:53Z kwm $
 #    $MCom: ports/graphics/colord/Makefile,v 1.10 2012/12/17 23:50:40 kwm Exp $
 
 PORTNAME=	colord
@@ -57,7 +57,7 @@ post-patch:
 		-e 's|-Wmissing-parameter-type||g' \
 		-e 's|LIBS="-lusb-1.0|LIBS="-lusb|g' \
 		${WRKSRC}/configure
-.if !{PORT_OPTIONS:MMANPAGES}
+.if !${PORT_OPTIONS:MMANPAGES}
 	@${REINPLACE_CMD} -e "s|2MAN_TRUE=$$|2MAN_TRUE='#'|g ; \
 		s|2MAN_FALSE='#'|2MAN_FALSE=|g" ${WRKSRC}/configure
 .endif
