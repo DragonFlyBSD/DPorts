@@ -1,5 +1,5 @@
 # Created by: Matt Tosto <datahead4@gmail.com>
-# $FreeBSD: audio/liblastfm/Makefile 313589 2013-03-07 14:10:26Z nivit $
+# $FreeBSD: audio/liblastfm/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	liblastfm
 PORTVERSION=	1.0.6
@@ -27,7 +27,7 @@ FINGERPRINT_DESC=	Build the lastfm-fingerprint library
 TESTS_DESC=		Build liblastfm tests
 OPTIONS_DEFAULT=	FINGERPRINT
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
