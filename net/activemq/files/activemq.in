@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/activemq/files/activemq.in,v 1.5 2012/11/17 05:59:56 svnexp Exp $
+# $FreeBSD: net/activemq/files/activemq.in 306442 2012-10-26 14:07:37Z tj $
 #
 
 # PROVIDE: activemq

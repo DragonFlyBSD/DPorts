@@ -1,5 +1,4 @@
-# $FreeBSD: ports/net/activemq/Makefile,v 1.9 2012/12/09 00:31:45 svnexp Exp $
-#
+# $FreeBSD: net/activemq/Makefile 314460 2013-03-17 16:44:03Z eadler $
 
 PORTNAME=	activemq
 PORTVERSION=	5.7.0
@@ -9,7 +8,7 @@ MASTER_SITES=	http://www.sai.msu.su/apache/${MASTER_SITE_SUBDIR}/ \
 MASTER_SITE_SUBDIR=${PORTNAME}/apache-${PORTNAME}/${PORTVERSION}
 DISTNAME=	apache-${PORTNAME}-${PORTVERSION}-bin
 
-MAINTAINER=	tj@freebsd.org
+MAINTAINER=	tj@FreeBSD.org
 COMMENT=	Messaging and Integration Patterns provider
 
 NO_BUILD=	yes

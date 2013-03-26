@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/net/activemq/files/pkg-deinstall.in,v 1.2 2012/11/17 05:59:56 svnexp Exp $
+# $FreeBSD: net/activemq/files/pkg-deinstall.in 300897 2012-07-14 14:29:18Z beat $
 
 ETCDIR=%%ETCDIR%%
 ETC_FILES="%%ETC_FILES%%"
