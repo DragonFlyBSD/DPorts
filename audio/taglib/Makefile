@@ -2,7 +2,7 @@
 # Date Created:				06 Nov 2003
 # Whom:				 	Frank Laszlo <laszlof@vonostingroup.com>
 #
-# $FreeBSD: ports/audio/taglib/Makefile,v 1.30 2012/11/17 05:54:45 svnexp Exp $
+# $FreeBSD: audio/taglib/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	taglib
@@ -22,7 +22,7 @@ OPTIONS_DEFINE=	RCC
 
 RCC_DESC=	Build with RusXMMS librcc patches (experimental)
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DWITH_ASF:BOOL=ON \
 		-DWITH_MP4:BOOL=ON
 MAKE_JOBS_SAFE=	yes
