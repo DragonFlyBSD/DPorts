@@ -1,5 +1,5 @@
 # Created by: Tim Cas <ports@stdrand.com>
-# $FreeBSD: ports/devel/ChipmunkPhysics/Makefile,v 1.2 2013/01/20 13:51:23 svnexp Exp $
+# $FreeBSD: devel/ChipmunkPhysics/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	ChipmunkPhysics
 PORTVERSION=	6.1.3
@@ -15,7 +15,7 @@ COMMENT=	2D physics engine written in C
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DBUILD_DEMOS=OFF
 MAKE_JOBS_SAFE=	yes
 
