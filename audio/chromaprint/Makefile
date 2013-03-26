@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/chromaprint/Makefile,v 1.2 2012/11/17 05:54:29 svnexp Exp $
+# $FreeBSD: audio/chromaprint/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	chromaprint
 PORTVERSION=	0.7
@@ -12,7 +12,7 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	avcodec:${PORTSDIR}/multimedia/ffmpeg
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
