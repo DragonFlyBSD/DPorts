@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: ports/net-p2p/eiskaltdcpp-lib/Makefile,v 1.9 2013/01/31 14:01:31 svnexp Exp $
+# $FreeBSD: net-p2p/eiskaltdcpp-lib/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	eiskaltdcpp-lib
 PORTVERSION=	2.2.4
@@ -20,7 +20,7 @@ PROJECTHOST=	eiskaltdc
 
 USE_XZ=		yes
 USE_GCC=	4.6+
-USE_CMAKE=	yes
+USES=		cmake
 USE_GETTEXT=	yes
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
