@@ -5,7 +5,7 @@
 # Whom:			Greg Larkin <glarkin@FreeBSD.org>
 # Copied From Whom:	Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/www/foswiki/bsd.foswiki.mk,v 1.3 2012/11/17 06:02:33 svnexp Exp $
+# $FreeBSD: www/foswiki/bsd.foswiki.mk 300897 2012-07-14 14:29:18Z beat $
 #
 
 #
