@@ -1,10 +1,11 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-Riak/Makefile 313178 2013-03-02 02:01:05Z tobez $
+# $FreeBSD: net/p5-Net-Riak/Makefile 314733 2013-03-20 13:26:41Z tobez $
 
 PORTNAME=	Net-Riak
-PORTVERSION=	0.17.01
+PORTVERSION=	0.17.02
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:RGE
 PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
@@ -44,6 +45,7 @@ MAN3=		Net::Riak.3 \
 		Net::Riak::Role::PBC::Link.3 \
 		Net::Riak::Role::PBC::MapReduce.3 \
 		Net::Riak::Role::PBC::Message.3 \
+		Net::Riak::Role::PBC::Meta.3 \
 		Net::Riak::Role::PBC::Object.3 \
 		Net::Riak::Role::REST.3 \
 		Net::Riak::Role::REST::Bucket.3 \
