@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Devel-ebug
-# Date created:		2007-05-02
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Devel-ebug/Makefile,v 1.6 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Devel-ebug/Makefile 314721 2013-03-20 09:37:56Z tobez $
 
 PORTNAME=	Devel-ebug
-PORTVERSION=	0.53
+PORTVERSION=	0.55
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Devel
