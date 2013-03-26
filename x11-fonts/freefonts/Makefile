@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: ports/x11-fonts/freefonts/Makefile,v 1.25 2013/02/18 14:40:13 svnexp Exp $
+# $FreeBSD: x11-fonts/freefonts/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	freefonts
 PORTVERSION=	0.10
@@ -16,7 +16,7 @@ COMMENT=	A collection of ATM fonts (not all free) from the CICA archives
 
 BUILD_DEPENDS=	type1inst:${PORTSDIR}/x11-fonts/p5-type1inst
 
-RESTRICTED=	"see accompanying .license files"
+RESTRICTED=	see accompanying .license files
 NO_WRKSUBDIR=	yes
 
 do-build:
