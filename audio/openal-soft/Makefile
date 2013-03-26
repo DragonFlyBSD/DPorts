@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/openal-soft/Makefile,v 1.20 2012/12/19 07:58:11 svnexp Exp $
+# $FreeBSD: audio/openal-soft/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	openal-soft
 PORTVERSION=	1.15.1
@@ -11,7 +11,7 @@ COMMENT=	A software implementation of the OpenAL specification
 CONFLICTS=	openal-200[0-9]*
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 CMAKE_ARGS+=	-DALSA:BOOL=OFF -DPORTAUDIO:BOOL=OFF -DSOLARIS:BOOL=OFF \
 		-DDSOUND:BOOL=OFF -DSNDIO:BOOL=OFF -DEXAMPLES:BOOL=OFF \
