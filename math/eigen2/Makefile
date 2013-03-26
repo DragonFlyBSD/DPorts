@@ -2,7 +2,7 @@
 # Date created:				2008-01-18
 # Whom:					arved
 #
-# $FreeBSD: ports/math/eigen2/Makefile,v 1.19 2012/11/17 05:59:20 svnexp Exp $
+# $FreeBSD: math/eigen2/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	eigen
 PORTVERSION=	2.0.17
@@ -16,7 +16,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Lightweight library for vector and matrix math
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 
 LATEST_LINK=	${PORTNAME}2
 
