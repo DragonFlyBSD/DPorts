@@ -1,10 +1,5 @@
-# New ports collection Makefile for:	cmake-modules
-# Date created:				12 July 2012
-# Whom:					gahr
-#
-# $FreeBSD: ports/devel/cmake-modules/Makefile,v 1.2 2012/11/17 05:55:38 svnexp Exp $
-#
-#
+# Created by: gahr
+# $FreeBSD: devel/cmake-modules/Makefile 314670 2013-03-19 18:00:29Z makc $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-modules
