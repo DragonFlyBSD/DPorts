@@ -2,7 +2,7 @@
 # Date created:		2007-01-12
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: ports/audio/dssi/Makefile,v 1.14 2012/11/17 05:54:30 svnexp Exp $
+# $FreeBSD: audio/dssi/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	dssi
@@ -26,7 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 
 OPTIONS_DEFINE=	QT4
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GMAKE=	yes
 USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
