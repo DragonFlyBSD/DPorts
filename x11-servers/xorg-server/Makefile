@@ -2,7 +2,7 @@
 # Date created:		7 May 2004
 # Whom:			anholt@FreeBSD.org
 #
-# $FreeBSD: ports/x11-servers/xorg-server/Makefile,v 1.96 2013/02/02 22:43:46 svnexp Exp $
+# $FreeBSD: x11-servers/xorg-server/Makefile 313929 2013-03-11 19:14:28Z zeising $
 #
 
 PORTNAME?=	xorg-server
@@ -48,7 +48,8 @@ USE_XORG?=	xf86driproto glproto xdmcp x11 xkbfile xxf86misc xxf86vm xaw7 \
 		xf86vidmodeproto xf86bigfontproto scrnsaverproto bigreqsproto \
 		resourceproto fontsproto inputproto xf86dgaproto \
 		videoproto compositeproto trapproto recordproto xineramaproto \
-		xinerama evieproto xfont fontenc xkbui pixman pciaccess
+		xinerama evieproto xfont fontenc xkbui pixman pciaccess \
+		xorg-macros
 
 MAKE_JOBS_UNSAFE=	yes
 USE_OPENSSL=	yes
