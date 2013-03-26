@@ -2,7 +2,7 @@
 # Date created:				08 March 2006
 # Whom:					Oliver Lehmann <oliver@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/freealut/Makefile,v 1.11 2012/11/17 05:54:32 svnexp Exp $
+# $FreeBSD: audio/freealut/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	freealut
