@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/net-im/libmsn/Makefile,v 1.25 2013/02/08 10:54:51 svnexp Exp $
+# $FreeBSD: net-im/libmsn/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	libmsn
 DISTVERSION=	4.2.1
@@ -12,7 +12,7 @@ COMMENT=	A library for connecting to MSN Messenger service
 LICENSE=	GPLv2
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
