@@ -1,5 +1,5 @@
 # Created by: will@cvs.kde.org
-# $FreeBSD: ports/audio/arts/Makefile,v 1.80 2012/12/30 18:55:37 svnexp Exp $
+# $FreeBSD: audio/arts/Makefile 315130 2013-03-24 15:51:03Z bdrewery $
 
 PORTNAME=	arts
 PORTVERSION=	1.5.10
@@ -44,11 +44,11 @@ USE_ICONV=	yes
 USE_XORG=	ice sm x11 xau xcursor xdmcp xext xfixes xft xi \
 		xinerama xrandr xrender xt
 USE_LDCONFIG=	yes
+USE_PKGCONFIG=	build
 QTCPPFLAGS+=	-L${LOCALBASE}/lib
 DO_NOT_COMPILE+=gmcop
 _NO_KDE_FINAL=	yes
 USE_PERL5_BUILD=yes
-USE_PKGCONFIG=	build
 
 CFLAGS+=	-DHAVE_VASPRINTF
 CONFIGURE_ENV+=	DO_NOT_COMPILE="${DO_NOT_COMPILE}"
