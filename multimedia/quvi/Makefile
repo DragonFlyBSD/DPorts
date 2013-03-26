@@ -1,12 +1,9 @@
-# New ports collection makefile for:	quvi
-# Date created:		2 February 2010
-# Whom:			Toni Gundogdu <legatvs@gmail.com>
-#
-# $FreeBSD: ports/multimedia/quvi/Makefile,v 1.27 2012/11/17 05:59:53 svnexp Exp $
-#
+# Created by: Toni Gundogdu <legatvs@gmail.com>
+# $FreeBSD: multimedia/quvi/Makefile 314545 2013-03-18 09:40:20Z bapt $
 
 PORTNAME=	quvi
 PORTVERSION=	0.4.2
+PORTREVISION=	1
 CATEGORIES=	multimedia devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION:R}/${PORTNAME}/ \
 		GOOGLE_CODE
@@ -17,12 +14,12 @@ COMMENT=	Command line tool for parsing flash media stream URLs
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	libquvi>=0.4.0:${PORTSDIR}/multimedia/libquvi
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 RUN_DEPENDS=	libquvi>=0.4.0:${PORTSDIR}/multimedia/libquvi
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig
 USE_XZ=		yes
+USE_PKGCONFIG=	build
 
 MAN1=		quvi.1
 PLIST_FILES=	bin/quvi
