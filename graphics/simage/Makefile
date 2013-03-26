@@ -2,7 +2,7 @@
 # Date created:				10 May 2002
 # Whom:					roland.jesse@gmx.net
 #
-# $FreeBSD: ports/graphics/simage/Makefile,v 1.32 2012/11/17 05:58:23 svnexp Exp $
+# $FreeBSD: graphics/simage/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	simage
@@ -21,7 +21,7 @@ LIB_DEPENDS=	sndfile.1:${PORTSDIR}/audio/libsndfile \
 		gif.5:${PORTSDIR}/graphics/giflib \
 		png15:${PORTSDIR}/graphics/png
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-mpeg2enc
 USE_LDCONFIG=	yes
