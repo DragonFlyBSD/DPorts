@@ -2,7 +2,7 @@
 # Date Created:				15 Feb 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/libXScrnSaver/Makefile,v 1.7 2012/11/17 06:03:17 svnexp Exp $
+# $FreeBSD: x11/libXScrnSaver/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	libXScrnSaver
