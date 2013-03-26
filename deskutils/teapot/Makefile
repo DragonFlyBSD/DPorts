@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ports/deskutils/teapot/Makefile,v 1.35 2013/01/03 00:50:07 svnexp Exp $
+# $FreeBSD: deskutils/teapot/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	teapot
 PORTVERSION=	2.3.0
@@ -15,7 +15,7 @@ COMMENT=	Full-screen curses based spread sheet program
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_CMAKE=	yes
+USES=		cmake
 
 NO_MANCOMPRESS=	no
 MAN1=	teapot.1
