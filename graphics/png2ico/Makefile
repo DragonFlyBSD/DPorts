@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: ports/graphics/png2ico/Makefile,v 1.12 2012/11/17 05:58:19 svnexp Exp $
+# $FreeBSD: graphics/png2ico/Makefile 314864 2013-03-21 19:08:10Z beech $
 
 PORTNAME=	png2ico
 PORTVERSION=	2002.12.08
@@ -11,6 +11,8 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION:S/./-/g}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Converts PNG files to Windows icon resource files
 
+LICENSE=	GPLv2
+
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
 MAN1=		png2ico.1
@@ -19,12 +21,15 @@ PORTDOCS=	bmp.txt
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/png2ico.1 ${PREFIX}/man/man1/
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/bmp.txt ${DOCSDIR}/
+	${INSTALL_MAN} ${WRKSRC}/doc/${MAN1} ${MAN1PREFIX}/man/man1
+
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/|} ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
