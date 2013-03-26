@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/smokegen/Makefile,v 1.1 2013/02/04 01:03:50 svnexp Exp $
+# $FreeBSD: devel/smokegen/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	smokegen
 PORTVERSION=	${KDE4_VERSION}
@@ -15,7 +15,7 @@ CONFLICTS=	kdebindings-smoke-4.[0-6].*
 USE_KDE4=	kdehier kdeprefix
 USE_QT4=	xml qmake_build moc_build uic_build rcc_build
 USE_XZ=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DSMOKE_CMAKE_MODULE_DIR:PATH=${PREFIX}/lib/cmake/smoke
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
