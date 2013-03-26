@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: ports/graphics/cairo/Makefile,v 1.65 2013/01/16 11:43:57 svnexp Exp $
+# $FreeBSD: graphics/cairo/Makefile 314662 2013-03-19 16:15:33Z mezz $
 #   $MCom: ports/graphics/cairo/Makefile,v 1.101 2010/10/29 15:40:04 kwm Exp $
 
 PORTNAME=	cairo
@@ -8,7 +8,6 @@ PORTREVISION=	5
 PORTEPOCH?=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
-#MASTER_SITES=	http://cairographics.org/snapshots/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Vector graphics library with cross-device output support
@@ -22,9 +21,9 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 
 CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR} \
 		--disable-directfb \
-		--enable-tee \
-		--enable-gobject
-USE_GNOME=	gnomehack ltverhack referencehack
+		--enable-tee
+USES=		pathfix
+USE_GNOME=	ltverhack referencehack
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
