@@ -2,7 +2,7 @@
 # Date created:				15 May 2012
 # Whom:					krichy
 #
-# $FreeBSD: ports/devel/libjson++/Makefile,v 1.3 2012/11/17 05:55:55 svnexp Exp $
+# $FreeBSD: devel/libjson++/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	libjson++
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://ftp.cflinux.hu/pub/
 MAINTAINER=	krichy@tvnetwork.hu
 COMMENT=	Small C++ library to handle JSON serialized data
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
