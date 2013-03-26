@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/games/frikqcc/files/Makefile,v 1.3 2012/11/17 05:57:39 svnexp Exp $
+# $FreeBSD: games/frikqcc/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 CFLAGS+=	-DINLINE
 
