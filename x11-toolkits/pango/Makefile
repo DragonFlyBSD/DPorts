@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/pango/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: x11-toolkits/pango/Makefile 314665 2013-03-19 16:27:59Z mezz $
 #   $MCom: ports/x11-toolkits/pango/Makefile,v 1.167 2012/06/06 21:18:48 kwm Exp $
 
 PORTNAME=	pango
@@ -51,6 +51,12 @@ PLIST_SUB+=		X11=""
 .else
 CONFIGURE_ARGS+=	--with-x=no
 PLIST_SUB+=		X11="@comment "
+.endif
+
+pre-configure:
+.if !exists(${LOCALBASE}/libdata/pkgconfig/cairo-gobject.pc)
+	@${ECHO_CMD} "${PKGNAME}: Needs cairo with GLIB (GObject) support enabled."
+	@${FALSE}
 .endif
 
 .include <bsd.port.mk>
