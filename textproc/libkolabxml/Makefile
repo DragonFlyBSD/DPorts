@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: ports/textproc/libkolabxml/Makefile,v 1.1 2013/02/04 03:34:09 svnexp Exp $
+# $FreeBSD: textproc/libkolabxml/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	libkolabxml
 PORTVERSION=	0.8.1
@@ -27,7 +27,7 @@ CMAKE_ARGS=	-DBUILD_TESTS:BOOL=OFF \
 		-DPHP_BINDINGS:BOOL=OFF \
 		-DPYTHON_BINDINGS:BOOL=OFF
 MAKE_JOBS_SAFE=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
