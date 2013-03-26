@@ -2,7 +2,7 @@
 # Date created:				2012-06-09
 # Whom:					Max Brazhnikov <makc@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/libjreen/Makefile,v 1.3 2012/11/17 06:00:27 svnexp Exp $
+# $FreeBSD: net-im/libjreen/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	libjreen
@@ -20,7 +20,7 @@ LIB_DEPENDS=	qca.2:${PORTSDIR}/devel/qca \
 
 USE_BZIP2=	yes
 USE_QT4=	network moc_build qmake_build rcc_build uic_build
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
