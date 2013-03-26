@@ -1,5 +1,5 @@
 # Created by: Rob Farmer <rfarmer@predatorlabs.net>
-# $FreeBSD: graphics/tumble/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: graphics/tumble/Makefile 313856 2013-03-11 06:59:19Z bapt $
 
 PORTNAME=	tumble
 PORTVERSION=	0.33
@@ -17,7 +17,6 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
 
 USE_GMAKE=	yes
 USES=		bison
-USE_BISON=	build
 
 MAKE_JOBS_SAFE=	yes
 
