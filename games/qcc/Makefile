@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qcc
-# Date created:				October 25th 1996
-# Whom:					James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: ports/games/qcc/Makefile,v 1.20 2012/11/17 05:57:50 svnexp Exp $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: games/qcc/Makefile 314461 2013-03-17 16:44:33Z danfe $
 
 PORTNAME=	qcc
 PORTVERSION=	1.01
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	source
 DISTNAME=	${PORTNAME}
 
 MAINTAINER=	danfe@FreeBSD.org
-COMMENT=	The QuakeC compiler, for building custom games of Quake
+COMMENT=	QuakeC compiler, for building custom games of Quake
 
 LICENSE=	GPLv2
 
@@ -23,13 +19,17 @@ MAKEFILE=	makefile
 PLIST_FILES=	bin/qcc
 PORTDOCS=	readme.txt
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-extract:
 	@${REINPLACE_CMD} -E '/^CFLAGS/d; s/cc( -c)? \$$\(C/$$(CC)\1 \$$\(C/' \
 		${WRKSRC}/${MAKEFILE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DOCSDIR}
 .endif
