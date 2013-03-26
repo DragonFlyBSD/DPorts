@@ -2,7 +2,7 @@
 # Date created:		2008-11-13
 # Whom:			TAKATSU Tomonari <tota@rtfm.jp>
 #
-# $FreeBSD: ports/devel/silentbob/Makefile,v 1.11 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: devel/silentbob/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	silentbob
@@ -13,7 +13,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}2/${PORTNAME}-2.4/
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Yet another sourcecode indexing tool
 
-USE_CMAKE=	yes
+USES=		cmake
 
 LICENSE=	GPLv1
 LICENSE_FILE=	${WRKSRC}/COPYING
