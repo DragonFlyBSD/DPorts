@@ -1,11 +1,10 @@
 # Created by: Leo Vandewoestijne <freebsd@dns-lab.com>
-# $FreeBSD: ports/dns/dnscrypt-proxy/Makefile,v 1.5 2013/01/02 21:42:00 svnexp Exp $
+# $FreeBSD: dns/dnscrypt-proxy/Makefile 314126 2013-03-14 01:50:38Z beech $
 
 PORTNAME=	dnscrypt-proxy
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.1
 CATEGORIES=	dns
-MASTER_SITES=	http://cloud.github.com/downloads/opendns/dnscrypt-proxy/ \
-		http://www.dns-lab.com/downloads/dnscrypt-proxy/
+MASTER_SITES=	http://download.dnscrypt.org/dnscrypt-proxy/
 
 MAINTAINER=	freebsd@dns-lab.com
 COMMENT=	Boost privacy and security of DNS
