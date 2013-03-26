@@ -1,4 +1,4 @@
-# $FreeBSD: irc/weechat-devel/Makefile 313156 2013-03-01 15:51:57Z jase $
+# $FreeBSD: irc/weechat-devel/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	weechat
 PORTVERSION=	20130301
@@ -19,7 +19,7 @@ CONFLICTS=	weechat-0.3*
 USE_ICONV=	yes
 USE_LDCONFIG=	yes
 USE_NCURSES=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DENABLE_GUILE=no
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 WANT_PERL=	yes
