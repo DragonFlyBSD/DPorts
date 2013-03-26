@@ -2,7 +2,7 @@
 # Date created:		16 Jan 2004
 # Whom:			Igor Pokrovsky <tiamat@comset.net>
 #
-# $FreeBSD: ports/graphics/ftgl/Makefile,v 1.20 2012/11/17 05:58:06 svnexp Exp $
+# $FreeBSD: graphics/ftgl/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	ftgl
@@ -22,7 +22,7 @@ USE_XORG=	x11 xext xmu
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gl-inc="${LOCALBASE}/include" \
 		--without-glut-inc
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
