@@ -2,7 +2,7 @@
 # Date created:		26 March 2003
 # Whom:			Kevin Lo <kevlo@FreeBSD.org>
 #
-# $FreeBSD: sysutils/synergy/Makefile 313088 2013-02-28 10:51:58Z gahr $
+# $FreeBSD: sysutils/synergy/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	synergy
@@ -14,7 +14,7 @@ MASTER_SITES=	GOOGLE_CODE
 MAINTAINER=	kevlo@FreeBSD.org
 COMMENT=	Mouse and keyboard sharing utility
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_XORG=	ice xtst x11 sm
 
 CFLAGS+=	-L${LOCALBASE}/lib -I${LOCALBASE}/include
