@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/textproc/ebook-tools/Makefile,v 1.8 2012/12/03 22:48:17 svnexp Exp $
+# $FreeBSD: textproc/ebook-tools/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	ebook-tools
 PORTVERSION=	0.2.2
@@ -11,7 +11,7 @@ COMMENT=	Accesses and converts various ebook file formats
 
 LIB_DEPENDS=	zip:${PORTSDIR}/archivers/libzip
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 USE_GNOME=	libxml2
 
