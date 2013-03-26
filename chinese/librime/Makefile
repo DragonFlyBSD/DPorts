@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: ports/chinese/librime/Makefile,v 1.4 2013/02/04 07:46:59 svnexp Exp $
+# $FreeBSD: chinese/librime/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	librime
 PORTVERSION=	0.9.7
@@ -18,7 +18,7 @@ LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs \
 		opencc:${PORTSDIR}/chinese/opencc \
 		yaml-cpp:${PORTSDIR}/devel/yaml-cpp
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_GETTEXT=	yes
 USE_PKGCONFIG=	yes
 USE_LDCONFIG=	yes
