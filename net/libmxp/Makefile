@@ -2,7 +2,7 @@
 # Date created:		2007-02-25
 # Whom:			Michael Nottebrock <lofi@kiste>
 #
-# $FreeBSD: ports/net/libmxp/Makefile,v 1.8 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/libmxp/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	libmxp
@@ -13,7 +13,7 @@ MASTER_SITES=	http://www.kmuddy.com/libmxp/files/
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Parser for the MUD eXtension protocol
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 
 post-patch:
