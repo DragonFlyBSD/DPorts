@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/e16/Makefile 313571 2013-03-07 09:48:38Z gahr $
+# $FreeBSD: x11-wm/e16/Makefile 314720 2013-03-20 09:31:25Z gahr $
 
 PORTNAME=	e16
 PORTVERSION=	1.0.11.002
@@ -22,7 +22,6 @@ USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--disable-rpath --enable-mans SHELL=/bin/sh
-CFLAGS+=	-g -O0
 
 .include <bsd.port.options.mk>
 
@@ -50,12 +49,13 @@ MAN1=		e16.1
 CONFIGURE_ARGS+=--enable-docs=yes
 .else
 CONFIGURE_ARGS+=--enable-docs=no
-post-patch:
-	${REINPLACE_CMD} -e '/^SUBDIRS/s|docs ||' \
-	    ${WRKSRC}/Makefile.am ${WRKSRC}/Makefile.in
 .endif
 
 post-patch:
+.if !${PORT_OPTIONS:MDOCS}
+	${REINPLACE_CMD} -e '/^SUBDIRS/s|docs ||' \
+	    ${WRKSRC}/Makefile.am ${WRKSRC}/Makefile.in
+.endif
 	${REINPLACE_CMD} -e 's|$$(USER)|${SHAREOWN}:${SHAREGRP}|g' \
 	    ${WRKSRC}/themes/Makefile.am ${WRKSRC}/themes/Makefile.in
 
