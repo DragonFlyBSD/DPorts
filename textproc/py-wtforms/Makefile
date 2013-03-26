@@ -1,5 +1,5 @@
 # Created by: Moggie <moggie@elasticmind.net>
-# $FreeBSD: ports/textproc/py-wtforms/Makefile,v 1.3 2013/02/06 07:41:39 svnexp Exp $
+# $FreeBSD: textproc/py-wtforms/Makefile 311744 2013-02-06 06:47:41Z culot $
 
 PORTNAME=	WTForms
 PORTVERSION=	1.0.3
