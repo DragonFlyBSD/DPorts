@@ -2,7 +2,7 @@
 # Date created:				2011/02/14
 # Whom:					chinsan
 #
-# $FreeBSD: ports/textproc/p5-HTML-QRCode/Makefile,v 1.4 2012/11/17 06:02:04 svnexp Exp $
+# $FreeBSD: textproc/p5-HTML-QRCode/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	HTML-QRCode
