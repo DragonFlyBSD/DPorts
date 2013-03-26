@@ -2,7 +2,7 @@
 # Date created:				2009-12-26
 # Whom:			Timothy Beyer <beyert@cs.ucr.edu>
 #
-# $FreeBSD: ports/audio/arss/Makefile,v 1.3 2012/11/17 05:54:28 svnexp Exp $
+# $FreeBSD: audio/arss/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	arss
@@ -19,7 +19,7 @@ LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/src
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	${PREFIX}/lib
 CFLAGS+=	-L${LOCALBASE}/lib -I${LOCALBASE}/include
 CMAKE_C_FLAGS=	${CFLAGS}
