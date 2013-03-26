@@ -1,5 +1,5 @@
 # Created by: Brian Handy <handy@physics.montana.edu>
-# $FreeBSD: x11-wm/windowmaker/Makefile 313478 2013-03-05 20:23:57Z hrs $
+# $FreeBSD: x11-wm/windowmaker/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME?=	windowmaker
 PORTVERSION=	0.95.4
@@ -27,7 +27,7 @@ OPTIONS_DEFINE=	NLS XRANDR
 
 USE_GCC=	any
 USE_XORG=	xft xinerama xmu xpm
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-pixmapdir=${PREFIX}/include/X11/pixmaps \
