@@ -2,7 +2,7 @@
 # Date created:				2005-10-03
 # Whom:					Tobias Gion <freebsd@gionet.de>
 #
-# $FreeBSD: ports/devel/guichan/Makefile,v 1.31 2013/02/14 10:22:08 svnexp Exp $
+# $FreeBSD: devel/guichan/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	guichan
@@ -18,7 +18,7 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
