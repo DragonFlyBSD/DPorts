@@ -1,17 +1,13 @@
-# New ports collection makefile for:    cmake
-# Date created:         March 18 2002
-# Whom:                 Kyle Martin <mkm@ieee.org>
-#
-# $FreeBSD: ports/devel/cmake/Makefile,v 1.56 2012/11/17 05:55:38 svnexp Exp $
-#
+# Created by: Kyle Martin <mkm@ieee.org>
+# $FreeBSD: devel/cmake/Makefile 314669 2013-03-19 18:00:07Z makc $
 
 PORTNAME=	cmake
-PORTVERSION=	2.8.9
+PORTVERSION=	2.8.10.2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.${PORTNAME}.org/files/v${PORTVERSION:C/\.[[:digit:]]+$//}/
+MASTER_SITES=	http://www.cmake.org/files/v2.8/
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT?=	A cross-platform Makefile generator
+COMMENT?=	Cross-platform Makefile generator
 
 LICENSE=	BSD
 
