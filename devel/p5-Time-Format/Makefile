@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-Time-Format
-# Date created:				18 November 2009
-# Whom:					Sergey V. Dyatko <Sergey.Dyatko@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-Time-Format/Makefile,v 1.3 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Sergey V. Dyatko <Sergey.Dyatko@gmail.com>
+# $FreeBSD: devel/p5-Time-Format/Makefile 314892 2013-03-22 05:31:12Z culot $
 
 PORTNAME=	Time-Format
-PORTVERSION=	1.11
+PORTVERSION=	1.12
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
