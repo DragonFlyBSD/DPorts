@@ -2,7 +2,7 @@
 # Date created:			Nov 04, 2005
 # Whom:				Clemens Zauner <czauner+ports@onlineloop.com>
 #
-# $FreeBSD: ports/textproc/wbxml2/Makefile,v 1.22 2012/11/17 06:02:24 svnexp Exp $
+# $FreeBSD: textproc/wbxml2/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	wbxml2
@@ -23,7 +23,7 @@ BUILD_WRKSRC=		${CONFIGURE_WRKSRC}
 INSTALL_WRKSRC=		${CONFIGURE_WRKSRC}
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_SOURCE_PATH=	..
 USE_LDCONFIG=	yes
 
