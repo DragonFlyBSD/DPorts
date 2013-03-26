@@ -1,8 +1,8 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: ports/devel/p5-Data-Rx/Makefile,v 1.4 2013/01/31 09:55:50 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Rx/Makefile 313880 2013-03-11 12:51:28Z tobez $
 
 PORTNAME=	Data-Rx
-PORTVERSION=	0.200002
+PORTVERSION=	0.200003
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,7 +14,9 @@ BUILD_DEPENDS=	p5-File-Find-Rule>=0:${PORTSDIR}/devel/p5-File-Find-Rule \
 		p5-JSON>=2:${PORTSDIR}/converters/p5-JSON \
 		p5-Number-Tolerant>=0:${PORTSDIR}/devel/p5-Number-Tolerant
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
+TEST_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter \
+		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
+		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
 
 PERL_CONFIGURE=	yes
 
