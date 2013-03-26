@@ -1,8 +1,8 @@
 # Created by: gugabsd <gugabsd@mundounix.com.br>
-# $FreeBSD: www/py-rhodecode/Makefile 313568 2013-03-07 08:00:10Z culot $
+# $FreeBSD: www/py-rhodecode/Makefile 313915 2013-03-11 16:03:40Z culot $
 
 PORTNAME=	rhodecode
-PORTVERSION=	1.5.3
+PORTVERSION=	1.5.4
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
