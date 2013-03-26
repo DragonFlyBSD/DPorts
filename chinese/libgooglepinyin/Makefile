@@ -2,7 +2,7 @@
 # Date created:				11 Nov 2011
 # Whom:			Zhihao Yuan <lichray@gmail.com>
 #
-# $FreeBSD: ports/chinese/libgooglepinyin/Makefile,v 1.3 2012/11/17 05:54:57 svnexp Exp $
+# $FreeBSD: chinese/libgooglepinyin/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	libgooglepinyin
@@ -15,6 +15,6 @@ COMMENT=	A fork of Google Pinyin IME on Android
 
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USE_CMAKE=	yes
+USES=		cmake
 
 .include <bsd.port.mk>
