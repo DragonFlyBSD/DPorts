@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/ksysguardd/Makefile,v 1.7 2013/02/04 01:04:39 svnexp Exp $
+# $FreeBSD: sysutils/ksysguardd/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	ksysguardd
 PORTVERSION=	${KDE4_VERSION}
@@ -14,7 +14,7 @@ COMMENT=	KDE System Guard Daemon
 DISTINFO_FILE=	${PORTSDIR}/x11/kde4-workspace/distinfo
 USE_XZ=	yes
 USE_KDE4=	kdeprefix kdehier
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DBIN_INSTALL_DIR:STRING="${PREFIX}/bin" \
 		-DSYSCONF_INSTALL_DIR:STRING="${PREFIX}/etc"
 MAKE_JOBS_SAFE=	yes
