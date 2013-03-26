@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: ports/science/cgnslib/Makefile,v 1.13 2012/12/10 18:29:52 svnexp Exp $
+# $FreeBSD: science/cgnslib/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	cgnslib
 DISTVERSION=	3.1.3-4
@@ -15,7 +15,7 @@ LICENSE_NAME=	AS-IS
 LICENSE_FILE=	${WRKSRC}/license.txt
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}"
 USE_LDCONFIG=	yes
 
