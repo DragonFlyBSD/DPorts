@@ -2,7 +2,7 @@
 # Date created:               2010-05-18
 # Whom:                       Konstantin Lepa <konstantin.lepa@gmail.com>
 #
-# $FreeBSD: ports/devel/vxlog/Makefile,v 1.5 2012/11/17 05:57:06 svnexp Exp $
+# $FreeBSD: devel/vxlog/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	vxlog
@@ -16,7 +16,7 @@ COMMENT=	C++ logging library
 
 LICENSE=	MIT
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 USE_GCC=	4.2+
 
