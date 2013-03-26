@@ -1,4 +1,4 @@
-# $FreeBSD: ports/math/eigen3/Makefile,v 1.25 2012/11/17 22:08:18 svnexp Exp $
+# $FreeBSD: math/eigen3/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	eigen
 PORTVERSION=	3.1.2
@@ -14,9 +14,8 @@ LICENSE=	LGPL21 MPL
 LICENSE_COMB=	multi
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
-CMAKE_OUTSOURCE=yes
-CMAKE_ENV+=	PKG_CONFIG_LIBDIR="${CMAKE_INSTALL_PREFIX}/libdata"
+USES=		cmake:outsource
+CMAKE_ENV+=	PKG_CONFIG_LIBDIR="${PREFIX}/libdata"
 NO_BUILD=	yes
 
 LATEST_LINK=	${PORTNAME}3
