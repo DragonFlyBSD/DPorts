@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/audio/sdl_mixer/Makefile,v 1.59 2012/12/28 11:41:48 svnexp Exp $
+# $FreeBSD: audio/sdl_mixer/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	sdl_mixer
 PORTVERSION=	1.2.12
@@ -16,7 +16,7 @@ LICENSE=	ZLIB
 USE_AUTOTOOLS=	libtool
 USE_SDL=	sdl
 USE_PKGCONFIG=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib

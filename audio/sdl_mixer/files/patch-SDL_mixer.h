@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/sdl_mixer/files/patch-SDL_mixer.h,v 1.2 2012/11/17 05:54:43 svnexp Exp $
+$FreeBSD: audio/sdl_mixer/files/patch-SDL_mixer.h 300895 2012-07-14 12:56:14Z beat $
 
 --- SDL_mixer.h	2001/05/08 07:44:56	1.1
 +++ SDL_mixer.h	2001/05/08 07:48:13
