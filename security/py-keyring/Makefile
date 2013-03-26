@@ -1,8 +1,9 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: ports/security/py-keyring/Makefile,v 1.16 2013/01/21 10:21:50 svnexp Exp $
+# $FreeBSD: security/py-keyring/Makefile 315099 2013-03-24 05:33:16Z rm $
 
 PORTNAME=	keyring
 PORTVERSION=	1.2
+PORTREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,10 +13,12 @@ COMMENT=	Store and access your passwords safely
 
 LICENSE=	PSFL
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest-runner>0:${PORTSDIR}/devel/py-pytest-runner
+
 LATEST_LINK=	py-${PORTNAME}
 
 USE_ZIP=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
 OPTIONS_DEFINE=		CRYPT_FILE GNOME_KEYRING KDE_KWALLET
@@ -37,10 +40,4 @@ USE_GNOME+=	pygnomedesktop
 USE_KDE4+=	pykde4
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MCRYPT_FILE} && ${PYTHON_VERSION} == "python2.5"
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}simplejson>=2.5:${PORTSDIR}/devel/py-simplejson
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
