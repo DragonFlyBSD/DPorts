@@ -2,7 +2,7 @@
 # Date created:				12 June 2009
 # Whom:					gahr
 #
-# $FreeBSD: ports/deskutils/taskwarrior/Makefile,v 1.20 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/taskwarrior/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	taskwarrior
@@ -24,8 +24,7 @@ WRKSRC=		${WRKDIR}/task-${DISTVERSION}
 USE_LUA=	5.1
 .endif
 
-USE_CMAKE=	yes
-CMAKE_OUTSOURCE=yes
+USES=		cmake:outsource
 CMAKE_ARGS+=	-DTASK_DOCDIR:STRING=${DATADIR:S/${PREFIX}\///} \
    		-DTASK_MAN1DIR:STRING=man/man1 \
 		-DTASK_MAN5DIR:STRING=man/man5
