@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/devel/libatomic_ops/Makefile,v 1.6 2013/01/31 05:43:23 svnexp Exp $
+# $FreeBSD: devel/libatomic_ops/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libatomic_ops
 DISTVERSION=	7.3alpha2
@@ -14,7 +14,7 @@ LICENSE_COMB=	multi
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 OPTIONS_DEFINE=	DOCS
 
