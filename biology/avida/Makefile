@@ -1,5 +1,5 @@
 # Created by: Jeremy <karlj000@unbc.ca>
-# $FreeBSD: ports/biology/avida/Makefile,v 1.34 2012/11/17 05:54:51 svnexp Exp $
+# $FreeBSD: biology/avida/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	avida
 PORTVERSION=	2.12.4
@@ -15,8 +15,7 @@ LICENSE=	GPLv3
 OPTIONS_DEFINE=	DOCS
 
 USE_NCURSES=	yes
-USE_CMAKE=	yes
-CMAKE_OUTSOURCE=yes
+USES=		cmake:outsource
 MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
