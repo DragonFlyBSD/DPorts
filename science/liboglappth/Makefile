@@ -2,7 +2,7 @@
 # Date created:			2008/8/21
 # Whom:				Nakata Maho <maho@FreeBSD.org>
 #
-# $FreeBSD: ports/science/liboglappth/Makefile,v 1.9 2013/01/08 07:53:22 svnexp Exp $
+# $FreeBSD: science/liboglappth/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	liboglappth
 PORTVERSION=	1.0.0
@@ -16,7 +16,7 @@ COMMENT=	Support libraries of science/ghemical port
 GNU_CONFIGURE=  yes
 
 USE_GL=		glut
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
