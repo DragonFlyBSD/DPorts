@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: ports/multimedia/gavl/Makefile,v 1.27 2012/11/17 05:59:49 svnexp Exp $
+# $FreeBSD: multimedia/gavl/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	gavl
 PORTVERSION=	1.4.0
@@ -12,7 +12,7 @@ COMMENT=	A library for handling uncompressed video and audio data
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
 MAKE_JOBS_SAFE=	yes
