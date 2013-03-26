@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/qjson/Makefile,v 1.7 2013/01/13 14:41:31 svnexp Exp $
+# $FreeBSD: devel/qjson/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	qjson
 PORTVERSION=	0.8.1
@@ -12,7 +12,7 @@ LICENSE=	LGPL21
 
 USE_QT4=	corelib moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
