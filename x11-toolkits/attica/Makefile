@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: ports/x11-toolkits/attica/Makefile,v 1.11 2013/02/04 01:04:54 svnexp Exp $
+# $FreeBSD: x11-toolkits/attica/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	attica
 PORTVERSION=	0.4.1
@@ -15,7 +15,7 @@ USE_QT4=	network qtestlib_build xml \
 		moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DATTICA_ENABLE_TESTS:BOOL=OFF
 MAKE_JOBS_SAFE=	yes
 
