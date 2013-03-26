@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/libplist/Makefile,v 1.7 2013/01/05 03:41:42 svnexp Exp $
+# $FreeBSD: devel/libplist/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	libplist
 PORTVERSION=	1.8
@@ -14,7 +14,7 @@ USE_GNOME=	libxml2
 # Unlisted dependency.
 USE_ICONV=	yes
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 # Required for iconv headers.
 CFLAGS+=	-I${LOCALBASE}/include
 MAKE_JOBS_UNSAFE=	yes
