@@ -1,5 +1,5 @@
 # Created by: clement
-# $FreeBSD: ports/irc/weechat/Makefile,v 1.67 2013/02/05 16:54:22 svnexp Exp $
+# $FreeBSD: irc/weechat/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	weechat
 PORTVERSION=	0.4.0
@@ -17,7 +17,7 @@ CONFLICTS=	weechat-devel-0.*
 USE_ICONV=	yes
 USE_LDCONFIG=	yes
 USE_NCURSES=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 WANT_PERL=	yes
 
