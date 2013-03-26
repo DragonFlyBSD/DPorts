@@ -1,12 +1,8 @@
-# New ports collection makefile for:	mkfontscale
-# Date Created:				28 Aug 2005
-# Whom:					Pawel Worach
-#
-# $FreeBSD: ports/x11-fonts/mkfontscale/Makefile,v 1.6 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: Pawel Worach
+# $FreeBSD: x11-fonts/mkfontscale/Makefile 313935 2013-03-11 19:53:11Z zeising $
 
 PORTNAME=	mkfontscale
-PORTVERSION=	1.0.9
+PORTVERSION=	1.1.0
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
@@ -15,7 +11,7 @@ COMMENT=	Creates an index of scalable font files for X
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
 
 XORG_CAT=	app
-USE_XORG=	xproto fontenc
+USE_XORG=	xproto fontenc xorg-macros
 
 PLIST_FILES=	bin/mkfontscale
 MAN1=		mkfontscale.1
