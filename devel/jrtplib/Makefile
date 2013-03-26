@@ -1,5 +1,5 @@
 # Created by: Petr Holub <hopet@ics.muni.cz>
-# $FreeBSD: ports/devel/jrtplib/Makefile,v 1.20 2012/12/01 01:18:03 svnexp Exp $
+# $FreeBSD: devel/jrtplib/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	jrtplib
 PORTVERSION=	3.9.1
@@ -13,7 +13,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.MIT
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
