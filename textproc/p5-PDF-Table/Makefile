@@ -1,9 +1,5 @@
-# New Ports collection makefile for:	p5-PDF-Table
-# Date created:				May 22, 2009
-# Whom:					scheidell@secnap.net
-#
-# $FreeBSD: ports/textproc/p5-PDF-Table/Makefile,v 1.6 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: scheidell@secnap.net
+# $FreeBSD: textproc/p5-PDF-Table/Makefile 314460 2013-03-17 16:44:03Z eadler $
 
 PORTNAME=	PDF-Table
 PORTVERSION=	0.9.5
@@ -11,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	scheidell@freebsd.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A utility class for building table layouts in a PDF::API2 object
 
 BUILD_DEPENDS=	p5-PDF-API2>=0:${PORTSDIR}/textproc/p5-PDF-API2
