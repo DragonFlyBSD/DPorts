@@ -2,7 +2,7 @@
 # Date created:		2009-11-27
 # Whom:			Thomas Abthorpe <tabthorpe@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/shared-desktop-ontologies/Makefile,v 1.9 2012/11/17 06:03:39 svnexp Exp $
+# $FreeBSD: x11-toolkits/shared-desktop-ontologies/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	shared-desktop-ontologies
@@ -17,7 +17,7 @@ CMAKE_ARGS+=	-DPKGCONFIG_INSTALL_DIR:PATH="libdata/pkgconfig/"
 INSTALL_TARGET=	install
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_GNOME=	pkgconfig
 
 post-patch:
