@@ -1,12 +1,8 @@
-# New ports collection makefile for:	vpnc-scripts
-# Date created:				20 Apr 2012
-# Whom:					Ryan Steinmetz <zi@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/vpnc-scripts/Makefile,v 1.5 2013/01/29 16:59:27 svnexp Exp $
-#
+# Created by: Ryan Steinmetz <zi@FreeBSD.org>
+# $FreeBSD: sysutils/vpnc-scripts/Makefile 313980 2013-03-12 15:32:40Z zi $
 
 PORTNAME=	vpnc-scripts
-PORTVERSION=	20130129
+PORTVERSION=	20130311
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.infradead.org/pub/${PORTNAME}/ \
 		http://mirrors.rit.edu/zi/
