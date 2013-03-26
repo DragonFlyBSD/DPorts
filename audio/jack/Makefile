@@ -2,7 +2,7 @@
 # Date created:			14 May 2002
 # Whom:				arved
 #
-# $FreeBSD: ports/audio/jack/Makefile,v 1.67 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: audio/jack/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	jackit
