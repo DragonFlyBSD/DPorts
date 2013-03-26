@@ -1,10 +1,6 @@
-# New ports collection makefile for:	lasi
-# Date created:		June 2006
-# Whom:			giffunip
-#
-# $FreeBSD: ports/devel/lasi/Makefile,v 1.23 2012/11/17 05:55:52 svnexp Exp $
+# Created by: giffunip
+# $FreeBSD: devel/lasi/Makefile 314960 2013-03-22 20:06:14Z makc $
 #    $MCom: ports/devel/lasi/Makefile,v 1.1 2006/10/04 20:25:40 ahze Exp $
-
 PORTNAME=	lasi
 PORTVERSION=	1.1.1
 PORTREVISION=	1
@@ -22,10 +18,8 @@ CONFIGURE_ENV+=	PKG_CONFIG_PATH=${PKG_CONFIG_PATH}
 
 USE_LDCONFIG=	yes
 
-USE_CMAKE=	yes
-CMAKE_ARGS+=	${WRKSRC}	\
-		-DCMAKE_INSTALL_PREFIX=${PREFIX}	\
-		-DCMAKE_INSTALL_DATADIR:PATH=${DATADIR}
+USES=		cmake
+CMAKE_ARGS+=	-DCMAKE_INSTALL_DATADIR:PATH=${DATADIR}
 
 .if !defined(NOPORTDOCS)
 BUILD_DEPENDS+=	${LOCALBASE}/bin/doxygen:${PORTSDIR}/devel/doxygen
