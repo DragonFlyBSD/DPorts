@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/libcoverart/Makefile,v 1.2 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/libcoverart/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	libcoverart
 PORTVERSION=	1.0.0
@@ -13,7 +13,7 @@ LICENSE=	LGPL20
 LIB_DEPENDS=	jansson:${PORTSDIR}/devel/jansson \
 		neon:${PORTSDIR}/www/neon29
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 
 MAKE_JOBS_SAFE=	yes
