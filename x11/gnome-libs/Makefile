@@ -1,11 +1,6 @@
-# New ports collection makefile for:	gnomelibs
-# Date created:				17 June 1998
-# Whom:					Yukihiro Nakai <Nakai@technologist.com>
-#
-# $FreeBSD: ports/x11/gnome-libs/Makefile,v 1.135 2012/11/17 06:03:15 svnexp Exp $
+# Created by: Yukihiro Nakai <Nakai@technologist.com>
+# $FreeBSD: x11/gnome-libs/Makefile 314556 2013-03-18 11:40:04Z bapt $
 #   $MCom: ports/x11/gnome-libs/Makefile,v 1.7 2007/08/04 03:51:32 marcus Exp $
-#
-
 PORTNAME=	gnome-libs
 PORTVERSION=	1.4.2
 PORTREVISION=	18
@@ -20,6 +15,7 @@ BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
+USES=		charsetfix
 USE_BZIP2=	yes
 USE_XORG=	xpm ice x11
 USE_PERL5=	yes
