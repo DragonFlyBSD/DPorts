@@ -1,17 +1,13 @@
-# New ports collection makefile for:	p5-AnyEvent-IRC
-# Date created:		05 Nov, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/irc/p5-AnyEvent-IRC/Makefile,v 1.5 2012/11/17 05:58:29 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: irc/p5-AnyEvent-IRC/Makefile 314978 2013-03-23 00:39:00Z wen $
 
 PORTNAME=	AnyEvent-IRC
-PORTVERSION=	0.96
+PORTVERSION=	0.97
 CATEGORIES=	irc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	wen@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Event system independent IRC protocol module
 
 BUILD_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
