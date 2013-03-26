@@ -2,7 +2,7 @@
 # Date created:        3 May 2012
 # Whom:                h2
 #
-# $FreeBSD: ports/biology/seqan/Makefile,v 1.4 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: biology/seqan/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	seqan
@@ -21,9 +21,8 @@ LICENSE_FILE_GPLv3=${WRKSRC}/apps/LICENSE
 
 USE_ZIP=	yes
 
-USE_CMAKE=	yes
+USES=		cmake:outsource
 CMAKE_SOURCE_PATH=${WRKSRC}/cmake
-CMAKE_OUTSOURCE=yes
 USE_PYTHON_BUILD=yes
 MAKE_JOB_SAFE=	yes
 
