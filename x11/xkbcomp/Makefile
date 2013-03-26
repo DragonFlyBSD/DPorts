@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xkbcomp/Makefile,v 1.8 2013/02/06 14:56:45 svnexp Exp $
+# $FreeBSD: x11/xkbcomp/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	xkbcomp
 PORTVERSION=	1.2.4
@@ -9,10 +9,9 @@ COMMENT=	Compile XKB keyboard description
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
 XORG_CAT=	app
-USE_XORG=	x11 xkbfile
-USE_GNOME=	gnomehack
+USE_XORG=	x11 xkbfile xorg-macros
+USES=		pathfix
 
 PLIST_FILES=	bin/xkbcomp \
 		libdata/pkgconfig/xkbcomp.pc
