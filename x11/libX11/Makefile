@@ -1,9 +1,5 @@
-# New ports collection makefile for:   libX11
-# Date Created:			28 Oct, 2003
-# Whom:				Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/libX11/Makefile,v 1.42 2012/11/17 06:03:17 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/libX11/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	libX11
 PORTVERSION=	1.4.4
@@ -15,13 +11,13 @@ COMMENT=	X11 library
 
 LICENSE=	MIT
 
-BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/xcb.pc:${PORTSDIR}/x11/libxcb \
-		${LOCALBASE}/share/aclocal/xorg-macros.m4:${PORTSDIR}/devel/xorg-macros
+BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/xcb.pc:${PORTSDIR}/x11/libxcb
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/xcb.pc:${PORTSDIR}/x11/libxcb
 
 XORG_CAT=	lib
 USE_XORG=	bigreqsproto xau xcmiscproto xdmcp xextproto xtrans \
-		kbproto:both inputproto xf86bigfontproto xproto:both
+		kbproto:both inputproto xf86bigfontproto xproto:both \
+		xorg-macros
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/lib \
 			--without-xmlto \
