@@ -1,9 +1,5 @@
-# Ports collection makefile for:	piddle
-# Date created:				29 Feb 2000
-# Whom:					dom@happygiraffe.net
-#
-# $FreeBSD: ports/graphics/piddle/Makefile,v 1.15 2012/11/17 05:58:19 svnexp Exp $
-#
+# Created by: dom@happygiraffe.net
+# $FreeBSD: graphics/piddle/Makefile 314887 2013-03-22 02:17:31Z beech $
 
 PORTNAME=	piddle
 PORTVERSION=	1.0.15
@@ -18,14 +14,13 @@ COMMENT=	Graphical Drawing library for Python
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
-.if !defined(NOPORTDOCS)
 PORTDOCS=	*
-.endif
+
+.include <bsd.port.options.mk>
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC}/docs ; tar cf - *) | (cd ${DOCSDIR} ; tar xf -)
+.if ${PORT_OPTIONS:MDOCS}
+	(cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${DOCSDIR})
 .endif
 
 .include <bsd.port.mk>
