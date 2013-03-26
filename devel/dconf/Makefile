@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/dconf/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/dconf/Makefile 313956 2013-03-12 09:45:07Z kwm $
 #   $MCom: ports/devel/dconf/Makefile,v 1.30 2012/10/03 17:57:17 kwm Exp $
 
 PORTNAME?=	dconf
@@ -13,7 +13,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A configuration database system for GNOME
 
-BUILD_DEPENDS=	vala>=0.11.7:${PORTSDIR}/lang/vala
+BUILD_DEPENDS=	vala>=0.15.1:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
 
 USE_XZ=		yes
