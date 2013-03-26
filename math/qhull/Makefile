@@ -1,5 +1,5 @@
 # Created by: pusto@web.de
-# $FreeBSD: ports/math/qhull/Makefile,v 1.21 2012/11/17 05:59:29 svnexp Exp $
+# $FreeBSD: math/qhull/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	qhull
 PORTVERSION=	2012.1
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Qhull computes convex hulls, Delaunay triangulations, and halfspaces
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
