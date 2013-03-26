@@ -2,7 +2,7 @@
 # Date created:		2010-03-29
 # Whom:			Bapt <baptiste.daroussin@gmail.com>
 #
-# $FreeBSD: ports/devel/yajl/Makefile,v 1.13 2012/11/17 05:57:07 svnexp Exp $
+# $FreeBSD: devel/yajl/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	yajl
@@ -20,7 +20,7 @@ GH_COMMIT=	fee1ebe
 LICENSE=	BSD
 
 USE_LDCONFIG=	yes
-USE_CMAKE=	yes
+USES=		cmake
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
