@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/local/bin/perl
 # $FreeBSD: ports/Tools/make_readmes,v 1.8 2012/11/17 05:54:18 svnexp Exp $
 
 $PORTSDIR="/usr/ports";

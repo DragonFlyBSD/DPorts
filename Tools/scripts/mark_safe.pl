@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/local/bin/perl -w
 
 # $FreeBSD: Tools/scripts/mark_safe.pl 300895 2012-07-14 12:56:14Z beat $
 #
