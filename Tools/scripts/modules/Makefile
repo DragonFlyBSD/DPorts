@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/modules/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTSDIR=	../incoming-PRs/ports/

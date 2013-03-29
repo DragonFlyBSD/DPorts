@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/notconnected 300910 2012-07-15 23:22:49Z eadler $
 #
 # MAINTAINER=   pgollucci@FreeBSD.org
 # all committers may commit to this file without approval

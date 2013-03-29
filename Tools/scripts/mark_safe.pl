@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/mark_safe.pl 300895 2012-07-14 12:56:14Z beat $
 #
 # MAINTAINER=   pgollucci@FreeBSD.org
 # all committers may commit to this file without approval
@@ -27,7 +27,7 @@ local $SIG{__DIE__}  = \&Carp::confess;
 local $SIG{__WARN__} = \&Carp::cluck;
 
 ### version
-our $VERSION = do { my @r = (q$FreeBSD$ =~ /\d+/g); sprintf "%d." . "%02d" x $#r, @r };
+our $VERSION = do { my @r = (q$FreeBSD: Tools/scripts/mark_safe.pl 300895 2012-07-14 12:56:14Z beat $ =~ /\d+/g); sprintf "%d." . "%02d" x $#r, @r };
 
 ### globals
 # cmdline options (standard) with defaults

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/options2ng.sh 300895 2012-07-14 12:56:14Z beat $
 #
 # This script makes a backup of the ports OPTIONS database and then converts
 # all of the saved files to the new format.

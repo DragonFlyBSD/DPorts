@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/release/doit.sh 300895 2012-07-14 12:56:14Z beat $
 
 pathtoports=$1
 dir=`dirname $0`

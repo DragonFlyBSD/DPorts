@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/resolveportsfromlibs.sh 300895 2012-07-14 12:56:14Z beat $
 
 #
 # The purpose of this script is to find the installed port which contains

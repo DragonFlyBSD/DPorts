@@ -33,7 +33,7 @@
 #
 # Id: addport,v 1.2 2000/04/02 06:21:13 will Exp (original shell script)
 # Id: addport,v 1.5 2000/04/22 22:19:43 mharo Exp (perl conversion)
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/addport 313371 2013-03-03 17:40:36Z crees $
 #
 # MAINTAINER=	crees@FreeBSD.org
 #
@@ -41,7 +41,6 @@
 use Cwd "abs_path";
 use Getopt::Std;
 use Sys::Hostname;
-use LWP::Simple;
 use locale;
 use strict;
 
@@ -113,6 +112,17 @@ $tmp = $tmp2 = $offset = 0;
 # Check the editor.
 my $edit = "/usr/bin/vi";
 $edit = $ENV{EDITOR} if ($ENV{EDITOR} ne "");
+
+# Check svn version
+my $svnversion = `svn --version --quiet 2>/dev/null`;
+chomp $svnversion;
+if ($svnversion eq "") {
+	errx(1, "Subversion binary not found in \$PATH, aborting.");
+}
+my @svnversion = split(/\./, $svnversion);
+if ($svnversion[0] == 1 && $svnversion[1] < 7) {
+	errx(1, "minimum Subversion version of 1.7 not met, aborting.");
+}
 
 # stuff that always happens when we start
 BEGIN {
@@ -227,9 +237,8 @@ foreach my $thisdir (@dirs) {
 	}
 
 	# Get the category name and make it suitable for use with svn
-	my $category;
-	$category = `$make -V PKGCATEGORY`;
-	chomp $category;
+	my @categories = split(/ /, `$make -VCATEGORIES`);
+	my $category = $categories[0];
 	if ($interactive) {
 		if (prompt("Port $portname will be put in category $category.  OK? " )) {
 			do {
@@ -324,8 +333,8 @@ foreach my $thisdir (@dirs) {
 	# Until svn revs are in the database, we'll use dates.
 	print "Checking for previous versions of $category/$portname... \n";
 	my $previous_incarnation = "bogus";
-	my $oldportlist;
-	if ($oldportlist = get('http://people.FreeBSD.org/~crees/removed_ports/index.xml')) {
+	my $oldportlist = `/usr/bin/fetch -qo - http://people.FreeBSD.org/~crees/removed_ports/index.xml`;
+	if ($oldportlist !=~ /^fetch:[^:]+: Not Found/) {
 		foreach (split("\n", $oldportlist)) {
 			if (/^ +\<port\>$category\/$portname(?:\<removed_revision\>r([0-9]*)\<\/removed_revision\>)?\<removed_date\>([^<]*)/) {
 				print "Found one!\n";
@@ -405,6 +414,10 @@ foreach my $thisdir (@dirs) {
 			system("svn -q propdel svn:keywords $_");
 		}
 	}
+
+	# strip svn:executable if added-- not allowed
+
+	system("cd $portname && svn -qR propdel svn:executable");
 
 	# figure out where the port name belongs in category Makefile
 	my ($spaces, @ports) = &lsports;

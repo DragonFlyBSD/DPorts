@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/p5-deps.pl 300895 2012-07-14 12:56:14Z beat $
 #
 # Usage: p5-deps.pl
 #

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/release/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 # The purpose of this Makefile is to setup a standardized environment
 # for making package splits.  Basically, for each split the organization

@@ -27,7 +27,7 @@
 #   % portsvar.sh -a -w kde
 #   list all variables through bsd.port.mk including kde
 #
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/portsvar.sh 300895 2012-07-14 12:56:14Z beat $
 #
 # MAINTAINER= daichi@freebsd.org
 

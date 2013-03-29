@@ -2,7 +2,7 @@
 #
 # MAINTAINER= miwi@FreeBSD.org
 #
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/getpr 304753 2012-09-23 17:12:59Z ohauer $
 #
 
 use strict;

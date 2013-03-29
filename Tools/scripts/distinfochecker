@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 #
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/distinfochecker 300895 2012-07-14 12:56:14Z beat $
 #
 # Author: Edwin Groothuis <edwin@FreeBSD.org>
 #

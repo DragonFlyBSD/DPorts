@@ -12,7 +12,7 @@
 # Maxim Sobolev
 # ----------------------------------------------------------------------------
 #
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/checkcats.py 300895 2012-07-14 12:56:14Z beat $
 #
 # MAINTAINER= sobomax@FreeBSD.org <- any unapproved commits to this file are
 #                                    highly discouraged!!!

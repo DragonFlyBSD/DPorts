@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-# $FreeBSD$
+# $FreeBSD: Tools/scripts/bump_revision.pl 300895 2012-07-14 12:56:14Z beat $
 
 #
 # MAINTAINER=	edwin@freebsd.org
