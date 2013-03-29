@@ -40,7 +40,7 @@ ${comp:C/:.*//:C/.*\///:tu}_DESC=	Install ${comp:C/:.*//:C/.*\///} application
 
 .for comp in ${COMPONENTS}
 . if ${PORT_OPTIONS:M${comp:C/:.*//:C/.*\///:tu}}
-.  if ${comp:M:}==""
+.  if ${comp:M*\:*}==""
 port=${comp}
 check=${comp:C/.*\///} # doesn't work
 .  else
