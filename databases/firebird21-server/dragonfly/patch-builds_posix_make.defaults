@@ -1,0 +1,11 @@
+--- builds/posix/make.defaults.intermediate	2013-03-27 23:47:41.000000000 +0000
++++ builds/posix/make.defaults
+@@ -266,7 +266,7 @@ LINK_EMPTY_SYMBOLS = $(LIB_LINK_MAPFILE)
+ FB_SUPER_SERVER	= $(BIN)/fbserver$(EXEC_EXT)
+ FB_CLASSIC_SERVER = $(BIN)/fb_inet_server$(EXEC_EXT)
+ 
+-STATIC_CXXSUPPORT_LIB = -lstdc++ -lgcc_s -lgcc_eh
++STATIC_CXXSUPPORT_LIB = -lstdc++ -lgcc_pic
+ 
+ # From utilities 
+ CREATE_DB	= $(BIN)/create_db$(EXEC_EXT)

@@ -1,0 +1,20 @@
+--- configure.in.intermediate	2013-03-27 23:39:19.000000000 +0000
++++ configure.in
+@@ -83,7 +83,7 @@ dnl MAKEFILE_PREFIX=darwin_ppc64
+ dnl CPU_TYPE=ppc64
+     ;;
+ 
+-  amd64-*-freebsd*)
++  amd64-*-freebsd*|x86_64-*-dragonfly*)
+     MAKEFILE_PREFIX=freebsd
+     PLATFORM=FREEBSD
+     AC_DEFINE(FREEBSD, 1, [Define this if OS is FreeBSD])
+@@ -102,7 +102,7 @@ dnl CPU_TYPE=ppc64
+     SHRLIB_EXT=so
+     ;;
+ 
+-  *-*-freebsd*)
++  *-*-freebsd*|*-*-dragonfly-*)
+     MAKEFILE_PREFIX=freebsd 
+     PLATFORM=FREEBSD
+     AC_DEFINE(FREEBSD, 1, [Define this if OS is FreeBSD])
