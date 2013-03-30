@@ -1,15 +1,11 @@
-# New ports collection makefile for:	tkmerge
-# Date created:         16 Dec 2004
-# Whom:			Bob Willcox <bob@immure.com>
-#
-# $FreeBSD: ports/devel/tkmerge/Makefile,v 1.8 2012/11/17 05:57:05 svnexp Exp $
-#
+# Created by: Bob Willcox <bob@immure.com>
+# $FreeBSD: devel/tkmerge/Makefile 314663 2013-03-19 16:26:27Z tabthorpe $
 
 PORTNAME=	tkmerge
 PORTVERSION=	0.85
 PORTREVISION=	1
 CATEGORIES=	devel tk
-MASTER_SITES=	http://immure.com/~bob/ports/tkmerge/
+MASTER_SITES=	http://immure.com/ports/tkmerge/
 
 MAINTAINER=	bob@immure.com
 COMMENT=	A tk script to aid in the merging changes between two files
