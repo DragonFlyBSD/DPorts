@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/audio/darkice/Makefile,v 1.45 2013/02/26 14:48:49 svnexp Exp $
+# $FreeBSD: audio/darkice/Makefile 312981 2013-02-26 14:40:41Z danfe $
 
 PORTNAME=	darkice
 PORTVERSION=	1.1
