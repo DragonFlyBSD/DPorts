@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Net_IMAP
-# Date created:			  12 march 2004
-# Whom:				  Attila Nagy <bra@fsn.hu>
-#
-# $FreeBSD: ports/mail/pear-Net_IMAP/Makefile,v 1.7 2012/11/17 05:59:10 svnexp Exp $
-#
+# Created by: Attila Nagy <bra@fsn.hu>
+# $FreeBSD: mail/pear-Net_IMAP/Makefile 314446 2013-03-17 14:21:48Z miwi $
 
 PORTNAME=	Net_IMAP
 PORTVERSION=	1.1.0
@@ -14,10 +10,10 @@ COMMENT=	PEAR class that provides an implementation of the IMAP protocol
 
 BUILD_DEPENDS=	${PEARDIR}/Net/Socket.php:${PORTSDIR}/net/pear-Net_Socket \
 		${PEARDIR}/Auth/SASL.php:${PORTSDIR}/security/pear-Auth_SASL
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/Net/Socket.php:${PORTSDIR}/net/pear-Net_Socket \
+		${PEARDIR}/Auth/SASL.php:${PORTSDIR}/security/pear-Auth_SASL
 
-CATEGORY=	Net
-FILES=		IMAP.php IMAPProtocol.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
