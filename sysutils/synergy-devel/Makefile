@@ -2,7 +2,7 @@
 # Date created:		6 February 2012
 # Whom:			George Neville-Neil <gnn@freebsd.org>
 #
-# $FreeBSD: sysutils/synergy-devel/Makefile 313088 2013-02-28 10:51:58Z gahr $
+# $FreeBSD: sysutils/synergy-devel/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	synergy
@@ -16,7 +16,7 @@ MAINTAINER=	gnn@FreeBSD.org
 COMMENT=	Mouse and keyboard sharing utility
 
 CONFLICTS=	synergy-[0-9]*
-USE_CMAKE=	yes
+USES=		cmake
 USE_XORG=	ice xtst x11 sm
 USE_DOS2UNIX=	yes
 
