@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xload/Makefile,v 1.7 2013/02/14 00:01:43 svnexp Exp $
+# $FreeBSD: x11/xload/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	xload
 PORTVERSION=	1.1.1
@@ -10,9 +10,7 @@ COMMENT=	System load average display for X
 LICENSE=	MIT
 
 XORG_CAT=	app
-USE_XORG=	xt xaw
-
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
+USE_XORG=	xt xaw xorg-macros
 
 MAN1=		xload.1
 
