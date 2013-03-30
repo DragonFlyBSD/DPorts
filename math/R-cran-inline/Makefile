@@ -1,9 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/R-cran-inline/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/R-cran-inline/Makefile 315173 2013-03-24 22:42:42Z wen $
 
 PORTNAME=	inline
-PORTVERSION=	0.3.10
-PORTREVISION=	2
+PORTVERSION=	0.3.11
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
