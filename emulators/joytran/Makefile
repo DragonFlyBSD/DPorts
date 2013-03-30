@@ -2,7 +2,7 @@
 # Date created:			30 Jul 2011
 # Whom:				Timothy Beyer <beyert@cs.ucr.edu>
 #
-# $FreeBSD: ports/emulators/joytran/Makefile,v 1.5 2012/11/17 05:57:20 svnexp Exp $
+# $FreeBSD: emulators/joytran/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	joytran
@@ -20,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 # This is needed to fetch from BerliOS
 FETCH_ARGS=	"-Fpr"
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DLOCALBASE="${LOCALBASE}" -DPREFIX="${PREFIX}"
 
 .if !defined(NOPORTDOCS)
