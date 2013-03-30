@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-DB_Pager
-# Date created:			  25 Febrary 2004
-# Whom:				  Toshiya Saitoh (<toshiya@saitoh.nu>)
-#
-# $FreeBSD: ports/databases/pear-DB_Pager/Makefile,v 1.5 2012/11/17 05:55:17 svnexp Exp $
-#
+# Created by: Toshiya Saitoh (<toshiya@saitoh.nu>)
+# $FreeBSD: databases/pear-DB_Pager/Makefile 314451 2013-03-17 14:59:02Z miwi $
 
 PORTNAME=	DB_Pager
 PORTVERSION=	0.7
@@ -14,10 +10,10 @@ COMMENT=	PEAR Database Abstraction Layer
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 		${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
+		${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB
 
-NO_BUILD=	yes
-FILES=		Pager.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
