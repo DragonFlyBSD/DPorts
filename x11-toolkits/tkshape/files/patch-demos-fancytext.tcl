@@ -1,4 +1,4 @@
-$FreeBSD: ports/x11-toolkits/tkshape/files/patch-demos-fancytext.tcl,v 1.3 2012/11/17 06:03:39 svnexp Exp $
+$FreeBSD: x11-toolkits/tkshape/files/patch-demos-fancytext.tcl 300897 2012-07-14 14:29:18Z beat $
 --- demos/fancytext.tcl	Mon Sep 11 12:01:58 2000
 +++ demos/fancytext.tcl.new	Sun Mar 14 14:36:43 2004
 @@ -32,9 +32,9 @@

@@ -1,4 +1,4 @@
-$FreeBSD: ports/x11-toolkits/tkshape/files/patch-unix-shapeUnixImpl.c,v 1.3 2012/11/17 06:03:39 svnexp Exp $
+$FreeBSD: x11-toolkits/tkshape/files/patch-unix-shapeUnixImpl.c 300897 2012-07-14 14:29:18Z beat $
 diff -ur unix/shapeUnixImpl.c unix/shapeUnixImpl.c.new
 --- unix/shapeUnixImpl.c	Mon Sep 11 16:27:28 2000
 +++ unix/shapeUnixImpl.c	Sat Mar 13 11:25:54 2004

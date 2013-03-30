@@ -1,4 +1,4 @@
-$FreeBSD: ports/x11-toolkits/tkshape/files/patch-generic-shape.c,v 1.3 2012/11/17 06:03:39 svnexp Exp $
+$FreeBSD: x11-toolkits/tkshape/files/patch-generic-shape.c 300897 2012-07-14 14:29:18Z beat $
 diff -ur generic/shape.c shape0.4.new/generic/shape.c.new
 --- generic/shape.c	Mon Sep 11 17:16:31 2000
 +++ generic/shape.c.new	Fri Jan 30 15:20:15 2004

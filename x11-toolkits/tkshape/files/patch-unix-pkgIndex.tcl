@@ -1,4 +1,4 @@
-$FreeBSD: ports/x11-toolkits/tkshape/files/patch-unix-pkgIndex.tcl,v 1.3 2012/11/17 06:03:39 svnexp Exp $
+$FreeBSD: x11-toolkits/tkshape/files/patch-unix-pkgIndex.tcl 300897 2012-07-14 14:29:18Z beat $
 --- unix/pkgIndex.tcl	Mon Sep 11 16:27:28 2000
 +++ unix/pkgIndex.tcl.new	Sun Mar 14 13:29:27 2004
 @@ -5,4 +5,4 @@

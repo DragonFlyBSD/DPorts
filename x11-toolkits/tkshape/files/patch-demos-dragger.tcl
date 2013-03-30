@@ -1,4 +1,4 @@
-$FreeBSD: ports/x11-toolkits/tkshape/files/patch-demos-dragger.tcl,v 1.3 2012/11/17 06:03:39 svnexp Exp $
+$FreeBSD: x11-toolkits/tkshape/files/patch-demos-dragger.tcl 300897 2012-07-14 14:29:18Z beat $
 --- demos/dragger.tcl	Mon Sep 11 12:01:58 2000
 +++ demos/dragger.tcl.new	Sun Mar 14 14:36:20 2004
 @@ -32,9 +32,9 @@
