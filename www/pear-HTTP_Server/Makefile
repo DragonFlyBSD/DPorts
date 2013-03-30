@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<tux@pinguru.net>)
-# $FreeBSD: ports/www/pear-HTTP_Server/Makefile,v 1.8 2013/02/03 19:11:31 svnexp Exp $
+# $FreeBSD: www/pear-HTTP_Server/Makefile 314455 2013-03-17 15:28:55Z miwi $
 
 PORTNAME=	HTTP_Server
 PORTVERSION=	0.4.1
@@ -10,7 +10,8 @@ COMMENT=	HTTP server class
 
 BUILD_DEPENDS=	${PEARDIR}/HTTP.php:${PORTSDIR}/www/pear-HTTP \
 		${PEARDIR}/Net/Server.php:${PORTSDIR}/net/pear-Net_Server
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/HTTP.php:${PORTSDIR}/www/pear-HTTP \
+		${PEARDIR}/Net/Server.php:${PORTSDIR}/net/pear-Net_Server
 
 PEAR_AUTOINSTALL=	yes
 
