@@ -1,5 +1,5 @@
 # Created by: Damian Gerow
-# $FreeBSD: ports/security/openconnect/Makefile,v 1.25 2013/02/15 00:51:11 svnexp Exp $
+# $FreeBSD: security/openconnect/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	openconnect
 PORTVERSION=	4.08
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-nls --with-vpnc-script=${LOCALBASE}/sbin/vpnc-script \
 		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 USE_AUTOTOOLS=	aclocal autoconf libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_PKGCONFIG=	yes
 USE_GMAKE=	yes
 USE_OPENSSL=	yes
