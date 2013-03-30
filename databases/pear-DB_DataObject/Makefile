@@ -1,9 +1,5 @@
-# New ports collection makefile for:   pear-DB_DataObject
-# Date created:        23 August 2004
-# Whom:                Antonio Carlos Venancio Junior (<antonio@php.net>)
-#
-# $FreeBSD: ports/databases/pear-DB_DataObject/Makefile,v 1.28 2012/11/17 05:55:17 svnexp Exp $
-#
+# Created by: Antonio Carlos Venancio Junior (<antonio@php.net>)
+# $FreeBSD: databases/pear-DB_DataObject/Makefile 314451 2013-03-17 14:59:02Z miwi $
 
 PORTNAME=	DB_DataObject
 PORTVERSION=	1.10.0
