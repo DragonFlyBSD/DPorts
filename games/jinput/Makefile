@@ -2,7 +2,7 @@
 # Date created:                        Mar 25 2012
 # Whom:                                loader <loader@freebsdmall.com>
 #
-# $FreeBSD: ports/games/jinput/Makefile,v 1.3 2012/12/10 16:41:32 svnexp Exp $
+# $FreeBSD: games/jinput/Makefile 313987 2013-03-12 17:16:37Z sunpoet $
 #
 
 PORTNAME=	jinput
@@ -10,7 +10,7 @@ DISTVERSION=	20110801.r247
 CATEGORIES=	games java
 MASTER_SITES=	LOCAL/loader
 
-MAINTAINER=	ports@freebsd.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java Game Controller API
 
 BUILD_DEPENDS=	${JAVALIBDIR}/jutils/jutils.jar:${PORTSDIR}/games/jutils
