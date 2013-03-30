@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mysqldumper
-# Date created:				8 January 2011
-# Whom:		Marek Holienka	<marekholienka@gmail.com>
-#
-# $FreeBSD: ports/databases/mysqldumper/Makefile,v 1.5 2012/11/17 05:55:12 svnexp Exp $
-#
+# Created by: Marek Holienka <marekholienka@gmail.com>
+# $FreeBSD: databases/mysqldumper/Makefile 314155 2013-03-14 12:56:38Z danfe $
 
 PORTNAME=	mysqldumper
 PORTVERSION=	1.24.2
@@ -13,37 +9,41 @@ MASTER_SITES=	SF/${PORTNAME}/MySQLDumper/
 DISTNAME=	MySQLDumper${PORTVERSION}
 
 MAINTAINER=	marekholienka@gmail.com
-COMMENT=	MySQLDumper is tool for backing up MySQL databases
+COMMENT=	Tool for backing up MySQL databases
 
-RUN_DEPENDS=	p5-DBI>=1.48:${PORTSDIR}/databases/p5-DBI \
+LICENSE=	GPLv2
 
-OPTIONS=	APACHE "Enable Apache Support" on \
-		LIGHTTPD "Enable Lighttpd Support" off
+RUN_DEPENDS=	p5-DBI>=1.48:${PORTSDIR}/databases/p5-DBI
 
 USE_ZIP=	yes
-NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/msd${PORTVERSION}
-USE_PHP=	session mysql zlib ftp
 USE_MYSQL=	yes
 USE_PERL5=	yes
-WWWOWN=		www
-WWWGRP=		${WWWOWN}
+USE_PHP=	session mysql zlib ftp
+
+NO_BUILD=	yes
+WRKSRC=		${WRKDIR}/msd${PORTVERSION}
+
+OPTIONS_DEFINE=	APACHE LIGHTTPD
+OPTIONS_DEFAULT=	APACHE
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_APACHE)
+.if ${PORT_OPTIONS:MAPACHE}
 USE_APACHE_RUN=	22+
 .endif
-.if defined(WITH_LIGHTTPD)
+
+.if ${PORT_OPTIONS:MLIGHTTPD}
 RUN_DEPENDS+=	lighttpd:${PORTSDIR}/www/lighttpd
 .endif
 
 do-install:
 	@${MKDIR} ${WWWDIR}
-	@${CP} -r ${WRKDIR}/msd${PORTVERSION}/ ${WWWDIR}
-	@${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}
+	${CP} -a ${WRKDIR}/msd${PORTVERSION}/ ${WWWDIR}
+	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}
 
 post-install:
-	${CAT} ${PKGMESSAGE}
+	@${ECHO_MSG}
+	@${CAT} ${PKGMESSAGE}
+	@${ECHO_MSG}
 
 .include <bsd.port.mk>
