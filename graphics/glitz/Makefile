@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: graphics/glitz/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: graphics/glitz/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #   $MCom: ports/graphics/glitz/Makefile,v 1.8 2006/09/10 00:51:10 mezz Exp $
 
 PORTNAME=	glitz
@@ -13,7 +13,7 @@ COMMENT=	OpenGL image compositing library
 
 USE_GL=		yes
 USE_XORG=	xt
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
