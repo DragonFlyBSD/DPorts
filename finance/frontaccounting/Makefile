@@ -1,14 +1,17 @@
 # Created by: Janky Jay <ek@purplehat.org>
-# $FreeBSD: ports/finance/frontaccounting/Makefile,v 1.2 2013/02/16 19:52:52 svnexp Exp $
+# $FreeBSD: finance/frontaccounting/Makefile 313800 2013-03-10 04:17:01Z beech $
 
 PORTNAME=	frontaccounting
-DISTVERSION=	2.3.14
+DISTVERSION=	2.3.15
 CATEGORIES=	finance www
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/FrontAccounting-2.3/${PORTVERSION}
 
 MAINTAINER=	ek@purplehat.org
 COMMENT=	Simple, powerful system for the entire ERP chain
+
+LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/doc/license.txt
 
 USE_GETTEXT=	yes
 USE_MYSQL=	yes
