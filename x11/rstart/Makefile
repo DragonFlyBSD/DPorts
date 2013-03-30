@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/rstart/Makefile,v 1.5 2013/02/14 14:50:53 svnexp Exp $
+# $FreeBSD: x11/rstart/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	rstart
 PORTVERSION=	1.0.5
@@ -8,9 +8,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Sample implementation of a Remote Start client
 
 XORG_CAT=	app
-USE_XORG=	x11
-
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
+USE_XORG=	x11 xorg-macros
 
 MAN1=		rstart.1 rstartd.1
 
