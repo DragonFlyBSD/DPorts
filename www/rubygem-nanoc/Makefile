@@ -1,8 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: ports/www/rubygem-nanoc/Makefile,v 1.9 2013/02/06 00:52:07 svnexp Exp $
+# $FreeBSD: www/rubygem-nanoc/Makefile 315117 2013-03-24 13:33:44Z zi $
 
 PORTNAME=	nanoc
-PORTVERSION=	3.5.0
+PORTVERSION=	3.6.2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
