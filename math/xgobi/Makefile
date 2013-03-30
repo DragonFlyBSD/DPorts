@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xgobi
-# Date created:				5 December 2001
-# Whom:					Tony Maher <tonym@biolateral.com.au>
-#
-# $FreeBSD: ports/math/xgobi/Makefile,v 1.12 2012/11/17 05:59:32 svnexp Exp $
-#
+# Created by: Tony Maher <tonym@biolateral.com.au>
+# $FreeBSD: math/xgobi/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	xgobi
 PORTVERSION=	2002.06.20
@@ -16,7 +12,7 @@ EXTRACT_SUFX=	.sh.gz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical data visualisation tool
 
-NO_CDROM=	"Restrictive copyright (do not sell for profit)"
+NO_CDROM=	Restrictive copyright (do not sell for profit)
 
 PATCH_WRKSRC=	${WRKDIR}/${PORTNAME}/src
 CONFIGURE_WRKSRC=	${PATCH_WRKSRC}
