@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/games/domination/files/domination-FlashGUI.in,v 1.2 2012/11/17 05:57:36 svnexp Exp $
+# $FreeBSD: games/domination/files/domination-FlashGUI.in 305276 2012-10-04 19:40:39Z pawel $
 #
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
