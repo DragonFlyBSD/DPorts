@@ -1,9 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/R-cran-Zelig/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/R-cran-Zelig/Makefile 315174 2013-03-24 22:44:00Z wen $
 
 PORTNAME=	Zelig
-DISTVERSION=	4.1-1
-PORTREVISION=	1
+DISTVERSION=	4.1-3
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
