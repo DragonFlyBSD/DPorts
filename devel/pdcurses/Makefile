@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pdcurses
-# Date created:				1 Jul 2006
-# Whom:					alepulver
-#
-# $FreeBSD: ports/devel/pdcurses/Makefile,v 1.17 2012/11/17 05:56:37 svnexp Exp $
-#
+# Created by: alepulver
+# $FreeBSD: devel/pdcurses/Makefile 313760 2013-03-09 21:43:02Z bapt $
 
 PORTNAME=	pdcurses
 PORTVERSION=	3.4
@@ -35,12 +31,12 @@ CONFIGURE_ARGS+=--enable-${opt:tl}
 .endfor
 
 .if ${PORT_OPTIONS:MNEXTAW}
-LIB_DEPENDS+=	neXtaw.${XAWVER}:${PORTSDIR}/x11-toolkits/neXtaw
+LIB_DEPENDS+=	neXtaw:${PORTSDIR}/x11-toolkits/neXtaw
 CONFIGURE_ARGS+=--with-nextaw
 .endif
 
 .if ${PORT_OPTIONS:MXAW3D}
-LIB_DEPENDS+=	Xaw3d.${XAWVER}:${PORTSDIR}/x11-toolkits/Xaw3d
+LIB_DEPENDS+=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d
 CONFIGURE_ARGS+=--with-xaw3d
 .endif
 
