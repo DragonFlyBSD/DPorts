@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Net_DIME
-# Date created:			  05 April 2004
-# Whom:				  Thierry Thomas (<thierry@FreeBSD.org>)
-#
-# $FreeBSD: ports/net/pear-Net_DIME/Makefile,v 1.9 2012/11/17 06:00:14 svnexp Exp $
-#
+# Created by: Thierry Thomas (<thierry@FreeBSD.org>)
+# $FreeBSD: net/pear-Net_DIME/Makefile 314267 2013-03-15 07:09:50Z miwi $
 
 PORTNAME=	Net_DIME
 PORTVERSION=	1.0.2
@@ -14,12 +10,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	The PEAR::Net_DIME class implements DIME encoding
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-CATEGORY=	Net
-FILES=		DIME.php
-TESTS=		dime_message_test.php dime_record_test.php
-_TESTSDIR=	test
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
