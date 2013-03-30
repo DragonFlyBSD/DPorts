@@ -1,15 +1,11 @@
-# Ports collection makefile for:	rubygem-tilt
-# Date created:				10 February 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/rubygem-tilt/Makefile,v 1.6 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: devel/rubygem-tilt/Makefile 314084 2013-03-13 13:45:36Z rm $
 
 PORTNAME=	tilt
-PORTVERSION=	1.3.3
+PORTVERSION=	1.3.5
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	rm@FreeBSD.org
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Generic interface to multiple Ruby template engines
 
 LICENSE=	MIT
