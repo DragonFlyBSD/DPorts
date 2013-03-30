@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-YAML
-# Date created:			  11 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/pear-YAML/Makefile,v 1.3 2012/11/17 06:02:15 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: textproc/pear-YAML/Makefile 314443 2013-03-17 14:14:19Z miwi $
 
 PORTNAME=	YAML
 PORTVERSION=	1.0.6
@@ -11,7 +7,7 @@ CATEGORIES=	textproc www pear
 MASTER_SITES=	http://pear.symfony-project.com/get/
 PKGNAMEPREFIX=	pear-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	The Symfony YAML Component
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
