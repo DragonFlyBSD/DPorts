@@ -2,7 +2,7 @@
 # Date created:		2008-08-16
 # Whom:			Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: ports/irc/irssi-otr/Makefile,v 1.11 2012/11/17 05:58:29 svnexp Exp $
+# $FreeBSD: irc/irssi-otr/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	irssi-otr
@@ -24,7 +24,7 @@ RUN_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 USE_GNOME=	glib20
 USE_PKGCONFIG=	build
