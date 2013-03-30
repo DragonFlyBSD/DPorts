@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: www/dillo/Makefile 313740 2013-03-09 18:09:24Z tmseck $
+# $FreeBSD: www/dillo/Makefile 313842 2013-03-10 21:18:01Z tmseck $
 #
 # Tunables:
 # WITH_DILLO_SSL: enable experimental SSL support
@@ -17,6 +17,9 @@ COMMENT=	A fast, small graphical Web browser built upon GTK+
 RUN_DEPENDS=	wget:${PORTSDIR}/ftp/wget
 LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
+
+DEPRECATED=	dillo1 is no longer actively maintained. Please consider using www/dillo2 instead
+EXPIRATION_DATE=	2013-06-30
 
 USE_BZIP2=	yes
 USE_GNOME=	gtk12
