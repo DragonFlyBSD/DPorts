@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xcd
-# Date created:         22 November 1994
-# Whom:                 jmz
-#
-# $FreeBSD: ports/audio/xcd/Makefile,v 1.36 2012/11/17 05:54:47 svnexp Exp $
-#
+# Created by: Jean-Marc Zucconi <jmz@FreeBSD.org>
+# $FreeBSD: audio/xcd/Makefile 314074 2013-03-13 11:54:25Z danfe $
 
 PORTNAME=	xcd
 PORTVERSION=	1.7
@@ -13,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	jmz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A Tcl/Tk CD player
+COMMENT=	Tcl/Tk CD player
 
 USE_TK=		yes
 WRKSRC=		${WRKDIR}/xcd
