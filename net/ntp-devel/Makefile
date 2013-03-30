@@ -2,7 +2,7 @@
 # Date created:		Di   5 Mai 1998 21:31:03 CEST
 # Whom:			andreas
 #
-# $FreeBSD: net/ntp-devel/Makefile 313036 2013-02-27 07:13:03Z cy $
+# $FreeBSD: net/ntp-devel/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	ntp
@@ -21,7 +21,7 @@ LATEST_LINK=	${PORTNAME}-dev
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	automake libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 MAN5=		ntp.conf.5 ntp.keys.5
 MAN8=		ntp-keygen.8 ntpd.8 ntpdc.8 ntpq.8 sntp.8 ntp-wait.8
