@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/ports-mgmt/portupgrade/Makefile,v 1.287 2013/01/24 21:45:08 svnexp Exp $
+# $FreeBSD: ports-mgmt/portupgrade/Makefile 314498 2013-03-17 22:04:00Z bdrewery $
 
 PORTNAME=	portupgrade
-PORTVERSION=	2.4.10.4
+PORTVERSION=	2.4.10.5
 PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	ports-mgmt
@@ -54,8 +54,11 @@ INSTALL_TARGET=		install
 INSTALL_TARGET+=	install-doc
 .endif
 
+# Reported that ruby-bdb is BROKEN with 2.0
+.if ${RUBY_VER} != 2.0
 # For PKG_DBDRIVER={bdb_btree,bdb_hash}
 RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/bdb.so:${PORTSDIR}/databases/ruby-bdb
+.endif
 
 # parsedate is needed for date globbing
 .if ${RUBY_VER} == 1.9
