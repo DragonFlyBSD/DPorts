@@ -2,7 +2,7 @@
 #
 # tracd startup
 #
-# $FreeBSD: ports/www/trac/files/tracd.in,v 1.3 2012/11/17 06:03:07 svnexp Exp $
+# $FreeBSD: www/trac/files/tracd.in 300897 2012-07-14 14:29:18Z beat $
 
 # PROVIDE: tracd
 # REQUIRE: LOGIN
