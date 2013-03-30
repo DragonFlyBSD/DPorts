@@ -1,5 +1,5 @@
 # Created by: Joel Sutton <jsutton@webnet.com.au>
-# $FreeBSD: emulators/atari800/Makefile 313080 2013-02-28 03:48:37Z miwi $
+# $FreeBSD: emulators/atari800/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	atari800
 PORTVERSION=	2.0.3
@@ -16,7 +16,7 @@ COMMENT=	Atari 8-bit computer emulator
 BUILD_DEPENDS=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
-RESTRICTED=	"xf25 contains copyright ROMs and cannot be distributed."
+RESTRICTED=	xf25 contains copyright ROMs and cannot be distributed.
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
