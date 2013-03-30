@@ -2,7 +2,7 @@
 # Date created:		15 Jan 2011
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/glosm/Makefile,v 1.5 2012/11/17 05:58:08 svnexp Exp $
+# $FreeBSD: graphics/glosm/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	glosm
@@ -19,7 +19,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		expat.6:${PORTSDIR}/textproc/expat2
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_GL=		gl
 USE_SDL=	sdl
 MAKE_JOBS_SAFE=	yes
