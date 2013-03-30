@@ -2,7 +2,7 @@
 # Date created:				5 May 2003
 # Whom:					Edwin Groothuis
 #
-# $FreeBSD: ports/games/bomberclone/Makefile,v 1.33 2012/11/17 05:57:33 svnexp Exp $
+# $FreeBSD: games/bomberclone/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	bomberclone
