@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pear-HTML_Crypt
-# Date created:		2008-09-22
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pear-HTML_Crypt/Makefile,v 1.4 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: security/pear-HTML_Crypt/Makefile 314255 2013-03-15 06:28:27Z miwi $
 
 PORTNAME=	HTML_Crypt
 PORTVERSION=	1.3.4
@@ -12,11 +8,10 @@ CATEGORIES=	security www pear
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Encrypts text which is later decoded using JavaScript on the client side
 
-BUILD_DEPENDS+=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS+=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
+BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-FILES=		HTML/Crypt.php
-EXAMPLES=	html-abc.php html-nojavascript.php html.php simple.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
