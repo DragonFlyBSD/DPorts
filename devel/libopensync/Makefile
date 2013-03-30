@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/libopensync/Makefile 314135 2013-03-14 07:12:04Z kwm $
+# $FreeBSD: devel/libopensync/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	libopensync
 PORTVERSION=	0.39
@@ -18,7 +18,7 @@ CONFLICTS=	libopensync-0.22*
 USE_SQLITE=	3
 USE_PKGCONFIG=	yes
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-Wno-dev
 USE_GNOME=	glib20 libxml2
 USE_PYTHON=	yes
