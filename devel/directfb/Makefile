@@ -2,7 +2,7 @@
 # Date created:				19 October 2002
 # Whom:					Devaux Fabien <fab@gcu.info>
 #
-# $FreeBSD: ports/devel/directfb/Makefile,v 1.46 2013/02/14 10:22:06 svnexp Exp $
+# $FreeBSD: devel/directfb/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	directfb
@@ -31,7 +31,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_PERL5_BUILD=yes
 USE_NCURSES=	yes
