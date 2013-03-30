@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: ports/math/ufc/Makefile,v 1.4 2013/01/31 14:01:29 svnexp Exp $
+# $FreeBSD: math/ufc/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	ufc
 PORTVERSION=	2.0.5
@@ -15,7 +15,7 @@ LIB_DEPENDS=	boost_math_c99:${PORTSDIR}/devel/boost-libs
 
 # LICENSE=	public domain
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_PYTHON=	-2.7
 PYDISTUTILS_PKGNAME=	ufc
 
