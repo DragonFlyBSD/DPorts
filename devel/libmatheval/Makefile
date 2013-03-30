@@ -2,12 +2,11 @@
 # Date created:				4 July 2004
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libmatheval/Makefile,v 1.15 2012/11/17 05:55:55 svnexp Exp $
+# $FreeBSD: devel/libmatheval/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	libmatheval
-PORTVERSION=	1.1.7
-PORTREVISION=	1
+PORTVERSION=	1.1.10
 CATEGORIES=	devel math
 MASTER_SITES=	GNU
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -21,7 +20,7 @@ LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	MAKEINFO="makeinfo --no-split"
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
 INFO=		libmatheval
