@@ -2,7 +2,7 @@
 # Date created:		12 Jul 2007
 # Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
 #
-# $FreeBSD: games/memonix/Makefile 313182 2013-03-02 03:55:25Z eadler $
+# $FreeBSD: games/memonix/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	memonix
@@ -27,7 +27,7 @@ LICENSE_DISTFILE_unknown=	memx16.tar.gz
 LICENSE_DISTFILE_GPLv2=	${DISTNAME}${EXTRACT_SUFX}
 LICENSE_FILE_GPLv2=	${WRKSRC}/License.txt
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_ZIP=	yes
 USE_SDL=	sdl mixer image
 USE_GL=		yes
