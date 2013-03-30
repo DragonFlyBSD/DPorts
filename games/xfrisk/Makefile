@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xfrisk
-# Date created:        20 April 1997
-# Whom:                Matthew Hunt <mph@pobox.com>
-#
-# $FreeBSD: ports/games/xfrisk/Makefile,v 1.27 2012/11/17 05:57:57 svnexp Exp $
-#
+# Created by: Matthew Hunt <mph@pobox.com>
+# $FreeBSD: games/xfrisk/Makefile 313760 2013-03-09 21:43:02Z bapt $
 
 PORTNAME=	xfrisk
 PORTVERSION=	1.2
@@ -16,7 +12,7 @@ DISTNAME=	XFrisk-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A multi-player networked Risk game for X11
 
-LIB_DEPENDS=	Xaw3d.${XAWVER}:${PORTSDIR}/x11-toolkits/Xaw3d
+LIB_DEPENDS=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d
 
 NO_CDROM=	Possible trademark infringement
 
