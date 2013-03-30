@@ -1,5 +1,5 @@
 # Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
-# $FreeBSD: www/serf/Makefile 313125 2013-02-28 20:32:19Z ohauer $
+# $FreeBSD: www/serf/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	serf
 PORTVERSION=	1.2.0
@@ -17,7 +17,7 @@ MAKE_JOBS_SAFE=	yes
 PROJECTHOST=	serf
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS+=	--with-apr=${LOCALBASE}/bin/apr-1-config \
