@@ -3,7 +3,7 @@
 # Date created:			Apr 4, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/science/libctl/Makefile,v 1.26 2012/11/17 06:00:58 svnexp Exp $
+# $FreeBSD: science/libctl/Makefile 314444 2013-03-17 14:15:48Z bdrewery $
 #
 
 PORTNAME=	libctl
@@ -24,6 +24,10 @@ USE_LDCONFIG=	yes
 MAN1=		gen-ctl-io.1
 
 .include <bsd.port.pre.mk>
+
+.if ${ARCH} == "sparc64"
+BROKEN=		does not build
+.endif
 
 post-install:
 .if !defined(NOPORTDOCS)
