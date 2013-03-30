@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/graphics/agg/Makefile,v 1.39 2012/11/17 05:58:00 svnexp Exp $
+# $FreeBSD: graphics/agg/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	agg
 PORTVERSION=	2.5
@@ -16,7 +16,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 
 USE_XORG=	x11
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_SDL=	sdl
 USE_GMAKE=	yes
 USE_PKGCONFIG=	yes
