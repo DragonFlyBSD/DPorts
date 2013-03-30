@@ -1,17 +1,13 @@
-# New ports collection makefile for:	SVN-S4
-# Date created:	   16 January 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-SVN-S4/Makefile,v 1.23 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-SVN-S4/Makefile 313993 2013-03-12 17:43:25Z culot $
 
 PORTNAME=	SVN-S4
-PORTVERSION=	1.054
+PORTVERSION=	1.055
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	gary@hayers.org
 COMMENT=	Wrapper for subversion program
 
 LICENSE=	ART20 LGPL3
