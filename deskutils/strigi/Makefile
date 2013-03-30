@@ -1,18 +1,15 @@
 # Created by: Tilman Keskinoz <arved@FreeBSD.org>
-# $FreeBSD: ports/deskutils/strigi/Makefile,v 1.21 2013/01/31 14:01:26 svnexp Exp $
+# $FreeBSD: deskutils/strigi/Makefile 315158 2013-03-24 20:26:48Z makc $
 
 PORTNAME=	strigi
-PORTVERSION=	0.7.7
-PORTREVISION=	5
+PORTVERSION=	0.7.8
 CATEGORIES=	deskutils
-MASTER_SITES=	http://rdieter.fedorapeople.org/strigi/
-#MASTER_SITES=	http://www.vandenoever.info/software/strigi/ \
-#		SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
+MASTER_SITES=	http://www.vandenoever.info/software/strigi/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Desktop searching program
 
-LIB_DEPENDS=	avcodec.1:${PORTSDIR}/multimedia/ffmpeg \
+LIB_DEPENDS=	avcodec${FFMPEG_SUFFIX}:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFIX} \
 		clucene-core:${PORTSDIR}/textproc/clucene \
 		dbus-1:${PORTSDIR}/devel/dbus \
 		exiv2.12:${PORTSDIR}/graphics/exiv2 \
@@ -20,11 +17,24 @@ LIB_DEPENDS=	avcodec.1:${PORTSDIR}/multimedia/ffmpeg \
 
 USE_QT4=	corelib gui dbus moc_build uic_build qmake_build rcc_build
 USE_BZIP2=	yes
-USE_GNOME=	libxml2 pkgconfig
+USE_GNOME=	libxml2
+USE_PKGCONFIG=	build
 USE_FAM=	yes
 USE_LDCONFIG=	yes
-USE_CMAKE=	yes
+USES=		cmake:outsource
 MAKE_JOBS_UNSAFE=	yes
+
+# supported versions: ffmpeg, ffmpeg1, ffmpeg-devel
+# corresponding FFMPEG_SUFFIX: '', '1', '-devel'
+FFMPEG_SUFFIX?=	#
+CMAKE_ARGS+=	-DFFMPEG_SUFFIX:STRING="${FFMPEG_SUFFIX}"
+
+.if !empty(FFMPEG_SUFFIX)
+# Reorder include directories to allow build with multiple ffmpeg installed.
+# This patch must NOT be used, if ffmpeg headers are installed
+# directly to ${LOCALBASE}/include
+EXTRA_PATCHES+=	${FILESDIR}/extrapatch-libstreamanalyzer__plugins__endplugins__CMakeLists.txt
+.endif
 
 post-patch:
 	${MKDIR} ${WRKSRC}
