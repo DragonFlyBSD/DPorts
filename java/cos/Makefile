@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cos
-# Date created:		1999/07/05
-# Whom:			Jose Marques <noway@nohow.demon.co.uk>
-#
-# $FreeBSD: ports/java/cos/Makefile,v 1.16 2012/11/17 05:58:41 svnexp Exp $
-#
+# Created by: Jose Marques <noway@nohow.demon.co.uk>
+# $FreeBSD: java/cos/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	cos
 PORTVERSION=	2002.11.05
@@ -21,7 +17,7 @@ USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
 USE_JAVA=	yes
 NO_BUILD=	yes
-RESTRICTED=	"Special conditions apply for commercial use, see licence"
+RESTRICTED=	Special conditions apply for commercial use, see licence
 DATAFILES=	readme.txt license.txt doc
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
