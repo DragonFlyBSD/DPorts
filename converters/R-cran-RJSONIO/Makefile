@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: converters/R-cran-RJSONIO/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: converters/R-cran-RJSONIO/Makefile 315166 2013-03-24 21:23:35Z tota $
 
 PORTNAME=	RJSONIO
-DISTVERSION=	1.0-1
-PORTREVISION=	2
+DISTVERSION=	1.0-2
 CATEGORIES=	converters
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -14,8 +13,5 @@ LICENSE=	BSD
 
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
-
-post-patch:
-	${REINPLACE_CMD} "s/std::snprintf/snprintf/" ${WRKSRC}/src/libjson/Source/NumberToString.h
 
 .include <bsd.port.mk>
