@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/mpdcon/Makefile,v 1.11 2012/11/17 05:54:39 svnexp Exp $
+# $FreeBSD: audio/mpdcon/Makefile 314074 2013-03-13 11:54:25Z danfe $
 
 PORTNAME=	mpdcon
 PORTVERSION=	1.1.99
@@ -8,17 +8,18 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/1.2%20beta%201
 DISTNAME=	MPDCon-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A GNUstep MPD client
+COMMENT=	MPD client for GNUstep
 
 LICENSE=	GPLv2
 
-USE_GNUSTEP=	yes
+USE_GNUSTEP=		yes
 USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
 post-patch:
-	${REINPLACE_CMD} -e 's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
-		${WRKSRC}/GNUmakefile
+	${REINPLACE_CMD} -e \
+		's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
+			${WRKSRC}/GNUmakefile
 
 .include <bsd.port.mk>
