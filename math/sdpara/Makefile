@@ -2,7 +2,7 @@
 # Date created:                         March 17 2003
 # Whom:                                 NAKATA, Maho <maho@FreeBSD.org>
 #
-# $FreeBSD: ports/math/sdpara/Makefile,v 1.32 2012/11/17 05:59:31 svnexp Exp $
+# $FreeBSD: math/sdpara/Makefile 301684 2012-07-29 11:17:02Z cs $
 #
 
 PORTNAME=	sdpara
