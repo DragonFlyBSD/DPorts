@@ -2,7 +2,7 @@
 # Date created:		15 Jan 2012
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/games/meandmyshadow/Makefile,v 1.8 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/meandmyshadow/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	meandmyshadow
@@ -17,7 +17,7 @@ COMMENT=	Me and My Shadow puzzle/platform game
 
 LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_SDL=	sdl ttf image mixer image gfx
 MAKE_JOBS_SAFE=	yes
 
