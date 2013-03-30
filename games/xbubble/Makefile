@@ -2,11 +2,11 @@
 # Date created:        2002-11-03
 # Whom:                Klaus Goger <klaus.goger@reflex.at>
 #
-# $FreeBSD: ports/games/xbubble/Makefile,v 1.16 2012/11/17 05:57:56 svnexp Exp $
+# $FreeBSD: games/xbubble/Makefile 313761 2013-03-09 21:49:44Z bdrewery $
 
 PORTNAME=	xbubble
 PORTVERSION=	0.5.8
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GENTOO}
 MASTER_SITE_SUBDIR=	distfiles
