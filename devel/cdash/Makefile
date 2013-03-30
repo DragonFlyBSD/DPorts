@@ -2,7 +2,7 @@
 # Date created:				12 August 2011
 # Whom:					gahr
 #
-# $FreeBSD: ports/devel/cdash/Makefile,v 1.6 2012/11/17 05:55:36 svnexp Exp $
+# $FreeBSD: devel/cdash/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	cdash
@@ -22,8 +22,7 @@ OPTIONS_MULTI_DB=	MYSQL PGSQL
 OPTIONS_DEFAULT=MYSQL
 
 USE_ZIP=	yes
-USE_CMAKE=	yes
-CMAKE_OUTSOURCE=yes
+USES=		cmake:outsource
 CMAKE_ARGS+=	-DCDASH_DB_NAME:STRING=cdash \
    		-DCDASH_DB_LOGIN:STRING=cdash \
    		-DCDASH_DB_TYPE:STRING=${DB_TYPE}
