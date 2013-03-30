@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: ports/games/odamex/Makefile,v 1.16 2013/02/24 17:27:16 svnexp Exp $
+# $FreeBSD: games/odamex/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	odamex
 PORTVERSION=	0.6.2
@@ -12,7 +12,7 @@ COMMENT=	The Standard in Online Multiplayer Doom
 
 USE_BZIP2=	yes
 USE_SDL=	sdl mixer
-USE_CMAKE=	yes
+USES=		cmake
 USE_DOS2UNIX=	CMakeLists.txt odalaunch/CMakeLists.txt common/d_main.cpp
 
 OPTIONS_DEFINE=	LAUNCHER
