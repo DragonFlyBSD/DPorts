@@ -1,8 +1,9 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: textproc/elasticsearch/Makefile 313601 2013-03-07 18:31:55Z tj $
+# $FreeBSD: textproc/elasticsearch/Makefile 313904 2013-03-11 14:14:30Z tj $
 
 PORTNAME=	elasticsearch
 PORTVERSION=	0.20.5
+PORTREVISION=	1
 CATEGORIES=	textproc java devel
 MASTER_SITES=	http://download.elasticsearch.org/${PORTNAME}/${PORTNAME}/ \
 		http://mirrors.rit.edu/zi/
@@ -45,7 +46,9 @@ GROUPS=		${SEARCHGROUP}
 ELASTIC_DBDIR=	/var/db/elasticsearch
 ELASTIC_LOGDIR=	/var/log/elasticsearch
 
-SUB_LIST=	SEARCHUSER=${SEARCHUSER} SEARCHGROUP=${SEARCHGROUP}
+SUB_LIST=	SEARCHUSER=${SEARCHUSER} \
+		SEARCHGROUP=${SEARCHGROUP} \
+		PORTVERSION=${PORTVERSION}
 SUB_FILES=	elasticsearch-plugin
 PLIST_SUB=	SIGAR_ARCH=${SIGAR_ARCH} \
 		SEARCHUSER=${SEARCHUSER} \

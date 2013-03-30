@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: textproc/elasticsearch/files/elasticsearch-plugin.in 308491 2012-12-08 20:48:41Z tj $
+# $FreeBSD: textproc/elasticsearch/files/elasticsearch-plugin.in 313904 2013-03-11 14:14:30Z tj $
 . /etc/rc.subr
 
 name=elasticsearch
@@ -10,7 +10,7 @@ load_rc_config $name
 : ${elasticsearch_config:="%%PREFIX%%/etc/elasticsearch/elasticsearch.yml"}
 
 ES_LIB="%%PREFIX%%/lib/elasticsearch"
-ES_CLASSPATH=$ES_LIB/elasticsearch-0.19.9.jar:$ES_LIB/*:$ES_LIB/sigar/*
+ES_CLASSPATH=$ES_LIB/elasticsearch-%%PORTVERSION%%.jar:$ES_LIB/*:$ES_LIB/sigar/*
 
 JAVA=%%LOCALBASE%%/bin/java
 
