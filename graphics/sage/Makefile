@@ -2,7 +2,7 @@
 # Date created:        4 February 2005
 # Whom:                Janni
 #
-# $FreeBSD: ports/graphics/sage/Makefile,v 1.16 2012/11/17 05:58:22 svnexp Exp $
+# $FreeBSD: graphics/sage/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	sage
@@ -17,7 +17,7 @@ COMMENT=	OpenGL extension library
 CONFIGURE_ARGS=	--program-transform-name=
 GNU_CONFIGURE=	yes
 USE_GL=		yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_SDL=	sdl
 
