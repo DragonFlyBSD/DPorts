@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/clang-devel/files/patch-include_llvm_ADT_Triple.h,v 1.1 2013/01/10 18:52:06 svnexp Exp $
+$FreeBSD: lang/clang-devel/files/patch-include_llvm_ADT_Triple.h 310192 2013-01-10 18:01:28Z brooks $
 
 --- include/llvm/ADT/Triple.h.orig
 +++ include/llvm/ADT/Triple.h

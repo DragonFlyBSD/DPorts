@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/clang-devel/files/patch-tools_clang_lib_Analysis_PrintfFormatString.cpp,v 1.3 2013/01/10 18:52:06 svnexp Exp $
+$FreeBSD$
 
 --- tools/clang/lib/Analysis/PrintfFormatString.cpp.orig
 +++ tools/clang/lib/Analysis/PrintfFormatString.cpp

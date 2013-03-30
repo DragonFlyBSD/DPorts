@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/clang-devel/files/patch-tools_clang_include_clang_Analysis_Analyses_FormatString.h,v 1.4 2013/01/10 18:52:06 svnexp Exp $
+$FreeBSD: lang/clang-devel/files/patch-tools_clang_include_clang_Analysis_Analyses_FormatString.h 310192 2013-01-10 18:01:28Z brooks $
 
 --- tools/clang/include/clang/Analysis/Analyses/FormatString.h.orig
 +++ tools/clang/include/clang/Analysis/Analyses/FormatString.h

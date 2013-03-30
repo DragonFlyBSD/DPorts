@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/clang-devel/files/patch-tools_clang_tools_scan-build_scan-build,v 1.2 2012/11/17 05:58:48 svnexp Exp $
+$FreeBSD: /tmp/pcvs/ports/lang/clang-devel/files/patch-tools_clang_tools_scan-build_scan-build,v 1.1 2010-10-08 14:00:31 brooks Exp $
 
 --- tools/clang/tools/scan-build/scan-build.orig
 +++ tools/clang/tools/scan-build/scan-build
