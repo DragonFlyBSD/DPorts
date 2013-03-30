@@ -3,7 +3,7 @@
 # Whom:					scheidell@freebsd.org
 # Credits:				rick@wzoeterwoude.net
 #
-# $FreeBSD: ports/databases/php52-rrdtool/Makefile,v 1.5 2012/11/17 05:55:19 svnexp Exp $
+# $FreeBSD: databases/php52-rrdtool/Makefile 314420 2013-03-17 11:29:38Z scheidell $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.00
@@ -15,7 +15,7 @@ MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/contrib/ \
 PKGNAMEPREFIX=	php52-
 DISTNAME=	php_rrdtool
 
-MAINTAINER=	scheidell@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A php 52 rrdtool glue
 
 LIB_DEPENDS=	rrd:${PORTSDIR}/databases/rrdtool
