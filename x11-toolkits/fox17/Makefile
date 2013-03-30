@@ -1,5 +1,5 @@
 # Whom: gahr
-# $FreeBSD: ports/x11-toolkits/fox17/Makefile,v 1.28 2012/12/17 13:40:50 svnexp Exp $
+# $FreeBSD: x11-toolkits/fox17/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	fox
 PORTVERSION=	1.7.37
@@ -23,7 +23,7 @@ DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${MAJORVER}
 
 USE_GL=		glut
 USE_XORG=	sm
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
