@@ -1,9 +1,5 @@
-# Ports collection makefile for:  HTTP_WebDAV_Server
-# Date created:			  14 Nov 2008
-# Whom:				  Wen Heping<wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/pear-HTTP_WebDAV_Server/Makefile,v 1.3 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Wen Heping<wenheping@gmail.com>
+# $FreeBSD: www/pear-HTTP_WebDAV_Server/Makefile 314214 2013-03-15 01:28:32Z miwi $
 
 PORTNAME=	HTTP_WebDAV_Server
 PORTVERSION=	1.0.0.r4
@@ -13,14 +9,7 @@ DISTNAME=	${PORTNAME}-1.0.0RC4
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	WebDAV Server Baseclass
 
-CATEGORY=	HTTP/WebDAV
-FILES=		Server.php Server/Filesystem.php \
-		Tools/_parse_lockinfo.php \
-		Tools/_parse_propfind.php \
-		Tools/_parse_proppatch.php \
-		db/Fileserver.sql
-DOCS=		README dav.txt
-_DOCSDIR=	.
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
