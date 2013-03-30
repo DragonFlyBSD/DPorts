@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: ports/www/pear-UDDI/Makefile,v 1.7 2013/02/18 09:28:40 svnexp Exp $
+# $FreeBSD: www/pear-UDDI/Makefile 314455 2013-03-17 15:28:55Z miwi $
 
 PORTNAME=	UDDI
 PORTVERSION=	0.2.4
@@ -10,7 +10,7 @@ COMMENT=	PEAR UDDI for PHP
 
 BUILD_DEPENDS=	${PEARDIR}/XML/Parser.php:${PORTSDIR}/devel/pear-XML_Parser \
 		${PEARDIR}/XML/Util.php:${PORTSDIR}/devel/pear-XML_Util
-RUN_DEPENDS:=	${PEARDIR}/XML/Parser.php:${PORTSDIR}/devel/pear-XML_Parser \
+RUN_DEPENDS=	${PEARDIR}/XML/Parser.php:${PORTSDIR}/devel/pear-XML_Parser \
 		${PEARDIR}/XML/Util.php:${PORTSDIR}/devel/pear-XML_Util
 
 PEAR_AUTOINSTALL=	yes
