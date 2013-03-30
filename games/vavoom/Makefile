@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: ports/games/vavoom/Makefile,v 1.69 2013/01/27 10:43:30 svnexp Exp $
+# $FreeBSD: games/vavoom/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	vavoom
 PORTVERSION=	1.33
@@ -14,7 +14,7 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 
 OPTIONS_SINGLE=	HWAPI
 OPTIONS_SINGLE_HWAPI=	ALLEGRO SDL
