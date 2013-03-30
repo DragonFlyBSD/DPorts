@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/ico/Makefile,v 1.5 2013/02/13 22:39:38 svnexp Exp $
+# $FreeBSD: x11/ico/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	ico
 PORTVERSION=	1.0.4
@@ -8,9 +8,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Displays a wire-frame rotating plyhedron
 
 XORG_CAT=	app
-USE_XORG=	x11
-
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
+USE_XORG=	x11 xorg-macros
 
 PLIST_FILES=	bin/ico
 
