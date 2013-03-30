@@ -1,9 +1,5 @@
-# New ports collection makefile for:	deng
-# Date created:		25 Aug 2004
-# Whom:			Igor Pokrovsky <ip@doom.homeunix.org>
-#
-# $FreeBSD: ports/games/deng/Makefile,v 1.36 2012/11/17 05:57:35 svnexp Exp $
-#
+# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
+# $FreeBSD: games/deng/Makefile 314736 2013-03-20 14:26:46Z makc $
 
 PORTNAME=	deng
 PORTVERSION=	1.9.0b6.9
@@ -12,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Doomsday%20Engine/1.9.0-beta6.9
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/b/-beta/}
 
-MAINTAINER=	yuri.pankov@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Enhanced Doom, Heretic, and Hexen source port
 
 BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
@@ -25,26 +21,25 @@ USE_LDCONFIG=	yes
 USE_SDL=	sdl mixer net
 USE_XORG=	x11
 USE_PYTHON=	yes
-
-BUILDDIR=	${WRKSRC}/doomsday/portbuild
-BUILD_WRKSRC=	${BUILDDIR}
-INSTALL_WRKSRC=	${BUILDDIR}
-
-USE_CMAKE=	yes
+USES=		cmake:outsource
+CMAKE_SOURCE_PATH=	${WRKSRC}/doomsday
 CFLAGS+=	-I${LOCALBASE}/include/libpng15
 CMAKE_ARGS+=	-DCMAKE_EXE_LINKER_FLAGS:STRING="-Wl,--export-dynamic"
 
 MAN6=		doomsday.6
 
-OPTIONS=	OPENAL "Build OpenAL sound plugin" off
+OPTIONS_DEFINE=	OPENAL DOCS
+OPTIONS_DEFAULT=	DOCS
+OPENAL_DESC=	Build OpenAL sound plugin
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_OPENAL) || exists(${LOCALBASE}/lib/libopenal.so)
+.if ${PORT_OPTIONS:MOPENAL}
 USE_OPENAL=	al
 CMAKE_ARGS+=	-DBUILDOPENAL:BOOL=ON
 PLIST_SUB=	OPENAL=""
 .else
+CMAKE_ARGS+=	-DBUILDOPENAL:BOOL=OFF
 PLIST_SUB=	OPENAL="@comment "
 .endif
 
@@ -54,18 +49,14 @@ post-patch:
 		-e '/TARGET_LINK_LIBRARIES/s/dl//' \
 		${WRKSRC}/doomsday/CMakeLists.txt
 
-do-configure:
-	@${MKDIR} ${BUILDDIR}
-	@cd ${BUILDDIR}; ${SETENV} ${CMAKE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} ..
-
 post-install:
 	@${LN} -s ${PREFIX}/bin/doomsday ${PREFIX}/bin/deng
 	${INSTALL_MAN} ${WRKSRC}/doomsday/engine/doc/doomsday.6 ${MANPREFIX}/man/man6/
-.ifndef (NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in LICENSE changelog.txt cnsname.txt cvars.txt deddoc.txt dhistory.txt naming.txt network.txt
 	${INSTALL_DATA} ${WRKSRC}/doomsday/engine/doc/${i} ${DOCSDIR}/
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
