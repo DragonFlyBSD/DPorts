@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xstdcmap/Makefile,v 1.5 2013/02/14 14:01:04 svnexp Exp $
+# $FreeBSD: x11/xstdcmap/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	xstdcmap
 PORTVERSION=	1.0.3
@@ -10,9 +10,7 @@ COMMENT=	X standard colormap utility
 LICENSE=	MIT
 
 XORG_CAT=	app
-USE_XORG=	xmu x11
-
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
+USE_XORG=	xmu x11 xorg-macros
 
 PLIST_FILES=	bin/xstdcmap
 
