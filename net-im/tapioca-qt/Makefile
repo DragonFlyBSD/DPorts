@@ -2,7 +2,7 @@
 # Date created:					2008-02-10
 # Whom:						arved
 #
-# $FreeBSD: ports/net-im/tapioca-qt/Makefile,v 1.16 2012/11/17 06:00:29 svnexp Exp $
+# $FreeBSD: net-im/tapioca-qt/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	tapioca-qt
 PORTVERSION=	0.14.1
@@ -20,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/../COPYING
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/build
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_SOURCE_PATH=	..
 USE_QT4=	corelib qmake_build uic_build moc_build rcc_build
 USE_LDCONFIG=	yes
