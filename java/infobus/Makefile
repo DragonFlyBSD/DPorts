@@ -1,5 +1,5 @@
 # Created by: Jose Marques
-# $FreeBSD: ports/java/infobus/Makefile,v 1.18 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/infobus/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	infobus
 PORTVERSION=	1.2
@@ -16,7 +16,7 @@ JAVA_VERSION=	1.6+
 
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
-NO_CDROM=	"See the license"
+NO_CDROM=	See the license
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	*
