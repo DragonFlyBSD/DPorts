@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/listres/Makefile,v 1.5 2013/02/13 23:10:13 svnexp Exp $
+# $FreeBSD: x11/listres/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	listres
 PORTVERSION=	1.0.3
@@ -8,9 +8,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	List resources in widgets
 
 XORG_CAT=	app
-USE_XORG=	xproto xt xmu xaw
-
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
+USE_XORG=	xproto xt xmu xaw xorg-macros
 
 PLIST_FILES=	bin/listres
 
