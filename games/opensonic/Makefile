@@ -2,7 +2,7 @@
 # Date created:		27 Aug 2009
 # Whom:			Stas Timokhin <stast@bsdportal.ru>
 #
-# $FreeBSD: ports/games/opensonic/Makefile,v 1.7 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/opensonic/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	opensonic
@@ -22,7 +22,7 @@ DESKTOP_ENTRIES="${PORTNAME}" \
 		"Game;KidsGame;" \
 		"false"
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ENV+=	OPENSNC_ALLEGRO_LIBS="`allegro-config --libs`" OPENSNC_ALLEGRO_VERSION="`allegro-config --version`"
 
 CFLAGS+=	-I${LOCALBASE}/include
