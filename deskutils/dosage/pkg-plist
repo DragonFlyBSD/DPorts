@@ -30,6 +30,9 @@ bin/mainline
 %%PYTHON_SITELIBDIR%%/dosagelib/helpers.py
 %%PYTHON_SITELIBDIR%%/dosagelib/helpers.pyc
 %%PYTHON_SITELIBDIR%%/dosagelib/helpers.pyo
+%%PYTHON_SITELIBDIR%%/dosagelib/languages.py
+%%PYTHON_SITELIBDIR%%/dosagelib/languages.pyc
+%%PYTHON_SITELIBDIR%%/dosagelib/languages.pyo
 %%PYTHON_SITELIBDIR%%/dosagelib/loader.py
 %%PYTHON_SITELIBDIR%%/dosagelib/loader.pyc
 %%PYTHON_SITELIBDIR%%/dosagelib/loader.pyo
@@ -57,6 +60,9 @@ bin/mainline
 %%PYTHON_SITELIBDIR%%/dosagelib/plugins/comicfury.py
 %%PYTHON_SITELIBDIR%%/dosagelib/plugins/comicfury.pyc
 %%PYTHON_SITELIBDIR%%/dosagelib/plugins/comicfury.pyo
+%%PYTHON_SITELIBDIR%%/dosagelib/plugins/comicgenesis.py
+%%PYTHON_SITELIBDIR%%/dosagelib/plugins/comicgenesis.pyc
+%%PYTHON_SITELIBDIR%%/dosagelib/plugins/comicgenesis.pyo
 %%PYTHON_SITELIBDIR%%/dosagelib/plugins/creators.py
 %%PYTHON_SITELIBDIR%%/dosagelib/plugins/creators.pyc
 %%PYTHON_SITELIBDIR%%/dosagelib/plugins/creators.pyo
