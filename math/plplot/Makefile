@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: ports/math/plplot/Makefile,v 1.81 2013/02/04 14:48:52 svnexp Exp $
+# $FreeBSD: math/plplot/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	plplot
 PORTVERSION=	5.9.9
@@ -26,7 +26,7 @@ OPTIONS_DEFAULT=	THREADS X11
 USE_GNOME=	pango
 USE_PERL5_BUILD=yes
 USE_GHOSTSCRIPT=yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DENABLE_java:BOOL=OFF -DENABLE_octave:BOOL=OFF \
 		-DENABLE_pdl:BOOL=OFF -DENABLE_ada:BOOL=OFF \
 		-DENABLE_d:BOOL=OFF -DENABLE_ocaml:BOOL=OFF \
