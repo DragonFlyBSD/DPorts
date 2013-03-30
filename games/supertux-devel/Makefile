@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/supertux-devel/Makefile,v 1.3 2012/11/17 05:57:54 svnexp Exp $
+# $FreeBSD: games/supertux-devel/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	supertux
 PORTVERSION=	0.3.3
@@ -18,7 +18,7 @@ USE_BZIP2=	yes
 USE_SDL=	image mixer
 USE_OPENAL=	al
 USE_GL=		glew
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 
 post-patch:
