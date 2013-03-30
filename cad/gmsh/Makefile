@@ -1,8 +1,9 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/gmsh/Makefile 313766 2013-03-09 22:22:52Z stephen $
+# $FreeBSD: cad/gmsh/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	gmsh
 PORTVERSION=	2.7.0
+PORTREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://www.geuz.org/gmsh/src/ \
 		http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/
@@ -27,15 +28,14 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}-source
 SLAVEDIRS=	cad/gmsh-occ
 
 USE_FORTRAN=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_GMAKE=	yes
 USE_GL=		yes
 ALL_TARGET=	all
 
 MAN1=		gmsh.1
 
-CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=YES \
-		-DCMAKE_VERBOSE_MAKEFILE:BOOL=YES
+CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=YES
 
 .if !defined(WITHOUT_STATIC_LIB)
 CMAKE_ARGS+=	-DENABLE_BUILD_LIB=ON
@@ -91,7 +91,7 @@ CMAKE_ARGS+=	-DENABLE_TAUCS=OFF
 .endif
 
 .if !defined(WITHOUT_MED)
-LIB_DEPENDS+=	med.4:${PORTSDIR}/french/med
+LIB_DEPENDS+=	med.5:${PORTSDIR}/french/med
 CMAKE_ARGS+=	-DENABLE_MED=ON
 .else
 CMAKE_ARGS+=	-DENABLE_MED=OFF
