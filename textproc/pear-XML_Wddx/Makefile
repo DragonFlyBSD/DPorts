@@ -2,20 +2,20 @@
 # Date created:			  30 March 2005
 # Whom:				  Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
 #
-# $FreeBSD: ports/textproc/pear-XML_Wddx/Makefile,v 1.6 2012/11/17 06:02:15 svnexp Exp $
+# $FreeBSD: textproc/pear-XML_Wddx/Makefile 314443 2013-03-17 14:14:19Z miwi $
 #
 
 PORTNAME=	XML_Wddx
 PORTVERSION=	1.0.2
 CATEGORIES=	textproc devel pear
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR Wddx pretty serializer and deserializer
 
 BUILD_DEPENDS=	${PEARDIR}/XML/Parser.php:${PORTSDIR}/devel/pear-XML_Parser
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/XML/Parser.php:${PORTSDIR}/devel/pear-XML_Parser
 
-FILES=		XML/Wddx.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
