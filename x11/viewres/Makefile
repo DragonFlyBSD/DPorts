@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/viewres/Makefile,v 1.6 2013/02/13 23:22:04 svnexp Exp $
+# $FreeBSD: x11/viewres/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	viewres
 PORTVERSION=	1.0.4
@@ -8,9 +8,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Graphical class browser for Xt
 
 XORG_CAT=	app
-USE_XORG=	xt xaw
-
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
+USE_XORG=	xt xaw xorg-macros
 
 MAN1=		viewres.1
 
