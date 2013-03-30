@@ -1,15 +1,11 @@
-# New ports collection makefile for:   gsview
-# Date created:        13 July 2008
-# Whom:                bf <bf2006a@yahoo.com>
-#
-# $FreeBSD: ports/print/gsview/Makefile,v 1.9 2012/11/17 06:00:50 svnexp Exp $
-#
+# Created by: bf <bf2006a@yahoo.com>
+# $FreeBSD: print/gsview/Makefile 314582 2013-03-18 16:11:34Z bf $
 
 PORTNAME=	gsview
 PORTVERSION=	4.9
 PORTREVISION=	4
 CATEGORIES=	print
-MASTER_SITES=	http://mirror.cs.wisc.edu/pub/mirrors/ghost/ghostgum/
+MASTER_SITES=	LOCAL/bf
 
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	A GUI to view, search, print, and convert PostScript and PDF documents
@@ -23,6 +19,8 @@ RUN_DEPENDS+=		epstool:${PORTSDIR}/graphics/epstool \
 NO_CDROM=	Can only be distributed for free
 
 MAKE_ENV+=	PTHREAD_LIBS=${PTHREAD_LIBS} PTHREAD_CFLAGS=${PTHREAD_CFLAGS}
+
+MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		gsview.1
 PLIST_FILES=	bin/gsview \
