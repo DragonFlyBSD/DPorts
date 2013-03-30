@@ -1,19 +1,18 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: ports/www/pear-Structures_DataGrid_Renderer_Pager/Makefile,v 1.3 2013/01/26 19:10:07 svnexp Exp $
+# $FreeBSD: www/pear-Structures_DataGrid_Renderer_Pager/Makefile 314455 2013-03-17 15:28:55Z miwi $
 
 PORTNAME=	Structures_DataGrid_Renderer_Pager
 PORTVERSION=	0.1.3
 CATEGORIES=	www pear
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Pager Renderer for pear-Structures_DataGrid
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid.php:${PORTSDIR}/devel/pear-Structures_DataGrid \
 		${PEARDIR}/Pager/Pager.php:${PORTSDIR}/devel/pear-Pager
 
-CATEGORY=	Structures
-FILES=		DataGrid/Renderer/Pager.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
