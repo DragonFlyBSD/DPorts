@@ -1,8 +1,8 @@
 # Created by: Richard Neese <r.neese@gmail.com>
-# $FreeBSD: www/fusionpbx/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: www/fusionpbx/Makefile 314508 2013-03-18 00:44:28Z bdrewery $
 
 PORTNAME=	fusionpbx
-DISTVERSION=	3.1.2
+DISTVERSION=	3.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.fusionpbx.com/downloads/ \
 		${MASTER_SITE_GOOGLE_CODE}
