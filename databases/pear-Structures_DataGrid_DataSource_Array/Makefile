@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Structures_DataGrid_DataSource_DBQuery
-# Date created:				19 Dec 2007
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/pear-Structures_DataGrid_DataSource_Array/Makefile,v 1.3 2012/11/17 05:55:17 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: databases/pear-Structures_DataGrid_DataSource_Array/Makefile 314395 2013-03-17 05:36:56Z miwi $
 
 PORTNAME=	Structures_DataGrid_DataSource_Array
 PORTVERSION=	0.1.4
@@ -15,9 +11,7 @@ COMMENT=	DataSource driver using arrays
 BUILD_DEPENDS=	${PEARDIR}/Structures/DataGrid.php:${PORTSDIR}/devel/pear-Structures_DataGrid
 RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid.php:${PORTSDIR}/devel/pear-Structures_DataGrid
 
-CATEGORY=	Structures
-
-FILES=		DataGrid/DataSource/Array.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
