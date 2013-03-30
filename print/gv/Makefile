@@ -1,14 +1,8 @@
-# ex:ts=8
-# Ports collection makefile for:  gv
-# Date created:			  16 Apr 1996
-# Whom:				  tg@freebsd.org
-#
-# $FreeBSD: ports/print/gv/Makefile,v 1.75 2012/11/17 06:00:50 svnexp Exp $
-#
+# Created by: tg@freebsd.org
+# $FreeBSD: print/gv/Makefile 314766 2013-03-20 21:25:31Z bf $
 
 PORTNAME=	gv
-PORTVERSION=	3.7.3
-PORTREVISION=	1
+PORTVERSION=	3.7.4
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
