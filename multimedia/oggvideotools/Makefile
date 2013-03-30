@@ -1,5 +1,5 @@
 # Created by: Jille Timmermans (jille@quis.cx)
-# $FreeBSD: multimedia/oggvideotools/Makefile 313195 2013-03-02 05:48:59Z miwi $
+# $FreeBSD: multimedia/oggvideotools/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	oggvideotools
 PORTVERSION=	0.8a
@@ -18,7 +18,7 @@ LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
 
 USE_SDL=	sdl
 USE_PKGCONFIG=	build
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
