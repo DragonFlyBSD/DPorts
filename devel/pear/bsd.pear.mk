@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/pear/bsd.pear.mk,v 1.20 2012/11/17 05:56:37 svnexp Exp $
+# $FreeBSD: devel/pear/bsd.pear.mk 300896 2012-07-14 13:54:48Z beat $
 
 # Common code for pear- ports.
 

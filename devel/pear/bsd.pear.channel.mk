@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/pear/bsd.pear.channel.mk,v 1.3 2012/11/17 05:56:37 svnexp Exp $
+# $FreeBSD: devel/pear/bsd.pear.channel.mk 300896 2012-07-14 13:54:48Z beat $
 #
 # Common code for PEAR channels
 

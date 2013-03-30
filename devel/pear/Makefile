@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pear
-# Date created:			25 Nov 2005
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear/Makefile,v 1.41 2012/11/17 05:56:37 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: devel/pear/Makefile 314350 2013-03-16 12:27:10Z bdrewery $
 
 PORTNAME=	pear
 PORTVERSION=	1.9.4
@@ -19,6 +15,7 @@ NO_BUILD=	yes
 
 WANT_PHP_CLI=	yes
 USE_PHP=	pcre xml
+USE_PHP_BUILD=	yes
 
 PEARDIR=	${PREFIX}/share/pear
 
@@ -29,7 +26,7 @@ post-patch:
 		${WRKSRC}/go-pear
 	@cd ${WRKSRC}/go-pear-bundle && ${MKDIR} tmp && ${TAR} -C tmp -xf PEAR-${PORTVERSION}.tar
 	@cd ${WRKSRC}/go-pear-bundle/tmp/PEAR-${PORTVERSION} && ${PATCH} -s -p0 < ${FILESDIR}/extra-patch-PEAR-Config.php
-	@rm ${WRKSRC}/go-pear-bundle/tmp/PEAR-${PORTVERSION}/PEAR/Config.php.orig
+	@${RM} ${WRKSRC}/go-pear-bundle/tmp/PEAR-${PORTVERSION}/PEAR/Config.php.orig
 	@${MD5} -q ${WRKSRC}/go-pear-bundle/tmp/PEAR-${PORTVERSION}/PEAR/Config.php > ${WRKSRC}/Config.php.md5
 	@${REINPLACE_CMD} -E -e "s|(file md5sum=\").*(\" name=\"PEAR/Config.php\" role=\"php\")|\1`${CAT} ${WRKSRC}/Config.php.md5`\2|g" \
 		${WRKSRC}/go-pear-bundle/tmp/package2.xml ${WRKSRC}/go-pear-bundle/package2.xml
