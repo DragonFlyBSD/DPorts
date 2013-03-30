@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/wesnoth/Makefile,v 1.104 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: games/wesnoth/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	wesnoth
 PORTVERSION=	1.10.5
@@ -22,7 +22,7 @@ USE_SDL=	image mixer net ttf
 USE_GNOME=	pango desktopfileutils
 MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DMANDIR="man"
 
 MAN6=		wesnoth.6
