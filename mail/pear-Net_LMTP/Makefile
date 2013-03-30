@@ -2,7 +2,7 @@
 # Date created:			  07 March 2005
 # Whom:				  Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
 #
-# $FreeBSD: ports/mail/pear-Net_LMTP/Makefile,v 1.6 2012/11/17 05:59:10 svnexp Exp $
+# $FreeBSD: mail/pear-Net_LMTP/Makefile 314446 2013-03-17 14:21:48Z miwi $
 #
 
 PORTNAME=	Net_LMTP
@@ -13,13 +13,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PEAR implementation of the RFC2033 LMTP protocol
 
 BUILD_DEPENDS=	${PEARDIR}/Net/Socket.php:${PORTSDIR}/net/pear-Net_Socket
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/Net/Socket.php:${PORTSDIR}/net/pear-Net_Socket
 
-CATEGORY=	Net
-PEAR_CATSRC=	yes
-FILES=		LMTP.php
-TESTS=		test_lmtp.php
-_TESTSDIR=	.
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
