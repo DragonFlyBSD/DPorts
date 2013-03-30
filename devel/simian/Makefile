@@ -1,5 +1,5 @@
 # Created by: andreas@syndrom23.de
-# $FreeBSD: ports/devel/simian/Makefile,v 1.24 2012/12/10 11:29:55 svnexp Exp $
+# $FreeBSD: devel/simian/Makefile 315179 2013-03-24 23:21:58Z eadler $
 
 PORTNAME=	simian
 PORTVERSION=	2.3.33
@@ -40,9 +40,7 @@ PLIST_SUB+=	MONO="@comment "
 SUB_LIST+=	MONO="@comment "
 .endif
 
-.if defined(PACKAGE_BUILDING)
 RESTRICTED=	Have to agree to license before download
-.endif
 
 SUB_FILES=	simian
 SUB_LIST+=	VERSION=${PORTVERSION}
