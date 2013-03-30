@@ -1,14 +1,13 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/ltris/Makefile 313753 2013-03-09 19:59:21Z eadler $
+# $FreeBSD: games/ltris/Makefile 314103 2013-03-13 18:49:55Z johans $
 
 PORTNAME=	ltris
-PORTVERSION=	1.0.15
-PORTREVISION=	1
+PORTVERSION=	1.0.18
 PORTEPOCH=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/lgames/${PORTNAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Tetris clone but a good one with bunch of cool features
 
 USE_SDL=	mixer sdl
