@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xedit/Makefile,v 1.5 2013/02/13 23:51:11 svnexp Exp $
+# $FreeBSD: x11/xedit/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	xedit
 PORTVERSION=	1.2.1
@@ -8,9 +8,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Simple text editor for X
 
 XORG_CAT=	app
-USE_XORG=	xt xaw7
-
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
+USE_XORG=	xt xaw7 xorg-macros
 
 MAN1=		xedit.1
 
