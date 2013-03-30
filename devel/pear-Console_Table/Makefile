@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Console_Table
-# Date created:			  31 August 2003
-# Whom:				  Thierry Thomas (<thierry@pompo.net>)
-#
-# $FreeBSD: ports/devel/pear-Console_Table/Makefile,v 1.18 2012/11/17 05:56:37 svnexp Exp $
-#
+# Created by: Thierry Thomas (<thierry@pompo.net>)
+# $FreeBSD: devel/pear-Console_Table/Makefile 314202 2013-03-15 00:49:35Z miwi $
 
 PORTNAME=	Console_Table
 PORTVERSION=	1.1.4
@@ -13,12 +9,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PHP class that makes it easy to build console style tables
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-CATEGORY=	Console
-FILES=		Table.php
-TESTS=		assoziative_arrays.phpt filters.phpt multibyte.phpt multiline.phpt \
-		no_header.phpt no_rows.phpt rules.phpt
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
