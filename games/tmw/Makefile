@@ -2,7 +2,7 @@
 # Date created:				12 Oktober 2005
 # Whom:					Tobias Gion
 #
-# $FreeBSD: ports/games/tmw/Makefile,v 1.49 2012/11/17 05:57:54 svnexp Exp $
+# $FreeBSD: games/tmw/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	tmw
@@ -23,7 +23,7 @@ LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2 \
 BUILD_DEPENDS=	guichan>=0.8.1:${PORTSDIR}/devel/guichan
 RUN_DEPENDS=	guichan>=0.8.1:${PORTSDIR}/devel/guichan
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_SDL=	sdl gfx image mixer net ttf
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
