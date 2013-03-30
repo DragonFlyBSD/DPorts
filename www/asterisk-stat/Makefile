@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/asterisk-stat
-# Date created:				16 June 2007
-# Whom:					Fumihiko Kimura <jfkimura@yahoo.com>
-#
-# $FreeBSD: ports/www/asterisk-stat/Makefile,v 1.18 2012/11/17 06:02:28 svnexp Exp $
-#
+# Created by: Fumihiko Kimura <jfkimura@yahoo.com>
+# $FreeBSD: www/asterisk-stat/Makefile 314915 2013-03-22 11:53:34Z bapt $
 
 PORTNAME=	asterisk-stat
 PORTVERSION=	2.0.1
@@ -26,11 +22,12 @@ WRKSRC=		${WRKDIR}/${SITE_SUBDIR}
 SUB_FILES=	pkg-message
 SUB_LIST+=	ASTERISKDIR=${ASTERISKDIR}
 
-OPTIONS=	PGSQL "Use PostgreSQL instead of MySQL" off
+OPTIONS_DEFINE=	PGSQL
+PGSQL_DESC=	Use PostgreSQL instead of MySQL
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_PGSQL)
+.if ${PORT_OPTIONS:MGSQL}
 ASTERISKSTATDB=	pgsql
 EXTRA_PATCHES+=	${FILESDIR}/pgsql__patch-call.log.php
 .else
@@ -60,4 +57,4 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/cdr_${ASTERISKSTATDB}.tbl ${PREFIX}/etc/asterisk
 	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${ASTERISKDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
