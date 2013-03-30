@@ -2,18 +2,18 @@
 # Date created:			  Wed Apr 30 06:10:16 PDT 2003
 # Whom:				  Barry Irwin <bvi@moria.org>
 #
-# $FreeBSD: ports/net-mgmt/pixilate/Makefile,v 1.27 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: ports/net-mgmt/pixilate/Makefile,v 1.28 2013/02/18 21:46:32 svnexp Exp $
 
 PORTNAME=	pixilate
 PORTVERSION=	0.4.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/winfingerprint/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generates packets to match a list of Cisco PIX access lists
 
-BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
+LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 
 WRKSRC=		${WRKDIR}/pixilate
 
