@@ -1,0 +1,55 @@
+# Created by: Pav Lucistnik <pav@FreeBSD.org>
+# $FreeBSD: ports/mail/popular/Makefile,v 1.14 2012/12/30 06:25:20 svnexp Exp $
+
+PORTNAME=	popular
+PORTVERSION=	1.5.5
+PORTREVISION=	3
+CATEGORIES=	mail
+MASTER_SITES=	http://www.remote.org/jochen/mail/popular/download/
+
+MAINTAINER=	pav@FreeBSD.org
+COMMENT=	Suite of programs for setting up large POP3 server systems
+
+BUILD_DEPENDS=	p5-XML-DOM>=0:${PORTSDIR}/textproc/p5-XML-DOM
+
+CONFLICTS=	pserv-[0-9]* synce-librapi2-[0-9]*
+
+USE_AUTOTOOLS=	libtool
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+USE_OPENSSL=	yes
+USE_PERL5=	yes
+PDM_MODULES=	any master
+CONFIGURE_ARGS=	--without-bdb --disable-docbook --with-confdir=${PREFIX}/etc/popular \
+		--enable-ssl --with-pdm="${PDM_MODULES}"
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+
+USE_RC_SUBR=	pcheckd pproxy pserv 0ringd
+
+MAN1=		pcheck.1 pcontrol.1 pdeliver.1 pstatus.1 ptestpdm.1
+MAN7=		popular-log.7
+MAN8=		pcheckd.8 pproxy.8 pserv.8 ringd.8
+
+OPTIONS_DEFINE=	DB4
+OPTIONS_DEFAULT=	DB4
+DB4_DESC=	Build db4 pdm module
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDB4}
+LIB_DEPENDS+=	db4.0:${PORTSDIR}/databases/db4
+PLIST_SUB+=	WITH_DB4=""
+PDM_MODULES+=	db4
+.else
+PLIST_SUB+=	WITH_DB4="@comment "
+.endif
+
+post-install:
+	${MKDIR} ${PREFIX}/etc/popular
+	${INSTALL_DATA} ${WRKSRC}/conf/pproxy.rc ${PREFIX}/etc/popular/pproxy.rc.sample
+	${INSTALL_DATA} ${WRKSRC}/conf/pserv.rc ${PREFIX}/etc/popular/pserv.rc.sample
+	${MKDIR} ${PREFIX}/include/popular
+	${FIND} ${WRKSRC}/src -name *.h | ${XARGS} -n 1 -J % ${INSTALL_DATA} % ${PREFIX}/include/popular
+
+.include <bsd.port.mk>
