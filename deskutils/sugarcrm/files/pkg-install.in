@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/deskutils/sugarcrm/files/pkg-install.in,v 1.3 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/deskutils/sugarcrm/files/pkg-install.in,v 1.2 2008-03-13 12:05:03 miwi Exp $
 
 case $2 in
     PRE-INSTALL)
