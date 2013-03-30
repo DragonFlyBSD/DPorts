@@ -2,7 +2,7 @@
 # Date created:		16 March 2008
 # Whom:			Wen heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/www/siteatschool/Makefile,v 1.3 2012/11/17 06:03:05 svnexp Exp $
+# $FreeBSD: www/siteatschool/Makefile 313785 2013-03-10 00:18:49Z wen $
 #
 
 PORTNAME=	siteatschool
@@ -12,6 +12,9 @@ MASTER_SITES=	SF/${PORTNAME}/Site%40School/Site%40School%20${PORTVERSION}
 
 MAINTAINER=	wenheping@gmail.com
 COMMENT=	CMS to manage and maintain a school website
+
+DEPRECATED=	Unmaintained upstream
+EXPIRATION_DATE=2013-06-30
 
 USE_PHP=	mysql
 USE_ZIP=	yes
