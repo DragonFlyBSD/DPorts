@@ -2,7 +2,7 @@
 # Date created:		16 Jun 2008
 # Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
 #
-# $FreeBSD: ports/devel/ois/Makefile,v 1.14 2012/11/17 05:56:02 svnexp Exp $
+# $FreeBSD: devel/ois/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	ois
@@ -17,7 +17,7 @@ COMMENT=	Object Oriented Input System
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_AUTOTOOLS=	libtool:env aclocal:env autoheader:env automake:env autoconf:env
 USE_XORG=	x11 xaw
 USE_LDCONFIG=	yes
