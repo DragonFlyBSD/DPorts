@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pear-PHP_ArrayOf
-# Date created:		2008-09-22
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-PHP_ArrayOf/Makefile,v 1.2 2012/11/17 05:56:40 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: devel/pear-PHP_ArrayOf/Makefile 314239 2013-03-15 02:44:13Z miwi $
 
 PORTNAME=	PHP_ArrayOf
 PORTVERSION=	0.2.1
@@ -12,19 +8,10 @@ CATEGORIES=	devel www pear
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Abstract class package to create arrays of specific element types
 
-BUILD_DEPENDS+=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS+=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
+BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-FILES=		PHP/ArrayOf.php PHP/ArrayOfInterface.php \
-		PHP/ArrayOf/Exception.php
-TESTS=		AcceptValue.phpt ArrayOfInteger.inc RejectValue.phpt \
-		__construct_subclass.phpt ArrayAccess_Brackets.phpt \
-		ArrayOfString.inc __construct_ArrayObject.phpt \
-		ArrayAccess_Methods.phpt Countable.phpt __construct_array.phpt \
-		ArrayOfAnything.inc IteratorAggregate.phpt \
-		__construct_self.phpt
-DOCS=		example1.php
-_DOCSDIR=	docs/examples
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
