@@ -2,7 +2,7 @@
 # Date created:				24 April 2003
 # Whom:					roland.jesse@gmx.net
 #
-# $FreeBSD: ports/x11-toolkits/SoXt/Makefile,v 1.26 2012/11/17 06:03:34 svnexp Exp $
+# $FreeBSD: x11-toolkits/SoXt/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	SoXt
@@ -23,7 +23,7 @@ USE_XORG=	xi
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS+=	--with-pthread=yes --with-coin=${LOCALBASE}
-USE_GNOME=	gnomehack
+USES=	pathfix
 # avoid renaming of soxt-config and soxt-config.1
 USE_LDCONFIG=	yes
 MAN1=		soxt-config.1
