@@ -2,7 +2,7 @@
 # Date created:        13 September 1999
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/librep/Makefile,v 1.89 2013/01/29 00:50:17 svnexp Exp $
+# $FreeBSD: lang/librep/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #    $MCom: ports/lang/librep/Makefile,v 1.2 2006/09/10 00:51:12 mezz Exp $
 
 PORTNAME=	librep
@@ -23,7 +23,7 @@ RUN_DEPENDS=	gtar:${PORTSDIR}/archivers/gtar
 USE_CSTD=	gnu89
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
