@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: ports/math/carve/Makefile,v 1.5 2013/01/31 14:01:29 svnexp Exp $
+# $FreeBSD: math/carve/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	carve
 PORTVERSION=	1.4.0
@@ -15,8 +15,7 @@ LIB_DEPENDS=	boost_filesystem:${PORTSDIR}/devel/boost-libs
 
 OPTIONS_DEFINE=	GUI
 
-USE_CMAKE=	yes
-CMAKE_OUTSOURCE=yes
+USES=		cmake:outsource
 USE_GL=		glut
 USE_LDCONFIG=	yes
 
