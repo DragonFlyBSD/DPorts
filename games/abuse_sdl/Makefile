@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/abuse_sdl/Makefile,v 1.34 2012/11/17 05:57:31 svnexp Exp $
+# $FreeBSD: games/abuse_sdl/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	abuse_sdl
 PORTVERSION=	0.8
@@ -13,7 +13,7 @@ COMMENT=	SDL port of the Abuse game engine
 
 LICENSE=	GPLv2
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GL=		gl
 USE_SDL=	mixer sdl
 GNU_CONFIGURE=	yes
