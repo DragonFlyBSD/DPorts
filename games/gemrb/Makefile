@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/gemrb/Makefile,v 1.22 2013/01/18 06:54:54 svnexp Exp $
+# $FreeBSD: games/gemrb/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	gemrb
 PORTVERSION=	0.7.2
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		vorbis:${PORTSDIR}/audio/libvorbis
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_SDL=	sdl mixer ttf
 USE_OPENAL=	al alut
 USE_LDCONFIG=	yes
