@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Browser
-# Date created:			  6 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/www/pear-Horde_Browser/Makefile,v 1.13 2013/01/10 10:41:49 svnexp Exp $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: www/pear-Horde_Browser/Makefile 314455 2013-03-17 15:28:55Z miwi $
 
 PORTNAME=	Horde_Browser
 PORTVERSION=	2.0.3
