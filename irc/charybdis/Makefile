@@ -1,4 +1,4 @@
-# $FreeBSD: ports/irc/charybdis/Makefile,v 1.7 2013/01/02 15:47:03 svnexp Exp $
+# $FreeBSD: irc/charybdis/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	charybdis
 PORTVERSION=	3.4.2
@@ -29,7 +29,7 @@ PORTDOCS=	charybdis-oper-guide.pdf
 
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoconf
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_RC_SUBR=	${PORTNAME}
 GNU_CONFIGURE=	yes
 USERS=	ircd

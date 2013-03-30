@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/irc/charybdis/files/charybdis.in,v 1.5 2013/01/02 15:47:03 svnexp Exp $
+# $FreeBSD: irc/charybdis/files/charybdis.in 309821 2013-01-02 15:27:48Z crees $
 #
 # PROVIDE: charybdis
 # REQUIRE: LOGIN
