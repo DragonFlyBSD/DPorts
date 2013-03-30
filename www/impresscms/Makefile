@@ -1,10 +1,10 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: ports/www/impresscms/Makefile,v 1.17 2012/11/17 06:02:37 svnexp Exp $
+# $FreeBSD: www/impresscms/Makefile 315110 2013-03-24 10:45:21Z wen $
 
 PORTNAME=	impresscms
-PORTVERSION=	1.3.3
+PORTVERSION=	1.3.4
 CATEGORIES=	www
-MASTER_SITES=	SF/${PORTNAME}/ImpressCMS%20Official%20Releases/ImpressCMS%201.3.3
+MASTER_SITES=	SF/${PORTNAME}/ImpressCMS%20Official%20Releases/ImpressCMS%20${PORTVERSION}
 DISTNAME=	${PORTNAME}_${PORTVERSION}_final
 
 MAINTAINER=	wen@FreeBSD.org
