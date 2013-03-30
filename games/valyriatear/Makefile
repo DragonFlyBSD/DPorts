@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/games/valyriatear/Makefile,v 1.1 2013/02/01 22:15:58 svnexp Exp $
+# $FreeBSD: games/valyriatear/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	valyriatear
 PORTVERSION=	0.5.0
@@ -21,7 +21,7 @@ LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs \
 		png15:${PORTSDIR}/graphics/png \
 		jpeg:${PORTSDIR}/graphics/jpeg
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_SDL=	sdl image ttf
 USE_GL=		gl
 USE_OPENAL=	yes
