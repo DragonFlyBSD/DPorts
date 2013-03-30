@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: ports/audio/alure/Makefile,v 1.1 2013/01/18 21:51:46 svnexp Exp $
+# $FreeBSD: audio/alure/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	alure
 PORTVERSION=	1.2
@@ -15,8 +15,7 @@ LIB_DEPENDS+=	sndfile:${PORTSDIR}/audio/libsndfile
 
 USE_OPENAL=	soft
 USE_LDCONFIG=	yes
-USE_CMAKE=	yes
-CMAKE_VERBOSE=	yes
+USES=		cmake
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
