@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xsm/Makefile,v 1.5 2013/02/14 13:50:11 svnexp Exp $
+# $FreeBSD: x11/xsm/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	xsm
 PORTVERSION=	1.0.3
@@ -8,9 +8,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X Session Manager
 
 XORG_CAT=	app
-USE_XORG=	xt xaw
-
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
+USE_XORG=	xt xaw xorg-macros
 
 MAN1=		xsm.1
 
