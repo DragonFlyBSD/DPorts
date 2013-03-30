@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: ports/devel/pear-FSM/Makefile,v 1.9 2012/12/17 02:17:59 svnexp Exp $
+# $FreeBSD: devel/pear-FSM/Makefile 314216 2013-03-15 01:30:55Z miwi $
 
 PORTNAME=	FSM
 PORTVERSION=	1.3.1
@@ -11,10 +11,7 @@ COMMENT=	PEAR Finite State Machine
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-FILES=		FSM.php FSM/GraphViz.php
-DOCS=		guide.txt graphviz.png
-TESTS=		addTransitionsArray.phpt transitions.phpt graphviz.phpt
-EXAMPLES=	rpn.php graphviz.php
+PEAR_AUTOINSTALL=	yes
 
 LATEST_LINK=	pear-${PORTNAME}
 OPTIONS_DEFINE=	PEAR_GRAPGHVIZ
