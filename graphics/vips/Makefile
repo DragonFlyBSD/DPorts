@@ -1,13 +1,9 @@
-# New ports collection makefile for:	vips
-# Date created:		19 December 2003
-# Whom:			Lev Serebryakov <lev@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/vips/Makefile,v 1.43 2013/01/17 16:48:39 svnexp Exp $
-#
+# Created by: Lev Serebryakov <lev@FreeBSD.org>
+# $FreeBSD: graphics/vips/Makefile 314141 2013-03-14 08:17:39Z pclin $
 
 PORTNAME=	vips
 PORTVERSION=	7.26.3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.vips.ecs.soton.ac.uk/supported/${PORTVERSION:R}/
 
