@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/bmpanel2/Makefile 313629 2013-03-08 09:10:13Z danfe $
+# $FreeBSD: x11/bmpanel2/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	bmpanel2
 DISTVERSION=	2.1pre1
@@ -11,7 +11,7 @@ COMMENT=	Nice, lightweight NETWM compliant panel for X11
 
 LICENSE=	MIT
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_GNOME=	pango
 USE_XORG=	x11 xext
 
@@ -23,7 +23,9 @@ TEMPERATURE_DESC=	Build with temperature widget (for CPU, etc.)
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTEMPERATURE}
-EXTRA_PATCHES=	${FILESDIR}/extra-patch-temperature-widget
+PATCH_SITES=	${MASTER_SITE_LOCAL}
+PATCH_SITE_SUBDIR=	danfe
+PATCHFILES=	${PORTNAME}-temperature-widget.diff
 .endif
 
 post-patch:
