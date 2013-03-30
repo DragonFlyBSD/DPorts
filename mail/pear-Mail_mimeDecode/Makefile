@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Mail_mimeDecode
-# Date created:			  21 June 2007
-# Whom:				  Zhen REN <bg1tpt@gmail.com>
-#
-# $FreeBSD: ports/mail/pear-Mail_mimeDecode/Makefile,v 1.8 2012/11/17 05:59:10 svnexp Exp $
-#
+# Created by: Zhen REN <bg1tpt@gmail.com>
+# $FreeBSD: mail/pear-Mail_mimeDecode/Makefile 314446 2013-03-17 14:21:48Z miwi $
 
 PORTNAME=	Mail_mimeDecode
 PORTVERSION=	1.5.5
@@ -15,13 +11,12 @@ COMMENT=	Provides a class to decode mime messages
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 		${PEARDIR}/Mail/mime.php:${PORTSDIR}/mail/pear-Mail_Mime
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
+		${PEARDIR}/Mail/mime.php:${PORTSDIR}/mail/pear-Mail_Mime
 
 LICENSE=	BSD
 
-CATEGORY=	Mail
-FILES=		mimeDecode.php
-TESTS=		parse_header_value.phpt semicolon_content_type_bug1724.phpt
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
