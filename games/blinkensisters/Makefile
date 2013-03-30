@@ -2,7 +2,7 @@
 # Date created:		26 Mar 2006
 # Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
 #
-# $FreeBSD: ports/games/blinkensisters/Makefile,v 1.23 2012/11/17 05:57:33 svnexp Exp $
+# $FreeBSD: games/blinkensisters/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	blinkensisters
@@ -16,7 +16,7 @@ COMMENT=	Parallax-style 2D scrolling platform game
 
 USE_SDL=	sdl image ttf
 USE_PERL5_BUILD=	yes
-USE_CMAKE=	yes
+USES=		cmake
 
 CFLAGS+=	-I${LOCALBASE}/include
 CXXFLAGS+=	-I${LOCALBASE}/include
