@@ -1,5 +1,5 @@
 # Created by: Christoph Theis <theis@gmx.at>
-# $FreeBSD: ports/www/cakephp22/Makefile,v 1.6 2013/02/08 12:21:44 svnexp Exp $
+# $FreeBSD: www/cakephp22/Makefile 314915 2013-03-22 11:53:34Z bapt $
 
 PORTNAME=	cakephp
 PORTVERSION=	2.2.7
@@ -62,7 +62,7 @@ CGI_EXT=
 
 SUB_LIST+=	PHPCGI=${WITH_PHP_CGI}
 
-.if defined(WITH_AP)
+.if ${PORT_OPTIONS:MAP}
 SUB_FILES=	pkg-message
 USE_APACHE_RUN=	22+
 PKGMESSAGE=	pkg-message
