@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-XML_Feed_Parser
-# Date created:			  2007/05/01
-# Whom:				  Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/pear-XML_Feed_Parser/Makefile,v 1.6 2012/11/17 06:02:15 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: textproc/pear-XML_Feed_Parser/Makefile 314443 2013-03-17 14:14:19Z miwi $
 
 PORTNAME=	XML_Feed_Parser
 PORTVERSION=	1.0.5
