@@ -1,5 +1,5 @@
 # Created by: Alex Miller (<asm@asm.kiev.ua>)
-# $FreeBSD: ports/www/pear-HTTP/Makefile,v 1.19 2013/02/18 09:06:38 svnexp Exp $
+# $FreeBSD: www/pear-HTTP/Makefile 314198 2013-03-15 00:42:37Z miwi $
 
 PORTNAME=	HTTP
 PORTVERSION=	1.4.1
@@ -9,13 +9,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR miscellaneous HTTP utilities
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-FILES=		HTTP.php
-
-TESTS=		absoluteURI.inc negotiateCharset.phpt negotiateCharset2.phpt \
-		negotiateLanguage.phpt negotiateMimeType.phpt test1a.phpt \
-		test2a.phpt test3a.phpt test4a.phpt test5a.phpt test6a.phpt
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
