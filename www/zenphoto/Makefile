@@ -1,8 +1,8 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: ports/www/zenphoto/Makefile,v 1.30 2013/02/19 19:28:45 svnexp Exp $
+# $FreeBSD: www/zenphoto/Makefile 313796 2013-03-10 03:20:31Z sunpoet $
 
 PORTNAME=	zenphoto
-PORTVERSION=	1.4.4.1b
+PORTVERSION=	1.4.4.3
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/archive/
 
