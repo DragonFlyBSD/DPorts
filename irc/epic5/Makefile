@@ -2,11 +2,11 @@
 # Date created:                24 February 2005
 # Whom:                        Josh Paetzel <josh@tcbug.org>
 #
-# $FreeBSD: ports/irc/epic5/Makefile,v 1.82 2012/11/27 05:34:08 svnexp Exp $
+# $FreeBSD: irc/epic5/Makefile 315164 2013-03-24 21:09:10Z jpaetzel $
 #
 
 PORTNAME=	epic5
-PORTVERSION=	1.1.4
+PORTVERSION=	1.1.5
 CATEGORIES=	irc ipv6
 MASTER_SITES=	http://ftp.epicsol.org/pub/epic/EPIC5-PRODUCTION/ \
 		http://tehran.lain.pl/epic-mirror/EPIC5-PRODUCTION/ \
