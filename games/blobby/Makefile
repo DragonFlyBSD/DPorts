@@ -2,7 +2,7 @@
 # Date created:	01 Apr 2008
 # Whom:		Ganael Laplanche <ganael.laplanche@martymac.org>
 #
-# $FreeBSD: ports/games/blobby/Makefile,v 1.14 2012/11/17 05:57:33 svnexp Exp $
+# $FreeBSD: games/blobby/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	blobby
@@ -24,7 +24,7 @@ BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
 USE_XORG=	ice x11 xext xxf86vm xdamage xfixes xau xdmcp xrandr xrender
 USE_SDL=	sdl
 USE_GL=		glu
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DDATADIR:PATH="${DATADIR}"
 WRKSRC=		${WRKDIR}/blobby-1.0rc1
 
