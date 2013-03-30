@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xmag/Makefile,v 1.7 2013/02/14 00:20:31 svnexp Exp $
+# $FreeBSD: x11/xmag/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	xmag
 PORTVERSION=	1.0.5
@@ -10,9 +10,7 @@ COMMENT=	X application for screen magnifying
 LICENSE=	MIT
 
 XORG_CAT=	app
-USE_XORG=	xt xaw
-
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xorg-macros.pc:${PORTSDIR}/devel/xorg-macros
+USE_XORG=	xt xaw xorg-macros
 
 MAN1=		xmag.1
 
