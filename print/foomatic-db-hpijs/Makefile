@@ -2,7 +2,7 @@
 # Date created:		2005-09-17
 # Whom:			Michael Nottebrock <lofi@FreeBSD.org>
 #
-# $FreeBSD: ports/print/foomatic-db-hpijs/Makefile,v 1.6 2012/11/17 06:00:49 svnexp Exp $
+# $FreeBSD: print/foomatic-db-hpijs/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	foomatic-db-hpijs
