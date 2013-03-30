@@ -1,6 +1,8 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/games/robocode/files/robocode.sh.in,v 1.3 2012/11/17 05:57:51 svnexp Exp $
+# $FreeBSD: games/robocode/files/robocode.sh.in 314872 2013-03-21 20:42:46Z pawel $
 
-cd "%%DATADIR%%"
-JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -jar libs/robocode.jar "$@"
+export JAVA_VERSION="%%JAVA_VERSION%%"
+  
+cd "%%DATADIR%%" && exec "%%LOCALBASE%%/bin/java" \
+-Djava.ext.dirs="%%DATADIR%%" -jar "%%DATADIR%%/libs/robocode.jar" "${@}"
