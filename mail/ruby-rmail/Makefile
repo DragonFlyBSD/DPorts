@@ -2,7 +2,7 @@
 # Date created:		16 January 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/mail/ruby-rmail/Makefile,v 1.20 2012/11/17 05:59:13 svnexp Exp $
+# $FreeBSD: mail/ruby-rmail/Makefile 301510 2012-07-25 06:32:06Z cs $
 #
 
 PORTNAME=	rmail
