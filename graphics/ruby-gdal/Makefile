@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/ruby-gdal/Makefile 313731 2013-03-09 16:56:58Z sunpoet $
+# $FreeBSD: graphics/ruby-gdal/Makefile 313912 2013-03-11 14:38:10Z sunpoet $
 
 PORTNAME=	gdal
 PORTVERSION=	1.9.2
@@ -14,7 +14,6 @@ COMMENT=	Ruby binding for GDAL
 
 LICENSE=	MIT
 
-#BUILD_DEPENDS=	${LOCALBASE}/bin/swig:${PORTSDIR}/devel/swig13
 BUILD_DEPENDS=	${LOCALBASE}/bin/swig2.0:${PORTSDIR}/devel/swig20
 LIB_DEPENDS=	gdal:${PORTSDIR}/graphics/gdal
 
@@ -33,8 +32,8 @@ post-patch:
 do-configure:
 	@${DO_NADA}
 
-# include/cpl_config.h will exist after build phase
-pre-build:
+# include/cpl_config.h will only exist after graphics/gdal (build dependency) installed
+pre-configure:
 	@${SED} -e '/^GDAL_ROOT/d' ${DATADIR}/GDALmake.opt > ${WRKSRC}/../../GDALmake.opt
 	@${CP} ${LOCALBASE}/include/cpl_config.h ${WRKSRC}/../../port/
 
