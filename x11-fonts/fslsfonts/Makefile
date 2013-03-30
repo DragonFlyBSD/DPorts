@@ -1,19 +1,14 @@
-# New ports collection makefile for:	fslsfonts
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/fslsfonts/Makefile,v 1.4 2012/11/17 06:03:28 svnexp Exp $
-#
+# $FreeBSD: x11-fonts/fslsfonts/Makefile 313933 2013-03-11 19:49:36Z zeising $
 
 PORTNAME=	fslsfonts
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.4
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	List fonts served by the X font server
 
 XORG_CAT=	app
-USE_XORG=	x11 libfs
+USE_XORG=	x11 libfs xorg-macros
 
 PLIST_FILES=	bin/fslsfonts
 
