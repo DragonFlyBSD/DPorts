@@ -2,7 +2,7 @@
 # Date created: 	Tue Nov 14 18:29:48 MET 1995
 # Whom: 		Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $FreeBSD: ports/print/apsfilter/Makefile,v 1.143 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: ports/print/apsfilter/Makefile,v 1.144 2013/01/31 19:48:37 svnexp Exp $
 #
 
 PORTNAME=	apsfilter
@@ -20,7 +20,7 @@ USE_SUBMAKE=	yes
 
 SUB_FILES+=	pkg-message
 
-SAMBA_PORT?=	net/samba34
+SAMBA_PORT?=	net/samba36
 
 # special arrangement for package building, build stuff without X11
 # to make memory footprint of apsfilter package smaller
