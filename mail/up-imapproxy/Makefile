@@ -1,5 +1,5 @@
 # Created by: Martin Blapp
-# $FreeBSD: ports/mail/up-imapproxy/Makefile,v 1.27 2012/11/17 05:59:17 svnexp Exp $
+# $FreeBSD: mail/up-imapproxy/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	imapproxy
 PORTVERSION=	1.2.7
@@ -18,7 +18,7 @@ OPTIONS_DEFINE=	DOVECOT DOCS
 DOVECOT_DESC=	Use with dovecot2
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	autoheader
 CONFIGURE_ARGS=	--with-openssl=${OPENSSLBASE}
