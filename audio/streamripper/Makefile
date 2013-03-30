@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/audio/streamripper/Makefile,v 1.50 2013/01/27 06:41:36 svnexp Exp $
+# $FreeBSD: audio/streamripper/Makefile 314853 2013-03-21 17:32:34Z bapt $
 
 PORTNAME=	streamripper
 PORTVERSION=	1.64.6
@@ -17,8 +17,8 @@ COMMENT=	Splits SHOUTcast stream into tracks
 LIB_DEPENDS=	mad.2:${PORTSDIR}/audio/libmad \
 		tre.5:${PORTSDIR}/textproc/libtre
 
-OPTIONS=	FAAD "Include FAAD mpeg4 codec support" on \
-		VORBIS "Include Ogg Vorbis codec support" on
+OPTIONS_DEFINE=	FAAD VORBIS
+OPTIONS_DEFAULT=	FAAD VORBIS
 
 LICENSE=	GPLv2
 
@@ -39,15 +39,15 @@ LDFLAGS+=	-Lcdk-${CDK_VERSION} -L${LOCALBASE}/lib
 
 CDK_VERSION=	5.0-20060507
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITHOUT_FAAD)
+.if ! ${PORT_OPTIONS:MFAAD}
 CONFIGURE_ARGS+=	ac_cv_lib_faad_NeAACDecDecode2=no
 .else
 LIB_DEPENDS+=	faad.2:${PORTSDIR}/audio/faad
 .endif
 
-.if defined(WITHOUT_VORBIS)
+.if ! ${PORT_OPTIONS:MVORBIS}
 CONFIGURE_ARGS+=	--without-ogg
 .else
 LIB_DEPENDS+=	vorbis.4:${PORTSDIR}/audio/libvorbis
@@ -73,4 +73,4 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/streamripper ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/streamripper.1 ${MANPREFIX}/man/man1
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
