@@ -1,9 +1,5 @@
-# Ports collection makefile for:	pear-Math_BigInteger
-# Date created:				26 July 2011
-# Whom:					Piotr Rybicki <meritus@innervision.pl>
-#
-# $FreeBSD: ports/math/pear-Math_BigInteger/Makefile,v 1.4 2012/11/17 05:59:28 svnexp Exp $
-#
+# Created by: Piotr Rybicki <meritus@innervision.pl>
+# $FreeBSD: math/pear-Math_BigInteger/Makefile 314372 2013-03-16 16:19:19Z miwi $
 
 PORTNAME=	Math_BigInteger
 PORTVERSION=	1.0.0
@@ -13,15 +9,10 @@ MAINTAINER=	meritus@innervision.pl
 COMMENT=	Pure-PHP arbitrary precision integer arithmetic library
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
-
-CATEGORY=	Math
-FILES=		BigInteger.php
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 USE_PHP=	pcre
-
-EXAMPLES=	demo/benchmark.php demo/demo.php
-_EXAMPLESDIR=
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
