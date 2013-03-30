@@ -3,7 +3,7 @@
 # Date created:				86 May 2005
 # Whom:					Edwin Groothuis
 #
-# $FreeBSD: ports/games/xrally/Makefile,v 1.17 2012/11/17 05:57:58 svnexp Exp $
+# $FreeBSD: games/xrally/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	xrally
