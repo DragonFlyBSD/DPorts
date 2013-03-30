@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: ports/security/pear-Crypt_RSA/Makefile,v 1.10 2012/12/17 02:18:03 svnexp Exp $
+# $FreeBSD: security/pear-Crypt_RSA/Makefile 314264 2013-03-15 07:05:03Z miwi $
 
 PORTNAME=	Crypt_RSA
 PORTVERSION=	1.2.1
@@ -17,6 +17,8 @@ GMP_DESC=	PHP GMP extension support
 
 LATEST_LINK=	pear-${PORTNAME}
 
+PEAR_AUTOINSTALL=	yes
+
 .include <bsd.port.options.mk>
 
 .for opt in BCMATH GMP
@@ -24,14 +26,6 @@ LATEST_LINK=	pear-${PORTNAME}
 USE_PHP+=	${opt:tl}
 .    endif
 .endfor
-
-CATEGORY=	Crypt
-FILES=		RSA.php RSA/ErrorHandler.php RSA/Key.php RSA/KeyPair.php \
-		RSA/MathLoader.php RSA/Math/BCMath.php RSA/Math/BigInt.php \
-		RSA/Math/GMP.php
-DOCS=		CREDITS LICENSE Crypt_RSA.txt math_wrappers.txt
-EXAMPLES=	web_interface.php
-TESTS=		test1.php test2.php bench.php
 
 post-extract:
 	@${MV} ${WRKSRC}/CREDITS ${WRKSRC}/docs
