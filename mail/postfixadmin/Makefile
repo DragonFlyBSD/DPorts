@@ -1,9 +1,5 @@
-# New ports collection makefile for:    postfixadmin
-# Date created:                         23 October 2003
-# Whom:                                 Rob Evers <rob@debank.tv>
-#
-# $FreeBSD: ports/mail/postfixadmin/Makefile,v 1.39 2013/02/23 21:41:56 svnexp Exp $
-#
+# Created by: Rob Evers <rob@debank.tv>
+# $FreeBSD: mail/postfixadmin/Makefile 314344 2013-03-16 09:04:41Z miwi $
 
 PORTNAME=	postfixadmin
 PORTVERSION=	2.3.6
@@ -22,28 +18,26 @@ NO_BUILD=	yes
 
 SUB_FILES+=	pkg-message
 
-OPTIONS=	MYSQL "MySQL back-end (use mysql PHP extension)" on
-OPTIONS+=	MYSQLI "MySQL 4.1+ back-end (use mysqli PHP extension)" off
-OPTIONS+=	PGSQL "PostgreSQL back-end (use pgsql PHP extension)" off
+OPTIONS_SINGLE=	DB
+OPTIONS_SINGLE_DB=	MYSQL MYSQLI PGSQL
+MYSQLI_DESC=	MySQL 4.1+ back-end (use mysqli PHP extension)
 
-.include <bsd.port.pre.mk>
+OPTIONS_DEFAULT=	MYSQL
+
+.include <bsd.port.options.mk>
 
 USE_PHP=	pcre session mbstring spl xmlrpc
 
-.if !defined(WITHOUT_MYSQL)
+.if ${PORT_OPTIONS:MMYSQL}
 USE_PHP+=	mysql
 .endif
 
-.if defined(WITH_MYSQLI)
+.if ${PORT_OPTIONS:MMYSQLI}
 USE_PHP+=	mysqli
 .endif
 
-.if defined(WITH_PGSQL)
+.if ${PORT_OPTIONS:MPGSQL}
 USE_PHP+=	pgsql
-.endif
-
-.if defined(WITHOUT_MYSQL) && !defined(WITH_MYSQLI) && !defined(WITH_PGSQL)
-IGNORE=	needs at least one database back-end
 .endif
 
 post-patch:
@@ -80,7 +74,7 @@ do-install:
 	(cd ${WRKSRC}/ADDITIONS/ && \
 	${COPYTREE_SHARE} \* ${PREFIX}/www/postfixadmin/ADDITIONS/ "! -name squirrelmail-plugin")
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	(cd ${WRKSRC}/DOCUMENTS && ${COPYTREE_SHARE} \* ${DOCSDIR})
 .endif
@@ -95,4 +89,4 @@ post-install:
 	@${CHMOD} 640 ${PREFIX}/www/postfixadmin/users/*.php
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
