@@ -1,8 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: ports/science/gromacs/Makefile,v 1.35 2013/02/10 11:28:50 svnexp Exp $
+# $FreeBSD: science/gromacs/Makefile 315145 2013-03-24 16:27:23Z miwi $
 
 PORTNAME=	gromacs
-PORTVERSION=	4.6
+PORTVERSION=	4.6.1
 CATEGORIES=	science
 MASTER_SITES=	ftp://ftp.gromacs.org/pub/gromacs/
 
@@ -22,10 +22,10 @@ GSL_DESC=	Extra analysis using math/gsl
 MPICH_DESC=	MPI support using net/mpich2
 OMPI_DESC=	MPI support using net/openmpi
 
+USES=		cmake
 USE_FORTRAN=	yes
 USE_PERL5=	yes
 USE_PKGCONFIG=	build
-USE_CMAKE=	yes
 CMAKE_ARGS=	-DBLAS_LIBRARIES:FILEPATH="${BLAS_LIBS}" \
 		-DLAPACK_LIBRARIES:FILEPATH="${LAPACK_LIBS}"
 USE_LDCONFIG=	yes
@@ -127,7 +127,7 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "CMakeLists.txt" | ${XARGS} \
 		${REINPLACE_CMD} -e \
 		's|share/man|man| ; \
-		 s|-lpthread|${PTHREAD_LIBS}| ; \
+		 s|-lpthread|-pthread| ; \
 		 /pkgconfig/s|LIB_INSTALL_DIR}|CMAKE_INSTALL_PREFIX}/libdata|'
 	@${FIND} ${WRKSRC} -name "GMXRC.*" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|LDLIB/pkgconfig|LDLIB/../libdata/pkgconfig| ; \
