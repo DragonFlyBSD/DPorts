@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/clamav/pkg-plist,v 1.41 2012/11/17 06:01:01 svnexp Exp $
+@comment $FreeBSD: security/clamav/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/clamav-config
 bin/clambc
 bin/clamconf

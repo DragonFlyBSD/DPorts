@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/security/clamav/files/pkg-install.in,v 1.6 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/security/clamav/files/pkg-install.in,v 1.5 2008-02-21 13:19:50 garga Exp $
 
 PREFIX=${PKG_PREFIX:-%%PREFIX%%}
 
