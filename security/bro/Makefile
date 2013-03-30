@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@FreeBSD.org>
-# $FreeBSD: ports/security/bro/Makefile,v 1.52 2013/01/10 02:56:22 svnexp Exp $
+# $FreeBSD: security/bro/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	bro
 PORTVERSION=	2.1
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	bison:${PORTSDIR}/devel/bison \
 LIB_DEPENDS=	GeoIP:${PORTSDIR}/net/GeoIP
 
 USE_PERL5=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CONFIGURE_WRKSRC=	${WRKSRC}/build
 BUILD_WRKSRC=	${CONFIGURE_WRKSRC}
 INSTALL_WRKSRC=	${CONFIGURE_WRKSRC}
