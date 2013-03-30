@@ -2,7 +2,7 @@
 # Date created:		3 April 2004
 # Whom:			Edwin Groothuis <edwin@mavetju.org>
 #
-# $FreeBSD: ports/deskutils/phpicalendar/Makefile,v 1.14 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/phpicalendar/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	phpicalendar
