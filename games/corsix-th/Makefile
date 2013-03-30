@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/games/corsix-th/Makefile,v 1.14 2013/01/01 17:49:02 svnexp Exp $
+# $FreeBSD: games/corsix-th/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	corsixth
 PORTVERSION=	0.11
@@ -16,7 +16,7 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LUA=	yes
 USE_SDL=	mixer
 
