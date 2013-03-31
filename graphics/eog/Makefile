@@ -1,14 +1,10 @@
-# New ports collection makefile for:	eog2
-# Date created:		21 May 2002
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/eog/Makefile,v 1.84 2012/11/17 05:58:04 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: graphics/eog/Makefile 314141 2013-03-14 08:17:39Z pclin $
 #   $MCom: ports/graphics/eog/Makefile,v 1.123 2010/11/16 10:11:41 kwm Exp $
-#
 
 PORTNAME=	eog
 PORTVERSION=	2.32.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
