@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/py-matplotlib/Makefile 313305 2013-03-02 23:04:45Z lwhsu $
+# $FreeBSD: math/py-matplotlib/Makefile 314162 2013-03-14 13:59:40Z olgeni $
 
 PORTNAME=	matplotlib
 PORTVERSION=	1.2.0
@@ -18,6 +18,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 		png15:${PORTSDIR}/graphics/png
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
+USE_PKGCONFIG=	build
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 CFLAGS+=	-I${LOCALBASE}/include
