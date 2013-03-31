@@ -1,9 +1,5 @@
-# Ports collection makefile for:	pear-Net_Portscan
-# Date created:				21 Dec, 2009
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pear-Net_Portscan/Makefile,v 1.3 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: security/pear-Net_Portscan/Makefile 314343 2013-03-16 08:30:46Z miwi $
 
 PORTNAME=	Net_Portscan
 PORTVERSION=	1.0.3
@@ -13,16 +9,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Provides an API for scanning ports
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-CATEGORY=	Net
-FILES=		Portscan.php
-TESTS=		01-portscan.php
-DOCS=		README.portscan
-
-post-extract:
-	@cd ${WRKSRC} && ${MKDIR} -p ${WRKSRC}/docs
-	${MV} ${WRKSRC}/README.portscan ${WRKSRC}/docs/
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
