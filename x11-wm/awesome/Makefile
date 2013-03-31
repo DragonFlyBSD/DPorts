@@ -1,8 +1,9 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: x11-wm/awesome/Makefile 313665 2013-03-08 18:54:52Z garga $
+# $FreeBSD: x11-wm/awesome/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	awesome
-PORTVERSION=	3.5
+PORTVERSION=	3.4.15
+PORTEPOCH=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 
@@ -13,6 +14,7 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	asciidoc:${PORTSDIR}/textproc/asciidoc \
 		convert:${PORTSDIR}/graphics/ImageMagick \
+		gperf>=3.0.3:${PORTSDIR}/devel/gperf \
 		pango>=1.19.3:${PORTSDIR}/x11-toolkits/pango \
 		xmlto:${PORTSDIR}/textproc/xmlto \
 		xcb-util>=0.3.8:${PORTSDIR}/x11/xcb-util \
@@ -32,7 +34,7 @@ LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo \
 
 USE_XZ=		yes
 USE_ICONV=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DSYSCONFDIR=${PREFIX}/etc
 USE_EFL=	imlib2
 USE_GNOME=	glib20 pango
@@ -40,7 +42,8 @@ USE_LUA=	5.1+
 USE_XORG=	pixman x11 xau xdmcp xext xft xinerama xrandr xrender xproto
 
 MAN1=	awesome.1 \
-	awesome-client.1
+	awesome-client.1 \
+	awsetbg.1
 MAN5=	awesomerc.5
 MANLANG=	"" de es fr
 MANCOMPRESSED=	yes
@@ -63,16 +66,21 @@ CMAKE_ARGS += -DWITH_DBUS=YES
 CMAKE_ARGS += -DWITH_DBUS=NO
 .endif
 
-.if ${PORT_OPTIONS:MDOCS}
-CMAKE_ARGS += -DINSTALL_PORTDOCS=YES -DGENERATE_DOC=YES
-.else
-CMAKE_ARGS += -DINSTALL_PORTDOCS=NO -DGENERATE_DOC=NO
+pre-configure:
+	@${REINPLACE_CMD} \
+	-e 's/"generate luadoc" ON/\"generate luadoc" OFF/g' \
+		${WRKSRC}/awesomeConfig.cmake
+	@${REINPLACE_CMD} \
+	-e 's,tr ,env LC_ALL="C" ${TR} ,g' \
+	-e 's,gperf,${LOCALBASE}/bin/gperf,g' \
+		${WRKSRC}/build-utils/gperf.sh
+.if empty(PORT_OPTIONS:MDOCS)
+	@${REINPLACE_CMD} \
+		-e 's/"install port docs" ON/\"install port docs" OFF/g' \
+		${WRKSRC}/awesomeConfig.cmake
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e "/LUA_EXECUTABLE lua/ s,lua,lua-${LUA_VER}," \
-		${WRKSRC}/awesomeConfig.cmake
-	@${REINPLACE_CMD} -e '/lgi-check/d' \
-		${WRKSRC}/CMakeLists.txt
+	@${RM} -f ${WRKSRC}/lib/awful/placement.lua.in.orig
 
 .include <bsd.port.post.mk>
