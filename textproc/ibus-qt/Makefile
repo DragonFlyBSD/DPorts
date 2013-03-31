@@ -1,5 +1,5 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: ports/textproc/ibus-qt/Makefile,v 1.11 2012/12/18 23:19:37 svnexp Exp $
+# $FreeBSD: textproc/ibus-qt/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	ibus-qt
 PORTVERSION=	1.3.1
@@ -20,8 +20,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ibus-1.0.pc:${PORTSDIR}/textproc/ibu
 	${LOCALBASE}/bin/icu-config:${PORTSDIR}/devel/icu
 
 USE_QT4=	gui dbus moc_build qmake_build moc_build uic_build rcc_build
-USE_CMAKE=	yes
-CMAKE_ARGS=	-DCMAKE_INSTALL_PREFIX=${PREFIX} -DDOCDIR=${PREFIX}/share/doc/ibus-qt
+USES=		cmake
+CMAKE_ARGS=	-DDOCDIR=${PREFIX}/share/doc/ibus-qt
 USE_LDCONFIG=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
