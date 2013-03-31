@@ -1,5 +1,5 @@
 # Created by: dchapes@ddm.on.ca
-# $FreeBSD: ports/emulators/vice/Makefile,v 1.84 2012/12/09 22:25:01 svnexp Exp $
+# $FreeBSD: emulators/vice/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	vice
 PORTVERSION=	2.4
@@ -18,10 +18,10 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		gif:${PORTSDIR}/graphics/giflib \
 		mp3lame:${PORTSDIR}/audio/lame
 .if defined(VICE_WITH_XAW3D)
-LIB_DEPENDS+=	Xaw3d.${XAWVER}:${PORTSDIR}/x11-toolkits/Xaw3d
+LIB_DEPENDS+=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d
 .endif
 
-RESTRICTED=	"ROMs are copyrighted by Commodore Business Machines"
+RESTRICTED=	ROMs are copyrighted by Commodore Business Machines
 LICENSE=	GPLv2
 
 USE_XORG=	xpm ice sm xext xv xt x11 xmu
