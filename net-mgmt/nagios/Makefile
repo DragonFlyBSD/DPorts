@@ -1,8 +1,8 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: ports/net-mgmt/nagios/Makefile,v 1.99 2013/02/16 17:16:36 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios/Makefile 315043 2013-03-23 16:03:53Z rm $
 
 PORTNAME=	nagios
-PORTVERSION=	3.4.4
+PORTVERSION=	3.5.0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-3.x/${PORTNAME}-${PORTVERSION}
 
