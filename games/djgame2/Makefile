@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/games/djgame2/Makefile,v 1.14 2013/02/12 13:17:57 svnexp Exp $
+# $FreeBSD: games/djgame2/Makefile 312098 2013-02-12 11:25:16Z bapt $
 
 PORTNAME=	djgame2
 PORTVERSION=	3.2.0
