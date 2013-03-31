@@ -2,12 +2,12 @@
 # Date created:		2008-04-27
 # Whom:			Tomoyuki Sakurai <cherry@trombik.org>
 #
-# $FreeBSD: ports/security/openvas-plugins/Makefile,v 1.11 2012/11/17 06:01:09 svnexp Exp $
+# $FreeBSD: ports/security/openvas-plugins/Makefile,v 1.12 2013/02/05 16:54:25 svnexp Exp $
 #
 
 PORTNAME=	openvas-plugins
 PORTVERSION=	1.0.7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/588/
 
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet \
 		openvasd:${PORTSDIR}/security/openvas-server
 LIB_DEPENDS=	openvas.2:${PORTSDIR}/security/openvas-libraries \
 		openvasnasl.2:${PORTSDIR}/security/openvas-libnasl \
-		gnutls.47:${PORTSDIR}/security/gnutls
+		gnutls.26:${PORTSDIR}/security/gnutls
 RUN_DEPENDS=	openvasd:${PORTSDIR}/security/openvas-server \
 		${LOCALBASE}/bin/gmd5sum:${PORTSDIR}/sysutils/coreutils \
 		${LOCALBASE}/bin/rsync:${PORTSDIR}/net/rsync
