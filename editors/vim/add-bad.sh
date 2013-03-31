@@ -1,5 +1,5 @@
 :
-# $FreeBSD: ports/editors/vim/add-bad.sh,v 1.2 2012/11/17 05:57:19 svnexp Exp $
+# $FreeBSD: editors/vim/add-bad.sh 302686 2012-08-17 16:08:14Z obrien $
 
 usage() {
 	echo 'usage: ${0##*/} <bad patch #s to add to ${BADPATCHES}>'

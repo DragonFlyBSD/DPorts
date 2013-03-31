@@ -1,4 +1,4 @@
-" $FreeBSD: ports/editors/vim/files/vietnamese_viscii.vim,v 1.2 2012/11/17 05:57:19 svnexp Exp $
+" $FreeBSD: editors/vim/files/vietnamese_viscii.vim 300896 2012-07-14 13:54:48Z beat $
 " vim:ts=8
 "
 "   VIQR input
