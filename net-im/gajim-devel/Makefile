@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: ports/net-im/gajim-devel/Makefile,v 1.47 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: net-im/gajim-devel/Makefile 314589 2013-03-18 18:37:19Z rm $
 
 PORTNAME=	gajim
 PORTVERSION=	20101030
@@ -11,6 +11,9 @@ DISTNAME=	${PORTNAME}-2010-10-30
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gajim is a Jabber client based on a plugin system
+
+DEPRECATED=	This port is outdated for two years, no distfile available. Please use net-im/gajim instead
+EXPIRATION_DATE=2013-04-18
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0.82.2:${PORTSDIR}/devel/py-dbus
 LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
