@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/photoprint/Makefile,v 1.3 2013/02/26 17:08:15 svnexp Exp $
+# $FreeBSD: print/photoprint/Makefile 315037 2013-03-23 14:54:54Z kwm $
 
 PORTNAME=	photoprint
 DISTVERSION=	0.4.2-pre2
@@ -31,6 +31,10 @@ USE_XORG=	x11 xau xcomposite xcursor xdamage xdmcp xext \
 INSTALLS_ICONS=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|glib/gstrfuncs.h|glib.h|g' \
+		${WRKSRC}/gp_cppsupport/gprinter.cpp
 
 post-install:
 		-@update-desktop-database
