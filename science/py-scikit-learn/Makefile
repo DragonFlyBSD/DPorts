@@ -1,9 +1,9 @@
 # Created by:	Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/science/py-scikit-learn/Makefile,v 1.4 2012/11/17 06:00:59 svnexp Exp $
+# $FreeBSD: science/py-scikit-learn/Makefile 313903 2013-03-11 14:11:26Z demon $
 
 PORTNAME=	scikit-learn
-PORTVERSION=	0.12.1
+PORTVERSION=	0.13.1
 CATEGORIES=	science python
 MASTER_SITES=	${MASTER_SITE_CHEESESHOP}
 MASTER_SITE_SUBDIR=source/s/scikit-learn
