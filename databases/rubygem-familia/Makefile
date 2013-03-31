@@ -2,7 +2,7 @@
 # Date created:		2011-11-10
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/rubygem-familia/Makefile,v 1.3 2012/11/17 05:55:24 svnexp Exp $
+# $FreeBSD: databases/rubygem-familia/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	familia
