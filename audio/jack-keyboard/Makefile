@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: ports/audio/jack-keyboard/Makefile,v 1.28 2012/11/24 20:28:03 svnexp Exp $
+# $FreeBSD: audio/jack-keyboard/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	jack-keyboard
 DISTVERSION=	2.7.1
@@ -19,7 +19,7 @@ MAN1=		jack-keyboard.1
 
 MAKE_JOBS_SAFE=	yes
 USE_GNOME=	gtk20
-USE_CMAKE=	yes
+USES=		cmake
 INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=        LASH
