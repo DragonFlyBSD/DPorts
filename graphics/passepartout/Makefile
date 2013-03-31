@@ -2,7 +2,7 @@
 # Date created:				11st Sep 2003
 # Whom:					Alexander Nedotsukov <bland@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/passepartout/Makefile,v 1.38 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: graphics/passepartout/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #    $MCom: ports/graphics/passepartout/Makefile,v 1.4 2006/09/30 15:31:05 ahze Exp $
 #
 
@@ -25,7 +25,7 @@ RUN_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
