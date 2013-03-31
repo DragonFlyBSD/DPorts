@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/graphics/eos-movrec/Makefile,v 1.10 2013/01/23 15:05:35 svnexp Exp $
+# $FreeBSD: graphics/eos-movrec/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	eos-movrec
 DISTVERSION=	0.3.1_beta
@@ -20,7 +20,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	gphoto2:${PORTSDIR}/graphics/libgphoto2
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_QT4=	qmake_build moc_build rcc_build uic_build gui
 
 PLIST_FILES=	bin/eos_movrec \
