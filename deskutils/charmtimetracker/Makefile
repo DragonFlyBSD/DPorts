@@ -2,7 +2,7 @@
 # Date created:		12 Feb 2012
 # Whom:			Andriy Gapon <avg@icyb.net.ua>
 #
-# $FreeBSD: ports/deskutils/charmtimetracker/Makefile,v 1.3 2012/11/17 05:55:26 svnexp Exp $
+# $FreeBSD: deskutils/charmtimetracker/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	charmtimetracker
@@ -21,7 +21,7 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 
 WRKSRC=		${WRKDIR}/KDAB-Charm-3151d25
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DCharm_VERSION:STRING=${PORTVERSION}
 USE_KDE4=	kdehier kdeprefix
 USE_QT4=	qmake_build moc_build rcc_build uic_build corelib gui network \
