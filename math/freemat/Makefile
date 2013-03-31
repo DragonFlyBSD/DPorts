@@ -2,7 +2,7 @@
 # Date created:		Sat 26 mar 2005
 # Whom:			Thierry Thomas <thierry@pompo.net>
 #
-# $FreeBSD: ports/math/freemat/Makefile,v 1.43 2012/12/10 19:24:02 svnexp Exp $
+# $FreeBSD: math/freemat/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=		FreeMat
@@ -35,7 +35,7 @@ FFLAGS+=		-O2
 
 USE_GL=			yes
 USE_PKGCONFIG=		yes
-USE_CMAKE=		yes
+USES=			cmake
 USE_QT4=		gui network opengl moc_build rcc_build uic_build \
 			qmake_build xml svg
 CPPFLAGS+=		${CXXFLAGS} -I${LOCALBASE}/include  ${AMDINC}
