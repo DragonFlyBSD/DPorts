@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ja-scim-tables
-# Date created:		22 May 2004
-# Whom:			Jie Gao	<gaoj@cpsc.ucalgary.ca>
-#
-# $FreeBSD: ports/japanese/scim-tables/Makefile,v 1.28 2012/11/17 05:58:39 svnexp Exp $
-#
+# Created by: Jie Gao	<gaoj@cpsc.ucalgary.ca>
+# $FreeBSD: japanese/scim-tables/Makefile 315130 2013-03-24 15:51:03Z bdrewery $
 
 PORTNAME=	scim-tables
 PORTVERSION=	0.5.10
@@ -19,6 +15,7 @@ RUN_DEPENDS=	scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+USE_PKGCONFIG=	build
 
 .include <bsd.port.pre.mk>
 
