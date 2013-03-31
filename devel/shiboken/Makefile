@@ -2,7 +2,7 @@
 # Date created:		2011-03-21
 # Whom:			Nicola Vitale <nivit@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/shiboken/Makefile,v 1.6 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: devel/shiboken/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	shiboken
@@ -27,7 +27,7 @@ USE_QT4=	gui qmake_build qtestlib moc_build \
 		uic_build rcc_build xml xmlpatterns
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 

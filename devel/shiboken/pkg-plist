@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/shiboken/pkg-plist,v 1.4 2012/11/17 05:57:03 svnexp Exp $
+@comment $FreeBSD: devel/shiboken/pkg-plist 301273 2012-07-21 12:36:01Z nivit $
 bin/shiboken
 include/shiboken/autodecref.h
 include/shiboken/basewrapper.h
