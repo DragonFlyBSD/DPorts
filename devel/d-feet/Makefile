@@ -2,7 +2,7 @@
 # Date created:		2010-09-11
 # Whom:			Thinker K.F. Li <thinker@eeebox.branda.to>
 #
-# $FreeBSD: ports/devel/d-feet/Makefile,v 1.3 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: devel/d-feet/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	d-feet

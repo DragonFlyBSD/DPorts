@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/d-feet/pkg-plist,v 1.2 2012/11/17 05:55:40 svnexp Exp $
+@comment $FreeBSD: devel/d-feet/pkg-plist 314436 2013-03-17 13:55:04Z danfe $
 bin/d-feet
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
@@ -74,7 +74,6 @@ bin/d-feet
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/share/icons/hicolor/16x16/apps/dfeet-signal-category.png
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/share/icons/hicolor/16x16/apps/dfeet-signal.png
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/share/icons/hicolor/48x48/apps/dfeet-icon.png
-
 @dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/share/icons/hicolor/48x48/apps
 @dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/share/icons/hicolor/48x48
 @dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/share/icons/hicolor/16x16/apps
