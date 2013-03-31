@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: ports/databases/mysql-connector-c++/Makefile,v 1.6 2013/02/05 16:57:40 svnexp Exp $
+# $FreeBSD: databases/mysql-connector-c++/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	mysql-connector-c++
 PORTVERSION=	1.1.2
@@ -16,8 +16,7 @@ LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
 
 USE_MYSQL=	51+
 USE_LDCONFIG=	yes
-USE_CMAKE=	yes
-CMAKE_OUTSOURCE=yes
+USES=		cmake:outsource
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
