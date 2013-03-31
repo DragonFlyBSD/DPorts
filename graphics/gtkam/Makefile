@@ -1,13 +1,9 @@
-# New ports collection makefile for:	gtkam
-# Date created:			10 June 2002
-# Whom:				ports@FreeBSD.org
-#
-# $FreeBSD: ports/graphics/gtkam/Makefile,v 1.44 2012/11/17 05:58:09 svnexp Exp $
-#
+# Created by: ports@FreeBSD.org
+# $FreeBSD: graphics/gtkam/Makefile 314141 2013-03-14 08:17:39Z pclin $
 
 PORTNAME=	gtkam
 PORTVERSION=	0.1.18
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/gphoto/${PORTNAME}/${PORTVERSION}
 
