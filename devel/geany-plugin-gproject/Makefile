@@ -1,13 +1,11 @@
-# $FreeBSD: ports/devel/geany-plugin-gproject/Makefile,v 1.2 2012/11/17 05:55:44 svnexp Exp $
+# $FreeBSD: devel/geany-plugin-gproject/Makefile 314846 2013-03-21 14:43:24Z makc $
 
-PORTNAME=	geany-plugin
+PORTNAME=	geany-plugin-gproject
 PORTVERSION=	${GEANY_VER}
 CATEGORIES=	devel
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Geany plugin: ${${GEANY_PLUGIN}_DESC}
-
-GEANY_PLUGIN=	gproject
 
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
 .include <bsd.port.mk>
