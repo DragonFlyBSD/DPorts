@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: ports/databases/mysql-connector-c/Makefile,v 1.1 2013/02/04 13:07:20 svnexp Exp $
+# $FreeBSD: databases/mysql-connector-c/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	mysql-connector-c
 PORTVERSION=	6.0.2
@@ -13,7 +13,7 @@ COMMENT=	MySQL database connector for C
 LICENSE=	GPLv2
 
 USE_MYSQL=	51+
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
