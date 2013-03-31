@@ -2,7 +2,7 @@
 # Date created:				10 March 2003
 # Whom:					roland.jesse@gmx.net
 #
-# $FreeBSD: ports/x11-toolkits/soqt/Makefile,v 1.35 2012/11/17 06:03:39 svnexp Exp $
+# $FreeBSD: x11-toolkits/soqt/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	SoQt
@@ -19,7 +19,7 @@ COMMENT=	Qt4 toolkit library for Coin
 LIB_DEPENDS=	Coin.61:${PORTSDIR}/graphics/Coin
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_QT4=	corelib opengl moc_build
 USE_GMAKE=	yes
 CPPFLAGS+=	-I${QT_INCDIR} -I${QT_INCDIR}/Qt -I${LOCALBASE}/include
