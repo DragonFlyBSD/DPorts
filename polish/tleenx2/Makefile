@@ -1,5 +1,5 @@
 # Created by: Maciek Korzen <eaquer@ceti.pl>
-# $FreeBSD: ports/polish/tleenx2/Makefile,v 1.18 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: polish/tleenx2/Makefile 304688 2012-09-22 15:42:59Z tabthorpe $
 
 PORTNAME=	tleenx2
 PORTVERSION=	20040214
