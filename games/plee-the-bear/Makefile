@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/games/plee-the-bear/Makefile,v 1.18 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: games/plee-the-bear/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	plee-the-bear
 PORTVERSION=	0.6.0
@@ -22,7 +22,7 @@ USE_GETTEXT=	yes
 MAKE_JOBS_SAFE=	yes
 USE_GCC=	4.6+
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-Dlibclaw_DIR="${LOCALBASE}/share/libclaw/cmake" \
 		-DBEAR_NO_EDITOR=YES
 
