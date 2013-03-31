@@ -1,7 +1,7 @@
-# $FreeBSD: ports/net-im/gajim/Makefile,v 1.58 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: net-im/gajim/Makefile 314618 2013-03-19 06:22:42Z rm $
 
 PORTNAME=	gajim
-PORTVERSION=	0.15.2
+PORTVERSION=	0.15.3
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.gajim.org/downloads/0.15/
 
