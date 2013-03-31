@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: ports/games/asteroid/Makefile,v 1.2 2013/02/19 17:43:27 svnexp Exp $
+# $FreeBSD: games/asteroid/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	asteroid
 PORTVERSION=	1.2.1
@@ -21,8 +21,7 @@ USE_SDL=	mixer sdl
 USE_GNOME=	gtk20
 USE_XORG=	xmu
 INSTALLS_ICONS=	yes
-USE_CMAKE=	yes
-CMAKE_VERBOSE=	yes
+USES=		cmake
 
 PORTDOCS=	AUTHORS NEWS README.md
 
