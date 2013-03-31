@@ -2,7 +2,7 @@
 # Date created:		23 Sep 2007
 # Whom:			Oleg Alexeenkov
 #
-# $FreeBSD: ports/games/openastromenace/Makefile,v 1.16 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/openastromenace/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	openastromenace
@@ -27,7 +27,7 @@ USE_GL=		gl glu
 USE_OPENAL=	al alut
 WANT_SDL=	yes
 USE_SDL=	sdl
-USE_CMAKE=	yes
+USES=		cmake
 WRKSRC=		${WRKDIR}/OpenAstroMenaceSVN
 USE_DOS2UNIX=	yes
 
