@@ -2,7 +2,7 @@
 # Date created:		03 May 2011
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/games/flare/Makefile,v 1.8 2012/11/17 05:57:38 svnexp Exp $
+# $FreeBSD: games/flare/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	flare
@@ -17,7 +17,7 @@ COMMENT=	Free Libre Action Roleplaying Engine
 
 LICENSE=	GPLv3
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_SDL=	sdl mixer image ttf
 MAKE_JOBS_SAFE=	yes
 CMAKE_BUILD_TYPE=	#empty
