@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/deskutils/qtm/Makefile,v 1.31 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/qtm/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	qtm
@@ -17,7 +17,7 @@ USE_BZIP2=	yes
 USE_QT4=	corelib dbus gui network xml \
 		moc_build qmake_build rcc_build uic_build
 USE_OPENSSL=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DCMAKE_CXX_FLAGS_RELEASE:STRING="-DNDEBUG" \
 		-DMANPAGE_DIRECTORY:STRING="${MANPREFIX}/man/man1" \
 		-DMARKDOWN_LOCATION:STRING="${LOCALBASE}/bin/markdown"
