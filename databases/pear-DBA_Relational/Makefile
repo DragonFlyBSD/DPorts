@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-DBA_Relational
-# Date created:			  28 Arp 2007
-# Whom:				  Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/pear-DBA_Relational/Makefile,v 1.4 2012/11/17 05:55:17 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: databases/pear-DBA_Relational/Makefile 314451 2013-03-17 14:59:02Z miwi $
 
 PORTNAME=	DBA_Relational
 PORTVERSION=	0.2.0
@@ -13,13 +9,11 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Berkely-style database abstraction class
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PORTSCOUT=	skipv:0.19
 
-FILES=		Functions.php Relational.php Table.php TempTable.php Toolbox.php
-TESTS=		empSchema.php hatSchema.php test_relational.php test_table.php
-DOCS=		Examples.txt
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
