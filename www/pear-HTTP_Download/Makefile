@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-HTTP_Download
-# Date created:			  17 January 2005
-# Whom:				  Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-#
-# $FreeBSD: ports/www/pear-HTTP_Download/Makefile,v 1.15 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
+# $FreeBSD: www/pear-HTTP_Download/Makefile 314455 2013-03-17 15:28:55Z miwi $
 
 PORTNAME=	HTTP_Download
 PORTVERSION=	1.1.4
@@ -13,10 +9,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR class to send HTTP downloads
 
 BUILD_DEPENDS=	${PEARDIR}/HTTP/Header.php:${PORTSDIR}/www/pear-HTTP_Header
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/HTTP/Header.php:${PORTSDIR}/www/pear-HTTP_Header
 
-FILES=		HTTP/Download.php HTTP/Download/PgLOB.php HTTP/Download/Archive.php
-TESTS=		send.php data.txt AllTests.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
