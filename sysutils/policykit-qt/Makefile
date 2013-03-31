@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@Fluffy.Khv.RU>
-# $FreeBSD: sysutils/policykit-qt/Makefile 313656 2013-03-08 16:06:03Z makc $
+# $FreeBSD: sysutils/policykit-qt/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	policykit-qt
 PORTVERSION=	0.9.4
@@ -20,7 +20,7 @@ USE_LDCONFIG=	yes
 USE_KDE4=	automoc4
 USE_QT4=	corelib dbus gui network svg xml  \
 		qmake_build moc_build rcc_build uic_build
-USE_CMAKE=	yes
+USES=		cmake
 
 PORTSCOUT=	limit:^0
 
