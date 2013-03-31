@@ -1,8 +1,9 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/print/qpdfview/Makefile,v 1.5 2013/02/19 19:13:13 svnexp Exp $
+# $FreeBSD: print/qpdfview/Makefile 314805 2013-03-21 05:27:16Z mezz $
 
 PORTNAME=	qpdfview
 PORTVERSION=	0.4
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	https://launchpadlibrarian.net/131409309/
 
