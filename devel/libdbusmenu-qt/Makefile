@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: ports/devel/libdbusmenu-qt/Makefile,v 1.10 2013/02/05 13:01:26 svnexp Exp $
+# $FreeBSD: devel/libdbusmenu-qt/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	libdbusmenu-qt
 PORTVERSION=	0.9.2
@@ -16,8 +16,7 @@ USE_QT4=	dbus gui xml \
 		moc_build qmake_build rcc_build uic_build
 FETCH_ARGS=	-Fpr
 USE_BZIP2=	yes
-USE_CMAKE=	yes
-CMAKE_OUTSOURCE=yes
+USES=		cmake:outsource
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
