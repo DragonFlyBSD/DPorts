@@ -1,13 +1,9 @@
-# New ports collection makefile for:	libgda4-bdb
-# Date created:				28 February 2009
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/libgda4-bdb/Makefile,v 1.9 2012/11/17 05:55:09 svnexp Exp $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: databases/libgda4-bdb/Makefile 314630 2013-03-19 10:26:51Z kwm $
 
-PORTREVISION?=	1
+PORTREVISION=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	-bdb
+PKGNAMESUFFIX=	4-bdb
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provides Berkeley DB backend for the libgda4 library
