@@ -2,7 +2,7 @@
 # Date created:			Tue  9 Aug 2011, 00:42:14
 # Whom:				fluffy@
 #
-# $FreeBSD: ports/graphics/prison/Makefile,v 1.4 2012/11/17 05:58:19 svnexp Exp $
+# $FreeBSD: graphics/prison/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	prison
 PORTVERSION=	1.0
@@ -19,7 +19,7 @@ LIB_DEPENDS=	dmtx.0:${PORTSDIR}/graphics/libdmtx \
 		qrencode.3:${PORTSDIR}/graphics/libqrencode
 
 USE_QT4=	corelib gui qmake_build moc_build rcc_build uic_build
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
