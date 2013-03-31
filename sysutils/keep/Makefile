@@ -2,7 +2,7 @@
 # Date created:				26 March 2007
 # Whom:					Daniel W. Steinbrook
 #
-# $FreeBSD: ports/sysutils/keep/Makefile,v 1.12 2013/02/04 08:25:30 svnexp Exp $
+# $FreeBSD: sysutils/keep/Makefile 311537 2013-02-04 01:46:42Z amdmi3 $
 #
 
 PORTNAME=	keep
