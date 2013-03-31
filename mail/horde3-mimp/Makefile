@@ -2,7 +2,7 @@
 # Date created:			Mon Feb 05, 2007
 # Whom:				Beech Rintoul <beech@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/horde3-mimp/Makefile,v 1.2 2012/12/16 12:14:29 svnexp Exp $
+# $FreeBSD: mail/horde3-mimp/Makefile 309001 2012-12-16 12:04:18Z mm $
 #
 
 PORTNAME=	mimp
