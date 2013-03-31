@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtkguitune
-# Date created:				12 Feb 2005
-# Whom:					Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/gtkguitune/Makefile,v 1.17 2012/11/17 05:54:34 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: audio/gtkguitune/Makefile 314074 2013-03-13 11:54:25Z danfe $
 
 PORTNAME=	gtkguitune
 PORTVERSION=	0.8
@@ -13,7 +9,7 @@ MASTER_SITES=	http://www.oocities.org/harpin_floh/mysoft/
 DISTNAME=	${PORTNAME}-gtk2-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A guitar (and other instruments) tuner for GTK
+COMMENT=	Guitar (and other instruments) tuner for GTK+2
 
 LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
 
