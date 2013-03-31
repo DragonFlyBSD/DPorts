@@ -1,16 +1,19 @@
-# New Ports collection makefile for:	kye
-# Date created:		17 July 2012
-# Whom:			nemysis@gmx.ch
-#
-# $FreeBSD: ports/games/kye/Makefile,v 1.4 2012/11/17 05:57:43 svnexp Exp $
-#
+# Created by: nemysis <nemysis@gmx.ch>
+# $FreeBSD: games/kye/Makefile 314180 2013-03-14 19:29:30Z beech $
 
 PORTNAME=	kye
 PORTVERSION=	1.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games python
-MASTER_SITES=	http://games.moria.org.uk/kye/download/
-PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+MASTER_SITES=	http://games.moria.org.uk/kye/download/ \
+		SF/nemysisfreebsdp/kye/:nemysis
+# Selection of production-ready/well-known Kye Levels
+# (Zipped levels already included from games.moria.org.uk are excluded)
+# Please contact the maintainer if a Level is missing
+DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
+		kye-data_moria_levels.20121101.tar.gz:nemysis \
+		kye-data_nuke_levels.20121101.tar.gz:nemysis \
+		kye-data_extra_levels.20120818.tar.gz:nemysis
 DIST_SUBDIR=	kye
 
 MAINTAINER=	nemysis@gmx.ch
@@ -27,22 +30,27 @@ PORTDOCS=	NEWS README
 
 SUB_FILES=	pkg-message
 
+DESKTOP_ENTRIES="Python Kye" "${COMMENT}" "Kye" \
+		"Kye" "Game;LogicGame;" false
+
 .include <bsd.port.options.mk>
 
+post-extract-script:
+	${MKDIR} ${WRKDIR}/${PORTNAME}
+.for l in kye-data_moria_levels.20121101.tar.gz kye-data_nuke_levels.20121101.tar.gz kye-data_extra_levels.20120818.tar.gz
+	${TAR} xfjp ${DISTDIR}/${DIST_SUBDIR}/${l} -C ${WRKDIR}/${PORTNAME}
+.endfor
+
 post-install:
-# Data
 	${INSTALL_DATA} ${WRKSRC}/kye-icon.png ${PREFIX}/share/pixmaps/Kye.png
 	${INSTALL_DATA} ${WRKSRC}/kye-edit-icon.png ${PREFIX}/share/pixmaps/Kye-edit.png
+	@cd ${WRKDIR}/${PORTNAME} && ${COPYTREE_SHARE} \* ${DATADIR}
 
-# Documentation
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
-.  for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.  endfor
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 .endif
 
-# pkg-message
 	@${ECHO_CMD}
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO_CMD}
