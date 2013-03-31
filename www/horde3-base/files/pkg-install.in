@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/horde3-base/files/pkg-install.in,v 1.1 2012/12/12 12:27:53 svnexp Exp $
+# $FreeBSD: www/horde3-base/files/pkg-install.in 300897 2012-07-14 14:29:18Z beat $
 #
 # Copied from databases/phpmyadmin.
 # Used if WITH_SUPHP has been defined.

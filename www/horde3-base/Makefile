@@ -2,7 +2,7 @@
 # Date created:			  Sun Oct 07, 2001
 # Whom:				  Thierry Thomas (<thierry@thomas.as>)
 #
-# $FreeBSD: ports/www/horde3-base/Makefile,v 1.2 2012/12/16 12:14:32 svnexp Exp $
+# $FreeBSD: www/horde3-base/Makefile 309001 2012-12-16 12:04:18Z mm $
 #
 
 PORTNAME=	base
