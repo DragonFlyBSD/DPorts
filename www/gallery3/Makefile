@@ -1,9 +1,8 @@
 # Created by: Bo-Yi Wu <appleboy.tw@gmail.com>
-# $FreeBSD: www/gallery3/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/gallery3/Makefile 314585 2013-03-18 16:36:54Z beech $
 
 PORTNAME=	gallery3
-PORTVERSION=	3.0.4
-PORTREVISION=	1
+PORTVERSION=	3.0.5
 CATEGORIES=	www
 MASTER_SITES=	SF/gallery/${PORTNAME}/${PORTVERSION}
 DISTNAME=	gallery-${PORTVERSION}
@@ -51,7 +50,11 @@ RUN_DEPENDS+=	gm:${PORTSDIR}/graphics/GraphicsMagick
 .endif
 
 .if ${PORT_OPTIONS:MIMAGEMAGICK}
-RUN_DEPENDS+=	convert:${PORTSDIR}/graphics/ImageMagick
+.if !defined(WITHOUT_X11)
+RUN_DEPENDS+=    convert:${PORTSDIR}/graphics/ImageMagick
+.else
+RUN_DEPENDS+=    convert:${PORTSDIR}/graphics/ImageMagick-nox11
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MJHEAD}
