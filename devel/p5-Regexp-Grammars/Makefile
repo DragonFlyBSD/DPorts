@@ -2,11 +2,11 @@
 # Date created:	   Mon Sep 27, 2010
 # Whom:		   Dan Rench <citric@cubicone.tmetic.com>
 #
-# $FreeBSD: ports/devel/p5-Regexp-Grammars/Makefile,v 1.7 2012/12/16 06:16:54 svnexp Exp $
+# $FreeBSD: devel/p5-Regexp-Grammars/Makefile 313832 2013-03-10 16:55:13Z beech $
 #
 
 PORTNAME=	Regexp-Grammars
-PORTVERSION=	1.021
+PORTVERSION=	1.026
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
