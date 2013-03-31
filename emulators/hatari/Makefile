@@ -1,5 +1,5 @@
 # Created by: Michael Neumann <mneumann@ntecs.de>
-# $FreeBSD: ports/emulators/hatari/Makefile,v 1.27 2012/12/10 04:03:41 svnexp Exp $
+# $FreeBSD: emulators/hatari/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	hatari
 PORTVERSION=	1.6.2
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 USE_GNOME=	pygtk2
 USE_SDL=	sdl
 USE_READLINE=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DPORTAUDIO_INCLUDE_DIR:STRING="${PA2_INCLUDE_DIR}" \
 		-DPORTAUDIO_LIBRARY:STRING="${PA2_LIBRARY}" \
 		-DCMAKE_C_FLAGS_RELEASE:STRING="-DNDEBUG" \
