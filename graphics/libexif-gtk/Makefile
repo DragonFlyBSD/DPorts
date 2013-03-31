@@ -1,13 +1,9 @@
-# New ports collection makefile for:	libexif-gtk
-# Date created:		10 Jun 2002
-# Whom:			ports@FreeBSD.org
-#
-# $FreeBSD: ports/graphics/libexif-gtk/Makefile,v 1.46 2012/11/17 05:58:12 svnexp Exp $
-#
+# Created by: ports@FreeBSD.org
+# $FreeBSD: graphics/libexif-gtk/Makefile 314141 2013-03-14 08:17:39Z pclin $
 
 PORTNAME=	libexif-gtk
 PORTVERSION=	0.3.5
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	graphics
 MASTER_SITES=	SF/libexif/${PORTNAME}/${PORTVERSION}
 
