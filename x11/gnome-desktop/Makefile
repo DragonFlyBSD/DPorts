@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-desktop/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: x11/gnome-desktop/Makefile 314763 2013-03-20 21:18:27Z mezz $
 #   $MCom: ports/x11/gnome-desktop/Makefile,v 1.190 2010/11/17 12:03:52 kwm Exp $
 
 PORTNAME=	gnome-desktop
 PORTVERSION=	2.32.1
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -22,7 +22,6 @@ USE_XORG=	xpm
 USES=		bison pathfix
 USE_GNOME=	gnomeprefix intlhack gnomedocutils gconf2 pygtk2 \
 		ltverhack referencehack
-GNOME_DESKTOP_VERSION=2
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
