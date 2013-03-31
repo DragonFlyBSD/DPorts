@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-HTML_TagCloud
-# Date created:			  08 April 2008
-# Whom:				  Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/pear-HTML_TagCloud/Makefile,v 1.6 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: www/pear-HTML_TagCloud/Makefile 314217 2013-03-15 01:31:42Z miwi $
 
 PORTNAME=	HTML_TagCloud
 PORTVERSION=	1.0.0
@@ -15,15 +11,7 @@ COMMENT=	Generate TagCloud in HTML And Visualize Tags
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-CATEGORY=	HTML
-FILES=		TagCloud.php
-
-DOCS=		examples/TagCloud_example1.php \
-		examples/TagCloud_example2.php \
-		examples/TagCloud_example3.php \
-		examples/TagCloud_example4.php
-
-TESTS=		AllTests.php TagCloudTest.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
