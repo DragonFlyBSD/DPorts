@@ -2,7 +2,7 @@
 # Date created:                03 May 2010
 # Whom:                        Ju Pengfei <jupengfei@gmail.com>
 #
-# $FreeBSD: ports/graphics/apvlv/Makefile,v 1.11 2012/11/17 05:58:01 svnexp Exp $
+# $FreeBSD: graphics/apvlv/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	apvlv
@@ -19,7 +19,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	poppler-glib.8:${PORTSDIR}/graphics/poppler-glib
 
 USE_GNOME=	gtk20
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 CMAKE_ARGS+=	-DSYSCONFDIR=${PREFIX}/etc \
 		-DMANDIR=${MANPREFIX}/man \
