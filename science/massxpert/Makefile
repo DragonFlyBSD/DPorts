@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/science/massxpert/Makefile,v 1.10 2013/02/09 15:01:33 svnexp Exp $
+# $FreeBSD: science/massxpert/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	massxpert
 PORTVERSION=	3.4.0
@@ -21,7 +21,7 @@ LICENSE=	GPLv3
 
 USE_GCC=	any
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_GETTEXT=	yes
 USE_ICONV=	yes
 USE_XORG=	ice sm x11 xau xdmcp xext xrender
