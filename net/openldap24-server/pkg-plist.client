@@ -1,4 +1,4 @@
-@comment $FreeBSD: net/openldap24-server/pkg-plist.client 305599 2012-10-09 18:33:17Z delphij $
+@comment $FreeBSD: net/openldap24-server/pkg-plist.client 315106 2013-03-24 06:42:13Z delphij $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -37,3 +37,4 @@ lib/libldap_r-2.4.so.%%SHLIB_MAJOR%%
 lib/libldap_r.a
 lib/libldap_r.la
 lib/libldap_r.so
+@dirrmtry libexec/openldap

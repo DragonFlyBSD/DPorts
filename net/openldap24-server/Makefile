@@ -1,8 +1,8 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: net/openldap24-server/Makefile 313182 2013-03-02 03:55:25Z eadler $
+# $FreeBSD: net/openldap24-server/Makefile 315106 2013-03-24 06:42:13Z delphij $
 
 PORTNAME=		openldap
-DISTVERSION=		2.4.33
+DISTVERSION=		2.4.34
 PORTREVISION=		${OPENLDAP_PORTREVISION}
 CATEGORIES=		net databases
 MASTER_SITES=		ftp://ftp.OpenLDAP.org/pub/OpenLDAP/%SUBDIR%/ \
@@ -19,17 +19,17 @@ MASTER_SITE_SUBDIR=	openldap-release
 PKGNAMESUFFIX=		-sasl-client
 COMMENT=		Open source LDAP client implementation with SASL2 support
 CONFLICTS=		${PKGNAMEPREFIX}${PORTNAME}-client-2.* \
-			${PKGNAMEPREFIX}${PORTNAME}-sasl-client-2.[!4].*
+			${PKGNAMEPREFIX}${PORTNAME}-sasl-client-2.[0-3].*
 .else
 PKGNAMESUFFIX=		-client
 COMMENT=		Open source LDAP client implementation
-CONFLICTS=		${PKGNAMEPREFIX}${PORTNAME}-client-2.[!4].* \
+CONFLICTS=		${PKGNAMEPREFIX}${PORTNAME}-client-2.[0-3].* \
 			${PKGNAMEPREFIX}${PORTNAME}-sasl-client-2.*
 .endif
 .else
 PKGNAMESUFFIX?=		-server
 # Do not use ${PKGNAMESUFFIX} here has it can change later
-OPTIONSFILE=		${PORT_DBDIR}/${PORTNAME}24-server/options
+OPTIONSFILE?=		${PORT_DBDIR}/${PORTNAME}24-server/options
 .endif
 EXTRACT_SUFX=		.tgz
 
@@ -56,7 +56,7 @@ BROKEN=			incompatible OpenLDAP version: ${WANT_OPENLDAP_VER}
 .endif
 
 PORTREVISION_CLIENT=	1
-PORTREVISION_SERVER=	2
+PORTREVISION_SERVER=	1
 OPENLDAP_SHLIB_MAJOR=	8
 
 OPTIONS_DEFINE=	FETCH
@@ -464,11 +464,12 @@ LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 
 .if defined(CLIENT_ONLY)
-.include "${FILESDIR}/manpages"
+.include "${FILESDIR}/manpages.client"
 .else
 SUB_LIST+=		RC_DIR=${PREFIX} \
 			LDAP_RUN_DIR=${LDAP_RUN_DIR} \
 			DATABASEDIR=${DATABASEDIR}
+.include "${FILESDIR}/manpages.server"
 .endif
 
 PLIST_SUB+=		${SUB_LIST}
