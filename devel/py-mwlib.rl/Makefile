@@ -1,0 +1,30 @@
+# New ports collection makefile for:	mwlib.rl
+# Date created:		06 May, 2009
+# Whom:			Wen Heping <wenheping@gmail.com>
+#
+# $FreeBSD: ports/devel/py-mwlib.rl/Makefile,v 1.10 2012/11/17 05:56:48 svnexp Exp $
+#
+
+PORTNAME=	mwlib.rl
+PORTVERSION=	0.12.8
+PORTREVISION=	1
+CATEGORIES=	devel python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	wen@FreeBSD.org
+COMMENT=	Generate Pdfs from Mediawiki Markup
+
+BUILD_DEPENDS=	${LOCALBASE}/bin/texvc:${PORTSDIR}/print/texvc \
+		${LOCALBASE}/bin/fribidi:${PORTSDIR}/converters/fribidi \
+		${PYTHON_PKGNAMEPREFIX}gevent>=0:${PORTSDIR}/devel/py-gevent \
+		${PYTHON_PKGNAMEPREFIX}mwlib>=0.12.14:${PORTSDIR}/devel/py-mwlib \
+		${PYTHON_PKGNAMEPREFIX}mwlib.ext>=0.12.3:${PORTSDIR}/devel/py-mwlib.ext \
+		${PYTHON_PKGNAMEPREFIX}pygments>=1.0:${PORTSDIR}/textproc/py-pygments
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+USE_GETTEXT=		yes
+USE_PYTHON=		2.5+
+USE_PYDISTUTILS=	easy_install
+
+.include <bsd.port.mk>
