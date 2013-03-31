@@ -1,9 +1,8 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: ports/print/pdfcube/Makefile,v 1.20 2013/01/31 14:01:31 svnexp Exp $
+# $FreeBSD: print/pdfcube/Makefile 314849 2013-03-21 15:44:33Z lwhsu $
 
 PORTNAME=	pdfcube
-DISTVERSION=	0.0.4-beta
-PORTREVISION=	3
+PORTVERSION=	0.0.5
 CATEGORIES=	print
 MASTER_SITES=	http://code.100allora.it/releases/pdfcube/
 
@@ -17,7 +16,6 @@ LIB_DEPENDS=	gtkglext:${PORTSDIR}/x11-toolkits/gtkglext \
 USE_GL=		glut
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${LOCALBASE}/lib --includedir=${LOCALBASE}/include
-WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION:R}
 
 PLIST_FILES=	bin/pdfcube
 
