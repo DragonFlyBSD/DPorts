@@ -2,7 +2,7 @@
 # Date created:				2008/06/20
 # Whom:					chinsan
 #
-# $FreeBSD: ports/x11-toolkits/sakura/Makefile,v 1.25 2012/11/17 06:03:39 svnexp Exp $
+# $FreeBSD: x11-toolkits/sakura/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	sakura
@@ -16,7 +16,7 @@ COMMENT=	A terminal emulator based on GTK and VTE
 
 USE_GNOME=	vte
 USE_GETTEXT=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_BZIP2=	yes
 USE_PKGCONFIG=	build
 
