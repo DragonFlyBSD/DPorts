@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/qzeitgeist/Makefile,v 1.6 2013/02/05 00:52:49 svnexp Exp $
+# $FreeBSD: sysutils/qzeitgeist/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	qzeitgeist
 PORTVERSION=	0.8.0
@@ -25,7 +25,7 @@ USE_PYTHON_BUILD=	yes
 USE_QT4=	dbus declarative qtestlib \
 		moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
