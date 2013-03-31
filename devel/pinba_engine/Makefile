@@ -2,7 +2,7 @@
 # Date created:				24 Dec 2009
 # Whom:					raven428 <raven428@gmail.com>
 #
-# $FreeBSD: ports/devel/pinba_engine/Makefile,v 1.7 2012/11/17 05:56:42 svnexp Exp $
+# $FreeBSD: devel/pinba_engine/Makefile 314580 2013-03-18 15:14:27Z vanilla $
 #
 
 PORTNAME=	pinba_engine
@@ -22,6 +22,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/google/protobuf/descriptor.h:${PORTSDIR}/dev
  		${NONEXISTENT}:${PORTSDIR}/${_MYSQL_SERVER}:configure \
 		bison:${PORTSDIR}/devel/bison \
 		cmake:${PORTSDIR}/devel/cmake
+LIB_DEPENDS=	protobuf:${PORTSDIR}/devel/protobuf
 
 GITVERSION=	3a0cb51
 FETCH_ARGS=	-pRr
