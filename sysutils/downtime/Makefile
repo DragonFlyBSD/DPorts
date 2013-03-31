@@ -2,7 +2,7 @@
 # Date created:		17 July 2006
 # Whom:			Nick Withers (nick@nickwithers.com)
 #
-# $FreeBSD: ports/sysutils/downtime/Makefile,v 1.13 2012/11/17 06:01:28 svnexp Exp $
+# $FreeBSD: sysutils/downtime/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	downtime
