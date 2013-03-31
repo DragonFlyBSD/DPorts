@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Services_JSON
-# Date created:			  22 May, 2009
-# Whom:				  Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/converters/pear-Services_JSON/Makefile,v 1.8 2012/11/17 05:55:04 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: converters/pear-Services_JSON/Makefile 314211 2013-03-15 01:24:02Z miwi $
 
 PORTNAME=	Services_JSON
 PORTVERSION=	1.0.3
@@ -13,9 +9,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PHP implementation of json_encode/decode
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-FILES=		JSON.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
