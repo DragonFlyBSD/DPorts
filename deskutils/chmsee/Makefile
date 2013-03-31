@@ -2,7 +2,7 @@
 # Date created:                		10 June 2006
 # Whom:                    		Yinghong Liu <relaxbsd@gmail.com>
 #
-# $FreeBSD: ports/deskutils/chmsee/Makefile,v 1.33 2012/11/17 05:55:26 svnexp Exp $
+# $FreeBSD: deskutils/chmsee/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	chmsee
@@ -22,7 +22,7 @@ LICENSE=	GPLv2
 USE_GNOME=	gnomehier libglade2
 USE_GECKO=	libxul19
 USE_GETTEXT=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=TRUE
 INSTALLS_ICONS=	yes
 
