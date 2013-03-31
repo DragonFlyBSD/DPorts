@@ -2,7 +2,7 @@
 # Date created:        Tue May 20 19:00:00 UTC 2008
 # Whom:                Ganael Laplanche <ganael.laplanche@martymac.org>
 #
-# $FreeBSD: ports/editors/yzis/Makefile,v 1.21 2012/11/17 05:57:19 svnexp Exp $
+# $FreeBSD: editors/yzis/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	yzis
@@ -27,7 +27,7 @@ LUA_COMPS=	lua
 USE_QT4=	qtestlib qmake_build rcc_build uic_build moc_build gui xml
 USE_PERL5=	yes
 
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DLOCALBASE:STRING="${LOCALBASE}" \
 		-DLUA_INCDIR:STRING="${LUA_INCDIR}" \
 		-DLUA_LIBDIR:STRING="${LUA_LIBDIR}" \
