@@ -1,8 +1,8 @@
 # Created by: miwi
-# $FreeBSD: ports/databases/akonadi/Makefile,v 1.42 2013/02/04 01:03:27 svnexp Exp $
+# $FreeBSD: databases/akonadi/Makefile 314929 2013-03-22 13:39:57Z makc $
 
 PORTNAME=	akonadi
-PORTVERSION=	1.9.0
+PORTVERSION=	1.9.1
 CATEGORIES=	databases kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTNAME}/src/
@@ -19,13 +19,14 @@ LIB_DEPENDS+=	execinfo:${PORTSDIR}/devel/libexecinfo
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 
 USE_KDE4=	kdehier kdeprefix sharedmime automoc4 soprano
-KDE4_BUILDENV=	yes
-USE_QT4=	dbus gui network qtestlib sql \
+USES=		cmake:outsource
+USE_QT4=	corelib dbus gui network qtestlib_build sql xml \
 		moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
 CMAKE_ARGS+=	-DAKONADI_BUILD_TESTS:BOOL=FALSE \
 		-DINSTALL_QSQLITE_IN_QT_PREFIX:BOOL=TRUE \
 		-DCMAKE_REQUIRED_INCLUDES:STRING="${LOCALBASE}/include"
+USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=	yes
 
 PLIST_SUB+=	QT_PREFIX=${QT_PREFIX}
