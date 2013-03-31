@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: ports/devel/qt4-qt3support/Makefile,v 1.28 2013/02/03 21:43:08 svnexp Exp $
+# $FreeBSD: devel/qt4-qt3support/Makefile 314095 2013-03-13 16:34:04Z makc $
 
 PORTNAME=	qt3support
 DISTVERSION=	${QT4_VERSION}
@@ -9,6 +9,7 @@ PKGNAMEPREFIX=	qt4-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt3 compatibility library
 
+USE_PKGCONFIG=	build
 USE_QT4=	qmake_build moc_build corelib gui network sql xml
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
