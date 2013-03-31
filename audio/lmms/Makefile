@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: ports/audio/lmms/Makefile,v 1.45 2012/11/17 05:54:38 svnexp Exp $
+# $FreeBSD: audio/lmms/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	lmms
 PORTVERSION=	0.4.13
@@ -35,7 +35,7 @@ USE_BZIP2=	yes
 USE_XORG=	xft
 USE_QT4=	corelib gui xml moc_build uic_build rcc_build \
 		qmake_build
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DWANT_ALSA:BOOL=OFF \
 		-DWANT_CALF:BOOL=OFF \
 		-DWANT_CAPS:BOOL=OFF \
