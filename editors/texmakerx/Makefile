@@ -2,12 +2,12 @@
 # Date created:			Feb 22, 2009
 # Whom:				lx
 #
-# $FreeBSD: ports/editors/texmakerx/Makefile,v 1.22 2012/11/17 05:57:18 svnexp Exp $
+# $FreeBSD: editors/texmakerx/Makefile 314805 2013-03-21 05:27:16Z mezz $
 #
 
 PORTNAME=	texmakerx
 PORTVERSION=	2.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/TexMakerX%20${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION:S:.0::}
@@ -15,8 +15,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S:.0::}
 MAINTAINER=	lx@FreeBSD.org
 COMMENT=	A LaTeX IDE derived from Texmaker
 
-LIB_DEPENDS=	poppler.18:${PORTSDIR}/graphics/poppler \
-		poppler-qt4.3:${PORTSDIR}/graphics/poppler-qt4
+LIB_DEPENDS=	poppler:${PORTSDIR}/graphics/poppler \
+		poppler-qt4:${PORTSDIR}/graphics/poppler-qt4
 RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
 		dvips:${PORTSDIR}/print/dvipsk-tetex \
 		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
