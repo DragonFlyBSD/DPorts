@@ -1,12 +1,9 @@
-# New ports collection makefile for:	libkexif
-# Date created:				Mon Oct 18 19:41:36 CEST 2004
-# Whom:					Markus Brueffer <markus@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/libkexif/Makefile,v 1.24 2012/11/17 05:58:13 svnexp Exp $
+# Created by: Markus Brueffer <markus@FreeBSD.org>
+# $FreeBSD: graphics/libkexif/Makefile 314141 2013-03-14 08:17:39Z pclin $
 
 PORTNAME=	libkexif
 PORTVERSION=	0.2.5
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	graphics devel
 MASTER_SITES=	SF/kipi/OldFiles
 
