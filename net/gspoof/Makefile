@@ -1,18 +1,18 @@
 # ex:ts=8
 # Ports collection makefile for:	gspoof
 # Created by: ijliao
-# $FreeBSD: ports/net/gspoof/Makefile,v 1.28 2012/11/17 06:00:01 svnexp Exp $
+# $FreeBSD: ports/net/gspoof/Makefile,v 1.29 2013/02/18 21:46:32 svnexp Exp $
 
 PORTNAME=	gspoof
 PORTVERSION=	3.2
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/Gspoof-3/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Console/GTK+ TCP/IP Packets Forger
 
-BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
+LIB_DEPENDS=	net:${PORTSDIR}/net/libnet
 
 USE_GNOME=	gtk20
 USE_GMAKE=	yes
