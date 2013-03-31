@@ -1,5 +1,5 @@
 # Created by: Bartlomiej Rutkowski <r@robakdesign.com>
-# $FreeBSD: www/ilias3/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/ilias3/Makefile 313782 2013-03-10 00:06:38Z wen $
 
 PORTNAME=	ilias
 PORTVERSION=	3.10.14
@@ -21,6 +21,9 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
 
 CONFLICTS=	ilias-4.[0-9].*
+
+DEPRECATED=	Obsolete stable release
+EXPIRATION_DATE=2013-04-30
 
 LATEST_LINK=		ilias3
 NO_BUILD=		yes
