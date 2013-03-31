@@ -1,0 +1,27 @@
+# New ports collection makefile for:	Authen-Simple-SSH
+# Date created:				22 May 2006
+# Whom:					Aaron Dalton <aaron@FreeBSD.org>
+#
+# $FreeBSD: ports/security/p5-Authen-Simple-SSH/Makefile,v 1.12 2012/11/17 06:01:10 svnexp Exp $
+#
+
+PORTNAME=	Authen-Simple-SSH
+PORTVERSION=	0.1
+CATEGORIES=	security perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Simple SSH authentication
+
+BUILD_DEPENDS=	p5-Authen-Simple>=0:${PORTSDIR}/security/p5-Authen-Simple \
+		p5-Net-SSH-Perl>=0:${PORTSDIR}/net/p5-Net-SSH-Perl
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+MAKE_JOBS_SAFE=  yes
+
+MAN3=	Authen::Simple::SSH.3
+
+PERL_MODBUILD=	yes
+
+.include <bsd.port.mk>
