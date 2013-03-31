@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/tint/Makefile,v 1.21 2013/01/20 15:43:42 svnexp Exp $
+# $FreeBSD: x11/tint/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	tint2
 PORTVERSION=	0.11
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=	yes
 
 PROJECTHOST=	tint2
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_GNOME=	pango glib20
 USE_XORG=	xinerama xrandr xdamage xcomposite
 USE_EFL=	imlib2
