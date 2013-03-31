@@ -1,10 +1,7 @@
-# New ports collection makefile for:   jpilot
-# Date created:        23 August 1999
-# Whom:                Alex Varju <varju@webct.com>
-#
-# $FreeBSD: ports/palm/jpilot/Makefile,v 1.73 2012/11/17 06:00:44 svnexp Exp $
-#
-# "?=" and "+=" are for including this Makefile from japanese/jpilot
+# Created by: Alex Varju <varju@webct.com>
+# $FreeBSD: palm/jpilot/Makefile 314938 2013-03-22 15:21:00Z bdrewery $
+
+# "?=" and "+=" are for including this Makefile from japanese/jpilot"
 
 PORTNAME=	jpilot
 PORTVERSION=	1.8.1
@@ -20,6 +17,7 @@ LIB_DEPENDS=	pisock.9:${PORTSDIR}/palm/pilot-link
 
 USE_GCC=	any
 USE_GMAKE=	yes
+USE_PKGCONFIG=	build
 USE_GNOME=	gnomehier
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
