@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: ports/astro/stellarium/Makefile,v 1.48 2013/02/21 04:42:21 svnexp Exp $
+# $FreeBSD: astro/stellarium/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	stellarium
 PORTVERSION=	0.12.0
@@ -13,7 +13,7 @@ COMMENT=	3D photo-realistic sky renderer (planetarium)
 
 LICENSE=	GPLv2
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_GETTEXT=	yes
 USE_GL=		glu
 USE_ICONV=	yes
