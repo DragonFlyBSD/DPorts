@@ -1,14 +1,11 @@
-# $FreeBSD: ports/devel/geany-plugin-extrasel/Makefile,v 1.2 2012/11/17 05:55:44 svnexp Exp $
+# $FreeBSD: devel/geany-plugin-extrasel/Makefile 314846 2013-03-21 14:43:24Z makc $
 
-PORTNAME=	geany-plugin
+PORTNAME=	geany-plugin-extrasel
 PORTVERSION=	${GEANY_VER}
 CATEGORIES=	devel
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Geany plugin: ${${GEANY_PLUGIN}_DESC}
-
-GEANY_PLUGIN=	extrasel
-GEANY_PLUGIN_DIR=	geanyextrasel
 
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
 .include <bsd.port.mk>
