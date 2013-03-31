@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: audio/mctoolame-encoder/Makefile 313026 2013-02-27 02:52:09Z danfe $
+# $FreeBSD: audio/mctoolame-encoder/Makefile 314072 2013-03-13 11:19:28Z danfe $
 
 PORTNAME=	mctoolame
 PORTVERSION=	0.1.a
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/\.//g}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	MPEG Layer II audio encoder with multi-channel encoding support
+COMMENT=	MPEG Layer II audio encoder with multi-channel support
 
 USE_GMAKE=	yes
 ALL_TARGET=	#
@@ -24,6 +24,9 @@ OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(ARCH)||' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -E \
+		's|gets *\(([^,)]+)\)|fgets(\1, sizeof(\1), stdin)|' \
+			${WRKSRC}/config.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mctoolame ${PREFIX}/bin
