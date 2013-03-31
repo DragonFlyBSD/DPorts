@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/libmspub/Makefile,v 1.2 2013/02/21 21:55:55 svnexp Exp $
+# $FreeBSD: print/libmspub/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libmspub
 PORTVERSION=	0.0.5
@@ -17,7 +17,7 @@ LIB_DEPENDS=	icui18n:${PORTSDIR}/devel/icu \
 		wpd-0.9:${PORTSDIR}/textproc/libwpd
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
 USE_XZ=		yes
