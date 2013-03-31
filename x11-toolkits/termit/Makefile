@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: ports/x11-toolkits/termit/Makefile,v 1.27 2012/12/19 17:42:31 svnexp Exp $
+# $FreeBSD: x11-toolkits/termit/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	termit
 PORTVERSION=	2.9.6
@@ -22,7 +22,7 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		xcb:${PORTSDIR}/x11/libxcb
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_PKGCONFIG=	build
 USE_ICONV=	yes
 USE_LUA=	yes
