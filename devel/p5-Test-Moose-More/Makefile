@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Test-Moose-More/Makefile,v 1.3 2013/01/09 09:55:25 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Moose-More/Makefile 314449 2013-03-17 14:47:31Z lth $
 
 PORTNAME=	Test-Moose-More
-PORTVERSION=	0.017
+PORTVERSION=	0.019
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Test
