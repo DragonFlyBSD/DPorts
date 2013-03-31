@@ -1,8 +1,8 @@
 # Created by:	Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Iterator-Simple/Makefile,v 1.1 2012/11/26 22:32:36 svnexp Exp $
+# $FreeBSD: devel/p5-Iterator-Simple/Makefile 314552 2013-03-18 11:31:59Z tobez $
 
 PORTNAME=	Iterator-Simple
-PORTVERSION=	0.05
+PORTVERSION=	0.06
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
