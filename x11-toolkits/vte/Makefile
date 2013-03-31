@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/vte/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: x11-toolkits/vte/Makefile 314323 2013-03-15 21:39:16Z kwm $
 #   $MCom: ports/x11-toolkits/vte/Makefile,v 1.117 2010/11/13 13:16:58 kwm Exp $
 
 PORTNAME=	vte
 PORTVERSION=	0.26.2
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -30,18 +30,21 @@ CONFIGURE_ARGS?=--disable-python \
 		--disable-freetypetest
 
 .if !defined(MASTERDIR)
-OPTIONS=	GLX	"Enable support for DRI/GLX rendering" off
+OPTIONS_DEFINE=	GLX
+GLX_DESC=	Support for DRI/GLX rendering
+.endif
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MGLX} && !defined(MASTERDIR)
+CONFIGURE_ARGS+=	--with-glX
+USE_GL=			yes
 .endif
 
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 900007
 EXTRA_PATCHES+=		${FILESDIR}/extra-patch-gnome-pty-helper_gnome-utmp.c
-.endif
-
-.if defined(WITH_GLX) && !defined(MASTERDIR)
-CONFIGURE_ARGS+=	--with-glX
-USE_GL=			yes
 .endif
 
 .include <bsd.port.post.mk>
