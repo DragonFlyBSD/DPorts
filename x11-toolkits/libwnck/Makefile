@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libwnck/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: x11-toolkits/libwnck/Makefile 314632 2013-03-19 10:40:22Z kwm $
 #   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.133 2010/11/17 11:38:29 kwm Exp $
 
 PORTNAME=	libwnck
@@ -30,17 +30,19 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS= STARTUP	"Enable startup notification support"	on
+OPTIONS_DEFINE=	STARTUP
+OPTIONS_DEFAULT=STARTUP
+STARTUP_DESC=	Startup notification support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_STARTUP)
-LIB_DEPENDS+=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
+.if ${PORT_OPTIONS:MSTARTUP}
+LIB_DEPENDS+=	startup-notification-1:${PORTSDIR}/x11/startup-notification
 CONFIGURE_ARGS+=--enable-startup-notification
 .else
 CONFIGURE_ARGS+=--disable-startup-notification
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
 
 .endif
