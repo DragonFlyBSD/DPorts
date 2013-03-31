@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <rod@zort.on.ca>
-# $FreeBSD: ports/audio/xhippo/Makefile,v 1.37 2013/01/21 04:44:52 svnexp Exp $
+# $FreeBSD: audio/xhippo/Makefile 314074 2013-03-13 11:54:25Z danfe $
 
 PORTNAME=	xhippo
 PORTVERSION=	3.5
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	GNU
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Generic music player for UNIX systems
+COMMENT=	Generic music player for Unix-like systems
 
 LICENSE=	GPLv3
 
@@ -32,12 +32,14 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^sysconf_DATA/s|=.*|= xhippo.config.default|' \
-		${WRKSRC}/Makefile.in 
+			${WRKSRC}/Makefile.in
 
 post-install:
 .if !exists(${PREFIX}/etc/xhippo.config)
 	(cd ${PREFIX}/etc && ${CP} xhippo.config.default xhippo.config)
 .endif
+	@${ECHO_MSG}
 	@${CAT} ${PKGMESSAGE}
+	@${ECHO_MSG}
 
 .include <bsd.port.mk>
