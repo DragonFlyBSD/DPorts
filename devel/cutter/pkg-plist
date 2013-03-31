@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/cutter/pkg-plist,v 1.10 2012/11/17 05:55:39 svnexp Exp $
+@comment $FreeBSD: devel/cutter/pkg-plist 307000 2012-11-05 11:38:11Z romain $
 bin/cut-diff
 bin/cutter
 include/cutter/cppcutter.h

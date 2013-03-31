@@ -1,8 +1,9 @@
 # Created by: Romain Tartiere <romain@FreeBSD.org>
-# $FreeBSD: ports/devel/cutter/Makefile,v 1.13 2012/12/30 06:16:24 svnexp Exp $
+# $FreeBSD: devel/cutter/Makefile 314318 2013-03-15 16:51:43Z romain $
 
 PORTNAME=	cutter
 PORTVERSION=	1.2.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
@@ -39,7 +40,8 @@ post-install:
 
 .if ${PORT_OPTIONS:MGOFFICE}
 CONFIGURE_ARGS+=--enable-goffice
-LIB_DEPENDS+=	goffice-0.6:${PORTSDIR}/devel/goffice06
+# the 0.8 is part of the library name don't remove it.
+LIB_DEPENDS+=	goffice-0.8:${PORTSDIR}/devel/goffice
 PLIST_SUB+=	GOFFICE=""
 .else
 CONFIGURE_ARGS+=--disable-goffice

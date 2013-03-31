@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/cutter/files/patch-test_run-test.sh,v 1.2 2012/11/17 05:55:39 svnexp Exp $
+$FreeBSD: devel/cutter/files/patch-test_run-test.sh 300896 2012-07-14 13:54:48Z beat $
 
 --- test/run-test.sh.orig
 +++ test/run-test.sh
