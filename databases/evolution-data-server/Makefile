@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/evolution-data-server/Makefile 313635 2013-03-08 11:32:11Z bapt $
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.203 2010/11/15 17:19:55 kwm Exp $
+# $FreeBSD: databases/evolution-data-server/Makefile 314632 2013-03-19 10:40:22Z kwm $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.218 2013/03/09 09:12:37 kwm Exp $
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.32.1
@@ -18,7 +18,6 @@ LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
 		ical:${PORTSDIR}/devel/libical \
 		nss3:${PORTSDIR}/security/nss \
 		tasn1:${PORTSDIR}/security/libtasn1 \
-		sqlite3:${PORTSDIR}/databases/sqlite3 \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 
 BUILD_DEPENDS+=	gperf:${PORTSDIR}/devel/gperf
@@ -30,6 +29,7 @@ USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack ltverhack ltasneededhack gconf2 \
 		libxml2
 USE_OPENLDAP=	yes
+USE_SQLITE=	3
 USE_AUTOTOOLS=	libtool
 USE_BDB=	41+
 USE_LDCONFIG=	yes
@@ -42,27 +42,20 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 PLIST_SUB=	VERSION="2.32" EVO_VERSION="1.2"
 
-#OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
-OPTIONS=	WEATHER		"Enable weather calendar backend"	on \
-		KERBEROS	"Adds Kerberos support"			on
+OPTIONS_DEFINE=	WEATHER KERBEROS
+OPTIONS_DEFAULT=WEATHER KERBEROS
+WEATHER_DESC=	Weather calendar backend
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_KERBEROS)
+.if ${PORT_OPTIONS:MKERBEROS}
 CONFIGURE_ARGS+=	--with-krb5=/usr
 KRB5_LIB=		`${LOCALBASE}/bin/krb5-config gssapi --libs`
 BUILD_DEPENDS+= 	/usr/bin/krb5-config:${PORTSDIR}/security/krb5
 .endif
 
-#.if defined(WITH_IMAP4) || defined(PACKAGE_BUILDING)
-#CONFIGURE_ARGS+=	--enable-imap4=yes
-#PLIST_SUB+=		IMAP4=""
-#.else
-PLIST_SUB+=		IMAP4="@comment "
-#.endif
-
-.if defined(WITH_WEATHER)
-LIB_DEPENDS+=		gweather.1:${PORTSDIR}/net/libgweather
+.if ${PORT_OPTIONS:MWEATHER}
+LIB_DEPENDS+=		gweather:${PORTSDIR}/net/libgweather
 CONFIGURE_ARGS+=	--with-weather
 PLIST_SUB+=		WEATHER=""
 .else
@@ -86,4 +79,4 @@ post-patch:
 		s|-Wmissing-include-dirs||g' \
 			${WRKSRC}/configure
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
