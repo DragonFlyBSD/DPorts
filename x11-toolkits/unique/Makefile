@@ -1,10 +1,10 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: ports/x11-toolkits/unique/Makefile,v 1.16 2013/01/21 18:47:21 svnexp Exp $
+# $FreeBSD: x11-toolkits/unique/Makefile 314500 2013-03-17 22:16:03Z kwm $
 #   $MCom: ports/x11-toolkits/unique/Makefile,v 1.12 2012/09/03 16:28:30 mezz Exp $
 
 PORTNAME=	unique
 PORTVERSION=	1.1.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME/sources/lib${PORTNAME}/${PORTVERSION:R}/
 DISTNAME=	lib${PORTNAME}-${PORTVERSION}
