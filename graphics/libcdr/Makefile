@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libcdr/Makefile 313488 2013-03-06 00:37:52Z jkim $
+# $FreeBSD: graphics/libcdr/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libcdr
 PORTVERSION=	0.0.11
@@ -19,7 +19,7 @@ LIB_DEPENDS=	icui18n:${PORTSDIR}/devel/icu \
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-werror --without-docs
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
 
