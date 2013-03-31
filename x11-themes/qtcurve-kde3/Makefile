@@ -2,7 +2,7 @@
 # Date created:                         23 May 2008
 # Whom:                                 Dmitry Klimov <lazyklimm@gmail.com>
 #
-# $FreeBSD: ports/x11-themes/qtcurve-kde3/Makefile,v 1.21 2012/11/17 06:03:33 svnexp Exp $
+# $FreeBSD: x11-themes/qtcurve-kde3/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	qtcurve
@@ -17,7 +17,7 @@ MAINTAINER=	5u623l20@gmail.com
 COMMENT=	QtCurve KDE3 widget style
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_QT_VER=	3
 CMAKE_ARGS=	-DQT_PLUGINS_DIR=${PREFIX}/lib/plugins
 
