@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cowbell
-# Date created:				2005-08-06
-# Whom:					Andreas Kohn <andreas@syndrom23.de>
-#
-# $FreeBSD: ports/audio/cowbell/Makefile,v 1.21 2012/11/17 05:54:29 svnexp Exp $
-#
+# Created by: Andreas Kohn <andreas@syndrom23.de>
+# $FreeBSD: audio/cowbell/Makefile 314074 2013-03-13 11:54:25Z danfe $
 
 PORTNAME=	cowbell
 PORTVERSION=	0.2.7.1
@@ -12,7 +8,7 @@ CATEGORIES=	audio gnome
 MASTER_SITES=	http://more-cowbell.org/releases/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An elegant music organizer
+COMMENT=	Elegant music organizer
 
 LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib
 
