@@ -2,7 +2,7 @@
 # Date created:				Nov 27 2007
 # Whom:                			Rong-En Fan <rafan@FreeBSD.org>
 #
-# $FreeBSD: ports/www/khtml2png/Makefile,v 1.14 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: www/khtml2png/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	khtml2png
@@ -15,7 +15,7 @@ MAINTAINER=	rafan@FreeBSD.org
 COMMENT=	Command line program to create screenshots of webpages
 
 USE_KDELIBS_VER=	3
-USE_CMAKE=		yes
+USES=			cmake
 
 PLIST_FILES=	bin/khtml2png2
 
