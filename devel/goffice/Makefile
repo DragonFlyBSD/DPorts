@@ -2,7 +2,7 @@
 # Date created:				07 June 2005
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/goffice/Makefile,v 1.71 2012/12/10 19:23:59 svnexp Exp $
+# $FreeBSD: devel/goffice/Makefile 314112 2013-03-13 20:54:33Z kwm $
 #   $MCom: ports-stable/devel/goffice/Makefile,v 1.3 2010/06/29 10:56:38 kwm Exp $
 #
 # !!! When updating goffice, don't forget to update pkg-plist in:
@@ -10,7 +10,7 @@
 
 PORTNAME=	goffice
 PORTVERSION=	0.8.17
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
