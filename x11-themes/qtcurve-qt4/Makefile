@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-themes/qtcurve-qt4/Makefile,v 1.21 2013/02/11 14:20:18 svnexp Exp $
+# $FreeBSD: x11-themes/qtcurve-qt4/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	qtcurve
 PORTVERSION=	1.8.14
@@ -14,7 +14,7 @@ CONFLICTS_BUILD=	qt-3.* qt-copy-3.*
 
 USE_BZIP2=	yes
 USE_GCC=	4.2+
-USE_CMAKE=	yes
+USES=		cmake
 USE_QT4=	dbus gui svg imageformats_run \
 		qmake_build uic_build moc_build rcc_build
 CFLAGS+=	-I${LOCALBASE}/include
