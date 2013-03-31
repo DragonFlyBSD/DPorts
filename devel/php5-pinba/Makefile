@@ -2,11 +2,12 @@
 # Date created:				24 Dec 2009
 # Whom:					raven428 <raven428@gmail.com>
 #
-# $FreeBSD: ports/devel/php5-pinba/Makefile,v 1.7 2012/11/17 05:56:41 svnexp Exp $
+# $FreeBSD: devel/php5-pinba/Makefile 314580 2013-03-18 15:14:27Z vanilla $
 #
 
 PORTNAME=	pinba
 PORTVERSION=	2012.03.20
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/tony2001/pinba_extension/tarball/${GITVERSION}/
 PKGNAMEPREFIX=	php5-
@@ -15,7 +16,7 @@ DISTNAME=	tony2001-pinba_extension-${GITVERSION}
 MAINTAINER=	komarov@valerka.net
 COMMENT=	PHP-extension part of statistics server for PHP
 
-LIB_DEPENDS=	protobuf.7:${PORTSDIR}/devel/protobuf
+LIB_DEPENDS=	protobuf:${PORTSDIR}/devel/protobuf
 
 GITVERSION=	f76b673
 FETCH_ARGS=	-pRr
