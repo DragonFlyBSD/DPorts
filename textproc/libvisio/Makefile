@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/libvisio/Makefile 313489 2013-03-06 00:38:16Z jkim $
+# $FreeBSD: textproc/libvisio/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libvisio
 PORTVERSION=	0.0.25
@@ -21,7 +21,7 @@ CONFIGURE_ARGS=	--disable-werror
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
 
