@@ -1,0 +1,10 @@
+@comment $FreeBSD: www/tickr/pkg-plist 314304 2013-03-15 14:30:21Z nivit $
+bin/tickr
+share/pixmaps/tickr/tickr-icon.png
+share/pixmaps/tickr/tickr-icon.xpm
+share/pixmaps/tickr/tickr-logo.png
+share/pixmaps/tickr/tickr-rss-icon.png
+%%DESKTOPDIR%%/tickr.desktop
+@dirrm share/pixmaps/tickr
+@exec %%LOCALBASE%%/bin/update-desktop-database || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database || /usr/bin/true
