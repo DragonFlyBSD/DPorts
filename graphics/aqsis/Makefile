@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/graphics/aqsis/Makefile,v 1.57 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: graphics/aqsis/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	aqsis
 PORTVERSION=	1.8.2
@@ -23,9 +23,7 @@ LIB_DEPENDS=	IlmImf:${PORTSDIR}/graphics/OpenEXR \
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 USE_LDCONFIG=	yes
-USE_CMAKE=	yes
-CMAKE_OUTSOURCE=	yes
-CMAKE_VERBOSE=	yes
+USES=		cmake:outsource
 USE_QT4=	opengl qmake_build moc_build rcc_build uic_build
 PLIST_SUB+=	LIBVERS=${PORTVERSION:R}
 
