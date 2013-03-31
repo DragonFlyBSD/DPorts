@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/deskutils/launchy/Makefile,v 1.17 2013/01/31 14:01:26 svnexp Exp $
+# $FreeBSD: deskutils/launchy/Makefile 314928 2013-03-22 13:16:37Z eadler $
 
 PORTNAME=	launchy
 PORTVERSION=	2.5
@@ -17,6 +17,7 @@ USE_DOS2UNIX=	readme.lyx readme.txt
 USE_QT4=	qmake_build moc_build rcc_build uic_build gui network
 PORTDOCS=	*
 
+MAKE_JOBS_UNSAFE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
