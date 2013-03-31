@@ -1,14 +1,10 @@
-# New ports collection makefile for:	eog-plugins
-# Date created:		28 August 2009
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/eog-plugins/Makefile,v 1.11 2012/11/17 05:58:04 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: graphics/eog-plugins/Makefile 314141 2013-03-14 08:17:39Z pclin $
 #   $MCom: ports/graphics/eog-plugins/Makefile,v 1.14 2010/09/04 18:09:30 kwm Exp $
-#
 
 PORTNAME=	eog-plugins
 PORTVERSION=	2.30.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
