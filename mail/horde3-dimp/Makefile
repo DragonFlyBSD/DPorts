@@ -2,7 +2,7 @@
 # Date created:			Sat Sep 13, 2008
 # Whom:				Beech Rintoul <beech@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/horde3-dimp/Makefile,v 1.2 2012/12/16 12:14:29 svnexp Exp $
+# $FreeBSD: mail/horde3-dimp/Makefile 309001 2012-12-16 12:04:18Z mm $
 #
 
 PORTNAME=	dimp
