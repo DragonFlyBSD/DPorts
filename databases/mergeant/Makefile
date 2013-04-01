@@ -1,10 +1,6 @@
-# New ports collection makefile for:	mergeant
-# Date created:				14 September 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/mergeant/Makefile,v 1.41 2012/11/17 05:55:10 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: databases/mergeant/Makefile 315037 2013-03-23 14:54:54Z kwm $
 #   $MCom: ports/databases/mergeant/Makefile,v 1.20 2008/02/05 13:30:46 kwm Exp $
-#
 
 PORTNAME=	mergeant
 PORTVERSION=	0.67
@@ -19,13 +15,14 @@ COMMENT=	Provide uniform access to data sources for the GNOME 2 environment
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack libgnomedb
+USES=		pathfix
+USE_GNOME=	gnomeprefix intlhack libgnomedb
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
