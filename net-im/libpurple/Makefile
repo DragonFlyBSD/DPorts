@@ -2,13 +2,13 @@
 # Date created:			26 Mar 1999
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/libpurple/Makefile,v 1.116 2013/02/18 00:24:31 svnexp Exp $
+# $FreeBSD: net-im/libpurple/Makefile 313809 2013-03-10 06:28:25Z marcus $
 #   $MCom: ports/net-im/libpurple/Makefile,v 1.32 2010/05/10 04:21:19 marcus Exp $
 #
 
 PORTNAME?=	libpurple
 PORTVERSION=	2.10.7
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	net-im
 MASTER_SITES=	SF/pidgin/Pidgin/${PORTVERSION}
 DISTNAME=	pidgin-${PORTVERSION}
