@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/www/rubygem-em-websocket/Makefile,v 1.8 2013/01/30 20:01:30 svnexp Exp $
+# $FreeBSD: www/rubygem-em-websocket/Makefile 313911 2013-03-11 14:37:20Z sunpoet $
 
 PORTNAME=	em-websocket
-PORTVERSION=	0.4.0
+PORTVERSION=	0.5.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
