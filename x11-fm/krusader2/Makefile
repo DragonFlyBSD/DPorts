@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: ports/x11-fm/krusader2/Makefile,v 1.50 2012/11/18 08:12:22 svnexp Exp $
+# $FreeBSD: x11-fm/krusader2/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	krusader
 DISTVERSION=	2.4.0-beta3
@@ -10,12 +10,11 @@ MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Twin panel file manager for KDE, like midnight or norton commander
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake:outsource
 USE_GETTEXT=	yes
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 
-CMAKE_OUTSOURCE=	yes
 MAKE_JOBS_SAFE=	yes
 LATEST_LINK=	${PORTNAME}2
 
