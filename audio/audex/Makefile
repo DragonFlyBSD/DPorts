@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/audex/Makefile,v 1.20 2013/02/04 15:51:22 svnexp Exp $
+# $FreeBSD: audio/audex/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	audex
 DISTVERSION=	0.74b1
@@ -14,7 +14,7 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	cdda_paranoia:${PORTSDIR}/audio/cdparanoia
 
 USE_XZ=		yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	automoc4 kdeprefix kdelibs libkcddb
 USE_QT4=	gui dbus network svg xml \
 		qmake_build moc_build rcc_build uic_build
