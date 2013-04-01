@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/multimedia/phonon-gstreamer/Makefile,v 1.26 2013/02/04 17:47:00 svnexp Exp $
+# $FreeBSD: multimedia/phonon-gstreamer/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	phonon
 PORTVERSION=	4.6.3
@@ -28,7 +28,7 @@ USE_QT4=	gui phonon xml \
 		qmake_build moc_build rcc_build uic_build
 USE_XORG=	x11
 USE_XZ=		yes
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB+=	QT_PREFIX=${QT_PREFIX}
