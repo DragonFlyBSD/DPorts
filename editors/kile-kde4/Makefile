@@ -1,5 +1,5 @@
 # Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-# $FreeBSD: ports/editors/kile-kde4/Makefile,v 1.60 2013/02/04 15:59:45 svnexp Exp $
+# $FreeBSD: editors/kile-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kile
 PORTVERSION=	2.1.3
@@ -13,7 +13,7 @@ RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
 		identify:${PORTSDIR}/graphics/ImageMagick
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 USE_KDE4=	kdeprefix kdelibs automoc4 sharedmime kate_run
 MAKE_JOBS_SAFE=	yes
