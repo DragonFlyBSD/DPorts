@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: ports/sysutils/nepomuk-core/Makefile,v 1.1 2013/02/04 01:04:40 svnexp Exp $
+# $FreeBSD: sysutils/nepomuk-core/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=		nepomuk-core
 PORTVERSION=		${KDE4_VERSION}
@@ -16,8 +16,9 @@ CONFLICTS_INSTALL=	kde-runtime-4.[7-8].*
 USE_XZ=			yes
 USE_KDE4=		kdeprefix kdehier automoc4 kdelibs \
 			ontologies soprano strigi
-KDE4_BUILDENV=		yes
+USES=			cmake:outsource
 USE_QT4=		qmake_build moc_build rcc_build uic_build
+USE_LDCONFIG=		yes
 MAKE_JOBS_SAFE=		yes
 
 SUB_FILES=		nepomuk-env.sh
