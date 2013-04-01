@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/plasma-scriptengine-python/Makefile,v 1.14 2013/02/04 01:04:52 svnexp Exp $
+# $FreeBSD: x11/plasma-scriptengine-python/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	plasma-scriptengine-python
 PORTVERSION=	${KDE4_VERSION}
@@ -16,11 +16,10 @@ USE_QT4=	qmake_build moc_build uic_build rcc_build
 USE_PYTHON=	2.5+
 DISTINFO_FILE=	${PORTSDIR}/x11/kde4-workspace/distinfo
 USE_XZ=	yes
-USE_CMAKE=	yes
+USES=		cmake:outsource
 MAKE_JOBS_SAFE=	yes
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/plasma/generic/scriptengines/python
-CMAKE_OUTSOURCE=	yes
 
 pre-configure:
 	${REINPLACE_CMD} -e 's,$${PYTHON_SITE_PACKAGES_DIR},${PYTHONPREFIX_SITELIBDIR},g' \
