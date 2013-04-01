@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/misc/kde4-l10n/Makefile,v 1.80 2013/02/04 01:04:22 svnexp Exp $
+# $FreeBSD: misc/kde4-l10n/Makefile 311483 2013-02-03 20:10:37Z makc $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
