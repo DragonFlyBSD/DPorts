@@ -2,7 +2,7 @@
 # Date created:		21 May 2010
 # Whom:			Mina R Waheeb <syncer@gmail.com>
 #
-# $FreeBSD: ports/deskutils/silence/Makefile,v 1.6 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/silence/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	silence
@@ -17,7 +17,7 @@ COMMENT=	An information management tool
 
 RUN_DEPENDS=	${KDE4_PREFIX}/lib/kde4/katepart.so:${PORTSDIR}/editors/kate
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build linguist_build
 
