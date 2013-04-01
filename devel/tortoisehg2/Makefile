@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/tortoisehg2/Makefile,v 1.20 2013/02/19 05:49:53 svnexp Exp $
+# $FreeBSD: devel/tortoisehg2/Makefile 314540 2013-03-18 08:27:56Z madpilot $
 
 PORTNAME=	tortoisehg
-PORTVERSION=	2.7
+PORTVERSION=	2.7.1
 CATEGORIES=	devel
 MASTER_SITES=	http://cdn.bitbucket.org/tortoisehg/targz/downloads/
 
