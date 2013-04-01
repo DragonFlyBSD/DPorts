@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@FreeBSD.org>
-# $FreeBSD: ports/cad/kicad/Makefile,v 1.36 2013/01/31 14:01:26 svnexp Exp $
+# $FreeBSD: cad/kicad/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kicad
 DISTVERSION=	2010-05-05-BZR2356
@@ -24,7 +24,7 @@ WRKSRC=		${WRKDIR}/kicad
 
 USE_ZIP=	yes
 USE_DOS2UNIX=	*.cmake
-USE_CMAKE=	yes
+USES=		cmake
 USE_GL=		yes
 USE_WX=		2.8
 WX_UNICODE=	yes
