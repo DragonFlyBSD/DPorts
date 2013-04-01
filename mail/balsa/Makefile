@@ -1,10 +1,6 @@
-# New ports collection makefile for:	balsa
-# Date created:				02 December 1998
-# Whom:					Glenn Johnson <gljohns@bellsouth.net>
-#
-# $FreeBSD: ports/mail/balsa/Makefile,v 1.158 2012/12/10 19:24:02 svnexp Exp $
+# Created by: Glenn Johnson <gljohns@bellsouth.net>
+# $FreeBSD: mail/balsa/Makefile 314634 2013-03-19 11:03:57Z kwm $
 #   $MCom: ports-stable/mail/balsa/Makefile,v 1.3 2007/12/02 19:18:50 marcus Exp $
-#
 
 PORTNAME=	balsa
 PORTVERSION=	2.4.8
@@ -16,12 +12,12 @@ DISTNAME=	balsa-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A mail reader for the GNOME 2 desktop
 
-LIB_DEPENDS=	aspell.16:${PORTSDIR}/textproc/aspell \
-		pcre.3:${PORTSDIR}/devel/pcre \
-		esmtp.7:${PORTSDIR}/mail/libesmtp \
-		gmime-2.4.6:${PORTSDIR}/mail/gmime24 \
+LIB_DEPENDS=	aspell:${PORTSDIR}/textproc/aspell \
+		pcre:${PORTSDIR}/devel/pcre \
+		esmtp:${PORTSDIR}/mail/libesmtp \
+		gmime-2.4:${PORTSDIR}/mail/gmime24 \
 		gnome-keyring:${PORTSDIR}/security/gnome-keyring \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
+		canberra-gtk:${PORTSDIR}/audio/libcanberra
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
@@ -29,7 +25,8 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PERL5=	yes
 USE_OPENSSL=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui gtkhtml3 \
+USES=		pathfix
+USE_GNOME=	gnomeprefix intlhack libgnomeui gtkhtml3 \
 		libgnomeprintui
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libltdl
@@ -45,40 +42,42 @@ CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 
 MAN1=		balsa.1
 
-OPTIONS=	LDAP "Enable LDAP support" on \
-		GTKSPELL "Spell checking support" on \
-		GTKSV "Enable GtkSourceview support" on \
-		NOTIFY "Enable libnotify support" on \
-		GPG "Enable GnuPG support" off
+OPTIONS_DEFINE=	LDAP GTKSPELL GTKSV NOTIFY GPG
+OPTIONS_DEFAULT=LDAP GTKSPELL GTKSV NOTIFY
+GTKSPELL_DESC=	Spell checking support
+GTKSV_DESC=	GtkSourceview support
+GPG_DESC=	GnuPG support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_GPG)
-LIB_DEPENDS+=		gpgme.19:${PORTSDIR}/security/gpgme
+.if ${PORT_OPTIONS:MGPG}
+LIB_DEPENDS+=		gpgme:${PORTSDIR}/security/gpgme
 CONFIGURE_ARGS+=	--with-gpgme=${LOCALBASE}/bin/gpgme-config
 .endif
 
-.if !defined(WITHOUT_LDAP)
+.if ${PORT_OPTIONS:MLDAP}
 USE_OPENLDAP=		yes
 CONFIGURE_ARGS+=	--with-ldap
 .endif
 
-.if !defined(WITHOUT_GTKSPELL)
-LIB_DEPENDS+=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
+.if ${PORT_OPTIONS:MGTKSPELL}
+LIB_DEPENDS+=	gtkspell:${PORTSDIR}/textproc/gtkspell
 CONFIGURE_ARGS+=--with-gtkspell
 .endif
 
-.if !defined(WITHOUT_GTKSV)
+.if ${PORT_OPTIONS:MGTKSV}
 USE_GNOME+=	gtksourceview2
 CONFIGURE_ARGS+=--with-gtksourceview=2
 .endif
 
-.if !defined(WITHOUT_NOTIFY)
-LIB_DEPENDS+=	notify.4:${PORTSDIR}/devel/libnotify
+.if ${PORT_OPTIONS:MNOTIFY}
+LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=--with-libnotify=yes
 .else
 CONFIGURE_ARGS+=--with-libnotify=no
 .endif
+
+.include <bsd.port.pre.mk>
 
 .if ${PREFIX}==${LOCALBASE}
 PLIST_SUB+=	GTKICON="@comment "
