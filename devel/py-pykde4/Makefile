@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-pykde4/Makefile,v 1.1 2013/02/04 01:03:48 svnexp Exp $
+# $FreeBSD: devel/py-pykde4/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	pykde4
 PORTVERSION=	${KDE4_VERSION}
@@ -31,7 +31,7 @@ USE_KDE4=	kdehier kdelibs kdeprefix okular pimlibs \
 USE_PYTHON=	2.5+
 USE_QT4=	corelib qmake_build moc_build uic_build rcc_build
 USE_XZ=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DWITH_PolkitQt:BOOL=FALSE
 MAKE_JOBS_SAFE=	yes
 
