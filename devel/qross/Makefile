@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/devel/qross/Makefile,v 1.4 2013/02/03 22:43:10 svnexp Exp $
+# $FreeBSD: devel/qross/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	qross
 PORTVERSION=	0.2.2
@@ -11,7 +11,7 @@ MAINTAINER=	g.veniamin@googlemail.com
 COMMENT=	Qt-only fork of Kross, the KDE scripting framework
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 USE_QT4=	designer gui network xml qmake_build uic_build moc_build \
 		rcc_build script
