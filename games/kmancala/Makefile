@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/kmancala/Makefile,v 1.6 2013/02/04 15:51:24 svnexp Exp $
+# $FreeBSD: games/kmancala/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kmancala
 PORTVERSION=	1.0.2
@@ -14,7 +14,7 @@ COMMENT=	Board game for KDE, also known as Mancala or Kalah
 LIB_DEPENDS=	kdegames:${PORTSDIR}/games/kdegames4
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	kdelibs kdeprefix automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 
