@@ -2,7 +2,7 @@
 # Date created:			28-12-2008
 # Whom:				Goran Tal <goran.tal@gmail.com>
 #
-# $FreeBSD: ports/textproc/dikt/Makefile,v 1.22 2012/11/17 06:01:54 svnexp Exp $
+# $FreeBSD: textproc/dikt/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	dikt
 PORTVERSION=	2j
@@ -18,7 +18,7 @@ USE_XZ=		yes
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	corelib gui network svg xml \
 		qmake_build moc_build rcc_build uic_build
-USE_CMAKE=	yes
+USES=		cmake
 
 PLIST_FILES=	bin/dikt \
 		share/applications/kde4/dikt.desktop \
