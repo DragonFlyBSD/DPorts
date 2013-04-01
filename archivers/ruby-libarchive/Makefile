@@ -2,10 +2,11 @@
 # Date created:		7 January 2009
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/archivers/ruby-libarchive/Makefile,v 1.4 2012/11/17 05:54:23 svnexp Exp $
+# $FreeBSD: archivers/ruby-libarchive/Makefile 315049 2013-03-23 17:11:40Z glewis $
 
 PORTNAME=	libarchive
 PORTVERSION=	0.1.1
+PORTREVISION=	1
 CATEGORIES=	archivers ruby
 MASTER_SITES=	RF
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
