@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/golly/Makefile,v 1.2 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/golly/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	golly
 PORTVERSION=	2.4
@@ -10,11 +10,10 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Conway's Game of Life and other cellular automata
 
-USE_CMAKE=	yes
+USES=		cmake:outsource
 USE_PERL5=	yes
 USE_PYTHON=	2.7+
 USE_WX=		2.8+
-CMAKE_OUTSOURCE=	yes
 MAKE_JOBS_SAFE=	yes
 
 DESKTOP_ENTRIES=	"Golly" "${COMMENT}" "${PREFIX}/share/pixmaps/golly.xpm" \
