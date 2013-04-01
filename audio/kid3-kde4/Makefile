@@ -1,7 +1,7 @@
-# $FreeBSD: ports/audio/kid3-kde4/Makefile,v 1.44 2012/12/11 12:33:42 svnexp Exp $
+# $FreeBSD: audio/kid3-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kid3
-PORTVERSION=	2.2.1
+PORTVERSION=	2.3
 CATEGORIES=	audio kde
 MASTER_SITES=	SF
 
@@ -14,7 +14,7 @@ LATEST_LINK=	${PORTNAME}-kde4
 
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build
-USE_CMAKE=	yes
+USES=		cmake
 USE_GETTEXT=	yes
 MAKE_JOBS_SAFE=	yes
 
