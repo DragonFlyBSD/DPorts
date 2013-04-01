@@ -2,7 +2,7 @@
 # Date created:		2010-06-15
 # Whom:			Max Brazhnikov <makc@FreeBSD.org>
 #
-# $FreeBSD: ports/ftp/plasma-applet-ftpmonitor/Makefile,v 1.6 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/plasma-applet-ftpmonitor/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	ftpmonitor
@@ -16,7 +16,7 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	KDE4 Plasma applet, which monitors connections to ftp daemons
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	kdelibs kdeprefix automoc4
 USE_QT4=	qmake_build moc_build uic_build rcc_build
 MAKE_JOS_SAFE=	yes
