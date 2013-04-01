@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: ports/deskutils/kdepim4-runtime/Makefile,v 1.27 2013/02/04 01:03:32 svnexp Exp $
+# $FreeBSD: deskutils/kdepim4-runtime/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	${KDE4_VERSION}
@@ -23,9 +23,10 @@ USE_XZ=	yes
 USE_GNOME=	libxml2
 USE_KDE4=	kdehier kdelibs kdeprefix pimlibs \
 		akonadi automoc4 ontologies sharedmime soprano strigi
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_QT4=	dbus designer gui network xml xmlpatterns \
 		qmake_build moc_build rcc_build uic_build
+USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 CMAKE_ARGS=	-DKDEPIM_MOBILE_UI:BOOL=OFF
 
