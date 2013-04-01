@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/kcm-polkit-kde/Makefile,v 1.1 2013/02/04 13:57:57 svnexp Exp $
+# $FreeBSD: sysutils/kcm-polkit-kde/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	polkit-kde
 DISTVERSION=	0.0-${PORTDATE}
@@ -17,7 +17,7 @@ USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_PKGCONFIG=	build
 USE_QT4=	dbus xml moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
