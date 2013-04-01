@@ -2,7 +2,7 @@
 # Date Created:				25 Sep 2008
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-drivers/xf86-input-synaptics/Makefile,v 1.16 2012/11/17 06:03:25 svnexp Exp $
+# $FreeBSD: x11-drivers/xf86-input-synaptics/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	xf86-input-synaptics
@@ -16,7 +16,7 @@ CONFLICTS=	synaptics-[0-9]*
 
 LIB_DEPENDS+=	hal.1:${PORTSDIR}/sysutils/hal
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_XORG=	x11 xextproto videoproto
 XORG_CAT=	driver
 
