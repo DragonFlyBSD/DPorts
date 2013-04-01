@@ -2,7 +2,7 @@
 # Date created:				2003-06-25
 # Whom:					arved
 #
-# $FreeBSD: ports/multimedia/kaffeine/Makefile,v 1.74 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/kaffeine/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kaffeine
 PORTVERSION=	1.2.2
@@ -25,8 +25,7 @@ USE_GETTEXT=		yes
 USE_KDE4=	kdehier kdeprefix automoc4 kdelibs
 USE_QT4=	corelib gui phonon svg network dbus xml sql \
 		qmake_build moc_build rcc_build uic_build
-USE_CMAKE=	yes
-CMAKE_VERBOSE=	yes
+USES=		cmake
 USE_LDCONFIG=		yes
 USE_XORG=	xscrnsaver
 
