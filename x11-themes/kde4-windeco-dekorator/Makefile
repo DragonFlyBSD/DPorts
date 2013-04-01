@@ -2,7 +2,7 @@
 # Date created:         2009-01-03
 # Whom:                 Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/x11-themes/kde4-windeco-dekorator/Makefile,v 1.11 2012/11/17 06:03:33 svnexp Exp $
+# $FreeBSD: x11-themes/kde4-windeco-dekorator/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	dekorator
@@ -23,7 +23,7 @@ LIB_DEPENDS=	qimageblitz.4:${PORTSDIR}/x11/qimageblitz
 USE_BZIP2=	yes
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4 workspace
 USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
-USE_CMAKE=	yes
+USES=		cmake
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 .include <bsd.port.mk>
