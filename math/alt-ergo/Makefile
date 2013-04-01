@@ -1,11 +1,11 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: math/alt-ergo/Makefile 313560 2013-03-07 03:46:47Z bf $
+# $FreeBSD: math/alt-ergo/Makefile 314582 2013-03-18 16:11:34Z bf $
 
 PORTNAME=	alt-ergo
 PORTVERSION=	0.94
 PORTREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	http://alt-ergo.lri.fr/http/ LOCAL/bf
+MASTER_SITES=	http://alt-ergo.lri.fr/http/alt-ergo-${PORTVERSION}/ LOCAL/bf
 
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	An automatic theorem prover dedicated to program verification
