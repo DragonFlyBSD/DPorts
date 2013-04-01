@@ -1,7 +1,8 @@
-# $FreeBSD: ports/graphics/okular/Makefile,v 1.11 2013/02/04 01:04:05 svnexp Exp $
+# $FreeBSD: graphics/okular/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	okular
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	graphics kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
@@ -14,7 +15,7 @@ LIB_DEPENDS=	djvulibre:${PORTSDIR}/graphics/djvulibre \
 		jpeg.11:${PORTSDIR}/graphics/jpeg \
 		qca.2:${PORTSDIR}/devel/qca \
 		tiff.4:${PORTSDIR}/graphics/tiff \
-		poppler-qt4.3:${PORTSDIR}/graphics/poppler-qt4 \
+		poppler-qt4:${PORTSDIR}/graphics/poppler-qt4 \
 		spectre.1:${PORTSDIR}/print/libspectre \
 		chm.0:${PORTSDIR}/misc/chmlib \
 		freetype.9:${PORTSDIR}/print/freetype2 \
@@ -23,9 +24,10 @@ LIB_DEPENDS=	djvulibre:${PORTSDIR}/graphics/djvulibre \
 CONFLICTS=	kdegraphics-4.[0-6].*
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4 qimageblitz
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_QT4=	gui xml qmake_build moc_build uic_build rcc_build
 USE_XZ=	yes
+USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	DVI
