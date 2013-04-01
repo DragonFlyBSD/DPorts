@@ -1,9 +1,5 @@
-# New ports collection makefile for:    dcc_send_limiter
-# Date created:                         23 October 2005
-# Whom:                                 Timothy Redaelli <drizzt@gufi.org>
-#
-# $FreeBSD: ports/irc/irssi-dcc_send_limiter/Makefile,v 1.8 2012/11/17 05:58:29 svnexp Exp $
-#
+# Created by: Timothy Redaelli <drizzt@gufi.org>
+# $FreeBSD: irc/irssi-dcc_send_limiter/Makefile 315130 2013-03-24 15:51:03Z bdrewery $
 
 PORTNAME=	dcc_send_limiter
 PORTVERSION=	0.8.10
@@ -25,6 +21,7 @@ BUILD_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
 RUN_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
 
 USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	lib/irssi/modules/lib/${DISTNAME}.so
