@@ -2,7 +2,7 @@
 # Date created:		29 October 2004
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/pulseaudio/Makefile,v 1.72 2012/11/17 05:54:41 svnexp Exp $
+# $FreeBSD: audio/pulseaudio/Makefile 302650 2012-08-16 17:26:54Z kwm $
 #   $MCom: ports-stable/audio/pulseaudio/Makefile,v 1.7 2010/06/25 20:35:01 kwm Exp $
 #
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
