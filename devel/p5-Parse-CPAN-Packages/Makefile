@@ -2,11 +2,11 @@
 # Date created:				Mar 27 2004
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/devel/p5-Parse-CPAN-Packages/Makefile,v 1.20 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: devel/p5-Parse-CPAN-Packages/Makefile 314425 2013-03-17 12:22:45Z lth $
 #
 
 PORTNAME=	Parse-CPAN-Packages
-PORTVERSION=	2.37
+PORTVERSION=	2.38
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
