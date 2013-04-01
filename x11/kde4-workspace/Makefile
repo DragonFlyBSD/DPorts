@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/kde4-workspace/Makefile,v 1.270 2013/02/04 01:04:51 svnexp Exp $
+# $FreeBSD: x11/kde4-workspace/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	kde-workspace
 PORTVERSION=	${KDE4_VERSION}
@@ -51,7 +51,7 @@ USE_GNOME=	glib20
 USE_ICONV=	yes
 USE_KDE4=	kdehier kdelibs kdeprefix oxygen pimlibs \
 		akonadi automoc4 ontologies qimageblitz soprano strigi
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_PKGCONFIG=	build
 USE_QT4=	dbus declarative gui network opengl phonon \
 		qt3support qtestlib script sql webkit xml \
@@ -60,6 +60,7 @@ USE_XORG=	kbproto x11 xau xcomposite xcursor xdamage xdmcp xfixes \
 		xft xi xinerama xkbfile xrandr xrender xres xscrnsaver xtst
 USE_XZ=		yes
 USE_GMAKE=	yes
+USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 # Xmms and Googlegadgets could be enabled.
