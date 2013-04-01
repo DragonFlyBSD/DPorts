@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-SHA-PurePerl
-# Date created:				21 Dec, 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-SHA-PurePerl/Makefile,v 1.28 2013/01/20 17:59:12 svnexp Exp $
+# Created by: Gabor Kovesdan <gabor@FreeBSD.org>
+# $FreeBSD: security/p5-Digest-SHA-PurePerl/Makefile 313756 2013-03-09 21:22:52Z ashish $
 
 PORTNAME=	Digest-SHA-PurePerl
 PORTVERSION=	5.81
@@ -14,30 +12,19 @@ COMMENT=	Perl extension for SHA-1/224/256/384/512 in pure Perl
 
 PERL_CONFIGURE=	yes
 
-MAN3=		Digest::SHA::PurePerl.3
+PORTEXAMPLES=	dups
+MAN3=	Digest::SHA::PurePerl.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500803
-RUN_DEPENDS+=	${SITE_PERL}/Digest/base.pm:${PORTSDIR}/security/p5-Digest
-.endif
-
-.if ${PERL_LEVEL} >= 501000
-PLIST_SUB+=	EXE_FILES="@comment "
-.else
-PLIST_SUB+=	EXE_FILES=""
-MAN1=		shasum.1
-.endif
+.include <bsd.port.options.mk>
 
 post-patch:
-.if ${PERL_LEVEL} >= 501000
 	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
-.endif
 
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
-	@${INSTALL_DATA} ${WRKSRC}/examples/dups ${EXAMPLESDIR}
+	@${INSTALL_DATA} ${PORTEXAMPLES:S,^,${WRKSRC}/examples/,} ${EXAMPLESDIR}
+
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
