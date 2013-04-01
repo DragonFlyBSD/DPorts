@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/libkolab/Makefile,v 1.1 2013/02/04 03:34:05 svnexp Exp $
+# $FreeBSD: devel/libkolab/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	libkolab
 PORTVERSION=	0.4.1
@@ -20,7 +20,7 @@ CMAKE_ARGS=	-DBUILD_TESTS:BOOL=OFF \
 		-DPYTHON_BINDINGS:BOOL=OFF \
 		-DUSE_LIBCALENDARING:BOOL=OFF
 MAKE_JOBS_SAFE=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	automoc4 kdelibs pimlibs
 USE_LDCONFIG=	yes
 USE_QT4=	corelib gui xml \
