@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: ports/games/pairs/Makefile,v 1.1 2013/02/04 01:04:00 svnexp Exp $
+# $FreeBSD: games/pairs/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=		pairs
 PORTVERSION=		${KDE4_VERSION}
@@ -13,7 +13,7 @@ COMMENT=		Memory and pairs game for KDE
 
 LICENSE=		GPLv2
 
-KDE4_BUILDENV=		yes
+USES=			cmake:outsource
 MAKE_JOBS_SAFE=		yes
 USE_KDE4=		kdehier kdelibs kdeprefix automoc4
 USE_QT4=		declarative opengl phonon xmlpatterns \
