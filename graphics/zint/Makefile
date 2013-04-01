@@ -2,7 +2,7 @@
 # Date created:		2010-03-13
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/graphics/zint/Makefile,v 1.8 2013/01/23 15:05:35 svnexp Exp $
+# $FreeBSD: graphics/zint/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	zint
@@ -18,7 +18,7 @@ LICENSE=	GPLv3
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 USE_QT4=	gui xml qmake_build uic_build moc_build rcc_build designer
 MAKE_JOBS_SAFE=	yes
