@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/f-spot/files/patch-src_Clients_MainApp_FSpot_GroupSelector.cs,v 1.2 2012/11/17 05:58:05 svnexp Exp $
+$FreeBSD: graphics/f-spot/files/patch-src_Clients_MainApp_FSpot_GroupSelector.cs 300896 2012-07-14 13:54:48Z beat $
 
 --- src/Clients/MainApp/FSpot/GroupSelector.cs.orig
 +++ src/Clients/MainApp/FSpot/GroupSelector.cs

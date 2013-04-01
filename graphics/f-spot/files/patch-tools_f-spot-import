@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/f-spot/files/patch-tools_f-spot-import,v 1.2 2012/11/17 05:58:05 svnexp Exp $
+$FreeBSD: graphics/f-spot/files/patch-tools_f-spot-import 300896 2012-07-14 13:54:48Z beat $
 
 --- tools/f-spot-import.orig
 +++ tools/f-spot-import
