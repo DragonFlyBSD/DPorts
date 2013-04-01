@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/devel/kdesdk4/Makefile,v 1.109 2013/02/04 01:03:38 svnexp Exp $
+# $FreeBSD: devel/kdesdk4/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	kdesdk
 PORTVERSION=	${KDE4_VERSION}
@@ -26,12 +26,13 @@ USE_XZ=	yes
 USE_GNOME=	libxml2 libxslt
 USE_KDE4=	kdehier kdelibs kdeprefix libkonq pimlibs sharedmime \
 		akonadi automoc4 qimageblitz_build strigi
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_PERL5=	yes
 USE_QT4=	dbus designer gui qt3support \
 		script scripttools sql svg xml \
 		qmake_build moc_build rcc_build uic_build uic3_build
 USE_GMAKE=	yes
+USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 CMAKE_ARGS+=	-DCMAKE_REQUIRED_INCLUDES:STRING="${LOCALBASE}/include"
 
