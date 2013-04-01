@@ -2,7 +2,7 @@
 # Date created:				11 September 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libgsf-gnome/Makefile,v 1.21 2012/11/17 05:55:54 svnexp Exp $
+# $FreeBSD: devel/libgsf-gnome/Makefile 313992 2013-03-12 17:39:34Z kwm $
 #   $MCom: ports/devel/libgsf-gnome/Makefile,v 1.14 2010/04/10 08:51:16 kwm Exp $
 #
 
@@ -18,6 +18,9 @@ BUILD_WRKSRC=	${WRKSRC}/gsf-gnome
 INSTALL_WRKSRC=	${WRKSRC}/gsf-gnome
 DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
+
+DEPRECATED=    -gnome support in libgsf is dropped in newer versions.
+EXPIRATION_DATE=2013-04-12
 
 USE_GNOME=	gnomehack libgsf gnomevfs2 libbonobo ltverhack intlhack
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc/gsf \
