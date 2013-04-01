@@ -1,16 +1,12 @@
-# New ports collection makefile for:	TiMidity++
-# Date created:		27 Feb 1999
-# Whom:			Yoichi Asai <yatt@msc.biglobe.ne.jp>
-#
-# $FreeBSD: ports/audio/timidity++-slang/Makefile,v 1.13 2012/11/17 05:54:46 svnexp Exp $
-#
+# Created by: Yoichi Asai <yatt@msc.biglobe.ne.jp>
+# $FreeBSD: audio/timidity++-slang/Makefile 314074 2013-03-13 11:54:25Z danfe $
 
 PKGNAMESUFFIX=	-slang
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Slang interface for TiMidity++
 
-MAKE_JOBS_SAFE=  yes
+MAKE_JOBS_SAFE=	yes
 
 MASTERDIR=	${.CURDIR}/../../audio/timidity++
 
