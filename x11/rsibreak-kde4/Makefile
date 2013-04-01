@@ -2,7 +2,7 @@
 # Date created:			15 Mar 2006
 # Whom:				Alex Dupre <ale@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/rsibreak-kde4/Makefile,v 1.22 2012/11/17 06:03:19 svnexp Exp $
+# $FreeBSD: x11/rsibreak-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	rsibreak
@@ -18,7 +18,7 @@ LATEST_LINK=	${PORTNAME}-kde4
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 USE_KDE4=	kdehier kdeprefix kdelibs automoc4
 INSTALLS_ICONS=	yes
