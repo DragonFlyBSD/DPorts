@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/plasma-applet-apcups/Makefile,v 1.7 2012/12/11 12:44:47 svnexp Exp $
+# $FreeBSD: sysutils/plasma-applet-apcups/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	apcups
 PORTVERSION=	0.2.1
@@ -12,7 +12,7 @@ COMMENT=	Plasma applet to monitor the status of APC UPS
 
 PROJECTHOST=	plasma-apcups
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	automoc4 kdeprefix kdelibs
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 MAKE_JOBS_SAFE=	yes
