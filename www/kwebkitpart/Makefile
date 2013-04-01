@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/kwebkitpart/Makefile,v 1.12 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: www/kwebkitpart/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kwebkitpart
 PORTVERSION=	1.3.0
@@ -12,7 +12,7 @@ USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	designer gui webkit \
 		moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
