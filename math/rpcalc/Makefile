@@ -2,7 +2,7 @@
 # Date created:                         31 January 2010
 # Whom:                                 Edwin Groothuis <edwin@mavetju.org>
 #
-# $FreeBSD: ports/math/rpcalc/Makefile,v 1.6 2013/02/03 22:43:41 svnexp Exp $
+# $FreeBSD: math/rpcalc/Makefile 311476 2013-02-03 18:16:54Z makc $
 #
 
 PORTNAME=	rpcalc
