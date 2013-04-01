@@ -1,5 +1,5 @@
 # Created by: Douglas Carmichael <dcarmich@dcarmichael.net>
-# $FreeBSD: devel/kdevelop-pg-qt/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/kdevelop-pg-qt/Makefile 314932 2013-03-22 13:41:53Z makc $
 
 PORTNAME=	kdevelop
 PORTVERSION=	1.0.0
@@ -20,7 +20,7 @@ USE_GCC=	4.6+
 USE_BZIP2=	yes
 USES=		bison
 USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
-KDE4_BUILDENV=	yes
+USES+=		cmake:outsource
 USE_QT4=	qmake_build moc_build uic_build rcc_build
 MAKE_JOBS_SAFE=	yes
 
