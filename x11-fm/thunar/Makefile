@@ -1,6 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: x11-fm/thunar/Makefile 313704 2013-03-09 11:12:54Z olivierd $
-#
+# $FreeBSD: x11-fm/thunar/Makefile 314141 2013-03-14 08:17:39Z pclin $
 
 PORTNAME=	Thunar
 PORTVERSION=	1.6.2
