@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: deskutils/kdepim3/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: deskutils/kdepim3/Makefile 314860 2013-03-21 18:31:39Z bapt $
 
 PORTNAME=	kdepim
 PORTVERSION=	${KDE_VERSION}
@@ -30,6 +30,7 @@ USES=		bison
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
+USE_PKGCONFIG=	build
 
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-gpg=${LOCALBASE}/bin/gpg \
