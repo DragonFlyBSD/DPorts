@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-File_Highlighter
-# Date created:			28 Dec 2007
-# Whom:				Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/pear-Text_Highlighter/Makefile,v 1.4 2012/11/17 06:02:15 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: textproc/pear-Text_Highlighter/Makefile 314443 2013-03-17 14:14:19Z miwi $
 
 PORTNAME=	Text_Highlighter
 PORTVERSION=	0.7.3
