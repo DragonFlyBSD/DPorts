@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/kruler/Makefile,v 1.8 2013/02/04 01:03:32 svnexp Exp $
+# $FreeBSD: deskutils/kruler/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	kruler
 PORTVERSION=	${KDE4_VERSION}
@@ -13,7 +13,7 @@ COMMENT=	KDE 4 screen ruler
 CONFLICTS=	kdegraphics-4.[0-6].*
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_QT4=	corelib qmake_build moc_build uic_build rcc_build
 USE_XORG=	x11
 USE_XZ=	yes
