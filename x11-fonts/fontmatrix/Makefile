@@ -2,7 +2,7 @@
 # Date created:         2008-01-13
 # Whom:                 Max Brazhnikov <makc@issp.ac.ru>
 #
-# $FreeBSD: ports/x11-fonts/fontmatrix/Makefile,v 1.13 2012/11/17 06:03:28 svnexp Exp $
+# $FreeBSD: x11-fonts/fontmatrix/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	fontmatrix
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicol
 USE_QT4=	gui svg network moc_build uic_build rcc_build qmake_build linguist_build
 INSTALLS_ICONS=	yes
 
-USE_CMAKE=	yes
+USES=		cmake
 
 OPTIONS_DEFINE=	FONTFORGE
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
