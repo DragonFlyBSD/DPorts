@@ -2,7 +2,7 @@
 # Date Created:				2011-02-23
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: ports/x11-clocks/plasma-applet-adjustableclock/Makefile,v 1.8 2012/11/17 06:03:24 svnexp Exp $
+# $FreeBSD: x11-clocks/plasma-applet-adjustableclock/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	adjustableclock
@@ -19,7 +19,7 @@ COMMENT=	Highly configurable clock plasmoid for KDE4
 LICENSE=	GPLv2
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_GETTEXT=	yes
 USE_KDE4=	automoc4 kdeprefix workspace
 USE_QT4=	qmake_build moc_build rcc_build uic_build
