@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/x11/qxkb/Makefile,v 1.2 2012/12/04 14:26:07 svnexp Exp $
+# $FreeBSD: x11/qxkb/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	qxkb
 PORTVERSION=	0.4.5
@@ -14,7 +14,7 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	xkbfile:${PORTSDIR}/x11/libxkbfile
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_QT4=	qmake_build linguist_build moc_build rcc_build uic_build \
 		corelib gui svg
 
