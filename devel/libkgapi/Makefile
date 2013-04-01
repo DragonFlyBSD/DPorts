@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/libkgapi/Makefile,v 1.1 2013/02/04 13:57:53 svnexp Exp $
+# $FreeBSD: devel/libkgapi/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	libkgapi
 PORTVERSION=	0.4.4
@@ -18,7 +18,7 @@ CONFLICTS=	akonadi-google-0.*
 
 MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	automoc4 kdelibs kdeprefix kdehier pimlibs
 USE_LDCONFIG=	yes
 USE_QT4=	corelib network webkit xml \
