@@ -1,17 +1,17 @@
 # Created by: ijliao
-# $FreeBSD: ports/editors/texmaker/Makefile,v 1.35 2012/11/17 05:57:18 svnexp Exp $
+# $FreeBSD: editors/texmaker/Makefile 314805 2013-03-21 05:27:16Z mezz $
 
 PORTNAME=	texmaker
 PORTVERSION=	3.5.2
-PORTEPOCH=	1
+PORTEPOCH=	2
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	LaTeX Development Environment
 
-LIB_DEPENDS=	poppler.18:${PORTSDIR}/graphics/poppler \
-		poppler-qt4.3:${PORTSDIR}/graphics/poppler-qt4
+LIB_DEPENDS=	poppler:${PORTSDIR}/graphics/poppler \
+		poppler-qt4:${PORTSDIR}/graphics/poppler-qt4
 RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
 		dvips:${PORTSDIR}/print/dvipsk-tetex \
 		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
