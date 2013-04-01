@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/kpartsplugin/Makefile,v 1.4 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: www/kpartsplugin/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kpartsplugin
 DISTVERSION=	0.0-${PORTDATE}
@@ -13,7 +13,7 @@ COMMENT=	Browser file viewer using KDE technology
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DNSPLUGIN_INSTALL_DIR:PATH="${WEBPLUGINS_DIR}"
 MAKE_JOBS_SAFE=	yes
 
