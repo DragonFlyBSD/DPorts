@@ -2,7 +2,7 @@
 # Date Created:			25 January 2008
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/hal-info/Makefile,v 1.7 2012/11/17 06:01:34 svnexp Exp $
+# $FreeBSD: sysutils/hal-info/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #   $MCom: ports/sysutils/hal-info/Makefile,v 1.6 2010/03/16 19:33:11 mezz Exp $
 #
 
@@ -20,7 +20,7 @@ BUILD_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
