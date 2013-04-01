@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: ports/devel/kcachegrind/Makefile,v 1.28 2012/12/01 10:52:12 svnexp Exp $
+# $FreeBSD: devel/kcachegrind/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kcachegrind
 PORTVERSION=	0.7.3
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	automoc4 kdehier kdelibs
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 INSTALLS_ICONS=	yes
