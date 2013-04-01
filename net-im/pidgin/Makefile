@@ -2,12 +2,12 @@
 # Date created:			26 Mar 1999
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/pidgin/Makefile,v 1.42 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: net-im/pidgin/Makefile 315159 2013-03-24 20:39:21Z marcus $
 #   $MCom: ports/net-im/pidgin/Makefile,v 1.17 2007/09/17 19:53:06 marcus Exp $
 #
 
 PORTNAME=	pidgin
-PORTREVISION=	0
+PORTREVISION=	1
 
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Pidgin multi-protocol messaging client (GTK+ UI)
