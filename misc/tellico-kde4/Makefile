@@ -1,9 +1,9 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: ports/misc/tellico-kde4/Makefile,v 1.91 2013/02/04 15:51:26 svnexp Exp $
+# $FreeBSD: misc/tellico-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	tellico
 PORTVERSION=	2.3.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc kde
 MASTER_SITES=	http://tellico-project.org/files/
 
@@ -24,7 +24,7 @@ USE_BZIP2=	yes
 USE_KDE4=	kdehier kdelibs kdeprefix libksane pimlibs \
 		automoc4 qimageblitz libkcddb
 USE_QT4=	qmake_build moc_build uic_build rcc_build
-USE_CMAKE=	yes
+USES=		cmake
 USE_GETTEXT=	yes
 MAKE_JOBS_SAFE=	yes
 
