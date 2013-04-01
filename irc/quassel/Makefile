@@ -2,7 +2,7 @@
 # Date created:		2008-08-10
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/irc/quassel/Makefile,v 1.25 2012/11/17 05:58:30 svnexp Exp $
+# $FreeBSD: irc/quassel/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	quassel
@@ -17,7 +17,7 @@ COMMENT=	Qt4 based distributed IRC client
 LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 MAKE_JOBS_SAFE=	yes
 
