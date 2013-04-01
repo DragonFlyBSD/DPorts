@@ -1,7 +1,7 @@
-# $FreeBSD: ports/mail/p5-Dancer-Plugin-Email/Makefile,v 1.7 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: mail/p5-Dancer-Plugin-Email/Makefile 314097 2013-03-13 17:20:11Z gblach $
 
 PORTNAME=	Dancer-Plugin-Email
-PORTVERSION=	1.0000
+PORTVERSION=	1.0100
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:IRONCAMEL
