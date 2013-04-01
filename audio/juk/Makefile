@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: ports/audio/juk/Makefile,v 1.52 2013/02/04 01:03:22 svnexp Exp $
+# $FreeBSD: audio/juk/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=		juk
 PORTVERSION=		${KDE4_VERSION}
@@ -19,7 +19,7 @@ CONFLICTS_INSTALL=	kdemultimedia-4.[1-8].*
 
 CMAKE_ARGS=		-DWITH_TunePimp:BOOL=OFF
 MAKE_JOBS_SAFE=		yes
-KDE4_BUILDENV=		yes
+USES=			cmake:outsource
 USE_KDE4=		automoc4 kdehier kdelibs kdeprefix
 USE_QT4=		dbus qt3support svg \
 			moc_build qmake_build rcc_build uic_build
