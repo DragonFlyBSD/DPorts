@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/kdevelop-custom-buildsystem/Makefile,v 1.1 2013/02/05 12:32:51 svnexp Exp $
+# $FreeBSD: devel/kdevelop-custom-buildsystem/Makefile 314932 2013-03-22 13:41:53Z makc $
 
 PORTNAME=	kdevelop-custom-buildsystem
 PORTVERSION=	1.2.2
@@ -15,7 +15,7 @@ LIB_DEPENDS=	kdevplatforminterfaces:${PORTSDIR}/devel/kdevplatform
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	lib/kde4/kcm_kdevcustombuildsystem.so \
