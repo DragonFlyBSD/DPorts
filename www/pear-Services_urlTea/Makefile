@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Services_urlTea
-# Date created:			  21 Jan 2007
-# Whom:				  Ditesh Shashikant Gathani <ditesh@gathani.org>
-#
-# $FreeBSD: ports/www/pear-Services_urlTea/Makefile,v 1.3 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
+# $FreeBSD: www/pear-Services_urlTea/Makefile 314455 2013-03-17 15:28:55Z miwi $
 
 PORTNAME=	Services_urlTea
 PORTVERSION=	0.1.0
@@ -16,11 +12,7 @@ BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 USE_PHP=	curl
-
-FILES=		Services/urlTea.php Services/urlTea/Exception.php
-
-TESTS=		001-create.phpt 002-lookup.phpt 003-create-and-lookup.phpt \
-		tests-config.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
