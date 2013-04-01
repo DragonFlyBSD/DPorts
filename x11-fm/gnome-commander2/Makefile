@@ -1,8 +1,9 @@
 # Created by: Edgardo Garcia Hoeffler <edybsd@yahoo.com.ar>
-# $FreeBSD: ports/x11-fm/gnome-commander2/Makefile,v 1.70 2013/01/08 19:50:01 svnexp Exp $
+# $FreeBSD: x11-fm/gnome-commander2/Makefile 314141 2013-03-14 08:17:39Z pclin $
 
 PORTNAME=	gnome-commander
 PORTVERSION=	1.2.8.15
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
