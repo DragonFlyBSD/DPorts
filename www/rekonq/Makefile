@@ -1,15 +1,15 @@
-# $FreeBSD: www/rekonq/Makefile 313654 2013-03-08 15:24:56Z makc $
+# $FreeBSD: www/rekonq/Makefile 314742 2013-03-20 16:09:29Z makc $
 
 PORTNAME=	rekonq
-PORTVERSION=	2.2
+PORTVERSION=	2.2.1
 CATEGORIES=	www kde
-MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION:R}.0/
+MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION:C,\..*,.0,}/
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Lightweight KDE browser based on WebKit
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake:outsource
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	script webkit \
 		moc_build qmake_build rcc_build uic_build
