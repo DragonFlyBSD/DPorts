@@ -2,7 +2,7 @@
 # Date created:				2010-12-29
 # Whom:					Dima Panov <fluffy@FreeBSD.org>
 #
-# $FreeBSD: ports/net/kio-upnp-ms/Makefile,v 1.8 2012/11/17 06:00:03 svnexp Exp $
+# $FreeBSD: net/kio-upnp-ms/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kio-upnp-ms
 DISTVERSION=	1.0.0.git20110808
@@ -20,7 +20,7 @@ COMMENT=	KIO slave to access UPnP MediaServers
 LIB_DEPENDS=	HUpnp.1:${PORTSDIR}/net/hupnp
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	automoc4 kdehier kdeprefix kdelibs
 USE_QT4=	corelib network xml dbus gui \
 		qmake_build moc_build rcc_build uic_build
