@@ -2,7 +2,7 @@
 # Date created:		2008-09-01
 # Whom:			Max Brazhnikov <makc@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/kiconedit/Makefile,v 1.20 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: graphics/kiconedit/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	kiconedit
@@ -19,7 +19,7 @@ COMMENT=	A KDE icon editor
 USE_BZIP2=	yes
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 
 EXTRA_VER=	4.4.0
