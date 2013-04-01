@@ -1,9 +1,5 @@
-# New ports collection makefile for:   tempest_for_eliza
-# Date created:        17 February 2001
-# Whom:                George Reid <greid@ukug.uk.freebsd.org>
-#
-# $FreeBSD: ports/audio/tempest_for_eliza/Makefile,v 1.22 2012/11/17 05:54:45 svnexp Exp $
-#
+# Created by: George Reid <greid@ukug.uk.freebsd.org>
+# $FreeBSD: audio/tempest_for_eliza/Makefile 314041 2013-03-13 09:06:35Z danfe $
 
 PORTNAME=	tempest_for_eliza
 PORTVERSION=	1.0.5
@@ -12,21 +8,26 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.erikyyy.de/tempest/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A program to send AM radio signals using a PC monitor
+COMMENT=	Program to send AM radio signals using a PC monitor
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl
 
+SONGS=		forelise jonny fruehling saints oldmacdonald ungarian \
+		godfather starwars tempest
+PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-install:
 	@${MKDIR} ${PREFIX}/share/tempest
-.for S in forelise jonny fruehling saints oldmacdonald ungarian \
-	godfather starwars tempest
-	@${INSTALL_DATA} ${WRKSRC}/songs/$S ${PREFIX}/share/tempest
-.endfor
-.if !defined(NOPORTDOCS)
+	${INSTALL_DATA} ${SONGS:S,^,${WRKSRC}/songs/,} ${PREFIX}/share/tempest
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
