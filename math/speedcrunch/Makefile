@@ -2,7 +2,7 @@
 # Date created:		27 Jul 2007
 # Whom:                	Yinghong.Liu <relaxbsd@gmail.com>
 #
-# $FreeBSD: ports/math/speedcrunch/Makefile,v 1.16 2012/11/17 05:59:31 svnexp Exp $
+# $FreeBSD: math/speedcrunch/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	speedcrunch
@@ -15,7 +15,7 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	A desktop calculator for power users
 
 USE_QT4=	qmake_build moc_build rcc_build uic_build gui xml
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_SOURCE_PATH=	src
 
 MAKE_JOBS_SAFE=	yes
