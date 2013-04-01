@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/libkonq/Makefile,v 1.4 2013/02/04 01:04:52 svnexp Exp $
+# $FreeBSD: x11/libkonq/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	libkonq
 PORTVERSION=	${KDE4_VERSION}
@@ -14,7 +14,7 @@ COMMENT=	Core library for Konqueror
 CONFLICTS_INSTALL=	kdebase-4.[0-6].* kde-baseapps-4.7.*
 
 USE_XZ=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
