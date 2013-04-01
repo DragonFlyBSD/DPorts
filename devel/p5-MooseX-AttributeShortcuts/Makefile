@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-MooseX-AttributeShortcuts/Makefile,v 1.2 2012/11/17 05:56:22 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-AttributeShortcuts/Makefile 314427 2013-03-17 12:30:41Z lth $
 
 PORTNAME=	MooseX-AttributeShortcuts
-PORTVERSION=	0.015
+PORTVERSION=	0.017
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	MooseX
