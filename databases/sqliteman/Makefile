@@ -2,7 +2,7 @@
 # Date created:		19 May, 2009
 # Whom:			Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/databases/sqliteman/Makefile,v 1.9 2013/02/03 22:42:53 svnexp Exp $
+# $FreeBSD: databases/sqliteman/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	sqliteman
@@ -16,7 +16,7 @@ COMMENT=	Admin's GUI tool for Sqlite3
 
 LIB_DEPENDS=	qscintilla2:${PORTSDIR}/devel/qscintilla2
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_SQLITE=	yes
 CMAKE_ENV+=	QMAKESPEC=${QMAKESPEC}
 USE_QT4=	qmake_build gui moc_build rcc_build uic_build xml sql
