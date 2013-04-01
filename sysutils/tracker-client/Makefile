@@ -1,14 +1,10 @@
-# New ports collection makefile for:	tracker
-# Date created:		2006-12-09
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: sysutils/tracker-client/Makefile 313088 2013-02-28 10:51:58Z gahr $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: sysutils/tracker-client/Makefile 314141 2013-03-14 08:17:39Z pclin $
 #   $MCom: ports/sysutils/tracker-client/Makefile,v 1.14 2010/05/10 04:21:19 marcus Exp $
-#
 
 PORTNAME=	tracker
 PORTVERSION=	0.6.95
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX?=	-client
