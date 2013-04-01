@@ -1,9 +1,9 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: ports/devel/pear-PHP_CompatInfo/Makefile,v 1.22 2012/12/17 02:17:59 svnexp Exp $
+# $FreeBSD: devel/pear-PHP_CompatInfo/Makefile 314340 2013-03-16 08:01:34Z miwi $
 
 PORTNAME=	PHP_CompatInfo
 PORTVERSION=	1.9.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel pear
 
 MAINTAINER=	miwi@FreeBSD.org
@@ -41,7 +41,7 @@ RUN_DEPENDS+=	${PEARDIR}/Var/Dump.php:${PORTSDIR}/devel/pear-Var_Dump
 .endif
 
 .if ${PORT_OPTIONS:MPEAR_PHPUNIT}
-RUN_DEPENDS+=	${PEARDIR}/PHPUnit/Framework.php:${PORTSDIR}/devel/pear-PHPUnit3
+RUN_DEPENDS+=	${PEARDIR}/PHPUnit/Autoload.php:${PORTSDIR}/devel/pear-PHPUnit3
 .endif
 
 .if ${PORT_OPTIONS:MPEAR_XML_UTIL}
