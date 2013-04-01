@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/goffice1/Makefile 313751 2013-03-09 19:52:49Z kwm $
+# $FreeBSD: devel/goffice1/Makefile 313992 2013-03-12 17:39:34Z kwm $
 #   $MCom: ports/devel/goffice1/Makefile,v 1.1 2007/07/23 21:36:19 mezz Exp $
 
 PORTNAME=	goffice
@@ -12,6 +12,9 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GLib/GTK+ set of document centric objects and utilities
 
 NO_LATEST_LINK=	yes
+
+DEPRECATED=    depends on libgsf_gnome which going away
+EXPIRATION_DATE=2013-04-12
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
