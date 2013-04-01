@@ -2,7 +2,7 @@
 # Date created:		2010-12-26
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/ksshaskpass/Makefile,v 1.6 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/ksshaskpass/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	ksshaskpass
@@ -16,7 +16,7 @@ MAINTAINER=	swills@FreeBSD.org
 COMMENT=	A KDE 4 version of ssh-askpass with KWallet support
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	kdelibs automoc4
 USE_QT4=	moc_build uic_build qmake_build rcc_build
 
