@@ -1,16 +1,15 @@
 # Created by: gahr
-# $FreeBSD: ports/graphics/gegl/Makefile,v 1.42 2013/01/27 18:44:48 svnexp Exp $
+# $FreeBSD: graphics/gegl/Makefile 314940 2013-03-22 15:39:45Z mezz $
 
 PORTNAME=	gegl
-PORTVERSION=	0.1.8
-PORTREVISION=	6
+PORTVERSION=	0.2.0
+PORTREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gegl/0.1/
+MASTER_SITES=	ftp://ftp.gimp.org/pub/gegl/0.2/
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A graph based image processing framework
+COMMENT=	Graph based image processing framework
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	babl-0.1:${PORTSDIR}/x11/babl
 
 OPTIONS_DEFINE=	CAIRO ENSCRIPT EXIV2 FFMPEG PIXBUF GRAPHVIZ JASPER JPEG \
@@ -22,20 +21,22 @@ ENSCRIPT_DESC=	Enscript support
 SPIRO_DESC=	Spiro support
 #UMFPACK_DESC=	UMFpack support
 
-USE_GNOME=	glib20 gnomehack
+USE_GNOME=	glib20 intltool
+USES=		pathfix
 USE_PKGCONFIG=	build
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_LDCONFIG=	${PREFIX}/lib/gegl-0.1
+USE_LDCONFIG=	${PREFIX}/lib/gegl-0.2
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	ac_cv_header_execinfo_h=no
 CONFIGURE_ARGS+=--without-vala
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
-GEGL_MINOR=	107
-PLIST_SUB+=	GEGL_MINOR="${GEGL_MINOR}"
+GEGL_MINOR=	199
+GEGL_VER=	0.2
+PLIST_SUB+=	GEGL_MINOR="${GEGL_MINOR}" GEGL_VER=${GEGL_VER}
 
 EXAMPLES=	2geglbuffer csugar float-lookup \
 		gegl-convert gegl-slicer geglbuffer-add-image \
@@ -87,7 +88,7 @@ PLIST_SUB+=	FFMPEG="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGRAPHVIZ}
-LIB_DEPENDS+=	gvpr:${PORTSDIR}/graphics/graphviz
+LIB_DEPENDS+=	cgraph:${PORTSDIR}/graphics/graphviz
 .else
 CONFIGURE_ARGS+=--without-graphviz
 .endif
@@ -191,18 +192,29 @@ PLIST_SUB+=	EXIV2="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MDOCS}
-BUILD_DEPENDS+=	a2x:${PORTSDIR}/textproc/asciidoc
+BUILD_DEPENDS+=	a2x:${PORTSDIR}/textproc/asciidoc \
+		vimdot:${PORTSDIR}/graphics/graphviz
 .else
 CONFIGURE_ARGS+=--disable-docs
 .endif
 
 post-patch:
 .if empty(PORT_OPTIONS:MDOCS)
-	@${REINPLACE_CMD} -e '/^SUBDIRS/s|tools examples tests||' \
-		${WRKSRC}/Makefile.in
+	${REINPLACE_CMD} -e '10s|\\||; 11,13d' \
+		${WRKSRC}/Makefile.am
 .endif
 	${REINPLACE_CMD} -e 's|\(lua\)\(5\.1\)|\1-\2|g ; s|x86_64|amd64|g' \
 		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's|/usr/bin/ruby|/usr/bin/env ruby|' \
+		${WRKSRC}/tools/gobj2dot.rb
+
+.if ${PORT_OPTIONS:MDOCS}
+pre-configure:
+.if !exists(${LOCALBASE}/bin/vimdot)
+	@${ECHO_CMD} "${PKGNAME}: Needs graphics/graphviz with PANGOCAIRO support enabled."
+	@${FALSE}
+.endif
+.endif
 
 post-build:
 .if ${PORT_OPTIONS:MDOCS}
