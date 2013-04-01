@@ -2,7 +2,7 @@
 # Date created:		2009-10-30
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/security/nmapsi4/Makefile,v 1.10 2012/11/17 06:01:08 svnexp Exp $
+# $FreeBSD: security/nmapsi4/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	nmapsi4
@@ -18,7 +18,7 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	${LOCALBASE}/bin/nmap:${PORTSDIR}/security/nmap
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_BZIP2=	yes
 INSTALLS_ICONS=	yes
 USE_QT4=	gui xml qmake_build uic_build moc_build rcc_build network \
