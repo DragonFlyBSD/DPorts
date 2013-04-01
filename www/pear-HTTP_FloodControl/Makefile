@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: ports/www/pear-HTTP_FloodControl/Makefile,v 1.5 2012/12/17 02:18:04 svnexp Exp $
+# $FreeBSD: www/pear-HTTP_FloodControl/Makefile 314455 2013-03-17 15:28:55Z miwi $
 
 PORTNAME=	HTTP_FloodControl
 PORTVERSION=	0.1.1
@@ -9,12 +9,7 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR classes to detect and protect from attempts to flood a site
 
 BUILD_DEPENDS=	${PEARDIR}/HTTP.php:${PORTSDIR}/www/pear-HTTP
-RUN_DEPENDS:=	${BUILD_DEPENDS}
-
-CATEGORY=	HTTP
-FILES=		FloodControl.php FloodControl/Container.php \
-		FloodControl/Container/DB.php FloodControl/Container/File.php \
-		FloodControl/Container/MDB.php FloodControl/Container/MDB2.php
+RUN_DEPENDS=	${PEARDIR}/HTTP.php:${PORTSDIR}/www/pear-HTTP
 
 LATEST_LINK=	pear-HTTP_FloodControl
 DOCS=		README LICENSE
