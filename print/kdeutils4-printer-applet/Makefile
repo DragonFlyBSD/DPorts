@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/kdeutils4-printer-applet/Makefile,v 1.25 2013/02/04 01:04:33 svnexp Exp $
+# $FreeBSD: print/kdeutils4-printer-applet/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	printer-applet
 PORTVERSION=	${KDE4_VERSION}
@@ -18,7 +18,7 @@ USE_KDE4=	kdehier kdelibs kdeprefix pykde4 pykdeuic4 automoc4
 USE_PYTHON=	2.5+
 USE_QT4=	qmake_build moc_build uic_build rcc_build
 USE_XZ=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DINSTALL_PRINTER_APPLET:BOOL=ON
 
 post-patch:
