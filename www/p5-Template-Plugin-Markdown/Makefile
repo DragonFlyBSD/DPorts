@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/www/p5-Template-Plugin-Markdown/Makefile,v 1.6 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Plugin-Markdown/Makefile 305130 2012-10-01 14:45:16Z tabthorpe $
 
 PORTNAME=	Template-Plugin-Markdown
 PORTVERSION=	0.02
