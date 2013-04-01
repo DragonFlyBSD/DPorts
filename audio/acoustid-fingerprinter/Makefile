@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/acoustid-fingerprinter/Makefile,v 1.2 2012/11/17 05:54:27 svnexp Exp $
+# $FreeBSD: audio/acoustid-fingerprinter/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	acoustid-fingerprinter
 PORTVERSION=	0.6
@@ -14,7 +14,7 @@ LIB_DEPENDS=	chromaprint:${PORTSDIR}/audio/chromaprint \
 		tag:${PORTSDIR}/audio/taglib \
 		avcodec:${PORTSDIR}/multimedia/ffmpeg
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_QT4=	gui network \
 		qmake_build moc_build rcc_build uic_build
 INSTALLS_ICONS=	yes
