@@ -1,4 +1,4 @@
-# $FreeBSD: databases/percona55-server/Makefile 313679 2013-03-08 22:58:43Z flo $
+# $FreeBSD: databases/percona55-server/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME?=	percona
 PORTVERSION=	5.5.30.30.1
@@ -13,8 +13,7 @@ MAINTAINER=	flo@FreeBSD.org
 COMMENT?=	Multithreaded SQL database (server)
 
 SLAVEDIRS=	databases/percona55-client
-USE_CMAKE=	yes
-USES=		bison
+USES=		bison cmake
 MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	OPENSSL FASTMTX
