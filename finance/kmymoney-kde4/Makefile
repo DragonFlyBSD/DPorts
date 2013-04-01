@@ -1,4 +1,4 @@
-# $FreeBSD: finance/kmymoney-kde4/Makefile 311310 2013-01-31 13:38:42Z bapt $
+# $FreeBSD: finance/kmymoney-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kmymoney
 PORTVERSION=	4.6.3
@@ -24,7 +24,7 @@ OFX_DESC=	Enable OFX plugin
 QUOTES_DESC=	Enable online price quotes
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_PKGCONFIG=	build
 USE_QT4=	gui dbus network phonon sql svg xml \
 		qmake_build moc_build rcc_build uic_build
