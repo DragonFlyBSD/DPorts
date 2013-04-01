@@ -1,4 +1,4 @@
-# $FreeBSD: ports/science/step/Makefile,v 1.9 2013/02/04 01:04:35 svnexp Exp $
+# $FreeBSD: science/step/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	step
 PORTVERSION=	${KDE4_VERSION}
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/eigen2.pc:${PORTSDIR}/math/eigen2
 CONFLICTS=	kdeedu-4.[0-6].*
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_QT4=	opengl xml moc_build qmake_build rcc_build uic_build
 USE_XZ=	yes
 MAKE_JOBS_SAFE=	yes
