@@ -1,4 +1,4 @@
-# $FreeBSD: ports/misc/bibletime/Makefile,v 1.58 2013/01/28 22:41:54 svnexp Exp $
+# $FreeBSD: misc/bibletime/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	bibletime
 PORTVERSION=	2.9.1
@@ -18,7 +18,7 @@ LIB_DEPENDS=	clucene-core:${PORTSDIR}/textproc/clucene
 
 USE_BZIP2=	yes
 USE_OPENSSL=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_QT4=	corelib dbus gui iconengines network phonon qtestlib script \
 		svg webkit xml linguist_build moc_build qmake_build \
 		rcc_build uic_build
