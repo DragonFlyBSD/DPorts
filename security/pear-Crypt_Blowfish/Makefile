@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Crypt_Blowfish
-# Date created:			  27 April 2005
-# Whom:				  Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-#
-# $FreeBSD: ports/security/pear-Crypt_Blowfish/Makefile,v 1.11 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
+# $FreeBSD: security/pear-Crypt_Blowfish/Makefile 314254 2013-03-15 06:27:06Z miwi $
 
 PORTNAME=	Crypt_Blowfish
 PORTVERSION=	1.1.0.r2
@@ -14,19 +10,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR class for blowfish encryption
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-CATEGORY=	Crypt
-FILES=		Blowfish.php \
-		Blowfish/CBC.php \
-		Blowfish/DefaultKey.php \
-		Blowfish/ECB.php \
-		Blowfish/MCrypt.php \
-		Blowfish/PHP.php
-TESTS=		blowfish.phpt \
-		blowfish_cbc.phpt \
-		vectors.txt \
-		vectors_cbc.txt
+PEAR_AUTOINSTALL=	yes
 
 .if defined(WITH_PHP_MCRYPT)
 USE_PHP=mcrypt
