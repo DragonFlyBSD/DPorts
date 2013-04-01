@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Services_Blogging
-# Date created:			  23 June 2008
-# Whom:				  Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/pear-Services_Blogging/Makefile,v 1.7 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: www/pear-Services_Blogging/Makefile 314455 2013-03-17 15:28:55Z miwi $
 
 PORTNAME=	Services_Blogging
 PORTVERSION=	0.2.4
@@ -14,7 +10,7 @@ COMMENT=	PHP interface to Blog
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 		${PEARDIR}/XML/RPC.php:${PORTSDIR}/net/pear-XML_RPC
-RUN_DEPENDS:=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 		${PEARDIR}/XML/RPC.php:${PORTSDIR}/net/pear-XML_RPC
 
 PEAR_AUTOINSTALL=	yes
