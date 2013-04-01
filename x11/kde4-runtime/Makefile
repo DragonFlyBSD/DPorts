@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/kde4-runtime/Makefile,v 1.260 2013/02/04 01:04:51 svnexp Exp $
+# $FreeBSD: x11/kde4-runtime/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	kde-runtime
 PORTVERSION=	${KDE4_VERSION}
@@ -30,12 +30,13 @@ USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_KDE4=	kdehier kdelibs kdeprefix oxygen \
 		attica automoc4 pimlibs sharedmime strigi
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_QT4=	dbus declarative designer gui phonon qt3support \
 		script svg webkit xml \
 		moc_build qmake_build rcc_build uic_build
 USE_XORG=	x11 xcursor
 USE_GMAKE=	yes
+USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 MAN1=		kdesu.1
