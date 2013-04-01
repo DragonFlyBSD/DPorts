@@ -2,7 +2,7 @@
 # Date created:				2011-02-28
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: ports/finance/libalkimia/Makefile,v 1.8 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: finance/libalkimia/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	libalkimia
@@ -20,7 +20,7 @@ LICENSE=	LGPL21
 LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	automoc4 kdeprefix kdelibs
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 
