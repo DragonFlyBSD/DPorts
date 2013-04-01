@@ -1,13 +1,8 @@
-# New ports collection makefile for:	gtick
-# Date created:		10 February 2004
-# Whom:			Liam J. Foy <liamfoy@sepulcrum.org>
-#
-# $FreeBSD: ports/audio/gtick/Makefile,v 1.34 2012/11/17 05:54:34 svnexp Exp $
-#
+# Created by: Liam J. Foy <liamfoy@sepulcrum.org>
+# $FreeBSD: audio/gtick/Makefile 314578 2013-03-18 15:04:45Z martymac $
 
 PORTNAME=	gtick
-PORTVERSION=	0.5.1
-PORTREVISION=	2
+PORTVERSION=	0.5.2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.antcom.de/gtick/download/ CENKES
 
