@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: ports/audio/kscd/Makefile,v 1.1 2013/02/04 01:03:22 svnexp Exp $
+# $FreeBSD: audio/kscd/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=		kscd
 PORTVERSION=		${KDE4_VERSION}
@@ -18,7 +18,7 @@ LIB_DEPENDS=		musicbrainz3.6:${PORTSDIR}/audio/libmusicbrainz3
 CONFLICTS_INSTALL=	kdemultimedia-4.[1-8].*
 
 MAKE_JOBS_SAFE=		yes
-KDE4_BUILDENV=		yes
+USES=			cmake:outsource
 USE_KDE4=		kdehier kdelibs kdeprefix libkcddb libkcompactdisc \
 			automoc4
 USE_QT4=		phonon moc_build qmake_build rcc_build uic_build
