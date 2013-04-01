@@ -1,5 +1,5 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: ports/devel/kdevplatform/Makefile,v 1.12 2013/02/05 12:32:51 svnexp Exp $
+# $FreeBSD: devel/kdevplatform/Makefile 314932 2013-03-22 13:41:53Z makc $
 
 PORTNAME=	kdevplatform
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
@@ -18,7 +18,7 @@ LIB_DEPENDS=	svn_client-1:${PORTSDIR}/devel/subversion \
 USE_KDE4=	kate_run kdehier kdelibs kdeprefix automoc4
 USE_QT4=	qmake_build moc_build uic_build rcc_build
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
