@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Services_TwitPic
-# Date created:			  10 Dez 2008
-# Whom:				  Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/www/pear-Services_TwitPic/Makefile,v 1.2 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: www/pear-Services_TwitPic/Makefile 314238 2013-03-15 02:43:08Z miwi $
 
 PORTNAME=	Services_TwitPic
 PORTVERSION=	0.1.0
@@ -15,12 +11,7 @@ COMMENT=	PHP Interface to TwitPic's API
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-FILES=		Services/TwitPic.php Services/TwitPic/Exception.php \
-		Services/TwitPic/Request/Common.php Services/TwitPic/Request/HTTPRequest.php \
-		Services/TwitPic/Request/Mock.php
-EXAMPLES=	example.php
-_EXAMPLESDIR=	docs
-TESTS=		TwitPicTest.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
