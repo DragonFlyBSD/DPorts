@@ -1,5 +1,5 @@
 # Created by: Marc Abramowitz (http://marc.abramowitz.info)
-# $FreeBSD: ports/graphics/opencv/Makefile,v 1.46 2013/01/17 16:48:39 svnexp Exp $
+# $FreeBSD: graphics/opencv/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME?=	opencv
 PORTVERSION=	2.3.1
@@ -18,7 +18,7 @@ USE_GNOME=	pkgconfig
 WANT_GSTREAMER=	yes
 MAKE_JOBS_UNSAFE=	yes
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/OpenCV-${DISTVERSION}
