@@ -2,7 +2,7 @@
 # Date created:		2008-01-15
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD: ports/audio/paman/Makefile,v 1.16 2012/11/17 05:54:41 svnexp Exp $
+# $FreeBSD: audio/paman/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	paman
@@ -19,7 +19,7 @@ LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 
 CONFIGURE_ARGS=	--disable-lynx
 
