@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/games/barbie_seahorse_adventures/files/barbie_seahorse_adventures.in,v 1.2 2012/11/17 05:57:32 svnexp Exp $
+# $FreeBSD: games/barbie_seahorse_adventures/files/barbie_seahorse_adventures.in 314003 2013-03-12 22:15:14Z beech $
 
 cd "%%DATADIR%%"
-exec ./run_game.py "${@}"
+exec /usr/bin/env python ./run_game.py "${@}"
