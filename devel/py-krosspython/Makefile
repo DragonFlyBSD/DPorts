@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-krosspython/Makefile,v 1.1 2013/02/04 01:03:48 svnexp Exp $
+# $FreeBSD: devel/py-krosspython/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	krosspython
 PORTVERSION=	${KDE4_VERSION}
@@ -16,7 +16,7 @@ USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_PYTHON=	2.5+
 USE_QT4=	gui qmake_build moc_build uic_build rcc_build
 USE_XZ=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DBUILD_falcon:BOOL=FALSE \
 		-DBUILD_ruby:BOOL=FALSE \
 		-DBUILD_java:BOOL=FALSE
