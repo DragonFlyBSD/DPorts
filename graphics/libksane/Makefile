@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/libksane/Makefile,v 1.8 2013/02/04 01:04:05 svnexp Exp $
+# $FreeBSD: graphics/libksane/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	libksane
 PORTVERSION=	${KDE4_VERSION}
@@ -15,9 +15,10 @@ LIB_DEPENDS=	sane.1:${PORTSDIR}/graphics/sane-backends
 CONFLICTS=	kdegraphics-4.[0-6].*
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_QT4=	corelib moc_build qmake_build rcc_build uic_build
 USE_XZ=	yes
+USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 pre-configure:
