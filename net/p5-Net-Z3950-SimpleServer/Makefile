@@ -2,12 +2,11 @@
 # Date created:				12 March 2002
 # Whom:                			Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-Z3950-SimpleServer/Makefile,v 1.17 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Z3950-SimpleServer/Makefile 314033 2013-03-13 07:09:34Z demon $
 #
 
 PORTNAME=	Net-Z3950-SimpleServer
-PORTVERSION=	1.12
-PORTREVISION=	1
+PORTVERSION=	1.16
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,11 +14,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	A Perl module for developing Z39.50 servers
 
-LIB_DEPENDS=	yaz.4:${PORTSDIR}/net/yaz
+LIB_DEPENDS=	yaz:${PORTSDIR}/net/yaz
 
 PERL_CONFIGURE=	yes
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 
-MAN3=	Net::Z3950::GRS1.3 Net::Z3950::SimpleServer.3
+MAN3=		Net::Z3950::GRS1.3 Net::Z3950::SimpleServer.3
 
 .include <bsd.port.mk>
