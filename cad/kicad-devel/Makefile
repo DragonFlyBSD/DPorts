@@ -1,5 +1,5 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: ports/cad/kicad-devel/Makefile,v 1.43 2013/01/31 14:01:26 svnexp Exp $
+# $FreeBSD: cad/kicad-devel/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=		kicad
 DISTVERSION=    r${BZR_SRC_REV}
@@ -38,7 +38,7 @@ PLIST_SUB=	OPSYS=${OPSYS}	\
 BINS=		cvpcb eeschema gerbview kicad pcbnew
 EXTRAS2RM=	linux-non_unicode linux wings3d LINUX.README	\
 		contrib_makefiles.txt running_kicad_under_W98.txt
-USE_CMAKE=      yes
+USES=		cmake
 CMAKE_ARGS=	-DLOCALBASE="${LOCALBASE}" \
 		-DKICAD_TESTING_VERSION=ON \
 		-DCMAKE_INCLUDE_PATH="${LOCALBASE}/include" \
