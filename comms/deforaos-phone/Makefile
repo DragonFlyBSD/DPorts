@@ -1,8 +1,9 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/comms/deforaos-phone/Makefile,v 1.2 2013/02/10 19:12:49 svnexp Exp $
+# $FreeBSD: comms/deforaos-phone/Makefile 315061 2013-03-23 18:04:20Z rm $
 
 PORTNAME=	phone
 PORTVERSION=	0.3.11
+PORTREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://www.defora.org/os/download/download/3721/
 PKGNAMEPREFIX=	deforaos-
