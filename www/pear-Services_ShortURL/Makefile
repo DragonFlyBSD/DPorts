@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Services_ShortURL
-# Date created:			  06 April 2011
-# Whom:				  Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/www/pear-Services_ShortURL/Makefile,v 1.2 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: www/pear-Services_ShortURL/Makefile 314411 2013-03-17 08:27:46Z miwi $
 
 PORTNAME=	Services_ShortURL
 PORTVERSION=	0.3.1
@@ -17,28 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 		${PEARDIR}/HTTP/Request2.php:${PORTSDIR}/www/pear-HTTP_Request2
 
 USE_PHP=	simplexml pcre spl
-
-CATEGORY=	Services
-PEAR_CATSRC=	yes
-
-FILES=		ShortURL/Bitly.php \
-		ShortURL/Common.php \
-		ShortURL/Digg.php \
-		ShortURL/Exception/CouldNotExpand.php \
-		ShortURL/Exception/CouldNotShorten.php \
-		ShortURL/Exception/InvalidOptions.php \
-		ShortURL/Exception/NotImplemented.php \
-		ShortURL/Exception/UnknownService.php \
-		ShortURL/Exception.php \
-		ShortURL/Googl.php \
-		ShortURL/Interface.php \
-		ShortURL/Isgd.php \
-		ShortURL/Shortie.php \
-		ShortURL/TinyURL.php \
-		ShortURL/Trim.php \
-		ShortURL.php
-
-TESTS=		AllTests.php Services/ShortURLTest.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
