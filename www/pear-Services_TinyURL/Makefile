@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Services_TinyURL
-# Date created:			  22 Jan 2007
-# Whom:				  Ditesh Shashikant Gathani <ditesh@gathani.org>
-#
-# $FreeBSD: ports/www/pear-Services_TinyURL/Makefile,v 1.3 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
+# $FreeBSD: www/pear-Services_TinyURL/Makefile 314251 2013-03-15 06:21:53Z miwi $
 
 PORTNAME=	Services_TinyURL
 PORTVERSION=	0.1.2
@@ -16,11 +12,7 @@ BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 USE_PHP=	curl
-
-FILES=		Services/TinyURL.php Services/TinyURL/Exception.php
-
-TESTS=		001-create.phpt 002-lookup.phpt 003-create-and-lookup.phpt \
-		100-bug-12207.phpt tests-config.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
