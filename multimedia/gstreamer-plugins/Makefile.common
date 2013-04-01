@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer-plugins/Makefile.common 303096 2012-08-24 18:13:28Z avilla $
+# $FreeBSD: multimedia/gstreamer-plugins/Makefile.common 315020 2013-03-23 09:58:02Z kwm $
 #    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.81 2010/03/16 19:33:10 mezz Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
@@ -50,6 +50,7 @@ BAD_GST_ALL_PLUGINS+= \
 		neon \
 		ofa \
 		opencv \
+		opus \
 		resindvd \
 		rsvg \
 		schro \
@@ -431,6 +432,12 @@ gst_opencv_LIB_DEPENDS+=opencv_highgui.2:${PORTSDIR}/graphics/opencv
 gst_opencv_PLIST_FILES= ${GST_LIB_DIR}/libgstopencv.la \
 			${GST_LIB_DIR}/libgstopencv.so
 gst_opencv_DIST=	bad
+
+# opus
+gst_opus_LIB_DEPENDS+=	opus:${PORTSDIR}/audio/opus
+gst_opus_PLIST_FILES=	${GST_LIB_DIR}/libgstopus.la \
+			${GST_LIB_DIR}/libgstopus.so
+gst_opus_DIST=		bad
 
 # pango
 gst_pango_USE_GNOME+=	pango
