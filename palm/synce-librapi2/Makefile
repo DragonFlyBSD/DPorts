@@ -2,7 +2,7 @@
 # Date created:                14 June 2003
 # Whom:                        Sam Lawrance <boris@brooknet.com.au>
 #
-# $FreeBSD: ports/palm/synce-librapi2/Makefile,v 1.30 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: palm/synce-librapi2/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	librapi2
 PORTVERSION=	0.14
@@ -20,7 +20,7 @@ CONFLICTS=	popular-[0-9]*
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_ICONV=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-libiconv="${LOCALBASE}" \
 			--with-libsynce="${LOCALBASE}"
