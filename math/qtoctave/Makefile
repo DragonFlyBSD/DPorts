@@ -1,4 +1,4 @@
-# $FreeBSD: ports/math/qtoctave/Makefile,v 1.12 2012/12/21 18:15:12 svnexp Exp $
+# $FreeBSD: math/qtoctave/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	qtoctave
 PORTVERSION=	0.10.1
@@ -13,7 +13,7 @@ RUN_DEPENDS=	octave:${PORTSDIR}/math/octave
 USE_QT4=	designer gui network script svg xml \
 		qmake_build moc_build rcc_build uic_build \
 		linguist_build
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DWITH_UseRPMTools:Bool=Off
 MAKE_JOBS_SAFE=	yes
 
