@@ -2,7 +2,7 @@
 # Date created:                         June 8, 2012
 # Whom:                                 Max Khon
 #
-# $FreeBSD: ports/databases/pgagent/Makefile,v 1.3 2012/11/17 05:55:18 svnexp Exp $
+# $FreeBSD: databases/pgagent/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	pgagent
@@ -16,7 +16,7 @@ MAINTAINER=	fjoe@FreeBSD.org
 COMMENT=	Job scheduler for PostgreSQL
 
 MAKE_JOBS_SAFE=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DSTATIC_BUILD:BOOL=NO -DWX_CONFIG_PATH:FILEPATH="${WX_CONFIG}"
 USE_WX=		2.8
 WX_UNICODE=	yes
