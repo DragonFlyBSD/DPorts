@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: ports/polish/kadu/Makefile,v 1.56 2012/12/10 19:24:04 svnexp Exp $
+# $FreeBSD: polish/kadu/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kadu
 PORTVERSION=	0.12.2
@@ -44,7 +44,7 @@ GG6_EMOTS_DISTFILE=	kompatybilne_z_GG6.tar.gz
 GG7_EMOTS_DISTFILE=	dodatkowe_emoty_GG7.tar.gz
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_PKGCONFIG=	build
 USE_ICONV=	yes
 USE_GETTEXT=	yes
