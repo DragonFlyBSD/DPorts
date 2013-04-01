@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-pykdeuic4/Makefile,v 1.1 2013/02/04 01:03:48 svnexp Exp $
+# $FreeBSD: devel/py-pykdeuic4/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	pykdeuic4
 PORTVERSION=	${KDE4_VERSION}
@@ -17,7 +17,7 @@ USE_PYTHON=	2.5+
 USE_QT4=	corelib qmake_build moc_build uic_build rcc_build
 USE_XZ=	yes
 DISTINFO_FILE=	${PORTSDIR}/devel/py-pykde4/distinfo
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/tools/${PORTNAME}
