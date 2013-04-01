@@ -2,7 +2,7 @@
 # Date created:				19 March 2005
 # Whom:					hank
 #
-# $FreeBSD: ports/misc/krecipes-kde4/Makefile,v 1.23 2012/11/17 05:59:41 svnexp Exp $
+# $FreeBSD: misc/krecipes-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	krecipes
@@ -22,7 +22,7 @@ OPTIONS_MULTI=		DB
 OPTIONS_MULTI_DB=	SQLITE MYSQL PGSQL
 OPTIONS_DEFAULT=	SQLITE
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_GETTEXT=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_KDE4=	automoc4 kdeprefix kdelibs qimageblitz sharedmime
