@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xf86-video-ati
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-drivers/xf86-video-ati613/Makefile,v 1.30 2012/11/17 06:03:25 svnexp Exp $
-#
+# $FreeBSD: x11-drivers/xf86-video-ati613/Makefile 313833 2013-03-10 17:33:52Z zeising $
 
 PORTNAME=	xf86-video-ati613
 PORTVERSION=	6.13.2
@@ -13,6 +8,9 @@ DISTNAME=	xf86-video-ati-${PORTVERSION}
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org ati display driver
+
+DEPRECATED=	Old version, use xf86-video-ati instead
+EXPIRATION_DATE=2013-05-10
 
 USE_GL=		gl
 
