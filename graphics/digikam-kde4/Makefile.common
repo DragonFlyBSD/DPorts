@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/digikam-kde4/Makefile.common,v 1.2 2012/11/17 05:58:03 svnexp Exp $
+# $FreeBSD: graphics/digikam-kde4/Makefile.common 314960 2013-03-22 20:06:14Z makc $
 #
 # Make sure when DIGIKAM_VER is updated that the following ports are updated:
 #	astro/libkgeomap
@@ -15,7 +15,7 @@ DISTNAME=	digikam-${DIGIKAM_VER}
 LICENSE?=	GPLv2
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4+=	automoc4 kdehier kdeprefix kdelibs
 USE_QT4+=	qmake_build moc_build rcc_build uic_build
 USE_LDCONFIG=	yes

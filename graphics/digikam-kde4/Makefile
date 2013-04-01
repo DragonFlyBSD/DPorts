@@ -2,7 +2,7 @@
 # Date created: 			3 February 2003
 # Whom:					Arjan van Leeuwen <avleeuwen@piwebs.com>
 #
-# $FreeBSD: ports/graphics/digikam-kde4/Makefile,v 1.84 2013/02/04 01:23:52 svnexp Exp $
+# $FreeBSD: graphics/digikam-kde4/Makefile 311484 2013-02-03 20:11:05Z makc $
 #
 
 PORTNAME=	digikam
