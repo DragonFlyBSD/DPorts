@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/x11-clocks/kdetoys4/Makefile,v 1.102 2013/02/04 01:04:53 svnexp Exp $
+# $FreeBSD: x11-clocks/kdetoys4/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	kdetoys
 PORTVERSION=	${KDE4_VERSION}
@@ -14,7 +14,7 @@ COMMENT=	Collection of entertaining programs for KDE
 LATEST_LINK=	${PORTNAME}4
 
 USE_KDE4=	kdehier kdelibs kdeprefix workspace automoc4
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_QT4=	dbus gui qt3support \
 		qmake_build moc_build rcc_build uic_build
 USE_XORG=	x11
