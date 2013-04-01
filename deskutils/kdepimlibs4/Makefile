@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: ports/deskutils/kdepimlibs4/Makefile,v 1.50 2013/02/04 01:03:32 svnexp Exp $
+# $FreeBSD: deskutils/kdepimlibs4/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	kdepimlibs
 PORTVERSION=	${KDE4_VERSION}
@@ -23,10 +23,11 @@ BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 USE_XZ=	yes
 USE_KDE4=	kdelibs akonadi kdeprefix kdehier \
 		automoc4 ontologies sharedmime soprano
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_OPENLDAP=	yes
 USE_QT4=	dbus designer gui network sql xml \
 		qmake_build moc_build rcc_build uic_build
+USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 post-patch:
