@@ -2,7 +2,7 @@
 # Date created:                March 2004
 # Whom:                        Sam Lawrance <boris@brooknet.com.au>
 #
-# $FreeBSD: ports/palm/synce-librra/Makefile,v 1.27 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: palm/synce-librra/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	librra
 PORTVERSION=	0.14
@@ -25,7 +25,7 @@ GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_ICONV=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 CONFIGURE_ARGS+=	--with-libsynce="${LOCALBASE}" \
 			--with-libmimedir="${LOCALBASE}"
 
