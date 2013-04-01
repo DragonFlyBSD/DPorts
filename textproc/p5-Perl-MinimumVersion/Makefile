@@ -1,7 +1,7 @@
-# $FreeBSD: ports/textproc/p5-Perl-MinimumVersion/Makefile,v 1.21 2012/12/14 13:54:03 svnexp Exp $
+# $FreeBSD: textproc/p5-Perl-MinimumVersion/Makefile 314431 2013-03-17 13:26:58Z lth $
 
 PORTNAME=	Perl-MinimumVersion
-PORTVERSION=	1.31
+PORTVERSION=	1.32
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
