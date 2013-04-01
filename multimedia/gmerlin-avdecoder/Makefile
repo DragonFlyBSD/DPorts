@@ -2,7 +2,7 @@
 # Date created:		07 Nov 2008
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/gmerlin-avdecoder/Makefile,v 1.38 2012/11/17 05:59:49 svnexp Exp $
+# $FreeBSD: multimedia/gmerlin-avdecoder/Makefile 314640 2013-03-19 13:04:30Z eadler $
 #
 
 PORTNAME=	gmerlin-avdecoder
@@ -29,7 +29,7 @@ DVDREAD_DESC=	libdvdread support
 GMERLIN_DESC=	gmerlin support
 SAMBA_DESC=	Samba support using libsmbclient
 
-USE_GNOME=	gnomehack
+USES=	pathfix
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-cpuflags=none --without-doxygen
