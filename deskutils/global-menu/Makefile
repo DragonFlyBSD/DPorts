@@ -1,13 +1,9 @@
-# New ports collection makefile for:   gnome-globalmenu
-# Date created:        27 February 2009
-# Whom:                Gustavo Perez
-#
-# $FreeBSD: ports/deskutils/global-menu/Makefile,v 1.17 2012/11/17 05:55:27 svnexp Exp $
-#
+# Created by: Gustavo Perez
+# $FreeBSD: deskutils/global-menu/Makefile 314636 2013-03-19 12:17:06Z miwi $
 
 PORTNAME=		gnome-globalmenu
 PORTVERSION=		0.7.10
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=		deskutils
 MASTER_SITES=		http://gnome2-globalmenu.googlecode.com/files/
 
@@ -27,20 +23,21 @@ INSTALLS_ICONS=		yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS=		XFCE4_PANEL "Xfce panel applet" Off
+OPTIONS_DEFINE=		XFCE4_PANEL NLS
+XFCE4_PANEL_DESC=	Xfce panel applet
 
 .include <bsd.port.options.mk>
 
-.if defined(WITHOUT_XFCE4_PANEL)
-CONFIGURE_ARGS+=	--without-xfce4-panel
-PLIST_SUB+=		XFCE4_PANEL="@comment "
-.else
-LIB_DEPENDS+=		libxfce4panel-1.0:${PORTSDIR}/x11-wm/xfce4-panel
+.if ${PORT_OPTIONS:MXFCE4_PANEL}
+USE_XFCE=	panel
 CONFIGURE_ARGS+=	--with-xfce4-panel
 PLIST_SUB+=		XFCE4_PANEL=""
+.else
+CONFIGURE_ARGS+=	--without-xfce4-panel
+PLIST_SUB+=		XFCE4_PANEL="@comment "
 .endif
 
-.if !defined(WITHOUT_NLS)
+.if ${PORT_OPTIONS:MNLS}
 USE_GETTEXT=		yes
 PLIST_SUB+=		NLS=""
 .else
