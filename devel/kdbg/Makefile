@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: ports/devel/kdbg/Makefile,v 1.53 2012/11/17 05:55:52 svnexp Exp $
+# $FreeBSD: devel/kdbg/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kdbg
 PORTVERSION=	2.5.2
@@ -11,7 +11,7 @@ COMMENT=	Graphical user interface around gdb using KDE
 
 LICENSE=	GPLv2
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	kdelibs kdeprefix automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 INSTALLS_ICONS=	yes
