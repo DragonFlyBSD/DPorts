@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# $FreeBSD: games/rocksndiamonds-data/files/pkg-deinstall.in 314981 2013-03-23 02:31:44Z beech $
+#
+
+if [ "$2" = "POST-DEINSTALL" ]; then
+    set -x
+    find %%PREFIX%%/share/rocksndiamonds -type l -exec rm -- {} +
+    find %%PREFIX%%/share/rnd_jue -type l -exec rm -- {} +
+fi
+
