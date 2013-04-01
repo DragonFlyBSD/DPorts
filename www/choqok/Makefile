@@ -2,7 +2,7 @@
 # Date created:				15 Sep 2009
 # Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
 #
-# $FreeBSD: ports/www/choqok/Makefile,v 1.20 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: www/choqok/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	choqok
@@ -27,7 +27,7 @@ USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	gui imageformats_run network \
 		moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
