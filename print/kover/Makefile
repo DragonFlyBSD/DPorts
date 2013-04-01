@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: ports/print/kover/Makefile,v 1.24 2013/02/08 09:11:09 svnexp Exp $
+# $FreeBSD: print/kover/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kover
 PORTVERSION=	6
@@ -20,7 +20,7 @@ USE_QT4=	corelib dbus gui network svg xml \
 		qmake_build uic_build rcc_build
 USE_PERL5_BUILD=yes
 USE_GETTEXT=	yes
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 
 MAN1=		kover.1
