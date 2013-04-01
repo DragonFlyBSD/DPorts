@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/system-config-printer-kde/Makefile,v 1.26 2013/02/04 01:04:34 svnexp Exp $
+# $FreeBSD: print/system-config-printer-kde/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	system-config-printer-kde
 PORTVERSION=	${KDE4_VERSION}
@@ -20,7 +20,7 @@ USE_PYTHON=	2.5+
 USE_QT4=	qmake_build moc_build uic_build rcc_build
 DISTINFO_FILE=	${PORTSDIR}/sysutils/kdeadmin4/distinfo
 USE_XZ=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS+=	-DINSTALL_SYSTEM_CONFIG_PRINTER:BOOL=ON \
 		-DBUILD_kuser:BOOL=OFF # Avoid checking for kdepimlibs.
 
