@@ -1,9 +1,9 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-desktop/Makefile 313702 2013-03-09 10:59:44Z olivierd $
+# $FreeBSD: x11-wm/xfce4-desktop/Makefile 314575 2013-03-18 14:46:25Z olivierd $
 #
 
 PORTNAME=	xfce4-desktop
-PORTVERSION=	4.10.1
+PORTVERSION=	4.10.2
 PORTREVISION=	1
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
@@ -22,9 +22,10 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	glib20 gnomehack gtk20 intltool intlhack desktopfileutils
+USE_GNOME=	glib20 gtk20 intltool intlhack desktopfileutils
 USE_XFCE=	configenv garcon libmenu libutil libexo xfconf
 USE_PKGCONFIG=	build
+USES=	pathfix
 USE_XORG=	x11 sm
 
 CONFIGURE_ARGS+=--enable-gio-unix \
