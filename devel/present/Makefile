@@ -2,7 +2,7 @@
 # Date created:		2005-06-13
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/present/Makefile,v 1.20 2013/02/14 10:22:19 svnexp Exp $
+# $FreeBSD: devel/present/Makefile 313992 2013-03-12 17:39:34Z kwm $
 #   $MCom: ports/devel/present/Makefile,v 1.8 2006/01/31 22:17:59 ahze Exp $
 #
 
@@ -16,6 +16,9 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A library for reading Microsoft PowerPoint(tm) documents
 
 LIB_DEPENDS=	goffice-1.2:${PORTSDIR}/devel/goffice1
+
+DEPRECATED=	depends on libgsf_gnome (via goffice1) which going away.
+EXPIRATION_DATE=2013-04-12
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
