@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/scribus/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: print/scribus/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	scribus
 PORTVERSION=	1.4.1
@@ -34,7 +34,7 @@ USE_QT4=	gui linguist_build moc_build qmake_build rcc_build uic_build xml networ
 USE_GNOME=	desktopfileutils libartlgpl2 libxml2 pkgconfig
 USE_GHOSTSCRIPT_RUN=	yes
 USE_PYTHON=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/Scribus
 
