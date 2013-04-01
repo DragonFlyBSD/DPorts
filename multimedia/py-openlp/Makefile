@@ -1,8 +1,7 @@
-# $FreeBSD: ports/multimedia/py-openlp/Makefile,v 1.23 2013/02/03 22:43:45 svnexp Exp $
+# $FreeBSD: multimedia/py-openlp/Makefile 314740 2013-03-20 15:22:04Z tabthorpe $
 
 PORTNAME=	OpenLP
-PORTVERSION=	1.9.12
-PORTREVISION=	2
+PORTVERSION=	2.0.1
 CATEGORIES=	multimedia python
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
