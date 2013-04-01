@@ -2,7 +2,7 @@
 # Date created:			Sat Oct 18 14:01:21 CEST 2003
 # Whom:				Markus Brueffer <brueffer@phoenix-systems.de>
 #
-# $FreeBSD: ports/mail/kshowmail/Makefile,v 1.39 2012/11/17 05:59:04 svnexp Exp $
+# $FreeBSD: mail/kshowmail/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kshowmail
 PORTVERSION=	4.1
@@ -20,7 +20,7 @@ USE_QT4=	corelib dbus gui network svg xml \
 		qmake_build uic_build rcc_build
 USE_PERL5_BUILD=yes
 USE_GETTEXT=	yes
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
