@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: ports/sysutils/k3b-kde4/Makefile,v 1.86 2013/02/04 15:51:28 svnexp Exp $
+# $FreeBSD: sysutils/k3b-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	k3b
 PORTVERSION=	2.0.2
@@ -16,7 +16,7 @@ LIB_DEPENDS=	cdda_paranoia:${PORTSDIR}/audio/cdparanoia \
 LATEST_LINK=	${PORTNAME}-kde4
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DK3B_BUILD_K3BSETUP:BOOL=OFF \
 		-DK3B_ENABLE_MUSICBRAINZ:BOOL=OFF
 USE_KDE4=	automoc4 kdeprefix kdelibs libkcddb
