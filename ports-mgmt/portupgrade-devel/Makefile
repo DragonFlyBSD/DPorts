@@ -1,8 +1,9 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports-mgmt/portupgrade-devel/Makefile 313587 2013-03-07 13:30:37Z bdrewery $
+# $FreeBSD: ports-mgmt/portupgrade-devel/Makefile 314498 2013-03-17 22:04:00Z bdrewery $
 
 PORTNAME=	portupgrade
-PORTVERSION=	20130307
+PORTVERSION=	20130313
+PORTREVISION=	1
 PORTEPOCH=	3
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	GH \
@@ -15,14 +16,12 @@ COMMENT=	FreeBSD ports/packages management tool (devel version)
 
 LICENSE=	BSD
 
-RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/bdb.so:${PORTSDIR}/databases/ruby-bdb
-
 CONFLICTS_INSTALL=	portupgrade-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	pkgtools
 GH_PROJECT=	pkgtools
-GH_COMMIT=	6c357b3
+GH_COMMIT=	2187011
 GH_TAGNAME=	${GH_COMMIT}
 
 DIST_SUBDIR=	${PORTNAME}
@@ -54,6 +53,11 @@ DOCSDIR=	${PREFIX}/share/doc/pkgtools
 INSTALL_TARGET=		install
 .if ${PORT_OPTIONS:MDOCS}
 INSTALL_TARGET+=	install-doc
+.endif
+
+# Reported that ruby-bdb is BROKEN with 2.0
+.if ${RUBY_VER} != 2.0
+RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/bdb.so:${PORTSDIR}/databases/ruby-bdb
 .endif
 
 # parsedate is needed for date globbing
