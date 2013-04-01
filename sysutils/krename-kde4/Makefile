@@ -2,7 +2,7 @@
 # Date created:				11 May 2003
 # Whom:					Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: ports/sysutils/krename-kde4/Makefile,v 1.58 2012/11/17 06:01:36 svnexp Exp $
+# $FreeBSD: sysutils/krename-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	krename
@@ -21,7 +21,7 @@ LIB_DEPENDS=	tag.1:${PORTSDIR}/audio/taglib \
 LATEST_LINK=	${PORTNAME}-kde4
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	kdeprefix kdelibs automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 MAKE_JOBS_SAFE=	yes
