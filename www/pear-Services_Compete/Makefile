@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Services_Compete
-# Date created:			  21 Jan 2007
-# Whom:				  Ditesh Shashikant Gathani <ditesh@gathani.org>
-#
-# $FreeBSD: ports/www/pear-Services_Compete/Makefile,v 1.3 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
+# $FreeBSD: www/pear-Services_Compete/Makefile 314410 2013-03-17 08:17:59Z miwi $
 
 PORTNAME=	Services_Compete
 PORTVERSION=	0.1.0
@@ -15,11 +11,7 @@ COMMENT=	PHP interface to Compete SnapShop API
 BUILD_DEPENDS=	${PEARDIR}/HTTP/Request.php:${PORTSDIR}/www/pear-HTTP_Request
 RUN_DEPENDS=	${PEARDIR}/HTTP/Request.php:${PORTSDIR}/www/pear-HTTP_Request
 
-CATEGORY=	Services
-FILES=		Compete.php
-
-EXAMPLES=	test_Services_Compete.php
-_EXAMPLESDIR=	examples
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
