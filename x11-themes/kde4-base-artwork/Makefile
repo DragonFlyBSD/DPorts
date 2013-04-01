@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: ports/x11-themes/kde4-base-artwork/Makefile,v 1.1 2013/02/04 01:04:54 svnexp Exp $
+# $FreeBSD: x11-themes/kde4-base-artwork/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=		kde-base-artwork
 PORTVERSION=		${KDE4_VERSION}
@@ -17,7 +17,7 @@ CONFLICTS_INSTALL=	kde-workspace-4.[7-8].*
 
 USE_KDE4=		automoc4 kdehier kdelibs kdeprefix
 USE_QT4=		moc_build qmake_build rcc_build uic_build
-KDE4_BUILDENV=		yes
+USES=			cmake:outsource
 NO_BUILD=		yes
 USE_XZ=			yes
 
