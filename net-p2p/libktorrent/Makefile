@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-p2p/libktorrent/Makefile,v 1.19 2013/02/04 03:04:09 svnexp Exp $
+# $FreeBSD: net-p2p/libktorrent/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	libktorrent
 DISTVERSION=	1.3.1
@@ -16,7 +16,7 @@ LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
 USE_BZIP2=	yes
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build
-USE_CMAKE=	yes
+USES=		cmake
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
