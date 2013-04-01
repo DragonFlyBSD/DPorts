@@ -1,12 +1,7 @@
-# New ports collection makefile for:    gnuplot
-# Date created:         19 April 1998
-# Whom:                 chuckr
-#
-# $FreeBSD: ports/math/gnuplot/Makefile,v 1.98 2012/11/22 04:09:23 svnexp Exp $
-#
+# $FreeBSD: math/gnuplot/Makefile 315064 2013-03-23 18:35:52Z glewis $
 
 PORTNAME=	gnuplot
-PORTVERSION=	4.6.1
+PORTVERSION=	4.6.2
 CATEGORIES=	math graphics
 MASTER_SITES=	SF
 
