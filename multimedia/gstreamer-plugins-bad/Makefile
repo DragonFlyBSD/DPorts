@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gstreamer-plugins-bad
-# Date created:			20 Jan 2006
-# Whom:				Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/gstreamer-plugins-bad/Makefile,v 1.20 2012/11/17 05:59:49 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: multimedia/gstreamer-plugins-bad/Makefile 313820 2013-03-10 10:00:27Z kwm $
 #    $MCom: ports/multimedia/gstreamer-plugins-bad/Makefile,v 1.11 2008/03/19 14:05:35 ahze Exp $
-#
 
 PORTREVISION=	0
 CATEGORIES=	multimedia
