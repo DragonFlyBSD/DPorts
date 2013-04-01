@@ -2,7 +2,7 @@
 # Date created:		2009-06-20
 # Whom:			J.R. Oldroyd <fbsd@opal.com>
 #
-# $FreeBSD: ports/sysutils/xfce4-power-manager/Makefile,v 1.19 2012/11/17 06:01:50 svnexp Exp $
+# $FreeBSD: sysutils/xfce4-power-manager/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	xfce4-power-manager
