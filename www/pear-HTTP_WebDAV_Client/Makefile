@@ -1,9 +1,5 @@
-# Ports collection makefile for:  HTTP_WebDAV_Client
-# Date created:			  14 Nov 2008
-# Whom:				  Wen Heping<wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/pear-HTTP_WebDAV_Client/Makefile,v 1.6 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Wen Heping<wenheping@gmail.com>
+# $FreeBSD: www/pear-HTTP_WebDAV_Client/Makefile 314455 2013-03-17 15:28:55Z miwi $
 
 PORTNAME=	HTTP_WebDAV_Client
 PORTVERSION=	1.0.2
