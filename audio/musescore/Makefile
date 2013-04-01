@@ -2,7 +2,7 @@
 # Date created:		28 Jul 2011
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/musescore/Makefile,v 1.7 2012/11/17 05:54:39 svnexp Exp $
+# $FreeBSD: audio/musescore/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	musescore
@@ -27,8 +27,7 @@ USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_QT4=	corelib designer gui network script scripttools svg webkit xml \
 		linguist_build moc_build qmake_build rcc_build uic_build
-USE_CMAKE=	yes
-CMAKE_OUTSOURCE=	yes
+USES=		cmake:outsource
 CMAKE_SOURCE_PATH=	${WRKSRC}/mscore
 CMAKE_ARGS=	-DBUILD_ALSA:BOOL=OFF
 ALL_TARGET=	lrelease all
