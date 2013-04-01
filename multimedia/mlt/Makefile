@@ -1,8 +1,8 @@
-# $FreeBSD: ports/multimedia/mlt/Makefile,v 1.46 2013/02/09 03:43:35 svnexp Exp $
+# $FreeBSD: multimedia/mlt/Makefile 314141 2013-03-14 08:17:39Z pclin $
 
 PORTNAME=	mlt
 PORTVERSION=	0.8.8
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
