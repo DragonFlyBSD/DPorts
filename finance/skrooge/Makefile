@@ -1,4 +1,4 @@
-# $FreeBSD: ports/finance/skrooge/Makefile,v 1.13 2013/02/04 16:02:11 svnexp Exp $
+# $FreeBSD: finance/skrooge/Makefile 315165 2013-03-24 21:18:25Z makc $
 
 PORTNAME=	skrooge
 PORTVERSION=	1.6.0
@@ -15,10 +15,10 @@ LIB_DEPENDS=	ofx:${PORTSDIR}/finance/libofx \
 		kactivities:${PORTSDIR}/x11/kactivities
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake:outsource
 USE_SQLITE=	yes
-USE_QT4=	qmake_build moc_build uic_build rcc_build \
-		dbus gui script xml sql sql-sqlite3_run
+USE_QT4=	qmake_build moc_build uic_build rcc_build designer_build \
+		corelib dbus gui script sql webkit xml sql-sqlite3_run
 USE_KDE4=	automoc4 kdehier kdelibs kdeprefix pimlibs sharedmime
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
