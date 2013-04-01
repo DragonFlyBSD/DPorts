@@ -2,7 +2,7 @@
 # Date created:                14 June 2003
 # Whom:                        Sam Lawrance <boris@brooknet.com.au>
 #
-# $FreeBSD: ports/palm/synce-libsynce/Makefile,v 1.26 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: palm/synce-libsynce/Makefile 314640 2013-03-19 13:04:30Z eadler $
 
 PORTNAME=	libsynce
 PORTVERSION=	0.14
@@ -19,7 +19,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_ICONV=	yes
-USE_GNOME=	gnomehack
+USES=	pathfix
 CONFIGURE_ARGS+=	--with-libiconv-prefix="${LOCALBASE}" \
 			--enable-dccm-file-support=no \
 			--enable-hal-support=yes \
