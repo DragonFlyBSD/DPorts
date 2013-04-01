@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-DB_Sqlite_Tools
-# Date created:			  29 April 2007
-# Whom:				  Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/pear-DB_Sqlite_Tools/Makefile,v 1.6 2012/11/17 05:55:17 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: databases/pear-DB_Sqlite_Tools/Makefile 314402 2013-03-17 08:08:23Z miwi $
 
 PORTNAME=	DB_Sqlite_Tools
 PORTVERSION=	0.1.7
@@ -14,11 +10,10 @@ COMMENT=	an object oriented interface to backup Sqlite databases
 
 BUILD_DEPENDS=	${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB \
 		${PEARDIR}/Log/null.php:${PORTSDIR}/sysutils/pear-Log
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB \
+		${PEARDIR}/Log/null.php:${PORTSDIR}/sysutils/pear-Log
 
-CATEGORY=	DB
-FILES=		DB/Sqlite/Tools.php DB/Sqlite/Tools/ArcFour.php DB/Sqlite/Tools/DBC.php \
-		DB/Sqlite/Tools/XMLParser.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
