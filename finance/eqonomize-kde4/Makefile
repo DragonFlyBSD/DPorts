@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/finance/eqonomize-kde4/Makefile,v 1.19 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: finance/eqonomize-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	eqonomize
 PORTVERSION=	0.6
@@ -13,7 +13,7 @@ COMMENT=	A personal accounting software
 
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	corelib dbus gui network svg xml qmake_build moc_build uic_build rcc_build
-USE_CMAKE=	yes
+USES=		cmake
 USE_GETTEXT=	yes
 USE_ICONV=	yes
 INSTALLS_ICONS=	yes
