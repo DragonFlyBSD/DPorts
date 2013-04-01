@@ -2,7 +2,7 @@
 # Date created:				2008-01-30
 # Whom:					Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/phonon-xine/Makefile,v 1.25 2012/11/17 05:59:53 svnexp Exp $
+# $FreeBSD: multimedia/phonon-xine/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	phonon
 PORTVERSION=	4.4.4
@@ -23,7 +23,7 @@ CONFLICTS=	phonon-4.3.0*
 
 PHONON_BRANCH=	stable
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	kdehier automoc4 kdeprefix
 USE_QT4=	gui dbus xml phonon \
 		qmake_build moc_build rcc_build uic_build
