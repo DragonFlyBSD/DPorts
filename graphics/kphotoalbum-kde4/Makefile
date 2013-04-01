@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: ports/graphics/kphotoalbum-kde4/Makefile,v 1.52 2013/02/04 18:46:41 svnexp Exp $
+# $FreeBSD: graphics/kphotoalbum-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kphotoalbum
 PORTVERSION=	4.3
@@ -18,7 +18,7 @@ USE_KDE4=	kdehier kdelibs kdeprefix libkdcraw libkipi automoc4
 USE_QT4=	corelib qt3support \
 		qmake_build moc_build rcc_build uic_build
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK=	${PORTNAME}-kde4
