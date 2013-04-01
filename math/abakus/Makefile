@@ -1,5 +1,5 @@
 # Created by: Andy Fawcett <andy@athame.co.uk>
-# $FreeBSD: math/abakus/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: math/abakus/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	abakus
 PORTVERSION=	0.92
@@ -17,8 +17,7 @@ LIB_DEPENDS=	mpfr:${PORTSDIR}/math/mpfr
 USE_BZIP2=	yes
 USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
 USE_QT4=	moc_build qmake_build rcc_build uic_build
-USES=		bison
-USE_CMAKE=	yes
+USES=		bison cmake
 CMAKE_ARGS=	-DCMAKE_REQUIRED_INCLUDES:STRING="${LOCALBASE}/include" \
 		-DCMAKE_REQUIRED_FLAGS:STRING="${LDFLAGS}" \
 		-DFLEX_EXECUTABLE:FILEPATH=${LOCALBASE}/bin/flex
