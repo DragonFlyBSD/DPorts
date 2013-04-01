@@ -1,10 +1,11 @@
 # Created by: clsung
-# $FreeBSD: ports/dns/p5-Net-Domain-ExpireDate/Makefile,v 1.30 2013/01/15 12:52:10 svnexp Exp $
+# $FreeBSD: dns/p5-Net-Domain-ExpireDate/Makefile 314732 2013-03-20 13:17:41Z tobez $
 
 PORTNAME=	Net-Domain-ExpireDate
-PORTVERSION=	1.10
+PORTVERSION=	1.11
 CATEGORIES=	dns net perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:DESPAIR
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
