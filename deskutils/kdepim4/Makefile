@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/deskutils/kdepim4/Makefile,v 1.137 2013/02/04 01:03:32 svnexp Exp $
+# $FreeBSD: deskutils/kdepim4/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	kdepim
 PORTVERSION=	${KDE4_VERSION}
@@ -28,7 +28,7 @@ USE_GNOME=	libxml2
 USE_ICONV=	yes
 USE_KDE4=	kdehier kdelibs kdeprefix pimlibs \
 		akonadi automoc4 ontologies soprano strigi
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_OPENLDAP=	yes
 USE_QT4=	dbus designer gui network \
 		qt3support script sql webkit xml \
@@ -36,6 +36,7 @@ USE_QT4=	dbus designer gui network \
 USE_XORG=	x11 xscrnsaver
 CMAKE_ARGS+=	-DKDEPIM_BUILD_MOBILE:BOOL=FALSE
 USE_GMAKE=	yes
+USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 MAN1=		kabcclient.1
