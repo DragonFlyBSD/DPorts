@@ -2,7 +2,7 @@
 # Date Created:				2009-02-22
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: ports/deskutils/plasma-applet-playwolf/Makefile,v 1.12 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/plasma-applet-playwolf/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	playwolf
@@ -16,7 +16,7 @@ MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Amarok 2.x plasma applet for KDE4
 
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	automoc4 kdeprefix kdelibs
 USE_QT4=	gui dbus network opengl phonon svg webkit xml xmlpatterns \
 		qmake_build moc_build rcc_build uic_build
