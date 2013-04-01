@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: ports/databases/pear-MDB2_Driver_pgsql/Makefile,v 1.11 2013/02/04 09:00:55 svnexp Exp $
+# $FreeBSD: databases/pear-MDB2_Driver_pgsql/Makefile 314451 2013-03-17 14:59:02Z miwi $
 
 PORTNAME=	MDB2_Driver_pgsql
 DISTVERSION=	1.5.0b4
@@ -17,10 +17,5 @@ USE_PHP=	pgsql
 PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800000 && ${ARCH} == "x86_64"
-BROKEN=		segfaults during installation on FreeBSD 7.X
-.endif
-
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
