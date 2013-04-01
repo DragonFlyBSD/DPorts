@@ -1,12 +1,12 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: devel/eric4/Makefile.inc 305911 2012-10-15 12:07:36Z bsam $
+# $FreeBSD: devel/eric4/Makefile.inc 313845 2013-03-10 21:52:35Z bsam $
 #
 # This is a set of Makefile macros which allow to build the core and
 # localized language packages for devel/eric4:
 # french/eric4, german/eric4, russian/eric4
 
 PORTNAME=	eric4
-PORTVERSION=	4.5.7
+PORTVERSION=	4.5.9
 MASTER_SITES=	SF/eric-ide/${PORTNAME}/stable/${PORTVERSION}
 DISTNAME?=	${PORTNAME}-i18n-${I18N_LANG}-${PORTVERSION}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
