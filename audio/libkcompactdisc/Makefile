@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: ports/audio/libkcompactdisc/Makefile,v 1.1 2013/02/04 01:03:22 svnexp Exp $
+# $FreeBSD: audio/libkcompactdisc/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=		libkcompactdisc
 PORTVERSION=		${KDE4_VERSION}
@@ -13,8 +13,9 @@ COMMENT=		KDE library for interfacing with audio CDs
 
 CONFLICTS_INSTALL=	kdemultimedia-4.[1-8].*
 
+USE_LDCONFIG=		yes
 MAKE_JOBS_SAFE=		yes
-KDE4_BUILDENV=		yes
+USES=			cmake:outsource
 USE_KDE4=		automoc4 kdehier kdelibs kdeprefix
 USE_QT4=		dbus phonon moc_build qmake_build rcc_build uic_build
 USE_XZ=			yes
