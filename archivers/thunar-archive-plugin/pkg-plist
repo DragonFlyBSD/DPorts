@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/archivers/thunar-archive-plugin/pkg-plist,v 1.3 2012/11/17 05:54:23 svnexp Exp $
+@comment $FreeBSD: archivers/thunar-archive-plugin/pkg-plist 314435 2013-03-17 13:45:27Z danfe $
 lib/thunarx-2/thunar-archive-plugin.so
 lib/thunarx-2/thunar-archive-plugin.la
 libexec/thunar-archive-plugin/ark.tap
@@ -58,4 +58,3 @@ share/icons/hicolor/16x16/apps/tap-extract-to.png
 @dirrmtry share/locale/ur
 @dirrmtry share/locale/ur_PK/LC_MESSAGES
 @dirrmtry share/locale/ur_PK
-

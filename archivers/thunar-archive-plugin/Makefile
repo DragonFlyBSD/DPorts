@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: ports/archivers/thunar-archive-plugin/Makefile,v 1.21 2012/12/31 06:21:25 svnexp Exp $
+# $FreeBSD: archivers/thunar-archive-plugin/Makefile 309681 2012-12-30 16:50:29Z olivierd $
 #
 
 PORTNAME=	thunar-archive-plugin
