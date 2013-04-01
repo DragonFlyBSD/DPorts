@@ -2,7 +2,7 @@
 # Date created:				Mon Apr 28 05:30:59 UTC 2003
 # Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/knutclient-kde4/Makefile,v 1.31 2012/11/17 06:01:36 svnexp Exp $
+# $FreeBSD: sysutils/knutclient-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	knutclient
@@ -20,7 +20,7 @@ LIB_DEPENDS=	qimageblitz.4:${PORTSDIR}/x11/qimageblitz
 
 CONFLICTS=	knutclient-0.*
 USE_GETTEXT=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	kdehier kdeprefix kdelibs automoc4
 USE_QT4=	corelib gui qmake_build moc_build rcc_build uic_build
 MAKE_JOBS_SAFE=	yes
