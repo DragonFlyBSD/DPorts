@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/konsole/Makefile,v 1.9 2013/02/04 01:04:52 svnexp Exp $
+# $FreeBSD: x11/konsole/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	konsole
 PORTVERSION=	${KDE4_VERSION}
@@ -14,7 +14,7 @@ CONFLICTS=	kdebase-4.[0-6].*
 
 USE_XZ=	yes
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4 libkonq
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_QT4=	xml moc_build qmake_build rcc_build uic_build
 USE_XORG=	x11 xrender
 CMAKE_ARGS+=	-DCMAKE_REQUIRED_FLAGS:STRING="-L${LOCALBASE}/lib"
