@@ -2,7 +2,7 @@
 # Date created:		5 Apr 2010
 # Whom:			Mina R Waheeb <syncer@gmail.com>
 #
-# $FreeBSD: ports/net/kwooty/Makefile,v 1.10 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/kwooty/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	kwooty
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/unrar:${PORTSDIR}/archivers/unrar \
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4 workspace
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 MAKE_JOBS_SAFE=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_LDCONFIG=	yes
 
 post-patch:
