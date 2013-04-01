@@ -2,7 +2,7 @@
 # Date created:        05 January 2004
 # Whom:                Michael Ranner
 #
-# $FreeBSD: ports/irc/kvirc/Makefile,v 1.87 2012/11/17 05:58:29 svnexp Exp $
+# $FreeBSD: irc/kvirc/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	kvirc
@@ -31,7 +31,7 @@ USE_OPENSSL=	yes
 USE_PERL5_BUILD=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build \
 		dbus gui network sql xml
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DWANT_ESD=no -DWANT_DOXYGEN=no \
 		-DMANDIR=${MANPREFIX}
 INSTALLS_ICONS=	yes
