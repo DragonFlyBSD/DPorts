@@ -1,8 +1,9 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/archivers/p5-Archive-Extract-Libarchive/Makefile,v 1.8 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: archivers/p5-Archive-Extract-Libarchive/Makefile 315049 2013-03-23 17:11:40Z glewis $
 
 PORTNAME=	Archive-Extract-Libarchive
 PORTVERSION=	0.38
+PORTREVISION=	1
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
