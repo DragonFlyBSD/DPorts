@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/archivers/ark/Makefile,v 1.163 2013/02/04 01:03:19 svnexp Exp $
+# $FreeBSD: archivers/ark/Makefile 315066 2013-03-23 18:45:56Z glewis $
 
 PORTNAME=	ark
 PORTVERSION=	${KDE4_VERSION}
@@ -17,8 +17,9 @@ CONFLICTS_INSTALL=	kdeutils-4.[0-7].*
 
 USE_XZ=	yes
 USE_KDE4=	kdeprefix kdehier automoc4 kdelibs libkonq
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_QT4=	qmake_build moc_build rcc_build uic_build
+USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 MAN1=		ark.1
@@ -43,7 +44,7 @@ RUN_DEPENDS+=	unzip>0:${PORTSDIR}/archivers/unzip \
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800505 || (${OSVERSION} >= 900000 && ${OSVERSION} < 900012)
-LIB_DEPENDS+=	archive.12:${PORTSDIR}/archivers/libarchive
+LIB_DEPENDS+=	archive:${PORTSDIR}/archivers/libarchive
 .endif
 
 .if ${PORT_OPTIONS:MRAR}
