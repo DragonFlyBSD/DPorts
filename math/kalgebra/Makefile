@@ -1,4 +1,4 @@
-# $FreeBSD: ports/math/kalgebra/Makefile,v 1.10 2013/02/04 01:04:19 svnexp Exp $
+# $FreeBSD: math/kalgebra/Makefile 314933 2013-03-22 14:18:02Z makc $
 
 PORTNAME=	kalgebra
 PORTVERSION=	${KDE4_VERSION}
@@ -17,7 +17,7 @@ CONFLICTS=	kdeedu-4.[0-6].*
 CMAKE_ARGS=	-DBUILD_mobile:BOOL=FALSE
 USE_GL=		glu
 USE_KDE4=	kdehier kdelibs kdeprefix libkdeedu automoc4
-KDE4_BUILDENV=	yes
+USES=		cmake:outsource
 USE_QT4=	gui opengl script scripttools xml \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
