@@ -2,7 +2,7 @@
 # Date created:                        Thu Dec  3 04:12:48  EST 2009
 # Whom:                                Steve Wills <steve@mouf.net>
 #
-# $FreeBSD: ports/x11-themes/kde4-style-skulpture/Makefile,v 1.11 2012/11/17 06:03:33 svnexp Exp $
+# $FreeBSD: x11-themes/kde4-style-skulpture/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	skulpture
@@ -19,6 +19,6 @@ COMMENT=	KDE style featuring 3D artwork and enhanced the visual experience
 USE_BZIP2=	yes
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4 workspace
 USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
-USE_CMAKE=	yes
+USES=		cmake
 
 .include <bsd.port.mk>
