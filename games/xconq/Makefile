@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: ports/games/xconq/Makefile,v 1.32 2013/02/04 11:53:41 svnexp Exp $
+# $FreeBSD: games/xconq/Makefile 314841 2013-03-21 13:03:07Z bdrewery $
 
 PORTNAME=	xconq
 DISTVERSION=	7.5.0-0pre.0.20050612
