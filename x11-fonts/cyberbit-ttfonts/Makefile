@@ -1,8 +1,5 @@
-# New ports collection makefile for:    cyberbit-ttf
-# Date created:                         20 Feb 2005
-# Whom:                                 NAKATA, Maho <maho@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/cyberbit-ttfonts/Makefile,v 1.7 2012/11/17 06:03:27 svnexp Exp $
+# Created by: NAKATA, Maho <maho@FreeBSD.org>
+# $FreeBSD: x11-fonts/cyberbit-ttfonts/Makefile 314605 2013-03-18 21:56:30Z eadler $
 
 PORTNAME=	cyberbit-ttfonts
 PORTVERSION=	2.0.20050220
@@ -22,7 +19,7 @@ EXTRACT_ONLY=	Cyberbit.ZIP
 MAINTAINER=	maho@FreeBSD.org
 COMMENT=	Bitstream Cyberbit is a TrueType font covers Unicode 2.0
 
-RESTRICTED=	"Redistribution not permitted; single user license only."
+RESTRICTED=	Redistribution not permitted; single user license only.
 
 USE_ZIP=	yes
 NO_BUILD=	yes
