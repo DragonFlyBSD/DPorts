@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Net_Traceroute
-# Date created:			  29 April 2007
-# Whom:				  Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/net/pear-Net_Traceroute/Makefile,v 1.5 2012/11/17 06:00:14 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: net/pear-Net_Traceroute/Makefile 314259 2013-03-15 06:35:41Z miwi $
 
 PORTNAME=	Net_Traceroute
 PORTVERSION=	0.21.3
@@ -13,12 +9,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR class to execute traceroute
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-CATEGORY=	Net
-FILES=		Traceroute.php
-EXAMPLES=	example1.php
-_EXAMPLESDIR=	docs/examples
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
