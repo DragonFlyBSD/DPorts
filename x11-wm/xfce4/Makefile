@@ -1,10 +1,10 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4/Makefile 313367 2013-03-03 16:52:56Z olivierd $
+# $FreeBSD: x11-wm/xfce4/Makefile 313837 2013-03-10 18:40:26Z olivierd $
 #
 
 PORTNAME=	xfce
 PORTVERSION=	4.10
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	# empty
 DISTFILES=	# empty
