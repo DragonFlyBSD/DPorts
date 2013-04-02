@@ -2,13 +2,13 @@
 # Date created:        30 January 2000
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/games/atomix/Makefile,v 1.39 2012/11/17 05:57:32 svnexp Exp $
+# $FreeBSD: games/atomix/Makefile 315638 2013-03-31 15:11:40Z kwm $
 #   $MCom: ports/games/atomix/Makefile,v 1.14 2007/09/10 05:39:33 mezz Exp $
 #
 
 PORTNAME=	atomix
 PORTVERSION=	2.14.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
