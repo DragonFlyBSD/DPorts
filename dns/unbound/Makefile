@@ -2,11 +2,11 @@
 # Date created:				25 Apr 2008
 # Whom:					Sergey Matveychuk <sem@FreeBSD.org>
 #
-# $FreeBSD: ports/dns/unbound/Makefile,v 1.59 2012/12/14 13:59:55 svnexp Exp $
+# $FreeBSD: dns/unbound/Makefile 315236 2013-03-25 16:03:53Z sem $
 #
 
 PORTNAME=	unbound
-PORTVERSION=	1.4.19
+PORTVERSION=	1.4.20
 PORTREVISION=	0
 CATEGORIES=	dns
 MASTER_SITES=	http://unbound.net/downloads/
