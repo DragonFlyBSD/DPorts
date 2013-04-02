@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Structures_DataGrid_DataSource_DataObject
-# Date created:				19 Dec 2007
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/pear-Structures_DataGrid_DataSource_DataObject/Makefile,v 1.3 2012/11/17 05:55:17 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: databases/pear-Structures_DataGrid_DataSource_DataObject/Makefile 314401 2013-03-17 08:07:24Z miwi $
 
 PORTNAME=	Structures_DataGrid_DataSource_DataObject
 PORTVERSION=	0.2.1
@@ -14,13 +10,11 @@ COMMENT=	DataSource driver using PEAR::DB_DataObject
 
 BUILD_DEPENDS=	${PEARDIR}/Structures/DataGrid.php:${PORTSDIR}/devel/pear-Structures_DataGrid \
 		${PEARDIR}/DB/DataObject.php:${PORTSDIR}/databases/pear-DB_DataObject
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid.php:${PORTSDIR}/devel/pear-Structures_DataGrid \
+		${PEARDIR}/DB/DataObject.php:${PORTSDIR}/databases/pear-DB_DataObject
 
 USE_PHP=	mysql
-
-CATEGORY=	Structures
-
-FILES=		DataGrid/DataSource/DataObject.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
