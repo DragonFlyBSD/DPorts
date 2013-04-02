@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: security/openssl/Makefile 313480 2013-03-05 20:47:17Z dinoex $
+# $FreeBSD: security/openssl/Makefile 314526 2013-03-18 06:20:21Z dinoex $
 
 PORTNAME=	openssl
 PORTVERSION=	1.0.1
@@ -41,7 +41,7 @@ SHARED_DESC?=	build of shared libs
 ZLIB_DESC?=	zlib compression support
 SCTP_DESC?=	SCTP protocol support
 MD2_DESC?=	MD2 hash (obsolete)
-RC5_DESC?=	RC5 chipher (patented)
+RC5_DESC?=	RC5 cipher (patented)
 RFC3779_DESC?=	RFC3779 support
 GMP_DESC?=	gmp support (LGPLv3)
 EC_DESC?=	Optimize NIST elliptic curves
