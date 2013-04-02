@@ -1,0 +1,14 @@
+
+$FreeBSD: editors/emacs-devel/files/patch-doc-lispintro-Makefile.in 300896 2012-07-14 13:54:48Z beat $
+
+--- doc/lispintro/Makefile.in.orig
++++ doc/lispintro/Makefile.in
+@@ -27,7 +27,7 @@
+ texinfodir = $(srcdir)/../misc
+ 
+ MAKEINFO = @MAKEINFO@
+-MAKEINFO_OPTS = --force -I $(srcdir)
++MAKEINFO_OPTS = --force --no-split -I $(srcdir)
+ TEXI2DVI = texi2dvi
+ TEXI2PDF = texi2pdf
+ DVIPS = dvips
