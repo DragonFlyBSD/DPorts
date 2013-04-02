@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Structures_DataGrid_DataSource_RSS
-# Date created:				19 Dec 2007
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/pear-Structures_DataGrid_DataSource_RSS/Makefile,v 1.2 2012/11/17 06:02:15 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: textproc/pear-Structures_DataGrid_DataSource_RSS/Makefile 314409 2013-03-17 08:17:05Z miwi $
 
 PORTNAME=	Structures_DataGrid_DataSource_RSS
 PORTVERSION=	0.1.1
@@ -16,10 +12,7 @@ BUILD_DEPENDS=	${PEARDIR}/Structures/DataGrid/DataSource/Array.php:${PORTSDIR}/d
 RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid/DataSource/Array.php:${PORTSDIR}/databases/pear-Structures_DataGrid_DataSource_Array
 
 USE_PHP=	mysql
-
-CATEGORY=	Structures
-
-FILES=		DataGrid/DataSource/RSS.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
