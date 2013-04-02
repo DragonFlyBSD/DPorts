@@ -1,10 +1,10 @@
 # Created by: Ade Lovett <ade@lovett.com>
-# $FreeBSD: graphics/gdk-pixbuf2/Makefile 314952 2013-03-22 19:00:36Z mezz $
+# $FreeBSD: graphics/gdk-pixbuf2/Makefile 315541 2013-03-29 14:13:20Z kwm $
 #    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.28 2012/12/10 12:09:15 kwm Exp $
 
 PORTNAME=	gdk-pixbuf
 PORTVERSION=	2.26.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2
@@ -35,7 +35,7 @@ OPTIONS_DEFAULT=JASPER JPEG PNG TIFF NLS
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:M_NLS}
+.if ${PORT_OPTIONS:MNLS}
 USE_GETTEXT=	yes
 PLIST_SUB+=	NLS=""
 .else
