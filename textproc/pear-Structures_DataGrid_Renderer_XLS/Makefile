@@ -2,7 +2,7 @@
 # Date created:				12 Jan 2008
 # Whom:					Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/pear-Structures_DataGrid_Renderer_XLS/Makefile,v 1.2 2012/11/17 06:02:15 svnexp Exp $
+# $FreeBSD: textproc/pear-Structures_DataGrid_Renderer_XLS/Makefile 314443 2013-03-17 14:14:19Z miwi $
 #
 
 PORTNAME=	Structures_DataGrid_Renderer_XLS
@@ -17,9 +17,7 @@ BUILD_DEPENDS=	${PEARDIR}/Structures/DataGrid/DataSource/Array.php:${PORTSDIR}/d
 RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid/DataSource/Array.php:${PORTSDIR}/databases/pear-Structures_DataGrid_DataSource_Array \
 		${PEARDIR}/Spreadsheet/Excel/Writer.php:${PORTSDIR}/textproc/pear-Spreadsheet_Excel_Writer
 
-CATEGORY=	Structures
-
-FILES=		DataGrid/Renderer/XLS.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
