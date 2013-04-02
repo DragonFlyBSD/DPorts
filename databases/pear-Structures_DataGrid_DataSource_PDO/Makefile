@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Structures_DataGrid_DataSource_PDO
-# Date created:				21 Dec 2007
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/pear-Structures_DataGrid_DataSource_PDO/Makefile,v 1.3 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: databases/pear-Structures_DataGrid_DataSource_PDO/Makefile 314451 2013-03-17 14:59:02Z miwi $
 
 PORTNAME=	Structures_DataGrid_DataSource_PDO
 PORTVERSION=	0.2.0
