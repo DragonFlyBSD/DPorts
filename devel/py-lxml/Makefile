@@ -1,8 +1,8 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: ports/devel/py-lxml/Makefile,v 1.27 2012/11/17 05:56:48 svnexp Exp $
+# $FreeBSD: devel/py-lxml/Makefile 315295 2013-03-26 14:13:16Z miwi $
 
 PORTNAME=	lxml
-PORTVERSION=	3.0.1
+PORTVERSION=	3.1.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,9 +17,8 @@ LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2 \
 
 # Python3 ready
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-PYEASYINSTALL_ARCHDEP=	yes
-PLIST_SUB=	PORTVERSION=${PORTVERSION}
+USE_PYDISTUTILS=	yes
+PLIST_SUB+=	PORTVERSION=${PORTVERSION} PYDISTUTILS_EGGINFO=${PYDISTUTILS_EGGINFO}
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 
