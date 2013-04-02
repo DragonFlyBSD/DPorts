@@ -1,10 +1,10 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/midori/Makefile 314102 2013-03-13 18:16:50Z olivierd $
+# $FreeBSD: www/midori/Makefile 315398 2013-03-27 17:56:42Z olivierd $
 #
 
 PORTNAME=	midori
 PORTVERSION=	0.4.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/apps/${PORTNAME}/${PORTVERSION:R}
