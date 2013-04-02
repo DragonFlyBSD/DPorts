@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xf86-video-radeonhd-devel
-# Date Created:				2008-09-07
-# Whom:					nork@FreeBSD.org
-#
-# $FreeBSD: ports/x11-drivers/xf86-video-radeonhd-devel/Makefile,v 1.40 2012/11/17 06:03:25 svnexp Exp $
-#
+# Created by: nork@FreeBSD.org
+# $FreeBSD: x11-drivers/xf86-video-radeonhd-devel/Makefile 313929 2013-03-11 19:14:28Z zeising $
 
 PORTNAME=	xf86-video-radeonhd
 PORTVERSION=	1.3.0.20091101
@@ -15,6 +11,9 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X.Org ati RadeonHD display driver development version
+
+DEPRECATED=	Unsupported devel version
+EXPIRATION_DATE=2013-04-09
 
 BUILD_DEPENDS=	${LOCALBASE}/share/aclocal/xorg-macros.m4:${PORTSDIR}/devel/xorg-macros \
 		${LOCALBASE}/libdata/pkgconfig/gl.pc:${PORTSDIR}/graphics/libGL
