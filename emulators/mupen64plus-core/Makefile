@@ -1,0 +1,36 @@
+# New ports collection makefile for:	mupen64plus-core
+# Date created:		2008-05-16
+# Whom:			Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
+#
+# $FreeBSD: ports/emulators/mupen64plus-core/Makefile,v 1.16 2012/11/17 05:57:22 svnexp Exp $
+#
+
+PORTNAME=	mupen64plus
+PORTVERSION?=	1.99.4
+PORTREVISION?=	5
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
+		${MASTER_SITE_LOCAL:S,$,acm/${PORTNAME}/,} \
+		${MASTER_SITE_GOOGLE_CODE}:plugin \
+		http://cdn.bitbucket.org/wahrhaft/${PORTNAME}${PKGNAMESUFFIX}/downloads/:plugin
+PKGNAMESUFFIX?=	-core
+DIST_SUBDIR=	${PORTNAME}
+
+MAINTAINER?=	acm@FreeBSD.org
+COMMENT?=	A fork of Mupen64 Nintendo 64 emulator
+
+PROJECTHOST=	bsdistfiles
+USE_GL?=	yes
+USE_SDL?=	yes
+USE_GMAKE=	yes
+USE_LDCONFIG?=	yes
+ONLY_FOR_ARCHS=	i386 amd64
+
+MAKE_ENV+=	PTHREAD_LIBS="${PTHREAD_LIBS}"
+OPTIONSFILE=	${PORT_DBDIR}/${PORTNAME}${PKGNAMESUFFIX}/options
+
+.include <bsd.port.pre.mk>
+
+.include "${MASTERDIR}/Makefile.common"
+
+.include <bsd.port.post.mk>

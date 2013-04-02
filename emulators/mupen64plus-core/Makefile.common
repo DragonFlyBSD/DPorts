@@ -1,0 +1,101 @@
+USE_DOS2UNIX=		*.c *.cpp *.h *.H *.ini *.conf
+
+DISTNAME=		${PORTNAME}-bundle-src-${PORTVERSION}
+PATCHDIR=		${.CURDIR}/files
+BUILD_WRKSRC?=		${WRKSRC}/source/${PORTNAME}${PKGNAMESUFFIX}/projects/unix
+WRKSRC?=		${WRKDIR}/${DISTNAME}
+
+EXTRACT_AFTER_ARGS?=	| ${TAR} -xf - "${DISTNAME}/source/${PORTNAME}-core/*" \
+				"${DISTNAME}/source/${PORTNAME}${PKGNAMESUFFIX}/*"
+
+.if ${PKGNAMESUFFIX} == "-core"
+LIB_DEPENDS+=		freetype.9:${PORTSDIR}/print/freetype2 \
+			png15:${PORTSDIR}/graphics/png
+.else
+PLIST=			${WRKDIR}/pkg-plist
+.endif
+
+.if ${PKGNAMESUFFIX} == "-ui-console"
+MAN6=	mupen64plus.6
+.endif
+
+.if ${PKGNAMESUFFIX} == "-video-rice"
+LIB_DEPENDS+=		png15:${PORTSDIR}/graphics/png
+.endif
+
+.if ${PKGNAMESUFFIX} != "-core"
+post-extract:
+.	if ${PKGNAMESUFFIX} == "-ui-console"
+		@${GUNZIP_CMD} ${WRKSRC}/source/${PORTNAME}${PKGNAMESUFFIX}/doc/${MAN6}.gz
+.	endif
+
+pre-install:
+	@${RM} -f ${PLIST}
+.	if ${PKGNAMESUFFIX} == "-video-rice"
+		@${ECHO_CMD} "%%DATADIR%%/RiceVideoLinux.ini" >> ${PLIST}
+.	endif
+
+.	if ${PKGNAMESUFFIX} == "-video-glide64"
+		@${ECHO_CMD} "%%DATADIR%%/Glide64.ini" >> ${PLIST}
+.	endif
+
+.	if ${PKGNAMESUFFIX} == "-input-sdl"
+		@${ECHO_CMD} "%%DATADIR%%/InputAutoCfg.ini" >> ${PLIST}
+.	endif
+
+.	if ${PKGNAMESUFFIX} != "-ui-console"
+		@${ECHO_CMD} "lib/${PORTNAME}/${PORTNAME}${PKGNAMESUFFIX}.so" >> ${PLIST}
+		@${ECHO_CMD} "@dirrmtry lib/${PORTNAME}" >> ${PLIST}
+		@${ECHO_CMD} "@dirrmtry %%DATADIR%%" >> ${PLIST}
+.	else
+		@${ECHO_CMD} "bin/${PORTNAME}" >> ${PLIST}
+.	endif
+.endif
+
+do-install:
+.if ${PKGNAMESUFFIX} == "-core"
+
+	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/libmupen64plus.so.2.0.0 \
+		${PREFIX}/lib/libmupen64plus.so.2.0.0
+
+	@${MKDIR} ${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/source/${PORTNAME}${PKGNAMESUFFIX}/data/* \
+		${DATADIR}
+
+	@${MKDIR} ${PREFIX}/include/${PORTNAME}
+	${INSTALL_DATA} ${WRKSRC}/source/${PORTNAME}${PKGNAMESUFFIX}/src/api/m64p_*.h \
+		${PREFIX}/include/${PORTNAME}
+
+.	if !defined(NOPORTDOCS)
+		${MKDIR} ${DOCSDIR}
+		${INSTALL_DATA} ${WRKSRC}/source/${PORTNAME}${PKGNAMESUFFIX}/RELEASE \
+			${DOCSDIR}/RELEASE
+.	endif
+	${LN} -sf ${PREFIX}/lib/libmupen64plus.so.2.0.0 ${PREFIX}/lib/libmupen64plus.so.2
+.else
+.	if ${PKGNAMESUFFIX} == "-ui-console"
+		${INSTALL_MAN} ${WRKSRC}/source/${PORTNAME}${PKGNAMESUFFIX}/doc/${MAN6} ${PREFIX}/man/man6/
+.	endif
+
+.	if ${PKGNAMESUFFIX} == "-video-rice"
+		@${MKDIR} ${DATADIR}
+		${INSTALL_DATA} ${WRKSRC}/source/${PORTNAME}${PKGNAMESUFFIX}/data/RiceVideoLinux.ini ${DATADIR}
+.	endif
+
+.	if ${PKGNAMESUFFIX} == "-video-glide64"
+		@${MKDIR} ${DATADIR}
+		${INSTALL_DATA} ${WRKSRC}/${PORTNAME}${PKGNAMESUFFIX}/data/Glide64.ini ${DATADIR}
+.	endif
+
+.	if ${PKGNAMESUFFIX} == "-input-sdl"
+		@${MKDIR} ${DATADIR}
+		${INSTALL_DATA} ${WRKSRC}/source/${PORTNAME}${PKGNAMESUFFIX}/data/InputAutoCfg.ini ${DATADIR}
+.	endif
+
+.	if ${PKGNAMESUFFIX} != "-ui-console"
+		@${MKDIR} ${PREFIX}/lib/${PORTNAME}
+		${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME}${PKGNAMESUFFIX}.so ${PREFIX}/lib/${PORTNAME}
+.	else
+		${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} ${PREFIX}/bin
+.	endif
+.endif
