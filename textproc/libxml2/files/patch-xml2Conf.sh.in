@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/libxml2/files/patch-xml2Conf.sh.in,v 1.4 2012/11/17 06:02:01 svnexp Exp $
+$FreeBSD: textproc/libxml2/files/patch-xml2Conf.sh.in 300897 2012-07-14 14:29:18Z beat $
 
 --- xml2Conf.sh.in	2001/05/19 19:57:43	1.1
 +++ xml2Conf.sh.in	2001/05/19 19:59:40
