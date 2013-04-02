@@ -1,10 +1,10 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net-im/folks04/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: net-im/folks04/Makefile 315386 2013-03-27 14:09:04Z kwm $
 #   $MCom: ports/net-im/folks04/Makefile,v 1.2 2012/04/27 13:28:44 kwm Exp $
 
 PORTNAME=	folks
 PORTVERSION=	0.4.3
-PORTREVISOIN=	1
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	GNOME
 
@@ -18,14 +18,16 @@ LIB_DEPENDS=	gee:${PORTSDIR}/devel/libgee06 \
 
 CONFLICTS=	folks-0.[6-9].[0-9]*
 
+LATEST_LINK=	${PORTNAME}04
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnomehier
+USES=		pathfix
+USE_GNOME=	intlhack gnomehier
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION=22
 
