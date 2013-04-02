@@ -1,13 +1,13 @@
 # Created by: Alonso Cárdenas Márquez <acm@FreeBSD.org>
-# $FreeBSD: databases/firebird25-server/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: databases/firebird25-server/Makefile 315591 2013-03-30 04:33:48Z acm $
 
 PORTNAME=	firebird
-PORTVERSION=	2.5.1
-PORTREVISION?=	2
+PORTVERSION=	2.5.2
+PORTREVISION?=	1
 CATEGORIES?=	databases
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:S/.0//}-Release/
 PKGNAMESUFFIX?=	-server
-DISTNAME=	${PORTNAME:S/f/F/}-${PORTVERSION}.26351-0
+DISTNAME=	${PORTNAME:S/f/F/}-${PORTVERSION}.26540-0
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	acm@FreeBSD.org
@@ -30,7 +30,7 @@ CONFIGURE_ARGS=	--with-system-editline \
 		--with-fbconf=${CONFDIR} \
 		--with-fbglock=${LOCALSTATEDIR} \
 		--with-fbhelp=${LOCALSTATEDIR}/help \
-		--with-fbintl=${LIBEXECDIR}/intl \
+		--with-fbintl=${CONFDIR}/intl \
 		--with-fblog=${LOCALSTATEDIR} \
 		--with-fbmsg=${DATADIR} \
 		--with-fbplugins=${LIBEXECDIR}/plugins \
@@ -75,13 +75,15 @@ LIB_DEPENDS+=	fbembed.2:${PORTSDIR}/databases/firebird25-client
 ALL_TARGET=	firebird_embedded
 
 USE_RC_SUBR=	firebird
-SUB_FILES=	pkg-install pkg-message
+SUB_FILES=	pkg-message
 
 UTIL_SBIN=	fb_inet_server fb_lock_print fb_smp_server
 UTIL_BIN=	fbguard fbsplit fbstat fbsvcmgr fbtracemgr gbak gdef gfix gsec \
 		nbackup
 UDF_SO=		ib_udf.so fbudf.so
 UDF_SQL=	src/extlib/ib_udf2.sql src/extlib/fbudf/fbudf.sql
+
+PKGINSTALL?=	${PKGDIR}/pkg-install${PKGNAMESUFFIX}
 .else
 # Client part stuff
 ALL_TARGET=	firebird_basic libfbembed libfbclient embed_isql embed_gpre \
@@ -128,10 +130,10 @@ post-install:
 
 .ifndef WITHOUT_IPC_CLEANUP
 pre-build:
-.ifndef PACKAGE_BUILDING
-	@if [ `${ID} -u` -eq 0 ]; then \
-	${ECHO_MSG} "==> Please do not build ${PORTNAME} as 'root' because this may cause conflicts with SysV semaphores of running services."; exit 1; fi
+.if !defined(CLIENT_ONLY)
+	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${PKGINSTALL} ${PORTNAME} PRE-INSTALL
 .endif
+
 	${MAKE} -C ${WRKSRC}/extern/btyacc
 	[ -f ${WRKDIR}/ipcs.pre.build ] || ${IPCS_CMD} -s | ${TAIL} -n +3 | \
 		${GREP} -F `${ID} -un` | ${CAT} > ${WRKDIR}/ipcs.pre.build
