@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ x"$2" != x"POST-INSTALL" ]; then
+    exit 0
+fi
+
+USERS_HOME="/var/spool/ejabberd"
+
+install -d -m 750 -o %%USERS%% -g %%GROUPS%% ${USERS_HOME} /var/log/ejabberd
+
+chown -R %%USERS%%:%%GROUPS%%  %%PREFIX%%/etc/%%PORTNAME%%
+chown -R %%USERS%%:%%GROUPS%%  %%PREFIX%%/lib/erlang/lib/%%PORTNAME%%-%%PORTVERSION%%
+
+exit 0
