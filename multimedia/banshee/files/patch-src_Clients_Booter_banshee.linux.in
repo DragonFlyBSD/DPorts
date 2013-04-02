@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/banshee/files/patch-src_Clients_Booter_banshee.linux.in,v 1.1 2012/10/06 22:04:05 romain Exp $
+$FreeBSD$
 
 --- src/Clients/Booter/banshee.linux.in.orig
 +++ src/Clients/Booter/banshee.linux.in

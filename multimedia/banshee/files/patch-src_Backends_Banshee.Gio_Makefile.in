@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/banshee/files/patch-src_Backends_Banshee.Gio_Makefile.in,v 1.1 2012/10/06 22:04:05 romain Exp $
+$FreeBSD$
 
 --- src/Backends/Banshee.Gio/Makefile.in.orig
 +++ src/Backends/Banshee.Gio/Makefile.in

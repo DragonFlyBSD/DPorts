@@ -1,8 +1,9 @@
 # Created by:	Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: ports/multimedia/banshee/Makefile,v 1.31 2012/11/17 05:59:47 svnexp Exp $
+# $FreeBSD: multimedia/banshee/Makefile 315312 2013-03-26 16:13:17Z miwi $
 
 PORTNAME=	banshee
 PORTVERSION=	2.6.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	GNOME
