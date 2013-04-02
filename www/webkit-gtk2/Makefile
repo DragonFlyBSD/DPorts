@@ -1,11 +1,12 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/webkit-gtk2/Makefile 313635 2013-03-08 11:32:11Z bapt $
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.80 2011/07/11 10:14:46 kwm Exp $
+# $FreeBSD: www/webkit-gtk2/Makefile 314913 2013-03-22 11:50:07Z kwm $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.92 2013/03/09 09:12:39 kwm Exp $
+
 PORTNAME=	webkit
-PORTVERSION=	1.4.3
-PORTREVISION=	2
+PORTVERSION=	1.8.3
+PORTREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://webkitgtk.org/
+MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -13,47 +14,62 @@ COMMENT=	An opensource browser engine
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf \
+		gtkdoc-rebase:${PORTSDIR}/textproc/gtk-doc \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
+LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
 		icutu:${PORTSDIR}/devel/icu \
-		curl.6:${PORTSDIR}/ftp/curl \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
-		soup-2.4.1:${PORTSDIR}/devel/libsoup
+		curl:${PORTSDIR}/ftp/curl \
+		soup-2.4:${PORTSDIR}/devel/libsoup
 
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GSTREAMER=	yes
 MAKE_JOBS_SAFE=	yes
-USE_XORG=	xt xrender
+USE_XORG=	xt
 USES=		bison
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk20 libxslt ltverhack
 USE_PKGCONFIG=	build
+USE_SQLITE=	yes
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \
+		ZLIB_CFLAGS="-I/usr/include" \
+		ZLIB_LIBS="-L/usr/lib -lz" \
 		ac_cv_path_DOLT_BASH=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--enable-icon-database \
-		--with-gtk=2.0 \
+CONFIGURE_ARGS=	--with-gtk=2.0 \
+		--enable-svg-fonts \
+		--disable-geolocation \
 		--enable-introspection
 MAKEFILE=	GNUmakefile
-GLIB_SCHEMAS=	org.webkitgtk-1.0.gschema.xml
 
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
-OPTIONS=	DEBUG "Build with debug support" off
+OPTIONS_DEFINE=	WEBGL DEBUG
+OPTIONS_DEFAULT=WEBGL
+WEBGL_DESC=	Enable Web GL support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_DEBUG)
+.if ${PORT_OPTIONS:MWEBGL}
+USE_GL=		gl
+CONFIGURE_ARGS+=--enable-webgl
+.else
+CONFIGURE_ARGS+=--disable-webgl
+.endif
+
+.if ${PORT_OPTIONS:MDEBUG}
 CONFIGURE_ARGS+=--enable-debug
 .else
 CONFIGURE_ARGS+=--disable-debug
 .endif
+
+.include <bsd.port.pre.mk>
 
 .if ${ARCH} == powerpc64
 CFLAGS+=	-mminimal-toc
