@@ -1,8 +1,8 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: ports/graphics/p5-Chart-Clicker/Makefile,v 1.55 2013/01/24 13:43:32 svnexp Exp $
+# $FreeBSD: graphics/p5-Chart-Clicker/Makefile 315103 2013-03-24 06:14:36Z sunpoet $
 
 PORTNAME=	Chart-Clicker
-PORTVERSION=	2.84
+PORTVERSION=	2.85
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:GPHAT
