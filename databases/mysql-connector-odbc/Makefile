@@ -2,7 +2,7 @@
 # Date created:				22 Mar 2004
 # Whom:					sergey@migsoft.com.ua
 #
-# $FreeBSD: ports/databases/mysql-connector-odbc/Makefile,v 1.35 2012/11/17 05:55:11 svnexp Exp $
+# $FreeBSD: databases/mysql-connector-odbc/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	mysql-connector-odbc
@@ -18,7 +18,7 @@ COMMENT=	ODBC driver for MySQL${MYSQL_VER} / ${DRIVER_MANAGER}
 USE_LDCONFIG=	yes
 USE_MYSQL=	yes
 DEFAULT_MYSQL_VER=	51
-USE_CMAKE=	yes
+USES=		cmake
 
 PLIST_SUB=	VER=${PORTVERSION}
 
