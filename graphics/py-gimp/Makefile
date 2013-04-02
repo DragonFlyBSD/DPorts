@@ -1,11 +1,8 @@
-# New ports collection makefile for:	py-gimp
-# Date created:		2006-12-31
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/py-gimp/Makefile,v 1.16 2012/11/17 05:58:20 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: graphics/py-gimp/Makefile 313872 2013-03-11 12:19:08Z kwm $
 #    $MCom: ports/graphics/py-gimp/Makefile,v 1.6 2009/08/25 00:06:39 marcus Exp $
 
-PORTREVISION=	1
+PORTREVISION=	0
 PORTEPOCH=	0
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
