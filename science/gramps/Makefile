@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: science/gramps/Makefile 313404 2013-03-04 11:19:40Z lwhsu $
+# $FreeBSD: science/gramps/Makefile 315491 2013-03-28 17:56:37Z eadler $
 
 PORTNAME=	gramps
 PORTVERSION=	3.3.0
@@ -21,7 +21,8 @@ USE_BDB=	43
 USE_PYTHON=	2.6+
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack pygnome2 pygnomeextras desktopfileutils gnomedocutils
+USES=		pathfix
+USE_GNOME=	pygnome2 pygnomeextras desktopfileutils gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
