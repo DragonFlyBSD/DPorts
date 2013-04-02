@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 314004 2013-03-12 22:15:57Z bdrewery $
+# $FreeBSD: Mk/bsd.pkgng.mk 315445 2013-03-28 07:45:02Z bapt $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -17,6 +17,11 @@ PKGPOSTDEINSTALL?=	${PKGDIR}/pkg-post-deinstall
 PKGPREUPGRADE?=		${PKGDIR}/pkg-pre-upgrade
 PKGPOSTUPGRADE?=	${PKGDIR}/pkg-post-upgrade
 PKGUPGRADE?=		${PKGDIR}/pkg-upgrade
+_FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
+						fonts.dir fonts.scale gtk-update-icon-cache \
+						gio-querymodules \
+						update-desktop-database update-mime-database
+
 PLIST_REINPLACE:=	${PLIST_REINPLACE:Ndirrmtry}
 PLIST_REINPLACE:=	${PLIST_REINPLACE:Nstopdaemon}
 
@@ -139,9 +144,9 @@ fake-pkg:
 	@[ -f ${MTREE_FILE} ] && ${CP} ${MTREE_FILE} ${METADIR}/+MTREE_DIRS || return 0
 .endif
 .if defined(INSTALLS_DEPENDS)
-	@${PKG_CMD} -d -l -m ${METADIR} -f ${TMPPLIST}
+	@${SETENV} FORCE_POST="${_FORCE_POST_PATTERNS}" ${PKG_CMD} -d -l -m ${METADIR} -f ${TMPPLIST}
 .else
-	@${PKG_CMD} -l -m ${METADIR} -f ${TMPPLIST}
+	@${SETENV} FORCE_POST="${_FORCE_POST_PATTERNS}" ${PKG_CMD} -l -m ${METADIR} -f ${TMPPLIST}
 .endif
 	@${RM} -rf ${METADIR}
 .else

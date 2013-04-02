@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.kde4.mk 314933 2013-03-22 14:18:02Z makc $
+# $FreeBSD: Mk/bsd.kde4.mk 315586 2013-03-29 23:51:39Z avilla $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Kde_Pre_Include)
 
@@ -27,22 +27,26 @@ Kde_Pre_Include=	bsd.kde4.mk
 # Available KDE4 components are:
 #
 # baseapps		- Basic applications for KDE Desktop
+# kactivities           - KDE activities library
 # kate			- KDE text editor framework
 # kdehier		- Hierarchy of common KDE directories
 # kdelibs		- KDE Developer Platform
 # kdeprefix		- If set, port will be installed into ${KDE4_PREFIX} instead of
-#				  ${LOCALBASE}
+#			  ${LOCALBASE}
 # korundum		- KDE Ruby bindings
 # libkcddb		- KDE CDDB library
 # libkcompactdisc	- KDE library for interfacing with audio CDs
 # libkdcraw		- KDE LibRaw library
 # libkdeedu		- Libraries used by KDE educational applications
+# libkdegames		- Libraries used by KDE games
 # libkexiv2		- KDE Exiv2 library
 # libkipi		- KDE Image Plugin Interface
 # libkonq		- Konqueror core library
 # libksane		- KDE SANE library
 # marble		- KDE virtual globe
 # okular		- KDE universal document viewer
+# nepomuk-core		- Nepomuk core libraries
+# nepomuk-widgets	- Nepomuk widgets library
 # oxygen		- KDE icon theme
 # perlkde		- KDE Perl bindings
 # perlqt		- Qt 4 Perl bindings
@@ -51,7 +55,7 @@ Kde_Pre_Include=	bsd.kde4.mk
 # pykdeuic4		- PyKDE user interface compiler
 # qtruby		- Qt 4 Ruby bindings
 # runtime		- Components required by many KDE Applications
-# sharedmime	- MIME types database for KDE ports
+# sharedmime		- MIME types database for KDE ports
 # smokegen		- SMOKE base libraries
 # smokekde		- KDE SMOKE libraries
 # smokeqt		- Qt 4 SMOKE libraries
@@ -59,28 +63,23 @@ Kde_Pre_Include=	bsd.kde4.mk
 # akonadi		- Storage server for KDE-Pim
 # attica		- Qt library implementing Open Collaboration Services API
 # automoc4		- Automatic moc for Qt 4 packages
-# ontologies	- Shared ontologies for semantic searching
-# qimageblitz	- KDE graphical effects and filters library
+# ontologies		- Shared ontologies for semantic searching
+# qimageblitz		- KDE graphical effects and filters library
 # soprano		- Qt 4 RDF framework
 # strigi		- Desktop search daemon
 #
 # These read-only variables can be used in a port's Makefile:
 #
-# MASTER_SITE_KDE_kde
-#				- It is equivalent to ${MASTER_SITE_KDE} with :kde tag. It could
-#				  be used when port needs multiple distfiles from different
-#				  sites. See for details the Porter's Handbook:
-#				  http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/porters-handbook/makefile-distfiles.html
-# KDE4_PREFIX	- The place where KDE4 ports live. Currently it is
-#				  ${LOCALBASE}/kde4, but this could change in the future.
+# KDE4_PREFIX		- The place where KDE4 ports live. Currently it is
+#			  ${LOCALBASE}/kde4, but this could change in the future.
 #
 
-KDE4_VERSION?=			4.9.5
-KDE4_BRANCH?=			stable
-CALLIGRA_VERSION?=		2.5.5
-CALLIGRA_BRANCH?=		stable
-KDEVELOP_VERSION?=		4.4.1
-KDEVELOP_BRANCH?=		stable
+KDE4_VERSION?=		4.10.1
+KDE4_BRANCH?=		stable
+CALLIGRA_VERSION?=	2.6.2
+CALLIGRA_BRANCH?=	stable
+KDEVELOP_VERSION?=	4.4.1
+KDEVELOP_BRANCH?=	stable
 
 #
 # KDE4 is installed into its own prefix to avoid conflicting with KDE3.
@@ -88,22 +87,21 @@ KDEVELOP_BRANCH?=		stable
 
 KDE4_PREFIX?=	${LOCALBASE}/kde4
 
-#
-# Common definitions for KDE4 ports.
-#
+# Help cmake to find files when testing ports with non-default PREFIX
+CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH="${LOCALBASE};${KDE4_PREFIX}"
 
 # ${PREFIX} and ${NO_MTREE} have to be defined in the pre-makefile section.
 .if defined(USE_KDE4) && ${USE_KDE4:Mkdeprefix} != ""
 . if ${.MAKEFLAGS:MPREFIX=*} == ""
-PREFIX=					${KDE4_PREFIX}
+PREFIX=		${KDE4_PREFIX}
 .  if ${KDE4_PREFIX} != ${LOCALBASE}
-NO_MTREE=				yes
+NO_MTREE=	yes
 .  endif
 . endif
 .endif
 
-PLIST_SUB+=				KDE4_PREFIX="${KDE4_PREFIX}" \
-					KDE4_VERSION="${KDE4_VERSION}"
+PLIST_SUB+=	KDE4_PREFIX="${KDE4_PREFIX}" \
+		KDE4_VERSION="${KDE4_VERSION}"
 
 # Keep in sync with cmake/modules/PythonMacros.cmake
 _PYTHON_SHORT_VER=	${PYTHON_VERSION:S/^python//:S/.//}
@@ -129,21 +127,26 @@ Kde_Post_Include=	bsd.kde4.mk
 # for ${component}; otherwise, it will default to 'build run'.
 #
 
-_USE_KDE4_ALL=		baseapps kate kdehier kdelibs kdeprefix korundum libkcddb \
-					libkcompactdisc libkdcraw libkdeedu libkexiv2 libkipi \
-					libkonq libksane marble okular oxygen perlkde perlqt \
-					pimlibs pykde4 pykdeuic4 qtruby runtime sharedmime \
-					smokegen smokekde smokeqt workspace
+_USE_KDE4_ALL=		baseapps kactivities kate kdehier kdelibs kdeprefix \
+			korundum libkcddb libkcompactdisc libkdcraw libkdeedu \
+			libkexiv2 libkdegames libkipi libkonq libksane marble \
+			nepomuk-core nepomuk-widgets \
+			okular oxygen perlkde perlqt pimlibs pykde4 pykdeuic4 \
+			qtruby runtime sharedmime smokegen smokekde smokeqt \
+			workspace
 # These components are not part of the Software Compilation.
 _USE_KDE4_ALL+=		akonadi attica automoc4 ontologies qimageblitz soprano \
-					strigi
+			strigi
 
 baseapps_PORT=		x11/kde4-baseapps
 baseapps_PATH=		${KDE4_PREFIX}/bin/kfmclient
 baseapps_TYPE=		run
 
-kate_PORT=			editors/kate
-kate_PATH=			${KDE4_PREFIX}/lib/libkateinterfaces.so.5
+kactivities_PORT=	x11/kactivities
+kactivities_PATH=	${KDE4_PREFIX}/lib/libkactivities.so.6
+
+kate_PORT=		editors/kate
+kate_PATH=		${KDE4_PREFIX}/lib/libkateinterfaces.so.5
 
 kdehier_PORT=		misc/kdehier4
 kdehier_PATH=		kdehier4>=0
@@ -159,20 +162,23 @@ korundum_TYPE=		run
 libkcddb_PORT=		audio/libkcddb
 libkcddb_PATH=		${KDE4_PREFIX}/lib/libkcddb.so.5
 
-libkcompactdisc_PORT=		audio/libkcompactdisc
-libkcompactdisc_PATH=		${KDE4_PREFIX}/lib/libkcompactdisc.so.5
+libkcompactdisc_PORT=	audio/libkcompactdisc
+libkcompactdisc_PATH=	${KDE4_PREFIX}/lib/libkcompactdisc.so.5
 
 libkdcraw_PORT=		graphics/libkdcraw-kde4
-libkdcraw_PATH=		${KDE4_PREFIX}/lib/libkdcraw.so.21
+libkdcraw_PATH=		${KDE4_PREFIX}/lib/libkdcraw.so.22
 
 libkdeedu_PORT=		misc/libkdeedu
 libkdeedu_PATH=		${KDE4_PREFIX}/lib/libkeduvocdocument.so.5
+
+libkdegames_PORT=	games/libkdegames
+libkdegames_PATH=	${KDE4_PREFIX}/lib/libkdegames.so.6
 
 libkexiv2_PORT=		graphics/libkexiv2-kde4
 libkexiv2_PATH=		${KDE4_PREFIX}/lib/libkexiv2.so.11
 
 libkipi_PORT=		graphics/libkipi-kde4
-libkipi_PATH=		${KDE4_PREFIX}/lib/libkipi.so.9
+libkipi_PATH=		${KDE4_PREFIX}/lib/libkipi.so.10
 
 libkonq_PORT=		x11/libkonq
 libkonq_PATH=		${KDE4_PREFIX}/lib/libkonq.so.7
@@ -181,10 +187,16 @@ libksane_PORT=		graphics/libksane
 libksane_PATH=		${KDE4_PREFIX}/lib/libksane.so.0
 
 marble_PORT=		astro/marble
-marble_PATH=		${KDE4_PREFIX}/lib/libmarblewidget.so.14
+marble_PATH=		${KDE4_PREFIX}/lib/libmarblewidget.so.15
+
+nepomuk-core_PORT=	sysutils/nepomuk-core
+nepomuk-core_PATH=	${KDE4_PREFIX}/lib/libnepomukcore.so.5
+
+nepomuk-widgets_PORT=	sysutils/nepomuk-widgets
+nepomuk-widgets_PATH=	${KDE4_PREFIX}/lib/libnepomukwidgets.so.5
 
 okular_PORT=		graphics/okular
-okular_PATH=		${KDE4_PREFIX}/lib/libokularcore.so.1
+okular_PATH=		${KDE4_PREFIX}/lib/libokularcore.so.2
 
 oxygen_PORT=		x11-themes/kde4-icons-oxygen
 oxygen_PATH=		${KDE4_PREFIX}/share/icons/oxygen/index.theme
@@ -249,7 +261,7 @@ qimageblitz_PATH=	${LOCALBASE}/lib/libqimageblitz.so.4
 soprano_PORT=		textproc/soprano
 soprano_PATH=		${LOCALBASE}/lib/libsoprano.so.4
 
-strigi_PORT=		deskutils/strigi
+strigi_PORT=		deskutils/libstreamanalyzer
 strigi_PATH=		${LOCALBASE}/lib/libstreamanalyzer.so.0
 
 # Iterate through components deprived of suffix.
@@ -285,5 +297,15 @@ RUN_DEPENDS+=		${${component}_DEPENDS}
 IGNORE=				can't be installed: unknown USE_KDE4 component '${component}'
 . endif # ${_USE_KDE4_ALL:M${component}} != ""
 .endfor
+
+.if defined(USE_KDE4) && ${USE_KDE4:Msharedmime} != ""
+post-install:	post-install-sharedmime
+. if !target(post-install-sharedmime)
+post-install-sharedmime:
+	@-${LOCALBASE}/bin/update-mime-database ${KDE4_PREFIX}/share/mime
+	@${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-mime-database %D/share/mime > /dev/null || /usr/bin/true" >> ${TMPPLIST}
+	@${ECHO_CMD} "@unexec ${LOCALBASE}/bin/update-mime-database %D/share/mime > /dev/null || /usr/bin/true" >> ${TMPPLIST}
+. endif
+.endif
 
 .endif # defined(_POSTMKINCLUDED) && !defined(Kde_Post_Include)

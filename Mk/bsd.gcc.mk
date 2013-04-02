@@ -29,7 +29,7 @@
 # If you are wondering what your port exactly does, use "make test-gcc"
 # to see some debugging.
 #
-# $FreeBSD: Mk/bsd.gcc.mk 314673 2013-03-19 18:37:30Z gerald $
+# $FreeBSD: Mk/bsd.gcc.mk 315538 2013-03-29 11:26:14Z gerald $
 #
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org
@@ -133,21 +133,6 @@ _GCC_ORLATER:=	true
 
 . endif # ${USE_GCC} == any
 
-# Check if USE_GCC points to a valid version.
-.for v in ${GCCVERSIONS}
-. for j in ${GCCVERSION_${v}}
-.  if ${_USE_GCC}==${j}
-_GCCVERSION_OKAY=	true
-.  endif
-. endfor
-.endfor
-
-.if !defined(_GCCVERSION_OKAY) && \
-   !(defined(_GCC_ORLATER) && ${_USE_GCC} < 4.9)
-IGNORE=	Unknown version of GCC specified (USE_GCC=${USE_GCC})
-.endif
-
-#
 # Determine current GCCVERSION
 # DragonFly has two compilers -- check value of CCVER and DRAGONFLY_CCVER
 # These have to match, otherwise base match is not accomplished.
@@ -167,9 +152,8 @@ _DFLY_CCVER=gcc${DRAGONFLY_MIN_VERSION}
 _BASE_VER=${DRAGONFLY_MIN_VERSION}
 .endif
 
-#
-# Initialize _GCC_FOUND${v}.
-#
+# Initialize _GCC_FOUND${v}.  In parallel, check if USE_GCC points to a
+# valid version to begin with.
 .for v in ${GCCVERSIONS}
 . if ${DFLYVERSION} >= ${_GCCVERSION_${v}_L} \
   && ${DFLYVERSION} < ${_GCCVERSION_${v}_R} \
@@ -179,7 +163,14 @@ _GCCVERSION:=		${v}
 . elif exists(${LOCALBASE}/bin/gcc${_GCCVERSION_${v}_V:S/.//})
 _GCC_FOUND${v}=	port
 . endif
+. if ${_USE_GCC}==${_GCCVERSION_${v}_V}
+_GCCVERSION_OKAY=	true
+. endif
 .endfor
+
+.if !defined(_GCCVERSION_OKAY)
+IGNORE=	Unknown version of GCC specified (USE_GCC=${USE_GCC})
+.endif
 
 # If the GCC package defined in USE_GCC does not exist, but a later
 # version is allowed (for example 4.2+), see if there is a later.

@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: Mk/bsd.sites.mk 314418 2013-03-17 11:21:32Z danfe $
+# $FreeBSD: Mk/bsd.sites.mk 315246 2013-03-25 21:16:03Z mandree $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -126,6 +126,7 @@ MASTER_SITE_CENKES+= \
 .if !defined(IGNORE_MASTER_SITE_CHEESESHOP)
 MASTER_SITE_CHEESESHOP+= \
 	http://pypi.python.org/packages/%SUBDIR%/ \
+	http://a.pypi.python.org/packages/%SUBDIR%/ \
 	http://b.pypi.python.org/packages/%SUBDIR%/ \
 	http://c.pypi.python.org/packages/%SUBDIR%/ \
 	http://d.pypi.python.org/packages/%SUBDIR%/ \
@@ -1143,11 +1144,11 @@ MASTER_SITE_SAVANNAH+= \
 .endif
 
 # List:		http://sourceforge.net/apps/trac/sourceforge/wiki/Mirrors
-# Updated:	2012-10-31
+# Updated:	2013-03-25
 .if !defined(IGNORE_MASTER_SITE_SOURCEFORGE)
-.for mirror in heanet sunet iweb switch freefr garr aarnet jaist osdn \
-	nchc ncu internode waix hivelocity superb-dca3 ufpr tenet space \
-	netcologne ignum
+.for mirror in heanet sunet iweb switch freefr garr aarnet jaist master \
+	nchc ncu internode waix hivelocity superb-dca3 ufpr tenet \
+	netcologne ignum kent kaz
 MASTER_SITE_SOURCEFORGE+= \
 	http://${mirror}.dl.sourceforge.net/project/%SUBDIR%/
 .endfor

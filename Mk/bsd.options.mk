@@ -1,5 +1,5 @@
 #-*- tab-width: 4; -*-
-# $FreeBSD: ports/Mk/bsd.options.mk,v 1.20 2012/12/10 10:20:14 svnexp Exp $
+# $FreeBSD: Mk/bsd.options.mk 315205 2013-03-25 09:15:52Z bapt $
 # Global options
 #
 # OPTIONS_DEFINE		- List of options this ports accept
