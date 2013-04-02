@@ -1,15 +1,15 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Moose/Makefile 314136 2013-03-14 07:18:55Z az $
+# $FreeBSD: devel/p5-Moose/Makefile 315567 2013-03-29 19:41:55Z sunpoet $
 
 PORTNAME=	Moose
-PORTVERSION=	2.0604
+PORTVERSION=	2.0801
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:DOY
+MASTER_SITE_SUBDIR=	CPAN:ETHER
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A complete modern object system for Perl 5
+COMMENT=	Complete modern object system for Perl 5
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
