@@ -1,0 +1,10 @@
+--- config.sub.orig	2013-03-19 17:02:01.000000000 +0000
++++ config.sub
+@@ -1127,6 +1127,7 @@ case $os in
+ 	      | -hpux* | -unos* | -osf* | -luna* | -dgux* | -solaris* | -sym* \
+ 	      | -amigaos* | -amigados* | -msdos* | -newsos* | -unicos* | -aof* \
+ 	      | -aos* \
++	      | -dragonfly* \
+ 	      | -nindy* | -vxsim* | -vxworks* | -ebmon* | -hms* | -mvs* \
+ 	      | -clix* | -riscos* | -uniplus* | -iris* | -rtu* | -xenix* \
+ 	      | -hiux* | -386bsd* | -netbsd* | -openbsd* | -kfreebsd* | -freebsd* | -riscix* \

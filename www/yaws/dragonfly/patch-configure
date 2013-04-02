@@ -1,0 +1,16 @@
+--- configure.orig	2013-03-19 17:03:18.000000000 +0000
++++ configure
+@@ -4124,11 +4124,11 @@ fi
+ 
+            ;;
+ 
+-        *bsd*)
++        *bsd*|*dragonfly*)
+            $as_echo "#define BSD 1" >>confdefs.h
+ 
+            case "$host_os" in
+-                freebsd*)
++                freebsd*|dragonfly*)
+                     HAVE_YAWS_SENDFILE=true
+                     ;;
+                 bsdi*)
