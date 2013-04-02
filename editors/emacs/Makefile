@@ -1,13 +1,8 @@
-# New ports collection makefile for:	GNU emacs
-# Date created:		11 October 2001
-# Whom:			MANTANI Nobutaka <nobutaka@nobutaka.com>
-#
-# $FreeBSD: ports/editors/emacs/Makefile,v 1.121 2013/02/17 09:43:53 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
+# $FreeBSD: editors/emacs/Makefile 315658 2013-04-02 03:36:31Z ashish $
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}
-PORTREVISION?=	1
 PORTEPOCH=	3
 CATEGORIES=	editors ipv6
 MASTER_SITES=	${MASTER_SITE_GNU}
@@ -25,7 +20,7 @@ CONFLICTS=	emacs-19.* emacs-21.* emacs-22.* emacs-23.* \
 		xemacs-[0-9]* xemacs-devel-[0-9]* \
 		xemacs-mule-[0-9]* xemacs-devel-mule-[0-9]*
 
-EMACS_VER=	24.2
+EMACS_VER=	24.3
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_NCURSES=	yes
@@ -36,7 +31,7 @@ CONFIGURE_ARGS=	--localstatedir=/var
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN1=		ctags.1 ebrowse.1 emacs.1 emacsclient.1 etags.1 \
-		grep-changelog.1 rcs-checkin.1
+		grep-changelog.1
 MANCOMPRESSED=	yes
 PLIST_SUB=	EMACS_VER=${EMACS_VER}
 
@@ -45,12 +40,12 @@ EMACS_DIRS=	${DATADIR}/${EMACS_VER}/leim ${DATADIR}/${EMACS_VER}/lisp ${DATADIR}
 
 MAKE_ENV=	LC_ALL=C
 
-INFO=		ada-mode auth autotype calc ccmode cl dbus dired-x \
+INFO=		ada-mode auth autotype bovine calc ccmode cl dbus dired-x \
 		ebrowse ede ediff edt efaq eieio eintr elisp emacs-mime emacs-gnutls emacs epa \
-		erc ert eshell eudc flymake forms gnus idlwave info \
+		erc ert eshell eudc flymake forms gnus htmlfontify idlwave info \
 		mairix-el message mh-e newsticker nxml-mode \
 		org pcl-cvs pgg rcirc reftex remember sasl sc semantic ses sieve \
-		smtpmail speedbar tramp url vip viper widget woman
+		smtpmail speedbar srecode tramp url vip viper widget wisent woman
 
 .if !defined(EMACS_NO_X11_SLAVE)
 CONFLICTS+=	emacs-nox11-[0-9]*
@@ -82,7 +77,7 @@ OPTIONS_DEFAULT=DBUS GCONF GIF GTK2 JPEG M17N OTF PNG SOUND SOURCES SVG TIFF SYN
 .if ${PORT_OPTIONS:MCANNA}
 PATCH_SITES+=	http://distfiles.pirateparty.in/%SUBDIR%/ ${MASTER_SITE_LOCAL}
 PATCH_SITE_SUBDIR+=	ashish
-PATCHFILES+=	emacs24.1canna-20120614.diff.gz
+PATCHFILES+=	emacs24.3canna-20130321.diff.gz
 PATCH_DIST_STRIP=	-p1
 CONFIGURE_ARGS+=	--with-canna \
 			--with-canna-includes=${LOCALBASE}/include \
@@ -95,6 +90,7 @@ CONFIGURE_ARGS+=	--without-x
 .else
 USE_XORG=	x11
 USE_GNOME=
+INSTALLS_ICONS=	yes
 
 .if ${PORT_OPTIONS:MSVG}
 USE_GNOME+=	librsvg2
@@ -104,7 +100,7 @@ CONFIGURE_ARGS+=	--without-rsvg
 
 .if ${PORT_OPTIONS:MGTK2}
 USE_GNOME+=	gtk20
-CONFIGURE_ARGS+=	--with-x-toolkit=gtk
+CONFIGURE_ARGS+=	--with-x-toolkit=gtk2
 .elif ${PORT_OPTIONS:MGTK3}
 USE_GNOME+=	gtk30
 CONFIGURE_ARGS+=	--with-x-toolkit=gtk3
@@ -244,9 +240,7 @@ CONFIGURE_ARGS+=	--without-gnutls
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "arm"
-BROKEN=	Emacs 24.X does not currently build on arm
-.elif ${ARCH} == "ia64"
+.if ${ARCH} == "ia64"
 BROKEN=	Emacs 24.X does not currently build on ia64
 .endif
 

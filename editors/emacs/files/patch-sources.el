@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/editors/emacs/files/patch-sources.el,v 1.5 2012/11/17 05:57:13 svnexp Exp $
+$FreeBSD: editors/emacs/files/patch-sources.el 301832 2012-08-01 15:20:25Z ashish $
 
 --- /dev/null
 +++ sources.el

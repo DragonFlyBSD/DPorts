@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/editors/emacs/files/patch-src_sysdep.c,v 1.2 2012/11/17 05:57:13 svnexp Exp $
+$FreeBSD: editors/emacs/files/patch-src_sysdep.c 315598 2013-03-30 05:13:30Z ashish $
 
 --- src/sysdep.c.orig
 +++ src/sysdep.c
@@ -9,12 +9,12 @@ $FreeBSD: ports/editors/emacs/files/patch-src_sysdep.c,v 1.2 2012/11/17 05:57:13
  
 +#ifdef __FreeBSD__
 +#include <sys/sysctl.h>
-+/* machine/frame.h in Sparc has 'struct frame' which conflicts with Emacs' 'struct frame', so rename it */
-+#ifdef __sparc__ 
++/* machine/frame.h in Sparc/ARM has 'struct frame' which conflicts with Emacs' 'struct frame', so rename it */
++#if defined(__sparc__) || defined(__arm__)
 +#define frame freebsd_sparc_frame
 +#endif
 +#include <sys/user.h>
-+#ifdef __sparc__ 
++#if defined(__sparc__) || defined(__arm__)
 +#undef frame
 +#endif
 +#include <sys/resource.h>
