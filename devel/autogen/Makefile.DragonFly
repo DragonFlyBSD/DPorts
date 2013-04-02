@@ -1,1 +1,6 @@
-USE_PERL5= yes
+USE_PERL5=	yes
+REPLACE_PERL=	autoopts/tpl/man2mdoc.pl \
+		autoopts/tpl/mdoc2texi.pl
+
+post-patch:
+	@printf "all:\n\ninstall:\n" > ${WRKSRC}/autoopts/test/Makefile.in
