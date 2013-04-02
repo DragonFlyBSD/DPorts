@@ -1,9 +1,9 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: graphics/libgphoto2/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: graphics/libgphoto2/Makefile 315503 2013-03-28 21:50:53Z pawel $
 
 PORTNAME=	libgphoto2
 PORTVERSION=	2.4.14
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	SF/gphoto/libgphoto/${PORTVERSION}
 
@@ -76,5 +76,6 @@ post-patch:
 .if ${OSVERSION} >= 800064
 	@${REINPLACE_CMD} -e '/Requires/d' ${WRKSRC}/libgphoto2_port/libgphoto2_port.pc.in
 .endif
+	@${REINPLACE_CMD} 's|with_hal=yes|with_hal=no|' ${WRKSRC}/libgphoto2_port/configure
 
 .include <bsd.port.post.mk>
