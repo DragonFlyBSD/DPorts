@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/deskbar-applet/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: deskutils/deskbar-applet/Makefile 314633 2013-03-19 10:44:16Z kwm $
 #   $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.116 2010/09/27 19:36:13 kwm Exp $
 
 PORTNAME=	deskbar-applet
@@ -17,7 +17,8 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix gnomehack pygnomedesktop intlhack
+USES=		pathfix
+USE_GNOME=	gnomeprefix pygnomedesktop intlhack
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_DISPLAY=	yes
@@ -29,17 +30,13 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	deskbar-applet.schemas
 
-OPTIONS=	EVO "Enable evolution support" on
+OPTIONS_DEFINE=	EVO
+OPTIONS_DEFAULT=EVO
+EVO_DESC=	Enable evolution support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if ${PYTHON_REL} < 260
-RUN_DEPENDS+=  ${PYTHON_PKGNAMEPREFIX}simplejson>=2.0.9:${PORTSDIR}/devel/py-simplejson
-.endif
-
-_OSRELEASE!=	${UNAME} -r
-
-.if !defined(WITHOUT_EVO)
+.if ${PORT_OPTIONS:MEVO}
 USE_GNOME+=	evolutiondataserver
 PLIST_SUB+=	EVO=""
 .else
@@ -55,4 +52,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|<glib/g.*\.h>|<glib.h>|g' \
 		${WRKSRC}/deskbar/handlers/evolution/evolution.[ch]
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
