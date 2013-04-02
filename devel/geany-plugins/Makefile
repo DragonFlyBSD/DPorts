@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: ports/devel/geany-plugins/Makefile,v 1.9 2012/11/17 05:55:44 svnexp Exp $
+# $FreeBSD: devel/geany-plugins/Makefile 314846 2013-03-21 14:43:24Z makc $
 
 PORTNAME=	geany-plugins
 PORTVERSION=	${GEANY_VER}
@@ -13,13 +13,19 @@ NO_BUILD=	yes
 
 .include "${.CURDIR}/files/bsd.geany-plugins.mk"
 
+OPTIONS_DEFINE=		NLS
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
+
+# NLS option first, then plugins sorted in GEANY_PLUGINS_ALL
+NO_OPTIONS_SORT=	yes
 
 .for plugin in ${GEANY_PLUGINS_ALL}
 OPTIONS_DEFINE+=	${plugin:tu}
 ${plugin:tu}_DESC=	${${plugin}_DESC}
 ${plugin:tu}_DEP=	geany-plugin-${plugin}>=0:${PORTSDIR}/devel/geany-plugin-${plugin}
 .endfor
+
+NLS_DEP=		geany-plugins-l10n>=0:${PORTSDIR}/devel/geany-plugins-l10n
 
 .include <bsd.port.options.mk>
 
