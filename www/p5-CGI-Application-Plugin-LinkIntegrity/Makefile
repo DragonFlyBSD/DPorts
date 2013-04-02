@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/www/p5-CGI-Application-Plugin-LinkIntegrity/Makefile,v 1.10 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-Plugin-LinkIntegrity/Makefile 314460 2013-03-17 16:44:03Z eadler $
 
 PORTNAME=	CGI-Application-Plugin-LinkIntegrity
 PORTVERSION=	0.06
@@ -8,7 +8,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FReeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Make tamper-resistent links in CGI::Application
 
 BUILD_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
