@@ -1,0 +1,45 @@
+--- configure.intermediate	2013-04-02 21:22:04.470671000 +0000
++++ configure
+@@ -3935,7 +3935,7 @@ case "${host}" in
+ 
+     DEFAULT_DEFAULT_wxUSE_MOTIF=1
+   ;;
+-  *-*-freebsd*)
++  *-*-freebsd*|*-*-dragonfly*)
+     USE_BSD=1
+     USE_FREEBSD=1
+     $as_echo "#define __FREEBSD__ 1" >>confdefs.h
+@@ -31611,7 +31611,7 @@ $as_echo "$as_me: WARNING: BeOS threads
+                                         THREAD_OPTS="-pthreads $THREAD_OPTS"
+                 fi
+                 ;;
+-          *-*-freebsd*)
++          *-*-freebsd*|*-*-dragonfly*)
+                                                 THREAD_OPTS="$PTHREAD_LIBS"
+                 ;;
+           *-*-darwin* | *-*-cygwin* )
+@@ -31730,7 +31730,7 @@ $as_echo_n "checking if more special fla
+                 WXCONFIG_LDFLAGS="-L/usr/lib/threads $WXCONFIG_LDFLAGS"
+                 flag="-D_THREAD_SAFE"
+                 ;;
+-            *-freebsd*)
++            *-freebsd*|*-dragonfly*)
+                 flag="-D_THREAD_SAFE"
+                 ;;
+             *-hp-hpux* )
+@@ -38925,6 +38925,7 @@ EOF
+       ;;
+ 
+       powerpc-apple-macos* | \
++      *-*-dragonfly* | \
+       *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
+       *-*-mirbsd* | \
+       *-*-sunos4* | \
+@@ -38967,6 +38968,7 @@ EOF
+ 
+     case "${BAKEFILE_HOST}" in
+       *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
++      *-*-dragonfly* | \
+       *-*-k*bsd*-gnu | *-*-mirbsd* )
+         if test "x$SUNCXX" = "xyes"; then
+             SONAME_FLAG="-h "
