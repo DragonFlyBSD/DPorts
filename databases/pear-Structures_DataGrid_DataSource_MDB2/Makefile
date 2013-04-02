@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Structures_DataGrid_DataSource_MDB2
-# Date created:				19 Dec 2007
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/pear-Structures_DataGrid_DataSource_MDB2/Makefile,v 1.2 2012/11/17 05:55:17 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: databases/pear-Structures_DataGrid_DataSource_MDB2/Makefile 314451 2013-03-17 14:59:02Z miwi $
 
 PORTNAME=	Structures_DataGrid_DataSource_MDB2
 PORTVERSION=	0.1.11
@@ -18,10 +14,7 @@ RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid.php:${PORTSDIR}/devel/pear-Structure
 		${PEARDIR}/MDB2.php:${PORTSDIR}/databases/pear-MDB2
 
 USE_PHP=	mysql
-
-CATEGORY=	Structures
-
-FILES=		DataGrid/DataSource/MDB2.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
