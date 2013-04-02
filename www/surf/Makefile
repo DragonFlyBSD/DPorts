@@ -1,28 +1,38 @@
 # Created by: Christopher Knaust <jigboe@gmx.de>
-# $FreeBSD: www/surf/Makefile 313753 2013-03-09 19:59:21Z eadler $
+# $FreeBSD: www/surf/Makefile 315136 2013-03-24 16:04:22Z miwi $
 
 PORTNAME=	surf
-PORTVERSION=	0.4.1
-PORTREVISION=	2
+PORTVERSION=	0.6
 CATEGORIES=	www
 MASTER_SITES=	http://dl.suckless.org/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple Web browser based on WebKit/Gtk+
 
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+OPTIONS_DEFINE=	DOCS
+
 LIB_DEPENDS=	webkitgtk-1.0:${PORTSDIR}/www/webkit-gtk2
 RUN_DEPENDS=	dmenu:${PORTSDIR}/x11/dmenu
 
-USE_GNOME=	gtk20 pkgconfig
+USE_CSTD=	c99
+USE_GNOME=	gtk20
+USE_PKGCONFIG=	yes
 
 MAN1=		surf.1
-PLIST_FILES=	bin/surf
-PORTDOCS=	LICENSE README
+PORTDOCS=	README
+PLIST_FILES=	bin/surf share/pixmaps/surf.png
+
+DESKTOP_ENTRIES="Surf" "" "${PREFIX}/share/pixmaps/surf.png" "surf" "" true
 
 CONFLICTS=	surf-1* # math/surf
 
 # Name conflicts with the math/surf port
 NO_LATEST_LINK=	yes
+
+.include <bsd.port.options.mk>
 
 pre-everything::
 	@${ECHO_MSG} "You can build surf with your own config.h using the SURF_CONF knob:"
@@ -34,12 +44,20 @@ post-extract:
 	@${CP} ${SURF_CONF} ${WRKSRC}/config.h
 .endif
 
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|^\(PREFIX\)|#\1| ; \
+		 s|/share/man|/man| ; \
+		 s|^\(CFLAGS\) =.*|\1 += -I. $${GTKINC} $${CPPFLAGS}| ; \
+		 s|^\(LDFLAGS\) =.*|\1 += $${GTKLIB}| ; \
+		 s|^\(CC\)|#\1|' ${WRKSRC}/config.mk
+
 post-install:
-.if !defined(NOPORTDOCS)
-	@${ECHO_MSG} "installing additional documentation to ${DOCSDIR}"
+	@${STRIP_CMD} ${PREFIX}/bin/surf
+	(cd ${WRKSRC} && ${INSTALL_DATA} surf.png ${PREFIX}/share/pixmaps)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_MAN} ${WRKSRC}/LICENSE ${DOCSDIR}
-	@${INSTALL_MAN} ${WRKSRC}/README ${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} README ${DOCSDIR})
 .endif
 
 .include <bsd.port.mk>
