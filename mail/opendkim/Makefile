@@ -1,8 +1,8 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: mail/opendkim/Makefile 313038 2013-02-27 08:42:44Z beech $
+# $FreeBSD: mail/opendkim/Makefile 315506 2013-03-28 22:58:55Z madpilot $
 
 PORTNAME=		opendkim
-PORTVERSION=		2.8.0
+PORTVERSION=		2.8.2
 CATEGORIES=		mail security
 MASTER_SITES=		SF
 MASTER_SITE_SUBDIR=	${PORTNAME} \
@@ -156,6 +156,7 @@ PLIST_SUB+=		LUA="@comment "
 
 pre-configure:
 	${REINPLACE_CMD} -e '/PKG_CONFIG/s/lua5/lua-5/' \
+	-e '/PKG_CONFIG/s/cyrussasl/libsasl2/' \
 	${WRKSRC}/configure
 
 post-patch:
