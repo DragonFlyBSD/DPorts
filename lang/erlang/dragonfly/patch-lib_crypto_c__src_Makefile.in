@@ -1,0 +1,11 @@
+--- lib/crypto/c_src/Makefile.in.orig	2012-12-06 17:02:12.000000000 +0000
++++ lib/crypto/c_src/Makefile.in
+@@ -31,7 +31,7 @@ VSN=$(CRYPTO_VSN)
+ # Set by configure.
+ # ----------------------------------------------------
+ CC = $(DED_CC)
+-LD = $(DED_LD)
++LD = $(DED_CC)
+ SHELL = /bin/sh
+ LIBS = $(DED_LIBS)
+ LDFLAGS += $(DED_LDFLAGS)

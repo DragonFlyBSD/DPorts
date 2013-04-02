@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/lang/erlang/files/epmd.in,v 1.2 2012/11/17 05:58:49 svnexp Exp $
+#
+# PROVIDE: epmd
+# REQUIRE: LOGIN
+#
+# Add the following line to /etc/rc.conf to enable epmd:
+#
+# epmd_enable="YES"
+#
+
+epmd_enable=${epmd_enable:-"NO"}
+
+. /etc/rc.subr
+
+name=epmd
+rcvar=epmd_enable
+
+procname=%%PREFIX%%/bin/epmd
+start_cmd="%%PREFIX%%/bin/epmd -daemon"
+stop_cmd="%%PREFIX%%/bin/epmd -kill >/dev/null"
+
+load_rc_config ${name}
+run_rc_command "$1"

@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/lang/erlang/files/patch-erts-emulator-Makefile.in,v 1.4 2012/11/17 05:58:49 svnexp Exp $
+
+--- erts/emulator/Makefile.in.orig
++++ erts/emulator/Makefile.in
+@@ -544,7 +546,7 @@
+ endif
+ 
+ $(OBJDIR)/%.o: beam/%.c
+-	$(CC) $(subst -O2, $(GEN_OPT_FLGS), $(CFLAGS)) $(INCLUDES) -c $< -o $@
++	$(CC) $(INCLUDES) $(subst -O2, $(GEN_OPT_FLGS), $(CFLAGS)) -c $< -o $@
+ 
+ else
+ 

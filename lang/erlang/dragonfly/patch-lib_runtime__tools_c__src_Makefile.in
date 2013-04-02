@@ -1,0 +1,11 @@
+--- lib/runtime_tools/c_src/Makefile.in.orig	2012-12-06 17:02:12.000000000 +0000
++++ lib/runtime_tools/c_src/Makefile.in
+@@ -38,7 +38,7 @@ VSN=$(RUNTIME_TOOLS_VSN)
+ # ----------------------------------------------------
+ CC = $(DED_CC)
+ CFLAGS = $(DED_CFLAGS)
+-LD = $(DED_LD)
++LD = $(DED_CC)
+ SHELL = /bin/sh
+ LIBS = $(DED_LIBS)
+ LDFLAGS += $(DED_LDFLAGS)

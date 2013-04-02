@@ -1,0 +1,11 @@
+--- lib/asn1/c_src/Makefile.orig	2012-12-06 17:02:12.000000000 +0000
++++ lib/asn1/c_src/Makefile
+@@ -22,7 +22,7 @@ include $(ERL_TOP)/make/$(TARGET)/otp.mk
+ include $(ERL_TOP)/make/$(TARGET)/otp_ded.mk
+ 
+ CC = $(DED_CC)
+-LD = $(DED_LD)
++LD = $(DED_CC)
+ LIBS = $(DED_LIBS)
+ 
+ # ----------------------------------------------------
