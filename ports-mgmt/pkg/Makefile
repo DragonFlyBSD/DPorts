@@ -1,11 +1,11 @@
-# $FreeBSD: ports-mgmt/pkg/Makefile 314562 2013-03-18 13:04:26Z bdrewery $
+# $FreeBSD: ports-mgmt/pkg/Makefile 315626 2013-03-31 01:02:19Z bdrewery $
 
 PORTNAME=	pkg
-DISTVERSION=	1.0.9
-PORTREVISION=	2
+DISTVERSION=	1.0.11
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	LOCAL/portmgr \
-		http://files.etoilebsd.net/pkg/
+		http://files.etoilebsd.net/pkg/ \
+		http://mirror.shatow.net/freebsd/${PORTNAME}/
 
 MAINTAINER=	portmgr@FreeBSD.org
 COMMENT=	New generation package manager

@@ -1,9 +1,9 @@
---- pkg-static/Makefile.orig	2012-12-21 12:57:15.000000000 +0100
-+++ pkg-static/Makefile	2012-12-23 19:52:33.245521000 +0100
-@@ -13,17 +13,8 @@
+--- pkg-static/Makefile.orig	2013-03-13 19:24:52.000000000 +0000
++++ pkg-static/Makefile
+@@ -18,17 +18,8 @@ LDADD_STATIC+=	-L${.OBJDIR}/../external/
+ .endif
  
  LDADD_STATIC+=	-lsqlite3 \
- 		-lyaml \
 -		-larchive \
 -		-lsbuf \
 -		-lfetch \
