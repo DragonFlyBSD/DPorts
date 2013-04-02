@@ -2,7 +2,7 @@
 # Date created:			2009-03-04
 # Whom:				Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/deskutils/plasma-applet-simpleweatherforecast/Makefile,v 1.11 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/plasma-applet-simpleweatherforecast/Makefile 314960 2013-03-22 20:06:14Z makc $
 #
 
 PORTNAME=	simpleweatherforecast
@@ -18,7 +18,7 @@ COMMENT=	Weather plasma applet for KDE4
 
 RUN_DEPENDS=	wget:${PORTSDIR}/ftp/wget
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	automoc4 kdeprefix kdelibs
 USE_QT4=	gui dbus network opengl svg webkit xml \
 		qmake_build moc_build rcc_build uic_build
