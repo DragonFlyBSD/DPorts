@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: misc/pciids/Makefile 315030 2013-03-23 13:29:33Z sunpoet $
+# $FreeBSD: misc/pciids/Makefile 315500 2013-03-28 20:22:35Z sunpoet $
 
 PORTNAME=	pciids
-PORTVERSION=	20130323
+PORTVERSION=	20130327
 CATEGORIES=	misc
 MASTER_SITES=	LOCAL/sunpoet
 
