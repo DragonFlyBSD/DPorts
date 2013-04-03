@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/multimedia/kdemultimedia4/Makefile,v 1.190 2013/02/04 01:04:24 svnexp Exp $
+# $FreeBSD: multimedia/kdemultimedia4/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kdemultimedia
 PORTVERSION=	${KDE4_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	KDE Multimedia applications (meta-port)
+COMMENT=	KDE Multimedia applications (meta port)
 
 LATEST_LINK=	${PORTNAME}4
 
