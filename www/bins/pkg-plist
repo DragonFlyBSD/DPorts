@@ -233,7 +233,6 @@ bin/bins_txt2xml
 %%DATADIR%%/templates.mwolson/imagelist.html
 %%DATADIR%%/templates.mwolson/navbar.html
 %%DATADIR%%/templates.mwolson/path.html
-%%DATADIR%%/templates.mwolson/static
 %%DATADIR%%/templates.mwolson/static/style.css
 %%DATADIR%%/templates.mwolson/static/style.css.bak
 %%DATADIR%%/templates.mwolson/subalbum.html
