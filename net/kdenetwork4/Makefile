@@ -1,13 +1,12 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/kdenetwork4/Makefile 314933 2013-03-22 14:18:02Z makc $
+# $FreeBSD: net/kdenetwork4/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kdenetwork
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
 CATEGORIES=	net kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
-DIST_SUBDIR=	KDE
+DIST_SUBDIR=	KDE/${PORTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Network applications
@@ -25,7 +24,8 @@ USE_KDE4=	kdehier kdelibs kdeprefix libkonq pimlibs workspace \
 		automoc4 ontologies strigi
 USES=		cmake:outsource
 USE_OPENSSL=	yes
-USE_QT4=	moc_build qmake_build rcc_build uic_build
+USE_QT4=	corelib gui sql \
+		moc_build qmake_build rcc_build uic_build
 USE_SQLITE=	yes
 USE_XORG=	x11 xdamage xext xscrnsaver xtst
 USE_XZ=		yes
