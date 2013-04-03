@@ -1,0 +1,17 @@
+# Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
+# $FreeBSD: ports/devel/hs-filemanip/Makefile,v 1.16 2013/02/05 22:47:09 svnexp Exp $
+
+PORTNAME=	filemanip
+PORTVERSION=	0.3.6.2
+PORTREVISION=	1
+CATEGORIES=	devel haskell
+
+MAINTAINER=	haskell@FreeBSD.org
+COMMENT=	Expressive file and directory manipulation for Haskell
+
+LICENSE=	BSD
+
+USE_CABAL=	mtl unix-compat
+
+.include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
+.include <bsd.port.mk>
