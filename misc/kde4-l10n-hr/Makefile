@@ -1,12 +1,12 @@
 # Created by: Thomas Abthorpe <tabthorpe@FreeBSD.org>
-# $FreeBSD: ports/misc/kde4-l10n-hr/Makefile,v 1.14 2013/02/04 01:04:22 svnexp Exp $
+# $FreeBSD: misc/kde4-l10n-hr/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
 CATEGORIES=	misc kde
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Croation messages and documentation for KDE4
+COMMENT=	Croation messages and documentation for KDE SC 4
 
 KDE4_L10N=	hr
 
