@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/accessibility/kdeaccessibility4/Makefile,v 1.54 2013/02/04 01:03:19 svnexp Exp $
+# $FreeBSD: accessibility/kdeaccessibility4/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kdeaccessibility
 PORTVERSION=	${KDE4_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Accessibility applications for KDE4
+COMMENT=	Accessibility applications for KDE 4
 
 USE_KDE4=	kdeprefix
 NO_BUILD=	yes
