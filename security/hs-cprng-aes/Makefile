@@ -1,0 +1,19 @@
+# $FreeBSD: security/hs-cprng-aes/Makefile 315580 2013-03-29 22:43:58Z pgj $
+
+PORTNAME=	cprng-aes
+PORTVERSION=	0.3.4
+PORTREVISION=	1
+CATEGORIES=	security haskell
+
+MAINTAINER=	haskell@FreeBSD.org
+COMMENT=	Crypto Pseudo Random Number Generator using AES
+
+LICENSE=	BSD
+
+CABAL_SETUP=	Setup.hs
+
+USE_CABAL=	cipher-aes>=0.1 crypto-api>=0.8 crypto-random-api>=0.2 \
+		entropy>=0.2 random
+
+.include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
+.include <bsd.port.mk>
