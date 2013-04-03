@@ -1,0 +1,19 @@
+# $FreeBSD: www/hs-wai-logger/Makefile 315580 2013-03-29 22:43:58Z pgj $
+
+PORTNAME=	wai-logger
+PORTVERSION=	0.3.0
+PORTREVISION=	2
+CATEGORIES=	www haskell
+
+MAINTAINER=	haskell@FreeBSD.org
+COMMENT=	A logging system for WAI
+
+LICENSE=	BSD
+
+CABAL_SETUP=	Setup.hs
+
+USE_CABAL=	blaze-builder byteorder case-insensitive date-cache>=0.3 \
+		fast-logger>=0.3 http-types network wai
+
+.include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
+.include <bsd.port.mk>
