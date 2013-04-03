@@ -1,0 +1,15 @@
+# $FreeBSD: devel/hs-reflection/Makefile 315580 2013-03-29 22:43:58Z pgj $
+
+PORTNAME=	reflection
+PORTVERSION=	1.1.7
+CATEGORIES=	devel haskell
+
+MAINTAINER=	haskell@FreeBSD.org
+COMMENT=	Reifies arbitrary terms into types that can be reflected back into terms
+
+LICENSE=	BSD
+
+USE_CABAL=	tagged>=0.4.4
+
+.include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
+.include <bsd.port.mk>
