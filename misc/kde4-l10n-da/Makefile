@@ -1,12 +1,12 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/misc/kde4-l10n-da/Makefile,v 1.69 2013/02/04 01:04:22 svnexp Exp $
+# $FreeBSD: misc/kde4-l10n-da/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
 CATEGORIES=	misc kde
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Danish messages and documentation for KDE4
+COMMENT=	Danish messages and documentation for KDE SC 4
 
 KDE4_L10N=	da
 
