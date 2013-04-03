@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# $FreeBSD: ports/devel/hs-cabal-install/files/cabal.in,v 1.1 2012/12/20 02:32:25 svnexp Exp $
+
+export CC=%%CC%%
+export CPP=%%CPP%%
+export LD=%%LD%%
+export AR=%%AR%%
+export RANLIB=%%RANLIB%%
+
+%%PREFIX%%/bin/cabal-install $*
