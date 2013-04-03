@@ -1,12 +1,12 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/korean/kde4-l10n/Makefile,v 1.67 2013/02/04 01:04:12 svnexp Exp $
+# $FreeBSD: korean/kde4-l10n/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
 CATEGORIES=	korean kde
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Korean messages and documentation for KDE4
+COMMENT=	Korean messages and documentation for KDE SC 4
 
 KDE4_L10N=	ko
 
