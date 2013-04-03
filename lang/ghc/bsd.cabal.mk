@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/lang/ghc/bsd.cabal.mk,v 1.20 2013/02/05 22:47:11 svnexp Exp $
+# $FreeBSD: lang/ghc/bsd.cabal.mk 315636 2013-03-31 13:43:10Z pgj $
 #
 # bsd.cabal.mk -- Support for ports based on Haskell Cabal.
 #
@@ -174,6 +174,7 @@ CONFIGURE_ARGS+=	--haddock-options=-w --with-haddock=${HADDOCK_CMD}
 
 .if ${PORT_OPTIONS:MDYNAMIC}
 CONFIGURE_ARGS+=	--enable-shared --enable-executable-dynamic
+CONFIGURE_ARGS+=	"--ghc-option=-optl -rpath" "--ghc-option=-optl ${CABAL_LIBDIR}/${DISTNAME}"
 .else
 CONFIGURE_ARGS+=	--disable-shared --disable-executable-dynamic
 .endif

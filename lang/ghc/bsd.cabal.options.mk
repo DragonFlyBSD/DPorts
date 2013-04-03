@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/lang/ghc/bsd.cabal.options.mk,v 1.4 2013/02/02 13:59:39 svnexp Exp $
+# $FreeBSD: lang/ghc/bsd.cabal.options.mk 315580 2013-03-29 22:43:58Z pgj $
 #
 # bsd.cabal.options.mk -- Support options for ports based on Haskell Cabal.
 #
@@ -16,6 +16,7 @@ PKGNAMEPREFIX?=		${HSPREFIX}
 LOCALBASE?=	/usr/local
 GHC_CMD?=	${LOCALBASE}/bin/ghc
 HADDOCK_CMD?=	${LOCALBASE}/bin/haddock
+HSCOLOUR_CMD?=	${LOCALBASE}/bin/HsColour
 GHC_VERSION=	7.4.2
 
 HSCOLOUR_DESC?=	Colorize generated documentation by HsColour
@@ -32,8 +33,12 @@ OPTIONS_DEFINE+=	PROFILE
 .endif
 
 .if !exists(${GHC_CMD}) || ((exists(${HADDOCK_CMD}) && exists(${LOCALBASE}/lib/ghc-${GHC_VERSION}/html)) && !defined(NOPORTDOCS))
-OPTIONS_DEFINE+=	DOCS HSCOLOUR
+OPTIONS_DEFINE+=	DOCS
 OPTIONS_DEFAULT+=	DOCS
+
+.if (${PORTNAME} != hscolour || exists(${HSCOLOUR_CMD})) && !defined(IGNORE_HSCOLOUR)
+OPTIONS_DEFINE+=	HSCOLOUR
+.endif
 .endif
 
 .if defined(OPTIONSMKINCLUDED)

@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/lang/ghc/bsd.hackage.mk,v 1.222 2013/02/05 22:47:11 svnexp Exp $
+# $FreeBSD: lang/ghc/bsd.hackage.mk 315583 2013-03-29 23:37:01Z pgj $
 #
 # bsd.hackage.mk -- List of Haskell Cabal ports.
 #
@@ -17,7 +17,6 @@ activehs_port=			www/hs-activehs
 activehs-base_port=		devel/hs-activehs-base
 aeson_port=			converters/hs-aeson
 Agda_port=			math/hs-Agda		# executable
-Agda-executable_port=		math/hs-Agda-executable	# executable
 alex_port=			devel/hs-alex		# executable
 ALUT_port=			audio/hs-ALUT
 angel_port=			sysutils/hs-angel
@@ -131,6 +130,7 @@ filesystem-conduit_port=	devel/hs-filesystem-conduit
 fsnotify_port=			devel/hs-fsnotify
 gconf_port=			devel/hs-gconf
 generic-deriving_port=		devel/hs-generic-deriving
+geniplate_port=			devel/hs-geniplate
 ghc-events_port=		devel/hs-ghc-events	# executable
 ghc-mtl_port=			devel/hs-ghc-mtl
 ghc-paths_port=			devel/hs-ghc-paths
@@ -157,6 +157,7 @@ hashtables_port=		devel/hs-hashtables
 haskeline_port=			devel/hs-haskeline
 haskell-src_port=		devel/hs-haskell-src
 haskell-src-exts_port=		devel/hs-haskell-src-exts
+hasktags_port=			devel/hs-hasktags	# executable
 hastache_port=			devel/hs-hastache
 HaXml_port=			textproc/hs-HaXml	# executable
 heist_port=			www/hs-heist
@@ -207,6 +208,7 @@ libxml_port=			textproc/hs-libxml
 lifted-base_port=		devel/hs-lifted-base
 List_port=			devel/hs-List
 logict_port=			devel/hs-logict
+maccatcher_port=		net/hs-maccatcher
 math-functions_port=		math/hs-math-functions
 MaybeT_port=			devel/hs-MaybeT
 MemoTrie_port=			devel/hs-MemoTrie
@@ -261,6 +263,7 @@ profunctor-extras_port=		devel/hs-profunctor-extras
 profunctors_port=		devel/hs-profunctors
 project-template_port=		devel/hs-project-template
 PSQueue_port=			devel/hs-PSQueue
+publicsuffixlist_port=		net/hs-publicsuffixlist
 pureMD5_port=			security/hs-pureMD5
 pwstore-fast_port=		security/hs-pwstore-fast
 QuickCheck_port=		devel/hs-QuickCheck
@@ -275,6 +278,7 @@ regex-base_port=		textproc/hs-regex-base
 regex-compat_port=		textproc/hs-regex-compat
 regex-pcre-builtin_port=	textproc/hs-regex-pcre-builtin
 regex-posix_port=		textproc/hs-regex-posix
+regex-tdfa_port=		textproc/hs-regex-tdfa
 resource-pool_port=		devel/hs-resource-pool
 resourcet_port=			devel/hs-resourcet
 RSA_port=			security/hs-RSA
@@ -352,6 +356,7 @@ utility-ht_port=		devel/hs-utility-ht
 uuagc_port=			devel/hs-uuagc		# executable
 uuagc-bootstrap_port=		devel/hs-uuagc-bootstrap # executable
 uuagc-cabal_port=		devel/hs-uuagc-cabal
+uuid_port=			devel/hs-uuid
 uulib_port=			devel/hs-uulib
 vault_port=			devel/hs-vault
 vector_port=			devel/hs-vector

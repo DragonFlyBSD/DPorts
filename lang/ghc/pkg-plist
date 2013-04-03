@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/lang/ghc/pkg-plist,v 1.32 2012/11/17 05:58:50 svnexp Exp $
+@comment $FreeBSD: lang/ghc/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/ghc
 bin/ghci
 bin/ghc-pkg

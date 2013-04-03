@@ -1,11 +1,12 @@
 # Created by: Simon Marlow <simonmar@microsoft.com>
-# $FreeBSD: ports/lang/ghc/Makefile,v 1.103 2013/02/05 22:47:11 svnexp Exp $
+# $FreeBSD: lang/ghc/Makefile 311736 2013-02-05 22:26:31Z pgj $
 
 PORTNAME=	ghc
 PORTVERSION=	7.4.2
 PORTREVISION=	1
 CATEGORIES=	lang haskell
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${PORTVERSION}/:source \
+		http://goetz-isenmann.de/dfly/:dflyboot \
 		${MASTER_SITE_LOCAL:S/$/:boot/}
 MASTER_SITE_SUBDIR=	pgj/:boot
 DISTFILES=	ghc-${PORTVERSION}-src${EXTRACT_SUFX}:source
@@ -16,7 +17,6 @@ COMMENT=	Compiler for the functional language Haskell
 ONLY_FOR_ARCHS=	i386 amd64
 
 GHC_VERSION=		${PORTVERSION}
-BOOT_GHC_VERSION=	7.4.1
 HSCOLOUR_VERSION=	1.20.2
 
 DATADIR=	${PREFIX}/share/ghc-${GHC_VERSION}
@@ -75,8 +75,6 @@ LIB_DEPENDS+=	ffi.6:${PORTSDIR}/devel/libffi
 
 .if empty(PORT_OPTIONS:MBOOT)
 
-EXTRA_PATCHES=		${PATCHDIR}/nopatch-.._ghc-${BOOT_GHC_VERSION}-boot_rts_package.conf.in
-
 .if ${OPSYS} == "FreeBSD"
 .if ${ARCH} == "i386"
 
@@ -90,7 +88,7 @@ DISTFILES+=	ghc-${BOOT_GHC_VERSION}-i386-freebsd7-boot${EXTRACT_SUFX}:boot
 IGNORE=		unsupported
 .endif
 
-.elif ${ARCH} == "x86_64"
+.elif ${ARCH:S///} == "amd64"
 
 .if ${OSVERSION} >= 900000
 DISTFILES+=	ghc-${BOOT_GHC_VERSION}-amd64-freebsd9-boot${EXTRACT_SUFX}:boot
@@ -102,10 +100,25 @@ DISTFILES+=	ghc-${BOOT_GHC_VERSION}-amd64-freebsd7-boot${EXTRACT_SUFX}:boot
 IGNORE=		unsupported
 .endif
 
+.endif		# FreeBSD platform list
+BOOT_GHC_VERSION=	7.4.1
+EXTRA_PATCHES=	${PATCHDIR}/nopatch-.._ghc-${BOOT_GHC_VERSION}-boot_rts_package.conf.in
+
+.elif ${OPSYS} == "DragonFly"
+
+.  if ${ARCH} == "i386"
+DISTFILES+=	ghc-${BOOT_GHC_VERSION}-i386-dragonfly-boot${EXTRACT_SUFX}:dflyboot
+.  elif ${ARCH} == "x86_64"
+DISTFILES+=	ghc-${BOOT_GHC_VERSION}-x86_64-dragonfly-boot${EXTRACT_SUFX}:dflyboot
+.  endif	# DragonFly platform list
+
+CONFIGURE_TARGET=	${ARCH}-portbld-dragonfly
+BOOT_GHC_VERSION=	7.4.2
+EXTRA_PATCHES=	${DFLY_PATCHDIR}/nopatch-ghc-${BOOT_GHC_VERSION}-boot_rts_package.conf.in
+
+.else
+IGNORE=		unsupported ${OPSYS} Operating System
 .endif
-.else  # FreeBSD
-IGNORE=		No DragonFly bootstrap compiler yet
-.endif # FreeBSD
 
 .endif # MBOOT
 
