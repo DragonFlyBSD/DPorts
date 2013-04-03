@@ -1,0 +1,4 @@
+The PCRE backend to accompany regex-base, with bundled code from
+<http://www.pcre.org>.
+
+WWW: http://hackage.haskell.org/package/regex-pcre
