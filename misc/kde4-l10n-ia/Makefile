@@ -1,11 +1,11 @@
-# $FreeBSD: ports/misc/kde4-l10n-ia/Makefile,v 1.7 2013/02/04 01:04:22 svnexp Exp $
+# $FreeBSD: misc/kde4-l10n-ia/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
 CATEGORIES=	misc kde
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Interlingua messages and documentation for KDE4
+COMMENT=	Interlingua messages and documentation for KDE SC 4
 
 KDE4_L10N=	ia
 
