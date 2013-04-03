@@ -1,12 +1,12 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/german/kde4-l10n/Makefile,v 1.59 2013/02/04 01:04:02 svnexp Exp $
+# $FreeBSD: german/kde4-l10n/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
 CATEGORIES=	german kde
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	German messages and documentation for KDE4
+COMMENT=	German messages and documentation for KDE SC 4
 
 KDE4_L10N=	de
 
