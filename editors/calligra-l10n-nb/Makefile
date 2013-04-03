@@ -1,4 +1,4 @@
-# $FreeBSD: ports/editors/calligra-l10n-nb/Makefile,v 1.42 2013/02/05 12:23:33 svnexp Exp $
+# $FreeBSD: editors/calligra-l10n-nb/Makefile 311700 2013-02-05 11:36:39Z makc $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
