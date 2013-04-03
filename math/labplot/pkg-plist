@@ -1,0 +1,31 @@
+bin/labplot2
+bin/opj2dat
+lib/liblabplot_origin.so
+lib/liblabplot_origin.so.0
+lib/liblabplot_origin.so.0.0.4
+share/apps/LabPlot/LabPlotui.rc
+share/apps/LabPlot/labplot.png
+share/apps/LabPlot/pics/auto-scale-all.png
+share/apps/LabPlot/pics/auto-scale-x.png
+share/apps/LabPlot/pics/auto-scale-y.png
+share/apps/LabPlot/pics/axis-horizontal.png
+share/apps/LabPlot/pics/axis-vertical.png
+share/apps/LabPlot/pics/editbreaklayout.png
+share/apps/LabPlot/pics/editgrid.png
+share/apps/LabPlot/pics/edithlayout.png
+share/apps/LabPlot/pics/editvlayout.png
+share/apps/LabPlot/pics/shift-down-y.png
+share/apps/LabPlot/pics/shift-left-x.png
+share/apps/LabPlot/pics/shift-right-x.png
+share/apps/LabPlot/pics/shift-up-y.png
+share/apps/LabPlot/pics/x-zoom-in.png
+share/apps/LabPlot/pics/x-zoom-out.png
+share/apps/LabPlot/pics/xy-curve.png
+share/apps/LabPlot/pics/y-zoom-in.png
+share/apps/LabPlot/pics/y-zoom-out.png
+share/apps/LabPlot/pics/zoom-in-x.png
+share/apps/LabPlot/pics/zoom-in-y.png
+share/apps/LabPlot/pics/zoom-out-x.png
+share/apps/LabPlot/pics/zoom-out-y.png
+@dirrm share/apps/LabPlot/pics
+@dirrm share/apps/LabPlot
