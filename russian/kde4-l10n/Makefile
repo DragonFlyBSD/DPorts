@@ -1,12 +1,12 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/russian/kde4-l10n/Makefile,v 1.64 2013/02/04 01:04:34 svnexp Exp $
+# $FreeBSD: russian/kde4-l10n/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
 CATEGORIES=	russian kde
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Russian messages and documentation for KDE4
+COMMENT=	Russian messages and documentation for KDE SC 4
 
 KDE4_L10N=	ru
 
