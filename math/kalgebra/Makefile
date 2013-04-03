@@ -1,11 +1,11 @@
-# $FreeBSD: math/kalgebra/Makefile 314933 2013-03-22 14:18:02Z makc $
+# $FreeBSD: math/kalgebra/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kalgebra
 PORTVERSION=	${KDE4_VERSION}
 CATEGORIES=	math kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
-DIST_SUBDIR=	KDE
+DIST_SUBDIR=	KDE/${PORTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE graph calculator
@@ -18,7 +18,7 @@ CMAKE_ARGS=	-DBUILD_mobile:BOOL=FALSE
 USE_GL=		glu
 USE_KDE4=	kdehier kdelibs kdeprefix libkdeedu automoc4
 USES=		cmake:outsource
-USE_QT4=	gui opengl script scripttools xml \
+USE_QT4=	corelib declarative gui opengl \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 MAKE_JOBS_SAFE=	yes
