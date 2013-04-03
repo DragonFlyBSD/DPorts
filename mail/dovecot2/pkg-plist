@@ -505,11 +505,9 @@ libexec/dovecot/stats
 libexec/dovecot/xml2text
 sbin/dovecot
 share/aclocal/dovecot.m4
-@dirrmtry libdata/ldconfig/dovecot2
 @dirrm libexec/dovecot
 @dirrm lib/dovecot/doveadm
 @dirrmtry lib/dovecot/auth
 @dirrm lib/dovecot
 @dirrm include/dovecot
 @dirrmtry %%ETCDIR%%
-%%PORTDOCS%%@dirrmtry %%DOCSDIR%%
