@@ -1,12 +1,12 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: deskutils/kdepim4/Makefile 314933 2013-03-22 14:18:02Z makc $
+# $FreeBSD: deskutils/kdepim4/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kdepim
 PORTVERSION=	${KDE4_VERSION}
 CATEGORIES=	deskutils kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
-DIST_SUBDIR=	KDE
+DIST_SUBDIR=	KDE/${PORTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Libraries for KDE-PIM applications
@@ -23,15 +23,15 @@ RUN_DEPENDS=	${KDE4_PREFIX}/bin/accountwizard:${PORTSDIR}/deskutils/kdepim4-runt
 LATEST_LINK=	${PORTNAME}4
 CONFLICTS_INSTALL=	kdepim-4.4.*
 
-USE_XZ=	yes
+USE_XZ=		yes
 USE_GNOME=	libxml2
 USE_ICONV=	yes
 USE_KDE4=	kdehier kdelibs kdeprefix pimlibs \
-		akonadi automoc4 ontologies soprano strigi
+		akonadi automoc4 ontologies soprano strigi nepomuk-widgets
 USES=		cmake:outsource
 USE_OPENLDAP=	yes
-USE_QT4=	dbus designer gui network \
-		qt3support script sql webkit xml \
+USE_QT4=	corelib dbus declarative designer_build gui network opengl \
+		script sql webkit \
 		qmake_build moc_build rcc_build uic_build
 USE_XORG=	x11 xscrnsaver
 CMAKE_ARGS+=	-DKDEPIM_BUILD_MOBILE:BOOL=FALSE
