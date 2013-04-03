@@ -1,4 +1,4 @@
-# $FreeBSD: editors/calligra-l10n/Makefile 311700 2013-02-05 11:36:39Z makc $
+# $FreeBSD: editors/calligra-l10n/Makefile 315586 2013-03-29 23:51:39Z avilla $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
@@ -13,9 +13,9 @@ COMMENT=	Localized messages and documentation for Calligra
 NO_BUILD=	yes
 USE_KDE4=	kdeprefix
 
-CALLIGRA_LANG_ALL=	ca ca@valencia cs da de el en_GB es et fi fr \
-			gl hu it ja kk nb nds nl pl pt pt_BR ru sk \
-			sv uk zh_CN zh_TW
+CALLIGRA_LANG_ALL=	bs ca ca@valencia cs da de el en_GB es et fi fr \
+			gl hu it ja kk nb nds nl pl pt pt_BR ru sk sl \
+			sv tr uk zh_CN zh_TW
 
 ca@valencia_PORT=	editors/calligra-l10n-ca_valencia
 de_PORT=	german/calligra-l10n
