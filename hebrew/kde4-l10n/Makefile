@@ -1,11 +1,11 @@
-# $FreeBSD: ports/hebrew/kde4-l10n/Makefile,v 1.69 2013/02/04 01:04:08 svnexp Exp $
+# $FreeBSD: hebrew/kde4-l10n/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
 CATEGORIES=	hebrew kde
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Hebrew messages and documentation for KDE4
+COMMENT=	Hebrew messages and documentation for KDE SC 4
 
 KDE4_L10N=	he
 
