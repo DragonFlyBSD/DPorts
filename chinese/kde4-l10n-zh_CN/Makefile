@@ -1,12 +1,12 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/chinese/kde4-l10n-zh_CN/Makefile,v 1.65 2013/02/04 01:03:26 svnexp Exp $
+# $FreeBSD: chinese/kde4-l10n-zh_CN/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
 CATEGORIES=	chinese kde
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Simplified Chinese messages and documentation for KDE4
+COMMENT=	Simplified Chinese messages and documentation for KDE SC 4
 
 KDE4_L10N=	zh_CN
 
