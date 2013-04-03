@@ -1,0 +1,20 @@
+# $FreeBSD: ports/devel/hs-gconf/Makefile,v 1.9 2013/02/05 22:47:09 svnexp Exp $
+
+PORTNAME=	gconf
+PORTVERSION=	0.12.1.1
+PORTREVISION=	1
+CATEGORIES=	devel haskell
+
+MAINTAINER=	haskell@FreeBSD.org
+COMMENT=	Binding to the GNOME configuration database system
+
+LICENSE=	LGPL21
+FILE_LICENSE=	COPYING
+
+CABAL_SETUP=	Setup.hs
+
+USE_CABAL=	glib>=0.12 gtk2hs-buildtools
+USE_GNOME=	gconf2
+
+.include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
+.include <bsd.port.mk>
