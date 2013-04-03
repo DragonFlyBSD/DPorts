@@ -1,22 +1,22 @@
 # Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-# $FreeBSD: games/knights-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/knights-kde4/Makefile 315374 2013-03-27 11:57:06Z makc $
 
 PORTNAME=	knights
 PORTVERSION=	2.5.0
+PORTREVISION=	1
 CATEGORIES=	games kde
 MASTER_SITES=	http://dl.dropbox.com/u/2888238/Knights/
 
 MAINTAINER=	syncer@gmail.com
 COMMENT=	KDE4 chess interface
 
-LIB_DEPENDS=	kdegames:${PORTSDIR}/games/kdegames4
 RUN_DEPENDS=	${LOCALBASE}/bin/gnuchess:${PORTSDIR}/games/gnuchess
 
 LATEST_LINK=	${PORTNAME}-kde4
 MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
-USES=		cmake
-USE_KDE4=	kdelibs kdehier kdeprefix automoc4 workspace
+USES=		cmake:outsource
+USE_KDE4=	kdelibs kdehier kdeprefix automoc4 workspace libkdegames
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 
 .include <bsd.port.options.mk>
