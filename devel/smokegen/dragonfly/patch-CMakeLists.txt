@@ -1,0 +1,13 @@
+--- CMakeLists.txt.orig	2013-03-01 06:37:21.353163000 +0000
++++ CMakeLists.txt
+@@ -36,6 +36,10 @@ set(generator_SRC
+ set (CMAKE_SKIP_BUILD_RPATH FALSE)
+ set (CMAKE_SKIP_RPATH FALSE)
+ 
++# Fix RPATH for compiler
++set (CMAKE_INSTALL_RPATH "@@GCC_RPATH@@:/usr/lib:${CMAKE_INSTALL_PREFIX}/lib")
++set (CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
++
+ configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/config.h.in config.h @ONLY )
+ 
+ add_executable(smokegen ${generator_SRC})

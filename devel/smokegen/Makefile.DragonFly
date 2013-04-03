@@ -1,0 +1,5 @@
+GCCRPATH=	/usr/lib/${MAKE_ENV:MCCVER*:S/CCVER=//}
+
+post-patch:
+	@${REINPLACE_CMD} -e "s|@@GCC_RPATH@@|${GCCRPATH}|" \
+	   ${WRKSRC}/CMakeLists.txt
