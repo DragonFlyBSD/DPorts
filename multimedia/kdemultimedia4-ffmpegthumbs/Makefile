@@ -1,27 +1,32 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: multimedia/kdemultimedia4-ffmpegthumbs/Makefile 314933 2013-03-22 14:18:02Z makc $
+# $FreeBSD: multimedia/kdemultimedia4-ffmpegthumbs/Makefile 315373 2013-03-27 11:55:25Z makc $
 
-PORTNAME=		ffmpegthumbs
-PORTVERSION=		${KDE4_VERSION}
-CATEGORIES=		multimedia kde
-MASTER_SITES=		${MASTER_SITE_KDE}
+PORTNAME=	ffmpegthumbs
+PORTVERSION=	${KDE4_VERSION}
+CATEGORIES=	multimedia kde
+MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
-PKGNAMEPREFIX=		kdemultimedia-
-DIST_SUBDIR=		KDE
+PKGNAMEPREFIX=	kdemultimedia-
+DIST_SUBDIR=	KDE/${PORTVERSION}
 
-MAINTAINER=		kde@FreeBSD.org
-COMMENT=		ffmpeg-based thumbnail creator for video files
+MAINTAINER=	kde@FreeBSD.org
+COMMENT=	FFmpeg-based thumbnail generator for video files
 
-LICENSE=		GPLv2
+LICENSE=	GPLv2
 
-LIB_DEPENDS=		swscale.1:${PORTSDIR}/multimedia/ffmpeg
+LIB_DEPENDS=	swscale${FFMPEG_SUFFIX}:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFIX}
 
 CONFLICTS_INSTALL=	kdemultimedia-4.[1-8].*
 
-MAKE_JOBS_SAFE=		yes
-USES=			cmake:outsource
-USE_KDE4=		automoc4 kdehier kdelibs kdeprefix
-USE_QT4=		moc_build qmake_build rcc_build uic_build
-USE_XZ=			yes
+USES=		cmake:outsource
+USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
+USE_QT4=	moc_build qmake_build rcc_build uic_build
+USE_XZ=		yes
+MAKE_JOBS_SAFE=	yes
+
+# supported versions: ffmpeg1, ffmpeg-devel
+# corresponding FFMPEG_SUFFIX: '1', '-devel'
+FFMPEG_SUFFIX?=	1
+CMAKE_ARGS+=	-DFFMPEG_SUFFIX=${FFMPEG_SUFFIX}
 
 .include <bsd.port.mk>
