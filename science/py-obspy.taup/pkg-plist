@@ -35,7 +35,6 @@
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/obspy/taup/tests/__init__.py
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/obspy/taup/tests/__init__.pyc
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/obspy/taup/tests/__init__.pyo
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/obspy/taup/tests/data
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/obspy/taup/tests/data/sample_ttimes_ak135.lst
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/obspy/taup/tests/data/sample_ttimes_iasp91.lst
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/obspy/taup/tests/test_taup.py
