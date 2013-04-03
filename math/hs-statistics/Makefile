@@ -1,0 +1,21 @@
+# Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
+# $FreeBSD: math/hs-statistics/Makefile 315580 2013-03-29 22:43:58Z pgj $
+
+PORTNAME=	statistics
+PORTVERSION=	0.10.2.0
+PORTREVISION=	2
+CATEGORIES=	math haskell
+
+MAINTAINER=	haskell@FreeBSD.org
+COMMENT=	A library of statistical types, data, and functions
+
+LICENSE=	BSD
+
+USE_CABAL=	erf math-functions>=0.1.1 monad-par>=0.1.0.1 \
+		mwc-random>=0.11.0.0 primitive>=0.3 vector>=0.7.1 \
+		vector-algorithms>=0.4
+
+INSTALL_PORTDATA=	${INSTALL_DATA} ${WRKSRC}/README.markdown ${DATADIR}
+
+.include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
+.include <bsd.port.mk>
