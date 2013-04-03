@@ -1,0 +1,7 @@
+@comment $FreeBSD: ports/lang/hs-epic/pkg-plist,v 1.2 2012/11/17 05:58:51 svnexp Exp $
+lib/evm/closure.h
+lib/evm/libevm.a
+lib/evm/mainprog.c
+lib/evm/sparks.h
+lib/evm/stdfuns.h
+@dirrm lib/evm
