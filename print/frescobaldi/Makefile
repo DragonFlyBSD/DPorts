@@ -1,9 +1,9 @@
 # Created by: martin.dieringer@gmx.de
-# $FreeBSD: ports/print/frescobaldi/Makefile,v 1.9 2013/02/03 22:43:57 svnexp Exp $
+# $FreeBSD: print/frescobaldi/Makefile 315375 2013-03-27 12:00:14Z makc $
 
 PORTNAME=	frescobaldi
 PORTVERSION=	2.0.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	print kde
 MASTER_SITES=	http://cloud.github.com/downloads/wbsoft/frescobaldi/
 
