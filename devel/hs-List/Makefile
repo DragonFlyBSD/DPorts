@@ -1,0 +1,18 @@
+# $FreeBSD: ports/devel/hs-List/Makefile,v 1.2 2013/02/05 22:47:09 svnexp Exp $
+
+PORTNAME=	List
+PORTVERSION=	0.5.1
+PORTREVISION=	1
+CATEGORIES=	devel haskell
+
+MAINTAINER=	haskell@FreeBSD.org
+COMMENT=	List monad transformer and class
+
+LICENSE=	BSD
+
+CABAL_SETUP=	Setup.hs
+
+USE_CABAL=	transformers>=0.2
+
+.include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
+.include <bsd.port.mk>
