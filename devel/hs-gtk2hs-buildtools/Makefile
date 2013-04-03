@@ -1,0 +1,25 @@
+# $FreeBSD: ports/devel/hs-gtk2hs-buildtools/Makefile,v 1.7 2013/02/05 22:47:09 svnexp Exp $
+
+PORTNAME=	gtk2hs-buildtools
+PORTVERSION=	0.12.4
+PORTREVISION=	1
+CATEGORIES=	devel haskell
+
+MAINTAINER=	haskell@FreeBSD.org
+COMMENT=	Tools to build the Gtk2Hs suite of User Interface Libraries
+
+LICENSE=	GPLv2
+FILE_LICENSE=	COPYING
+
+CABAL_SETUP=	Setup.hs
+
+USE_CABAL=	random
+USE_ALEX=	yes
+USE_HAPPY=	yes
+
+EXECUTABLE=	gtk2hsTypeGen gtk2hsHookGenerator gtk2hsC2hs
+
+STANDALONE=	yes
+
+.include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
+.include <bsd.port.mk>
