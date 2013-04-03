@@ -2,7 +2,7 @@
 # Date created:				Aug 26, 2008
 # Whom:					Kris Moore
 #
-# $FreeBSD: ports/multimedia/kmplayer-kde4/Makefile,v 1.60 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/kmplayer-kde4/Makefile 315229 2013-03-25 14:45:18Z kmoore $
 #
 
 PORTNAME=	kmplayer
@@ -22,7 +22,7 @@ RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer
 
 USE_GNOME=	gtk20
 USE_BZIP2=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_KDE4=	automoc4 kdehier kdeprefix kdelibs
 USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
 
@@ -30,5 +30,7 @@ post-patch:
 #Fix build with kdelibs>=4.5.0
 	${REINPLACE_CMD} -e 's,V4.1.2-Based,V4.2-Based,g' \
 		${WRKSRC}/doc/index.docbook
+	${REINPLACE_CMD} -e 's,glib/gthread.h,glib.h,g' \
+		${WRKSRC}/src/npplayer.cpp
 
 .include <bsd.port.mk>
