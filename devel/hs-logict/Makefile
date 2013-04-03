@@ -1,0 +1,15 @@
+# $FreeBSD: devel/hs-logict/Makefile 315580 2013-03-29 22:43:58Z pgj $
+
+PORTNAME=	logict
+PORTVERSION=	0.6
+CATEGORIES=	devel haskell
+
+MAINTAINER=	haskell@FreeBSD.org
+COMMENT=	Backtracking logic-programming monad
+
+LICENSE=	BSD
+
+USE_CABAL=	mtl>=1.0.1
+
+.include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
+.include <bsd.port.mk>
