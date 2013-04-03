@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ksysguardd/Makefile 314933 2013-03-22 14:18:02Z makc $
+# $FreeBSD: sysutils/ksysguardd/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	ksysguardd
 PORTVERSION=	${KDE4_VERSION}
@@ -6,13 +6,13 @@ CATEGORIES=	sysutils kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src/
 DISTNAME=	kde-workspace-${PORTVERSION}
-DIST_SUBDIR=	KDE
+DIST_SUBDIR=	KDE/${PORTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE System Guard Daemon
 
 DISTINFO_FILE=	${PORTSDIR}/x11/kde4-workspace/distinfo
-USE_XZ=	yes
+USE_XZ=		yes
 USE_KDE4=	kdeprefix kdehier
 USES=		cmake
 CMAKE_ARGS+=	-DBIN_INSTALL_DIR:STRING="${PREFIX}/bin" \
