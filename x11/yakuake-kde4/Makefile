@@ -1,8 +1,9 @@
 # Created by: Shane Bell <decept0@gmail.com>
-# $FreeBSD: x11/yakuake-kde4/Makefile 315134 2013-03-24 16:01:10Z miwi $
+# $FreeBSD: x11/yakuake-kde4/Makefile 315669 2013-04-02 10:59:39Z miwi $
 
 PORTNAME=	yakuake
 PORTVERSION=	2.9.9
+PORTREVISION=	1
 CATEGORIES=	x11 kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 PKGNAMESUFFIX=	-kde4
