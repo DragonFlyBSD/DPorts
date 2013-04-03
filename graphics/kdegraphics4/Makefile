@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/graphics/kdegraphics4/Makefile,v 1.170 2013/02/04 01:04:05 svnexp Exp $
+# $FreeBSD: graphics/kdegraphics4/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kdegraphics
 PORTVERSION=	${KDE4_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Graphics utilities for KDE 4 (meta-port)
+COMMENT=	Graphics utilities for KDE 4 (meta port)
 
 RUN_DEPENDS=	${KDE4_PREFIX}/lib/kde4/mobithumbnail.so:${PORTSDIR}/graphics/kdegraphics4-mobipocket \
 		${KDE4_PREFIX}/lib/strigi/strigiea_dvi.so:${PORTSDIR}/graphics/kdegraphics4-strigi-analyzer \
