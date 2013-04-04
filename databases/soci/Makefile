@@ -1,13 +1,8 @@
-# New ports collection makefile for:	soci
-# Date created:		2010-09-13
-# Whom:			Julien Laffaye <kimelto@gmail.com>
-#
-# $FreeBSD: ports/databases/soci/Makefile,v 1.5 2012/11/17 05:55:25 svnexp Exp $
-#
+# Created by: Julien Laffaye <kimelto@gmail.com>
+# $FreeBSD: databases/soci/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	soci
-PORTVERSION=	3.0.0
-PORTREVISION=	1
+PORTVERSION=	3.1.0
 CATEGORIES=	databases
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
@@ -15,47 +10,81 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	jlaffaye@FreeBSD.org
 COMMENT=	The C++ Database Access Library
 
-LICENSE=	MIT
+LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE_1_0.txt
 
+USE_ZIP=	yes
+USES=		cmake
+CMAKE_ARGS+=	-DWITH_ORACLE:BOOL=OFF
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
-USE_TCL_BUILD=	85
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--include-prefix=${PREFIX}/include/soci \
-		--lib-prefix=${PREFIX}/lib
-ALL_TARGET=	build_libs
+
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
-OPTIONS=	MYSQL "Build MySQL driver" on \
-		PGSQL "Build PostgreSQL driver" on
+OPTIONS_DEFINE=	MYSQL PGSQL SQLITE ODBC BOOST
+BOOST_DESC=	Enable support for additional types using Boost
+OPTIONS_SINGLE=	ODBCDRV
+ODBCDRV_DESC=	ODBC driver to use
+OPTIONS_SINGLE_ODBCDRV=	IODBC UODBC
+IODBC_DESC=	use iODBC driver
+UODBC_DESC=	use unixODBC driver
+OPTIONS_DEFAULT=MYSQL PGSQL SQLITE ODBC IODBC BOOST
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.ifdef (WITH_MYSQL)
+.if ${PORT_OPTIONS:MMYSQL}
 USE_MYSQL=	yes
 PLIST_SUB+=	MYSQL=""
-CONFIGURE_ARGS+=--mysql-include=${LOCALBASE}/include/mysql \
-		--mysql-lib=${LOCALBASE}/lib/mysql
+CMAKE_ARGS+=	-DWITH_MYSQL:BOOL=ON
 .else
 PLIST_SUB+=	MYSQL="@comment "
+CMAKE_ARGS+=	-DWITH_MYSQL:BOOL=OFF
 .endif
 
-.ifdef (WITH_PGSQL)
+.if ${PORT_OPTIONS:MPGSQL}
 USE_PGSQL=	yes
 PLIST_SUB+=	PGSQL=""
-CONFIGURE_ARGS+=--postgresql-include=${LOCALBASE}/include \
-		--postgresql-lib=${LOCALBASE}/lib
+CMAKE_ARGS+=	-DWITH_POSTGRESQL:BOOL=ON
 .else
 PLIST_SUB+=	PGSQL="@comment "
+CMAKE_ARGS+=	-DWITH_POSTGRESQL:BOOL=OFF
 .endif
 
-post-patch:
-	@${REINPLACE_CMD} -e "s|/usr/local|${LOCALBASE}|" ${WRKSRC}/configure
-	@${REINPLACE_CMD} -e "s/ldconfig/true/" ${WRKSRC}/build/unix/install.tcl
+.if ${PORT_OPTIONS:MSQLITE}
+USE_SQLITE=	yes
+PLIST_SUB+=	SQLITE=""
+CMAKE_ARGS+=	-DWITH_SQLITE3:BOOL=ON
+.else
+PLIST_SUB+=	SQLITE="@comment "
+CMAKE_ARGS+=	-DWITH_SQLITE3:BOOL=OFF
+.endif
+
+.if ${PORT_OPTIONS:MODBC}
+PLIST_SUB+=	ODBC=""
+CMAKE_ARGS+=	-DWITH_ODBC:BOOL=ON
+.if ${PORT_OPTIONS:MUODBC}
+LIB_DEPENDS+=	odbc:${PORTSDIR}/databases/unixODBC
+CMAKE_ARGS+=	-DODBC_LIBRARY:FILE_PATH=${LOCALBASE}/lib/libodbc.so
+.elif ${PORT_OPTIONS:MIODBC}
+LIB_DEPENDS+=	iodbc:${PORTSDIR}/databases/libiodbc
+CMAKE_ARGS+=	-DODBC_LIBRARY:FILE_PATH=${LOCALBASE}/lib/libiodbc.so
+.endif
+.else
+PLIST_SUB+=	ODBC="@comment "
+CMAKE_ARGS+=	-DWITH_ODBC:BOOL=OFF
+.endif
+
+. if ${PORT_OPTIONS:MBOOST}
+LIB_DEPENDS+=	boost_date_time:${PORTSDIR}/devel/boost-libs
+PLIST_SUB+=	BOOST=""
+CMAKE_ARGS+=	-DWITH_BOOST:BOOL=ON
+.else
+PLIST_SUB+=	BOOST="@comment "
+CMAKE_ARGS+=	-DWITH_BOOST:BOOL=OFF
+.endif
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
