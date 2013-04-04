@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-App-gist
-# Date created:				2012-01-04
-# Whom:					Denny Lin <dennylin93@hs.ntnu.edu.tw>
-#
-# $FreeBSD: ports/www/p5-App-gist/Makefile,v 1.7 2012/11/17 06:02:44 svnexp Exp $
-#
+# Created by: Denny Lin <dennylin93@hs.ntnu.edu.tw>
+# $FreeBSD: www/p5-App-gist/Makefile 315219 2013-03-25 13:42:16Z tobez $
 
 PORTNAME=	App-gist
-PORTVERSION=	0.13
+PORTVERSION=	0.14
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
