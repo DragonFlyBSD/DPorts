@@ -1,16 +1,10 @@
-# ex:ts=8
-# Ports collection makefile for:	tinycdb
-# Date created:			Oct 17, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/databases/tinycdb/Makefile,v 1.15 2012/11/17 05:55:25 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: databases/tinycdb/Makefile 315457 2013-03-28 11:50:04Z ohauer $
 
 PORTNAME=	tinycdb
-PORTVERSION=	0.77
+PORTVERSION=	0.78
 CATEGORIES=	databases
 MASTER_SITES=	http://www.corpit.ru/mjt/tinycdb/
-DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Analogous to cdb, but faster
