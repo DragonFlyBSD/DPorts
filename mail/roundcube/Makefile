@@ -1,7 +1,7 @@
-# $FreeBSD: ports/mail/roundcube/Makefile,v 1.81 2013/01/28 11:09:52 svnexp Exp $
+# $FreeBSD: mail/roundcube/Makefile 315455 2013-03-28 10:23:59Z ale $
 
 PORTNAME=	roundcube
-DISTVERSION=	0.8.5
+DISTVERSION=	0.8.6
 PORTEPOCH=	1
 CATEGORIES?=	mail www
 MASTER_SITES=	SF/${PORTNAME}mail/${PORTNAME}mail/${DISTVERSION:tu}
