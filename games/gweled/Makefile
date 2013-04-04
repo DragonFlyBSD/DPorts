@@ -2,12 +2,12 @@
 # Date created:		November 28, 2003
 # Whom:			James Earl
 #
-# $FreeBSD: ports/games/gweled/Makefile,v 1.22 2012/11/17 05:57:41 svnexp Exp $
+# $FreeBSD: games/gweled/Makefile 315648 2013-04-01 09:53:51Z kwm $
 #
 
 PORTNAME=	gweled
 PORTVERSION=	0.7
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	games gnome
 MASTER_SITES=	http://sebdelestaing.free.fr/gweled/Release/
 
