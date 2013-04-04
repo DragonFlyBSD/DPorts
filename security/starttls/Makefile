@@ -2,12 +2,12 @@
 # Date created:		Dec 20, 2003
 # Whom:			kuriyama@FreeBSD.org
 #
-# $FreeBSD: ports/security/starttls/Makefile,v 1.17 2012/11/17 06:01:21 svnexp Exp $
+# $FreeBSD: security/starttls/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	starttls
 PORTVERSION=	0.10
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.opaopa.org/pub/elisp/
 
