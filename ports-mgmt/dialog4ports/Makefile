@@ -1,12 +1,16 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: ports-mgmt/dialog4ports/Makefile 314878 2013-03-21 22:07:51Z bdrewery $
+# $FreeBSD: ports-mgmt/dialog4ports/Makefile 315627 2013-03-31 05:50:32Z eadler $
 
 PORTNAME=	dialog4ports
-PORTVERSION=	0.1.1
+PORTVERSION=	0.1.3
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://m1cro.tk/dialog4ports/ \
 		http://files.etoilebsd.net/dialog4ports/ \
-		ftp://invisible-island.net/dialog/:dialog
+		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
+		http://m1cro.tk/dialog4ports/:dialog \
+		http://files.etoilebsd.net/dialog4ports/:dialog \
+		ftp://invisible-island.net/dialog/:dialog \
+		http://mirror.shatow.net/freebsd/${PORTNAME}/:dialog
 
 MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Console Interface to configure ports
