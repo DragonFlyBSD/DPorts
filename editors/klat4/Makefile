@@ -1,0 +1,24 @@
+# Ports collection makefile for:	klat4
+# Date created:			14 September 2008
+# Whom:				laddassm
+#
+# $FreeBSD: editors/klat4/Makefile 314960 2013-03-22 20:06:14Z makc $
+#
+
+PORTNAME=	klat4
+PORTVERSION=	0.6.1
+PORTREVISION=	9
+CATEGORIES=	editors
+MASTER_SITES=	http://klat.algebraic.ru/
+
+MAINTAINER=	laddassm@gmail.com
+COMMENT=	A LaTeX source editor for KDE4
+
+RUN_DEPENDS=	${KDE4_PREFIX}/lib/kde4/katepart.so:${PORTSDIR}/editors/kate
+
+USE_BZIP2=	yes
+USES=		cmake
+USE_KDE4=	kdeprefix kdelibs automoc4
+USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
+
+.include <bsd.port.mk>
