@@ -2,12 +2,12 @@
 # Date created:		2011-12-01
 # Whom:			Ashish SHUKLA <ashish@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Sepia/Makefile,v 1.6 2012/11/17 05:56:28 svnexp Exp $
+# $FreeBSD: devel/p5-Sepia/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	Sepia
 PORTVERSION=	0.992
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
