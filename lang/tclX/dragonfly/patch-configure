@@ -1,0 +1,20 @@
+--- configure.intermediate	2013-03-16 13:08:05.343644000 +0000
++++ configure
+@@ -8565,7 +8565,7 @@ rm -f conftest*
+ 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+ 	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # FreeBSD 3.* and greater have ELF.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="ld -Bshareable -x"
+@@ -9335,7 +9335,7 @@ fi;
+ 		    ;;
+ 		IRIX*)
+ 		    ;;
+-		NetBSD-*|FreeBSD-*)
++		NetBSD-*|FreeBSD-*|DragonFly-*)
+ 		    ;;
+ 		Darwin-*)
+ 		    ;;
