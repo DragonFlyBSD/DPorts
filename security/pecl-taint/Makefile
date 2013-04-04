@@ -1,8 +1,8 @@
 # Created by: johnpupu <johnpupu@gmail.com>
-# $FreeBSD: security/pecl-taint/Makefile 313280 2013-03-02 16:52:32Z miwi $
+# $FreeBSD: security/pecl-taint/Makefile 315594 2013-03-30 04:41:48Z miwi $
 
 PORTNAME=	taint
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.2
 CATEGORIES=	security
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
