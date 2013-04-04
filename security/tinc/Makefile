@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: ports/security/tinc/Makefile,v 1.50 2013/01/26 16:45:51 svnexp Exp $
+# $FreeBSD: security/tinc/Makefile 315441 2013-03-28 06:24:34Z dinoex $
 
 PORTNAME=	tinc
-PORTVERSION=	1.0.19
+PORTVERSION=	1.0.20
 CATEGORIES=	security
 MASTER_SITES=	http://www.tinc-vpn.org/packages/ \
 		ftp://ftp.wiretapped.net/pub/security/network-security/tinc/ \
