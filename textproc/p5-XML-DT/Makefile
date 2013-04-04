@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: ports/textproc/p5-XML-DT/Makefile,v 1.21 2012/11/17 06:02:11 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-DT/Makefile 315276 2013-03-26 10:52:27Z tobez $
 
 PORTNAME=	XML-DT
-PORTVERSION=	0.62
+PORTVERSION=	0.63
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
