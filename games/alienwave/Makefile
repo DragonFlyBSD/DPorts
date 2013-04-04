@@ -1,8 +1,8 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: ports/games/alienwave/Makefile,v 1.8 2012/12/11 14:39:59 svnexp Exp $
+# $FreeBSD: games/alienwave/Makefile 315194 2013-03-25 06:06:11Z miwi $
 
 PORTNAME=	alienwave
-PORTVERSION=	0.3.0
+PORTVERSION=	0.4.0
 CATEGORIES=	games
 MASTER_SITES=	http://www.alessandropira.org/alienwave/
 
@@ -10,14 +10,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shoot'em up game written using ncurses
 
 LICENSE=	GPLv2
-
-WRKSRC=		${WRKDIR}/${PORTNAME}
-ALL_TARGET=	${PORTNAME}
-
-MAKE_ARGS=	CC="${CC}" CFLAGS="-c ${CFLAGS}"
-
-PLIST_FILES=	bin/alienwave
-PORTDOCS=	README STORY TO_DO
 
 OPTIONS_DEFINE=	RANDOM_LEVELS DOCS
 OPTIONS_DEFAULT=LEVEL_MEDIUM
@@ -27,6 +19,14 @@ RANDOM_LEVELS_DESC=	Enable random waves
 LEVEL_EASY_DESC=	Killing Xzarna: easy
 LEVEL_MEDIUM_DESC=	Killing Xzarna: medium
 LEVEL_HARD_DESC=	Killing Xzarna: hard
+
+WRKSRC=		${WRKDIR}/${PORTNAME}
+
+ALL_TARGET=	${PORTNAME}
+MAKE_JOBS_SAFE=	yes
+
+PORTDOCS=	README STORY TO_DO
+PLIST_FILES=	bin/alienwave
 
 .include <bsd.port.options.mk>
 
@@ -42,11 +42,20 @@ CFLAGS+=	-DLEV_HARD
 CFLAGS+=	-DRANDOM_LEVELS
 .endif
 
+post-patch:
+	@${REINPLACE_CMD} -e \
+		'/^CC /s|^|#| ; \
+		 /^CFLAGS /s|^|#| ; \
+		 s|-lncurses|-lcurses| ; \
+		 /strip /s|^|#|' ${WRKSRC}/Makefile
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/alienwave ${PREFIX}/bin
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} alienwave ${PREFIX}/bin)
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+.for i in ${PORTDOCS}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${i} ${DOCSDIR})
+.endfor
 .endif
 
 .include <bsd.port.mk>
