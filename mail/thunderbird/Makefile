@@ -1,8 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: mail/thunderbird/Makefile 313676 2013-03-08 22:27:39Z flo $
+# $FreeBSD: mail/thunderbird/Makefile 315713 2013-04-03 20:27:48Z flo $
 
 PORTNAME=	thunderbird
-DISTVERSION=	17.0.4
+DISTVERSION=	17.0.5
 CATEGORIES=	mail ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	${PORTNAME}/releases/${DISTVERSION}esr/source
@@ -24,7 +24,7 @@ EM_VERSION=	1.5.1
 USE_AUTOTOOLS=	autoconf213:env
 USE_PYTHON_BUILD=-2.7
 USE_GECKO=	gecko
-CONFLICTS=	thunderbird-2[0-9].* thunderbird-1[1-689].* thunderbird-10.*
+CONFLICTS=	thunderbird-24.* thunderbird-1[1-6].* thunderbird-10.*
 USE_MOZILLA=	# empty
 
 MAKE_JOBS_SAFE=	yes
@@ -61,17 +61,6 @@ WRKSRC=		${WRKDIR}/comm-esr17
 MOZSRC:=	${WRKSRC}/mozilla
 
 XPI_LIBDIR=	${PREFIX}/lib/xpi
-
-.if ${ARCH} == x86_64
-CONFIGURE_TARGET=x86_64-portbld-freebsd${OSREL}
-.elif ${ARCH} == powerpc64
-.if ${OSVERSION} < 900033
-BROKEN=		Needs binutils 2.17.50 to build
-.else
-MOZ_EXPORT+=	UNAME_m="powerpc64"
-CFLAGS+=	-mminimal-toc
-.endif
-.endif
 
 .if ${PORT_OPTIONS:MENIGMAIL}
 MASTER_SITES+=	http://www.enigmail.net/download/source/:enigmail
