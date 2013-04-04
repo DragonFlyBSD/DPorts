@@ -1,8 +1,9 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: net/neubot/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: net/neubot/Makefile 315610 2013-03-30 12:40:29Z miwi $
 
 PORTNAME=	neubot
 PORTVERSION=	0.4.15.6
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://releases.neubot.org/_packages/
 
