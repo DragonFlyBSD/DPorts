@@ -1,9 +1,9 @@
 # Created by: Christopher J. Ruwe
-# $FreeBSD: math/ess/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/ess/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	ess
 DISTVERSION=	12.09-2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://ess.r-project.org/downloads/ess/
 EXTRACT_SUFX=	.tgz
