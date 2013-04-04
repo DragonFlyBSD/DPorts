@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-diazo/Makefile,v 1.3 2012/11/17 05:56:46 svnexp Exp $
+# $FreeBSD: devel/py-diazo/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	diazo
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
