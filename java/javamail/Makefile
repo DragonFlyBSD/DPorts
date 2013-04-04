@@ -1,10 +1,10 @@
 # Created by: Jose Marques
-# $FreeBSD: ports/java/javamail/Makefile,v 1.32 2013/02/11 10:14:43 svnexp Exp $
+# $FreeBSD: java/javamail/Makefile 315660 2013-04-02 04:42:52Z miwi $
 
 PORTNAME=	javamail
-PORTVERSION=	1.4.6
+PORTVERSION=	1.4.7
 CATEGORIES=	java mail
-MASTER_SITES=	http://kenai.com/downloads/javamail/
+MASTER_SITES=	https://kenai.com/downloads/javamail/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	ale@FreeBSD.org
