@@ -1,13 +1,13 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/devel/py-rauth/Makefile,v 1.6 2013/02/09 15:59:06 svnexp Exp $
+# $FreeBSD: devel/py-rauth/Makefile 315264 2013-03-26 07:34:10Z koobs $
 
 PORTNAME=	rauth
-PORTVERSION=	0.4.17
+PORTVERSION=	0.5.1
 CATEGORIES=	devel www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	koobs@FreeBSD.org
-COMMENT=	A Python library for OAuth 1.0/a, 2.0, and Ofly consumers
+COMMENT=	Python library for OAuth 1.0/a, 2.0, and Ofly consumers
 
 LICENSE=	MIT
 
@@ -15,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>0.12.0:${PORTSDIR}/www/py-requests
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	litl
-GH_COMMIT=	219d35f
+GH_COMMIT=	c520bf1
 
 OPTIONS_DEFINE=	TESTS
 TESTS_DESC=	Install tools for unit testing
