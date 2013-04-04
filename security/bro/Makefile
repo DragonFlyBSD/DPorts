@@ -1,8 +1,9 @@
 # Created by: David O'Brien <obrien@FreeBSD.org>
-# $FreeBSD: security/bro/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: security/bro/Makefile 315615 2013-03-30 13:47:49Z miwi $
 
 PORTNAME=	bro
 PORTVERSION=	2.1
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.bro-ids.org/downloads/release/
 

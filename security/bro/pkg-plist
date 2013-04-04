@@ -1,6 +1,7 @@
-@comment $FreeBSD: security/bro/pkg-plist 308122 2012-12-03 05:20:38Z kevlo $
+@comment $FreeBSD: security/bro/pkg-plist 315615 2013-03-30 13:47:49Z miwi $
 bin/binpac
 bin/bro
+lib/libbinpac.a
 include/binpac.h
 include/binpac_analyzer.h
 include/binpac_buffer.h
