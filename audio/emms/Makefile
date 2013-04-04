@@ -2,12 +2,12 @@
 # Date created:		10 May 2006
 # Whom:			Dryice Liu <dryice@dryice.name>
 #
-# $FreeBSD: ports/audio/emms/Makefile,v 1.20 2012/11/17 05:54:30 svnexp Exp $
+# $FreeBSD: audio/emms/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	emms
 PORTVERSION=	3.0
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	audio elisp
 MASTER_SITES=	GNU
 
