@@ -1,19 +1,18 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/devel/py-avro/Makefile,v 1.1 2013/02/01 13:43:17 svnexp Exp $
+# $FreeBSD: devel/py-avro/Makefile 315607 2013-03-30 12:06:26Z rm $
 
 PORTNAME=	avro
 PORTVERSION=	1.7.3
+PORTREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	APACHE
+MASTER_SITES=	http://www.sai.msu.su/apache/${PORTNAME}/${PORTNAME}-${PORTVERSION}/ \
+		APACHE
 MASTER_SITE_SUBDIR=	${PORTNAME}/stable
 PKGNAMEPREFIX=	py-
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	g.veniamin@googlemail.com
 COMMENT=	Data serialization system for python
-
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/simplejson/__init__.py:${PORTSDIR}/devel/py-simplejson
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/simplejson/__init__.py:${PORTSDIR}/devel/py-simplejson
 
 USE_PYDISTUTILS=	easy_install
 USE_PYTHON=		yes
