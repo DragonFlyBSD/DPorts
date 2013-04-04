@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/EsounD
-# Date created:		8 October 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/audio/ruby-esound/Makefile,v 1.8 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: audio/ruby-esound/Makefile 315601 2013-03-30 08:17:48Z miwi $
 
 PORTNAME=	esound
 PORTVERSION=	0.1
@@ -17,8 +13,9 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A Ruby binding to the EsounD library
 
-LIB_DEPENDS=	esd.2:${PORTSDIR}/audio/esound
+LIB_DEPENDS=	esd:${PORTSDIR}/audio/esound
 
+USE_PKGCONFIG=      build
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
 
