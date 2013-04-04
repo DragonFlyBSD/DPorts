@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: ports/graphics/p5-Imager/Makefile,v 1.68 2013/01/10 12:44:37 svnexp Exp $
+# $FreeBSD: graphics/p5-Imager/Makefile 315313 2013-03-26 16:20:52Z skreuzer $
 
 PORTNAME=	Imager
 PORTVERSION=	0.94
+PORTREVISION=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -41,6 +42,7 @@ MAN3=		Imager.3 \
 		Imager::Expr.3 \
 		Imager::Expr::Assem.3 \
 		Imager::ExtUtils.3 \
+		Imager::File::GIF.3 \
 		Imager::File::ICO.3 \
 		Imager::File::JPEG.3 \
 		Imager::File::PNG.3 \
