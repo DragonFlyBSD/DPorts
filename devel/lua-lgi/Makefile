@@ -1,7 +1,7 @@
-# $FreeBSD: devel/lua-lgi/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/lua-lgi/Makefile 315336 2013-03-26 22:16:03Z mandree $
 
 PORTNAME=	lgi
-PORTVERSION=	0.6.2
+PORTVERSION=	0.7.1
 CATEGORIES=	devel
 PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
@@ -11,10 +11,9 @@ COMMENT=	Lua bindings to libraries using GObject-Introspection
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-WRKSRC=		${WRKDIR}/pavouk-lgi-a4ad06c
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	pavouk
+GH_COMMIT=	1bbf1bc
 
 USE_LUA=	5.1+
 USE_GMAKE=	yes
