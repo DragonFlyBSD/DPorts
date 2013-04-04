@@ -2,12 +2,12 @@
 # Date created:				2010-04-12
 # Whom:					Frank Wall <fw@moov.de>
 #
-# $FreeBSD: mail/spmfilter/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: mail/spmfilter/Makefile 315332 2013-03-26 21:22:45Z cs $
 #
 
 PORTNAME=	spmfilter
 PORTVERSION=	0.4.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	http://www.${PORTNAME}.org/attachments/download/60/
 
