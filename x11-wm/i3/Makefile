@@ -1,8 +1,9 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11-wm/i3/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: x11-wm/i3/Makefile 314749 2013-03-20 17:19:06Z bapt $
 
 PORTNAME=	i3
-DISTVERSION=	4.4
+DISTVERSION=	4.5.1
+PORTREVISION=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://i3wm.org/downloads/ \
 		${MASTER_SITE_LOCAL}
@@ -28,7 +29,7 @@ RUN_DEPENDS=	p5-IPC-Run>=0:${PORTSDIR}/devel/p5-IPC-Run \
 		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny \
 		p5-AnyEvent-I3>=0:${PORTSDIR}/devel/p5-AnyEvent-I3
 
-USE_PERL5=	yes
+USE_PERL5_RUN=	yes
 USE_XORG=	x11 xcursor
 USES=		bison
 USE_BZIP2=	yes
