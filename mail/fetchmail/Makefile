@@ -1,15 +1,14 @@
 # Created by: Ville Eerola <ve@sci.fi>
-# $FreeBSD: mail/fetchmail/Makefile 313331 2013-03-03 08:13:07Z beech $
+# $FreeBSD: mail/fetchmail/Makefile 315268 2013-03-26 08:56:28Z mandree $
 #
 # NOTE:  The fetchmailconf program (an interactive program for
-# writing .fetchmailrc files) requires Python, Tk, X11, etc..
+# writing .fetchmailrc files) requires Python, Tk, X11, etc.
 #
 # The fetchmail program itself does not need Python, but if you
 # want fetchmailconf to work, define the X11 option.
 
 PORTNAME=	fetchmail
-PORTVERSION=	6.3.24
-PORTREVISION=	1
+PORTVERSION=	6.3.25
 CATEGORIES=	mail ipv6
 MASTER_SITES=	SF/${PORTNAME}/branch_6.3/ \
 		http://mandree.home.pages.de/${PORTNAME}/
