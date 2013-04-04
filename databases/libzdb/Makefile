@@ -1,12 +1,9 @@
-# New ports collection makefile for:	libzdb
-# Date created:				Nov 28 2005
-# Whom:					vanilla@
-#
-# $FreeBSD: databases/libzdb/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# Created by: vanilla@
+# $FreeBSD: databases/libzdb/Makefile 315332 2013-03-26 21:22:45Z cs $
 #
 
 PORTNAME=	libzdb
-PORTVERSION=	2.10.5
+PORTVERSION=	2.11.1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.tildeslash.com/libzdb/dist/ \
 		http://www.c-s.li/ports/
