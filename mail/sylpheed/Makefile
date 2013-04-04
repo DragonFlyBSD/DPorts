@@ -1,8 +1,9 @@
 # Created by: shigeri <shigeri@m10.alpha-net.ne.jp>
-# $FreeBSD: ports/mail/sylpheed/Makefile,v 1.136 2013/01/15 13:46:56 svnexp Exp $
+# $FreeBSD: mail/sylpheed/Makefile 315584 2013-03-29 23:46:31Z ehaupt $
 
 PORTNAME=	sylpheed
 PORTVERSION=	3.3.0
+PORTREVISION=	1
 CATEGORIES=	mail ipv6
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v${PORTVERSION:C/\.[^\.]*$//}/  \
 		CRITICAL
@@ -10,6 +11,7 @@ MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v${PORTVERSION:C/\.[^\.]*$//}/ 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Lightweight, featureful, and fast GTK+ based e-mail client
 
+LIB_DEPENDS=	aspell:${PORTSDIR}/textproc/aspell
 RUN_DEPENDS=	${LOCALBASE}/etc/mime.types:${PORTSDIR}/misc/mime-support
 
 USE_BZIP2=	yes
