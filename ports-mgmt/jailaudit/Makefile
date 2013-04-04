@@ -1,8 +1,8 @@
 # Created by: Philipp Wuensche <cryx-ports@h3q.com>
-# $FreeBSD: ports-mgmt/jailaudit/Makefile 313050 2013-02-27 13:03:46Z culot $
+# $FreeBSD: ports-mgmt/jailaudit/Makefile 315407 2013-03-27 19:20:31Z ohauer $
 
 PORTNAME=	jailaudit
-PORTVERSION=	1.3
+PORTVERSION=	1.4
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://outpost.h3q.com/software/jailaudit/
 
