@@ -2,11 +2,11 @@
 # Date created:		Di   5 Mai 1998 21:31:03 CEST
 # Whom:			andreas
 #
-# $FreeBSD: net/ntp-devel/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: net/ntp-devel/Makefile 315340 2013-03-27 00:19:37Z cy $
 #
 
 PORTNAME=	ntp
-PORTVERSION=	4.2.7p357
+PORTVERSION=	4.2.7p364
 CATEGORIES=	net ipv6
 MASTER_SITES=	ftp://ftp.udel.edu/pub/ntp/ntp4/ntp-dev/ \
 		http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-dev/ \
