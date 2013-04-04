@@ -1,10 +1,10 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: www/py-django/Makefile 313465 2013-03-05 17:29:02Z lwhsu $
+# $FreeBSD: www/py-django/Makefile 315546 2013-03-29 16:21:42Z lwhsu $
 
 PORTNAME=	django
-PORTVERSION=	1.5
+PORTVERSION=	1.5.1
 CATEGORIES=	www python
-MASTER_SITES=	https://www.djangoproject.com/m/releases/${PORTVERSION}/ \
+MASTER_SITES=	https://www.djangoproject.com/m/releases/${PORTVERSION:R}/ \
 		CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	Django-${PORTVERSION}
