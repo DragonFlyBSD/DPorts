@@ -1,8 +1,8 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/firefox/Makefile 313676 2013-03-08 22:27:39Z flo $
+# $FreeBSD: www/firefox/Makefile 315713 2013-04-03 20:27:48Z flo $
 
 PORTNAME=	firefox
-DISTVERSION=	19.0.2
+DISTVERSION=	20.0
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -13,7 +13,7 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
 BUILD_DEPENDS=	nspr>=4.9.4:${PORTSDIR}/devel/nspr \
-		nss>=3.14.1:${PORTSDIR}/security/nss \
+		nss>=3.14.3:${PORTSDIR}/security/nss \
 		sqlite3>=3.7.14.1:${PORTSDIR}/databases/sqlite3 \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		cairo>=1.10.2_1,1:${PORTSDIR}/graphics/cairo \
@@ -50,6 +50,7 @@ OPTIONS_DEFINE=	GSTREAMER PGO WEBRTC
 OPTIONS_DEFAULT=GIO WEBRTC
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
+
 
 .include <bsd.port.pre.mk>
 
@@ -89,6 +90,7 @@ post-extract:
 
 post-patch:
 	@${REINPLACE_CMD} -e '/MOZPNG/s/=[0-9]*/=10511/' \
+		-e '/^SQLITE_VERSION/s/=.*/=3.7.14.1/' \
 		${WRKSRC}/configure.in
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/browser/app/nsBrowserApp.cpp
