@@ -1,21 +1,16 @@
-# New ports collection makefile for:	kshutdown
-# Date created:				Mon Jan  9 18:06:42 CET 2006
-# Whom:					Markus Brueffer <markus@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/kshutdown-kde4/Makefile,v 1.23 2012/11/17 06:01:36 svnexp Exp $
+# $FreeBSD: sysutils/kshutdown-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	kshutdown
-DISTVERSION=	3.0beta4
-PORTREVISION=	1
+DISTVERSION=	3.0beta6
 CATEGORIES=	sysutils kde
-MASTER_SITES=	SF/${PORTNAME}/KShutdown/3.0%20Beta%204/
+MASTER_SITES=	SF/${PORTNAME}/KShutdown/3.0%20Beta%206/
 DISTNAME=	${PORTNAME}-source-${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Advanced shutdown utility for KDE
 
 USE_ZIP=	yes
-USE_CMAKE=	yes
+USES=		cmake
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_KDE4=	automoc4 kdehier kdeprefix workspace
 
