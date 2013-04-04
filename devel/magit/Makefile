@@ -1,7 +1,8 @@
-# $FreeBSD: ports/devel/magit/Makefile,v 1.12 2012/12/23 10:29:52 svnexp Exp $
+# $FreeBSD: devel/magit/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	magit
 PORTVERSION=	1.2.0
+PORTREVISION=	1
 CATEGORIES=	devel elisp
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://cloud.github.com/downloads/magit/magit/
