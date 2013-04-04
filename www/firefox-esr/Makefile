@@ -1,8 +1,8 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/firefox-esr/Makefile 313676 2013-03-08 22:27:39Z flo $
+# $FreeBSD: www/firefox-esr/Makefile 315713 2013-04-03 20:27:48Z flo $
 
 PORTNAME=	firefox
-DISTVERSION=	17.0.4
+DISTVERSION=	17.0.5
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -53,17 +53,6 @@ OPTIONS_DEFAULT=GIO
 .include <bsd.port.pre.mk>
 
 WRKSRC:=	${WRKDIR}/mozilla-esr17
-
-.if ${ARCH} == x86_64
-CONFIGURE_TARGET=x86_64-portbld-freebsd${OSREL}
-.elif ${ARCH} == powerpc64
-.if ${OSVERSION} < 900033
-BROKEN=		Needs binutils 2.17.50 to build
-.else
-MOZ_EXPORT+=	UNAME_m="powerpc64"
-CFLAGS+=	-mminimal-toc
-.endif
-.endif
 
 .if ${PORT_OPTIONS:MPGO}
 USE_GCC?=	any
