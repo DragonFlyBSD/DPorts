@@ -2,12 +2,12 @@
 # Date created:				2012-05-12
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: ports/astro/libkgeomap/Makefile,v 1.5 2013/02/04 01:23:12 svnexp Exp $
+# $FreeBSD: astro/libkgeomap/Makefile 315375 2013-03-27 12:00:14Z makc $
 #
 
 PORTNAME=	libkgeomap
 PORTVERSION=	${DIGIKAM_VER}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	astro kde
 
 MAINTAINER=	kde@FreeBSD.org
