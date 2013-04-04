@@ -1,7 +1,8 @@
-# $FreeBSD: math/gnuplot/Makefile 315064 2013-03-23 18:35:52Z glewis $
+# $FreeBSD: math/gnuplot/Makefile 315259 2013-03-26 06:06:30Z glewis $
 
 PORTNAME=	gnuplot
 PORTVERSION=	4.6.2
+PORTREVISION=	1
 CATEGORIES=	math graphics
 MASTER_SITES=	SF
 
@@ -29,8 +30,6 @@ WX_DESC=		Enable WX support
 X11_DESC=		Enable X11 support
 
 OPTIONS_DEFAULT=CAIRO GD PDF PLOT TETEX WX X11
-
-USE_GCC=	any
 
 MAN1=		gnuplot.1 lasergnu.1
 
