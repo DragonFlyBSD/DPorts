@@ -2,12 +2,12 @@
 # Date created:		2 May 2008
 # Whom:			Peter Schuller <peter.schuller@infidyne.com>
 #
-# $FreeBSD: ports/textproc/doc-mode.el/Makefile,v 1.14 2012/11/17 06:01:54 svnexp Exp $
+# $FreeBSD: textproc/doc-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	doc-mode.el
 PORTVERSION=	1.1
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	textproc elisp
 MASTER_SITES=	SF/xpt/doc-mode/doc-mode-${PORTVERSION}
 DISTNAME=	doc-mode-${PORTVERSION}
