@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: ports/devel/liboop/Makefile,v 1.37 2013/01/12 13:02:14 svnexp Exp $
+# $FreeBSD: devel/liboop/Makefile 315360 2013-03-27 08:57:02Z wen $
 
 PORTNAME=	liboop
 PORTVERSION=	1.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	GENTOO/distfiles \
 		http://download.ofb.net/liboop/
