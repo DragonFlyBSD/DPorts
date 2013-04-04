@@ -1,11 +1,11 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: ports/archivers/paq/Makefile,v 1.37 2013/02/14 15:47:23 svnexp Exp $
+# $FreeBSD: archivers/paq/Makefile 315495 2013-03-28 19:52:13Z bf $
 
 PORTNAME=	paq
-PORTVERSION=	20130213
+PORTVERSION=	20130325
 CATEGORIES=	archivers
 MASTER_SITES=	http://mattmahoney.net/dc/ LOCAL/bf/paq/
-DISTFILES=	wbpe110.zip zpaq622.zip zpipe.201.zip
+DISTFILES=	wbpe110.zip zpaq623.zip zpipe.201.zip
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${DISTFILES:M*.zip}
 
@@ -100,7 +100,7 @@ do-build:
 	${CXX} ${CXXFLAGS} -o wbpe wbpe.cpp; \
 	${CXX} ${CXXFLAGS} ${OPENMP_CFLAGS} ${ZPAQFLAGS} \
 	-o zpaq zpaq.cpp libzpaq.cpp divsufsort.c ${LDFLAGS} -pthread; \
-	${CXX} ${CXXFLAGS} ${ZPAQFLAGS} \
+	${CXX} ${CXXFLAGS:N-DNDEBUG} ${ZPAQFLAGS} \
 	-o zpaqd zpaqd.cpp libzpaq.cpp ${LDFLAGS}; \
 	${CXX} ${CXXFLAGS} ${ZPAQFLAGS} -o zpipe zpipe.cpp libzpaq.cpp
 
