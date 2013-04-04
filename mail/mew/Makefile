@@ -3,12 +3,12 @@
 # Whom:			Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
 #			Hiroto Kagotani <hiroto.kagotani@gmail.com>
 #
-# $FreeBSD: ports/mail/mew/Makefile,v 1.58 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/mew/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	mew
 PORTVERSION=	6.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail elisp
 MASTER_SITES=	http://www.mew.org/Release/
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
