@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/misc/kdeedu4/Makefile,v 1.86 2013/02/04 01:04:22 svnexp Exp $
+# $FreeBSD: misc/kdeedu4/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kdeedu
 PORTVERSION=	${KDE4_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Set of entertaining, educational programs for KDE 4 (meta-port)
+COMMENT=	Entertaining and educational programs for KDE 4 (meta port)
 
 LATEST_LINK=	${PORTNAME}4
 
