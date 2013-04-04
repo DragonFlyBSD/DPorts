@@ -1,9 +1,8 @@
 # Created by: rene@FreeBSD.org (repocopied from audio/py-mpd)
-# $FreeBSD: ports/audio/py-mpd2/Makefile,v 1.3 2013/01/14 22:44:17 svnexp Exp $
+# $FreeBSD: audio/py-mpd2/Makefile 315214 2013-03-25 10:39:51Z rene $
 
 PORTNAME=	mpd2
-PORTVERSION=	0.5.0
-PORTREVISION=	1
+PORTVERSION=	0.5.1
 CATEGORIES=	audio python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	python-${PORTNAME}-${PORTVERSION}
@@ -15,7 +14,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	Mic92
 GH_PROJECT=	python-${PORTNAME}
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	7471873
+GH_COMMIT=	f8d5946
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
@@ -25,7 +24,7 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
-PORTDOCS=	commands.txt
+PORTDOCS=	commands.rst
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 PORTEXAMPLES=	locking.py logger.py
 
