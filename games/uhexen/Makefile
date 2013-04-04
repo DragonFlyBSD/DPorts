@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/games/uhexen/Makefile,v 1.24 2012/11/22 15:41:41 svnexp Exp $
+# $FreeBSD: games/uhexen/Makefile 315369 2013-03-27 10:20:36Z miwi $
 
 PORTNAME=	uhexen
 PORTVERSION=	0.601
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/U-hexen%20version%20${PORTVERSION}
 
@@ -16,6 +16,8 @@ USE_SDL=	mixer sdl
 OPTIONS_DEFINE=	MUSIC
 OPTIONS_DEFAULT=	MUSIC
 MUSIC_DESC=	In-game MIDI music support
+
+PLIST_FILES=	bin/uhexen
 
 .include <bsd.port.pre.mk>
 

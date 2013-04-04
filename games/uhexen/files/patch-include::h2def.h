@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/uhexen/files/patch-include::h2def.h,v 1.2 2012/11/17 05:57:55 svnexp Exp $
+$FreeBSD: games/uhexen/files/patch-include::h2def.h 300896 2012-07-14 13:54:48Z beat $
 
 --- include/h2def.h	2003/02/10 14:43:33	1.1
 +++ include/h2def.h	2003/02/10 14:46:37

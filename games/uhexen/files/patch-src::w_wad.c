@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/uhexen/files/patch-src::w_wad.c,v 1.2 2012/11/17 05:57:55 svnexp Exp $
+$FreeBSD: games/uhexen/files/patch-src::w_wad.c 300896 2012-07-14 13:54:48Z beat $
 
 --- src/w_wad.c	2003/02/10 14:47:45	1.1
 +++ src/w_wad.c	2003/02/10 14:47:58

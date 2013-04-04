@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/uhexen/files/patch-src::h2_main.c,v 1.3 2012/11/22 15:41:41 svnexp Exp $
+$FreeBSD: games/uhexen/files/patch-src::h2_main.c 307656 2012-11-22 15:37:58Z danfe $
 
 --- src/h2_main.c.orig	Tue Dec  4 18:11:47 2001
 +++ src/h2_main.c	Mon Feb 10 16:56:31 2003
