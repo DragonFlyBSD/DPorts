@@ -2,12 +2,12 @@
 # Date created:		23 October 2001
 # Whom:			J Koshy <jkoshy@freebsd.org>
 #
-# $FreeBSD: ports/lang/ocaml-mode.el/Makefile,v 1.23 2012/11/17 05:58:53 svnexp Exp $
+# $FreeBSD: lang/ocaml-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	caml-mode
 PORTVERSION=	3.01
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	lang elisp
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/ \
 		${MASTER_SITE_LOCAL}
