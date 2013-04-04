@@ -1,8 +1,9 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: lang/fsharp/Makefile 314770 2013-03-20 22:07:40Z pgj $
+# $FreeBSD: lang/fsharp/Makefile 315634 2013-03-31 13:11:04Z pgj $
 
 PORTNAME=	fsharp
 PORTVERSION=	3.0.25
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://nodeload.github.com/fsharp/fsharp/tar.gz/ \
 		CRITICAL
@@ -20,6 +21,13 @@ USE_AUTOTOOLS=	autoconf
 USE_PKGCONFIG=	build
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+# This is currently a workaround for the differences between pkg_* and pkg(8).
+.if defined(WITH_PKGNG)
+PLIST_SUB+=	LB="${LOCALBASE}/"
+.else
+PLIST_SUB+=	LB=""
+.endif
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
