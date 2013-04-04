@@ -1,0 +1,2 @@
+LDFLAGS+= -L${LOCALBASE}/lib -lX11
+LDFLAGS+= -L${LOCALBASE}/kde4/lib -lsolid
