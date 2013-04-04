@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/www/httpcore/Makefile,v 1.15 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/httpcore/Makefile 315528 2013-03-29 08:25:48Z ale $
 
 PORTNAME=	httpcore
-DISTVERSION=	4.2.3
+DISTVERSION=	4.2.4
 CATEGORIES=	www java
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=	httpcomponents/${PORTNAME}/binary
@@ -24,6 +24,8 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar %%JAVAJARDIR%%/${PORTNAME}-nio.jar
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+.include <bsd.port.options.mk>
+
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR file as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${INSTALL_DATA} ${WRKSRC}/lib/${PORTNAME}-${DISTVERSION}.jar \
@@ -33,7 +35,7 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/lib/${PORTNAME}-nio-${DISTVERSION}.jar \
 		${JAVAJARDIR}/${PORTNAME}-nio.jar
 	@${ECHO_MSG} " [DONE]"
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${ECHO_MSG} -n ">> Installing documentation..."
 	@${MKDIR} ${DOCSDIR}
 	@cd ${WRKSRC} && ${FIND} javadoc tutorial \
@@ -41,7 +43,7 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES.txt ${DOCSDIR}/
 	@${ECHO_MSG} " [DONE]"
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${ECHO_MSG} -n ">> Installing examples..."
 	@${MKDIR} ${EXAMPLESDIR}
 	@cd ${WRKSRC}/examples && ${FIND} . \
