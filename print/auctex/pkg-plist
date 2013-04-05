@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/print/auctex/pkg-plist,v 1.19 2013/01/01 23:45:11 svnexp Exp $
+@comment $FreeBSD: print/auctex/pkg-plist 309795 2013-01-01 23:35:09Z hrs $
 %%LISPDIR%%/auctex.el
 %%LISPDIR%%/preview-latex.el
 %%LISPDIR%%/tex-site.el

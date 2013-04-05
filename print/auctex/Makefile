@@ -1,8 +1,9 @@
 # Created by: Martin Kammerhofer
-# $FreeBSD: ports/print/auctex/Makefile,v 1.47 2013/01/01 23:45:11 svnexp Exp $
+# $FreeBSD: print/auctex/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	auctex
 PORTVERSION=	11.87
+PORTREVISION=	1
 CATEGORIES=	print elisp
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
