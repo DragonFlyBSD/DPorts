@@ -2,12 +2,12 @@
 # Date created:		7 Apr 1999
 # Whom: 		MANTANI Nobutaka <nobutaka@nobutaka.com>
 #
-# $FreeBSD: ports/mail/wanderlust/Makefile,v 1.56 2012/11/17 05:59:17 svnexp Exp $
+# $FreeBSD: mail/wanderlust/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	wanderlust
 PORTVERSION=	2.14.0
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	mail elisp
 MASTER_SITES=	ftp://ftp.gohome.org/wl/stable/ \
 		${MASTER_SITE_RINGSERVER:S,%SUBDIR%,text/elisp/wl/stable/&,} \

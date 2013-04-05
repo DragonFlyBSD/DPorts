@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/mail/wanderlust/files/patch-utils_ptexinfmt.el,v 1.2 2012/11/17 05:59:17 svnexp Exp $
+$FreeBSD: mail/wanderlust/files/patch-utils_ptexinfmt.el 303709 2012-09-05 15:10:13Z nobutaka $
 
 --- utils/ptexinfmt.el.orig
 +++ utils/ptexinfmt.el
