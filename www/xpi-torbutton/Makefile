@@ -1,8 +1,8 @@
 # Created by: Andreas Donig <a.donig@gmx.net>
-# $FreeBSD: www/xpi-torbutton/Makefile 313261 2013-03-02 15:04:17Z miwi $
+# $FreeBSD: www/xpi-torbutton/Makefile 315317 2013-03-26 17:28:33Z miwi $
 
 PORTNAME=	torbutton
-PORTVERSION=	1.5.0
+PORTVERSION=	1.5.1
 CATEGORIES=	www
 MASTER_SITES=	https://www.torproject.org/dist/torbutton/
 
