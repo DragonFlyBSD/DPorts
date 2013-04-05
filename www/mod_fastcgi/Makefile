@@ -1,18 +1,19 @@
 # Created by: JunSeon Oh <hollywar@mail.holywar.net>
-# $FreeBSD: ports/www/mod_fastcgi/Makefile,v 1.33 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_fastcgi/Makefile 315402 2013-03-27 18:17:22Z ohauer $
 
 PORTNAME=	mod_fastcgi
-PORTVERSION=	2.4.6
-PORTREVISION=	3
+PORTVERSION=	2.4.7
 CATEGORIES=	www
-MASTER_SITES=	http://www.fastcgi.com/dist/
+MASTER_SITES=	http://www.fastcgi.com/dist/ \
+		LOCAL/ohauer
+DISTNAME=	mod_fastcgi-SNAP-0910052141
+DIST_SUBDIR=	apache2
 
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	A fast-cgi module for Apache
 
 MAKE_JOBS_SAFE=	yes
 
-CONFLICTS=	apache-contrib-1.*
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
