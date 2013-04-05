@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Free Pascal Compiler Docs
-# Date created: 			9 February 2004
-# Whom: 				John Merryweather Cooper
-#
-# $FreeBSD: ports/lang/fpc-docs/Makefile,v 1.18 2012/11/17 05:58:49 svnexp Exp $
-#
+# Created by:	John Merryweather Cooper
+# $FreeBSD: lang/fpc-docs/Makefile 314989 2013-03-23 05:25:05Z acm $
 
 PORTNAME=	docs
-PORTVERSION=	2.6.0
+PORTVERSION=	2.6.2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.freepascal.org/pub/fpc/dist/${PORTVERSION}/docs/ \
 		ftp://planetmirror.com/pub/fpc/dist/${PORTVERSION}/docs/ \
