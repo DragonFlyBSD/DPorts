@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libevtx/Makefile 313730 2013-03-09 16:35:59Z rm $
+# $FreeBSD: devel/libevtx/Makefile 315434 2013-03-28 04:47:09Z miwi $
 
 PORTNAME=	libevtx
-DISTVERSION=	alpha-20130303
+DISTVERSION=	alpha-20130319
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
