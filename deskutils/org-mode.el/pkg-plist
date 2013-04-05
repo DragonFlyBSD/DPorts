@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/deskutils/org-mode.el/pkg-plist,v 1.4 2012/11/17 05:55:29 svnexp Exp $
+@comment $FreeBSD: deskutils/org-mode.el/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%EMACS_LIBDIR%%/etc/org-mode/styles/OrgOdtContentTemplate.xml
 %%EMACS_LIBDIR%%/etc/org-mode/styles/OrgOdtStyles.xml
 %%EMACS_LIBDIR%%/etc/org-mode/styles/README

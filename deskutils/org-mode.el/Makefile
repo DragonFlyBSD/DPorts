@@ -2,12 +2,12 @@
 # Date created:		2007-02-15
 # Whom:			Kai Wang <kaiw27@gmail.com>
 #
-# $FreeBSD: ports/deskutils/org-mode.el/Makefile,v 1.13 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/org-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	org-mode.el
 PORTVERSION=	7.8.11
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	deskutils elisp
 MASTER_SITES=	http://orgmode.org/
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
