@@ -1,13 +1,13 @@
-# $FreeBSD: ports/www/py-plone.app.vocabularies/Makefile,v 1.6 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-plone.app.vocabularies/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone.app.vocabularies
-PORTVERSION=	2.1.7
+PORTVERSION=	2.1.10
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	zope@FreeBSD.org
-COMMENT=	A collection of generally useful vocabularies
+COMMENT=	Collection of generally useful vocabularies
 
 LICENSE=	GPLv2
 
@@ -25,7 +25,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.browser>=0:${PORTSDIR}/devel/py-zope.br
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
-USE_ZIP=	yes
 USE_ZOPE=	yes
 
 .include <bsd.port.mk>
