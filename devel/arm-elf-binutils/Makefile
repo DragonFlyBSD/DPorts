@@ -1,8 +1,8 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: devel/arm-elf-binutils/Makefile 313324 2013-03-03 04:03:36Z beech $
+# $FreeBSD: devel/arm-elf-binutils/Makefile 315415 2013-03-27 21:22:47Z bdrewery $
 
 PORTNAME=	binutils
-PORTVERSION=	2.23.1
+PORTVERSION=	2.23.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEWARE}
 MASTER_SITE_SUBDIR=	binutils/releases
