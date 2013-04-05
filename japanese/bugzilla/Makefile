@@ -1,7 +1,7 @@
-# $FreeBSD: ports/japanese/bugzilla/Makefile,v 1.29 2012/11/22 20:22:05 svnexp Exp $
+# $FreeBSD: japanese/bugzilla/Makefile 315642 2013-03-31 17:36:29Z ohauer $
 
 PORTNAME=	bugzilla
-PORTVERSION=	4.0.9
+PORTVERSION=	4.0.10
 CATEGORIES=	japanese
 MASTER_SITES=	http://bug-ja.org/releases/4.0/ \
 		LOCAL
