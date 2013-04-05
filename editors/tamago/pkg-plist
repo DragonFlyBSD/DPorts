@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/editors/tamago/pkg-plist,v 1.15 2012/11/17 05:57:18 svnexp Exp $
+@comment $FreeBSD: editors/tamago/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/egg-helper
 %%ELISPDIR%%/egg/egg-cnv.el
 %%ELISPDIR%%/egg/egg-cnv.elc

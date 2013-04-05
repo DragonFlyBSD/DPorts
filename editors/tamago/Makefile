@@ -1,9 +1,9 @@
 # Created by: tetsushi NAKAI <nakai@tsl.pe.u-tokyo.ac.jp>
-# $FreeBSD: ports/editors/tamago/Makefile,v 1.53 2013/02/02 18:46:52 svnexp Exp $
+# $FreeBSD: editors/tamago/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	tamago
 PORTVERSION=	4.0.6.0.20041122.19
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	editors elisp
 MASTER_SITES=	${MASTER_SITE_DEBIAN}
 MASTER_SITE_SUBDIR=	pool/main/e/egg
