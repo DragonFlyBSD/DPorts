@@ -1,13 +1,13 @@
-# $FreeBSD: ports/www/py-Products.CMFPlone/Makefile,v 1.6 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: www/py-Products.CMFPlone/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.CMFPlone
-PORTVERSION=	4.2.1.1
+PORTVERSION=	4.2.5
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	zope@FreeBSD.org
-COMMENT=	The Plone Content Management System (core)
+COMMENT=	Plone Content Management System (core)
 
 LICENSE=	GPLv2
 
