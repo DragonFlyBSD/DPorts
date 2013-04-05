@@ -1,9 +1,10 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: x11/gnome-libs/Makefile 314556 2013-03-18 11:40:04Z bapt $
+# $FreeBSD: x11/gnome-libs/Makefile 315631 2013-03-31 09:05:28Z kwm $
 #   $MCom: ports/x11/gnome-libs/Makefile,v 1.7 2007/08/04 03:51:32 marcus Exp $
+
 PORTNAME=	gnome-libs
 PORTVERSION=	1.4.2
-PORTREVISION=	18
+PORTREVISION=	20
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -20,7 +21,8 @@ USE_BZIP2=	yes
 USE_XORG=	xpm ice x11
 USE_PERL5=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix esound gtk12 imlib libxml orbit
+USES=		pathfix
+USE_GNOME=	gnomehier gnomeprefix esound gtk12 imlib libxml orbit
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
