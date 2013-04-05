@@ -1,9 +1,9 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: ports/editors/flim/Makefile,v 1.64 2013/01/26 11:50:35 svnexp Exp $
+# $FreeBSD: editors/flim/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	flim
 PORTVERSION=	${FLIM_VER}
-PORTREVISION=	11
+PORTREVISION=	12
 PORTEPOCH=	1
 CATEGORIES=	editors elisp
 MASTER_SITES=	http://git.chise.org/elisp/dist/flim/flim-1.14/
