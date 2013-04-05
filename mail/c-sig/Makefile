@@ -1,9 +1,9 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
-# $FreeBSD: ports/mail/c-sig/Makefile,v 1.21 2013/01/15 21:46:41 svnexp Exp $
+# $FreeBSD: mail/c-sig/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	c-sig
 PORTVERSION=	3.8
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	mail elisp
 MASTER_SITES=	LOCAL
 MASTER_SITE_SUBDIR=	tota/${PORTNAME}
