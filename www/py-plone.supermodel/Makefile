@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-plone.supermodel
-# Date created:				02 January 2012
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/www/py-plone.supermodel/Makefile,v 1.4 2012/11/17 06:03:01 svnexp Exp $
-#
+# $FreeBSD: www/py-plone.supermodel/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone.supermodel
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.4
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
