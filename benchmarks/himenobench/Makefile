@@ -2,26 +2,29 @@
 # Date Created:                16 Aug 2004
 # Whom:                        NAKATA Maho <maho@FreeBSD.org>
 #
-# $FreeBSD: ports/benchmarks/himenobench/Makefile,v 1.18 2012/11/17 05:54:50 svnexp Exp $
+# $FreeBSD: benchmarks/himenobench/Makefile 315344 2013-03-27 02:53:44Z maho $
 #
 
 PORTNAME=	himenobench
 PORTVERSION=	2004.08.16
 PORTREVISION=	3
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://accc.riken.jp/assets/files/himenob_loadmodule/
-DISTFILES=	himenoBMTxp_xl.lzh himenoBMTxp_l.lzh himenoBMTxp_m.lzh \
-		himenoBMTxp_s.lzh cc_himenoBMTxp_xl.lzh cc_himenoBMTxp_l.lzh \
-		cc_himenoBMTxp_m.lzh cc_himenoBMTxp_s.lzh f90_xp.lzh himenoBMTxpa.lzh
+MASTER_SITES=	http://accc.riken.jp/secure/4502/:C http://accc.riken.jp/secure/4503/:C \
+		http://accc.riken.jp/secure/4504/:F90 http://accc.riken.jp/secure/4505/:F77
+DISTFILES=	himenoBMTxp_xl.lzh:F77 himenoBMTxp_l.lzh:F77 himenoBMTxp_m.lzh:F77 \
+		himenoBMTxp_s.lzh:F77 cc_himenoBMTxp_xl.lzh:C cc_himenoBMTxp_l.lzh:C \
+		cc_himenoBMTxp_m.lzh:C cc_himenoBMTxp_s.lzh:C f90_xp.lzh:F90 himenobmtxpa.lzh:C
 DIST_SUBDIR=	himeno
 
 MAINTAINER=	maho@FreeBSD.org
 COMMENT=	Himeno bench benchmark, solves Poisson eq. with Jacobi's method
 
+NO_WRKSUBDIR=	yes
+USE_LHA=	yes
+
 .if defined(WITH_ICC)
 BUILD_DEPENDS=	${LOCALBASE}/intel_cc_80/bin/icc:${PORTSDIR}/lang/icc
 .endif
-EXTRACT_DEPENDS=	lha:${PORTSDIR}/archivers/lha
 
 USE_FORTRAN=	yes
 .if defined(WITH_IFC)
@@ -56,11 +59,6 @@ PLIST_SUB+=	WITH_GFORTRAN="@comment "
 PLIST_SUB+=	WITH_GFORTRAN=""
 .endif
 
-do-extract:
-	@${MKDIR} ${WRKSRC}
-	@for i in ${DISTFILES}; do \
-	cd ${WRKSRC} ; lha xf ${DISTDIR}/${DIST_SUBDIR}/$$i; \
-	done
 do-build:
 .if ${USE_FORTRAN} == yes
 	cd ${WRKSRC} ; ${FC} ${FFLAGS} -o himenobmtxp    himenobmtxp.f90
