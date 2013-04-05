@@ -1,0 +1,93 @@
+# Created by: Andreas Klemm <andreas@klemm.gtn.com>
+# $FreeBSD: ports/sysutils/webmin/Makefile,v 1.332 2013/02/18 14:40:00 svnexp Exp $
+
+PORTNAME=	webmin
+PORTVERSION=	1.620
+CATEGORIES=	sysutils
+MASTER_SITES=	http://download.webmin.com/updates/:up \
+		SF/webadmin/${PORTNAME}/${PORTVERSION}:sf \
+		${MASTER_SITE_LOCAL:S/$/:up/}
+MASTER_SITE_SUBDIR=	olgeni/:up
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:sf ${WEBMIN_MODULES:S/gz$/gz:up/}
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+MAINTAINER=	olgeni@FreeBSD.org
+COMMENT=	Web-based interface for system administration for Unix
+
+RUN_DEPENDS=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay \
+		p5-IO-Tty>=0:${PORTSDIR}/devel/p5-IO-Tty \
+		p5-Authen-PAM>=0:${PORTSDIR}/security/p5-Authen-PAM
+
+USE_PERL5=	yes
+USE_PYTHON=	yes
+USE_RC_SUBR=	webmin
+SUB_LIST=	PERL5=${PERL}
+SUB_FILES=	pkg-message
+
+WEBMIN_MODULES=
+
+post-extract:
+	@${RM} -f ${WRKSRC}/mount/freebsd-mounts-?
+	@if [ "${WEBMIN_MODULES}" != "" ]; then \
+		for webmin_module in ${WEBMIN_MODULES}; do \
+			${ECHO} "===> Unpacking updated module: $${webmin_module}"; \
+			${TAR} --unlink -xzf ${DISTDIR}/$${webmin_module} -C ${WRKSRC}; \
+		done; \
+	fi
+
+post-patch:
+	@${REINPLACE_CMD} -e "s@%%PREFIX%%@${PREFIX}@g" ${WRKSRC}/setup.sh
+
+	@${FIND} ${WRKSRC} -name config-freebsd\* \
+		-exec ${REINPLACE_CMD} -e "s@/usr/local@${PREFIX}@g" {} \; \
+		-exec ${REINPLACE_CMD} -e "s@%%PREFIX%%@${PREFIX}@g" {} \;
+
+	@${FIND} ${WRKSRC} -name "*.cgi" -exec \
+		${REINPLACE_CMD} -e "s@#!/usr/local/bin/perl@#!${PERL}@" {} \;
+	@${FIND} ${WRKSRC} -name "*.cgi" -exec \
+		${REINPLACE_CMD} -e "s@#!/usr/bin/perl@#!${PERL}@" {} \;
+	@${FIND} ${WRKSRC} -name "*.pl" -exec \
+		${REINPLACE_CMD} -e "s@#!/usr/local/bin/perl@#!${PERL}@" {} \;
+	@${FIND} ${WRKSRC} -name "*.pl" -exec \
+		${REINPLACE_CMD} -e "s@#!/usr/bin/perl@#!${PERL}@" {} \;
+
+	@${FIND} ${WRKSRC} -name "*.orig" -delete
+	@${FIND} ${WRKSRC} -name "*.bak" -delete
+	@${FIND} ${WRKSRC} -name "*.pyc" -delete
+
+do-build:
+	@${CC} ${CFLAGS} -o ${WRKSRC}/mount/freebsd-mounts-7 ${WRKSRC}/mount/freebsd-mounts-7.c
+
+do-install:
+	@${MKDIR} ${PREFIX}/lib/webmin
+	@${CP} -r ${WRKSRC}/* ${PREFIX}/lib/webmin
+
+post-install:
+	@${PYTHON_CMD} -O -mcompileall ${PREFIX}/lib/webmin/ajaxterm/ajaxterm/
+	@${PYTHON_CMD} -mcompileall ${PREFIX}/lib/webmin/ajaxterm/ajaxterm/
+
+	@cd ${WRKSRC} ; ${FIND} * -type f -o -type l | ${SORT} | ${AWK} \
+		'{ print "lib/webmin/" $$1 }' > ${WRKDIR}/PLIST.lib-webmin
+	@cd ${WRKSRC} ; ${FIND} * -type f -name "*.py" | ${SED} -e "s/\\.py/.pyc/" | ${SORT} | ${AWK} \
+		'{ print "lib/webmin/" $$1 }' >> ${WRKDIR}/PLIST.lib-webmin
+	@cd ${WRKSRC} ; ${FIND} * -type f -name "*.py" | ${SED} -e "s/\\.py/.pyo/" | ${SORT} | ${AWK} \
+		'{ print "lib/webmin/" $$1 }' >> ${WRKDIR}/PLIST.lib-webmin
+	@cd ${WRKSRC} ; ${FIND} * -type d -empty | ${SORT} -r | ${AWK} \
+		'{ print "lib/webmin/" $$1 }' | ${SED} -e 's#^#@exec mkdir -p %D/#g' \
+		>> ${WRKDIR}/PLIST.lib-webmin
+	@cd ${WRKSRC} ; ${FIND} * -type d | ${SORT} -r | ${AWK} \
+		'{ print "lib/webmin/" $$1 }' | ${SED} -e 's/^/@dirrm /g' \
+		>> ${WRKDIR}/PLIST.lib-webmin
+	@${ECHO_CMD} "r ${TMPPLIST}"			> ${WRKDIR}/ex.script
+	@${ECHO_CMD} "/Insert PLIST.lib-webmin"		>> ${WRKDIR}/ex.script
+	@${ECHO_CMD} "d"				>> ${WRKDIR}/ex.script
+	@${ECHO_CMD} "r ${WRKDIR}/PLIST.lib-webmin"	>> ${WRKDIR}/ex.script
+	@${ECHO_CMD} "x!"				>> ${WRKDIR}/ex.script
+	@${CP} -p ${TMPPLIST} ${TMPPLIST}.pre-lib-webmin
+	@cd ${WRKDIR} ; ex < ex.script
+	@if [ -d ${PREFIX}/etc/webmin ]; then \
+		${PREFIX}/lib/webmin/setup.sh; \
+	fi
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.mk>

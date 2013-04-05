@@ -1,0 +1,5 @@
+@comment Insert PLIST.lib-webmin here
+@comment -=[ begin PLIST.lib-webmin ]=-
+@comment -=[ end PLIST.lib-webmin ]=-
+@dirrmtry lib/webmin
+@exec [ -d %D/etc/webmin ] && %D/lib/webmin/setup.sh || true
