@@ -1,0 +1,12 @@
+--- SConstruct.intermediate	2013-04-05 13:45:25.090861000 +0000
++++ SConstruct
+@@ -167,6 +167,9 @@ def CreateEnvironment():
+     wget = 'wget'
+     if GetOS() == 'Darwin':
+         wget = 'curl -O'
++    elif GetOS() == 'DragonFly':
++        wget = 'fetch'
++        make = 'gmake'
+     elif GetOS() == 'FreeBSD':
+         wget = 'fetch'
+         make = 'gmake'

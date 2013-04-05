@@ -1,0 +1,28 @@
+--- SConstruct.orig	2012-07-17 23:25:59.000000000 -0500
++++ SConstruct	2012-07-17 23:40:11.633113871 -0500
+@@ -176,10 +176,12 @@ def CreateEnvironment():
+ 
+     libln_builder = Builder(action='ln -s ${SOURCE.name} ${TARGET.name}',
+                             chdir=True)
+-    env = Environment(ENV=os.environ, CFLAGS=cflags, CXXFLAGS=cflags,
+-                      TAR=tar, MAKE=make, WGET=wget,
+-                      CPPPATH=['.'] + allinc(),
+-                      tools=['default', 'textfile'])
++    env = Environment(tools=['default', 'textfile'], **ARGUMENTS)
++    env['ENV'] = os.environ
++    env['TAR'] = tar
++    env['MAKE'] = make
++    env['CPPPATH'] = ['.'] + allinc()
++
+     env.Append(BUILDERS={'InstallAsSymlink': libln_builder})
+     return env
+ 
+@@ -420,7 +422,7 @@ def DoInstall():
+                                  lib_target_bin),
+             ]
+ 
+-    lib_pkgconfig_target = env.Install(os.path.join(libdir, 'pkgconfig'),
++    lib_pkgconfig_target = env.Install(os.path.join(env['PREFIX'], 'libdata/pkgconfig'),
+                                        ['sunpinyin-2.0.pc'])
+     libdata_target = env.Install(libdatadir,
+                                  ['data/lm_sc.t3g',
