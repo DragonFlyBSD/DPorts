@@ -1,8 +1,9 @@
 # Created by: Joey Mingrone <joey@mingrone.org>
-# $FreeBSD: deskutils/parcellite/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: deskutils/parcellite/Makefile 315616 2013-03-30 14:09:04Z miwi $
 
 PORTNAME=	parcellite
 PORTVERSION=	1.0.1
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
