@@ -1,7 +1,8 @@
 # Created by:	Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql83-contrib/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: databases/postgresql83-contrib/Makefile 315718 2013-04-04 13:21:22Z girgen $
 
 PORTNAME=	postgresql
+PORTREVISION=	0
 PKGNAMESUFFIX=	-contrib
 CATEGORIES=	databases
 
