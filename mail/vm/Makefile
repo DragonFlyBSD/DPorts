@@ -2,12 +2,12 @@
 # Date created: 	20 February 2002
 # Whom:			olive
 #
-# $FreeBSD: ports/mail/vm/Makefile,v 1.33 2012/11/17 05:59:17 svnexp Exp $
+# $FreeBSD: mail/vm/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	vm
 PORTVERSION=	8.1.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail elisp
 MASTER_SITES=	https://launchpad.net/${PORTNAME}/8.1.x/${PORTVERSION}/+download/
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
