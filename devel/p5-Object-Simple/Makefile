@@ -1,8 +1,8 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-Object-Simple/Makefile 313513 2013-03-06 13:27:39Z tobez $
+# $FreeBSD: devel/p5-Object-Simple/Makefile 315559 2013-03-29 18:46:25Z sunpoet $
 
 PORTNAME=	Object-Simple
-PORTVERSION=	3.0800
+PORTVERSION=	3.0900
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
