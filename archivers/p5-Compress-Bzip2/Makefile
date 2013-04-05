@@ -2,11 +2,11 @@
 # Date created:				23 February 2003
 # Whom:	      				Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/p5-Compress-Bzip2/Makefile,v 1.9 2012/11/17 05:54:22 svnexp Exp $
+# $FreeBSD: archivers/p5-Compress-Bzip2/Makefile 315468 2013-03-28 13:19:41Z demon $
 #
 
 PORTNAME=	Compress-Bzip2
-PORTVERSION=	2.09
+PORTVERSION=	2.10
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
