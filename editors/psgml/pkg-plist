@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/editors/psgml/pkg-plist,v 1.7 2012/11/17 05:57:18 svnexp Exp $
+@comment $FreeBSD: editors/psgml/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%EMACS_VERSION_SITE_LISPDIR%%/psgml/iso88591.map
 %%EMACS_VERSION_SITE_LISPDIR%%/psgml/psgml-api.el
 %%EMACS_VERSION_SITE_LISPDIR%%/psgml/psgml-api.elc
