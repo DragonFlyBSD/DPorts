@@ -1,7 +1,7 @@
-# $FreeBSD: ports/security/py-Products.PluggableAuthService/Makefile,v 1.6 2012/11/17 06:01:16 svnexp Exp $
+# $FreeBSD: security/py-Products.PluggableAuthService/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.PluggableAuthService
-PORTVERSION=	1.8.0
+PORTVERSION=	1.10.0
 CATEGORIES=	security python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
