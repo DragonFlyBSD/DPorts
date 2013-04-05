@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/py-plone.app.content/Makefile,v 1.5 2012/11/17 06:03:00 svnexp Exp $
+# $FreeBSD: www/py-plone.app.content/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone.app.content
-PORTVERSION=	2.0.11
+PORTVERSION=	2.0.12
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,7 +24,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.memoize>=0:${PORTSDIR}/www/py-plone.me
 		${PYTHON_PKGNAMEPREFIX}zope.schema>=0:${PORTSDIR}/devel/py-zope.schema \
 		${PYTHON_PKGNAMEPREFIX}zope.viewlet>=0:${PORTSDIR}/devel/py-zope.viewlet \
 		${PYTHON_PKGNAMEPREFIX}Acquisition>=0:${PORTSDIR}/devel/py-Acquisition \
-		${PYTHON_PKGNAMEPREFIX}Products.ATContentTypes>=0:${PORTSDIR}/devel/py-Products.ATContentTypes \
 		${PYTHON_PKGNAMEPREFIX}Products.CMFCore>=2.2.0:${PORTSDIR}/devel/py-Products.CMFCore \
 		${PYTHON_PKGNAMEPREFIX}Products.CMFDefault>=0:${PORTSDIR}/devel/py-Products.CMFDefault
 
