@@ -1,20 +1,21 @@
 # Created by: ports@FreeBSD.org
-# $FreeBSD: graphics/gtkam/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: graphics/gtkam/Makefile 315504 2013-03-28 21:56:08Z pawel $
 
 PORTNAME=	gtkam
 PORTVERSION=	0.1.18
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	SF/gphoto/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	pav@FreeBSD.org
 COMMENT=	Download and view files from various digital cameras
 
-LIB_DEPENDS=	exif-gtk.5:${PORTSDIR}/graphics/libexif-gtk \
+LIB_DEPENDS=	exif-gtk:${PORTSDIR}/graphics/libexif-gtk \
 		gphoto2.2:${PORTSDIR}/graphics/libgphoto2
 
 WANT_GNOME=	yes
-USE_GNOME=	gnomehack gnomehier gtk20
+USES=        pathfix
+USE_GNOME=	gnomehier gtk20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
