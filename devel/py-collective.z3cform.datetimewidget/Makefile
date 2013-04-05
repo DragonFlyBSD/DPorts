@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-collective.z3cform.datetimewidget/Makefile,v 1.5 2012/11/17 05:56:45 svnexp Exp $
+# $FreeBSD: devel/py-collective.z3cform.datetimewidget/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	collective.z3cform.datetimewidget
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.3
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
