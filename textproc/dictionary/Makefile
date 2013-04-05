@@ -2,12 +2,12 @@
 # Date created:                23 March 2002
 # Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
 #
-# $FreeBSD: ports/textproc/dictionary/Makefile,v 1.28 2012/11/17 06:01:54 svnexp Exp $
+# $FreeBSD: textproc/dictionary/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	dictionary
 PORTVERSION=	1.8.7
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	textproc net elisp
 MASTER_SITES=	http://me.in-berlin.de/~myrkr/dictionary/ \
 		http://bsdchat.com/dist/dryice/
