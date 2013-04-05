@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-plone.openid
-# Date created:				22 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/security/py-plone.openid/Makefile,v 1.3 2012/11/17 06:01:17 svnexp Exp $
-#
+# $FreeBSD: security/py-plone.openid/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone.openid
-PORTVERSION=	2.0
+PORTVERSION=	2.0.1
 CATEGORIES=	security python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
