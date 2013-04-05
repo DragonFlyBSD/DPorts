@@ -1,0 +1,108 @@
+# Created by: Attila Nagy <bra@fsn.hu>
+# $FreeBSD: ports/mail/mailutils/Makefile,v 1.4 2013/02/05 16:54:23 svnexp Exp $
+
+PORTNAME=	mailutils
+PORTVERSION=	2.2
+PORTREVISION=	1
+CATEGORIES=	mail
+MASTER_SITES=	GNU
+
+MAINTAINER=	bra@fsn.hu
+COMMENT=	Mailutils offers utilities and daemons for processing e-mail
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
+CONFIGURE_ARGS+=--disable-build-comsat
+
+LDFLAGS=	-L${LOCALBASE}/lib
+USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/${PORTNAME}
+
+INFO=		${PORTNAME}
+MAN1=		imap4d.1 mail.1 pop3d.1 popauth.1
+
+OPTIONS_DEFINE=		GDBM BDB TOKYOCABINET GNUTLS MYSQL PGSQL LDAP PYTHON
+OPTIONS_DEFAULT=	
+
+GDBM_DESC=		Use GNU DBM
+BDB_DESC=		Use Berkeley DB
+TOKYOCABINET_DESC=	Use Tokyo Cabinet
+GNUTLS_DESC=		Enable GNUTLS support
+MYSQL_DESC=		Enable MySQL support
+PGSQL_DESC=		Enable Postgres support
+LDAP_DESC=		Enable LDAP support
+PYTHON_DESC=		Enable Python support
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MGDBM}
+CONFIGURE_ARGS+=	--with-gdbm
+LIB_DEPENDS+=		gdbm.3:${PORTSDIR}/databases/gdbm
+.else
+CONFIGURE_ARGS+=	--without-gdbm
+.endif
+
+.if ${PORT_OPTIONS:MBDB}
+USE_BDB=		yes
+CONFIGURE_ARGS+=	--with-berkeley-db
+.else
+CONFIGURE_ARGS+=	--without-berkeley-db
+.endif
+
+.if ${PORT_OPTIONS:MTOKYOCABINET}
+CONFIGURE_ARGS+=	--with-tokyocabinet
+LIB_DEPENDS+=		tokyocabinet.9:${PORTSDIR}/databases/tokyocabinet
+PLIST_SUB+=		TOKYOCABINET=""
+.else
+CONFIGURE_ARGS+=	--without-tokyocabinet
+PLIST_SUB+=		TOKYOCABINET="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MGNUTLS}
+LIB_DEPENDS+=		gnutls:${PORTSDIR}/security/gnutls
+CONFIGURE_ARGS+=	--with-gnutls
+.else
+CONFIGURE_ARGS+=	--without-gnutls
+.endif
+
+.if ${PORT_OPTIONS:MMYSQL}
+USE_MYSQL=		yes
+CONFIGURE_ARGS+=	--with-mysql
+.else
+CONFIGURE_ARGS+=	--without-mysql
+.endif
+
+.if ${PORT_OPTIONS:MPGSQL}
+USE_PGSQL=		yes
+CONFIGURE_ARGS+=	--with-postgres
+.else
+CONFIGURE_ARGS+=	--without-postgres
+.endif
+
+.if ${PORT_OPTIONS:MLDAP}
+USE_OPENLDAP=		yes
+CONFIGURE_ARGS+=	--with-ldap
+.else
+CONFIGURE_ARGS+=	--without-ldap
+.endif
+
+.if ${PORT_OPTIONS:MPYTHON}
+CONFIGURE_ARGS+=	--with-python --with-pythondir=${PYTHON_SITELIBDIR}
+USE_PYTHON=		2.5+
+PLIST_SUB+=		PYTHON=""
+.else
+CONFIGURE_ARGS+=	--without-python
+PLIST_SUB+=		PYTHON="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MNLS}
+USE_GETTEXT=		yes
+PLIST_SUB+=		NLS=""
+.else
+CONFIGURE_ARGS+=	--disable-nls
+PLIST_SUB+=		NLS="@comment "
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e '/need_charset_alias=/s|true|false|g' ${WRKSRC}/lib/Makefile.in
+
+.include <bsd.port.mk>
