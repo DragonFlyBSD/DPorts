@@ -2,10 +2,10 @@
 # Date created:		November 13, 1998
 # Whom:			Marc G. Fournier <scrappy@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/postgresql90-server/Makefile,v 1.248 2013/02/08 11:28:24 svnexp Exp $
+# $FreeBSD: databases/postgresql90-server/Makefile 315718 2013-04-04 13:21:22Z girgen $
 #
 
-DISTVERSION?=	9.0.12
+DISTVERSION?=	9.0.13
 PORTREVISION=	0
 PKGNAMESUFFIX?=	-server
 
