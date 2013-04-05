@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/irc/riece/pkg-plist,v 1.22 2012/11/17 05:58:30 svnexp Exp $
+@comment $FreeBSD: irc/riece/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%EMACS_VERSION_SITE_LISPDIR%%/riece/riece-000.el
 %%EMACS_VERSION_SITE_LISPDIR%%/riece/riece-000.elc
 %%EMACS_VERSION_SITE_LISPDIR%%/riece/riece-200.el
