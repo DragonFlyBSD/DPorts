@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/tuareg-mode.el/files/patch-tuareg.el,v 1.1 2012/08/13 01:41:10 ashish Exp $
+$FreeBSD$
 
 --- tuareg.el.orig
 +++ tuareg.el

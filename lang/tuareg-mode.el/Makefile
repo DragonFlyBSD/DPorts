@@ -2,12 +2,12 @@
 # Date created:			28 October 2004
 # Whom:				dd
 #
-# $FreeBSD: ports/lang/tuareg-mode.el/Makefile,v 1.24 2012/11/17 05:58:58 svnexp Exp $
+# $FreeBSD: lang/tuareg-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	tuareg-mode
 PORTVERSION=	1.45.6
-PORTREVISION=	12
+PORTREVISION=	13
 PORTEPOCH=	1
 CATEGORIES=	lang elisp
 MASTER_SITES=	http://www-rocq.inria.fr/~acohen/tuareg/mode/
