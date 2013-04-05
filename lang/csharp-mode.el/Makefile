@@ -2,12 +2,12 @@
 # Date created:				19 Jun 2006
 # Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/csharp-mode.el/Makefile,v 1.20 2012/11/17 05:58:48 svnexp Exp $
+# $FreeBSD: lang/csharp-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	csharp-mode.el
 PORTVERSION=	0.8.5
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	lang elisp
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME:S|.el$||}-${PORTVERSION}.el
