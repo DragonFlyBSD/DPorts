@@ -1,8 +1,7 @@
-# $FreeBSD: devel/py-Products.CMFDefault/Makefile 313737 2013-03-09 17:43:38Z miwi $
+# $FreeBSD: devel/py-Products.CMFDefault/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.CMFDefault
-PORTVERSION=	2.2.2
-PORTREVISION=	1
+PORTVERSION=	2.2.3
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
