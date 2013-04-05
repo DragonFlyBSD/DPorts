@@ -2,12 +2,12 @@
 # Date created:		July 05, 2004
 # Whom:			Joachim Strombergson <watchman@ludd.ltu.se>
 #
-# $FreeBSD: ports/cad/dinotrace/Makefile,v 1.19 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: cad/dinotrace/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	dinotrace
 PORTVERSION=	9.4c
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	http://www.veripool.org/ftp/
 EXTRACT_SUFX=	.tgz
