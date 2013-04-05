@@ -1,11 +1,11 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: ports/databases/py-PyGreSQL/Makefile,v 1.55 2013/01/09 17:55:15 svnexp Exp $
+# $FreeBSD: databases/py-PyGreSQL/Makefile 315348 2013-03-27 04:52:07Z rm $
 
 PORTNAME=	PyGreSQL
 PORTVERSION=	4.1.1
 PORTEPOCH=	1
 CATEGORIES=	databases python
-MASTER_SITES=	http://pygresql.org/files/
+MASTER_SITES=	http://www.pygresql.org/files/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 EXTRACT_SUFX=	.tgz
 
