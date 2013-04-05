@@ -1,25 +1,45 @@
 # Created by: ports@FreeBSD.org
-# $FreeBSD: graphics/libexif-gtk/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: graphics/libexif-gtk/Makefile 315683 2013-04-02 17:44:30Z pawel $
 
 PORTNAME=	libexif-gtk
-PORTVERSION=	0.3.5
-PORTREVISION=	11
+PORTVERSION=	0.4.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF/libexif/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	marius@nuenneri.ch
 COMMENT=	GTK+ widgets to display/edit EXIF tags
 
-LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif
+LICENSE=	LGPL21
 
-USE_GNOME=	gnomehack gtk20
+LIB_DEPENDS=	exif:${PORTSDIR}/graphics/libexif
+
+USES=		pathfix
+USE_GNOME=	gtk20
 USE_AUTOTOOLS=	autoconf libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
+PORTDOCS=	AUTHORS ChangeLog NEWS README
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=	--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.endif
+
 post-patch:
-	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
-		's|-D.*_DISABLE_DEPRECATED||g'
+	@${REINPLACE_CMD} 's|-g ||g' ${WRKSRC}/configure.ac
+
+post-install:
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+.endif
 
 .include <bsd.port.mk>
