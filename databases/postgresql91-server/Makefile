@@ -1,8 +1,8 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: ports/databases/postgresql91-server/Makefile,v 1.262 2013/02/08 11:28:24 svnexp Exp $
+# $FreeBSD: databases/postgresql91-server/Makefile 315718 2013-04-04 13:21:22Z girgen $
 
 PORTNAME?=	postgresql
-DISTVERSION?=	9.1.8
+DISTVERSION?=	9.1.9
 PORTREVISION?=	0
 CATEGORIES?=	databases
 MASTER_SITES=	PGSQL
