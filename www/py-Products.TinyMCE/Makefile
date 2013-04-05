@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/py-Products.TinyMCE/Makefile,v 1.8 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: www/py-Products.TinyMCE/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.TinyMCE
-PORTVERSION=	1.2.13
+PORTVERSION=	1.2.16
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,6 +14,7 @@ LICENSE=	LGPL21
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.app.imaging>=1.0.2:${PORTSDIR}/www/py-plone.app.imaging \
 		${PYTHON_PKGNAMEPREFIX}plone.outputfilters>=0:${PORTSDIR}/www/py-plone.outputfilters \
 		${PYTHON_PKGNAMEPREFIX}elementtree>=0:${PORTSDIR}/devel/py-elementtree \
+		${PYTHON_PKGNAMEPREFIX}zope.app.component>0:${PORTSDIR}/devel/py-zope.app.component \
 		${PYTHON_PKGNAMEPREFIX}zope.app.content>0:${PORTSDIR}/devel/py-zope.app.content
 
 DIST_SUBDIR=	zope
