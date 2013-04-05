@@ -1,12 +1,8 @@
-# New ports collection makefile for:	pecl-mysqlnd_qc
-# Date created:		13 May 2011
-# Whom:			johnpupu <johnpupu@gmail.com>
-#
-# $FreeBSD: ports/databases/pecl-mysqlnd_qc/Makefile,v 1.3 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: johnpupu <johnpupu@gmail.com>
+# $FreeBSD: databases/pecl-mysqlnd_qc/Makefile 315292 2013-03-26 14:07:26Z miwi $
 
 PORTNAME=	mysqlnd_qc
-PORTVERSION=	1.1.1
+PORTVERSION=	1.2.0
 CATEGORIES=	databases
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
