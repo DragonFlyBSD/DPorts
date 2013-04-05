@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/vuxml/Makefile 306878 2012-11-02 18:45:31Z ohauer $
+# $FreeBSD: security/vuxml/Makefile 315412 2013-03-27 20:44:50Z delphij $
 
 PORTNAME=	vuxml
 PORTVERSION=	1.1
@@ -78,6 +78,17 @@ validate: tidy
 		${ECHO_MSG} ... seems okay; \
 		${RM} "${VUXML_FILE}.tidy"; \
 	else \
+		return 1; \
+	fi
+	@${ECHO_MSG} Checking for space/tab...
+	@unexpand "${VUXML_FILE}" | ${SED} -E 's,[[:space:]]*$$,,g' > "${VUXML_FILE}.unexpanded"
+	@if ${DIFF} -u "${VUXML_FILE}" "${VUXML_FILE}.unexpanded"; \
+	then \
+		${ECHO_MSG} ... seems okay; \
+		${RM} "${VUXML_FILE}.unexpanded"; \
+	else \
+		${ECHO_MSG} ... see above; \
+		${ECHO_CMD} Consider using ${VUXML_FILE}.unexpanded for final commit; \
 		return 1; \
 	fi
 
