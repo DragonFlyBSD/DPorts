@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-archetypes.querywidget/Makefile,v 1.4 2012/11/17 05:56:45 svnexp Exp $
+# $FreeBSD: devel/py-archetypes.querywidget/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	archetypes.querywidget
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.8
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
