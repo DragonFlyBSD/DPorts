@@ -2,12 +2,12 @@
 # Date created:		13 Nov 2004
 # Whom:			Dominic Mitchell
 #
-# $FreeBSD: ports/editors/slime/Makefile,v 1.26 2012/11/17 05:57:18 svnexp Exp $
+# $FreeBSD: editors/slime/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	slime
 PORTVERSION=	20110714
-PORTREVISION=	7
+PORTREVISION=	8
 PORTEPOCH=	1
 CATEGORIES=	editors elisp
 MASTER_SITES=	ftp://ftp.SpringDaemons.com/soft/
