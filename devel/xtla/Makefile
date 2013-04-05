@@ -2,12 +2,12 @@
 # Date created:                27 June 2004
 # Whom:                        Dryice Liu <dryice@liu.com.cn>
 #
-# $FreeBSD: ports/devel/xtla/Makefile,v 1.34 2012/11/17 05:57:06 svnexp Exp $
+# $FreeBSD: devel/xtla/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	xtla
 PORTVERSION=	1.2.1
-PORTREVISION=	13
+PORTREVISION=	14
 PORTEPOCH=	1
 CATEGORIES=	devel elisp
 MASTER_SITES=	http://download.gna.org/xtla-el/ \
