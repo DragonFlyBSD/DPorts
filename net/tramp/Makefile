@@ -1,8 +1,9 @@
 # Created by: Yoichi NAKAYAMA <yoichi@FreeBSD.org>
-# $FreeBSD: ports/net/tramp/Makefile,v 1.66 2013/01/14 12:47:16 svnexp Exp $
+# $FreeBSD: net/tramp/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	tramp
 PORTVERSION=	2.2.6
+PORTREVISION=	1
 CATEGORIES=	net elisp
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
