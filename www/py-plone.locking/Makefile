@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-plone.locking
-# Date created:				25 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/www/py-plone.locking/Makefile,v 1.4 2012/11/17 06:03:01 svnexp Exp $
-#
+# $FreeBSD: www/py-plone.locking/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone.locking
-PORTVERSION=	2.0.3
+PORTVERSION=	2.0.4
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -30,6 +25,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.annotation>=0:${PORTSDIR}/devel/py-zope
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+USE_ZIP=	yes
 #USE_ZOPE	yes
 
 .include <bsd.port.mk>
