@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael127@home.com>
-# $FreeBSD: graphics/feh/Makefile 313097 2013-02-28 15:38:04Z zeising $
+# $FreeBSD: graphics/feh/Makefile 315716 2013-04-04 12:45:51Z zeising $
 
 PORTNAME=	feh
 PORTVERSION=	2.9.1
@@ -32,7 +32,7 @@ PORTDOCS=	AUTHORS ChangeLog README TODO
 .include	<bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} 's#/install-man install-doc#install-man#' \
+	@${REINPLACE_CMD} 's/install-man install-doc/install-man/' \
 		${WRKSRC}/Makefile
 
 post-install:
