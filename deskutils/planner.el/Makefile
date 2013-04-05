@@ -2,12 +2,12 @@
 # Date created:				March 09 2005
 # Whom:					Dryice Liu <dryice@liu.com.cn>
 #
-# $FreeBSD: ports/deskutils/planner.el/Makefile,v 1.32 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/planner.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	planner.el
 PORTVERSION=	3.42
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	deskutils elisp
 MASTER_SITES=	http://download.gna.org/planner-el/ \
 		http://dryice.name/computer/FreeBSD/distfiles/
