@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-File-pushd/Makefile 313510 2013-03-06 11:05:26Z tobez $
+# $FreeBSD: devel/p5-File-pushd/Makefile 315221 2013-03-25 13:47:31Z tobez $
 
 PORTNAME=	File-pushd
-PORTVERSION=	1.004
+PORTVERSION=	1.005
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
