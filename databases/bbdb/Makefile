@@ -2,12 +2,12 @@
 # Date Created:		12 Dec 2001
 # Whom:			Yoichi NAKAYAMA <yoichi@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/bbdb/Makefile,v 1.24 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: databases/bbdb/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	bbdb
 PORTVERSION=	2.35
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	databases elisp
 MASTER_SITES=	SF
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
