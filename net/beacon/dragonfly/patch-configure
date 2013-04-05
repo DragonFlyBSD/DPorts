@@ -1,0 +1,11 @@
+--- configure.orig	2011-02-05 03:32:41.000000000 +0000
++++ configure
+@@ -5591,7 +5591,7 @@ done
+ # If we're on FreeBSD, install the rc.d script
+ case "${host_os}" in
+ 
+-freebsd*)
++freebsd*|dragonfly*)
+     have_freebsd=yes
+     ;;
+ 
