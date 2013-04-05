@@ -2,12 +2,12 @@
 # Date created:		26 Oct 2003
 # Whom:			Fritz Heinrichmeyer
 #
-# $FreeBSD: ports/editors/nxml/Makefile,v 1.22 2012/11/17 05:57:17 svnexp Exp $
+# $FreeBSD: editors/nxml/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	nxml-mode
 PORTVERSION=	${NXML_VER}
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	editors elisp
 MASTER_SITES=	http://www.thaiopensource.com/download/
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
