@@ -1,8 +1,9 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: ports/mail/wanderlust-devel/Makefile,v 1.22 2013/01/26 10:49:22 svnexp Exp $
+# $FreeBSD: mail/wanderlust-devel/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	wanderlust
 PORTVERSION=	2.15.9.b.${SNAPDATE}
+PORTREVISION=	1
 CATEGORIES=	mail elisp
 MASTER_SITES=	http://www.jpl.org/ftp/pub/github-snapshots/ \
 		${MASTER_SITE_LOCAL}
