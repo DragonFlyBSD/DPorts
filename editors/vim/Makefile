@@ -1,5 +1,5 @@
 # Created by:  David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: editors/vim/Makefile 315666 2013-04-02 10:22:08Z bapt $
+# $FreeBSD: editors/vim/Makefile 315730 2013-04-05 08:23:44Z bapt $
 
 PORTNAME?=	vim
 #		! _NEVER_ reduce or lower PATCHLEVEL, even if the PATCHLEVEL
@@ -112,11 +112,12 @@ WANT_GNOME=	yes
 
 .if defined(LITE)
 PKGNAMESUFFIX=	-lite
-MAKE_ARGS+=	CONF_OPT_GUI="--enable-gui=no --without-x --enable-multibyte"
+CONF_OPT_GUI="--enable-gui=no --without-x --enable-multibyte"
 MAKE_ARGS+=	CONF_OPT_PERL="--disable-perlinterp --disable-pythoninterp --disable-tclinterp --disable-rubyinterp --disable-luainterp"
 .else	# !LITE
 MAKE_ARGS+=	CONF_OPT_FEAT="--with-features=big"
 I18N=		CONF_OPT_MULTIBYTE="--enable-multibyte --enable-fontset --enable-xim"
+CONF_OPT_GUI="--enable-gui=no --without-x"
 .endif
 
 .if ${PORT_OPTIONS:MCSCOPE}
@@ -131,7 +132,6 @@ CTAGS_CMD=	exctags -R .
 CTAGS_CMD=	${FIND} . -type f \\|${XARGS} ctags
 .endif
 
-CONF_OPT_GUI="--enable-gui=no --without-x"
 
 .if ${PORT_OPTIONS:MX11}
 CONF_OPT_GUI="--enable-gui=no --with-x"
