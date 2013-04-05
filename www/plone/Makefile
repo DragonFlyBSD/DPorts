@@ -1,13 +1,13 @@
-# $FreeBSD: ports/www/plone/Makefile,v 1.40 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: www/plone/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone
-PORTVERSION=	4.2.1
+PORTVERSION=	4.2.5
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 DISTNAME=	Plone-${PORTVERSION}
 
 MAINTAINER=	zope@FreeBSD.org
-COMMENT=	The Plone Content Management System
+COMMENT=	Plone Content Management System
 
 LICENSE=	GPLv2
 
