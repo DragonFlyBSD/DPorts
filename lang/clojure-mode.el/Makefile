@@ -2,12 +2,12 @@
 # Date created:		22 Dec 2008
 # Whom:			Peter Schuller <peter.schuller@infidyne.com>
 #
-# $FreeBSD: ports/lang/clojure-mode.el/Makefile,v 1.13 2012/11/17 05:58:48 svnexp Exp $
+# $FreeBSD: lang/clojure-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	clojure-mode.el
 PORTVERSION=	20090718
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	lang elisp
 MASTER_SITES=	http://distfiles.scode.org/ports/
 DISTNAME=	clojure-mode-${PORTVERSION}
