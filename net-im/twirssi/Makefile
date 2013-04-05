@@ -1,0 +1,50 @@
+# $FreeBSD: net-im/twirssi/Makefile 315417 2013-03-27 21:57:42Z gjb $
+
+PORTNAME=	twirssi
+PORTVERSION=	2.5.1
+PORTREVISION=	1
+CATEGORIES=	net-im
+MASTER_SITES=	http://twirssi.com/
+EXTRACT_SUFX=	.pl
+EXTRACT_ONLY=
+
+MAINTAINER=	garga@FreeBSD.org
+COMMENT=	Twitter script to irssi
+
+RUN_DEPENDS=	p5-Net-Twitter>=0:${PORTSDIR}/net/p5-Net-Twitter \
+		p5-WWW-Shorten>=0:${PORTSDIR}/www/p5-WWW-Shorten \
+		p5-WWW-Shorten-Bitly>=0:${PORTSDIR}/www/p5-WWW-Shorten-Bitly
+
+OPTIONS_SINGLE=	IRSSIVER
+OPTIONS_SINGLE_IRSSIVER=PROD DEVEL
+OPTIONS_DEFAULT=PROD
+PROD_DESC=	Use production irc/irssi port
+DEVEL_DESC=	Use development irc/irssi-devel port
+
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MPROD}
+RUN_DEPENDS+=	irssi:${PORTSDIR}/irc/irssi
+.endif
+
+.if ${PORT_OPTIONS:MDEVEL}
+RUN_DEPENDS+=	irssi:${PORTSDIR}/irc/irssi-devel
+.endif
+
+SUB_FILES=	pkg-message
+
+NO_BUILD=	yes
+PLIST_FILES=	%%DATADIR%%/${PORTNAME}.pl
+PLIST_DIRS=	%%DATADIR%%
+
+post-extract:
+	@${MKDIR} ${WRKSRC}
+	@${INSTALL_SCRIPT} ${DISTDIR}/${PORTNAME}-${PORTVERSION}.pl \
+		${WRKSRC}/${PORTNAME}.pl
+
+do-install:
+	@${MKDIR} ${DATADIR}
+	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${DATADIR}
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.post.mk>
