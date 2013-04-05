@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-Products.CMFFormController
-# Date created:				20 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-Products.CMFFormController/Makefile,v 1.3 2012/11/17 05:56:44 svnexp Exp $
-#
+# $FreeBSD: devel/py-Products.CMFFormController/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.CMFFormController
-PORTVERSION=	3.0.2
+PORTVERSION=	3.0.3
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
