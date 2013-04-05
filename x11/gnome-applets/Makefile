@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomeapplets2
-# Date created:				26th May 2000
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/gnome-applets/Makefile,v 1.139 2012/11/17 06:03:15 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: x11/gnome-applets/Makefile 315697 2013-04-03 07:40:59Z kwm $
 #   $MCom: ports/x11/gnome-applets/Makefile,v 1.219 2011/04/10 19:41:38 mezz Exp $
-#
 
 PORTNAME=	gnome-applets
 PORTVERSION=	2.32.1.1
@@ -18,11 +14,11 @@ COMMENT=	Applets components for the GNOME 2 Desktop Environment
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/system-tools-backends \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
-LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
-		gweather.1:${PORTSDIR}/net/libgweather \
-		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
-		xklavier.12:${PORTSDIR}/x11/libxklavier \
-		gucharmap.7:${PORTSDIR}/deskutils/gucharmap
+LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop \
+		gweather:${PORTSDIR}/net/libgweather \
+		polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
+		xklavier:${PORTSDIR}/x11/libxklavier \
+		gucharmap:${PORTSDIR}/deskutils/gucharmap
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/system-tools-backends \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 
@@ -32,8 +28,8 @@ USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel gnomedocutils \
-		libgnomekbd
+USES=		pathfix
+USE_GNOME=	gnomeprefix intlhack gnomepanel gnomedocutils libgnomekbd
 WANT_GNOME=	yes
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
@@ -46,42 +42,30 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas \
 		mixer.schemas multiload.schemas stickynotes.schemas
 
-OPTIONS=	MINI_COMMANDER "Enable mini-commander applet" off
+OPTIONS_DEFINE=	MINI_COMMANDER
+MINI_COMMANDER_DESC=	Mini-commander applet
 
-.if defined(PACKAGE_BUILDING)
-.undef WITHOUT_GNOME
-WITH_GNOME=	yes
-.endif
-
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/libdata/pkgconfig/libnotify.pc) || \
-	!defined(WITHOUT_LIBNOTIFY)
-LIB_DEPENDS+=	notify.4:${PORTSDIR}/devel/libnotify
+	!${PORT_OPTIONS:MNOTIFY}
+LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
 .endif
 
-.if ${ARCH} != "i386" && ${ARCH} != "x86_64"
-CFLAGS+=	-fPIC
-PLIST_SUB=	BATTERY="@comment "
-.else
-GCONF_SCHEMAS+=	battstat.schemas
-PLIST_SUB=	BATTERY=""
-.endif
-
-.if ${ARCH} != "i386" && ${ARCH} != "x86_64"
-PLIST_SUB+=	CPUFREQ="@comment "
-.else
-PLIST_SUB+=	CPUFREQ=""
-GCONF_SCHEMAS+=	cpufreq-applet.schemas
-.endif
-
-.if defined(WITH_MINI_COMMANDER)
+.if ${PORT_OPTIONS:MMINI_COMMANDER}
 CONFIGURE_ARGS+=	--enable-mini-commander
 GCONF_SCHEMAS+=	mini-commander-global.schemas mini-commander.schemas
 PLIST_SUB+=	COMMANDER="" OLDCOMMANDER="@comment "
 .else
 PLIST_SUB+=	COMMANDER="@comment " OLDCOMMANDER=""
 .endif
+
+.if defined(PACKAGE_BUILDING)
+.undef WITHOUT_GNOME 	 
+WITH_GNOME=	yes 	 
+.endif
+
+.include <bsd.port.pre.mk>
 
 .if ( exists(${pygnomedesktop_DETECT}) ) || \
 	( ( ${HAVE_GNOME:Mpygnomedesktop}!="" ) && ${ARCH}!="sparc64" )
@@ -91,6 +75,21 @@ USE_GNOME+=	pygnomedesktop
 PLIST_SUB+=	PYTHON=""
 .else
 PLIST_SUB+=	PYTHON="@comment "
+.endif
+
+.if ${ARCH} != "i386" && ${ARCH} != "x86_64"
+CFLAGS+=	-fPIC
+PLIST_SUB+=	BATTERY="@comment "
+.else
+GCONF_SCHEMAS+=	battstat.schemas
+PLIST_SUB+=	BATTERY=""
+.endif
+
+.if ${ARCH} != "i386" && ${ARCH} != "x86_64"
+PLIST_SUB+=	CPUFREQ="@comment "
+.else
+PLIST_SUB+=	CPUFREQ=""
+GCONF_SCHEMAS+= cpufreq-applet.schemas
 .endif
 
 post-patch:
