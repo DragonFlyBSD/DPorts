@@ -2,12 +2,12 @@
 # Date created:		12 January 2009
 # Whom:			stas
 #
-# $FreeBSD: ports/cad/verilog-mode.el/Makefile,v 1.7 2012/11/17 05:54:55 svnexp Exp $
+# $FreeBSD: cad/verilog-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	verilog-mode.el
 PORTVERSION=	801
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	cad elisp
 MASTER_SITES=	http://www.veripool.org/ftp/
 DISTNAME=	${PORTNAME:R}-${PORTVERSION}.${PORTNAME:E}
