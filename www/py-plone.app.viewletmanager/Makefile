@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-plone.app.viewletmanager
-# Date created:				03 January 2012
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/www/py-plone.app.viewletmanager/Makefile,v 1.3 2012/11/17 06:03:01 svnexp Exp $
-#
+# $FreeBSD: www/py-plone.app.viewletmanager/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone.app.viewletmanager
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.3
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,7 +18,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.
 		${PYTHON_PKGNAMEPREFIX}zope.viewlet>=0:${PORTSDIR}/devel/py-zope.viewlet \
 		${PYTHON_PKGNAMEPREFIX}Products.GenericSetup>=0:${PORTSDIR}/devel/py-Products.GenericSetup \
 		zodb${PYTHON_PKGNAMESUFFIX}>=0:${PORTSDIR}/databases/zodb3 \
-		${PYTHON_PKGNAMEPREFIX}Acquisition>=0:${PORTSDIR}/devel/py-Acquisition
+		${PYTHON_PKGNAMEPREFIX}Acquisition>=0:${PORTSDIR}/devel/py-Acquisition \
+		${PYTHON_PKGNAMEPREFIX}plone.app.vocabularies>0:${PORTSDIR}/www/py-plone.app.vocabularies
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
