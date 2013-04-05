@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-Products.ExtendedPathIndex/Makefile,v 1.4 2012/11/17 05:56:44 svnexp Exp $
+# $FreeBSD: devel/py-Products.ExtendedPathIndex/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.ExtendedPathIndex
-PORTVERSION=	3.0.1
+PORTVERSION=	3.1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
