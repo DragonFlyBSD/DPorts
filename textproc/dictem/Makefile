@@ -2,11 +2,11 @@
 # Date created:				24 Apr 2006
 # Whom:					Max N. Boyarov <m.boyarov@gmail.com>
 #
-# $FreeBSD: ports/textproc/dictem/Makefile,v 1.24 2012/11/17 06:01:54 svnexp Exp $
+# $FreeBSD: textproc/dictem/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	dictem
 PORTVERSION=	1.0.2
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	textproc net elisp
 MASTER_SITES=	SF/dictem/dictem/dictem-${PORTVERSION}
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
