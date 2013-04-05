@@ -1,8 +1,8 @@
-# $FreeBSD: ports/editors/yasnippet/Makefile,v 1.10 2013/01/26 15:07:25 svnexp Exp $
+# $FreeBSD: editors/yasnippet/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	yasnippet
 PORTVERSION=	0.6.1c
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
