@@ -1,0 +1,4 @@
+bin/bmake
+@comment Insert PLIST.share-mk here
+@comment -=[ begin PLIST.share-mk ]=-
+@comment -=[ end PLIST.share-mk ]=-
