@@ -1,8 +1,8 @@
 # Created by: Wen Heping
-# $FreeBSD: www/py-WebTest/Makefile 315148 2013-03-24 17:32:26Z cs $
+# $FreeBSD: www/py-WebTest/Makefile 315326 2013-03-26 20:37:45Z cs $
 
 PORTNAME=	WebTest
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.3
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP \
 		http://www.c-s.li/ports/
