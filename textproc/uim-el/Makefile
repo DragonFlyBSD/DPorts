@@ -2,12 +2,12 @@
 # Date created:        24 December 2005
 # Whom:                MANTANI Nobutaka <nobutaka@freebsd.org>
 #
-# $FreeBSD: ports/textproc/uim-el/Makefile,v 1.47 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/uim-el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	uim-el
 PORTVERSION=	1.8.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
