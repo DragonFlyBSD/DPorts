@@ -1,8 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-signal/Makefile 314583 2013-03-18 16:35:19Z stephen $
+# $FreeBSD: math/octave-forge-signal/Makefile 315320 2013-03-26 18:31:40Z stephen $
 
 PORTNAME=	octave-forge-signal
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.2
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
