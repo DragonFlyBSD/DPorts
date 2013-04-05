@@ -1,8 +1,9 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: security/pear-Crypt_RSA/Makefile 314264 2013-03-15 07:05:03Z miwi $
+# $FreeBSD: security/pear-Crypt_RSA/Makefile 315262 2013-03-26 07:25:00Z miwi $
 
 PORTNAME=	Crypt_RSA
 PORTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	security www pear
 
 MAINTAINER=	miwi@FreeBSD.org
@@ -26,10 +27,6 @@ PEAR_AUTOINSTALL=	yes
 USE_PHP+=	${opt:tl}
 .    endif
 .endfor
-
-post-extract:
-	@${MV} ${WRKSRC}/CREDITS ${WRKSRC}/docs
-	@${MV} ${WRKSRC}/LICENSE ${WRKSRC}/docs
 
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.mk>
