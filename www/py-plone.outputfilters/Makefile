@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/py-plone.outputfilters/Makefile,v 1.5 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-plone.outputfilters/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone.outputfilters
-PORTVERSION=	1.6
+PORTVERSION=	1.8
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
