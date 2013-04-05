@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-Products.CMFDiffTool
-# Date created:				20 December 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-Products.CMFDiffTool/Makefile,v 1.3 2012/11/17 05:56:44 svnexp Exp $
-#
+# $FreeBSD: devel/py-Products.CMFDiffTool/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.CMFDiffTool
-PORTVERSION=	2.0
+PORTVERSION=	2.0.2
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.
 		${PYTHON_PKGNAMEPREFIX}Acquisition>=0:${PORTSDIR}/devel/py-Acquisition
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 USE_ZIP=	yes
 #USE_ZOPE=	yes
