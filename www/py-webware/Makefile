@@ -2,11 +2,11 @@
 # Date created:		9 July 2002
 # Whom:			Stefan Schwarzer <sschwarzer@sschwarzer.net>
 #
-# $FreeBSD: ports/www/py-webware/Makefile,v 1.18 2012/11/17 06:03:02 svnexp Exp $
+# $FreeBSD: www/py-webware/Makefile 315453 2013-03-28 09:32:14Z miwi $
 #
 
 PORTNAME=	webware
-DISTVERSION=	1.1
+DISTVERSION=	1.1.1
 CATEGORIES=	www python
 MASTER_SITES=	SF/${PORTNAME}/Webware/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
