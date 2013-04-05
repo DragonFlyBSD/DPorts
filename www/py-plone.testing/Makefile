@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/py-plone.testing/Makefile,v 1.4 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-plone.testing/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone.testing
-PORTVERSION=	4.0.4
+PORTVERSION=	4.0.8
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
