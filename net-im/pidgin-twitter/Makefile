@@ -2,7 +2,7 @@
 # Date created:                         17 May 2008
 # Whom:                                 Junji NAKANISHI <jun-g@daemonfreaks.com>
 #
-# $FreeBSD: ports/net-im/pidgin-twitter/Makefile,v 1.17 2012/11/17 06:00:29 svnexp Exp $
+# $FreeBSD: net-im/pidgin-twitter/Makefile 315631 2013-03-31 09:05:28Z kwm $
 
 PORTNAME=	pidgin-twitter
 PORTVERSION=	0.9.2
@@ -24,5 +24,8 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	lib/pidgin/pidgin-twitter.so \
 		${DATADIR_REL}/prefs.ui
 PLIST_DIRS=	${DATADIR_REL}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-Werror||g' ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
