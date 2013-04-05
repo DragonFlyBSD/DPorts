@@ -1,12 +1,12 @@
-# $FreeBSD: ports/japanese/bugzilla3/Makefile,v 1.29 2012/11/22 20:22:05 svnexp Exp $
+# $FreeBSD: japanese/bugzilla3/Makefile 315642 2013-03-31 17:36:29Z ohauer $
 
 PORTNAME=	bugzilla
-PORTVERSION=	3.6.12
+PORTVERSION=	3.6.13
 CATEGORIES=	japanese
 MASTER_SITES=	http://bug-ja.org/releases/3.6/ \
 		LOCAL
 MASTER_SITE_SUBDIR=	tota/bugzilla-ja
-DISTNAME=	Bugzilla-ja-${PORTVERSION}-template
+DISTNAME=	Bugzilla-ja-${PORTVERSION}-template-rel01
 
 MAINTAINER=	bugzilla@FreeBSD.org
 COMMENT=	Japanese localization for Bugzilla
