@@ -1,8 +1,9 @@
 # Created by: antoine@FreeBSD.org
-# $FreeBSD: ports/security/regripper/Makefile,v 1.2 2012/12/02 12:32:27 svnexp Exp $
+# $FreeBSD: security/regripper/Makefile 315728 2013-04-04 22:18:24Z antoine $
 
 PORTNAME=	regripper
 DISTVERSION=	2.5
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	rrv${DISTVERSION}
@@ -25,7 +26,7 @@ PLIST_FILES=	bin/rip.pl
 post-patch:
 	${REINPLACE_CMD} -e 's|#! c:\\perl\\bin\\perl.exe|#!${PERL}| ; \
 		s|plugindir = $$str|plugindir = "${DATADIR}"| ; \
-		s|require "plugins\\\\|require "${DATADIR}plugins/|' ${WRKSRC}/rip.pl
+		s|require "plugins/|require "${DATADIR}plugins/|' ${WRKSRC}/rip.pl
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rip.pl ${PREFIX}/bin
