@@ -2,12 +2,12 @@
 # Date created:		24 Feb 2000
 # Whom:			OKAZAKI Tetsurou
 #
-# $FreeBSD: ports/devel/elib/Makefile,v 1.26 2012/11/17 05:55:42 svnexp Exp $
+# $FreeBSD: devel/elib/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	elib
 PORTVERSION=	1.0
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	devel elisp
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	../old-gnu/emacs
