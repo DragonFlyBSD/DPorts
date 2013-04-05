@@ -2,12 +2,12 @@
 # Date created:				Fri Jul 27 13:26:37 MSD 2007
 # Whom:					Denis Shaposhnikov <dsh@vlink.ru>
 #
-# $FreeBSD: ports/misc/color-theme.el/Makefile,v 1.13 2012/11/17 05:59:33 svnexp Exp $
+# $FreeBSD: misc/color-theme.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	color-theme.el
 PORTVERSION=	6.6.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	misc elisp
 MASTER_SITES=	http://download.gna.org/color-theme/
 PKGNAMESUFFIX=	-${EMACS_NAME}
