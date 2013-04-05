@@ -2,11 +2,12 @@
 # Date created:         23 Jul 1997
 # Whom:                 stb
 #
-# $FreeBSD: ports/net/netatalk3/Makefile,v 1.10 2012/12/21 14:13:18 svnexp Exp $
+# $FreeBSD: ports/net/netatalk3/Makefile,v 1.13 2013/02/25 04:59:50 svnexp Exp $
 #
 
 PORTNAME=	netatalk
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net
 MASTER_SITES=	SF
@@ -51,7 +52,8 @@ OPTIONS=	PAM		"Enable PAM support" off \
 MAN1=		ad.1 afpldaptest.1 afppasswd.1 apple_dump.1 asip-status.pl.1 \
 		dbd.1 macusers.1 \
 		netatalk-config.1 uniconv.1
-MAN5=		afp.conf.5 afp_signature.conf.5 afp_voluuid.conf.5
+MAN5=		afp.conf.5 afp_signature.conf.5 afp_voluuid.conf.5 \
+		extmap.conf.5
 MAN8=		afpd.8 cnid_dbd.8 cnid_metad.8 netatalk.8
 
 CONFLICTS=	bigloo-2.* cap-6.0.* tct-1.* netatalk-[12]* yudit-[0-9]*
@@ -121,6 +123,8 @@ post-install:
 		${PREFIX}/bin/macusers
 	[ -f ${PREFIX}/etc/afp.conf ] || \
 		${INSTALL_DATA} -c ${PREFIX}/etc/afp.conf.dist ${PREFIX}/etc/afp.conf
+	[ -f ${PREFIX}/etc/extmap.conf ] || \
+		${INSTALL_DATA} -c ${PREFIX}/etc/extmap.conf.dist ${PREFIX}/etc/extmap.conf
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>
