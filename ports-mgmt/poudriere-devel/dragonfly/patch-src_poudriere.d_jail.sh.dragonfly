@@ -1,6 +1,6 @@
---- src/poudriere.d/jail.sh.dragonfly.orig	2013-03-07 15:24:40.000000000 +0000
+--- src/poudriere.d/jail.sh.dragonfly.orig	2013-04-01 15:07:37.000000000 +0000
 +++ src/poudriere.d/jail.sh.dragonfly
-@@ -0,0 +1,267 @@
+@@ -0,0 +1,265 @@
 +#!/bin/sh
 +#
 +# DragonFly specific
@@ -130,10 +130,8 @@
 +	local bhack
 +	local mounted=$(check_mount "${JAILFS}")
 +
-+	if [ -z "${mounted}" ]; then
-+		${NULLMOUNT} ${JAILFS} "${JAILMNT}" || \
-+		  err 1 "Failed to mount JAILFS"
-+	fi
++	[ -n "${mounted}" ] && err 1 "Already mounted: ${JAILFS}"
++	${NULLMOUNT} ${JAILFS} "${JAILMNT}" || err 1 "Failed to mount JAILFS"
 +	[ -d ${JAILMNT}/usr/src ] && UPDATE=1
 +	mkdir -p ${JAILMNT}/usr/src
 +	cd ${JAILMNT}/usr/src

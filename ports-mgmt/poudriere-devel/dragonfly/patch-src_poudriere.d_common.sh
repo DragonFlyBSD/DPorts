@@ -601,6 +601,15 @@
  	local tardir=${POUDRIERE_DATA}/wrkdirs/${JAILNAME%-job-*}/${PTNAME}
  	local tarname=${tardir}/${PKGNAME}.${WRKDIR_ARCHIVE_FORMAT}
  	local mnted_portdir=${JAILMNT}/wrkdirs/${portdir}
+@@ -707,7 +242,7 @@ save_wrkdir() {
+ 	txz) COMPRESSKEY="J" ;;
+ 	esac
+ 	rm -f ${tarname}
+-	tar -s ",${mnted_portdir},," -c${COMPRESSKEY}f ${tarname} ${mnted_portdir}/work > /dev/null 2>&1
++	tar -s ",${JAILMNT}/wrkdirs,," -c${COMPRESSKEY}f ${tarname} ${mnted_portdir}/work > /dev/null 2>&1
+ 
+ 	if [ -n "${MY_JOBID}" ]; then
+ 		job_msg "Saved ${port} wrkdir to: ${tarname}"
 @@ -716,58 +251,6 @@ save_wrkdir() {
  	fi
  }

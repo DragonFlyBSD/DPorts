@@ -1,4 +1,4 @@
---- src/poudriere.d/common.sh.dragonfly.orig	2013-03-07 15:24:40.000000000 +0000
+--- src/poudriere.d/common.sh.dragonfly.orig	2013-04-01 15:07:37.000000000 +0000
 +++ src/poudriere.d/common.sh.dragonfly
 @@ -0,0 +1,850 @@
 +#!/bin/sh
@@ -337,7 +337,7 @@
 +	fi
 +	# Refresh /usr/local and /etc and /var
 +	mount_tmpfs -s 100M  tmpfs ${mnt}/tmp
-+	mount_tmpfs -s 4G    tmfps ${mnt}/wrkdirs
++	mount_tmpfs -s 7G    tmfps ${mnt}/wrkdirs
 +	mount_tmpfs -s 12M   tmpfs ${mnt}/etc
 +	mount_tmpfs -s 100M  tmpfs ${mnt}/var
 +	mount_tmpfs -s 4K    tmpfs ${mnt}/compat
@@ -728,7 +728,7 @@
 +		# Check for invalid options-JAILNAME created by bad options.sh
 +		[ -d ${POUDRIERED}/options-${JAILNAME%-job-*} ] && err 1 "Please move your options-${JAILNAME%-job-*} to ${JAILNAME%-job-*}-options"
 +
-+		mount_tmpfs -s 4G tmpfs ${JAILMNT}/wrkdirs
++		mount_tmpfs -s 7G tmpfs ${JAILMNT}/wrkdirs
 +		msg "Mounting packages from: ${PKGDIR}"
 +	fi
 +
