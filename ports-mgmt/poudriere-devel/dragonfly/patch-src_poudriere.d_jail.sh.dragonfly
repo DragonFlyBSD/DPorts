@@ -1,14 +1,14 @@
---- src/poudriere.d/jail.sh.dragonfly.orig	2013-04-05 16:10:58.203297000 +0000
+--- src/poudriere.d/jail.sh.dragonfly.orig	2013-04-05 17:28:31.527634000 +0000
 +++ src/poudriere.d/jail.sh.dragonfly
-@@ -0,0 +1,265 @@
+@@ -0,0 +1,266 @@
 +#!/bin/sh
 +#
 +# DragonFly specific
 +
 +jail_runs() {
 +	[ $# -ne 0 ] && eargs
-+	local check=$(zget status)
-+	[ "${check}" = "idle:" ] && return 0
++	local mounted=$(check_mount "${JAILFS}")
++	[ -n "${mounted}" ] && return 0
 +	return 1
 +}
 +
@@ -55,6 +55,8 @@
 +	case ${METHOD} in
 +	git)
 +		install_from_git ${1}
++		umount ${JAILMNT}/dev
++		umount ${JAILMNT}
 +		;;
 +	*)
 +		err 1 "Unsupported method"
@@ -96,7 +98,6 @@
 +	mount -t devfs devfs ${JAILMNT}/dev
 +	make -C ${JAILMNT}/usr/src upgrade > \
 +	  ${JLOGBASE}/upgrade.log 2>&1 || err 1 "Fail to make world upgrade"
-+	umount ${JAILMNT}/dev
 +
 +	# make sure world can be dismounted
 +	cd /
@@ -163,7 +164,6 @@
 +		echo " done"
 +	fi
 +	build_and_install_world ${1}
-+	umount ${JAILMNT}
 +	bhack="$(date '+%Y-%m-%d %H:%M:%S')"
 +	zset timestamp "${bhack}"
 +}
@@ -244,7 +244,8 @@
 +	local JOBX="$(jot -w %02d ${numcpu})"
 +
 +	msg_n "Removing ${JAILNAME} jail..."
-+	zkillfs ${JAILFS} jails/${JAILNAME}
++	chflags -R noschg ${JAILFS}
++	zkillfs ${JAILFS} jail/${JAILNAME}
 +
 +	rmdir ${JAILMNT}
 +	rm -rf ${POUDRIERE_DATA}/packages/${JAILNAME}

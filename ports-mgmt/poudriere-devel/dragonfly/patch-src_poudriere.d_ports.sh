@@ -198,7 +198,7 @@
 +	[ -n "$(check_mount ${PTFS})" ] && \
 +		err 1 "Ports tree \"${PTNAME}\" is currently mounted and being used."
 +	msg "Deleting portstree \"${PTNAME}\""
-+	zkillfs ${PTFS} ports/${PTNAME}
++	zkillfs ${PTFS} port/${PTNAME}
  fi
  
  if [ ${UPDATE} -eq 1 ]; then

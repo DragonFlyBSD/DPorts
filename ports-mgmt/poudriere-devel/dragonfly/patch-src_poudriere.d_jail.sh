@@ -1,6 +1,6 @@
 --- src/poudriere.d/jail.sh.orig	2012-12-01 00:15:48.000000000 +0000
 +++ src/poudriere.d/jail.sh
-@@ -11,75 +11,38 @@ Parameters:
+@@ -11,401 +11,48 @@ Parameters:
      -k            -- kill (stop) a jail
      -u            -- update a jail
      -i            -- show informations
@@ -91,7 +91,10 @@
  }
  
  cleanup_new_jail() {
-@@ -87,325 +50,6 @@ cleanup_new_jail() {
+ 	msg "Error while creating jail, cleaning up." >&2
++	cd /
++	umount ${JAILMNT}/dev 2>/dev/null || :
++	umount ${JAILMNT} 2>/dev/null || :
  	delete_jail
  }
  
@@ -417,7 +420,7 @@
  ARCH=`uname -m`
  REALARCH=${ARCH}
  START=0
-@@ -416,27 +60,29 @@ CREATE=0
+@@ -416,27 +63,29 @@ CREATE=0
  QUIET=0
  INFO=0
  UPDATE=0
@@ -453,7 +456,7 @@
  			;;
  		m)
  			METHOD=${OPTARG}
-@@ -444,9 +90,15 @@ while getopts "J:j:v:a:z:m:n:f:M:sdklqci
+@@ -444,9 +93,15 @@ while getopts "J:j:v:a:z:m:n:f:M:sdklqci
  		f)
  			JAILFS=${OPTARG}
  			;;
@@ -469,7 +472,7 @@
  		s)
  			START=1
  			;;
-@@ -480,44 +132,52 @@ while getopts "J:j:v:a:z:m:n:f:M:sdklqci
+@@ -480,44 +135,52 @@ while getopts "J:j:v:a:z:m:n:f:M:sdklqci
  	esac
  done
  
