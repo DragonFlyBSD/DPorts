@@ -1,0 +1,11 @@
+--- simple-sendfile.cabal.orig	2013-02-20 00:43:30.000000000 +0000
++++ simple-sendfile.cabal
+@@ -21,7 +21,7 @@ Library
+                       , network
+                       , bytestring
+   -- NetBSD and OpenBSD don't have sendfile
+-  if os(freebsd)
++  if os(freebsd) || os(dragonfly)
+     CPP-Options:        -DOS_BSD
+     Other-Modules:      Network.Sendfile.BSD
+                         Network.Sendfile.IOVec
