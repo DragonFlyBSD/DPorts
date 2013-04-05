@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-archetypes.schemaextender
-# Date created:				02 January 2012
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-archetypes.schemaextender/Makefile,v 1.3 2012/11/17 05:56:45 svnexp Exp $
-#
+# $FreeBSD: devel/py-archetypes.schemaextender/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	archetypes.schemaextender
-PORTVERSION=	2.1.1
+PORTVERSION=	2.1.2
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
