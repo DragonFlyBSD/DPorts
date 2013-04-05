@@ -1,9 +1,9 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: ports/mail/emh/Makefile,v 1.27 2012/11/17 05:59:01 svnexp Exp $
+# $FreeBSD: mail/emh/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	emh
 PORTVERSION=	1.14.1
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	mail elisp
 MASTER_SITES=	RINGSERVER/elisp/semi/semi-1.14-for-flim-1.14
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
