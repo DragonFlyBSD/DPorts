@@ -1,9 +1,9 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: ports/japanese/lookup/Makefile,v 1.47 2013/02/04 08:30:28 svnexp Exp $
+# $FreeBSD: japanese/lookup/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	lookup
 PORTVERSION=	1.4.1
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	japanese elisp
 MASTER_SITES=	http://openlab.ring.gr.jp/edict/lookup/dist/
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
