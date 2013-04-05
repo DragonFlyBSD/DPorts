@@ -2,12 +2,12 @@
 # Date created:		27 May 2002
 # Whom:			Yoichi NAKAYAMA <yoichi@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/elscreen/Makefile,v 1.30 2012/11/17 05:59:34 svnexp Exp $
+# $FreeBSD: misc/elscreen/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	elscreen
 PORTVERSION=	1.4.6
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	misc elisp
 MASTER_SITES=	ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/%SUBDIR%/
 MASTER_SITE_SUBDIR=	. old
