@@ -1,7 +1,7 @@
-# $FreeBSD: ports/security/py-Products.PlonePAS/Makefile,v 1.6 2012/11/17 06:01:16 svnexp Exp $
+# $FreeBSD: security/py-Products.PlonePAS/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.PlonePAS
-PORTVERSION=	4.0.13
+PORTVERSION=	4.0.16
 CATEGORIES=	security python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.memoize>=0:${PORTSDIR}/www/py-plone.me
 		${PYTHON_PKGNAMEPREFIX}Products.PluggableAuthService>=0:${PORTSDIR}/security/py-Products.PluggableAuthService
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 USE_ZIP=	yes
 USE_ZOPE=	yes
