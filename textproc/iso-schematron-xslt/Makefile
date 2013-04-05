@@ -1,7 +1,8 @@
-# $FreeBSD: textproc/iso-schematron-xslt/Makefile 314053 2013-03-13 10:22:23Z gabor $
+# $FreeBSD: textproc/iso-schematron-xslt/Makefile 315673 2013-04-02 13:23:04Z gabor $
 
 PORTNAME=	iso-schematron-xslt
 PORTVERSION=	20130313
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.schematron.com/tmp/
 DISTFILES=	iso-schematron-xslt1.zip \
