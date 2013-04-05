@@ -1,0 +1,4 @@
+@comment Insert PLIST.lib-usermin here
+@comment -=[ begin PLIST.lib-usermin ]=-
+@comment -=[ end PLIST.lib-usermin ]=-
+@dirrmtry lib/usermin
