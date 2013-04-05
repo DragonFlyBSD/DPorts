@@ -2,12 +2,12 @@
 # Date Created:		27 Apr 2002
 # Whom:			Yoichi NAKAYAMA <yoichi@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/lsdb/Makefile,v 1.28 2012/11/17 05:55:10 svnexp Exp $
+# $FreeBSD: databases/lsdb/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	lsdb
 PORTVERSION=	0.11
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	databases elisp
 MASTER_SITES=	SFJP/${PORTNAME}/7488
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
