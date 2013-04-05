@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/gnomememoryblocks/files/patch-src::Makefile.in,v 1.3 2012/11/17 05:57:40 svnexp Exp $
+$FreeBSD: games/gnomememoryblocks/files/patch-src::Makefile.in 300896 2012-07-14 13:54:48Z beat $
 
 --- src/Makefile.in	2001/12/19 10:29:24	1.1
 +++ src/Makefile.in	2001/12/19 10:30:18

@@ -1,13 +1,9 @@
-# New ports collection makefile for:	gnomememoryblocks
-# Date created:				10th July 2000
-# Whom:					Ade Lovett <ade@FreeBSD.org>
-#
-# $FreeBSD: ports/games/gnomememoryblocks/Makefile,v 1.34 2012/11/17 05:57:40 svnexp Exp $
-#
+# Created by: Ade Lovett <ade@FreeBSD.org>
+# $FreeBSD: games/gnomememoryblocks/Makefile 315665 2013-04-02 10:10:49Z kwm $
 
 PORTNAME=	gnomememoryblocks
 PORTVERSION=	0.2
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	games gnome
 MASTER_SITES=	SF/gnome-memblocks/gnome-memblocks/${PORTVERSION}
 DISTNAME=	gnome-memblocks-${PORTVERSION}
@@ -16,7 +12,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Memory Blocks game for GNOME
 
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomelibs gdkpixbuf
+USES=        pathfix
+USE_GNOME=	gnomeprefix gnomelibs gdkpixbuf
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
