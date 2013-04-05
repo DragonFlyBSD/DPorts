@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-Products.PasswordResetTool/Makefile,v 1.4 2012/11/17 05:56:44 svnexp Exp $
+# $FreeBSD: devel/py-Products.PasswordResetTool/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.PasswordResetTool
-PORTVERSION=	2.0.8
+PORTVERSION=	2.0.12
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
