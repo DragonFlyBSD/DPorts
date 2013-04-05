@@ -1,10 +1,11 @@
-# $FreeBSD: ports/mail/sma/Makefile,v 1.14 2012/11/17 05:59:14 svnexp Exp $
+# $FreeBSD: mail/sma/Makefile 313435 2013-03-05 06:08:12Z dinoex $
 
 PORTNAME=	sma
 PORTVERSION=	1.4
 CATEGORIES=	mail
-MASTER_SITES=	http://www.klake.org/sma/dl/ \
+MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		ftp://ftp.dinoex.de/pub/FreeBSD/distfiles/
+MASTER_SITE_SUBDIR=	dinoex
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Program that analyses Sendmail log entries
