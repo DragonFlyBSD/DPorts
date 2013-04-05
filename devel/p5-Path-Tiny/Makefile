@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Path-Tiny/Makefile 314290 2013-03-15 10:38:10Z tobez $
+# $FreeBSD: devel/p5-Path-Tiny/Makefile 315366 2013-03-27 09:54:20Z tobez $
 
 PORTNAME=	Path-Tiny
-PORTVERSION=	0.015
+PORTVERSION=	0.016
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DAGOLDEN
