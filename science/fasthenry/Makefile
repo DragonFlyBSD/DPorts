@@ -1,12 +1,8 @@
-# New ports collection makefile for:	FastHenry
-# Date created:		5 Jan 2006
-# Whom:			Pedro Giffuni <giffunip@asme.org>
-#
-# $FreeBSD: ports/science/fasthenry/Makefile,v 1.6 2012/11/17 06:00:57 svnexp Exp $
-#
+# Created by: Pedro Giffuni <giffunip@asme.org>
+# $FreeBSD: science/fasthenry/Makefile 315424 2013-03-28 01:06:02Z bf $
 
 PORTNAME=	fasthenry
-DISTVERSION=	3.0wr-011109
+DISTVERSION=	3.0wr-021113
 CATEGORIES=	science cad
 MASTER_SITES=	http://www.wrcad.com/ftp/pub/ LOCAL/bf
 
