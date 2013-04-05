@@ -1,13 +1,13 @@
-# $FreeBSD: ports/www/py-plonetheme.classic/Makefile,v 1.5 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-plonetheme.classic/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plonetheme.classic
-PORTVERSION=	1.2.3
+PORTVERSION=	1.2.5
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	zope@FreeBSD.org
-COMMENT=	The classic Plone 3 default theme
+COMMENT=	Classic Plone 3 default theme
 
 LICENSE=	GPLv2
 
