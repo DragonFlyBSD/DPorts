@@ -1,4 +1,4 @@
---- src/poudriere.d/jail.sh.dragonfly.orig	2013-04-01 15:07:37.000000000 +0000
+--- src/poudriere.d/jail.sh.dragonfly.orig	2013-04-05 16:10:58.203297000 +0000
 +++ src/poudriere.d/jail.sh.dragonfly
 @@ -0,0 +1,265 @@
 +#!/bin/sh
@@ -93,8 +93,10 @@
 +
 +	# make upgrade required to link device drives (e.g. </dev/video/...)
 +     	msg "${JAILNAME}: making world upgrade"
++	mount -t devfs devfs ${JAILMNT}/dev
 +	make -C ${JAILMNT}/usr/src upgrade > \
 +	  ${JLOGBASE}/upgrade.log 2>&1 || err 1 "Fail to make world upgrade"
++	umount ${JAILMNT}/dev
 +
 +	# make sure world can be dismounted
 +	cd /
@@ -160,9 +162,7 @@
 +		git pull || err 1 "Fail "
 +		echo " done"
 +	fi
-+	mount -t devfs devfs ${JAILMNT}/dev
 +	build_and_install_world ${1}
-+	umount ${JAILMNT}/dev
 +	umount ${JAILMNT}
 +	bhack="$(date '+%Y-%m-%d %H:%M:%S')"
 +	zset timestamp "${bhack}"

@@ -1062,8 +1062,11 @@
  }
  
  append_make() {
-@@ -1596,8 +1045,7 @@ prepare_jail() {
+@@ -1594,10 +1043,10 @@ prepare_jail() {
+ 		export PACKAGE_BUILDING=yes
+ 	fi
  	export FORCE_PACKAGE=yes
++	export TERM=cons25
  	export USER=root
  	export HOME=/root
 -	PORTSDIR=`porttree_get_base ${PTNAME}`
@@ -1072,7 +1075,7 @@
  	[ -z "${JAILMNT}" ] && err 1 "No path of the base of the jail defined"
  	[ -z "${PORTSDIR}" ] && err 1 "No ports directory defined"
  	[ -z "${PKGDIR}" ] && err 1 "No package directory defined"
-@@ -1619,15 +1067,14 @@ prepare_jail() {
+@@ -1619,15 +1068,14 @@ prepare_jail() {
  	fi
  
  	msg "Populating LOCALBASE"
@@ -1092,7 +1095,7 @@
  	else
  		export PKGNG=0
  		export PKG_ADD=pkg_add
-@@ -1645,26 +1092,40 @@ test -f ${SCRIPTPREFIX}/../../etc/poudri
+@@ -1645,26 +1093,40 @@ test -f ${SCRIPTPREFIX}/../../etc/poudri
  . ${SCRIPTPREFIX}/../../etc/poudriere.conf
  POUDRIERED=${SCRIPTPREFIX}/../../etc/poudriere.d
  
@@ -1141,7 +1144,7 @@
  case ${ZROOTFS} in
  	[!/]*)
  		err 1 "ZROOTFS shoud start with a /"
-@@ -1679,8 +1140,3 @@ case "${WRKDIR_ARCHIVE_FORMAT}" in
+@@ -1679,8 +1141,3 @@ case "${WRKDIR_ARCHIVE_FORMAT}" in
  	*) err 1 "invalid format for WRKDIR_ARCHIVE_FORMAT: ${WRKDIR_ARCHIVE_FORMAT}" ;;
  esac
  
