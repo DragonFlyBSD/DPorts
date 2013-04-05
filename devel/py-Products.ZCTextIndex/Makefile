@@ -1,12 +1,7 @@
-# New ports collection makefile for:	py-Products.ZCTextIndex
-# Date created:				Nov 14, 2011
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/devel/py-Products.ZCTextIndex/Makefile,v 1.3 2012/11/17 05:56:44 svnexp Exp $
-#
+# $FreeBSD: devel/py-Products.ZCTextIndex/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.ZCTextIndex
-PORTVERSION=	2.13.3
+PORTVERSION=	2.13.4
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
