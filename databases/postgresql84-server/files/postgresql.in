@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/databases/postgresql84-server/files/postgresql.in,v 1.8 2012/11/17 05:55:20 svnexp Exp $
+# $FreeBSD: databases/postgresql84-server/files/postgresql.in 300896 2012-07-14 13:54:48Z beat $
 #
 # PROVIDE: postgresql
 # REQUIRE: LOGIN

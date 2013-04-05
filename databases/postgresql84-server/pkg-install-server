@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $FreeBSD: ports/databases/postgresql84-server/pkg-install-server,v 1.11 2012/11/17 05:55:20 svnexp Exp $
+# $FreeBSD: databases/postgresql84-server/pkg-install-server 300896 2012-07-14 13:54:48Z beat $
 
 PATH=/bin:/usr/bin:/usr/sbin
 
