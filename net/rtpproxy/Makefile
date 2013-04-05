@@ -1,17 +1,14 @@
-# New ports collection makefile for:   rtpproxy
-# Date created:        20 April 2005
-# Whom:                sobomax@FreeBSD.org
-#
-# $FreeBSD: ports/net/rtpproxy/Makefile,v 1.5 2012/11/17 06:00:18 svnexp Exp $
-#
+# Created by: sobomax
+# $FreeBSD: ports/net/rtpproxy/Makefile,v 1.7 2012/12/22 18:42:36 svnexp Exp $
 
 PORTNAME=	rtpproxy
 PORTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.rtpproxy.org/chrome/site/
 
 MAINTAINER=	sobomax@FreeBSD.org
-COMMENT=	A high-performance RTP proxy server for the SIP Express Router (SER)
+COMMENT=	High-performance RTP proxy server for the SIP Express Router (SER)
 
 LIB_DEPENDS=	gsm.1:${PORTSDIR}/audio/gsm
 
@@ -20,6 +17,9 @@ CONFIGURE_ENV+=	LIBS=-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 #CONFIGURE_ARGS=	--mandir=${LOCALBASE}/man
 MAN8=		rtpproxy.8
+
+USERS=		${PORTNAME}
+GROUPS=		${PORTNAME}
 
 post-build:
 	${SED} 's|%%PREFIX%%|${PREFIX}|g ; s|%%RC_SUBR%%|/etc/rc.subr|g' \
