@@ -2,12 +2,12 @@
 # Date created:                27 July 2004
 # Whom:                        Dryice Liu <dryice@liu.com.cn>
 #
-# $FreeBSD: ports/editors/tree-widget/Makefile,v 1.22 2012/11/17 05:57:18 svnexp Exp $
+# $FreeBSD: editors/tree-widget/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	tree-widget
 PORTVERSION=	2.0
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	editors elisp
 MASTER_SITES=	SF/emhacks/${PORTNAME}/${PORTVERSION} \
 		http://dryice.name/computer/FreeBSD/distfiles/
