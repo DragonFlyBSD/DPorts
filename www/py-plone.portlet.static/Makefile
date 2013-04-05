@@ -1,18 +1,13 @@
-# New ports collection makefile for:	py-plone.portlet.static
-# Date created:				03 January 2012
-# Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-#
-# $FreeBSD: ports/www/py-plone.portlet.static/Makefile,v 1.3 2012/11/17 06:03:01 svnexp Exp $
-#
+# $FreeBSD: www/py-plone.portlet.static/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone.portlet.static
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	zope@FreeBSD.org
-COMMENT=	A simple static HTML portlet for Plone
+COMMENT=	Simple static HTML portlet for Plone
 
 LICENSE=	GPLv2
 
