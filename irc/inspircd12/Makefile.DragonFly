@@ -1,0 +1,8 @@
+OPTIONS_EXCLUDE+= OPENSSL
+
+REPLACE_PERL=	configure \
+		inspircd \
+		modulemanager \
+		make/run-cc.pl \
+		tools/create_templates.pl \
+		win/rename_installer.pl
