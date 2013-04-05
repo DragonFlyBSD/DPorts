@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-Products.CMFPlacefulWorkflow/Makefile,v 1.4 2012/11/17 05:56:44 svnexp Exp $
+# $FreeBSD: devel/py-Products.CMFPlacefulWorkflow/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.CMFPlacefulWorkflow
-PORTVERSION=	1.5.7
+PORTVERSION=	1.5.9
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
