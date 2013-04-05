@@ -2,12 +2,12 @@
 # Date created:		10 September 2009
 # Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/x-face-e21/Makefile,v 1.12 2012/11/17 05:59:18 svnexp Exp $
+# $FreeBSD: mail/x-face-e21/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	x-face-e21
 PORTVERSION=	20070306
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	mail elisp
 MASTER_SITES=	http://www.jpl.org/elips/
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
