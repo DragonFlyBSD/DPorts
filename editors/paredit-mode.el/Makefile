@@ -1,8 +1,8 @@
-# $FreeBSD: ports/editors/paredit-mode.el/Makefile,v 1.11 2013/01/26 15:07:25 svnexp Exp $
+# $FreeBSD: editors/paredit-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	paredit-mode.el
 PORTVERSION=	22
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	editors elisp
 MASTER_SITES=	http://mumble.net/~campbell/emacs/
 DISTNAME=	paredit-22.el
