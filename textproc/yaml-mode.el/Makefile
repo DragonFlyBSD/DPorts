@@ -1,9 +1,9 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
-# $FreeBSD: ports/textproc/yaml-mode.el/Makefile,v 1.15 2013/01/15 21:49:06 svnexp Exp $
+# $FreeBSD: textproc/yaml-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	yaml-mode.el
 PORTVERSION=	0.0.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc elisp
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
 
