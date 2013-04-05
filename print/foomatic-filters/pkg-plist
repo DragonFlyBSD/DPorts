@@ -1,0 +1,16 @@
+bin/foomatic-rip
+@unexec if cmp -s %D/etc/foomatic/filter.conf %D/etc/foomatic/filter.conf.sample; then rm -f %D/etc/foomatic/filter.conf; fi
+etc/foomatic/filter.conf.sample
+libexec/cups/backend/beh
+libexec/cups/filter/foomatic-rip
+lib/ppr/interfaces/foomatic-rip
+lib/ppr/lib/foomatic-rip
+@dirrmtry libexec/cups/backend
+@dirrmtry libexec/cups/filter
+@dirrmtry etc/foomatic/direct
+@dirrmtry etc/foomatic
+@dirrmtry lib/ppr/lib
+@dirrmtry lib/ppr/interfaces
+@dirrmtry lib/ppr
+@dirrmtry libexec/cups/filter
+@dirrmtry libexec/cups
