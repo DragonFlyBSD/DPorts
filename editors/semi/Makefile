@@ -1,9 +1,9 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: ports/editors/semi/Makefile,v 1.56 2013/01/26 17:31:23 svnexp Exp $
+# $FreeBSD: editors/semi/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	semi
 PORTVERSION=	${SEMI_VER}
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	editors elisp
 MASTER_SITES=	http://git.chise.org/elisp/dist/semi/semi-1.14-for-flim-1.14/
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
