@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-kss-core/Makefile,v 1.5 2012/11/17 05:56:48 svnexp Exp $
+# $FreeBSD: devel/py-kss-core/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	kss-core
-PORTVERSION=	1.6.4
+PORTVERSION=	1.6.5
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
