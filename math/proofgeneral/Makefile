@@ -1,13 +1,9 @@
-# New ports collection makefile for:   proofgeneral
-# Date created:        11 August 2005
-# Whom:                Timothy Bourke <timbob@bigpond.com>
-#
-# $FreeBSD: ports/math/proofgeneral/Makefile,v 1.34 2012/11/17 05:59:28 svnexp Exp $
-#
+# Created by: Timothy Bourke <timbob@bigpond.com>
+# $FreeBSD: math/proofgeneral/Makefile 315633 2013-03-31 12:58:43Z bdrewery $
 
 PORTNAME=	proofgeneral
 PORTVERSION=	4.1
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	math elisp
 MASTER_SITES=	http://proofgeneral.inf.ed.ac.uk/releases/
 PKGNAMESUFFIX=	-${EMACS_NAME}
@@ -29,12 +25,6 @@ INSTALLS_ICONS=	yes
 USE_PERL5=	yes
 
 .include <bsd.port.pre.mk>
-
-.ifdef (PACKAGE_BUILDING)
-PLIST_SUB+=	PACKAGE_BUILDING="@comment "
-.else
-PLIST_SUB+=	PACKAGE_BUILDING=""
-.endif
 
 .if ${EMACS_NAME} == xemacs
 IGNORE=	the ProofGeneral developers no longer support XEmacs
