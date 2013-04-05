@@ -2,12 +2,12 @@
 # Date created:				February 22 2006
 # Whom:					Dryice Liu <dryice@dryice.name>
 #
-# $FreeBSD: ports/textproc/muse/Makefile,v 1.25 2012/11/17 06:02:03 svnexp Exp $
+# $FreeBSD: textproc/muse/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	muse
 PORTVERSION=	3.20
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	textproc elisp
 MASTER_SITES=	http://download.gna.org/muse-el/ \
 		${MASTER_SITE_LOCAL} \
