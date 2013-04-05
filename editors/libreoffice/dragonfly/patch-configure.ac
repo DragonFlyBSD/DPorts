@@ -10,15 +10,7 @@
  BUILD_TYPE="LibO"
  SCPDEFS=""
  GIT_NEEDED_SUBMODULES=""
-@@ -453,6 +456,7 @@ openbsd*)
-     ;;
- 
- dragonfly*)
-+    test_cups=no
-     test_gtk=yes
-     build_gstreamer=yes
-     build_gstreamer_0_10=yes
-@@ -8277,7 +8281,7 @@ dnl Graphite
+@@ -8277,7 +8280,7 @@ dnl Graphite
  dnl ===================================================================
  
  AC_MSG_CHECKING([whether to enable graphite support])
