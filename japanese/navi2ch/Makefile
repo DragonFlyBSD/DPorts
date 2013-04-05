@@ -2,12 +2,12 @@
 # Date created:		13 May 2001
 # Whom:			FUJISHIMA Satsuki <sf@FreeBSD.org>
 #
-# $FreeBSD: ports/japanese/navi2ch/Makefile,v 1.21 2012/11/17 05:58:37 svnexp Exp $
+# $FreeBSD: japanese/navi2ch/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	navi2ch
 PORTVERSION=	1.8.4
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	japanese www elisp
 MASTER_SITES=	SF
