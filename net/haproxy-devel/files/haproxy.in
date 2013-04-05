@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/haproxy-devel/files/haproxy.in,v 1.10 2012/11/17 06:00:01 svnexp Exp $
+# $FreeBSD: net/haproxy-devel/files/haproxy.in 305893 2012-10-14 20:58:04Z crees $
 #
 
 # PROVIDE: haproxy
