@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-mongoengine
-# Date created:		2010-06-04
-# Whom:			Mirko Zinn <mail@derzinn.de>
-#
-# $FreeBSD: ports/devel/py-mongoengine/Makefile,v 1.8 2012/11/17 05:56:48 svnexp Exp $
-#
+# Created by: Mirko Zinn <mail@derzinn.de>
+# $FreeBSD: devel/py-mongoengine/Makefile 315510 2013-03-29 00:52:44Z lippe $
 
 PORTNAME=	mongoengine
-PORTVERSION=	0.6.8
+PORTVERSION=	0.7.9
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,5 +17,6 @@ RUN_DEPENDS=	pymongo>=2.1:${PORTSDIR}/databases/pymongo
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
+PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
 .include <bsd.port.mk>
