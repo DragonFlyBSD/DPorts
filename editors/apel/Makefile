@@ -1,9 +1,9 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: ports/editors/apel/Makefile,v 1.62 2013/01/26 11:45:25 svnexp Exp $
+# $FreeBSD: editors/apel/Makefile 315598 2013-03-30 05:13:30Z ashish $
 
 PORTNAME=	apel
 PORTVERSION=	${APEL_VER}
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	editors elisp
 MASTER_SITES=	http://git.chise.org/elisp/dist/apel/
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
