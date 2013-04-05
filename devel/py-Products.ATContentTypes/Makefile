@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/py-Products.ATContentTypes/Makefile,v 1.5 2012/11/17 05:56:44 svnexp Exp $
+# $FreeBSD: devel/py-Products.ATContentTypes/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	Products.ATContentTypes
-PORTVERSION=	2.1.8
+PORTVERSION=	2.1.12
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
