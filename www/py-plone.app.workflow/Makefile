@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/py-plone.app.workflow/Makefile,v 1.4 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-plone.app.workflow/Makefile 315489 2013-03-28 17:23:24Z rm $
 
 PORTNAME=	plone.app.workflow
-PORTVERSION=	2.0.7
+PORTVERSION=	2.0.10
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
