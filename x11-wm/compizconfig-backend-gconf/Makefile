@@ -1,0 +1,30 @@
+# Created by: Robert Noland <rnoland@FreeBSD.org>
+# $FreeBSD: x11-wm/compizconfig-backend-gconf/Makefile 315433 2013-03-28 03:28:30Z eadler $
+
+PORTNAME=	compizconfig-backend-gconf
+PORTVERSION=	0.8.4
+PORTREVISION=	3
+CATEGORIES=	x11-wm
+MASTER_SITES=	http://releases.compiz.org/${PORTVERSION}/
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	The gconf backend for CompizConfig
+
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/compiz.pc:${PORTSDIR}/x11-wm/compiz
+LIB_DEPENDS=	compizconfig.0:${PORTSDIR}/x11-wm/libcompizconfig
+
+USE_BZIP2=	yes
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_LDCONFIG=	yes
+USE_PKGCONFIG=	yes
+USE_AUTOTOOLS=	libtool
+
+USES=        pathfix
+USE_GNOME=	glib20 gconf2
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|'	\
+		${WRKSRC}/settings-backend/gconf.c	\
+
+.include <bsd.port.mk>
