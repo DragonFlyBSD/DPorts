@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/security/nettle/Makefile,v 1.38 2013/01/26 15:05:06 svnexp Exp $
+# $FreeBSD: security/nettle/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	nettle
 PORTVERSION=	2.6
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GNU} \
 MASTER_SITE_SUBDIR=	${PORTNAME}/:DEFAULT
 
 MAINTAINER=	johans@FreeBSD.org
-COMMENT=	A low-level cryptographic library
+COMMENT=	Low-level cryptographic library
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
