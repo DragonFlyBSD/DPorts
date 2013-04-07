@@ -1,8 +1,5 @@
-# New ports collection makefile for:	mhash
-# Date created:		Mon Jun 28 17:59:13 PDT 1999
-# Whom:			nsayer@freebsd.org
-#
-# $FreeBSD: ports/security/mhash/Makefile,v 1.37 2012/11/17 06:01:08 svnexp Exp $
+# Created by: nsayer@freebsd.org
+# $FreeBSD: security/mhash/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	mhash
@@ -12,7 +9,7 @@ CATEGORIES=	security
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An easy-to-use library for strong hashes such as MD5 and SHA1
+COMMENT=	Easy-to-use library for strong hashes such as MD5 and SHA1
 
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
