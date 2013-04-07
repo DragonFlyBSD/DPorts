@@ -1,5 +1,5 @@
-# Created by:	bms
-# $FreeBSD: ports/devel/chrpath/Makefile,v 1.8 2012/11/17 05:55:37 svnexp Exp $
+# Created by: bms
+# $FreeBSD: devel/chrpath/Makefile 315209 2013-03-25 10:09:39Z rene $
 
 PORTNAME=	chrpath
 PORTVERSION=	0.13
@@ -22,7 +22,6 @@ PLIST_FILES=	bin/chrpath
 PORTDOCS=	AUTHORS ChangeLog NEWS README
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=
 
 .include <bsd.port.options.mk>
 
