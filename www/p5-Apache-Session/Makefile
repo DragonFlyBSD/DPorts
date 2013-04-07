@@ -1,5 +1,5 @@
 # Created by: Frank Mayhar <frank@exit.com>
-# $FreeBSD: ports/www/p5-Apache-Session/Makefile,v 1.31 2013/01/30 09:53:32 svnexp Exp $
+# $FreeBSD: www/p5-Apache-Session/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Apache-Session
 PORTVERSION=	1.90
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A persistence framework for session data
+COMMENT=	Persistence framework for session data
 
 MAKE_JOBS_SAFE=	yes
 
