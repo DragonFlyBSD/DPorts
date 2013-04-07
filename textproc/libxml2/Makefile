@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: textproc/libxml2/Makefile 315569 2013-03-29 20:12:12Z kwm $
+# $FreeBSD: textproc/libxml2/Makefile 315735 2013-04-05 19:39:31Z bdrewery $
 #    $MCom: ports/textproc/libxml2/Makefile,v 1.15 2012/11/26 19:55:23 kwm Exp $
 
 PORTNAME=	libxml2
@@ -7,6 +7,7 @@ PORTVERSION=	2.8.0
 PORTREVISION?=	1
 CATEGORIES?=	textproc gnome
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/ \
+		http://xmlsoft.org/sources/ \
 		ftp://gd.tuwien.ac.at/pub/libxml/
 DIST_SUBDIR=	gnome2
 
