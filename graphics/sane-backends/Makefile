@@ -1,5 +1,5 @@
 # Created by: gary@hotlava.com
-# $FreeBSD: graphics/sane-backends/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: graphics/sane-backends/Makefile 315474 2013-03-28 15:51:16Z eadler $
 
 PORTNAME=	sane-backends
 PORTVERSION=	1.0.23
@@ -54,10 +54,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MUSB}
-.if ${OSVERSION} < 800069
-LIB_DEPENDS+=		usb-0.1:${PORTSDIR}/devel/libusb
-.endif
-.else
 CONFIGURE_ARGS+=	--disable-libusb
 .endif
 
