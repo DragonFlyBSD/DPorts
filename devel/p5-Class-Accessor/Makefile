@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-Accessor
-# Date created:		17 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Class-Accessor/Makefile,v 1.18 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Class-Accessor/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Class-Accessor
 PORTVERSION=	0.34
