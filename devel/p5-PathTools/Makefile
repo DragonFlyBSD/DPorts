@@ -1,6 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.ORG>
-# $FreeBSD: ports/devel/p5-PathTools/Makefile,v 1.40 2013/01/30 16:50:35 svnexp Exp $
-#
+# $FreeBSD: devel/p5-PathTools/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	PathTools
 PORTVERSION=	3.4000
@@ -11,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:C/00$//}
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Perl module for portably manipulating file specifications
+COMMENT=	Perl module for portably manipulating file specifications
 
 PERL_CONFIGURE=	yes
 
