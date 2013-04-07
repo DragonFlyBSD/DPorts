@@ -1,10 +1,11 @@
-# $FreeBSD: ports/security/cyrus-sasl2/Makefile,v 1.158 2013/01/08 15:45:29 svnexp Exp $
+# $FreeBSD: security/cyrus-sasl2/Makefile 315740 2013-04-06 11:10:15Z bapt $
 
 PORTNAME=	cyrus-sasl
 PORTVERSION=	2.1.26
 PORTREVISION=	2
 CATEGORIES=	security ipv6
-MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/
+MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/ \
+		http://cyrusimap.org/releases/
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	RFC 2222 SASL (Simple Authentication and Security Layer)
