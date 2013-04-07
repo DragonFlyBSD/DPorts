@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 315445 2013-03-28 07:45:02Z bapt $
+# $FreeBSD: Mk/bsd.pkgng.mk 315732 2013-04-05 09:24:39Z bapt $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -20,7 +20,9 @@ PKGUPGRADE?=		${PKGDIR}/pkg-upgrade
 _FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
 						fonts.dir fonts.scale gtk-update-icon-cache \
 						gio-querymodules \
-						update-desktop-database update-mime-database
+						update-desktop-database update-mime-database \
+						gdk-pixbuf-query-loaders catalog.ports \
+						glib-compile-schemas
 
 PLIST_REINPLACE:=	${PLIST_REINPLACE:Ndirrmtry}
 PLIST_REINPLACE:=	${PLIST_REINPLACE:Nstopdaemon}
