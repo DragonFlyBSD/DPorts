@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: ports/japanese/nkf/Makefile,v 1.43 2013/02/04 11:36:18 svnexp Exp $
+# $FreeBSD: japanese/nkf/Makefile 311574 2013-02-04 05:29:46Z eadler $
 
 PORTNAME=	nkf
 PORTVERSION=	2.1.2
