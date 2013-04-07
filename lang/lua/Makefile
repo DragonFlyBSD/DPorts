@@ -1,5 +1,5 @@
 # Created by: Richard Kiss
-# $FreeBSD: ports/lang/lua/Makefile,v 1.59 2013/01/05 23:43:11 svnexp Exp $
+# $FreeBSD: lang/lua/Makefile 315557 2013-03-29 18:41:29Z mandree $
 
 PORTNAME=	lua
 PORTVERSION=	5.1.5
@@ -13,6 +13,8 @@ MAINTAINER=	lua@FreeBSD.org
 COMMENT=	Small, compilable scripting language providing easy access to C code
 
 LICENSE=	MIT
+
+PORTSCOUT=	limit:^5\.1
 
 PATCH_WRKSRC=	${WRKSRC}/src
 USE_LUA=	5.1
