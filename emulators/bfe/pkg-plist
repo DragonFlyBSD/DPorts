@@ -1,0 +1,4 @@
+bin/bfe2
+%%DATADIR%%/bferc.sample
+%%DATADIR%%/README.bferc
+@dirrm %%DATADIR%%
