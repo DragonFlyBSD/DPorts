@@ -1,4 +1,4 @@
-# $FreeBSD: ports/misc/kdehier4/Makefile,v 1.41 2013/02/04 01:04:22 svnexp Exp $
+# $FreeBSD: misc/kdehier4/Makefile 315373 2013-03-27 11:55:25Z makc $
 
 PORTNAME=	kdehier4
 PORTVERSION=	1.0.11
@@ -7,7 +7,7 @@ MASTER_SITES=	# none
 DISTFILES=	# none
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Utility port that creates hierarchy of shared KDE4 directories
+COMMENT=	Hierarchy of shared directories for KDE 4 ports
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
