@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/krb5/Makefile 313458 2013-03-05 16:10:39Z cy $
+# $FreeBSD: security/krb5/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=		krb5
 PORTVERSION=		1.11.1
@@ -13,7 +13,7 @@ PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2
 
 MAINTAINER=		cy@FreeBSD.org
-COMMENT=		An authentication system developed at MIT, successor to Kerberos IV
+COMMENT=		Authentication system developed at MIT, successor to Kerberos IV
 
 LICENSE=		MIT
 
