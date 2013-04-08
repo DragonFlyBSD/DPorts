@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-Password-Pronounceable
-# Date created:				Fri Dec  29 13:13:45 UTC 2006
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Text-Password-Pronounceable/Makefile,v 1.8 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: security/p5-Text-Password-Pronounceable/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Text-Password-Pronounceable
 PORTVERSION=	0.30
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Perl extension for generating pronounceable passwords
+COMMENT=	Perl extension for generating pronounceable passwords
 
 PERL_CONFIGURE=	yes
 
