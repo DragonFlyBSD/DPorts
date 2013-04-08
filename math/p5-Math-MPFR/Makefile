@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-MPFR/Makefile 313583 2013-03-07 12:50:04Z tobez $
+# $FreeBSD: math/p5-Math-MPFR/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Math-MPFR
 PORTVERSION=	3.17
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:SISYPHUS
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A perl interface to MPFR Library
+COMMENT=	Perl interface to MPFR Library
 
 LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp \
 		mpfr:${PORTSDIR}/math/mpfr
