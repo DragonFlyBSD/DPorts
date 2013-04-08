@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Chen
-# $FreeBSD: ports/devel/p5-Devel-Caller/Makefile,v 1.10 2013/01/16 15:46:58 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-Caller/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Devel-Caller
 PORTVERSION=	2.06
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A perl module which is meatier versions of caller
+COMMENT=	Perl module which is meatier versions of caller
 
 BUILD_DEPENDS=	p5-PadWalker>=0.08:${PORTSDIR}/devel/p5-PadWalker
 RUN_DEPENDS:=	${BUILD_DEPENDS}
