@@ -2,7 +2,7 @@
 # Date created:		2007-03-06
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: ports/audio/caps-plugins/Makefile,v 1.14 2012/11/17 05:54:29 svnexp Exp $
+# $FreeBSD: audio/caps-plugins/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	caps-plugins
