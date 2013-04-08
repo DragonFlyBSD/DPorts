@@ -1,10 +1,5 @@
-# New ports collection makefile for:   gnomekeyring
-# Date Created:			08 December 2003
-# Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/security/gnome-keyring/Makefile,v 1.60 2012/11/17 06:01:04 svnexp Exp $
-#   $MCom: ports/security/gnome-keyring/Makefile,v 1.98 2010/10/26 08:18:44 kwm Exp $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: security/gnome-keyring/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	2.32.1
@@ -14,7 +9,7 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A program that keeps passwords and other secrets
+COMMENT=	Program that keeps passwords and other secrets
 
 LIB_DEPENDS=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
