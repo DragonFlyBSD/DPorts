@@ -2,7 +2,7 @@
 # Date created:        28 April 1999
 # Whom:                jkoshy
 #
-# $FreeBSD: ports/lang/siod/Makefile,v 1.17 2012/11/17 05:58:56 svnexp Exp $
+# $FreeBSD: lang/siod/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	siod
