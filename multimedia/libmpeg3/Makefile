@@ -2,7 +2,7 @@
 # Date created:		06 Feb 2005
 # Whom:			Igor Pokrovsky <ip@doom.homeunix.org>
 #
-# $FreeBSD: ports/multimedia/libmpeg3/Makefile,v 1.18 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/libmpeg3/Makefile 300947 2012-07-16 11:58:02Z bapt $
 #
 
 PORTNAME=	libmpeg3
