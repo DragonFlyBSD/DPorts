@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/botan/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: security/botan/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	botan
 PORTVERSION=	1.8.13
@@ -9,7 +9,7 @@ DISTNAME=	Botan-${PORTVERSION}
 EXTRACT_SUFX=	.tbz
 
 MAINTAINER=	lapo@lapo.it
-COMMENT=	A portable, easy to use, and efficient C++ crypto library
+COMMENT=	Portable, easy to use, and efficient C++ crypto library
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/doc/license.txt
