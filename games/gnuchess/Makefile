@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: games/gnuchess/Makefile 314105 2013-03-13 18:57:12Z johans $
+# $FreeBSD: games/gnuchess/Makefile 315523 2013-03-29 07:07:33Z johans $
 
 PORTNAME=	gnuchess
 PORTVERSION=	6.0.3
@@ -44,7 +44,7 @@ post-build:
 
 post-install:
 	${LN} -f ${PREFIX}/bin/gnuchess ${PREFIX}/bin/gnuchessx
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/NEWS ${WRKSRC}/doc/* ${DOCSDIR}
 .endif
