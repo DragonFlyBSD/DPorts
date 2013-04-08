@@ -2,7 +2,7 @@
 # Date created:				2007-08-15
 # Whom:					Robert Noland <rnoland@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/compiz-bcop/Makefile,v 1.15 2012/11/17 05:55:38 svnexp Exp $
+# $FreeBSD: devel/compiz-bcop/Makefile 301539 2012-07-26 05:40:22Z bapt $
 #
 
 PORTNAME=	compiz-bcop
