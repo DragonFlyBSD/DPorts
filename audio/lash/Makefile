@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: ports/audio/lash/Makefile,v 1.24 2012/12/17 02:31:03 svnexp Exp $
+# $FreeBSD: audio/lash/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	lash
 PORTVERSION=	0.5.4
@@ -20,7 +20,8 @@ LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack \
 OPTIONS_DEFINE=	READLINE DOCS
 OPTIONS_DEFAULT=READLINE
 
-USE_GNOME=	gnomehack gtk20 libxml2
+USES=        pathfix
+USE_GNOME=	gtk20 libxml2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-alsa-midi
