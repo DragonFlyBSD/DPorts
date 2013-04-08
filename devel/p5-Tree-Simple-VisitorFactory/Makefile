@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Tree::Simple::VisitorFactory
-# Date created:				13 August 2004
-# Whom:					Aaron Dalton <aaron@daltons.ca>
-#
-# $FreeBSD: ports/devel/p5-Tree-Simple-VisitorFactory/Makefile,v 1.18 2012/12/17 13:43:44 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@daltons.ca>
+# $FreeBSD: devel/p5-Tree-Simple-VisitorFactory/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Tree-Simple-VisitorFactory
 PORTVERSION=	0.10
@@ -13,7 +9,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A set of visitor objects for traversing Tree::Simple hierarchies
+COMMENT=	Set of visitor objects for traversing Tree::Simple hierarchies
 
 BUILD_DEPENDS=	p5-Tree-Simple>=0:${PORTSDIR}/devel/p5-Tree-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
