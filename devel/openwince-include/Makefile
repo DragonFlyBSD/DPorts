@@ -3,7 +3,7 @@
 # Whom:			Stanislav Sedov <ssedov@mbsd.msk.ru>
 #
 # $MBSDlabs$
-# $FreeBSD: ports/devel/openwince-include/Makefile,v 1.6 2012/11/17 05:56:03 svnexp Exp $
+# $FreeBSD: devel/openwince-include/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	include
