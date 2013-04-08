@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/graphviz/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: graphics/graphviz/Makefile 315524 2013-03-29 07:53:21Z dinoex $
 
 PORTNAME=	graphviz
 PORTVERSION=	2.30.1
@@ -125,10 +125,12 @@ PLIST_SUB+=		WITH_TK="@comment "
 CPPFLAGS+=		-I${TCL_INCLUDEDIR}
 USE_TCL_BUILD=		84+
 .include "${PORTSDIR}/Mk/bsd.tcl.mk"
-CONFIGURE_ARGS+=	--with-tclsh=${TCLSH}
+CONFIGURE_ARGS+=	--with-tclsh=${TCLSH} --enable-tcl=yes
 CONFIGURE_ENV+=		TCLCONFIG="${TCL_LIBDIR}/tclConfig.sh"
 MAN3+=			gdtclft.3tcl tcldot.3tcl
 PLIST_SUB+=		TCL_VER="${TCL_VER}"
+.else
+CONFIGURE_ARGS+=	--enable-tcl=no
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
