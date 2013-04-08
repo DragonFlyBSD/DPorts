@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MIME-Lite
-# Date created:				August 3, 1999
-# Whom:	      				Alex Perel <veers@disturbed.net>
-#
-# $FreeBSD: ports/mail/p5-MIME-Lite/Makefile,v 1.28 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: Alex Perel <veers@disturbed.net>
+# $FreeBSD: mail/p5-MIME-Lite/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	MIME-Lite
 PORTVERSION=	3.02.9
@@ -13,7 +9,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A simple interface for creating (not parsing!) MIME messages
+COMMENT=	Simple interface for creating (not parsing!) MIME messages
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
