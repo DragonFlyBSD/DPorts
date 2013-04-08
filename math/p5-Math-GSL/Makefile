@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math-GSL
-# Date created:				15 September 2003
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-GSL/Makefile,v 1.32 2012/12/17 05:34:40 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: math/p5-Math-GSL/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Math-GSL
 PORTVERSION=	0.27
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A perl interface to GNU Scientific Library
+COMMENT=	Perl interface to GNU Scientific Library
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
