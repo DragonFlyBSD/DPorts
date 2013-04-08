@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CDDB
-# Date created:		11-Mar-2001
-# Whom:			Yar Tikhiy <yar@comp.chem.msu.su>
-#
-# $FreeBSD: ports/audio/p5-CDDB/Makefile,v 1.19 2012/11/17 05:54:40 svnexp Exp $
-#
+# Created by: Yar Tikhiy <yar@comp.chem.msu.su>
+# $FreeBSD: audio/p5-CDDB/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	CDDB
 PORTVERSION=	1.220
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A high-level interface to the Compact Disc Database
+COMMENT=	High-level interface to the Compact Disc Database
 
 PERL_CONFIGURE=	yes
 
