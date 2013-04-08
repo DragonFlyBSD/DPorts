@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/devel/p5-Class-InsideOut/Makefile,v 1.19 2013/01/25 09:47:54 svnexp Exp $
+# $FreeBSD: devel/p5-Class-InsideOut/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Class-InsideOut
 PORTVERSION=	1.11
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A safe, simple inside-out object construction kit
+COMMENT=	Safe, simple inside-out object construction kit
 
 BUILD_DEPENDS=	p5-Class-ISA>=0:${PORTSDIR}/devel/p5-Class-ISA
 RUN_DEPENDS:=	${BUILD_DEPENDS}
