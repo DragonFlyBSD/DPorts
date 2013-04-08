@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: ports/security/cryptopp/Makefile,v 1.32 2012/11/17 06:01:02 svnexp Exp $
+# $FreeBSD: security/cryptopp/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=		cryptopp
 PORTVERSION=		5.6.1
@@ -10,7 +10,7 @@ MASTER_SITES=		SF \
 DISTNAME=		cryptopp${PORTVERSION:S/.//g}
 
 MAINTAINER=		delphij@FreeBSD.org
-COMMENT=		A free C++ class library of Cryptographic Primitives
+COMMENT=		Free C++ class library of Cryptographic Primitives
 
 OPTIONS_DEFINE=		DEBUG DOCS GCC46 STATIC THREADS
 OPTIONS_DEFAULT=	STATIC THREADS
