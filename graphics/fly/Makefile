@@ -2,7 +2,7 @@
 # Date created:         30 December 1997
 # Whom:                 Juergen Unger <j.unger@choin.net>
 #
-# $FreeBSD: ports/graphics/fly/Makefile,v 1.22 2012/11/17 05:58:05 svnexp Exp $
+# $FreeBSD: graphics/fly/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	fly
