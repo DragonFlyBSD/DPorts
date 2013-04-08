@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ImageMagick/Makefile 313328 2013-03-03 05:15:16Z beech $
+# $FreeBSD: graphics/ImageMagick/Makefile 315309 2013-03-26 15:55:59Z bapt $
 
 PORTNAME=	ImageMagick
 PORTREVISION=	1
@@ -70,10 +70,6 @@ MODULES_DESC=		Modules support
 TESTS_DESC=		Run bundled self-tests after build
 
 .include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MPDF} && defined(WITH_GHOSTSCRIPT_VER) && ${WITH_GHOSTSCRIPT_VER} == "7"
-IGNORE=		support for the PDF format requires ghostscript 8 and higher
-.endif
 
 .if ${PORT_OPTIONS:MHDRI}
 CONFIGURE_ARGS+=	--enable-hdri
