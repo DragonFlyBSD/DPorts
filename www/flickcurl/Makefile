@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: ports/www/flickcurl/Makefile,v 1.33 2012/12/27 16:54:56 svnexp Exp $
+# $FreeBSD: www/flickcurl/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	flickcurl
 PORTVERSION=	1.23
@@ -12,7 +12,8 @@ COMMENT=	C library for the Flickr API
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack ltverhack libxml2 pkgconfig
+USES=        pathfix
+USE_GNOME=	ltverhack libxml2 pkgconfig
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 
