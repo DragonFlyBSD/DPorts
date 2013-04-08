@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/pythk/pkg-plist,v 1.4 2012/11/17 05:56:54 svnexp Exp $
+@comment $FreeBSD: devel/pythk/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%PYTHON_SITELIBDIR%%/pythk/__init__.py
 %%PYTHON_SITELIBDIR%%/pythk/__init__.pyc
 %%PYTHON_SITELIBDIR%%/pythk/__init__.pyo

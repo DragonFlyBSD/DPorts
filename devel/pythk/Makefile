@@ -2,7 +2,7 @@
 # Date created:		2007-03-27
 # Whom:			Thinker K.F. Li <thinker@branda.to>
 #
-# $FreeBSD: ports/devel/pythk/Makefile,v 1.6 2012/11/17 05:56:54 svnexp Exp $
+# $FreeBSD: devel/pythk/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	pythk
