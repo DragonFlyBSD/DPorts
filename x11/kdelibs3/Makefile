@@ -3,7 +3,7 @@
 # Date created:				2 November 2001
 # Whom:					will@cvs.kde.org
 #
-# $FreeBSD: ports/x11/kdelibs3/Makefile,v 1.258 2013/02/01 14:53:50 svnexp Exp $
+# $FreeBSD: x11/kdelibs3/Makefile 315474 2013-03-28 15:51:16Z eadler $
 #
 
 PORTNAME=	kdelibs
@@ -90,14 +90,6 @@ CONFLICTS_BUILD=       openssl-1.*
 .if !exists(/usr/bin/bzip2)
 LIB_DEPENDS+=	bz2.1:${PORTSDIR}/archivers/bzip2
 .endif # !exists(/usr/bin/bzip2)
-
-.if ${OSVERSION} < 800000
-.if !defined(WITHOUT_CUPS)
-BROKEN=		does not build fully (cups) on FreeBSD 7.X
-.else
-BROKEN=		does not compile
-.endif
-.endif
 
 pre-configure:
 	${REINPLACE_CMD} "s,%%LOCALBASE%%,${LOCALBASE},g" ${WRKSRC}/kdeprint/cups/kmcupsmanager.cpp
