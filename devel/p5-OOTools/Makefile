@@ -1,9 +1,5 @@
-# New ports collection makefile for:	OOTools
-# Date created:				July 22 2004
-# Whom:	      				Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/devel/p5-OOTools/Makefile,v 1.13 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: devel/p5-OOTools/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	OOTools
 PORTVERSION=	2.21
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:DOMIZIO
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Perl module collection to easily create constructors methods
+COMMENT=	Perl module collection to easily create constructors methods
 
 PERL_CONFIGURE=	YES
 
