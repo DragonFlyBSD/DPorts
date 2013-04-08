@@ -1,5 +1,5 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-# $FreeBSD: ports/devel/apr1/Makefile,v 1.127 2013/02/19 22:41:52 svnexp Exp $
+# $FreeBSD: devel/apr1/Makefile 315269 2013-03-26 09:06:12Z ohauer $
 
 PORTNAME=	apr
 PORTVERSION=	${APR_VERSION}.${APU_VERSION}
@@ -119,7 +119,7 @@ APU_CONF_ARGS+=	--without-ldap
 APU_EXTRAS=	yes
 PLIST_SUB+=	FREETDS=""
 APU_CONF_ARGS+=	--with-freetds=${LOCALBASE}
-LIB_DEPENDS=	sybdb:${PORTSDIR}/databases/freetds
+LIB_DEPENDS+=	sybdb:${PORTSDIR}/databases/freetds
 .else
 PLIST_SUB+=	FREETDS="@comment "
 APU_CONF_ARGS+=	--without-freetds
