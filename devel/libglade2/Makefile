@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@lovett.com>
-# $FreeBSD: devel/libglade2/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: devel/libglade2/Makefile 315652 2013-04-01 14:46:13Z bdrewery $
 #   $MCom: ports/devel/libglade2/Makefile,v 1.26 2007/08/01 16:13:48 mezz Exp $
 
 PORTNAME=	libglade2
@@ -39,7 +39,7 @@ OPTIONS_DEFAULT=PYTHON
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MPYTHON
+.if ${PORT_OPTIONS:MPYTHON}
 
 USE_PYTHON=	yes
 PLIST_SUB+=	PYTHON=""
