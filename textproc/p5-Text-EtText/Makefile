@@ -2,7 +2,7 @@
 # Date created: 			21 June 2002
 # Whom:					Joseph Koshy <jkoshy@freebsd.org>
 #
-# $FreeBSD: ports/textproc/p5-Text-EtText/Makefile,v 1.7 2012/11/17 06:02:09 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-EtText/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Text-EtText
