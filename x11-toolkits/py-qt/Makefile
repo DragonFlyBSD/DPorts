@@ -1,8 +1,5 @@
-# New ports collection makefile for:	PyQt
-# Date created:		Sun Oct 17 00:24:28 PDT 1999
-# Whom:			adsharma@sharmas.dhs.org
-#
-# $FreeBSD: ports/x11-toolkits/py-qt/Makefile,v 1.70 2013/02/03 22:44:21 svnexp Exp $
+# Created by: adsharma@sharmas.dhs.org
+# $FreeBSD: x11-toolkits/py-qt/Makefile 315499 2013-03-28 20:11:08Z rm $
 
 PORTNAME=	qt
 PORTVERSION=	3.18.2
