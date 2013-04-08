@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gctpc
-# Date created:				26 Apr 2001
-# Whom:					Randall Hopper <aa8vb@nc.rr.com>
-#
-# $FreeBSD: ports/misc/gctpc/Makefile,v 1.8 2012/11/17 05:59:37 svnexp Exp $
-#
+# Created by: Randall Hopper <aa8vb@nc.rr.com>
+# $FreeBSD: misc/gctpc/Makefile 315192 2013-03-25 04:30:31Z eadler $
 
 PORTNAME=	gctpc
 PORTVERSION=	1.3
@@ -14,9 +10,11 @@ DISTNAME=	gctpc
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An USGS General Cartographic Transformation Package (GCTP)
+COMMENT=	USGS General Cartographic Transformation Package (GCTP)
 
 WRKSRC=		${WRKDIR}/${PORTNAME}/source
+
+.include <bsd.port.options.mk>
 
 USE_GMAKE=	yes
 ALL_TARGET=	libgctpc.so.1
@@ -30,7 +28,7 @@ do-install:
 	${MKDIR} ${PREFIX}/include/gctpc
 	${INSTALL_DATA} ${WRKSRC}/*.h ${PREFIX}/include/gctpc
 	${INSTALL_DATA} ${FILESDIR}/*.h ${PREFIX}/include/gctpc
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/../doc/* ${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/../README ${DOCSDIR}/README.main

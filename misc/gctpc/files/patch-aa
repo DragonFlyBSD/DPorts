@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/misc/gctpc/files/patch-aa,v 1.2 2012/11/17 05:59:37 svnexp Exp $
+$FreeBSD: misc/gctpc/files/patch-aa 300896 2012-07-14 13:54:48Z beat $
 
 --- Makefile.orig	Fri Feb 24 17:05:37 1995
 +++ Makefile	Thu May 31 15:33:40 2001
