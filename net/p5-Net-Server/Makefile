@@ -1,5 +1,5 @@
 # Created by: Jesse McConnell <jesse@gallup.com>
-# $FreeBSD: ports/net/p5-Net-Server/Makefile,v 1.39 2013/01/13 12:45:04 svnexp Exp $
+# $FreeBSD: net/p5-Net-Server/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Net-Server
 PORTVERSION=	2.007
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A configurable base class for writing internet servers in Perl
+COMMENT=	Configurable base class for writing internet servers in Perl
 
 BUILD_DEPENDS=	p5-IO-Multiplex>=1.01:${PORTSDIR}/devel/p5-IO-Multiplex
 RUN_DEPENDS=	p5-IO-Multiplex>=1.01:${PORTSDIR}/devel/p5-IO-Multiplex
