@@ -2,7 +2,7 @@
 # Date created:    01 April 2007
 # Whom:            Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/misc/xdelta3/Makefile,v 1.9 2012/11/17 05:59:46 svnexp Exp $
+# $FreeBSD: misc/xdelta3/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	xdelta
