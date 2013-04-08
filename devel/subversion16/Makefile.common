@@ -2,7 +2,7 @@
 # Date created:				10 September 2001
 # Whom:					rooneg@electricjellyfish.net
 #
-# $FreeBSD: ports/devel/subversion16/Makefile.common,v 1.60 2013/01/23 17:42:38 svnexp Exp $
+# $FreeBSD: devel/subversion16/Makefile.common 315739 2013-04-06 10:00:28Z ohauer $
 
 PORTNAME=	subversion
 PORTVERSION=	#please edit Makefile.inc for PORTVERSION, so ../svnmerge can stay in sync.
@@ -120,6 +120,7 @@ LIB_DEPENDS+=	serf-1:${PORTSDIR}/www/serf
 CONFIGURE_ARGS+=--with-serf=${LOCALBASE}
 PLIST_SUB+=	SERF=""
 .else
+CONFIGURE_ARGS+=--without-serf
 PLIST_SUB+=	SERF="@comment "
 .endif
 

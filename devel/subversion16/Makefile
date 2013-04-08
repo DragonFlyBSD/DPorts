@@ -2,7 +2,7 @@
 # Date created:				10 September 2001
 # Whom:					rooneg@electricjellyfish.net
 #
-# $FreeBSD: ports/devel/subversion16/Makefile,v 1.141 2012/11/17 05:57:04 svnexp Exp $
+# $FreeBSD: devel/subversion16/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
