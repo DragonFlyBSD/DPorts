@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/gavl/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: multimedia/gavl/Makefile 315474 2013-03-28 15:51:16Z eadler $
 
 PORTNAME=	gavl
 PORTVERSION=	1.4.0
@@ -35,11 +35,6 @@ CONFIGURE_ARGS+=	--disable-libpng
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS} && ${ARCH} == i386 && ${OSVERSION} < 700000
-# Build fails on FreeBSD-6.3 i386 with optimized cflags with gcc 3.4
-USE_GCC=	4.2+
-.endif
 
 post-patch:
 .if empty(PORT_OPTIONS:MOPTIMIZED_CFLAGS)
