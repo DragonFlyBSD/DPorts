@@ -1,5 +1,5 @@
 # Created by: Eivind Eklund <eivind@FreeBSD.org>
-# $FreeBSD: ports/mail/p5-MIME-Tools/Makefile,v 1.57 2013/02/01 10:57:25 svnexp Exp $
+# $FreeBSD: mail/p5-MIME-Tools/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	MIME-Tools
 PORTVERSION=	5.504
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	MIME-tools-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A set of perl5 modules for MIME
+COMMENT=	Set of perl5 modules for MIME
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
