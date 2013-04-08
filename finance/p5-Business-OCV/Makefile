@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Business::OCV
-# Date created:				17 December 2003
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/finance/p5-Business-OCV/Makefile,v 1.4 2012/11/17 05:57:25 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: finance/p5-Business-OCV/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Business-OCV
 PORTVERSION=	0.1
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:BENL
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An interface to the Ingenico OCV Server
+COMMENT=	Interface to the Ingenico OCV Server
 
 PERL_CONFIGURE=	yes
 
