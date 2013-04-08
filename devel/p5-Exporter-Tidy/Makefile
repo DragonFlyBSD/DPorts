@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	Exporter::Tidy
-# Date created:			Sep 24, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/p5-Exporter-Tidy/Makefile,v 1.4 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-Exporter-Tidy/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Exporter-Tidy
 PORTVERSION=	0.07
