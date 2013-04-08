@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/x11-wm/openbox/Makefile,v 1.104 2013/01/27 06:41:43 svnexp Exp $
+# $FreeBSD: x11-wm/openbox/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
 
 PORTNAME=	openbox
 PORTVERSION=	3.5.0
