@@ -2,7 +2,7 @@
 # Date created:		30 June, 2009
 # Whom:			Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/devel/py-setuptools_darcs/Makefile,v 1.5 2012/11/17 05:56:50 svnexp Exp $
+# $FreeBSD: devel/py-setuptools_darcs/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	setuptools_darcs
