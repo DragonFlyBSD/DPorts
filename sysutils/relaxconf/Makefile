@@ -2,7 +2,7 @@
 # Date created:		2005-10-12
 # Whom:		 	Yinghong Liu <relaxbsd@gmail.com>
 #
-# $FreeBSD: ports/sysutils/relaxconf/Makefile,v 1.10 2012/11/17 06:01:43 svnexp Exp $
+# $FreeBSD: sysutils/relaxconf/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	relaxconf
