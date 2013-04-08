@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22/Makefile 313287 2013-03-02 19:31:49Z ohauer $
+# $FreeBSD: www/apache22/Makefile 315333 2013-03-26 21:31:27Z ohauer $
 
 PORTNAME=	apache22
 PORTVERSION=	2.2.24
@@ -19,9 +19,9 @@ MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK?=	apache22
 
-CONFLICTS=	caudium14-1.* \
-		apache-2.0.* apache-*-2.0.* \
-		apache-*-2.2.* apache22-*-2.2.*
+CONFLICTS_INSTALL=	caudium14-1.* \
+		apache-*-2.2.* apache22-*-2.2.* \
+		apache-*-2.4.* apache24-*-2.4.*
 
 USE_APACHE=	common22
 USE_BZIP2=	yes
