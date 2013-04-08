@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Data::HexDump
-# Date created:		8 Aug 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Data-HexDump/Makefile,v 1.7 2012/11/17 05:56:10 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Data-HexDump/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Data-HexDump
 PORTVERSION=	0.02
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A simple hexadecimal dumper
+COMMENT=	Simple hexadecimal dumper
 
 PERL_CONFIGURE=	yes
 
