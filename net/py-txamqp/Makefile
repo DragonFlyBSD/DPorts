@@ -2,7 +2,7 @@
 # Date created:		2009-07-04
 # Whom:			Bruce Simpson
 #
-# $FreeBSD: ports/net/py-txamqp/Makefile,v 1.4 2012/11/17 06:00:16 svnexp Exp $
+# $FreeBSD: net/py-txamqp/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	txamqp
