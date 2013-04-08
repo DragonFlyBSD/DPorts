@@ -2,7 +2,7 @@
 # Date created:		2009-09-15
 # Whom:			Christopher Key <cjk32@cam.ac.uk>
 #
-# $FreeBSD: ports/devel/p5-UUID-Tiny/Makefile,v 1.6 2012/11/17 05:56:36 svnexp Exp $
+# $FreeBSD: devel/p5-UUID-Tiny/Makefile 302967 2012-08-22 21:42:37Z linimon $
 #
 
 PORTNAME=	UUID-Tiny
