@@ -3,7 +3,7 @@
 # Date created:				2 November 2001
 # Whom:					will@cvs.kde.org
 #
-# $FreeBSD: ports/net/kdenetwork3/Makefile,v 1.146 2012/12/30 18:56:14 svnexp Exp $
+# $FreeBSD: net/kdenetwork3/Makefile 315474 2013-03-28 15:51:16Z eadler $
 #
 
 PORTNAME=	kdenetwork
@@ -45,14 +45,9 @@ CONFIGURE_ENV+=	DO_NOT_COMPILE="${DO_NOT_COMPILE}"
 .include "${.CURDIR}/../../x11/kde3/Makefile.kde"
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} >= 800074
 DO_NOT_COMPILE+=	kppp
 PLIST_SUB+=	KPPP="@comment "
 KPPP=
-.else
-KPPP=		kppp
-PLIST_SUB+=	KPPP=""
-.endif
 
 .if ${OPSYS} == "FreeBSD" && ${OSVERSION} >= 900004
 EXTRA_PATCHES+=	${FILESDIR}/extrapatch-find_user.cpp
