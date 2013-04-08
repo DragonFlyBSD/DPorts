@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: ports/textproc/liblrdf/Makefile,v 1.29 2012/12/20 20:08:23 svnexp Exp $
+# $FreeBSD: textproc/liblrdf/Makefile 315577 2013-03-29 21:57:35Z eadler $
 
 PORTNAME=	liblrdf
 PORTVERSION=	0.5.0
@@ -22,10 +22,12 @@ AUTOMAKE_ARGS=	--add-missing
 GNU_CONFIGURE=	yes
 USE_PKGCONFIG=	build
 USE_ICONV=	yes
-USE_GNOME=	gnomehack libxml2 libxslt
+USES=		pathfix
+USE_GNOME=	libxml2 libxslt
 GNOME_MAKEFILEIN=	Makefile.am
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
+PATHFIX_MAKEFILEIN=	Makefile.am
 
 CFLAGS+=	-I${OPENSSLINC} ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${OPENSSLLIB} ${PTHREAD_LIBS}
