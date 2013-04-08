@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tk
-# Date created:				October 21st 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: x11-toolkits/p5-Tk/Makefile 313341 2013-03-03 10:58:48Z crees $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: x11-toolkits/p5-Tk/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Tk
 PORTVERSION=	804.030
@@ -13,7 +9,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A re-port of a perl5 interface to Tk8.4
+COMMENT=	Re-port of a perl5 interface to Tk8.4
 
 LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
