@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Event/Makefile,v 1.27 2012/12/15 18:25:10 svnexp Exp $
+# $FreeBSD: devel/p5-Event/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Event
 PORTVERSION=	1.21
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Generic Perl Event Loop
+COMMENT=	Generic Perl Event Loop
 
 PERL_CONFIGURE=	yes
 PORTDOCS=	ANNOUNCE ChangeLog INSTALL MANIFEST README TODO Tutorial.pdf
