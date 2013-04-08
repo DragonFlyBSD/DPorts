@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-Tiny
-# Date created:		2007-01-27
-# Whom:			Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Tiny/Makefile,v 1.10 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-Tiny/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	XML-Tiny
 PORTVERSION=	2.06
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A simple lightweight parser for a subset of XML
+COMMENT=	Simple lightweight parser for a subset of XML
 
 PERL_CONFIGURE=	yes
 
