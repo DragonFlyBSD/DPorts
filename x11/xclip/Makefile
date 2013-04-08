@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xclip/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: x11/xclip/Makefile 315513 2013-03-29 00:59:45Z eadler $
 
 PORTNAME=	xclip
 PORTVERSION=	0.12
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	SF
 
 MAINTAINER=	eadler@FreeBSD.org
-COMMENT=	An interface to X selections ("the clipboard") from the command line
+COMMENT=	Interface to X selections ("the clipboard") from the command line
 
 USE_AUTOTOOLS=	autoconf:env aclocal:env automake:env
 USE_XORG=	x11 xmu
