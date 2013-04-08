@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: ports/textproc/libtranslate/Makefile,v 1.18 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: textproc/libtranslate/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=		libtranslate
 PORTVERSION=		0.99
@@ -17,7 +17,8 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		ports@FreeBSD.org
 COMMENT=		A natural language translation library
 
-USE_GNOME=		glib20 gnomehack intlhack
+USES=        pathfix
+USE_GNOME=		glib20 intlhack
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_LDCONFIG=		yes
