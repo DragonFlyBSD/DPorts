@@ -1,5 +1,5 @@
 # Created by: mukai
-# $FreeBSD: ports/devel/ocaml-extlib/Makefile,v 1.19 2012/12/20 06:03:34 svnexp Exp $
+# $FreeBSD: devel/ocaml-extlib/Makefile 309287 2012-12-20 05:45:56Z araujo $
 
 PORTNAME=	extlib
 PORTVERSION=	1.5.3
