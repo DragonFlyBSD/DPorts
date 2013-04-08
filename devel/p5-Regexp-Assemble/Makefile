@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Regexp-Assemble
-# Date created:				3 March 2005
-# Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Regexp-Assemble/Makefile,v 1.20 2012/11/17 05:56:27 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: devel/p5-Regexp-Assemble/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Regexp-Assemble
 PORTVERSION=	0.35
