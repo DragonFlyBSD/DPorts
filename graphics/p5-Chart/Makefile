@@ -1,5 +1,4 @@
-# Created: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: ports/graphics/p5-Chart/Makefile,v 1.39 2013/01/07 10:00:02 svnexp Exp $
+# $FreeBSD: graphics/p5-Chart/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Chart
 PORTVERSION=	2.4.6
@@ -9,7 +8,7 @@ MASTER_SITE_SUBDIR=	CPAN:CHARTGRP
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A perl5 interface to build chart graphics
+COMMENT=	Perl5 interface to build chart graphics
 
 BUILD_DEPENDS=	p5-GD>=2:${PORTSDIR}/graphics/p5-GD
 RUN_DEPENDS=	p5-GD>=2:${PORTSDIR}/graphics/p5-GD
