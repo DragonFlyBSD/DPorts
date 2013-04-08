@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gpgme
-# Date created:		15 June 2001
-# Whom:			teramoto@comm.eng.osaka-u.ac.jp
-#
-# $FreeBSD: ports/security/gpgme/Makefile,v 1.73 2012/11/17 06:01:04 svnexp Exp $
+# Created by: teramoto@comm.eng.osaka-u.ac.jp
+# $FreeBSD: security/gpgme/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	gpgme
@@ -14,7 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}.sig
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	jhale@FreeBSD.org
-COMMENT=	A library to make access to GnuPG easier
+COMMENT=	Library to make access to GnuPG easier
 
 LICENSE=	LGPL21
 
