@@ -3,7 +3,7 @@
 # Whom:					Stanislav Sedov <ssedov@mbsd.msk.ru>
 #
 # $MBSDlabs$
-# $FreeBSD: ports/archivers/ocaml-zip/Makefile,v 1.9 2012/11/17 05:54:21 svnexp Exp $
+# $FreeBSD: archivers/ocaml-zip/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	zip
