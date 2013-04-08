@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Event-ExecFlow
-# Date created:		2006/12/22
-# Whom:			chinsan
-#
-# $FreeBSD: ports/devel/p5-Event-ExecFlow/Makefile,v 1.8 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: devel/p5-Event-ExecFlow/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Event-ExecFlow
 PORTVERSION=	0.64
