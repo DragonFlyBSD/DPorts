@@ -2,7 +2,7 @@
 # Date created:				08 June 2001
 # Whom:					Jason R. Mastaler <jason@mastaler.com>
 #
-# $FreeBSD: ports/mail/tmda/Makefile,v 1.63 2012/11/17 05:59:17 svnexp Exp $
+# $FreeBSD: mail/tmda/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	tmda
