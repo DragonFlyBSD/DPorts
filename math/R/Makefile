@@ -1,5 +1,5 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
-# $FreeBSD: math/R/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/R/Makefile 315422 2013-03-27 23:43:55Z bf $
 
 PORTNAME?=	R
 PORTVERSION=	2.15.3
@@ -12,7 +12,6 @@ MASTER_SITES=	http://cran.r-project.org/src/base/R-2/ \
 		http://cran.ch.r-project.org/src/base/R-2/ \
 		http://cran.es.r-project.org/src/base/R-2/ \
 		http://cran.dk.r-project.org/src/base/R-2/ \
-		http://cran.hu.r-project.org/src/base/R-2/ \
 		http://cran.uk.r-project.org/src/base/R-2/ \
 		http://cran.us.r-project.org/src/base/R-2/ \
 		ftp://ftp.u-aizu.ac.jp/pub/lang/R/CRAN/src/base/R-2/ \
