@@ -1,5 +1,5 @@
 # Created by: dmitry@karasik.eu.org
-# $FreeBSD: ports/x11-toolkits/p5-Prima/Makefile,v 1.32 2013/01/11 12:56:54 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Prima/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Prima
 PORTVERSION=	1.36
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An extensible Perl toolkit for multi-platform GUI development
+COMMENT=	Extensible Perl toolkit for multi-platform GUI development
 
 LICENSE=	BSD
 
