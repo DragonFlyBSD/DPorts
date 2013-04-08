@@ -1,9 +1,5 @@
-# New ports collection makefile for:	RDF-Core
-# Date created:	   30 May 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-RDF-Core/Makefile,v 1.15 2012/11/17 06:02:07 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-RDF-Core/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	RDF-Core
 PORTVERSION=	0.51
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An object oriented Perl modules for handling tasks related to RDF
+COMMENT=	Object oriented Perl modules for handling tasks related to RDF
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-DBI>=0:${PORTSDIR}/databases/p5-DBI \
