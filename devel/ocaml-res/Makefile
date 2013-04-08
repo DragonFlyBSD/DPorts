@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: ports/devel/ocaml-res/Makefile,v 1.14 2012/12/20 06:20:13 svnexp Exp $
+# $FreeBSD: devel/ocaml-res/Makefile 309291 2012-12-20 05:48:36Z araujo $
 
 PORTNAME=	res
 PORTVERSION=	4.0.2
