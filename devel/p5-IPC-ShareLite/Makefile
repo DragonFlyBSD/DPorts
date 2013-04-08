@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IPC-ShareLite
-# Date created:				April 03 2001
-# Whom:	      				vanilla
-#
-# $FreeBSD: ports/devel/p5-IPC-ShareLite/Makefile,v 1.11 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: vanilla
+# $FreeBSD: devel/p5-IPC-ShareLite/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	IPC-ShareLite
 PORTVERSION=	0.17
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A simple interface to access shared memory
+COMMENT=	Simple interface to access shared memory
 
 PERL_CONFIGURE=	yes
 
