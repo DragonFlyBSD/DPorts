@@ -1,5 +1,5 @@
-# Created by:	ijliao
-# $FreeBSD: ports/devel/epydoc/Makefile,v 1.12 2012/11/17 05:55:42 svnexp Exp $
+# Created by: ijliao
+# $FreeBSD: devel/epydoc/Makefile 315209 2013-03-25 10:09:39Z rene $
 
 PORTNAME=	epydoc
 PORTVERSION=	3.0.1
@@ -14,8 +14,6 @@ LICENSE=	MIT
 OPTIONS_DEFINE=	DOCS UTF8
 
 UTF8_DESC=	Use UTF-8 instead of iso-8859-1 in HTMLs
-
-OPTIONS_DEFAULT=
 
 .include <bsd.port.options.mk>
 
