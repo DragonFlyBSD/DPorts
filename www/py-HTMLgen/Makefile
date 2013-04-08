@@ -2,7 +2,7 @@
 # Date created:				03/20/1999
 # Whom:					nectar@FreeBSD.org
 #
-# $FreeBSD: ports/www/py-HTMLgen/Makefile,v 1.24 2012/11/17 06:02:58 svnexp Exp $
+# $FreeBSD: www/py-HTMLgen/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	HTMLgen
