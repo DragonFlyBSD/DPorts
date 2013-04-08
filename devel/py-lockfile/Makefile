@@ -2,7 +2,7 @@
 # Date created:		4th Sep, 2009
 # Whom:			Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/devel/py-lockfile/Makefile,v 1.4 2012/11/17 05:56:48 svnexp Exp $
+# $FreeBSD: devel/py-lockfile/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	lockfile
