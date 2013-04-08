@@ -2,7 +2,7 @@
 # Date created:				Wed Aug 29 21:37:35 CEST 2007
 # Whom:					Stefan Esser <se@FreeBSD.org>
 #
-# $FreeBSD: ports/www/py-utidy/Makefile,v 1.8 2012/11/17 06:03:02 svnexp Exp $
+# $FreeBSD: www/py-utidy/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	utidy
