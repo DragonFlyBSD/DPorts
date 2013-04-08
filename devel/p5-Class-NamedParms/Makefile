@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Class-NamedParms
-# Date created:				Oct 23 2003
-# Whom:					clsung@dragon2.net
-#
-# $FreeBSD: ports/devel/p5-Class-NamedParms/Makefile,v 1.6 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: clsung@dragon2.net
+# $FreeBSD: devel/p5-Class-NamedParms/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Class-NamedParms
 PORTVERSION=	1.06
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A lightweight named parameter handling system
+COMMENT=	Lightweight named parameter handling system
 
 PERL_CONFIGURE=	yes
 
