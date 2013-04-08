@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtkextra
-# Date created:				17 August 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: x11-toolkits/gtkextra2/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: x11-toolkits/gtkextra2/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	gtkextra
 PORTVERSION=	2.1.2
@@ -15,6 +11,7 @@ DISTNAME=	${PORTNAME:S/gtk/gtk+/}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A useful widget set complementary to GTK+ 2.0
 
+USES=        pathfix
 USE_GNOME=	gtk20 gnomehack
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
