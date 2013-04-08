@@ -2,7 +2,7 @@
 # Date created:		2005-11-16
 # Whom:			Choe, Cheng-Dae
 #
-# $FreeBSD: ports/www/py-formencode/Makefile,v 1.17 2012/11/17 06:03:00 svnexp Exp $
+# $FreeBSD: www/py-formencode/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	formencode
