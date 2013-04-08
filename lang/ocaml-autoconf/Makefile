@@ -2,7 +2,7 @@
 # Date created:		24 Marth 2010
 # Whom:			stas
 #
-# $FreeBSD: ports/lang/ocaml-autoconf/Makefile,v 1.4 2012/11/17 05:58:53 svnexp Exp $
+# $FreeBSD: lang/ocaml-autoconf/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	autoconf
