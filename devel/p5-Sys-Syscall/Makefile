@@ -1,5 +1,5 @@
-# Created by:			Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/devel/p5-Sys-Syscall/Makefile,v 1.6 2012/12/20 09:03:56 svnexp Exp $
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Sys-Syscall/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Sys-Syscall
 PORTVERSION=	0.25
