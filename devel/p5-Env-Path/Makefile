@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Env-Path
-# Date created:		2006-07-21
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Env-Path/Makefile,v 1.4 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Env-Path/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Env-Path
 PORTVERSION=	0.18
