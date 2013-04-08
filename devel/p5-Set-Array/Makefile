@@ -1,6 +1,5 @@
 # Created by: Alex Kapranoff <kappa@rambler-co.ru>
-# $FreeBSD: ports/devel/p5-Set-Array/Makefile,v 1.15 2013/01/30 03:41:35 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Set-Array/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Set-Array
 PORTVERSION=	0.28
