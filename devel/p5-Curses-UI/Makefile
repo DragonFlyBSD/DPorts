@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Curses-UI
-# Date Created:				April 19, 2004
-# Whom:					Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Curses-UI/Makefile,v 1.18 2012/11/17 05:56:09 svnexp Exp $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: devel/p5-Curses-UI/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Curses-UI
 PORTVERSION=	0.9609
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A curses based OO user interface framework
+COMMENT=	Curses based OO user interface framework
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
