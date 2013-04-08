@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: ports/devel/ocaml-cfg/Makefile,v 1.12 2012/12/20 06:00:18 svnexp Exp $
+# $FreeBSD: devel/ocaml-cfg/Makefile 309286 2012-12-20 05:45:04Z araujo $
 
 PORTNAME=	cfg
 PORTVERSION=	2.0.1
