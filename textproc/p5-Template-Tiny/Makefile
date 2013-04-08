@@ -2,7 +2,7 @@
 # Date created:		2010-03-17
 # Whom:			ports@c0decafe.net
 #
-# $FreeBSD: ports/textproc/p5-Template-Tiny/Makefile,v 1.4 2012/11/17 06:02:09 svnexp Exp $
+# $FreeBSD: textproc/p5-Template-Tiny/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
 #
 
 PORTNAME=	Template-Tiny
