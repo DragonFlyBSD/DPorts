@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	Sort::Maker
-# Date created:			Dec 20, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/p5-Sort-Maker/Makefile,v 1.3 2012/11/17 05:56:29 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-Sort-Maker/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Sort-Maker
 DISTVERSION=	0.06
@@ -13,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A simple way to make efficient sort subs
+COMMENT=	Simple way to make efficient sort subs
 
 PERL_CONFIGURE=	yes
 
