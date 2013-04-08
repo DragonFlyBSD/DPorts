@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Sub-Exporter/Makefile,v 1.25 2013/02/21 09:58:08 svnexp Exp $
+# $FreeBSD: devel/p5-Sub-Exporter/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Sub-Exporter
 PORTVERSION=	0.985
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A sophisticated exporter for custom-built routines
+COMMENT=	Sophisticated exporter for custom-built routines
 
 BUILD_DEPENDS=	p5-Data-OptList>=0.100:${PORTSDIR}/devel/p5-Data-OptList \
 		p5-Params-Util>=0.14:${PORTSDIR}/devel/p5-Params-Util \
