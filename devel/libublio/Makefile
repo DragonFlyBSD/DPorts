@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: devel/libublio/Makefile 314880 2013-03-21 22:09:47Z mandree $
+# $FreeBSD: devel/libublio/Makefile 315619 2013-03-30 14:37:13Z bf $
 
 PORTNAME=	libublio
 PORTVERSION=	20070103
@@ -18,7 +18,7 @@ PLIST_SUB+=	PROFLIB="@comment "
 PLIST_SUB+=	PROFLIB=""
 .endif
 
-SRCCONF=	${NONEXISTENT}
+SRCCONF=	/dev/null
 MAKE_ENV+=	SRCCONF=${SRCCONF}
 
 .include <bsd.port.options.mk>
