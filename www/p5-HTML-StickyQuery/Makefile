@@ -1,9 +1,5 @@
-# New ports collection makefile for:	HTML::StickyQuery
-# Date created:				24 Jan 2002
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/www/p5-HTML-StickyQuery/Makefile,v 1.12 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: www/p5-HTML-StickyQuery/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	HTML-StickyQuery
 PORTVERSION=	0.13
