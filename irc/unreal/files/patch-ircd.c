@@ -1,4 +1,4 @@
-$FreeBSD: ports/irc/unreal/files/patch-ircd.c,v 1.4 2012/11/17 05:58:30 svnexp Exp $
+$FreeBSD: irc/unreal/files/patch-ircd.c 300896 2012-07-14 13:54:48Z beat $
 
 --- src/ircd.c	2011-11-05 02:25:24.000000000 -0700
 +++ src/ircd.c	2011-11-28 10:21:38.000000000 -0800
