@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Device-SerialPort
-# Date created:				July 6th 2003
-# Whom:	      				Nick Sayer <nsayer@FreeBSD.org>
-#
-# $FreeBSD: ports/comms/p5-Device-SerialPort/Makefile,v 1.12 2012/11/17 05:55:00 svnexp Exp $
-#
+# Created by: Nick Sayer <nsayer@FreeBSD.org>
+# $FreeBSD: comms/p5-Device-SerialPort/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Device-SerialPort
 PORTVERSION=	1.040000
@@ -13,7 +9,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:C/0+$//}
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A perl5 module for simple serial port control
+COMMENT=	Perl5 module for simple serial port control
 
 PERL_CONFIGURE=	yes
 
