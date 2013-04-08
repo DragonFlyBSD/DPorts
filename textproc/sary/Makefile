@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Sary
-# Date created:		8 October 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: textproc/sary/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: textproc/sary/Makefile 315491 2013-03-28 17:56:37Z eadler $
 
 PORTNAME=	sary
 PORTVERSION=	1.2.0
@@ -14,7 +10,8 @@ MASTER_SITES=	http://sary.sourceforge.net/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A suffix array library and tools, which provide fast full-text search
 
-USE_GNOME=	glib20 gnomehack
+USES=		pathfix
+USE_GNOME=	glib20
 USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
