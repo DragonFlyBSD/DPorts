@@ -2,7 +2,7 @@
 # Date created:		Di   7 Nov 2000 19:48:50 CET
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $FreeBSD: ports/net-mgmt/arts++/Makefile,v 1.32 2012/11/17 06:00:30 svnexp Exp $
+# $FreeBSD: net-mgmt/arts++/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	arts++
