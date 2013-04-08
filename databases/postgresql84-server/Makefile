@@ -1,9 +1,9 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql84-server/Makefile 315718 2013-04-04 13:21:22Z girgen $
+# $FreeBSD: databases/postgresql84-server/Makefile 315734 2013-04-05 15:26:49Z girgen $
 
 PORTNAME?=	postgresql
 DISTVERSION?=	8.4.17
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	databases
 MASTER_SITES=	PGSQL
 MASTER_SITE_SUBDIR=	source/v${DISTVERSION}
