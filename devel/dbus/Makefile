@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/dbus/Makefile 314310 2013-03-15 15:26:14Z kwm $
+# $FreeBSD: devel/dbus/Makefile 315314 2013-03-26 16:30:41Z kwm $
 #   $MCom: ports/devel/dbus/Makefile,v 1.58 2013/02/15 15:06:49 kwm Exp $
 
 PORTNAME=	dbus
@@ -41,6 +41,7 @@ MAN1=		dbus-cleanup-sockets.1 dbus-daemon.1 dbus-launch.1 \
 
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11
+X11_DESC=	X11 Desktop Environments
 
 .include <bsd.port.options.mk>
 
