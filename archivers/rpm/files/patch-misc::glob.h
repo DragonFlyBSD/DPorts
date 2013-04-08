@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/archivers/rpm/files/patch-misc::glob.h,v 1.2 2012/11/17 05:54:23 svnexp Exp $
+$FreeBSD: archivers/rpm/files/patch-misc::glob.h 300895 2012-07-14 12:56:14Z beat $
 
 --- misc/glob.h	2002/09/23 16:45:45	1.1
 +++ misc/glob.h	2002/09/23 16:46:23
