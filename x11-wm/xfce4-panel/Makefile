@@ -1,10 +1,10 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-panel/Makefile 313364 2013-03-03 16:08:46Z olivierd $
+# $FreeBSD: x11-wm/xfce4-panel/Makefile 315751 2013-04-07 07:12:32Z olivierd $
 #
 
 PORTNAME=	xfce4-panel
 PORTVERSION=	4.10.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 DIST_SUBDIR=	xfce4
@@ -16,11 +16,12 @@ LIB_DEPENDS=	wnck-1:${PORTSDIR}/x11-toolkits/libwnck \
 		cairo:${PORTSDIR}/graphics/cairo \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
+USES=	pathfix
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack glib20 gtk20 intltool intlhack desktopfileutils
+USE_GNOME=	glib20 gtk20 intltool intlhack desktopfileutils
 USE_LDCONFIG=	yes
 USE_PERL5=	yes
 USE_XFCE=	configenv garcon libexo libmenu libutil xfconf
