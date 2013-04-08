@@ -2,7 +2,7 @@
 # Date created:					2011-08-29
 # Whom:						stas
 #
-# $FreeBSD: ports/devel/libinotify/Makefile,v 1.4 2012/11/17 05:55:55 svnexp Exp $
+# $FreeBSD: devel/libinotify/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	libinotify
