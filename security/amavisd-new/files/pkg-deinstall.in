@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/amavisd-new/files/pkg-deinstall.in,v 1.2 2012/11/17 06:01:00 svnexp Exp $
+# $FreeBSD: security/amavisd-new/files/pkg-deinstall.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 USER=%%AMAVISUSER%%

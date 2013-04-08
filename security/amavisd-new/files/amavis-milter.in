@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/amavisd-new/files/amavis-milter.in,v 1.3 2012/11/17 06:01:00 svnexp Exp $
+# $FreeBSD: security/amavisd-new/files/amavis-milter.in 306550 2012-10-28 13:57:12Z crees $
 #
 # PROVIDE: amavis_milter
 # REQUIRE: amavisd

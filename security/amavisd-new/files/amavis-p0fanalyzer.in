@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/security/amavisd-new/files/amavis-p0fanalyzer.in,v 1.4 2012/11/17 06:01:00 svnexp Exp $
+# $FreeBSD: security/amavisd-new/files/amavis-p0fanalyzer.in 306550 2012-10-28 13:57:12Z crees $
 #
 # PROVIDE: amavis_p0fanalyzer
 # REQUIRE: DAEMON

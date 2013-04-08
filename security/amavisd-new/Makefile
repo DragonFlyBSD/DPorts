@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/amavisd-new/Makefile,v 1.93 2012/12/16 06:16:58 svnexp Exp $
+# $FreeBSD: security/amavisd-new/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	amavisd-new
 PORTVERSION=	2.8.0
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirror.mainloop.se/amavisd/
 
 MAINTAINER=	gabor@FreeBSD.org
-COMMENT=	A mail scanner interface between mailer and content checkers
+COMMENT=	Mail scanner interface between mailer and content checkers
 
 LICENSE=	GPLv2
 

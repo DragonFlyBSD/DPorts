@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/amavisd-new/pkg-plist,v 1.29 2012/11/17 06:01:00 svnexp Exp $
+@comment $FreeBSD: security/amavisd-new/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 @unexec if cmp -s %%PREFIX%%/etc/amavisd-custom.conf %%PREFIX%%/etc/amavisd-custom.conf-dist; then rm %%PREFIX%%/etc/amavisd-custom.conf; fi
 %%PORTDOCS%%%%DOCSDIR%%/AAAREADME.first
 %%PORTDOCS%%%%DOCSDIR%%/AMAVIS-MIB.txt
