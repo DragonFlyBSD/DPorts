@@ -2,7 +2,7 @@
 # Date created:        3 January 2001
 # Whom:                George Reid <greid@ukug.uk.freebsd.org>
 #
-# $FreeBSD: devel/zziplib/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/zziplib/Makefile 315474 2013-03-28 15:51:16Z eadler $
 #
 
 PORTNAME=	zziplib
@@ -68,10 +68,6 @@ PLIST_SUB+=	SDL="@comment "
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 740000 && ${ARCH} == "x86_64"
-BROKEN=		segfaults during build
-.endif
 
 test check:
 	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} \
