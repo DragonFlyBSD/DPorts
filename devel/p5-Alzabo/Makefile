@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Alzabo
-# Date created:				8 Aug 2004
-# Whom:	      				mat
-#
-# $FreeBSD: ports/devel/p5-Alzabo/Makefile,v 1.20 2012/11/17 05:56:04 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-Alzabo/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Alzabo
 PORTVERSION=	0.92
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A data modelling tool and RDBMS-OO mapper
+COMMENT=	Data modelling tool and RDBMS-OO mapper
 
 BUILD_DEPENDS=	p5-Exception-Class>=0:${PORTSDIR}/devel/p5-Exception-Class \
 		p5-Class-Factory-Util>=0:${PORTSDIR}/devel/p5-Class-Factory-Util \
