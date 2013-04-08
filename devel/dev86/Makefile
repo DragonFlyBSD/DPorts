@@ -2,7 +2,7 @@
 # Date created:				25 October 2007
 # Whom:					Philip Schulz <phs@deadc0.de>
 #
-# $FreeBSD: ports/devel/dev86/Makefile,v 1.3 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: devel/dev86/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	dev86
