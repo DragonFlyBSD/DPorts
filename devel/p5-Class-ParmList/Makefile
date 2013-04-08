@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Class-ParmList
-# Date created:				Oct 23 2003
-# Whom:					clsung@dragon2.net
-#
-# $FreeBSD: ports/devel/p5-Class-ParmList/Makefile,v 1.7 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: clsung@dragon2.net
+# $FreeBSD: devel/p5-Class-ParmList/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Class-ParmList
 PORTVERSION=	1.05
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A module for processing named parameter lists for method calls
+COMMENT=	Module for processing named parameter lists for method calls
 
 PERL_MODBUILD=	yes
 
