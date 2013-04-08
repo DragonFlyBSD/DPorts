@@ -1,9 +1,5 @@
-# New ports collection makefile for:	File-Find-Rule
-# Date created:	   19 May 2003
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-File-Find-Rule/Makefile,v 1.17 2012/11/17 05:56:16 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-File-Find-Rule/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	File-Find-Rule
 PORTVERSION=	0.33
