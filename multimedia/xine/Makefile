@@ -2,7 +2,7 @@
 # Date created:         14 Oct 2000
 # Whom:                 alex
 #
-# $FreeBSD: ports/multimedia/xine/Makefile,v 1.113 2012/11/17 05:59:55 svnexp Exp $
+# $FreeBSD: multimedia/xine/Makefile 300944 2012-07-16 11:39:35Z bapt $
 #
 
 PORTNAME=	xine
