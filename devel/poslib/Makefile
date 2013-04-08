@@ -2,7 +2,7 @@
 # Date created:		2003-08-03
 # Whom:			Sergei Kolobov <sergei@kolobov.com>
 #
-# $FreeBSD: ports/devel/poslib/Makefile,v 1.22 2013/02/14 10:22:19 svnexp Exp $
+# $FreeBSD: devel/poslib/Makefile 312209 2013-02-14 09:42:12Z gahr $
 #
 
 PORTNAME=	poslib
