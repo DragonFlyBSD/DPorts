@@ -1,3 +1,3 @@
 # Disable HAL as a default option
 
-OPTIONS_EXCLUDE= HAL
+OPTIONS_EXCLUDE+= HAL
