@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libident
-# Date created:		9 October 1995
-# Whom:			torstenb@FreeBSD.org
-#
-# $FreeBSD: ports/security/libident/Makefile,v 1.34 2012/11/17 06:01:07 svnexp Exp $
+# Created by: torstenb@FreeBSD.org
+# $FreeBSD: security/libident/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	libident
@@ -12,7 +9,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.remlab.net/files/libident/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A small library to interface the ident protocol server (rfc1413)
+COMMENT=	Small library to interface the ident protocol server (rfc1413)
 
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	lthack
