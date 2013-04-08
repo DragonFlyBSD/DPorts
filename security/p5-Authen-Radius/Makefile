@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: ports/security/p5-Authen-Radius/Makefile,v 1.39 2012/11/19 09:56:44 svnexp Exp $
+# $FreeBSD: security/p5-Authen-Radius/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Authen-Radius
 PORTVERSION=	0.22
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	RadiusPerl-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A perl5 module to provide simple Radius client facilities
+COMMENT=	Perl5 module to provide simple Radius client facilities
 
 RUN_DEPENDS=	p5-Data-HexDump>=0.02:${PORTSDIR}/devel/p5-Data-HexDump
 BUILD_DEPENDS:=	${RUN_DEPENDS}
