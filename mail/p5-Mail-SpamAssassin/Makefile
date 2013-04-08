@@ -1,5 +1,5 @@
 # Created by: Anthony Kim
-# $FreeBSD: mail/p5-Mail-SpamAssassin/Makefile 314467 2013-03-17 17:15:53Z beech $
+# $FreeBSD: mail/p5-Mail-SpamAssassin/Makefile 315186 2013-03-24 23:58:50Z beech $
 #
 
 PORTNAME=	Mail-SpamAssassin
@@ -87,7 +87,7 @@ PLIST_SUB+=	SSL="@comment "
 .endif
 
 .if !defined(WITHOUT_GNUPG)
-RUN_DEPENDS+=	gnupg>=1.4.7:${PORTSDIR}/security/gnupg
+RUN_DEPENDS+=	gnupg>=1.4.7:${PORTSDIR}/security/gnupg1
 .endif
 
 .if defined(WITH_MYSQL)
