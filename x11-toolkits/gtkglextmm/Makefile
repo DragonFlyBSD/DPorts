@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtkglextmm
-# Date created:				22 March 2003
-# Whom:					Kimura Fuyuki <fuyuki@hadaly.org>
-#
-# $FreeBSD: ports/x11-toolkits/gtkglextmm/Makefile,v 1.36 2012/11/17 06:03:35 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@hadaly.org>
+# $FreeBSD: x11-toolkits/gtkglextmm/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	gtkglextmm
 PORTVERSION=	1.2.0
@@ -19,7 +15,8 @@ LIB_DEPENDS=	gtkglext-x11-1.0.0:${PORTSDIR}/x11-toolkits/gtkglext \
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack gnomeprefix gtk20
+USES=        pathfix
+USE_GNOME=	gnomeprefix gtk20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_PKGCONFIG=	build
