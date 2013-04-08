@@ -2,7 +2,7 @@
 # Date created:		23 Sep 2002
 # Whom:			makeport.pl
 #
-# $FreeBSD: ports/audio/py-vorbis/Makefile,v 1.22 2012/11/17 05:54:42 svnexp Exp $
+# $FreeBSD: audio/py-vorbis/Makefile 301188 2012-07-19 20:15:37Z naddy $
 #
 
 PORTNAME=	vorbis
