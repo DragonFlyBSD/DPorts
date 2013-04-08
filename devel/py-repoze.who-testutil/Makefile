@@ -2,7 +2,7 @@
 # Date created:		3rd August,2009
 # Whom:	      		Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/devel/py-repoze.who-testutil/Makefile,v 1.4 2012/11/17 05:56:50 svnexp Exp $
+# $FreeBSD: devel/py-repoze.who-testutil/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	repoze.who-testutil
