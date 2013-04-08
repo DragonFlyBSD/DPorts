@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <pgollucci@FreeBSD.org>
-# $FreeBSD: ports/graphics/p5-GD/Makefile,v 1.62 2013/02/26 13:59:48 svnexp Exp $
+# $FreeBSD: graphics/p5-GD/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	GD
 PORTVERSION=	2.49
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	GD-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A perl5 interface to Gd Graphics Library version2
+COMMENT=	Perl5 interface to Gd Graphics Library version2
 
 LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd
 
