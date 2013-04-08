@@ -2,7 +2,7 @@
 # Date created:		23 Sep 2002
 # Whom:			nbm
 #
-# $FreeBSD: ports/audio/py-ogg/Makefile,v 1.19 2012/11/17 05:54:42 svnexp Exp $
+# $FreeBSD: audio/py-ogg/Makefile 301188 2012-07-19 20:15:37Z naddy $
 #
 
 PORTNAME=	ogg
