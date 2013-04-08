@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: ports/x11-toolkits/gtkglext/Makefile,v 1.42 2012/12/17 14:45:05 svnexp Exp $
+# $FreeBSD: x11-toolkits/gtkglext/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	gtkglext
 PORTVERSION=	1.2.0
@@ -34,7 +34,8 @@ USE_AUTOTOOLS=	libtool
 USE_XORG=	ice pixman sm x11 xau xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xmu xrandr xrender xt xxf86vm
 USE_GL=		glu
-USE_GNOME=	gdkpixbuf2 gnomehack gtk20
+USES=        pathfix
+USE_GNOME=	gdkpixbuf2 gtk20
 USE_LDCONFIG=	yes
 
 .include <bsd.port.options.mk>
