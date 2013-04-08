@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/security/openvas-libraries/files/patch-openvas-libraries.tmpl.in,v 1.5 2012/11/17 06:01:09 svnexp Exp $
+$FreeBSD: security/openvas-libraries/files/patch-openvas-libraries.tmpl.in 300897 2012-07-14 14:29:18Z beat $
 
 --- openvas-libraries.tmpl.in.orig
 +++ openvas-libraries.tmpl.in

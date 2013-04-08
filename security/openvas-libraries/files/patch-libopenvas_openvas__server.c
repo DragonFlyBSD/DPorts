@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/security/openvas-libraries/files/patch-libopenvas_openvas__server.c,v 1.3 2012/11/17 06:01:09 svnexp Exp $
+$FreeBSD: security/openvas-libraries/files/patch-libopenvas_openvas__server.c 300897 2012-07-14 14:29:18Z beat $
 
 --- libopenvas/openvas_server.c.orig
 +++ libopenvas/openvas_server.c

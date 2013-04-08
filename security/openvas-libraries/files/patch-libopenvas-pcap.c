@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/security/openvas-libraries/files/patch-libopenvas-pcap.c,v 1.4 2012/11/17 06:01:09 svnexp Exp $
+$FreeBSD: security/openvas-libraries/files/patch-libopenvas-pcap.c 300897 2012-07-14 14:29:18Z beat $
 
 --- libopenvas/pcap.c.orig
 +++ libopenvas/pcap.c
