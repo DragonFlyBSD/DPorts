@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: ports/security/libpreludedb/Makefile,v 1.44 2013/02/05 16:54:25 svnexp Exp $
+# $FreeBSD: security/libpreludedb/Makefile 311722 2013-02-05 16:17:06Z novel $
 
 PORTNAME=	libpreludedb
 PORTVERSION=	1.0.1p1

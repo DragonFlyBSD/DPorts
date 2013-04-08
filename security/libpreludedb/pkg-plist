@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/libpreludedb/pkg-plist,v 1.14 2012/11/17 06:01:07 svnexp Exp $
+@comment $FreeBSD: security/libpreludedb/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/preludedb-admin
 bin/libpreludedb-config
 include/libpreludedb/preludedb-path-selection.h
