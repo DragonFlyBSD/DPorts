@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/cl-md5/Makefile,v 1.6 2013/01/26 15:07:28 svnexp Exp $
+# $FreeBSD: security/cl-md5/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	md5
 PORTVERSION=	1.8.5
@@ -9,7 +9,7 @@ DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}_${PORTVERSION}.orig
 PKGNAMEPREFIX=	cl-
 
 MAINTAINER=	olgeni@FreeBSD.org
-COMMENT=	A native MD5 implementation in Common Lisp
+COMMENT=	Native MD5 implementation in Common Lisp
 
 WRKSRC=		${WRKDIR}/${PKGNAMEPREFIX}${PORTNAME}-${DISTVERSION}
 NO_BUILD=	yes
