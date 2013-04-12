@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phat
-# Date created:		2007-03-06
-# Whom:			trasz <trasz@pin.if.uz.zgora.pl>
-#
-# $FreeBSD: x11-toolkits/phat/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: trasz <trasz@pin.if.uz.zgora.pl>
+# $FreeBSD: x11-toolkits/phat/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	phat
 PORTVERSION=	0.4.1
@@ -17,6 +13,7 @@ COMMENT=	Collection of GTK+ widgets geared toward pro-audio apps
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+USES=        pathfix
 USE_GNOME=	gtk20 libgnomecanvas gnomehack
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
