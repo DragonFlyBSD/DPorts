@@ -2,7 +2,7 @@
 # Date created:		2005-07-19
 # Whom:			Vsevolod Stakhov <vsevolod@highsecure.ru>
 #
-# $FreeBSD: ports/converters/htx/Makefile,v 1.11 2012/11/17 05:55:03 svnexp Exp $
+# $FreeBSD: converters/htx/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	htx
