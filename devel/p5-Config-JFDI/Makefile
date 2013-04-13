@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Config-JFDI
-# Date created:				29 Mar 2009
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Config-JFDI/Makefile,v 1.11 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: devel/p5-Config-JFDI/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Config-JFDI
 PORTVERSION=	0.065
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:ROKR
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Catalyst::Plugin::ConfigLoader-style layer over Config::Any
+COMMENT=	Catalyst::Plugin::ConfigLoader-style layer over Config::Any
 
 BUILD_DEPENDS=	\
 	p5-Carp-Clan-Share>=0:${PORTSDIR}/devel/p5-Carp-Clan-Share \
