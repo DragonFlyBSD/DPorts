@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Data-Phrasebook-Loader-YAML/Makefile,v 1.6 2012/12/26 14:10:54 svnexp Exp $
+# $FreeBSD: textproc/p5-Data-Phrasebook-Loader-YAML/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Data-Phrasebook-Loader-YAML
 PORTVERSION=	0.12
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A loader class for phrasebook implementations using YAML
+COMMENT=	Loader class for phrasebook implementations using YAML
 
 LICENSE=	ART20
 
