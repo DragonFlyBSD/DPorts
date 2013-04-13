@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ExtUtils::XSBuilder
-# Date created:				11 Sep 2003
-# Whom:                			vanilla
-#
-# $FreeBSD: ports/devel/p5-ExtUtils-XSBuilder/Makefile,v 1.11 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: vanilla
+# $FreeBSD: devel/p5-ExtUtils-XSBuilder/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	ExtUtils-XSBuilder
 PORTVERSION=	0.28
