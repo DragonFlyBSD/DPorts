@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/clipit/Makefile,v 1.1 2013/01/25 06:45:14 svnexp Exp $
+# $FreeBSD: deskutils/clipit/Makefile 310967 2013-01-25 06:33:14Z jgh $
 
 PORTNAME=	clipit
 PORTVERSION=	1.4.2
