@@ -2,7 +2,7 @@
 # Date created:		01/07/16
 # Whom:			Satoshi Taoka <taoka@FreeBSD.org>
 #
-# $FreeBSD: ports/japanese/wnn7egg/Makefile,v 1.10 2012/11/17 05:58:41 svnexp Exp $
+# $FreeBSD: japanese/wnn7egg/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	wnn7egg
