@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/devel/p5-Throwable/Makefile,v 1.8 2013/02/24 16:47:21 svnexp Exp $
+# $FreeBSD: devel/p5-Throwable/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Throwable
 PORTVERSION=	0.200004
@@ -9,7 +8,7 @@ MASTER_SITE_SUBDIR=	CPAN:RJBS
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An easy-to-use class for error objects
+COMMENT=	Easy-to-use class for error objects
 
 RUN_DEPENDS=	p5-Class-Load>=0.20:${PORTSDIR}/devel/p5-Class-Load \
 		p5-Devel-StackTrace>=1.21:${PORTSDIR}/devel/p5-Devel-StackTrace \
