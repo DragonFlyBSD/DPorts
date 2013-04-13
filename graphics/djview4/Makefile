@@ -2,7 +2,7 @@
 # Date created:		2007-02-13
 # Whom:			Stanislav Sedov <stas@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/djview4/Makefile,v 1.35 2012/11/17 05:58:03 svnexp Exp $
+# $FreeBSD: graphics/djview4/Makefile 301539 2012-07-26 05:40:22Z bapt $
 #
 
 PORTNAME=	djview
