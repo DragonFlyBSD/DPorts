@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: cad/geda/Makefile 313198 2013-03-02 05:54:37Z miwi $
+# $FreeBSD: cad/geda/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	geda
 PORTVERSION=	1.8.1
@@ -20,7 +20,8 @@ RUN_DEPENDS=	gawk:${PORTSDIR}/lang/gawk
 
 OPTIONS_DEFINE=	DOCS
 
-USE_GNOME=	desktopfileutils gnomehack gtk20
+USES=        pathfix
+USE_GNOME=	desktopfileutils gtk20
 USE_PERL5_RUN=	yes
 USE_PYTHON=	run
 USE_GETTEXT=	yes
