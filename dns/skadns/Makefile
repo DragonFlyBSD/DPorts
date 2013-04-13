@@ -2,7 +2,7 @@
 # Date created:		2004-01-01
 # Whom:			Sergei Kolobov <sergei@FreeBSD.org>
 #
-# $FreeBSD: ports/dns/skadns/Makefile,v 1.7 2012/11/17 05:57:11 svnexp Exp $
+# $FreeBSD: dns/skadns/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	skadns
