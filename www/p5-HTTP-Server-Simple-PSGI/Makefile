@@ -2,7 +2,7 @@
 # Date created:		2010-03-16
 # Whom:			ports@c0decafe.net
 #
-# $FreeBSD: ports/www/p5-HTTP-Server-Simple-PSGI/Makefile,v 1.4 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-Server-Simple-PSGI/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
 #
 
 PORTNAME=	HTTP-Server-Simple-PSGI
