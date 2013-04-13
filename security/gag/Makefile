@@ -1,9 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  gag
-# Date created:			  Sun Feb 12, 2000
-# Whom:				  David O'Brien (obrien@NUXI.com)
-#
-# $FreeBSD: ports/security/gag/Makefile,v 1.11 2012/11/17 06:01:04 svnexp Exp $
+# Created by: David O'Brien (obrien@NUXI.com)
+# $FreeBSD: security/gag/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	gag
@@ -14,7 +10,7 @@ DISTNAME=	sickenscan
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A stacheldraht (DOS attack) agent detector
+COMMENT=	Stacheldraht (DOS attack) agent detector
 
 LATEST_LINK=	gag-sickenscan
 
