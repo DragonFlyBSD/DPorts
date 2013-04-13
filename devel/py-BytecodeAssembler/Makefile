@@ -2,7 +2,7 @@
 # Date created:		23 June, 2009
 # Whom:			Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/devel/py-BytecodeAssembler/Makefile,v 1.4 2012/11/17 05:56:44 svnexp Exp $
+# $FreeBSD: devel/py-BytecodeAssembler/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	BytecodeAssembler
