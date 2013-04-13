@@ -2,7 +2,7 @@
 # Date created:		18 October 2000
 # Whom:			roam@orbitel.bg
 #
-# $FreeBSD: ports/net/tcpcat/Makefile,v 1.12 2012/11/17 06:00:22 svnexp Exp $
+# $FreeBSD: net/tcpcat/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	tcpcat
