@@ -1,8 +1,5 @@
-# New ports collection makefile for:	multimedia/quark
-# Date created:		21 Jul 2003
-# Whom:			Juan Salaverria <rael@vectorstar.net>
-#
-# $FreeBSD: ports/multimedia/quark/Makefile,v 1.39 2012/11/17 05:59:53 svnexp Exp $
+# Created by: Juan Salaverria <rael@vectorstar.net>
+# $FreeBSD: multimedia/quark/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	quark
 PORTVERSION=	3.24
@@ -18,7 +15,8 @@ LIB_DEPENDS=	xine.2:${PORTSDIR}/multimedia/libxine
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GNOME=	gnomehack gnomeprefix gnomevfs2
+USES=        pathfix
+USE_GNOME=	gnomeprefix gnomevfs2
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
