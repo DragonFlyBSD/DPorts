@@ -1,9 +1,5 @@
-# New ports collection makefile for:	teg
-# Date created:				31 October 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/games/teg/Makefile,v 1.42 2012/11/17 05:57:54 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: games/teg/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	teg
 PORTVERSION=	0.11.2
@@ -14,7 +10,8 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A turn-based strategy game for GNOME
 
-USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui
+USES=        pathfix
+USE_GNOME=	gnomeprefix intlhack libgnomeui
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
