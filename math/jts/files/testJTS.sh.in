@@ -1,5 +1,5 @@
 #! /bin/sh
-# $FreeBSD: ports/math/jts/files/testJTS.sh.in,v 1.2 2012/11/17 05:59:22 svnexp Exp $
+# $FreeBSD: math/jts/files/testJTS.sh.in 300896 2012-07-14 13:54:48Z beat $
 
 JLD="%%JAVALIBDIR%%"
 JJD="%%JAVAJARDIR%%"

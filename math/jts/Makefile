@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/math/jts/Makefile,v 1.10 2013/02/17 00:51:35 svnexp Exp $
+# $FreeBSD: math/jts/Makefile 312393 2013-02-16 23:57:07Z wen $
 
 PORTNAME=	jts
 PORTVERSION=	1.13
