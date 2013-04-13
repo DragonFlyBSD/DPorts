@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math-BigRat
-# Date created:	   03 March 2005
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/math/p5-Math-BigRat/Makefile,v 1.15 2012/11/17 05:59:25 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: math/p5-Math-BigRat/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Math-BigRat
 PORTVERSION=	0.26.02
