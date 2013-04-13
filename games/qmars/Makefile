@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: ports/games/qmars/Makefile,v 1.6 2012/11/17 05:57:50 svnexp Exp $
+# $FreeBSD: games/qmars/Makefile 306841 2012-11-02 11:08:29Z pawel $
 
 PORTNAME=	qmars
 PORTVERSION=	1.1
