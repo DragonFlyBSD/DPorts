@@ -1,5 +1,5 @@
 # Created by: Cy Schubert (Cy.Schubert@uumail.gov.bc.ca)
-# $FreeBSD: security/aide/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: security/aide/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	aide
 PORTVERSION=	0.15.1
@@ -10,7 +10,7 @@ MASTER_SITES=	SF \
 
 
 MAINTAINER=	cy@FreeBSD.org
-COMMENT=	A replacement and extension for Tripwire
+COMMENT=	Replacement and extension for Tripwire
 
 LIB_DEPENDS=	mhash.2:${PORTSDIR}/security/mhash
 
