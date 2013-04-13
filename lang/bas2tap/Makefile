@@ -1,5 +1,5 @@
-# Created by:	rene
-# $FreeBSD: ports/lang/bas2tap/Makefile,v 1.7 2012/11/17 05:58:48 svnexp Exp $
+# Created by: rene
+# $FreeBSD: lang/bas2tap/Makefile 315209 2013-03-25 10:09:39Z rene $
 
 PORTNAME=	bas2tap
 PORTVERSION=	2.5
