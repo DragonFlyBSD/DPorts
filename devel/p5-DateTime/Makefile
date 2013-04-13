@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: ports/devel/p5-DateTime/Makefile,v 1.69 2012/12/17 15:43:18 svnexp Exp $
+# $FreeBSD: devel/p5-DateTime/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	DateTime
 PORTVERSION=	0.78
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:DROLSKY
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A date and time object
+COMMENT=	Date and time object
 
 LICENSE=	ART20
 
