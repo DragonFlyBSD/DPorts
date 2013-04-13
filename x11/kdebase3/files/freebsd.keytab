@@ -1,6 +1,6 @@
 # [freebsd.keytab] Konsole Keyboard Table (FreeBSD console keys)
 #
-# $FreeBSD: ports/x11/kdebase3/files/freebsd.keytab,v 1.19 2012/11/17 06:03:16 svnexp Exp $
+# $FreeBSD: x11/kdebase3/files/freebsd.keytab 300897 2012-07-14 14:29:18Z beat $
 # --------------------------------------------------------------
 
 # NOT TESTED, MAY NEED SOME CLEANUPS

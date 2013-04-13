@@ -1,1 +1,2 @@
 BUILD_DEPENDS+=	mcopidl:${PORTSDIR}/audio/arts
+LIB_DEPENDS+= usb-0.1:${PORTSDIR}/devel/libusb

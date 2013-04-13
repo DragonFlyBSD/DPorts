@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/x11/kdebase3/files/kdm.in,v 1.9 2012/11/17 06:03:16 svnexp Exp $
+# $FreeBSD: x11/kdebase3/files/kdm.in 300897 2012-07-14 14:29:18Z beat $
 
 # some defs
 GENKDMCONF=%%PREFIX%%/bin/genkdmconf

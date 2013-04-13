@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/kdebase3/Makefile,v 1.234 2012/12/30 18:56:33 svnexp Exp $
+# $FreeBSD: x11/kdebase3/Makefile 315474 2013-03-28 15:51:16Z eadler $
 
 PORTNAME=	kdebase
 PORTVERSION=	${KDE_VERSION}
@@ -56,11 +56,6 @@ HTDIG_DESC=		Use htdig to build manual indices
 .include "${.CURDIR}/../../x11/kde3/Makefile.kde"
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == "DragonFly" || ${OSVERSION} < 800069
-LIB_DEPENDS+=	usb-0.1:${PORTSDIR}/devel/libusb
-.else
-EXTRA_PATCHES+=	${FILESDIR}/extrapatch-libusb20
-.endif
 
 .if ${PORT_OPTIONS:MARTSWRAPPER}
 RUN_DEPENDS+=	artswrapper:${PORTSDIR}/audio/artswrapper
