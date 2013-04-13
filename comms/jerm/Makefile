@@ -1,5 +1,5 @@
 # Created by: Shinsuke Matsui <smatsui@karashi.org>
-# $FreeBSD: ports/comms/jerm/Makefile,v 1.6 2012/11/23 12:48:54 svnexp Exp $
+# $FreeBSD: comms/jerm/Makefile 315743 2013-04-06 15:04:35Z wg $
 
 PORTNAME=	jerm
 PORTVERSION=	8096
@@ -42,7 +42,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/init.sh ${PREFIX}/libexec/jerm
 	${INSTALL_SCRIPT} ${WRKSRC}/rock.pl ${PREFIX}/libexec/jerm
 .endif
-.if ${PORT_OPTIONS:MOCS}
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
