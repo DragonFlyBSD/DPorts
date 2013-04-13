@@ -2,7 +2,7 @@
 # Date created:					2004-07-05
 # Whom:						arved
 #
-# $FreeBSD: ports/net/kphone/Makefile,v 1.20 2012/12/30 18:56:15 svnexp Exp $
+# $FreeBSD: net/kphone/Makefile 309662 2012-12-30 12:03:51Z beat $
 
 PORTNAME=	kphone
 PORTVERSION=	4.2
