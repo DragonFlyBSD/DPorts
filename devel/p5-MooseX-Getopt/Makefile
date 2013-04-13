@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MooseX-Getopt/Makefile,v 1.41 2013/02/16 17:11:03 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Getopt/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	MooseX-Getopt
 PORTVERSION=	0.56
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:ETHER
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Moose role for processing command line options
+COMMENT=	Moose role for processing command line options
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
