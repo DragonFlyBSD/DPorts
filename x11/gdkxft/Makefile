@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gdkxft
-# Date created:				3 September 2001
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/gdkxft/Makefile,v 1.43 2012/11/17 06:03:15 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: x11/gdkxft/Makefile 315242 2013-03-25 19:14:43Z eadler $
 
 PORTNAME=	gdkxft
 PORTVERSION=	1.5
@@ -32,6 +28,8 @@ USE_LDCONFIG=	yes
 
 MAN8=		gdkxft_sysinstall.8
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|gtk-config --prefix|$$GTK_CONFIG --prefix|g ; \
 		 s|libgdk.la|libgdk-12.so|g ; \
@@ -48,7 +46,7 @@ post-patch:
 .endfor
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
