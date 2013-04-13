@@ -1,5 +1,5 @@
 # Created by: will@cvs.kde.org
-# $FreeBSD: ports/misc/kdeedu3/Makefile,v 1.58 2013/01/31 14:01:30 svnexp Exp $
+# $FreeBSD: misc/kdeedu3/Makefile 315474 2013-03-28 15:51:16Z eadler $
 
 PORTNAME=	kdeedu
 PORTVERSION=	${KDE_VERSION}
@@ -35,10 +35,6 @@ USE_LDCONFIG=	yes
 .include "${.CURDIR}/../../x11/kde3/Makefile.kde"
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800069
-LIB_DEPENDS+=	usb-0.1:${PORTSDIR}/devel/libusb
-.endif
 
 pre-configure:
 	${REINPLACE_CMD} \
