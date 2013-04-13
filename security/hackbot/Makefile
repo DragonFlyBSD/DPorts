@@ -1,8 +1,5 @@
-# New ports collection makefile for:   hackbot
-# Date created:        Mon Jan 13 15:44:35 GMT 2003
-# Whom:                mich@freebsdcluster.org
-#
-# $FreeBSD: ports/security/hackbot/Makefile,v 1.11 2012/11/17 06:01:05 svnexp Exp $
+# Created by: mich@freebsdcluster.org
+# $FreeBSD: security/hackbot/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	hackbot
@@ -13,7 +10,7 @@ MASTER_SITES=	http://freebsdcluster.org/~mich/software/ \
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	mich@FreeBSD.org
-COMMENT=	A host exploration tool and bannergrabber
+COMMENT=	Host exploration tool and bannergrabber
 
 USE_PERL5=	YES
 NO_BUILD=	YES
