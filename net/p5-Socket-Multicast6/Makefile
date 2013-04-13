@@ -2,7 +2,7 @@
 # Date created:		2007-03-10
 # Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
 #
-# $FreeBSD: ports/net/p5-Socket-Multicast6/Makefile,v 1.6 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-Socket-Multicast6/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Socket-Multicast6
