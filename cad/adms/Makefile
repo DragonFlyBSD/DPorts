@@ -3,7 +3,7 @@
 # Whom:			Stanislav Sedov <ssedov@mbsd.msk.ru>
 #
 # $MBSDlabs$
-# $FreeBSD: ports/cad/adms/Makefile,v 1.15 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: cad/adms/Makefile 301539 2012-07-26 05:40:22Z bapt $
 #
 
 PORTNAME=	adms
