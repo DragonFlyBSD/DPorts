@@ -2,7 +2,7 @@
 # Date created:		2009-01-19
 # Whom:			Christopher Key <cjk32@cam.ac.uk>
 #
-# $FreeBSD: ports/www/p5-WebService-MusicBrainz/Makefile,v 1.8 2012/11/17 06:02:56 svnexp Exp $
+# $FreeBSD: www/p5-WebService-MusicBrainz/Makefile 302967 2012-08-22 21:42:37Z linimon $
 #
 
 PORTNAME=	WebService-MusicBrainz
