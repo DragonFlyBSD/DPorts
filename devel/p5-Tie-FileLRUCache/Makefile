@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Tie-FileLRUCache
-# Date created:				Oct 23 2003
-# Whom:					clsung@dragon2.net
-#
-# $FreeBSD: ports/devel/p5-Tie-FileLRUCache/Makefile,v 1.10 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: clsung@dragon2.net
+# $FreeBSD: devel/p5-Tie-FileLRUCache/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Tie-FileLRUCache
 PORTVERSION=	1.05
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A lightweight but robust filesystem based persistent LRU cache
+COMMENT=	Lightweight but robust filesystem based persistent LRU cache
 
 BUILD_DEPENDS=	p5-Class-NamedParms>=0:${PORTSDIR}/devel/p5-Class-NamedParms \
 		p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
