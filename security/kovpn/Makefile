@@ -1,8 +1,5 @@
-# New ports collection makefile for:	kovpn
-# Date created:				13 April 2006
-# Whom:					anderson@cnpm.embrapa.br
-#
-# $FreeBSD: ports/security/kovpn/Makefile,v 1.18 2012/11/17 06:01:06 svnexp Exp $
+# Created by: anderson@cnpm.embrapa.br
+# $FreeBSD: security/kovpn/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	kovpn
@@ -13,7 +10,7 @@ MASTER_SITES=	https://projects.fslab.de/projects/kovpn/chrome/site/
 DISTNAME=	${PORTNAME}-${PORTVERSION}.pre7
 
 MAINTAINER=	anderson@cnpm.embrapa.br
-COMMENT=	A simple GUI for OpenVPN clients
+COMMENT=	Simple GUI for OpenVPN clients
 
 RUN_DEPENDS=	openvpn:${PORTSDIR}/security/openvpn
 
