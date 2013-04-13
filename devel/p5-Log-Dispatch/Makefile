@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: ports/devel/p5-Log-Dispatch/Makefile,v 1.51 2013/01/23 08:45:53 svnexp Exp $
+# $FreeBSD: devel/p5-Log-Dispatch/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Log-Dispatch
 PORTVERSION=	2.35
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A suite of OO modules for logging messages to multiple outputs
+COMMENT=	Suite of OO modules for logging messages to multiple outputs
 
 LICENSE=	ART20
 
