@@ -2,7 +2,7 @@
 # Date created:			Sep 18. 2005
 # Whom:				Volker Stolz <vs@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/gastex/Makefile,v 1.7 2012/11/17 06:01:56 svnexp Exp $
+# $FreeBSD: textproc/gastex/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	gastex
