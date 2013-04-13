@@ -2,7 +2,7 @@
 # Date created:		01 Nov 2002
 # Whom:			Sergei Kolobov <sergei@kolobov.com>
 #
-# $FreeBSD: ports/databases/puredb/Makefile,v 1.12 2012/11/17 05:55:21 svnexp Exp $
+# $FreeBSD: databases/puredb/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	puredb
