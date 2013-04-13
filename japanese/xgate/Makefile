@@ -2,7 +2,7 @@
 # Date created:				2005/10/22
 # Whom:					nork@FreeBSD.org
 #
-# $FreeBSD: ports/japanese/xgate/Makefile,v 1.16 2012/11/17 05:58:41 svnexp Exp $
+# $FreeBSD: japanese/xgate/Makefile 315474 2013-03-28 15:51:16Z eadler $
 
 PORTNAME=	xgate
 PORTVERSION=	3.7pl6
@@ -45,10 +45,6 @@ PORTDOCS=	AdminGuide.pdf \
 RESTRICTED=	Commercial license
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800000
-EXTRACT_DEPENDS=	unzip:${PORTSDIR}/archivers/unzip
-.endif
 
 APP_HOME!=	${MAKE} -C ${PORTSDIR}/www/tomcat6 -VAPP_HOME
 
