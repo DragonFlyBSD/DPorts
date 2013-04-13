@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-FileHandle-Unget
-# Date created:				Oct 28 2003
-# Whom:					Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/devel/p5-FileHandle-Unget/Makefile,v 1.17 2012/12/17 15:43:18 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: devel/p5-FileHandle-Unget/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	FileHandle-Unget
 PORTVERSION=	0.1623
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A FileHandle which supports ungetting of multiple bytes
+COMMENT=	FileHandle which supports ungetting of multiple bytes
 
 PERL_CONFIGURE=	yes
 
