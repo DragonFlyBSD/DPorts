@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gsk
-# Date created:				May 1, 2001
-# Whom:					ijliao
-#
-# $FreeBSD: net/gsk/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: ijliao
+# $FreeBSD: net/gsk/Makefile 315491 2013-03-28 17:56:37Z eadler $
 
 PORTNAME=	gsk
 PORTVERSION=	1.0.63
@@ -13,7 +9,8 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A C library for writing servers
 
-USE_GNOME=	glib20 gnomehack
+USES=		pathfix
+USE_GNOME=	glib20
 USE_PKGCONFIG=	build
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	libtool
