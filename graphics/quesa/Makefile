@@ -2,7 +2,7 @@
 # Date created:		03 Feb 2004
 # Whom:			Igor Pokrovsky <tiamat@comset.net>
 #
-# $FreeBSD: ports/graphics/quesa/Makefile,v 1.23 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/quesa/Makefile 302037 2012-08-04 22:52:02Z kwm $
 #
 
 PORTNAME=	quesa
