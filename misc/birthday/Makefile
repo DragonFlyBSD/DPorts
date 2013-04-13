@@ -1,9 +1,5 @@
-# New ports collection makefile for:   birthday
-# Date created:        21 May 2001
-# Whom:                Niek Bergboer <niek@bergboer.net>
-#
-# $FreeBSD: ports/misc/birthday/Makefile,v 1.8 2012/11/17 05:59:33 svnexp Exp $
-#
+# Created by: Niek Bergboer <niek@bergboer.net>
+# $FreeBSD: misc/birthday/Makefile 315240 2013-03-25 18:44:20Z eadler $
 
 PORTNAME=	birthday
 PORTVERSION=	1.5
@@ -11,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://users.zetnet.co.uk/mortia/source/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A program that outputs reminders for upcoming events (e.g. birthdays)
+COMMENT=	Outputs reminders for upcoming events (e.g. birthdays)
 
 MAN1=		birthday.1
 MANCOMPRESSED=	no
