@@ -3,7 +3,7 @@
 # Whom:			Stanislav Sedov <stas@FreeBSD.org>
 #
 # $MBSDlabs$
-# $FreeBSD: ports/devel/fga/Makefile,v 1.11 2013/02/14 10:22:07 svnexp Exp $
+# $FreeBSD: devel/fga/Makefile 312209 2013-02-14 09:42:12Z gahr $
 #
 
 PORTNAME=	fga
