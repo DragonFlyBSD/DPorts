@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: ports/emulators/tme/Makefile,v 1.18 2012/12/10 19:24:01 svnexp Exp $
+# $FreeBSD: emulators/tme/Makefile 308630 2012-12-10 19:11:11Z mm $
 
 PORTNAME=	tme
 PORTVERSION=	0.8
