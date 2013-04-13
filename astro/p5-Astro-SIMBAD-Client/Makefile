@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/astro/p5-Astro-SIMBAD-Client/Makefile,v 1.11 2012/11/17 16:51:51 svnexp Exp $
+# $FreeBSD: astro/p5-Astro-SIMBAD-Client/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Astro-SIMBAD-Client
 PORTVERSION=	0.026
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:WYANT
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An object-oriented interface to SIMBAD4
+COMMENT=	OO interface to SIMBAD4
 
 BUILD_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 		p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite \
