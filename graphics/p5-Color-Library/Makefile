@@ -1,9 +1,5 @@
-# New ports collection makefile for:	graphics/p5-Color-Library
-# Date created:				2009/04/10
-# Whom:					chinsan
-#
-# $FreeBSD: ports/graphics/p5-Color-Library/Makefile,v 1.5 2012/11/17 05:58:16 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: graphics/p5-Color-Library/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Color-Library
 PORTVERSION=	0.02.1
@@ -15,7 +11,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An easy-to-use and comprehensive named-color library
+COMMENT=	Easy-to-use and comprehensive named-color library
 
 BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inheritable
