@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/www/p5-CGI-Application-Plugin-Authentication/Makefile,v 1.9 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-Plugin-Authentication/Makefile 305216 2012-10-03 18:31:53Z tabthorpe $
 
 PORTNAME=	CGI-Application-Plugin-Authentication
 PORTVERSION=	0.20
