@@ -1,9 +1,4 @@
-# New ports collection makefile for:	libmediawiki
-# Date created:				2012-05-12
-# Whom:					Jason E. Hale <bsdkaffee@gmail.com>
-#
-# $FreeBSD: ports/net/libmediawiki/Makefile,v 1.4 2012/11/17 06:00:04 svnexp Exp $
-#
+# $FreeBSD: net/libmediawiki/Makefile 315762 2013-04-08 17:10:56Z makc $
 
 PORTNAME=	libmediawiki
 PORTVERSION=	${DIGIKAM_VER}
@@ -13,6 +8,8 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE4 library for accessing MediaWiki sites
 
 .include "${.CURDIR}/../../graphics/digikam-kde4/Makefile.common"
+
+USE_LDCONFIG=	yes
 
 post-patch:
 	${REINPLACE_CMD} -e '/pkgconfig/s|$${LIB_INSTALL_DIR}|libdata|' \
