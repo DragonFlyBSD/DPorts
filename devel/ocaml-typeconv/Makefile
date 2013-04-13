@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/devel/ocaml-typeconv/Makefile,v 1.6 2012/12/20 06:31:51 svnexp Exp $
+# $FreeBSD: devel/ocaml-typeconv/Makefile 309294 2012-12-20 05:51:59Z araujo $
 
 PORTNAME=	type-conv
 PORTVERSION=	108.07.00
