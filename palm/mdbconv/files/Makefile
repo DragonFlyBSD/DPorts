@@ -1,4 +1,4 @@
-# $FreeBSD: ports/palm/mdbconv/files/Makefile,v 1.2 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: palm/mdbconv/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 
 PROG=	mdbconv
 NOMAN=	yes
