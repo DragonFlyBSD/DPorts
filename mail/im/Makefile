@@ -2,7 +2,7 @@
 # Date created:		13 November 1997
 # Whom:			Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
 #
-# $FreeBSD: ports/mail/im/Makefile,v 1.20 2012/11/17 05:59:04 svnexp Exp $
+# $FreeBSD: mail/im/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	im
