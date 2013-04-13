@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-DBIx-Class-EncodedColumn
-# Date created:				29 Mar 2009
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-EncodedColumn/Makefile,v 1.19 2012/12/17 09:41:16 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: databases/p5-DBIx-Class-EncodedColumn/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	DBIx-Class-EncodedColumn
 PORTVERSION=	0.00011
