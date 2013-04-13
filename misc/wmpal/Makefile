@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmpal
-# Date created:				20 April 2001
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/wmpal/Makefile,v 1.18 2012/11/17 05:59:46 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: misc/wmpal/Makefile 315192 2013-03-25 04:30:31Z eadler $
 
 PORTNAME=	wmpal
 PORTVERSION=	0.6.1
@@ -11,7 +7,7 @@ CATEGORIES=	misc windowmaker
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A one of the most useless dockapps in the world
+COMMENT=	One of the most useless dockapps in the world
 
 USE_XORG=	xpm
 GNU_CONFIGURE=	yes
@@ -21,11 +17,13 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PORTDOCS=	README
 PLIST_FILES=	bin/wmpal
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|"dino"|"daemon"|g' ${WRKSRC}/wmpal.c
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
