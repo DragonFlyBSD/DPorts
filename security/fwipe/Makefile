@@ -1,8 +1,5 @@
-# New ports collection makefile for:	wipe
-# Date created:			2006-09-22
-# Whom:				David Thiel <lx@redundancy.redundancy.org>
-#
-# $FreeBSD: ports/security/fwipe/Makefile,v 1.4 2012/11/17 06:01:04 svnexp Exp $
+# Created by: David Thiel <lx@redundancy.redundancy.org>
+# $FreeBSD: security/fwipe/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	fwipe
@@ -13,7 +10,7 @@ MASTER_SITES=	http://www.jeenyus.net/linux/software/fwipe/ \
 		http://redundancy.redundancy.org/mirror/
 
 MAINTAINER=	lx@FreeBSD.org
-COMMENT=	A djb-style file wiping utility
+COMMENT=	djb-style file wiping utility
 
 ALL_TARGET=	it
 INSTALL_TARGET=	setup
