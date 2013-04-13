@@ -2,7 +2,7 @@
 # Date created:		Fri Sep 10 16:37:35 EEST 2010
 # Whom:			Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/sssnips/Makefile,v 1.6 2012/11/17 05:59:45 svnexp Exp $
+# $FreeBSD: misc/sssnips/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	sssnips
