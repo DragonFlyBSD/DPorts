@@ -2,7 +2,7 @@
 # Date created:		19 October 2004
 # Whom:			Pedro F. Giffuni
 #
-# $FreeBSD: ports/science/isaac-cfd/Makefile,v 1.9 2012/11/17 06:00:58 svnexp Exp $
+# $FreeBSD: science/isaac-cfd/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	isaac
