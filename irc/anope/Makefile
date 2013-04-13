@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: ports/irc/anope/Makefile,v 1.32 2013/01/07 21:42:50 svnexp Exp $
+# $FreeBSD: irc/anope/Makefile 315270 2013-03-26 09:25:33Z miwi $
 
 PORTNAME=	anope
 PORTVERSION=	1.8.7
@@ -45,7 +45,7 @@ pre-install:
 	@${MKDIR} ${DATADIR}
 
 post-install:
-.if ${PORT_OPTIONS:MDCOS}
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/docs/,} ${DOCSDIR}/
 .endif
