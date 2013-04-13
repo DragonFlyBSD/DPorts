@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: x11-wm/qtile/Makefile 315511 2013-03-29 00:55:17Z lippe $
+# $FreeBSD: x11-wm/qtile/Makefile 315741 2013-04-06 12:31:46Z wg $
 
 PORTNAME=	qtile
 PORTVERSION=	0.5
@@ -11,7 +11,9 @@ COMMENT=	A small, flexible, scriptable tiling window manager written in Python
 LICENSE=	MIT
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xpyb>0:${PORTSDIR}/x11/xpyb \
-		${PYTHON_PKGNAMEPREFIX}cairo>0:${PORTSDIR}/graphics/py-cairo
+		${PYTHON_PKGNAMEPREFIX}cairo>0:${PORTSDIR}/graphics/py-cairo \
+		${PYTHON_PKGNAMEPREFIX}gobject>0:${PORTSDIR}/devel/py-gobject \
+		${PYTHON_PKGNAMEPREFIX}gtk>0:${PORTSDIR}/x11-toolkits/py-gtk2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	qtile
