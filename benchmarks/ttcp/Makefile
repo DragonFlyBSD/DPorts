@@ -2,7 +2,7 @@
 # Date created:			Tue Jun  1 22:58:13 PDT 1999
 # Whom:				mharo@FreeBSD.org
 #
-# $FreeBSD: ports/benchmarks/ttcp/Makefile,v 1.14 2012/11/17 05:54:51 svnexp Exp $
+# $FreeBSD: benchmarks/ttcp/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	ttcp
