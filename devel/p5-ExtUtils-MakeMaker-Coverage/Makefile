@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ExtUtils-MakeMaker-Coverage
-# Date created:	   30 September 2005
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-ExtUtils-MakeMaker-Coverage/Makefile,v 1.7 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-ExtUtils-MakeMaker-Coverage/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	ExtUtils-MakeMaker-Coverage
 PORTVERSION=	0.05
