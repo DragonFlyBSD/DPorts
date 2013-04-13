@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/editors/leo/pkg-plist,v 1.14 2012/11/17 05:57:15 svnexp Exp $
+@comment $FreeBSD: editors/leo/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/leo
 %%PYTHON_SITELIBDIR%%/leo/Icons/LeoWin.gif
 %%PYTHON_SITELIBDIR%%/leo/Icons/Leoapp.GIF

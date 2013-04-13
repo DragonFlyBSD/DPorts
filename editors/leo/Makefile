@@ -2,7 +2,7 @@
 # Date created:			2002/11/17
 # Whom:				Alan Eldridge <ports@geeksrus.net>
 #
-# $FreeBSD: ports/editors/leo/Makefile,v 1.36 2013/02/03 22:43:14 svnexp Exp $
+# $FreeBSD: editors/leo/Makefile 311476 2013-02-03 18:16:54Z makc $
 #
 
 PORTNAME=	leo
