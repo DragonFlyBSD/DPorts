@@ -1,9 +1,5 @@
-# New ports collection makefile for:	portmon
-# Date created:				18.06.2003
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/net-mgmt/portmon/Makefile,v 1.16 2012/11/17 06:00:36 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: net-mgmt/portmon/Makefile 315736 2013-04-05 19:42:03Z bdrewery $
 
 PORTNAME=	portmon
 PORTVERSION=	2.0
