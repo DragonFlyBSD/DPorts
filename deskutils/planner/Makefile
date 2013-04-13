@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: deskutils/planner/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: deskutils/planner/Makefile 315377 2013-03-27 13:17:02Z kwm $
 #   $MCom: ports-stable/deskutils/planner/Makefile,v 1.4 2009/04/16 00:34:24 kwm Exp $
 
 PORTNAME=	planner
@@ -35,7 +35,6 @@ MAN1=		planner.1
 
 OPTIONS_DEFINE=	GDA
 GDA_DESC=	Enable database support (though libgda)
-#		EVO "Enable evolution data server support" off
 
 .include <bsd.port.options.mk>
 
