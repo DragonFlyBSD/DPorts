@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	v6
-# Date created:			Aug 1, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/lang/p5-v6/Makefile,v 1.12 2012/11/17 05:58:54 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: lang/p5-v6/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	v6
 PORTVERSION=	0.017
@@ -15,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-alpha-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An experimental compiler for Perl 6
+COMMENT=	Experimental compiler for Perl 6
 
 BUILD_DEPENDS=	p5-Data-Bind>=0.28:${PORTSDIR}/devel/p5-Data-Bind \
 		p5-Devel-Caller>=0.10:${PORTSDIR}/devel/p5-Devel-Caller \
