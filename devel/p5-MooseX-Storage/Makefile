@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: ports/devel/p5-MooseX-Storage/Makefile,v 1.23 2013/01/13 12:46:45 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Storage/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	MooseX-Storage
 PORTVERSION=	0.32
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An serialization framework for Moose classes
+COMMENT=	Serialization framework for Moose classes
 
 BUILD_DEPENDS=	p5-JSON-Any>=1.15:${PORTSDIR}/converters/p5-JSON-Any \
 		p5-Moose>=0.99:${PORTSDIR}/devel/p5-Moose \
