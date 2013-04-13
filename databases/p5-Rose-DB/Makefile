@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: ports/databases/p5-Rose-DB/Makefile,v 1.51 2013/02/02 03:41:34 svnexp Exp $
+# $FreeBSD: databases/p5-Rose-DB/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Rose-DB
 PORTVERSION=	0.770
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	CPAN:JSIRACUSA
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A DBI wrapper and abstraction layer
+COMMENT=	DBI wrapper and abstraction layer
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
