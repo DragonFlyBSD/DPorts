@@ -2,7 +2,7 @@
 # Date created:		22 Jan 2004
 # Whom:			Igor Pokrovsky <tiamat@comset.net>
 #
-# $FreeBSD: ports/games/glbsp/Makefile,v 1.13 2012/11/17 05:57:39 svnexp Exp $
+# $FreeBSD: games/glbsp/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	glbsp
