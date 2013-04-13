@@ -2,7 +2,7 @@
 # Date created:				2004-08-20
 # Whom:					ports@c0decafe.net
 #
-# $FreeBSD: ports/x11-toolkits/p5-Gtk2-Ex-PodViewer/Makefile,v 1.18 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Gtk2-Ex-PodViewer/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
 #
 
 PORTNAME=	Gtk2-Ex-PodViewer
