@@ -2,14 +2,14 @@
 # Date created:		9 August 1996
 # Whom:			chuckr@freebsd.org
 #
-# $FreeBSD: ports/print/transfig/Makefile,v 1.50 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: ports/print/transfig/Makefile,v 1.51 2013/02/15 11:11:26 svnexp Exp $
 #
 
 PORTNAME=	transfig
 PORTVERSION=	3.2.5d
 PORTREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	SF/mcj/mcj_dist_src/3.0/
+MASTER_SITES=	SF/mcj/mcj-source/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
