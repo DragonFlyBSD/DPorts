@@ -1,9 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	integrit
-# Date created:			Dec 30, 2000
-# Whom:				Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/security/integrit/Makefile,v 1.17 2012/11/17 06:01:05 svnexp Exp $
+# Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
+# $FreeBSD: security/integrit/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	integrit
@@ -12,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	SF
 
 MAINTAINER=	jos@catnook.com
-COMMENT=	A file integrity verification program
+COMMENT=	File integrity verification program
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 GNU_CONFIGURE=	yes
