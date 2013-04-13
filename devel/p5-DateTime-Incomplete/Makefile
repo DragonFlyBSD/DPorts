@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: ports/devel/p5-DateTime-Incomplete/Makefile,v 1.13 2012/11/17 05:56:12 svnexp Exp $
+# $FreeBSD: devel/p5-DateTime-Incomplete/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	DateTime-Incomplete
 PORTVERSION=	0.07.00
@@ -9,7 +9,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An incomplete DateTime, like January 5
+COMMENT=	Incomplete DateTime, like January 5
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
