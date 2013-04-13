@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/wol/pkg-plist,v 1.6 2012/11/17 06:00:25 svnexp Exp $
+@comment $FreeBSD: net/wol/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/wol
 bin/wol-bootptab
 bin/wol-dhcpdconf

@@ -1,7 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	wol
 # Created by: ijliao
-# $FreeBSD: ports/net/wol/Makefile,v 1.35 2012/11/17 06:00:25 svnexp Exp $
+# $FreeBSD: net/wol/Makefile 305921 2012-10-15 16:21:11Z tabthorpe $
 
 PORTNAME=	wol
 PORTVERSION=	0.7.1
