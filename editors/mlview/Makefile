@@ -1,9 +1,5 @@
-# Ports collection Makefile for:	mlview
-# Date created:				24 September 2003
-# Whom:					Simon Barner <barner@gmx.de>
-#
-# $FreeBSD: ports/editors/mlview/Makefile,v 1.44 2012/11/17 05:57:16 svnexp Exp $
-#
+# Created by: Simon Barner <barner@gmx.de>
+# $FreeBSD: editors/mlview/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	mlview
 PORTVERSION=	0.8
@@ -17,7 +13,8 @@ COMMENT=	A tree oriented XML editor for Gnome
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	autoconf libtool
-USE_GNOME=	eel2 gnomehack gnomeprefix gtksourceview libgnomeui
+USES=        pathfix
+USE_GNOME=	eel2 gnomeprefix gtksourceview libgnomeui
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib `pkg-config --libs gnome-vfs-2.0 libgnomeui-2.0`"
