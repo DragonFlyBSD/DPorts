@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xtset
-# Date created:		7 March 2001
-# Whom:			grog
-#
-# $FreeBSD: ports/x11/xtset/Makefile,v 1.10 2012/11/17 06:03:23 svnexp Exp $
-#
+# Created by: grog
+# $FreeBSD: x11/xtset/Makefile 315479 2013-03-28 16:07:10Z eadler $
 
 PORTNAME=	xtset
 PORTVERSION=	1.1
@@ -13,7 +9,7 @@ MASTER_SITES=	ftp://ftp.lemis.com/pub/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility to set title on an xterm
 
-NO_WRKSUBDIR=   YES
+NO_WRKSUBDIR=	YES
 
 PLIST_FILES=	bin/xtset
 MAN1=		xtset.1
