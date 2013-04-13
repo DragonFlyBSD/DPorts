@@ -2,7 +2,7 @@
 # Date created:		17 May, 2009
 # Whom:			Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/graphics/pygts/Makefile,v 1.5 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/pygts/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	pygts
