@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: ports/textproc/ack/Makefile,v 1.3 2013/01/07 17:47:06 svnexp Exp $
+# $FreeBSD: textproc/ack/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	ack
 PORTVERSION=	1.96
@@ -9,7 +9,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	App
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A grep-like text finder for large trees of text
+COMMENT=	Grep-like text finder for large trees of text
 
 BUILD_DEPENDS=	p5-File-Next>=0.40:${PORTSDIR}/sysutils/p5-File-Next
 RUN_DEPENDS:=	${BUILD_DEPENDS}
