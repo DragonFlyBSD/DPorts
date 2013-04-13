@@ -2,7 +2,7 @@
 # Date created:		2010-01-24
 # Whom:			ports@c0decafe.net <ports@c0decafe.net>
 #
-# $FreeBSD: ports/misc/ondir/Makefile,v 1.3 2012/11/17 05:59:42 svnexp Exp $
+# $FreeBSD: misc/ondir/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
 #
 
 PORTNAME=	ondir
