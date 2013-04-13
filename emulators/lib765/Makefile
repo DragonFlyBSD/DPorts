@@ -1,5 +1,5 @@
-# Created by:	Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: ports/emulators/lib765/Makefile,v 1.20 2012/11/17 05:57:21 svnexp Exp $
+# Created by: Alexey V. Antipovsky <kemm@in-line.ru>
+# $FreeBSD: emulators/lib765/Makefile 315209 2013-03-25 10:09:39Z rene $
 
 PORTNAME=	lib765
 PORTVERSION=	0.4.2
