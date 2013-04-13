@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xrsi
-# Date created:		2007-03-17
-# Whom:			Martin Tournoij <carpetsmoker@xs4all.nl>
-#
-# $FreeBSD: ports/x11/xrsi/Makefile,v 1.8 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
+# $FreeBSD: x11/xrsi/Makefile 315242 2013-03-25 19:14:43Z eadler $
 
 PORTNAME=	xrsi
 PORTVERSION=	0.9
@@ -18,12 +14,14 @@ USE_XORG=	x11
 PLIST_FILES=	bin/xrsi
 PORTDOCS=	Readme Licence
 
+.include <bsd.port.options.mk>
+
 do-build:
 	${CC} ${CFLAGS} -I${LOCALBASE}/include -L${LOCALBASE}/lib -lX11 -o ${WRKSRC}/xrsi ${WRKSRC}/xrsi.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xrsi ${PREFIX}/bin/
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/Readme  ${DOCSDIR}/
 	${INSTALL_DATA} ${WRKSRC}/Licence ${DOCSDIR}/
