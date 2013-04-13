@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/dns/p5-POE-Component-Client-DNS-Recursive/Makefile,v 1.4 2013/01/25 09:57:06 svnexp Exp $
+# $FreeBSD: dns/p5-POE-Component-Client-DNS-Recursive/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	POE-Component-Client-DNS-Recursive
 PORTVERSION=	1.06
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A recursive DNS client for POE
+COMMENT=	Recursive DNS client for POE
 
 BUILD_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-Net-IP-Minimal>=0:${PORTSDIR}/net/p5-Net-IP-Minimal \
