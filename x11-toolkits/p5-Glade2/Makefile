@@ -2,7 +2,7 @@
 # Date created:		2004-08-03
 # Whom:			ports@c0decafe.net
 #
-# $FreeBSD: ports/x11-toolkits/p5-Glade2/Makefile,v 1.37 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Glade2/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
 #
 
 PORTNAME=	Glade
