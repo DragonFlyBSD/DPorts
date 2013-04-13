@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: ports/www/extsm/Makefile,v 1.14 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/extsm/Makefile 308605 2012-12-10 13:43:43Z bapt $
 
 PORTNAME=	extsm
 PORTVERSION=	1.1
