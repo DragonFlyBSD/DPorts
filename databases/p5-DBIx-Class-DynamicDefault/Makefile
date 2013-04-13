@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-DBIx-Class-DynamicDefault
-# Date created:				28 April 2009
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-DynamicDefault/Makefile,v 1.6 2012/12/17 08:59:15 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: databases/p5-DBIx-Class-DynamicDefault/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	DBIx-Class-DynamicDefault
 PORTVERSION=	0.04
