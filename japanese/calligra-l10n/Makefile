@@ -1,7 +1,7 @@
-# $FreeBSD: ports/japanese/calligra-l10n/Makefile,v 1.4 2013/02/05 12:23:34 svnexp Exp $
+# $FreeBSD: japanese/calligra-l10n/Makefile 315586 2013-03-29 23:51:39Z avilla $
 
 PORTNAME=	calligra-l10n
-PORTVERSION=	${CALLIGRA_VERSION}
+PORTVERSION=	2.5.5
 CATEGORIES=	japanese editors kde
 
 MAINTAINER=	kde@FreeBSD.org
