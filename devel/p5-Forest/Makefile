@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Forest
-# Date created:				2008/08/30
-# Whom:	      				chinsan
-#
-# $FreeBSD: ports/devel/p5-Forest/Makefile,v 1.12 2012/11/17 05:56:17 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: devel/p5-Forest/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Forest
 PORTVERSION=	0.09
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:STEVAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A collection of n-ary tree related modules
+COMMENT=	Collection of n-ary tree related modules
 
 RUN_DEPENDS=	p5-Moose>=0.90:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-AttributeHelpers>=0.17:${PORTSDIR}/devel/p5-MooseX-AttributeHelpers \
