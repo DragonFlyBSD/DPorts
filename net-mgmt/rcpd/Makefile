@@ -2,7 +2,7 @@
 # Date created:		2006-12-16
 # Whom:			Babak Farrokhi <farrokhi@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/rcpd/Makefile,v 1.3 2012/11/17 06:00:37 svnexp Exp $
+# $FreeBSD: net-mgmt/rcpd/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	rcpd
