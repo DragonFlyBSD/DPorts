@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: ports/devel/aifad/Makefile,v 1.13 2012/12/20 05:39:54 svnexp Exp $
+# $FreeBSD: devel/aifad/Makefile 309281 2012-12-20 05:37:46Z araujo $
 
 PORTNAME=	aifad
 PORTVERSION=	2.0.2
