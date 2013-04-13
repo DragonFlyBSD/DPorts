@@ -1,9 +1,4 @@
-# New ports collection makefile for:	MooseX-RelatedClassRoles
-# Date created:	                        January 31, 2010
-# Whom:		                        	Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/p5-MooseX-RelatedClassRoles/Makefile,v 1.5 2012/11/17 05:56:23 svnexp Exp $
-#
+# $FreeBSD: devel/p5-MooseX-RelatedClassRoles/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	MooseX-RelatedClassRoles
 PORTVERSION=	0.004
