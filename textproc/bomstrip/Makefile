@@ -2,7 +2,7 @@
 # Date created:			14 June 2008
 # Whom:				Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/bomstrip/Makefile,v 1.7 2012/11/17 06:01:52 svnexp Exp $
+# $FreeBSD: textproc/bomstrip/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	bomstrip
