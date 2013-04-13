@@ -14,7 +14,7 @@
      ;;
  
 -  *-*-freebsd*)
-+  *-*-freebsd*|*-*-dragonfly-*)
++  *-*-freebsd*|*-*-dragonfly*)
      MAKEFILE_PREFIX=freebsd 
      PLATFORM=FREEBSD
      AC_DEFINE(FREEBSD, 1, [Define this if OS is FreeBSD])
