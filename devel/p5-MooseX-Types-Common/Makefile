@@ -1,9 +1,5 @@
-# New ports collection makefile for:	MooseX-Types-Common
-# Date created:				26 November 2009
-# Whom:					Sahil Tandon <sahil@tandon.net>
-#
-# $FreeBSD: ports/devel/p5-MooseX-Types-Common/Makefile,v 1.14 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Sahil Tandon <sahil@tandon.net>
+# $FreeBSD: devel/p5-MooseX-Types-Common/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	MooseX-Types-Common
 PORTVERSION=	0.001008
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:ETHER
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A set of commonly-used type constraints that do not ship with p5-Moose
+COMMENT=	Set of commonly-used type constraints that do not ship with p5-Moose
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
