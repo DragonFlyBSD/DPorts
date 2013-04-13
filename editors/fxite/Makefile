@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: ports/editors/fxite/Makefile,v 1.16 2012/11/27 11:24:15 svnexp Exp $
+# $FreeBSD: editors/fxite/Makefile 315707 2013-04-03 12:02:59Z gahr $
 
 PORTNAME=	fxite
 PORTVERSION=	0.9
@@ -30,6 +30,7 @@ LDFLAGS+=	-lgetline
 PLIST_FILES=	bin/fxite \
 		share/pixmaps/fxite.xpm \
 		share/applications/fxite.desktop
+PLIST_DIRSTRY=	share/applications
 
 post-patch:
 	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
