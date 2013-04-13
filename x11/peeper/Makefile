@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	peeper
-# Date created:			Aug 9, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/x11/peeper/Makefile,v 1.15 2012/11/17 06:03:18 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: x11/peeper/Makefile 315242 2013-03-25 19:14:43Z eadler $
 
 PORTNAME=	peeper
 PORTVERSION=	0.1
@@ -21,9 +16,11 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} `${IMLIB_CONFIG} --cflags-gdk`" \
 		LIBS="`${IMLIB_CONFIG} --libs-gdk`"
 ALL_TARGET=	peeper
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/peeper ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
