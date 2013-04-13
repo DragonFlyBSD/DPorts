@@ -2,7 +2,7 @@
 # Date created:		18 September 2001
 # Whom:	      		Johann Visagie <wjv@FreeBSD.org>
 #
-# $FreeBSD: ports/www/quixote/Makefile,v 1.40 2012/11/17 06:03:02 svnexp Exp $
+# $FreeBSD: www/quixote/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	quixote
