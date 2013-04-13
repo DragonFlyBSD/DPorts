@@ -1,5 +1,5 @@
-# Created by:	rene
-# $FreeBSD: ports/lang/bf2c/Makefile,v 1.20 2012/11/17 05:58:48 svnexp Exp $
+# Created by: rene
+# $FreeBSD: lang/bf2c/Makefile 315209 2013-03-25 10:09:39Z rene $
 
 PORTNAME=	bf2c
 PORTVERSION=	1.2.5
