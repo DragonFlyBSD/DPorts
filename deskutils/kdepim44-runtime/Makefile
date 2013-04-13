@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim44-runtime/Makefile 314933 2013-03-22 14:18:02Z makc $
+# $FreeBSD: deskutils/kdepim44-runtime/Makefile 315680 2013-04-02 15:40:37Z makc $
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	4.4.11.1
@@ -20,7 +20,8 @@ LATEST_LINK=	${PORTNAME}44
 USE_KDE4=	pimlibs kdeprefix kdehier sharedmime automoc4
 USES=		cmake:outsource
 USE_BZIP2=	yes
-USE_QT4=	qmake_build moc_build rcc_build uic_build
+USE_QT4=	qmake_build moc_build rcc_build uic_build \
+		corelib dbus gui network qtestlib xml
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
