@@ -1,9 +1,5 @@
-# Ports collection makefile for:  horde-kronolith
-# Date created:			  Sun Dec 02, 2001
-# Whom:				  Thierry Thomas (<thierry@thomas.as>)
-#
-# $FreeBSD: ports/deskutils/horde-kronolith/Makefile,v 1.72 2013/02/12 17:38:58 svnexp Exp $
-#
+# Created by: Thierry Thomas (<thierry@thomas.as>)
+# $FreeBSD: deskutils/horde-kronolith/Makefile 315654 2013-04-01 15:12:35Z bdrewery $
 
 PORTNAME=	kronolith
 PORTVERSION=	4.0.4
