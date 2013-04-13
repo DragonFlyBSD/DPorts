@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Log-Dispatch-Config
-# Date created:		27 March 2003
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/p5-Log-Dispatch-Config/Makefile,v 1.14 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/p5-Log-Dispatch-Config/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Log-Dispatch-Config
 PORTVERSION=	1.04
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A log4j equivalent for Perl
+COMMENT=	Log4j equivalent for Perl
 
 BUILD_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
 		p5-AppConfig>=1.52:${PORTSDIR}/devel/p5-AppConfig \
