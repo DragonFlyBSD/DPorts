@@ -2,7 +2,7 @@
 # Date created:			28 October 2005
 # Whom:				Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/s5/Makefile,v 1.7 2012/11/17 06:02:20 svnexp Exp $
+# $FreeBSD: textproc/s5/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	s5
