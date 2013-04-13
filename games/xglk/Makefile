@@ -2,7 +2,7 @@
 # Date created:         4 February 2005
 # Whom:                 Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: ports/games/xglk/Makefile,v 1.9 2012/11/17 05:57:57 svnexp Exp $
+# $FreeBSD: games/xglk/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	xglk
