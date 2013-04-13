@@ -2,7 +2,7 @@
 # Date created:		2008-09-17
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/teseq/Makefile,v 1.3 2012/11/17 05:59:45 svnexp Exp $
+# $FreeBSD: misc/teseq/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	teseq
