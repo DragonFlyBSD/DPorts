@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MooseX-Params-Validate/Makefile,v 1.10 2013/01/18 10:08:16 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Params-Validate/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	MooseX-Params-Validate
 PORTVERSION=	0.18
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An extension of Params::Validate for using Moose types
+COMMENT=	Extension of Params::Validate for using Moose types
 
 BUILD_DEPENDS=	p5-Moose>=0.74:${PORTSDIR}/devel/p5-Moose \
 		p5-Params-Validate>0:${PORTSDIR}/devel/p5-Params-Validate \
