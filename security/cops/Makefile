@@ -1,8 +1,5 @@
-# New ports collection makefile for:	cops
-# Date created:				29 August 1996
-# Whom:					oly
-#
-# $FreeBSD: ports/security/cops/Makefile,v 1.21 2012/11/17 06:01:02 svnexp Exp $
+# Created by: oly
+# $FreeBSD: security/cops/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	cops
@@ -13,7 +10,7 @@ MASTER_SITES=	http://www.fish2.com/cops/ \
 DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}+
 
 MAINTAINER=	cy@FreeBSD.org
-COMMENT=	A system secureness checker
+COMMENT=	System secureness checker
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION:S/.//g}+
 HAS_CONFIGURE=	yes
