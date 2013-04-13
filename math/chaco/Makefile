@@ -2,7 +2,7 @@
 # Date created:         26 April 2006
 # Whom:                 Pedro Giffuni <giffunip@asme.org>
 #
-# $FreeBSD: ports/math/chaco/Makefile,v 1.3 2012/11/17 05:59:19 svnexp Exp $
+# $FreeBSD: math/chaco/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	chaco
