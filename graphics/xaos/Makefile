@@ -1,5 +1,5 @@
 # Created by: Joseph Koshy <koshy@india.hp.com>
-# $FreeBSD: ports/graphics/xaos/Makefile,v 1.45 2013/01/23 15:05:35 svnexp Exp $
+# $FreeBSD: graphics/xaos/Makefile 315222 2013-03-25 13:59:18Z makc $
 
 PORTNAME=	xaos
 PORTVERSION=	3.5
@@ -16,7 +16,7 @@ USE_XORG=	x11 xext
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
-OPTIONS_DEFINE=	GTK2 PTHREAD
+OPTIONS_DEFINE=	GTK2 PTHREAD NLS
 GTK2_DESC=	GTK+ User Interface (experimental)
 PTHREAD_DESC=	Enable SMP support (experimental)
 
