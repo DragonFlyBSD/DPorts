@@ -1,9 +1,4 @@
-# New ports collection makefile for:	libkface
-# Date created:				2012-05-12
-# Whom:					Jason E. Hale <bsdkaffee@gmail.com>
-#
-# $FreeBSD: ports/graphics/libkface/Makefile,v 1.4 2012/11/17 05:58:13 svnexp Exp $
-#
+# $FreeBSD: graphics/libkface/Makefile 315762 2013-04-08 17:10:56Z makc $
 
 PORTNAME=	libkface
 PORTVERSION=	${DIGIKAM_VER}
@@ -15,6 +10,7 @@ COMMENT=	KDE4 library for face recognition
 .include "${.CURDIR}/../digikam-kde4/Makefile.common"
 
 LIB_DEPENDS=	opencv_legacy:${PORTSDIR}/graphics/opencv
+USE_LDCONFIG=	yes
 
 post-patch:
 	${REINPLACE_CMD} -e '/pkgconfig/s|$${LIB_INSTALL_DIR}|libdata|' \
