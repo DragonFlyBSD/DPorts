@@ -2,7 +2,7 @@
 # Date created:				2003-11-28
 # Whom:					Walter Venable <weaseal@hotmail.com>
 #
-# $FreeBSD: ports/irc/srvx/Makefile,v 1.12 2012/11/17 05:58:30 svnexp Exp $
+# $FreeBSD: irc/srvx/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	srvx
