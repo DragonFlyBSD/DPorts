@@ -2,7 +2,7 @@
 # Date created:		26 November 2000
 # Whom:			roam@FreeBSD.org
 #
-# $FreeBSD: ports/x11/xvkbd/Makefile,v 1.26 2012/11/17 06:03:23 svnexp Exp $
+# $FreeBSD: x11/xvkbd/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	xvkbd
