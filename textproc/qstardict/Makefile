@@ -2,7 +2,7 @@
 # Date created:		12 Jul 2007
 # Whom:			Yinghong.Liu <relaxbsd@gmail.com>
 #
-# $FreeBSD: textproc/qstardict/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: textproc/qstardict/Makefile 315222 2013-03-25 13:59:18Z makc $
 #
 
 PORTNAME=	qstardict
@@ -20,7 +20,7 @@ USE_DOS2UNIX=	qstardict.pri
 
 DICPATH=	${LOCALBASE}/share/stardict/dic
 
-OPTIONS_DEFINE=	DBUS
+OPTIONS_DEFINE=	DBUS DOCS NLS
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
 .include <bsd.port.options.mk>
