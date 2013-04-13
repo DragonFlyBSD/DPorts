@@ -3,7 +3,7 @@
 # Date created:			Dec 8, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/www/py-mt/Makefile,v 1.5 2012/11/17 06:03:00 svnexp Exp $
+# $FreeBSD: www/py-mt/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	mt
