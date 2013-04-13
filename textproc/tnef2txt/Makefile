@@ -2,7 +2,7 @@
 # Date created:			14 Jan 2002
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/tnef2txt/Makefile,v 1.5 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/tnef2txt/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	tnef2txt
