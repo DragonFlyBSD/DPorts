@@ -2,7 +2,7 @@
 # Date created:		2 May 1998
 # Whom:			Bruce A. Mah <bmah@ca.sandia.gov>
 #
-# $FreeBSD: ports/x11/dxpc/Makefile,v 1.23 2012/11/17 06:03:14 svnexp Exp $
+# $FreeBSD: x11/dxpc/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	dxpc
