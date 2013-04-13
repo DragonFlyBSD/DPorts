@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xsu
-# Date created:				27 Aug 2002
-# Whom:					Juan Salaverria <rael@vectorstar.net>
-#
-# $FreeBSD: ports/sysutils/xsu/Makefile,v 1.17 2012/11/17 06:01:51 svnexp Exp $
-#
+# Created by: Juan Salaverria <rael@vectorstar.net>
+# $FreeBSD: sysutils/xsu/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	xsu
 PORTVERSION=	0.2.4
@@ -15,7 +11,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Xsu runs commands as root after prompting for the root password
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomelibs
+USES=        pathfix
+USE_GNOME=	gnomeprefix gnomelibs
 CONFIGURE_ARGS=	--su-pwd-out="Password:"
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
