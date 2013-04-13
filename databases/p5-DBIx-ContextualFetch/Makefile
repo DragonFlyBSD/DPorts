@@ -1,9 +1,5 @@
-# New ports collection makefile for:	DBIx-ContextualFetch
-# Date created:	   17 March 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/databases/p5-DBIx-ContextualFetch/Makefile,v 1.12 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: databases/p5-DBIx-ContextualFetch/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	DBIx-ContextualFetch
 PORTVERSION=	1.03
