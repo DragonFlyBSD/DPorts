@@ -2,7 +2,7 @@
 # Date created:				8 Mar 2005
 # Whom:					Benno Rice <benno@jeamland.net>
 #
-# $FreeBSD: ports/textproc/py-zpt/Makefile,v 1.4 2012/11/17 06:02:18 svnexp Exp $
+# $FreeBSD: textproc/py-zpt/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	zpt
