@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/sysutils/unieject/Makefile,v 1.21 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: sysutils/unieject/Makefile 315491 2013-03-28 17:56:37Z eadler $
 
 PORTNAME=	unieject
 PORTVERSION=	6
@@ -17,7 +17,8 @@ LIB_DEPENDS=	confuse:${PORTSDIR}/devel/libconfuse \
 		cdio:${PORTSDIR}/sysutils/libcdio
 
 USE_BZIP2=	yes
-USE_GNOME=	glib20 gnomehack
+USES=		pathfix
+USE_GNOME=	glib20
 USE_GETTEXT=	yes
 USE_ICONV=	yes
 USE_PKGCONFIG=	build
