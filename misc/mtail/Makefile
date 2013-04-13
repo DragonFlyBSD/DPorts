@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mtail
-# Date created:		9 August 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/mtail/Makefile,v 1.3 2012/11/17 05:59:42 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: misc/mtail/Makefile 315192 2013-03-25 04:30:31Z eadler $
 
 PORTNAME=	mtail
 PORTVERSION=	1.1.1
@@ -20,16 +16,18 @@ PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	CHANGES LICENSE README
 PORTEXAMPLES=	mtailrc
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e '1s|/.*|${PYTHON_CMD}|' ${WRKSRC}/${PORTNAME}
 
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-.ifndef NOPORTDOCS
+.if ${PORT_OPTIONS:MDOCS}
 	@${INSTALL} -d ${DOCSDIR}/
 	@cd ${WRKSRC}/&&${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
 .endif
-.ifndef NOPORTEXAMPLES
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${INSTALL} -d ${EXAMPLESDIR}/
 	@${INSTALL_DATA} ${WRKSRC}/mtailrc.sample ${EXAMPLESDIR}/mtailrc
 .endif
