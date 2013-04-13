@@ -2,7 +2,7 @@
 # Date created:		2010-07-25
 # Whom:			ports@c0decafe.net
 #
-# $FreeBSD: ports/deskutils/tnote/Makefile,v 1.3 2012/11/17 05:55:31 svnexp Exp $
+# $FreeBSD: deskutils/tnote/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
 #
 
 PORTNAME=	tnote
