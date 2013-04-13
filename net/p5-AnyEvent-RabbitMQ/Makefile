@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-AnyEvent-RabbitMQ/Makefile 313509 2013-03-06 11:03:33Z tobez $
+# $FreeBSD: net/p5-AnyEvent-RabbitMQ/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	AnyEvent-RabbitMQ
 PORTVERSION=	1.11
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:BOBTFISH
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An asynchronous and multi channel Perl AMQP client
+COMMENT=	Asynchronous and multi channel Perl AMQP client
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
