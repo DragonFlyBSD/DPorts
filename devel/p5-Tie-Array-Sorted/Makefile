@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tie-Array-Sorted
-# Date created:				27 July 2004
-# Whom:	      				Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Tie-Array-Sorted/Makefile,v 1.7 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Tie-Array-Sorted/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Tie-Array-Sorted
 PORTVERSION=	1.4.1
@@ -13,7 +9,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:C/\.(.)$/\1/}
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Perl array which is kept sorted
+COMMENT=	Perl array which is kept sorted
 
 PERL_CONFIGURE=	yes
 
