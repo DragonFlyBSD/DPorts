@@ -46,14 +46,8 @@ MANLANG=	"" fr
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "i386"
-LIB_DEPENDS+=		EMF.1:${PORTSDIR}/graphics/libemf
-CONFIGURE_ARGS+=	--enable-libemf
-PLIST_SUB+=		WMF=""
-.else
 CONFIGURE_ARGS+=	--disable-libemf
 PLIST_SUB+=		WMF="@comment "
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
