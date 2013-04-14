@@ -1,0 +1,1 @@
+IGNORE= Gnome does not build on DragonFly yet (common makefile needed though)
