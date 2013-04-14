@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br>
-# $FreeBSD: ports/mail/qmail/Makefile,v 1.167 2013/02/23 19:42:18 svnexp Exp $
+# $FreeBSD: mail/qmail/Makefile 315553 2013-03-29 18:12:28Z bdrewery $
 
 PORTNAME=	qmail
 PORTVERSION?=	${QMAIL_VERSION}
@@ -17,6 +17,9 @@ DIST_SUBDIR=	qmail
 
 CONFLICTS?=	qmail-ldap-[0-9]* qmail-mysql-[0-9]* qmail-spamcontrol-[0-9]* qmail-tls-[0-9]*
 CONFLICTS+=	qmail-vida-[0-9]*
+
+USES=		qmail:vars
+PREFIX?=	${QMAIL_PREFIX}
 
 MAKE_JOBS_UNSAFE=	yes
 
@@ -148,9 +151,9 @@ PATCHFILES+=	qmail-1.03-tls-${TLS_PATCH_DATE}-renato_v2.patch:tls
 .endif
 
 PATCH_SITES+=	${MASTER_SITE_LOCAL:S/$/:dns,sendmail_flagf,rfc2821,ldap,mysql,tls,quota,blockexec,doublebounce,spf,localtime,qmtpc_outgoingip/}
-PATCH_SITE_SUBDIR+=	garga/qmail/:dns,sendmail_flagf,rfc2821,ldap,mysql,tls,quota,blockexec,doublebounce,spf,localtime,qmtpc_outgoingip
+PATCH_SITE_SUBDIR+=	garga/qmail/:dns,sendmail_flagf,rfc2821,ldap,mysql,quota,blockexec,doublebounce,spf,localtime,qmtpc_outgoingip
+PATCH_SITE_SUBDIR+=	bdrewery/qmail/:tls
 
-PREFIX?=		${QMAIL_PREFIX}
 QMAIL_VERSION?=		1.03
 
 .if !defined(BARRIER_SMTP_AUTH_PATCH)
@@ -335,8 +338,6 @@ BOOTFILES=	home home+df proc proc+df binm1 binm1+df \
 
 CONFIGUREPROGRAMS=	install dnsfq hostname dnsip ipmeprint dnsptr
 CONFIGURESCRIPTS=	config config-fast
-
-WANT_QMAIL=	yes
 
 .include <bsd.port.options.mk>
 
@@ -648,7 +649,7 @@ pre-everything::
 	@${ECHO_MSG} "		then \"${LOCALBASE}/qmail\" is suggested"
 	@${ECHO_MSG} "		instead of \"${LOCALBASE}\", but both will"
 	@${ECHO_MSG} "		work."
- 	@${ECHO_MSG} ""
+	@${ECHO_MSG} ""
 .endif
 
 post-extract:
@@ -790,7 +791,7 @@ do-configure:
 	@${ECHO_CMD} "${CC} ${STRIP} ${LDFLAGS}" > ${WRKSRC}/conf-ld
 	@${ECHO_CMD} ${PREFIX} > ${WRKSRC}/conf-qmail
 .if !empty(PORT_OPTIONS:MBIG_CONCURRENCY_PATCH) \
-	&& defined(BIG_CONCURRENCY_PATCH_CONCURRENCY_LIMIT)
+	&& defined(WITH_BIG_CONCURRENCY_PATCH_CONCURRENCY_LIMIT)
 	@if [ ${WITH_BIG_CONCURRENCY_PATCH_CONCURRENCY_LIMIT} -gt 0 ]; then \
 		${ECHO_CMD} "${WITH_BIG_CONCURRENCY_PATCH_CONCURRENCY_LIMIT}" \
 			> ${WRKSRC}/conf-spawn ; \

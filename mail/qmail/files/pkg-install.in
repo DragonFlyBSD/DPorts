@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/qmail/files/pkg-install.in,v 1.12 2013/02/23 19:42:18 svnexp Exp $
+# $FreeBSD: mail/qmail/files/pkg-install.in 312845 2013-02-23 18:49:29Z bdrewery $
 #
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin

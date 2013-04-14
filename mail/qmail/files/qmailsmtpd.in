@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/mail/qmail/files/qmailsmtpd.in,v 1.1 2013/02/23 19:42:18 svnexp Exp $
+# $FreeBSD: mail/qmail/files/qmailsmtpd.in 312845 2013-02-23 18:49:29Z bdrewery $
 #
 # PROVIDE: qmailsmtpd
 # REQUIRE: LOGIN cleanvar
