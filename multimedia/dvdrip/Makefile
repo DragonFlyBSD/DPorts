@@ -25,7 +25,7 @@ RUN_DEPENDS+=	cdrdao:${PORTSDIR}/sysutils/cdrdao \
 		pstree:${PORTSDIR}/sysutils/pstree \
 		transcode:${PORTSDIR}/multimedia/transcode \
 		vcdimager:${PORTSDIR}/multimedia/vcdimager \
-		rar:${PORTSDIR}/archivers/rar \
+		unrar:${PORTSDIR}/archivers/unrar \
 		${LOCALBASE}/sbin/fping:${PORTSDIR}/net/fping
 
 OPTIONS_DEFINE=	VORBIS SUBTITLE
