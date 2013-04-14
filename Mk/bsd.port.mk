@@ -1528,6 +1528,15 @@ USES+=	cmake
 . endif
 .endif
 
+# Loading features
+.for f in ${USES}
+_f=${f:C/\:.*//g}
+.if ${_f} != ${f}
+${_f}_ARGS:=	${f:C/^[^\:]*\://g}
+.endif
+.include "${USESDIR}/${_f}.mk"
+.endfor
+
 # You can force skipping these test by defining IGNORE_PATH_CHECKS
 .if !defined(IGNORE_PATH_CHECKS)
 .if (${PREFIX:C,(^.).*,\1,} != "/")
@@ -1558,15 +1567,6 @@ check-makefile::
 .endif
 
 _POSTMKINCLUDED=	yes
-
-# Loading features
-.for f in ${USES}
-_f=${f:C/\:.*//g}
-.if ${_f} != ${f}
-${_f}_ARGS:=	${f:C/^[^\:]*\://g}
-.endif
-.include "${USESDIR}/${_f}.mk"
-.endfor
 
 WRKDIR?=		${WRKDIRPREFIX}/${.CURDIR:H:T}/${.CURDIR:T}/work
 .if !defined(IGNORE_MASTER_SITE_GITHUB) && defined(USE_GITHUB)
@@ -1970,11 +1970,7 @@ LIB_DEPENDS+=			ttf.4:${PORTSDIR}/print/freetype
 .endif
 
 X_IMAKE_PORT=		${PORTSDIR}/devel/imake
-X_LIBRARIES_PORT=	${PORTSDIR}/x11/xorg-libraries
-X_CLIENTS_PORT=		${PORTSDIR}/x11/xorg-apps
-X_SERVER_PORT=		${PORTSDIR}/x11-servers/xorg-server
 X_FONTSERVER_PORT=	${PORTSDIR}/x11-fonts/xfs
-X_PRINTSERVER_PORT=	${PORTSDIR}/x11-servers/xorg-printserver
 X_VFBSERVER_PORT=	${PORTSDIR}/x11-servers/xorg-vfbserver
 X_NESTSERVER_PORT=	${PORTSDIR}/x11-servers/xorg-nestserver
 X_FONTS_ENCODINGS_PORT=	${PORTSDIR}/x11-fonts/encodings
@@ -2005,10 +2001,7 @@ MAKE_ENV+=		DISPLAY="localhost:1001"
 .endif
 .endif
 
-XAWVER=				8
 PKG_IGNORE_DEPENDS?=		'this_port_does_not_exist'
-
-PLIST_SUB+=			XAWVER=${XAWVER}
 
 _GL_gl_LIB_DEPENDS=		GL.1:${PORTSDIR}/graphics/libGL
 _GL_glew_LIB_DEPENDS=		GLEW.1:${PORTSDIR}/graphics/glew
@@ -2155,7 +2148,7 @@ _USE_GHOSTSCRIPT=	${USE_GHOSTSCRIPT_RUN}
 _USE_GHOSTSCRIPT=	${USE_GHOSTSCRIPT}
 .endif
 
-.if defined(WITH_GHOSTSCRIPT_VER) && !empty(WITH_GHOSTSCRIPT_VER:M[789])
+.if defined(WITH_GHOSTSCRIPT_VER) && !empty(WITH_GHOSTSCRIPT_VER:M[89])
 _USE_GHOSTSCRIPT_DEFAULT_VER=	${WITH_GHOSTSCRIPT_VER}
 .else
 _USE_GHOSTSCRIPT_DEFAULT_VER=	9
@@ -2167,8 +2160,8 @@ _USE_GHOSTSCRIPT_PKGNAME_SUFFIX=
 .	else
 _USE_GHOSTSCRIPT_PKGNAME_SUFFIX=-nox11
 .	endif
-.	if !empty(_USE_GHOSTSCRIPT:M[789])
-_USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT:M[789]}
+.	if !empty(_USE_GHOSTSCRIPT:M[89])
+_USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT:M[89]}
 .	else
 _USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT_DEFAULT_VER}
 .	endif
@@ -2178,7 +2171,7 @@ _USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT_DEFAULT_VER}
 
 # Sanity check
 .if defined(_USE_GHOSTSCRIPT) && defined(WITH_GHOSTSCRIPT_VER)
-.	if empty(WITH_GHOSTSCRIPT_VER:M[789])
+.	if empty(WITH_GHOSTSCRIPT_VER:M[89])
 .		error You set an invalid value "${WITH_GHOSTSCRIPT_VER}" in WITH_GHOSTSCRIPT_VER.  Abort.
 .	elif ${_USE_GHOSTSCRIPT_VER} != ${WITH_GHOSTSCRIPT_VER}
 .		error You set WITH_GHOSTSCRIPT_VER as ${WITH_GHOSTSCRIPT_VER} but ${PKGNAME} requires print/ghostscript${_USE_GHOSTSCRIPT_VER}.  Abort.
@@ -6135,7 +6128,7 @@ check-config: _check-config
 .if !target(sanity-config)
 sanity-config: _check-config
 .if !empty(_CHECK_CONFIG_ERROR)
-	@echo -n "Config is invalid. Re-edit? [Y/N] "; \
+	@echo -n "Config is invalid. Re-edit? [Y/n] "; \
 	read answer; \
 	case $$answer in \
 	[Nn]|[Nn][Oo]) \
