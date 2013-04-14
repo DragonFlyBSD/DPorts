@@ -1502,10 +1502,6 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .include "${PORTSDIR}/Mk/bsd.gstreamer.mk"
 .endif
 
-.if defined(USE_QMAIL) || defined(USE_QMAIL_RUN) || defined(USE_QMAIL_BUILD) || defined(WANT_QMAIL)
-.include "${PORTSDIR}/Mk/bsd.mail.mk"
-.endif
-
 .if defined(USE_SDL) || defined(WANT_SDL)
 .include "${PORTSDIR}/Mk/bsd.sdl.mk"
 .endif
@@ -1944,7 +1940,7 @@ USE_LINUX=	${OVERRIDE_LINUX_BASE_PORT}
 .	if exists(${PORTSDIR}/emulators/linux_base-${USE_LINUX})
 LINUX_BASE_PORT=	${LINUXBASE}/bin/sh:${PORTSDIR}/emulators/linux_base-${USE_LINUX}
 .	else
-.		if ${USE_LINUX:tl} == "yes"
+.		if ${USE_LINUX:L} == "yes"
 .			if ${LINUX_OSRELEASE} == "2.4.2"
 LINUX_BASE_PORT=	${LINUXBASE}/etc/fedora-release:${PORTSDIR}/emulators/linux_base-fc4
 .			else

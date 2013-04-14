@@ -65,7 +65,7 @@ MOUNT_DEVFS?=	${MOUNT} -t devfs devfs
 # XXX: this is a work-around for an obscure bug where
 # mount -t nullfs returns zero status on errors within
 # a make target
-MOUNT_NULLFS?=	/sbin/mount_null
+MOUNT_NULLFS?=	/sbin/mount_nullfs
 MV?=		/bin/mv
 OBJCOPY?=	/usr/bin/objcopy
 OBJDUMP?=	/usr/bin/objdump
