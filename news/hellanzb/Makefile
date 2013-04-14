@@ -25,12 +25,7 @@ PORTDOCS=	CHANGELOG CREDITS README
 
 .include <bsd.port.options.mk>
 
-# more fully-featured rar needs i386
-.if ${ARCH} == "i386"
-RUN_DEPENDS+=	rar:${PORTSDIR}/archivers/rar
-.else
 RUN_DEPENDS+=	unrar:${PORTSDIR}/archivers/unrar
-.endif
 
 post-install:
 	@if [ ! -f ${PREFIX}/etc/hellanzb.conf ]; then \
