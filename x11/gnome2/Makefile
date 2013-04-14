@@ -25,7 +25,6 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		bug-buddy:${PORTSDIR}/devel/bug-buddy \
 		gnome-system-monitor:${PORTSDIR}/sysutils/gnome-system-monitor \
 		nautilus:${PORTSDIR}/x11-fm/nautilus \
-		${LOCALBASE}/sbin/gdm:${PORTSDIR}/x11/gdm \
 		${LOCALBASE}/share/gnome/help/user-guide/C/user-guide.xml:${PORTSDIR}/misc/gnome-user-docs \
 		${LOCALBASE}/share/sounds/question.wav:${PORTSDIR}/audio/gnome-audio \
 		file-roller:${PORTSDIR}/archivers/file-roller \
