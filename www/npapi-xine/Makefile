@@ -25,5 +25,5 @@ NPAPI_ID=	${PORTNAME}
 NPAPI_WRKSRC=	${WRKSRC}/src/.libs
 NPAPI_FILES=	xineplugin.so
 
-.include "${.CURDIR}/../linux-mplayer-plugin/Makefile.npapi"
+.include "${.CURDIR}/../../Mk/bsd.npapi.mk"
 .include <bsd.port.mk>
