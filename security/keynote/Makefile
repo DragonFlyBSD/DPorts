@@ -1,8 +1,5 @@
-# New ports collection makefile for:	keynote
-# Date created:                         02 September 1999
-# Whom:                                 se
-#
-# $FreeBSD: ports/security/keynote/Makefile,v 1.14 2012/11/17 06:01:06 svnexp Exp $
+# Created by: se
+# $FreeBSD: security/keynote/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	keynote
@@ -12,7 +9,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www1.cs.columbia.edu/~angelos/Code/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A Trust-Management System
+COMMENT=	Trust-Management System
 
 USE_OPENSSL=	YES
 GNU_CONFIGURE=	yes
