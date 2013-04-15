@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xf-spf
-# Date created:         2007-09-12
-# Whom:                 Felippe de Meirelles Motta <lippe@freebsdbrasil.com.br>
-#
-# $FreeBSD: ports/mail/xf-spf/Makefile,v 1.5 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: Felippe de Meirelles Motta <lippe@freebsdbrasil.com.br>
+# $FreeBSD: mail/xf-spf/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
 
 PORTNAME=	xf-spf
 PORTVERSION=	0.2
@@ -16,7 +12,7 @@ COMMENT=	SPF checker for Qmail's SMTPEXTFORK patch
 
 LIB_DEPENDS+=	spf2.3:${PORTSDIR}/mail/libspf2
 
-USE_QMAIL=	yes
+USES=		qmail
 USE_BZIP2=	yes
 
 SUB_FILES=	pkg-message
