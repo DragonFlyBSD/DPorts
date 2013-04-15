@@ -1,9 +1,5 @@
-# Ports collection makefile for:  termatrix
-# Date created:                   2007/07/30
-# Whom:                           chinsan
-#
-# $FreeBSD: ports/misc/termatrix/Makefile,v 1.3 2012/11/17 05:59:45 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: misc/termatrix/Makefile 315192 2013-03-25 04:30:31Z eadler $
 
 PORTNAME=	termatrix
 PORTVERSION=	0.2
@@ -17,13 +13,15 @@ COMMENT=	Emulates Matrix terminal's "green tears" effect
 PLIST_FILES=	bin/termatrix
 PORTDOCS=	README
 
+.include <bsd.port.options.mk>
+
 do-build:
 	${CC} ${CFLAGS} ${CPPFLAGS} -o ${WRKSRC}/termatrix \
 		${WRKSRC}/termatrix.c ${LDFLAGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/termatrix ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 .endif
