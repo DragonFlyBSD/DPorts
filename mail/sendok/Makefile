@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sendok
-# Date created:		18 October 2005
-# Whom:			Zak Johnson <zakj@nox.cx>
-#
-# $FreeBSD: ports/mail/sendok/Makefile,v 1.5 2012/11/17 05:59:14 svnexp Exp $
-#
+# Created by: Zak Johnson <zakj@nox.cx>
+# $FreeBSD: mail/sendok/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
 
 PORTNAME=	sendok
 PORTVERSION=	0.9.2
@@ -14,7 +10,7 @@ MASTER_SITES=	http://peff.net/sendok/ \
 MAINTAINER=	zakj@nox.cx
 COMMENT=	Generates qmail email addresses with timed cookies
 
-USE_QMAIL_RUN=	yes
+USES=		qmail:run
 
 PLIST_FILES=	bin/sendok-check bin/sendok-create
 
