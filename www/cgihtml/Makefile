@@ -2,7 +2,7 @@
 # Date created:		3 Nov 1997
 # Whom:			Ian Vaudrey <i.vaudrey@bigfoot.com>
 #
-# $FreeBSD: ports/www/cgihtml/Makefile,v 1.21 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: www/cgihtml/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	cgihtml

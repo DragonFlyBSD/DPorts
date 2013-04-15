@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/cgihtml/files/Makefile,v 1.5 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: www/cgihtml/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 # Makefile for cgihtml libraries
 
 LIB = cgihtml
