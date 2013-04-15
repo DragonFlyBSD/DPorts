@@ -1,9 +1,5 @@
-# New ports collection makefile for:	iselect
-# Date created:		03-Jan-1998
-# Whom:			Ralf S. Engelschall <rse@engelschall.com>
-#
-# $FreeBSD: ports/misc/iselect/Makefile,v 1.16 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: Ralf S. Engelschall <rse@engelschall.com>
+# $FreeBSD: misc/iselect/Makefile 315192 2013-03-25 04:30:31Z eadler $
 
 PORTNAME=	iselect
 PORTVERSION=	1.4.0
@@ -14,11 +10,16 @@ MASTER_SITE_SUBDIR=	tool/iselect
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Interactive Selection Tool
 
+OPTIONS_DEFINE=	SLANG
+SLANG_DESC=	Link with slang
+
 GNU_CONFIGURE=	yes
 
 MAN1=		iselect.1
 
-.if defined(WITH_SLANG)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MSLANG}
 LIB_DEPENDS+=	slang.2:${PORTSDIR}/devel/libslang2
 CONFIGURE_ARGS+=	--with-incdir=${LOCALBASE}/include \
 			--with-libdir=${LOCALBASE}/lib
@@ -30,7 +31,7 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iselect ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/iselect.1 ${MANPREFIX}/man/man1
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${EXAMPLESDIR}
 	cd ${WRKSRC}/example && ${FIND} . | \
 		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
