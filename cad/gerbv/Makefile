@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	gerbv
-# Date created:			Jul 16, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/cad/gerbv/Makefile,v 1.46 2012/11/17 05:54:54 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: cad/gerbv/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	gerbv
 PORTVERSION=	2.6.0
@@ -18,7 +13,8 @@ COMMENT=	A Free Gerber Viewer
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GNOME=	desktopfileutils gnomehack gtk20
+USES=        pathfix
+USE_GNOME=	desktopfileutils gtk20
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
