@@ -1,9 +1,5 @@
-# New ports collection makefile for:	asbutton
-# Date created:			10 May 1999
-# Whom:				Jim Mock <jim@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/asbutton/Makefile,v 1.19 2012/11/17 05:59:32 svnexp Exp $
-#
+# Created by: Jim Mock <jim@FreeBSD.org>
+# $FreeBSD: misc/asbutton/Makefile 315240 2013-03-25 18:44:20Z eadler $
 
 PORTNAME=	asbutton
 PORTVERSION=	0.3
@@ -12,7 +8,7 @@ CATEGORIES=	misc windowmaker afterstep
 MASTER_SITES=	http://www.tigr.net/afterstep/download/asbutton/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A dockapp that displays 4 or 9 buttons to run apps of your choice
+COMMENT=	Dockapp that displays 4 or 9 buttons to run apps of your choice
 
 USE_XORG=	x11 xpm
 ALL_TARGET=	asbutton
