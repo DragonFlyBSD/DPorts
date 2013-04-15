@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/audio/autozen/Makefile,v 1.30 2013/01/27 06:41:36 svnexp Exp $
+# $FreeBSD: audio/autozen/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
 
 PORTNAME=	autozen
 PORTVERSION=	2.1
