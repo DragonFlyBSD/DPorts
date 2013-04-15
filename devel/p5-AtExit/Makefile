@@ -1,9 +1,5 @@
-# New ports collection makefile for:	AtExit
-# Date created:	   28 August 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-AtExit/Makefile,v 1.7 2012/11/17 05:56:05 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-AtExit/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	AtExit
 PORTVERSION=	2.01
