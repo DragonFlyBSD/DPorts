@@ -2,7 +2,7 @@
 # Date created:                   Tue Feb 20, 2001
 # Whom:                           Maxime Henrion (mux@FreeBSD.org)
 #
-# $FreeBSD: ports/www/htdump/Makefile,v 1.10 2012/11/17 06:02:36 svnexp Exp $
+# $FreeBSD: www/htdump/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	htdump
