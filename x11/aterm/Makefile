@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: ports/x11/aterm/Makefile,v 1.43 2012/12/06 10:21:49 svnexp Exp $
+# $FreeBSD: x11/aterm/Makefile 308377 2012-12-06 10:19:32Z rene $
 
 PORTNAME=	aterm
 PORTVERSION=	1.0.1
