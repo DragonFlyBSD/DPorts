@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mrxvt
-# Date created:				27 Nov 2004
-# Whom:					David Yeske <dyeske@gmail.com>
-#
-# $FreeBSD: ports/x11/mrxvt/Makefile,v 1.28 2012/11/17 06:03:18 svnexp Exp $
-#
+# Created by: David Yeske <dyeske@gmail.com>
+# $FreeBSD: x11/mrxvt/Makefile 315242 2013-03-25 19:14:43Z eadler $
 
 PORTNAME=	mrxvt
 PORTVERSION=	0.4.2
