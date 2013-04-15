@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: ports/graphics/openrm/Makefile,v 1.23 2012/11/17 05:58:16 svnexp Exp $
+# $FreeBSD: graphics/openrm/Makefile 306634 2012-10-29 20:40:32Z madpilot $
 
 PORTNAME=	openrm
 PORTVERSION=	1.6.0.2
