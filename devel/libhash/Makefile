@@ -1,5 +1,5 @@
 # Created by: Andrew <andrew@ugh.net.au>
-# $FreeBSD: ports/devel/libhash/Makefile,v 1.11 2013/01/12 13:02:14 svnexp Exp $
+# $FreeBSD: devel/libhash/Makefile 315367 2013-03-27 10:12:20Z miwi $
 
 PORTNAME=	libhash
 PORTVERSION=	1.0.3
@@ -31,7 +31,7 @@ MLINKS=		libhash.3 hash_initialise.3 \
 
 USE_LDCONFIG=	yes
 
-.if defined(NOPROFILE)
+.if defined(NO_PROFILE)
 PLIST_SUB+=	PROFILE="@comment "
 .else
 PLIST_SUB+=	PROFILE=""
