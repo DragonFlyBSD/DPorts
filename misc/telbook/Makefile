@@ -1,8 +1,5 @@
-# New ports collection makefile for:	telbook
-# Date created:				19 May 2003
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/misc/telbook/Makefile,v 1.14 2012/11/17 05:59:45 svnexp Exp $
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: misc/telbook/Makefile 315192 2013-03-25 04:30:31Z eadler $
 
 PORTNAME=	telbook
 PORTVERSION=	0.4
@@ -21,9 +18,11 @@ USE_BZIP2=	yes
 PORTDOCS=	README
 PLIST_FILES=	bin/telbook
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/telbook ${PREFIX}/bin
-.ifndef (NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
