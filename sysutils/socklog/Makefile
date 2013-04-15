@@ -2,7 +2,7 @@
 # Date created:		22 Aug 2002
 # Whom:			Sergei Kolobov <sergei@kolobov.com>
 #
-# $FreeBSD: ports/sysutils/socklog/Makefile,v 1.22 2012/11/17 06:01:46 svnexp Exp $
+# $FreeBSD: sysutils/socklog/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	socklog
