@@ -1,9 +1,5 @@
-# New ports collection makefile for:	histring
-# Date created:		26 October 2000
-# Whom:			roam@FreeBSD.org
-#
-# $FreeBSD: ports/misc/histring/Makefile,v 1.11 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: roam@FreeBSD.org
+# $FreeBSD: misc/histring/Makefile 315240 2013-03-25 18:44:20Z eadler $
 
 PORTNAME=	histring
 PORTVERSION=	1.1.0
@@ -13,7 +9,7 @@ MASTER_SITES=	http://ess4.engr.uvic.ca/proj/histring/ \
 MASTER_SITE_SUBDIR=	roam/misc
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A tool to highlight strings using the ANSI terminal escape sequences
+COMMENT=	Highlight strings using the ANSI terminal escape sequences
 
 GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/histring
