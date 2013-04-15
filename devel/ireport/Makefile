@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/devel/ireport/Makefile,v 1.36 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/ireport/Makefile 308600 2012-12-10 11:25:27Z bapt $
 
 PORTNAME=	ireport
 PORTVERSION=	3.7.6
