@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gpass
-# Date created:		2006-07-24
-# Whom:			ports@c0decafe.net <ports@c0decafe.net>
-#
-# $FreeBSD: security/gpass/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: ports@c0decafe.net <ports@c0decafe.net>
+# $FreeBSD: security/gpass/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	gpass
 PORTVERSION=	0.5.1
@@ -12,7 +8,7 @@ CATEGORIES=	security gnome
 MASTER_SITES=	http://projects.netlab.jp/gpass/release/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A password manager for GNOME2
+COMMENT=	Password manager for GNOME2
 
 LIB_DEPENDS=	mcrypt:${PORTSDIR}/security/mcrypt \
 		mhash:${PORTSDIR}/security/mhash
@@ -23,7 +19,8 @@ USE_GMAKE=	yes
 
 MAN1=		gpass.1 gpass.ja.1 gpass-convert.1 gpass-convert.ja.1
 
-USE_GNOME=	gnomehack gnomeprefix gtk20 libgnomeui intltool libglade2
+USES=        pathfix
+USE_GNOME=	gnomeprefix gtk20 libgnomeui intltool libglade2
 GCONF_SCHEMAS=	gpass.schemas
 
 post-patch:
