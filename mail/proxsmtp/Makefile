@@ -1,5 +1,5 @@
 # Created by: Dario Freni <saturnero@gufi.org>
-# $FreeBSD: ports/mail/proxsmtp/Makefile,v 1.13 2012/12/17 03:35:24 svnexp Exp $
+# $FreeBSD: mail/proxsmtp/Makefile 309058 2012-12-17 03:30:32Z araujo $
 
 PORTNAME=	proxsmtp
 PORTVERSION=	1.10
