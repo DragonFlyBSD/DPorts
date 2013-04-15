@@ -1,8 +1,5 @@
-# New ports collection makefile for:	fiked
-# Date created:				2005-12-07
-# Whom:					Daniel Roethlisberger <daniel@roe.ch>
-#
-# $FreeBSD: ports/security/fiked/Makefile,v 1.16 2013/02/18 21:46:33 svnexp Exp $
+# Created by: Daniel Roethlisberger <daniel@roe.ch>
+# $FreeBSD: security/fiked/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	fiked
@@ -12,7 +9,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://mirror.roe.ch/dist/fiked/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A fake IKE PSK+XAUTH daemon based on VPNC
+COMMENT=	Fake IKE PSK+XAUTH daemon based on VPNC
 
 LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 .if !defined(WITHOUT_LIBNET)
