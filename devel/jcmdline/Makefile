@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/devel/jcmdline/Makefile,v 1.7 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/jcmdline/Makefile 308600 2012-12-10 11:25:27Z bapt $
 
 PORTNAME=	jcmdline
 PORTVERSION=	2.0.0
