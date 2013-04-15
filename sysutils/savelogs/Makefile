@@ -2,7 +2,7 @@
 # Date created:		2004-04-29
 # Whom:			ports@c0decafe.net
 #
-# $FreeBSD: ports/sysutils/savelogs/Makefile,v 1.9 2012/11/17 06:01:45 svnexp Exp $
+# $FreeBSD: sysutils/savelogs/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
 #
 
 PORTNAME=	savelogs
