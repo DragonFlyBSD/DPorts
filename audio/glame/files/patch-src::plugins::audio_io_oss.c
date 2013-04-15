@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/glame/files/patch-src::plugins::audio_io_oss.c,v 1.4 2012/11/17 05:54:32 svnexp Exp $
+$FreeBSD: audio/glame/files/patch-src::plugins::audio_io_oss.c 300895 2012-07-14 12:56:14Z beat $
 
 --- src/plugins/audio_io_oss.c	2003/07/01 12:26:28	1.1
 +++ src/plugins/audio_io_oss.c	2003/07/01 12:26:41

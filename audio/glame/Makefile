@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/audio/glame/Makefile,v 1.57 2013/02/26 15:48:56 svnexp Exp $
+# $FreeBSD: audio/glame/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	glame
 PORTVERSION=	2.0.1
@@ -20,7 +20,8 @@ USE_AUTOTOOLS=	libltdl libtool
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack gnomeprefix libgnomeui
+USES=        pathfix
+USE_GNOME=	gnomeprefix libgnomeui
 USE_XORG=	xbitmaps x11
 
 INFO=		glame glame-dev

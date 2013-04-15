@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/glame/files/patch-Makefile.in,v 1.6 2012/11/17 05:54:32 svnexp Exp $
+$FreeBSD: audio/glame/files/patch-Makefile.in 300895 2012-07-14 12:56:14Z beat $
 
 --- Makefile.in.orig	Fri Oct 29 03:53:30 2004
 +++ Makefile.in	Fri Oct 29 21:29:55 2004
