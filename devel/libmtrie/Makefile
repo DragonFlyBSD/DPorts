@@ -1,5 +1,5 @@
 # Created by: alfred@freebsd.org
-# $FreeBSD: ports/devel/libmtrie/Makefile,v 1.11 2013/01/12 13:02:14 svnexp Exp $
+# $FreeBSD: devel/libmtrie/Makefile 315361 2013-03-27 09:20:14Z miwi $
 
 PORTNAME=	libmtrie
 PORTVERSION=	1.0.3
@@ -13,7 +13,7 @@ COMMENT=	Library to build an IP-netmask based mtrie
 
 USE_LDCONFIG= yes
 
-.if defined(NOPROFILE)
+.if defined(NO_PROFILE)
 PLIST_SUB+=     HURRRR="@comment "
 .else
 PLIST_SUB+=     HURRRR=""
