@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: ports/databases/flare/Makefile,v 1.10 2013/01/31 14:01:26 svnexp Exp $
+# $FreeBSD: databases/flare/Makefile 311310 2013-01-31 13:38:42Z bapt $
 
 PORTNAME=	flare
 PORTVERSION=	1.0.9
