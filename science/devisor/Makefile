@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: ports/science/devisor/Makefile,v 1.6 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: science/devisor/Makefile 308605 2012-12-10 13:43:43Z bapt $
 
 PORTNAME=	devisor
 PORTVERSION=	2.1
