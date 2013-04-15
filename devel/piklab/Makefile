@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@kiste>
-# $FreeBSD: devel/piklab/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/piklab/Makefile 315474 2013-03-28 15:51:16Z eadler $
 
 PORTNAME=	piklab
 PORTVERSION=	0.16.2
@@ -43,10 +43,6 @@ PLIST_SUB+=	KDE4="@comment "
 
 .if ${ARCH} == "sparc64"
 BROKEN=		Does not compile on sparc64
-.endif
-
-.if ${OSVERSION} < 800069
-LIB_DEPENDS+=	usb:${PORTSDIR}/devel/libusb
 .endif
 
 post-patch:
