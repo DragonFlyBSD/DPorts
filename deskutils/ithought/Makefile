@@ -2,7 +2,7 @@
 # Date created:		20 Feb 2001
 # Whom:			nbm
 #
-# $FreeBSD: ports/deskutils/ithought/Makefile,v 1.16 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: deskutils/ithought/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	ithought
