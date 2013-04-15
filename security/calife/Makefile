@@ -1,8 +1,5 @@
-# New ports collection makefile for:	calife
-# Date created:				13 Jun 2000
-# Whom:					Thomas Quinot <thomas@cuivre.fr.eu.org>
-#
-# $FreeBSD: security/calife/Makefile 314760 2013-03-20 20:32:10Z thomas $
+# Created by: Thomas Quinot <thomas@cuivre.fr.eu.org>
+# $FreeBSD: security/calife/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	calife
@@ -12,7 +9,7 @@ MASTER_SITES=	http://assets.keltia.net/calife/
 DISTNAME=	calife-2.8.6-p5
 
 MAINTAINER=	thomas@FreeBSD.org
-COMMENT=	A lightweight alternative to sudo
+COMMENT=	Lightweight alternative to sudo
 
 USE_BZIP2=	yes
 
