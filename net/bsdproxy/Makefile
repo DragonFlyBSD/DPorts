@@ -2,7 +2,7 @@
 # Date created:		2 November 2001
 # Whom:			roam@FreeBSD.org
 #
-# $FreeBSD: ports/net/bsdproxy/Makefile,v 1.10 2012/11/17 05:59:57 svnexp Exp $
+# $FreeBSD: net/bsdproxy/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	bsdproxy
