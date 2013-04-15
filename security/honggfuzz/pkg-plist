@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/honggfuzz/pkg-plist,v 1.3 2012/11/17 06:01:05 svnexp Exp $
+@comment $FreeBSD: security/honggfuzz/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/honggfuzz
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/externalfuzzers/lowBytesIncrease.py
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/externalfuzzers/o20.sh
