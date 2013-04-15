@@ -2,7 +2,7 @@
 # Date created:				2005-10-19
 # Whom:					Choe, Cheng-Dae <whitekid@gmail.com>
 #
-# $FreeBSD: ports/databases/pgpool/Makefile,v 1.16 2012/11/17 05:55:18 svnexp Exp $
+# $FreeBSD: databases/pgpool/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	pgpool

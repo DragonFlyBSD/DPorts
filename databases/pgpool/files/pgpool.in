@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/databases/pgpool/files/pgpool.in,v 1.5 2012/11/17 05:55:18 svnexp Exp $
+# $FreeBSD: databases/pgpool/files/pgpool.in 300896 2012-07-14 13:54:48Z beat $
 #        
 # PROVIDE: pgpool
 # REQUIRE: LOGIN
