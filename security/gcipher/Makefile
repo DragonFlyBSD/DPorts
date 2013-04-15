@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gcipher
-# Date created:		25 June 2003
-# Whom:			Shannon -jj Behrens <jjinux@yahoo.com>
-#
-# $FreeBSD: ports/security/gcipher/Makefile,v 1.20 2012/11/17 06:01:04 svnexp Exp $
+# Created by: Shannon -jj Behrens <jjinux@yahoo.com>
+# $FreeBSD: security/gcipher/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	gcipher
@@ -12,7 +9,7 @@ CATEGORIES=	security gnome
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A simple encryption tool
+COMMENT=	Simple encryption tool
 
 LICENSE=	BSD
 
