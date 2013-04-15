@@ -2,7 +2,7 @@
 # Date created:		2005-05-23
 # Whom:			Andrej Zverev <az@inec.ru>
 #
-# $FreeBSD: ports/sysutils/mdf2iso/Makefile,v 1.6 2012/11/17 06:01:38 svnexp Exp $
+# $FreeBSD: sysutils/mdf2iso/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	mdf2iso
