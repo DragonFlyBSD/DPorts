@@ -2,7 +2,7 @@
 # Date created:			30 April 2001
 # Whom:				Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/sysutils/pdumpfs/Makefile,v 1.13 2012/11/17 06:01:41 svnexp Exp $
+# $FreeBSD: sysutils/pdumpfs/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	pdumpfs
