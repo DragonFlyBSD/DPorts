@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/astro/p5-Astro/Makefile,v 1.5 2013/02/19 14:11:44 svnexp Exp $
+# $FreeBSD: astro/p5-Astro/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Astro
 PORTVERSION=	0.75
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A collection of useful astronomical routines in Perl
+COMMENT=	Collection of useful astronomical routines in Perl
 
 PERL_CONFIGURE=	yes
 
