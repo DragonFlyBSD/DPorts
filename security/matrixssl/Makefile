@@ -2,7 +2,7 @@
 # Date created:				2006-03-17
 # Whom:					arved
 #
-# $FreeBSD: ports/security/matrixssl/Makefile,v 1.6 2012/12/01 00:17:05 svnexp Exp $
+# $FreeBSD: security/matrixssl/Makefile 308035 2012-11-30 23:50:42Z sperber $
 
 PORTNAME=	matrixssl
 PORTVERSION=	3.3
