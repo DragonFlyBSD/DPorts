@@ -2,7 +2,7 @@
 # Date created:		03 March 2001
 # Whom:			Kris Kennaway <kris@FreeBSD.org>
 #
-# $FreeBSD: ports/www/adzap/Makefile,v 1.60 2012/11/17 06:02:27 svnexp Exp $
+# $FreeBSD: www/adzap/Makefile 300897 2012-07-14 14:29:18Z beat $
 
 PORTNAME=	adzap
 PORTVERSION=	20110915
