@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	libyahoo2
-# Date created:			Apr 6, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/net-im/libyahoo2/Makefile,v 1.30 2012/11/17 06:00:27 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: net-im/libyahoo2/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	libyahoo2
 PORTVERSION=	1.0.1
@@ -16,6 +11,7 @@ COMMENT=	A C library that handles the new Yahoo! Messenger protocol
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
+USES=        pathfix
 USE_GNOME=	glib20 gnomehack
 USE_LDCONFIG=	yes
 
