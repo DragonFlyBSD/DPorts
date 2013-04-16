@@ -2,7 +2,7 @@
 # Date created:				09/26/2010
 # Whom:					stas
 #
-# $FreeBSD: ports/devel/safe-iop/Makefile,v 1.3 2012/11/17 05:57:02 svnexp Exp $
+# $FreeBSD: devel/safe-iop/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	safe-iop
