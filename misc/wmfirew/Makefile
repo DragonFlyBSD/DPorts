@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: ports/misc/wmfirew/Makefile,v 1.10 2013/02/08 00:12:50 svnexp Exp $
+# $FreeBSD: misc/wmfirew/Makefile 315240 2013-03-25 18:44:20Z eadler $
 
 PORTNAME=	wmfirew
 PORTVERSION=	0.20
@@ -8,7 +8,7 @@ CATEGORIES=	misc windowmaker afterstep
 MASTER_SITES=	http://web.novalis.org/programs/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A dockapp that shows fireworks in action
+COMMENT=	Dockapp that shows fireworks in action
 
 PLIST_FILES=	bin/wmfirew
 WRKSRC=	${WRKDIR}/${PORTNAME}.app/${PORTNAME}
