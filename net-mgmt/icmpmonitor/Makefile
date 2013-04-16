@@ -2,7 +2,7 @@
 # Date created:		31 Jul 2001
 # Whom:			nbm
 #
-# $FreeBSD: ports/net-mgmt/icmpmonitor/Makefile,v 1.10 2012/11/17 06:00:32 svnexp Exp $
+# $FreeBSD: net-mgmt/icmpmonitor/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	icmpmonitor
