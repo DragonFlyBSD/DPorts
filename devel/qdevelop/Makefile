@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <liu_yinghong@yahoo.com.cn>
-# $FreeBSD: ports/devel/qdevelop/Makefile,v 1.21 2013/01/23 15:05:33 svnexp Exp $
+# $FreeBSD: devel/qdevelop/Makefile 315222 2013-03-25 13:59:18Z makc $
 
 PORTNAME=	qdevelop
 PORTVERSION=	0.28
@@ -30,7 +30,7 @@ DESKTOP_ENTRIES=	"QDevelop" \
 			"Development;IDE;Qt;" \
 			"false"
 
-OPTIONS_DEFINE=	TOOLS
+OPTIONS_DEFINE=	TOOLS DOCS NLS
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 TOOLS_DESC=	Install Qt4 dev. tools (qmake, moc, etc.)
 
