@@ -2,7 +2,7 @@
 # Date created:		2006-11-04
 # Whom:			Bartlomiej Rutkowski <r@robakdesign.com>
 #
-# $FreeBSD: ports/www/hastymail/Makefile,v 1.9 2012/11/17 06:02:35 svnexp Exp $
+# $FreeBSD: www/hastymail/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=		hastymail
