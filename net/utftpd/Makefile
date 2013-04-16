@@ -2,7 +2,7 @@
 # Date created:		15 January 2002
 # Whom:			andreas@freebsd.org
 #
-# $FreeBSD: ports/net/utftpd/Makefile,v 1.7 2012/11/17 06:00:24 svnexp Exp $
+# $FreeBSD: net/utftpd/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	utftpd
