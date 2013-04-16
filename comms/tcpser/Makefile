@@ -2,7 +2,7 @@
 # Date created:		2008-09-24
 # Whom:			Edward Tomasz Napierala <trasz@FreeBSD.org>
 #
-# $FreeBSD: ports/comms/tcpser/Makefile,v 1.4 2012/11/17 05:55:01 svnexp Exp $
+# $FreeBSD: comms/tcpser/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	tcpser
