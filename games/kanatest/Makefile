@@ -2,7 +2,7 @@
 # Date created:		2004-03-27
 # Whom:			S H A N <shanali@yahoo.com>
 #
-# $FreeBSD: ports/games/kanatest/Makefile,v 1.17 2012/11/17 05:57:42 svnexp Exp $
+# $FreeBSD: games/kanatest/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	kanatest
