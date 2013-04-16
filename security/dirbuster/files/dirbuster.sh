@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/dirbuster/files/dirbuster.sh,v 1.2 2012/11/17 06:01:03 svnexp Exp $
+# $FreeBSD: security/dirbuster/files/dirbuster.sh 300897 2012-07-14 14:29:18Z beat $
 #
 
 cd %%PATH%%
