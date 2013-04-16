@@ -2,7 +2,7 @@
 # Date created:				2010-09-08
 # Whom:					Anonymous <swell.k@gmail.com>
 #
-# $FreeBSD: ports/multimedia/vdpauinfo/Makefile,v 1.4 2012/11/17 05:59:54 svnexp Exp $
+# $FreeBSD: multimedia/vdpauinfo/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	vdpauinfo
