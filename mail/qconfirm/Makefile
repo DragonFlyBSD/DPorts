@@ -2,7 +2,7 @@
 # Date created:		22 Aug 2002
 # Whom:			Sergei Kolobov <sergei@kolobov.com>
 #
-# $FreeBSD: ports/mail/qconfirm/Makefile,v 1.27 2012/11/17 05:59:12 svnexp Exp $
+# $FreeBSD: mail/qconfirm/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	qconfirm
