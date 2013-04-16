@@ -2,7 +2,7 @@
 # Date created:				2008-01-15
 # Whom:					alepulver
 #
-# $FreeBSD: ports/games/optimax/Makefile,v 1.8 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/optimax/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	optimax
