@@ -2,7 +2,7 @@
 # Date created:			5 March 2001
 # Whom:				Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/dns/dns_balance/Makefile,v 1.14 2012/11/17 05:57:08 svnexp Exp $
+# $FreeBSD: dns/dns_balance/Makefile 302141 2012-08-05 23:19:36Z dougb $
 #
 
 PORTNAME=	dns_balance
