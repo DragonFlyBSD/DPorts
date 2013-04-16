@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ripperx
-# Date created:		2006-12-26
-# Whom:			trasz <trasz@pin.if.uz.zgora.pl>
-#
-# $FreeBSD: ports/audio/ripperx/Makefile,v 1.16 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: trasz <trasz@pin.if.uz.zgora.pl>
+# $FreeBSD: audio/ripperx/Makefile 315491 2013-03-28 17:56:37Z eadler $
 
 PORTNAME=	ripperx
 PORTVERSION=	2.7.3
@@ -21,7 +17,8 @@ RUN_DEPENDS=	cdparanoia:${PORTSDIR}/audio/cdparanoia
 GNU_CONFIGURE=	yes
 CFLAGS+=	-L${LOCALBASE}/lib
 USE_GMAKE=	yes
-USE_GNOME=	gtk20 gnomehack
+USES=		pathfix
+USE_GNOME=	gtk20
 MAN1=		ripperX.1
 
 .include <bsd.port.mk>
