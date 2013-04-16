@@ -2,7 +2,7 @@
 # Date created:		2006-12-26
 # Whom:			Aleksander Fafula <alex@BSDGuru.org>
 #
-# $FreeBSD: ports/security/vinetto/Makefile,v 1.11 2012/11/17 06:01:22 svnexp Exp $
+# $FreeBSD: security/vinetto/Makefile 301257 2012-07-20 22:14:15Z bapt $
 #
 
 PORTNAME=	vinetto
