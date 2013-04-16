@@ -2,7 +2,7 @@
 # Date created:		11 November 2006
 # Whom:			stas
 #
-# $FreeBSD: ports/graphics/visprint/Makefile,v 1.6 2012/11/17 05:58:24 svnexp Exp $
+# $FreeBSD: graphics/visprint/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	visprint
