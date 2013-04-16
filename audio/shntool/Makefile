@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.org>
-# $FreeBSD: audio/shntool/Makefile 313033 2013-02-27 04:02:00Z danfe $
+# $FreeBSD: audio/shntool/Makefile 315291 2013-03-26 14:00:52Z bapt $
 
 PORTNAME=	shntool
 PORTVERSION=	3.0.10
@@ -32,14 +32,14 @@ RDEP=	AIFF:sox SHN:shorten FLAC APE:mac OFR:ofr:optimfrog LPAC WV:wavpack \
 
 .include <bsd.port.options.mk>
 
-.for i in ${RDEP}
-o=	${i:C/:.*//}
-.	if ${PORT_OPTIONS:M${o}}
-b=	${i:C/^[A-Z]*://:C/:.*//:tl}
-p=	${i:C/^[A-Z]*://:C/.*://:tl}
+.for o in ${PORT_OPTIONS}
+m=	${RDEP:M${o}*}
+.if ${m}
+b=	${m:C/^[A-Z]*://:C/:.*//:tl}
+p=	${m:C/^[A-Z]*://:C/.*://:tl}
 RUN_DEPENDS+=	${b}:${PORTSDIR}/audio/${p}
 RUN_DEPENDS:=	${RUN_DEPENDS}
-.	endif
+.endif
 .endfor
 
 .include <bsd.port.mk>
