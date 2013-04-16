@@ -1,9 +1,5 @@
-# New ports collection makefile for:	simscan
-# Date created:        1 Apr 2005
-# Whom:                Anton Karpov <toxa@toxahost.ru>
-#
-# $FreeBSD: ports/mail/simscan/Makefile,v 1.21 2012/11/17 05:59:14 svnexp Exp $
-#
+# Created by: Anton Karpov <toxa@toxahost.ru>
+# $FreeBSD: mail/simscan/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
 
 PORTNAME=	simscan
 PORTVERSION=	1.4.0
@@ -15,7 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.r/rc/}
 MAINTAINER=	lippe@FreeBSD.org
 COMMENT=	Fast Content/Anti-virus Scanner for qmail Written in C
 
-USE_QMAIL_BUILD=	yes
+USES=		qmail:build
 
 GNU_CONFIGURE=	yes
 
