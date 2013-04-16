@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tklregexp
-# Date created:        2 May 2000
-# Whom:                Patrick Seal <patseal@hyperhost.net>
-#
-# $FreeBSD: ports/misc/tkregexp/Makefile,v 1.13 2012/11/17 05:59:45 svnexp Exp $
-#
+# Created by: Patrick Seal <patseal@hyperhost.net>
+# $FreeBSD: misc/tkregexp/Makefile 315240 2013-03-25 18:44:20Z eadler $
 
 PORTNAME=	tkregexp
 PORTVERSION=	3.0
@@ -13,7 +9,7 @@ MASTER_SITES=	http://laurent.riesterer.free.fr/regexp/
 DISTNAME=	visual_regexp-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An interactive regexp design tool
+COMMENT=	Interactive regexp design tool
 
 USE_TK_RUN=	yes
 NO_BUILD=	yes
