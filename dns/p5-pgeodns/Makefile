@@ -1,9 +1,4 @@
-# New ports collection makefile for:	pgeodns
-# Date created:		16 May 2009
-# Whom:				Phillip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/dns/p5-pgeodns/Makefile,v 1.6 2012/11/17 05:57:10 svnexp Exp $
-#
+# $FreeBSD: dns/p5-pgeodns/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	pgeodns
 PORTVERSION=	1.41
@@ -12,7 +7,7 @@ MASTER_SITES=	http://cloud.github.com/downloads/abh/pgeodns/
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Geographic NameServer
+COMMENT=	Geographic NameServer
 
 BUILD_DEPENDS=	p5-Geo-IP>=0:${PORTSDIR}/net/p5-Geo-IP \
   				p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
