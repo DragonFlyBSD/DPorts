@@ -2,7 +2,7 @@
 # Date created:		12 Aug 2002
 # Whom:			Sergei Kolobov <sergei@kolobov.com>
 #
-# $FreeBSD: ports/mail/pymsgauth/Makefile,v 1.10 2012/11/17 05:59:12 svnexp Exp $
+# $FreeBSD: mail/pymsgauth/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	pymsgauth
