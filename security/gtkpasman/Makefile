@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gtkpasman
-# Date created:				25 Aug 2004
-# Whom:					Philippe Rocques
-#
-# $FreeBSD: security/gtkpasman/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# Created by: Philippe Rocques
+# $FreeBSD: security/gtkpasman/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	gtkpasman
@@ -12,7 +9,7 @@ CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-sources/${PORTVERSION}
 
 MAINTAINER=	rm@FreeBSD.org
-COMMENT=	A GTK+ passwords manager for system and network administrators
+COMMENT=	GTK+ passwords manager for system and network administrators
 
 RUN_DEPENDS+=	gpgv2:${PORTSDIR}/security/gnupg
 
