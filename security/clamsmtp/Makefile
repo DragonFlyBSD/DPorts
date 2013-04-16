@@ -1,8 +1,5 @@
-# New ports collection makefile for:	clamsmtp
-# Date created:		2004-07-29
-# Whom:			Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/security/clamsmtp/Makefile,v 1.38 2012/11/17 06:01:02 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: security/clamsmtp/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	clamsmtp
@@ -12,7 +9,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://thewalter.net/stef/software/clamsmtp/
 
 MAINTAINER=	clsung@FreeBSD.org
-COMMENT=	An ClamAV anti-virus SMTP Filter
+COMMENT=	ClamAV anti-virus SMTP Filter
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
