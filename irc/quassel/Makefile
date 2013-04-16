@@ -2,7 +2,7 @@
 # Date created:		2008-08-10
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: irc/quassel/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: irc/quassel/Makefile 315225 2013-03-25 14:01:36Z makc $
 #
 
 PORTNAME=	quassel
@@ -21,6 +21,7 @@ USES=		cmake
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 MAKE_JOBS_SAFE=	yes
 
+OPTIONS_DEFINE=	NLS
 OPTIONS_MULTI=	MODULE
 OPTIONS_MULTI_MODULE=	MONO CORE CLIENT
 OPTIONS_DEFAULT=	${OPTIONS_MULTI_MODULE}
