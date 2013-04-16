@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: comms/smstools3/Makefile 313413 2013-03-04 16:10:48Z pawel $
+# $FreeBSD: comms/smstools3/Makefile 315474 2013-03-28 15:51:16Z eadler $
 
 PORTNAME=	smstools
 PORTVERSION=	3.1.15
@@ -45,11 +45,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 .else
 CFLAGS+=	-DNOSTATS
 .endif
-.if ${OSVERSION} < 800045
-SMSTOOLS_DEFAULT_COMPORT?=	/dev/cuad0
-.else
 SMSTOOLS_DEFAULT_COMPORT?=	/dev/cuau0
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/Makefile \
