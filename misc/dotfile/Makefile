@@ -1,9 +1,5 @@
-# New ports collection makefile for: dotfile
-# Date created:      11/12/96
-# Whom:              oly@world.std.com
-#
-# $FreeBSD: ports/misc/dotfile/Makefile,v 1.35 2012/11/17 05:59:34 svnexp Exp $
-#
+# Created by: oly@world.std.com
+# $FreeBSD: misc/dotfile/Makefile 315192 2013-03-25 04:30:31Z eadler $
 
 PORTNAME=	dotfile
 PORTVERSION=	2.4.1
@@ -12,7 +8,7 @@ CATEGORIES=	misc tk
 MASTER_SITES=	http://www.blackie.dk/dotfile/download/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A GUI dotfile generator program to create .config files
+COMMENT=	GUI dotfile generator program to create .config files
 
 BUILD_DEPENDS=	formail:${PORTSDIR}/mail/procmail
 
@@ -49,7 +45,7 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} LC_ALL=C ${MAKE} install
 
 post-install:
-.ifndef(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}/dotfile
 	@${MKDIR} ${DOCSDIR}/procmail
 	@${MKDIR} ${DOCSDIR}/tcsh
