@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Pg
-# Date created:				October 19th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-Pg/Makefile,v 1.47 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: databases/p5-Pg/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Pg
 PORTVERSION=	2.1.1
@@ -16,7 +12,7 @@ PKGNAMEPREFIX=	p5-
 DIST_SUBDIR=	postgresql
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An interface for using perl5 to access PostgreSQL databases
+COMMENT=	Interface for using perl5 to access PostgreSQL databases
 
 USE_PGSQL=	yes
 PERL_CONFIGURE=	yes
