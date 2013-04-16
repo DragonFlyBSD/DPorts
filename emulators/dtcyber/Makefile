@@ -2,7 +2,7 @@
 # Date created:		2006-09-03
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: ports/emulators/dtcyber/Makefile,v 1.10 2012/11/17 05:57:20 svnexp Exp $
+# $FreeBSD: emulators/dtcyber/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	dtcyber
