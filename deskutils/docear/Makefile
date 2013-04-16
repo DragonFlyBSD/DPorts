@@ -1,11 +1,12 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: deskutils/docear/Makefile 314883 2013-03-22 00:15:37Z mandree $
+# $FreeBSD: deskutils/docear/Makefile 315247 2013-03-25 21:19:46Z mandree $
 
 PORTNAME=	docear
 PORTVERSION=	1.0.0.b08
 CATEGORIES=	deskutils java
 MASTER_SITES=	http://downloads.docear.org/${PORTVERSION:S/.b/_beta/}/ \
-		LOCAL/mandree/${PORTNAME}-${PORTVERSION:S/.b/_beta/}/
+		SF/docear/1.x/${PORTVERSION:S/.b/_beta/} \
+		LOCAL/mandree/${DIST_SUBDIR}/
 DISTNAME=	docear_linux
 DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
