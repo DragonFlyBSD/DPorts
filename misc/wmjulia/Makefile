@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmjulia
-# Date created:				16 May 2002
-# Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
-#
-# $FreeBSD: ports/misc/wmjulia/Makefile,v 1.10 2012/11/17 05:59:46 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
+# $FreeBSD: misc/wmjulia/Makefile 315240 2013-03-25 18:44:20Z eadler $
 
 PORTNAME=	wmjulia
 PORTVERSION=	0.40
@@ -12,7 +8,7 @@ CATEGORIES=	misc windowmaker afterstep
 MASTER_SITES=	http://web.novalis.org/programs/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A dockapp that creates an animated Julia set
+COMMENT=	Dockapp that creates an animated Julia set
 
 PLIST_FILES=	bin/wmjulia
 WRKSRC=	${WRKDIR}/${PORTNAME}.app/${PORTNAME}
