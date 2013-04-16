@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: ports/security/gpasman/Makefile,v 1.20 2012/12/29 04:51:55 svnexp Exp $
+# $FreeBSD: security/gpasman/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	gpasman
 PORTVERSION=	1.3.1
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://gpasman.sourceforge.net/files/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A password manager that stores password information encrypted
+COMMENT=	Password manager that stores password information encrypted
 
 PLIST_FILES=	bin/gpasman
 USE_GMAKE=	yes
