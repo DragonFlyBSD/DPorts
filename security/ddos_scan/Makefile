@@ -3,7 +3,7 @@
 # Date created:			  Sun Feb 12, 2000
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
-# $FreeBSD: ports/security/ddos_scan/Makefile,v 1.10 2012/11/17 06:01:03 svnexp Exp $
+# $FreeBSD: security/ddos_scan/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	ddos_scan
