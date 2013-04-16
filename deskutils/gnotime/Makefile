@@ -1,11 +1,6 @@
-# New ports collection makefile for:	gnotime
-# Date created:		1 March 2003
-# Whom:			Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-#
-# $FreeBSD: ports/deskutils/gnotime/Makefile,v 1.44 2012/11/17 05:55:27 svnexp Exp $
+# Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
+# $FreeBSD: deskutils/gnotime/Makefile 315433 2013-03-28 03:28:30Z eadler $
 #   $MCom: ports/deskutils/gnotime/Makefile,v 1.24 2009/11/28 05:58:58 mezz Exp $
-#
-
 PORTNAME=	gnotime
 PORTVERSION=	2.3.0
 PORTREVISION=	8
@@ -21,7 +16,8 @@ COMMENT=	A time tracker for gnome2
 LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile
 
 USE_XORG=	xscrnsaver
-USE_GNOME=	gnomehack gnomeprefix gtkhtml3 intlhack libgnomeui
+USES=        pathfix
+USE_GNOME=	gnomeprefix gtkhtml3 intlhack libgnomeui
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool libltdl
