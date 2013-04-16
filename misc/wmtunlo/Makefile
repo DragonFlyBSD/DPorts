@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmtunlo
-# Date created:			27 July 2002
-# Whom:				Adam Weinberger <adam@vectors.cx>
-#
-# $FreeBSD: ports/misc/wmtunlo/Makefile,v 1.11 2012/11/17 05:59:46 svnexp Exp $
-#
+# Created by: Adam Weinberger <adam@vectors.cx>
+# $FreeBSD: misc/wmtunlo/Makefile 315240 2013-03-25 18:44:20Z eadler $
 
 PORTNAME=	wmtunlo
 PORTVERSION=	0.1.3
@@ -13,7 +9,7 @@ MASTER_SITES=	http://www.gnu-darwin.org/distfiles/ \
 		http://cvsup.theplanet.com/distfiles/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A falling-down-a-tunnel dockapp
+COMMENT=	Falling-down-a-tunnel dockapp
 
 USE_XORG=	x11 xpm xextproto
 ALL_TARGET=	wmtunlo
