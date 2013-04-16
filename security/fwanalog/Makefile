@@ -1,8 +1,5 @@
-# New ports collection makefile for:   fwanalog
-# Date created:                11 March 2002
-# Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
-#
-# $FreeBSD: ports/security/fwanalog/Makefile,v 1.19 2012/11/17 06:01:04 svnexp Exp $
+# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
+# $FreeBSD: security/fwanalog/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	fwanalog
@@ -12,7 +9,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://tud.at/programm/fwanalog/
 
 MAINTAINER=	cy@FreeBSD.org
-COMMENT=	A firewall log summarizer that uses Analog
+COMMENT=	Firewall log summarizer that uses Analog
 
 RUN_DEPENDS=	analog:${PORTSDIR}/www/analog
 
