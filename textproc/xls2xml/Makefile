@@ -2,7 +2,7 @@
 # Date created:				4 November 1999
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/xls2xml/Makefile,v 1.26 2012/11/17 06:02:25 svnexp Exp $
+# $FreeBSD: textproc/xls2xml/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	xls2xml
