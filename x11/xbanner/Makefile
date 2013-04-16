@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xbanner
-# Date created:		13 Jan 1999
-# Whom:			giffunip@asme.org
-#
-# $FreeBSD: ports/x11/xbanner/Makefile,v 1.21 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: giffunip@asme.org
+# $FreeBSD: x11/xbanner/Makefile 315242 2013-03-25 19:14:43Z eadler $
 
 PORTNAME=	xbanner
 PORTVERSION=	1.31
@@ -18,6 +14,8 @@ COMMENT=	Make your XDM login screen look beautiful
 
 USE_XORG=	xpm x11
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/xres.c ${WRKSRC}/samples/XBanner.ad
@@ -25,7 +23,7 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/samples/XBanner.ad \
 		${PREFIX}/lib/X11/app-defaults/XBanner
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${PREFIX}/share/doc/XBanner
 	${INSTALL_DATA} ${WRKSRC}/QuickStart ${PREFIX}/share/doc/XBanner
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${PREFIX}/share/doc/XBanner
