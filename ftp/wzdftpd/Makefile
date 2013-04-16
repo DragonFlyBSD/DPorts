@@ -2,7 +2,7 @@
 # Date created:		2003-10-22
 # Whom:			Roman Bogorodskiy
 #
-# $FreeBSD: ports/ftp/wzdftpd/Makefile,v 1.73 2013/02/05 16:54:22 svnexp Exp $
+# $FreeBSD: ftp/wzdftpd/Makefile 311722 2013-02-05 16:17:06Z novel $
 #
 
 PORTNAME=	wzdftpd
