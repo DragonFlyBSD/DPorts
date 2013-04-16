@@ -1,9 +1,5 @@
-# New ports collection makefile for:	GSnes9x
-# Date created:				18 Jun 2000
-# Whom:					Kelly Yancey <kbyanc@posi.net>
-#
-# $FreeBSD: ports/emulators/gsnes9x/Makefile,v 1.26 2012/11/17 05:57:20 svnexp Exp $
-#
+# Created by: Kelly Yancey <kbyanc@posi.net>
+# $FreeBSD: emulators/gsnes9x/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	gsnes9x
 PORTVERSION=	3.12
@@ -17,7 +13,8 @@ COMMENT=	A GTK front-end for the Snes9X SNES emulator
 
 RUN_DEPENDS=	snes9x:${PORTSDIR}/emulators/snes9x
 
-USE_GNOME=	gnomehack gnomeprefix gnomelibs
+USES=        pathfix
+USE_GNOME=	gnomeprefix gnomelibs
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOMAKE="${TRUE}" \
