@@ -2,7 +2,7 @@
 # Date created:		2003-10-28
 # Whom:			Joachim Strombergson <watchman@ludd.ltu.se>
 #
-# $FreeBSD: ports/converters/shftool/Makefile,v 1.10 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: converters/shftool/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	shftool
