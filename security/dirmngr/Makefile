@@ -1,8 +1,5 @@
-# New ports collection makefile for:	dirmngr
-# Date created:		06 Feb 2003
-# Whom:			michaelnottebrock@gmx.net
-#
-# $FreeBSD: ports/security/dirmngr/Makefile,v 1.54 2012/11/17 06:01:03 svnexp Exp $
+# Created by: michaelnottebrock@gmx.net
+# $FreeBSD: security/dirmngr/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	dirmngr
@@ -15,7 +12,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}.sig
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	umq@ueo.co.jp
-COMMENT=	A client for managing and downloading certificate revocation lists
+COMMENT=	Client for managing and downloading certificate revocation lists
 
 LIB_DEPENDS=	assuan.0:${PORTSDIR}/security/libassuan \
 		gcrypt.18:${PORTSDIR}/security/libgcrypt \
