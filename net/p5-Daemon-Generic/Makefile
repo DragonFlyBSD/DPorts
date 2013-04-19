@@ -2,7 +2,7 @@
 # Date created:		2008-05-30
 # Whom:			BluePex Security Solutions <freebsd-ports@bluepex.com>
 #
-# $FreeBSD: ports/net/p5-Daemon-Generic/Makefile,v 1.7 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-Daemon-Generic/Makefile 303861 2012-09-08 03:26:09Z swills $
 #
 
 PORTNAME=	Daemon-Generic
