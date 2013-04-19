@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-REST-Google-Apps-Provisioning
-# Date created:		2009-08-06
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-REST-Google-Apps-Provisioning/Makefile,v 1.11 2012/11/17 06:02:53 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-REST-Google-Apps-Provisioning/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	REST-Google-Apps-Provisioning
 PORTVERSION=	1.1.10
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:SSCHNEID
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Perl library to Google\'s RESTful Apps API
+COMMENT=	Perl library to Google\'s RESTful Apps API
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
