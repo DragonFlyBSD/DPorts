@@ -2,7 +2,7 @@
 # Date created:				Nov 3 2003
 # Whom:					Cheng-Lung Sung <clsung@dragon2.net>
 #
-# $FreeBSD: ports/textproc/p5-Text-ParagraphDiff/Makefile,v 1.10 2012/11/17 06:02:10 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-ParagraphDiff/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Text-ParagraphDiff
