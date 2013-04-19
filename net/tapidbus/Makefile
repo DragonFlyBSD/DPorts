@@ -1,9 +1,5 @@
-# New ports collection makefile for:    tapidbus
-# Date created:		2006-01-11
-# Whom:			Babak Farrokhi
-#
-# $FreeBSD: ports/net/tapidbus/Makefile,v 1.19 2012/11/17 06:00:22 svnexp Exp $
-#
+# Created by: Babak Farrokhi
+# $FreeBSD: net/tapidbus/Makefile 315491 2013-03-28 17:56:37Z eadler $
 
 PORTNAME=	tapidbus
 PORTVERSION=	0.2.1
@@ -19,7 +15,8 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USE_GNOME=	glib20 gnomehack
+USES=		pathfix
+USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	yes
 
