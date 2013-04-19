@@ -1,5 +1,5 @@
 # Created by: Aliaksandr Zahatski <zahatski@gmail.com>
-# $FreeBSD: lang/rakudo/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: lang/rakudo/Makefile 315622 2013-03-30 18:13:57Z bapt $
 
 PORTNAME=	rakudo
 PORTVERSION=	2012.11
@@ -35,13 +35,14 @@ CONFIGURE_PARROT_ARGS=	--cc=${CC} --cxx=${CXX} --ld=${CC} --ccflags="${CFLAGS}" 
 CONFIGURE_ARGS=	--with-parrot=${PREFIX}/bin/parrot \
 		--with-nqp=${PREFIX}/bin/nqp
 
+USES=		bison
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
 BROKEN=		Does not compile on ia64, powerpc, or sparc64
 .endif
 
-USES+=		bison
 USE_PERL5_BUILD=	yes
 USE_GMAKE=	yes
 
