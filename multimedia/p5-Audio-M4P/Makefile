@@ -2,7 +2,7 @@
 # Date created:		2009-01-19
 # Whom:			Christopher Key <cjk32@cam.ac.uk>
 #
-# $FreeBSD: ports/multimedia/p5-Audio-M4P/Makefile,v 1.5 2012/11/17 05:59:52 svnexp Exp $
+# $FreeBSD: multimedia/p5-Audio-M4P/Makefile 302967 2012-08-22 21:42:37Z linimon $
 #
 
 PORTNAME=	Audio-M4P
