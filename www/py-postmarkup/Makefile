@@ -2,7 +2,7 @@
 # Date created:                 June 7, 2007
 # Whom:                         Chao Shin <quakelee@cn.freebsd.org>
 #
-# $FreeBSD: ports/www/py-postmarkup/Makefile,v 1.7 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-postmarkup/Makefile 300897 2012-07-14 14:29:18Z beat $
 
 PORTNAME=	postmarkup
 PORTVERSION=	1.2.0
