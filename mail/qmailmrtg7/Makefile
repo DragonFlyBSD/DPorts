@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qmailmrtg7
-# Date created:			16 Jun 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/qmailmrtg7/Makefile,v 1.9 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: mail/qmailmrtg7/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
 
 PORTNAME=	qmailmrtg7
 PORTVERSION=	4.2
@@ -15,7 +11,8 @@ MAINTAINER=	ale@FreeBSD.org
 COMMENT=	A program to create mrtg graphs for qmail activity
 
 RUN_DEPENDS=	mrtg:${PORTSDIR}/net-mgmt/mrtg
-USE_QMAIL=	yes
+
+USES=		qmail
 
 .include <bsd.port.pre.mk>
 
