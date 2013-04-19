@@ -1,9 +1,5 @@
-# Ports collection makefile for:	p5-Catalyst-Plugin-Authorization-ACL
-# Date created:				Dec 12, 2005
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Authorization-ACL/Makefile,v 1.19 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Plugin-Authorization-ACL/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Catalyst-Plugin-Authorization-ACL
 PORTVERSION=	0.15
