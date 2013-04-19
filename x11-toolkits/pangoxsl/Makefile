@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pangoxsl
-# Date created:		1 January 2005
-# Whom:			James Earl
-#
-# $FreeBSD: ports/x11-toolkits/pangoxsl/Makefile,v 1.21 2012/11/17 06:03:38 svnexp Exp $
-#
+# Created by: James Earl
+# $FreeBSD: x11-toolkits/pangoxsl/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	pangoxsl
 PORTVERSION=	1.6.0.3
@@ -15,7 +11,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Implements Pango library with a PDF backend for PDF output
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack pango
+USES=        pathfix
+USE_GNOME=	pango
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_PKGCONFIG=	build
