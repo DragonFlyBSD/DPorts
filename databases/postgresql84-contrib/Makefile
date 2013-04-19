@@ -1,12 +1,15 @@
 # Created by:	Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql84-contrib/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: databases/postgresql84-contrib/Makefile 315734 2013-04-05 15:26:49Z girgen $
 
 PORTNAME=	postgresql
-PKGNAMESUFFIX=	-contrib
+PORTREVISION=	0
 CATEGORIES=	databases
+PKGNAMESUFFIX=	-contrib
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	The contrib utilities from the PostgreSQL distribution
+
+LIB_DEPENDS=	xslt.2:${PORTSDIR}/textproc/libxslt xml2.5:${PORTSDIR}/textproc/libxml2
 
 USE_PGSQL=	yes
 DEFAULT_PGSQL_VER=84
@@ -19,7 +22,6 @@ INSTALL_DIRS=	contrib
 
 SLAVE_ONLY=	yes
 CONFIGURE_ARGS+=--with-libxslt --with-libxml --with-openssl
-LIB_DEPENDS=	xslt.2:${PORTSDIR}/textproc/libxslt xml2.5:${PORTSDIR}/textproc/libxml2
 
 post-install:
 	@- ${INSTALL_DATA} ${WRKSRC}/contrib/README ${DOCSDIR}/contrib/README
