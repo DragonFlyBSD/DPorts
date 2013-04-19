@@ -2,7 +2,7 @@
 # Date created:				2003-07-03
 # Whom:					arved
 #
-# $FreeBSD: ports/games/taxipilot/Makefile,v 1.36 2012/12/30 18:55:59 svnexp Exp $
+# $FreeBSD: games/taxipilot/Makefile 309662 2012-12-30 12:03:51Z beat $
 
 PORTNAME=	taxipilot
 PORTVERSION=	0.9.2
