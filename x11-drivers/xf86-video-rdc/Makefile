@@ -2,7 +2,7 @@
 # Date created:				14 April 2010
 # Whom:					stas
 #
-# $FreeBSD: ports/x11-drivers/xf86-video-rdc/Makefile,v 1.9 2012/11/17 06:03:25 svnexp Exp $
+# $FreeBSD: x11-drivers/xf86-video-rdc/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	xf86-video-rdc
