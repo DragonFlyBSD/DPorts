@@ -2,7 +2,7 @@
 # Date created:		17 February 2006
 # Whom:			jodocus <jodocus@jodocus.org>
 #
-# $FreeBSD: ports/net-im/py-punjab/Makefile,v 1.8 2012/11/17 06:00:29 svnexp Exp $
+# $FreeBSD: net-im/py-punjab/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
 #
 
 PORTNAME=	punjab
