@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	gsubedit
-# Date created:			Mar 12, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/multimedia/gsubedit/Makefile,v 1.27 2012/11/17 05:59:49 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: multimedia/gsubedit/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	GSubEdit
 PORTVERSION=	0.4.p1
@@ -17,7 +12,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNOME Subtitle Editor is a tool for editing/converting video subtitles
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomelibs
+USES=        pathfix
+USE_GNOME=	gnomeprefix gnomelibs
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-included-gettext
 
