@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: audio/kaudiocreator/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/kaudiocreator/Makefile 315682 2013-04-02 16:18:35Z dbn $
 
 PORTNAME=	kaudiocreator
 PORTVERSION=	1.2.90
@@ -22,7 +22,7 @@ RUN_DEPENDS+=	lame:${PORTSDIR}/audio/lame
 USE_BZIP2=	yes
 USES=		cmake
 USE_QT4=	moc_build qmake_build rcc_build uic_build
-USE_KDE4=	automoc4 kdehier kdeprefix libkcddb
+USE_KDE4=	automoc4 kdehier kdeprefix libkcddb libkcompactdisc
 
 LICENSE=	GPLv2
 MAKE_JOBS_SAFE=	yes
