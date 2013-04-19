@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Sys-Gamin
-# Date created:		03 May 2007
-# Whom: 	Nick Hibma <n_hibma@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/p5-Sys-Gamin/Makefile,v 1.6 2012/11/17 06:01:40 svnexp Exp $
-#
+# Created by: Nick Hibma <n_hibma@FreeBSD.org>
+# $FreeBSD: sysutils/p5-Sys-Gamin/Makefile 315563 2013-03-29 19:04:28Z bdrewery $
 
 PORTNAME=	Sys-Gamin
 PORTVERSION=	0.1
