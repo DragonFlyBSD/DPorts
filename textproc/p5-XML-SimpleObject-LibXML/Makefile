@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-SimpleObject-LibXML
-# Date created:				02 September 2003
-# Whom:	      				Foxfair Hu <foxfair@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-SimpleObject-LibXML/Makefile,v 1.10 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: Foxfair Hu <foxfair@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-SimpleObject-LibXML/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	XML-SimpleObject-LibXML
 PORTVERSION=	0.60
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A simple(r) object representation of an XML::LibXML DOM object
+COMMENT=	Simple(r) object representation of an XML::LibXML DOM object
 
 BUILD_DEPENDS=	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML \
 		p5-XML-SimpleObject>=0:${PORTSDIR}/textproc/p5-XML-SimpleObject
