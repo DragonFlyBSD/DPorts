@@ -2,7 +2,7 @@
 # Date created:                 2003-07-23
 # Whom:                         Tilman Linneweh <arved@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/klogoturtle/Makefile,v 1.25 2012/12/30 18:56:06 svnexp Exp $
+# $FreeBSD: lang/klogoturtle/Makefile 309662 2012-12-30 12:03:51Z beat $
 
 PORTNAME=	klogoturtle
 PORTVERSION=	0.6
