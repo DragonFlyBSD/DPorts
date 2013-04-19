@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	Astro-SIMBAD
-# Date created:			Oct 19, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/astro/p5-Astro-SIMBAD/Makefile,v 1.13 2012/11/17 05:54:25 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: astro/p5-Astro-SIMBAD/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Astro-SIMBAD
 PORTVERSION=	2.0.0
@@ -14,7 +9,7 @@ MASTER_SITE_SUBDIR=	Astro
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An OO Perl interface to the SIMBAD astronomical database
+COMMENT=	OO Perl interface to the SIMBAD astronomical database
 
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
