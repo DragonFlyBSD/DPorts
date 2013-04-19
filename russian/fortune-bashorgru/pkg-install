@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/russian/fortune-bashorgru/pkg-install,v 1.2 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/russian/fortune-bashorgru/pkg-install,v 1.1 2007-04-20 12:13:55 miwi Exp $
 #
 
 if [ "$2" != "PRE-INSTALL" ]; then

@@ -2,7 +2,7 @@
 # Date created:        19-04-2007
 # Whom:                dindin@dindin.ru
 #
-# $FreeBSD: ports/russian/fortune-bashorgru/Makefile,v 1.12 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: russian/fortune-bashorgru/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	fortune-bashorgru
