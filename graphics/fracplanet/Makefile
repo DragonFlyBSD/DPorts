@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: ports/graphics/fracplanet/Makefile,v 1.18 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: graphics/fracplanet/Makefile 311310 2013-01-31 13:38:42Z bapt $
 
 PORTNAME=	fracplanet
 PORTVERSION=	0.4.0
