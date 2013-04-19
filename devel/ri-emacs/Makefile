@@ -2,7 +2,7 @@
 # Date created:		16 June 2009
 # Whom:			stas
 #
-# $FreeBSD: ports/devel/ri-emacs/Makefile,v 1.3 2012/11/17 05:56:56 svnexp Exp $
+# $FreeBSD: devel/ri-emacs/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	ri-emacs
