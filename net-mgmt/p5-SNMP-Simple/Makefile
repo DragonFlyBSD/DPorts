@@ -2,7 +2,7 @@
 # Date created:		2007-11-16
 # Whom:			BluePex Security Solutions <freebsd-ports@bluepex.com>
 #
-# $FreeBSD: ports/net-mgmt/p5-SNMP-Simple/Makefile,v 1.5 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-SNMP-Simple/Makefile 303033 2012-08-23 18:05:17Z tabthorpe $
 #
 
 PORTNAME=	SNMP-Simple
