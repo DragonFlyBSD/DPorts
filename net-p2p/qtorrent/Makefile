@@ -2,7 +2,7 @@
 # Date created:		2004-03-31
 # Whom:			michael johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/net-p2p/qtorrent/Makefile,v 1.23 2012/11/17 06:00:41 svnexp Exp $
+# $FreeBSD: net-p2p/qtorrent/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	qtorrent
