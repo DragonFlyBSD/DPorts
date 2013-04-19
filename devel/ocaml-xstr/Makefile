@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: ports/devel/ocaml-xstr/Makefile,v 1.8 2012/12/20 06:34:56 svnexp Exp $
+# $FreeBSD: devel/ocaml-xstr/Makefile 309295 2012-12-20 05:53:00Z araujo $
 #
 
 PORTNAME=	xstr
