@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-Atom-Stream
-# Date created:				12 Jun 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Atom-Stream/Makefile,v 1.11 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-Atom-Stream/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	XML-Atom-Stream
 PORTVERSION=	0.11
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A client interface for AtomStream
+COMMENT=	Client interface for AtomStream
 
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-XML-SAX>=0.12:${PORTSDIR}/textproc/p5-XML-SAX \
