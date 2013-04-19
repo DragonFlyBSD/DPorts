@@ -2,7 +2,7 @@
 # Date created:        March 31 2008
 # Whom:                Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
 #
-# $FreeBSD: ports/x11-fonts/indic-ttf/Makefile,v 1.12 2012/11/17 06:03:28 svnexp Exp $
+# $FreeBSD: x11-fonts/indic-ttf/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	indic-ttf
