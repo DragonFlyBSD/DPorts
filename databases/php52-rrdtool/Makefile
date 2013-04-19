@@ -3,7 +3,7 @@
 # Whom:					scheidell@freebsd.org
 # Credits:				rick@wzoeterwoude.net
 #
-# $FreeBSD: databases/php52-rrdtool/Makefile 314420 2013-03-17 11:29:38Z scheidell $
+# $FreeBSD: databases/php52-rrdtool/Makefile 315474 2013-03-28 15:51:16Z eadler $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.00
@@ -29,10 +29,4 @@ USE_PHP=	yes
 DEFAULT_PHP_VER=52
 USE_PHPEXT=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 700000
-BROKEN=		does not configure on 6.X
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
