@@ -2,7 +2,7 @@
 # Date Created:			  13 February 2008
 # Whom:				  Bruce M. Simpson
 #
-# $FreeBSD: ports/devel/boost_build/Makefile,v 1.7 2012/11/17 05:55:35 svnexp Exp $
+# $FreeBSD: devel/boost_build/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 PORTNAME=	boost_build
 PORTVERSION=	2.0.m12
