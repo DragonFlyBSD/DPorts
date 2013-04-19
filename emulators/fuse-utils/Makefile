@@ -1,5 +1,5 @@
-# Created by:	rene
-# $FreeBSD: ports/emulators/fuse-utils/Makefile,v 1.9 2012/11/17 05:57:20 svnexp Exp $
+# Created by: rene
+# $FreeBSD: emulators/fuse-utils/Makefile 315209 2013-03-25 10:09:39Z rene $
 
 PORTNAME=	fuse-utils
 PORTVERSION=	1.0.0
