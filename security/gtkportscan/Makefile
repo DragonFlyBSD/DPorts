@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: ports/security/gtkportscan/Makefile,v 1.26 2012/12/10 08:59:20 svnexp Exp $
+# $FreeBSD: security/gtkportscan/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	gtkportscan
 PORTVERSION=	1.2
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	LOCAL/cpiazza
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A simple port scanner that prints out open ports
+COMMENT=	Simple port scanner that prints out open ports
 
 OPTIONS_DEFINE=	GTK2
 
