@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: ports/devel/ocaml-pomap/Makefile,v 1.11 2012/12/20 06:12:22 svnexp Exp $
+# $FreeBSD: devel/ocaml-pomap/Makefile 309289 2012-12-20 05:47:45Z araujo $
 
 PORTNAME=	pomap
 PORTVERSION=	3.0.1
