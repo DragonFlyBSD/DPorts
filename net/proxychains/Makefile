@@ -1,5 +1,5 @@
 # Created by:	Patrick MARIE <mycroft@virgaria.org>
-# $FreeBSD: ports/net/proxychains/Makefile,v 1.9 2012/11/17 06:00:15 svnexp Exp $
+# $FreeBSD: net/proxychains/Makefile 306081 2012-10-18 19:13:07Z ak $
 
 PORTNAME=	proxychains
 PORTVERSION=	3.1
