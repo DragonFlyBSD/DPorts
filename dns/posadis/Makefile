@@ -2,7 +2,7 @@
 # Date Created:				27 Feb 2003
 # Whom:					Sergei Kolobov <sergei@kolobov.com>
 #
-# $FreeBSD: ports/dns/posadis/Makefile,v 1.28 2012/11/17 05:57:10 svnexp Exp $
+# $FreeBSD: dns/posadis/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	posadis
