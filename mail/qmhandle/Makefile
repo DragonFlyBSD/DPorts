@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: ports/mail/qmhandle/Makefile,v 1.28 2012/12/18 14:03:18 svnexp Exp $
+# $FreeBSD: mail/qmhandle/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
 
 PORTNAME=	qmhandle
 PORTVERSION=	1.3.2
@@ -12,7 +12,7 @@ COMMENT=	Tool to view and manage a qmail queue
 
 OPTIONS_DEFINE=	DOCS
 
-USE_QMAIL_RUN=	yes
+USES=		qmail:run
 
 NO_BUILD=	yes
 USE_PERL5=	yes

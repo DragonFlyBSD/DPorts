@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/mail/qmhandle/pkg-plist,v 1.4 2012/11/17 05:59:13 svnexp Exp $
+@comment $FreeBSD: mail/qmhandle/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/qmHandle
 @unexec if cmp -s %D/etc/qmHandle.conf %D/etc/qmHandle.conf.sample; then rm -f %D/etc/qmHandle.conf; fi
 etc/qmHandle.conf.sample
