@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/milkytracker/Makefile 314943 2013-03-22 16:14:34Z ehaupt $
+# $FreeBSD: audio/milkytracker/Makefile 315218 2013-03-25 13:01:19Z ehaupt $
 
 PORTNAME=	milkytracker
 PORTVERSION=	0.90.85
@@ -38,7 +38,7 @@ OPTIONS_DEFINE=	DOCS
 post-install:
 .for f in ${ICONS}
 	${INSTALL_DATA} ${WRKSRC}/resources/pictures/${f} \
-		${LOCALBASE}/share/pixmaps/${f:C/carton/milkytracker/}
+		${PREFIX}/share/pixmaps/${f:C/carton/milkytracker/}
 .endfor
 	${MKDIR} ${DESKTOPDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${DESKTOPDIR}
