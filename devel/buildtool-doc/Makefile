@@ -2,7 +2,7 @@
 # Date created:		2003-07-24
 # Whom:			Sergei Kolobov <sergei@kolobov.com>
 #
-# $FreeBSD: ports/devel/buildtool-doc/Makefile,v 1.10 2012/11/17 05:55:36 svnexp Exp $
+# $FreeBSD: devel/buildtool-doc/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	buildtool-doc
