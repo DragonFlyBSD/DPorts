@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	WebService::ISBNDB
-# Date created:			Jan 4, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/p5-WebService-ISBNDB/Makefile,v 1.6 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/p5-WebService-ISBNDB/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	WebService-ISBNDB
 PORTVERSION=	0.34
@@ -13,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Perl extension to access isbndb.com
+COMMENT=	Perl extension to access isbndb.com
 
 RUN_DEPENDS=	p5-Business-ISBN>=1.80:${PORTSDIR}/misc/p5-Business-ISBN \
 		p5-Class-Std>=0.0.8:${PORTSDIR}/devel/p5-Class-Std \
