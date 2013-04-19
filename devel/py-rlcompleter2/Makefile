@@ -3,7 +3,7 @@
 # Date created:			Dec 31, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/py-rlcompleter2/Makefile,v 1.6 2012/11/17 05:56:50 svnexp Exp $
+# $FreeBSD: devel/py-rlcompleter2/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	rlcompleter2
