@@ -2,7 +2,7 @@
 # Date created:		2 July 2002
 # Whom:			Sean Chittenden <seanc@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/docbookide.el/Makefile,v 1.7 2012/11/17 06:01:55 svnexp Exp $
+# $FreeBSD: textproc/docbookide.el/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	docbookide.el
