@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtktetcolor
-# Date created:				17 August 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/games/gtktetcolor/Makefile,v 1.33 2012/11/17 05:57:40 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: games/gtktetcolor/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	gtktetcolor
 PORTVERSION=	0.6.4
@@ -18,7 +14,8 @@ COMMENT=	Game for GNOME that resembles well-known Tetris and Columns
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui
+USES=        pathfix
+USE_GNOME=	gnomeprefix intlhack libgnomeui
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
