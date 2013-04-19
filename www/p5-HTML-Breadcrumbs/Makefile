@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: ports/www/p5-HTML-Breadcrumbs/Makefile,v 1.5 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Breadcrumbs/Makefile 304807 2012-09-25 03:41:31Z tabthorpe $
 
 PORTNAME=	HTML-Breadcrumbs
 PORTVERSION=	0.7
