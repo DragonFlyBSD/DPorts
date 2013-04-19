@@ -2,7 +2,7 @@
 # Date created:				5 November 2004
 # Whom:	      				Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: ports/dns/p5-Stanford-DNSserver/Makefile,v 1.5 2012/11/17 05:57:10 svnexp Exp $
+# $FreeBSD: dns/p5-Stanford-DNSserver/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	Stanford-DNSserver
