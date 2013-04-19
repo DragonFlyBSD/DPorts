@@ -1,9 +1,5 @@
-# Ports collection makefile for:	Algorithm::Evolutionary
-# Date created:			Oct 24, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/p5-Algorithm-Evolutionary/Makefile,v 1.31 2012/12/17 13:43:43 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-Algorithm-Evolutionary/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Algorithm-Evolutionary
 PORTVERSION=	0.78
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A library for doing evolutionary computation in Perl
+COMMENT=	Library for doing evolutionary computation in Perl
 
 LICENSE=	GPLv2
 
