@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	WWW:Mediawiki::Client
-# Date created:			Jan 2, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/p5-WWW-Mediawiki-Client/Makefile,v 1.5 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/p5-WWW-Mediawiki-Client/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	WWW-Mediawiki-Client
 PORTVERSION=	0.31
@@ -14,7 +9,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A very simple cvs-like interface for Mediawiki websites
+COMMENT=	Very simple cvs-like interface for Mediawiki websites
 
 BUILD_DEPENDS=	p5-Test-Differences>0:${PORTSDIR}/devel/p5-Test-Differences \
 		p5-VCS-Lite>0:${PORTSDIR}/devel/p5-VCS-Lite \
