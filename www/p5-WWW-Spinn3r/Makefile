@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Spinn3r
-# Date created:		2008-03-15
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-WWW-Spinn3r/Makefile,v 1.7 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-WWW-Spinn3r/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	WWW-Spinn3r
 PORTVERSION=	3.00700001
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An interface to the Spinn3r API
+COMMENT=	Interface to the Spinn3r API
 
 BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
