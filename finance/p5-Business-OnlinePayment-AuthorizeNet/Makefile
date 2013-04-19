@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Business::OnlinePayment::AuthorizeNet
-# Date created:				24 October 2002
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/finance/p5-Business-OnlinePayment-AuthorizeNet/Makefile,v 1.18 2012/11/17 05:57:25 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: finance/p5-Business-OnlinePayment-AuthorizeNet/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Business-OnlinePayment-AuthorizeNet
 PORTVERSION=	3.22
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Business::OnlinePayment backend module for Authorize.Net
+COMMENT=	Business::OnlinePayment backend module for Authorize.Net
 
 RUN_DEPENDS=	p5-Business-OnlinePayment>=3:${PORTSDIR}/finance/p5-Business-OnlinePayment \
 		p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay \
