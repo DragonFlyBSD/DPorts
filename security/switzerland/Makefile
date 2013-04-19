@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Switzerland
-# Date created:				08/08/08
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: ports/security/switzerland/Makefile,v 1.8 2012/12/30 19:06:22 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: security/switzerland/Makefile 315749 2013-04-06 23:22:20Z wg $
 
 PORTNAME=	switzerland
 PORTVERSION=	0.1.0
@@ -18,13 +14,15 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PORTDOCS=	*
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's,gcc -O3,${CC} ${CFLAGS}, ; \
 		s,"Switzerland","switzerland", ; \
 		s,"0\.0","${PORTVERSION}",' ${WRKSRC}/setup.py
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/BUGS.txt ${WRKSRC}/README.txt \
 		${WRKSRC}/doc/* ${DOCSDIR}
