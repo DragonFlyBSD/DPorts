@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Task-Catalyst
-# Date created:				21 Nov 2005
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Task-Catalyst/Makefile,v 1.22 2012/11/17 06:02:54 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Task-Catalyst/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Task-Catalyst
 PORTVERSION=	4.02
