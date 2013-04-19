@@ -2,7 +2,7 @@
 # Date created:		21 January 1998
 # Whom:			giffunip@asme.org
 #
-# $FreeBSD: ports/graphics/rayshade/Makefile,v 1.23 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/rayshade/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	rayshade
