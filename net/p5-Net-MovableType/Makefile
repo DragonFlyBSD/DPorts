@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-MovableType
-# Date created:				Oct 21 2003
-# Whom:					clsung@dragon2.net
-#
-# $FreeBSD: ports/net/p5-Net-MovableType/Makefile,v 1.9 2012/11/17 06:00:11 svnexp Exp $
-#
+# Created by: clsung@dragon2.net
+# $FreeBSD: net/p5-Net-MovableType/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Net-MovableType
 PORTVERSION=	1.74
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A lightweight MovableType client Perl module
+COMMENT=	Lightweight MovableType client Perl module
 
 BUILD_DEPENDS=	p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite
 RUN_DEPENDS:=	${BUILD_DEPENDS}
