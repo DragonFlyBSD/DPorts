@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ezmlm-idx
-# Date created:		28 November 1998
-# Whom:			Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-#
-# $FreeBSD: ports/mail/ezmlm-idx/Makefile,v 1.38 2012/11/17 05:59:03 svnexp Exp $
-#
+# Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
+# $FreeBSD: mail/ezmlm-idx/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
 
 PORTNAME=	ezmlm-idx
 PORTVERSION=	7.1.1
@@ -19,7 +15,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 LICENSE=	GPLv2
 
-USE_QMAIL_RUN=	yes
+USES=		qmail:run
 
 CONFLICTS=	ezmlm-0.*
 
