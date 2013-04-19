@@ -2,7 +2,7 @@
 # Date created:		18 February 2005
 # Whom:			roam@FreeBSD.org
 #
-# $FreeBSD: ports/security/poly1305aes/Makefile,v 1.5 2012/11/17 06:01:16 svnexp Exp $
+# $FreeBSD: security/poly1305aes/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	poly1305aes
