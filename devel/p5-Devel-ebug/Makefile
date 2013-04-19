@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Devel-ebug/Makefile 314721 2013-03-20 09:37:56Z tobez $
+# $FreeBSD: devel/p5-Devel-ebug/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Devel-ebug
 PORTVERSION=	0.55
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	Devel
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A simple, extensible Perl debugger
+COMMENT=	Simple, extensible Perl debugger
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
