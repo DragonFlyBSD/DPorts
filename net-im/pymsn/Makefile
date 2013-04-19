@@ -2,7 +2,7 @@
 # Date created:				Apr 19 2007
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/pymsn/Makefile,v 1.9 2012/11/17 06:00:29 svnexp Exp $
+# $FreeBSD: net-im/pymsn/Makefile 315474 2013-03-28 15:51:16Z eadler $
 #
 
 PORTNAME=	pymsn
@@ -29,10 +29,4 @@ RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g} \
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800000
-BROKEN=		does not configure
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
