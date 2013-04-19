@@ -1,9 +1,5 @@
-# New ports collection makefile for:	MooseX-ChainedAccessors
-# Date created:				2011-04-03
-# Whom:					Frederic Culot <culot@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-MooseX-ChainedAccessors/Makefile,v 1.2 2012/11/17 05:56:22 svnexp Exp $
-#
+# Created by: Frederic Culot <culot@FreeBSD.org>
+# $FreeBSD: devel/p5-MooseX-ChainedAccessors/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	MooseX-ChainedAccessors
 PORTVERSION=	0.02
