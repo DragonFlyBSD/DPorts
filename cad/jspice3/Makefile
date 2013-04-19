@@ -2,7 +2,7 @@
 # Date created:         26 Feb 2006
 # Whom:                 Pedro F. Giffuni
 #
-# $FreeBSD: ports/cad/jspice3/Makefile,v 1.12 2012/11/17 05:54:54 svnexp Exp $
+# $FreeBSD: cad/jspice3/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	jspice3
