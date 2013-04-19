@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiw27@gmail.com>
-# $FreeBSD: ports/shells/fish/Makefile,v 1.22 2012/12/18 10:09:32 svnexp Exp $
+# $FreeBSD: shells/fish/Makefile 309158 2012-12-18 10:04:42Z rene $
 
 PORTNAME=	fish
 PORTVERSION=	1.23.1
