@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: databases/rrdtool10/Makefile 314856 2013-03-21 17:43:46Z bapt $
+# $FreeBSD: databases/rrdtool10/Makefile 315637 2013-03-31 14:38:39Z miwi $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.0.50
@@ -16,6 +16,7 @@ MAKE_ENV=	PERL=${PERL}
 CONFLICTS=	rrdtool-1.2*
 LATEST_LINK=	rrdtool10
 
+USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-shared --enable-local-zlib \
@@ -51,7 +52,7 @@ BROKEN=		Does not build on ia64
 .endif
 
 post-extract:
-.if ${PORT_OPTIONS:MDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's/install-idocDATA install-ihtmlDATA//g' \
 		${WRKSRC}/doc/Makefile.in
 .endif
