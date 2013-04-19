@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtk-theme-switch
-# Date Created:				24 July 2000
-# Whom:				 	Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/gtk-theme-switch/Makefile,v 1.17 2012/11/17 06:03:16 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: x11/gtk-theme-switch/Makefile 315242 2013-03-25 19:14:43Z eadler $
 
 PORTNAME=	gtk-theme-switch
 PORTVERSION=	1.0.1
@@ -19,7 +15,9 @@ USE_GMAKE=	yes
 
 MAN1=		gtk-theme-switch.1
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${PREFIX}/share/gtk-theme-switch
 	${INSTALL_MAN} ${WRKSRC}/readme ${PREFIX}/share/gtk-theme-switch/README

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/gtk-theme-switch/files/patch-aa,v 1.6 2012/11/17 06:03:16 svnexp Exp $
+$FreeBSD: x11/gtk-theme-switch/files/patch-aa 300897 2012-07-14 14:29:18Z beat $
 
 --- Makefile.orig	Fri Apr 13 17:57:24 2001
 +++ Makefile	Tue Apr 17 09:31:20 2001
