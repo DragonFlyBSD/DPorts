@@ -2,7 +2,7 @@
 # Date created:		2009-02-11
 # Whom:			stas
 #
-# $FreeBSD: ports/sysutils/philesight/Makefile,v 1.6 2012/11/17 06:01:41 svnexp Exp $
+# $FreeBSD: sysutils/philesight/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	philesight
