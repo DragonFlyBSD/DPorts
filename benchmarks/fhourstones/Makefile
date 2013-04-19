@@ -2,7 +2,7 @@
 # Date created:		2006-11-23
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: ports/benchmarks/fhourstones/Makefile,v 1.6 2012/11/17 05:54:49 svnexp Exp $
+# $FreeBSD: benchmarks/fhourstones/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	fhourstones
