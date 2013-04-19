@@ -1,6 +1,5 @@
-# $FreeBSD: ports/sysutils/pyrenamer/Makefile,v 1.19 2012/12/31 17:09:12 svnexp Exp $
+# $FreeBSD: sysutils/pyrenamer/Makefile 315433 2013-03-28 03:28:30Z eadler $
 #   $MCom: ports/sysutils/pyrenamer/Makefile,v 1.1 2007/08/14 21:33:09 mezz Exp $
-
 PORTNAME=	pyrenamer
 PORTVERSION=	0.6.0
 PORTREVISION=	5
@@ -10,7 +9,8 @@ MASTER_SITES=	http://www.infinicode.org/code/pyrenamer/files/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A mass file renamer written in PyGTK
 
-USE_GNOME=	gconf2 gnomehack pygtk2
+USES=        pathfix
+USE_GNOME=	gconf2 pygtk2
 USE_PYTHON=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
