@@ -3,7 +3,7 @@
 # Whom:			Stanislav Sedov <ssedov@mbsd.msk.ru>
 #
 # $MBSDlabs$
-# $FreeBSD: ports/lang/ocaml-camlidl/Makefile,v 1.12 2012/11/17 05:58:53 svnexp Exp $
+# $FreeBSD: lang/ocaml-camlidl/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	camlidl
