@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: ports/math/convertall/Makefile,v 1.29 2013/02/03 22:43:39 svnexp Exp $
+# $FreeBSD: math/convertall/Makefile 311476 2013-02-03 18:16:54Z makc $
 
 PORTNAME=	convertall
 PORTVERSION=	0.5.2
