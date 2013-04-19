@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Newsletter
-# Date created:		2006/12/22
-# Whom:	      		chinsan
-#
-# $FreeBSD: ports/www/p5-Newsletter/Makefile,v 1.7 2012/11/17 06:02:52 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: www/p5-Newsletter/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Newsletter
 PORTVERSION=	0.03.3
@@ -14,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Simple website based Newsletter interface
+COMMENT=	Simple website based Newsletter interface
 
 BUILD_DEPENDS=	p5-MIME-Explode>0:${PORTSDIR}/mail/p5-MIME-Explode \
 		p5-MIME-Lite>0:${PORTSDIR}/mail/p5-MIME-Lite \
