@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/net/p5-Net-Dropbox-API/Makefile,v 1.10 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Dropbox-API/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Net-Dropbox-API
 PORTVERSION=	1.9
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A dropbox API interface
+COMMENT=	Dropbox API interface
 
 BUILD_DEPENDS=	p5-Data-Random>=0:${PORTSDIR}/devel/p5-Data-Random \
 		p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
