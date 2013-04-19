@@ -1,9 +1,5 @@
-# New ports collection makefile for:   qsheff
-# Date created:                 14 Jul 2005
-# Whom:                         Ozkan KIRIK <ozkan@enderunix.org>
-#
-# $FreeBSD: ports/mail/qsheff/Makefile,v 1.19 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: Ozkan KIRIK <ozkan@enderunix.org>
+# $FreeBSD: mail/qsheff/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
 
 PORTNAME=	qsheff-II
 PORTVERSION=	2.1.r3
@@ -22,7 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 GNU_CONFIGURE=	YES
 
-USE_QMAIL=	yes
+USES=		qmail
 
 DOCS=		README COPYING AUTHORS ChangeLog INSTALL THANKS TODO
 EXAMPLES=	sample-OK.msg sample-SPAM.msg sample-VIRUS.msg
