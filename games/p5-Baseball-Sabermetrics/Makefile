@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Baseball-Sabermetrics
-# Date created:				2006/07/21
-# Whom:					chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/games/p5-Baseball-Sabermetrics/Makefile,v 1.9 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: games/p5-Baseball-Sabermetrics/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Baseball-Sabermetrics
 PORTVERSION=	0.03
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Baseball Statistics Module
+COMMENT=	Baseball Statistics Module
 
 BUILD_DEPENDS=	p5-Data-Serializer>=0.29:${PORTSDIR}/devel/p5-Data-Serializer \
 		p5-HTML-TableExtract>=2.08:${PORTSDIR}/www/p5-HTML-TableExtract \
