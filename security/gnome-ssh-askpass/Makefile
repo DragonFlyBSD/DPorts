@@ -1,8 +1,5 @@
-# New ports collection makefile for: gnome-ssh-askpass
-# Date created:	11 June 2002
-# Whom: Mark Hannon <markhannon@optusnet.com.au>
-#
-# $FreeBSD: ports/security/gnome-ssh-askpass/Makefile,v 1.18 2012/11/17 06:01:04 svnexp Exp $
+# Created by: Mark Hannon <markhannon@optusnet.com.au>
+# $FreeBSD: security/gnome-ssh-askpass/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	gnome-ssh-askpass
 PORTVERSION=	5.8p2
@@ -12,7 +9,7 @@ MASTER_SITES=	OPENBSD/OpenSSH/portable/
 DISTNAME=	openssh-${PORTVERSION}
 
 MAINTAINER=	5u623l20@gmail.com
-COMMENT=	A graphical ssh askpass utility for Gnome2
+COMMENT=	Graphical SSH askpass utility for Gnome2
 
 PORTSCOUT=	skipv:5.9p1 # Will update when FreeBSD version off SSH goes to 5.9p1
 
