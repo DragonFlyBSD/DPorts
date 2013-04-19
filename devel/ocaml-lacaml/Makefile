@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: ports/devel/ocaml-lacaml/Makefile,v 1.24 2013/02/07 18:31:25 svnexp Exp $
+# $FreeBSD: devel/ocaml-lacaml/Makefile 311842 2013-02-07 14:25:13Z miwi $
 
 PORTNAME=	lacaml
 PORTVERSION=	7.0.7
