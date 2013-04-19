@@ -2,7 +2,7 @@
 # Date created:				2003-07-03
 # Whom:					arved
 #
-# $FreeBSD: ports/games/kwappen/Makefile,v 1.24 2012/12/30 18:55:58 svnexp Exp $
+# $FreeBSD: games/kwappen/Makefile 309662 2012-12-30 12:03:51Z beat $
 
 PORTNAME=	kwappen
 PORTVERSION=	1.1.5
