@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: ports/devel/ocaml-sexplib/Makefile,v 1.11 2012/12/24 02:26:37 svnexp Exp $
+# $FreeBSD: devel/ocaml-sexplib/Makefile 309450 2012-12-24 02:11:44Z araujo $
 
 PORTNAME=	sexplib
 PORTVERSION=	108.07.00
