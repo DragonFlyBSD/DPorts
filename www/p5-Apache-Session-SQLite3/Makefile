@@ -2,7 +2,7 @@
 # Date created:				March 17, 2005
 # Whom:					clsung
 #
-# $FreeBSD: ports/www/p5-Apache-Session-SQLite3/Makefile,v 1.5 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-Apache-Session-SQLite3/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Apache-Session-SQLite3
