@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnochm
-# Date created:				25 November 2004
-# Whom:					Radek Kozlowski <radek@raadradd.com>
-#
-# $FreeBSD: ports/deskutils/gnochm/Makefile,v 1.25 2012/11/17 05:55:27 svnexp Exp $
-#
+# Created by: Radek Kozlowski <radek@raadradd.com>
+# $FreeBSD: deskutils/gnochm/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	gnochm
 PORTVERSION=	0.9.11
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/chm/_chmlib.so:${PORTSDIR}/textproc/pychm
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix intlhack pygnome2 pygtk2 pygnomeextras
+USES=        pathfix
+USE_GNOME=	gnomeprefix intlhack pygnome2 pygtk2 pygnomeextras
 GNU_CONFIGURE=	yes
 USE_PYTHON=	2.2+
 USE_GETTEXT=	yes
