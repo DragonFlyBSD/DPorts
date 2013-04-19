@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/misc/misterproper/files/patch-aa,v 1.5 2012/11/17 05:59:42 svnexp Exp $
+$FreeBSD: misc/misterproper/files/patch-aa 300896 2012-07-14 13:54:48Z beat $
 
 --- src/main.c.orig	Sat Mar  3 15:03:28 2001
 +++ src/main.c	Fri Aug 31 15:28:37 2001
