@@ -2,7 +2,7 @@
 # Date created:		2004-01-02
 # Whom:			Sergei Kolobov <sergei@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/annoyance-filter/Makefile,v 1.9 2012/11/17 05:58:58 svnexp Exp $
+# $FreeBSD: mail/annoyance-filter/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	annoyance-filter
