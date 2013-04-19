@@ -1,8 +1,5 @@
-# New ports collection makefile for:	liteamp
-# Date created:		24 June 2003
-# Whom:			Hye-Shik Chang <perky@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/liteamp/Makefile,v 1.36 2012/11/17 05:54:37 svnexp Exp $
+# Created by: Hye-Shik Chang <perky@FreeBSD.org>
+# $FreeBSD: audio/liteamp/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	liteamp
 PORTVERSION=	0.2.4.2
@@ -21,7 +18,8 @@ LIB_DEPENDS=	id3tag.0:${PORTSDIR}/audio/libid3tag \
 		mad.2:${PORTSDIR}/audio/libmad \
 		vorbisfile.6:${PORTSDIR}/audio/libvorbis
 
-USE_GNOME=	gnomehack libgnomeui
+USES=        pathfix
+USE_GNOME=	libgnomeui
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
