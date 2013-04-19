@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/schism/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: audio/schism/Makefile 315204 2013-03-25 08:53:22Z ehaupt $
 
 PORTNAME=	schism
 PORTVERSION=	20100101
@@ -33,7 +33,8 @@ do-install:
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} >= 900027
+# after merging log2 and log2f into libm
+.if ${OSVERSION} >= 802502
 EXTRA_PATCHES=	${FILESDIR}/extrapatch-modplug__snd_gm.c
 .endif
 
