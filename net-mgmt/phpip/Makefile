@@ -2,7 +2,7 @@
 # Date created:		2006-10-28
 # Whom:			Babak Farrokhi <babak@farrokhi.net>
 #
-# $FreeBSD: ports/net-mgmt/phpip/Makefile,v 1.8 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/phpip/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	phpip
