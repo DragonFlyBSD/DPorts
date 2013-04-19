@@ -2,13 +2,15 @@
 # Date created:		6 January 2005
 # Whom:			Michael Reifenberger (mike@Reifenberger.com)
 #
-# $FreeBSD: ports/comms/pyla/Makefile,v 1.5 2012/11/17 05:55:01 svnexp Exp $
+# $FreeBSD: comms/pyla/Makefile 315285 2013-03-26 12:01:55Z mr $
 #
 
 PORTNAME=	pyla
 PORTVERSION=	1.1.7.1
 CATEGORIES=	comms python
-MASTER_SITES=	http://www.teamsw.it/pyla/download/
+#MASTER_SITES=	http://www.teamsw.it/pyla/download/
+MASTER_SITES=   ${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=     mr
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyla${PORTVERSION}
 EXTRACT_SUFX=	.tgz
