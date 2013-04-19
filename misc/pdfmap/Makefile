@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	pdfmap
-# Date created:			Mar 24, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/misc/pdfmap/Makefile,v 1.14 2012/11/17 05:59:43 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: misc/pdfmap/Makefile 315192 2013-03-25 04:30:31Z eadler $
 
 PORTNAME=	pdfmap
 PORTVERSION=	2.00
@@ -25,11 +20,13 @@ USE_PYDISTUTILS=	yes
 
 DOCS=		CREDITS NEWS README TODO doc/*.html
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	*
 .endif
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${DOCSDIR}
 	@cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
