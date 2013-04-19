@@ -1,8 +1,5 @@
-# New ports collection makefile for:	amavis-stats
-# Date created:				12 July 2004
-# Whom:					Mantas Kaulakys <stone@tainet.lt>
-#
-# $FreeBSD: ports/security/amavis-stats/Makefile,v 1.11 2012/11/17 06:01:00 svnexp Exp $
+# Created by: Mantas Kaulakys <stone@tainet.lt>
+# $FreeBSD: security/amavis-stats/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	amavis-stats
@@ -12,7 +9,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://downloads.topicdesk.com/amavis_stats/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A simple AMaViS statistics generator based on rrdtool
+COMMENT=	Simple AMaViS statistics generator based on rrdtool
 
 RUN_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool
 
