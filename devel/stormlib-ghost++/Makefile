@@ -2,7 +2,7 @@
 # Date created:		2011-02-13
 # Whom:			 <ports@c0decafe.net>
 #
-# $FreeBSD: ports/devel/stormlib-ghost++/Makefile,v 1.3 2012/11/17 05:57:03 svnexp Exp $
+# $FreeBSD: devel/stormlib-ghost++/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
 #
 
 PORTNAME=	stormlib
