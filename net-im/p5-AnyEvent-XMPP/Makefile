@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/net-im/p5-AnyEvent-XMPP/Makefile,v 1.5 2013/01/31 17:00:45 svnexp Exp $
+# $FreeBSD: net-im/p5-AnyEvent-XMPP/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	AnyEvent-XMPP
 PORTVERSION=	0.54
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An implementation of the XMPP Protocol
+COMMENT=	Implementation of the XMPP Protocol
 
 BUILD_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-Net-LibIDN>=0:${PORTSDIR}/dns/p5-Net-LibIDN \
