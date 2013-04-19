@@ -2,7 +2,7 @@
 # Date created:				29 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Math-RandomOrg/Makefile,v 1.10 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: math/p5-Math-RandomOrg/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	Math-RandomOrg
