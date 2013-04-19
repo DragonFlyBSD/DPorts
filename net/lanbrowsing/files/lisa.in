@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/lanbrowsing/files/lisa.in,v 1.3 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/lanbrowsing/files/lisa.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # PROVIDE: lisa

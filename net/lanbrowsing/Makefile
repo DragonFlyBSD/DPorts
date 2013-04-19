@@ -2,7 +2,7 @@
 # Date created:				September 02 2004
 # Whom:					Michael Nottebrock <lofi@FreeBSD.org>
 #
-# $FreeBSD: ports/net/lanbrowsing/Makefile,v 1.41 2013/01/31 19:48:37 svnexp Exp $
+# $FreeBSD: net/lanbrowsing/Makefile 311324 2013-01-31 19:14:08Z timur $
 #
 
 PORTNAME=	lanbrowsing
