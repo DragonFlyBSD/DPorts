@@ -1,8 +1,5 @@
-# New ports collection makefile for:	mailzu
-# Date created:				20 July 2009
-# Whom:					Sahil Tandon <sahil@tandon.net>
-#
-# $FreeBSD: ports/security/mailzu/Makefile,v 1.6 2012/11/17 06:01:08 svnexp Exp $
+# Created by: Sahil Tandon <sahil@tandon.net>
+# $FreeBSD: security/mailzu/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	mailzu
@@ -13,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/MailZu%200.8RC3
 DISTNAME=	MailZu_${DISTVERSION:S/rc/RC/}
 
 MAINTAINER=	sahil@FreeBSD.org
-COMMENT=	A simple and intuitive web interface to manage amavisd-new quarantine
+COMMENT=	Simple and intuitive web interface to manage amavisd-new quarantine
 
 RUN_DEPENDS=	${LOCALBASE}/sbin/amavisd:${PORTSDIR}/security/amavisd-new \
 		${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB \
