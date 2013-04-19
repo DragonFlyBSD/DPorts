@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Test-Corpus-Audio-MPD
-# Date created:				18 Sep, 2010
-# Whom:	      				Wen Heping <wen@freebsd.org>
-#
-# $FreeBSD: ports/audio/p5-Test-Corpus-Audio-MPD/Makefile,v 1.6 2012/11/17 05:54:41 svnexp Exp $
-#
+# Created by: Wen Heping <wen@freebsd.org>
+# $FreeBSD: audio/p5-Test-Corpus-Audio-MPD/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Test-Corpus-Audio-MPD
 PORTVERSION=	1.120990
