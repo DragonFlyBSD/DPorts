@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/www/p5-MojoMojo/Makefile,v 1.21 2013/01/26 19:06:45 svnexp Exp $
+# $FreeBSD: www/p5-MojoMojo/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	MojoMojo
 PORTVERSION=	1.09
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:MRAMBERG
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Catalyst & DBIx::Class powered Wiki
+COMMENT=	Catalyst & DBIx::Class powered Wiki
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
