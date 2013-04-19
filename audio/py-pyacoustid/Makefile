@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: ports/audio/py-pyacoustid/Makefile,v 1.2 2013/02/15 08:46:46 svnexp Exp $
+# $FreeBSD: audio/py-pyacoustid/Makefile 315738 2013-04-06 02:38:59Z wg $
 
 PORTNAME=	pyacoustid
 PORTVERSION=	0.7
@@ -16,16 +16,6 @@ LIB_DEPENDS=	chromaprint:${PORTSDIR}/audio/chromaprint
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/acoustid.py \
-		%%PYTHON_SITELIBDIR%%/chromaprint.py
+PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-.include <bsd.port.pre.mk>
-
-do-build:
-	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} \
-		${PYSETUP} build)
-
-do-install:
-	cd ${WRKSRC}/build/lib && ${COPYTREE_SHARE} \* ${PYTHONPREFIX_SITELIBDIR}/
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
