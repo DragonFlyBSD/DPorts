@@ -2,12 +2,12 @@
 # Date created:		8 Novemver 2008
 # Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/xcite/Makefile,v 1.14 2012/11/17 05:59:18 svnexp Exp $
+# $FreeBSD: mail/xcite/Makefile 315598 2013-03-30 05:13:30Z ashish $
 #
 
 PORTNAME=	xcite
 PORTVERSION=	1.60
-PORTREVISION=	13
+PORTREVISION=	19
 PORTREVISION=	5
 CATEGORIES=	mail elisp
 MASTER_SITES=	http://www.gentei.org/~yuuji/software/
