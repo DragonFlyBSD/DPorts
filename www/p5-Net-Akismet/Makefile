@@ -2,7 +2,7 @@
 # Date created:				April 20th, 2006
 # Whom:	      				Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Net-Akismet/Makefile,v 1.11 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-Net-Akismet/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Net-Akismet
