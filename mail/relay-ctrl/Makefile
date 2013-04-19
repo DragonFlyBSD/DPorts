@@ -2,7 +2,7 @@
 # Date created:		2003-12-05
 # Whom:			Fumihiko Kimura <jfkimura@yahoo.co.jp>
 #
-# $FreeBSD: ports/mail/relay-ctrl/Makefile,v 1.6 2012/11/17 05:59:13 svnexp Exp $
+# $FreeBSD: mail/relay-ctrl/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	relay-ctrl
