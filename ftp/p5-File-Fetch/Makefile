@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/ftp/p5-File-Fetch/Makefile,v 1.21 2013/01/12 18:14:31 svnexp Exp $
+# $FreeBSD: ftp/p5-File-Fetch/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	File-Fetch
 PORTVERSION=	0.38
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A generic file fetching mechanism
+COMMENT=	Generic file fetching mechanism
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
