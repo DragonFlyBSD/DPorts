@@ -2,7 +2,7 @@
 # Date created:				2006-04-15
 # Whom:					nork@FreeBSD.org
 #
-# $FreeBSD: ports/textproc/p5-WWW-Google-SiteMap/Makefile,v 1.8 2012/11/17 06:02:11 svnexp Exp $
+# $FreeBSD: textproc/p5-WWW-Google-SiteMap/Makefile 302594 2012-08-15 19:26:13Z tabthorpe $
 #
 
 PORTNAME=	WWW-Google-SiteMap
