@@ -1,9 +1,5 @@
-# Ports collection makefile for:	mod_macro22
-# Date created:				31 May 2008
-# Whom:					Lukasz Wasikowski <lukasz@wasikowski.net>
-#
-# $FreeBSD: www/mod_macro22/Makefile 313182 2013-03-02 03:55:25Z eadler $
-#
+# Created by: Lukasz Wasikowski <lukasz@wasikowski.net>
+# $FreeBSD: www/mod_macro22/Makefile 315392 2013-03-27 16:19:19Z ohauer $
 
 PORTNAME=	mod_macro
 PORTVERSION=	1.1.11
@@ -28,8 +24,12 @@ PORTDOCS=	${PORTNAME}.html
 
 PORTSCOUT=	limit:^1\.1\.
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}/
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}/
 .endif
