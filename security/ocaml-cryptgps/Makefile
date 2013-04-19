@@ -3,7 +3,7 @@
 # Whom:			Stanislav Sedov <ssedov@mbsd.msk.ru>
 #
 # $MBSDlabs$
-# $FreeBSD: ports/security/ocaml-cryptgps/Makefile,v 1.8 2012/11/17 06:01:08 svnexp Exp $
+# $FreeBSD: security/ocaml-cryptgps/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	cryptgps
