@@ -2,7 +2,7 @@
 # Date created:		2008-08-21
 # Whom:				Bapt <baptiste.daroussin@gmail.com>
 #
-# $FreeBSD: ports/net-mgmt/lanmap/Makefile,v 1.8 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/lanmap/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	lanmap
