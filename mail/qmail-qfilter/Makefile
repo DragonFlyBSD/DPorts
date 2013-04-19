@@ -2,7 +2,7 @@
 # Date created:		2004-10-13
 # Whom:			Sergei Kolobov <sergei@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/qmail-qfilter/Makefile,v 1.11 2012/11/17 05:59:12 svnexp Exp $
+# $FreeBSD: mail/qmail-qfilter/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	qmail-qfilter
