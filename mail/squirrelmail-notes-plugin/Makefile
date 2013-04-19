@@ -2,7 +2,7 @@
 # Date created:		10 Feb 2006
 # Whom:		Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: ports/mail/squirrelmail-notes-plugin/Makefile,v 1.4 2012/11/17 05:59:15 svnexp Exp $
+# $FreeBSD: mail/squirrelmail-notes-plugin/Makefile 315341 2013-03-27 00:34:41Z miwi $
 
 PORTNAME=		squirrelmail-${SQUIRREL_PLUGIN_NAME}-plugin
 PORTVERSION=		1.2
@@ -42,6 +42,8 @@ NO_WRKSUBDIR=		yes
 USE_PERL5_BUILD=	yes
 USE_PHP=		yes
 WANT_PHP_WEB=		yes
+IGNORE_WITH_PHP=	5 # known incompatibilities with php-5.4, use 5.3 for now
+DEFAULT_PHP_VER=	53
 
 pre-everything::
 	@${ECHO} ""
