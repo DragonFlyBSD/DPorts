@@ -1,5 +1,5 @@
 # Created by: Bernhard Fröhlich <decke@bluelife.at>
-# $FreeBSD: ports/audio/vagalume/Makefile,v 1.22 2012/12/16 21:02:34 svnexp Exp $
+# $FreeBSD: audio/vagalume/Makefile 315714 2013-04-03 21:00:33Z decke $
 
 PORTNAME=	vagalume
 PORTVERSION=	0.8.5
@@ -36,6 +36,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_SUB+=	NLS=""
 .else
+CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
 
@@ -65,7 +66,7 @@ CONFIGURE_ARGS+=--enable-gconf
 post-patch:
 	@${REINPLACE_CMD} -e 's|serviceentrydir = @serviceentrydir@|serviceentrydir = ${PREFIX}/share/dbus-1/services|' \
 		${WRKSRC}/Makefile.in
-.if ${PORT_OPTIONS:MNLS}
+.if empty(PORT_OPTIONS:MNLS)
 	@${REINPLACE_CMD} -e 's|SUBDIRS = src po|SUBDIRS = src|' \
 		${WRKSRC}/Makefile.in
 .endif
