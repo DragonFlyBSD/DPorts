@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim44/Makefile 314933 2013-03-22 14:18:02Z makc $
+# $FreeBSD: deskutils/kdepim44/Makefile 315680 2013-04-02 15:40:37Z makc $
 
 PORTNAME=	kdepim
 PORTVERSION=	4.4.11.1
@@ -25,7 +25,8 @@ USE_KDE4=	kdelibs pimlibs \
 		akonadi kdeprefix kdehier automoc4 oxygen
 USES=		cmake:outsource
 USE_BZIP2=	yes
-USE_QT4=	qmake_build moc_build rcc_build uic_build
+USE_QT4=	qmake_build moc_build rcc_build uic_build \
+		corelib dbus designer gui network qt3support sql webkit
 USE_OPENLDAP=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
