@@ -2,13 +2,13 @@
 # Date Created:                         14 Nov 2011
 # Whom:                                 Norberto Lopes <nlopes.ml@gmail.com>
 #
-# $FreeBSD: ports/x11-fonts/anonymous-pro/Makefile,v 1.2 2012/11/17 06:03:27 svnexp Exp $
+# $FreeBSD: x11-fonts/anonymous-pro/Makefile 315635 2013-03-31 13:32:29Z rakuco $
 #
 
 PORTNAME=	anonymous-pro
 PORTVERSION=	1.002
 CATEGORIES=	x11-fonts
-MASTER_SITES=	http://www.ms-studio.com/FontSales/
+MASTER_SITES=	http://www.marksimonson.com/assets/content/fonts/
 DISTNAME=	AnonymousPro-${PORTVERSION}
 
 MAINTAINER=	nlopes.ml@gmail.com
