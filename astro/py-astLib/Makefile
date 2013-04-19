@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/astro/py-astLib/Makefile,v 1.13 2013/02/25 11:44:09 svnexp Exp $
+# $FreeBSD: astro/py-astLib/Makefile 312914 2013-02-25 11:09:19Z danfe $
 
 PORTNAME=	astLib
 PORTVERSION=	0.6.1
