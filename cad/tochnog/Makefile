@@ -2,7 +2,7 @@
 # Date created:		19 Apr 2003
 # Whom:			Pedro Giffuni <giffunip@asme.org>
 #
-# $FreeBSD: ports/cad/tochnog/Makefile,v 1.21 2013/02/08 00:50:51 svnexp Exp $
+# $FreeBSD: cad/tochnog/Makefile 311861 2013-02-07 14:57:49Z gahr $
 #
 
 PORTNAME=	tochnog
