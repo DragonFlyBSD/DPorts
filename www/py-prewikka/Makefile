@@ -1,5 +1,5 @@
 # Created by: Robin Gruyters <r.gruyters@yirdis.nl>
-# $FreeBSD: ports/www/py-prewikka/Makefile,v 1.34 2012/12/15 22:28:09 svnexp Exp $
+# $FreeBSD: www/py-prewikka/Makefile 308968 2012-12-15 22:22:37Z pawel $
 
 PORTNAME=	prewikka
 PORTVERSION=	1.0.1p1
