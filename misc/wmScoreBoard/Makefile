@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmScoreBoard
-# Date created:				Sun Jun 24 17:08:15 EDT 2001
-# Whom:					Patrick Li <pat@databits.net>
-#
-# $FreeBSD: ports/misc/wmScoreBoard/Makefile,v 1.10 2012/11/17 05:59:46 svnexp Exp $
-#
+# Created by: Patrick Li <pat@databits.net>
+# $FreeBSD: misc/wmScoreBoard/Makefile 315192 2013-03-25 04:30:31Z eadler $
 
 PORTNAME=	wmScoreBoard
 PORTVERSION=	0.30
@@ -21,8 +17,10 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 USE_GMAKE=	yes
 USE_XORG=	xpm
 
+.include <bsd.port.options.mk>
+
 post-install:
-.ifndef(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for docs in BUGS CHANGES HINTS README
 	@${INSTALL_DATA} ${WRKSRC}/../${docs} ${DOCSDIR}
