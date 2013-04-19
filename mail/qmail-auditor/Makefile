@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qmail-auditor
-# Date created:		2007-02-08
-# Whom:			Patrick Tracanelli <eksffa@freebsdbrasil.com.br>
-#
-# $FreeBSD: ports/mail/qmail-auditor/Makefile,v 1.5 2012/11/17 05:59:12 svnexp Exp $
-#
+# Created by: Patrick Tracanelli <eksffa@freebsdbrasil.com.br>
+# $FreeBSD: mail/qmail-auditor/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
 
 PORTNAME=	qmail-auditor
 PORTVERSION=	0.47
@@ -16,7 +12,7 @@ COMMENT=	Selective e-mail auditing for qmail by means of qmail-queue wrapping
 
 WRKSRC=		${WRKDIR}/${PORTNAME:R}
 
-USE_QMAIL_RUN=	yes
+USES=		qmail:run
 GNU_CONFIGURE=	yes
 
 SUB_FILES=	pkg-message
