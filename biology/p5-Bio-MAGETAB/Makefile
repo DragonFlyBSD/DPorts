@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/biology/p5-Bio-MAGETAB/Makefile,v 1.14 2013/02/05 15:44:11 svnexp Exp $
+# $FreeBSD: biology/p5-Bio-MAGETAB/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Bio-MAGETAB
 PORTVERSION=	1.27
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A data model and utility API for the MAGE-TAB format
+COMMENT=	Data model and utility API for the MAGE-TAB format
 
 LICENSE=	GPLv2
 
