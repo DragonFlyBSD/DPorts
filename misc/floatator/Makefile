@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	floatator
-# Date created:			Jun 1, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/misc/floatator/Makefile,v 1.14 2012/11/17 05:59:34 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: misc/floatator/Makefile 315240 2013-03-25 18:44:20Z eadler $
 
 PORTNAME=	floatator
 PORTVERSION=	0.2.1
@@ -13,7 +8,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://floatator.cichon.com/download/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An interactive fluid dynamics simulation
+COMMENT=	Interactive fluid dynamics simulation
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
