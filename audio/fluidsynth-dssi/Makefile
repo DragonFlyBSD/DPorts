@@ -2,7 +2,7 @@
 # Date created:		2007-01-19
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: ports/audio/fluidsynth-dssi/Makefile,v 1.17 2012/11/17 05:54:31 svnexp Exp $
+# $FreeBSD: audio/fluidsynth-dssi/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	fluidsynth-dssi
