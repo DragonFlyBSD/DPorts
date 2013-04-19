@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bebocd
-# Date created:				02 July 2003
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/bebocd/Makefile,v 1.19 2012/11/17 05:54:28 svnexp Exp $
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: audio/bebocd/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	bebocd
 PORTVERSION=	0.4
@@ -17,7 +13,8 @@ COMMENT=	GTK2 CD Player
 LIB_DEPENDS=	cdaudio.1:${PORTSDIR}/audio/libcdaudio
 
 USE_XORG=	x11
-USE_GNOME=	gnomehack gtk20
+USES=        pathfix
+USE_GNOME=	gtk20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
