@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: ports/devel/ocaml-xstrp4/Makefile,v 1.10 2012/12/20 06:38:40 svnexp Exp $
+# $FreeBSD: devel/ocaml-xstrp4/Makefile 309296 2012-12-20 05:54:02Z araujo $
 
 PORTNAME=	xstrp4
 PORTVERSION=	1.8
