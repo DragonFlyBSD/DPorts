@@ -1,9 +1,4 @@
-# New ports collection makefile for:	App-SD
-# Date created:		2011-04-05
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-App-SD/Makefile,v 1.4 2012/11/17 05:56:04 svnexp Exp $
-#
+# $FreeBSD: devel/p5-App-SD/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	App-SD
 PORTVERSION=	0.75
