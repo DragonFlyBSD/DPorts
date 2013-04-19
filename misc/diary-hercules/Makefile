@@ -1,9 +1,5 @@
-# New ports collection makefile for:	diary-hercules
-# Date created:		2 May 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/diary-hercules/Makefile,v 1.16 2012/11/17 05:59:33 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: misc/diary-hercules/Makefile 315240 2013-03-25 18:44:20Z eadler $
 
 PORTNAME=	hercules
 PORTVERSION=	0.1.1
@@ -14,7 +10,7 @@ PKGNAMEPREFIX=	diary-
 DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A personal workout diary program for bodybuilders
+COMMENT=	Personal workout diary program for bodybuilders
 
 LICENSE=	GPLv2
 
