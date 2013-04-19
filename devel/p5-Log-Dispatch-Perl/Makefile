@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Log-Dispatch-Perl
-# Date created:				Sun Feb  1 14:18:26 GMT 2004
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: ports/devel/p5-Log-Dispatch-Perl/Makefile,v 1.8 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: devel/p5-Log-Dispatch-Perl/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Log-Dispatch-Perl
 PORTVERSION=	0.04
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Log::Dispatch plug-in using core Perl functions for logging
+COMMENT=	Log::Dispatch plug-in using core Perl functions for logging
 
 BUILD_DEPENDS=	p5-Log-Dispatch>=0:${PORTSDIR}/devel/p5-Log-Dispatch \
 		p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
