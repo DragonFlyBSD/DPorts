@@ -2,7 +2,7 @@
 # Date created:		2005-01-28
 # Whom:			Michael Nottebrock <lofi@FreeBSD.org>
 #
-# $FreeBSD: ports/print/alignmargins/Makefile,v 1.6 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: print/alignmargins/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	alignmargins
