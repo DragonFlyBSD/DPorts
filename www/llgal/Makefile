@@ -2,7 +2,7 @@
 # Date created:				2007-01-25
 # Whom:					arved
 #
-# $FreeBSD: ports/www/llgal/Makefile,v 1.22 2012/11/17 06:02:39 svnexp Exp $
+# $FreeBSD: www/llgal/Makefile 300897 2012-07-14 14:29:18Z beat $
 
 PORTNAME=	llgal
 PORTVERSION=	0.13.17
