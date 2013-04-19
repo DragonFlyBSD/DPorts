@@ -2,7 +2,7 @@
 # Date created:		2007-03-27
 # Whom:			Thinker K.F. Li <thinker@branda.to>
 #
-# $FreeBSD: ports/devel/py-sqlcc/Makefile,v 1.5 2012/11/17 05:56:51 svnexp Exp $
+# $FreeBSD: devel/py-sqlcc/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	sqlcc
