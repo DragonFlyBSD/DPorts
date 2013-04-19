@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@liu.com.cn>
-# $FreeBSD: ports/www/session2/Makefile,v 1.15 2012/11/17 06:03:05 svnexp Exp $
+# $FreeBSD: www/session2/Makefile 305307 2012-10-05 16:30:22Z bapt $
 
 PORTNAME=	session2
 PORTVERSION=	0.6.1
