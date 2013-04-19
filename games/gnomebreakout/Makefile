@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnomebreakout
-# Date created:				01 Sep 2000
-# Whom:					Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/games/gnomebreakout/Makefile,v 1.31 2012/11/17 05:57:40 svnexp Exp $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: games/gnomebreakout/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	gnomebreakout
 PORTVERSION=	0.5.3
@@ -15,7 +11,8 @@ DISTNAME=	gnome-breakout-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNOME version of the classic breakout game
 
-USE_GNOME=	gnomehack gnomeprefix libgnomeui
+USES=        pathfix
+USE_GNOME=	gnomeprefix libgnomeui
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
