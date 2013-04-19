@@ -1,5 +1,5 @@
 # Created by: Brad Allen <braddo@tranceaddict.net>
-# $FreeBSD: ports/games/stepmania-devel/Makefile,v 1.18 2012/12/14 07:16:20 svnexp Exp $
+# $FreeBSD: games/stepmania-devel/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	stepmania
 PORTVERSION=	5.0.a3
@@ -28,7 +28,8 @@ PROJECTHOST=	sm-ssc
 USE_BZIP2=	yes
 USE_XORG=	x11 xau xdmcp xext xrandr xrender xtst
 USE_GL=		gl glu
-USE_GNOME=	gnomehack gtk20
+USES=        pathfix
+USE_GNOME=	gtk20
 USE_PERL5_BUILD=yes
 USE_ICONV=	yes
 GNU_CONFIGURE=	yes
