@@ -2,7 +2,7 @@
 # Date created:				2004-09-02
 # Whom:					arved
 #
-# $FreeBSD: ports/games/kpuzzle/Makefile,v 1.28 2012/12/30 18:55:58 svnexp Exp $
+# $FreeBSD: games/kpuzzle/Makefile 309662 2012-12-30 12:03:51Z beat $
 
 PORTNAME=	kpuzzle
 PORTVERSION=	0.4
