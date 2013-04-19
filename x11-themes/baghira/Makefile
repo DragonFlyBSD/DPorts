@@ -2,7 +2,7 @@
 # Date created:			31 August 2004
 # Whom:		 		Miguel Mendez <flynn@energyhq.es.eu.org>
 #
-# $FreeBSD: ports/x11-themes/baghira/Makefile,v 1.29 2012/12/30 18:56:35 svnexp Exp $
+# $FreeBSD: x11-themes/baghira/Makefile 309662 2012-12-30 12:03:51Z beat $
 #
 
 PORTNAME=	baghira
