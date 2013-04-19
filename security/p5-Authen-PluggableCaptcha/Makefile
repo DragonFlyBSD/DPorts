@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Authen-PluggableCaptcha
-# Date created:				2007/02/14
-# Whom:					chinsan
-#
-# $FreeBSD: ports/security/p5-Authen-PluggableCaptcha/Makefile,v 1.8 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: security/p5-Authen-PluggableCaptcha/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Authen-PluggableCaptcha
 PORTVERSION=	0.05
@@ -13,7 +9,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A pluggable Captcha framework for Perl
+COMMENT=	Pluggable Captcha framework for Perl
 
 BUILD_DEPENDS=	p5-Number-Spell>=0:${PORTSDIR}/textproc/p5-Number-Spell \
 		p5-HTML-Email-Obfuscate>=0:${PORTSDIR}/security/p5-HTML-Email-Obfuscate
