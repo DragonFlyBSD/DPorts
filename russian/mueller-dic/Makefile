@@ -2,7 +2,7 @@
 # Date created:		14 Jan 2004
 # Whom:			Igor Pokrovsky <tiamat@comset.net>
 #
-# $FreeBSD: ports/russian/mueller-dic/Makefile,v 1.8 2012/11/17 06:00:56 svnexp Exp $
+# $FreeBSD: russian/mueller-dic/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	mueller-dic
