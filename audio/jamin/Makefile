@@ -2,7 +2,7 @@
 # Date created:		2006-12-06
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: ports/audio/jamin/Makefile,v 1.14 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: audio/jamin/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	jamin
