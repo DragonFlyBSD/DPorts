@@ -2,7 +2,7 @@
 # Date created:			  Thu Dec 16 18:46:55 EET 2004
 # Whom:				  Anton Yudin <toha@FreeBSD.org>
 #
-# $FreeBSD: ports/games/warmux/Makefile,v 1.42 2012/11/17 05:57:55 svnexp Exp $
+# $FreeBSD: games/warmux/Makefile 315222 2013-03-25 13:59:18Z makc $
 #
 
 PORTNAME=	warmux
@@ -30,7 +30,7 @@ USE_DOS2UNIX=	fixed_class.h
 MANCOMPRESSED=	no
 MAN6=		warmux.6
 
-OPTIONS_DEFINE=	FRIBIDI SERVER
+OPTIONS_DEFINE=	FRIBIDI SERVER NLS
 FRIBIDI_DESC=	Enable bi-directional unicode support
 SERVER_DESC=	Enable dedicated server
 
