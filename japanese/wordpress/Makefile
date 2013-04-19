@@ -1,5 +1,5 @@
 # Created by: Takefu
-# $FreeBSD: ports/japanese/wordpress/Makefile,v 1.11 2013/01/30 02:44:10 svnexp Exp $
+# $FreeBSD: japanese/wordpress/Makefile 311196 2013-01-30 01:55:29Z delphij $
 
 PORTNAME=	wordpress
 PORTVERSION=	3.5.1
