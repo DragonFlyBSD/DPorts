@@ -1,9 +1,5 @@
-# New ports collection makefile for:	timemachine
-# Date created:		2007-01-25
-# Whom:			trasz <trasz@pin.if.uz.zgora.pl>
-#
-# $FreeBSD: ports/audio/timemachine/Makefile,v 1.16 2012/11/17 05:54:45 svnexp Exp $
-#
+# Created by: trasz <trasz@pin.if.uz.zgora.pl>
+# $FreeBSD: audio/timemachine/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	timemachine
 PORTVERSION=	0.3.3
@@ -22,7 +18,8 @@ LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack \
 
 OPTIONS_DEFINE=	LASH
 
-USE_GNOME=	gnomehack gtk20
+USES=        pathfix
+USE_GNOME=	gtk20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
