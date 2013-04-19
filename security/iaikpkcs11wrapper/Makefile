@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/security/iaikpkcs11wrapper/Makefile,v 1.12 2012/12/10 13:48:07 svnexp Exp $
+# $FreeBSD: security/iaikpkcs11wrapper/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	iaikPkcs11Wrapper
 PORTVERSION=	1.2.18
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	ale
 DISTNAME=	${PORTNAME}_${PORTVERSION:S/./_/g}
 
 MAINTAINER=	ale@FreeBSD.org
-COMMENT=	A PKCS\#11 Java wrapper
+COMMENT=	PKCS\#11 Java wrapper
 
 USE_ZIP=	yes
 USE_JAVA=	yes
