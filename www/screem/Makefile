@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SCREEM
-# Date created:		05 Nov 1999
-# Whom:			Will Andrews <andrews@technologist.com>
-#
-# $FreeBSD: www/screem/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Will Andrews <andrews@technologist.com>
+# $FreeBSD: www/screem/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	screem
 PORTVERSION=	0.16.1
@@ -17,7 +13,8 @@ COMMENT=	Nice GNOME/GTK-based HTML editor
 LIB_DEPENDS=	croco-0.6.3:${PORTSDIR}/textproc/libcroco
 
 USE_GETTEXT=	yes
-USE_GNOME=	desktopfileutils gnomehack gnomemenus gnomeprefix \
+USES=        pathfix
+USE_GNOME=	desktopfileutils gnomemenus gnomeprefix \
 		gtksourceview intlhack libgnomeprintui libgnomeui libgtkhtml
 USE_XORG=	xpm
 USE_GMAKE=	yes
