@@ -2,7 +2,7 @@
 # Date created:		2005-03-25
 # Whom:			Choe, Cheng-Dae
 #
-# $FreeBSD: ports/www/py-webware-component/Makefile,v 1.6 2012/11/17 06:03:02 svnexp Exp $
+# $FreeBSD: www/py-webware-component/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Component
