@@ -3,7 +3,7 @@
 # Date created:			Nov 3, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/www/xist/Makefile,v 1.36 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: www/xist/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	xist
