@@ -2,7 +2,7 @@
 # Date created:		2004-04-08
 # Whom:			Piet Delport <pjd@303.za.net>
 #
-# $FreeBSD: ports/databases/mrtg-mysql-load/Makefile,v 1.12 2012/11/17 05:55:10 svnexp Exp $
+# $FreeBSD: databases/mrtg-mysql-load/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	mrtg-mysql-load
