@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Devel-Profiler
-# Date created:	   09 September 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Devel-Profiler/Makefile,v 1.10 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Devel-Profiler/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Devel-Profiler
 PORTVERSION=	0.04
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A Perl profiler compatible with dprofpp
+COMMENT=	Perl profiler compatible with dprofpp
 
 BUILD_DEPENDS=	p5-Time-HiRes>=0:${PORTSDIR}/devel/p5-Time-HiRes
 RUN_DEPENDS:=	${BUILD_DEPENDS}
