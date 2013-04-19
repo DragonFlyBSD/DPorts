@@ -1,4 +1,4 @@
-# $FreeBSD: ports/math/libmissing/Makefile,v 1.2 2012/12/31 12:32:09 svnexp Exp $
+# $FreeBSD: math/libmissing/Makefile 315494 2013-03-28 19:25:12Z bf $
 
 PORTNAME=	libmissing
 DISTVERSION=	20121222
@@ -15,8 +15,8 @@ LIB_DEPENDS=	mpc:${PORTSDIR}/math/mpc
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 
-MAKE_ENV=	LDADD="-lmpc" LIB=missing SHLIB_MAJOR="${SHLIB_MAJOR}" \
-		SRCCONF="${NONEXISTENT}" SRCS="${SRCS}"
+MAKE_ENV=	LDADD=-lmpc LIB=missing SHLIB_MAJOR="${SHLIB_MAJOR}" \
+		SRCCONF=/dev/null SRCS="${SRCS}"
 
 OPTIONS_DEFINE=	PROFILE
 
