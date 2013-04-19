@@ -1,9 +1,5 @@
-# New ports collection makefile for:	multi-aterm
-# Date created:		2003-07-11
-# Whom:			Sebastian Yepes <esn@x123.info>
-#
-# $FreeBSD: ports/x11/multi-aterm/Makefile,v 1.15 2012/11/17 06:03:18 svnexp Exp $
-#
+# Created by: Sebastian Yepes <esn@x123.info>
+# $FreeBSD: x11/multi-aterm/Makefile 315242 2013-03-25 19:14:43Z eadler $
 
 PORTNAME=	multi-aterm
 PORTVERSION=	0.2.1
