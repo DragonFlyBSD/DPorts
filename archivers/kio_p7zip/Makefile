@@ -2,7 +2,7 @@
 # Date created:				2006-07-28
 # Whom:					makc <makc@issp.ac.ru>
 #
-# $FreeBSD: ports/archivers/kio_p7zip/Makefile,v 1.14 2012/12/30 18:55:35 svnexp Exp $
+# $FreeBSD: archivers/kio_p7zip/Makefile 309662 2012-12-30 12:03:51Z beat $
 #
 
 PORTNAME=	kio_p7zip
