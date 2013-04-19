@@ -2,7 +2,7 @@
 # Date created:		23 April 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/www/py-feedfinder/Makefile,v 1.4 2012/11/17 06:02:59 svnexp Exp $
+# $FreeBSD: www/py-feedfinder/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	feedfinder
