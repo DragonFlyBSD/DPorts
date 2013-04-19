@@ -2,7 +2,7 @@
 # Date created:				08 Apr 2011
 # Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/simpleviewer/Makefile,v 1.8 2012/11/17 05:58:23 svnexp Exp $
+# $FreeBSD: graphics/simpleviewer/Makefile 315474 2013-03-28 15:51:16Z eadler $
 #
 
 PORTNAME=	simpleviewer
@@ -35,11 +35,6 @@ PLIST_FILES=	bin/sviewgl
 post-patch:
 	@${REINPLACE_CMD} -e 's,-O2,${CFLAGS}, ; s,/usr/include,${LOCALBASE}/include,g ; \
 		s,=-s,=-L${LOCALBASE}/lib,' ${WRKSRC}/Makefile
-.if ${OSVERSION} < 800501
-	@${REINPLACE_CMD} -e 's,const struct dirent,struct dirent,' \
-		${WRKSRC}/src/fileslist.*
-.endif
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sviewgl ${PREFIX}/bin
 
