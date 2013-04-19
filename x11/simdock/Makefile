@@ -1,9 +1,5 @@
-# New ports collection makefile for:	simdock
-# Date created:				28 Jul 2007
-# Whom:					Yinghong.Liu <relaxbsd@gmail.com>
-#
-# $FreeBSD: ports/x11/simdock/Makefile,v 1.10 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: Yinghong.Liu <relaxbsd@gmail.com>
+# $FreeBSD: x11/simdock/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	simdock
 PORTVERSION=	1.2
@@ -16,7 +12,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A fast and customizable dockbar
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack gnomeprefix gconf2 libwnck
+USES=        pathfix
+USE_GNOME=	gnomeprefix gconf2 libwnck
 USE_WX=		2.8
 USE_PKGCONFIG=	yes
 WX_CONF_ARGS=	absolute
@@ -24,6 +21,8 @@ WX_CONF_ARGS=	absolute
 WRKSRC=		${WRKDIR}/trunk
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL LICENSE NEWS README TODO
+
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}|g' \
@@ -34,7 +33,7 @@ post-patch:
 		${WRKSRC}/src/main.cc
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for doc in ${PORTDOCS}
 	@${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}
