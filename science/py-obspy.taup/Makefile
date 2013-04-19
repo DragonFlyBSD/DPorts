@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/science/py-obspy.taup/Makefile,v 1.5 2012/11/17 06:00:59 svnexp Exp $
+# $FreeBSD: science/py-obspy.taup/Makefile 315753 2013-04-07 12:01:13Z wen $
 
 PORTNAME=	obspy.taup
 PORTVERSION=	0.7.0
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
