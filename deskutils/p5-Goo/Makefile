@@ -2,7 +2,7 @@
 # Date created:				14 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/p5-Goo/Makefile,v 1.9 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/p5-Goo/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	Goo
