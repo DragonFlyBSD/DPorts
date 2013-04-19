@@ -2,7 +2,7 @@
 # Date created:				2006-12-09
 # Whom:					arved
 #
-# $FreeBSD: ports/games/kmastermind/Makefile,v 1.24 2012/12/30 18:55:58 svnexp Exp $
+# $FreeBSD: games/kmastermind/Makefile 309662 2012-12-30 12:03:51Z beat $
 
 PORTNAME=	kmastermind
 PORTVERSION=	2.2
