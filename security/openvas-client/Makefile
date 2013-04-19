@@ -2,7 +2,7 @@
 # Date created:		2008-04-27
 # Whom:			Tomoyuki Sakurai <cherry@trombik.org>
 #
-# $FreeBSD: ports/security/openvas-client/Makefile,v 1.10 2012/11/17 06:01:09 svnexp Exp $
+# $FreeBSD: security/openvas-client/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	openvas-client
