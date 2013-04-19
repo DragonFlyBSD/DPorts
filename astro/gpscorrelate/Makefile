@@ -1,5 +1,5 @@
 # Created by: Lukas Maly
-# $FreeBSD: ports/astro/gpscorrelate/Makefile,v 1.14 2013/02/25 11:44:09 svnexp Exp $
+# $FreeBSD: astro/gpscorrelate/Makefile 315474 2013-03-28 15:51:16Z eadler $
 
 PORTNAME=	gpscorrelate
 PORTVERSION=	1.6.1
@@ -26,12 +26,6 @@ PORTDOCS=	*
 PLIST_FILES=	bin/gpscorrelate bin/gpscorrelate-gui
 
 .include <bsd.port.options.mk>
-
-# This port depends on nan(3) added in r174684, Sun Dec 16 21:19:28 2007 UTC.
-# There was no __FreeBSD_version bump for this change, so use the nearest one.
-.if ${OSVERSION} < 800007
-BROKEN=		Does not compile on 7.x: Requires nan(3)
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e \
