@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-RSS
-# Date created:		10 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-POE-Component-RSS/Makefile,v 1.10 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-POE-Component-RSS/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	POE-Component-RSS
 PORTVERSION=	0.09
@@ -12,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A module for event based RSS parsing
+COMMENT=	Module for event based RSS parsing
 
 BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-XML-RSS>=0:${PORTSDIR}/textproc/p5-XML-RSS
