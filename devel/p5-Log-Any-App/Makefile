@@ -1,5 +1,5 @@
 # Created by: Evgeniy Kosov <evgeniy@kosov.su>
-# $FreeBSD: ports/devel/p5-Log-Any-App/Makefile,v 1.12 2013/01/21 09:51:28 svnexp Exp $
+# $FreeBSD: devel/p5-Log-Any-App/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Log-Any-App
 PORTVERSION=	0.43
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	An easy way to use Log::Any in applications
+COMMENT=	Easy way to use Log::Any in applications
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
