@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Apache-Clean
-# Date created:				Sep 09 2003
-# Whom:	      				Martin Matuska <martin@matuska.org>
-#
-# $FreeBSD: ports/www/p5-Apache-Clean2/Makefile,v 1.15 2012/11/17 06:02:44 svnexp Exp $
-#
+# Created by: Martin Matuska <martin@matuska.org>
+# $FreeBSD: www/p5-Apache-Clean2/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Apache-Clean
 PORTVERSION=	2.00
@@ -15,7 +11,7 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION}_7
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A mod_perl interface into HTML::Clean
+COMMENT=	Mod_perl interface into HTML::Clean
 
 BUILD_DEPENDS=	${APACHE_PKGNAMEPREFIX}mod_perl2>=0:${PORTSDIR}/www/mod_perl2 \
 		p5-HTML-Clean>=0.8:${PORTSDIR}/www/p5-HTML-Clean
