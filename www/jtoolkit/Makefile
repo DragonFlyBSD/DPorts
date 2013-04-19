@@ -2,7 +2,7 @@
 # Date created:		30 August 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/www/jtoolkit/Makefile,v 1.6 2012/11/17 06:02:37 svnexp Exp $
+# $FreeBSD: www/jtoolkit/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	jToolkit
