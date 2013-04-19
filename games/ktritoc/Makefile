@@ -2,7 +2,7 @@
 # Date created:				2003-07-06
 # Whom:					arved
 #
-# $FreeBSD: ports/games/ktritoc/Makefile,v 1.21 2012/12/30 18:55:58 svnexp Exp $
+# $FreeBSD: games/ktritoc/Makefile 309662 2012-12-30 12:03:51Z beat $
 
 PORTNAME=	ktritoc
 PORTVERSION=	1.0
