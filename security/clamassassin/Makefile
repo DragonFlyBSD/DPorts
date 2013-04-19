@@ -1,5 +1,5 @@
 # Created by: Matt <matt@xtaz.net>
-# $FreeBSD: security/clamassassin/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: security/clamassassin/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	clamassassin
 PORTVERSION=	1.2.4
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://jameslick.com/clamassassin/
 
 MAINTAINER=	chalpin@cs.wisc.edu
-COMMENT=	A simple virus filter wrapper for ClamAV
+COMMENT=	Simple virus filter wrapper for ClamAV
 
 BUILD_DEPENDS=	sigtool:${PORTSDIR}/security/clamav \
 		formail:${PORTSDIR}/mail/procmail
