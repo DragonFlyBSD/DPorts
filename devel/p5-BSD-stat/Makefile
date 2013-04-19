@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/devel/p5-BSD-stat/Makefile,v 1.11 2012/11/18 06:03:42 svnexp Exp $
+# $FreeBSD: devel/p5-BSD-stat/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	BSD-stat
 PORTVERSION=	1.34
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A stat() with BSD 4.4 extensions
+COMMENT=	Stat() with BSD 4.4 extensions
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
