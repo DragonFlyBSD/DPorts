@@ -2,7 +2,7 @@
 # Date created:				2009-11-15
 # Whom:					steinex
 #
-# $FreeBSD: ports/net/p5-Event-tcp/Makefile,v 1.5 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-Event-tcp/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Event-tcp
