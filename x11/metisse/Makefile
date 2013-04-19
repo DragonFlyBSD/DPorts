@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/x11/metisse/Makefile,v 1.27 2012/12/16 15:58:35 svnexp Exp $
+# $FreeBSD: x11/metisse/Makefile 315525 2013-03-29 08:04:19Z bapt $
 
 PORTNAME=	metisse
 PORTVERSION=	0.4.1
@@ -25,7 +25,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-fontdir=${LOCALBASE}/lib/X11/fonts
 MAKE_ARGS=	METISSE_DOC_DIR="${DOCSDIR}"
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack
+USES=		pathfix
+WANT_GNOME=	yes
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 USE_XORG=	xcursor xft xinerama xpm xrender xt xtst
