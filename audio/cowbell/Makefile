@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: audio/cowbell/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/cowbell/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	cowbell
 PORTVERSION=	0.2.7.1
@@ -12,7 +12,8 @@ COMMENT=	Elegant music organizer
 
 LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib
 
-USE_GNOME=	gnomehack gnomeprefix intltool gtksharp20
+USES=        pathfix
+USE_GNOME=	gnomeprefix intltool gtksharp20
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
