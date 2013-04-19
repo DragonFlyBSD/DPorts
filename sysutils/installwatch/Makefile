@@ -2,7 +2,7 @@
 # Date created:		03 March 2001
 # Whom:			George Reid <greid@ukug.uk.freebsd.org>
 #
-# $FreeBSD: ports/sysutils/installwatch/Makefile,v 1.12 2012/11/17 06:01:34 svnexp Exp $
+# $FreeBSD: sysutils/installwatch/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	installwatch

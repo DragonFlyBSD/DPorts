@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/sysutils/installwatch/files/patch-installwatch.c,v 1.2 2012/11/17 06:01:34 svnexp Exp $
+$FreeBSD: sysutils/installwatch/files/patch-installwatch.c 300897 2012-07-14 14:29:18Z beat $
 
 --- installwatch.c.orig
 +++ installwatch.c
