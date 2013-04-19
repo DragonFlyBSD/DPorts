@@ -2,7 +2,7 @@
 # Date created:				2003-10-13
 # Whom:					arved
 #
-# $FreeBSD: ports/games/kpictorial/Makefile,v 1.24 2012/12/30 18:55:58 svnexp Exp $
+# $FreeBSD: games/kpictorial/Makefile 309662 2012-12-30 12:03:51Z beat $
 
 PORTNAME=	kpictorial
 PORTVERSION=	0.9.1
