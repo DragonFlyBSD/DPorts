@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Acme-GuessNumber
-# Date created:				2008/05/18
-# Whom:					chinsan
-#
-# $FreeBSD: ports/games/p5-Acme-GuessNumber/Makefile,v 1.3 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: games/p5-Acme-GuessNumber/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Acme-GuessNumber
 PORTVERSION=	0.03
