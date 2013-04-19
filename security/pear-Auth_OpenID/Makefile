@@ -2,7 +2,7 @@
 # Date created:		2008-03-03
 # Whom:			Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/security/pear-Auth_OpenID/Makefile,v 1.9 2012/11/17 06:01:14 svnexp Exp $
+# $FreeBSD: security/pear-Auth_OpenID/Makefile 301256 2012-07-20 22:12:58Z bapt $
 #
 
 PORTNAME=	Auth_OpenID
