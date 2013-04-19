@@ -1,9 +1,5 @@
-# New ports collection makefile for: vqadmin
-# Date created:		29 Mar 2001
-# Whom:			nbm
-#
-# $FreeBSD: ports/mail/vqadmin/Makefile,v 1.16 2012/11/17 05:59:17 svnexp Exp $
-#
+# Created by: nbm
+# $FreeBSD: mail/vqadmin/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
 
 PORTNAME=	vqadmin
 PORTVERSION=	2.3.6
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	${LOCALBASE}/vpopmail/lib/libvpopmail.a:${PORTSDIR}/mail/vpopmail
 RUN_DEPENDS=	${LOCALBASE}/vpopmail/lib/libvpopmail.a:${PORTSDIR}/mail/vpopmail
 
 GNU_CONFIGURE=	YES
-WANT_QMAIL=	yes
+
+USES=		qmail:vars
 
 CGIBINDIR?=	www/cgi-bin-dist
 WEBDATADIR?=	www/data-dist
