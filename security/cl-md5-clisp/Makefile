@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/cl-md5-clisp/Makefile,v 1.6 2013/01/26 15:07:28 svnexp Exp $
+# $FreeBSD: security/cl-md5-clisp/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	md5
 PORTVERSION=	1.8.5
@@ -8,7 +8,7 @@ PKGNAMEPREFIX=	cl-
 DISTFILES=	# none
 
 MAINTAINER=	olgeni@FreeBSD.org
-COMMENT=	A native MD5 implementation in Common Lisp
+COMMENT=	Native MD5 implementation in Common Lisp
 
 BUILD_DEPENDS=	${LOCALBASE}/${CL_LIBDIR_REL}/md5/md5.asd:${PORTSDIR}/security/cl-md5
 RUN_DEPENDS=	${LOCALBASE}/${CL_LIBDIR_REL}/md5/md5.asd:${PORTSDIR}/security/cl-md5
