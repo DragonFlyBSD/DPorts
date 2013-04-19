@@ -1,15 +1,10 @@
-# ex:ts=8
-# Ports collection makefile for:	terraform
-# Date created:			Feb 8, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/misc/terraform/Makefile,v 1.20 2012/11/17 05:59:45 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: misc/terraform/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	terraform
 PORTVERSION=	0.9.5
-PORTREVISION=	1
 DISTVERSIONPREFIX=	src-
+PORTREVISION=	1
 CATEGORIES=	misc gnome
 MASTER_SITES=	GOOGLE_CODE
 EXTRACT_SUFX=	.tgz
@@ -24,7 +19,8 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libtrio.a:${PORTSDIR}/devel/trio
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USE_GNOME=	gnomehack gnomehier libgnomeprintui libgnomeui
+USES=        pathfix
+USE_GNOME=	gnomehier libgnomeprintui libgnomeui
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	automake:env
@@ -33,6 +29,8 @@ MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS/s| desktop-links docs | |' \
@@ -48,7 +46,7 @@ post-install:
 	@${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/desktop-links/terraform.png \
 		${PREFIX}/share/pixmaps
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for file in FAQ.sgml README.sgml UsersGuide.sgml i18n.txt
 	${INSTALL_DATA} ${WRKSRC}/docs/${file} ${DOCSDIR}
