@@ -1,8 +1,5 @@
-# New ports collection makefile for:	mindterm-binary
-# Date created:				22 Sep 2000
-# Whom:					alex@FreeBSD.org
-#
-# $FreeBSD: ports/security/mindterm-binary/Makefile,v 1.12 2012/11/17 06:01:08 svnexp Exp $
+# Created by: alex@FreeBSD.org
+# $FreeBSD: security/mindterm-binary/Makefile 315566 2013-03-29 19:33:41Z cs $
 
 PORTNAME=	mindterm-binary
 PORTVERSION=	1.2.1
@@ -15,7 +12,7 @@ DISTFILES=	mindterm-ssh.html ${EXTRACT_ONLY}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A full vt220 compatible Java SSH-1 client (not only for websites)
+COMMENT=	Full vt220 compatible Java SSH-1 client (not only for websites)
 
 USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
