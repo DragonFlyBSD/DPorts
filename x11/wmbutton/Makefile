@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmbutton
-# Date created:			10 Apr 1999
-# Whom:				Jim Mock <jim@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/wmbutton/Makefile,v 1.18 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Jim Mock <jim@FreeBSD.org>
+# $FreeBSD: x11/wmbutton/Makefile 315242 2013-03-25 19:14:43Z eadler $
 
 PORTNAME=	wmbutton
 PORTVERSION=	0.6.1
@@ -24,6 +20,8 @@ PORTDOCS=	README
 PORTEXAMPLES=	dot.wmbutton
 PLIST_FILES=	bin/wmbutton
 
+.include <bsd.port.options.mk>
+
 do-build:
 	cd ${BUILD_WRKSRC} && ${CC} ${CFLAGS} \
 		-I${LOCALBASE}/include/X11 -I${LOCALBASE}/include \
@@ -32,11 +30,11 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmbutton ${PREFIX}/bin/wmbutton
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/README
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/.wmbutton ${EXAMPLESDIR}/dot.wmbutton
 .endif
