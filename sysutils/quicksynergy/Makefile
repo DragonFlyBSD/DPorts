@@ -1,9 +1,5 @@
-# New ports collection makefile for:	quicksynergy
-# Date created:		2008-03-28
-# Whom:			Lars Engels <lme@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/quicksynergy/Makefile,v 1.17 2012/11/17 06:01:43 svnexp Exp $
-#
+# Created by: Lars Engels <lme@FreeBSD.org>
+# $FreeBSD: sysutils/quicksynergy/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	quicksynergy
 PORTVERSION=	0.9.0
@@ -20,7 +16,8 @@ GNU_CONFIGURE=	yes
 USE_ICONV=	yes
 USE_GETTEXT=	yes
 USE_PKGCONFIG=	yes
-USE_GNOME=	gnomehack gnomeprefix libglade2
+USES=        pathfix
+USE_GNOME=	gnomeprefix libglade2
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
