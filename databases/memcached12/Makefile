@@ -2,7 +2,7 @@
 # Date created:		July 21, 2003
 # Whom:			Sean Chittenden <seanc@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/memcached12/Makefile,v 1.12 2012/12/10 15:19:12 svnexp Exp $
+# $FreeBSD: databases/memcached12/Makefile 315474 2013-03-28 15:51:16Z eadler $
 #
 
 PORTNAME=	memcached
@@ -41,9 +41,7 @@ PORTDOCS=	protocol.txt threads.txt
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} >= 800000
 CFLAGS+=       -fstack-protector
-.endif
 
 .if ${PORT_OPTIONS:MREPCACHED}
 # WWW: http://repcached.lab.klab.org/
