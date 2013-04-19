@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/p5-JSON-RPC-Dispatcher/Makefile,v 1.10 2012/12/26 14:56:58 svnexp Exp $
+# $FreeBSD: devel/p5-JSON-RPC-Dispatcher/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	JSON-RPC-Dispatcher
 PORTVERSION=	0.0506
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A JSON-RPC 2.0 server
+COMMENT=	JSON-RPC 2.0 server
 
 RUN_DEPENDS=	p5-JSON>=2.16:${PORTSDIR}/converters/p5-JSON \
 		p5-Log-Any>=0.11:${PORTSDIR}/devel/p5-Log-Any \
