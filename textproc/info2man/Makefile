@@ -2,7 +2,7 @@
 # Date created:         19 January 2005
 # Whom:                 Thierry Thomas <thierry@pompo.net>
 #
-# $FreeBSD: ports/textproc/info2man/Makefile,v 1.3 2012/11/17 06:01:59 svnexp Exp $
+# $FreeBSD: textproc/info2man/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	info2man
