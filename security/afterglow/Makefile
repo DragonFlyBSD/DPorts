@@ -1,8 +1,5 @@
-# New ports collection makefile for:	afterglow
-# Date created:				1 Aug 2007
-# Whom:					pauls
-#
-# $FreeBSD: ports/security/afterglow/Makefile,v 1.12 2012/12/17 18:28:30 svnexp Exp $
+# Created by: pauls
+# $FreeBSD: security/afterglow/Makefile 315566 2013-03-29 19:33:41Z cs $
 #
 
 PORTNAME=	afterglow
@@ -11,7 +8,7 @@ CATEGORIES=	security graphics net-mgmt
 MASTER_SITES=	SF/${PORTNAME}/AfterGlow%201.x/${PORTVERSION}
 
 MAINTAINER=	pauls@utdallas.edu
-COMMENT=	A collection of graph-generating scripts
+COMMENT=	Collection of graph-generating scripts
 
 LICENSE=	GPLv2
 
