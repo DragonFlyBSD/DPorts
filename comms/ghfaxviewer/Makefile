@@ -1,5 +1,5 @@
 # Created by: Dominik Brettnacher <domi@saargate.de>
-# $FreeBSD: ports/comms/ghfaxviewer/Makefile,v 1.29 2012/12/29 04:51:17 svnexp Exp $
+# $FreeBSD: comms/ghfaxviewer/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	ghfaxviewer
 PORTVERSION=	0.22.0
@@ -14,7 +14,8 @@ COMMENT=	GNOME compliant fax viewer capable of displaying TIFF G3 faxes
 LIB_DEPENDS=	tiff.4:${PORTSDIR}/graphics/tiff
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gconf gnomeprint
+USES=        pathfix
+USE_GNOME=	gnomeprefix gconf gnomeprint
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
