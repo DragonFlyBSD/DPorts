@@ -2,7 +2,7 @@
 # Date created:				2004-02-13
 # Whom:					arved
 #
-# $FreeBSD: ports/games/kfreerings/Makefile,v 1.21 2012/12/30 18:55:58 svnexp Exp $
+# $FreeBSD: games/kfreerings/Makefile 309662 2012-12-30 12:03:51Z beat $
 
 PORTNAME=	kfreerings
 PORTVERSION=	1.0
