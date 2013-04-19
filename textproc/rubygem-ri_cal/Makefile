@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-ri_cal/Makefile 313202 2013-03-02 06:04:49Z rpaulo $
+# $FreeBSD: textproc/rubygem-ri_cal/Makefile 315371 2013-03-27 10:39:24Z miwi $
 
 PORTNAME=	ri_cal
 PORTVERSION=	0.8.8
@@ -13,5 +13,6 @@ LICENSE=	MIT
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=yes
+PLIST_FILES=	bin/ri_cal
 
 .include <bsd.port.mk>
