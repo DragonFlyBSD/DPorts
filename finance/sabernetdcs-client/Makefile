@@ -2,7 +2,7 @@
 # Date created:        29 December 2006
 # Whom:                Matthew Ranostay <mranostay@saberlogic.com>
 #
-# $FreeBSD: ports/finance/sabernetdcs-client/Makefile,v 1.16 2012/11/17 05:57:26 svnexp Exp $
+# $FreeBSD: finance/sabernetdcs-client/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	sabernetdcs
