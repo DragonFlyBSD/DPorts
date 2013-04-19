@@ -21,7 +21,7 @@ NO_BUILD=	yes
 
 DEFAULTPAPERSIZE?=	a4
 .for P in a4 letter
-.if ${DEFAULTPAPERSIZE:L:M${P}} != ${P}
+.if ${DEFAULTPAPERSIZE:tl:M${P}} != ${P}
 CONFLICTS+=	papersize-default-${P}-[0-9]*
 .endif
 .endfor
