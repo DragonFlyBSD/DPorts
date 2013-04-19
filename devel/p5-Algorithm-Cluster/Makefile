@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Algorithm-Cluster
-# Date created:				Fri May 21 15:21:09 CST 2004
-# Whom:					Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/devel/p5-Algorithm-Cluster/Makefile,v 1.27 2012/11/17 05:56:03 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: devel/p5-Algorithm-Cluster/Makefile 315509 2013-03-29 00:44:53Z eadler $
 
 PORTNAME=	Algorithm-Cluster
 PORTVERSION=	1.50
@@ -13,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:MDEHOON
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A perl interface to C clustering library
+COMMENT=	Perl interface to C clustering library
 
 MAKE_JOBS_UNSAFE=	yes
 
