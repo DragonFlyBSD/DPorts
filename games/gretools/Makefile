@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: ports/games/gretools/Makefile,v 1.27 2012/11/17 05:57:40 svnexp Exp $
+# $FreeBSD: games/gretools/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	gretools
 PORTVERSION=	1.2.4
@@ -13,7 +13,8 @@ COMMENT=	GNOME vocabulary builder
 
 LICENSE=	GPLv2
 
-USE_GNOME=	gnomehack gnomeprefix pygnome2
+USES=        pathfix
+USE_GNOME=	gnomeprefix pygnome2
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
