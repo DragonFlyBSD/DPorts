@@ -2,7 +2,7 @@
 # Date created:				2004-05-23
 # Whom:					arved
 #
-# $FreeBSD: ports/textproc/p5-XML-Parser-Style-Elemental/Makefile,v 1.5 2012/11/17 06:02:13 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-Parser-Style-Elemental/Makefile 300897 2012-07-14 14:29:18Z beat $
 
 PORTNAME=	XML-Parser-Style-Elemental
 PORTVERSION=	0.50
