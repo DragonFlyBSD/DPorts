@@ -2,7 +2,7 @@
 # Date created: 	Tue Nov 14 18:29:48 MET 1995
 # Whom: 		Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $FreeBSD: ports/print/apsfilter/Makefile,v 1.144 2013/01/31 19:48:37 svnexp Exp $
+# $FreeBSD: print/apsfilter/Makefile 311324 2013-01-31 19:14:08Z timur $
 #
 
 PORTNAME=	apsfilter

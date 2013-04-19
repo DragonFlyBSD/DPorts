@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $FreeBSD: ports/print/apsfilter/scripts/configure,v 1.39 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: print/apsfilter/scripts/configure 300897 2012-07-14 14:29:18Z beat $
 
 if [ "$BATCH" != "yes" ]; then
 
