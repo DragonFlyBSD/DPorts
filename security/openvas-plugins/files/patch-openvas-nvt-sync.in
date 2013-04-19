@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/security/openvas-plugins/files/patch-openvas-nvt-sync.in,v 1.3 2012/11/17 06:01:09 svnexp Exp $
+$FreeBSD: security/openvas-plugins/files/patch-openvas-nvt-sync.in 300897 2012-07-14 14:29:18Z beat $
 
 --- openvas-nvt-sync.in.orig
 +++ openvas-nvt-sync.in
