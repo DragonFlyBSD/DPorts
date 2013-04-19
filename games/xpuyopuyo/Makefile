@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpuyopuyo
-# Date created:		19 Sep 1999
-# Whom:			Yin-Jieh Chen <yinjieh@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/games/xpuyopuyo/Makefile,v 1.36 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Yin-Jieh Chen <yinjieh@csie.nctu.edu.tw>
+# $FreeBSD: games/xpuyopuyo/Makefile 315491 2013-03-28 17:56:37Z eadler $
 
 PORTNAME=	xpuyopuyo
 PORTVERSION=	0.9.8
@@ -34,7 +30,8 @@ CONFIGURE_ARGS+=--with-libmikmod-prefix=${LOCALBASE}
 .endif
 
 .if ${HAVE_GNOME:Mgnomelibs}!=""
-USE_GNOME+=	gnomelibs gnomehack
+USES=		pathfix
+USE_GNOME+=	gnomelibs
 PKGNAMESUFFIX=	-gnome
 .else
 CONFIGURE_ARGS+=	--without-gnome
