@@ -5,8 +5,7 @@ PORTNAME=	formido
 PORTVERSION=	1.0
 PORTREVISION=	9
 CATEGORIES=	games
-MASTER_SITES=	http://koti.mbnet.fi/lsoft/formido/ \
-		http://mirror.amdmi3.ru/distfiles/
+MASTER_SITES=	http://mirror.amdmi3.ru/distfiles/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	2D kill-em all with 3D rendered graphics
