@@ -1,15 +1,19 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: www/tt-rss/Makefile 315045 2013-03-23 16:19:27Z thierry $
+# $FreeBSD: www/tt-rss/Makefile 315858 2013-04-16 17:16:29Z thierry $
 
 PORTNAME=	tt-rss
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.8
 CATEGORIES=	www
-MASTER_SITES=	http://tt-rss.org/download/
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Tiny Tiny RSS: web-based news feed (RSS/Atom) aggregator
 
 LICENSE=	GPLv2
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	gothfox
+GH_PROJECT=	Tiny-Tiny-RSS
+GH_COMMIT=	9fb91a2
 
 NO_BUILD=	yes
 
