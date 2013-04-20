@@ -4,7 +4,7 @@
 PORTNAME=	netembryo
 PORTVERSION=	0.1.1
 CATEGORIES=	net
-MASTER_SITES=	http://lscube.org/files/downloads/netembryo/
+MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/netembryo/netembryo-0.1.1.tar.bz2/d5a3c96b37fe3e4fb1c49df1f7a4a16f/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Network abstraction library used by for feng, libnemesi, felix
