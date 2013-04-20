@@ -9,7 +9,7 @@ PORTNAME=	rsibreak
 PORTVERSION=	0.8.0
 PORTREVISION=	7
 CATEGORIES=	x11 kde
-MASTER_SITES=	http://www.rsibreak.org/files/
+MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/rsibreak/Rsibreak-0.8.0.tar.bz2/62a62ff2f405461cfbf978484fb2d62c/
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	A KDE RSI prevention tool
