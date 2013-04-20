@@ -4,7 +4,7 @@
  * redistributable in accordance with the
  * GNU General Public License v2
  *
- * $FreeBSD: ports/sysutils/e2fsprogs/files/fsck_ext2fs.c,v 1.6 2012/11/17 06:01:29 svnexp Exp $
+ * $FreeBSD: sysutils/e2fsprogs/files/fsck_ext2fs.c 300897 2012-07-14 14:29:18Z beat $
  *
  * Upstream: $Id: fsck_ext2fs.c,v 1.6 2006/07/02 11:37:49 emma Exp $
  *

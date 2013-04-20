@@ -1,12 +1,8 @@
-# New ports collection makefile for:	e2fsprogs
-# Date created:				3 July 2001
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/e2fsprogs/Makefile,v 1.87 2012/11/17 06:01:29 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: sysutils/e2fsprogs/Makefile 310945 2013-01-24 21:07:33Z mandree $
 
 PORTNAME=	e2fsprogs
-PORTVERSION=	1.42.6
+PORTVERSION=	1.42.7
 PORTREVISION?=	0
 CATEGORIES?=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/v${PORTVERSION}
@@ -30,6 +26,8 @@ MAKE_ARGS+=	LDFLAGS='${LDFLAGS} -L${LOCALBASE}/lib'
 OPTIONS_DEFINE=		DOCS NLS
 OPTIONS_DEFAULT=	NLS
 OPTIONS_EXCLUDE+=	EXAMPLES
+
+IGNORE=		Will not build on DragonFly
 
 MAN1=		chattr.1 lsattr.1
 MAN5=		e2fsck.conf.5 mke2fs.conf.5
