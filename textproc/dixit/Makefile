@@ -1,11 +1,14 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-# $FreeBSD: ports/textproc/dixit/Makefile,v 1.17 2013/02/05 10:18:56 svnexp Exp $
+# $FreeBSD: textproc/dixit/Makefile 315809 2013-04-15 23:01:12Z bdrewery $
 
 PORTNAME=	dixit
 PORTVERSION=	11.11
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION} \
-		SF/${PORTNAME}/${PORTNAME}_qdb:db
+		SF/${PORTNAME}/${PORTNAME}_qdb:db \
+		LOCAL/bdrewery/${PORTNAME}/ \
+		LOCAL/bdrewery/${PORTNAME}:db
 DISTFILES=	${PORTNAME}-${PORTVERSION}.${QT_VER}.tgz \
 		${_DB_D}:db
 EXTRACT_ONLY=	${PORTNAME}-${PORTVERSION}.${QT_VER}.tgz
