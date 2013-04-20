@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/x11-wm/pawm/Makefile,v 1.25 2012/11/17 06:03:43 svnexp Exp $
+# $FreeBSD: x11-wm/pawm/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	pawm
 PORTVERSION=	2.3.0
@@ -11,7 +11,7 @@ COMMENT=	The Puto Amo Window Manager
 
 USE_BZIP2=	yes
 USE_XORG=	x11 xft xrandr xrender xpm
-USE_CMAKE=	yes
+USES=		cmake
 CMAKE_ARGS=	-DCMAKE_CONFIG_PREFIX:STRING="${PREFIX}/etc" \
 		-DX11_LIBRARY_DIRS:STRING="${LOCALBASE}/lib"
 

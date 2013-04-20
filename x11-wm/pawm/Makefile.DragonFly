@@ -1,1 +1,1 @@
-LDFLAGS+= -L${LOCALBASE}/lib/ -lXext
+LDFLAGS+= -L${LOCALBASE}/lib/ -lXext -lXrender
