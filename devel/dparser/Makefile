@@ -1,14 +1,14 @@
 # Created by: ijliao
-# $FreeBSD: ports/devel/dparser/Makefile,v 1.20 2013/01/23 17:16:52 svnexp Exp $
+# $FreeBSD: devel/dparser/Makefile 315941 2013-04-17 07:42:03Z gahr $
 
 PORTNAME=	dparser
-PORTVERSION=	1.29
+PORTVERSION=	1.30
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/
 DISTNAME=	d-${PORTVERSION}-src
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	A simple but powerful tool for parsing
+COMMENT=	Simple but powerful tool for parsing
 
 OPTIONS_DEFINE=	BOEHM DOCS
 BOEHM_DESC=	Boehm garbage collector support
