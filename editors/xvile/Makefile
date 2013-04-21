@@ -1,104 +1,104 @@
-# New ports collection makefile for:    xvile
-# Date created:         Wed Nov 26, 1996
-# Whom:                 pgf
-#
-# $FreeBSD: ports/editors/xvile/Makefile,v 1.97 2012/11/17 05:57:19 svnexp Exp $
-#
+# Created by: pgf
+# $FreeBSD: ports/editors/xvile/Makefile,v 1.100 2013/02/07 17:11:51 svnexp Exp $
 
 PORTNAME=	xvile
-PORTVERSION=	9.8g
+PORTVERSION=	9.8i
 CATEGORIES=	editors
-MASTER_SITES=	ftp://invisible-island.net/vile/current/ \
-		ftp://dickey.his.com/vile/current/ \
-		ftp://ftp.phred.org/pub/vile/current/
-DISTNAME=	vile-9.8g
+MASTER_SITES=	ftp://dickey.his.com/vile/current/ \
+		ftp://invisible-island.net/vile/current/
+DISTNAME=	vile-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
-PATCH_SITES=    ${MASTER_SITES:S,vile/current/,vile/patches/,g}
-PATCHFILES=
+PATCH_SITES=	${MASTER_SITES:S,vile/current/,vile/patches/,g}
+PATCHFILES=	# none
 
-MAINTAINER=	gj@FreeBSD.org
-COMMENT=	VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	VI Like Emacs -- X11 version
 
-MAKEFILE=	makefile
+LICENSE=	GPLv2
+
+OPTIONS_DEFINE=	FILTERS ICONV PERL DOCS
+OPTIONS_RADIO=	MENUS
+OPTIONS_RADIO_MENUS=	MOTIF XAW XAW3D
+FILTERS_DESC=	Loadable filters
+MENUS_DESC=	Support for menus
+XAW_DESC=	X Athena Widgets
+XAW3D_DESC=	X Athena Widgets with 3D effect
+
+USE_XORG=	x11 xext xpm
 GNU_CONFIGURE=	yes
-USE_XORG=	x11 xpm xext
+CONFIGURE_ARGS=	--with-xpm \
+		--with-pixmapdir=${PREFIX}/share/pixmaps
+MAKEFILE=	makefile
 MAKE_JOBS_SAFE=	yes
 
-CONFIGURE_ARGS=	--prefix=${PREFIX} \
-		--with-libdir-path=${PREFIX}/lib/xvile \
-		--datadir=${PREFIX}/share/xvile
+DATADIR=	${PREFIX}/share/vile
+
 MAN1=		xvile.1
 
-OPTIONS= FILTERS "Add support for loadable filters" OFF
-OPTIONS+= ICONV "Add support for ICONV" OFF
-OPTIONS+= MENUS "Add support for menus" OFF
-OPTIONS+= PERL "Add support for perl functions" OFF
-OPTIONS+= XAW3D "Use XAW3D to get a 3D effect" OFF
+CONFLICTS_INSTALL=	vile-[0-9]*
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-pre-configure:
-.if ! defined(WITH_ICONV)
-	@${ECHO_MSG} "Choose the option ICONV if you want to make an xvile which includes"
-	@${ECHO_MSG} "ICONV functionality"
-.endif
-.if ! defined(WITH_MENUS)
-	@${ECHO_MSG} "To use xvile with menus, choose the option MENUS,"
-	@${ECHO_MSG} "which will also turn on Xaw. If you have Xaw3d, you can use it"
-	@${ECHO_MSG} "by also choosing the option XAW3D."
+.if ${PORT_OPTIONS:MFILTERS}
+CONFIGURE_ARGS+=	--with-loadable-filters
+PLIST_SUB+=	SO_EXT=".so"
+.else
+PLIST_SUB+=	SO_EXT=""
 .endif
 
-.if ! defined(WITH_PERL)
-	@${ECHO_MSG} "To use xvile with PERL, choose the option PERL."
-.endif
-
-.if ! defined(WITH_FILTERS)
-	@${ECHO_MSG} "Choose the option FILTERS if you want to make an xvile which will"
-	@${ECHO_MSG} "dynamically load filters as needed."
-.endif
-
-.if defined(WITH_ICONV)
-CONFIGURE_ARGS+=	--with-iconv
+.if ${PORT_OPTIONS:MICONV}
 USE_ICONV=	yes
+CONFIGURE_ARGS+=	--with-iconv
+PLIST_SUB+=	ICONV=""
 .else
-CONFIGURE_ARGS+=	--without-iconv
+CONFIGURE_ARGS+=	--without-iconv --without-locale
+PLIST_SUB+=	ICONV="@comment "
 .endif
 
-.if defined(WITH_MENUS)
-CONFIGURE_ARGS+= --with-screen=Xaw
-.if defined(WITH_XAW3D)
-LIB_DEPENDS+=	Xaw3d.${XAWVER}:${PORTSDIR}/x11-toolkits/Xaw3d
-CONFIGURE_ARGS+=	--with-Xaw3d
-.endif
+.if ${PORT_OPTIONS:MPERL}
+USE_PERL5=	yes
+CONFIGURE_ARGS+=	--with-perl
+PLIST_SUB+=	PERL=""
 .else
+PLIST_SUB+=	PERL="@comment "
+.endif
+
+.if empty(PORT_OPTIONS:MMOTIF) && empty(PORT_OPTIONS:MXAW) && empty(PORT_OPTIONS:MXAW3D)
 CONFIGURE_ARGS+=	--with-screen=x11
 .endif
 
-.if defined(WITH_PERL)
-CONFIGURE_ARGS+= --with-perl
-PLIST=		${PKGDIR}/pkg-plist.perl
-USE_PERL5=	yes
+.if ${PORT_OPTIONS:MMOTIF}
+USE_MOTIF=	yes
+CONFIGURE_ARGS+=	--with-screen=motif
 .endif
 
-.if defined(WITH_FILTERS)
-CONFIGURE_ARGS+=	--with-loadable-filters
-PLIST=		${PKGDIR}/pkg-plist.filt
+.if ${PORT_OPTIONS:MXAW}
+USE_XORG+=	xaw
+CONFIGURE_ARGS+=	--with-screen=athena
 .endif
 
-.if defined(WITH_PERL) && defined(WITH_FILTERS)
-PLIST=		${PKGDIR}/pkg-plist.perl+filt
+.if ${PORT_OPTIONS:MXAW3D}
+LIB_DEPENDS+=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d
+CONFIGURE_ARGS+=	--enable-colored-menus \
+			--with-Xaw3d \
+			--with-screen=xaw3d
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|^DOCDIR|#DOCDIR|' ${WRKSRC}/makefile.in
+	@${REINPLACE_CMD} -e \
+		's|^#!.*|#!${PERL}|' ${WRKSRC}/perl/vileget
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@if ! [ -d ${PREFIX}/share/doc/xvile ]; then ${MKDIR} ${PREFIX}/share/doc/xvile; fi
-	${INSTALL_DATA} ${WRKSRC}/doc/*.doc ${PREFIX}/share/doc/xvile
+	@${MKDIR} ${DATADIR}/macros
+	(cd ${WRKSRC}/macros && ${INSTALL_DATA} *.rc ${DATADIR}/macros)
+	@${MKDIR} ${DESKTOPDIR}
+	(cd ${WRKSRC}/macros && ${INSTALL_DATA} *.desktop ${DESKTOPDIR})
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	(cd ${WRKSRC}/doc && ${INSTALL_DATA} *.doc ${DOCSDIR})
 .endif
-	@if ! [ -d ${PREFIX}/share/xvile/macros ]; then ${MKDIR} ${PREFIX}/share/xvile/macros; fi
-	${INSTALL_DATA} ${WRKSRC}/macros/*.rc ${PREFIX}/share/xvile/macros
-	${INSTALL_SCRIPT} ${WRKSRC}/macros/vile-pager ${PREFIX}/share/xvile/macros
-	@${ECHO_MSG} "Look in ${PREFIX}/share/doc/xvile for documentation."
-	@${ECHO_MSG} "Look in ${PREFIX}/share/xvile/macros for macros."
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
