@@ -8,12 +8,15 @@
  extern char *yyget_text (void);
  extern void yyset_lineno (int);
  extern void yyset_in (FILE *);
-@@ -76,7 +75,7 @@ static char rcf_linebuf[CF_LINEBUFSIZE];
+@@ -76,9 +75,9 @@ static char rcf_linebuf[CF_LINEBUFSIZE];
  #define YYDEBUG 1
  #define DP \
  	if (cf_debug) { \
 -		fprintf(CF_ERRDEV, "%s:%d:%d[%s] len=%d\n", \
-+		fprintf(CF_ERRDEV, "%s:%d:%d[%s] len=%ld\n", \
++		fprintf(CF_ERRDEV, "%s:%d:%d[%s] len=%lu\n", \
  		    rcf_istk[rcf_istkp].path, rcf_istk[rcf_istkp].lineno, \
- 		    yy_start, yytext, yyleng); \
+-		    yy_start, yytext, yyleng); \
++		    yy_start, yytext, (unsigned long) yyleng); \
  	}
+ #else
+ #define DP
