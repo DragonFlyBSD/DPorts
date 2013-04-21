@@ -2,11 +2,11 @@
 # Date created:				18 October 2011
 # Whom:					Ryan Steinmetz <zi@FreeBSD.org>
 #
-# $FreeBSD: ports/security/pam_krb5-rh/Makefile,v 1.4 2012/12/15 03:37:53 svnexp Exp $
+# $FreeBSD: ports/security/pam_krb5-rh/Makefile,v 1.5 2013/02/26 13:47:32 svnexp Exp $
 #
 
 PORTNAME=	pam_krb5
-DISTVERSION=	2.4.1
+DISTVERSION=	2.4.4
 CATEGORIES=	security
 MASTER_SITES=	https://fedorahosted.org/released/${PORTNAME}/ \
 		http://mirrors.rit.edu/zi/
