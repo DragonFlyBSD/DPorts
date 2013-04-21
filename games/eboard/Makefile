@@ -2,12 +2,12 @@
 # Date created:				22 June 2001
 # Whom:					petef@FreeBSD.org
 #
-# $FreeBSD: ports/games/eboard/Makefile,v 1.45 2012/11/17 05:57:36 svnexp Exp $
+# $FreeBSD: ports/games/eboard/Makefile,v 1.47 2013/01/23 15:05:34 svnexp Exp $
 #
 
 PORTNAME=	eboard
 PORTVERSION=	1.1.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	SF \
 		SF/${PORTNAME}/eboard-extras/pack%201%20patchlevel%202/:p1 \
@@ -44,9 +44,9 @@ JOYSTICK_DESC=	Enable joystick support
 
 DESKTOP_ENTRIES="eboard" \
 		"Play chess" \
-		"eboard.xpm" \
+		"${PREFIX}/share/pixmaps/eboard.xpm" \
 		"eboard" \
-		"Application;Game;" \
+		"Game;BoardGame;GTK;" \
 		true
 
 .include <bsd.port.options.mk>
