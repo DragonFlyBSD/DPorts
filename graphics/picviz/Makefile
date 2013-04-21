@@ -1,9 +1,5 @@
-# New ports collection makefile for:	picviz
-# Date created:         08 Nov 2008
-# Whom:                 Tim Hemel
-#
-# $FreeBSD: ports/graphics/picviz/Makefile,v 1.7 2012/12/10 19:24:01 svnexp Exp $
-#
+# Created by: Tim Hemel
+# $FreeBSD: graphics/picviz/Makefile 314960 2013-03-22 20:06:14Z makc $
 
 PORTNAME=	picviz
 PORTVERSION=	0.4
@@ -18,9 +14,8 @@ COMMENT=	Parallel coordinates plotter
 LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre \
 		cairo.2:${PORTSDIR}/graphics/cairo
 
-USE_CMAKE=	yes
 USE_LDCONFIG=	yes
-USE_BISON=	build
+USES=		bison cmake
 
 MAN1=		pcv.1
 
