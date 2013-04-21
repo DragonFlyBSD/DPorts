@@ -1,14 +1,9 @@
-# ex:ts=8
-# Ports collection makefile for:	latex2slides
-# Date created:			May 23, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/print/latex2slides/Makefile,v 1.14 2012/11/17 06:00:51 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: print/latex2slides/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
 
 PORTNAME=	latex2slides
 PORTVERSION=	1.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	SF
 EXTRACT_SUFX=	.tgz
@@ -18,7 +13,7 @@ COMMENT=	Produces a set of HTML/JPEG slides from a TeX or LaTeX source
 
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick \
 		dvips:${PORTSDIR}/print/teTeX \
-		${PYTHON_SITELIBDIR}/_tkinter.so:${PORTSDIR}/x11-toolkits/py-tkinter
+		${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
 
 USE_PYTHON=	yes
 NO_BUILD=	yes
