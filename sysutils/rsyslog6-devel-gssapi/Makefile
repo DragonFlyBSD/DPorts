@@ -12,6 +12,8 @@ MNAME=	gssapi
 
 CONFIGURE_ARGS+=--enable-gssapi-krb5
 
+LIB_DEPENDS+= krb5:${PORTSDIR}/security/krb5
+
 PLIST_FILES+=	lib/rsyslog/imgssapi.la \
 		lib/rsyslog/imgssapi.so \
 		lib/rsyslog/lmgssutil.la \
