@@ -80,7 +80,7 @@
 +	mount_tmpfs -s 100M  tmpfs ${JAILMNT}/tmp
 +	mount_tmpfs -s 125M  tmpfs ${JAILMNT}/var
 +	mount_tmpfs -s 64K   tmpfs ${JAILMNT}/compat
-+	mount_tmpfs -s 2500M tmpfs ${JAILMNT}/usr/local
++	mount_tmpfs -s 3G    tmpfs ${JAILMNT}/usr/local
 +
 +	mkdir -p ${JAILMNT}/compat/linprocfs \
 +		 ${JAILMNT}/compat/linux/proc \
@@ -341,7 +341,7 @@
 +	mount_tmpfs -s 12M   tmpfs ${mnt}/etc
 +	mount_tmpfs -s 125M  tmpfs ${mnt}/var
 +	mount_tmpfs -s 64K   tmpfs ${mnt}/compat
-+	mount_tmpfs -s 2500M tmpfs ${mnt}/usr/local
++	mount_tmpfs -s 3G    tmpfs ${mnt}/usr/local
 +	mkdir -p ${mnt}/compat/linprocfs \
 +		 ${mnt}/compat/linux/proc \
 +		 ${mnt}/compat/svr4
