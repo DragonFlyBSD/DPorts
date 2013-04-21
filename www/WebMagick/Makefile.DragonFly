@@ -1,0 +1,5 @@
+REPLACE_PERL+=	utils/aub \
+		utils/aub_hook \
+		utils/help2man \
+		utils/make_dir_index.pl \
+		utils/texi2html
