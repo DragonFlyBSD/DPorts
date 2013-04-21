@@ -2,12 +2,12 @@
 # Date created:		4 Feb 2005
 # Whom:			sumikawa
 #
-# $FreeBSD: ports/security/racoon2/Makefile,v 1.66 2012/11/17 06:01:18 svnexp Exp $
+# $FreeBSD: security/racoon2/Makefile 315928 2013-04-17 05:45:56Z sumikawa $
 #
 
 PORTNAME=	racoon2
 PORTVERSION=	20100526a
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security net ipv6
 MASTER_SITES=	ftp://ftp.racoon2.wide.ad.jp/pub/racoon2/
 EXTRACT_SUFX=	.tgz
@@ -21,6 +21,7 @@ USE_OPENSSL=	YES
 USE_AUTOTOOLS=	autoconf
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc/racoon2
+CONFIGURE_ENV=	YACC=/usr/bin/yacc
 
 OPTIONS=	KINK "enable KINK support" off
 
