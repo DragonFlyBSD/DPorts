@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	cssed
-# Date created:			Jul 29, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/cssed/Makefile,v 1.17 2012/11/17 06:02:30 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/cssed/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	cssed
 PORTVERSION=	0.4.0
@@ -15,7 +10,8 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An application to help CSS style sheets creation and maintenance
 
-USE_GNOME=	gnomehack gtk20 libxml2
+USES=        pathfix
+USE_GNOME=	gtk20 libxml2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

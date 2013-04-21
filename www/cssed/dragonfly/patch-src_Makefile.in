@@ -1,11 +1,11 @@
---- src/Makefile.in.orig	2013-01-19 04:30:24.409402000 +0100
-+++ src/Makefile.in	2013-01-19 04:31:40.939509000 +0100
-@@ -322,7 +322,7 @@
- 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
- cssed$(EXEEXT): $(cssed_OBJECTS) $(cssed_DEPENDENCIES) 
- 	@rm -f cssed$(EXEEXT)
--	$(cssed_LINK) $(cssed_LDFLAGS) $(cssed_OBJECTS) $(cssed_LDADD) $(LIBS)
-+	$(cssed_LINK) $(cssed_LDFLAGS) $(cssed_OBJECTS) $(cssed_LDADD) $(LIBS) $(INTLLIBS)
+--- src/Makefile.in.orig	2013-04-21 12:51:01.239215000 +0000
++++ src/Makefile.in
+@@ -262,7 +262,7 @@ cssed_SOURCES = \
+ 	xpm-icons.h \
+ 	filetypes.h
  
- mostlyclean-compile:
- 	-rm -f *.$(OBJEXT)
+-cssed_LDADD = @PACKAGE_LIBS@  ../scintilla/gtk/libscintilla.a ../libcroco/parser/libcroco.a
++cssed_LDADD = @PACKAGE_LIBS@ -lgmodule-2.0 -lintl ../scintilla/gtk/libscintilla.a ../libcroco/parser/libcroco.a
+ cssed_LINK = g++ -DGTK -o cssed
+ all: all-am
+ 
