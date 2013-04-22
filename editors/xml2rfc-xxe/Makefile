@@ -1,6 +1,6 @@
 # Created by: Bill Fenner
 #
-# $FreeBSD: ports/editors/xml2rfc-xxe/Makefile,v 1.17 2012/11/17 05:57:19 svnexp Exp $
+# $FreeBSD: editors/xml2rfc-xxe/Makefile 305526 2012-10-08 10:38:47Z dougb $
 
 PORTNAME=	xml2rfc-xxe
 PORTVERSION=	0.8.0
@@ -26,6 +26,7 @@ do-install:
 	@cd ${WRKDIR} && tar cf - xml2rfc | \
 		tar -C ${PREFIX}/lib/${XXE_DIR}/addon -xf -
 
-.include "../xxe/Makefile.inc"
+IGNORE= Do not build until editors/xxe builds again
+#.include "../xxe/Makefile.inc"
 
 .include <bsd.port.mk>
