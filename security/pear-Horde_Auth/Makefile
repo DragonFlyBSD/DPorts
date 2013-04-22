@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/security/pear-Horde_Auth/Makefile,v 1.18 2013/02/12 17:39:03 svnexp Exp $
+# $FreeBSD: security/pear-Horde_Auth/Makefile 316218 2013-04-21 22:16:15Z mm $
 
 PORTNAME=	Horde_Auth
-PORTVERSION=	2.0.3
+PORTVERSION=	2.0.4
 CATEGORIES=	security www pear
 
 MAINTAINER=	horde@FreeBSD.org
