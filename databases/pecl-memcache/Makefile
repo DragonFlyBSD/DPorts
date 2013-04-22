@@ -1,8 +1,8 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: ports/databases/pecl-memcache/Makefile,v 1.27 2013/02/08 01:12:05 svnexp Exp $
+# $FreeBSD: databases/pecl-memcache/Makefile 316066 2013-04-18 17:42:12Z sunpoet $
 
 PORTNAME=	memcache
-PORTVERSION=	3.0.7
+PORTVERSION=	3.0.8
 CATEGORIES=	databases
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
