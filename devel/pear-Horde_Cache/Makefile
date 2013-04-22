@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/pear-Horde_Cache/Makefile,v 1.6 2012/12/12 15:19:47 svnexp Exp $
+# $FreeBSD: devel/pear-Horde_Cache/Makefile 316221 2013-04-21 23:02:58Z mm $
 
 PORTNAME=	Horde_Cache
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.4
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	pear-
 
@@ -16,7 +16,7 @@ OPTIONS_DEFINE=	APC MEMCACHE
 APC_DESC=	Require APC PHP extension
 MEMCACHE_DESC=	Enable Memcache support
 		
-USE_HORDE_RUN=	Horde_Exception Horde_Util
+USE_HORDE_RUN=	Horde_Compress_Fast Horde_Exception Horde_Util
 USE_PHP=	hash
 
 .include <bsd.port.pre.mk>
