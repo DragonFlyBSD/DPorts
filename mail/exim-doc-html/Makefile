@@ -26,8 +26,8 @@ DOCFORMAT?=	html
 DISTDOCFORMAT?=	${DOCFORMAT}
 
 .if ${DOCFORMAT} == "info"
-BUILD_DEPENDS+=	${LOCALBASE}/bin/makeinfo:${PORTSDIR}/print/texinfo
-MAKEINFO=	${LOCALBASE}/bin/makeinfo
+BUILD_DEPENDS+=	makeinfo:${PORTSDIR}/print/texinfo
+MAKEINFO=	makeinfo
 .endif
 
 .if !defined(NOPORTDOCS)
