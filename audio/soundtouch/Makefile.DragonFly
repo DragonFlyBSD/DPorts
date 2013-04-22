@@ -1,0 +1,3 @@
+.if ${ARCH} == "i386"
+CONFIGURE_ARGS+=  --enable-x86-optimizations=no
+.endif
