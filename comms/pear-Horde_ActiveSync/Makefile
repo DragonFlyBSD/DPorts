@@ -2,11 +2,11 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: comms/pear-Horde_ActiveSync/Makefile 313223 2013-03-02 11:05:07Z mm $
+# $FreeBSD: comms/pear-Horde_ActiveSync/Makefile 316218 2013-04-21 22:16:15Z mm $
 #
 
 PORTNAME=	Horde_ActiveSync
-PORTVERSION=	2.3.0
+PORTVERSION=	2.3.6
 CATEGORIES=	comms www pear
 
 MAINTAINER=	horde@FreeBSD.org
