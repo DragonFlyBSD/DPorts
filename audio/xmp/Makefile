@@ -1,8 +1,8 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: audio/xmp/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: audio/xmp/Makefile 316194 2013-04-21 18:36:14Z ehaupt $
 
 PORTNAME=	xmp
-PORTVERSION=	4.0.1
+PORTVERSION=	4.0.3
 PORTEPOCH=	1
 CATEGORIES=	audio
 MASTER_SITES=	SF
