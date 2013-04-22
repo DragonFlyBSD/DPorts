@@ -1,10 +1,10 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: textproc/libxml2/Makefile 315735 2013-04-05 19:39:31Z bdrewery $
+# $FreeBSD: textproc/libxml2/Makefile 316079 2013-04-18 22:40:33Z jkim $
 #    $MCom: ports/textproc/libxml2/Makefile,v 1.15 2012/11/26 19:55:23 kwm Exp $
 
 PORTNAME=	libxml2
 PORTVERSION=	2.8.0
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES?=	textproc gnome
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/ \
 		http://xmlsoft.org/sources/ \
@@ -27,9 +27,8 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS?=--with-iconv=${LOCALBASE} \
 		--with-html-dir=${PREFIX}/share/doc \
 		--with-html-subdir=${PORTNAME} \
+		--with-lzma=/usr \
 		--without-python
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 .if !defined(MASTERDIR)
 MAN1=		xml2-config.1 xmllint.1 xmlcatalog.1
