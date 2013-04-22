@@ -1,8 +1,8 @@
 # Created by: Frank Fischer
-# $FreeBSD: ports/lang/abcl/Makefile,v 1.12 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: lang/abcl/Makefile 316110 2013-04-19 15:42:58Z olgeni $
 
 PORTNAME=	abcl
-PORTVERSION=	1.0.1
+PORTVERSION=	1.1.1
 CATEGORIES=	lang lisp java
 MASTER_SITES=	http://common-lisp.net/project/armedbear/releases/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
