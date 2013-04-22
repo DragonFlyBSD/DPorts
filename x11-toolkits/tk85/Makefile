@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/x11-toolkits/tk85/Makefile,v 1.44 2013/02/07 11:16:08 svnexp Exp $
+# $FreeBSD: x11-toolkits/tk85/Makefile 316025 2013-04-18 08:20:59Z gahr $
 
 PORTNAME=	tk
-PORTVERSION=	8.5.13
+PORTVERSION=	8.5.14
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/tcl/Tcl/${PORTVERSION}
 DISTNAME=	${PORTNAME}${PORTVERSION}-src
@@ -82,6 +82,12 @@ INSTALL_TARGET+=install-doc
 TKBASE?=	${PORTSDIR}/${PKGCATEGORY}/${LATEST_LINK}
 
 post-patch:
+	${REINPLACE_CMD} -e \
+	    's|@TK_BUILD_LIB_SPEC@|@TK_LIB_SPEC@|; \
+	     s|@TK_BUILD_STUB_LIB_SPEC@|@TK_STUB_LIB_SPEC@|; \
+	     s|@TK_BUILD_STUB_LIB_PATH@|@TK_STUB_LIB_PATH@|; \
+	     s|@TK_SRC_DIR@|${PREFIX}/include/tk${TK_VER}|' \
+	     ${WRKSRC}/tkConfig.sh.in
 	@${REINPLACE_CMD} -e 's|X11/Intrinsic.h|X11/Xlib.h|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|@TK_SHARED_BUILD@|#@TK_SHARED_BUILD@|g; s|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/Makefile.in
 
