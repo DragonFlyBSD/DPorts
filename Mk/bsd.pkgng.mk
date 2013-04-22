@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 315732 2013-04-05 09:24:39Z bapt $
+# $FreeBSD: Mk/bsd.pkgng.mk 316243 2013-04-22 15:51:07Z bapt $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -259,8 +259,14 @@ do-package: ${TMPPLIST}
 		fi; \
 	fi;
 	@if ${PKG_CREATE} -o ${PKGREPOSITORY} ${PKGNAME}; then \
-		if [ -d ${PACKAGES} ]; then \
-			cd ${.CURDIR} && eval ${MAKE} package-links; \
+		if [ "${PKGORIGIN}" = "ports-mgmt/pkg" ]; then \
+			if [ ! -d ${PKGLATESTREPOSITORY} ]; then \
+				if ! ${MKDIR} ${PKGLATESTREPOSITORY}; then \
+					${ECHO_MSG} "=> Can't create directory ${PKGLATESTREPOSITORY}."; \
+					exit 1; \
+				fi; \
+			fi ; \
+			${LN} -s ../${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ${PKGLATESTFILE} ; \
 		fi; \
 	else \
 		cd ${.CURDIR} && eval ${MAKE} delete-package; \

@@ -1940,7 +1940,7 @@ USE_LINUX=	${OVERRIDE_LINUX_BASE_PORT}
 .	if exists(${PORTSDIR}/emulators/linux_base-${USE_LINUX})
 LINUX_BASE_PORT=	${LINUXBASE}/bin/sh:${PORTSDIR}/emulators/linux_base-${USE_LINUX}
 .	else
-.		if ${USE_LINUX:L} == "yes"
+.		if ${USE_LINUX:tl} == "yes"
 .			if ${LINUX_OSRELEASE} == "2.4.2"
 LINUX_BASE_PORT=	${LINUXBASE}/etc/fedora-release:${PORTSDIR}/emulators/linux_base-fc4
 .			else

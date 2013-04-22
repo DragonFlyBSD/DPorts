@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.options.desc.mk 315216 2013-03-25 12:18:18Z makc $
+# $FreeBSD: Mk/bsd.options.desc.mk 316106 2013-04-19 14:47:09Z danfe $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -190,7 +190,7 @@ LANG_FI_DESC?=		Finnish language support
 LANG_FR_DESC?=		French language support
 LANG_FY_DESC?=		Frisian language support
 LANG_GA_DESC?=		Irish language support
-LANG_GB_DESC?=		English GB language support
+LANG_GB_DESC?=		English (GB) language support
 LANG_GD_DESC?=		Gaelic (Scotland) language support
 LANG_GL_DESC?=		Galician language support
 LANG_GU_DESC?=		Gujarati language support
@@ -247,9 +247,8 @@ LANG_TW_DESC?=		Taiwanese language support
 LANG_UA_DESC?=		Ukrainian language support
 LANG_UK_DESC?=		Ukrainian language support
 LANG_US_DESC?=		English (US) language support
-LANG_US_DESC?=		English US language support
 LANG_VI_DESC?=		Vietnamese language support
-LANG_ZA_DESC?=		English (South Afrika) language support
+LANG_ZA_DESC?=		English (South Africa) language support
 LANG_ZU_DESC?=		Zulu language support
 LASH_DESC?=		LASH audio support
 LASTFM_DESC?=		Last.fm streaming support
@@ -312,6 +311,7 @@ MUSEPACK_DESC?=		MPC audio format support
 MYSQL_DESC?=		MySQL database support
 MYSQL_JDBC_DESC?=	JDBC connection to MySQL databases
 NAS_DESC?=		Network Audio System support
+NCURSES_DESC?=		Console (text) interface support
 NETCDF_DESC?=		NetCDF data format support
 NETPBM_DESC?=		Netpbm graphics toolkit support
 NFS_DESC?=		Network File System support
