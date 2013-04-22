@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/rcs/Makefile,v 1.2 2012/11/17 05:56:56 svnexp Exp $
+# $FreeBSD: devel/rcs/Makefile 315898 2013-04-16 20:27:58Z zeising $
 
 PORTNAME=	rcs
-PORTVERSION=	5.8.1
+PORTVERSION=	5.8.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
