@@ -1,8 +1,8 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/e16/Makefile 315449 2013-03-28 08:01:57Z gahr $
+# $FreeBSD: x11-wm/e16/Makefile 316234 2013-04-22 15:10:48Z gahr $
 
 PORTNAME=	e16
-PORTVERSION=	1.0.12
+PORTVERSION=	1.0.13
 CATEGORIES=	x11-wm enlightenment
 MASTER_SITES=	SF/enlightenment/${PORTNAME}/${PORTVERSION}/
 
@@ -22,6 +22,7 @@ USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--disable-rpath --enable-mans SHELL=/bin/sh
+CFLAGS+=	-g -O0
 
 .include <bsd.port.options.mk>
 
