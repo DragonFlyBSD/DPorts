@@ -1,17 +1,15 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: ports/devel/omake/Makefile,v 1.14 2012/12/13 07:08:00 svnexp Exp $
+# $FreeBSD: devel/omake/Makefile 315988 2013-04-17 16:59:55Z bf $
 
 PORTNAME=	omake
-PORTVERSION=	${OMVERSION}rc1
+DISTVERSION=	0.9.8.6-0.rc1
 CATEGORIES=	devel
 MASTER_SITES=	http://main.metaprl.org/download/omake/
-DISTNAME=	${PORTNAME}-${OMVERSION}-0.rc1
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	bf@FreeBSD.org
 COMMENT=	A flexible build system
 
-OMVERSION=	0.9.8.6
-WRKSRC=		${WRKDIR}/${PORTNAME}-${OMVERSION}
+WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION:C|-.*||}
 USE_OCAML=	yes
 NO_OCAML_RUNDEPENDS=yes
 USE_NCURSES=	yes
@@ -41,6 +39,20 @@ post-patch:
 		's|cp -f -m 444|$$(BSD_INSTALL_DATA)| ; \
 		 s|cp -f -m 555|$$(BSD_INSTALL_PROGRAM)|' ${WRKSRC}/${f}
 .endfor
+	@${REINPLACE_CMD} -e 's| -j2 | |' ${WRKSRC}/Makefile
+.if ${NCURSESBASE} == "/usr"
+.for f in lib/configure/ncurses.om src/libmojave-external/cutil/lm_terminfo.c
+	@${REINPLACE_CMD} -E -e 's|ncurses/(term\.h)|\1|' ${WRKSRC}/${f}
+.endfor
+.endif
+
+check regression-test test: build
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_ARGS} boot/omake check
+	@${FIND} -ds ${WRKSRC}/test -type f -name 'result.log' -print0 | \
+		${XARGS} -0tI @ ${CAT} @
+
+bench: build
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_ARGS} boot/omake bench
 
 post-install:
 	@(cd ${WRKSRC}/doc/info \
