@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: mail/pear-Horde_Imap_Client/Makefile 313223 2013-03-02 11:05:07Z mm $
+# $FreeBSD: mail/pear-Horde_Imap_Client/Makefile 316218 2013-04-21 22:16:15Z mm $
 
 PORTNAME=	Horde_Imap_Client
-PORTVERSION=	2.7.0
+PORTVERSION=	2.8.2
 CATEGORIES=	mail www pear
 PKGNAMEPREFIX=	pear-
 
