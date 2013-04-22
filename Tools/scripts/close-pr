@@ -191,7 +191,7 @@ fi
 
 # here's where we actually call the editor.
 cp $new $new.old
-/usr/local/bin/perl -pi -e "s|>State:.*|>State:          closed|" $new
+/usr/bin/perl -pi -e "s|>State:.*|>State:          closed|" $new
 if cmp -s $new.old $new ; then
   echo "$prog: PR not changed"
   $PR_EDIT --unlock $pr_id

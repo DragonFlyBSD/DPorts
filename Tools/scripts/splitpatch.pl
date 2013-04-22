@@ -1,4 +1,4 @@
-#! /usr/local/bin/perl -w
+#! /usr/bin/perl -w
 # ----------------------------------------------------------------------------
 # "THE BEER-WARE LICENSE" (Revision 42)
 # <tobez@FreeBSD.org> wrote this file.  As long as you retain this notice you
