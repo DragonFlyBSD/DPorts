@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/pear-channel-horde/bsd.horde.mk,v 1.16 2012/12/18 07:33:46 svnexp Exp $
+# $FreeBSD: devel/pear-channel-horde/bsd.horde.mk 316221 2013-04-21 23:02:58Z mm $
 
 MASTER_SITES?=	http://pear.horde.org/get/
 
@@ -27,6 +27,7 @@ horde-Horde_Browser-DEPEND=	${PEARDIR}/Horde/Browser.php:${PORTSDIR}/www/pear-Ho
 horde-Horde_Cache-DEPEND=	${PEARDIR}/Horde/Cache.php:${PORTSDIR}/devel/pear-Horde_Cache
 horde-Horde_Cli-DEPEND=		${PEARDIR}/Horde/Cli.php:${PORTSDIR}/devel/pear-Horde_Cli
 horde-Horde_Compress-DEPEND=	${PEARDIR}/Horde/Compress.php:${PORTSDIR}/archivers/pear-Horde_Compress
+horde-Horde_Compress_Fast-DEPEND=	${PEARDIR}/Horde/Compress/Fast.php:${PORTSDIR}/archivers/pear-Horde_Compress_Fast
 horde-Horde_Constraint-DEPEND=	${PEARDIR}/Horde/Constraint.php:${PORTSDIR}/devel/pear-Horde_Constraint
 horde-Horde_Controller-DEPEND=	${PEARDIR}/Horde/Controller.php:${PORTSDIR}/devel/pear-Horde_Controller
 horde-Horde_Core-DEPEND=	${PEARDIR}/Horde.php:${PORTSDIR}/devel/pear-Horde_Core

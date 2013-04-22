@@ -2,7 +2,7 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/pear-channel-horde/Makefile,v 1.6 2012/11/17 05:56:40 svnexp Exp $
+# $FreeBSD: devel/pear-channel-horde/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	horde
