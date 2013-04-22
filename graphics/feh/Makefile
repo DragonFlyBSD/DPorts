@@ -1,8 +1,9 @@
 # Created by: Jeremy Norris <ishmael127@home.com>
-# $FreeBSD: graphics/feh/Makefile 315716 2013-04-04 12:45:51Z zeising $
+# $FreeBSD: graphics/feh/Makefile 315760 2013-04-08 13:19:19Z zeising $
 
 PORTNAME=	feh
 PORTVERSION=	2.9.1
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://feh.finalrewind.org/ \
 		${MASTER_SITE_LOCAL}
@@ -36,7 +37,7 @@ post-patch:
 		${WRKSRC}/Makefile
 
 post-install:
-.if ${PORT_OPTIONS:MDOC}
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 .endif
