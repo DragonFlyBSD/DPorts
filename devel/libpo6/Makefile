@@ -1,8 +1,8 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/libpo6/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/libpo6/Makefile 316153 2013-04-20 15:07:06Z pawel $
 
 PORTNAME=	libpo6
-PORTVERSION=	0.2.3
+PORTVERSION=	0.3.1
 CATEGORIES=	devel
 MASTER_SITES=	http://hyperdex.org/src/
 
