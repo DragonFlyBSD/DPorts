@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/comms/pear-Horde_SyncMl/Makefile,v 1.11 2013/01/10 18:34:35 svnexp Exp $
+# $FreeBSD: comms/pear-Horde_SyncMl/Makefile 316218 2013-04-21 22:16:15Z mm $
 
 PORTNAME=	Horde_SyncMl
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.3
 CATEGORIES=	comms www pear
 
 MAINTAINER=	horde@FreeBSD.org
