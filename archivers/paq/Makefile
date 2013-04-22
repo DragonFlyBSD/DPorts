@@ -1,11 +1,11 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: archivers/paq/Makefile 315495 2013-03-28 19:52:13Z bf $
+# $FreeBSD: archivers/paq/Makefile 316195 2013-04-21 19:06:54Z bf $
 
 PORTNAME=	paq
-PORTVERSION=	20130325
+PORTVERSION=	20130419
 CATEGORIES=	archivers
 MASTER_SITES=	http://mattmahoney.net/dc/ LOCAL/bf/paq/
-DISTFILES=	wbpe110.zip zpaq623.zip zpipe.201.zip
+DISTFILES=	wbpe110.zip zpaq625.zip zpipe.201.zip
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${DISTFILES:M*.zip}
 
