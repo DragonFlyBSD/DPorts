@@ -1,9 +1,8 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/krb5/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/krb5/Makefile 315921 2013-04-17 00:41:37Z cy $
 
 PORTNAME=		krb5
-PORTVERSION=		1.11.1
-PORTREVISION=		1
+PORTVERSION=		1.11.2
 CATEGORIES=		security
 MASTER_SITES=		http://web.mit.edu/kerberos/dist/${PORTNAME}/${PORTVERSION:C/^[0-9]*\.[0-9]*/&X/:C/X\.[0-9]*$//:C/X//}/
 DISTNAME=		${PORTNAME}-${PORTVERSION}-signed
@@ -56,7 +55,7 @@ CONFIGURE_ARGS+=	--enable-dns-for-realm
 
 .include "${PORTSDIR}/Mk/bsd.openssl.mk"
 
-MAN1=			k5srvutil.1 kadmin.1 krb5-send-pr.1 \
+MAN1=			k5srvutil.1 kadmin.1 krb5-config.1 krb5-send-pr.1 \
 			kpasswd.1 klist.1 kinit.1 kdestroy.1 kswitch.1 ksu.1 \
 			ktutil.1 \
 			sclient.1 kvno.1 compile_et.1
