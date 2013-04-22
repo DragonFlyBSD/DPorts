@@ -1,8 +1,8 @@
 # Created by: Artem Zaytsev <a.arepo@gmail.com>
-# $FreeBSD: sysutils/pp/Makefile 314845 2013-03-21 14:22:13Z danfe $
+# $FreeBSD: sysutils/pp/Makefile 316101 2013-04-19 13:19:45Z culot $
 
 PORTNAME=	pp
-PORTVERSION=	1.02
+PORTVERSION=	1.03
 CATEGORIES=	sysutils
 MASTER_SITES=	GOOGLE_CODE \
 		http://de.nologin.ru/distfiles/sysutils/pp/
