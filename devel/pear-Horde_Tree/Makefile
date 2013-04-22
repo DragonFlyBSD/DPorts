@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/pear-Horde_Tree/Makefile,v 1.5 2012/12/12 15:19:48 svnexp Exp $
+# $FreeBSD: devel/pear-Horde_Tree/Makefile 316218 2013-04-21 22:16:15Z mm $
 
 PORTNAME=	Horde_Tree
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
