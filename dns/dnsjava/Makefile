@@ -1,8 +1,8 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: dns/dnsjava/Makefile 313531 2013-03-06 17:30:01Z lippe $
+# $FreeBSD: dns/dnsjava/Makefile 316192 2013-04-21 18:31:29Z bdrewery $
 
 PORTNAME=	dnsjava
-PORTVERSION=	2.1.4
+PORTVERSION=	2.1.5
 CATEGORIES=	dns java
 MASTER_SITES=	http://www.dnsjava.org/download/
 
