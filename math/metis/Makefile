@@ -1,8 +1,8 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: math/metis/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: math/metis/Makefile 316240 2013-04-22 15:30:58Z bf $
 
 PORTNAME=	metis
-PORTVERSION=	5.0.3
+PORTVERSION=	5.1.0
 CATEGORIES=	math
 MASTER_SITES=	http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/
 
