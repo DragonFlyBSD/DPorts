@@ -1,9 +1,8 @@
 # Created by: Thomas Sandford <freebsduser@paradisegreen.co.uk>
-# $FreeBSD: ports/www/drush/Makefile,v 1.11 2013/02/04 14:46:05 svnexp Exp $
+# $FreeBSD: www/drush/Makefile 316092 2013-04-19 09:21:28Z culot $
 
 PORTNAME=	drush
-PORTVERSION=	5.8
-PORTREVISION=	1
+PORTVERSION=	5.9
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 DISTNAME=	drush-7.x-${PORTVERSION}
