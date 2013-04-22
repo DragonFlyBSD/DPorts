@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/lang/tcl85/Makefile,v 1.48 2013/02/07 11:56:32 svnexp Exp $
+# $FreeBSD: lang/tcl85/Makefile 316025 2013-04-18 08:20:59Z gahr $
 
 PORTNAME=	tcl
-PORTVERSION=	8.5.13
+PORTVERSION=	8.5.14
 CATEGORIES=	lang
 MASTER_SITES=	SF/tcl/Tcl/${PORTVERSION}
 DISTNAME=	tcl${PORTVERSION}-src
@@ -69,6 +69,14 @@ INSTALL_TARGET+=install-tzdata
 PLIST_SUB+=		TZDATA="@comment "
 CONFIGURE_ARGS+=--without-tzdata
 .endif
+
+post-patch:
+	${REINPLACE_CMD} -e \
+	    's|@TCL_BUILD_LIB_SPEC@|@TCL_LIB_SPEC@|; \
+	     s|@TCL_BUILD_STUB_LIB_SPEC@|@TCL_STUB_LIB_SPEC@|; \
+	     s|@TCL_BUILD_STUB_LIB_PATH@|@TCL_STUB_LIB_PATH@|; \
+	     s|@TCL_SRC_DIR@|${PREFIX}/include/tcl${TCL_VER}|' \
+	     ${WRKSRC}/tclConfig.sh.in
 
 post-configure:
 	${REINPLACE_CMD} \
