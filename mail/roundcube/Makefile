@@ -1,4 +1,4 @@
-# $FreeBSD: mail/roundcube/Makefile 315455 2013-03-28 10:23:59Z ale $
+# $FreeBSD: mail/roundcube/Makefile 316164 2013-04-20 19:07:00Z olgeni $
 
 PORTNAME=	roundcube
 DISTVERSION=	0.8.6
@@ -36,7 +36,7 @@ PGSQL_DESC=	Use PostgreSQL backend
 SQLITE_DESC=	Use SQLite backend (needs PHP 5.3 or below)
 SSL_DESC=	Enable SSL support (imaps or google spellcheck)
 LDAP_DESC=	Enable LDAP support (address book)
-GD_DESC=	Enable GD support (image convertion)
+GD_DESC=	Enable GD support (image conversion)
 PSPELL_DESC=	Enable PSpell support (internal spellcheck)
 NSC_DESC=	Install network spellchecker
 
