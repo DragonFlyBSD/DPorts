@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::LibXSLT
-# Date created:		6 June 2001
-# Whom:			Dom Mitchell <dom@happygiraffe.net>
-#
-# $FreeBSD: ports/textproc/p5-XML-LibXSLT/Makefile,v 1.25 2012/11/17 06:02:13 svnexp Exp $
-#
+# Created by: Dom Mitchell <dom@happygiraffe.net>
+# $FreeBSD: textproc/p5-XML-LibXSLT/Makefile 316227 2013-04-22 12:53:58Z bapt $
 
 PORTNAME=	XML-LibXSLT
 PORTVERSION=	1.77
@@ -11,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to the GNOME XSLT library
 
 BUILD_DEPENDS=	p5-XML-LibXML>=1.70:${PORTSDIR}/textproc/p5-XML-LibXML
