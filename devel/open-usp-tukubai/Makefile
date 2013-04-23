@@ -2,12 +2,11 @@
 # Date created:				1 March 2012
 # Whom:					Daichi GOTO <daichi@freebsd.org>
 #
-# $FreeBSD: ports/devel/open-usp-tukubai/Makefile,v 1.5 2012/11/17 05:56:03 svnexp Exp $
+# $FreeBSD: devel/open-usp-tukubai/Makefile 315933 2013-04-17 06:42:52Z daichi $
 #
 
 PORTNAME=	open-usp-tukubai
-PORTVERSION=	20120802
-PORTREVISION=	1
+PORTVERSION=	20130417
 CATEGORIES=	devel
 MASTER_SITES=	https://uec.usp-lab.com/TUKUBAI/DOWNLOAD/
 
