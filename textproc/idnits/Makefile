@@ -1,8 +1,8 @@
 # Created by: fenner@FreeBSD.Org
-# $FreeBSD: ports/textproc/idnits/Makefile,v 1.34 2012/12/13 04:31:47 svnexp Exp $
+# $FreeBSD: textproc/idnits/Makefile 315840 2013-04-16 16:15:12Z sunpoet $
 
 PORTNAME=	idnits
-PORTVERSION=	2.12.14
+PORTVERSION=	2.12.16
 CATEGORIES=	textproc
 MASTER_SITES=	http://tools.ietf.org/tools/idnits/ \
 		LOCAL/sunpoet
