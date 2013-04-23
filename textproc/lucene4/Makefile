@@ -1,8 +1,8 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: textproc/lucene4/Makefile 314108 2013-03-13 19:23:28Z mva $
+# $FreeBSD: textproc/lucene4/Makefile 316096 2013-04-19 11:16:20Z mva $
 
 PORTNAME=	lucene
-PORTVERSION=	4.2.0
+PORTVERSION=	4.2.1
 CATEGORIES=	textproc java devel
 MASTER_SITES=	APACHE
 MASTER_SITE_SUBDIR=	${PORTNAME}/java/${PORTVERSION}/
