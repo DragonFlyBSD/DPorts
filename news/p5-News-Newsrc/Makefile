@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-News-Newsrc
-# Date created:		February 7, 1998
-# Whom:			Don Croyle <croyle@gelemna.org>
-#
-# $FreeBSD: ports/news/p5-News-Newsrc/Makefile,v 1.18 2012/11/17 06:00:43 svnexp Exp $
-#
+# Created by: Don Croyle <croyle@gelemna.org>
+# $FreeBSD: news/p5-News-Newsrc/Makefile 316042 2013-04-18 14:28:13Z eadler $
 
 PORTNAME=	News-Newsrc
-PORTVERSION=	1.09
+PORTVERSION=	1.11
 CATEGORIES=	news perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
