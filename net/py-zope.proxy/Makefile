@@ -1,25 +1,22 @@
-# New ports collection makefile for:	py-zopeproxy
-# Date created:		22 Nov, 2008
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/net/py-zope.proxy/Makefile,v 1.12 2012/11/17 06:00:17 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: net/py-zope.proxy/Makefile 316000 2013-04-17 18:01:53Z rm $
 
 PORTNAME=	zope.proxy
-PORTVERSION=	3.6.1
-PORTREVISION=	3
+PORTVERSION=	4.1.3
 CATEGORIES=	net python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Generic Transparent Proxies
 
+LICENSE=	ZPL21
+
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=3.3.0:${PORTSDIR}/devel/py-zope.interface
-RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_ZIP=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
