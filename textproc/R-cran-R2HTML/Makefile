@@ -1,9 +1,8 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: textproc/R-cran-R2HTML/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: textproc/R-cran-R2HTML/Makefile 315859 2013-04-16 17:16:56Z thierry $
 
 PORTNAME=	R2HTML
-PORTVERSION=	2.2
-PORTREVISION=	2
+PORTVERSION=	2.2.1
 CATEGORIES=	textproc
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
