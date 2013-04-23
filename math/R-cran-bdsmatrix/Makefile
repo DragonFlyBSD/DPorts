@@ -1,16 +1,15 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-bdsmatrix/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/R-cran-bdsmatrix/Makefile 315965 2013-04-17 13:15:23Z tota $
 
 PORTNAME=	bdsmatrix
-PORTVERSION=	1.3
-PORTREVISION=	5
+DISTVERSION=	1.3-1
 CATEGORIES=	math
-DISTNAME=	${PORTNAME}_${PORTVERSION}
+DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Routines for Block Diagonal Symmetric matrices
 
-LICENSE=	GPLv2
+LICENSE=	LGPL20
 
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
