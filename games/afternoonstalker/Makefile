@@ -1,13 +1,8 @@
-# New ports collection makefile for:	afternoonstalker
-# Date created:			Feb 15, 2003
-# Whom:				Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/games/afternoonstalker/Makefile,v 1.31 2012/11/17 05:57:31 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: games/afternoonstalker/Makefile 315963 2013-04-17 13:02:44Z martymac $
 
 PORTNAME=	afternoonstalker
-PORTVERSION=	1.1.4
-PORTREVISION=	3
+PORTVERSION=	1.1.5
 CATEGORIES=	games
 MASTER_SITES=	http://perso.b2b2c.ca/sarrazip/dev/ \
 		LOCAL/martymac
