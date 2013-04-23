@@ -1,13 +1,8 @@
-# New ports collection makefile for:	dvdvideo
-# Date created:			26 Jan 2012
-# Whom:				Ganael Laplanche <ganael.laplanche@martymac.org>
-#
-# $FreeBSD: ports/sysutils/dvdvideo/Makefile,v 1.5 2012/11/17 06:01:29 svnexp Exp $
-#
+# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
+# $FreeBSD: sysutils/dvdvideo/Makefile 315936 2013-04-17 07:02:55Z martymac $
 
 PORTNAME=	dvdvideo
-PORTVERSION=	20120126
-PORTREVISION=	3
+PORTVERSION=	20130117
 CATEGORIES=	sysutils multimedia
 MASTER_SITES=	http://contribs.martymac.org/FreeBSD-ports/distfiles/ \
 		LOCAL/martymac
@@ -21,7 +16,7 @@ LICENSE=	GPLv3
 
 USE_PYTHON=	3.1+
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_EGGINFO=	python_dvdvideo-0.1-py${PYTHON_VER}.egg-info
+PYDISTUTILS_EGGINFO=	python_dvdvideo-0.${PORTVERSION}-py${PYTHON_VER}.egg-info
 
 OPTIONS_DEFINE=	DVDCSS
 .if !defined(PACKAGE_BUILDING)
