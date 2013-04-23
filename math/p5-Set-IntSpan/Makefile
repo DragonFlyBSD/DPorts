@@ -1,17 +1,13 @@
-# New ports collection makefile for:	p5-Set-IntSpan
-# Date created:		February 7, 1998
-# Whom:			Don Croyle <croyle@gelemna.org>
-#
-# $FreeBSD: ports/math/p5-Set-IntSpan/Makefile,v 1.20 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Don Croyle <croyle@gelemna.org>
+# $FreeBSD: math/p5-Set-IntSpan/Makefile 316181 2013-04-21 14:59:27Z bdrewery $
 
 PORTNAME=	Set-IntSpan
-PORTVERSION=	1.16
+PORTVERSION=	1.19
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Manages sets of integers
 
 PERL_CONFIGURE=	yes
