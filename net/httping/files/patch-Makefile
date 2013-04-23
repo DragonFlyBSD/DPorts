@@ -1,28 +1,20 @@
---- ./Makefile.orig	2013-03-19 20:10:16.000000000 +0100
-+++ ./Makefile	2013-03-20 11:56:23.000000000 +0100
-@@ -18,12 +18,11 @@
+--- ./Makefile.orig	2013-04-17 22:46:50.000000000 +0200
++++ ./Makefile	2013-04-17 23:49:01.771634044 +0200
+@@ -13,8 +13,6 @@
+ # files in the program, then also delete it here.
+ # $Revision: 178 $
  
- DEBUG=yes
- WFLAGS=-Wall -W
--OFLAGS=-O3
- CFLAGS+=$(WFLAGS) $(OFLAGS) -DVERSION=\"$(VERSION)\"
- LDFLAGS=-lm
- 
- PACKAGE=$(TARGET)-$(VERSION)
--PREFIX=/usr
-+PREFIX?=/usr
- BINDIR=$(PREFIX)/bin
- MANDIR=$(PREFIX)/share/man
- DOCDIR=$(PREFIX)/share/doc/$(TARGET)
-@@ -59,11 +58,6 @@
- CFLAGS+=-DTCP_TFO
- endif
- 
--ifeq ($(DEBUG),yes)
--CFLAGS+=-D_DEBUG -ggdb
--LDFLAGS+=-g
--endif
+--include makefile.inc
 -
- ifeq ($(ARM),yes)
- CC=arm-linux-gcc
- endif
+ # *** configure script ***
+ # support for tcp fast open?
+ #TFO=yes
+@@ -31,7 +29,7 @@
+ 
+ TARGET=httping
+ 
+-DEBUG=yes
++DEBUG?=no
+ WFLAGS=-Wall -W
+ OFLAGS=
+ CFLAGS+=$(WFLAGS) $(OFLAGS) -DVERSION=\"$(VERSION)\"
