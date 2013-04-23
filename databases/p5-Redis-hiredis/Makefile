@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-Redis-hiredis/Makefile,v 1.9 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: databases/p5-Redis-hiredis/Makefile 315971 2013-04-17 15:27:24Z gblach $
 
 PORTNAME=	Redis-hiredis
-PORTVERSION=	0.10.2
+PORTVERSION=	0.11.0
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:NEOPHENIX
