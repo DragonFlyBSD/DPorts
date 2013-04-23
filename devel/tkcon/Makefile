@@ -1,9 +1,9 @@
 # Created by: wghicks@bellsouth.net
-# $FreeBSD: ports/devel/tkcon/Makefile,v 1.25 2012/11/26 23:00:40 svnexp Exp $
+# $FreeBSD: devel/tkcon/Makefile 316028 2013-04-18 08:31:37Z gahr $
 
 PORTNAME=	tkcon
 PORTVERSION=	2.5
-CATEGORIES=	devel tcl tk
+CATEGORIES=	devel
 MASTER_SITES=	SF
 
 MAINTAINER=	tcltk@FreeBSD.org
