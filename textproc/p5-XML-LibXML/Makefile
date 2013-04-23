@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-LibXML/Makefile 314174 2013-03-14 18:04:06Z bapt $
+# $FreeBSD: textproc/p5-XML-LibXML/Makefile 316227 2013-04-22 12:53:58Z bapt $
 
 PORTNAME=	XML-LibXML
 PORTVERSION=	2.0004
@@ -9,7 +9,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interface to Gnome libxml2 library
 
 BUILD_DEPENDS=	p5-XML-NamespaceSupport>=1.07:${PORTSDIR}/textproc/p5-XML-NamespaceSupport \
