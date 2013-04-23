@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-App/Makefile 313750 2013-03-09 19:37:09Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-App/Makefile 315991 2013-04-17 17:10:39Z sunpoet $
 
 PORTNAME=	MooseX-App
-PORTVERSION=	1.17
+PORTVERSION=	1.21
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -34,6 +34,7 @@ MAN3=		MooseX::App.3 \
 		MooseX::App::Meta::Role::Class::Base.3 \
 		MooseX::App::Meta::Role::Class::Command.3 \
 		MooseX::App::ParsedArgv.3 \
+		MooseX::App::ParsedArgv::Element.3 \
 		MooseX::App::Plugin::BashCompletion.3 \
 		MooseX::App::Plugin::Color.3 \
 		MooseX::App::Plugin::Config.3 \
