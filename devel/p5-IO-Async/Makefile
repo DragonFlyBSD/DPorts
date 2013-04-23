@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-IO-Async/Makefile 313895 2013-03-11 13:36:00Z sunpoet $
+# $FreeBSD: devel/p5-IO-Async/Makefile 316105 2013-04-19 14:35:51Z sunpoet $
 
 PORTNAME=	IO-Async
-PORTVERSION=	0.55
+PORTVERSION=	0.56
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PEVANS
@@ -14,7 +14,7 @@ COMMENT=	Perl modules that implement asynchronous filehandle IO
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Future>=0.08:${PORTSDIR}/devel/p5-Future
+BUILD_DEPENDS=	p5-Future>=0.12:${PORTSDIR}/devel/p5-Future
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Identity>=0:${PORTSDIR}/devel/p5-Test-Identity \
