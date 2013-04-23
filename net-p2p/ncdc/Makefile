@@ -1,8 +1,8 @@
 # Created by: Dmitriy Limonov
-# $FreeBSD: net-p2p/ncdc/Makefile 314096 2013-03-13 17:13:35Z pawel $
+# $FreeBSD: net-p2p/ncdc/Makefile 316150 2013-04-20 14:28:38Z pawel $
 
 PORTNAME=	ncdc
-PORTVERSION=	1.15
+PORTVERSION=	1.16.1
 CATEGORIES=	net-p2p
 MASTER_SITES=	SF \
 		http://dev.yorhel.nl/download/
