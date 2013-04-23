@@ -1,9 +1,8 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: math/R-cran-quadprog/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/R-cran-quadprog/Makefile 316132 2013-04-20 08:32:37Z dbn $
 
 PORTNAME=	quadprog
-DISTVERSION=	1.5-4
-PORTREVISION=	2
+DISTVERSION=	1.5-5
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
