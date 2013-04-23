@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/postgresql-plproxy/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: databases/postgresql-plproxy/Makefile 316230 2013-04-22 13:27:47Z bapt $
 
 PORTNAME=	plproxy
 PORTVERSION=	2.4
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/3274/
 PKGNAMEPREFIX=	postgresql-
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PL/Proxy is database partitioning system
 
 USE_PGSQL=	yes
