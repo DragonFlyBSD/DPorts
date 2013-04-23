@@ -1,8 +1,8 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: net/openldap24-server/Makefile 315446 2013-03-28 07:49:59Z delphij $
+# $FreeBSD: net/openldap24-server/Makefile 315896 2013-04-16 20:00:27Z delphij $
 
 PORTNAME=		openldap
-DISTVERSION=		2.4.34
+DISTVERSION=		2.4.35
 PORTREVISION=		${OPENLDAP_PORTREVISION}
 CATEGORIES=		net databases
 MASTER_SITES=		ftp://ftp.OpenLDAP.org/pub/OpenLDAP/%SUBDIR%/ \
@@ -55,8 +55,8 @@ WANT_OPENLDAP_VER?=	24
 BROKEN=			incompatible OpenLDAP version: ${WANT_OPENLDAP_VER}
 .endif
 
-PORTREVISION_CLIENT=	1
-PORTREVISION_SERVER=	2
+PORTREVISION_CLIENT=	0
+PORTREVISION_SERVER=	0
 OPENLDAP_SHLIB_MAJOR=	8
 
 OPTIONS_DEFINE=	FETCH
