@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/git-review/Makefile,v 1.3 2012/11/28 05:17:16 svnexp Exp $
+# $FreeBSD: devel/git-review/Makefile 316037 2013-04-18 12:06:10Z culot $
 
 PORTNAME=	git-review
-PORTVERSION=	1.20
+PORTVERSION=	1.21
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 MASTER_SITE_SUBDIR=	source/g/${PORTNAME}
@@ -19,13 +19,15 @@ NO_BUILD=	yes
 
 MAN1=		git-review.1
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/git-review ${PREFIX}/bin/git-review
 	${INSTALL_MAN} ${WRKSRC}/git-review.1 ${PREFIX}/man/man1
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/README.md ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/HACKING ${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/HACKING.rst ${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/AUTHORS ${DOCSDIR}
 .endif
 
