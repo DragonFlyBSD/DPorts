@@ -1,8 +1,8 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: ports/www/mod_setenvifplus/Makefile,v 1.6 2012/11/17 06:02:42 svnexp Exp $
+# $FreeBSD: www/mod_setenvifplus/Makefile 316161 2013-04-20 17:38:32Z ohauer $
 
 PORTNAME=	mod_setenvifplus
-PORTVERSION=	0.19
+PORTVERSION=	0.22
 CATEGORIES=	www
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	modsetenvifplus
