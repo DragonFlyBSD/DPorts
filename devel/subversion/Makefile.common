@@ -1,9 +1,9 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion/Makefile.common 315739 2013-04-06 10:00:28Z ohauer $
+# $FreeBSD: devel/subversion/Makefile.common 315779 2013-04-10 18:05:53Z rpaulo $
 
 PORTNAME=	subversion
 PORTVERSION=	1.7.9
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES+=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:S/$/:main/} \
 		${MASTER_SITE_LOCAL:S/$/:book/}
