@@ -1,11 +1,10 @@
 # Created by: Sutra Zhou <zhoushuqun@gmail.com>
-# $FreeBSD: ports/www/mod_auth_openid/Makefile,v 1.13 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_openid/Makefile 316165 2013-04-20 19:21:29Z ohauer $
 
 PORTNAME=	mod_auth_openid
-PORTVERSION=	0.6
-PORTREVISION=	1
+PORTVERSION=	0.7
 CATEGORIES=	www
-MASTER_SITES=	http://butterfat.net/releases/mod_auth_openid/
+MASTER_SITES=	http://cloud.github.com/downloads/bmuller/mod_auth_openid/
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 
 MAINTAINER=	zhoushuqun@gmail.com
