@@ -1,8 +1,8 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: security/p5-IO-Async-SSL/Makefile 313749 2013-03-09 19:25:13Z sunpoet $
+# $FreeBSD: security/p5-IO-Async-SSL/Makefile 316067 2013-04-18 17:51:58Z sunpoet $
 
 PORTNAME=	IO-Async-SSL
-PORTVERSION=	0.08
+PORTVERSION=	0.09
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PEVANS
