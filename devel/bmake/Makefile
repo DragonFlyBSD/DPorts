@@ -1,14 +1,14 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: devel/bmake/Makefile 315199 2013-03-25 07:03:36Z trociny $
+# $FreeBSD: devel/bmake/Makefile 315884 2013-04-16 18:46:09Z trociny $
 
 PORTNAME=	bmake
-PORTVERSION=	20130303
+PORTVERSION=	20130330
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/sjg/ \
 		http://www.gtlib.cc.gatech.edu/pub/NetBSD/misc/sjg/ \
 		ftp://ftp.uk.netbsd.org/pub/NetBSD/misc/sjg/ \
 		ftp://ftp.de.netbsd.org/pub/NetBSD/misc/sjg/
-DISTFILES=	bmake-${PORTVERSION}.tar.gz mk-${PORTVERSION}.tar.gz
+DISTFILES=	bmake-${PORTVERSION}.tar.gz mk-20130321.tar.gz
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Portable version of NetBSD 'make' utility
