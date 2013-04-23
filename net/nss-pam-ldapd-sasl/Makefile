@@ -1,17 +1,17 @@
 # Created by: rflynn@acsalaska.net
-# $FreeBSD: ports/net/nss-pam-ldapd-sasl/Makefile,v 1.4 2013/01/25 05:46:24 svnexp Exp $
+# $FreeBSD: net/nss-pam-ldapd-sasl/Makefile 315818 2013-04-16 15:11:33Z zi $
 
-PORTNAME=		nss-pam-ldapd
-PKGNAMESUFFIX=		-sasl
+PORTNAME=	nss-pam-ldapd
+PKGNAMESUFFIX=	-sasl
 
-MAINTAINER=		ports@FreeBSD.org
-COMMENT=		Advanced fork of nss_ldap with sasl support
+MAINTAINER=	zi@FreeBSD.org
+COMMENT=	Advanced fork of nss_ldap with sasl support
 
-LICENSE=		# pet portlint
+LICENSE=	# pet portlint
 
 OPTIONS_SET+=	SASL
 
-SLAVE_PORT=		sasl # In case we come up with more
-MASTERDIR=		${.CURDIR}/../nss-pam-ldapd
+SLAVE_PORT=	sasl # In case we come up with more
+MASTERDIR=	${.CURDIR}/../nss-pam-ldapd
 
 .include "${MASTERDIR}/Makefile"
