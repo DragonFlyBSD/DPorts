@@ -1,12 +1,8 @@
-# New ports collection makefile for:	ldapscripts
-# Date created:		Sat Oct 01 09:30:00 UTC 2003
-# Whom:			Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-#
-# $FreeBSD: ports/net/ldapscripts/Makefile,v 1.22 2012/11/17 06:00:04 svnexp Exp $
-#
+# Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
+# $FreeBSD: net/ldapscripts/Makefile 316039 2013-04-18 12:44:30Z martymac $
 
 PORTNAME=	ldapscripts
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 		http://contribs.martymac.org/ldapscripts/
