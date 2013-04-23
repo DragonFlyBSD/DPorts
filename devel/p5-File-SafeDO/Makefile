@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-File-SafeDO
-# Date created:				May 28 2010
-# Whom:					Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/p5-File-SafeDO/Makefile,v 1.2 2012/11/17 05:56:16 svnexp Exp $
-#
+# $FreeBSD: devel/p5-File-SafeDO/Makefile 315981 2013-04-17 16:02:36Z crees $
 
 PORTNAME=	File-SafeDO
 PORTVERSION=	0.12
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
