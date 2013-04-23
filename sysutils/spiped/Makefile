@@ -1,12 +1,7 @@
-# New ports collection makefile for:		spiped secure pipe daemon
-# Date created:					2011-08-18
-# Whom:						Colin Percival
-#
-# $FreeBSD: ports/sysutils/spiped/Makefile,v 1.6 2012/11/17 06:01:46 svnexp Exp $
-#
+# $FreeBSD: sysutils/spiped/Makefile 315954 2013-04-17 09:28:35Z cperciva $
 
 PORTNAME=	spiped
-PORTVERSION=	1.2.1
+PORTVERSION=	1.3.1
 PORTREVISION=	1
 CATEGORIES=	sysutils security
 MASTER_SITES=	http://www.tarsnap.com/spiped/
@@ -18,21 +13,27 @@ COMMENT=	Daemon for creating secure symmetric pipes
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
-DOCFILES=	BUILDING CHANGELOG COPYRIGHT README STYLE
-READMES=	spiped spipe
+# Ask to have man pages installed
+MAKE_ARGS=	MAN1DIR=${MANPREFIX}/man/man1
+MAN1=		spiped.1 spipe.1
 
+# Binaries go into ${PREFIX}/bin
+MAKE_ARGS+=	BINDIR=${PREFIX}/bin
+
+# Force __BSD_VISIBLE on since it works and improves performance
+MAKE_ARGS+=	CFLAGS="-O2 -D__BSD_VISIBLE"
+
+PORTDOCS=	BUILDING CHANGELOG COPYRIGHT README STYLE
 PLIST_FILES=	bin/spiped bin/spipe
-PORTDOCS=	${DOCFILES} ${READMES:S/^/README-/}
 
 USE_RC_SUBR=	spiped
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC} && ${INSTALL_MAN} ${DOCFILES} ${DOCSDIR})
-.for README in ${READMES}
-	${INSTALL_MAN} ${WRKSRC}/${README}/README ${DOCSDIR}/README-${README}
-.endfor
+	(cd ${WRKSRC} && ${INSTALL_MAN} ${PORTDOCS} ${DOCSDIR})
 .endif
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/sysutils/spiped/files/spiped.in,v 1.4 2012/11/17 06:01:46 svnexp Exp $
+# $FreeBSD: sysutils/spiped/files/spiped.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: spiped
 # REQUIRE: LOGIN
