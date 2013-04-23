@@ -1,16 +1,11 @@
-# New ports collection makefile for:	arpack-ng
-# Date created:			26 June 2012
-# Whom:				bf <bf@FreeBSD.org>
-#
-# $FreeBSD: ports/math/arpack-ng/Makefile,v 1.3 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: bf <bf@FreeBSD.org>
+# $FreeBSD: math/arpack-ng/Makefile 316107 2013-04-19 14:47:48Z bf $
 
 PORTNAME=	arpack-ng
-PORTVERSION=	3.1.2
+PORTVERSION=	3.1.3
 CATEGORIES=	math
 MASTER_SITES=	http://forge.scilab.org/index.php/p/arpack-ng/downloads/get/ \
 		LOCAL/bf
-DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	Revised Argand library for solving large-scale eigenvalue problems
