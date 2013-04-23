@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libmsiecf/Makefile 314758 2013-03-20 20:31:28Z pawel $
+# $FreeBSD: devel/libmsiecf/Makefile 316200 2013-04-21 19:12:26Z antoine $
 
 PORTNAME=	libmsiecf
-DISTVERSION=	alpha-20130317
+DISTVERSION=	alpha-20130417
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
