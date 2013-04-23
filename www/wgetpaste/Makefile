@@ -1,8 +1,8 @@
 # Created by: Anonymous
-# $FreeBSD: www/wgetpaste/Makefile 313907 2013-03-11 14:34:23Z sunpoet $
+# $FreeBSD: www/wgetpaste/Makefile 316068 2013-04-18 17:52:57Z sunpoet $
 
 PORTNAME=	wgetpaste
-PORTVERSION=	2.21
+PORTVERSION=	2.22
 CATEGORIES=	www
 MASTER_SITES=	http://wgetpaste.zlin.dk/ \
 		LOCAL/sunpoet
