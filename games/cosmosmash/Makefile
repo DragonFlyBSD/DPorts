@@ -1,13 +1,8 @@
-# New ports collection makefile for: cosmosmash
-# Date created:                      12 Apr 2008
-# Whom:                              Ganael Laplanche <ganael.laplanche@martymac.org>
-#
-# $FreeBSD: ports/games/cosmosmash/Makefile,v 1.18 2012/11/17 05:57:35 svnexp Exp $
-#
+# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
+# $FreeBSD: games/cosmosmash/Makefile 316089 2013-04-19 08:01:27Z martymac $
 
 PORTNAME=	cosmosmash
-DISTVERSION=	1.4.5
-PORTREVISION=	2
+DISTVERSION=	1.4.7
 CATEGORIES=	games
 MASTER_SITES=	http://perso.b2b2c.ca/sarrazip/dev/ \
 		LOCAL/martymac
