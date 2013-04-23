@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/graphics/jasper/Makefile,v 1.43 2013/01/26 16:56:10 svnexp Exp $
+# $FreeBSD: graphics/jasper/Makefile 316157 2013-04-20 16:01:55Z dinoex $
 
 PORTNAME=	jasper
 PORTVERSION=	1.900.1
-PORTREVISION=	10
+PORTREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ece.uvic.ca/~mdadams/jasper/software/ \
 		${MASTER_SITE_IMAGEMAGICK}
