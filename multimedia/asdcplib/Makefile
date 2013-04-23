@@ -1,9 +1,9 @@
-# $FreeBSD: multimedia/asdcplib/Makefile 313121 2013-02-28 17:35:18Z olgeni $
+# $FreeBSD: multimedia/asdcplib/Makefile 315882 2013-04-16 18:37:00Z olgeni $
 
 PORTNAME=	asdcplib
-PORTVERSION=	1.10.48
+PORTVERSION=	1.11.49
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.cinecert.com/asdcplib/
+MASTER_SITES=	http://download.cinecert.com/asdcplib/
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	An open source implementation of SMPTE and the MXF Interop format
