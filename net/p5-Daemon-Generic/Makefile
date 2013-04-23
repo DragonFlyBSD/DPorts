@@ -1,17 +1,13 @@
-# New ports collection makefile for:	p5-Daemon-Generic
-# Date created:		2008-05-30
-# Whom:			BluePex Security Solutions <freebsd-ports@bluepex.com>
-#
-# $FreeBSD: net/p5-Daemon-Generic/Makefile 303861 2012-09-08 03:26:09Z swills $
-#
+# Created by: BluePex Security Solutions <freebsd-ports@bluepex.com>
+# $FreeBSD: net/p5-Daemon-Generic/Makefile 315863 2013-04-16 17:37:45Z bdrewery $
 
 PORTNAME=	Daemon-Generic
-PORTVERSION=	0.82
+PORTVERSION=	0.83
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Framework to provide start/stop/reload for a daemon
 
 BUILD_DEPENDS=	p5-File-Flock>=0:${PORTSDIR}/devel/p5-File-Flock \
