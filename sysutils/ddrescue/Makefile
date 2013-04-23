@@ -1,25 +1,17 @@
-# New ports collection makefile for:	ddrescue
-# Date created:		16 August 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/ddrescue/Makefile,v 1.13 2012/11/17 06:01:28 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: sysutils/ddrescue/Makefile 316083 2013-04-19 02:59:09Z ak $
 
 PORTNAME=	ddrescue
 PORTVERSION=	1.16
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU
-EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Data recovery tool
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-EXTRACT_DEPENDS=lzip:${PORTSDIR}/archivers/lzip
-
-EXTRACT_CMD=	${LOCALBASE}/bin/lzip
 
 OPTIONS_DEFINE=	DOCS
 
@@ -40,13 +32,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${i} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/${i}.1 ${MAN1PREFIX}/man/man1
 .endfor
-.for i in ddrescue
-	${INSTALL_DATA} ${WRKSRC}/doc/${i}.info ${PREFIX}/${INFO_PATH}
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/doc/ddrescue.info ${PREFIX}/${INFO_PATH}
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
-.for file in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+.for i in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
 .endfor
 .endif
 
