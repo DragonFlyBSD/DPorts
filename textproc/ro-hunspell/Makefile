@@ -1,12 +1,8 @@
-# New ports collection makefile for:	ro-hunspell
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/ro-hunspell/Makefile,v 1.7 2012/11/17 06:02:19 svnexp Exp $
-#
+# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
+# $FreeBSD: textproc/ro-hunspell/Makefile 315837 2013-04-16 16:13:11Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	3.3.7
+PORTVERSION=	3.3.8
 CATEGORIES=	textproc
 MASTER_SITES=	SF/rospell/Romanian%20dictionaries/dict-${PORTVERSION}/
 PKGNAMEPREFIX=	ro-
