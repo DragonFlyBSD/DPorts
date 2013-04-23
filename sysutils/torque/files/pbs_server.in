@@ -1,9 +1,11 @@
 #!/bin/sh
 
-# $FreeBSD: ports/sysutils/torque/files/pbs_server.in,v 1.2 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/torque/files/pbs_server.in 315876 2013-04-16 18:23:45Z madpilot $
 #
 # PROVIDE: pbs_server
-# REQUIRE: 
+# REQUIRE: DAEMON
+# BEFORE: LOGIN
+# KEYWORD: shutdown
 #
 # Add the following lines to /etc/rc.conf.local or /etc/rc.conf
 # to enable this service:
@@ -14,7 +16,7 @@
 
 . /etc/rc.subr
 
-name="pbs_server"
+name=pbs_server
 rcvar=pbs_server_enable
 
 pidfile=/var/spool/torque/server_priv/server.lock
@@ -22,6 +24,6 @@ command=%%PREFIX%%/sbin/${name}
 
 load_rc_config $name
 
-: ${pbs_server_enable="NO"}
+: ${pbs_server_enable:="NO"}
 
 run_rc_command "$1"
