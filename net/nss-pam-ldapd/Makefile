@@ -1,13 +1,14 @@
 # Created by: melifaro@ipfw.ru
-# $FreeBSD: ports/net/nss-pam-ldapd/Makefile,v 1.20 2013/01/23 10:44:10 svnexp Exp $
+# $FreeBSD: net/nss-pam-ldapd/Makefile 315818 2013-04-16 15:11:33Z zi $
 
 PORTNAME=		nss-pam-ldapd
 PORTVERSION=		0.8.12
-PORTREVISION=	1
+PORTREVISION=		1
 CATEGORIES=		net
-MASTER_SITES=		http://arthurdejong.org/nss-pam-ldapd/
+MASTER_SITES=		http://arthurdejong.org/nss-pam-ldapd/ \
+    			http://mirrors.rit.edu/zi/
 
-MAINTAINER?=		ports@FreeBSD.org
+MAINTAINER?=		zi@FreeBSD.org
 COMMENT?=		Advanced fork of nss_ldap
 
 LICENSE=		LGPL21 LGPL3
