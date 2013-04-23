@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-DocSet
-# Date created:				2009 January 14
-# Whom:					pgollucci@FreeBSD.org
-#
-# $FreeBSD: ports/textproc/p5-DocSet/Makefile,v 1.7 2012/11/17 06:02:04 svnexp Exp $
-#
+# $FreeBSD: textproc/p5-DocSet/Makefile 315981 2013-04-17 16:02:36Z crees $
 
 PORTNAME=	DocSet
 PORTVERSION=	0.19
+PORTREVISION=	1
 CATEGORIES=	textproc www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:STAS
@@ -16,7 +12,7 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Documentation projects builder in HTML, PS, and PDF formats
 
 BUILD_DEPENDS=	p5-Pod-POM>=0:${PORTSDIR}/textproc/p5-Pod-POM \
-				p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit
+		p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit
 
 MAKE_JOBS_SAFE=  yes
 
