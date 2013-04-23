@@ -1,10 +1,10 @@
 # Created by:	kirk@strauser.com
 #
-# $FreeBSD: ports/shells/bash-completion/Makefile,v 1.31 2013/01/17 07:45:44 svnexp Exp $
+# $FreeBSD: shells/bash-completion/Makefile 316125 2013-04-20 00:29:32Z adamw $
 #
 
 PORTNAME=	bash-completion
-PORTVERSION=	2.0
+PORTVERSION=	2.1
 PORTEPOCH=	1
 CATEGORIES=	shells
 MASTER_SITES=	http://bash-completion.alioth.debian.org/files/
