@@ -1,5 +1,5 @@
 <?php
-/* $FreeBSD: ports/databases/phpmyadmin/files/config.inc.php.sample,v 1.5 2012/11/17 05:55:20 svnexp Exp $
+/* $FreeBSD: databases/phpmyadmin/files/config.inc.php.sample 300896 2012-07-14 13:54:48Z beat $
  *
  * Skeleton configuration file -- this file is empty on a fresh
  * installaton of phpmyadmin.
