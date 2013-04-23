@@ -1,8 +1,8 @@
 # Created by: Ulf Lilleengen
-# $FreeBSD: security/py-paramiko/Makefile 313454 2013-03-05 13:54:26Z sbz $
+# $FreeBSD: security/py-paramiko/Makefile 315823 2013-04-16 15:31:40Z sbz $
 
 PORTNAME=	paramiko
-PORTVERSION=	1.10.0
+PORTVERSION=	1.10.1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
