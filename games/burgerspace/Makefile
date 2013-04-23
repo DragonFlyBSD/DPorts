@@ -1,13 +1,8 @@
-# New ports collection makefile for:	burgerspace
-# Date created:			Apr 13, 2001
-# Whom:				Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/games/burgerspace/Makefile,v 1.33 2012/11/17 05:57:34 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: games/burgerspace/Makefile 315963 2013-04-17 13:02:44Z martymac $
 
 PORTNAME=	burgerspace
-PORTVERSION=	1.9.0
-PORTREVISION=	3
+PORTVERSION=	1.9.2
 CATEGORIES=	games
 MASTER_SITES=	http://perso.b2b2c.ca/sarrazip/dev/ \
 		LOCAL/martymac
