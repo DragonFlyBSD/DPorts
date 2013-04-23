@@ -1,9 +1,7 @@
-@comment $FreeBSD: ports/multimedia/projectx/pkg-plist,v 1.5 2012/11/17 05:59:53 svnexp Exp $
+@comment $FreeBSD: multimedia/projectx/pkg-plist 316061 2013-04-18 17:36:30Z nox $
 bin/project-x
 %%DATADIR%%/ReadMe.txt
-%%DATADIR%%/ReadMe_Lang.txt
-%%DATADIR%%/ReleaseNotes_0.90.4.txt
-%%DATADIR%%/ReleaseNotes_0.90.4.00.txt
+%%DATADIR%%/ReleaseNotes_0.91.0.txt
 %%DATADIR%%/htmls/cli.html
 %%DATADIR%%/htmls/faq.html
 %%DATADIR%%/htmls/index.html
