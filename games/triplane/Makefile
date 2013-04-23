@@ -1,13 +1,8 @@
-# New ports collection makefile for: triplane
-# Date created:	01 Jan 2011
-# Whom:		Ganael Laplanche <ganael.laplanche@martymac.org>
-#
-# $FreeBSD: ports/games/triplane/Makefile,v 1.3 2012/11/17 05:57:54 svnexp Exp $
-#
+# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
+# $FreeBSD: games/triplane/Makefile 315938 2013-04-17 07:11:47Z martymac $
 
 PORTNAME=	triplane
-PORTVERSION=	1.04.r20110114
-PORTREVISION=	1
+PORTVERSION=	1.08.r20130224
 CATEGORIES=	games
 MASTER_SITES=	http://contribs.martymac.org/FreeBSD-ports/distfiles/ \
 		SF/${PORTNAME}
@@ -26,5 +21,7 @@ CFLAGS+=	-DTRIPLANE_DATA=\\\"${DATADIR}\\\"
 MAKE_ENV=	DATADIR="${DATADIR}"
 
 ALL_TARGET=	depend all
+
+MAN6=	triplane.6
 
 .include <bsd.port.mk>
