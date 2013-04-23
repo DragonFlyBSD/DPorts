@@ -1,9 +1,9 @@
-# $FreeBSD: ports/sysutils/ansible/Makefile,v 1.2 2013/02/20 20:47:57 svnexp Exp $
+# $FreeBSD: sysutils/ansible/Makefile 316070 2013-04-18 18:39:43Z jgh $
 
 PORTNAME=	ansible
-PORTVERSION=	0.9
+PORTVERSION=	1.1
 CATEGORIES=	sysutils python
-MASTER_SITES=	GH
+MASTER_SITES=	http://ansible.cc/releases/
 
 MAINTAINER=	lifanov@mail.lifanov.com
 COMMENT=	Simple ssh-based configuration management and orchestration system
@@ -19,18 +19,12 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	ansible
-GH_TAGNAME=	v${DISTVERSION}
-GH_COMMIT=	0115d4b
-
 SUB_FILES=	pkg-message
 PORTEXAMPLES=	*
 MAN1=	ansible-doc.1 ansible-playbook.1 ansible-pull.1 ansible.1
 
 post-patch-script:
 	@${REINPLACE_CMD} -e "s|/etc/ansible|${ETCDIR}|" \
-		${WRKSRC}/CHANGELOG.md \
 		${WRKSRC}/docs/man/man1/ansible-playbook.1 \
 		${WRKSRC}/docs/man/man1/ansible.1 \
 		${WRKSRC}/examples/ansible.cfg \
@@ -38,10 +32,7 @@ post-patch-script:
 		${WRKSRC}/examples/playbooks/ansible_pull.yml \
 		${WRKSRC}/lib/ansible/constants.py \
 		${WRKSRC}/lib/ansible/playbook/__init__.py \
-		${WRKSRC}/lib/ansible/runner/__init__.py \
-		${WRKSRC}/plugins/README.md \
-		${WRKSRC}/plugins/inventory/cobbler.py \
-		${WRKSRC}/plugins/inventory/nova.py
+		${WRKSRC}/lib/ansible/runner/__init__.py
 	@${REINPLACE_CMD} -e "s|/usr/share/ansible|${DATADIR}|" \
 		${WRKSRC}/docs/man/man1/ansible-playbook.1 \
 		${WRKSRC}/docs/man/man1/ansible.1 \
@@ -50,8 +41,6 @@ post-patch-script:
 		${WRKSRC}/lib/ansible/playbook/__init__.py \
 		${WRKSRC}/lib/ansible/runner/__init__.py
 	@${REINPLACE_CMD} -e "s|/usr/bin/python|/usr/bin/env python|" \
-		${WRKSRC}/examples/scripts/* \
-		${WRKSRC}/plugins/inventory/* \
 		${WRKSRC}/library/*
 
 pre-install-script:
