@@ -1,14 +1,14 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: ports/www/mod_webkit/Makefile,v 1.18 2012/11/17 06:02:42 svnexp Exp $
+# $FreeBSD: www/mod_webkit/Makefile 316171 2013-04-21 07:53:03Z ohauer $
 
 PORTNAME=	mod_webkit
-PORTVERSION=	1.1
+PORTVERSION=	1.1.1
 CATEGORIES=	www
-MASTER_SITES=	SF/webware/Webware/1.1
+MASTER_SITES=	SF/webware/Webware/1.1.1
 DISTNAME=	Webware-${PORTVERSION}
 
 MAINTAINER=	apache@FreeBSD.org
-COMMENT=	A apache module for WebWare WebKit AppServer
+COMMENT=	Apache module for WebWare WebKit AppServer
 
 MAKE_JOBS_SAFE=  yes
 
