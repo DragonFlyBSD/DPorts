@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libevt/Makefile 315435 2013-03-28 04:48:45Z miwi $
+# $FreeBSD: devel/libevt/Makefile 315993 2013-04-17 17:19:19Z antoine $
 
 PORTNAME=	libevt
-DISTVERSION=	alpha-20130319
+DISTVERSION=	alpha-20130415
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
