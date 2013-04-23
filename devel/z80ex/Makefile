@@ -1,19 +1,21 @@
-# New ports collection makefile for:	z80ex
-# Date created:	22 December 2009
-# Whom:	Hardy Schumacher <hardy.schumacher@gmx.de>
-#
-# $FreeBSD: ports/devel/z80ex/Makefile,v 1.3 2012/11/17 05:57:07 svnexp Exp $
-#
+# Created by: Hardy Schumacher <hardy.schumacher@gmx.de>
+# $FreeBSD: devel/z80ex/Makefile 315880 2013-04-16 18:30:10Z madpilot $
 
 PORTNAME=	z80ex
-PORTVERSION=	1.1.19
+PORTVERSION=	1.1.20.1
 CATEGORIES=	devel
-MASTER_SITES=	SF
+MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/1.1.20rev1
+DISTNAME=	${PORTNAME}-1.1.20rev1
 
 MAINTAINER=	hardy.schumacher@gmx.de
 COMMENT=	ZiLOG Z80 CPU emulator library
 
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e 's/$$(TOOLS_PREFIX)gcc/$${CC}/' \
+		-e 's/$$(TOOLS_PREFIX)ar/$${AR}/' \
+		-e 's/-O2//' ${WRKSRC}/Makefile
 
 .include <bsd.port.mk>
