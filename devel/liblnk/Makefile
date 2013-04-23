@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/liblnk/Makefile 313726 2013-03-09 16:32:28Z rm $
+# $FreeBSD: devel/liblnk/Makefile 316199 2013-04-21 19:11:05Z antoine $
 
 PORTNAME=	liblnk
-PORTVERSION=	20130304
+PORTVERSION=	20130413
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}-alpha-${PORTVERSION}
@@ -26,10 +26,9 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 MAN1=		lnkinfo.1
 MAN3=		liblnk.3
 
-OPTIONS_DEFINE=	DOCS EXAMPLES
+OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	AUTHORS ChangeLog
-PORTEXAMPLES=	*
 
 .include <bsd.port.options.mk>
 
@@ -37,11 +36,6 @@ post-install:
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/${PORTNAME}/* \
-		${WRKSRC}/examples/${PORTNAME:S,lib,py,}/* ${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
