@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/munin-node/files/munin-node.in,v 1.6 2013/02/16 14:10:56 svnexp Exp $
+# $FreeBSD: sysutils/munin-node/files/munin-node.in 312351 2013-02-16 13:30:41Z flo $
 #
 # PROVIDE: munin-node
 # REQUIRE: DAEMON

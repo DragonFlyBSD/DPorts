@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/munin-node/files/munin-sched.in,v 1.3 2013/02/16 14:10:56 svnexp Exp $
+# $FreeBSD: sysutils/munin-node/files/munin-sched.in 316077 2013-04-18 21:47:37Z flo $
 #
 # PROVIDE: munin-sched
 # REQUIRE: DAEMON
@@ -31,7 +31,7 @@ stop_precmd=find_pidfile
 find_pidfile()
 {
 	if type get_pidfile_from_conf >/dev/null 2>&1 &&
-		get_pidfile_from_conf pid_file $munin_node_config; then
+		get_pidfile_from_conf pid_file $munin_sched_config; then
 	    pidfile="${_pidfile_from_conf%node*}sched"
 	    pidfile="${pidfile}${_pidfile_from_conf#*node}"
 	else
