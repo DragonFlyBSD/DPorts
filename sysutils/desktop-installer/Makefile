@@ -1,12 +1,8 @@
-# New ports collection makefile for:	desktop-installer
-# Date created:		2009-12-29
-# Whom:			Jason Bacon <jwbacon@tds.net>
-#
-# $FreeBSD: ports/sysutils/desktop-installer/Makefile,v 1.10 2012/11/17 06:01:28 svnexp Exp $
-#
+# Created by: Jason Bacon <jwbacon@tds.net>
+# $FreeBSD: sysutils/desktop-installer/Makefile 316098 2013-04-19 11:46:48Z madpilot $
 
 PORTNAME=	desktop-installer
-PORTVERSION=	0.4.3
+PORTVERSION=	0.4.4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
 		http://personalpages.tds.net/~jwbacon/Ports/distfiles/
@@ -14,7 +10,7 @@ MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
 MAINTAINER=	jwbacon@tds.net
 COMMENT=	Quickly configure a FreeBSD desktop system
 
-RUN_DEPENDS=	auto-admin>=0.3:${PORTSDIR}/sysutils/auto-admin
+RUN_DEPENDS=	auto-admin>=0.3.1:${PORTSDIR}/sysutils/auto-admin
 
 NO_BUILD=	yes
 
