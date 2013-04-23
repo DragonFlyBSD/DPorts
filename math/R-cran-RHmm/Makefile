@@ -1,17 +1,16 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-RHmm/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/R-cran-RHmm/Makefile 316119 2013-04-19 22:27:20Z tota $
 
 PORTNAME=	RHmm
-PORTVERSION=	2.0.2
-PORTREVISION=	2
+PORTVERSION=	2.0.3
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Hidden Markov Models simulations and estimations
 
-LICENSE=        GPLv2 GPLv3
-LICENSE_COMB=   dual
+LICENSE=	GPLv2 GPLv3
+LICENSE_COMB=	dual
 
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
