@@ -1,11 +1,12 @@
 # Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: ports/portuguese/hunspell/Makefile,v 1.25 2012/11/17 06:00:47 svnexp Exp $
+# $FreeBSD: portuguese/hunspell/Makefile 316055 2013-04-18 17:01:08Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	20121006
+PORTVERSION=	20130331
 CATEGORIES=	portuguese textproc
 MASTER_SITES=	http://natura.di.uminho.pt/download/sources/Dictionaries/hunspell/ \
-		http://www.broffice.org/files/:BR
+		http://www.broffice.org/files/:BR \
+		LOCAL/sunpoet/${PORTNAME}:BR
 DISTFILES=	hunspell-pt_PT-${PORTVERSION}.tar.gz \
 		pt_BR-2012-06-09AOC.zip:BR
 DIST_SUBDIR=	${PORTNAME}
