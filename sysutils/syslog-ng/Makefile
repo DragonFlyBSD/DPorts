@@ -2,11 +2,11 @@
 # Date created:		10 November 2006
 # Whom:			Ivan Lago <ivan.lago@ifom-ieo-campus.it>
 #
-# $FreeBSD: ports/sysutils/syslog-ng/Makefile,v 1.68 2013/02/18 22:13:14 svnexp Exp $
+# $FreeBSD: sysutils/syslog-ng/Makefile 315914 2013-04-16 22:37:24Z cy $
 #
 
 PORTNAME=	syslog-ng
-PORTVERSION=	3.3.8
+PORTVERSION=	3.3.9
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/sources/$(PORTVERSION)/source/
 DISTFILES=	$(PORTNAME)_$(PORTVERSION).tar.gz
