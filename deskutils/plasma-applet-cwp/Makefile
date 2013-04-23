@@ -1,8 +1,8 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: deskutils/plasma-applet-cwp/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: deskutils/plasma-applet-cwp/Makefile 316185 2013-04-21 16:18:44Z dbn $
 
 PORTNAME=	cwp
-PORTVERSION=	1.6.13
+PORTVERSION=	1.7.3
 CATEGORIES=	deskutils kde
 MASTER_SITES=	http://kde-look.org/CONTENT/content-files/
 PKGNAMEPREFIX=	plasma-applet-
