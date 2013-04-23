@@ -1,7 +1,7 @@
-# $FreeBSD: www/owncloud/Makefile 314703 2013-03-20 01:56:04Z kevlo $
+# $FreeBSD: www/owncloud/Makefile 316156 2013-04-20 15:53:03Z kevlo $
 
 PORTNAME=	owncloud
-PORTVERSION=	5.0.0
+PORTVERSION=	5.0.5
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
 
@@ -14,9 +14,9 @@ BUILD_DEPENDS=	mp3info:${PORTSDIR}/audio/mp3info
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=	yes
-USE_PHP=	ctype curl dom fileinfo gd hash iconv json mbstring mysql \
-		pdo pdo_mysql pdo_sqlite session simplexml sqlite3 xml zip \
-		zlib
+USE_PHP=	ctype curl dom fileinfo filter gd hash iconv json mbstring \
+		mysql pdo pdo_mysql pdo_sqlite session simplexml sqlite3 xml \
+		zip zlib
 WANT_PHP_WEB=	yes
 DEFAULT_PHP_VER=5
 
