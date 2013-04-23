@@ -1,4 +1,4 @@
-# $FreeBSD: dns/bind99/Makefile 315356 2013-03-27 07:56:12Z erwin $
+# $FreeBSD: dns/bind99/Makefile 315942 2013-04-17 07:57:54Z erwin $
 
 PORTNAME=	bind99
 PORTVERSION=	9.9.2.2
@@ -115,7 +115,7 @@ CONFIGURE_ARGS+=	--enable-rpz-nsdname
 .endif
 
 .if ${PORT_OPTIONS:MRPZRRL_PATCH}
-PATCHFILES=		9.9.2-rpz+rl.072.23-P1.patch
+PATCHFILES=		9.9.2-rpz+rl.094.21-P2.patch
 PATCH_SITES=		http://ss.vix.com/~vjs/
 .endif
 
