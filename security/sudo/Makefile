@@ -1,8 +1,8 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: security/sudo/Makefile 313131 2013-03-01 01:57:28Z wxs $
+# $FreeBSD: security/sudo/Makefile 315822 2013-04-16 15:30:51Z wxs $
 
 PORTNAME=	sudo
-DISTVERSION=	1.8.6p7
+DISTVERSION=	1.8.6p8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SUDO}
 
