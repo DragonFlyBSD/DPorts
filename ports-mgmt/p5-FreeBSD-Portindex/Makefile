@@ -1,8 +1,8 @@
 # Created by: Matthew Seaman
-# $FreeBSD: ports/ports-mgmt/p5-FreeBSD-Portindex/Makefile,v 1.27 2012/12/03 21:15:10 svnexp Exp $
+# $FreeBSD: ports-mgmt/p5-FreeBSD-Portindex/Makefile 315902 2013-04-16 20:53:16Z matthew $
 
 PORTNAME=	FreeBSD-Portindex
-PORTVERSION=	3.0
+PORTVERSION=	3.2
 CATEGORIES=	ports-mgmt perl5
 MASTER_SITES=	http://www.infracaninophile.co.uk/portindex/
 PKGNAMEPREFIX=	p5-
