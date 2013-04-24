@@ -1,10 +1,11 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: x11/rsibreak-kde4/Makefile 316183 2013-04-21 15:22:36Z crees $
 
 PORTNAME=	rsibreak
 DISTVERSION=	0.11
 CATEGORIES=	x11 kde
-MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/rsibreak/rsibreak-0.11.tar.bz2/d5dd540efd18900aa508eee381bcaafd/
+MASTER_SITES=	LOCAL/crees/${PORTNAME} \
+		http://pkgs.fedoraproject.org/repo/pkgs/rsibreak/rsibreak-0.11.tar.bz2/d5dd540efd18900aa508eee381bcaafd/
 
 MAINTAINER=	avg@icyb.net.ua
 COMMENT=	KDE RSI prevention tool
