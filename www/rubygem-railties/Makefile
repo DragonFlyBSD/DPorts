@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/www/rubygem-railties/Makefile,v 1.23 2013/02/16 21:49:47 svnexp Exp $
+# $FreeBSD: www/rubygem-railties/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
 
 PORTNAME=	railties
-PORTVERSION=	3.2.12
+PORTVERSION=	3.2.13
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
