@@ -6,7 +6,7 @@ PORTVERSION=	3.14.3
 #DISTVERSIONSUFFIX=	.with.ckbi.1.93
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	security/nss/releases/${DISTNAME:U:C/[-.]/_/g}_RTM/src
+MASTER_SITE_SUBDIR=	security/nss/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Libraries to support development of security-enabled applications
