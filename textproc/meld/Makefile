@@ -1,8 +1,8 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: textproc/meld/Makefile 313221 2013-03-02 10:20:34Z pawel $
+# $FreeBSD: textproc/meld/Makefile 316115 2013-04-19 18:24:13Z pawel $
 
 PORTNAME=	meld
-PORTVERSION=	1.7.1
+PORTVERSION=	1.7.2
 CATEGORIES=	textproc devel python
 MASTER_SITES=	GNOME
 
