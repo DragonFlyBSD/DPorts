@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing
-# $FreeBSD: chinese/qterm/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: chinese/qterm/Makefile 315876 2013-04-16 18:23:45Z madpilot $
 
 PORTNAME=	qterm
 PORTVERSION=	0.5.12
@@ -18,6 +18,8 @@ USE_QT4=	codecs-cn_run codecs-tw_run gui help-tools_build \
 USE_XORG=	x11 ice
 MAKE_JOBS_SAFE=	yes
 INSTALLS_ICONS=	yes
+
+CONFLICTS_INSTALL=	torque-[0-9]*
 
 OPTIONS_DEFINE=	DBUS OPENSSL PHONON QTSCRIPT KDE
 OPTIONS_DEFAULT=	DBUS OPENSSL PHONON QTSCRIPT
