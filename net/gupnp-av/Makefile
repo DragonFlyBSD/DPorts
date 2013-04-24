@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-av/Makefile 315010 2013-03-23 08:10:18Z sunpoet $
+# $FreeBSD: net/gupnp-av/Makefile 316211 2013-04-21 20:04:35Z sunpoet $
 
 PORTNAME=	gupnp-av
 PORTVERSION=	0.12.1
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
+USE_PKGCONFIG=	build
 USE_XZ=		yes
 USES=		pathfix
 
