@@ -1,8 +1,8 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: ports/devel/rubygem-activesupport/Makefile,v 1.41 2013/02/16 21:49:42 svnexp Exp $
+# $FreeBSD: devel/rubygem-activesupport/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
 
 PORTNAME=	activesupport
-PORTVERSION=	3.2.12
+PORTVERSION=	3.2.13
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
