@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/databases/rubygem-activemodel/Makefile,v 1.19 2013/02/16 21:49:41 svnexp Exp $
+# $FreeBSD: databases/rubygem-activemodel/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
 
 PORTNAME=	activemodel
-PORTVERSION=	3.2.12
+PORTVERSION=	3.2.13
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
