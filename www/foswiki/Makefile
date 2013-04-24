@@ -1,4 +1,4 @@
-# $FreeBSD: www/foswiki/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/foswiki/Makefile 316230 2013-04-22 13:27:47Z bapt $
 
 PORTNAME=	foswiki
 PORTVERSION=	1.1.5
@@ -7,7 +7,7 @@ MASTER_SITES=	SF
 DISTNAME=	Foswiki-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A free and open source enterprise wiki
 
 RUN_DEPENDS=	p5-Error>=0.15:${PORTSDIR}/lang/p5-Error \
