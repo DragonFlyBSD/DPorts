@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-ui/Makefile 315011 2013-03-23 08:11:07Z sunpoet $
+# $FreeBSD: net/gupnp-ui/Makefile 316212 2013-04-21 20:04:58Z sunpoet $
 
 PORTNAME=	gupnp-ui
 PORTVERSION=	0.1.1
@@ -20,6 +20,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
+USE_PKGCONFIG=	build
 USE_PYTHON=	yes
 USES=		pathfix
 
