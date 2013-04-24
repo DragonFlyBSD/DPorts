@@ -1,8 +1,7 @@
-# $FreeBSD: math/gnuplot/Makefile 315259 2013-03-26 06:06:30Z glewis $
+# $FreeBSD: math/gnuplot/Makefile 316191 2013-04-21 18:27:06Z glewis $
 
 PORTNAME=	gnuplot
-PORTVERSION=	4.6.2
-PORTREVISION=	1
+PORTVERSION=	4.6.3
 CATEGORIES=	math graphics
 MASTER_SITES=	SF
 
