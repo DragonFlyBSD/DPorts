@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/rt40/files/patch-aclocal.m4,v 1.4 2012/11/17 06:03:03 svnexp Exp $
+$FreeBSD: www/rt40/files/patch-aclocal.m4 300897 2012-07-14 14:29:18Z beat $
 
 --- aclocal.m4.orig
 +++ aclocal.m4
