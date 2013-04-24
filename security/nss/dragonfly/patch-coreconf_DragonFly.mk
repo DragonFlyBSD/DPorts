@@ -8,9 +8,9 @@
 +
 +include $(CORE_DEPTH)/coreconf/UNIX.mk
 +
-+DEFAULT_COMPILER	= $(CC)
-+CC			?= gcc
-+CCC			= $(CXX)
++DEFAULT_COMPILER	= gcc
++CC			= gcc
++CCC			= g++
 +RANLIB			= ranlib
 +
 +CPU_ARCH		= $(OS_TEST)
@@ -28,7 +28,7 @@
 +OS_CFLAGS		= $(DSO_CFLAGS) -ansi -Wall -Wno-switch -DFREEBSD -DHAVE_STRERROR -DHAVE_BSD_FLOCK
 +
 +DSO_CFLAGS		= -fPIC
-+DSO_LDOPTS		= -shared -Wl,-soname -Wl,$(notdir $@)
++DSO_LDOPTS		= -shared -Wl,-soname -Wl,$(notdir $@) -L$(PREFIX)/lib
 +
 +#
 +# The default implementation strategy for FreeBSD is pthreads.
@@ -37,14 +37,14 @@
 +USE_PTHREADS		= 1
 +DEFINES			+= -D_THREAD_SAFE -D_REENTRANT
 +OS_LIBS			+= -pthread
-+DSO_LDOPTS		+= $(BSD_LDOPTS)
++DSO_LDOPTS		+= -pthread
 +endif
 +
 +ARCH			= freebsd
-+
++MOZ_OBJFORMAT		= elf
 +DLL_SUFFIX		= so.1
 +
-+MKSHLIB			= $(CC) -Wl,-Bsymbolic $(DSO_LDOPTS)
++MKSHLIB			= $(CC) $(DSO_LDOPTS)
 +ifdef MAPFILE
 +	MKSHLIB += -Wl,--version-script,$(MAPFILE)
 +endif
