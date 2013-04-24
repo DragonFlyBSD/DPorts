@@ -1,5 +1,5 @@
 # Created by:  David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: editors/vim/Makefile 315730 2013-04-05 08:23:44Z bapt $
+# $FreeBSD: editors/vim/Makefile 315831 2013-04-16 16:04:14Z eadler $
 
 PORTNAME?=	vim
 #		! _NEVER_ reduce or lower PATCHLEVEL, even if the PATCHLEVEL
@@ -224,10 +224,7 @@ post-install:
 	${ECHO_CMD} "r ${WRKDIR}/PLIST.share-vim"	>> ${WRKDIR}/ex.script
 	${ECHO_CMD} "x!"				>> ${WRKDIR}/ex.script
 	${CP} -p ${TMPPLIST} ${TMPPLIST}.pre-share-vim
-	cd ${WRKDIR} ; env TERM=cons25 ex < ex.script
-	@${ECHO_CMD}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_CMD}
+	cd ${WRKDIR} ; ex < ex.script
 
 .if defined(ONT_CHECKSUM)
 checksum:
