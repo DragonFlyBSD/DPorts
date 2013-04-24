@@ -2,7 +2,7 @@
 # Date created:		2006-02-20
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/www/libxul19/Makefile,v 1.4 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: www/libxul19/Makefile 315713 2013-04-03 20:27:48Z flo $
 #
 
 PORTNAME=	libxul
@@ -61,17 +61,6 @@ OPTIONS_SINGLE:=${OPTIONS_SINGLE:NTOOLKIT}
 
 .if ${USE_MOZILLA:M-nss}
 MOZ_PKGCONFIG_FILES+=	mozilla-nss
-.endif
-
-.if ${ARCH} == x86_64
-CONFIGURE_TARGET=x86_64-portbld-freebsd${OSREL}
-.elif ${ARCH} == powerpc64
-.if ${OSVERSION} < 900033
-BROKEN=		Needs binutils 2.17.50 to build
-.else
-MOZ_EXPORT+=	UNAME_m="powerpc64"
-CFLAGS+=	-mminimal-toc
-.endif
 .endif
 
 .if ${PORT_OPTIONS:MJAVA}
