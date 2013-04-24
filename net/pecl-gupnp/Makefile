@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-gupnp
-# Date created:		2012-03-16
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/net/pecl-gupnp/Makefile,v 1.2 2012/11/17 06:00:15 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: net/pecl-gupnp/Makefile 316002 2013-04-17 18:59:30Z sunpoet $
 
 PORTNAME=	gupnp
 PORTVERSION=	1.0.0
@@ -11,6 +7,7 @@ CATEGORIES=	net pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
 EXTRACT_SUFX=	.tgz
+DIST_SUBDIR=	PECL
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GUPnP wrapper extension
