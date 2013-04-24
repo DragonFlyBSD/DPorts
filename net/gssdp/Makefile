@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gssdp/Makefile 315008 2013-03-23 08:07:56Z sunpoet $
+# $FreeBSD: net/gssdp/Makefile 316209 2013-04-21 19:46:45Z sunpoet $
 
 PORTNAME=	gssdp
 PORTVERSION=	0.14.2
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
+USE_PKGCONFIG=	build
 USE_XZ=		yes
 USES=		pathfix
 
