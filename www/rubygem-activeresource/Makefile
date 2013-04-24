@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/www/rubygem-activeresource/Makefile,v 1.24 2013/02/16 21:49:47 svnexp Exp $
+# $FreeBSD: www/rubygem-activeresource/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
 
 PORTNAME=	activeresource
-PORTVERSION=	3.2.12
+PORTVERSION=	3.2.13
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
