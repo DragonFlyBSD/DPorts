@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/devel/otrs/files/pkg-install.in,v 1.6 2012/11/17 05:56:03 svnexp Exp $
+# $FreeBSD: devel/otrs/files/pkg-install.in 300896 2012-07-14 13:54:48Z beat $
 
 PATH=/bin:/usr/bin:/usr/sbin
 

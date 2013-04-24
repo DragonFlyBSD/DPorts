@@ -1,15 +1,15 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/devel/otrs/Makefile,v 1.57 2013/02/26 03:47:00 svnexp Exp $
+# $FreeBSD: devel/otrs/Makefile 316230 2013-04-22 13:27:47Z bapt $
 
 PORTNAME=	otrs
-PORTVERSION=	3.1.13
+PORTVERSION=	3.1.14
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.otrs.org/pub/otrs/ \
 		ftp://ftp.samurai.com/pub/otrs/ \
 		http://ftp.gwdg.de/pub/misc/otrs/ \
 		http://mirror.xaranet.de/otrs/
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open Ticket Request System
 
 LICENSE=	GPLv3
