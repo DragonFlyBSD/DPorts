@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gxine
-# Date created:	Sa 19 Apr 2003 01:34:06 CEST
-# Whom: 	Grigori Goronzy <greg@chown.ath.cx>
-#
-# $FreeBSD: ports/multimedia/gxine/Makefile,v 1.70 2012/11/17 05:59:49 svnexp Exp $
-#
+# Created by: Grigori Goronzy <greg@chown.ath.cx>
+# $FreeBSD: multimedia/gxine/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	gxine
 PORTVERSION=	0.5.907
@@ -23,7 +19,8 @@ OPTIONS_DEFINE=	MOZILLA_PLUGIN GNOME LIRC
 MOZILLA_PLUGIN_DESC=	Mozilla plugin
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack gtk20
+USES=        pathfix
+USE_GNOME=	gtk20
 USE_GECKO=	libxul19
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
