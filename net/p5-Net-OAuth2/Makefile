@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-Net-OAuth2/Makefile 315527 2013-03-29 08:25:10Z sunpoet $
+# $FreeBSD: net/p5-Net-OAuth2/Makefile 315846 2013-04-16 16:48:12Z sunpoet $
 
 PORTNAME=	Net-OAuth2
-PORTVERSION=	0.54
+PORTVERSION=	0.55
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
