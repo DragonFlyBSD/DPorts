@@ -1,8 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: ports/math/octave-forge-geometry/Makefile,v 1.19 2012/11/17 05:59:24 svnexp Exp $
+# $FreeBSD: math/octave-forge-geometry/Makefile 315867 2013-04-16 17:43:52Z stephen $
 
 PORTNAME=	octave-forge-geometry
-PORTVERSION=	1.6.0
+PORTVERSION=	1.7.0
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
