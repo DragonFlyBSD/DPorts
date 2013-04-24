@@ -411,7 +411,7 @@
 +	local logname=${JAILMNT}/poudriere/ports.${1}
 +	local cnt
 +	if [ "${1}" = "skipped" ]; then
-+	    cnt=$(awk '{print $1}' ${logname} | uniq | wc -l)
++	    cnt=$(awk '{print $1}' ${logname} | sort -u | wc -l)
 +	else
 +	    cnt=$(cat ${logname} | wc -l)
 +	fi
