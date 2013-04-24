@@ -1,8 +1,8 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: ports/mail/rubygem-actionmailer/Makefile,v 1.43 2013/02/16 21:49:44 svnexp Exp $
+# $FreeBSD: mail/rubygem-actionmailer/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
 
 PORTNAME=	actionmailer
-PORTVERSION=	3.2.12
+PORTVERSION=	3.2.13
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 
