@@ -1,8 +1,8 @@
-# Created by:	Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-# $FreeBSD: ports/x11-fonts/sourcecodepro-ttf/Makefile,v 1.4 2012/12/10 03:22:06 svnexp Exp $
+# Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
+# $FreeBSD: x11-fonts/sourcecodepro-ttf/Makefile 316111 2013-04-19 16:46:40Z sunpoet $
 
 PORTNAME=	sourcecodepro-ttf
-PORTVERSION=	1.013
+PORTVERSION=	1.017
 CATEGORIES=	x11-fonts
 MASTER_SITES=	SF/sourcecodepro.adobe
 DISTNAME=	SourceCodePro_FontsOnly-${PORTVERSION}
