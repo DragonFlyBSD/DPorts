@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/freerdp/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: net/freerdp/Makefile 316015 2013-04-18 02:39:21Z fluffy $
 
 PORTNAME=	freerdp
 PORTVERSION=	1.0.2
@@ -20,11 +20,9 @@ GH_ACCOUNT=	FreeRDP
 GH_PROJECT=	FreeRDP
 GH_COMMIT=	616aed4
 GH_TAGNAME=	${GH_COMMIT}
-GNU_CONFIGURE=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
-CFLAGS+=	-I${LOCALBASE}/include
-CPPFLAGS+=	-I${LOCALBASE}/include
+CFLAGS+=	-I${WRKSRC}/include -I${LOCALBASE}/include
 
 OPTIONS_DEFINE=	ALSA CUPS DIRECTFB FFMPEG PULSEAUDIO SSE X11
 OPTIONS_DEFAULT=	CUPS PULSEAUDIO X11
