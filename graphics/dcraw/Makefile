@@ -2,11 +2,11 @@
 # Date created: 			14 February 2004
 # Whom:					Arjan van Leeuwen <avleeuwen@piwebs.com>
 #
-# $FreeBSD: ports/graphics/dcraw/Makefile,v 1.63 2012/11/17 05:58:03 svnexp Exp $
+# $FreeBSD: graphics/dcraw/Makefile 316175 2013-04-21 10:19:31Z sunpoet $
 #
 
 PORTNAME=	dcraw
-PORTVERSION=	9.16
+PORTVERSION=	9.17
 CATEGORIES=	graphics
 MASTER_SITES=	LOCAL/sunpoet
 
