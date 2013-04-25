@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cdcollect
-# Date created:				09 April 2008
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/misc/cdcollect/Makefile,v 1.14 2013/02/20 16:45:24 svnexp Exp $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: misc/cdcollect/Makefile 315433 2013-03-28 03:28:30Z eadler $
 
 PORTNAME=	cdcollect
 PORTVERSION=	0.6.0
@@ -12,7 +8,7 @@ CATEGORIES=	misc gnome
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}_source
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A simple CD catalog for GNOME
+COMMENT=	Simple CD catalog for GNOME
 
 BUILD_DEPENDS=	sqlite3>=3.0:${PORTSDIR}/databases/sqlite3
 RUN_DEPENDS:=	${BUILD_DEPENDS}
@@ -20,7 +16,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnome gnomesharp20
+USES=        pathfix
+USE_GNOME=	gnomeprefix intlhack libgnome gnomesharp20
 GCONF_SCHEMAS=	cdcollect.schemas
 USE_GETTEXT=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

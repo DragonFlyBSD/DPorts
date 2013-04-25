@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/misc/cdcollect/files/patch-src_DBsql.cs,v 1.2 2012/11/17 05:59:33 svnexp Exp $
+$FreeBSD: misc/cdcollect/files/patch-src_DBsql.cs 300896 2012-07-14 13:54:48Z beat $
 
 --- src/DBsql.cs.orig
 +++ src/DBsql.cs
