@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/gbrainy/Makefile,v 1.24 2012/11/17 05:57:39 svnexp Exp $
+# $FreeBSD: games/gbrainy/Makefile 305577 2012-10-09 09:32:59Z kevlo $
 
 PORTNAME=	gbrainy
 PORTVERSION=	2.1.5
