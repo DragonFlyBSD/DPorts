@@ -1,8 +1,8 @@
 # Created by: Chess Griffin <chess@chessgriffin.com>
-# $FreeBSD: multimedia/gpodder/Makefile 313659 2013-03-08 17:34:03Z rm $
+# $FreeBSD: multimedia/gpodder/Makefile 316069 2013-04-18 18:30:25Z rm $
 
 PORTNAME=	gpodder
-PORTVERSION=	3.5.0
+PORTVERSION=	3.5.1
 CATEGORIES=	multimedia python
 MASTER_SITES=	http://gpodder.org/src/
 
