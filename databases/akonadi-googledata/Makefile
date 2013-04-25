@@ -1,9 +1,5 @@
-# New ports collection makefile for:	akonadi-googledata
-# Date created:		2009-08-16
-# Whom:			Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
-#
-# $FreeBSD: databases/akonadi-googledata/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
+# $FreeBSD: databases/akonadi-googledata/Makefile 315830 2013-04-16 16:00:08Z rene $
 
 PORTNAME=	akonadi-googledata
 PORTVERSION=	1.2.0
@@ -11,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://libgcal.googlecode.com/files/
 
-MAINTAINER=	tkjacobsen@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Akonadi Resources for Google Contacts and Calendar
 
 LIB_DEPENDS=	gcal:${PORTSDIR}/deskutils/libgcal
