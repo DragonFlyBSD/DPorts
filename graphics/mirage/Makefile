@@ -1,13 +1,9 @@
-# New ports collection makefile for:	mirage
-# Date created:		31 January 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/mirage/Makefile,v 1.18 2012/11/17 05:58:15 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: graphics/mirage/Makefile 315778 2013-04-10 17:57:03Z pawel $
 
 PORTNAME=	mirage
 PORTVERSION=	0.9.5.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	BERLIOS/mirageiv
 
