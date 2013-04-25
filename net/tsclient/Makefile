@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: net/tsclient/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: net/tsclient/Makefile 315491 2013-03-28 17:56:37Z eadler $
 
 PORTNAME=	tsclient
 PORTVERSION=	0.150
@@ -32,7 +32,8 @@ XNEST_DESC=	X via Xnest support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNOME}
-USE_GNOME+=	gnomeprefix gnomehack gnomepanel libgnomeui 
+USES=		pathfix
+USE_GNOME+=	gnomeprefix gnomepanel libgnomeui 
 .else
 CONFIGURE_ARGS+=	--disable-gnome
 .endif
