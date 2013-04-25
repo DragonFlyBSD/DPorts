@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/plee-the-bear/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/plee-the-bear/Makefile 315789 2013-04-12 06:40:01Z amdmi3 $
 
 PORTNAME=	plee-the-bear
 PORTVERSION=	0.6.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Plee%20the%20Bear/${PORTVERSION:R}
 
