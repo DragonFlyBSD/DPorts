@@ -1,7 +1,7 @@
-# $FreeBSD: x11/yad/Makefile 314979 2013-03-23 02:05:22Z bdrewery $
+# $FreeBSD: x11/yad/Makefile 315984 2013-04-17 16:39:13Z bdrewery $
 
 PORTNAME=	yad
-PORTVERSION=	0.20.1
+PORTVERSION=	0.20.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GOOGLE_CODE
 
