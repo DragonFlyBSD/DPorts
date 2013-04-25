@@ -1,9 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/deskutils/xfce4-notifyd/Makefile,v 1.20 2012/12/31 01:05:43 svnexp Exp $
+# $FreeBSD: deskutils/xfce4-notifyd/Makefile 316187 2013-04-21 16:46:40Z ehaupt $
 
 PORTNAME=	xfce4-notifyd
-PORTVERSION=	0.2.2
-PORTREVISION=	4
+PORTVERSION=	0.2.3
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE
 MASTER_SITE_SUBDIR=	src/apps/${PORTNAME}/${PORTVERSION:R}
@@ -21,21 +20,17 @@ USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gtk20 gnomehack intltool intlhack desktopfileutils
+USE_GNOME=	gtk20 intltool intlhack desktopfileutils
 USE_PKGCONFIG=	build
-USE_XFCE=	configenv libexo libmenu libutil xfconf
+USE_XFCE=	configenv libmenu libutil xfconf
 INSTALLS_ICONS=	yes
 USE_XORG=	x11
 
-CONFIGURE_ARGS=	--disable-debug
-
-CONFLICTS=	notification-daemon-[0-9]* xfce4-notification-daemon-[0-9]* \
-		xfce4-notifyd-0.1*
+CONFLICTS=	notification-daemon-[0-9]* xfce4-notification-daemon-[0-9]*
 
 MAN1=	xfce4-notifyd-config.1
 
 OPTIONS_DEFINE=	NLS
-OPTIONS_DEFAULT=NLS
 
 .include <bsd.port.options.mk>
 
@@ -44,6 +39,7 @@ USE_GETTEXT=	yes
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-configure
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
