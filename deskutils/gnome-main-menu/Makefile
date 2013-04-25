@@ -2,7 +2,7 @@
 # Date created:				06 July 2008
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/gnome-main-menu/Makefile,v 1.16 2012/11/17 05:55:27 svnexp Exp $
+# $FreeBSD: deskutils/gnome-main-menu/Makefile 315647 2013-04-01 09:53:00Z kwm $
 #
 
 PORTNAME=	gnome-main-menu
@@ -28,5 +28,13 @@ CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags libgnomeui-2.0`
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	application-browser.schemas slab.schemas
+
+post-patch:
+	${REINPLACE_CMD} -e 's|glib/gmacros.h|glib.h|g' \
+		-e 's|glib/gfileutils.h|glib.h|g' \
+		-e 's|glib/gtypes.h|glib.h|g' \
+		${WRKSRC}/libslab/system-tile.c \
+		${WRKSRC}/libslab/application-tile.c \
+		${WRKSRC}/main-menu/src/tomboykeybinder.h
 
 .include <bsd.port.mk>
