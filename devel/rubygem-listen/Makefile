@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-listen/Makefile 314183 2013-03-14 20:23:39Z sunpoet $
+# $FreeBSD: devel/rubygem-listen/Makefile 316172 2013-04-21 10:16:17Z sunpoet $
 
 PORTNAME=	listen
-PORTVERSION=	0.7.3
+PORTVERSION=	1.0.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -14,5 +14,8 @@ RUN_DEPENDS=	rubygem-rb-kqueue>=0.2.0:${PORTSDIR}/devel/rubygem-rb-kqueue
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e '14,41 d' ${WRKSRC}/${GEM_NAME}.gemspec
 
 .include <bsd.port.mk>
