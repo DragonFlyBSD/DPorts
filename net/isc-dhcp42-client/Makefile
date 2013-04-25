@@ -1,9 +1,5 @@
-# Ports collection makefile for:	isc-dhcp42-client
-# Date created:				29 June 2011
-# Whom:					Ryan Steinmetz <rpsfa@rit.edu>
-#
-# $FreeBSD: ports/net/isc-dhcp42-client/Makefile,v 1.2 2012/11/17 06:00:03 svnexp Exp $
-#
+# Created by: Ryan Steinmetz <rpsfa@rit.edu>
+# $FreeBSD: net/isc-dhcp42-client/Makefile 316014 2013-04-18 01:25:41Z zi $
 
 COMMENT=	The ISC Dynamic Host Configuration Protocol client
 
