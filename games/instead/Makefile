@@ -1,8 +1,8 @@
 # Created by: neuroworker@gmail.com
-# $FreeBSD: ports/games/instead/Makefile,v 1.12 2013/01/29 00:46:53 svnexp Exp $
+# $FreeBSD: games/instead/Makefile 315917 2013-04-16 22:59:51Z amdmi3 $
 
 PORTNAME=	instead
-PORTVERSION=	1.8.3
+PORTVERSION=	1.9.0
 CATEGORIES=	games
 MASTER_SITES=	GOOGLE_CODE \
 		http://mirror.amdmi3.ru/distfiles/
