@@ -1,9 +1,10 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: deskutils/dosage/Makefile 315013 2013-03-23 08:20:11Z culot $
+# $FreeBSD: deskutils/dosage/Makefile 316108 2013-04-19 15:16:41Z antoine $
 
 PORTNAME=	dosage
-PORTVERSION=	1.14
+PORTVERSION=	2.1
 CATEGORIES=	deskutils python
+MASTER_SITES=	GHC
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Application to keep a local mirror of web comics
@@ -14,8 +15,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>0:${PORTSDIR}/www/py-requests
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	wummel
-GH_TAGNAME=	upstream/${PORTVERSION}
-GH_COMMIT=	179ba7f
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
