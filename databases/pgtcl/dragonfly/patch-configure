@@ -1,0 +1,11 @@
+--- configure.orig	2011-09-19 00:56:38.000000000 +0000
++++ configure
+@@ -5819,7 +5819,7 @@ $as_echo "$tcl_cv_ld_elf" >&6; }
+ 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+ 	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # FreeBSD 3.* and greater have ELF.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="ld -Bshareable -x"

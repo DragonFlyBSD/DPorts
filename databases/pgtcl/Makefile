@@ -1,0 +1,51 @@
+# New ports collection makefile for:	pgtcl
+# Date created:				February 13, 2007
+# Whom:					Mikhail Teterin
+#
+# $FreeBSD: ports/databases/pgtcl/Makefile,v 1.10 2012/11/17 05:55:18 svnexp Exp $
+#
+
+PORTNAME=	pgtcl
+PORTVERSION=	2.0.0
+CATEGORIES=	databases tcl
+MASTER_SITES=	SF/pgtclng/pgtclng/${PORTVERSION}:src
+MASTER_SITE_SUBDIR=	pgtclng
+DISTNAME=	${PORTNAME}${PORTVERSION}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:src
+
+MAINTAINER=	mi@aldan.algebra.com
+COMMENT=	TCL extension for accessing a PostgreSQL server (PGTCL-NG)
+
+LICENSE=	BSD
+
+USE_TCL=	yes
+USE_PGSQL=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--with-tcl=${TCL_LIBDIR} --with-tclinclude=${TCL_INCLUDEDIR}
+LIBDIR=		${PREFIX}/lib/${PORTNAME}
+PLIST_SUB+=	PORTVERSION=${PORTVERSION}
+MANUALREL=	20110918
+
+.if !defined(NOPORTDOCS)
+EXTRACT_ONLY=	${_DISTFILES:M*tar.gz}
+DISTFILES+=	pgtcldocs-${MANUALREL}.zip:doc
+MASTER_SITES+=	SF/pgtclng/Manual/${MANUALREL}:doc
+.endif
+
+post-configure:
+	${REINPLACE_CMD} -e 's,tclstub,tcl,g' \
+	    -e 's,-DUSE_TCL_STUBS=1,-UUSE_TCL_STUBS,g' \
+		${WRKSRC}/Makefile
+
+do-install:
+	${MKDIR} ${LIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/pkgIndex.tcl	\
+		${WRKSRC}/libpgtcl${PORTVERSION}.so ${LIBDIR}
+.if !defined(NOPORTDOCS)
+	${MKDIR} -p ${DOCSDIR}
+	${TAR} -xf ${DISTDIR}/${_DISTFILES:M*.zip} -C ${DOCSDIR} \
+		--strip-components 1 --no-same-permission --no-same-owner
+	${CHMOD} ${SHAREMODE} ${DOCSDIR}/*
+.endif
+
+.include <bsd.port.mk>
