@@ -1,11 +1,8 @@
-# New ports collection makefile for:	cnagios
-# Date created:				23 May 2012
-# Whom:					Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-#
-# $FreeBSD: ports/net-mgmt/cnagios/Makefile,v 1.2 2012/11/17 06:00:31 svnexp Exp $
+# Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
+# $FreeBSD: net-mgmt/cnagios/Makefile 315900 2013-04-16 20:48:40Z madpilot $
 
 PORTNAME=	cnagios
-PORTVERSION=	0.29
+PORTVERSION=	0.30
 CATEGORIES=	net-mgmt
 MASTER_SITES=	ftp://noc.hep.wisc.edu/src/cnagios/ \
 		ftp://noc.hep.wisc.edu/src/cnagios/old-versions/
