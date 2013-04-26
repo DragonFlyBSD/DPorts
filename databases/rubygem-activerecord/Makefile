@@ -1,8 +1,8 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: ports/databases/rubygem-activerecord/Makefile,v 1.48 2013/02/16 21:49:41 svnexp Exp $
+# $FreeBSD: databases/rubygem-activerecord/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
 
 PORTNAME=	activerecord
-PORTVERSION=	3.2.12
+PORTVERSION=	3.2.13
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
