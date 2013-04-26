@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-themes/bluecurve-themes/bsd.bluecurve.mk,v 1.4 2012/11/17 06:03:30 svnexp Exp $
+# $FreeBSD: x11-themes/bluecurve-themes/bsd.bluecurve.mk 300897 2012-07-14 14:29:18Z beat $
 
 _BC_MK_INCLUDED=	yes
 
