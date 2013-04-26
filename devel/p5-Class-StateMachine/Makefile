@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Class-StateMachine/Makefile 315281 2013-03-26 11:08:14Z tobez $
+# $FreeBSD: devel/p5-Class-StateMachine/Makefile 316045 2013-04-18 14:48:31Z eadler $
 
 PORTNAME=	Class-StateMachine
-PORTVERSION=	0.22
+PORTVERSION=	0.23
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
