@@ -1,0 +1,19 @@
+# Created by: Matjaz Prelog <rachek@si.freebsd.org>
+# $FreeBSD: ports/security/p5-Crypt-PGPSimple/Makefile,v 1.7 2012/11/17 06:01:11 svnexp Exp $
+
+PORTNAME=	Crypt-PGPSimple
+PORTVERSION=	0.13
+CATEGORIES=	security perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Crypt::PGPSimple provides a simple object-oriented interface to PGP
+
+RUN_DEPENDS=	${LOCALBASE}/bin/pgp:${PORTSDIR}/security/pgp
+
+PERL_CONFIGURE=	yes
+
+MAN3=		Crypt::PGPSimple.3
+
+.include <bsd.port.mk>
