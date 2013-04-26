@@ -1,8 +1,8 @@
-# $FreeBSD: databases/percona55-server/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: databases/percona55-server/Makefile 316075 2013-04-18 21:45:13Z flo $
 
 PORTNAME?=	percona
-PORTVERSION=	5.5.30.30.1
-DISTNAME=	Percona-Server-5.5.30-rel30.1
+PORTVERSION=	5.5.30.30.2
+DISTNAME=	Percona-Server-5.5.30-rel30.2
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://www.percona.com/downloads/Percona-Server-5.5/${DISTNAME:S/rel//}/source/
