@@ -1,8 +1,8 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: ports/www/rubygem-rails/Makefile,v 1.54 2013/02/16 21:49:47 svnexp Exp $
+# $FreeBSD: www/rubygem-rails/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
 
 PORTNAME=	rails
-PORTVERSION=	3.2.12
+PORTVERSION=	3.2.13
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
