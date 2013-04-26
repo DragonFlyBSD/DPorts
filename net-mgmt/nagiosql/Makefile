@@ -1,9 +1,9 @@
 # Created by: Chris St Denis <chris@smartt.com>
-# $FreeBSD: net-mgmt/nagiosql/Makefile 313373 2013-03-03 19:56:48Z ohauer $
+# $FreeBSD: net-mgmt/nagiosql/Makefile 315908 2013-04-16 21:24:17Z ohauer $
 
 PORTNAME=	nagiosql
 PORTVERSION=	3.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/NagiosQL%20${PORTVERSION}/
 DISTNAME=	${PORTNAME}_${PORTVERSION:S/.//g}
@@ -20,7 +20,7 @@ RUN_DEPENDS=	nagios:${PORTSDIR}/net-mgmt/nagios \
 USE_BZIP2=	yes
 USE_MYSQL=	yes
 USE_GETTEXT=	yes
-USE_PHP=	mysql gettext session simplexml
+USE_PHP=	mysql filter gettext session simplexml
 WANT_PHP_WEB=	yes
 
 USERS?=		nagios
