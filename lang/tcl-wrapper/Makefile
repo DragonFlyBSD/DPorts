@@ -2,7 +2,7 @@
 # Date created:			4 March 2007
 # Whom:	      			Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/tcl-wrapper/Makefile,v 1.12 2012/12/04 13:59:40 svnexp Exp $
+# $FreeBSD: lang/tcl-wrapper/Makefile 316351 2013-04-23 11:51:52Z gahr $
 #
 
 PORTNAME=	wrapper
@@ -36,10 +36,10 @@ TX_SHELL=	wish
 TX_PORT=	tk
 TX_PORT_U=	Tk
 TX_CAT=		x11-toolkits
-USE_TK_RUN=	83+
+USE_TK_RUN=	84+
 CATEGORIES=	x11-toolkits tk
 .else
-USE_TCL_RUN=	83+
+USE_TCL_RUN=	84+
 .endif
 
 TX_CONF=	${TX_SHELL}.conf

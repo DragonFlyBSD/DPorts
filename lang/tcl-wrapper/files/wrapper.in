@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/lang/tcl-wrapper/files/wrapper.in,v 1.2 2012/11/17 05:58:57 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/lang/tcl-wrapper/files/wrapper.in,v 1.1 2007-03-27 10:52:18 miwi Exp $
 #
 # Wrapper for the %%TX_PORT%% shell "%%TX_SHELL%%"
 
