@@ -2,7 +2,7 @@
 # Date created:        20 December 2002
 # Whom:                David Holm <david@realityrift.com>
 #
-# $FreeBSD: ports/devel/sgl/Makefile,v 1.3 2012/11/17 05:57:02 svnexp Exp $
+# $FreeBSD: devel/sgl/Makefile 316927 2013-04-30 12:27:50Z bapt $
 #
 
 PORTNAME=	sgl
@@ -18,7 +18,6 @@ COMMENT=	STL implementation for ADA95
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-
 .include <bsd.port.pre.mk>
 
 do-install:
