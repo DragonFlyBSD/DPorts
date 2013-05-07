@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: ports/print/detex/Makefile,v 1.20 2012/12/03 10:28:47 svnexp Exp $
+# $FreeBSD: print/detex/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	detex
 PORTVERSION=	2.8
@@ -9,10 +9,6 @@ EXTRACT_SUFX=	.tar
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Strips TeX/LaTeX codes from a file
-
-EXTRACT_CMD=		${TAR}
-EXTRACT_BEFORE_ARGS=	-xf
-EXTRACT_AFTER_ARGS=	#empty
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DNO_MALLOC_DECL -DHAVE_STRING_H"
 MAN1=		detex.1
