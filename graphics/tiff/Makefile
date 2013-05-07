@@ -1,5 +1,5 @@
 # Created by: Richard Hwang <rhwang@bigpanda.com>, Mikhail Teterin <mi@aldan.algebra.com>, Jun-ichiro itojun Itoh <itojun@itojun.org>
-# $FreeBSD: ports/graphics/tiff/Makefile,v 1.88 2012/12/09 21:38:12 svnexp Exp $
+# $FreeBSD: graphics/tiff/Makefile 316270 2013-04-22 20:04:57Z dinoex $
 
 PORTNAME=	tiff
 PORTVERSION=	4.0.3
@@ -10,11 +10,11 @@ MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Tools and library routines for working with TIFF images
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
-		jbig:${PORTSDIR}/graphics/jbigkit
-
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
+
+LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
+		jbig:${PORTSDIR}/graphics/jbigkit
 
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
