@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: converters/libiconv/Makefile 314581 2013-03-18 15:51:39Z bapt $
+# $FreeBSD: converters/libiconv/Makefile 316695 2013-04-27 22:09:15Z bapt $
 
 PORTNAME=	libiconv
 PORTVERSION=	1.14
@@ -29,11 +29,6 @@ OPTIONS_DEFINE=	ENCODINGS PATCHES
 OPTIONS_DEFAULT=ENCODINGS
 ENCODINGS_DESC=	Include extra character sets
 PATCHES_DESC=	Apply patches to fix CP932, add EUCJP-MS
-
-.ifdef USE_ICONV
-.error USE_ICONV is defined as an environment variable, or in the arguments \
-	to "make".  Please unset it and restart the build.
-.endif
 
 .include <bsd.port.options.mk>
 
