@@ -1,9 +1,5 @@
-# New ports collection makefile for:   nc6
-# Date created:                30 May 2002
-# Whom:                        Filippo Natali <filippo@widestore.net>
-#
-# $FreeBSD: ports/net/nc6/Makefile,v 1.22 2012/11/17 06:00:06 svnexp Exp $
-#
+# Created by: Filippo Natali <filippo@widestore.net>
+# $FreeBSD: net/nc6/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	nc6
 PORTVERSION=	1.0
@@ -16,13 +12,15 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Netcat clone with IPv6 support
 
 MAN1=	nc6.1
-USE_ICONV=	yes
+USES=	iconv
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
