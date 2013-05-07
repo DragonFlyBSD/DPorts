@@ -1,5 +1,5 @@
 # Created by: Sébastien Santoro <dereckson@gmail.com>
-# $FreeBSD: ports/textproc/xmlgen/Makefile,v 1.1 2013/02/18 07:39:00 svnexp Exp $
+# $FreeBSD: textproc/xmlgen/Makefile 316351 2013-04-23 11:51:52Z gahr $
 
 PORTNAME=	xmlgen
 PORTVERSION=	1.4
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/tclxml/${PORTNAME}/v${PORTVERSION}
 MAINTAINER=	dereckson@gmail.com
 COMMENT=	Write XML documents using Tcl
 
-USE_TCL=	83+
+USE_TCL=	84+
 NO_BUILD=	yes
 
 .include <bsd.port.pre.mk>
