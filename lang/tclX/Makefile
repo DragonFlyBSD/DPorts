@@ -2,7 +2,7 @@
 # Date created:		6 February 1996
 # Whom:			jkh
 #
-# $FreeBSD: lang/tclX/Makefile 315189 2013-03-25 01:52:06Z miwi $
+# $FreeBSD: lang/tclX/Makefile 316353 2013-04-23 11:56:21Z gahr $
 #
 
 PORTNAME=	tclX
@@ -16,7 +16,7 @@ MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Extended TCL
 
 USE_BZIP2=	yes
-USE_TCL=	83+
+USE_TCL=	84+
 
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -63,11 +63,6 @@ EXTRA_PATCHES+=	${FILESDIR}/tcl85-test-patch
 PLIST_SUB+=	BELOW_85='@comment '
 .else
 PLIST_SUB+=	BELOW_85=''
-.endif
-.if ${TCL_VER} > 8.3
-PLIST_SUB+=	ABOVE_83=''
-.else
-PLIST_SUB+=	ABOVE_83='@comment '
 .endif
 
 pre-configure:
