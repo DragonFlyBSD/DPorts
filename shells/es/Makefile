@@ -1,9 +1,5 @@
-# New ports collection makefile for:    es
-# Date created:         Sun Aug 13 12:36:14 CDT 1995
-# Whom:                 erich@rrnet.com
-#
-# $FreeBSD: ports/shells/es/Makefile,v 1.20 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by: erich@rrnet.com
+# $FreeBSD: shells/es/Makefile 317241 2013-05-03 20:39:02Z bapt $
 
 PORTNAME=	es
 PORTVERSION=	0.9.b1
@@ -16,6 +12,7 @@ MAINTAINER=	ljrittle@acm.org
 COMMENT=	An extensible shell, derived from plan9's rc
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	es_cv_abused_getenv=no
 CONFIGURE_ARGS= --with-readline
 CFLAGS:=	${CFLAGS:N-O*}
 
