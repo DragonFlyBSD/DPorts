@@ -1,9 +1,5 @@
-# New ports collection makefile for:	popt
-# Date Created:				29 Dec 1999
-# Whom:					Yuan-Chen Cheng <ycheng@sinica.edu.tw>
-#
-# $FreeBSD: devel/popt/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Yuan-Chen Cheng <ycheng@sinica.edu.tw>
+# $FreeBSD: devel/popt/Makefile 317521 2013-05-06 15:18:38Z bapt $
 
 PORTNAME=	popt
 PORTVERSION=	1.16
@@ -19,19 +15,20 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
-USES=	pathfix
-USE_ICONV=	yes
+USES=		pathfix iconv
 USE_LDCONFIG=	yes
 
 MAN3=		popt.3
 
-.if defined(WITHOUT_NLS)
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.else
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
+.else
+CONFIGURE_ARGS+=--disable-nls
+PLIST_SUB+=	NLS="@comment "
 .endif
 
 .include <bsd.port.mk>
