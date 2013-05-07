@@ -2,7 +2,7 @@
 # Date created:			11 May 2002
 # Whom:				Tilman Linneweh <arved@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/ladspa/Makefile,v 1.17 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: audio/ladspa/Makefile 316371 2013-04-23 16:41:46Z crees $
 
 PORTNAME=	ladspa
 PORTVERSION=	1.13
@@ -29,7 +29,7 @@ BUILD_WRKSRC=	${WRKSRC}/src
 MAKE_JOBS_SAFE=	yes
 
 post-patch:
-	${REINPLACE_CMD} -e 's,-ldl,,; s,-O3,${CFLAGS},; \
+	${REINPLACE_CMD} -e 's,-ldl,,; s,-O3,${CFLAGS},; s,-Werror ,,; \
 		s,^CC,#CC,;s,^CPP,#CPP,;s,CPP,CXX,; s,^CXXFLAGS.*=,CXXFLAGS+=,' \
 		${WRKSRC}/src/makefile
 
