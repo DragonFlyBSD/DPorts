@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/mecab/Makefile 314725 2013-03-20 12:38:23Z tota $
+# $FreeBSD: japanese/mecab/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	mecab
 PORTVERSION=	0.995
@@ -16,7 +16,7 @@ LICENSE_FILE_GPLv2=	${WRKSRC}/GPL
 LICENSE_FILE_LGPL21=	${WRKSRC}/LGPL
 
 USE_AUTOTOOLS=	libtool
-USE_ICONV=	yes
+USES=		iconv
 USE_PERL5_BUILD=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
