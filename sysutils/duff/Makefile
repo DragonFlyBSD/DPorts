@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/duff/Makefile,v 1.9 2012/11/17 06:01:29 svnexp Exp $
+# $FreeBSD: sysutils/duff/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	duff
 PORTVERSION=	0.5.2
@@ -25,7 +25,7 @@ PORTDOCS=	README.SHA
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
