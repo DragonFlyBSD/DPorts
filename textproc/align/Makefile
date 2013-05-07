@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/textproc/align/Makefile,v 1.18 2013/01/14 16:44:06 svnexp Exp $
+# $FreeBSD: textproc/align/Makefile 317595 2013-05-07 09:39:35Z ehaupt $
 
 PORTNAME=	align
 PORTVERSION=	1.7.2
@@ -14,14 +14,12 @@ LICENSE=	GPLv2 # (or later)
 
 NO_BUILD=	yes
 
+USES=		shebangfix
 USE_PERL5_RUN=	yes
 
-PLIST_FILES=	bin/align bin/width
+SHEBANG_FILES=	align width
 
-post-patch:
-.for i in align width
-	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL}|' ${WRKSRC}/${i}
-.endfor
+PLIST_FILES=	bin/align bin/width
 
 do-install:
 .for i in align width
