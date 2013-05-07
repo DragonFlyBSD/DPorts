@@ -1,5 +1,5 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: ports/shells/rc/Makefile,v 1.20 2012/12/16 18:33:19 svnexp Exp $
+# $FreeBSD: shells/rc/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	rc
 PORTVERSION=	1.7.1
@@ -21,7 +21,7 @@ OPTIONS_DEFINE=	READLINE
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREADLINE}
-USE_READLINE=	yes
+USES+=		readline
 CONFIGURE_ARGS+=	--with-readline
 .else
 MAKE_ARGS+=	CFLAGS="$(CFLAGS) -static"
