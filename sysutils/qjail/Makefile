@@ -1,15 +1,13 @@
 # Created by: Joe Barbish
-# $FreeBSD: sysutils/qjail/Makefile 314731 2013-03-20 13:17:23Z bdrewery $
+# $FreeBSD: sysutils/qjail/Makefile 316638 2013-04-26 21:25:52Z bdrewery $
 
 PORTNAME=	qjail
-PORTVERSION=	2.1
+PORTVERSION=	2.2
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}
 
 MAINTAINER=	qjail@a1poweruser.com
 COMMENT=	Utility to quickly deploy and manage jails
-
-RESTRICTED=	license/copyright in dispute
 
 USE_BZIP2=	yes
 NO_BUILD=	yes
