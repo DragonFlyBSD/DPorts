@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.kde4.mk 315586 2013-03-29 23:51:39Z avilla $
+# $FreeBSD: Mk/bsd.kde4.mk 317154 2013-05-02 21:42:57Z avilla $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Kde_Pre_Include)
 
@@ -76,6 +76,8 @@ Kde_Pre_Include=	bsd.kde4.mk
 
 KDE4_VERSION?=		4.10.1
 KDE4_BRANCH?=		stable
+KTP_VERSION?=		0.6.1
+KTP_BRANCH?=		stable
 CALLIGRA_VERSION?=	2.6.2
 CALLIGRA_BRANCH?=	stable
 KDEVELOP_VERSION?=	4.4.1

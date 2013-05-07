@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.qt.mk 314295 2013-03-15 11:46:58Z makc $
+# $FreeBSD: Mk/bsd.qt.mk 317119 2013-05-02 14:12:58Z bapt $
 #
 # Variables:
 # QT_NONSTANDARD	- Suppress modification of configure and make environment.

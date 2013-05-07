@@ -4,7 +4,7 @@
 # Date created:		12 Nov 2005
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.gecko.mk 315713 2013-04-03 20:27:48Z flo $
+# $FreeBSD: Mk/bsd.gecko.mk 317081 2013-05-02 08:26:03Z bapt $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -505,7 +505,7 @@ MOZILLA_BIN?=	${PORTNAME}-bin
 MOZILLA_EXEC_NAME?=${MOZILLA}
 MOZ_RPATH?=	${MOZILLA}
 USE_GNOME+=	libidl desktopfileutils
-USE_ICONV=	yes
+USES=	iconv
 USE_PERL5_BUILD=yes
 USE_XORG=	printproto sm xt xi xext x11 xinerama \
 		ice xproto
@@ -528,7 +528,7 @@ PKGDEINSTALL?=	${WRKDIR}/pkg-deinstall
 PKGINSTALL_INC?=	${.CURDIR}/../../www/firefox/files/pkg-install.in
 PKGDEINSTALL_INC?=	${.CURDIR}/../../www/firefox/files/pkg-deinstall.in
 
-EXTRACT_AFTER_ARGS?=	| ${TAR} -xf - --exclude */CVS/*	\
+EXTRACT_AFTER_ARGS?=	--exclude */CVS/*	\
 			--exclude */macbuild/*			\
 			--exclude */package/*			\
 			--exclude mozilla*/gc/boehm

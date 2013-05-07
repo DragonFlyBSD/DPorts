@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 316243 2013-04-22 15:51:07Z bapt $
+# $FreeBSD: Mk/bsd.pkgng.mk 316634 2013-04-26 20:19:50Z bapt $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -258,6 +258,9 @@ do-package: ${TMPPLIST}
 			fi; \
 		fi; \
 	fi;
+	@for cat in ${CATEGORIES}; do \
+		${RM} -f ${PACKAGES}/$$cat/${PKGNAMEPREFIX}${PORTNAME}*${PKG_SUFX} ; \
+	done
 	@if ${PKG_CREATE} -o ${PKGREPOSITORY} ${PKGNAME}; then \
 		if [ "${PKGORIGIN}" = "ports-mgmt/pkg" ]; then \
 			if [ ! -d ${PKGLATESTREPOSITORY} ]; then \
@@ -266,7 +269,7 @@ do-package: ${TMPPLIST}
 					exit 1; \
 				fi; \
 			fi ; \
-			${LN} -s ../${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ${PKGLATESTFILE} ; \
+			${LN} -sf ../${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ${PKGLATESTFILE} ; \
 		fi; \
 	else \
 		cd ${.CURDIR} && eval ${MAKE} delete-package; \

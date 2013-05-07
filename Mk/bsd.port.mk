@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 315599 2013-03-30 05:31:29Z bdrewery $
+# $FreeBSD: Mk/bsd.port.mk 317580 2013-05-07 08:01:46Z bapt $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -325,12 +325,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # GMAKE			- Set to path of GNU make if not in $PATH.
 #				  Default: gmake
 ##
-# USE_ICONV		- If set, this port uses libiconv.
-# USE_GETTEXT	- The port uses GNU gettext (libintl).
-#					'build'		as a build-time dependency
-#					'yes'		as a library dependency
-#					'run'		as a run-time dependency
-##
 # USE_GHOSTSCRIPT
 #				- If set, this port needs ghostscript to both
 #				  build and run.  If a number is specified,
@@ -361,7 +355,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  if PACKAGE_BUILDING is not set, then CONFIGURE_ENV and
 #				  MAKE_ENV are extended with a DISPLAY variable.
 #
-# USE_FREETYPE	- If set, this port uses the freetype print libraries.
 # USE_GL		- A list of Mesa or GL related dependencies needed by the port.
 #				  Supported components are: glut, glu, glw, gl and linux.
 #				  If set to "yes", this is equivalent to "glu". Note that
@@ -376,12 +369,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 ##
 # USE_SDL		- If set, this port uses the sdl libraries.
 #				  See bsd.sdl.mk for more information.
-##
-# USE_READLINE	- If set, this port uses libreadline.
-# 				  Legal values are: yes, base, port
-#				  yes, base: use base system libreadline on FreeBSD 9 or earlier,
-#				  	use ports/devel/readline on FreeBSD 10.0+
-#				  port: always use ports/devel/readline
 ##
 # USE_OPENAL	- If set, this port relies on the OpenAL package.
 #				  Legal values are: al, soft, si, alut.
@@ -512,6 +499,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # USE_XORG			- Set to a list of X.org module dependencies.
 #				  Implies inclusion of bsd.xorg.mk.
 ##
+# USE_TEX			- A list of the TeX dependencies the port has.
+#
+##
 # USE_RC_SUBR	- If set, the ports startup/shutdown script uses the common
 #				  routines found in /etc/rc.subr.
 #				  If this is set to a list of files, these files will be
@@ -525,14 +515,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  this option is not needed unless the port installs in the base.
 ##
 # USE_APACHE	- If set, this port relies on an apache webserver.
-#
-# USE_CDRTOOLS	- If set, this port depends on sysutils/cdrtools.
-#
-# USE_NCURSES	- If set, this port relies on the ncurses package.
-#
-# USE_PKGCONFIG	- Implies that the port uses pkg-config in one way or another:
-#		  'build', 'run', 'both', implying build,
-#		  runtime, and both build/run dependencies
 #
 # Conflict checking.  Use if your port cannot be installed at the same time as
 # another package.
@@ -947,6 +929,8 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #
 # WITH_CCACHE_BUILD
 # 				- Enable CCACHE support (devel/ccache).  User settable.
+# CCACHE_DIR
+# 				- Which directory to use for ccache (default: $HOME/.ccache)
 # NO_CCACHE
 #				- Disable CCACHE support for example for certain ports if
 #				  CCACHE is enabled.  User settable.
@@ -1277,8 +1261,6 @@ USE_SUBMAKE=	yes
 USE_SUBMAKE=	yes
 .endif
 
-.include "${PORTSDIR}/Mk/bsd.interpreter.mk"
-
 # where 'make config' records user configuration options
 PORT_DBDIR?=	/var/db/ports
 
@@ -1478,6 +1460,10 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .include "${PORTSDIR}/Mk/bsd.qt.mk"
 .endif
 
+.if defined(USE_TEX)
+.include "${PORTSDIR}/Mk/bsd.tex.mk"
+.endif
+
 .if defined(USE_DRUPAL)
 .include "${PORTSDIR}/Mk/bsd.drupal.mk"
 .endif
@@ -1514,19 +1500,7 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .include "${PORTSDIR}/Mk/bsd.kde4.mk"
 .endif
 
-.if defined(USE_NCURSES)
-.include "${PORTSDIR}/Mk/bsd.ncurses.mk"
-.endif
-
 .include "${PORTSDIR}/Mk/bsd.pbi.mk"
-
-.if defined(USE_CMAKE)
-. if defined(CMAKE_OUTSOURCE)
-USES+=	cmake:outsource
-. else
-USES+=	cmake
-. endif
-.endif
 
 # Loading features
 .for f in ${USES}
@@ -1539,7 +1513,7 @@ ${_f}_ARGS:=	${f:C/^[^\:]*\://g}
 
 # You can force skipping these test by defining IGNORE_PATH_CHECKS
 .if !defined(IGNORE_PATH_CHECKS)
-.if (${PREFIX:C,(^.).*,\1,} != "/")
+.if ! ${PREFIX:M/*}
 .BEGIN:
 	@${ECHO_MSG} "PREFIX must be defined as an absolute path so that when 'make'"
 	@${ECHO_MSG} "is invoked in the work area PREFIX points to the right place."
@@ -1707,18 +1681,6 @@ EXTRACT_DEPENDS+=	unmakeself:${PORTSDIR}/archivers/unmakeself
 BUILD_DEPENDS+=		gmake:${PORTSDIR}/devel/gmake
 CONFIGURE_ENV+=	MAKE=${GMAKE}
 .endif
-.if defined(USE_PKGCONFIG)
-.if ${USE_PKGCONFIG:tl} == yes || ${USE_PKGCONFIG:tl} == build
-BUILD_DEPENDS+=	pkgconf:${PORTSDIR}/devel/pkgconf
-CONFIGURE_ENV+=	PKG_CONFIG=pkgconf
-.elif ${USE_PKGCONFIG:tl} == both
-RUN_DEPENDS+=	pkgconf:${PORTSDIR}/devel/pkgconf
-BUILD_DEPENDS+=	pkgconf:${PORTSDIR}/devel/pkgconf
-CONFIGURE_ENV+=	PKG_CONFIG=pkgconf
-.elif ${USE_PKGCONFIG:tl} == run
-RUN_DEPENDS+=	pkgconf:${PORTSDIR}/devel/pkgconf
-.endif
-.endif
 
 .if defined(USE_GCC) || defined(USE_FORTRAN)
 .include "${PORTSDIR}/Mk/bsd.gcc.mk"
@@ -1752,12 +1714,6 @@ MAKE_ENV+=	${b}="${${b}}"
 
 .if defined(USE_OPENLDAP) || defined(WANT_OPENLDAP_VER)
 .include "${PORTSDIR}/Mk/bsd.ldap.mk"
-.endif
-
-.if defined(USE_READLINE)
-LIB_DEPENDS+=	readline.6:${PORTSDIR}/devel/readline
-CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-L${LOCALBASE}/lib -lreadline
 .endif
 
 .if defined(USE_OPENAL)
@@ -1892,22 +1848,6 @@ USE_LDCONFIG=	${PREFIX}/lib
 IGNORE=			has USE_LDCONFIG32 set to yes, which is not correct
 .endif
 
-.if defined(USE_ICONV)
-LIB_DEPENDS+=	iconv.3:${PORTSDIR}/converters/libiconv
-.endif
-
-.if defined(USE_GETTEXT)
-.	if ${USE_GETTEXT:tl} == "build"
-BUILD_DEPENDS+=	xgettext:${PORTSDIR}/devel/gettext
-.	elif ${USE_GETTEXT:tl} == "run"
-RUN_DEPENDS+=	xgettext:${PORTSDIR}/devel/gettext
-.	elif ${USE_GETTEXT:tl} == "yes"
-LIB_DEPENDS+=	intl:${PORTSDIR}/devel/gettext
-.	else
-IGNORE=			USE_GETTEXT can be only one of build, run, or yes
-.	endif
-.endif
-
 .if defined(USE_LINUX_PREFIX) && defined(USE_LDCONFIG)
 # we need ${LINUXBASE}/sbin/ldconfig
 USE_LINUX?=	yes
@@ -1941,7 +1881,7 @@ USE_LINUX=	${OVERRIDE_LINUX_BASE_PORT}
 LINUX_BASE_PORT=	${LINUXBASE}/bin/sh:${PORTSDIR}/emulators/linux_base-${USE_LINUX}
 .	else
 .		if ${USE_LINUX:tl} == "yes"
-.			if ${LINUX_OSRELEASE} == "2.4.2"
+.			if ${OSVERSION} < 800076 || ${LINUX_OSRELEASE} == "2.4.2"
 LINUX_BASE_PORT=	${LINUXBASE}/etc/fedora-release:${PORTSDIR}/emulators/linux_base-fc4
 .			else
 LINUX_BASE_PORT=	${LINUXBASE}/etc/fedora-release:${PORTSDIR}/emulators/linux_base-f10
@@ -1963,10 +1903,6 @@ NO_OPENMOTIF=		yes
 .if !defined(NO_OPENMOTIF)
 LIB_DEPENDS+=		Xm.4:${PORTSDIR}/x11-toolkits/open-motif
 .endif
-.endif
-
-.if defined(USE_FREETYPE)
-LIB_DEPENDS+=			ttf.4:${PORTSDIR}/print/freetype
 .endif
 
 X_IMAKE_PORT=		${PORTSDIR}/devel/imake
@@ -2148,7 +2084,7 @@ _USE_GHOSTSCRIPT=	${USE_GHOSTSCRIPT_RUN}
 _USE_GHOSTSCRIPT=	${USE_GHOSTSCRIPT}
 .endif
 
-.if defined(WITH_GHOSTSCRIPT_VER) && !empty(WITH_GHOSTSCRIPT_VER:M[89])
+.if defined(WITH_GHOSTSCRIPT_VER) && !empty(WITH_GHOSTSCRIPT_VER:M[789])
 _USE_GHOSTSCRIPT_DEFAULT_VER=	${WITH_GHOSTSCRIPT_VER}
 .else
 _USE_GHOSTSCRIPT_DEFAULT_VER=	9
@@ -2160,8 +2096,8 @@ _USE_GHOSTSCRIPT_PKGNAME_SUFFIX=
 .	else
 _USE_GHOSTSCRIPT_PKGNAME_SUFFIX=-nox11
 .	endif
-.	if !empty(_USE_GHOSTSCRIPT:M[89])
-_USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT:M[89]}
+.	if !empty(_USE_GHOSTSCRIPT:M[789])
+_USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT:M[789]}
 .	else
 _USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT_DEFAULT_VER}
 .	endif
@@ -2171,7 +2107,7 @@ _USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT_DEFAULT_VER}
 
 # Sanity check
 .if defined(_USE_GHOSTSCRIPT) && defined(WITH_GHOSTSCRIPT_VER)
-.	if empty(WITH_GHOSTSCRIPT_VER:M[89])
+.	if empty(WITH_GHOSTSCRIPT_VER:M[789])
 .		error You set an invalid value "${WITH_GHOSTSCRIPT_VER}" in WITH_GHOSTSCRIPT_VER.  Abort.
 .	elif ${_USE_GHOSTSCRIPT_VER} != ${WITH_GHOSTSCRIPT_VER}
 .		error You set WITH_GHOSTSCRIPT_VER as ${WITH_GHOSTSCRIPT_VER} but ${PKGNAME} requires print/ghostscript${_USE_GHOSTSCRIPT_VER}.  Abort.
@@ -2186,12 +2122,6 @@ BUILD_DEPENDS+=	gs:${PORTSDIR}/${GHOSTSCRIPT_PORT}
 .endif
 .if defined(USE_GHOSTSCRIPT) || defined(USE_GHOSTSCRIPT_RUN)
 RUN_DEPENDS+=	gs:${PORTSDIR}/${GHOSTSCRIPT_PORT}
-.endif
-
-# Set up the cdrtools.
-.if defined(USE_CDRTOOLS)
-BUILD_DEPENDS+=	cdrecord:${PORTSDIR}/sysutils/cdrtools
-RUN_DEPENDS+=	cdrecord:${PORTSDIR}/sysutils/cdrtools
 .endif
 
 # Macro for doing in-place file editing using regexps
@@ -2245,6 +2175,7 @@ CFLAGS:=	${CFLAGS:N-std=*} -std=${USE_CSTD}
 
 # Multiple make jobs support
 .if defined(DISABLE_MAKE_JOBS) || defined(MAKE_JOBS_UNSAFE)
+MAKE_JOBS_NUMBER=	1
 _MAKE_JOBS=		#
 .else
 .if defined(MAKE_JOBS_SAFE) || defined(FORCE_MAKE_JOBS)
@@ -2266,7 +2197,12 @@ BUILD_DEPENDS+=		${LOCALBASE}/bin/ccache:${PORTSDIR}/devel/ccache
 .	endif
 
 # Prepend the ccache dir into the PATH and setup ccache env
-MAKE_ENV+=	PATH=${LOCALBASE}/libexec/ccache:${PATH}
+MAKE_ENV+=		PATH=${LOCALBASE}/libexec/ccache:${PATH}
+CONFIGURE_ENV+=	PATH=${LOCALBASE}/libexec/ccache:${PATH}
+.	if defined(CCACHE_DIR)
+MAKE_ENV+=		CCACHE_DIR="${CCACHE_DIR}"
+CONFIGURE_ENV+=	CCACHE_DIR="${CCACHE_DIR}"
+.	endif
 .endif
 
 PTHREAD_CFLAGS?=
@@ -2338,18 +2274,12 @@ EXTRACT_CMD?=		${UNMAKESELF_CMD}
 EXTRACT_BEFORE_ARGS?=
 EXTRACT_AFTER_ARGS?=
 .else
-EXTRACT_BEFORE_ARGS?=	-dc
+EXTRACT_CMD?=	${TAR}
+EXTRACT_BEFORE_ARGS?=	-xf
 .if defined(EXTRACT_PRESERVE_OWNERSHIP)
-EXTRACT_AFTER_ARGS?=	| ${TAR} -xf -
+EXTRACT_AFTER_ARGS?=
 .else
-EXTRACT_AFTER_ARGS?=	| ${TAR} -xf - --no-same-owner --no-same-permissions
-.endif
-.if defined(USE_BZIP2)
-EXTRACT_CMD?=			${BZIP2_CMD}
-.elif defined(USE_XZ)
-EXTRACT_CMD?=			${XZ_CMD}
-.else
-EXTRACT_CMD?=			${GZIP_CMD}
+EXTRACT_AFTER_ARGS?=	--no-same-owner --no-same-permissions
 .endif
 .endif
 
@@ -2856,11 +2786,12 @@ patch-sites: patch-sites-DEFAULT
 
 .if defined(IGNOREFILES)
 .if !defined(CKSUMFILES)
-.  for file in ${ALLFILES}
-.    if empty(IGNOREFILES:M${file})
-CKSUMFILES+= ${file}
-.    endif
+.  for _f in ${ALLFILES}
+.    if ! ${IGNOREFILES:M${_f}}
+CKSUMFILES+=	${_f}
+.   endif
 .  endfor
+.  undef _f
 .endif
 .else
 CKSUMFILES=		${ALLFILES}
@@ -2961,7 +2892,7 @@ CONFIGURE_MAX_CMD_LEN!=	${SYSCTL} -n kern.argmax
 .endif
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX} $${_LATE_CONFIGURE_ARGS}
-CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${CONFIGURE_MAX_CMD_LEN}
+CONFIGURE_ENV+=		CONFIG_SITE=${PORTSDIR}/Templates/config.site lt_cv_sys_max_cmd_len=${CONFIGURE_MAX_CMD_LEN}
 HAS_CONFIGURE=		yes
 
 SET_LATE_CONFIGURE_ARGS= \
@@ -3010,6 +2941,11 @@ MANEXT=	.gz
 .endif
 
 .if (defined(MLINKS) || defined(_MLINKS_PREPEND)) && !defined(_MLINKS)
+
+.if defined(.PARSEDIR)
+_MLINKS=	 ${_MLINKS_PREPEND} \
+		 ${MANLANG:S,^,man/,:S,/"",,:@m@${MLINKS:@p@${MAN${p:E}PREFIX}/$m/man${p:E}/$p${MANEXT}@}@}
+.else
 __pmlinks!=	${ECHO_CMD} '${MLINKS:S/	/ /}' | ${AWK} \
  '{ if (NF % 2 != 0) { print "broken"; exit; } \
 	for (i=1; i<=NF; i++) { \
@@ -3035,6 +2971,7 @@ _MLINKS+=	${___pmlinks:S// /g:S/___LANG___/${__lang}/}
 .endfor
 .endfor
 .endfor
+.endif
 .endif
 _COUNT=0
 .for ___tpmlinks in ${_MLINKS}

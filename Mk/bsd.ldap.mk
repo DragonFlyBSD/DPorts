@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: ports/Mk/bsd.ldap.mk,v 1.12 2012/12/12 20:11:41 svnexp Exp $
+# $FreeBSD: Mk/bsd.ldap.mk 317133 2013-05-02 17:12:43Z bapt $
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Ldap_Post_Include)
@@ -66,7 +66,7 @@ IGNORE=	cannot install: OpenLDAP versions mismatch: openldap${_OPENLDAP_VER}-cli
 
 CFLAGS+=	-DLDAP_DEPRECATED
 
-_OPENLDAP_CLIENT_PKG!=	${PKG_INFO} -Ex openldap.\*-client 2>/dev/null || echo
+_OPENLDAP_CLIENT_PKG!=	${PKG_INFO} -Ex openldap.\*-client 2>/dev/null; ${ECHO_CMD}
 _OPENLDAP_FLAVOUR=	${_OPENLDAP_CLIENT_PKG:C/openldap//:C/-client-.*//}
 
 .if defined(WANT_OPENLDAP_SASL)

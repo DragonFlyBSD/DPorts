@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.linux-rpm.mk,v 1.28 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/Mk/bsd.linux-rpm.mk,v 1.27 2012-05-23 08:17:49 miwi Exp $
 #
 
 # Variables:
@@ -32,8 +32,6 @@
 
 Linux_RPM_Include_MAINTAINER=	emulation@FreeBSD.org
 Linux_RPM_Pre_Include=			bsd.linux-rpm.mk
-
-RPM2CPIO?=			${LOCALBASE}/bin/rpm2cpio
 
 EXTRACT_SUFX?=		.${LINUX_RPM_ARCH}.rpm
 SRC_SUFX?=		.src.rpm
@@ -133,11 +131,9 @@ MASTER_SITE_SUBDIR+=	${MASTER_SITE_SRC_SUBDIR}
 ALWAYS_KEEP_DISTFILES=	yes
 .  endif
 
-EXTRACT_DEPENDS+=		${RPM2CPIO}:${PORTSDIR}/archivers/rpm
-
-EXTRACT_CMD?=			${RPM2CPIO}
-EXTRACT_BEFORE_ARGS?=
-EXTRACT_AFTER_ARGS?=	| ${CPIO} -id --quiet
+EXTRACT_CMD?=			${TAR}
+EXTRACT_BEFORE_ARGS?=	-xf
+EXTRACT_AFTER_ARGS?=
 
 DISTINFO_FILE?=				${MASTERDIR}/distinfo.${LINUX_RPM_ARCH}
 

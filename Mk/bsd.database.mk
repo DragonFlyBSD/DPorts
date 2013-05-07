@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: ports/Mk/bsd.database.mk,v 1.87 2013/02/14 15:55:31 svnexp Exp $
+# $FreeBSD: Mk/bsd.database.mk 316631 2013-04-26 19:52:01Z flo $
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Database_Post_Include)
@@ -105,7 +105,6 @@ Database_Include_MAINTAINER=	ports@FreeBSD.org
 .if defined(USE_MYSQL)
 DEFAULT_MYSQL_VER?=	55
 # MySQL client version currently supported.
-MYSQL41_LIBVER=		14
 MYSQL50_LIBVER=		15
 MYSQL51_LIBVER=		16
 MYSQL53m_LIBVER=	16
@@ -166,10 +165,6 @@ _MYSQL_SERVER=	databases/percona56-server
 .else
 _MYSQL_CLIENT=	databases/mysql${MYSQL_VER}-client
 _MYSQL_SERVER=	databases/mysql${MYSQL_VER}-server
-.endif
-
-.if (${USE_MYSQL} == "embedded")
-IGNORE_WITH_MYSQL=	41
 .endif
 
 # And now we are checking if we can use it

@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/Mk/bsd.gnustep.mk,v 1.75 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.gnustep.mk 317116 2013-05-02 14:09:21Z bapt $
 #
 # This file contains some variable definitions that are supposed to
 # make your life easier when dealing with ports related to the GNUstep.
@@ -523,7 +523,7 @@ do-install:
 .endif
 
 .if !defined(GNUSTEP_WITH_BASE_GCC)
-TARGLIB!=	(cd ${PORTSDIR}/${GNUSTEP_GCC_PORT} && make -V TARGLIB)
+TARGLIB!=	${MAKE} -C ${PORTSDIR}/${GNUSTEP_GCC_PORT} -V TARGLIB
 .endif
 
 .endif
