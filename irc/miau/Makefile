@@ -2,7 +2,7 @@
 # Date created:				23 Apr 2004
 # Whom:					Oliver Eikemeier
 #
-# $FreeBSD: ports/irc/miau/Makefile,v 1.21 2012/11/17 05:58:29 svnexp Exp $
+# $FreeBSD: irc/miau/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=		miau
@@ -14,7 +14,7 @@ MAINTAINER=		dhn@FreeBSD.org
 COMMENT=		A fully featured easy to use IRC-bouncer
 
 USE_BZIP2=		yes
-USE_ICONV=		yes
+USES=			iconv
 GNU_CONFIGURE=		yes
 
 INFO=			miau
