@@ -1,9 +1,5 @@
-# New ports collection makefile for:	chu
-# Date created:				September 16 2006
-# Whom:					Diane Bruce <db@db.net>
-#
-# $FreeBSD: ports/comms/chu/Makefile,v 1.3 2012/11/17 05:54:59 svnexp Exp $
-#
+# Created by: Diane Bruce <db@db.net>
+# $FreeBSD: comms/chu/Makefile 317378 2013-05-04 22:12:35Z bapt $
 
 PORTNAME=	chu
 PORTVERSION=	0.1.29
@@ -17,6 +13,8 @@ COMMENT=	Synchronise computer clock to CHU radio station
 
 MAN8=	chu.8
 
+.include <bsd.port.options.mk>
+
 do-extract:
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
@@ -27,7 +25,7 @@ do-extract:
 			exit 1; \
 		fi \
 	done
-	${EXTRACT_CMD} -d ${WRKSRC}/testsignal.gz
+	${GZIP_CMD} -d ${WRKSRC}/testsignal.gz
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/etc/chu|${PREFIX}/etc/chu|g' ${WRKSRC}/chu.c ${WRKSRC}/chu.8
@@ -39,7 +37,7 @@ do-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/testsignal ${DATADIR}
 	${INSTALL_MAN} ${WRKSRC}/chu.8 ${PREFIX}/man/man8
-.if	!defined(NOPORTDOCS)
+.if	${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for	d in ${WRKSRC}/COPYING \
 	${WRKSRC}/TESTING \
