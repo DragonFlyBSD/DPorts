@@ -1,5 +1,5 @@
 # Created by: Niels Heinen
-# $FreeBSD: security/fuzzdb/Makefile 313263 2013-03-02 15:12:04Z pawel $
+# $FreeBSD: security/fuzzdb/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	fuzzdb
 PORTVERSION=	1.09
@@ -11,7 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Comprehensive set of fuzzing patterns
 
 NO_BUILD=	yes
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude .svn
+EXTRACT_AFTER_ARGS=	--exclude .svn
 PORTDOCS=	_copyright.txt _readme.txt
 PORTDIRS=	attack-payloads wordlists-misc Discovery \
 		web-backdoors wordlists-user-passwd regex
