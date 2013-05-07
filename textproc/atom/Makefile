@@ -1,9 +1,4 @@
-# New ports collection Makefile for:	atom
-# Date created:	 	3 June 2009
-# Whom:			utisoft@gmail.com
-#
-# $FreeBSD: ports/textproc/atom/Makefile,v 1.4 2012/11/17 06:01:52 svnexp Exp $
-#
+# $FreeBSD: textproc/atom/Makefile 316959 2013-04-30 20:10:53Z crees $
 
 PORTNAME=	atom
 PORTVERSION=	1.0
@@ -14,14 +9,16 @@ MASTER_SITES=	http://www.bayofrum.net/dist/atom/ \
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Converts text files to html with special attributes
 
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 MAN1=	atom.1
 MANCOMPRESSED=	no
 
 GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/atom
-PORTDOCS=	COPYING \
-		README \
+PORTDOCS=	README \
 		TODO \
 		testFile
 
