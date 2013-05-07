@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/axel/Makefile 315271 2013-03-26 09:58:33Z bapt $
+# $FreeBSD: ftp/axel/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	axel
 PORTVERSION=	2.4
@@ -21,8 +21,7 @@ OPTIONS_DEFINE=	NLS DEBUG
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES+=		gettext iconv
 PLIST_SUB+=	NLS=""
 CONFIGURE_ARGS+=--i18n=1
 .else
