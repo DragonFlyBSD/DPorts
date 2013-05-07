@@ -1,9 +1,5 @@
-# New ports collection makefile for:	id-utils
-# Date created:		22 Aug 1996
-# Whom:			pst@freebsd.org
-#
-# $FreeBSD: ports/devel/idutils/Makefile,v 1.38 2012/11/17 05:55:50 svnexp Exp $
-#
+# Created by: pst@freebsd.org
+# $FreeBSD: devel/idutils/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	idutils
 PORTVERSION=	4.6
@@ -24,12 +20,14 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 INFO=		idutils
 MAN1=		aid.1 defid.1 eid.1 fid.1 fnid.1 gid.1 lid.1 mkid.1 xtokid.1
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 # Port configure script will auto-install the .elc file if [x]emacs is found
