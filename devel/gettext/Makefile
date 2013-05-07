@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: devel/gettext/Makefile 314581 2013-03-18 15:51:39Z bapt $
+# $FreeBSD: devel/gettext/Makefile 317574 2013-05-07 06:31:54Z jgh $
 
 PORTNAME=	gettext
 PORTVERSION=	0.18.1.1
@@ -14,8 +14,7 @@ MASTER_SITE_SUBDIR=	gettext
 MAINTAINER=	autotools@FreeBSD.org
 COMMENT=	GNU gettext package
 
-USES=		charsetfix
-USE_ICONV=	yes
+USES=		charsetfix iconv
 LIBTOOLFILES=	gettext-runtime/configure \
 		gettext-runtime/libasprintf/configure gettext-tools/configure
 USE_AUTOTOOLS=	libtool
@@ -42,12 +41,9 @@ MAN3=		bind_textdomain_codeset.3 bindtextdomain.3 dcgettext.3 \
 		textdomain.3
 INFO=		autosprintf gettext
 
-.ifdef USE_GETTEXT
-.error	USE_GETTEXT is defined as an environment variable, or in the arguments \
-	to "make".  Please unset it and restart the build.
-.endif
+.include <bsd.port.options.mk>
 
-.if defined (NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-nodocs
 .endif
 
@@ -63,7 +59,7 @@ pre-extract:
 post-patch:
 	@${FIND} ${WRKSRC} -name configure -print | ${XARGS} \
 	    ${REINPLACE_CMD} -e 's|mkdir gmkdir|mkdir|; s|gawk|awk|'
-.if defined (NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 .for dir in runtime tools
 	@${REINPLACE_CMD} -e 's|^SUBDIRS = doc|SUBDIRS =|' \
 		${WRKSRC}/gettext-${dir}/Makefile.in
