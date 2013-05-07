@@ -1,6 +1,6 @@
 --- pkg/pkg.conf.sample.orig	2013-03-31 00:52:51.000000000 +0000
 +++ pkg/pkg.conf.sample
-@@ -2,11 +2,23 @@
+@@ -2,11 +2,24 @@
  # For more information on the file format and
  # options please refer to the pkg.conf(5) man page
  
@@ -15,6 +15,7 @@
 +PACKAGESITE: http://mirror-master.dragonflybsd.org/dports/${ABI}/LATEST
 +
 +# European mirrors
++#PACKAGESITE: http://mirrors.ircam.fr/pub/DragonFlyBSD-dports/${ABI}/LATEST
 +#PACKAGESITE: http://pkg.wolfpond.org/${ABI}/LATEST
 +
  # Configuration options
