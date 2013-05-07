@@ -2,7 +2,7 @@
 # Date created:		12 Sep 1996
 # Whom:			gurney_j@efn.org
 #
-# $FreeBSD: ports/sysutils/su2/Makefile,v 1.16 2012/11/17 06:01:46 svnexp Exp $
+# $FreeBSD: sysutils/su2/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	su2
