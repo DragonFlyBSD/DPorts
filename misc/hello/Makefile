@@ -2,7 +2,7 @@
 # Date created:				Fri Jul 23, 1999
 # Whom:					shipley@dis.org
 #
-# $FreeBSD: ports/misc/hello/Makefile,v 1.24 2012/11/17 05:59:38 svnexp Exp $
+# $FreeBSD: misc/hello/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	hello
@@ -21,7 +21,7 @@ MAN1=		hello.1
 INFO=		hello
 
 .if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+USES+=		gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
