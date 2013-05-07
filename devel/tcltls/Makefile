@@ -2,7 +2,7 @@
 # Date created:				4 May 2000
 # Whom:					mi@aldan.algebra.com
 #
-# $FreeBSD: ports/devel/tcltls/Makefile,v 1.19 2012/11/17 05:57:05 svnexp Exp $
+# $FreeBSD: devel/tcltls/Makefile 316351 2013-04-23 11:51:52Z gahr $
 #
 
 PORTNAME=	tcltls
@@ -17,7 +17,7 @@ COMMENT=	SSL extensions for TCL; dynamicly loadable
 
 LIB_DEPENDS+=	tcl${TCLVND}:${PORTSDIR}/lang/tcl${TCLVND}
 
-USE_TCL=	83+
+USE_TCL=	84+
 USE_OPENSSL=	yes
 
 WRKSRC=	${WRKDIR}/tls${PORTVERSION}
