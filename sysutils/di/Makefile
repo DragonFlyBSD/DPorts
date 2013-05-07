@@ -1,5 +1,5 @@
 # Created by: Brad Lanam <bll@gentoo.com>
-# $FreeBSD: ports/sysutils/di/Makefile,v 1.34 2013/01/21 00:06:13 svnexp Exp $
+# $FreeBSD: sysutils/di/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	di
 PORTVERSION=	4.34
@@ -19,7 +19,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB=	NLS=""
 .else
 PLIST_SUB=	NLS="@comment "
