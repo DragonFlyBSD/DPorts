@@ -1,5 +1,5 @@
 # Created by: Rafal Lesniak <fbsd@grid.einherjar.de>
-# $FreeBSD: ports/dns/idnkit2/Makefile,v 1.4 2012/12/20 16:54:18 svnexp Exp $
+# $FreeBSD: dns/idnkit2/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	idnkit
 PORTVERSION=	2.2
@@ -17,7 +17,7 @@ LATEST_LINK=	${PORTNAME}${PORTVERSION:R}
 CONFLICTS_INSTALL=	idnkit-1.*
 
 USE_AUTOTOOLS=	libtool
-USE_ICONV=	yes
+USES=		iconv
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libiconv=${LOCALBASE}
