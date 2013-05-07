@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dar
-# Date created:				3 January 2004
-# Whom:					Edson Brandi <ebrandi@fugspbr.org>
-#
-# $FreeBSD: ports/sysutils/dar/Makefile,v 1.33 2012/11/17 06:01:28 svnexp Exp $
-#
+# Created by: Edson Brandi <ebrandi@fugspbr.org>
+# $FreeBSD: sysutils/dar/Makefile 317491 2013-05-06 09:07:58Z bapt $
 
 PORTNAME=	dar
 PORTVERSION=	2.3.11
@@ -23,8 +19,10 @@ CPPFLAGS+=	-DHAVE_DECL_GETOPT=0
 
 MAN1=		dar.1 dar_cp.1 dar_manager.1 dar_slave.1 dar_xform.1
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -35,7 +33,7 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.html *.dtd *.txt *.jpg [CR]* ${DOCSDIR}
 	@${MKDIR} ${DOCSDIR}/samples
