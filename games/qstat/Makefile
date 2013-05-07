@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: games/qstat/Makefile 314461 2013-03-17 16:44:33Z danfe $
+# $FreeBSD: games/qstat/Makefile 315876 2013-04-16 18:23:45Z madpilot $
 
 PORTNAME=	qstat
 PORTVERSION=	2.11
@@ -10,6 +10,8 @@ MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Command-line program to query game servers on the net
 
 GNU_CONFIGURE=	yes
+
+CONFLICTS_INSTALL=	torque-[0-9]*
 
 OPTIONS_DEFINE=	DOCS
 
