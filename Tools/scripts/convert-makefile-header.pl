@@ -7,7 +7,7 @@
 #
 # MAINTAINER=   ehaupt@FreeBSD.org
 #
-# $FreeBSD: Tools/scripts/convert-makefile-header.pl 313120 2013-02-28 17:28:50Z brooks $
+# $FreeBSD: Tools/scripts/convert-makefile-header.pl 317597 2013-05-07 10:18:25Z ehaupt $
 
 use strict;
 use warnings;
@@ -24,11 +24,56 @@ Usage: $bn [OPTION] PORT
                         (make sure the original creator is ok with this)
   -h, --help            this help
   -n, --nowrite         don't change file, just print what would be done
+  -N, --nopreserve      don't preserve original file
 
 _ENOUSAGE
 }
 
-my $nicepeople="((\\s|<|^)(araujo|az|avilla|bapt|bdrewery|beat|brooks|crees|eadler|flo|flz|garga|kuriyama|linimon|makc|rm|tabthorpe|wxs)\@freebsd.org|cvs-src\@yandex\.ru|makc\@issp\.ac\.ru|villa\.alberto@|pgollucci\@p6m7g8\.com|bsdkaffee@|baptiste\.daroussin\@gmail.com)";
+# You may add yourself to the following list if you agree to waive on the
+# "Created by" attribution
+sub get_nice_people() {
+	my $committers=[
+		'araujo',
+		'az',
+		'avilla',
+		'bapt',
+		'bdrewery',
+		'beat',
+		'brooks',
+		'crees',
+		'eadler',
+		'flo',
+		'flz',
+		'garga',
+		'kuriyama',
+		'linimon',
+		'makc',
+		'pgollucci',
+		'rm',
+		'tabthorpe',
+		'wxs'
+	];
+
+	# append FreeBSD.org domain to the list of committers
+	map ($_ .= '\@FreeBSD\.org', @$committers);
+
+	my $maintainers=[
+		'cvs-src\@yandex\.ru',
+		'makc\@issp\.ac\.ru',
+		'villa\.alberto\@',
+		'pgollucci\@p6m7g8\.com',
+		'bsdkaffee\@',
+		'baptiste\.daroussin\@gmail\.com'
+	];
+
+	# merge committer and maintainer addresses
+	my @nice_people=(@$committers, @$maintainers);
+
+	# prepend regex
+	map ($_ = '(\\s|<|^)' . $_, @nice_people);
+
+	return \@nice_people;
+}
 
 sub get_creator($) {
 	my $header=shift;
@@ -43,21 +88,11 @@ sub get_creator($) {
 	return $creator;
 }
 
-sub get_mcom($) {
-	my $header=shift;
-	my $mcom;
-	for my $line (@$header) {
-		if ($line=~m'\$MCom:'i) {
-			return $line;
-		}
-	}
-	return "";
-}
-
 MAIN: {
 	# get options
 	my $opt={};
-	GetOptions($opt, 'help|h', 'rcsonly|r', 'createdby|c', 'nowrite|n');
+	my $nice_people=get_nice_people();
+	GetOptions($opt, 'help|h', 'rcsonly|r', 'createdby|c', 'nowrite|n', 'nopreserve|N');
 
 	if(defined($opt->{help})) {
 		usage();
@@ -71,6 +106,7 @@ MAIN: {
 	for my $arg (@ARGV) {
 		my @header;
 		my @makefile;
+		my @header_exception;
 		my $in_header=1;
 		if(-f "$arg/Makefile") {
 			my $mf=$arg . "/Makefile";
@@ -82,6 +118,11 @@ MAIN: {
 				} else {
 					$in_header=0;
 					push(@makefile, $line);
+				}
+
+				# tolerate $MCom RCS tags
+				if($line=~m'\$MCom') {
+					push(@header_exception, $line);
 				}
 			}
 			close(F);
@@ -99,16 +140,28 @@ MAIN: {
 				print $outh "# \$FreeBSD\$\n";
 			} elsif(defined($opt->{createdby}) || !defined($opt->{rcsonly})) {
 				my $creator=get_creator(\@header);
-				my $mcom=get_mcom(\@header);
 				if(defined($creator)) {
-					if ($creator!~m"$nicepeople"i) {
-						print $outh "# Created by: $creator\n";
+					my $is_nice=0;
+					for my $c (@$nice_people) {
+						if($creator=~m"${c}"i) {
+							$is_nice=1;
+							last;
+						}
 					}
+
+					# normalize FreeBSD.org
+					$creator=~s#\@freebsd\.org#\@FreeBSD.org#i;
+
+					print $outh "# Created by: $creator\n" if(!$is_nice);
 				} else {
 					print STDERR "$mf creator not found. Reverting to RCS string only.\n";
 				}
 				print $outh "# \$FreeBSD\$\n";
-				print $outh $mcom;
+
+				# append header exceptions
+				for my $h (@header_exception) {
+					print $outh $h . "\n";
+				}
 			}
 		
 			for my $line (@makefile) {
@@ -117,7 +170,7 @@ MAIN: {
 
 			if(not defined($opt->{nowrite})) {
 				# move new Makefile
-				`mv $mf $mf.orig`;
+				`mv $mf $mf.orig` if(not defined($opt->{nopreserve}));
 				`mv $mf.tmp_header_rename $mf`;
 				print STDERR "$mf converted.\n";
 			}
