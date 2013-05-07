@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/lang/tcl86/Makefile,v 1.44 2013/02/06 18:52:15 svnexp Exp $
+# $FreeBSD: lang/tcl86/Makefile 316025 2013-04-18 08:20:59Z gahr $
 
 PORTNAME=	tcl
 PORTVERSION=	8.6.0
@@ -77,6 +77,12 @@ BROKEN=		Does not build on arm
 .endif
 
 post-patch:
+	${REINPLACE_CMD} -e \
+	    's|@TCL_BUILD_LIB_SPEC@|@TCL_LIB_SPEC@|; \
+	     s|@TCL_BUILD_STUB_LIB_SPEC@|@TCL_STUB_LIB_SPEC@|; \
+	     s|@TCL_BUILD_STUB_LIB_PATH@|@TCL_STUB_LIB_PATH@|; \
+	     s|@TCL_SRC_DIR@|${PREFIX}/include/tcl${TCL_VER}|' \
+	     ${WRKSRC}/tclConfig.sh.in
 .if !${PORT_OPTIONS:MTCLMAN}
 	@${FIND} ${WRKSRC}/../pkgs -name Makefile.in | ${XARGS} ${REINPLACE_CMD} \
 	    -e '/^install:/s|install-doc||'
