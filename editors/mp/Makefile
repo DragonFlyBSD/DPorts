@@ -1,8 +1,8 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: editors/mp/Makefile 315195 2013-03-25 06:06:56Z miwi $
+# $FreeBSD: editors/mp/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	mp
-PORTVERSION=	5.2.5
+PORTVERSION=	5.2.6
 CATEGORIES=	editors
 MASTER_SITES=	http://triptico.com/download/mp/
 
@@ -16,8 +16,7 @@ OPTIONS_RADIO=	GUI
 OPTIONS_RADIO_GUI=	GTK3 GTK2 QT4
 OPTIONS_DEFAULT=	PCRE
 
-USE_NCURSES=	yes
-USE_ICONV=	yes
+USES=		iconv ncurses
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	config.sh
 CONFIGURE_ARGS=	--prefix=${PREFIX} --without-win32 --without-kde4
@@ -29,7 +28,7 @@ DATADIR=	${PREFIX}/share/mp-5
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--without-gettext
