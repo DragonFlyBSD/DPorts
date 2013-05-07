@@ -1,9 +1,5 @@
-# New ports collection makefile for:	stfl
-# Date created:		28 March 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/stfl/Makefile,v 1.16 2013/02/14 10:22:23 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: devel/stfl/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	stfl
 PORTVERSION=	0.22
@@ -18,8 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
-USE_NCURSES=	yes
+USES=		iconv ncurses
 MAKE_JOBS_SAFE=	yes
 ALL_TARGET=	libstfl.so
 PLIST_FILES=	lib/libstfl.so.1 lib/libstfl.so include/stfl.h \
