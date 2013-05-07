@@ -2,7 +2,7 @@
 # Date created:					2012-02-20
 # Whom:						arved
 #
-# $FreeBSD: ports/devel/remake/Makefile,v 1.3 2012/11/17 05:56:56 svnexp Exp $
+# $FreeBSD: devel/remake/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	remake
 PORTVERSION=	0.9
@@ -15,7 +15,7 @@ MAINTAINER=	arved@FreeBSD.org
 COMMENT=	Fork of gmake with debugger
 
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 MAN1=		remake.1
 INFO=		remake
 
