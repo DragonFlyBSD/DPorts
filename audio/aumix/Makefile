@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: ports/audio/aumix/Makefile,v 1.58 2012/12/17 20:54:17 svnexp Exp $
+# $FreeBSD: audio/aumix/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	aumix
 PORTVERSION=	2.9.1
@@ -35,7 +35,7 @@ OPTIONS_DEFINE=	NLS GTK2
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 
 .for ii in ca de el es fr gl it ja nl pl pt_BR ru sv uk zh_CN
 PLIST_FILES+=	share/locale/${ii}/LC_MESSAGES/aumix.mo
