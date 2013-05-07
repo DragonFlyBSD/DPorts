@@ -1,9 +1,5 @@
-# New ports collection makefile for:	CLEX File Manager
-# Date created:				Tue Oct 30, 2002
-# Whom:			Michael L. Hostbaek <mich@freebsdcluster.org>
-#
-# $FreeBSD: ports/misc/clex/Makefile,v 1.20 2012/11/17 05:59:33 svnexp Exp $
-#
+# Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
+# $FreeBSD: misc/clex/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	clex
 PORTVERSION=	4.6.4
@@ -16,8 +12,8 @@ COMMENT=	A command line file manager
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
+USES=		ncurses
 USE_GMAKE=	yes
-USE_NCURSES=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -30,7 +26,9 @@ post-patch:
 	@${REINPLACE_CMD} -e '18s,^,#include <stdio.h>,' \
 		${WRKSRC}/src/preview.c
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
