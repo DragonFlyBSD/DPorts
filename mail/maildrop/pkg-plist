@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/mail/maildrop/pkg-plist,v 1.16 2012/11/17 05:59:05 svnexp Exp $
+@comment $FreeBSD: mail/maildrop/pkg-plist 305004 2012-09-28 17:26:54Z madpilot $
 bin/maildrop-deliverquota
 bin/lockmail
 bin/mailbot
