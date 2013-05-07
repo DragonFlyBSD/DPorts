@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: ports/sysutils/reed/Makefile,v 1.16 2012/11/17 06:01:43 svnexp Exp $
+# $FreeBSD: sysutils/reed/Makefile 316959 2013-04-30 20:10:53Z crees $
 
 PORTNAME=	reed
 PORTVERSION=	5.4
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.bayofrum.net/dist/${PORTNAME}
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	A text pager with autoscrolling and more
+
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_PERL5=	yes
 HAS_CONFIGURE=	yes
