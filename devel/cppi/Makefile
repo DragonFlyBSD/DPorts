@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cppi/Makefile 314434 2013-03-17 13:38:31Z johans $
+# $FreeBSD: devel/cppi/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	cppi
 PORTVERSION=	1.18
@@ -10,7 +10,7 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	A tool to indent the C preprocessor directives
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 
@@ -19,7 +19,7 @@ MAN1=		cppi.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
