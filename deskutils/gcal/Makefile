@@ -1,21 +1,15 @@
-# New ports collection makefile for:	gcal
-# Date created:				12 October 2000
-# Whom:					Cyrille Lefevre <clefevre@citeweb.net>
-#
-# $FreeBSD: ports/deskutils/gcal/Makefile,v 1.25 2012/11/17 05:55:27 svnexp Exp $
-#
+# Created by: Cyrille Lefevre <clefevre@citeweb.net>
+# $FreeBSD: deskutils/gcal/Makefile 316844 2013-04-29 20:03:38Z johans $
 
 PORTNAME=		gcal
-PORTVERSION=		3.6.2
+PORTVERSION=		3.6.3
 CATEGORIES=		deskutils
-MASTER_SITES=		${MASTER_SITE_GNU}
-MASTER_SITE_SUBDIR=	${PORTNAME}
+MASTER_SITES=		GNU
 
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	The GNU Gregorian calendar program
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 
@@ -25,7 +19,7 @@ INFO=		gcal
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
