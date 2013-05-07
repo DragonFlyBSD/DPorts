@@ -1,4 +1,4 @@
-# $FreeBSD: GIDs 313677 2013-03-08 22:27:59Z pawel $
+# $FreeBSD: GIDs 317297 2013-05-04 08:07:59Z hrs $
 # The 60000-60999 is reserved to resolve incompatibility from FreeBSD
 # Please keep this file sorted by GID!
 operator:*:5:amanda
@@ -196,6 +196,7 @@ dahdi:*:843:asterisk
 fossy:*:901:www
 bacula:*:910:
 iserv:*:911:
+_sj3:*:912:
 _relayd:*:913:
 bitlbee:*:914:
 logcheck:*:915:
@@ -250,6 +251,7 @@ git_daemon:*:964:
 elasticsearch:*:965:
 ossec:*:966:
 kippo:*:969:
+colord:*:970:
 avenger:*:60149:
 nogroup:*:65533:
 nobody:*:65534:

@@ -1,4 +1,4 @@
-# $FreeBSD: UIDs 315389 2013-03-27 14:58:56Z ashish $
+# $FreeBSD: UIDs 317618 2013-05-07 15:32:37Z ale $
 # Please keep this file sorted by UID!
 operator:*:2:5::0:0:System &:/:/usr/sbin/nologin
 smmsp:*:25:25::0:0:Sendmail Submission User:/var/spool/clientmqueue:/usr/sbin/nologin
@@ -211,7 +211,7 @@ nefu:*:918:918::0:0:Nefu daemon:/var/db/nefu:/usr/sbin/nologin
 couchdb:*:919:919::0:0:CouchDB Account:/var/empty:/usr/sbin/nologin
 vboxusers:*:920:920::0:0:Virtualbox user:/nonexistent:/usr/sbin/nologin
 transmission:*:921:921::0:0:Transmission Daemon User:/usr/local/etc/transmission/home:/usr/sbin/nologin
-mongodb:*:922:922::0:0:MongoDB pseudo-user:/var/db/mongodb:/bin/sh
+mongodb:*:922:922::0:0:MongoDB pseudo-user:/var/db/mongodb:/usr/sbin/nologin
 liquidsoap:*:923:923::0:0:Liquidsoap User:/nonexistent:/usr/sbin/nologin
 postpals:*:924:924::0:0:postpals user:/nonexistent:/usr/sbin/nologin
 mfs:*:925:925::0:0:MooseFS User:/nonexistent:/usr/sbin/nologin
@@ -257,5 +257,6 @@ ossec:*:966:966::0:0:OSSEC user:/usr/local/ossec-hids:/usr/sbin/nologin
 ossecm:*:967:966::0:0:OSSEC mail user:/usr/local/ossec-hids:/usr/sbin/nologin
 ossecr:*:968:966::0:0:OSSEC rem user:/usr/local/ossec-hids:/usr/sbin/nologin
 kippo:*:969:969::0:0:kippo user:/nonexistent:/usr/sbin/nologin
+colord:*:970:970::0:0:colord color management daemon:/nonexistent:/usr/sbin/nologin
 avenger:*:60149:60149::0:0:Mail Avenger:/var/spool/avenger:/usr/sbin/nologin
 nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin
