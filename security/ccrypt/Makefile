@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/security/ccrypt/Makefile,v 1.21 2012/12/05 18:29:44 svnexp Exp $
+# $FreeBSD: security/ccrypt/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	ccrypt
 PORTVERSION=	1.10
@@ -14,7 +14,7 @@ COMMENT=	Command-line utility for encrypting and decrypting files and streams
 
 .if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
 .else
 PLIST_SUB+=	NLS="@comment "
 USE_PERL5_BUILD=	yes
