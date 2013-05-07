@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: shells/zsh/Makefile 313182 2013-03-02 03:55:25Z eadler $
+# $FreeBSD: shells/zsh/Makefile 317529 2013-05-06 16:02:52Z bapt $
 
 PORTNAME=	zsh
 PORTVERSION=	5.0.2
@@ -21,9 +21,8 @@ MAKE_JOBS_UNSAFE=	yes
 ZSH_VER=	${PORTVERSION}
 
 USE_BZIP2=	yes
-USE_ICONV=	yes
+USES=		iconv ncurses
 GNU_CONFIGURE=	yes
-USE_NCURSES=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
