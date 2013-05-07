@@ -2,7 +2,7 @@
 # Date created:				01 Feb 2011
 # Whom:					Kevin Rauwolf <sweetpea-freebsd@tentacle.net>
 #
-# $FreeBSD: ports/mail/lurker/Makefile,v 1.3 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/lurker/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	lurker
@@ -20,7 +20,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 MIMELIB_VERSION=	3.1.1
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
