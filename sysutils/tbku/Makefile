@@ -2,11 +2,11 @@
 # Date Created:				19 March 2008
 # Whom:					tundra
 #
-# $FreeBSD: ports/sysutils/tbku/Makefile,v 1.2 2012/11/17 06:01:47 svnexp Exp $
+# $FreeBSD: sysutils/tbku/Makefile 317331 2013-05-04 18:08:36Z rakuco $
 #
 
 PORTNAME=	tbku
-PORTVERSION=	1.115
+PORTVERSION=	1.117
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.tundraware.com/Software/tbku/
 
