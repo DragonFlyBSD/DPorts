@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/cook/files/patch-common_ac_time.h,v 1.2 2012/11/17 05:55:38 svnexp Exp $
+$FreeBSD: devel/cook/files/patch-common_ac_time.h 300896 2012-07-14 13:54:48Z beat $
 
 --- common/ac/time.h.orig	Fri Nov 29 23:15:13 2002
 +++ common/ac/time.h	Fri Nov 29 23:15:27 2002
