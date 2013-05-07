@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: ports/irc/ii/Makefile,v 1.9 2013/01/21 20:41:49 svnexp Exp $
+# $FreeBSD: irc/ii/Makefile 317272 2013-05-03 21:54:48Z bapt $
 
 PORTNAME=	ii
 PORTVERSION=	1.7
@@ -16,7 +16,9 @@ MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	CHANGES FAQ README
 PORTEXAMPLES=	query.sh
+.if !defined(.PARSEDIR)
 MAKE_ARGS=	-E CC
+.endif
 
 .include <bsd.port.options.mk>
 
