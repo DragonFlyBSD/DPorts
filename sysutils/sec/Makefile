@@ -1,7 +1,7 @@
-# $FreeBSD: sysutils/sec/Makefile 315940 2013-04-17 07:40:07Z culot $
+# $FreeBSD: sysutils/sec/Makefile 316264 2013-04-22 19:05:08Z culot $
 
 PORTNAME=	sec
-PORTVERSION=	2.7.1
+PORTVERSION=	2.7.2
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/simple-evcorr/${PORTNAME}/${PORTVERSION}
 
