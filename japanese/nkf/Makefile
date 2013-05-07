@@ -1,25 +1,22 @@
 # Created by: asami
-# $FreeBSD: japanese/nkf/Makefile 311574 2013-02-04 05:29:46Z eadler $
+# $FreeBSD: japanese/nkf/Makefile 317159 2013-05-02 21:57:28Z hrs $
 
 PORTNAME=	nkf
 PORTVERSION=	2.1.2
 PORTEPOCH=	1
 CATEGORIES?=	japanese
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
-MASTER_SITE_SUBDIR=	${PORTNAME}/53171
-PKGNAMEPREFIX?=	ja-
+MASTER_SITES=	SFJP/${PORTNAME}/53171
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT?=	Network Kanji code conversion Filter
+MAINTAINER=	hrs@FreeBSD.org
+COMMENT=	Network Kanji code conversion Filter
 
-LICENSE?=	ZLIB
-LICENSE_FILE?=	${WRKSRC}/nkf.c
+LICENSE=	ZLIB
+LICENSE_FILE=	${WRKSRC}/nkf.c
 
-.if ${PKGNAMEPREFIX} != "ja-p5-"
+ALL_TARGET=	nkf
+PLIST_FILES=	bin/nkf
+
 MAN1=		nkf.1
 MANLANG=	"" ja
-PLIST_FILES=	bin/nkf
-ALL_TARGET=	nkf
-.endif
 
 .include <bsd.port.mk>
