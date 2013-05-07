@@ -2,7 +2,7 @@
 # Date created:         22 July 1999
 # Whom:                 mi@aldan.algebra.com
 #
-# $FreeBSD: ports/russian/koi8r-ps/Makefile,v 1.16 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: russian/koi8r-ps/Makefile 317166 2013-05-02 22:17:24Z bapt $
 #
 
 PORTNAME=	koi8rPS
@@ -23,16 +23,19 @@ DIST_SUBDIR=	koi8r-ps
 .include <bsd.port.pre.mk>
 
 .if !defined(FONTMAP)
-FONTMAP1!=	which gs 2> /dev/null; echo
-FONTMAP=	/nicht/
-.if !empty(FONTMAP1)
-d!= gs -h  | awk '/^Search path:$$/ { nl=1; next } nl { print $$3; exit }'; echo
-.  if exists(${d}/Fontmap.GS)
-FONTMAP=	${d}/Fontmap.GS
-.  elif exists(${d}/Fontmap)
-FONTMAP=	${d}/Fontmap
-.  endif
-.endif
+FONTMAP!=	if which gs > /dev/null 2>&1 ; then \
+			d=`gs -h  | awk '/^Search path:$$/ { nl=1; next } \
+					nl { print $$3; exit }'`; \
+			if [ -e $$d/Fontmap.GS ] ; then \
+				${ECHO_CMD} $$d/Fontmap.GS; \
+			elif [ -e $$d/Fontmap ] ; then \
+				${ECHO_CMD} $$d/Fontmap \
+			else \
+				${ECHO_CMD} /nicht/ ; \
+			fi; \
+		else \
+			${ECHO_CMD} /nicht/ ; \
+		fi; ${ECHO_CMD}
 .endif
 
 NO_PACKAGE=	Nothing to build, configurations only
