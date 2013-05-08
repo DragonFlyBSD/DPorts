@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: ports/audio/vorbis-tools/Makefile,v 1.63 2012/12/18 21:34:11 svnexp Exp $
+# $FreeBSD: audio/vorbis-tools/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	vorbis-tools
 PORTVERSION=	1.4.0
@@ -28,10 +28,10 @@ MAKE_JOBS_SAFE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=    yes
+USES+=		gettext
 PLIST_SUB+=     NLS=""
 .else
-USE_ICONV=	yes
+USES+=		iconv
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=     NLS="@comment "
 .endif

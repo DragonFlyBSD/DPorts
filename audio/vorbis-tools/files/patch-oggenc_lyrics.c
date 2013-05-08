@@ -1,4 +1,4 @@
-$FreeBSD: ports/audio/vorbis-tools/files/patch-oggenc_lyrics.c,v 1.2 2012/11/17 05:54:46 svnexp Exp $
+$FreeBSD: audio/vorbis-tools/files/patch-oggenc_lyrics.c 300895 2012-07-14 12:56:14Z beat $
 --- oggenc/lyrics.c.orig	2010-06-05 17:00:07.000000000 +0200
 +++ oggenc/lyrics.c	2010-06-05 17:00:17.000000000 +0200
 @@ -16,7 +16,7 @@
