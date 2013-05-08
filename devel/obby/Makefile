@@ -1,9 +1,5 @@
-# Ports collection makefile for:	obby
-# Date created:				2005-10-14
-# Whom:					Andreas Kohn <andreas@syndrom23.de>
-#
-# $FreeBSD: devel/obby/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Andreas Kohn <andreas@syndrom23.de>
+# $FreeBSD: devel/obby/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	obby
 PORTVERSION=	0.4.8
@@ -18,16 +14,17 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20 \
 		net6:${PORTSDIR}/net/net6
 
-USES=	pathfix
-USE_PKGCONFIG=	build
+USES=	pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
-.if !defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
