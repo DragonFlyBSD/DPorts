@@ -3,7 +3,7 @@
 # Date created:			Oct 19, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/security/gss/Makefile,v 1.38 2012/11/17 06:01:04 svnexp Exp $
+# $FreeBSD: security/gss/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gss
@@ -34,7 +34,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
