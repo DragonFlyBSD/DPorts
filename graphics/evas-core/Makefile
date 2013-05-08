@@ -1,9 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/graphics/evas-core/Makefile,v 1.18 2013/01/15 17:46:00 svnexp Exp $
+# $FreeBSD: graphics/evas-core/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	core
-PORTVERSION=	1.7.5
-PORTREVISION=	1
+PORTVERSION=	1.7.6.1
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -20,9 +19,9 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pathfix pkgconfig
 USE_GCC=	any
 USE_EFL=	librt_hack libtool_hack
-USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
 DATADIR=	${PREFIX}/share/evas
 EXAMPLESDIR=	${PREFIX}/share/examples/evas
@@ -32,7 +31,6 @@ EXAMPLESDIR=	${PREFIX}/share/examples/evas
 OPTIONS_DEFINE=	EET FONTCONFIG FRIBIDI
 OPTIONS_DEFAULT=EET FONTCONFIG FRIBIDI
 EET_DESC=	EET font loader
-FRIBIDI_DESC=	Bidirectional text support
 
 .include <bsd.port.options.mk>
 
