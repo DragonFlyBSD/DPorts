@@ -1,10 +1,5 @@
-# New ports collection makefile for:	adms
-# Date created:		2006-07-29
-# Whom:			Stanislav Sedov <ssedov@mbsd.msk.ru>
-#
-# $MBSDlabs$
-# $FreeBSD: cad/adms/Makefile 301539 2012-07-26 05:40:22Z bapt $
-#
+# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
+# $FreeBSD: cad/adms/Makefile 316310 2013-04-23 06:34:47Z bapt $
 
 PORTNAME=	adms
 PORTVERSION=	2.3.0
@@ -18,10 +13,10 @@ COMMENT=	A model generator for SPICE simulators
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USES=		pkgconfig
 USE_GNOME=	glib20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
