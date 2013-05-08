@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cvsdadm
-# Date Created:				Sat Jan 21 22:05:06 EST 2006
-# Whom:					Serge Gagnon <serge.gagnon.1@ulaval.ca>
-#
-# $FreeBSD: ports/devel/cvsdadm/Makefile,v 1.13 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: Serge Gagnon <serge.gagnon.1@ulaval.ca>
+# $FreeBSD: devel/cvsdadm/Makefile 317594 2013-05-07 09:30:51Z ehaupt $
 
 PORTNAME=	cvsdadm
 PORTVERSION=	0.3.2
@@ -18,20 +14,22 @@ COMMENT=	Tool for CVSd pserver user administration
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+USES=		shebangfix
 NO_BUILD=	yes
 USE_PERL5_RUN=	yes
 POD2TEXT?=	pod2text
 PORTDOCS=	cvsdadm.README
 
+SHEBANG_FILES=	cvsdadm
+
 PLIST_FILES=	bin/cvsdadm
 
 MAN1=	cvsdadm.1
 
-post-patch:
-	@${REINPLACE_CMD} -e "s,#!/usr/bin/perl,#! ${PERL}," ${WRKSRC}/cvsdadm
+.include <bsd.port.options.mk>
 
 do-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${POD2TEXT} ${WRKSRC}/cvsdadm > ${WRKSRC}/${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
