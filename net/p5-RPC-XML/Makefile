@@ -2,11 +2,12 @@
 # Date created:				6 Sep 2001
 # Whom:					Dominic Mitchell <dom@happygiraffe.net>
 #
-# $FreeBSD: ports/net/p5-RPC-XML/Makefile,v 1.32 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-RPC-XML/Makefile 316342 2013-04-23 10:39:26Z des $
 #
 
 PORTNAME=	RPC-XML
 PORTVERSION=	0.77
+PORTREVISION=	1
 CATEGORIES=	net www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
