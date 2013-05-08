@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: databases/sqlite3/Makefile 315952 2013-04-17 09:19:54Z culot $
+# $FreeBSD: databases/sqlite3/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	sqlite3
 PORTVERSION=	3.7.16.1
@@ -17,7 +17,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 CONFLICTS=	sqlite34-[0-9]* sqlcipher-[0-9]*
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_LDCONFIG=	YES
 GNU_CONFIGURE=	YES
 
