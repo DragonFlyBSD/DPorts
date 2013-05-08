@@ -1,6 +1,5 @@
-# Created by:			nbm
-#
-# $FreeBSD: ports/security/py-pycrypto/Makefile,v 1.25 2012/11/17 06:01:17 svnexp Exp $
+# Created by: nbm
+# $FreeBSD: security/py-pycrypto/Makefile 316139 2013-04-20 11:31:42Z koobs $
 
 PORTNAME=	pycrypto
 PORTVERSION=	2.6
@@ -10,7 +9,7 @@ MASTER_SITES=	CHEESESHOP \
 		https://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	jgh@FreeBSD.org
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	The Python Cryptography Toolkit
 
 USE_PYTHON=		yes
