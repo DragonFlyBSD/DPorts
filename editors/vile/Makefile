@@ -1,8 +1,8 @@
 # Created by: pgf
-# $FreeBSD: ports/editors/vile/Makefile,v 1.93 2013/02/08 09:20:22 svnexp Exp $
+# $FreeBSD: editors/vile/Makefile 316820 2013-04-29 14:22:09Z miwi $
 
 PORTNAME=	vile
-PORTVERSION=	9.8i
+PORTVERSION=	9.8j
 CATEGORIES=	editors
 MASTER_SITES=	ftp://dickey.his.com/vile/current/ \
 		ftp://invisible-island.net/vile/current/
@@ -19,6 +19,7 @@ LICENSE=	GPLv2
 OPTIONS_DEFINE=	FILTERS ICONV PERL DOCS
 FILTERS_DESC=	Loadable filters
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 MAKEFILE=	makefile
 MAKE_JOBS_SAFE=	yes
@@ -37,8 +38,8 @@ PLIST_SUB+=	SO_EXT=""
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=	yes
-CONFIGURE_ARGS+=	--with-iconv
+USES+=		iconv
+CONFIGURE_ARGS+=	--with-iconv --with-libiconv-prefix=${LOCALBASE}
 PLIST_SUB+=	ICONV=""
 .else
 CONFIGURE_ARGS+=	--without-iconv --without-locale
