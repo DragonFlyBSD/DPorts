@@ -1,13 +1,9 @@
-# New ports collection makefile for:	Metalink tools
-# Date created:		Sun 10 Aug 2008 04:22:51 UTC
-# Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: misc/metalink-tools/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: misc/metalink-tools/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	metalink
 PORTVERSION=	0.3.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	SF/metalinks/Metalink%20commandline/${PORTVERSION}
 PKGNAMESUFFIX?=	-tools
@@ -15,7 +11,7 @@ PKGNAMESUFFIX?=	-tools
 MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	Metalink generation tool
 
-LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt \
+LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
 		glibmm-2.4.1:${PORTSDIR}/devel/glibmm \
 		gpg-error.0:${PORTSDIR}/security/libgpg-error \
 		sigc-2.0.0:${PORTSDIR}/devel/libsigc++20
@@ -25,7 +21,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 CONFIGURE_ENV+=	AWK="${AWK}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
