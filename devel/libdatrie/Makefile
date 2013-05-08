@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: devel/libdatrie/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/libdatrie/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	libdatrie
 PORTVERSION=	0.2.6
@@ -13,8 +13,7 @@ LICENSE=	LGPL21
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-USES=	pathfix
-USE_ICONV=	yes
+USES=		iconv pathfix
 USE_LDCONFIG=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
