@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: ports/ftp/hsftp/Makefile,v 1.20 2012/12/14 02:36:30 svnexp Exp $
+# $FreeBSD: ftp/hsftp/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	hsftp
 PORTVERSION=	1.15
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--with-openssh
 .endif
 
 .if ${PORT_OPTIONS:MREADLINE}
-USE_READLINE=	yes
+USES+=			readline
 CONFIGURE_ARGS+=	--with-readline
 .endif
 
