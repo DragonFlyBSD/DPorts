@@ -1,5 +1,5 @@
 # Created by: Ilja Dejs <ilja.dejs@gmail.com>
-# $FreeBSD: ports/net-im/imspector/Makefile,v 1.10 2013/02/25 04:51:47 svnexp Exp $
+# $FreeBSD: net-im/imspector/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	imspector
 PORTVERSION=	20111108
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 CFLAGS+=	-fPIC -I ${LOCALBASE}/include -DHAVE_SSL
 USE_GMAKE=	YES
-USE_ICONV=	YES
+USES=		iconv
 USE_OPENSSL=	YES
 USE_LDCONFIG=	${LOCALBASE}/lib/imspector
 
