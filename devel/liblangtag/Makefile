@@ -1,4 +1,4 @@
-# $FreeBSD: devel/liblangtag/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/liblangtag/Makefile 317157 2013-05-02 21:47:51Z kwm $
 
 PORTNAME=	liblangtag
 PORTVERSION=	0.4.0
@@ -17,8 +17,8 @@ GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=	pathfix
+USES=		pathfix pkgconfig
+CONFIGURE_ARGS=	--disable-introspection
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 
 .include <bsd.port.mk>
