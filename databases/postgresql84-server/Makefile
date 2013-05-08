@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql84-server/Makefile 315734 2013-04-05 15:26:49Z girgen $
+# $FreeBSD: databases/postgresql84-server/Makefile 316740 2013-04-28 18:15:06Z crees $
 
 PORTNAME?=	postgresql
 DISTVERSION?=	8.4.17
@@ -108,7 +108,7 @@ OPTIONS_DEFAULT+=	SSL
 ICU_DESC=	Use ICU for unicode collation (server)
 PAM_DESC=	Build with PAM support (server only)
 LDAP_DESC=	Build with LDAP authentication support
-MIT_KRB5_DESC=	Build with MIT's kerberos support
+MIT_KRB5_DESC=	Build with MIT kerberos support
 HEIMDAL_KRB5_DESC=	Builds with Heimdal kerberos
 OPTIMIZED_CFLAGS_DESC=	Builds with compiler optimizations (-O3)
 DEBUG_DESC=	Builds with debugging symbols
@@ -132,8 +132,6 @@ LIB_DEPENDS+=	icudata.50:${PORTSDIR}/devel/icu
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-icu4
 .  endif
 .endif # !SLAVE_ONLY
-
-.include <bsd.port.pre.mk>
 
 .if !defined(SLAVE_ONLY)
 PATCH_DIST_STRIP=-p1
@@ -173,10 +171,10 @@ CONFIGURE_ARGS+=--enable-integer-datetimes
 CONFIGURE_ARGS+=--disable-integer-datetimes
 .  endif
 
-.  if ( defined(WITH_GETTEXT) || ${PORT_OPTIONS:MNLS} )
+.  if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	GETTEXT=""
-USE_GETTEXT=	yes
+USES+=	gettext
 .  else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	GETTEXT="@comment "
@@ -305,6 +303,9 @@ PLIST_SUB+=	PG_USER=${PG_USER} \
 SUB_LIST+=	PG_GROUP=${PG_GROUP} \
 		PG_USER=${PG_USER} \
 		PG_UID=${PG_UID}
+
+# For testing files in FILESDIR
+.include <bsd.port.pre.mk>
 
 .if !defined(NO_BUILD)
 .if !target(pre-build)
