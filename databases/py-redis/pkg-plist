@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/py-redis/pkg-plist,v 1.6 2012/11/28 03:37:46 svnexp Exp $
+@comment $FreeBSD: databases/py-redis/pkg-plist 307878 2012-11-28 03:35:05Z swills $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt
