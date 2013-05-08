@@ -1,5 +1,5 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: ftp/wput/Makefile 315271 2013-03-26 09:58:33Z bapt $
+# $FreeBSD: ftp/wput/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	wput
 PORTVERSION=	0.6.2
@@ -35,8 +35,7 @@ CONFIGURE_ARGS+=	--without-ssl
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES+=		gettext iconv
 CONFIGURE_ARGS+=	--enable-nls \
 			--with-libintl-prefix=${LOCALBASE} \
 			--with-libiconv-prefix=${LOCALBASE}
