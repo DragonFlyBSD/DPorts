@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/devel/ecore-file/Makefile,v 1.15 2013/01/15 17:45:58 svnexp Exp $
+# $FreeBSD: devel/ecore-file/Makefile 317198 2013-05-03 12:24:26Z bapt $
 
 PORTNAME=	file
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -18,7 +18,10 @@ DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_EFL=	ecore libtool_hack
-USE_GNOME=	gnomehack pkgconfig
+USES=		pkgconfig
+.if defined(.PARSEDIR)
+USE_GMAKE=	yes
+.endif
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/lib/ecore_file
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
