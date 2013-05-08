@@ -2,7 +2,7 @@
 # Date created:		Mar 30 jul 2002 22:42:49 CEST
 # Whom:			thierry@pompo.net
 #
-# $FreeBSD: ports/textproc/spellutils/Makefile,v 1.10 2012/11/17 06:02:22 svnexp Exp $
+# $FreeBSD: textproc/spellutils/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	spellutils
@@ -17,7 +17,7 @@ COMMENT=	Programs used to isolate some parts or texts before spell-checking
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 CONFIGURE_ENV=		LIBS='-L${LOCALBASE}/lib'
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-lintl
