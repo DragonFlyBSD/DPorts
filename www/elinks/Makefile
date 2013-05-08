@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: www/elinks/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: www/elinks/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	elinks
 DISTVERSION=	0.11.7
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--without-zlib
 
 .if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
 .else
 PLIST_SUB+=	NLS="@comment "
 CONFIGURE_ARGS+=	--disable-nls
@@ -190,7 +190,7 @@ CONFIGURE_ARGS+=	--disable-sm-scripting --without-spidermonkey
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=	yes
+USES+=			iconv
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${LOCALBASE}
 .endif
 
