@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/irc/bitlbee/files/bitlbee.in,v 1.10 2012/11/17 05:58:27 svnexp Exp $
+# $FreeBSD: irc/bitlbee/files/bitlbee.in 300896 2012-07-14 13:54:48Z beat $
 #
 # PROVIDE: bitlbee
 # REQUIRE: LOGIN

@@ -1,8 +1,8 @@
-# $FreeBSD: ports/irc/bitlbee/Makefile,v 1.74 2013/02/05 16:54:22 svnexp Exp $
+# $FreeBSD: irc/bitlbee/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	bitlbee
 PORTVERSION=	3.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	irc
 MASTER_SITES=	http://get.bitlbee.org/src/ \
 		${MASTER_SITE_LOCAL}
@@ -20,9 +20,9 @@ PORTDOCS=	AUTHORS CHANGES CREDITS FAQ README
 PORTEXAMPLES=	bitlbee.conf motd.txt
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_RC_SUBR=	bitlbee
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
