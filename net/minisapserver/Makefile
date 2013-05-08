@@ -2,7 +2,7 @@
 # Date created:		2004-05-25
 # Whom:			michael johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/net/minisapserver/Makefile,v 1.24 2012/11/17 06:00:06 svnexp Exp $
+# $FreeBSD: net/minisapserver/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	minisapserver
@@ -16,7 +16,7 @@ COMMENT=	SAP and SLP announcement for the VLC Media Player
 LICENSE=	GPLv2
 
 USE_XZ=	yes
-USE_ICONV=	yes
+USES=	iconv
 GNU_CONFIGURE=	yes
 MAN1=		sapserver.1
 PLIST_FILES=	bin/sapserver etc/sap.cfg-dist
