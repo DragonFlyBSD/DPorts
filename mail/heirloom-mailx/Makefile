@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: ports/mail/heirloom-mailx/Makefile,v 1.62 2013/02/20 20:53:56 svnexp Exp $
+# $FreeBSD: mail/heirloom-mailx/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	mailx
 PORTVERSION=	12.4
@@ -17,7 +17,7 @@ CONFLICTS=	mailx-[0-9]*
 
 MAKE_JOBS_UNSAFE=	yes
 USE_BZIP2=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_OPENSSL=	yes
 MAKE_ARGS=	PREFIX="${PREFIX}" \
 		SYSCONFDIR="${PREFIX}/etc" \
