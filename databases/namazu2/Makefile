@@ -2,7 +2,7 @@
 # Date created:		25 February 2000
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/databases/namazu2/Makefile,v 1.61 2012/11/17 05:55:12 svnexp Exp $
+# $FreeBSD: databases/namazu2/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	namazu
@@ -18,8 +18,7 @@ BUILD_DEPENDS=	p5-File-MMagic>=0:${PORTSDIR}/devel/p5-File-MMagic
 RUN_DEPENDS=	p5-File-MMagic>=0:${PORTSDIR}/devel/p5-File-MMagic
 
 USE_PERL5=	yes
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-perl5="${PERL}" \
 		--with-libintl-prefix=${LOCALBASE} \
