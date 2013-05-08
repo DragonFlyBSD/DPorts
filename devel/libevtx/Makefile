@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libevtx/Makefile 316198 2013-04-21 19:09:53Z antoine $
+# $FreeBSD: devel/libevtx/Makefile 317303 2013-05-04 09:38:46Z antoine $
 
 PORTNAME=	libevtx
-DISTVERSION=	alpha-20130418
+DISTVERSION=	alpha-20130421
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
@@ -13,10 +13,8 @@ LICENSE=	LGPL3
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python
-USE_GETTEXT=	yes
-USES=		pathfix
-USE_ICONV=	yes
-USE_PYTHON=	yes
+USES=		gettext iconv pathfix
+USE_PYTHON=	-2.7
 USE_LDCONFIG=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -24,8 +22,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:E}
 
 MAN1=		evtxinfo.1
 MAN3=		libevtx.3
-
-OPTIONS_DEFINE=	DOCS EXAMPLES
 
 PORTDOCS=	AUTHORS ChangeLog
 PORTEXAMPLES=	*
