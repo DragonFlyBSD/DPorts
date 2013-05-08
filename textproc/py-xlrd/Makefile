@@ -1,13 +1,8 @@
-# New ports collection makefile for: xlrd
-# Date created:		2009-08-19
-# Whom:			Dikshie
-#
-# $FreeBSD: ports/textproc/py-xlrd/Makefile,v 1.6 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: Dikshie
+# $FreeBSD: textproc/py-xlrd/Makefile 317015 2013-05-01 12:47:03Z skreuzer $
 
 PORTNAME=	xlrd
-PORTVERSION=	0.7.1
-PORTREVISION=	2
+PORTVERSION=	0.9.2
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
