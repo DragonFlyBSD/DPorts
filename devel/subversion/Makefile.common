@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion/Makefile.common 315779 2013-04-10 18:05:53Z rpaulo $
+# $FreeBSD: devel/subversion/Makefile.common 316620 2013-04-26 15:10:57Z bapt $
 
 PORTNAME=	subversion
 PORTVERSION=	1.7.9
@@ -130,7 +130,7 @@ LIB_DEPENDS+=	svn_client-1:${PORTSDIR}/devel/subversion
 
 # KWallet requires NLS to be enabled.
 .if ${PORT_OPTIONS:MNLS} || ${PORT_OPTIONS:MKDE_KWALLET}
-USE_GETTEXT=	yes
+USES+=	gettext
 PLIST_SUB+=	WITHOUT_GETTEXT=""
 .else
 CONFIGURE_ARGS+=--disable-nls
