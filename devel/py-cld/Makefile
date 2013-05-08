@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: ports/devel/py-cld/Makefile,v 1.2 2013/02/25 18:57:46 svnexp Exp $
+# $FreeBSD: devel/py-cld/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	cld
 PORTVERSION=	0.2
@@ -16,7 +16,7 @@ LICENSE=	BSD
 
 LIB_DEPENDS=	cld:${PORTSDIR}/devel/cld
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	chromium_compact_language_detector
