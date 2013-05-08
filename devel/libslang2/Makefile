@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/libslang2/Makefile,v 1.37 2012/12/10 19:24:00 svnexp Exp $
+# $FreeBSD: devel/libslang2/Makefile 316812 2013-04-29 12:51:21Z mva $
 
 PORTNAME=	libslang2
 PORTVERSION=	2.2.4
@@ -36,7 +36,7 @@ ONIG_DESC=	Oniguruma support
 
 PORTDOCS=	*
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPCRE}
 LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
@@ -55,7 +55,7 @@ PLIST_SUB+=	PNG="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=	yes
+USES+=		iconv
 PLIST_SUB+=	ICONV=""
 .else
 CONFIGURE_ARGS+=	--without-iconv
@@ -79,4 +79,4 @@ post-patch:
 		${WRKSRC}/slsh/Makefile.in
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
