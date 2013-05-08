@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: ports/chinese/libpinyin/Makefile,v 1.4 2012/11/17 05:54:57 svnexp Exp $
+# $FreeBSD: chinese/libpinyin/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	libpinyin
 PORTVERSION=	0.7.91
@@ -14,7 +14,7 @@ MAN1=		libpinyin.1 gen_binary_files.1 gen_unigram.1 \
 
 USE_BDB=	yes
 USE_GNOME=	glib20 gnomehack pkgconfig
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
