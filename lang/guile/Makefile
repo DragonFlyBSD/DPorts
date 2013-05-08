@@ -1,5 +1,5 @@
 # Created by: jseger@FreeBSD.org
-# $FreeBSD: ports/lang/guile/Makefile,v 1.90 2012/12/27 17:43:25 svnexp Exp $
+# $FreeBSD: lang/guile/Makefile 317525 2013-05-06 15:34:17Z bapt $
 #    $MCom: ports/lang/guile/Makefile,v 1.1 2006/09/12 14:57:06 ahze Exp $
 
 PORTNAME=	guile
@@ -15,10 +15,9 @@ LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp
 
 USE_AUTOTOOLS=	autoconf libltdl
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext ncurses
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_NCURSES=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 
