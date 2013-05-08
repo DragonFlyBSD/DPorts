@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Class-InsideOut/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Class-InsideOut/Makefile 316799 2013-04-29 10:42:14Z tobez $
 
 PORTNAME=	Class-InsideOut
-PORTVERSION=	1.11
+PORTVERSION=	1.13
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
