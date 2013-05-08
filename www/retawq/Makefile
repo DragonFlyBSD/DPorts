@@ -3,7 +3,7 @@
 # Date created:			Dec 30, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/www/retawq/Makefile,v 1.42 2013/02/07 14:08:10 svnexp Exp $
+# $FreeBSD: www/retawq/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	retawq
@@ -15,7 +15,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-0.2.6c
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An interactive, multi-threaded web browser for text terminals
 
-USE_GETTEXT=	yes
+USES=		gettext
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--path-archprefix=${PREFIX} --path-prefix=${PREFIX} \
 		--enable-i18n --enable-local-cgi --enable-ipv6
