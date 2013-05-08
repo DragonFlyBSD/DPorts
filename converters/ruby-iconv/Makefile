@@ -2,7 +2,7 @@
 # Date created:		7 Aug 2000
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/converters/ruby-iconv/Makefile,v 1.34 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: converters/ruby-iconv/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	iconv
@@ -20,7 +20,7 @@ COMMENT=	An iconv wrapper class for Ruby
 
 FETCH_DEPENDS=	${NONEXISTENT}:${PORTSDIR}/${RUBY_PORT}:patch
 
-USE_ICONV=	yes
+USES=		iconv
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
