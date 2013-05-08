@@ -1,9 +1,5 @@
-# New ports collection makefile for:	keyprint
-# Date created:		Sat May 29 02:05:00 PDT 1999
-# Whom:			mharo@FreeBSD.org
-#
-# $FreeBSD: ports/security/opieprint/Makefile,v 1.15 2012/11/17 06:01:09 svnexp Exp $
-#
+# Created by: mharo@FreeBSD.org
+# $FreeBSD: security/opieprint/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	opieprint
 PORTVERSION=	1.0
@@ -22,6 +18,8 @@ USE_PERL5_RUN=	yes
 
 PLIST_FILES=	bin/opieprint
 
+EXTRACT_CMD=	${GZCAT}
+EXTRACT_BEFORE_ARGS=	#
 EXTRACT_AFTER_ARGS=	> ${WRKSRC}/${PORTNAME}
 
 post-patch:
