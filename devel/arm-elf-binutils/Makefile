@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: devel/arm-elf-binutils/Makefile 315415 2013-03-27 21:22:47Z bdrewery $
+# $FreeBSD: devel/arm-elf-binutils/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	binutils
 PORTVERSION=	2.23.2
@@ -13,7 +13,7 @@ COMMENT=	GNU binutils for vanilla ARM cross-development
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--target=${PKGNAMEPREFIX:S/-$//} CFLAGS="-I/usr/local/include"
 INFO_PATH=	${PKGNAMEPREFIX:S/-$//}/info
