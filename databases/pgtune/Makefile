@@ -2,14 +2,14 @@
 # Date created:        16 feb 2009
 # Whom:                Matthieu BOUTHORS
 #
-# $FreeBSD: ports/databases/pgtune/Makefile,v 1.3 2012/11/17 05:55:18 svnexp Exp $
+# $FreeBSD: databases/pgtune/Makefile 316565 2013-04-26 04:03:22Z gjb $
 #
 
 PORTNAME=	pgtune
 PORTVERSION=	0.9.3
 CATEGORIES=	databases
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/2449/ \
-		http://www.glenbarber.us/ports/${CATEGORIES}/${PORTNAME}/
+		https://www.glenbarber.us/ports/${CATEGORIES}/${PORTNAME}/
 
 MAINTAINER=	gjb@FreeBSD.org
 COMMENT=	Postgresql.conf tuning tips based on hardware and load type
