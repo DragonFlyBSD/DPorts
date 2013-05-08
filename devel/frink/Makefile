@@ -2,7 +2,7 @@
 # Date created:			8 May 2001
 # Whom:				Mikhail Teterin
 #
-# $FreeBSD: ports/devel/frink/Makefile,v 1.5 2012/11/17 05:55:43 svnexp Exp $
+# $FreeBSD: devel/frink/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	frink
