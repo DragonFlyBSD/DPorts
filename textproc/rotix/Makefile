@@ -3,7 +3,7 @@
 # Date created:			Dec 8, 2001
 # Whom:				lintux@debian.org
 #
-# $FreeBSD: ports/textproc/rotix/Makefile,v 1.19 2012/11/17 06:02:19 svnexp Exp $
+# $FreeBSD: textproc/rotix/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	rotix
@@ -15,7 +15,7 @@ MASTER_SITES=	http://elektron.its.tudelft.nl/~hemmin98/rotix_releases/${DISTNAME
 MAINTAINER=	lintux@debian.org
 COMMENT=	A program to generate rotational obfuscations
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --i18n=1
