@@ -1,5 +1,5 @@
 # Created by: Nagy, Attila <bra@fsn.hu>
-# $FreeBSD: ports/mail/dovecot2/Makefile,v 1.31 2013/02/14 08:23:29 svnexp Exp $
+# $FreeBSD: mail/dovecot2/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	dovecot
 PORTVERSION=	2.1.15
@@ -23,7 +23,7 @@ CONFLICTS=	dovecot-1.[0-9]*
 # port before updating this one.                                     #
 ######################################################################
 
-USE_ICONV=	yes
+USES=		iconv
 USE_RC_SUBR=	dovecot
 MAKE_JOBS_SAFE=	yes
 
