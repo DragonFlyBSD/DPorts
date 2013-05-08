@@ -2,7 +2,7 @@
 # Date created:		2008-02-26
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/exempi/Makefile,v 1.13 2012/11/17 06:01:55 svnexp Exp $
+# $FreeBSD: textproc/exempi/Makefile 316683 2013-04-27 18:25:24Z mva $
 #   $MCom: ports/textproc/exempi/Makefile,v 1.1 2008/02/26 18:50:26 ahze Exp $
 #
 
@@ -17,12 +17,12 @@ COMMENT=	A port of Adobe XMP SDK to work on UNIX
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	ltverhack gnomehack
+USE_GNOME=	ltverhack
 CONFIGURE_ARGS=	--enable-unittest=no
 CONFIGURE_ENV=	LIBS="-liconv"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_ICONV=	yes
+USES=		pathfix iconv
 USE_LDCONFIG=	yes
 
 post-patch:
