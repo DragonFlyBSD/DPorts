@@ -1,4 +1,4 @@
-# $FreeBSD: devel/liborcus/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/liborcus/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	liborcus
 PORTVERSION=	0.3.0
@@ -18,9 +18,8 @@ LIB_DEPENDS=	zip:${PORTSDIR}/archivers/libzip \
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 
 CONFIGURE_ARGS=	--disable-spreadsheet-model --disable-werror \
 		--with-boost-system=boost_system
