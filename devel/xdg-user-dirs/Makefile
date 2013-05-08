@@ -2,7 +2,7 @@
 # Date created:		2008-07-01
 # Whom:			Max Brazhnikov <makc@issp.ac.ru>
 #
-# $FreeBSD: ports/devel/xdg-user-dirs/Makefile,v 1.9 2012/11/17 05:57:06 svnexp Exp $
+# $FreeBSD: devel/xdg-user-dirs/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	xdg-user-dirs
@@ -14,8 +14,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Tool to help manage personal user directories
 
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 USE_GMAKE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
