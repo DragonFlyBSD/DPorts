@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hwloc/Makefile 313415 2013-03-04 16:53:12Z pawel $
+# $FreeBSD: devel/hwloc/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	hwloc
 PORTVERSION=	1.6.2
@@ -17,11 +17,10 @@ LIB_DEPENDS=	pciaccess:${PORTSDIR}/devel/libpciaccess
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-static \
 			--enable-libxml2
+USES=		pkgconfig pathfix iconv
 USE_BZIP2=	yes
-USE_PKGCONFIG=	build
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	libxml2 gnomehack
+USE_GNOME=	libxml2
 MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
