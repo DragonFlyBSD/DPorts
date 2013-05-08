@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/textproc/rasqal/Makefile,v 1.47 2013/02/04 01:04:44 svnexp Exp $
+# $FreeBSD: textproc/rasqal/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	rasqal
 PORTVERSION=	0.9.30
@@ -21,10 +21,10 @@ LIB_DEPENDS=	raptor2:${PORTSDIR}/textproc/raptor2 \
 USE_GNOME=	gnomehack lthack
 USE_OPENSSL=	yes
 USE_PERL5_BUILD=yes
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
+USES+=		iconv
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
 
 MAN1=		rasqal-config.1 roqet.1
