@@ -1,17 +1,13 @@
-# New ports collection makefile for:	babeld
-# Date created:		2010-04-20
-# Whom:			Hung-Yi Chen <gaod@hychen.org>
-#
-# $FreeBSD: ports/net/babeld/Makefile,v 1.8 2012/11/17 05:59:56 svnexp Exp $
-#
+# Created by: Hung-Yi Chen <gaod@hychen.org>
+# $FreeBSD: net/babeld/Makefile 317600 2013-05-07 12:31:49Z bdrewery $
 
 PORTNAME=	babeld
-PORTVERSION=	1.3.4
+PORTVERSION=	1.4.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.pps.univ-paris-diderot.fr/~jch/software/files/
 
 MAINTAINER=	gaod@hychen.org
-COMMENT=	A distance-vector routing protocol
+COMMENT=	Distance-vector routing protocol
 
 PLIST_FILES=	bin/babeld
 
