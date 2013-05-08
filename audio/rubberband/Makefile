@@ -1,5 +1,5 @@
 # Created by: mathias.picker@gmx.de
-# $FreeBSD: audio/rubberband/Makefile 314460 2013-03-17 16:44:03Z eadler $
+# $FreeBSD: audio/rubberband/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	rubberband
 PORTVERSION=	1.7.0
@@ -19,6 +19,7 @@ LIB_DEPENDS=	sndfile.1:${PORTSDIR}/audio/libsndfile \
 		fftw3.6:${PORTSDIR}/math/fftw3
 RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
@@ -27,7 +28,5 @@ USE_LDCONFIG=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-USE_PKGCONFIG=	build
 
 .include <bsd.port.mk>
