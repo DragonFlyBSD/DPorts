@@ -1,9 +1,5 @@
-# New ports collection makefile for:	c-icap
-# Date created:				30 January 2006
-# Whom:					Elisey Savateev <b3k@mail.ru>
-#
-# $FreeBSD: ports/www/c-icap/Makefile,v 1.28 2012/11/25 09:12:19 svnexp Exp $
-#
+# Created by: Elisey Savateev <b3k@mail.ru>
+# $FreeBSD: www/c-icap/Makefile 317389 2013-05-04 22:48:03Z flo $
 
 PORTNAME=	c-icap
 PORTVERSION=	0.2.3
@@ -122,9 +118,9 @@ post-patch:
 
 post-install:
 	@${CP} -np ${PREFIX}/etc/c-icap/c-icap.conf.default \
-		${PREFIX}/etc/c-icap/c-icap.conf
+		${PREFIX}/etc/c-icap/c-icap.conf || ${TRUE}
 	@${CP} -np ${PREFIX}/etc/c-icap/c-icap.magic.default \
-		${PREFIX}/etc/c-icap/c-icap.magic
+		${PREFIX}/etc/c-icap/c-icap.magic || ${TRUE}
 	@${SH} ${PKGINSTALL} ${PREFIX} POST-INSTALL
 
 .include <bsd.port.post.mk>
