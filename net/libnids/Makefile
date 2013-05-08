@@ -1,5 +1,5 @@
 # Created by: kris@FreeBSD.org
-# $FreeBSD: net/libnids/Makefile 314221 2013-03-15 01:59:39Z wxs $
+# $FreeBSD: net/libnids/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	libnids
 PORTVERSION=	1.24
@@ -18,7 +18,7 @@ GLIB2_DESC=	Use GLIB2 for multiprocessing support
 OPTIONS_DEFAULT=	LIBNET11 GLIB2
 
 WANT_GNOME=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 
 MAN3=		libnids.3
