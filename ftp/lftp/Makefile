@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ftp/lftp/Makefile 314538 2013-03-18 08:16:22Z martymac $
+# $FreeBSD: ftp/lftp/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	lftp
 PORTVERSION=	4.4.5
@@ -20,7 +20,7 @@ LICENSE=	GPLv3
 
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
 
-USE_ICONV=	yes
+USES=		iconv
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+=	--without-gnutls
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
