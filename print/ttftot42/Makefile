@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ttftot42
-# Date created:        22 April 2001
-# Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
-#
-# $FreeBSD: ports/print/ttftot42/Makefile,v 1.11 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
+# $FreeBSD: print/ttftot42/Makefile 316593 2013-04-26 09:23:54Z bapt $
 
 PORTNAME=	ttftot42
 PORTVERSION=	0.3.1
@@ -14,7 +10,7 @@ MASTER_SITES=	http://www.nih.at/ttftot42/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	TrueType to Type42 font converter
 
-USE_FREETYPE=	yes
+LIB_DEPENDS=	ttf:${PORTSDIR}/print/freetype
 GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/ttftot42
