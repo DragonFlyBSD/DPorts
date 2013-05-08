@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: converters/recode/Makefile 315288 2013-03-26 12:56:14Z demon $
+# $FreeBSD: converters/recode/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	recode
 PORTVERSION=	3.6
@@ -11,11 +11,10 @@ MASTER_SITE_SUBDIR=	recode
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Converts files between character sets and usages
 
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_AUTOTOOLS=	libtool
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
-USE_ICONV=	yes
 CONFIGURE_ARGS=	--without-included-gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
