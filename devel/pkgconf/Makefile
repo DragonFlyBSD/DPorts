@@ -1,8 +1,8 @@
-# $FreeBSD: devel/pkgconf/Makefile 314747 2013-03-20 17:03:00Z bapt $
+# $FreeBSD: devel/pkgconf/Makefile 317130 2013-05-02 15:47:15Z bapt $
 
 PORTNAME=	pkgconf
-PORTVERSION=	0.9.1
-PORTREVISION=	2
+PORTVERSION=	0.9.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://rabbit.dereferenced.org/~nenolod/distfiles/ \
 		http://files.etoilebsd.net/pkgconf/
@@ -13,7 +13,7 @@ COMMENT=	Utility to help to configure compiler and linker flags
 LICENSE=	BSD
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-pkg-config-dir=${PREFIX}/libdata/pkgconfig \
+CONFIGURE_ARGS=	--with-pkg-config-dir=${PREFIX}/libdata/pkgconfig:/usr/libdata/pkgconfig \
 		--with-system-libdir=/usr/lib \
 		--with-system-includedir=/usr/include
 USE_BZIP2=	yes
