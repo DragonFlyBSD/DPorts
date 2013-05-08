@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: textproc/dwdiff/Makefile 314110 2013-03-13 19:38:29Z pawel $
+# $FreeBSD: textproc/dwdiff/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	dwdiff
 PORTVERSION=	2.0.4
@@ -30,7 +30,7 @@ PORTDOCS=	COPYING Changelog README
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 MANLANG=	"" nl nl.UTF-8
 .else
