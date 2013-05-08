@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/libstreamanalyzer/Makefile 315308 2013-03-26 15:43:09Z makc $
+# $FreeBSD: deskutils/libstreamanalyzer/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	libstreamanalyzer
 PORTVERSION=	${STRIGI_VERSION}
@@ -13,9 +13,8 @@ LIB_DEPENDS=	avcodec${FFMPEG_SUFFIX}:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFI
 		exiv2:${PORTSDIR}/graphics/exiv2 \
 		streams:${PORTSDIR}/deskutils/libstreams
 
-USE_ICONV=	yes
+USES=		pkgconfig iconv
 USE_GNOME=	libxml2
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
