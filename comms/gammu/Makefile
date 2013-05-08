@@ -1,5 +1,5 @@
 # Created by: Kirill Bezzubets <kirill@solaris.ru>
-# $FreeBSD: comms/gammu/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: comms/gammu/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gammu
 PORTVERSION=	1.32.0
@@ -18,9 +18,8 @@ OPTIONS_DEFINE=	BASH
 
 CMAKE_ARGS+=	-DINSTALL_LIBDATA_DIR=${LOCALBASE}/libdata
 
-USES=		cmake
+USES=		cmake gettext
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
 USE_GNOME=	glib20
 
 PORTDOCS=	*
