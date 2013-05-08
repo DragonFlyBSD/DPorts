@@ -1,8 +1,8 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: ports/lang/embryo/Makefile,v 1.38 2013/01/15 17:46:00 svnexp Exp $
+# $FreeBSD: lang/embryo/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	embryo
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 PORTEPOCH=	2
 CATEGORIES=	lang enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
@@ -16,8 +16,8 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pathfix pkgconfig
 USE_EFL=	eina libtool_hack librt_hack
-USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
 
 .include <bsd.port.pre.mk>
