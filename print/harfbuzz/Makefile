@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: print/harfbuzz/Makefile 315531 2013-03-29 09:49:21Z kwm $
+# $FreeBSD: print/harfbuzz/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	harfbuzz
 PORTVERSION=	0.9.14
@@ -14,8 +14,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules
