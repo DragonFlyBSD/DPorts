@@ -85,7 +85,7 @@ CONFIGURE_ARGS+=	--disable-optimize
 
 .if ${PORT_OPTIONS:MREADLINE}
 CONFIGURE_ARGS+=	--enable-readline
-LIB_DEPENDS+=		readline:${PORTSDIR}/devel/readline
+USES+=			readline
 LDFLAGS+=		-L${LOCALBASE}/lib
 .else
 CONFIGURE_ARGS+=	--disable-readline
