@@ -8,7 +8,7 @@
 #
 # Modern FreeBSD systems already have a group mail.
 #
-# $FreeBSD: ports/mail/exim/pkg-install,v 1.16 2012/11/17 05:59:02 svnexp Exp $
+# $FreeBSD: mail/exim/pkg-install 300896 2012-07-14 13:54:48Z beat $
 #
 
 PKG_PREFIX=${PKG_PREFIX:=%%PREFIX%%}

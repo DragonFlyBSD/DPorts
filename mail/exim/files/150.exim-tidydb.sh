@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/exim/files/150.exim-tidydb.sh,v 1.5 2012/11/17 05:59:02 svnexp Exp $
+# $FreeBSD: mail/exim/files/150.exim-tidydb.sh 307267 2012-11-10 10:01:20Z rea $
 #
 # Exim hints database maintenance
 # 

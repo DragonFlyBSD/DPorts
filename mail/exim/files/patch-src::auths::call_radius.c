@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/mail/exim/files/patch-src::auths::call_radius.c,v 1.2 2012/11/17 05:59:02 svnexp Exp $
+$FreeBSD: mail/exim/files/patch-src::auths::call_radius.c 300896 2012-07-14 13:54:48Z beat $
 
 --- src/auths/call_radius.c
 +++ src/auths/call_radius.c
