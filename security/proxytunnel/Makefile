@@ -1,9 +1,5 @@
-# New ports collection makefile for:		proxytunnel
-# Date created:					Sun Nov 25 15:16:44 BRST 2001
-# Whom:						Hammurabi Mendes <hmendes@brturbo.com>
-#
-# $FreeBSD: ports/security/proxytunnel/Makefile,v 1.22 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Hammurabi Mendes <hmendes@brturbo.com>
+# $FreeBSD: security/proxytunnel/Makefile 316318 2013-04-23 07:59:07Z ehaupt $
 
 PORTNAME=	proxytunnel
 PORTVERSION=	1.9.0
@@ -15,7 +11,7 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Connects stdin and stdout to an origin server through an HTTPS proxy
 
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig:build
 MAKE_JOBS_SAFE=	yes
 
 ALL_TARGET=	${PORTNAME}
