@@ -2,7 +2,7 @@
 # Date created:		2011-11-25
 # Whom:			KIKUCHI Koichiro <koichiro@rworks.jp>
 #
-# $FreeBSD: ports/net-mgmt/wmi-client/Makefile,v 1.2 2012/11/17 06:00:38 svnexp Exp $
+# $FreeBSD: net-mgmt/wmi-client/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=		wmi
@@ -21,7 +21,7 @@ USE_BZIP2=		yes
 USE_AUTOTOOLS=		autoconf:env
 USE_PYTHON_BUILD=	yes
 USE_GMAKE=		yes
-USE_ICONV=		yes
+USES=			iconv
 USE_LDCONFIG=		yes
 
 #BUILD_DEPENDS+=		gnutls.47:${PORTSDIR}/security/gnutls
