@@ -2,7 +2,7 @@
 # Date created:		02 February 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/grzip/Makefile,v 1.7 2012/11/17 05:54:20 svnexp Exp $
+# $FreeBSD: archivers/grzip/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	grzip
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Efficient file compressor
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 CFLAGS+=	-I${LOCALBASE}/include -fPIC
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
