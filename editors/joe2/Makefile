@@ -2,7 +2,7 @@
 # Date created:		01 Jul 1995
 # Whom:			torstenb@FreeBSD.org
 #
-# $FreeBSD: ports/editors/joe2/Makefile,v 1.27 2012/11/17 05:57:14 svnexp Exp $
+# $FreeBSD: editors/joe2/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	joe
@@ -20,7 +20,7 @@ CONFLICTS=	joe-3*
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -liconv"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
