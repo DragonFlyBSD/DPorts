@@ -1,8 +1,8 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: textproc/p5-Pod-Simple/Makefile 313146 2013-03-01 10:55:24Z tobez $
+# $FreeBSD: textproc/p5-Pod-Simple/Makefile 317480 2013-05-06 08:21:24Z tobez $
 
 PORTNAME=	Pod-Simple
-PORTVERSION=	3.26
+PORTVERSION=	3.28
 CATEGORIES=	textproc devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DWHEELER
