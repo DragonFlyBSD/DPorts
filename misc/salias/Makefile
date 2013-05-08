@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/salias/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/salias/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	salias
 PORTVERSION=	0.3.1
@@ -10,9 +10,9 @@ MASTER_SITES=	SF/${PORTNAME}/C%20${PORTNAME}/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CLI tool to alias arguments of other programs
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 
 MAN1=		salias.1
