@@ -1,12 +1,12 @@
 # Created by: Samuel Tardieu <sam@rfc1149.net>
-# $FreeBSD: devel/gputils/Makefile 315483 2013-03-28 16:19:35Z tijl $
+# $FreeBSD: devel/gputils/Makefile 316410 2013-04-24 08:01:28Z tijl $
 
 PORTNAME=	gputils
 PORTVERSION=	1.1.0
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
-MAINTAINER=	tijl@coosemans.org
+MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	A set of utilities for Microchip PIC microcontrollers
 
 LICENSE=	GPLv2
