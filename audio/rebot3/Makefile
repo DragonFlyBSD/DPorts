@@ -1,9 +1,4 @@
-# Ports collection Makefile for:	rebot3
-# Date created:				7th May 2011
-# Whom:					Chris Rees (utisoft@gmail.com)
-#
-# $FreeBSD: ports/audio/rebot3/Makefile,v 1.4 2012/11/17 05:54:43 svnexp Exp $
-#
+# $FreeBSD: audio/rebot3/Makefile 316959 2013-04-30 20:10:53Z crees $
 
 PORTNAME=	rebot3
 PORTVERSION=	1.0.2
@@ -13,6 +8,8 @@ MASTER_SITES=	http://www.headmqa.com/${PORTNAME}/ \
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Renames mp3 files using freedb or local CDDB
+
+LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-CDDB>=0:${PORTSDIR}/audio/p5-CDDB \
 		p5-MP3-ID3v1Tag>=0:${PORTSDIR}/audio/p5-MP3-ID3v1Tag
