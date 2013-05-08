@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: ports/devel/tig/Makefile,v 1.13 2012/11/17 05:57:05 svnexp Exp $
+# $FreeBSD: devel/tig/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	tig
 PORTVERSION=	1.1
@@ -21,7 +21,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libiconv=${LOCALBASE}
 
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 PLIST_FILES=	bin/tig
 
