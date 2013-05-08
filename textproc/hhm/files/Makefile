@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/hhm/files/Makefile,v 1.2 2012/11/17 06:01:57 svnexp Exp $
+# $FreeBSD: textproc/hhm/files/Makefile 317260 2013-05-03 21:18:57Z bapt $
 
 PROG=	hhm
 
@@ -6,6 +6,6 @@ LDADD=	-L${PREFIX}/lib -llzxcomp -lm
 CFLAGS=	-I${PREFIX}/include
 BINDIR=	${PREFIX}/bin
 
-NOMAN=	#
+NO_MAN=	#
 
 .include <bsd.prog.mk>
