@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: deskutils/dosage/Makefile 316108 2013-04-19 15:16:41Z antoine $
+# $FreeBSD: deskutils/dosage/Makefile 317302 2013-05-04 09:31:30Z antoine $
 
 PORTNAME=	dosage
-PORTVERSION=	2.1
+PORTVERSION=	2.2
 CATEGORIES=	deskutils python
 MASTER_SITES=	GHC
 
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
-PYDISTUTILS_PKGNAME=	Dosage
+PYDISTUTILS_PKGNAME=Dosage
 
 MAN1=		dosage.1
 
