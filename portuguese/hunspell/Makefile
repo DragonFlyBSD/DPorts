@@ -1,5 +1,5 @@
 # Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: portuguese/hunspell/Makefile 316055 2013-04-18 17:01:08Z sunpoet $
+# $FreeBSD: portuguese/hunspell/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	20130331
@@ -13,10 +13,6 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Portuguese hunspell dictionaries
-
-# rely on bsdtar ability to extract .gz and .zip archives
-EXTRACT_CMD=	${CAT}
-EXTRACT_BEFORE_ARGS=	# empty
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/hunspell-pt_PT-${PORTVERSION}
