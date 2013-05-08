@@ -1,9 +1,5 @@
-# New ports collection makefile for:	packter-agent
-# Date created:				2012-09-05
-# Whom:					Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-#
-# $FreeBSD: net/packter-agent/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
+# $FreeBSD: net/packter-agent/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	packter-agent
 PORTVERSION=	2.5
@@ -18,8 +14,8 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL LICENSE NEWS README
 
