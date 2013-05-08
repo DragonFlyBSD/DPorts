@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/libgpg-error/Makefile 313222 2013-03-02 10:56:34Z novel $
+# $FreeBSD: security/libgpg-error/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	libgpg-error
 PORTVERSION=	1.11
@@ -20,8 +20,7 @@ MAKE_JOBS_UNSAFE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES+=		gettext iconv
 CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
 		--with-libintl-prefix=${LOCALBASE}
 PLIST_SUB=	NLS=""
