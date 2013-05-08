@@ -1,8 +1,9 @@
 # Created by: Alexander Leidinger <netchild@freebsd.org>
-# $FreeBSD: security/libssh2/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/libssh2/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	libssh2
 PORTVERSION=	1.4.3
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.libssh2.org/download/ \
