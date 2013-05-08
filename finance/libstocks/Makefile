@@ -2,7 +2,7 @@
 # Date created:         this 7th day of January, 2002
 # Whom:                 Mikhail Teterin
 #
-# $FreeBSD: ports/finance/libstocks/Makefile,v 1.10 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: finance/libstocks/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	libstocks
