@@ -1,23 +1,24 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: emulators/libspectrum/Makefile 314736 2013-03-20 14:26:46Z makc $
+# $FreeBSD: emulators/libspectrum/Makefile 317314 2013-05-04 13:43:23Z rene $
 
 PORTNAME=	libspectrum
 PORTVERSION=	1.0.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	emulators devel
 MASTER_SITES=	SF/fuse-emulator/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rene@FreeBSD.org
 COMMENT=	Handling of ZX-Spectrum emulator files formats
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
+USES=		pkgconfig
 
 MAN3=		libspectrum.3
 
