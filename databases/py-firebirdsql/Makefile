@@ -1,9 +1,8 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD: databases/py-firebirdsql/Makefile 315592 2013-03-30 04:37:26Z acm $
+# $FreeBSD: databases/py-firebirdsql/Makefile 316414 2013-04-24 09:09:19Z culot $
 
 PORTNAME=	firebirdsql
-PORTVERSION=	0.7.2
-PORTREVISION=	1
+PORTVERSION=	0.7.3
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
