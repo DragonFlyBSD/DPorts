@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: lang/mono/Makefile 314682 2013-03-19 19:38:01Z romain $
+# $FreeBSD: lang/mono/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	mono
 PORTVERSION=	3.0.3
@@ -14,13 +14,12 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
     		bash:${PORTSDIR}/shells/bash
 
 USE_BZIP2=	yes
-USES=		bison pathfix
+USES=		bison pathfix gettext
 USE_GNOME=	glib20
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
 MAKE_JOBS_UNSAFE=yes
 
 # Moonlight is installed as part of www/moonlight
