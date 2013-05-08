@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/libIDL/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/libIDL/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/devel/libIDL/Makefile,v 1.7 2010/04/02 17:27:42 kwm Exp $
 
 PORTNAME=	libIDL
@@ -12,12 +12,10 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A library for creating trees of CORBA IDL files
 
-USES=		bison pathfix
+USES=		bison pathfix pkgconfig gettext
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
