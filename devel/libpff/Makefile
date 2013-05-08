@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libpff/Makefile 314764 2013-03-20 21:22:11Z pawel $
+# $FreeBSD: devel/libpff/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	libpff
 DISTVERSION=	alpha-20120802
@@ -13,9 +13,7 @@ LICENSE=	LGPL3
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python
-USE_GETTEXT=	yes
-USES=		pathfix
-USE_ICONV=	yes
+USES=		pathfix gettext iconv
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 
