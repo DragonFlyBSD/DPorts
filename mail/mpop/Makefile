@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: ports/mail/mpop/Makefile,v 1.14 2013/02/11 07:59:45 svnexp Exp $
+# $FreeBSD: mail/mpop/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	mpop
 PORTVERSION=	1.0.27
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--without-libgsasl-prefix
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB=		NLS=""
 .else
