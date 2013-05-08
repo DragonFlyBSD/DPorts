@@ -1,5 +1,5 @@
 # Created by: Harold Gutch <logix@foobar.franken.de>
-# $FreeBSD: ports/multimedia/vcdimager/Makefile,v 1.45 2012/11/17 05:59:54 svnexp Exp $
+# $FreeBSD: multimedia/vcdimager/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	vcdimager
 PORTVERSION=	0.7.24
@@ -17,12 +17,12 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
 		xml2:${PORTSDIR}/textproc/libxml2 \
 		cdio.13:${PORTSDIR}/sysutils/libcdio
 
+USES=		pkgconfig pathfix
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
-USE_GNOME=	gnomehack lthack
+USE_GNOME=	lthack
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
