@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Test-Command/Makefile,v 1.3 2013/02/18 19:14:37 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Command/Makefile 317108 2013-05-02 13:01:59Z sunpoet $
 
 PORTNAME=	Test-Command
-PORTVERSION=	0.10
+PORTVERSION=	0.11
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
