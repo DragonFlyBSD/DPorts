@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/py-htsql-pgsql/pkg-plist,v 1.2 2012/11/17 05:55:22 svnexp Exp $
+@comment $FreeBSD: databases/py-htsql-pgsql/pkg-plist 316728 2013-04-28 14:34:12Z koobs $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt
@@ -51,16 +51,6 @@
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/timeout/connect.py
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/timeout/connect.pyc
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/timeout/connect.pyo
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/view/__init__.py
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/view/__init__.pyc
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/view/__init__.pyo
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/view/introspect.py
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/view/introspect.pyc
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/view/introspect.pyo
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/view/rulesparser.py
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/view/rulesparser.pyc
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/view/rulesparser.pyo
-@dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/view
 @dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/timeout
 @dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/system
 @dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/htsql_pgsql/tweak/inet
