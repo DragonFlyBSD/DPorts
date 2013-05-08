@@ -2,11 +2,11 @@
 # Date created:		27 February 2004
 # Whom:			Stefan Walter <sw@gegenunendlich.de>
 #
-# $FreeBSD: ports/net/py-GeoIP/Makefile,v 1.16 2012/11/17 06:00:15 svnexp Exp $
+# $FreeBSD: net/py-GeoIP/Makefile 316601 2013-04-26 12:56:07Z stefan $
 #
 
 PORTNAME=	GeoIP
-PORTVERSION=	1.2.7
+PORTVERSION=	1.2.8
 CATEGORIES=	net python geography
 MASTER_SITES=	http://geolite.maxmind.com/download/geoip/api/python/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
