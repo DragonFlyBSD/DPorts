@@ -1,9 +1,5 @@
-# New ports collection makefile for:	exrtools
-# Date created:				15 Aug 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/graphics/exrtools/Makefile,v 1.23 2013/01/17 04:15:05 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: graphics/exrtools/Makefile 316318 2013-04-23 07:59:07Z ehaupt $
 
 PORTNAME=	exrtools
 PORTVERSION=	0.4
@@ -22,10 +18,9 @@ LIB_DEPENDS=	IlmImf:${PORTSDIR}/graphics/OpenEXR \
 		jpeg:${PORTSDIR}/graphics/jpeg
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig:build
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
-
-USE_PKGCONFIG=	build
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
