@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/libtre/Makefile 314782 2013-03-21 00:11:34Z jgh $
+# $FreeBSD: textproc/libtre/Makefile 316884 2013-04-30 07:11:19Z jgh $
 
 PORTNAME=	libtre
 PORTVERSION=	0.8.0
@@ -16,8 +16,7 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_BZIP2=	yes
-USES=	pathfix
-USE_PKGCONFIG=	build
+USES=	pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS+=	--enable-static
 USE_LDCONFIG=	yes
@@ -30,16 +29,17 @@ PGO_DESC=	Enable Profile-Guided Optimization
 
 MAN1=	tre_agrep.1
 
-.include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
+
+.include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
 CFLAGS+=	-Wuninitialized -ffast-math -finline-functions \
