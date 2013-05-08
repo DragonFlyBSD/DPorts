@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gmime2
-# Date created:				16 Apr 2001
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/mail/gmime2/Makefile,v 1.65 2012/11/17 05:59:03 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: mail/gmime2/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	gmime
 PORTVERSION=	2.2.27
@@ -20,10 +16,9 @@ CONFLICTS=	gmime-1.0.* gmime-2.4.*
 
 SLAVEDIRS=	mail/gmime2-sharp
 
-USE_ICONV=	yes
 USE_GMAKE=	yes
 USE_GNOME?=	gnomehack glib20
-USE_PKGCONFIG=	build
+USES=		pkgconfig iconv
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 # www.freebsd.org/cgi/query-pr.cgi?pr=118092
