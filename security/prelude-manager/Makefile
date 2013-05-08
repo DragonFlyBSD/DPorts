@@ -1,12 +1,9 @@
-# New ports collection makefile for:	prelude-manager
-# Date created:			Sun Aug 4 19:31:17 CEST 2002
-# Whom:				Clement Laforet <sheepkiller@cultdeadsheep.org>
-#
-# $FreeBSD: ports/security/prelude-manager/Makefile,v 1.73 2013/02/05 16:54:25 svnexp Exp $
+# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
+# $FreeBSD: security/prelude-manager/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	prelude-manager
 PORTVERSION=	1.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://www.prelude-ids.org/attachments/download/243/
 
@@ -22,12 +19,10 @@ LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp \
 		nettle:${PORTSDIR}/security/nettle \
 		p11-kit:${PORTSDIR}/security/p11-kit
 
+USES=		pkgconfig gettext iconv
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libltdl
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
 
 USE_RC_SUBR=	prelude-manager
