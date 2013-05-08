@@ -3,7 +3,7 @@
 # Date created:			Aug 6, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/lang/open-cobol/Makefile,v 1.42 2012/11/17 05:58:53 svnexp Exp $
+# $FreeBSD: lang/open-cobol/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	open-cobol
@@ -30,7 +30,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .else
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .endif
 
