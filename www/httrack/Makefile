@@ -1,8 +1,8 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: www/httrack/Makefile 313703 2013-03-09 11:11:53Z sunpoet $
+# $FreeBSD: www/httrack/Makefile 317304 2013-05-04 09:53:20Z sunpoet $
 
 PORTNAME=	httrack
-PORTVERSION=	3.46.1
+PORTVERSION=	3.47.7
 CATEGORIES=	www
 MASTER_SITES=	http://download.httrack.com/ \
 		http://mirror.httrack.com/ \
@@ -21,8 +21,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USE_ICONV=	yes
 USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/${PORTNAME}
+USES=		iconv
 
 MAN1=		htsserver.1 httrack.1 proxytrack.1 webhttrack.1
 
