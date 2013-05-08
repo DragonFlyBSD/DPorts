@@ -1,5 +1,5 @@
 # Created by: Matt Emmerton <matt@gsicomp.on.ca>
-# $FreeBSD: misc/lifelines/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: misc/lifelines/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	lifelines
 PORTVERSION=	3.0.51
@@ -11,14 +11,13 @@ MAINTAINER=	matt@gsicomp.on.ca
 COMMENT=	An advanced genealogical system
 
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
 USE_BZIP2=	yes
-USES=		bison
+USES=		bison iconv
 
 MAN1=		btedit.1 dbverify.1 llines.1
 
 .if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
