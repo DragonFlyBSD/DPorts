@@ -1,5 +1,5 @@
 # Created by: Robert Withrow <witr@rwwa.com>
-# $FreeBSD: misc/findutils/Makefile 312401 2013-02-17 05:33:16Z rm $
+# $FreeBSD: misc/findutils/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	findutils
 PORTVERSION=	4.5.11
@@ -22,7 +22,7 @@ USE_GMAKE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
