@@ -2,7 +2,7 @@
 # Date created:				31 March 2008
 # Whom:					Frank Fenor <frank@fenor.de>
 #
-# $FreeBSD: ports/sysutils/tclsyslog/Makefile,v 1.5 2012/12/04 13:59:52 svnexp Exp $
+# $FreeBSD: sysutils/tclsyslog/Makefile 316351 2013-04-23 11:51:52Z gahr $
 #
 
 PORTNAME=	tclsyslog
@@ -14,7 +14,7 @@ MASTER_SITES=	http://ftp.wagner.pp.ru/pub/tcl/tclsyslog/
 MAINTAINER=	frank@fenor.de
 COMMENT=	Tcl Interface to Syslog
 
-USE_TCL=	83+
+USE_TCL=	84+
 MANN=		syslog.n
 MANCOMPRESSED=	no
 
