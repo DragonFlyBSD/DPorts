@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-listen/Makefile 316172 2013-04-21 10:16:17Z sunpoet $
+# $FreeBSD: devel/rubygem-listen/Makefile 317045 2013-05-01 19:39:15Z sunpoet $
 
 PORTNAME=	listen
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
