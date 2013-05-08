@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: textproc/liblrdf/Makefile 315577 2013-03-29 21:57:35Z eadler $
+# $FreeBSD: textproc/liblrdf/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	liblrdf
 PORTVERSION=	0.5.0
@@ -20,9 +20,7 @@ USE_AUTOTOOLS=	libtoolize automake autoconf aclocal
 ACLOCAL_ARGS=	-I${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
-USE_ICONV=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig iconv
 USE_GNOME=	libxml2 libxslt
 GNOME_MAKEFILEIN=	Makefile.am
 USE_LDCONFIG=	yes
