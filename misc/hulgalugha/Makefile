@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hulgalugha
-# Date created:				22 Apr 2003
-# Whom:					alfred@freebsd.org
-#
-# $FreeBSD: ports/misc/hulgalugha/Makefile,v 1.6 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: alfred@freebsd.org
+# $FreeBSD: misc/hulgalugha/Makefile 317386 2013-05-04 22:30:06Z bapt $
 
 PORTNAME=	hulgalugha
 PORTVERSION=	1.0
@@ -16,4 +12,6 @@ COMMENT=	Very jerky text filter
 
 PLIST_FILES=	bin/hulgalugha
 
+post-patch:
+	@${REINPLACE_CMD} -e "s/NOMAN/NO_MAN/" ${WRKSRC}/Makefile
 .include <bsd.port.mk>
