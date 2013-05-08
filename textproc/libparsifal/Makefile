@@ -3,7 +3,7 @@
 # Date created:			Jan 6, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/textproc/libparsifal/Makefile,v 1.25 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: textproc/libparsifal/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	libparsifal
@@ -15,7 +15,7 @@ MAINTAINER=	yzlin@FreeBSD.org
 COMMENT=	Lightweight XML Parser
 
 USE_AUTOTOOLS=	libtool
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
