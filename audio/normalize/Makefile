@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: audio/normalize/Makefile 314853 2013-03-21 17:32:34Z bapt $
+# $FreeBSD: audio/normalize/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	normalize
 PORTVERSION=	0.7.7
@@ -48,7 +48,7 @@ RUN_DEPENDS+=	flac:${PORTSDIR}/audio/flac
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
