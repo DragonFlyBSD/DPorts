@@ -1,5 +1,5 @@
 # Created by: Alex Keda <admin@lissyara.su>
-# $FreeBSD: ports/lang/php52/Makefile,v 1.39 2013/02/18 07:18:25 svnexp Exp $
+# $FreeBSD: lang/php52/Makefile 317389 2013-05-04 22:48:03Z flo $
 
 PORTNAME=	php52
 PORTVERSION=	5.2.17
@@ -216,7 +216,7 @@ post-install:
 	@${INSTALL_DATA} ${WRKDIR}/php-fpm.conf.sample ${PREFIX}/etc
 	@${MKDIR} `dirname ${PHP_FPM_PID}`
 	@${MKDIR} `dirname ${PHP_FPM_LOG}`
-	@cd ${PREFIX}/etc && ${CP} -n php-fpm.conf.sample php-fpm.conf
+	@cd ${PREFIX}/etc && ${CP} -n php-fpm.conf.sample php-fpm.conf || ${TRUE}
 .endif
 .if defined(WITH_APACHE)
 	@${CAT} ${PKGMESSAGE}
