@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: ports/textproc/qt4-xmlpatterns-tool/Makefile,v 1.9 2013/02/03 21:44:07 svnexp Exp $
+# $FreeBSD: textproc/qt4-xmlpatterns-tool/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	xmlpatterns-tool
 DISTVERSION=	${QT4_VERSION}
@@ -29,7 +29,6 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake translations \
 		src/3rdparty/clucene src/3rdparty/freetype \
 		src/3rdparty/libjpeg src/3rdparty/libmng src/3rdparty/libpng \
 		src/3rdparty/libtiff src/3rdparty/phonon src/3rdparty/webkit
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
 .for dne in ${DO_NOT_EXTRACT}
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
