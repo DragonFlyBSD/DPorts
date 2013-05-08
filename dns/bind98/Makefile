@@ -1,4 +1,4 @@
-# $FreeBSD: dns/bind98/Makefile 315942 2013-04-17 07:57:54Z erwin $
+# $FreeBSD: dns/bind98/Makefile 316321 2013-04-23 08:26:48Z erwin $
 
 PORTNAME=	bind98
 PORTVERSION=	9.8.4.2
@@ -221,8 +221,6 @@ post-patch:
 .if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	*
 .endif
-PKGMESSAGE=	${.CURDIR}/../bind97/pkg-message
-PKGINSTALL=	${.CURDIR}/../bind97/pkg-install
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/bin/rndc/rndc.conf \
 		${BIND_DESTETC}/rndc.conf.sample
