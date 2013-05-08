@@ -1,8 +1,5 @@
-# Ports collection makefile for:	jggtrans
-# Date created:				13 September 2006
-# Whom:					Bartek Rutkowski <r@robakdesign.com>
-#
-# $FreeBSD: ports/net-im/jggtrans/Makefile,v 1.12 2012/11/17 06:00:27 svnexp Exp $
+# Created by: Bartek Rutkowski <r@robakdesign.com>
+# $FreeBSD: net-im/jggtrans/Makefile 317389 2013-05-04 22:48:03Z flo $
 
 PORTNAME=		jggtrans
 PORTVERSION=		2.2.4
@@ -20,7 +17,7 @@ LIB_DEPENDS=		idn.17:${PORTSDIR}/dns/libidn \
 
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
-USE_GETTEXT=		yes
+USES=		gettext
 USE_GNOME=		glib20 pkgconfig
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
@@ -49,7 +46,7 @@ SUB_LIST+=	JABBER_USER=${JABBER_USER}
 
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/jggtrans.xml ${PREFIX}/etc/jggtrans.xml.sample
-	@${CP} -n ${WRKSRC}/jggtrans.xml ${PREFIX}/etc/jggtrans.xml
+	@${CP} -n ${WRKSRC}/jggtrans.xml ${PREFIX}/etc/jggtrans.xml || ${TRUE}
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>
