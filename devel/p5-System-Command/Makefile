@@ -1,8 +1,8 @@
 # Created by: Wen Heping<wen@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-System-Command/Makefile,v 1.5 2013/01/11 13:13:00 svnexp Exp $
+# $FreeBSD: devel/p5-System-Command/Makefile 316805 2013-04-29 11:06:11Z tobez $
 
 PORTNAME=	System-Command
-PORTVERSION=	1.09
+PORTVERSION=	1.100
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
