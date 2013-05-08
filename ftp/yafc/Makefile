@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: ports/ftp/yafc/Makefile,v 1.49 2013/01/19 23:12:43 svnexp Exp $
+# $FreeBSD: ftp/yafc/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	yafc
 PORTVERSION=	1.2.4
@@ -35,16 +35,15 @@ PLIST_FILES=	bin/yafc
 
 .if ${PORT_OPTIONS:MNLS}
 USE_GNOME+=	intltool
-USE_GETTEXT=	yes
-LDFLAGS+=	-lintl
+USES+=		gettext
 PLIST_FILES+=	share/locale/de/LC_MESSAGES/yafc.mo \
 		share/locale/sv/LC_MESSAGES/yafc.mo
 .else
-CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--without-gettext
 .endif
 
 .if ${PORT_OPTIONS:MREADLINE}
-USE_READLINE=	yes
+USES+=		readline
 .else
 CONFIGURE_ARGS+=	--without-readline
 .endif
