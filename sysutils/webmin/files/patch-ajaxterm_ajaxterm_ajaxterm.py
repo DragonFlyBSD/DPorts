@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/sysutils/webmin/files/patch-ajaxterm_ajaxterm_ajaxterm.py,v 1.3 2012/11/17 06:01:49 svnexp Exp $
+$FreeBSD: sysutils/webmin/files/patch-ajaxterm_ajaxterm_ajaxterm.py 300971 2012-07-16 19:01:18Z olgeni $
 
 --- ajaxterm/ajaxterm/ajaxterm.py.orig
 +++ ajaxterm/ajaxterm/ajaxterm.py

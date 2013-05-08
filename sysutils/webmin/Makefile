@@ -1,8 +1,9 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: ports/sysutils/webmin/Makefile,v 1.332 2013/02/18 14:40:00 svnexp Exp $
+# $FreeBSD: sysutils/webmin/Makefile 316633 2013-04-26 19:58:08Z olgeni $
 
 PORTNAME=	webmin
 PORTVERSION=	1.620
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.webmin.com/updates/:up \
 		SF/webadmin/${PORTNAME}/${PORTVERSION}:sf \
@@ -54,6 +55,8 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "*.orig" -delete
 	@${FIND} ${WRKSRC} -name "*.bak" -delete
 	@${FIND} ${WRKSRC} -name "*.pyc" -delete
+
+	@${PRINTF} "g/^FreeBSD/m0\nwq\n" | ex ${WRKSRC}/os_list.txt
 
 do-build:
 	@${CC} ${CFLAGS} -o ${WRKSRC}/mount/freebsd-mounts-7 ${WRKSRC}/mount/freebsd-mounts-7.c

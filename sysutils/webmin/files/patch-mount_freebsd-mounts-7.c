@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/sysutils/webmin/files/patch-mount_freebsd-mounts-7.c,v 1.2 2012/11/17 06:01:49 svnexp Exp $
+$FreeBSD: sysutils/webmin/files/patch-mount_freebsd-mounts-7.c 300897 2012-07-14 14:29:18Z beat $
 
 --- mount/freebsd-mounts-7.c.orig
 +++ mount/freebsd-mounts-7.c
