@@ -1,8 +1,8 @@
 # Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: ports/devel/py-bluelet/Makefile,v 1.1 2013/02/15 04:52:43 svnexp Exp $
+# $FreeBSD: devel/py-bluelet/Makefile 316304 2013-04-23 02:34:34Z swills $
 
 PORTNAME=	bluelet
-PORTVERSION=	0.1
+PORTVERSION=	0.2.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
