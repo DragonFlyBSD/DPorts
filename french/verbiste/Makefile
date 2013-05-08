@@ -1,5 +1,5 @@
 # Created by: Dan Phillips <dan-ports@dp.id.au>
-# $FreeBSD: french/verbiste/Makefile 315267 2013-03-26 07:46:53Z bapt $
+# $FreeBSD: french/verbiste/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	verbiste
 PORTVERSION=	0.1.33
@@ -13,12 +13,10 @@ OPTIONS_DEFINE=	GTK2 GNOME
 
 LICENSE=	GPLv2
 
-USES=		pathfix
+USES=		pathfix pkgconfig iconv
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	ltverhack libxml2
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -46,7 +44,7 @@ PLIST_SUB+=	HASGNOME="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGTK2} || ${PORT_OPTIONS:MGNOME}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	HASGUI=""
 .else
 PLIST_SUB+=	HASGUI="@comment "
