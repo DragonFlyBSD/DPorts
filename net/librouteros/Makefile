@@ -1,12 +1,9 @@
-# Ports collection Makefile for:	librouteros
-# Date created:				April 6 2012
-# Whom:					Mark Felder <feld@feld.me>
-#
-# $FreeBSD: ports/net/librouteros/Makefile,v 1.2 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Mark Felder <feld@feld.me>
+# $FreeBSD: net/librouteros/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	librouteros
 PORTVERSION=	1.1.2
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://verplant.org/librouteros/files/
 
