@@ -1,5 +1,5 @@
 # Created by: Jason Harris <jharris@widomaker.com>
-# $FreeBSD: ports/sysutils/coreutils/Makefile,v 1.41 2013/02/08 03:26:20 svnexp Exp $
+# $FreeBSD: sysutils/coreutils/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	coreutils
 PORTVERSION=	8.20
@@ -55,7 +55,7 @@ OPTIONS_DEFAULT=NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
