@@ -1,8 +1,8 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD: databases/py-fdb/Makefile 314646 2013-03-19 13:54:39Z culot $
+# $FreeBSD: databases/py-fdb/Makefile 316408 2013-04-24 07:49:47Z culot $
 
 PORTNAME=	fdb
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
