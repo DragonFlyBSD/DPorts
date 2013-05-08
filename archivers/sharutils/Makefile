@@ -1,8 +1,8 @@
 # Created by: ache
-# $FreeBSD: ports/archivers/sharutils/Makefile,v 1.52 2013/01/09 00:45:33 svnexp Exp $
+# $FreeBSD: archivers/sharutils/Makefile 316385 2013-04-23 19:14:32Z garga $
 
 PORTNAME=	sharutils
-PORTVERSION=	4.13.3
+PORTVERSION=	4.13.5
 CATEGORIES=	archivers
 MASTER_SITES=	GNU
 
@@ -26,7 +26,7 @@ INFO=		sharutils
 
 .if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
+USES=		gettext
 CONFIGURE_ARGS+=--with-libintl-prefix="${LOCALBASE}"
 .else
 PLIST_SUB+=	NLS="@comment "
