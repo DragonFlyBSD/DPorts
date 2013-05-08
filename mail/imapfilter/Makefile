@@ -2,12 +2,12 @@
 # Date created:        28 July 2002
 # Whom:                Lefteris Chatzibarbas <lefcha@hellug.gr>
 #
-# $FreeBSD: ports/mail/imapfilter/Makefile,v 1.31 2012/12/10 19:24:02 svnexp Exp $
+# $FreeBSD: mail/imapfilter/Makefile 316599 2013-04-26 12:31:01Z stefan $
 #
 
 PORTNAME=	imapfilter
-PORTVERSION=	2.5.3
-PORTREVISION=	1
+PORTVERSION=	2.5.4
+#PORTREVISION=	0
 CATEGORIES=	mail
 
 MAINTAINER=	stefan@FreeBSD.org
@@ -23,7 +23,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -L${LUA_LIBDIR}
 USE_GITHUB=	yes
 GH_ACCOUNT=	lefcha
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	69b6501
+GH_COMMIT=	7593368
 
 MAN1=		imapfilter.1
 MAN5=		imapfilter_config.5
