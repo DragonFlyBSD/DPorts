@@ -1,12 +1,9 @@
-# New ports collection makefile for:	libcdio
-# Date created:				2004-04-04
-# Whom:					arved
-#
-# $FreeBSD: ports/sysutils/libcdio/Makefile,v 1.40 2012/11/17 06:01:36 svnexp Exp $
+# Created by: arved
+# $FreeBSD: sysutils/libcdio/Makefile 317619 2013-05-07 15:46:15Z ale $
 
 PORTNAME=	libcdio
 PORTVERSION=	0.83
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	libcdio
@@ -15,20 +12,16 @@ MAINTAINER=	arved@FreeBSD.org
 COMMENT=	Compact Disc Input and Control Library
 
 LIB_DEPENDS=	cddb.4:${PORTSDIR}/audio/libcddb \
-		popt.0:${PORTSDIR}/devel/popt \
 		cdda_paranoia.0:${PORTSDIR}/audio/cdparanoia
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig gnomehack
+USES=		pathfix pkgconfig iconv ncurses
 USE_GMAKE=	yes
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
-USE_NCURSES=	yes
-CONFIGURE_ARGS+=	--with-libpopt-prefix=${LOCALBASE} \
-			--with-libiconv-prefix=${LOCALBASE} \
+CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE}
 USE_PERL5_BUILD=yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -liconv
