@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: lang/vala/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: lang/vala/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/lang/vala/Makefile,v 1.65 2012/12/17 19:46:24 kwm Exp $
 
 PORTNAME=	vala
@@ -12,13 +12,11 @@ COMMENT=	Programming language and compiler that converts Vala code into C code
 
 LICENSE=	LGPL21
 
-USES=		bison pathfix
+USES=		bison pathfix pkgconfig gettext
 USE_XZ=		yes
 USE_GNOME=	glib20 gnomeprefix libxslt
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
