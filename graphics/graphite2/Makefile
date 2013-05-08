@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/graphite2/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/graphite2/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	graphite2
 PORTVERSION=	1.2.0
@@ -9,8 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Rendering capabilities for complex non-Roman writing systems
 
-USES=		cmake
-USE_ICONV=	yes
+USES=		cmake iconv
 USE_LDCONFIG=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib -liconv
 
