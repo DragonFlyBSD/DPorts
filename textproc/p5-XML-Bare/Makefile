@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-XML-Bare/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-XML-Bare/Makefile 317001 2013-05-01 08:32:53Z tobez $
 
 PORTNAME=	XML-Bare
-PORTVERSION=	0.47
+PORTVERSION=	0.52
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
