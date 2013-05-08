@@ -1,8 +1,8 @@
-# $FreeBSD: ports/security/shishi/Makefile,v 1.54 2013/02/06 21:57:32 svnexp Exp $
+# $FreeBSD: security/shishi/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	shishi
-PORTVERSION=	1.0.1
-PORTREVISION=	4
+PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	GNU
 
@@ -16,8 +16,7 @@ LIB_DEPENDS=	idn:${PORTSDIR}/dns/libidn \
 
 USE_AUTOTOOLS=	libtool
 USE_PERL5_BUILD=	yes
-USE_GNOME=	gnomehack pkgconfig
-USE_ICONV=	yes
+USES=		pathfix pkgconfig iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 CONFIGURE_ARGS=	--with-db-dir=/var/shishi
@@ -34,7 +33,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
@@ -42,11 +41,6 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800000
-CONFIGURE_ARGS+=	gl_cv_func_stat_dir_slash="guessing yes" \
-			gl_cv_func_stat_file_slash="guessing yes"
-.endif
 
 post-extract:
 	@${RM} -f ${WRKSRC}/doc/shishi.info*
@@ -57,5 +51,7 @@ post-patch:
 		${WRKSRC}/db/gl/Makefile.in
 	@${REINPLACE_CMD} -e 's:\.\./gl/libgnu.la:../db/gl/libgnu.la &:' \
 		${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e '/^AM_CPPFLAGS/s:-I[^ ]*/gl ::g' \
+		${WRKSRC}/examples/Makefile.in
 
 .include <bsd.port.post.mk>
