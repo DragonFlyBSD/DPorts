@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11/babl/Makefile 313870 2013-03-11 12:17:15Z kwm $
+# $FreeBSD: x11/babl/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	babl
 PORTVERSION=	0.1.10
@@ -20,8 +20,7 @@ USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	ltverhack
-USE_PKGCONFIG=	build
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--disable-introspection
 
