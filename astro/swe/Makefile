@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/astro/swe/Makefile,v 1.4 2013/01/05 12:42:36 svnexp Exp $
+# $FreeBSD: astro/swe/Makefile 317276 2013-05-03 22:02:11Z bapt $
 
 PORTNAME=	swe
 PORTVERSION=	1.78.00
@@ -20,7 +20,9 @@ OPTIONS_DEFINE=	DOCS
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-pedantic||' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's|-pedantic||' \
+		-e 's|CFLAGS =|CFLAGS ?=|' \
+		${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libswe.a ${LOCALBASE}/lib
