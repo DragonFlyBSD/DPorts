@@ -1,8 +1,9 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: sysutils/rubygem-facter/Makefile 314483 2013-03-17 20:14:31Z zi $
+# $FreeBSD: sysutils/rubygem-facter/Makefile 316944 2013-04-30 16:01:02Z demon $
 
 PORTNAME=	facter
 PORTVERSION=	1.6.18
+PORTREVISION=	1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG \
 		http://downloads.puppetlabs.com/facter/
