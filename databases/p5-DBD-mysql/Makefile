@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-mysql/Makefile 314856 2013-03-21 17:43:46Z bapt $
+# $FreeBSD: databases/p5-DBD-mysql/Makefile 316227 2013-04-22 12:53:58Z bapt $
 
 PORTNAME=	DBD-mysql
 PORTVERSION=	4.021
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/00$//}
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT?=	MySQL driver for the Perl5 Database Interface (DBI)
 
 LICENSE=	ART10 GPLv1
