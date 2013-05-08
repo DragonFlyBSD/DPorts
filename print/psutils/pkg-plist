@@ -1,0 +1,25 @@
+@comment $FreeBSD: print/psutils/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+bin/psbook
+bin/psselect
+bin/pstops
+bin/epsffit
+bin/psnup
+bin/psresize
+bin/getafm
+bin/fixfmps
+bin/fixmacps
+bin/fixpsditps
+bin/fixpspps
+bin/fixtpps
+bin/fixwfwps
+bin/fixwpps
+bin/fixscribeps
+bin/fixwwps
+bin/fixdlsrps
+bin/extractres
+bin/includeres
+bin/psmerge
+bin/showchar
+%%DATADIR%%/md68_0.ps
+%%DATADIR%%/md71_0.ps
+@dirrm %%DATADIR%%
