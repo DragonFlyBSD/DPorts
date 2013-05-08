@@ -1,9 +1,5 @@
-# New ports collection makefile for:	slv2
-# Date created:		2008-11-25
-# Whom:			xaimus <xaimus@gmail.com>
-#
-# $FreeBSD: ports/audio/slv2/Makefile,v 1.7 2012/11/17 05:54:44 svnexp Exp $
-#
+# Created by: xaimus <xaimus@gmail.com>
+# $FreeBSD: audio/slv2/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
 
 PORTNAME=	slv2
 PORTVERSION=	0.6.6
@@ -20,10 +16,10 @@ BUILD_DEPENDS=	${LOCALBASE}/include/lv2.h:${PORTSDIR}/audio/lv2core
 LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack \
 		rdf.0:${PORTSDIR}/textproc/redland
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_PYTHON_BUILD=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
@@ -32,9 +28,7 @@ MAKE_JOBS_SAFE=	yes
 WAF_VERBOSE=	--verbose
 .endif
 
-.if defined(MAKE_JOBS_NUMBER)
 WAF_JOBS=	--jobs=${MAKE_JOBS_NUMBER}
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e \
