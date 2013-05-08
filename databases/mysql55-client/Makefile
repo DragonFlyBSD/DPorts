@@ -2,7 +2,7 @@
 # Date created:				28 Jan 2006
 # Whom:					Alex Dupre <ale@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/mysql55-client/Makefile,v 1.113 2013/01/17 16:56:02 svnexp Exp $
+# $FreeBSD: databases/mysql55-client/Makefile 317032 2013-05-01 16:33:00Z ale $
 #
 
 PORTNAME=	mysql
