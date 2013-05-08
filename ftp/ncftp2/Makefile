@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ports/ftp/ncftp2/Makefile,v 1.58 2012/12/14 02:40:22 svnexp Exp $
+# $FreeBSD: ftp/ncftp2/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	ncftp
 PORTVERSION=	2.4.3
@@ -16,7 +16,7 @@ OPTIONS_DEFINE=	READLINE
 OPTIONS_DEFAULT=READLINE
 READLINE_DESC=	Enable readline support
 
-USE_NCURSES=	yes
+USES=		ncurses
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_func_getmaxyx=yes
 MAKE_JOBS_SAFE=	yes
@@ -27,7 +27,7 @@ PLIST_FILES=	bin/${LATEST_LINK}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREADLINE}
-USE_READLINE=	yes
+USES+=		readline
 .else
 CONFIGURE_ARGS+=--disable-readline
 .endif
