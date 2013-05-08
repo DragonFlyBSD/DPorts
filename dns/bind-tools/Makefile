@@ -1,4 +1,4 @@
-# $FreeBSD: ports/dns/bind-tools/Makefile,v 1.6 2012/11/17 05:57:07 svnexp Exp $
+# $FreeBSD: dns/bind-tools/Makefile 316430 2013-04-24 13:17:03Z zeising $
 
 PORTNAME=	bind-tools
 
@@ -6,9 +6,9 @@ COMMENT=	Command line tools from BIND: dig, host, and nslookup
 
 CONFIGURE_ARGS+=	--disable-shared
 
-CONFLICTS+=	bind97-9.7.*
+CONFLICTS+=	bind99-9.9.*
 
-MASTERDIR=	${.CURDIR}/../../dns/bind97
+MASTERDIR=	${.CURDIR}/../../dns/bind99
 
 DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
