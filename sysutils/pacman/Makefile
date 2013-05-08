@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/sysutils/pacman/Makefile,v 1.1 2013/01/25 00:54:14 svnexp Exp $
+# $FreeBSD: sysutils/pacman/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	pacman
 PORTVERSION=	4.0.3
@@ -64,7 +64,7 @@ CFLAGS+=	-I${LOCALBASE}/include/gpgme
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls

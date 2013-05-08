@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/pacman/pkg-deinstall,v 1.1 2013/01/25 00:54:14 svnexp Exp $
+# $FreeBSD$
 #
 
 case $2 in
