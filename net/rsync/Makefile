@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: net/rsync/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: net/rsync/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	rsync
 PORTVERSION=	3.0.9
@@ -70,7 +70,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=	yes
+USES+=		iconv
 CONFIGUREDCFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ENV+=	CONFIGUREDCFLAGS="${CONFIGUREDCFLAGS}"
