@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: multimedia/libquvi/Makefile 314250 2013-03-15 03:08:39Z miwi $
+# $FreeBSD: multimedia/libquvi/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	libquvi
 PORTVERSION=	0.4.1
@@ -19,12 +19,10 @@ OPTIONS_DEFINE=	DOCS
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
 USE_LUA=	yes
 USE_XZ=		yes
-USES=		pathfix
+USES=		pathfix pkgconfig iconv
 
 MAN3=		libquvi.3
 
