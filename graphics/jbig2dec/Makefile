@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/jbig2dec/Makefile,v 1.9 2012/12/31 14:16:05 svnexp Exp $
+# $FreeBSD: graphics/jbig2dec/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	jbig2dec
 PORTVERSION=	0.11
@@ -24,7 +24,7 @@ TESTS_DESC=	Download and use test-images for post-build testing
 MAN1=		jbig2dec.1
 
 MAKE_JOBS_SAFE=	yes
-EXTRACT_AFTER_ARGS+=|${TAR} -xpf - --exclude sha1.h --exclude 'getopt*'
+EXTRACT_AFTER_ARGS+=	--exclude sha1.h --exclude 'getopt*'
 
 LICENSE=	GPLv3
 
