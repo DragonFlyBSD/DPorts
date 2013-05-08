@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/newt/files/setup.py.in,v 1.2 2012/11/17 05:56:01 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/devel/newt/files/setup.py.in,v 1.1 2010-01-10 23:40:05 pgollucci Exp $
 import os
 from distutils.core import setup, Extension
 
@@ -13,7 +13,7 @@ setup ( name = 'newt',
 		library_dirs=['.', '%%LOCALBASE%%'+'/lib', '%%PREFIX%%'+'/lib'],
 		libraries=['newt', 'popt', 'slang', 'ncurses']
 	)])
-# $FreeBSD: ports/devel/newt/files/setup.py.in,v 1.2 2012/11/17 05:56:01 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/devel/newt/files/setup.py.in,v 1.1 2010-01-10 23:40:05 pgollucci Exp $
 import os
 from distutils.core import setup, Extension
 

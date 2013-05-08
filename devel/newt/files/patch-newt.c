@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/newt/files/patch-newt.c,v 1.3 2012/11/17 05:56:01 svnexp Exp $
+$FreeBSD: devel/newt/files/patch-newt.c 300896 2012-07-14 13:54:48Z beat $
 
 --- newt.c	2009-09-24 11:03:09.000000000 -0400
 +++ newt.c	2010-01-06 01:04:01.000000000 -0500

@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/newt/Makefile,v 1.48 2013/02/15 02:49:27 svnexp Exp $
+# $FreeBSD: devel/newt/Makefile 316866 2013-04-30 02:21:54Z miwi $
 
 PORTNAME=	newt
-PORTVERSION=	0.52.14
+PORTVERSION=	0.52.15
 CATEGORIES=	devel
 MASTER_SITES=	https://fedorahosted.org/releases/n/e/newt/
 
@@ -34,7 +34,7 @@ SOVERSION=	${PORTVERSION:R:E}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
