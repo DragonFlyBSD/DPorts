@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/x11/efreet/Makefile,v 1.12 2013/01/15 17:46:04 svnexp Exp $
+# $FreeBSD: x11/efreet/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	efreet
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 CATEGORIES=	x11 enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -15,9 +15,9 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pathfix pkgconfig
 USE_EFL=	eet eina ecore libtool_hack librt_hack
 USE_EFL_ECORE=	file
-USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS=	--disable-nls
