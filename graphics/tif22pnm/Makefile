@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	tif22pnm
-# Date created:			Jan 7, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/graphics/tif22pnm/Makefile,v 1.24 2012/11/27 12:31:43 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: graphics/tif22pnm/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	tif22pnm
 PORTVERSION=	0.14
@@ -21,7 +16,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		tiff:${PORTSDIR}/graphics/tiff
 
 PROJECTHOST=	sam2p
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libtiff-ldir=${LOCALBASE}/lib \
