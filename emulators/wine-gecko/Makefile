@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: ports/emulators/wine-gecko/Makefile,v 1.7 2013/02/11 04:44:19 svnexp Exp $
+# $FreeBSD: emulators/wine-gecko/Makefile 316190 2013-04-21 18:23:33Z dbn $
 
 PORTNAME=	wine-gecko
 DISTVERSION=	1.4
@@ -15,7 +15,7 @@ COMMENT=	Gecko Layout Engine for Wine (HTML support)
 LICENSE=	MPL GPLv2 GPLv3 LGPL21 LGPL3
 LICENSE_COMB=	multi
 
-PORTSCOUT=	ignore	# for newer versions see emulators/wine-gecko-devel
+PORTSCOUT=	ignore:1	# for newer versions see emulators/wine-gecko-devel
 
 NO_BUILD=	yes
 PLIST_SUB+=	GECKO_VERSION="${DISTVERSION}"
