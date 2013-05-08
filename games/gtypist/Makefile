@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/gtypist/Makefile,v 1.30 2012/12/18 15:48:24 svnexp Exp $
+# $FreeBSD: games/gtypist/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gtypist
 PORTVERSION=	2.9.2
@@ -20,7 +20,7 @@ MAN1=		gtypist.1 typefortune.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
