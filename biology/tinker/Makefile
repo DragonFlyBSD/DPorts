@@ -1,8 +1,8 @@
 # Created by: Glenn Johnson
-# $FreeBSD: biology/tinker/Makefile 315140 2013-03-24 16:13:57Z miwi $
+# $FreeBSD: biology/tinker/Makefile 316821 2013-04-29 14:23:03Z miwi $
 
 PORTNAME=	tinker
-PORTVERSION=	6.2.01
+PORTVERSION=	6.2.02
 CATEGORIES=	biology
 MASTER_SITES=	http://dasher.wustl.edu/tinker/downloads/
 
