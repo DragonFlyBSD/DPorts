@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: security/vuxml/vuln.xml 315746 2013-04-06 16:51:41Z dinoex $
+  $FreeBSD: security/vuxml/vuln.xml 317627 2013-05-07 18:58:55Z delphij $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -51,6 +51,564 @@ Note:  Please add new entries to the beginning of this file.
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="efaa4071-b700-11e2-b1b9-f0def16c5c1b">
+    <topic>nginx -- Stack-based buffer overflow</topic>
+    <affects>
+      <package>
+	<name>nginx</name>
+	<range><ge>1.3.9,1</ge><lt>1.4.1,1</lt></range>
+      </package>
+      <package>
+	<name>nginx-devel</name>
+	<range><ge>1.3.9</ge><lt>1.5.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>The nginx project reports:</p>
+       <blockquote cite="http://nginx.org/en/security_advisories.html">
+       <p>A stack-based buffer overflow might occur in a worker process
+       process while handling a specially crafted request, potentially
+       resulting in arbitrary code execution.</p>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2028</cvename>
+    </references>
+    <dates>
+      <discovery>2013-05-07</discovery>
+      <entry>2013-05-07</entry>
+      <modified>2013-05-07</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="6ff570cb-b418-11e2-b279-20cf30e32f6d">
+    <topic>strongSwan -- ECDSA signature verification issue</topic>
+    <affects>
+      <package>
+	<name>strongswan</name>
+	<range><lt>5.0.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>strongSwan security team reports:</p>
+	<blockquote cite="http://www.strongswan.org/blog/2013/04/30/strongswan-5.0.4-released-%28cve-2013-2944%29.html">
+	  <p>If the openssl plugin is used for ECDSA signature verification an empty,
+	    zeroed or otherwise invalid signature is handled as a legitimate one.
+	    Both IKEv1 and IKEv2 are affected.</p>
+	  <p>Affected are only installations that have enabled and loaded the OpenSSL
+	    crypto backend (--enable-openssl). Builds using the default crypto backends
+	    are not affected.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2944</cvename>
+    </references>
+    <dates>
+      <discovery>2013-04-30</discovery>
+      <entry>2013-05-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="622e14b1-b40c-11e2-8441-00e0814cab4e">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>1.514</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory reports:</p>
+	<blockquote cite="https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2013-05-02">
+	  <p>This advisory announces multiple security vulnerabilities that
+	    were found in Jenkins core.</p>
+	  <ol>
+	    <li>
+	      <p>SECURITY-63 / CVE-2013-2034</p>
+	      <p>This creates a cross-site request forgery (CSRF) vulnerability
+		 on Jenkins master, where an anonymous attacker can trick an
+		 administrator to execute arbitrary code on Jenkins master by
+		 having him open a specifically crafted attack URL.</p>
+	      <p>There's also a related vulnerability where the permission
+		 check on this ability is done imprecisely, which may affect
+		 those who are running Jenkins instances with a custom
+		 authorization strategy plugin.</p>
+	    </li>
+	    <li>
+	      <p>SECURITY-67 / CVE-2013-2033</p>
+	      <p>This creates a cross-site scripting (XSS) vulnerability, where
+		 an attacker with a valid user account on Jenkins can execute
+		 JavaScript in the browser of other users, if those users are
+		 using certain browsers.</p>
+	    </li>
+	    <li>
+	      <p>SECURITY-69 / CVE-2013-2034</p>
+	      <p>This is another CSRF vulnerability that allows an attacker to
+		 cause a deployment of binaries to Maven repositories. This
+		 vulnerability has the same CVE ID as SEUCRITY-63.</p>
+	    </li>
+	    <li>
+	      <p>SECURITY-71 / CVE-2013-1808</p>
+	      <p>This creates a cross-site scripting (XSS) vulnerability.</p>
+	    </li>
+	  </ol>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://wiki.jenkins-ci.org/display/SECURITY/Jenkins+Security+Advisory+2013-05-02</url>
+      <cvename>CVE-2013-2034</cvename>
+      <cvename>CVE-2013-2033</cvename>
+      <cvename>CVE-2013-2034</cvename>
+      <cvename>CVE-2013-1808</cvename>
+    </references>
+    <dates>
+      <discovery>2013-05-02</discovery>
+      <entry>2013-05-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e66a6e2f-b0d5-11e2-9164-0016e6dcb562">
+    <topic>FreeBSD -- NFS remote denial of service</topic>
+    <affects>
+      <package>
+	<name>FreeBSD</name>
+	<range><gt>8.3</gt><lt>8.3_8</lt></range>
+	<range><gt>9.1</gt><lt>9.1_3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<blockquote cite="http://www.freebsd.org/security/advisories/FreeBSD-SA-13:05.nfsserver.asc">
+	  <p>Insufficient input validation in the NFS server allows an
+	   attacker to cause the underlying file system to treat a
+	   regular file as a directory.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-3266</cvename>
+      <freebsdsa>SA-13:05.nfsserver</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2013-04-21</discovery>
+      <entry>2013-04-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="57df803e-af34-11e2-8d62-6cf0490a8c18">
+    <topic>Joomla! -- XXS and DDoS vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>joomla</name>
+	<range><ge>2.0.*</ge><lt>2.5.10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The JSST and the Joomla! Security Center report:</p>
+	<blockquote cite="http://developer.joomla.org/security/80-20130405-core-xss-vulnerability.html">
+	  <h2>[20130405] - Core - XSS Vulnerability</h2>
+	  <p>Inadequate filtering leads to XSS vulnerability in Voting plugin.</p>
+	</blockquote>
+	<blockquote cite="http://developer.joomla.org/security/81-20130403-core-xss-vulnerability.html">
+	  <h2>[20130403] - Core - XSS Vulnerability</h2>
+	  <p>Inadequate filtering allows possibility of XSS exploit in some
+	  circumstances.</p>
+	</blockquote>
+	<blockquote cite="http://developer.joomla.org/security/82-20130402-core-information-disclosure.html">
+	  <h2>[20130402] - Core - Information Disclosure</h2>
+	  <p>Inadequate permission checking allows unauthorised user to see
+	  permission settings in some circumstances.</p>
+	</blockquote>
+	<blockquote cite="http://developer.joomla.org/security/83-20130404-core-xss-vulnerability.html">
+	  <h2>[20130404] - Core - XSS Vulnerability</h2>
+	  <p>Use of old version of Flash-based file uploader leads to XSS
+	   vulnerability.</p>
+	</blockquote>
+	<blockquote cite="http://developer.joomla.org/security/84-20130401-core-privilege-escalation.html">
+	  <h2>[20130401] - Core - Privilege Escalation</h2>
+	  <p>Inadequate permission checking allows unauthorised user to delete
+	  private messages.</p>
+	</blockquote>
+	<blockquote cite="http://developer.joomla.org/security/85-20130406-core-dos-vulnerability.html">
+	  <h2>[20130406] - Core - DOS Vulnerability</h2>
+	  <p>Object unserialize method leads to possible denial of service
+	  vulnerability.</p>
+	</blockquote>
+	<blockquote cite="http://developer.joomla.org/security/86-20130407-core-xss-vulnerability.html">
+	  <h2>[20130407] - Core - XSS Vulnerability</h2>
+	  <p>Inadequate filtering leads to XSS vulnerability in highlighter
+	  plugin</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-3059</cvename>
+      <cvename>CVE-2013-3058</cvename>
+      <cvename>CVE-2013-3057</cvename>
+      <url>http://developer.joomla.org/security/83-20130404-core-xss-vulnerability.html</url>
+      <cvename>CVE-2013-3056</cvename>
+      <cvename>CVE-2013-3242</cvename>
+      <cvename>CVE-2013-3267</cvename>
+    </references>
+    <dates>
+      <discovery>2013-04-24</discovery>
+      <entry>2013-04-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8c8fa44d-ad15-11e2-8cea-6805ca0b3d42">
+    <topic>phpMyAdmin -- Multiple security vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<range><ge>3.5</ge><lt>3.5.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyAdmin development team reports:</p>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-2.php">
+	  <p>In some PHP versions, the preg_replace() function can be
+	  tricked into executing arbitrary PHP code on the
+	  server. This is done by passing a crafted argument as the
+	  regular expression, containing a null byte. phpMyAdmin does
+	  not correctly sanitize an argument passed to preg_replace()
+	  when using the "Replace table prefix" feature, opening the
+	  way to this vulnerability..</p>
+	  <p>This vulnerability can be triggered only by someone who
+	  logged in to phpMyAdmin, as the usual token protection
+	  prevents non-logged-in users to access the required
+	  form.</p>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-3.php">
+	  <p>phpMyAdmin can be configured to save an export file on
+	  the web server, via its SaveDir directive. With this in
+	  place, it's possible, either via a crafted filename template
+	  or a crafted table name, to save a double extension file
+	  like foobar.php.sql. In turn, an Apache webserver on which
+	  there is no definition for the MIME type "sql" (the default)
+	  will treat this saved file as a ".php" script, leading to
+	  remote code execution.</p>
+	  <p>This vulnerability can be triggered only by someone who
+	  logged in to phpMyAdmin, as the usual token protection
+	  prevents non-logged-in users to access the required
+	  form. Moreover, the SaveDir directive is empty by default,
+	  so a default configuration is not vulnerable. The
+	  $cfg['SaveDir'] directive must be configured, and the server
+	  must be running Apache with mod_mime to be exploitable.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-3238</cvename>
+      <cvename>CVE-2013-3239</cvename>
+    </references>
+    <dates>
+      <discovery>2013-04-24</discovery>
+      <entry>2013-04-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="aeb962f6-ab8d-11e2-b3f5-003067c2616f">
+    <topic>tinc -- Buffer overflow</topic>
+    <affects>
+      <package>
+	<name>tinc</name>
+	<range><lt>1.0.21</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>tinc-vpn.org reports:</p>
+	<blockquote cite="http://www.tinc-vpn.org/news/">
+	  <p>Drop packets forwarded via TCP if they are too big.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1428</cvename>
+    </references>
+    <dates>
+      <discovery>2013-01-26</discovery>
+      <entry>2013-04-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7280c3f6-a99a-11e2-8cef-6805ca0b3d42">
+    <topic>phpMyAdmin -- XSS due to unescaped HTML output in GIS visualisation page</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<range><ge>3.5</ge><lt>3.5.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyAdmin development team reports:</p>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-1.php">
+	  <p> When modifying a URL parameter with a crafted value it
+	    is possible to trigger an XSS.</p>
+	  <p>These XSS can only be triggered when a valid database is
+	    known and when a valid cookie token is used.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1937</cvename>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2013-1.php</url>
+    </references>
+    <dates>
+      <discovery>2013-04-18</discovery>
+      <entry>2013-04-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a592e991-a919-11e2-ade0-8c705af55518">
+    <topic>roundcube -- arbitrary file disclosure vulnerability</topic>
+    <affects>
+      <package>
+	<name>roundcube</name>
+	<range><lt>0.8.6,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>RoundCube development team reports:</p>
+	<blockquote cite="http://lists.roundcube.net/pipermail/dev/2013-March/022337.html">
+	  <p>After getting reports about a possible vulnerability
+	    of Roundcube which allows an attacker to modify its
+	    users preferences in a way that he/she can then read
+	    files from the server, we now published updated packages
+	    as well as patches that fix this security issue.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1904</cvename>
+      <url>https://secunia.com/advisories/52806/</url>
+    </references>
+    <dates>
+      <discovery>2013-03-27</discovery>
+      <entry>2013-04-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8ff84335-a7da-11e2-b3f5-003067c2616f">
+    <topic>jasper -- buffer overflow</topic>
+    <affects>
+      <package>
+	<name>jasper</name>
+	<range><lt>1.900.1_12</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Fedora reports:</p>
+	<blockquote cite="http://www.kb.cert.org/vuls/id/887409">
+	  <p>JasPer fails to properly decode marker segments and other
+	    sections in malformed JPEG2000 files. Malformed inputs can
+	    cause heap buffer overflows which in turn may result in
+	    execution of attacker-controlled code.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2008-3520</cvename>
+      <cvename>CVE-2008-3522</cvename>
+      <cvename>CVE-2011-4516</cvename>
+      <cvename>CVE-2011-4517</cvename>
+      <url>http://www.kb.cert.org/vuls/id/887409</url>
+    </references>
+    <dates>
+      <discovery>2011-12-09</discovery>
+      <entry>2013-04-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2070c79a-8e1e-11e2-b34d-000c2957946c">
+    <topic>ModSecurity -- XML External Entity Processing Vulnerability</topic>
+    <affects>
+      <package>
+	<name>mod_security</name>
+	<range><gt>2.*</gt><lt>2.7.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Positive Technologies has reported a vulnerability in ModSecurity,
+	  which can be exploited by malicious people to disclose potentially
+	  sensitive information or cause a DoS (Denial Of Serice).</p>
+	<p>The vulnerability is caused due to an error when parsing external
+	  XML entities and can be exploited to e.g. disclose local files or
+	  cause excessive memory and CPU consumption.</p>
+	<blockquote cite="https://secunia.com/advisories/52847/">
+	  <p>.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1915</cvename>
+      <url>https://secunia.com/advisories/52847/</url>
+      <url>https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-1915</url>
+      <url>https://bugs.gentoo.org/show_bug.cgi?id=464188</url>
+    </references>
+    <dates>
+      <discovery>2013-04-02</discovery>
+      <entry>2013-04-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a2ff483f-a5c6-11e2-9601-000d601460a4">
+    <topic>sieve-connect -- TLS hostname verification was not occurring</topic>
+    <affects>
+      <package>
+	<name>sieve-connect</name>
+	<range><lt>0.85</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>sieve-connect developer Phil Pennock reports:</p>
+	<blockquote cite="http://mail.globnix.net/pipermail/sieve-connect-announce/2013/000005.html">
+	  <p>sieve-connect was not actually verifying TLS certificate identities
+	    matched the expected hostname.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://mail.globnix.net/pipermail/sieve-connect-announce/2013/000005.html</url>
+    </references>
+    <dates>
+      <discovery>2013-04-14</discovery>
+      <entry>2013-04-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="15236023-a21b-11e2-a460-208984377b34">
+    <topic>linux-flashplugin -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-f10-flashplugin</name>
+	<range><lt>11.2r202.280</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="http://www.adobe.com/support/security/bulletins/apsb13-12.html">
+	  <p>These updates address vulnerabilities that could cause a crash
+	    and potentially allow an attacker to take control of the affected system.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1383</cvename>
+      <cvename>CVE-2013-1384</cvename>
+      <cvename>CVE-2013-1385</cvename>
+      <cvename>CVE-2013-1386</cvename>
+    </references>
+    <dates>
+      <discovery>2013-04-09</discovery>
+      <entry>2013-04-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="db0c4b00-a24c-11e2-9601-000d601460a4">
+    <topic>rubygem-rails -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>rubygem-rails</name>
+	<range><lt>3.2.13</lt></range>
+      </package>
+      <package>
+	<name>rubygem-actionpack</name>
+	<range><lt>3.2.13</lt></range>
+      </package>
+      <package>
+	<name>rubygem-activerecord</name>
+	<range><lt>3.2.13</lt></range>
+      </package>
+      <package>
+	<name>rubygem-activesupport</name>
+	<range><lt>3.2.13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Ruby on Rails team reports:</p>
+	<blockquote cite="http://weblog.rubyonrails.org/2013/3/18/SEC-ANN-Rails-3-2-13-3-1-12-and-2-3-18-have-been-released/">
+	  <p>Rails versions 3.2.13 has been released. This release
+	  contains important security fixes.  It is recommended
+	  users upgrade as soon as possible.</p>
+	  <p>Four vulnerabilities have been discovered and fixed:</p>
+	  <ol>
+	    <li>(CVE-2013-1854) Symbol DoS vulnerability in Active Record</li>
+	    <li>(CVE-2013-1855) XSS vulnerability in sanitize_css in Action Pack</li>
+	    <li>(CVE-2013-1856) XML Parsing Vulnerability affecting JRuby users</li>
+	    <li>(CVE-2013-1857) XSS Vulnerability in the `sanitize` helper of Ruby on Rails</li>
+	  </ol>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+	<cvename>CVE-2013-1854</cvename>
+	<cvename>CVE-2013-1856</cvename>
+	<cvename>CVE-2013-1856</cvename>
+	<cvename>CVE-2013-1857</cvename>
+	<url>http://weblog.rubyonrails.org/2013/3/18/SEC-ANN-Rails-3-2-13-3-1-12-and-2-3-18-have-been-released/</url>
+	<url>https://groups.google.com/forum/#!topic/ruby-security-ann/o0Dsdk2WrQ0</url>
+	<url>https://groups.google.com/forum/?fromgroups=#!topic/rubyonrails-security/4_QHo4BqnN8</url>
+	<url>https://groups.google.com/forum/?fromgroups=#!topic/rubyonrails-security/KZwsQbYsOiI</url>
+	<url>https://groups.google.com/forum/?fromgroups=#!topic/rubyonrails-security/zAAU7vGTPvI</url>
+    </references>
+    <dates>
+      <discovery>2013-03-18</discovery>
+      <entry>2013-04-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1431f2d6-a06e-11e2-b9e0-001636d274f3">
+    <topic>NVIDIA UNIX driver -- ARGB cursor buffer overflow in "NoScanout" mode</topic>
+    <affects>
+      <package>
+	<name>nvidia-driver</name>
+	<range><gt>304.88</gt><lt>310.44</lt></range>
+	<range><ge>195.22</ge><lt>304.88</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NVIDIA Unix security team reports:</p>
+	<blockquote cite="http://nvidia.custhelp.com/app/answers/detail/a_id/3290">
+	  <p>When the NVIDIA driver for the X Window System is operated in
+	     "NoScanout" mode, and an X client installs an ARGB cursor that
+	     is larger than the expected size (64x64 or 256x256, depending on
+	     the driver version), the driver will overflow a buffer.  This
+	     can cause a denial of service (e.g., an X server segmentation
+	     fault), or could be exploited to achieve arbitrary code
+	     execution.  Because the X server runs as setuid root in many
+	     configurations, an attacker could potentially use this
+	     vulnerability in those configurations to gain root privileges.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-0131</cvename>
+      <url>http://nvidia.custhelp.com/app/answers/detail/a_id/3290</url>
+    </references>
+    <dates>
+      <discovery>2013-03-27</discovery>
+      <entry>2013-04-08</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="cebed39d-9e6f-11e2-b3f5-003067c2616f">
     <topic>opera -- moderately severe issue</topic>
     <affects>
@@ -221,7 +779,7 @@ Note:  Please add new entries to the beginning of this file.
       <package>
 	<name>firefox</name>
 	<range><gt>18.0,1</gt><lt>20.0,1</lt></range>
-	<range><lt>17.0.3,1</lt></range>
+	<range><lt>17.0.5,1</lt></range>
       </package>
       <package>
 	<name>linux-firefox</name>
@@ -298,6 +856,7 @@ Note:  Please add new entries to the beginning of this file.
     <dates>
       <discovery>2013-04-02</discovery>
       <entry>2013-04-03</entry>
+      <modified>2013-04-08</modified>
     </dates>
   </vuln>
 
@@ -377,15 +936,15 @@ Note:  Please add new entries to the beginning of this file.
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
 	<p>The OpenVPN project reports:</p>
-	<blockquote cite="https://community.openvpn.net/openvpn/wiki/ChangesInOpenvpn23#OpenVPN2.3.1">
-	  <p>[OpenVPN 2.3.1 adds a fix to prevent potential side-channel
-	    attacks by switching to a] constant time memcmp when comparing HMACs in [the] openvpn_decrypt [function].</p>
+	<blockquote cite="https://community.openvpn.net/openvpn/wiki/SecurityAnnouncement-f375aa67cc">
+	  <p>OpenVPN 2.3.0 and earlier running in UDP mode are subject
+	    to chosen ciphertext injection due to a non-constant-time
+	    HMAC comparison function.</p>
 	</blockquote>
       </body>
     </description>
     <references>
-      <url>https://community.openvpn.net/openvpn/wiki/ChangesInOpenvpn23#OpenVPN2.3.1</url>
-      <url>http://openvpn.git.sourceforge.net/git/gitweb.cgi?p=openvpn/openvpn-testing.git;a=commit;h=11d21349a4e7e38a025849479b36ace7c2eec2ee</url>
+      <url>https://community.openvpn.net/openvpn/wiki/SecurityAnnouncement-f375aa67cc</url>
     </references>
     <dates>
       <discovery>2013-03-19</discovery>
@@ -3412,7 +3971,8 @@ executed in your Internet Explorer while displaying the email.</p>
     <affects>
       <package>
 	<name>squid</name>
-	<range><lt>3.1.23</lt></range>
+	<range><lt>2.7.9_4</lt></range>
+	<range><ge>3.1</ge><lt>3.1.23</lt></range>
 	<range><ge>3.2</ge><lt>3.2.6</lt></range>
 	<range><ge>3.3</ge><lt>3.3.0.3</lt></range>
       </package>
@@ -3440,7 +4000,7 @@ executed in your Internet Explorer while displaying the email.</p>
     <dates>
       <discovery>2012-12-17</discovery>
       <entry>2012-12-28</entry>
-      <modified>2013-01-11</modified>
+      <modified>2013-05-02</modified>
     </dates>
   </vuln>
 
@@ -3885,7 +4445,7 @@ executed in your Internet Explorer while displaying the email.</p>
     </dates>
   </vuln>
 
-  <vuln vid="0f020b7b-e033-11e1-90a2-000c299b62e1">
+  <vuln vid="4b79538b-a450-11e2-9898-001060e06fd4">
     <topic>FreeBSD -- Multiple Denial of Service vulnerabilities with named(8)</topic>
     <affects>
       <package>
@@ -12952,7 +13512,7 @@ executed in your Internet Explorer while displaying the email.</p>
     </dates>
   </vuln>
 
-  <vuln vid="7a09a8df-ca41-11df-aade-0050568f000c">
+  <vuln vid="87261557-a450-11e2-9898-001060e06fd4">
     <topic>FreeBSD -- Network ACL mishandling in mountd(8)</topic>
     <affects>
       <package>
@@ -14703,7 +15263,7 @@ executed in your Internet Explorer while displaying the email.</p>
     </dates>
   </vuln>
 
-  <vuln vid="ce4b3af8-0b7c-11e1-846b-00235409fd3e">
+  <vuln vid="7be92050-a450-11e2-9898-001060e06fd4">
     <topic>libxml -- Integer overflow</topic>
     <affects>
       <package>
