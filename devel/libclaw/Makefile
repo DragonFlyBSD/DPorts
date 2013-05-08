@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/libclaw/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/libclaw/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	libclaw
 PORTVERSION=	1.7.2
@@ -13,11 +13,10 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/bind.hpp:${PORTSDIR}/devel/boost-libs
 
-USES=		cmake
+USES=		cmake gettext
 CMAKE_ARGS=	-DCLAW_CMAKE_MODULES_INSTALL_PATH="${DATADIR}/cmake"
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
-USE_GETTEXT=	yes
 USE_GCC=	4.6+
 
 post-patch:
