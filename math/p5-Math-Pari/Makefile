@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Math-Pari
-# Date created:				Tue Sep 11 02:08:49 PDT 2001
-# Whom:	      				Michael Haro <mharo@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-Pari/Makefile,v 1.21 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Michael Haro <mharo@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Pari/Makefile 316227 2013-04-22 12:53:58Z bapt $
 
 PORTNAME=	Math-Pari
 PORTVERSION=	2.01080605
@@ -11,7 +7,7 @@ CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	PARI - numerical/scientific/number-theoretic calculations
 
 BUILD_DEPENDS=	${NONEXISTENT}:${PORTSDIR}/math/pari:configure
