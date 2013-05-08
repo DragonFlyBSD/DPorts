@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/liblnk/Makefile 316199 2013-04-21 19:11:05Z antoine $
+# $FreeBSD: devel/liblnk/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	liblnk
 PORTVERSION=	20130413
@@ -14,9 +14,7 @@ LICENSE=	LGPL3
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python
-USE_GETTEXT=	yes
-USES=		pathfix
-USE_ICONV=	yes
+USES=		pathfix gettext iconv
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 
