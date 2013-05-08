@@ -1,5 +1,5 @@
 # Created by: Andy Gilligan
-# $FreeBSD: ports/mail/mb2md/Makefile,v 1.14 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/mb2md/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	mb2md
 PORTVERSION=	3.20
@@ -14,7 +14,8 @@ COMMENT=	Converts mbox mailboxes to Maildir
 
 RUN_DEPENDS=	p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate
 
-EXTRACT_CMD=	${GZIP_CMD} -cd
+EXTRACT_CMD=	${GZIP_CMD}
+EXTRACT_BEFORE_ARGS=	-dc
 EXTRACT_AFTER_ARGS=	> ${WRKDIR}/${PORTNAME}
 
 NO_WRKSUBDIR=	yes
