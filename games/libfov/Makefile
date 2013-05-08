@@ -1,5 +1,5 @@
 # Created by: aaron@FreeBSD.org
-# $FreeBSD: games/libfov/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: games/libfov/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	libfov
 PORTVERSION=	1.0.4
@@ -12,9 +12,8 @@ COMMENT=	C library for calculating fields of view on low resolution rasters
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
-USE_PKGCONFIG=	yes
 CONFIGURE_ENV=	ac_cv_prog_doxygen=no ac_cv_path_SDL_CONFIG=no
 USE_LDCONFIG=	yes
 
