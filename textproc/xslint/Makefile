@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xslint
-# Date created:			11 August 2001
-# Whom:				Alex Kapranoff <kapr@crosswinds.net>
-#
-# $FreeBSD: ports/textproc/xslint/Makefile,v 1.11 2012/11/17 06:02:25 svnexp Exp $
-#
+# Created by: Alex Kapranoff <kapr@crosswinds.net>
+# $FreeBSD: textproc/xslint/Makefile 317595 2013-05-07 09:39:35Z ehaupt $
 
 PORTNAME=	xslint
 PORTVERSION=	005
@@ -16,25 +12,27 @@ COMMENT=	XSL(T) stylesheet checker
 
 RUN_DEPENDS=	p5-XML-DOM>=0:${PORTSDIR}/textproc/p5-XML-DOM
 
+USES=		shebangfix
 USE_ZIP=	yes
 USE_PERL5_RUN=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-0.05
 NO_BUILD=	yes
 
+SHEBANG_FILES=	xslint.pl
+
 PLIST_FILES=	bin/xslint
 PORTDOCS=	README xslint.html xslint.xml
 
-post-patch:
-	@${REINPLACE_CMD} -e 's,/usr/bin/perl,${PERL},' ${WRKSRC}/${PORTNAME}.pl
+.include <bsd.port.options.mk>
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
-.	for i in ${PORTDOCS}
-	  ${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
-.	endfor
+.for i in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+.endfor
 .endif
 
 .include <bsd.port.mk>
