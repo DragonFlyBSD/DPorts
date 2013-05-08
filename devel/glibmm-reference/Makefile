@@ -1,9 +1,5 @@
-# New ports collection makefile for:	glibmm-reference
-# Date created:				09 May 2006
-# Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
-#
-# $FreeBSD: devel/glibmm-reference/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
+# $FreeBSD: devel/glibmm-reference/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTREVISION=	0
 
@@ -12,7 +8,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/glibmm-2.4.pc:${PORTSDIR}/devel/gl
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 DOCSDIR=	${PREFIX}/share/doc/glibmm-2.4
 
