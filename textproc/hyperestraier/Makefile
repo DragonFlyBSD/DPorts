@@ -2,7 +2,7 @@
 # Date created:		2005-09-11
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/hyperestraier/Makefile,v 1.51 2012/11/17 06:01:59 svnexp Exp $
+# $FreeBSD: textproc/hyperestraier/Makefile 316683 2013-04-27 18:25:24Z mva $
 #    $MCom: ports-stable/textproc/hyperestraier/Makefile,v 1.3 2006/10/17 11:45:45 ahze Exp $
 
 PORTNAME=	hyperestraier
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	qdbm>=1.8.77:${PORTSDIR}/databases/qdbm
 # check configure for min version of qdbm.
 LIB_DEPENDS=	qdbm.14:${PORTSDIR}/databases/qdbm
 
-USE_ICONV=	yes
+USES=		iconv
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-bzip2 --disable-zlib
