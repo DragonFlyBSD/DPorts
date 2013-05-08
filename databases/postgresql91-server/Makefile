@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql91-server/Makefile 315718 2013-04-04 13:21:22Z girgen $
+# $FreeBSD: databases/postgresql91-server/Makefile 317540 2013-05-06 18:37:00Z crees $
 
 PORTNAME?=	postgresql
 DISTVERSION?=	9.1.9
@@ -87,8 +87,8 @@ KRB5_DESC=       Build with kerberos provider support
 NLS_DESC=	Use internationalized messages
 DTRACE_DESC=	Build with DTrace probes (server only)
 PAM_DESC=	Build with PAM Support
-LDAP_DESC=	Build with LDAP authentication support
-MIT_KRB5_DESC=	Build with MIT's kerberos support
+LDAP_DESC=	Build with LDAP authentication support (server only)
+MIT_KRB5_DESC=	Build with MIT kerberos support
 HEIMDAL_KRB5_DESC=	Builds with Heimdal kerberos
 GSSAPI_DESC=	Build with GSSAPI support
 OPTIMIZED_CFLAGS_DESC=	Builds with compiler optimizations (-O3)
@@ -140,8 +140,6 @@ PLIST_SUB+=	OSSP=""
 PLIST_SUB+=	OSSP="@comment "
 .endif
 
-.include <bsd.port.pre.mk>
-
 .if !defined(SLAVE_ONLY)
 
 PATCH_DIST_STRIP=-p1
@@ -159,8 +157,8 @@ CONFIGURE_ARGS+=--with-pam
 .  endif
 
 .  if ${PORT_OPTIONS:MLDAP}
-CONFIGURE_ARGS+=--with-ldap
 .    if defined (SERVER_ONLY)
+CONFIGURE_ARGS+=--with-ldap
 USE_OPENLDAP=	yes
 .    endif
 .  endif
@@ -181,10 +179,10 @@ PLIST_SUB+=	TZDATA="@comment "
 CONFIGURE_ARGS+=--disable-integer-datetimes
 .  endif
 
-.  if ( defined(WITH_GETTEXT) || ${PORT_OPTIONS:MNLS} )
+.  if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	GETTEXT=""
-USE_GETTEXT=	yes
+USES+=	gettext
 .  else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	GETTEXT="@comment "
@@ -327,6 +325,9 @@ PLIST_SUB+=	PG_USER=${PG_USER} \
 SUB_LIST+=	PG_GROUP=${PG_GROUP} \
 		PG_USER=${PG_USER} \
 		PG_UID=${PG_UID}
+
+# For testing files in FILESDIR
+.include <bsd.port.pre.mk>
 
 .if defined(SERVER_ONLY)
 pre-build:
