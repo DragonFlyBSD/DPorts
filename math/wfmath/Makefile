@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: math/wfmath/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: math/wfmath/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	wfmath
 PORTVERSION=	1.0.1
@@ -10,8 +10,7 @@ MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	Worldforge math library
 
 USE_GMAKE=	yes
-USES=	pathfix
-USE_PKGCONFIG=	yes
+USES=	pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
