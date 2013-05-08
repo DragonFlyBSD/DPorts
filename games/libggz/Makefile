@@ -1,20 +1,15 @@
-# ex:ts=8
-# Ports collection makefile for:	libggz
-# Date created:			Oct 8, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: games/libggz/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: ijliao
+# $FreeBSD: games/libggz/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	libggz
 PORTVERSION=	${GGZ_VERSION}
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	games
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	The GGZ Gaming Zone - Base Library
 
-LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
 USE_AUTOTOOLS=	libtool
 USES=	pathfix
