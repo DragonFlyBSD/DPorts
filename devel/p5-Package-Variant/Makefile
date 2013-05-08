@@ -1,20 +1,22 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Package-Variant/Makefile,v 1.2 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: devel/p5-Package-Variant/Makefile 317612 2013-05-07 14:20:19Z culot $
 
 PORTNAME=	Package-Variant
-PORTVERSION=	1.001002
+PORTVERSION=	1.001004
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	wen@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parameterizable packages
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Import-Into>=0:${PORTSDIR}/devel/p5-Import-Into
-RUN_DEPENDS=	p5-Import-Into>=0:${PORTSDIR}/devel/p5-Import-Into
+BUILD_DEPENDS=	p5-Import-Into>=1:${PORTSDIR}/devel/p5-Import-Into \
+		p5-Module-Runtime>=0.013:${PORTSDIR}/devel/p5-Module-Runtime
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal
 
 PERL_CONFIGURE=	yes
 
