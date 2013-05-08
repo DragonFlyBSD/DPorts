@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson <glennpj@charter.net>
-# $FreeBSD: ports/finance/libofx/Makefile,v 1.40 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: finance/libofx/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	libofx
 PORTVERSION=	0.9.5
@@ -14,7 +14,7 @@ LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
 		osp.5:${PORTSDIR}/textproc/opensp
 
 USE_GCC=	any
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtool
 ACLOCAL_ARGS=	-I m4
