@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: ports/dns/libidn/Makefile,v 1.89 2013/02/07 01:42:32 svnexp Exp $
+# $FreeBSD: dns/libidn/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	libidn
 PORTVERSION=	1.26
@@ -11,7 +11,7 @@ MAINTAINER=	gaod@hychen.org
 COMMENT=	Internationalized Domain Names command line tool
 
 USE_GNOME=	gnomehack pkgconfig
-USE_ICONV=	yes
+USES=		iconv
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_PERL5_BUILD=	yes
@@ -20,8 +20,10 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 INFO=	libidn
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
@@ -34,13 +36,13 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|$$(AUTOMAKE)|${TRUE}|' \
 			-e 's|imagesdir = $$(infodir)|imagesdir = $$(docdir)|' \
 		${WRKSRC}/doc/Makefile.in
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's|install-data-am: install-imagesDATA install-info-am install-man|install-data-am: install-info-am install-man|' \
 		${WRKSRC}/doc/Makefile.in
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for i in FAQ NEWS README
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/dns/libidn/files/patch-po_LINGUAS,v 1.5 2012/11/17 05:57:09 svnexp Exp $
+$FreeBSD: dns/libidn/files/patch-po_LINGUAS 300896 2012-07-14 13:54:48Z beat $
 
 --- po/LINGUAS.orig
 +++ po/LINGUAS
