@@ -1,10 +1,10 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: ports/devel/boost-libs/Makefile,v 1.20 2013/02/14 10:22:05 svnexp Exp $
+# $FreeBSD: devel/boost-libs/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	boost-libs
 COMMENT=	Free portable C++ libraries (without Boost.Python)
 
-PORTREVISION=	1
+PORTREVISION=	2
 
 BUILD_DEPENDS+=	bjam:${PORTSDIR}/devel/boost-jam
 
@@ -24,7 +24,7 @@ BJAM_ARGS+=	--without-python
 LIB_DEPENDS+=	icuuc:${PORTSDIR}/devel/icu
 BJAM_ARGS+=	-sICU_PATH=${LOCALBASE}
 .else
-USE_ICONV=	yes
+USES+=		iconv
 BJAM_ARGS+=	-sICONV_PATH=${LOCALBASE}
 .endif
 
