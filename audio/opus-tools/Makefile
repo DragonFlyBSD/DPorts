@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/opus-tools/Makefile,v 1.9 2012/12/18 16:33:24 svnexp Exp $
+# $FreeBSD: audio/opus-tools/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	opus-tools
 PORTVERSION=	0.1.6
@@ -13,7 +13,7 @@ LIB_DEPENDS=	ogg.8:${PORTSDIR}/audio/libogg \
 		opus:${PORTSDIR}/audio/opus
 
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/opusdec bin/opusenc bin/opusinfo
