@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/archivers/gcpio/pkg-plist,v 1.2 2012/11/17 05:54:20 svnexp Exp $
+@comment $FreeBSD: archivers/gcpio/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/gcpio
 %%NLS%%share/locale/da/LC_MESSAGES/cpio.mo
 %%NLS%%share/locale/de/LC_MESSAGES/cpio.mo

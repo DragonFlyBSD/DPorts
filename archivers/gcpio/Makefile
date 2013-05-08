@@ -1,4 +1,4 @@
-# $FreeBSD: ports/archivers/gcpio/Makefile,v 1.7 2012/12/18 21:34:11 svnexp Exp $
+# $FreeBSD: archivers/gcpio/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	cpio
 PORTVERSION=	2.11
@@ -24,7 +24,7 @@ MAN1=		gcpio.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CONFIGURE_ARGS+=--with-libintl-prefix="${LOCALBASE}"
 .else
