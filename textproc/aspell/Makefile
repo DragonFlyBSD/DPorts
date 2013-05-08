@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: ports/textproc/aspell/Makefile,v 1.105 2012/11/17 06:01:52 svnexp Exp $
+# $FreeBSD: textproc/aspell/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	aspell
 PORTVERSION=	0.60.6.1
@@ -24,7 +24,7 @@ CONFIGURE_ARGS=		--enable-dict-dir=${DATADIR}	\
 			--enable-static
 
 USE_GMAKE=		yes
-USE_ICONV=		yes
+USES=			iconv
 USE_PERL5_BUILD=	yes
 USE_LDCONFIG=		yes
 
@@ -36,7 +36,7 @@ SUB_LIST=		VERINST=${VERINST}
 
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
