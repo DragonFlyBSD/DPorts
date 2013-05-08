@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/pear/Makefile 314350 2013-03-16 12:27:10Z bdrewery $
+# $FreeBSD: devel/pear/Makefile 317389 2013-05-04 22:48:03Z flo $
 
 PORTNAME=	pear
 PORTVERSION=	1.9.4
@@ -38,6 +38,6 @@ do-install:
 		${PEARDIR}/peclcmd.php
 
 post-install:
-	@${CP} -n ${PREFIX}/etc/pear.conf.sample ${PREFIX}/etc/pear.conf
+	@${CP} -n ${PREFIX}/etc/pear.conf.sample ${PREFIX}/etc/pear.conf || ${TRUE}
 
 .include <bsd.port.mk>
