@@ -1,4 +1,4 @@
-# $FreeBSD: ports/archivers/lha-ac/Makefile,v 1.10 2012/11/17 05:54:21 svnexp Exp $
+# $FreeBSD: archivers/lha-ac/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	lha
 PORTVERSION=	1.14i
@@ -23,7 +23,9 @@ GNU_CONFIGURE=	yes
 
 RESTRICTED=	no permission to redistribute
 
-.if !defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=	--disable-multibyte-filename
 .else
 CONFIGURE_ARGS+=	--enable-multibyte-filename=auto
