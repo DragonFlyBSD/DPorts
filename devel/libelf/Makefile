@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: ports/devel/libelf/Makefile,v 1.33 2013/01/12 13:02:14 svnexp Exp $
+# $FreeBSD: devel/libelf/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	libelf
 PORTVERSION=	0.8.13
@@ -30,7 +30,7 @@ NOMAN=		defined
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 CONFIGURE_ARGS+=	--enable-nls
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	GETTEXT=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
