@@ -1,12 +1,9 @@
-# New ports collection makefile for: clamz
-# Date created:		2009-06-08
-# Whom:			Helko Glathe <glathe.helko@googlemail.com>
-#
-# $FreeBSD: ports/net/clamz/Makefile,v 1.9 2012/11/17 05:59:58 svnexp Exp $
-#
+# Created by: Helko Glathe <glathe.helko@googlemail.com>
+# $FreeBSD: net/clamz/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	clamz
 PORTVERSION=	0.5
+PORTREVISION=	1
 CATEGORIES=	net audio
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
@@ -15,7 +12,7 @@ COMMENT=	Command-line program to download MP3 files from Amazon's music store
 
 LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
 		expat.6:${PORTSDIR}/textproc/expat2 \
-		gcrypt.18:${PORTSDIR}/security/libgcrypt
+		gcrypt:${PORTSDIR}/security/libgcrypt
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

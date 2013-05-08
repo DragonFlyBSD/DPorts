@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/clamz/pkg-plist,v 1.2 2012/11/17 05:59:58 svnexp Exp $
+@comment $FreeBSD: net/clamz/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/clamz
 share/applications/clamz.desktop
 share/mime/packages/clamz.xml
