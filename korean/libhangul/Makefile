@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libhangul
-# Date created:				31 January 2007
-# Whom:					Hyogeol, Lee <hyogeollee@gmail.com>
-#
-# $FreeBSD: ports/korean/libhangul/Makefile,v 1.13 2012/11/17 05:58:46 svnexp Exp $
-#
+# Created by: Hyogeol, Lee <hyogeollee@gmail.com>
+# $FreeBSD: korean/libhangul/Makefile 317521 2013-05-06 15:18:38Z bapt $
 
 PORTNAME=	libhangul
 PORTVERSION=	0.1.0
@@ -15,12 +11,14 @@ COMMENT=	Library for Hangul processing
 
 LICENSE=	LGPL21
 
-USE_ICONV=	yes
+USES=		iconv
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 PLIST_SUB+=	NLS=""
