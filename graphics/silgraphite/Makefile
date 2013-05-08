@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: ports/graphics/silgraphite/Makefile,v 1.6 2013/01/07 21:42:50 svnexp Exp $
+# $FreeBSD: graphics/silgraphite/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	silgraphite
 PORTVERSION=	2.3.1
@@ -12,7 +12,7 @@ COMMENT=	Font engine for complex non-Roman writing systems
 OPTIONS_DEFINE=	FREETYPE
 OPTIONS_DEFAULT=	FREETYPE
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-xft --without-pangographite
@@ -21,7 +21,7 @@ CONFIGURE_ARGS=	--without-xft --without-pangographite
 
 .if ${PORT_OPTIONS:MFREETYPE}
 LIB_DEPENDS+=	freetype.9:${PORTSDIR}/print/freetype2
-USE_ICONV=	yes
+USES+=		iconv
 CONFIGURE_ARGS+=	--with-freetype
 PLIST_SUB+=	WITH_FREETYPE=""
 .else
