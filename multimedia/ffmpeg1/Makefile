@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ffmpeg1
-# Date created:		2012-10-14
-# Whom:			Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: multimedia/ffmpeg1/Makefile 314301 2013-03-15 13:28:09Z mm $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: multimedia/ffmpeg1/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	ffmpeg
 PORTVERSION=	1.0.5
@@ -27,12 +23,12 @@ LATEST_LINK=	ffmpeg${PKGNAMESUFFIX}
 
 HAS_CONFIGURE=	yes
 CONFIGURE_LOG=	config.err
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 WANT_SDL=	yes
 USE_PERL5_BUILD=	yes
-USE_PKGCONFIG=	build
 
 OPTIONS_DEFINE=	AACPLUS ALSA AMR_NB AMR_WB ASS CDIO CELT DEBUG FAAC \
 		FDK_AAC FFSERVER FONTCONFIG FREETYPE FREI0R GNUTLS GSM LAME \
