@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/libntlm/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: security/libntlm/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	libntlm
 PORTVERSION=	1.3
@@ -11,9 +11,8 @@ COMMENT=	Library that implement Microsoft's NTLM authentication
 
 LICENSE=	LGPL21
 
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
