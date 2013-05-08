@@ -1,4 +1,4 @@
-USE_READLINE=	port
+USES+=		readline
 
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
