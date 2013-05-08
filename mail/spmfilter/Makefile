@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	spmfilter
-# Date created:				2010-04-12
-# Whom:					Frank Wall <fw@moov.de>
-#
-# $FreeBSD: mail/spmfilter/Makefile 315332 2013-03-26 21:22:45Z cs $
-#
+# Created by: Frank Wall <fw@moov.de>
+# $FreeBSD: mail/spmfilter/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	spmfilter
 PORTVERSION=	0.4.2
@@ -24,10 +20,9 @@ RUN_DEPENDS=	gmime-24>=2.4:${PORTSDIR}/mail/gmime24 \
 
 LICENSE=	LGPL3
 
-USES=		cmake
+USES=		cmake pkgconfig
 CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH="${LOCALBASE}/include" \
 		-DCMAKE_LIBRARY_PATH="${LOCALBASE}/lib"
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 USE_RC_SUBR=	${PORTNAME}
 
