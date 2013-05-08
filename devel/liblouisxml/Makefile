@@ -1,7 +1,5 @@
-# New ports collection makefile for:	liblouisxml
-# Date created:				06 Feb 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/liblouisxml/Makefile,v 1.3 2012/11/17 05:55:55 svnexp Exp $
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/liblouisxml/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	liblouisxml
 PORTVERSION=	1.8.0
@@ -15,9 +13,9 @@ LIB_DEPENDS=	louis.2:${PORTSDIR}/devel/liblouis \
 		xml2.5:${PORTSDIR}/textproc/libxml2
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 
 INFO=		liblouisxml-guide
 MAN1=		msword2brl.1 xml2brl.1
