@@ -1,7 +1,8 @@
-# $FreeBSD: devel/p5-Benchmark-Timer/Makefile 316215 2013-04-21 20:25:33Z eadler $
+# $FreeBSD: devel/p5-Benchmark-Timer/Makefile 316447 2013-04-24 16:17:39Z eadler $
 
 PORTNAME=	Benchmark-Timer
 PORTVERSION=	0.7102
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,6 +11,8 @@ MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Code benchmarking tool
 
 LICENSE=	GPLv2
+
+BUILD_DEPENDS=	p5-Module-Install>0:${PORTSDIR}/devel/p5-Module-Install
 
 PERL_CONFIGURE=	yes
 
