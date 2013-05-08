@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-Pod-Site
-# Date created:				25 April 2010
-# Whom:					milki
-#
-# $FreeBSD: ports/www/p5-Pod-Site/Makefile,v 1.7 2012/11/17 06:02:53 svnexp Exp $
-#
+# $FreeBSD: www/p5-Pod-Site/Makefile 316475 2013-04-24 19:35:38Z swills $
 
 PORTNAME=	Pod-Site
 PORTVERSION=	0.53
@@ -21,12 +16,13 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-Object-Tiny>=0:${PORTSDIR}/devel/p5-Object-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-File>=0:${PORTSDIR}/devel/p5-Test-File \
 		p5-Test-MockModule>=0.05:${PORTSDIR}/devel/p5-Test-MockModule \
 		p5-Test-XPath>=0.12:${PORTSDIR}/lang/p5-Test-XPath
 
-OPTIONS=	PODT "Include Pod package tests" off
+OPTIONS_DEFINE=	PODT
+
+PODT_DESC=	Include Pod package tests
 
 PERL_MODBUILD=	yes
 
@@ -35,7 +31,7 @@ MAN3=		Pod::Site.3
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_PODT)
+.if ${PORT_OPTIONS:MPODT}
 TEST_DEPENDS+=	p5-Test-Pod>=1.41:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1.06:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 .endif
