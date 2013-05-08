@@ -1,5 +1,5 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
-# $FreeBSD: ports/multimedia/transcode/Makefile,v 1.159 2012/11/17 05:59:54 svnexp Exp $
+# $FreeBSD: multimedia/transcode/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	transcode
 PORTVERSION=	1.1.7
@@ -200,7 +200,7 @@ CONFIGURE_ARGS+=	--disable-libjpeg
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=	yes
+USES+=		iconv
 CONFIGURE_ARGS+=	--with-iconv-prefix=${LOCALBASE} --enable-iconv
 .else
 CONFIGURE_ARGS+=	--disable-iconv
