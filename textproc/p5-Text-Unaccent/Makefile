@@ -2,7 +2,7 @@
 # Date created:				25 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-Text-Unaccent/Makefile,v 1.6 2012/11/17 06:02:10 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Unaccent/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	Text-Unaccent
@@ -17,7 +17,7 @@ COMMENT=	Remove accents from a string
 
 MAN3=	Text::Unaccent.3
 
-USE_ICONV=	yes
+USES=		iconv
 PERL_CONFIGURE=	yes
 CFLAGS+=	-DICONV_CONST=const
 
