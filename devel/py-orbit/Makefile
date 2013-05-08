@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/py-orbit/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/py-orbit/Makefile 316333 2013-04-23 10:13:19Z bapt $
 #   $MCom: ports/devel/py-orbit/Makefile,v 1.1 2008/09/23 20:08:04 mezz Exp $
 
 PORTNAME=	orbit
@@ -16,10 +16,10 @@ COMMENT=	Python bindings for ORBit2
 
 CONFLICTS=	py*-omniorb-[0-9]*
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack orbit2
-USE_PKGCONFIG=	build
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 ORBIT_CONFIG=	${LOCALBASE}/bin/orbit2-config
