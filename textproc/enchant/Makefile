@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/enchant/Makefile 315712 2013-04-03 16:52:20Z kwm $
+# $FreeBSD: textproc/enchant/Makefile 316355 2013-04-23 14:20:25Z bapt $
 #   $MCom: ports-stable/textproc/enchant/Makefile,v 1.3 2010/07/20 07:48:41 kwm Exp $
 
 PORTNAME=	enchant
@@ -15,9 +15,8 @@ COMMENT=	Dictionary/spellchecking framework
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20 ltverhack
-USE_PKGCONFIG=	build
 CONFIGURE_ARGS=	--disable-uspell \
 		--disable-voikko
 MAKE_JOBS_SAFE=	yes
