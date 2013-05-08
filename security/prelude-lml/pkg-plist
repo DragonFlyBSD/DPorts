@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/prelude-lml/pkg-plist,v 1.17 2012/12/15 22:28:08 svnexp Exp $
+@comment $FreeBSD: security/prelude-lml/pkg-plist 308968 2012-12-15 22:22:37Z pawel $
 bin/prelude-lml
 @unexec if cmp -s %D/etc/prelude-lml/plugins.rules %D/etc/prelude-lml/plugins.rules-dist; then rm -f %D/etc/prelude-lml/plugins.rules; fi
 etc/prelude-lml/plugins.rules-dist
