@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libxfce4util
-# Date created:		7 June 2003
-# Whom:			James Earl <jdearl@telus.net>
-#
-# $FreeBSD: ports/x11/libxfce4util/Makefile,v 1.50 2012/11/17 06:03:18 svnexp Exp $
-#
+# Created by: James Earl <jdearl@telus.net>
+# $FreeBSD: x11/libxfce4util/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	libxfce4util
 PORTVERSION=	4.10.0
@@ -22,7 +18,7 @@ USE_GNOME=	glib20 gnomehack intltool intlhack
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 CONFIGURE_ARGS+=--disable-gtk-doc-html
 
@@ -31,7 +27,7 @@ OPTIONS_DEFINE=		NLS DOCS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
