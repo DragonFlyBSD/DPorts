@@ -1,4 +1,4 @@
-# $FreeBSD: lang/sdcc/Makefile 314948 2013-03-22 16:54:51Z tijl $
+# $FreeBSD: lang/sdcc/Makefile 316410 2013-04-24 08:01:28Z tijl $
 
 PORTNAME=	sdcc
 PORTVERSION=	3.2.0
@@ -7,7 +7,7 @@ PORTREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	SF
 
-MAINTAINER=	tijl@coosemans.org
+MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	Small Device C Compiler
 
 LICENSE=	GPLv3
