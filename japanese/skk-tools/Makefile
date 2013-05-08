@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: japanese/skk-tools/Makefile 315514 2013-03-29 01:06:58Z miwi $
+# $FreeBSD: japanese/skk-tools/Makefile 316350 2013-04-23 11:46:54Z bapt $
 
 PORTNAME=	skk-tools
 PORTVERSION=	1.3.2
@@ -30,7 +30,7 @@ PLIST_FILES=	bin/skkdic-count bin/skkdic-expr bin/skkdic-sort
 
 .if ${PORT_OPTIONS:MEXPR2}
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
+USES+=		pkgconfig
 PORTDOCS+=	README.skkdic-expr2
 PLIST_FILES+=	bin/skkdic-expr2
 .else
