@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/quake-extras/Makefile 314412 2013-03-17 08:56:30Z danfe $
+# $FreeBSD: games/quake-extras/Makefile 317370 2013-05-04 21:59:01Z bapt $
 
 PORTNAME=	extras
 PORTVERSION=	1.1
@@ -36,7 +36,7 @@ SKYBOXES_DESC=		Skyboxes (sky replacement images)
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREMODEL} || ${PORT_OPTIONS:MSKYBOXES}
-EXTRACT_DEPENDS+=	unzip:${PORTSDIR}/archivers/unzip
+EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 .endif
 
 .if ${PORT_OPTIONS:MLITS}
