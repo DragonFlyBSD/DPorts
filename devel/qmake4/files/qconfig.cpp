@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: ports/devel/qmake4/files/qconfig.cpp,v 1.12 2012/11/17 05:56:55 svnexp Exp $
+ * $FreeBSD: devel/qmake4/files/qconfig.cpp 300896 2012-07-14 13:54:48Z beat $
  * Hand-crafted...
  * The default prefix (/ usr / local) is dynamicly replaced
  * at configure time.

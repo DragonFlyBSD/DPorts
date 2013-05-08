@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org, mi@aldan.algebra.com
-# $FreeBSD: ports/devel/qmake4/Makefile,v 1.30 2013/02/14 10:22:21 svnexp Exp $
+# $FreeBSD: devel/qmake4/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	qmake
 DISTVERSION=	${QT4_VERSION}
@@ -19,7 +19,7 @@ MAKE_ENV+=	FILESDIR="${FILESDIR}"
 MAKE_JOBS_SAFE=	yes
 TODAY_CMD=	/bin/date +%Y-%m-%d
 
-EXTRACT_AFTER_ARGS=| ${TAR} -xf - \
+EXTRACT_AFTER_ARGS= \
 	'${DISTNAME}/mkspecs' \
 	'${DISTNAME}/include/*/*' \
 	'${DISTNAME}/src/*/*.h' \
