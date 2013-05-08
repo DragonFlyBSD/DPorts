@@ -1,9 +1,9 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: ports/textproc/libxslt/Makefile,v 1.106 2012/12/28 21:37:28 svnexp Exp $
+# $FreeBSD: textproc/libxslt/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	libxslt
 PORTVERSION=	1.1.28
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	textproc gnome
 MASTER_SITES=	ftp://gd.tuwien.ac.at/pub/libxml/ \
 		ftp://xmlsoft.org/libxml2/
