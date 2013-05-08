@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: ports/mail/mailutils/Makefile,v 1.4 2013/02/05 16:54:23 svnexp Exp $
+# $FreeBSD: mail/mailutils/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	mailutils
 PORTVERSION=	2.2
@@ -95,7 +95,7 @@ PLIST_SUB+=		PYTHON="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
