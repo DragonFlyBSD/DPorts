@@ -1,5 +1,5 @@
 # Created by: Paul Traina <pst@FreeBSD.org>
-# $FreeBSD: palm/pilot-link/Makefile 315748 2013-04-06 23:20:30Z wg $
+# $FreeBSD: palm/pilot-link/Makefile 316831 2013-04-29 16:43:05Z rene $
 
 PORTNAME=	pilot-link
 PORTVERSION=	0.12.5
@@ -13,10 +13,8 @@ COMMENT=	Suite of tools used to connect and sync your Palm handled
 
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 
-USES=		pathfix
+USES=		pathfix pkgconfig iconv
 USE_BZIP2=	yes
-USE_ICONV=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${WRKSRC}/popt -I${LOCALBASE}/include
 CONFIGURE_ARGS+=--with-libiconv=${LOCALBASE}  --with-included-popt --enable-conduits --enable-xsltproc
@@ -34,9 +32,6 @@ CONFIGURE_ENV+=		PTHREAD_LIBS="${PTHREAD_LIBS}" PTHREAD_CFLAGS="${PTHREAD_CFLAGS
 .endif
 
 .if ${PORT_OPTIONS:MUSB}
-. if ${OSVERSION} < 800069
-LIB_DEPENDS+=	usb-0.1.8:${PORTSDIR}/devel/libusb
-. endif
 CONFIGURE_ARGS+=--enable-libusb
 LDFLAGS+=	-L${PREFIX}/lib -lusb
 
