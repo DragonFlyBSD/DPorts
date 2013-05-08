@@ -1,4 +1,4 @@
-# $FreeBSD: devel/dbus-sharp-glib/Makefile 314546 2013-03-18 09:46:11Z bapt $
+# $FreeBSD: devel/dbus-sharp-glib/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	dbus-sharp-glib
 PORTVERSION=	0.5.0
@@ -11,9 +11,8 @@ COMMENT=	D-Bus for .NET: GLib integration module
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-sharp-1.0.pc:${PORTSDIR}/devel/dbus-sharp
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-sharp-1.0.pc:${PORTSDIR}/devel/dbus-sharp
 
-USES=		pathfix
+USES=		pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 
 .include <bsd.port.mk>
