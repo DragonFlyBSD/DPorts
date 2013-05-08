@@ -1,8 +1,8 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: ports/devel/p5-Capture-Tiny/Makefile,v 1.13 2013/01/03 12:02:21 svnexp Exp $
+# $FreeBSD: devel/p5-Capture-Tiny/Makefile 316517 2013-04-25 14:07:35Z culot $
 
 PORTNAME=	Capture-Tiny
-PORTVERSION=	0.21
+PORTVERSION=	0.22
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DAGOLDEN
