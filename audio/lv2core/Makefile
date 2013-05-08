@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lv2core
-# Date created:		2008-11-20
-# Whom:			xaimus <xaimus@gmail.com>
-#
-# $FreeBSD: ports/audio/lv2core/Makefile,v 1.8 2012/11/17 05:54:38 svnexp Exp $
-#
+# Created by: xaimus <xaimus@gmail.com>
+# $FreeBSD: audio/lv2core/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
 
 PORTNAME=	lv2core
 PORTVERSION=	6.0
@@ -16,9 +12,9 @@ COMMENT=	LV2 Core Package
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_PYTHON_BUILD=	yes
-USE_PKGCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
@@ -27,9 +23,7 @@ MAKE_JOBS_SAFE=	yes
 WAF_VERBOSE=	--verbose
 .endif
 
-.if defined(MAKE_JOBS_NUMBER)
 WAF_JOBS=	--jobs=${MAKE_JOBS_NUMBER}
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/autowaf.build_pc/s|^|#|' ${WRKSRC}/wscript
