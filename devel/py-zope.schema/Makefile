@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-zope.schema/Makefile 315489 2013-03-28 17:23:24Z rm $
+# $FreeBSD: devel/py-zope.schema/Makefile 315934 2013-04-17 06:44:00Z rm $
 
 PORTNAME=	zope.schema
 PORTVERSION=	4.2.1
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	clsung@FreeBSD.org
+MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Zope Interface extension for defining data schemas
 
 LICENSE=	ZPL21
