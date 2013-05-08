@@ -2,7 +2,7 @@
 # Date created:		9 June 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/ots/Makefile,v 1.10 2012/11/17 06:02:03 svnexp Exp $
+# $FreeBSD: textproc/ots/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ots
@@ -18,7 +18,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 USE_GNOME=	glib20 libxml2
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
