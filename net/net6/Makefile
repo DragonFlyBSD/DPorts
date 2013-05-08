@@ -1,9 +1,5 @@
-# Ports collection makefile for:	net6
-# Date created:				2005-10-14
-# Whom:					Andreas Kohn <andreas@syndrom23.de>
-#
-# $FreeBSD: net/net6/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Andreas Kohn <andreas@syndrom23.de>
+# $FreeBSD: net/net6/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	net6
 PORTVERSION=	1.3.14
@@ -19,20 +15,21 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20 \
 		gnutls.26:${PORTSDIR}/security/gnutls
 
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 
-.if defined(WITHOUT_NLS)
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+.else
+CONFIGURE_ARGS+=--disable-nls
+PLIST_SUB+=	NLS="@comment "
 .endif
 
 .include <bsd.port.mk>
