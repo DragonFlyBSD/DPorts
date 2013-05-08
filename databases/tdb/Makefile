@@ -1,4 +1,4 @@
-# $FreeBSD: databases/tdb/Makefile 314856 2013-03-21 17:43:46Z bapt $
+# $FreeBSD: databases/tdb/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=		tdb
 PORTVERSION=		1.2.11
@@ -20,7 +20,7 @@ USE_LDCONFIG=		yes
 HAS_CONFIGURE=		yes
 WAF_TOOL=		buildtools/bin/waf
 CONFIGURE_SCRIPT=	${WAF_TOOL} configure
-USE_PKGCONFIG=		build
+USES=			pkgconfig
 
 MAKE_JOBS_SAFE=		yes
 
