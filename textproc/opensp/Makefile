@@ -1,9 +1,5 @@
-# New ports collection makefile for:	OpenSP
-# Date created:		Jan 6, 2003
-# Whom:			kuriyama
-#
-# $FreeBSD: ports/textproc/opensp/Makefile,v 1.23 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: kuriyama
+# $FreeBSD: textproc/opensp/Makefile 317494 2013-05-06 09:26:23Z bapt $
 
 PORTNAME=	OpenSP
 PORTVERSION=	1.5.2
@@ -16,7 +12,7 @@ COMMENT=	This package is a collection of SGML/XML tools called OpenSP
 
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes
 CONFIGURE_ARGS=	--enable-default-catalog=${PREFIX}/share/sgml/catalog \
@@ -25,12 +21,14 @@ CONFIGURE_ARGS=	--enable-default-catalog=${PREFIX}/share/sgml/catalog \
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 #MAN1=		onsgmls.1 osgmlnorm.1 ospam.1 ospent.1 osx.1
@@ -44,7 +42,7 @@ PLIST_SUB+=	NLS=""
 CPPFLAGS:=	-O ${CFLAGS:N-O*:N-m*}
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${CAT} ${PLIST} | \
 		${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} | \
