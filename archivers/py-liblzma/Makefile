@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: ports/archivers/py-liblzma/Makefile,v 1.12 2013/01/16 20:24:39 svnexp Exp $
+# $FreeBSD: archivers/py-liblzma/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	liblzma
 PORTVERSION=	0.5.3
@@ -13,7 +13,7 @@ DISTNAME=	${PYDISTUTILS_PKGNAME}-${PORTVERSION}
 MAINTAINER=	dbn@FreeBSD.org
 COMMENT=	Python binding for the LZMA compression library
 
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_PYTHON=	2.6+
 USE_PYDISTUTILS=yes
