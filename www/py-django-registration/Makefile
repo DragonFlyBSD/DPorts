@@ -2,7 +2,7 @@
 # Date created:				22 November 2009
 # Whom:					Kevin Golding <ports@caomhin.org>
 #
-# $FreeBSD: ports/www/py-django-registration/Makefile,v 1.4 2012/11/17 06:02:59 svnexp Exp $
+# $FreeBSD: www/py-django-registration/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	django-registration
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.3:${PORTSDIR}/www/py-django
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 CONFLICTS_INSTALL=	pootle-*
 
