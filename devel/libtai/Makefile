@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
-# $FreeBSD: ports/devel/libtai/Makefile,v 1.20 2013/01/12 13:02:14 svnexp Exp $
+# $FreeBSD: devel/libtai/Makefile 315798 2013-04-13 21:12:26Z bdrewery $
 
 PORTNAME=	libtai
 PORTVERSION=	0.60
@@ -46,7 +46,7 @@ pre-install:
 .endfor
 
 post-build:
-	@${ENV} LD_LIBRARY_PATH=${WRKSRC} \
+	@${SETENV} LD_LIBRARY_PATH=${WRKSRC} \
 		${WRKSRC}/leapsecs < ${WRKSRC}/leapsecs.txt > \
 		${WRKSRC}/leapsecs.dat
 
