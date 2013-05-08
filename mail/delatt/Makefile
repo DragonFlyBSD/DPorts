@@ -1,9 +1,5 @@
-# New ports collection makefile for:	delatt
-# Date created:				22 Jun 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/mail/delatt/Makefile,v 1.13 2012/12/16 06:16:56 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: mail/delatt/Makefile 317591 2013-05-07 08:57:37Z ehaupt $
 
 PORTNAME=	delatt
 DISTVERSION=	1.1.3
@@ -18,14 +14,12 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 
+USES=		shebangfix
 USE_PERL5_RUN=	yes
 NO_BUILD=	yes
 
+SHEBANG_FILES=	delatt
 PLIST_FILES=	bin/delatt
-
-post-patch:
-	${REINPLACE_CMD} -e 's|^#!/usr/bin/perl|#!${PERL}|' \
-		${WRKSRC}/${PORTNAME}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
