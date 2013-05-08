@@ -1,5 +1,5 @@
 # Created by: pgs
-# $FreeBSD: ports/graphics/hobbes-icons-xpm/Makefile,v 1.27 2013/01/26 16:56:10 svnexp Exp $
+# $FreeBSD: graphics/hobbes-icons-xpm/Makefile 316273 2013-04-22 20:36:25Z dinoex $
 
 PORTNAME=	hobbes-icons-xpm3
 PORTVERSION=	1.0
@@ -16,18 +16,20 @@ NO_BUILD=	yes
 # Where it will be installed (change pkg/PLIST if you change this)
 LIBDIR=		${PREFIX}/include/X11/pixmaps
 
+.include <bsd.port.options.mk>
+
 do-install:
-	@${MKDIR} ${LIBDIR}
+	${MKDIR} ${LIBDIR}
 	${CP} -R ${WRKSRC}/* ${LIBDIR}
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${LIBDIR}
 	-${RM} ${LIBDIR}/README
 	-${RM} ${LIBDIR}/readem.shar
 
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-	@${INSTALL_SCRIPT} ${WRKSRC}/*.shar ${DOCSDIR}
+	${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/*.shar ${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
