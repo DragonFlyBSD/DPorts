@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <michaelnottebrock@gmx.net>
-# $FreeBSD: ports/audio/ices/Makefile,v 1.27 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: audio/ices/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	ices
 PORTVERSION=	2.0.2
@@ -21,13 +21,12 @@ LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg \
 
 OPTIONS_DEFINE=	ALSA
 
+USES=		pkgconfig iconv
 USE_BZIP2=	yes
 USE_GNOME=	libxml2
 USE_GMAKE=	yes
-USE_ICONV=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-roaraudio --disable-sun-audio
-USE_PKGCONFIG=	build
 MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
