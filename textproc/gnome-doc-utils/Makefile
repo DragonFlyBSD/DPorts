@@ -2,7 +2,7 @@
 # Date created:				11 November 2004
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/gnome-doc-utils/Makefile,v 1.33 2012/11/17 06:01:57 svnexp Exp $
+# $FreeBSD: textproc/gnome-doc-utils/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.84 2010/09/29 15:20:02 kwm Exp $
 #
 
@@ -25,7 +25,7 @@ RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomehier gnomehack libxslt intlhack
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
