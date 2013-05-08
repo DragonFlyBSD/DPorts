@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/libcroco/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: textproc/libcroco/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	libcroco
 PORTVERSION=	0.6.8
@@ -10,12 +10,11 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CSS2 parsing library
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack glib20 libxml2 ltverhack
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 CONFIGURE_ARGS=	--disable-gtk-doc-html
 
 PLIST_SUB=	VERSION="0.6"
