@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ports/security/authforce/Makefile,v 1.25 2012/11/17 06:01:00 svnexp Exp $
+# $FreeBSD: security/authforce/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	authforce
 PORTVERSION=	0.9.9
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 OPTIONS_DEFINE=	CURL NLS
 
-USE_NCURSES=	yes
+USES=		ncurses
 #USE_READLINE=	yes
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--without-curl
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_FILES+=	share/locale/nl/LC_MESSAGES/authforce.mo
 CONFIGURE_ENV+=	CPPFLAGS=-I${PREFIX}/include LDFLAGS=-L${PREFIX}/lib
 .else
