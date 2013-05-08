@@ -2,7 +2,7 @@
 # Date created:		2 April 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: games/hinversi/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: games/hinversi/Makefile 316596 2013-04-26 10:44:28Z ak $
 #
 
 PORTNAME=	hinversi
@@ -27,7 +27,7 @@ MAN1=		hinversi-cli.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--with-libintl-prefix=${LOCALBASE}
 PLIST_SUB+=	NLS=""
 .else
