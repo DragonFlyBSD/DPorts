@@ -1,19 +1,15 @@
-# New ports collection makefile for:	OpenGFX
-# Date created:				2010-11-04
-# Whom:					Ilya A. Arhipov <admin@gorodkirov.ru>
-#
-# $FreeBSD: ports/games/opengfx/Makefile,v 1.7 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
+# $FreeBSD: games/opengfx/Makefile 316424 2013-04-24 11:35:05Z madpilot $
 
 PORTNAME=	opengfx
-PORTVERSION=	0.4.4
+PORTVERSION=	0.4.6.1
 CATEGORIES=	games
 MASTER_SITES=	http://hu.binaries.openttd.org/binaries/extra/${PORTNAME}/${PORTVERSION}/ \
 		http://us.binaries.openttd.org/binaries/extra/${PORTNAME}/${PORTVERSION}/ \
 		http://cz.binaries.openttd.org/openttd/binaries/extra/${PORTNAME}/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-all
 
-MAINTAINER=	micro@heavennet.ru
+MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Free alternative graphics for OpenTTD game engine
 
 USE_ZIP=	yes
