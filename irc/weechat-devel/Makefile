@@ -1,7 +1,8 @@
-# $FreeBSD: irc/weechat-devel/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: irc/weechat-devel/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	weechat
 PORTVERSION=	20130301
+PORTREVISION=	1
 CATEGORIES=	irc
 MASTER_SITES=	http://perturb.me.uk/distfiles/ \
 		${MASTER_SITE_LOCAL}
@@ -16,10 +17,8 @@ LICENSE=	GPLv3
 
 CONFLICTS=	weechat-0.3*
 
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
-USE_NCURSES=	yes
-USES=		cmake
+USES=		cmake iconv
 CMAKE_ARGS+=	-DENABLE_GUILE=no
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 WANT_PERL=	yes
@@ -59,7 +58,7 @@ PLIST_SUB+=	CHARSET="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DENABLE_NLS=no
@@ -95,7 +94,7 @@ PLIST_SUB+=	RUBY="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGNUTLS}
-USE_PKGCONFIG=	yes
+USES+=		pkgconfig
 LIB_DEPENDS+=	gnutls:${PORTSDIR}/security/gnutls
 .else
 CMAKE_ARGS+=	-DENABLE_GNUTLS=no
@@ -110,7 +109,7 @@ PLIST_SUB+=	PERL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MTCL}
-USE_TCL=	83+
+USE_TCL=	84+
 .include "${PORTSDIR}/Mk/bsd.tcl.mk"
 CMAKE_ARGS+=	-DBSD_TCL_VER=${TCL_VER} \
 		-DBSD_TCL_LIBDIR=${LOCALBASE}/lib \
@@ -145,8 +144,10 @@ LIB_DEPENDS+=	execinfo:${PORTSDIR}/devel/libexecinfo
 .endif
 
 .if ${PORT_OPTIONS:MCOLOR256}
-WITH_NCURSES_PORT=	yes
+USES+=		ncurses:port
 CMAKE_ARGS+=	-DNCURSES_INCLUDE_PATH=${LOCALBASE}/include/ncurses
+.else
+USES+=		ncurses
 .endif
 
 MAN1=	weechat-curses.1
