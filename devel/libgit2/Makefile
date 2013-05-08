@@ -1,11 +1,11 @@
-# $FreeBSD: devel/libgit2/Makefile 315068 2013-03-23 19:12:58Z bapt $
+# $FreeBSD: devel/libgit2/Makefile 316953 2013-04-30 17:32:00Z bapt $
 
 PORTNAME=	libgit2
 PORTVERSION=	0.17.0
 CATEGORIES=	devel
 MASTER_SITES=	GHC
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable, pure C implementation of the Git core
 
 LICENSE=	GPLv2
