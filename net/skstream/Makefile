@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: net/skstream/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: net/skstream/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	skstream
 PORTVERSION=	0.3.9
@@ -10,8 +10,7 @@ MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	An iostream based C++ socket library
 
 USE_GMAKE=	yes
-USES=	pathfix
-USE_PKGCONFIG=	yes
+USES=	pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
