@@ -1,9 +1,5 @@
-# New ports collection makefile for:	docbook-tdg
-# Date created:		24 August 2001
-# Whom:	      		Johann Visagie <wjv@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/docbook-tdg/Makefile,v 1.13 2012/11/17 06:01:54 svnexp Exp $
-#
+# Created by: Johann Visagie <wjv@FreeBSD.org>
+# $FreeBSD: textproc/docbook-tdg/Makefile 316230 2013-04-22 13:27:47Z bapt $
 
 PORTNAME=	docbook-tdg
 PORTVERSION=	2.0.17
@@ -11,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.docbook.org/tdg/en/
 DISTNAME=	tdg-en-html-${PORTVERSION}
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Norman Walsh's book "DocBook: The Definitive Guide"
 
 USE_ZIP=	yes
