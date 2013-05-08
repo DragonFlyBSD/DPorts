@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: ports/mail/libetpan/Makefile,v 1.70 2013/02/08 03:35:05 svnexp Exp $
+# $FreeBSD: mail/libetpan/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	libetpan
 PORTVERSION=	1.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail ipv6
 MASTER_SITES=	SF
 
@@ -19,7 +19,7 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 USE_AUTOTOOLS=	libtool autoconf
 AUTOTOOLSFILES=	aclocal.m4
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
