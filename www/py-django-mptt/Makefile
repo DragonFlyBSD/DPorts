@@ -2,7 +2,7 @@
 # Date created:				2011-02-16
 # Whom:					Carlo Strub
 #
-# $FreeBSD: ports/www/py-django-mptt/Makefile,v 1.6 2012/11/17 06:02:59 svnexp Exp $
+# $FreeBSD: www/py-django-mptt/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	django-mptt
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/django/bin/django-admin.py:${PORTSDIR}/www/py-
 GITVERSION=	4310e7e 
 
 FETCH_ARGS=	-Fpr
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYDISTUTILS=	yes
 USE_PYTHON=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-${GITVERSION}
