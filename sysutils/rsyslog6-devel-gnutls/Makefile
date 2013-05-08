@@ -1,20 +1,16 @@
-#New ports collection makefile for: rsyslog4-gnutls
-# Date created:     29 December 2008
-# Whom:             Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-#
-# $FreeBSD: ports/sysutils/rsyslog6-devel-gnutls/Makefile,v 1.14 2013/02/05 16:54:25 svnexp Exp $
-#
+# Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
+# $FreeBSD: sysutils/rsyslog6-devel-gnutls/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	GNUTLS module for rsyslog
 MASTERDIR=	${.CURDIR}/../rsyslog6-devel
 
 MNAME=	gnutls
 LIB_DEPENDS+=	gnutls.26:${PORTSDIR}/security/gnutls \
-		gcrypt.18:${PORTSDIR}/security/libgcrypt
+		gcrypt:${PORTSDIR}/security/libgcrypt
 
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 
 CONFIGURE_ARGS+=--enable-gnutls
 
