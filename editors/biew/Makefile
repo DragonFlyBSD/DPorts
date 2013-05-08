@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: editors/biew/Makefile 314348 2013-03-16 11:48:45Z danfe $
+# $FreeBSD: editors/biew/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	biew
 PORTVERSION=	6.1.0
@@ -19,7 +19,7 @@ CONFIGURE_ARGS=	--cc="${CC}" --with-extraincdir="${LOCALBASE}/include" \
 		--prefix="${PREFIX}" --datadir="${DATADIR}"
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_DOS2UNIX=	${PORTDOCS}
 MAKEFILE=	makefile
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S/.//g}
