@@ -1,9 +1,5 @@
-# New ports collection makefile for:   lesspipe
-# Date created:        11 December 2004
-# Whom:                Slaven Rezic <slaven@rezic.de>
-#
-# $FreeBSD: ports/misc/lesspipe/Makefile,v 1.7 2012/11/17 05:59:41 svnexp Exp $
-#
+# Created by: Slaven Rezic <slaven@rezic.de>
+# $FreeBSD: misc/lesspipe/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	lesspipe
 PORTVERSION=	1.55
@@ -26,8 +22,8 @@ BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip \
 		dvi2tty:${PORTSDIR}/print/dvi2tty \
 		pstotext:${PORTSDIR}/print/pstotext \
 		mp3info:${PORTSDIR}/audio/mp3info \
-		cabextract:${PORTSDIR}/archivers/cabextract
-USE_CDRTOOLS=	yes
+		cabextract:${PORTSDIR}/archivers/cabextract \
+		cdrecord:${PORTSDIR}/sysutils/cdrtools
 .endif
 
 USE_PERL5=	yes
