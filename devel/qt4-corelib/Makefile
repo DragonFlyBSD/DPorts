@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: devel/qt4-corelib/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/qt4-corelib/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	corelib
 DISTVERSION=	${QT4_VERSION}
@@ -12,8 +12,9 @@ COMMENT=	Qt core library
 
 LIB_DEPENDS=	icui18n:${PORTSDIR}/devel/icu
 
+USES=		pkgconfig
 USE_GNOME=	_glib20
-USE_PKGCONFIG=	build
+USE_GCC=	any
 USE_QT4=	qmake_build moc_build
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
@@ -35,7 +36,6 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake tools translations \
 		src/xmlpatterns src/3rdparty/clucene src/3rdparty/freetype \
 		src/3rdparty/libjpeg src/3rdparty/libmng src/3rdparty/libpng \
 		src/3rdparty/libtiff src/3rdparty/phonon src/3rdparty/webkit
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
 .for dne in ${DO_NOT_EXTRACT}
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
