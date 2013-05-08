@@ -2,7 +2,7 @@
 # Date created:				today
 # Whom:					miwi
 #
-# $FreeBSD: devel/automoc4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/automoc4/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	automoc4
 PORTVERSION=	0.9.88
@@ -15,10 +15,9 @@ DIST_SUBDIR=	KDE
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Automatic moc for Qt 4 packages
 
-USE_ICONV=	yes
 USE_QT4=	corelib moc qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake iconv
 MAKE_JOBS_UNSAFE=	yes
 
 .include <bsd.port.mk>
