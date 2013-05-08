@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/unieject/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: sysutils/unieject/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	unieject
 PORTVERSION=	6
@@ -17,11 +17,8 @@ LIB_DEPENDS=	confuse:${PORTSDIR}/devel/libconfuse \
 		cdio:${PORTSDIR}/sysutils/libcdio
 
 USE_BZIP2=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig gettext iconv
 USE_GNOME=	glib20
-USE_GETTEXT=	yes
-USE_ICONV=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules \
 		--disable-doc
