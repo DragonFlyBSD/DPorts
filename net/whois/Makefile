@@ -2,7 +2,7 @@
 # Date created:                02 Oct 2003
 # Whom:                        Filippo Natali <filippo@widestore.net>
 #
-# $FreeBSD: ports/net/whois/Makefile,v 1.65 2012/11/17 06:00:24 svnexp Exp $
+# $FreeBSD: net/whois/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	whois
@@ -18,7 +18,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GMAKE=		yes
-USE_ICONV=		yes
+USES=			iconv
 USE_PERL5_BUILD=	yes
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
