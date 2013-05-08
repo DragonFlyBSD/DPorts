@@ -2,7 +2,7 @@
 # Date created:                         5 February 2010
 # Whom:                                 Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/gnugrep/Makefile,v 1.16 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: textproc/gnugrep/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	grep
@@ -32,7 +32,7 @@ OPTIONS_DEFINE=	PCRE
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 LDFLAGS+=	-lintl -L${LOCALBASE}/lib
 PLIST_SUB+=	NLS=
 .else
