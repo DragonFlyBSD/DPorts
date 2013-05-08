@@ -1,8 +1,8 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: mail/opendkim/Makefile 315506 2013-03-28 22:58:55Z madpilot $
+# $FreeBSD: mail/opendkim/Makefile 317604 2013-05-07 13:00:32Z bdrewery $
 
 PORTNAME=		opendkim
-PORTVERSION=		2.8.2
+PORTVERSION=		2.8.3
 CATEGORIES=		mail security
 MASTER_SITES=		SF
 MASTER_SITE_SUBDIR=	${PORTNAME} \
@@ -22,6 +22,7 @@ LICENSE_PERMS_SENDMAIL=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 NO_OPTIONS_SORT=yes
+USES=		pkgconfig:build
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 
