@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/avro-c/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/avro-c/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	avro
 PORTVERSION=	1.7.3
@@ -12,9 +12,8 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 MAINTAINER=	g.veniamin@googlemail.com
 COMMENT=	Data serialization system for ANSI C
 
-USES=		cmake
+USES=		cmake pkgconfig
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/lang/c
 
