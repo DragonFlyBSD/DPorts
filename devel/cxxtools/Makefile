@@ -2,7 +2,7 @@
 # Date created:		Wed Apr 14 18:11:42 CEST 2010
 # Whom:			Juergen Lock <nox@freebsd.org>
 #
-# $FreeBSD: ports/devel/cxxtools/Makefile,v 1.12 2013/02/14 10:22:06 svnexp Exp $
+# $FreeBSD: devel/cxxtools/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	cxxtools
@@ -14,7 +14,7 @@ MAINTAINER=	nox@FreeBSD.org
 COMMENT=	Collection of general-purpose C++ classes
 
 PATCH_STRIP=	-p1
-USE_ICONV=	yes
+USES=		iconv
 USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
