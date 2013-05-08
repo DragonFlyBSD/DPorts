@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <larse@isi.edu>
-# $FreeBSD: www/mod_perl2/Makefile 316159 2013-04-20 16:29:57Z ohauer $
+# $FreeBSD: www/mod_perl2/Makefile 316307 2013-04-23 05:11:57Z ohauer $
 
 PORTNAME=	mod_perl
 PORTVERSION=	2.0.8
@@ -94,6 +94,9 @@ post-patch:
 	${REINPLACE_CMD} -e "s|/usr/local/apache/bin/apxs|${APXS}|" \
 			-e "s|'bin', 'apxs'|'sbin', 'apxs'|" \
 			${WRKSRC}/lib/Apache2/Build.pm
+
+pre-configure:
+	@${FIND} ${WRKSRC} -type f \( -name \*.bak -o -name \*.orig \) -delete
 
 post-configure:
 	${REINPLACE_CMD} -e 's/-pthread -Wl,-E//g' \
