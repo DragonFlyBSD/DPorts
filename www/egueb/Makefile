@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/egueb/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: www/egueb/Makefile 316813 2013-04-29 12:59:35Z bapt $
 
 PORTNAME=	egueb
 PORTVERSION=	20121003
@@ -18,7 +18,6 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USES=		bison pathfix
-USE_BISON=	build
 USE_EFL=	eina enesim ender etch libtool_hack
 USE_GNOME=	pkgconfig
 USE_LDCONFIG=	yes
