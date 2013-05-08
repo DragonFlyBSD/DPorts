@@ -1,16 +1,11 @@
-# New ports collection makefile for:    lynx
-# Date created:         15 Dec 1994
-# Whom:                 ache
-#
-# $FreeBSD: ports/www/lynx-current/Makefile,v 1.202 2012/11/17 06:02:39 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: www/lynx-current/Makefile 316951 2013-04-30 16:47:38Z johans $
 
 PORTNAME=	lynx
-PORTVERSION=	2.8.8d12
-PORTREVISION=	1
+PORTVERSION=	2.8.8d15
 CATEGORIES=	www ipv6
 MASTER_SITES=	http://lynx.isc.org/current/
-DISTNAME=	${PORTNAME}2.8.8dev.12
+DISTNAME=	${PORTNAME}${PORTVERSION:C/d.*//}dev.${PORTVERSION:C/.*d//}
 
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	A non-graphical, text-based World-Wide Web client
@@ -20,9 +15,9 @@ RUN_DEPENDS=	${LOCALBASE}/etc/mime.types:${PORTSDIR}/misc/mime-support
 
 CONFLICTS_INSTALL=	lynx-2.8.[0-7].* ja-lynx-[0-9]*
 
-WRKSRC=		${WRKDIR}/${PORTNAME}2-8-8
+WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION:S/./-/g:C/d.*//}
 USE_BZIP2=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_OPENSSL=	yes
 NO_LATEST_LINK=	yes
 GNU_CONFIGURE=	yes
@@ -52,7 +47,7 @@ L_DOC=		${PREFIX}/share/doc/lynx
 L_HELP=		${PREFIX}/share/lynx_help
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CONFIGURE_ARGS+=	--enable-nls
 .else
