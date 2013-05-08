@@ -1,11 +1,11 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/avro-cpp/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/avro-cpp/Makefile 317418 2013-05-05 14:42:01Z rakuco $
 
 PORTNAME=	avro
-PORTVERSION=	1.7.3
-PORTREVISION=	1
+PORTVERSION=	1.7.4
 CATEGORIES=	devel
-MASTER_SITES=	APACHE
+MASTER_SITES=	http://www.sai.msu.su/apache/${PORTNAME}/${PORTNAME}-${PORTVERSION}/ \
+		APACHE
 MASTER_SITE_SUBDIR=	${PORTNAME}/stable
 PKGNAMESUFFIX=	-cpp
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
