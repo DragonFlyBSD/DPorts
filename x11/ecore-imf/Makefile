@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/x11/ecore-imf/Makefile,v 1.13 2013/01/15 17:46:04 svnexp Exp $
+# $FreeBSD: x11/ecore-imf/Makefile 317188 2013-05-03 09:41:29Z bapt $
 
 PORTNAME=	imf
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 CATEGORIES=	x11 enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -18,7 +18,10 @@ DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_EFL=	ecore libtool_hack
-USE_GNOME=	gnomehack pkgconfig
+USES=		pkgconfig
+.if defined(.PARSEDIR)
+USE_GMAKE=	yes
+.endif
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/lib/ecore_imf
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
