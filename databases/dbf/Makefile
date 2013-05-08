@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/dbf/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: databases/dbf/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
 
 PORTNAME=	dbf
 PORTVERSION=	0.9.0
@@ -27,7 +27,7 @@ MAKE_JOBS_SAFE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 PLIST_SUB+=	NLS=""
@@ -36,9 +36,7 @@ CONFIGURE_ENV+=	ac_cv_header_libintl_h=no
 PLIST_SUB+=	NLS="@comment "
 .endif
 
-.if !defined(DISABLE_MAKE_JOBS)
 _make_jobs=	-j${MAKE_JOBS_NUMBER}
-.endif
 
 post-extract:
 	@${FIND} ${WRKDIR} -name "configure" -or -name "install-sh" | \
