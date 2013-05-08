@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: sysutils/tmux/Makefile 315448 2013-03-28 08:00:48Z gahr $
+# $FreeBSD: sysutils/tmux/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	tmux
 PORTVERSION=	1.8
@@ -12,7 +12,7 @@ COMMENT=	A Terminal Multiplexer
 LICENSE=	BSD
 
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 MAN1=		tmux.1
 
