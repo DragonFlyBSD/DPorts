@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/multiwatch/Makefile,v 1.3 2012/11/17 06:02:43 svnexp Exp $
+# $FreeBSD: www/multiwatch/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	multiwatch
 PORTVERSION=	1.0.0
@@ -13,7 +13,7 @@ LIB_DEPENDS=	ev:${PORTSDIR}/devel/libev
 GNU_CONFIGURE=	yes
 
 MAN1=		multiwatch.1
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	_glib20
 
