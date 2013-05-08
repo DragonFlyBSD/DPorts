@@ -2,7 +2,7 @@
 # Date created:		7 March 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/tel/Makefile,v 1.8 2012/11/17 05:55:31 svnexp Exp $
+# $FreeBSD: deskutils/tel/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	tel
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Little console-based phone book manager
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
