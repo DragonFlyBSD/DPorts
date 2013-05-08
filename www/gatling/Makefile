@@ -2,7 +2,7 @@
 # Date created:			Feb 21, 2004
 # Whom:				Thomas-Martin Seck <tmseck@netcologne.de>
 #
-# $FreeBSD: www/gatling/Makefile 313740 2013-03-09 18:09:24Z tmseck $
+# $FreeBSD: www/gatling/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	gatling
@@ -58,7 +58,7 @@ CFLAGS+=	-O2 -fomit-frame-pointer
 .endif
 
 .if defined(WITH_GATLING_SMB)
-USE_ICONV=	yes
+USES+=		iconv
 CFLAGS+=	-I${LOCALBASE}/include
 MAKE_ENV+=	ICONV=1
 .else
