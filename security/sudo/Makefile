@@ -1,5 +1,5 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: security/sudo/Makefile 315822 2013-04-16 15:30:51Z wxs $
+# $FreeBSD: security/sudo/Makefile 317387 2013-05-04 22:30:31Z wxs $
 
 PORTNAME=	sudo
 DISTVERSION=	1.8.6p8
@@ -49,8 +49,12 @@ CONFIGURE_ARGS+=	--with-secure-path="${SUDO_SECURE_PATH}"
 
 .include <bsd.port.options.mk>
 
+.if ${ARCH} == "arm"
+CONFIGURE_ARGS+=	--disable-pie
+.endif
+
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 CFLAGS+=	-I${LOCALBASE}/include
 PLIST_SUB+=	NLS=""
