@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-CPAN-Changes
-# Date created:		2012-04-08
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-CPAN-Changes/Makefile,v 1.4 2012/12/16 06:16:54 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-CPAN-Changes/Makefile 317085 2013-05-02 08:47:58Z tobez $
 
 PORTNAME=	CPAN-Changes
-PORTVERSION=	0.19
+PORTVERSION=	0.20
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,6 +12,7 @@ COMMENT=	Read and write CPAN Changes files
 
 PERL_CONFIGURE=	yes
 
+MAN1=	tidy_changelog.1
 MAN3=	CPAN::Changes.3 \
 	CPAN::Changes::Release.3 \
 	CPAN::Changes::Spec.3 \
