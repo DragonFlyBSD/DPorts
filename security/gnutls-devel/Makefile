@@ -2,7 +2,7 @@
 # Date created:				8 Jan 2009
 # Whom:					Roman Bogorodskiy <novel@FreeBSD.org>
 #
-# $FreeBSD: ports/security/gnutls-devel/Makefile,v 1.82 2013/02/06 21:57:30 svnexp Exp $
+# $FreeBSD: security/gnutls-devel/Makefile 317496 2013-05-06 09:39:25Z bapt $
 #
 
 PORTNAME=	gnutls
@@ -23,7 +23,7 @@ LIB_DEPENDS=	gpg-error.0:${PORTSDIR}/security/libgpg-error \
 CONFLICTS=	gnutls-[0-9]*
 
 USE_XZ=		yes
-USE_ICONV=	yes
+USES=		iconv
 USE_GNOME=	pkgconfig ltverhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--disable-guile --disable-silent-rules \
 			--disable-hardware-acceleration
 MANCOMPRESSED=	no
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if (defined(WITH_LIBTASN1) || exists(${LOCALBASE}/lib/libtasn1.so.5)) && !defined(WITHOUT_LIBTASN1)
 LIB_DEPENDS+=	tasn1.5:${PORTSDIR}/security/libtasn1
@@ -50,15 +50,15 @@ PLIST_SUB+=		CXX="@comment "
 PLIST_SUB+=		CXX=""
 .endif
 
-.if defined(WITHOUT_NLS)
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=		NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=		NLS="@comment "
-.else
-USE_GETTEXT=		yes
-PLIST_SUB+=		NLS=""
 .endif
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=		AUTHORS NEWS README THANKS
 .endif
 EXAMPLES=	doc/examples/*.c
@@ -72,7 +72,7 @@ pre-configure:
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${EXAMPLES} ${EXAMPLESDIR}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in ${PORTDOCS}
 	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
@@ -80,4 +80,4 @@ post-install:
 .endif
 
 .include "Makefile.man"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
