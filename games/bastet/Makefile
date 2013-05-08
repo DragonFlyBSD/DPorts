@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: ports/games/bastet/Makefile,v 1.7 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: games/bastet/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	bastet
 PORTVERSION=	0.43
@@ -15,7 +15,7 @@ LICENSE=	GPLv3 # (or later)
 
 LIB_DEPENDS=	boost_program_options:${PORTSDIR}/devel/boost-libs
 
-USE_NCURSES=	yes
+USES=		ncurses
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 
