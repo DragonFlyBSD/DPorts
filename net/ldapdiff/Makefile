@@ -2,7 +2,7 @@
 # Date created:         15 February 2002
 # Whom:                 Christian Brueffer <chris@unixpages.org)
 #
-# $FreeBSD: ports/net/ldapdiff/Makefile,v 1.23 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/ldapdiff/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	ldapdiff
@@ -16,7 +16,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	A utility for patching LDAP directories using LDIF files
 
-USE_ICONV=	yes
+USES=		iconv
 USE_OPENLDAP=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${LOCALBASE} \
