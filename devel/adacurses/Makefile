@@ -2,7 +2,7 @@
 # Date created:				19 June 2002
 # Whom:					olgeni@FreeBSD.org
 #
-# $FreeBSD: ports/devel/adacurses/Makefile,v 1.23 2012/11/17 05:55:32 svnexp Exp $
+# $FreeBSD: devel/adacurses/Makefile 316927 2013-04-30 12:27:50Z bapt $
 #
 
 PORTNAME=		adacurses
