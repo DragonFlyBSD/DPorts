@@ -1,26 +1,24 @@
-# New ports collection makefile for:	rnv
-# Date created:	   22 Jan 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/rnv/Makefile,v 1.4 2012/11/17 06:02:19 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/rnv/Makefile 316816 2013-04-29 14:18:47Z miwi $
 
 PORTNAME=	rnv
-PORTVERSION=	1.7.10
+PORTVERSION=	1.7.11
 CATEGORIES=	textproc devel
 MASTER_SITES=	SF/${PORTNAME}/Sources/${PORTVERSION}
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Relax NG Compact Syntax validator
 
-LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
+LICENSE=	BSD
 
-USE_BZIP2=	yes
+LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
+
+USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-expat="${LOCALBASE}"
-
-PLIST_FILES=	bin/arx bin/rnv bin/rvp bin/xsdck
+MAKE_JOBS_SAFE=	yes
 
 MAN1=		rnv.1
+PLIST_FILES=	bin/arx bin/rnv bin/rvp bin/xsdck
 
 .include <bsd.port.mk>
