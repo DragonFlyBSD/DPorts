@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/lighttpd/pkg-plist,v 1.22 2012/11/17 06:02:38 svnexp Exp $
+@comment $FreeBSD: www/lighttpd/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 @unexec if cmp -s %D/etc/lighttpd/lighttpd.conf %D/etc/lighttpd/lighttpd.conf.sample; then rm -f %D/etc/lighttpd/lighttpd.conf; fi
 etc/lighttpd/lighttpd.conf.sample
 @exec [ -f %B/lighttpd.conf ] || cp %B/%f %B/lighttpd.conf
