@@ -1,9 +1,5 @@
-# New ports collection makefile for: cadaver
-# Date created:		13 January 2000
-# Whom:			Alex Povolotsky <tarkhil@over.ru>
-#
-# $FreeBSD: ports/www/cadaver/Makefile,v 1.53 2012/11/17 06:02:29 svnexp Exp $
-#
+# Created by: Alex Povolotsky <tarkhil@over.ru>
+# $FreeBSD: www/cadaver/Makefile 317472 2013-05-06 06:54:19Z bapt $
 
 PORTNAME=	cadaver
 PORTVERSION=	0.23.3
@@ -29,7 +25,7 @@ PLIST_FILES=	bin/cadaver
 # script breaks if it can not find the Makefile* in them. Exclude
 # them to be sure, a stray .h is not included instead of what's
 # found under PREFIX (installed by the neon port):
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf - \
+EXTRACT_AFTER_ARGS=	\
 		--exclude '${PORTNAME}-${PORTVERSION}/lib/expat/*.[ch]' \
 		--exclude '${PORTNAME}-${PORTVERSION}/lib/intl/*.[ch]' \
 		--exclude '${PORTNAME}-${PORTVERSION}/lib/neon/*.[ch]' \
@@ -50,9 +46,10 @@ post-install:
 	#
 .endif
 
-.if !defined(WITHOUT_NLS)
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES=		gettext iconv
 CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE} \
 		--with-libintl-prefix=${LOCALBASE}
 LANGS=en@quot es it
