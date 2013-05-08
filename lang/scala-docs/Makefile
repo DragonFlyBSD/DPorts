@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/lang/scala-docs/Makefile,v 1.3 2013/01/16 16:54:06 svnexp Exp $
+# $FreeBSD: lang/scala-docs/Makefile 316329 2013-04-23 10:00:22Z ale $
 
 PORTNAME=	scala-docs
-PORTVERSION=	2.10.0
+PORTVERSION=	2.10.1
 CATEGORIES=	lang java
 MASTER_SITES=	http://www.scala-lang.org/downloads/distrib/files/
 EXTRACT_SUFX=	.txz
