@@ -1,5 +1,5 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: multimedia/quvi/Makefile 314545 2013-03-18 09:40:20Z bapt $
+# $FreeBSD: multimedia/quvi/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	quvi
 PORTVERSION=	0.4.2
@@ -18,8 +18,8 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 RUN_DEPENDS=	libquvi>=0.4.0:${PORTSDIR}/multimedia/libquvi
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_XZ=		yes
-USE_PKGCONFIG=	build
 
 MAN1=		quvi.1
 PLIST_FILES=	bin/quvi
