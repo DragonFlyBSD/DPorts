@@ -1,16 +1,10 @@
-# ex:ts=8
-# Ports collection makefile for:	py-ipy
-# Date created:			Jan 30, 2002
-# Whom:	      			ijliao
-#
-# $FreeBSD: ports/net-mgmt/py-ipy/Makefile,v 1.23 2012/11/17 06:00:36 svnexp Exp $
-#
+# Created by:	ijliao
+# $FreeBSD: net-mgmt/py-ipy/Makefile 316911 2013-04-30 10:25:23Z wen $
 
 PORTNAME=	ipy
-PORTVERSION=	0.75
+PORTVERSION=	0.81
 CATEGORIES=	net-mgmt python
-MASTER_SITES=	${MASTER_SITE_CHEESESHOP}
-MASTER_SITE_SUBDIR=	source/I/IPy
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	IPy-${PORTVERSION}
 
