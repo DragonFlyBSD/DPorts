@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-cli/Makefile 313230 2013-03-02 13:48:31Z crees $
+# $FreeBSD: net-p2p/transmission-cli/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	transmission
 PORTVERSION=	2.77
@@ -28,7 +28,7 @@ GEN_LIB_DEPENDS=curl.6:${PORTSDIR}/ftp/curl \
 GEN_RUN_DEPENDS=${LOCALBASE}/share/transmission/web/index.html:${PORTSDIR}/www/transmission-web
 
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
