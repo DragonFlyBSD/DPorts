@@ -1,9 +1,5 @@
-# New ports collection makefile for:	managepkg
-# Date created:		2005-09-04
-# Whom:			Andreas Fehlner <fehlner@gmx.de>
-#
-# $FreeBSD: ports/ports-mgmt/managepkg/Makefile,v 1.5 2012/11/17 06:00:45 svnexp Exp $
-#
+# Created by: Andreas Fehlner <fehlner@gmx.de>
+# $FreeBSD: ports-mgmt/managepkg/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	managepkg
 PORTVERSION=	1.1
@@ -17,7 +13,9 @@ MAINTAINER=	fehlner@gmx.de
 COMMENT=	Script for maintaining ports
 # Any ideas for a better comment?
 
-EXTRACT_AFTER_ARGS=	${DISTDIR}/${DISTFILES} > ${WRKSRC}/${PORTNAME}
+EXTRACT_CMD=	${GZCAT}
+EXTRACT_BEFORE_ARGS=	
+EXTRACT_AFTER_ARGS=	> ${WRKSRC}/${PORTNAME}
 WRKSRC=	${WRKDIR}
 NO_BUILD=	yes
 PLIST_FILES=	sbin/managepkg
