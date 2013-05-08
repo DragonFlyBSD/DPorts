@@ -2,7 +2,7 @@
 # Date created:				15 March 2004
 # Whom:					johans
 #
-# $FreeBSD: ports/deskutils/ljclive/Makefile,v 1.18 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/ljclive/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	clive
@@ -13,7 +13,7 @@ MASTER_SITES=	SF/lj${PORTNAME}/lj${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	A command line client for posting LiveJournal entries
 
-USE_ICONV=	yes
+USES=	iconv
 
 MAN1=	clive.1
 
