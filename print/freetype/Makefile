@@ -1,9 +1,5 @@
-# New ports collection makefile for:	freetype
-# Date created:		January 24, 1998
-# Whom:			jseger@FreeBSD.org
-#
-# $FreeBSD: ports/print/freetype/Makefile,v 1.46 2013/01/06 21:42:19 svnexp Exp $
-#
+# Created by: jseger@FreeBSD.org
+# $FreeBSD: print/freetype/Makefile 316593 2013-04-26 09:23:54Z bapt $
 
 PORTNAME=	freetype
 PORTVERSION=	1.3.1
@@ -24,10 +20,6 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-nls --enable-static --enable-shared
 
 PORTSCOUT=	limit:^1\.
-
-.ifdef USE_FREETYPE
-IGNORE=	cannot be installed: you have the 'USE_FREETYPE' variable defined either in environment or in make(1) arguments. Please undefine and try again
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
