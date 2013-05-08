@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jwhois
-# Date created:		15 Jul 2000
-# Whom:			matusita@jp.FreeBSD.org
-#
-# $FreeBSD: ports/net/jwhois/Makefile,v 1.34 2012/11/17 06:00:03 svnexp Exp $
-#
+# Created by: matusita@jp.FreeBSD.org
+# $FreeBSD: net/jwhois/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	jwhois
 PORTVERSION=	4.0
@@ -17,16 +13,19 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=An improved WHOIS client capable of selecting server to query
 
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 CPPFLAGS+=	-I${PREFIX}/include
 LDFLAGS+=	-L${PREFIX}/lib
 CONFIGURE_ARGS=	--localstatedir=${PREFIX}/var/jwhois
-.if defined(WITHOUT_NLS)
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+PLIST_SUB=	NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB=	NLS="@comment "
-.else
-PLIST_SUB=	NLS=""
 .endif
 
 INSTALL_TARGET=	install-strip
