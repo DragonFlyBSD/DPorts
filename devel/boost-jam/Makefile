@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: ports/devel/boost-jam/Makefile,v 1.7 2013/02/08 11:14:41 svnexp Exp $
+# $FreeBSD: devel/boost-jam/Makefile 317037 2013-05-01 18:15:28Z bapt $
 
 PORTNAME=	boost-jam
 COMMENT=	Build tool from the boost.org
@@ -7,6 +7,8 @@ COMMENT=	Build tool from the boost.org
 PORTREVISION=	1
 
 PLIST_FILES=	bin/bjam
+
+EXTRACT_AFTER_ARGS=	${DISTNAME}/tools/build/v2/engine
 
 .include "${.CURDIR}/../boost-all/common.mk"
 
