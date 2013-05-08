@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/shells/scponly/files/scponlyc.in,v 1.7 2012/11/17 06:01:24 svnexp Exp $
+# $FreeBSD: shells/scponly/files/scponlyc.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # PROVIDE: scponlyc

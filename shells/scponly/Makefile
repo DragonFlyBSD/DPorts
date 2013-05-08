@@ -1,8 +1,9 @@
 # Created by: mcglk@artlogix.com
-# $FreeBSD: ports/shells/scponly/Makefile,v 1.41 2013/02/26 03:43:26 svnexp Exp $
+# $FreeBSD: shells/scponly/Makefile 317053 2013-05-01 21:52:05Z gjb $
 
 PORTNAME=	scponly
 PORTVERSION=	4.8.20110526
+PORTREVISION=	1
 CATEGORIES=	shells security
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}-snapshots
@@ -32,6 +33,11 @@ UNISON_DESC=	Unisson support
 WINSCP_DESC=	WinSCP support
 
 .include <bsd.port.options.mk>
+
+.if(!exists(/usr/bin/sftp))
+RUN_DEPENDS+=	sftp:${PORTSDIR}/security/openssh-portable
+BUILD_DEPENDS+=	sftp:${PORTSDIR}/security/openssh-portable
+.endif
 
 .if ${PORT_OPTIONS:MDEFAULT_CHDIR}
 CONFIGURE_ARGS+=--with-default-chdir=${SCPONLY_DEFAULT_CHDIR}
