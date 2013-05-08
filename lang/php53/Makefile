@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: lang/php53/Makefile 314596 2013-03-18 20:46:51Z flo $
+# $FreeBSD: lang/php53/Makefile 317389 2013-05-04 22:48:03Z flo $
 
 PORTNAME=	php53
-PORTVERSION=	5.3.23
+PORTVERSION=	5.3.24
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
@@ -63,7 +63,7 @@ PATCH_SITES+=	${MASTER_SITE_LOCAL} \
 PATCH_SITE_SUBDIR=	flo
 
 .if ${PORT_OPTIONS:MSUHOSIN}
-PATCHFILES+=	suhosin-patch-5.3.x-0.9.10.3.patch.gz
+PATCHFILES+=	suhosin-patch-5.3.x-0.9.10.4.patch.gz
 PLIST_SUB+=	SUHOSIN=""
 .else
 PLIST_SUB+=	SUHOSIN="@comment "
@@ -185,7 +185,7 @@ post-install:
 	@${INSTALL_DATA} ${WRKDIR}/php.conf ${PREFIX}/etc
 	@${TOUCH} ${PREFIX}/include/php/ext/php_config.h
 .if ${PORT_OPTIONS:MFPM}
-	@${CP} -n ${PREFIX}/etc/php-fpm.conf.default ${PREFIX}/etc/php-fpm.conf
+	@${CP} -n ${PREFIX}/etc/php-fpm.conf.default ${PREFIX}/etc/php-fpm.conf || ${TRUE}
 .endif
 .if ${PORT_OPTIONS:MAPACHE}
 	@${CAT} ${PKGMESSAGE}

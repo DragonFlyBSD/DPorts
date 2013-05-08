@@ -11,7 +11,7 @@ WRKSRC=		${WRKDIR}/${EXTSUBDIR}
 PATCHDIR=	${.CURDIR}/files
 PLIST=		${NONEXISTENT}
 
-EXTRACT_AFTER_ARGS?=	| ${TAR} -xf - ${EXTSUBDIR}
+EXTRACT_AFTER_ARGS?=	${EXTSUBDIR}
 
 .if ${PHP_MODNAME} == "bcmath"
 CONFIGURE_ARGS+=--enable-bcmath
@@ -110,7 +110,7 @@ PHP_HEADER_DIRS=libgd
 .if ${PHP_MODNAME} == "gettext"
 CONFIGURE_ARGS+=--with-gettext=${LOCALBASE}
 
-USE_GETTEXT=	yes
+USES+=		gettext
 .endif
 
 .if ${PHP_MODNAME} == "gmp"
@@ -127,7 +127,7 @@ CONFIGURE_ARGS+=--enable-hash \
 .if ${PHP_MODNAME} == "iconv"
 CONFIGURE_ARGS+=--with-iconv=${LOCALBASE}
 
-USE_ICONV=	yes
+USES+=	iconv
 .endif
 
 .if ${PHP_MODNAME} == "imap"
@@ -432,7 +432,7 @@ CONFIGURE_ARGS+=--with-xmlrpc \
 		--with-libxml-dir=${LOCALBASE} \
 		--with-iconv-dir=${LOCALBASE}
 
-USE_ICONV=	yes
+USES+=		iconv
 USE_GNOME=	libxml2
 
 PHP_HEADER_DIRS=libxmlrpc
