@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libebml
-# Date created:		Mon May 19 08:29:44 UTC 2003
-# Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/libebml/Makefile,v 1.29 2012/11/17 06:02:01 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: textproc/libebml/Makefile 317559 2013-05-06 22:47:41Z ehaupt $
 
 PORTNAME=	libebml
-PORTVERSION=	1.2.2
+PORTVERSION=	1.3.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://dl.matroska.org/downloads/libebml/ \
 		http://www.bunkus.org/videotools/mkvtoolnix/sources/
