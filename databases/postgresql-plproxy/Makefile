@@ -1,22 +1,23 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/postgresql-plproxy/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: databases/postgresql-plproxy/Makefile 316819 2013-04-29 14:21:23Z miwi $
 
 PORTNAME=	plproxy
-PORTVERSION=	2.4
+PORTVERSION=	2.5
 CATEGORIES=	databases
-MASTER_SITES=	http://pgfoundry.org/frs/download.php/3274/
+MASTER_SITES=	http://pgfoundry.org/frs/download.php/3392/
 PKGNAMEPREFIX=	postgresql-
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	PL/Proxy is database partitioning system
+COMMENT=	PL/Proxy - database partitioning system
 
+LICENSE=	BSD
+
+USES=		bison
 USE_PGSQL=	yes
 USE_GMAKE=	yes
-USES=		bison
+MAKE_JOBS_SAFE=	yes
 
 PORTSCOUT=	site:http://pgfoundry.org/frs/?group_id=1000207
-
-MAKE_ARGS+=	CFLAGS+=-DSYS_SOCKET_H
 
 .include <bsd.port.pre.mk>
 
@@ -35,5 +36,9 @@ PLIST_SUB+=	NEW_CONTRIB_DIR=""  OLD_CONTRIB_DIR="@comment "
 .else
 PLIST_SUB+=	NEW_CONTRIB_DIR="@comment "  OLD_CONTRIB_DIR=""
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		'/^#ifdef/s| SYS_| HAVE_SYS_|' ${WRKSRC}/src/execute.c
 
 .include <bsd.port.post.mk>
