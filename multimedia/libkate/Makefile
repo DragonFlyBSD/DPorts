@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: ports/multimedia/libkate/Makefile,v 1.17 2012/12/27 23:08:56 svnexp Exp $
+# $FreeBSD: multimedia/libkate/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	libkate
 PORTVERSION=	0.4.1
@@ -16,9 +16,9 @@ LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg \
 		png15:${PORTSDIR}/graphics/png
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 
 CFLAGS+=	"-I${LOCALBASE}/include"
 
