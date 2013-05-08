@@ -1,9 +1,5 @@
-# New ports collection makefile for:	latrine
-# Date created:		Sun Feb 18 01:13:42 CET 2007
-# Whom:			Juergen Lock <nox@FreeBSD.org>
-#
-# $FreeBSD: ports/games/latrine/Makefile,v 1.13 2012/11/17 05:57:43 svnexp Exp $
-#
+# Created by: Juergen Lock <nox@FreeBSD.org>
+# $FreeBSD: games/latrine/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	latrine
 PORTVERSION=	1.0.0
@@ -22,8 +18,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_CSTD=	gnu89
 USE_SQLITE=	3
 USE_PERL5_BUILD=yes
-USE_NCURSES=	yes
-USE_GETTEXT=	yes
+USES=		gettext ncurses
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
