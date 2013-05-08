@@ -1,4 +1,4 @@
-# $FreeBSD: net/get_iplayer/Makefile 315885 2013-04-16 18:54:41Z crees $
+# $FreeBSD: net/get_iplayer/Makefile 316959 2013-04-30 20:10:53Z crees $
 
 PORTNAME=	get_iplayer
 PORTVERSION=	2.82
@@ -8,6 +8,9 @@ MASTER_SITES=	ftp://ftp.infradead.org/pub/${PORTNAME}/ \
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Search, index, or stream archive video from BBC iPlayer
+
+LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	flvstreamer:${PORTSDIR}/multimedia/flvstreamer
 
