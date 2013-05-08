@@ -2,7 +2,7 @@
 # Date created:				14 Nov 2000
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/net/zebra-server/Makefile,v 1.27 2012/11/17 06:00:25 svnexp Exp $
+# $FreeBSD: net/zebra-server/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	zebra-server
@@ -22,7 +22,7 @@ CONFIGURE_ARGS=	--with-yaz=${LOCALBASE}/bin \
 		--with-tclconfig=${TCL_LIBDIR} \
 		--with-iconv=${LOCALBASE} --with-expat=${LOCALBASE}
 
-USE_ICONV=	yes
+USES=		iconv
 USE_LDCONFIG=	yes
 USE_TCL=	84+
 
