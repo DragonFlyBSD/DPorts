@@ -1,0 +1,5 @@
+/* $FreeBSD: japanese/sj3-server/files/sj3_freebsd.tmpl.in 300896 2012-07-14 13:54:48Z beat $ */
+
+SJ3TOP=		%%PREFIX%%
+SJ3DICTDIR=	$(SJ3LIBDIR)/sj3/dict
+SJ3VARRUNDIR=	%%DESTDIR%%$(VARDIR)/run/sj3

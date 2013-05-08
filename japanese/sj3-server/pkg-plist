@@ -1,0 +1,20 @@
+@comment $FreeBSD: japanese/sj3-server/pkg-plist 300896 2012-07-14 13:54:48Z beat $
+bin/sj3
+bin/sj3dic
+bin/sj3mkdic
+bin/sj3stat
+etc/sj3/cvtkey.news
+etc/sj3/cvtkey.nwp511
+etc/sj3/cvtkey.nwp517
+etc/sj3/cvtkey.xterm
+etc/sj3/serverrc
+etc/sj3/sjrc
+etc/sj3/sjrk
+lib/sj3/dict/sj3main.dic
+sbin/sj3serv
+@dirrm lib/sj3/dict/user
+@dirrm lib/sj3/dict
+@dirrm lib/sj3
+@dirrm etc/sj3
+@cwd /var/run
+@dirrmtry sj3
