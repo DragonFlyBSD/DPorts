@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/astro/p5-Astro-Coords/Makefile,v 1.4 2012/12/04 07:54:46 svnexp Exp $
+# $FreeBSD: astro/p5-Astro-Coords/Makefile 316590 2013-04-26 09:12:29Z sunpoet $
 
 PORTNAME=	Astro-Coords
 PORTVERSION=	0.18
@@ -33,11 +33,4 @@ MAN3=		Astro::Coords.3 \
 		Astro::Coords::Offset.3 \
 		Astro::Coords::Planet.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Time-Piece>=1.02:${PORTSDIR}/devel/p5-Time-Piece
-RUN_DEPENDS+=	p5-Time-Piece>=1.02:${PORTSDIR}/devel/p5-Time-Piece
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
