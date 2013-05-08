@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/archivers/gtar/pkg-plist,v 1.20 2012/11/17 05:54:20 svnexp Exp $
+@comment $FreeBSD: archivers/gtar/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/gtar
 libexec/grmt
 %%NLS%%share/locale/bg/LC_MESSAGES/tar.mo
