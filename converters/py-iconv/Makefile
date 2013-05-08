@@ -2,7 +2,7 @@
 # Date created:		11 September 2001
 # Whom:			Hye-Shik Chang <perky@python.or.kr>
 #
-# $FreeBSD: ports/converters/py-iconv/Makefile,v 1.13 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/py-iconv/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	iconv
 PORTVERSION=	1.0
@@ -16,7 +16,7 @@ DIST_SUBDIR=	python
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An iconv wrapper with Unicode codec for Python
 
-USE_ICONV=	yes
+USES=		iconv
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PLIST_SUB=	PYTHON_SITELIBDIR=${PYTHON_SITELIBDIR:S|^${LOCALBASE}/||g}
