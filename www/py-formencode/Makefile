@@ -2,7 +2,7 @@
 # Date created:		2005-11-16
 # Whom:			Choe, Cheng-Dae
 #
-# $FreeBSD: www/py-formencode/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/py-formencode/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	formencode
@@ -17,7 +17,7 @@ COMMENT=	HTML form validation, generation, and conversion package
 
 USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	easy_install
-USE_GETTEXT=		yes
+USES=		gettext
 
 PYDISTUTILS_PKGNAME=	FormEncode
 
