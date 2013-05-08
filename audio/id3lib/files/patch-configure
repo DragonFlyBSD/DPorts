@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/id3lib/files/patch-configure,v 1.3 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: audio/id3lib/files/patch-configure 300895 2012-07-14 12:56:14Z beat $
 --- configure.orig	Sun Aug 14 11:21:37 2005
 +++ configure	Sun Aug 14 11:29:43 2005
 @@ -9134,6 +9134,7 @@
