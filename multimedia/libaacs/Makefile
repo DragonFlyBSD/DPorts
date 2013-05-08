@@ -1,8 +1,9 @@
 # Created by: kamikaze@bsdforen.de
-# $FreeBSD: multimedia/libaacs/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: multimedia/libaacs/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	libaacs
 PORTVERSION=	0.3.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.videolan.org/pub/videolan/${PORTNAME}/${PORTVERSION}/ \
 		http://blu.opsec.eu/
@@ -11,15 +12,13 @@ MAINTAINER=	kamikaze@bsdforen.de
 COMMENT=	Advanced Access Content System implementation
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
-LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt \
+LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
 		gpg-error.0:${PORTSDIR}/security/libgpg-error
 
-USE_ICONV=	yes
-USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoconf aclocal automake libtool
-USES=		bison
+USES=		bison gettext iconv
 
 MAKE_JOBS_SAFE=	yes
 HAS_CONFIGURE=	yes
