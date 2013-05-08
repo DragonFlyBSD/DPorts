@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sitecopy
-# Date created:		15 January 1999
-# Whom:			nik
-#
-# $FreeBSD: ports/www/sitecopy/Makefile,v 1.55 2012/11/17 06:03:06 svnexp Exp $
-#
+# Created by: nik
+# $FreeBSD: www/sitecopy/Makefile 317472 2013-05-06 06:54:19Z bapt $
 
 PORTNAME=	sitecopy
 PORTVERSION=	0.16.6
@@ -26,13 +22,15 @@ CONFIGURE_ARGS=	--with-neon --with-libxml2
 USE_GNOME=	libxml2
 USE_GMAKE=	yes
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+LIBS+=		-lintl
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-LIBS+=		-lintl
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 .ifndef WITHOUT_SSL
