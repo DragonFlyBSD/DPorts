@@ -1,5 +1,5 @@
 # Created by: Brian Feldman & Matt Heckaman
-# $FreeBSD: net-im/licq/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: net-im/licq/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	base
 PORTVERSION=	${LICQ_VER}
@@ -14,8 +14,7 @@ LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
 
 LICENSE=	GPLv2
 
-USE_ICONV=	yes
-USES=		cmake
+USES=		cmake iconv
 WRKSRC=		${WRKDIR}/${DISTNAME}
 LICQ_PORT?=	net-im/licq
 
@@ -31,11 +30,13 @@ CONFIGURE_ARGS+=--with-openssl-inc=${OPENSSLINC}
 CONFIGURE_ARGS+=--with-openssl-lib=${OPENSSLLIB}
 .endif
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 CMAKE_ARGS+=	-DENABLE_NLS:BOOL=OFF
 PLIST_SUB+=	NLS="@comment "
 .else
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .endif
 
