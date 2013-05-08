@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/cdk/Makefile 315072 2013-03-23 19:19:55Z bapt $
+# $FreeBSD: devel/cdk/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	cdk
 PORTVERSION=	5.0.20120323
@@ -16,8 +16,8 @@ COMMENT=	Curses Development Kit for speedy development of full screen programs
 
 LICENSE=	BSD
 
+USES=		ncurses
 USE_GMAKE=	yes
-USE_NCURSES=	yes
 GNU_CONFIGURE=	yes
 PORTDOCS=	COPYING EXPANDING INSTALL NOTES README TODO
 MAKE_JOBS_UNSAFE=	yes
