@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: misc/pdmenu/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/pdmenu/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	pdmenu
 PORTVERSION=	1.3.2
@@ -18,7 +18,7 @@ LIB_DEPENDS=	slang.2:${PORTSDIR}/devel/libslang2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	SLANG_H_LOC="${LOCALBASE}/include/slang.h" \
