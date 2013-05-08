@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-CookieJar/Makefile 313902 2013-03-11 13:54:02Z sunpoet $
+# $FreeBSD: www/p5-HTTP-CookieJar/Makefile 316550 2013-04-26 02:47:48Z sunpoet $
 
 PORTNAME=	HTTP-CookieJar
-PORTVERSION=	0.003
+PORTVERSION=	0.004
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
