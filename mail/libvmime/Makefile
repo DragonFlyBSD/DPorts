@@ -2,7 +2,7 @@
 # Date created:				September 17, 2005
 # Whom:					delphij@FreeBSD.org
 #
-# $FreeBSD: ports/mail/libvmime/Makefile,v 1.33 2013/02/05 16:54:23 svnexp Exp $
+# $FreeBSD: mail/libvmime/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	libvmime
@@ -19,7 +19,7 @@ LIB_DEPENDS+=	gsasl:${PORTSDIR}/security/gsasl
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
