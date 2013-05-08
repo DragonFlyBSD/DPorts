@@ -1,9 +1,9 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: security/libpreludedb/Makefile 311722 2013-02-05 16:17:06Z novel $
+# $FreeBSD: security/libpreludedb/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	libpreludedb
 PORTVERSION=	1.0.1p1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://www.prelude-ids.org/attachments/download/287/
 
@@ -21,8 +21,7 @@ LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp \
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libltdl
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 
 CONFIGURE_ARGS=	--enable-gtk-doc=no
 USE_LDCONFIG=	yes
