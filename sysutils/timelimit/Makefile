@@ -1,11 +1,10 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: sysutils/timelimit/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: sysutils/timelimit/Makefile 315828 2013-04-16 15:46:00Z eadler $
 
 PORTNAME=	timelimit
 PORTVERSION=	1.8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://devel.ringlet.net/sysutils/timelimit/
-DISTNAME=	${PORTNAME}-${PORTVERSION:S/.b/pre/}
 
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Limit the absolute execution time of a process
