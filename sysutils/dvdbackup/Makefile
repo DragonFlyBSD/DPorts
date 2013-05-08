@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: ports/sysutils/dvdbackup/Makefile,v 1.24 2013/01/15 13:46:58 svnexp Exp $
+# $FreeBSD: sysutils/dvdbackup/Makefile 316340 2013-04-23 10:26:09Z ehaupt $
 
 PORTNAME=	dvdbackup
 PORTVERSION=	0.4.2
@@ -29,7 +29,7 @@ OPTIONS_DEFINE=	DOCS NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
