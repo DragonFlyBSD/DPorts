@@ -2,7 +2,7 @@
 # Date created:		17 October 1994
 # Whom:			jmz
 #
-# $FreeBSD: archivers/unzip/Makefile 313182 2013-03-02 03:55:25Z eadler $
+# $FreeBSD: archivers/unzip/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	unzip
@@ -50,7 +50,7 @@ PATCH_SITES+=		${MASTER_SITE_LOCAL}
 PATCH_SITE_SUBDIR=	nork
 PATCHFILES+=		unzip60-alt-iconv-utf8.patch
 PATCH_DIST_STRIP+=	-p1
-USE_ICONV=		yes
+USES=			iconv
 CFLAGS+=		-I${LOCALBASE}/include -DNATIVE
 MAKE_ARGS+=		LFLAGS1="-L${LOCALBASE}/lib -liconv"
 .endif
