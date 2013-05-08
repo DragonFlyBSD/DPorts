@@ -3,7 +3,7 @@
 # Date created:			May 2, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/archivers/dact/Makefile,v 1.33 2012/11/17 05:54:20 svnexp Exp $
+# $FreeBSD: archivers/dact/Makefile 317389 2013-05-04 22:48:03Z flo $
 #
 
 PORTNAME=	dact
@@ -39,7 +39,7 @@ pre-install:
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}
-	${CP} -n ${WRKSRC}/dact.conf ${EXAMPLESDIR}
+	${CP} -n ${WRKSRC}/dact.conf ${EXAMPLESDIR} || ${TRUE}
 .endif
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
