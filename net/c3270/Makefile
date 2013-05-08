@@ -2,7 +2,7 @@
 # Date created:		04 October 2004
 # Whom:			pdseniura@techie.com
 #
-# $FreeBSD: ports/net/c3270/Makefile,v 1.25 2012/11/17 05:59:57 svnexp Exp $
+# $FreeBSD: net/c3270/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	c3270
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:C/([0-9]\.[0-9])(\..*)/\1/}
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
-USE_ICONV=	yes
+USES=		iconv
 USE_OPENSSL=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include

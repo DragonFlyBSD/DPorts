@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/c3270/pkg-plist,v 1.4 2012/11/17 05:59:57 svnexp Exp $
+@comment $FreeBSD: net/c3270/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/c3270
 bin/x3270if
 etc/x3270/ibm_hosts
