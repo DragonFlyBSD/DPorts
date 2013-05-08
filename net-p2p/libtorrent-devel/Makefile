@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: net-p2p/libtorrent-devel/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: net-p2p/libtorrent-devel/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	libtorrent-devel
 PORTVERSION=	0.13.3
@@ -18,8 +18,7 @@ CONFLICTS=	libtorrent-[0-9]* \
 		rblibtorrent-devel-[0-9]*
 
 USE_AUTOTOOLS=	libtool
-USES=	pathfix
-USE_PKGCONFIG=	build
+USES=	pathfix pkgconfig
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
