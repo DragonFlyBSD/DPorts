@@ -1,5 +1,5 @@
 # Created by: Chia-liang Kao <clkao@CirX.ORG>
-# $FreeBSD: devel/ORBit2/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/ORBit2/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/devel/ORBit2/Makefile,v 1.57 2010/09/29 14:08:02 kwm Exp $
 
 PORTNAME=	ORBit2
@@ -16,12 +16,11 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
+USES=		pkgconfig gettext
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack libidl ltverhack referencehack
-USE_PKGCONFIG=	build
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 CPPFLAGS+=	-I${LOCALBASE}/include
