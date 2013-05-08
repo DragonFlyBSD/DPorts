@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/libcsv/files/Makefile,v 1.2 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: textproc/libcsv/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 
 LIB = 	csv
 SRCS=	libcsv.c
