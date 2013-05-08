@@ -1,9 +1,10 @@
-# $FreeBSD: ports/security/libotr3/Makefile,v 1.4 2012/11/17 06:01:07 svnexp Exp $
+# $FreeBSD: security/libotr3/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	libotr
 PORTVERSION=	3.2.1
 # Please do not bump PORTREVISION for this port unless you have
 # confirmed via testing that it is necessary
+PORTREVISION=	1
 CATEGORIES=	security net-im net
 MASTER_SITES=	http://www.cypherpunks.ca/otr/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}.asc
