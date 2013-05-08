@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/audio/gbsplay/Makefile,v 1.19 2013/01/15 13:46:52 svnexp Exp $
+# $FreeBSD: audio/gbsplay/Makefile 316340 2013-04-23 10:26:09Z ehaupt $
 
 PORTNAME=	gbsplay
 PORTVERSION=	0.0.8
@@ -12,8 +12,8 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT?=	Emulates the sound hardware of the Nintendo Game Boy(TM)
 
 HAS_CONFIGURE=	yes
+USES=		gettext
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 MAKE_JOBS_SAFE=	yes
 USE_CSTD=	gnu89
 
