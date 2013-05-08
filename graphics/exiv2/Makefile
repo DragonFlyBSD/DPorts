@@ -2,7 +2,7 @@
 # Date created:		2004-09-24
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/graphics/exiv2/Makefile,v 1.37 2012/11/17 05:58:05 svnexp Exp $
+# $FreeBSD: graphics/exiv2/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	exiv2
@@ -17,7 +17,7 @@ COMMENT=	Exif and Iptc metadata manipulation library and tools
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 MAN1=		exiv2.1
