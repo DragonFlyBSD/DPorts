@@ -1,5 +1,5 @@
 #
-# $FreeBSD: editors/nano-devel/Makefile 315432 2013-03-28 02:50:14Z eadler $
+# $FreeBSD: editors/nano-devel/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	nano
 PORTVERSION=	2.3.2
@@ -25,7 +25,7 @@ MAKE_JOBS_SAFE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 MANLANG=	"" fr
 .else
