@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: devel/glibmm/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/glibmm/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/devel/glibmm/Makefile,v 1.121 2012/12/09 21:00:20 kwm Exp $
 
 PORTNAME=	glibmm
@@ -22,9 +22,8 @@ PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_GNOME=	gnomehack glib20 ltverhack libsigc++20
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 USE_PERL5=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
