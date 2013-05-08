@@ -2,7 +2,7 @@
 # Date created:		11 June 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/www/rsstool/Makefile,v 1.8 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: www/rsstool/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	rsstool
@@ -14,7 +14,7 @@ MASTER_SITES=	BERLIOS
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Read, parse, merge and write RSS and Atom feeds
 
-USE_ICONV=	yes
+USES=		iconv
 USE_GNOME=	libxml2
 USE_GMAKE=	yes
 BUILD_WRKSRC=	${WRKSRC}/src
