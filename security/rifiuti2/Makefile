@@ -1,5 +1,5 @@
 # Created by: antoine@FreeBSD.org
-# $FreeBSD: ports/security/rifiuti2/Makefile,v 1.1 2012/12/20 17:19:02 svnexp Exp $
+# $FreeBSD: security/rifiuti2/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	rifiuti2
 DISTVERSION=	0.5.1
@@ -14,9 +14,7 @@ LICENSE=	BSD
 LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		pkgconfig gettext iconv
 USE_GNOME=	glib20
 
 CPPFLAGS+=	-I${LOCALBASE}/include
