@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: archivers/liborange/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: archivers/liborange/Makefile 316684 2013-04-27 18:31:47Z mva $
 
 PORTNAME=	liborange
 PORTVERSION=	0.4
@@ -25,9 +25,7 @@ MAKE_JOBS_SAFE=	yes
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USES=	pathfix
-USE_PKGCONFIG=	build
-USE_ICONV=	yes
+USES=	iconv pathfix pkgconfig
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
