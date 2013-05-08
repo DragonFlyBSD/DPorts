@@ -2,7 +2,7 @@
 # Date created:		24 July 2007
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/converters/cocot/Makefile,v 1.6 2012/11/17 05:55:02 svnexp Exp $
+# $FreeBSD: converters/cocot/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	cocot
@@ -17,7 +17,7 @@ MAINTAINER=	knu@FreeBSD.org
 COMMENT=	Code Converter on TTY
 
 USE_ZIP=	yes
-USE_ICONV=	yes
+USES=		iconv
 WRKSRC=		${WRKDIR}/vmi-${PORTNAME}-8bc9f64
 GNU_CONFIGURE=	yes
 
