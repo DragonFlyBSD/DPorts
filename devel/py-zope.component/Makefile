@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-zope.component
-# Date created:				2011-03-21
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-zope.component/Makefile,v 1.5 2012/11/17 05:56:53 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/py-zope.component/Makefile 315934 2013-04-17 06:44:00Z rm $
 
 PORTNAME=	zope.component
 PORTVERSION=	3.12.0
@@ -11,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	clsung@FreeBSD.org
+MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Zope Component Architecture
 
 LICENSE=	ZPL21
