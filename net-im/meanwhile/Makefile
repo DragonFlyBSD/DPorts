@@ -1,9 +1,5 @@
-# New ports collection makefile for:	meanwhile
-# Date created:		24 June 2004
-# Whom:		 	Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: net-im/meanwhile/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: net-im/meanwhile/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	meanwhile
 PORTVERSION=	1.0.2
@@ -15,9 +11,9 @@ MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Open Source implementation of the Lotus Sametime protocol
 
 USE_AUTOTOOLS=	libtool
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-doxygen=no \
