@@ -1,8 +1,9 @@
 # Created by: Craig Edwards <brain@mail1.chatspike.net>
-# $FreeBSD: ports/irc/inspircd/Makefile,v 1.31 2013/02/18 01:11:39 svnexp Exp $
+# $FreeBSD: irc/inspircd/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	inspircd
 PORTVERSION=	2.0.10
+PORTREVISION=	1
 CATEGORIES=	irc
 
 MAINTAINER=	feld@feld.me
