@@ -1,9 +1,5 @@
-# New ports collection makefile for:	httpsqs
-# Date created:		2011-04-22
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/www/httpsqs/Makefile,v 1.6 2013/02/07 14:08:06 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: www/httpsqs/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	httpsqs
 PORTVERSION=	1.7
@@ -18,7 +14,7 @@ LICENSE=	BSD
 LIB_DEPENDS+=	tokyocabinet:${PORTSDIR}/databases/tokyocabinet \
 	event-2.0:${PORTSDIR}/devel/libevent2
 
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 
 PLIST_FILES=	bin/${PORTNAME}
 

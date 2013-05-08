@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/httpsqs/files/Makefile,v 1.2 2012/11/17 06:02:36 svnexp Exp $
+# $FreeBSD: www/httpsqs/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 # Makefile for httpsqs (pmake)
 
 tokyocabinet_CFLAGS!=	pkg-config --cflags tokyocabinet
