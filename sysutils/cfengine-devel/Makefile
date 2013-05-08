@@ -1,8 +1,8 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine-devel/Makefile 313127 2013-02-28 21:02:28Z gjb $
+# $FreeBSD: sysutils/cfengine-devel/Makefile 317233 2013-05-03 19:08:18Z cy $
 
 PORTNAME=	cfengine
-PORTVERSION=	3.5.0a2
+PORTVERSION=	3.5.0b1
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
@@ -34,7 +34,7 @@ CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
 		--with-pcre=${LOCALBASE} \
 		--enable-fhs
 
-LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
 
 OPTIONS_DEFINE=	PGSQL MYSQL LIBVIRT
 OPTIONS_SINGLE=	DB
