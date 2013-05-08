@@ -1,5 +1,5 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-# $FreeBSD: devel/apr1/Makefile 315269 2013-03-26 09:06:12Z ohauer $
+# $FreeBSD: devel/apr1/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	apr
 PORTVERSION=	${APR_VERSION}.${APU_VERSION}
@@ -34,7 +34,7 @@ NSS_DESC=	NSS crypto driver
 APR_VERSION=	1.4.6
 APU_VERSION=	1.4.1
 
-USE_ICONV=		yes
+USES=		iconv
 USE_AUTOTOOLS=	automake autoconf libtool:env
 USE_PYTHON_BUILD=	-2.7
 USE_LDCONFIG=		yes
