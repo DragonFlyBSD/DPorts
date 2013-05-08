@@ -1,8 +1,9 @@
 # Created by: Dmitriy Limonov
-# $FreeBSD: net-p2p/ncdc/Makefile 316150 2013-04-20 14:28:38Z pawel $
+# $FreeBSD: net-p2p/ncdc/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	ncdc
 PORTVERSION=	1.16.1
+PORTREVISION=	1
 CATEGORIES=	net-p2p
 MASTER_SITES=	SF \
 		http://dev.yorhel.nl/download/
@@ -19,8 +20,7 @@ LIB_DEPENDS=	sqlite3:${PORTSDIR}/databases/sqlite3 \
 		nettle:${PORTSDIR}/security/nettle \
 		p11-kit:${PORTSDIR}/security/p11-kit
 
-USE_PKGCONFIG=	build
-USE_NCURSES=	yes
+USES=		pkgconfig ncurses
 USE_GNOME=	glib20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
