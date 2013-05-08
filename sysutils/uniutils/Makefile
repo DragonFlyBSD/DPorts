@@ -2,7 +2,7 @@
 # Date created:		Sun 15 May 2005
 # Whom:			thierry@pompo.net
 #
-# $FreeBSD: ports/sysutils/uniutils/Makefile,v 1.23 2012/11/17 06:01:48 svnexp Exp $
+# $FreeBSD: sysutils/uniutils/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	uniutils
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-lintl"
 CPPFLAGS+=	${CFLAGS} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GETTEXT=	yes
+USES=		gettext
 
 TESTFILES=	Test1.ann Test1.u Test2.ann Test2.u Test3.ann Test3.u	\
 		Test4.ann Test4.u Test5.ann Test5.u
