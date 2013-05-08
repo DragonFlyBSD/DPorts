@@ -2,7 +2,7 @@
 # Date created:         May 11, 2000
 # Whom:                 Nick Sayer <nsayer@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/unixODBC/Makefile,v 1.69 2012/11/17 05:55:25 svnexp Exp $
+# $FreeBSD: databases/unixODBC/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	unixODBC
@@ -15,7 +15,7 @@ COMMENT=	ODBC library suite for Unix
 
 CONFLICTS=	libiodbc-[0-9]* virtuoso-*
 
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static --enable-shared \
 		--with-libiconv-prefix=${LOCALBASE}
