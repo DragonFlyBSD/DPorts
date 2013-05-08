@@ -1,8 +1,8 @@
 # Created by: Mikolaj Golub <trociny@FreeBSD.org>
-# $FreeBSD: ports/databases/py-swiftclient/Makefile,v 1.3 2013/02/14 12:18:19 svnexp Exp $
+# $FreeBSD: databases/py-swiftclient/Makefile 316480 2013-04-24 21:09:04Z trociny $
 
 PORTNAME=	swiftclient
-PORTVERSION=	1.3.0
+PORTVERSION=	1.4.0
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,5 +21,12 @@ PYDISTUTILS_PKGNAME=	python_${PORTNAME}
 
 PLIST_FILES=	bin/swift \
 		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+
+MAN1=		swift.1
+
+post-install:
+.for i in ${MAN1}
+	${INSTALL_MAN} ${WRKSRC}/doc/manpages/${i} ${MANPREFIX}/man/man1/${i}
+.endfor
 
 .include <bsd.port.mk>
