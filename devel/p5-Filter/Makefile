@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Filter/Makefile 315565 2013-03-29 19:30:06Z sunpoet $
+# $FreeBSD: devel/p5-Filter/Makefile 316879 2013-04-30 05:43:26Z culot $
 
 PORTNAME=	Filter
-PORTVERSION=	1.46
+PORTVERSION=	1.49
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RURBAN
