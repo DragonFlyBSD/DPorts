@@ -1,4 +1,5 @@
-# $FreeBSD: ports/sysutils/xjobs/Makefile,v 1.5 2012/11/17 06:01:50 svnexp Exp $
+# Created by: Jason Helfman <jgh@FreeBSD.org>
+# $FreeBSD: sysutils/xjobs/Makefile 316566 2013-04-26 04:03:25Z jgh $
 
 PORTNAME=	xjobs
 PORTVERSION=	20120412
@@ -6,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.maier-komor.de/xjobs/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Utility reads job descriptions line by line and executes in parallel
 
 LICENSE=	GPLv2
@@ -21,7 +22,7 @@ PORTDOCS=	ChangeLog README
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1
 
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
