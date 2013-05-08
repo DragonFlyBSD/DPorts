@@ -2,7 +2,7 @@
 # Date created:				3rd December 2006
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/libiptcdata/Makefile,v 1.10 2012/11/17 05:58:13 svnexp Exp $
+# $FreeBSD: graphics/libiptcdata/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	libiptcdata
@@ -14,8 +14,7 @@ MAINTAINER=	pav@FreeBSD.org
 COMMENT=	Library for manipulating IPTC metadata stored in image files
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	pkgconfig
-USE_ICONV=	yes
+USES=		pkgconfig iconv
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-nls
