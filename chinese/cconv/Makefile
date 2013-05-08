@@ -2,7 +2,7 @@
 # Date created:		2011-04-26
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/chinese/cconv/Makefile,v 1.6 2012/11/17 05:54:56 svnexp Exp $
+# $FreeBSD: chinese/cconv/Makefile 316684 2013-04-27 18:31:47Z mva $
 #
 
 PORTNAME=	cconv
@@ -15,7 +15,7 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simplified-Traditional Chinese conversion tool
 
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_LDCONFIG=	yes
 
 post-patch:
