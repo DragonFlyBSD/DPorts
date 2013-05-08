@@ -2,7 +2,7 @@
 # Date created:				10 Feb 2005
 # Whom:					Paul Schmehl <pauls@utdallas.edu>
 #
-# $FreeBSD: ports/security/sancp/Makefile,v 1.8 2012/11/17 06:01:19 svnexp Exp $
+# $FreeBSD: security/sancp/Makefile 317389 2013-05-04 22:48:03Z flo $
 #
 
 PORTNAME=	sancp
@@ -31,7 +31,7 @@ post-extract:
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/sancp ${PREFIX}/bin
 	@${INSTALL_DATA} ${WRKSRC}/etc/sancp/sancp.conf ${PREFIX}/etc/sancp.conf-dist
-	@${CP} -n ${PREFIX}/etc/sancp.conf-dist ${PREFIX}/etc/sancp.conf
+	@${CP} -n ${PREFIX}/etc/sancp.conf-dist ${PREFIX}/etc/sancp.conf || ${TRUE}
 
 .if !defined(NOPORTDOCS)
 	@${INSTALL} -d ${DOCSDIR}/
