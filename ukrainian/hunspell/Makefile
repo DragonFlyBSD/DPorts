@@ -1,9 +1,4 @@
-# New ports collection makefile for:	hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/ukrainian/hunspell/Makefile,v 1.7 2012/11/17 06:02:26 svnexp Exp $
-#
+# $FreeBSD: ukrainian/hunspell/Makefile 317605 2013-05-07 13:12:31Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.6.5
@@ -19,9 +14,11 @@ COMMENT=	Ukrainian hunspell dictionaries
 
 BUILD_DEPENDS=	iconv:${PORTSDIR}/converters/libiconv
 
+USES=		shebangfix
 ALL_TARGET=	myspell
 USE_GMAKE=	yes
 USE_PERL5_BUILD=	yes
+SHEBANG_FILES=	bin/*.pl
 
 PLIST_FILES=	%%DATADIR%%/uk_UA.aff \
 		%%DATADIR%%/uk_UA.dic
