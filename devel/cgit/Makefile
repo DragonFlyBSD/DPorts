@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: devel/cgit/Makefile 313575 2013-03-07 11:21:11Z bapt $
+# $FreeBSD: devel/cgit/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	cgit
 PORTVERSION=	0.9.1
@@ -18,7 +18,7 @@ LICENSE=	GPLv2
 GIT_VERSION=	1.7.4.4
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 USE_OPENSSL=	yes
 CFLAGS+=	-I${LOCALBASE}/include
