@@ -2,7 +2,7 @@
 # Date created:				19th January 2001
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/intltool/Makefile,v 1.68 2012/11/17 06:01:59 svnexp Exp $
+# $FreeBSD: textproc/intltool/Makefile 316683 2013-04-27 18:25:24Z mva $
 #   $MCom: ports/textproc/intltool/Makefile,v 1.13 2010/05/29 19:19:26 kwm Exp $
 
 PORTNAME=	intltool
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir="${PREFIX}/libdata"
