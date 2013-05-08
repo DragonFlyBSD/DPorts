@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: ports/misc/qt4-doc/Makefile,v 1.18 2013/02/03 21:43:40 svnexp Exp $
+# $FreeBSD: misc/qt4-doc/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	doc
 DISTVERSION=	${QT4_VERSION}
@@ -13,7 +13,7 @@ USE_QT4=	# empty
 QT_DIST=	yes
 NO_BUILD=	yes
 
-EXTRACT_AFTER_ARGS=| ${TAR} -xf - '${DISTNAME}/doc'
+EXTRACT_AFTER_ARGS=	'${DISTNAME}/doc'
 
 DOCSDIR=	${PREFIX}/share/doc/qt4
 
