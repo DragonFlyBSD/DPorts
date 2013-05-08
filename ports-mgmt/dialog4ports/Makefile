@@ -1,5 +1,5 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: ports-mgmt/dialog4ports/Makefile 315627 2013-03-31 05:50:32Z eadler $
+# $FreeBSD: ports-mgmt/dialog4ports/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	dialog4ports
 PORTVERSION=	0.1.3
@@ -38,8 +38,6 @@ DIALOG4PORTS=	${WRKSRC}/dialog4ports
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
 		${DIALOGNAME}.tgz:dialog
 DIALOGNAME=	dialog-1.1-20120706
-EXTRACT_CMD=	${CAT}
-EXTRACT_BEFORE_ARGS=
 
 MAKE_ENV+=	DIALOGSOURCES=${WRKDIR}/${DIALOGNAME}
 
