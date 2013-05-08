@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/py-dbf/Makefile 313802 2013-03-10 04:27:16Z wen $
+# $FreeBSD: databases/py-dbf/Makefile 317025 2013-05-01 14:51:55Z wen $
 
 PORTNAME=	dbf
-PORTVERSION=	0.95.001
+PORTVERSION=	0.95.003
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,8 +10,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Pure python package for reading/writing dbf files
 
-USE_ZIP=	yes
-USE_PYTHON=	2.5+
+USE_ZIP=		yes
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
 .include <bsd.port.mk>
