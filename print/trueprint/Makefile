@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: print/trueprint/Makefile 314101 2013-03-13 17:44:52Z bdrewery $
+# $FreeBSD: print/trueprint/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	trueprint
 PORTVERSION=	5.4
@@ -11,7 +11,7 @@ MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Print program listings on postscript printer
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
