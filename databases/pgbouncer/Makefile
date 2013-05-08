@@ -1,16 +1,12 @@
-# Ports collection makefile for:  pgbouncer
-# Date created:			  19 July 2007
-# Whom:				  Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/databases/pgbouncer/Makefile,v 1.20 2012/11/17 05:55:18 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: databases/pgbouncer/Makefile 317417 2013-05-05 14:30:56Z rakuco $
 
 PORTNAME=	pgbouncer
-PORTVERSION=	1.5.2
+PORTVERSION=	1.5.4
 CATEGORIES=	databases
-MASTER_SITES=	http://pgfoundry.org/frs/download.php/3293/
+MASTER_SITES=	http://pgfoundry.org/frs/download.php/3393/
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	Lightweight connection pooler for PostgreSQL
 
 LICENSE=	BSD

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/databases/pgbouncer/files/pgbouncer.in,v 1.2 2012/11/17 05:55:18 svnexp Exp $
+# $FreeBSD: databases/pgbouncer/files/pgbouncer.in 302141 2012-08-05 23:19:36Z dougb $
 #
 
 # PROVIDE: pgbouncer
