@@ -2,7 +2,7 @@
 # Date created:			1 February 2000
 # Whom:				Dmitry Sivachenko <dima@Chg.RU>
 #
-# $FreeBSD: ports/devel/p5-Locale-gettext/Makefile,v 1.25 2012/11/17 05:56:20 svnexp Exp $
+# $FreeBSD: devel/p5-Locale-gettext/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	Locale-gettext
@@ -18,7 +18,7 @@ COMMENT=	Message handling functions
 
 PERL_CONFIGURE=	yes
 CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
-USE_GETTEXT=	yes
+USES=		gettext
 
 MAN3=		Locale::gettext.3
 
