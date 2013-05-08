@@ -1,11 +1,12 @@
 # Created by: Vaida Bogdan <vaida.bogdan@gmail.com>
-# $FreeBSD: ports/security/secure_delete/Makefile,v 1.5 2012/12/20 05:55:55 svnexp Exp $
+# $FreeBSD: security/secure_delete/Makefile 316857 2013-04-30 00:38:41Z miwi $
 
 PORTNAME=	secure_delete
 PORTVERSION=	3.1
 PORTREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	PACKETSTORM/group/thc
+MASTER_SITES=	PACKETSTORM/groups/thc \
+		http://freeworld.thc.org/releases/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Secure data deletion toolkit
@@ -14,7 +15,7 @@ OPTIONS_DEFINE=	DOCS
 
 CONFLICTS=	srm-[0-9]*
 
-MAKE_JOBS_UNSAFE=yes
+MAKE_JOBS_UNSAFE=	yes
 
 SUB_FILES=	pkg-message
 
@@ -30,9 +31,9 @@ BIN_SCRIPTS=	the_cleaner.sh
 
 post-patch:
 	@${REINPLACE_CMD} -e \
-	's|^CC=|CC?=| ; \
-	s|-O2 |$$(CFLAGS) | ;\
-	/strip/s|^|#|' ${WRKSRC}/Makefile
+		's|^CC=|CC?=| ; \
+		 s|-O2 |$$(CFLAGS) | ;\
+		 /strip/s|^|#|' ${WRKSRC}/Makefile
 
 do-install:
 .for i in ${BIN_PROGRAMS}
@@ -42,16 +43,13 @@ do-install:
 .for i in ${BIN_SCRIPTS}
 	${INSTALL_SCRIPT} ${WRKSRC}/${i} ${PREFIX}/bin
 .endfor
+	${LN} -sf srm ${PREFIX}/bin/sdel
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
 .endfor
 .endif
-
-	${LN} -sf srm ${PREFIX}/bin/sdel
-
-post-install:
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
