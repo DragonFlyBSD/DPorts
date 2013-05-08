@@ -1,8 +1,5 @@
-# New ports collection makefile for:	docbook-xml-440
-# Date created:		16 April 2005
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/docbook-xml-440/Makefile,v 1.5 2012/11/17 06:01:54 svnexp Exp $
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/docbook-xml-440/Makefile 316230 2013-04-22 13:27:47Z bapt $
 
 PORTNAME=	docbook-xml
 PORTVERSION=	4.4
@@ -10,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.oasis-open.org/docbook/xml/${PORTVERSION}/
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DocBook/XML DTD V4.4, designed for technical documentation
 
 RUN_DEPENDS=	${XMLCATMGR}:${PORTSDIR}/textproc/xmlcatmgr
