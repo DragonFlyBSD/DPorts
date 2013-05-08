@@ -2,7 +2,7 @@
 # Date created:			June 10, 2003
 # Whom:				at@rominet.net
 #
-# $FreeBSD: ports/net/ssltunnel-client/Makefile,v 1.13 2012/11/17 06:00:21 svnexp Exp $
+# $FreeBSD: net/ssltunnel-client/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	ssltunnel
@@ -19,7 +19,7 @@ LICENSE=	BSD
 
 CONFIGURE_ARGS=	--disable-server --with-iconv=${LOCALBASE}
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 MAN1=		pppclient.1
 MAN5=		ssltunnelrc.5
