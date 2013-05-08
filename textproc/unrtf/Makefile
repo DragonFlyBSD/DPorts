@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: ports/textproc/unrtf/Makefile,v 1.28 2013/01/29 01:44:36 svnexp Exp $
+# $FreeBSD: textproc/unrtf/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	unrtf
 PORTVERSION=	0.21.3
@@ -11,7 +11,7 @@ COMMENT=	A converter from RTF to several formats, including HTML and LaTeX
 
 LICENSE=	GPLv3
 
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/share
