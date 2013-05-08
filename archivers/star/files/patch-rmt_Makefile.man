@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/archivers/star/files/patch-rmt_Makefile.man,v 1.2 2012/11/17 05:54:23 svnexp Exp $
+$FreeBSD: archivers/star/files/patch-rmt_Makefile.man 300895 2012-07-14 12:56:14Z beat $
 
 --- rmt/Makefile.man.orig
 +++ rmt/Makefile.man

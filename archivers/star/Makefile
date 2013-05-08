@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: ports/archivers/star/Makefile,v 1.55 2013/01/29 03:46:06 svnexp Exp $
+# $FreeBSD: archivers/star/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	star
 DISTVERSION=	1.5.2
@@ -12,8 +12,7 @@ COMMENT=	Unique standard tape archiver with many enhancements
 BUILD_DEPENDS=	smake:${PORTSDIR}/devel/smake
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 
 .if !defined(NO_INSTALL_MANPAGES)
 MAN1=		scpio.1 spax.1 srmt.1 star.1 suntar.1 tartest.1
