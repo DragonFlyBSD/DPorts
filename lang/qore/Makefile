@@ -1,4 +1,4 @@
-# $FreeBSD: lang/qore/Makefile 315004 2013-03-23 06:55:44Z rm $
+# $FreeBSD: lang/qore/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	qore
 PORTVERSION=	0.8.7
@@ -17,8 +17,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		pathfix
-USE_ICONV=	yes
+USES=		pathfix iconv
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
