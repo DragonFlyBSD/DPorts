@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/devel/eio/Makefile,v 1.5 2013/01/15 17:45:58 svnexp Exp $
+# $FreeBSD: devel/eio/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	eio
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6.1
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -15,12 +15,8 @@ LICENSE=	LGPL21
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pathfix pkgconfig
 USE_EFL=	eina eet ecore libtool_hack
-USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
-
-post-install:
-	@${RMDIR} ${PREFIX}/share/eio/examples
-	@${RMDIR} ${PREFIX}/share/eio
 
 .include <bsd.port.mk>
