@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2/Makefile 316204 2013-04-21 19:22:22Z sunpoet $
+# $FreeBSD: www/aria2/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	aria2
 PORTVERSION=	1.17.0
@@ -58,7 +58,7 @@ PLIST_DIRS=	%%DOCSDIR%%/xmlrpc \
 
 .if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=--with-libintl-prefix=${LOCALBASE}
-USE_GETTEXT=	yes
+USES+=		gettext
 LANGS=		en@boldquot en@quot fil kk oc zh_HK
 LANGS_MTREE=	ar bg bn ca da de el es fa fi fr he hr hu id it ja ko ms nb nl \
 		nn pl pt pt_BR ro ru sk sr sv th tr uk vi zh_CN zh_TW
