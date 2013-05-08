@@ -1,18 +1,17 @@
 # Created by: Jerry Hicks
-# $FreeBSD: devel/bison/Makefile 314556 2013-03-18 11:40:04Z bapt $
+# $FreeBSD: devel/bison/Makefile 316946 2013-04-30 16:06:27Z johans $
 
 PORTNAME=	bison
-PORTVERSION=	2.7
+PORTVERSION=	2.7.1
 PORTEPOCH=	1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU}
-MASTER_SITE_SUBDIR=	${PORTNAME}
+MASTER_SITES=	GNU
 
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	A parser generator from FSF, (mostly) compatible with Yacc
 
-BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
-RUN_DEPENDS=	gm4:${PORTSDIR}/devel/m4
+BUILD_DEPENDS=	m4>=1.4.16,1:${PORTSDIR}/devel/m4
+RUN_DEPENDS=	m4>=1.4.16,1:${PORTSDIR}/devel/m4
 
 USES=		charsetfix
 USE_XZ=		yes
@@ -29,15 +28,11 @@ INFO=		bison
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.endif
-
-.ifdef USE_BISON
-.error You have `USE_BISON' variable defined either in environment or in make(1) arguments. Please undefine and try again.
 .endif
 
 post-extract:
