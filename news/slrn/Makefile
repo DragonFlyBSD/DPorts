@@ -1,5 +1,5 @@
 # Created by: Carey Jones <mcj@acquiesce.org>
-# $FreeBSD: ports/news/slrn/Makefile,v 1.62 2012/12/22 18:57:40 svnexp Exp $
+# $FreeBSD: news/slrn/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	slrn
 PORTVERSION=	1.0.1
@@ -15,7 +15,7 @@ LIB_DEPENDS=	slang:${PORTSDIR}/devel/libslang2
 CONFLICTS_INSTALL=	ja-slrn-[0-9]*
 
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-ipv6 --disable-inews --with-slrnpull \
@@ -31,7 +31,7 @@ OPTIONS_DEFAULT=SSL
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
