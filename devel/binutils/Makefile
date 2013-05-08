@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/binutils/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/binutils/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	binutils
 PORTVERSION=	2.23.1
@@ -75,7 +75,7 @@ PLIST_SUB+=	GOLD="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
