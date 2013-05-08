@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: ports/devel/libisofs/Makefile,v 1.11 2013/02/14 10:22:10 svnexp Exp $
+# $FreeBSD: devel/libisofs/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	libisofs
 PORTVERSION=	1.2.4
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	burn.4:${PORTSDIR}/devel/libburn
 
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
