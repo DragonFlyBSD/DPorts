@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/dparser/Makefile 315941 2013-04-17 07:42:03Z gahr $
+# $FreeBSD: devel/dparser/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	dparser
 PORTVERSION=	1.30
@@ -15,7 +15,7 @@ BOEHM_DESC=	Boehm garbage collector support
 
 WRKSRC=		${WRKDIR}/d
 
-EXTRACT_AFTER_ARGS=	|${TAR} -xf - --exclude "*my*"
+EXTRACT_AFTER_ARGS=	--exclude "*my*"
 USE_GMAKE=	yes
 MAKE_ARGS=	CC="${CC}" D_OPTIMIZE= PREFIX=${PREFIX}
 
