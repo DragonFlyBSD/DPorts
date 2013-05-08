@@ -1,8 +1,5 @@
-# New ports collection makefile for:	mu-conference
-# Date created:			Mon Feb  9 15:34:59 MSK 2004
-# Whom:				Denis Shaposhnikov <dsh@vlink.ru>
-#
-# $FreeBSD: ports/net-im/mu-conference/Makefile,v 1.23 2012/11/17 06:00:28 svnexp Exp $
+# Created by: Denis Shaposhnikov <dsh@vlink.ru>
+# $FreeBSD: net-im/mu-conference/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	mu-conference
 PORTVERSION=	0.8
@@ -19,8 +16,8 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2 \
 		idn:${PORTSDIR}/dns/libidn
 
+USES=		pkgconfig
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_RC_SUBR=	${PORTNAME}
 
 OPTIONS_DEFINE=	MYSQL
