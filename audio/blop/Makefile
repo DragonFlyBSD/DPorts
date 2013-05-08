@@ -2,7 +2,7 @@
 # Date created:			15 May 2002
 # Whom:				Tilman Linneweh <arved@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/blop/Makefile,v 1.23 2012/11/17 05:54:28 svnexp Exp $
+# $FreeBSD: audio/blop/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	blop
 PORTVERSION=	0.2.8
@@ -27,7 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
