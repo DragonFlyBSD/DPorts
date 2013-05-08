@@ -2,7 +2,7 @@
 # Date created:				5 Nov 1997
 # Whom:					Ian Vaudrey <i.vaudrey@bigfoot.com>
 #
-# $FreeBSD: ports/textproc/texi2html/Makefile,v 1.29 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/texi2html/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	texi2html
@@ -38,7 +38,7 @@ INFO=		texi2html
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls --enable-translations
 PLIST_SUB+=	NLS=""
 .else
