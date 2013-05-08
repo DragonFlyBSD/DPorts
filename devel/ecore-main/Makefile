@@ -1,9 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/devel/ecore-main/Makefile,v 1.13 2013/01/31 22:44:40 svnexp Exp $
+# $FreeBSD: devel/ecore-main/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	main
-PORTVERSION=	1.7.5
-PORTREVISION=	1
+PORTVERSION=	1.7.6
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -18,9 +17,8 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pathfix pkgconfig iconv
 USE_EFL=	eina libtool_hack
-USE_GNOME=	gnomehack pkgconfig
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
 
 EXAMPLESDIR=	${PREFIX}/share/examples/ecore
@@ -29,7 +27,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/ecore
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
