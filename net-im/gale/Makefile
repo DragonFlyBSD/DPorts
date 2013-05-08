@@ -2,7 +2,7 @@
 # Date created:         14 July 2000
 # Whom:                 Peter Haight <peterh@sapros.com>
 #
-# $FreeBSD: ports/net-im/gale/Makefile,v 1.36 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: net-im/gale/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	gale
@@ -19,7 +19,7 @@ LIB_DEPENDS=	gc.1:${PORTSDIR}/devel/boehm-gc \
 		wwwcore.1:${PORTSDIR}/www/libwww \
 		adns.1:${PORTSDIR}/dns/adns
 
-USE_ICONV=	yes
+USES=		iconv
 USE_GNOME=	glib12
 USE_AUTOTOOLS=	libtool
 LIBTOOLFILES=	configure liboop/configure
