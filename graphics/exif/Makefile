@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: graphics/exif/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: graphics/exif/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	exif
 PORTVERSION=	0.6.20
@@ -13,19 +13,20 @@ COMMENT=	Command line utility to read and manipulate EXIF data
 LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
 		popt.0:${PORTSDIR}/devel/popt
 
+USES=		pkgconfig
 USE_GMAKE=	yes
-USE_PKGCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 CONFIGURE_ENV+=		POPT_CFLAGS=-I${LOCALBASE}/include POPT_LIBS="-L${LOCALBASE}/lib -lpopt"
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext iconv
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls --without-libiconv-prefix
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_ICONV=	yes
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 MAN1=		exif.1
