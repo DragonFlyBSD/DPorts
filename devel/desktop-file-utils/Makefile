@@ -1,28 +1,27 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: devel/desktop-file-utils/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#   $MCom: ports/devel/desktop-file-utils/Makefile,v 1.8 2007/09/07 20:22:45 mezz Exp $
+# $FreeBSD: devel/desktop-file-utils/Makefile 317467 2013-05-06 06:28:57Z kwm $
+#   $MCom: ports/trunk/devel/desktop-file-utils/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	desktop-file-utils
-PORTVERSION=	0.18
+PORTVERSION=	0.21
 CATEGORIES=	devel
 MASTER_SITES=	http://freedesktop.org/software/${PORTNAME}/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A couple of command line utilities for working with desktop entries
 
+USES=		pkgconfig gettext
 USE_GNOME=	glib20
-USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-lispdir
-CONFIGURE_ENV=	EMACS="no"
+CONFIGURE_ENV=	EMACS="no" LIBS="-lintl"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		desktop-file-install.1 desktop-file-validate.1 \
-		update-desktop-database.1
+MAN1=		desktop-file-edit.1 desktop-file-install.1 \
+		desktop-file-validate.1 update-desktop-database.1
 
 PKGINSTALL=	${WRKDIR}/pkg-install
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
