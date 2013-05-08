@@ -1,11 +1,11 @@
 # Created by: clutton mbsd@isgroup.com.ua
-# $FreeBSD: ports/www/xpi-pentadactyl/Makefile,v 1.4 2013/01/22 22:48:56 svnexp Exp $
+# $FreeBSD: www/xpi-pentadactyl/Makefile 317240 2013-05-03 20:36:40Z antoine $
 
-PORTNAME=      pentadactyl
-PORTVERSION=   20130122
-MASTER_SITES=  GOOGLE_CODE
-PROJECTHOST=   dactyl
-CATEGORIES=    www
+PORTNAME=	pentadactyl
+PORTVERSION=	20130407
+CATEGORIES=	www
+MASTER_SITES=	GOOGLE_CODE
+PROJECTHOST=	dactyl
 
 MAINTAINER=	mbsd@isgroup.com.ua
 COMMENT=	Firefox for Vim and Links addicts
