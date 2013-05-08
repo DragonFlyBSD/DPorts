@@ -1,15 +1,10 @@
-# New ports collection makefile for:	wdiff
-# Date created:		Sep 15, 1997
-# Whom:			Yoshiro MIHIRA <sanpei@yy.cs.keio.ac.jp>
-#
-# $FreeBSD: ports/textproc/wdiff/Makefile,v 1.25 2012/11/17 06:02:24 svnexp Exp $
-#
+# Created by: Yoshiro MIHIRA <sanpei@yy.cs.keio.ac.jp>
+# $FreeBSD: textproc/wdiff/Makefile 317494 2013-05-06 09:26:23Z bapt $
 
 PORTNAME=	wdiff
-PORTVERSION=	1.1.2
+PORTVERSION=	1.2.1
 CATEGORIES=	textproc
 MASTER_SITES=	GNU
-
 
 MAINTAINER=	sanpei@FreeBSD.org
 COMMENT=	Display word differences between text files
@@ -21,8 +16,10 @@ GNU_CONFIGURE=	yes
 MAN1=		wdiff.1
 INFO=		wdiff
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 CFLAGS+=	-I${LOCALBASE}/include
 PLIST_SUB+=	NLS=""
 .else
