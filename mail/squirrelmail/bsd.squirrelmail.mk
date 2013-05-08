@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/squirrelmail/bsd.squirrelmail.mk,v 1.11 2012/11/17 05:59:15 svnexp Exp $
+# $FreeBSD: mail/squirrelmail/bsd.squirrelmail.mk 307190 2012-11-08 16:27:01Z adamw $
 #
 # $LastChangedDate: 2010-02-01 22:21:34 -0500 (Mon, 01 Feb 2010) $
 #

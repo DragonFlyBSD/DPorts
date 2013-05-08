@@ -2,7 +2,7 @@
 # Date created: 			27 December 2001
 # Whom: 				Simon Dick <simond@irrelevant.org>
 #
-# $FreeBSD: ports/mail/squirrelmail/Makefile,v 1.84 2012/11/18 06:23:48 svnexp Exp $
+# $FreeBSD: mail/squirrelmail/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	squirrelmail
@@ -27,7 +27,7 @@ IGNORE_WITH_PHP=5 # known incompatibilities with php-5.4, use 5.3 for now
 DEFAULT_PHP_VER=53
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 OPTIONS_DEFINE=	DATABASE LDAP
 DATABASE_DESC=	PEAR database support (must also intall a driver)

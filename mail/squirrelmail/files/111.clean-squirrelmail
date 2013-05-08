@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/squirrelmail/files/111.clean-squirrelmail,v 1.2 2012/11/17 05:59:15 svnexp Exp $
+# $FreeBSD: mail/squirrelmail/files/111.clean-squirrelmail 300896 2012-07-14 13:54:48Z beat $
 #
 # This script copied from /etc/periodic/daily/110.clean-tmps,v 1.6.2.4 2002/10/13 19:59:01
 #

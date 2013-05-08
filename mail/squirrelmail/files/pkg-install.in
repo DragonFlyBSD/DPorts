@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$FreeBSD: ports/mail/squirrelmail/files/pkg-install.in,v 1.3 2012/11/17 05:59:15 svnexp Exp $
+#	$FreeBSD: mail/squirrelmail/files/pkg-install.in 303976 2012-09-09 16:29:30Z adamw $
 #
 
 PKG_BATCH=${BATCH:=NO}
