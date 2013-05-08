@@ -1,5 +1,5 @@
 # Created by: Richard Kiss
-# $FreeBSD: lang/lua/Makefile 315557 2013-03-29 18:41:29Z mandree $
+# $FreeBSD: lang/lua/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	lua
 PORTVERSION=	5.1.5
@@ -20,7 +20,7 @@ PATCH_WRKSRC=	${WRKSRC}/src
 USE_LUA=	5.1
 LUA_COMPS=	# only define variables
 ALL_TARGET=	freebsd
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	LUA_SONAME="liblua-${LUA_VER}.so.${LUA_VER_SH}"
