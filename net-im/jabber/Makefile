@@ -1,13 +1,9 @@
-# New ports collection makefile for:	jabber
-# Date created:			5 February 2001
-# Whom:				joe
-#
-# $FreeBSD: ports/net-im/jabber/Makefile,v 1.64 2013/02/06 21:57:24 svnexp Exp $
-#
+# Created by: joe
+# $FreeBSD: net-im/jabber/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	jabber
 PORTVERSION=	1.6.1.1
-PORTREVISION=	12
+PORTREVISION=	13
 PORTEPOCH=	1
 CATEGORIES=	net-im ipv6
 MASTER_SITES=	http://download.jabberd.org/jabberd14/ \
@@ -31,9 +27,8 @@ LIB_DEPENDS=	pth:${PORTSDIR}/devel/pth-hard \
 OPTIONS_DEFINE= IPV6 MYSQL PGSQL
 
 USE_RC_SUBR=	jabber
-USE_ICONV=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	${PREFIX}/lib/jabber
 MAKE_JOBS_UNSAFE=	yes
