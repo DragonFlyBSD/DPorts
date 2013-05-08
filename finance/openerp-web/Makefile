@@ -2,7 +2,7 @@
 # Date created:        11 January 2010
 # Whom:                Borja Lopez<borja@pexego.es>
 #
-# $FreeBSD: ports/finance/openerp-web/Makefile,v 1.5 2012/11/17 05:57:25 svnexp Exp $
+# $FreeBSD: finance/openerp-web/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	openerp-web
@@ -25,7 +25,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cherrypy>0:${PORTSDIR}/www/py-cherrypy \
 		${PYTHON_PKGNAMEPREFIX}xlwt>0:${PORTSDIR}/textproc/py-xlwt
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_GETTEXT=	yes
+USES=		gettext
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
