@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/ruby-sary/Makefile 314627 2013-03-19 09:13:44Z bapt $
+# $FreeBSD: textproc/ruby-sary/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	sary
 PORTVERSION=	1.2.0
@@ -17,7 +17,7 @@ LIB_DEPENDS=	sary.10:${PORTSDIR}/textproc/sary
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 INSTALL_TARGET=	site-install
 
