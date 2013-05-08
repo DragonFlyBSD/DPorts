@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: security/gsasl/Makefile 314556 2013-03-18 11:40:04Z bapt $
+# $FreeBSD: security/gsasl/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	gsasl
 PORTVERSION=	1.8.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -12,7 +12,7 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	GNU SASL Library
 
 LIB_DEPENDS=	idn.17:${PORTSDIR}/dns/libidn \
-		gcrypt.18:${PORTSDIR}/security/libgcrypt \
+		gcrypt:${PORTSDIR}/security/libgcrypt \
 		gnutls.26:${PORTSDIR}/security/gnutls \
 		ntlm.0:${PORTSDIR}/security/libntlm
 
@@ -27,7 +27,7 @@ INFO=	gsasl
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
