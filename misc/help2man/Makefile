@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/help2man/Makefile 316053 2013-04-18 16:58:08Z sunpoet $
+# $FreeBSD: misc/help2man/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	help2man
 PORTVERSION=	1.41.2
@@ -30,7 +30,7 @@ RUN_DEPENDS+=	p5-Locale-gettext>=0:${PORTSDIR}/devel/p5-Locale-gettext
 
 CFLAGS+=	-lintl
 MANLANG=	"" ${LANGS} ${LANGS_MTREE}
-USE_GETTEXT=	yes
+USES+=		gettext
 
 LANGS=		de el eo fi fr hr it pl pt_BR ru sr sv uk vi
 LANGS_MTREE=	ja	# languages that already exist in BSD.local.dist
