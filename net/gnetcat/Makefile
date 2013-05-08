@@ -2,7 +2,7 @@
 # Date created:		10 January 2004
 # Whom:			liamfoy@sepulcrum.org
 #
-# $FreeBSD: ports/net/gnetcat/Makefile,v 1.11 2012/11/17 06:00:01 svnexp Exp $
+# $FreeBSD: net/gnetcat/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	gnetcat
@@ -15,8 +15,7 @@ DISTNAME=	netcat-0.7.1
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GPL'ed re-write of the well known networking tool netcat
 
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
