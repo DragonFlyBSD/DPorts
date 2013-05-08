@@ -2,7 +2,7 @@
 # Date created:		Wed Apr 14 18:11:42 CEST 2010
 # Whom:			Juergen Lock <nox@freebsd.org>
 #
-# $FreeBSD: ports/www/tntnet/Makefile,v 1.10 2013/02/07 14:08:11 svnexp Exp $
+# $FreeBSD: www/tntnet/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	tntnet
@@ -17,7 +17,7 @@ COMMENT=	Webapplicationserver for C++
 LIB_DEPENDS=	cxxtools:${PORTSDIR}/devel/cxxtools
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip
 
-USE_ICONV=	yes
+USES=		iconv
 USE_CSTD=	gnu89
 PATCH_STRIP=	-p1
 GNU_CONFIGURE=	yes
