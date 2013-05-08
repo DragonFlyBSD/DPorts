@@ -1,5 +1,5 @@
 # Created by: Horance Chou <horance@freedom.ie.cycu.edu.tw>
-# $FreeBSD: devel/libffi/Makefile 314838 2013-03-21 12:01:28Z zeising $
+# $FreeBSD: devel/libffi/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	libffi
 PORTVERSION=	3.0.13
@@ -23,8 +23,7 @@ BUILD_DEPENDS:=	${TEST_DEPENDS}
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USES=	pathfix
-USE_PKGCONFIG=	build
+USES=	pathfix pkgconfig
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 INFO=		libffi
