@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/textproc/xmlstarlet/Makefile,v 1.13 2013/01/01 22:59:58 svnexp Exp $
+# $FreeBSD: textproc/xmlstarlet/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	xmlstarlet
 PORTVERSION=	1.4.2
@@ -13,7 +13,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GNOME=	libxslt
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libxml-prefix=${LOCALBASE} \
 		--with-libxslt-prefix=${LOCALBASE} \
