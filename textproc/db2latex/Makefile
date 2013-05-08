@@ -3,12 +3,12 @@
 # Date created:			Jun 24, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/textproc/db2latex/Makefile,v 1.4 2012/11/17 06:01:53 svnexp Exp $
+# $FreeBSD: textproc/db2latex/Makefile 316712 2013-04-28 11:24:26Z stefan $
 #
 
 PORTNAME=	db2latex
 PORTVERSION=	0.8p1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.8pre1
 DISTNAME=	${PORTNAME}-xsl-${PORTVERSION:S/p/pre/}
