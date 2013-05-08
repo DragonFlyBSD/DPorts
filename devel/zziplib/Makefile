@@ -1,8 +1,6 @@
-# New ports collection makefile for:   zziplib
-# Date created:        3 January 2001
-# Whom:                George Reid <greid@ukug.uk.freebsd.org>
+# Created by: George Reid <greid@ukug.uk.freebsd.org>
 #
-# $FreeBSD: devel/zziplib/Makefile 315474 2013-03-28 15:51:16Z eadler $
+# $FreeBSD: devel/zziplib/Makefile 316333 2013-04-23 10:13:19Z bapt $
 #
 
 PORTNAME=	zziplib
@@ -21,10 +19,9 @@ BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 OPTIONS_DEFINE=	SDL
 
 USE_BZIP2=	yes
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_PYTHON_BUILD=	yes
 USE_AUTOTOOLS=	libtool
-USE_PKGCONFIG=	yes
 CONFIGURE_ENV=	ac_cv_path_XMLTO=":"
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
