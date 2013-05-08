@@ -2,7 +2,7 @@
 # Date created:				15 August 2008
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/freedesktop-sound-theme/Makefile,v 1.4 2012/11/17 05:54:32 svnexp Exp $
+# $FreeBSD: audio/freedesktop-sound-theme/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/audio/freedesktop-sound-theme/Makefile,v 1.6 2009/11/27 22:09:57 marcus Exp $
 #
 
@@ -19,7 +19,7 @@ COMMENT=	Sound theme based on the FreeDesktop specification
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomehier intlhack
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
