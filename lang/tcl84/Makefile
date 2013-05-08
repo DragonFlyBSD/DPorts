@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: ports/lang/tcl84/Makefile,v 1.127 2013/02/07 09:35:42 svnexp Exp $
+# $FreeBSD: lang/tcl84/Makefile 316025 2013-04-18 08:20:59Z gahr $
 
 PORTNAME=	tcl
 PORTVERSION=	8.4.19
@@ -54,6 +54,14 @@ CONFIGURE_ARGS+=	--enable-threads
 .else
 CONFIGURE_ARGS+=	--disable-threads
 .endif
+
+post-patch:
+	${REINPLACE_CMD} -e \
+	    's|@TCL_BUILD_LIB_SPEC@|@TCL_LIB_SPEC@|; \
+	     s|@TCL_BUILD_STUB_LIB_SPEC@|@TCL_STUB_LIB_SPEC@|; \
+	     s|@TCL_BUILD_STUB_LIB_PATH@|@TCL_STUB_LIB_PATH@|; \
+	     s|@TCL_SRC_DIR@|${PREFIX}/include/tcl${TCL_VER}|' \
+	     ${WRKSRC}/tclConfig.sh.in
 
 post-configure:
 	${REINPLACE_CMD} \
