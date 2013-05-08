@@ -1,4 +1,4 @@
-# $FreeBSD: lang/sdcc-devel/Makefile 315051 2013-03-23 17:47:44Z tijl $
+# $FreeBSD: lang/sdcc-devel/Makefile 316410 2013-04-24 08:01:28Z tijl $
 
 PORTNAME=	sdcc
 PORTVERSION=	3.2.1.2013.03.22
@@ -7,7 +7,7 @@ MASTER_SITES=	SF/sdcc/snapshot_builds/sdcc-src/ \
 		http://tijl.fastmail.fm/mirror/
 DISTNAME=	${PORTNAME}-src-20130322-8457
 
-MAINTAINER=	tijl@coosemans.org
+MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	Small Device C Compiler
 
 LICENSE=	GPLv3
