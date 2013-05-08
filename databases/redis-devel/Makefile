@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/redis-devel/Makefile 313995 2013-03-12 18:31:48Z osa $
+# $FreeBSD: databases/redis-devel/Makefile 317224 2013-05-03 17:38:24Z osa $
 
 PORTNAME=	redis
-DISTVERSION=	2.6.11
+DISTVERSION=	2.6.13
 CATEGORIES=	databases
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMESUFFIX=	-devel
@@ -83,9 +83,7 @@ post-install:
 	[ -d ${d} ] || ${MKDIR} ${d} && ${CHOWN} ${USERS}:${GROUPS} ${d}
 .endfor
 
-test: build
+regression-test: build
 	@cd ${WRKSRC} && ${TCLSH} tests/test_helper.tcl
-
-regression-test: test
 
 .include <bsd.port.mk>
