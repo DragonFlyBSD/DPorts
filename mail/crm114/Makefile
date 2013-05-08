@@ -1,7 +1,7 @@
 # New ports collection makefile for:	crm114
 # Date created:				23 February 2004
 # Whom:					Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: ports/mail/crm114/Makefile,v 1.32 2012/11/17 05:59:00 svnexp Exp $
+# $FreeBSD: mail/crm114/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	crm114
@@ -24,8 +24,7 @@ LIB_DEPENDS=	tre.5:${PORTSDIR}/textproc/libtre
 
 CRM114RELEASENAME=BlameMichelson
 
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 
 MAKE_ARGS=	CC="${CC}" prefix="${PREFIX}" \
 		LIBS="${LIBS}" \

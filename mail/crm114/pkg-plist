@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/mail/crm114/pkg-plist,v 1.9 2012/11/17 05:59:00 svnexp Exp $
+@comment $FreeBSD: mail/crm114/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/crm
 bin/cssdiff
 bin/cssmerge
