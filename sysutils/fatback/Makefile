@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/sysutils/fatback/Makefile,v 1.7 2013/01/15 13:46:58 svnexp Exp $
+# $FreeBSD: sysutils/fatback/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	fatback
 PORTVERSION=	1.3
@@ -15,9 +15,8 @@ MAKE_JOBS_SAFE=	yes
 
 MAN1=		fatback.1
 INFO=		fatback-manual
-EXTRACT_AFTER_ARGS+=	|${TAR} -xpf -	\
-	--exclude 'getopt*'	\
-	--exclude 'set[yl].c'
+EXTRACT_AFTER_ARGS=	--exclude 'getopt*'	\
+			--exclude 'set[yl].c'
 
 OPTIONS_DEFINE=	DOCS
 
