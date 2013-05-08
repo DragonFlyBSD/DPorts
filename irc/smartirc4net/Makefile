@@ -1,9 +1,5 @@
-# New ports collection makefile for:	smartirc4net
-# Date created:		2009-08-25
-# Whom:			Romain Tartiere <romain@blogreen.org>
-#
-# $FreeBSD: irc/smartirc4net/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Romain Tartiere <romain@blogreen.org>
+# $FreeBSD: irc/smartirc4net/Makefile 316344 2013-04-23 10:51:39Z bapt $
 
 PORTNAME=	smartirc4net
 PORTVERSION=	0.4.5.1
@@ -17,8 +13,7 @@ BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
 USE_GMAKE=	yes
-USES=	pathfix
+USES=	pathfix pkgconfig
 
 .include <bsd.port.mk>
