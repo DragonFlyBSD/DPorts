@@ -1,8 +1,6 @@
-# New ports collection Makefile for: 	swhplugins
-# Date created:			12 May 2002
-# Whom:				Tilman Linneweh <arved@FreeBSD.org>
+# Created by: Tilman Linneweh <arved@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/swhplugins/Makefile,v 1.49 2013/02/21 02:55:15 svnexp Exp $
+# $FreeBSD: audio/swhplugins/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	swhplugins
 PORTVERSION=	0.4.15
@@ -22,7 +20,7 @@ LIB_DEPENDS=	fftw3f:${PORTSDIR}/math/fftw3-float
 # includes assembler code
 ONLY_FOR_ARCHS=	i386 amd64
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
@@ -38,7 +36,7 @@ SSE_DESC=	use SSE instructions
 
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 LDFLAGS+=	-lintl
 .else
