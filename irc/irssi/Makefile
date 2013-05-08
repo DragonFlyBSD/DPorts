@@ -1,6 +1,4 @@
-#
-# $FreeBSD: irc/irssi/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# $FreeBSD: irc/irssi/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	irssi
 PORTVERSION=	0.8.15
@@ -15,11 +13,10 @@ LIB_DEPENDS=	glib-2:${PORTSDIR}/devel/glib20
 
 CONFLICTS=	irssi-devel-[0-9]* zh-irssi-[0-9]*
 
+USES=		pkgconfig ncurses
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
 USE_GMAKE=	yes
-USE_NCURSES=	yes
 WANT_PERL=	yes
 
 MAN1=		irssi.1
