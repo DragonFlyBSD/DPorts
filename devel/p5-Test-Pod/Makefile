@@ -1,8 +1,8 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: ports/devel/p5-Test-Pod/Makefile,v 1.30 2013/02/16 22:01:50 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Pod/Makefile 317479 2013-05-06 08:19:55Z tobez $
 
 PORTNAME=	Test-Pod
-PORTVERSION=	1.46
+PORTVERSION=	1.48
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DWHEELER
