@@ -1,5 +1,5 @@
 # Created by: Lupe Christoph <lupe@lupe-christoph.de>
-# $FreeBSD: sysutils/munin-node/Makefile 316077 2013-04-18 21:47:37Z flo $
+# $FreeBSD: sysutils/munin-node/Makefile 317610 2013-05-07 14:02:30Z bapt $
 
 PORTNAME=	munin
 PORTVERSION=	${MUNIN_VERSION}
@@ -26,10 +26,12 @@ RUN_DEPENDS=	p5-Cache-Cache>=0:${PORTSDIR}/devel/p5-Cache-Cache \
 
 DISTINFO_FILE=	${MUNIN_DISTINFO}
 EXTRA_PATCHES+=	${MUNIN_PATCHES}
+USES=		shebangfix
 USE_PERL5=	yes
 USE_GMAKE=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
 REINPLACE_ARGS=	-i ""
+SHEBANG_FILES=	node/sbin/munin-node
 
 .include "${.CURDIR}/../munin-common/munin.mk"
 
