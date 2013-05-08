@@ -1,12 +1,9 @@
-# New ports collection makefile for:	snort-rep
-# Date created:			Jul 19, 2001
-# Whom:				Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/security/snort-rep/Makefile,v 1.9 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: security/snort-rep/Makefile 317005 2013-05-01 09:02:50Z stefan $
 
 PORTNAME=	snort-rep
 PORTVERSION=	1.10
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://david.schweikert.ch/software/snort-rep/pub/
 
