@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ssed
-# Date created:		28 May 2002
-# Whom:			verm
-#
-# $FreeBSD: ports/editors/ssed/Makefile,v 1.19 2012/11/17 05:57:18 svnexp Exp $
-#
+# Created by: verm
+# $FreeBSD: editors/ssed/Makefile 317474 2013-05-06 07:01:48Z bapt $
 
 PORTNAME=	sed
 PORTVERSION=	3.62
@@ -20,13 +16,15 @@ CONFIGURE_ARGS=	--program-prefix=s
 
 MAN1=		ssed.1
 
-.if defined(WITHOUT_NLS)
-CONFIGURE_ARGS+=	--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${LOCALBASE}
 PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=	--disable-nls
+PLIST_SUB+=	NLS="@comment "
 .endif
 
 .include <bsd.port.mk>
