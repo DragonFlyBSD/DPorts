@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: ports/databases/qt4-sql/Makefile,v 1.21 2013/02/03 21:42:50 svnexp Exp $
+# $FreeBSD: databases/qt4-sql/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	sql
 DISTVERSION=	${QT4_VERSION}
@@ -30,7 +30,6 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake tools translations \
 		src/3rdparty/clucene src/3rdparty/freetype \
 		src/3rdparty/libjpeg src/3rdparty/libmng src/3rdparty/libpng \
 		src/3rdparty/libtiff src/3rdparty/phonon src/3rdparty/webkit
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
 .for dne in ${DO_NOT_EXTRACT}
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
