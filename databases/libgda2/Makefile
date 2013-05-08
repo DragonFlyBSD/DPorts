@@ -2,7 +2,7 @@
 # Date created:				02 June 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: databases/libgda2/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: databases/libgda2/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/databases/libgda2/Makefile,v 1.44 2008/03/11 04:21:46 mezz Exp $
 #
 
@@ -30,7 +30,7 @@ CONFLICTS=	libgda-0*
 
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack glib20 libxslt referencehack intlhack
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
