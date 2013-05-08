@@ -2,7 +2,7 @@
 # Date created:				15 May 2003
 # Whom:					Oliver Lehmann <oliver@freebsd.org>
 #
-# $FreeBSD: ports/devel/libzvbi/Makefile,v 1.50 2013/02/14 10:22:10 svnexp Exp $
+# $FreeBSD: devel/libzvbi/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	libzvbi
@@ -18,7 +18,7 @@ COMMENT=	Routines to access raw VBI capture devices
 LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png \
 		unicode.0:${PORTSDIR}/devel/libunicode
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack pkgconfig
 GNU_CONFIGURE=	yes
