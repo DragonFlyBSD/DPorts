@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/textproc/redland/Makefile,v 1.45 2012/12/31 01:12:42 svnexp Exp $
+# $FreeBSD: textproc/redland/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	redland
 PORTVERSION=	1.0.16
@@ -16,7 +16,7 @@ USE_AUTOTOOLS=	libltdl
 USE_GNOME=	gnomehack libxml2 lthack
 USE_OPENSSL=	yes
 USE_PERL5_BUILD=	yes
-USE_PKGCONFIG=	both
+USES=		pkgconfig:both
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-raptor=system \
 		--with-threestore=no
