@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/devel/p5-ExtUtils-PkgConfig/Makefile,v 1.21 2013/02/06 15:37:02 svnexp Exp $
+# $FreeBSD: devel/p5-ExtUtils-PkgConfig/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	ExtUtils-PkgConfig
 PORTVERSION=	1.14
@@ -12,7 +12,7 @@ COMMENT=	Simplistic interface to pkg-config
 
 LICENSE=	LGPL3
 
-USE_PKGCONFIG=	both
+USES=		pkgconfig:both
 PERL_CONFIGURE=	yes
 
 MAN3=		ExtUtils::PkgConfig.3
