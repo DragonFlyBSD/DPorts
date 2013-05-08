@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: archivers/rpm/Makefile 315688 2013-04-02 22:14:37Z bapt $
+# $FreeBSD: archivers/rpm/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	rpm
 PORTVERSION=	3.0.6
@@ -26,7 +26,7 @@ MAKE_ENV=	OLD_PO_FILE_INPUT=1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl -liconv"
