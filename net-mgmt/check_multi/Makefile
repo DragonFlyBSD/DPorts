@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/check_multi/Makefile,v 1.6 2012/11/17 06:00:31 svnexp Exp $
+# $FreeBSD: net-mgmt/check_multi/Makefile 317596 2013-05-07 10:00:57Z ehaupt $
 
 PORTNAME=	check_multi
 PORTVERSION=	0.19
@@ -14,15 +14,14 @@ COMMENT=	A multi purpose wrapper plugin for Nagios
 
 LICENSE=	GPLv2
 
+USES=		shebangfix
 USE_PERL5_RUN=	yes
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PLUGIN_DIR=	libexec/nagios
 
-do-configure:
-	${REINPLACE_CMD} -e "s|/usr/bin/perl|${PERL5}|" \
-		${WRKSRC}/check_multi
+SHEBANG_FILES=	check_multi
 
 do-install:
 	-${MKDIR} ${PREFIX}/${PLUGIN_DIR}
