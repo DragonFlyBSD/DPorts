@@ -1,1 +1,1 @@
-USE_GETTEXT=	yes
+USES+=	gettext
