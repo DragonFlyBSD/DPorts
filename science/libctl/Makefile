@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection Makefile for:	libctl
-# Date created:			Apr 4, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: science/libctl/Makefile 314444 2013-03-17 14:15:48Z bdrewery $
-#
+# Created by: ijliao
+# $FreeBSD: science/libctl/Makefile 315805 2013-04-15 17:29:36Z bdrewery $
 
 PORTNAME=	libctl
 PORTVERSION=	3.1
@@ -27,6 +22,10 @@ MAN1=		gen-ctl-io.1
 
 .if ${ARCH} == "sparc64"
 BROKEN=		does not build
+.endif
+
+.if ${ARCH} == i386 && ${OSVERSION} < 901000
+BROKEN=		does not link due to libtool not respecting CC
 .endif
 
 post-install:
