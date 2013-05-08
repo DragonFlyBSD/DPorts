@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: ports/devel/boost-all/Makefile,v 1.5 2013/01/31 13:51:19 svnexp Exp $
+# $FreeBSD: devel/boost-all/Makefile 311308 2013-01-31 13:33:04Z bapt $
 
 PORTNAME=	boost-all
 
