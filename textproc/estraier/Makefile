@@ -2,7 +2,7 @@
 # Date created:		2004-08-28
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/textproc/estraier/Makefile,v 1.29 2012/11/17 06:01:55 svnexp Exp $
+# $FreeBSD: textproc/estraier/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	estraier
@@ -22,7 +22,7 @@ CHASEN_DESC=	Japanese Morphological Analysis Support
 MECAB_DESC=	Part-of-Speech and Morphological Analyzer
 KAKASI_DESC=	Language processing filter/converter
 
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-sysqdbm \
 		--enable-dlfilter \
