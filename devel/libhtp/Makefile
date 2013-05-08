@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/libhtp/Makefile,v 1.9 2012/12/12 18:51:43 svnexp Exp $
+# $FreeBSD: devel/libhtp/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	libhtp
 PORTVERSION=	0.3.0
@@ -16,8 +16,7 @@ GH_COMMIT=	a334539
 USE_AUTOTOOLS=	libtool autoheader aclocal
 ACLOCAL_ARGS=	-Im4
 USE_LDCONFIG=	yes
-USE_GNOME=	pkgconfig gnomehack
-USE_ICONV=	yes
+USES=		pkgconfig pathfix iconv
 
 CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE}
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib \
