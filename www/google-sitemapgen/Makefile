@@ -1,9 +1,5 @@
-# New ports collection makefile for:	google-sitemapgen
-# Date created:	   09 June 2005
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/google-sitemapgen/Makefile,v 1.7 2012/11/17 06:02:34 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/google-sitemapgen/Makefile 316230 2013-04-22 13:27:47Z bapt $
 
 PORTNAME=	google-sitemapgen
 PORTVERSION=	1.5
@@ -11,7 +7,7 @@ CATEGORIES=	www devel
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	sitemap_gen_${PORTVERSION}
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Script to analyze web server and generate Google Sitemap files
 
 PROJECTHOST=	sitemap-generators
