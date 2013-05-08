@@ -1,5 +1,5 @@
 # Created by: Axel Steiner <ast@treibsand.com>
-# $FreeBSD: mail/spmfilter-clamav/Makefile 315130 2013-03-24 15:51:03Z bdrewery $
+# $FreeBSD: mail/spmfilter-clamav/Makefile 316950 2013-04-30 16:37:46Z bdrewery $
 
 PORTNAME=	spmfilter-clamav
 PORTVERSION=	0.1.1
@@ -14,12 +14,11 @@ BUILD_DEPENDS=	spmfilter>=0.4:${PORTSDIR}/mail/spmfilter
 
 RUN_DEPENDS=	spmfilter>=0.4:${PORTSDIR}/mail/spmfilter
 
-USES=		cmake
+USES=		cmake pkgconfig
 CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH="${LOCALBASE}/include" \
 		-DCMAKE_LIBRARY_PATH="${LOCALBASE}/lib"
 
 USE_LDCONFIG=	${PREFIX}/lib/spmfilter
-USE_PKGCONFIG=	build
 
 OPTIONS=	DEBUG	"Enable Debugging"	off
 
