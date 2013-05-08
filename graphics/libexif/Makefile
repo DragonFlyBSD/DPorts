@@ -1,5 +1,5 @@
 # Created by: Peter Schmiedeskamp <pschmied@qwest.net>
-# $FreeBSD: graphics/libexif/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: graphics/libexif/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	libexif
 PORTVERSION=	0.6.21
@@ -11,10 +11,10 @@ COMMENT=	Library to read digital camera file meta-data
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack ltverhack
 USE_GMAKE=	yes
-USE_PKGCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -26,7 +26,7 @@ PORTDOCS=	AUTHORS ChangeLog NEWS README
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ENV+=	am_cv_func_iconv=no
