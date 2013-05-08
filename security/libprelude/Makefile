@@ -1,9 +1,9 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/libprelude/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: security/libprelude/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	libprelude
 PORTVERSION=	1.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://www.prelude-ids.org/attachments/download/241/
 
@@ -24,10 +24,7 @@ CONFIGURE_ARGS=	--localstatedir=/var \
 		--enable-gtk-doc=no \
 		--with-html-dir=${PREFIX}/share/doc
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
-USE_ICONV=	yes
-USE_GETTEXT=	yes
-USES=	pathfix
+USES=	pathfix pkgconfig gettext iconv
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
