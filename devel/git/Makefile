@@ -1,12 +1,8 @@
-# Ports collection makefile for:	git
-# Date created:				7 Feb 2006
-# Whom:					Eric Anholt
-#
-# $FreeBSD: devel/git/Makefile 315821 2013-04-16 15:30:07Z wxs $
-#
+# Created by: Eric Anholt
+# $FreeBSD: devel/git/Makefile 317509 2013-05-06 11:35:55Z wxs $
 
 PORTNAME=	git
-PORTVERSION=	1.8.2.1
+PORTVERSION=	1.8.2.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
@@ -217,7 +213,7 @@ ETCSHELLS_DESC=	Modify /etc/shells
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
@@ -259,7 +255,7 @@ PLIST_SUB+=	PERLSUB="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=	yes
+USES+=		iconv
 MAKE_ENV+=	NEEDS_LIBICONV=yes \
 		ICONVDIR=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-iconv=${LOCALBASE}
