@@ -1,5 +1,5 @@
 # Created by: Thaddeus Covert <tcovert@grimmy.sahuagin.net>
-# $FreeBSD: devel/log4cxx/Makefile 314777 2013-03-20 23:32:00Z rene $
+# $FreeBSD: devel/log4cxx/Makefile 317214 2013-05-03 15:12:02Z bapt $
 
 PORTNAME=	log4cxx
 PORTVERSION=	0.10.0
@@ -13,6 +13,10 @@ MAINTAINER=	rene@FreeBSD.org
 COMMENT=	Log4cxx is a port to C++ of the Log4j project
 
 LICENSE=	AL2
+
+.if defined(.PARSEDIR)
+USE_GMAKE=	yes
+.endif
 
 LIB_DEPENDS=	apr-1:${PORTSDIR}/devel/apr1
 
