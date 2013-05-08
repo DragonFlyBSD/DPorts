@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: irc/irssi-devel/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: irc/irssi-devel/Makefile 316344 2013-04-23 10:51:39Z bapt $
 
 PORTNAME=	irssi
 PORTVERSION=	20120624
@@ -16,8 +16,8 @@ LIB_DEPENDS=	glib-2.0:${PORTSDIR}/devel/glib20
 CONFLICTS=	irssi-0.8*
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 WANT_PERL=	yes
 MAKE_JOBS_SAFE=	yes
 
