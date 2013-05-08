@@ -2,7 +2,7 @@
 # Date created:				25 Dec 2004
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/net/libmms/Makefile,v 1.22 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/libmms/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	libmms
@@ -13,9 +13,8 @@ MASTER_SITES=	SF
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Library for parsing mms:// and mmsh:// type network streams
 
-USE_GNOME=	gnomehack pkgconfig glib20
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USE_GNOME=	pkgconfig glib20
+USES=		pathfix gettext iconv
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
