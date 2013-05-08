@@ -1,8 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: net/exabgp/Makefile 315470 2013-03-28 13:59:56Z zi $
+# $FreeBSD: net/exabgp/Makefile 316282 2013-04-22 22:16:28Z zi $
 
 PORTNAME=	exabgp
-PORTVERSION=	3.1.9
+PORTVERSION=	3.1.10
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 		http://mirrors.rit.edu/zi/
