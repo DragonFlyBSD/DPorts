@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:   dotconf
-# Date created:                Jan 28, 2001
-# Whom:                        Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: devel/dotconf/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: devel/dotconf/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	dotconf
 PORTVERSION=	1.3
@@ -16,8 +11,7 @@ COMMENT=	A simple, powerful configuration-file parser
 
 LICENSE=	LGPL21
 
-USES=	pathfix
-USE_PKGCONFIG=	yes
+USES=	pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
