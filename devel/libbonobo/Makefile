@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/libbonobo/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/libbonobo/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/devel/libbonobo/Makefile,v 1.84 2010/09/26 20:57:33 kwm Exp $
 
 PORTNAME=	libbonobo
@@ -18,14 +18,12 @@ USE_BZIP2=	yes
 
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
-USES=		bison pathfix
+USES=		bison pathfix pkgconfig gettext
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes
 USE_GNOME=	intlhack libxml2 orbit2 referencehack
-USE_PKGCONFIG=	build
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 CPPFLAGS+=	-I${LOCALBASE}/include
