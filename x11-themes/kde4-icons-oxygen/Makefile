@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/kde4-icons-oxygen/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: x11-themes/kde4-icons-oxygen/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	oxygen
 PORTVERSION=	${KDE4_VERSION}
@@ -16,6 +16,6 @@ USE_XZ=		yes
 USE_KDE4=	kdeprefix kdehier
 USES=		cmake:outsource
 INSTALL_TARGET=	install
-EXTRACT_AFTER_ARGS+=	| ${TAR} -xf - --exclude '${DISTNAME}/scalable'
+EXTRACT_AFTER_ARGS=	--exclude '${DISTNAME}/scalable'
 
 .include <bsd.port.mk>
