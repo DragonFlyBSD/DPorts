@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/msyslog/files/msyslogd.in,v 1.2 2012/11/17 06:01:39 svnexp Exp $
+# $FreeBSD: sysutils/msyslog/files/msyslogd.in 302141 2012-08-05 23:19:36Z dougb $
 #
 
 # PROVIDE: syslogd
