@@ -1,8 +1,9 @@
 # Created by: David Barksdale <amatus@gnu.org>
-# $FreeBSD: ports/www/libmicrohttpd/Makefile,v 1.19 2013/02/07 01:57:31 svnexp Exp $
+# $FreeBSD: www/libmicrohttpd/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	libmicrohttpd
-PORTVERSION=	0.9.25
+PORTVERSION=	0.9.26
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -13,6 +14,7 @@ COMMENT=	C library for embedding HTTP server functionality
 LICENSE=	LGPL21
 
 OPTIONS_DEFINE=	GNUTLS
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTLS}
