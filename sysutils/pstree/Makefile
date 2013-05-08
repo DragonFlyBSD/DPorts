@@ -1,14 +1,13 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: sysutils/pstree/Makefile 313114 2013-02-28 17:05:01Z culot $
+# $FreeBSD: sysutils/pstree/Makefile 317275 2013-05-03 21:59:14Z jgh $
 
 PORTNAME=	pstree
-PORTVERSION=	2.35
+PORTVERSION=	2.36
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.thp.uni-due.de/pstree/ \
-		LOCAL/avl
-DISTNAME=	${PORTNAME}
+MASTER_SITES=	ftp://ftp.thp.uni-due.de/pub/source/ \
+		LOCAL/jgh/sysutils/${PORTNAME}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	List processes as a tree
 
 NO_WRKSUBDIR=	yes
