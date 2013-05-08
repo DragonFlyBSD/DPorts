@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libvisual
-# Date created:		23 oktober 2004
-# Whom:			Koop Mast <kwm@FreeBSD.org>
-#
-# $FreeBSD: graphics/libvisual/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD: graphics/libvisual/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 # WARNING: when updating this port check if the ports that use libvisual
 # can work with it. Backwards compatibility is known to be broken in the past.
@@ -17,10 +13,9 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Abstraction library that sits between apps and visual plugin
 
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 CFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 
