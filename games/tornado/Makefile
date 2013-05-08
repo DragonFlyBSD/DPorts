@@ -2,7 +2,7 @@
 # Date created:                         1 July 2001
 # Whom:                                 minter
 #
-# $FreeBSD: ports/games/tornado/Makefile,v 1.11 2012/11/17 05:57:54 svnexp Exp $
+# $FreeBSD: games/tornado/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	tornado
@@ -17,7 +17,7 @@ COMMENT=	A curses-based game of weather destruction
 MAN6=		tornado.6
 MANLANG=	"" de fr it nl no ru
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 
 .include <bsd.port.mk>
