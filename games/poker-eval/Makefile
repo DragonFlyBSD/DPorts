@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection Makefile for:	poker-eval
-# Date created:			Dec 14, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/games/poker-eval/Makefile,v 1.10 2012/11/17 05:57:49 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: games/poker-eval/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	poker-eval
 PORTVERSION=	0.138
@@ -19,9 +14,9 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 post-patch:
