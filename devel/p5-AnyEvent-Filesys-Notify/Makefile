@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-AnyEvent-Filesys-Notify/Makefile,v 1.14 2013/02/16 10:30:45 svnexp Exp $
+# $FreeBSD: devel/p5-AnyEvent-Filesys-Notify/Makefile 317451 2013-05-06 00:42:27Z kuriyama $
 
 PORTNAME=	AnyEvent-Filesys-Notify
-PORTVERSION=	0.21
+PORTVERSION=	0.22
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
