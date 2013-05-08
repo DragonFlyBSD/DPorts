@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: ports/textproc/freexl/Makefile,v 1.5 2012/12/26 19:37:43 svnexp Exp $
+# $FreeBSD: textproc/freexl/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	freexl
 DISTVERSION=	1.0.0e
@@ -11,7 +11,7 @@ COMMENT=	Library to extract valid data from within an Excel (.xls) spreadsheet
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -liconv
