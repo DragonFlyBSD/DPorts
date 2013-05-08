@@ -1,9 +1,5 @@
-# New ports collection makefile for:   m17n-contrib
-# Date created:                5 October 2008
-# Whom:                        Nikola Lecic <nikola.lecic@anthesphoria.net>
-#
-# $FreeBSD: ports/textproc/m17n-contrib/Makefile,v 1.8 2012/11/17 06:02:02 svnexp Exp $
-#
+# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
+# $FreeBSD: textproc/m17n-contrib/Makefile 317494 2013-05-06 09:26:23Z bapt $
 
 PORTNAME=	m17n-contrib
 PORTVERSION=	1.1.13
@@ -20,8 +16,10 @@ RUN_DEPENDS=	m17n-db>=1.6.3:${PORTSDIR}/devel/m17n-db
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
