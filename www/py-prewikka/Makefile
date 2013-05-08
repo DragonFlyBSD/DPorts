@@ -1,5 +1,5 @@
 # Created by: Robin Gruyters <r.gruyters@yirdis.nl>
-# $FreeBSD: www/py-prewikka/Makefile 308968 2012-12-15 22:22:37Z pawel $
+# $FreeBSD: www/py-prewikka/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	prewikka
 PORTVERSION=	1.0.1p1
@@ -20,7 +20,7 @@ USE_PYDISTUTILS=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 PLIST_SUB+=		NLS="@comment "
