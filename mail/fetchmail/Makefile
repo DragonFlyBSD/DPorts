@@ -1,5 +1,5 @@
 # Created by: Ville Eerola <ve@sci.fi>
-# $FreeBSD: mail/fetchmail/Makefile 315268 2013-03-26 08:56:28Z mandree $
+# $FreeBSD: mail/fetchmail/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 # NOTE:  The fetchmailconf program (an interactive program for
 # writing .fetchmailrc files) requires Python, Tk, X11, etc.
@@ -8,7 +8,7 @@
 # want fetchmailconf to work, define the X11 option.
 
 PORTNAME=	fetchmail
-PORTVERSION=	6.3.25
+PORTVERSION=	6.3.26
 CATEGORIES=	mail ipv6
 MASTER_SITES=	SF/${PORTNAME}/branch_6.3/ \
 		http://mandree.home.pages.de/${PORTNAME}/
@@ -69,7 +69,7 @@ PLIST_SUB+=	X11="@comment " NOX11=""
 .if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
 .else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
