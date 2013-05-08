@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libfixbuf
-# Date created:		2008-04-13
-# Whom:			David Thiel <lx@redundancy.redundancy.org>
-#
-# $FreeBSD: net/libfixbuf/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: David Thiel <lx@redundancy.redundancy.org>
+# $FreeBSD: net/libfixbuf/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	libfixbuf
 PORTVERSION=	1.0.2
@@ -15,8 +11,8 @@ MAINTAINER=	lx@FreeBSD.org
 COMMENT=	Library for using the IP Flow Information Export protocol
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 
 post-patch:
