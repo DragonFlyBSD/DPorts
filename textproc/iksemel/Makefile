@@ -1,9 +1,5 @@
-# New ports collection makefile for:	iksemel
-# Date created:			24 April 2006
-# Whom:				trasz
-#
-# $FreeBSD: ports/textproc/iksemel/Makefile,v 1.26 2013/02/05 16:54:26 svnexp Exp $
-#
+# Created by: trasz
+# $FreeBSD: textproc/iksemel/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	iksemel
 PORTVERSION=	1.4
@@ -22,11 +18,9 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 INFO=	iksemel
-
-.include <bsd.port.pre.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|@setfilename iksemel|@setfilename iksemel.info|' \
@@ -34,4 +28,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|pkgconfigdir=$$(libdir)/pkgconfig|pkgconfigdir=$${prefix}/libdata/pkgconfig|' \
 	    ${WRKSRC}/Makefile.am
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
