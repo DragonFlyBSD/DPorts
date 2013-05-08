@@ -1,7 +1,7 @@
-# $FreeBSD: japanese/ajaxzip2-data/Makefile 313600 2013-03-07 17:08:13Z miwi $
+# $FreeBSD: japanese/ajaxzip2-data/Makefile 317616 2013-05-07 14:33:14Z kuriyama $
 
 PORTNAME=	ajaxzip2
-PORTVERSION=	20130228
+PORTVERSION=	20130430
 CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	kuriyama
