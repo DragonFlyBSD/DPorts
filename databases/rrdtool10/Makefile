@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: databases/rrdtool10/Makefile 315637 2013-03-31 14:38:39Z miwi $
+# $FreeBSD: databases/rrdtool10/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.0.50
@@ -16,7 +16,7 @@ MAKE_ENV=	PERL=${PERL}
 CONFLICTS=	rrdtool-1.2*
 LATEST_LINK=	rrdtool10
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-shared --enable-local-zlib \
