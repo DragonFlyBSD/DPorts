@@ -1,5 +1,5 @@
 # Created by: Rene Ladan <rene@FreeBSD.org>
-# $FreeBSD: ports/devel/ros/Makefile,v 1.20 2013/01/31 14:01:27 svnexp Exp $
+# $FreeBSD: devel/ros/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	ros
 PORTVERSION=	1.4.10
@@ -33,7 +33,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/yaml/__init__.py:${PORTSDIR}/devel/py-yaml \
 USE_PYTHON=	yes
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 
 # rosmake does its own threading
 MAKE_JOBS_UNSAFE=	yes
