@@ -1,5 +1,5 @@
 # Created by: Jochem Kossen <j.kossen@home.nl>
-# $FreeBSD: audio/cplay/Makefile 313391 2013-03-04 03:35:26Z danfe $
+# $FreeBSD: audio/cplay/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	cplay
 PORTVERSION=	1.49
@@ -12,7 +12,7 @@ COMMENT=	Curses-based front-end for various audio players
 
 LICENSE=	GPLv2
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 
