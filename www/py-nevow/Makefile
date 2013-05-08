@@ -2,7 +2,7 @@
 # Date created:		2005-04-16
 # Whom:			Choe, Cheng-Dae
 #
-# $FreeBSD: ports/www/py-nevow/Makefile,v 1.22 2012/11/17 06:03:00 svnexp Exp $
+# $FreeBSD: www/py-nevow/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	nevow
@@ -20,7 +20,7 @@ COMMENT=	A web application templating system, based on the Twisted Woven
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 USE_TWISTED=	web
-USE_GETTEXT=	yes
+USES=		gettext
 PYDISTUTILS_PKGNAME=	Nevow
 
 SUB_FILES=	pkg-message
