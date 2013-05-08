@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/games/ldmud/files/ldmud.in,v 1.3 2012/11/17 05:57:43 svnexp Exp $
+# $FreeBSD: games/ldmud/files/ldmud.in 300896 2012-07-14 13:54:48Z beat $
 #
 # PROVIDE: ldmud
 # REQUIRE: LOGIN

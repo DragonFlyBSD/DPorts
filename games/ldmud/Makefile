@@ -2,7 +2,7 @@
 # Date created:		13 August 2003
 # Whom:			glewis@FreeBSD.org
 #
-# $FreeBSD: ports/games/ldmud/Makefile,v 1.15 2012/12/10 19:24:01 svnexp Exp $
+# $FreeBSD: games/ldmud/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	ldmud
@@ -20,7 +20,7 @@ LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
-USE_ICONV=	yes
+USES=		iconv
 CONFIGURE_ARGS+=--libdir=${DATADIR} \
 		--bindir=${PREFIX}/sbin \
 		--enable-use-pcre \
