@@ -1,9 +1,5 @@
-# New ports collection makefile for:   abcselect
-# Date created:			11 March 2002
-# Whom:				Sue Blake <sue@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/abcselect/Makefile,v 1.5 2012/11/17 05:54:27 svnexp Exp $
-#
+# Created by: Sue Blake <sue@FreeBSD.org>
+# $FreeBSD: audio/abcselect/Makefile 317556 2013-05-06 22:24:39Z bapt $
 
 PORTNAME=	abcselect
 PORTVERSION=	1.5
@@ -14,14 +10,14 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extract parts, movements, etc from abc music files
 
-USE_PERL5=	yes
+USES=		shebangfix
+USE_PERL5_RUN=	yes
 NO_BUILD=	yes
+
+SHEBANG_FILES=	abcselect
 
 MAN1=	abcselect.1
 PLIST_FILES=	bin/abcselect
-
-post-patch:
-	@${PERL} -pi -e "s,/usr/bin/perl,${SETENV} perl,g" ${WRKSRC}/abcselect
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/abcselect ${PREFIX}/bin
