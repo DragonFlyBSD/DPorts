@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/sysutils/runit/pkg-plist,v 1.10 2012/11/17 06:01:44 svnexp Exp $
+@comment $FreeBSD: sysutils/runit/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 @unexec cmp -s %D/%%ETCDIR%%/1 %D/%%ETCDIR%%/1.sample && rm -f %D/%%ETCDIR%%/1
 %%ETCDIR%%/1.sample
 @exec [ ! -f %D/%%ETCDIR%%/1 ] && cp -p %D/%F %B/1

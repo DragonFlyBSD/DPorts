@@ -1,4 +1,4 @@
-$FreeBSD: ports/sysutils/runit/files/patch-utmpx,v 1.2 2012/11/17 06:01:44 svnexp Exp $
+$FreeBSD: sysutils/runit/files/patch-utmpx 300897 2012-07-14 14:29:18Z beat $
 
 Since init lacks this code in FreeBSD (utx-logout is performed in pam_lastlog)
 we will simply make utmpset.c a noop if utmpx is present.
