@@ -1,9 +1,5 @@
-# New ports collection makefile for:	FreeSBIE
-# Date created:		27 March 2003
-# Whom:			Thomas E. Zander <riggs@rrr.de>
-#
-# $FreeBSD: ports/sysutils/freesbie/Makefile,v 1.16 2012/11/17 06:01:31 svnexp Exp $
-#
+# Created by: Thomas E. Zander <riggs@rrr.de>
+# $FreeBSD: sysutils/freesbie/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	freesbie
 PORTVERSION=	2.0.20070710
@@ -16,8 +12,9 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/2.0.//}
 MAINTAINER=	riggs@rrr.de
 COMMENT=	Yet another cool answer to the system-on-cd question
 
+RUN_DEPENDS=	cdrecord:${PORTSDIR}/sysutils/cdrtools
+
 USE_BZIP2=	yes
-USE_CDRTOOLS=	yes
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}2
