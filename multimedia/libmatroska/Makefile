@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libmatroska
-# Date created:		Mon May 19 08:29:44 UTC 2003
-# Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/libmatroska/Makefile,v 1.30 2012/11/17 05:59:50 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: multimedia/libmatroska/Makefile 317560 2013-05-06 22:48:45Z ehaupt $
 
 PORTNAME=	libmatroska
-PORTVERSION=	1.3.0
+PORTVERSION=	1.4.0
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://dl.matroska.org/downloads/libmatroska/ \
 		http://www.bunkus.org/videotools/mkvtoolnix/sources/
@@ -14,11 +10,14 @@ MASTER_SITES=	http://dl.matroska.org/downloads/libmatroska/ \
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Extensible Multimedia Container Format
 
-BUILD_DEPENDS=	libebml>=1.2.1:${PORTSDIR}/textproc/libebml
-LIB_DEPENDS=	ebml.3:${PORTSDIR}/textproc/libebml
+LICENSE=	LGPL21
+
+BUILD_DEPENDS=	libebml>=1.3.0:${PORTSDIR}/textproc/libebml
+LIB_DEPENDS=	ebml.4:${PORTSDIR}/textproc/libebml
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_DOS2UNIX=	make/linux/Makefile
 BUILD_WRKSRC=	${WRKSRC}/make/linux
 INSTALL_WRKSRC=	${WRKSRC}/make/linux
 USE_LDCONFIG=	yes
