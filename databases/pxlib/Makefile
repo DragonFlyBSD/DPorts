@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: databases/pxlib/Makefile 314856 2013-03-21 17:43:46Z bapt $
+# $FreeBSD: databases/pxlib/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	pxlib
 PORTVERSION=	0.6.3
@@ -14,8 +14,7 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
