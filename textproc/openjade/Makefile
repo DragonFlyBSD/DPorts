@@ -2,7 +2,7 @@
 # Date created:		May 19, 2000
 # Whom:			kuriyama
 #
-# $FreeBSD: ports/textproc/openjade/Makefile,v 1.56 2012/11/17 06:02:03 svnexp Exp $
+# $FreeBSD: textproc/openjade/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	openjade
@@ -22,7 +22,7 @@ USE_GCC=	any
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_PERL5=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-default-catalog=${PREFIX}/share/sgml/catalog \
 		--datadir=${DATADIR}

@@ -1,4 +1,4 @@
-$FreeBSD: ports/textproc/openjade/files/patch-TeXFOTBuilder.cxx,v 1.2 2012/11/17 06:02:03 svnexp Exp $
+$FreeBSD: textproc/openjade/files/patch-TeXFOTBuilder.cxx 305336 2012-10-06 05:06:25Z kuriyama $
 
 --- jade/TeXFOTBuilder.cxx.orig	2011-09-24 14:17:02.000000000 +0000
 +++ jade/TeXFOTBuilder.cxx	2011-09-24 14:19:42.000000000 +0000

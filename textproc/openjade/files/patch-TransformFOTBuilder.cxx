@@ -1,4 +1,4 @@
-$FreeBSD: ports/textproc/openjade/files/patch-TransformFOTBuilder.cxx,v 1.2 2012/11/17 06:02:03 svnexp Exp $
+$FreeBSD: textproc/openjade/files/patch-TransformFOTBuilder.cxx 305336 2012-10-06 05:06:25Z kuriyama $
 
 --- jade/TransformFOTBuilder.cxx.orig	2011-09-24 14:20:28.000000000 +0000
 +++ jade/TransformFOTBuilder.cxx	2011-09-24 14:22:32.000000000 +0000
