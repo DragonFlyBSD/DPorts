@@ -2,14 +2,14 @@
 # Date created:		6 August 2001
 # Whom:	      		Johann Visagie <wjv@FreeBSD.org>
 #
-# $FreeBSD: ports/biology/migrate/Makefile,v 1.28 2012/11/17 05:54:52 svnexp Exp $
+# $FreeBSD: biology/migrate/Makefile 316568 2013-04-26 04:03:54Z gjb $
 #
 
 PORTNAME=	migrate
 PORTVERSION=	3.1.6
 CATEGORIES=	biology
 MASTER_SITES=	http://people.sc.fsu.edu/~beerli/popgen/currentversion/ \
-		http://www.glenbarber.us/ports/${CATEGORIES}/${PORTNAME}/
+		https://www.glenbarber.us/ports/${CATEGORIES}/${PORTNAME}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
 
 MAINTAINER=	wen@FreeBSD.org
