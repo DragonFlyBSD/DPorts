@@ -2,7 +2,7 @@
 # Date created:				29 October 2002
 # Whom:					John Nielsen <john@jnielsen.net>
 #
-# $FreeBSD: ports/mail/hotwayd/Makefile,v 1.15 2012/12/10 15:19:15 svnexp Exp $
+# $FreeBSD: mail/hotwayd/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	hotwayd
@@ -21,7 +21,7 @@ LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2 \
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 MAN1=		hotwayd.1 \
 		hotsmtpd.1
