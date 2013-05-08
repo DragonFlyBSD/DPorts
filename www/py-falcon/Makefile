@@ -1,9 +1,9 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: www/py-falcon/Makefile 314148 2013-03-14 11:38:15Z miwi $
+# $FreeBSD: www/py-falcon/Makefile 316575 2013-04-26 06:47:24Z miwi $
 #
 
 PORTNAME=	falcon
-PORTVERSION=	0.1.1
+PORTVERSION=	0.1.4
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
