@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: ports/net-im/jabberd/Makefile,v 1.92 2013/01/22 08:56:26 svnexp Exp $
+# $FreeBSD: net-im/jabberd/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	jabberd
 PORTVERSION=	2.2.17
@@ -30,7 +30,7 @@ GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_PERL5_RUN=	yes
 USE_OPENSSL=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_RC_SUBR=	jabberd
 USE_LDCONFIG=	${PREFIX}/lib/jabberd
 CONFIGURE_ARGS+=	--localstatedir=/var \
