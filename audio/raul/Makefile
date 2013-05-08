@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/raul/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: audio/raul/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
 
 PORTNAME=	raul
 PORTVERSION=	0.8.0
@@ -15,9 +15,9 @@ LICENSE_COMB=	dual
 
 LIB_DEPENDS=	boost_date_time:${PORTSDIR}/devel/boost-libs
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_PYTHON_BUILD=yes
 USE_LDCONFIG=	yes
 
@@ -29,9 +29,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 WAF_VERBOSE=	--verbose
 .endif
 
-.if defined(MAKE_JOBS_NUMBER)
 WAF_JOBS=	--jobs=${MAKE_JOBS_NUMBER}
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e \
