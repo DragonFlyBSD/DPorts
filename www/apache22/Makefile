@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22/Makefile 315333 2013-03-26 21:31:27Z ohauer $
+# $FreeBSD: www/apache22/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	apache22
 PORTVERSION=	2.2.24
@@ -25,7 +25,7 @@ CONFLICTS_INSTALL=	caudium14-1.* \
 
 USE_APACHE=	common22
 USE_BZIP2=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_AUTOTOOLS=	autoconf libtool
 USE_PERL5=	yes
 USE_RC_SUBR=	apache22 htcacheclean
