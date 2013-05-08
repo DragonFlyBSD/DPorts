@@ -1,9 +1,5 @@
-# New ports collection makefile for: tuning-primer
-# Date created:		2009-11-18
-# Whom:			Joe Horn <joehorn@gmail.com>
-#
-# $FreeBSD: ports/databases/tuning-primer/Makefile,v 1.8 2012/11/17 05:55:25 svnexp Exp $
-#
+# Created by: Joe Horn <joehorn@gmail.com>
+# $FreeBSD: databases/tuning-primer/Makefile 317379 2013-05-04 22:14:42Z flo $
 
 PORTNAME=	tuning-primer
 PORTVERSION=	1.6.r1
