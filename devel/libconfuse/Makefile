@@ -2,7 +2,7 @@
 # Date created:				18 September 2004
 # Whom:					Juraj Lutter <otis@sk.freebsd.org>
 #
-# $FreeBSD: ports/devel/libconfuse/Makefile,v 1.11 2012/11/17 05:55:53 svnexp Exp $
+# $FreeBSD: devel/libconfuse/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	libconfuse
@@ -19,10 +19,9 @@ COMMENT=	Configuration file parsing library
 LIB_DEPENDS+=	${LOCALBASE}/lib/libcheck.a:${PORTSDIR}/devel/libcheck
 .endif
 
-USE_ICONV=	yes
+USES=	iconv pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig
 CONFIGURE_ARGS+=	--disable-nls
 CFLAGS+=	-I${WRKSRC}/src
 .if defined(WITH_CHECK)
