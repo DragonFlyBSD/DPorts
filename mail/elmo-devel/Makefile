@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/mail/elmo-devel/Makefile,v 1.30 2013/01/27 06:41:39 svnexp Exp $
+# $FreeBSD: mail/elmo-devel/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	elmo
 PORTVERSION=	1.3.2
@@ -14,7 +14,7 @@ COMMENT=	Receive, filter, read, compose, and send mail at the text console
 CONFLICTS=	elmo-[0-9]*
 
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_OPENSSL=	yes
 USE_PERL5_RUN=	yes
 
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .else
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
 .endif
 
 .include <bsd.port.pre.mk>
