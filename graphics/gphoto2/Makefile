@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: ports/graphics/gphoto2/Makefile,v 1.70 2012/12/30 06:25:19 svnexp Exp $
+# $FreeBSD: graphics/gphoto2/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gphoto2
 PORTVERSION=	2.4.14
@@ -12,9 +12,9 @@ COMMENT=	A command-line frontend to libgphoto2
 LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt \
 		gphoto2:${PORTSDIR}/graphics/libgphoto2
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-cdk
 MAKE_JOBS_SAFE=	yes
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=--without-aalib --without-jpeg
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
