@@ -1,5 +1,5 @@
 # Created by: Glenn Trewitt <glenn@trewitt.org>
-# $FreeBSD: textproc/htmldoc/Makefile 314780 2013-03-21 00:04:42Z jgh $
+# $FreeBSD: textproc/htmldoc/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	htmldoc
 PORTVERSION=	1.8.27
@@ -27,7 +27,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-localjpeg --enable-localzlib --enable-localpng
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 EXCLUDE=	png jpeg zlib htmldoc/md5* htmldoc/rc4* htmldoc/snprintf*
-EXTRACT_AFTER_ARGS=| ${TAR} -xf - ${EXCLUDE:S,^,--exclude ,}
+EXTRACT_AFTER_ARGS=${EXCLUDE:S,^,--exclude ,}
 
 MAN1=	htmldoc.1
 post-patch:
