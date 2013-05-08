@@ -1,8 +1,8 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: ports/chinese/chiconv/Makefile,v 1.2 2012/11/17 05:54:56 svnexp Exp $
+# $FreeBSD: chinese/chiconv/Makefile 317060 2013-05-01 23:14:22Z bdrewery $
 
 PORTNAME=	chiconv
-PORTVERSION=	1.0
+PORTVERSION=	10.0
 CATEGORIES=	chinese converters
 DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${PORTVERSION}-0-g${GH_COMMIT}
 
@@ -15,7 +15,7 @@ LIB_DEPENDS=	bsdconv:${PORTSDIR}/converters/bsdconv
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	buganini
-GH_COMMIT=	046010f
+GH_COMMIT=	6f4a7bf
 
 MAKE_ARGS=	PREFIX=${PREFIX}
 
