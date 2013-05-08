@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hardlink
-# Date created:				14 January 2011
-# Whom:					Douglas Thrift
-#
-# $FreeBSD: ports/sysutils/hardlink/Makefile,v 1.6 2012/11/17 06:01:34 svnexp Exp $
-#
+# Created by: Douglas Thrift
+# $FreeBSD: sysutils/hardlink/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	hardlink
 PORTVERSION=	0.2.0
@@ -17,7 +13,7 @@ COMMENT=	Replace file copies using hardlinks
 
 LICENSE=	MIT
 
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 
 MAN1=		hardlink.1
 PLIST_FILES=	bin/hardlink
