@@ -1,8 +1,9 @@
 # Created by: Tim Vanderhoek <hoek@FreeBSD.org>
-# $FreeBSD: ports/devel/cc65/Makefile,v 1.40 2012/12/01 02:35:54 svnexp Exp $
+# $FreeBSD: devel/cc65/Makefile 317605 2013-05-07 13:12:31Z bapt $
 
 PORTNAME=	cc65
 PORTVERSION=	2.13.3
+PORTREVISION=	1
 DISTVERSIONPREFIX=	sources-
 CATEGORIES=	devel
 MASTER_SITES=	http://bj.spline.de/cc65/ \
@@ -14,11 +15,15 @@ COMMENT=	Cross-compiler for 6502-based systems, includes 65816 assembler
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+USES=		shebangfix
 USE_BZIP2=	yes
 USE_PERL5_BUILD=yes
 USE_GMAKE=	yes
 MAKEFILE=	${WRKSRC}/make/gcc.mak
 MAKE_JOBS_UNSAFE=yes
+SHEBANG_FILES=	src/ca65html/ca65html \
+		src/ca65/macpack/cvt-mac.pl \
+		src/ld65/cfg/cvt-cfg.pl
 
 SUB_FILES=	pkg-message
 
