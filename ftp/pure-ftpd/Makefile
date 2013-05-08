@@ -1,5 +1,5 @@
 # Created by: Frank DENIS
-# $FreeBSD: ports/ftp/pure-ftpd/Makefile,v 1.86 2012/12/30 00:46:54 svnexp Exp $
+# $FreeBSD: ftp/pure-ftpd/Makefile 317534 2013-05-06 17:57:36Z sunpoet $
 
 PORTNAME=	pure-ftpd
 PORTVERSION=	1.0.36
@@ -93,9 +93,8 @@ CONFIGURE_ARGS+=	--with-throttling
 .if ${PORT_OPTIONS:MTLS}
 CONFIGURE_ARGS+=	--with-tls
 # different certificate file location?
-. if ${PORT_OPTIONS:MCERTFILE}
-CONFIGURE_ARGS+=	--with-certfile=${WITH_CERTFILE}
-. endif
+CERTFILE?=      /etc/ssl/private/pure-ftpd.pem
+CONFIGURE_ARGS+=	--with-certfile=${CERTFILE}
 .endif
 
 # if mysql or ldap are disabled, enable pam
@@ -110,7 +109,7 @@ CONFIGURE_ARGS+=	--with-uploadscript
 
 # RFC 2640 charset conversion requested?
 .if ${PORT_OPTIONS:MUTF8}
-USE_ICONV=	YES
+USES+=			iconv
 CONFIGURE_ARGS+=	--with-rfc2640
 .endif
 
@@ -158,7 +157,7 @@ CONTRIB=	xml_python_processors.txt pure-stat.pl pure-vpopauth.pl
 
 pre-fetch:
 	@${ECHO_MSG} "You can use the following additional options:"
-	@${ECHO_MSG} "WITH_CERTFILE=/path   - Set different location of certificate file for TLS"
+	@${ECHO_MSG} "CERTFILE=/path        - Custom location of certificate file for TLS"
 	@${ECHO_MSG} "WITH_LANG=lang        - Enable compilation of language support, lang is one of"
 	@${ECHO_MSG} "  english, german, romanian, french, french-funny, polish, spanish,"
 	@${ECHO_MSG} "  danish, dutch, italian, brazilian-portuguese, slovak, korean, swedish,"
@@ -167,8 +166,7 @@ pre-fetch:
 	@${ECHO_MSG} ""
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|$${exec_prefix}|${PREFIX}|g' \
-		${WRKSRC}/configuration-file/pure-config.pl.in
+	@${REINPLACE_CMD} -e 's|@PERL@|${PERL}|; s|$${exec_prefix}|${PREFIX}|g' ${WRKSRC}/configuration-file/pure-config.pl.in
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/pureftpd-ldap.conf ${PREFIX}/etc/pureftpd-ldap.conf.sample
