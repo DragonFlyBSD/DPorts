@@ -1,8 +1,8 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: ports/converters/py-bsdconv/Makefile,v 1.18 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/py-bsdconv/Makefile 317062 2013-05-01 23:15:54Z bdrewery $
 
 PORTNAME=	bsdconv
-PORTVERSION=	9.0
+PORTVERSION=	10.0.0
 CATEGORIES=	converters python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${PORTVERSION}-0-g${GH_COMMIT}
@@ -16,8 +16,8 @@ LIB_DEPENDS=	bsdconv:${PORTSDIR}/converters/bsdconv
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	buganini
+GH_COMMIT=	e28674b
 GH_PROJECT=	python-${PORTNAME}
-GH_COMMIT=	2fcf39c
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
