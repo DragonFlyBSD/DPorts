@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: net/mosh/Makefile 315376 2013-03-27 12:16:44Z zi $
+# $FreeBSD: net/mosh/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	mosh
 PORTVERSION=	1.2.4
@@ -20,7 +20,7 @@ CONFIGURE_ARGS=	--with-utempter
 CONFIGURE_ENV+=	OPENSSL_CFLAGS="-I${OPENSSLINC}" OPENSSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto"
 INSTALL_TARGET=	install-strip
 USE_OPENSSL=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 LATEST_LINK=	mosh-term
 
