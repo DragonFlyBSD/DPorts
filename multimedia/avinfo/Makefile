@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/avinfo/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: multimedia/avinfo/Makefile 316486 2013-04-25 00:27:28Z amdmi3 $
 
 PORTNAME=	avinfo
 PORTVERSION=	1.0.a15
@@ -25,6 +25,8 @@ MAN1=		avinfo.1
 post-patch:
 	@${REINPLACE_CMD} -e '/^CC=/ d; /^CFLAGS=/ d; /^PREFIX=/ d' \
 		${WRKSRC}/config.mk
+	@${REINPLACE_CMD} -e '/BISON.*-d/ s|$$| \&\& ${REINPLACE_CMD} -e "/int yyparse (void)/ d" ass.tab.h|' \
+		${WRKSRC}/src/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/avinfo ${PREFIX}/bin/
