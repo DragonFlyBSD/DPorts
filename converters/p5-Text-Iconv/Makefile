@@ -2,7 +2,7 @@
 # Date created:		26 Dec 2000
 # Whom:			Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/converters/p5-Text-Iconv/Makefile,v 1.17 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/p5-Text-Iconv/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	Text-Iconv
@@ -14,7 +14,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to iconv() codeset conversion function
 
-USE_ICONV=	yes
+USES=	iconv
 
 PERL_CONFIGURE=	yes
 CONFIGURE_ARGS+=	INC="-I${LOCALBASE}/include" \
