@@ -2,7 +2,7 @@
 # Date Created:			16 Aug 1998
 # Whom:				Chia-liang Kao <clkao@CirX.ORG>
 #
-# $FreeBSD: ports/devel/ORBit/Makefile,v 1.93 2012/11/17 05:55:32 svnexp Exp $
+# $FreeBSD: devel/ORBit/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ORBit
@@ -16,7 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	High-performance CORBA ORB with support for the C language
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	glib12
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

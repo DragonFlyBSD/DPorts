@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/ORBit/files/patch-libIDL::libIDL-config.in,v 1.3 2012/11/17 05:55:32 svnexp Exp $
+$FreeBSD: devel/ORBit/files/patch-libIDL::libIDL-config.in 300896 2012-07-14 13:54:48Z beat $
 
 --- libIDL/libIDL-config.in	2001/10/22 11:25:30	1.1
 +++ libIDL/libIDL-config.in	2001/10/22 11:26:00

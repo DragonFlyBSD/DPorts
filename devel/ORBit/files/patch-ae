@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/ORBit/files/patch-ae,v 1.10 2012/11/17 05:55:32 svnexp Exp $
+$FreeBSD: devel/ORBit/files/patch-ae 300896 2012-07-14 13:54:48Z beat $
 
 --- configure.orig	Thu Jun  6 14:27:24 2002
 +++ configure	Fri Jun  7 19:30:22 2002
