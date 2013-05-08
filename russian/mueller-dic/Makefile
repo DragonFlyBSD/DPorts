@@ -2,7 +2,7 @@
 # Date created:		14 Jan 2004
 # Whom:			Igor Pokrovsky <tiamat@comset.net>
 #
-# $FreeBSD: russian/mueller-dic/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: russian/mueller-dic/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	mueller-dic
@@ -18,7 +18,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Mueller English-Russian dictionary
 
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 SUB_FILES=	mueller
 
 WRKSRC=	${WRKDIR}/mf
