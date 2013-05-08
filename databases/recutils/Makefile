@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/databases/recutils/Makefile,v 1.3 2012/11/17 05:55:23 svnexp Exp $
+# $FreeBSD: databases/recutils/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	recutils
 PORTVERSION=	1.5
@@ -24,7 +24,7 @@ PORTDOCS=	ChangeLog NEWS README
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
