@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libass/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: multimedia/libass/Makefile 316284 2013-04-22 22:33:35Z bapt $
 
 PORTNAME=	libass
 PORTVERSION=	0.10.1
@@ -16,8 +16,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
 		fribidi:${PORTSDIR}/converters/fribidi
 
-USES=	pathfix
-USE_PKGCONFIG=	build
+USES=	pathfix pkgconfig
 USE_XZ=	yes
 USE_LDCONFIG=	yes
 
