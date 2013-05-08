@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/mail/bsmtp/files/patch-Makefile.in,v 1.2 2012/11/17 05:58:59 svnexp Exp $
+$FreeBSD: mail/bsmtp/files/patch-Makefile.in 300896 2012-07-14 13:54:48Z beat $
 
 --- Makefile.in.orig	Thu Sep  5 15:38:26 2002
 +++ Makefile.in	Thu Sep  5 15:38:51 2002

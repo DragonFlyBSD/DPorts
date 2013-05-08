@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/bsmtp/files/config.sed,v 1.6 2012/11/17 05:58:59 svnexp Exp $
+# $FreeBSD: mail/bsmtp/files/config.sed 300896 2012-07-14 13:54:48Z beat $
 s,@CC@,%%CC%%,
 s,@INSTALL@,/usr/bin/install,
 s,@SH@,/bin/sh,

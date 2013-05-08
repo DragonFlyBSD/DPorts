@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/bsmtp/Makefile,v 1.16 2012/11/17 05:58:59 svnexp Exp $
+# $FreeBSD: mail/bsmtp/Makefile 317605 2013-05-07 13:12:31Z bapt $
 
 PORTNAME=	bsmtp
 PORTVERSION=	1.02
@@ -12,11 +12,13 @@ COMMENT=	Batch SMTP support for sendmail, incoming and outgoing
 
 CONFLICTS=	smail-3.*
 
+USES=		shebangfix
 USE_PERL5=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--redo
 MAKE_JOBS_SAFE=	yes
+SHEBANG_FILES=	configure
 
 .include <bsd.port.pre.mk>
 
