@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/mail/gmime24/files/patch-mono_gmime-sharp.dll.config.in,v 1.2 2012/11/17 05:59:03 svnexp Exp $
+$FreeBSD: mail/gmime24/files/patch-mono_gmime-sharp.dll.config.in 300896 2012-07-14 13:54:48Z beat $
 
 --- mono/gmime-sharp.dll.config.in.orig
 +++ mono/gmime-sharp.dll.config.in

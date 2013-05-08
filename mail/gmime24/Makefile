@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gmime2
-# Date created:				16 Apr 2001
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/mail/gmime24/Makefile,v 1.17 2012/11/30 02:47:50 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: mail/gmime24/Makefile 317508 2013-05-06 11:13:56Z kwm $
 
 PORTNAME=	gmime
 PORTVERSION=	2.4.33
@@ -22,10 +18,9 @@ CONFLICTS=	gmime-1.0.*
 SLAVEDIRS=	mail/gmime2-sharp
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}24
-USE_ICONV=	yes
 USE_GMAKE=	yes
 USE_GNOME?=	gnomehack glib20
-USE_PKGCONFIG=	build
+USES=		pkgconfig iconv
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
@@ -41,6 +36,10 @@ CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LATEST_LINK?=	${PORTNAME}24
 
 PORTDOCS=	*
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
+		${WRKSRC}/*/Makefile.in
 
 post-install:
 .if !defined(NOPORTDOCS)

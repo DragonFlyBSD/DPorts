@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/mail/gmime24/files/patch-docs_Makefile.in,v 1.2 2012/11/17 05:59:03 svnexp Exp $
+$FreeBSD: mail/gmime24/files/patch-docs_Makefile.in 300896 2012-07-14 13:54:48Z beat $
 
 --- docs/Makefile.in.orig
 +++ docs/Makefile.in
