@@ -2,7 +2,7 @@
 # Date Created:				12 January 2005
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-themes/gnome-backgrounds/Makefile,v 1.27 2012/11/17 06:03:31 svnexp Exp $
+# $FreeBSD: x11-themes/gnome-backgrounds/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-themes/gnome-backgrounds/Makefile,v 1.49 2010/09/27 19:52:50 kwm Exp $
 #
 
@@ -16,7 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A collection of backgrounds for GNOME 2
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack
