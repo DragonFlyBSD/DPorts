@@ -2,7 +2,7 @@
 # Date created:				16 December 2001
 # Whom:					Peter Haight <peterh@sapros.com>
 #
-# $FreeBSD: ports/devel/scons/Makefile,v 1.47 2012/11/17 05:57:02 svnexp Exp $
+# $FreeBSD: devel/scons/Makefile 317412 2013-05-05 13:49:11Z eadler $
 #
 
 PORTNAME=	scons
@@ -24,6 +24,8 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_EGGINFODIR=	${PREFIX}/lib/scons-${PORTVERSION}
 
 PLIST_SUB+=	SCONS_VER=${PORTVERSION}
+
+USE_PYTHON=	-2.7
 
 .include <bsd.port.pre.mk>
 
