@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/ctpl/Makefile,v 1.2 2012/11/17 06:01:53 svnexp Exp $
+# $FreeBSD: textproc/ctpl/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	ctpl
 PORTVERSION=	0.3.3
@@ -10,7 +10,7 @@ COMMENT=	C Template (Parser) Library
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20 gnomehack
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 
 MAN1=	ctpl.1
