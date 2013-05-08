@@ -2,7 +2,7 @@
 # Date created:		08 Nov 2006
 # Whom:			dinoex
 #
-# $FreeBSD: ports/mail/sendmail/bsd.milter.mk,v 1.6 2012/11/17 05:59:14 svnexp Exp $
+# $FreeBSD: mail/sendmail/bsd.milter.mk 300896 2012-07-14 13:54:48Z beat $
 #
 # a port shall includes this file after bsd.ports.pre.mk
 # .include "${PORTSDIR}/${PKGCATEGORY}/sendmail/bsd.milter.mk"
