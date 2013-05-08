@@ -2,7 +2,7 @@
 # Date created:				Mon Mar 29 2003
 # Whom:					Xavier Beaudouin <kiwi@oav.net>
 #
-# $FreeBSD: ports/mail/gnarwl/Makefile,v 1.11 2012/11/17 05:59:03 svnexp Exp $
+# $FreeBSD: mail/gnarwl/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	gnarwl
@@ -19,7 +19,7 @@ LIB_DEPENDS=	gdbm.4:${PORTSDIR}/databases/gdbm
 BUILD_DEPENDS=	${LOCALBASE}/bin/gsed:${PORTSDIR}/textproc/gsed
 
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_OPENLDAP=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --with-docdir=${DOCSDIR}
