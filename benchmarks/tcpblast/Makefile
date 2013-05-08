@@ -2,7 +2,7 @@
 # Date created:		22 August 1994
 # Whom:			mr
 #
-# $FreeBSD: ports/benchmarks/tcpblast/Makefile,v 1.22 2012/11/17 05:54:51 svnexp Exp $
+# $FreeBSD: benchmarks/tcpblast/Makefile 301494 2012-07-24 21:09:44Z cs $
 #
 # port's source files are in src dir in portball
 
