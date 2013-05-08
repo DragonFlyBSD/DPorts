@@ -1,8 +1,8 @@
 # Created by: Peter van Heusden <pvh@egenetics.com>
-# $FreeBSD: ports/lang/p5-Error/Makefile,v 1.28 2012/11/28 08:10:49 svnexp Exp $
+# $FreeBSD: lang/p5-Error/Makefile 317493 2013-05-06 09:23:05Z tobez $
 
 PORTNAME=	Error
-PORTVERSION=	0.17019
+PORTVERSION=	0.17020
 CATEGORIES=	lang perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
