@@ -2,7 +2,7 @@
 # Date created:			        04 Dec 2009
 # Whom:					vanilla@
 #
-# $FreeBSD: ports/converters/lua-iconv/Makefile,v 1.3 2012/11/17 05:55:03 svnexp Exp $
+# $FreeBSD: converters/lua-iconv/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	iconv
@@ -16,8 +16,7 @@ COMMENT=	Iconv binding for Lua 5
 
 WRKSRC=		${WRKDIR}/lua-${PORTNAME}-${PORTVERSION}
 USE_LUA?=	5.1
-USE_GNOME=	pkgconfig
-USE_ICONV=	yes
+USES=		pkgconfig iconv
 
 PLIST_FILES=	%%LUA_MODLIBDIR%%/iconv.so
 
