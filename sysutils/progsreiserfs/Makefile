@@ -1,9 +1,5 @@
-# New ports collection makefile for:	progsreiserfs
-# Date created:				May 13 2004
-# Whom:					Florent Thoumie <flz@xbsd.org>
-#
-# $FreeBSD: ports/sysutils/progsreiserfs/Makefile,v 1.29 2012/11/17 06:01:42 svnexp Exp $
-#
+# Created by: Florent Thoumie <flz@xbsd.org>
+# $FreeBSD: sysutils/progsreiserfs/Makefile 317491 2013-05-06 09:07:58Z bapt $
 
 PORTNAME=	progsreiserfs
 PORTVERSION=	0.3.1.r8
@@ -22,12 +18,14 @@ CFLAGS+=	-Dgetopt_long_only=getopt_long
 
 EXTRA_PATCHES=	${FILESDIR}/extrapatch-progsreiserfs::libmisc::Makefile.in
 
-.if defined(WITHOUT_NLS)
-CONFIGURE_ARGS+=--disable-nls
-.else
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+.else
+CONFIGURE_ARGS+=--disable-nls
 .endif
 
 MAN8=		cpfs.reiserfs.8 mkfs.reiserfs.8 reiserfs.8 \
