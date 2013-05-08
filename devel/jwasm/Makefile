@@ -1,8 +1,8 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: ports/devel/jwasm/Makefile,v 1.7 2012/12/07 17:23:41 svnexp Exp $
+# $FreeBSD: devel/jwasm/Makefile 316818 2013-04-29 14:20:19Z miwi $
 
 PORTNAME=	jwasm
-PORTVERSION=	209
+PORTVERSION=	210
 CATEGORIES=	devel
 MASTER_SITES=	http://www.japheth.de/Download/JWasm/
 DISTNAME=	JWasm${PORTVERSION}s
