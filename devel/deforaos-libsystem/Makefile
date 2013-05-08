@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/devel/deforaos-libsystem/Makefile,v 1.2 2013/01/03 16:06:42 svnexp Exp $
+# $FreeBSD: devel/deforaos-libsystem/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	libsystem
 PORTVERSION=	0.1.6
@@ -14,8 +14,8 @@ COMMENT=	DeforaOS core system library
 
 LICENSE=	GPLv3
 
+USES=		pkgconfig
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
 post-patch:
