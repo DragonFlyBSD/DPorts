@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/comms/scmxx/Makefile,v 1.32 2013/01/09 20:04:26 svnexp Exp $
+# $FreeBSD: comms/scmxx/Makefile 316695 2013-04-27 22:09:15Z bapt $
 
 PORTNAME=	scmxx
 PORTVERSION=	0.9.0
@@ -12,8 +12,7 @@ COMMENT=	Data exchange utility for Siemens mobile phones
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
