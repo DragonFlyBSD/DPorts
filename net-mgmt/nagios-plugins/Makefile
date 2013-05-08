@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: net-mgmt/nagios-plugins/Makefile 316219 2013-04-21 22:29:06Z bdrewery $
+# $FreeBSD: net-mgmt/nagios-plugins/Makefile 317075 2013-05-02 06:49:34Z jgh $
 
 PORTNAME=	nagios-plugins
 PORTVERSION=	1.4.16
@@ -42,7 +42,7 @@ NAGIOSCGIURL?=	${NAGIOSHTMURL}/cgi-bin
 NAGIOSPOLLIP?=	127.0.0.1
 NAGIOSPOLLIP6?=	::1
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 CONFIGURE_ARGS=	--with-nagios-user=${NAGIOSUSER} \
 		--with-nagios-group=${NAGIOSGROUP} \
@@ -128,12 +128,12 @@ PLIST_SUB+=	SUB_LDAP=""
 PLIST_SUB+=	SUB_LDAP="@comment "
 .endif
 
-.if empty(PORT_OPTIONS:MNLS)
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 # Restore check_users from 1.4.15 for hosts without getutxent(3)
@@ -153,4 +153,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's# ::1 # ${NAGIOSPOLLIP6} #g' ${WRKSRC}/configure.in
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
