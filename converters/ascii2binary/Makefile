@@ -2,7 +2,7 @@
 # Date created:		Sun 29 January 2006
 # Whom:			thierry@pompo.net
 #
-# $FreeBSD: ports/converters/ascii2binary/Makefile,v 1.13 2012/11/17 05:55:02 svnexp Exp $
+# $FreeBSD: converters/ascii2binary/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ascii2binary
@@ -14,7 +14,7 @@ MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Convert between textual representations of numbers and binary
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 LICENSE=	GPLv3
 
