@@ -2,7 +2,7 @@
 # Date created:         Sep 6 2011
 # Whom:                 Andrew Elble <aweits@rit.edu>
 #
-# $FreeBSD: ports/devel/ding-libs/Makefile,v 1.3 2012/11/17 05:55:40 svnexp Exp $
+# $FreeBSD: devel/ding-libs/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ding-libs
@@ -18,7 +18,7 @@ LICENSE=	GPLv3
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	pkgconfig
 USE_LDCONFIG=	yes
 
