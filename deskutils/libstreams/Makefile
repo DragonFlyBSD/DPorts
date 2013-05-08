@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/libstreams/Makefile 315308 2013-03-26 15:43:09Z makc $
+# $FreeBSD: deskutils/libstreams/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	libstreams
 PORTVERSION=	${STRIGI_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	${STRIGI_MASTER_SITES}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Strigi desktop search: streams library
 
-USE_ICONV=	yes
+USES=		iconv
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
