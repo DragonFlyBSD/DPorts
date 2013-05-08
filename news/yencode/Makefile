@@ -3,7 +3,7 @@
 # Date created:			Mar 24, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/news/yencode/Makefile,v 1.23 2012/11/17 06:00:43 svnexp Exp $
+# $FreeBSD: news/yencode/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	yencode
@@ -15,7 +15,7 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A free (GPL) encoder and decoder for the yEnc Usenet file format
 
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 
 MAN1=	ydecode.1 yencode.1 ypost.1
