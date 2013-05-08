@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: ftp/wget/Makefile 315271 2013-03-26 09:58:33Z bapt $
+# $FreeBSD: ftp/wget/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	wget
 DISTVERSION=	1.14
@@ -18,9 +18,9 @@ GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
 OPTIONS_RADIO=	SSL
-OPTIONS_RADIO_SSL=	GNUTLS OPENSSL
+OPTIONS_RADIO_SSL=GNUTLS OPENSSL
 OPTIONS_DEFINE=	IPV6 NLS IDN
-OPTIONs_DEFAULT=	OPENSSL IDN
+OPTIONS_DEFAULT=OPENSSL IDN
 
 .include <bsd.port.options.mk>
 
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=--disable-ipv6
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -68,6 +68,7 @@ INFO=		wget
 # eliminate gmakism
 post-patch:
 	${REINPLACE_CMD} -e 's,$$<,$$(srcdir)/wget.texi,' \
+	    		 -e 's,WGETRC = $$(sysconfdir)/wgetrc,&.sample,' \
 		${WRKSRC}/doc/Makefile.in
 	${REINPLACE_CMD} -e 's,/usr/local/etc/wgetrc,${PREFIX}/etc/wgetrc,' \
 			 -e 's,@file{},@file{${PREFIX}},' \
