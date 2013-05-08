@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/py-pyro/Makefile,v 1.26 2012/12/31 13:14:08 svnexp Exp $
+# $FreeBSD: devel/py-pyro/Makefile 317050 2013-05-01 20:41:56Z rm $
 
 PORTNAME=	pyro
-PORTVERSION=	4.17
+PORTVERSION=	4.18
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +14,6 @@ COMMENT=	Distributed Object Middleware for Python(IPC/RPC)
 LICENSE=	MIT
 
 USE_DOS2UNIX=	yes
-# Python 3 ready
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Pyro4
