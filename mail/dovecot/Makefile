@@ -2,7 +2,7 @@
 # Date created:				12/08/2002
 # Whom:			Dominic Marks <dominic.marks@btinternet.com>
 #
-# $FreeBSD: ports/mail/dovecot/Makefile,v 1.124 2012/11/17 05:59:01 svnexp Exp $
+# $FreeBSD: mail/dovecot/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	dovecot
@@ -30,7 +30,7 @@ DOVECOTVERSION=	1.2
 # consult the maintainer of those ports before updating this one.    #
 ######################################################################
 
-USE_ICONV=	yes
+USES=		iconv
 USE_RC_SUBR=	dovecot
 
 GNU_CONFIGURE=	yes
