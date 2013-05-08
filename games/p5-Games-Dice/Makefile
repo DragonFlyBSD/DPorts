@@ -1,13 +1,13 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: ports/games/p5-Games-Dice/Makefile,v 1.6 2012/11/29 17:35:48 svnexp Exp $
+# $FreeBSD: games/p5-Games-Dice/Makefile 316425 2013-04-24 12:10:18Z bdrewery $
 
 PORTNAME=	Games-Dice
-PORTVERSION=	0.03
+PORTVERSION=	0.04
 CATEGORIES=	games perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Perl module to simulate die rolls
 
 MAN3=		Games::Dice.3
