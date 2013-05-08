@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/libqrencode/Makefile 313706 2013-03-09 11:30:29Z vanilla $
+# $FreeBSD: graphics/libqrencode/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	libqrencode
 PORTVERSION=	3.4.2
@@ -13,8 +13,7 @@ COMMENT=	A C library for encoding data in a QR Code symbol
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
-USE_PKGCONFIG=	yes
-USES+=		pathfix
+USES=		pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
