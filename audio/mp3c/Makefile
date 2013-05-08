@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mp3c
-# Date created:				11 Jul 2002
-# Whom:					Joris Vandalon <joris@vandalon.nl>
-#
-# $FreeBSD: ports/audio/mp3c/Makefile,v 1.10 2012/11/17 05:54:38 svnexp Exp $
-#
+# Created by: Joris Vandalon <joris@vandalon.nl>
+# $FreeBSD: audio/mp3c/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	mp3c
 PORTVERSION=	0.31
@@ -17,21 +13,23 @@ EXTRACT_ONLY=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
 MAINTAINER=	joris@vandalon.nl
 COMMENT=	A CD to mp3c converter with a console frontend
 
-RUN_DEPENDS=	mp3info:${PORTSDIR}/audio/mp3info
+RUN_DEPENDS=	mp3info:${PORTSDIR}/audio/mp3info \
+		cdrecord:${PORTSDIR}/sysutils/cdrtools
 
-USE_CDRTOOLS=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--prefix=${PREFIX}"
 
 MAN1=		mp3c.1
 MANCOMPRESSED=	no
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=		NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=		NLS="@comment "
-.else
-USE_GETTEXT=		yes
-PLIST_SUB+=		NLS=""
 .endif
 
 post-patch:
