@@ -1,5 +1,5 @@
 # Created by: Rene Hexel <rh@netbsd.org>
-# $FreeBSD: textproc/scrollkeeper/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: textproc/scrollkeeper/Makefile 316596 2013-04-26 10:44:28Z ak $
 #    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.12 2007/10/17 21:36:13 mezz Exp $
 
 PORTNAME=	scrollkeeper
@@ -27,10 +27,9 @@ DOCBOOK_VERSION=4.2
 CONFLICTS=	rarian-[0-9]*
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USES=		bison pathfix
+USES=		bison pathfix gettext
 USE_GNOME=	gnomehier libxslt intlhack
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--localstatedir=/var --datadir=${PREFIX}/share \
