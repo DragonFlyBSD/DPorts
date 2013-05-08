@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@FreeBSD.org>
-# $FreeBSD: audio/pytone/Makefile 314853 2013-03-21 17:32:34Z bapt $
+# $FreeBSD: audio/pytone/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	pytone
 PORTVERSION=	3.0.2
@@ -16,8 +16,8 @@ LIB_DEPENDS=	ao.4:${PORTSDIR}/audio/libao
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		${PYTHON_SITELIBDIR}/mutagen/__init__.py:${PORTSDIR}/audio/py-mutagen
 
+USES=		ncurses
 USE_PYTHON=	2.5+
-USE_NCURSES=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyTone
 
