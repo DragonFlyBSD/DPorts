@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/libadplug/Makefile 314054 2013-03-13 10:41:23Z ehaupt $
+# $FreeBSD: audio/libadplug/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	libadplug
 PORTVERSION=	2.2.1
@@ -14,10 +14,10 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	binio:${PORTSDIR}/devel/libbinio
 
+USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 USE_CSTD=	gnu89
 
 MAKE_JOBS_SAFE=	yes
