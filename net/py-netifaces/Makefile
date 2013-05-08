@@ -2,7 +2,7 @@
 # Date created:			May 27 2009
 # Whom:				Stanislav Svirid <count@211.ru>
 #
-# $FreeBSD: ports/net/py-netifaces/Makefile,v 1.3 2012/11/17 06:00:16 svnexp Exp $
+# $FreeBSD: net/py-netifaces/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	netifaces
