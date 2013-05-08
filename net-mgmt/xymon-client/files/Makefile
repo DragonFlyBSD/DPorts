@@ -1,5 +1,5 @@
 # Toplevel Makefile for Xymon
-# $FreeBSD: ports/net-mgmt/xymon-client/files/Makefile,v 1.4 2012/11/17 06:00:38 svnexp Exp $
+# $FreeBSD: net-mgmt/xymon-client/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 BUILDTOPDIR=`pwd`
 CLIENTONLY = yes
 LOCALCLIENT = no
