@@ -2,7 +2,7 @@
 # Date created:		Fri Apr 18, 2003
 # Whom:			Dan Rench <citric@cubicone.tmetic.com>
 #
-# $FreeBSD: ports/lang/spidermonkey17/Makefile,v 1.2 2012/11/17 05:58:57 svnexp Exp $
+# $FreeBSD: lang/spidermonkey17/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	spidermonkey17
 DISTVERSION=	1.7.0
@@ -42,8 +42,7 @@ JSH=		jsapi.h jsarena.h jsarray.h jsatom.h jsautocfg.h jsbool.h \
 
 PLIST_FILES=	bin/js lib/libjs.so lib/libjs.so.1 ${JSH:S,^,include/,}
 WRKSRC=		${WRKDIR}/${SRC_DIR}
-EXTRACT_AFTER_ARGS=| ${TAR} -xf - \
-		--exclude js/jsd
+EXTRACT_AFTER_ARGS= --exclude js/jsd
 
 OPTIONS=	UTF8 "Enable UTF8 support" Off
 
