@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnucflow
-# Date created:		07 Feb 2008
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/devel/gnucflow/Makefile,v 1.7 2012/11/17 05:55:46 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: devel/gnucflow/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	gnucflow
 PORTVERSION=	1.4
@@ -26,9 +22,10 @@ INFO=		cflow
 
 PLIST_FILES=	bin/cflow
 
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 CONFIGURE_ARGS+=--with-libintl-prefix="${LOCALBASE}"
 PLIST_FILES+= 	share/locale/da/LC_MESSAGES/cflow.mo \
 		share/locale/fi/LC_MESSAGES/cflow.mo \
