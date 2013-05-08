@@ -1,9 +1,5 @@
-# New ports collection makefile for:	silc client
-# Date created:				Thu Nov 8 01:50:05 BRST 2001
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: net/silc-client/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: net/silc-client/Makefile 317181 2013-05-03 08:16:33Z bapt $
 
 PORTNAME=	silc
 PORTVERSION=	1.1.8
@@ -28,7 +24,7 @@ MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
@@ -92,7 +88,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=		yes
+USES+=			iconv
 CONFIGURE_ARGS+=	--with-iconv
 .else
 CONFIGURE_ARGS+=	--without-iconv
@@ -101,7 +97,7 @@ CONFIGURE_ARGS+=	--without-iconv
 .if ${PORT_OPTIONS:MPERL}
 USE_PERL5=		yes
 .  if exists(${LOCALBASE}/bin/perl)
-PERL_ARCHNAME!=		perl -V:archname 2>/dev/null || true
+PERL_ARCHNAME!=		perl -V:archname 2>/dev/null || ${ECHO_CMD}
 PLIST_SUB+=		WITH_PERL="" PERL_ARCHNAME="${PERL_ARCHNAME:S/archname='//:S/';//}"
 .  endif
 CONFIGURE_ARGS+=	--with-perl-lib=${PREFIX}/lib/${PORTNAME}/perl
