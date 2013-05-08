@@ -1,4 +1,4 @@
-# $FreeBSD: finance/aqbanking/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: finance/aqbanking/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	aqbanking
 PORTVERSION=	5.0.25
@@ -22,10 +22,8 @@ KTOBLZCHECK_DESC=	Enable KtoBlzCheck support
 PAYPAL_DESC=		Build PayPal backend (separate license)
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
-USES=	pathfix
+USES=	pathfix pkgconfig gettext
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-release="yes"
