@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache24/Makefile 316160 2013-04-20 17:28:36Z ohauer $
+# $FreeBSD: www/apache24/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	apache24
 PORTVERSION=	2.4.4
@@ -23,7 +23,7 @@ CONFLICTS_INSTALL=	caudium14-1.* \
 		apache-*-2.2.* apache22-*
 
 USE_APACHE=	common24
-USE_ICONV=	yes
+USES=		iconv
 USE_AUTOTOOLS=	autoconf libtool
 USE_PERL5=	yes
 USE_RC_SUBR=	apache24 htcacheclean
