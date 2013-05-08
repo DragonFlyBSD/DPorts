@@ -1,9 +1,5 @@
-# New ports collection makefile for:    psmisc
-# Date created:         10 March 1998
-# Whom:                 rantapaa@uswest.net
-#
-# $FreeBSD: ports/sysutils/psmisc/Makefile,v 1.34 2012/11/17 06:01:42 svnexp Exp $
-#
+# Created by: rantapaa@uswest.net
+# $FreeBSD: sysutils/psmisc/Makefile 316744 2013-04-28 20:01:07Z bapt $
 
 PORTNAME=	psmisc
 PORTVERSION=	22.16
@@ -22,19 +18,19 @@ CONFLICTS=	pidof-[0-9]* pstree-2.[0-9]*
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
-OPTIONS=	NLS "Native Language Support via gettext utilities" on
+OPTIONS_DEFINE=	NLS
 
 .include <bsd.port.options.mk>
 
 MAN1=		killall.1 pstree.1
 
-.if defined(WITHOUT_NLS)
-CONFIGURE_ARGS=	--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 CONFIGURE_ARGS=	--enable-nls
 PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS=	--disable-nls
+PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-patch:
