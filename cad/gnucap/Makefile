@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/cad/gnucap/Makefile,v 1.31 2012/12/07 21:41:42 svnexp Exp $
+# $FreeBSD: cad/gnucap/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	gnucap
 PORTVERSION=	2009.12.07
@@ -29,7 +29,7 @@ PLIST_FILES=	bin/gnucap bin/gnucap-modelgen
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREADLINE}
-USE_READLINE=	yes
+USES+=		readline
 .else
 CONFIGURE_ARGS+=--with-readline=no
 .endif
