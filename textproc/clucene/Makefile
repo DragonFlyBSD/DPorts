@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/clucene/Makefile 315883 2013-04-16 18:37:03Z jkim $
+# $FreeBSD: textproc/clucene/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	clucene
 PORTVERSION=	2.3.3.4
@@ -16,8 +16,7 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libboost_regex.a:${PORTSDIR}/devel/boost-libs
 
-USES=		cmake
-USE_ICONV=	yes
+USES=		cmake iconv
 USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DBUILD_CONTRIBS_LIB=ON
