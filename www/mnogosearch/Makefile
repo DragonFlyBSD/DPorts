@@ -1,9 +1,5 @@
-# New ports collection makefile for:    mnogosearch
-# Date created:         27.01.2001
-# Whom:                 ache
-#
-# $FreeBSD: ports/www/mnogosearch/Makefile,v 1.89 2013/02/07 14:08:06 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: www/mnogosearch/Makefile 316959 2013-04-30 20:10:53Z crees $
 
 PORTNAME=	mnogosearch
 PORTVERSION=	3.3.12
@@ -13,6 +9,9 @@ MASTER_SITES=	http://www.mnogosearch.org/Download/ \
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Full featured SQL-based hypertext search engine
+
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS=	dpsearch-[0-9]* udmsearch-[0-9]* mguesser-[0-9]*
 
