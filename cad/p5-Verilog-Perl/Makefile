@@ -1,8 +1,8 @@
 # Created by: Otacilio de Araujo Ramos Neto <otacilio.neto@ee.ufcg.edu.br>
-# $FreeBSD: cad/p5-Verilog-Perl/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: cad/p5-Verilog-Perl/Makefile 317268 2013-05-03 21:42:40Z rakuco $
 
 PORTNAME=	Verilog-Perl
-PORTVERSION=	3.316
+PORTVERSION=	3.400
 CATEGORIES=	cad perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -34,6 +34,7 @@ MAN3=	Verilog::EditFiles.3 Verilog::Netlist::Logger.3 \
 post-patch:
 	@${REINPLACE_CMD} -e '/EXE_FILES/ s/ vsplitmodule//' \
 		${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -e 's|make|gmake|g' ${WRKSRC}/Makefile.PL
 
 post-configure:
 .if ${OSVERSION} < 700042
