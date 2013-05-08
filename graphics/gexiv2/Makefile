@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/graphics/gexiv2/Makefile,v 1.10 2012/11/17 05:58:07 svnexp Exp $
+# $FreeBSD: graphics/gexiv2/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	gexiv2
 PORTVERSION=	0.4.1
@@ -16,11 +16,11 @@ BUILD_DEPENDS=	libtool:${PORTSDIR}/devel/libtool \
 		gm4:${PORTSDIR}/devel/m4
 LIB_DEPENDS=	exiv2:${PORTSDIR}/graphics/exiv2
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	glib20
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -E \
