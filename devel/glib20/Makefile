@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/glib20/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/glib20/Makefile 316654 2013-04-27 08:50:46Z mva $
 #   $MCom: ports/devel/glib20/Makefile,v 1.229 2012/12/09 20:42:55 kwm Exp $
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
@@ -24,11 +24,9 @@ PORTSCOUT=	limitw:1,even
 LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
 		ffi:${PORTSDIR}/devel/libffi
 
-USE_GETTEXT=	yes
-USE_ICONV=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext iconv
 USE_GNOME=	gnomehack ltverhack
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
