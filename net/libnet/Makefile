@@ -1,5 +1,5 @@
 # Created by: shipley@dis.org
-# $FreeBSD: ports/net/libnet/Makefile,v 1.30 2013/02/21 06:49:39 svnexp Exp $
+# $FreeBSD: net/libnet/Makefile 317184 2013-05-03 09:12:43Z bapt $
 
 PORTNAME=	libnet
 PORTVERSION=	1.1.6
@@ -20,6 +20,10 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-fPIC
 USE_CSTD=	gnu89
+# upstream makefile is not bmake compatible
+.if defined(.PARSEDIR)
+USE_GMAKE=	yes
+.endif
 CONFIGURE_ARGS=	--with-link-layer=${LIBNET_LINK}
 
 SHORT_VER=	11
