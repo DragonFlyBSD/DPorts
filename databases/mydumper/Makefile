@@ -1,9 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/mydumper/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: databases/mydumper/Makefile 316992 2013-05-01 07:15:53Z wen $
 
 PORTNAME=	mydumper
-PORTVERSION=	0.5.1
-PORTREVISION=	2
+PORTVERSION=	0.5.2
 CATEGORIES=	databases
 MASTER_SITES=	http://code.launchpad.net/mydumper/${PORTVERSION:R}/${PORTVERSION}/+download/
 
@@ -19,9 +18,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S/a//}
 FETCH_ARGS?=	-pRr
 PLIST_FILES=	sbin/mydumper sbin/myloader
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_MYSQL=	yes
-USES=		cmake
+USES=		cmake pkgconfig
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Werror||' ${WRKSRC}/CMakeLists.txt
