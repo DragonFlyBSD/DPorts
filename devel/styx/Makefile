@@ -3,7 +3,7 @@
 # Date created:			Apr 17, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/styx/Makefile,v 1.30 2013/02/14 10:22:23 svnexp Exp $
+# $FreeBSD: devel/styx/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	styx
@@ -16,7 +16,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A scanner/parser generator
 
 USE_AUTOTOOLS=	libtool
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
