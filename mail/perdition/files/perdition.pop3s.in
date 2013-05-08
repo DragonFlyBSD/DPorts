@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/perdition/files/perdition.pop3s.in,v 1.6 2012/11/17 05:59:10 svnexp Exp $
+# $FreeBSD: mail/perdition/files/perdition.pop3s.in 300896 2012-07-14 13:54:48Z beat $
 #
 # PROVIDE: perdition_pop3s
 # REQUIRE: DAEMON

@@ -1,5 +1,5 @@
 # Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
-# $FreeBSD: ports/mail/perdition/Makefile,v 1.46 2013/01/09 11:28:13 svnexp Exp $
+# $FreeBSD: mail/perdition/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	perdition
 PORTVERSION=	1.18
@@ -25,7 +25,7 @@ MLINKS=		perdition.8 perdition.imap4.8 \
 MANCOMPRESSED=	no
 
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
