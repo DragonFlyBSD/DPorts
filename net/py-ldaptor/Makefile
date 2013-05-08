@@ -2,7 +2,7 @@
 # Date created:		10.Jun 2011
 # Whom:			bra@fsn.hu
 #
-# $FreeBSD: ports/net/py-ldaptor/Makefile,v 1.2 2012/11/17 06:00:16 svnexp Exp $
+# $FreeBSD: net/py-ldaptor/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	ldaptor
 PORTVERSION=	0.0.43
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pyparsing.py:${PORTSDIR}/devel/py-parsing \
 
 GITVERSION=	aad8ded658b36337a08aeb7402b6b67eb8771bea
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_TWISTED=	yes
 USE_PYDISTUTILS=	yes
