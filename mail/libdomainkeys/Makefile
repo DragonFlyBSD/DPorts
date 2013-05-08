@@ -1,16 +1,12 @@
-# New ports collection makefile for:	libdomainkeys
-# Date created:	   16 May 2005
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/mail/libdomainkeys/Makefile,v 1.11 2012/11/17 05:59:04 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: mail/libdomainkeys/Makefile 316230 2013-04-22 13:27:47Z bapt $
 
 PORTNAME=	libdomainkeys
 PORTVERSION=	0.69
 CATEGORIES=	mail
 MASTER_SITES=	SF/domainkeys/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DomainKeys library
 
 USE_LDCONFIG=	YES

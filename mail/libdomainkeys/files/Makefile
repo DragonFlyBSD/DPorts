@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/libdomainkeys/files/Makefile,v 1.5 2012/11/17 05:59:04 svnexp Exp $
+# $FreeBSD: mail/libdomainkeys/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 LIB = 	domainkeys
 SRCS=	dns_txt.c domainkeys.c dktrace.c
