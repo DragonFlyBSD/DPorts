@@ -1,8 +1,8 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: ports/devel/eet/Makefile,v 1.37 2013/01/15 17:45:58 svnexp Exp $
+# $FreeBSD: devel/eet/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	eet
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 PORTEPOCH=	2
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
@@ -18,8 +18,8 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pathfix pkgconfig
 USE_EFL=	eina librt_hack libtool_hack
-USE_GNOME=	gnomehack pkgconfig
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 
