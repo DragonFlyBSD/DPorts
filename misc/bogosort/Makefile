@@ -1,5 +1,5 @@
 # Created by: roam@orbitel.bg
-# $FreeBSD: misc/bogosort/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: misc/bogosort/Makefile 317392 2013-05-05 02:00:59Z eadler $
 
 PORTNAME=	bogosort
 PORTVERSION=	0.4.2
@@ -22,20 +22,5 @@ INFO=		bogosort
 PLIST_FILES=	bin/bogosort
 
 MAKE_JOBS_SAFE=	yes
-
-test:		all
-		${PRINTF} "a\nb\nc\nd\n" > ${WRKDIR}/sorted
-		${PRINTF} "c\na\n\d\nb\n" > ${WRKDIR}/unsorted
-		@${ECHO_MSG} "Testing bogosort"
-		@${WRKSRC}/bogosort ${WRKDIR}/unsorted | diff - ${WRKDIR}/sorted && ${ECHO_MSG} "ok"
-		@${ECHO_MSG} "Testing zbogotest"
-		@${ECHO_MSG} "  ${WRKSRC}/bogosort.c"
-		@${WRKSRC}/zbogotest ${WRKSRC}/bogosort.c || ${ECHO_MSG} "ok"
-		@${ECHO_MSG} "  /dev/null"
-		@${WRKSRC}/zbogotest /dev/null && ${ECHO_MSG} "ok"
-		@${ECHO_MSG} "  ${WRKDIR}/unsorted"
-		@${WRKSRC}/zbogotest ${WRKDIR}/unsorted || ${ECHO_MSG} "ok"
-		@${ECHO_MSG} "  ${WRKDIR}/sorted"
-		@${WRKSRC}/zbogotest ${WRKDIR}/sorted && ${ECHO_MSG} "ok"
 
 .include <bsd.port.mk>
