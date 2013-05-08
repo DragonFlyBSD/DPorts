@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gsnmp
-# Date created:				Sat Jun  9 19:34:09 PDT 2007
-# Whom:					Matt Peterson <matt@peterson.org>
-#
-# $FreeBSD: net-mgmt/gsnmp/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Matt Peterson <matt@peterson.org>
+# $FreeBSD: net-mgmt/gsnmp/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	gsnmp
 PORTVERSION=	0.2.0
@@ -18,8 +14,8 @@ COMMENT=	SNMP library written on top of glib and gnet2
 
 LIB_DEPENDS=	gnet:${PORTSDIR}/net/gnet2
 
+USES=		pkgconfig
 USE_GNOME=	gnomehack glib20
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
