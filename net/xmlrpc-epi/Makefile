@@ -2,7 +2,7 @@
 # Date created:			19 February 2007
 # Whom:				Thierry Thomas <thierry@pompo.net>
 #
-# $FreeBSD: ports/net/xmlrpc-epi/Makefile,v 1.14 2012/11/17 06:00:25 svnexp Exp $
+# $FreeBSD: net/xmlrpc-epi/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	xmlrpc-epi
@@ -16,7 +16,7 @@ COMMENT=	A general purpose implementation of the xmlrpc specification in C
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
