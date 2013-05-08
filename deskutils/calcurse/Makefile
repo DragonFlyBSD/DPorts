@@ -1,5 +1,5 @@
 # Created by: Herbert J. Skuhra <h.skuhra@gmail.com>
-# $FreeBSD: ports/deskutils/calcurse/Makefile,v 1.28 2013/02/17 08:59:35 svnexp Exp $
+# $FreeBSD: deskutils/calcurse/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	calcurse
 PORTVERSION=	3.1.4
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-docs
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
