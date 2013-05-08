@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: sysutils/moreutils-parallel/Makefile 315507 2013-03-28 23:43:25Z eadler $
+# $FreeBSD: sysutils/moreutils-parallel/Makefile 316742 2013-04-28 18:55:45Z eadler $
 
 PORTNAME=	moreutils-parallel
 PORTVERSION=	0.47
@@ -10,6 +10,8 @@ DISTNAME=	moreutils_${PORTVERSION}
 
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Run programs in parallel
+
+LICENSE=	GPLv2
 
 CONFLICTS=	parallel-[0-9]*
 
