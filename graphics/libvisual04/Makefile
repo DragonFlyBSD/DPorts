@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libvisual
-# Date created:		23 oktober 2004
-# Whom:			Koop Mast <kwm@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/libvisual04/Makefile,v 1.23 2012/11/17 05:58:14 svnexp Exp $
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD: graphics/libvisual04/Makefile 316959 2013-04-30 20:10:53Z crees $
 
 PORTNAME=	libvisual
 PORTVERSION=	0.4.0
@@ -15,9 +11,12 @@ PKGNAMESUFFIX=	04
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Abstraction library that sits between apps and visual plugin
 
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack pkgconfig
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
