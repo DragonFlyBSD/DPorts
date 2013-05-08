@@ -1,10 +1,5 @@
-
-# New ports collection makefile for:	taglib-sharp
-# Date Created:				Aug 25 2008
-# Whom:				 	Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: audio/taglib-sharp/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Florent Thoumie <flz@FreeBSD.org>
+# $FreeBSD: audio/taglib-sharp/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	taglib-sharp
 PORTVERSION=	2.0.3.7
@@ -21,8 +16,7 @@ RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|}
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USES=	pathfix
-USE_PKGCONFIG=	build
+USES=	pathfix pkgconfig
 
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}" \
 		VERSIONSUFX="db62eba44689b5b0"
