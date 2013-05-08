@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Locale-libintl/Makefile 315698 2013-04-03 07:50:51Z miwi $
+# $FreeBSD: devel/p5-Locale-libintl/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	Locale-libintl
 PORTVERSION=	1.23
@@ -13,7 +13,7 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Internationalization library for Perl
 
 PERL_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 MAN3=		Locale::Messages.3 \
 		Locale::Recode.3 \
