@@ -1,11 +1,11 @@
 # Created by: Jun-ichiro itojun Hagino <itojun@itojun.org>
-# $FreeBSD: ports-mgmt/portlint/Makefile 313808 2013-03-10 06:16:40Z marcus $
+# $FreeBSD: ports-mgmt/portlint/Makefile 316769 2013-04-28 23:18:23Z marcus $
 #
 # This port is self contained in the src directory.
 #
 
 PORTNAME=	portlint
-PORTVERSION=	2.14.2
+PORTVERSION=	2.14.3
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none
