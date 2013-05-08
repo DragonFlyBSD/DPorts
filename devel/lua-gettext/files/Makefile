@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/lua-gettext/files/Makefile,v 1.3 2012/11/17 05:55:59 svnexp Exp $
+# $FreeBSD: devel/lua-gettext/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 SHLIB=		gettext
 SHLIB_NAME=	lgettext.so

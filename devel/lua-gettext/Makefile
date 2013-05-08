@@ -2,7 +2,7 @@
 # Date created:        31 May 2006
 # Whom:                Andrew Turner <andrew+ports@fubar.geek.nz>
 #
-# $FreeBSD: ports/devel/lua-gettext/Makefile,v 1.11 2012/11/17 05:55:58 svnexp Exp $
+# $FreeBSD: devel/lua-gettext/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gettext
@@ -18,7 +18,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gettext binding for Lua 5
 
 USE_LUA?=	5.1
-USE_GETTEXT=	yes
+USES=		gettext
 
 CVER=		1.15
 LVER=		${PORTVERSION}
