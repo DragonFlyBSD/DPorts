@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/ldb/Makefile,v 1.4 2013/02/07 00:48:23 svnexp Exp $
+# $FreeBSD: databases/ldb/Makefile 316313 2013-04-23 07:08:32Z bapt $
 
 PORTNAME=		ldb
 PORTVERSION=		1.1.15
@@ -15,12 +15,12 @@ LICENSE=		GPLv3
 
 CONFLICTS=		*samba3[0-4]-3.*
 
+USES=			pkgconfig
 USE_PYTHON_BUILD=	-2.7
 USE_LDCONFIG=		yes
 HAS_CONFIGURE=		yes
 WAF_TOOL=		buildtools/bin/waf
 CONFIGURE_SCRIPT=	${WAF_TOOL} configure
-USE_PKGCONFIG=		build
 
 USE_OPENLDAP=		yes
 
