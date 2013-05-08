@@ -1,14 +1,13 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/www/py-slumber/Makefile,v 1.5 2013/02/09 15:59:54 svnexp Exp $
+# $FreeBSD: www/py-slumber/Makefile 316706 2013-04-28 08:20:44Z koobs $
 
 PORTNAME=	slumber
-PORTVERSION=	0.5.1
-PORTREVISION=	1
+PORTVERSION=	0.6.0
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	koobs@FreeBSD.org
-COMMENT=	Python library that makes consuming a REST API easier
+COMMENT=	Python library that makes consuming a RESTful API easier
 
 LICENSE=	BSD
 
@@ -29,7 +28,7 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
 GH_ACCOUNT=	dstufft
-GH_COMMIT=	e5bde78
+GH_COMMIT=	85b17b9
 GH_TAGNAME=	v${DISTVERSION}
 
 TEST_DEPENDS:=	${RUN_DEPENDS} \

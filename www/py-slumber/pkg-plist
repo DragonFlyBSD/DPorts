@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/py-slumber/pkg-plist,v 1.3 2012/11/25 19:35:26 svnexp Exp $
+@comment $FreeBSD: www/py-slumber/pkg-plist 316706 2013-04-28 08:20:44Z koobs $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt
@@ -14,19 +14,6 @@
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/slumber/serialize.py
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/slumber/serialize.pyc
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/slumber/serialize.pyo
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/__init__.py
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/__init__.pyc
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/__init__.pyo
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/resource.py
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/resource.pyc
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/resource.pyo
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/serializer.py
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/serializer.pyc
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/serializer.pyo
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/utils.py
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/utils.pyc
-%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests/utils.pyo
-@dirrmtry %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/tests
 @dirrmtry %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/slumber
 @dirrmtry %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO
 @dirrmtry %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
