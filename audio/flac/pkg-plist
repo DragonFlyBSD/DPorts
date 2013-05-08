@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/audio/flac/pkg-plist,v 1.15 2012/11/17 05:54:31 svnexp Exp $
+@comment $FreeBSD: audio/flac/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/flac
 bin/metaflac
 include/FLAC++/all.h

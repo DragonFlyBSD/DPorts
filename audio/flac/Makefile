@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/audio/flac/Makefile,v 1.57 2012/12/18 21:34:11 svnexp Exp $
+# $FreeBSD: audio/flac/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	flac
 PORTVERSION=	1.2.1
@@ -27,7 +27,7 @@ OPTIONS_DEFAULT=ICONV
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=	yes
+USES+=		iconv
 CONFIGURE_ARGS+=--with-libiconv-prefix="${LOCALBASE}"
 .else
 CONFIGURE_ARGS+=--without-libiconv-prefix
