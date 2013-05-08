@@ -1,10 +1,10 @@
-# $FreeBSD: devel/gitolite/Makefile 314145 2013-03-14 11:31:58Z miwi $
+# $FreeBSD: devel/gitolite/Makefile 316471 2013-04-24 19:18:21Z swills $
 
 PORTNAME=	gitolite
-PORTVERSION=	3.4
+PORTVERSION=	3.5.1
 PORTEPOCH=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://milki.github.com/${PORTNAME}/ \
+MASTER_SITES=	http://milki.github.io/${PORTNAME}/ \
 		LOCAL/tdb
 
 MAINTAINER=	milki@rescomp.berkeley.edu
