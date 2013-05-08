@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/nunnimcax/files/Makefile,v 1.2 2012/11/17 06:02:03 svnexp Exp $
+# $FreeBSD: textproc/nunnimcax/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 
 LIB = 	NunniMCAX
 SRCS=	NunniCXMLParser.c NunniCXMLParserFSM.c NunniHashtable.c NunniStack.c
