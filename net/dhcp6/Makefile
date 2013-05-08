@@ -2,7 +2,7 @@
 # Date created:		30 July 2004
 # Whom:			sumikawa
 #
-# $FreeBSD: ports/net/dhcp6/Makefile,v 1.17 2012/11/17 05:59:59 svnexp Exp $
+# $FreeBSD: net/dhcp6/Makefile 302141 2012-08-05 23:19:36Z dougb $
 #
 
 PORTNAME=	dhcp6
