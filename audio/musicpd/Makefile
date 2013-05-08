@@ -1,8 +1,7 @@
-# $FreeBSD: ports/audio/musicpd/Makefile,v 1.90 2013/01/03 16:36:34 svnexp Exp $
+# $FreeBSD: audio/musicpd/Makefile 317325 2013-05-04 15:41:40Z crees $
 
 PORTNAME=	musicpd
-PORTVERSION=	0.17.2
-PORTREVISION=	2
+PORTVERSION=	0.17.3
 CATEGORIES=	audio ipv6
 MASTER_SITES=	SF/${PORTNAME}/mpd/${PORTVERSION}
 DISTNAME=	mpd-${PORTVERSION}
@@ -28,16 +27,18 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${PREFIX}/include
 
 MAN1=		${PORTNAME}.1
-MAN5=		${MPDCONF}.5
+MAN5=		${PORTNAME}.conf.5
 
 DOCSDIR?=	${PREFIX}/share/doc/musicpd
 PORTDOCS=	AUTHORS README COPYING NEWS UPGRADING
 
 SUB_FILES=	pkg-message
 
-OPTIONS_DEFINE=	ID3TAG IPV6 AVAHI FLAC VORBIS WAV FFMPEG TREMOR AAC \
+OPTIONS_DEFINE=	ID3TAG IPV6 FLAC VORBIS WAV FFMPEG TREMOR AAC \
 		MUSEPACK MIKMOD MODPLUG ARCHIVE MMS LASTFM AO PULSEAUDIO \
 		JACK SHOUTCAST SNDFILE LAME HTTPD SAMPLERATE CUE
+OPTIONS_RADIO=	ZEROCONF
+OPTIONS_RADIO_ZEROCONF=	AVAHI MDNSRESPONDER
 
 OPTIONS_DEFAULT=ID3TAG IPV6 FLAC VORBIS WAV FFMPEG SNDFILE 
 LAME_DESC=	Support for MP3 Icecast Streams
@@ -45,19 +46,31 @@ LAME_DESC=	Support for MP3 Icecast Streams
 MPDDIR?=	/var/mpd
 MPDUSER?=	mpd
 MPDGROUP?=	mpd
-MPDCONF?=	musicpd.conf
 
 USERS=	${MPDUSER}
 GROUPS=	${MPDGROUP}
 
-PLIST_SUB=	MPDCONF=${MPDCONF} \
-		MPDUSER=${MPDUSER} \
+PLIST_SUB=	MPDUSER=${MPDUSER} \
 		MPDDIR=${MPDDIR}   \
 		MPDGROUP=${MPDGROUP}
-SUB_LIST+=	MPDDIR=${MPDDIR} \
-		MPDCONF=${MPDCONF}
+SUB_LIST+=	MPDDIR=${MPDDIR}
 
 .include <bsd.port.options.mk>
+
+.ifdef MPDCONF
+.error Please remove the MPDCONF line from make.conf, then rename ${PREFIX}/etc/${MPDCONF} to musicpd.conf, if it exists
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if exists(${PREFIX}/etc/mpd.conf)
+MSG=You still have ${PREFIX}/etc/mpd.conf in existence-- this file is no longer used by musicpd.
+.if !exists(${PREFIX}/etc/musicpd.conf)
+.error ${MSG}  Move it to ${PREFIX}/etc/musicpd.conf.
+.else
+.error ${MSG}  You also have musicpd.conf-- check carefully to see which one you want, and remove mpd.conf.
+.endif
+.endif
 
 .if ${PORT_OPTIONS:MFLAC}
 LIB_DEPENDS+=	FLAC.10:${PORTSDIR}/audio/flac
@@ -168,6 +181,13 @@ LIB_DEPENDS+=	avahi-client.3:${PORTSDIR}/net/avahi-app
 CONFIGURE_ARGS+=--with-zeroconf=no
 .endif
 
+.if ${PORT_OPTIONS:MMDNSRESPONDER}
+CONFIGURE_ARGS+=--with-zeroconf=bonjour
+LIB_DEPENDS+=	dns_sd:${PORTSDIR}/net/mDNSResponder
+.else
+CONFIGURE_ARGS+=--with-zeroconf=no
+.endif
+
 .if ${PORT_OPTIONS:MAO}
 CONFIGURE_ARGS+=--enable-ao
 LIB_DEPENDS+=	ao.4:${PORTSDIR}/audio/libao
@@ -221,16 +241,6 @@ LIB_DEPENDS+=	cue:${PORTSDIR}/textproc/libcue
 CONFIGURE_ARGS+=--disable-cue
 .endif
 
-.if ${MPDCONF} != musicpd.conf
-pre-everything::
-	@${ECHO_MSG} "Looks as though you're using a non-default value for MPDCONF."
-	@${ECHO_MSG} "This is deprecated, and some time in the near future the only value permissible"
-	@${ECHO_MSG} "for MPDCONF will be the default; musicpd.conf."
-	@${ECHO_MSG} -n "Continuing in "
-	@for s in 5 4 3 2 1 ; do ${ECHO_MSG} -n "$$s... " && sleep 1 ; done
-	@${ECHO_MSG} ""
-.endif
-
 post-patch:
 # Replace ~/ with MPDDIR and make musicpd run as mpd by default
 	@${REINPLACE_CMD} -e 's,^#\([^"]*"\)~/,\1${MPDDIR}/,g' \
@@ -246,8 +256,8 @@ post-patch:
 		${WRKSRC}/doc/mpdconf.example
 # Fix man pages for executable names
 	@${REINPLACE_CMD} -e 's/^\(\.B m\)pd/\1usicpd/' \
-		-e 's#^\(\.BI \)/etc/mpd.conf#\1${PREFIX}/etc/${MPDCONF}#' \
-		-e 's#^mpd.conf#${MPDCONF}#' \
+		-e 's#^\(\.BI \)/etc/mpd.conf#\1${PREFIX}/etc/${PORTNAME}.conf#' \
+		-e 's#^mpd.conf#${PORTNAME}.conf#' \
 		-e 's#^mpd(1)#musicpd(1)#' \
 		${WRKSRC}/doc/mpd.1 ${WRKSRC}/doc/mpd.conf.5
 .if (${OSVERSION} < 800000)
@@ -261,7 +271,7 @@ do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/src/mpd ${PREFIX}/bin/${PORTNAME}
 	@${INSTALL_MAN} ${WRKSRC}/doc/mpd.1 ${MAN1PREFIX}/man/man1/${PORTNAME}.1
 	@${INSTALL_MAN} ${WRKSRC}/doc/mpd.conf.5 \
-		${MAN5PREFIX}/man/man5/${MPDCONF}.5
+		${MAN5PREFIX}/man/man5/${PORTNAME}.conf.5
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .   for doc in ${PORTDOCS}
@@ -270,14 +280,14 @@ do-install:
 .endif
 
 post-install:
-	@${INSTALL_DATA} ${WRKSRC}/doc/mpdconf.example ${PREFIX}/etc/${MPDCONF}.sample
-	@if [ ! -f ${PREFIX}/etc/${MPDCONF} ]; then \
-		${CP} -p ${PREFIX}/etc/${MPDCONF}.sample \
-			${PREFIX}/etc/${MPDCONF} ; \
+	@${INSTALL_DATA} ${WRKSRC}/doc/mpdconf.example ${PREFIX}/etc/${PORTNAME}.conf.sample
+	@if [ ! -f ${PREFIX}/etc/${PORTNAME}.conf ]; then \
+		${CP} -p ${PREFIX}/etc/${PORTNAME}.conf.sample \
+			${PREFIX}/etc/${PORTNAME}.conf ; \
 	fi
 	@${INSTALL} -d -o ${MPDUSER} -g ${MPDGROUP} ${MPDDIR} ${MPDDIR}/.mpd
 	@${ECHO_MSG}
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO_MSG}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
