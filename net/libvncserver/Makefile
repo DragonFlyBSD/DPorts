@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: net/libvncserver/Makefile 315074 2013-03-23 19:25:00Z bapt $
+# $FreeBSD: net/libvncserver/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	libvncserver
 PORTVERSION=	0.9.9
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	net devel
 MASTER_SITES=	SF
 DISTNAME=	LibVNCServer-${PORTVERSION}
