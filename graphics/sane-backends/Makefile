@@ -1,5 +1,5 @@
 # Created by: gary@hotlava.com
-# $FreeBSD: graphics/sane-backends/Makefile 315474 2013-03-28 15:51:16Z eadler $
+# $FreeBSD: graphics/sane-backends/Makefile 316839 2013-04-29 19:40:20Z bapt $
 
 PORTNAME=	sane-backends
 PORTVERSION=	1.0.23
@@ -30,8 +30,7 @@ USB_DESC=	USB support
 GPHOTO2_DESC=	gPhoto2 support
 IEEE1284_DESC=	libieee1284 support
 
-USES=	pathfix
-USE_PKGCONFIG=	yes
+USES=	pathfix pkgconfig
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-docdir=${WRKDIR}/tmproot \
@@ -51,14 +50,14 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include "Makefile.man"
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MUSB}
+.if ! ${PORT_OPTIONS:MUSB}
 CONFIGURE_ARGS+=	--disable-libusb
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=	gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-translations
@@ -106,7 +105,7 @@ CONFIGURE_ENV+=		ac_cv_header_cups_cups_h=no
 
 post-extract:
 	@((cd ${DISTDIR} && ${CAT} ${DISTFILES:C/:[^:]+$//}) | (cd ${WRKDIR} \
-		&& ${EXTRACT_CMD} ${EXTRACT_BEFOR_ARGS} ${EXTRACT_AFTER_ARGS}))
+		&& ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} - ${EXTRACT_AFTER_ARGS}))
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^for ac_header in/s|libc.h|cups/cups.h| ; \
@@ -126,4 +125,4 @@ post-install:
 .endif
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
