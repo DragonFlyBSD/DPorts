@@ -2,7 +2,7 @@
 # Date created:         10 August 1998
 # Whom:                 Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
 #
-# $FreeBSD: ports/japanese/lynx-current/Makefile,v 1.27 2012/11/17 05:58:36 svnexp Exp $
+# $FreeBSD: japanese/lynx-current/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	lynx
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=--with-screen=ncurses --with-zlib --libdir="${L_LIB}" \
 		--with-bzlib
 
 .if !defined(WITHOUT_JAPANESE_UTF8)
-USE_ICONV=	yes
+USES+=		iconv
 CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE} \
 		--enable-japanese-utf8
 .else
