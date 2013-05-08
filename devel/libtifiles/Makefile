@@ -2,7 +2,7 @@
 # Date created:		27 August 2003
 # Whom:			Tijl Coosemans <tijl@ulyssis.org>
 #
-# $FreeBSD: ports/devel/libtifiles/Makefile,v 1.21 2012/11/17 05:55:57 svnexp Exp $
+# $FreeBSD: devel/libtifiles/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	libtifiles
@@ -11,10 +11,13 @@ PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=		SF/tilp/OldFiles
 
-MAINTAINER=	tijl@coosemans.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	TI calculator file types library
 
-USE_GETTEXT=	yes
+DEPRECATED=	Superseded by devel/libtifiles2
+EXPIRATION_DATE=2013-07-01
+
+USES=		gettext
 USE_GNOME=	gnomehack pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
