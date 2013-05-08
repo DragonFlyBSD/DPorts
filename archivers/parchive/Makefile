@@ -2,7 +2,7 @@
 # Whom:					Chris D. Faulhaber <jedgar@FreeBSD.org>
 # Date created:				26 November 2001
 #
-# $FreeBSD: ports/archivers/parchive/Makefile,v 1.8 2012/11/17 05:54:22 svnexp Exp $
+# $FreeBSD: archivers/parchive/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	parchive
