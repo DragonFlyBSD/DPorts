@@ -1,12 +1,8 @@
-# Ports collection makefile for: bash-static
-# Date created:			 22 Jan 2009
-# Whom:				 Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/shells/bash-static/Makefile,v 1.2 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by:  Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: shells/bash-static/Makefile 317405 2013-05-05 08:39:30Z bapt $
 
 MASTERDIR=	${.CURDIR}/../../shells/bash
 
-WITH_STATIC_BASH=	yes
+OPTIONS_SLAVE=	STATIC
 
 .include "${MASTERDIR}/Makefile"
