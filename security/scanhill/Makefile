@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/scanhill/Makefile,v 1.8 2012/11/17 06:01:19 svnexp Exp $
+# $FreeBSD: security/scanhill/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	scanhill
 DISTVERSION=	0.5-p1
@@ -13,7 +13,7 @@ COMMENT=	Microsoft Messenger Protocol Sniffer
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
+USES=		iconv
 MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README.txt INSTALL.txt mysql.sql
