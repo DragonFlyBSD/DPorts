@@ -1,5 +1,5 @@
 # Created by: Mark Reidel <ports@mark.reidel.info>
-# $FreeBSD: audio/ncmpc/Makefile 314853 2013-03-21 17:32:34Z bapt $
+# $FreeBSD: audio/ncmpc/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	ncmpc
 PORTVERSION=	0.20
@@ -22,7 +22,7 @@ LYRICS_DESC=	Compile with lyrics screen
 
 .include <bsd.port.options.mk>
 
-USE_ICONV=	yes
+USES=		iconv
 PLIST_FILES=	bin/ncmpc \
 		%%EXAMPLESDIR%%/config \
 		%%EXAMPLESDIR%%/keys \
@@ -30,7 +30,7 @@ PLIST_FILES=	bin/ncmpc \
 PLIST_DIRS=%%EXAMPLESDIR%%
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 LANGUAGES=cs da de eo es fi fr gl he hu it ko nb nl pl pt_BR ru sk sv uk zh_CN
 .for language in ${LANGUAGES}
 PLIST_FILES+=share/locale/${language}/LC_MESSAGES/ncmpc.mo
