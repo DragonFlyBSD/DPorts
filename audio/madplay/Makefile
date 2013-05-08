@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: ports/audio/madplay/Makefile,v 1.23 2012/11/17 05:54:38 svnexp Exp $
+# $FreeBSD: audio/madplay/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	madplay
 PORTVERSION=	0.15.2b
@@ -34,7 +34,7 @@ TCL82_MAN_DESC= Install tcl 8.3 manpages
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
