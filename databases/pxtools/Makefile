@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: ports/databases/pxtools/Makefile,v 1.26 2013/01/21 04:50:56 svnexp Exp $
+# $FreeBSD: databases/pxtools/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	pxtools
 PORTVERSION=	0.0.20
@@ -13,7 +13,7 @@ COMMENT=	Collection of tools to work with Paradox databases
 
 LICENSE=	GPLv2
 
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
