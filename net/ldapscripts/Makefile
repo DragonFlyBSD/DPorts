@@ -1,5 +1,5 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: net/ldapscripts/Makefile 316039 2013-04-18 12:44:30Z martymac $
+# $FreeBSD: net/ldapscripts/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	ldapscripts
 PORTVERSION=	2.0.2
@@ -21,7 +21,7 @@ RUN_DEPENDS=	ldapadd:${PORTSDIR}/net/openldap${OPENLDAP_VER}-client \
 		ldappasswd:${PORTSDIR}/net/openldap${OPENLDAP_VER}-client
 
 USE_OPENLDAP=	yes
-USE_ICONV=	yes
+USES=		iconv
 LIBDIR=	${PREFIX}/lib/${PORTNAME}
 MAKE_ENV+=	MANDIR=${MANPREFIX}/man \
 		ETCDIR=${ETCDIR}
