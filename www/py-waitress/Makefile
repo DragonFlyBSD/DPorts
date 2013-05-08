@@ -1,8 +1,9 @@
-# $FreeBSD: ports/www/py-waitress/Makefile,v 1.5 2012/12/26 16:06:36 svnexp Exp $
+# Created by: Olivier Duchateau
+# $FreeBSD: www/py-waitress/Makefile 316942 2013-04-30 15:47:09Z olivierd $
 #
 
 PORTNAME=	waitress
-PORTVERSION=	0.8.2
+PORTVERSION=	0.8.3
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
