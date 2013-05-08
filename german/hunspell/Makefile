@@ -1,9 +1,4 @@
-# New ports collection makefile for:	hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/german/hunspell/Makefile,v 1.11 2012/11/17 05:57:59 svnexp Exp $
-#
+# $FreeBSD: german/hunspell/Makefile 317605 2013-05-07 13:12:31Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	20120607
@@ -18,10 +13,12 @@ COMMENT=	German hunspell dictionaries
 BUILD_DEPENDS=	buildhash:${PORTSDIR}/textproc/ispell \
 		hunspell:${PORTSDIR}/textproc/hunspell
 
+USES=		shebangfix
 USE_BZIP2=	yes
 ALL_TARGET=	hunspell-all
 USE_GMAKE=	yes
 USE_PERL5_BUILD=	yes
+SHEBANG_FILES=	bin/*.pl
 
 PLIST_FILES=	%%DATADIR%%/de_AT.aff \
 		%%DATADIR%%/de_AT.dic \
