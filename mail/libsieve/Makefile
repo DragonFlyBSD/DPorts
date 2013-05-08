@@ -1,5 +1,5 @@
 # Created by: Mark Starovoytov <mark_sf@kikg.ifmo.ru>
-# $FreeBSD: mail/libsieve/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: mail/libsieve/Makefile 316813 2013-04-29 12:59:35Z bapt $
 
 PORTNAME=	libsieve
 PORTVERSION=	2.3.1
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${PREFIX}
 USE_GMAKE=	yes
 USES=		bison
-USE_BISON=	build
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
