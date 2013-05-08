@@ -1,5 +1,5 @@
 # Created by: pandzilla
-# $FreeBSD: ports/security/nikto/Makefile,v 1.32 2012/11/17 18:58:40 svnexp Exp $
+# $FreeBSD: security/nikto/Makefile 316914 2013-04-30 11:21:41Z johans $
 
 PORTNAME=	nikto
 PORTVERSION=	2.1.5
@@ -8,7 +8,7 @@ CATEGORIES=	security www
 MASTER_SITES=	http://www.cirt.net/${PORTNAME}/ \
 		http://www.mirrors.wiretapped.net/security/vulnerability-assessment/${PORTNAME}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Web and CGI vulnerability scanner with SSL support
 
 LICENSE=	GPLv2
