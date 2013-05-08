@@ -1,9 +1,5 @@
-# Ports collection makefile for:	masqmail
-# Date created:				4 Apr 2004
-# Whom:					Andrey Slusar <anray@FreeBSD.org>
-#
-# $FreeBSD: mail/masqmail/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Andrey Slusar <anray@FreeBSD.org>
+# $FreeBSD: mail/masqmail/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	masqmail
 PORTVERSION=	0.3.4
@@ -20,7 +16,7 @@ MAN8=		masqmail.8 rmail.8
 .endif
 
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_RC_SUBR=	masqmail
 GNU_CONFIGURE=	yes
 CFLAGS+=	-Wno-trigraphs
