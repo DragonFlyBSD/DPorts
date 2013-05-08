@@ -1,9 +1,9 @@
 # Created by: clement
-# $FreeBSD: irc/weechat/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: irc/weechat/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	weechat
 PORTVERSION=	0.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	irc
 MASTER_SITES=	http://weechat.org/files/src/
 
@@ -14,10 +14,8 @@ LICENSE=	GPLv3
 
 CONFLICTS=	weechat-devel-0.*
 
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
-USE_NCURSES=	yes
-USES=		cmake
+USES=		cmake iconv
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 WANT_PERL=	yes
 
@@ -48,7 +46,7 @@ PLIST_SUB+=	CHARSET="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DENABLE_NLS=no
@@ -98,7 +96,7 @@ PLIST_SUB+=	PERL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MTCL}
-USE_TCL=	83+
+USE_TCL=	84+
 .include "${PORTSDIR}/Mk/bsd.tcl.mk"
 CMAKE_ARGS+=	-DBSD_TCL_VER=${TCL_VER} \
 		-DBSD_TCL_LIBDIR=${LOCALBASE}/lib \
@@ -140,10 +138,12 @@ PLIST_SUB+=	DOCUMENTATION="@comment "
 LIB_DEPENDS+=	execinfo:${PORTSDIR}/devel/libexecinfo
 .endif
 
-.if ${PORT_OPTIONS:MCOLOR256}                                      
-WITH_NCURSES_PORT=	yes                                        
+.if ${PORT_OPTIONS:MCOLOR256}
+USES+=	ncurses:port
 CMAKE_ARGS+=	-DNCURSES_INCLUDE_PATH=${LOCALBASE}/include/ncurses
-.endif                                                             
+.else
+USES+=	ncurses
+.endif
 
 MAN1=	weechat-curses.1
 
