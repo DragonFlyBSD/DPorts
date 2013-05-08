@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/net/tcpreen/Makefile,v 1.24 2013/01/09 20:05:02 svnexp Exp $
+# $FreeBSD: net/tcpreen/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	tcpreen
 PORTVERSION=	1.4.4
@@ -16,8 +16,10 @@ MAN1=		tcpreen.1
 
 DOC_FILES=	AUTHORS NEWS README THANKS TODO
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
@@ -25,7 +27,7 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-install:
-.ifndef(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for file in ${DOC_FILES}
 	@${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
