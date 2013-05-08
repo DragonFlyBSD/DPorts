@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/gsk/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: net/gsk/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	gsk
 PORTVERSION=	1.0.63
@@ -9,9 +9,8 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A C library for writing servers
 
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-gtk-doc
