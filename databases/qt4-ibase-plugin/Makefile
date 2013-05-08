@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: ports/databases/qt4-ibase-plugin/Makefile,v 1.19 2013/02/03 21:42:50 svnexp Exp $
+# $FreeBSD: databases/qt4-ibase-plugin/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
@@ -18,10 +18,9 @@ MAKE_JOBS_SAFE=	yes
 
 DRIVER=		src/sql/drivers/${DB}
 PLUGIN=		src/plugins/sqldrivers/${DB}
-EXTRACT_AFTER_ARGS?=| ${TAR} -xf - \
-		${DISTNAME}/${DRIVER} ${DISTNAME}/${PLUGIN} \
-		${DISTNAME}/include/QtSql \
-		${DISTNAME}/src/sql/kernel
+EXTRACT_AFTER_ARGS?=	${DISTNAME}/${DRIVER} ${DISTNAME}/${PLUGIN} \
+			${DISTNAME}/include/QtSql \
+			${DISTNAME}/src/sql/kernel
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 MAKE_ENV+=	DB="${DB}" DRIVER="${DRIVER}" MOC="${MOC}" \
 		PLUGIN="${PLUGIN}" \
