@@ -1,7 +1,8 @@
-# $FreeBSD: ports/comms/spandsp-devel/Makefile,v 1.34 2013/02/15 19:50:19 svnexp Exp $
+# $FreeBSD: comms/spandsp-devel/Makefile 316761 2013-04-28 22:16:02Z beech $
 
 PORTNAME=	spandsp
 DISTVERSION=	0.0.6pre21
+PORTREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://www.soft-switch.org/downloads/spandsp/
 PKGNAMESUFFIX=	-devel
@@ -28,20 +29,21 @@ CONFLICTS=	spandsp-[0-9]*
 
 OPTIONS_DEFINE=	DOXYGEN
 
+PORTDOCS=	*
+
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MDOXYGEN}
+.if ${PORT_OPTIONS:MDOXYGEN} && ${PORT_OPTIONS:MDOCS}
 CONFIGURE_ARGS+=--enable-doc
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen \
 		docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 USE_GNOME+=	libxslt
-PORTDOCS=	*
 .else
 CONFIGURE_ARGS+=--disable-doc
 .endif
 
 post-install:
-.if ${PORT_OPTIONS:MDOXYGEN}
+.if ${PORT_OPTIONS:MDOXYGEN} && ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	(cd ${WRKSRC}/doc && \
 		${COPYTREE_SHARE} \* ${DOCSDIR} "-type d -or -mindepth 1")
