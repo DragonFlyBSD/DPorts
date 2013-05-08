@@ -2,7 +2,7 @@
 # Date created:		2008-04-26
 # Whom:			Tomoyuki Sakurai <cherry@trombik.org>
 #
-# $FreeBSD: security/openvas-server/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: security/openvas-server/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	openvas-server
@@ -18,7 +18,7 @@ LIB_DEPENDS=	openvas.2:${PORTSDIR}/security/openvas-libraries \
 		openvasnasl.2:${PORTSDIR}/security/openvas-libnasl
 
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_RC_SUBR=	openvasd
 
 MAN1=		openvas-mkrand.1 openvas-mkcert-client.1 openvasd-config.1
