@@ -1,5 +1,5 @@
 # Created by: Dierk Sacher <dierk@blaxxtarz.de>
-# $FreeBSD: ports/multimedia/ffmpegthumbnailer/Makefile,v 1.22 2012/11/17 05:59:48 svnexp Exp $
+# $FreeBSD: multimedia/ffmpegthumbnailer/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	ffmpegthumbnailer
 PORTVERSION=	2.0.8
@@ -19,7 +19,7 @@ LDFLAGS+=	${PTHREAD_LIBS} -L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig --enable-gio
 
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GNOME=	gnomehack _glib20
 USE_LDCONFIG=	yes
 
