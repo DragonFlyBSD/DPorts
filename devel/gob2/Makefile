@@ -1,9 +1,5 @@
-# New ports collection makefile for:   gob2
-# Date created:        09 November 2002
-# Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: devel/gob2/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: devel/gob2/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	gob2
 PORTVERSION=	2.0.17
@@ -17,7 +13,7 @@ COMMENT=	A preprocessor for making GObjects with inline C
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
