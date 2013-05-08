@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: lang/gawk/Makefile 314439 2013-03-17 14:05:20Z johans $
+# $FreeBSD: lang/gawk/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gawk
 PORTVERSION=	4.0.2
@@ -27,7 +27,7 @@ PLIST_SUB=	VERSION=${PORTVERSION}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
