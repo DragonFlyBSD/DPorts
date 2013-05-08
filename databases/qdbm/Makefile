@@ -2,7 +2,7 @@
 # Date created:				18 October 2003
 # Whom:					Kimura Fuyuki <fuyuki@nigredo.org>
 #
-# $FreeBSD: ports/databases/qdbm/Makefile,v 1.85 2012/11/17 05:55:23 svnexp Exp $
+# $FreeBSD: databases/qdbm/Makefile 316654 2013-04-27 08:50:46Z mva $
 #    $MCom: ports-stable/databases/qdbm/Makefile,v 1.6 2008/03/29 20:07:25 ahze Exp $
 
 PORTNAME=	qdbm
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
 .if !defined(SLAVEPORT)
-USE_ICONV=	yes
+USES+=		iconv
 CONFIGURE_ARGS=	--enable-zlib \
 		--enable-iconv \
 		--enable-pthread
