@@ -1,16 +1,16 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: security/openvas-libnasl/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: security/openvas-libnasl/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	openvas-libnasl
 PORTVERSION=	2.0.1
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/561/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	NASL libraries for OpenVAS
 
-LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt \
+LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
 		gnutls.26:${PORTSDIR}/security/gnutls \
 		gpg-error.0:${PORTSDIR}/security/libgpg-error \
 		gpgme.19:${PORTSDIR}/security/gpgme \
@@ -20,8 +20,7 @@ LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt \
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_ICONV=	yes
-USES=		bison
+USES=		bison iconv
 
 MAN1=		openvas-libnasl-config.1 openvas-nasl.1
 
