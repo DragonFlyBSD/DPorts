@@ -2,7 +2,7 @@
 # Date created:		14 Feb 2006
 # Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: ports/shells/tcsh_nls/Makefile,v 1.6 2012/11/17 06:01:24 svnexp Exp $
+# $FreeBSD: shells/tcsh_nls/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	tcsh_nls
@@ -14,7 +14,7 @@ DISTFILES=	# none
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	Misc NLS catalogs for tcsh which requires libiconv
 
-USE_ICONV=	yes
+USES=		iconv
 NO_BUILD=	yes
 
 PLIST_FILES=	share/nls/de_AT.UTF-8/tcsh.cat \
