@@ -1,9 +1,6 @@
-# New ports collection makefile for:	cdrtools
-# Date created:		Wed Jul 25 23:30:19 CEST 2001
-# Whom:			Dirk Froemberg <dirk@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/cdrtools/Makefile,v 1.87 2012/12/16 15:37:17 svnexp Exp $
-#
+# Created by: Dirk Froemberg <dirk@FreeBSD.org>
+# $FreeBSD: sysutils/cdrtools/Makefile 317403 2013-05-05 08:15:24Z bapt $
+
 ###########################################################################
 # This makefile was contributed by Marius Strobl.
 ###########################################################################
@@ -94,13 +91,12 @@ MAKE_ENV+=	CCOM=cc GMAKE_NOWARN=true INS_BASE=${LOCALBASE} \
 		INS_RBASE=${LOCALBASE}
 CDRTLSTARGET=	${ARCH:S/powerpc64/powerpc/}-freebsd-cc
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/lib/libiconv.a) || \
-	exists(${LOCALBASE}/lib/libintl.a) || !defined(WITHOUT_NLS)
+	exists(${LOCALBASE}/lib/libintl.a) || ${PORT_OPTIONS:MNLS}
 MAKE_ENV+=	OSDEFS=-I${LOCALBASE}/include
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES+=		gettext iconv
 .endif
 
 pre-everything::
@@ -223,7 +219,7 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/rscsi/rscsi.dfl ${PREFIX}/etc/rscsi
 .endif
 .endif
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in ${DOCS}
 	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
@@ -247,4 +243,4 @@ post-install:
 		${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL; fi
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
