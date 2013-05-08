@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: lang/gnustep-base/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: lang/gnustep-base/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	gnustep-base
 PORTVERSION=	1.24.0
@@ -30,8 +30,7 @@ USE_GNUSTEP_CONFIGURE=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 USE_GNUSTEP_LDCONFIG=	${GNUSTEP_SYSTEM_LIBRARIES}
-USE_ICONV=	yes
-USE_PKGCONFIG=	yes
+USES=		pkgconfig iconv
 
 MAKE_FLAGS=	OPTFLAG="${CFLAGS}"
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
