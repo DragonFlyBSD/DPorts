@@ -2,7 +2,7 @@
 # Date created:		19 March 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: dns/idnkit/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: dns/idnkit/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	idnkit
@@ -16,7 +16,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A library to handle internationalized domain names
 
 USE_AUTOTOOLS=	libtool
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libiconv=${LOCALBASE} \
 		--enable-runidn \
