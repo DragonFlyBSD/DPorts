@@ -1,15 +1,15 @@
 # Created by: jpaetzel
-# $FreeBSD: ports/databases/py-htsql/Makefile,v 1.13 2013/02/09 15:58:53 svnexp Exp $
+# $FreeBSD: databases/py-htsql/Makefile 316728 2013-04-28 14:34:12Z koobs $
 
 PORTNAME=	htsql
-PORTVERSION=	2.3.2
+PORTVERSION=	2.3.3
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	${PORTNAME:tu}-${PORTVERSION}
 
 MAINTAINER=	koobs@FreeBSD.org
-COMMENT=	Python HTSQL
+COMMENT=	Database Query Language (Core & SQLite Backend)
 
 USE_PYTHON=		2.6-2.7
 USE_PYDISTUTILS=	easy_install
