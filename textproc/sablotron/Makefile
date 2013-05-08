@@ -1,12 +1,12 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/sablotron/Makefile 314788 2013-03-21 00:21:21Z jgh $
+# $FreeBSD: textproc/sablotron/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	Sablot
 PORTVERSION=	1.0.3
 CATEGORIES=	textproc
 MASTER_SITES=	http://download-1.gingerall.cz/download/sablot/
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XML toolkit implementing XSLT 1.0, XPath 1.0 and DOM Level2
 
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
@@ -30,7 +30,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lexpat -liconv
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 USE_PERL5_BUILD=	yes
 
