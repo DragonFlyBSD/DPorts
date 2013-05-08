@@ -2,7 +2,7 @@
 # Date created:		23 June 2002
 # Whom:			sada
 #
-# $FreeBSD: ports/www/cgi-lib.pl/Makefile,v 1.6 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: www/cgi-lib.pl/Makefile 316786 2013-04-29 08:57:12Z bapt $
 #
 
 PORTNAME=	cgi-lib_pl
@@ -20,6 +20,8 @@ USE_PERL5=	YES
 NO_BUILD=	YES
 NO_WRKSUBDIR=	YES
 PLIST_FILES=	%%SITE_PERL%%/cgi-lib.pl
+EXTRACT_CMD=	${GZCAT}
+EXTRACT_BEFORE_ARGS=	#
 EXTRACT_AFTER_ARGS=	> cgi-lib.pl
 
 INSTALL_BASE=	${SITE_PERL_REL}
