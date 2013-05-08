@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/databases/mysql51-server/Makefile,v 1.293 2013/02/07 10:36:44 svnexp Exp $
+# $FreeBSD: databases/mysql51-server/Makefile 317519 2013-05-06 14:49:11Z ale $
 
 PORTNAME?=	mysql
-PORTVERSION=	5.1.68
+PORTVERSION=	5.1.69
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL}
@@ -24,6 +24,8 @@ CONFIGURE_ARGS=	--localstatedir=/var/db/mysql \
 		--with-low-memory \
 		--with-comment='FreeBSD port: ${PKGNAME}' \
 		--enable-thread-safe-client
+
+CONFIGURE_ENV=	mysql_cv_btype_last_arg_accept=socklen_t
 
 .ifdef USE_MYSQL
 .error You have `USE_MYSQL' variable defined either in environment or in make(1) arguments. Please undefine and try again.

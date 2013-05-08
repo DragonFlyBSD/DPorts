@@ -1,7 +1,7 @@
 --- include/my_tcpd.h.orig	Sun Jan  9 13:33:51 2005
 +++ include/my_tcpd.h	Sun Jan  9 13:41:42 2005
 @@ -6,6 +6,25 @@
-   * $FreeBSD: ports/databases/mysql51-server/files/patch-include_my_tcpd.h,v 1.2 2012/11/17 05:55:12 svnexp Exp $
+   * $FreeBSD: databases/mysql51-server/files/patch-include_my_tcpd.h 300896 2012-07-14 13:54:48Z beat $
    */
  
 +#ifndef _TCPWRAPPERS_TCPD_H
