@@ -1,5 +1,5 @@
 # Created by: Steven Honson
-# $FreeBSD: dns/dnsmasq/Makefile 315999 2013-04-17 17:50:27Z mandree $
+# $FreeBSD: dns/dnsmasq/Makefile 316620 2013-04-26 15:10:57Z bapt $
 
 PORTNAME=	dnsmasq
 DISTVERSION=	2.66
@@ -40,11 +40,10 @@ CFLAGS+=	-DNO_IPV6
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_PKGCONFIG=	build
+USES+=		pkgconfig gettext
 LIB_DEPENDS+=	idn:${PORTSDIR}/dns/libidn
 PLIST_SUB+=	NLS=""
 ALL_TARGET=	all-i18n
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 .else
 PLIST_SUB+=	NLS="@comment "
@@ -56,7 +55,7 @@ LIB_DEPENDS+=	idn:${PORTSDIR}/dns/libidn
 
 .if ${PORT_OPTIONS:MDBUS}
 LIB_DEPENDS+=	dbus-1:${PORTSDIR}/devel/dbus
-USE_PKGCONFIG=	build
+USES+=		pkgconfig
 CFLAGS+=	-DHAVE_DBUS
 .endif
 
