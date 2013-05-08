@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: ports/graphics/ilmbase/Makefile,v 1.16 2013/02/12 14:15:59 svnexp Exp $
+# $FreeBSD: graphics/ilmbase/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	ilmbase
 PORTVERSION=	1.0.3
@@ -13,7 +13,7 @@ LICENSE=	BSD
 
 CONFLICTS=	OpenEXR-1.[0-4].*
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
