@@ -1,8 +1,8 @@
-# $FreeBSD: ports/devel/gwenhywfar/Makefile,v 1.38 2013/02/14 10:22:08 svnexp Exp $
+# $FreeBSD: devel/gwenhywfar/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	gwenhywfar
 PORTVERSION=	4.3.3
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES=	devel net security
 MASTER_SITES=	http://www.aquamaniac.de/sites/download/download.php?package=01&release=67&file=01&dummy=/
 
@@ -20,12 +20,10 @@ OPTIONS_DEFINE=	DOXYGEN MEMDEBUG
 MEMDEBUG_DESC=	Enable memory debugger statistic
 .endif
 
+USES=		pathfix pkgconfig gettext
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_OPENSSL=	yes
-USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-release="yes" \
