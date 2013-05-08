@@ -1,7 +1,8 @@
-# $FreeBSD: textproc/py-elib.intl/Makefile 315028 2013-03-23 13:11:45Z rm $
+# $FreeBSD: textproc/py-elib.intl/Makefile 316668 2013-04-27 15:17:50Z rm $
 
 PORTNAME=	elib.intl
 PORTVERSION=	0.0.3
+PORTREVISION=	1
 CATEGORIES=	textproc python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
