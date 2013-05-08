@@ -1,14 +1,14 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-IO-Socket-IP/Makefile 313952 2013-03-12 08:03:58Z sunpoet $
+# $FreeBSD: net/p5-IO-Socket-IP/Makefile 316646 2013-04-27 04:10:14Z sunpoet $
 
 PORTNAME=	IO-Socket-IP
-PORTVERSION=	0.19
+PORTVERSION=	0.21
 CATEGORIES=	net ipv6 perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A drop-in replacement for IO::Socket::INET supporting IPv4 and IPv6
+COMMENT=	Drop-in replacement for IO::Socket::INET supporting IPv4 and IPv6
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
