@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/security/mcrypt/Makefile,v 1.51 2013/01/27 06:41:41 svnexp Exp $
+# $FreeBSD: security/mcrypt/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	mcrypt
 PORTVERSION=	2.6.8
@@ -16,7 +16,7 @@ COMMENT=	Replacement for crypt(1)
 LIB_DEPENDS=	mcrypt.8:${PORTSDIR}/security/libmcrypt \
 		mhash.2:${PORTSDIR}/security/mhash
 
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
