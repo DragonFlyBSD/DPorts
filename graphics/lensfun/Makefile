@@ -1,5 +1,5 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: graphics/lensfun/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: graphics/lensfun/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	lensfun
 PORTVERSION=	0.2.7
@@ -13,10 +13,10 @@ LICENSE=	LGPL3
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 USE_PYTHON_BUILD=	yes
 
