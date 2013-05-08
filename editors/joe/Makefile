@@ -1,9 +1,5 @@
-# New ports collection makefile for:	joe
-# Date created:		01 Jul 1995
-# Whom:			torstenb@FreeBSD.org
-#
-# $FreeBSD: ports/editors/joe/Makefile,v 1.37 2012/11/17 05:57:14 svnexp Exp $
-#
+# Created by: torstenb@FreeBSD.org
+# $FreeBSD: editors/joe/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	joe
 PORTVERSION=	3.7
@@ -22,8 +18,7 @@ CONFLICTS=	joe-2.*
 
 LICENSE=	GPLv1
 USE_GMAKE=	yes
-USE_ICONV=	yes
-USE_NCURSES=	yes
+USES=		iconv ncurses
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -liconv"
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -35,7 +30,7 @@ MANLANG=	"" ru
 
 .include <bsd.port.pre.mk>
 
-.ifdef NOPORTDOCS
+.if ! ${PORT_OPTIONS:MDOCS}
 post-patch:
 	${REINPLACE_CMD} 's,install-data-am: install-data_charmapsDATA install-data_docDATA,install-data-am: install-data_charmapsDATA,' \
 		${WRKSRC}/Makefile.in
