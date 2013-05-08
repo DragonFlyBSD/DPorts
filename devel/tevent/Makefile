@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/tevent/Makefile,v 1.10 2013/01/31 15:43:48 svnexp Exp $
+# $FreeBSD: devel/tevent/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=		tevent
 PORTVERSION=		0.9.17
@@ -21,7 +21,7 @@ HAS_CONFIGURE=		yes
 WAF_TOOL=		buildtools/bin/waf
 CONFIGURE_SCRIPT=	${WAF_TOOL} configure
 CONFIGURE_LOG=		bin/config.log
-USE_PKGCONFIG=		build
+USES=			pkgconfig
 
 MAKE_JOBS_SAFE=		yes
 
