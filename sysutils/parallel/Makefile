@@ -1,8 +1,8 @@
 # Created by: Chris Howey <howeyc@gmail.com>
-# $FreeBSD: ports/sysutils/parallel/Makefile,v 1.33 2013/02/26 02:44:19 svnexp Exp $
+# $FreeBSD: sysutils/parallel/Makefile 316267 2013-04-22 19:20:17Z culot $
 
 PORTNAME=	parallel
-PORTVERSION=	20130222
+PORTVERSION=	20130422
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU
 
@@ -26,6 +26,10 @@ PORTDOCS=	parallel.html sem.html sql.html niceload.html \
 		parallel.texi sem.texi sql.texi niceload.texi
 
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
+BUILD_DEPENDS+=	pod2texi:${PORTSDIR}/print/texinfo
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '1 s|/usr/bin/perl|${PERL}|' ${WRKSRC}/src/parallel
