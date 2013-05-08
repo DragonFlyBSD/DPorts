@@ -1,5 +1,5 @@
 # vi:ft=make
-# $FreeBSD: ports/security/gnutls/Makefile.man,v 1.12 2012/11/17 06:01:04 svnexp Exp $
+# $FreeBSD: security/gnutls/Makefile.man 300897 2012-07-14 14:29:18Z beat $
 
 INFO=	gnutls
 

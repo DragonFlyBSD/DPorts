@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/gnutls/pkg-plist,v 1.29 2013/02/05 16:48:51 svnexp Exp $
+@comment $FreeBSD: security/gnutls/pkg-plist 311721 2013-02-05 16:14:59Z novel $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug

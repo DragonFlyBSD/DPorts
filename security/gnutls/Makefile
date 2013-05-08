@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnutls
-# Date created:				13 Nov 2002
-# Whom:					Sergei Kolobov <sergei@kolobov.com>
-#
-# $FreeBSD: ports/security/gnutls/Makefile,v 1.105 2013/02/06 21:57:30 svnexp Exp $
-#
+# Created by: Sergei Kolobov <sergei@kolobov.com>
+# $FreeBSD: security/gnutls/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	gnutls
 PORTVERSION=	2.12.23
@@ -21,10 +17,9 @@ LIB_DEPENDS=	nettle:${PORTSDIR}/security/nettle \
 
 CONFLICTS=	gnutls-devel-[0-9]*
 
+USES=		pathfix pkgconfig iconv
 USE_BZIP2=	yes
-USE_ICONV=	yes
-USE_PKGCONFIG=	build
-USE_GNOME=	ltverhack gnomehack
+USE_GNOME=	ltverhack
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
@@ -68,7 +63,7 @@ PLIST_SUB+=		CXX=""
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=		NLS="@comment "
 .else
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .endif
 
