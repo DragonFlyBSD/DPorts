@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libbs2b
-# Date created:				22 May 2010
-# Whom:					SimaMoto,RyoTa <liangtai.s4@gmail.com>
-#
-# $FreeBSD: ports/audio/libbs2b/Makefile,v 1.5 2012/11/17 05:54:36 svnexp Exp $
-#
+# Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
+# $FreeBSD: audio/libbs2b/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	libbs2b
 PORTVERSION=	3.1.0
@@ -19,10 +15,10 @@ LIB_DEPENDS+=	sndfile:${PORTSDIR}/audio/libsndfile \
 		FLAC:${PORTSDIR}/audio/flac \
 		vorbis:${PORTSDIR}/audio/libvorbis
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	CFLAGS=`pkg-config --cflags sndfile` \
 	LDFLAGS=`pkg-config --libs-only-L sndfile`
