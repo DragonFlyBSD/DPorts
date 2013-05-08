@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: www/roundup/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: www/roundup/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	roundup
 PORTVERSION=	1.4.21
@@ -11,7 +11,7 @@ COMMENT=	Issue-Tracking System for Knowledge Workers
 
 LICENSE=	PSFL
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
