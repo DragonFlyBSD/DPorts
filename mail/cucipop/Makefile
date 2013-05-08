@@ -1,5 +1,5 @@
 # Created by: igor@zynaps.ru
-# $FreeBSD: ports/mail/cucipop/Makefile,v 1.22 2012/11/17 05:59:00 svnexp Exp $
+# $FreeBSD: mail/cucipop/Makefile 316862 2013-04-30 00:42:58Z miwi $
 
 # NOTE: APOP works only for virtual hosts as designed!
 #       Virtual hosts works only with Berkeley DB2.
@@ -10,7 +10,7 @@ PORTVERSION=	1.31
 PORTREVISION=	2
 CATEGORIES=	mail ipv6
 MASTER_SITES=	ftp://ftp.informatik.rwth-aachen.de/pub/packages/cucipop/ \
-		http://ftp.riken.go.jp/archives/net/mail/pop/ \
+		http://ftp.riken.go.jp/archives/net/mail/pop/cucipop/ \
 		http://horms.net/projects/cucipop/download/
 
 PATCH_SITES=	${MASTER_SITE_RINGSERVER}
