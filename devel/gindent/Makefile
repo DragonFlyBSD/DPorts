@@ -3,7 +3,7 @@
 # Date created:        28 August 1997
 # Whom:                Kapil Chowksey <kchowksey@hss.hns.com>
 #
-# $FreeBSD: ports/devel/gindent/Makefile,v 1.49 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: devel/gindent/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gindent
@@ -26,7 +26,7 @@ MAKE_JOBS_UNSAFE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
