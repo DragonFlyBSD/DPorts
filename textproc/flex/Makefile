@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/flex/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: textproc/flex/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	flex
 PORTVERSION=	2.5.37
@@ -23,8 +23,7 @@ INFO=		flex
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES+=		gettext iconv
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
