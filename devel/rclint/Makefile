@@ -1,13 +1,15 @@
-# $FreeBSD: ports/devel/rclint/Makefile,v 1.7 2013/02/18 18:07:45 svnexp Exp $
+# $FreeBSD: devel/rclint/Makefile 317149 2013-05-02 21:13:42Z crees $
 
 PORTNAME=	rclint
-PORTVERSION=	0.0.5
+PORTVERSION=	0.0.6
 CATEGORIES=	devel textproc python
 MASTER_SITES=	http://www.bayofrum.net/dist/rclint/	\
 		LOCAL/crees/
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Checks rc scripts for style and common errors
+
+LICENSE=	BSD
 
 NO_BUILD=	yes
 USE_PYTHON=	yes

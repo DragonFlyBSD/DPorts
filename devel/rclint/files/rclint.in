@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/rclint/files/rclint.in,v 1.3 2012/11/17 05:56:56 svnexp Exp $
+# $FreeBSD: devel/rclint/files/rclint.in 306289 2012-10-22 20:47:40Z crees $
 #
 
 exec python %%DATADIR%%/rclint.py ${1+"$@"}
