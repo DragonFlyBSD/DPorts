@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ftp/weex/Makefile 315672 2013-04-02 12:59:10Z ehaupt $
+# $FreeBSD: ftp/weex/Makefile 316340 2013-04-23 10:26:09Z ehaupt $
 
 PORTNAME=	weex
 PORTVERSION=	2.6.1.5
@@ -22,7 +22,7 @@ OPTIONS_DEFINE=	DOCS NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
