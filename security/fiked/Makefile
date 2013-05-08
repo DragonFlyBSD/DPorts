@@ -1,10 +1,10 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: security/fiked/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/fiked/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 #
 
 PORTNAME=	fiked
 PORTVERSION=	0.0.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://mirror.roe.ch/dist/fiked/
 
