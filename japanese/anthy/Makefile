@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: ports/japanese/anthy/Makefile,v 1.42 2013/01/26 10:44:31 svnexp Exp $
+# $FreeBSD: japanese/anthy/Makefile 316350 2013-04-23 11:46:54Z bapt $
 
 PORTNAME=	anthy
 PORTVERSION=	9100h
@@ -19,9 +19,9 @@ LICENSE_FILE_GPLv2=	${WRKSRC}/alt-cannadic/COPYING
 LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 USE_GNOME=	lthack
-USE_PKGCONFIG=	build
 
 DOCSDIR=	share/doc/ja/anthy
 ELISPDIR=	share/emacs/site-lisp/anthy
