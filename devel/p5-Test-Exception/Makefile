@@ -1,18 +1,17 @@
-# New ports collection makefile for:    p5-Test-Exception
-# Date created:				January 27th 2003
-# Whom:	      				Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Exception/Makefile,v 1.23 2012/11/17 05:56:32 svnexp Exp $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-Exception/Makefile 316788 2013-04-29 09:13:02Z sunpoet $
 
 PORTNAME=	Test-Exception
-PORTVERSION=	0.31
+PORTVERSION=	0.32
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Test::Exception - test functions for exception based code
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 RUN_DEPENDS=	p5-Sub-Uplevel>=0.18:${PORTSDIR}/devel/p5-Sub-Uplevel
 BUILD_DEPENDS:=	${RUN_DEPENDS}
