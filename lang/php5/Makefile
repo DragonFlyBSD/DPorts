@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/php5/Makefile 314716 2013-03-20 08:15:37Z ale $
+# $FreeBSD: lang/php5/Makefile 317389 2013-05-04 22:48:03Z flo $
 
 PORTNAME=	php5
-PORTVERSION=	5.4.13
+PORTVERSION=	5.4.14
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
@@ -195,7 +195,7 @@ post-install:
 	@${INSTALL_DATA} ${WRKDIR}/php.conf ${PREFIX}/etc
 	@${TOUCH} ${PREFIX}/include/php/ext/php_config.h
 .if ${PORT_OPTIONS:MFPM}
-	@${CP} -n ${PREFIX}/etc/php-fpm.conf.default ${PREFIX}/etc/php-fpm.conf
+	@${CP} -n ${PREFIX}/etc/php-fpm.conf.default ${PREFIX}/etc/php-fpm.conf || ${TRUE}
 .endif
 .if ${PORT_OPTIONS:MAPACHE}
 	@${CAT} ${PKGMESSAGE}
