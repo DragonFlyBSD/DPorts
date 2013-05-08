@@ -1,8 +1,8 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 314083 2013-03-13 13:44:56Z jadawin $
+# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 316893 2013-04-30 08:03:14Z jadawin $
 
 PORTNAME=	DateTime-TimeZone
-PORTVERSION=	1.58
+PORTVERSION=	1.59
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -23,8 +23,11 @@ MAN3=		DateTime::TimeZone.3 DateTime::TimeZone::Floating.3 \
 	  	DateTime::TimeZone::OffsetOnly.3 DateTime::TimeZone::OlsonDB.3 \
 		DateTime::TimeZone::UTC.3 DateTime::TimeZone::Catalog.3
 
-.if !defined(NOPORTDOCS)
 PORTDOCS=	Changes README
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
