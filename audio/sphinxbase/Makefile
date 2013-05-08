@@ -1,5 +1,5 @@
 # Created by: r.neese
-# $FreeBSD: ports/audio/sphinxbase/Makefile,v 1.10 2012/12/14 17:16:37 svnexp Exp $
+# $FreeBSD: audio/sphinxbase/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	sphinxbase
 PORTVERSION=	0.8
@@ -33,7 +33,7 @@ THREADS_DESC=	Build with thread safety support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSNDFILE}
-USE_PKGCONFIG=	build
+USES+=		pkgconfig
 LIB_DEPENDS+=	sndfile:${PORTSDIR}/audio/libsndfile
 .else
 CONFIGURE_ENV+=	HAVE_PKGCONFIG=no
