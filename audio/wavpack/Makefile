@@ -2,7 +2,7 @@
 # Date created:				Fri Jun 24 20:30:04 CEST 2005
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/wavpack/Makefile,v 1.22 2012/11/17 05:54:47 svnexp Exp $
+# $FreeBSD: audio/wavpack/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	wavpack
@@ -16,8 +16,7 @@ COMMENT=	Audio codec for lossless, lossy, and hybrid compression
 LICENSE=	BSD
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack pkgconfig
-USE_ICONV=	yes
+USES=		pathfix pkgconfig iconv
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
