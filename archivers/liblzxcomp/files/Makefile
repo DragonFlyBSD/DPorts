@@ -1,4 +1,4 @@
-# $FreeBSD: ports/archivers/liblzxcomp/files/Makefile,v 1.3 2012/11/17 05:54:21 svnexp Exp $
+# $FreeBSD: archivers/liblzxcomp/files/Makefile 300895 2012-07-14 12:56:14Z beat $
 
 LIB = 	lzxcomp
 SRCS=	lz_nonslide.c lzx_layer.c
