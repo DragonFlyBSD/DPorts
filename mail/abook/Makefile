@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
-# $FreeBSD: ports/mail/abook/Makefile,v 1.33 2012/12/17 03:32:55 svnexp Exp $
+# $FreeBSD: mail/abook/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	abook
 PORTVERSION=	0.5.6
@@ -14,8 +14,7 @@ LICENSE=	GPLv2
 
 OPTIONS_DEFINE=	NLS DOCS
 
-USE_NCURSES=	yes
-USE_READLINE=	yes
+USES=		ncurses readline
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
@@ -30,7 +29,7 @@ PORTDOCS=	ANNOUNCE AUTHORS BUGS ChangeLog FAQ INSTALL NEWS README \
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
