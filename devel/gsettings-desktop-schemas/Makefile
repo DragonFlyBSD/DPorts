@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/gsettings-desktop-schemas/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/gsettings-desktop-schemas/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.13 2011/04/27 21:18:30 kwm Exp $
 
 PORTNAME=	gsettings-desktop-schemas
@@ -15,12 +15,11 @@ RUN_DEPENDS=	${LOCALBASE}/etc/fonts/conf.avail/31-cantarell.conf:${PORTSDIR}/x11
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig gettext
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_PERL5_BUILD=	yes
 USE_GNOME=	gnomehack intltool glib20
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 
 GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
