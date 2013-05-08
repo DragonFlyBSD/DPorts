@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/rudiments/Makefile 313204 2013-03-02 06:25:51Z miwi $
+# $FreeBSD: devel/rudiments/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	rudiments
 PORTVERSION=	0.41
@@ -13,8 +13,8 @@ LICENSE=	LGPL20
 
 OPTIONS_DEFINE=	DOCS
 
+USES=		pkgconfig
 USE_OPENSSL=	yes
-USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-ssl-includes=-I${OPENSSLINC} \
 		--with-ssl-libs=-L${OPENSSLLIB} \
