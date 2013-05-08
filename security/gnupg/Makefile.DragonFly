@@ -1,0 +1,3 @@
+# This option expects USB-1
+# Either patch makefile or disable option
+OPTIONS_EXCLUDE+=	SCDAEMON

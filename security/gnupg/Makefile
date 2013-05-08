@@ -1,8 +1,8 @@
-# $FreeBSD: ports/security/gnupg/Makefile,v 1.148 2012/12/27 14:26:07 svnexp Exp $
+# $FreeBSD: security/gnupg/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	gnupg
 PORTVERSION=	2.0.19
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	gnupg
@@ -26,18 +26,9 @@ LIB_DEPENDS=	assuan:${PORTSDIR}/security/libassuan \
 USE_BZIP2=	YES
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
-USE_ICONV=	YES
+USES=		iconv
 USE_LDCONFIG=	YES
 CONFIGURE_ARGS+=	--enable-symcryptrun
-.if defined(NOPORTDOCS)
-CONFIGURE_ARGS+=	--disable-doc
-.else
-MAN1=		gpg2.1 gpgsm.1 gpgv2.1 gpg-agent.1 scdaemon.1 watchgnupg.1 \
-		gpgconf.1 gpg-preset-passphrase.1 gpg-connect-agent.1 \
-		gpgparsemail.1 symcryptrun.1 gpgsm-gencert.sh.1
-MAN8=		addgnupghome.8 applygnupgdefaults.8
-INFO=		gnupg
-.endif
 
 OPTIONS_DEFINE=		PINENTRY LDAP SCDAEMON CURL GPGSM KDNS STD_SOCKET NLS
 PINENTRY_DESC=		Use pinentry
@@ -51,6 +42,16 @@ OPTIONS_DEFAULT=	CURL
 NO_OPTIONS_SORT=	YES
 
 .include <bsd.port.options.mk>
+
+.if ! ${PORT_OPTIONS:MDOCS}
+CONFIGURE_ARGS+=	--disable-doc
+.else
+MAN1=		gpg2.1 gpgsm.1 gpgv2.1 gpg-agent.1 scdaemon.1 watchgnupg.1 \
+		gpgconf.1 gpg-preset-passphrase.1 gpg-connect-agent.1 \
+		gpgparsemail.1 symcryptrun.1 gpgsm-gencert.sh.1
+MAN8=		addgnupghome.8 applygnupgdefaults.8
+INFO=		gnupg
+.endif
 
 .if ${PORT_OPTIONS:MPINENTRY}
 RUN_DEPENDS+=	pinentry>0:${PORTSDIR}/security/pinentry
@@ -87,7 +88,7 @@ CONFIGURE_ARGS+=--enable-standard-socket
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	YES
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
@@ -97,9 +98,6 @@ PLIST_SUB+=	NLS="@comment "
 
 .if ${PORT_OPTIONS:MSCDAEMON}
 CONFIGURE_ARGS+=--enable-scdaemon
-. if ${OSVERSION} < 800069
-LIB_DEPENDS+=	usb-0.1:${PORTSDIR}/devel/libusb
-. endif
 PLIST_SUB+=	SCDAEMON=""
 .else
 CONFIGURE_ARGS+=--disable-scdaemon

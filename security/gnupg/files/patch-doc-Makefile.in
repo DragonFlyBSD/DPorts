@@ -1,4 +1,4 @@
-$FreeBSD: ports/security/gnupg/files/patch-doc-Makefile.in,v 1.2 2012/11/17 06:01:04 svnexp Exp $
+$FreeBSD: security/gnupg/files/patch-doc-Makefile.in 302102 2012-08-05 09:41:57Z kuriyama $
 
 --- doc/Makefile.in	2012-08-05 12:21:36.163578307 +0900
 +++ doc/Makefile.in.orig	2012-08-05 12:21:25.241287984 +0900
