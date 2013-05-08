@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/chinese/bg5ps/files/patch-aa,v 1.6 2012/11/17 05:54:55 svnexp Exp $
+$FreeBSD: chinese/bg5ps/files/patch-aa 300895 2012-07-14 12:56:14Z beat $
 
 --- Makefile.orig	Mon Feb 14 22:41:27 2000
 +++ Makefile	Thu Mar 14 09:33:24 2002
