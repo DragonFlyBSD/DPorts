@@ -1,5 +1,5 @@
 # Created by: Yuri <yuri@tsoft.com>
-# $FreeBSD: multimedia/assimp/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: multimedia/assimp/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	assimp
 PORTVERSION=	3.0
@@ -17,8 +17,7 @@ LICENSE=	BSD
 LIB_DEPENDS=	boost_filesystem:${PORTSDIR}/devel/boost-libs
 
 USE_ZIP=	yes
-USES=		cmake
-USE_PKGCONFIG=	build
+USES=		cmake pkgconfig
 USE_GCC=	4.6+ # 4.2+ causes compiler warnings
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
