@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: math/fftw3/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: math/fftw3/Makefile 316355 2013-04-23 14:20:25Z bapt $
 #    $MCom: ports-experimental/math/fftw3/Makefile,v 1.1 2006/03/28 00:08:57 ahze Exp $
 
 PORTNAME=	fftw3
@@ -19,10 +19,9 @@ FFTW3_FLAVOR?=	default
 FFTW3_SUFX=
 
 GNU_CONFIGURE=	yes
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_PERL5_BUILD=yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 
 CONFIGURE_ARGS =	--enable-shared --enable-threads --disable-fortran
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
