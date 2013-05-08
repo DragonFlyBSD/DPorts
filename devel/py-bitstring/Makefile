@@ -1,8 +1,8 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/py-bitstring/Makefile 315826 2013-04-16 15:39:47Z sbz $
+# $FreeBSD: devel/py-bitstring/Makefile 316467 2013-04-24 18:25:56Z sbz $
 
 PORTNAME=	bitstring
-PORTVERSION=	3.1.1
+PORTVERSION=	3.1.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
