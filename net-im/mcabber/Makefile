@@ -1,9 +1,9 @@
 # Created by: vsevolod
-# $FreeBSD: ports/net-im/mcabber/Makefile,v 1.50 2013/01/07 21:42:52 svnexp Exp $
+# $FreeBSD: net-im/mcabber/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	mcabber
 PORTVERSION=	0.10.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.lilotux.net/~mikael/mcabber/files/ CENKES
 
@@ -19,11 +19,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-sigwinch --libdir=${PREFIX}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		pkgconfig gettext iconv ncurses
 USE_LDCONFIG=	yes
-USE_NCURSES=	yes
-USE_PKGCONFIG=	build
 USE_GNOME=	glib20
 
 MAN1=		mcabber.1
@@ -60,7 +57,7 @@ CONFIGURE_ARGS+=--disable-enchant
 
 .if ${PORT_OPTIONS:MOTR}
 LIB_DEPENDS+=	otr.4:${PORTSDIR}/security/libotr3 \
-		gcrypt.18:${PORTSDIR}/security/libgcrypt
+		gcrypt:${PORTSDIR}/security/libgcrypt
 CONFIGURE_ARGS+=--enable-otr
 PLIST_SUB+=	OTR=""
 .else
