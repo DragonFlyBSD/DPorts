@@ -1,9 +1,5 @@
-# New ports collection makefile for:	linklint
-# Date created:				16 Sep 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/www/linklint/Makefile,v 1.9 2012/11/17 06:02:38 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: www/linklint/Makefile 317614 2013-05-07 14:27:41Z ehaupt $
 
 PORTNAME=	linklint
 DISTVERSION=	2.3.6.d
@@ -14,14 +10,13 @@ MASTER_SITES=	http://www.linklint.org/download/ \
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Perl script that checks links on web sites
 
+USES=		shebangfix
 USE_PERL5_RUN=	yes
 NO_BUILD=	yes
 
-PLIST_FILES=	bin/linklint
+SHEBANG_FILES=	${DISTNAME}
 
-post-patch:
-	@${REINPLACE_CMD} -e '1s|.*|#!${PERL}|' \
-		${WRKSRC}/${DISTNAME}
+PLIST_FILES=	bin/linklint
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/${PORTNAME}
