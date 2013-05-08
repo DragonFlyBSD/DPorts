@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/ruby-byaccr/files/Makefile,v 1.2 2012/11/17 05:56:56 svnexp Exp $
+# $FreeBSD: devel/ruby-byaccr/files/Makefile 317278 2013-05-03 22:04:50Z bapt $
 
 PROG=	byaccr
 SRCS=	closure.c \
@@ -13,7 +13,7 @@ SRCS=	closure.c \
 	symtab.c \
 	verbose.c \
 	warshall.c
-NOMAN=	YES
+NO_MAN=	YES
 BINDIR=	${LOCALBASE}/bin
 
 .include <bsd.prog.mk>
