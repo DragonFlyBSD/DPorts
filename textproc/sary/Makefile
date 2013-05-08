@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/sary/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: textproc/sary/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	sary
 PORTVERSION=	1.2.0
@@ -10,9 +10,8 @@ MASTER_SITES=	http://sary.sourceforge.net/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A suffix array library and tools, which provide fast full-text search
 
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
