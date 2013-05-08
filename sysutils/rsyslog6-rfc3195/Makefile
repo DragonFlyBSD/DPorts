@@ -1,8 +1,6 @@
-# New ports collection makefile for: rsyslog4-snmp
-# Date created:     29 December 2008
-# Whom:             Cristiano Rolim Pereira <cristianorolim@hotmail.com>
+# Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
 #
-# $FreeBSD: ports/sysutils/rsyslog6-rfc3195/Makefile,v 1.2 2012/11/17 06:01:44 svnexp Exp $
+# $FreeBSD: sysutils/rsyslog6-rfc3195/Makefile 316355 2013-04-23 14:20:25Z bapt $
 #
 
 COMMENT=	RFC3195 input support for rsyslog
@@ -11,7 +9,7 @@ MASTERDIR=	${.CURDIR}/../rsyslog6
 MNAME=	rfc3195
 LIB_DEPENDS+=	logging.0:${PORTSDIR}/devel/liblogging
 
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 
 CONFIGURE_ARGS+=--enable-rfc3195
 
