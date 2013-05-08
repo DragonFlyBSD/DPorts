@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: astro/cfitsio/Makefile 313813 2013-03-10 08:26:20Z sunpoet $
+# $FreeBSD: astro/cfitsio/Makefile 316358 2013-04-23 14:40:08Z sunpoet $
 
 PORTNAME=	cfitsio
 PORTVERSION=	3.330
@@ -25,7 +25,7 @@ CONFIGURE_ARGS=	ac_cv_prog_FC="f2c"
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PORTDOCS=	*
