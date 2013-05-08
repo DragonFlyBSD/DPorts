@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: www/w3m/Makefile 314918 2013-03-22 12:23:46Z bapt $
+# $FreeBSD: www/w3m/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	w3m
 PORTVERSION=	0.5.3
@@ -47,7 +47,7 @@ PLIST_SUB+=	M17N="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MJAPANESE}
-USE_GETTEXT=		yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-m17n --enable-japanese=E --with-migemo=yes gt_cv_func_gnugettext1_libintl=yes
 DOCS_JP=	${DOCS} README.SSL README.cookie README.keymap README.mailcap \
 		README.menu README.migemo
