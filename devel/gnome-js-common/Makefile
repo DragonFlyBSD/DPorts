@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnome-js-common
-# Date created:				19 July 2009
-# Whom:					Alexander Logvinov <avl@FreeBSD.org>
-#
-# $FreeBSD: devel/gnome-js-common/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# Created by: Alexander Logvinov <avl@FreeBSD.org>
+# $FreeBSD: devel/gnome-js-common/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/devel/gnome-js-common/Makefile,v 1.3 2010/01/01 03:30:52 avl Exp $
-#
 
 PORTNAME=	gnome-js-common
 PORTVERSION=	0.1.2
@@ -19,9 +15,8 @@ COMMENT=	GNOME JavaScript common modules and tests
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_GNOME=	gnomehack intltool
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 
 PORTDOCS=	AUTHORS COPYING INSTALL NEWS README ChangeLog
 
