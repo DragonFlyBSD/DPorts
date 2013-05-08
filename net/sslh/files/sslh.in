@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net/sslh/files/sslh.in,v 1.7 2012/11/18 16:55:40 svnexp Exp $
+# $FreeBSD: net/sslh/files/sslh.in 307542 2012-11-18 16:33:31Z hrs $
 #
 # sslh startup script
 #

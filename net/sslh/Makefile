@@ -2,7 +2,7 @@
 # Date created:		2010-03-29
 # Whom:			Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
 #
-# $FreeBSD: ports/net/sslh/Makefile,v 1.9 2012/11/18 16:55:40 svnexp Exp $
+# $FreeBSD: net/sslh/Makefile 307542 2012-11-18 16:33:31Z hrs $
 #
 
 PORTNAME=	sslh
