@@ -1,5 +1,5 @@
 # Created by: cjh@FreeBSD.org
-# $FreeBSD: misc/linm/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/linm/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	linm
 PORTVERSION=	${LINM_VER}.1
@@ -12,9 +12,8 @@ DISTNAME=	linm_${LINM_VER}-1
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Clone of Mdir, mc-style terminal file manager
 
+USES=		pkgconfig iconv
 USE_AUTOTOOLS=	libtool
-USE_ICONV=	yes
-USE_PKGCONFIG=	yes
 USE_OPENSSL=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
@@ -26,7 +25,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 #PLIST_SUB+=	NLS="@comment "
 #.else
 CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib -lintl -liconv"
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 #.endif
 
