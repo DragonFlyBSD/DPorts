@@ -1,14 +1,10 @@
-# New ports collection makefile for:   check_tftp
-# Date created:        7 August 2011
-# Whom:                hr <holgerrepp@googlemail.com>
-#
-# $FreeBSD: ports/net-mgmt/nagios-check_tftp/Makefile,v 1.2 2012/11/17 06:00:33 svnexp Exp $
-#
+# Created by: hr <holgerrepp@googlemail.com>
+# $FreeBSD: net-mgmt/nagios-check_tftp/Makefile 315799 2013-04-14 14:10:51Z bdrewery $
 
 PORTNAME=	check_tftp
 PORTVERSION=	1.0.1
 CATEGORIES=	net-mgmt
-MASTER_SITES=	http://mathias-kettner.de/download/
+MASTER_SITES=	http://mymixrechner.de/freebsd-ports/distfiles/
 PKGNAMEPREFIX=	nagios-
 DISTNAME=	${PORTNAME}
 EXTRACT_SUFX=
