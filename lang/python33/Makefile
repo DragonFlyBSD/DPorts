@@ -1,4 +1,4 @@
-# $FreeBSD: ports/lang/python33/Makefile,v 1.4 2012/12/23 21:23:33 svnexp Exp $
+# $FreeBSD: lang/python33/Makefile 317498 2013-05-06 09:58:09Z jgh $
 
 PORTNAME=	python33
 PORTVERSION=	3.3.0
@@ -54,6 +54,17 @@ OPTIONS_DEFAULT=	THREADS PYMALLOC IPV6
 
 NLS_DESC=	Enable Gettext support for the locale module
 
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+# XXX do not set any LDFLAGS or CFLAGS - this causes pyexpat to fail building
+#LDFLAGS+=	"-L${LOCALBASE}/lib"
+#CFLAGS+=	"-I${LOCALBASE}/include"
+.else
+CONFIGURE_ENV+=	ac_cv_lib_intl_textdomain=no ac_cv_header_libintl_h=no
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_VERSION} == ${PYTHON_DEFAULT_VERSION}
@@ -67,15 +78,6 @@ PLIST_SUB+=	IF_DEFAULT="@comment "
 PLIST_SUB+=	IF_DEFAULT_MAJOR=""
 .else
 PLIST_SUB+=	IF_DEFAULT_MAJOR="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
-# XXX do not set any LDFLAGS or CFLAGS - this causes pyexpat to fail building
-#LDFLAGS+=	"-L${LOCALBASE}/lib"
-#CFLAGS+=	"-I${LOCALBASE}/include"
-.else
-CONFIGURE_ENV+=	ac_cv_lib_intl_textdomain=no ac_cv_header_libintl_h=no
 .endif
 
 .if ${PORT_OPTIONS:MTHREADS}
