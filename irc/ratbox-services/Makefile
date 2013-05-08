@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: irc/ratbox-services/Makefile 315287 2013-03-26 12:36:21Z bapt $
+# $FreeBSD: irc/ratbox-services/Makefile 316344 2013-04-23 10:51:39Z bapt $
 
 PORTNAME=	ratbox-services
 PORTVERSION=	1.2.3
@@ -21,7 +21,7 @@ LOGDIR?=	/var/log
 RUNDIR?=	/var/run
 DBDIR?=		/var/db/${PORTNAME}
 PERL?=		${LOCALBASE}/bin/perl
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 SUB_FILES=	pkg-message pkg-install
 PLIST_SUB=	LOGDIR=${LOGDIR} RUNDIR=${RUNDIR} DBDIR=${DBDIR} PERL=${PERL}
 SUB_LIST=	LOGDIR=${LOGDIR} RUNDIR=${RUNDIR} DBDIR=${DBDIR} PERL=${PERL}
