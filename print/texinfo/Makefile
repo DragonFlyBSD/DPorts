@@ -1,9 +1,8 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: print/texinfo/Makefile 315109 2013-03-24 10:11:49Z johans $
+# $FreeBSD: print/texinfo/Makefile 316941 2013-04-30 15:42:43Z johans $
 
 PORTNAME=	texinfo
-PORTVERSION=	5.1.20130313
-PORTREVISION=	1
+PORTVERSION=	5.1.20130419
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNU} \
 		ftp://ftp.stack.nl/pub/users/johans/texinfo/${PORTVERSION:E}/
@@ -40,7 +39,7 @@ PLIST_SUB=	TEXMF=${TEXMF}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
