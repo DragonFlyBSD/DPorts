@@ -1,9 +1,5 @@
-# New ports collection makefile for:	OpenEXR
-# Date created:				2003/01/26
-# Whom:					nork@FreeBSD.org
-#
-# $FreeBSD: ports/graphics/OpenEXR/Makefile,v 1.46 2013/01/17 03:51:46 svnexp Exp $
-#
+# Created by: nork@FreeBSD.org
+# $FreeBSD: graphics/OpenEXR/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	OpenEXR
 PORTVERSION=	1.7.1
@@ -20,8 +16,8 @@ LIB_DEPENDS=	Imath:${PORTSDIR}/graphics/ilmbase
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+USES=		pkgconfig
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	YES
