@@ -2,7 +2,7 @@
 # Date created:		2004-10-06
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/graphics/libsvg/Makefile,v 1.21 2012/11/17 05:58:13 svnexp Exp $
+# $FreeBSD: graphics/libsvg/Makefile 316662 2013-04-27 11:59:28Z mva $
 #   $MCom: ports/graphics/libsvg/Makefile,v 1.3 2005/07/04 00:11:29 marcus Exp $
 #
 
@@ -21,8 +21,8 @@ LIB_DEPENDS=	fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig \
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USE_GNOME=	libxml2 gnomehack
-USE_ICONV=	yes
+USE_GNOME=	libxml2
+USES=		pathfix iconv
 USE_LDCONFIG=	yes
 
 PLIST_FILES=	include/svg.h \
