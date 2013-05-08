@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: ports/net/yaz/Makefile,v 1.75 2013/02/16 13:04:56 svnexp Exp $
+# $FreeBSD: net/yaz/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	yaz
-PORTVERSION=	4.2.51
+PORTVERSION=	4.2.54
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yaz/
 
@@ -11,11 +11,10 @@ COMMENT=	Z39.50/SR client and API library
 
 LIB_DEPENDS=	icuuc:${PORTSDIR}/devel/icu
 
-USE_ICONV=	yes
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
-USE_GNOME=	libxml2 libxslt gnomehack
+USES=		pathfix pkgconfig iconv
+USE_GNOME=	libxml2 libxslt
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
