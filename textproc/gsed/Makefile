@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: textproc/gsed/Makefile 314556 2013-03-18 11:40:04Z bapt $
+# $FreeBSD: textproc/gsed/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	sed
 PORTVERSION=	4.2.1
@@ -29,8 +29,7 @@ MAN1=		gsed.1
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES+=		gettext iconv
 PLIST_SUB=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
