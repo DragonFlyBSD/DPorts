@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: audio/openal/Makefile 314853 2013-03-21 17:32:34Z bapt $
+# $FreeBSD: audio/openal/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	openal
 PORTVERSION=	20060211
@@ -19,8 +19,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-capture
 USE_GMAKE=	yes
-USES=		pathfix
-USE_PKGCONFIG=	build
+USES=		pathfix pkgconfig
 WANT_SDL=	yes
 USE_LDCONFIG=	yes
 
