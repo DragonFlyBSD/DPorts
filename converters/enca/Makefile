@@ -2,7 +2,7 @@
 # Date created:			  Fri Sep 20, 2002
 # Whom:				  Alexandr Kovalenko <never@nevermind.kiev.ua>
 #
-# $FreeBSD: ports/converters/enca/Makefile,v 1.30 2012/11/17 05:55:03 svnexp Exp $
+# $FreeBSD: converters/enca/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	enca
@@ -20,8 +20,7 @@ RUN_DEPENDS=	umap:${PORTSDIR}/converters/p5-Unicode-Map8
 LICENSE=	GPLv2
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	pkgconfig
-USE_ICONV=	yes
+USES=		pkgconfig iconv
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
