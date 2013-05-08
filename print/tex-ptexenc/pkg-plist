@@ -1,0 +1,8 @@
+@comment $FreeBSD: print/tex-ptexenc/pkg-plist 317452 2013-05-06 00:44:22Z hrs $
+include/ptexenc/ptexenc.h
+include/ptexenc/unicode.h
+@dirrm include/ptexenc
+lib/libptexenc.a
+lib/libptexenc.la
+lib/libptexenc.so
+lib/libptexenc.so.4
