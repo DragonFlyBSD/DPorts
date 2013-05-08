@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fretsonfire-data
-# Date created:		2006-10-02
-# Whom:			Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-#
-# $FreeBSD: ports/games/fretsonfire-data/Makefile,v 1.9 2012/11/17 05:57:39 svnexp Exp $
-#
+# Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
+# $FreeBSD: games/fretsonfire-data/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	1.3.110
@@ -21,7 +17,7 @@ DATADIR=	share/${PKGNAMEPREFIX:S/-//}
 RESTRICTED=	Only Unreal Voodoo site is allowed to distribute the music
 WRKSRC=		${WRKDIR}/Frets\ on\ Fire-${PORTVERSION}
 
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude 'win32' "Frets on Fire-${PORTVERSION}/${PORTNAME}"
+EXTRACT_AFTER_ARGS=	--exclude 'win32' "Frets on Fire-${PORTVERSION}/${PORTNAME}"
 
 do-install:
 	@${MKDIR} ${PREFIX}/${DATADIR}
