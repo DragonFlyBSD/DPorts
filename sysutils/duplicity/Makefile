@@ -1,5 +1,5 @@
 # Created by: Gerhard Häring <gh@ghaering.de>
-# $FreeBSD: ports/sysutils/duplicity/Makefile,v 1.46 2013/01/23 17:21:51 svnexp Exp $
+# $FreeBSD: sysutils/duplicity/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	duplicity
 PORTVERSION=	0.6.21
@@ -32,7 +32,7 @@ SSH_DESC=	Install SSH/SCP/SFTP backend
 .include "bsd.port.options.mk"
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
