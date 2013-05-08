@@ -1,10 +1,9 @@
 # Created by: michaelnottebrock@gmx.net
-# $FreeBSD: security/dirmngr/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/dirmngr/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	dirmngr
 PORTVERSION=	1.1.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	dirmngr
@@ -15,13 +14,13 @@ MAINTAINER=	umq@ueo.co.jp
 COMMENT=	Client for managing and downloading certificate revocation lists
 
 LIB_DEPENDS=	assuan.0:${PORTSDIR}/security/libassuan \
-		gcrypt.18:${PORTSDIR}/security/libgcrypt \
+		gcrypt:${PORTSDIR}/security/libgcrypt \
 		gpg-error.0:${PORTSDIR}/security/libgpg-error \
 		ksba.19:${PORTSDIR}/security/libksba \
 		pth:${PORTSDIR}/devel/pth
 
 USE_BZIP2=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_OPENLDAP=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
@@ -31,19 +30,19 @@ MAN1=		dirmngr-client.1 dirmngr.1
 CONFIGURE_ARGS+=	--docdir=${DOCSDIR}
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS=	NLS "National Language Support" off
+OPTIONS_DEFINE=	NLS
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITHOUT_NLS)
+.if ${PORT_OPTIONS:MNLS}
+USES+=	gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 verify: checksum
 	gpg --verify ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}.sig
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
