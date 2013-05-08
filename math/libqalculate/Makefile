@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@agava.com>
-# $FreeBSD: ports/math/libqalculate/Makefile,v 1.30 2012/11/17 05:59:23 svnexp Exp $
+# $FreeBSD: math/libqalculate/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	libqalculate
 PORTVERSION=	0.9.7
@@ -12,7 +12,7 @@ COMMENT=	Multi-purpose desktop calculator (backend library)
 
 LIB_DEPENDS=	cln:${PORTSDIR}/math/cln
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GNOME=	glib20 gnomehack intlhack libxml2
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
@@ -21,7 +21,7 @@ USE_LDCONFIG=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
