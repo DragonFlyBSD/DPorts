@@ -3,7 +3,7 @@
 # Date created:			Feb 3, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/gettext-lint/Makefile,v 1.9 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: devel/gettext-lint/Makefile 316434 2013-04-24 13:36:18Z ak $
 #
 
 PORTNAME=	gettext-lint
@@ -20,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 NO_BUILD=	yes
 
-USE_GETTEXT=	run
+USES=		gettext:run
 USE_PYTHON_RUN=	yes
 
 MAN1=		POFileChecker.1 POFileClean.1 POFileConsistency.1 \
