@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-TinyXML
-# Date created:		2009-07-09
-# Whom:			Rick van der Zwet <info@rickvanderzwet.nl>
-#
-# $FreeBSD: ports/textproc/p5-XML-TinyXML/Makefile,v 1.4 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: Rick van der Zwet <info@rickvanderzwet.nl>
+# $FreeBSD: textproc/p5-XML-TinyXML/Makefile 317369 2013-05-04 21:58:05Z bapt $
 
 PORTNAME=	XML-TinyXML
 PORTVERSION=	0.30
@@ -14,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	info@rickvanderzwet.nl
 COMMENT=	Little and efficient Perl module to manage xml data
 
-USE_ICONV=	yes
+USES=		iconv
 
 MAKE_ARGS+=	LIBS='-L${LOCALBASE}/lib' INC='-I. -I${LOCALBASE}/include'
 PERL_CONFIGURE=	yes
