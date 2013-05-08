@@ -1,9 +1,5 @@
-# New ports collection makefile for:	taglookup
-# Date created:				21 Oct 2007
-# Whom:					Alex Allan <alex@kamaz.org.uk>
-#
-# $FreeBSD: ports/audio/taglookup/Makefile,v 1.5 2012/11/17 05:54:45 svnexp Exp $
-#
+# Created by: Alex Allan <alex@kamaz.org.uk>
+# $FreeBSD: audio/taglookup/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	taglookup
 PORTVERSION=	0.2
@@ -18,7 +14,7 @@ COMMENT=	Utility for tagging groups of audio files using CDDB
 LIB_DEPENDS=	cddb.4:${PORTSDIR}/audio/libcddb \
 		tag.1:${PORTSDIR}/audio/taglib
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 MAN1=		taglookup.1
 PLIST_FILES=	bin/taglookup
