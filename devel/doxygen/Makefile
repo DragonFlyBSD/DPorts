@@ -1,5 +1,5 @@
 # Created by: Joep Grooten <joep@di.nl>
-# $FreeBSD: devel/doxygen/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/doxygen/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	doxygen
 PORTVERSION=	1.8.3.1
@@ -18,8 +18,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	tmake:${PORTSDIR}/devel/tmake
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
-USES=		bison
-USE_ICONV=	yes
+USES=		bison iconv
 ALL_TARGET=	all
 USE_PERL5=	yes
 HAS_CONFIGURE=	yes
@@ -30,10 +29,9 @@ CONFIGURE_ARGS=	--prefix ${PREFIX} --perl ${PERL} --make ${GMAKE} \
 MAKE_JOBS_UNSAFE=	yes
 REINPLACE_ARGS=	-i ''
 
-EXTRACT_AFTER_ARGS=|${TAR} -xpf - \
-		--exclude '*/libmd5'	\
-		--exclude '*/libpng'	\
-		--exclude '*/tmake'
+EXTRACT_AFTER_ARGS=	--exclude '*/libmd5'	\
+			--exclude '*/libpng'	\
+			--exclude '*/tmake'
 
 PLIST=		${WRKDIR}/plist
 TMPDOCDEST=	${WRKDIR}/tmpdocdest
@@ -54,7 +52,7 @@ BUILD_DEPENDS+=	dot:${PORTSDIR}/graphics/graphviz
 
 .if ${PORT_OPTIONS:MPDFDOCS}
 ALL_TARGET+=	pdf
-BUILD_DEPENDS+=	latex:${PORTSDIR}/print/teTeX
+USE_TEX=	tetex
 USE_GHOSTSCRIPT_BUILD=	yes
 MAKE_ARGS+=	HAVE_PDFDOCS=yes
 .endif # PDFDOCS
