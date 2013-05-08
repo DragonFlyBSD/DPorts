@@ -1,8 +1,8 @@
 # Created by: Kristaps Kulis <kristaps.kulis@gmail.com>
-# $FreeBSD: www/py-gunicorn/Makefile 315107 2013-03-24 08:59:49Z koobs $
+# $FreeBSD: www/py-gunicorn/Makefile 316676 2013-04-27 17:13:34Z koobs $
 
 PORTNAME=	gunicorn
-PORTVERSION=	0.17.2
+PORTVERSION=	0.17.4
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -18,7 +18,7 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
 GH_ACCOUNT=	benoitc
-GH_COMMIT=	5369c6c
+GH_COMMIT=	ca35dc7
 
 OPTIONS_DEFINE=	EVENTLET GEVENT TORNADO SETPROC
 EVENTLET_DESC=	Add Eventlet async worker
