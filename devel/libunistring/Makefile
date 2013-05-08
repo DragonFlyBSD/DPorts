@@ -1,5 +1,5 @@
 # Created by: Takefu
-# $FreeBSD: devel/libunistring/Makefile 314556 2013-03-18 11:40:04Z bapt $
+# $FreeBSD: devel/libunistring/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	libunistring
 PORTVERSION=	0.9.3
@@ -14,9 +14,8 @@ LICENSE_COMB=	dual
 LICENSE_FILE_GPLv3=	${WRKSRC}/COPYING
 LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING.LIB
 
-USES=		charsetfix
+USES=		charsetfix iconv
 USE_GMAKE=	yes
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INFO=		${PORTNAME}
