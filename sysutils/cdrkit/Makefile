@@ -2,7 +2,7 @@
 # Date created:				12 Dec 2007
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: sysutils/cdrkit/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: sysutils/cdrkit/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	cdrkit
@@ -14,8 +14,7 @@ MASTER_SITES=	http://cdrkit.org/releases/ \
 MAINTAINER=	pav@FreeBSD.org
 COMMENT=	Command-line CD/DVD writing suite
 
-USES=		cmake
-USE_ICONV=	yes
+USES=		cmake iconv
 
 MAN1=		cdda2ogg.1 devdump.1 dirsplit.1 genisoimage.1 icedax.1 \
 		isodebug.1 isodump.1 isoinfo.1 isovfy.1 list_audio_tracks.1 \
