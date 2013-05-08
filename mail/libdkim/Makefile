@@ -1,16 +1,12 @@
-# New ports collection makefile for:	libdkim
-# Date created:	   03 Oct 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/mail/libdkim/Makefile,v 1.8 2012/11/17 05:59:04 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: mail/libdkim/Makefile 316230 2013-04-22 13:27:47Z bapt $
 
 PORTNAME=	libdkim
 PORTVERSION=	1.0.21
 CATEGORIES=	mail
 MASTER_SITES=	SF
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DKIM (DomainKeys Identified Mail) library
 
 LICENSE=	AL2

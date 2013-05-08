@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/libdkim/files/Makefile,v 1.4 2012/11/17 05:59:04 svnexp Exp $
+# $FreeBSD: mail/libdkim/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 LIB = 	dkim
 SRCS=	dkim.cpp dns.cpp dkimbase.cpp dkimsign.cpp dkimverify.cpp
