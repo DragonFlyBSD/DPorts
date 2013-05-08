@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/libzeitgeist/Makefile 315397 2013-03-27 17:55:14Z olivierd $
+# $FreeBSD: sysutils/libzeitgeist/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	libzeitgeist
 PORTVERSION=	0.3.18
@@ -10,12 +10,10 @@ MASTER_SITES=	https://launchpadlibrarian.net/100152436/ \
 MAINTAINER=	olivierd@FreeBSD.org
 COMMENT=	Zeitgeist client library
 
-USES=	pathfix
+USES=	pathfix pkgconfig gettext
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20 intltool intlhack
-USE_GETTEXT=	yes
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOCS
