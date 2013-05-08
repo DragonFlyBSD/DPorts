@@ -1,2 +1,2 @@
-USE_ICONV=	yes
+USES+=		iconv
 LDFLAGS+=	-L${LOCALBASE}/lib -liconv
