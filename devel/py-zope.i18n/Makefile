@@ -2,7 +2,7 @@
 # Date created:				Aug 10, 2011
 # Whom:					Wen Heping <wen@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/py-zope.i18n/Makefile,v 1.5 2012/11/17 05:56:53 svnexp Exp $
+# $FreeBSD: devel/py-zope.i18n/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	zope.i18n
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.event>=0:${PORTSDIR}/devel/py-zope.even
 		${PYTHON_PKGNAMEPREFIX}zope.interface>=3.3.0:${PORTSDIR}/devel/py-zope.interface \
 		${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz
 
-USE_GETTEXT=		yes
+USES=		gettext
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
