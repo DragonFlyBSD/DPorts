@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul@it.ca>
-# $FreeBSD: textproc/xml2/Makefile 313482 2013-03-05 22:48:12Z pawel $
+# $FreeBSD: textproc/xml2/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	xml2
 PORTVERSION=	0.5
@@ -13,7 +13,7 @@ COMMENT=	Convert between XML and a line-oriented format similar to XPath
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GNOME=	libxml2
 
 PLIST_FILES=	bin/xml2 \
