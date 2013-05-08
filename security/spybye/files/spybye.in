@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/security/spybye/files/spybye.in,v 1.2 2012/11/17 06:01:20 svnexp Exp $
+# $FreeBSD: security/spybye/files/spybye.in 302141 2012-08-05 23:19:36Z dougb $
 #
 # PROVIDE: spybye
 # REQUIRE: DAEMON
