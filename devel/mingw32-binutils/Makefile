@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: ports/devel/mingw32-binutils/Makefile,v 1.47 2012/12/16 15:18:36 svnexp Exp $
+# $FreeBSD: devel/mingw32-binutils/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	binutils
 PORTVERSION=	${BINUTILVERSION}
@@ -17,7 +17,7 @@ BINUTILVERSION=	2.23.1
 USE_BZIP2=	yes
 USE_GCC=	any
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--target=${PKGNAMEPREFIX:S/-$//} \
 		--with-gcc --with-gnu-ld --with-gnu-as \

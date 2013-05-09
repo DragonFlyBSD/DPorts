@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/mingw32-binutils/pkg-plist,v 1.17 2012/11/17 05:56:00 svnexp Exp $
+@comment $FreeBSD: devel/mingw32-binutils/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%BINUTILS_TARG%%/bin/addr2line
 %%BINUTILS_TARG%%/bin/ar
 %%BINUTILS_TARG%%/bin/as
