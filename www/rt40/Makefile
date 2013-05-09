@@ -1,7 +1,7 @@
-# $FreeBSD: www/rt40/Makefile 315905 2013-04-16 21:02:29Z matthew $
+# $FreeBSD: www/rt40/Makefile 317171 2013-05-03 05:11:17Z matthew $
 
 PORTNAME=	rt
-PORTVERSION=	4.0.11
+PORTVERSION=	4.0.12
 CATEGORIES=	www
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/ \
 		ftp://ftp.eu.uu.net/pub/unix/ticketing/rt/release/
