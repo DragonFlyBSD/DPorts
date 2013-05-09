@@ -1,8 +1,8 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: ports/dns/p5-POE-Component-Server-DNS/Makefile,v 1.13 2013/01/28 10:53:30 svnexp Exp $
+# $FreeBSD: dns/p5-POE-Component-Server-DNS/Makefile 316422 2013-04-24 11:13:01Z tobez $
 
 PORTNAME=	POE-Component-Server-DNS
-PORTVERSION=	0.28
+PORTVERSION=	0.30
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Net-DNS>=0.58:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-POE>=0.38:${PORTSDIR}/devel/p5-POE \
 		p5-POE-Component-Client-DNS>=1.051:${PORTSDIR}/dns/p5-POE-Component-Client-DNS \
 		p5-POE-Component-Client-DNS-Recursive>=1.04:${PORTSDIR}/dns/p5-POE-Component-Client-DNS-Recursive \
-		p5-POE-Component-Generic>=0.09.10:${PORTSDIR}/net/p5-POE-Component-Generic
+		p5-POE-Component-Generic>=0.09.10:${PORTSDIR}/net/p5-POE-Component-Generic \
+		p5-POE-Filter-DNS-TCP>=0.04:${PORTSDIR}/dns/p5-POE-Filter-DNS-TCP
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
