@@ -1,15 +1,11 @@
-# New ports collection makefile for:	VLGothic fotns
-# Date created:		31 Oct 2006
-# Whom:			NIIMI Satoshi <sa2c@sa2c.net>
-#
-# $FreeBSD: ports/japanese/font-vlgothic/Makefile,v 1.34 2012/11/18 12:40:23 svnexp Exp $
-#
+# Created by: NIIMI Satoshi <sa2c@sa2c.net>
+# $FreeBSD: japanese/font-vlgothic/Makefile 316977 2013-04-30 23:53:03Z hrs $
 
 PORTNAME=	vlgothic
-PORTVERSION=	20121109
+PORTVERSION=	20130422
+PORTREVISION=	1
 CATEGORIES=	japanese x11-fonts
-MASTER_SITES=	SFJP
-MASTER_SITE_SUBDIR=	vlgothic/57344
+MASTER_SITES=	SFJP/vlgothic/58671
 PKGNAMEPREFIX=	ja-font-
 DISTNAME=	VLGothic-${PORTVERSION}
 
@@ -26,12 +22,17 @@ SUB_FILES=	pkg-install
 SUB_LIST=	X_FONTSDIR=${PREFIX}/${X_FONTSDIR}
 PLIST_SUB=	X_FONTSDIR=${X_FONTSDIR} \
 		LOCAL_FONTSDIR=${LOCAL_FONTSDIR}
+DATADIR=	${PREFIX}/share/font-${PORTNAME}
 PORTDOCS=	Changelog LICENSE LICENSE.en LICENSE_E.mplus LICENSE_J.mplus \
 		README README.sazanami README_J.mplus
 WRKSRC=		${WRKDIR}/VLGothic
 
 LOCAL_FONTSDIR=	share/fonts
 X_FONTSDIR=	lib/X11/fonts
+
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
 
 do-install:
 	${MKDIR} ${DATADIR}
@@ -42,14 +43,14 @@ do-install:
 	${MKDIR} ${PREFIX}/${X_FONTSDIR}/TTF
 	${LN} -s -f ${DATADIR}/*.ttf \
 		${PREFIX}/${X_FONTSDIR}/TTF/
-	${INSTALL_DATA} ${FILESDIR}/20-unhint-vlgothic.conf \
-		${FILESDIR}/62-fonts-vlgothic.conf \
+	${INSTALL_DATA} ${FILESDIR}/20-unhint-${PORTNAME}.conf \
+		${FILESDIR}/62-fonts-${PORTNAME}.conf \
 		${PREFIX}/etc/fonts/conf.avail
-	${LN} -s -f ../conf.avail/20-unhint-vlgothic.conf \
-		${PREFIX}/etc/fonts/conf.d/20-unhint-vlgothic.conf
-	${LN} -s -f ../conf.avail/62-fonts-vlgothic.conf \
-		${PREFIX}/etc/fonts/conf.d/62-fonts-vlgothic.conf
-.if !defined(NOPORTDOCS)
+	${LN} -s -f ../conf.avail/20-unhint-${PORTNAME}.conf \
+		${PREFIX}/etc/fonts/conf.d/20-unhint-${PORTNAME}.conf
+	${LN} -s -f ../conf.avail/62-fonts-${PORTNAME}.conf \
+		${PREFIX}/etc/fonts/conf.d/62-fonts-${PORTNAME}.conf
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
 .endif
