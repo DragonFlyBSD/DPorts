@@ -2,7 +2,7 @@
 # Date created:				24 July 2001
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gdl/Makefile,v 1.50 2012/11/17 06:03:34 svnexp Exp $
+# $FreeBSD: x11-toolkits/gdl/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-toolkits/gdl/Makefile,v 1.40 2010/09/29 08:07:46 kwm Exp $
 #
 
@@ -18,7 +18,7 @@ COMMENT=	Components intended to be shared between GNOME development tools
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gtk20
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
