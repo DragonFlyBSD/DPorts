@@ -1,9 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/www/py-django-mezzanine-grappelli/Makefile,v 1.3 2013/02/09 15:59:54 svnexp Exp $
+# $FreeBSD: www/py-django-mezzanine-grappelli/Makefile 317398 2013-05-05 06:41:29Z koobs $
 
 PORTNAME=	django-mezzanine-grappelli
-PORTVERSION=	0.2.6
-PORTREVISION=	1
+PORTVERSION=	0.2.21
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +12,7 @@ MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Fork of django-grappelli for Mezzanine CMS
 
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	grappelli_safe
 
