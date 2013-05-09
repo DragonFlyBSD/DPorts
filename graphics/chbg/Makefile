@@ -2,7 +2,7 @@
 # Date created:		10 Dec 1999
 # Whom:			Peter Jones <p@dancris.com>
 #
-# $FreeBSD: ports/graphics/chbg/Makefile,v 1.29 2012/11/17 05:58:02 svnexp Exp $
+# $FreeBSD: graphics/chbg/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	chbg
@@ -19,7 +19,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
 USE_GNOME=	gdkpixbuf
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
