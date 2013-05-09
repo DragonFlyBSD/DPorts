@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/print/jabref/Makefile,v 1.20 2013/01/20 16:47:36 svnexp Exp $
+# $FreeBSD: print/jabref/Makefile 316476 2013-04-24 19:42:33Z mandree $
 
 PORTNAME=	jabref
 PORTVERSION=	2.9.2
@@ -15,6 +15,8 @@ COMMENT=	BibTeX native bibliographic reference manager
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
+
+PORTSCOUT=	limit:.*[0-9]$$
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
