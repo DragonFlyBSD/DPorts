@@ -2,7 +2,7 @@
 # Date created:				09 Sep 2004
 # Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/ljit/Makefile,v 1.20 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/ljit/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ljit
@@ -23,7 +23,7 @@ RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gtk20
 
 PLIST_FILES=	bin/ljit share/locale/ru/LC_MESSAGES/ljit.mo
