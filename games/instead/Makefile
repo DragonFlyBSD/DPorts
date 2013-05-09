@@ -1,5 +1,5 @@
 # Created by: neuroworker@gmail.com
-# $FreeBSD: games/instead/Makefile 315917 2013-04-16 22:59:51Z amdmi3 $
+# $FreeBSD: games/instead/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	instead
 PORTVERSION=	1.9.0
@@ -13,10 +13,10 @@ COMMENT=	Simple Text Adventure, The Interpreter
 
 HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	pkgconfig gtk20
+USE_GNOME=	gtk20
 USE_LUA=	5.1
 USE_SDL=	sdl image ttf mixer
-USE_ICONV=	yes
+USES=		pkgconfig iconv
 
 CONFIGURE_SCRIPT=	configure.sh
 CONFIGURE_ENV=	PREFIX="${PREFIX}"
