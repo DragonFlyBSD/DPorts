@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/graphics/ecore-sdl/Makefile,v 1.14 2013/01/15 17:46:00 svnexp Exp $
+# $FreeBSD: graphics/ecore-sdl/Makefile 317318 2013-05-04 14:05:04Z bapt $
 
 PORTNAME=	sdl
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -17,9 +17,11 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+.if defined(.PARSEDIR)
+USE_GMAKE=	yes
+.endif
 USE_EFL=	ecore libtool_hack
 USE_EFL_ECORE=	input
-USE_GNOME=	gnomehack pkgconfig
 USE_SDL=	sdl
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/lib/ecore_sdl
