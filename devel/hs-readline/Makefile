@@ -12,7 +12,7 @@ LICENSE=	GPLv2
 
 CABAL_SETUP=	Setup.hs
 
-LIB_DEPENDS+=	readline:${PORTSDIR}/devel/readline
+USES+=		readline
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
