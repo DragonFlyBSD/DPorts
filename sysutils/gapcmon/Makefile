@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/gapcmon/Makefile,v 1.19 2012/11/17 06:01:32 svnexp Exp $
+# $FreeBSD: sysutils/gapcmon/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	gapcmon
 PORTVERSION=	0.8.9
@@ -15,7 +15,7 @@ SUB_FILES=	pkg-message
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gconf2
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 
 PORTDOCS=	AUTHORS ChangeLog INSTALL README
