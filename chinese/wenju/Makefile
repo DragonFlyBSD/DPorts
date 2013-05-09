@@ -2,7 +2,7 @@
 # Date created:				18 Oct 2003
 # Whom:				Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
 #
-# $FreeBSD: ports/chinese/wenju/Makefile,v 1.39 2012/11/17 05:54:58 svnexp Exp $
+# $FreeBSD: chinese/wenju/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	wenju
@@ -23,7 +23,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS=	--disable-nls
