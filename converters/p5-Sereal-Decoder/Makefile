@@ -1,10 +1,10 @@
-# $FreeBSD: ports/converters/p5-Sereal-Decoder/Makefile,v 1.1 2013/02/05 12:36:04 svnexp Exp $
+# $FreeBSD: converters/p5-Sereal-Decoder/Makefile 317301 2013-05-04 08:50:24Z kuriyama $
 
 PORTNAME=	Sereal-Decoder
-PORTVERSION=	0.25
+PORTVERSION=	0.35
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:SMUELLER
+MASTER_SITE_SUBDIR=	CPAN:YVES
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	kuriyama@FreeBSD.org
