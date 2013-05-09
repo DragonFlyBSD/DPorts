@@ -2,7 +2,7 @@
 # Date created:		20 May 2004
 # Whom:			Jie Gao	<gaoj@cpsc.ucalgary.ca>
 #
-# $FreeBSD: ports/textproc/scim/Makefile,v 1.43 2012/11/17 06:02:21 svnexp Exp $
+# $FreeBSD: textproc/scim/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	scim
@@ -18,11 +18,10 @@ USE_GNOME=	gnomehack gnomehier gtk20 intlhack
 
 USE_AUTOTOOLS=	libtool
 USE_GCC=	any
-USE_ICONV=	yes
 USE_GMAKE=	yes
 USE_XORG=	x11 xpm
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
