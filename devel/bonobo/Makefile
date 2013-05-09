@@ -2,7 +2,7 @@
 # Date created:				8th October 1999
 # Whom:					Ade Lovett <ade@lovett.com>
 #
-# $FreeBSD: ports/devel/bonobo/Makefile,v 1.82 2012/11/17 05:55:35 svnexp Exp $
+# $FreeBSD: devel/bonobo/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/devel/bonobo/Makefile,v 1.5 2007/05/19 21:36:04 marcus Exp $
 #
 
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix oaf gnomehier gnomeprint
-USE_GETTEXT=	yes
+USES=		gettext
 GNOME_HTML_DIR=	${PREFIX}/share/doc/bonobo
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
