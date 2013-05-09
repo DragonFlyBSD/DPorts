@@ -2,7 +2,7 @@
 # Date created:		8 Jan 2003
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/www/flood/Makefile,v 1.29 2012/11/17 06:02:33 svnexp Exp $
+# $FreeBSD: www/flood/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	flood
@@ -25,7 +25,7 @@ CONFIGURE_ARGS=	--disable-shared \
 	--with-apr-util=${LOCALBASE}/bin/apu-1-config
 LDFLAGS+=	-L${PREFIX}/lib
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 EX_SCRIPTS=	analyze-relative analyze-relative-ramp
 EX_DATA=	flood.dtd relative-averages-time.awk round-robin-dynamic.xml \
