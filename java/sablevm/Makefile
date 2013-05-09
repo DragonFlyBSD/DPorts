@@ -1,5 +1,5 @@
 # Creaetd by:	Archie Cobbs <archie@freebsd.org>
-# $FreeBSD: ports/java/sablevm/Makefile,v 1.53 2012/11/17 05:58:46 svnexp Exp $
+# $FreeBSD: java/sablevm/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	sablevm
 PORTVERSION=	1.13
@@ -18,11 +18,9 @@ RUN_DEPENDS=	fastjar:${PORTSDIR}/archivers/fastjar
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libltdl
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext iconv
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
