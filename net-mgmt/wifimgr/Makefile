@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wifimgr
-# Date created:				2009 November 10
-# Whom:					J.R. Oldroyd <fbsd@opal.com>
-#
-# $FreeBSD: ports/net-mgmt/wifimgr/Makefile,v 1.18 2012/11/17 06:00:38 svnexp Exp $
-#
+# Created by: J.R. Oldroyd <fbsd@opal.com>
+# $FreeBSD: net-mgmt/wifimgr/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	wifimgr
 PORTVERSION=	1.10
@@ -15,13 +11,16 @@ MASTER_SITES=	http://opal.com/freebsd/ports/net-mgmt/wifimgr/ \
 MAINTAINER=	fbsd@opal.com
 COMMENT=	WiFi Networks Manager
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_XORG=	x11
-USE_GNOME=	gtk20 pkgconfig
+USE_GNOME=	gtk20
 INSTALLS_ICONS=	yes
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CFLAGS+=	-DWITHOUT_NLS
