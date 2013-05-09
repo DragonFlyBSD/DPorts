@@ -3,7 +3,7 @@
 # Date created:			Nov 11, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/games/csmash/Makefile,v 1.31 2012/11/17 05:57:35 svnexp Exp $
+# $FreeBSD: games/csmash/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	csmash
@@ -15,7 +15,7 @@ MASTER_SITES=	SF/cannonsmash/CannonSmash/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A 3D tabletennis game
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_SDL=	image mixer sdl
 USE_GL=		yes
 USE_GNOME=	gtk20
