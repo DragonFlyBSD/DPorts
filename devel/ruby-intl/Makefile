@@ -2,7 +2,7 @@
 # Date created:		9 Aug 2000
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-intl/Makefile,v 1.23 2012/11/17 05:56:57 svnexp Exp $
+# $FreeBSD: devel/ruby-intl/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	intl
@@ -17,7 +17,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A simple wrapper of GNU gettext for Ruby
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
 
