@@ -1,2 +1,1 @@
-USE_ICONV=yes
-
+USES+= iconv
