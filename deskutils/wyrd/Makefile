@@ -1,5 +1,5 @@
 # Created by: Russell A. Jackson <raj@csub.edu>
-# $FreeBSD: deskutils/wyrd/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: deskutils/wyrd/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	wyrd
 PORTVERSION=	1.4.5
@@ -17,8 +17,8 @@ LICENSE=	GPLv2
 OPTIONS_DEFINE=	UTF8
 
 GNU_CONFIGURE=	yes
+USES=		ncurses
 USE_GMAKE=	yes
-USE_NCURSES=	yes
 
 MAN1=	wyrd.1
 MAN5=	wyrdrc.5
