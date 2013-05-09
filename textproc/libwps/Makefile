@@ -1,20 +1,21 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: ports/textproc/libwps/Makefile,v 1.25 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: textproc/libwps/Makefile 316262 2013-04-22 18:55:55Z jkim $
 
 PORTNAME=	libwps
-PORTVERSION=	0.2.7
+PORTVERSION=	0.2.8
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	A Microsoft file word processor format import filter library
 
-LICENSE=	LGPL21
+LICENSE=	LGPL21 MPL
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
 LIB_DEPENDS=	wpd-0.9:${PORTSDIR}/textproc/libwpd
 
-OPTIONS_DEFINE=	DOXYGEN
+OPTIONS_DEFINE=	DOCS
 
 CONFIGURE_ARGS=	--disable-werror
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -22,12 +23,11 @@ USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack gnomeprefix ltverhack
 USE_LDCONFIG=	yes
 
-PORTDOCS=	*
-
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MDOXYGEN}
+.if ${PORT_OPTIONS:MDOCS}
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
+PORTDOCS=	*
 .else
 CONFIGURE_ARGS+=--without-docs
 .endif
