@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/benchmarks/p5-Benchmark-Forking/Makefile,v 1.4 2012/11/17 05:54:50 svnexp Exp $
+# $FreeBSD: benchmarks/p5-Benchmark-Forking/Makefile 306244 2012-10-21 20:25:30Z eadler $
 
 PORTNAME=	Benchmark-Forking
 PORTVERSION=	1.01
