@@ -1,8 +1,8 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: textproc/p5-XML-Compile/Makefile 315529 2013-03-29 08:27:43Z sunpoet $
+# $FreeBSD: textproc/p5-XML-Compile/Makefile 317495 2013-05-06 09:33:14Z tobez $
 
 PORTNAME=	XML-Compile
-PORTVERSION=	1.32
+PORTVERSION=	1.33
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
