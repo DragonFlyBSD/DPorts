@@ -1,12 +1,8 @@
-# New ports collection makefile for:	net/p5-XML-Compile-SOAP-Daemon
-# Date created:				15 April 2008
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-XML-Compile-SOAP-Daemon/Makefile,v 1.14 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: net/p5-XML-Compile-SOAP-Daemon/Makefile 317506 2013-05-06 10:56:17Z tobez $
 
 PORTNAME=	XML-Compile-SOAP-Daemon
-PORTVERSION=	3.05
+PORTVERSION=	3.06
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
