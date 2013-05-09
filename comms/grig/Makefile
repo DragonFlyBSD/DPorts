@@ -2,7 +2,7 @@
 # Date created:				2004-01-22
 # Whom:					Matt Dawson <matt@mattsnetwork.co.uk>
 #
-# $FreeBSD: ports/comms/grig/Makefile,v 1.22 2012/11/17 05:54:59 svnexp Exp $
+# $FreeBSD: comms/grig/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	grig
@@ -21,7 +21,7 @@ LIB_DEPENDS=	hamlib:${PORTSDIR}/comms/hamlib
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 MAN1=		grig.1
 
