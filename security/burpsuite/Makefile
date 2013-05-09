@@ -1,5 +1,5 @@
 # Created by: Niels Heinen
-# $FreeBSD: ports/security/burpsuite/Makefile,v 1.7 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: security/burpsuite/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	burpsuite
 PORTVERSION=	1.5
@@ -12,7 +12,6 @@ EXTRACT_SUFX=	.jar
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Burp Suite is an integrated platform for testing web applications
 
-EXTRACT_CMD=	""
 USE_JAVA=	yes
 NO_BUILD=	yes
 JAVA_VERSION=	1.7

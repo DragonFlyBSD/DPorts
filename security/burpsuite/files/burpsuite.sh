@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/burpsuite/files/burpsuite.sh,v 1.3 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: security/burpsuite/files/burpsuite.sh 300897 2012-07-14 14:29:18Z beat $
 #
 
 cd %%PATH%%

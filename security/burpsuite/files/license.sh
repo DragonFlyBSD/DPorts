@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/security/burpsuite/files/license.sh,v 1.3 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: security/burpsuite/files/license.sh 307007 2012-11-05 12:51:58Z sbz $
 
 # License agreement
 more << EOF_LICENSE
