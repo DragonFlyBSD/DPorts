@@ -2,7 +2,7 @@
 # Date created:			  Sun Oct 07, 2001
 # Whom:				  Thierry Thomas (<thierry@thomas.as>)
 #
-# $FreeBSD: www/horde3-base/Makefile 309001 2012-12-16 12:04:18Z mm $
+# $FreeBSD: www/horde3-base/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	base
@@ -79,7 +79,7 @@ RUN_DEPENDS+=	${PEARDIR}/Date.php:${PORTSDIR}/devel/pear-Date			\
 		${PEARDIR}/Net/SMTP.php:${PORTSDIR}/net/pear-Net_SMTP   \
 		${PEARDIR}/MDB2/Schema/Validate.php:${PORTSDIR}/databases/pear-MDB2_Schema
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PHP=	ctype gettext session
 
 .if defined(WITH_SUPHP) && !defined(WITHOUT_SUPHP)
