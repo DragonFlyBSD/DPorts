@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libunique3/Makefile 314644 2013-03-19 13:30:41Z kwm $
+# $FreeBSD: x11-toolkits/libunique3/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	libunique
 PORTVERSION=	3.0.2
@@ -16,7 +16,7 @@ LATEST_LINK=	libunique3
 USE_XORG=	ice x11
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk30 gnomeprefix ltverhack:0
