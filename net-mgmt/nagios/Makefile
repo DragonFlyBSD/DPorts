@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: net-mgmt/nagios/Makefile 315043 2013-03-23 16:03:53Z rm $
+# $FreeBSD: net-mgmt/nagios/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	nagios
 PORTVERSION=	3.5.0
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
 RUN_DEPENDS=	${LOCALBASE}/libexec/nagios/check_nagios:${PORTSDIR}/net-mgmt/nagios-plugins
 
-USE_ICONV=	yes
+USES=		iconv
 USE_PERL5_BUILD=yes
 USE_AUTOTOOLS=	autoconf libltdl
 USE_PHP=	yes
