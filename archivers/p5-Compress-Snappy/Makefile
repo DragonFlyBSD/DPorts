@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: archivers/p5-Compress-Snappy/Makefile 313265 2013-03-02 15:46:05Z sunpoet $
+# $FreeBSD: archivers/p5-Compress-Snappy/Makefile 315849 2013-04-16 16:51:47Z sunpoet $
 
 PORTNAME=	Compress-Snappy
-PORTVERSION=	0.19
+PORTVERSION=	0.20
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
