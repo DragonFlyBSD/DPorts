@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: x11-toolkits/Xaw3d/Makefile 313760 2013-03-09 21:43:02Z bapt $
+# $FreeBSD: x11-toolkits/Xaw3d/Makefile 316994 2013-05-01 07:20:26Z jgh $
 
 PORTNAME=	Xaw3d
 PORTVERSION=	1.5E
@@ -8,8 +8,8 @@ CATEGORIES=	x11-toolkits
 MASTER_SITES=	ftp://ftp.visi.com/users/hawkeyd/X/ \
 		ftp.slackware.com/pub/slackware/slackware_source/x/xaw3d/
 
-MAINTAINER=	dinoex@FreeBSD.org
-COMMENT=	A 3-D Athena Widget set that looks like Motif
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	3-D Athena Widget set that looks like Motif
 
 LICENSE=	MIT
 
@@ -23,10 +23,10 @@ SUB_FILES=	pkg-message
 XAWVER=		8
 SUB_LIST=	XAWVER="${XAWVER}"
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
@@ -35,11 +35,10 @@ PLIST_SUB+=	NLS="@comment "
 post-extract:
 	${MKDIR} ${WRKSRC}/X11/Xaw3d
 	cd ${WRKSRC}/X11/Xaw3d; ${LN} -sf ../../*.h .
-.if defined(WITHOUT_NLS)
+.if ! ${PORT_OPTIONS:MNLS}
 	${REINPLACE_CMD} -e '/LINTLIBS =/s/=.*/=/' \
 		-e '/#ifdef XawI18nDefines/s//#if 0/' \
 		${WRKSRC}/Imakefile
-		
 .endif
 
 # Workaround a bug in egcs on FreeBSD/Alpha.
@@ -50,10 +49,10 @@ post-configure:
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.XAW3D ${DOCSDIR}/
 .endif
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
