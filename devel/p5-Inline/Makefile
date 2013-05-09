@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline/Makefile 313582 2013-03-07 12:45:36Z tobez $
+# $FreeBSD: devel/p5-Inline/Makefile 317008 2013-05-01 09:46:19Z tobez $
 
 PORTNAME=	Inline
-PORTVERSION=	0.52
+PORTVERSION=	0.53
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SISYPHUS
