@@ -1,16 +1,10 @@
-# New ports collection makefile for:	smalltalk
-# Date created:		09 Feb 1995
-# Whom:			gpalmer
-#
-# $FreeBSD: ports/lang/smalltalk/Makefile,v 1.105 2012/11/17 05:58:56 svnexp Exp $
-#
+# Created by: gpalmer
+# $FreeBSD: lang/smalltalk/Makefile 316855 2013-04-29 23:15:35Z johans $
 
 PORTNAME=	smalltalk
-PORTVERSION=	3.2.4
-PORTREVISION=	3
+PORTVERSION=	3.2.5
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU}
-MASTER_SITE_SUBDIR=	${PORTNAME}
+MASTER_SITES=	GNU
 
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	GNU Smalltalk
@@ -25,14 +19,15 @@ OPTIONS_DEFINE=	TCL PGSQL SDL
 OPTIONS_DEFAULT=TCL PGSQL SDL
 
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack pkgconfig pango
-USE_ICONV=	yes
+USE_GNOME=	pango
+USES=		pathfix pkgconfig iconv
 USE_SQLITE=	yes
 USE_GMAKE=	yes
+USE_XZ=		yes
 USE_XORG=	ice xi xmu
 USE_GL=		gl glut
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	ac_cv_prog_EMACS=no
+CONFIGURE_ENV=	ac_cv_prog_EMACS=no ac_cv_prog_AWK=gawk
 CONFIGURE_ARGS=	--enable-generational-gc=no \
 		--enable-gtk=no \
 		--with-emacs=no \
@@ -95,6 +90,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/lrintl (truncl/lroundl (truncl/' \
 		${WRKSRC}/libgst/prims.def \
 		${WRKSRC}/libgst/prims.inl
+	@${REINPLACE_CMD} -e '/^ac_include/s/\\$$/#include <wctype.h> \\/' \
+		${WRKSRC}/snprintfv/configure
 
 post-build:
 	@${SED} -e 's|@bindir@|${PREFIX}/bin|g' \
