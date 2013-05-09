@@ -1,8 +1,8 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/typo345/Makefile 313623 2013-03-08 08:18:16Z culot $
+# $FreeBSD: www/typo345/Makefile 317531 2013-05-06 16:29:48Z culot $
 
 PORTNAME=	typo3
-PORTVERSION=	4.5.25
+PORTVERSION=	4.5.26
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/TYPO3%20Source%20and%20Dummy/TYPO3%20${PORTVERSION}
 
