@@ -2,7 +2,7 @@
 # Date created:				27 July 2009
 # Whom:					utisoft@gmail.com
 #
-# $FreeBSD: ports/net/opentracker/Makefile,v 1.8 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/opentracker/Makefile 316567 2013-04-26 04:03:43Z gjb $
 #
 
 PORTNAME=	opentracker
@@ -10,7 +10,7 @@ PORTVERSION=	0.2010.05.30
 PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.bayofrum.net/dist/${PORTNAME}/ \
-		http://www.glenbarber.us/ports/net/${PORTNAME}/
+		https://www.glenbarber.us/ports/net/${PORTNAME}/
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	A free lightweight bittorrent tracker using libowfat
