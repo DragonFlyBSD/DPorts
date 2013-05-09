@@ -1,5 +1,5 @@
 # Created by: Matt Tosto <datahead4@gmail.com>
-# $FreeBSD: audio/liblastfm/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/liblastfm/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	liblastfm
 PORTVERSION=	1.0.6
@@ -27,10 +27,9 @@ FINGERPRINT_DESC=	Build the lastfm-fingerprint library
 TESTS_DESC=		Build liblastfm tests
 OPTIONS_DEFAULT=	FINGERPRINT
 
-USES=		cmake
+USES=		cmake pkgconfig
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 USE_QT4=	dbus moc_build rcc_build network qmake_build qtestlib sql xml
 
 .include <bsd.port.options.mk>
