@@ -20,9 +20,11 @@ GH_COMMIT=      4f28361
 GNU_CONFIGURE=	yes
 
 USE_GNOME=      glib20
-USE_PKGCONFIG=	yes
+USES+=		pkgconfig
 USE_AUTOTOOLS=	libtool autoconf automake
 USE_PYTHON=	-2.7
+CONFIGURE_ENV=	ac_cv_prog_SED=${LOCALBASE}/bin/gsed \
+		ac_cv_path_SED=${LOCALBASE}/bin/gsed
 
 pre-configure:
 	@cd ${WRKSRC} && ${SH} ./autogen.sh
