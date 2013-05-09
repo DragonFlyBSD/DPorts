@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: ports/www/py-django-devel/Makefile,v 1.38 2013/01/06 20:41:51 svnexp Exp $
+# $FreeBSD: www/py-django-devel/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	django
 PORTVERSION=	${SNAPSHOTDATE}
@@ -20,7 +20,7 @@ LICENSE=	BSD
 SNAPSHOTDATE=	20130106
 
 USE_XZ=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
