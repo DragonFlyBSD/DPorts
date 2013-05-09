@@ -1,9 +1,4 @@
-# New ports collection makefile for:	pear-Date_Holidays_Ireland
-# Date created:		2008-06-05
-# Whom:			Thomas Abthorpe <tabthorpe@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-Date_Holidays_Ireland/Makefile,v 1.6 2012/11/17 05:56:38 svnexp Exp $
-#
+# $FreeBSD: devel/pear-Date_Holidays_Ireland/Makefile 316895 2013-04-30 08:35:54Z miwi $
 
 PORTNAME=	Date_Holidays_Ireland
 PORTVERSION=	0.1.3
