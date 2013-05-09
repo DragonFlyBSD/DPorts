@@ -2,7 +2,7 @@
 # Date created:		Thursday 13 November 2003
 # Whom:			edwin@mavetju.org
 #
-# $FreeBSD: ports/www/mod_encoding/Makefile,v 1.16 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_encoding/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	mod_encoding
@@ -22,7 +22,7 @@ MAKE_JOBS_SAFE=	yes
 #APACHE_VERSION=	1.3.6
 
 USE_APACHE=	22+
-USE_ICONV=	yes
+USES=		iconv
 HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
 
