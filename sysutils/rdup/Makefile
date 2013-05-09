@@ -1,5 +1,5 @@
 # Created by: corky1951@comcast.net
-# $FreeBSD: sysutils/rdup/Makefile 315063 2013-03-23 18:20:13Z rm $
+# $FreeBSD: sysutils/rdup/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	rdup
 PORTVERSION=	1.1.14
@@ -18,7 +18,7 @@ LIB_DEPENDS=	glib-2.0:${PORTSDIR}/devel/glib20 \
 USE_BZIP2=	yes
 
 USE_AUTOTOOLS=	autoconf
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 
