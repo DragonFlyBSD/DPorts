@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/gtk20/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: x11-toolkits/gtk20/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.237 2013/03/04 17:44:38 kwm Exp $
 # Remember to update graphics/gtk-update-icon-cache too.
 
@@ -34,7 +34,7 @@ MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack gtk-update-icon-cache
-USE_GETTEXT=	yes
+USES=		gettext
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 CONFIGURE_ARGS=	--enable-static --with-xinput=yes
