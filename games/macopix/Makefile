@@ -2,7 +2,7 @@
 # Date created:				15 Apr 2003
 # Whom:					Shinya Esu <esu@yk.rim.or.jp>
 #
-# $FreeBSD: ports/games/macopix/Makefile,v 1.46 2013/02/05 16:54:22 svnexp Exp $
+# $FreeBSD: games/macopix/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	macopix
@@ -34,7 +34,7 @@ RESTRICTED_FILES=	\
 		macopix-mascot-HxB-euc-ja-0.30.tar.gz
 
 WANT_GNOME=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
