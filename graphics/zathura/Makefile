@@ -1,5 +1,5 @@
 # Created by: Quentin Stievenart <acieroid@awesom.eu>
-# $FreeBSD: ports/graphics/zathura/Makefile,v 1.19 2013/01/23 19:50:33 svnexp Exp $
+# $FreeBSD: graphics/zathura/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	zathura
 PORTVERSION=	0.2.2
@@ -35,7 +35,7 @@ MAKE_ENV+=	RSTTOMAN=${LOCALBASE}/bin/rst2man
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
