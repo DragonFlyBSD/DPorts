@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: misc/pinfo/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: misc/pinfo/Makefile 317725 2013-05-09 08:50:00Z ehaupt $
 
 PORTNAME=	pinfo
 PORTVERSION=	0.6.10
@@ -15,7 +15,7 @@ OPTIONS_DEFINE=	READLINE
 OPTIONS_DEFAULT=READLINE
 
 USE_BZIP2=	yes
-USES=		gettext ncurses
+USES=		ncurses gettext
 USE_AUTOTOOLS=	libtoolize aclocal autoheader automake autoconf
 LIBTOOLIZE_ARGS=--force
 ACLOCAL_ARGS=	-I macros
@@ -44,7 +44,6 @@ PLIST_SUB+=	NLS=""
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
-
 
 .if ${PORT_OPTIONS:MREADLINE}
 USES+=		readline
