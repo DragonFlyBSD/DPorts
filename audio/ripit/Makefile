@@ -1,9 +1,5 @@
-# New ports collection makefile for:    ripit
-# Date created:         2 May 1999
-# Whom:                 oyvindmo@initio.no
-#
-# $FreeBSD: ports/audio/ripit/Makefile,v 1.35 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: oyvindmo@initio.no
+# $FreeBSD: audio/ripit/Makefile 317573 2013-05-07 06:31:06Z bapt $
 
 PORTNAME=	ripit
 PORTVERSION=	3.9.0
@@ -22,20 +18,22 @@ RUN_DEPENDS=	p5-CDDB_get>=0:${PORTSDIR}/audio/p5-CDDB_get \
 	lame:${PORTSDIR}/audio/lame \
 	cdparanoia:${PORTSDIR}/audio/cdparanoia \
 
+USES=	shebangfix
 NO_BUILD=	yes
 PLIST_FILES=	bin/ripit
 MAN1=		ripit.1
 PORTEXAMPLES=	config
 USE_PERL5_RUN=	yes
 USE_BZIP2=	yes
+SHEBANG_FILES=	ripit.pl
+perl_OLD_CMD=	/usr/bin/env perl
 
-post-patch:
-	@${REINPLACE_CMD} -e "s|#!/usr/bin/env perl|#!${PERL}|" ${WRKSRC}/ripit.pl
+.include <bsd.port.options.mk>
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ripit.pl ${PREFIX}/bin/ripit
 	${INSTALL_MAN} ${WRKSRC}/ripit.1 ${MAN1PREFIX}/man/man1
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}/
 	${INSTALL_DATA} ${WRKSRC}/config ${EXAMPLESDIR}/config
 .endif
