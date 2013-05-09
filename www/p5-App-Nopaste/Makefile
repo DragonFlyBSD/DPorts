@@ -1,8 +1,8 @@
 # Created by: bapt <baptiste.daroussin@gmail.com>
-# $FreeBSD: ports/www/p5-App-Nopaste/Makefile,v 1.26 2013/01/29 09:48:35 svnexp Exp $
+# $FreeBSD: www/p5-App-Nopaste/Makefile 316809 2013-04-29 11:56:15Z tobez $
 
 PORTNAME=	App-Nopaste
-PORTVERSION=	0.91
+PORTVERSION=	0.92
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SARTAK
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
 
 OPTIONS_DEFINE=	CLIPBOARD GITHUB PASTEBIN
 OPTIONS_DEFAULT=CLIPBOARD GITHUB PASTEBIN
