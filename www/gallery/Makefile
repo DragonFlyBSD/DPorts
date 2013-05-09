@@ -1,5 +1,5 @@
 # Created by: Jamie Hermans <jamie@hermans.ca>
-# $FreeBSD: www/gallery/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: www/gallery/Makefile 317472 2013-05-06 06:54:19Z bapt $
 
 PORTNAME=	gallery
 PORTVERSION=	1.5.10
@@ -14,14 +14,16 @@ COMMENT=	Slick web based photo album written using PHP
 
 RUN_DEPENDS=	giftopnm:${PORTSDIR}/graphics/netpbm \
 		jhead:${PORTSDIR}/graphics/jhead \
-		unzip:${PORTSDIR}/archivers/unzip
+		${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 
 USE_PHP=	pcre session
 WANT_PHP_WEB=	yes
 
-.if !defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 USE_PHP+=	gettext
-USE_GETTEXT=	yes	# Pet portlint
+USES+=		gettext
 
 LANGPACKS=	af_ZA-1.5.2${EXTRACT_SUFX} \
 		ar_EG-1.5.1-cvs${EXTRACT_SUFX} \
@@ -98,7 +100,7 @@ do-install:
 	  -o -print | ${CPIO} ${CPIOARGS} ${WWWOWN}:${WWWGRP} ${WWWDIR}
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@ ${INSTALL} -d ${DOCSDIR}
 	@ cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
 .endif
