@@ -1,10 +1,10 @@
-$FreeBSD: ports/lang/cparser/files/patch-firm_machine-c,v 1.4 2012/11/17 05:58:48 svnexp Exp $
+$FreeBSD: lang/cparser/files/patch-firm_machine-c 316956 2013-04-30 17:48:36Z sperber $
 
 By rdivacky@, enables cparser to work out of the box on amd64
 
 --- driver/firm_machine.c	2011-04-14 16:51:46.000000000 +0200
 +++ driver/firm_machine.c	2011-08-12 22:04:40.000000000 +0200
-@@ -77,12 +77,18 @@
+@@ -108,12 +108,18 @@
  machine_triple_t *firm_get_host_machine(void)
  {
  	machine_triple_t *machine = XMALLOC(machine_triple_t);
