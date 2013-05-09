@@ -2,7 +2,7 @@
 # Date created:				1 April 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/sdl12/Makefile,v 1.132 2013/02/14 10:22:23 svnexp Exp $
+# $FreeBSD: devel/sdl12/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	sdl
@@ -23,8 +23,7 @@ USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 WANT_GNOME=	yes
-USE_GNOME=	gnomehack pkgconfig
-USE_ICONV=	yes
+USES=		pathfix pkgconfig iconv
 CONFIGURE_ENV=	ac_cv_header_libusbhid_h=no
 
 CFLAGS+=	-I${LOCALBASE}/include
