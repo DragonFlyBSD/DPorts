@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: ports/games/xye/Makefile,v 1.21 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/xye/Makefile 317258 2013-05-03 21:09:22Z bapt $
 
 PORTNAME=	xye
 PORTVERSION=	0.12.1
@@ -29,7 +29,7 @@ COMMENT=	Puzzle games like sokoban or boulderdash
 
 LICENSE=	ZLIB
 
-EXTRACT_DEPENDS=unzip:${PORTSDIR}/archivers/unzip
+EXTRACT_DEPENDS=${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 
 USE_SDL=	sdl image ttf
 GNU_CONFIGURE=	yes
