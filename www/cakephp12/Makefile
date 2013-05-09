@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/cakephp12/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/cakephp12/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	cakephp
 PORTVERSION=	1.2.10
@@ -24,7 +24,7 @@ SLAVE_PORT_MODULES=	REWRITE
 CONFLICTS=	cakephp-1.[13].*
 
 NO_BUILD=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PHP=	session
 WANT_PHP_WEB=	yes
 DEFAULT_PHP_VER=5
