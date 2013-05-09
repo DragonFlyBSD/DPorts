@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/hs-terminfo/Makefile,v 1.12 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-terminfo/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	terminfo
 PORTVERSION=	0.3.2.5
@@ -10,7 +10,7 @@ COMMENT=	Haskell bindings to the terminfo library
 
 LICENSE=	BSD
 
-USE_NCURSES=	yes
+USES=		ncurses
 
 CONFIGURE_ARGS+=	--configure-option=--with-curses-includes=${NCURSESINC} \
 			--configure-option=--with-curses-libraries=${NCURSESLIB}
