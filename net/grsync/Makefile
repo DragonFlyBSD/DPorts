@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: ports/net/grsync/Makefile,v 1.27 2013/02/01 12:51:29 svnexp Exp $
+# $FreeBSD: net/grsync/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	grsync
 PORTVERSION=	1.2.3
@@ -30,7 +30,7 @@ MAN1=		grsync.1 grsync-batch.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
