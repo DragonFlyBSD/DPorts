@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: ports/databases/freetds-devel/Makefile,v 1.76 2013/02/05 16:54:20 svnexp Exp $
+# $FreeBSD: databases/freetds-devel/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	freetds
 PORTVERSION=	0.91
@@ -14,7 +14,7 @@ COMMENT=	Sybase/Microsoft TDS protocol library
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 TDS_VER?=	5.0
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 GNU_GONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf:env libtool
