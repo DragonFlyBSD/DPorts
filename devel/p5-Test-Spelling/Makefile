@@ -1,8 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Test-Spelling/Makefile,v 1.9 2013/01/31 06:52:24 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Spelling/Makefile 317546 2013-05-06 19:57:59Z ehaupt $
 
 PORTNAME=	Test-Spelling
-PORTVERSION=	0.17
+PORTVERSION=	0.19
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
