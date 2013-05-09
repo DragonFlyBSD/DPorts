@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/www/xcache/Makefile,v 1.21 2013/01/10 13:02:37 svnexp Exp $
+# $FreeBSD: www/xcache/Makefile 316324 2013-04-23 08:49:56Z ale $
 
 PORTNAME=	xcache
-DISTVERSION=	3.0.1-rc1
+DISTVERSION=	3.0.1
 CATEGORIES=	www
 MASTER_SITES=	http://xcache.lighttpd.net/pub/Releases/${DISTVERSION}/
 
