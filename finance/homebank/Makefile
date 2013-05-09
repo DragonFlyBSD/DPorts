@@ -1,4 +1,4 @@
-# $FreeBSD: ports/finance/homebank/Makefile,v 1.43 2013/02/08 03:35:04 svnexp Exp $
+# $FreeBSD: finance/homebank/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	homebank
 PORTVERSION=	4.5
@@ -22,8 +22,7 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext xfixes \
 		xi xinerama xrandr xrender
 USE_GNOME=	desktopfileutils gnomehier gtk20
