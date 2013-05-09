@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-papi
-# Date created:		2006-12-19
-# Whom:			Marcus von Appen
-#
-# $FreeBSD: accessibility/py-papi/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: Marcus von Appen
+# $FreeBSD: accessibility/py-papi/Makefile 316309 2013-04-23 06:26:31Z bapt $
 
 PORTNAME=	papi
 PORTVERSION=	0.0.9
@@ -14,8 +10,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	ATK accessibility wrapper for python
 
+USES=		pkgconfig
 USE_GNOME=	atk
-USE_PKGCONFIG=	build
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
