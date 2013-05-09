@@ -1,15 +1,16 @@
-# $FreeBSD: ports/japanese/font-migu/Makefile,v 1.5 2012/11/18 12:35:00 svnexp Exp $
+# $FreeBSD: japanese/font-migu/Makefile 316972 2013-04-30 23:41:20Z hrs $
 
 PORTNAME=	migu
-PORTVERSION=	1.0.20121030
+PORTVERSION=	1.0.20130430
+PORTREVISION=	1
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
-MASTER_SITE_SUBDIR=	mix-mplus-ipa/57240
+MASTER_SITE_SUBDIR=	mix-mplus-ipa/58720
 PKGNAMEPREFIX=	ja-font-
-DISTFILES=	migu-1p-20121030${EXTRACT_SUFX} \
-		migu-1c-20121030${EXTRACT_SUFX} \
-		migu-1m-20121030${EXTRACT_SUFX} \
-		migu-2m-20121030${EXTRACT_SUFX}
+DISTFILES=	${PORTNAME}-1p-${PORTVERSION:E}${EXTRACT_SUFX} \
+		${PORTNAME}-1c-${PORTVERSION:E}${EXTRACT_SUFX} \
+		${PORTNAME}-1m-${PORTVERSION:E}${EXTRACT_SUFX} \
+		${PORTNAME}-2m-${PORTVERSION:E}${EXTRACT_SUFX}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Another Japanese font set based on MigMix
@@ -24,23 +25,28 @@ SUB_FILES=	pkg-install
 SUB_LIST=	X_FONTSDIR=${PREFIX}/${X_FONTSDIR}
 PLIST_SUB=	X_FONTSDIR=${X_FONTSDIR} \
 		LOCAL_FONTSDIR=${LOCAL_FONTSDIR}
+DATADIR=	${PREFIX}/share/font-${PORTNAME}
 PORTDOCS=	IPA_Font_License_Agreement_v1.0.txt Readme_ipag00303.txt \
 		migu-README.txt
 
 LOCAL_FONTSDIR=	share/fonts
 X_FONTSDIR=	lib/X11/fonts
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 do-install:
-	cd ${WRKDIR}/migu-1p-20121030/ && \
+	cd ${WRKDIR}/${PORTNAME}-1p-${PORTVERSION:E}/ && \
 		${INSTALL_DATA} ipag00303/*.txt \
-			migu-README.txt \
+			${PORTNAME}-README.txt \
 			${WRKDIR}
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} \
-		${WRKDIR}/migu-1p-20121030/*.ttf \
-		${WRKDIR}/migu-1c-20121030/*.ttf \
-		${WRKDIR}/migu-1m-20121030/*.ttf \
-		${WRKDIR}/migu-2m-20121030/*.ttf \
+		${WRKDIR}/${PORTNAME}-1p-${PORTVERSION:E}/*.ttf \
+		${WRKDIR}/${PORTNAME}-1c-${PORTVERSION:E}/*.ttf \
+		${WRKDIR}/${PORTNAME}-1m-${PORTVERSION:E}/*.ttf \
+		${WRKDIR}/${PORTNAME}-2m-${PORTVERSION:E}/*.ttf \
 		${DATADIR}
 	${MKDIR} ${PREFIX}/${LOCAL_FONTSDIR}/TTF
 	${LN} -s -f ${DATADIR}/migu*.ttf \
@@ -48,14 +54,14 @@ do-install:
 	${MKDIR} ${PREFIX}/${X_FONTSDIR}/TTF
 	${LN} -s -f ${DATADIR}/migu*.ttf \
 		${PREFIX}/${X_FONTSDIR}/TTF/
-	${INSTALL_DATA} ${FILESDIR}/20-unhint-migu.conf \
-		${FILESDIR}/62-fonts-migu.conf \
+	${INSTALL_DATA} ${FILESDIR}/20-unhint-${PORTNAME}.conf \
+		${FILESDIR}/62-fonts-${PORTNAME}.conf \
 		${PREFIX}/etc/fonts/conf.avail
-	${LN} -s -f ../conf.avail/20-unhint-migu.conf \
-		${PREFIX}/etc/fonts/conf.d/20-unhint-migu.conf
-	${LN} -s -f ../conf.avail/62-fonts-migu.conf \
-		${PREFIX}/etc/fonts/conf.d/62-fonts-migu.conf
-.if !defined(NOPORTDOCS)
+	${LN} -s -f ../conf.avail/20-unhint-${PORTNAME}.conf \
+		${PREFIX}/etc/fonts/conf.d/20-unhint-${PORTNAME}.conf
+	${LN} -s -f ../conf.avail/62-fonts-${PORTNAME}.conf \
+		${PREFIX}/etc/fonts/conf.d/62-fonts-${PORTNAME}.conf
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	cd ${WRKDIR} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
 .endif
