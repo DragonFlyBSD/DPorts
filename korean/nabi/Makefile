@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nabi
-# Date created:		5 August 2003
-# Whom:			Hye-Shik Chang <perky@FreeBSD.org>
-#
-# $FreeBSD: ports/korean/nabi/Makefile,v 1.44 2012/11/17 05:58:47 svnexp Exp $
-#
+# Created by: Hye-Shik Chang <perky@FreeBSD.org>
+# $FreeBSD: korean/nabi/Makefile 317521 2013-05-06 15:18:38Z bapt $
 
 PORTNAME=	nabi
 PORTVERSION=	0.99.11
@@ -22,8 +18,10 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gtk20
 GNU_CONFIGURE=	yes
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 PLIST_SUB+=	NLS=""
