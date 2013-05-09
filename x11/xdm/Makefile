@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xdm/Makefile,v 1.16 2013/01/05 23:45:47 svnexp Exp $
+# $FreeBSD: x11/xdm/Makefile 317389 2013-05-04 22:48:03Z flo $
 
 PORTNAME=	xdm
 PORTVERSION=	1.1.11
@@ -49,7 +49,7 @@ post-configure:
 
 post-install:
 .for f in ${CFFILES}
-	${CP} -n ${EXAMPLESDIR}/$f ${PREFIX}/lib/X11/xdm/$f
+	${CP} -n ${EXAMPLESDIR}/$f ${PREFIX}/lib/X11/xdm/$f || ${TRUE}
 .endfor
 	${MKDIR} /var/lib/xdm/authdir
 	${LN} -sf /var/lib/xdm/authdir ${PREFIX}/lib/X11/xdm/authdir
