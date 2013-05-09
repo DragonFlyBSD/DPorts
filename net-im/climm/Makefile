@@ -1,13 +1,9 @@
-# New ports collection makefile for:	micq
-# Date created:				11 Oct 1998
-# Whom:					mph
-#
-# $FreeBSD: ports/net-im/climm/Makefile,v 1.90 2013/02/05 16:54:24 svnexp Exp $
-#
+# Created by: mph
+# $FreeBSD: net-im/climm/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	climm
 PORTVERSION=	0.7.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.climm.org/source/ \
 		http://http.bg.climm.org/source/
@@ -16,8 +12,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	CLI-based Multi-Messenger
 
+USES=		pkgconfig
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 
@@ -43,7 +39,7 @@ CONFIGURE_ARGS+=	--disable-otr
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=		yes
+USES+=			iconv
 .else
 CONFIGURE_ARGS+=	--disable-iconv
 .endif
@@ -72,7 +68,6 @@ CFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--enable-xmpp --enable-ssl=gnutls \
 			--with-libgcrypt-prefix=${LOCALBASE}
 CONFIGURE_ENV+=		LIBGNUTLS_CONFIG="${LOCALBASE}/bin/pkgconf gnutls"
-USE_PKGCONFIG=		yes
 LIB_DEPENDS+=		iksemel:${PORTSDIR}/textproc/iksemel \
 			gnutls:${PORTSDIR}/security/gnutls \
 			gcrypt:${PORTSDIR}/security/libgcrypt \
