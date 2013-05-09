@@ -1,5 +1,5 @@
 # Created by: vj562001@yahoo.de
-# $FreeBSD: ports/print/latex-etoolbox/Makefile,v 1.13 2013/01/01 16:05:08 svnexp Exp $
+# $FreeBSD: print/latex-etoolbox/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	etoolbox
 DISTVERSION=	2.1
@@ -13,12 +13,8 @@ DIST_SUBDIR=	${PORTNAME}/${DISTVERSION}
 MAINTAINER=	idolum@users.sourceforge.net
 COMMENT=	A toolbox providing programming facilities for LaTeX
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-
 USE_ZIP=	YES
+USE_TEX=	tetex
 NO_BUILD=	YES
 PLIST=		${WRKDIR}/pkg-plist
 
