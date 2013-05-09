@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/games/poker-engine/Makefile,v 1.17 2013/01/03 00:45:08 svnexp Exp $
+# $FreeBSD: games/poker-engine/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	poker-engine
 PORTVERSION=	1.3.6
@@ -22,9 +22,8 @@ RUN_DEPENDS=	${LOCALBASE}/bin/rsync:${PORTSDIR}/net/rsync \
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USES=		pkgconfig gettext
 USE_PYTHON=	2.5-2.7
-USE_PKGCONFIG=	yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
