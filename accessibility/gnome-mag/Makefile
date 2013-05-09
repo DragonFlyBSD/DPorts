@@ -2,7 +2,7 @@
 # Date created:			12 April 2003
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/gnome-mag/Makefile,v 1.61 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: accessibility/gnome-mag/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/accessibility/gnome-mag/Makefile,v 1.54 2010/10/31 11:01:52 kwm Exp $
 #
 
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 USE_XORG=	xfixes xdamage ice xcomposite sm
 USE_GNOME=	gnomehack gnomeprefix atspi libbonobo intlhack ltverhack
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
