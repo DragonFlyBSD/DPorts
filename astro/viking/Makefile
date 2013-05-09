@@ -1,5 +1,5 @@
 # Created by: David Le Brun <david@trucs.org>
-# $FreeBSD: astro/viking/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: astro/viking/Makefile 316684 2013-04-27 18:31:47Z mva $
 
 PORTNAME=	viking
 PORTVERSION=	1.4
@@ -23,13 +23,12 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		xcb:${PORTSDIR}/x11/libxcb
 RUN_DEPENDS=	gpsbabel:${PORTSDIR}/astro/gpsbabel
 
+USES=		iconv pkgconfig
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
 USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
 USE_GNOME=	desktopfileutils gnomedocutils gtk20
-USE_PKGCONFIG=	build
 USE_PERL5_RUN=	yes
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
@@ -48,7 +47,7 @@ GPSD_DESC=	Realtime GPS tracking
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
