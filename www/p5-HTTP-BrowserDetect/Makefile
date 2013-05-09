@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-HTTP-BrowserDetect/Makefile 313397 2013-03-04 07:40:37Z culot $
+# $FreeBSD: www/p5-HTTP-BrowserDetect/Makefile 317487 2013-05-06 08:54:26Z tobez $
 
 PORTNAME=	HTTP-BrowserDetect
-PORTVERSION=	1.50
+PORTVERSION=	1.52
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:OALDERS
@@ -15,7 +15,9 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
-		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
+		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings \
+		p5-Test-FailWarnings>=0:${PORTSDIR}/devel/p5-Test-FailWarnings \
+		p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most
 
 PERL_CONFIGURE=	yes
 
