@@ -2,7 +2,7 @@
 # Date created:		04 March 2000
 # Whom:			Kris Kennaway <kris@FreeBSD.org>
 #
-# $FreeBSD: ports/www/nscache/Makefile,v 1.24 2012/11/17 06:02:43 svnexp Exp $
+# $FreeBSD: www/nscache/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/www/nscache/Makefile,v 1.3 2007/08/07 03:35:07 mezz Exp $
 #
 
@@ -20,7 +20,7 @@ COMMENT=	Netscape cache browser
 
 USE_GNOME=	gnomehier gtk12
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk-config=${GTK_CONFIG} --disable-gnome
 MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOMAKE="${TRUE}" \
