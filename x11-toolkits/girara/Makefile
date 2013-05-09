@@ -1,5 +1,5 @@
 # Created by: Mike Krutov <neko@takino.org>
-# $FreeBSD: ports/x11-toolkits/girara/Makefile,v 1.6 2013/01/21 00:09:30 svnexp Exp $
+# $FreeBSD: x11-toolkits/girara/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	girara
 PORTVERSION=	0.1.5
@@ -16,7 +16,7 @@ USE_LDCONFIG=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
