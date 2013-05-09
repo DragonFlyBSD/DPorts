@@ -2,7 +2,7 @@
 # Date created:		10 October 2007
 # Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
 #
-# $FreeBSD: ports/textproc/kmflcomp/Makefile,v 1.12 2012/11/17 06:02:00 svnexp Exp $
+# $FreeBSD: textproc/kmflcomp/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	kmflcomp
@@ -23,7 +23,7 @@ BUILD_DEPENDS=	bison:${PORTSDIR}/devel/bison
 
 USE_XORG=	x11
 USE_LDCONFIG=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -liconv
