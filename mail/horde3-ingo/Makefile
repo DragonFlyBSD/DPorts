@@ -2,7 +2,7 @@
 # Date created:			  Dec 3, 2004
 # Whom:				  Thierry Thomas (<thierry@pompo.net>)
 #
-# $FreeBSD: ports/mail/horde3-ingo/Makefile,v 1.2 2012/12/16 12:14:29 svnexp Exp $
+# $FreeBSD: mail/horde3-ingo/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ingo
@@ -28,7 +28,7 @@ RUN_DEPENDS+=	${PEARDIR}/Net/Sieve.php:${PORTSDIR}/net/pear-Net_Sieve
 
 USE_PHP=	imap
 USE_HORDE=	base pkg-message
-USE_GETTEXT=	yes
+USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL RELEASE_NOTES TODO
 
 .include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
