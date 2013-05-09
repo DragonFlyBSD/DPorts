@@ -1,5 +1,5 @@
 # Created by: Damian Gerow
-# $FreeBSD: security/openconnect/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/openconnect/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	openconnect
 PORTVERSION=	4.08
@@ -20,8 +20,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-nls --with-vpnc-script=${LOCALBASE}/sbin/vpnc-script \
 		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 USE_AUTOTOOLS=	aclocal autoconf libtool
-USES=	pathfix
-USE_PKGCONFIG=	yes
+USES=	pathfix pkgconfig
 USE_GMAKE=	yes
 USE_OPENSSL=	yes
 MAKE_JOBS_SAFE=	yes
