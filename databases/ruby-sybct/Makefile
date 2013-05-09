@@ -2,7 +2,7 @@
 # Date created:				10 September 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/databases/ruby-sybct/Makefile,v 1.5 2012/11/17 05:55:24 svnexp Exp $
+# $FreeBSD: databases/ruby-sybct/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	sybct
@@ -20,7 +20,7 @@ LIB_DEPENDS=	tds.5:${PORTSDIR}/databases/freetds
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
