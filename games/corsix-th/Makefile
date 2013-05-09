@@ -1,8 +1,8 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/corsix-th/Makefile 315207 2013-03-25 09:28:03Z madpilot $
+# $FreeBSD: games/corsix-th/Makefile 317422 2013-05-05 17:56:24Z madpilot $
 
 PORTNAME=	corsixth
-PORTVERSION=	0.20
+PORTVERSION=	0.21
 CATEGORIES=	games
 MASTER_SITES=	GOOGLE_CODE
 PROJECTHOST=	corsix-th
