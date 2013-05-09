@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: multimedia/xmms/Makefile 315201 2013-03-25 08:19:08Z bsam $
+# $FreeBSD: multimedia/xmms/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	xmms
 PORTVERSION=	1.2.11
@@ -15,10 +15,9 @@ COMMENT?=	X Multimedia System -- An audio player with Winamp GUI
 
 USE_BZIP2=	yes
 USE_GL=		gl
-USE_GNOME=	desktopfileutils gtk12 gnomehack
+USE_GNOME=	desktopfileutils gtk12
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		pathfix gettext iconv
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	automake autoconf libtool
 AUTOTOOLSFILES=	aclocal.m4
