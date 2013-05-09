@@ -2,7 +2,7 @@
 # Date created:        Wed Nov 24 12:35:17 CST 2010
 # Whom:                Mark Felder <feld@feld.me>
 #
-# $FreeBSD: ports/accessibility/redshift/Makefile,v 1.7 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: accessibility/redshift/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	redshift
@@ -34,7 +34,7 @@ VIDMODE_DESC=	Support VIDMODE for changing colors (NVIDIA)
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE} \
                 --with-libintl-prefix=${LOCALBASE}
 PLIST_SUB=	NLS=""
