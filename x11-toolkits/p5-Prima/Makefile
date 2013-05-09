@@ -1,5 +1,5 @@
 # Created by: dmitry@karasik.eu.org
-# $FreeBSD: x11-toolkits/p5-Prima/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: x11-toolkits/p5-Prima/Makefile 316695 2013-04-27 22:09:15Z bapt $
 
 PORTNAME=	Prima
 PORTVERSION=	1.36
@@ -136,7 +136,7 @@ MAN3=		Prima.3 \
 .if ${PORT_OPTIONS:MXFT}
 USE_XORG+=	xft
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=	yes
+USES+=		iconv
 .else
 CONFIGURE_ARGS+=WITH_ICONV=0
 .endif
