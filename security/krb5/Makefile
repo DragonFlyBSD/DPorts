@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/krb5/Makefile 315921 2013-04-17 00:41:37Z cy $
+# $FreeBSD: security/krb5/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=		krb5
 PORTVERSION=		1.11.2
@@ -27,7 +27,7 @@ USE_PERL5_BUILD=	yes
 USE_LDCONFIG=		yes
 USE_CSTD=		gnu99
 USE_AUTOTOOLS=		libtool
-USE_GETTEXT=		yes
+USES=		gettext
 CONFIGURE_ARGS?=	--enable-shared --without-system-verto
 CONFIGURE_ENV=		INSTALL="${INSTALL}" YACC="${YACC}"
 MAKE_ARGS=		INSTALL="${INSTALL}"
