@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: devel/pharmacy/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: devel/pharmacy/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	pharmacy
 PORTVERSION=	0.3
@@ -11,9 +11,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNOME frontend for CVS
 
 USE_GMAKE=	yes
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gnomeprefix gnomelibs
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CPPCFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
