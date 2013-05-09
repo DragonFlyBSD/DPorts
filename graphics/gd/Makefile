@@ -1,5 +1,5 @@
 # Created by: jeff@cetlink.net
-# $FreeBSD: ports/graphics/gd/Makefile,v 1.106 2013/01/26 14:43:40 svnexp Exp $
+# $FreeBSD: graphics/gd/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	gd
 PORTVERSION=	2.0.35
@@ -47,7 +47,7 @@ FEATURES+=	GD_FONTCONFIG
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=	yes
+USES+=		iconv
 CPPFLAGS+=	-DHAVE_ICONV -DHAVE_ICONV_H -DHAVE_ICONV_T_DEF
 LDFLAGS+=	-L${LOCALBASE}/lib -liconv
 .endif
