@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: ports/x11/xnee/Makefile,v 1.46 2013/01/23 15:05:39 svnexp Exp $
+# $FreeBSD: x11/xnee/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	xnee
 PORTVERSION=	3.15
@@ -41,8 +41,7 @@ LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
 CONFIGURE_ARGS+=--enable-gui
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES+=		gettext iconv
 USE_XORG+=	pixman xcomposite xcursor xdamage xfixes xinerama xrandr xrender
 USE_GNOME+=	gdkpixbuf2 gtk20 libgnomeui
 MAN1+=		gnee.1
