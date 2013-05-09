@@ -2,7 +2,7 @@
 # Date created:				2007-01-25
 # Whom:					arved
 #
-# $FreeBSD: www/llgal/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/llgal/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	llgal
 PORTVERSION=	0.13.17
@@ -28,7 +28,7 @@ RUN_DEPENDS=	p5-Image-Size>=0:${PORTSDIR}/graphics/p5-Image-Size \
 
 USE_BZIP2=	yes
 USE_PERL5=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 
 MAN1=		llgal.1
