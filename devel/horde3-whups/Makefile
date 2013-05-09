@@ -2,7 +2,7 @@
 # Date created:			  Feb 28, 2008
 # Whom:				  Beech Rintoul <horde@FreeBSD.org
 #
-# $FreeBSD: ports/devel/horde3-whups/Makefile,v 1.2 2012/12/16 12:14:26 svnexp Exp $
+# $FreeBSD: devel/horde3-whups/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	whups
@@ -14,7 +14,7 @@ MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Bug tracking/ticketing system
 
 USE_HORDE=	base pkg-message
-USE_GETTEXT=	yes
+USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL TODO lighttpd-whups.conf
 NO_BUILD=	yes
 
