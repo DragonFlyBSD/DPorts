@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: textproc/p5-Hailo/Makefile 314785 2013-03-21 00:14:56Z jgh $
+# $FreeBSD: textproc/p5-Hailo/Makefile 316498 2013-04-25 03:27:59Z az $
 
 PORTNAME=	Hailo
 PORTVERSION=	0.70
@@ -75,10 +75,9 @@ OPTIONS_DEFAULT=	SQLITE
 RUN_DEPENDS+=	p5-DBD-SQLite>=1.29:${PORTSDIR}/databases/p5-DBD-SQLite
 .endif
 
-.if ${PORT_OPTIONS:MPSQL}
+.if ${PORT_OPTIONS:MPGSQL}
 RUN_DEPENDS+=	p5-DBD-Pg>=0:${PORTSDIR}/databases/p5-DBD-Pg
 .endif
-
 .if ${PORT_OPTIONS:MMYSQL}
 RUN_DEPENDS+=	p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql
 .endif
