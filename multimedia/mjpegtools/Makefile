@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/multimedia/mjpegtools/Makefile,v 1.88 2012/11/17 05:59:51 svnexp Exp $
+# $FreeBSD: multimedia/mjpegtools/Makefile 316286 2013-04-22 22:57:36Z bapt $
 
 PORTNAME=	mjpegtools
 PORTVERSION=	2.0.0
@@ -18,7 +18,7 @@ QUICKTIME_DESC=		Enable libQuickTime support
 
 CONFLICTS=	mplex-[0-9]*
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtoolize aclocal autoheader automake autoconf
 LIBTOOLIZE_ARGS=--force
