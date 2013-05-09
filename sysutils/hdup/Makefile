@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: sysutils/hdup/Makefile 314144 2013-03-14 11:20:54Z miwi $
+# $FreeBSD: sysutils/hdup/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	hdup
 PORTVERSION=	2.0.14
@@ -21,11 +21,11 @@ RUN_DEPENDS=	mcrypt:${PORTSDIR}/security/mcrypt \
 		gpgv:${PORTSDIR}/security/gnupg1 \
 		lzop:${PORTSDIR}/archivers/lzop
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	autoconf
 
 MAN1=		hdup.1
