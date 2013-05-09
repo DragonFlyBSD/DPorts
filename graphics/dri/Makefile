@@ -1,5 +1,5 @@
 # Created by: anholt@FreeBSD.org
-# $FreeBSD: graphics/dri/Makefile 313610 2013-03-08 01:01:11Z jkim $
+# $FreeBSD: graphics/dri/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	dri
 PORTVERSION=	${MESAVERSION}
@@ -12,7 +12,7 @@ COMMENT=	OpenGL hardware acceleration drivers for the DRI
 LIB_DEPENDS=	drm:${PORTSDIR}/graphics/libdrm \
 		expat.6:${PORTSDIR}/textproc/expat2
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_XORG=	glproto x11 xext xxf86vm xdamage xfixes dri2proto
 
 ALL_DRI_DRIVERS=I810 I915 I965 MACH64 MGA R128 R200 R300 R600 RADEON \
