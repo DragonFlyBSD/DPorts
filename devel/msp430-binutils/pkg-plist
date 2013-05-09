@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/msp430-binutils/pkg-plist,v 1.13 2012/11/17 05:56:01 svnexp Exp $
+@comment $FreeBSD: /tmp/pcvs/ports/devel/msp430-binutils/pkg-plist,v 1.12 2011-08-05 13:21:30 lev Exp $
 bin/%%BINUTILS_TARG%%-addr2line
 bin/%%BINUTILS_TARG%%-ar
 bin/%%BINUTILS_TARG%%-as
