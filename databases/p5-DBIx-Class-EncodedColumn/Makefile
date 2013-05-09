@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-EncodedColumn/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: databases/p5-DBIx-Class-EncodedColumn/Makefile 316899 2013-04-30 08:42:04Z tobez $
 
 PORTNAME=	DBIx-Class-EncodedColumn
-PORTVERSION=	0.00011
+PORTVERSION=	0.00012
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
