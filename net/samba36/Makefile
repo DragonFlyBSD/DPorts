@@ -1,4 +1,4 @@
-# $FreeBSD: net/samba36/Makefile 315234 2013-03-25 15:18:58Z timur $
+# $FreeBSD: net/samba36/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=		${SAMBA_BASENAME}36
 PORTVERSION=		3.6.13
@@ -30,9 +30,8 @@ AUTOHEADER_ARGS=	${IPATHS}
 AUTOCONF_ARGS=		${IPATHS}
 
 USE_GMAKE=		yes
-USE_ICONV=		yes
 GNU_CONFIGURE=		yes
-USE_PKGCONFIG=		build
+USES=			pkgconfig iconv
 USE_AUTOTOOLS=		autoconf autoheader
 USE_LDCONFIG=		${SAMBA_LIBDIR}
 # pkg-config is used to find talloc
