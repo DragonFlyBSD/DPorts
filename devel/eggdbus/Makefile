@@ -1,5 +1,5 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
-# $FreeBSD: devel/eggdbus/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/eggdbus/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/devel/eggdbus/Makefile,v 1.3 2009/11/24 01:46:27 marcus Exp $
 
 PORTNAME=	eggdbus
@@ -14,7 +14,7 @@ COMMENT=	D-Bus bindings for GObject
 LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
 USE_GNOME=	glib20 gnomehack
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=yes
 GNU_CONFIGURE=	yes
