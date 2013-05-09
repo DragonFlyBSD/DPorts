@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/erlang/files/patch-erts_emulator_drivers_common_efile__drv.c,v 1.1 2013/01/10 15:27:09 svnexp Exp $
+$FreeBSD: lang/erlang/files/patch-erts_emulator_drivers_common_efile__drv.c 310183 2013-01-10 14:42:50Z olgeni $
 
 --- erts/emulator/drivers/common/efile_drv.c.orig
 +++ erts/emulator/drivers/common/efile_drv.c

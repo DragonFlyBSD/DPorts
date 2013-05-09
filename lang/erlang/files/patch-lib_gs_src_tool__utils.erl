@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/erlang/files/patch-lib_gs_src_tool__utils.erl,v 1.5 2012/11/17 05:58:49 svnexp Exp $
+$FreeBSD: lang/erlang/files/patch-lib_gs_src_tool__utils.erl 300896 2012-07-14 13:54:48Z beat $
 
 --- lib/gs/src/tool_utils.erl.orig
 +++ lib/gs/src/tool_utils.erl

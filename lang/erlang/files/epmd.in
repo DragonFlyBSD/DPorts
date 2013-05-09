@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/lang/erlang/files/epmd.in,v 1.2 2012/11/17 05:58:49 svnexp Exp $
+# $FreeBSD: lang/erlang/files/epmd.in 302141 2012-08-05 23:19:36Z dougb $
 #
 # PROVIDE: epmd
 # REQUIRE: LOGIN

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/erlang/files/patch-lib_ssl_src_ssl__manager.erl,v 1.1 2013/01/10 15:27:09 svnexp Exp $
+$FreeBSD: lang/erlang/files/patch-lib_ssl_src_ssl__manager.erl 310183 2013-01-10 14:42:50Z olgeni $
 
 --- lib/ssl/src/ssl_manager.erl.orig
 +++ lib/ssl/src/ssl_manager.erl

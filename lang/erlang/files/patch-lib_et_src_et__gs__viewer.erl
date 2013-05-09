@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/erlang/files/patch-lib_et_src_et__gs__viewer.erl,v 1.2 2012/11/17 05:58:49 svnexp Exp $
+$FreeBSD: lang/erlang/files/patch-lib_et_src_et__gs__viewer.erl 300896 2012-07-14 13:54:48Z beat $
 
 --- lib/et/src/et_gs_viewer.erl.orig	2010-03-11 16:26:59.000000000 +0800
 +++ lib/et/src/et_gs_viewer.erl	2010-03-11 16:27:16.000000000 +0800

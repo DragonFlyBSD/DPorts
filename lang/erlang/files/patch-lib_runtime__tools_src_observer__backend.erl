@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/erlang/files/patch-lib_runtime__tools_src_observer__backend.erl,v 1.1 2012/11/28 00:09:54 svnexp Exp $
+$FreeBSD: lang/erlang/files/patch-lib_runtime__tools_src_observer__backend.erl 307862 2012-11-27 21:34:53Z olgeni $
 
 --- lib/runtime_tools/src/observer_backend.erl.orig
 +++ lib/runtime_tools/src/observer_backend.erl

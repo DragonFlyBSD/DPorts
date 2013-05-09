@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/erlang/files/patch-lib_odbc_c__src_odbcserver.c,v 1.2 2012/11/17 05:58:49 svnexp Exp $
+$FreeBSD: lang/erlang/files/patch-lib_odbc_c__src_odbcserver.c 307013 2012-11-05 14:53:00Z olgeni $
 
 --- lib/odbc/c_src/odbcserver.c.orig
 +++ lib/odbc/c_src/odbcserver.c

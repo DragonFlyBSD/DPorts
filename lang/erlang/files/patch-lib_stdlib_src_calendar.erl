@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/erlang/files/patch-lib_stdlib_src_calendar.erl,v 1.2 2012/11/17 05:58:49 svnexp Exp $
+$FreeBSD: lang/erlang/files/patch-lib_stdlib_src_calendar.erl 300896 2012-07-14 13:54:48Z beat $
 
 --- lib/stdlib/src/calendar.erl.orig
 +++ lib/stdlib/src/calendar.erl
