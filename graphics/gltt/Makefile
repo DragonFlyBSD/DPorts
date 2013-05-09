@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gltt
-# Date created:		12 Aug 2002
-# Whom:			Igor Pokrovsky <tiamat@telegraph.spb.ru>
-#
-# $FreeBSD: ports/graphics/gltt/Makefile,v 1.27 2012/11/17 05:58:08 svnexp Exp $
-#
+# Created by: Igor Pokrovsky <tiamat@telegraph.spb.ru>
+# $FreeBSD: graphics/gltt/Makefile 316593 2013-04-26 09:23:54Z bapt $
 
 PORTNAME=	gltt
 PORTVERSION=	2.5.2
@@ -14,9 +10,10 @@ MASTER_SITES=	http://gltt.sourceforge.net/download/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	TrueType fonts rendering using OpenGL
 
+LIB_DEPENDS=	ttf:${PORTSDIR}/print/freetype
+
 USE_AUTOTOOLS=	libtool
 USE_GL=		gl glut
-USE_FREETYPE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
