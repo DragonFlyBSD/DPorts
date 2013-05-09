@@ -1,5 +1,5 @@
 # Created by:  Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-haskeline/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: devel/hs-haskeline/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	haskeline
 PORTVERSION=	0.7.0.3
@@ -13,7 +13,7 @@ LICENSE=	BSD
 CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	transformers>=0.2
-USE_ICONV=	yes
+USES+=		iconv
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
