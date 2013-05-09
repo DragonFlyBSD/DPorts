@@ -1,8 +1,8 @@
-# $FreeBSD: games/abuse_sdl/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: games/abuse_sdl/Makefile 316767 2013-04-28 23:01:27Z beech $
 
 PORTNAME=	abuse_sdl
 PORTVERSION=	0.8
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	GENTOO/distfiles \
 		http://abuse.zoy.org/raw-attachment/wiki/download/
@@ -25,25 +25,19 @@ MAN6=		abuse.6 abuse-tool.6
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-PLIST_FILES=	bin/abuse \
-		bin/abuse-tool \
-		share/pixmaps/abuse.png
-
-PORTDATA=	*
 PORTDOCS=	AUTHORS ChangeLog NEWS README TODO
+
+DESKTOP_ENTRIES="Abuse-SDL" "${COMMENT}" "abuse" \
+		"abuse" "Game;StrategyGame;" false
 
 .include <bsd.port.options.mk>
 
 post-install:
-# Pixmaps
 	${INSTALL_DATA} ${WRKSRC}/doc/abuse.png ${PREFIX}/share/pixmaps/
 
-# Documentation
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
-.  for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.  endfor
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
