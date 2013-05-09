@@ -2,7 +2,7 @@
 # Date created:		2002-10-08
 # Whom:			Sean Chittenden <seanc@FreeBSD.org>
 #
-# $FreeBSD: ports/net/ruby-net-geoip/Makefile,v 1.20 2012/12/06 16:41:48 svnexp Exp $
+# $FreeBSD: net/ruby-net-geoip/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	net-geoip
@@ -18,7 +18,7 @@ COMMENT=	A Ruby extension that wraps around libGeoIP
 BUILD_DEPENDS=	GeoIP>=1.4.6:${PORTSDIR}/net/GeoIP
 LIB_DEPENDS=	GeoIP.5:${PORTSDIR}/net/GeoIP
 
-USE_ICONV=	yes
+USES=		iconv
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=	site-install
