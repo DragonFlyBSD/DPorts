@@ -1,5 +1,5 @@
 # Created by: Dominik Brettnacher <domi@nonsensss.de>
-# $FreeBSD: ports/graphics/xsane/Makefile,v 1.72 2013/02/04 10:50:26 svnexp Exp $
+# $FreeBSD: graphics/xsane/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	xsane
 PORTVERSION=	0.998
@@ -32,7 +32,7 @@ GIMP_DESC=	GIMP plugin support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib -lintl"
 PLIST_SUB+=	NLS=""
 .else
