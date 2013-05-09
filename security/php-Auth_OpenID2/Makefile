@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php-Auth_OpenID
-# Date created:		2007-04-24
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/security/php-Auth_OpenID2/Makefile,v 1.8 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: security/php-Auth_OpenID2/Makefile 316749 2013-04-28 21:02:39Z bapt $
 
 PORTNAME=	Auth_OpenID2
 PORTVERSION=	2.1.3
@@ -22,30 +18,28 @@ CONFLICTS=	pear-Auth_OpenID-2.*
 
 USE_BZIP2=	yes
 NO_BUILD=	yes
-OPTIONS=	BCMATH "Use bcmath instead of libgmp" off \
-		MYSQL "Use mysql" off \
-		PGSQL "Use pgsql" off \
-		SQLITE "Use sqlite" off
+OPTIONS_DEFINE=	BCMATH MYSQL PGSQL SQLITE EXAMPLES
+BCMATH_DESC=	Use bcmath instead of libgmp
 
 USE_PHP=	curl dom
 
 .include <bsd.port.pre.mk>
 
-.ifdef(WITH_BCMATH)
+.if ${PORT_OPTIONS:MBCMATH}
 USE_PHP+=	bcmath
 .else
 USE_PHP+=	gmp
 .endif
 
-.ifdef(WITH_MYSQL)
+.if ${PORT_OPTIONS:MMYSQL}
 USE_PHP+=	mysql
 .endif
 
-.ifdef(WITH_PGSQL)
+.if ${PORT_OPTIONS:MPGSQL}
 USE_PHP+=	pgsql
 .endif
 
-.ifdef(WITH_SQLITE)
+.if ${PORT_OPTIONS:MSQLITE}
 USE_PHP+=	sqlite
 .endif
 
@@ -55,7 +49,7 @@ do-install:
 	${CP} ${WRKSRC}/Auth/OpenID/* ${PREFIX}/share/pear/Auth/OpenID
 	${MKDIR} ${PREFIX}/share/pear/Auth/Yadis
 	${CP} -R ${WRKSRC}/Auth/Yadis/* ${PREFIX}/share/pear/Auth/Yadis
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}
 	${CP} -R ${WRKSRC}/examples/ ${EXAMPLESDIR}
 .endif
