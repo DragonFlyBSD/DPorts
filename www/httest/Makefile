@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/httest/Makefile 316041 2013-04-18 14:05:55Z ehaupt $
+# $FreeBSD: www/httest/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	httest
 PORTVERSION=	2.3.3
@@ -25,7 +25,7 @@ CONFIGURE_ARGS=	--enable-lua-module \
 CPPFLAGS+=	-I${LUA_INCDIR}
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_LUA=	yes
 USE_OPENSSL=	yes
 
