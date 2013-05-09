@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/giflib/Makefile 313811 2013-03-10 06:50:17Z dinoex $
+# $FreeBSD: graphics/giflib/Makefile 316640 2013-04-26 22:42:05Z dinoex $
 
 PORTNAME=	giflib
 PORTVERSION=	4.2.1
@@ -12,6 +12,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Tools and library routines for working with GIF images
 
 CONFLICTS=	libungif-[0-9]*
+PORTSCOUT=	limit:^4\.
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
