@@ -1,5 +1,5 @@
 # Created by: tg@freebsd.org
-# $FreeBSD: print/gv/Makefile 314766 2013-03-20 21:25:31Z bf $
+# $FreeBSD: print/gv/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	gv
 PORTVERSION=	3.7.4
@@ -15,7 +15,7 @@ LIB_DEPENDS=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d
 USE_XORG=	xpm ice sm xext xmu x11
 USE_GHOSTSCRIPT=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_PERL5_BUILD=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
