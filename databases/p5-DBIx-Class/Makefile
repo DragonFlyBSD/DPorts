@@ -1,11 +1,11 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class/Makefile 313154 2013-03-01 14:10:21Z tobez $
+# $FreeBSD: databases/p5-DBIx-Class/Makefile 316908 2013-04-30 10:04:34Z tobez $
 
 PORTNAME=	DBIx-Class
-PORTVERSION=	0.08209
+PORTVERSION=	0.08250
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:ABRAXXA
+MASTER_SITE_SUBDIR=	CPAN:RIBASUSHI
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
@@ -49,6 +49,7 @@ TEST_DEPENDS=	p5-Class-DBI-Plugin-DeepAbstractSearch>=0:${PORTSDIR}/databases/p5
 		p5-SQL-Translator>=0.09.004:${PORTSDIR}/databases/p5-SQL-Translator \
 		p5-Test-Exception>=0.31:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Warn>=0.21:${PORTSDIR}/devel/p5-Test-Warn \
+		p5-Test-Deep>0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Text-CSV>=0:${PORTSDIR}/textproc/p5-Text-CSV \
 		p5-Time-Piece>=0:${PORTSDIR}/devel/p5-Time-Piece \
 		p5-Time-Piece-MySQL>=0:${PORTSDIR}/databases/p5-Time-Piece-MySQL \
