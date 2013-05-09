@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: net/serviio/Makefile 316155 2013-04-20 15:42:32Z netchild $
+# $FreeBSD: net/serviio/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	serviio
 PORTVERSION=	1.2.1
@@ -21,7 +21,7 @@ SUB_FILES+=	pkg-message serviiod serviio-console
 USE_RC_SUBR=	serviio
 SUB_LIST+=	USER=${USERS}
 RESTRICTED=	License does not allow selling
-EXTRACT_AFTER_ARGS=|${TAR} -xf - --exclude junit.jar	\
+EXTRACT_AFTER_ARGS=--exclude junit.jar	\
 	--exclude org.restlet.ext.net.jar
 
 USERS=	dlna
