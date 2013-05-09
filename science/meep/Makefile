@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: science/meep/Makefile 314144 2013-03-14 11:20:54Z miwi $
+# $FreeBSD: science/meep/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	meep
 PORTVERSION=	1.1.1
@@ -23,8 +23,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_FORTRAN=	yes
 USE_GCC=	4.6+
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_AUTOTOOLS+=	libltdl
 CPPFLAGS+=	-I${LOCALBASE}/include
 LD_LIBRARY_PATH=	-L${LOCALBASE}/lib -L/usr/lib
