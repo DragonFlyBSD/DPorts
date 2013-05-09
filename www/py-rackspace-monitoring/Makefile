@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/www/py-rackspace-monitoring/Makefile,v 1.7 2013/02/09 15:59:54 svnexp Exp $
+# $FreeBSD: www/py-rackspace-monitoring/Makefile 316792 2013-04-29 09:55:29Z koobs $
 
 PORTNAME=	rackspace-monitoring
-PORTVERSION=	0.3.2
+PORTVERSION=	0.3.6
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
