@@ -1,4 +1,4 @@
-# $FreeBSD: games/wesnoth/Makefile 315871 2013-04-16 17:49:26Z bdrewery $
+# $FreeBSD: games/wesnoth/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	wesnoth
 PORTVERSION=	1.10.6
@@ -90,7 +90,7 @@ CMAKE_ARGS+=	-DENABLE_NOTIFICATIONS=off
 
 .if ${PORT_OPTIONS:MNLS}
 CMAKE_ARGS+=	-DENABLE_NLS=on -DLOCALEDIR=${PREFIX}/share/locale
-USE_GETTEXT=	yes
+USES+=		gettext
 MANLANG=	"" cs de en_GB es et fi fr gl hu id it lt pl ru sk \
 		sr sr@ijekavian sr@ijekavianlatin sr@latin vi zh_CN zh_TW
 .if ${PORT_OPTIONS:MSERVER}
