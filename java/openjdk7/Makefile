@@ -33,7 +33,7 @@ LICENSE=	GPLv2
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES+=		iconv
 USE_XORG+=	x11 xext xi xrender xt xtst
 
 OPTIONS_DEFINE=		DEBUG POLICY TZUPDATE
