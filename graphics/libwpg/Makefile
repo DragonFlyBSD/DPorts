@@ -1,39 +1,33 @@
-# New ports collection makefile for:	graphics/libwpg
-# Date created:		2009-01-09
-# Whom:			Dima Panov <fluffy@Fluffy.Khv.RU>
-#
-# $FreeBSD: ports/graphics/libwpg/Makefile,v 1.20 2012/11/17 05:58:14 svnexp Exp $
-#
+# $FreeBSD: graphics/libwpg/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	libwpg
-PORTVERSION=	0.2.1
-PORTREVISION=	2
+PORTVERSION=	0.2.2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Library and tools to work with WordPerfect Graphics (WPG) files
 
-LICENSE=	LGPL20
+LICENSE=	LGPL21 MPL
+LICENSE_COMB=	dual
 
 LIB_DEPENDS=	wpd-0.9:${PORTSDIR}/textproc/libwpd
 
 USE_AUTOTOOLS=	libtool
+USES=		pkgconfig
 USE_GNOME=	gnomeprefix gnomehack ltverhack
 USE_BZIP2=	yes
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 CONFIGURE_ARGS=	--disable-werror
 
 OPTIONS_DEFINE=	DOCS
-
-PORTDOCS=	*
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
+PORTDOCS=	*
 .else
 post-patch:
 	@${REINPLACE_CMD} -E '/^SUBDIRS = /s/docs//g' ${WRKSRC}/Makefile.in
