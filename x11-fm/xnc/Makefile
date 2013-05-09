@@ -2,7 +2,7 @@
 # Date created:		5 February 1999
 # Whom:			Dima Sivachenko	<dima@chg.ru>
 #
-# $FreeBSD: ports/x11-fm/xnc/Makefile,v 1.43 2012/11/17 06:03:26 svnexp Exp $
+# $FreeBSD: x11-fm/xnc/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xnc
@@ -27,7 +27,7 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
 		tiff.4:${PORTSDIR}/graphics/tiff
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_XORG=	x11 xext xt
 CONFIGURE_ARGS+=--with-pty=BSD --with-libintl-prefix=${LOCALBASE}
