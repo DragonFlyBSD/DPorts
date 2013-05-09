@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Catalyst-Plugin-AutoCRUD
-# Whom:			gugu
-# Date created:		03 December 2009
-#
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-AutoCRUD/Makefile,v 1.9 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: gugu
+# $FreeBSD: www/p5-Catalyst-Plugin-AutoCRUD/Makefile 317090 2013-05-02 09:34:19Z tobez $
 
 PORTNAME=	Catalyst-Plugin-AutoCRUD
-PORTVERSION=	2.113.450
+PORTVERSION=	2.131.210
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
