@@ -1,22 +1,20 @@
 # Created by: antoine@FreeBSD.org
-# $FreeBSD: security/regripper/Makefile 315728 2013-04-04 22:18:24Z antoine $
+# $FreeBSD: security/regripper/Makefile 317306 2013-05-04 10:29:06Z antoine $
 
 PORTNAME=	regripper
-DISTVERSION=	2.5
-PORTREVISION=	1
+DISTVERSION=	2.8
 CATEGORIES=	security
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	rrv${DISTVERSION}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Tool for registry analysis in forensics examinations
 
 LICENSE=	GPLv3
-LICENSE_FILE=	${WRKSRC}/license.txt
 
 RUN_DEPENDS=	p5-Parse-Win32Registry>=0:${PORTSDIR}/devel/p5-Parse-Win32Registry
 
-USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
 USE_DOS2UNIX=	yes
 NO_BUILD=	yes
