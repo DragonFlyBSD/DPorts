@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: ports/x11-themes/gtk-engines2/Makefile,v 1.94 2013/02/23 17:03:29 svnexp Exp $
+# $FreeBSD: x11-themes/gtk-engines2/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.82 2010/04/19 10:51:27 kwm Exp $
 
 PORTNAME=	gtk-engines2
@@ -19,7 +19,7 @@ CONFLICTS=	gtk-smooth-engine-[0-9]* clearlooks-[0-9]*
 USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gtk20 intlhack ltasneededhack
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
