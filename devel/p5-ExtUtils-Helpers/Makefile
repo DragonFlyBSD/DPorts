@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-ExtUtils-Helpers/Makefile 316058 2013-04-18 17:20:12Z sunpoet $
+# $FreeBSD: devel/p5-ExtUtils-Helpers/Makefile 317622 2013-05-07 16:22:57Z sunpoet $
 
 PORTNAME=	ExtUtils-Helpers
-PORTVERSION=	0.018
+PORTVERSION=	0.021
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
