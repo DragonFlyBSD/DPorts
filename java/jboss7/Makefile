@@ -1,5 +1,5 @@
 # Created by: Alexander Yerenkow <yerenkow@gmail.com>
-# $FreeBSD: ports/java/jboss7/Makefile,v 1.2 2012/11/17 05:58:44 svnexp Exp $
+# $FreeBSD: java/jboss7/Makefile 316012 2013-04-17 23:40:57Z ak $
 
 PORTNAME=	jboss
 PORTVERSION=	${JBOSS_BRANCH}.1
@@ -23,7 +23,6 @@ USER=		www
 GROUP=		www
 DIST_SUBDIR=	${DISTNAME}
 NO_BUILD=	yes
-USE_GZIP=	yes
 
 .include <bsd.port.pre.mk>
 
