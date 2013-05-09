@@ -2,7 +2,7 @@
 # Date created:		Wed Apr 14 18:11:42 CEST 2010
 # Whom:			Juergen Lock <nox@freebsd.org>
 #
-# $FreeBSD: ports/multimedia/w_scan/Makefile,v 1.16 2012/11/17 05:59:55 svnexp Exp $
+# $FreeBSD: multimedia/w_scan/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	w_scan
@@ -23,7 +23,7 @@ LINUX_DESC=	Install Linux binary too (linux-w_scan)
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 PATCH_STRIP=	-lp1
-USE_GETTEXT=	yes
+USES+=		gettext
 CPPFLAGS+=	-I"${LOCALBASE}/include"
 LDFLAGS+=	-L"${LOCALBASE}/lib\ -liconv"
 PORTDOCS=	COPYING ChangeLog README
