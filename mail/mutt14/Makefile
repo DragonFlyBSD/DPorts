@@ -3,7 +3,7 @@
 # Date created:			  Thur July 25, 1996
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
-# $FreeBSD: ports/mail/mutt14/Makefile,v 1.199 2012/11/17 05:59:06 svnexp Exp $
+# $FreeBSD: mail/mutt14/Makefile 317527 2013-05-06 15:54:23Z bapt $
 #
 
 PORTNAME=	mutt
@@ -40,9 +40,8 @@ OPTIONS=	NLS "Native Language Support via gettext utilities" on \
  GSSAPI "GSSAPI (Kerberos) support" on
 
 USE_OPENSSL=	yes
-USE_NCURSES=	yes
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 RUN_DEPENDS=	${LOCALBASE}/etc/mime.types:${PORTSDIR}/misc/mime-support
 .if defined(PACKAGE_BUILDING) && !defined (MUTT_LITE)
@@ -61,20 +60,21 @@ WITH_SGML_DOCS:=no
 .endif
 
 .if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES+=		gettext iconv
 .if defined(WITHOUT_MUTT_ICONV)
 IGNORE=	the WITHOUT_MUTT_ICONV knob of the mutt port only works if \
 	WITHOUT_NLS is also given
 .endif
 .elif !defined(WITHOUT_MUTT_ICONV)
-USE_ICONV=	yes
+USES+=	iconv
 .endif
 
 .if defined(WITH_SLANG)
 LIB_DEPENDS+=	slang.2:${PORTSDIR}/devel/libslang2
 .elif defined(WITH_NCURSES)
-WITH_NCURSES_PORT=	yes
+USES+=	ncurses:port
+.else
+USES+=	ncurses
 .endif
 .if !defined (MUTT_LITE)
 .if defined(WITH_MUTT_CYRUS_SASL)
@@ -220,4 +220,4 @@ post-install:
 	@${ECHO} ""
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
