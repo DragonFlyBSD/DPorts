@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: graphics/librsvg2/Makefile 313863 2013-03-11 10:20:05Z kwm $
+# $FreeBSD: graphics/librsvg2/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/graphics/librsvg2/Makefile,v 1.147 2012/10/16 08:58:47 kwm Exp $
 
 PORTNAME=	librsvg
@@ -18,12 +18,11 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 RUN_DEPENDS=	gtk-engines2>=2.7.5_1:${PORTSDIR}/x11-themes/gtk-engines2
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehier gnomeprefix libgsf ltverhack gtk20
-USES=		pathfix
+USES=		pathfix gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-svgz \
