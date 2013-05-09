@@ -1,0 +1,1 @@
+SCONS_ARGS+= platform=freebsd
