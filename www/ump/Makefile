@@ -2,7 +2,7 @@
 # Date created:		15 Nov 2001
 # Whom:			Leland Wang <llwang@infor.org>
 #
-# $FreeBSD: ports/www/ump/Makefile,v 1.35 2012/11/17 06:03:09 svnexp Exp $
+# $FreeBSD: www/ump/Makefile 316786 2013-04-29 08:57:12Z bapt $
 #
 
 PORTNAME=	ump
@@ -45,7 +45,7 @@ EXTRA_PATCHES=	${PORTSDIR}/audio/timidity++/files/*
 PKGDIR=		${.CURDIR}
 WRKSRC=		${WRKDIR}/TiMidity++-${TIMIDITY_VERSION}
 BUILD_WRKSRC=	${WRKSRC}/ump
-EXTRACT_AFTER_ARGS=	| ${TAR} -xpf - --exclude '*/libarc/*'	\
+EXTRACT_AFTER_ARGS=	--exclude '*/libarc/*'	\
 	--exclude '*/utils/mblock.h' --exclude '*/utils/memb.h'
 ALL_TARGET=	ump
 
