@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Class-Accessor-Grouped/Makefile,v 1.29 2012/12/17 15:43:18 svnexp Exp $
+# $FreeBSD: devel/p5-Class-Accessor-Grouped/Makefile 316419 2013-04-24 10:20:19Z tobez $
 
 PORTNAME=	Class-Accessor-Grouped
-PORTVERSION=	0.10009
+PORTVERSION=	0.10010
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RIBASUSHI
