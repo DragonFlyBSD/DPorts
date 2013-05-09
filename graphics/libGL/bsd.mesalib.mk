@@ -14,8 +14,10 @@
 #    - graphics/libGLw
 #    - graphics/dri
 #
-# $FreeBSD: graphics/libGL/bsd.mesalib.mk 313641 2013-03-08 12:55:43Z zeising $
+# $FreeBSD: graphics/libGL/bsd.mesalib.mk 317201 2013-05-03 13:11:44Z bapt $
 #
+
+.MAKE.FreeBSD_UL=	yes
 
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
