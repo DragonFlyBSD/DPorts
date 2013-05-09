@@ -1,4 +1,4 @@
-$FreeBSD: ports/textproc/jaxup/files/patch-build.xml,v 1.2 2012/11/17 06:02:00 svnexp Exp $
+$FreeBSD: textproc/jaxup/files/patch-build.xml 300897 2012-07-14 14:29:18Z beat $
 
 --- build.xml.orig	Thu Dec  9 14:14:21 2004
 +++ build.xml	Thu Dec  9 14:16:44 2004

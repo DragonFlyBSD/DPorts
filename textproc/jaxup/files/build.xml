@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $FreeBSD: ports/textproc/jaxup/files/build.xml,v 1.2 2012/11/17 06:02:00 svnexp Exp $ -->
+<!-- $FreeBSD: textproc/jaxup/files/build.xml 300897 2012-07-14 14:29:18Z beat $ -->
 
 <project name="jaxup" default="jar" basedir=".">
 

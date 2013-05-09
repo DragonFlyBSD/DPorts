@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/textproc/jaxup/Makefile,v 1.9 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/jaxup/Makefile 317123 2013-05-02 14:34:29Z bapt $
 
 PORTNAME=	jaxup
 PORTVERSION=	1.01
@@ -47,11 +47,11 @@ UTIL_CLASSPATH_JARS=	jaxen-full saxpath xercesImpl
 UTIL_CLASSPATH!=	${ECHO_CMD} ${UTIL_CLASSPATH_JARS:S,^,${JAVALIBDIR}/,:S,$,.jar,} | ${TR} " " ":"
 
 .if !defined(NOPORTDOCS)
-JDK_API!=	(${FIND} -s ${LOCALBASE}/share/doc/jdk1.[4-5] -maxdepth 1 -name api -type d 2>/dev/null || ${TRUE}) | ${TAIL} -n 1 ; echo
+JDK_API!=	(${FIND} -s ${LOCALBASE}/share/doc/jdk1.[4-5] -maxdepth 1 -name api -type d 2>/dev/null || ${ECHO_CMD}) | ${TAIL} -n 1
 .if ${JDK_API} != ""
 MAKE_ARGS+=	-Dj2se.apidocs="${JDK_API}"
 .endif
-JAXEN_API!=	(${FIND} -s ${LOCALBASE}/share/doc/jaxen -maxdepth 1 -name javadoc -type d 2>/dev/null || ${TRUE}) | ${TAIL} -n 1 ; echo
+JAXEN_API!=	(${FIND} -s ${LOCALBASE}/share/doc/jaxen -maxdepth 1 -name javadoc -type d 2>/dev/null || ${ECHO_CMD}) | ${TAIL} -n 1
 .if ${JAXEN_API} != ""
 MAKE_ARGS+=	-Djaxen.apidocs="${JAXEN_API}"
 .endif
