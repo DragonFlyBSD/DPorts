@@ -2,7 +2,7 @@
 # Date created:			  Mon Oct 08, 2001
 # Whom:				  Thierry Thomas (<thierry@thomas.as>)
 #
-# $FreeBSD: ports/mail/horde3-imp/Makefile,v 1.2 2012/12/16 12:14:29 svnexp Exp $
+# $FreeBSD: mail/horde3-imp/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	imp
@@ -67,7 +67,7 @@ RUN_DEPENDS+=	${PEARDIR}/HTTP/Request.php:${PORTSDIR}/www/pear-HTTP_Request
 
 CONFLICTS=	imp-3.*
 USE_HORDE=	base
-USE_GETTEXT=	yes
+USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL	\
 		RELEASE_NOTES  TODO  UPGRADING
 
