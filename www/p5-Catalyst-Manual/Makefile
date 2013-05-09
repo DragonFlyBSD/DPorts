@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/www/p5-Catalyst-Manual/Makefile,v 1.30 2012/11/18 05:16:00 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Manual/Makefile 317583 2013-05-07 08:29:51Z tobez $
 
 PORTNAME=	Catalyst-Manual
-PORTVERSION=	5.9006
+PORTVERSION=	5.9007
 PORTEPOCH=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
