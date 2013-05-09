@@ -2,7 +2,7 @@
 # Date created:		2008-09-10
 # Whom:			Max Brazhnikov <makc@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/scim-bridge/Makefile,v 1.11 2012/11/17 06:02:21 svnexp Exp $
+# $FreeBSD: textproc/scim-bridge/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	scim-bridge
@@ -17,7 +17,7 @@ COMMENT=	Scim-bridge agent (server)
 LIB_DEPENDS=	scim-1.0.10:${PORTSDIR}/textproc/scim
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 
 LICENSE=	GPLv2 LGPL21

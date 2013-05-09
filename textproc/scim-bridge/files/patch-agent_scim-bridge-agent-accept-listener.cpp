@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/scim-bridge/files/patch-agent_scim-bridge-agent-accept-listener.cpp,v 1.2 2012/11/17 06:02:21 svnexp Exp $
+$FreeBSD: textproc/scim-bridge/files/patch-agent_scim-bridge-agent-accept-listener.cpp 300897 2012-07-14 14:29:18Z beat $
 
 --- agent/scim-bridge-agent-accept-listener.cpp.orig
 +++ agent/scim-bridge-agent-accept-listener.cpp
