@@ -1,5 +1,5 @@
 # Created by: bmc@WillsCreek.COM
-# $FreeBSD: graphics/tgif/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: graphics/tgif/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	tgif
 PORTVERSION=	4.2.2
@@ -30,7 +30,7 @@ MAN1=		tgif.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 IMAKEDEFINES+=	WITH_NLS
 PLIST_SUB=	NLS=""
 .else
