@@ -1,0 +1,26 @@
+# New ports collection makefile for:    husky-hptsqfix
+# Date created:                         6 January 2003
+# Whom:                                 Max Khon
+#
+# $FreeBSD: news/husky-hptsqfix/Makefile 317723 2013-05-09 06:59:06Z fjoe $
+#
+
+PORTNAME=	hptsqfix
+PORTVERSION=	1.2.4
+PORTREVISION=	2
+CATEGORIES=	news mail
+MASTER_SITES=	SF/husky/${PORTNAME}/1.2-release
+DISTNAME=	${PORTNAME}-${PORTVERSION}-src
+
+MAINTAINER=	fjoe@FreeBSD.org
+COMMENT=	Fix message base
+
+LIB_DEPENDS=	smapi.2:${PORTSDIR}/news/husky-smapi
+
+MAN1=		hptsqfix.1
+MANCOMPRESSED=	yes
+PLIST_FILES=	bin/hptsqfix
+
+.include <bsd.port.pre.mk>
+.include "${PORTSDIR}/news/husky-base/Makefile.inc"
+.include <bsd.port.post.mk>
