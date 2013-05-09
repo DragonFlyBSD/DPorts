@@ -1,8 +1,8 @@
 # Created by: markun@onohara.to
-# $FreeBSD: security/clamav/Makefile 314319 2013-03-15 17:14:10Z garga $
+# $FreeBSD: security/clamav/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	clamav
-PORTVERSION=	0.97.7
+PORTVERSION=	0.97.8
 CATEGORIES=	security
 MASTER_SITES=	SF
 
@@ -133,7 +133,7 @@ CONFIGURE_ARGS+=--disable-unrar
 .endif
 .if ${PORT_OPTIONS:MICONV}
 CONFIGURE_ARGS+=--with-iconv
-USE_ICONV=	yes
+USES+=		iconv
 .else
 CONFIGURE_ARGS+=--without-iconv
 .endif
