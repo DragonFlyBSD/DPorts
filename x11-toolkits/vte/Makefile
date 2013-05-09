@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/vte/Makefile 314323 2013-03-15 21:39:16Z kwm $
+# $FreeBSD: x11-toolkits/vte/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/x11-toolkits/vte/Makefile,v 1.117 2010/11/13 13:16:58 kwm Exp $
 
 PORTNAME=	vte
@@ -17,10 +17,9 @@ USE_BZIP2=	yes
 .if !defined(REFERENCE_PORT)
 
 USE_GMAKE=	yes
-USES=		bison pathfix
+USES=		bison pathfix gettext
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
 USE_GNOME?=	gnomeprefix gtk20 ltverhack referencehack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
