@@ -1,9 +1,8 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: finance/R-cran-fBasics/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: finance/R-cran-fBasics/Makefile 317430 2013-05-05 19:57:45Z dbn $
 
 PORTNAME=	fBasics
-PORTVERSION=	2160.85
-PORTREVISION=	2
+PORTVERSION=	3010.86
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
@@ -15,7 +14,8 @@ LICENSE_COMB=	dual
 
 RUN_DEPENDS=	R-cran-timeDate>0:${PORTSDIR}/finance/R-cran-timeDate \
 		R-cran-timeSeries>=2100.84:${PORTSDIR}/finance/R-cran-timeSeries \
-		R-cran-stabledist>0:${PORTSDIR}/math/R-cran-stabledist
+		R-cran-stabledist>0:${PORTSDIR}/math/R-cran-stabledist \
+		R-cran-gss>0:${PORTSDIR}/math/R-cran-gss
 
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
