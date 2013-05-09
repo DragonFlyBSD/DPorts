@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin2mavetju.org>
-# $FreeBSD: devel/flatzebra/Makefile 315963 2013-04-17 13:02:44Z martymac $
+# $FreeBSD: devel/flatzebra/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	flatzebra
 PORTVERSION=	0.1.6
@@ -12,9 +12,9 @@ COMMENT=	A generic game engine for 2D double-buffering animation
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include
 
+USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_SDL=	sdl mixer image
-USE_PKGCONFIG=	build
 
 USE_LDCONFIG=	yes
 
