@@ -2,7 +2,7 @@
 # Date created:		2009-12-29
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/print/cups-pk-helper/Makefile,v 1.8 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: print/cups-pk-helper/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/print/cups-pk-helper/Makefile,v 1.1 2009/12/29 16:01:07 ahze Exp $
 
 PORTNAME=	cups-pk-helper
@@ -21,7 +21,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	intlhack gtk20
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/libs
