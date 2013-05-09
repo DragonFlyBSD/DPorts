@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/lxtask/Makefile 313753 2013-03-09 19:59:21Z eadler $
+# $FreeBSD: sysutils/lxtask/Makefile 317491 2013-05-06 09:07:58Z bapt $
 
 PORTNAME=	lxtask
 PORTVERSION=	0.1.4
@@ -12,12 +12,14 @@ COMMENT=	Lightweight desktop-independent task manager
 
 USE_GNOME=	gtk20 intlhack
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
