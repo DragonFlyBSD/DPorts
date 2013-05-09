@@ -1,9 +1,10 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: security/py-python-registry/Makefile 315323 2013-03-26 20:24:12Z rm $
+# $FreeBSD: security/py-python-registry/Makefile 316202 2013-04-21 19:15:11Z antoine $
 
 PORTNAME=	python-registry
 PORTVERSION=	0.2.5
 CATEGORIES=	security devel python
+MASTER_SITES=	GH
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
