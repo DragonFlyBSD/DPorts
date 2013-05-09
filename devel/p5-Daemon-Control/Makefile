@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Daemon-Control
-# Date created:		2012-06-06
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Daemon-Control/Makefile,v 1.2 2012/11/17 05:56:09 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/p5-Daemon-Control/Makefile 316648 2013-04-27 04:14:22Z sunpoet $
 
 PORTNAME=	Daemon-Control
-PORTVERSION=	0.000.009
+PORTVERSION=	0.001.000
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
