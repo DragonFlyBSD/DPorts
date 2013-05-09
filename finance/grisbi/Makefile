@@ -1,9 +1,5 @@
-# New ports collection makefile for:	grisbi
-# Date created:		19 November 2002
-# Whom:			Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/finance/grisbi/Makefile,v 1.57 2012/11/17 05:57:25 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: finance/grisbi/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	grisbi
 PORTVERSION=	0.8.9
@@ -19,7 +15,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	ofx.5:${PORTSDIR}/finance/libofx
 
 USE_BZIP2=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 glib20 libxml2
@@ -32,18 +28,20 @@ MAN1=		grisbi.1
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 pre-configure:
 	${REINPLACE_CMD} -e "s|-lpthread|${PTHREAD_LIBS}|g"	\
 		${WRKSRC}/${CONFIGURE_SCRIPT}
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	${REINPLACE_CMD} -e "s|pixmaps help|pixmaps|" ${WRKSRC}/Makefile.in
 .endif
 
