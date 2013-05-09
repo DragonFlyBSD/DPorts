@@ -1,5 +1,5 @@
 # Created by:	Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: ports/audio/easytag/Makefile,v 1.60 2012/11/17 05:54:30 svnexp Exp $
+# $FreeBSD: audio/easytag/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	easytag
 PORTVERSION=	2.1.7
@@ -20,7 +20,7 @@ MAN1=		easytag.1
 CONFLICTS=	easytag-devel-[0-9]*
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomehack gnomeprefix gtk20 desktopfileutils
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_GTK
