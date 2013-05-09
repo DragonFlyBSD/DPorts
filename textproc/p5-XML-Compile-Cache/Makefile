@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/textproc/p5-XML-Compile-Cache/Makefile,v 1.16 2012/11/17 06:02:11 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-Compile-Cache/Makefile 317497 2013-05-06 09:58:04Z tobez $
 
 PORTNAME=	XML-Compile-Cache
-PORTVERSION=	0.99.2
+PORTVERSION=	0.99.3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
