@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/trac-accountmanager/Makefile,v 1.15 2012/11/17 06:03:07 svnexp Exp $
+# $FreeBSD: www/trac-accountmanager/Makefile 317502 2013-05-06 10:20:42Z kuriyama $
 
 PORTNAME=	accountmanager
-PORTVERSION=	0.4.${REV}
+PORTVERSION=	0.5.${REV}
 PORTEPOCH=	1
 CATEGORIES=	www devel python
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
@@ -16,12 +16,12 @@ COMMENT=	Account Manager Plugin for trac
 RUN_DEPENDS=	tracd:${PORTSDIR}/www/trac
 
 FETCH_BEFORE_ARGS=	-o ${DISTFILES}
-REV=			11722
+REV=			12583
 USE_ZIP=		yes
 USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracAccountManager
-PYDISTUTILS_PKGVERSION=	0.4dev
+PYDISTUTILS_PKGVERSION=	0.5dev
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 WRKSRC=			${WRKDIR}/accountmanagerplugin/trunk
 
