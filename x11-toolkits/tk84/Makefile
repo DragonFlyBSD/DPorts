@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-toolkits/tk84/Makefile,v 1.122 2013/02/06 18:12:43 svnexp Exp $
+# $FreeBSD: x11-toolkits/tk84/Makefile 316025 2013-04-18 08:20:59Z gahr $
 
 PORTNAME=	tk
 PORTVERSION=	8.4.19
@@ -63,6 +63,12 @@ CONFIGURE_ARGS+=	--disable-threads
 .endif
 
 post-patch:
+	${REINPLACE_CMD} -e \
+	    's|@TK_BUILD_LIB_SPEC@|@TK_LIB_SPEC@|; \
+	     s|@TK_BUILD_STUB_LIB_SPEC@|@TK_STUB_LIB_SPEC@|; \
+	     s|@TK_BUILD_STUB_LIB_PATH@|@TK_STUB_LIB_PATH@|; \
+	     s|@TK_SRC_DIR@|${PREFIX}/include/tk${TK_VER}|' \
+	     ${WRKSRC}/tkConfig.sh.in
 	@(cd ${WRKSRC}/..; ${PATCH} -p0 < ${PATCHDIR}/extra-lastevent-patch)
 	@${REINPLACE_CMD} -e 's|X11/Intrinsic.h|X11/Xlib.h|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|@TK_SHARED_BUILD@|#@TK_SHARED_BUILD@|g' ${WRKSRC}/Makefile.in
