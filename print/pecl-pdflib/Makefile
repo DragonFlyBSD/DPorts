@@ -1,12 +1,8 @@
-# New ports collection makefile for:	pecl-pdflib
-# Date created:			25 Jun 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/print/pecl-pdflib/Makefile,v 1.21 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: print/pecl-pdflib/Makefile 316347 2013-04-23 11:08:06Z ale $
 
 PORTNAME=	pdflib
-PORTVERSION=	2.1.9
+PORTVERSION=	2.1.10
 CATEGORIES=	print pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
