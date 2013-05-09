@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/libgda/files/patch-configure,v 1.7 2012/11/17 05:55:09 svnexp Exp $
+$FreeBSD: databases/libgda/files/patch-configure 300896 2012-07-14 13:54:48Z beat $
 
 --- configure	2002/05/01 08:18:05	1.1
 +++ configure	2002/05/01 08:19:03

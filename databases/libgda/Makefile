@@ -2,7 +2,7 @@
 # Date created:				8th March 2001
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgda/Makefile,v 1.55 2012/11/17 05:55:09 svnexp Exp $
+# $FreeBSD: databases/libgda/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/databases/libgda/Makefile,v 1.5 2007/05/19 21:36:00 marcus Exp $
 #
 
@@ -23,7 +23,7 @@ CONFLICTS=	libgda2*-[0-9]*
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix gnomehier gconf bonobo
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool

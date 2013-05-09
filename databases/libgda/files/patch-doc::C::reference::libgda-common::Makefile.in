@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/libgda/files/patch-doc::C::reference::libgda-common::Makefile.in,v 1.4 2012/11/17 05:55:09 svnexp Exp $
+$FreeBSD: databases/libgda/files/patch-doc::C::reference::libgda-common::Makefile.in 300896 2012-07-14 13:54:48Z beat $
 
 --- doc/C/reference/libgda-common/Makefile.in	2002/05/01 08:16:31	1.1
 +++ doc/C/reference/libgda-common/Makefile.in	2002/05/01 08:17:35
