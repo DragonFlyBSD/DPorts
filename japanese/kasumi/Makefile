@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kasumi
-# Date Created:				10 January 2005
-# Whom:					MANTANI Nobutaka <nobutaka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/kasumi/Makefile,v 1.24 2012/11/17 05:58:35 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: japanese/kasumi/Makefile 317521 2013-05-06 15:18:38Z bapt $
 
 PORTNAME=	kasumi
 PORTVERSION=	2.5
@@ -26,12 +22,14 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		kasumi.1
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 .include <bsd.port.mk>
