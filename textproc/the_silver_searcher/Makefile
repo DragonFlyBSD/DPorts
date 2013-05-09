@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/textproc/the_silver_searcher/Makefile,v 1.4 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: textproc/the_silver_searcher/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	the_silver_searcher
 PORTVERSION=	0.13.1
@@ -17,7 +17,7 @@ AUTOMAKE_ARGS+=	--add-missing
 GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/ag
 USE_AUTOTOOLS=	aclocal autoconf autoheader automake
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 MAN1=		ag.1
 
