@@ -2,7 +2,7 @@
 # Date created:			30-12-2007
 # Whom:				Ulrich Spoerlein <uspoerlein@gmail.com>
 #
-# $FreeBSD: devel/librcc/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/librcc/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	librcc
@@ -24,9 +24,9 @@ LIB_DEPENDS=	rcd.1:${PORTSDIR}/devel/librcd \
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack lthack libxml2
+USE_GNOME=	lthack libxml2
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		pathfix iconv
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoheader
 
