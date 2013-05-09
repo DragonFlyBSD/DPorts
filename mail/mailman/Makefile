@@ -1,5 +1,5 @@
 # Created by: n_hibma@qubesoft.com
-# $FreeBSD: mail/mailman/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: mail/mailman/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	mailman
 DISTVERSION=	2.1.14
@@ -78,7 +78,7 @@ MTA_DESC=	integrate with a MTA
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
