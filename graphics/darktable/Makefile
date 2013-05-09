@@ -1,10 +1,10 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/darktable/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/darktable/Makefile 316997 2013-05-01 07:27:27Z danfe $
 
 PORTNAME=	darktable
-PORTVERSION=	1.1.3
+PORTVERSION=	1.2
 CATEGORIES=	graphics
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Virtual lighttable and darkroom for photographers
@@ -24,6 +24,7 @@ ONLY_FOR_ARCHS_REASON=	uses SSE extensions
 MAKE_JOBS_SAFE=	yes
 
 USES=		cmake:outsource
+USE_XZ=		yes
 USE_GNOME=	librsvg2
 USE_SQLITE=	yes
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
@@ -32,7 +33,7 @@ MAN1=		${PORTNAME}.1
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	GPHOTO GEO FLICKR FACEBOOK KWALLET GNOMEKEYRING RAWSPEED \
-		SLIDESHOW NLS GCC46
+		OPENJPEG SLIDESHOW NLS GCC46
 
 GEO_DESC=	Build geotagging parts
 FACEBOOK_DESC=	Support images export to Facebook
@@ -42,7 +43,7 @@ GCC46_DESC=	Build with GCC 4.6+ (better OpenMP support)
 
 OPTIONS_DEFAULT=	GPHOTO RAWSPEED GCC46
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGPHOTO}
 LIB_DEPENDS+=	gphoto2:${PORTSDIR}/graphics/libgphoto2
@@ -93,6 +94,13 @@ CMAKE_ARGS+=	-DUSE_GNOME_KEYRING:BOOL=OFF
 CMAKE_ARGS+=	-DDONT_USE_RAWSPEED:BOOL=ON
 .endif
 
+.if ${PORT_OPTIONS:MOPENJPEG}
+LIB_DEPENDS+=	openjpeg:${PORTSDIR}/graphics/openjpeg
+PLIST_FILES+=	lib/darktable/plugins/imageio/format/libj2k.so
+.else
+CMAKE_ARGS+=	-DUSE_OPENJPEG:BOOL=OFF
+.endif
+
 .if ${PORT_OPTIONS:MSLIDESHOW}
 USE_GL=		gl
 USE_SDL=	sdl
@@ -102,7 +110,7 @@ CMAKE_ARGS+=	-DBUILD_SLIDESHOW:BOOL=OFF
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 .else
 CMAKE_ARGS+=	-DUSE_NLS:BOOL=OFF
 .endif
@@ -138,4 +146,4 @@ post-install:
 	@${REINPLACE_CMD} -e '/LC_MESSAGES/d' ${TMPPLIST}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
