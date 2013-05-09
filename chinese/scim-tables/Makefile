@@ -1,5 +1,5 @@
 # Created by: Jie Gao	<gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: chinese/scim-tables/Makefile 315130 2013-03-24 15:51:03Z bdrewery $
+# $FreeBSD: chinese/scim-tables/Makefile 316310 2013-04-23 06:34:47Z bapt $
 
 PORTNAME=	scim-tables
 PORTVERSION=	0.5.10
@@ -13,9 +13,9 @@ COMMENT=	SCIM table based Chinese input methods
 BUILD_DEPENDS=	scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
 RUN_DEPENDS=	scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
 
+USES=		pkgconfig
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
 
 .include <bsd.port.pre.mk>
 
