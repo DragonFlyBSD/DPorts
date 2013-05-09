@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gmtk/Makefile 313541 2013-03-06 20:49:41Z jkim $
+# $FreeBSD: multimedia/gmtk/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gmtk
 PORTVERSION=	1.0.8
@@ -17,9 +17,8 @@ USE_GMAKE=	yes
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 USE_PERL5_BUILD=	yes
-USE_PKGCONFIG=	build
 USE_XORG=	x11
-USES=		pathfix
+USES=		pathfix pkgconfig
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README
 
@@ -57,7 +56,7 @@ CONFIGURE_ARGS+=	--disable-gtk3
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
