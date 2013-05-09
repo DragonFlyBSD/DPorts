@@ -2,7 +2,7 @@
 # Date created:		Sun May 22 17:22:53 CEST 2005
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/glade3/Makefile,v 1.31 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: devel/glade3/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/devel/glade3/Makefile,v 1.44 2010/06/06 22:11:46 kwm Exp $
 #
 
@@ -22,7 +22,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gtk20 libxml2 gnomeprefix gnomehack \
 		gnomedocutils desktopfileutils ltverhack:10
 WANT_GNOME=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
