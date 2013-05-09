@@ -1,7 +1,8 @@
-# $FreeBSD: ports/irc/dxirc/Makefile,v 1.2 2013/01/02 08:47:51 svnexp Exp $
+# $FreeBSD: irc/dxirc/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	dxirc
 PORTVERSION=	1.10.0
+PORTREVISION=	1
 CATEGORIES=	irc
 MASTER_SITES=	GOOGLE_CODE
 
@@ -34,7 +35,7 @@ PORTDOCS=	README
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .else
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .endif
 
