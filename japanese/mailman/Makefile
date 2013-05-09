@@ -2,7 +2,7 @@
 # Date created:				21 Feb 2003
 # Whom:					Sunagawa Koji <koj@ofug.net>
 #
-# $FreeBSD: ports/japanese/mailman/Makefile,v 1.9 2012/11/17 05:58:36 svnexp Exp $
+# $FreeBSD: japanese/mailman/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	mailman
@@ -27,7 +27,7 @@ CONFLICTS=	mailman-2.1.*
 PORTSCOUT=	limit:.*\.j\d+$$
 
 USE_AUTOTOOLS=	autoconf
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_RC_SUBR=	mailman
 

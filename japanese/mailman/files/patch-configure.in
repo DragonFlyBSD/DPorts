@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/japanese/mailman/files/patch-configure.in,v 1.2 2012/11/17 05:58:36 svnexp Exp $
+$FreeBSD: /tmp/pcvs/ports/japanese/mailman/files/patch-configure.in,v 1.1 2012-03-04 06:00:38 tota Exp $
 
 Mailman tests for existence of users during configure -- unfortunately
 this creates a problem; we create the users just before install.

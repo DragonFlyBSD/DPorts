@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: ports/japanese/mailman/files/pkg-deinstall.in,v 1.2 2012/11/17 05:58:36 svnexp Exp $
+# $FreeBSD: japanese/mailman/files/pkg-deinstall.in 300896 2012-07-14 13:54:48Z beat $
 
 PATH=/bin:/usr/bin:/usr/sbin
 
