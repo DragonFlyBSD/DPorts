@@ -1,4 +1,4 @@
-# $FreeBSD: devel/lua-lgi/Makefile 315336 2013-03-26 22:16:03Z mandree $
+# $FreeBSD: devel/lua-lgi/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	lgi
 PORTVERSION=	0.7.1
@@ -15,9 +15,9 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	pavouk
 GH_COMMIT=	1bbf1bc
 
+USES=		pkgconfig
 USE_LUA=	5.1+
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 
 CPPFLAGS+=	-I${LOCALBASE}/include/${LUA_SUBDIR}
 
