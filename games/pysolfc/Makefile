@@ -1,5 +1,5 @@
 # Created by: Marcus von Appen
-# $FreeBSD: games/pysolfc/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: games/pysolfc/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	pysolfc
 PORTVERSION=	2.0
@@ -45,7 +45,7 @@ PLIST_SUB+=	CARDSETS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
