@@ -2,7 +2,7 @@
 # Date created:				19th June 2001
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/gnome-db/Makefile,v 1.54 2012/11/17 05:55:08 svnexp Exp $
+# $FreeBSD: databases/gnome-db/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/databases/gnome-db/Makefile,v 1.5 2007/05/19 21:36:00 marcus Exp $
 #
 
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 USE_GCC=	any
 USE_GNOME=	gnomehack gnomeprefix gnomehier libgda
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/gnome-db/files/patch-doc::C::reference::Makefile.in,v 1.4 2012/11/17 05:55:08 svnexp Exp $
+$FreeBSD: databases/gnome-db/files/patch-doc::C::reference::Makefile.in 300896 2012-07-14 13:54:48Z beat $
 
 --- doc/C/reference/Makefile.in	2002/05/01 08:49:53	1.1
 +++ doc/C/reference/Makefile.in	2002/05/01 08:50:40
