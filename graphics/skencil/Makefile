@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/skencil/Makefile 314249 2013-03-15 03:06:44Z beech $
+# $FreeBSD: graphics/skencil/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	skencil
 PORTVERSION=	1.0.a784
@@ -26,7 +26,7 @@ USE_TCL_BUILD=	yes
 USE_TCL=	yes
 USE_TK_BUILD=	yes
 USE_TK=		yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
