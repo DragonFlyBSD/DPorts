@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/colord/Makefile 314380 2013-03-16 17:36:53Z kwm $
+# $FreeBSD: graphics/colord/Makefile 316596 2013-04-26 10:44:28Z ak $
 #    $MCom: ports/graphics/colord/Makefile,v 1.10 2012/12/17 23:50:40 kwm Exp $
 
 PORTNAME=	colord
@@ -19,9 +19,8 @@ LIB_DEPENDS=	polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
 
 USE_XZ=		yes
 USE_GNOME=	gnomehier glib20 intlhack
-USES=		pathfix
+USES=		pathfix gettext
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_SQLITE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
