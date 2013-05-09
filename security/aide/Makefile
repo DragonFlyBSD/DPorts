@@ -1,5 +1,5 @@
 # Created by: Cy Schubert (Cy.Schubert@uumail.gov.bc.ca)
-# $FreeBSD: security/aide/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/aide/Makefile 315787 2013-04-11 19:53:48Z cy $
 
 PORTNAME=	aide
 PORTVERSION=	0.15.1
@@ -13,11 +13,11 @@ MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Replacement and extension for Tripwire
 
 LIB_DEPENDS=	mhash.2:${PORTSDIR}/security/mhash
+USES=		bison
 
 .include <bsd.port.pre.mk>
 
 USE_GMAKE=	yes
-USES=		bison
 USE_AUTOTOOLS=	autoconf
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-mhash \
