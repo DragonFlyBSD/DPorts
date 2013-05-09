@@ -1,5 +1,5 @@
 # Created by: Andriy Gapon
-# $FreeBSD: ports/devel/coccinelle/Makefile,v 1.4 2013/01/16 20:13:27 svnexp Exp $
+# $FreeBSD: devel/coccinelle/Makefile 317605 2013-05-07 13:12:31Z bapt $
 
 PORTNAME=	coccinelle
 DISTVERSION=	0.2.4rc5
@@ -10,11 +10,13 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	avg@icyb.net.ua
 COMMENT=	Coccinelle is a program matching and transformation engine
 
+USES=		shebangfix
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 USE_PYTHON=	2.5+
 USE_OCAML=	3.0+
+SHEBANG_FILES=	configure
 
 MAN1=		spatch.1
 
