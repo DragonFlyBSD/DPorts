@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: ports/games/lgeneral/Makefile,v 1.27 2012/11/29 22:39:42 svnexp Exp $
+# $FreeBSD: games/lgeneral/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	lgeneral
 PORTVERSION=	1.2.3
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=--disable-sound
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ENV+=	am_cv_func_iconv=no
