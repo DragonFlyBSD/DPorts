@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: ports/www/mod_mono/Makefile,v 1.17 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_mono/Makefile 317238 2013-05-03 20:32:10Z bapt $
 
 PORTNAME=	mod_mono
 PORTVERSION=	2.10
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 		xsp:${PORTSDIR}/www/xsp
 
+USES=		pkgconfig
 USE_APACHE=	22
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
