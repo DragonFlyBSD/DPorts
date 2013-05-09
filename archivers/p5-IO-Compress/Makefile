@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/archivers/p5-IO-Compress/Makefile,v 1.23 2013/01/30 17:07:37 svnexp Exp $
+# $FreeBSD: archivers/p5-IO-Compress/Makefile 311228 2013-01-30 16:20:25Z sunpoet $
 
 PORTNAME=	IO-Compress
 PORTVERSION=	2.060
