@@ -2,7 +2,7 @@
 # Date created:		23 Sep 2000
 # Whom:			Neil Blakey-Milner
 #
-# $FreeBSD: ports/mail/sqwebmail/Makefile,v 1.102 2012/12/10 19:24:02 svnexp Exp $
+# $FreeBSD: mail/sqwebmail/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	sqwebmail
@@ -59,7 +59,7 @@ CACHEOWNER?=	bin
 
 USE_PERL5=	YES
 USE_BZIP2=	YES
-USE_GETTEXT=	YES
+USES=		gettext
 USE_GMAKE=	YES
 USE_RC_SUBR=	sqwebmail-sqwebmaild
 GNU_CONFIGURE=	yes
