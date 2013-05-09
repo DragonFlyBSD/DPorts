@@ -4,7 +4,7 @@
 #
 # Authors: Bjoern A. Zeeb
 #
-# $FreeBSD: ports/sysutils/areca-cli/files/407.status-areca-raid.in,v 1.2 2012/11/17 06:01:25 svnexp Exp $
+# $FreeBSD: sysutils/areca-cli/files/407.status-areca-raid.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # If there is a global system configuration file, suck it in.

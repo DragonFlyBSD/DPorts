@@ -1,12 +1,9 @@
-# New ports collection makefile for: areca-cli
-# Date created:		16 July 2006
-# Whom:			Rink Springer <rink@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/areca-cli/Makefile,v 1.11 2012/11/17 06:01:25 svnexp Exp $
-#
+# Created by: Rink Springer <rink@FreeBSD.org>
+# $FreeBSD: sysutils/areca-cli/Makefile 317611 2013-05-07 14:09:04Z ehaupt $
 
 PORTNAME=	areca-cli
 DISTVERSION=	${CLI_VER}.${CLI_REV}
+PORTEPOCH=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.areca.com.tw/RaidCards/AP_Drivers/FreeBSD/CLI/ \
 		CRITICAL
@@ -23,8 +20,8 @@ PERIODICSCRIPT=	407.status-areca-raid
 USE_ZIP=	yes
 NO_BUILD=	yes
 
-CLI_VER=	1.86
-CLI_REV=	111101
+CLI_VER=	1.9.0
+CLI_REV=	120503
 
 SUB_FILES+=	${PERIODICSCRIPT}
 
