@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: games/gnmm/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: games/gnmm/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	gnmm
 PORTVERSION=	0.1.2
@@ -11,10 +11,8 @@ DIST_SUBDIR=	gnome
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A "nine mens' morris" implementation for the GNOME Desktop Environment
 
-USE_GETTEXT=	yes
-USE_ICONV=	yes
 USE_GMAKE=	yes
-USES=        pathfix
+USES=		pathfix gettext iconv
 USE_GNOME=	gnomeprefix gnomelibs gdkpixbuf
 
 GNU_CONFIGURE=	yes
