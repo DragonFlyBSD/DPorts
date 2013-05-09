@@ -1,5 +1,5 @@
 # Created by: Manuel Creach <manuel.creach@icloud.com>
-# $FreeBSD: net/libnfs/Makefile 313012 2013-02-26 23:12:28Z pawel $
+# $FreeBSD: net/libnfs/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	libnfs
 PORTVERSION=	1.3.0
@@ -13,12 +13,12 @@ LICENSE=	LGPL21 GPLv3
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_AUTORECONF=	yes
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtoolize
 ACLOCAL_ARGS=	-I.
 AUTOMAKE_ARGS=	--add-missing
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 
 post-patch:
