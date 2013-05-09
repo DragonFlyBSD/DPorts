@@ -1,8 +1,5 @@
-# New ports collection makefile for:	mp3burn
-# Date created:				17th December 2003
-# Whom:					Vincent Tantardini <vinc@FreeBSD-fr.org>
-#
-# $FreeBSD: ports/audio/mp3burn/Makefile,v 1.13 2012/11/17 05:54:38 svnexp Exp $
+# Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
+# $FreeBSD: audio/mp3burn/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	mp3burn
 PORTVERSION=	0.4.2
@@ -17,13 +14,13 @@ RUN_DEPENDS=	mpg123:${PORTSDIR}/audio/mpg123 \
 		ogg123:${PORTSDIR}/audio/vorbis-tools \
 		p5-MP3-Info>=0:${PORTSDIR}/audio/p5-MP3-Info \
 		p5-Ogg-Vorbis-Header>=0:${PORTSDIR}/audio/p5-Ogg-Vorbis-Header \
-		p5-String-ShellQuote>=0:${PORTSDIR}/textproc/p5-String-ShellQuote
+		p5-String-ShellQuote>=0:${PORTSDIR}/textproc/p5-String-ShellQuote \
+		cdda2wav:${PORTSDIR}/sysutils/cdrtools
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_BZIP2=	yes
 USE_PERL5=	yes
-USE_CDRTOOLS=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/mp3burn
