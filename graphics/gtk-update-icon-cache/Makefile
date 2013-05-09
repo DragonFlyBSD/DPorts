@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/gtk-update-icon-cache/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: graphics/gtk-update-icon-cache/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/graphics/gtk-update-icon-cache/Makefile,v 1.18 2013/03/04 17:44:37 kwm Exp $
 
 PORTNAME=	gtk-update-icon-cache
@@ -27,7 +27,7 @@ MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack
-USE_GETTEXT=	yes
+USES=		gettext
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 PATCHDIR=	${.CURDIR}/../../x11-toolkits/gtk20/files
