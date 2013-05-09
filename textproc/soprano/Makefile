@@ -1,8 +1,8 @@
 # Created by: arved
-# $FreeBSD: textproc/soprano/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: textproc/soprano/Makefile 317414 2013-05-05 14:17:11Z rakuco $
 
 PORTNAME=	soprano
-PORTVERSION=	2.9.0
+PORTVERSION=	2.9.1
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/Soprano/${PORTVERSION}
 
@@ -15,9 +15,8 @@ LIB_DEPENDS=	raptor2:${PORTSDIR}/textproc/raptor2 \
 
 USE_QT4=	corelib dbus qtestlib network \
 		qmake_build moc_build uic_build rcc_build
-USE_PKGCONFIG=	both
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake pkgconfig
 CMAKE_ARGS+=	-DSOPRANO_DISABLE_CLUCENE_INDEX=yes \
 		-DSOPRANO_DISABLE_SESAME2_BACKEND=yes
 MAKE_JOBS_SAFE=	yes
