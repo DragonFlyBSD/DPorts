@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rsvndump
-# Date created:		2008-10-12
-# Whom:			glarkin
-#
-# $FreeBSD: ports/devel/rsvndump/Makefile,v 1.20 2012/11/17 05:56:56 svnexp Exp $
-#
+# Created by: glarkin
+# $FreeBSD: devel/rsvndump/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	rsvndump
 PORTVERSION=	0.5.8
@@ -15,8 +11,10 @@ COMMENT=	Remote Subversion repository dumpfile generator
 
 GNU_CONFIGURE=	yes
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=		yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_FILES+=		share/locale/de/LC_MESSAGES/rsvndump.mo
 .else
 CONFIGURE_ARGS+=	--disable-nls
@@ -24,14 +22,12 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--enable-man \
 			--with-svn=${LOCALBASE}
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 MAN1=		rsvndump.1
 .endif
 PLIST_FILES+=	bin/rsvndump
 
-.include <bsd.port.pre.mk>
-
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 BUILD_DEPENDS+=	asciidoc:${PORTSDIR}/textproc/asciidoc \
 		xmlto:${PORTSDIR}/textproc/xmlto
 CONFIGURE_ARGS+=--enable-man
@@ -40,4 +36,4 @@ CONFIGURE_ARGS+=--disable-man
 .endif
 
 BUILD_DEPENDS+=	svn:${PORTSDIR}/devel/subversion
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
