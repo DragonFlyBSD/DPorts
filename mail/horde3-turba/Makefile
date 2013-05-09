@@ -2,7 +2,7 @@
 # Date created:			  Sat Nov 16, 2001
 # Whom:				  Thierry Thomas (<thierry@thomas.as>)
 #
-# $FreeBSD: ports/mail/horde3-turba/Makefile,v 1.2 2012/12/16 12:14:29 svnexp Exp $
+# $FreeBSD: mail/horde3-turba/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	turba
@@ -16,7 +16,7 @@ COMMENT=	Contact management application
 
 USE_HORDE=	base
 USE_PHP=	ldap
-USE_GETTEXT=	yes
+USES=		gettext
 
 PORTDOCS=	README CHANGES CREDITS INSTALL LDAP RELEASE_NOTES TODO UPGRADING
 
