@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnofin
-# Date created:				Sun Jul 18 1999
-# Whom:					domi@saargate.de
-#
-# $FreeBSD: ports/finance/gnofin/Makefile,v 1.49 2012/11/17 05:57:25 svnexp Exp $
-#
+# Created by: domi@saargate.de
+# $FreeBSD: finance/gnofin/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	gnofin
 PORTVERSION=	0.8.4
@@ -22,8 +18,10 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB=	NLS=""
 .else
 CONFIGURE_ARGS=	--disable-nls
