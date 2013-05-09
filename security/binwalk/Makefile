@@ -1,7 +1,7 @@
-# $FreeBSD: ports/security/binwalk/Makefile,v 1.6 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: ports/security/binwalk/Makefile,v 1.7 2012/12/25 11:18:19 svnexp Exp $
 
 PORTNAME=	binwalk
-PORTVERSION=	0.4.5
+PORTVERSION=	0.5.0
 CATEGORIES=	security
 MASTER_SITES=	GOOGLE_CODE
 
@@ -13,6 +13,7 @@ LICENSE=	MIT
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 PLIST_FILES=	bin/binwalk \
+		etc/binwalk/extract.conf \
 		etc/binwalk/magic.binarch \
 		etc/binwalk/magic.bincast \
 		etc/binwalk/magic.binwalk
