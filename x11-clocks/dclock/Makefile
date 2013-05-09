@@ -1,5 +1,5 @@
 # Created by: David Leonard <leonard@dstc.edu.au>
-# $FreeBSD: ports/x11-clocks/dclock/Makefile,v 1.28 2012/11/26 23:28:36 svnexp Exp $
+# $FreeBSD: x11-clocks/dclock/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	dclock
 PORTVERSION=	2.2.2
@@ -17,7 +17,7 @@ SOX_DESC=	Install SOX to play audio
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_XORG=	x11 xt
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lX11 -lXt -lm
