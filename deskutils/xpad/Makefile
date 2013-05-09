@@ -1,5 +1,5 @@
 # Created by: Guillaume Paquet <amyfoub@gmail.com>
-# $FreeBSD: deskutils/xpad/Makefile 315918 2013-04-16 23:13:51Z jgh $
+# $FreeBSD: deskutils/xpad/Makefile 316484 2013-04-24 23:04:22Z jgh $
 
 PORTNAME=	xpad
 PORTVERSION=	3.1
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_XORG=	x11 sm
 USE_GNOME=	gtk20 gnomehier intltool
-USE_PKGCONFIG=	build
+USES=	pkgconfig
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 
@@ -30,7 +30,7 @@ MAN1=		xpad.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
