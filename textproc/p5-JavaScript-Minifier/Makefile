@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-JavaScript-Minifier
-# Date created:		2011-08-03
-# Whom:			Kurt Lidl <kurt.lidl@cello.com>
-#
-# $FreeBSD: ports/textproc/p5-JavaScript-Minifier/Makefile,v 1.2 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Kurt Lidl <kurt.lidl@cello.com>
+# $FreeBSD: textproc/p5-JavaScript-Minifier/Makefile 316561 2013-04-26 03:08:36Z sunpoet $
 
 PORTNAME=	JavaScript-Minifier
 PORTVERSION=	1.05
@@ -15,8 +11,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	JavaScript whitespace/comment eliminator
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 PERL_CONFIGURE=	yes
 
-MAN3=	JavaScript::Minifier.3
+MAN3=		JavaScript::Minifier.3
 
 .include <bsd.port.mk>
