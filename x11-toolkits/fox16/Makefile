@@ -1,5 +1,5 @@
 # Created by: Alexander Novitsky <alecn2002@yandex.ru>
-# $FreeBSD: ports/x11-toolkits/fox16/Makefile,v 1.48 2013/02/25 08:43:43 svnexp Exp $
+# $FreeBSD: x11-toolkits/fox16/Makefile 316370 2013-04-23 16:41:07Z gahr $
 
 PORTNAME=	fox
 PORTVERSION=	${MAJORVER}.${SHVER}
@@ -18,7 +18,7 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 LATEST_LINK=	fox16
 
 MAJORVER=	1.6
-SHVER=		47
+SHVER=		49
 PLIST_SUB+=	MAJORVER=${MAJORVER} SHVER=${SHVER}
 
 USE_GNOME=	lthack gnomehack
@@ -29,7 +29,7 @@ USE_LDCONFIG=	yes
 
 MAN1=		shutterbug.1 reswrap.1
 
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -fPIC
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS CUPS DEBUG APPS PROFILE SHM XFT
