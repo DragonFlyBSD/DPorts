@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/oaf/files/patch-ltmain.sh,v 1.6 2012/11/17 05:56:02 svnexp Exp $
+$FreeBSD: devel/oaf/files/patch-ltmain.sh 300896 2012-07-14 13:54:48Z beat $
 
 --- ltmain.sh	2001/08/27 09:51:26	1.1
 +++ ltmain.sh	2001/08/27 09:51:42

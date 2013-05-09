@@ -2,7 +2,7 @@
 # Date created:				1st June 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/oaf/Makefile,v 1.43 2012/11/17 05:56:02 svnexp Exp $
+# $FreeBSD: devel/oaf/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/devel/oaf/Makefile,v 1.5 2007/05/19 21:36:06 marcus Exp $
 #
 
@@ -23,7 +23,7 @@ USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix gtk12 orbit libxml
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

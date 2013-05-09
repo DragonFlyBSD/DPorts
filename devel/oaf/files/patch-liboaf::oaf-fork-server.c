@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/oaf/files/patch-liboaf::oaf-fork-server.c,v 1.5 2012/11/17 05:56:02 svnexp Exp $
+$FreeBSD: devel/oaf/files/patch-liboaf::oaf-fork-server.c 300896 2012-07-14 13:54:48Z beat $
 
 --- liboaf/oaf-fork-server.c	2002/02/14 01:44:13	1.1
 +++ liboaf/oaf-fork-server.c	2002/02/14 01:44:39
