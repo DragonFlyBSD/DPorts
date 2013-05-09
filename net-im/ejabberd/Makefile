@@ -2,7 +2,7 @@
 # Date created:                         03 July 2004
 # Whom:                                 Alexander Timoshenko <gonzo@univ.kiev.ua>
 #
-# $FreeBSD: ports/net-im/ejabberd/Makefile,v 1.49 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: net-im/ejabberd/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	ejabberd
@@ -26,7 +26,7 @@ GROUPS=		${USERS}
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_RC_SUBR=	${PORTNAME}
 NOPRECIOUSMAKEVARS=	yes
 
