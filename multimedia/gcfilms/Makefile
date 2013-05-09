@@ -1,12 +1,9 @@
-# New ports collection makefile for:	GCFilms
-# Date Created:				01 May 2005
-# Whom:					Remington Lang <MrL0Lz@gmail.com>
-#
-# $FreeBSD: ports/multimedia/gcfilms/Makefile,v 1.15 2012/11/17 05:59:49 svnexp Exp $
+# Created by: Remington Lang <MrL0Lz@gmail.com>
+# $FreeBSD: multimedia/gcfilms/Makefile 317605 2013-05-07 13:12:31Z bapt $
 
 PORTNAME=	gcfilms
 PORTVERSION=	6.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia perl5
 MASTER_SITES=	http://download.gna.org/gcfilms/
 
@@ -22,7 +19,10 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+USES=		shebangfix
 NO_BUILD=	yes
+
+SHEBANG_FILES=	bin/gcfilms install
 
 do-install:
 	cd ${WRKSRC} ; ./install --prefix=${PREFIX}
