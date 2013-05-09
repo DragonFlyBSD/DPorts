@@ -2,7 +2,7 @@
 # Date created:		22 January 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-fonts/fntsample/Makefile,v 1.20 2012/11/17 06:03:27 svnexp Exp $
+# $FreeBSD: x11-fonts/fntsample/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME?=	fntsample
@@ -34,7 +34,7 @@ BUILD_DEPENDS=	gawk:${PORTSDIR}/lang/gawk
 RUN_DEPENDS=	pdfoutline:${PORTSDIR}/textproc/pdfoutline
 
 USE_GNOME=	pango
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules \
 		--with-unicode-blocks=${WRKSRC}/Blocks.txt
