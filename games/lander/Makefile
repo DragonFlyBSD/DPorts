@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/lander/Makefile 315368 2013-03-27 10:18:06Z miwi $
+# $FreeBSD: games/lander/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	lander
 PORTVERSION=	0.6.4
@@ -15,7 +15,7 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 		boost_filesystem:${PORTSDIR}/devel/boost-libs
 
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_SDL=	sdl image mixer
 USE_GL=		gl glu
 MAKE_JOBS_SAFE=	yes
