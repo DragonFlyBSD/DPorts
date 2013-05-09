@@ -2,7 +2,7 @@
 # Date created:		2011-11-09
 # Whom:			Zhihao Yuan <lichray@gmail.com>
 #
-# $FreeBSD: ports/x11-toolkits/pure-tk/Makefile,v 1.3 2012/12/04 14:00:00 svnexp Exp $
+# $FreeBSD: x11-toolkits/pure-tk/Makefile 316351 2013-04-23 11:51:52Z gahr $
 #
 
 PORTNAME=	pure-tk
@@ -13,7 +13,7 @@ MAINTAINER=	lichray@gmail.com
 COMMENT=	A basic interface between Pure and Tcl/Tk
 
 USE_PURE=	yes
-USE_TK=	83+
+USE_TK=	84+
 SHORT_TCL_VER=	${TCL_VER:S/8./8/}
 
 MAKE_ARGS+=	tclvers=${TCL_VER}
