@@ -1,4 +1,4 @@
-# $FreeBSD: net/ntp/Makefile.inc 315756 2013-04-08 05:10:58Z cy $
+# $FreeBSD: net/ntp/Makefile.inc 317146 2013-05-02 20:48:08Z cy $
 
 OPTIONS_DEFINE=	NTPSNMPD \
 		SSL \
@@ -53,7 +53,7 @@ OPTIONS_DEFINE=	NTPSNMPD \
   		VARITEXT
 
 OPTIONS_DEFAULT=	SSL \
-		NTP_SIGND_DESC \
+		NTP_SIGND \
   		ATOM \
   		NMEA
 
