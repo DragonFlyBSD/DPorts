@@ -1,5 +1,5 @@
 # Created by: Oliver Heesakkers <dev2@heesakkers.info>
-# $FreeBSD: ports/graphics/zbar/Makefile,v 1.10 2012/12/13 18:44:02 svnexp Exp $
+# $FreeBSD: graphics/zbar/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	zbar
 PORTVERSION=	0.10
@@ -15,7 +15,7 @@ LICENSE=	LGPL21
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 OPTIONS_DEFINE=	X11 IMAGEMAGICK V4L PYTHON GTK2 QT4
 OPTIONS_DEFAULT=	X11 IMAGEMAGICK
