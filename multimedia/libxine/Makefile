@@ -1,5 +1,5 @@
 # Created by: alex
-# $FreeBSD: ports/multimedia/libxine/Makefile,v 1.190 2013/02/08 22:41:54 svnexp Exp $
+# $FreeBSD: multimedia/libxine/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	xine
 PORTVERSION=	1.2.2
@@ -37,18 +37,16 @@ BUILD_DEPENDS+=	v4l_compat>=1.0.20100321:${PORTSDIR}/multimedia/v4l_compat
 LIB_DEPENDS+=	dvdcss.${DVDCSS_LIBVERSION}:${PORTSDIR}/multimedia/libdvdcss
 .endif
 
+USES=		pathfix pkgconfig iconv
 USE_XZ=		yes
-USE_ICONV=	yes
 GNU_CONFIGURE=	yes
 WANT_GNOME=	yes
-USE_GNOME=	gnomehack
 USE_GMAKE=	yes
 USE_XORG=	sm x11 xv xinerama
 USE_GL=		gl glu
 USE_PERL5_BUILD=yes
 USE_SDL=	sdl
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 CONFIGURE_ENV=	THREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		THREAD_LIBS="${PTHREAD_LIBS}" \
 		EXTRA_X_LIBS="-lGL -lGLU -lXext -lX11 -lm"
@@ -97,7 +95,7 @@ IGNORE=		only builds with -O1 or higher, check CFLAGS
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
