@@ -1,8 +1,9 @@
 # Created by: gahr
-# $FreeBSD: editors/fxite/Makefile 316238 2013-04-22 15:16:30Z gahr $
+# $FreeBSD: editors/fxite/Makefile 316372 2013-04-23 16:45:40Z gahr $
 
 PORTNAME=	fxite
 PORTVERSION=	0.91
+PORTREVISION=	1
 CATEGORIES=	editors
 
 MAINTAINER=	gahr@FreeBSD.org
@@ -21,8 +22,8 @@ GH_ACCOUNT=	yetanothergeek
 GH_TAGNAME=	FXITE-0_91
 GH_COMMIT=	c2ecac3
 
+USES=		pkgconfig
 USE_LUA=	yes
-USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	aclocal autoconf automake
 ACLOCAL_ARGS=	--force -I m4
 AUTOMAKE_ARGS=	--gnu --add-missing --copy
