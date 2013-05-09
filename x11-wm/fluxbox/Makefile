@@ -1,5 +1,5 @@
 # Created by: spn
-# $FreeBSD: ports/x11-wm/fluxbox/Makefile,v 1.69 2013/02/15 09:31:41 svnexp Exp $
+# $FreeBSD: x11-wm/fluxbox/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	fluxbox
 PORTVERSION=	1.3.5
@@ -74,7 +74,7 @@ CONFIGURE_ARGS+=	--enable-xinerama
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_ICONV=		yes
+USES+=			iconv
 CONFIGURE_ENV=		LIBS="-L${LOCALBASE}/lib -liconv"
 CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--enable-nls
