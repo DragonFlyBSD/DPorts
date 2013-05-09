@@ -2,7 +2,7 @@
 # Date created:         5 December 1998
 # Whom:                 Sean Kelly <kelly@ad1440.net>
 #
-# $FreeBSD: ports/print/jadetex/Makefile,v 1.42 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/jadetex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	jadetex
@@ -14,10 +14,9 @@ MASTER_SITES=	SF
 MAINTAINER=	doceng@FreeBSD.org
 COMMENT=	A TeX backend for Jade, for typesetting SGML documents
 
-BUILD_DEPENDS=	etex:${PORTSDIR}/print/teTeX-base
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
-RUN_DEPENDS=	etex:${PORTSDIR}/print/teTeX-base
 
+USE_TEX=	tetex
 MAKE_JOBS_UNSAFE=	yes
 MAKE_ENV=	TEXMFCNF=${FILESDIR}:${TEXMFDIR}/web2c
 
