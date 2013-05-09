@@ -2,7 +2,7 @@
 # Date created:				2008-04-23
 # Whom:					Alex Samorukov <samm@os2.kiev.ua>
 #
-# $FreeBSD: ports/graphics/rawstudio/Makefile,v 1.17 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/rawstudio/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	rawstudio
@@ -31,7 +31,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gtk20 libxml2 gconf2 desktopfileutils gnomehack
 USE_SQLITE=	3
 USE_LDCONFIG=	yes
