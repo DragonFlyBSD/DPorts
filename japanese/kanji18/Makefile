@@ -36,8 +36,8 @@ RESIZESED_FILE?=	18to16.sed
 RESIZED_ALIAS_FILE?=	kanji16.alias
 
 post-extract:
-	@(cd ${WRKSRC}; ${CAT} kanji18.a[a-h] | uudecode)
-	@${GUNZIP_CMD} ${WRKSRC}/kanji18.bdf.Z
+	@(cd ${WRKSRC}; ${CAT} kanji${PKGNAMESUFFIX}.a? | uudecode)
+	@${GUNZIP_CMD} ${WRKSRC}/kanji${PKGNAMESUFFIX}.bdf.Z
 
 pre-install:
 	@for file in INSTALL DEINSTALL; do \
