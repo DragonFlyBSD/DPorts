@@ -1,8 +1,8 @@
-# Create by: Eduard Martinescu
-# $FreeBSD: ports/sysutils/smartmontools/Makefile,v 1.63 2012/11/17 06:01:46 svnexp Exp $
+# Created by: Eduard Martinescu
+# $FreeBSD: sysutils/smartmontools/Makefile 314695 2013-03-19 21:02:40Z pawel $
 
 PORTNAME=	smartmontools
-PORTVERSION=	6.0
+PORTVERSION=	6.1
 CATEGORIES=	sysutils
 MASTER_SITES=	SF
 
@@ -27,7 +27,9 @@ MAN8=		smartd.8 smartctl.8
 
 PORTDOCS=	*
 
-.if defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ! ${PORT_OPTIONS:MDOCS}
 CONFIGURE_ARGS+=	--without-docdir --without-exampledir
 .else
 CONFIGURE_ARGS+=	--with-docdir=${DOCSDIR}
