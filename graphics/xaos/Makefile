@@ -1,5 +1,5 @@
 # Created by: Joseph Koshy <koshy@india.hp.com>
-# $FreeBSD: graphics/xaos/Makefile 315222 2013-03-25 13:59:18Z makc $
+# $FreeBSD: graphics/xaos/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	xaos
 PORTVERSION=	3.5
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--with-gtk-driver=yes --with-x11-driver=no
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
