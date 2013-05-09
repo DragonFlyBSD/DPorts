@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Throwable/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Throwable/Makefile 317002 2013-05-01 08:35:22Z tobez $
 
 PORTNAME=	Throwable
-PORTVERSION=	0.200004
+PORTVERSION=	0.200008
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RJBS
