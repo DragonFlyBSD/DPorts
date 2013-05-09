@@ -1,5 +1,5 @@
 # Created by George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: ports/devel/fnccheck/Makefile,v 1.14 2013/02/14 10:22:07 svnexp Exp $
+# $FreeBSD: devel/fnccheck/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	fnccheck
 PORTVERSION=	3.2.0
@@ -32,7 +32,7 @@ INFO=		libfc
 
 # should be same as binutils
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 LDFLAGS+=	-lintl
 .endif
 
