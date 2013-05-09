@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@Chg.RU>
-# $FreeBSD: ports/x11-toolkits/fltk/Makefile,v 1.64 2012/12/12 17:39:48 svnexp Exp $
+# $FreeBSD: x11-toolkits/fltk/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	fltk
 PORTVERSION=	1.3.2
@@ -19,7 +19,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 USE_LDCONFIG=	yes
 USE_XORG=	xft
 USE_GL=		glu
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-threads \
 		--enable-shared \
