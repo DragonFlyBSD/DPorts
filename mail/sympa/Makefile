@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: mail/sympa/Makefile 314178 2013-03-14 19:14:47Z crees $
+# $FreeBSD: mail/sympa/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	sympa
 PORTVERSION=	6.1.17
@@ -66,7 +66,7 @@ SUB_FILES=	pkg-install
 USE_RC_SUBR=	sympa
 
 .if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
