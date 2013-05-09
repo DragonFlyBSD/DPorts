@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/linkchecker/Makefile 314132 2013-03-14 05:35:08Z miwi $
+# $FreeBSD: www/linkchecker/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	linkchecker
 PORTVERSION=	8.4
@@ -90,7 +90,7 @@ USE_APACHE_RUN=	22
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
