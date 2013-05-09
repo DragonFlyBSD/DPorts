@@ -1,5 +1,5 @@
 # Created by: Timothy Redaelli <drizzt@gufi.org>
-# $FreeBSD: irc/irssi-dcc_send_limiter/Makefile 315130 2013-03-24 15:51:03Z bdrewery $
+# $FreeBSD: irc/irssi-dcc_send_limiter/Makefile 316344 2013-04-23 10:51:39Z bapt $
 
 PORTNAME=	dcc_send_limiter
 PORTVERSION=	0.8.10
@@ -20,8 +20,8 @@ COMMENT=	Irssi plugin to limit the transmit speed of DCC sends
 BUILD_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
 RUN_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
 
+USES=		pkgconfig
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	lib/irssi/modules/lib/${DISTNAME}.so
