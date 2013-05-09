@@ -2,11 +2,12 @@
 # Date created:			01 May 2008
 # Whom:				Greg Larkin <glarkin@FreeBSD.org>
 #
-# $FreeBSD: ports/net/rubygem-rightaws/Makefile,v 1.10 2012/11/17 06:00:19 svnexp Exp $
+# $FreeBSD: net/rubygem-rightaws/Makefile 316885 2013-04-30 07:21:08Z gahr $
 #
 
 PORTNAME=	rightaws
 PORTVERSION=	1.10.0
+PORTREVISION=	1
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 DISTNAME=	right_aws-${PORTVERSION}
@@ -27,7 +28,7 @@ OPTIONS=	LIBXML "Use libxml instead of REXML" Off
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_LIBXML)
-RUN_DEPENDS+=	${RUBY_PKGNAMEPREFIX}libxml>=0:${PORTSDIR}/textproc/ruby-libxml
+RUN_DEPENDS+=	rubygem-libxml-ruby>=2.3.3:${PORTSDIR}/textproc/rubygem-libxml-ruby
 .else
 USE_RUBY_FEATURES=	rexml
 .endif
