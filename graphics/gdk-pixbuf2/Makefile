@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@lovett.com>
-# $FreeBSD: graphics/gdk-pixbuf2/Makefile 315541 2013-03-29 14:13:20Z kwm $
+# $FreeBSD: graphics/gdk-pixbuf2/Makefile 316515 2013-04-25 13:44:38Z ak $
 #    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.28 2012/12/10 12:09:15 kwm Exp $
 
 PORTNAME=	gdk-pixbuf
@@ -11,13 +11,12 @@ PKGNAMESUFFIX=	2
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A graphic library for GTK+
+COMMENT=	Graphic library for GTK+
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 LATEST_LINK=	gdk-pixbuf2
 USE_XZ=		yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_XORG=	xt xi x11
 USE_AUTOTOOLS=	libtool
@@ -30,13 +29,13 @@ CONFIGURE_ARGS=	--enable-introspection=yes --with-x11
 
 MAN1=		gdk-pixbuf-csource.1 gdk-pixbuf-query-loaders.1
 
-OPTIONS_DEFINE=	JASPER JPEG PNG TIFF NLS
-OPTIONS_DEFAULT=JASPER JPEG PNG TIFF NLS
+OPTIONS_DEFINE=	JASPER JPEG PNG TIFF
+OPTIONS_DEFAULT=JASPER JPEG PNG TIFF
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
