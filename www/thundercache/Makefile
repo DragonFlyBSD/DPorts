@@ -1,4 +1,4 @@
-# $FreeBSD: www/thundercache/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/thundercache/Makefile 316958 2013-04-30 20:00:28Z bdrewery $
 
 PORTNAME=	thundercache
 PORTVERSION=	6.1
@@ -62,7 +62,7 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/pgsql.so:${PORTSDIR}/databases
 USE_PHP+=	curl pcre bcmath pdo mcrypt mhash session
 .endif
 
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl:install
+LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
 
 SUB_FILES=	pkg-message log.sh test-deps.sh
 SUB_LIST=	"GREP=${GREP}"
