@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/games/chroma/Makefile,v 1.13 2013/02/04 07:25:56 svnexp Exp $
+# $FreeBSD: games/chroma/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	chroma
 PORTVERSION=	1.08
@@ -12,7 +12,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Abstract puzzle game
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-lintl"
