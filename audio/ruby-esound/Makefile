@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: audio/ruby-esound/Makefile 315601 2013-03-30 08:17:48Z miwi $
+# $FreeBSD: audio/ruby-esound/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	esound
 PORTVERSION=	0.1
@@ -15,7 +15,7 @@ COMMENT=	A Ruby binding to the EsounD library
 
 LIB_DEPENDS=	esd:${PORTSDIR}/audio/esound
 
-USE_PKGCONFIG=      build
+USES=		pkgconfig
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
 
