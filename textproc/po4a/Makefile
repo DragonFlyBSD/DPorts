@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: ports/textproc/po4a/Makefile,v 1.17 2013/01/09 00:58:49 svnexp Exp $
+# $FreeBSD: textproc/po4a/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	po4a
 PORTVERSION=	0.44
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	p5-Term-ReadKey>=2.30:${PORTSDIR}/devel/p5-Term-ReadKey \
 		jade>=0:${PORTSDIR}/textproc/jade
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PERL5=	yes
 PERL_MODBUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-v0.40.1
