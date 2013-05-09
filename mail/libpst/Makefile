@@ -1,5 +1,5 @@
 # Created by: Nate Underwood <natey@natey.com>
-# $FreeBSD: ports/mail/libpst/Makefile,v 1.23 2013/02/23 22:53:42 svnexp Exp $
+# $FreeBSD: mail/libpst/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	libpst
 PORTVERSION=	0.6.58
@@ -16,7 +16,7 @@ LIB_DEPENDS=	gsf-1:${PORTSDIR}/devel/libgsf
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -liconv
 CONFIGURE_ARGS+=	--disable-python
