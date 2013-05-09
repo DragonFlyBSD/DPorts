@@ -1,5 +1,5 @@
 # Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-# $FreeBSD: ports/lang/racket/Makefile,v 1.31 2013/02/18 14:39:35 svnexp Exp $
+# $FreeBSD: lang/racket/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	racket
 PORTVERSION=	5.3.1
@@ -54,7 +54,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src/build
-USE_ICONV=	yes
+USES+=		iconv
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:env
 
