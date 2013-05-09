@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/japanese/FreeWnn-server/files/pkg-install.in,v 1.5 2012/11/17 05:58:31 svnexp Exp $
+# $FreeBSD: japanese/FreeWnn-server/files/pkg-install.in 300896 2012-07-14 13:54:48Z beat $
 
 case $2 in
 POST-INSTALL)

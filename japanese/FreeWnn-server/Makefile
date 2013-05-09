@@ -1,9 +1,5 @@
-# New ports collection makefile for:	server of FreeWnn
-# Date created:		00/08/25
-# Whom:			Satoshi TAOKA <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/FreeWnn-server/Makefile,v 1.51 2012/11/17 05:58:31 svnexp Exp $
-#
+# Created by: Satoshi TAOKA <taoka@FreeBSD.org>
+# $FreeBSD: japanese/FreeWnn-server/Makefile 317168 2013-05-02 22:27:58Z hrs $
 
 PORTNAME=	FreeWnn
 PORTVERSION=	1.1.1.a021

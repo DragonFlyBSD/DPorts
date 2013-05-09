@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/japanese/FreeWnn-server/files/wnn.in,v 1.2 2012/11/17 05:58:31 svnexp Exp $
+# $FreeBSD: japanese/FreeWnn-server/files/wnn.in 302141 2012-08-05 23:19:36Z dougb $
 #
 # PROVIDE: wnn
 # REQUIRE: LOGIN
