@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: chinese/oxim/Makefile 314855 2013-03-21 17:39:03Z bapt $
+# $FreeBSD: chinese/oxim/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	oxim
 PORTVERSION=	1.2.2
@@ -19,7 +19,7 @@ GTK2_DESC=	 GTK2 input method module
 CHEWING_DESC=	 Chewing input module
 UNICODE_DESC=	 Unicode input module
 
-USE_ICONV=	yes
+USES=		iconv
 USE_XORG=	x11 xft xpm xtst
 WANT_GNOME=	yes
 
@@ -70,7 +70,7 @@ PLIST_SUB+=	UNICODE="@comment "
 
 # TODO WITHOUT_NLS knob
 #.if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 LDFLAGS+=	-lintl
 PLIST_SUB+=	NLS=""
 #.else
