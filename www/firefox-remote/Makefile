@@ -1,13 +1,11 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: ports/www/firefox-remote/Makefile,v 1.15 2012/11/17 06:02:33 svnexp Exp $
+# $FreeBSD: www/firefox-remote/Makefile 316732 2013-04-28 16:13:10Z stefan $
 
-PORTNAME=	firefox
+PORTNAME=	firefox-remote
 PORTVERSION=	20040803
 PORTREVISION=	3
 CATEGORIES=	www
-MASTER_SITES=	http://www.webonaut.com/distfiles/${PORTNAME}${PKGNAMESUFFIX}/
-PKGNAMESUFFIX=	-remote
-DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
+MASTER_SITES=	http://www.webonaut.com/distfiles/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Wrapper scripts for firefox web browser
@@ -15,8 +13,8 @@ COMMENT=	Wrapper scripts for firefox web browser
 USE_BZIP2=	yes
 
 UTF8_HACK=	no
-FIREFOX_REMOTE=	${PORTNAME}${PKGNAMESUFFIX}
-THUNDERBIRD_REMOTE=	thunderbird${PKGNAMESUFFIX}
+FIREFOX_REMOTE=	firefox-remote
+THUNDERBIRD_REMOTE=	thunderbird-remote
 
 OPTIONS_DEFINE=	UTF8_LOCALE MENU_FIREFOX MENU_THUNDERBIRD
 UTF8_LOCALE_DESC=	Use UTF8 locale (read Makefile for details)
