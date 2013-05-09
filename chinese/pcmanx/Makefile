@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: ports/chinese/pcmanx/Makefile,v 1.43 2013/02/23 07:41:51 svnexp Exp $
+# $FreeBSD: chinese/pcmanx/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	pcmanx
 PORTVERSION=	1.2
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 USE_XZ=		yes
 USE_GNOME=	gtk20 intlhack
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 
 OPTIONS_DEFINE=	NLS DEBUG DOCKLET NOTIFIER LIBNOTIFY NANCY MOUSE EXTERNAL IPLOOKUP PROXY
@@ -35,7 +35,7 @@ MAN1=		pcmanx.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
