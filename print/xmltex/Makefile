@@ -2,7 +2,7 @@
 # Date created:         9 May 2002
 # Whom:                 Nik Clayton <nik@FreeBSD.org>
 #
-# $FreeBSD: ports/print/xmltex/Makefile,v 1.19 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: print/xmltex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=		xmltex
@@ -18,13 +18,9 @@ DIST_SUBDIR=		${PORTNAME}
 MAINTAINER=		hrs@FreeBSD.org
 COMMENT=		A non-validating XML parser, written in TeX
 
-BUILD_DEPENDS=		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal \
-			${LOCALBASE}/${TEXMFDISTDIR}/LICENSE.texmf:${PORTSDIR}/print/teTeX-texmf \
-			latex:${PORTSDIR}/print/teTeX-base
 LIB_DEPENDS=		png15:${PORTSDIR}/graphics/png
-RUN_DEPENDS=		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal \
-			${LOCALBASE}/${TEXMFDISTDIR}/LICENSE.texmf:${PORTSDIR}/print/teTeX-texmf \
-			latex:${PORTSDIR}/print/teTeX-base
+
+USE_TEX=	tetex
 
 .include <bsd.port.pre.mk>
 

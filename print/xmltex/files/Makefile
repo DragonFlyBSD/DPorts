@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/xmltex/files/Makefile,v 1.4 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: print/xmltex/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 
 TEX_CMD?=	etex
 LATEX_FMT?=	latex
