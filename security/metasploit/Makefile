@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: ports/security/metasploit/Makefile,v 1.32 2012/12/12 21:34:32 svnexp Exp $
+# $FreeBSD: security/metasploit/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	metasploit
 DISTVERSION=	4.5.0
@@ -17,14 +17,13 @@ WRKSRC=		${WRKDIR}/msf3
 SCRIPTS=	msfcli msfconsole msfd msfelfscan msfencode msfmachscan \
 		msfopcode msfpayload msfpescan msfweb
 
-OPTIONS=	SVN "Use subversion" off
+OPTIONS_DEFINE=	SVN
 
 NO_BUILD=	yes
+USES=		ncurses:port
 USE_RUBY=	yes
 USE_RUBY_FEATURES=	iconv
 USE_BZIP2=	yes
-USE_NCURSES=	yes
-WITH_NCURSES_PORT=	yes
 
 .include <bsd.port.pre.mk>
 
@@ -37,7 +36,7 @@ RUN_DEPENDS+=	rubygem-actionpack>0:${PORTSDIR}/www/rubygem-actionpack	\
 		rubygem-activesupport>0:${PORTSDIR}/devel/rubygem-activesupport
 .endif
 
-.if defined(WITH_SVN)
+.if ${PORT_OPTIONS:MSVN}
 RUN_DEPENDS+=	svn:${PORTSDIR}/devel/subversion
 .endif
 
