@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/prayer/Makefile,v 1.27 2012/12/31 14:35:18 svnexp Exp $
+# $FreeBSD: mail/prayer/Makefile 317605 2013-05-07 13:12:31Z bapt $
 
 PORTNAME=	prayer
 PORTVERSION=	1.3.5
@@ -14,8 +14,12 @@ LIB_DEPENDS=	c-client4:${PORTSDIR}/mail/cclient
 
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
-USE_ICONV=	yes
+USES=		iconv shebangfix
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+SHEBANG_FILES=	utils/ucsnews.pl \
+		templates/old/make_olist.pl \
+		templates/src/*.pl
 
 MAKE_ENV+=	PORTCFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 		PORTLDFLAGS="${LDFLAGS}"
