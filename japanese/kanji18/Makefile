@@ -11,6 +11,8 @@ PORTREVISION?=	4
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=   http://leaf.dragonflybsd.org/~marino/dports-src/
 PKGNAMESUFFIX?=	18
+DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}
+DISTFILES=	${DISTNAME}-${PORTVERSION}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	sanpei@FreeBSD.org
@@ -32,7 +34,6 @@ MAKE_ENV=	FONTSDIR=${FONTSDIR}
 PLIST_SUB=	FONTSDIR=${FONTSDIR}
 RESIZESED_FILE?=	18to16.sed
 RESIZED_ALIAS_FILE?=	kanji16.alias
-DNAME=		${PORTNAME}${PKGNAMESUFFIX}
 
 post-extract:
 	@(cd ${WRKSRC}; ${CAT} kanji18.a[a-h] | uudecode)
@@ -49,11 +50,11 @@ pre-install:
 
 post-install:
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${PREFIX}/share/doc/${DNAME}
-	@${INSTALL_DATA} ${WRKSRC}/${RESIZESED_FILE} ${PREFIX}/share/doc/${DNAME}/
-	@${INSTALL_DATA} ${WRKSRC}/README.${DNAME} ${PREFIX}/share/doc/${DNAME}/
-	@${INSTALL_DATA} ${WRKSRC}/${RESIZED_ALIAS_FILE} ${PREFIX}/share/doc/${DNAME}/
-	@${INSTALL_DATA} ${WRKSRC}/${DNAME}.alias ${PREFIX}/share/doc/${DNAME}/
+	@${MKDIR} ${PREFIX}/share/doc/${DISTNAME}
+	@${INSTALL_DATA} ${WRKSRC}/${RESIZESED_FILE} ${PREFIX}/share/doc/${DISTNAME}/
+	@${INSTALL_DATA} ${WRKSRC}/README.${DISTNAME} ${PREFIX}/share/doc/${DISTNAME}/
+	@${INSTALL_DATA} ${WRKSRC}/${RESIZED_ALIAS_FILE} ${PREFIX}/share/doc/${DISTNAME}/
+	@${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.alias ${PREFIX}/share/doc/${DISTNAME}/
 .endif
 	@${SETENV} PKG_PREFIX=${PREFIX} \
 		${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
