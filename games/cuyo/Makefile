@@ -2,7 +2,7 @@
 # Date created:				1 June 2009
 # Whom:					Matthew Gibson <mdg583@hotmail.com>
 #
-# $FreeBSD: ports/games/cuyo/Makefile,v 1.10 2012/11/17 05:57:35 svnexp Exp $
+# $FreeBSD: games/cuyo/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	cuyo
@@ -21,7 +21,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_SDL=	mixer image
 USE_XORG=	xdmcp xau x11
-USE_ICONV=	yes
+USES=		iconv
 INSTALLS_ICONS=	yes
 
 MAN6=		cuyo.6 cual.6
