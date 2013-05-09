@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/sweep/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: audio/sweep/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	sweep
 PORTVERSION=	0.9.3
@@ -18,9 +18,8 @@ LIB_DEPENDS=	mad:${PORTSDIR}/audio/libmad \
 		speex:${PORTSDIR}/audio/speex
 
 USE_BZIP2=	yes
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gtk20
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 
