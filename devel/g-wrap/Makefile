@@ -1,5 +1,5 @@
 # Created by: Matthew Condell (mcondell@alum.mit.edu)
-# $FreeBSD: devel/g-wrap/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/g-wrap/Makefile 316333 2013-04-23 10:13:19Z bapt $
 #    $MCom: ports/devel/g-wrap/Makefile,v 1.6 2006/12/24 18:45:08 ahze Exp $
 
 PORTNAME=	g-wrap
@@ -19,12 +19,12 @@ RUN_DEPENDS=	guile>=1.8.6:${PORTSDIR}/lang/guile \
 
 INFO=		g-wrap
 
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_TARGET=${ARCH:S/amd64/x86_64/}-portbld-freebsd${OSREL}
 USE_GMAKE=	yes
 USE_GNOME=	glib20 gnomehack
-USE_PKGCONFIG=	build
 NOT_FOR_ARCHS=	ia64 powerpc
 
 CFLAGS+=		-fPIC
