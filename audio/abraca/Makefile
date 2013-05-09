@@ -1,5 +1,5 @@
 # Created by: Olivier Smedts <olivier@gid0.org>
-# $FreeBSD: audio/abraca/Makefile 313683 2013-03-09 00:40:46Z madpilot $
+# $FreeBSD: audio/abraca/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	abraca
 PORTVERSION=	0.7.1
@@ -13,9 +13,9 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/valac:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	xmmsclient:${PORTSDIR}/audio/xmms2 \
 		gee:${PORTSDIR}/devel/libgee06
 
+USES=		pkgconfig
 USE_SCONS=	yes
 USE_GNOME=	gtk30
-USE_PKGCONFIG=	build
 
 SCONS_ARGS=	MANDIR=${MANPREFIX}/man
 
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS='@comment '
 .else
 PLIST_SUB+=	NLS=''
-USE_GETTEXT=	yes
+USES+=		gettext
 .endif
 
 post-configure:
