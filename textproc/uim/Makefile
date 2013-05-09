@@ -2,7 +2,7 @@
 # Date created:        31 August 2003
 # Whom:                MANTANI Nobutaka <nobutaka@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/uim/Makefile,v 1.102 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/uim/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	uim
@@ -22,8 +22,7 @@ WANT_GNOME=	yes
 USE_GNOME+=	glib20 intltool
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
 
