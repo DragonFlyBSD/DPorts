@@ -1,5 +1,5 @@
 # Created by: Alex Varju <varju@webct.com>
-# $FreeBSD: palm/jpilot/Makefile 314938 2013-03-22 15:21:00Z bdrewery $
+# $FreeBSD: palm/jpilot/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 # "?=" and "+=" are for including this Makefile from japanese/jpilot"
 
@@ -16,8 +16,8 @@ COMMENT=	Desktop Organizer Software for the Palm Pilot
 LIB_DEPENDS=	pisock.9:${PORTSDIR}/palm/pilot-link
 
 USE_GCC=	any
+USES=		pkgconfig
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 USE_GNOME=	gnomehier
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
@@ -26,8 +26,14 @@ CONFIGURE_ARGS+=	--with-pilot-prefix=${LOCALBASE}
 
 LICENSE=	GPLv2
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+USE_GNOME+=	gtk20
+
+MAN1=		jpilot-dial.1 jpilot-dump.1 jpilot-sync.1 jpilot.1
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB=		NLS=""
 .else
@@ -35,11 +41,7 @@ CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB=		NLS="@comment "
 .endif
 
-USE_GNOME+=	gtk20
-
-MAN1=		jpilot-dial.1 jpilot-dump.1 jpilot-sync.1 jpilot.1
-
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	*
 .endif
 
@@ -62,7 +64,7 @@ post-install:
 		${SED} 's,^${PREFIX}/,,' >> ${TMPPLIST}
 	@${FIND} ${DATADIR} -type d | ${SORT} -r | \
 		${SED} 's,^${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for ext in html png jpg
 	${INSTALL_DATA} ${WRKSRC}/docs/*.${ext} ${DOCSDIR}
