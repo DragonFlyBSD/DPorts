@@ -1,5 +1,5 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
-# $FreeBSD: sysutils/polkit/Makefile 313638 2013-03-08 12:21:07Z miwi $
+# $FreeBSD: sysutils/polkit/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/sysutils/polkit/Makefile,v 1.23 2012/12/18 13:01:54 kwm Exp $
 
 PORTNAME=	polkit
@@ -20,9 +20,8 @@ RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-i
 
 USE_GNOME=	gnomehack glib20 intlhack gnomehier
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-authfw=pam \
