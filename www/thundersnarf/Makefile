@@ -1,4 +1,4 @@
-# $FreeBSD: www/thundersnarf/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/thundersnarf/Makefile 316958 2013-04-30 20:00:28Z bdrewery $
 
 PORTNAME=	thundersnarf
 PORTVERSION=	1.3
@@ -42,7 +42,7 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/pdo_pgsql.so:${PORTSDIR}/datab
 USE_PHP+=	curl pcre bcmath pdo mcrypt mhash session pgsql spl dom xmlrpc ctype openssl simplexml soap json
 .endif
 
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl:install
+LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
 
 SUB_FILES=	pkg-message
 
