@@ -1,4 +1,4 @@
-# $FreeBSD: x11/yad/Makefile 315984 2013-04-17 16:39:13Z bdrewery $
+# $FreeBSD: x11/yad/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	yad
 PORTVERSION=	0.20.3
@@ -30,7 +30,7 @@ OPTIONS_DEFAULT=	GTK2
 
 .if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
 .else
 PLIST_SUB+=	NLS="@comment "
 CONFIGURE_ARGS+=	--disable-nls
