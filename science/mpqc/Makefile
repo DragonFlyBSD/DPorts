@@ -2,7 +2,7 @@
 # Date created:				27 April 2001
 # Whom:					batman <batman@udel.edu>
 #
-# $FreeBSD: ports/science/mpqc/Makefile,v 1.65 2013/01/08 05:42:05 svnexp Exp $
+# $FreeBSD: science/mpqc/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	mpqc
@@ -42,9 +42,9 @@ LIB_DEPENDS+=	mpich:${PORTSDIR}/net/mpich2
 .endif
 LIB_DEPENDS+=	int.1:${PORTSDIR}/science/libint
 .if !defined(NOPORTDOCS)
+USE_TEX=	tetex
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
 BUILD_DEPENDS+=	dot:${PORTSDIR}/graphics/graphviz
-BUILD_DEPENDS+=	latex:${PORTSDIR}/print/teTeX-base
 BUILD_DEPENDS+=	${LOCALBASE}/bin/gsed:${PORTSDIR}/textproc/gsed
 LIB_DEPENDS+=	execinfo.1:${PORTSDIR}/devel/libexecinfo
 .endif
