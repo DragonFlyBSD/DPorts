@@ -2,7 +2,7 @@
 # Date created:		3 Jul 2005
 # Whom:			Alexander Wittig <alexander@wittig.name>
 #
-# $FreeBSD: ports/mail/squirrelmail-change_ldappass-plugin/Makefile,v 1.13 2012/11/17 05:59:15 svnexp Exp $
+# $FreeBSD: mail/squirrelmail-change_ldappass-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	change_ldappass
 PORTVERSION=	2.2
@@ -16,7 +16,7 @@ COMMENT=	Allows users to change their passwords stored in LDAP Tree
 LICENSE=	GPLv2
 
 USE_PHP+=	ldap
-USE_GETTEXT=	yes
+USES=		gettext
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/mail/squirrelmail/bsd.squirrelmail.mk"
