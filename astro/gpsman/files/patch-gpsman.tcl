@@ -1,4 +1,4 @@
-$FreeBSD: ports/astro/gpsman/files/patch-gpsman.tcl,v 1.7 2012/11/17 05:54:25 svnexp Exp $
+$FreeBSD: astro/gpsman/files/patch-gpsman.tcl 300895 2012-07-14 12:56:14Z beat $
 
 diff -ruN gpsman.tcl gpsman.tcl
 --- gpsman.tcl	Tue May  9 02:37:24 2006

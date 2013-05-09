@@ -2,11 +2,11 @@
 # Date created:		26 November 2001
 # Whom:			David Wolfskill
 #
-# $FreeBSD: ports/astro/gpsman/Makefile,v 1.29 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: astro/gpsman/Makefile 316463 2013-04-24 18:09:51Z crees $
 #
 
 PORTNAME=	gpsman
-PORTVERSION=	6.4.3
+PORTVERSION=	6.4.4
 CATEGORIES=	astro tk geography
 MASTER_SITES=	SF/${PORTNAME}/distrib
 EXTRACT_SUFX=	.tgz
@@ -14,8 +14,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	david@catwhisker.org
 COMMENT=	A Tcl/Tk-based GPS management utility
 
-#RUN_DEPENDS=	wish8.4:${PORTSDIR}/x11-toolkits/tk84
-USE_TK_RUN=	84
+USE_TK_RUN=	84+
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 SUB_FILES=	pkg-message
