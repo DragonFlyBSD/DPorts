@@ -2,12 +2,12 @@
 # Date created:				15 Sep 2004
 # Whom:					Stefan Walter <sw@gegenunendlich.de>
 #
-# $FreeBSD: ports/graphics/py-pydot/Makefile,v 1.11 2012/11/17 05:58:20 svnexp Exp $
+# $FreeBSD: graphics/py-pydot/Makefile 316617 2013-04-26 14:36:07Z stefan $
 #
 
 PORTNAME=	pydot
-PORTVERSION=	1.0.2
-PORTREVISION=	4
+PORTVERSION=	1.0.28
+#PORTREVISION=	0
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
