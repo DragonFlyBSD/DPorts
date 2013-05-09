@@ -1,5 +1,5 @@
 # Created by: Jie Gao <gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: ports/chinese/scim-pinyin/Makefile,v 1.34 2013/02/17 04:45:49 svnexp Exp $
+# $FreeBSD: chinese/scim-pinyin/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	scim-pinyin
 PORTVERSION=	0.5.92
@@ -12,8 +12,8 @@ COMMENT=	SCIM Chinese Smart Pinyin input method
 BUILD_DEPENDS=	scim>=1.2.0:${PORTSDIR}/textproc/scim
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_GNOME=	gnomehack lthack
-USE_ICONV=	yes
+USE_GNOME=	lthack
+USES=		pathfix iconv
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 
@@ -27,7 +27,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
