@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/mod_gnutls/pkg-plist,v 1.2 2012/11/17 06:02:41 svnexp Exp $
+@comment $FreeBSD: www/mod_gnutls/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%APACHEMODDIR%%/%%AP_MODULE%%
 @exec   '%D/sbin/apxs' -e -a -n '%%AP_NAME%%' '%D/%%APACHEMODDIR%%/%%AP_MODULE%%'
 @unexec '%D/sbin/apxs' -e -A -n '%%AP_NAME%%' '%D/%%APACHEMODDIR%%/%%AP_MODULE%%'

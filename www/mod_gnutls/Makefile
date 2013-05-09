@@ -1,5 +1,5 @@
 # Created by: Fumiyuki Shimizu <fumifumi@abacustech.jp>
-# $FreeBSD: ports/www/mod_gnutls/Makefile,v 1.11 2013/02/05 16:54:26 svnexp Exp $
+# $FreeBSD: www/mod_gnutls/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	mod_gnutls
 PORTVERSION=	0.5.10
@@ -19,7 +19,7 @@ LIB_DEPENDS=	gnutls.26:${PORTSDIR}/security/gnutls
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_APACHE=	22
 GNU_CONFIGURE=	yes
 
