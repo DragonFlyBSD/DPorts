@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: databases/phppgadmin/Makefile 316005 2013-04-17 19:35:23Z dinoex $
+# $FreeBSD: databases/phppgadmin/Makefile 317389 2013-05-04 22:48:03Z flo $
 
 PORTNAME=	phppgadmin
 PORTVERSION=	5.1
@@ -40,9 +40,9 @@ do-install:
 	${CP} -Rp ${WRKSRC}/ ${PREFIX}/${PGADMDIR}/
 .if exists(${PREFIX}/${PGADMOLDDIR}/conf/config.inc.php)
 	${CP} -np ${PREFIX}/${PGADMOLDDIR}/conf/config.inc.php \
-		${PREFIX}/${PGADMDIR}/conf/config.inc.php
+		${PREFIX}/${PGADMDIR}/conf/config.inc.php || ${TRUE}
 .endif
 	${CP} -np ${PREFIX}/${PGADMDIR}/conf/config.inc.php-dist \
-		${PREFIX}/${PGADMDIR}/conf/config.inc.php
+		${PREFIX}/${PGADMDIR}/conf/config.inc.php || ${TRUE}
 
 .include <bsd.port.post.mk>
