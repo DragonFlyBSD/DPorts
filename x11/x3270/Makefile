@@ -2,7 +2,7 @@
 # Date created:		31 January 1995
 # Whom:			janek
 #
-# $FreeBSD: ports/x11/x3270/Makefile,v 1.44 2012/11/17 06:03:20 svnexp Exp $
+# $FreeBSD: x11/x3270/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	x3270
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
 
 USE_IMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_XORG=	ice sm x11 xaw xext xmu xt
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-fontdir=${PREFIX}/lib/X11/fonts/local --disable-dbcs
