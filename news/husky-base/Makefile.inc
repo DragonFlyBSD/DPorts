@@ -7,6 +7,8 @@ DIST_SUBDIR=	husky
 
 WRKSRC?=	${WRKDIR}/${PORTNAME}
 
+CFLAGS+=	-D__FreeBSD__=1
+
 .if ${PORTNAME} != "base"
 BUILD_DEPENDS=	${LOCALBASE}/etc/fido/huskymak.cfg:${PORTSDIR}/news/husky-base
 
