@@ -1,5 +1,5 @@
-# Created by: nemysis@gmx.ch
-# $FreeBSD: games/asteroid/Makefile 314960 2013-03-22 20:06:14Z makc $
+# Created by: nemysis <nemysis@gmx.ch>
+# $FreeBSD: games/asteroid/Makefile 316770 2013-04-28 23:25:25Z beech $
 
 PORTNAME=	asteroid
 PORTVERSION=	1.2.1
@@ -18,7 +18,7 @@ GH_COMMIT=	6d23595
 
 USE_GL=		glut
 USE_SDL=	mixer sdl
-USE_GNOME=	gtk20
+USE_GNOME=	desktopfileutils gtk20
 USE_XORG=	xmu
 INSTALLS_ICONS=	yes
 USES=		cmake
