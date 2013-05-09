@@ -1,5 +1,5 @@
 # Created by: Sheldon Hearn <sheldonh@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-Sybase/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: databases/p5-DBD-Sybase/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	DBD-Sybase
 PORTVERSION=	1.14
@@ -16,7 +16,7 @@ RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 
 CONFIGURE_ENV=	SYBASE=${LOCALBASE}
 PERL_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 .if defined(BATCH)
 CONFIGURE_ARGS=	< /dev/null
