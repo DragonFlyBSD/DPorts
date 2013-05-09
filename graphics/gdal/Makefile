@@ -1,5 +1,5 @@
 # Created by: Randall Hopper
-# $FreeBSD: ports/graphics/gdal/Makefile,v 1.66 2012/12/09 06:10:12 svnexp Exp $
+# $FreeBSD: graphics/gdal/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	gdal
 PORTVERSION=	1.9.2
@@ -91,7 +91,7 @@ CONFIGURE_ARGS+=--with-hdf5=no
 
 .if ${PORT_OPTIONS:MICONV}
 CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE}
-USE_ICONV=	yes
+USES+=		iconv
 .else
 CONFIGURE_ARGS+=--with-libiconv-prefix=no
 .endif
