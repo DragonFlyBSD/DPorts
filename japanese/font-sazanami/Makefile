@@ -1,16 +1,11 @@
-# New ports collection makefile for:	Sazanami TrueType fonts
-# Date created:		19 June 2004
-# Whom:			hrs
-#
-# $FreeBSD: ports/japanese/font-sazanami/Makefile,v 1.14 2012/11/17 05:58:34 svnexp Exp $
-#
+# $FreeBSD: japanese/font-sazanami/Makefile 316976 2013-04-30 23:51:33Z hrs $
 
-PORTNAME=	font-sazanami
+PORTNAME=	sazanami
 PORTVERSION=	20040629
+PORTREVISION=	1
 CATEGORIES=	japanese x11-fonts
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
-MASTER_SITE_SUBDIR=	efont/10087
-DISTNAME=	${PORTNAME:C/font-//}-${PORTVERSION}
+MASTER_SITES=	SFJP/efont/10087
+PKGNAMEPREFIX=	ja-font-
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Sazanami Japanese TrueType fonts
@@ -25,11 +20,15 @@ SUB_FILES=	pkg-install
 SUB_LIST=	X_FONTSDIR=${PREFIX}/${X_FONTSDIR}
 PLIST_SUB=	X_FONTSDIR=${X_FONTSDIR} \
 		LOCAL_FONTSDIR=${LOCAL_FONTSDIR}
+DATADIR=	${PREFIX}/share/font-${PORTNAME}
 PORTDOCS=	README doc
-WRKSRC=		${WRKDIR}/sazanami-${PORTVERSION}
 
 LOCAL_FONTSDIR=	share/fonts
 X_FONTSDIR=	lib/X11/fonts
+
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
 
 do-install:
 	${MKDIR} ${DATADIR}
@@ -40,14 +39,14 @@ do-install:
 	${MKDIR} ${PREFIX}/${X_FONTSDIR}/TTF
 	${LN} -s -f \
 		${DATADIR}/*.ttf ${PREFIX}/${X_FONTSDIR}/TTF/
-	${INSTALL_DATA} ${FILESDIR}/20-unhint-sazanami.conf \
-		${FILESDIR}/62-fonts-sazanami.conf \
+	${INSTALL_DATA} ${FILESDIR}/20-unhint-${PORTNAME}.conf \
+		${FILESDIR}/62-fonts-${PORTNAME}.conf \
 		${PREFIX}/etc/fonts/conf.avail
-	${LN} -s -f ../conf.avail/20-unhint-sazanami.conf \
-		${PREFIX}/etc/fonts/conf.d/20-unhint-sazanami.conf
-	${LN} -s -f ../conf.avail/62-fonts-sazanami.conf \
-		${PREFIX}/etc/fonts/conf.d/62-fonts-sazanami.conf
-.if !defined(NOPORTDOCS)
+	${LN} -s -f ../conf.avail/20-unhint-${PORTNAME}.conf \
+		${PREFIX}/etc/fonts/conf.d/20-unhint-${PORTNAME}.conf
+	${LN} -s -f ../conf.avail/62-fonts-${PORTNAME}.conf \
+		${PREFIX}/etc/fonts/conf.d/62-fonts-${PORTNAME}.conf
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && ${CP} -R ${PORTDOCS} ${DOCSDIR}
 .endif
