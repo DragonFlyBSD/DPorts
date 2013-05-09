@@ -1,5 +1,5 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
-# $FreeBSD: math/R/Makefile 315422 2013-03-27 23:43:55Z bf $
+# $FreeBSD: math/R/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME?=	R
 PORTVERSION=	2.15.3
@@ -88,7 +88,7 @@ PLIST_SUB=		R_SOVERSION="${R_SOVERSION}" \
 			RBLAS_SOVERSION="${RBLAS_SOVERSION}" \
 			RLAPACK_SOVERSION="${RLAPACK_SOVERSION}"
 R_LD_LIBRARY_PATH=	${_GCC_RUNTIME}:${LOCALBASE}/lib
-USE_ICONV=		yes
+USES+=			iconv
 .endif # LIBRMATH_SLAVEPORT
 GNU_CONFIGURE=		yes
 MAKE_JOBS_UNSAFE=	yes
@@ -146,7 +146,7 @@ CONFIGURE_ARGS+=	--without-ICU
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
@@ -244,8 +244,8 @@ INFO=		R-FAQ R-admin R-data R-exts R-intro R-lang
 .if ${PORT_OPTIONS:MPDF_MANUALS} && ${PORT_OPTIONS:MDOCS}
 BROKEN =		The PDF_MANUALS option cannot be used, because\
 			print/texinfo is incompatible with print/teTeX-base
-BUILD_DEPENDS +=	pdftex:${PORTSDIR}/print/teTeX-base \
-			texi2dvi:${PORTSDIR}/print/texinfo
+USE_TEX=		tetex
+BUILD_DEPENDS +=	texi2dvi:${PORTSDIR}/print/texinfo
 ALL_TARGET+=		pdf
 CONFIGURE_ENV +=	INSTALL_INFO="${LOCALBASE}/bin/install-info" \
 			MAKEINFO="${LOCALBASE}/bin/makeinfo"

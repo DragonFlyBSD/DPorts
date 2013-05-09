@@ -1,2 +1,2 @@
-LIB_DEPENDS+=	readline.6:${PORTSDIR}/devel/readline
+USES+=		readline
 
