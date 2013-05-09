@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/lolcat/Makefile,v 1.3 2012/11/17 05:57:44 svnexp Exp $
+# $FreeBSD: games/lolcat/Makefile 317514 2013-05-06 13:40:45Z ehaupt $
 
 PORTNAME=	lolcat
 PORTREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	arved@FreeBSD.org
 COMMENT=	Rainbows and unicorns
+
+CONFLICTS=	filters-[0-9]*
 
 RUN_DEPENDS=	rubygem-trollop>=1.9:${PORTSDIR}/devel/rubygem-trollop \
 		rubygem-paint>=0.8.5:${PORTSDIR}/devel/rubygem-paint
