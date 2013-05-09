@@ -1,12 +1,8 @@
-# New ports collection makefile for:	qtel
-# Date Created:		2012-05-22
-# Whome:		Stephen Hurd <shurd@sasktel.net>
-#
-# $FreeBSD: ports/comms/qtel/Makefile,v 1.3 2012/11/17 05:55:01 svnexp Exp $
-#
+# $FreeBSD: comms/qtel/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	qtel
 PORTVERSION=	11.05
+PORTREVISION=	1
 CATEGORIES=	comms hamradio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	svxlink/svxlink/${PORTVERSION}
@@ -35,10 +31,10 @@ MAN5=	svxlink.conf.5 \
 	ModuleSelCallEnc.conf.5 \
 	remotetrx.conf.5
 MANCOMPRESSED=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_QT_VER=	3
 USE_TCL=	yes
-USE_PKGCONFIG=	yes
 USE_RC_SUBR=	svxlink remotetrx
 USE_LDCONFIG=	${LOCALBASE}/lib ${LOCALBASE}/lib/svxlink
 
