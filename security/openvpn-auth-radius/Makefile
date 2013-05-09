@@ -1,12 +1,9 @@
-# New ports collection makefile for:	security/openvpn-auth-radius
-# Date created:		2011-03-04
-# Whom:			Mikhail T. <m.tsatsenko@gmail.com>
-#
-# $FreeBSD: ports/security/openvpn-auth-radius/Makefile,v 1.4 2012/11/17 06:01:09 svnexp Exp $
-#
+# Created by: Mikhail T. <m.tsatsenko@gmail.com>
+# $FreeBSD: security/openvpn-auth-radius/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	openvpn-auth-radius
 PORTVERSION=	2.1
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.nongnu.org/radiusplugin/ \
 		http://svn-cache.ipcopaddons.org/
@@ -16,7 +13,7 @@ MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	RADIUS authentication plugin for OpenVPN
 
 RUN_DEPENDS=	openvpn:${PORTSDIR}/security/openvpn
-LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
 LICENSE=	GPLv2
 
