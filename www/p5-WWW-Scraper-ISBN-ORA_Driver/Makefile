@@ -1,12 +1,8 @@
-# Ports collection makefile for:	p5-WWW-Scraper-ISBN-ORA_Driver
-# Date created:			Nov 8, 2005
-# Whom:				Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/www/p5-WWW-Scraper-ISBN-ORA_Driver/Makefile,v 1.13 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
+# $FreeBSD: www/p5-WWW-Scraper-ISBN-ORA_Driver/Makefile 316906 2013-04-30 09:29:46Z jadawin $
 
 PORTNAME=	WWW-Scraper-ISBN-ORA_Driver
-PORTVERSION=	0.19
+PORTVERSION=	0.20
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
