@@ -1,19 +1,24 @@
 # Created by: Anes Muhametov <anes@anes.su>
-# $FreeBSD: ports/mail/roundcube-sieverules/Makefile,v 1.7 2013/02/19 04:02:52 svnexp Exp $
+# $FreeBSD: mail/roundcube-sieverules/Makefile 317617 2013-05-07 15:23:01Z ale $
 
 PORTNAME=	sieverules
-PORTVERSION=	1.17.1
+PORTVERSION=	0.9.0
+PORTEPOCH=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://www.tehinterweb.co.uk/roundcube/plugins/
 PKGNAMEPREFIX=	roundcube-
-DISTNAME=	${PORTNAME}
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Roundcube webmail sieve plugin
 
 LICENSE=	GPLv3
 
-RUN_DEPENDS=	roundcube>=0.8:${PORTSDIR}/mail/roundcube
+RUN_DEPENDS=	roundcube>=0.9.0:${PORTSDIR}/mail/roundcube
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	JohnDoh
+GH_PROJECT=	Roundcube-Plugin-SieveRules-Managesieve
+GH_TAGNAME=	v${PORTVERSION}
+GH_COMMIT=	430d810
 
 NO_BUILD=	yes
 
