@@ -1,5 +1,5 @@
 # Created by: Janky Jay <ek@purplehat.org>
-# $FreeBSD: finance/frontaccounting/Makefile 313800 2013-03-10 04:17:01Z beech $
+# $FreeBSD: finance/frontaccounting/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	frontaccounting
 DISTVERSION=	2.3.15
@@ -13,7 +13,7 @@ COMMENT=	Simple, powerful system for the entire ERP chain
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/doc/license.txt
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_MYSQL=	yes
 USE_PHP+=	mysql mysqli openssl session
 
