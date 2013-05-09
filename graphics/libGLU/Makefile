@@ -1,5 +1,5 @@
 # Created by: anholt@FreeBSD.org
-# $FreeBSD: graphics/libGLU/Makefile 313300 2013-03-02 21:32:51Z swills $
+# $FreeBSD: graphics/libGLU/Makefile 317202 2013-05-03 13:17:00Z bapt $
 
 PORTNAME=	libGLU
 PORTREVISION=	2
@@ -11,11 +11,12 @@ COMMENT=	OpenGL utility library
 USE_GL=		gl
 USE_XORG=	glproto x11 xext xxf86vm xdamage xfixes dri2proto
 
-do-install:
+INSTALL_WRKSRC=	${WRKSRC}/src/glu
+BUILD_WRKSRC=	${WRKSRC}/src/glu
+
+pre-install:
 	@${MKDIR} ${PREFIX}/include/GL/
-	cd ${WRKSRC}/src/glu; ${GMAKE} install
 	${INSTALL_DATA} ${WRKSRC}/include/GL/glu*.h ${PREFIX}/include/GL/
-	cd ${WRKSRC}/src/glu; ${GMAKE} install
 
 .include "${.CURDIR}/../../graphics/libGL/bsd.mesalib.mk"
 
