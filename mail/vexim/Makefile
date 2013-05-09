@@ -1,5 +1,5 @@
 # Created by: John Oxley <john@yoafrica.com>
-# $FreeBSD: ports/mail/vexim/Makefile,v 1.12 2012/11/17 05:59:17 svnexp Exp $
+# $FreeBSD: mail/vexim/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	vexim
 DISTVERSION=	2.2.2_rc1
@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/vexim-release
 SUB_FILES=	pkg-message
 NO_BUILD=	yes
 USE_PHP=	gettext session posix
-USE_GETTEXT=	yes
+USES=		gettext
 
 OPTIONS_MULTI=		DB
 OPTIONS_MULTI_DB=	MYSQL PGSQL
