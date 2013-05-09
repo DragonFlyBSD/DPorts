@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@rwxrwxrwx.net>
-# $FreeBSD: graphics/geeqie/Makefile 313111 2013-02-28 16:41:43Z amdmi3 $
+# $FreeBSD: graphics/geeqie/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	geeqie
 PORTVERSION=	1.1
@@ -26,7 +26,7 @@ MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
 MAN1=		geeqie.1
-USE_GETTEXT=	yes
+USES=		gettext
 
 OPTIONS_DEFINE=	EXIV2 LCMS LIRC GPS DOCS
 OPTIONS_DEFAULT=EXIV2 LCMS
