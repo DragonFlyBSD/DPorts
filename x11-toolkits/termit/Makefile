@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/termit/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11-toolkits/termit/Makefile 316695 2013-04-27 22:09:15Z bapt $
 
 PORTNAME=	termit
 PORTVERSION=	2.9.6
@@ -22,9 +22,7 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		xcb:${PORTSDIR}/x11/libxcb
 
 USE_BZIP2=	yes
-USES=		cmake
-USE_PKGCONFIG=	build
-USE_ICONV=	yes
+USES=		cmake pkgconfig iconv
 USE_LUA=	yes
 USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext xfixes \
 		xi xinerama xrandr xrender
@@ -47,7 +45,7 @@ CMAKE_ARGS+=	-DDEBUG:BOOL=YES
 
 .if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
 .else
 CMAKE_ARGS+=	-DENABLE_NLS:BOOL=NO
 PLIST_SUB+=	NLS="@comment "
