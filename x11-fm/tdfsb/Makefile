@@ -1,9 +1,5 @@
-# New ports collection makefile for:	TDFSB
-# Date created:				31 Jul 2005
-# Whom:					Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/x11-fm/tdfsb/Makefile,v 1.25 2012/11/17 06:03:26 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: x11-fm/tdfsb/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	tdfsb
 PORTVERSION=	0.0.10
@@ -21,7 +17,7 @@ LIB_DEPENDS=	smpeg.1:${PORTSDIR}/multimedia/smpeg
 
 USE_GL=		glut
 USE_SDL=	image sdl
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 
 PORTDOCS=	README
 PLIST_FILES=	bin/${PORTNAME}
