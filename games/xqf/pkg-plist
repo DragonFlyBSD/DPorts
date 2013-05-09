@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/games/xqf/pkg-plist,v 1.14 2012/11/17 05:57:58 svnexp Exp $
+@comment $FreeBSD: games/xqf/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/xqf
 @exec mkdir -p %D/lib/xqf
 %%PORTDOCS%%%%DOCSDIR%%/xqfdocs.html
