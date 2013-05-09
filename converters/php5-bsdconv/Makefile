@@ -1,8 +1,8 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: ports/converters/php5-bsdconv/Makefile,v 1.17 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/php5-bsdconv/Makefile 317063 2013-05-01 23:16:28Z bdrewery $
 
 PORTNAME=	bsdconv
-PORTVERSION=	9.0
+PORTVERSION=	10.0.0
 CATEGORIES=	converters
 PKGNAMEPREFIX=	php5-
 DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${PORTVERSION}-0-g${GH_COMMIT}
@@ -16,8 +16,8 @@ LIB_DEPENDS=	bsdconv:${PORTSDIR}/converters/bsdconv
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	buganini
+GH_COMMIT=	122cbb0
 GH_PROJECT=	php-${PORTNAME}
-GH_COMMIT=	314309f
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
