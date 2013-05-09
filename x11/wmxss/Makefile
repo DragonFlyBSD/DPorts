@@ -2,7 +2,7 @@
 # Date created:		27 August 2002
 # Whom:			Bruce M Simpson <bms@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/wmxss/Makefile,v 1.9 2012/11/17 06:03:20 svnexp Exp $
+# $FreeBSD: x11/wmxss/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	wmxss
