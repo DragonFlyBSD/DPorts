@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/multimedia/libquicktime/Makefile,v 1.110 2012/12/31 13:43:00 svnexp Exp $
+# $FreeBSD: multimedia/libquicktime/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	libquicktime
 PORTVERSION=	1.2.4
@@ -18,10 +18,8 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack
-USE_PKGCONFIG=	build
+USES=		pathfix pkgconfig gettext
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	autoconf
 
