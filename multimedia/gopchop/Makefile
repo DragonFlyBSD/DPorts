@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	GOPchop
-# Date created:				Apr 24, 2002
-# Whom:					ijliao
-#
-# $FreeBSD: ports/multimedia/gopchop/Makefile,v 1.35 2012/11/17 05:59:49 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: multimedia/gopchop/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	gopchop
 PORTVERSION=	1.0.0
@@ -28,12 +23,14 @@ PORTSCOUT=	skipv:1.1.0,1.1.1,1.1.2,1.1.3,1.1.4,1.1.5,1.1.6,1.1.7,1.1.8
 CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_DECL_GETOPT
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 post-patch:
