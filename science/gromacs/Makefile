@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: science/gromacs/Makefile 315145 2013-03-24 16:27:23Z miwi $
+# $FreeBSD: science/gromacs/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	gromacs
 PORTVERSION=	4.6.1
@@ -22,10 +22,9 @@ GSL_DESC=	Extra analysis using math/gsl
 MPICH_DESC=	MPI support using net/mpich2
 OMPI_DESC=	MPI support using net/openmpi
 
-USES=		cmake
+USES=		cmake pkgconfig
 USE_FORTRAN=	yes
 USE_PERL5=	yes
-USE_PKGCONFIG=	build
 CMAKE_ARGS=	-DBLAS_LIBRARIES:FILEPATH="${BLAS_LIBS}" \
 		-DLAPACK_LIBRARIES:FILEPATH="${LAPACK_LIBS}"
 USE_LDCONFIG=	yes
