@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430-gcc/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: devel/msp430-gcc/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}.${LTSVERSION}
@@ -47,8 +47,7 @@ PATCH_WRKSRC=	${SRCDIR}
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		bison
-USE_ICONV=	yes
+USES=		bison iconv
 USE_PERL5_BUILD=yes
 MAKE_JOBS_SAFE=	yes
 
