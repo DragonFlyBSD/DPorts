@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/libXcm/Makefile,v 1.1 2013/02/15 11:49:44 svnexp Exp $
+# $FreeBSD: x11/libXcm/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	libXcm
 PORTVERSION=	0.5.2
@@ -11,7 +11,7 @@ COMMENT=	X Colour Management Library
 LICENSE=	MIT
 
 XORG_CAT=	lib
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_XORG=	xfixes xmu
 
 MAN3=		Xcm.3 XcmDDC.3 XcmEdidParse.3 XcmEvents.3 XcolorProfile.3 \
