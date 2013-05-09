@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fonts/suxus/Makefile,v 1.9 2013/01/16 13:41:54 svnexp Exp $
+# $FreeBSD: x11-fonts/suxus/Makefile 317380 2013-05-04 22:19:17Z bapt $
 
 PORTNAME=	suxus
 PORTVERSION=	1.5
@@ -23,10 +23,10 @@ do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${PORTNAME}-iso-8859-1.bdf.gz ${WRKSRC}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/fonts.alias ${WRKSRC}
-	@${EXTRACT_CMD} -d  ${WRKSRC}/${PORTNAME}-iso-8859-1.bdf.gz
+	@${GZIP_CMD} -d  ${WRKSRC}/${PORTNAME}-iso-8859-1.bdf.gz
 
 do-build:
-	${PREFIX}/bin/bdftopcf -t ${WRKSRC}/suxus-iso-8859-1.bdf | ${EXTRACT_CMD} > ${WRKSRC}/suxus-iso-8859-1.pcf.gz
+	${PREFIX}/bin/bdftopcf -t ${WRKSRC}/suxus-iso-8859-1.bdf | ${GZIP_CMD} > ${WRKSRC}/suxus-iso-8859-1.pcf.gz
 	${PREFIX}/bin/mkfontdir ${WRKSRC}
 
 do-install:
