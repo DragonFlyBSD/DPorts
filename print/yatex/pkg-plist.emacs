@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/print/yatex/pkg-plist.emacs,v 1.8 2012/11/17 06:00:55 svnexp Exp $
+@comment $FreeBSD: print/yatex/pkg-plist.emacs 300897 2012-07-14 14:29:18Z beat $
 share/emacs/site-lisp/yatex/comment.el
 share/emacs/site-lisp/yatex/yahtml.el
 share/emacs/site-lisp/yatex/yatex.el

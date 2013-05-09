@@ -1,6 +1,6 @@
 ;; a startup elisp for YaTeX
 ;;   -- S. Taoka <taoka@FreeBSD.org>
-;; $FreeBSD: ports/print/yatex/files/yatex-startup.el.in,v 1.2 2012/11/17 06:00:55 svnexp Exp $
+;; $FreeBSD: print/yatex/files/yatex-startup.el.in 300897 2012-07-14 14:29:18Z beat $
 
 ;;;;;;;;;;; %%TARGETNAME%% (Ver.%%VERSION%%) ;;;;;;;;;;;
 
