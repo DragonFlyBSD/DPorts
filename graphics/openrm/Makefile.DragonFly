@@ -1,2 +1,0 @@
-REPLACE_PERL=	doc/source2html.pl \
-		doc/sortlist.pl
