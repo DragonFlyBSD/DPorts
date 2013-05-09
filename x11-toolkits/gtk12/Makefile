@@ -1,8 +1,5 @@
-# New ports collection makefile for:   gtk12
-# Date Created:			28 Sep 1997
-# Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
-#
-# $FreeBSD: ports/x11-toolkits/gtk12/Makefile,v 1.116 2012/11/17 06:03:35 svnexp Exp $
+# Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
+# $FreeBSD: x11-toolkits/gtk12/Makefile 317470 2013-05-06 06:41:15Z bapt $
 #    $MCom: ports/x11-toolkits/gtk12/Makefile,v 1.3 2006/10/09 19:31:53 ahze Exp $
 
 PORTNAME=	gtk
@@ -26,16 +23,19 @@ CONFIGURE_ARGS=	--includedir=${PREFIX}/include/gtk12 --with-native-locale \
 CONFIGURE_ENV=	X_CFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+
+INFO=		gdk gtk
+MAN1=		gtk-config.1
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
-
-INFO=		gdk gtk
-MAN1=		gtk-config.1
 
 pre-build:
 	${RM} -rf ${WRKSRC}/docs/gtk.info*
