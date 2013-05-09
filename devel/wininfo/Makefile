@@ -1,9 +1,5 @@
-# New ports collection makefile for:	X Window Information
-# Date created:			11 Jun 2004
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/devel/wininfo/Makefile,v 1.23 2012/11/17 05:57:06 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: devel/wininfo/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	wininfo
 PORTVERSION=	0.7
@@ -18,7 +14,7 @@ USE_XORG=	xext xrender xinerama xrandr xi xfixes xcursor \
 		xcomposite x11 xres
 USE_GNOME=	gtk20 gnomeprefix
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
