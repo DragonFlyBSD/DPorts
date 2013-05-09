@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: lang/fsharp/Makefile 315634 2013-03-31 13:11:04Z pgj $
+# $FreeBSD: lang/fsharp/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	fsharp
 PORTVERSION=	3.0.25
@@ -16,9 +16,9 @@ LICENSE=	AL2
 BUILD_DEPENDS=	mono>=3.0:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono>=3.0:${PORTSDIR}/lang/mono
 
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	autoconf
-USE_PKGCONFIG=	build
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
