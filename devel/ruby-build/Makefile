@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/ruby-build/Makefile,v 1.3 2013/02/23 00:51:33 svnexp Exp $
+# $FreeBSD: devel/ruby-build/Makefile 317078 2013-05-02 07:09:17Z jgh $
 
 PORTNAME=	ruby-build
-PORTVERSION=	20130129
+PORTVERSION=	20130408
 CATEGORIES=	devel ruby
 MASTER_SITES=	GH
 
@@ -11,7 +11,7 @@ COMMENT=	Compile and install different ruby versions
 LICENSE=	RUBY-BUILD
 LICENSE_NAME=	Sam Stephenson
 LICENSE_FILE=	${WRKSRC}/LICENSE
-LICENSE_PERMS=${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 RUN_DEPENDS=	autoconf:${PORTSDIR}/devel/autoconf \
 		curl:${PORTSDIR}/ftp/curl \
@@ -29,7 +29,7 @@ RUN_DEPENDS+=	rbenv:${PORTSDIR}/devel/rbenv
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	sstephenson
-GH_COMMIT=	d9bbeb3
+GH_COMMIT=	5273fb3
 GH_TAGNAME=	v${PORTVERSION}
 
 NO_BUILD=	yes
