@@ -1,6 +1,10 @@
-$FreeBSD: ports/security/openssh-portable/files/patch-ssh.c,v 1.3 2012/11/17 06:01:09 svnexp Exp $
+$FreeBSD: security/openssh-portable/files/patch-ssh.c 315920 2013-04-17 00:35:31Z bdrewery $
 
-Make the same change to use the canonical hostname as the base FreeBSD ssh.
+r99054 | des | 2002-06-29 05:57:53 -0500 (Sat, 29 Jun 2002) | 4 lines
+Changed paths:
+   M /head/crypto/openssh/ssh.c
+
+Canonicize the host name before looking it up in the host file.
 
 --- ssh.c.orig	2010-08-16 09:59:31.000000000 -0600
 +++ ssh.c	2010-08-25 17:55:01.000000000 -0600
