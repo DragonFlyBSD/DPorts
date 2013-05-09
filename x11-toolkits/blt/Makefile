@@ -1,5 +1,5 @@
 # Created by: Kenjiro Cho <kjc@csl.sony.co.jp>
-# $FreeBSD: ports/x11-toolkits/blt/Makefile,v 1.67 2013/02/19 12:38:48 svnexp Exp $
+# $FreeBSD: x11-toolkits/blt/Makefile 316351 2013-04-23 11:51:52Z gahr $
 
 PORTNAME=	blt
 PORTVERSION=	2.4z
@@ -30,7 +30,7 @@ CFLAGS+=	-Wall -Wno-uninitialized
 CFLAGS+=	-I${TK_INCLUDEDIR}/generic -I${TK_INCLUDEDIR}/unix
 MAKE_JOBS_SAFE=	yes
 
-USE_TK=		83+
+USE_TK=		84+
 INVALID_TK_VER=	86
 USE_XORG=	x11
 
