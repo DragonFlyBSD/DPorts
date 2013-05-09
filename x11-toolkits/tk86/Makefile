@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ports/x11-toolkits/tk86/Makefile,v 1.40 2013/02/06 18:52:51 svnexp Exp $
+# $FreeBSD: x11-toolkits/tk86/Makefile 316025 2013-04-18 08:20:59Z gahr $
 
 PORTNAME=	tk
 PORTVERSION=	8.6.0
@@ -75,6 +75,14 @@ CONFIGURE_ARGS+=--enable-threads
 .else
 CONFIGURE_ARGS+=--disable-threads
 .endif
+
+post-patch:
+	${REINPLACE_CMD} -e \
+	    's|@TK_BUILD_LIB_SPEC@|@TK_LIB_SPEC@|; \
+	     s|@TK_BUILD_STUB_LIB_SPEC@|@TK_STUB_LIB_SPEC@|; \
+	     s|@TK_BUILD_STUB_LIB_PATH@|@TK_STUB_LIB_PATH@|; \
+	     s|@TK_SRC_DIR@|${PREFIX}/include/tk${TK_VER}|' \
+	     ${WRKSRC}/tkConfig.sh.in
 
 regression-test:	build
 	cd ${WRKSRC}; ${MAKE} test
