@@ -2,7 +2,7 @@
 # Date created:		3 April 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/mtpaint/Makefile,v 1.19 2012/11/17 05:58:15 svnexp Exp $
+# $FreeBSD: graphics/mtpaint/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	mtpaint
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+=jasper
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=intl
 PLIST_SUB+=	NLS=""
 .else
