@@ -1,4 +1,4 @@
-# $FreeBSD: ports/math/calcoo/Makefile,v 1.34 2012/11/17 05:59:19 svnexp Exp $
+# $FreeBSD: math/calcoo/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	calcoo
 PORTVERSION=	1.3.18
@@ -9,8 +9,8 @@ MASTER_SITES=	SF
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	RPN and algebraic scientific calculator
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
-USE_PKGCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
