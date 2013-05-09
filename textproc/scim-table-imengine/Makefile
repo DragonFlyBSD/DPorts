@@ -2,7 +2,7 @@
 # Date created:		01 March 2005
 # Whom:			Jie Gao	<gaoj@cpsc.ucalgary.ca>
 #
-# $FreeBSD: ports/textproc/scim-table-imengine/Makefile,v 1.36 2012/11/17 06:02:21 svnexp Exp $
+# $FreeBSD: textproc/scim-table-imengine/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	scim-table-imengine
@@ -22,7 +22,7 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	intlhack
-USE_GETTEXT=	yes
+USES=		gettext
 
 MAN1=		scim-make-table.1
 
