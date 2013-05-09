@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/hitori/Makefile 314389 2013-03-17 03:05:09Z beech $
+# $FreeBSD: games/hitori/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	hitori
 PORTVERSION=	0.4.0
@@ -34,7 +34,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
