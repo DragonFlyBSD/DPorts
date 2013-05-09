@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: net/mtr/Makefile 314277 2013-03-15 07:40:34Z sunpoet $
+# $FreeBSD: net/mtr/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	mtr
 PORTVERSION=	0.84
@@ -22,7 +22,7 @@ GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib -lglib-2.0
 USE_GMAKE=	yes
 USE_GNOME=	_glib20
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 MAN8=		mtr.8
 PLIST_FILES=	sbin/mtr
