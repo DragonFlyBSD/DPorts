@@ -2,7 +2,7 @@
 # Date created:		2006-02-15
 # Whom:			Gustavo Fukao <gustavofukao@gmail.com>
 #
-# $FreeBSD: ports/net/phamm/Makefile,v 1.8 2012/11/17 06:00:15 svnexp Exp $
+# $FreeBSD: net/phamm/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	phamm
@@ -16,7 +16,7 @@ COMMENT=	Front-end written in PHP to manage virtual service
 NO_BUILD=	yes
 USE_PHP=	gettext ldap openssl pcre session
 
-USE_GETTEXT=	yes
+USES=		gettext
 
 PHAMMDIR?=	www/${PORTNAME}
 SCHEMADIR=	${WRKSRC}/schema
