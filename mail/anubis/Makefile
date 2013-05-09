@@ -2,7 +2,7 @@
 # Date created:			Jul 31, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/mail/anubis/Makefile,v 1.49 2013/02/05 16:54:23 svnexp Exp $
+# $FreeBSD: mail/anubis/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	anubis
@@ -46,8 +46,7 @@ MAKE_JOBS_UNSAFE=	yes
 _REQUIRE=	mail
 
 .if ${PORT_OPTIONS:MNLS}
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES+=		gettext iconv
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
