@@ -1,5 +1,5 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: ports/x11/trayer/Makefile,v 1.18 2012/12/10 20:43:19 svnexp Exp $
+# $FreeBSD: x11/trayer/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	trayer
 PORTVERSION=	1.1.5
@@ -13,7 +13,7 @@ COMMENT=	Lightweight GTK2-based systray for UNIX desktop
 GITVERSION=	0-g5353f80
 FETCH_ARGS=	-pRr
 USE_GNOME=	gtk20 glib20 pango atk
-USE_ICONV=	yes
+USES=		iconv
 USE_XORG=	xmu
 USE_GMAKE=	yes
 MAKE_ARGS=	"PREFIX=${PREFIX}"
