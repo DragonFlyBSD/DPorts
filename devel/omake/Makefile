@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: devel/omake/Makefile 315988 2013-04-17 16:59:55Z bf $
+# $FreeBSD: devel/omake/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	omake
 DISTVERSION=	0.9.8.6-0.rc1
@@ -7,13 +7,12 @@ CATEGORIES=	devel
 MASTER_SITES=	http://main.metaprl.org/download/omake/
 
 MAINTAINER=	bf@FreeBSD.org
-COMMENT=	A flexible build system
+COMMENT=	Flexible build system
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION:C|-.*||}
 USE_OCAML=	yes
 NO_OCAML_RUNDEPENDS=yes
-USE_NCURSES=	yes
-USE_READLINE=	yes
+USES=		ncurses readline
 MAKE_JOBS_UNSAFE=	yes
 
 INFO=		omake-doc
