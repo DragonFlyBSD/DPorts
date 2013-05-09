@@ -1,4 +1,4 @@
-$FreeBSD: ports/comms/amtterm/files/patch-redir-c,v 1.2 2012/11/17 05:54:58 svnexp Exp $
+$FreeBSD: comms/amtterm/files/patch-redir-c 300895 2012-07-14 12:56:14Z beat $
 
 From http://people.freebsd.org/~kib/misc/amtterm.1.patch
 
