@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/ghostscript9/files/Makefile.drivers_post,v 1.10 2012/11/17 06:00:50 svnexp Exp $
+# $FreeBSD: print/ghostscript9/files/Makefile.drivers_post 316695 2013-04-27 22:09:15Z bapt $
 # pre/postprocessing driver variables
 
 # dmprt specific
@@ -110,7 +110,7 @@ PORT_OPTIONS:=	${PORT_OPTIONS:NGS_${D}}
 .endfor
 
 .if defined(_ICONV_DEVS)
-USE_ICONV=	yes
+USES+=		iconv
 CONFIGURE_ARGS+=--with-libiconv=gnu
 EXTRALIBS+=	-liconv
 .else

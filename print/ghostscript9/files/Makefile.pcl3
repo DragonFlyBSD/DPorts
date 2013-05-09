@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/ghostscript9/files/Makefile.pcl3,v 1.2 2012/11/17 06:00:50 svnexp Exp $
+# $FreeBSD: print/ghostscript9/files/Makefile.pcl3 300897 2012-07-14 14:29:18Z beat $
 
 PORTDOCS+=	pcl3
 PORTDOC_FILES+= pcl3/NEWS pcl3/BUGS pcl3/README pcl3/gs-pcl3.html	\
