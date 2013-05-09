@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bogged
-# Date created:				18 May 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/bogged/Makefile,v 1.18 2012/11/17 05:57:33 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/bogged/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	bogged
 PORTVERSION=	1.0.0
