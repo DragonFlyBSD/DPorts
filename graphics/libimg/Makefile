@@ -1,9 +1,5 @@
-# New ports collection makefile for:	img
-# Date Created:		20 February 1999
-# Whom:			Glenn Johnson
-#
-# $FreeBSD: ports/graphics/libimg/Makefile,v 1.39 2012/11/17 05:58:13 svnexp Exp $
-#
+# Created by: Glenn Johnson
+# $FreeBSD: graphics/libimg/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	libimg
 PORTVERSION=	1.2.4
@@ -29,13 +25,13 @@ PLIST_SUB+=	DIR="${DIR}" SHLIB_NAME="${SHLIB_NAME}" \
 
 WRKSRC=		${WRKDIR}/img${PORTVERSION}
 MAKEFILE=	${FILESDIR}/Makefile.bsd
-USE_TK=		83+
+USE_TK=		84+
 USE_TK_BUILD=	${USE_TK}
 MAKE_ENV+=	TCL_VER=${TCL_VER}
 MAKE_JOBS_SAFE=	yes
 
 # We don't need the bundled libraries:
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude '*/libz/*' \
+EXTRACT_AFTER_ARGS=	--exclude '*/libz/*' \
 		--exclude '*/compat/*' --exclude '*/libtiff/*' \
 		--exclude '*/libjpeg/*' --exclude '*/libpng/*'
 
@@ -54,17 +50,13 @@ post-install:
 
 .include <bsd.port.pre.mk>
 
-.if ${TCL_VER} == 8.3
-PKGNAMESUFFIX=	-tk83
-EXTRA_PATCHES=	${FILESDIR}/pre-tk84-warnings
-CONFLICTS=	libimg-1.* libimg-tkstep-1.*
-.elif ${TCL_VER} == 8.4
+.if ${TCL_VER} == 8.4
 PKGNAMESUFFIX=	-tk84
 EXTRA_PATCHES=	${FILESDIR}/tk84-Tk_PhotoPutBlock ${FILESDIR}/tk84-warnings
-CONFLICTS=	libimg-tk83-1.* libimg-tkstep-1.*
+CONFLICTS=	libimg-tkstep-1.*
 .else
 EXTRA_PATCHES=	${FILESDIR}/tk85-Tk_PhotoPutBlock ${FILESDIR}/tk84-warnings
-CONFLICTS=	libimg-tk83-1.* libimg-tk84-1.* libimg-tkstep-1.*
+CONFLICTS=	libimg-tk84-1.* libimg-tkstep-1.*
 .endif
 
 .include <bsd.port.post.mk>
