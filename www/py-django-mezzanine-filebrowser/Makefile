@@ -1,9 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/www/py-django-mezzanine-filebrowser/Makefile,v 1.3 2013/02/09 15:59:54 svnexp Exp $
+# $FreeBSD: www/py-django-mezzanine-filebrowser/Makefile 317397 2013-05-05 06:12:26Z koobs $
 
 PORTNAME=	django-mezzanine-filebrowser
-PORTVERSION=	0.2.6
-PORTREVISION=	1
+PORTVERSION=	0.2.27
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +12,7 @@ MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Fork of django-filebrowser for Mezzanine CMS
 
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	filebrowser_safe
 
