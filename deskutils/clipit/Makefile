@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/clipit/Makefile 310967 2013-01-25 06:33:14Z jgh $
+# $FreeBSD: deskutils/clipit/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	clipit
 PORTVERSION=	1.4.2
@@ -19,7 +19,7 @@ XDOTOOL_DESC=	Automatic paste functionality
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CONFIGURE_ARGS+=	--localedir=${LOCALBASE}/share/locale
 .else
