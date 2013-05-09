@@ -2,7 +2,7 @@
 # Date created:				23 Apr 2009
 # Whom:					Greg Larkin <glarkin@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/docbook2X/Makefile,v 1.6 2012/11/17 06:01:54 svnexp Exp $
+# $FreeBSD: textproc/docbook2X/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	docbook2X
@@ -29,7 +29,7 @@ CONFLICTS=	docbook-utils-*
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 .if defined(NOPORTDOCS)
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-doc__Makefile.in
