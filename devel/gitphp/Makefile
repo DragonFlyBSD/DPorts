@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/gitphp/Makefile,v 1.4 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: devel/gitphp/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gitphp
 PORTVERSION=	0.2.8
@@ -11,7 +11,7 @@ COMMENT=	A web based git repository browser written in PHP
 LICENSE=	GPLv2
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PHP=	bz2 fileinfo mbstring memcache posix simplexml spl zlib
 WANT_PHP_WEB=	yes
 NO_BUILD=	yes
