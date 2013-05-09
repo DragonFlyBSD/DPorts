@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/ltris/Makefile 314103 2013-03-13 18:49:55Z johans $
+# $FreeBSD: games/ltris/Makefile 316624 2013-04-26 16:39:14Z bapt $
 
 PORTNAME=	ltris
 PORTVERSION=	1.0.18
@@ -17,14 +17,14 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--localstatedir=${DATADIR}
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITHOUT_NLS)
+.if ${PORT_OPTIONS:MNLS}
+USES+=	gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 post-patch:
@@ -38,4 +38,4 @@ post-install:
 	@${CHMOD} 0664 ${DATADIR}/${PORTNAME}.hscr
 	@${CHOWN} root:games ${DATADIR}/${PORTNAME}.hscr
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
