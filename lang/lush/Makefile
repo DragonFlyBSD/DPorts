@@ -2,7 +2,7 @@
 # Date created:				20 May 2003
 # Whom:					David Yeske <dyeske@gmail.com>
 #
-# $FreeBSD: ports/lang/lush/Makefile,v 1.27 2012/11/17 05:58:52 svnexp Exp $
+# $FreeBSD: lang/lush/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	lush
 PORTVERSION=	1.2.1
@@ -13,7 +13,7 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A high level object-oriented programming language
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_XORG=	xt xft
 USE_GL=		yes
 USE_SDL=	sdl image
