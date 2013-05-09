@@ -18,7 +18,7 @@ LICENSE_FILE=	${WRKSRC}/doc/caph/COPYING
 USE_BZIP2=	yes
 USE_SDL=	sdl
 USE_GL=		gl
-USE_ICONV=	yes
+USES+=		iconv
 
 BUILD_WRKSRC=	${WRKSRC}/src
 
