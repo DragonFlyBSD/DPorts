@@ -1,5 +1,5 @@
 # Created by: Zastupov Stepan [RedChrom] <redchrom@mail.ru>
-# $FreeBSD: ports/multimedia/audacious/Makefile,v 1.71 2013/02/18 10:18:30 svnexp Exp $
+# $FreeBSD: multimedia/audacious/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	audacious
 PORTVERSION=	3.3.4
@@ -53,11 +53,11 @@ CONFIGURE_ARGS+=--enable-gconf
 .endif
 
 .if  ${PORT_OPTIONS:MICONV} || exists(${LOCALBASE}/lib/libiconv.so)
-USE_ICONV=	yes
+USES+=		iconv
 .endif
 
 .if  ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
