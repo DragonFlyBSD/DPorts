@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/py-otr/Makefile,v 1.5 2012/11/17 06:01:16 svnexp Exp $
+# $FreeBSD: security/py-otr/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	otr
 PORTVERSION=	0.2.1.1
@@ -15,9 +15,9 @@ BUILD_DEPENDS=	swig1.3:${PORTSDIR}/devel/swig13
 # This should be updated to the newer version of libotr
 LIB_DEPENDS=	otr.4:${PORTSDIR}/security/libotr3
 
+USES=		pkgconfig
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
-USE_PKGCONFIG=	build
 PYDISTUTILS_PKGNAME=	python-otr
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
