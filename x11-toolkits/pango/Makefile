@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/pango/Makefile 314665 2013-03-19 16:27:59Z mezz $
+# $FreeBSD: x11-toolkits/pango/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/x11-toolkits/pango/Makefile,v 1.167 2012/06/06 21:18:48 kwm Exp $
 
 PORTNAME=	pango
@@ -23,13 +23,12 @@ RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
 		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT} \
 		${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
 
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack glib20 ltverhack referencehack
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
