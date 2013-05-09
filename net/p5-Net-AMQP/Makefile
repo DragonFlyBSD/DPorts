@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/net/p5-Net-AMQP/Makefile,v 1.9 2013/01/30 11:48:00 svnexp Exp $
+# $FreeBSD: net/p5-Net-AMQP/Makefile 317083 2013-05-02 08:44:44Z tobez $
 
 PORTNAME=	Net-AMQP
-PORTVERSION=	0.05
+PORTVERSION=	0.06
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -35,6 +35,7 @@ MAN3=		Net::AMQP.3 \
 		Net::AMQP::Frame::Trace.3 \
 		Net::AMQP::Protocol.3 \
 		Net::AMQP::Protocol::Base.3 \
-		Net::AMQP::Protocol::v0_8.3
+		Net::AMQP::Protocol::v0_8.3 \
+		Net::AMQP::Value.3
 
 .include <bsd.port.mk>
