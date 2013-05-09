@@ -1,8 +1,8 @@
 # Created by: Vladimir Korkodinov <newbieman@perm.raid.ru>
-# $FreeBSD: ports/net-p2p/py-transmissionrpc/Makefile,v 1.9 2013/01/16 15:49:35 svnexp Exp $
+# $FreeBSD: net-p2p/py-transmissionrpc/Makefile 317047 2013-05-01 20:37:20Z rm $
 
 PORTNAME=	transmissionrpc
-PORTVERSION=	0.9
+PORTVERSION=	0.10
 CATEGORIES=	net-p2p python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +13,9 @@ COMMENT=	Python module that communicates with Transmission through JSON-RPC
 
 LICENSE=	MIT
 
-USE_PYTHON=	-2.7
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six
+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
