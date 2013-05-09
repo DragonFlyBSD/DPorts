@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/agg/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: graphics/agg/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	agg
 PORTVERSION=	2.5
@@ -16,10 +16,9 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 
 USE_XORG=	x11
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_SDL=	sdl
 USE_GMAKE=	yes
-USE_PKGCONFIG=	yes
 USE_AUTOTOOLS=	aclocal autoheader autoconf libtoolize automake
 ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--foreign --add-missing --ignore-deps
