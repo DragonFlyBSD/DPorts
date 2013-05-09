@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/at-spi/Makefile 313735 2013-03-09 17:27:56Z kwm $
+# $FreeBSD: accessibility/at-spi/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/accessibility/at-spi/Makefile,v 1.103 2010/09/27 09:47:42 kwm Exp $
 
 PORTNAME=	at-spi
@@ -18,7 +18,7 @@ USE_BZIP2=	yes
 
 RUN_DEPENDS=	at-spi2-atk>2.6.0:${PORTSDIR}/accessibility/at-spi2-atk
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomehier intlhack gtk20 gconf2 libbonobo
 USE_XORG=	x11 xtst
