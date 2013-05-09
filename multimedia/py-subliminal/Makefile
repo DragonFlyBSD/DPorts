@@ -1,8 +1,9 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: ports/multimedia/py-subliminal/Makefile,v 1.2 2013/02/15 12:04:27 svnexp Exp $
+# $FreeBSD: multimedia/py-subliminal/Makefile 317728 2013-05-09 09:13:39Z ehaupt $
 
 PORTNAME=	subliminal
 PORTVERSION=	0.6.3
+PORTREVISION=	1
 CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,10 +14,11 @@ COMMENT=	Python library to search and download subtitles
 LICENSE=	LGPL3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.0:${PORTSDIR}/www/py-beautifulsoup \
-		${PYTHON_PKGNAMEPREFIX}enzyme>0:${PORTSDIR}/multimedia/py-enzyme \
-		${PYTHON_PKGNAMEPREFIX}guessit>0:${PORTSDIR}/multimedia/py-guessit \
-		${PYTHON_PKGNAMEPREFIX}requests<1:${PORTSDIR}/www/py-requests \
-		${PYTHON_PKGNAMEPREFIX}html5lib>0:${PORTSDIR}/www/py-html5lib
+		${PYTHON_PKGNAMEPREFIX}enzyme>=0.1:${PORTSDIR}/multimedia/py-enzyme \
+		${PYTHON_PKGNAMEPREFIX}guessit>=0.4.1:${PORTSDIR}/multimedia/py-guessit \
+		${PYTHON_PKGNAMEPREFIX}requests>=1.1:${PORTSDIR}/www/py-requests \
+		${PYTHON_PKGNAMEPREFIX}html5lib>0:${PORTSDIR}/www/py-html5lib \
+		${PYTHON_PKGNAMEPREFIX}lxml>0:${PORTSDIR}/devel/py-lxml
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
