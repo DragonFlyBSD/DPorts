@@ -1,5 +1,5 @@
 # Created by: Rob Evers <rob@debank.tv>
-# $FreeBSD: mail/postfixadmin/Makefile 314344 2013-03-16 09:04:41Z miwi $
+# $FreeBSD: mail/postfixadmin/Makefile 317389 2013-05-04 22:48:03Z flo $
 
 PORTNAME=	postfixadmin
 PORTVERSION=	2.3.6
@@ -60,7 +60,7 @@ do-install:
 	(cd ${WRKSRC}/ && \
 	${COPYTREE_SHARE} \*.php ${PREFIX}/www/postfixadmin "! -name config.inc.php")
 	@${CP} ${WRKSRC}/config.inc.php ${PREFIX}/www/postfixadmin/config.inc.php.sample
-	@${CP} -n ${WRKSRC}/config.inc.php ${PREFIX}/www/postfixadmin/config.inc.php
+	@${CP} -n ${WRKSRC}/config.inc.php ${PREFIX}/www/postfixadmin/config.inc.php || ${TRUE}
 	@${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/www/postfixadmin
 	@${INSTALL_DATA} ${WRKSRC}/*.TXT ${PREFIX}/www/postfixadmin
 	@${INSTALL_DATA} ${WRKSRC}/css/* ${PREFIX}/www/postfixadmin/css
