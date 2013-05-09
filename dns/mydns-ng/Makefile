@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: dns/mydns-ng/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: dns/mydns-ng/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	mydns-ng
 PORTVERSION=	1.2.8.31
@@ -13,7 +13,7 @@ COMMENT=	A Next Generation DNS Server for sql based DNS services
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-confdir=${PREFIX}/etc
-USE_ICONV=	yes
+USES=		iconv
 
 USE_RC_SUBR=	mydns
 
@@ -62,7 +62,7 @@ CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .else
 CONFIGURE_ARGS+=--with-included-gettext
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .endif
 
