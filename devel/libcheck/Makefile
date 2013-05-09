@@ -1,8 +1,8 @@
 # Created by: mikeh@FreeBSD.org
-# $FreeBSD: ports/devel/libcheck/Makefile,v 1.18 2013/02/01 22:10:13 svnexp Exp $
+# $FreeBSD: devel/libcheck/Makefile 316540 2013-04-26 02:28:07Z sunpoet $
 
 PORTNAME=	libcheck
-PORTVERSION=	0.9.9
+PORTVERSION=	0.9.10
 CATEGORIES=	devel
 MASTER_SITES=	SF/check/check/${PORTVERSION}
 DISTNAME=	check-${PORTVERSION}
@@ -14,13 +14,12 @@ LICENSE=	LGPL21
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-#CONFIGURE_ARGS=	--docdir=${DOCSDIR}
+CONFIGURE_ENV=	ac_cv_path_AWK_PATH=${AWK}
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+USES=		pathfix
 
-#DOCSDIR=	${PREFIX}/share/doc/check
-#EXAMPLESDIR=	${PREFIX}/share/examples/check
 INFO=		check
 MAN1=		checkmk.1
 
@@ -30,7 +29,6 @@ post-patch:
 	@${REINPLACE_CMD} \
 		-e 's|COPYING.LESSER||' \
 		-e '/^docdir = / s|$$(PACKAGE)|${PORTNAME}|' \
-		-e '/^pcdatadir = / s|(libdir)/pkgconfig|(exec_prefix)/libdata/pkgconfig|' \
 			${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} \
 		-e '/^exampledir = / s|(docdir)/example|(datadir)/examples/${PORTNAME}|' \
