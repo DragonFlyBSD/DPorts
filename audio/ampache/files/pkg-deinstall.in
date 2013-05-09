@@ -1,5 +1,5 @@
 #! /bin/sh
-# $FreeBSD: ports/audio/ampache/files/pkg-deinstall.in,v 1.2 2012/11/17 05:54:28 svnexp Exp $
+# $FreeBSD: audio/ampache/files/pkg-deinstall.in 300895 2012-07-14 12:56:14Z beat $
 #
 
 PATH=/bin:/usr/bin:/usr/sbin
