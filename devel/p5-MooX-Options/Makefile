@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooX-Options/Makefile 315516 2013-03-29 01:34:46Z miwi $
+# $FreeBSD: devel/p5-MooX-Options/Makefile 316031 2013-04-18 09:18:02Z az $
 
 PORTNAME=	MooX-Options
 PORTVERSION=	3.77
@@ -29,7 +29,6 @@ RUN_DEPENDS=	p5-Module-Runtime>=0.012:${PORTSDIR}/devel/p5-Module-Runtime \
 		p5-Getopt-Long-Descriptive>=0.093:${PORTSDIR}/devel/p5-Getopt-Long-Descriptive \
 		p5-Regexp-Common>=0:${PORTSDIR}/textproc/p5-Regexp-Common
 
-PERL_CONFIGURE=	yes
 PERL_MODBUILD=	yes
 
 MAN3=		MooX::Options.3 \
