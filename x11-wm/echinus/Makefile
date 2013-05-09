@@ -1,5 +1,5 @@
 # Created by: hrkfrd@gmail.com
-# $FreeBSD: ports/x11-wm/echinus/Makefile,v 1.13 2012/12/30 00:34:53 svnexp Exp $
+# $FreeBSD: x11-wm/echinus/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	echinus
 PORTVERSION=	0.4.9
@@ -15,7 +15,7 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		xcb:${PORTSDIR}/x11/libxcb \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_XORG=	x11 xau xdmcp xext xft xrender xrandr
 
 MAN1=		echinus.1
