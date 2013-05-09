@@ -2,12 +2,12 @@
 # Date created:		Fri Aug 14 15:32:26 CEST 1998
 # Whom:			Slaven Rezic <eserte@cs.tu-berlin.de>
 #
-# $FreeBSD: ports/german/BBBike/Makefile,v 1.32 2012/11/17 05:57:59 svnexp Exp $
+# $FreeBSD: german/BBBike/Makefile 316659 2013-04-27 10:04:58Z stefan $
 #
 
 PORTNAME=	BBBike
-PORTVERSION=	3.17
-PORTREVISION=	1
+PORTVERSION=	3.18
+#PORTREVISION=	0
 CATEGORIES=	german
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${PORTVERSION}
 
