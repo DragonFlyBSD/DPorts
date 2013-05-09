@@ -2,7 +2,7 @@
 # Date created:		22 October 1994
 # Whom:			jkh
 #
-# $FreeBSD: ports/lang/logo/Makefile,v 1.46 2012/11/17 05:58:52 svnexp Exp $
+# $FreeBSD: lang/logo/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	ucblogo
@@ -21,7 +21,7 @@ USE_EMACS=	yes
 
 .if defined(WITH_FULL_DOCS)
 .undef NOPORTDOCS
-BUILD_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
+USE_TEX=	tetex
 USE_GHOSTSCRIPT=yes
 .endif
 
