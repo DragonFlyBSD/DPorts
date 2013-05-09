@@ -1,8 +1,8 @@
 # Created by: aaron@FreeBSD.org
-# $FreeBSD: ports/devel/p5-Log-Message/Makefile,v 1.11 2013/01/24 15:44:03 svnexp Exp $
+# $FreeBSD: devel/p5-Log-Message/Makefile 316798 2013-04-29 10:41:09Z tobez $
 
 PORTNAME=	Log-Message
-PORTVERSION=	0.06
+PORTVERSION=	0.08
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
