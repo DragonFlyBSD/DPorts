@@ -2,7 +2,7 @@
 # Date created:         		4 Fev 2005
 # Whom:                 		Andrey V. Elsukov <bu7cher@yandex.ru>
 #
-# $FreeBSD: ports/graphics/danpei/Makefile,v 1.15 2012/11/17 05:58:02 svnexp Exp $
+# $FreeBSD: graphics/danpei/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	danpei
@@ -20,7 +20,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 RUN_DEPENDS+=	convert:${PORTSDIR}/graphics/ImageMagick
 .endif
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gtk12 gdkpixbuf
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
