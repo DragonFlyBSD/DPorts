@@ -1,7 +1,7 @@
-# $FreeBSD: textproc/libvisio/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: textproc/libvisio/Makefile 316537 2013-04-25 23:44:29Z jkim $
 
 PORTNAME=	libvisio
-PORTVERSION=	0.0.25
+PORTVERSION=	0.0.26
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://dev-www.libreoffice.org/src/ \
 		LOCAL/sunpoet
@@ -21,9 +21,8 @@ CONFIGURE_ARGS=	--disable-werror
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 
 .include <bsd.port.pre.mk>
 
