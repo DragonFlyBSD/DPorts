@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: devel/geany/Makefile 315703 2013-04-03 11:27:42Z makc $
+# $FreeBSD: devel/geany/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	geany
 PORTVERSION=	1.23
@@ -17,8 +17,7 @@ INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
-USE_PKGCONFIG=	build
-USES=		pathfix
+USES=		pathfix pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_JOBS_SAFE=	yes
@@ -32,7 +31,7 @@ MAN1=		geany.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
