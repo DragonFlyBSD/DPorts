@@ -1,13 +1,9 @@
-# New ports collection makefile for:	irssi-otr
-# Date created:		2008-08-16
-# Whom:			Ashish Shukla <wahjava@gmail.com>
-#
-# $FreeBSD: irc/irssi-otr/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Ashish Shukla <wahjava@gmail.com>
+# $FreeBSD: irc/irssi-otr/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	irssi-otr
 PORTVERSION=	0.3
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	irc
 MASTER_SITES=	ftp://download.tuxfamily.org/${MASTER_SITE_SUBDIR}/
 MASTER_SITE_SUBDIR=	irssiotr
@@ -18,16 +14,15 @@ COMMENT=	A plugin for irssi for Off-the-Record (OTR) messaging
 BUILD_DEPENDS=	${LOCALBASE}/include/irssi/src/common.h:${PORTSDIR}/irc/irssi \
 		${LOCALBASE}/bin/libgcrypt-config:${PORTSDIR}/security/libgcrypt
 LIB_DEPENDS=	otr.4:${PORTSDIR}/security/libotr3 \
-		gcrypt.18:${PORTSDIR}/security/libgcrypt
+		gcrypt:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	irssi:${PORTSDIR}/irc/irssi
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake
+USES=		cmake pkgconfig
 USE_LDCONFIG=	yes
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 
 PLIST_FILES=	lib/irssi/modules/libotr.so \
 		%%DOCSDIR%%/LICENSE %%DOCSDIR%%/README
