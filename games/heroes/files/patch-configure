@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/heroes/files/patch-configure,v 1.3 2012/11/17 05:57:41 svnexp Exp $
+$FreeBSD: games/heroes/files/patch-configure 300896 2012-07-14 13:54:48Z beat $
 
 --- configure.orig	Sat Mar 30 19:36:16 2002
 +++ configure	Sat Apr  6 16:11:51 2002

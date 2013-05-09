@@ -2,7 +2,7 @@
 # Date created:				15 August 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/games/heroes/Makefile,v 1.42 2012/11/17 05:57:41 svnexp Exp $
+# $FreeBSD: games/heroes/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	heroes
@@ -36,8 +36,7 @@ MUSICSRC=	${WRKDIR}/${MUSICDISTNAME}
 
 USE_SDL=	mixer sdl
 USE_GMAKE=	yes
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 CONFIGURE_ARGS=	--with-sdl_mixer=${LOCALBASE} --without-gii --without-ggi
