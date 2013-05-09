@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/lash/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: audio/lash/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	lash
 PORTVERSION=	0.5.4
@@ -20,7 +20,7 @@ LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack \
 OPTIONS_DEFINE=	READLINE DOCS
 OPTIONS_DEFAULT=READLINE
 
-USES=        pathfix
+USES=		pathfix
 USE_GNOME=	gtk20 libxml2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
@@ -34,7 +34,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREADLINE}
-USE_READLINE=	yes
+USES+=		readline
 PLIST_SUB+=	READLINE=""
 .else
 CONFIGURE_ENV+=	vl_cv_lib_readline=no
