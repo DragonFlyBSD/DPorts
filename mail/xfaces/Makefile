@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xfaces-3.3
-# Date created:		15 Dec 2001
-# Whom:			Ted Faber <faber@isi.edu>
-# $FreeBSD: ports/mail/xfaces/Makefile,v 1.30 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: Ted Faber <faber@isi.edu>
+# $FreeBSD: mail/xfaces/Makefile 316958 2013-04-30 20:00:28Z bdrewery $
 
 PORTNAME=	xfaces
 PORTVERSION=	3.3
@@ -23,7 +20,7 @@ PATCH_DIST_STRIP=
 MAINTAINER=	faber@isi.edu
 COMMENT=	Display shaped icons for mail spool contents
 
-LIB_DEPENDS=	compface:${PORTSDIR}/mail/faces:install
+LIB_DEPENDS=	compface:${PORTSDIR}/mail/faces
 
 # GNU make properly processes some overridden rules in the makefile that
 # imake generates.  Specifically, installing the html docs.
