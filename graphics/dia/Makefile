@@ -1,5 +1,5 @@
 # Created by: saper@system.pl
-# $FreeBSD: graphics/dia/Makefile 315957 2013-04-17 11:25:52Z kwm $
+# $FreeBSD: graphics/dia/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/graphics/dia/Makefile,v 1.16 2007/10/11 02:49:12 mezz Exp $
 
 PORTNAME=	dia
@@ -16,12 +16,11 @@ COMMENT=	Diagram creation program, similar to Visio
 LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt \
 		png15:${PORTSDIR}/graphics/png
 
-USES=		pathfix desktop-file-utils
+USES=		pathfix desktop-file-utils gettext
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 gnomeprefix libxslt libartlgpl2 intlhack
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl" \
 		LOCALBASE="${LOCALBASE}"
