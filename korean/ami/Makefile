@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ami
-# Date created:		05 Jun 1999
-# Whom:			CHOI Junho <cjh@kr.freebsd.org>
-#
-# $FreeBSD: ports/korean/ami/Makefile,v 1.51 2012/11/17 05:58:46 svnexp Exp $
-#
+# Created by: CHOI Junho <cjh@kr.freebsd.org>
+# $FreeBSD: korean/ami/Makefile 317521 2013-05-06 15:18:38Z bapt $
 
 PORTNAME=	ami
 PORTVERSION=	1.2.3
@@ -20,14 +16,16 @@ COMMENT=	Well-known Korean X11 Input Method
 
 LICENSE=	GPLv2
 
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 USE_GNOME=	gtk12 gdkpixbuf
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 PLIST_SUB+=	NLS=""
@@ -46,7 +44,7 @@ post-build:
 	${CAT} ${DISTDIR}/ami.dic >> ${WRKDIR}/hanja.dic
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${PREFIX}/share/doc/ami
 	( cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR} )
 .endif
