@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: mail/bogofilter/Makefile 314868 2013-03-21 20:27:32Z mandree $
+# $FreeBSD: mail/bogofilter/Makefile 317736 2013-05-09 12:06:38Z bdrewery $
 
 PORTNAME=	bogofilter
 PORTVERSION=	1.2.3
@@ -29,6 +29,12 @@ MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	aclocal automake autoconf autoheader
 ACLOCAL_ARGS=	-Im4
 
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MUNICODE}
+USES+=		iconv
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
@@ -40,7 +46,6 @@ BF_CPPFLAGS?=		-I${BDB_INCLUDE_DIR} -I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc
 .if ${PORT_OPTIONS:MUNICODE}
 CONFIGURE_ARGS+=	--enable-unicode
-USE_ICONV=		yes
 BF_LIBS+=		-liconv
 .endif
 .if ${PORT_OPTIONS:MGSL}
