@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/gconf/files/patch-backends::bdb-backend.c,v 1.3 2012/11/17 05:55:44 svnexp Exp $
+$FreeBSD: devel/gconf/files/patch-backends::bdb-backend.c 300896 2012-07-14 13:54:48Z beat $
 
 --- backends/bdb-backend.c	2001/08/02 17:59:13	1.1
 +++ backends/bdb-backend.c	2001/08/02 18:03:23
