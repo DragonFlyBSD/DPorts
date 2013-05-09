@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/audio/gvolwheel/Makefile,v 1.1 2013/02/10 18:08:46 svnexp Exp $
+# $FreeBSD: audio/gvolwheel/Makefile 316652 2013-04-27 08:24:14Z bapt $
 
 PORTNAME=	gvolwheel
 PORTVERSION=	1.0
@@ -15,10 +15,9 @@ BUILD_DEPENDS=	intltoolize:${PORTSDIR}/textproc/intltool
 
 CONFIGURE_ARGS+=--enable-oss
 GNU_CONFIGURE=	yes
+USES=		pkgconfig pathfix iconv
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtk30
-USE_ICONV=	yes
-USE_PKGCONFIG=	yes
+USE_GNOME=	gtk30
 
 OPTIONS_DEFINE=	NLS
 NLS_DESC=	Native language support
@@ -30,7 +29,7 @@ CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .else
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
 .endif
 
 pre-configure:
