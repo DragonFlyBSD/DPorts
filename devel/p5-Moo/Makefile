@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Moo/Makefile 314554 2013-03-18 11:35:51Z tobez $
+# $FreeBSD: devel/p5-Moo/Makefile 317481 2013-05-06 08:24:42Z tobez $
 
 PORTNAME=	Moo
-PORTVERSION=	1.001000
+PORTVERSION=	1.002000
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MSTROUT
