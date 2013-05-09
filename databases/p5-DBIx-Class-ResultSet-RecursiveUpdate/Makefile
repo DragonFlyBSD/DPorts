@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-ResultSet-RecursiveUpdate/Makefile 313044 2013-02-27 10:27:37Z tobez $
+# $FreeBSD: databases/p5-DBIx-Class-ResultSet-RecursiveUpdate/Makefile 317499 2013-05-06 10:11:38Z tobez $
 
 PORTNAME=	DBIx-Class-ResultSet-RecursiveUpdate
-PORTVERSION=	0.27
+PORTVERSION=	0.29
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
