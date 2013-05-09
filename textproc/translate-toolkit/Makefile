@@ -2,7 +2,7 @@
 # Date created:		30 August 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/translate-toolkit/Makefile,v 1.22 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/translate-toolkit/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	translate-toolkit
@@ -28,7 +28,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 # Can use psyco (on i386)
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 
