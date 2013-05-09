@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/www/httpclient/Makefile,v 1.17 2013/01/15 16:50:30 svnexp Exp $
+# $FreeBSD: www/httpclient/Makefile 316432 2013-04-24 13:27:14Z ale $
 
 PORTNAME=	httpclient
-DISTVERSION=	4.2.3
+DISTVERSION=	4.2.5
 CATEGORIES=	www java
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=	httpcomponents/${PORTNAME}/binary
