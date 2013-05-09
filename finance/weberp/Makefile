@@ -2,7 +2,7 @@
 # Date created:		05 Oct 2008
 # Whom:			Wen heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/finance/weberp/Makefile,v 1.17 2012/11/17 05:57:28 svnexp Exp $
+# $FreeBSD: finance/weberp/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	weberp
@@ -18,7 +18,7 @@ PORTSCOUT=	skipv:3.12
 
 USE_ZIP=	yes
 USE_PHP=	mysql gettext
-USE_GETTEXT=	yes
+USES=		gettext
 WRKSRC=		${WRKDIR}/webERP${PORTVERSION}
 
 NO_BUILD=	yes
