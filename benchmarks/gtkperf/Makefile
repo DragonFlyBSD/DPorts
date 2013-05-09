@@ -1,9 +1,5 @@
-# Ports collection makefile for:	gtkperf
-# Date created:				2006-04-22
-# Whom:					Andreas Kohn <andreas@syndrom23.de>
-#
-# $FreeBSD: ports/benchmarks/gtkperf/Makefile,v 1.17 2012/11/17 05:54:50 svnexp Exp $
-#
+# Created by: Andreas Kohn <andreas@syndrom23.de>
+# $FreeBSD: benchmarks/gtkperf/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=		gtkperf
 PORTVERSION=		0.40
@@ -20,9 +16,10 @@ USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 USE_GNOME=		gtk20 gnomeprefix
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=		yes
-USE_ICONV=		yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext iconv
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--enable-nls
