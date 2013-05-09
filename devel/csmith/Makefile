@@ -1,4 +1,4 @@
-# $FreeBSD: devel/csmith/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: devel/csmith/Makefile 316295 2013-04-23 01:44:40Z eadler $
 
 PORTNAME=	csmith
 PORTVERSION=	2.1.0
@@ -20,8 +20,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAKE_JOBS_SAFE=	yes
 
-.include <bsd.port.pre.mk>
-
 ONLY_FOR_ARCHS=	i386 amd64
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
