@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/atk/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: accessibility/atk/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/accessibility/atk/Makefile,v 1.123 2012/10/07 09:00:37 kwm Exp $
 
 PORTNAME=	atk
@@ -18,12 +18,11 @@ USE_XZ=		yes
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
-USE_GETTEXT=	yes
+USES=		pathfix pkgconfig gettext
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehier gnomehack glib20 ltverhack referencehack
-USE_PKGCONFIG=	build
+USE_GNOME=	gnomehier glib20 ltverhack referencehack
 CONFIGURE_ARGS=	--enable-static \
 		--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	-I${LOCALBASE}/include
