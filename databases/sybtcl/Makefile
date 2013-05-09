@@ -2,7 +2,7 @@
 # Date created:			Jul 30, 2002
 # Whom:				mi
 #
-# $FreeBSD: ports/databases/sybtcl/Makefile,v 1.6 2012/11/17 05:55:25 svnexp Exp $
+# $FreeBSD: databases/sybtcl/Makefile 316351 2013-04-23 11:51:52Z gahr $
 #
 
 PORTNAME=	sybtcl
@@ -16,7 +16,7 @@ COMMENT=	TCL extension to connect to Sybase servers
 
 LIB_DEPENDS=	sybdb:${PORTSDIR}/databases/freetds
 
-USE_TCL=	83+
+USE_TCL=	84+
 TCL_DVER=	${TCL_VER:S/.//}
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 MAKE_ARGS+=	TCL_VER=${TCL_VER}
