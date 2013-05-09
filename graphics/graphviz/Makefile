@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/graphviz/Makefile 315524 2013-03-29 07:53:21Z dinoex $
+# $FreeBSD: graphics/graphviz/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	graphviz
 PORTVERSION=	2.30.1
@@ -94,8 +94,6 @@ NVTHREADS_DESC=	Link with threads (needed for nvidia)
 USE_QT4=		qmake_build moc_build rcc_build uic_build linguist_build corelib gui
 .endif
 
-.include <bsd.port.pre.mk>
-
 # allow the use localized gd ports in Makefile.local or slave ports.
 GD_PORT?=	graphics/gd
 
@@ -134,23 +132,25 @@ CONFIGURE_ARGS+=	--enable-tcl=no
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-USE_ICONV=		yes
+USES+=			iconv
 CONFIGURE_ARGS+=	--with-iconvlibdir=${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-iconvincludedir=${LOCALBASE}/include
 .else
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 .endif
 
-.if ${PORT_OPTIONS:MXPM} || exists(${LOCALBASE}/lib/libXpm.so)
+.if ${PORT_OPTIONS:MXPM}
+CONFIGURE_ARGS+=	--with-x
 USE_XORG+=		xaw xpm xmu xt sm ice xext x11 xau xdmcp xp
 MAN1+=			dotty.1 lefty.1 lneato.1
 PLIST_SUB+=		WITH_XPM=""
 .else
+CONFIGURE_ARGS+=	--without-x
 PLIST_SUB+=		WITH_XPM="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=	gettext
 .else
 CONFIGURE_ARGS+=	--disable-nls
 .endif
@@ -479,4 +479,4 @@ post-install: install-ldconfig-file
 		${EXAMPLESDIR}/pathplan_data/
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
