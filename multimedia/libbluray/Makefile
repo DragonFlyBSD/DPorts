@@ -2,7 +2,7 @@
 # Date created:	19 February 2011
 # Whom:		kamikaze@bsdforen.de
 #
-# $FreeBSD: ports/multimedia/libbluray/Makefile,v 1.4 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/libbluray/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	libbluray
@@ -19,7 +19,7 @@ LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
 # dlopen dependencies, libbdplus not yet available
 LIB_DEPENDS+=	aacs.1:${PORTSDIR}/multimedia/libaacs
 
-USE_ICONV=	yes
+USES=		iconv
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	autoconf aclocal automake libtool
