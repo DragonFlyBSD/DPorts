@@ -2,7 +2,7 @@
 # Date created:		13 February 2003
 # Whom:			johs
 #
-# $FreeBSD: ports/devel/meta-cvs/Makefile,v 1.20 2012/11/17 05:56:00 svnexp Exp $
+# $FreeBSD: devel/meta-cvs/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	meta-cvs
@@ -37,7 +37,7 @@ PORTDOCS=	Meta-CVS-PAPER \
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPDFDOC} && !defined(NOPORTDOCS)
-BUILD_DEPENDS+=	pdflatex:${PORTSDIR}/print/teTeX-base
+USE_TEX=	tetex
 PORTDOCS+=	meta-cvs.pdf
 .endif
 
