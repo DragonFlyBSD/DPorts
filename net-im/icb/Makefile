@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.ucdavis.edu)
-# $FreeBSD: ports/net-im/icb/Makefile,v 1.21 2013/02/07 20:52:46 svnexp Exp $
+# $FreeBSD: net-im/icb/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	icb
 PORTVERSION=	5.1.0
@@ -11,9 +11,9 @@ DISTNAME=	c${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Internet CB - a mostly-defunct chat client
 
+USES=		readline
 USE_TK_BUILD=	yes
 USE_TK=		yes
-USE_READLINE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-tclinclude=${TCL_INCLUDEDIR} \
 		--with-tcllib=${LOCALBASE}/lib
