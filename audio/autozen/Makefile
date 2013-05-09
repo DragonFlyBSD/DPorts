@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/autozen/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
+# $FreeBSD: audio/autozen/Makefile 317558 2013-05-06 22:27:57Z bapt $
 
 PORTNAME=	autozen
 PORTVERSION=	2.1
@@ -13,8 +13,10 @@ COMMENT=	Adjust brain waves with sound
 MAKE_ENV+=	PTHREAD_FLAGS="${PTHREAD_CFLAGS} ${PTHREAD_LIBS}" \
 		DATADIR="${DATADIR}" DOCSDIR="${DOCSDIR}" MKDIR="${MKDIR}"
 
+USES=		shebangfix
 USE_GNOME=	gtk12
 USE_PERL5_RUN=	yes
+SHEBANG_FILES=	zentime
 
 PORTDOCS=	*
 MAN1=		autozen.1
