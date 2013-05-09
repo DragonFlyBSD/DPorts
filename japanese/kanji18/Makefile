@@ -16,7 +16,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	sanpei@FreeBSD.org
 COMMENT=	X11 ${PKGNAMESUFFIX}-dot Kanji font
 
-EXTRACT_DEPENDS=	gunshar:${PORTSDIR}/archivers/sharutils
 BUILD_DEPENDS=	mkbold:${PORTSDIR}/x11-fonts/mkbold-mkitalic \
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
