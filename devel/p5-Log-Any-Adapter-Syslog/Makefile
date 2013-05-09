@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-Log-Any-Adapter-Syslog
-# Date created:				10 Oct 2010
-# Whom:					Bill Brinzer <bill.brinzer@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-Log-Any-Adapter-Syslog/Makefile,v 1.6 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Bill Brinzer <bill.brinzer@gmail.com>
+# $FreeBSD: devel/p5-Log-Any-Adapter-Syslog/Makefile 316524 2013-04-25 18:08:58Z culot $
 
 PORTNAME=	Log-Any-Adapter-Syslog
-PORTVERSION=	1.3
+PORTVERSION=	1.5
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,11 +10,15 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	bill.brinzer@gmail.com
 COMMENT=	Send Log::Any logs to syslog
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 RUN_DEPENDS=	p5-Log-Any-Adapter>=0:${PORTSDIR}/devel/p5-Log-Any-Adapter \
 		p5-Unix-Syslog>=0:${PORTSDIR}/sysutils/p5-Unix-Syslog
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
-		p5-Test-MockModule>=0:${PORTSDIR}/devel/p5-Test-MockModule
+		p5-Test-MockModule>=0:${PORTSDIR}/devel/p5-Test-MockModule \
+		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
 PERL_CONFIGURE=	yes
 
