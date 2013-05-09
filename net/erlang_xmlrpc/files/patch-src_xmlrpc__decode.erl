@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/erlang_xmlrpc/files/patch-src_xmlrpc__decode.erl,v 1.2 2012/11/17 06:00:00 svnexp Exp $
+$FreeBSD: net/erlang_xmlrpc/files/patch-src_xmlrpc__decode.erl 300897 2012-07-14 14:29:18Z beat $
 
 --- src/xmlrpc_decode.erl.orig	Tue Oct 12 21:02:55 2004
 +++ src/xmlrpc_decode.erl	Tue Oct 12 21:03:43 2004

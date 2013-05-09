@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/erlang_xmlrpc/files/patch-src_xmlrpc__http.erl,v 1.2 2012/11/17 06:00:00 svnexp Exp $
+$FreeBSD: net/erlang_xmlrpc/files/patch-src_xmlrpc__http.erl 300897 2012-07-14 14:29:18Z beat $
 
 --- src/xmlrpc_http.erl.orig	Wed Apr 23 21:06:45 2003
 +++ src/xmlrpc_http.erl	Fri May 23 11:59:38 2003
