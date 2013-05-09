@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-AnyEvent-RabbitMQ/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-AnyEvent-RabbitMQ/Makefile 317590 2013-05-07 08:50:50Z tobez $
 
 PORTNAME=	AnyEvent-RabbitMQ
-PORTVERSION=	1.11
+PORTVERSION=	1.13
 CATEGORIES=	net devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BOBTFISH
@@ -15,7 +15,7 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
-		p5-Net-AMQP>=0:${PORTSDIR}/net/p5-Net-AMQP \
+		p5-Net-AMQP>=0.6:${PORTSDIR}/net/p5-Net-AMQP \
 		p5-Devel-GlobalDestruction>=0:${PORTSDIR}/devel/p5-Devel-GlobalDestruction \
 		p5-File-ShareDir>=0:${PORTSDIR}/devel/p5-File-ShareDir \
 		p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
