@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xmandel
-# Date created:         		18 October 1996
-# Whom:                 		andreas@marvin.robin.de
-#
-# $FreeBSD: ports/graphics/xmandel/Makefile,v 1.15 2012/11/17 05:58:25 svnexp Exp $
-#
+# Created by: andreas@marvin.robin.de
+# $FreeBSD: graphics/xmandel/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	xmandel
 PORTVERSION=	1.0
