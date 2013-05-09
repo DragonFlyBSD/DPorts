@@ -1,18 +1,18 @@
-# $FreeBSD: ports/converters/p5-Sereal/Makefile,v 1.1 2013/02/05 12:41:07 svnexp Exp $
+# $FreeBSD: converters/p5-Sereal/Makefile 317301 2013-05-04 08:50:24Z kuriyama $
 
 PORTNAME=	Sereal
-PORTVERSION=	0.260
+PORTVERSION=	0.350
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:SMUELLER
+MASTER_SITE_SUBDIR=	CPAN:YVES
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for fast, compact, powerful binary (de-)serialization
 
 RUN_DEPENDS=	\
-	p5-Sereal-Decoder>=0.25:${PORTSDIR}/converters/p5-Sereal-Decoder \
-	p5-Sereal-Encoder>=0.26:${PORTSDIR}/converters/p5-Sereal-Encoder
+	p5-Sereal-Decoder>=0.35:${PORTSDIR}/converters/p5-Sereal-Decoder \
+	p5-Sereal-Encoder>=0.35:${PORTSDIR}/converters/p5-Sereal-Encoder
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
 PERL_CONFIGURE=	yes
