@@ -1,15 +1,15 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/textproc/lucene/Makefile,v 1.23 2013/02/23 00:55:12 svnexp Exp $
+# $FreeBSD: textproc/lucene/Makefile 317066 2013-05-01 23:23:51Z bdrewery $
 
 PORTNAME=	lucene
-PORTVERSION=	3.6.1
+PORTVERSION=	3.6.2
 CATEGORIES=	textproc java devel
 MASTER_SITES=	APACHE
 MASTER_SITE_SUBDIR=	${PORTNAME}/java/${PORTVERSION}/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A full-text search engine for Java
+MAINTAINER=	danilogondolfo@gmail.com
+COMMENT=	Full-text search engine for Java
 
 LICENSE=	AL2
 
