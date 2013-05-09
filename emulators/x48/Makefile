@@ -1,11 +1,12 @@
 # Created by: Eric L. Hernes <erich@FreeBSD.org>
-# $FreeBSD: emulators/x48/Makefile 316085 2013-04-19 04:38:32Z danfe $
+# $FreeBSD: emulators/x48/Makefile 317453 2013-05-06 01:14:55Z danfe $
 
 PORTNAME=	x48
 PORTVERSION=	0.6.4
+PORTREVISION=	1
 CATEGORIES=	emulators math
 MASTER_SITES=	SF/${PORTNAME}.berlios
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} gxrom-r.bz2 sxrom-e.bz2
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} gxrom-r.bz2 sxrom-j.bz2
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -35,16 +36,20 @@ OPTIONS_DEFINE=	DOCS
 
 post-extract: .SILENT
 # Extract official HP ROM images for GX/SX
-	${CP} ${_DISTDIR}/gxrom-r.bz2 ${WRKSRC} && ${EXTRACT_CMD} \
+	${CP} ${_DISTDIR}/gxrom-r.bz2 ${WRKSRC} && ${BZIP2_CMD} \
 		-d ${WRKSRC}/gxrom-r.bz2
-# The latest SX ROM revision is J, but it does not work with x48, so use E
-	${CP} ${_DISTDIR}/sxrom-e.bz2 ${WRKSRC} && ${EXTRACT_CMD} \
-		-d ${WRKSRC}/sxrom-e.bz2
+	${CP} ${_DISTDIR}/sxrom-j.bz2 ${WRKSRC} && ${BZIP2_CMD} \
+		-d ${WRKSRC}/sxrom-j.bz2
 
 post-patch:
 # Enable serial communication and prefer GX Revision R ROM by default
 	@${REINPLACE_CMD} -e '/useSerial/s+False+True+ ; s+ttyS+cuau+ ; \
 		s+rom\.dump+${DATADIR}/gxrom-r+' ${WRKSRC}/src/X48.ad.h
+# Force correct type per what comment says
+	@${REINPLACE_CMD} -e '/timer1/s+char+signed &+' ${WRKSRC}/src/hp48.h
+# Fix the build against Clang (lots of warnings remain)
+	@${REINPLACE_CMD} -e '1531s+char \*+void+' ${WRKSRC}/src/debugger.c
+	@${REINPLACE_CMD} -e '698s+^+static +' ${WRKSRC}/src/emulate.c
 
 do-install:
 .for p in x48 dump2rom checkrom mkcard
