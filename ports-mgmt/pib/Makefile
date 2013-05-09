@@ -2,7 +2,7 @@
 # Date created:         30 December 1996
 # Whom:                 Mike Smith <msmith@freebsd.org>
 #
-# $FreeBSD: ports/ports-mgmt/pib/Makefile,v 1.31 2012/11/17 06:00:45 svnexp Exp $
+# $FreeBSD: ports-mgmt/pib/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	pib
