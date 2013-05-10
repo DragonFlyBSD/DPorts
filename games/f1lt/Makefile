@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: games/f1lt/Makefile 316123 2013-04-19 23:33:17Z jgh $
+# $FreeBSD: games/f1lt/Makefile 317054 2013-05-01 22:11:34Z jgh $
 
 PORTNAME=	f1lt
 PORTVERSION=	2.0.2
@@ -30,7 +30,7 @@ PLIST_FILES=	bin/F1LT \
 PLIST_DIRSTRY=	share/f1lt
 PORTDOCS=	CHANGELOG
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 post-patch-script:
 	@${REINPLACE_CMD} -e 's|PREFIX = /opt/$$$$TARGET|PREFIX = ${PREFIX}|g' \
@@ -41,8 +41,6 @@ post-patch-script:
 	@${REINPLACE_CMD} -e 's|999999999998|1000000|g' \
 		${WRKSRC}/src/tools/laptimecomparisondialog.cpp
 .endif
-
-.include <bsd.port.options.mk>
 
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
@@ -55,4 +53,4 @@ post-install:
 .endif
 	@${LN} -s ${PREFIX}/bin/F1LT ${PREFIX}/bin/${PORTNAME}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
