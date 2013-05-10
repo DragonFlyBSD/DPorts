@@ -3,7 +3,7 @@
 # Date created:			Jul 30, 2007
 # Whom:				ijliao
 #
-# $FreeBSD: ports/print/latex-resume/Makefile,v 1.6 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-resume/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	resume
 PORTVERSION=	20010823
@@ -19,9 +19,7 @@ DIST_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A resume class for LaTeX
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-
+USE_TEX=	tetex
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 EXTRACT_CMD=	${CP}
