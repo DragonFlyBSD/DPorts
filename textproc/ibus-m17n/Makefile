@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ibus-m17n
-# Date created:		3 September 2009
-# Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
-#
-# $FreeBSD: ports/textproc/ibus-m17n/Makefile,v 1.15 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
+# $FreeBSD: textproc/ibus-m17n/Makefile 317494 2013-05-06 09:26:23Z bapt $
 
 PORTNAME=	ibus-m17n
 PORTVERSION=	1.3.3
@@ -24,8 +20,10 @@ PROJECTHOST=	ibus
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
