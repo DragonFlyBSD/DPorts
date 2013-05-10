@@ -2,7 +2,7 @@
 # Date created:				14 Jul 2005
 # Whom:					Alejandro Pulver <alejandro@varnet.biz>
 #
-# $FreeBSD: ports/games/tuxpaint/Makefile,v 1.27 2012/11/17 05:57:54 svnexp Exp $
+# $FreeBSD: games/tuxpaint/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	tuxpaint
@@ -19,7 +19,7 @@ LIB_DEPENDS=	fribidi.3:${PORTSDIR}/converters/fribidi \
 
 USE_GNOME=	librsvg2
 USE_SDL=	image mixer sdl ttf pango
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 MAKE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
