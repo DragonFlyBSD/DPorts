@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/games/lianliankan/Makefile,v 1.19 2012/11/17 05:57:43 svnexp Exp $
+# $FreeBSD: games/lianliankan/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	lianliankan
 DISTVERSION=	2.3beta1
@@ -13,7 +13,7 @@ COMMENT=	Tile matching game
 
 LICENSE=	GPLv2
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GNOME=	gtk20 esound
 USE_AUTOTOOLS=	aclocal automake autoconf libtool
 MAKE_JOBS_SAFE=	yes
@@ -30,7 +30,7 @@ DOCSDIR=	${PREFIX}/share/doc/llk_linux
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
