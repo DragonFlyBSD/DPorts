@@ -2,7 +2,7 @@
 # Date created:				02 Mar 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/gucharmap/Makefile,v 1.58 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: deskutils/gucharmap/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/deskutils/gucharmap/Makefile,v 1.75 2010/11/13 13:05:08 kwm Exp $
 #
 
@@ -19,7 +19,7 @@ COMMENT=	A Unicode/ISO10646 character map and font viewer
 LIB_DEPENDS=	rarian.0:${PORTSDIR}/textproc/rarian
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gtk20 gnomedocutils gconf2
 GNU_CONFIGURE=	yes
