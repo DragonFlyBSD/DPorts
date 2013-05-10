@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: ports/emulators/catapult/Makefile,v 1.17 2012/12/10 19:24:01 svnexp Exp $
+# $FreeBSD: emulators/catapult/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	catapult
 PORTVERSION=	0.9.1
@@ -34,8 +34,7 @@ USE_GNOME=	gdkpixbuf2 glib20 gtk20 libxml2
 USE_WX=		2.6+
 USE_PYTHON_BUILD=yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 USE_XORG=	ice pixman sm x11 xau xcomposite xcursor xdamage xdmcp \
 		xext xfixes xi xinerama xrandr xrender xxf86vm
 MAKEFILE=	GNUmakefile
