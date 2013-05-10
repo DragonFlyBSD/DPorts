@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
-# $FreeBSD: graphics/libcaca/Makefile 315227 2013-03-25 14:06:30Z makc $
+# $FreeBSD: graphics/libcaca/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	libcaca
 DISTVERSION=	0.99.beta18
@@ -10,9 +10,8 @@ MASTER_SITES=	http://caca.zoy.org/raw-attachment/wiki/libcaca/
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Graphics library that outputs text instead of pixels
 
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	ltverhack
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-doc \
