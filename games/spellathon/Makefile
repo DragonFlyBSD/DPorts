@@ -1,5 +1,5 @@
 # Created by: Girish <girish.rao.dev@gmail.com>
-# $FreeBSD: ports/games/spellathon/Makefile,v 1.21 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/spellathon/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	spellathon
 PORTVERSION=	6.0
@@ -21,8 +21,7 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		xcb:${PORTSDIR}/x11/libxcb
 
 CXXFLAGS+=	-fPIC
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 USE_GNOME=	glib20
 USE_QT4=	corelib gui moc_build qmake_build rcc_build uic_build
 USE_XORG=	ice sm x11 xau xdmcp xext xrender
