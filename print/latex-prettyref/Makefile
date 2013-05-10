@@ -2,7 +2,7 @@
 # Date created:		19 November 2007
 # Whom:			Koji Yokota (yokota@res.otaru-uc.ac.jp)
 #
-# $FreeBSD: ports/print/latex-prettyref/Makefile,v 1.7 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-prettyref/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	latex-prettyref
@@ -17,10 +17,8 @@ DIST_SUBDIR=	latex
 MAINTAINER=	yokota@res.otaru-uc.ac.jp
 COMMENT=	Improved reference formatting for LaTeX2e
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-
 USE_ZIP=	yes
+USE_TEX=	tetex
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR}
 
 TEXMFDIR?=	share/texmf
