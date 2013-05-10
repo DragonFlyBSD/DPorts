@@ -1,9 +1,9 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/telak/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: graphics/telak/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	telak
 PORTVERSION=	0.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://julien.danjou.info/telak/ \
 		CRITICAL
