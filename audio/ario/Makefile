@@ -1,9 +1,9 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: audio/ario/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: audio/ario/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	ario
 PORTVERSION=	1.5.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	SF/ario-player/ario-player/${PORTVERSION}
 
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--disable-avahi
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 .else
 CONFIGURE_ARGS+=	--disable-nls
