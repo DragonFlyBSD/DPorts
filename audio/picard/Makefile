@@ -2,7 +2,7 @@
 # Date created:				Sat Aug 20 15:26:15 UTC 2005
 # Whom:					Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/picard/Makefile,v 1.40 2013/02/03 22:42:45 svnexp Exp $
+# $FreeBSD: audio/picard/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	picard
@@ -28,7 +28,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mutagen>=0:${PORTSDIR}/audio/py-mutagen \
 		${PYTHON_PKGNAMEPREFIX}qt4-network>=0:${PORTSDIR}/net/py-qt4-network \
 		${PYTHON_PKGNAMEPREFIX}qt4-xml>=0:${PORTSDIR}/textproc/py-qt4-xml
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 INSTALLS_ICONS=	yes
