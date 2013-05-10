@@ -2,7 +2,7 @@
 # Date created:		2008-04-16
 # Whom:			Ganael Laplanche <ganael.laplanche@martymac.org>
 #
-# $FreeBSD: ports/graphics/pencil/Makefile,v 1.17 2012/12/10 19:24:01 svnexp Exp $
+# $FreeBSD: graphics/pencil/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	pencil
@@ -27,7 +27,7 @@ LIB_DEPENDS+=	ming:${PORTSDIR}/graphics/ming \
 		drm:${PORTSDIR}/graphics/libdrm
 
 USE_ZIP=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	glib20
 USE_QT4=	gui moc_build qmake_build rcc_build xml_build opengl_build
 USE_XORG=	xi xrender xrandr xfixes xcursor xinerama xext x11 xau xdmcp \
