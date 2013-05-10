@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gsmartcontrol
-# Date created:		2009-03-25
-# Whom:			Pawel Pekala <c0rn@o2.pl>
-#
-# $FreeBSD: ports/sysutils/gsmartcontrol/Makefile,v 1.15 2012/12/10 19:24:05 svnexp Exp $
-#
+# Created by: Pawel Pekala <c0rn@o2.pl>
+# $FreeBSD: sysutils/gsmartcontrol/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	gsmartcontrol
 PORTVERSION=	0.8.7
@@ -32,10 +28,8 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		smartctl:${PORTSDIR}/sysutils/smartmontools
 
 USE_AUTOTOOLS=	libtool
+USES=		pkgconfig gettext iconv
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
-USE_ICONV=	yes
-USE_PKGCONFIG=	build
 USE_GNOME=	gtk20
 USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext xfixes \
 		xi xinerama xrandr xrender 
