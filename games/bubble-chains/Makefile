@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/bubble-chains/Makefile 314012 2013-03-13 01:38:56Z beech $
+# $FreeBSD: games/bubble-chains/Makefile 316755 2013-04-28 21:38:56Z beech $
 
 PORTNAME=	bubble-chains
 PORTVERSION=	0.1.1
@@ -29,8 +29,6 @@ QMAKEFLAGS+=	QMAKE_LFLAGS="-L${LOCALBASE}/lib -lX11 -lSDL-1.2"
 
 MAKE_JOBS_SAFE=	yes
 
-OPTIONS_DEFINE=	DOCS
-
 PORTDOCS=	README
 
 DESKTOP_ENTRIES="Bubble Chains" "${COMMENT}" \
@@ -38,12 +36,6 @@ DESKTOP_ENTRIES="Bubble Chains" "${COMMENT}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
-PLIST_SUB+=	PORTDOCS=""
-.else
-PLIST_SUB+=	PORTDOCS="@comment "
-.endif
 
 P7ZIP_CMD=	${LOCALBASE}/bin/7z
 P7ZIP_ARGS=	x -o${WRKDIR}
