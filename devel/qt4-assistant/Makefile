@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: ports/devel/qt4-assistant/Makefile,v 1.29 2013/02/03 21:43:07 svnexp Exp $
+# $FreeBSD: devel/qt4-assistant/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	assistant
 DISTVERSION=	${QT4_VERSION}
@@ -34,7 +34,6 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake translations \
 		src/winmain src/xmlpatterns src/3rdparty/clucene \
 		src/3rdparty/freetype src/3rdparty/libjpeg src/3rdparty/libmng \
 		src/3rdparty/libpng src/3rdparty/libtiff src/3rdparty/phonon
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
 .for dne in ${DO_NOT_EXTRACT}
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
