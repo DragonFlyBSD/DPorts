@@ -2,7 +2,7 @@
 # Date created:				21 October 2008
 # Whom:					Henry Hu <henry.hu.sh@gmail.com>
 #
-# $FreeBSD: ports/textproc/ibus/Makefile,v 1.25 2012/11/17 06:01:59 svnexp Exp $
+# $FreeBSD: textproc/ibus/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ibus
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--disable-iso-codes-check
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
