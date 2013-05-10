@@ -2,7 +2,7 @@
 # Date created:				2005-08-06
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
-# $FreeBSD: ports/devel/libnotify/Makefile,v 1.33 2012/11/17 05:55:55 svnexp Exp $
+# $FreeBSD: devel/libnotify/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/devel/libnotify/Makefile,v 1.21 2011/06/11 19:51:15 mezz Exp $
 #
 
@@ -22,7 +22,7 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack intlhack glib20 gtk20 ltverhack
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
