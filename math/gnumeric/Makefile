@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: math/gnumeric/Makefile 314629 2013-03-19 09:39:43Z kwm $
+# $FreeBSD: math/gnumeric/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports-stable/math/gnumeric/Makefile,v 1.5 2010/06/29 11:24:22 kwm Exp $
 # When updating, remember to update pkg-plist of gchemutils.
 
@@ -22,9 +22,8 @@ LIB_DEPENDS=	goffice-0.8:${PORTSDIR}/devel/goffice \
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack gnomehier pygtk2 \
 		desktopfileutils libgsf
 USE_PYTHON=	yes
