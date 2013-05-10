@@ -2,7 +2,7 @@
 # Date created:         2012-05-11
 # Whom:                 Hiroto Kagotani <hiroto.kagotani@gmail.com>
 #
-# $FreeBSD: ports/print/bophook/Makefile,v 1.2 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: print/bophook/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	bophook
 PORTVERSION=	0.02
@@ -14,10 +14,9 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	hiroto.kagotani@gmail.com
 COMMENT=	Style file providing a beginning-of-page hook for LaTeX
 
-BUILD_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_ZIP=	yes
+USE_TEX=	tetex
 
 PLIST=		${WRKDIR}/pkg-plist
 
