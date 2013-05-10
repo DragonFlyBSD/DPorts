@@ -2,7 +2,7 @@
 # Date created:		Fri Sept 24 09:52:35 EST 2010
 # Whom:			Kris Moore <kmoore@freebsd.org>
 #
-# $FreeBSD: ports/x11/lxmenu-data/Makefile,v 1.6 2012/11/17 06:03:18 svnexp Exp $
+# $FreeBSD: x11/lxmenu-data/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	lxmenu-data
@@ -15,7 +15,7 @@ COMMENT=	Menu data used by lxpanel
 
 USE_XORG=	x11 xmu
 USE_GNOME=	intltool
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	automake:env
 CONFIGURE_ARGS+=--prefix=${LOCALBASE} --sysconfdir=${LOCALBASE}/etc
