@@ -1,9 +1,5 @@
-# New ports collection makefile for:	FreeMat
-# Date created:		Sat 26 mar 2005
-# Whom:			Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: math/freemat/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: math/freemat/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=		FreeMat
 PORTVERSION=		4.0
@@ -34,8 +30,7 @@ USE_FORTRAN=		yes
 FFLAGS+=		-O2
 
 USE_GL=			yes
-USE_PKGCONFIG=		yes
-USES=			cmake
+USES=			cmake pkgconfig
 USE_QT4=		gui network opengl moc_build rcc_build uic_build \
 			qmake_build xml svg
 CPPFLAGS+=		${CXXFLAGS} -I${LOCALBASE}/include  ${AMDINC}
