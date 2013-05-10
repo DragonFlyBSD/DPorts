@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: multimedia/2mandvd/Makefile 315256 2013-03-26 04:45:25Z miwi $
+# $FreeBSD: multimedia/2mandvd/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	2ManDVD
 PORTVERSION=	1.8.4
@@ -25,7 +25,8 @@ RUN_DEPENDS=	sox:${PORTSDIR}/audio/sox \
 		tcprobe:${PORTSDIR}/multimedia/transcode \
 		xine:${PORTSDIR}/multimedia/xine \
 		bash:${PORTSDIR}/shells/bash \
-		growisofs:${PORTSDIR}/sysutils/dvd+rw-tools
+		growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
+		cdrecord:${PORTSDIR}/sysutils/cdrtools
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
@@ -34,7 +35,6 @@ USE_QT4=	corelib gui opengl \
 USE_GL=		glu
 USE_SDL=	sdl
 USE_PERL5_RUN=	yes
-USE_CDRTOOLS=	yes
 USE_GMAKE=	yes
 MAKE_ENV=	QTDIR="${QT_PREFIX}"
 MAKE_JOBS_SAFE=	yes
