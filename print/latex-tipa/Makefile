@@ -2,7 +2,7 @@
 # Date created:		18 November 2003
 # Whom:			Andreas Braml
 #
-# $FreeBSD: ports/print/latex-tipa/Makefile,v 1.9 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-tipa/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	latex-tipa
@@ -15,9 +15,7 @@ DISTNAME=	tipa-${PORTVERSION}
 MAINTAINER=	a.strich.b@web.de
 COMMENT=	Package which provides T3-encoded fonts to be used with LaTeX2e
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-
+USE_TEX=	tetex
 NO_INSTALL_MANPAGES=	yes
 NO_BUILD=	yes
 LATEX_BIN=	${LOCALBASE}/bin/latex
