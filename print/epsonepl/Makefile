@@ -2,7 +2,7 @@
 # Date created:		14 February 2003
 # Whom:			Simon 'corecode' Schubert <corecode@corecode.ath.cx>
 #
-# $FreeBSD: ports/print/epsonepl/Makefile,v 1.10 2012/11/17 06:00:49 svnexp Exp $
+# $FreeBSD: print/epsonepl/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	epsonepl
