@@ -2,7 +2,7 @@
 # Date created:				Jul 29, 2005
 # Whom:					rafan@infor.org
 #
-# $FreeBSD: ports/print/freetype-tools/Makefile,v 1.20 2012/11/17 06:00:49 svnexp Exp $
+# $FreeBSD: print/freetype-tools/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	freetype-tools
@@ -21,10 +21,10 @@ MAINTAINER=	rafan@FreeBSD.org
 COMMENT=	Tools for FreeType 1
 
 LIB_DEPENDS=	ttf.4:${PORTSDIR}/print/freetype
-RUN_DEPENDS=	${LOCALBASE}/lib/libkpathsea.a:${PORTSDIR}/print/teTeX-base \
-		t1asm:${PORTSDIR}/print/t1utils
+RUN_DEPENDS=	t1asm:${PORTSDIR}/print/t1utils
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
+USE_TEX=	tetex
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-nls --enable-static --enable-shared
