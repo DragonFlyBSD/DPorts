@@ -2,7 +2,7 @@
 # Date created:		25 July 1996
 # Whom:			obrien@cs.ucdavis.edu
 #
-# $FreeBSD: ports/news/tin/Makefile,v 1.166 2012/12/10 19:24:04 svnexp Exp $
+# $FreeBSD: news/tin/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	tin
@@ -31,7 +31,7 @@ RUN_DEPENDS=	${LOCALBASE}/etc/mime.types:${PORTSDIR}/misc/mime-support
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 TIN_EDITOR?=	/usr/bin/ee
 TIN_SCREEN?=	ncursesw
@@ -93,7 +93,7 @@ CONFIGURE_ARGS+=	--enable-cancel-locks
 
 .if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=	--enable-nls
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
