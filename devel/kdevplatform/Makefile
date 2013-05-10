@@ -1,5 +1,5 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: devel/kdevplatform/Makefile 315702 2013-04-03 11:26:30Z makc $
+# $FreeBSD: devel/kdevplatform/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	kdevplatform
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
@@ -29,7 +29,7 @@ PLIST_SUB+=	SHLIB_VER=6.0.0 \
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DBUILD_po:BOOL=Off
