@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-p2p/qbittorrent/Makefile,v 1.55 2013/02/01 07:45:52 svnexp Exp $
+# $FreeBSD: net-p2p/qbittorrent/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	qbittorrent
 PORTVERSION=	3.0.8
@@ -13,7 +13,7 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 		torrent-rasterbar.7:${PORTSDIR}/net-p2p/libtorrent-rasterbar-16
 
 HAS_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_QT4=	corelib network qmake_build moc_build rcc_build
 QT_NONSTANDARD=	yes
 
