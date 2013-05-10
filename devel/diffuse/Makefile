@@ -1,5 +1,5 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: ports/devel/diffuse/Makefile,v 1.20 2012/12/31 15:17:33 svnexp Exp $
+# $FreeBSD: devel/diffuse/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	diffuse
 PORTVERSION=	0.4.6
@@ -44,7 +44,7 @@ PLIST_SUB+=	MENU="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 TRANSLATIONS=	de es it ja ko ru zh_CN
 MANLANG=	"" it ru
 PLIST_SUB+=	NLS=""
