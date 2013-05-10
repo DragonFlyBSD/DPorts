@@ -2,7 +2,7 @@
 # Date Created:				26 Aug 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: sysutils/consolekit/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: sysutils/consolekit/Makefile 316407 2013-04-24 07:35:40Z ak $
 #    $MCom: ports/sysutils/consolekit/Makefile,v 1.25 2010/10/23 10:12:30 kwm Exp $
 
 PORTNAME=	consolekit
@@ -19,9 +19,8 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 
 WRKSRC=		${WRKDIR}/ConsoleKit-${PORTVERSION}
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_XORG=	x11
-USES=	pathfix
+USES=	pathfix gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
