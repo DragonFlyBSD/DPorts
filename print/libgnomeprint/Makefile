@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: print/libgnomeprint/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: print/libgnomeprint/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/print/libgnomeprint/Makefile,v 1.77 2010/09/28 16:38:29 kwm Exp $
 #
 # NOTE: Remind to update comms/gfax plist when PORTVERSION change.
@@ -21,11 +21,10 @@ USE_BZIP2=	yes
 LIB_DEPENDS=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
 		popt:${PORTSDIR}/devel/popt
 
-USES=		bison pathfix
+USES=		bison pathfix gettext
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehier glib20 pango libxml2 \
 		libartlgpl2 ltverhack
-USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
