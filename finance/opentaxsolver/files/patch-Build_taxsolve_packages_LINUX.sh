@@ -1,4 +1,4 @@
-$FreeBSD: ports/finance/opentaxsolver/files/patch-Build_taxsolve_packages_LINUX.sh,v 1.2 2012/11/17 05:57:25 svnexp Exp $
+$FreeBSD: finance/opentaxsolver/files/patch-Build_taxsolve_packages_LINUX.sh 300896 2012-07-14 13:54:48Z beat $
 
 --- Build_taxsolve_packages_LINUX.sh.orig	2009-05-09 11:10:10.000000000 -0600
 +++ Build_taxsolve_packages_LINUX.sh	2012-02-11 09:23:27.000000000 -0700

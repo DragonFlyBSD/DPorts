@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/finance/opentaxsolver/files/pkg-plist.in,v 1.2 2012/11/17 05:57:25 svnexp Exp $
+@comment $FreeBSD: finance/opentaxsolver/files/pkg-plist.in 300896 2012-07-14 13:54:48Z beat $
 %%X11%%bin/ots_gui
 bin/taxsolve_CA_540_%%TAXYEAR%%
 bin/taxsolve_MA_1_%%TAXYEAR%%

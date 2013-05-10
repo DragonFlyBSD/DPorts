@@ -1,4 +1,4 @@
-$FreeBSD: ports/finance/opentaxsolver/files/patch-src-GUI-Makefile.linux,v 1.2 2012/11/17 05:57:25 svnexp Exp $
+$FreeBSD: finance/opentaxsolver/files/patch-src-GUI-Makefile.linux 300896 2012-07-14 13:54:48Z beat $
 --- src/GUI/Makefile.linux.orig	Fri Mar 31 22:16:19 2006
 +++ src/GUI/Makefile.linux	Mon Feb  4 21:47:35 2008
 @@ -2,9 +2,9 @@

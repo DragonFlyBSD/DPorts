@@ -1,4 +1,4 @@
-$FreeBSD: ports/finance/opentaxsolver/files/patch-src-GUI-ots_gui.c,v 1.7 2012/11/17 05:57:25 svnexp Exp $
+$FreeBSD: finance/opentaxsolver/files/patch-src-GUI-ots_gui.c 300896 2012-07-14 13:54:48Z beat $
 --- src/GUI/ots_gui.c.orig	2012-01-13 07:12:50.000000000 -0700
 +++ src/GUI/ots_gui.c	2012-02-07 08:14:06.000000000 -0700
 @@ -731,7 +731,7 @@
