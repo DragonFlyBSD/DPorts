@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net-im/folks04/Makefile 315386 2013-03-27 14:09:04Z kwm $
+# $FreeBSD: net-im/folks04/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/net-im/folks04/Makefile,v 1.2 2012/04/27 13:28:44 kwm Exp $
 
 PORTNAME=	folks
@@ -22,9 +22,8 @@ LATEST_LINK=	${PORTNAME}04
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	intlhack gnomehier
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
