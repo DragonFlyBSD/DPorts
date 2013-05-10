@@ -2,7 +2,7 @@
 # Date created:				August 8, 2011
 # Whom:					Jung-uk Kim <jkim@FreeBSD.org>
 #
-# $FreeBSD: ports/korean/ibus-hangul/Makefile,v 1.14 2012/11/17 05:58:46 svnexp Exp $
+# $FreeBSD: korean/ibus-hangul/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ibus-hangul
@@ -31,7 +31,7 @@ USE_PYTHON=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 PLIST_SUB+=	NLS=""
