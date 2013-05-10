@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tovid
-# Date created:		Mon Dec 26 20:00:42 UTC 2005
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/tovid/Makefile,v 1.29 2012/11/17 05:59:54 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: multimedia/tovid/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	tovid
 PORTVERSION=	0.30
@@ -29,17 +25,18 @@ RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer \
 		vcdxbuild:${PORTSDIR}/multimedia/vcdimager \
 		cdrdao:${PORTSDIR}/sysutils/cdrdao \
 		tcprobe:${PORTSDIR}/multimedia/transcode \
+		cdrecord:${PORTSDIR}/sysutils/cdrtools \
 		sox:${PORTSDIR}/audio/sox \
 		normalize:${PORTSDIR}/audio/normalize \
 		bash:${PORTSDIR}/shells/bash \
 		${PYTHON_SITELIBDIR}/cairo/__init__.py:${PORTSDIR}/graphics/py-cairo
 
+USES=		pkgconfig
 USE_WX=		2.6
 WX_COMPS=	python
 NO_BUILD=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
-USE_CDRTOOLS=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 
