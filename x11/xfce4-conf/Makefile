@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xfce4-conf
-# Date created:		28 August 2008
-# Whom:			Oliver Lehmann <oliver@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xfce4-conf/Makefile,v 1.25 2012/11/17 06:03:21 svnexp Exp $
-#
+# Created by: Oliver Lehmann <oliver@FreeBSD.org>
+# $FreeBSD: x11/xfce4-conf/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	xfce4-conf
 PORTVERSION=	4.10.0
@@ -27,7 +23,7 @@ USE_LDCONFIG=	yes
 USE_PERL5_BUILD=	yes
 USE_XFCE=	configenv libutil
 USE_XORG=	x11
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 CONFIGURE_ARGS+=--disable-gtk-doc-html
 
@@ -59,7 +55,7 @@ PLIST_SUB+=	PERLBIND="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
