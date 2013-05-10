@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/editors/gobby/pkg-plist,v 1.6 2013/01/09 12:19:00 svnexp Exp $
+@comment $FreeBSD: editors/gobby/pkg-plist 310137 2013-01-09 11:31:47Z sbz $
 bin/gobby
 %%DATADIR%%/icons/HighContrastLargePrint/48x48/actions/chat.png
 %%DATADIR%%/icons/HighContrastLargePrint/48x48/actions/document-list.png

@@ -1,4 +1,4 @@
-# $FreeBSD: ports/editors/gobby/Makefile,v 1.30 2013/01/09 12:19:00 svnexp Exp $
+# $FreeBSD: editors/gobby/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gobby
 PORTVERSION=	0.4.13
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=--without-gtkspell
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 CONFIGURE_ARGS+=	--enable-nls
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
