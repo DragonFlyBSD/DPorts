@@ -2,7 +2,7 @@
 # Date created:		2 Mar 2005
 # Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: ports/japanese/scim-anthy/Makefile,v 1.40 2012/11/17 05:58:39 svnexp Exp $
+# $FreeBSD: japanese/scim-anthy/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	scim-anthy
@@ -21,7 +21,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		kasumi:${PORTSDIR}/japanese/kasumi
 
 USE_GNOME=	lthack
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
