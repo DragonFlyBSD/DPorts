@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsamn.edu.ar>
-# $FreeBSD: biology/embassy/Makefile 314609 2013-03-18 23:35:01Z jgh $
+# $FreeBSD: biology/embassy/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	embassy
 PORTVERSION=	6.2.0
@@ -16,7 +16,7 @@ LIB_DEPENDS=	nucleus.6:${PORTSDIR}/biology/emboss
 PREFIX?=	${LOCALBASE}/emboss
 NO_MTREE=	yes
 USE_SUBMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	x11
