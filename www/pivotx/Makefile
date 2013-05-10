@@ -1,5 +1,5 @@
 # Created by: Fumiyuki Shimizu <fumifumi@abacustech.jp>
-# $FreeBSD: www/pivotx/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/pivotx/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	pivotx
 PORTVERSION=	2.3.3
@@ -30,7 +30,7 @@ PHPDOM_DESC=	Use PHP:DOM instead of SimpleXML
 
 WANT_PHP_WEB=	yes
 USE_PHP=	session gettext xml tokenizer gd pcre
-USE_GETTEXT=	yes
+USES+=		gettext
 
 .if ${PORT_OPTIONS:MPHPDOM}
 USE_PHP+=	dom
