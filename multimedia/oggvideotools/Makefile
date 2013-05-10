@@ -1,5 +1,5 @@
 # Created by: Jille Timmermans (jille@quis.cx)
-# $FreeBSD: multimedia/oggvideotools/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: multimedia/oggvideotools/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	oggvideotools
 PORTVERSION=	0.8a
@@ -17,8 +17,7 @@ LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
 		vorbis:${PORTSDIR}/audio/libvorbis
 
 USE_SDL=	sdl
-USE_PKGCONFIG=	build
-USES=		cmake
+USES=		cmake pkgconfig
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
