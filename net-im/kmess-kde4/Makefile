@@ -2,7 +2,7 @@
 # Date created:			21 June 2002
 # Whom:				Hye-Shik Chang <perky@python.or.kr>
 #
-# $FreeBSD: net-im/kmess-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: net-im/kmess-kde4/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	kmess
@@ -24,7 +24,6 @@ USE_BZIP2=	yes
 USE_GNOME=	libxml2 libxslt
 USE_KDE4=	kdehier kdeprefix kdelibs libkonq automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build
-USES=		cmake
-USE_GETTEXT=	yes
+USES=		cmake gettext
 
 .include <bsd.port.mk>
