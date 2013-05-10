@@ -2,7 +2,7 @@
 # Date created:		23 May 2004
 # Whom:			thierry@FreeBSD.org
 #
-# $FreeBSD: ports/print/latex-ucs/Makefile,v 1.9 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-ucs/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	latex-ucs
 PORTVERSION=	20041017
@@ -16,13 +16,9 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package for using UTF-8 as input encoding
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMFDIR_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMFDIR_LSR}:${PORTSDIR}/print/tex-texmflocal
-
 NO_BUILD=	yes
 USE_PERL5_RUN=	yes
+USE_TEX=	tetex
 PLIST_SUB=	MKTEXLSR="${MKTEXLSR}" CLASSDIR=${CLASSDIR}
 
 TEXMFDIR=	share/texmf
