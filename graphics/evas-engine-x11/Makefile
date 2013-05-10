@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/graphics/evas-engine-x11/Makefile,v 1.15 2013/01/15 17:46:00 svnexp Exp $
+# $FreeBSD: graphics/evas-engine-x11/Makefile 317198 2013-05-03 12:24:26Z bapt $
 
 PORTNAME=	engine-x11
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6.1
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -19,8 +19,10 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+.if defined(.PARSEDIR)
+USE_GMAKE=	yes
+.endif
 USE_EFL=	evas librt_hack libtool_hack
-USE_GNOME=	gnomehack pkgconfig
 USE_XORG=	x11 xext
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/modules/engines/software_x11
