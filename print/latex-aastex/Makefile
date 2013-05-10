@@ -2,7 +2,7 @@
 # Date created:		14 November 2007
 # Whom:			Koji Yokota (yokota@res.otaru-uc.ac.jp)
 #
-# $FreeBSD: ports/print/latex-aastex/Makefile,v 1.5 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-aastex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	latex-aastex
@@ -16,10 +16,10 @@ DIST_SUBDIR=	latex
 MAINTAINER=	yokota@res.otaru-uc.ac.jp
 COMMENT=	LaTeX class for American Astronomical Society (AAS) journals
 
-BUILD_DEPENDS=	${LOCALBASE}/share/texmf:${PORTSDIR}/print/teTeX-texmf \
-		dvips:${PORTSDIR}/print/dvipsk-tetex
+BUILD_DEPENDS=	dvips:${PORTSDIR}/print/dvipsk-tetex
 
 USE_GHOSTSCRIPT=yes
+USE_TEX=	tetex
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
