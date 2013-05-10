@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: polish/kadu/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: polish/kadu/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	kadu
 PORTVERSION=	0.12.2
@@ -44,10 +44,7 @@ GG6_EMOTS_DISTFILE=	kompatybilne_z_GG6.tar.gz
 GG7_EMOTS_DISTFILE=	dodatkowe_emoty_GG7.tar.gz
 
 USE_BZIP2=	yes
-USES=		cmake
-USE_PKGCONFIG=	build
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		cmake pkgconfig gettext iconv
 USE_XORG=	ice sm x11 xau xdmcp xext xfixes xrender xscrnsaver
 CMAKE_ARGS=	-DKADU_VERSION:STRING="${DISTVERSION}" -DWITH_ENCHANT=ON
 # Setting KADU_VERSION disables git invocation
