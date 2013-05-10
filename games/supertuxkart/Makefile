@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/supertuxkart/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/supertuxkart/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	supertuxkart
 PORTVERSION=	0.8
@@ -23,10 +23,9 @@ LIB_DEPENDS=	vorbisfile:${PORTSDIR}/audio/libvorbis \
 USE_BZIP2=	yes
 USE_GL=		gl glu glut
 USE_OPENAL=	al alut
-USES=		cmake
+USES=		cmake gettext
 USE_GMAKE=	yes
 USE_SDL=	sdl
-USE_GETTEXT=	yes
 USE_DOS2UNIX=	lib/irrlicht/source/Irrlicht/Makefile
 MAKE_JOBS_SAFE=	yes
 
