@@ -2,7 +2,7 @@
 # Date Created: 2002 01 02
 # Whom: dgilbert@velocet.ca
 #
-# $FreeBSD: ports/print/gutenprint-base/Makefile,v 1.56 2012/11/17 06:00:50 svnexp Exp $
+# $FreeBSD: print/gutenprint-base/Makefile 316464 2013-04-24 18:10:30Z ak $
 #    $MCom: ports/print/gutenprint-base/Makefile,v 1.8 2007/03/30 16:45:02 ahze Exp $
 #
 
@@ -20,7 +20,7 @@ LICENSE=	GPLv2
 CONFLICTS=	gimp-print-[0-9]*
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gtk20
 GNU_CONFIGURE=	yes
