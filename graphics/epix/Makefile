@@ -3,7 +3,7 @@
 # Date created:			Sep 5, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/graphics/epix/Makefile,v 1.23 2012/11/17 05:58:04 svnexp Exp $
+# $FreeBSD: graphics/epix/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	epix
@@ -20,12 +20,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	dvips:${PORTSDIR}/print/dvipsk-tetex \
 		latex-pgf>=0:${PORTSDIR}/print/latex-pgf \
-		latex:${PORTSDIR}/print/teTeX-base \
 		bash:${PORTSDIR}/shells/bash
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		bash:${PORTSDIR}/shells/bash
+RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 USE_BZIP2=	yes
+USE_TEX=	tetex
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-bash=${LOCALBASE}/bin/bash \
