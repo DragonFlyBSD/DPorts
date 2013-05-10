@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: x11/libgnome/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: x11/libgnome/Makefile 317508 2013-05-06 11:13:56Z kwm $
 #   $MCom: ports/x11/libgnome/Makefile,v 1.135 2010/09/27 20:06:45 kwm Exp $
 
 PORTNAME=	libgnome
@@ -20,11 +20,10 @@ BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack esound libbonobo \
 		gnomevfs2 ltverhack referencehack
-USES=		bison pathfix
+USES=		bison pathfix gettext
 USE_XORG=	xpm
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
@@ -58,6 +57,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/libgnome/libgnome-2.0.pc.in
 	@${REINPLACE_CMD} -e '/^$$/d' ${WRKSRC}/po/POTFILES.in
+	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
+		${WRKSRC}/libgnome/Makefile.in
 
 .include <bsd.port.mk>
 
