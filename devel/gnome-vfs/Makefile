@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/gnome-vfs/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: devel/gnome-vfs/Makefile 317508 2013-05-06 11:13:56Z kwm $
 #   $MCom: ports/devel/gnome-vfs/Makefile,v 1.191 2010/09/29 12:30:29 kwm Exp $
 
 PORTNAME=	gnome-vfs
@@ -19,8 +19,7 @@ USE_BZIP2=	yes
 RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack gnomemimedata gconf2 \
 		ltverhack referencehack
 USE_AUTOTOOLS=	libtool
@@ -87,6 +86,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-lacl||g ; \
 		s|inotify_support=yes|inotify_support=no|g' \
 			${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
+		${WRKSRC}/*/Makefile.in
 	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
 	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
