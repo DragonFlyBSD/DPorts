@@ -1,6 +1,6 @@
-# $FreeBSD: ports/devel/gwenhywfar-fox16/Makefile,v 1.5 2012/11/27 11:29:06 svnexp Exp $
+# $FreeBSD: devel/gwenhywfar-fox16/Makefile 316372 2013-04-23 16:45:40Z gahr $
 
-PORTREVISION=	1
+PORTREVISION=	2
 PKGNAMESUFFIX=	-${SLAVEPORT}
 
 MAINTAINER=	jhale@FreeBSD.org
