@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: sysutils/quicksynergy/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: sysutils/quicksynergy/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	quicksynergy
 PORTVERSION=	0.9.0
@@ -13,10 +13,7 @@ COMMENT=	A graphical interface for easily configuring Synergy2
 BUILD_DEPENDS=	synergys:${PORTSDIR}/sysutils/synergy
 
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
-USE_GETTEXT=	yes
-USE_PKGCONFIG=	yes
-USES=        pathfix
+USES=		pathfix pkgconfig gettext iconv
 USE_GNOME=	gnomeprefix libglade2
 
 CPPFLAGS+=	-I${LOCALBASE}/include
