@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: ports/editors/ted/Makefile,v 1.42 2013/02/18 15:00:31 svnexp Exp $
+# $FreeBSD: editors/ted/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	ted
 PORTVERSION=	2.23
@@ -25,7 +25,7 @@ GTK2_DESC=	Use GTK2 instead of MOTIF
 WRKSRC=		${WRKDIR}/Ted-${PORTVERSION}
 
 USE_XORG=	xext xft
-USE_ICONV=	yes
+USES=		iconv
 USE_GHOSTSCRIPT_RUN=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include/libpng15
