@@ -2,7 +2,7 @@
 # Date created:        9 Apr 2007
 # Whom:                Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: ports/japanese/uim-tomoe-gtk/Makefile,v 1.20 2012/11/17 05:58:40 svnexp Exp $
+# $FreeBSD: japanese/uim-tomoe-gtk/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	uim-tomoe-gtk
@@ -20,7 +20,7 @@ LIB_DEPENDS=	tomoe.1:${PORTSDIR}/japanese/tomoe \
 
 USE_GNOME=	lthack gtk20
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/uim-tomoe-gtk \
