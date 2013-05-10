@@ -1,9 +1,5 @@
-# Ports collection makefile for:	giblib
-# Date created:				12 Nov 2000
-# Whom:					Jeremy Norris <ishmael27@home.com>
-#
-# $FreeBSD: graphics/giblib/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Jeremy Norris <ishmael27@home.com>
+# $FreeBSD: graphics/giblib/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	giblib
 PORTVERSION=	1.2.4
@@ -15,11 +11,10 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A utility library that includes a wrapper for imlib2
 
 USE_AUTOTOOLS=	libtool
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_EFL=	imlib2
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 
 MAKE_JOBS_SAFE=	yes
 
