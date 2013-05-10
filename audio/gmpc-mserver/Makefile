@@ -2,7 +2,7 @@
 # Date created:		March 27 2008
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/gmpc-mserver/Makefile,v 1.21 2012/11/17 05:54:33 svnexp Exp $
+# $FreeBSD: audio/gmpc-mserver/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gmpc-mserver
@@ -26,6 +26,6 @@ USE_GMAKE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GNOME=	gnomehack pkgconfig glib20 gtk20 libxml2
-USE_GETTEXT=	yes
+USES=		gettext
 
 .include <bsd.port.mk>
