@@ -2,7 +2,7 @@
 # Date created:				30 Apr 2009
 # Whom:					Daichi GOTO <daichi@freebsd.org>
 #
-# $FreeBSD: ports/japanese/ibus-anthy/Makefile,v 1.29 2012/11/17 05:58:35 svnexp Exp $
+# $FreeBSD: japanese/ibus-anthy/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ibus-anthy
@@ -24,7 +24,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/pynotify/_pynotify.so:${PORTSDIR}/deve
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_GNOME=	pygtk2
 
