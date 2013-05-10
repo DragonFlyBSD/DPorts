@@ -1,9 +1,5 @@
-# New ports collection makefile for:    lincity
-# Date created:         13 Feb 1997
-# Whom:                 Julian Assange
-#
-# $FreeBSD: ports/games/lincity/Makefile,v 1.35 2012/11/17 05:57:43 svnexp Exp $
-#
+# Created by: Julian Assange
+# $FreeBSD: games/lincity/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	lincity
 PORTVERSION=	1.13.1
@@ -13,6 +9,8 @@ MASTER_SITES=	SF/${PORTNAME}/Lincity%20Development%20Source/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Rich city simulation game for X
+
+OPTIONS_DEFINE=	SVGALIB NLS
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
@@ -27,10 +25,12 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN6=		lincity.6
 
+.include <bsd.port.options.mk>
+
 pre-configure:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' ${WRKSRC}/readpng.c
 
-.if defined(WITH_SVGALIB)
+.if ${PORT_OPTIONS:MSVGALIB}
 LIB_DEPENDS+=	vga.1:${PORTSDIR}/graphics/svgalib
 CONFIGURE_ARGS+=	--without-x
 PLIST_SUB=	PROG="bin/lincity"
@@ -40,8 +40,8 @@ CONFIGURE_ARGS+=	--without-svga
 PLIST_SUB=	PROG="bin/xlincity"
 .endif
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
