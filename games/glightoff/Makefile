@@ -1,5 +1,5 @@
 # Created by:			nemysis@gmx.ch
-# $FreeBSD: ports/games/glightoff/Makefile,v 1.5 2012/12/25 14:48:17 svnexp Exp $
+# $FreeBSD: games/glightoff/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	glightoff
 PORTVERSION=	1.0.0
@@ -27,7 +27,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
