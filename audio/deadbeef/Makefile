@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: audio/deadbeef/Makefile 314853 2013-03-21 17:32:34Z bapt $
+# $FreeBSD: audio/deadbeef/Makefile 317576 2013-05-07 06:45:39Z bapt $
 
 PORTNAME=	deadbeef
 PORTVERSION=	0.5.5
@@ -18,12 +18,10 @@ LIB_DEPENDS=	samplerate:${PORTSDIR}/audio/libsamplerate \
 		execinfo:${PORTSDIR}/devel/libexecinfo
 
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		pkgconfig gettext iconv shebangfix
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-USE_ICONV=	yes
-USE_PKGCONFIG=	build
 CONFIGURE_ARGS=	--disable-alsa --disable-nullout \
 		CPPFLAGS="-I../dumb/dumb-kode54/include -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" LIBS="-lexecinfo -lintl"
@@ -31,6 +29,7 @@ WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
 MAKE_JOBS_SAFE=	yes
 CONFIGURE_ENV+=	CONFIG_SHELL="${LOCALBASE}/bin/bash"
+SHEBANG_FILES=	yasmwrapper.sh
 
 OPTIONS_DEFINE=	PULSEAUDIO GUI VFS LASTFM ART EQ SID FFAP VTX HOTKEYS VORBIS FFMPEG \
 		FLAC SNDFILE WAV CDDA GME DUMB NOTIFY MUSEPACK WILD TTA DCA AAC \
@@ -359,8 +358,6 @@ post-patch:
 		${WRKSRC}/plugins/gme/Makefile.in \
 		${WRKSRC}/plugins/sid/Makefile.in \
 		${WRKSRC}/plugins/supereq/Makefile.in
-	@${REINPLACE_CMD} -e 's,/bin/bash,${LOCALBASE}/bin/bash,' \
-		${WRKSRC}/yasmwrapper.sh
 	@${REINPLACE_CMD} -e 's,/etc/timidity++/timidity-freepats.cfg:/etc/timidity/freepats.cfg:/etc/timidity/,${LOCALBASE}/share/,' \
 		${WRKSRC}/plugins/wildmidi/wildmidiplug.c
 
