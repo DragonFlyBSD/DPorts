@@ -2,7 +2,7 @@
 # Date created:				5 Sep 2012
 # Whom:			Zhihao Yuan <lichray@gmail.com>
 #
-# $FreeBSD: chinese/fcitx-table-extra/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: chinese/fcitx-table-extra/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	fcitx-table-extra
@@ -17,8 +17,7 @@ COMMENT=	Table-based input methods for Fcitx
 LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
-USES=		cmake
+USES=		cmake gettext
 USE_GNOME=	intltool
 INSTALLS_ICONS=	yes
 STRIP=
