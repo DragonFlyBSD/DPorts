@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: ports/ftp/wxdfast/Makefile,v 1.15 2013/02/08 11:48:48 svnexp Exp $
+# $FreeBSD: ftp/wxdfast/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	wxdfast
 PORTVERSION=	0.6.0
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_WX=		2.6+
 WX_CONF_ARGS=	relative
 WX_UNICODE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	aclocal automake autoconf libtoolize
 ACLOCAL_ARGS=	-I ${LOCALBASE}/share/locale
 AUTOMAKE_ARGS=	--add-missing --copy --force-missing --foreign
