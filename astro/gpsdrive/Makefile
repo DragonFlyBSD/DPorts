@@ -1,5 +1,5 @@
 # Created by: Marco Molteni <molter@gufi.org>
-# $FreeBSD: ports/astro/gpsdrive/Makefile,v 1.54 2013/02/25 11:41:49 svnexp Exp $
+# $FreeBSD: astro/gpsdrive/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gpsdrive
 PORTVERSION=	2.09
@@ -34,7 +34,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
