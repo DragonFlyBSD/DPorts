@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: security/gtkportscan/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/gtkportscan/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	gtkportscan
 PORTVERSION=	1.2
@@ -20,7 +20,7 @@ PLIST_FILES=	bin/gtkportscan bin/portscan
 
 .if ${PORT_OPTIONS:MGTK2}
 USE_GNOME=	gtk20
-USE_PKGCONFIG=	build
+USES+=		pkgconfig
 GTK_CONFIG=	pkg-config gtk+-2.0
 .else
 USE_GNOME=	gtk12
