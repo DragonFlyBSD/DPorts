@@ -2,7 +2,7 @@
 # Date created:		6 Apr 2005
 # Whom:			Jun Mukai <mukai@jmuk.org>
 #
-# $FreeBSD: ports/japanese/scim-skk/Makefile,v 1.35 2012/11/17 05:58:39 svnexp Exp $
+# $FreeBSD: japanese/scim-skk/Makefile 316662 2013-04-27 11:59:28Z mva $
 #    $MCom: ports/japanese/scim-skk/Makefile,v 1.1 2006/09/30 05:17:05 ahze Exp $
 
 PORTNAME=	scim-skk
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	scim:${PORTSDIR}/textproc/scim
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_AUTOTOOLS=	libtool
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
