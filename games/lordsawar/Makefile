@@ -1,9 +1,4 @@
-# New ports collection makefile for:   lordsawar
-# Date created:                 12 February 2008
-# Whom:                         spam@rm-rf.kiev.ua
-#
-# $FreeBSD: ports/games/lordsawar/Makefile,v 1.22 2012/11/17 05:57:45 svnexp Exp $
-#
+# $FreeBSD: games/lordsawar/Makefile 316834 2013-04-29 17:53:34Z ak $
 
 PORTNAME=	lordsawar
 PORTVERSION=	0.1.9
@@ -12,8 +7,8 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	ak@FreeBSD.org
-COMMENT=	A Warlords II clone
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Warlords II clone
 
 LICENSE=	GPLv3
 
@@ -24,7 +19,7 @@ LIB_DEPENDS=	glademm-2:${PORTSDIR}/devel/libglademm24 \
 BUILD_DEPENDS=	bjam:${PORTSDIR}/devel/boost-jam \
 		${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	intltool
 USE_SDL=	sdl image mixer
