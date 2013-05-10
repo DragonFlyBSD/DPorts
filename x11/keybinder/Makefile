@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/keybinder/Makefile,v 1.6 2012/12/27 08:51:46 svnexp Exp $
+# $FreeBSD: x11/keybinder/Makefile 316355 2013-04-23 14:20:25Z bapt $
 #
 
 PORTNAME=	keybinder
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gtk20
 USE_XORG=	x11 xext xrender
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	PYTHON LUA
