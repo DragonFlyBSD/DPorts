@@ -2,7 +2,7 @@
 # Date created:				15 August 2012
 # Whom:					Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/www/c-icap-modules/Makefile,v 1.6 2012/11/25 09:12:19 svnexp Exp $
+# $FreeBSD: www/c-icap-modules/Makefile 317389 2013-05-04 22:48:03Z flo $
 #
 
 PORTNAME=	c-icap
@@ -33,8 +33,8 @@ CONFIGURE_ARGS+=	--enable-static \
 
 post-install:
 	@${CP} -np ${PREFIX}/etc/c-icap/srv_url_check.conf.default \
-		${PREFIX}/etc/c-icap/srv_url_check.conf
+		${PREFIX}/etc/c-icap/srv_url_check.conf || ${TRUE}
 	@${CP} -np ${PREFIX}/etc/c-icap/virus_scan.conf.default \
-		${PREFIX}/etc/c-icap/virus_scan.conf
+		${PREFIX}/etc/c-icap/virus_scan.conf || ${TRUE}
 
 .include <bsd.port.mk>
