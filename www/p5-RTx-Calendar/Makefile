@@ -2,11 +2,11 @@
 # Date created:	        16 August 2008
 # Whom:                 Matthew Seaman <m.seaman@infracaninophile.co.uk>
 #
-# $FreeBSD: ports/www/p5-RTx-Calendar/Makefile,v 1.19 2012/11/17 06:02:53 svnexp Exp $
+# $FreeBSD: www/p5-RTx-Calendar/Makefile 316500 2013-04-25 05:16:25Z matthew $
 #
 
 PORTNAME=	RTx-Calendar
-PORTVERSION=	0.14
+PORTVERSION=	0.15
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
