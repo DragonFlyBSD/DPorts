@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/games/ultimatestunts/Makefile,v 1.22 2012/12/14 07:20:44 svnexp Exp $
+# $FreeBSD: games/ultimatestunts/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	ultimatestunts
 PORTVERSION=	0.7.7.1
@@ -17,11 +17,10 @@ LIB_DEPENDS=	vorbisfile.6:${PORTSDIR}/audio/libvorbis
 
 OPTIONS_DEFINE=	DOCS
 
+USES=		pkgconfig gettext
 USE_OPENAL=	al alut
 USE_GL=		gl glu
 USE_SDL=	sdl image
-USE_GETTEXT=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-openal
 MAKE_JOBS_UNSAFE=	yes
