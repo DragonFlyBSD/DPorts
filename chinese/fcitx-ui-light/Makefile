@@ -2,7 +2,7 @@
 # Date created:				09 Nov 2011
 # Whom:			Zhihao Yuan <lichray@gmail.com>
 #
-# $FreeBSD: chinese/fcitx-ui-light/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: chinese/fcitx-ui-light/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	fcitx-ui-light
@@ -19,9 +19,8 @@ LIB_DEPENDS=	fcitx-config.4:${PORTSDIR}/chinese/fcitx \
 		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_XORG=	x11 xft xpm
-USES=		cmake
+USES=		cmake gettext
 USE_GNOME=	intltool
 
 PROJECTHOST=	fcitx
