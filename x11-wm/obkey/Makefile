@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: ports/x11-wm/obkey/Makefile,v 1.1 2013/02/25 02:49:44 svnexp Exp $
+# $FreeBSD: x11-wm/obkey/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	obkey
 PORTVERSION=	1.0
@@ -13,7 +13,7 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	py2[67]-gtk>=2.14:${PORTSDIR}/x11-toolkits/py-gtk2
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PORTDOCS=	NEWS
