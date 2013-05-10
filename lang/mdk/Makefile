@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/lang/mdk/Makefile,v 1.47 2012/12/14 03:41:18 svnexp Exp $
+# $FreeBSD: lang/mdk/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	mdk
 PORTVERSION=	1.2.6
@@ -15,9 +15,7 @@ OPTIONS_DEFINE=	GLADE GUILE
 OPTIONS_DEFAULT=GLADE GUILE
 
 USE_GNOME=	glib20 intltool
-USE_NCURSES=	yes
-USE_READLINE=	yes
-USE_GETTEXT=	yes
+USES=		gettext ncurses readline
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
