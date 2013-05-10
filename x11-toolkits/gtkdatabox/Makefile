@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/gtkdatabox/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: x11-toolkits/gtkdatabox/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	gtkdatabox
 PORTVERSION=	0.9.2.0
@@ -16,9 +16,8 @@ OPTIONS_DEFINE=	GLADE GLADEUI DOCS EXAMPLES
 GLADE_DESC=	Enable libglade2 support
 GLADEUI_DESC=	Enable glade3 support
 
-USES=        pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	gtk20
-USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--includedir="${PREFIX}/include/${PORTNAME}" \
 		--with-html-dir="${PREFIX}/share/doc"
