@@ -2,7 +2,7 @@
 # Date created:				04 April 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/libbonoboui/Makefile,v 1.75 2012/11/17 06:03:36 svnexp Exp $
+# $FreeBSD: x11-toolkits/libbonoboui/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-toolkits/libbonoboui/Makefile,v 1.75 2010/09/28 16:03:49 kwm Exp $
 #
 
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack \
