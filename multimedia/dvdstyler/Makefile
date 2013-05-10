@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/dvdstyler/Makefile 315351 2013-03-27 06:20:07Z miwi $
+# $FreeBSD: multimedia/dvdstyler/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	dvdstyler
 PORTVERSION=	2.4.1
@@ -25,18 +25,17 @@ RUN_DEPENDS=	wxsvg>=1.1.13:${PORTSDIR}/graphics/wxsvg \
 		dvdauthor:${PORTSDIR}/multimedia/dvdauthor \
 		mplex:${PORTSDIR}/multimedia/mjpegtools \
 		growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
-		zip:${PORTSDIR}/archivers/zip
+		zip:${PORTSDIR}/archivers/zip \
+		mkisofs:${PORTSDIR}/sysutils/cdrtools
 
 OPTIONS_DEFINE=	GNOME DOCS
 
+USES=		pkgconfig gettext
 USE_BZIP2=	yes
 USE_WX=		2.8
 WX_COMPS=	wx svg
 WX_CONF_ARGS=	absolute
 USE_GNOME=	desktopfileutils
-USE_GETTEXT=	yes
-USE_CDRTOOLS=	yes	# dvdstyler needs mkisofs
-USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBAV_CFLAGS="${LIBAV_CFLAGS}" LIBAV_LIBS="${LIBAV_LIBS}" \
