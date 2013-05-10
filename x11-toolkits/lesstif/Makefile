@@ -1,5 +1,5 @@
 # Created by: 1wardd@airmail.net
-# $FreeBSD: ports/x11-toolkits/lesstif/Makefile,v 1.111 2013/01/26 16:45:52 svnexp Exp $
+# $FreeBSD: x11-toolkits/lesstif/Makefile 311023 2013-01-26 16:06:35Z dinoex $
 
 PORTNAME=	lesstif
 PORTVERSION=	0.95.2
