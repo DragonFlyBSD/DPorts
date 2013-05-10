@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net-im/farsight2/Makefile 315661 2013-04-02 09:27:05Z kwm $
+# $FreeBSD: net-im/farsight2/Makefile 316407 2013-04-24 07:35:40Z ak $
 #    $MCom: ports/net-im/farsight2/Makefile,v 1.10 2012/06/13 09:31:14 kwm Exp $
 
 PORTNAME=	farsight2
@@ -15,12 +15,11 @@ LIB_DEPENDS=	nice:${PORTSDIR}/net-im/libnice
 
 CONFLICTS=	farstream-[0-9]*
 
+USES=		pkgconfig gettext
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gnomehack glib20 ltverhack
-USE_PKGCONFIG=	build
 USE_GSTREAMER=	core good bad python
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
