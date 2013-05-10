@@ -2,7 +2,7 @@
 # Date created:		15 Nov 2008
 # Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
 #
-# $FreeBSD: ports/games/pushover/Makefile,v 1.13 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/pushover/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	pushover
@@ -22,7 +22,7 @@ USE_SDL=	sdl mixer ttf
 USE_LUA=	5.1
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GETTEXT=	yes
+USES=		gettext
 MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	*
