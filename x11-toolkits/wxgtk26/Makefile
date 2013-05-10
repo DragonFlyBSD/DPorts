@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wxgtk26
-# Date created:         		June 27, 2004
-# Whom:					fjoe@FreeBSD.ORG
-#
-# $FreeBSD: ports/x11-toolkits/wxgtk26/Makefile,v 1.51 2012/11/17 06:03:40 svnexp Exp $
-#
+# Created by: fjoe@FreeBSD.org
+# $FreeBSD: x11-toolkits/wxgtk26/Makefile 316695 2013-04-27 22:09:15Z bapt $
 
 PORTNAME=	wx
 PORTVERSION=	2.6.4
@@ -22,12 +18,12 @@ LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png\
 		expat.6:${PORTSDIR}/textproc/expat2\
 		mspack.1:${PORTSDIR}/archivers/libmspack
 
+USES=		iconv
 USE_BZIP2=	yes
 USE_XORG=	x11 sm xxf86vm xinerama
 USE_GL=		glu
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
-USE_ICONV=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libpng=sys\
