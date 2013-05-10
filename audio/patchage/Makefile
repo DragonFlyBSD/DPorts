@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: ports/audio/patchage/Makefile,v 1.11 2013/01/31 14:01:25 svnexp Exp $
+# $FreeBSD: audio/patchage/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
 
 PORTNAME=	patchage
 PORTVERSION=	0.5.0
@@ -37,9 +37,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 WAF_VERBOSE=	--verbose
 .endif
 
-.if defined(MAKE_JOBS_NUMBER)
 WAF_JOBS=	--jobs=${MAKE_JOBS_NUMBER}
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e \
