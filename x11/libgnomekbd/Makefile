@@ -2,7 +2,7 @@
 # Date created:		2006-11-07
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/libgnomekbd/Makefile,v 1.26 2012/11/17 06:03:17 svnexp Exp $
+# $FreeBSD: x11/libgnomekbd/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11/libgnomekbd/Makefile,v 1.48 2010/09/28 08:01:11 kwm Exp $
 #
 
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomehack ltverhack gconf2
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
