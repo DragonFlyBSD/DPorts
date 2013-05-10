@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/clutter/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: graphics/clutter/Makefile 316407 2013-04-24 07:35:40Z ak $
 #  $MCom: ports/graphics/clutter/Makefile,v 1.34 2010/09/24 16:35:42 kwm Exp $
 
 PORTNAME=	clutter
@@ -16,12 +16,11 @@ LIB_DEPENDS=	json-glib-1.0:${PORTSDIR}/devel/json-glib
 
 LICENSE=	LGPL21
 
+USES=		pkgconfig gettext
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gdkpixbuf2 gnomehack ltverhack gnomeprefix atk pango
-USE_PKGCONFIG=	build
 USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes
