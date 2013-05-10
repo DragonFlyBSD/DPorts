@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: games/gnomememoryblocks/Makefile 315665 2013-04-02 10:10:49Z kwm $
+# $FreeBSD: games/gnomememoryblocks/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	gnomememoryblocks
 PORTVERSION=	0.2
@@ -11,8 +11,7 @@ DISTNAME=	gnome-memblocks-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Memory Blocks game for GNOME
 
-USE_GETTEXT=	yes
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gnomeprefix gnomelibs gdkpixbuf
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
