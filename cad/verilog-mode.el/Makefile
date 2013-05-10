@@ -1,9 +1,5 @@
-# New ports collection makefile for:	verilog-mode.el
-# Date created:		12 January 2009
-# Whom:			stas
-#
-# $FreeBSD: cad/verilog-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
-#
+# Created by: stas
+# $FreeBSD: cad/verilog-mode.el/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	verilog-mode.el
 PORTVERSION=	801
@@ -18,6 +14,8 @@ COMMENT=	Emacs lisp modules for the Verilog language
 
 LICENSE=	GPLv3 # (or later)
 
+EXTRACT_CMD=	${GZCAT}
+EXTRACT_BEFORE_ARGS=	#
 EXTRACT_AFTER_ARGS=	> ${PORTNAME}
 
 NO_WRKSUBDIR=	yes
