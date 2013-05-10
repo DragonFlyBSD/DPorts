@@ -2,7 +2,7 @@
 # Date created:				18 Jan 2002
 # Whom:					Dom Mitchell <dom@happygiraffe.net>
 #
-# $FreeBSD: ports/games/toppler/Makefile,v 1.29 2012/11/17 05:57:54 svnexp Exp $
+# $FreeBSD: games/toppler/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	toppler
@@ -15,7 +15,7 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	A game where you have to climb the tower and avoid the monsters
 
 USE_SDL=	mixer sdl
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=${PREFIX}/share
