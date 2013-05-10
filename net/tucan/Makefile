@@ -2,7 +2,7 @@
 # Date created:         2009-14-11
 # Whom:                 Gustau Perez Querol <gustau.perez@gmail.com>
 #
-# $FreeBSD: ports/net/tucan/Makefile,v 1.9 2012/11/17 06:00:23 svnexp Exp $
+# $FreeBSD: net/tucan/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	tucan
@@ -24,7 +24,7 @@ USE_PYTHON=	2.5+
 
 MANCOMPRESSED=	yes
 MAN1=		tucan.1
-USE_GETTEXT=	yes
+USES=		gettext
 
 post-patch:
 	${REINPLACE_CMD} -Ee 's|#! /usr/bin/env python|#! ${PYTHON_CMD}|' ${WRKSRC}/tucan.py
