@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: ports/x11-wm/e16utils/Makefile,v 1.35 2012/11/17 06:03:41 svnexp Exp $
+# $FreeBSD: x11-wm/e16utils/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	e16utils
 PORTVERSION=	0.16
@@ -16,7 +16,7 @@ COMMENT=	Standalone menu and keybinding editors for enlightenment 0.16
 LIB_DEPENDS=	gdbm:${PORTSDIR}/databases/gdbm
 
 USE_GNOME=	imlib gtk20
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 SUB_STUBS=	e16menuedit-0.1 e16keyedit-0.7
 
