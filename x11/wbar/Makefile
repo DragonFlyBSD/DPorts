@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: x11/wbar/Makefile 311772 2013-02-06 14:52:39Z nivit $
+# $FreeBSD: x11/wbar/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	wbar
 PORTVERSION=	2.3.4
@@ -50,7 +50,7 @@ PLIST_SUB+=	WBARCONFIG="@comment "
 .endif
 
 USE_EFL=	imlib2
-USE_GETTEXT=	yes
+USES+=		gettext
 USE_GMAKE=	yes
 USE_GNOME+=	desktopfileutils intltool
 
