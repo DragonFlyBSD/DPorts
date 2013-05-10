@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: ports/databases/sqsh/Makefile,v 1.39 2012/12/13 04:41:37 svnexp Exp $
+# $FreeBSD: databases/sqsh/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	sqsh
 PORTVERSION=	2.1.8
@@ -16,7 +16,7 @@ LIB_DEPENDS=	ct:${PORTSDIR}/databases/freetds
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11
 
-USE_READLINE=	yes
+USES=		readline
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	SYBASE="${LOCALBASE}"
 CONFIGURE_ARGS=	--with-readline
