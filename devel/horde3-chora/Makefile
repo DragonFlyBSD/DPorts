@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: devel/horde3-chora/Makefile 313753 2013-03-09 19:59:21Z eadler $
+# $FreeBSD: devel/horde3-chora/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	chora
 PORTVERSION=	2.1.1
@@ -42,7 +42,7 @@ CVSROOT=	/home/cvs
 .endif
 
 USE_HORDE=	base pkg-message
-USE_GETTEXT=	yes
+USES=		gettext
 PORTDOCS=	README BUGS CHANGES CREDITS INSTALL RELEASE_NOTES TODO
 
 pre-configure:
