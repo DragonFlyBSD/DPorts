@@ -2,7 +2,7 @@
 # Date created:		24 February 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/security/clamtk/Makefile,v 1.55 2013/02/02 20:44:08 svnexp Exp $
+# $FreeBSD: security/clamtk/Makefile 316434 2013-04-24 13:36:18Z ak $
 #
 
 PORTNAME=	clamtk
@@ -28,7 +28,7 @@ RUN_DEPENDS=	p5-Config-Tiny>=2.12:${PORTSDIR}/devel/p5-Config-Tiny \
 
 NO_BUILD=	yes
 USE_PERL5_RUN=	yes
-USE_GETTEXT=	run
+USES=		gettext:run
 
 MAN1=		${PORTNAME}.1
 
