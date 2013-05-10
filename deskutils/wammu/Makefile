@@ -2,7 +2,7 @@
 # Date created:        			14 May 2010
 # Whom:                			bsam
 #
-# $FreeBSD: ports/deskutils/wammu/Makefile,v 1.12 2012/11/17 05:55:31 svnexp Exp $
+# $FreeBSD: deskutils/wammu/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=		wammu
@@ -20,7 +20,7 @@ RUN_DEPENDS+=		gammu:${PORTSDIR}/comms/gammu
 
 LICENSE=		GPLv2
 
-USE_GETTEXT=		yes
+USES=		gettext
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 USE_WX=			2.6+
