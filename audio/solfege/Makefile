@@ -3,7 +3,7 @@
 # Date created:			Apr 10, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/audio/solfege/Makefile,v 1.64 2012/11/17 05:54:44 svnexp Exp $
+# $FreeBSD: audio/solfege/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/audio/solfege/Makefile,v 1.7 2007/09/09 23:47:50 mezz Exp $
 #
 
@@ -22,7 +22,7 @@ BUILD_DEPENDS=	${STYLESHEET}:${PORTSDIR}/textproc/docbook-xsl \
 USE_GNOME=	gnomehack pygtk2
 WANT_GNOME=	yes
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_XML2PO=""
