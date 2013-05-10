@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/sodipodi/files/patch-src::xml::repr-io.c,v 1.2 2012/11/17 05:58:23 svnexp Exp $
+$FreeBSD: graphics/sodipodi/files/patch-src::xml::repr-io.c 300896 2012-07-14 13:54:48Z beat $
 
 --- src/xml/repr-io.c	2001/11/22 15:20:50	1.1
 +++ src/xml/repr-io.c	2001/11/22 15:21:18

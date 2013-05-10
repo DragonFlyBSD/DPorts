@@ -2,7 +2,7 @@
 # Date created:        28 January 2000
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/sodipodi/Makefile,v 1.83 2012/11/17 05:58:23 svnexp Exp $
+# $FreeBSD: graphics/sodipodi/Makefile 316464 2013-04-24 18:10:30Z ak $
 #    $MCom: ports/graphics/sodipodi/Makefile,v 1.3 2007/05/30 03:21:43 mezz Exp $
 
 PORTNAME=	sodipodi
@@ -19,7 +19,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
 
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libglade2 libartlgpl2 desktopfileutils
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--without-gnome-print \
 		--with-popt
