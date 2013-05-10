@@ -2,7 +2,7 @@
 # Date created:			Sep 18. 2005
 # Whom:				Volker Stolz <vs@FreeBSD.org>
 #
-# $FreeBSD: textproc/gastex/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: textproc/gastex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	gastex
@@ -17,9 +17,7 @@ EXTRACT_ONLY=	#
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphs and Automata Simplified in TeX
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-
+USE_TEX=	tetex
 NO_BUILD=	yes
 
 TEXMFDIR?=	share/texmf
