@@ -1,9 +1,5 @@
-# New ports collection makefile for:   lxterminal
-# Date created:                2010/09/24
-# Whom:                        Kris Moore <kmoore@freebsd.org>
-#
-# $FreeBSD: ports/sysutils/lxterminal/Makefile,v 1.5 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Kris Moore <kmoore@freebsd.org>
+# $FreeBSD: sysutils/lxterminal/Makefile 317491 2013-05-06 09:07:58Z bapt $
 
 PORTNAME=	lxterminal
 PORTVERSION=	0.1.11
@@ -18,14 +14,16 @@ LIB_DEPENDS=	vte.9:${PORTSDIR}/x11-toolkits/vte
 
 USE_GNOME=	gtk20 intlhack
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
 MAN1=		lxterminal.1
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
