@@ -1,5 +1,5 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
-# $FreeBSD: sysutils/polkit-gnome/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: sysutils/polkit-gnome/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.20 2012/12/18 13:05:11 kwm Exp $
 
 PORTNAME=	polkit-gnome
@@ -14,7 +14,7 @@ LIB_DEPENDS=	polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomehack gnomeprefix gtk20 intlhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
