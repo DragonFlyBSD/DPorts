@@ -1,5 +1,5 @@
 # Created by: Jie Gao	<gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: korean/scim-tables/Makefile 315130 2013-03-24 15:51:03Z bdrewery $
+# $FreeBSD: korean/scim-tables/Makefile 316355 2013-04-23 14:20:25Z bapt $
 #    $MCom: ports/korean/scim-tables/Makefile,v 1.1 2006/09/30 03:44:11 ahze Exp $
 PORTNAME=	scim-tables
 PORTVERSION=	0.5.10
@@ -15,7 +15,7 @@ RUN_DEPENDS=	scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 .include <bsd.port.pre.mk>
 
