@@ -1,9 +1,9 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: ports/mail/wmbiff/Makefile,v 1.49 2013/02/05 16:54:23 svnexp Exp $
+# $FreeBSD: mail/wmbiff/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	wmbiff
 PORTVERSION=	0.4.27
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	mail windowmaker afterstep
 MASTER_SITES=	SF
 
