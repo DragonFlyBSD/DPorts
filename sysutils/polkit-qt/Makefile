@@ -2,7 +2,7 @@
 # Date created:		2009-12-25
 # Whom:			Dima Panov <fluffy@Fluffy.Khv.RU>
 #
-# $FreeBSD: sysutils/polkit-qt/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: sysutils/polkit-qt/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	polkit-qt
@@ -22,12 +22,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	polkit-agent-1.0:${PORTSDIR}/sysutils/polkit
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_KDE4=	automoc4
 USE_QT4=	corelib dbus gui network svg xml  \
 		qmake_build moc_build rcc_build uic_build
-USES=		cmake
+USES=		cmake gettext
 # TODO: the next release (post-0.103.0) should have commit 56883bd, which
 #       syncs FindGObject.cmake with kdelibs' and should find GObject without
 #       requiring us to explicitly set LDFLAGS.
