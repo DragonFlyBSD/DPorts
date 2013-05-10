@@ -1,8 +1,8 @@
 # Created by: nbm
-# $FreeBSD: databases/phpmyadmin/Makefile 315903 2013-04-16 20:58:07Z matthew $
+# $FreeBSD: databases/phpmyadmin/Makefile 317295 2013-05-04 06:24:53Z matthew $
 
 PORTNAME=	phpMyAdmin
-DISTVERSION=	3.5.8
+DISTVERSION=	4.0.0
 CATEGORIES=	databases www
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${DISTVERSION}
 DISTNAME=	${PORTNAME}-${DISTVERSION}-all-languages
@@ -23,9 +23,9 @@ USE_PHP=	ctype session filter mbstring json spl
 # want this, either turn off GD in the config dialog, or else turn off
 # FONTCONFIG in the graphics/gd port options.
 
-PHP_MODULE_OPTIONS=	APC BZ2 GD MCRYPT OPENSSL PDF ZIP ZLIB
+PHP_MODULE_OPTIONS=	APC BZ2 GD MCRYPT OPENSSL PDF XML ZIP ZLIB
 OPTIONS_DEFINE=		SUPHP ${PHP_MODULE_OPTIONS}
-OPTIONS_DEFAULT=	APC BZ2 GD MCRYPT MYSQLI OPENSSL PDF ZIP ZLIB
+OPTIONS_DEFAULT=	APC BZ2 GD MCRYPT MYSQLI OPENSSL PDF XML ZIP ZLIB
 
 OPTIONS_MULTI=		DB_connect
 OPTIONS_MULTI_DB_connect=	MYSQL MYSQLI
@@ -39,6 +39,7 @@ MYSQL_DESC=	PHP MySQL support via mysql client
 OPENSSL_DESC=	PHP OpenSSL support
 PDF_DESC=	PHP PDFlib support
 SUPHP_DESC=	suPHP support
+XML_DESC=	PHP XML support (Export to OpenDoc)
 ZIP_DESC=	PHP Zip compression support
 ZLIB_DESC=	PHP ZLIB support
 
