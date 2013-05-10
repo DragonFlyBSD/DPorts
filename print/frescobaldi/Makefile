@@ -1,5 +1,5 @@
 # Created by: martin.dieringer@gmx.de
-# $FreeBSD: print/frescobaldi/Makefile 315375 2013-03-27 12:00:14Z makc $
+# $FreeBSD: print/frescobaldi/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	frescobaldi
 PORTVERSION=	2.0.8
@@ -16,7 +16,7 @@ LICENSE_COMB=	dual
 RUN_DEPENDS=	lilypond:${PORTSDIR}/print/lilypond \
 		${PYTHON_PKGNAMEPREFIX}poppler-qt4>=0:${PORTSDIR}/graphics/py-poppler-qt4
 
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 USE_KDE4=	kdeprefix kdelibs pykde4_build pykde4_run
 USE_PYTHON=	2.6+
