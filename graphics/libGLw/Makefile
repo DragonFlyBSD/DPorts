@@ -1,5 +1,5 @@
 # Created by: anholt@FreeBSD.org
-# $FreeBSD: graphics/libGLw/Makefile 313300 2013-03-02 21:32:51Z swills $
+# $FreeBSD: graphics/libGLw/Makefile 317215 2013-05-03 15:20:07Z bapt $
 
 PORTNAME=	libGLw
 PORTVERSION=	${MESAVERSION}
@@ -12,8 +12,8 @@ USE_GL=		gl
 USE_MOTIF=	yes
 USE_XORG=	glproto xt x11 xext xxf86vm xdamage xfixes dri2proto
 
-do-install:
-	cd ${WRKSRC}/src/glw; ${GMAKE} install
+INSTALL_WRKSRC=	${WRKSRC}/src/glw
+BUILD_WRKSRC=	${WRKSRC}/src/glw
 
 .include "${.CURDIR}/../../graphics/libGL/bsd.mesalib.mk"
 
