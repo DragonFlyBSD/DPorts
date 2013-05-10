@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <michaelnottebrock@gmx.net>
-# $FreeBSD: multimedia/dvdrip/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: multimedia/dvdrip/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	dvdrip
 PORTVERSION=	0.98.11
@@ -26,7 +26,8 @@ RUN_DEPENDS+=	cdrdao:${PORTSDIR}/sysutils/cdrdao \
 		transcode:${PORTSDIR}/multimedia/transcode \
 		vcdimager:${PORTSDIR}/multimedia/vcdimager \
 		unrar:${PORTSDIR}/archivers/unrar \
-		${LOCALBASE}/sbin/fping:${PORTSDIR}/net/fping
+		${LOCALBASE}/sbin/fping:${PORTSDIR}/net/fping \
+		cdrecord:${PORTSDIR}/sysutils/cdrtools
 
 OPTIONS_DEFINE=	VORBIS SUBTITLE
 OPTIONS_DEFAULT=	VORBIS SUBTITLE
@@ -34,8 +35,7 @@ SUBTITLE_DESC=	Enable support for getting subtitles
 
 PERL_CONFIGURE=	yes
 CONFIGURE_ENV=	SKIP_UNPACK_REQUIRED_MODULES=1
-USE_CDRTOOLS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		dvdrip.1 dvdrip-progress.1 dvdrip-splitpipe.1
