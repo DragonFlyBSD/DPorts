@@ -1,10 +1,9 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-#
-# $FreeBSD: ports/audio/gnormalize/Makefile,v 1.18 2013/01/08 16:55:22 svnexp Exp $
+# $FreeBSD: audio/gnormalize/Makefile 317573 2013-05-07 06:31:06Z bapt $
 
 PORTNAME=	gnormalize
 PORTVERSION=	0.63
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
@@ -14,8 +13,11 @@ COMMENT=	An alternative for replaygain
 RUN_DEPENDS+=	p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		wavegain:${PORTSDIR}/audio/wavegain
 
+USES=		shebangfix
 USE_PERL5_RUN=	yes
 INSTALLS_ICONS=	yes
+
+SHEBANGFILES=	${PORTNAME}
 
 NO_BUILD=	yes
 
@@ -44,7 +46,7 @@ RUN_DEPENDS+=	faac:${PORTSDIR}/audio/faac \
 .endif
 
 .if ${PORT_OPTIONS:MCDPARANOIA} || ${PORT_OPTIONS:MCDDA2WAV}
-USE_CDRTOOLS=	yes
+RUN_DEPENDS+=	cdda2wav:${PORTSDIR}/sysutils/cdrtools
 .else
 RUN_DEPENDS+=	cdparanoia:${PORTSDIR}/audio/cdparanoia
 .endif
@@ -67,10 +69,6 @@ RUN_DEPENDS+=	mac:${PORTSDIR}/audio/mac
 
 .if ${PORT_OPTIONS:MMUSEPACK}
 RUN_DEPENDS+=	mppenc:${PORTSDIR}/audio/musepack
-.endif
-
-.if ${OSVERSION} < 800505 || (${OSVERSION} >= 900000 && ${OSVERSION} < 900012)
-BUILD_DEPENDS+=	lzma:${PORTSDIR}/archivers/xz
 .endif
 
 post-patch:
