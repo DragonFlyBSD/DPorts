@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/graphics/evas-loader-xpm/Makefile,v 1.15 2013/01/15 17:46:00 svnexp Exp $
+# $FreeBSD: graphics/evas-loader-xpm/Makefile 317198 2013-05-03 12:24:26Z bapt $
 
 PORTNAME=	loader-xpm
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6.1
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -19,8 +19,12 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+MYMAKE=		${MAKE}
+.if defined(.PARSEDIR)
+USE_GMAKE=	yes
+MYMAKE=		${GMAKE}
+.endif
 USE_EFL=	evas librt_hack libtool_hack
-USE_GNOME=	gnomehack pkgconfig
 USE_XORG=	xpm
 USE_LDCONFIG=	yes
 
@@ -38,11 +42,11 @@ post-patch:
 		${MAKEDIRS:S,$,/Makefile.in,}
 
 do-build:
-	@(for DIR in ${MAKEDIRS}; do cd $${DIR}; ${SETENV} ${MAKE_ENV} ${MAKE} \
+	@(for DIR in ${MAKEDIRS}; do cd $${DIR}; ${SETENV} ${MAKE_ENV} ${MYMAKE} \
 	    ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET}; done)
 
 do-install:
-	@(for DIR in ${MAKEDIRS}; do cd $${DIR}; ${SETENV} ${MAKE_ENV} ${MAKE} \
+	@(for DIR in ${MAKEDIRS}; do cd $${DIR}; ${SETENV} ${MAKE_ENV} ${MYMAKE} \
 	    ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET}; done)
 
 .include <bsd.port.mk>
