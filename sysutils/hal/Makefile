@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/hal/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: sysutils/hal/Makefile 317507 2013-05-06 11:12:33Z kwm $
 #   $MCom: ports/sysutils/hal/Makefile,v 1.81 2010/04/13 02:49:07 mezz Exp $
 
 PORTNAME=	hal
@@ -12,14 +12,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Hardware Abstraction Layer for simplifying device access
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l_compat
-LIB_DEPENDS=	polkit:${PORTSDIR}/sysutils/policykit \
+# keep shlib version, to prevent confusion with polkit-* from sysutils/polkit
+LIB_DEPENDS=	polkit.2:${PORTSDIR}/sysutils/policykit \
 		volume_id:${PORTSDIR}/devel/libvolume_id \
 		ck-connector:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:${PORTSDIR}/misc/pciids
 
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	intlhack ltverhack
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
