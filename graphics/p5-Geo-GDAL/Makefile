@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/graphics/p5-Geo-GDAL/Makefile,v 1.3 2012/12/09 06:13:37 svnexp Exp $
+# $FreeBSD: graphics/p5-Geo-GDAL/Makefile 316591 2013-04-26 09:14:48Z sunpoet $
 
 PORTNAME=	Geo-GDAL
 PORTVERSION=	1.9.2
@@ -12,6 +12,8 @@ DISTNAME=	gdal-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl binding for GDAL
+
+LICENSE=	MIT
 
 LIB_DEPENDS=	gdal:${PORTSDIR}/graphics/gdal
 
