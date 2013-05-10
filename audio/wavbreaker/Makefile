@@ -2,7 +2,7 @@
 # Date created:				20 May 2003
 # Whom:					Kirill Ponomarew <ponomarew@oberon.net>
 #
-# $FreeBSD: ports/audio/wavbreaker/Makefile,v 1.34 2012/11/17 05:54:47 svnexp Exp $
+# $FreeBSD: audio/wavbreaker/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	wavbreaker
 PORTVERSION=	0.11
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--disable-pulse
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
