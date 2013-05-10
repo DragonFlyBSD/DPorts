@@ -1,5 +1,5 @@
 # Created by:	Tobias Kortkamp <tobias.kortkamp@gmail.com>
-# $FreeBSD: ports/deskutils/easystroke/Makefile,v 1.1 2013/02/15 02:44:49 svnexp Exp $
+# $FreeBSD: deskutils/easystroke/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	easystroke
 PORTVERSION=	0.5.6
@@ -26,7 +26,7 @@ OPTIONS_DEFINE=	NLS
 
 .include <bsd.port.options.mk>
 
-USE_GETTEXT=	yes
+USES+=		gettext
 
 .if ${PORT_OPTIONS:MNLS}
 BUILD_DEPENDS+=	intltool-merge:${PORTSDIR}/textproc/intltool
