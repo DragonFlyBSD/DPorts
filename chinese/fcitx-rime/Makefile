@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-rime/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: chinese/fcitx-rime/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	fcitx-rime
 PORTVERSION=	0.1.2
@@ -16,8 +16,7 @@ LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx \
 
 USE_LDCONFIG=	${PREFIX}/lib/fcitx/
 USE_XZ=		yes
-USE_GETTEXT=	yes
-USES=		cmake
+USES=		cmake gettext
 USE_GNOME=	intltool
 INSTALLS_ICONS=	yes
 
