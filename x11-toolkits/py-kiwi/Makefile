@@ -2,7 +2,7 @@
 # Date created:		2006-05-04
 # Whom:			Nicola Vitale	<nivit@email.it>
 #
-# $FreeBSD: ports/x11-toolkits/py-kiwi/Makefile,v 1.20 2012/11/17 06:03:38 svnexp Exp $
+# $FreeBSD: x11-toolkits/py-kiwi/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	kiwi
@@ -19,7 +19,7 @@ COMMENT=	A framework and a set of enhanced widgets based on PyGTK
 BUILD_DEPENDS=	pygtk-codegen-2.0:${PORTSDIR}/x11-toolkits/py-gtk2
 RUN_DEPENDS=	pygtk-codegen-2.0:${PORTSDIR}/x11-toolkits/py-gtk2
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	libglade2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
