@@ -2,7 +2,7 @@
 # Date created:			24 Mar 2008
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/www/libepc/Makefile,v 1.15 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: www/libepc/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	libepc
@@ -20,7 +20,7 @@ LIB_DEPENDS=	uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid \
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomeprefix gnomehack gtk20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
