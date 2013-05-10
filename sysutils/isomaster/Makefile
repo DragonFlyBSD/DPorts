@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-# $FreeBSD: sysutils/isomaster/Makefile 313192 2013-03-02 05:46:45Z miwi $
+# $FreeBSD: sysutils/isomaster/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	isomaster
 PORTVERSION=	1.3.9
@@ -16,7 +16,7 @@ RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 
 USE_BZIP2=	yes
 USE_GNOME=	desktopfileutils intlhack gnomehier gtk20
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 MAKE_ENV=	DEFAULT_VIEWER="xdg-open" USE_SYSTEM_INIPARSER=1
 MAKE_JOBS_SAFE=	yes
