@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: deskutils/xchm/Makefile 313996 2013-03-12 18:43:53Z rm $
+# $FreeBSD: deskutils/xchm/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	xchm
 PORTVERSION=	1.22
@@ -23,7 +23,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
