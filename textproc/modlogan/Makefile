@@ -2,7 +2,7 @@
 # Date created:         06.Sep.2000
 # Whom:                 Alexander@Leidinger.net
 #
-# $FreeBSD: ports/textproc/modlogan/Makefile,v 1.62 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: textproc/modlogan/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	modlogan
@@ -20,7 +20,7 @@ LIB_DEPENDS=	adns.1:${PORTSDIR}/dns/adns \
 		expat.6:${PORTSDIR}/textproc/expat2
 
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
+USES=		gettext
 
 # Please don't remove the comments, as soon as autoconf/libtool get's
 # updated in the ports collection the comments may be removed.
