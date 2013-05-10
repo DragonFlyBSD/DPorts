@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/latex-ltablex/Makefile,v 1.8 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-ltablex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	ltablex
 PORTVERSION=	1.0
@@ -17,10 +17,8 @@ DIST_SUBDIR=	latex
 MAINTAINER=	rakuco@FreeBSD.org
 COMMENT=	Combines the features of both the tabularx and longtable packages
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-
 USE_ZIP=	YES
+USE_TEX=	tetex
 NO_BUILD=	YES
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} \
 		CLASSDIR=${CLASSDIR} \
