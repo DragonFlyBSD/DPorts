@@ -1,5 +1,5 @@
 # Created by: itojun@itojun.org
-# $FreeBSD: ports/misc/magicpoint/Makefile,v 1.61 2013/01/26 16:45:50 svnexp Exp $
+# $FreeBSD: misc/magicpoint/Makefile 316615 2013-04-26 13:50:31Z bapt $
 
 PORTNAME=	magicpoint
 PORTVERSION=	1.13a
@@ -46,7 +46,7 @@ NO_OPTIONS_SORT=yes
 
 .if ${PORT_OPTIONS:MFREETYPE}
 # Only freetype 1.x is supported
-USE_FREETYPE=		yes
+LIB_DEPENDS+=		ttf:${PORTSDIR}/print/freetype
 CONFIGURE_ARGS+=	--enable-freetype \
 			--enable-freetype-charset16
 .else
