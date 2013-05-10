@@ -2,7 +2,7 @@
 # Date created:		31 Aug 2008
 # Whom:			vj562001@yahoo.de
 #
-# $FreeBSD: ports/print/latex-csquotes/Makefile,v 1.12 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-csquotes/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	csquotes
 PORTVERSION=	5.0b
@@ -15,13 +15,10 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	idolum@users.sourceforge.net
 COMMENT=	Context sensitive quotation facilities
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal \
-		${LOCALBASE}/${TEXMFLOCAL}/tex/latex/etoolbox/etoolbox.sty:${PORTSDIR}/print/latex-etoolbox
+RUN_DEPENDS=	${LOCALBASE}/${TEXMFLOCAL}/tex/latex/etoolbox/etoolbox.sty:${PORTSDIR}/print/latex-etoolbox
 
 USE_ZIP=	YES
+USE_TEX=	tetex
 NO_BUILD=	YES
 PLIST=		${WRKDIR}/pkg-plist
 
