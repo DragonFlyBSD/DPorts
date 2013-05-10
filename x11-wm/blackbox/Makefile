@@ -2,7 +2,7 @@
 # Date created:				June 15, 1998
 # Whom:					Brian Handy <handy@physics.montana.edu>
 #
-# $FreeBSD: ports/x11-wm/blackbox/Makefile,v 1.57 2012/11/17 06:03:41 svnexp Exp $
+# $FreeBSD: x11-wm/blackbox/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	blackbox
@@ -17,8 +17,7 @@ COMMENT=	A small and fast window manager for X11R6
 LICENSE=	MIT
 
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
-USE_GNOME=	gnomehack pkgconfig
+USES=		pathfix pkgconfig iconv
 USE_XORG=	x11 xft
 
 MAN1=		bsetbg.1 bsetroot.1
