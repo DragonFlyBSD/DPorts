@@ -2,7 +2,7 @@
 # Date created:                10 Mar 2001
 # Whom:                        Shen Chuan-Hsing
 #
-# $FreeBSD: ports/chinese/cwtex/Makefile,v 1.21 2012/11/17 05:54:56 svnexp Exp $
+# $FreeBSD: chinese/cwtex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	cwtex
@@ -16,8 +16,7 @@ DISTFILES=	cwtexmain.tgz cwtexbin-${PORTVERSION}.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CwTeX let you use Chinese Big5 codes in TeX/LaTeX documents
 
-BUILD_DEPENDS=	latex:${PORTSDIR}/print/teTeX
-
+USE_TEX=	tetex
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
