@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: games/monster-masher/Makefile 315027 2013-03-23 13:11:25Z kwm $
+# $FreeBSD: games/monster-masher/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	monster
 PORTVERSION=	1.8.1
@@ -17,10 +17,9 @@ LIB_DEPENDS=	gnomecanvasmm-2.6:${PORTSDIR}/graphics/libgnomecanvasmm26 \
 		glademm-2.4:${PORTSDIR}/devel/libglademm24
 
 USE_BZIP2=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack libgnome esound
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lesd
