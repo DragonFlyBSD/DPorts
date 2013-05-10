@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/gretl/Makefile 316182 2013-04-21 15:00:50Z bf $
+# $FreeBSD: math/gretl/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gretl
 PORTVERSION=	1.9.12
@@ -67,7 +67,7 @@ PLIST_SUB+=		GUI="@comment "
 
 .if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=	--enable-nls=yes
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--enable-nls=no
