@@ -1,5 +1,5 @@
 # Created by: Yuan Jue <yuanjue@yuanjue.net>
-# $FreeBSD: devel/kdesvn-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/kdesvn-kde4/Makefile 316620 2013-04-26 15:10:57Z bapt $
 
 PORTNAME=	kdesvn
 DISTVERSION=	1.6.0
@@ -26,10 +26,10 @@ MAKE_JOBS_SAFE=	yes
 
 MAN1=		kdesvn.1 kdesvnaskpass.1
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=	gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
@@ -48,4 +48,4 @@ post-patch:
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
