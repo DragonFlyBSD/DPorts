@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: x11/xkeyboard-config/Makefile 315717 2013-04-04 13:08:21Z bapt $
+# $FreeBSD: x11/xkeyboard-config/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	xkeyboard-config
 PORTVERSION=	2.5.1
@@ -30,8 +30,7 @@ MAN7=		xkeyboard-config.7
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES+=		gettext iconv
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
