@@ -2,7 +2,7 @@
 # Date Created:		9 Feb 1997
 # Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
 #
-# $FreeBSD: ports/converters/xdeview/Makefile,v 1.38 2012/12/04 13:59:17 svnexp Exp $
+# $FreeBSD: converters/xdeview/Makefile 316351 2013-04-23 11:51:52Z gahr $
 #
 
 PORTNAME=	xdeview
@@ -19,8 +19,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	uu.3:${PORTSDIR}/converters/uulib
 
-USE_TK_BUILD=	83+
-USE_TK=		83+
+USE_TK=		84+
 GNU_CONFIGURE=	yes
 # Explicitly disable Tcl otherwise the configure script picks-up
 # crud from the $PATH like /usr/opt/Simili/tcl/.
