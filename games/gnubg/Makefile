@@ -2,7 +2,7 @@
 # Date created:		8 Dec 2002
 # Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
 #
-# $FreeBSD: ports/games/gnubg/Makefile,v 1.44 2012/11/17 05:57:40 svnexp Exp $
+# $FreeBSD: games/gnubg/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gnubg
@@ -51,7 +51,7 @@ CONFIGURE_ENV+=	ac_cv_path_AUDIOFILE_CONFIG=no ac_cv_path_ESD_CONFIG=no
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CONFIGURE_ARGS+=	--enable-nls
 .else
