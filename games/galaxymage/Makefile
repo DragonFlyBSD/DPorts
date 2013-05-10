@@ -2,7 +2,7 @@
 # Date created:		2006-01-30
 # Whom:			Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
 #
-# $FreeBSD: ports/games/galaxymage/Makefile,v 1.13 2012/11/17 05:57:39 svnexp Exp $
+# $FreeBSD: games/galaxymage/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	galaxymage
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/Numeric/_numpy.so:${PORTSDIR}/math/py-numeric 
 
 USE_PYTHON=	yes
 USE_TWISTED=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 NO_BUILD=	yes
 
 OPTIONS=	PSYCO	"Use just-in-time Python compiler" off
