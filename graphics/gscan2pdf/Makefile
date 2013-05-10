@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gscan2pdf
-# Date created:		4 September 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/gscan2pdf/Makefile,v 1.67 2012/11/17 05:58:08 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: graphics/gscan2pdf/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	gscan2pdf
 PORTVERSION=	1.0.4
@@ -72,8 +68,10 @@ PERL_CONFIGURE=	yes
 MAN1=		${PORTNAME}.1 scanadf-perl.1 scanimage-perl.1
 PORT_VERBS=	${PORTNAME} Gscan2pdf
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
