@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/graphics/gpicview/Makefile,v 1.14 2013/01/09 20:04:47 svnexp Exp $
+# $FreeBSD: graphics/gpicview/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	gpicview
 PORTVERSION=	0.2.1
@@ -16,8 +16,10 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
