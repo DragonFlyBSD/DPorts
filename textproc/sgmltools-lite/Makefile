@@ -2,7 +2,7 @@
 # Date created:				7 Apr 2000
 # Whom:					Benno Rice <benno@netizen.com.au>
 #
-# $FreeBSD: ports/textproc/sgmltools-lite/Makefile,v 1.22 2012/11/17 06:02:21 svnexp Exp $
+# $FreeBSD: textproc/sgmltools-lite/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	sgmltools-lite
@@ -14,12 +14,12 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generates various output formats from DocBook SGML documents
 
-BUILD_DEPENDS+=	openjade:${PORTSDIR}/textproc/openjade \
-		${LOCALBASE}/share/texmf:${PORTSDIR}/print/teTeX
+BUILD_DEPENDS+=	openjade:${PORTSDIR}/textproc/openjade
 RUN_DEPENDS+=	docbook<2:${PORTSDIR}/textproc/docbook \
 		${LOCALBASE}/share/sgml/docbook/dsssl:${PORTSDIR}/textproc/dsssl-docbook-modular
 
 USE_PYTHON_BUILD=	yes
+USE_TEX=	tetex
 MAN1=		sgmltools-lite.1
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-etcsgml=${PREFIX}/etc/sgml --datadir=${PREFIX}/share
