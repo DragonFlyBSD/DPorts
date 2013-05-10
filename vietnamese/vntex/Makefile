@@ -3,7 +3,7 @@
 # Date created:			  Tue Feb 06, 2001
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
-# $FreeBSD: ports/vietnamese/vntex/Makefile,v 1.14 2012/11/17 06:02:26 svnexp Exp $
+# $FreeBSD: vietnamese/vntex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	vntex
@@ -16,10 +16,8 @@ DISTNAME=	vntex
 MAINTAINER=	obrien@FreeBSD.org
 COMMENT=	teTeX Vietnamese language + font support
 
-#	actually just need to make sure ${PREFIX}/share/texmf/tex/ exists
-RUN_DEPENDS=	${LOCALBASE}/share/texmf/tex/plain:${PORTSDIR}/print/teTeX
-
 USE_ZIP=	yes
+USE_TEX=	tetex
 NO_BUILD=	yes
 
 do-install:
