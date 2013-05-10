@@ -1,5 +1,5 @@
 # Created by: bsam
-# $FreeBSD: databases/py-sqlkit/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: databases/py-sqlkit/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	sqlkit
 PORTVERSION=	0.9.5.1
@@ -19,7 +19,7 @@ LICENSE=	GPLv3
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 USE_GNOME=	pygtk2 desktopfileutils
-USE_GETTEXT=	yes
+USES=		gettext
 
 OPTIONS_DEFINE=	FIREBIRD MSSQL MYSQL PGSQL SQLITE SYBASE
 OPTIONS_DEFAULT=MYSQL PGSQL SQLITE
