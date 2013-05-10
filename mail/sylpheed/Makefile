@@ -1,5 +1,5 @@
 # Created by: shigeri <shigeri@m10.alpha-net.ne.jp>
-# $FreeBSD: mail/sylpheed/Makefile 315584 2013-03-29 23:46:31Z ehaupt $
+# $FreeBSD: mail/sylpheed/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	sylpheed
 PORTVERSION=	3.3.0
@@ -14,10 +14,9 @@ COMMENT=	Lightweight, featureful, and fast GTK+ based e-mail client
 LIB_DEPENDS=	aspell:${PORTSDIR}/textproc/aspell
 RUN_DEPENDS=	${LOCALBASE}/etc/mime.types:${PORTSDIR}/misc/mime-support
 
+USES=		gettext iconv
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
