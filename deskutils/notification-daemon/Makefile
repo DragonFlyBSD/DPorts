@@ -2,7 +2,7 @@
 # Date created:				2005-08-06
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
-# $FreeBSD: ports/deskutils/notification-daemon/Makefile,v 1.39 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/notification-daemon/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/deskutils/notification-daemon/Makefile,v 1.11 2011/06/11 19:51:12 mezz Exp $
 #
 
@@ -23,7 +23,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack gtk30
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_XORG=	x11
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
