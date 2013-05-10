@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/games/kajaani-kombat/files/kajaani-kombat.in,v 1.1 2012/12/17 16:05:25 svnexp Exp $
+# $FreeBSD: games/kajaani-kombat/files/kajaani-kombat.in 309106 2012-12-17 16:00:14Z pawel $
 #
 
 cd "%%DATADIR%%"

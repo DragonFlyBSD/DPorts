@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: ports/games/kajaani-kombat/Makefile,v 1.4 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/kajaani-kombat/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	kajaani-kombat
 PORTVERSION=	0.7
@@ -17,7 +17,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 USE_SDL=	sdl image mixer net ttf
 USE_GMAKE=	yes
 ALL_TARGET=	client server
-USE_ICONV=	yes
+USES=		iconv
 MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	AUTHORS ChangeLog README
