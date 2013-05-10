@@ -1,4 +1,4 @@
-# $FreeBSD: devel/kdevelop-php/Makefile 314932 2013-03-22 13:41:53Z makc $
+# $FreeBSD: devel/kdevelop-php/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	kdevelop-php
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
@@ -32,7 +32,7 @@ RUN_DEPENDS+=	${KDE4_PREFIX}/lib/kde4/kdevphpdocs.so:${PORTSDIR}/devel/kdevelop-
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DBUILD_po:BOOL=Off
