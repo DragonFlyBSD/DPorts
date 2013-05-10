@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/graphics/py-PyX/Makefile,v 1.22 2012/12/10 07:34:30 svnexp Exp $
+# $FreeBSD: graphics/py-PyX/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	PyX
 PORTVERSION=	0.12.1
@@ -12,10 +12,9 @@ COMMENT=	A Python package for the creation of encapsulated PostScript figures
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	kpsewhich:${PORTSDIR}/print/teTeX
-
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
+USE_TEX=	tetex
 
 OPTIONS_DEFINE=		T1CODE KPATHSEA
 OPTIONS_DEFAULT=	T1CODE KPATHSEA
@@ -35,7 +34,6 @@ PLIST_SUB+=	T1CODE="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MKPATHSEA}
-BUILD_DEPENDS+=	${LOCALBASE}/lib/libkpathsea.a:${PORTSDIR}/print/teTeX
 LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_SUB+=	KPATHSEA=""
 .else
