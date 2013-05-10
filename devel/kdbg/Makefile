@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: devel/kdbg/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/kdbg/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	kdbg
 PORTVERSION=	2.5.2
@@ -22,7 +22,7 @@ OPTIONS_DEFAULT=NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
