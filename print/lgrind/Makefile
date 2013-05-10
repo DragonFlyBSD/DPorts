@@ -2,7 +2,7 @@
 # Date created:				20 April 2002
 # Whom:					Kay Lehmann
 #
-# $FreeBSD: ports/print/lgrind/Makefile,v 1.20 2012/11/17 06:00:52 svnexp Exp $
+# $FreeBSD: print/lgrind/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	lgrind
@@ -52,8 +52,7 @@ EXTRACT_ONLY=	${PORTNAME}.tar.gz
 MAINTAINER=	dereckson@gmail.com
 COMMENT=	Produce beautiful listings of source code with LaTeX
 
-BUILD_DEPENDS=	latex:${PORTSDIR}/print/teTeX
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX
+USE_TEX=	tetex
 
 MAN1=		lgrind.1
 MAN5=		lgrindef.5
