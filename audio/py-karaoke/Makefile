@@ -1,5 +1,5 @@
 # Created by: Elias Mandouvalos <ocean@mail.gr>
-# $FreeBSD: ports/audio/py-karaoke/Makefile,v 1.15 2012/11/17 05:54:42 svnexp Exp $
+# $FreeBSD: audio/py-karaoke/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	karaoke
 PORTVERSION=	0.7.5
@@ -24,8 +24,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}game>0:${PORTSDIR}/devel/py-game \
 OPTIONS_DEFINE=	MUTAGEN
 MUTAGEN_DESC=	Enable Mutagen support
 
+USES=		iconv
 USE_ZIP=	yes
-USE_ICONV=	yes
 USE_SDL=	sdl
 USE_XORG=	x11 xau xdmcp
 USE_WX=		2.6+
