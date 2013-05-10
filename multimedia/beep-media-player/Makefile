@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: multimedia/beep-media-player/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: multimedia/beep-media-player/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	beep-media-player
 PORTVERSION=	0.9.7.1
@@ -14,7 +14,7 @@ COMMENT=	GTK2 multimedia player
 
 LIB_DEPENDS=	id3-3.8:${PORTSDIR}/audio/id3lib
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GNOME=	gnomehack gtk20 libglade2 desktopfileutils
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
@@ -33,7 +33,7 @@ OPTIONS_DEFAULT=	OSS VORBIS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
