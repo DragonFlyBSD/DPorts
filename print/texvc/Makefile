@@ -2,7 +2,7 @@
 # Date created:		2008-06-14
 # Whom:			Max Brazhnikov <makc@issp.ac.ru>
 #
-# $FreeBSD: ports/print/texvc/Makefile,v 1.8 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: print/texvc/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	texvc
@@ -30,8 +30,8 @@ RASTER_DESC=	rasterization support
 
 .if ${PORT_OPTIONS:MRASTER}
 USE_GHOSTSCRIPT_RUN=	yes
-RUN_DEPENDS+=	latex:${PORTSDIR}/print/teTeX-base \
-		dvips:${PORTSDIR}/print/dvipsk-tetex \
+USE_TEX=	tetex
+RUN_DEPENDS+=	dvips:${PORTSDIR}/print/dvipsk-tetex \
 		convert:${PORTSDIR}/graphics/ImageMagick
 .endif
 
