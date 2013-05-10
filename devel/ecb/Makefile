@@ -1,13 +1,9 @@
-# New ports collection makefile for:   ecb
-# Date created:                25 January 2002
-# Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
-#
-# $FreeBSD: ports/devel/ecb/Makefile,v 1.45 2012/11/17 05:55:41 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
+# $FreeBSD: devel/ecb/Makefile 316628 2013-04-26 17:36:46Z mva $
 
 PORTNAME=	ecb
 PORTVERSION=	2.40
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	devel elisp
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTNAME:tu}%20${PORTVERSION}
@@ -29,29 +25,28 @@ ALL_TARGET=	ecb
 
 INFO=		ecb
 
-OPTIONS=	CEDET	"Use the Cedet library" On \
-		ICONS	"Install ecb's icons" On
+OPTIONS_DEFINE=		CEDET ICONS DOCS
+OPTIONS_DEFAULT=	CEDET ICONS
+CEDET_DESC=	Use the Cedet library
 
-.include <bsd.port.pre.mk>
+PORTDOCS=	NEWS README RELEASE_NOTES
 
-.if defined(WITHOUT_CEDET)
-BUILD_DEPENDS+=	${LOCALBASE}/${EMACS_VERSION_SITE_LISPDIR}/semantic/semantic.el:${PORTSDIR}/devel/semantic
-RUN_DEPENDS+=	${BUILD_DEPENDS}
-MAKE_ARGS=	CEDET=""
-.else
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MCEDET}
 BUILD_DEPENDS+=	${LOCALBASE}/${EMACS_VERSION_SITE_LISPDIR}/cedet/common/cedet.el:${PORTSDIR}/devel/cedet
 RUN_DEPENDS+=	${BUILD_DEPENDS}
 MAKE_ARGS=	CEDET=${LOCALBASE}/${EMACS_VERSION_SITE_LISPDIR}/cedet
-.endif
-
-.if defined(WITHOUT_ICONS)
-PLIST_SUB+=	ICONS="@comment "
 .else
-PLIST_SUB+=	ICONS=""
+BUILD_DEPENDS+=	${LOCALBASE}/${EMACS_VERSION_SITE_LISPDIR}/semantic/semantic.el:${PORTSDIR}/devel/semantic
+RUN_DEPENDS+=	${BUILD_DEPENDS}
+MAKE_ARGS=	CEDET=""
 .endif
 
-.if !defined(NOPORTDOCS)
-PORTDOCS=	NEWS README RELEASE_NOTES
+.if ${PORT_OPTIONS:MICONS}
+PLIST_SUB+=	ICONS=""
+.else
+PLIST_SUB+=	ICONS="@comment "
 .endif
 
 post-patch:
@@ -69,7 +64,7 @@ do-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/ecb.info ${PREFIX}/info
 
-.if !defined(WITHOUT_ICONS)
+.if ${PORT_OPTIONS:MICONS}
 .for i in ${ICONSUBDIRS}
 	${MKDIR} ${ICONDIR}/default/${i}
 	${INSTALL_DATA} ${ICONSRC}/default/${i}/*.xpm ${ICONDIR}/default/${i}
@@ -82,11 +77,11 @@ do-install:
 		${ICONDIR}/methods/height-14_to_21
 .endif
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for i in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
