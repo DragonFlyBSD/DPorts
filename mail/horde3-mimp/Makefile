@@ -2,7 +2,7 @@
 # Date created:			Mon Feb 05, 2007
 # Whom:				Beech Rintoul <beech@FreeBSD.org>
 #
-# $FreeBSD: mail/horde3-mimp/Makefile 309001 2012-12-16 12:04:18Z mm $
+# $FreeBSD: mail/horde3-mimp/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	mimp
@@ -43,7 +43,7 @@ RUN_DEPENDS+=	${LOCALBASE}/bin/gpg:${PORTSDIR}/security/gnupg
 .endif
 
 USE_HORDE=	base
-USE_GETTEXT=	yes
+USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL RELEASE_NOTES
 
 pre-configure:
