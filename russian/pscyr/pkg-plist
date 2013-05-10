@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/russian/pscyr/pkg-plist,v 1.4 2012/11/17 06:00:56 svnexp Exp $
+@comment $FreeBSD: russian/pscyr/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 share/texmf/doc/fonts/pscyr/LICENSE
 share/texmf/doc/fonts/pscyr/PROBLEMS
 share/texmf/doc/fonts/pscyr/README.koi
