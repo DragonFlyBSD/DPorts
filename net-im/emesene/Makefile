@@ -2,7 +2,7 @@
 # Date created:				31 May 2007
 # Whom:					Yinghong Liu <relaxbsd@gmail.com>
 #
-# $FreeBSD: ports/net-im/emesene/Makefile,v 1.21 2013/01/23 15:05:37 svnexp Exp $
+# $FreeBSD: net-im/emesene/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	emesene
@@ -22,7 +22,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PROJECTHOST=	bsdistfiles
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	pygtk2 desktopfileutils
 USE_GSTREAMER=	python
 INSTALLS_ICONS=	yes
