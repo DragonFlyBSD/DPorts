@@ -1,5 +1,5 @@
 # Created by: Romain Tartière <romain@blogreen.org>
-# $FreeBSD: ports/audio/paprefs/Makefile,v 1.13 2012/12/30 06:16:24 svnexp Exp $
+# $FreeBSD: audio/paprefs/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	paprefs
 PORTVERSION=	0.9.9
@@ -30,7 +30,7 @@ LIB_DEPENDS+=	packagekit-glib2.14:${PORTSDIR}/ports-mgmt/packagekit
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
