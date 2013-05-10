@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mirage/Makefile 315778 2013-04-10 17:57:03Z pawel $
+# $FreeBSD: graphics/mirage/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	mirage
 PORTVERSION=	0.9.5.2
@@ -15,7 +15,7 @@ LICENSE=	GPLv3
 USE_BZIP2=	yes
 USE_GNOME=	gtk20 pygtk2
 WANT_GNOME=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Mirage
