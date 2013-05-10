@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: ports/graphics/icon-slicer/Makefile,v 1.13 2012/11/30 10:23:42 svnexp Exp $
+# $FreeBSD: graphics/icon-slicer/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	icon-slicer
 PORTVERSION=	0.3
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
