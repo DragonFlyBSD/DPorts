@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/webalizer/Makefile,v 1.97 2012/12/30 13:00:40 svnexp Exp $
+# $FreeBSD: www/webalizer/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	webalizer
 PORTVERSION=	2.23.5
@@ -124,7 +124,7 @@ EXTRA_PATCHES+=		${FILESDIR}/ja-webalizer.conf-dist.patch
 .endif
 
 .if ${PORT_OPTIONS:MWEBALIZER_CONV}
-USE_ICONV=yes
+USES+=			iconv
 # 	The patch file is written by URASHIMA Akira
 #	see http://tyche.pu-toyama.ac.jp/~a-urasim/webalizer/
 EXTRA_PATCHES+=		${FILESDIR}/webalizer-a-urasim_2.patch
