@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: emulators/pcsxr/Makefile 316088 2013-04-19 07:40:04Z martymac $
+# $FreeBSD: emulators/pcsxr/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	pcsxr
 PORTVERSION=	1.9.92.r84102
@@ -32,7 +32,7 @@ USE_DOS2UNIX=	yes
 DOS2UNIX_REGEX=	.*\.(c|h|cpp|hpp|am)
 
 USE_GNOME=	gtk30 desktopfileutils glib20
-USE_ICONV=	yes
+USES=		iconv
 USE_XORG=	x11 xv xext xxf86vm xtst
 USE_SDL=	sdl
 USE_GL=	gl
@@ -44,14 +44,14 @@ PORTDOCS=	ChangeLog README
 # accessed through libcdio (using cam(4) and pass(4))
 DEFAULT_DVD_DEVICE?=	/dev/cd0
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${ARCH} == "x86_64"
 CONFIGURE_ARGS+=	--enable-dynarec=x86_64
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=	gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
@@ -78,4 +78,4 @@ post-install:
 .endif
 	@-update-desktop-database
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
