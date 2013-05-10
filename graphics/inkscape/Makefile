@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: graphics/inkscape/Makefile 313634 2013-03-08 10:58:45Z kwm $
+# $FreeBSD: graphics/inkscape/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	inkscape
 PORTVERSION=	0.48.4
@@ -28,7 +28,7 @@ USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 WANT_GNOME=	yes
 USE_GNOME=	gnomehack desktopfileutils intlhack libxslt
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes
 INSTALLS_ICONS=	yes
