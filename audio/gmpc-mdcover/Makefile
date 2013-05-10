@@ -2,7 +2,7 @@
 # Date created:		September 14 2007
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/gmpc-mdcover/Makefile,v 1.18 2012/11/17 05:54:33 svnexp Exp $
+# $FreeBSD: audio/gmpc-mdcover/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gmpc-mdcover
@@ -22,6 +22,6 @@ RUN_DEPENDS=	gmpc:${PORTSDIR}/audio/gmpc
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack pkgconfig intltool glib20 gtk20 libxml2
-USE_GETTEXT=	yes
+USES=		gettext
 
 .include <bsd.port.mk>
