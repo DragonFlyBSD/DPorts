@@ -2,7 +2,7 @@
 # Date created:        05 January 2004
 # Whom:                Michael Ranner
 #
-# $FreeBSD: irc/kvirc/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: irc/kvirc/Makefile 316596 2013-04-26 10:44:28Z ak $
 #
 
 PORTNAME=	kvirc
@@ -26,12 +26,11 @@ CONFLICTS_INSTALL=	kvirc-qt4-4.*
 .endif
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_OPENSSL=	yes
 USE_PERL5_BUILD=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build \
 		dbus gui network sql xml
-USES=		cmake
+USES=		cmake gettext
 CMAKE_ARGS=	-DWANT_ESD=no -DWANT_DOXYGEN=no \
 		-DMANDIR=${MANPREFIX}
 INSTALLS_ICONS=	yes
