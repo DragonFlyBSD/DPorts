@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: ports/games/starfighter/Makefile,v 1.14 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/starfighter/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	starfighter
 PORTVERSION=	1.2
@@ -17,7 +17,7 @@ COMMENT=	Liberate the universe from the evil company WEAPCO
 
 LICENSE=	GPLv2
 
-USE_ICONV=	yes
+USES=		iconv
 USE_XORG=	x11 xau xdmcp
 USE_SDL=	image mixer
 WITH_ZLIB=	yes
