@@ -1,8 +1,5 @@
-# New ports collection makefile for:	gpredict
-# Date created:		2004-01-22
-# Whom:			Matt Dawson <matt@mattsnetwork.co.uk>
-#
-# $FreeBSD: ports/comms/gpredict/Makefile,v 1.25 2013/01/23 15:05:32 svnexp Exp $
+# Created by: Matt Dawson <matt@mattsnetwork.co.uk>
+# $FreeBSD: comms/gpredict/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	gpredict
 PORTVERSION=	1.2
@@ -27,12 +24,14 @@ MAN1=		gpredict.1
 
 LICENSE=	GPLv2
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=		NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=		NLS="@comment "
-.else
-USE_GETTEXT=		yes
-PLIST_SUB+=		NLS=""
 .endif
 
 DESKTOP_ENTRIES="GPREDICT" \
