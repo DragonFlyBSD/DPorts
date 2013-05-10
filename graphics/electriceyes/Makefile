@@ -2,7 +2,7 @@
 # Date created:				21 August 1998
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
-# $FreeBSD: ports/graphics/electriceyes/Makefile,v 1.49 2012/11/17 05:58:04 svnexp Exp $
+# $FreeBSD: graphics/electriceyes/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	electriceyes
@@ -18,7 +18,7 @@ COMMENT=	A graphic view base imlib & gtk
 
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomelibs
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
