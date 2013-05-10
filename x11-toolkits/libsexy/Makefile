@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: ports/x11-toolkits/libsexy/Makefile,v 1.25 2012/12/29 10:13:59 svnexp Exp $
+# $FreeBSD: x11-toolkits/libsexy/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	libsexy
 PORTVERSION=	0.1.11
@@ -17,10 +17,9 @@ LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
 USE_GNOME=	gnomehack lthack gtk20 libxml2
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>
