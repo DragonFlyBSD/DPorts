@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/py-gobject/Makefile 314697 2013-03-19 21:52:38Z mezz $
+# $FreeBSD: devel/py-gobject/Makefile 316333 2013-04-23 10:13:19Z bapt $
 #   $MCom: ports/devel/py-gobject/Makefile,v 1.58 2012/12/30 18:15:16 mezz Exp $
 
 PORTNAME=	gobject
@@ -24,12 +24,11 @@ LIB_DEPENDS+=	ffi:${PORTSDIR}/devel/libffi
 RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
 
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20
 USE_PYTHON=	2.5+
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-docs --disable-introspection --with-ffi
