@@ -1,5 +1,5 @@
 # Created by:	CHOI Junho <cjh@FreeBSD.org>
-# $FreeBSD: ports/korean/scim-hangul/Makefile,v 1.27 2012/11/17 05:58:47 svnexp Exp $
+# $FreeBSD: korean/scim-hangul/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	scim-hangul
 PORTVERSION=	0.4.0
@@ -16,14 +16,14 @@ LIB_DEPENDS=	hangul:${PORTSDIR}/korean/libhangul \
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 OPTIONS_DEFINE=	NLS
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
