@@ -1,5 +1,5 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: net-p2p/amule/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: net-p2p/amule/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	amule
 PORTVERSION=	2.3.1
@@ -22,8 +22,7 @@ BUILD_DEPENDS=	${FLEX}:${PORTSDIR}/textproc/flex \
 CONFLICTS=	amule-devel-[0-9]*
 
 USE_BZIP2=	yes
-USES=		bison
-USE_PKGCONFIG=	yes
+USES=		bison pkgconfig
 USE_GMAKE=	yes
 USE_WX=		2.8
 WX_CONF_ARGS=	absolute
@@ -69,7 +68,7 @@ CONFIGURE_ARGS+=--disable-debug
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
