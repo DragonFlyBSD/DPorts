@@ -2,7 +2,7 @@
 # Date created:		09 Oct 2005
 # Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
 #
-# $FreeBSD: ports/games/volleyball/Makefile,v 1.25 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/volleyball/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	volleyball
@@ -20,7 +20,7 @@ COMMENT=	A game similar to GNU Arcade Volleyball
 USE_SDL=	sdl image mixer
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 CONFIGURE_ARGS=	--mandir="${MANPREFIX}/man" --disable-nls # strangeness in nls support
 MAKE_JOBS_SAFE=	yes
