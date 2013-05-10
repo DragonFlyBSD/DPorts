@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: graphics/gegl/Makefile 314940 2013-03-22 15:39:45Z mezz $
+# $FreeBSD: graphics/gegl/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gegl
 PORTVERSION=	0.2.0
@@ -22,11 +22,9 @@ SPIRO_DESC=	Spiro support
 #UMFPACK_DESC=	UMFpack support
 
 USE_GNOME=	glib20 intltool
-USES=		pathfix
-USE_PKGCONFIG=	build
+USES=		pathfix pkgconfig gettext
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_LDCONFIG=	${PREFIX}/lib/gegl-0.2
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	ac_cv_header_execinfo_h=no
