@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/graphics/ocre/Makefile,v 1.22 2012/11/17 05:58:15 svnexp Exp $
+# $FreeBSD: graphics/ocre/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	ocre
 PORTVERSION=	0.042
@@ -21,7 +21,7 @@ RUN_DEPENDS=	display:${PORTSDIR}/graphics/ImageMagick \
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/${PORTNAME}
 
 USE_GNOME=	gtk20
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 MAKE_ENV=	CFLAGS1="${CFLAGS}"
 MAKE_JOBS_SAFE=	yes
