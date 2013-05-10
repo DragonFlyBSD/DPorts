@@ -2,7 +2,7 @@
 # Date created:		11 June 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/gx/Makefile,v 1.9 2012/11/17 05:58:09 svnexp Exp $
+# $FreeBSD: graphics/gx/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gx
@@ -18,7 +18,7 @@ LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24 \
 		gnomevfsmm-2.6.1:${PORTSDIR}/devel/gnome-vfsmm \
 		gconfmm-2.6.1:${PORTSDIR}/devel/gconfmm26
 
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>
