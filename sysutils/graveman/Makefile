@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: sysutils/graveman/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: sysutils/graveman/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	graveman
 PORTVERSION=	0.3.12.5
@@ -12,14 +12,13 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Another GTK2 frontend for cdrecord, mkisofs, readcd, and sox
 
 LIB_DEPENDS=	mng:${PORTSDIR}/graphics/libmng
+BUILD_DEPENDS=	cdrecord:${PORTSDIR}/sysutils/cdrtools
+RUN_DEPENDS=	cdrecord:${PORTSDIR}/sysutils/cdrtools
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-USE_CDRTOOLS=	yes
-USE_PKGCONFIG=	build
-USES=        pathfix
+USES=		pathfix pkgconfig gettext
 USE_GNOME=	libglade2 intlhack gnomeprefix
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
