@@ -1,13 +1,9 @@
-# New ports collection makefile for:   fsbackup
-# Date created:        1 April 2005
-# Whom:                samm
-#
-# $FreeBSD: ports/sysutils/fsbackup/Makefile,v 1.4 2012/11/17 06:01:31 svnexp Exp $
-#
+# Created by: samm
+# $FreeBSD: sysutils/fsbackup/Makefile 317610 2013-05-07 14:02:30Z bapt $
 
 PORTNAME=	fsbackup
 PORTVERSION=	1.2.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.opennet.ru/dev/fsbackup/src/
 DISTNAME=	fsbackup-1.2pl1
@@ -17,7 +13,10 @@ COMMENT=	File system backup and synchronization utility
 
 RUN_DEPENDS=	p5-Net>=0:${PORTSDIR}/net/p5-Net
 
+USES=		shebangfix
 USE_PERL5=	yes
+SHEBANG_FILES=	contrib/*.pl \
+		*.pl
 
 MAN1=		fsbackup.1
 MANCOMPRESSED=	no
