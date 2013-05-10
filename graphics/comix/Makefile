@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/comix/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: graphics/comix/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports-stable/graphics/comix/Makefile,v 1.1 2006/10/21 18:39:46 mezz Exp $
 
 PORTNAME=	comix
@@ -18,7 +18,7 @@ NO_BUILD=	yes
 USE_GNOME=	desktopfileutils pygtk2
 WANT_GNOME=	yes
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 
 DOCS=		COPYING ChangeLog README
