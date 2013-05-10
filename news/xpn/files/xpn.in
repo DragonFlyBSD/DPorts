@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/news/xpn/files/xpn.in,v 1.2 2012/11/17 06:00:43 svnexp Exp $
+# $FreeBSD: news/xpn/files/xpn.in 300897 2012-07-14 14:29:18Z beat $
 #
 if [ -z "$1" ] ; then
     export XPN_ARGS=-d

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/news/xpn/pkg-plist,v 1.4 2012/11/17 06:00:43 svnexp Exp $
+@comment $FreeBSD: news/xpn/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/xpn
 %%PORTDOCS%%%%DOCSDIR%%/xpn.html
 %%DATADIR%%/lang/de/LC_MESSAGES/xpn.mo

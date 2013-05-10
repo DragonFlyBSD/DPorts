@@ -2,7 +2,7 @@
 # Date created:		2007-01-14
 # Whom:			Nicola Vitale <nivit@FreeBSD.org>
 #
-# $FreeBSD: ports/news/xpn/Makefile,v 1.11 2012/11/17 06:00:43 svnexp Exp $
+# $FreeBSD: news/xpn/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xpn
@@ -27,7 +27,7 @@ FIND_DATA=	-type f -mindepth 2 -not -name "*~"
 SUB_FILES=	${PORTNAME}
 SUB_LIST=	PYTHON_CMD=${PYTHON_CMD} XPN=${XPN}
 
-USE_GETTEXT=	yes
+USES=		gettext
 
 XPN=	${PORTNAME}.py
 
