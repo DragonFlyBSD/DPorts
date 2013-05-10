@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: editors/texworks/Makefile 314805 2013-03-21 05:27:16Z mezz $
+# $FreeBSD: editors/texworks/Makefile 316337 2013-04-23 10:19:45Z bapt $
 
 PORTNAME=	texworks
 PORTVERSION=	0.4.4
@@ -16,7 +16,7 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	hunspell:${PORTSDIR}/textproc/hunspell
 LIB_DEPENDS=	poppler-qt4:${PORTSDIR}/graphics/poppler-qt4
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_QT4=	qmake_build gui corelib rcc_build moc_build uic_build \
 		dbus xml scripttools designer_build
 QMAKE_ARGS=	INSTALL_PREFIX=${PREFIX} \
