@@ -2,7 +2,7 @@
 # Date created:				11 December 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/libgnetwork/Makefile,v 1.35 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/libgnetwork/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	libgnetwork
@@ -17,7 +17,7 @@ COMMENT=	A GLib-based networking wrapper
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomeprefix gnomehack intlhack gconf2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
