@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: audio/lmms/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/lmms/Makefile 316287 2013-04-22 23:19:08Z bapt $
 
 PORTNAME=	lmms
 PORTVERSION=	0.4.13
@@ -30,12 +30,11 @@ RUN_DEPENDS=	${LOCALBASE}/share/ladspa/rdf/caps.rdf:${PORTSDIR}/audio/caps-plugi
 OPTIONS_DEFINE=	JACK PULSEAUDIO SDL
 
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 USE_BZIP2=	yes
 USE_XORG=	xft
 USE_QT4=	corelib gui xml moc_build uic_build rcc_build \
 		qmake_build
-USES=		cmake
+USES=		cmake pkgconfig
 CMAKE_ARGS=	-DWANT_ALSA:BOOL=OFF \
 		-DWANT_CALF:BOOL=OFF \
 		-DWANT_CAPS:BOOL=OFF \
