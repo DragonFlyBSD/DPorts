@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/netatalk3/files/netatalk.in,v 1.3 2012/11/17 06:00:07 svnexp Exp $
+# $FreeBSD: net/netatalk3/files/netatalk.in 305024 2012-09-29 05:18:56Z marcus $
 #
 # PROVIDE: netatalk
 # REQUIRE: DAEMON %%ZEROCONF%%
