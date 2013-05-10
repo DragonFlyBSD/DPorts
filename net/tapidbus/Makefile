@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi
-# $FreeBSD: net/tapidbus/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: net/tapidbus/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	tapidbus
 PORTVERSION=	0.2.1
@@ -15,10 +15,9 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
