@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gtodo/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: deskutils/gtodo/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	gtodo
 PORTVERSION=	0.14
@@ -10,8 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An Gtk2 Todo list manager
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gnomeprefix gnomevfs2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
