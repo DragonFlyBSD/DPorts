@@ -2,7 +2,7 @@
 # Date created:                                11 April 2007
 # Whom:                                        Matthieu Guegan <matt.guegan@free.fr>
 #
-# $FreeBSD: ports/audio/gimmix/Makefile,v 1.28 2012/11/17 05:54:32 svnexp Exp $
+# $FreeBSD: audio/gimmix/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gimmix
@@ -40,7 +40,7 @@ CONFIGURE_ENV=	DATADIRNAME=share
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 CONFIGURE_ARGS+=	--enable-nls
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
