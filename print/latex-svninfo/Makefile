@@ -2,7 +2,7 @@
 # Date created:		05 Dec 2006
 # Whom:			Henrik Brix Andersen <henrik@brixandersen.dk>
 #
-# $FreeBSD: ports/print/latex-svninfo/Makefile,v 1.13 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-svninfo/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	svninfo
 PORTVERSION=	0.7.4
@@ -16,11 +16,7 @@ PKGNAMEPREFIX=	latex-
 MAINTAINER=	brix@FreeBSD.org
 COMMENT=	A LaTeX package for Subversion support
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-
+USE_TEX=	tetex
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} CLASSDIR=${CLASSDIR}
 
 TEXMFLOCAL=	share/texmf-local
