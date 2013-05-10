@@ -1,5 +1,5 @@
 # Created by: Jaosn Helfman <jgh@FreeBSD.org>
-# $FreeBSD: deskutils/xpad-current/Makefile 315918 2013-04-16 23:13:51Z jgh $
+# $FreeBSD: deskutils/xpad-current/Makefile 316484 2013-04-24 23:04:22Z jgh $
 
 PORTNAME=	xpad
 PORTVERSION=	4.1
@@ -20,7 +20,7 @@ FETCH_ARGS=	-p
 USE_BZIP2=	yes
 USE_XORG=	x11 sm
 USE_GNOME=	gtk20 gnomehier intltool
-USE_PKGCONFIG=	build
+USES=	pkgconfig
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -31,7 +31,7 @@ USE_GMAKE=	yes
 
 #code currently doesn't properly handle --disable-nls (in next upstream milestone)
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
