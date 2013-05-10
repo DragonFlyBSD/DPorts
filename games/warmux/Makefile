@@ -2,7 +2,7 @@
 # Date created:			  Thu Dec 16 18:46:55 EET 2004
 # Whom:				  Anton Yudin <toha@FreeBSD.org>
 #
-# $FreeBSD: games/warmux/Makefile 315222 2013-03-25 13:59:18Z makc $
+# $FreeBSD: games/warmux/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	warmux
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+=	--enable-debug \
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
