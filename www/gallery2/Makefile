@@ -2,7 +2,7 @@
 # Date created:		29 Aug 2005
 # Whom:			Alex Varju <freebsd-ports@varju.ca>
 #
-# $FreeBSD: www/gallery2/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/gallery2/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gallery2
@@ -43,7 +43,7 @@ RUN_DEPENDS+=	pngtogd:${PORTSDIR}/graphics/gd
 
 .if ${PORT_OPTIONS:MNLS}
 USE_PHP+=	gettext
-USE_GETTEXT=	yes	# Pet portlint
+USES+=		gettext
 .endif
 
 .if ${PORT_OPTIONS:MNETPBM}
