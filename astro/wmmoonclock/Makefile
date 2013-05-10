@@ -1,9 +1,5 @@
-# New ports collection makefile for:   wmMoonClock
-# Date created:        14 March 1999
-# Whom:                Kris Kennaway <kkennawa@physics.adelaide.edu.au>
-#
-# $FreeBSD: ports/astro/wmmoonclock/Makefile,v 1.19 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: Kris Kennaway <kkennawa@physics.adelaide.edu.au>
+# $FreeBSD: astro/wmmoonclock/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	wmMoonClock
 PORTVERSION=	1.27
@@ -14,9 +10,6 @@ MASTER_SITES=	http://www.dockapps.org/files/14/21/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Displays the phase of the moon, plus orbital data
 
-# Distfile says it's a .tar.gz but is actually uncompressed
-EXTRACT_CMD=	${CAT}
-EXTRACT_BEFORE_ARGS=
 WRKSRC=		${WRKDIR}/${DISTNAME}/Src
 
 USE_XORG=	xpm

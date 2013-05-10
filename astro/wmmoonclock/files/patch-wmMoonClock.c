@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/astro/wmmoonclock/files/patch-wmMoonClock.c,v 1.2 2012/11/17 05:54:26 svnexp Exp $
+$FreeBSD: astro/wmmoonclock/files/patch-wmMoonClock.c 300895 2012-07-14 12:56:14Z beat $
 
 --- wmMoonClock.c.orig	Thu Aug 15 18:15:26 2002
 +++ wmMoonClock.c	Thu Aug 15 18:15:51 2002
