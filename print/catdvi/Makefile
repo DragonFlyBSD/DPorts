@@ -3,7 +3,7 @@
 # Date created:			Feb 10, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/print/catdvi/Makefile,v 1.24 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: print/catdvi/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	catdvi
@@ -15,8 +15,7 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A DVI to text/plain translator
 
-BUILD_DEPENDS=	${LOCALBASE}/lib/libkpathsea.a:${PORTSDIR}/print/teTeX
-
+USE_TEX=	tetex
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
