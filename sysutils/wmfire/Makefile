@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmfire
-# Date created:				21 October 1999
-# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: ports/sysutils/wmfire/Makefile,v 1.23 2012/11/17 06:01:50 svnexp Exp $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: sysutils/wmfire/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	wmfire
 PORTVERSION=	1.2.4
@@ -16,8 +12,8 @@ COMMENT=	Window Maker dock app showing load average as a flame
 
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop
 
+USES=		pkgconfig
 USE_GNOME=	gtk20
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 USE_CSTD=	gnu89
 CPPFLAGS+=	-I${LOCALBASE}/include
