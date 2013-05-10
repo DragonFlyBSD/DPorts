@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: textproc/gladtex/Makefile 313603 2013-03-07 20:04:30Z nivit $
+# $FreeBSD: textproc/gladtex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	gladtex
 PORTVERSION=	1.3
@@ -15,9 +15,9 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	gif:${PORTSDIR}/graphics/giflib \
 		png15:${PORTSDIR}/graphics/png
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX \
-		dvips:${PORTSDIR}/print/dvipsk-tetex
+RUN_DEPENDS=	dvips:${PORTSDIR}/print/dvipsk-tetex
 
+USE_TEX=	tetex
 BINPATH=	${PREFIX}/bin
 INCPATH=	"-I${LOCALBASE}/include"
 LIBPATH=	"-L${LOCALBASE}/lib"
