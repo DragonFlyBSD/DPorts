@@ -2,7 +2,7 @@
 # Date created:				11 January 2008
 # Whom:	      				Oleg Ukraincev <oleg@ht-systems.ru>
 #
-# $FreeBSD: ports/www/diamanda/Makefile,v 1.8 2012/11/17 06:02:30 svnexp Exp $
+# $FreeBSD: www/diamanda/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	diamanda
@@ -27,7 +27,7 @@ WRKSRC=	${WRKDIR}/${PORTNAME}
 USE_BZIP2=	yes
 NO_BUILD=	yes
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 SUB_FILES=	pkg-message
 
 .include <bsd.port.pre.mk>
