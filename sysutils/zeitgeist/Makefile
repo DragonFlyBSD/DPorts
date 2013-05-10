@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: sysutils/zeitgeist/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: sysutils/zeitgeist/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	zeitgeist
 PORTVERSION=	0.8.2
@@ -21,7 +21,7 @@ USE_GMAKE=	yes
 USE_PYTHON=	yes
 FETCH_ARGS=	-Fpr
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
