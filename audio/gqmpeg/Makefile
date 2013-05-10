@@ -2,7 +2,7 @@
 # Date Created:		28 Oct 1998
 # Whom:			Vanilla Pooh Shu <vanilla@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/gqmpeg/Makefile,v 1.75 2012/11/17 05:54:33 svnexp Exp $
+# $FreeBSD: audio/gqmpeg/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gqmpeg
@@ -26,7 +26,7 @@ RUN_DEPENDS+=	mpg123:${PORTSDIR}/audio/mpg123
 .endif
 
 USE_GNOME=	gdkpixbuf
-USE_GETTEXT=	yes
+USES=		gettext
 WANT_GNOME=	yes
 USE_AUTOTOOLS=	autoconf213 libtool
 

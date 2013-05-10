@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/gqmpeg/files/patch-aclocal.m4,v 1.4 2012/11/17 05:54:33 svnexp Exp $
+$FreeBSD: audio/gqmpeg/files/patch-aclocal.m4 300895 2012-07-14 12:56:14Z beat $
 
 --- aclocal.m4.orig	Wed Jul 17 20:48:30 2002
 +++ aclocal.m4	Thu Jul 18 16:38:49 2002
