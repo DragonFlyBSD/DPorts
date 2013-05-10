@@ -2,7 +2,7 @@
 # Date created:				19 Aug 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/gtkspell/Makefile,v 1.46 2012/11/17 06:01:57 svnexp Exp $
+# $FreeBSD: textproc/gtkspell/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/textproc/gtkspell/Makefile,v 1.2 2006/09/10 00:51:13 mezz Exp $
 #
 
@@ -22,7 +22,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant
 
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gtk20 intlhack
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
