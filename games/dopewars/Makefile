@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: games/dopewars/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: games/dopewars/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	dopewars
 PORTVERSION=	1.5.12
@@ -10,7 +10,7 @@ MASTER_SITES=	SF
 MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	UNIX rewrite of a game originally based on "Drug Wars"
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk12
