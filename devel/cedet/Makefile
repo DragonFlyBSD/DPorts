@@ -1,9 +1,5 @@
-# New ports collection makefile for:   cedet
-# Date created:                2004-02-28
-# Whom:                        Dryice Liu
-#
-# $FreeBSD: devel/cedet/Makefile 315598 2013-03-30 05:13:30Z ashish $
-#
+# Created by: Dryice Liu
+# $FreeBSD: devel/cedet/Makefile 316364 2013-04-23 15:33:16Z mva $
 
 PORTNAME=	cedet
 PORTVERSION=	1.1
