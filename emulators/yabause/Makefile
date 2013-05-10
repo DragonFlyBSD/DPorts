@@ -1,9 +1,5 @@
-# New ports collection makefile for:	yabause
-# Date created:		2006-08-23
-# Whom:			Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-#
-# $FreeBSD: ports/emulators/yabause/Makefile,v 1.34 2012/11/17 05:57:25 svnexp Exp $
-#
+# Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
+# $FreeBSD: emulators/yabause/Makefile 316753 2013-04-28 21:20:28Z bapt $
 
 PORTNAME=	yabause
 PORTVERSION=	0.9.11.1
@@ -27,11 +23,13 @@ USE_SDL=	yes
 SUB_FILES=	pkg-message
 MAN1=	yabause.1
 
-OPTIONS=	QT4	"Build wit qt4 interface instead of gtk2 one"	on
+OPTIONS_DEFINE=	QT4
+OPTIONS_DEFAULT=	QT4
+QT4_DESC=	Build wit qt4 interface instead of gtk2 one
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_QT4)
+.if ${PORT_OPTIONS:MQT4}
 USE_QT4=	corelib gui opengl
 CONFIGURE_ARGS+=	--with-port=qt
 .else
