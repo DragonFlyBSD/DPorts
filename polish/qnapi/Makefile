@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: ports/polish/qnapi/Makefile,v 1.15 2012/12/21 18:55:39 svnexp Exp $
+# $FreeBSD: polish/qnapi/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	qnapi
 PORTVERSION=	0.1.6.r2
@@ -21,8 +21,7 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 RUN_DEPENDS=	7z:${PORTSDIR}/archivers/p7zip
 
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_XORG=	ice sm x11 xau xdmcp xext xrender
 USE_QT4=	corelib gui network xml qmake_build moc_build uic_build rcc_build
 USE_KDE4=	kdehier
