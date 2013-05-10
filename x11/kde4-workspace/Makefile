@@ -1,7 +1,8 @@
-# $FreeBSD: x11/kde4-workspace/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: x11/kde4-workspace/Makefile 317170 2013-05-03 04:56:40Z rm $
 
 PORTNAME=	kde-workspace
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11 kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
@@ -42,14 +43,11 @@ RUN_DEPENDS=	${KDE4_PREFIX}/env/xdg-env.sh:${PORTSDIR}/misc/kde4-xdg-env \
 
 CONFLICTS=	kdeaccessibility-4.[0-6].* kdebase-workspace-4.[0-6].*
 
-USE_GETTEXT=	yes
 USE_GL=		glu
 USE_GNOME=	glib20
-USE_ICONV=	yes
 USE_KDE4=	kactivities kdehier kdelibs kdeprefix oxygen pimlibs \
 		akonadi automoc4 ontologies qimageblitz soprano strigi
-USES=		cmake:outsource
-USE_PKGCONFIG=	build
+USES=		cmake:outsource pkgconfig gettext iconv
 USE_QT4=	corelib dbus declarative designer_build gui network \
 		opengl phonon qtestlib script sql webkit xml \
 		moc_build qmake_build rcc_build uic_build
@@ -126,10 +124,6 @@ RUN_DEPENDS+=	${KDE4_PREFIX}/share/wallpapers/Horos/metadata.desktop:${PORTSDIR}
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800069
-LIB_DEPENDS+=	usb-0.1:${PORTSDIR}/devel/libusb
-.endif
 
 .if ${OSVERSION} < 900004
 LIB_DEPENDS+=	utempter:${PORTSDIR}/sysutils/libutempter
