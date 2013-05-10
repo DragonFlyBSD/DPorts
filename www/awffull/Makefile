@@ -1,5 +1,5 @@
 # Created by: Chadwick Sorrell chad@wickdev.com
-# $FreeBSD: www/awffull/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/awffull/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	awffull
 PORTVERSION=	3.10.2
@@ -23,8 +23,7 @@ FONTLABEL?=	${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf
 
 OPTIONS_DEFINE=	GEOIP
 
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-font-default=${FONTDEFAULT} \
