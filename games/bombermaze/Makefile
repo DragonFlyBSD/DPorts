@@ -2,7 +2,7 @@
 # Date created:				25 July 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/games/bombermaze/Makefile,v 1.39 2012/11/17 05:57:33 svnexp Exp $
+# $FreeBSD: games/bombermaze/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	bombermaze
@@ -16,7 +16,7 @@ COMMENT=	A multiplayer game, strategy place bombs to kill enemies and obstacles
 
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomelibs gdkpixbuf
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

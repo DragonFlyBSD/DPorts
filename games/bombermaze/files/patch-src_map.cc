@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/bombermaze/files/patch-src_map.cc,v 1.3 2012/11/17 05:57:33 svnexp Exp $
+$FreeBSD: games/bombermaze/files/patch-src_map.cc 300896 2012-07-14 13:54:48Z beat $
 
 --- src/map.cc.orig	Sun Feb 25 08:50:07 2001
 +++ src/map.cc	Sun Aug 22 21:25:12 2004
