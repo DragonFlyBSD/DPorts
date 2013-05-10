@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: ports/security/zenmap/Makefile,v 1.62 2013/01/11 21:16:59 svnexp Exp $
+# $FreeBSD: security/zenmap/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	zenmap
 PORTVERSION=	6.25
@@ -31,7 +31,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
