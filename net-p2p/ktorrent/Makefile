@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: net-p2p/ktorrent/Makefile 315458 2013-03-28 12:06:41Z makc $
+# $FreeBSD: net-p2p/ktorrent/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	ktorrent
 DISTVERSION=	4.3.1
@@ -19,8 +19,7 @@ USE_BZIP2=	yes
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4 pimlibs workspace
 USE_QT4=	corelib gui network qt3support qtestlib webkit \
 		qmake_build moc_build rcc_build uic_build
-USES=		cmake:outsource
-USE_GETTEXT=	yes
+USES=		cmake:outsource gettext
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
