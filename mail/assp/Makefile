@@ -1,8 +1,8 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: mail/assp/Makefile 313496 2013-03-06 03:04:32Z bdrewery $
+# $FreeBSD: mail/assp/Makefile 317065 2013-05-01 23:20:50Z bdrewery $
 
 PORTNAME=	assp
-PORTVERSION=	1.9.8.13056
+PORTVERSION=	1.9.9.13107
 PORTEPOCH=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.ringofsaturn.com/distfiles/
@@ -54,7 +54,7 @@ IPV6_DESC=	IPv6 sockets support
 
 OPTIONS_DEFAULT=	EMVALID SPF SRS SEND FBACKW ZLIB CLAMAV DNSBL MATCHRE SENDERB MIMEMOD SSL IPV6
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/ASSP_1.98_13056_install/${PORTNAME:tu}
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/ASSP_1.99_13107_install/${PORTNAME:tu}
 
 .include <bsd.port.pre.mk>
 
