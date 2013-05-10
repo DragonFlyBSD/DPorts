@@ -1,5 +1,5 @@
 # Created by: rehsack@liwing.de
-# $FreeBSD: devel/gaphor/Makefile 315437 2013-03-28 04:52:46Z miwi $
+# $FreeBSD: devel/gaphor/Makefile 317359 2013-05-04 21:35:42Z bapt $
 
 PORTNAME=	gaphor
 PORTVERSION=	0.17.1
@@ -21,7 +21,7 @@ COMMENT=	UML modeling environment written in Python
 
 LICENSE=	GPLv2
 
-EXTRACT_DEPENDS=unzip:${PORTSDIR}/archivers/unzip
+EXTRACT_DEPENDS=${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>=0.10.4:${PORTSDIR}/devel/py-nose
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}decorator>0:${PORTSDIR}/devel/py-decorator \
 		${PYTHON_PKGNAMEPREFIX}zope.component>3.4.0:${PORTSDIR}/devel/py-zope.component
