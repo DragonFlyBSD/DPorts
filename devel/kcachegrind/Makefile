@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: devel/kcachegrind/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/kcachegrind/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	kcachegrind
 PORTVERSION=	0.7.3
@@ -14,11 +14,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-USES=		cmake
+USES=		cmake gettext
 USE_KDE4=	automoc4 kdehier kdelibs
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
 
 OPTIONS_DEFINE=	DOT VALGRIND
 OPTIONS_DEFAULT=	DOT
