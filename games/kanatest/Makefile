@@ -2,7 +2,7 @@
 # Date created:		2004-03-27
 # Whom:			S H A N <shanali@yahoo.com>
 #
-# $FreeBSD: games/kanatest/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: games/kanatest/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	kanatest
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Japanese kana (Hiragana and Katakana) simple flashcard tool
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gtk20 libxml2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
