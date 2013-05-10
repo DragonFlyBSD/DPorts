@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: ports/games/gcompris/Makefile,v 1.75 2012/12/26 09:36:08 svnexp Exp $
+# $FreeBSD: games/gcompris/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gcompris
 PORTVERSION=	12.11
@@ -25,7 +25,7 @@ RUN_DEPENDS=	gnuchess:${PORTSDIR}/games/gnuchess \
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_GSTREAMER=	yes
 USE_PYTHON=	-2.7
