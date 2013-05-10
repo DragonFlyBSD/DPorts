@@ -1,5 +1,5 @@
 # Created by: Sascha Holzleiter <sascha@root-login.org>
-# $FreeBSD: x11/idesk/Makefile 314024 2013-03-13 04:29:50Z jgh $
+# $FreeBSD: x11/idesk/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	idesk
 PORTVERSION=	0.7.5
@@ -17,7 +17,7 @@ USE_GMAKE=	yes
 USE_EFL=	imlib2
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 OPTIONS_DEFINE=	SHAPE SN
 SHAPE_DESC=	Support of XShape extension
