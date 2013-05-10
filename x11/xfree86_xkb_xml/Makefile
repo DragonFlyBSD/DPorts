@@ -2,7 +2,7 @@
 # Date created:				31 May 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/xfree86_xkb_xml/Makefile,v 1.23 2012/11/17 06:03:21 svnexp Exp $
+# $FreeBSD: x11/xfree86_xkb_xml/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	xfree86_xkb_xml
@@ -14,8 +14,7 @@ MASTER_SITES=	SF/gswitchit/OldFiles
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A little set of XML files useful for dealing with XKB rules
 
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_XORG=	x11
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
