@@ -1,5 +1,5 @@
 # Created by: Hendrik Scholz <hscholz@raisdorf.net>
-# $FreeBSD: x11-clocks/buici-clock/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: x11-clocks/buici-clock/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	buici-clock
 PORTVERSION=	0.4.9.2
@@ -17,9 +17,8 @@ LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USE_XORG=	x11 xext
-USES=		bison
+USES=		bison pkgconfig
 USE_GMAKE=	yes
-USE_PKGCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
 
