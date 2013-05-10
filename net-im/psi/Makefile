@@ -1,5 +1,5 @@
 # Created by: Jonathan Chen <jonc@chen.org.nz>
-# $FreeBSD: ports/net-im/psi/Makefile,v 1.58 2012/11/17 06:00:29 svnexp Exp $
+# $FreeBSD: net-im/psi/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	psi
 PORTVERSION=	0.15
@@ -15,8 +15,8 @@ RUN_DEPENDS=	qca-ossl>=2.0.0.b3:${PORTSDIR}/security/qca-ossl \
 
 HAS_CONFIGURE=	yes
 QT_NONSTANDARD=	yes
+USES=		pkgconfig
 USE_BZIP2=	yes
-USE_PKGCONFIG=	build
 USE_QT4=	gui network xml imageformats_run \
 		qmake_build moc_build rcc_build uic_build
 USE_XORG=	xscrnsaver
