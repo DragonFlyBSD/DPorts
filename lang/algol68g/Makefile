@@ -1,12 +1,7 @@
-# New ports collection makefile for:	xshttpd
-# Date created:				9 September 2010
-# Whom:					Johan van Selst <johans@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/algol68g/Makefile,v 1.20 2012/11/17 05:58:47 svnexp Exp $
-#
+# $FreeBSD: lang/algol68g/Makefile 317327 2013-05-04 17:27:29Z johans $
 
 PORTNAME=	algol68g
-PORTVERSION=	2.4.1
+PORTVERSION=	2.6
 CATEGORIES=	lang
 MASTER_SITES=	http://jmvdveer.home.xs4all.nl/
 
