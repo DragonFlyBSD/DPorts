@@ -1,5 +1,5 @@
 # Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
-# $FreeBSD: graphics/converseen/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/converseen/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	converseen
 PORTVERSION=	0.5.3
@@ -23,9 +23,7 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libltdl
-USES=		cmake
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		cmake gettext iconv
 USE_XORG=	ice sm x11 xau xdmcp xext xrender xt
 USE_QT4=	corelib gui linguist_build moc_build qmake_build \
 		rcc_build uic_build
