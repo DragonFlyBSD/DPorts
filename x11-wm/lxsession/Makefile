@@ -1,9 +1,5 @@
-# New ports collection makefile for:   lxsession
-# Date created:                2008/06/20
-# Whom:                        chinsan
-#
-# $FreeBSD: ports/x11-wm/lxsession/Makefile,v 1.16 2012/11/17 06:03:43 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: x11-wm/lxsession/Makefile 317470 2013-05-06 06:41:15Z bapt $
 
 PORTNAME=	lxsession
 PORTVERSION=	0.4.6.1
@@ -22,7 +18,7 @@ CONFLICTS=	lxsession-lite-[0-9]*
 USE_GNOME=	gtk20 intlhack
 
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
@@ -31,8 +27,10 @@ MAN1=		lxsession.1 lxsession-logout.1
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
