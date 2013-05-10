@@ -2,7 +2,7 @@
 # Date Created:			29 April 2002
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libgtop/Makefile,v 1.107 2012/11/17 05:55:54 svnexp Exp $
+# $FreeBSD: devel/libgtop/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/devel/libgtop/Makefile,v 1.56 2010/05/02 00:04:47 marcus Exp $
 #
 
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 USE_BZIP2=	yes
 USE_PERL5_BUILD=yes
 USE_XORG=	xau
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20 ltverhack intlhack
 USE_LDCONFIG=	yes
