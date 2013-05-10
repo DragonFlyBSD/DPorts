@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: x11/gtkterm2/Makefile 315242 2013-03-25 19:14:43Z eadler $
+# $FreeBSD: x11/gtkterm2/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	gtkterm2
 PORTVERSION=	0.2.3
@@ -12,7 +12,7 @@ COMMENT=	A simple GTK-2 terminal with tabs
 
 USE_GNOME=	vte
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
 
 PORTDOCS=	README
