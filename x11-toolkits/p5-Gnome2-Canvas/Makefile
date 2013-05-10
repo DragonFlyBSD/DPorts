@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-Gnome2-Canvas
-# Date created:			Apr 1, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/x11-toolkits/p5-Gnome2-Canvas/Makefile,v 1.24 2012/11/17 06:03:37 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: x11-toolkits/p5-Gnome2-Canvas/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	Gnome2-Canvas
 PORTVERSION=	1.002
@@ -26,7 +21,7 @@ RUN_DEPENDS=	p5-Glib2>=0:${PORTSDIR}/devel/p5-Glib2 \
 		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2
 
 USE_GNOME=	libgnomecanvas
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 PERL_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
