@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: graphics/kphotoalbum-kde4/Makefile 315681 2013-04-02 15:55:43Z makc $
+# $FreeBSD: graphics/kphotoalbum-kde4/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	kphotoalbum
 PORTVERSION=	4.4
@@ -37,7 +37,7 @@ CMAKE_ARGS+=	-DWITH_Marble:BOOL=Off
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DBUILD_po:BOOL=Off
