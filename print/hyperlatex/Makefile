@@ -2,7 +2,7 @@
 # Date created:				2 August 1994
 # Whom:					Robert Withrow <witr@rwwa.com>
 #
-# $FreeBSD: ports/print/hyperlatex/Makefile,v 1.20 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/hyperlatex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	Hyperlatex
@@ -14,9 +14,9 @@ MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/2.9a
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Produce HTML and printed documents from LaTeX source
 
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX \
-		ppmtogif:${PORTSDIR}/graphics/netpbm
+RUN_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm
 
+USE_TEX=	tetex
 USE_EMACS=	yes
 EMACS_PORT_NAME?=	emacs21
 
