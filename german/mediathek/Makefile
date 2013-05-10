@@ -2,12 +2,12 @@
 # Date created:		2010-10-17
 # Whom:			Lars Engels <lme@FreeBSD.org>
 #
-# $FreeBSD: ports/german/mediathek/Makefile,v 1.10 2013/01/23 15:05:35 svnexp Exp $
+# $FreeBSD: german/mediathek/Makefile 317561 2013-05-06 23:01:58Z ehaupt $
 #
 
 PORTNAME=	mediathek
 PORTVERSION=	3.1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	german java
 MASTER_SITES=	SF/zdfmediathk/Mediathek/Mediathek%20${PORTVERSION}
 DISTNAME=	MediathekView_${PORTVERSION}
