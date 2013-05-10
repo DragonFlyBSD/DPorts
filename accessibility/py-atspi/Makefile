@@ -2,7 +2,7 @@
 # Date Created:			12 April 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/py-atspi/Makefile,v 1.7 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: accessibility/py-atspi/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/accessibility/py-atspi/Makefile,v 1.13 2010/11/16 11:55:55 kwm Exp $
 #
 
@@ -23,7 +23,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomehier intlhack gtk20 libxml2
 GNU_CONFIGURE=	yes
