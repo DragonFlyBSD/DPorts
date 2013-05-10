@@ -1,4 +1,4 @@
-# $FreeBSD: print/latex-beamer/Makefile 313377 2013-03-03 20:43:52Z hrs $
+# $FreeBSD: print/latex-beamer/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	latex-beamer
 PORTVERSION=	3.07
@@ -9,10 +9,9 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/Version%20${PORTVERSION}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX class to create a beamer presentation
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${LOCALBASE}/${TEXMFDIR}/tex/latex/pgf/basiclayer/pgf.sty:${PORTSDIR}/print/latex-pgf
+RUN_DEPENDS=	${LOCALBASE}/${TEXMFDIR}/tex/latex/pgf/basiclayer/pgf.sty:${PORTSDIR}/print/latex-pgf
 
+USE_TEX=	tetex
 NO_BUILD=	YES
 PLIST=		${WRKDIR}/pkg-plist
 
