@@ -1,5 +1,5 @@
 # Created by: Lupe Christoph <lupe@lupe-christoph.de>
-# $FreeBSD: ports/sysutils/munin-master/Makefile,v 1.42 2013/02/16 14:10:56 svnexp Exp $
+# $FreeBSD: sysutils/munin-master/Makefile 312351 2013-02-16 13:30:41Z flo $
 
 PORTNAME=	munin
 PORTVERSION=	${MUNIN_VERSION}
