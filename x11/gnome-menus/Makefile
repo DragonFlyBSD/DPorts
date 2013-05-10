@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-menus/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: x11/gnome-menus/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/x11/gnome-menus/Makefile,v 1.110 2010/11/17 11:29:19 kwm Exp $
 
 PORTNAME=	gnome-menus
@@ -14,11 +14,10 @@ COMMENT=	Implementation of the FreeDesktop Desktop Menu Spec
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
-USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack glib20 ltverhack
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 USE_AUTOTOOLS=	libtool
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
