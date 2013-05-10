@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda4/Makefile 314939 2013-03-22 15:28:13Z mezz $
+# $FreeBSD: databases/libgda4/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 #   $MCom: ports/databases/libgda4/Makefile,v 1.27 2012/09/01 23:02:08 mezz Exp $
 
 PORTNAME=	libgda
 PORTVERSION=	4.2.12
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX?=	4
@@ -24,9 +24,8 @@ LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
 		json-glib-1.0:${PORTSDIR}/devel/json-glib
 
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix glib20 libxslt intlhack referencehack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
