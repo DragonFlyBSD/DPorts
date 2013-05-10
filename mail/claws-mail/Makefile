@@ -1,9 +1,9 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: ports/mail/claws-mail/Makefile,v 1.185 2013/02/08 03:35:05 svnexp Exp $
+# $FreeBSD: mail/claws-mail/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	claws-mail
 PORTVERSION=	3.9.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail news ipv6
 MASTER_SITES=	SF/sylpheed-claws/Claws%20Mail/${PORTVERSION}
 
@@ -37,12 +37,11 @@ CONFLICTS=	sylpheed-claws
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
 USE_XORG=	ice pixman sm x11 xau xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
 USE_GNOME=	atk glib20 gnomehack gtk20 libartlgpl2 libxml2 pango
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig iconv
 INSTALLS_ICONS=	yes
 MAKE_JOBS_SAFE=	yes
 
@@ -120,7 +119,7 @@ PLIST_SUB+=		MANUAL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
