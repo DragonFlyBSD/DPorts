@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: multimedia/gnome-mplayer/Makefile 313541 2013-03-06 20:49:41Z jkim $
+# $FreeBSD: multimedia/gnome-mplayer/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gnome-mplayer
 PORTVERSION=	1.0.8
@@ -83,7 +83,7 @@ CONFIGURE_ARGS+=	--enable-nautilus=no
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
