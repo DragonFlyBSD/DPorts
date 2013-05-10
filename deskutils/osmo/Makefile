@@ -2,7 +2,7 @@
 # Date created:                      29 Sep 2009
 # Whom:                              Charlie Kester <corky1951#comcast.net>
 #
-# $FreeBSD: ports/deskutils/osmo/Makefile,v 1.15 2012/12/30 12:10:38 svnexp Exp $
+# $FreeBSD: deskutils/osmo/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	osmo
@@ -22,7 +22,7 @@ LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2 \
 		gtkhtml:${PORTSDIR}/www/libgtkhtml
 
 USE_GNOME=	gtk20
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 
 GNU_CONFIGURE=	yes
