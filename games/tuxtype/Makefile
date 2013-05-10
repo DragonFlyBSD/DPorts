@@ -2,7 +2,7 @@
 # Date created:				Mon Aug  6 21:53:03 EDT 2001
 # Whom:					Patrick Li <pat@databits.net>
 #
-# $FreeBSD: ports/games/tuxtype/Makefile,v 1.38 2012/11/17 05:57:55 svnexp Exp $
+# $FreeBSD: games/tuxtype/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
 #
 
 PORTNAME=	tuxtype
@@ -29,7 +29,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}_w_fonts-${PORTVERSION}
 USE_GNOME=	libxml2
 USE_SDL=	image mixer net pango sdl
 USE_PERL5=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	T4K_COMMON_CFLAGS="-I${T4K_WRKSRC}/src" \
@@ -49,7 +49,7 @@ T4K_WRKSRC=	${WRKDIR}/${T4K_NAME}-${T4K_VERSION}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
@@ -63,9 +63,7 @@ CONFIGURE_ARGS+=--without-rsvg
 .endif
 
 # use multiple make jobs for T4K_WRKSRC
-.if !defined(DISABLE_MAKE_JOBS)
 _make_jobs=	-j${MAKE_JOBS_NUMBER}
-.endif
 
 post-extract:
 	@${LN} -sf ${T4K_WRKSRC} ${WRKDIR}/${T4K_NAME}
