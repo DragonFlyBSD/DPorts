@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: ports/games/chromium-bsu/Makefile,v 1.37 2012/12/05 02:33:31 svnexp Exp $
+# $FreeBSD: games/chromium-bsu/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	chromium-bsu
 PORTVERSION=	0.9.15
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+=--disable-sdlmixer
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
