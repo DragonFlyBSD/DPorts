@@ -2,7 +2,7 @@
 # Date created:		2012-06-14
 # Whom:			lbartoletti <coder@tuxfamily.org>
 #
-# $FreeBSD: ports/graphics/libgaiagraphics/Makefile,v 1.2 2012/11/17 05:58:12 svnexp Exp $
+# $FreeBSD: graphics/libgaiagraphics/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	libgaiagraphics
@@ -21,7 +21,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -liconv
