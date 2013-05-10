@@ -1,5 +1,5 @@
 # Created by: dchapes@ddm.on.ca
-# $FreeBSD: emulators/vice/Makefile 315668 2013-04-02 10:58:56Z miwi $
+# $FreeBSD: emulators/vice/Makefile 316624 2013-04-26 16:39:14Z bapt $
 
 PORTNAME=	vice
 PORTVERSION=	2.4
@@ -25,10 +25,10 @@ LIB_DEPENDS+=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d
 RESTRICTED=	ROMs are copyrighted by Commodore Business Machines
 LICENSE=	GPLv2
 
+USES=		pkgconfig
 USE_XORG=	xpm ice sm xext xv xt x11 xmu
 USE_XORG+=	xrender xinerama xi xrandr xcursor xcomposite xdamage xfixes
 USE_GMAKE=	yes
-USE_PKGCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_ENV+=	MAKEINFOFLAGS="--no-split"
 
@@ -85,14 +85,10 @@ FIX_XAW=	src/arch/unix/x11/xaw/about.c \
 		src/arch/unix/x11/xaw/widgets/MultiListP.h \
 		src/arch/unix/x11/xaw/widgets/ScrList.c \
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 INFO=		vice
-.endif
-
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION}<800063
-LIB_DEPENDS+=		usb:${PORTSDIR}/devel/libusb
 .endif
 
 .if exists(${LOCALBASE}/bin/fc-cache)
@@ -108,9 +104,9 @@ PLIST_SUB+=		NOFCCACHE=""
 LIB_DEPENDS+=		avcodec:${PORTSDIR}/multimedia/ffmpeg
 .endif
 
-.if !defined(WITHOUT_NLS)
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PATCH_DEPENDS+=		${LOCALBASE}/bin/iconv:${PORTSDIR}/converters/libiconv
-USE_GETTEXT=		yes
 CONFIGURE_ARGS+=	--enable-nls --localedir=${LOCALBASE}/share/locale
 # causes vice to crash:
 #LDFLAGS+=		-lgettextlib
@@ -145,10 +141,10 @@ post-patch:
 	${MV} "${WRKSRC}/po/${i}" "${WRKSRC}/po/${i}.latin"
 	${LOCALBASE}/bin/iconv -f latin1 -t utf-8 < "${WRKSRC}/po/${i}.latin" > "${WRKSRC}/po/${i}"
 .endfor
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	${REINPLACE_CMD} -e 's| doc||' ${WRKSRC}/Makefile.in
 .endif
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 .if defined(VICE_WITH_XAW3D)
 .for i in ${FIX_XAW}
 	${REINPLACE_CMD} -e 's|X11/Xaw/|X11/Xaw3d/|' ${WRKSRC}/${i}
@@ -157,7 +153,7 @@ post-patch:
 .endif
 
 pre-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .endif
 	${MKDIR} ${PREFIX}/lib/vice/fonts
@@ -165,8 +161,8 @@ pre-install:
 		${PREFIX}/lib/vice/fonts/
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${LN} -sf vice_toc.html ${DOCSDIR}/index.html
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
