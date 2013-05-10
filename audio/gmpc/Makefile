@@ -2,7 +2,7 @@
 # Date created:		May 12 2004
 # Whom:			Mark Reidel <ports@mark.reidel.info>
 #
-# $FreeBSD: ports/audio/gmpc/Makefile,v 1.37 2012/11/17 05:54:32 svnexp Exp $
+# $FreeBSD: audio/gmpc/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gmpc
@@ -28,7 +28,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack pkgconfig glib20 gtk20 libglade2
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 CONFIGURE_ARGS=	--enable-system-libsexy
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
