@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-qt4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: net-im/telepathy-qt4/Makefile 316943 2013-04-30 15:57:28Z avilla $
 
 PORTNAME=	telepathy-qt4
 PORTVERSION=	0.9.3
@@ -16,11 +16,10 @@ LIB_DEPENDS=	telepathy-farsight:${PORTSDIR}/net-im/telepathy-farsight \
 
 USE_GNOME=	libxslt:build
 USE_GSTREAMER=	yes
-USE_PKGCONFIG=	yes
 USE_PYTHON_BUILD=	2.5+
 USE_QT4=	dbus gui network qtestlib_build xml \
 		moc_build qmake_build rcc_build uic_build
-USES=		cmake
+USES=		cmake pkgconfig
 CMAKE_ARGS=	-DENABLE_FARSIGHT:BOOL=True \
 		-DENABLE_TESTS:BOOL=False
 MAKE_JOBS_SAFE=	yes
