@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/e16/Makefile 316234 2013-04-22 15:10:48Z gahr $
+# $FreeBSD: x11-wm/e16/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	e16
 PORTVERSION=	1.0.13
@@ -14,8 +14,7 @@ SOUND_DESC=	Sound support via pulseaudio/libsndfile
 
 USE_XORG=	compositeproto damageproto xextproto x11 xbitmaps xcomposite xdamage \
 		xext xfixes xft xinerama xrandr xrender xxf86vm
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_GMAKE=	yes
 USE_EFL=	imlib2
 USE_AUTOTOOLS=	libtool
@@ -38,7 +37,7 @@ CONFIGURE_ARGS+=--disable-sound \
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
