@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-p2p/deluge/Makefile,v 1.87 2013/02/26 09:44:18 svnexp Exp $
+# $FreeBSD: net-p2p/deluge/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	deluge
 PORTVERSION=	1.3.6
@@ -24,7 +24,7 @@ PLIST_SUB+=	PYTHON_VER=${PYTHON_VER}
 
 USE_XZ=		yes
 WANT_GNOME=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_OPENSSL=	yes
 USE_PYTHON=	-2.7
 USE_TWISTED_RUN=	web
