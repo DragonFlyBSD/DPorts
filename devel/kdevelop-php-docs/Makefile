@@ -1,4 +1,4 @@
-# $FreeBSD: devel/kdevelop-php-docs/Makefile 314932 2013-03-22 13:41:53Z makc $
+# $FreeBSD: devel/kdevelop-php-docs/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	kdevelop-php-docs
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
@@ -21,7 +21,7 @@ MAKE_JOBS_SAFE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DBUILD_po:BOOL=Off
