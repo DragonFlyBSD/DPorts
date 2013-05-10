@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: www/qt4-webkit/Makefile 314095 2013-03-13 16:34:04Z makc $
+# $FreeBSD: www/qt4-webkit/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	webkit
 DISTVERSION=	${QT4_VERSION}
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	qt4-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt4 WebKit engine
 
-USE_PKGCONFIG=	build
+USE_GCC=	any
+USES=		pkgconfig
 USE_QT4=	corelib declarative gui network \
 		qmake_build moc_build rcc_build
 QT_NONSTANDARD=	yes
@@ -32,7 +33,6 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake tools translations \
 		src/testlib src/tools src/winmain src/3rdparty/clucene \
 		src/3rdparty/freetype src/3rdparty/libjpeg src/3rdparty/libmng \
 		src/3rdparty/libpng src/3rdparty/libtiff
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
 .for dne in ${DO_NOT_EXTRACT}
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
