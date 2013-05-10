@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: x11-toolkits/flowcanvas/Makefile 315568 2013-03-29 19:55:58Z pawel $
+# $FreeBSD: x11-toolkits/flowcanvas/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
 
 PORTNAME=	flowcanvas
 PORTVERSION=	0.7.1
@@ -31,9 +31,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 WAF_VERBOSE=	--verbose
 .endif
 
-.if defined(MAKE_JOBS_NUMBER)
 WAF_JOBS=	--jobs=${MAKE_JOBS_NUMBER}
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e \
