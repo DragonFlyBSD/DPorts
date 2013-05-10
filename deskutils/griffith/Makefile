@@ -2,7 +2,7 @@
 # Date created:		27 January 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/griffith/Makefile,v 1.23 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: deskutils/griffith/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	griffith
@@ -30,7 +30,7 @@ PYGNOMEEXTRAS_DESC=	Enable python-gnome-extras support
 USE_XZ=		yes
 USE_GNOME=	pygtk2
 USE_PYTHON=	2.5+
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 NO_BUILD=	yes
 
