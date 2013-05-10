@@ -2,7 +2,7 @@
 # Date created:			17 Nov 1998
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
-# $FreeBSD: irc/xchat1/Makefile 301663 2012-07-28 15:57:55Z cs $
+# $FreeBSD: irc/xchat1/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=		xchat
@@ -21,7 +21,7 @@ COMMENT=	X11 IRC client using the GTK+ toolkit, and optionally, GNOME
 
 USE_BZIP2=		yes
 USE_GMAKE=		yes
-USE_ICONV=		yes
+USES=			iconv
 USE_PERL5=		yes
 USE_GNOME=		gtk12
 WANT_GNOME=		yes
