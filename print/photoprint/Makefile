@@ -1,4 +1,4 @@
-# $FreeBSD: print/photoprint/Makefile 315037 2013-03-23 14:54:54Z kwm $
+# $FreeBSD: print/photoprint/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	photoprint
 DISTVERSION=	0.4.2-pre2
@@ -24,7 +24,7 @@ LIB_DEPENDS=	cups:${PORTSDIR}/print/cups-client \
 		xcb:${PORTSDIR}/x11/libxcb
 
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	desktopfileutils pango
 USE_XORG=	x11 xau xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
