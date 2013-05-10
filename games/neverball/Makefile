@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/neverball/Makefile,v 1.45 2012/12/31 17:20:21 svnexp Exp $
+# $FreeBSD: games/neverball/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	neverball
 PORTVERSION=	1.5.4
@@ -25,8 +25,10 @@ MAKE_JOBS_SAFE=	yes
 PORTDOCS=	CHANGES COPYING README
 MAN6=		neverball.6 neverputt.6
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 MAKE_ENV+=	ENABLE_NLS=1
 LOCALE_DIRS=	ca de es fi fr lv nn
 PLIST_SUB+=	NLS=""
@@ -55,7 +57,7 @@ do-install:
 		${PREFIX}/share/pixmaps/${f}.png
 	@${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin/
 .endfor
-.if !defined(WITHOUT_NLS)
+.if ${PORT_OPTIONS:MNLS}
 .  for ii in ${LOCALE_DIRS}
 	@${MKDIR} ${PREFIX}/share/locale/${ii}/LC_MESSAGES
 	@${INSTALL_DATA} ${WRKSRC}/locale/${ii}/LC_MESSAGES/*.mo \
@@ -63,7 +65,7 @@ do-install:
 .  endfor
 .endif
 
-.ifndef (NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${DOCSDIR}
 .  for i in ${PORTDOCS}
