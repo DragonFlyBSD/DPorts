@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/qt4-graphicssystems-opengl/Makefile,v 1.6 2013/02/03 21:44:16 svnexp Exp $
+# $FreeBSD: x11/qt4-graphicssystems-opengl/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	graphicssystems
 DISTVERSION=	${QT4_VERSION}
@@ -17,6 +17,7 @@ MAKE_JOBS_SAFE=	yes
 HAS_CONFIGURE=	yes
 USE_GL=		glu
 
+USE_GCC=	any
 ALL_TARGET=	first
 CONFIGURE_ENV?=	QTDIR=${WRKSRC} PATH=${WRKSRC}/bin:$$PATH
 MAKE_ENV?=	QTDIR=${WRKSRC} LD_LIBRARY_PATH=${WRKSRC}/lib:$$LD_LIBRARY_PATH \
@@ -30,7 +31,6 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake tools translations \
 		src/3rdparty/clucene src/3rdparty/freetype \
 		src/3rdparty/libjpeg src/3rdparty/libmng src/3rdparty/libpng \
 		src/3rdparty/libtiff src/3rdparty/phonon src/3rdparty/webkit
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
 .for dne in ${DO_NOT_EXTRACT}
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
