@@ -2,7 +2,7 @@
 # mplayer and mencoder....the variables that we need to set
 # before we include bsd.port.pre.mk
 #
-# $FreeBSD: multimedia/mplayer/Makefile.shared 315041 2013-03-23 15:45:25Z naddy $
+# $FreeBSD: multimedia/mplayer/Makefile.shared 317525 2013-05-06 15:34:17Z bapt $
 
 MPLAYER_SNAPSHOT_DATE=	2013-03-08
 MPLAYER_PORT_VERSION=	1.1.r${MPLAYER_SNAPSHOT_DATE:S/-//g}
@@ -22,10 +22,9 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/yasm:${PORTSDIR}/devel/yasm
 
+USES=		iconv ncurses
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
-USE_NCURSES=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}" \
