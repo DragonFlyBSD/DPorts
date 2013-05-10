@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: multimedia/gstreamer/Makefile 316596 2013-04-26 10:44:28Z ak $
 #    $MCom: ports/multimedia/gstreamer/Makefile,v 1.74 2010/03/09 10:11:45 kwm Exp $
 
 PORTNAME=	gstreamer
@@ -17,12 +17,10 @@ RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-i
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 CFLAGS:=	${CFLAGS} -O2 -Wno-format
-USES=		bison pathfix
+USES=		bison pathfix pkgconfig gettext
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20 libxml2 ltverhack ltasneededhack
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-tests \
 		--disable-examples \
