@@ -1,5 +1,5 @@
 # Created by: Dominik Rothert <dr@domix.de>
-# $FreeBSD: x11-wm/wmakerconf/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: x11-wm/wmakerconf/Makefile 316464 2013-04-24 18:10:30Z ak $
 #    $MCom: ports/x11-wm/wmakerconf/Makefile,v 1.2 2006/10/05 07:31:44 mezz Exp $
 PORTNAME=	wmakerconf
 PORTVERSION=	2.12
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USE_GNOME=	gtk20
 USE_PERL5=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
