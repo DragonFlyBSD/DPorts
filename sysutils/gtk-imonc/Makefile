@@ -1,5 +1,5 @@
 # Created by: Steffen Vogelreuter
-# $FreeBSD: ports/sysutils/gtk-imonc/Makefile,v 1.31 2012/12/10 19:24:05 svnexp Exp $
+# $FreeBSD: sysutils/gtk-imonc/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	gtk-imonc
 PORTVERSION=	0.6.4.1
@@ -22,9 +22,7 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		xcb:${PORTSDIR}/x11/libxcb
 
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
-USE_ICONV=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext iconv
 USE_GNOME=	gdkpixbuf2 gtk20
 USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
