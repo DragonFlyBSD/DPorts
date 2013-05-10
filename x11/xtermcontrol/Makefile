@@ -2,7 +2,7 @@
 # Date created:				23.12.2004
 # Whom:					krion
 #
-# $FreeBSD: ports/x11/xtermcontrol/Makefile,v 1.16 2012/11/17 06:03:23 svnexp Exp $
+# $FreeBSD: x11/xtermcontrol/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xtermcontrol
@@ -16,7 +16,7 @@ COMMENT=	Tool for dynamic control of xterm properties
 
 RUN_DEPENDS=	xterm:${PORTSDIR}/x11/xterm
 
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
