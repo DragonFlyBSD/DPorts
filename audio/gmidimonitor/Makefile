@@ -2,7 +2,7 @@
 # Date created:		2007-03-20
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: ports/audio/gmidimonitor/Makefile,v 1.14 2012/11/17 05:54:32 svnexp Exp $
+# $FreeBSD: audio/gmidimonitor/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
 #
 
 PORTNAME=	gmidimonitor
@@ -27,9 +27,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 PLIST_FILES=	bin/gmidimonitor %%DATADIR%%/gmidimonitor.ui
 PLIST_DIRS=	%%DATADIR%%
 
-.if defined(MAKE_JOBS_NUMBER)
 MAKE_JOBS_ARGS=	-j${MAKE_JOBS_NUMBER}
-.endif
 
 do-configure:
 	@(cd ${WRKSRC} && ./waf configure --prefix=${PREFIX} --alsa=no)
