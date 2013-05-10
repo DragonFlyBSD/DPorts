@@ -1,5 +1,5 @@
 # Created by: Martin Kammerhofer
-# $FreeBSD: print/auctex/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: print/auctex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	auctex
 PORTVERSION=	11.87
@@ -14,9 +14,7 @@ COMMENT=	Integrated environment for writing LaTeX using GNU Emacs
 
 LICENSE=	GPLv3
 
-BUILD_DEPENDS=	${MKTEXLSR}:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	${MKTEXLSR}:${PORTSDIR}/print/teTeX-base
-
+USE_TEX=	tetex
 USE_GHOSTSCRIPT=yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-lispdir=${PREFIX}/${LISPDIR} \
