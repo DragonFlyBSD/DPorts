@@ -2,7 +2,7 @@
 # Date created:         		September 18, 1999
 # Whom:					nectar@FreeBSD.ORG
 #
-# $FreeBSD: ports/x11-toolkits/py-wxPython28/Makefile,v 1.77 2012/11/17 06:03:38 svnexp Exp $
+# $FreeBSD: x11-toolkits/py-wxPython28/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	wxPython
@@ -26,7 +26,7 @@ USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PLIST_SUB=	PYTHON_VER=${PYTHON_VER}
-USE_GETTEXT=	yes
+USES=		gettext
 
 PYDISTUTILS_BUILDARGS=	\
 			WX_CONFIG="${WX_CONFIG}" \
