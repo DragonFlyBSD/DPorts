@@ -1,5 +1,5 @@
 # Created by: Kristopher Zentner <kzentner@u.washington.edu>
-# $FreeBSD: audio/soundtracker/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: audio/soundtracker/Makefile 316620 2013-04-26 15:10:57Z bapt $
 
 PORTNAME=	soundtracker
 PORTVERSION=	0.6.8
@@ -31,7 +31,7 @@ DESKTOP_ENTRIES="SoundTracker" "Pattern-oriented music editor" \
 		"${PREFIX}/share/pixmaps/${PORTNAME}.xpm" \
 		"soundtracker" "AudioVideo;Audio;AudioVideoEditing;" false
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MASM}
 CONFIGURE_ARGS+=	--enable-asm
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=	--disable-sdl
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
@@ -83,4 +83,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sharp.xpm \
 		${PREFIX}/share/pixmaps/soundtracker.xpm
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
