@@ -2,7 +2,7 @@
 # Date created:				2007/02/13
 # Whom:					chinsan
 #
-# $FreeBSD: ports/textproc/eqe/Makefile,v 1.9 2012/11/17 06:01:55 svnexp Exp $
+# $FreeBSD: textproc/eqe/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	eqe
 PORTVERSION=	1.3.0
@@ -16,12 +16,11 @@ COMMENT=	LaTeX equation editor
 BUILD_DEPENDS=	p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 		p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit \
-		Magick++-config:${PORTSDIR}/graphics/ImageMagick \
-		tex:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	tex:${PORTSDIR}/print/teTeX-base
+		Magick++-config:${PORTSDIR}/graphics/ImageMagick
 
 USE_BZIP2=	yes
 USE_PERL5=	yes
+USE_TEX=	tetex
 
 MAKE_ARGS=	PREFIX=${PREFIX}
 
