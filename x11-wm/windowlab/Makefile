@@ -1,5 +1,5 @@
 # Created by: Pierre-Paul Lavoie <ppl@nbnet.nb.ca>
-# $FreeBSD: x11-wm/windowlab/Makefile 315693 2013-04-03 06:21:41Z miwi $
+# $FreeBSD: x11-wm/windowlab/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	windowlab
 PORTVERSION=	1.40
@@ -30,7 +30,7 @@ PLIST_DIRS=	%%ETCDIR%%
 
 .if ${PORT_OPTIONS:MXFT}
 USE_XORG+=	xft
-USE_PKGCONFIG=	build
+USES+=		pkgconfig
 MAKE_ENV+=	EXTRA_INC="$$(pkg-config --cflags xft)" \
 		EXTRA_LIBS="$$(pkg-config --libs xft)"
 CFLAGS+=	-DXFT
