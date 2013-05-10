@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/devel/synfig/Makefile,v 1.35 2013/01/17 16:48:38 svnexp Exp $
+# $FreeBSD: devel/synfig/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	synfig
 DISTVERSION=	0.63.05
@@ -23,7 +23,7 @@ LIB_DEPENDS=	glibmm-2.4.1:${PORTSDIR}/devel/glibmm \
 		xml\\+\\+-2.6:${PORTSDIR}/textproc/libxml++26
 
 USE_GNOME=	gnomehack glib20
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
