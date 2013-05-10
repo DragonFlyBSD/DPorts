@@ -2,7 +2,7 @@
 # Date created:				18 Dec 2005
 # Whom:					Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: ports/japanese/scim-tomoe/Makefile,v 1.24 2012/11/17 05:58:39 svnexp Exp $
+# $FreeBSD: japanese/scim-tomoe/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	scim-tomoe
@@ -19,8 +19,7 @@ LIB_DEPENDS=	tomoe.1:${PORTSDIR}/japanese/tomoe \
 		tomoe-gtk.1:${PORTSDIR}/japanese/libtomoe-gtk
 
 USE_GNOME=	lthack intlhack
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
