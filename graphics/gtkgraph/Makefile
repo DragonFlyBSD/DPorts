@@ -2,7 +2,7 @@
 # Date created:				12 October 1999
 # Whom:					Chris D. Faulhaber <jedgar@fxp.org>
 #
-# $FreeBSD: ports/graphics/gtkgraph/Makefile,v 1.37 2012/11/17 05:58:09 svnexp Exp $
+# $FreeBSD: graphics/gtkgraph/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gtkgraph
@@ -15,7 +15,7 @@ MASTER_SITE_SUBDIR= jedgar
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphing calculator using GTK+
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	imlib
 USE_PERL5_BUILD=yes
