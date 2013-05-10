@@ -1,5 +1,5 @@
 # Created by: Bernhard Fröhlich <decke@bluelife.at>
-# $FreeBSD: audio/vagalume/Makefile 315714 2013-04-03 21:00:33Z decke $
+# $FreeBSD: audio/vagalume/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	vagalume
 PORTVERSION=	0.8.5
@@ -16,9 +16,9 @@ LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2 \
 		curl.6:${PORTSDIR}/ftp/curl
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
-USE_PKGCONFIG=	build
 USE_GSTREAMER=	good mad gconf
 INSTALLS_ICONS=	yes
 
@@ -31,7 +31,7 @@ TRAY_DESC=	Tray icon and libnotify support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_SUB+=	NLS=""
