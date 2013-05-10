@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: x11-toolkits/gtkmm30/Makefile 314653 2013-03-19 15:08:34Z kwm $
+# $FreeBSD: x11-toolkits/gtkmm30/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/x11-toolkits/gtkmm30/Makefile,v 1.22 2012/10/21 16:52:21 kwm Exp $
 
 PORTNAME=	gtkmm
@@ -20,11 +20,10 @@ LATEST_LINK=	gtkmm30
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gtk30 ltverhack glibmm cairomm atkmm pangomm
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
