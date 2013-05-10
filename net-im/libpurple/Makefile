@@ -2,7 +2,7 @@
 # Date created:			26 Mar 1999
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
-# $FreeBSD: net-im/libpurple/Makefile 313809 2013-03-10 06:28:25Z marcus $
+# $FreeBSD: net-im/libpurple/Makefile 316766 2013-04-28 22:53:20Z marcus $
 #   $MCom: ports/net-im/libpurple/Makefile,v 1.32 2010/05/10 04:21:19 marcus Exp $
 #
 
@@ -33,8 +33,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 .if !defined(PIDGIN_SLAVE)
 # Pidgin slave ports that require the following functionality, must explicitly
 # set these macros themselves.
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 USE_LDCONFIG=	yes
 WANT_GNOME=	yes
 USE_PYTHON=	yes
@@ -76,6 +75,8 @@ OPTIONS=	BONJOUR "Enable mDNS support" on \
 OPTIONS+=	GTKSPELL "Spell checking support" on \
 		CAP "Enable Contact Availability Prediction plugin" on
 .endif
+
+OPTIONSFILE=	${PORT_DBDIR}/${UNIQUENAME}/options
 
 CONFIGURE_ARGS+=--disable-doxygen
 
