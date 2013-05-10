@@ -1,5 +1,5 @@
 # Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-# $FreeBSD: editors/kile-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: editors/kile-kde4/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	kile
 PORTVERSION=	2.1.3
@@ -9,13 +9,13 @@ MASTER_SITES=	SF/${PORTNAME}/stable/${PORTNAME}-${DISTVERSION}
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	LaTeX source editor for KDE
 
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		identify:${PORTSDIR}/graphics/ImageMagick
+RUN_DEPENDS=	identify:${PORTSDIR}/graphics/ImageMagick
 
 USE_BZIP2=	yes
 USES=		cmake
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 USE_KDE4=	kdeprefix kdelibs automoc4 sharedmime kate_run
+USE_TEX=	tetex
 MAKE_JOBS_SAFE=	yes
 
 LATEST_LINK=	${PORTNAME}-kde4
