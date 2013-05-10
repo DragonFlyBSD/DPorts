@@ -1,5 +1,5 @@
 # Create by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/warzone2100/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: games/warzone2100/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	warzone2100
 PORTVERSION=	3.1.0
@@ -51,7 +51,7 @@ IGNORE=		does not build on < 8.x
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
