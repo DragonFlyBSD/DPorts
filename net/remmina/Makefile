@@ -1,24 +1,21 @@
-# New ports collection makefile for:	grdc
-# Date created:				12 April 2009
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/net/remmina/Makefile,v 1.27 2013/02/19 14:35:20 svnexp Exp $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: net/remmina/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	remmina
 PORTVERSION=	0.9.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net gnome
 MASTER_SITES=	SF/${PORTNAME}/0.9
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	The GTK+ Remote Desktop Client
 
-OPTIONS=	SSH	"Build with SSH tunneling support"	on \
-		GCRYPT	"Build with libgcrypt support for password encryption"	on \
-		TERM	"Build with terminal support"	on \
-		AVAHI	"Build with Avahi support"	on \
-		UNIQUE	"Build with Unique-App support"	on
+OPTIONS_DEFINE=	SSH GCRYPT TERM AVAHI UNIQUE NLS
+OPTIONS_DEFAULT=	SSH GCRYPT TERM AVAHI UNIQUE
+SSH_DESC=	SSH tunneling support
+GCRYPT_DESC=	libgcrypt support for password encryption
+TERM_DESC=	terminal support
+UNIQUE_DESC=	Unique-App support
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
@@ -33,15 +30,15 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 .include <bsd.port.options.mk>
 
-.if defined(WITHOUT_NLS)
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
-.if !defined(WITHOUT_SSH)
+.if ${PORT_OPTIONS:MSSH}
 BUILD_DEPENDS+=	${LOCALBASE}/include/libssh/libssh.h:${PORTSDIR}/security/libssh
 RUN_DEPENDS+=	${LOCALBASE}/lib/libssh.so.4:${PORTSDIR}/security/libssh
 .if ${OSVERSION} >= 800040
@@ -51,25 +48,25 @@ LDFLAGS+=	-fstack-protector
 CONFIGURE_ARGS+=--disable-ssh
 .endif
 
-.if !defined(WITHOUT_GCRYPT)
-LIB_DEPENDS+=	gcrypt.18:${PORTSDIR}/security/libgcrypt
+.if ${PORT_OPTIONS:MGCRYPT}
+LIB_DEPENDS+=	gcrypt:${PORTSDIR}/security/libgcrypt
 .else
 CONFIGURE_ARGS+=--disable-gcrypt
 .endif
 
-.if !defined(WITHOUT_TERM)
+.if ${PORT_OPTIONS:MTERM}
 USE_GNOME+=	vte
 .else
 CONFIGURE_ARGS+=--disable-vte
 .endif
 
-.if !defined(WITHOUT_AVAHI)
+.if ${PORT_OPTIONS:MAVAHI}
 LIB_DEPENDS+=	avahi-ui.0:${PORTSDIR}/net/avahi-gtk
 .else
 CONFIGURE_ARGS+=--disable-avahi
 .endif
 
-.if !defined(WITHOUT_UNIQUE)
+.if ${PORT_OPTIONS:MUNIQUE}
 LIB_DEPENDS+=	unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 .else
 CONFIGURE_ARGS+=--disable-unique
