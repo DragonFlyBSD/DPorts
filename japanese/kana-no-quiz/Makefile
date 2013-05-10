@@ -2,7 +2,7 @@
 # Date created:		2006-04-10
 # Whom:			Nicola Vitale	<nivit@email.it>
 #
-# $FreeBSD: ports/japanese/kana-no-quiz/Makefile,v 1.14 2012/11/17 05:58:35 svnexp Exp $
+# $FreeBSD: japanese/kana-no-quiz/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	kana-no-quiz
@@ -24,7 +24,7 @@ NO_BUILD=	yes
 RM_FILES=	CHANGES.txt FAL.txt  GPL.txt
 RM_OPTS=	-f
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
 

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/japanese/kana-no-quiz/pkg-plist,v 1.5 2012/11/17 05:58:35 svnexp Exp $
+@comment $FreeBSD: japanese/kana-no-quiz/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/kana-no-quiz
 %%PYTHON_SITELIBDIR%%/kananoquiz/__init__.py
 %%PYTHON_SITELIBDIR%%/kananoquiz/__init__.pyc
