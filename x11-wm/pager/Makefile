@@ -1,5 +1,5 @@
 # Created by: Michael Ebert <ebert@informatik.unibw-muenchen.de>
-# $FreeBSD: ports/x11-wm/pager/Makefile,v 1.32 2012/11/27 16:49:47 svnexp Exp $
+# $FreeBSD: x11-wm/pager/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	pager
 PORTVERSION=	0.90.3
@@ -17,7 +17,7 @@ RUN_DEPENDS=	sawfish:${PORTSDIR}/x11-wm/sawfish
 USE_XZ=		yes
 USE_GNOME=	gtk20
 USE_GMAKE=	yes
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 
 PLIST_FILES=	lib/sawfish/sawfishpager \
