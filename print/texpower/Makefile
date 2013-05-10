@@ -3,7 +3,7 @@
 # Date created:			Dec 30, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/print/texpower/Makefile,v 1.12 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: print/texpower/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	texpower
@@ -17,9 +17,7 @@ DISTNAME=	${PORTNAME}-0-2
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Creating dynamic online presentations with LaTeX
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base
-
+USE_TEX=	tetex
 PLIST_SUB=	TEXMFLOCAL=${TEXMFLOCAL} \
 		MKTEXLSR=${MKTEXLSR}
 

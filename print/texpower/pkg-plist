@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/print/texpower/pkg-plist,v 1.4 2012/11/17 06:00:55 svnexp Exp $
+@comment $FreeBSD: print/texpower/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%TEXMFLOCAL%%/tex/latex/texpower/automata.sty
 %%TEXMFLOCAL%%/tex/latex/texpower/fixseminar.sty
 %%TEXMFLOCAL%%/tex/latex/texpower/powersem.cls
