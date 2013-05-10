@@ -2,7 +2,7 @@
 # Date created:				Sun Nov  2
 # Whom:					Clement Laforet <sheepkiller@cultdeadsheep.org>
 #
-# $FreeBSD: ports/net-mgmt/bandwidthd/Makefile,v 1.22 2012/11/17 06:00:30 svnexp Exp $
+# $FreeBSD: net-mgmt/bandwidthd/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	bandwidthd
@@ -23,7 +23,7 @@ USE_CSTD=	c89
 
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
-USE_ICONV=	YES
+USES=		iconv
 
 post-install:
 	@${INSTALL_SCRIPT} ${FILESDIR}/bandwidthd.sh \
