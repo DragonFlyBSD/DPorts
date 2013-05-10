@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ports/databases/gtksql/Makefile,v 1.30 2013/02/26 20:45:35 svnexp Exp $
+# $FreeBSD: databases/gtksql/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gtksql
 PORTVERSION=	0.4.5
@@ -16,7 +16,7 @@ LIB_DEPENDS=	avahi-client:${PORTSDIR}/net/avahi-app
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	aclocal libtool
 ACLOCAL_ARGS=	-I${LOCALBASE}/share/aclocal
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
 
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=--without-mysql
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
