@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/audio/osd-lyrics/Makefile,v 1.10 2012/11/17 05:54:40 svnexp Exp $
+# $FreeBSD: audio/osd-lyrics/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	osdlyrics
 PORTVERSION=	0.4.3
@@ -21,7 +21,7 @@ CONFIGURE_ENV=	DATADIRNAME=share
 # Cannot enable -Werror yet: Clang does not like the code `printf(_("..."))',
 # see this bug for details: http://llvm.org/bugs/show_bug.cgi?id=3814
 #CONFIGURE_ARGS=	--with-werror
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
 USE_SQLITE=	yes
