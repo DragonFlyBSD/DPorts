@@ -1,5 +1,5 @@
 # Created by: Yonatan <Yonatan@Xpert.com>
-# $FreeBSD: ports/security/libtomcrypt/Makefile,v 1.34 2012/11/17 06:01:07 svnexp Exp $
+# $FreeBSD: security/libtomcrypt/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	libtomcrypt
 PORTVERSION=	1.17
@@ -47,7 +47,7 @@ CFLAGS+=	-DGMP_DESC
 .endif
 
 .if ${PORT_OPTIONS:MDOCS}
-BUILD_DEPENDS+=	latex:${PORTSDIR}/print/teTeX
+USE_TEX=	tetex
 PORTDOCS=	*
 .else
 MAKE_ARGS+=	NODOCS=yes
