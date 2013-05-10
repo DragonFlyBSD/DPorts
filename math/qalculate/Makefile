@@ -2,7 +2,7 @@
 # Date created:        07 July 2004
 # Whom:                Sergey Akifyev <asa@gascom.ru>
 #
-# $FreeBSD: ports/math/qalculate/Makefile,v 1.29 2012/11/17 05:59:29 svnexp Exp $
+# $FreeBSD: math/qalculate/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	qalculate
@@ -20,7 +20,7 @@ RUN_DEPENDS=	gnuplot:${PORTSDIR}/math/gnuplot \
 		wget:${PORTSDIR}/ftp/wget
 
 USE_GNOME=	gnomehack gnomeprefix intlhack libglade2 libgnome
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
