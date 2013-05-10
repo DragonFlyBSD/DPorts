@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: deskutils/kdepim4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: deskutils/kdepim4/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	kdepim
 PORTVERSION=	${KDE4_VERSION}
@@ -25,10 +25,9 @@ CONFLICTS_INSTALL=	kdepim-4.4.*
 
 USE_XZ=		yes
 USE_GNOME=	libxml2
-USE_ICONV=	yes
 USE_KDE4=	kdehier kdelibs kdeprefix pimlibs \
 		akonadi automoc4 ontologies soprano strigi nepomuk-widgets
-USES=		cmake:outsource
+USES=		cmake:outsource iconv
 USE_OPENLDAP=	yes
 USE_QT4=	corelib dbus declarative designer_build gui network opengl \
 		script sql webkit \
