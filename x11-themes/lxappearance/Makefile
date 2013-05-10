@@ -2,7 +2,7 @@
 # Date created:                2008/06/20
 # Whom:                        chinsan
 #
-# $FreeBSD: ports/x11-themes/lxappearance/Makefile,v 1.16 2012/11/17 06:03:33 svnexp Exp $
+# $FreeBSD: x11-themes/lxappearance/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	lxappearance
@@ -17,7 +17,7 @@ COMMENT=	A desktop-independent theme switcher for GTK+
 LICENSE=	GPLv2
 
 USE_GNOME=	gnomehack gtk20 intlhack
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
