@@ -2,7 +2,7 @@
 # Date created:                February 26, 2009
 # Whom:                        Nikos Ntarmos <ntarmos@cs.uoi.gr>
 #
-# $FreeBSD: ports/x11-wm/awesome2/Makefile,v 1.28 2012/11/17 06:03:40 svnexp Exp $
+# $FreeBSD: x11-wm/awesome2/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	awesome2
@@ -21,7 +21,7 @@ LIB_DEPENDS=	confuse.0:${PORTSDIR}/devel/libconfuse \
 		cairo.2:${PORTSDIR}/graphics/cairo \
 		freetype.9:${PORTSDIR}/print/freetype2
 
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 USE_EFL=	imlib2
 USE_GNOME=	pango
