@@ -1,7 +1,8 @@
-# $FreeBSD: net-im/gajim/Makefile 314618 2013-03-19 06:22:42Z rm $
+# $FreeBSD: net-im/gajim/Makefile 317027 2013-05-01 15:19:41Z rm $
 
 PORTNAME=	gajim
 PORTVERSION=	0.15.3
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.gajim.org/downloads/0.15/
 
@@ -13,8 +14,6 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}openssl>=0:${PORTSDIR}/security/py-openssl \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:${PORTSDIR}/databases/py-sqlite3 \
 		${PYTHON_PKGNAMEPREFIX}asn1>=0:${PORTSDIR}/devel/py-asn1
-
-CONFLICTS=	gajim-devel-[0-9]*
 
 FETCH_ARGS=	-Fpr
 GNU_CONFIGURE=	yes
@@ -40,7 +39,7 @@ SPELL_DESC=	Spell checking support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
