@@ -1,5 +1,5 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: chinese/ibus-pinyin/Makefile 314855 2013-03-21 17:39:03Z bapt $
+# $FreeBSD: chinese/ibus-pinyin/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	ibus-pinyin
 PORTVERSION=	1.4.0
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--disable-opencc
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
