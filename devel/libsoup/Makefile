@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/libsoup/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/libsoup/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 #   $MCom: ports/devel/libsoup/Makefile,v 1.116 2013/01/15 02:25:57 kwm Exp $
 
 PORTNAME=	libsoup
 PORTVERSION=	2.40.3
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -20,7 +20,7 @@ USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomehier gnomehack glib20 libxml2 ltverhack referencehack \
 		intltool
 USE_LDCONFIG=	yes
