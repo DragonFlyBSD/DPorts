@@ -2,7 +2,7 @@
 # Date created:		2005-07-01
 # Whom:			Vsevolod Stakhov <vsevolod@highsecure.ru>
 #
-# $FreeBSD: ports/misc/metromap/Makefile,v 1.23 2012/11/17 05:59:42 svnexp Exp $
+# $FreeBSD: misc/metromap/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	metromap
@@ -22,7 +22,7 @@ USE_PYTHON=	yes
 USE_GNOME=	pygtk2
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 PORTDOCS=	AUTHORS NEWS README README.data TODO
 
