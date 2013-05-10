@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/print/dvipdfmx/pkg-plist,v 1.17 2012/11/17 06:00:48 svnexp Exp $
+@comment $FreeBSD: print/dvipdfmx/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/dvipdfmx
 bin/ebb-dvipdfmx
 bin/extractbb
