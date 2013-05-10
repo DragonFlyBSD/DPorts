@@ -2,7 +2,7 @@
 # Date created:        2002-11-03
 # Whom:                Klaus Goger <klaus.goger@reflex.at>
 #
-# $FreeBSD: games/xbubble/Makefile 313761 2013-03-09 21:49:44Z bdrewery $
+# $FreeBSD: games/xbubble/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	xbubble
 PORTVERSION=	0.5.8
@@ -21,7 +21,7 @@ MAN6=		xbubble.6
 USE_XORG=	x11 xmu
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 CPPFLAGS+=	-I${LOCALBASE}/include/libpng15
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
