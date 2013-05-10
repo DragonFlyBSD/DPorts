@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/lxmusic/Makefile,v 1.2 2012/11/17 05:54:38 svnexp Exp $
+# $FreeBSD: audio/lxmusic/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	lxmusic
 PORTVERSION=	0.4.5
@@ -14,7 +14,7 @@ LIB_DEPENDS=	xmmsclient:${PORTSDIR}/audio/xmms2 \
 USE_GNOME=	gtk20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
