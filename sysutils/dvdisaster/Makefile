@@ -2,7 +2,7 @@
 # Date created:                         2006/08/13
 # Whom:                                 Heiner <h.eichmann@gmx.de>
 #
-# $FreeBSD: ports/sysutils/dvdisaster/Makefile,v 1.23 2012/11/17 06:01:29 svnexp Exp $
+# $FreeBSD: sysutils/dvdisaster/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	dvdisaster
@@ -23,7 +23,7 @@ BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 MAKEFILE=	GNUmakefile
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gtk20
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--docsubdir="/" \
