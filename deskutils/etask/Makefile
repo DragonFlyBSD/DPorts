@@ -2,7 +2,7 @@
 # Date created:                15 December 2004
 # Whom:                        Dryice Liu <dryice@liu.com.cn>
 #
-# $FreeBSD: ports/deskutils/etask/Makefile,v 1.13 2012/11/17 05:55:27 svnexp Exp $
+# $FreeBSD: deskutils/etask/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	etask
@@ -15,13 +15,13 @@ MASTER_SITES=	http://members.chello.at/rene.weichselbaum/ \
 MAINTAINER=	dryice@dryice.name
 COMMENT=	Manage your projects or tasks within GNU Emacs
 
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		dvips:${PORTSDIR}/print/dvipsk-tetex \
+RUN_DEPENDS=	dvips:${PORTSDIR}/print/dvipsk-tetex \
 		xpdf:${PORTSDIR}/graphics/xpdf
 
 USE_EMACS=	yes
 EMACS_PORT_NAME?=	emacs21
 USE_GHOSTSCRIPT_RUN=	yes
+USE_TEX=	tetex
 
 .if ${EMACS_PORT_NAME} != "emacs21"
 PORTNAMESUFFIX=	${PKGNAMESUFFIX}
