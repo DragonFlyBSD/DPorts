@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: x11/gsynaptics/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: x11/gsynaptics/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	gsynaptics
 PORTVERSION=	0.9.16
@@ -13,10 +13,8 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	xf86-input-synaptics>0:${PORTSDIR}/x11-drivers/xf86-input-synaptics
 
-USES=        pathfix
+USES=		pathfix pkgconfig gettext
 USE_GNOME=	gconf2 libglade2 gnomedocutils
-USE_GETTEXT=	yes
-USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
