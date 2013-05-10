@@ -1,5 +1,5 @@
 # Created by: Joey Mingrone <joey@mingrone.org>
-# $FreeBSD: deskutils/parcellite/Makefile 315616 2013-03-30 14:09:04Z miwi $
+# $FreeBSD: deskutils/parcellite/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	parcellite
 PORTVERSION=	1.0.1
@@ -18,7 +18,7 @@ USE_GNOME=	gtk20
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
