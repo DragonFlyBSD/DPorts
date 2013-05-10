@@ -1,5 +1,5 @@
 # Created by: Bernd Rosauer <br@netland.inka.de>
-# $FreeBSD: print/teTeX/Makefile 314921 2013-03-22 12:40:32Z bapt $
+# $FreeBSD: print/teTeX/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	teTeX
 PORTVERSION=	3.0
@@ -12,12 +12,10 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A meta port for teTeX suite
 
-RUN_DEPENDS=	${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal \
-		${LOCALBASE}/${TEXMFDISTDIR}/LICENSE.texmf:${PORTSDIR}/print/teTeX-texmf \
-		latex:${PORTSDIR}/print/teTeX-base \
-		${LOCALBASE}/share/fonts/cm-super/README:${PORTSDIR}/print/cm-super \
+RUN_DEPENDS=	${LOCALBASE}/share/fonts/cm-super/README:${PORTSDIR}/print/cm-super \
 		dvips:${PORTSDIR}/print/dvipsk-tetex
 
+USE_TEX=	tetex
 OPTIONS_DEFINE=	LETTERSIZE X11
 LETTERSIZE_DESC=	Use letter size by default
 
