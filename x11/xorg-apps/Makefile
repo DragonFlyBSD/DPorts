@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xorg-apps/Makefile,v 1.16 2013/02/04 05:58:18 svnexp Exp $
+# $FreeBSD: x11/xorg-apps/Makefile 317162 2013-05-02 22:10:11Z bapt $
 
 PORTNAME=	xorg-apps
 PORTVERSION=	7.5.2
@@ -10,6 +10,8 @@ EXTRACT_ONLY=	# none
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.org apps meta-port
+
+.MAKE.FreeBSD_UL=	yes
 
 COMPONENTS=	appres bitmap xf86dga:dga iceauth luit \
 		x11-fonts/mkfontdir:mkfontdir \
