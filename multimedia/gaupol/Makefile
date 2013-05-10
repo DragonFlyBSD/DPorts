@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gaupol
-# Date created:		08 January 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/gaupol/Makefile,v 1.24 2012/11/17 05:59:49 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: multimedia/gaupol/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	gaupol
 PORTVERSION=	0.19.2
@@ -28,8 +24,10 @@ INSTALLS_ICONS=	yes
 
 MAN1=		${PORTNAME}.1
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
