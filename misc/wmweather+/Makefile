@@ -1,5 +1,5 @@
 # Created by: Harald Wille <harald.wille@students.jku.at>
-# $FreeBSD: misc/wmweather+/Makefile 314321 2013-03-15 18:05:28Z pawel $
+# $FreeBSD: misc/wmweather+/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=		wmweather+
 PORTVERSION=		2.13
@@ -23,7 +23,7 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 WRKSRC=		${WRKDIR}/wmweather+-${PORTVERSION}
 
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_XORG=	xpm
 
 CONFIGURE_ARGS+=	--with-libwraster=${LOCALBASE} \
