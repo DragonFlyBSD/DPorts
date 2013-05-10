@@ -1,5 +1,5 @@
 # Created by: bremner@unb.ca
-# $FreeBSD: graphics/ipe/Makefile 315830 2013-04-16 16:00:08Z rene $
+# $FreeBSD: graphics/ipe/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	ipe
 DISTVERSION=	7.1.2
@@ -13,15 +13,15 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extensible drawing editor
 
 LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}/src
 
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 USE_LUA=	5.1
 USE_GMAKE=	yes
-USE_PKGCONFIG=	yes
 USE_QT4=	gui qt3support qmake_build moc_build uic_build rcc_build
+USE_TEX=	tetex
 MAN1=		ipe.1 ipe6upgrade.1 ipeextract.1 iperender.1 ipetoipe.1 ipescript.1
 
 .include <bsd.port.options.mk>
