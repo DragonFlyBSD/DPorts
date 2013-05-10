@@ -2,7 +2,7 @@
 # Date created:			Thu Mar 08, 2007
 # Whom:				Beech Rintoul <beech@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/horde3-vacation/Makefile,v 1.2 2012/12/16 12:14:29 svnexp Exp $
+# $FreeBSD: mail/horde3-vacation/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	vacation
@@ -33,7 +33,7 @@ USE_PHP+=	ftp
 .endif
 
 USE_HORDE=	base pkg-message
-USE_GETTEXT=	yes
+USES=		gettext
 PORTDOCS=	CHANGES CREDITS INSTALL RELEASE_NOTES TODO
 
 .include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
