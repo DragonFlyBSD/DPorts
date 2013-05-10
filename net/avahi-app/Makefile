@@ -2,7 +2,7 @@
 # Date created:		18 November 2005
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/avahi-app/Makefile,v 1.37 2012/11/17 05:59:56 svnexp Exp $
+# $FreeBSD: net/avahi-app/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/net/avahi-app/Makefile,v 1.17 2011/03/13 17:23:19 kwm Exp $
 #
 
@@ -27,7 +27,7 @@ USERS?=		${PORTNAME}
 GROUPS?=	${USERS}
 
 USE_GNOME?=	gnomehack ltverhack glib20 intltool
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME_SUBR=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
