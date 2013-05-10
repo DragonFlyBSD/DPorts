@@ -1,4 +1,4 @@
-# $FreeBSD: math/gnuplot/Makefile 316191 2013-04-21 18:27:06Z glewis $
+# $FreeBSD: math/gnuplot/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	gnuplot
 PORTVERSION=	4.6.3
@@ -68,8 +68,7 @@ CONFIGURE_ARGS+=	--without-plot
 .endif
 
 .if ${PORT_OPTIONS:MTETEX}
-BUILD_DEPENDS+=		kpsexpand:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS+=		kpsexpand:${PORTSDIR}/print/teTeX-base
+USE_TEX=		tetex
 CONFIGURE_ARGS+=	--with-kpsexpand \
 			--with-texdir=${LOCALBASE}/share/texmf/tex/latex/gnuplot
 PLIST_SUB+=		TETEX=""
