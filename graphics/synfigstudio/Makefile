@@ -2,7 +2,7 @@
 # Date created:				25 Jun 2006
 # Whom:					Yinghong.Liu <relaxbsd@gmail.com>
 #
-# $FreeBSD: ports/graphics/synfigstudio/Makefile,v 1.27 2012/11/17 05:58:24 svnexp Exp $
+# $FreeBSD: graphics/synfigstudio/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	synfigstudio
@@ -19,7 +19,7 @@ LIB_DEPENDS=	synfig.0:${PORTSDIR}/devel/synfig \
 		gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
 
 USE_GNOME=	gnomehack gtk20
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
