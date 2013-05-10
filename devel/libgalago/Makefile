@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libgalago/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/libgalago/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	libgalago
 PORTVERSION=	0.5.2
@@ -14,8 +14,7 @@ LIB_PC_DEPENDS=	dbus-glib-1.pc:${PORTSDIR}/devel/dbus-glib
 BUILD_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 
-USES=	pathfix
-USE_GETTEXT=	yes
+USES=	pathfix gettext
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tests
