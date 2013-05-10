@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/graphics/mapnik/Makefile,v 1.29 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: graphics/mapnik/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
 
 PORTNAME=	mapnik
 PORTVERSION=	2.1.0
@@ -127,9 +127,7 @@ IGNORE=		does not install: runs out of virtual memory
 SCONS_ARGS+=	WARNING_CXXFLAGS=${WARNING_CXXFLAGS}
 SCONS_ARGS+=	INPUT_PLUGINS="`${ECHO} ${INPUT_PLUGINS} | ${TR} ' ' ,`"
 
-.if defined (MAKE_JOBS_NUMBER)
 SCONS_ARGS+=	JOBS=${MAKE_JOBS_NUMBER}
-.endif
 
 pre-configure:
 .if ${PORT_OPTIONS:MSQLITE3}
