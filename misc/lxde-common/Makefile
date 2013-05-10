@@ -2,7 +2,7 @@
 # Date created:                2009/02/03
 # Whom:                        sahne
 #
-# $FreeBSD: ports/misc/lxde-common/Makefile,v 1.12 2012/11/17 05:59:41 svnexp Exp $
+# $FreeBSD: misc/lxde-common/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	lxde-common
@@ -16,7 +16,7 @@ COMMENT=	LXDE Common files
 
 USE_GNOME=	gtk20
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		CPPFLAGS="-I${LOCALBASE}/include" \
