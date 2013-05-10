@@ -1,5 +1,5 @@
 # Created by: Chris St Denis <chris@smartt.com>
-# $FreeBSD: net-mgmt/nagiosql/Makefile 315908 2013-04-16 21:24:17Z ohauer $
+# $FreeBSD: net-mgmt/nagiosql/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	nagiosql
 PORTVERSION=	3.2.0
@@ -19,7 +19,7 @@ RUN_DEPENDS=	nagios:${PORTSDIR}/net-mgmt/nagios \
 
 USE_BZIP2=	yes
 USE_MYSQL=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PHP=	mysql filter gettext session simplexml
 WANT_PHP_WEB=	yes
 
