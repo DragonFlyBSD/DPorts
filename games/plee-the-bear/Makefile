@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/plee-the-bear/Makefile 315789 2013-04-12 06:40:01Z amdmi3 $
+# $FreeBSD: games/plee-the-bear/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	plee-the-bear
 PORTVERSION=	0.6.0
@@ -18,11 +18,10 @@ USE_GL=		gl glu
 WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
 MAKE_JOBS_SAFE=	yes
 USE_GCC=	4.6+
 
-USES=		cmake
+USES=		cmake gettext
 CMAKE_ARGS=	-Dlibclaw_DIR="${LOCALBASE}/share/libclaw/cmake" \
 		-DBEAR_NO_EDITOR=YES
 
