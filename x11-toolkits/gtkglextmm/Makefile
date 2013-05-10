@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: x11-toolkits/gtkglextmm/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: x11-toolkits/gtkglextmm/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	gtkglextmm
 PORTVERSION=	1.2.0
@@ -14,12 +14,10 @@ LIB_DEPENDS=	gtkglext-x11-1.0.0:${PORTSDIR}/x11-toolkits/gtkglext \
 		gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
-USES=        pathfix
+USES=		pathfix pkgconfig gettext
 USE_GNOME=	gnomeprefix gtk20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 
 post-patch:
