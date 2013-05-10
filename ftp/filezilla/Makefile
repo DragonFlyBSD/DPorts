@@ -1,9 +1,10 @@
 # Created by: alepulver
-# $FreeBSD: ftp/filezilla/Makefile 313370 2013-03-03 17:38:02Z jsa $
+# $FreeBSD: ftp/filezilla/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 #
 
 PORTNAME=	filezilla
 PORTVERSION=	3.6.0.2
+PORTREVISION=	1
 CATEGORIES=	ftp
 MASTER_SITES=	SF/${PORTNAME}/FileZilla_Client/${PORTVERSION}
 DISTNAME=	FileZilla_${PORTVERSION}_src
@@ -50,7 +51,7 @@ CONFIGURE_ARGS+=	--without-dbus
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-locales
