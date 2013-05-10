@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-qt4-dbussupport/Makefile,v 1.1 2013/02/03 22:23:03 svnexp Exp $
+# $FreeBSD: devel/py-qt4-dbussupport/Makefile 316333 2013-04-23 10:13:19Z bapt $
 
 PORTNAME=	dbussupport
 PORTVERSION=	${PYQT4_VERSION}
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0.8:${PORTSDIR}/devel/py-dbus \
 
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_PYTHON=	2.5+
 USE_QT4=	corelib qmake_build moc_build
 
