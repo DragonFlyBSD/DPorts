@@ -2,7 +2,7 @@
 # Date created:                 23 December 2009
 # Whom:                         Li-Lun Wang <llwang@infor.org>
 #
-# $FreeBSD: ports/chinese/scim-array/Makefile,v 1.7 2012/11/17 05:54:58 svnexp Exp $
+# $FreeBSD: chinese/scim-array/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 
 PORTNAME=	scim-array
@@ -19,9 +19,7 @@ RUN_DEPENDS=	scim:${PORTSDIR}/textproc/scim
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	pkgconfig
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext pkgconfig iconv
 
 CFLAGS+=	-fPIC
 CPPFLAGS+=	-I${LOCALBASE}/include
