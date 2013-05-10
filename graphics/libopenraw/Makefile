@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: ports/graphics/libopenraw/Makefile,v 1.19 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: graphics/libopenraw/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	libopenraw
 PORTVERSION=	0.0.8
@@ -14,9 +14,9 @@ LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs \
 		jpeg.11:${PORTSDIR}/graphics/jpeg
 
 MAKE_JOBS_SAFE=	yes
+USES=		pkgconfig
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
