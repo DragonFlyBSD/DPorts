@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/deskutils/nagaina/Makefile,v 1.14 2013/01/23 15:05:32 svnexp Exp $
+# $FreeBSD: deskutils/nagaina/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	nagaina
 PORTVERSION=	0.1.2
@@ -25,8 +25,7 @@ OPTIONS_DEFINE=	DOCS
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 USE_GNOME=	glib20
 USE_QT4=	corelib gui xml moc_build qmake_build rcc_build uic_build
 USE_XORG=	ice sm x11 xau xdmcp xext xrender
