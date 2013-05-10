@@ -1,5 +1,5 @@
 # Created by: vj562001@yahoo.de
-# $FreeBSD: print/latex-biblatex/Makefile 314921 2013-03-22 12:40:32Z bapt $
+# $FreeBSD: print/latex-biblatex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	biblatex
 PORTVERSION=	0.9e
@@ -12,13 +12,10 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	idolum@users.sourceforge.net
 COMMENT=	Reimplementation of the LaTeX bibliographic facilities
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal \
-		${LOCALBASE}/${TEXMFLOCAL}/tex/latex/etoolbox/etoolbox.sty:${PORTSDIR}/print/latex-etoolbox
+RUN_DEPENDS=	${LOCALBASE}/${TEXMFLOCAL}/tex/latex/etoolbox/etoolbox.sty:${PORTSDIR}/print/latex-etoolbox
 
 USE_ZIP=	YES
+USE_TEX=	tetex
 NO_BUILD=	YES
 PLIST=		${WRKDIR}/pkg-plist
 
