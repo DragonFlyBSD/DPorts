@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/xymon-server/Makefile,v 1.35 2012/12/10 19:24:04 svnexp Exp $
+# $FreeBSD: net-mgmt/xymon-server/Makefile 317389 2013-05-04 22:48:03Z flo $
 
 PORTNAME=	xymon
 PORTVERSION=	4.3.10
@@ -101,7 +101,7 @@ post-install:
 .endfor
 .for i in ${CONFIG_FILES}
 	${CP} -np ${WWWDIR}/server/etc/${i}.DIST \
-		${WWWDIR}/server/etc/${i}
+		${WWWDIR}/server/etc/${i} || ${TRUE}
 .endfor
 
 .include <bsd.port.mk>
