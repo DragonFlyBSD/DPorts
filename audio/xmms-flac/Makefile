@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/xmms-flac/Makefile,v 1.29 2012/11/17 05:54:48 svnexp Exp $
+# $FreeBSD: audio/xmms-flac/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	xmms-flac
 PORTVERSION=	1.2.1
@@ -17,9 +17,8 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
 		xcb.2:${PORTSDIR}/x11/libxcb
 
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_GNOME=	gtk12
-USE_ICONV=	yes
 USE_XORG=	x11 xau xdmcp xext xi
 CONFIGURE_ARGS=	--with-libiconv-prefix="${LOCALBASE}" \
 		--with-ogg="${LOCALBASE}" \

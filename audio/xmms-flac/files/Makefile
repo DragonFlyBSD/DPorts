@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/xmms-flac/files/Makefile,v 1.2 2012/11/17 05:54:48 svnexp Exp $
+# $FreeBSD: audio/xmms-flac/files/Makefile 300895 2012-07-14 12:56:14Z beat $
 
 SUBDIRS= src/share src/plugin_common src/plugin_xmms
 

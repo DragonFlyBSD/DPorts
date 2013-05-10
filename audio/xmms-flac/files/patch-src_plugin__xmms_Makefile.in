@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/xmms-flac/files/patch-src_plugin__xmms_Makefile.in,v 1.5 2012/11/17 05:54:48 svnexp Exp $
+$FreeBSD: audio/xmms-flac/files/patch-src_plugin__xmms_Makefile.in 300895 2012-07-14 12:56:14Z beat $
 
 --- src/plugin_xmms/Makefile.in.orig
 +++ src/plugin_xmms/Makefile.in
