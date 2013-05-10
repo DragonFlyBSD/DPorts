@@ -1,7 +1,8 @@
-# $FreeBSD: multimedia/phonon-vlc/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: multimedia/phonon-vlc/Makefile 317561 2013-05-06 23:01:58Z ehaupt $
 
 PORTNAME=	phonon
 PORTVERSION=	0.6.1
+PORTREVISION=	1
 CATEGORIES=	multimedia kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${PHONON_BRANCH}/${PORTNAME}/${PORTNAME}-backend${PKGNAMESUFFIX}/${PORTVERSION}/src
