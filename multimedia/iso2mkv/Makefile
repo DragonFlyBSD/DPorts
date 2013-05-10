@@ -2,11 +2,12 @@
 # Date created:			31 Dec 2006
 # Whom:				Alexander Botero-Lowry <alexbl@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/iso2mkv/Makefile,v 1.13 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/iso2mkv/Makefile 317561 2013-05-06 23:01:58Z ehaupt $
 #
 
 PORTNAME=	iso2mkv
 DISTVERSION=	2007-04-25
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://5ko.free.fr/dl/
 
