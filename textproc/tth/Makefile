@@ -2,7 +2,7 @@
 # Date created:         19 Feb 1998
 # Whom:                 Thomas Gellekum <tg@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/tth/Makefile,v 1.52 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/tth/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	tth
@@ -17,10 +17,10 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	lx@FreeBSD.org
 COMMENT=	A TeX to HTML translator
 
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX \
-		ppmtogif:${PORTSDIR}/graphics/netpbm
+RUN_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm
 
 USE_GHOSTSCRIPT_RUN=	yes
+USE_TEX=	tetex
 
 MAN1=		tth.1
 
