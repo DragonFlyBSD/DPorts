@@ -2,7 +2,7 @@
 # Date created:	4 January 2010
 # Whom:		Hiroto Kagotani <hiroto.kagotani@gmail.com>
 #
-# $FreeBSD: ports/japanese/ibus-skk/Makefile,v 1.14 2012/11/17 05:58:35 svnexp Exp $
+# $FreeBSD: japanese/ibus-skk/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ibus-skk
@@ -19,7 +19,7 @@ LIB_DEPENDS=	skk:${PORTSDIR}/japanese/libskk \
 		ibus-1.0:${PORTSDIR}/textproc/ibus
 
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 USE_GMAKE=	yes
 USE_GNOME=	intltool
@@ -40,7 +40,7 @@ post-install:
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
