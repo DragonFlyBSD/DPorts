@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/print/sgf2tex/pkg-plist,v 1.5 2012/11/17 06:00:54 svnexp Exp $
+@comment $FreeBSD: print/sgf2tex/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/sgf2tex
 bin/sgfsplit
 share/texmf/fonts/tfm/public/GOOE/gobl.tfm
