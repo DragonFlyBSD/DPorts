@@ -1,9 +1,5 @@
-# New ports collection makefile for:	imagination
-# Date created:				April 22, 2011
-# Whom:					Jesse <jessefrgsmith@yahoo.ca>
-#
-# $FreeBSD: ports/multimedia/imagination/Makefile,v 1.4 2012/11/17 05:59:50 svnexp Exp $
-#
+# Created by: Jesse <jessefrgsmith@yahoo.ca>
+# $FreeBSD: multimedia/imagination/Makefile 317038 2013-05-01 18:17:36Z jgh $
 
 PORTNAME=	imagination
 PORTVERSION=	3.0
@@ -12,7 +8,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	jessefrgsmith@yahoo.ca
-COMMENT=	A DVD slideshow maker
+COMMENT=	DVD slideshow maker
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/gtk-2.0:${PORTSDIR}/x11-toolkits/gtk20 \
 		${LOCALBASE}/bin/sox:${PORTSDIR}/audio/sox \
@@ -25,14 +21,14 @@ INSTALLS_ICONS=	yes
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
