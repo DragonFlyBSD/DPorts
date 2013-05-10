@@ -1,19 +1,22 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: print/cups-base/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: print/cups-base/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	cups
 PORTVERSION=	1.5.4
 DISTVERSIONSUFFIX=	-source
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	EASYSW/${PORTNAME}/${DISTVERSION}
 PKGNAMESUFFIX=	${CUPS_SUFFIX}${PKGNAMESUFFIX2}
-UNIQUENAME=	${PORTNAME}${PKGNAMESUFFIX}
 
 MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Common UNIX Printing System: ${COMMENT2}
 
 LICENSE=	GPLv2
+
 CONFLICTS=	LPRng-[0-9]*
+
+UNIQUENAME=	${PORTNAME}${PKGNAMESUFFIX}
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -42,6 +45,7 @@ CUPS_ETCDIR=	${PREFIX}/etc/cups
 CUPS_CACHEDIR?=	/var/db/cups
 CUPS_SPOOLDIR=	/var/spool/cups
 CUPS_SOCKET?=	/var/run/cups.sock
+CUPS_PDFTOPS?=	${LOCALBASE}/libexec/xpdf/pdftops
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
 # file, dir ownership
@@ -69,10 +73,13 @@ CUPS_SUFFIX=	-base
 CONFLICTS+=	cupsddk-*
 OPTIONS_DEFINE=	GNUTLS LIBPAPER PHP PYTHON PAM LDAP DBUS LIBUSB XDG_OPEN GHOSTSCRIPT XPDF AVAHI MDNSRESPONDER
 OPTIONS_DEFAULT=	LIBPAPER GHOSTSCRIPT
+OPTIONS_EXCLUDE+=	GHOSTSCRIPT XPDF
 NO_OPTIONS_SORT=	yes
 .endif
 
 LIBUSB_DESC=		USB support
+GHOSTSCRIPT_DESC=	Build pdftops with GHOSTSCRIPT
+XPDF_DESC=		Build pdftops with XPDF
 XDG_OPEN=		Build with XDG_OPEN as browser
 
 .include <bsd.port.options.mk>
@@ -81,7 +88,7 @@ XDG_OPEN=		Build with XDG_OPEN as browser
 COMMENT2=	Library cups
 INSTALL_WRKSRC=	${WRKSRC}/cups
 PLIST=		${MASTERDIR}/pkg-plist.client
-USE_ICONV=	yes
+USES+=		iconv
 USE_LDCONFIG=	yes
 PKGMESSAGE=	${NONEXISTENT}
 DESCR=		${MASTERDIR}/pkg-descr.client
@@ -93,6 +100,8 @@ LIB_DEPENDS+=	cups:${PORTSDIR}/${PKGCATEGORY}/cups-client \
 # force build if old cups is installed.
 BUILD_DEPENDS+=	cups-client${PKGNAMESUFFIX2}>=${PORTVERSION}:${PORTSDIR}/${PKGCATEGORY}/cups-client
 COMMENT2=	Library cupsimage
+#CONFIGURE_ARGS+=	--disable-pdftops
+PLIST_SUB+=	WITH_PDFTOPS=""
 INSTALL_WRKSRC=	${WRKSRC}/filter
 PLIST=		${MASTERDIR}/pkg-plist.image
 USE_LDCONFIG=	yes
@@ -119,12 +128,12 @@ CONFIGURE_ARGS+=	--with-printcap=/etc/printcap
 PLIST_SUB+=		OVERWRITE="@comment "
 CONFIGURE_ARGS+=	--with-printcap=${PREFIX}/etc/printcap
 .endif
- 
+
 .if ${PORT_OPTIONS:MGNUTLS}
 CONFIGURE_ARGS+=	--disable-openssl --enable-gnutls
 LIB_DEPENDS+=		gcrypt:${PORTSDIR}/security/libgcrypt
 LIB_DEPENDS+=		gnutls:${PORTSDIR}/security/gnutls
-USE_PKGCONFIG=	yes
+USES+=		pkgconfig
 .else
 CONFIGURE_ARGS+=	--disable-gnutls --enable-openssl
 WITH_OPENSSL_HACK7=	yes
@@ -141,6 +150,22 @@ CONFIGURE_ARGS+=	--without-php
 PLIST_SUB+=		PHP="@comment "
 .endif
 
+.if !defined(CUPS_CLIENT) && !defined(CUPS_IMAGE) && ${PORT_OPTIONS:MGHOSTSCRIPT}
+.if ${PORT_OPTIONS:MXPDF}
+IGNORE=			you must select one and only one option to build pdftops
+.endif
+USE_GHOSTSCRIPT=	yes
+CONFIGURE_ARGS+=	--enable-pdftops --with-pdftops=${LOCALBASE}/bin/gs
+PLIST_SUB+=		WITH_PDFTOPS=""
+.elif !defined(CUPS_CLIENT) && !defined(CUPS_IMAGE) && ${PORT_OPTIONS:MXPDF}
+BUILD_DEPENDS+=		${CUPS_PDFTOPS}:${PORTSDIR}/graphics/xpdf
+RUN_DEPENDS+=		${CUPS_PDFTOPS}:${PORTSDIR}/graphics/xpdf
+CONFIGURE_ARGS+=	--enable-pdftops --with-pdftops=${CUPS_PDFTOPS}
+PLIST_SUB+=		WITH_PDFTOPS=""
+.else
+PLIST_SUB+=		WITH_PDFTOPS="@comment "
+.endif
+
 .if !defined(CUPS_CLIENT) && !defined(CUPS_IMAGE) && ${PORT_OPTIONS:MPYTHON}
 CONFIGURE_ARGS+=	--with-python
 USE_PYTHON=		yes
@@ -154,7 +179,7 @@ LIB_DEPENDS+=		paper:${PORTSDIR}/print/libpaper
 
 .if !defined(CUPS_CLIENT) && !defined(CUPS_IMAGE) && ${PORT_OPTIONS:MMDNSRESPONDER}
 .if ${PORT_OPTIONS:MAVAHI}
-IGNORE=			You must select one and only one option to build for Zeroconf
+IGNORE=			you must select one and only one option to build for Zeroconf
 .endif
 LIB_DEPENDS+=		dns_sd:${PORTSDIR}/net/mDNSResponder
 CONFIGURE_ARGS+=	--with-dnssd-includes=${LOCALBASE}/include
@@ -198,14 +223,12 @@ PLIST_SUB+=		WITH_DBUS="@comment "
 RUN_DEPENDS+=		xdg-open:${PORTSDIR}/devel/xdg-utils
 .endif
 
-.if !defined(CUPS_CLIENT) && !defined(CUPS_IMAGE) && ${PORT_OPTIONS:MLIBUSB} && ${OSVERSION}>800062
-CPPFLAGS+=		-I/usr/include
-LDFLAGS+=		-L/usr/lib
-.elif !defined(CUPS_CLIENT) && !defined(CUPS_IMAGE) && ${PORT_OPTIONS:MLIBUSB} && ${OSVERSION}<800063
-LIB_DEPENDS+=		usb:${PORTSDIR}/devel/libusb
+.if !defined(CUPS_CLIENT) && !defined(CUPS_IMAGE) && ${PORT_OPTIONS:MLIBUSB}
+USES+=			usb
 .else
 CONFIGURE_ARGS+=	--disable-libusb
 .endif
+#CONFIGURE_ARGS+=	LIBS="-lssp_nonshared"
 
 .if defined(CUPS_CLIENT)
 MAN1=	cups-config.1
