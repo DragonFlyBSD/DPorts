@@ -3,7 +3,7 @@
 # Date created:			Mar 27, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/poedit/Makefile,v 1.68 2012/11/17 05:57:18 svnexp Exp $
+# $FreeBSD: editors/poedit/Makefile 316464 2013-04-24 18:10:30Z ak $
 #    $MCom: ports/editors/poedit/Makefile,v 1.2 2006/10/05 07:03:09 mezz Exp $
 #
 
@@ -25,7 +25,7 @@ WX_CONF_ARGS=	absolute
 WX_UNICODE=	yes
 USE_BDB=	yes
 WITH_BDB_HIGHEST=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	WXRC="${WXRC_CMD}"
