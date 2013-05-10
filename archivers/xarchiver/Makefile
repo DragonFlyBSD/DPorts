@@ -2,7 +2,7 @@
 # Date created:        27 Mart 2008
 # Whom:            Andreev Maxim
 #
-# $FreeBSD: ports/archivers/xarchiver/Makefile,v 1.12 2012/11/17 05:54:24 svnexp Exp $
+# $FreeBSD: archivers/xarchiver/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xarchiver
@@ -25,7 +25,7 @@ INSTALLS_ICONS=	yes
 .include <bsd.port.options.mk>
 
 .if !empty(PORT_OPTIONS:MNLS)
-USE_GETTEXT=	yes
+USES+=		gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_SUB+=	NLS=""
