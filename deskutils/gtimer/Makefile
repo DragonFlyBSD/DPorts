@@ -2,7 +2,7 @@
 # Date created:        25 February 1999
 # Whom:                Chris Piazza <cpiazza@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/gtimer/Makefile,v 1.31 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: deskutils/gtimer/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gtimer
@@ -19,7 +19,7 @@ RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 USE_XORG=	xscrnsaver
 USE_GNOME=	gtk20
 USE_PERL5_BUILD=yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
