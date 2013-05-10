@@ -1,5 +1,5 @@
 # Created by: M. L. Dodson, <bdodson@scms.utmb.edu>
-# $FreeBSD: ports/math/gri/Makefile,v 1.25 2013/02/07 16:12:39 svnexp Exp $
+# $FreeBSD: math/gri/Makefile 317553 2013-05-06 21:58:11Z bapt $
 
 PORTNAME=	gri
 PORTVERSION=	2.12.23
@@ -11,7 +11,7 @@ COMMENT=	Extensible plotting language for producing scientific graphs
 
 LIB_DEPENDS=	netcdf:${PORTSDIR}/science/netcdf
 
-USE_READLINE=	yes
+USES=		readline
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-FreeBSD
