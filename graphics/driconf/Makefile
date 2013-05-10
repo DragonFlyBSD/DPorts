@@ -2,7 +2,7 @@
 # Date created:         		1 Apr, 2005
 # Whom:                 anholt@FreeBSD.org
 #
-# $FreeBSD: ports/graphics/driconf/Makefile,v 1.19 2012/11/17 05:58:03 svnexp Exp $
+# $FreeBSD: graphics/driconf/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	driconf
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gtk/__init__.py:${PORTSDIR}/x11-toolki
 USE_GL=		glut
 USE_PYTHON=	yes
 NO_BUILD=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_EGGINFO=	yes
 PYDISTUTILS_EGGINFODIR=	lib/driconf
 
