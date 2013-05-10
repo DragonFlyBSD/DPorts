@@ -1,9 +1,5 @@
-# New ports collection makefile for:    m17n-im-config
-# Date created:		1 October 2008
-# Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
-#
-# $FreeBSD: ports/textproc/m17n-im-config/Makefile,v 1.14 2013/01/23 15:05:38 svnexp Exp $
-#
+# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
+# $FreeBSD: textproc/m17n-im-config/Makefile 317494 2013-05-06 09:26:23Z bapt $
 
 PORTNAME=	m17n-im-config
 PORTVERSION=	0.9.0
@@ -21,7 +17,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk20 intltool intlhack pkgconfig glib20
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
@@ -32,8 +28,10 @@ DESKTOP_ENTRIES="M17N-IM Configuration" \
 		"Settings;" \
 		true
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
