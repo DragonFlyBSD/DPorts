@@ -2,12 +2,12 @@
 # Date created:         22 Apr 2005 17:00:00 CEST
 # Whom:                 e-masson@kisoft-services.com
 #
-# $FreeBSD: ports/print/lpr-wrapper/Makefile,v 1.11 2012/11/17 06:00:52 svnexp Exp $
+# $FreeBSD: print/lpr-wrapper/Makefile 316401 2013-04-24 04:13:09Z hrs $
 #
 
 PORTNAME=	lpr-wrapper
 PORTVERSION=	0.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://www.mathstat.dal.ca/~selinger/lpr-wrapper/download/
 
@@ -23,11 +23,7 @@ RUN_DEPENDS+=	bash:${PORTSDIR}/shells/bash
 RUN_DEPENDS+=	ppdfilt:${PORTSDIR}/print/libppd
 RUN_DEPENDS+=	psdim:${PORTSDIR}/print/psdim
 RUN_DEPENDS+=	mpage:${PORTSDIR}/print/mpage
-.if defined(A4)
-RUN_DEPENDS+=	pstops:${PORTSDIR}/print/psutils-a4
-.else
-RUN_DEPENDS+=	pstops:${PORTSDIR}/print/psutils-letter
-.endif
+RUN_DEPENDS+=	pstops:${PORTSDIR}/print/psutils
 
 PLIST_FILES=	bin/lpr-wrapper bin/lpr-wrapper-cups bin/lpr-wrapper-features
 
