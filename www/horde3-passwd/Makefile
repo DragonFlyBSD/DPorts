@@ -2,7 +2,7 @@
 # Date created:		Thu Feb 12, 2004
 # Whom:			Joao Carlos Mendes Luis (<jonny@jonny.eng.br>)
 #
-# $FreeBSD: ports/www/horde3-passwd/Makefile,v 1.2 2012/12/16 12:14:32 svnexp Exp $
+# $FreeBSD: www/horde3-passwd/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	passwd
@@ -15,7 +15,7 @@ MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Password changing module
 
 USE_HORDE=	base
-USE_GETTEXT=	yes
+USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL RELEASE_NOTES TODO
 
 .include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
