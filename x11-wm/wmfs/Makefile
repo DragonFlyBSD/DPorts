@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: ports/x11-wm/wmfs/Makefile,v 1.17 2013/01/07 21:42:54 svnexp Exp $
+# $FreeBSD: x11-wm/wmfs/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	wmfs
 DISTVERSION=	201104
@@ -15,7 +15,7 @@ LICENSE=	BSD
 
 LIB_DEPENDS+=	freetype.9:${PORTSDIR}/print/freetype2
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_XORG=	x11 xft xpm
 HAS_CONFIGURE=	yes
 
