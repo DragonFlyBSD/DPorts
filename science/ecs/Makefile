@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/ecs/Makefile 314691 2013-03-19 20:35:32Z thierry $
+# $FreeBSD: science/ecs/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	ecs
 PORTVERSION=	2.0.2
@@ -44,8 +44,7 @@ CONFIGURE_ARGS+=--without-adf --without-ccm
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .else
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES+=		gettext iconv
 PLIST_SUB+=	NLS=""
 .endif
 
@@ -54,8 +53,8 @@ CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 .if !defined(NOPORTDOCS)
-BUILD_DEPENDS+=	pdflatex:${PORTSDIR}/print/teTeX-base	\
-		fig2dev:${PORTSDIR}/print/transfig
+USE_TEX=	tetex
+BUILD_DEPENDS+=	fig2dev:${PORTSDIR}/print/transfig
 PORTDOCS=	mi_ecs.pdf mt_ecs.pdf
 .endif
 
