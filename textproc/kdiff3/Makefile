@@ -2,7 +2,7 @@
 # Date created:		2003/01/03
 # Whom:			Heiner Eichmann <h.eichmann@gmx.de>
 #
-# $FreeBSD: textproc/kdiff3/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: textproc/kdiff3/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	kdiff3
@@ -15,9 +15,8 @@ MAINTAINER=	brucec@FreeBSD.org
 COMMENT=	A KDE4 graphical frontend for diff
 
 USE_KDE4=	kdelibs libkonq kdeprefix kdehier automoc4
-USES=		cmake
+USES=		cmake gettext
 USE_QT4=	moc_build qmake_build rcc_build uic_build
-USE_GETTEXT=	yes
 MAKE_JOBS_SAFE=	yes
 
 post-patch:
