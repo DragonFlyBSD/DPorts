@@ -2,7 +2,7 @@
 # Date created:        24 December 2005
 # Whom:                MANTANI Nobutaka <nobutaka@freebsd.org>
 #
-# $FreeBSD: textproc/uim-el/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: textproc/uim-el/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	uim-el
@@ -27,7 +27,7 @@ USE_BZIP2=	yes
 USE_PERL5_BUILD=yes
 USE_GNOME=	intltool
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_EMACS=	yes
 GNU_CONFIGURE=	yes
 
