@@ -2,7 +2,7 @@
 # Date created:				20. November 2007
 # Whom:					Simon I. Rigét
 #
-# $FreeBSD: ports/multimedia/kissdx/Makefile,v 1.13 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/kissdx/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	kissdx
@@ -19,7 +19,7 @@ LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
 		jpeg:${PORTSDIR}/graphics/jpeg \
 		dvdread:${PORTSDIR}/multimedia/libdvdread
 
-USE_ICONV=	yes
+USES=		iconv
 
 # Man pages
 MAN1=		kissdx.1
