@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/www/htmlcompressor/Makefile,v 1.5 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/htmlcompressor/Makefile 316230 2013-04-22 13:27:47Z bapt $
 
 PORTNAME=	htmlcompressor
 PORTVERSION=	0.9.4
@@ -7,7 +7,7 @@ CATEGORIES=	www java
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
-MAINTAINER=	skv@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTML/XML Compressor
 
 LICENSE=	AL2
