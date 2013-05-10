@@ -1,5 +1,5 @@
 # Created by: Shane Bell <decept0@gmail.com>
-# $FreeBSD: x11/yakuake-kde4/Makefile 315669 2013-04-02 10:59:39Z miwi $
+# $FreeBSD: x11/yakuake-kde4/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	yakuake
 PORTVERSION=	2.9.9
@@ -14,10 +14,9 @@ COMMENT=	Drop-down terminal emulator for KDE
 LICENSE=	GPLv2
 
 USE_XZ=		yes
-USES=		cmake
+USES=		cmake gettext
 USE_KDE4=	automoc4 kdelibs kdeprefix
 USE_QT4=	qmake_build moc_build rcc_build uic_build
-USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 MAKE_JOBS_SAFE=	yes
 
