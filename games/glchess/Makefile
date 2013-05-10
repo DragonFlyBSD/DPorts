@@ -1,9 +1,5 @@
-# New ports collection makefile for:	glchess
-# Date created:				Wed Jul 18 08:35:56 EDT 2001
-# Whom:					Patrick Li <pat@databits.net>
-#
-# $FreeBSD: ports/games/glchess/Makefile,v 1.47 2012/11/17 05:57:39 svnexp Exp $
-#
+# Created by: Patrick Li <pat@databits.net>
+# $FreeBSD: games/glchess/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	glchess
 PORTVERSION=	1.0.6
@@ -23,12 +19,14 @@ USE_PYDISTUTILS=	yes
 
 GCONF_SCHEMAS=	glchess.schemas
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+PLIST_SUB+=	NLS=""
+USES+=		gettext
+.else
 PLIST_SUB+=	NLS="@comment"
 CONFIGURE_ARGS+=	--disable-nls
-.else
-PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
 .endif
 
 post-patch:
@@ -49,7 +47,7 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/po/$$lang.mo \
 		${PREFIX}/share/locale/$$lang/LC_MESSAGES/glchess.mo ; \
 	done)
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for file in ChangeLog README TODO
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
