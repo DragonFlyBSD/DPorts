@@ -2,7 +2,7 @@
 # Date created:		2006-03-22
 # Whom:			Nicola Vitale	<nivit@email.it>
 #
-# $FreeBSD: ports/graphics/l2p/Makefile,v 1.13 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: graphics/l2p/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	l2p
@@ -16,11 +16,11 @@ MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Create PNG images from LaTeX math expressions
 
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick \
-		dvips:${PORTSDIR}/print/dvipsk-tetex \
-		latex:${PORTSDIR}/print/teTeX
+		dvips:${PORTSDIR}/print/dvipsk-tetex
 
 USE_PERL5_RUN=	yes
 USE_ZIP=	yes
+USE_TEX=	tetex
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
