@@ -2,7 +2,7 @@
 # Date created:				12th September 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/bakery/Makefile,v 1.60 2012/11/17 06:03:34 svnexp Exp $
+# $FreeBSD: x11-toolkits/bakery/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-toolkits/bakery/Makefile,v 1.16 2009/01/09 22:07:11 kwm Exp $
 #
 
@@ -23,7 +23,7 @@ LIB_DEPENDS=	gconfmm-2.6:${PORTSDIR}/devel/gconfmm26 \
 USE_GNOME=	gnomehack gnomeprefix intlhack ltverhack
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
