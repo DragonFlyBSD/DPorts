@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkextra2/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: x11-toolkits/gtkextra2/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	gtkextra
 PORTVERSION=	2.1.2
@@ -11,13 +11,12 @@ DISTNAME=	${PORTNAME:S/gtk/gtk+/}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A useful widget set complementary to GTK+ 2.0
 
-USES=        pathfix
-USE_GNOME=	gtk20 gnomehack
+USES=		pathfix pkgconfig
+USE_GNOME=	gtk20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_CSTD=	gnu89
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 
 LATEST_LINK=	gtkextra2
 DOCSDIR=	${PREFIX}/share/doc/gtkextra2
