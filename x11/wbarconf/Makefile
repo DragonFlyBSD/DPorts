@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wbarconf
-# Date created:		21 may 2009
-# Whom:			Olivier Cochard-Labbe <olivier@cochard.me>
-#
-# $FreeBSD: ports/x11/wbarconf/Makefile,v 1.11 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Olivier Cochard-Labbe <olivier@cochard.me>
+# $FreeBSD: x11/wbarconf/Makefile 316950 2013-04-30 16:37:46Z bdrewery $
 
 PORTNAME=	wbarconf
 PORTVERSION=	0.7.2.2
@@ -18,11 +14,10 @@ RUN_DEPENDS=	wbar:${PORTSDIR}/x11/wbar
 
 USE_GNOME=	pygobject pygtk2 gtk20
 USE_PYTHON=	2.5+
-USE_GETTEXT=	yes
+USES=		gettext
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PORTDOCS=	README COPYING
-USE_GETTEXT=	yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
