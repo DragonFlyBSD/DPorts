@@ -1,5 +1,5 @@
 # Created by: Sarod Yatawatta <sarod@cs.pdn.ac.lk>
-# $FreeBSD: ports/cad/pdnmesh/Makefile,v 1.32 2013/01/23 15:05:31 svnexp Exp $
+# $FreeBSD: cad/pdnmesh/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	pdnmesh
 PORTVERSION=	0.2.2
@@ -26,12 +26,10 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 OPTIONS_DEFINE=	ATLAS DOCS EXAMPLES
 ATLAS_DESC=	Enable ATLAS support
 
+USES=		pkgconfig gettext iconv
 USE_FORTRAN=	yes
 USE_GL=		glu
-USE_GETTEXT=	yes
-USE_ICONV=	yes
 USE_GNOME=	gdkpixbuf2 gtk20
-USE_PKGCONFIG=	build
 USE_XORG=	ice pixman sm x11 xau xcomposite xcursor xdamage xdmcp xext \
 		xfixes xmu xi xinerama xrandr xrender xt xxf86vm
 GNU_CONFIGURE=	yes
