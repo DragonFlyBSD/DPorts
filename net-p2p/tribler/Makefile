@@ -1,8 +1,9 @@
 # Created by: alepulver
-# $FreeBSD: ports/net-p2p/tribler/Makefile,v 1.18 2012/12/18 02:00:59 svnexp Exp $
+# $FreeBSD: net-p2p/tribler/Makefile 317561 2013-05-06 23:01:58Z ehaupt $
 
 PORTNAME=	tribler
 PORTVERSION=	6.0.3
+PORTREVISION=	1
 CATEGORIES=	net-p2p
 #MASTER_SITES=	http://dl.tribler.org/
 MASTER_SITES=	GENTOO/distfiles \
@@ -18,7 +19,7 @@ COMMENT=	Streaming capable P2P network client based on BitTorrent
 LICENSE=	LGPL21 MIT
 LICENSE_COMB=	multi
 
-EXTRACT_DEPENDS=unzip:${PORTSDIR}/archivers/unzip
+EXTRACT_DEPENDS=${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 LIB_DEPENDS=	event-2.0:${PORTSDIR}/devel/libevent2 \
 		vlc:${PORTSDIR}/multimedia/vlc
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
