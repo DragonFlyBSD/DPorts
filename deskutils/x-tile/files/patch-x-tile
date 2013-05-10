@@ -1,4 +1,4 @@
-$FreeBSD: ports/deskutils/x-tile/files/patch-x-tile,v 1.2 2012/11/17 05:55:31 svnexp Exp $
+$FreeBSD: deskutils/x-tile/files/patch-x-tile 300896 2012-07-14 13:54:48Z beat $
 
 Fix ctypes warning, by Ruslan Mahmatkhanov <cvs-src@yandex.ru>
 

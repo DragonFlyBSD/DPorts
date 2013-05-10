@@ -1,9 +1,5 @@
-# New ports collection makefile for:	x-tile
-# Date created:		2010-09-17
-# Whom:			Pedro Garcia Freitas <sawp@sawp.com.br>
-#
-# $FreeBSD: ports/deskutils/x-tile/Makefile,v 1.5 2012/11/17 05:55:31 svnexp Exp $
-#
+# Created by: Pedro Garcia Freitas <sawp@sawp.com.br>
+# $FreeBSD: deskutils/x-tile/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	x-tile
 PORTVERSION=	2.2.1
@@ -21,18 +17,20 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	X_Tile
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' \
-		${WRKSRC}/x-tile ${WRKSRC}/linux/x-tile.desktop \
-		${WRKSRC}/modules/cons.py
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PYDISTUTILS_BUILD_TARGET=	--without-gettext build
 PYDISTUTILS_INSTALL_TARGET=	--without-gettext install
 PLIST_SUB+=	NLS="@comment "
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' \
+		${WRKSRC}/x-tile ${WRKSRC}/linux/x-tile.desktop \
+		${WRKSRC}/modules/cons.py
 
 .include <bsd.port.mk>
