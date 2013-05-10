@@ -1,4 +1,4 @@
-# $FreeBSD: audio/audex/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/audex/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	audex
 DISTVERSION=	0.74b1
@@ -29,7 +29,7 @@ EYED3_DESC=		Unicode MP3 tag support via audio/py-eyed3
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DDISABLE_ALL_OPTIONAL_SUBDIRECTORIES=TRUE
