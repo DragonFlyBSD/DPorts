@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/freerdp/Makefile 316015 2013-04-18 02:39:21Z fluffy $
+# $FreeBSD: net/freerdp/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	freerdp
 PORTVERSION=	1.0.2
@@ -11,10 +11,9 @@ COMMENT=	A free implementation of Remote Desktop Protocol
 LICENSE=	AL2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USE_PKGCONFIG=	build
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
-USES=		cmake
+USES=		cmake pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	FreeRDP
 GH_PROJECT=	FreeRDP
