@@ -1,8 +1,9 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: ports/audio/gogglesmm/Makefile,v 1.50 2012/12/16 16:39:00 svnexp Exp $
+# $FreeBSD: audio/gogglesmm/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	gogglesmm
 PORTVERSION=	0.12.7
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	GOOGLE_CODE
 
@@ -28,8 +29,9 @@ GCRYPT_DESC=	Use libgcrypt for md5 calculation
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man --prefix=${PREFIX}
 MAKE_JOBS_SAFE=	yes
+
+USES=		pkgconfig
 USE_GMAKE=	yes
-USE_PKGCONFIG=	yes
 USE_XZ=		yes
 INSTALLS_ICONS=	yes
 MAN1=		gogglesmm.1
@@ -47,7 +49,7 @@ LIB_DEPENDS+=	FOX-1.7:${PORTSDIR}/x11-toolkits/fox17
 .endif
 
 .if ${PORT_OPTIONS:MGCRYPT}
-LIB_DEPENDS+=	gcrypt.18:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS+=	gcrypt:${PORTSDIR}/security/libgcrypt
 CONFIGURE_ARGS+=	--with-md5=gcrypt
 .else
 CONFIGURE_ARGS+=	--with-md5=internal
@@ -67,7 +69,7 @@ CONFIGURE_ARGS+=	--without-curl
 
 .if ${PORT_OPTIONS:MNLS}
 PLIST_SUB=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
 .else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB=	NLS="@comment "
