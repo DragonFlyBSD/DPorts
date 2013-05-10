@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: science/massxpert/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: science/massxpert/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	massxpert
 PORTVERSION=	3.4.0
@@ -21,9 +21,7 @@ LICENSE=	GPLv3
 
 USE_GCC=	any
 USE_BZIP2=	yes
-USES=		cmake
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		cmake gettext iconv
 USE_XORG=	ice sm x11 xau xdmcp xext xrender
 USE_GNOME=	glib20
 USE_QT4=	corelib gui xml rcc_build qmake_build uic_build moc_build \
