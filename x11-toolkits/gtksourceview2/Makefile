@@ -2,7 +2,7 @@
 # Date created:				07 May 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gtksourceview2/Makefile,v 1.27 2012/11/17 06:03:35 svnexp Exp $
+# $FreeBSD: x11-toolkits/gtksourceview2/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-toolkits/gtksourceview2/Makefile,v 1.96 2010/09/29 12:42:49 kwm Exp $
 #
 
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
