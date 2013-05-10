@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: audio/xmms-wma/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: audio/xmms-wma/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	xmms-wma
 PORTVERSION=	1.0.5
@@ -23,7 +23,7 @@ USE_LDCONFIG=	yes
 
 .if defined(WITH_ICONV)
 CFLAGS+=	-DUSE_ICONV
-USE_ICONV=	yes
+USES=		iconv
 .endif
 
 .include <bsd.port.pre.mk>
