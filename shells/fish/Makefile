@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiw27@gmail.com>
-# $FreeBSD: shells/fish/Makefile 309158 2012-12-18 10:04:42Z rene $
+# $FreeBSD: shells/fish/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	fish
 PORTVERSION=	1.23.1
@@ -11,11 +11,10 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A user friendly command line shell
 
 USE_AUTOTOOLS=	autoconf
-USE_ICONV=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
-USE_GETTEXT=	yes
+USES=		gettext iconv
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV+=	LIBS="${LDFLAGS}"
