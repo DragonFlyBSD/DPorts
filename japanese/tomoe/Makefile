@@ -2,7 +2,7 @@
 # Date created:				18 Dec 2005
 # Whom:					Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: japanese/tomoe/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: japanese/tomoe/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	tomoe
@@ -18,7 +18,7 @@ COMMENT=	Tegaki Online MOji-ninshiki Engine
 
 USE_GNOME=	lthack gnomehack
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_RUBY=	yes
