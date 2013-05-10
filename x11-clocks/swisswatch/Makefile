@@ -2,7 +2,7 @@
 # Date created:         16 December 1995
 # Whom:                 Yoshiro MIHIRA <sanpei@yy.cs.keio.ac.jp>
 #
-# $FreeBSD: ports/x11-clocks/swisswatch/Makefile,v 1.17 2012/11/17 06:03:24 svnexp Exp $
+# $FreeBSD: x11-clocks/swisswatch/Makefile 316803 2013-04-29 11:00:06Z sanpei $
 #
 
 PORTNAME=	swisswatch
@@ -15,6 +15,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	sanpei@FreeBSD.org
 COMMENT=	A Swiss railway clock emulation, and a fancy default appearance
 
+USE_GCC=	any
 USE_IMAKE=	yes
 USE_XORG=	ice sm x11 xext xmu xt
 MAN1=		swisswatch.1
