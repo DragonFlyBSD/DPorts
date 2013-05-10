@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/semantik/Makefile,v 1.42 2013/01/15 02:41:38 svnexp Exp $
+# $FreeBSD: deskutils/semantik/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	semantik
 PORTVERSION=	0.8.3
@@ -28,7 +28,7 @@ USE_LDCONFIG=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
