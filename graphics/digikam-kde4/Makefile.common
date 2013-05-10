@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/digikam-kde4/Makefile.common 315762 2013-04-08 17:10:56Z makc $
+# $FreeBSD: graphics/digikam-kde4/Makefile.common 316343 2013-04-23 10:47:02Z bapt $
 #
 # Make sure when DIGIKAM_VER is updated that the following ports are updated:
 #	astro/libkgeomap
@@ -127,7 +127,7 @@ DISTINFO_FILE=	${.CURDIR}/../../graphics/digikam-kde4/distinfo
 CONFLICTS_INSTALL=	kipi-plugins-2.*
 
 DESCR=		${.CURDIR}/../../graphics/kipi-plugins-kde4/pkg-descr
-USE_PKGCONFIG=	build
+USES+=		pkgconfig
 
 .if ${KIPI_PLUGIN} != "libkipiplugins"
 EXTRA_PATCHES=	${.CURDIR}/../../graphics/kipi-plugins-kde4/files/extrapatch-CMakeLists.txt

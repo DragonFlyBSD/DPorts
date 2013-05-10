@@ -1,5 +1,5 @@
 # Created by: Arjan van Leeuwen <avleeuwen@piwebs.com>
-# $FreeBSD: graphics/digikam-kde4/Makefile 315762 2013-04-08 17:10:56Z makc $
+# $FreeBSD: graphics/digikam-kde4/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	digikam
 PORTVERSION=	${DIGIKAM_VER}
@@ -30,7 +30,7 @@ NO_OPTIONS_SORT=	yes
 GPHOTO2_DESC=		Enable gphoto2 camera support
 PIMLIBS_DESC=		Enable address book support
 
-USE_PKGCONFIG=	build
+USES+=		pkgconfig
 USE_KDE4+=	libkdcraw libkexiv2 libkipi
 USE_QT4+=	sql-sqlite3_run
 USE_LDCONFIG=	yes
