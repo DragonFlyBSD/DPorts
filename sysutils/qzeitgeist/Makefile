@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/qzeitgeist/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: sysutils/qzeitgeist/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	qzeitgeist
 PORTVERSION=	0.8.0
@@ -33,7 +33,7 @@ USE_LDCONFIG=	yes
 ZEITGEIST_VERSION=	0.8.2
 
 post-extract:
-	@(cd ${WRKDIR} && ${GZIP_CMD} ${EXTRACT_BEFORE_ARGS} \
+	@(cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
 		${_DISTDIR}/zeitgeist-${ZEITGEIST_VERSION}.tar.gz ${EXTRACT_AFTER_ARGS})
 	cd ${WRKDIR}/zeitgeist-${ZEITGEIST_VERSION} && \
 		${CP} zeitgeist/datamodel.py \
