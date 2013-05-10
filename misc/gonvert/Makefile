@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/misc/gonvert/Makefile,v 1.46 2013/02/10 13:03:38 svnexp Exp $
+# $FreeBSD: misc/gonvert/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gonvert
 PORTVERSION=	0.2.32
@@ -20,7 +20,7 @@ PORTDOCS=	CHANGELOG FAQ README THANKS TODO
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
