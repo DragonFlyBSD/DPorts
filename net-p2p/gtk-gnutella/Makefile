@@ -1,5 +1,5 @@
 # Created by: rbt@zort.on.ca
-# $FreeBSD: net-p2p/gtk-gnutella/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: net-p2p/gtk-gnutella/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 #
 # A quick note on configurable make symbols:
@@ -100,7 +100,7 @@ CONFIGURE_ARGS+=	-U d_gnutls
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 CONFIGURE_ARGS+=	-D d_nls
 PLIST_SUB+=		NLS=""
 .else
