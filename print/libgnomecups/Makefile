@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson <glennpj@charter.net>
-# $FreeBSD: print/libgnomecups/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: print/libgnomecups/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	libgnomecups
 PORTVERSION=	0.2.3
@@ -14,11 +14,10 @@ COMMENT=	Support library for gnome cups administration
 
 LIB_DEPENDS=	cups:${PORTSDIR}/print/cups-client
 
+USES=		pkgconfig gettext
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack ltverhack glib20
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=  libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
