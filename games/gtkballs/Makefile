@@ -2,7 +2,7 @@
 # Date created:				11 November 1998
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD: ports/games/gtkballs/Makefile,v 1.48 2012/11/17 05:57:40 svnexp Exp $
+# $FreeBSD: games/gtkballs/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gtkballs
@@ -14,7 +14,7 @@ MASTER_SITES=	http://gtkballs.antex.ru/dist/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lines-like simple logic game for X Window System
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gtk20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
