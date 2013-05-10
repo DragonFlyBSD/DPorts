@@ -2,7 +2,7 @@
 # Date created:		25 Feberury 2008
 # Whom:			Wen heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/www/elgg/Makefile,v 1.18 2012/11/17 06:02:32 svnexp Exp $
+# $FreeBSD: www/elgg/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	elgg
@@ -16,7 +16,7 @@ COMMENT=	Blogging and social networking platform
 LICENSE=	GPLv2
 
 USE_PHP=	mysql gd json soap dom xml
-USE_GETTEXT=	yes
+USES=		gettext
 USE_ZIP=	yes
 
 NO_BUILD=	yes
