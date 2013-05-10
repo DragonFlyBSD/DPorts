@@ -1,9 +1,4 @@
-# New ports collection makefile for:    xine
-# Date created:         14 Oct 2000
-# Whom:                 alex
-#
-# $FreeBSD: multimedia/xine/Makefile 300944 2012-07-16 11:39:35Z bapt $
-#
+# $FreeBSD: multimedia/xine/Makefile 316518 2013-04-25 14:58:15Z ak $
 
 PORTNAME=	xine
 PORTVERSION=	0.99.7
@@ -13,7 +8,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-ui/${PORTVERSION}
 DISTNAME=	${PORTNAME}-ui-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An X11 multimedia player
+COMMENT=	X11 multimedia player
 
 LICENSE=	GPLv2
 
@@ -34,7 +29,6 @@ WIN32_CODECS_DESC=	Enable win32 codecs
 
 USE_XZ=		yes
 USE_XORG=	x11 xext xinerama xscrnsaver xt xtst xv xxf86vm
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-vdr-keys \
@@ -66,7 +60,7 @@ CODEC_DETECTION_FILE!=	${MAKE} -f ${CODEC_PORT}/Makefile -V CODEC_DETECTION_FILE
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
