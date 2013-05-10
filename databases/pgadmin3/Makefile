@@ -2,7 +2,7 @@
 # Date created:                         November 4, 2003
 # Whom:                                 Max Khon
 #
-# $FreeBSD: ports/databases/pgadmin3/Makefile,v 1.59 2012/11/17 05:55:18 svnexp Exp $
+# $FreeBSD: databases/pgadmin3/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	pgadmin3
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	sphinx-build:${PORTSDIR}/textproc/py-sphinx
 IGNORE_WITH_PGSQL=	82 83
 
 MAKE_JOBS_SAFE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PGSQL=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
