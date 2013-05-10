@@ -2,7 +2,7 @@
 # Date created:				18 May 2001
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/libgnomecanvas/Makefile,v 1.70 2012/11/17 05:58:13 svnexp Exp $
+# $FreeBSD: graphics/libgnomecanvas/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/graphics/libgnomecanvas/Makefile,v 1.79 2010/09/28 07:31:27 kwm Exp $
 #
 
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 .if !defined(REFERENCE_PORT)
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack libglade2 libartlgpl2 ltverhack referencehack
