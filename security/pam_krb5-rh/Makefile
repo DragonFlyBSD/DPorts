@@ -1,12 +1,8 @@
-# New ports collection makefile for:	pam_krb5
-# Date created:				18 October 2011
-# Whom:					Ryan Steinmetz <zi@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pam_krb5-rh/Makefile,v 1.5 2013/02/26 13:47:32 svnexp Exp $
-#
+# Created by: Ryan Steinmetz <zi@FreeBSD.org>
+# $FreeBSD: security/pam_krb5-rh/Makefile 317496 2013-05-06 09:39:25Z bapt $
 
 PORTNAME=	pam_krb5
-DISTVERSION=	2.4.4
+DISTVERSION=	2.4.5
 CATEGORIES=	security
 MASTER_SITES=	https://fedorahosted.org/released/${PORTNAME}/ \
 		http://mirrors.rit.edu/zi/
@@ -20,7 +16,7 @@ LICENSE_COMB=	dual
 
 CONFLICTS=	pam_krb5-4.*
 
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-libiconv-prefix=${LOCALBASE} --without-afs \
 		--with-libintl-prefix=${LOCALBASE} --with-krb4=no \
@@ -30,19 +26,15 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN5=		pam_krb5.5
 MAN8=		pam_krb5.8 pam_krb5_cchelper.8
 
-.if defined(WITHOUT_NLS)
-PLIST_SUB+=	NLS="@comment "
-CONFIGURE_ARGS+=--disable-nls
-.else
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
 LDFLAGS+=	-lintl
-USE_GETTEXT=	yes
-.endif
-
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800000
-BROKEN=		does not build on FreeBSD 7.x
+USES+=		gettext
+.else
+PLIST_SUB+=	NLS="@comment "
+CONFIGURE_ARGS+=--disable-nls
 .endif
 
 post-patch:
@@ -54,4 +46,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|PAM_AUTHTOK_RECOVER_ERR|PAM_AUTHTOK_RECOVERY_ERR|g' \
 		${WRKSRC}/src/password.c
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
