@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gmerlin-avdecoder
-# Date created:		07 Nov 2008
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: multimedia/gmerlin-avdecoder/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: multimedia/gmerlin-avdecoder/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gmerlin-avdecoder
 PORTVERSION=	1.2.0
@@ -29,12 +25,10 @@ DVDREAD_DESC=	libdvdread support
 GMERLIN_DESC=	gmerlin support
 SAMBA_DESC=	Samba support using libsmbclient
 
-USES=	pathfix
-USE_GETTEXT=	yes
+USES=	pathfix pkgconfig gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-cpuflags=none --without-doxygen
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
