@@ -2,7 +2,7 @@
 # Date created:				2003-06-25
 # Whom:					arved
 #
-# $FreeBSD: multimedia/kaffeine/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: multimedia/kaffeine/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	kaffeine
 PORTVERSION=	1.2.2
@@ -21,11 +21,10 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GMAKE=		yes
-USE_GETTEXT=		yes
 USE_KDE4=	kdehier kdeprefix automoc4 kdelibs
 USE_QT4=	corelib gui phonon svg network dbus xml sql \
 		qmake_build moc_build rcc_build uic_build
-USES=		cmake
+USES=		cmake gettext
 USE_LDCONFIG=		yes
 USE_XORG=	xscrnsaver
 
