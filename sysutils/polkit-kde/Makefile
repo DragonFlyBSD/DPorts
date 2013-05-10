@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@Fluffy.Khv.RU>
-# $FreeBSD: sysutils/polkit-kde/Makefile 314931 2013-03-22 13:41:12Z makc $
+# $FreeBSD: sysutils/polkit-kde/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	polkit-kde
 PORTVERSION=	0.99.1
@@ -24,7 +24,7 @@ MAKE_JOBS_SAFE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DBUILD_po:BOOL=FALSE
