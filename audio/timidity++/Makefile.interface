@@ -1,4 +1,4 @@
-#$FreeBSD: ports/audio/timidity++/Makefile.interface,v 1.8 2012/11/17 05:54:45 svnexp Exp $
+#$FreeBSD: audio/timidity++/Makefile.interface 300895 2012-07-14 12:56:14Z beat $
 
 # Shared by timidity++ interface ports
 
