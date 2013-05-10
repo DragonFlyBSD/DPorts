@@ -2,7 +2,7 @@
 # Date created:		4 April 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/rgbpaint/Makefile,v 1.13 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/rgbpaint/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	rgbpaint
@@ -14,7 +14,7 @@ MASTER_SITES=	SF/mtpaint/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Very basic painting program
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 HAS_CONFIGURE=	yes
