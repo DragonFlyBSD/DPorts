@@ -2,7 +2,7 @@
 # Date created:		06 May, 2009
 # Whom:			Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/devel/py-mwlib.rl/Makefile,v 1.10 2012/11/17 05:56:48 svnexp Exp $
+# $FreeBSD: devel/py-mwlib.rl/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	mwlib.rl
@@ -23,7 +23,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/texvc:${PORTSDIR}/print/texvc \
 		${PYTHON_PKGNAMEPREFIX}pygments>=1.0:${PORTSDIR}/textproc/py-pygments
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_GETTEXT=		yes
+USES=		gettext
 USE_PYTHON=		2.5+
 USE_PYDISTUTILS=	easy_install
 
