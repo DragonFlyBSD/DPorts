@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: ports/www/py-satchmo/Makefile,v 1.8 2012/11/17 06:03:01 svnexp Exp $
+# $FreeBSD: www/py-satchmo/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	satchmo
 PORTVERSION=	0.9.2
@@ -27,7 +27,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.2.3:${PORTSDIR}/www/py-django \
 				${PYTHON_PKGNAMEPREFIX}django-signals-ahoy>=0:${PORTSDIR}/www/py-django-signals-ahoy \
 				${PYTHON_PKGNAMEPREFIX}django-threaded-multihost>=0:${PORTSDIR}/www/py-django-threaded-multihost
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_EGG=	Satchmo-${PORTVERSION}-${PYTHON_VERSION:S/thon//}.egg
