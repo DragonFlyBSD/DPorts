@@ -1,5 +1,5 @@
 # Created by: Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: ports/print/lyx/Makefile,v 1.146 2013/01/31 14:01:31 svnexp Exp $
+# $FreeBSD: print/lyx/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	lyx
 PORTVERSION=	${MAJOR_VERSION}.${MINOR_VERSION}
@@ -70,7 +70,7 @@ CONFIGURE_ARGS+=	--without-hunspell
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .else
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .endif
 
