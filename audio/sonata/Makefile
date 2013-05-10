@@ -2,7 +2,7 @@
 # Date created:		2007-01-22
 # Whom:			Nicola Vitale <nivit@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/sonata/Makefile,v 1.32 2012/11/17 05:54:44 svnexp Exp $
+# $FreeBSD: audio/sonata/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	sonata
@@ -18,7 +18,7 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpd>=0.2.0:${PORTSDIR}/audio/py-mpd
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
