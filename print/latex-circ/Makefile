@@ -2,7 +2,7 @@
 # Date created:		2005-07-20
 # Whom:			Nicola Vitale <nivit@email.it>
 #
-# $FreeBSD: ports/print/latex-circ/Makefile,v 1.9 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-circ/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	circ
@@ -17,12 +17,8 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	A LaTeX package for typesetting circuit diagrams
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-
 USE_ZIP=	yes
+USE_TEX=	tetex
 
 # We need to install in the global texmf-local directory
 PREFIX=		${LOCALBASE}
