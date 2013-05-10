@@ -2,7 +2,7 @@
 # Date created:				Oct 10, 2005
 # Whom:					Rong-En Fan <rafan@infor.org>
 #
-# $FreeBSD: ports/textproc/bibtool/Makefile,v 1.8 2012/11/17 06:01:52 svnexp Exp $
+# $FreeBSD: textproc/bibtool/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	bibtool
@@ -16,8 +16,7 @@ DISTNAME=	BibTool-${PORTVERSION}
 MAINTAINER=	rafan@FreeBSD.org
 COMMENT=	Command line manipulation of BibTeX files
 
-BUILD_DEPENDS=	${LOCALBASE}/include/kpathsea/tex-file.h:${PORTSDIR}/print/teTeX-base
-
+USE_TEX=	tetex
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-kpathsea
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
