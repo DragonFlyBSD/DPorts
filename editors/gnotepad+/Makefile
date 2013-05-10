@@ -2,7 +2,7 @@
 # Date created:		08 March 1999
 # Whom:			brett@peloton.physics.montana.edu
 #
-# $FreeBSD: ports/editors/gnotepad+/Makefile,v 1.42 2012/11/17 05:57:14 svnexp Exp $
+# $FreeBSD: editors/gnotepad+/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gnotepad+
@@ -25,7 +25,7 @@ LICENSE_COMB=	dual
 USE_XORG=	xpm
 WANT_GNOME=	yes
 USE_GNOME=	gnomeprefix gtk12
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
