@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	swftools
-# Date created:			Feb 9, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/graphics/swftools/Makefile,v 1.49 2012/11/17 05:58:23 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: graphics/swftools/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	swftools
 PORTVERSION=	0.9.2
@@ -27,9 +22,9 @@ LIB_DEPENDS=	t1.5:${PORTSDIR}/devel/t1lib \
 
 OPTIONS_DEFINE=	LAME PDF
 
+USES=		pkgconfig
 USE_GL=		glut
 USE_GMAKE=	yes
-USE_PKGCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_lib_zzip_zzip_file_open=no
 
