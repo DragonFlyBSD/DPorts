@@ -2,7 +2,7 @@
 # Date created:                       Jan 25 2011
 # Whom:                               Eygene Ryabinkin <rea@FreeBSD.org>
 #
-# $FreeBSD: ports/print/latex-acm/Makefile,v 1.2 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-acm/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	latex-acm
@@ -16,12 +16,8 @@ DISTFILES=	acm-small-v1-1.zip \
 MAINTAINER=	rea@FreeBSD.org
 COMMENT=	LaTeX styles for ACM journals
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-
 USE_ZIP=	yes
+USE_TEX=	tetex
 NO_BUILD=	yes
 
 TEXMFLOCAL=	share/texmf-local
