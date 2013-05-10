@@ -1,5 +1,5 @@
 # Created by: Maxim Ignatenko <gelraen.ua@gmail.com>
-# $FreeBSD: ports/devel/qt4-qdoc3/Makefile,v 1.11 2013/02/03 21:43:08 svnexp Exp $
+# $FreeBSD: devel/qt4-qdoc3/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	qdoc3
 DISTVERSION=	${QT4_VERSION}
@@ -23,7 +23,6 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake translations \
 		src/activeqt src/dbus src/multimedia src/opengl src/openvg \
 		src/s60installs src/s60main src/scripttools src/sql src/svg \
 		src/testlib src/winmain src/xmlpatterns
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
 .for dne in ${DO_NOT_EXTRACT}
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
