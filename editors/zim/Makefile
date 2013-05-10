@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: ports/editors/zim/Makefile,v 1.32 2012/11/17 05:57:19 svnexp Exp $
+# $FreeBSD: editors/zim/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	zim
 PORTVERSION=	0.57
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xdg>=0:${PORTSDIR}/devel/py-xdg \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:${PORTSDIR}/databases/py-sqlite3
 
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	desktopfileutils gtk20 pygtk2 pygobject
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
@@ -38,7 +38,7 @@ DITAA_DESC=		Diagram editor support
 RUN_DEPENDS+=	R:${PORTSDIR}/math/R
 .endif
 .if ${PORT_OPTIONS:MLATEX}
-RUN_DEPENDS+=	latex:${PORTSDIR}/print/teTeX-base
+USE_TEX=	tetex
 .endif
 .if ${PORT_OPTIONS:MGRAPHVIZ}
 RUN_DEPENDS+=	fdp:${PORTSDIR}/graphics/graphviz
