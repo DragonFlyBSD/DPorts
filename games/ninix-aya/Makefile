@@ -1,16 +1,11 @@
-# New ports collection makefile for:	ninix-aya
-# Date created:				6 Dec 2003
-# Whom:					UMENO Takashi
-#
-# $FreeBSD: ports/games/ninix-aya/Makefile,v 1.87 2012/11/17 05:57:47 svnexp Exp $
-#
+# Created by: UMENO Takashi
+# $FreeBSD: games/ninix-aya/Makefile 316650 2013-04-27 06:18:58Z culot $
 
 PORTNAME=	ninix-aya
-PORTVERSION=	4.3.9
-PORTREVISION=	1
+PORTVERSION=	4.4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
-MASTER_SITE_SUBDIR=	ninix-aya/54987
+MASTER_SITE_SUBDIR=	ninix-aya/58500
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	umeno@rr.iij4u.or.jp
@@ -29,14 +24,14 @@ USE_PYTHON=	yes
 USE_GNOME=	pygtk2
 USE_GMAKE=	yes
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 DOCSDIR=	${PREFIX}/share/doc/ninix
 .endif
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.if ${PORT_OPTIONS:MNLS}
+USES+=	gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
@@ -48,13 +43,13 @@ post-patch:
 		-e 's,lib/ninix,libexec/ninix,'	\
 		-e 's,/doc,/share/doc/ninix,' \
 		${WRKSRC}/Makefile
-.if defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/docdir)$$/d' \
 		${WRKSRC}/Makefile
 .endif
-.if defined(WITHOUT_NLS)
+.if ${PORT_OPTIONS:MNLS}
 	@${REINPLACE_CMD} -e '/localedir/d' \
 		${WRKSRC}/Makefile
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
