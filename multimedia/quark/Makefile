@@ -1,5 +1,5 @@
 # Created by: Juan Salaverria <rael@vectorstar.net>
-# $FreeBSD: multimedia/quark/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: multimedia/quark/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	quark
 PORTVERSION=	3.24
@@ -15,9 +15,8 @@ LIB_DEPENDS=	xine.2:${PORTSDIR}/multimedia/libxine
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gnomeprefix gnomevfs2
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
