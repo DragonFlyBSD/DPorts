@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-math/Makefile 313115 2013-02-28 17:06:36Z brooks $
+# $FreeBSD: www/trac-math/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.1
@@ -11,9 +11,9 @@ PKGNAMEPREFIX=	trac-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Support for LaTeX math formulas in wiki pages
 
-RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \
-		latex:${PORTSDIR}/print/teTeX-base
+RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 
+USE_TEX=	tetex
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
