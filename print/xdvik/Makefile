@@ -1,25 +1,21 @@
 # Created by: Kentaro Inagaki <JBD01226@niftyserve.ne.jp>
-# $FreeBSD: print/xdvik/Makefile 313378 2013-03-03 20:49:34Z hrs $
+# $FreeBSD: print/xdvik/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	xdvik
 PORTVERSION=	22.84.16
 PORTREVISION=	5
 CATEGORIES=	print
-MASTER_SITES=	SF/xdvi/${PORTNAME}/${PORTVERSION}
+MASTER_SITES=	SF/hoge
+#/xdvi/${PORTNAME}/${PORTVERSION}
 PKGNAMESUFFIX=	-tetex
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	DVI Previewer(kpathsearch) for X
 
-BUILD_DEPENDS=	${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal \
-		${LOCALBASE}/${TEXMFDISTDIR}/LICENSE.texmf:${PORTSDIR}/print/teTeX-texmf \
-		mktexlsr:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal \
-		${LOCALBASE}/${TEXMFDISTDIR}/LICENSE.texmf:${PORTSDIR}/print/teTeX-texmf \
-		mktexlsr:${PORTSDIR}/print/teTeX-base
 LIB_DEPENDS=	t1.5:${PORTSDIR}/devel/t1lib
 
 USE_GMAKE=	yes
+USE_TEX=	tetex
 USE_MOTIF=	yes
 MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
