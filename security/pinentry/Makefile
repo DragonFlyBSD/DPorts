@@ -1,9 +1,9 @@
 # Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: ports/security/pinentry/Makefile,v 1.66 2013/02/06 13:14:25 svnexp Exp $
+# $FreeBSD: security/pinentry/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	pinentry
 PORTVERSION=	0.8.1
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	pinentry
@@ -11,12 +11,12 @@ MASTER_SITE_SUBDIR=	pinentry
 MAINTAINER=	makc@FreeBSD.org
 COMMENT?=	Collection of simple PIN or passphrase entry dialogs
 
-LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt \
+LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
 		ksba.19:${PORTSDIR}/security/libksba
 
 CONFLICTS_INSTALL?=	pinentry-[a-z]*-[0.9]*
 
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INFO=		pinentry
@@ -78,7 +78,7 @@ PLIST_SUB+=	WITH_GTK2="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNCURSES}
-USE_NCURSES=	yes
+USES+=		ncurses
 PLIST_SUB+=	WITH_NCURSES=""
 .else
 CONFIGURE_ARGS+=--disable-pinentry-curses
