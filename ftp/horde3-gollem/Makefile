@@ -2,7 +2,7 @@
 # Date created:			  Sun Dec 16, 2001
 # Whom:				  Thierry Thomas (<thierry@pompo.net>)
 #
-# $FreeBSD: ports/ftp/horde3-gollem/Makefile,v 1.2 2012/12/16 12:14:28 svnexp Exp $
+# $FreeBSD: ftp/horde3-gollem/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gollem
@@ -14,7 +14,7 @@ MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Web-based File Manager
 
 USE_HORDE=	base
-USE_GETTEXT=	yes
+USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL RELEASE_NOTES
 
 .include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
