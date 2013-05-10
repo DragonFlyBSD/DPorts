@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/arabic/arabtex/pkg-plist,v 1.2 2012/11/17 05:54:19 svnexp Exp $
+@comment $FreeBSD: arabic/arabtex/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 %%PORTDOCS%%share/texmf-local/doc/arabtex/html/arabtex.gif
 %%PORTDOCS%%share/texmf-local/doc/arabtex/html/arabtex.htm
 %%PORTDOCS%%share/texmf-local/doc/arabtex/html/changes.htm

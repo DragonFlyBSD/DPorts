@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: ports/arabic/arabtex/Makefile,v 1.11 2012/12/23 07:08:39 svnexp Exp $
+# $FreeBSD: arabic/arabtex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	arabtex
 PORTVERSION=	3.11
@@ -12,10 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	TeX/LaTeX package to generate Arabic writing
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS:=	${BUILD_DEPENDS}
-
+USE_TEX=	tetex
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR}
