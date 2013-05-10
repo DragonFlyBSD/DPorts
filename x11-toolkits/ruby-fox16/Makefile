@@ -2,12 +2,12 @@
 # Date created:    8 October 2008
 # Whom:            Luiz Eduardo Roncato Cordeiro <lercordeiro@gmail.com>
 #
-# $FreeBSD: ports/x11-toolkits/ruby-fox16/Makefile,v 1.20 2012/11/27 11:29:48 svnexp Exp $
+# $FreeBSD: x11-toolkits/ruby-fox16/Makefile 316372 2013-04-23 16:45:40Z gahr $
 #
 
 PORTNAME=	fox
 PORTVERSION=	1.6.19
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	x11-toolkits ruby
 MASTER_SITES=	RF
 MASTER_SITE_SUBDIR=	fxruby
