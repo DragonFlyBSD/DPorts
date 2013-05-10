@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: multimedia/ogmrip/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: multimedia/ogmrip/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	ogmrip
 PORTVERSION=	1.0.0
@@ -33,9 +33,8 @@ MP4BOX_DESC=	Enable Mpeg-4 container support
 THEORA_DESC=	Enable Ogg Theora video codec support
 SRT_DESC=	Enable SRT text subtitles support
 
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	glib20 intlhack libxml2
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
