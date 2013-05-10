@@ -2,7 +2,7 @@
 # Date Created:			03 June 2003
 # Whom:				Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/net/gnome-nettool/Makefile,v 1.40 2012/11/17 06:00:01 svnexp Exp $
+# $FreeBSD: net/gnome-nettool/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/net/gnome-nettool/Makefile,v 1.58 2010/09/28 09:03:44 kwm Exp $
 #
 
@@ -23,7 +23,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libglade2 gconf2 gnomedocutils
 GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
