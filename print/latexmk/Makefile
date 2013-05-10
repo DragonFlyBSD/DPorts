@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: print/latexmk/Makefile 313206 2013-03-02 06:27:43Z miwi $
+# $FreeBSD: print/latexmk/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	latexmk
 PORTVERSION=	435
@@ -11,8 +11,6 @@ COMMENT=	Tool to completely automate generating output from LaTeX documents
 
 LICENSE=	GPLv2 # (or later)
 
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 NO_WRKSUBDIR=	yes
@@ -20,6 +18,7 @@ NO_BUILD=	yes
 
 USE_ZIP=	yes
 USE_PERL5_RUN=	yes
+USE_TEX=	tetex
 
 MAN1=		latexmk.1
 PORTDOCS=	*
