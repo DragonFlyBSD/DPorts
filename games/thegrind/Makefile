@@ -1,9 +1,5 @@
-# New Ports collection makefile for:	The Grind
-# Date created:		2012-05-18
-# Whom:			nemysis@gmx.ch
-#
-# $FreeBSD: ports/games/thegrind/Makefile,v 1.5 2013/02/23 16:48:43 svnexp Exp $
-#
+# Created by: nemysis@gmx.ch
+# $FreeBSD: games/thegrind/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	thegrind
 PORTVERSION=	0.1.2
@@ -22,8 +18,8 @@ LIB_DEPENDS=	radius:${PORTSDIR}/graphics/radius-engine \
 		physfs.1:${PORTSDIR}/devel/physfs
 RUN_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
 ALL_TARGET=	${PORTNAME}
 USE_SDL=	sdl sound
 USE_GL=		glu
