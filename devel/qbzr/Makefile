@@ -2,7 +2,7 @@
 # Date created:         26 May 2010
 # Whom:                 Carlo Strub
 #
-# $FreeBSD: ports/devel/qbzr/Makefile,v 1.21 2013/02/03 22:43:10 svnexp Exp $
+# $FreeBSD: devel/qbzr/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	qbzr
@@ -28,7 +28,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_PYTHON=	yes
 USE_QT4=	# empty
 USE_PYDISTUTILS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 
 .include <bsd.port.mk>
