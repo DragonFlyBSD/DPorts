@@ -1,12 +1,9 @@
-# Ports collection makefile for:    netatalk
-# Date created:         23 Jul 1997
-# Whom:                 stb
-#
-# $FreeBSD: ports/net/netatalk/Makefile,v 1.111 2012/11/17 06:00:07 svnexp Exp $
-#
+# Created by: stb
+# $FreeBSD: net/netatalk/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	netatalk
 PORTVERSION=	2.2.4
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net print
 MASTER_SITES=	SF
@@ -19,7 +16,7 @@ LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 USE_AUTOTOOLS=	libtool
 USE_BDB=	46+
 USE_BZIP2=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
