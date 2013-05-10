@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: ports/x11-toolkits/gtkunique/Makefile,v 1.14 2012/12/30 06:25:24 svnexp Exp $
+# $FreeBSD: x11-toolkits/gtkunique/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gtkunique
 PORTVERSION=	0.9.1
@@ -13,10 +13,9 @@ MAINTAINER=	pav@FreeBSD.org
 COMMENT=	Single instance application library
 
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
 USE_GNOME=	gtk20 ltverhack
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
