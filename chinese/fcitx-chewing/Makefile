@@ -2,7 +2,7 @@
 # Date created:				6 Feb 2012
 # Whom:			Zhihao Yuan <lichray@gmail.com>
 #
-# $FreeBSD: chinese/fcitx-chewing/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: chinese/fcitx-chewing/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	fcitx-chewing
@@ -18,8 +18,7 @@ LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx \
 		chewing:${PORTSDIR}/chinese/libchewing
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
-USES=		cmake
+USES=		cmake gettext
 USE_GNOME=	intltool
 
 PROJECTHOST=	fcitx
