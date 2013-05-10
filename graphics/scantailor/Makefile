@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: graphics/scantailor/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/scantailor/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	scantailor
 PORTVERSION=	0.9.11
@@ -17,9 +17,7 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
 
-USES=		cmake
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		cmake gettext iconv
 USE_QT4=	gui xml qmake_build uic_build moc_build rcc_build \
 		linguist_build
 MAKE_JOBS_SAFE=	yes
