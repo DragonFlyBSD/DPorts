@@ -1,5 +1,5 @@
 # Created by: Liam J. Foy <liamfoy@sepulcrum.org>
-# $FreeBSD: audio/gtick/Makefile 314578 2013-03-18 15:04:45Z martymac $
+# $FreeBSD: audio/gtick/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gtick
 PORTVERSION=	0.5.2
@@ -23,7 +23,7 @@ MAN1=	gtick.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
