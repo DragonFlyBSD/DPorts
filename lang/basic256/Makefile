@@ -1,8 +1,8 @@
 # Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
-# $FreeBSD: lang/basic256/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: lang/basic256/Makefile 316570 2013-04-26 06:31:53Z miwi $
 
 PORTNAME=	basic256
-PORTVERSION=	0.9.9.46
+PORTVERSION=	0.9.9.58
 CATEGORIES=	lang
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	kidbasic/${PORTNAME}
