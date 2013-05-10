@@ -2,7 +2,7 @@
 # Date created:		Jan 1, 2005
 # Whom:			kuriyama@FreeBSD.org
 #
-# $FreeBSD: ports/devel/rapidsvn/Makefile,v 1.34 2012/11/17 05:56:56 svnexp Exp $
+# $FreeBSD: devel/rapidsvn/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	rapidsvn
@@ -24,7 +24,7 @@ USE_WX=	2.6
 WX_CONF_ARGS=	absolute
 
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	autoconf libtool automake
 CONFIGURE_TARGET=
 CONFIGURE_ARGS=	--with-apr-config=apr-1-config \
