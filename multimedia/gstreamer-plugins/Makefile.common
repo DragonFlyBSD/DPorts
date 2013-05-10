@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer-plugins/Makefile.common 315020 2013-03-23 09:58:02Z kwm $
+# $FreeBSD: multimedia/gstreamer-plugins/Makefile.common 316693 2013-04-27 20:56:38Z kwm $
 #    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.81 2010/03/16 19:33:10 mezz Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
@@ -349,6 +349,7 @@ gst_jpeg_PLIST_FILES=	${GST_LIB_DIR}/libgstjpeg.la \
 
 # ladspa
 gst_ladspa_BUILD_DEPENDS+=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
+gst_ladspa_LIB_DEPENDS+=	lrdf:${PORTSDIR}/textproc/liblrdf
 gst_ladspa_PLIST_FILES=		${GST_LIB_DIR}/libgstladspa.la \
 				${GST_LIB_DIR}/libgstladspa.so
 gst_ladspa_DIST=	bad
@@ -377,7 +378,7 @@ gst_libpng_PLIST_FILES=	${GST_LIB_DIR}/libgstpng.so \
 		${GST_LIB_DIR}/libgstpng.la
 
 # libvisual
-gst_libvisual_LIB_DEPENDS+=	visual.0:${PORTSDIR}/graphics/libvisual
+gst_libvisual_LIB_DEPENDS+=	visual-0.4:${PORTSDIR}/graphics/libvisual04
 gst_libvisual_PLIST_FILES=	${GST_LIB_DIR}/libgstlibvisual.la \
 		${GST_LIB_DIR}/libgstlibvisual.so
 gst_libvisual_DIST=	base

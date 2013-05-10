@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-plugins/Makefile 314040 2013-03-13 08:57:19Z kwm $
+# $FreeBSD: multimedia/gstreamer-plugins/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.125 2010/03/16 19:33:10 mezz Exp $
 
 PORTNAME=	gstreamer
@@ -41,13 +41,12 @@ UGLY_DISTFILE=		${UGLY_DISTNAME}${EXTRACT_SUFX}
 DIST?=		good
 
 SHLIB_VERSION=	1
-USE_GETTEXT=	yes
 VERSION=	${GST_VERSION}
 WANT_GSTREAMER=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME+=	gnomehack ltverhack ltasneededhack
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 USE_AUTOTOOLS=	libtool
 GST_PLUGIN?=	base
 
