@@ -1,8 +1,8 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: x11-fonts/sourcesanspro-ttf/Makefile 316059 2013-04-18 17:33:17Z sunpoet $
+# $FreeBSD: x11-fonts/sourcesanspro-ttf/Makefile 316547 2013-04-26 02:42:32Z sunpoet $
 
 PORTNAME=	sourcesanspro-ttf
-PORTVERSION=	1.040
+PORTVERSION=	1.050
 CATEGORIES=	x11-fonts
 MASTER_SITES=	SF/sourcesans.adobe
 DISTNAME=	SourceSansPro_FontsOnly-${PORTVERSION}
