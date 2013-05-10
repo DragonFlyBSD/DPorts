@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/logstalgia/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: sysutils/logstalgia/Makefile 316318 2013-04-23 07:59:07Z ehaupt $
 
 PORTNAME=	logstalgia
 PORTVERSION=	1.0.3
@@ -18,7 +18,7 @@ LIB_DEPENDS=	ftgl:${PORTSDIR}/graphics/ftgl \
 		pcre.3:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig:build
 USE_SDL=	sdl image
 
 CFLAGS+=	-L/usr/local/lib -I/usr/local/include
