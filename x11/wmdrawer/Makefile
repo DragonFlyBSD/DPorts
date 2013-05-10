@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	wmDrawer
-# Date created:			Apr 6, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/x11/wmdrawer/Makefile,v 1.26 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: x11/wmdrawer/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	wmdrawer
 PORTVERSION=	0.10.5
@@ -21,7 +16,7 @@ COMMENT=	A dockapp which provides a drawer to launch applications
 
 USE_GNOME=	gdkpixbuf
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 CONFIGURE_ENV+=	DOCSDIR=${DOCSDIR}
 MAKE_ENV+=	${CONFIGURE_ENV}
 
