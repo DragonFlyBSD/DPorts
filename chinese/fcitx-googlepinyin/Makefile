@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-googlepinyin/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: chinese/fcitx-googlepinyin/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	fcitx-googlepinyin
 PORTVERSION=	0.1.6
@@ -14,8 +14,7 @@ LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx \
 		googlepinyin:${PORTSDIR}/chinese/libgooglepinyin
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
-USES=		cmake
+USES=		cmake gettext
 USE_GNOME=	intltool
 
 PROJECTHOST=	fcitx
