@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-gtk/Makefile 313708 2013-03-09 12:24:28Z crees $
+# $FreeBSD: net-p2p/transmission-gtk/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PKGNAMESUFFIX=	-gtk2
 
@@ -17,7 +17,7 @@ PLIST=		${.CURDIR}/pkg-plist
 SLAVEPORT=	gtk2
 
 USE_GNOME=	gnomehack gtk30 desktopfileutils intlhack
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 
 EXTRA_CONF_ARGS=--disable-cli \
