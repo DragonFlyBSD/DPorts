@@ -1,5 +1,5 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: devel/kdevelop-kde4/Makefile 314932 2013-03-22 13:41:53Z makc $
+# $FreeBSD: devel/kdevelop-kde4/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	kdevelop
 DISTVERSION=	${KDEVELOP_VERSION}
@@ -43,7 +43,7 @@ RUN_DEPENDS+=	${KDE4_PREFIX}/lib/kde4/kdevphplanguagesupport.so:${PORTSDIR}/deve
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DBUILD_po:BOOL=FALSE
