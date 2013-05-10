@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: korean/fcitx-hangul/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: korean/fcitx-hangul/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	fcitx-hangul
 PORTVERSION=	0.2.0
@@ -17,8 +17,7 @@ LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx \
 		hangul:${PORTSDIR}/korean/libhangul
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
-USES=		cmake
+USES=		cmake gettext
 USE_GNOME=	intltool
 INSTALLS_ICONS=	yes
 
