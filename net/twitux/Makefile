@@ -2,7 +2,7 @@
 # Date created:        25 August 2008
 # Whom:                Arnaud Berthomier
 #
-# $FreeBSD: ports/net/twitux/Makefile,v 1.9 2012/11/17 06:00:23 svnexp Exp $
+# $FreeBSD: net/twitux/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=		twitux
@@ -25,7 +25,7 @@ INSTALLS_OMF=	yes
 USE_BZIP2=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=		yes
-USE_GETTEXT=	yes
+USES=		gettext
 CONFIGURE_ENV+=	GMSGFMT="${LOCALBASE}/bin/msgfmt"
 GCONF_SCHEMAS=	twitux.schemas
 INSTALLS_ICONS=	yes
