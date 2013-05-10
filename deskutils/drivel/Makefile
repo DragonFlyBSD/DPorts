@@ -2,7 +2,7 @@
 # Date created:			Thu Feb 26 23:13:12 CET 2004
 # Whom:				Koop Mast <kwm@rainbow-runner.nl>
 #
-# $FreeBSD: deskutils/drivel/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: deskutils/drivel/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	drivel
@@ -25,7 +25,7 @@ LICENSE_COMB=	dual
 
 USE_BZIP2=	yes
 USE_GNOME=	gconf2 gnomedocutils gnomevfs2 gtksourceview2
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
