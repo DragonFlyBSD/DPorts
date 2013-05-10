@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: x11-toolkits/qt4-gui/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: x11-toolkits/qt4-gui/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	gui
 DISTVERSION=	${QT4_VERSION}
@@ -18,8 +18,9 @@ QT_NONSTANDARD=	yes
 QT_DIST=	yes
 MAKE_JOBS_SAFE=	yes
 
+USE_GCC=	any
 HAS_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_LDCONFIG=	${PREFIX}/lib/qt4
 USE_XORG=	xrender xrandr xinerama inputproto xfixes \
 		sm xcursor xext x11 ice xi xt
@@ -37,7 +38,6 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake tools translations \
 		src/3rdparty/clucene src/3rdparty/freetype \
 		src/3rdparty/libjpeg src/3rdparty/libmng src/3rdparty/libpng \
 		src/3rdparty/libtiff src/3rdparty/phonon src/3rdparty/webkit
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
 .for dne in ${DO_NOT_EXTRACT}
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
