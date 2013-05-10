@@ -2,7 +2,7 @@
 # Date created:		2008-12-25
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/clutter-gtk/Makefile,v 1.14 2012/11/17 05:58:02 svnexp Exp $
+# $FreeBSD: graphics/clutter-gtk/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	clutter-gtk
@@ -19,7 +19,7 @@ LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack gtk20 ltverhack gnomeprefix
 USE_XORG=	xp x11
