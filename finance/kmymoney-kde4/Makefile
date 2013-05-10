@@ -1,4 +1,4 @@
-# $FreeBSD: finance/kmymoney-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: finance/kmymoney-kde4/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	kmymoney
 PORTVERSION=	4.6.3
@@ -24,8 +24,7 @@ OFX_DESC=	Enable OFX plugin
 QUOTES_DESC=	Enable online price quotes
 
 USE_BZIP2=	yes
-USES=		cmake
-USE_PKGCONFIG=	build
+USES=		cmake pkgconfig
 USE_QT4=	gui dbus network phonon sql svg xml \
 		qmake_build moc_build rcc_build uic_build
 USE_KDE4=	kdehier kdeprefix automoc4 kdelibs pimlibs sharedmime
@@ -37,7 +36,7 @@ MAN1=		kmymoney.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DENABLE_NLS:BOOL=OFF
