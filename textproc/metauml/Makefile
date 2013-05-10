@@ -2,7 +2,7 @@
 # Date created:		2007-08-29
 # Whom:			TAKATSU Tomonari <tota@rtfm.jp>
 #
-# $FreeBSD: ports/textproc/metauml/Makefile,v 1.9 2012/11/17 06:02:02 svnexp Exp $
+# $FreeBSD: textproc/metauml/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	metauml
@@ -21,12 +21,10 @@ EXTRACT_ONLY=	${PORTNAME}_lib_${PORTVERSION}.tgz lop-release.tgz
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	A MetaPost library for typesetting UML diagrams
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/thrunk/License
 
+USE_TEX=	tetex
 PLIST_SUB=	TEXMFDIR=${TEXMFDIR} MKTEXLSR=${MKTEXLSR} MPDIR=${MPDIR}
 
 TEXMFDIR=	share/texmf
