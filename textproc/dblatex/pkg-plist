@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/dblatex/pkg-plist,v 1.8 2012/11/17 06:01:54 svnexp Exp $
+@comment $FreeBSD: textproc/dblatex/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/dblatex
 %%DATADIR%%/latex/contrib/db2latex/db2latex.sty
 %%DATADIR%%/latex/contrib/db2latex/graphics/caution.eps

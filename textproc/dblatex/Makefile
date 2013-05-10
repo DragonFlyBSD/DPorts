@@ -2,7 +2,7 @@
 # Date created:		2007-02-25
 # Whom:			Peter Johnson <johnson.peter@gmail.com>
 #
-# $FreeBSD: ports/textproc/dblatex/Makefile,v 1.15 2012/11/17 06:01:53 svnexp Exp $
+# $FreeBSD: textproc/dblatex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	dblatex
@@ -16,10 +16,10 @@ COMMENT=	DocBook to LaTeX/ConTeXt Publishing
 
 BUILD_DEPENDS=	${LOCALBASE}/share/texmf-local/tex/latex/ifxetex/ifxetex.sty:${PORTSDIR}/print/ifxetex
 RUN_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
-		${LOCALBASE}/share/xml/docbook/4.2/docbook.cat:${PORTSDIR}/textproc/docbook-xml \
-		etex:${PORTSDIR}/print/teTeX-base
+		${LOCALBASE}/share/xml/docbook/4.2/docbook.cat:${PORTSDIR}/textproc/docbook-xml
 
 USE_BZIP2=	yes
+USE_TEX=	tetex
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
 PYDISTUTILS_INSTALLARGS=	-c -O1 --prefix=${PREFIX} \
