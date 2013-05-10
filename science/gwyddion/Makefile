@@ -1,5 +1,5 @@
 # Created by: Yeti <yeti@gwyddion.net>
-# $FreeBSD: science/gwyddion/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: science/gwyddion/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gwyddion
 PORTVERSION=	2.31
@@ -20,10 +20,9 @@ OPTIONS_DEFAULT=PERL PYTHON UNIQUE
 UNIQUE_DESC=	Remote controle backend support
 
 USE_XZ=		yes
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	desktopfileutils gconf2 gtk20 libxml2
 USE_GL=		glu
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules --disable-gtk-doc \
