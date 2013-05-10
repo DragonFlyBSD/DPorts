@@ -2,7 +2,7 @@
 # Date created:				16 March 2001
 # Whom:					Jeremy Norris <ishmael27@home.com>
 #
-# $FreeBSD: ports/graphics/gliv/Makefile,v 1.61 2012/11/17 05:58:08 svnexp Exp $
+# $FreeBSD: graphics/gliv/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gliv
@@ -21,7 +21,7 @@ LICENSE=	GPLv2
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix gtk20
 USE_GL=		yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOMAKE="${TRUE}" \
