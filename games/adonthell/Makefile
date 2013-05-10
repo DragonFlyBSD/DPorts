@@ -2,7 +2,7 @@
 # Date created:		Sat May 10 15:26:09 CEST 2003
 # Whom:			Miguel Mendez <flynn@energyhq.es.eu.org>
 #
-# $FreeBSD: ports/games/adonthell/Makefile,v 1.40 2012/11/17 05:57:31 svnexp Exp $
+# $FreeBSD: games/adonthell/Makefile 316464 2013-04-24 18:10:30Z ak $
 #    $MCom: ports/games/adonthell/Makefile,v 1.1 2006/10/04 20:13:33 ahze Exp $
 
 PORTNAME=	adonthell
@@ -24,7 +24,7 @@ LIB_DEPENDS=	vorbis:${PORTSDIR}/audio/libvorbis \
 
 USE_SDL=	mixer ttf sdl
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PYPACKAGE="${PYTHON_CMD}" ac_cv_path_P_SWIG=no
