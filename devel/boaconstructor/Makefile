@@ -2,7 +2,7 @@
 # Date created:         		15 December 2000
 # Whom:                 		Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/boaconstructor/Makefile,v 1.28 2012/11/17 05:55:35 svnexp Exp $
+# $FreeBSD: devel/boaconstructor/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	boaconstructor
@@ -19,7 +19,7 @@ COMMENT=	A cross platform RAD GUI Building IDE for wxPython
 WRKSRC=		${WRKDIR}/boa-constructor-${PORTVERSION}
 
 USE_ZIP=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_WX=		2.6
 WX_COMPS=	python
