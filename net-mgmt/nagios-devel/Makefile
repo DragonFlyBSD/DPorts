@@ -2,7 +2,7 @@
 # Date created:				14 July 2007
 # Whom:					Jarrod Sayers <jarrod@netleader.com.au>
 #
-# $FreeBSD: ports/net-mgmt/nagios-devel/Makefile,v 1.33 2012/12/16 06:16:58 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios-devel/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	nagios
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/nagios/check_nagios:${PORTSDIR}/net-mgmt/nagio
 MASTER_SITE_FREEBSD=	yes
 LATEST_LINK=	nagios-devel
 
-USE_ICONV=	yes
+USES=		iconv
 USE_PERL5_BUILD=yes
 USE_AUTOTOOLS=	autoconf libltdl
 USE_RC_SUBR=	nagios
