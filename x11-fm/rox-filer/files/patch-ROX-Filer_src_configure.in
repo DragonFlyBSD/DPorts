@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-fm/rox-filer/files/patch-ROX-Filer_src_configure.in,v 1.6 2012/11/17 06:03:26 svnexp Exp $
+$FreeBSD: x11-fm/rox-filer/files/patch-ROX-Filer_src_configure.in 300897 2012-07-14 14:29:18Z beat $
 
 --- ROX-Filer/src/configure.in.orig
 +++ ROX-Filer/src/configure.in

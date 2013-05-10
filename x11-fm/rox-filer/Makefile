@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fm/rox-filer/Makefile,v 1.86 2013/01/26 15:07:30 svnexp Exp $
+# $FreeBSD: x11-fm/rox-filer/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	rox-filer
 PORTVERSION=	2.11
@@ -19,7 +19,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_XORG=	x11 sm xaw xproto
 USE_GNOME=	atk gconf2 glib20 gnomevfs2 gtk20 libglade2 libidl libxml2 orbit2 pango
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 HAS_CONFIGURE=	yes
 
 MAN1=		rox.1
