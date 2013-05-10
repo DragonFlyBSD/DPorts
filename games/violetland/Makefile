@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/violetland/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/violetland/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	violetland
 PORTVERSION=	0.4.3
@@ -18,8 +18,7 @@ USE_ZIP=	yes
 USE_SDL=	sdl mixer image ttf
 USE_GL=		gl glu
 MAKE_JOBS_SAFE=	yes
-USES=		cmake
-USE_GETTEXT=	yes
+USES=		cmake gettext
 USE_DOS2UNIX=	yes
 CMAKE_ARGS=	-DDATA_INSTALL_DIR="${DATADIR}"
 
