@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/kcm-polkit-kde/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: sysutils/kcm-polkit-kde/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	polkit-kde
 DISTVERSION=	0.0-${PORTDATE}
@@ -14,10 +14,9 @@ LIB_DEPENDS=	polkit-qt-agent-1:${PORTSDIR}/sysutils/polkit-qt
 RUN_DEPENDS=	${KDE4_PREFIX}/lib/kde4/libexec/polkit-kde-authentication-agent-1:${PORTSDIR}/sysutils/polkit-kde
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
-USE_PKGCONFIG=	build
 USE_QT4=	dbus xml moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake pkgconfig
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
