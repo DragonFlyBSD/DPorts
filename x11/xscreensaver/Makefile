@@ -1,5 +1,5 @@
 # Created by: dom@myrddin.demon.co.uk
-# $FreeBSD: x11/xscreensaver/Makefile 313129 2013-02-28 22:08:41Z zeising $
+# $FreeBSD: x11/xscreensaver/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	xscreensaver
 PORTVERSION=	5.21
@@ -22,11 +22,10 @@ MAKE_JOBS_SAFE=	yes
 
 CONFLICTS=	xscreensaver-gnome-[0-9]* xscreensaver-gnome-hacks-[0-9]*
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 USE_XORG=	xpm
 USE_GL=		yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk --with-gl --with-gle --with-pixbuf --with-xpm \
 		--with-jpeg=${LOCALBASE} --with-xshm-ext --with-xdbe-ext \
