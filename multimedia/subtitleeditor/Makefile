@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: multimedia/subtitleeditor/Makefile 315704 2013-04-03 11:34:53Z ehaupt $
+# $FreeBSD: multimedia/subtitleeditor/Makefile 316340 2013-04-23 10:26:09Z ehaupt $
 
 PORTNAME=	subtitleeditor
 PORTVERSION=	0.40.0
@@ -34,7 +34,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
