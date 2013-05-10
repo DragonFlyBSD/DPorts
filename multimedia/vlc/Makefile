@@ -1,9 +1,9 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 315312 2013-03-26 16:13:17Z miwi $
+# $FreeBSD: multimedia/vlc/Makefile 317561 2013-05-06 23:01:58Z ehaupt $
 
 PORTNAME=	vlc
-DISTVERSION=	2.0.5
-PORTREVISION=	3
+DISTVERSION=	2.0.6
+PORTREVISION=	2
 PORTEPOCH=	3
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/p/-pre/}/ \
@@ -30,7 +30,7 @@ OPTIONS_DEFINE=	A52 AALIB ASS AVAHI CACA DBUS DIRAC DOCS DTS DVDREAD \
 		SAMBA SCHROED SDL SHOUTCAST SKINS STREAM SPEEX SQLITE SVG \
 		TAGLIB THEORA TWOLAME UPNP V4L VAAPI VCD VORBIS \
 		X11 X264 XCB XOSD XVIDEO ZVBI SERVER_ONLY DEBUG \
-		NO_DVD LIBBLURAY SAMPLERATE
+		NO_DVD LIBBLURAY SAMPLERATE SIDPLAY
 OPTIONS_DEFAULT=A52 AVAHI DBUS DTS DVDREAD DVDNAV FAAD FLAC GLX GNUTLS \
 		HTTPD LUA MAD MATROSKA MPEG2 OGG OPUS PNG QT4 REALAUDIO \
 		SDL SKINS STREAM SPEEX TAGLIB THEORA TWOLAME V4L \
@@ -49,6 +49,7 @@ REALAUDIO_DESC=	Real Audio(R) support
 RUNROOT_DESC=	Enable running as root
 SAMBA_DESC=	SAMBA Access module
 SCHROED_DESC=	Schroedinger decoder
+SIDPLAY_DESC=	C64 sid demux support
 SKINS_DESC=	winamp skins interface
 STREAM_DESC=	stream output
 TAGLIB_DESC=	ID3 tag and Ogg comment support
@@ -63,9 +64,10 @@ NO_DVD_DESC=	disable DVD specific features
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_PERL5_BUILD=yes
 USE_GL=yes
+USE_CSTD=	gnu99
 MAKE_JOBS_SAFE=	yes
 WANT_GNOME=	yes
 
@@ -398,7 +400,7 @@ CONFIGURE_ARGS+=--disable-ncurses
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 .else
 CONFIGURE_ARGS+=--disable-nls
 .endif
@@ -491,6 +493,14 @@ LIB_DEPENDS+=	schroedinger-1:${PORTSDIR}/multimedia/schroedinger
 CONFIGURE_ARGS+=--enable-schroedinger
 .else
 CONFIGURE_ARGS+=--disable-schroedinger
+.endif
+
+.if ${PORT_OPTIONS:MSIDPLAY}
+LIB_DEPENDS+=	sidplay2:${PORTSDIR}/audio/libsidplay2
+LDFLAGS+=	-L${LOCALBASE}/lib/sidplay/builders
+CONFIGURE_ARGS+=--enable-sid
+.else
+CONFIGURE_ARGS+=--disable-sid
 .endif
 
 .if ${PORT_OPTIONS:MSDL} && ${PORT_OPTIONS:MXCB}
@@ -715,6 +725,7 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		-e '\|LIBS|s|-lrt||' \
+		-e '/PKG_CONFIG.*lib.*</s|libavcodec <|libavcodec${FFMPEG_SUFFIX} <|' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf|${WITH_VLC_DEFAULT_FONT}|' \
 		${WRKSRC}/modules/text_renderer/freetype.c
@@ -793,7 +804,7 @@ pre-install:
 .if ${PORT_OPTIONS:MNLS}
 	cd ${FAKEDIR}/share/locale && ${FIND} -s * -type f -o -type l | \
 		${SED} -e 's|^|share/locale/|' >> ${PLIST}
-.for locale in ach cgg bn_IN ckb co ff fur gd ia kk km kmr lg my oc ps tet tl zu
+.for locale in ach an cgg bn_IN ckb co ff fur gd ia kk km kmr lg my oc ps tet tl zu
 	${ECHO_CMD} "@dirrmtry share/locale/${locale}/LC_MESSAGES" >> ${PLIST}
 	${ECHO_CMD} "@dirrmtry share/locale/${locale}" >> ${PLIST}
 .endfor
