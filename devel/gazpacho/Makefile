@@ -2,7 +2,7 @@
 # Date created:		2006-09-08
 # Whom:			Gustavo Fukao <gustavofukao@gmail.com>
 #
-# $FreeBSD: ports/devel/gazpacho/Makefile,v 1.9 2012/11/17 05:55:44 svnexp Exp $
+# $FreeBSD: devel/gazpacho/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gazpacho
@@ -23,7 +23,7 @@ NO_BUILD=	yes
 USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 PORTDOCS=	AUTHORS ChangeLog CONTRIBUTORS COPYING README NEWS
 
