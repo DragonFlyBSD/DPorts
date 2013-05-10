@@ -2,7 +2,7 @@
 # Date created:				15 Sep 2009
 # Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
 #
-# $FreeBSD: www/choqok/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: www/choqok/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	choqok
@@ -22,12 +22,11 @@ LIB_DEPENDS=	qjson.0:${PORTSDIR}/devel/qjson \
 #BUILD_DEPENDS+=	${KDE4_PREFIX}/lib/kde4/kwebkitpart.so:${PORTSDIR}/www/kwebkitpart
 #RUN_DEPENDS+=	${KDE4_PREFIX}/lib/kde4/kwebkitpart.so:${PORTSDIR}/www/kwebkitpart
 
-USE_GETTEXT=	yes
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	gui imageformats_run network \
 		moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake gettext
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
