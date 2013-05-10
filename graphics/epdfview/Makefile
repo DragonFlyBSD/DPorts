@@ -1,9 +1,5 @@
-# New ports collection makefile for:	epdfview
-# Date created:				2006/06/01
-# Whom:					chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: graphics/epdfview/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: graphics/epdfview/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	epdfview
 PORTVERSION=	0.1.8
@@ -23,28 +19,27 @@ LIB_DEPENDS=	poppler-glib.8:${PORTSDIR}/graphics/poppler-glib
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 intlhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS=	CUPS	"Use cups printing system"		off \
-		NLS	"Native language support"		on
+OPTIONS_DEFINE=	CUPS NLS
 
 MAN1=	epdfview.1
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_CUPS)
+.if ${PORT_OPTIONS:MCUPS}
 CONFIGURE_ARGS+=--with-cups
 LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
 .else
 CONFIGURE_ARGS+=--without-cups
 .endif
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.if ${PORT_OPTIONS:MNLS}
+USES+=	gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -63,4 +58,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/${PORTNAME}.desktop ${PREFIX}/share/applications/
 	@-update-desktop-database
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
