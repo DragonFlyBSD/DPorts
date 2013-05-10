@@ -1,5 +1,5 @@
 # Created by: mwest@uct.ac.za
-# $FreeBSD: devel/libgii/Makefile 315112 2013-03-24 12:12:31Z antoine $
+# $FreeBSD: devel/libgii/Makefile 316127 2013-04-20 07:46:09Z antoine $
 
 PORTNAME=	libgii
 PORTVERSION=	1.0.2
@@ -184,6 +184,8 @@ OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11
 
 .include <bsd.port.options.mk>
+
+CONFIGURE_ARGS=	--disable-linux-kbd --disable-linux-joy --disable-linux-evdev
 
 .if exists(/usr/include/dev/kii/kii.h)
 CONFIGURE_ARGS+=--enable-kii --with-extra-includes=/usr/include/dev
