@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tortoisehg2/Makefile 314540 2013-03-18 08:27:56Z madpilot $
+# $FreeBSD: devel/tortoisehg2/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	tortoisehg
 PORTVERSION=	2.7.1
@@ -36,7 +36,7 @@ SUB_FILES=	pkg-message
 
 .if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
 .else
 PLIST_SUB+=	NLS="@comment "
 .endif
