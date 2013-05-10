@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: ports/graphics/albumshaper/Makefile,v 1.11 2013/01/23 15:05:35 svnexp Exp $
+# $FreeBSD: graphics/albumshaper/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	albumshaper
 PORTVERSION=	2.1
@@ -17,7 +17,7 @@ DEPRECATED=	Depends on QT3; unmaintained
 EXPIRATION_DATE=	2013-07-01
 
 USE_BZIP2=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_QT_VER=	3
 USE_GNOME=	libxml2 libxslt
 
@@ -35,7 +35,9 @@ DESKTOP_ENTRIES=	"AlbumShaper" \
 			"Qt;Graphics;" \
 			"false"
 
-.if !defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
@@ -47,7 +49,7 @@ MYDISTDOCS=	AlbumShaper.doc install packageHowTo.txt readme.txt \
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}|g' \
 		${WRKSRC}/AlbumShaper.pro
-.if defined(WITHOUT_NLS)
+.if ! ${PORT_OPTIONS:MNLS}
 	@${REINPLACE_CMD} -e '/INSTALLS\ +=\ translations/d' \
 		${WRKSRC}/AlbumShaper.pro
 .endif
@@ -57,7 +59,7 @@ pre-build:
 		qmake AlbumShaper.pro )
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for doc in ${MYDISTDOCS}
 	@${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}
