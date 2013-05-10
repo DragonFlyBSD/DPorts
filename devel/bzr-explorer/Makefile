@@ -2,7 +2,7 @@
 # Date created:		25 May 2010
 # Whom:			Carlo Strub
 #
-# $FreeBSD: ports/devel/bzr-explorer/Makefile,v 1.12 2012/11/17 05:55:36 svnexp Exp $
+# $FreeBSD: devel/bzr-explorer/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	bzr-explorer
@@ -23,6 +23,6 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/bzrlib/plugins/qbzr/__init__.py:${PORTSDIR}/de
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	explorer
-USE_GETTEXT=	yes
+USES=		gettext
 
 .include <bsd.port.mk>
