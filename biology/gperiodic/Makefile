@@ -2,7 +2,7 @@
 # Date created:				16 July 1999
 # Whom:					Andrey Zakhvatov
 #
-# $FreeBSD: ports/biology/gperiodic/Makefile,v 1.39 2012/11/17 05:54:51 svnexp Exp $
+# $FreeBSD: biology/gperiodic/Makefile 316464 2013-04-24 18:10:30Z ak $
 #    $MCom: ports/biology/gperiodic/Makefile,v 1.1 2006/09/29 23:42:13 ahze Exp $
 
 PORTNAME=	gperiodic
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Displays a periodic table of the elements
 
 USE_GNOME=	gtk20
-USE_GETTEXT=	yes
+USES=		gettext
 
 LANGS=		da fr gl it pl ru sv tr
 
