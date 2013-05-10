@@ -1,4 +1,4 @@
-# $FreeBSD: ports/multimedia/qt4-multimedia/Makefile,v 1.10 2013/02/03 21:43:42 svnexp Exp $
+# $FreeBSD: multimedia/qt4-multimedia/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	multimedia
 DISTVERSION=	${QT4_VERSION}
@@ -29,7 +29,6 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake tools translations \
 		src/3rdparty/freetype src/3rdparty/libjpeg src/3rdparty/libmng \
 		src/3rdparty/libpng src/3rdparty/libtiff src/3rdparty/phonon \
 		src/3rdparty/webkit
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
 .for dne in ${DO_NOT_EXTRACT}
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
