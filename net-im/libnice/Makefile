@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net-im/libnice/Makefile 313638 2013-03-08 12:21:07Z miwi $
+# $FreeBSD: net-im/libnice/Makefile 316407 2013-04-24 07:35:40Z ak $
 #    $MCom$
 
 PORTNAME=	libnice
@@ -11,11 +11,10 @@ MASTER_SITES=	http://nice.freedesktop.org/releases/ \
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library and transmitter that implements ICE-19
 
+USES=		pkgconfig gettext
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack glib20 ltverhack
-USE_PKGCONFIG=	build
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--without-gstreamer --with-gstreamer-0.10
