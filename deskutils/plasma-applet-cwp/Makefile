@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: deskutils/plasma-applet-cwp/Makefile 316185 2013-04-21 16:18:44Z dbn $
+# $FreeBSD: deskutils/plasma-applet-cwp/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	cwp
 PORTVERSION=	1.7.3
@@ -13,9 +13,8 @@ COMMENT=	Weather plasma applet for KDE4
 
 LICENSE=	GPLv3
 
-USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake gettext
 USE_KDE4=	automoc4 kdeprefix kdelibs
 USE_QT4=	gui dbus network opengl svg phonon webkit xml \
 		qmake_build moc_build rcc_build uic_build
