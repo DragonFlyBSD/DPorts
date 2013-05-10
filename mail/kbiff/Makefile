@@ -2,7 +2,7 @@
 # Date created:		So  14 Jun 1998 13:09:18 CEST
 # Whom:			andreas
 #
-# $FreeBSD: mail/kbiff/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: mail/kbiff/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	kbiff
@@ -21,8 +21,7 @@ USE_KDE4=	automoc4 kdehier kdeprefix kdelibs
 USE_QT4=	corelib dbus gui network svg xml \
 		qmake_build uic_build rcc_build
 USE_PERL5_BUILD=yes
-USE_GETTEXT=	yes
-USES=		cmake
+USES=		cmake gettext
 MAKE_JOBS_SAFE=	yes
 
 MAN1=		kbiff.1
