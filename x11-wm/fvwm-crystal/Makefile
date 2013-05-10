@@ -1,5 +1,5 @@
 # Created by: Giacomo Mariani <giacomomariani@yahoo.it>
-# $FreeBSD: ports/x11-wm/fvwm-crystal/Makefile,v 1.14 2013/02/03 02:46:14 svnexp Exp $
+# $FreeBSD: x11-wm/fvwm-crystal/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	fvwm-crystal
 PORTVERSION=	3.0.6
@@ -14,7 +14,7 @@ RUN_DEPENDS=	fvwm>=2.5:${PORTSDIR}/x11-wm/fvwm2 \
 		bash:${PORTSDIR}/shells/bash
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 MAKE_ENV=	prefix="${PREFIX}" addondir="${DOCSDIR}/addons"
 PORTDOCS=	*
