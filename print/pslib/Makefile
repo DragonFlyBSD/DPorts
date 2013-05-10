@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/pslib/Makefile 315108 2013-03-24 09:08:30Z mva $
+# $FreeBSD: print/pslib/Makefile 317551 2013-05-06 21:53:56Z ehaupt $
 
 PORTNAME=	pslib
 PORTVERSION=	0.4.5
@@ -14,10 +14,8 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png \
 		tiff.4:${PORTSDIR}/graphics/tiff
 
-USES=		pathfix
-USE_PKGCONFIG=	build
+USES=		pathfix pkgconfig gettext
 USE_GNOME=	intlhack
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -49,7 +47,6 @@ CONFIGURE_ENV+=	ac_cv_prog_DOC_TO_MAN=""
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ENV+=	ac_cv_header_libintl_h=no
