@@ -2,7 +2,7 @@
 # Date Created:			25 July 2004
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: devel/py-dbus/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/py-dbus/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/devel/py-dbus/Makefile,v 1.14 2011/08/11 19:48:46 kwm Exp $
 #
 
@@ -18,8 +18,7 @@ COMMENT=	Python bindings for the D-BUS messaging system
 
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
-USE_GETTEXT=	yes
-USES=	pathfix
+USES=	pathfix gettext
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
