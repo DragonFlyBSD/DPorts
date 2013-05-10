@@ -1,5 +1,5 @@
 # Created by: Kjell Tore Ullavik <ktullavik@gmail.com>
-# $FreeBSD: multimedia/pyjama/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: multimedia/pyjama/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	pyjama
 PORTVERSION=	0.3.0.1
@@ -21,7 +21,7 @@ NO_BUILD=	yes
 USE_PYTHON=	2.5+
 USE_GSTREAMER=	core good bad gnomevfs
 USE_GNOME=	pygtk2
-USE_GETTEXT=	yes
+USES=		gettext
 
 LOCALES=	bg ca da de en_GB es fr it pl
 INSTDIR=	${PYTHON_SITELIBDIR}/${PORTNAME}
