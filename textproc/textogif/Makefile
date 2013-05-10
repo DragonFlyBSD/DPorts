@@ -2,7 +2,7 @@
 # Date created:		2006-02-04
 # Whom:			Nicola Vitale	<nivit@email.it>
 #
-# $FreeBSD: ports/textproc/textogif/Makefile,v 1.7 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/textogif/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	textogif
@@ -16,11 +16,11 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	A Perl script to convert LaTeX formulas into GIFs
 
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX \
-		dvips:${PORTSDIR}/print/dvipsk-tetex \
+RUN_DEPENDS=	dvips:${PORTSDIR}/print/dvipsk-tetex \
 		ppmtogif:${PORTSDIR}/graphics/netpbm
 
 NO_BUILD=	yes
+USE_TEX=	tetex
 USE_PERL5_RUN=	yes
 
 do-install:
