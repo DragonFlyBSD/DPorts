@@ -2,7 +2,7 @@
 # Date created:		29 October 2004
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: audio/pulseaudio/Makefile 302650 2012-08-16 17:26:54Z kwm $
+# $FreeBSD: audio/pulseaudio/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports-stable/audio/pulseaudio/Makefile,v 1.7 2010/06/25 20:35:01 kwm Exp $
 #
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
@@ -30,7 +30,7 @@ LIB_DEPENDS=	samplerate.1:${PORTSDIR}/audio/libsamplerate \
 USE_GNOME=	gnomehack glib20 intltool ltverhack
 USE_XORG=	x11 sm xtst ice
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libltdl libtool
 USE_GMAKE=	yes
