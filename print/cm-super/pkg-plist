@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/print/cm-super/pkg-plist,v 1.2 2012/11/17 06:00:48 svnexp Exp $
+@comment $FreeBSD: print/cm-super/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 share/fonts/cm-super/README
 share/fonts/cm-super/afm/isflb8.afm
 share/fonts/cm-super/afm/isfli8.afm

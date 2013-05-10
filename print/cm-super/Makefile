@@ -2,7 +2,7 @@
 # Date created:		27 June 2006
 # Whom:			hrs
 #
-# $FreeBSD: ports/print/cm-super/Makefile,v 1.10 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: print/cm-super/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	cm-super
@@ -21,9 +21,9 @@ COMMENT=	Computer Modern Font Families in Type 1 Fonts
 .if !defined(WITHOUT_X11)
 BUILD_DEPENDS=	${LOCALBASE}/bin/type1inst:${PORTSDIR}/x11-fonts/p5-type1inst
 .endif
-RUN_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base
 
 USE_ZIP=	yes
+USE_TEX=	tetex
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 .if !defined(WITHOUT_X11)
