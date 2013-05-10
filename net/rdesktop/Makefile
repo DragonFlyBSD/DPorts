@@ -2,7 +2,7 @@
 # Date created:               13 December 2000
 # Whom:                       mwest@uct.ac.za
 #
-# $FreeBSD: ports/net/rdesktop/Makefile,v 1.55 2012/11/17 06:00:17 svnexp Exp $
+# $FreeBSD: net/rdesktop/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	rdesktop
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
 .if defined(WITH_ICONV)
-USE_ICONV=	yes
+USES+=		iconv
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${LOCALBASE}
 .endif
 

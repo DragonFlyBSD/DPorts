@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/rdesktop/pkg-plist,v 1.9 2012/11/17 06:00:17 svnexp Exp $
+@comment $FreeBSD: net/rdesktop/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/rdesktop
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/TODO
