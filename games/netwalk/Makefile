@@ -1,4 +1,4 @@
-# $FreeBSD: games/netwalk/Makefile 314121 2013-03-14 00:11:57Z beech $
+# $FreeBSD: games/netwalk/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	netwalk
 PORTVERSION=	0.4.10
@@ -24,7 +24,7 @@ GH_COMMIT=	634e7c9
 
 USE_SDL=	sdl ttf
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_XORG=	x11 xau xdmcp
 ALL_TARGET=
 MAKE_JOBS_SAFE=	yes
