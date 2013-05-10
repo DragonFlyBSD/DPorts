@@ -2,7 +2,7 @@
 # Date created:		07 November 2003
 # Whom:			Stefan Walter <sw@gegenunendlich.de>
 #
-# $FreeBSD: ports/textproc/foiltex/Makefile,v 1.14 2012/11/17 06:01:56 svnexp Exp $
+# $FreeBSD: textproc/foiltex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	foiltex
@@ -16,11 +16,9 @@ DISTFILES=	foiltex.dtx foiltex.ins
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A collection of LaTeX files for making foils
 
-BUILD_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-
 NO_CDROM=	redistribution on a not-for-profit basis only
 
+USE_TEX=	tetex
 NO_WRKSUBDIR=	yes
 
 LATEX_CMD=	${LOCALBASE}/bin/latex
