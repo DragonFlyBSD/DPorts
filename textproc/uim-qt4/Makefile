@@ -2,7 +2,7 @@
 # Date created:		2008-21-08
 # Whom:			Yamashiro Jun <yamajun@ofug.net>
 #
-# $FreeBSD: ports/textproc/uim-qt4/Makefile,v 1.10 2012/11/17 06:02:24 svnexp Exp $
+# $FreeBSD: textproc/uim-qt4/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PKGNAMESUFFIX=	-qt4
@@ -13,7 +13,7 @@ LIB_DEPENDS=	uim.8:${PORTSDIR}/textproc/uim
 
 USE_QT4=	qmake_build moc_build qt3support uic
 USE_AUTOTOOLS=	libtool
-USE_ICONV=	yes
+USES=		iconv
 
 MASTERDIR=	${.CURDIR}/../../textproc/uim
 PKGDIR=		${.CURDIR}
