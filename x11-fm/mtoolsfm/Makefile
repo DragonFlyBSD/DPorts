@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: x11-fm/mtoolsfm/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: x11-fm/mtoolsfm/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	mtoolsfm
 PORTVERSION=	1.9.5
@@ -13,9 +13,8 @@ COMMENT=	A graphical frontend to mtools
 
 RUN_DEPENDS=	mtools:${PORTSDIR}/emulators/mtools
 
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gtk12
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
