@@ -2,7 +2,7 @@
 # Date created:		4 May 2000
 # Whom:			Mario S F Ferreira <lioux@linf.unb.br> et al.
 #
-# $FreeBSD: ports/cad/electric/Makefile,v 1.27 2013/02/08 00:50:50 svnexp Exp $
+# $FreeBSD: cad/electric/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	electric
@@ -39,7 +39,7 @@ FEATURES+=	T1LIB
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 FEATURES+=	INT
 .endif
 
