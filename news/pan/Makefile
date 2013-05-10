@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: news/pan/Makefile 314354 2013-03-16 13:33:19Z kwm $
+# $FreeBSD: news/pan/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/news/pan/Makefile,v 1.7 2008/01/19 22:45:42 mezz Exp $
 
 PORTNAME=	pan
@@ -19,9 +19,8 @@ LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre \
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	intlhack
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lgnuregex
