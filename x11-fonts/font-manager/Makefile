@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-fonts/font-manager/Makefile 314894 2013-03-22 08:16:07Z bapt $
+# $FreeBSD: x11-fonts/font-manager/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	font-manager
 PORTVERSION=	0.5.7
@@ -34,7 +34,7 @@ IGNORE=	port data is source code, undefine NOPORTDATA
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
