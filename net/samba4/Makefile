@@ -1,9 +1,9 @@
 # Created by: timur@FreeBSD.org
-# $FreeBSD: net/samba4/Makefile 315342 2013-03-27 01:50:53Z timur $
+# $FreeBSD: net/samba4/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME?=		${SAMBA4_PORTNAME}
 PORTVERSION?=		${SAMBA4_VERSION}
-PORTREVISION?=		0
+PORTREVISION?=	1
 CATEGORIES?=		net
 MASTER_SITES=		${MASTER_SITE_SAMBA}
 MASTER_SITE_SUBDIR=	samba/stable samba/rc
@@ -72,9 +72,7 @@ USE_PERL5_BUILD=	yes
 
 USE_GCC=		4.2+
 USE_PYTHON=		yes
-USE_ICONV=		yes
-USE_GETTEXT=		yes
-USE_PKGCONFIG=		build
+USES=			pkgconfig gettext iconv
 USE_LDCONFIG=		${SAMBA4_LIBDIR}
 
 PKGCONFIGDIR?=		${PREFIX}/libdata/pkgconfig
