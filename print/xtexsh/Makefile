@@ -2,7 +2,7 @@
 # Date created:         11 August 2001
 # Whom:                 Jean-Sebastien Roy <js@jeannot.org>
 #
-# $FreeBSD: ports/print/xtexsh/Makefile,v 1.15 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: print/xtexsh/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	xtexsh
@@ -15,14 +15,13 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}-${PORTVERSION:E}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tcl/Tk-based simple TeX interface
 
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base
-
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}
 NO_BUILD=	yes
 
+USE_TEX=	tetex
 USE_TK_WRAPPER=	yes
 INSTALLS_ICONS=	yes
 MAN1=		xtexsh.1
