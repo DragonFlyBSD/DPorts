@@ -3,7 +3,7 @@
 # Date created:			Apr 15, 2005
 # Whom:				ijliao
 #
-# $FreeBSD: ports/print/dvisvg/Makefile,v 1.12 2012/11/17 06:00:49 svnexp Exp $
+# $FreeBSD: print/dvisvg/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	dvisvg
@@ -15,12 +15,9 @@ MASTER_SITES=	http://dvisvg.sourceforge.net/files/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Converter from DVI to SVG
 
-BUILD_DEPENDS=	${MKTEXLSR}:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS=	${MKTEXLSR}:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}
 USE_GHOSTSCRIPT_RUN=	yes
+USE_TEX=	tetex
 ALL_TARGET=	# empty
 # workaround for svgfonts.c not including kpathsea/c-auto.h
 CFLAGS+=	-DHAVE_PROTOTYPES
