@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bino
-# Date created:		2012-03-12
-# Whom:			Mykola Dzham <i@levsha.me>
-#
-# $FreeBSD: ports/multimedia/bino/Makefile,v 1.5 2012/11/17 05:59:47 svnexp Exp $
-#
+# Created by: Mykola Dzham <i@levsha.me>
+# $FreeBSD: multimedia/bino/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	bino
 PORTVERSION=	1.2.1
@@ -17,10 +13,10 @@ COMMENT=	3D video player with multi-display support
 LICENSE=	GPLv3
 
 FETCH_ARGS=	-Fpr
+USES=		pkgconfig
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 INSTALLS_ICONS=	yes
 USE_QT4=	moc_build opengl rcc_build
 
@@ -35,8 +31,10 @@ LIB_DEPENDS+=	ass.5:${PORTSDIR}/multimedia/libass \
 MAN1=	bino.1
 INFO=	bino
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
