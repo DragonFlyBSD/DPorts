@@ -2,7 +2,7 @@
 # Date created:        30 September 2002
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
-# $FreeBSD: ports/x11-toolkits/gtkmm24/Makefile,v 1.135 2012/11/17 06:03:35 svnexp Exp $
+# $FreeBSD: x11-toolkits/gtkmm24/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.77 2011/07/16 17:31:29 kwm Exp $
 #
 
@@ -28,7 +28,7 @@ LIB_DEPENDS=	glibmm-2.4.1:${PORTSDIR}/devel/glibmm \
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
