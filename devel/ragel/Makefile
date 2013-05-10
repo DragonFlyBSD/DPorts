@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/devel/ragel/Makefile,v 1.44 2013/02/14 23:06:24 svnexp Exp $
+# $FreeBSD: devel/ragel/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	ragel
 PORTVERSION=	6.8
@@ -23,9 +23,9 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
+USE_TEX=	tetex
 CONFIGURE_ARGS+=	--enable-manual
 BUILD_DEPENDS+=	fig2dev:${PORTSDIR}/print/transfig
-BUILD_DEPENDS+=	pdflatex:${PORTSDIR}/print/teTeX
 PLIST_SUB+=	DOCS=""
 .else
 PLIST_SUB+=	DOCS="@comment "
