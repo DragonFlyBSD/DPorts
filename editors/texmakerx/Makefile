@@ -1,5 +1,5 @@
 # Created by: lx
-# $FreeBSD: editors/texmakerx/Makefile 315263 2013-03-26 07:28:58Z bapt $
+# $FreeBSD: editors/texmakerx/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	texmakerx
 PORTVERSION=	2.1
@@ -13,8 +13,7 @@ COMMENT=	A LaTeX IDE derived from Texmaker
 
 LIB_DEPENDS=	poppler:${PORTSDIR}/graphics/poppler \
 		poppler-qt4:${PORTSDIR}/graphics/poppler-qt4
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		dvips:${PORTSDIR}/print/dvipsk-tetex \
+RUN_DEPENDS=	dvips:${PORTSDIR}/print/dvipsk-tetex \
 		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
 WRKSRC=	${WRKDIR}/${PORTNAME}${PORTVERSION}
@@ -22,6 +21,7 @@ WRKSRC=	${WRKDIR}/${PORTNAME}${PORTVERSION}
 USE_GHOSTSCRIPT=yes
 USE_QT4=	gui network xml moc_build qmake_build rcc_build \
 		uic_build qtestlib script
+USE_TEX=	tetex
 HAS_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 MAKE_JOBS_UNSAFE=	yes
