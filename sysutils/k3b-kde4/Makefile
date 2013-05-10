@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/k3b-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: sysutils/k3b-kde4/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	k3b
 PORTVERSION=	2.0.2
@@ -12,6 +12,8 @@ COMMENT=	KDE CD/DVD writing suite
 
 LIB_DEPENDS=	cdda_paranoia:${PORTSDIR}/audio/cdparanoia \
 		samplerate:${PORTSDIR}/audio/libsamplerate
+RUN_DEPENDS=	cdrecord:${PORTSDIR}/sysutils/cdrtools
+BUILD_DEPENDS=	cdrecord:${PORTSDIR}/sysutils/cdrtools
 
 LATEST_LINK=	${PORTNAME}-kde4
 
@@ -20,7 +22,6 @@ USES=		cmake
 CMAKE_ARGS=	-DK3B_BUILD_K3BSETUP:BOOL=OFF \
 		-DK3B_ENABLE_MUSICBRAINZ:BOOL=OFF
 USE_KDE4=	automoc4 kdeprefix kdelibs libkcddb
-USE_CDRTOOLS=	yes
 USE_QT4=	gui dbus network phonon qt3support sql svg webkit xml \
 		qmake_build moc_build rcc_build uic_build
 USE_LDCONFIG=	yes
