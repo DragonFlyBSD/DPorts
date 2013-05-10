@@ -1,9 +1,5 @@
-# New ports collection makefile for:   cairo-clock
-# Date created:                2007/01/16
-# Whom:                        chinsan
-#
-# $FreeBSD: ports/x11-clocks/cairo-clock/Makefile,v 1.17 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: x11-clocks/cairo-clock/Makefile 317470 2013-05-06 06:41:15Z bapt $
 
 PORTNAME=	cairo-clock
 PORTVERSION=	0.3.4
@@ -14,15 +10,17 @@ MASTER_SITES=	http://macslow.thepimp.net/projects/cairo-clock/
 MAINTAINER=	daichi@FreeBSD.org
 COMMENT=	MacSlow's Cairo-Clock
 
-USE_GNOME=	gtk20 intlhack gnomehack libglade2 librsvg2
+USE_GNOME=	gtk20 intlhack libglade2 librsvg2
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		pathfix iconv
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAN1=		cairo-clock.1
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -37,7 +35,7 @@ post-patch:
 		${WRKSRC}/man/Makefile.in
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for file in README NEWS AUTHORS TODO
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
