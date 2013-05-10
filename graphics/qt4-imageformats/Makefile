@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: ports/graphics/qt4-imageformats/Makefile,v 1.28 2013/02/03 21:43:24 svnexp Exp $
+# $FreeBSD: graphics/qt4-imageformats/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	imageformats
 DISTVERSION=	${QT4_VERSION}
@@ -14,6 +14,7 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png \
 		tiff:${PORTSDIR}/graphics/tiff
 
+USE_GCC=	any
 USE_QT4=	qmake_build moc_build rcc_build corelib gui svg xml
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
@@ -34,7 +35,6 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake tools translations \
 		src/3rdparty/clucene src/3rdparty/freetype \
 		src/3rdparty/libjpeg src/3rdparty/libmng src/3rdparty/libpng \
 		src/3rdparty/libtiff src/3rdparty/phonon src/3rdparty/webkit
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
 .for dne in ${DO_NOT_EXTRACT}
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
