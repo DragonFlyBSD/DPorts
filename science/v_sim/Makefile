@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/science/v_sim/Makefile,v 1.39 2012/12/11 14:23:09 svnexp Exp $
+# $FreeBSD: science/v_sim/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	v_sim
 PORTVERSION=	3.6.1.1
@@ -36,7 +36,7 @@ MAN1=		v_sim.1
 .if defined(WITHOUT_NLS)
 PLIST_SUB+=	NLS="@comment "
 .else
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .endif
 
