@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/bomberinstinct/files/patch-data::Sprites::Makefile.in,v 1.2 2012/11/17 05:57:33 svnexp Exp $
+$FreeBSD: games/bomberinstinct/files/patch-data::Sprites::Makefile.in 300896 2012-07-14 13:54:48Z beat $
 
 --- data/Sprites/Makefile.in	2002/07/02 12:58:45	1.1
 +++ data/Sprites/Makefile.in	2002/07/02 13:05:49

@@ -2,7 +2,7 @@
 # Date created:				28 September 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/games/bomberinstinct/Makefile,v 1.28 2012/11/17 05:57:33 svnexp Exp $
+# $FreeBSD: games/bomberinstinct/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	bomberinstinct
@@ -18,7 +18,7 @@ COMMENT=	A nice Bomberman-like multiplayer game
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_SDL=	mixer sdl
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_PERL5_BUILD=yes
