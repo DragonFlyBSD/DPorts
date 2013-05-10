@@ -2,7 +2,7 @@
 # Date created:		3 May 2004
 # Whom:			Tim Bishop <tim@bishnet.net>
 #
-# $FreeBSD: mail/gnubiff/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: mail/gnubiff/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gnubiff
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--with-password
 .ifndef(WITHOUT_NLS)
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=		NLS=""
-USE_GETTEXT=		yes
+USES+=		gettext
 .else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=		NLS="@comment "
