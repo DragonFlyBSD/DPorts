@@ -2,7 +2,7 @@
 # Date created:		Tue Mar 15 17:50:34 EST 2005
 # Whom:			Paul Chvostek <paul@it.ca>
 #
-# $FreeBSD: ports/print/pdfjam/Makefile,v 1.15 2012/11/17 06:00:53 svnexp Exp $
+# $FreeBSD: print/pdfjam/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	pdfjam
@@ -15,8 +15,7 @@ MASTER_SITES=	http://www2.warwick.ac.uk/fac/sci/statistics/staff/academic/firth/
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Shell scripts to manipulate PDF files
 
-RUN_DEPENDS=	pdflatex:${PORTSDIR}/print/teTeX-base
-
+USE_TEX=	tetex
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PROGS=		pdf90 pdf180 pdf270 pdfbook pdfflip pdfjam \
