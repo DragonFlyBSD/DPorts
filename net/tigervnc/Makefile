@@ -1,8 +1,9 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: net/tigervnc/Makefile 315144 2013-03-24 16:24:56Z swills $
+# $FreeBSD: net/tigervnc/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	tigervnc
 PORTVERSION=	1.2.0
+PORTREVISION=	1
 CATEGORIES=	net x11-servers
 MASTER_SITES=	SF:tigervnc
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTVERSION}/:tigervnc
@@ -21,8 +22,7 @@ CONFLICTS=	tridiavnc-[0-9]* \
 
 MAKE_JOBS_UNSAFE=	yes
 
-USES=		cmake
-USE_PKGCONFIG=	build
+USES=		cmake pkgconfig
 USE_GMAKE=	yes
 USE_GL=		gl
 USE_AUTOTOOLS+=	autoconf:env automake:env libtool:env
@@ -63,7 +63,7 @@ CMAKE_ARGS+=	-DENABLE_GNUTLS=0
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CMAKE_ARGS+=	-DENABLE_NLS=1
 PLIST_SUB+=	NLS=""
 .else
