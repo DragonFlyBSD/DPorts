@@ -2,7 +2,7 @@
 # Date created:                March 2004
 # Whom:                        Sam Lawrance <boris@brooknet.com.au>
 #
-# $FreeBSD: palm/synce-librra/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: palm/synce-librra/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	librra
 PORTVERSION=	0.14
@@ -23,9 +23,8 @@ OPTIONS?=	TOOLS	"Build with minor rra command line tools" on \
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
-USES=	pathfix
+USES=		pathfix iconv
 CONFIGURE_ARGS+=	--with-libsynce="${LOCALBASE}" \
 			--with-libmimedir="${LOCALBASE}"
 
