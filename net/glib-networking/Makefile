@@ -1,9 +1,10 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net/glib-networking/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: net/glib-networking/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 #   $MCom: ports/net/glib-networking/Makefile,v 1.20 2012/12/10 11:17:13 kwm Exp $
 
 PORTNAME=	glib-networking
 PORTVERSION=	2.34.2
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -23,7 +24,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_ro
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack glib20 intltool
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
