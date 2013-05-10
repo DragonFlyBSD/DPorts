@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geda
-# Date created:			4 April 2001
-# Whom:				bruno schwander <bruno@tinkerbox.org>
-#
-# $FreeBSD: ports/cad/geda-gschem/Makefile,v 1.34 2012/11/17 05:54:54 svnexp Exp $
-#
+# Created by: bruno schwander <bruno@tinkerbox.org>
+# $FreeBSD: cad/geda-gschem/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	gschem
 PORTVERSION=	1.4.3
@@ -36,8 +32,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		gschem.1
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
