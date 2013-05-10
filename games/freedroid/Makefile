@@ -1,5 +1,5 @@
 # Created by: <benlutz@datacomm.ch>
-# $FreeBSD: ports/games/freedroid/Makefile,v 1.23 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/freedroid/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	freedroid
 PORTVERSION=	1.0.2
@@ -13,7 +13,7 @@ COMMENT=	Clone of the Commodore game Paradroid
 LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
 
-USE_ICONV=	yes
+USES=		iconv
 USE_SDL=	mixer image sdl
 
 GNU_CONFIGURE=	yes
