@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11/i3lock/Makefile 314748 2013-03-20 17:13:42Z bapt $
+# $FreeBSD: x11/i3lock/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	i3lock
 PORTVERSION=	2.4.1
@@ -35,6 +35,6 @@ MAKE_JOBS_SAFE=	yes
 USE_XORG=	x11 xt xproto xext
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 
 .include <bsd.port.mk>
