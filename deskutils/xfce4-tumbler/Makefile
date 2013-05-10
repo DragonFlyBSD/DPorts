@@ -1,10 +1,8 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: deskutils/xfce4-tumbler/Makefile 313701 2013-03-09 10:50:10Z olivierd $
-#
+# $FreeBSD: deskutils/xfce4-tumbler/Makefile 317545 2013-05-06 19:45:51Z rene $
 
 PORTNAME=	tumbler
-PORTVERSION=	0.1.27
-PORTREVISION=	1
+PORTVERSION=	0.1.29
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/xfce/${PORTNAME}/${PORTVERSION:R}
@@ -17,31 +15,30 @@ COMMENT=	Thumbnail service for Xfce desktop
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
+USES=		pathfix pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	glib20 gnomehack intltool intlhack
+USE_GNOME=	glib20 intltool intlhack
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv
-USE_PKGCONFIG=	build
 
 CONFIGURE_ARGS=	--enable-xdg-cache \
 		--disable-gtk-doc-html
 
 OPTIONS_DEFINE=	DOCS NLS PIXBUF FONTS JPEG FFMPEG POPPLER \
 	GSTREAMER ODF RAW COVER
-OPTIONS_DEFAULT=	PIXBUF FONTS JPEG POPPLER GSTREAMER ODF
-# GStreamer thumbnailer needs new 1.0 API
-OPTIONS_EXCLUDE=	GSTREAMER
+OPTIONS_DEFAULT=	PIXBUF FONTS JPEG POPPLER ODF
 FONTS_DESC=	Fonts thumbnailer plugin
 COVER_DESC=	Open Movie Database thumbnailer plugin
+GSTREAMER_DESC=	GStreamer (1.0) thumbnailer plugin
 
 SUB_FILES=	pkg-message
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
@@ -130,7 +127,7 @@ USE_GNOME+=	gdkpixbuf2
 CONFIGURE_ARGS+=--enable-pixbuf-thumbnailer
 PLIST_SUB+=	PIXBUF=""
 .endif
-USE_GSTREAMER=	yes
+USE_GSTREAMER1=	yes
 CONFIGURE_ARGS+=--enable-gstreamer-thumbnailer
 PLIST_SUB+=	GSTREAMER=""
 .else
@@ -178,11 +175,6 @@ PLIST_SUB+=	COVER=""
 .else
 CONFIGURE_ARGS+=--disable-cover-thumbnailer
 PLIST_SUB+=	COVER="@comment "
-.endif
-
-post-patch:
-.if empty(PORT_OPTIONS:MNLS)
-	@${REINPLACE_CMD} -e 's|	po||' ${WRKSRC}/Makefile.in
 .endif
 
 post-install:
