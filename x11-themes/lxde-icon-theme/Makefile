@@ -2,7 +2,7 @@
 # Date created:                09/23/2010
 # Whom:                        Kris Moore <kmoore@freebsd.org>
 #
-# $FreeBSD: ports/x11-themes/lxde-icon-theme/Makefile,v 1.4 2012/11/17 06:03:33 svnexp Exp $
+# $FreeBSD: x11-themes/lxde-icon-theme/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	lxde-icon-theme
@@ -16,7 +16,7 @@ COMMENT=	LXDE Icon Theme
 
 USE_BZIP2=	YES
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
 
