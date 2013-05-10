@@ -1,5 +1,5 @@
 # Created by: Andrew L. Neporada <andrew@chg.ru>
-# $FreeBSD: math/pspp/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: math/pspp/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	pspp
 PORTVERSION=	0.6.2
@@ -17,7 +17,7 @@ OPTIONS_DEFINE=	GUI PGSQL
 
 USE_GNOME=	libxml2
 USE_PERL5_BUILD=yes
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
@@ -30,7 +30,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
