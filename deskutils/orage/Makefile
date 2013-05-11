@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: ports/deskutils/orage/Makefile,v 1.39 2013/02/02 10:44:59 svnexp Exp $
+# $FreeBSD: deskutils/orage/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	orage
 PORTVERSION=	4.8.4
@@ -15,11 +15,10 @@ LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
+USES=		pkgconfig gettext
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gtk20 intltool intlhack desktopfileutils
-USE_PKGCONFIG=	build
 USE_XFCE=	configenv libmenu panel
 USE_XORG=	xext xrender xinerama xi xrandr xcursor xcomposite xdamage x11 \
 		xfixes
