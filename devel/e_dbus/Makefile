@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/devel/e_dbus/Makefile,v 1.13 2013/01/15 17:45:58 svnexp Exp $
+# $FreeBSD: devel/e_dbus/Makefile 316272 2013-04-22 20:35:19Z gblach $
 
 PORTNAME=	e_dbus
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 PORTEPOCH=	1
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
@@ -18,9 +18,9 @@ LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USES=		pathfix
 USE_EFL=	eina evas ecore libtool_hack librt_hack
 USE_EFL_ECORE=	evas
-USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS=	--enable-ehal \
