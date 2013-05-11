@@ -1,5 +1,5 @@
 # Created by: Chess Griffin <chess@chessgriffin.com>
-# $FreeBSD: multimedia/gpodder/Makefile 316069 2013-04-18 18:30:25Z rm $
+# $FreeBSD: multimedia/gpodder/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gpodder
 PORTVERSION=	3.5.1
@@ -28,7 +28,7 @@ OPTIONS_EXCLUDE=NLS
 ALL_TARGET=	messages
 MAKE_ENV=	GPODDER_MANPATH_NO_SHARE="yes"
 MAKEFILE=	makefile
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_PYTHON=	-2.7
 WANT_GNOME=	yes
