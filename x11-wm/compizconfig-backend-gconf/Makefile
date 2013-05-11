@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/compizconfig-backend-gconf/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: x11-wm/compizconfig-backend-gconf/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	compizconfig-backend-gconf
 PORTVERSION=	0.8.4
@@ -17,10 +17,9 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 
-USES=        pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20 gconf2
 
 post-patch:
