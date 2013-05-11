@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: science/gramps/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: science/gramps/Makefile 316757 2013-04-28 22:08:22Z bapt $
 
 PORTNAME=	gramps
 PORTVERSION=	3.3.0
@@ -19,9 +19,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bsddb>0:${PORTSDIR}/databases/py-bsddb \
 
 USE_BDB=	43
 USE_PYTHON=	2.6+
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	pygnome2 pygnomeextras desktopfileutils gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
@@ -32,27 +31,28 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 MAN1=		gramps.1
 MANLANG=	"" cs fr nl pl sv
 
-OPTIONS=	ENCHANT "Spellchecking support" off \
-		PYWEBKITGTK "Use webkit backend for Geographic view" on \
-		GRAPHVIZ "Use graphviz for graphs creating" on \
-		EXIV "Managing exiv metadata support" on
+OPTIONS_DEFINE=	ENCHANT PYWEBKITGTK GRAPHVIZ EXIV
+OPTIONS_DEFAULT=	PYWEBKITGTK GRAPHVIZ EXIV
+ENCHANT_DESC=		Spellchecking support
+PYWEBKITGTK_DESC=	Use webkit backend for Geographic view
+EXIV_DESC=		Managing exiv metadata support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_ENCHANT)
+.if ${PORT_OPTIONS:MENCHANT}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}enchant>=0:${PORTSDIR}/textproc/py-enchant
 .endif
-.if defined(WITH_PYWEBKITGTK)
+.if ${PORT_OPTIONS:MPYWEBKITGTK}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}webkitgtk>=0:${PORTSDIR}/www/py-webkitgtk
 .endif
-.if defined(WITH_GRAPHVIZ)
+.if ${PORT_OPTIONS:MGRAPHVIZ}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}graphviz>-0:${PORTSDIR}/graphics/py-graphviz
 .endif
-.if defined(WITH_EXIV)
+.if ${PORT_OPTIONS:MEXIV}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}exiv2>=0.1.3:${PORTSDIR}/graphics/py-exiv2
 .endif
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
