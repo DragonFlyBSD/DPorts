@@ -2,7 +2,7 @@
 # Date created:		20 Jan 2004
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/sound-juicer/Makefile,v 1.65 2012/11/17 05:54:44 svnexp Exp $
+# $FreeBSD: audio/sound-juicer/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/audio/sound-juicer/Makefile,v 1.102 2010/09/29 13:19:43 kwm Exp $
 #
 
@@ -25,7 +25,7 @@ LIB_DEPENDS=	musicbrainz3.6:${PORTSDIR}/audio/libmusicbrainz3 \
 		brasero-media.3:${PORTSDIR}/sysutils/brasero
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gconf2 libglade2 gnomedocutils
