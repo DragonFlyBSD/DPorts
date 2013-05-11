@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kompose
-# Date created:				31 Aug 2004
-# Whom:					Lauri Watts <lauri@kde.org>
-#
-# $FreeBSD: ports/deskutils/kompose/Makefile,v 1.28 2012/12/30 18:55:45 svnexp Exp $
-#
+# Created by: Lauri Watts <lauri@kde.org>
+# $FreeBSD: deskutils/kompose/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	kompose
 PORTVERSION=	0.5.3
@@ -28,12 +24,14 @@ INSTALLS_ICONS=	yes
 
 DOCSDIR=	share/doc/HTML/en/${PORTNAME}
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 post-patch:
