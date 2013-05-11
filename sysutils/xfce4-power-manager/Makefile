@@ -2,7 +2,7 @@
 # Date created:		2009-06-20
 # Whom:			J.R. Oldroyd <fbsd@opal.com>
 #
-# $FreeBSD: sysutils/xfce4-power-manager/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: sysutils/xfce4-power-manager/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfce4-power-manager
@@ -19,7 +19,7 @@ LIB_DEPENDS=	notify:${PORTSDIR}/devel/libnotify
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 intltool intlhack pkgconfig
 USE_XFCE=	configenv libutil libgui panel
