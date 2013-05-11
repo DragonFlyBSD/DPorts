@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/print/deforaos-pdfviewer/Makefile,v 1.2 2013/02/10 19:35:33 svnexp Exp $
+# $FreeBSD: print/deforaos-pdfviewer/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	pdfviewer
 PORTVERSION=	0.0.1
@@ -18,8 +18,8 @@ LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem \
 		poppler-glib:${PORTSDIR}/graphics/poppler-glib
 
 MAKE_ARGS+=	PREFIX=${PREFIX}
+USES=		pkgconfig
 USE_GNOME=	gtk20 desktopfileutils
-USE_PKGCONFIG=	build
 PLIST_FILES=	bin/pdfviewer \
 		share/applications/pdfviewer.desktop
 
