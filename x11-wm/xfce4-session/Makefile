@@ -1,10 +1,9 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: x11-wm/xfce4-session/Makefile 313364 2013-03-03 16:08:46Z olivierd $
-#
+# $FreeBSD: x11-wm/xfce4-session/Makefile 316689 2013-04-27 20:20:45Z olivierd $
 
 PORTNAME=	xfce4-session
 PORTVERSION=	4.10.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 DIST_SUBDIR=	xfce4
@@ -25,15 +24,15 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtk20 glib20 intltool intlhack desktopfileutils
-USE_PKGCONFIG=	build
+USE_GNOME=	gtk20 glib20 intltool intlhack
+USES=		pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv libmenu libutil panel xfconf
 USE_XORG=	x11 sm ice
 
 CONFIGURE_ARGS+=--enable-legacy-sm \
 		--disable-libgnome-keyring \
-		--with-xsession-prefix=${LOCALBASE}
+		--with-xsession-prefix=${PREFIX}
 
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
@@ -47,7 +46,7 @@ PLIST_SUB=	VERSION="4.6"
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=	gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
@@ -63,6 +62,5 @@ post-install:
 	@${ECHO_MSG}
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO_MSG}
-	@-update-desktop-database
 
 .include <bsd.port.mk>
