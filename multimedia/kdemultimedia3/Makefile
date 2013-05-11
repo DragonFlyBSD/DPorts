@@ -3,7 +3,7 @@
 # Date created:				Saturday 7 December 2002
 # Whom:					Alan Eldridge <alane@freebsd.org>
 #
-# $FreeBSD: ports/multimedia/kdemultimedia3/Makefile,v 1.156 2012/12/30 18:56:12 svnexp Exp $
+# $FreeBSD: multimedia/kdemultimedia3/Makefile 316391 2013-04-23 20:41:49Z mi $
 #
 
 PORTNAME=	kdemultimedia
