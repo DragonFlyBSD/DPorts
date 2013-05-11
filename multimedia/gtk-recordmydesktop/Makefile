@@ -2,7 +2,7 @@
 # Date created:				2010-07-16
 # Whom:					Ruslan Mahmatkhanov <cvs-src@yandex.ru>
 #
-# $FreeBSD: ports/multimedia/gtk-recordmydesktop/Makefile,v 1.8 2012/11/17 05:59:49 svnexp Exp $
+# $FreeBSD: multimedia/gtk-recordmydesktop/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gtk-recordmydesktop
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/recordmydesktop:${PORTSDIR}/multimedia/recordmydes
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_PYTHON=	-2.7
