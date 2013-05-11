@@ -2,7 +2,7 @@
 # Date created:		06 October 2003
 # Whom:			Thorsten Greiner <thorsten.greiner@web.de>
 #
-# $FreeBSD: ports/deskutils/xfce4-notes-plugin/Makefile,v 1.48 2012/11/17 05:55:31 svnexp Exp $
+# $FreeBSD: deskutils/xfce4-notes-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfce4-notes-plugin
@@ -20,7 +20,7 @@ LIB_DEPENDS=	unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack glib20 gtk20 intltool intlhack desktopfileutils pkgconfig
