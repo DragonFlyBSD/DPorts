@@ -1,6 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/midori/Makefile 316117 2013-04-19 19:19:04Z olivierd $
-#
+# $FreeBSD: www/midori/Makefile 317320 2013-05-04 14:06:08Z bdrewery $
 
 PORTNAME=	midori
 PORTVERSION=	0.5.0
@@ -29,12 +28,7 @@ CONFIGURE_ARGS+=--enable-libnotify \
 		--enable-docs \
 		--disable-gtk3
 
-# if user has set DISABLE_MAKE_JOBS, then MAKE_JOBS_NUMBER is undefined
-.if defined(DISABLE_MAKE_JOBS)
-CONFIGURE_ARGS+=--jobs=1
-.else
 CONFIGURE_ARGS+=--jobs=${MAKE_JOBS_NUMBER}
-.endif
 
 MAKE_JOBS_SAFE=	yes
 HAS_CONFIGURE=	yes
@@ -44,7 +38,7 @@ USE_GNOME=	glib20 gtk20 intltool libxml2 desktopfileutils
 USE_XORG=	xscrnsaver
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 PLIST_SUB=	VERSION="${PORTVERSION:R}"
 
@@ -61,7 +55,7 @@ ZEITGEIST_DESC=	User logs activities
 CONFIGURE_ENV+=	CC="${CC}"
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
