@@ -2,7 +2,7 @@
 # Date Created:				12 June 2003
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-themes/gnome-themes-extras/Makefile,v 1.48 2012/11/17 06:03:31 svnexp Exp $
+# $FreeBSD: x11-themes/gnome-themes-extras/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-themes/gnome-themes-extras/Makefile,v 1.18 2007/10/04 02:36:16 mezz Exp $
 #
 
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	gtk-engines2>=2.11.0:${PORTSDIR}/x11-themes/gtk-engines2 \
 RUN_DEPENDS=	gtk-engines2>=2.11.0:${PORTSDIR}/x11-themes/gtk-engines2
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack libgnomeui intlhack
