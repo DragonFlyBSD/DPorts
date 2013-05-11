@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/glade2/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: devel/glade2/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/devel/glade2/Makefile,v 1.20 2007/08/04 03:51:29 marcus Exp $
 
 PORTNAME=	glade
@@ -16,10 +16,9 @@ COMMENT=	A user interface builder for GTK+/GNOME
 LIB_DEPENDS=	rarian.0:${PORTSDIR}/textproc/rarian
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack gtk20 desktopfileutils
 USE_GMAKE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
