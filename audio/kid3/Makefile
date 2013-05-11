@@ -2,7 +2,7 @@
 # Date created:                2006-08-02
 # Whom:                        Max Brazhnikov <makc@issp.ac.ru>
 #
-# $FreeBSD: ports/audio/kid3/Makefile,v 1.34 2012/12/30 18:55:38 svnexp Exp $
+# $FreeBSD: audio/kid3/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	kid3
@@ -29,7 +29,7 @@ PORTSCOUT=	limit:^1\.
 USE_KDELIBS_VER=3
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-musicbrainz
 MAKE_JOBS_SAFE=	yes
