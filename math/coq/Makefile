@@ -1,9 +1,8 @@
 # Created by: Rene Ladan <r.c.ladan@student.tue.nl>
-# $FreeBSD: math/coq/Makefile 313476 2013-03-05 20:22:02Z bf $
+# $FreeBSD: math/coq/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	coq
-PORTVERSION=	8.4.1
-PORTREVISION=	1
+PORTVERSION=	8.4.2
 PORTEPOCH=	1
 CATEGORIES=	math
 MASTER_SITES=	http://coq.inria.fr/distrib/V${COQVERSION}/files/ \
@@ -37,8 +36,8 @@ MAN1=	coq-tex.1 coq_makefile.1 coqc.1 coqchk.1 coqdep.1 coqdoc.1 \
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
+USE_TEX=	tetex
 BUILD_DEPENDS+=	hevea:${PORTSDIR}/textproc/hevea \
-		latex:${PORTSDIR}/print/teTeX \
 		${LOCALBASE}/share/texmf/tex/latex/ucs/utf8x.def:${PORTSDIR}/print/latex-ucs
 PORTDOCS=	*
 .else
