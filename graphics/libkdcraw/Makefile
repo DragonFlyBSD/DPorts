@@ -2,7 +2,7 @@
 # Date created:			22 June 2007
 # Whom:				Alex Dupre <ale@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/libkdcraw/Makefile,v 1.19 2012/11/17 05:58:13 svnexp Exp $
+# $FreeBSD: graphics/libkdcraw/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	libkdcraw
 PORTVERSION=	0.1.9
@@ -16,7 +16,7 @@ COMMENT=	A C++ interface around the LibRaw library
 LIB_DEPENDS=	lcms.1:${PORTSDIR}/graphics/lcms
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_KDELIBS_VER=3
 USE_GNOME=	gnomehack pkgconfig
 USE_GMAKE=	yes
