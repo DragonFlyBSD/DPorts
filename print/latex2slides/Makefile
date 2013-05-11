@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/latex2slides/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: print/latex2slides/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	latex2slides
 PORTVERSION=	1.0
@@ -12,10 +12,10 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Produces a set of HTML/JPEG slides from a TeX or LaTeX source
 
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick \
-		dvips:${PORTSDIR}/print/teTeX \
 		${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
 
 USE_PYTHON=	yes
+USE_TEX=	tetex
 NO_BUILD=	yes
 PLIST_SUB=	PORTNAME="${PORTNAME}" PORTVERSION="${PORTVERSION}"
 
