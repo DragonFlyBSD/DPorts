@@ -2,7 +2,7 @@
 # Date created:				06 July 2008
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: deskutils/gnome-main-menu/Makefile 315647 2013-04-01 09:53:00Z kwm $
+# $FreeBSD: deskutils/gnome-main-menu/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gnome-main-menu
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix gnomepanel intlhack eel2 gnomedesktop \
 		libgnomeui
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="`pkg-config --libs libgnomeui-2.0`"
 CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags libgnomeui-2.0`
