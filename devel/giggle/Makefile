@@ -2,7 +2,7 @@
 # Date created:		2008-10-01
 # Whom:			Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: devel/giggle/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: devel/giggle/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	giggle
@@ -24,7 +24,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	glib20 gtk20 gtksourceview2 libglade2
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
