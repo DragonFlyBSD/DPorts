@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/gnome-clipboard-daemon/Makefile,v 1.19 2012/12/31 17:20:47 svnexp Exp $
+# $FreeBSD: x11/gnome-clipboard-daemon/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	gnome-clipboard-daemon
 PORTVERSION=	1.0
@@ -13,7 +13,7 @@ COMMENT=	Program that keeps the content of your X clipboard in memory
 LICENSE=	GPLv2
 
 USE_BZIP2=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GNOME=	gtk20
 MAKE_JOBS_SAFE=	yes
 
