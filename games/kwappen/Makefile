@@ -2,7 +2,7 @@
 # Date created:				2003-07-03
 # Whom:					arved
 #
-# $FreeBSD: games/kwappen/Makefile 309662 2012-12-30 12:03:51Z beat $
+# $FreeBSD: games/kwappen/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	kwappen
 PORTVERSION=	1.1.5
@@ -18,7 +18,7 @@ EXTRA_PATCHES=	${.CURDIR}/../../x11/kde3/files/extrapatch-old_configure
 DEPRECATED=	Depends on QT3; unmaintained
 EXPIRATION_DATE=	2013-07-01
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_KDELIBS_VER=3
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
