@@ -2,7 +2,7 @@
 # Date created:        30 January 2000
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: games/atomix/Makefile 315638 2013-03-31 15:11:40Z kwm $
+# $FreeBSD: games/atomix/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/games/atomix/Makefile,v 1.14 2007/09/10 05:39:33 mezz Exp $
 #
 
@@ -18,7 +18,7 @@ COMMENT=	A yet another little mind game
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
