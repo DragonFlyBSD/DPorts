@@ -2,7 +2,7 @@
 # Date created:				20040812
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/net/blam/Makefile,v 1.37 2012/11/17 05:59:57 svnexp Exp $
+# $FreeBSD: net/blam/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $Id: Makefile,v 1.22 2006/10/26 05:32:53 tmclau02 Exp $
 #
 
@@ -23,7 +23,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ENV=	GMSGFMT="${LOCALBASE}/bin/msgfmt" DATADIRNAME="share"
 USE_GNOME=	gnomesharp20
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 GCONF_SCHEMAS=	blam.schemas
 
