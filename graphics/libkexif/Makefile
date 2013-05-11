@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: graphics/libkexif/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: graphics/libkexif/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	libkexif
 PORTVERSION=	0.2.5
@@ -18,7 +18,7 @@ USE_GNOME=	gnomehack pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||g;s|-fno-schedule-insns -fno-inline||g' \
