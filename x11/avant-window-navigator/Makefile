@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11/avant-window-navigator/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: x11/avant-window-navigator/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	avant-window-navigator
 PORTVERSION=	0.3.2.1
@@ -18,12 +18,10 @@ LIB_DEPENDS=	wnck-1:${PORTSDIR}/x11-toolkits/libwnck \
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USES=        pathfix
+USES=		pathfix pkgconfig gettext
 USE_GNOME=	glib20 gtk20 pygtk2
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 INSTALLS_ICONS=	yes
 USE_XORG=	x11 xproto xcomposite xrender
 CPPFLAGS+=	-I${LOCALBASE}/include
