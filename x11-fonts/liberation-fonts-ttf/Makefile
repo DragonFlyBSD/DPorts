@@ -1,13 +1,13 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/x11-fonts/liberation-fonts-ttf/Makefile,v 1.13 2012/11/17 19:19:03 svnexp Exp $
-#
+# $FreeBSD: x11-fonts/liberation-fonts-ttf/Makefile 315792 2013-04-12 18:12:31Z thierry $
 
 PORTNAME=	liberation-fonts-ttf
 PORTVERSION=	2.00.1
 PORTEPOCH=	1
 CATEGORIES=	x11-fonts
-MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/
+MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/	\
+		${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	thierry
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Liberation fonts from Red Hat to replace MS TTF fonts
