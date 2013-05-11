@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jimFreeBSD.org>
-# $FreeBSD: www/erwn/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: www/erwn/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	erwn
 PORTVERSION=	0.8
@@ -11,10 +11,9 @@ DISTNAME=	erwin-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple GTK+-2 HTML editor
 
-USES=        pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	gnomeprefix gtksourceview gtkhtml3
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 
 MAN1=		erwin.1
