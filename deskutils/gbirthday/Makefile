@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/gbirthday/Makefile 313217 2013-03-02 08:47:03Z rm $
+# $FreeBSD: deskutils/gbirthday/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gbirthday
 PORTVERSION=	0.6.7
@@ -23,7 +23,7 @@ USE_GNOME=	pygtk2 desktopfileutils
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 USE_GNOME+=	intltool
 LANGUAGES=	de en es fr gl it pl pt ru sk
 PLIST_SUB+=	NLS=""
