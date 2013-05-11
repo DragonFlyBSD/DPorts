@@ -2,7 +2,7 @@
 # Date created: 2012-04-17
 # Whom: Olivier Duchateau <duchateau.olivier@gmail.com>
 #
-# $FreeBSD: ports/sysutils/xfce4-mount-plugin/Makefile,v 1.2 2012/11/17 06:01:50 svnexp Exp $
+# $FreeBSD: sysutils/xfce4-mount-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfce4-mount-plugin
@@ -19,7 +19,7 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intltool intlhack pkgconfig
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_XFCE=	configenv libmenu panel
