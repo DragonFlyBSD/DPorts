@@ -1,5 +1,5 @@
 # Created by: Dan Papasian <bugg@bugg.strangled.net>
-# $FreeBSD: games/gtetrinet/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: games/gtetrinet/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	gtetrinet
 PORTVERSION=	0.7.11
@@ -11,9 +11,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Version of the popular TetriNET multiplayer Tetris clone
 
-USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	esound gnomeprefix libgnomeui
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
