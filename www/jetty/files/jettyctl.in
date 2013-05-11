@@ -4,7 +4,7 @@
 # Author:        Jean-Baptiste Quenot <jb.quenot@caraldi.com>
 # Purpose:       Manage resin pid file and log files
 # Date Created:  2005-01-21 15:43:19
-# Revision:      $FreeBSD: ports/www/jetty/files/jettyctl.in,v 1.2 2012/11/17 06:02:37 svnexp Exp $
+# Revision:      $FreeBSD: ports/www/jetty/files/jettyctl.in,v 1.3 2013/01/16 10:41:38 svnexp Exp $
 ################################################################################
 # Copyright (c) 2004, Jean-Baptiste Quenot <jb.quenot@caraldi.com>
 # All rights reserved.
@@ -152,8 +152,7 @@ if __name__ == '__main__':
     ARGS += [
         "-Djetty.home=%%APP_HOME%%",
         "-jar",
-        "%%APP_HOME%%/start.jar",
-        "%%PREFIX%%/etc/%%APP_NAME%%.xml"
+        "%%APP_HOME%%/start.jar"
         ]
 
     os.environ['PATH'] = "%%LOCALBASE%%/bin:/usr/bin:/bin"
