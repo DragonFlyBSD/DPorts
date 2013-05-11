@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/twiki/files/pkg-install.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/twiki/files/pkg-install.in 317069 2013-05-02 01:42:34Z bdrewery $
 #
 
 TWDIR=%%TWDIR%%
@@ -26,8 +26,8 @@ case $2 in
 		chown -R ${WWWOWN}:${WWWGRP} ${WWWDIR}/
 		chmod -R u+w ${WWWDIR}/
 		cd ${WWWDIR}/
-		chmod o-rwx data lib locale templates test tools working
-		chmod a+x bin/* tools/*
+		chmod o-rwx data lib test tools
+		chmod a+x tools/*
 
 		# let the user know what's going on
 		cat << __EOF__

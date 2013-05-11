@@ -1,12 +1,12 @@
 # Created by: Justin Hawkins <justin@hawkins.id.au>
-# $FreeBSD: www/twiki/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: www/twiki/Makefile 317803 2013-05-10 14:03:43Z koobs $
 
 PORTNAME=	twiki
-PORTVERSION=	4.2.4
-PORTREVISION=	1
+PORTVERSION=	5.1.4
 PORTEPOCH=	1
 CATEGORIES=	www
-MASTER_SITES=	http://twiki.org/p/pub/Codev/Release/
+MASTER_SITES=	SF/${PORTNAME}/TWiki%20for%20all%20Platforms/${DISTNAME} \
+		http://twiki.org/p/pub/Codev/Release/
 DISTNAME=	TWiki-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
@@ -28,9 +28,9 @@ RUN_DEPENDS=	\
 		twiki-TWikiUserMappingContrib>=0:${PORTSDIR}/www/twiki-TWikiUserMappingContrib
 
 USE_PERL5=	yes
+WRKSRC=	${WRKDIR}/twiki
 
 post-extract:
-	@cd ${WRKDIR}/ && ${INSTALL} -d .t/ && ${MV} * .t/ && ${MV} .t ${WRKSRC}
 	@${RM} -rf ${WRKSRC}/lib/CPAN
 	@${CAT} ${.CURDIR}/../twiki-*/pkg-plist |\
 		${SED} -e 's|%%TWDIR%%|${WRKSRC}|;/^@/d' |\
