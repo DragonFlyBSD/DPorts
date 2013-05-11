@@ -2,7 +2,7 @@
 # Date created:				12 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gconf-editor/Makefile,v 1.58 2012/11/17 06:01:32 svnexp Exp $
+# $FreeBSD: sysutils/gconf-editor/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/sysutils/gconf-editor/Makefile,v 1.85 2010/09/27 18:22:59 kwm Exp $
 #
 
@@ -18,7 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A gconf database editor for the GNOME 2 environment
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
