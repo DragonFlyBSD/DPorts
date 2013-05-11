@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/www/deforaos-surfer/Makefile,v 1.2 2013/02/10 18:53:43 svnexp Exp $
+# $FreeBSD: www/deforaos-surfer/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	surfer
 PORTVERSION=	0.2.6
@@ -23,8 +23,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_ro
 
 MAKE_ARGS=	PREFIX=${PREFIX}
 USE_GNOME=	gtk20 desktopfileutils
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
+USES=		pkgconfig gettext
 INSTALLS_ICONS=	yes
 
 MAKE_ENV+=	MANDIR=${MANPREFIX}/man
