@@ -2,7 +2,7 @@
 # Date created:				16 September 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gtranslator/Makefile,v 1.66 2012/11/17 05:55:46 svnexp Exp $
+# $FreeBSD: devel/gtranslator/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/devel/gtranslator/Makefile,v 1.12 2007/07/04 15:52:37 mezz Exp $
 #
 
@@ -20,7 +20,7 @@ LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gnomevfs2 libgnomeui
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
