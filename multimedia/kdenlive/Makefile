@@ -1,8 +1,5 @@
-# New ports collection makefile for:	kdenlive
-# Date created:				15 October 2008
-# Whom:					Alberto Villa <villa.alberto@gmail.com>
-#
-# $FreeBSD: multimedia/kdenlive/Makefile 314960 2013-03-22 20:06:14Z makc $
+# Created by: Alberto Villa <villa.alberto@gmail.com>
+# $FreeBSD: multimedia/kdenlive/Makefile 316600 2013-04-26 12:35:50Z bapt $
 
 PORTNAME=	kdenlive
 PORTVERSION=	0.9.2
@@ -41,8 +38,8 @@ OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDVDWIZARD}
-RUN_DEPENDS+=	dvdauthor:${PORTSDIR}/multimedia/dvdauthor
-USE_CDRTOOLS=	yes
+RUN_DEPENDS+=	dvdauthor:${PORTSDIR}/multimedia/dvdauthor \
+		cdrecord:${PORTSDIR}/sysutils/cdrtools
 .endif
 
 .if ${PORT_OPTIONS:MFREI0R}
@@ -54,7 +51,7 @@ RUN_DEPENDS+=	swhplugins>=0:${PORTSDIR}/audio/swhplugins
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CMAKE_ARGS+=	-DBUILD_po:BOOL=FALSE
