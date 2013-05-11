@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@freebsd.org>
-# $FreeBSD: ports/x11/libfm/Makefile,v 1.13 2013/01/08 16:58:02 svnexp Exp $
+# $FreeBSD: x11/libfm/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	libfm
 PORTVERSION=	1.1.0
@@ -19,7 +19,7 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_FAM=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--sysconfdir=${LOCALBASE}/etc
@@ -31,7 +31,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
