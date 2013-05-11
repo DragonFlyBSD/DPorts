@@ -2,7 +2,7 @@
 # Date Created:				2009-07-08
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: deskutils/plasma-applet-daisy/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: deskutils/plasma-applet-daisy/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	daisy
@@ -17,10 +17,9 @@ COMMENT=	Simple launcher plasma applet for KDE4
 
 LICENSE=	GPLv3
 
-USES=		cmake
+USES=		cmake gettext
 USE_KDE4=	automoc4 kdeprefix kdelibs workspace
 USE_QT4=	qmake_build moc_build rcc_build uic_build
-USE_GETTEXT=	yes
 MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
