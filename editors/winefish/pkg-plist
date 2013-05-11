@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/editors/winefish/pkg-plist,v 1.8 2012/11/17 05:57:19 svnexp Exp $
+@comment $FreeBSD: editors/winefish/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/winefish
 share/application-registry/winefish.applications
 share/applications/winefish.desktop
