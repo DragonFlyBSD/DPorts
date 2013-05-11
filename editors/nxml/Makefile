@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nxml for emacs
-# Date created:		26 Oct 2003
-# Whom:			Fritz Heinrichmeyer
-#
-# $FreeBSD: editors/nxml/Makefile 315598 2013-03-30 05:13:30Z ashish $
-#
+# Created by: Fritz Heinrichmeyer
+# $FreeBSD: editors/nxml/Makefile 317072 2013-05-02 05:43:40Z hrs $
 
 PORTNAME=	nxml-mode
 PORTVERSION=	${NXML_VER}
@@ -29,6 +25,10 @@ NXML_INSTDIRS=	. char-name char-name/unicode schema
 NXML_INCLEXP=	\.el$$\|\.elc$$\|\.rnc$$\|\.xml$$
 NXML_EXCLEXP=	nxml-mode.xml\|nxml-mode.rnc\|test.invalid.xml\|test.valid.xml
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 do-install:
 	@${MKDIR} ${NXML_INSTDIRS:S,^,${NXML_LISPDIR}/,}
 .for D in ${NXML_INSTDIRS}
@@ -40,7 +40,7 @@ do-install:
 
 post-install:
 	@${INSTALL_DATA} ${INSTALL_WRKSRC}/nxml-mode.info ${PREFIX}/info
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@cd ${INSTALL_WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
 .endif
@@ -49,7 +49,7 @@ post-install:
 .include <bsd.port.pre.mk>
 
 .if ${EMACS_PORT_NAME} == "emacs23" || ${EMACS_PORT_NAME} == "emacs24"
-IGNORE=     incorporated into ${EMACS_PORT_NAME}
+IGNORE=	incorporated into ${EMACS_PORT_NAME}
 .endif
 
 .include <bsd.port.post.mk>
