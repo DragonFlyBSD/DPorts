@@ -1,12 +1,8 @@
-# New ports collection makefile for:	gstreamer-plugins-libvisual
-# Date created:			4 Dec 2004
-# Whom:				Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/gstreamer-plugins-libvisual/Makefile,v 1.13 2012/11/17 05:58:09 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: graphics/gstreamer-plugins-libvisual/Makefile 316693 2013-04-27 20:56:38Z kwm $
 #   $MCom: ports/graphics/gstreamer-plugins-libvisual/Makefile,v 1.6 2008/03/21 04:01:32 ahze Exp $
-#
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 COMMENT=	Gstreamer libvisual plugin
