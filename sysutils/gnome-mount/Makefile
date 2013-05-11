@@ -1,14 +1,10 @@
-# New ports collection makefile for:	gnome-mount
-# Date created:			04 June 2006
-# Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/gnome-mount/Makefile,v 1.23 2012/11/17 06:01:33 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: sysutils/gnome-mount/Makefile 317222 2013-05-03 16:56:48Z ehaupt $
 #   $MCom: ports/sysutils/gnome-mount/Makefile,v 1.28 2011/03/08 19:25:20 kwm Exp $
-#
 
 PORTNAME=	gnome-mount
 PORTVERSION=	0.8
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -22,7 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/polkit-gnome.pc:${PORTSDIR}/sysutils
 
 USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gtk20
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-nautilus-extension
 CPPFLAGS+=	-I${LOCALBASE}/include
