@@ -2,7 +2,7 @@
 # Date created:				20 September 2003
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/gnome-blog/Makefile,v 1.21 2012/11/17 05:55:27 svnexp Exp $
+# $FreeBSD: deskutils/gnome-blog/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/deskutils/gnome-blog/Makefile,v 1.5 2007/08/08 21:52:36 mezz Exp $
 #
 
@@ -18,7 +18,7 @@ COMMENT=	GNOME app to post to blogs
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix pygnome2 intlhack
