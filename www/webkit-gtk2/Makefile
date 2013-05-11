@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/webkit-gtk2/Makefile 314913 2013-03-22 11:50:07Z kwm $
+# $FreeBSD: www/webkit-gtk2/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/www/webkit-gtk2/Makefile,v 1.92 2013/03/09 09:12:39 kwm Exp $
 
 PORTNAME=	webkit
@@ -22,15 +22,13 @@ LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
 		soup-2.4:${PORTSDIR}/devel/libsoup
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
 USE_GSTREAMER=	yes
 MAKE_JOBS_SAFE=	yes
 USE_XORG=	xt
-USES=		bison
+USES=		bison pkgconfig gettext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk20 libxslt ltverhack
-USE_PKGCONFIG=	build
 USE_SQLITE=	yes
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
