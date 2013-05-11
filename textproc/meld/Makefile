@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: textproc/meld/Makefile 316115 2013-04-19 18:24:13Z pawel $
+# $FreeBSD: textproc/meld/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	meld
 PORTVERSION=	1.7.2
@@ -25,7 +25,7 @@ PYGNOMEDESKTOP_DESC=	Code syntax highlighting (many dependencies)
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
