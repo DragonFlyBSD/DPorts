@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net-im/pidgin-privacy-please/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: net-im/pidgin-privacy-please/Makefile 316340 2013-04-23 10:26:09Z ehaupt $
 
 PORTNAME=	pidgin-privacy-please
 PORTVERSION=	0.7.1
@@ -17,8 +17,8 @@ BUILD_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
 GNU_CONFIGURE=	yes
+USES=		gettext
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_GNOME=	gtk20
 USE_LDCONFIG=	${PREFIX}/lib/pidgin
 
