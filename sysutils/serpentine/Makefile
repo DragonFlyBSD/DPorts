@@ -1,8 +1,5 @@
-# New ports collection makefile for:	serpentine
-# Date created:		2005-06-25
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/serpentine/Makefile,v 1.30 2012/11/17 06:01:45 svnexp Exp $
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: sysutils/serpentine/Makefile 316355 2013-04-23 14:20:25Z bapt $
 #    $MCom: ports/sysutils/serpentine/Makefile,v 1.4 2006/08/31 05:21:45 marcus Exp $
 
 PORTNAME=	serpentine
@@ -17,11 +14,11 @@ COMMENT=	Gnome Audio Cd Burner
 BUILD_DEPENDS=	xmlproc_parse:${PORTSDIR}/textproc/py-xml
 RUN_DEPENDS=	xmlproc_parse:${PORTSDIR}/textproc/py-xml
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	pygnomedesktop intlhack
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 USE_GSTREAMER=	core gnomevfs python
 USE_PYTHON=	2.4+
 
