@@ -2,7 +2,7 @@
 # Date created:				29 April 2006
 # Whom:					Martin Wilke (freebsd@unixfreunde.de)
 #
-# $FreeBSD: ports/net-im/xfce4-messenger-plugin/Makefile,v 1.25 2012/11/17 06:00:30 svnexp Exp $
+# $FreeBSD: net-im/xfce4-messenger-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfce4-messenger-plugin
@@ -19,7 +19,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 intltool intlhack pkgconfig
 USE_XFCE=	configenv libgui libutil panel
