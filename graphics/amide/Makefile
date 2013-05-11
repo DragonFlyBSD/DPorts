@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/amide/Makefile,v 1.17 2012/11/21 19:08:11 svnexp Exp $
+# $FreeBSD: graphics/amide/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	amide
 PORTVERSION=	1.0.4
@@ -17,7 +17,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_CSTD=	gnu89
 MAKE_JOBS_UNSAFE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gtk20 libgnomecanvas libgnomeui libxml2
 INSTALLS_OMF=	yes
 
