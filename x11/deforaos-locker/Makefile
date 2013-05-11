@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/x11/deforaos-locker/Makefile,v 1.2 2013/02/10 17:05:49 svnexp Exp $
+# $FreeBSD: x11/deforaos-locker/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	locker
 PORTVERSION=	0.2.1
@@ -21,8 +21,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/Panel.pc:${PORTSDIR}/x11/deforaos-
 		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
 
 USE_GNOME=	gtk20 desktopfileutils
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
+USES=		pkgconfig gettext
 MAKE_ARGS+=	PREFIX=${PREFIX}
 MAKE_ENV+=	MANDIR=${MANPREFIX}/man
 
