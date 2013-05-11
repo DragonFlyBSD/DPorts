@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/compiz/Makefile 313527 2013-03-06 16:52:02Z bapt $
+# $FreeBSD: x11-wm/compiz/Makefile 317466 2013-05-06 06:27:42Z jgh $
 
 PORTNAME=	compiz
 PORTVERSION=	0.8.4
@@ -20,9 +20,9 @@ GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 #USE_TGZ=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix
 USE_GL=		glu
-USE_GNOME=	gnomehack gconf2 libxslt
+USE_GNOME=	gconf2 libxslt
 USE_XORG=	xcomposite xfixes xdamage xrandr xrender ice sm xinerama glproto
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
