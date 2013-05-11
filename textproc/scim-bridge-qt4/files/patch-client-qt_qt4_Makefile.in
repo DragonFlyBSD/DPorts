@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/scim-bridge-qt4/files/patch-client-qt_qt4_Makefile.in,v 1.2 2012/11/17 06:02:21 svnexp Exp $
+$FreeBSD: textproc/scim-bridge-qt4/files/patch-client-qt_qt4_Makefile.in 300897 2012-07-14 14:29:18Z beat $
 
 --- client-qt/qt4/Makefile.in.orig
 +++ client-qt/qt4/Makefile.in

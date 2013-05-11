@@ -2,7 +2,7 @@
 # Date created:		2008-08-17
 # Whom:			Henry Hu <henry.hu.sh@gmail.com>
 #
-# $FreeBSD: ports/textproc/scim-bridge-qt4/Makefile,v 1.11 2012/11/17 06:02:21 svnexp Exp $
+# $FreeBSD: textproc/scim-bridge-qt4/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	scim-bridge
@@ -20,7 +20,7 @@ RUN_DEPENDS=	scim-bridge:${PORTSDIR}/textproc/scim-bridge
 USE_QT4=	corelib gui moc_build
 QT_NONSTANDARD=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 
 LICENSE=	GPLv2 LGPL21
