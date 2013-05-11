@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/mail/deforaos-mailer/Makefile,v 1.2 2013/02/10 20:18:19 svnexp Exp $
+# $FreeBSD: mail/deforaos-mailer/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	mailer
 PORTVERSION=	0.1.6
@@ -20,8 +20,7 @@ LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem \
 		Desktop:${PORTSDIR}/x11/deforaos-libdesktop
 
 USE_GNOME=	gtk20 desktopfileutils
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
+USES=		pkgconfig gettext
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
