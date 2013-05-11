@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/graphics/ecore-evas/Makefile,v 1.17 2013/01/15 17:46:00 svnexp Exp $
+# $FreeBSD: graphics/ecore-evas/Makefile 317205 2013-05-03 13:33:48Z bapt $
 
 PORTNAME=	evas
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -17,9 +17,11 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+.if defined(.PARSEDIR)
+USE_GMAKE=	yes
+.endif
 USE_EFL=	evas ecore libtool_hack
 USE_EFL_ECORE=	input input_evas
-USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/lib/ecore_evas
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
@@ -57,12 +59,12 @@ CONFIGURE_ARGS+=	--disable-ecore-evas-opengl-x11
 .endif
 
 .if ${PORT_OPTIONS:MSDL}
-CONFIGURE_ARGS+=	--enable-ecore-evas-software-sdl --enable-ecore-sdl
+CONFIGURE_ARGS+=	--enable-ecore-sdl
 USE_EFL_EVAS_ENGINES+=	sdl
 USE_EFL_ECORE+=	sdl
 LDFLAGS+=		-lecore_sdl
 .else
-CONFIGURE_ARGS+=	--disable-ecore-evas-software-sdl --disable-ecore-sdl
+CONFIGURE_ARGS+=	--disable-ecore-sdl
 .endif
 
 .if ${PORT_OPTIONS:MX11}
