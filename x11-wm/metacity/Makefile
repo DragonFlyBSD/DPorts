@@ -2,7 +2,7 @@
 # Date created:        21 May 2002
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
-# $FreeBSD: ports/x11-wm/metacity/Makefile,v 1.80 2012/11/17 06:03:43 svnexp Exp $
+# $FreeBSD: x11-wm/metacity/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-wm/metacity/Makefile,v 1.158 2010/09/30 07:04:02 kwm Exp $
 #
 
@@ -23,7 +23,7 @@ RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
 USE_BZIP2=	yes
 USE_XORG=	x11 xcomposite xdamage
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix intlhack gnomehack gconf2 ltverhack gtk20
