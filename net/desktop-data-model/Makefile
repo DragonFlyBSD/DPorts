@@ -2,7 +2,7 @@
 # Date created:		2008-05-28
 # Whom:			Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: ports/net/desktop-data-model/Makefile,v 1.14 2012/12/10 19:24:03 svnexp Exp $
+# $FreeBSD: net/desktop-data-model/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	desktop-data-model
@@ -27,7 +27,7 @@ LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre \
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomehack gtk20 glib20 gnomedesktop gnomevfs2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-maemo=no
