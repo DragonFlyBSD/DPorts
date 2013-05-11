@@ -2,7 +2,7 @@
 # Date created:				Nov 16 2007
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: mail/gnome-gmail-notifier/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: mail/gnome-gmail-notifier/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gnome-gmail-notifier
@@ -21,7 +21,7 @@ LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify \
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	glib20 gtk20 gconf2 libxml2 librsvg2
 USE_GSTREAMER=	good
 
