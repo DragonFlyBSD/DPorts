@@ -2,7 +2,7 @@
 # Date created:			2008 01 10
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/mousetweaks/Makefile,v 1.22 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: accessibility/mousetweaks/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.53 2010/11/15 21:25:36 kwm Exp $
 #
 
@@ -20,7 +20,7 @@ USE_XORG=	x11 xfixes xcursor xtst
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix gnomepanel intlhack
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
