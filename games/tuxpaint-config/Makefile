@@ -2,7 +2,7 @@
 # Date created:				28 Nov 2005
 # Whom:					Alejandro Pulver <alejandro@varnet.biz>
 #
-# $FreeBSD: ports/games/tuxpaint-config/Makefile,v 1.20 2012/11/17 05:57:55 svnexp Exp $
+# $FreeBSD: games/tuxpaint-config/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	tuxpaint-config
@@ -18,7 +18,7 @@ LIB_DEPENDS=	paper.2:${PORTSDIR}/print/libpaper \
 		fltk.1:${PORTSDIR}/x11-toolkits/fltk
 RUN_DEPENDS=	tuxpaint:${PORTSDIR}/games/tuxpaint
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 MAKE_ARGS=	PREFIX="${PREFIX}" \
 		MAN_PREFIX="${MANPREFIX}/man" \
