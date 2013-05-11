@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: ports/x11/xfce4-verve-plugin/Makefile,v 1.27 2012/12/31 01:05:49 svnexp Exp $
+# $FreeBSD: x11/xfce4-verve-plugin/Makefile 317031 2013-05-01 16:13:45Z jgh $
 
 PORTNAME=	verve-plugin
 PORTVERSION=	1.0.0
@@ -12,7 +12,7 @@ PKGNAMEPREFIX=	xfce4-
 DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	xfce@FreeBSD.org
-COMMENT=	A command line plugin for Xfce4
+COMMENT=	Command line plugin for Xfce4
 
 LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
@@ -20,18 +20,18 @@ USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack glib20 intltool intlhack
+USE_GNOME=	glib20 intltool intlhack
 USE_XFCE=	configenv panel libexo libgui libutil
-USE_PKGCONFIG=	build
+USES=		pkgconfig pathfix
 
 CONFIGURE_ARGS=	--disable-debug
 
 OPTIONS_DEFINE=	NLS DBUS
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
@@ -48,4 +48,4 @@ CONFIGURE_ARGS+=--disable-dbus
 PLIST_SUB+=	DBUS="@comment "
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
