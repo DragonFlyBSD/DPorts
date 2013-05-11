@@ -2,13 +2,13 @@
 # Date created:				27 April 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: x11/gnome-panel/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: x11/gnome-panel/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/x11/gnome-panel/Makefile,v 1.237 2012/10/25 09:21:00 kwm Exp $
 #
 
 PORTNAME=	gnome-panel
 PORTVERSION=	2.32.1
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -24,15 +24,14 @@ LIB_DEPENDS=	gweather:${PORTSDIR}/net/libgweather \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		canberra-gtk:${PORTSDIR}/audio/libcanberra
 
-CONFLICTS=	gnome-panel-3.[0-9]* mate-panel-*
+CONFLICTS=	gnome-panel-3.[0-9]*
 
-USE_GETTEXT=	yes
 USE_XORG=	ice sm x11 xau xrandr
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack gnomedesktop libwnck gnomemenus \
 		gnomedocutils ltverhack referencehack librsvg2
 USE_GMAKE=	yes
