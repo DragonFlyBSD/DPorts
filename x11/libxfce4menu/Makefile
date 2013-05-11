@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libxfce4menu
-# Date created:		7 Oktober 2008
-# Whom:			Oliver Lehmann <oliver@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/libxfce4menu/Makefile,v 1.20 2012/11/17 06:03:18 svnexp Exp $
-#
+# Created by: Oliver Lehmann <oliver@FreeBSD.org>
+# $FreeBSD: x11/libxfce4menu/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	libxfce4menu
 PORTVERSION=	4.10.0
@@ -23,7 +19,7 @@ USE_GNOME=	glib20 gnomehack gtk20 intltool intlhack desktopfileutils
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv libutil xfconf
 INSTALLS_ICONS=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 CONFIGURE_ARGS=	--disable-gtk-doc-html \
 		--with-vendor-info=FreeBSD
@@ -42,7 +38,7 @@ PLIST_SUB+=	APIDOCS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
