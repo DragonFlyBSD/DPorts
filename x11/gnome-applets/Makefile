@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-applets/Makefile 315697 2013-04-03 07:40:59Z kwm $
+# $FreeBSD: x11/gnome-applets/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/x11/gnome-applets/Makefile,v 1.219 2011/04/10 19:41:38 mezz Exp $
 
 PORTNAME=	gnome-applets
@@ -22,13 +22,12 @@ LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/system-tools-backends \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 
-USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack gnomepanel gnomedocutils libgnomekbd
 WANT_GNOME=	yes
 USE_GSTREAMER=	yes
