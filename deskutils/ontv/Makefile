@@ -2,7 +2,7 @@
 # Date created:		2006-07-24
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/ontv/Makefile,v 1.20 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/ontv/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/deskutils/ontv/Makefile,v 1.7 2007/07/23 21:02:59 mezz Exp $
 #
 
@@ -24,7 +24,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		tv_check:${PORTSDIR}/textproc/p5-xmltv
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomehack gnomeprefix pygnomedesktop pygnomeextras pygtk2
 USE_GMAKE=	yes
 USE_PYTHON=	2.5-2.7
