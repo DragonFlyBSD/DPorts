@@ -2,7 +2,7 @@
 # Date created:				05 July 2002
 # Whom:					Andy Raffle <andy@digitalspecies.com>
 #
-# $FreeBSD: ports/graphics/kbarcode/Makefile,v 1.42 2012/12/30 18:56:02 svnexp Exp $
+# $FreeBSD: graphics/kbarcode/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	kbarcode
@@ -20,7 +20,7 @@ DEPRECATED=	Depends on QT3; unmaintained
 EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=	3
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	automake:env autoconf:env libtool:env
 GNU_CONFIGURE=	yes
