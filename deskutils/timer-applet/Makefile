@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/timer-applet/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: deskutils/timer-applet/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	timer-applet
 PORTVERSION=	2.1.4
@@ -17,10 +17,9 @@ RUN_DEPENDS=	gnome-audio>0:${PORTSDIR}/audio/gnome-audio \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gnomeprefix intlhack pygnomedesktop
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/libexec
