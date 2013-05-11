@@ -1,5 +1,5 @@
 # Created by: Thomas Hurst <tom@hur.st>
-# $FreeBSD: ports/x11/terminator/Makefile,v 1.21 2013/01/04 22:43:00 svnexp Exp $
+# $FreeBSD: x11/terminator/Makefile 317031 2013-05-01 16:13:45Z jgh $
 
 PORTNAME=	terminator
 PORTVERSION=	0.96
@@ -29,16 +29,19 @@ INSTALLS_ICONS=	yes
 
 WANT_GNOME=	yes
 
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
+PLIST_SUB+=	NLS="@comment "
+PYSETUP+=	--without-gettext
+.endif
+
 .include <bsd.port.pre.mk>
 
 PYSETUP+=	--without-icon-cache
-.if empty(PORT_OPTIONS:MNLS)
-PLIST_SUB+=	NLS="@comment "
-PYSETUP+=	--without-gettext
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
-.endif
 
 .if ${PORT_OPTIONS:MGCONF}
 USE_GNOME+=	pygnome2
