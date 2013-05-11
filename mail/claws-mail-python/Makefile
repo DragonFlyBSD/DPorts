@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/mail/claws-mail-python/Makefile,v 1.21 2012/12/10 17:32:44 svnexp Exp $
+# $FreeBSD: mail/claws-mail-python/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	python
 PORTVERSION=	0.11
@@ -28,7 +28,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
