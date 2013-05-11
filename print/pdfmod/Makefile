@@ -2,7 +2,7 @@
 # Date created:		2009-07-28
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD: ports/print/pdfmod/Makefile,v 1.5 2012/11/17 06:00:53 svnexp Exp $
+# $FreeBSD: print/pdfmod/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	pdfmod
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomesharp20
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 
 .include <bsd.port.mk>

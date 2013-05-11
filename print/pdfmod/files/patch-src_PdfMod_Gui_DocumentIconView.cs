@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/print/pdfmod/files/patch-src_PdfMod_Gui_DocumentIconView.cs,v 1.2 2012/11/17 06:00:53 svnexp Exp $
+$FreeBSD: print/pdfmod/files/patch-src_PdfMod_Gui_DocumentIconView.cs 300897 2012-07-14 14:29:18Z beat $
 
 --- src/PdfMod/Gui/DocumentIconView.cs.orig
 +++ src/PdfMod/Gui/DocumentIconView.cs
