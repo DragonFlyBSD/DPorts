@@ -1,5 +1,5 @@
 # Created by: fjoe@FreeBSD.ORG
-# $FreeBSD: x11-toolkits/wxgtk29/Makefile 314894 2013-03-22 08:16:07Z bapt $
+# $FreeBSD: x11-toolkits/wxgtk29/Makefile 316695 2013-04-27 22:09:15Z bapt $
 
 PORTNAME=	wx
 PORTVERSION=	2.9.4
@@ -19,13 +19,13 @@ LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png\
 		inotify.0:${PORTSDIR}/devel/libinotify\
 		webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2
 
+USES+=		iconv
 USE_BZIP2=	yes
 USE_GCC=	any
 USE_XORG=	x11 sm xxf86vm xinerama
 USE_GL=		glu
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
-USE_ICONV=	yes
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
