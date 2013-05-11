@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/gnote/Makefile,v 1.18 2013/01/31 14:01:26 svnexp Exp $
+# $FreeBSD: deskutils/gnote/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/deskutils/gnote/Makefile,v 1.14 2010/11/15 16:21:49 kwm Exp $
 
 PORTNAME=	gnote
@@ -23,7 +23,7 @@ USE_GMAKE=	yes
 USE_XZ=		yes
 USE_GNOME=	gnomehack gnomeprefix gconf2 gtk20 intltool libxml2 libxslt \
 		ltverhack gnomepanel
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 GCONF_SCHEMAS=	gnote.schemas
 USE_AUTOTOOLS=	libtool
