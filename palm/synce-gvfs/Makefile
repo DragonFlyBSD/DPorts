@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: palm/synce-gvfs/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: palm/synce-gvfs/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	synce-gvfs
 PORTVERSION=	0.3.1
@@ -17,8 +17,7 @@ MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gnomeprefix gvfs
 INSTALLS_ICONS=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
