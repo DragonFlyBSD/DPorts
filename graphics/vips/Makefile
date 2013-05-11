@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
-# $FreeBSD: graphics/vips/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: graphics/vips/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	vips
 PORTVERSION=	7.26.3
@@ -27,7 +27,7 @@ LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3 \
 
 PYPRESENT!=	which python > /dev/null && echo on || echo off
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PERL5_BUILD=yes
 USE_GNOME=	gnomehack glib20 pkgconfig pango libxml2
 USE_AUTOTOOLS=	libtool
@@ -41,7 +41,7 @@ post-configure:
 
 # Don't extract doc/ subdirectory - the simplest way:
 .ifdef NOPORTDOCS
-EXTRACT_AFTER_ARGS=	| ${TAR} -xpf - --exclude doc
+EXTRACT_AFTER_ARGS=	--exclude doc
 EXTRA_PATCHES=	${FILESDIR}/nodoc-patch
 .endif
 PLIST_SUB+=	VERSION=${PORTVERSION:R}
