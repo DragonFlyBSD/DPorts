@@ -1,5 +1,5 @@
 # Created by: John Prather
-# $FreeBSD: net-im/pidgin-sipe/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: net-im/pidgin-sipe/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	pidgin-sipe
 PORTVERSION=	1.13.1
@@ -54,7 +54,7 @@ post-install:
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
