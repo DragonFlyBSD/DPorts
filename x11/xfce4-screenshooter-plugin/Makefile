@@ -1,6 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: ports/x11/xfce4-screenshooter-plugin/Makefile,v 1.38 2013/01/19 21:43:25 svnexp Exp $
-#
+# $FreeBSD: x11/xfce4-screenshooter-plugin/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	xfce4-screenshooter-plugin
 PORTVERSION=	1.8.1
@@ -22,14 +21,14 @@ USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_XFCE=	configenv libexo libmenu libutil panel
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 MAN1=		xfce4-screenshooter.1
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
