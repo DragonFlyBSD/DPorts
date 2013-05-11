@@ -2,7 +2,7 @@
 # Date created:        10 Februar 2008
 # Whom:                tomsan
 #
-# $FreeBSD: ports/sysutils/kleansweep/Makefile,v 1.11 2012/11/17 06:01:36 svnexp Exp $
+# $FreeBSD: sysutils/kleansweep/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	kleansweep
@@ -17,7 +17,7 @@ COMMENT=	KleanSweep allows you to reclaim disk space by finding unneeded files
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_KDELIBS_VER=3
 
 post-extract:
