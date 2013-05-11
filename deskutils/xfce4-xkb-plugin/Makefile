@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/xfce4-xkb-plugin/Makefile,v 1.41 2012/11/17 05:55:31 svnexp Exp $
+# $FreeBSD: deskutils/xfce4-xkb-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	xfce4-xkb-plugin
 PORTVERSION=	0.5.4.3
@@ -14,7 +14,7 @@ LIB_DEPENDS=	xklavier.12:${PORTSDIR}/x11/libxklavier
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 intltool intlhack pkgconfig librsvg2
 USE_XFCE=	configenv panel
