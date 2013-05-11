@@ -2,7 +2,7 @@
 # Date created:				11 April 2009
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/net-im/pidgin-birthday-reminder/Makefile,v 1.24 2013/02/20 16:45:25 svnexp Exp $
+# $FreeBSD: net-im/pidgin-birthday-reminder/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	pidgin-birthday-reminder
@@ -22,7 +22,7 @@ MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	pkgconfig intltool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
