@@ -2,7 +2,7 @@
 # Date created:				11 October 2006
 # Whom:					Yu-Xi Lim <yuxi@gmx.net>
 #
-# $FreeBSD: ports/deskutils/katapult/Makefile,v 1.14 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: deskutils/katapult/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	katapult
@@ -19,7 +19,7 @@ USE_GMAKE=	yes
 USE_KDELIBS_VER=3
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	${PREFIX}/lib/ ${PREFIX}/lib/kde3/
-USE_GETTEXT=	yes
+USES=		gettext
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 .include <bsd.port.mk>
