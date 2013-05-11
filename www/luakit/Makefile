@@ -1,5 +1,5 @@
 # Created by: gugabsd <gugabsd@mundounix.com.br>
-# $FreeBSD: ports/www/luakit/Makefile,v 1.5 2013/02/18 23:45:33 svnexp Exp $
+# $FreeBSD: www/luakit/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	luakit
 PORTVERSION=	2012.09.13r1
@@ -24,7 +24,7 @@ GH_TAGNAME=	${PORTVERSION:C/r/-r/}
 GH_COMMIT=	0d5f4ab
 
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GNOME=	glib20 gtk20
 USE_LUA=	5.1
 MAKE_ARGS+=	USE_UNIQUE=1 NO_JAVASCRIPTCORE=1
