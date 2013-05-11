@@ -2,7 +2,7 @@
 # Date created:				06 August 2008
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: deskutils/hamster-applet/Makefile 313345 2013-03-03 12:57:23Z kwm $
+# $FreeBSD: deskutils/hamster-applet/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/deskutils/hamster-applet/Makefile,v 1.42 2010/06/06 11:27:47 kwm Exp $
 #
 
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_XORG=	xscrnsaver
