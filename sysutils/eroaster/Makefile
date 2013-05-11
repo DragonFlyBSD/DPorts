@@ -1,9 +1,5 @@
-# New ports collection makefile for:	eroaster
-# Date Created:		20 Dic 2003
-# Whom:			Davide D'Amico <dave@gufi.org>
-#
-# $FreeBSD: ports/sysutils/eroaster/Makefile,v 1.17 2012/11/17 06:01:29 svnexp Exp $
-#
+# Created by: Davide D'Amico <dave@gufi.org>
+# $FreeBSD: sysutils/eroaster/Makefile 317388 2013-05-04 22:32:54Z bapt $
 
 PORTNAME=	eroaster
 PORTVERSION=	2.2.0.0.6
@@ -15,7 +11,9 @@ DISTNAME=	${PORTNAME}-2.2.0-0.6
 MAINTAINER=	dave@gufi.org
 COMMENT=	A GNOME2 frontend to mkisofs/cdrecord
 
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/_gnome.so:${PORTSDIR}/x11-toolkits/py-gnome2
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/_gnome.so:${PORTSDIR}/x11-toolkits/py-gnome2 \
+		cdrecord:${PORTSDIR}/sysutils/cdrtools
+RUN_DEPENDS=	cdrecord:${PORTSDIR}/sysutils/cdrtools
 
 .if defined(WITH_ADDITIONAL_PROGRAMS)
 BUILD_DEPENDS+=	bchunk:${PORTSDIR}/sysutils/bchunk \
@@ -30,7 +28,6 @@ BUILD_DEPENDS+=	bchunk:${PORTSDIR}/sysutils/bchunk \
 
 GNU_CONFIGURE=	yes
 USE_PYTHON=	yes
-USE_CDRTOOLS=	yes
 
 pre-everything::
 	@${ECHO_MSG} "===>  You can enable more features by defining WITH_ADDITIONAL_PROGRAMS"
