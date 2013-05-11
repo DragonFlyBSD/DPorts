@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/java/classpath/Makefile,v 1.52 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/classpath/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	classpath
 PORTVERSION=	0.99
@@ -17,11 +17,10 @@ COMMENT=	A GNU project to create a free Java class library
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
+USES=		pkgconfig iconv
 USE_GMAKE=	yes
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
 USE_PERL5_BUILD=yes
-USE_PKGCONFIG=	build
 USE_XORG=	x11 ice xtst xaw xproto xext
 WANT_GNOME=	yes
 
@@ -51,29 +50,24 @@ INFO=		cp-hacking cp-tools cp-vmintegration
 
 CONFLICTS=	sablevm-classpath-1.13 sablevm-classpath-1.13_[1-9]
 
-OPTIONS_DEFINE=	CAIRO ECJ GCONF GJDOC GMP GTK2 JDK QT4
-OPTIONS_DEFAULT=GMP GJDOC GTK2 JDK
+OPTIONS_DEFINE=	CAIRO ECJ GCONF GJDOC GMP GTK2 QT4
+OPTIONS_DEFAULT=GMP GJDOC GTK2
 CAIRO_DESC=	Use Gtk+ Cairo based Graphics2D
 ECJ_DESC=	Embed ECJ as com.sun.tools.javac
 GJDOC_DESC=	Build javadoc replacement
 GMP_DESC=	Enable native java.math.BigInteger
 GTK2_DESC=	Enable Gtk+ AWT peer
-JDK_DESC=	Build with native JDK
 QT4_DESC=	Enable Qt AWT peer
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MECJ} || \
-    (!defined(WITH_GCJ) && empty(PORT_OPTIONS:MJDK))
+.if ${PORT_OPTIONS:MECJ}
 MASTER_SITES+=		${MASTER_SITE_ECLIPSE:S|$|:ecj|}
 MASTER_SITE_SUBDIR+=	R-${ECJ_VERSION}-${ECJ_DROPDATE}/:ecj
 DISTFILES+=		${ECJ_JAR}:ecj
 ECJ_VERSION=		3.8.1
 ECJ_DROPDATE=		201209141540
 ECJ_JAR=		ecj-${ECJ_VERSION}.jar
-.endif
-
-.if ${PORT_OPTIONS:MECJ}
 CONFIGURE_ARGS+=	--with-ecj-jar=${DISTDIR}/${ECJ_JAR}
 .endif
 
@@ -128,26 +122,6 @@ IGNORE=you need to enable the Gtk+ AWT peer in order to use Cairo based Graphics
 .endif
 .endif
 
-.if ${PORT_OPTIONS:MJDK}
-USE_JAVA=		yes
-JAVA_BUILD=		jdk
-JAVA_VERSION=		1.6+
-.else
-.if defined(WITH_GCC)
-GCC_SUFX=		${WITH_GCC:S/.//}
-.endif
-GCC_SUFX?=		46
-BUILD_DEPENDS+=		gcj${GCC_SUFX}:${PORTSDIR}/lang/gcc${GCC_SUFX}
-JAR=			${LOCALBASE}/bin/gjar${GCC_SUFX}
-JAVA=			${LOCALBASE}/bin/gij${GCC_SUFX}
-.if defined(WITH_GCJ)
-JAVAC=			${LOCALBASE}/bin/gcj${GCC_SUFX}
-JAVACFLAGS?=		-C
-.else
-JAVAC=			${WRKDIR}/ecj.sh
-.endif
-.endif
-
 .if ${PORT_OPTIONS:MQT4}
 CONFIGURE_ARGS+=	--enable-qt-peer
 .if empty(PORT_OPTIONS:MGTK2)
@@ -160,20 +134,21 @@ PLIST_SUB+=		QT4=""
 PLIST_SUB+=		QT4="@comment "
 .endif
 
+.if !defined(WITH_GCJ) && (${ARCH} == "x86_64" || ${ARCH} == "i386")
+USE_JAVA=		yes
+JAVA_VERSION=		1.6+
+.else
+USE_BINUTILS=		yes
+USE_GCC=		4.6+
+GCC_SUFX=		${_USE_GCC:S/.//}
+JAR?=			${LOCALBASE}/bin/gjar${GCC_SUFX}
+JAVA?=			${LOCALBASE}/bin/gij${GCC_SUFX}
+JAVAC?=			${LOCALBASE}/bin/gcj${GCC_SUFX}
+JAVACFLAGS?=		-C
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -i.bak -e 's|@JAVA@|$${JAVACMD:-java}|g' \
 	    ${WRKSRC}/tools/g*.in
-
-.if !defined(WITH_GCJ) && empty(PORT_OPTIONS:MJDK)
-pre-configure:
-	@if [ ! -x ${JAVAC} ]; then \
-		${PRINTF} "%s\n%s\n%s\n%s\n" \
-		    '#!/bin/sh' \
-		    '"${JAVA}" -Xmx768M -classpath "${DISTDIR}/${ECJ_JAR}" \' \
-		    '    org.eclipse.jdt.internal.compiler.batch.Main \' \
-		    '    "$${@:--help}"' > ${JAVAC}; \
-		${CHMOD} 755 ${JAVAC}; \
-	fi
-.endif
 
 .include <bsd.port.mk>
