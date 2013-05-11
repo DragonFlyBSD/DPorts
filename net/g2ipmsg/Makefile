@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: net/g2ipmsg/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: net/g2ipmsg/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	g2ipmsg
 PORTVERSION=	0.9.3
@@ -14,14 +14,11 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A popup style message communication tool for GNOME2
 
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USES=        pathfix
+USES=		pathfix pkgconfig gettext iconv
 USE_GNOME=	gnomeprefix intlhack intltool \
 		libgnomeui libbonobo desktopfileutils gnomepanel
 USE_GSTREAMER=	vorbis
-USE_PKGCONFIG=	build
-USE_ICONV=	yes
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
