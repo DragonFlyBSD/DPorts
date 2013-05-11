@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnome-subtitles
-# Date created:				23 March 2007
-# Whom:				Marcin Simonides <marcin@studio4plus.com>
-#
-# $FreeBSD: ports/multimedia/gnome-subtitles/Makefile,v 1.23 2012/11/17 05:59:49 svnexp Exp $
-#
+# Created by: Marcin Simonides <marcin@studio4plus.com>
+# $FreeBSD: multimedia/gnome-subtitles/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	gnome-subtitles
 PORTVERSION=	1.2
@@ -35,8 +31,10 @@ USE_LDCONFIG=	${PREFIX}/lib/gnome-subtitles
 
 MAN1=		gnome-subtitles.1
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
