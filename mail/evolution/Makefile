@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: mail/evolution/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: mail/evolution/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/mail/evolution/Makefile,v 1.241 2012/09/01 23:02:10 mezz Exp $
 
 PORTNAME=	evolution
@@ -21,8 +21,7 @@ CONFLICTS=	evolution-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		bison pathfix
-USE_GETTEXT=	yes
+USES=		bison pathfix gettext
 USE_GNOME=	gnomeprefix intlhack evolutiondataserver gtkhtml3 \
 		desktopfileutils gnomedocutils ltasneededhack gnomedesktop
 USE_AUTOTOOLS=	libtool
