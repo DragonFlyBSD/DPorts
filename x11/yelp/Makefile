@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/x11/yelp/Makefile,v 1.81 2012/11/17 06:03:23 svnexp Exp $
+# $FreeBSD: x11/yelp/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11/yelp/Makefile,v 1.171 2012/10/01 16:19:07 kwm Exp $
 
 PORTNAME=	yelp
@@ -20,7 +20,7 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 
 CONFLICTS=	yelp-3.[0-9]*
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_BZIP2=	yes
 USE_XORG=	ice
 USE_GMAKE=	yes
