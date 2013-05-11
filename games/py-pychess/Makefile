@@ -2,7 +2,7 @@
 # Date created:		2008-01-23
 # Whom:			Nicola Vitale <nivit@FreeBSD.org>
 #
-# $FreeBSD: ports/games/py-pychess/Makefile,v 1.14 2012/11/17 05:57:49 svnexp Exp $
+# $FreeBSD: games/py-pychess/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	pychess
@@ -34,7 +34,7 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 PYDISTUTILS_PKGVERSION=	${DISTVERSION}
 
 USE_GNOME=	pygnomedesktop
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/games/py-pychess/pkg-plist,v 1.4 2012/11/17 05:57:49 svnexp Exp $
+@comment $FreeBSD: games/py-pychess/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/pychess
 %%PYTHON_SITELIBDIR%%/pychess/Main.py
 %%PYTHON_SITELIBDIR%%/pychess/Main.pyc
