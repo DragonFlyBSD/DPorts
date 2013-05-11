@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	KDE libraries 3
-# Date created:				2 November 2001
-# Whom:					will@cvs.kde.org
-#
-# $FreeBSD: x11/kdelibs3/Makefile 315474 2013-03-28 15:51:16Z eadler $
-#
+# Created by: will@cvs.kde.org
+# $FreeBSD: x11/kdelibs3/Makefile 317291 2013-05-03 23:20:01Z bapt $
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE_VERSION}
@@ -53,7 +48,7 @@ EXPIRATION_DATE=	2013-07-01
 
 USE_BZIP2=	yes
 USE_FAM=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_OPENSSL=	yes
 USE_QT_VER=	3
@@ -79,7 +74,7 @@ FONTENCOD=	${LOCALBASE}/lib/X11/fonts/encodings/encodings.dir
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} > 1000014
-PATCH_SITES=		http://oschtan.academ.org/oschtan-overlay/kde-base/kdelibs/files/
+PATCH_SITES=		http://leaf.dragonflybsd.org/~marino/dports-src/
 PATCHFILES=		kdelibs-3.5-openssl-1.0.0.patch
 PATCH_DIST_STRIP=	-p1
 .else
