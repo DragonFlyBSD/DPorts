@@ -1,15 +1,12 @@
-# New ports collection makefile for:	RSIBreak
-# Date created:			15 Mar 2006
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/rsibreak/Makefile,v 1.18 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: x11/rsibreak/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	rsibreak
 PORTVERSION=	0.8.0
 PORTREVISION=	7
 CATEGORIES=	x11 kde
-MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/rsibreak/Rsibreak-0.8.0.tar.bz2/62a62ff2f405461cfbf978484fb2d62c/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	ale
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	A KDE RSI prevention tool
@@ -19,7 +16,7 @@ PORTSCOUT=	limit:^0\.8\.
 USE_BZIP2=	yes
 USE_KDELIBS_VER=3
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 USE_XORG=	xscrnsaver
 
