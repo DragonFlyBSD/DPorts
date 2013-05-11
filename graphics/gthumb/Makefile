@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: graphics/gthumb/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: graphics/gthumb/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gthumb
 PORTVERSION=	2.14.1
@@ -15,13 +15,11 @@ LIB_DEPENDS=	unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USE_XZ=	yes
-USE_GETTEXT=	yes
-USES=		bison pathfix
+USES=		bison pathfix pkgconfig gettext
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomedocutils gconf2
 WANT_GSTREAMER=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
