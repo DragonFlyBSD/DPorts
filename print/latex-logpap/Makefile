@@ -2,7 +2,7 @@
 # Date created:		14 Feb 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: ports/print/latex-logpap/Makefile,v 1.9 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-logpap/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	latex-logpap
 PORTVERSION=	0.6.20040201
@@ -17,14 +17,10 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package for drawing logarithmic graph paper
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-
 PLIST_SUB=	TEXMFLOCAL=${TEXMFLOCAL} MKTEXLSR=${MKTEXLSR} \
 		CLASSDIR=${CLASSDIR}
 
+USE_TEX=	tetex
 USE_GMAKE=	YES
 TEXMFLOCAL=	share/texmf-local
 TEXMFLOCAL_LSR=	${LOCALBASE}/${TEXMFLOCAL}/ls-R
