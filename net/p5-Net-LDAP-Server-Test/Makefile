@@ -1,12 +1,11 @@
 # Created by: swills@
-# $FreeBSD: net/p5-Net-LDAP-Server-Test/Makefile 314289 2013-03-15 10:36:28Z tobez $
+# $FreeBSD: net/p5-Net-LDAP-Server-Test/Makefile 317007 2013-05-01 09:43:58Z tobez $
 #
 
 PORTNAME=	Net-LDAP-Server-Test
-PORTVERSION=	0.18
+PORTVERSION=	0.19
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
-#MASTER_SITE_SUBDIR=	CPAN:KARMAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
