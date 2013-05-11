@@ -1,5 +1,5 @@
 # Created by: Holger Lamm <holger@e-gitt.net>
-# $FreeBSD: net-p2p/mldonkey/Makefile 313613 2013-03-08 03:00:37Z bf $
+# $FreeBSD: net-p2p/mldonkey/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	mldonkey
 PORTVERSION=	3.1.3
@@ -18,7 +18,7 @@ NO_LATEST_LINK=	yes
 CONFLICTS=	mldonkey{-{core,gui},}-devel-[0-9]*
 
 USE_BZIP2=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_AUTOTOOLS=	autoconf:env
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
