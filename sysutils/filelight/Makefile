@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: sysutils/filelight/Makefile 313088 2013-02-28 10:51:58Z gahr $
+# $FreeBSD: sysutils/filelight/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	filelight
 PORTVERSION=	1.0
@@ -14,7 +14,7 @@ USE_KDELIBS_VER=3
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/-O2//g' ${WRKSRC}/${CONFIGURE_SCRIPT}
