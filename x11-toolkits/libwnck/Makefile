@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libwnck/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: x11-toolkits/libwnck/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.133 2010/11/17 11:38:29 kwm Exp $
 
 PORTNAME=	libwnck
@@ -19,10 +19,9 @@ USE_BZIP2=	yes
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
-USE_GETTEXT=	yes
 USE_XORG=	xres
 USE_GMAKE=	yes
-USES=		bison pathfix
+USES=		bison pathfix gettext
 USE_GNOME=	gtk20 ltverhack referencehack intlhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
