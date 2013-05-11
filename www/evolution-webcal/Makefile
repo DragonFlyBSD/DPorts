@@ -2,7 +2,7 @@
 # Date created:				Mon Apr 26 18:08:00 CEST 2004
 # Whom:					Koop Mast <kwm@rainbow-runner.nl>
 #
-# $FreeBSD: ports/www/evolution-webcal/Makefile,v 1.35 2012/11/17 06:02:32 svnexp Exp $
+# $FreeBSD: www/evolution-webcal/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/www/evolution-webcal/Makefile,v 1.69 2010/09/29 12:56:07 kwm Exp $
 #
 
@@ -18,7 +18,7 @@ COMMENT=	Webcal(endar) handler for gnome
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PERL5=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver libgnomeui
 GNU_CONFIGURE=	yes
