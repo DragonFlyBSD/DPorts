@@ -2,7 +2,7 @@
 # Date created: 			7 January 2008
 # Whom:					Hyogeol Lee <hyogeollee@gmail.com>
 #
-# $FreeBSD: ports/korean/ko.TeX-fonts-extra/Makefile,v 1.6 2012/11/17 05:58:46 svnexp Exp $
+# $FreeBSD: korean/ko.TeX-fonts-extra/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	ko.TeX-fonts-extra
@@ -15,9 +15,7 @@ DISTFILES=	ko.tex-extra-hlfont.tar.gz ko.tex-unfonts-extra.tar.gz
 MAINTAINER=	hyogeollee@gmail.com
 COMMENT=	Korean TeX extra fonts
 
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX
-
+USE_TEX=	tetex
 CONFLICTS=	hlatex-[0-9]*
 
 NO_WRKSUBDIR=	yes
