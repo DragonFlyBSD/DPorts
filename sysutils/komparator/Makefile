@@ -2,7 +2,7 @@
 # Date created:				18 Jan 2006
 # Whom:			Alexander V. Ribchansky <triosoft@triosoft.com.ua>
 #
-# $FreeBSD: sysutils/komparator/Makefile 313088 2013-02-28 10:51:58Z gahr $
+# $FreeBSD: sysutils/komparator/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	komparator
 PORTVERSION=	0.9
@@ -17,7 +17,7 @@ USE_KDELIBS_VER=3
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 INSTALLS_ICONS=	yes
 DOCSDIR=	${PREFIX}/share/doc/HTML/en/komparator
