@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: ports/www/xfce4-smartbookmark-plugin/Makefile,v 1.27 2013/01/23 19:44:00 svnexp Exp $
+# $FreeBSD: www/xfce4-smartbookmark-plugin/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	xfce4-smartbookmark-plugin
@@ -14,10 +14,9 @@ COMMENT=	Query search engines from the Xfce panel
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 intltool intlhack
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 USE_XFCE=	configenv libexo libmenu libutil panel
 USE_XORG=	ice
 
