@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: www/epiphany-extensions/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: www/epiphany-extensions/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/www/epiphany-extensions/Makefile,v 1.140 2012/12/13 20:33:05 kwm Exp $
 
 PORTNAME=	epiphany-extensions
@@ -19,7 +19,7 @@ RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 
 CONFLICTS=	epiphany-extensions-3.[0-9]*
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack
 INSTALLS_OMF=	yes
