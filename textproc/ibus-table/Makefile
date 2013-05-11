@@ -1,5 +1,5 @@
 # Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-# $FreeBSD: textproc/ibus-table/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: textproc/ibus-table/Makefile 317494 2013-05-06 09:26:23Z bapt $
 
 PORTNAME=	ibus-table
 PORTVERSION=	1.3.9.20110827
@@ -23,8 +23,10 @@ USE_GMAKE=	yes
 
 PROJECTHOST=	ibus
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
