@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
-# $FreeBSD: graphics/nip2/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: graphics/nip2/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	nip2
 PORTVERSION=	7.26.3
@@ -25,7 +25,7 @@ MAKE_JOBS_SAFE=	yes
 # are always installed, regardless of the NOPORTDOCS setting.
 # The PDF version of the documentation is another story:
 .if defined(NOPORTDOCS)
-EXTRACT_AFTER_ARGS=|${TAR} -xpf - --exclude nipguide --exclude pdf
+EXTRACT_AFTER_ARGS=	--exclude nipguide --exclude pdf
 .endif
 # Somehow vendor's configure misses these:
 MAKE_ENV+=	UPDATE_MIME_DATABASE=update-mime-database	\
