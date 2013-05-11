@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: multimedia/gxmms/Makefile 313840 2013-03-10 20:03:03Z bdrewery $
+# $FreeBSD: multimedia/gxmms/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gxmms
 PORTVERSION=	0.3.0
@@ -12,7 +12,7 @@ COMMENT=	Simple GNOME panel applet for controlling XMMS
 
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomepanel gnomeprefix intlhack libgnomeui
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="`pkg-config --libs libgnomeui-2.0`"
 CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags libgnomeui-2.0`
