@@ -1,6 +1,6 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
-# $FreeBSD: multimedia/totem/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: multimedia/totem/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/multimedia/totem/Makefile,v 1.151 2010/09/27 19:04:37 kwm Exp $
 #
 
@@ -26,8 +26,7 @@ CONFLICTS=	totem-3.[0-9]*
 
 USE_PYTHON=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack desktopfileutils \
 		nautilus2 ltverhack pygtk2 gnomehier
 USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly python gio
