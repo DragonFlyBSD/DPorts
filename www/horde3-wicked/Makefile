@@ -2,7 +2,7 @@
 # Date created:			  Jul 20, 2008
 # Whom:				  Beech Rintoul <beech@FreeBSD.org>
 #
-# $FreeBSD: ports/www/horde3-wicked/Makefile,v 1.1 2012/12/12 12:27:53 svnexp Exp $
+# $FreeBSD: www/horde3-wicked/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	wicked
@@ -17,7 +17,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Wiki module for Horde
 
 USE_HORDE=	base pkg-message
-USE_GETTEXT=	yes
+USES=		gettext
 PORTDOCS=	README CHANGES CREDITS INSTALL TODO
 
 BUILD_DEPENDS+=	${PEARDIR}/Text/Wiki.php:${PORTSDIR}/www/pear-Text_Wiki
