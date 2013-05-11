@@ -2,7 +2,7 @@
 # Date created:		30 July 2008
 # Whom:			hrkfrd@gmail.com
 #
-# $FreeBSD: ports/net-im/pidgin-msn-pecan/Makefile,v 1.20 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: net-im/pidgin-msn-pecan/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	msn-pecan
@@ -22,7 +22,7 @@ PROJECTHOST=	msn-pecan
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 post-install:
 	${GMAKE} -C ${WRKSRC} install_locales
