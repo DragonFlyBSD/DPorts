@@ -2,7 +2,7 @@
 # Date created:				25 Jul 2006
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/orca/Makefile,v 1.40 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: accessibility/orca/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/accessibility/orca/Makefile,v 1.90 2010/11/16 12:00:48 avl Exp $
 #
 
@@ -27,7 +27,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 LATEST_LINK=	gnome-orca
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui gnomespeech pygnome2 \
