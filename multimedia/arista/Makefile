@@ -2,7 +2,7 @@
 # Date created:		2009-05-30
 # Whom:			Steve Wills <steve@mouf.net>
 #
-# $FreeBSD: ports/multimedia/arista/Makefile,v 1.13 2012/11/17 05:59:47 svnexp Exp $
+# $FreeBSD: multimedia/arista/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	arista
@@ -15,7 +15,7 @@ MASTER_SITES=	http://programmer-art.org/media/releases/arista-transcoder/ \
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	An easy to use multimedia transcoder for the GNOME Desktop
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GSTREAMER=	faac x264 lame mpeg2enc
 USE_GNOME=	pygnomedesktop
 USE_PYTHON=	yes
