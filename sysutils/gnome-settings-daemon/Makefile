@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-settings-daemon/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: sysutils/gnome-settings-daemon/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.75 2011/04/25 19:56:57 mezz Exp $
 
 PORTNAME=	gnome-settings-daemon
@@ -23,9 +23,8 @@ CONFLICTS=	gnome-settings-daemon-3.[0-9]*
 USE_XORG=	xxf86misc
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack gnomedesktop libgnomekbd
-USE_GETTEXT=	yes
 USE_GSTREAMER=	good
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
