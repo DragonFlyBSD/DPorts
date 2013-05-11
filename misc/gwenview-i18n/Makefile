@@ -2,7 +2,7 @@
 # Date created:			Mon Sep 18 02:03:50 CEST 2006
 # Whom:				Markus Brueffer <markus@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/gwenview-i18n/Makefile,v 1.15 2012/12/30 18:56:11 svnexp Exp $
+# $FreeBSD: misc/gwenview-i18n/Makefile 316434 2013-04-24 13:36:18Z ak $
 #
 
 PORTNAME=	gwenview-i18n
@@ -22,7 +22,7 @@ EXPIRATION_DATE=	2013-07-01
 USE_KDELIBS_VER=3
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	build
+USES=		gettext:build
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>
