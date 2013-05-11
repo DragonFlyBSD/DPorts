@@ -2,7 +2,7 @@
 # Date created:		7 September 2007
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/xfce4-wmdock-plugin/Makefile,v 1.23 2012/11/17 06:03:21 svnexp Exp $
+# $FreeBSD: x11/xfce4-wmdock-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfce4-wmdock-plugin
@@ -16,7 +16,7 @@ COMMENT=	WMdock plugin for Xfce
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 intltool intlhack pkgconfig libwnck
