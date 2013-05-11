@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: deskutils/planner/Makefile 315377 2013-03-27 13:17:02Z kwm $
+# $FreeBSD: deskutils/planner/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports-stable/deskutils/planner/Makefile,v 1.4 2009/04/16 00:34:24 kwm Exp $
 
 PORTNAME=	planner
@@ -14,11 +14,10 @@ COMMENT=	Project management application for GNOME 2
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack libgnomeui libgnomeprintui \
 		libgsf desktopfileutils
 WANT_GNOME=	yes
-USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
