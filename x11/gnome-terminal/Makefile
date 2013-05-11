@@ -2,7 +2,7 @@
 # Date created:				1 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome-terminal/Makefile,v 1.75 2012/11/17 06:03:15 svnexp Exp $
+# $FreeBSD: x11/gnome-terminal/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11/gnome-terminal/Makefile,v 1.137 2010/11/13 13:25:22 kwm Exp $
 #
 
@@ -18,7 +18,7 @@ COMMENT=	Terminal component for the GNOME 2 Desktop
 
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
