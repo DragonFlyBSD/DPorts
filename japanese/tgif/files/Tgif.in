@@ -1,4 +1,4 @@
-! $FreeBSD: ports/japanese/tgif/files/Tgif.in,v 1.3 2012/11/17 05:58:40 svnexp Exp $
+! $FreeBSD: japanese/tgif/files/Tgif.in 300896 2012-07-14 13:54:48Z beat $
 Tgif.UseNKF:			true
 Tgif.CopyAndPasteJIS:		true
 Tgif.GridSystem:		Metric

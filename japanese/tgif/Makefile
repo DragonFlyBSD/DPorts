@@ -1,14 +1,11 @@
-# New ports collection makefile for:	tgif-j
-# Date created:		8 Dec 1995
-# Whom:			Mita Yoshio <mita@jp.FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/tgif/Makefile,v 1.44 2012/11/17 05:58:40 svnexp Exp $
-#
+# Created by: Mita Yoshio <mita@jp.FreeBSD.org>
+# $FreeBSD: japanese/tgif/Makefile 316986 2013-05-01 03:23:00Z hrs $
 
-PORTNAME=	tgif-resource
+PORTNAME=	tgif
 PORTVERSION=	4.2.2
 CATEGORIES=	japanese graphics
 MASTER_SITES=	# empty
+PKGNAMESUFFIX=	-resource
 DISTFILES=	# empty
 
 MAINTAINER=	hrs@FreeBSD.org
