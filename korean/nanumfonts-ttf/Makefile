@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Nanum Hangul fonts
-# Date created:		August 4, 2011
-# Whom:			Jung-uk Kim <jkim@FreeBSD.org>
-#
-# $FreeBSD: ports/korean/nanumfonts-ttf/Makefile,v 1.2 2012/11/17 05:58:47 svnexp Exp $
-#
+# $FreeBSD: korean/nanumfonts-ttf/Makefile 315891 2013-04-16 19:43:00Z jkim $
 
 MASTERDIR=	${.CURDIR}/../nanumfonts-otf
 
