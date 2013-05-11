@@ -2,7 +2,7 @@
 # Date created:				14 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/bug-buddy/Makefile,v 1.63 2012/11/17 05:55:35 svnexp Exp $
+# $FreeBSD: devel/bug-buddy/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/devel/bug-buddy/Makefile,v 1.86 2010/11/16 18:17:55 kwm Exp $
 #
 
@@ -20,7 +20,7 @@ LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
