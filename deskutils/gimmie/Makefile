@@ -1,9 +1,5 @@
-# New ports collection makefile for:    gimmie
-# Date created:                         28 06 2006
-# Whom:                                 pneumann@gmail.com
-#
-# $FreeBSD: ports/deskutils/gimmie/Makefile,v 1.16 2012/11/17 05:55:27 svnexp Exp $
-#
+# Created by: pneumann@gmail.com
+# $FreeBSD: deskutils/gimmie/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	gimmie
 PORTVERSION=	0.2.7
@@ -30,8 +26,10 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
