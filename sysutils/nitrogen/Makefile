@@ -1,5 +1,5 @@
 # Created by: Jonathan Liu <Net147@hotmail.com>
-# $FreeBSD: ports/sysutils/nitrogen/Makefile,v 1.15 2013/01/23 15:05:38 svnexp Exp $
+# $FreeBSD: sysutils/nitrogen/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	nitrogen
 PORTVERSION=	1.5.2
@@ -33,8 +33,7 @@ RUN_DEPENDS=	gnome-icon-theme>0:${PORTSDIR}/misc/gnome-icon-theme \
 OPTIONS_DEFINE=	XINERAMA
 OPTIONS_DEFAULT=XINERAMA
 
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 USE_GNOME=	gtk20
 USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext xfixes \
 		xrandr xrender
