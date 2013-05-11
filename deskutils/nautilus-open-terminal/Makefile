@@ -2,7 +2,7 @@
 # Date created:		2005-07-07
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/nautilus-open-terminal/Makefile,v 1.23 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/nautilus-open-terminal/Makefile 316464 2013-04-24 18:10:30Z ak $
 #    $MCom: ports/deskutils/nautilus-open-terminal/Makefile,v 1.17 2009/08/09 15:30:27 ahze Exp $
 #
 
@@ -19,7 +19,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	nautilus2 gnomeprefix intlhack gnomehack
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags gnome-vfs-2.0`
 LDFLAGS+=	-L${LOCALBASE}/lib
