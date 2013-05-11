@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	ggz-gtk-client
-# Date created:			Oct 22, 2005
-# Whom:				ijliao
-#
-# $FreeBSD: ports/games/ggz-gtk-client/Makefile,v 1.22 2012/11/17 05:57:39 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: games/ggz-gtk-client/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	ggz-gtk-client
 PORTVERSION=	${GGZ_VERSION}
@@ -25,12 +20,14 @@ MAN6=	ggz-gtk.6
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 .include <bsd.port.pre.mk>
