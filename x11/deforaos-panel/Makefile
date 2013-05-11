@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/x11/deforaos-panel/Makefile,v 1.2 2013/01/03 16:24:40 svnexp Exp $
+# $FreeBSD: x11/deforaos-panel/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	deforaos-panel
 PORTVERSION=	0.2.17
@@ -23,8 +23,7 @@ RUN_DEPENDS=	keyboard:${PORTSDIR}/x11/deforaos-keyboard \
 		sudo:${PORTSDIR}/security/sudo
 
 USE_GNOME=	gtk20 desktopfileutils
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
+USES=		pkgconfig gettext
 INSTALLS_ICONS=	yes
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
