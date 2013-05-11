@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/mail/claws-mail-spamreport/Makefile,v 1.38 2012/12/10 17:32:44 svnexp Exp $
+# $FreeBSD: mail/claws-mail-spamreport/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	spamreport
 PORTVERSION=	0.3.17
@@ -31,7 +31,7 @@ CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
