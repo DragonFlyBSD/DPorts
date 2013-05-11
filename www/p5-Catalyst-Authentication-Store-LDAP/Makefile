@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Authentication-Store-LDAP/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Catalyst-Authentication-Store-LDAP/Makefile 316791 2013-04-29 09:41:31Z tobez $
 
 PORTNAME=	Catalyst-Authentication-Store-LDAP
-PORTVERSION=	1.012
+PORTVERSION=	1.014
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
