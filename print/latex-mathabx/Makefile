@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: ports/print/latex-mathabx/Makefile,v 1.9 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-mathabx/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	latex-mathabx
 PORTVERSION=	1.0.20050518
@@ -14,12 +14,8 @@ DISTFILES=	mathabx${EXTRACT_SUFX} abxtype1${EXTRACT_SUFX}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Math series, aka mathabx MetaFont fontset for TeX/LaTeX
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-
 USE_ZIP=	YES
+USE_TEX=	tetex
 NO_BUILD=	YES
 PLIST_SUB=	TEXMFLOCALDIR=${TEXMFLOCALDIR} \
 		MKTEXLSR=${MKTEXLSR} \
