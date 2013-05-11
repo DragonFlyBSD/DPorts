@@ -2,7 +2,7 @@
 # Date created:				01 May 2004
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/cog/Makefile,v 1.20 2012/11/17 06:01:27 svnexp Exp $
+# $FreeBSD: sysutils/cog/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	cog
@@ -17,7 +17,7 @@ COMMENT=	A program for editing advanced GNOME settings in an easy way
 USE_XORG=	x11
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
