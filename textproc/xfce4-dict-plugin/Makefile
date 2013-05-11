@@ -2,7 +2,7 @@
 # Date created:				23. January 2007
 # Whom:					Oliver Lehmann (oliver@FreeBSD.org)
 #
-# $FreeBSD: ports/textproc/xfce4-dict-plugin/Makefile,v 1.31 2012/11/17 06:02:24 svnexp Exp $
+# $FreeBSD: textproc/xfce4-dict-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfce4-dict
@@ -20,7 +20,7 @@ COMMENT=	Xfce Plugin for searching for the translation or explanation of a word
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 intltool intlhack pkgconfig desktopfileutils
 USE_XFCE=	configenv libgui libutil panel
