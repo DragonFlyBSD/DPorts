@@ -2,7 +2,7 @@
 # Date created:				11 May 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/gnopernicus/Makefile,v 1.46 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: accessibility/gnopernicus/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.85 2007/07/23 19:03:49 mezz Exp $
 #
 
@@ -19,7 +19,7 @@ COMMENT=	Collection of accessibility apps for GNOME 2
 LIB_DEPENDS=	gnome-mag.2:${PORTSDIR}/accessibility/gnome-mag
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
