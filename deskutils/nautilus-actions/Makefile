@@ -2,7 +2,7 @@
 # Date created:		2005-08-31
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/nautilus-actions/Makefile,v 1.29 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/nautilus-actions/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.21 2010/04/16 23:41:09 kwm Exp $
 #
 
@@ -21,7 +21,7 @@ LIB_DEPENDS=	uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid \
 
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	nautilus2 intlhack
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
