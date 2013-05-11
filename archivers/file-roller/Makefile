@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: ports/archivers/file-roller/Makefile,v 1.96 2012/12/30 00:37:15 svnexp Exp $
+# $FreeBSD: archivers/file-roller/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/archivers/file-roller/Makefile,v 1.184 2010/11/15 22:58:48 kwm Exp $
 
 PORTNAME=	file-roller
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar \
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
