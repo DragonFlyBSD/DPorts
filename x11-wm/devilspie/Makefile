@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Devil's Pie
-# Date created:			08 Jun 2004
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/x11-wm/devilspie/Makefile,v 1.33 2012/11/17 06:03:41 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: x11-wm/devilspie/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	devilspie
 PORTVERSION=	0.22
@@ -15,10 +11,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A window manipulation tool
 
 USE_GNOME=	libwnck
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
