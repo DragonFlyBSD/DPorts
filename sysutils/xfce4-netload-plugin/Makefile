@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xfce-netload-plugin
-# Date created:				3 September 2003
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/xfce4-netload-plugin/Makefile,v 1.44 2012/11/17 06:01:50 svnexp Exp $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: sysutils/xfce4-netload-plugin/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	xfce4-netload-plugin
 PORTVERSION=	1.2.0
@@ -20,15 +16,15 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intltool intlhack
 USE_XFCE=	configenv libmenu panel
+USES=		pkgconfig
 INSTALLS_ICONS=	yes
-USE_PKGCONFIG=	build
 
 OPTIONS_DEFINE=	NLS
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=  yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+= NLS=""
 .else
