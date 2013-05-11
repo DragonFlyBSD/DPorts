@@ -2,7 +2,7 @@
 # Date created:				5 July 2003
 # Whom:					lewiz <purple@lewiz.net>
 #
-# $FreeBSD: ports/accessibility/dasher/Makefile,v 1.56 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: accessibility/dasher/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/accessibility/dasher/Makefile,v 1.66 2009/03/18 04:59:21 marcus Exp $
 #
 
@@ -22,7 +22,7 @@ LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier libgnomeui atspi \
 		libwnck gnomedocutils
