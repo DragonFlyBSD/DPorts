@@ -1,5 +1,5 @@
 # Created by: Gustavo Perez
-# $FreeBSD: deskutils/global-menu/Makefile 314636 2013-03-19 12:17:06Z miwi $
+# $FreeBSD: deskutils/global-menu/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=		gnome-globalmenu
 PORTVERSION=		0.7.10
@@ -38,7 +38,7 @@ PLIST_SUB+=		XFCE4_PANEL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=		yes
+USES+=		gettext
 PLIST_SUB+=		NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
