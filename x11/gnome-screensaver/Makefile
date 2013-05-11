@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-screensaver/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: x11/gnome-screensaver/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.125 2012/09/03 16:28:29 mezz Exp $
 
 PORTNAME=	gnome-screensaver
@@ -19,10 +19,9 @@ CONFLICTS=	gnome-screensaver-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	xtst xxf86vm
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack gnomemenus libgnomekbd gnomedesktop
 CONFIGURE_ARGS=	--with-gdm-config=${LOCALBASE}/etc/gdm/custom.conf \
 		--with-xscreensaverdir=${XSCREENSAVER_DIR} \
