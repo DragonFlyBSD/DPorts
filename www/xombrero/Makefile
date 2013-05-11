@@ -1,5 +1,5 @@
-# Created by:				Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: ports/www/xombrero/Makefile,v 1.9 2013/02/07 14:08:11 svnexp Exp $
+# Created by: Aldis Berjoza <aldis@bsdroot.lv>
+# $FreeBSD: www/xombrero/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	xombrero
 PORTVERSION=	1.4.0
@@ -17,7 +17,7 @@ LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 		soup-2.4:${PORTSDIR}/devel/libsoup \
 		webkitgtk-1:${PORTSDIR}/www/webkit-gtk2
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_PERL5_BUILD=yes
 USE_GNOME=	gtk20
 INSTALLS_ICONS=	yes

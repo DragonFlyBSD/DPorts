@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/xombrero/files/xombrero.in,v 1.4 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: www/xombrero/files/xombrero.in 304901 2012-09-26 11:28:56Z zeising $
 #
 # A wrapper script for xombrero
 # Created by HU Dong <itechbear@gmail.com>
