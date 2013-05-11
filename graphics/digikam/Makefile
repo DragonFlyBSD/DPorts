@@ -2,7 +2,7 @@
 # Date created: 			3 February 2003
 # Whom:					Arjan van Leeuwen <avleeuwen@piwebs.com>
 #
-# $FreeBSD: ports/graphics/digikam/Makefile,v 1.59 2012/11/17 05:58:03 svnexp Exp $
+# $FreeBSD: graphics/digikam/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	digikam
@@ -30,7 +30,7 @@ USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_KDELIBS_VER=3
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 
