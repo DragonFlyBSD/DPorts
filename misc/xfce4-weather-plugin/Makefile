@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: ports/misc/xfce4-weather-plugin/Makefile,v 1.51 2013/02/19 19:50:06 svnexp Exp $
+# $FreeBSD: misc/xfce4-weather-plugin/Makefile 316596 2013-04-26 10:44:28Z ak $
 #
 
 PORTNAME=	xfce4-weather-plugin
@@ -16,12 +16,11 @@ LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
+USES=		pkgconfig gettext
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20 gtk20 intltool intlhack libxml2
 USE_XFCE=	configenv libmenu libutil panel
-USE_PKGCONFIG=	build
 
 OPTIONS_DEFINE=	UPOWER
 UPOWER_DESC=	Power state support
