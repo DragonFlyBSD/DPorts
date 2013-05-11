@@ -2,7 +2,7 @@
 # Date created:				06 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: deskutils/gnome-utils/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: deskutils/gnome-utils/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.159 2012/09/01 23:02:09 mezz Exp $
 #
 
@@ -25,7 +25,7 @@ CONFLICTS=	baobob-3.[0-9]* gnome-dictionary-3.[0-9]* \
 		gnome-search-tool-3.[0-9]* gnome-system-log-3.[0-9]*
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
