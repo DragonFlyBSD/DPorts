@@ -1,0 +1,15 @@
+--- makefile.intermediate	2013-05-09 17:58:33.525506000 +0000
++++ makefile
+@@ -48,6 +48,12 @@ LDLIBS+=-lm $(CRYPT_LIB)
+ CFLAGS?=
+ MTFLAGS=
+ 
++# DragonFly
++ifeq ("DragonFly", "$(UNAME_S)")
++OPTIONS=-Wall -DHAS_GETIFADDRS -DNO_DUAL -DNO_MCAST_JOIN $(ENC_OPTS)
++OPENSSL=/usr
++endif
++
+ # FreeBSD
+ ifeq ("FreeBSD", "$(UNAME_S)")
+ OPTIONS=-Wall -DHAS_GETIFADDRS -DNO_DUAL -DNO_MCAST_JOIN $(ENC_OPTS)
