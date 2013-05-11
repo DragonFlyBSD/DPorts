@@ -1,9 +1,5 @@
-# Ports collection Makefile for:	pidgin-libnotify
-# Date created:				2007-07-10
-# Whom:					Meethune Bhowmick <meethune@gmail.com>
-#
-# $FreeBSD: ports/net-im/pidgin-libnotify/Makefile,v 1.25 2012/11/17 06:00:28 svnexp Exp $
-#
+# Created by: Meethune Bhowmick <meethune@gmail.com>
+# $FreeBSD: net-im/pidgin-libnotify/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	libnotify
 PORTVERSION=	0.14
@@ -24,14 +20,17 @@ LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify \
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-USE_GNOME=	pkgconfig gtk20
+USE_GNOME=	gtk20
+USES=		pkgconfig
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.else
-USE_GETTEXT=	yes
-PLIST_SUB+=	NLS=""
 .endif
 
 CPPFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
