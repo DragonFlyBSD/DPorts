@@ -2,7 +2,7 @@
 # Date created:                         05 April 2002
 # Whom:                                 Lauri Watts <lauri@kde.org>
 #
-# $FreeBSD: ports/korean/kde3-i18n/Makefile,v 1.57 2012/12/30 18:56:06 svnexp Exp $
+# $FreeBSD: korean/kde3-i18n/Makefile 316434 2013-04-24 13:36:18Z ak $
 #
 
 PORTNAME=	kde-i18n
@@ -22,7 +22,7 @@ EXPIRATION_DATE=	2013-07-01
 USE_KDELIBS_VER=3
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	build
+USES=		gettext:build
 GNU_CONFIGURE=	yes
 KDE_I18N=	yes
 
