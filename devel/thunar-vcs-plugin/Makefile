@@ -1,6 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: ports/devel/thunar-vcs-plugin/Makefile,v 1.29 2012/12/31 06:21:27 svnexp Exp $
-#
+# $FreeBSD: devel/thunar-vcs-plugin/Makefile 316850 2013-04-29 22:27:05Z bapt $
 
 PORTNAME=	thunar-vcs-plugin
 PORTVERSION=	0.1.4
@@ -20,18 +19,18 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	desktopfileutils gnomehack gtk20 glib20 intltool intlhack
 USE_XFCE=	configenv libexo libutil thunar
 INSTALLS_ICONS=	yes
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS=	NLS "Enable Native Language Support" on \
-		GIT "Enable Git support" off \
-		SVN "Enable Subversion support" on
+OPTIONS_DEFINE=	NLS GIT SVN
+OPTIONS_DEFAULT=	SVN
+GIT_DESC=	Git support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.if ${PORT_OPTIONS:MNLS}
+USES+=	gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
@@ -39,7 +38,7 @@ CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
 
-.if defined(WITH_GIT)
+.if ${PORT_OPTIONS:MGIT}
 RUN_DEPENDS+=	git:${PORTSDIR}/devel/git
 CONFIGURE_ARGS+=--enable-git
 PLIST_SUB+=	GIT=""
@@ -48,7 +47,7 @@ CONFIGURE_ARGS+=--disable-git
 PLIST_SUB+=	GIT="@comment "
 .endif
 
-.if !defined(WITHOUT_SVN)
+.if ${PORT_OPTIONS:MSVN}
 LIB_DEPENDS+=	svn_client-1:${PORTSDIR}/devel/subversion
 CONFIGURE_ARGS+=--enable-subversion
 PLIST_SUB+=	SVN=""
@@ -60,4 +59,4 @@ PLIST_SUB+=	SVN="@comment "
 post-install:
 	@-update-desktop-database
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
