@@ -1,9 +1,9 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: ports/print/xfce4-print/Makefile,v 1.72 2012/11/17 06:00:55 svnexp Exp $
+# $FreeBSD: print/xfce4-print/Makefile 316672 2013-04-27 16:00:26Z hrs $
 
 PORTNAME=	xfce4-print
 PORTVERSION=	4.6.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	print xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/archive/xfprint/${PORTVERSION:R}
@@ -13,10 +13,13 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Xfce 4 graphical frontend for printing
 
+BUILD_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps
+RUN_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps
+
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	glib20 gnomehack gtk20 intltool intlhack pkgconfig
 USE_LDCONFIG=	yes
@@ -50,12 +53,8 @@ PLIST_SUB+=	LPR="@comment "
 
 .if ${PORT_OPTIONS:MLETTER}
 CONFIGURE_ARGS+=--enable-letter
-BUILD_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps-letter
-RUN_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps-letter
 .else
 CONFIGURE_ARGS+=--disable-letter
-BUILD_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps-a4
-RUN_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps-a4
 .endif
 
 post-patch:
