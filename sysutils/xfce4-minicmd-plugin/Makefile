@@ -2,7 +2,7 @@
 # Date created:				16 August 2003
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/xfce4-minicmd-plugin/Makefile,v 1.30 2012/11/17 06:01:50 svnexp Exp $
+# $FreeBSD: sysutils/xfce4-minicmd-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfce4-minicmd-plugin
@@ -17,7 +17,7 @@ COMMENT=	Displays a mini-command line on the xfce4-panel
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 intltool intlhack pkgconfig
 USE_XFCE=	libgui configenv panel
