@@ -1,12 +1,9 @@
-# New ports collection makefile for:		bitcoin
-# Date created:					2011-05-20
-# Whom:						Shaun Amott <shaun@FreeBSD.org>
-#
-# $FreeBSD: ports/net-p2p/bitcoin/Makefile,v 1.18 2012/11/17 06:00:39 svnexp Exp $
-#
+# Created by: Shaun Amott <shaun@FreeBSD.org>
+# $FreeBSD: net-p2p/bitcoin/Makefile 316400 2013-04-24 02:42:20Z swills $
 
 PORTNAME=	bitcoin
-PORTVERSION=	0.7.1
+PORTVERSION=	0.8.1
+PORTREVISION=	1
 CATEGORIES=	net-p2p finance
 
 MAINTAINER=	robbak@robbak.com
@@ -17,14 +14,14 @@ LIB_DEPENDS=	boost_date_time:${PORTSDIR}/devel/boost-libs
 OPTIONS_DEFINE=	GUI UPNP QRCODES
 OPTIONS_DEFAULT=	GUI QRCODES
 
-GUI_DESC=	Build as a QT3 GUI
+GUI_DESC=	Build as a QT4 GUI
 UPNP_DESC=	Build with UPNP support
 QRCODES_DESC=	Build with QR code display
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	bitcoin
 GH_PROJECT=	bitcoin
-GH_COMMIT=	d082365
+GH_COMMIT=	38f8657
 GH_TAGNAME=	v${PORTVERSION}
 
 USE_GMAKE=	yes
@@ -39,7 +36,6 @@ CXXFLAGS+=	-Wno-invalid-offsetof
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI} && !defined(WITHOUT_X11)
-USE_QT_VER=	4
 USE_QT4=	corelib gui qmake_build linguist uic moc rcc
 BINARY=		bitcoin-qt
 .else
@@ -67,9 +63,6 @@ QMAKE_USE_UPNP=	-
 .include <bsd.port.pre.mk>
 
 post-patch:
-	@${CP} ${WRKSRC}/src/protocol.h ${WRKSRC}/src/protocol.h.orig
-	@${AWK} 'BEGIN { f = 0 } { if ( $$0 ~ /^#include/ && f == 0 ) { f = 1; print "#include <sys/socket.h>"; print "#include <netinet/in.h>" }; print }' \
-		${WRKSRC}/src/protocol.h.orig > ${WRKSRC}/src/protocol.h
 .if !${PORT_OPTIONS:MGUI} || defined(WITHOUT_X11)
 	@cd ${WRKSRC}/src && ${CP} -p makefile.unix Makefile
 	@${REINPLACE_CMD} \

@@ -1,0 +1,11 @@
+--- src/leveldb/build_detect_platform.intermediate	2013-05-10 15:38:53.341567000 +0000
++++ src/leveldb/build_detect_platform
+@@ -90,7 +90,7 @@ case "$TARGET_OS" in
+         PLATFORM_LIBS="-lpthread -lrt"
+         PORT_FILE=port/port_posix.cc
+         ;;
+-    FreeBSD)
++    FreeBSD|DragonFly)
+         PLATFORM=OS_FREEBSD
+         COMMON_FLAGS="$MEMCMP_FLAG -D_REENTRANT -DOS_FREEBSD"
+         PLATFORM_LIBS="-lpthread"
