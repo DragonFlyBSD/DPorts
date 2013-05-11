@@ -2,7 +2,7 @@
 # Date created:				07 July 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/print/ggv/Makefile,v 1.61 2012/11/17 06:00:49 svnexp Exp $
+# $FreeBSD: print/ggv/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/print/ggv/Makefile,v 1.8 2007/09/24 19:40:45 mezz Exp $
 #
 
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui desktopfileutils
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GHOSTSCRIPT=yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
