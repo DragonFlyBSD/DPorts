@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Kopete-OTR
-# Date created:				2007-04-09
-# Whom:					Dave Grochowski <malus.x@gmail.com>
-#
-# $FreeBSD: ports/security/kopete-otr/Makefile,v 1.18 2012/11/17 06:01:06 svnexp Exp $
-#
+# Created by: Dave Grochowski <malus.x@gmail.com>
+# $FreeBSD: security/kopete-otr/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	otr
 PORTVERSION=	0.7
@@ -24,11 +20,11 @@ LIB_DEPENDS=	otr.4:${PORTSDIR}/security/libotr3
 USE_KDELIBS_VER=3
 PREFIX=		${KDE_PREFIX}
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 
 .include <bsd.port.mk>
