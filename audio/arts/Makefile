@@ -1,5 +1,5 @@
 # Created by: will@cvs.kde.org
-# $FreeBSD: audio/arts/Makefile 315130 2013-03-24 15:51:03Z bdrewery $
+# $FreeBSD: audio/arts/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	arts
 PORTVERSION=	1.5.10
@@ -13,7 +13,7 @@ DIST_SUBDIR=	KDE
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Audio system for the KDE integrated X11 desktop
 
-LIB_DEPENDS+=	\
+LIB_DEPENDS+=	asound:${PORTSDIR}/audio/alsa-lib \
 		audiofile:${PORTSDIR}/audio/libaudiofile \
 		mad:${PORTSDIR}/audio/libmad \
 		ogg:${PORTSDIR}/audio/libogg \
@@ -35,20 +35,17 @@ EXPIRATION_DATE=	2013-07-01
 
 PREFIX=		${KDE_PREFIX}
 WANT_GNOME=	yes
+USES=		pkgconfig gettext iconv
 USE_QT_VER=	3
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USE_ICONV=	yes
 USE_XORG=	ice sm x11 xau xcursor xdmcp xext xfixes xft xi \
 		xinerama xrandr xrender xt
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 QTCPPFLAGS+=	-L${LOCALBASE}/lib
 DO_NOT_COMPILE+=gmcop
 _NO_KDE_FINAL=	yes
-USE_PERL5_BUILD=yes
 
 CFLAGS+=	-DHAVE_VASPRINTF
 CONFIGURE_ENV+=	DO_NOT_COMPILE="${DO_NOT_COMPILE}"
