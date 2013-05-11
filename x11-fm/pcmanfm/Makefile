@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: ports/x11-fm/pcmanfm/Makefile,v 1.34 2013/01/08 17:00:33 svnexp Exp $
+# $FreeBSD: x11-fm/pcmanfm/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	pcmanfm
 PORTVERSION=	1.1.0
@@ -28,7 +28,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
