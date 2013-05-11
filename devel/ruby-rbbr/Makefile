@@ -2,7 +2,7 @@
 # Date created:		24 November 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-rbbr/Makefile,v 1.28 2012/11/17 05:56:57 svnexp Exp $
+# $FreeBSD: devel/ruby-rbbr/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	rbbr
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	rubygem-gettext>0:${PORTSDIR}/devel/rubygem-gettext
 RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gtk2.so:${PORTSDIR}/x11-toolkits/ruby-gtk2 \
 		rubygem-gettext>0:${PORTSDIR}/devel/rubygem-gettext
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 RUBY_SETUP=	install.rb
