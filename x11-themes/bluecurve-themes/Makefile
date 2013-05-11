@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-themes/bluecurve-themes/Makefile 315970 2013-04-17 14:43:05Z bapt $
+# $FreeBSD: x11-themes/bluecurve-themes/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 # NOTE TO VISITING COMMITTER: if you need to bump the port revisions
 # of the slave ports, you should add PORTREVISION?= to the "master
@@ -42,7 +42,7 @@ MASTER_SITES=	${MASTER_SITE_FEDORA_LINUX}
 MASTER_SITE_SUBDIR=	../releases/7/Fedora/source/SRPMS/
 DISTFILES=	redhat-artwork-${PORTVERSION}-9.fc7.src.rpm
 
-USE_PKGCONFIG=	build
+USES+=		pkgconfig
 
 WRKSRC=		${WRKDIR}/redhat-artwork-${PORTVERSION}
 
