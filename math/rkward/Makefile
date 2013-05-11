@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: math/rkward/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/rkward/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	rkward
 DISTVERSION=	0.4.9a
@@ -19,7 +19,7 @@ CONFLICTS=	rkward-kde4-0.5.*
 USE_KDELIBS_VER=3
 USE_PHP=	yes
 WANT_PHP_CLI=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"	\
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
