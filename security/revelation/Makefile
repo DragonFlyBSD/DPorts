@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: security/revelation/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: security/revelation/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	revelation
 PORTVERSION=	0.4.14
@@ -21,11 +21,9 @@ OPTIONS_DEFINE=	APPLET
 APPLET_DESC=	Build with applet
 
 USE_BZIP2=	yes
-USES=        pathfix
+USES=		pathfix pkgconfig gettext
 USE_GNOME=	desktopfileutils gnomeprefix pygnome2
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
-USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
