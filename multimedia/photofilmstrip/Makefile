@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: multimedia/photofilmstrip/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: multimedia/photofilmstrip/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	photofilmstrip
 PORTVERSION=	1.5.0
@@ -24,7 +24,7 @@ USE_PYTHON=	yes
 USE_WX=		2.8+
 WX_COMPS=	python:lib
 WX_UNICODE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 ALL_TARGET=	compile
 
 PFSDIR=		${PYTHONPREFIX_SITELIBDIR}/${PORTNAME}
