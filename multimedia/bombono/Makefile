@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: multimedia/bombono/Makefile 313671 2013-03-08 19:57:07Z pawel $
+# $FreeBSD: multimedia/bombono/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	bombono
 PORTVERSION=	1.2.2
@@ -23,11 +23,10 @@ RUN_DEPENDS=	GraphicsMagick>=1.1.7:${PORTSDIR}/graphics/GraphicsMagick \
 		growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 		toolame:${PORTSDIR}/audio/toolame
 
+USES=		pkgconfig gettext
 USE_BZIP2=	yes
 USE_SCONS=	yes
-USE_PKGCONFIG=	build
 USE_GCC=	4.2+
-USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 MAKE_JOBS_SAFE=	yes
 
