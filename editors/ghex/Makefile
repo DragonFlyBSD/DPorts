@@ -2,7 +2,7 @@
 # Date created:				15 September 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/ghex/Makefile,v 1.42 2012/11/17 05:57:13 svnexp Exp $
+# $FreeBSD: editors/ghex/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/editors/ghex/Makefile,v 1.13 2008/08/23 18:22:59 mezz Exp $
 #
 
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprintui libgnomeui \
 		gnomedocutils
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
