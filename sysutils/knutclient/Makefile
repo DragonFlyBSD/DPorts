@@ -2,7 +2,7 @@
 # Date created:				Mon Apr 28 05:30:59 UTC 2003
 # Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/knutclient/Makefile,v 1.26 2012/11/17 06:01:36 svnexp Exp $
+# $FreeBSD: sysutils/knutclient/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	knutclient
@@ -19,7 +19,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 CONFLICTS=      knutclient-1.*
 USE_KDELIBS_VER=	3
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool automake:env aclocal:env
 CONFIGURE_ARGS=	--disable-fast-perl --enable-mt --program-transform-name=''
