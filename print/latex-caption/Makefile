@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: ports/print/latex-caption/Makefile,v 1.27 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-caption/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	latex-caption
 PORTVERSION=	3.1.20100114
@@ -17,11 +17,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package that supports customization of captions
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMF_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMF_LSR}:${PORTSDIR}/print/tex-texmflocal
-
+USE_TEX=	tetex
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} \
 		TEXMFDIR=${TEXMFDIR}
 
