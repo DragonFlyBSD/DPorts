@@ -2,7 +2,7 @@
 # Date created:			18 Sep 2003
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
-# $FreeBSD: ports/mail/mail-notification/Makefile,v 1.71 2012/12/10 15:19:15 svnexp Exp $
+# $FreeBSD: mail/mail-notification/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	mail-notification
@@ -20,7 +20,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		notify:${PORTSDIR}/devel/libnotify
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 USE_GNOME=	gconf2 gnomeprefix gnomevfs2 libglade2 libgnomeui libxml2
 CPPFLAGS+=	-I${LOCALBASE}/include
