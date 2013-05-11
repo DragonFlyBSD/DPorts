@@ -1,9 +1,10 @@
-# $FreeBSD: security/pidgin-otr/Makefile 313010 2013-02-26 23:11:52Z jgh $
+# $FreeBSD: security/pidgin-otr/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=	otr
 PORTVERSION=	4.0.0
 # Please do not bump PORTREVISION for this port unless you have
 # confirmed via testing that it is necessary
+PORTREVISION=	1
 CATEGORIES=	security net-im net
 MASTER_SITES=	http://www.cypherpunks.ca/otr/
 PKGNAMEPREFIX=	pidgin-
@@ -22,7 +23,7 @@ MAKE_JOBS_SAFE=	yes
 
 USE_GMAKE=	yes
 USE_GNOME=	intltool
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
