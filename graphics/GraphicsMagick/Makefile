@@ -2,7 +2,7 @@
 # Date created:        25 july 2005
 # Whom:                Ron van Daal
 #
-# $FreeBSD: ports/graphics/GraphicsMagick/Makefile,v 1.39 2012/11/17 05:58:00 svnexp Exp $
+# $FreeBSD: graphics/GraphicsMagick/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	GraphicsMagick
@@ -34,7 +34,7 @@ TESTS_DESC=	Run bundled self-tests after build
 
 OPTIONS_DEFAULT=X11 TESTS DOCS
 
-USE_ICONV=	yes
+USES=		iconv
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 USE_GHOSTSCRIPT=yes
