@@ -1,5 +1,5 @@
 # Created by: Hon-Yu Lawrence Cheung (cheunghonyu@gmail.com)
-# $FreeBSD: deskutils/rednotebook/Makefile 313290 2013-03-02 20:04:15Z beech $
+# $FreeBSD: deskutils/rednotebook/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	rednotebook
 PORTVERSION=	1.7.1
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>0:${PORTSDIR}/devel/py-yaml \
 		${LOCALBASE}/bin/xdg-open:${PORTSDIR}/devel/xdg-utils \
 		${PYTHON_PKGNAMEPREFIX}chardet>0:${PORTSDIR}/textproc/py-chardet
 
-USE_GETTEXT=	yes
+USES=		gettext
 
 INSTALLS_ICONS=	yes
 USE_GNOME=	pygtk2
