@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <ports@FreeBSD.org>
-# $FreeBSD: sysutils/xfce4-genmon-plugin/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: sysutils/xfce4-genmon-plugin/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	xfce4-genmon-plugin
 PORTVERSION=	3.4.0
@@ -14,9 +14,8 @@ COMMENT=	Generic Monitor Xfce4 panel plugin
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gtk20 intltool intlhack pkgconfig
 USE_XFCE=	configenv libmenu panel
 
