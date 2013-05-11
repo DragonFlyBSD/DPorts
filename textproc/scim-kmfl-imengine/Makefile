@@ -2,7 +2,7 @@
 # Date created:		10 October 2007
 # Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
 #
-# $FreeBSD: ports/textproc/scim-kmfl-imengine/Makefile,v 1.19 2012/11/17 06:02:21 svnexp Exp $
+# $FreeBSD: textproc/scim-kmfl-imengine/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	scim-kmfl-imengine
@@ -28,8 +28,7 @@ RUN_DEPENDS=	kmflcomp:${PORTSDIR}/textproc/kmflcomp \
 USE_XORG=	x11 xkbfile xproto
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	glib20 gtk20 intlhack
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
