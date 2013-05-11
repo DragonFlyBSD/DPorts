@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/gnotime/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: deskutils/gnotime/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/deskutils/gnotime/Makefile,v 1.24 2009/11/28 05:58:58 mezz Exp $
 PORTNAME=	gnotime
 PORTVERSION=	2.3.0
@@ -16,9 +16,8 @@ COMMENT=	A time tracker for gnome2
 LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile
 
 USE_XORG=	xscrnsaver
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gnomeprefix gtkhtml3 intlhack libgnomeui
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool libltdl
 LIBTOOLFILES=	configure ../${QOF_DISTNAME}/configure
