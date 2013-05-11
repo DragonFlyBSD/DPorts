@@ -1,5 +1,5 @@
 # Created by: Jesse van den Kieboom <troplosti@orcaweb.cjb.net>
-# $FreeBSD: sysutils/gksu/Makefile 315352 2013-03-27 06:39:01Z bsam $
+# $FreeBSD: sysutils/gksu/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	gksu
 PORTVERSION=	2.0.2
@@ -14,8 +14,7 @@ LIB_DEPENDS=	gksu2:${PORTSDIR}/sysutils/libgksu \
 		nautilus-extension:${PORTSDIR}/x11-fm/nautilus \
 		gnome-keyring:${PORTSDIR}/security/gnome-keyring
 
-USES=		pathfix
-USE_PKGCONFIG=	build
+USES=		pathfix pkgconfig
 USE_GNOME=	desktopfileutils gconf2 gnomeprefix gtk20 intlhack
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
