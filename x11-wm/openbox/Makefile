@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-wm/openbox/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
+# $FreeBSD: x11-wm/openbox/Makefile 317471 2013-05-06 06:52:59Z bapt $
 
 PORTNAME=	openbox
 PORTVERSION=	3.5.0
@@ -25,8 +25,10 @@ MAN1=		openbox.1 openbox-session.1 obxprop.1 \
 
 PLIST_SUB=	VERSION=${PORTVERSION:C/.[0-9]+\$//}
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
