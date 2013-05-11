@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/devel/ecore/Makefile,v 1.12 2013/01/15 17:45:58 svnexp Exp $
+# $FreeBSD: devel/ecore/Makefile 316272 2013-04-22 20:35:19Z gblach $
 
 PORTNAME=	ecore
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 PORTEPOCH=	2
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	# none
