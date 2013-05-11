@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/evince/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: graphics/evince/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #    $MCom: ports/graphics/evince/Makefile,v 1.159 2012/09/01 23:02:10 mezz Exp $
 
 PORTNAME=	evince
@@ -25,10 +25,9 @@ USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	intlhack gnomeprefix desktopfileutils \
 		gnomedocutils ltasneededhack gconf2
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -56,8 +55,7 @@ DJVU_DESC=	DJVU support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDVI} || ${PORT_OPTIONS:MT1LIB}
-BUILD_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
-RUN_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
+USE_TEX=	tetex
 
 CONFIGURE_ARGS+=	--enable-dvi
 GCONF_SCHEMAS+=	evince-thumbnailer-dvi.schemas
