@@ -2,7 +2,7 @@
 # Date created:		31 June 2003
 # Whom:			Thorsten Greiner <thorsten.greiner@web.de>
 #
-# $FreeBSD: ports/sysutils/xfce4-battery-plugin/Makefile,v 1.48 2012/11/17 06:01:50 svnexp Exp $
+# $FreeBSD: sysutils/xfce4-battery-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfce4-battery-plugin
@@ -30,7 +30,7 @@ OPTIONS_DEFAULT=        NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
