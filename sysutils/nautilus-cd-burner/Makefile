@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/nautilus-cd-burner/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: sysutils/nautilus-cd-burner/Makefile 316600 2013-04-26 12:35:50Z bapt $
 #   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.149 2009/09/25 18:40:01 kwm Exp $
 
 PORTNAME=	nautilus-cd-burner
@@ -14,16 +14,16 @@ COMMENT=	CD burner view for Nautilus
 
 BUILD_DEPENDS=	gnome-mount:${PORTSDIR}/sysutils/gnome-mount
 RUN_DEPENDS=	gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
-		cdrdao:${PORTSDIR}/sysutils/cdrdao
+		cdrdao:${PORTSDIR}/sysutils/cdrdao \
+		cdrecord:${PORTSDIR}/sysutils/cdrtools
 
 CONFIGURE_ARGS=	--enable-gnome-mount
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack nautilus2 ltverhack \
 		desktopfileutils ltasneededhack eel2 libgnomeui
-USE_CDRTOOLS=	yes
 INSTALLS_ICONS=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
