@@ -1,5 +1,5 @@
 # Created by: eimar.koort
-# $FreeBSD: ports/x11/keyboardcast/Makefile,v 1.5 2013/01/28 15:43:54 svnexp Exp $
+# $FreeBSD: x11/keyboardcast/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	keyboardcast
 PORTVERSION=	0.1.1
@@ -13,7 +13,7 @@ COMMENT=	Broadcast keystrokes to multiple X windows for Gnome2
 
 USE_XORG=	xmu
 USE_GNOME=	libwnck libglade2 gtk20
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 INSTALLS_ICONS=	yes
 
 post-install:
