@@ -2,7 +2,7 @@
 # Date created:			Tue Mar 16 00:33:35 CET 2004
 # Whom:				Markus Brueffer <markus@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/k3b-i18n/Makefile,v 1.29 2012/12/30 18:56:11 svnexp Exp $
+# $FreeBSD: misc/k3b-i18n/Makefile 316434 2013-04-24 13:36:18Z ak $
 #
 
 PORTNAME=	k3b-i18n
@@ -20,7 +20,7 @@ EXPIRATION_DATE=	2013-07-01
 USE_KDELIBS_VER=3
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	build
+USES=		gettext:build
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>
