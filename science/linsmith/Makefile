@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/science/linsmith/Makefile,v 1.19 2013/02/07 21:32:31 svnexp Exp $
+# $FreeBSD: science/linsmith/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	linsmith
 PORTVERSION=	0.99.24
@@ -13,8 +13,7 @@ COMMENT=	Smith charting program
 LICENSE=	GPLv2 # (or later)
 
 USE_GNOME=	libgnomeui libxml2
-USE_ICONV=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
