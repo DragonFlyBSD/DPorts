@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: x11/simdock/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: x11/simdock/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	simdock
 PORTVERSION=	1.2
@@ -12,10 +12,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A fast and customizable dockbar
 
 GNU_CONFIGURE=	yes
-USES=        pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	gnomeprefix gconf2 libwnck
 USE_WX=		2.8
-USE_PKGCONFIG=	yes
 WX_CONF_ARGS=	absolute
 
 WRKSRC=		${WRKDIR}/trunk
