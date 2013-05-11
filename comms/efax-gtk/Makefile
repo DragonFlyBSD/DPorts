@@ -1,5 +1,5 @@
 # Created by: Jean-Baptiste Quenot <jb.quenot@caraldi.com>
-# $FreeBSD: ports/comms/efax-gtk/Makefile,v 1.53 2013/02/08 03:35:02 svnexp Exp $
+# $FreeBSD: comms/efax-gtk/Makefile 316695 2013-04-27 22:09:15Z bapt $
 
 PORTNAME=	efax-gtk
 PORTVERSION=	3.2.11
@@ -27,11 +27,10 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		xcb:${PORTSDIR}/x11/libxcb
 RUN_DEPENDS=	ggv:${PORTSDIR}/print/ggv
 
-USE_ICONV=	yes
+USES=		pkgconfig iconv
 USE_GHOSTSCRIPT_RUN=yes
 USE_GNOME=	gdkpixbuf2 gtk20
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
 USE_GCC=	4.4+
 USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext xfixes \
 		xi xinerama xrandr xrender
@@ -49,7 +48,7 @@ CONFIGURE_ARGS+=--with-gtk-version=gtk2
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
