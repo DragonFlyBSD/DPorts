@@ -2,7 +2,7 @@
 # Date created:				Mon Oct 18 19:41:36 CEST 2004
 # Whom:					Markus Brueffer <markus@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/libkipi/Makefile,v 1.23 2012/11/17 05:58:13 svnexp Exp $
+# $FreeBSD: graphics/libkipi/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	libkipi
 PORTVERSION=	0.1.6
@@ -19,7 +19,7 @@ USE_GNOME=	gnomehack pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||g;s|-fno-schedule-insns -fno-inline||g' \
