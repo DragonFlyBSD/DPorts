@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau
-# $FreeBSD: ports/x11/xfce4-terminal/Makefile,v 1.1 2013/01/06 17:36:39 svnexp Exp $
+# $FreeBSD: x11/xfce4-terminal/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	xfce4-terminal
 PORTVERSION=	0.6.1
@@ -19,7 +19,7 @@ USE_GNOME=	gnomehack gtk20 glib20 intltool intlhack vte \
 	libxml2 desktopfileutils
 USE_XFCE=	configenv libmenu
 USE_XORG=	x11
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 CONFIGURE_ARGS=	--without-gnome-default-appsdir
 
@@ -32,7 +32,7 @@ MANLANG=	"" ar ca da de el es fr gl id it ja ko lt \
 .include  <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
