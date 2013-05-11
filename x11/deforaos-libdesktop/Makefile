@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/x11/deforaos-libdesktop/Makefile,v 1.2 2013/01/03 16:11:15 svnexp Exp $
+# $FreeBSD: x11/deforaos-libdesktop/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	libdesktop
 PORTVERSION=	0.0.9
@@ -16,7 +16,7 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem
 
 USE_GNOME=	gtk20
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_LDCONFIG=	yes
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
