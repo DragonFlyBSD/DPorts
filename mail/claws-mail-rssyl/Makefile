@@ -1,5 +1,5 @@
 # Created by: v.velox@vvelox.net
-# $FreeBSD: ports/mail/claws-mail-rssyl/Makefile,v 1.64 2012/12/10 17:32:44 svnexp Exp $
+# $FreeBSD: mail/claws-mail-rssyl/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	rssyl
 PORTVERSION=	0.34
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
 RUN_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
 
 USE_AUTOTOOLS=	autoconf
-USE_ICONV=	yes
+USES=		iconv
 MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -30,7 +30,7 @@ CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
