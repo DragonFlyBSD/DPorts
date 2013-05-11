@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau
-# $FreeBSD: x11/libexo/Makefile 313704 2013-03-09 11:12:54Z olivierd $
+# $FreeBSD: x11/libexo/Makefile 316596 2013-04-26 10:44:28Z ak $
 #
 
 PORTNAME=	libexo
@@ -29,7 +29,7 @@ USE_LDCONFIG=	yes
 USE_PERL5=	yes
 USE_XFCE=	configenv libmenu libutil
 USE_XORG=	x11
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 CONFIGURE_ARGS+=--disable-gtk-doc-html
 
@@ -48,7 +48,7 @@ PLIST_SUB+=	APIDOCS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
