@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: x11-fm/thunar/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: x11-fm/thunar/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	Thunar
 PORTVERSION=	1.6.2
@@ -23,7 +23,7 @@ USE_GNOME=	desktopfileutils gnomehack gtk20 intltool intlhack gdkpixbuf2
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv libexo libmenu libutil
 USE_XORG=	sm x11
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 OPTIONS_DEFINE=	DBUS DOCS GVFS NLS NOTIFY STARTUP
 OPTIONS_GROUP=	PLUGINS
@@ -57,7 +57,7 @@ PLIST_SUB+=	WITH_DBUS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
