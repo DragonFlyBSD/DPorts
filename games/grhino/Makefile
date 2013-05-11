@@ -2,7 +2,7 @@
 # Date created:				21 Sep 2002
 # Whom:					UMENO Takashi <umeno@rr.iij4u.or.jp>
 #
-# $FreeBSD: ports/games/grhino/Makefile,v 1.39 2012/11/17 05:57:40 svnexp Exp $
+# $FreeBSD: games/grhino/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	grhino
@@ -14,7 +14,7 @@ MASTER_SITES=	SF/rhino/GRhino/${PORTVERSION}
 MAINTAINER=	umeno@rr.iij4u.or.jp
 COMMENT=	GRhino Othello/Reversi Program
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomeprefix libgnomeui
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
