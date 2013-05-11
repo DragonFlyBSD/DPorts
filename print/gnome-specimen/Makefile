@@ -2,7 +2,7 @@
 # Date created:		2010-08-08
 # Whom:			Steve Wills <steve@mouf.net>
 #
-# $FreeBSD: ports/print/gnome-specimen/Makefile,v 1.11 2012/11/17 06:00:50 svnexp Exp $
+# $FreeBSD: print/gnome-specimen/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gnome-specimen
@@ -19,7 +19,7 @@ USE_GNOME=	pygnomedesktop
 GCONF_SCHEMAS=	gnome-specimen.schemas
 USE_GMAKE=	yes
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	automake:env autoconf:env
 
 INSTALLS_ICONS=	yes
