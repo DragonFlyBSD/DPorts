@@ -2,12 +2,12 @@
 # Date created:				21 June 2004
 # Whom:					Alexander Novitsky
 #
-# $FreeBSD: ports/finance/kmymoney2/Makefile,v 1.39 2012/12/30 18:55:56 svnexp Exp $
+# $FreeBSD: finance/kmymoney2/Makefile 316729 2013-04-28 15:11:37Z hrs $
 #
 
 PORTNAME=	kmymoney2
 PORTVERSION=	1.0.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	finance
 MASTER_SITES=	SF/${PORTNAME}/KMyMoney/${PORTVERSION}
 
@@ -29,7 +29,7 @@ USE_AUTOTOOLS=	libtool
 USE_PERL5=	yes
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_XORG=	xext
 
 INSTALLS_ICONS=	yes
@@ -52,7 +52,7 @@ CONFIGURE_ARGS=	--enable-ofxplugin --enable-ofxbanking --enable-pdf-docs
 # Add more build-time dependencies to generate the PDF docs
 BUILD_DEPENDS+=	jade:${PORTSDIR}/textproc/jade \
 		pdfjadetex:${PORTSDIR}/print/jadetex \
-		html2ps:${PORTSDIR}/print/html2ps-letter \
+		html2ps:${PORTSDIR}/print/html2ps \
 		dsssl-docbook-modular>=0:${PORTSDIR}/textproc/dsssl-docbook-modular \
 		cppunit-config:${PORTSDIR}/devel/cppunit \
 		recode:${PORTSDIR}/converters/recode
