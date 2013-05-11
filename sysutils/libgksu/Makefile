@@ -1,5 +1,5 @@
 # Created by: Jesse van den Kieboom <troplosti@orcaweb.cjb.net>
-# $FreeBSD: sysutils/libgksu/Makefile 315274 2013-03-26 10:19:29Z bsam $
+# $FreeBSD: sysutils/libgksu/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	libgksu
 PORTVERSION=	2.0.9
@@ -17,7 +17,7 @@ LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop \
 RUN_DEPENDS=	xauth:${PORTSDIR}/x11/xauth \
 		sudo:${PORTSDIR}/security/sudo
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GNOME=	desktopfileutils glib20 gconf2
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-gtk-doc=no
