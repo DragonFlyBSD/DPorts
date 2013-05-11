@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: ports/archivers/kbackup/Makefile,v 1.20 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: archivers/kbackup/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	kbackup
 PORTVERSION=	0.5.4
@@ -15,7 +15,7 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_KDELIBS_VER=3
 INSTALLS_ICONS=	yes
 MAKE_JOBS_UNSAFE=	yes
