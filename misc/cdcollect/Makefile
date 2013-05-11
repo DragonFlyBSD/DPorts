@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: misc/cdcollect/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: misc/cdcollect/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	cdcollect
 PORTVERSION=	0.6.0
@@ -16,10 +16,9 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gnomeprefix intlhack libgnome gnomesharp20
 GCONF_SCHEMAS=	cdcollect.schemas
-USE_GETTEXT=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
