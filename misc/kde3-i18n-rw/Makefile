@@ -2,7 +2,7 @@
 # Date created:                         22 January 2005
 # Whom:                                 Michael Nottebrock <lofi@freebsd.org>
 #
-# $FreeBSD: ports/misc/kde3-i18n-rw/Makefile,v 1.21 2012/12/30 18:56:11 svnexp Exp $
+# $FreeBSD: misc/kde3-i18n-rw/Makefile 316434 2013-04-24 13:36:18Z ak $
 #
 
 PORTNAME=	kde-i18n
@@ -23,7 +23,7 @@ EXPIRATION_DATE=	2013-07-01
 USE_KDELIBS_VER=3
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	build
+USES=		gettext:build
 GNU_CONFIGURE=	yes
 KDE_I18N=	yes
 
