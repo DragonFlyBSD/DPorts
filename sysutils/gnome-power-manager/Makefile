@@ -2,7 +2,7 @@
 # Date created:				03 May 2006
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gnome-power-manager/Makefile,v 1.39 2012/11/17 06:01:33 svnexp Exp $
+# $FreeBSD: sysutils/gnome-power-manager/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.73 2011/04/30 20:43:26 mezz Exp $
 #
 
@@ -25,7 +25,7 @@ RUN_DEPENDS=	pkexec:${PORTSDIR}/sysutils/polkit
 
 CONFLICTS=	gnome-power-manager-3.[0-9]*
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
