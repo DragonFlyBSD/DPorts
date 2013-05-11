@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: graphics/gimp-app/Makefile 314378 2013-03-16 17:33:54Z kwm $
+# $FreeBSD: graphics/gimp-app/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/graphics/gimp-app/Makefile,v 1.65 2012/12/30 18:09:11 mezz Exp $
 
 PORTNAME=	gimp-app
@@ -33,14 +33,12 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_XORG=	xpm xmu xext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME+=	intltool intlhack gtk20 libartlgpl2 ltverhack gnomehier \
 		desktopfileutils
-USES=		pathfix
-USE_PKGCONFIG=	build
+USES=		pathfix pkgconfig gettext
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 LIBTOOLFLAGS=	--disable-ltlibs --release-ignore
