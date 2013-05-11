@@ -2,7 +2,7 @@
 # Date created:				21 Jan 2008
 # Whom:					Martin Wilke (miwi@FreeBSD.org)
 #
-# $FreeBSD: ports/audio/xfmpc/Makefile,v 1.29 2012/11/17 05:54:48 svnexp Exp $
+# $FreeBSD: audio/xfmpc/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfmpc
@@ -22,7 +22,7 @@ MAKE_JOBS_SAFE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 intltool intlhack pkgconfig desktopfileutils
 USE_XFCE=	configenv libmenu libutil
