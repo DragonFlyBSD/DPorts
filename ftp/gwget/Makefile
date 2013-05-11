@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: ftp/gwget/Makefile 315153 2013-03-24 19:32:45Z pawel $
+# $FreeBSD: ftp/gwget/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	gwget
 PORTVERSION=	1.0.4
@@ -20,8 +20,7 @@ EPIPHANY_DESC=	Epiphany extension
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	desktopfileutils gnomeprefix gtk20 gconf2 libgnomeui
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
