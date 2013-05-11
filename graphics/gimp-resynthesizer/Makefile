@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/gimp-resynthesizer/Makefile 313102 2013-02-28 16:22:30Z amdmi3 $
+# $FreeBSD: graphics/gimp-resynthesizer/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	resynthesizer
 PORTVERSION=	2.0
@@ -20,7 +20,7 @@ GH_COMMIT=	28cade5
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl"
-USE_GETTEXT=	yes
+USES=		gettext
 MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	aclocal automake
 USE_GMAKE=	yes
