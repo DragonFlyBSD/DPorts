@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11-wm/i3/Makefile 314749 2013-03-20 17:19:06Z bapt $
+# $FreeBSD: x11-wm/i3/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	i3
 DISTVERSION=	4.5.1
@@ -31,11 +31,9 @@ RUN_DEPENDS=	p5-IPC-Run>=0:${PORTSDIR}/devel/p5-IPC-Run \
 
 USE_PERL5_RUN=	yes
 USE_XORG=	x11 xcursor
-USES=		bison
+USES=		bison pkgconfig iconv
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_ICONV=	yes
-USE_PKGCONFIG=	build
 MAKE_JOBS_UNSAFE=	yes
 
 PLIST_FILES=	bin/i3 \
