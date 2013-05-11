@@ -2,7 +2,7 @@
 # Date created:		2007-09-17
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/accerciser/Makefile,v 1.19 2012/11/17 05:54:19 svnexp Exp $
+# $FreeBSD: accessibility/accerciser/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/accessibility/accerciser/Makefile,v 1.36 2010/04/27 21:38:19 kwm Exp $
 #
 
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	pygnomedesktop atspi intlhack
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
