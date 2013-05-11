@@ -2,7 +2,7 @@
 # Date created:        14 Aug 2009
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
-# $FreeBSD: ports/x11-wm/mutter/Makefile,v 1.12 2012/11/17 06:03:43 svnexp Exp $
+# $FreeBSD: x11-wm/mutter/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-wm/mutter/Makefile,v 1.14 2010/06/29 21:14:07 kwm Exp $
 #
 
@@ -24,7 +24,7 @@ RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
 USE_BZIP2=	yes
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk20 gconf2 ltverhack
