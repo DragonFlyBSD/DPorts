@@ -2,7 +2,7 @@
 # Date created:		21 September 2008
 # Whom:			hrkfrd@googlemail.com
 #
-# $FreeBSD: ports/net-im/pidgin-pidgimpd/Makefile,v 1.20 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: net-im/pidgin-pidgimpd/Makefile 316662 2013-04-27 11:59:28Z mva $
 #
 
 PORTNAME=	pidgimpd
@@ -21,8 +21,8 @@ BUILD_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
 USE_BZIP2=	yes
-USE_GNOME=	pkgconfig gtk20
-USE_ICONV=	yes
+USE_GNOME=	gtk20
+USES=		pkgconfig iconv
 GNU_CONFIGURE=	yes
 
 PLIST_FILES=	lib/pidgin/pidgimpd.so \
