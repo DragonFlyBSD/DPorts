@@ -1,5 +1,5 @@
 # Created by: Christopher Knaust <jigboe@gmx.de>
-# $FreeBSD: www/surf/Makefile 315136 2013-03-24 16:04:22Z miwi $
+# $FreeBSD: www/surf/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	surf
 PORTVERSION=	0.6
@@ -19,7 +19,7 @@ RUN_DEPENDS=	dmenu:${PORTSDIR}/x11/dmenu
 
 USE_CSTD=	c99
 USE_GNOME=	gtk20
-USE_PKGCONFIG=	yes
+USES=		pkgconfig
 
 MAN1=		surf.1
 PORTDOCS=	README
