@@ -1,5 +1,4 @@
-# Created by:	Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: multimedia/banshee/Makefile 315312 2013-03-26 16:13:17Z miwi $
+# $FreeBSD: multimedia/banshee/Makefile 317503 2013-05-06 10:22:41Z bapt $
 
 PORTNAME=	banshee
 PORTVERSION=	2.6.0
@@ -52,8 +51,8 @@ CONFIGURE_ARGS=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project --disable-gio-har
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
