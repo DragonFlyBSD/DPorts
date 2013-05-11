@@ -1,5 +1,5 @@
 # Created by: Yuri Pankov <yuri.pankov@gmail.com>
-# $FreeBSD: deskutils/glipper/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: deskutils/glipper/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	glipper
 PORTVERSION=	1.0
@@ -11,10 +11,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Clipboard manager for the GNOME panel
 
 USE_BZIP2=	yes
-USE_ICONV=	yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USES=        pathfix
+USES=		pathfix gettext iconv
 USE_GNOME=	gnomeprefix intltool pygnomedesktop pygnomeextras
 USE_PYTHON=	2.5+
 INSTALLS_ICONS=	yes
