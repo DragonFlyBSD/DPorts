@@ -1,6 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: sysutils/xfce4-settings/Makefile 313362 2013-03-03 15:41:59Z olivierd $
-#
+# $FreeBSD: sysutils/xfce4-settings/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	xfce4-settings
 PORTVERSION=	4.10.0
@@ -22,7 +21,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20 gtk20 desktopfileutils intltool intlhack
 USE_XFCE=	configenv garcon libexo libmenu libutil xfconf
 USE_XORG=	inputproto x11 xi
-USE_PKGCONFIG=	build
+USEs=		pkgconfig
 
 CONFIGURE_ARGS=	--enable-pluggable-dialogs \
 		--enable-gio-unix
@@ -64,7 +63,7 @@ CONFIGURE_ARGS+=--disable-libnotify
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
