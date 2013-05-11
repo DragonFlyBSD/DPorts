@@ -1,5 +1,5 @@
 # Created by: eric
-# $FreeBSD: ports/textproc/stardict3/Makefile,v 1.50 2013/02/25 16:13:37 svnexp Exp $
+# $FreeBSD: textproc/stardict3/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	stardict
 PORTVERSION=	3.0.4
@@ -23,7 +23,7 @@ CONFIGURE_ARGS=	--disable-festival \
 USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack
-USE_GETTEXT=	yes
+USES=		gettext
 MAKE_JOBS_SAFE=	yes
 CONFIGURE_WRKSRC=	${WRKSRC}/dict
 BUILD_WRKSRC=	${CONFIGURE_WRKSRC}
