@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-themes/thewidgetfactory/Makefile,v 1.12 2012/12/31 17:09:13 svnexp Exp $
+# $FreeBSD: x11-themes/thewidgetfactory/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	thewidgetfactory
 PORTVERSION=	0.2.1
@@ -13,7 +13,7 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 
 PLIST_FILES=	bin/twf
 
