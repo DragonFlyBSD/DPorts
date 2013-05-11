@@ -1,4 +1,4 @@
-@comment $FreeBSD: x11-wm/awesome/pkg-plist 315273 2013-03-26 10:05:44Z garga $
+@comment $FreeBSD: x11-wm/awesome/pkg-plist 316602 2013-04-26 13:01:31Z garga $
 bin/awesome
 bin/awesome-client
 etc/xdg/awesome/rc.lua
@@ -12,7 +12,6 @@ etc/xdg/awesome/rc.lua
 %%DATADIR%%/lib/awful/completion.lua
 %%DATADIR%%/lib/awful/dbus.lua
 %%DATADIR%%/lib/awful/ewmh.lua
-%%DATADIR%%/lib/awful/icccm.lua
 %%DATADIR%%/lib/awful/init.lua
 %%DATADIR%%/lib/awful/key.lua
 %%DATADIR%%/lib/awful/keygrabber.lua
@@ -65,6 +64,7 @@ etc/xdg/awesome/rc.lua
 %%DATADIR%%/lib/wibox/init.lua
 %%DATADIR%%/lib/wibox/layout/align.lua
 %%DATADIR%%/lib/wibox/layout/base.lua
+%%DATADIR%%/lib/wibox/layout/constraint.lua
 %%DATADIR%%/lib/wibox/layout/fixed.lua
 %%DATADIR%%/lib/wibox/layout/flex.lua
 %%DATADIR%%/lib/wibox/layout/init.lua
@@ -197,7 +197,6 @@ share/xsessions/awesome.desktop
 @dirrm %%DATADIR%%/lib/awful/mouse
 @dirrm %%DATADIR%%/lib/awful/layout/suit
 @dirrm %%DATADIR%%/lib/awful/layout
-@dirrm %%DATADIR%%/lib/awful
 @dirrm %%DATADIR%%/lib/awful
 @dirrm %%DATADIR%%/lib
 @dirrm %%DATADIR%%/icons

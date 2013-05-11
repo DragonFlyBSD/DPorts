@@ -1,9 +1,9 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: x11-wm/awesome/Makefile 315273 2013-03-26 10:05:44Z garga $
+# $FreeBSD: x11-wm/awesome/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	awesome
-PORTVERSION=	3.5
-PORTREVISION=	1
+PORTVERSION=	3.5.1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
@@ -35,8 +35,7 @@ LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo \
 		execinfo:${PORTSDIR}/devel/libexecinfo
 
 USE_XZ=		yes
-USE_ICONV=	yes
-USES=		cmake
+USES=		cmake iconv
 CMAKE_ARGS+=	-DSYSCONFDIR=${PREFIX}/etc
 USE_EFL=	imlib2
 USE_GNOME=	glib20 pango
