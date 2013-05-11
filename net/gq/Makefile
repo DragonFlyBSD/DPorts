@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net/gq/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: net/gq/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gq
 PORTVERSION=	1.3.4
@@ -21,7 +21,7 @@ CACHE_DESC=	Support the OpenLDAP experimental client cache
 USE_GNOME=	libglade2 gnomedocutils
 USE_OPENSSL=	yes
 USE_OPENLDAP=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ldap-prefix=${LOCALBASE}
