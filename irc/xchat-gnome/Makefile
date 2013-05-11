@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: irc/xchat-gnome/Makefile 315959 2013-04-17 11:32:01Z kwm $
+# $FreeBSD: irc/xchat-gnome/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	xchat
 PORTVERSION=	0.26.1
@@ -17,10 +17,9 @@ LIB_DEPENDS=	sexy:${PORTSDIR}/x11-toolkits/libsexy \
 		canberra-gtk:${PORTSDIR}/audio/libcanberra \
 		notify:${PORTSDIR}/devel/libnotify
 
-USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		pathfix desktop-file-utils
+USES=		pathfix desktop-file-utils gettext
 USE_GNOME=	gnomeprefix libgnomeui gnomedocutils
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
