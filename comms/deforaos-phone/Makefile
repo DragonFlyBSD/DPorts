@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: comms/deforaos-phone/Makefile 315061 2013-03-23 18:04:20Z rm $
+# $FreeBSD: comms/deforaos-phone/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	phone
 PORTVERSION=	0.3.11
@@ -22,9 +22,8 @@ LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem \
 BUILD_DEPENDS=	locker:${PORTSDIR}/x11/deforaos-locker \
 		${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l_compat
 
+USES=		pkgconfig gettext
 USE_GNOME=	gtk20 desktopfileutils
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
