@@ -1,9 +1,14 @@
-# $FreeBSD: Mk/bsd.tex.mk 317588 2013-05-07 08:44:32Z hrs $
+# $FreeBSD: Mk/bsd.tex.mk 317777 2013-05-10 09:05:05Z hrs $
 #
 # bsd.tex.mk - Common part for TeX related ports
 #
 TEX_MAINTAINER=	hrs@FreeBSD.org
 
+#
+# For ports which depend on TeX:
+# USE_TEX=	yes
+# Note that teTeX or TeXLive is used based on $TEX_DEFAULT, and full version
+# of the packages will be installed as the dependency. 
 #
 # For full teTeX dependency:
 # USE_TEX=	tetex
@@ -24,7 +29,7 @@ TEX_MAINTAINER=	hrs@FreeBSD.org
 #  texmf:	TeXLive texmf tree
 #  infra:	tlmgr dependency (Perl modules)
 #
-#  dvipsk:	dvipsk (not implemented yet)
+#  dvipsk:	dvipsk
 #  dvipdfmx:	DVIPDFMx
 #  xdvik:	XDvi
 #
@@ -48,6 +53,10 @@ TEX_DEFAULT?=	tetex
 
 # normalize
 TEX_DEFAULT:=	${TEX_DEFAULT:tl}
+
+.if defined(USE_TEX) && !empty(USE_TEX:M[Yy][Ee][Ss])
+USE_TEX:=	${TEX_DEFAULT}
+.endif
 
 TEXMFDIR?=	share/texmf
 TEXMFDISTDIR?=	share/texmf-dist
@@ -76,6 +85,10 @@ CONFLICTS_INSTALL+=	${CONFLICTS_TEXLIVE}
 .endif
 .if !empty(USE_TEX:Mtetex-base) || !empty(USE_TEX:Mtetex)
 _USE_TETEX_BASE=	mktexlsr:${PORTSDIR}/print/teTeX-base
+CONFLICTS_INSTALL+=	${CONFLICTS_TEXLIVE}
+.endif
+.if !empty(USE_TEX:Mtetex-dvipsk) || !empty(USE_TEX:Mtetex)
+_USE_TETEX_DVIPSK=	dvips:${PORTSDIR}/print/dvipsk-tetex
 CONFLICTS_INSTALL+=	${CONFLICTS_TEXLIVE}
 .endif
 
@@ -116,9 +129,8 @@ _USE_TEX_PTEXENC=	ptexenc:${PORTSDIR}/print/tex-ptexenc
 CONFLICTS_INSTALL+=	${CONFLICTS_TETEX}
 .endif
 .if !empty(USE_TEX:Mdvipsk) || !empty(USE_TEX:Mtexlive)
-# XXX
-#_USE_TEX_DVIPSK=	dvips:${PORTSDIR}/print/tex-dvipsk
-#CONFLICTS_INSTALL+=	${CONFLICTS_TETEX}
+_USE_TEX_DVIPSK=	dvips:${PORTSDIR}/print/tex-dvipsk
+CONFLICTS_INSTALL+=	${CONFLICTS_TETEX}
 .endif
 .if !empty(USE_TEX:Mxdvik) || !empty(USE_TEX:Mtexlive)
 _USE_TEX_XDVIK=		xdvi:${PORTSDIR}/print/tex-xdvik
@@ -145,13 +157,14 @@ _USE_TEXLIVE_INFRA=	${SITE_PERL}/TeXLive/TLConfig.pm:${PORTSDIR}/print/texlive-i
 CONFLICTS_INSTALL+=	${CONFLICTS_TETEX}
 .endif
 
-.for D in TETEX_TEXMF TETEX_BASE TEXLIVE_BASE TEX_WEB2C TEXLIVE_TEXMF \
-	TEXLIVE_INFRA \
+.for D in TETEX_TEXMF TETEX_BASE TETEX_DVIPSK \
+	TEXLIVE_BASE TEX_WEB2C TEXLIVE_TEXMF TEXLIVE_INFRA \
 	TEX_FORMATS TEX_ALEPH TEX_JADETEX TEX_XMLTEX TEX_LUATEX \
 	TEX_XETEX TEX_PTEX TEX_XDVIK TEX_DVIPSK TEX_DVIPDFMX
 RUN_DEPENDS+=	${_USE_${D}}
 .endfor
-.for D in TETEX_TEXMF TETEX_BASE TEXLIVE_BASE TEX_WEB2C TEXLIVE_TEXMF \
+.for D in TETEX_TEXMF TETEX_BASE TETEX_DVIPSK \
+	TEXLIVE_BASE TEX_WEB2C TEXLIVE_TEXMF \
 	TEX_FORMATS TEX_ALEPH TEX_JADETEX TEX_XMLTEX TEX_LUATEX \
 	TEX_XETEX TEX_PTEX
 BUILD_DEPENDS+=	${_USE_${D}}
