@@ -1,5 +1,5 @@
 # Created by: anderson@cnpm.embrapa.br
-# $FreeBSD: security/kovpn/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/kovpn/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	kovpn
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_BZIP2=	yes
 USE_KDELIBS_VER=3
 PREFIX=		${KDE_PREFIX}
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_XORG=	xpm
