@@ -2,7 +2,7 @@
 # Date created:		August 14, 2002
 # Whom:			James Earl <jdearl@telus.net>
 #
-# $FreeBSD: ports/x11-wm/xfce4-wm/Makefile,v 1.65 2012/11/17 06:03:44 svnexp Exp $
+# $FreeBSD: x11-wm/xfce4-wm/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfce4-wm
@@ -26,7 +26,7 @@ CONFIGURE_ARGS=	--enable-xsync \
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gtk20 intltool intlhack pkgconfig desktopfileutils
 USE_LDCONFIG=	yes
