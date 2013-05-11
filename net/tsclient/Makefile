@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: net/tsclient/Makefile 315491 2013-03-28 17:56:37Z eadler $
+# $FreeBSD: net/tsclient/Makefile 316948 2013-04-30 16:26:32Z jgh $
 
 PORTNAME=	tsclient
 PORTVERSION=	0.150
@@ -8,14 +8,14 @@ CATEGORIES=	net gnome
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@thepentagon.org
-COMMENT=	A GNOME 2 frontend for rdesktop and vncviewer
+COMMENT=	GNOME 2 frontend for rdesktop and vncviewer
 
 RUN_DEPENDS=	rdesktop:${PORTSDIR}/net/rdesktop
 
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk20
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="`pkg-config --libs libgnomeui-2.0`"
 CPPFLAGS+=	-I${LOCALBASE}/include `pkg-config --cflags libgnomeui-2.0`
@@ -24,7 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		tsclient.1
 PORTDOCS=	COPYING NEWS README
 
-OPTIONS_DEFINE= GNOME TIGHTVNC XNEST DOCS
+OPTIONS_DEFINE=	GNOME TIGHTVNC XNEST DOCS
 OPTIONS_DEFAULT=	GNOME
 TIGHTVNC_DESC=	vncviewer support
 XNEST_DESC=	X via Xnest support
@@ -32,8 +32,8 @@ XNEST_DESC=	X via Xnest support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNOME}
-USES=		pathfix
-USE_GNOME+=	gnomeprefix gnomepanel libgnomeui 
+USES+=		pathfix
+USE_GNOME+=	gnomeprefix gnomepanel libgnomeui
 .else
 CONFIGURE_ARGS+=	--disable-gnome
 .endif
