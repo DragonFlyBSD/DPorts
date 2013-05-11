@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/labyrinth/Makefile,v 1.10 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/labyrinth/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	labyrinth
 PORTVERSION=	0.5
@@ -15,7 +15,7 @@ USE_GMAKE=	yes
 CONFIGURE_ENV=	GMSGFMT=msgfmt
 USE_GNOME=	pygnome2 gnomedesktop gnomehack
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 
 .include <bsd.port.mk>
