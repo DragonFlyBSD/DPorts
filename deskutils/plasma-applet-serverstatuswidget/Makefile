@@ -2,7 +2,7 @@
 # Date Created:				2011-02-23
 # Whom:					Jason E. Hale <bsdkaffee@gmail.com>
 #
-# $FreeBSD: deskutils/plasma-applet-serverstatuswidget/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: deskutils/plasma-applet-serverstatuswidget/Makefile 316407 2013-04-24 07:35:40Z ak $
 #
 
 PORTNAME=	serverstatuswidget
@@ -17,8 +17,7 @@ MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Server monitoring plasma applet for KDE4
 
 USE_BZIP2=	yes
-USES=		cmake
-USE_GETTEXT=	yes
+USES=		cmake gettext
 USE_KDE4=	automoc4 kdeprefix workspace
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 MAKE_JOBS_SAFE=	yes
