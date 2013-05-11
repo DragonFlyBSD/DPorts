@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: ports/print/tex-omegaware-old/Makefile,v 1.11 2012/11/17 06:00:54 svnexp Exp $
+# $FreeBSD: print/tex-omegaware-old/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	tex-omegaware-old
 PORTVERSION=	2.0.2
@@ -16,8 +16,7 @@ EXTRACT_ONLY=	${TETEX_SRC}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Old version of ovf2ovp, ovp2ovf, ofm2opl, and opl2ofm
 
-BUILD_DEPENDS=	tangle:${PORTSDIR}/print/teTeX-base
-
+USE_TEX=	tetex
 DIST_SUBDIR=	teTeX
 WRKSRC=		${WRKDIR}/tetex-src-${PORTVERSION}/texk/web2c
 CONFIGURE_WRKSRC=	${WRKDIR}/tetex-src-${PORTVERSION}
