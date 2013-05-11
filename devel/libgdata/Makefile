@@ -2,7 +2,7 @@
 # Date created:				9 May 2009
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libgdata/Makefile,v 1.16 2012/11/17 05:55:54 svnexp Exp $
+# $FreeBSD: devel/libgdata/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/devel/libgdata/Makefile,v 1.14 2010/09/30 19:39:17 kwm Exp $
 #
 
@@ -20,7 +20,7 @@ LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome
 
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	libtool
