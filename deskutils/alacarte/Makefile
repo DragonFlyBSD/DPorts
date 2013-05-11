@@ -2,7 +2,7 @@
 # Date created:				22 March 2005
 # Whom:					FreeBSD GNOME Team
 #
-# $FreeBSD: ports/deskutils/alacarte/Makefile,v 1.34 2012/11/17 05:55:26 svnexp Exp $
+# $FreeBSD: deskutils/alacarte/Makefile 316464 2013-04-24 18:10:30Z ak $
 #    $MCom: ports/deskutils/alacarte/Makefile,v 1.25 2010/03/29 13:19:00 avl Exp $
 #
 
@@ -19,7 +19,7 @@ COMMENT=	An editor for the freedesktop.org menu specification
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix pygnomedesktop intlhack
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_PYTHON=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
