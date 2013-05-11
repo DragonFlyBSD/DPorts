@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: emulators/mupen64plus-video-z64/Makefile 314312 2013-03-15 16:10:06Z jgh $
+# $FreeBSD: emulators/mupen64plus-video-z64/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTREVISION=	2
 PKGNAMESUFFIX=	-video-z64
@@ -19,7 +19,7 @@ OPTIONS_DEFINE=	#
 CFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/${PORTNAME}
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf -
+EXTRACT_AFTER_ARGS=	#
 BUILD_WRKSRC=		${WRKSRC}/${PORTNAME}${PKGNAMESUFFIX}/projects/unix
 WRKSRC=			${WRKDIR}
 
