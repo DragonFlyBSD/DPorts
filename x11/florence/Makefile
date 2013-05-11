@@ -2,7 +2,7 @@
 # Date created:                2011/07/26
 # Whom:                        Kris Moore <kmoore@freebsd.org>
 #
-# $FreeBSD: ports/x11/florence/Makefile,v 1.5 2012/11/17 06:03:15 svnexp Exp $
+# $FreeBSD: x11/florence/Makefile 316683 2013-04-27 18:25:24Z mva $
 #
 
 PORTNAME=	florence
@@ -21,9 +21,8 @@ USE_XORG=	xtst
 USE_GNOME=	gtk20 intlhack gnomedocutils gconf2 librsvg2 gnomepanel
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext iconv
 USE_GMAKE=	yes
-USE_ICONV=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_OMF=	yes
