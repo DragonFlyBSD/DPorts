@@ -2,7 +2,7 @@
 # Date created: 			15 February 2004
 # Whom:					Arjan van Leeuwen <avleeuwen@piwebs.com>
 #
-# $FreeBSD: ports/graphics/kipi-plugins/Makefile,v 1.56 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: graphics/kipi-plugins/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	kipi-plugins
@@ -49,7 +49,7 @@ USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_KDELIBS_VER=3
-USE_GETTEXT=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-ipodexport
 
