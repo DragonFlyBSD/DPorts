@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: ports/mail/claws-mail-pdf_viewer/Makefile,v 1.25 2012/12/10 17:32:44 svnexp Exp $
+# $FreeBSD: mail/claws-mail-pdf_viewer/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	pdf_viewer
 PORTVERSION=	0.9.3
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
 RUN_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
 
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_GHOSTSCRIPT=yes
 USE_AUTOTOOLS=	autoconf
 MAKE_JOBS_SAFE=	yes
@@ -28,7 +28,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
