@@ -1,5 +1,5 @@
 # Created by: Piotr Smyrak <smyru@heron.pl>
-# $FreeBSD: ports/graphics/agave/Makefile,v 1.20 2013/01/31 14:01:28 svnexp Exp $
+# $FreeBSD: graphics/agave/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	agave
 PORTVERSION=	0.4.2
@@ -17,7 +17,7 @@ LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
 #OPTIONS=	GNOME	"Adds GNOME support"	on
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomedocutils intlhack
 GCONF_SCHEMAS=	agave.schemas
