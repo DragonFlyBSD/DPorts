@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: archivers/thunar-archive-plugin/Makefile 309681 2012-12-30 16:50:29Z olivierd $
+# $FreeBSD: archivers/thunar-archive-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	thunar-archive-plugin
@@ -16,7 +16,7 @@ COMMENT=	Archive plugin for the Thunar File Manager
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_XFCE=	configenv libexo thunar
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 USE_GNOME=	desktopfileutils intltool
 USE_GMAKE=	yes
