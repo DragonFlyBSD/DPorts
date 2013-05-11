@@ -2,7 +2,7 @@
 # Date created:				08 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome-session/Makefile,v 1.84 2012/11/17 06:03:15 svnexp Exp $
+# $FreeBSD: x11/gnome-session/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11/gnome-session/Makefile,v 1.187 2010/11/17 12:00:11 kwm Exp $
 #
 
@@ -29,7 +29,7 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gno
 		${LOCALBASE}/bin/xdpyinfo:${PORTSDIR}/x11/xdpyinfo
 
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_BZIP2=	yes
 USE_XORG=	ice sm xau xrandr
 USE_GNOME=	gnomeprefix gnomehack intlhack gconf2
