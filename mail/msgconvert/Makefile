@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: ports/mail/msgconvert/Makefile,v 1.12 2012/11/17 05:59:06 svnexp Exp $
+# $FreeBSD: mail/msgconvert/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	msgconvert
 PORTVERSION=	20060330
@@ -19,9 +19,13 @@ RUN_DEPENDS=	p5-OLE-Storage_Lite>=0:${PORTSDIR}/devel/p5-OLE-Storage_Lite \
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
+USES+=		shebangfix
 USE_BZIP2=	yes
 USE_PERL5=	yes
+EXTRACT_CMD=	${BZCAT}
+EXTRACT_BEFORE_ARGS=	
 EXTRACT_AFTER_ARGS=	> ${PORTNAME}.pl
+SHEBANG_FILES=	${PORTNAME}.pl
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}.pl
