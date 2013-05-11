@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/graphics/evas_generic_loaders-svg/Makefile,v 1.2 2013/01/15 17:46:00 svnexp Exp $
+# $FreeBSD: graphics/evas_generic_loaders-svg/Makefile 316272 2013-04-22 20:35:19Z gblach $
 
 PORTNAME=	svg
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -14,13 +14,11 @@ COMMENT=	Additional loader for Evas (svg)
 
 LICENSE=	GPLv2
 
-#LIB_DEPENDS=	poppler:${PORTSDIR}/graphics/poppler
-
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_EFL=	eina
-USE_GNOME=	librsvg2 gnomehack pkgconfig
+USE_GNOME=	librsvg2
 USE_LDCONFIG=	yes
 
 BINSRC=		${WRKSRC}/src/bin/${PORTNAME}
