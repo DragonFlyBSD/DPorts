@@ -1,5 +1,5 @@
 # Created by: Juan Salaverria <rael@vectorstar.net>
-# $FreeBSD: textproc/sagasu/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: textproc/sagasu/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	sagasu
 PORTVERSION=	2.0.12
@@ -11,10 +11,8 @@ COMMENT=	A GNOME tool to find strings in a set of files
 
 LICENSE=	GPLv2 # (or later)
 
-USES=        pathfix
+USES=		pathfix pkgconfig gettext
 USE_GNOME=	gnomehier libgnomeui
-USE_GETTEXT=	yes
-USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
