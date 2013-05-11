@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson <gljohns@bellsouth.net>
-# $FreeBSD: mail/balsa/Makefile 314634 2013-03-19 11:03:57Z kwm $
+# $FreeBSD: mail/balsa/Makefile 316662 2013-04-27 11:59:28Z mva $
 #   $MCom: ports-stable/mail/balsa/Makefile,v 1.3 2007/12/02 19:18:50 marcus Exp $
 
 PORTNAME=	balsa
@@ -25,13 +25,11 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PERL5=	yes
 USE_OPENSSL=	yes
-USES=		pathfix
+USES=		pathfix gettext iconv
 USE_GNOME=	gnomeprefix intlhack libgnomeui gtkhtml3 \
 		libgnomeprintui
-USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libltdl
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
 CONFIGURE_ARGS=	--enable-threads \
 		--disable-more-warnings \
 		--with-ssl \
