@@ -2,7 +2,7 @@
 # Date created:				13th February 2002
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/xscreensaver-gnome/Makefile,v 1.78 2012/11/17 06:03:23 svnexp Exp $
+# $FreeBSD: x11/xscreensaver-gnome/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11/xscreensaver-gnome/Makefile,v 1.5 2007/08/15 18:29:16 mezz Exp $
 #
 
@@ -26,7 +26,7 @@ USE_GL=		gl
 USE_GMAKE=	yes
 USE_PERL5_RUN=	yes
 USE_GNOME=	gnomehier libglade2 gnomehack
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk --with-gl --with-gle --with-pixbuf --with-xpm \
 		--with-jpeg=${LOCALBASE} --with-xshm-ext --with-xdbe-ext \
