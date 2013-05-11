@@ -2,7 +2,7 @@
 # Date created:				14th Jan 2008
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/net/libgweather/Makefile,v 1.25 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/libgweather/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/net/libgweather/Makefile,v 1.42 2010/09/27 14:03:30 kwm Exp $
 #
 
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/mi
 LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 ltverhack
