@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: ports/mail/claws-mail-gdata/Makefile,v 1.6 2012/12/10 17:32:44 svnexp Exp $
+# $FreeBSD: mail/claws-mail-gdata/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	gdata
 PORTVERSION=	0.5
@@ -18,7 +18,7 @@ LIB_DEPENDS=	gdata:${PORTSDIR}/devel/libgdata
 RUN_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
 
 GNU_CONFIGURE=	yes
-USE_ICONV=	yes
+USES=		iconv
 USE_GMAKE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -30,7 +30,7 @@ CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
