@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/x11-fm/deforaos-browser/Makefile,v 1.3 2013/01/03 16:14:23 svnexp Exp $
+# $FreeBSD: x11-fm/deforaos-browser/Makefile 316355 2013-04-23 14:20:25Z bapt $
 
 PORTNAME=	deforaos-browser
 PORTVERSION=	0.4.10
@@ -19,8 +19,7 @@ LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem \
 		Xrandr:${PORTSDIR}/x11/libXrandr
 
 USE_GNOME=	gtk20 desktopfileutils
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
+USES=		pkgconfig gettext
 INSTALLS_ICONS=	yes
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
