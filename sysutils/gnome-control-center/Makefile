@@ -2,7 +2,7 @@
 # Date created:				04 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gnome-control-center/Makefile,v 1.123 2012/11/17 06:01:33 svnexp Exp $
+# $FreeBSD: sysutils/gnome-control-center/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.214 2010/11/18 11:46:09 kwm Exp $
 #
 
@@ -25,7 +25,7 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GSTREAMER=	good
