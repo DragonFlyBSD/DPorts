@@ -2,7 +2,7 @@
 # Date created:				26 March 2007
 # Whom:					Daniel W. Steinbrook
 #
-# $FreeBSD: sysutils/keep/Makefile 311537 2013-02-04 01:46:42Z amdmi3 $
+# $FreeBSD: sysutils/keep/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	keep
@@ -21,6 +21,6 @@ USE_GMAKE=	yes
 USE_KDELIBS_VER=3
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 .include <bsd.port.mk>
