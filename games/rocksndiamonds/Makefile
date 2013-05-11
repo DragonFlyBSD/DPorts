@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/rocksndiamonds/Makefile 314970 2013-03-22 22:22:00Z beech $
+# $FreeBSD: games/rocksndiamonds/Makefile 316654 2013-04-27 08:50:46Z mva $
 
 PORTNAME=	rocksndiamonds
 PORTVERSION=	3.3.0.1
@@ -34,7 +34,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	smpeg:${PORTSDIR}/multimedia/smpeg
 EXTRACT_DEPENDS=${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 
-USE_ICONV=	yes
+USES=		iconv
 USE_SDL=	image mixer net sdl
 USE_GMAKE=	yes
 MAKE_ARGS=	CC="${CC}" MAKE="${GMAKE}" OPTIONS="${CFLAGS}" \
