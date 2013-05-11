@@ -2,7 +2,7 @@
 # Date created:				28 April, 2005
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
-# $FreeBSD: mail/evolution-exchange/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: mail/evolution-exchange/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/mail/evolution-exchange/Makefile,v 1.172 2012/09/20 23:06:27 kwm Exp $
 #
 
@@ -23,7 +23,7 @@ RUN_DEPENDS=	${EVO_PC_FILE}:${PORTSDIR}/mail/evolution
 CONFLICTS=	evolution-exchange-3.[0-9]*
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_BDB=	41
