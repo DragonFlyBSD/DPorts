@@ -1,6 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: ports/audio/xfce4-mpc-plugin/Makefile,v 1.36 2012/12/31 01:05:42 svnexp Exp $
-#
+# $FreeBSD: audio/xfce4-mpc-plugin/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	xfce4-mpc-plugin
 PORTVERSION=	0.4.4
@@ -15,12 +14,11 @@ COMMENT=	An MPC plugin for Xfce
 
 LIB_DEPENDS=	mpd:${PORTSDIR}/audio/libmpd
 
+USES=		pkgconfig gettext
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libexo libmenu panel
-USE_PKGCONFIG=	build
 
 .include <bsd.port.mk>
