@@ -2,7 +2,7 @@
 # Date created:				23 Januar 2007
 # Whom:					Martin Wilke (miwi@FreeBSD.org)
 #
-# $FreeBSD: ports/x11-clocks/xfce4-timer-out-plugin/Makefile,v 1.19 2012/11/17 06:03:25 svnexp Exp $
+# $FreeBSD: x11-clocks/xfce4-timer-out-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	xfce4-time-out-plugin
@@ -19,7 +19,7 @@ COMMENT=	A timer out plugin for Xfce
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gtk20 intltool intlhack pkgconfig
 USE_XFCE=	configenv libmenu libutil panel
