@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: www/epiphany/Makefile 314914 2013-03-22 11:50:30Z kwm $
+# $FreeBSD: www/epiphany/Makefile 316596 2013-04-26 10:44:28Z ak $
 #   $MCom: ports/www/epiphany/Makefile,v 1.246 2011/04/30 20:43:27 mezz Exp $
 
 PORTNAME=	epiphany
@@ -27,10 +27,9 @@ CONFLICTS=	epiphany-3.[0-9]*
 
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack gnomedesktop desktopfileutils
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
