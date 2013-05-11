@@ -1,13 +1,9 @@
-# New ports collection makefile for:	jd
-# Date created:     			10 May 2009
-# Whom:             			Takashi Kato <townwear@gmail.com>
-#
-# $FreeBSD: ports/japanese/jd/Makefile,v 1.28 2013/02/05 16:54:23 svnexp Exp $
-#
+# Created by: Takashi Kato <townwear@gmail.com>
+# $FreeBSD: japanese/jd/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
 
 PORTNAME=		jd
 PORTVERSION=		2.8.5
-PORTREVISION=		1
+PORTREVISION=	2
 CATEGORIES=		japanese www
 MASTER_SITES=		SFJP
 MASTER_SITE_SUBDIR=	jd4linux/56721
