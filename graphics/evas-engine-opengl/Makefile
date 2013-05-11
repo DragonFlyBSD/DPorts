@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/graphics/evas-engine-opengl/Makefile,v 1.15 2013/01/15 17:46:00 svnexp Exp $
+# $FreeBSD: graphics/evas-engine-opengl/Makefile 317205 2013-05-03 13:33:48Z bapt $
 
 PORTNAME=	engine-opengl
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6.1
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -19,8 +19,12 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+MYMAKE=		${MAKE}
+.if defined(.PARSEDIR)
+USE_GMAKE=	yes
+MYMAKE=		${GMAKE}
+.endif
 USE_EFL=	evas librt_hack libtool_hack
-USE_GNOME=	gnomehack pkgconfig
 USE_XORG=	x11 xext xrender
 USE_GL=		gl glu
 USE_LDCONFIG=	yes
@@ -41,7 +45,7 @@ post-patch:
 
 pre-build:
 	@(cd ${WRKSRC}/src/modules/engines/gl_common; ${SETENV} ${MAKE_ENV} \
-		${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET})
+		${MYMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET})
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/evas-opengl-x11.pc \
