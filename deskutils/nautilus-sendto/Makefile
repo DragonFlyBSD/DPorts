@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/nautilus-sendto/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: deskutils/nautilus-sendto/Makefile 316596 2013-04-26 10:44:28Z ak $
 #    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.30 2010/09/30 06:21:18 kwm Exp $
 
 PORTNAME=	nautilus-sendto
@@ -16,9 +16,8 @@ GLIB_SCHEMAS=	org.gnome.Nautilus.Sendto.gschema.xml
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	intlhack gnomeprefix nautilus2 gnomehack evolutiondataserver
-USE_GETTEXT=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-plugins="${SENDTO_PLUGINS}"
