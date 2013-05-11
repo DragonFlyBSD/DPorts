@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/muine/files/patch-libmuine_rb-cell-renderer-pixbuf.c,v 1.4 2012/11/17 05:54:39 svnexp Exp $
+$FreeBSD: audio/muine/files/patch-libmuine_rb-cell-renderer-pixbuf.c 300895 2012-07-14 12:56:14Z beat $
 
 --- libmuine/rb-cell-renderer-pixbuf.c.orig
 +++ libmuine/rb-cell-renderer-pixbuf.c

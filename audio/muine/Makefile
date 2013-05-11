@@ -1,10 +1,6 @@
-# New ports collection makefile for:	muine
-# Date created:				20040615
-# Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-#
-# $FreeBSD: ports/audio/muine/Makefile,v 1.68 2012/11/17 05:54:39 svnexp Exp $
+# Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
+# $FreeBSD: audio/muine/Makefile 317576 2013-05-07 06:45:39Z bapt $
 #   $Id: Makefile,v 1.54 2007/01/26 03:17:25 tmclau02 Exp $
-#
 
 PORTNAME=	muine
 PORTVERSION=	0.8.11
@@ -24,20 +20,18 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext shebangfix
 USE_GNOME=	gnomeprefix gnomehack intltool libgnomeui gnomesharp20
 USE_GSTREAMER=	gconf
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
+SHEBANG_FILES=	src/muine.in
+bash_CMD=	${SETENV} bash
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	muine.schemas
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|/bin/bash|/usr/bin/env bash|g' \
-		${WRKSRC}/src/muine.in
 
 .include <bsd.port.mk>
