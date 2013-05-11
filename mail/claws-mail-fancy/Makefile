@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: ports/mail/claws-mail-fancy/Makefile,v 1.27 2012/12/10 17:32:44 svnexp Exp $
+# $FreeBSD: mail/claws-mail-fancy/Makefile 316662 2013-04-27 11:59:28Z mva $
 
 PORTNAME=	fancy
 PORTVERSION=	0.9.17
@@ -20,7 +20,7 @@ RUN_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
 
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	autoconf
-USE_ICONV=	yes
+USES=		iconv
 USE_GNOME=	gtk20
 MAKE_JOBS_SAFE=	yes
 
@@ -33,7 +33,7 @@ CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
