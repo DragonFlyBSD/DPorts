@@ -1,10 +1,10 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: ports/lang/chicken/Makefile,v 1.50 2012/11/17 05:58:48 svnexp Exp $
+# $FreeBSD: lang/chicken/Makefile 313997 2013-03-12 18:49:10Z culot $
 
 PORTNAME=	chicken
-PORTVERSION=	4.8.0
+PORTVERSION=	4.8.0.3
 CATEGORIES=	lang scheme
-MASTER_SITES=	http://code.call-cc.org/releases/${PORTVERSION}/
+MASTER_SITES=	http://code.call-cc.org/releases/4.8.0/
 
 MAINTAINER=	vmagerya@gmail.com
 COMMENT=	A Scheme-to-C compiler
@@ -22,14 +22,14 @@ MAKE_ARGS+=	PLATFORM=bsd PREFIX=${PREFIX} \
 		DOCDIR="${DOCSDIR}" \
 		C_COMPILER_OPTIMIZATION_OPTIONS="${CFLAGS}"
 
-NEW_ARCH=	${ARCH:S/i386/x86/:S/amd64/x86-64/}
+NEW_ARCH=	${ARCH:S/i386/x86/:S/amd64/x86-64/:S/x86_64/x86-64/}
 
 MAN1=		chicken.1 chicken-bug.1 chicken-install.1 chicken-profile.1 \
 		chicken-status.1 chicken-uninstall.1 csc.1 csi.1
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} != "amd64" && ${ARCH} != "i386" && ${ARCH} != "sparc64"
+.if ${ARCH} != "x86_64" && ${ARCH} != "i386" && ${ARCH} != "sparc64"
 MAKE_ARGS+=	HACKED_APPLY=
 .endif
 
