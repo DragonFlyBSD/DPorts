@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: ports/deskutils/deforaos-todo/Makefile,v 1.2 2013/02/10 16:20:53 svnexp Exp $
+# $FreeBSD: deskutils/deforaos-todo/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	todo
 PORTVERSION=	0.1.2
@@ -16,9 +16,8 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem \
 		Desktop:${PORTSDIR}/x11/deforaos-libdesktop
 
+USES=		pkgconfig gettext
 USE_GNOME=	gtk20 desktopfileutils
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
