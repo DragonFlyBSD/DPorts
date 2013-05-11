@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: ports/print/latex-arydshln/Makefile,v 1.11 2012/11/17 06:00:51 svnexp Exp $
+# $FreeBSD: print/latex-arydshln/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	latex-arydshln
 PORTVERSION=	1.71.20040831
@@ -17,11 +17,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package that draws dash-lines in array/tabular
 
-BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX-base \
-		${TEXMFLOCAL_LSR}:${PORTSDIR}/print/tex-texmflocal
-
+USE_TEX=	tetex
 PLIST=		${WRKDIR}/pkg-plist
 
 TEXMFLOCAL=	share/texmf-local
