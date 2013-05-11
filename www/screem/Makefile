@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: www/screem/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: www/screem/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	screem
 PORTVERSION=	0.16.1
@@ -12,13 +12,11 @@ COMMENT=	Nice GNOME/GTK-based HTML editor
 
 LIB_DEPENDS=	croco-0.6.3:${PORTSDIR}/textproc/libcroco
 
-USE_GETTEXT=	yes
-USES=        pathfix
+USES=		pathfix pkgconfig gettext
 USE_GNOME=	desktopfileutils gnomemenus gnomeprefix \
 		gtksourceview intlhack libgnomeprintui libgnomeui libgtkhtml
 USE_XORG=	xpm
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
