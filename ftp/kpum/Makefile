@@ -2,7 +2,7 @@
 # Date created:			Jun 18, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/ftp/kpum/Makefile,v 1.20 2012/12/30 18:55:57 svnexp Exp $
+# $FreeBSD: ftp/kpum/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	kpum
@@ -24,6 +24,6 @@ USE_KDELIBS_VER=3
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 .include <bsd.port.mk>
