@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/guake/Makefile,v 1.1 2013/01/18 23:53:07 svnexp Exp $
+# $FreeBSD: x11/guake/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	guake
 PORTVERSION=	0.4.4.0
@@ -38,7 +38,7 @@ MAKE_ENV=	man_MANS=""
 .if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS=	--localedir=${PREFIX}/share/locale
 PLIST_SUB=	NLS=""
-USE_GETTEXT=	yes
+USES+=		gettext
 .else
 CONFIGURE_ARGS=	--disable-nls
 PLIST_SUB=	NLS="@comment "

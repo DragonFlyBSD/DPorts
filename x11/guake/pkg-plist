@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/x11/guake/pkg-plist,v 1.1 2013/01/18 23:53:07 svnexp Exp $
+@comment $FreeBSD: x11/guake/pkg-plist 310624 2013-01-18 23:24:01Z nivit $
 bin/guake
 bin/guake-prefs
 %%NLS%%share/locale/de/LC_MESSAGES/guake.mo
