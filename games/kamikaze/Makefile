@@ -2,7 +2,7 @@
 # Date created:				06 August 2005
 # Whom:					Josef Spillner <spillner@kde.org>
 #
-# $FreeBSD: ports/games/kamikaze/Makefile,v 1.14 2012/12/30 18:55:58 svnexp Exp $
+# $FreeBSD: games/kamikaze/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	kamikaze
 PORTVERSION=	0.2.2
@@ -23,7 +23,7 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-server
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 MAN6=		kamikaze.6 kamikaze-editor.6
 
