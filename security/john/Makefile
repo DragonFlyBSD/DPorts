@@ -1,9 +1,5 @@
-# New ports collection makefile for:	John the Ripper
-# Date created:				Sun Mar 09, 1997
-# Whom:					David O'Brien <obrien@FreeBSD.org>
-#
-# $FreeBSD: ports/security/john/Makefile,v 1.56 2012/11/17 06:01:06 svnexp Exp $
-#
+# Created by: David O'Brien <obrien@FreeBSD.org>
+# $FreeBSD: security/john/Makefile 316807 2013-04-29 11:31:38Z bdrewery $
 
 PORTNAME=	john
 DISTVERSION=	1.7.9-jumbo-5
@@ -30,7 +26,7 @@ BUILD_WRKSRC=	${WRKDIR}/${DISTNAME}/src
 #
 PORTSCOUT=	limit:.*-jumbo
 
-OSNAME=		${OPSYS:tl}
+OSNAME=		freebsd
 CFLAGS+=	-DJOHN_SYSTEMWIDE=1 \
 		-DJOHN_SYSTEMWIDE_HOME=\\"${DATADIR}\\" \
 		-DCFG_FULL_NAME=\\"${PREFIX}/etc/${PORTNAME}.conf\\"
@@ -38,7 +34,8 @@ CFLAGS+=	-DJOHN_SYSTEMWIDE=1 \
 PORTDOCS=	CHANGES CONFIG EXAMPLES EXTERNAL FAQ MODES OPTIONS README \
 		RULES CONTACT CREDITS
 
-OPTIONS=	OPENMP	"Compile with OpenMP support"	off
+OPTIONS_DEFINE=	OPENMP DOCS
+OPENMP_DESC=	Compile with OpenMP support
 
 .include <bsd.port.pre.mk>
 
@@ -50,7 +47,7 @@ ALL_TARGET=	${OSNAME}-x86-mmx
 . else
 ALL_TARGET=	${OSNAME}-x86-any
 . endif
-.elif ${ARCH} == "amd64"
+.elif ${ARCH} == "x86_64"
 ALL_TARGET=	${OSNAME}-x86-64
 .elif ${ARCH} == "alpha"
 ALL_TARGET=	${OSNAME}-alpha
@@ -62,10 +59,14 @@ ALL_TARGET=	generic
 BROKEN=		Does not compile on sparc64
 .endif
 
+.if ${PORT_OPTIONS:MOPENMP}
+USE_GCC=	4.7
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|= gcc|= ${CC}|' \
 		-e '/^CFLAGS =/s|-O2|${CFLAGS}|' ${WRKSRC}/src/Makefile
-.if defined(WITH_OPENMP)
+.if ${PORT_OPTIONS:MOPENMP}
 	@${REINPLACE_CMD} -E \
 		'/(fopenmp|-m${MACHINE_CPU:Msse2})$$/s,#(OMPFLAGS =),\1,' \
 			${WRKSRC}/src/Makefile
@@ -93,7 +94,7 @@ do-install:
 .if !exists(${PREFIX}/etc/john.conf)
 	${INSTALL_DATA} ${WRKSRC}/run/john.conf ${PREFIX}/etc
 .endif
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/|} ${DOCSDIR}
 .endif
