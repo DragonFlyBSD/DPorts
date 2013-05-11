@@ -1,5 +1,5 @@
 # Created by: Chris Petrik (chris@officialunix.com)
-# $FreeBSD: ftp/bareftp/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: ftp/bareftp/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	bareftp
 PORTVERSION=	0.3.9
@@ -14,7 +14,7 @@ CONFIGURE_ARGS=	--datarootdir="${PREFIX}/share" --libdir="${PREFIX}/lib" \
 		--localedir="${PREFIX}/share/locale" --includedir="${LOCALBASE}/include"
 
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gtksharp20 gnomesharp20
 USE_GMAKE=	yes
 
