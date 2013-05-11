@@ -2,7 +2,7 @@
 # Date created:		2007-08-17
 # Whom:			Robert Noland <rnoland@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-wm/ccsm/Makefile,v 1.17 2012/11/17 06:03:41 svnexp Exp $
+# $FreeBSD: x11-wm/ccsm/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	ccsm
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/compizconfig-python.pc:${PORTSDIR}/x
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	pygtk2
 USE_PYTHON=	-2.7
 
