@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/x11-wm/wmii/Makefile,v 1.27 2012/12/17 09:30:56 svnexp Exp $
+# $FreeBSD: x11-wm/wmii/Makefile 317404 2013-05-05 08:26:08Z bapt $
 
 PORTNAME=	wmii
 DISTVERSION=	3.6	# this is stable version; for 3.9.x, use -devel port
@@ -16,7 +16,6 @@ RUN_DEPENDS=	dmenu:${PORTSDIR}/x11/dmenu
 CONFLICTS=	wmii-3.9*
 
 USE_XORG=	x11 xextproto xt xext
-USE_PKGCONFIG=	build
 
 MAKE_ARGS=	PREFIX="${PREFIX}" INCLUDE="${LOCALBASE}/include" \
 		INCX11="-I${LOCALBASE}/include" LIBX11="-L${LOCALBASE}/lib -lX11 -lixp" \
@@ -32,7 +31,7 @@ SLIM_LAYOUT_BOX_DESC=	Build with slim layout boxes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUTF8}
-USE_ICONV=	yes
+USES+=		iconv
 MAKE_ARGS+=	LIBICONV="-liconv"
 .else
 MAKE_ARGS+=	-DNO_UTF8
