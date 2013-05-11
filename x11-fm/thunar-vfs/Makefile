@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: ports/x11-fm/thunar-vfs/Makefile,v 1.11 2012/12/31 06:21:32 svnexp Exp $
+# $FreeBSD: x11-fm/thunar-vfs/Makefile 316994 2013-05-01 07:20:26Z jgh $
 
 PORTNAME=	thunar-vfs
 PORTVERSION=	1.2.0
@@ -22,10 +22,10 @@ USE_AUTOTOOLS=	libtool
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack glib20 gtk20 intltool intlhack
+USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_XFCE=	configenv libutil libexo
 USE_XORG=	x11
-USE_PKGCONFIG=	build
+USES=		pkgconfig pathfix
 
 CONFIGURE_ARGS=	--disable-debug
 
@@ -35,10 +35,10 @@ OPTIONS_DEFAULT=	NLS HAL DBUS STARTUP APIDOCS
 APIDOCS_DESC=	Install api documentation
 STARTUP_DESC=	Enable startup notification support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
@@ -86,4 +86,4 @@ PLIST_SUB+=	APIDOCS="@comment "
 post-patch:
 		@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' ${WRKSRC}/configure
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
