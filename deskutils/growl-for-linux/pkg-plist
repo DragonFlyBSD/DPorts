@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/deskutils/growl-for-linux/pkg-plist,v 1.2 2012/11/17 05:55:28 svnexp Exp $
+@comment $FreeBSD: deskutils/growl-for-linux/pkg-plist 303572 2012-09-02 20:03:39Z nivit $
 bin/gol
 lib/growl-for-linux/display/libballoon.a
 lib/growl-for-linux/display/libballoon.la

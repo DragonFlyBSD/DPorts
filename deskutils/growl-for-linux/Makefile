@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/growl-for-linux/Makefile,v 1.2 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: deskutils/growl-for-linux/Makefile 316314 2013-04-23 07:14:15Z bapt $
 
 PORTNAME=	growl-for-linux
 PORTVERSION=	0.6.8
@@ -23,6 +23,8 @@ OPTIONS_DEFINE=	LIBNOTIFY
 OPTIONS_DEFAULT=	LIBNOTIFY
 LIBNOTIFY_DESC=	Use notify-osd for libnotify display plugin
 
+USES=		pkgconfig
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBNOTIFY}
@@ -37,7 +39,6 @@ USE_GITHUB=	yes
 USE_GNOME=	desktopfileutils gtk20
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
-USE_PKGCONFIG=	build
 USE_SQLITE=	3
 
 WITH_OPENSSL_PORT=	yes
