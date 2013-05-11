@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: graphics/eog/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: graphics/eog/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/graphics/eog/Makefile,v 1.123 2010/11/16 10:11:41 kwm Exp $
 
 PORTNAME=	eog
@@ -23,7 +23,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack librsvg2 desktopfileutils \
 		gconf2 gnomedesktop
 WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 GNOME_DESKTOP_VERSION=2
