@@ -2,7 +2,7 @@
 # Date created:        04 September 2007
 # Whom:                Jona Joachim <jaj@hcl-club.lu>
 #
-# $FreeBSD: ports/audio/soundconverter/Makefile,v 1.17 2012/11/17 05:54:44 svnexp Exp $
+# $FreeBSD: audio/soundconverter/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	soundconverter
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gst-0.10/gst/__init__.py:${PORTSDIR}/multimedi
 LICENSE=	GPLv3
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	pygtk2 pygnome2
