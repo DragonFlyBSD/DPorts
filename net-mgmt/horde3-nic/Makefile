@@ -2,7 +2,7 @@
 # Date created:			Fri Mar 16, 2007
 # Whom:				Beech Rintoul <beech@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/horde3-nic/Makefile,v 1.2 2012/12/16 12:14:31 svnexp Exp $
+# $FreeBSD: net-mgmt/horde3-nic/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	nic
@@ -16,7 +16,7 @@ MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Network service monitor
 
 USE_HORDE=	base pkg-message
-USE_GETTEXT=	yes
+USES=		gettext
 PORTDOCS=	CHANGES CREDITS INSTALL TODO README
 
 .include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
