@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/benchmarks/expedite/Makefile,v 1.5 2013/01/15 17:45:57 svnexp Exp $
+# $FreeBSD: benchmarks/expedite/Makefile 316272 2013-04-22 20:35:19Z gblach $
 
 PORTNAME=	expedite
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 CATEGORIES=	benchmarks enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -17,7 +17,6 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_EFL=	evas
 USE_EFL_EVAS_ENGINES=	buffer
-USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	OPENGL SDL X11
