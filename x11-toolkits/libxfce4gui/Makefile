@@ -2,7 +2,7 @@
 # Date created:		7 June 2003
 # Whom:			James Earl <jdearl@telus.net>
 #
-# $FreeBSD: ports/x11-toolkits/libxfce4gui/Makefile,v 1.63 2012/11/17 06:03:36 svnexp Exp $
+# $FreeBSD: x11-toolkits/libxfce4gui/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	libxfce4gui
@@ -36,7 +36,7 @@ STARTUP_DESC=		Use libstartup-notification
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
