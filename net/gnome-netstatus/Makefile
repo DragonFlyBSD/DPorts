@@ -2,7 +2,7 @@
 # Date Created:			05 December 2003
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/gnome-netstatus/Makefile,v 1.43 2012/11/17 06:00:01 svnexp Exp $
+# $FreeBSD: net/gnome-netstatus/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/net/gnome-netstatus/Makefile,v 1.58 2010/09/29 12:35:14 kwm Exp $
 #
 
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnome gnomepanel \
 		gnomedocutils
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
