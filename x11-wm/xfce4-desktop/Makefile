@@ -1,6 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-desktop/Makefile 314575 2013-03-18 14:46:25Z olivierd $
-#
+# $FreeBSD: x11-wm/xfce4-desktop/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	xfce4-desktop
 PORTVERSION=	4.10.2
@@ -24,8 +23,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20 gtk20 intltool intlhack desktopfileutils
 USE_XFCE=	configenv garcon libmenu libutil libexo xfconf
-USE_PKGCONFIG=	build
-USES=	pathfix
+USES=	pathfix pkgconfig
 USE_XORG=	x11 sm
 
 CONFIGURE_ARGS+=--enable-gio-unix \
@@ -47,7 +45,7 @@ CONFIGURE_ARGS+=--disable-thunarx --without-file-manager-fallback
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	NLS=""
 .else
