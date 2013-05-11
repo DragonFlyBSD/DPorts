@@ -2,7 +2,7 @@
 # Date created:		2008-03-20
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: print/system-config-printer/Makefile 315631 2013-03-31 09:05:28Z kwm $
+# $FreeBSD: print/system-config-printer/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/print/system-config-printer/Makefile,v 1.6 2009/12/29 16:03:58 ahze Exp $
 #
 
@@ -32,7 +32,7 @@ USE_BZIP2=	yes
 USE_PYTHON=	2.6+
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GNOME=	pygtk2
