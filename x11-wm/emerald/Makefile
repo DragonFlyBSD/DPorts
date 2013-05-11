@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/emerald/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: x11-wm/emerald/Makefile 316407 2013-04-24 07:35:40Z ak $
 
 PORTNAME=	emerald
 PORTVERSION=	0.8.4
@@ -17,12 +17,10 @@ GNU_CONFIGURE=	yes
 USE_GL=		gl
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=        pathfix
+USES=		pathfix pkgconfig gettext
 USE_GNOME=	gtk20 libwnck pango
 USE_XORG=	xrender
-USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 
 MAN1=		emerald.1 \
