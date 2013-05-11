@@ -2,7 +2,7 @@
 # Date created:				2005-06-22
 # Whom:					Geoffrey Mainland <mainland@apeiron.net>
 #
-# $FreeBSD: ports/net-im/pidgin-latex/Makefile,v 1.20 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: net-im/pidgin-latex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	latex
@@ -18,12 +18,12 @@ COMMENT=	Display LaTeX output in your IMs
 
 BUILD_DEPENDS=	${LOCALBASE}/include/pidgin/pidgin.h:${PORTSDIR}/net-im/pidgin
 RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin \
-		latex:${PORTSDIR}/print/teTeX \
 		convert:${PORTSDIR}/graphics/ImageMagick
 
 WRKSRC=		${WRKDIR}/${PKGNAMEPREFIX}${PORTNAME}
 
 CFLAGS+=	"-fPIC"
+USE_TEX=	tetex
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
 USE_BZIP2=	yes
