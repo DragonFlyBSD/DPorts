@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/deskutils/xfce4-notification-daemon/Makefile,v 1.33 2012/11/17 05:55:31 svnexp Exp $
+# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 316340 2013-04-23 10:26:09Z ehaupt $
 
 PORTNAME=	notification-daemon
 PORTVERSION=	0.3.7
@@ -45,7 +45,7 @@ OPTIONS_DEFAULT=CLOSE NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
