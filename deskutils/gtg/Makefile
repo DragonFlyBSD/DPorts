@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/gtg/Makefile,v 1.29 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: deskutils/gtg/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	gtg
 PORTVERSION=	0.3
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}configobj>=0:${PORTSDIR}/devel/py-configobj 
 
 FETCH_ARGS=	-pRr
 USE_GNOME=	desktopfileutils pygobject pygtk2
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
