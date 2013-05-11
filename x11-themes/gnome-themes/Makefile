@@ -2,7 +2,7 @@
 # Date Created:				05 October 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-themes/gnome-themes/Makefile,v 1.71 2012/11/17 06:03:31 svnexp Exp $
+# $FreeBSD: x11-themes/gnome-themes/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.183 2010/11/15 22:11:44 kwm Exp $
 #
 
@@ -23,7 +23,7 @@ RUN_DEPENDS=	gtk-engines2>=2.15.0:${PORTSDIR}/x11-themes/gtk-engines2
 CONFLICTS=	clearlooks-metacity-0.*
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
