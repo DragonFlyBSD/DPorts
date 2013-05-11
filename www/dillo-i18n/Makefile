@@ -1,5 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@netcologne.de>
-# $FreeBSD: www/dillo-i18n/Makefile 313842 2013-03-10 21:18:01Z tmseck $
+# $FreeBSD: www/dillo-i18n/Makefile 317472 2013-05-06 06:54:19Z bapt $
 #
 # Tunables:
 # WITH_DILLO_SSL:		enable experimental SSL support
@@ -33,7 +33,7 @@ I18NVERSION=	20060709
 USE_BZIP2=	yes
 USE_GNOME=	gtk12
 USE_GMAKE=	yes
-USE_ICONV=	yes
+USES=		iconv
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -42,8 +42,10 @@ CONFIGURE_ARGS=	--enable-cookies --enable-threaded-dns \
 
 CONFLICTS=	dillo-[0-9].[0-9].[0-9]*
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 PLIST_SUB=	NLS=""
 CONFIGURE_ARGS+=	--enable-nls
 .else
