@@ -2,7 +2,7 @@
 # Date created:				26 Sep 2002
 # Whom:					AlanE <alane@freebsd.org>
 #
-# $FreeBSD: ports/www/kdewebdev/Makefile,v 1.80 2012/12/30 18:56:29 svnexp Exp $
+# $FreeBSD: www/kdewebdev/Makefile 316434 2013-04-24 13:36:18Z ak $
 #
 
 PORTNAME=	kdewebdev
@@ -30,7 +30,7 @@ PREFIX=		${KDE_PREFIX}
 USE_BZIP2=	yes
 USE_XORG=	xpm
 USE_GMAKE=	yes
-USE_GETTEXT=	build
+USES=		gettext:build
 USE_AUTOTOOLS=  libtool
 
 .include <${.CURDIR}/../../x11/kde3/Makefile.kde>
