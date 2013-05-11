@@ -2,7 +2,7 @@
 # Date created:        23 May 1998
 # Whom:                Hans Petter Bieker <zerium@webindex.no>
 #
-# $FreeBSD: ports/misc/kwatch/Makefile,v 1.46 2012/12/30 18:56:12 svnexp Exp $
+# $FreeBSD: misc/kwatch/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	kwatch
@@ -20,7 +20,7 @@ EXPIRATION_DATE=	2013-07-01
 USE_KDELIBS_VER=3
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_ICONS=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/HTML
