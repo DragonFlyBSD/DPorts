@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/x11-wm/obconf/Makefile,v 1.34 2013/01/27 06:41:43 svnexp Exp $
+# $FreeBSD: x11-wm/obconf/Makefile 317470 2013-05-06 06:41:15Z bapt $
 
 PORTNAME=	obconf
 PORTVERSION=	2.0.3
@@ -25,16 +25,18 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PORTDOCS=	ABOUT-NLS AUTHORS README TODO
 
-.if defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=		NLS=""
+.else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=		NLS="@comment "
-.else
-USE_GETTEXT=		yes
-PLIST_SUB+=		NLS=""
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for file in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
