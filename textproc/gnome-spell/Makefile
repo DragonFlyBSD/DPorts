@@ -2,7 +2,7 @@
 # Date created:				29 December 2001
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/gnome-spell/Makefile,v 1.40 2012/11/17 06:01:57 svnexp Exp $
+# $FreeBSD: textproc/gnome-spell/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/textproc/gnome-spell/Makefile,v 1.13 2007/10/15 17:17:18 mezz Exp $
 #
 
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
