@@ -2,7 +2,7 @@
 # Date created:                        Sat May 20 00:41:23 CEST 2006
 # Whom:                                Markus Brueffer <markus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-themes/kde-style-polyester/Makefile,v 1.21 2012/11/17 06:03:32 svnexp Exp $
+# $FreeBSD: x11-themes/kde-style-polyester/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	polyester
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 USE_KDEBASE_VER=3
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
+USES=		gettext
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||g' ${WRKSRC}/${CONFIGURE_SCRIPT}
