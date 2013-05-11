@@ -1,9 +1,5 @@
-# New ports collection makefile for:	scim-openvanilla
-# Date Created:				3 September 2005
-# Whom:					Leland Wang <llwang@infor.org>
-#
-# $FreeBSD: ports/textproc/scim-openvanilla/Makefile,v 1.22 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: Leland Wang <llwang@infor.org>
+# $FreeBSD: textproc/scim-openvanilla/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	scim-openvanilla
 PORTVERSION=	0.7.2.20070514
@@ -24,9 +20,7 @@ LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 USE_AUTOTOOLS=	libltdl
 WRKSRC=		${WRKDIR}/${DISTNAME}/Loaders/SCIM
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USE_ICONV=	yes
-USE_PKGCONFIG=	yes
+USES=		pkgconfig gettext iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	OV_MODULEDIR=${PREFIX}/lib/openvanilla/
 CPPFLAGS+=	-I${LOCALBASE}/include
