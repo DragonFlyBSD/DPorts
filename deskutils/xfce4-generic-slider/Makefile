@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-generic-slider/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: deskutils/xfce4-generic-slider/Makefile 316314 2013-04-23 07:14:15Z bapt $
 
 PORTNAME=	xfce4-generic-slider
 PORTVERSION=	0.0.20100827
@@ -12,8 +12,8 @@ COMMENT=	Slider plugin to adjust and/or monitor any numeric variable
 
 LICENSE=	GPLv3
 
+USES=		pkgconfig
 USE_XFCE=	panel libutil libgui
-USE_PKGCONFIG=	build
 
 CFLAGS+=	`pkg-config --cflags libxfce4panel-1.0 libxfcegui4-1.0`
 LDFLAGS+=	`pkg-config --libs libxfce4panel-1.0 libxfcegui4-1.0`
