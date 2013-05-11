@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gal2/Makefile 315399 2013-03-27 18:10:29Z kwm $
+# $FreeBSD: x11-toolkits/gal2/Makefile 316407 2013-04-24 07:35:40Z ak $
 #   $MCom: ports/x11-toolkits/gal2/Makefile,v 1.54 2007/05/23 14:37:18 ahze Exp $
 
 PORTNAME=	gal2
@@ -20,9 +20,8 @@ USE_BZIP2=	yes
 
 USE_PERL5=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack libgnomeui libgnomeprintui ltverhack
-USE_GETTEXT=	yes
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=  libtool
