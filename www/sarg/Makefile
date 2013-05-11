@@ -1,9 +1,8 @@
 # Created by: mt@primats.org.ua
-# $FreeBSD: ports/www/sarg/Makefile,v 1.59 2012/11/17 06:03:05 svnexp Exp $
+# $FreeBSD: www/sarg/Makefile 316683 2013-04-27 18:25:24Z mva $
 
 PORTNAME=	sarg
-PORTVERSION=	2.3.2
-PORTREVISION=	5
+PORTVERSION=	2.3.6
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -13,10 +12,9 @@ COMMENT=	Squid log analyzer and HTML report generator
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-OPTIONS_DEFINE=	GD PHP NLS
-OPTIONS_DEFAULT=GD PHP NLS
+OPTIONS_DEFINE=	GD PHP NLS PCRE LDAP ICONV
+OPTIONS_DEFAULT=GD PHP NLS PCRE LDAP ICONV
 
-GD_DESC=	Enable GD support
 PHP_DESC=	Install PHP for reporting generating
 
 USE_AUTOTOOLS=	autoconf aclocal
@@ -24,7 +22,8 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--sysconfdir="${ETCDIR}" \
+CONFIGURE_ARGS=	CPPFLAGS=-I${LOCALBASE}/include \
+		--sysconfdir="${ETCDIR}" \
 		--enable-fontdir="${ETCDIR}/fonts" \
 		--enable-imagedir="${ETCDIR}/images"
 
@@ -34,15 +33,18 @@ MAN1=		sarg.1
 
 .if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES+=		gettext
+RPL1=		-lintl
 .else
 PLIST_SUB+=	NLS="@comment "
 CONFIGURE_ARGS+=--disable-nls
 .endif
 
 .if ${PORT_OPTIONS:MGD}
+CONFIGURE_ARGS+=--with-gd
 LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
+.else
+CONFIGURE_ARGS+=--without-gd
 .endif
 
 .if ${PORT_OPTIONS:MPHP}
@@ -53,13 +55,35 @@ CONFIGURE_ARGS+=--disable-sargphp
 PLIST_SUB+=	PHP="@comment "
 .endif
 
+.if ${PORT_OPTIONS:MPCRE}
+CONFIGURE_ARGS+=--with-pcre
+LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
+.else
+CONFIGURE_ARGS+=--without-pcre
+.endif
+
+.if ${PORT_OPTIONS:MLDAP}
+CONFIGURE_ARGS+=--with-ldap
+USE_OPENLDAP=	yes
+.else
+CONFIGURE_ARGS+=--without-ldap
+.endif
+
+.if ${PORT_OPTIONS:MICONV}
+CONFIGURE_ARGS+=--with-iconv
+USES+=	iconv
+RPL2=	-liconv
+.else
+CONFIGURE_ARGS+=--without-iconv
+.endif
+
 post-extract:
 	@${FIND} ${WRKSRC} -type d -exec ${CHMOD} 0755 {} \;
 	@${CHMOD} 0755 ${WRKSRC}/configure
 
 post-patch:
-.if ${PORT_OPTIONS:MNLS}
-	@${REINPLACE_CMD} -e '/^LIBS/ s/$$/ -lintl/' ${WRKSRC}/Makefile.in
+.if ${PORT_OPTIONS:MNLS} || ${PORT_OPTIONS:MICONV}
+	@${REINPLACE_CMD} -e '/^LIBS/ s/$$/ ${RPL1} ${RPL2}/' ${WRKSRC}/Makefile.in
 .endif
 
 pre-configure:
