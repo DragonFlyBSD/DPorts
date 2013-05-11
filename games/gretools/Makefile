@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/gretools/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: games/gretools/Makefile 316343 2013-04-23 10:47:02Z bapt $
 
 PORTNAME=	gretools
 PORTVERSION=	1.2.4
@@ -13,12 +13,11 @@ COMMENT=	GNOME vocabulary builder
 
 LICENSE=	GPLv2
 
-USES=        pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	gnomeprefix pygnome2
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
 INSTALLS_OMF=	yes
 
 post-patch:
