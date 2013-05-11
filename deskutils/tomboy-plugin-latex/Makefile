@@ -2,7 +2,7 @@
 # Date created:		2008-12-21
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD: ports/deskutils/tomboy-plugin-latex/Makefile,v 1.3 2012/11/17 05:55:31 svnexp Exp $
+# $FreeBSD: deskutils/tomboy-plugin-latex/Makefile 317455 2013-05-06 02:00:40Z hrs $
 #
 
 PORTNAME=	tomboy-plugin-latex
@@ -16,10 +16,10 @@ MAINTAINER=	mono@FreeBSD.org
 COMMENT=	LaTeX math plugin for Tomboy
 
 BUILD_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
-RUN_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy \
-		latex:${PORTSDIR}/print/teTeX-base
+RUN_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+USE_TEX=	tetex
 
 .include <bsd.port.mk>
