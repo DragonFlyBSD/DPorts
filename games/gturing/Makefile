@@ -2,7 +2,7 @@
 # Date created:				08 Jul 2002
 # Whom:					Juan Salaverria <rael@vectorstar.net>
 #
-# $FreeBSD: ports/games/gturing/Makefile,v 1.37 2012/11/17 05:57:41 svnexp Exp $
+# $FreeBSD: games/gturing/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	gturing
@@ -16,7 +16,7 @@ COMMENT=	Simple Turing machine simulator for GNOME 2
 
 USE_GNOME=	gnomeprefix gnomehack libgnomeui
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
