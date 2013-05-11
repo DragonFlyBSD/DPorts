@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugins/files/Makefile.common 314846 2013-03-21 14:43:24Z makc $
+# $FreeBSD: devel/geany-plugins/files/Makefile.common 316620 2013-04-26 15:10:57Z bapt $
 
 .include "${.CURDIR}/../../devel/geany-plugins/files/bsd.geany-plugins.mk"
 
@@ -17,7 +17,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS+=	libtool
-USE_PKGCONFIG=	build
+USES=		pkgconfig
 USE_GNOME+=	gtk20
 
 # geany-plugins-l10n is not a plugin, thus special treatment
@@ -43,7 +43,7 @@ DOCSDIR=	share/doc/geany-plugins
 
 .if ${PORTNAME} != "geany-plugins-l10n"
 . if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=	gettext
 . else
 CONFIGURE_ARGS+=	--disable-nls
 . endif
