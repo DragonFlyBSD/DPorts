@@ -2,7 +2,7 @@
 # Date created:		2005-11-30
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/www/gnome-web-photo/Makefile,v 1.27 2012/11/17 06:02:34 svnexp Exp $
+# $FreeBSD: www/gnome-web-photo/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/www/gnome-web-photo/Makefile,v 1.5 2007/08/07 03:27:32 mezz Exp $
 #
 #
@@ -23,7 +23,7 @@ LIB_DEPENDS=	webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2
 
 USE_XZ=		yes
 USE_GNOME=	gconf2 gnomehack gnomeprefix
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules \
