@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: graphics/f-spot/Makefile 314141 2013-03-14 08:17:39Z pclin $
+# $FreeBSD: graphics/f-spot/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	f-spot
 PORTVERSION=	0.8.2
@@ -29,7 +29,7 @@ USE_BZIP2=	yes
 USE_SQLITE=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack gnomedesktopsharp20
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
