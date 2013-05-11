@@ -1,12 +1,9 @@
-# New ports collection makefile for:	tesseract-data
-# Date created:		18 March 2011
-# Whom:			bf <bf@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/tesseract-data/Makefile,v 1.7 2012/11/17 05:58:24 svnexp Exp $
-#
+# Created by: bf <bf@FreeBSD.org>
+# $FreeBSD: graphics/tesseract-data/Makefile 316029 2013-04-18 08:37:38Z bf $
 
 PORTNAME=	tesseract-data
 PORTVERSION=	3.02
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${TESSERACT_LANGS_300:O:u:S|$|.traineddata.gz|} \
@@ -27,7 +24,7 @@ NO_BUILD=	yes
 LANGS_300=	dan-frak deu-frak swe-frak
 LANGS_301=	osd slk-frak
 LANGS_302=	afr ara aze bel ben bul cat ces chi_sim chi_tra chr dan deu \
-		ell eng enm epo equ est eus fin fra frk frm glg grc heb hin \
+		ell eng enm epo epo_alt equ est eus fin fra frk frm glg grc heb hin \
 		hrv hun ind isl ita ita_old jpn kan kor lav lit mal mkd mlt \
 		msa nld nor pol por ron rus slk slv spa spa_old sqi srp swa \
 		swe tam tel tgl tha tur ukr vie
