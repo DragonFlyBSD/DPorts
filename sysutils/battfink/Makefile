@@ -2,7 +2,7 @@
 # Date created:			12 April 2003
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/battfink/Makefile,v 1.22 2012/11/17 06:01:25 svnexp Exp $
+# $FreeBSD: sysutils/battfink/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	battfink
@@ -20,7 +20,7 @@ USE_XORG=	x11
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack gnomeprefix libgnomeui
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
