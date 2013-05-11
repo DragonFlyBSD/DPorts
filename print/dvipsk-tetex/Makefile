@@ -1,4 +1,4 @@
-# $FreeBSD: print/dvipsk-tetex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/dvipsk-tetex/Makefile 317779 2013-05-10 09:19:46Z hrs $
 
 PORTNAME=	dvipsk-tetex
 PORTVERSION=	5.95a
@@ -17,7 +17,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		wwwcore.1:${PORTSDIR}/www/libwww \
 		t1.5:${PORTSDIR}/devel/t1lib
 
-USE_TEX=	tetex
+USE_TEX=	tetex-base tetex-texmf
 PLIST_SUB=	TEXMFDIR=${TEXMFDIR} \
 		TEXMFDISTDIR=${TEXMFDISTDIR} \
 		TEXMFCONFIGDIR=${TEXMFCONFIGDIR} \
