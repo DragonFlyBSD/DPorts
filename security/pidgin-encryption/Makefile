@@ -1,9 +1,5 @@
-# New ports collection Makefile for: pidgin-encryption
-# Date created:		2004-05-01
-# Whom:			ports@c0decafe.net
-#
-# $FreeBSD: security/pidgin-encryption/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#
+# Created by: ports@c0decafe.net
+# $FreeBSD: security/pidgin-encryption/Makefile 317496 2013-05-06 09:39:25Z bapt $
 
 PORTNAME=	pidgin
 PORTVERSION=	3.1
@@ -22,7 +18,7 @@ LIB_DEPENDS=	purple.10:${PORTSDIR}/net-im/libpurple \
 
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
-USE_GETTEXT=	yes
+USES=		gettext
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
@@ -32,8 +28,10 @@ CONFIGURE_ARGS=	--with-nspr-includes=${LOCALBASE}/include/nspr	\
 		--with-nss-includes=${LOCALBASE}/include/nss/nss \
 		--with-nss-libs=${LOCALBASE}/lib/nss
 
-.if !defined(WITHOUT_NLS)
-USE_GETTEXT=	yes
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
 CONFIGURE_ARGS+=	--with-libintl-prefix=${LOCALBASE}
 PLIST_SUB+=	NLS=""
 .else
