@@ -2,7 +2,7 @@
 # Date created:				09 February 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/py-gnome2/Makefile,v 1.113 2012/11/17 06:03:38 svnexp Exp $
+# $FreeBSD: x11-toolkits/py-gnome2/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/x11-toolkits/py-gnome2/Makefile,v 1.60 2010/04/02 20:22:15 kwm Exp $
 #
 
@@ -27,7 +27,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GNOME=	gnomehack libgnomeui pygtk2
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib" \
