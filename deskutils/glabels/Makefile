@@ -2,7 +2,7 @@
 # Date created:		29 September 2002
 # Whom:			Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
-# $FreeBSD: deskutils/glabels/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: deskutils/glabels/Makefile 316464 2013-04-24 18:10:30Z ak $
 #   $MCom: ports/deskutils/glabels/Makefile,v 1.10 2010/04/03 19:25:49 kwm Exp $
 #
 
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix libgnomeui \
 		desktopfileutils intlhack ltverhack
 WANT_GNOME=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
