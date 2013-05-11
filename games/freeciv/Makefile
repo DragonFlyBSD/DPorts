@@ -1,5 +1,5 @@
 # Created by: ada@bsd.org
-# $FreeBSD: ports/games/freeciv/Makefile,v 1.127 2013/02/19 06:49:22 svnexp Exp $
+# $FreeBSD: games/freeciv/Makefile 316464 2013-04-24 18:10:30Z ak $
 
 PORTNAME=	freeciv
 PORTVERSION=	2.3.4
@@ -11,7 +11,7 @@ COMMENT=	Free turn-based multiplayer strategy
 
 RUN_DEPENDS=	hicolor-icon-theme>=0:${PORTSDIR}/misc/hicolor-icon-theme
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_PYTHON=	yes
@@ -71,7 +71,7 @@ CONFIGURE_ARGS+=--disable-ipv6
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
