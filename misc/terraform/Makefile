@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/terraform/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: misc/terraform/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	terraform
 PORTVERSION=	0.9.5
@@ -19,9 +19,8 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libtrio.a:${PORTSDIR}/devel/trio
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=        pathfix
+USES=        pathfix gettext
 USE_GNOME=	gnomehier libgnomeprintui libgnomeui
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	automake:env
 GNU_CONFIGURE=	yes
