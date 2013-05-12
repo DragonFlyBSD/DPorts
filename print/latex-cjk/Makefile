@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang (keith@FreeBSD.org)
-# $FreeBSD: print/latex-cjk/Makefile 314921 2013-03-22 12:40:32Z bapt $
+# $FreeBSD: print/latex-cjk/Makefile 317455 2013-05-06 02:00:40Z hrs $
 
 PORTNAME=	latex-cjk
 PORTVERSION=	4.8.2
@@ -14,14 +14,14 @@ MAINTAINER=	rafan@FreeBSD.org
 COMMENT=	A LaTeX2e macro package which enables the use of CJK scripts
 
 RUN_DEPENDS=	zh-arphicttf>=0:${PORTSDIR}/chinese/arphicttf \
-		teTeX>=0:${PORTSDIR}/print/teTeX \
 		ttf2pk:${PORTSDIR}/print/freetype-tools
 BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		${LOCALBASE}/share/ttf2pt1/maps/cugb.map:${PORTSDIR}/chinese/ttf2pt1 \
 		ttf2pt1:${PORTSDIR}/print/ttf2pt1
+LIB_DEPENDS=	ttf:${PORTSDIR}/print/freetype
 
 USE_GMAKE=	yes
-USE_FREETYPE=	yes
+USE_TEX=	tetex
 
 MAN1=		bg5conv.1 cef5conv.1 cefconv.1 cefsconv.1 extconv.1 \
 		hbf2gf.1 sjisconv.1
