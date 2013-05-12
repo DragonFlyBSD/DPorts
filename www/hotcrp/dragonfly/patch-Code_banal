@@ -1,0 +1,11 @@
+--- Code/banal.orig	2012-09-27 13:50:18.000000000 +0000
++++ Code/banal
+@@ -131,7 +131,7 @@ if (exists $ENV{"PDFTOHTML"}) {
+ } elsif (defined $pdftohtml_prog) {
+     $pdftohtml = $pdftohtml_prog;
+ } else {
+-    $pdftohtml = "pdftohtml";
++    $pdftohtml = "pdf-to-html";
+ }
+ 
+ #print STDERR "using $pdftohtml...\n";
