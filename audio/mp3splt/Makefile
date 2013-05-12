@@ -1,34 +1,37 @@
-# Created by:	Ulrich Spoerlein <q@uni.de>
-# $FreeBSD: ports/audio/mp3splt/Makefile,v 1.37 2012/12/04 18:39:42 svnexp Exp $
+# Created by: Ulrich Spoerlein <q@uni.de>
+# $FreeBSD: audio/mp3splt/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	mp3splt
-PORTVERSION=	2.4.3
+PORTVERSION=	2.5.2
 CATEGORIES=	audio
 MASTER_SITES=	SF/mp3splt/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	citrin@citrin.ru
-COMMENT=	Utility to split mp3 and ogg files (via CUE sheets)
+COMMENT=	Utility to split MP3 and Ogg files (via CUE sheets)
+
+LICENSE=	GPLv2
 
 LIB_DEPENDS=	mp3splt:${PORTSDIR}/audio/libmp3splt
 
+USES=	pkgconfig:build
 USE_AUTOTOOLS=	libltdl
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--enable-oggsplt_symlink
+CONFIGURE_ENV+=	PKG_CONFIG_PATH=${LOCALBASE}/lib/pkgconfig
+
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS+=--enable-oggsplt_symlink --disable-mp3splttest
-
-CPPFLAGS+=	-I${LOCALBASE}/include
-
-OPTIONS_DEFINE=	NLS
-OPTIONS_DEFAULT=	NLS
 
 MAN1=		oggsplt.1 mp3splt.1
 PLIST_FILES=	bin/mp3splt bin/oggsplt
 
+OPTIONS_DEFINE=	NLS
+OPTIONS_DEFAULT=	NLS
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 LANGUAGES=	cs de_DE es fr_FR
 .for language in ${LANGUAGES}
 PLIST_FILES+=	share/locale/${language}/LC_MESSAGES/mp3splt.mo
