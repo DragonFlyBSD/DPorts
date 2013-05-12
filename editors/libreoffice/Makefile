@@ -63,17 +63,17 @@ RUN_DEPENDS=	${LOCALBASE}/lib/X11/fonts/dejavu/DejaVuSans.ttf:${PORTSDIR}/x11-fo
 CONFLICTS_INSTALL=	libreoffice-legacy-[0-9]*
 
 GNU_CONFIGURE=	yes
+_MAKE_JOBS=	#
 MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	autoconf aclocal
 USE_GCC=	4.7
 USE_GMAKE=	yes
 USE_PERL5_BUILD=	yes
-USE_PKGCONFIG=	build
 USE_PYTHON=	3.3+
 USE_QT4=	# empty but required
 USE_XORG=	xaw xrandr
 USE_XZ=		yes
-USES=		bison
+USES=		bison pkgconfig
 
 DISTFILES+=	${PORTNAME}-${LOVERSION}${EXTRACT_SUFX}
 DISTFILES+=	${PORTNAME}-help-${LOVERSION}${EXTRACT_SUFX}
