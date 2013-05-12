@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: print/ttf2pt1/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: print/ttf2pt1/Makefile 317605 2013-05-07 13:12:31Z bapt $
 
 PORTNAME=	ttf2pt1
 PORTVERSION=	3.4.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	SF
 EXTRACT_SUFX=	.tgz
@@ -14,10 +14,22 @@ COMMENT=	True Type Font to Postscript Type 1 Converter
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
 RUN_DEPENDS=	t1asm:${PORTSDIR}/print/t1utils
 
-USE_PKGCONFIG=	build
+USES=		pkgconfig shebangfix
 USE_PERL5=	yes
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} ${CPPFLAGS}" LIBS="${LDFLAGS}" \
 		INSTDIR="${PREFIX}" LIBXDIR="${PREFIX}/bin"
+SHEBANG_FILES=	app/TeX/sfd2map \
+		app/TeX/cjk-latex-config \
+		other/showdf \
+		other/lst.pl \
+		other/cntstems.pl \
+		other/showg \
+		scripts/forceiso \
+		scripts/frommap \
+		scripts/inst_dir \
+		scripts/html2man \
+		scripts/t1fdir \
+		scripts/trans
 
 MAN1=		ttf2pt1.1 ttf2pt1_convert.1 ttf2pt1_x2gs.1
 
