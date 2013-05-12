@@ -1,9 +1,8 @@
 # Created by: siasia
-# $FreeBSD: lang/v8/Makefile 313707 2013-03-09 11:45:26Z vanilla $
+# $FreeBSD: lang/v8/Makefile 317413 2013-05-05 13:51:08Z vanilla $
 
 PORTNAME=	v8
-PORTVERSION=	3.17.9
-PORTREVISION=	0
+PORTVERSION=	3.18.5
 CATEGORIES=	lang
 MASTER_SITES=	LOCAL/vanilla
 
@@ -20,8 +19,11 @@ ALL_TARGET=	native
 MAKE_ENV+=	GYPFLAGS=-DOS=freebsd
 MAKE_ENV+=	library=shared
 USE_GCC=	4.7
+CFLAGS+=	-D__FreeBSD__=1
 
 .include <bsd.port.pre.mk>
+
+
 ONLY_FOR_ARCHS=	i386 amd64
 
 post-patch:
