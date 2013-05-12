@@ -1,10 +1,5 @@
-# -*-mode: makefile-*-
-# New ports collection makefile for:	qt-mysql-plugin
-# Date created:				20 April 2003
-# Whom:					Kay Lehmann <kay_lehmann@web.de>
-#
-# $FreeBSD: ports/databases/qt-mysql-plugin/Makefile,v 1.26 2012/12/30 18:55:44 svnexp Exp $
-#
+# Created by: Kay Lehmann <kay_lehmann@web.de>
+# $FreeBSD: databases/qt-mysql-plugin/Makefile 316786 2013-04-29 08:57:12Z bapt $
 
 PORTNAME=	qt-${DB}-plugin
 PORTVERSION=	3.3.8
@@ -28,8 +23,8 @@ USE_MYSQL=	yes
 USE_BZIP2=	yes
 PLUGIN=		plugins/src/sqldrivers/${DB}
 DRIVER=		src/sql/drivers/${DB}
-EXTRACT_AFTER_ARGS?=| ${TAR} -xf - ${DISTNAME}/${PLUGIN} \
-		${DISTNAME}/${DRIVER} ${DISTNAME}/src/sql/drivers/cache
+EXTRACT_AFTER_ARGS?=	${DISTNAME}/${PLUGIN} ${DISTNAME}/${DRIVER} \
+		${DISTNAME}/src/sql/drivers/cache
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 MAKE_ENV+=	DB="${DB}" DRIVER="${DRIVER}" PLUGIN="${PLUGIN}" \
 		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
