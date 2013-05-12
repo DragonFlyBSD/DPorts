@@ -15,12 +15,10 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	erwin@FreeBSD.org
 COMMENT=	A command-line tool for converting pdf-files into html
 
-CONFLICTS=	poppler-utils-[0-9]*
-
 USE_GHOSTSCRIPT_RUN=	yes
 USE_GMAKE=	yes
 
-PLIST_FILES=	bin/pdftohtml
+PLIST_FILES=	bin/pdf-to-html
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
@@ -29,6 +27,6 @@ pre-patch:
 		${REINPLACE_CMD} -e "s|-O[0-9]||" -e "s|-g||"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/pdftohtml ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/pdftohtml ${PREFIX}/bin/pdf-to-html
 
 .include <bsd.port.mk>
