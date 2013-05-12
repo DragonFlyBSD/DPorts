@@ -1,4 +1,4 @@
-# $FreeBSD: ports/chinese/docproj/src/Makefile,v 1.3 2012/11/17 05:54:56 svnexp Exp $
+# $FreeBSD: chinese/docproj/src/Makefile 300895 2012-07-14 12:56:14Z beat $
 
 SUBDIR=	cjktexsty
 

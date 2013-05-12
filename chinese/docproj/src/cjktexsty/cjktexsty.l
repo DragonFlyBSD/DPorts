@@ -1,4 +1,5 @@
 %{
+#define __FBSDID(s)	struct __hack
 /*-
  * Copyright (c) 2005, 2006 intron <intron@intron.ac>.  All rights reserved.
  * Copyright (c) 2005, 2006 The FreeBSD Simplified Chinese Project.
@@ -32,6 +33,7 @@
  */
 
 #include <sys/cdefs.h>
+__FBSDID("$FreeBSD: chinese/docproj/src/cjktexsty/cjktexsty.l 300895 2012-07-14 12:56:14Z beat $");
 
 #include <err.h>
 #include <stdio.h>

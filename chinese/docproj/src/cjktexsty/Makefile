@@ -1,4 +1,4 @@
-# $FreeBSD: ports/chinese/docproj/src/cjktexsty/Makefile,v 1.2 2012/11/17 05:54:56 svnexp Exp $
+# $FreeBSD: chinese/docproj/src/cjktexsty/Makefile 300895 2012-07-14 12:56:14Z beat $
 
 PROG=	cjktexsty
 SRCS=	cjktexsty.l

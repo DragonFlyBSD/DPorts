@@ -2,7 +2,7 @@
 # Date created:		26 Feb 2006
 # Whom:			Xin LI <delphij@FreeBSD.org>
 #
-# $FreeBSD: ports/chinese/docproj/Makefile,v 1.13 2012/11/17 05:54:56 svnexp Exp $
+# $FreeBSD: chinese/docproj/Makefile 316654 2013-04-27 08:50:46Z mva $
 #
 # This port is self contained in the src directory.
 #
@@ -22,7 +22,7 @@ COMMENT=	Supportive tools for Chinese docproj build
 
 RUN_DEPENDS=	gbklatex:${PORTSDIR}/print/latex-cjk
 
-USE_ICONV=	yes
+USES=	iconv
 
 WRKSRC=		${WRKDIR}/src
 
