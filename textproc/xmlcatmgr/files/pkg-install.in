@@ -40,7 +40,7 @@ fi
 
 if [ ! -r ${CATALOG_PORTS_XML} ]; then
 	echo " + Creating ${CATALOG_PORTS_XML}"
-	${XMLCATMGR} -c ${CATALOG_PORTS_XML} create
+	${XMLCATMGR} -c ${CATALOG_PORTS_XML} create > /dev/null 2>&1
 fi
 ;;
 esac
