@@ -1,16 +1,19 @@
-# Created by:	Anton Yuzhaninov <citrin@citrin.ru>
-# $FreeBSD: ports/audio/libmp3splt/Makefile,v 1.24 2012/12/10 19:23:58 svnexp Exp $
+# Created by: Anton Yuzhaninov <citrin@citrin.ru>
+# $FreeBSD: audio/libmp3splt/Makefile 316596 2013-04-26 10:44:28Z ak $
 
 PORTNAME=	libmp3splt
-PORTVERSION=	0.7.3
-PORTREVISION=	1
+PORTVERSION=	0.8.2
 CATEGORIES=	audio
 MASTER_SITES=	SF/mp3splt/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	citrin@citrin.ru
-COMMENT=	Library for mp3splt and mp3splt-gtk
+COMMENT=	Library for splitting of various audio files
+
+LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-cutter --disable-doxygen_doc
+USES=	pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libltdl
 MAKE_JOBS_SAFE=	yes
@@ -23,19 +26,22 @@ PCRE_DESC=	PCRE support to set tags from input filename
 
 OPTIONS_DEFAULT=	MAD VORBIS ID3 PCRE NLS
 
-PLIST_DIRS=	include/libmp3splt lib/libmp3splt
-PLIST_FILES=	include/libmp3splt/mp3splt.h lib/libmp3splt.a \
+PLUGIN_DIR=	libmp3splt0
+
+PLIST_DIRS=	include/libmp3splt lib/${PLUGIN_DIR}
+PLIST_DIRSTRY=	libdata/pkgconfig
+PLIST_FILES=	include/libmp3splt/mp3splt.h include/libmp3splt/version.h lib/libmp3splt.a \
 		lib/libmp3splt.la lib/libmp3splt.so lib/libmp3splt.so.0 \
-		share/aclocal/mp3splt.m4
+		libdata/pkgconfig/libmp3splt.pc
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMAD}
 LIB_DEPENDS+=	mad:${PORTSDIR}/audio/libmad
-PLIST_FILES+=	lib/libmp3splt/libsplt_mp3.a \
-		lib/libmp3splt/libsplt_mp3.la \
-		lib/libmp3splt/libsplt_mp3.so \
-		lib/libmp3splt/libsplt_mp3.so.0
+PLIST_FILES+=	lib/${PLUGIN_DIR}/libsplt_mp3.a \
+		lib/${PLUGIN_DIR}/libsplt_mp3.la \
+		lib/${PLUGIN_DIR}/libsplt_mp3.so \
+		lib/${PLUGIN_DIR}/libsplt_mp3.so.0
 .else
 CONFIGURE_ARGS+=	--disable-mp3
 .endif
@@ -43,10 +49,10 @@ CONFIGURE_ARGS+=	--disable-mp3
 .if ${PORT_OPTIONS:MVORBIS}
 LIB_DEPENDS+=	ogg:${PORTSDIR}/audio/libogg \
 		vorbis:${PORTSDIR}/audio/libvorbis
-PLIST_FILES+=	lib/libmp3splt/libsplt_ogg.a \
-		lib/libmp3splt/libsplt_ogg.la \
-		lib/libmp3splt/libsplt_ogg.so \
-		lib/libmp3splt/libsplt_ogg.so.0
+PLIST_FILES+=	lib/${PLUGIN_DIR}/libsplt_ogg.a \
+		lib/${PLUGIN_DIR}/libsplt_ogg.la \
+		lib/${PLUGIN_DIR}/libsplt_ogg.so \
+		lib/${PLUGIN_DIR}/libsplt_ogg.so.0
 .else
 CONFIGURE_ARGS+=	--disable-ogg
 .endif
@@ -59,15 +65,16 @@ CONFIGURE_ARGS+=	--disable-pcre
 
 .if ${PORT_OPTIONS:MID3}
 LIB_DEPENDS+=	id3tag:${PORTSDIR}/audio/libid3tag
+LDFLAGS+=	-lz
 .else
 CONFIGURE_ARGS+=	--disable-id3tag
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 LANGUAGES=	de_DE cs es fr_FR hr
 .for language in ${LANGUAGES}
-PLIST_FILES+=	share/locale/${language}/LC_MESSAGES/libmp3splt.mo
+PLIST_FILES+=	share/locale/${language}/LC_MESSAGES/libmp3splt0.mo
 .endfor
 PLIST_FILES+=	"@dirrmtry share/locale/de_DE/LC_MESSAGES"
 PLIST_FILES+=	"@dirrmtry share/locale/de_DE"
