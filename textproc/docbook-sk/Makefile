@@ -15,7 +15,7 @@ DISTNAME=	docbkx${PORTVERSION:S/.//g}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	XML version of the DocBook DTD version controlled for ScrollKeeper
 
-RUN_DEPENDS=	${XMLCATMGR}:${PORTSDIR}/textproc/xmlcatmgr
+RUN_DEPENDS=	xmlcatmgr:${PORTSDIR}/textproc/xmlcatmgr
 
 USE_ZIP=	yes
 NO_BUILD=	yes
