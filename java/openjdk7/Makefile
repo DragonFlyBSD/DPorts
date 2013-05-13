@@ -2,12 +2,11 @@
 # Date created:				2 January 2010
 # Whom:					Greg Lewis <glewis@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: java/openjdk7/Makefile 317431 2013-05-05 20:10:26Z glewis $
 #
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${PORT_MINOR_VERSION}.${PORT_BUILD_NUMBER}
-PORTREVISION=	2
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}u${JDK_MINOR_VERSION}/promoted/b${JDK_BUILD_NUMBER}/ \
 		http://download.java.net/jaxp/1.4.5/:jaxp \
@@ -16,14 +15,14 @@ MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}u${JDK_MIN
 		http://icedtea.classpath.org/download/drops/:jaxws \
 		https://java.net/downloads/jax-ws/JDK7/:jaf \
 		http://icedtea.classpath.org/download/drops/:jaf \
-		${MASTER_SITE_APACHE:S,%SUBDIR%/,ant/binaries/:ant,} \
-		http://dl.wolfpond.org/openjdk7/:bootstrap
-DISTFILES=	${JDK_SRC_DISTFILE} \
-		${ANT_DISTFILE}:ant \
-		${BOOTSTRAP_DISTFILE}:bootstrap
-EXTRACT_ONLY=	${JDK_SRC_DISTFILE} \
-		${ANT_DISTFILE} \
-		${BOOTSTRAP_DISTFILE}
+		http://dl.wolfpond.org/openjdk7/:bootstrap \
+		${MASTER_SITE_APACHE:S,%SUBDIR%/,ant/binaries/:ant,}
+DISTFILES=	${JDK_SRC_DISTFILE}${EXTRACT_SUFX} \
+		${BOOTSTRAP_DISTFILE}:bootstrap \
+		${ANT_DISTFILE}${EXTRACT_SUFX}:ant
+EXTRACT_ONLY=	${JDK_SRC_DISTFILE}${EXTRACT_SUFX} \
+		${BOOTSTRAP_DISTFILE} \
+		${ANT_DISTFILE}${EXTRACT_SUFX}
 
 MAINTAINER=	glewis@FreeBSD.org
 COMMENT=	Java Development Kit 7
@@ -32,8 +31,9 @@ LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+EXTRACT_SUFX=	.zip
 USE_GMAKE=	yes
-USES+=		iconv
+USES=		iconv
 USE_XORG+=	x11 xext xi xrender xt xtst
 
 OPTIONS_DEFINE=		DEBUG POLICY TZUPDATE
@@ -42,42 +42,34 @@ DEBUG_DESC=		Enable extra debugging info
 POLICY_DESC=		Install the Unlimited Strength Policy Files
 TZUPDATE_DESC=		Update the time zone data
 
-PORT_MINOR_VERSION=	9
-PORT_BUILD_NUMBER=	05
+PORT_MINOR_VERSION=	21
+PORT_BUILD_NUMBER=	11
 JDK_MAJOR_VERSION=	7
 JDK_MINOR_VERSION=	6
 JDK_BUILD_NUMBER=	24
 JDK_BUILD_DATE=		09_aug_2012
-JDK_SRC_DISTFILE=	${PORTNAME}-${JDK_MAJOR_VERSION}u${JDK_MINOR_VERSION}-fcs-src-b${JDK_BUILD_NUMBER}-${JDK_BUILD_DATE}.zip
+JDK_SRC_DISTFILE=	${PORTNAME}-${JDK_MAJOR_VERSION}u${JDK_MINOR_VERSION}-fcs-src-b${JDK_BUILD_NUMBER}-${JDK_BUILD_DATE}
 
 # Use our own version of ant to avoid circular dependencies
 ANT_VERSION=		1.8.4
-ANT_DISTFILE=		apache-ant-${ANT_VERSION}-bin.zip
+ANT_DISTFILE=		apache-ant-${ANT_VERSION}-bin
 
 LATEST_LINK=		openjdk7
 
-LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2
-
+LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2 \
+		asound:${PORTSDIR}/audio/alsa-lib
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip \
 		unzip:${PORTSDIR}/archivers/unzip \
 		${LOCALBASE}/include/cups/cups.h:${PORTSDIR}/print/cups-client
 RUN_DEPENDS+=	javavm:${PORTSDIR}/java/javavmwrapper \
 		${LOCALBASE}/lib/X11/fonts/dejavu:${PORTSDIR}/x11-fonts/dejavu
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "i386"
-JDK_ARCH=	i386
-OPENJDK_OSARCH=	bsd-${ARCH:S/i386/i586/}
-.else
-JDK_ARCH=	amd64
-OPENJDK_OSARCH=	bsd-${JDK_ARCH}
-.endif
-BOOTSTRAP_DISTFILE=	bootstrap-openjdk-7.9.05_2.dfly-3.3-${JDK_ARCH}.tar.xz
-BOOTSTRAP_LIBDIRS=	${BOOTSTRAPJDKDIR}/jre/lib/${JDK_ARCH}
-
+JDK_ARCH=	${ARCH:S/x86_64/amd64/}
+OPENJDK_OSARCH=	bsd-${JDK_ARCH:S/i386/i586/}
 INSTALLDIR=	${PREFIX}/${PORTNAME}${JDK_MAJOR_VERSION}
 
+BOOTSTRAP_DISTFILE=	bootstrap-openjdk-7.9.05_2.dfly-3.3-${JDK_ARCH}.tar.xz
+BOOTSTRAP_LIBDIRS=	${BOOTSTRAPJDKDIR}/jre/lib/${JDK_ARCH}
 NOPRECIOUSMAKEVARS=	yes
 
 ONLY_FOR_ARCHS=	i386 amd64
@@ -108,11 +100,11 @@ MAKE_ENV+=	LANG="C" \
 		ENABLE_FULL_DEBUG_SYMBOLS=0 \
 		PTHREAD_LIBS="${PTHREAD_LIBS}" \
 		MILESTONE="fcs" \
-		JDK_MICRO_VERSION="0_0${PORT_MINOR_VERSION}" \
+		JDK_MICRO_VERSION="0_${PORT_MINOR_VERSION}" \
 		BUILD_NUMBER="b${PORT_BUILD_NUMBER}"
 
-MAKE_ENV+=	HOTSPOT_BUILD_JOBS=${MAKE_JOBS}
-MAKE_ENV+=	PARALLEL_COMPILE_JOBS=${MAKE_JOBS}
+MAKE_ENV+=	HOTSPOT_BUILD_JOBS=${MAKE_JOBS_NUMBER}
+MAKE_ENV+=	ALT_PARALLEL_COMPILE_JOBS=${MAKE_JOBS_NUMBER}
 
 .include <bsd.port.options.mk>
 
@@ -125,11 +117,6 @@ RUN_DEPENDS+=  ${LOCALBASE}/share/java/zi:${PORTSDIR}/java/java-zoneinfo
 .endif
 
 BOOTSTRAPJDKDIR=	${WRKDIR}/bootstrap
-
-# Executable permissions are removed from zip archives if USE_ZIP is not set
-# and USE_ZIP breaks if .tar.xz archives are present...
-post-extract:
-	cd ${WRKDIR} && chmod -R a+x apache-ant-${ANT_VERSION}/bin
 
 post-patch:
 	@${REINPLACE_CMD} "s|%%LOCALBASE%%|${LOCALBASE}|" \
@@ -170,4 +157,4 @@ post-install:
 	# Register the VM
 	"${LOCALBASE}/bin/registervm" "${INSTALLDIR}/bin/java # OpenJDK${JDK_MAJOR_VERSION}"
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
