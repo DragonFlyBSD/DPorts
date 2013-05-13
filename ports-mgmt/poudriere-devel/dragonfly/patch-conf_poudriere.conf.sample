@@ -26,6 +26,15 @@
  
  # Directory used to store "poudriere cron" files by default:
  # ${POUDRIERE_DATA}/cron
+@@ -88,7 +73,7 @@ DISTFILES_CACHE=/usr/ports/distfiles
+ 
+ # ccache support. Supply the path to your ccache cache directory.
+ # It will be mounted into the jail and be shared among all jails.
+-#CCACHE_DIR=/var/cache/ccache
++#LOCAL_CCACHE_DIR=/var/cache/ccache
+ #
+ 
+ # parallel build support.
 @@ -123,6 +108,23 @@ DISTFILES_CACHE=/usr/ports/distfiles
  # Cleanout the restricted packages
  # NO_RESTRICTED=yes

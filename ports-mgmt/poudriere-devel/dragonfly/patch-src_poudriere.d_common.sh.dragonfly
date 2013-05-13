@@ -1,6 +1,6 @@
---- src/poudriere.d/common.sh.dragonfly.orig	2013-04-01 15:07:37.000000000 +0000
+--- src/poudriere.d/common.sh.dragonfly.orig	2013-05-13 18:37:37.191061000 +0000
 +++ src/poudriere.d/common.sh.dragonfly
-@@ -0,0 +1,850 @@
+@@ -0,0 +1,849 @@
 +#!/bin/sh
 +#
 +# DragonFly-specific
@@ -719,10 +719,9 @@
 +		mkdir -p ${STD_PACKAGES}
 +		mkdir -p ${PKGDIR}/All
 +		mkdir -p ${STD_DISTFILES}
-+		if [ -d "${CCACHE_DIR:-/nonexistent}" ]; then
-+			mkdir -p ${JAILMNT}${CCACHE_DIR} || err 1 "Failed to create ccache directory "
-+			msg "Mounting ccache from: ${CCACHE_DIR}"
-+			export CCACHE_DIR
++		if [ -d "${LOCAL_CCACHE_DIR:-/nonexistent}" ]; then
++			msg "Mounting ccache from: ${LOCAL_CCACHE_DIR}"
++			export CCACHE_DIR=/usr/obj
 +			export WITH_CCACHE_BUILD=yes
 +		fi
 +		# Check for invalid options-JAILNAME created by bad options.sh
@@ -750,9 +749,9 @@
 +		use_options ${POUDRIERED}/options ${should_mkdir}
 +	fi
 +
-+	if [ -d "${CCACHE_DIR:-/nonexistent}" ]; then
-+		# Mount user supplied CCACHE_DIR into /var/cache/ccache
-+		${NULLMOUNT} ${CCACHE_DIR} ${JAILMNT}${CCACHE_DIR} || err 1 "Failed to mount the ccache directory "
++	if [ -d "${LOCAL_CCACHE_DIR:-/nonexistent}" ]; then
++		# Mount user supplied LOCAL_CCACHE_DIR into /usr/obj
++		${NULLMOUNT} ${LOCAL_CCACHE_DIR} ${JAILMNT}/usr/obj || err 1 "Failed to mount the ccache directory"
 +	fi
 +}
 +

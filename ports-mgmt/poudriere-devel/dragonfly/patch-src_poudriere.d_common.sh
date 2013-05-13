@@ -1095,12 +1095,13 @@
  	else
  		export PKGNG=0
  		export PKG_ADD=pkg_add
-@@ -1645,26 +1093,40 @@ test -f ${SCRIPTPREFIX}/../../etc/poudri
+@@ -1645,26 +1093,41 @@ test -f ${SCRIPTPREFIX}/../../etc/poudri
  . ${SCRIPTPREFIX}/../../etc/poudriere.conf
  POUDRIERED=${SCRIPTPREFIX}/../../etc/poudriere.d
  
 -[ -z ${ZPOOL} ] && err 1 "ZPOOL variable is not set"
  [ -z ${BASEFS} ] && err 1 "Please provide a BASEFS variable in your poudriere.conf"
++[ -n "${CCACHE_DIR}" ] && err 1 "Please rename CCACHE_DIR to LOCAL_CCACHE_DIR in your poudriere.conf"
  
  trap sig_handler SIGINT SIGTERM SIGKILL
  trap exit_handler EXIT
@@ -1144,7 +1145,7 @@
  case ${ZROOTFS} in
  	[!/]*)
  		err 1 "ZROOTFS shoud start with a /"
-@@ -1679,8 +1141,3 @@ case "${WRKDIR_ARCHIVE_FORMAT}" in
+@@ -1679,8 +1142,3 @@ case "${WRKDIR_ARCHIVE_FORMAT}" in
  	*) err 1 "invalid format for WRKDIR_ARCHIVE_FORMAT: ${WRKDIR_ARCHIVE_FORMAT}" ;;
  esac
  
