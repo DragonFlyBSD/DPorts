@@ -1,0 +1,11 @@
+--- Makefile.orig	2013-05-02 15:55:29.000000000 +0000
++++ Makefile
+@@ -9,7 +9,7 @@
+ 
+ # must not be empty so we can have a target for it
+ ifeq ($(MAKECMDGOALS),)
+-MAKECMDGOALS:=all
++MAKECMDGOALS:=build
+ endif
+ 
+ SHELL=/usr/bin/env bash

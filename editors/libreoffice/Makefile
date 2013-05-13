@@ -1,4 +1,4 @@
-# $FreeBSD: editors/libreoffice/Makefile 315901 2013-04-16 20:51:47Z jkim $
+# $FreeBSD: editors/libreoffice/Makefile 317713 2013-05-08 22:34:52Z jkim $
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -53,6 +53,7 @@ LIB_DEPENDS=	icutu:${PORTSDIR}/devel/icu \
 		wps-0.2.2:${PORTSDIR}/textproc/libwps \
 		mythes-1.2.0:${PORTSDIR}/textproc/mythes \
 		odbc.2:${PORTSDIR}/databases/unixODBC \
+		cups:${PORTSDIR}/print/cups-client \
 		rdf.0:${PORTSDIR}/textproc/redland
 
 RUN_DEPENDS=	${LOCALBASE}/lib/X11/fonts/dejavu/DejaVuSans.ttf:${PORTSDIR}/x11-fonts/dejavu \
@@ -62,9 +63,10 @@ RUN_DEPENDS=	${LOCALBASE}/lib/X11/fonts/dejavu/DejaVuSans.ttf:${PORTSDIR}/x11-fo
 
 CONFLICTS_INSTALL=	libreoffice-legacy-[0-9]*
 
-GNU_CONFIGURE=	yes
 _MAKE_JOBS=	#
 MAKE_JOBS_SAFE=	yes
+
+GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf aclocal
 USE_GCC=	4.7
 USE_GMAKE=	yes
@@ -91,12 +93,17 @@ CONFIGURE_ENV=		DMAKE=${LOCALBASE}/bin/dmake \
 			PYTHON_CFLAGS="`${PYTHON_VERSION}-config --cflags`" \
 			PYTHON_LIBS="`${PYTHON_VERSION}-config --libs`"
 
-CONFIGURE_ARGS+=	--disable-epm \
+CONFIGURE_ARGS+=	--disable-dbus \
+			--disable-epm \
 			--disable-fetch-external \
 			--disable-gconf \
+			--disable-gio \
 			--disable-gnome-vfs \
 			--disable-gstreamer-0.10 \
+			--disable-gtk \
+			--disable-gtk3 \
 			--disable-linkoo \
+			--disable-lockdown \
 			--disable-neon \
 			--disable-odk \
 			--disable-online-update \
@@ -115,6 +122,7 @@ CONFIGURE_ARGS+=	--with-alloc=system \
 			--with-external-thes-dir=${LOCALBASE}/share/mythes \
 			--with-external-tar=${DISTDIR}/${DIST_SUBDIR} \
 			--with-gnu-patch=${LOCALBASE}/bin/gpatch \
+			--with-os-version=${DFLYVERSION} \
 			--with-parallelism=${MAKE_JOBS_NUMBER} \
 			--with-system-headers \
 			--with-system-libs \
@@ -123,6 +131,7 @@ CONFIGURE_ARGS+=	--with-alloc=system \
 			--with-vendor="DragonFly dports"
 
 CONFIGURE_ARGS+=	--enable-cairo-canvas \
+			--enable-cups \
 			--enable-graphite \
 			--enable-python=system
 
@@ -133,7 +142,7 @@ CONFIGURE_ARGS+=	--without-afms \
 			--without-ppds \
 			--without-system-jars \
 			--without-system-npapi-headers
- 
+
 MAN1=	libreoffice.1 \
 	lobase.1 \
 	localc.1 \
