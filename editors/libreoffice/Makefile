@@ -76,6 +76,8 @@ USE_QT4=	# empty but required
 USE_XORG=	xaw xrandr
 USE_XZ=		yes
 USES=		bison pkgconfig
+USE_GNOME+=	gtk20 desktopfileutils
+INSTALLS_ICONS= yes
 
 DISTFILES+=	${PORTNAME}-${LOVERSION}${EXTRACT_SUFX}
 DISTFILES+=	${PORTNAME}-help-${LOVERSION}${EXTRACT_SUFX}
@@ -100,7 +102,6 @@ CONFIGURE_ARGS+=	--disable-dbus \
 			--disable-gio \
 			--disable-gnome-vfs \
 			--disable-gstreamer-0.10 \
-			--disable-gtk \
 			--disable-gtk3 \
 			--disable-linkoo \
 			--disable-lockdown \
@@ -133,6 +134,7 @@ CONFIGURE_ARGS+=	--with-alloc=system \
 CONFIGURE_ARGS+=	--enable-cairo-canvas \
 			--enable-cups \
 			--enable-graphite \
+			--enable-gtk \
 			--enable-python=system
 
 CONFIGURE_ARGS+=	--without-afms \
