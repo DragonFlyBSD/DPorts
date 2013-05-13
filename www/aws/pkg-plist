@@ -777,3 +777,4 @@ share/gps/plug-ins/wsdl2aws.xml
 @dirrm include/aws
 @dirrmtry lib/gnat
 @dirrmtry share/gps/plug-ins
+@dirrmtry share/gps
