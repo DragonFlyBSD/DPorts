@@ -1,0 +1,20 @@
+--- configure.orig	2013-05-14 21:54:31.409484000 +0000
++++ configure
+@@ -7990,7 +7990,7 @@ fi
+ 		;;
+ 	    esac
+ 	    ;;
+-	FreeBSD-*)
++	DragonFly-*|FreeBSD-*)
+ 	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="${CC} -shared"
+@@ -8790,7 +8790,7 @@ fi
+ 	    BSD/OS*) ;;
+ 	    CYGWIN_*) ;;
+ 	    IRIX*) ;;
+-	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
++	    DragonFly-*|NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
+ 	    Darwin-*) ;;
+ 	    SCO_SV-3.2*) ;;
+ 	    windows) ;;
