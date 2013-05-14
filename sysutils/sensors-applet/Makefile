@@ -1,0 +1,37 @@
+# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
+# $FreeBSD: sysutils/sensors-applet/Makefile 316355 2013-04-23 14:20:25Z bapt $
+
+PORTNAME=	sensors-applet
+PORTVERSION=	1.6.1
+PORTREVISION=	10
+CATEGORIES=	sysutils
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/GNOME%20Sensors%20Applet%20Version%20${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A GNOME applet displaying hardware sensor values
+
+RUN_DEPENDS=	mbmon:${PORTSDIR}/sysutils/mbmon \
+		smartctl:${PORTSDIR}/sysutils/smartmontools
+
+USES=		pathfix pkgconfig
+USE_GNOME=	gnomeprefix intlhack gnomepanel libgnomeui
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+DEFINES=	-DMBMON_EXECUTABLE=\\\"${LOCALBASE}/bin/mbmon\\\" \
+		-DSMARTCTL_HELPER=\\\"${PREFIX}/libexec/smartctl-helper\\\"
+CPPFLAGS+=	-I${LOCALBASE}/include ${DEFINES}
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+post-patch:
+	@${CP} -f ${FILESDIR}/mbmon-sensors-interface.* \
+		${FILESDIR}/smartctl-sensors-interface.* ${WRKSRC}/src
+
+post-build:
+	${CC} ${CFLAGS} -DSMARTCTL=\"${LOCALBASE}/sbin/smartctl\" \
+		-o ${WRKSRC}/smartctl-helper ${FILESDIR}/smartctl-helper.c
+
+post-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/smartctl-helper ${PREFIX}/libexec
+	${CHMOD} u+s ${PREFIX}/libexec/smartctl-helper
+
+.include <bsd.port.mk>
