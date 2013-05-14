@@ -1,0 +1,48 @@
+# Created by: Jung-uk Kim <jkim@FreeBSD.org>
+# $FreeBSD: sysutils/asusoled/Makefile 316831 2013-04-29 16:43:05Z rene $
+
+PORTNAME=	asusoled
+PORTVERSION=	0.10
+PORTREVISION=	7
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	jkim
+
+MAINTAINER=	jkim@FreeBSD.org
+COMMENT=	Utility for ASUS USB OLED Display
+
+RUN_DEPENDS=	${FONTDIR}/TTF/luxisr.ttf:${PORTSDIR}/x11-fonts/font-bh-ttf
+
+USE_SDL=	image sdl ttf
+USE_RC_SUBR=	asusoled oled_clock
+
+PORTDATA=	asus.png asus_clock.png
+PORTDOCS=	README.FreeBSD
+PLIST_FILES=	sbin/asusoled
+SUB_FILES=	pkg-message
+
+MAKE_ARGS+=	TTF_FONT=${FONTDIR}/TTF/luxisr.ttf
+
+FONTDIR?=	${LOCALBASE}/lib/X11/fonts
+
+.include <bsd.port.options.mk>
+
+post-install:
+.if !defined(NOPORTDATA)
+	@${MKDIR} ${DATADIR}
+.for i in ${PORTDATA}
+	@${INSTALL_DATA} ${WRKSRC}/data/${i} ${DATADIR}
+.endfor
+.endif
+.if ${PORT_OPTIONS:MDOCS}
+	@${CAT} ${PKGMESSAGE} > ${WRKSRC}/README.FreeBSD
+	@${MKDIR} ${DOCSDIR}
+.for i in ${PORTDOCS}
+	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+.endfor
+.endif
+	@${ECHO}
+	@${CAT} ${PKGMESSAGE}
+	@${ECHO}
+
+.include <bsd.port.mk>
