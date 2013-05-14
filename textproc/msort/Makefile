@@ -2,7 +2,7 @@
 # Date created:		2006-08-11
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/textproc/msort/Makefile,v 1.29 2012/11/17 06:02:03 svnexp Exp $
+# $FreeBSD: textproc/msort/Makefile 316464 2013-04-24 18:10:30Z ak $
 #
 
 PORTNAME=	msort
@@ -26,7 +26,7 @@ MAKE_ENV+=	INCLUDES="-I${LOCALBASE}/include"
 GNU_CONFIGURE=	yes
 USE_TK_RUN=	yes
 USE_TCL_WRAPPER=	yes
-USE_GETTEXT=	yes
+USES=		gettext
 
 PLIST_FILES=	bin/msg bin/msort
 
