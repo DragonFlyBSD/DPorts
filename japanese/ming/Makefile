@@ -1,0 +1,86 @@
+# $FreeBSD: japanese/ming/Makefile 317308 2013-05-04 10:48:54Z kuriyama $
+
+PORTNAME=	ming
+PORTVERSION=	0.1.5
+PORTREVISION=	7
+CATEGORIES=	japanese graphics
+MASTER_SITES=	http://dist.bsdlab.org/
+#MASTER_SITES=	http://blue.ribbon.to/~harpy/ming/jaming/
+DISTNAME=	jaming-${PORTVERSION}
+
+MAINTAINER=	kuriyama@FreeBSD.org
+COMMENT=	LGPL'ed Flash 4/5 movie output library with Japanese languages support
+
+LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
+		gif.5:${PORTSDIR}/graphics/giflib
+
+CONFLICTS=	ming-*
+
+WRKSRC=		${WRKDIR}/jaming-${PORTVERSION}/src
+MAKE_ARGS=	NOPROFILE=true
+USE_LDCONFIG=	yes
+USES=		bison
+
+UTILS=		gif2dbl \
+		gif2mask \
+		listfdb \
+		listjpeg \
+		listswf \
+		makefdb \
+		png2dbl \
+		swftophp
+DOCS=		CHANGES \
+		CREDITS \
+		README \
+		TODO
+DOCS_UTIL=	README \
+		TODO
+
+post-extract:
+	${SED} -e 's:"\.\./\.\./ming\.h":<ming.h>:g' \
+		${WRKSRC}/ming.h > ${WRKSRC}/mingpp.h
+	cd ${WRKSRC}/../util && \
+	${RM} bindump.c decompile5.c hexdump.c listmp3.c
+
+pre-build:
+	${CP} ${FILESDIR}/Makefile ${WRKSRC}/
+	cd ${WRKSRC}/actioncompiler; ${MAKE} lex.swf4.c lex.swf5.c swf4compiler.tab.c swf5compiler.tab.c
+
+post-build:
+	cd ${WRKSRC}/../util && \
+	${CC} ${CFLAGS} -I${PREFIX}/include -I${PREFIX}/include/ming -c *.c
+	cd ${WRKSRC}/../util && \
+	${CC} ${CFLAGS} -L${PREFIX}/lib -o gif2dbl gif2dbl.o -lm -lz -lgif
+	cd ${WRKSRC}/../util && \
+	${CC} ${CFLAGS} -L${PREFIX}/lib -o gif2mask gif2mask.o -lm -lz -lgif
+	cd ${WRKSRC}/../util && \
+	${CC} ${CFLAGS} -L${PREFIX}/lib -o listfdb listfdb.o blocktypes.o
+	cd ${WRKSRC}/../util && \
+	${CC} ${CFLAGS} -L${PREFIX}/lib -o listjpeg listjpeg.o
+	cd ${WRKSRC}/../util && \
+	${CC} ${CFLAGS} -L${PREFIX}/lib -o listswf listswf.o blocktypes.o decompile.o read.o -lz
+	cd ${WRKSRC}/../util && \
+	${CC} ${CFLAGS} -L${PREFIX}/lib -o makefdb makefdb.o blocktypes.o read.o
+	cd ${WRKSRC}/../util && \
+	${CC} ${CFLAGS} -L${PREFIX}/lib -o png2dbl png2dbl.o -lm -lz -lpng
+	cd ${WRKSRC}/../util && \
+	${CC} ${CFLAGS} -L${PREFIX}/lib -o swftophp swftophp.o blocktypes.o decompile.o read.o -lm
+
+pre-install:
+	${MKDIR} ${PREFIX}/include/ming/blocks
+
+post-install:
+.for f in ${UTILS}
+	${INSTALL_PROGRAM} ${WRKSRC}/../util/${f} ${PREFIX}/bin/
+.endfor
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${PREFIX}/share/doc/ming/utils
+.for f in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/../${f} ${PREFIX}/share/doc/ming/
+.endfor
+.for f in ${DOCS_UTIL}
+	${INSTALL_DATA} ${WRKSRC}/../util/${f} ${PREFIX}/share/doc/ming/utils/
+.endfor
+.endif
+
+.include <bsd.port.mk>
