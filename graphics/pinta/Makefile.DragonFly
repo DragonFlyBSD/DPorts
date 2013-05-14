@@ -1,0 +1,3 @@
+.if ${ARCH} == "i386"
+IGNORE= pinta locks up during build on ${ARCH} platform
+.endif
