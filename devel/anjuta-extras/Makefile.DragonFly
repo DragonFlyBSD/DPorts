@@ -1,0 +1,3 @@
+USES+=		shebangfix
+
+SHEBANG_FILES=	scripts/builder2schema.pl
