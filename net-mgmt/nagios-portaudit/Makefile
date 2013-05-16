@@ -17,8 +17,8 @@ DISTNAME=	check_portaudit-${PORTVERSION}
 MAINTAINER=	rea@FreeBSD.org
 COMMENT=	Nagios plug-in to get portaudit/portupgrade status
 
-OPTIONS=	PORTAUDIT "Enable portaudit check" ON \
-		PORTUPGRADE "Enable portupgrade check" ON \
+#OPTIONS=	PORTAUDIT "Enable portaudit check" ON
+OPTIONS=	PORTUPGRADE "Enable portupgrade check" ON \
 		PORTUPGRADE_DEVEL "Use portupgrade-devel" OFF
 
 USE_PERL5=	yes
