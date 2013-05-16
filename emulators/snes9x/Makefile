@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai<Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: emulators/snes9x/Makefile 317113 2013-05-02 13:29:28Z bdrewery $
+# $FreeBSD: emulators/snes9x/Makefile 317692 2013-05-08 15:59:11Z bdrewery $
 
 PORTNAME=	snes9x
 PORTVERSION=	1.51
@@ -61,7 +61,7 @@ CONFIGURE_ARGS+=	--with-assembler
 CONFIGURE_ARGS+=	--without-assembler
 .endif
 
-.if ${PORT_OPTIONS:MMMX} && !defined(PACKAGE_BUILDING}
+.if ${PORT_OPTIONS:MMMX} && !defined(PACKAGE_BUILDING)
 CONFIGURE_ARGS+=	--with-mmx
 .else
 CONFIGURE_ARGS+=	--without-mmx
