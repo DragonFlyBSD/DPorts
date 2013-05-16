@@ -1,0 +1,30 @@
+#! /bin/sh
+#
+# $FreeBSD: ports/net/dhcprelay/files/dhcprelay.in,v 1.6 2012/11/17 05:59:59 svnexp Exp $
+#
+# PROVIDE: dhcprelay
+# REQUIRE: DAEMON
+#
+# Add the following line to /etc/rc.conf to enable dhcrelay:
+#
+# dhcprelay_enable="YES"
+#
+# dhcprelay_server	dhcprelay server(s)
+# dhcprelay_ifaces	ethernet interface(s)
+
+. /etc/rc.subr
+
+name=dhcprelay
+rcvar=dhcprelay_enable
+
+pidfile=/var/run/${name}.pid
+command=%%PREFIX%%/bin/${name}
+command_args="${dhcprelay_ifaces} ${dhcprelay_server}"
+
+# echo $rc_flags
+
+load_rc_config ${name}
+
+dhcprelay_enable=${dhcprelay_enable:"NO"}
+
+run_rc_command "$1"
