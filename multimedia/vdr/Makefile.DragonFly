@@ -1,0 +1,2 @@
+MAKE_ENV+=	OSTYPE=FreeBSD
+MAKE_ENV+=	DRAGONFLY="-D__FreeBSD__=9 -D__FreeBSD_version=9300400"

@@ -1,0 +1,15 @@
+--- Make.config.template.orig	2013-05-16 18:18:59.960703000 +0000
++++ Make.config.template
+@@ -16,10 +16,10 @@ endif
+ ### The C compiler and options:
+ 
+ CC       = gcc
+-CFLAGS   = -g -O3 -Wall
++CFLAGS   = $(DRAGONFLY) -g -O3 -Wall
+ 
+ CXX      = g++
+-CXXFLAGS = -g -O3 -Wall -Werror=overloaded-virtual -Wno-parentheses
++CXXFLAGS = $(DRAGONFLY) -g -O3 -Wall -Werror=overloaded-virtual -Wno-parentheses
+ 
+ ifdef PLUGIN
+ CFLAGS   += -fPIC
