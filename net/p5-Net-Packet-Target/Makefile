@@ -1,0 +1,24 @@
+# New ports collection makefile for:	Net-Packet-Target
+# Date created:		28 September 2006
+# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
+#
+# $FreeBSD: ports/net/p5-Net-Packet-Target/Makefile,v 1.6 2012/11/17 06:00:11 svnexp Exp $
+#
+
+PORTNAME=	Net-Packet-Target
+PORTVERSION=	1.01
+CATEGORIES=	net perl5 devel
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Target object for all Net-Packet related stuff
+
+BUILD_DEPENDS=	p5-Class-Gomor>=1.00:${PORTSDIR}/devel/p5-Class-Gomor \
+		p5-Net-Packet>=3.00:${PORTSDIR}/net/p5-Net-Packet
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+PERL_CONFIGURE=	yes
+MAN3=	${PORTNAME:S/-/::/g}.3
+
+.include <bsd.port.mk>
