@@ -1,0 +1,3 @@
+USES+= usb
+
+CONFIGURE_ARGS+= --disable-libusb_1_0
