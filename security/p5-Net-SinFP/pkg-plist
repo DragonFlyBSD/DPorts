@@ -1,0 +1,27 @@
+@comment $FreeBSD: ports/security/p5-Net-SinFP/pkg-plist,v 1.5 2012/11/17 06:01:13 svnexp Exp $
+%%SITE_PERL%%/Net/SinFP.pm
+%%SITE_PERL%%/Net/SinFP/Consts.pm
+%%SITE_PERL%%/Net/SinFP/DB.pm
+%%SITE_PERL%%/Net/SinFP/DB/IpVersion.pm
+%%SITE_PERL%%/Net/SinFP/DB/Os.pm
+%%SITE_PERL%%/Net/SinFP/DB/OsVersion.pm
+%%SITE_PERL%%/Net/SinFP/DB/OsVersionChildren.pm
+%%SITE_PERL%%/Net/SinFP/DB/OsVersionFamily.pm
+%%SITE_PERL%%/Net/SinFP/DB/PatternBinary.pm
+%%SITE_PERL%%/Net/SinFP/DB/PatternTcpFlags.pm
+%%SITE_PERL%%/Net/SinFP/DB/PatternTcpMss.pm
+%%SITE_PERL%%/Net/SinFP/DB/PatternTcpOptions.pm
+%%SITE_PERL%%/Net/SinFP/DB/PatternTcpWindow.pm
+%%SITE_PERL%%/Net/SinFP/DB/Signature.pm
+%%SITE_PERL%%/Net/SinFP/DB/SystemClass.pm
+%%SITE_PERL%%/Net/SinFP/DB/Vendor.pm
+%%SITE_PERL%%/Net/SinFP/Result.pm
+%%SITE_PERL%%/Net/SinFP/Search.pm
+%%SITE_PERL%%/Net/SinFP/SinFP4.pm
+%%SITE_PERL%%/Net/SinFP/SinFP6.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/SinFP/.packlist
+@dirrmtry %%SITE_PERL%%/Net
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net
+@dirrm %%SITE_PERL%%/Net/SinFP/DB
+@dirrm %%SITE_PERL%%/Net/SinFP
+@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/SinFP
