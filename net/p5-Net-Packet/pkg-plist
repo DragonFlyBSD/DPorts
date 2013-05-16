@@ -1,0 +1,69 @@
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Packet/.packlist
+%%SITE_PERL%%/Net/Packet.pm
+%%SITE_PERL%%/Net/Packet/ARP.pm
+%%SITE_PERL%%/Net/Packet/CDP.pm
+%%SITE_PERL%%/Net/Packet/CDP/Address.pm
+%%SITE_PERL%%/Net/Packet/CDP/Type.pm
+%%SITE_PERL%%/Net/Packet/CDP/TypeAddresses.pm
+%%SITE_PERL%%/Net/Packet/CDP/TypeCapabilities.pm
+%%SITE_PERL%%/Net/Packet/CDP/TypeDeviceId.pm
+%%SITE_PERL%%/Net/Packet/CDP/TypePortId.pm
+%%SITE_PERL%%/Net/Packet/CDP/TypeSoftwareVersion.pm
+%%SITE_PERL%%/Net/Packet/Consts.pm
+%%SITE_PERL%%/Net/Packet/Desc.pm
+%%SITE_PERL%%/Net/Packet/DescL2.pm
+%%SITE_PERL%%/Net/Packet/DescL3.pm
+%%SITE_PERL%%/Net/Packet/DescL4.pm
+%%SITE_PERL%%/Net/Packet/Dump.pm
+%%SITE_PERL%%/Net/Packet/ETH.pm
+%%SITE_PERL%%/Net/Packet/Env.pm
+%%SITE_PERL%%/Net/Packet/Frame.pm
+%%SITE_PERL%%/Net/Packet/ICMPv4.pm
+%%SITE_PERL%%/Net/Packet/IGMPv4.pm
+%%SITE_PERL%%/Net/Packet/IPv4.pm
+%%SITE_PERL%%/Net/Packet/IPv6.pm
+%%SITE_PERL%%/Net/Packet/LLC.pm
+%%SITE_PERL%%/Net/Packet/Layer.pm
+%%SITE_PERL%%/Net/Packet/Layer2.pm
+%%SITE_PERL%%/Net/Packet/Layer3.pm
+%%SITE_PERL%%/Net/Packet/Layer4.pm
+%%SITE_PERL%%/Net/Packet/Layer7.pm
+%%SITE_PERL%%/Net/Packet/NULL.pm
+%%SITE_PERL%%/Net/Packet/OSPF.pm
+%%SITE_PERL%%/Net/Packet/PPP.pm
+%%SITE_PERL%%/Net/Packet/PPPLCP.pm
+%%SITE_PERL%%/Net/Packet/PPPoE.pm
+%%SITE_PERL%%/Net/Packet/RAW.pm
+%%SITE_PERL%%/Net/Packet/SLL.pm
+%%SITE_PERL%%/Net/Packet/STP.pm
+%%SITE_PERL%%/Net/Packet/TCP.pm
+%%SITE_PERL%%/Net/Packet/UDP.pm
+%%SITE_PERL%%/Net/Packet/Utils.pm
+%%SITE_PERL%%/Net/Packet/VLAN.pm
+@dirrmtry %%SITE_PERL%%/Net/Packet/CDP
+@dirrmtry %%SITE_PERL%%/Net/Packet
+@dirrmtry %%SITE_PERL%%/Net
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Packet
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/arp-reply.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/arp-request.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/arp-scan.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/chaos-query.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/d3-syn-send.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/d4-syn-send.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/icmp-dest-unreach.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/icmp-echo.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/icmp-information.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/icmp-mask.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/icmp-redirect.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/icmp-timestamp.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ip6-syn-send.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ipv4-flags.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/read-pcap.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/sniffer.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/syn-scan.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/syn-send.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/udp-send.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/vlan-craft.pl
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/vlan-support.pl
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%
