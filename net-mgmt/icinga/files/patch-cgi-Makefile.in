@@ -1,0 +1,16 @@
+--- cgi/Makefile.in.orig	2012-05-15 13:00:56.000000000 +0000
++++ cgi/Makefile.in	2012-05-16 19:18:25.683923624 +0000
+@@ -199,10 +199,10 @@
+ 	$(MAKE) install-basic
+ 
+ install-basic:
+-	$(INSTALL) -m 775 $(INSTALL_OPTS_WEB) -d $(DESTDIR)$(CGILOGDIR)
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CGIDIR)
++	$(INSTALL) -m 755 $(INSTALL_OPTS_WEB) -d $(DESTDIR)$(CGILOGDIR)
++	$(INSTALL) -m 755 $(INSTALL_OPTS) -d $(DESTDIR)$(CGIDIR)
+ 	for file in *.cgi; do \
+-		$(INSTALL) -m 775 $(INSTALL_OPTS) $$file $(DESTDIR)$(CGIDIR); \
++		$(INSTALL) -m 755 $(INSTALL_OPTS) $$file $(DESTDIR)$(CGIDIR); \
+ 	done
+ 
+ strip-post-install:

@@ -1,0 +1,17 @@
+--- contrib/Makefile.in.orig	2012-05-15 13:00:56.000000000 +0000
++++ contrib/Makefile.in	2012-05-16 19:18:25.684923160 +0000
+@@ -52,10 +52,10 @@
+ devclean: distclean
+ 
+ install:
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CGIDIR)
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(BINDIR)
+-	for f in $(CGIS); do $(INSTALL) -m 775 $(INSTALL_OPTS) $$f $(DESTDIR)$(CGIDIR); done
+-	for f in $(UTILS); do $(INSTALL) -m 775 $(INSTALL_OPTS) $$f $(DESTDIR)$(BINDIR); done
++	$(INSTALL) -m 755 $(INSTALL_OPTS) -d $(DESTDIR)$(CGIDIR)
++	$(INSTALL) -m 755 $(INSTALL_OPTS) -d $(DESTDIR)$(BINDIR)
++	for f in $(CGIS); do $(INSTALL) -m 755 $(INSTALL_OPTS) $$f $(DESTDIR)$(CGIDIR); done
++	for f in $(UTILS); do $(INSTALL) -m 755 $(INSTALL_OPTS) $$f $(DESTDIR)$(BINDIR); done
+ 
+ ##############################################################################
+ # rules and dependencies for actual target programs
