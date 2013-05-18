@@ -18,6 +18,7 @@ readline_ARGS=	port
 
 .if defined(readline_ARGS) && ${readline_ARGS} == port
 LIB_DEPENDS+=		readline.6:${PORTSDIR}/devel/readline
+CFLAGS+=		-I${LOCALBASE}/include
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib -lreadline
 .endif
