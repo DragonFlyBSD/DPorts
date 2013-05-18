@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libkpass
-# Date created:		2011-09-12
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: ports/security/libkpass/Makefile,v 1.3 2012/11/17 06:01:07 svnexp Exp $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: security/libkpass/Makefile 317096 2013-05-02 12:06:21Z pawel $
 
 PORTNAME=	libkpass
-PORTVERSION=	3
+PORTVERSION=	5
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}/
 
@@ -15,14 +11,19 @@ COMMENT=	Library for a reading/writing KeePass 1.x DB
 
 LICENSE=	GPLv3
 
+LIB_DEPENDS=	nettle:${PORTSDIR}/security/nettle
+
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+USES=		gettext
 USE_LDCONFIG=	yes
-CFLAGS+=	-Dbswap_32=bswap32 -Dbswap_16=bswap16
+CFLAGS+=	-Dbswap_32=bswap32 -Dbswap_16=bswap16 \
+		-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
 PLIST_FILES=	include/kpass.h \
 		lib/libkpass.so \
-		lib/libkpass.so.0 \
+		lib/libkpass.so.1 \
 		lib/libkpass.la \
 		lib/libkpass.a
 
