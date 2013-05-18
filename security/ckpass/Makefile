@@ -1,9 +1,8 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: security/ckpass/Makefile 315566 2013-03-29 19:33:41Z cs $
-#
+# $FreeBSD: security/ckpass/Makefile 317096 2013-05-02 12:06:21Z pawel $
 
 PORTNAME=	ckpass
-PORTVERSION=	0.1
+PORTVERSION=	0.2
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}
 
@@ -12,11 +11,11 @@ COMMENT=	Ncurses based password database client
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	kpass.0:${PORTSDIR}/security/libkpass
+LIB_DEPENDS=	kpass:${PORTSDIR}/security/libkpass
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
-CPPFLAGS+=	"-I${LOCALBASE}/include"
+CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_FILES=	bin/ckpass
 
