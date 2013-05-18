@@ -1,0 +1,18 @@
+--- gdb/configure.host.orig	2013-03-05 13:37:10.000000000 +0000
++++ gdb/configure.host
+@@ -87,6 +87,7 @@ hppa*-*-linux*)		gdb_host=linux ;;
+ hppa*-*-netbsd*)	gdb_host=nbsd ;;
+ hppa*-*-openbsd*)	gdb_host=obsd ;;
+ 
++i[34567]86-*-dragonf*)	gdb_host=dfly ;;
+ i[34567]86-*-freebsd* | i[34567]86-*-kfreebsd*-gnu)
+ 			gdb_host=fbsd ;;
+ i[34567]86-*-netbsdelf* | i[34567]86-*-knetbsd*-gnu)
+@@ -174,6 +175,7 @@ vax-*-openbsd*)		gdb_host=obsd ;;
+ vax-*-ultrix*)		gdb_host=vax ;;
+ 
+ x86_64-*-linux*)	gdb_host=linux64 ;;
++x86_64-*-dragonfly*)	gdb_host=dfly64 ;;
+ x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu)
+ 			gdb_host=fbsd64 ;;
+ x86_64-*-netbsd* | x86_64-*-knetbsd*-gnu)
