@@ -1,18 +1,15 @@
-# New ports collection makefile for:	Xfce4-parole
-# Date created:		26 December 2009
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/xfce4-parole/Makefile,v 1.22 2012/11/17 05:59:55 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: multimedia/xfce4-parole/Makefile 317695 2013-05-08 16:05:21Z olivierd $
 
 PORTNAME=	parole
-PORTVERSION=	0.3.0.3
+PORTVERSION=	0.5.0
+PORTREVISION=	2
 CATEGORIES=	multimedia xfce
-MASTER_SITES=	XFCE/src/apps/${PORTNAME}/0.3/
+MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}/
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
-COMMENT=	Lightweight media player for Xfce4 based on gstreamer
+COMMENT=	Lightweight media player for Xfce4 based on GStreamer
 
 LICENSE=	GPLv2
 
@@ -23,37 +20,64 @@ LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib \
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USE_GSTREAMER=	core faad flac wavpack
 USE_GMAKE=	yes
-CONFIGURE_ARGS=	--disable-power-manager-plugin \
-		--enable-libnotify \
+CONFIGURE_ARGS=	--enable-notify-plugin \
+		--enable-tray-plugin \
 		--enable-taglib \
 		--without-html-dir
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GNOME=	gnomehack gtk20 glib20 intltool intlhack desktopfileutils
+USE_GNOME=	gtk20 glib20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil
 USE_XORG=	x11 sm
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
+USES=		desktop-file-utils pathfix pkgconfig
 
-OPTIONS_DEFINE=	CDDA HTTP NLS
-OPTIONS_DEFAULT=	CDDA HTTP NLS
-CDDA_DESC=	CD audio support (cdparanoia)
-HTTP_DESC=	HTTP streaming support (libsoup)
+OPTIONS_DEFINE=	NLS
+OPTIONS_SINGLE=	GSTREAMER
+# GST01 (GStreamer 0.10), GST10 (GStreamer 1.0)
+OPTIONS_SINGLE_GSTREAMER=	GST01 GST10
+OPTIONS_GROUP=	GST_PLUG
+OPTIONS_GROUP_GST_PLUG=	CDDA HTTP
+OPTIONS_DEFAULT=	GST01 NLS
+CDDA_DESC=	CD audio (cdparanoia)
+HTTP_DESC=	HTTP streaming (libsoup)
+GST01_DESC=	GStreamer 0.10
+GST10_DESC=	GStreamer 1.0
+GST_PLUG_DESC=	Additional GStreamer plugins
 
 .include <bsd.port.options.mk>
 
+.if ${PORT_OPTIONS:MGST01}
+USE_GSTREAMER=	core faad flac wavpack
+CONFIGURE_ARGS+=--with-gstreamer=0.10
+.endif
+
+.if ${PORT_OPTIONS:MGST10}
+USE_GSTREAMER1=	core faad flac wavpack rtmp x
+CONFIGURE_ARGS+=--with-gstreamer=1.0
+.endif
+
 .if ${PORT_OPTIONS:MCDDA}
+.if ${PORT_OPTIONS:MGST01}
 USE_GSTREAMER+=	cdparanoia
+.endif
+.if ${PORT_OPTIONS:MGST10}
+USE_GSTREAMER1+= cdparanoia
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MHTTP}
+.if ${PORT_OPTIONS:MGST01}
 USE_GSTREAMER+=	soup
+.endif
+.if ${PORT_OPTIONS:MGST10}
+USE_GSTREAMER1+= soup
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=	NLS=""
 .else
@@ -62,13 +86,8 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-patch:
-# Downgrade Glib version
-	@${REINPLACE_CMD} -e 's|2\.32|2\.28|g' ${WRKSRC}/configure
-# Fix .rc file path
+# Fix .rc files path
 	@${REINPLACE_CMD} -e 's|xfce4/src/misc|${PORTNAME}|g' \
 		${WRKSRC}/src/common/parole-rc-utils.h
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.mk>

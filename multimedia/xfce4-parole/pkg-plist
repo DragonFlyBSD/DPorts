@@ -7,18 +7,21 @@ include/parole/parole-provider-player.h
 include/parole/parole-provider-plugin.h
 include/parole/parole-stream.h
 include/parole/parole.h
-lib/parole-0/stream-properties.la
-lib/parole-0/stream-properties.so
+lib/parole-0/parole-notify.la
+lib/parole-0/parole-notify.so
 lib/parole-0/tray-icon.la
 lib/parole-0/tray-icon.so
 share/applications/parole.desktop
+share/icons/hicolor/16x16/apps/parole-extension.png
 share/icons/hicolor/16x16/apps/parole.png
 share/icons/hicolor/24x24/apps/parole.png
 share/icons/hicolor/32x32/apps/parole.png
+share/icons/hicolor/48x48/apps/parole-extension.png
 share/icons/hicolor/48x48/apps/parole.png
 share/icons/hicolor/scalable/apps/parole.svg
 %%NLS%%share/locale/ar/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/ast/LC_MESSAGES/parole.mo
+%%NLS%%share/locale/bg/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/ca/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/cs/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/da/LC_MESSAGES/parole.mo
@@ -54,12 +57,17 @@ share/icons/hicolor/scalable/apps/parole.svg
 %%NLS%%share/locale/ug/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/uk/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/zh_CN/LC_MESSAGES/parole.mo
+%%NLS%%share/locale/zh_HK/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/zh_TW/LC_MESSAGES/parole.mo
-%%DATADIR%%/parole-plugins-0/stream-properties.desktop
+%%DATADIR%%/gtk-2.0/parole.gtkrc
+%%DATADIR%%/parole-plugins-0/notify.desktop
 %%DATADIR%%/parole-plugins-0/system-tray.desktop
 share/pixmaps/parole.png
 @dirrm %%DATADIR%%/parole-plugins-0
+@dirrm %%DATADIR%%/gtk-2.0
 @dirrm %%DATADIR%%
+%%NLS%%@dirrmtry share/locale/zh_HK/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/zh_HK
 %%NLS%%@dirrmtry share/locale/ug/LC_MESSAGES
 %%NLS%%@dirrmtry share/locale/ug
 %%NLS%%@dirrmtry share/locale/te/LC_MESSAGES
@@ -68,5 +76,3 @@ share/pixmaps/parole.png
 %%NLS%%@dirrmtry share/locale/ast
 @dirrm lib/parole-0
 @dirrm include/parole
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
