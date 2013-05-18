@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ecasound
-# Date created:		22 dec 2000
-# Whom:			The Anarcat <anarcat@anarcat.dyndns.org>
-#
-# $FreeBSD: ports/audio/ecasound/Makefile,v 1.48 2012/11/17 05:54:30 svnexp Exp $
-#
+# Created by: The Anarcat <anarcat@anarcat.dyndns.org>
+# $FreeBSD: audio/ecasound/Makefile 317525 2013-05-06 15:34:17Z bapt $
 
 PORTNAME=	ecasound
 PORTVERSION=	2.9.0
@@ -26,6 +22,7 @@ AUDIOFILE_DESC=	Enable libaudiofile support
 LO_DESC=	Enable liblo support
 OIL_DESC=	Enable liboil support
 
+USES=		readline
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-liblilv \
@@ -43,10 +40,6 @@ MAN1=		ecaconvert.1 ecafixdc.1 ecalength.1 ecamonitor.1 \
 MAN5=		ecasoundrc.5
 
 .include <bsd.port.options.mk>
-
-.if exists(${LOCALBASE}/lib/libreadline.so)
-LIB_DEPENDS+=	readline:${PORTSDIR}/devel/readline
-.endif
 
 .if ${PORT_OPTIONS:MALSA}
 LIB_DEPENDS+=	asound:${PORTSDIR}/audio/alsa-lib
