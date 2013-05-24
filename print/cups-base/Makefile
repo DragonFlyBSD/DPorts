@@ -45,7 +45,6 @@ CUPS_ETCDIR=	${PREFIX}/etc/cups
 CUPS_CACHEDIR?=	/var/db/cups
 CUPS_SPOOLDIR=	/var/spool/cups
 CUPS_SOCKET?=	/var/run/cups.sock
-CUPS_PDFTOPS?=	${LOCALBASE}/libexec/xpdf/pdftops
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
 # file, dir ownership
