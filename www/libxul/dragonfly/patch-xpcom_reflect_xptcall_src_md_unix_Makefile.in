@@ -1,0 +1,11 @@
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2012-11-30 04:12:39.000000000 +0100
++++ xpcom/reflect/xptcall/src/md/unix/Makefile.in	2012-12-26 14:10:05.219461000 +0100
+@@ -59,7 +59,7 @@
+ # New code for Linux, et. al., with gcc
+ # Migrate other platforms here after testing
+ #
+-ifneq (,$(filter Linux FreeBSD GNU_%,$(OS_ARCH)))
++ifneq (,$(filter Linux FreeBSD DragonFly GNU_%,$(OS_ARCH)))
+ # Linux/x86-64
+ ifeq (x86_64,$(OS_TEST))
+ CPPSRCS		:= xptcinvoke_x86_64_unix.cpp xptcstubs_x86_64_linux.cpp
