@@ -1,0 +1,10 @@
+--- configure.orig	2009-01-11 22:53:18.000000000 +0000
++++ configure
+@@ -3701,6 +3701,7 @@ shift; shift
+ target_os=$*
+ IFS=$ac_save_IFS
+ case $target_os in *\ *) target_os=`echo "$target_os" | sed 's/ /-/g'`;; esac
++case $target_os in dragonfly*) target_os=freebsd; OSRELEASE=900100 ;; esac
+ 
+ 
+ # The aliases save the names the user supplied, while $host etc.
