@@ -1,0 +1,15 @@
+--- configure.ac.intermediate	2013-05-29 09:44:43.000000000 +0000
++++ configure.ac
+@@ -74,6 +74,12 @@ case "$target_os" in
+                    need_pragma=yes ;
+                    ;;
+ 
++  dragonfly* )     OSTYPE=FreeBSD ;
++		   OS_TAG="P_FREEBSD" ;
++		   OSRELEASE=900100
++                   need_pragma=yes ;
++		   ;;
++
+   freebsd* )       OSTYPE=FreeBSD ;
+ 		   OS_TAG="P_FREEBSD" ;
+                    if test "x$OSRELEASE" = "x"; then
