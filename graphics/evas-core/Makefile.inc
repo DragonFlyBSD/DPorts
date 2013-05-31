@@ -28,3 +28,4 @@ CONFIGURE_ARGS=	--disable-software-xcb \
 		--disable-cpu-sse3
 
 PATCHDIR=	"../../graphics/evas-core/files"
+DFLY_PATCHDIR=	"../../graphics/evas-core/dragonfly"
