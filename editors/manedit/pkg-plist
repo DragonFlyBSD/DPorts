@@ -1,0 +1,17 @@
+bin/manedit
+bin/manview
+bin/manwrap
+%%DATADIR%%/help/index.html
+%%DATADIR%%/help/manedit_heading.gif
+%%DATADIR%%/help/tutorial.html
+%%DATADIR%%/help/xml_reference.html
+%%DATADIR%%/icons/manedit.xpm
+%%DATADIR%%/icons/manview.xpm
+%%DATADIR%%/templates/api.mpt
+%%DATADIR%%/templates/config.mpt
+%%DATADIR%%/templates/intro.mpt
+%%DATADIR%%/templates/program.mpt
+@dirrm %%DATADIR%%/templates
+@dirrm %%DATADIR%%/icons
+@dirrm %%DATADIR%%/help
+@dirrm %%DATADIR%%
