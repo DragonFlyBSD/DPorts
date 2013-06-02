@@ -36,19 +36,7 @@ obspamd_precmd()
 {
 	_rc=0
 	echo "${obspamd_flags}" | egrep "(^\-b| \-b)" 2>&1 > /dev/null
-	if [ $? -eq 1 ]; then
-		/sbin/mount -p | grep 'fdescfs.*/dev/fd.*fdescfs.*rw' 2>&1 > /dev/null
-		_rc=${?}
-		if [ ${_rc} -ne 0 ]; then
-			echo "Unable to start spamd in greylisting mode"
-			echo ""
-			echo "Please mount fdescfs with the following line in /etc/fstab"
-			echo ""
-			echo "  fdescfs /dev/fd fdescfs rw 0 0"
-			echo ""
-		fi
-		return ${_rc}
-	fi
+	return 0
 }
 
 obspamd_postcmd()
