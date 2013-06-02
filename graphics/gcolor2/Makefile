@@ -1,0 +1,28 @@
+# New ports collection makefile for:	gcolor2
+# Date created:		18 April 2005
+# Whom:			Piotr Smyrak, piotr.smyrak@heron.pl
+#
+# $FreeBSD: graphics/gcolor2/Makefile 318333 2013-05-16 20:07:39Z rakuco $
+#
+
+PORTNAME=	gcolor2
+PORTVERSION=	0.4
+PORTREVISION=	9
+CATEGORIES=	graphics gnome
+MASTER_SITES=	SF
+
+MAINTAINER=	ps.ports@smyrak.com
+COMMENT=	A simple GTK+ 2.0 color selector
+
+USE_GNOME=	gtk20 gnomeprefix
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+SUB_FILES=	gcolor2.desktop
+
+post-install:
+	${MKDIR} ${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKDIR}/gcolor2.desktop ${PREFIX}/share/applications
+
+.include <bsd.port.mk>
