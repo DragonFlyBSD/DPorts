@@ -1,0 +1,46 @@
+bin/aconnect
+bin/alsaloop
+bin/alsamixer
+bin/alsaucm
+bin/amidi
+bin/amixer
+bin/aplay
+bin/aplaymidi
+bin/arecord
+bin/arecordmidi
+bin/aseqdump
+bin/aseqnet
+bin/iecset
+bin/speaker-test
+sbin/alsaconf
+sbin/alsactl
+share/alsa/init/00main
+share/alsa/init/default
+share/alsa/init/hda
+share/alsa/init/help
+share/alsa/init/info
+share/alsa/init/test
+share/alsa/speaker-test/sample_map.csv
+%%NLS%%share/locale/de/LC_MESSAGES/alsa-utils.mo
+%%NLS%%share/locale/fr/LC_MESSAGES/alsa-utils.mo
+%%NLS%%share/locale/ja/LC_MESSAGES/alsa-utils.mo
+%%NLS%%share/locale/ja/LC_MESSAGES/alsaconf.mo
+%%NLS%%share/locale/ru/LC_MESSAGES/alsaconf.mo
+share/sounds/alsa/Front_Center.wav
+share/sounds/alsa/Front_Left.wav
+share/sounds/alsa/Front_Right.wav
+share/sounds/alsa/Noise.wav
+share/sounds/alsa/Rear_Center.wav
+share/sounds/alsa/Rear_Left.wav
+share/sounds/alsa/Rear_Right.wav
+share/sounds/alsa/Side_Left.wav
+share/sounds/alsa/Side_Right.wav
+@dirrmtry man/fr/man8
+@dirrmtry man/fr
+@dirrmtry share/sounds/alsa
+@dirrmtry share/sounds
+@dirrmtry share/alsa/speaker-test
+@dirrmtry share/alsa/init
+@dirrmtry share/alsa
+@cwd /var
+@dirrmtry lib/alsa
