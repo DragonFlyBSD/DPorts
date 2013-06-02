@@ -1,0 +1,35 @@
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: graphics/xmms-vumeter/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+
+PORTNAME=	vumeter
+PORTVERSION=	0.9.2
+PORTREVISION=	8
+CATEGORIES=	graphics
+MASTER_SITES=	SF/${PORTNAME}plugin/Plugin%20for%20XMMS
+PKGNAMEPREFIX=	xmms-
+
+MAINTAINER=	c.petrik.sosa@gmail.com
+COMMENT=	Analog VUmeter plugin for XMMS
+
+LICENSE=	GPLv2 GPLv3
+LICENSE_COMB=	dual
+
+LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
+
+USE_GNOME=	gdkpixbuf
+GNU_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	yes
+
+DATADIR=	${PREFIX}/share/xmms/VU_Meter_skins
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}|' ${WRKSRC}/src/vumeter.h
+	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
+
+post-install:
+.for s in default default.mirror default.oldxmms
+	${MKDIR} ${DATADIR}/${s}
+	${INSTALL_DATA} ${WRKSRC}/skins/${s}/* ${DATADIR}/${s}
+.endfor
+
+.include <bsd.port.mk>
