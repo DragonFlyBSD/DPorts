@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.fpc.mk 314990 2013-03-23 05:28:05Z acm $
+# $FreeBSD: Mk/bsd.fpc.mk 318556 2013-05-20 00:45:26Z miwi $
 #
 # bsd.fpc.mk - Support for FreePascal based ports.
 #
@@ -7,7 +7,7 @@
 #
 # For FreeBSD committers:
 # Please send all suggested changes to the maintainer instead of committing
-# them to CVS yourself.
+# them to SVN yourself.
 #
 # USE_FPC		- If you set this to "yes", this automatically will install
 #			  free pascal compiler, if you need install additional fpc

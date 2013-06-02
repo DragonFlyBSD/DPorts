@@ -7,9 +7,9 @@
 #
 # For FreeBSD committers:
 # Please send all suggested changes to the maintainer instead of committing
-# them to CVS yourself.
+# them to svn yourself.
 #
-# $FreeBSD: Mk/bsd.java.mk 316544 2013-04-26 02:38:41Z glewis $
+# $FreeBSD: Mk/bsd.java.mk 318556 2013-05-20 00:45:26Z miwi $
 #
 
 .if !defined(Java_Include)

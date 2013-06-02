@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.python.mk 317117 2013-05-02 14:11:03Z bapt $
+# $FreeBSD: Mk/bsd.python.mk 319529 2013-05-31 16:03:49Z miwi $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
@@ -375,49 +375,49 @@ PYTHON_PORTVERSION=	${PYTHON_DEFAULT_PORTVERSION}
 
 # Python-3.3
 .if ${PYTHON_VERSION} == "python3.3"
-PYTHON_PORTVERSION?=3.3.0
+PYTHON_PORTVERSION?=	3.3.2
 PYTHON_PORTSDIR=	${PORTSDIR}/lang/python33
-PYTHON_REL=			330
+PYTHON_REL=		332
 PYTHON_SUFFIX=		33
-PYTHON_VER=			3.3
+PYTHON_VER=		3.3
 .if exists(${PYTHON_CMD}-config)
 PYTHON_ABIVER!=		${PYTHON_CMD}-config --abiflags
 .endif
 
 # Python-3.2
 .elif ${PYTHON_VERSION} == "python3.2"
-PYTHON_PORTVERSION?=3.2.3
+PYTHON_PORTVERSION?=	3.2.5
 PYTHON_PORTSDIR=	${PORTSDIR}/lang/python32
-PYTHON_REL=			323
+PYTHON_REL=		325
 PYTHON_SUFFIX=		32
-PYTHON_VER=			3.2
+PYTHON_VER=		3.2
 .if exists(${PYTHON_CMD}-config)
 PYTHON_ABIVER!=		${PYTHON_CMD}-config --abiflags
 .endif
 
 # Python-3.1
 .elif ${PYTHON_VERSION} == "python3.1"
-PYTHON_PORTVERSION?=3.1.5
+PYTHON_PORTVERSION?=	3.1.5
 PYTHON_PORTSDIR=	${PORTSDIR}/lang/python31
-PYTHON_REL=			315
+PYTHON_REL=		315
 PYTHON_SUFFIX=		31
-PYTHON_VER=			3.1
+PYTHON_VER=		3.1
 
 # Python-2.7
 .elif ${PYTHON_VERSION} == "python2.7"
-PYTHON_PORTVERSION?=2.7.3
+PYTHON_PORTVERSION?=	2.7.5
 PYTHON_PORTSDIR=	${PORTSDIR}/lang/python27
-PYTHON_REL=			273
+PYTHON_REL=		275
 PYTHON_SUFFIX=		27
-PYTHON_VER=			2.7
+PYTHON_VER=		2.7
 
 # Python-2.6
 .elif ${PYTHON_VERSION} == "python2.6"
-PYTHON_PORTVERSION?=2.6.8
+PYTHON_PORTVERSION?=	2.6.8
 PYTHON_PORTSDIR=	${PORTSDIR}/lang/python26
-PYTHON_REL=			268
+PYTHON_REL=		268
 PYTHON_SUFFIX=		26
-PYTHON_VER=			2.6
+PYTHON_VER=		2.6
 
 # Python versions in development
 .elif defined(FORCE_PYTHON_VERSION)
@@ -671,10 +671,9 @@ RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/twisted/__init__.py:${PORTSDIR}/devel/py-twis
 # This in turn might cause it to link against version X while using the
 # includes of version Y, leading to a broken port.
 # Enforce a certain Python version by using PYTHON_VER for cmake.
-.if defined(USE_CMAKE)
+
 CMAKE_ARGS+=	-DPythonLibs_FIND_VERSION:STRING="${PYTHON_VER}" \
 		-DPythonInterp_FIND_VERSION:STRING="${PYTHON_VER}"
-.endif
 
 .endif		# !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
 

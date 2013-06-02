@@ -5,9 +5,9 @@
 #
 # For FreeBSD committers:
 # Please send all suggested changes to the maintainer instead of committing
-# them to CVS yourself.
+# them to SVN yourself.
 #
-# $FreeBSD: Mk/bsd.php.mk 313569 2013-03-07 09:20:22Z ale $
+# $FreeBSD: Mk/bsd.php.mk 319224 2013-05-27 12:32:13Z ale $
 #
 # Adding 'USE_PHP=yes' to a port includes this Makefile after bsd.ports.pre.mk.
 # If the port requires a predefined set of PHP extensions, they can be
@@ -60,9 +60,8 @@ PHP_EXT_INC=	pcre spl
 
 HTTPD?=		${LOCALBASE}/sbin/httpd
 .if exists(${HTTPD})
-APXS?=		${LOCALBASE}/sbin/apxs
-APACHE_MPM!=	${APXS} -q MPM_NAME
-.	if ${APACHE_MPM} == "worker" || ${APACHE_MPM} == "event"
+APACHE_THR!=	${HTTPD} -V | ${GREP} threaded
+.	if ${APACHE_THR:Myes}
 PHP_EXT_DIR:=	${PHP_EXT_DIR}-zts
 .	endif
 .elif defined(APACHE_PORT) && (${APACHE_PORT:M*worker*} != "" || ${APACHE_PORT:M*event*} != "")

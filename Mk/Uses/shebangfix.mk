@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/shebangfix.mk 317555 2013-05-06 22:23:09Z bapt $
+# $FreeBSD: Mk/Uses/shebangfix.mk 319366 2013-05-29 10:34:57Z bapt $
 #
 # common templates for replacing #! interpreters in scripts file
 #
@@ -48,6 +48,6 @@ pre-patch: fix-shebang
 
 fix-shebang:
 	@cd ${WRKSRC}; \
-		${ECHO_CMD} ${SHEBANG_FILES} | ${XARGS} ${REINPLACE_CMD} ${_SHEBANG_REINPLACE_ARGS}
+		${ECHO_CMD} ${SHEBANG_FILES} | ${XARGS} ${SED} -i '' ${_SHEBANG_REINPLACE_ARGS}
 
 .endif

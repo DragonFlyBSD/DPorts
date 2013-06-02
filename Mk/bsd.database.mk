@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.database.mk 316631 2013-04-26 19:52:01Z flo $
+# $FreeBSD: Mk/bsd.database.mk 317925 2013-05-12 00:00:56Z girgen $
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Database_Post_Include)
@@ -43,7 +43,7 @@ Database_Include_MAINTAINER=	ports@FreeBSD.org
 #				  currently installed version.  Fall back to default if
 #				  necessary (PostgreSQL-9.0 = 90).
 # DEFAULT_PGSQL_VER
-#				- PostgreSQL default version, currently 90.
+#				- PostgreSQL default version, currently 92.
 # WANT_PGSQL_VER
 #				- Maintainer can set an arbitrary version of PostgreSQL to
 #				  always build this port with (overrides WITH_PGSQL_VER).
@@ -190,13 +190,14 @@ IGNORE=		cannot install: unknown MySQL version: ${MYSQL_VER}
 .endif # USE_MYSQL
 
 .if defined(USE_PGSQL)
-VALID_PGSQL_VER=	83 84 90 91 92
-DEFAULT_PGSQL_VER?=	90
+VALID_PGSQL_VER=	83 84 90 91 92 93
+DEFAULT_PGSQL_VER?=	92
 PGSQL83_LIBVER=		5
 PGSQL84_LIBVER=		5
 PGSQL90_LIBVER=		5
 PGSQL91_LIBVER=		5
 PGSQL92_LIBVER=		5
+PGSQL93_LIBVER=		5
 
 # Setting/finding PostgreSQL version we want.
 .  if exists(${LOCALBASE}/bin/pg_config)

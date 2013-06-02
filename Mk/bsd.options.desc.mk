@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.options.desc.mk 316106 2013-04-19 14:47:09Z danfe $
+# $FreeBSD: Mk/bsd.options.desc.mk 317928 2013-05-12 04:48:06Z danfe $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -132,6 +132,7 @@ HAL_DESC?=		HAL (Hardware Abstraction Layer) support
 HDF5_DESC?=		HDF-5 data format support
 HTTPD_DESC?=		httpd output streaming support
 HTTPS_DESC?=		HTTPS protocol support
+HUNSPELL_DESC?=		Spell checking support via Hunspell
 ICONS_DESC?=		Install icon theme(s)
 ICONV_DESC?=		Encoding conversion support via iconv
 ICU_DESC?=		Unicode support via ICU

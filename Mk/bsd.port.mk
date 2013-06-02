@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 317580 2013-05-07 08:01:46Z bapt $
+# $FreeBSD: Mk/bsd.port.mk 319432 2013-05-30 15:17:29Z bapt $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -462,7 +462,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #
 # USE_LINUX		- Set to yes to say the port needs the default linux base port.
 #				  Set to value <X>, if the port needs emulators/linux_base-<X>.
-#				  If set to "7", a dependency is registered to emulators/linux_base.
 #				  Implies appropriate settings for STRIP and STRIP_CMD.
 # USE_LINUX_PREFIX
 #				- controls the action of PREFIX (see above). Only use this
@@ -480,7 +479,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # LINUX_OSRELEASE	- Contains the value of compat.linux.osrelease sysctl.
 #				  Will be used to distinguish which linux
 #				  infrastructure ports should be used.
-#				  Valid values: 2.4.2, 2.6.16.
+#				  Valid values: 2.6.16.
 # AUTOMATIC_PLIST
 #				- Set to yes to enable automatic packing list generation.
 #				  Currently has no effect unless USE_LINUX_RPM is set.
@@ -1660,10 +1659,14 @@ LIB32DIR=	lib
 .endif
 PLIST_SUB+=	LIB32DIR=${LIB32DIR}
 
+PKGNG_ORIGIN?=	ports-mgmt/pkg
 .if defined(WITH_PKGNG)
+.if ${WITH_PKGNG} == devel
+PKGNG_ORIGIN=		ports-mgmt/pkg-devel
+.endif
 .if !defined(PKG_DEPENDS)
 .if !defined(CLEAN_FETCH_ENV)
-PKG_DEPENDS+=		${LOCALBASE}/sbin/pkg:${PORTSDIR}/ports-mgmt/pkg
+PKG_DEPENDS+=		${LOCALBASE}/sbin/pkg:${PORTSDIR}/${PKGNG_ORIGIN}
 .endif
 .endif
 .endif
@@ -1881,11 +1884,7 @@ USE_LINUX=	${OVERRIDE_LINUX_BASE_PORT}
 LINUX_BASE_PORT=	${LINUXBASE}/bin/sh:${PORTSDIR}/emulators/linux_base-${USE_LINUX}
 .	else
 .		if ${USE_LINUX:tl} == "yes"
-.			if ${OSVERSION} < 800076 || ${LINUX_OSRELEASE} == "2.4.2"
-LINUX_BASE_PORT=	${LINUXBASE}/etc/fedora-release:${PORTSDIR}/emulators/linux_base-fc4
-.			else
 LINUX_BASE_PORT=	${LINUXBASE}/etc/fedora-release:${PORTSDIR}/emulators/linux_base-f10
-.			endif
 .		else
 IGNORE=		cannot be built: there is no emulators/linux_base-${USE_LINUX}, perhaps wrong use of USE_LINUX or OVERRIDE_LINUX_BASE_PORT
 .		endif
@@ -1940,11 +1939,13 @@ MAKE_ENV+=		DISPLAY="localhost:1001"
 PKG_IGNORE_DEPENDS?=		'this_port_does_not_exist'
 
 _GL_gl_LIB_DEPENDS=		GL.1:${PORTSDIR}/graphics/libGL
+_GL_gl_USE_XORG=		glproto dri2proto
 _GL_glew_LIB_DEPENDS=		GLEW.1:${PORTSDIR}/graphics/glew
 _GL_glu_LIB_DEPENDS=		GLU.1:${PORTSDIR}/graphics/libGLU
+_GL_glu_USE_XORG=		glproto dri2proto
 _GL_glw_LIB_DEPENDS=		GLw.1:${PORTSDIR}/graphics/libGLw
 _GL_glut_LIB_DEPENDS=		glut.12:${PORTSDIR}/graphics/freeglut
-_GL_linux_RUN_DEPENDS=		${LINUXBASE}/usr/X11R6/lib/libGL.so.1:${PORTSDIR}/graphics/linux_dri
+_GL_linux_RUN_DEPENDS=		${LINUXBASE}/usr/lib/libGL.so.1.2:${PORTSDIR}/graphics/linux-dri74
 
 .if defined(USE_GL)
 . if ${USE_GL:tl} == "yes"
@@ -1955,6 +1956,8 @@ USE_GL=		glu
 		!defined(_GL_${_component}_RUN_DEPENDS)
 IGNORE=		uses unknown GL component
 .  else
+USE_XORG+=	${_GL_${_component}_USE_XORG}
+BUILD_DEPENDS+=	${_GL_${_component}_BUILD_DEPENDS}
 LIB_DEPENDS+=	${_GL_${_component}_LIB_DEPENDS}
 RUN_DEPENDS+=	${_GL_${_component}_RUN_DEPENDS}
 .  endif
@@ -2175,7 +2178,6 @@ CFLAGS:=	${CFLAGS:N-std=*} -std=${USE_CSTD}
 
 # Multiple make jobs support
 .if defined(DISABLE_MAKE_JOBS) || defined(MAKE_JOBS_UNSAFE)
-MAKE_JOBS_NUMBER=	1
 _MAKE_JOBS=		#
 .else
 .if defined(MAKE_JOBS_SAFE) || defined(FORCE_MAKE_JOBS)
@@ -2187,6 +2189,10 @@ BUILD_FAIL_MESSAGE+=	"You have chosen to use multiple make jobs (parallelization
 .endif
 .endif
 
+.if empty(MAKE_JOBS_NUMBER)
+MAKE_JOBS_NUMBER=	1
+.endif
+
 # ccache support
 # Support NO_CCACHE for common setups, require WITH_CCACHE_BUILD, and
 # don't use if ccache already set in CC
@@ -2196,9 +2202,15 @@ BUILD_FAIL_MESSAGE+=	"You have chosen to use multiple make jobs (parallelization
 BUILD_DEPENDS+=		${LOCALBASE}/bin/ccache:${PORTSDIR}/devel/ccache
 .	endif
 
+_CCACHE_PATH=	${LOCALBASE}/libexec/ccache
+
 # Prepend the ccache dir into the PATH and setup ccache env
-MAKE_ENV+=		PATH=${LOCALBASE}/libexec/ccache:${PATH}
-CONFIGURE_ENV+=	PATH=${LOCALBASE}/libexec/ccache:${PATH}
+PATH:=	${_CCACHE_PATH}:${PATH}
+.if !${MAKE_ENV:M*PATH=*} && !${CONFIGURE_ENV:M*PATH=*}
+MAKE_ENV+=			PATH=${PATH}
+CONFIGURE_ENV+=		PATH=${PATH}
+.endif
+
 .	if defined(CCACHE_DIR)
 MAKE_ENV+=		CCACHE_DIR="${CCACHE_DIR}"
 CONFIGURE_ENV+=	CCACHE_DIR="${CCACHE_DIR}"
@@ -2944,7 +2956,7 @@ MANEXT=	.gz
 
 .if defined(.PARSEDIR)
 _MLINKS=	 ${_MLINKS_PREPEND} \
-		 ${MANLANG:S,^,man/,:S,/"",,:@m@${MLINKS:@p@${MAN${p:E}PREFIX}/$m/man${p:E}/$p${MANEXT}@}@}
+		 ${MANLANG:S,^,man/,:S,/"",,:@m@${MLINKS:@p@${MAN${p:E:C/(.).*/\1/g}PREFIX}/$m/man${p:E:C/(.).*/\1/g}/$p${MANEXT}@}@}
 .else
 __pmlinks!=	${ECHO_CMD} '${MLINKS:S/	/ /}' | ${AWK} \
  '{ if (NF % 2 != 0) { print "broken"; exit; } \

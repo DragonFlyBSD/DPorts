@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 316634 2013-04-26 20:19:50Z bapt $
+# $FreeBSD: Mk/bsd.pkgng.mk 319432 2013-05-30 15:17:29Z bapt $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -20,6 +20,7 @@ PKGUPGRADE?=		${PKGDIR}/pkg-upgrade
 _FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
 						fonts.dir fonts.scale gtk-update-icon-cache \
 						gio-querymodules \
+						ldconfig \
 						update-desktop-database update-mime-database \
 						gdk-pixbuf-query-loaders catalog.ports \
 						glib-compile-schemas
@@ -262,7 +263,7 @@ do-package: ${TMPPLIST}
 		${RM} -f ${PACKAGES}/$$cat/${PKGNAMEPREFIX}${PORTNAME}*${PKG_SUFX} ; \
 	done
 	@if ${PKG_CREATE} -o ${PKGREPOSITORY} ${PKGNAME}; then \
-		if [ "${PKGORIGIN}" = "ports-mgmt/pkg" ]; then \
+		if [ "${PKGORIGIN}" = "ports-mgmt/pkg" -o "${PKGORIGIN}" = "ports-mgmt/pkg-devel" ]; then \
 			if [ ! -d ${PKGLATESTREPOSITORY} ]; then \
 				if ! ${MKDIR} ${PKGLATESTREPOSITORY}; then \
 					${ECHO_MSG} "=> Can't create directory ${PKGLATESTREPOSITORY}."; \

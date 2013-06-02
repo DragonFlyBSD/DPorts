@@ -5,7 +5,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.commands.mk 314628 2013-03-19 09:27:52Z bapt $
+# $FreeBSD: Mk/bsd.commands.mk 319530 2013-05-31 16:09:54Z miwi $
 #
 # DO NOT COMMIT CHANGES TO THIS FILE BY YOURSELF, EVEN IF YOU DID NOT GET
 # A RESPONSE FROM THE MAINTAINER(S) WITHIN A REASONABLE TIMEFRAME! ALL
@@ -72,6 +72,7 @@ OBJDUMP?=	/usr/bin/objdump
 PASTE?=		/usr/bin/paste
 PAX?=		/bin/pax
 PRINTF?=	/usr/bin/printf
+PS_CMD?=	/bin/ps
 PW?=		/usr/sbin/pw
 REALPATH?=	/bin/realpath
 RM?=		/bin/rm
@@ -120,7 +121,7 @@ ECHO_MSG?=	${ECHO_CMD}
 .elif !defined(_PKGTOOLSDEFINED)
 _PKGTOOLSDEFINED=	yes
 .if defined(WITH_PKGNG)
-PKG_BIN?=		${LOCALBASE}/sbin/pkg
+PKG_BIN?=		${LOCALBASE}/sbin/pkg-static
 PKG_CMD?=		${PKG_BIN} register
 PKG_DELETE?=		${PKG_BIN} delete -y
 PKG_INFO?=		${PKG_BIN} info -g

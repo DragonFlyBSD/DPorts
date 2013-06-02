@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.licenses.db.mk,v 1.22 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.licenses.db.mk 318596 2013-05-20 12:24:43Z bdrewery $
 
 Licenses_db_Include_MAINTAINER=         portmgr@FreeBSD.org
 
@@ -70,7 +70,7 @@ _LICENSE_NAME_AGPLv3=	GNU Affero General Public License version 3
 _LICENSE_GROUPS_AGPLv3=	FSF GPL OSI
 
 _LICENSE_NAME_AL2=	Apache License
-_LICENSE_GROUPS_AL2=	FSF OSI COPYFREE
+_LICENSE_GROUPS_AL2=	FSF OSI
 
 _LICENSE_NAME_ART10=	Artistic License version 1.0
 _LICENSE_GROUPS_ART10=	OSI

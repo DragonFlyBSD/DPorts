@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.gnustep.mk 317116 2013-05-02 14:09:21Z bapt $
+# $FreeBSD: Mk/bsd.gnustep.mk 319399 2013-05-30 01:06:51Z bdrewery $
 #
 # This file contains some variable definitions that are supposed to
 # make your life easier when dealing with ports related to the GNUstep.
@@ -465,6 +465,7 @@ RUN_DEPENDS+=	${GNUSTEP_LOCAL_SERVICES}/${_GNUSTEP_DEP:C/:.*//}.service/${_GNUST
 # source GNUstep.sh
 #
 .if defined(USE_GNUSTEP_CONFIGURE)
+NO_CCACHE=	Overrides PATH set from GNUstep.sh
 run-autotools::
 	@${DO_NADA}
 
@@ -489,6 +490,7 @@ do-configure:
 # source GNUstep.sh
 #
 .if defined(USE_GNUSTEP_BUILD)
+NO_CCACHE=	Overrides PATH set from GNUstep.sh
 do-build:
 .if defined(USE_GNUSTEP_MAKE_DIRS)
 .for i in ${USE_GNUSTEP_MAKE_DIRS}

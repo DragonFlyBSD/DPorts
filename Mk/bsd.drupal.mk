@@ -1,13 +1,13 @@
 #-*- mode: makefile; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.drupal.mk 313219 2013-03-02 09:27:34Z miwi $
+# $FreeBSD: Mk/bsd.drupal.mk 318556 2013-05-20 00:45:26Z miwi $
 #
 # bsd.drupal.mk - Support for Drupal ports and modules.
 #
 # For FreeBSD committers:
 # Please send all suggested changes to the maintainer instead of committing
-# them to CVS yourself.
+# them to SVN yourself.
 
 bsd_drupal_mk_MAINTAINER=       miwi@FreeBSD.org
 

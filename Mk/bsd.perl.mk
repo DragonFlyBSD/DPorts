@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.perl.mk,v 1.29 2013/02/04 12:03:32 svnexp Exp $
+# $FreeBSD: Mk/bsd.perl.mk 318556 2013-05-20 00:45:26Z miwi $
 #
 # bsd.perl.mk - Support for Perl-based ports.
 #
@@ -9,7 +9,7 @@
 #
 # For FreeBSD committers:
 # Please send all suggested changes to the maintainer instead of committing
-# them to CVS yourself.
+# them to SVN yourself.
 #
 # PERL5			- Set to full path of perl5, either in the system or
 #				  installed from a port.
