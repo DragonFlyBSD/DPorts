@@ -1,0 +1,5 @@
+etc/portsnap.conf.sample
+libexec/make_index
+libexec/phttpget
+sbin/portsnap
+@dirrmtry portsnap
