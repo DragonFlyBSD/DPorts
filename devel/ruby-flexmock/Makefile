@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Ruby/FlexMock
-# Date created:		18 November 2005
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/ruby-flexmock/Makefile,v 1.11 2013/01/23 19:56:52 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-flexmock/Makefile 319623 2013-06-02 01:48:59Z swills $
 
 PORTNAME=	flexmock
-PORTVERSION=	1.2.0
+PORTVERSION=	1.3.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
