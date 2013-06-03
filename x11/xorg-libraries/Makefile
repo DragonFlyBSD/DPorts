@@ -1,12 +1,8 @@
-# New ports collection makefile for:    xorg-libraries
-# Date created:		29 May 2004
-# Whom:			anholt@FreeBSD.org
-#
-# $FreeBSD: ports/x11/xorg-libraries/Makefile,v 1.31 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/xorg-libraries/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xorg-libraries
-PORTVERSION=	7.5.1
+PORTVERSION=	7.7
 CATEGORIES=	x11
 MASTER_SITES=	# none
 DISTFILES=	# none
