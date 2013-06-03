@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xlsclients
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xlsclients/Makefile,v 1.5 2012/11/17 06:03:22 svnexp Exp $
-#
+# $FreeBSD: x11/xlsclients/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xlsclients
 PORTVERSION=	1.1.2
