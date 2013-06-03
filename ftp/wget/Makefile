@@ -1,8 +1,9 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: ftp/wget/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: ftp/wget/Makefile 318142 2013-05-14 08:27:47Z vd $
 
 PORTNAME=	wget
 DISTVERSION=	1.14
+PORTREVISION=	2
 CATEGORIES=	ftp www ipv6
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	wget
@@ -19,8 +20,10 @@ MAKE_JOBS_SAFE=	yes
 
 OPTIONS_RADIO=	SSL
 OPTIONS_RADIO_SSL=GNUTLS OPENSSL
-OPTIONS_DEFINE=	IPV6 NLS IDN
+OPTIONS_DEFINE=	IPV6 NLS IDN PCRE
 OPTIONS_DEFAULT=OPENSSL IDN
+
+PCRE_DESC=	Support Perl regular expressions in addition to POSIX
 
 .include <bsd.port.options.mk>
 
@@ -60,6 +63,15 @@ LIB_DEPENDS+=	idn:${PORTSDIR}/dns/libidn
 CONFIGURE_ARGS+=--enable-iri --with-libidn=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=--disable-iri
+.endif
+
+.if ${PORT_OPTIONS:MPCRE}
+# Wget will pick pcre automatically and link with it if it is present.
+LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+.else
+CONFIGURE_ENV+=	ac_cv_header_pcre_h=no
 .endif
 
 MAN1=		wget.1
