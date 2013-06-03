@@ -2,7 +2,7 @@
 # Date created:				3 May 2004
 # Whom:					Brian Candler <B.Candler@pobox.com>
 #
-# $FreeBSD: ports/textproc/docbook-utils/Makefile,v 1.14 2012/11/17 06:01:54 svnexp Exp $
+# $FreeBSD: textproc/docbook-utils/Makefile 317903 2013-05-11 18:45:42Z hrs $
 #
 
 PORTNAME=	docbook-utils
@@ -19,7 +19,6 @@ BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/3.1:${PORTSDIR}/textproc/docbook
 		${LOCALBASE}/share/sgml/docbook/dsssl:${PORTSDIR}/textproc/dsssl-docbook-modular \
 		nsgmls:${PORTSDIR}/textproc/jade
 RUN_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/dsssl:${PORTSDIR}/textproc/dsssl-docbook-modular \
-		${LOCALBASE}/share/texmf/tex/jadetex/dsssl.def:${PORTSDIR}/print/jadetex \
 		nsgmls:${PORTSDIR}/textproc/jade \
 		sgmlspl:${PORTSDIR}/textproc/p5-SGMLSpm \
 		lynx:${PORTSDIR}/www/lynx
@@ -27,6 +26,7 @@ RUN_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/dsssl:${PORTSDIR}/textproc/dsssl-d
 CONFLICTS=	docbook2X-*
 
 USE_PERL5_RUN=	yes
+USE_TEX=	jadetex
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 MAKE_ARGS+=	docdir="${DOCSDIR}" htmldir="${DOCSDIR}/html"
