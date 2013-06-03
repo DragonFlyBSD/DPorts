@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-MPFR/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: math/p5-Math-MPFR/Makefile 318017 2013-05-13 08:56:41Z tobez $
 
 PORTNAME=	Math-MPFR
-PORTVERSION=	3.17
+PORTVERSION=	3.18
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SISYPHUS
