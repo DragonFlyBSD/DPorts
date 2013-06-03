@@ -1,8 +1,9 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: lang/tcl86/Makefile 316025 2013-04-18 08:20:59Z gahr $
+# $FreeBSD: lang/tcl86/Makefile 319676 2013-06-02 15:37:23Z crees $
 
 PORTNAME=	tcl
 PORTVERSION=	8.6.0
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	SF/tcl/Tcl/${PORTVERSION} \
 		${MASTER_SITE_TCLTK}
