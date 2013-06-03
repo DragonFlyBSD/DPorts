@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-sequel
-# Date created:		24 Dec 2008
-# Whom:			Wen Heping<wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/rubygem-sequel/Makefile,v 1.39 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Wen Heping<wenheping@gmail.com>
+# $FreeBSD: devel/rubygem-sequel/Makefile 319694 2013-06-02 17:30:08Z swills $
 
 PORTNAME=	sequel
-PORTVERSION=	3.38.0
+PORTVERSION=	3.48.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
