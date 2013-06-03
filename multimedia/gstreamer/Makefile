@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: multimedia/gstreamer/Makefile 317804 2013-05-10 14:14:10Z kwm $
 #    $MCom: ports/multimedia/gstreamer/Makefile,v 1.74 2010/03/09 10:11:45 kwm Exp $
 
 PORTNAME=	gstreamer
@@ -18,6 +18,8 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 CFLAGS:=	${CFLAGS} -O2 -Wno-format
 USES=		bison pathfix pkgconfig gettext
+# workaround a crash in clang 3.3 crash llvm bug # 15840
+USE_GCC=	any
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20 libxml2 ltverhack ltasneededhack
