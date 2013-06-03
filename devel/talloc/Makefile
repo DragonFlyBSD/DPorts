@@ -1,4 +1,4 @@
-# $FreeBSD: devel/talloc/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/talloc/Makefile 318827 2013-05-23 02:23:34Z jgh $
 
 PORTNAME=		talloc
 PORTVERSION=		2.0.8
@@ -28,7 +28,8 @@ MAKE_JOBS_SAFE=		yes
 PKGCONFIGDIR?=		${PREFIX}/libdata/pkgconfig
 PLIST_SUB+=		PKGCONFIGDIR=${PKGCONFIGDIR:S;${PREFIX}/;;}
 
-OPTIONS=		PYTHON		"Python bindings"	on
+OPTIONS_DEFINE=	PYTHON
+OPTIONS_DEFAULT=	PYTHON
 
 .include <bsd.port.options.mk>
 
@@ -52,7 +53,7 @@ _MAKE_JOBS=		--jobs=${MAKE_JOBS_NUMBER}
 .endif
 .endif
 
-.if defined(WITH_PYTHON)
+.if ${PORT_OPTIONS:MPYTHON}
 USE_PYTHON_RUN=		yes
 PLIST_FILES+=		include/pytalloc.h \
 			lib/libpytalloc-util.so \
