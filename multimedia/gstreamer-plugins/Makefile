@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-plugins/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: multimedia/gstreamer-plugins/Makefile 317804 2013-05-10 14:14:10Z kwm $
 #   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.125 2010/03/16 19:33:10 mezz Exp $
 
 PORTNAME=	gstreamer
@@ -54,6 +54,9 @@ CONFIGURE_ARGS=	--disable-option-checking
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${EXTRA_LIBS} ${PTHREAD_LIBS}
 CFLAGS+=	-I${LOCALBASE}/include
+
+# workaround a crash in clang 3.3 crash llvm bug # 15840
+USE_GCC=	any
 
 DEFAULT_AUDIOSINK?=	osssink
 DEFAULT_AUDIOSRC?=	osssrc
