@@ -1,5 +1,5 @@
 # Created by: Edini <ports@edini.net>
-# $FreeBSD: ports/irc/evangeline/Makefile,v 1.11 2013/01/18 13:29:40 svnexp Exp $
+# $FreeBSD: irc/evangeline/Makefile 318141 2013-05-14 08:02:31Z gahr $
 
 PORTNAME=	evangeline
 PORTVERSION=	1.1.4
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_TCL=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--with-tcllib=${LOCALBASE}/lib/libtcl${TCL_VER:S/.//}.so \
+    		--with-tclinc=${LOCALBASE}/include/tcl${TCL_VER}/tcl.h
 
 PLIST_FILES=	bin/evangeline
 
