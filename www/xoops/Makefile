@@ -1,12 +1,8 @@
-# New ports collection makefile for:   xoops
-# Date created:		02/08/2008
-# Whom:			Wen heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/www/xoops/Makefile,v 1.16 2012/11/17 06:03:11 svnexp Exp $
-#
+# Created by: Wen heping <wenheping@gmail.com>
+# $FreeBSD: www/xoops/Makefile 319565 2013-06-01 14:03:30Z wen $
 
 PORTNAME=	xoops
-PORTVERSION=	2.5.5
+PORTVERSION=	2.5.6
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/XOOPS%20Core%20%28stable%20releases%29/XOOPS_${PORTVERSION}
 
