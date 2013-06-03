@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Data-Dump
-# Date created:	   23 March 2003
-# Whom:		   mat
-#
-# $FreeBSD: ports/devel/p5-Data-Dump/Makefile,v 1.17 2012/11/17 05:56:09 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-Data-Dump/Makefile 318031 2013-05-13 09:23:40Z tobez $
 
 PORTNAME=	Data-Dump
-PORTVERSION=	1.21
+PORTVERSION=	1.22
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
