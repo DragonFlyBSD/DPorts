@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Coro/Makefile,v 1.54 2012/12/21 10:37:38 svnexp Exp $
+# $FreeBSD: devel/p5-Coro/Makefile 317732 2013-05-09 10:15:26Z tobez $
 
 PORTNAME=	Coro
-PORTVERSION=	6.23
+PORTVERSION=	6.31
 PORTEPOCH=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
