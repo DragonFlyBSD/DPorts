@@ -2,10 +2,10 @@
 # Date created:			  7 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: databases/pear-Horde_Db/Makefile 316218 2013-04-21 22:16:15Z mm $
+# $FreeBSD: databases/pear-Horde_Db/Makefile 317889 2013-05-11 15:37:47Z mm $
 
 PORTNAME=	Horde_Db
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.3
 CATEGORIES=	databases www pear
 PKGNAMEPREFIX=	pear-
 
