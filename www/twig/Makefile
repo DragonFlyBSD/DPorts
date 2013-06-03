@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/twig/Makefile,v 1.29 2012/11/17 06:03:09 svnexp Exp $
+# $FreeBSD: www/twig/Makefile 305832 2012-10-13 13:39:56Z dinoex $
 
 PORTNAME=	twig
 PORTVERSION=	2.8.3
