@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-channel-horde/bsd.horde.mk 316221 2013-04-21 23:02:58Z mm $
+# $FreeBSD: devel/pear-channel-horde/bsd.horde.mk 319374 2013-05-29 14:51:15Z mm $
 
 MASTER_SITES?=	http://pear.horde.org/get/
 
@@ -33,6 +33,7 @@ horde-Horde_Controller-DEPEND=	${PEARDIR}/Horde/Controller.php:${PORTSDIR}/devel
 horde-Horde_Core-DEPEND=	${PEARDIR}/Horde.php:${PORTSDIR}/devel/pear-Horde_Core
 horde-Horde_Crypt-DEPEND=	${PEARDIR}/Horde/Crypt.php:${PORTSDIR}/security/pear-Horde_Crypt
 horde-Horde_Crypt_Blowfish-DEPEND=	${PEARDIR}/Horde/Crypt/Blowfish.php:${PORTSDIR}/security/pear-Horde_Crypt_Blowfish
+horde-Horde_Css_Parser-DEPEND=	${PEARDIR}/Horde/Css/Parser.php:${PORTSDIR}/www/pear-Horde_Css_Parser
 horde-Horde_Data-DEPEND=	${PEARDIR}/Horde/Data.php:${PORTSDIR}/devel/pear-Horde_Data
 horde-Horde_Date-DEPEND=	${PEARDIR}/Horde/Date.php:${PORTSDIR}/devel/pear-Horde_Date
 horde-Horde_Date_Parser-DEPEND=	${PEARDIR}/Horde/Date/Parser.php:${PORTSDIR}/devel/pear-Horde_Date_Parser
@@ -69,6 +70,7 @@ horde-Horde_Oauth-DEPEND=	${PEARDIR}/Horde/Oauth/Consumer.php:${PORTSDIR}/securi
 horde-Horde_Pdf-DEPEND=		${PEARDIR}/Horde/Pdf/Writer.php:${PORTSDIR}/textproc/pear-Horde_Pdf
 horde-Horde_Perms-DEPEND=	${PEARDIR}/Horde/Perms.php:${PORTSDIR}/security/pear-Horde_Perms
 horde-Horde_Prefs-DEPEND=	${PEARDIR}/Horde/Prefs.php:${PORTSDIR}/devel/pear-Horde_Prefs
+horde-Horde_Queue-DEPEND=	${PEARDIR}/Horde/Queue/Runner.php:${PORTSDIR}/devel/pear-Horde_Queue
 horde-Horde_Rdo-DEPEND=		${PEARDIR}/Horde/Rdo.php:${PORTSDIR}/devel/pear-Horde_Rdo
 horde-Horde_Role-DEPEND=	${PEARDIR}/PEAR/Installer/Role/Horde/Role.php:${PORTSDIR}/devel/pear-Horde_Role
 horde-Horde_Rpc-DEPEND=		${PEARDIR}/Horde/Rpc.php:${PORTSDIR}/net/pear-Horde_Rpc
