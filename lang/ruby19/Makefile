@@ -1,5 +1,5 @@
-# Created by:	Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/lang/ruby19/Makefile,v 1.22 2013/01/29 00:50:17 svnexp Exp $
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: lang/ruby19/Makefile 319130 2013-05-26 19:22:51Z swills $
 
 PORTNAME=	ruby
 PORTVERSION=	${RUBY_PORTVERSION}
@@ -302,7 +302,7 @@ plist::
 test:
 	@(cd ${WRKSRC}; ${MAKE} test)
 
-validate::
+validate:
 	@${MKDIR} ${WRKSRC}/rubyspec
 	rm -rf ${WRKSRC}/rubyspec/*
 	(cd ${WRKSRC}/rubyspec && git clone git://github.com/rubyspec/rubyspec.git)
