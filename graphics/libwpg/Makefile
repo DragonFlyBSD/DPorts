@@ -1,11 +1,11 @@
-# $FreeBSD: graphics/libwpg/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/libwpg/Makefile 318637 2013-05-21 02:35:34Z fluffy $
 
 PORTNAME=	libwpg
 PORTVERSION=	0.2.2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	fluffy@FreeBSD.org
+MAINTAINER=	office@FreeBSD.org
 COMMENT=	Library and tools to work with WordPerfect Graphics (WPG) files
 
 LICENSE=	LGPL21 MPL
