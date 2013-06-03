@@ -2,11 +2,11 @@
 # Date created:		04 October 2004
 # Whom:			pdseniura@techie.com
 #
-# $FreeBSD: net/c3270/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: net/c3270/Makefile 318928 2013-05-24 08:37:19Z araujo $
 #
 
 PORTNAME=	c3270
-PORTVERSION=	3.3.12ga7
+PORTVERSION=	3.3.12ga13
 CATEGORIES=	net
 MASTER_SITES=	http://x3270.bgp.nu/download/
 EXTRACT_SUFX=	-src.tgz
