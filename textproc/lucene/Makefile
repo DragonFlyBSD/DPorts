@@ -1,8 +1,10 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: textproc/lucene/Makefile 317066 2013-05-01 23:23:51Z bdrewery $
+# $FreeBSD: textproc/lucene/Makefile 318740 2013-05-22 00:19:45Z bdrewery $
 
 PORTNAME=	lucene
 PORTVERSION=	3.6.2
+# Be sure to chase devel/openoffice-devel and textproc/py-lucene
+# when updating this
 CATEGORIES=	textproc java devel
 MASTER_SITES=	APACHE
 MASTER_SITE_SUBDIR=	${PORTNAME}/java/${PORTVERSION}/
@@ -15,7 +17,7 @@ LICENSE=	AL2
 
 CONFLICTS=	lucene4-[0-9].*
 
-PORTSCOUT=	limit:3.*$$
+PORTSCOUT=	limit:^3\.
 
 USE_JAVA=	yes
 NO_BUILD=	yes
