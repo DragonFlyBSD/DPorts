@@ -1,9 +1,9 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: ports/security/openvpn20/Makefile,v 1.53 2013/01/11 23:43:25 svnexp Exp $
+# $FreeBSD: security/openvpn20/Makefile 319579 2013-06-01 16:47:41Z mandree $
 
 PORTNAME=	openvpn
 PORTVERSION=	2.0.9
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security net
 # MASTER_SITES points to hosts in distinct data centers,
 # so just one MASTER_SITES entry should be OK.
