@@ -2,7 +2,7 @@
 # Date created:				17 December 2004
 # Whom:					Daniel Gerzo <danger@rulez.sk>
 #
-# $FreeBSD: ports/www/autoindex2/Makefile,v 1.14 2012/11/17 06:02:28 svnexp Exp $
+# $FreeBSD: www/autoindex2/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	AutoIndex
