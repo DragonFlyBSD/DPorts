@@ -1,13 +1,13 @@
 # Created by: Glenn Johnson
-# $FreeBSD: biology/tinker/Makefile 316821 2013-04-29 14:23:03Z miwi $
+# $FreeBSD: biology/tinker/Makefile 319343 2013-05-29 05:25:49Z miwi $
 
 PORTNAME=	tinker
-PORTVERSION=	6.2.02
+PORTVERSION=	6.2.05
 CATEGORIES=	biology
 MASTER_SITES=	http://dasher.wustl.edu/tinker/downloads/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A general purpose molecular modelling package
+COMMENT=	General purpose molecular modelling package
 
 RESTRICTED=	author requests no distribution except from his FTP site
 
@@ -26,7 +26,6 @@ INSTALL_TARGET=	rename
 MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
-
 
 .include <bsd.port.pre.mk>
 
