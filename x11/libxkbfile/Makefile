@@ -1,12 +1,8 @@
-# New ports collection makefile for:   libxkbfile
-# Date Created:			7 May 2004
-# Whom:				Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/libxkbfile/Makefile,v 1.13 2012/11/17 06:03:18 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/libxkbfile/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libxkbfile
-PORTVERSION=	1.0.7
+PORTVERSION=	1.0.8
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
