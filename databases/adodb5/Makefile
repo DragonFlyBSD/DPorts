@@ -1,5 +1,5 @@
 # Created by: mm@FreeBSD.org
-# $FreeBSD: ports/databases/adodb5/Makefile,v 1.18 2012/12/05 02:57:39 svnexp Exp $
+# $FreeBSD: databases/adodb5/Makefile 318115 2013-05-13 15:47:47Z miwi $
 
 PORTNAME=	adodb
 DISTVERSION=	5.18
@@ -18,7 +18,6 @@ LATEST_LINK=	adodb5
 USE_ZIP=	yes
 USE_PHP=	pcre
 DEFAULT_PHP_VER=5
-IGNORE_WITH_PHP=4
 
 WRKSRC=		${WRKDIR}/${PORTNAME}5
 NO_BUILD=	YES
