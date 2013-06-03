@@ -1,8 +1,8 @@
 # Created by: arved
-# $FreeBSD: textproc/soprano/Makefile 317414 2013-05-05 14:17:11Z rakuco $
+# $FreeBSD: textproc/soprano/Makefile 317868 2013-05-11 12:19:49Z rakuco $
 
 PORTNAME=	soprano
-PORTVERSION=	2.9.1
+PORTVERSION=	2.9.2
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/Soprano/${PORTVERSION}
 
@@ -13,7 +13,7 @@ LIB_DEPENDS=	raptor2:${PORTSDIR}/textproc/raptor2 \
 		rdf:${PORTSDIR}/textproc/redland \
 		iodbc:${PORTSDIR}/databases/libiodbc
 
-USE_QT4=	corelib dbus qtestlib network \
+USE_QT4=	corelib dbus network qtestlib_build xml \
 		qmake_build moc_build uic_build rcc_build
 USE_BZIP2=	yes
 USES=		cmake pkgconfig
