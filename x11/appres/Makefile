@@ -1,12 +1,7 @@
-# New ports collection makefile for:	appres
-# Date Created:				15 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/appres/Makefile,v 1.4 2012/11/17 06:03:14 svnexp Exp $
-#
+# $FreeBSD: x11/appres/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	appres
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.4
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
