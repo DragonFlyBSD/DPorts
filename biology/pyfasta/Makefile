@@ -1,9 +1,5 @@
-# Ports collection makefile for:	pyfasta
-# Date created:				18 Nov, 2009
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/biology/pyfasta/Makefile,v 1.14 2012/11/17 05:54:53 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: biology/pyfasta/Makefile 319570 2013-06-01 14:22:35Z wen $
 
 PORTNAME=	pyfasta
 PORTVERSION=	0.4.5
