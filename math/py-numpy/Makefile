@@ -1,12 +1,8 @@
-# New ports collection makefile for:	numpy
-# Date created:				24 July 2006
-# Whom:					Tony Maher
-#
-# $FreeBSD: ports/math/py-numpy/Makefile,v 1.41 2012/11/17 05:59:29 svnexp Exp $
-#
+# Created by: Tony Maher
+# $FreeBSD: math/py-numpy/Makefile 318649 2013-05-21 06:44:17Z demon $
 
 PORTNAME=	numpy
-PORTVERSION=	1.6.2
+PORTVERSION=	1.7.0
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	math python
@@ -14,8 +10,8 @@ MASTER_SITES=	http://docs.scipy.org/doc/${DISTNAME:C/\..$/.0/}/:doc \
 		SF/${PORTNAME}/NumPy/${PORTVERSION}:source
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	numpy-${PORTVERSION:S/r/rc/}${EXTRACT_SUFX}:source \
-		numpy-ref.pdf:doc \
-		numpy-user.pdf:doc
+		numpy-ref-${PORTVERSION}.pdf:doc \
+		numpy-user-${PORTVERSION}.pdf:doc
 EXTRACT_ONLY=	numpy-${PORTVERSION:S/r/rc/}${EXTRACT_SUFX}
 
 MAINTAINER=	llwang@infor.org
@@ -74,9 +70,13 @@ LIB_DEPENDS+=	umfpack.1:${PORTSDIR}/math/suitesparse
 PYDISTUTILS_CONFIGUREARGS+=	--fcompiler=gnu95
 PYDISTUTILS_BUILDARGS+=	--fcompiler=gnu95
 
+.if ${PYTHON_REL} >= 320
+.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
+.endif
+
 post-extract:
-	@${CP} ${DISTDIR}/numpy-ref.pdf ${WRKDIR}
-	@${CP} ${DISTDIR}/numpy-user.pdf ${WRKDIR}
+	@${CP} ${DISTDIR}/numpy-ref-${PORTVERSION}.pdf ${WRKDIR}
+	@${CP} ${DISTDIR}/numpy-user-${PORTVERSION}.pdf ${WRKDIR}
 
 post-patch:
 	@${REINPLACE_CMD} -e "s+%%FC%%+${FC}+" ${WRKSRC}/numpy/distutils/fcompiler/gnu.py
@@ -118,8 +118,8 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/numpy/f2py/f2py.1 ${MAN1PREFIX}/man/man1
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKDIR}/numpy-ref.pdf ${DOCSDIR}
-	${INSTALL_DATA} ${WRKDIR}/numpy-user.pdf ${DOCSDIR}
+	${INSTALL_DATA} ${WRKDIR}/numpy-ref-${PORTVERSION}.pdf ${DOCSDIR}
+	${INSTALL_DATA} ${WRKDIR}/numpy-user-${PORTVERSION}.pdf ${DOCSDIR}
 .endif
 .if defined(WITH_FIXED_FENV)
 	@if [ "`${PKG_VERSION} -t \"\`\\\`${CC} -print-prog-name=as\\\` --version | ${AWK} 'NR==1 {sub(/\(GNU Binutils\)/,""); print $$3}'\`\" 2.18.49`" = ">" ] ; then \
