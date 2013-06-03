@@ -2,11 +2,11 @@
 # Date created:							18 Dec 2007
 # Whom:									vsevolod
 #
-# $FreeBSD: ports/devel/libev/Makefile,v 1.14 2012/11/17 05:55:54 svnexp Exp $
+# $FreeBSD: devel/libev/Makefile 317741 2013-05-09 16:47:55Z vsevolod $
 #
 
 PORTNAME=	libev
-PORTVERSION=	4.11
+PORTVERSION=	4.15
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://dist.schmorp.de/libev/ \
