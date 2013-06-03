@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/devel/rubygem-highline/Makefile,v 1.14 2013/01/08 00:51:21 svnexp Exp $
+# $FreeBSD: devel/rubygem-highline/Makefile 319640 2013-06-02 03:29:47Z swills $
 
 PORTNAME=	highline
-PORTVERSION=	1.6.15
+PORTVERSION=	1.6.19
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
