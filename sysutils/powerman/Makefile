@@ -1,5 +1,5 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: ports/sysutils/powerman/Makefile,v 1.17 2012/11/27 00:38:42 svnexp Exp $
+# $FreeBSD: sysutils/powerman/Makefile 319274 2013-05-27 16:48:01Z bsam $
 
 PORTNAME=	powerman
 PORTVERSION=	2.3.16
@@ -7,10 +7,9 @@ CATEGORIES=	sysutils parallel
 MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A tool for doing remote power control
+COMMENT=	Tool for doing remote power control
 
 LICENSE=	GPLv2 # (or later)
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
