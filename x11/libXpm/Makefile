@@ -1,12 +1,8 @@
-# New ports collection makefile for:   libXpm
-# Date Created:			25 Jan, 2003
-# Whom:				Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/libXpm/Makefile,v 1.23 2012/11/17 06:03:17 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/libXpm/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libXpm
-PORTVERSION=	3.5.9
+PORTVERSION=	3.5.10
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
