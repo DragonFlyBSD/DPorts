@@ -2,11 +2,11 @@
 # Date created:			  Mon Oct 08, 2001
 # Whom:				  Thierry Thomas (<thierry@thomas.as>)
 #
-# $FreeBSD: ports/mail/horde-imp/Makefile,v 1.80 2013/02/12 17:39:01 svnexp Exp $
+# $FreeBSD: mail/horde-imp/Makefile 319377 2013-05-29 15:02:18Z mm $
 #
 
 PORTNAME=	imp
-PORTVERSION=	6.0.4
+PORTVERSION=	6.0.5
 CATEGORIES=	mail www pear
 PKGNAMEPREFIX=	horde-
 
@@ -26,6 +26,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Compress \
 		Horde_Core \
 		Horde_Crypt \
+		Horde_Css_Parser \
 		Horde_Date \
 		Horde_Editor \
 		Horde_Exception \
@@ -44,6 +45,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Perms \
 		Horde_Serialize \
 		Horde_SpellChecker \
+		Horde_Stream_Filter \
 		Horde_Support \
 		Horde_Text_Filter \
 		Horde_Text_Flowed \
