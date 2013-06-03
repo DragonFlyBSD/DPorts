@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-surl
-# Date created:		2010-10-04
-# Whom:			Carlo Strub <c-s@c-s.li>
-#
-# $FreeBSD: ports/www/py-surl/Makefile,v 1.6 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Carlo Strub <c-s@c-s.li>
+# $FreeBSD: www/py-surl/Makefile 317644 2013-05-08 08:48:12Z rm $
 
 PORTNAME=	surl
 PORTVERSION=	0.7.1.1
@@ -17,19 +13,14 @@ COMMENT=	URL shortening command line application
 
 LICENSE=	GPLv3
 
-USE_PYTHON=	2.5+
-USE_PYDISTUTILS=yes
 USE_BZIP2=	yes
+USE_PYTHON=	-2.7
+USE_PYDISTUTILS=yes
+
 MAN1=		surl.1
-
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 260
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}simplejson>=2.0.9:${PORTSDIR}/devel/py-simplejson
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,share/man/man1,${PREFIX}/man/man1,g' \
-	                ${WRKSRC}/setup.py
+		${WRKSRC}/setup.py
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
