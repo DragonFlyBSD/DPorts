@@ -1,12 +1,12 @@
 # Created by: Brooks Davis <brooks@freebsd.org>
-# $FreeBSD: ports/net/openmpi/Makefile,v 1.35 2012/12/16 10:30:42 svnexp Exp $
+# $FreeBSD: net/openmpi/Makefile 319015 2013-05-24 20:58:30Z pawel $
 
 # TODO:
 #  - etc/*.sample support
 
 PORTNAME=	openmpi
 DISTVERSION=	1.6.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/
 
