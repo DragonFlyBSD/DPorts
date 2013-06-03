@@ -1,12 +1,7 @@
-# New ports collection makefile for:	rubygem-msgpack
-# Date created:		19 Jan 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-msgpack/Makefile,v 1.9 2012/11/17 05:57:00 svnexp Exp $
-#
+# $FreeBSD: devel/rubygem-msgpack/Makefile 319108 2013-05-26 13:36:40Z kuriyama $
 
 PORTNAME=	msgpack
-PORTVERSION=	0.4.7
+PORTVERSION=	0.5.5
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
