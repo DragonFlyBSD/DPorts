@@ -2,7 +2,7 @@
 # Date created:		08 Nov 2006
 # Whom:			dinoex
 #
-# $FreeBSD: mail/sendmail/bsd.milter.mk 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: mail/sendmail/bsd.milter.mk 318274 2013-05-16 05:28:01Z dinoex $
 #
 # a port shall includes this file after bsd.ports.pre.mk
 # .include "${PORTSDIR}/${PKGCATEGORY}/sendmail/bsd.milter.mk"
@@ -61,7 +61,7 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/libmilter.so.${MILTER_SOVER}:${PORTSDIR}/mail/${S
 .endif
 
 SENDMAIL_MILTER_PORT?=	sendmail
-MILTER_SOVER?=	4
+MILTER_SOVER?=	6
 MILTERBASE?=	${LOCALBASE}
 MILTERINC=	-I${MILTERBASE}/include
 MILTERRPATH=	${MILTERBASE}/lib
