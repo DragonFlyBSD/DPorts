@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-cql
-# Date created:		2011-12-14
-# Whom:			Radim Kolar <hsn@fbsd8.localdomain>
-#
-# $FreeBSD: ports/databases/py-cql/Makefile,v 1.4 2012/11/17 05:55:22 svnexp Exp $
-#
+# Created by: Radim Kolar <hsn@sendmail.cz>
+# $FreeBSD: databases/py-cql/Makefile 318489 2013-05-19 05:19:35Z bdrewery $
 
 PORTNAME=	cql
-PORTVERSION=	1.0.10
+PORTVERSION=	1.4.0
 CATEGORIES=	databases python
 MASTER_SITES=	http://cassandra-dbapi2.apache-extras.org.codespot.com/files/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
