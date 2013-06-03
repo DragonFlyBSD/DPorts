@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lopster
-# Date created:		19 Oct 2000
-# Whom:			Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: ports/net-p2p/lopster/Makefile,v 1.48 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: net-p2p/lopster/Makefile 317828 2013-05-10 16:44:26Z bapt $
 
 PORTNAME=	lopster
 PORTVERSION=	1.2.2
@@ -22,29 +18,27 @@ CONFIGURE_ARGS=	--with-pthread=yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 
-OPTIONS=	FLAC	"Include FLAC support"		On	\
-		OGG	"Include OGG support"		On	\
-		ZLIB	"Enable ZLIB compression"	On
+OPTIONS_DEFINE=	FLAC OGG ZLIB
+OPTIONS_DEFAULT=	FLAC OGG ZLIB
 
-.include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
 # --with-flac is on by default
-.if defined(WITH_FLAC)
+.if ${PORT_OPTIONS:MFLAC}
 LIB_DEPENDS+=		FLAC.10:${PORTSDIR}/audio/flac
 .else
 CONFIGURE_ARGS+=	--without-flac
 .endif
 
 # --with-ogg is on by default
-.if defined(WITH_OGG)
+.if ${PORT_OPTIONS:MOGG}
 LIB_DEPENDS+=		ogg:${PORTSDIR}/audio/libogg
 .else
 CONFIGURE_ARGS+=	--without-ogg
 .endif
 
 # --with-zlib is on by default
-.if defined(WITHOUT_ZLIB)
+.if ! ${PORT_OPTIONS:MZLIB}
 CONFIGURE_ARGS+=	--without-zlib
 .endif
 
@@ -54,4 +48,4 @@ post-patch:
 	@${REINPLACE_CMD} -e "s/www.naplist.com/www.gotnap.com/" \
 		${WRKSRC}/src/lopster.h
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

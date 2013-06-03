@@ -1,4 +1,4 @@
-$FreeBSD: ports/net-p2p/lopster/files/patch-src-global.c,v 1.2 2012/11/17 06:00:40 svnexp Exp $
+$FreeBSD: net-p2p/lopster/files/patch-src-global.c 300897 2012-07-14 14:29:18Z beat $
 
 This used to be patch-src::global.c, but has been moved to stop using
 colons in patch names.
