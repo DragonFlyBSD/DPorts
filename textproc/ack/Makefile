@@ -1,9 +1,8 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/ack/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/ack/Makefile 319584 2013-06-01 19:07:15Z rakuco $
 
 PORTNAME=	ack
-PORTVERSION=	1.96
-PORTREVISION=	1
+PORTVERSION=	2.04
 CATEGORIES=	textproc perl5 sysutils
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	App
@@ -19,20 +18,5 @@ PERL_CONFIGURE=	yes
 CONFLICTS_INSTALL=	ja-ack-[0-9]*
 
 MAN1=		ack.1
-
-OPTIONS_DEFINE=	BASH_COMPLETE
-BASH_COMPLETE_DESC=	install bash completion files
-
-.include <bsd.port.options.mk>
-
-COMPLETION_DIR=		${PREFIX}/etc/bash_completion.d
-.if ${PORT_OPTIONS:MBASH_COMPLETE}
-RUN_DEPENDS+=	${COMPLETION_DIR}:${PORTSDIR}/shells/bash-completion
-PLIST_SUB+=		BASH=""
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/etc/ack.bash_completion.sh ${COMPLETION_DIR}
-.else
-PLIST_SUB+=		BASH="@comment "
-.endif
 
 .include <bsd.port.mk>
