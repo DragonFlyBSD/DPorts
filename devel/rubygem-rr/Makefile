@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-rr
-# Date created:		21 September 2010
-# Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/rubygem-rr/Makefile,v 1.5 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
+# $FreeBSD: devel/rubygem-rr/Makefile 319684 2013-06-02 16:39:26Z swills $
 
 PORTNAME=	rr
-PORTVERSION=	1.0.4
+PORTVERSION=	1.1.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
