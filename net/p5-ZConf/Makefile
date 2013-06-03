@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-LDAP-Makepath
-# Date created:		2008-06-24
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: ports/net/p5-ZConf/Makefile,v 1.22 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: net/p5-ZConf/Makefile 319500 2013-05-31 14:44:50Z miwi $
 
 PORTNAME=	ZConf
 PORTVERSION=	6.1.0
