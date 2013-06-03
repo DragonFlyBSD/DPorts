@@ -2,11 +2,12 @@
 # Date created:		20 Nov 2005
 # Whom:			Hye-Shik Chang
 #
-# $FreeBSD: ports/devel/llvm/Makefile,v 1.52 2013/01/11 16:44:24 svnexp Exp $
+# $FreeBSD: devel/llvm/Makefile 319327 2013-05-28 20:28:03Z brooks $
 #
 
 PORTNAME=	llvm
 PORTVERSION=	3.2
+PORTREVISION=	3
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/releases/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
@@ -15,18 +16,16 @@ MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	Low Level Virtual Machine
 
 LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
-BUILD_DEPENDS=	sphinx-build:${PORTSDIR}/textproc/py-sphinx
-.if defined(PACKAGE_BUILDING) || defined(MAINTAINER_MODE)
+.if defined(PACKAGE_BUILDING)
 BUILD_DEPENDS+=	bash:${PORTSDIR}/shells/bash
 .endif
 .if defined(MAINTAINER_MODE)
 BUILD_DEPENDS+=	f2c:${PORTSDIR}/lang/f2c
 .endif
 
-CONFLICTS=	llvm-devel-[23]* llvm29-* llvm31-*
+CONFLICTS=	llvm-devel-[23]* llvm31-3*
 
 GNU_CONFIGURE=	yes
-USE_GCC=	4.2+
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_PERL5=	yes
@@ -39,25 +38,27 @@ MAKE_ARGS+=		REQUIRES_RTTI=1
 LIBNAME=		libLLVM-${DISTVERSION:C/\.r[0-9]*//}.so
 
 CONFIGURE_ARGS+=	--enable-bindings=none
+CONFIGURE_ARGS+=	--enable-optimized
 
-OPTIONS_DEFINE=	ASSERTS DOCS LTOPLUGIN
+OPTIONS_DEFINE=	ASSERTS DOCS LTOPLUGIN MANPAGES
 
 ASSERTS_DESC=	Enable assertions (thread unsafe)
 LTOPLUGIN_DESC=	Build LTO plugin (requires gold)
 
-MAN1=		bugpoint.1 lit.1 llc.1 lli.1 llvm-ar.1 llvm-as.1 \
-		llvm-bcanalyzer.1 llvm-config.1 llvm-cov.1 llvm-diff.1 \
-		llvm-dis.1 llvm-extract.1 llvm-link.1 llvm-nm.1 \
-		llvm-prof.1 llvm-ranlib.1 llvm-stress.1 opt.1 tblgen.1
+OPTIONS_DEFAULT=	MANPAGES
 
 PLIST_SUB+=		PORTVERSION=${PORTVERSION}
 
 .include <bsd.port.options.mk>
 
-.if defined(MAINTAINER_MODE)
-CONFIGURE_ARGS+=	--with-f2c=${LOCALBASE}
+.if ${PORT_OPTIONS:MASSERTS}
+CONFIGURE_ARGS+=	--enable-assertions
 .else
-CONFIGURE_ARGS+=	--enable-optimized
+CONFIGURE_ARGS+=	--disable-assertions
+.endif
+
+.if ${PORT_OPTIONS:MDOCS} || ${PORT_OPTIONS:MMANPAGES}
+BUILD_DEPENDS+=	sphinx-build:${PORTSDIR}/textproc/py-sphinx
 .endif
 
 .if ${PORT_OPTIONS:MDOCS}
@@ -66,17 +67,18 @@ CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ARGS+=	--disable-docs
 .endif
 
-.if ${PORT_OPTIONS:MASSERTS}
-CONFIGURE_ARGS+=	--enable-assertions
-.else
-CONFIGURE_ARGS+=	--disable-assertions
-.endif
-
 .if ${PORT_OPTIONS:MLTOPLUGIN}
 BUILD_DEPENDS+=		ld.gold:${PORTSDIR}/devel/binutils
 RUN_DEPENDS+=		ld.gold:${PORTSDIR}/devel/binutils
 CONFIGURE_ARGS+=	--with-binutils-include=${LOCALBASE}/include
 PLIST_FILES+=		lib/LLVMgold.so
+.endif
+
+.if ${PORT_OPTIONS:MMANPAGES}
+MAN1=		bugpoint.1 lit.1 llc.1 lli.1 llvm-ar.1 llvm-as.1 \
+		llvm-bcanalyzer.1 llvm-config.1 llvm-cov.1 llvm-diff.1 \
+		llvm-dis.1 llvm-extract.1 llvm-link.1 llvm-nm.1 \
+		llvm-prof.1 llvm-ranlib.1 llvm-stress.1 opt.1 tblgen.1
 .endif
 
 .include <bsd.port.pre.mk>
@@ -104,7 +106,9 @@ post-patch:
 	    ${WRKSRC}/Makefile.config.in
 
 post-build:
+.if ${PORT_OPTIONS:MMANPAGES}
 	@cd ${WRKSRC}/docs && ${GMAKE} -f Makefile.sphinx man
+.endif
 .if ${PORT_OPTIONS:MDOCS}
 	@cd ${WRKSRC}/docs && ${GMAKE} -f Makefile.sphinx html
 .endif
@@ -114,8 +118,8 @@ post-install:
 	${LN} -s ${LIBNAME}.0 ${PREFIX}/lib/${LIBNAME}
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}/html
-	find ${WRKSRC}/docs/_build/html -type f | \
-	    xargs -I _DOC_ ${INSTALL_DATA} _DOC_ ${DOCSDIR}/html/
+	${FIND} ${WRKSRC}/docs/_build/html -type f | \
+	    ${XARGS} -I _DOC_ ${INSTALL_DATA} _DOC_ ${DOCSDIR}/html/
 .endif
 .for man in ${MAN1}
 	@${INSTALL_MAN} ${WRKSRC}/docs/_build/man/${man} \
@@ -160,5 +164,17 @@ build-plist:
 	${FIND} ${DOCSDIR} -type d | ${SORT} -r | \
 	    ${SED} -e 's|${DOCSDIR}|%%DOCSDIR%%|' \
 	     -e 's|^|%%PORTDOCS%%@dirrm |' >> ${PLIST}
+
+.if make(svn-patch)
+.if !defined(PATCH_REV)
+.error svn-patch requires that PATCH_REV be set
+.endif
+_PATCH_FILE=${FILESDIR}/patch-svn-${PATCH_REV}
+_LLVM_BASE=http://llvm.org/svn/llvm-project/llvm/trunk
+svn-patch:
+	printf "$$%s$$\n" FreeBSD > ${_PATCH_FILE}
+	svn log -c ${PATCH_REV} ${_LLVM_BASE} >> ${_PATCH_FILE}
+	svn diff -c ${PATCH_REV} ${_LLVM_BASE} >> ${_PATCH_FILE}
+.endif
 
 .include <bsd.port.post.mk>
