@@ -1,7 +1,5 @@
-# New ports collection makefile for:  HTML-FormHandler
-# Date created:		2009-12-03
-# Whom:			gugu
-# $FreeBSD: ports/www/p5-HTML-FormHandler/Makefile,v 1.19 2012/11/17 06:02:49 svnexp Exp $
+# Created by: gugu
+# $FreeBSD: www/p5-HTML-FormHandler/Makefile 319463 2013-05-31 01:46:41Z miwi $
 
 PORTNAME=	HTML-FormHandler
 PORTVERSION=	0.35005
