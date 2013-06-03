@@ -1,8 +1,8 @@
-# $FreeBSD: x11-toolkits/tk84/Makefile 316025 2013-04-18 08:20:59Z gahr $
+# $FreeBSD: x11-toolkits/tk84/Makefile 318766 2013-05-22 13:04:58Z gahr $
 
 PORTNAME=	tk
 PORTVERSION=	8.4.19
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	2
 CATEGORIES=	x11-toolkits tk
 MASTER_SITES=	SF/tcl/Tcl/${PORTVERSION}
