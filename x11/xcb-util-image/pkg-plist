@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/x11/xcb-util-image/pkg-plist,v 1.3 2012/12/10 19:12:19 svnexp Exp $
+@comment $FreeBSD: x11/xcb-util-image/pkg-plist 308628 2012-12-10 19:08:02Z garga $
 include/xcb/xcb_bitops.h
 include/xcb/xcb_image.h
 include/xcb/xcb_pixel.h
