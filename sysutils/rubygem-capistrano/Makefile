@@ -1,19 +1,15 @@
-# New ports collection makefile for:	rubygem-capistrano
-# Date created:				22 March 2006
-# Whom:					Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-#
-# $FreeBSD: ports/sysutils/rubygem-capistrano/Makefile,v 1.39 2012/11/17 06:01:44 svnexp Exp $
-#
+# Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
+# $FreeBSD: sysutils/rubygem-capistrano/Makefile 319606 2013-06-01 21:40:21Z swills $
 
 PORTNAME=	capistrano
-PORTVERSION=	2.13.3
+PORTVERSION=	2.14.2
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A utility for executing commands in parallel on multiple machines
 
-RUN_DEPENDS= 	rubygem-highline>=0:${PORTSDIR}/devel/rubygem-highline \
+RUN_DEPENDS=	rubygem-highline>=0:${PORTSDIR}/devel/rubygem-highline \
 		rubygem-net-scp>=1.0.0:${PORTSDIR}/security/rubygem-net-scp \
 	  	rubygem-net-sftp>=2.0.0:${PORTSDIR}/security/rubygem-net-sftp \
 		rubygem-net-ssh>=2.0.14:${PORTSDIR}/security/rubygem-net-ssh \
