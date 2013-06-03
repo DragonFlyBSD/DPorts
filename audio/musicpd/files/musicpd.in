@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: audio/musicpd/files/musicpd.in 316961 2013-04-30 20:48:02Z crees $
+# $FreeBSD: audio/musicpd/files/musicpd.in 319487 2013-05-31 11:54:01Z crees $
 #
 # PROVIDE: musicpd
 # REQUIRE: mixer LOGIN avahi_daemon oss
@@ -27,8 +27,7 @@ stop_precmd=${name}_getpidfile
 
 musicpd_getpidfile()
 {
-	if type get_pidfile_from_conf >/dev/null 2>&1 &&
-	    get_pidfile_from_conf pid_file %%PREFIX%%/etc/musicpd.conf ; then
+	if get_pidfile_from_conf pid_file %%PREFIX%%/etc/musicpd.conf ; then
 		pidfile="$_pidfile_from_conf"
 	else
 		pidfile="%%MPDDIR%%/.mpd/pid"
