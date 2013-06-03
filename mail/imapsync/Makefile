@@ -1,8 +1,8 @@
 # Created by: Alex Deiter <tiamat@komi.mts.ru>
-# $FreeBSD: ports/mail/imapsync/Makefile,v 1.55 2012/12/21 20:20:02 svnexp Exp $
+# $FreeBSD: mail/imapsync/Makefile 318192 2013-05-14 19:31:05Z rakuco $
 
 PORTNAME=	imapsync
-PORTVERSION=	1.508
+PORTVERSION=	1.536
 CATEGORIES=	mail perl5
 MASTER_SITES=	https://fedorahosted.org/released/${PORTNAME}/
 EXTRACT_SUFX=	.tgz
