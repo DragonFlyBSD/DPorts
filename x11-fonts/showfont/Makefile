@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/showfont/Makefile 313936 2013-03-11 19:54:17Z zeising $
+# $FreeBSD: x11-fonts/showfont/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	showfont
 PORTVERSION=	1.0.4
@@ -8,7 +8,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Font dumper for the X font server
 
 XORG_CAT=	app
-USE_XORG=	libfs xorg-macros
+USE_XORG=	libfs
 
 PLIST_FILES=	bin/showfont
 
