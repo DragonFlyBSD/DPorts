@@ -1,8 +1,8 @@
 # Created by: Eric F Crist <ecrist@secure-computing.net>
-# $FreeBSD: ports/audio/freeswitch-sounds/Makefile,v 1.15 2013/01/08 00:48:47 svnexp Exp $
+# $FreeBSD: audio/freeswitch-sounds/Makefile 318744 2013-05-22 04:21:42Z jgh $
 
 PORTNAME=	freeswitch
-DISTVERSION=	1.0.22
+DISTVERSION=	1.0.24
 CATEGORIES=	audio
 MASTER_SITES=	http://files.freeswitch.org/
 PKGNAMESUFFIX=	-sounds
@@ -70,10 +70,10 @@ DISTFILES+=	${PORTNAME}${PKGNAMESUFFIX}-en-us-callie-48000-${DISTVERSION}${EXTRA
 .if ${PORT_OPTIONS:MFRENCH}
 .if ${PORT_OPTIONS:MDOWNLOAD}
 .for rate in ${BITRATES}
-DISTFILES+=	${PORTNAME}${PKGNAMESUFFIX}-fr-ca-june-${rate}-1.0.16${EXTRACT_SUFX}
+DISTFILES+=	${PORTNAME}${PKGNAMESUFFIX}-fr-ca-june-${rate}-1.0.18${EXTRACT_SUFX}
 .endfor
 .else
-DISTFILES+=	${PORTNAME}${PKGNAMESUFFIX}-fr-ca-june-48000-1.0.16${EXTRACT_SUFX}
+DISTFILES+=	${PORTNAME}${PKGNAMESUFFIX}-fr-ca-june-48000-1.0.18${EXTRACT_SUFX}
 .endif
 .endif
 .if ${PORT_OPTIONS:MRUSSIAN}
