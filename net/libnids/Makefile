@@ -1,5 +1,5 @@
 # Created by: kris@FreeBSD.org
-# $FreeBSD: net/libnids/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/libnids/Makefile 318350 2013-05-17 02:00:55Z wxs $
 
 PORTNAME=	libnids
 PORTVERSION=	1.24
@@ -7,15 +7,21 @@ CATEGORIES=	net security
 MASTER_SITES=	SF
 
 MAINTAINER=	wxs@FreeBSD.org
-COMMENT=	Network monitoring library with TCP/IP reassembly
+COMMENT?=	Network monitoring library with TCP/IP reassembly
 
 LICENSE=	GPLv2
+
+CONFLICTS?=	libnids-libnet11-[0-9]*
 
 OPTIONS_DEFINE=	LIBNET10 LIBNET11 GLIB2
 LIBNET10_DESC=	Use libnet 1.0.x
 LIBNET11_DESC=	Use libnet 1.1.x
 GLIB2_DESC=	Use GLIB2 for multiprocessing support
+.if defined(WITH_LIBNET11)
 OPTIONS_DEFAULT=	LIBNET11 GLIB2
+.else
+OPTIONS_DEFAULT=	LIBNET10 GLIB2
+.endif
 
 WANT_GNOME=	yes
 USES=		pkgconfig
@@ -26,9 +32,9 @@ MAN3=		libnids.3
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
-PLIST_SUB+= PORTDOCS=""
+PLIST_SUB+=	PORTDOCS=""
 .else
-PLIST_SUB+= PORTDOCS="@comment "
+PLIST_SUB+=	PORTDOCS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MLIBNET10}
