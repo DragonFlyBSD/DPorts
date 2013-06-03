@@ -2,7 +2,7 @@
 # Date created:         2008-09-24
 # Whom:                 Martin Dieringer <martin.dieringer@gmx.de>
 #
-# $FreeBSD: print/ifxetex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/ifxetex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	ifxetex
 PORTVERSION=	20090124
@@ -17,7 +17,7 @@ COMMENT=	The file ifxetex.sty tests whether XeTeX is being used
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_ZIP=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 
 PLIST=		${WRKDIR}/pkg-plist
 
