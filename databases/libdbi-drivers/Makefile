@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/libdbi-drivers/Makefile 317214 2013-05-03 15:12:02Z bapt $
+# $FreeBSD: databases/libdbi-drivers/Makefile 319395 2013-05-29 23:09:25Z delphij $
 
 PORTNAME=	libdbi-drivers
 DISTVERSION=	0.8.3-1
@@ -7,7 +7,7 @@ PORTREVISION=	5
 CATEGORIES=	databases devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-0.8.3-1
 
-MAINTAINER=	delphij@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Drivers for libdbi
 
 LIB_DEPENDS=	dbi.1:${PORTSDIR}/databases/libdbi
