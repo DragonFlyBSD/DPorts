@@ -1,7 +1,7 @@
-# $FreeBSD: print/libmspub/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: print/libmspub/Makefile 318617 2013-05-20 17:38:03Z jkim $
 
 PORTNAME=	libmspub
-PORTVERSION=	0.0.5
+PORTVERSION=	0.0.6
 CATEGORIES=	print graphics devel
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 
@@ -17,9 +17,9 @@ LIB_DEPENDS=	icui18n:${PORTSDIR}/devel/icu \
 		wpd-0.9:${PORTSDIR}/textproc/libwpd
 
 GNU_CONFIGURE=	yes
-USES=	pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_XZ=		yes
+USES=		pathfix pkgconfig
 
 CONFIGURE_ARGS=	--disable-werror --without-docs
 CONFIGURE_ENV=	ZLIB_CFLAGS="-I/usr/include" ZLIB_LIBS="-lz"
