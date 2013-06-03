@@ -1,9 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: sysutils/debootstrap/Makefile 314998 2013-03-23 06:00:49Z rm $
+# $FreeBSD: sysutils/debootstrap/Makefile 318929 2013-05-24 08:37:48Z mm $
 
 PORTNAME=	debootstrap
-PORTVERSION=	1.0.46
-PORTREVISION=	1
+PORTVERSION=	1.0.52
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN}
 MASTER_SITE_SUBDIR=	pool/main/d/${PORTNAME}
