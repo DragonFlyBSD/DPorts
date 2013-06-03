@@ -1,12 +1,7 @@
-# New ports collection makefile for:	dri2proto
-# Date Created:				Jul 28 2008
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/dri2proto/Makefile,v 1.8 2012/11/17 06:03:14 svnexp Exp $
-#
+# $FreeBSD: x11/dri2proto/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	dri2proto
-PORTVERSION=	2.6
+PORTVERSION=	2.8
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
