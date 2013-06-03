@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libX11/Makefile 313929 2013-03-11 19:14:28Z zeising $
+# $FreeBSD: x11/libX11/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libX11
-PORTVERSION=	1.4.4
+PORTVERSION=	1.5.0
 PORTEPOCH=	1
 CATEGORIES=	x11
 
@@ -11,13 +11,11 @@ COMMENT=	X11 library
 
 LICENSE=	MIT
 
-BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/xcb.pc:${PORTSDIR}/x11/libxcb
-RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/xcb.pc:${PORTSDIR}/x11/libxcb
-
 XORG_CAT=	lib
 USE_XORG=	bigreqsproto xau xcmiscproto xdmcp xextproto xtrans \
 		kbproto:both inputproto xf86bigfontproto xproto:both \
-		xorg-macros
+		xcb
+USE_PERL5_BUILD=yes
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/lib \
 			--without-xmlto \
