@@ -1,12 +1,7 @@
-# New ports collection makefile for:	dtcp
-# Date Created:		Sep 27 2002
-# Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
-#
-# $FreeBSD: ports/net/dtcp/Makefile,v 1.23 2012/11/17 05:59:59 svnexp Exp $
-#
+# $FreeBSD: net/dtcp/Makefile 319664 2013-06-02 14:23:35Z ume $
 
 PORTNAME=	dtcp
-PORTVERSION=	20060109
+PORTVERSION=	20130602
 #PORTREVISION=	0
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.mahoroba.org/~ume/ipv6/ \
@@ -21,7 +16,6 @@ RUN_DEPENDS=	qpopauth:${PORTSDIR}/mail/qpopper
 
 USE_RC_SUBR=	dtcpc dtcps
 USE_RUBY=	yes
-RUBY_VER=	1.8
 MAKE_ENV+=	RUBY=${RUBY}
 
 MAN8=		dtcpauth.8 dtcpc.8 dtcps.8
