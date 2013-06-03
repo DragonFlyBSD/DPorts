@@ -1,20 +1,19 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: ports/databases/couchdb/Makefile,v 1.26 2012/12/18 23:19:31 svnexp Exp $
+# $FreeBSD: databases/couchdb/Makefile 319429 2013-05-30 14:07:20Z crees $
 
 PORTNAME=	couchdb
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.2
 PORTEPOCH=	1
-PORTREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_APACHE}
-MASTER_SITE_SUBDIR=	couchdb/releases/${PORTVERSION}
+MASTER_SITE_SUBDIR=	couchdb/source/${PORTVERSION}
 DISTNAME=	apache-couchdb-${PORTVERSION}
 
-MAINTAINER=	till@php.net
+MAINTAINER=	adams-ports@ateamsystems.com
 COMMENT=	A document database server, accessible via a RESTful JSON API
 
 LIB_DEPENDS=	icudata:${PORTSDIR}/devel/icu \
-		js:${PORTSDIR}/lang/spidermonkey17 \
+		mozjs185:${PORTSDIR}/lang/spidermonkey185 \
 		curl:${PORTSDIR}/ftp/curl
 BUILD_DEPENDS=	${LOCALBASE}/bin/help2man:${PORTSDIR}/misc/help2man \
 		erlc:${PORTSDIR}/lang/erlang
@@ -34,6 +33,11 @@ CONFIGURE_ARGS=	--with-erlang=${LOCALBASE}/lib/erlang/usr/include \
 		--with-js-include=${LOCALBASE}/include \
 		--with-js-lib=${LOCALBASE}/lib
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
+
+# Override default value of ${STRIP} because the underlying Makefile
+# erroneously tries to install a shell script with ${STRIP}, causing
+# an install error.
+STRIP=	#empty
 
 MAN1=	couchdb.1 couchjs.1
 
