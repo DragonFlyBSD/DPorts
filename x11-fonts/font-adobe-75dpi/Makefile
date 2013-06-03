@@ -1,9 +1,5 @@
-# New ports collection makefile for:    font-adobe-75dpi
-# Date created:		28 Aug 2005
-# Whom:			Pawel Worach
-#
-# $FreeBSD: ports/x11-fonts/font-adobe-75dpi/Makefile,v 1.4 2012/11/17 06:03:27 svnexp Exp $
-#
+# Created by: Pawel Worach
+# $FreeBSD: x11-fonts/font-adobe-75dpi/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	font-adobe-75dpi
 PORTVERSION=	1.0.3
