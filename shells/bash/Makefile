@@ -1,8 +1,8 @@
 # Created by: Oliver Eikemeier
-# $FreeBSD: shells/bash/Makefile 317405 2013-05-05 08:39:30Z bapt $
+# $FreeBSD: shells/bash/Makefile 319053 2013-05-25 13:55:46Z miwi $
 
 PORTNAME=		bash
-PATCHLEVEL=		42
+PATCHLEVEL=		45
 PORTVERSION=		4.2.${PATCHLEVEL:S/^0//g}
 PORTREVISION?=		0
 CATEGORIES=		shells
