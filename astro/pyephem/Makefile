@@ -1,9 +1,5 @@
-# Ports collection makefile for:        py-emphem
-# Date created:                 Feb 27, 2007
-# Whom:                         db
-#
-# $FreeBSD: ports/astro/pyephem/Makefile,v 1.10 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: db
+# $FreeBSD: astro/pyephem/Makefile 319570 2013-06-01 14:22:35Z wen $
 
 PORTNAME=	pyephem
 PORTVERSION=	3.7.5.1
