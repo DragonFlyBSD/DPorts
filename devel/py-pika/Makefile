@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/devel/py-pika/Makefile,v 1.4 2013/01/31 07:43:55 svnexp Exp $
+# $FreeBSD: devel/py-pika/Makefile 318611 2013-05-20 16:06:42Z wg $
 
 PORTNAME=	pika
-PORTVERSION=	0.9.9
+PORTVERSION=	0.9.12
 CATEGORIES=	devel net
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
