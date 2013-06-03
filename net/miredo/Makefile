@@ -1,9 +1,9 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: net/miredo/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: net/miredo/Makefile 319428 2013-05-30 14:04:10Z sumikawa $
 
 PORTNAME=		miredo
-PORTVERSION=	 	1.2.5
-PORTREVISION=		2
+PORTVERSION=	 	1.2.6
+PORTREVISION=		1
 CATEGORIES=		net ipv6
 MASTER_SITES=		http://www.remlab.net/files/miredo/archive/
 
@@ -23,7 +23,7 @@ POLICYTABLE_DESC=	Install policy table to support teredo
 MAN1=			teredo-mire.1
 MAN5=			miredo-server.conf.5 miredo.conf.5
 MAN8=			miredo-server.8 miredo.8 miredo-checkconf.8
-USE_RC_SUBR=		miredo_server miredo
+USE_RC_SUBR=		miredo-server miredo
 
 LDFLAGS+=		-L${LOCALBASE}/lib
 

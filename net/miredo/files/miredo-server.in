@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $FreeBSD: net/miredo/files/miredo_server.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: net/miredo/files/miredo-server.in 319422 2013-05-30 12:48:42Z sumikawa $
 #
 
-# PROVIDE: miredo_server
+# PROVIDE: miredo-server
 # REQUIRE: NETWORKING
 # KEYWORD: shutdown
 
@@ -12,12 +12,12 @@
 #
 #miredo_server_enable="YES"
 #
-miredo_server_enable="${miredo_server_enable-NO}"
+miredo_server_enable="${miredo-server_enable-NO}"
 
 . /etc/rc.subr
 
-name=miredo_server
-rcvar=miredo_server_enable
+name=miredo-server
+rcvar=miredo-server_enable
 
 command=%%PREFIX%%/sbin/${name}
 required_files=%%PREFIX%%/etc/miredo/miredo-server.conf
