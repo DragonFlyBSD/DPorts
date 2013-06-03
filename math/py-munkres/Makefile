@@ -1,11 +1,12 @@
 # Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: ports/math/py-munkres/Makefile,v 1.2 2013/02/24 21:51:35 svnexp Exp $
+# $FreeBSD: math/py-munkres/Makefile 318559 2013-05-20 01:03:43Z swills $
 
 PORTNAME=	munkres
 PORTVERSION=	1.0.5.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	feld@feld.me
 COMMENT=	A Python implementation of the munkres algorithm
