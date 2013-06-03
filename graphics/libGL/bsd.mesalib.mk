@@ -11,19 +11,16 @@
 #
 #    - graphics/libGL
 #    - graphics/libGLU
-#    - graphics/libGLw
 #    - graphics/dri
 #
-# $FreeBSD: graphics/libGL/bsd.mesalib.mk 317201 2013-05-03 13:11:44Z bapt $
-#
+# $FreeBSD: graphics/libGL/bsd.mesalib.mk 319055 2013-05-25 14:37:02Z zeising $
 
-.MAKE.FreeBSD_UL=	yes
 
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
 
 .if defined(WITH_NEW_XORG)
-MESABASEVERSION=	7.11.2
+MESABASEVERSION=	8.0.5
 # if there is a subversion, include the '-' between 7.11-rc2 for example.
 MESASUBVERSION=		
 PLIST_SUB+=	OLD="@comment " NEW=""
@@ -33,8 +30,8 @@ MESASUBVERSION=
 PLIST_SUB+=	OLD="" NEW="@comment "
 .endif
 
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${MESABASEVERSION}/:mesa,glut
-DISTFILES=	MesaLib-${MESADISTVERSION}${EXTRACT_SUFX}:mesa
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${MESABASEVERSION}/
+DISTFILES=	MesaLib-${MESADISTVERSION}${EXTRACT_SUFX}
 MAINTAINER?=	x11@FreeBSD.org
 
 BUILD_DEPENDS+=	makedepend:${PORTSDIR}/devel/makedepend \
@@ -46,22 +43,19 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_UNSAFE=	yes
+MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--enable-gallium-llvm=no --without-gallium-drivers \
-		--disable-egl --disable-glut
+		--disable-egl
 
 .if defined(WITH_NEW_XORG)
 EXTRA_PATCHES+=	${PATCHDIR}/extra-configure \
-		${PATCHDIR}/extra-mach64_context.h \
-		${PATCHDIR}/extra-sis_context.h \
 		${PATCHDIR}/extra-src-glsl_ir_constant_expression.cpp \
 		${PATCHDIR}/extra-src__gallium__include__pipe__p_config.h \
 		${PATCHDIR}/extra-src__mesa__drivers__dri__nouveau__nouveau_array.c \
-		${PATCHDIR}/extra-src__mesa__drivers__dri__nouveau__nouveau_render_t.c \
-		${PATCHDIR}/extra-src__mesa__drivers__dri__radeon__radeon_span.c
+		${PATCHDIR}/extra-src__mesa__drivers__dri__nouveau__nouveau_render_t.c
 .else
 EXTRA_PATCHES+=	${PATCHDIR}/extra-configure-old \
 		${PATCHDIR}/extra-mach64_context.h-old \
@@ -69,13 +63,17 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-configure-old \
 		${PATCHDIR}/extra-src__mesa__x86-64__xform4.S \
 		${PATCHDIR}/extra-src__mesa__x86__glapi_x86.S \
 		${PATCHDIR}/extra-src__mesa__x86__read_rgba_span_x86.S
+CONFIGURE_ARGS+=--disable-glut --disable-glw
 .endif
 
 ALL_TARGET=		default
 
-PATCHDIR=		${.CURDIR}/../../graphics/libGL/files
-DFLY_PATCHDIR=		${.CURDIR}/../../graphics/libGL/dragonfly
-WRKSRC=			${WRKDIR}/Mesa-${MESABASEVERSION}${MESASUBVERSION}
+MASTERDIR=		${.CURDIR}/../../graphics/libGL
+PATCHDIR=		${MASTERDIR}/files
+DFLY_PATCHDIR=		${MASTERDIR}/dragonfly
+DESCR=			${.CURDIR}/pkg-descr
+PLIST=			${.CURDIR}/pkg-plist
+WRKSRC=			${WRKDIR}/Mesa-${MESADISTVERSION}
 
 .if !defined(ARCH)
 ARCH!=			uname -p
@@ -87,36 +85,23 @@ COMPONENT=		${PORTNAME:tl:C/^lib//:C/mesa-//}
 CONFIGURE_ARGS+=	--disable-glu
 .endif
 
-.if ${COMPONENT:Mglw} == ""
-CONFIGURE_ARGS+=	--disable-glw
-.else
-CONFIGURE_ARGS+=	--enable-motif
-.endif
-
 .if ${COMPONENT:Mdri} == ""
 CONFIGURE_ARGS+=	--with-dri-drivers=no
+.else
+CONFIGURE_ARGS+=	--with-dri-drivers="i915,i965,r200,radeon,swrast"
 .endif
 
+.if !defined(WITH_NEW_XORG)
 .if defined(WITHOUT_XCB)
 CONFIGURE_ARGS+=	--disable-xcb
 .else
 CONFIGURE_ARGS+=	--enable-xcb
 .endif
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|[$$](INSTALL_LIB_DIR)/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/src/glu/Makefile \
-		${WRKSRC}/src/glw/Makefile \
 		${WRKSRC}/src/mesa/Makefile \
 		${WRKSRC}/src/mesa/drivers/dri/Makefile
-.if defined(WITH_NEW_XORG)
-# replace hardlinks with patched radeon_span.c
-.for i in r200 r300 r600
-	@${CP} -fp ${WRKSRC}/src/mesa/drivers/dri/radeon/radeon_span.c \
-		${WRKSRC}/src/mesa/drivers/dri/${i}/
-.endfor
-.endif
-.if ${COMPONENT:Mglut} != ""
-	@${REINPLACE_CMD} -e 's|[$$](INSTALL_LIB_DIR)/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
-		${WRKSRC}/src/glut/glx/Makefile
-.endif
+
