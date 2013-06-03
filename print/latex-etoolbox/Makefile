@@ -1,5 +1,5 @@
 # Created by: vj562001@yahoo.de
-# $FreeBSD: print/latex-etoolbox/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-etoolbox/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	etoolbox
 DISTVERSION=	2.1
@@ -14,7 +14,7 @@ MAINTAINER=	idolum@users.sourceforge.net
 COMMENT=	A toolbox providing programming facilities for LaTeX
 
 USE_ZIP=	YES
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	YES
 PLIST=		${WRKDIR}/pkg-plist
 
