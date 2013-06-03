@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-LaTeX-Driver/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/p5-LaTeX-Driver/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	LaTeX-Driver
 PORTVERSION=	0.12
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 		p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_TEX=	tetex
+USE_TEX=	latex
 PERL_CONFIGURE=	yes
 
 MAN1=	latex2ps.1 latex2pdf.1 latex2dvi.1
