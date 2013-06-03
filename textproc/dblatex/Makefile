@@ -2,7 +2,7 @@
 # Date created:		2007-02-25
 # Whom:			Peter Johnson <johnson.peter@gmail.com>
 #
-# $FreeBSD: textproc/dblatex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/dblatex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	dblatex
@@ -19,7 +19,7 @@ RUN_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
 		${LOCALBASE}/share/xml/docbook/4.2/docbook.cat:${PORTSDIR}/textproc/docbook-xml
 
 USE_BZIP2=	yes
-USE_TEX=	tetex
+USE_TEX=	tex
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
 PYDISTUTILS_INSTALLARGS=	-c -O1 --prefix=${PREFIX} \
