@@ -1,8 +1,8 @@
 # Created by: Nagy, Attila <bra@fsn.hu>
-# $FreeBSD: mail/dovecot2/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/dovecot2/Makefile 318892 2013-05-23 17:58:48Z miwi $
 
 PORTNAME=	dovecot
-PORTVERSION=	2.1.15
+PORTVERSION=	2.2.2
 CATEGORIES=	mail ipv6
 MASTER_SITES=	http://www.dovecot.org/releases/${PORTVERSION:R}/
 
