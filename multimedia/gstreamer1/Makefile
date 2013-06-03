@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1/Makefile 316693 2013-04-27 20:56:38Z kwm $
+# $FreeBSD: multimedia/gstreamer1/Makefile 317830 2013-05-10 16:59:15Z kwm $
 #    $MCom: ports/multimedia/gstreamer1/Makefile,v 1.5 2013/01/15 21:43:45 kwm Exp $
 
 PORTNAME=	gstreamer1
@@ -19,6 +19,8 @@ RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-i
 
 CFLAGS:=	${CFLAGS} -O2 -Wno-format
 USES=		bison gettext pathfix pkgconfig
+# workaround a crash in clang 3.3 crash llvm bug # 15840
+USE_GCC=	any
 USE_XZ=		yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAVE=	yes
