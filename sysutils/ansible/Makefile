@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ansible/Makefile 316070 2013-04-18 18:39:43Z jgh $
+# $FreeBSD: sysutils/ansible/Makefile 318885 2013-05-23 16:36:28Z wg $
 
 PORTNAME=	ansible
 PORTVERSION=	1.1
@@ -18,6 +18,9 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
+
+USES=		shebangfix
+SHEBANG_FILES=	${WRKSRC}/library/*
 
 SUB_FILES=	pkg-message
 PORTEXAMPLES=	*
@@ -40,8 +43,6 @@ post-patch-script:
 		${WRKSRC}/lib/ansible/constants.py \
 		${WRKSRC}/lib/ansible/playbook/__init__.py \
 		${WRKSRC}/lib/ansible/runner/__init__.py
-	@${REINPLACE_CMD} -e "s|/usr/bin/python|/usr/bin/env python|" \
-		${WRKSRC}/library/*
 
 pre-install-script:
 	@(cd ${WRKSRC} && ${FIND} . -type f -name '*.bak' -exec ${RM} {} +)
