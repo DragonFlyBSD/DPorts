@@ -1,10 +1,10 @@
 # Ports collection makefile for:        py-networkx
 # Date created:			June, 20  2008
 # Whom:				dikshie
-# $FreeBSD: ports/math/py-networkx/Makefile,v 1.11 2012/11/17 05:59:29 svnexp Exp $
+# $FreeBSD: math/py-networkx/Makefile 319113 2013-05-26 14:52:24Z wen $
 
 PORTNAME=	networkx
-PORTVERSION=	1.6
+PORTVERSION=	1.7
 CATEGORIES=	math python
 MASTER_SITES=	http://networkx.lanl.gov/download/networkx/ \
 		CHEESESHOP
