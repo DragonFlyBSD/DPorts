@@ -1,19 +1,19 @@
-# $FreeBSD: security/libsodium/Makefile 316665 2013-04-27 13:50:42Z madpilot $
+# $FreeBSD: security/libsodium/Makefile 318683 2013-05-21 11:55:16Z wg $
 
 PORTNAME=	libsodium
-PORTVERSION=	0.4
+PORTVERSION=	0.4.1
 CATEGORIES=	security
 MASTER_SITES=	http://download.dnscrypt.org/libsodium/releases/
 
 MAINTAINER=	csosstudy@gmail.com
-COMMENT=	Library for build higher-level cryptographic tools
+COMMENT=	Library to build higher-level cryptographic tools
 
 LICENSE=	ISCL
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-PORTDOCS=	AUTHORS COPYING INSTALL NEWS THANKS
+PORTDOCS=	AUTHORS NEWS THANKS
 
 post-build:
 	cd ${WRKSRC} && ${MAKE} check
