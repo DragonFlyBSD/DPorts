@@ -1,8 +1,8 @@
 # Created by: ache
-# $FreeBSD: graphics/png/Makefile 316641 2013-04-26 22:48:22Z dinoex $
+# $FreeBSD: graphics/png/Makefile 319025 2013-05-25 05:09:17Z dinoex $
 
 PORTNAME=	png
-PORTVERSION=	1.5.15
+PORTVERSION=	1.5.16
 CATEGORIES=	graphics
 MASTER_SITES=	SF/lib${PORTNAME}/lib${PORTNAME}15/${PORTVERSION}
 DISTNAME=	lib${PORTNAME}-${PORTVERSION}
