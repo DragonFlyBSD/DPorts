@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: ports/graphics/pgplot/Makefile,v 1.37 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: graphics/pgplot/Makefile 319430 2013-05-30 14:25:02Z bf $
 
 PORTNAME=	pgplot
 PORTVERSION=	5.2.2
@@ -21,14 +21,13 @@ USE_LDCONFIG=	yes
 USE_XORG=	x11 xproto xt
 
 MAKE_ENV=	SSP_CFLAGS=
+SHEBANG_FILES=	makehtml maketex
 SUFFIXES=	flib clib bin
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-SHEBANG_FILES=	makehtml maketex
+.include <bsd.port.options.mk>
 
-.include <bsd.port.pre.mk>
-
-.if !empty(ARCH:M*64*)
+.if ${ARCH:M*64*}
 EXTRA_PATCHES +=	${FILESDIR}/drivers_64bit_patch
 .endif
 
@@ -36,7 +35,7 @@ EXTRA_PATCHES +=	${FILESDIR}/drivers_64bit_patch
 PORTDATA=	grfont.dat
 .endif
 
-.ifndef(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 DOCS=	cpg/cpgplot.doc pgplot-routines.tex pgplot.doc pgplot.html \
 	readme.pgdisp rgb.txt
 SUFFIXES+=	doc
@@ -44,7 +43,7 @@ PORTDOCS=	${DOCS:C|.*/||}
 USE_PERL5_BUILD=	yes
 .endif
 
-.ifndef(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 EXAMPLES=	Makefile.demo cpg/cpgdemo.c examples/pgdemo*.f
 PORTEXAMPLES=	${EXAMPLES:C|.*/||}
 .endif
@@ -75,12 +74,12 @@ do-install:
 	@${MKDIR} ${DATADIR}
 	@cd ${WRKSRC}; ${INSTALL_DATA} ${PORTDATA} ${DATADIR}
 .endif
-.ifndef(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@cd ${WRKSRC}; ${CP} pgdispd/aaaread.me readme.pgdisp; \
 	${INSTALL_DATA} ${DOCS} ${DOCSDIR}
 .endif
-.ifndef(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	@cd ${WRKSRC}; ${INSTALL_DATA} ${EXAMPLES} ${EXAMPLESDIR}
 .endif
@@ -96,4 +95,4 @@ check test: build
 	PGPLOT_DIR="${WRKSRC}" PGPLOT_DEV="/xwin" ${WRKSRC}/${DEMO}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
