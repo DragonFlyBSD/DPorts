@@ -1,11 +1,10 @@
 # Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: ports/polish/hunspell/Makefile,v 1.77 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: polish/hunspell/Makefile 317663 2013-05-08 14:47:58Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	20121103
+PORTVERSION=	20130505
 CATEGORIES=	polish textproc
-MASTER_SITES=	http://sjp.pl/slownik/ort/ \
-		LOCAL/sunpoet/${PORTNAME}
+MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}
 DISTNAME=	sjp-myspell-pl-${PORTVERSION}
 DIST_SUBDIR=	${PORTNAME}
 
