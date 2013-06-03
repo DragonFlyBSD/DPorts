@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: net/py-smb/Makefile 314619 2013-03-19 06:57:03Z rm $
+# $FreeBSD: net/py-smb/Makefile 319555 2013-06-01 05:24:20Z rm $
 
 PORTNAME=	smb
-PORTVERSION=	1.1.3
+PORTVERSION=	1.1.4
 CATEGORIES=	net python
 MASTER_SITES=	http://miketeo.net/files/Projects/py${PORTNAME}/ \
 		CHEESESHOP
