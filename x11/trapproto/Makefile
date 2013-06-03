@@ -1,9 +1,5 @@
-# New ports collection makefile for:	trapproto
-# Date Created:				06 Feb 2006
-# Whom:					Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/trapproto/Makefile,v 1.2 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/trapproto/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	trapproto
 PORTVERSION=	3.4.3
