@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/ecore-main/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/ecore-main/Makefile 318824 2013-05-23 02:14:33Z gblach $
 
 PORTNAME=	main
-PORTVERSION=	1.7.6
+PORTVERSION=	1.7.7
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -44,10 +44,5 @@ CONFIGURE_ARGS+=--disable-install-examples
 post-patch:
 	@${REINPLACE_CMD} -e 's|= \$$(datadir)/\$$(PACKAGE)/examples|= $$(datadir)/examples/$$(PACKAGE)|' \
 		${WRKSRC}/src/examples/Makefile.in
-
-post-install:
-.if empty(PORT_OPTIONS:MEXAMPLES)
-	@${RMDIR} ${EXAMPLESDIR}
-.endif
 
 .include <bsd.port.mk>
