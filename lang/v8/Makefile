@@ -1,5 +1,5 @@
 # Created by: siasia
-# $FreeBSD: lang/v8/Makefile 317413 2013-05-05 13:51:08Z vanilla $
+# $FreeBSD: lang/v8/Makefile 319241 2013-05-27 13:36:43Z vanilla $
 
 PORTNAME=	v8
 PORTVERSION=	3.18.5
@@ -16,6 +16,7 @@ USE_XZ=		yes
 USE_PYTHON=	2.6+
 USE_LDCONFIG=	yes
 ALL_TARGET=	native
+MAKE_ARGS=	strictaliasing=off
 MAKE_ENV+=	GYPFLAGS=-DOS=freebsd
 MAKE_ENV+=	library=shared
 USE_GCC=	4.7
