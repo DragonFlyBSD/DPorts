@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-mgmt/pmacct/files/pmacctd.in,v 1.5 2013/01/15 19:44:21 svnexp Exp $
+# $FreeBSD: net-mgmt/pmacct/files/pmacctd.in 310459 2013-01-15 19:38:19Z zi $
 #
 
 # PROVIDE: pmacctd

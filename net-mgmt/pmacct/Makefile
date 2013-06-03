@@ -1,8 +1,8 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: ports/net-mgmt/pmacct/Makefile,v 1.85 2013/01/15 19:44:21 svnexp Exp $
+# $FreeBSD: net-mgmt/pmacct/Makefile 318246 2013-05-15 16:03:31Z zi $
 
 PORTNAME=	pmacct
-DISTVERSION=	0.14.2
+DISTVERSION=	0.14.3
 CATEGORIES=	net-mgmt
 MASTER_SITES=	http://www.pmacct.net/ \
 		http://mirrors.rit.edu/zi/
