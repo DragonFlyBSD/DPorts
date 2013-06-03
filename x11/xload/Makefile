@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xload/Makefile 313929 2013-03-11 19:14:28Z zeising $
+# $FreeBSD: x11/xload/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xload
 PORTVERSION=	1.1.1
@@ -10,7 +10,7 @@ COMMENT=	System load average display for X
 LICENSE=	MIT
 
 XORG_CAT=	app
-USE_XORG=	xt xaw xorg-macros
+USE_XORG=	xt xaw
 
 MAN1=		xload.1
 
