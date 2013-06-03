@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/pear-Horde_Token/Makefile,v 1.13 2013/02/12 17:38:59 svnexp Exp $
+# $FreeBSD: devel/pear-Horde_Token/Makefile 317889 2013-05-11 15:37:47Z mm $
 
 PORTNAME=	Horde_Token
-PORTVERSION=	2.0.3
+PORTVERSION=	2.0.4
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
