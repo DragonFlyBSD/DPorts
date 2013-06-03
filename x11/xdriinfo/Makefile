@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xdriinfo
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xdriinfo/Makefile,v 1.5 2012/11/17 06:03:21 svnexp Exp $
-#
+# $FreeBSD: x11/xdriinfo/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xdriinfo
 PORTVERSION=	1.0.4
