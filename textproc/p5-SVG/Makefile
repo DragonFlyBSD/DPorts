@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/textproc/p5-SVG/Makefile,v 1.19 2013/02/16 16:48:00 svnexp Exp $
+# $FreeBSD: textproc/p5-SVG/Makefile 319371 2013-05-29 14:08:27Z jadawin $
 
 PORTNAME=	SVG
-PORTVERSION=	2.54
+PORTVERSION=	2.59
 CATEGORIES=	textproc graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -19,7 +19,7 @@ PERL_CONFIGURE=	yes
 USE_DOS2UNIX=	yes
 
 MAN3=		SVG.3 SVG::DOM.3 SVG::Element.3 SVG::Extension.3 \
-		SVG::Manual.3 SVG::XML.3
+		SVG::XML.3
 
 .include <bsd.port.options.mk>
 
