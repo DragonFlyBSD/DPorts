@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Mail-IMAPClient
-# Date created:		14 Nov 2000
-# Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: ports/mail/p5-Mail-IMAPClient/Makefile,v 1.47 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: mail/p5-Mail-IMAPClient/Makefile 318358 2013-05-17 07:50:38Z jadawin $
 
 PORTNAME=	Mail-IMAPClient
-PORTVERSION=	3.32
+PORTVERSION=	3.33
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PLOBBES
