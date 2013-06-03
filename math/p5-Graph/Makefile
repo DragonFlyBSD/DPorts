@@ -1,12 +1,8 @@
-# New ports collection makefile for:	math/p5-Graph
-# Date created:				09 October 2001
-# Whom:					tobez
-#
-# $FreeBSD: ports/math/p5-Graph/Makefile,v 1.36 2012/11/17 05:59:25 svnexp Exp $
-#
+# Created by: tobez
+# $FreeBSD: math/p5-Graph/Makefile 319171 2013-05-27 08:20:49Z tobez $
 
 PORTNAME=	Graph
-PORTVERSION=	0.94
+PORTVERSION=	0.96
 PORTEPOCH=	1
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
