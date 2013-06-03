@@ -1,4 +1,4 @@
-# $FreeBSD: ports/cad/gdt/files/Makefile,v 1.3 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: cad/gdt/files/Makefile 300895 2012-07-14 12:56:14Z beat $
 
 PREFIX?=	/usr/local
 
