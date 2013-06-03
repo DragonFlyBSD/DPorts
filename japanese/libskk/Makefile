@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: japanese/libskk/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: japanese/libskk/Makefile 318656 2013-05-21 08:12:14Z miwi $
 
 PORTNAME=	libskk
 PORTVERSION=	1.0.0
@@ -16,6 +16,7 @@ LIB_DEPENDS=	gee:${PORTSDIR}/devel/libgee06 \
 
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
+USE_GCC=	any
 USE_GNOME=	intltool gnomehack
 USES=		pkgconfig
 GNU_CONFIGURE=	yes
