@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: print/latex-pgf/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-pgf/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	pgf
 PORTVERSION=	2.10
@@ -16,7 +16,7 @@ COMMENT=	A LaTeX package for TeX Portable Graphic Format
 
 NO_BUILD=	YES
 USE_ZIP=	YES
-USE_TEX=	tetex
+USE_TEX=	latex
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} \
 		CLASSDIR=${CLASSDIR} \
 		TEXMFDIR=${TEXMFDIR}
