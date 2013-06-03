@@ -1,20 +1,15 @@
-# New ports collection makefile for:	rubygem-delayed_job
-# Date created:		2011-06-16
-# Whom:			Ryan Steinmetz <rpsfa@rit.edu>
-#
-# $FreeBSD: ports/devel/rubygem-delayed_job/Makefile,v 1.9 2013/01/23 21:01:47 svnexp Exp $
-#
+# Created by: Ryan Steinmetz <rpsfa@rit.edu>
+# $FreeBSD: devel/rubygem-delayed_job/Makefile 319634 2013-06-02 02:28:23Z swills $
 
 PORTNAME=	delayed_job
-PORTVERSION=	3.0.4
+PORTVERSION=	3.0.5
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Asynchronously executing longer tasks in the background
 
-RUN_DEPENDS=	rubygem-activesupport>=3.0:${PORTSDIR}/devel/rubygem-activesupport \
-		rubygem-daemons>=0:${PORTSDIR}/devel/rubygem-daemons
+RUN_DEPENDS=	rubygem-activesupport>=3.0:${PORTSDIR}/devel/rubygem-activesupport
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
