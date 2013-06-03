@@ -1,12 +1,8 @@
-# New ports collection makefile for:	scons
-# Date created:				16 December 2001
-# Whom:					Peter Haight <peterh@sapros.com>
-#
-# $FreeBSD: devel/scons/Makefile 317412 2013-05-05 13:49:11Z eadler $
-#
+# Created by: Peter Haight <peterh@sapros.com>
+# $FreeBSD: devel/scons/Makefile 318450 2013-05-18 20:24:03Z rakuco $
 
 PORTNAME=	scons
-PORTVERSION=	2.1.0
+PORTVERSION=	2.3.0
 CATEGORIES=	devel python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
