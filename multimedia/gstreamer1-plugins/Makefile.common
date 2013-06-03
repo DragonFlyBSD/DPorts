@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer1-plugins/Makefile.common 316738 2013-04-28 17:53:47Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins/Makefile.common 317778 2013-05-10 09:14:12Z kwm $
 #    $MCom: kwm/multimedia/gstreamer1-plugins/Makefile.common 11415 2013-04-26 22:58:21Z kwm $
 
 BASE_GST_ALL_PLUGINS= \
@@ -382,6 +382,11 @@ gst_vorbis_LIB_DEPENDS=	vorbis:${PORTSDIR}/audio/libvorbis
 
 # vpx
 gst_vpx_LIB_DEPENDS=	vpx:${PORTSDIR}/multimedia/libvpx
+gst_vpx_PLIST_FILES=	${GST_LIB_DIR}/libgstvpx.la \
+			${GST_LIB_DIR}/libgstvpx.so \
+			share/gstreamer-${VERSION}/presets/GstVP8Enc.prs
+gst_vpx_PLIST_DIRSTRY=	share/gstreamer-${VERSION}/presets \
+			share/gstreamer-${VERSION}
 
 # X ximage and xvimage sinks aka output
 .if ${DIST} == base

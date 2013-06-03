@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1-plugins/Makefile 316693 2013-04-27 20:56:38Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins/Makefile 317830 2013-05-10 16:59:15Z kwm $
 #    $MCom: kwm/multimedia/gstreamer1-plugins/Makefile 11404 2013-04-26 19:05:50Z kwm $
 
 PORTNAME=	gstreamer
@@ -55,6 +55,9 @@ USE_LDCONFIG=	yes
 CFLAGS:=	${CFLAGS} -O2 -Wno-format
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${EXTRA_LIBS} ${PTHREAD_LIBS}
+
+# workaround a crash in clang 3.3 crash llvm bug # 15840
+USE_GCC=	any
 
 DEFAULT_AUDIOSINK?=	osssink
 DEFAULT_AUDIOSRC?=	osssrc
