@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-rspec-mocks
-# Date created:		2011-06-12
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-rspec-mocks/Makefile,v 1.6 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-rspec-mocks/Makefile 319687 2013-06-02 17:01:02Z swills $
 
 PORTNAME=	rspec-mocks
-PORTVERSION=	2.11.2
+PORTVERSION=	2.13.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
