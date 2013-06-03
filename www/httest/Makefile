@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/httest/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: www/httest/Makefile 319350 2013-05-29 06:15:49Z ehaupt $
 
 PORTNAME=	httest
-PORTVERSION=	2.3.3
+PORTVERSION=	2.4.2
 CATEGORIES=	www
 MASTER_SITES=	SF/htt/htt${PORTVERSION:R}/${PORTNAME}-${PORTVERSION}
 
