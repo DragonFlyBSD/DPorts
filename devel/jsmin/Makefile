@@ -1,8 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/jsmin/Makefile 314078 2013-03-13 12:37:35Z madpilot $
+# $FreeBSD: devel/jsmin/Makefile 318785 2013-05-22 18:30:11Z madpilot $
 
 PORTNAME=	jsmin
-PORTVERSION=	20130225
+PORTVERSION=	20130329
 CATEGORIES=	devel
 
 MAINTAINER=	madpilot@FreeBSD.org
@@ -12,7 +12,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	douglascrockford
 GH_PROJECT=	JSMin
 GH_TAGNAME=	master
-GH_COMMIT=	67754f6
+GH_COMMIT=	1bf6ce5
 
 PLIST_FILES=	bin/jsmin
 PORTDOCS=	README
