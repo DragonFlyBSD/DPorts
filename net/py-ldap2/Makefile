@@ -1,14 +1,14 @@
-# $FreeBSD: ports/net/py-ldap2/Makefile,v 1.68 2012/11/17 06:00:16 svnexp Exp $
+# $FreeBSD: net/py-ldap2/Makefile 319392 2013-05-29 22:27:18Z rm $
 
 PORTNAME=	ldap2
-PORTVERSION=	2.4.10
+PORTVERSION=	2.4.12
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	python-ldap-${PORTVERSION}
 
 MAINTAINER=	rm@FreeBSD.org
-COMMENT=	An LDAP module for python, for OpenLDAP2
+COMMENT=	LDAP module for python, for OpenLDAP2
 
 LICENSE=	PSFL
 
