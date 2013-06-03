@@ -1,9 +1,5 @@
-# New ports collection makefile for:	clive
-# Date created:		2007-02-11
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/multimedia/clive/Makefile,v 1.63 2012/11/17 05:59:48 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: multimedia/clive/Makefile 318952 2013-05-24 10:30:58Z az $
 
 PORTNAME=	clive
 PORTVERSION=	2.3.3
@@ -32,11 +28,4 @@ PLIST_FILES=	bin/clive \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/clive/.packlist
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/clive
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-version>=0.77:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0.77:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
