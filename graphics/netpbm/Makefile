@@ -1,9 +1,8 @@
 # Created by: jmz
-# $FreeBSD: graphics/netpbm/Makefile 313806 2013-03-10 06:00:45Z dinoex $
+# $FreeBSD: graphics/netpbm/Makefile 317976 2013-05-12 20:37:50Z dinoex $
 
 PORTNAME=	netpbm
-PORTVERSION=	10.35.88
-PORTREVISION=	1
+PORTVERSION=	10.35.89
 CATEGORIES=	graphics
 MASTER_SITES=	SF/netpbm/super_stable/${PORTVERSION} \
 		${MASTER_SITE_LOCAL:S/$/:man/}
@@ -48,7 +47,7 @@ PLIST_SUB+=	X11='@comment '
 
 .include <bsd.port.pre.mk>
 
-.if ${PORT_OPTIONS:MMANPAGES}
+.if ${PORT_OPTIONS:MMANPAGES} || make(makesum) || defined(FETCH_ALL)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-manpages-2013-03-09${EXTRACT_SUFX}:man
 # lifted from ${WRKSRC}/buildtools/Makefile.manpage
 HMAN1+=	411toppm.1 anytopnm.1 asciitopgm.1 atktopbm.1 bioradtopgm.1 \
