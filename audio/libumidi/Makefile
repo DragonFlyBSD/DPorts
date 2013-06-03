@@ -1,8 +1,8 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/libumidi/Makefile 313460 2013-03-05 17:07:43Z miwi $
+# $FreeBSD: audio/libumidi/Makefile 318236 2013-05-15 10:37:13Z kwm $
 
 PORTNAME=	libumidi
-PORTVERSION=	2.0.5
+PORTVERSION=	2.0.6
 CATEGORIES=	audio
 MASTER_SITES=	http://www.selasky.org/hans_petter/distfiles/ \
 		http://hselasky.homeunix.org:8192/distfiles/
