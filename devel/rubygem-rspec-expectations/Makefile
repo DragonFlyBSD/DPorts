@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-rspec-expectations
-# Date created:		2011-06-12
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-rspec-expectations/Makefile,v 1.7 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-rspec-expectations/Makefile 319687 2013-06-02 17:01:02Z swills $
 
 PORTNAME=	rspec-expectations
-PORTVERSION=	2.11.2
+PORTVERSION=	2.13.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
