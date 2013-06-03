@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/devel/rubygem-rdoc/Makefile,v 1.13 2013/02/12 17:48:11 svnexp Exp $
+# $FreeBSD: devel/rubygem-rdoc/Makefile 319596 2013-06-01 21:23:47Z swills $
 
 PORTNAME=	rdoc
-PORTVERSION=	3.12.1
+PORTVERSION=	3.12.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
