@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@agava.com>
-# $FreeBSD: math/libqalculate/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: math/libqalculate/Makefile 319105 2013-05-26 12:36:34Z bapt $
 
 PORTNAME=	libqalculate
 PORTVERSION=	0.9.7
@@ -29,8 +29,12 @@ PLIST_SUB+=		NLS="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e '/^SUBDIRS =/s|docs||g' ${WRKSRC}/Makefile.in
+.if ${PORT_OPTIONS:MNLS}
 	@${REINPLACE_CMD} -e 's/^GMSGFMT = @GMSGFMT@/GMSGFMT = msgfmt/' ${WRKSRC}/po/Makefile.in.in
+.else
+	@${REINPLACE_CMD} -e '/^SUBDIRS =/s|po ||g' ${WRKSRC}/Makefile.in
+.endif
+	@${REINPLACE_CMD} -e '/^SUBDIRS =/s|docs||g' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's/-pthread/${PTHREAD_LIBS}/g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's/-lpthread/${PTHREAD_LIBS}/g' ${WRKSRC}/libqalculate.pc.in
 
