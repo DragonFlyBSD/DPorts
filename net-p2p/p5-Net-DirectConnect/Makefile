@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-DirectConnect
-# Date created:		2010-01-16
-# Whom:			Oleg Alexeenkov <proler@gmail.com>
-#
-# $FreeBSD: ports/net-p2p/p5-Net-DirectConnect/Makefile,v 1.10 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: Oleg Alexeenkov <proler@gmail.com>
+# $FreeBSD: net-p2p/p5-Net-DirectConnect/Makefile 319257 2013-05-27 15:44:15Z az $
 
 PORTNAME=	Net-DirectConnect
 PORTVERSION=	0.13
@@ -33,11 +29,4 @@ PERL_CONFIGURE=	yes
 MAN1=		dcget.1 dcshare.1
 MAN3=		Net::DirectConnect.3 Net::DirectConnect::filelist.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
