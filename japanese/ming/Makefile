@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/ming/Makefile 317308 2013-05-04 10:48:54Z kuriyama $
+# $FreeBSD: japanese/ming/Makefile 318993 2013-05-24 16:35:30Z bapt $
 
 PORTNAME=	ming
 PORTVERSION=	0.1.5
@@ -17,9 +17,10 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 CONFLICTS=	ming-*
 
 WRKSRC=		${WRKDIR}/jaming-${PORTVERSION}/src
-MAKE_ARGS=	NOPROFILE=true
+MAKE_ARGS=	NO_PROFILE=true
 USE_LDCONFIG=	yes
 USES=		bison
+MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
 UTILS=		gif2dbl \
 		gif2mask \
