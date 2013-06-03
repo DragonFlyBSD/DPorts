@@ -2,11 +2,11 @@
 # Date created:		26 May 2012
 # Whom:			Daniel Knaggs	<knaggsy2000@gmail.com>
 #
-# $FreeBSD: head/sysutils/py-danzfs/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: sysutils/py-danzfs/Makefile 317811 2013-05-10 14:37:41Z miwi $
 #
 
 PORTNAME=	danzfs
-PORTVERSION=	0.1.2
+PORTVERSION=	0.2.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
