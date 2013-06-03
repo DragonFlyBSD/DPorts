@@ -1,8 +1,8 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/typo3/Makefile 317530 2013-05-06 16:17:06Z culot $
+# $FreeBSD: www/typo3/Makefile 319159 2013-05-27 07:18:51Z culot $
 
 PORTNAME=	typo3
-PORTVERSION=	6.1.0
+PORTVERSION=	6.1.1
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/TYPO3%20Source%20and%20Dummy/TYPO3%20${PORTVERSION}
 
@@ -64,7 +64,7 @@ USE_PHP+=	mbstring
 
 .if ${PORT_OPTIONS:MMYSQL}
 USE_MYSQL=	server
-IGNORE_WITH_MYSQL=	41 50
+IGNORE_WITH_MYSQL=	50
 .endif
 
 .if ${PORT_OPTIONS:MZLIB}
