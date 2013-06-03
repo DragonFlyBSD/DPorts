@@ -1,12 +1,7 @@
-# New ports collection makefile for:	xrefresh
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xrefresh/Makefile,v 1.4 2012/11/17 06:03:22 svnexp Exp $
-#
+# $FreeBSD: x11/xrefresh/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xrefresh
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.5
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
