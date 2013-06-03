@@ -1,19 +1,15 @@
-# New ports collection makefile for:	xwininfo
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xwininfo/Makefile,v 1.6 2012/11/17 06:03:23 svnexp Exp $
-#
+# $FreeBSD: x11/xwininfo/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xwininfo
-PORTVERSION=	1.1.2
+PORTVERSION=	1.1.3
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Window information utility for X
 
 XORG_CAT=	app
-USE_XORG=	xmuu xext x11
+USES=		iconv
+USE_XORG=	x11 xcb xproto xorg-macros
 
 PLIST_FILES=	bin/xwininfo
 
