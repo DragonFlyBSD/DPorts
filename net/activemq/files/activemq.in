@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/activemq/files/activemq.in 306442 2012-10-26 14:07:37Z tj $
+# $FreeBSD: net/activemq/files/activemq.in 318541 2013-05-19 16:06:17Z tj $
 #
 
 # PROVIDE: activemq
@@ -47,7 +47,7 @@ load_rc_config $name
 pidfile=/var/run/${name}.pid
 
 required_files="%%ETCDIR%%/activemq.xml"
-jar_file="%%DATADIR%%/bin/run.jar"
+jar_file="%%DATADIR%%/bin/activemq.jar"
 java_options=" 	-server -jar ${activemq_javargs} \
 		-Dactivemq.classpath=${activemq_classpath} \
 		-Dactivemq.conf=${activemq_conf} \
