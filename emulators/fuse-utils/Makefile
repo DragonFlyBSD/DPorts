@@ -1,8 +1,8 @@
 # Created by: rene
-# $FreeBSD: emulators/fuse-utils/Makefile 315209 2013-03-25 10:09:39Z rene $
+# $FreeBSD: emulators/fuse-utils/Makefile 318604 2013-05-20 15:03:18Z rene $
 
 PORTNAME=	fuse-utils
-PORTVERSION=	1.0.0
+PORTVERSION=	1.1.0
 CATEGORIES=	emulators
 MASTER_SITES=	SF/fuse-emulator/${PORTNAME}/${PORTVERSION}
 
@@ -14,29 +14,40 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 MAKE_JOBS_SAFE=	yes
 
+USES=		pkgconfig
 LIB_DEPENDS=	spectrum:${PORTSDIR}/emulators/libspectrum
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libspectrum-prefix=${LOCALBASE} \
 		--with-local-prefix=${LOCALBASE}
 
-MAN1=	createhdf.1 fuse-utils.1 listbasic.1 raw2hdf.1 rzxcheck.1 rzxdump.1 rzxtool.1 scl2trd.1 snap2tzx.1 snapconv.1 tapeconv.1 tzxlist.1 profile2map.1
+MAN1=	createhdf.1 fmfconv.1 fuse-utils.1 listbasic.1 raw2hdf.1 rzxcheck.1 \
+	rzxdump.1 rzxtool.1 scl2trd.1 snap2tzx.1 snapconv.1 tapeconv.1 \
+	tzxlist.1 profile2map.1
 
-OPTIONS_DEFINE=	AUDIOFILE DOCS
+OPTIONS_DEFINE=	AUDIOTOOLS DOCS
+OPTIONS_DEFAULT=	AUDIOTOOLS
 
-AUDIOFILE_DESC=	Build audio <-> tape utilities
-
-OPTIONS_DEFAULT=	AUDIOFILE
+AUDIOTOOLS_DESC=	Build audio <-> tape utilities
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MAUDIOFILE}
+.if ${PORT_OPTIONS:MAUDIOTOOLS}
+CONFIGURE_ARGS+=--with-audiofile
 LIB_DEPENDS+=	audiofile:${PORTSDIR}/audio/libaudiofile
-PLIST_SUB=	AUDIOFILE=""
+PLIST_SUB=	AUDIOTOOLS=""
 MAN1+=		audio2tape.1 tape2wav.1
 .else
 CONFIGURE_ARGS+=--without-audiofile
-PLIST_SUB=	AUDIOFILE="@comment "
+PLIST_SUB=	AUDIOTOOLS="@comment "
 .endif
+
+# FIXME no way to specify ffmpeg1 paths to configure script
+#.if ${PORT_OPTIONS:MFFMPEG}
+#LIB_DEPENDS+=	avformat1:${PORTSDIR}/multimedia/ffmpeg1
+#CONFIGURE_ARGS+=--with-ffmpeg
+#.else
+CONFIGURE_ARGS+=--without-ffmpeg
+#.endif
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
