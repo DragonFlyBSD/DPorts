@@ -2,7 +2,7 @@
 # Date created:		21 June 1995
 # Whom:			Satoshi Asami (asami)
 #
-# $FreeBSD: ports/editors/e93/Makefile,v 1.42 2012/11/17 05:57:13 svnexp Exp $
+# $FreeBSD: editors/e93/Makefile 318746 2013-05-22 08:03:52Z gahr $
 #
 
 PORTNAME=	e93
@@ -20,7 +20,6 @@ LICENSE=	GPLv2
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_XORG=	x11 xinerama
-USE_TCL_BUILD=	yes
 USE_TCL=	yes
 USE_GMAKE=	yes
 MAKE_ARGS=	PREFIX="${PREFIX}" \
