@@ -1,8 +1,8 @@
 # Created by:	Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: ports/www/p5-RPC-ExtDirect/Makefile,v 1.1 2013/02/23 19:44:42 svnexp Exp $
+# $FreeBSD: www/p5-RPC-ExtDirect/Makefile 318612 2013-05-20 16:15:17Z tj $
 
 PORTNAME=	RPC-ExtDirect
-PORTVERSION=	2.10
+PORTVERSION=	2.13
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
