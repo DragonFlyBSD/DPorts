@@ -1,0 +1,19 @@
+
+$FreeBSD: ports/games/columns/files/patch-ab,v 1.4 2012/11/17 05:57:34 svnexp Exp $
+
+--- columns.cc.orig	Fri Mar 17 02:52:55 2000
++++ columns.cc	Wed Apr 17 15:48:10 2002
+@@ -22,10 +22,12 @@
+ #include <stdarg.h>
+ #include <stdio.h>
+ #include <string.h>
++#ifndef __STDC__
+ #include <malloc.h>
++#endif
+ #include <stdlib.h>
+ #include <time.h>
+-#include <SDL/SDL.h>
++#include <SDL.h>
+ 
+ #define HIGHSCORE_X 10
+ #define HIGHSCORE_Y 30
