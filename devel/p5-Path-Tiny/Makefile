@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Path-Tiny/Makefile 315366 2013-03-27 09:54:20Z tobez $
+# $FreeBSD: devel/p5-Path-Tiny/Makefile 319359 2013-05-29 08:30:12Z tobez $
 
 PORTNAME=	Path-Tiny
-PORTVERSION=	0.016
+PORTVERSION=	0.022
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DAGOLDEN
@@ -15,6 +15,7 @@ BUILD_DEPENDS=	p5-PathTools>=3.4000:${PORTSDIR}/devel/p5-PathTools \
 		p5-autodie>=2.14:${PORTSDIR}/devel/p5-autodie
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
+		p5-Test-FailWarnings>=0:${PORTSDIR}/devel/p5-Test-FailWarnings \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Devel-Hide>=0:${PORTSDIR}/devel/p5-Devel-Hide \
 		p5-File-pushd>=0:${PORTSDIR}/devel/p5-File-pushd
