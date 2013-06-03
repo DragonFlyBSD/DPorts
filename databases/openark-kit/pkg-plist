@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/openark-kit/pkg-plist,v 1.4 2013/02/08 12:33:07 svnexp Exp $
+@comment $FreeBSD: databases/openark-kit/pkg-plist 311928 2013-02-08 09:19:27Z miwi $
 bin/oak-apply-ri
 bin/oak-block-account
 bin/oak-chunk-update
