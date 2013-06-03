@@ -1,12 +1,8 @@
-# New ports collection makefile for:   libXau
-# Date Created:			29 Oct, 2003
-# Whom:				Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/libXau/Makefile,v 1.21 2012/11/17 06:03:17 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/libXau/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libXau
-PORTVERSION=	1.0.6
+PORTVERSION=	1.0.8
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
