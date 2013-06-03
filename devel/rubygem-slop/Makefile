@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-slop
-# Date created:		2012-02-08
-# Whom:			Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-#
-# $FreeBSD: ports/devel/rubygem-slop/Makefile,v 1.3 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
+# $FreeBSD: devel/rubygem-slop/Makefile 319679 2013-06-02 16:05:03Z swills $
 
 PORTNAME=	slop
-PORTVERSION=	3.3.2
+PORTVERSION=	3.4.5
 CATEGORIES=	devel ruby
 MASTER_SITES=	RG
 
