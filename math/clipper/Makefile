@@ -1,8 +1,8 @@
 # Created by: Martin Dieringer <martin.dieringer@gmx.de>
-# $FreeBSD: math/clipper/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: math/clipper/Makefile 317887 2013-05-11 15:31:37Z wen $
 
 PORTNAME=	clipperlib
-PORTVERSION=	5.1.3
+PORTVERSION=	5.1.5
 CATEGORIES=	math
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	polyclipping
