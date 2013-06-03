@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-core/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/evas-core/Makefile 318442 2013-05-18 19:36:31Z gblach $
 
 PORTNAME=	core
-PORTVERSION=	1.7.6.1
+PORTVERSION=	1.7.7
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
