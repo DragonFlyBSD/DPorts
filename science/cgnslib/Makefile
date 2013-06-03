@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/cgnslib/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: science/cgnslib/Makefile 318887 2013-05-23 17:39:18Z thierry $
 
 PORTNAME=	cgnslib
 DISTVERSION=	3.1.3-4
@@ -49,7 +49,7 @@ TESTSBIN=	cgwrite cgread test_partial
 .endif
 
 .if ${PORT_OPTIONS:MTOOLS}
-USE_TK=		yes
+USE_TK=		85
 USE_GL=		gl glu
 USE_XORG=	xmu
 CMAKE_ARGS+=	-DBUILD_CGNSTOOLS:BOOL=TRUE			\
