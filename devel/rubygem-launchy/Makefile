@@ -1,11 +1,8 @@
-# Ports collection makefile for:	gem-launchy
-# Date created:				06 Nov 2009
-# Whom:					Ryan Steinmetz (<rpsfa@rit.edu>)
-#
-# $FreeBSD: ports/devel/rubygem-launchy/Makefile,v 1.12 2012/11/17 05:56:59 svnexp Exp $
+# Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
+# $FreeBSD: devel/rubygem-launchy/Makefile 319656 2013-06-02 13:41:48Z swills $
 
 PORTNAME=	launchy
-PORTVERSION=	2.1.2
+PORTVERSION=	2.3.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
