@@ -1,11 +1,11 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-panel/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11-wm/xfce4-panel/Makefile 317687 2013-05-08 15:42:11Z olivierd $
 
 PORTNAME=	xfce4-panel
-PORTVERSION=	4.10.0
-PORTREVISION=	6
+PORTVERSION=	4.10.1
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
+MASTER_SITE_SUBDIR=	src/xfce/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
@@ -15,19 +15,18 @@ LIB_DEPENDS=	wnck-1:${PORTSDIR}/x11-toolkits/libwnck \
 		cairo:${PORTSDIR}/graphics/cairo \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
-USES=	pathfix pkgconfig
+USES=	desktop-file-utils pathfix pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	glib20 gtk20 intltool intlhack desktopfileutils
+USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_LDCONFIG=	yes
 USE_PERL5=	yes
 USE_XFCE=	configenv garcon libexo libmenu libutil xfconf
 USE_XORG=	x11 sm
 
-CONFIGURE_ARGS+=--enable-gio-unix \
-		--disable-gtk-doc-html
+CONFIGURE_ARGS+=--enable-gio-unix
 
 OPTIONS_DEFINE=		NLS DOCS
 
@@ -49,14 +48,5 @@ PLIST_SUB+=	APIDOCS=""
 CONFIGURE_ARGS+=--without-html-dir
 PLIST_SUB+=	APIDOCS="@comment "
 .endif
-
-post-patch:
-.if empty(PORT_OPTIONS:MNLS)
-	@${REINPLACE_CMD} -e 's|	icons \\|	icons|' \
-	    -e 's|	po||' ${WRKSRC}/Makefile.in
-.endif
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.mk>
