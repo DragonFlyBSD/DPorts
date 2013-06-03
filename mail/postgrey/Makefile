@@ -1,13 +1,9 @@
-# New ports collection makefile for:    postgrey
-# Date created:				24 August 2004
-# Whom:					Will Andrews <will@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/postgrey/Makefile,v 1.35 2012/11/17 05:59:11 svnexp Exp $
-#
+# Created by: Will Andrews <will@FreeBSD.org>
+# $FreeBSD: mail/postgrey/Makefile 319058 2013-05-25 14:55:19Z madpilot $
 
 PORTNAME=	postgrey
 PORTVERSION=	1.34
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	http://postgrey.schweikert.ch/pub/ \
 		http://postgrey.schweikert.ch/pub/old/
@@ -27,21 +23,26 @@ NO_BUILD=	yes
 POD2MAN?=	pod2man
 PORTDOCS=	README Changes README.exim
 SUB_FILES=	pkg-install
-SUB_LIST=	USER=${PGY_USERNAME} UID=${PGY_USERID} GROUP=${PGY_GROUPNAME} \
-		GID=${PGY_GROUPID} ETCFILES="${ETCFILES}" \
+SUB_LIST=	USER=${PGY_USERNAME} \
+		GROUP=${PGY_GROUPNAME} \
+		ETCFILES="${ETCFILES}" \
 		POSTGREYDIR=${PGY_DIR}
 ETCFILES=	whitelist_clients whitelist_recipients
 PGY_USERNAME?=	postgrey
-PGY_USERID?=	225
-PGY_GROUPNAME?=	${PGY_USERNAME}
-PGY_GROUPID?=	${PGY_USERID}
+PGY_GROUPNAME?=	postgrey
 PGY_DIR?=	/var/db/postgrey
 
 USERS=		${PGY_USERNAME}
 GROUPS=		${PGY_GROUPNAME}
 MAN1=		${PORTNAME}.1 policy-test.1 postgreyreport.1
 
+USES=		shebangfix
+SHEBANG_FILES=	${WRKSRC}/postgrey
+
+.include <bsd.port.options.mk>
+
 post-patch:
+	@${REINPLACE_CMD} -e 's#nogroup#${PGY_GROUPNAME}#' ${WRKSRC}/postgrey
 	@${REINPLACE_CMD} -e 's#/etc/main.cf#/etc/postfix/main.cf#' ${WRKSRC}/postgrey
 	@${REINPLACE_CMD} -e 's#/etc/postfix#${PREFIX}&#' ${WRKSRC}/postgrey ${WRKSRC}/postgrey_whitelist_*
 	@${REINPLACE_CMD} -e 's#/var/spool/postfix/postgrey#${PGY_DIR}#' ${WRKSRC}/postgrey ${WRKSRC}/contrib/postgreyreport
@@ -61,7 +62,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/postgrey_${i} ${PREFIX}/etc/postfix/dist-postgrey_${i}
 .endfor
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${INSTALL} -d ${DOCSDIR}
 	@cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
 .endif
