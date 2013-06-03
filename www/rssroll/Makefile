@@ -1,7 +1,7 @@
-# $FreeBSD: www/rssroll/Makefile 315324 2013-03-26 20:31:07Z cs $
+# $FreeBSD: www/rssroll/Makefile 318644 2013-05-21 06:10:06Z miwi $
 
 PORTNAME=	rssroll
-PORTVERSION=	0.2
+PORTVERSION=	0.3
 CATEGORIES=	www
 MASTER_SITES=	http://chaosophia.net/downloads/rssroll/ \
 		http://ns1.chaosophia.net/downloads/rssroll/
@@ -13,8 +13,7 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		xml2:${PORTSDIR}/textproc/libxml2 \
 		sqlite3:${PORTSDIR}/databases/sqlite3
 
-CFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libxml2
-LDFLAGS+=	-L${LOCALBASE}/lib
+GNU_CONFIGURE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rssroll ${PREFIX}/bin
