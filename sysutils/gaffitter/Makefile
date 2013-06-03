@@ -1,18 +1,16 @@
-# ex:ts=8
-# Ports collection makefile for:	gaffitter
-# Date created:			13 Mar 2010
-# Whom:				corky1951@comcast.net
-#
-# $FreeBSD: ports/sysutils/gaffitter/Makefile,v 1.3 2012/11/17 06:01:32 svnexp Exp $
-#
+# Created by: corky1951@comcast.net
+# $FreeBSD: sysutils/gaffitter/Makefile 319164 2013-05-27 07:40:09Z bsam $
 
 PORTNAME=	gaffitter
 PORTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A bin packing utility that uses a genetic algorithm
+COMMENT=	Bin packing utility that uses a genetic algorithm
+
+LICENSE=	GPLv3 # or later
 
 USE_BZIP2=	yes
 
