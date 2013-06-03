@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-toolkits/qwt5/Makefile,v 1.24 2012/12/15 13:56:04 svnexp Exp $
+# $FreeBSD: x11-toolkits/qwt5/Makefile 317947 2013-05-12 11:48:49Z makc $
 
 PORTNAME=	qwt
 PORTVERSION=	5.2.3
@@ -22,6 +22,8 @@ PLIST_SUB=	SHLIB_VER=${PORTVERSION} \
 		SHLIB_SHVER=${PORTVERSION:R}
 
 STRIP_FILES=	lib/libqwt.so.${PORTVERSION}
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.pre.mk>
 .include <${FILESDIR}/Makefile.man>
