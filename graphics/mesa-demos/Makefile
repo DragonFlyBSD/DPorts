@@ -1,5 +1,5 @@
-# Created by: anholt@FreeBSD.org
-# $FreeBSD: graphics/mesa-demos/Makefile 313913 2013-03-11 14:56:56Z zeising $
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: graphics/mesa-demos/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	mesa-demos
 PORTVERSION=	8.1.0
