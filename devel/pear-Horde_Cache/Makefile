@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: devel/pear-Horde_Cache/Makefile 316221 2013-04-21 23:02:58Z mm $
+# $FreeBSD: devel/pear-Horde_Cache/Makefile 317889 2013-05-11 15:37:47Z mm $
 
 PORTNAME=	Horde_Cache
-PORTVERSION=	2.0.4
+PORTVERSION=	2.1.0
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	pear-
 
