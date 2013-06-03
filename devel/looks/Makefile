@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ports/devel/looks/Makefile,v 1.21 2013/02/08 08:19:39 svnexp Exp $
+# $FreeBSD: devel/looks/Makefile 318410 2013-05-17 22:06:14Z erwin $
 
 PORTNAME=	looks
 PORTVERSION=	2.5.2
