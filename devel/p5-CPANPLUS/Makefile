@@ -1,8 +1,8 @@
 # Created by: Alex Kapranoff <kappa@rambler-co.ru>
-# $FreeBSD: devel/p5-CPANPLUS/Makefile 316787 2013-04-29 09:12:14Z sunpoet $
+# $FreeBSD: devel/p5-CPANPLUS/Makefile 318662 2013-05-21 08:56:40Z tobez $
 
 PORTNAME=	CPANPLUS
-PORTVERSION=	0.9136
+PORTVERSION=	0.9138
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
