@@ -1,12 +1,7 @@
-# New ports collection makefile for:	textproc/p5-PPI-XS
-# Date created:				09 May 2007
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-PPI-XS/Makefile,v 1.4 2012/11/17 06:02:06 svnexp Exp $
-#
+# $FreeBSD: textproc/p5-PPI-XS/Makefile 318371 2013-05-17 09:42:14Z lth $
 
 PORTNAME=	PPI-XS
-PORTVERSION=	0.901
+PORTVERSION=	0.902
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	PPI
