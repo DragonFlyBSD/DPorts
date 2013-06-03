@@ -1,16 +1,19 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: lang/python26/Makefile 317469 2013-05-06 06:32:22Z jgh $
+# $FreeBSD: lang/python26/Makefile 318353 2013-05-17 04:17:22Z rm $
 
 PORTNAME=	python26
 PORTVERSION=	2.6.8
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	lang python ipv6
-MASTER_SITES=	${PYTHON_MASTER_SITES}
+MASTER_SITES=	PYTHON
 MASTER_SITE_SUBDIR=	${PYTHON_MASTER_SITE_SUBDIR}
 DISTFILES=	${PYTHON_DISTFILE}
 
 MAINTAINER=	python@FreeBSD.org
-COMMENT=	An interpreted object-oriented programming language
+COMMENT=	Interpreted object-oriented programming language
+
+DEPRECATED=	This port will reach it's EoL upstream soon, please migrate to lang/python27
+EXPIRATION_DATE=2013-10-01
 
 DIST_SUBDIR=	python
 WRKSRC=		${PYTHON_WRKSRC}/portbld.static
