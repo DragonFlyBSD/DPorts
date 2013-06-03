@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-No-Worries/Makefile 313045 2013-02-27 10:39:48Z tobez $
+# $FreeBSD: devel/p5-No-Worries/Makefile 318680 2013-05-21 11:48:38Z tobez $
 
 PORTNAME=	No-Worries
-PORTVERSION=	0.9
+PORTVERSION=	1.0
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
