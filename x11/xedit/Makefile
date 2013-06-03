@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xedit/Makefile 313929 2013-03-11 19:14:28Z zeising $
+# $FreeBSD: x11/xedit/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xedit
 PORTVERSION=	1.2.1
@@ -8,7 +8,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Simple text editor for X
 
 XORG_CAT=	app
-USE_XORG=	xt xaw7 xorg-macros
+USE_XORG=	xt xaw7
 
 MAN1=		xedit.1
 
