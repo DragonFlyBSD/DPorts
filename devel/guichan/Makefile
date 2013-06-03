@@ -1,9 +1,9 @@
 # Created by: Tobias Gion <freebsd@gionet.de>
-# $FreeBSD: devel/guichan/Makefile 316704 2013-04-28 07:40:39Z mva $
+# $FreeBSD: devel/guichan/Makefile 318789 2013-05-22 19:19:03Z mva $
 
 PORTNAME=	guichan
 PORTVERSION=	0.8.2
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	devel games
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
@@ -19,7 +19,8 @@ USES=	pathfix
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS_DEFINE=	SDL ALLEGRO OPENGL
+OPTIONS_DEFINE=		SDL ALLEGRO OPENGL
+OPTIONS_DEFAULT=	SDL OPENGL
 ALLEGRO_DESC=	Allegro support
 
 .include <bsd.port.options.mk>
