@@ -1,9 +1,9 @@
 # Created by: gpalmer
-# $FreeBSD: net-mgmt/net-snmp/Makefile 313439 2013-03-05 07:12:24Z rm $
+# $FreeBSD: net-mgmt/net-snmp/Makefile 319417 2013-05-30 11:55:31Z zi $
 
 PORTNAME=	snmp
 PORTVERSION=	5.7.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-mgmt ipv6
 MASTER_SITES=	SF/net-${PORTNAME}/net-${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	net-
