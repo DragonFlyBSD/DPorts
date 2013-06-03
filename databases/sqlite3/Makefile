@@ -1,14 +1,14 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: databases/sqlite3/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: databases/sqlite3/Makefile 319492 2013-05-31 14:03:15Z culot $
 
 PORTNAME=	sqlite3
-PORTVERSION=	3.7.16.1
+PORTVERSION=	3.7.17
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sqlite.org/2013/ http://www2.sqlite.org/2013/ http://www3.sqlite.org/2013/
-DISTNAME=	sqlite-autoconf-3071601
+DISTNAME=	sqlite-autoconf-3071700
 
 MAINTAINER=	pavelivolkov@gmail.com
-COMMENT=	An SQL database engine in a C library
+COMMENT=	SQL database engine in a C library
 
 LICENSE=	public
 LICENSE_NAME=	Public Domain
