@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-devise
-# Date created:				2011-06-16
-# Whom:					rpsfa@rit.edu
-#
-# $FreeBSD: ports/devel/rubygem-devise/Makefile,v 1.14 2012/11/17 05:56:58 svnexp Exp $
+# Created by: rpsfa@rit.edu
+# $FreeBSD: devel/rubygem-devise/Makefile 319636 2013-06-02 02:37:23Z swills $
 
 PORTNAME=	devise
-PORTVERSION=	2.1.2
+PORTVERSION=	2.2.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
