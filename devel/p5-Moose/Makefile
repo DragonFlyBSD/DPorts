@@ -1,8 +1,9 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Moose/Makefile 315567 2013-03-29 19:41:55Z sunpoet $
+# $FreeBSD: devel/p5-Moose/Makefile 319303 2013-05-28 11:39:53Z tobez $
 
 PORTNAME=	Moose
-PORTVERSION=	2.0801
+PORTVERSION=	2.0802
+PORTEPOCH=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ETHER
@@ -45,7 +46,8 @@ TEST_DEPENDS=	\
 	p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle \
 	p5-Test-Output>=0:${PORTSDIR}/devel/p5-Test-Output \
 	p5-Test-Requires>=0.05:${PORTSDIR}/devel/p5-Test-Requires \
-	p5-Test-DependentModules>=0.13:${PORTSDIR}/devel/p5-Test-DependentModules
+	p5-Test-DependentModules>=0.13:${PORTSDIR}/devel/p5-Test-DependentModules \
+	p5-Test-CheckDeps>=0:${PORTSDIR}/devel/p5-Test-CheckDeps
 
 CFLAGS+=	-I.	# mop.h
 MAKE_JOBS_UNSAFE=	yes
@@ -74,6 +76,7 @@ MAN3=	Class::MOP.3 \
 	Class::MOP::Object.3 \
 	Class::MOP::Package.3 \
 	Moose.3 \
+	Moose::Conflicts.3 \
 	Moose::Cookbook.3 \
 	Moose::Cookbook::Basics::BankAccount_MethodModifiersAndSubclassing.3 \
 	Moose::Cookbook::Basics::BinaryTree_AttributeFeatures.3 \
