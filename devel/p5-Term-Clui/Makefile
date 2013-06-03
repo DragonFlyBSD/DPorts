@@ -1,8 +1,8 @@
-# $FreeBSD: ports/devel/p5-Term-Clui/Makefile,v 1.2 2012/12/09 18:39:27 svnexp Exp $
+# $FreeBSD: devel/p5-Term-Clui/Makefile 318618 2013-05-20 17:39:03Z tj $
 #
 
 PORTNAME=	Term-Clui
-PORTVERSION=	1.66
+PORTVERSION=	1.67
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
