@@ -1,12 +1,9 @@
-# New ports collection makefile for:	p5-libalarm
-# Date created:				March 27, 2008
-# Whom:					Marzhan Mykola <delgod@portaone.com>
-#
-# $FreeBSD: ports/devel/p5-libalarm/Makefile,v 1.2 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Marzhan Mykola <delgod@portaone.com>
+# $FreeBSD: devel/p5-libalarm/Makefile 318281 2013-05-16 08:38:06Z miwi $
 
 PORTNAME=	libalarm
 PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN/Alarm
 PKGNAMEPREFIX=	p5-
