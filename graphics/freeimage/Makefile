@@ -1,14 +1,15 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: ports/graphics/freeimage/Makefile,v 1.19 2013/01/30 14:46:04 svnexp Exp $
+# $FreeBSD: graphics/freeimage/Makefile 317740 2013-05-09 16:46:32Z gahr $
 
 PORTNAME=	freeimage
 PORTVERSION=	3.15.4
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Source%20Distribution/${PORTVERSION}
 DISTNAME=	FreeImage${PORTVERSION:S/.//g}
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	An open source graphics library
+COMMENT=	Simple C/C++ bitmap graphics library
 
 USE_ZIP=	yes
 USE_DOS2UNIX=	Source/LibOpenJPEG/opj_malloc.h
@@ -16,13 +17,18 @@ USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/FreeImage
 
-CFLAGS+= -fexceptions -fvisibility=hidden
+CFLAGS+=	-fexceptions -fvisibility=hidden
 
 PLIST_FILES=	include/FreeImage.h \
+		include/FreeImagePlus.h \
 		lib/libfreeimage.a \
 		lib/libfreeimage-${PORTVERSION}.so \
 		lib/libfreeimage.so.3 \
-		lib/libfreeimage.so
+		lib/libfreeimage.so \
+		lib/libfreeimageplus.a \
+		lib/libfreeimageplus-${PORTVERSION}.so \
+		lib/libfreeimageplus.so.3 \
+		lib/libfreeimageplus.so
 
 .include <bsd.port.pre.mk>
 
@@ -32,6 +38,14 @@ CFLAGS+=	-fPIC
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}| ; s|-g root|-g wheel|' \
-		${WRKSRC}/Makefile.gnu
+		${WRKSRC}/Makefile.gnu ${WRKSRC}/Makefile.fip
+
+post-build:
+	cd ${WRKSRC} && ${GMAKE} -f Makefile.fip
+
+post-install:
+	cd ${WRKSRC} && ${GMAKE} -f Makefile.fip ${INSTALL_TARGET}
+	${LN} -s libfreeimageplus-${PORTVERSION} ${PREFIX}/lib/libfreeimageplus.so.3
+	${LN} -s libfreeimageplus-${PORTVERSION} ${PREFIX}/lib/libfreeimageplus.so
 
 .include <bsd.port.post.mk>
