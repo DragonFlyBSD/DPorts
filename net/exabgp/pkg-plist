@@ -1,4 +1,4 @@
-@comment $FreeBSD: net/exabgp/pkg-plist 315470 2013-03-28 13:59:56Z zi $
+@comment $FreeBSD: net/exabgp/pkg-plist 319520 2013-05-31 15:18:09Z miwi $
 etc/exabgp/exabgp.env
 sbin/exabgp
 %%PYTHON_SITELIBDIR%%/exabgp/__init__.py
@@ -253,7 +253,6 @@ sbin/exabgp
 @dirrm %%PYTHON_SITELIBDIR%%/exabgp/bgp/message/open
 @dirrm %%PYTHON_SITELIBDIR%%/exabgp/bgp/message
 @dirrm %%PYTHON_SITELIBDIR%%/exabgp/compatibility
-@dirrm %%PYTHON_SITELIBDIR%%/exabgp/configuration/schema
 @dirrm %%PYTHON_SITELIBDIR%%/exabgp/configuration
 @dirrm %%PYTHON_SITELIBDIR%%/exabgp/leak
 @dirrm %%PYTHON_SITELIBDIR%%/exabgp/memory
