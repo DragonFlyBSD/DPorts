@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Log::Any
-# Date created:		30 Aug 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Log-Any/Makefile,v 1.12 2012/11/17 05:56:20 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Log-Any/Makefile 318693 2013-05-21 13:30:27Z kuriyama $
 
 PORTNAME=	Log-Any
-PORTVERSION=	0.14
+PORTVERSION=	0.15
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JSWARTZ
