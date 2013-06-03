@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: mail/gmime24/Makefile 317508 2013-05-06 11:13:56Z kwm $
+# $FreeBSD: mail/gmime24/Makefile 317712 2013-05-08 22:23:36Z bdrewery $
 
 PORTNAME=	gmime
 PORTVERSION=	2.4.33
@@ -19,8 +19,8 @@ SLAVEDIRS=	mail/gmime2-sharp
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}24
 USE_GMAKE=	yes
-USE_GNOME?=	gnomehack glib20
-USES=		pkgconfig iconv
+USE_GNOME?=	glib20
+USES=		pathfix pkgconfig iconv
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
