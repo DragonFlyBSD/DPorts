@@ -1,4 +1,4 @@
-# $FreeBSD: x11/viewres/Makefile 313929 2013-03-11 19:14:28Z zeising $
+# $FreeBSD: x11/viewres/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	viewres
 PORTVERSION=	1.0.4
@@ -8,7 +8,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Graphical class browser for Xt
 
 XORG_CAT=	app
-USE_XORG=	xt xaw xorg-macros
+USE_XORG=	xt xaw
 
 MAN1=		viewres.1
 
