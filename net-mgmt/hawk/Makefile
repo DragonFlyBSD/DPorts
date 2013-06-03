@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/hawk/Makefile,v 1.7 2012/11/17 06:00:32 svnexp Exp $
+# $FreeBSD: net-mgmt/hawk/Makefile 305526 2012-10-08 10:38:47Z dougb $
 
 PORTNAME=	hawk
 PORTVERSION=	0.6
