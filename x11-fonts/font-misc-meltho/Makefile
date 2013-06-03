@@ -1,9 +1,4 @@
-# New ports collection makefile for:    font-misc-meltho
-# Date created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/font-misc-meltho/Makefile,v 1.4 2012/11/17 06:03:28 svnexp Exp $
-#
+# $FreeBSD: x11-fonts/font-misc-meltho/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	font-misc-meltho
 PORTVERSION=	1.0.3
