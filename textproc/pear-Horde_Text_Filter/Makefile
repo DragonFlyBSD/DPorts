@@ -2,10 +2,10 @@
 # Date created:			  7 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: textproc/pear-Horde_Text_Filter/Makefile 316218 2013-04-21 22:16:15Z mm $
+# $FreeBSD: textproc/pear-Horde_Text_Filter/Makefile 319377 2013-05-29 15:02:18Z mm $
 
 PORTNAME=	Horde_Text_Filter
-PORTVERSION=	2.1.0
+PORTVERSION=	2.1.3
 CATEGORIES=	textproc www pear
 
 MAINTAINER=	horde@FreeBSD.org
