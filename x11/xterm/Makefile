@@ -1,8 +1,8 @@
 # Created by: krion
-# $FreeBSD: x11/xterm/Makefile 316612 2013-04-26 13:38:09Z ehaupt $
+# $FreeBSD: x11/xterm/Makefile 319349 2013-05-29 06:08:05Z ehaupt $
 
 PORTNAME=	xterm
-PORTVERSION=	292
+PORTVERSION=	293
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/:src1 \
 		CRITICAL:src1 CRITICAL:src2
@@ -18,6 +18,7 @@ CONFLICTS=	x11iraf-[0-9]*
 USE_XORG=	xaw xft
 WANT_GNOME=	desktopfileutils
 GNU_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--with-utempter --enable-narrowproto
