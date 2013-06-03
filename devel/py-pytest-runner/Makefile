@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-pytest-runner/Makefile 314953 2013-03-22 19:35:13Z rm $
+# $FreeBSD: devel/py-pytest-runner/Makefile 318257 2013-05-15 19:33:14Z wg $
 
 PORTNAME=	pytest-runner
 PORTVERSION=	1.2
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Test support for pytest runner in setup.py
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hgtools>=0:${PORTSDIR}/devel/py-hgtools
