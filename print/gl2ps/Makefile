@@ -1,12 +1,8 @@
-# New ports collection makefile for: gl2ps
-# Date created:		31 Jan 2004
-# Whom:			Igor Pokrovsky <tiamat@comset.net>
-#
-# $FreeBSD: ports/print/gl2ps/Makefile,v 1.23 2012/11/17 06:00:50 svnexp Exp $
-#
+# Created by: Igor Pokrovsky <tiamat@comset.net>
+# $FreeBSD: print/gl2ps/Makefile 319203 2013-05-27 10:23:39Z araujo $
 
 PORTNAME=	gl2ps
-PORTVERSION=	1.3.7
+PORTVERSION=	1.3.8
 CATEGORIES=	print graphics
 MASTER_SITES=	http://www.geuz.org/gl2ps/src/
 EXTRACT_SUFX=	.tgz
