@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: print/cups-base/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: print/cups-base/Makefile 319651 2013-06-02 12:14:24Z eadler $
 
 PORTNAME=	cups
 PORTVERSION=	1.5.4
@@ -69,7 +69,6 @@ OPTIONS_DEFINE=	GNUTLS
 .else
 PORTREVISION=	1
 CUPS_SUFFIX=	-base
-CONFLICTS+=	cupsddk-*
 OPTIONS_DEFINE=	GNUTLS LIBPAPER PHP PYTHON PAM LDAP DBUS LIBUSB XDG_OPEN GHOSTSCRIPT XPDF AVAHI MDNSRESPONDER
 OPTIONS_DEFAULT=	LIBPAPER GHOSTSCRIPT
 OPTIONS_EXCLUDE+=	GHOSTSCRIPT XPDF
@@ -79,7 +78,7 @@ NO_OPTIONS_SORT=	yes
 LIBUSB_DESC=		USB support
 GHOSTSCRIPT_DESC=	Build pdftops with GHOSTSCRIPT
 XPDF_DESC=		Build pdftops with XPDF
-XDG_OPEN=		Build with XDG_OPEN as browser
+XDG_OPEN_DESC=		Build with XDG_OPEN as browser
 
 .include <bsd.port.options.mk>
 
