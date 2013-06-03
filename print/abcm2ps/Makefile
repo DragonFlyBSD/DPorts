@@ -1,11 +1,8 @@
-# New ports collection makefile for:	abcm2ps
-# Date created:				2003-06-27
-# Whom:					arved
-#
-# $FreeBSD: ports/print/abcm2ps/Makefile,v 1.46 2012/11/17 06:00:47 svnexp Exp $
+# Created by: arved
+# $FreeBSD: print/abcm2ps/Makefile 319186 2013-05-27 09:17:44Z araujo $
 
 PORTNAME=	abcm2ps
-PORTVERSION=	6.6.18
+PORTVERSION=	6.6.22
 CATEGORIES=	print audio
 MASTER_SITES=	http://moinejf.free.fr/
 
