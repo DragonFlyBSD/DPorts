@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: www/qt4-webkit/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: www/qt4-webkit/Makefile 317896 2013-05-11 17:31:45Z rakuco $
 
 PORTNAME=	webkit
 DISTVERSION=	${QT4_VERSION}
@@ -10,7 +10,6 @@ PKGNAMEPREFIX=	qt4-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt4 WebKit engine
 
-USE_GCC=	any
 USES=		pkgconfig
 USE_QT4=	corelib declarative gui network \
 		qmake_build moc_build rcc_build
