@@ -1,12 +1,8 @@
-# New ports collection makefile for:	sql-ledger
-# Date created:		2005-10-29
-# Whom:			lth@FreeBSD.org
-#
-# $FreeBSD: ports/finance/sql-ledger/Makefile,v 1.41 2012/11/17 05:57:26 svnexp Exp $
-#
+# Created by: lth@FreeBSD.org
+# $FreeBSD: finance/sql-ledger/Makefile 317913 2013-05-11 21:00:04Z rakuco $
 
 PORTNAME=	sql-ledger
-PORTVERSION=	3.0.2
+PORTVERSION=	3.0.4
 CATEGORIES=	finance perl5
 MASTER_SITES=	http://www.sql-ledger.com/source/ \
 		http://abacus.sql-ledger.com/source/ \
