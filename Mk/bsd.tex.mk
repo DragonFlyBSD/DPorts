@@ -78,15 +78,15 @@ CONFLICTS_TETEX= \
 	latex2e-[0-9]*
 
 # override the user configuration
-.if !empty(USE_TEX:U:MTETEX)
+.if !empty(USE_TEX:tu:MTETEX)
 TEX_DEFAULT=	tetex
-.elif !empty(USE_TEX:U:MTEXLIVE)
+.elif !empty(USE_TEX:tu:MTEXLIVE)
 TEX_DEFAULT=	texlive
 .endif
 
-.if !empty(TEX_DEFAULT:U:MTETEX)
+.if !empty(TEX_DEFAULT:tu:MTETEX)
 CONFLICTS_INSTALL+=	${CONFLICTS_TEXLIVE}
-.elif !empty(TEX_DEFAULT:U:MTEXLIVE)
+.elif !empty(TEX_DEFAULT:tu:MTEXLIVE)
 CONFLICTS_INSTALL+=	${CONFLICTS_TETEX}
 .else
 .error malformed TEX_DEFAULT: ${TEX_DEFAULT}
@@ -146,13 +146,13 @@ _USE_TEX_FULL=	texmf base web2c infra \
 		dvipsk dvipdfmx xdvik \
 		kpathsea:lib ptexenc:lib
 
-.if !empty(USE_TEX:U:MFULL)
+.if !empty(USE_TEX:tu:MFULL)
 USE_TEX:=	${_USE_${_TEX_LABEL}_FULL}
 .endif
 
 .for _UU in ${USE_TEX:tu}
 _U:=	${_UU}	# ugly but necessary in for loop
-. if !empty(_U:U:MKPATHSEA) || !empty(_U:U:MPTEXENC)
+. if !empty(_U:tu:MKPATHSEA) || !empty(_U:tu:MPTEXENC)
 _U:=	${_U}:lib
 . endif
 . if empty(_U:M*\:*)
