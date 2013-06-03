@@ -1,20 +1,16 @@
-# New ports collection makefile for:	filedupe
-# Date created:			Apr 10, 2001
-# Whom:				Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/sysutils/filedupe/Makefile,v 1.11 2012/11/17 06:01:30 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: sysutils/filedupe/Makefile 319158 2013-05-27 06:27:31Z bsam $
 
 PORTNAME=	filedupe
 PORTVERSION=	1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://sammy.net/~sammy/hacks/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A utility for quickly finding duplicate files
+COMMENT=	utility for quickly finding duplicate files
 
-LIB_DEPENDS=	gdbm.4:${PORTSDIR}/databases/gdbm
+LIB_DEPENDS=	gdbm:${PORTSDIR}/databases/gdbm
 
 PLIST_FILES=	bin/filedupe
 
