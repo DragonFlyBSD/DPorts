@@ -1,8 +1,8 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: mail/rubygem-mail/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
+# $FreeBSD: mail/rubygem-mail/Makefile 319600 2013-06-01 21:25:32Z swills $
 
 PORTNAME=	mail
-PORTVERSION=	2.5.3
+PORTVERSION=	2.5.4
 PORTEPOCH=	1
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
