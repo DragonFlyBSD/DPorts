@@ -1,4 +1,4 @@
-# $FreeBSD: x11/rstart/Makefile 313929 2013-03-11 19:14:28Z zeising $
+# $FreeBSD: x11/rstart/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	rstart
 PORTVERSION=	1.0.5
@@ -8,7 +8,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Sample implementation of a Remote Start client
 
 XORG_CAT=	app
-USE_XORG=	x11 xorg-macros
+USE_XORG=	x11
 
 MAN1=		rstart.1 rstartd.1
 
