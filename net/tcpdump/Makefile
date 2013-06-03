@@ -1,12 +1,8 @@
-# New ports collection makefile for:	tcpdump
-# Date created:		10 December 2003
-# Whom:			Bruce M Simpson <bms@FreeBSD.org>
-#
-# $FreeBSD: ports/net/tcpdump/Makefile,v 1.33 2012/11/17 06:00:22 svnexp Exp $
-#
+# Created by: Bruce M Simpson <bms@FreeBSD.org>
+# $FreeBSD: net/tcpdump/Makefile 319402 2013-05-30 02:15:22Z wxs $
 
 PORTNAME=	tcpdump
-PORTVERSION=	4.3.0
+PORTVERSION=	4.4.0
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.tcpdump.org/release/
 
