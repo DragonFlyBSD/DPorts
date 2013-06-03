@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmms-flac/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: audio/xmms-flac/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xmms-flac
 PORTVERSION=	1.2.1
@@ -13,13 +13,12 @@ COMMENT=	XMMS input plugin for playing FLAC files
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
 		FLAC.10:${PORTSDIR}/audio/flac \
 		pthread-stubs.0:${PORTSDIR}/devel/libpthread-stubs \
-		ogg:${PORTSDIR}/audio/libogg \
-		xcb.2:${PORTSDIR}/x11/libxcb
+		ogg:${PORTSDIR}/audio/libogg
 
 USE_AUTOTOOLS=	libtool
 USES=		gettext iconv
 USE_GNOME=	gtk12
-USE_XORG=	x11 xau xdmcp xext xi
+USE_XORG=	x11 xau xcb xdmcp xext xi
 CONFIGURE_ARGS=	--with-libiconv-prefix="${LOCALBASE}" \
 		--with-ogg="${LOCALBASE}" \
 		--with-xmms-prefix="${LOCALBASE}"
