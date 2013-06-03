@@ -1,12 +1,9 @@
-# New ports collection makefile for:	rubygem-net-ldap
-# Date created:		2010-05-13
-# Whom:			Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/net/rubygem-net-ldap/Makefile,v 1.6 2012/11/17 06:00:19 svnexp Exp $
-#
+# Whom: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
+# $FreeBSD: net/rubygem-net-ldap/Makefile 319278 2013-05-27 18:53:17Z swills $
 
 PORTNAME=	net-ldap
 PORTVERSION=	0.3.1
+PORTREVISION=	1
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
