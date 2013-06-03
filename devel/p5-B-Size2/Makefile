@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-B-Size2/Makefile,v 1.2 2013/02/04 06:08:03 svnexp Exp $
+# $FreeBSD: devel/p5-B-Size2/Makefile 319107 2013-05-26 13:35:52Z kuriyama $
 
 PORTNAME=	B-Size2
-PORTVERSION=	2.02
+PORTVERSION=	2.05
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
