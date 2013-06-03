@@ -1,5 +1,5 @@
 # Created by: Nicolas de Bari Embriz <nbari@dalmp.com>
-# $FreeBSD: ports/databases/dalmp/Makefile,v 1.18 2013/01/22 14:46:28 svnexp Exp $
+# $FreeBSD: databases/dalmp/Makefile 318115 2013-05-13 15:47:47Z miwi $
 
 PORTNAME=	dalmp
 PORTVERSION=	2.1
@@ -14,7 +14,6 @@ LICENSE=	BSD
 USE_BZIP2=	YES
 
 DEFAULT_PHP_VER=5
-IGNORE_WITH_PHP=4
 
 NO_BUILD=	YES
 USE_PHP=	pcre mysql mysqli session memcache sqlite3 curl
