@@ -2,7 +2,7 @@
 # Date created:				08 May 2012
 # Whom:					William Grzybowski
 #
-# $FreeBSD: ports/devel/py-mimeparse/Makefile,v 1.2 2012/11/17 05:56:48 svnexp Exp $
+# $FreeBSD: devel/py-mimeparse/Makefile 318257 2013-05-15 19:33:14Z wg $
 #
 
 PORTNAME=	mimeparse
@@ -11,7 +11,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Basic functions for handling mime-types in Python
 
 USE_PYTHON=	2.5+
