@@ -1,5 +1,5 @@
 # Created by: Joep Grooten <joep@di.nl>
-# $FreeBSD: devel/doxygen/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: devel/doxygen/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	doxygen
 PORTVERSION=	1.8.3.1
@@ -52,7 +52,7 @@ BUILD_DEPENDS+=	dot:${PORTSDIR}/graphics/graphviz
 
 .if ${PORT_OPTIONS:MPDFDOCS}
 ALL_TARGET+=	pdf
-USE_TEX=	tetex
+USE_TEX=	latex:build
 USE_GHOSTSCRIPT_BUILD=	yes
 MAKE_ARGS+=	HAVE_PDFDOCS=yes
 .endif # PDFDOCS
