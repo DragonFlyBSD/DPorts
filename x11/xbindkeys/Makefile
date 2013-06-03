@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xbindkeys/Makefile 315890 2013-04-16 19:42:47Z eadler $
+# $FreeBSD: x11/xbindkeys/Makefile 317952 2013-05-12 12:40:30Z eadler $
 
 PORTNAME=	xbindkeys
 PORTVERSION=	1.8.5
@@ -11,8 +11,7 @@ COMMENT=	Allows you to launch shell commands under X with your keyboard
 
 LICENSE=	GPLv2
 
-OPTIONS_DEFINE=	GUILE TCLTK
-TCLTK_DESC=	Tcl Scripting Support
+OPTIONS_DEFINE=	GUILE TCL
 
 USE_XORG=	x11 xi
 GNU_CONFIGURE=	yes
@@ -35,7 +34,7 @@ LIB_DEPENDS+=	guile:${PORTSDIR}/lang/guile
 CONFIGURE_ARGS+=	--disable-guile
 .endif
 
-.if ${PORT_OPTIONS:MTCLTK}
+.if ${PORT_OPTIONS:MTCL}
 RUN_DEPENDS+=	wish8.4:${PORTSDIR}/x11-toolkits/tk84
 MAN1+=		xbindkeys_show.1
 PLIST_FILES+=	bin/xbindkeys_show
