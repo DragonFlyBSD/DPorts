@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/pear-Horde_Itip/Makefile,v 1.11 2013/02/23 19:59:32 svnexp Exp $
+# $FreeBSD: devel/pear-Horde_Itip/Makefile 319377 2013-05-29 15:02:18Z mm $
 
 PORTNAME=	Horde_Itip
-PORTVERSION=	2.0.4
+PORTVERSION=	2.0.5
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
