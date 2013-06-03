@@ -1,12 +1,8 @@
-# New ports collection makefile for:   libICE
-# Date Created:			09 Nov, 2003
-# Whom:				Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/libICE/Makefile,v 1.25 2012/11/17 06:03:17 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/libICE/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libICE
-PORTVERSION=	1.0.7
+PORTVERSION=	1.0.8
 PORTEPOCH=	1
 CATEGORIES=	x11
 
