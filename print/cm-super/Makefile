@@ -2,7 +2,7 @@
 # Date created:		27 June 2006
 # Whom:			hrs
 #
-# $FreeBSD: print/cm-super/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/cm-super/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	cm-super
@@ -23,7 +23,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/type1inst:${PORTSDIR}/x11-fonts/p5-type1inst
 .endif
 
 USE_ZIP=	yes
-USE_TEX=	tetex
+USE_TEX=	base texmf
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 .if !defined(WITHOUT_X11)
