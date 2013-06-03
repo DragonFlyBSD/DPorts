@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xsetpointer
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xsetpointer/Makefile,v 1.3 2012/11/17 06:03:23 svnexp Exp $
-#
+# $FreeBSD: x11/xsetpointer/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xsetpointer
 PORTVERSION=	1.0.1
