@@ -1,17 +1,15 @@
-# New ports collection makefile for:	xpi-dispmua
-# Date created:			25 august 2010
-# Whom:				Lapo Luchini <lapo@lapo.it>
-#
-# $FreeBSD: ports/mail/xpi-dispmua/Makefile,v 1.3 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: Lapo Luchini <lapo@lapo.it>
+# $FreeBSD: mail/xpi-dispmua/Makefile 318862 2013-05-23 10:13:52Z wg $
 
 PORTNAME=	dispmua
-PORTVERSION=	1.6.6
+PORTVERSION=	1.6.9
 CATEGORIES=	mail
-DISTNAME=	display_mail_user_agent-${DISTVERSION}-tb+sm
+DISTNAME=	display_mail_user_agent-${DISTVERSION}-sm+tb
 
 MAINTAINER=	lapo@lapo.it
 COMMENT=	Displays the icon of the application with which the e-mail was written
+
+LICENSE=	GPLv3
 
 XPI_NUM=	562
 XPI_ID=		{F8147CF4-B9E3-445B-AA87-081ED66548F8}
