@@ -1,9 +1,5 @@
-# New ports collection makefile for:	linpack
-# Date created:		31 October 1994
-# Whom:			ljo
-#
-# $FreeBSD: ports/math/linpack/Makefile,v 1.42 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: ljo
+# $FreeBSD: math/linpack/Makefile 318993 2013-05-24 16:35:30Z bapt $
 
 PORTNAME=	linpack
 PORTVERSION=	1.0
@@ -16,6 +12,7 @@ MAINTAINER=	bf@FreeBSD.org
 COMMENT=	Linear Algebra package
 
 LIB_DEPENDS=	blas.2:${PORTSDIR}/math/blas
+MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
 .include <bsd.port.pre.mk>
 
