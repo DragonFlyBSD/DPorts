@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-yaz
-# Date created:			9 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/net/pecl-yaz/Makefile,v 1.16 2012/11/17 06:00:15 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: net/pecl-yaz/Makefile 319369 2013-05-29 13:49:06Z crees $
 
 PORTNAME=	yaz
 PORTVERSION=	1.0.14
@@ -14,7 +10,7 @@ PKGNAMEPREFIX=	pecl-
 EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	PECL
 
-MAINTAINER=	till@php.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A PECL extension that implements a Z39.50 client
 
 LIB_DEPENDS=	yaz.4:${PORTSDIR}/net/yaz
