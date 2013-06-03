@@ -1,8 +1,8 @@
 # Created by: Damian Gerow
-# $FreeBSD: security/openconnect/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: security/openconnect/Makefile 318439 2013-05-18 18:25:58Z zi $
 
 PORTNAME=	openconnect
-PORTVERSION=	4.08
+PORTVERSION=	4.99
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/ \
 		http://mirrors.rit.edu/zi/
@@ -28,7 +28,7 @@ ACLOCAL_ARGS=	-I .
 USE_LDCONFIG=	yes
 PORTDOCS=	*
 
-PORTSCOUT=	skipv:4.99
+PORTSCOUT=	skipv:5.00
 
 MAN8=		openconnect.8
 
