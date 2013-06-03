@@ -1,8 +1,9 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: japanese/anthy/Makefile 316350 2013-04-23 11:46:54Z bapt $
+# $FreeBSD: japanese/anthy/Makefile 318179 2013-05-14 17:06:06Z nobutaka $
 
 PORTNAME=	anthy
 PORTVERSION=	9100h
+PORTREVISION=	1
 CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
 MASTER_SITE_SUBDIR=	${PORTNAME}/37536
