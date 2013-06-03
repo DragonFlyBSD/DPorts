@@ -2,11 +2,11 @@
 # Date created:				23 April 2006
 # Whom:					marck@FreeBSD.org
 #
-# $FreeBSD: ports/net/arpdig/Makefile,v 1.7 2012/11/17 05:59:56 svnexp Exp $
+# $FreeBSD: net/arpdig/Makefile 319291 2013-05-28 05:51:28Z miwi $
 #
 
 PORTNAME=	arpdig
-PORTVERSION=	0.5.5
+PORTVERSION=	0.5.6
 CATEGORIES=	net
 MASTER_SITES=	SF
 
