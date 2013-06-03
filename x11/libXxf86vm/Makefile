@@ -1,12 +1,8 @@
-# New ports collection makefile for:   libXxf86vm
-# Date Created:			8 Feb 2006
-# Whom:				Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/libXxf86vm/Makefile,v 1.7 2012/11/17 06:03:17 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/libXxf86vm/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libXxf86vm
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.2
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
