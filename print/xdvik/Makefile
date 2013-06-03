@@ -1,5 +1,5 @@
 # Created by: Kentaro Inagaki <JBD01226@niftyserve.ne.jp>
-# $FreeBSD: print/xdvik/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/xdvik/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	xdvik
 PORTVERSION=	22.84.16
@@ -15,7 +15,7 @@ COMMENT=	DVI Previewer(kpathsearch) for X
 LIB_DEPENDS=	t1.5:${PORTSDIR}/devel/t1lib
 
 USE_GMAKE=	yes
-USE_TEX=	tetex
+USE_TEX=	base texmf
 USE_MOTIF=	yes
 MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
