@@ -1,5 +1,5 @@
 # Created by: ehaupt@FreeBSD.org
-# $FreeBSD: ports/net-mgmt/py-ipcalc/Makefile,v 1.2 2013/01/25 21:53:57 svnexp Exp $
+# $FreeBSD: net-mgmt/py-ipcalc/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
 
 PORTNAME=	ipcalc
 PORTVERSION=	1.0.0
@@ -13,5 +13,6 @@ COMMENT=	Module to perform IP subnet calculations
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
+MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
