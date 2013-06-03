@@ -2,11 +2,11 @@
 # Date created:		7 March 2003
 # Whom:			Simon 'corecode' Schubert <corecode@corecode.ath.cx>
 #
-# $FreeBSD: ports/misc/mime-support/Makefile,v 1.26 2012/11/17 05:59:42 svnexp Exp $
+# $FreeBSD: misc/mime-support/Makefile 318013 2013-05-13 08:42:19Z oliver $
 #
 
 PORTNAME=	mime-support
-PORTVERSION=	3.52.2
+PORTVERSION=	3.54
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN_POOL}
 DISTNAME=	${PORTNAME}_${PORTVERSION:C/([0-9]*\.[0-9]*)\.(.*)/\1-\2/}
