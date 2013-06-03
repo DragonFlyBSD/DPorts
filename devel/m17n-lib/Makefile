@@ -1,29 +1,29 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: ports/devel/m17n-lib/Makefile,v 1.41 2013/02/01 11:46:11 svnexp Exp $
+# $FreeBSD: devel/m17n-lib/Makefile 319714 2013-06-02 18:56:39Z pawel $
 
 PORTNAME=	m17n-lib
-PORTVERSION=	1.6.3
-PORTREVISION=	1
+PORTVERSION=	1.6.4
 CATEGORIES=	devel
-MASTER_SITES=	http://www.m17n.org/m17n-lib-download/ \
-		http://anthesphoria.net/FreeBSD/ports/distfiles/
+MASTER_SITES=	${MASTER_SITE_SAVANNAH}
+MASTER_SITE_SUBDIR=	m17n
 
 MAINTAINER=	nikola.lecic@anthesphoria.net
 COMMENT=	Library for the multilingual text handling
 
 BUILD_DEPENDS=	bison:${PORTSDIR}/devel/bison \
-		m17n-db>=1.6.2:${PORTSDIR}/devel/m17n-db
+		m17n-db>=1.6.4:${PORTSDIR}/devel/m17n-db
 LIB_DEPENDS=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
 		freetype:${PORTSDIR}/print/freetype2 \
 		fribidi:${PORTSDIR}/converters/fribidi \
 		gd:${PORTSDIR}/graphics/gd \
 		otf:${PORTSDIR}/print/libotf
-RUN_DEPENDS=	m17n-db>=1.6.2:${PORTSDIR}/devel/m17n-db
+RUN_DEPENDS=	m17n-db>=1.6.4:${PORTSDIR}/devel/m17n-db
 
 MAKE_JOBS_UNSAFE=	yes
 
 USE_XORG=	ice sm x11 xaw xft xt
-USE_GNOME=	libxml2 pkgconfig
+USE_PKGCONFIG=	yes
+USE_GNOME=	libxml2
 USE_AUTOTOOLS=	autoconf libtool
 USE_LDCONFIG=	yes
 
