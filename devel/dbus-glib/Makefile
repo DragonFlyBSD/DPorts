@@ -1,12 +1,11 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/dbus-glib/Makefile 316464 2013-04-24 18:10:30Z ak $
-#   $MCom: ports/devel/dbus-glib/Makefile,v 1.18 2013/02/18 22:04:05 kwm Exp $
+# $FreeBSD: devel/dbus-glib/Makefile 318117 2013-05-13 15:50:10Z kwm $
+#   $MCom$
 
 PORTNAME=	dbus-glib
-PORTVERSION=	0.100.1
+PORTVERSION=	0.100.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-glib/
-DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GLib bindings for the D-BUS messaging system
