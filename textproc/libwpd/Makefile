@@ -1,12 +1,12 @@
 # Created by: reed@pugetsoundtechnology.com
-# $FreeBSD: textproc/libwpd/Makefile 316259 2013-04-22 18:44:24Z jkim $
+# $FreeBSD: textproc/libwpd/Makefile 318637 2013-05-21 02:35:34Z fluffy $
 
 PORTNAME=	libwpd
-PORTVERSION=	0.9.7
+PORTVERSION=	0.9.8
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	fluffy@FreeBSD.org
+MAINTAINER=	office@FreeBSD.org
 COMMENT=	Tools for importing and exporting WordPerfect(tm) documents
 
 LICENSE=	LGPL21 MPL
