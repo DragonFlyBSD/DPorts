@@ -1,12 +1,8 @@
-# New ports collection makefile for:	kbproto
-# Date Created:				08 Aug 2005
-# Whom:					Dejan Lesjak <lesi@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/kbproto/Makefile,v 1.4 2012/11/17 06:03:16 svnexp Exp $
-#
+# Created by: Dejan Lesjak <lesi@FreeBSD.org>
+# $FreeBSD: x11/kbproto/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	kbproto
-PORTVERSION=	1.0.5
+PORTVERSION=	1.0.6
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
