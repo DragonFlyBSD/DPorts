@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: security/openvas-libnasl/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/openvas-libnasl/Makefile 319722 2013-06-02 19:15:39Z bapt $
 
 PORTNAME=	openvas-libnasl
 PORTVERSION=	2.0.1
@@ -20,7 +20,7 @@ LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USES=		bison iconv
+USES=		bison iconv pkgconfig
 
 MAN1=		openvas-libnasl-config.1 openvas-nasl.1
 
