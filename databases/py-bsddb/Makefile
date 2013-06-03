@@ -1,11 +1,11 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: databases/py-bsddb/Makefile 313167 2013-03-01 20:12:01Z lwhsu $
+# $FreeBSD: databases/py-bsddb/Makefile 318353 2013-05-17 04:17:22Z rm $
 
 PORTNAME=	bsddb
 PORTVERSION=	${PYTHON_PORTVERSION}
 PORTREVISION=	3
 CATEGORIES=	databases python
-MASTER_SITES=	${PYTHON_MASTER_SITES}
+MASTER_SITES=	PYTHON
 MASTER_SITE_SUBDIR=	${PYTHON_MASTER_SITE_SUBDIR}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	${PYTHON_DISTFILE}
@@ -13,7 +13,7 @@ DISTFILES=	${PYTHON_DISTFILE}
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Standard Python bindings to the Berkeley DB library
 
-USE_BDB=	yes
+USE_BDB=	43+
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 USE_XZ=		yes
