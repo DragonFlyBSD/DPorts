@@ -1,8 +1,8 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: ports/devel/rubygem-inline/Makefile,v 1.32 2013/01/25 02:44:20 svnexp Exp $
+# $FreeBSD: devel/rubygem-inline/Makefile 319652 2013-06-02 12:20:19Z swills $
 
 PORTNAME=	inline
-PORTVERSION=	3.12.0
+PORTVERSION=	3.12.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 DISTNAME=	RubyInline-${PORTVERSION}
