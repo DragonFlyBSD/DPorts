@@ -1,8 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ports/math/gmp/Makefile,v 1.53 2013/02/14 15:36:10 svnexp Exp $
+# $FreeBSD: math/gmp/Makefile 319220 2013-05-27 12:18:23Z ale $
 
 PORTNAME=	gmp
-PORTVERSION=	5.1.1
+PORTVERSION=	5.1.2
 CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	gmp
