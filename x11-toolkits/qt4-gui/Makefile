@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: x11-toolkits/qt4-gui/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: x11-toolkits/qt4-gui/Makefile 317896 2013-05-11 17:31:45Z rakuco $
 
 PORTNAME=	gui
 DISTVERSION=	${QT4_VERSION}
@@ -18,7 +18,6 @@ QT_NONSTANDARD=	yes
 QT_DIST=	yes
 MAKE_JOBS_SAFE=	yes
 
-USE_GCC=	any
 HAS_CONFIGURE=	yes
 USES=		pkgconfig
 USE_LDCONFIG=	${PREFIX}/lib/qt4
