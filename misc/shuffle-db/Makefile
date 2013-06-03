@@ -1,9 +1,5 @@
-# New ports collection makefile for:	shuffle-db
-# Date created:				16 Jan 2007
-# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/shuffle-db/Makefile,v 1.5 2012/11/17 05:59:44 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: misc/shuffle-db/Makefile 317657 2013-05-08 12:47:16Z ehaupt $
 
 PORTNAME=	shuffle-db
 DISTVERSION=	1.0-rc1
