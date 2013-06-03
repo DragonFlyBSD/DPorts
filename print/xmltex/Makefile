@@ -2,7 +2,7 @@
 # Date created:         9 May 2002
 # Whom:                 Nik Clayton <nik@FreeBSD.org>
 #
-# $FreeBSD: print/xmltex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/xmltex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=		xmltex
@@ -20,7 +20,7 @@ COMMENT=		A non-validating XML parser, written in TeX
 
 LIB_DEPENDS=		png15:${PORTSDIR}/graphics/png
 
-USE_TEX=	tetex
+USE_TEX=	tex
 
 .include <bsd.port.pre.mk>
 
