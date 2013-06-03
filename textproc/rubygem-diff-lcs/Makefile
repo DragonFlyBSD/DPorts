@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-diff-lcs
-# Date created:				2008-11-05
-# Whom:					Daniel Roethlisberger <daniel@roe.ch>
-#
-# $FreeBSD: ports/textproc/rubygem-diff-lcs/Makefile,v 1.6 2012/11/17 06:02:20 svnexp Exp $
+# Created by: Daniel Roethlisberger <daniel@roe.ch>
+# $FreeBSD: textproc/rubygem-diff-lcs/Makefile 319688 2013-06-02 17:02:12Z swills $
 
 PORTNAME=	diff-lcs
-PORTVERSION=	1.1.3
+PORTVERSION=	1.2.4
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
