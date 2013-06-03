@@ -1,5 +1,5 @@
 # Created by: Jeroen Schot <schot@a-eskwadraat.nl>
-# $FreeBSD: ports/x11-wm/dwm/Makefile,v 1.53 2012/11/17 06:03:41 svnexp Exp $
+# $FreeBSD: x11-wm/dwm/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	dwm
 PORTVERSION=	6.0
@@ -15,13 +15,12 @@ COMMENT=	Dynamic, small, fast and simple window manager
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
-		xcb:${PORTSDIR}/x11/libxcb
+LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs
 
 OPTIONS_DEFINE=	XINERAMA XFT DOCS
 OPTIONS_DEFAULT=XINERAMA
 
-USE_XORG=	x11 xau xdmcp xext
+USE_XORG=	x11 xau xcb xdmcp xext
 
 MAN1=		dwm.1
 PLIST_FILES=	bin/dwm
