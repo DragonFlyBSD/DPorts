@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Daemonize/Makefile 316647 2013-04-27 04:14:04Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Daemonize/Makefile 318155 2013-05-14 09:46:26Z tobez $
 
 PORTNAME=	MooseX-Daemonize
-PORTVERSION=	0.17
+PORTVERSION=	0.18
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
