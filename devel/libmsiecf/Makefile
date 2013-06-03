@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libmsiecf/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/libmsiecf/Makefile 319474 2013-05-31 09:41:35Z antoine $
 
 PORTNAME=	libmsiecf
-DISTVERSION=	alpha-20130417
+DISTVERSION=	alpha-20130529
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
@@ -13,7 +13,7 @@ LICENSE=	LGPL3
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python
-USES=		pathfix gettext iconv
+USES=		gettext iconv pathfix
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 
