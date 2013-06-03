@@ -1,9 +1,9 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: www/py-waitress/Makefile 316942 2013-04-30 15:47:09Z olivierd $
+# $FreeBSD: www/py-waitress/Makefile 319073 2013-05-25 20:11:48Z olivierd $
 #
 
 PORTNAME=	waitress
-PORTVERSION=	0.8.3
+PORTVERSION=	0.8.4
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
