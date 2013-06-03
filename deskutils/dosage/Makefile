@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: deskutils/dosage/Makefile 317302 2013-05-04 09:31:30Z antoine $
+# $FreeBSD: deskutils/dosage/Makefile 319326 2013-05-28 19:53:05Z antoine $
 
 PORTNAME=	dosage
-PORTVERSION=	2.2
+PORTVERSION=	2.3
 CATEGORIES=	deskutils python
 MASTER_SITES=	GHC
 
