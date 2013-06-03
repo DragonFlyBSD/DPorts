@@ -1,13 +1,7 @@
-# New ports collection makefile for:	cx_Freeze
-# Date created:				05 Apr 2009
-# Whom:					Marcelo Araujo <araujo@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/cx_Freeze/Makefile,v 1.13 2012/11/17 05:55:39 svnexp Exp $
-#
+# $FreeBSD: devel/cx_Freeze/Makefile 319185 2013-05-27 09:16:52Z araujo $
 
 PORTNAME=	cx_Freeze
-PORTVERSION=	4.3
-PORTREVISION=	1
+PORTVERSION=	4.3.1
 CATEGORIES=	devel python
 MASTER_SITES=	SF/cx-freeze/${PORTVERSION}
 
