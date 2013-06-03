@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vor
-# Date created:				07 Sep 2005
-# Whom:					Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/vor/Makefile,v 1.25 2013/01/23 15:05:34 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/vor/Makefile 318817 2013-05-23 02:02:20Z amdmi3 $
 
 PORTNAME=	vor
 PORTVERSION=	0.5.5
@@ -30,7 +26,9 @@ DESKTOP_ENTRIES="Variations on Rockdodger" \
 		"Game;ArcadeGame;" \
 		false
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
