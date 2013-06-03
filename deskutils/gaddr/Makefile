@@ -1,18 +1,15 @@
-# New ports collection makefile for:	gaddr
-# Date created:			8 August 1999
-# Whom:				Jim Mock <jim@FreeBSD.org>
-#
-# $FreeBSD: ports/deskutils/gaddr/Makefile,v 1.24 2012/11/17 05:55:27 svnexp Exp $
-#
+# Created by: Jim Mock <jim@FreeBSD.org>
+# $FreeBSD: deskutils/gaddr/Makefile 317786 2013-05-10 10:20:00Z lme $
 
 PORTNAME=	gaddr
 PORTVERSION=	1.1.4
 PORTREVISION=	5
 CATEGORIES=	deskutils gnome
-MASTER_SITES=	http://bsd-geek.de/FreeBSD/distfiles/
+MASTER_SITES=	http://www.wirelesscouch.net/software/gaddr/ \
+		http://bsd-geek.de/FreeBSD/distfiles/
 
 MAINTAINER=	lme@FreeBSD.org
-COMMENT=	A GTK (and optionally, GNOME) address book
+COMMENT=	GTK 1.x address book
 
 PLIST_FILES=	bin/gaddr
 GNU_CONFIGURE=	yes
