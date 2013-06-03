@@ -1,14 +1,12 @@
-# New ports collection makefile for:	py-memcached
-# Date created:		2004-04-16
-# Whom:			michael johnson <ahze@ahze.net>
-#
-# $FreeBSD: ports/databases/py-memcached/Makefile,v 1.18 2012/11/17 05:55:22 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@ahze.net>
+# $FreeBSD: databases/py-memcached/Makefile 317683 2013-05-08 15:38:22Z sunpoet $
 
 PORTNAME=	memcached
-PORTVERSION=	1.48
+PORTVERSION=	1.51
 CATEGORIES=	databases python
-MASTER_SITES=	ftp://ftp.tummy.com/pub/python-memcached/ \
+MASTER_SITES=	http://ftp.tummy.com/pub/python-memcached/ \
+		http://ftp.tummy.com/pub/python-memcached/old-releases/ \
+		ftp://ftp.tummy.com/pub/python-memcached/ \
 		ftp://ftp.tummy.com/pub/python-memcached/old-releases/ \
 		LOCAL/sunpoet
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
