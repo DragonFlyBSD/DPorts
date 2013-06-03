@@ -1,0 +1,15 @@
+
+$FreeBSD: www/cowboy/files/patch-Makefile 318909 2013-05-23 20:53:11Z olgeni $
+
+--- Makefile.orig
++++ Makefile
+@@ -55,8 +55,7 @@
+ 	git clone -n -- https://github.com/extend/ranch.git $(DEPS_DIR)/ranch
+ 	cd $(DEPS_DIR)/ranch ; git checkout -q $(RANCH_VSN)
+ 
+-deps: $(DEPS_DIR)/ranch
+-	@$(MAKE) -C $(DEPS_DIR)/ranch
++deps:
+ 
+ clean-deps:
+ 	-@$(MAKE) -C $(DEPS_DIR)/ranch clean
