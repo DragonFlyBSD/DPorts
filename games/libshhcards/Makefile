@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libshhcards
-# Date created:				12 April 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/libshhcards/Makefile,v 1.26 2012/11/17 05:57:43 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/libshhcards/Makefile 318993 2013-05-24 16:35:30Z bapt $
 
 PORTNAME=	libshhcards
 PORTVERSION=	1.0.5
@@ -18,9 +14,12 @@ COMMENT=	Library for displaying game cards on X Window System
 USE_XORG=	xpm
 MAKEFILE=	${FILESDIR}/Makefile.lib
 USE_LDCONFIG=	yes
+MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
+
+.include <bsd.port.options.mk>
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
