@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: x11/xnee/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: x11/xnee/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xnee
 PORTVERSION=	3.15
@@ -10,14 +10,13 @@ MASTER_SITES=	GNU
 MAINTAINER=	pawel@FreeBSD.org
 COMMENT=	X events recorder and player
 
-LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
-		xcb:${PORTSDIR}/x11/libxcb
+LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs
 
 LICENSE=	GPLv3
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_XORG=	x11 xau xdmcp xext xi xtst
+USE_XORG=	x11 xau xcb xdmcp xext xi xtst
 USE_GNOME=	gnomehack
 MAKE_JOBS_SAFE=	yes
 
