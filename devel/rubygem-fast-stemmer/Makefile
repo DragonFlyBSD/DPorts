@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-fast-stemmer
-# Date created:				2010-12-08
-# Whom:					Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/rubygem-fast-stemmer/Makefile,v 1.3 2012/11/17 05:56:59 svnexp Exp $
+# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
+# $FreeBSD: devel/rubygem-fast-stemmer/Makefile 319639 2013-06-02 03:06:43Z swills $
 
 PORTNAME=	fast-stemmer
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
