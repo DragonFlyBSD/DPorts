@@ -1,9 +1,5 @@
-# New ports collection makefile for:	agame
-# Date created:		30 Jul 2006
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/agame/Makefile,v 1.18 2013/01/23 15:05:34 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/agame/Makefile 318822 2013-05-23 02:04:46Z amdmi3 $
 
 PORTNAME=	agame
 PORTVERSION=	1577
@@ -35,6 +31,8 @@ DESKTOP_ENTRIES="game" \
 		"Game;BlocksGame;" \
 		false
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -Ee 's,wav/|mp3/|img/,${DATADIR}/&,g' ${WRKSRC}/main.c
 
@@ -45,7 +43,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${dir}/* ${DATADIR}/${dir}/
 .endfor
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
