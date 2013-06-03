@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: print/ttf2pt1/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: print/ttf2pt1/Makefile 318068 2013-05-13 10:59:27Z bapt $
 
 PORTNAME=	ttf2pt1
 PORTVERSION=	3.4.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	SF
 EXTRACT_SUFX=	.tgz
@@ -21,9 +21,8 @@ MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} ${CPPFLAGS}" LIBS="${LDFLAGS}" \
 SHEBANG_FILES=	app/TeX/sfd2map \
 		app/TeX/cjk-latex-config \
 		other/showdf \
-		other/lst.pl \
-		other/cntstems.pl \
 		other/showg \
+		other/*.pl \
 		scripts/forceiso \
 		scripts/frommap \
 		scripts/inst_dir \
