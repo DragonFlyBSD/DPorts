@@ -1,9 +1,5 @@
-# New ports collection makefile for:	EasyTCP
-# Date created:				24 Jan 2002
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/net/p5-EasyTCP/Makefile,v 1.16 2012/11/17 06:00:09 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: net/p5-EasyTCP/Makefile 318283 2013-05-16 08:38:49Z miwi $
 
 PORTNAME=	EasyTCP
 PORTVERSION=	0.26
@@ -17,7 +13,7 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Easily create TCP/IP clients and servers
 
 BUILD_DEPENDS=	p5-Crypt-RSA>=0:${PORTSDIR}/security/p5-Crypt-RSA
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	p5-Crypt-RSA>=0:${PORTSDIR}/security/p5-Crypt-RSA
 
 PERL_CONFIGURE=	yes
 
