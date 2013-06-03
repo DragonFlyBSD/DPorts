@@ -1,12 +1,8 @@
-# New ports collection makefile for:	recordproto
-# Date Created:				06 Feb 2006
-# Whom:					Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/recordproto/Makefile,v 1.4 2012/11/17 06:03:19 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/recordproto/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	recordproto
-PORTVERSION=	1.14.1
+PORTVERSION=	1.14.2
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
