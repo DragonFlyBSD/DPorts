@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Test-TCP/Makefile,v 1.26 2012/11/17 05:56:34 svnexp Exp $
+# $FreeBSD: devel/p5-Test-TCP/Makefile 318703 2013-05-21 14:16:14Z kuriyama $
 
 PORTNAME=	Test-TCP
-PORTVERSION=	1.18
+PORTVERSION=	1.27
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TOKUHIROM
@@ -15,9 +15,11 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 # XXX: test t/05_sigint.t fails.  Check it later.
 
-PERL_CONFIGURE=	yes
+PERL_MODBUILD=	yes
 
-MAN3=	Test::TCP.3
+MAN3=	Net::EmptyPort.3 \
+	Test::TCP.3 \
+	Test::TCP::CheckPort.3
 
 .include <bsd.port.pre.mk>
 
