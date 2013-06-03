@@ -1,8 +1,8 @@
 # Created by: Alexandre Snarskii <snar@snar.spb.ru>
-# $FreeBSD: ports/net-mgmt/bgpq3/Makefile,v 1.6 2013/01/12 19:20:53 svnexp Exp $
+# $FreeBSD: net-mgmt/bgpq3/Makefile 318587 2013-05-20 08:59:26Z miwi $
 
 PORTNAME=	bgpq3
-PORTVERSION=	0.1.18
+PORTVERSION=	0.1.19
 CATEGORIES=	net-mgmt
 MASTER_SITES=	http://snar.spb.ru/prog/bgpq3/
 EXTRACT_SUFX=	.tgz
