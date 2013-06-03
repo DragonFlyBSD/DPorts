@@ -1,5 +1,5 @@
 # Created by: anholt@FreeBSD.org
-# $FreeBSD: ports/textproc/asciidoc/Makefile,v 1.29 2012/12/19 22:54:27 svnexp Exp $
+# $FreeBSD: textproc/asciidoc/Makefile 318615 2013-05-20 17:29:02Z eadler $
 
 PORTNAME=	asciidoc
 PORTVERSION=	8.6.8
@@ -13,7 +13,7 @@ COMMENT=	Text document format for writing short documents and man pages
 LICENSE=	GPLv2 MIT
 LICENSE_COMB=	multi
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	-2.7
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
