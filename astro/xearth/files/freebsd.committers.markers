@@ -1,4 +1,4 @@
-# $FreeBSD: ports/astro/xearth/files/freebsd.committers.markers,v 1.504 2013/02/13 06:41:48 svnexp Exp $
+# $FreeBSD: astro/xearth/files/freebsd.committers.markers 318778 2013-05-22 15:32:23Z xride $
 #
 # FreeBSD Project Committers
 #
@@ -130,7 +130,7 @@
  53.56,		10.02,		"cracauer"			# Hamburg, Germany
  53.64,		9.84,		"hm"		align=left	# Rellingen, Germany
  48.336389,	9.836389,	"helbig"			# Waiblingen, Germany
- 54.8994,	9.5468,		"xride"				# Rinkenaes, Denmark
+ 35.633,	-84.303,	"xride"				# Oak Ridge, TN, USA
  49.00,		9.5,		"schweikh"			# Weinstadt, Germany
  51.20,		9.20,		"dinoex"			# Habichtswald, Germany
  45.467,	9.200,		"piso"				# Milano, Italy

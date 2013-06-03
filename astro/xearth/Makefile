@@ -1,5 +1,5 @@
 # Created by: Piero Serini <piero@FreeBSD.org>
-# $FreeBSD: ports/astro/xearth/Makefile,v 1.42 2012/11/17 05:54:26 svnexp Exp $
+# $FreeBSD: astro/xearth/Makefile 305910 2012-10-15 12:03:40Z madpilot $
 
 PORTNAME=	xearth
 PORTVERSION=	1.2
