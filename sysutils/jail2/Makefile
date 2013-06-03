@@ -1,7 +1,7 @@
-# $FreeBSD: ports/sysutils/jail2/Makefile,v 1.1 2013/01/20 16:04:03 svnexp Exp $
+# $FreeBSD: sysutils/jail2/Makefile 317708 2013-05-08 20:31:59Z bdrewery $
 
 PORTNAME=	jail2
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	#
 DISTFILES=	#
