@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: lang/vala/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: lang/vala/Makefile 318898 2013-05-23 19:16:48Z az $
 #   $MCom: ports/lang/vala/Makefile,v 1.65 2012/12/17 19:46:24 kwm Exp $
 
 PORTNAME=	vala
@@ -29,8 +29,8 @@ PLIST_SUB=	VERSION=${VALA_VER}
 .if defined(VALA_SLAVE)
 LIB_DEPENDS+=	vala-${VALA_VER}.0:${PORTSDIR}/lang/vala
 CONFIGURE_ARGS+=--enable-vapigen
-BUILD_DEPENDS+=	${SITE_PERL}/${PERL_ARCH}/XML/LibXML.pm:${PORTSDIR}/textproc/p5-XML-LibXML
-RUN_DEPENDS+=	${SITE_PERL}/${PERL_ARCH}/XML/LibXML.pm:${PORTSDIR}/textproc/p5-XML-LibXML
+BUILD_DEPENDS+=	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML
+RUN_DEPENDS+=	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML
 MAN1=		vala-gen-introspect.1 vapigen.1
 .else
 CONFIGURE_ARGS+=--disable-vapigen
