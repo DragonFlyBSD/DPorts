@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/py-dbf/Makefile 317025 2013-05-01 14:51:55Z wen $
+# $FreeBSD: databases/py-dbf/Makefile 319111 2013-05-26 14:25:20Z wen $
 
 PORTNAME=	dbf
-PORTVERSION=	0.95.003
+PORTVERSION=	0.95.004
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
