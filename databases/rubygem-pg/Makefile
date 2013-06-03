@@ -1,12 +1,8 @@
-# New ports collection makefile for: pg
-# Date created: 28 Jan 2009
-# Whom: Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/databases/rubygem-pg/Makefile,v 1.12 2012/11/17 05:55:24 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: databases/rubygem-pg/Makefile 319683 2013-06-02 16:34:43Z swills $
 
 PORTNAME=		pg
-PORTVERSION=	0.13.0
+PORTVERSION=		0.15.1
 CATEGORIES=		databases rubygems
 MASTER_SITES=		RG
 
