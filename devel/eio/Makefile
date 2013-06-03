@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: devel/eio/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/eio/Makefile 318442 2013-05-18 19:36:31Z gblach $
 
 PORTNAME=	eio
-PORTVERSION=	1.7.6.1
+PORTVERSION=	1.7.7
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
