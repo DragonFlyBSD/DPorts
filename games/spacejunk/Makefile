@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: ports/games/spacejunk/Makefile,v 1.16 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/spacejunk/Makefile 318819 2013-05-23 02:03:03Z amdmi3 $
 
 PORTNAME=	spacejunk
 PORTVERSION=	1.0.5
@@ -29,7 +29,7 @@ DESKTOP_ENTRIES=	"Spacejunk" \
 			"Game;ArcadeGame;" \
 			false
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${ARCH} == "sparc64"
 BROKEN=		Doesn't compile on sparc64
@@ -45,9 +45,9 @@ do-install:
 	${MKDIR} ${DATADIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} 'data config.txt' ${DATADIR}/
 	${INSTALL_SCRIPT} ${WRKDIR}/spacejunk ${PREFIX}/bin/
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} '*' ${DOCSDIR}/
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
