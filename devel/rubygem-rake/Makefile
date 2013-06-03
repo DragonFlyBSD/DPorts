@@ -1,11 +1,8 @@
-# Ports collection makefile for:	gem-rake
-# Date created:				27 May 2005
-# Whom:					Jonathan Weiss (<jw@innerewut.de>)
-#
-# $FreeBSD: ports/devel/rubygem-rake/Makefile,v 1.27 2013/01/09 04:43:42 svnexp Exp $
+# Whom:	Jonathan Weiss (<jw@innerewut.de>)
+# $FreeBSD: devel/rubygem-rake/Makefile 319595 2013-06-01 21:23:29Z swills $
 
 PORTNAME=	rake
-PORTVERSION=	10.0.3
+PORTVERSION=	10.0.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
