@@ -1,9 +1,8 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: security/cryptopp/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/cryptopp/Makefile 318803 2013-05-22 22:51:57Z delphij $
 
 PORTNAME=		cryptopp
-PORTVERSION=		5.6.1
-PORTREVISION=		2
+PORTVERSION=		5.6.2
 CATEGORIES=		security
 MASTER_SITES=		SF \
 			http://www.cryptopp.com/
