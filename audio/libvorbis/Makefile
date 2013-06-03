@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: audio/libvorbis/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: audio/libvorbis/Makefile 318777 2013-05-22 15:29:09Z naddy $
 
 PORTNAME=	libvorbis
 PORTVERSION=	1.3.3
@@ -13,8 +13,8 @@ COMMENT=	Audio compression codec library
 
 LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
 
+USES=		pathfix
 USE_AUTOTOOLS=	libtool
-USES=	pathfix
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 
@@ -22,6 +22,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ogg=${LOCALBASE} \
 		--disable-docs		# don't rebuild
 MAKE_JOBS_SAFE=	yes
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
