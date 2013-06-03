@@ -1,0 +1,143 @@
+bin/mc
+bin/mcdiff
+%%EDITOR%%bin/mcedit
+bin/mcview
+%%EDITOR%%etc/mc/edit.indent.rc
+etc/mc/filehighlight.ini
+etc/mc/mc.default.keymap
+etc/mc/mc.emacs.keymap
+etc/mc/mc.ext
+etc/mc/mc.keymap
+etc/mc/mc.menu
+etc/mc/mc.menu.sr
+etc/mc/mcedit.menu
+etc/mc/sfs.ini
+libexec/mc/ext.d/archive.sh
+libexec/mc/ext.d/doc.sh
+libexec/mc/ext.d/image.sh
+libexec/mc/ext.d/misc.sh
+libexec/mc/ext.d/package.sh
+libexec/mc/ext.d/sound.sh
+libexec/mc/ext.d/text.sh
+libexec/mc/ext.d/video.sh
+libexec/mc/ext.d/web.sh
+libexec/mc/extfs.d/README
+libexec/mc/extfs.d/README.extfs
+libexec/mc/extfs.d/a+
+libexec/mc/extfs.d/apt+
+libexec/mc/extfs.d/audio
+libexec/mc/extfs.d/bpp
+libexec/mc/extfs.d/changesetfs
+libexec/mc/extfs.d/deb
+libexec/mc/extfs.d/deba
+libexec/mc/extfs.d/debd
+libexec/mc/extfs.d/dpkg+
+libexec/mc/extfs.d/gitfs+
+libexec/mc/extfs.d/hp48+
+libexec/mc/extfs.d/iso9660
+libexec/mc/extfs.d/lslR
+libexec/mc/extfs.d/mailfs
+libexec/mc/extfs.d/patchfs
+libexec/mc/extfs.d/patchsetfs
+libexec/mc/extfs.d/rpm
+libexec/mc/extfs.d/rpms+
+libexec/mc/extfs.d/s3+
+libexec/mc/extfs.d/trpm
+libexec/mc/extfs.d/u7z
+libexec/mc/extfs.d/uace
+libexec/mc/extfs.d/ualz
+libexec/mc/extfs.d/uar
+libexec/mc/extfs.d/uarc
+libexec/mc/extfs.d/uarj
+libexec/mc/extfs.d/uc1541
+libexec/mc/extfs.d/ucab
+libexec/mc/extfs.d/uha
+libexec/mc/extfs.d/ulha
+libexec/mc/extfs.d/ulib
+libexec/mc/extfs.d/urar
+libexec/mc/extfs.d/uzip
+libexec/mc/extfs.d/uzoo
+libexec/mc/fish/README.fish
+libexec/mc/fish/append
+libexec/mc/fish/chmod
+libexec/mc/fish/chown
+libexec/mc/fish/fexists
+libexec/mc/fish/get
+libexec/mc/fish/hardlink
+libexec/mc/fish/info
+libexec/mc/fish/ln
+libexec/mc/fish/ls
+libexec/mc/fish/mkdir
+libexec/mc/fish/mv
+libexec/mc/fish/rmdir
+libexec/mc/fish/send
+libexec/mc/fish/unlink
+libexec/mc/fish/utime
+libexec/mc/mc-wrapper.csh
+libexec/mc/mc-wrapper.sh
+libexec/mc/mc.csh
+libexec/mc/mc.sh
+%%NLS%%share/locale/az/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/be/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/bg/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/ca/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/cs/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/da/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/de/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/de_CH/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/el/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/eo/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/es/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/et/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/eu/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/fa/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/fi/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/fi_FI/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/fr/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/gl/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/hr/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/hu/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/ia/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/id/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/it/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/it_IT/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/ja/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/ka/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/ko/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/lt/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/lv/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/mn/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/nb/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/nl/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/pl/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/pt/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/pt_BR/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/ro/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/ru/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/sk/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/sl/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/sr/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/sv/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/sv_SE/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/ta/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/tr/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/uk/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/vi/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/wa/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/zh_CN/LC_MESSAGES/mc.mo
+%%NLS%%share/locale/zh_TW/LC_MESSAGES/mc.mo
+%%NLS%%@dirrmtry share/locale/sv_SE/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/sv_SE
+%%NLS%%@dirrmtry share/locale/it_IT/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/it_IT
+%%NLS%%@dirrmtry share/locale/ia/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/ia
+%%NLS%%@dirrmtry share/locale/fi_FI/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/fi_FI
+%%NLS%%@dirrmtry share/locale/de_CH/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/de_CH
+@dirrm libexec/mc/fish
+@dirrm libexec/mc/extfs.d
+@dirrm libexec/mc/ext.d
+@dirrm libexec/mc
+@dirrm etc/mc
