@@ -1,8 +1,7 @@
-# $FreeBSD: x11/xorg-apps/Makefile 317162 2013-05-02 22:10:11Z bapt $
+# $FreeBSD: x11/xorg-apps/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xorg-apps
-PORTVERSION=	7.5.2
-PORTREVISION=	1
+PORTVERSION=	7.7
 CATEGORIES=	x11
 MASTER_SITES=	# none
 DISTFILES=	# none
