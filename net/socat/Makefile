@@ -1,9 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: net/socat/Makefile 313620 2013-03-08 06:40:12Z ehaupt $
+# $FreeBSD: net/socat/Makefile 319300 2013-05-28 09:27:19Z ehaupt $
 
 PORTNAME=	socat
-PORTVERSION=	1.7.2.1
-PORTREVISION=	1
+PORTVERSION=	1.7.2.2
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.dest-unreach.org/socat/download/ \
 		CRITICAL
@@ -25,13 +24,17 @@ MAN1=		socat.1
 PLIST_FILES=	bin/filan bin/procan bin/socat
 PORTDOCS=	EXAMPLES README SECURITY FAQ
 
-.if ${CC} == clang
-CFLAGS+=	-Wno-unused-comparison
-.endif
-
 OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
+
+.if(${OSVERSION} >= 1000024)
+CCISCLANG!=	${CC} --version | ${HEAD} -1 | ${GREP} 'clang'
+.endif
+
+.if ${CC} == clang || defined(CCISCLANG)
+CFLAGS+=	-Wno-unused-comparison
+.endif
 
 do-install:
 .for f in filan procan socat
