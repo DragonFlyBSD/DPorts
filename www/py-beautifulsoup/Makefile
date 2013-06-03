@@ -1,5 +1,5 @@
 # Created by: Mike Meyer
-# $FreeBSD: www/py-beautifulsoup/Makefile 313417 2013-03-04 18:12:32Z lippe $
+# $FreeBSD: www/py-beautifulsoup/Makefile 318257 2013-05-15 19:33:14Z wg $
 
 PORTNAME=	beautifulsoup
 PORTVERSION=	4.1.3
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.crummy.com/software/BeautifulSoup/bs4/download/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	beautifulsoup4-${PORTVERSION}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	HTML/XML Parser for Python
 
 USE_PYTHON=	yes
