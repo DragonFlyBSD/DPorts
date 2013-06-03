@@ -1,13 +1,8 @@
-# New ports collection makefile for:	pecl-fribidi
-# Date created:			9 Jul 2004
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/pecl-fribidi/Makefile,v 1.7 2012/11/17 05:55:04 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: converters/pecl-fribidi/Makefile 319219 2013-05-27 12:16:19Z ale $
 
 PORTNAME=	fribidi
-PORTVERSION=	1.0
-PORTREVISION=	1
+PORTVERSION=	1.2
 CATEGORIES=	converters pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -21,8 +16,6 @@ LIB_DEPENDS=	fribidi.3:${PORTSDIR}/converters/fribidi
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
-DEFAULT_PHP_VER=53
-IGNORE_WITH_PHP=5
 
 CONFIGURE_ARGS=	--with-fribidi=${LOCALBASE}
 
