@@ -1,8 +1,8 @@
 # Created by: wen
-# $FreeBSD: databases/pecl-mongo/Makefile 316609 2013-04-26 13:29:10Z miwi $
+# $FreeBSD: databases/pecl-mongo/Makefile 319435 2013-05-30 16:44:50Z miwi $
 
 PORTNAME=	mongo
-PORTVERSION=	1.3.7
+PORTVERSION=	1.4.0
 CATEGORIES=	databases pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -13,13 +13,11 @@ COMMENT=	PECL classes for Mongo Database Driver
 
 LICENSE=	AL2
 
-IGNORE_WITH_PHP=4
-
 USE_PHP=	yes
 USE_PHP_BUILD=	spl
 USE_PHPIZE=	yes
 USE_PHPEXT=	yes
-
+CONFIGURE_ARGS=	--enable-mongo=${LOCALBASE}
 SUB_FILES=	pkg-message
 
 post-install:
