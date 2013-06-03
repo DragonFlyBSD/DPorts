@@ -1,15 +1,14 @@
-# $FreeBSD: lang/python32/Makefile 317498 2013-05-06 09:58:09Z jgh $
+# $FreeBSD: lang/python32/Makefile 318421 2013-05-18 08:21:00Z rm $
 
 PORTNAME=	python32
-PORTVERSION=	3.2.3
-PORTREVISION=	2
+PORTVERSION=	3.2.5
 CATEGORIES=	lang python ipv6
-MASTER_SITES=	${PYTHON_MASTER_SITES}
+MASTER_SITES=	PYTHON
 MASTER_SITE_SUBDIR=	${PYTHON_MASTER_SITE_SUBDIR}
 DISTFILES=	${PYTHON_DISTFILE}
 
 MAINTAINER=	python@FreeBSD.org
-COMMENT=	An interpreted object-oriented programming language
+COMMENT=	Interpreted object-oriented programming language
 
 DIST_SUBDIR=	python
 WRKSRC=		${PYTHON_WRKSRC}/portbld.static
