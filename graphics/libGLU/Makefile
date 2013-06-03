@@ -1,9 +1,9 @@
-# Created by: anholt@FreeBSD.org
-# $FreeBSD: graphics/libGLU/Makefile 317202 2013-05-03 13:17:00Z bapt $
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: graphics/libGLU/Makefile 319064 2013-05-25 18:16:44Z zeising $
 
 PORTNAME=	libGLU
-PORTREVISION=	2
 PORTVERSION=	${MESAVERSION}
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL utility library
@@ -19,11 +19,4 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/include/GL/glu*.h ${PREFIX}/include/GL/
 
 .include "${.CURDIR}/../../graphics/libGL/bsd.mesalib.mk"
-
-.include <bsd.port.pre.mk>
-
-.if !(${ARCH} == "x86_64" || ${ARCH} == "i386")
-CONFIGURE_ARGS+=--disable-gallium-intel
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
