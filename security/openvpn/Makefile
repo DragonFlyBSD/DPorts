@@ -1,8 +1,8 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: security/openvpn/Makefile 315640 2013-03-31 16:00:02Z mandree $
+# $FreeBSD: security/openvpn/Makefile 319549 2013-05-31 23:06:39Z mandree $
 
 PORTNAME=	openvpn
-DISTVERSION=	2.3.1
+DISTVERSION=	2.3.2
 CATEGORIES=	security net
 MASTER_SITES=	http://swupdate.openvpn.net/community/releases/ \
 		http://build.openvpn.net/downloads/releases/
