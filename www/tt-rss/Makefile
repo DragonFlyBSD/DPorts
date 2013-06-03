@@ -1,8 +1,8 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: www/tt-rss/Makefile 315858 2013-04-16 17:16:29Z thierry $
+# $FreeBSD: www/tt-rss/Makefile 318328 2013-05-16 18:35:03Z thierry $
 
 PORTNAME=	tt-rss
-PORTVERSION=	1.7.8
+PORTVERSION=	1.7.9
 CATEGORIES=	www
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -13,7 +13,7 @@ LICENSE=	GPLv2
 USE_GITHUB=	yes
 GH_ACCOUNT=	gothfox
 GH_PROJECT=	Tiny-Tiny-RSS
-GH_COMMIT=	9fb91a2
+GH_COMMIT=	d1c977b
 
 NO_BUILD=	yes
 
