@@ -33,10 +33,13 @@
 #
 # Id: addport,v 1.2 2000/04/02 06:21:13 will Exp (original shell script)
 # Id: addport,v 1.5 2000/04/22 22:19:43 mharo Exp (perl conversion)
-# $FreeBSD: Tools/scripts/addport 313371 2013-03-03 17:40:36Z crees $
+# $FreeBSD: Tools/scripts/addport 319388 2013-05-29 19:20:52Z crees $
 #
 # MAINTAINER=	crees@FreeBSD.org
 #
+
+# Smartmatch operator (~~) used
+require 5.10.1;
 
 use Cwd "abs_path";
 use Getopt::Std;
@@ -104,8 +107,8 @@ my $rm = "rm";
 my $keyword = '\$FreeBSD\\\$';
 # vars required for commitfile
 my $descr; my $portversion; my $pkgcomment;
-my $tmp; my $pkgcommentlen; my $comment; my $maintainer;
-my $tmp2; my $offset; my $commitfile = "";
+my $tmp; my $pkgcommentlen; my $comment; my $maintainer = "";
+my $maintaineraddr; my $tmp2; my $offset; my $commitfile = "";
 my $moved = "";
 $tmp = $tmp2 = $offset = 0;
 
@@ -251,10 +254,11 @@ foreach my $thisdir (@dirs) {
 	# Do commitfile checking but only if the user did not request automatic filling.
 	if (!$autofill) {
 		if (-f $c) {
-			system("$mv $c $tmpdir/commitfile") or errx(1, "Oops, can't move commitfile!");
+			system("$mv $c $tmpdir/commitfile") && errx(1, "Oops, can't move commitfile!");
 			print "\nRemember, you asked to use a commit file to read for the commit log.\n";
 			print "This means you'll get a message saying the log message was unchanged or\n";
 			print "not specified.  Just tell it to continue and it will be committed.\n\n";
+			$commitfile = "--file $tmpdir/commitfile";
 		}
 	} else {
 		## Set up the autofill file.
@@ -276,9 +280,11 @@ foreach my $thisdir (@dirs) {
 			chomp;
 			die ("Old style Makefile headers detected") if (/^# (?:[Nn]ew )?[Pp]orts collection [Mm]akefile/);
 			($maintainer) = (m/^# Created by:\s+(\w.*)$/) if (/^# Created by/);
+			($maintaineraddr) = (m/^MAINTAINER=\s+(\w.*)$/) if (/^MAINTAINER=/);
 			($portversion) = (m/^PORTVERSION=\s+(\w.*)$/) if (/^PORTVERSION=/);
 		}
 		close(MAKEFILE);
+		$maintainer = $maintaineraddr unless ($maintainer);
 		# Write out the data to the comment file.
 		open(AUTOFILL, "> $tmpdir/commitfile") or die("Can't open $tmpdir/commitfile for writing: $!");
 		if ($autofill_l) {
