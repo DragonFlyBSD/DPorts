@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: graphics/hs-HGL/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: graphics/hs-HGL/Makefile 317973 2013-05-12 19:30:28Z pgj $
 
 PORTNAME=	HGL
 PORTVERSION=	3.2.0.2
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	graphics haskell
 
 MAINTAINER=	haskell@FreeBSD.org
