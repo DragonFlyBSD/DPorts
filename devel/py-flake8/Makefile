@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-flake8/Makefile 314956 2013-03-22 19:40:51Z rm $
+# $FreeBSD: devel/py-flake8/Makefile 318257 2013-05-15 19:33:14Z wg $
 
 PORTNAME=	flake8
 PORTVERSION=	2.0
@@ -8,7 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Code checking using pep8 and pyflakes
 
 LICENSE=	MIT
