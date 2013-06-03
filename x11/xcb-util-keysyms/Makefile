@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xcb-util-keysyms/Makefile,v 1.5 2012/12/10 19:12:19 svnexp Exp $
+# $FreeBSD: x11/xcb-util-keysyms/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xcb-util-keysyms
 PORTVERSION=	0.3.9
@@ -8,13 +8,13 @@ MASTER_SITES=	http://xcb.freedesktop.org/dist/
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Standard X key constants and conversion to/from keycodes
 
-LIB_DEPENDS=	xcb:${PORTSDIR}/x11/libxcb \
-		xcb-util:${PORTSDIR}/x11/xcb-util
+LIB_DEPENDS=	xcb-util:${PORTSDIR}/x11/xcb-util
 #BUILD_DEPENDS=	${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+USE_XORG=	xcb xorg-macros
 #USE_XORG=	xau xdmcp
 #USE_AUTOTOOLS=	libtool
 
