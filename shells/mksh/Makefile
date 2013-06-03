@@ -1,8 +1,8 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: shells/mksh/Makefile 313804 2013-03-10 04:31:12Z miwi $
+# $FreeBSD: shells/mksh/Makefile 319298 2013-05-28 08:41:18Z miwi $
 
 PORTNAME=	mksh
-DISTVERSION=	R44
+DISTVERSION=	R46
 CATEGORIES=	shells
 MASTER_SITES=	http://www.mirbsd.org/MirOS/dist/mir/mksh/ \
 		http://pub.allbsd.org/MirOS/dist/mir/mksh/
