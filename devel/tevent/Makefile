@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tevent/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/tevent/Makefile 318827 2013-05-23 02:23:34Z jgh $
 
 PORTNAME=		tevent
 PORTVERSION=		0.9.17
@@ -28,7 +28,8 @@ MAKE_JOBS_SAFE=		yes
 PKGCONFIGDIR?=		${PREFIX}/libdata/pkgconfig
 PLIST_SUB+=		PKGCONFIGDIR=${PKGCONFIGDIR:S;${PREFIX}/;;}
 
-OPTIONS=		PYTHON		"Python bindings"	on
+OPTIONS_DEFINE=	PYTHON
+OPTIONS_DEFAULT=	PYTHON
 
 .include <bsd.port.options.mk>
 
@@ -57,7 +58,7 @@ _MAKE_JOBS=		--jobs=${MAKE_JOBS_NUMBER}
 .endif
 .endif
 
-.if defined(WITH_PYTHON)
+.if ${PORT_OPTIONS:MPYTHON}
 USE_PYTHON_RUN=		yes
 PLIST_FILES+=		%%PYTHON_SITELIBDIR%%/_tevent.so \
 			%%PYTHON_SITELIBDIR%%/tevent.py
