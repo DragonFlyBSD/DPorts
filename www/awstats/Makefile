@@ -1,8 +1,8 @@
 # Created by: Munish Chopra <mchopra@engmail.uwaterloo.ca>
-# $FreeBSD: ports/www/awstats/Makefile,v 1.49 2013/02/01 18:45:55 svnexp Exp $
+# $FreeBSD: www/awstats/Makefile 318455 2013-05-18 20:47:45Z rakuco $
 
 PORTNAME=	awstats
-PORTVERSION=	7.1
+PORTVERSION=	7.1.1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/AWStats/${PORTVERSION}
