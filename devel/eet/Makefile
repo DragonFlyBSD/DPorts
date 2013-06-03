@@ -1,8 +1,8 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/eet/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/eet/Makefile 318823 2013-05-23 02:13:40Z gblach $
 
 PORTNAME=	eet
-PORTVERSION=	1.7.6
+PORTVERSION=	1.7.7
 PORTEPOCH=	2
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
@@ -40,8 +40,5 @@ post-patch:
 
 post-install:
 	@${REINPLACE_CMD} -i '' -e 's/ openssl//' ${PREFIX}/libdata/pkgconfig/eet.pc
-.if empty(PORT_OPTIONS:MEXAMPLES)
-	@${RMDIR} ${EXAMPLESDIR}
-.endif
 
 .include <bsd.port.mk>
