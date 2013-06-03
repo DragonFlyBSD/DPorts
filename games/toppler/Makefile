@@ -1,9 +1,5 @@
-# New ports collection makefile for:	toppler
-# Date created:				18 Jan 2002
-# Whom:					Dom Mitchell <dom@happygiraffe.net>
-#
-# $FreeBSD: games/toppler/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Dom Mitchell <dom@happygiraffe.net>
+# $FreeBSD: games/toppler/Makefile 317947 2013-05-12 11:48:49Z makc $
 
 PORTNAME=	toppler
 PORTVERSION=	1.1.5
@@ -12,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	A game where you have to climb the tower and avoid the monsters
+COMMENT=	Climb a tower and avoid monsters
 
 USE_SDL=	mixer sdl
 USES=		gettext
@@ -24,6 +20,8 @@ MAN6=		${PORTNAME}.6
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
