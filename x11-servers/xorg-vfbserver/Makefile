@@ -1,12 +1,7 @@
-# New ports collection makefile for:    xorg-vfbserver
-# Date created:		17 June 2004
-# Whom:			anholt@FreeBSD.org
-#
-# $FreeBSD: ports/x11-servers/xorg-vfbserver/Makefile,v 1.23 2012/11/17 06:03:30 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11-servers/xorg-vfbserver/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xorg-vfbserver
-PORTREVISION=	1
 
 COMMENT=	X virtual framebuffer server from X.Org
 
@@ -20,8 +15,8 @@ USE_XORG=	x11 xf86driproto glproto randrproto renderproto fixesproto \
 		xineramaproto xinerama evieproto xkbfile xfont fontenc \
 		xkbui xxf86misc xxf86vm xaw7 xmu xpm xext pixman xtrans
 
-CONFIGURE_ARGS=	--disable-dmx --disable-xnest --disable-xorg \
-		--without-xmlto --disable-docs --disable-devel-docs \
+CONFIGURE_ARGS=	--disable-dmx --disable-xnest \
+		--without-xmlto --disable-docs --disable-devel1-docs \
 		--localstatedir=/var --without-dtrace
 
 SLAVE_PORT=	yes
