@@ -1,17 +1,16 @@
-# New ports collection makefile for:	optipng
-# Date created:				09 July 2003
-# Whom:					Thomas Hurst <freaky@aagh.net>
-#
-# $FreeBSD: ports/graphics/optipng/Makefile,v 1.13 2012/11/17 05:58:16 svnexp Exp $
-#
+# Created by: Thomas Hurst <freaky@aagh.net>
+# $FreeBSD: graphics/optipng/Makefile 318453 2013-05-18 20:35:07Z rakuco $
 
 PORTNAME=	optipng
-PORTVERSION=	0.7.1
+PORTVERSION=	0.7.4
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/OptiPNG/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	tom@hur.st
 COMMENT=	An optimizer for PNG files
+
+LICENSE=	ZLIB
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 OPTIONS_DEFINE=	BUNDLED_LIBPNG BUNDLED_ZLIB
 
