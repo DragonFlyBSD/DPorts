@@ -1,10 +1,10 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion16/Makefile 317101 2013-05-02 12:18:33Z bapt $
+# $FreeBSD: devel/subversion16/Makefile 319546 2013-05-31 22:30:57Z ohauer $
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
 
-CONFLICTS_INSTALL=	subversion-devel-[0-9]* subversion-freebsd-[0-9]*
+CONFLICTS_INSTALL=	subversion-1.[7|8].[0-9]*
 
 USE_RC_SUBR=	svnserve
 
@@ -236,7 +236,7 @@ post-install:	${MKREPOS_TARGET}
 	cd ${WRKSRC}/tools ; \
 	  ${TAR} --exclude '*.in' -cf - * | ${TAR} -C ${DATADIR} -xf -
 	@${CHMOD} -R a-st,o+rX ${DATADIR}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	for f in ${TXT_DOCS}; do \
 	  ${INSTALL_MAN} ${WRKSRC}/$$f ${DOCSDIR}; \
