@@ -1,8 +1,8 @@
 # Created by: Samuel Tardieu <sam@rfc1149.net>
-# $FreeBSD: devel/gputils/Makefile 316410 2013-04-24 08:01:28Z tijl $
+# $FreeBSD: devel/gputils/Makefile 318532 2013-05-19 14:50:45Z tijl $
 
 PORTNAME=	gputils
-PORTVERSION=	1.1.0
+PORTVERSION=	1.2.0
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
