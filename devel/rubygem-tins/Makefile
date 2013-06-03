@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-tins
-# Date created:		2011-10-27
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-tins/Makefile,v 1.11 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/rubygem-tins/Makefile 319701 2013-06-02 17:58:48Z swills $
 
 PORTNAME=	tins
-PORTVERSION=	0.5.3
+PORTVERSION=	0.8.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
