@@ -1,8 +1,8 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: mail/getmail/Makefile 314157 2013-03-14 13:28:31Z miwi $
+# $FreeBSD: mail/getmail/Makefile 319378 2013-05-29 15:22:27Z wg $
 
 PORTNAME=	getmail
-PORTVERSION=	4.39.1
+PORTVERSION=	4.41.0
 CATEGORIES=	mail python
 MASTER_SITES=	http://pyropus.ca/software/getmail/old-versions/ \
 		http://mirrors.closedsrc.org/getmail/
@@ -22,10 +22,12 @@ PORTDOCS=	README BUGS CHANGELOG THANKS TODO *.txt *.html *.css
 
 post-install:
 	@${CHMOD} -R 644 ${PYTHON_SITELIBDIR}/getmailcore/*
-	@${CP} ${WRKSRC}/README ${WRKSRC}/docs/
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/getmailrc-examples ${EXAMPLESDIR}
+.endif
 .if ${PORT_OPTIONS:MDOCS}
+	@${CP} ${WRKSRC}/README ${WRKSRC}/docs/
 	@${MKDIR} ${DOCSDIR}
 .for docs in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/docs/${docs} ${DOCSDIR}
