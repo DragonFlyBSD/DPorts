@@ -1,5 +1,5 @@
 # Created by: Jimmy Olgeni <olgeni@FreeBSD.org>
-# $FreeBSD: ports/devel/allegro/Makefile,v 1.47 2013/02/14 10:22:04 svnexp Exp $
+# $FreeBSD: devel/allegro/Makefile 318215 2013-05-15 05:19:36Z miwi $
 
 PORTNAME=	allegro
 DISTVERSION=	4.2.2
