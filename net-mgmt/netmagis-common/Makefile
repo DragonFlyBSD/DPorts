@@ -1,5 +1,5 @@
 # Created by: Pierre David <pdagog@gmail.com>, Jean Benoit <jean@unistra.fr>
-# $FreeBSD: net-mgmt/netmagis-common/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: net-mgmt/netmagis-common/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME?=	netmagis
 DISTVERSION?=	2.1.1
@@ -28,7 +28,7 @@ USE_PGSQL+=	server pltcl
 
 .if ${PKGNAMESUFFIX} == -www
 USE_APACHE=	22+
-USE_TEX=	tetex
+USE_TEX=	tex
 RUN_DEPENDS+=	dot:${PORTSDIR}/graphics/graphviz \
 		pwgen:${PORTSDIR}/sysutils/pwgen \
 		${LOCALBASE}/libexec/apache22/mod_auth_pgsql.so:${PORTSDIR}/www/mod_auth_pgsql2
