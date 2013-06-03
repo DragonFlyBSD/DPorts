@@ -1,9 +1,9 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: ftp/curl/Makefile 315271 2013-03-26 09:58:33Z bapt $
+# $FreeBSD: ftp/curl/Makefile 318741 2013-05-22 01:32:58Z bdrewery $
 
 PORTNAME=	curl
 PORTVERSION=	7.24.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	ftp ipv6 www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		LOCAL/sunpoet
@@ -106,7 +106,7 @@ IGNORE=			only supports CA bundle with OpenSSL
 .endif
 
 .if ${PORT_OPTIONS:MCARES}
-LIB_DEPENDS+=	cares.2:${PORTSDIR}/dns/c-ares
+LIB_DEPENDS+=	cares:${PORTSDIR}/dns/c-ares
 CONFIGURE_ARGS+=	--enable-ares=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--disable-ares
