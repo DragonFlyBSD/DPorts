@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rsyslog6-devel/Makefile 313088 2013-02-28 10:51:58Z gahr $
+# $FreeBSD: sysutils/rsyslog6-devel/Makefile 319083 2013-05-26 00:58:25Z brd $
 
 PORTNAME=	rsyslog
 PORTVERSION=	6.5.0
@@ -11,6 +11,9 @@ PKGNAMESUFFIX?=	-${MNAME}
 
 MAINTAINER=	brd@FreeBSD.org
 COMMENT?=	Syslogd supporting SQL, TCP, and TLS
+
+DEPRECATED=	Use sysutils/rsyslog7
+EXPIRATION_DATE=2013-07-25
 
 USE_LDCONFIG=	yes
 
