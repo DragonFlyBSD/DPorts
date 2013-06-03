@@ -1,7 +1,7 @@
-# $FreeBSD: ports/sysutils/usermin/Makefile,v 1.100 2013/02/05 12:03:19 svnexp Exp $
+# $FreeBSD: sysutils/usermin/Makefile 318424 2013-05-18 11:02:45Z olgeni $
 
 PORTNAME=	usermin
-PORTVERSION=	1.540
+PORTVERSION=	1.550
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.webmin.com/uupdates/:up \
 		SF/webadmin/${PORTNAME}/${PORTVERSION}:sf \

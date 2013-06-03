@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/sysutils/usermin/files/patch-setup.sh,v 1.6 2012/11/17 06:01:49 svnexp Exp $
+$FreeBSD: sysutils/usermin/files/patch-setup.sh 300897 2012-07-14 14:29:18Z beat $
 
 --- setup.sh.orig
 +++ setup.sh
