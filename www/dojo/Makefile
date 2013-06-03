@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/dojo/Makefile,v 1.20 2013/01/16 20:21:06 svnexp Exp $
+# $FreeBSD: www/dojo/Makefile 318721 2013-05-21 20:13:05Z glarkin $
 
 PORTNAME=		dojo
-PORTVERSION=		1.8.3
+PORTVERSION=		1.9.0
 CATEGORIES=		www
 MASTER_SITES=		http://download.dojotoolkit.org/release-${PORTVERSION}/
 DISTNAME=		dojo-release-${PORTVERSION}
@@ -10,6 +10,8 @@ MAINTAINER=		glarkin@FreeBSD.org
 COMMENT=		Open-source DHTML toolkit written in JavaScript
 
 NO_BUILD=		yes
+SHAREOWN=		www
+SHAREGRP=		www
 
 OPTIONS_DEFINE=		APACHE
 
@@ -29,17 +31,8 @@ PLIST_SUB+=		NOAPACHE="@comment "
 
 do-install:
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${WWWDIR}
-	@${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}
-	@${ECHO_CMD} '@exec ${CHOWN} -R ${WWWOWN}:${WWWGRP} \
-		${WWWDIR:S|^${PREFIX}/|%D/|}' >> ${TMPPLIST}
-	@${FIND} ${WWWDIR} -type f -print0 | ${XARGS} -0 ${CHMOD} 644
-	@${ECHO_CMD} '@exec ${FIND} ${WWWDIR} -type f -print0 | \
-		${XARGS} -0 ${CHMOD} 644' >> ${TMPPLIST}
-	@${FIND} ${WWWDIR} -type d -print0 | ${XARGS} -0 ${CHMOD} 755
-	@${ECHO_CMD} '@exec ${FIND} ${WWWDIR} -type d -print0 | \
-		${XARGS} -0 ${CHMOD} 755' >> ${TMPPLIST}
 
-.if defined(WITH_APACHE)
+.if ${PORT_OPTIONS:MAPACHE}
 post-install:
 	@if [ -d "${CONFDIR}" ]; then \
 	  ${CP} ${WRKDIR}/${CONF} ${CONFDIR}/dojo.conf; \
