@@ -1,8 +1,8 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-pylib/Makefile 314620 2013-03-19 06:57:47Z rm $
+# $FreeBSD: devel/py-pylib/Makefile 317631 2013-05-07 19:42:05Z rm $
 
 PORTNAME=	pylib
-PORTVERSION=	1.4.13
+PORTVERSION=	1.4.14
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +13,6 @@ COMMENT=	Agile development and test support library
 
 LICENSE=	MIT
 
-# Python3 ready
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	py
