@@ -1,7 +1,7 @@
-# $FreeBSD: ports/security/kpcli/Makefile,v 1.3 2013/01/24 01:52:34 svnexp Exp $
+# $FreeBSD: security/kpcli/Makefile 317989 2013-05-13 02:26:26Z miwi $
 
 PORTNAME=	kpcli
-PORTVERSION=	1.6
+PORTVERSION=	1.7
 CATEGORIES=	security
 MASTER_SITES=	SF/kpcli/
 EXTRACT_SUFX=	.pl
