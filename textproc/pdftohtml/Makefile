@@ -3,7 +3,7 @@
 # Date created:			1 Jun 2001
 # Whom:				Soeren Boll Overgaard <boll@tolkien.dk>
 #
-# $FreeBSD: ports/textproc/pdftohtml/Makefile,v 1.31 2012/11/17 06:02:15 svnexp Exp $
+# $FreeBSD: textproc/pdftohtml/Makefile 318312 2013-05-16 13:08:03Z erwin $
 #
 
 PORTNAME=	pdftohtml
@@ -12,7 +12,7 @@ PORTREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	erwin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A command-line tool for converting pdf-files into html
 
 USE_GHOSTSCRIPT_RUN=	yes
