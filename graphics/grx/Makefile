@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: ports/graphics/grx/Makefile,v 1.26 2012/11/17 05:58:08 svnexp Exp $
+# $FreeBSD: graphics/grx/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	grx
 PORTVERSION=	2.4.9
@@ -13,15 +13,14 @@ COMMENT=	A 2D graphics library
 LICENSE=	LGPL20 MIT
 LICENSE_COMB=	multi
 
-LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
-		xcb:${PORTSDIR}/x11/libxcb
+LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs
 
 OPTIONS_DEFINE=	BGI BMP JPEG PNG PRINT TIFF ZLIB
 OPTIONS_DEFAULT=	ZLIB BGI BMP PNG PRINT
 BGI_DESC=	Enable BGI support
 BMP_DESC=	Enable BMP support
 
-USE_XORG=	x11 xau xdmcp
+USE_XORG=	x11 xau xcb xdmcp
 USE_GMAKE=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --with-fontpath=${DATADIR}/fonts \
