@@ -1,11 +1,11 @@
-# $FreeBSD: ports/devel/rubygem-paint/Makefile,v 1.2 2012/11/17 05:57:00 svnexp Exp $
+# $FreeBSD: devel/rubygem-paint/Makefile 317825 2013-05-10 16:07:42Z arved $
 
 PORTNAME=	paint
-PORTVERSION=	0.8.5
+PORTVERSION=	0.8.6
 CATEGORIES=	devel
 MASTER_SITES=	RG
 
-MAINTAINER=	arved@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Terminal painter
 
 USE_RUBY=	yes
