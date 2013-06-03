@@ -1,4 +1,4 @@
-# $FreeBSD: devel/creduce/Makefile 316494 2013-04-25 02:35:08Z eadler $
+# $FreeBSD: devel/creduce/Makefile 317980 2013-05-12 21:31:26Z eadler $
 
 PORTNAME=	creduce
 #PORTVERSION=	2.0.1
@@ -30,7 +30,5 @@ USE_GMAKE=	yes
 USE_PERL5=	yes
 
 MAKE_JOBS_SAFE=	yes
-
-PORTDATA=	perl/pass_balanced.pm perl/pass_lines.pm perl/pass_peep.pm perl/creduce_utils.pm perl/pass_indent.pm perl/creduce_regexes.pm perl/pass_blank.pm perl/creduce_config.pm perl/pass_crc.pm perl/pass_ints.pm perl/pass_clang.pm perl/pass_ternary.pm
 
 .include <bsd.port.mk>
