@@ -1,12 +1,9 @@
-# New ports collection makefile for:   pyweblib
-# Date created:        22 March 2002
-# Whom:                Oddbjorn Steffensen <oddbjorn@tricknology.org>
-#
-# $FreeBSD: ports/www/pyweblib/Makefile,v 1.15 2012/11/17 06:03:02 svnexp Exp $
-#
+# Created by: Oddbjorn Steffensen <oddbjorn@tricknology.org>
+# $FreeBSD: www/pyweblib/Makefile 319011 2013-05-24 19:34:24Z bsam $
 
 PORTNAME=	pyweblib
-PORTVERSION=	1.3.9
+PORTVERSION=	1.3.10
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.stroeder.com/pylib/PyWebLib/download/
 
@@ -18,23 +15,22 @@ LICENSE=	GPLv2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
-DOCS=		pydoc/pyweblib.forms.html \
-		pydoc/pyweblib.helper.html \
-		pydoc/pyweblib.html \
-		pydoc/pyweblib.httphelper.html \
-		pydoc/pyweblib.session.html \
-		pydoc/pyweblib.sslenv.html
+PORTDOCS=	pyweblib.forms.html pyweblib.helper.html \
+		pyweblib.html pyweblib.httphelper.html \
+		pyweblib.session.html pyweblib.sslenv.html
 
 EXAMPLES=	*.py
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-install:
-	${MKDIR} ${EXAMPLESDIR} ${EXAMPLESDIR}/cgi-bin
+	@${MKDIR} ${EXAMPLESDIR} ${EXAMPLESDIR}/cgi-bin
 	${INSTALL_DATA} ${WRKSRC}/cgi-bin/${EXAMPLES} ${EXAMPLESDIR}/cgi-bin
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}/pydoc
-.for file in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/htdocs/${file} ${DOCSDIR}/${file}
-.endfor
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/htdocs/pydoc/,} ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
