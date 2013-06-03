@@ -1,22 +1,24 @@
-# New ports collection makefile for:	nyancat
-# Date created:				30 Mar 2012
-# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/net/nyancat/Makefile,v 1.2 2012/11/17 06:00:08 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: net/nyancat/Makefile 319587 2013-06-01 19:50:52Z ehaupt $
 
 PORTNAME=	nyancat
-PORTVERSION=	20120330
+PORTVERSION=	1.2
+PORTEPOCH=	1
 CATEGORIES=	net games
-MASTER_SITES=	CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Animated telnet server that renders a loop of the nyan cat animation
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	klange
+GH_TAGNAME=	${PORTVERSION}
+GH_COMMIT=	89c5bc8
 MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 PLIST_FILES=	bin/nyancat
+
+WRKSRC=		${WRKDIR}/${GH_ACCOUNT}-${PORTNAME}-${GH_COMMIT}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin
