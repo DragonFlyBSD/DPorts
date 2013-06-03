@@ -1,8 +1,8 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/libpcap/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: net/libpcap/Makefile 319401 2013-05-30 02:15:01Z wxs $
 
 PORTNAME=	libpcap
-PORTVERSION=	1.3.0
+PORTVERSION=	1.4.0
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.tcpdump.org/release/
 
