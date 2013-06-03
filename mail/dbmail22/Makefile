@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: ports/mail/dbmail22/Makefile,v 1.54 2012/11/17 05:59:00 svnexp Exp $
+# $FreeBSD: mail/dbmail22/Makefile 317694 2013-05-08 16:03:20Z bdrewery $
 
 PORTNAME=	dbmail
 PORTVERSION=	2.2.18
@@ -26,8 +26,9 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_LDCONFIG=	${PREFIX}/lib/dbmail
 USE_RC_SUBR=	dbmail-pop3d dbmail-lmtpd dbmail-imapd dbmail-timsieved
-USE_GNOME=	glib20 pkgconfig
+USE_GNOME=	glib20
 USE_OPENSSL=	yes
+USES=		pkgconfig
 
 CFLAGS+=	-fPIC -I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
