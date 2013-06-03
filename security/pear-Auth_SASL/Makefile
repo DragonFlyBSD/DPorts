@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Auth_SASL
-# Date created:			  2 February 2003
-# Whom:				  Thierry Thomas (<thierry@pompo.net>)
-#
-# $FreeBSD: ports/security/pear-Auth_SASL/Makefile,v 1.15 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: Thierry Thomas (<thierry@pompo.net>)
+# $FreeBSD: security/pear-Auth_SASL/Makefile 318056 2013-05-13 09:56:24Z miwi $
 
 PORTNAME=	Auth_SASL
 PORTVERSION=	1.0.6
@@ -15,10 +11,7 @@ COMMENT=	PEAR abstraction of various SASL mechanism responses
 BUILD_DEPENDS=	${PEARDIR}/Auth/Auth.php:${PORTSDIR}/security/pear-Auth
 RUN_DEPENDS=	${PEARDIR}/Auth/Auth.php:${PORTSDIR}/security/pear-Auth
 
-FILES=		Auth/SASL.php Auth/SASL/Anonymous.php \
-		Auth/SASL/Common.php Auth/SASL/CramMD5.php \
-		Auth/SASL/External.php Auth/SASL/DigestMD5.php \
-		Auth/SASL/Login.php Auth/SASL/Plain.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
