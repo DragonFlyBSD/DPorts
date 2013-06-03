@@ -1,9 +1,8 @@
-@comment $FreeBSD: net/libfixbuf/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: net/libfixbuf/pkg-plist 319389 2013-05-29 19:42:08Z lx $
 include/fixbuf/autoinc.h
 include/fixbuf/public.h
 include/fixbuf/private.h
-lib/libfixbuf-1.0.2.so.8
-lib/libfixbuf-1.0.2.so
+lib/libfixbuf.so.1
 lib/libfixbuf.so
 lib/libfixbuf.la
 lib/libfixbuf.a

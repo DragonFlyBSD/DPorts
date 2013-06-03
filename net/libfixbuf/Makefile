@@ -1,8 +1,8 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: net/libfixbuf/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/libfixbuf/Makefile 319389 2013-05-29 19:42:08Z lx $
 
 PORTNAME=	libfixbuf
-PORTVERSION=	1.0.2
+PORTVERSION=	1.3.0
 CATEGORIES=	net
 MASTER_SITES=	http://tools.netsa.cert.org/releases/ \
 		http://redundancy.redundancy.org/mirror/
