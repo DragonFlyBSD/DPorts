@@ -1,14 +1,13 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: irc/py-irc/Makefile 314954 2013-03-22 19:36:52Z rm $
+# $FreeBSD: irc/py-irc/Makefile 318377 2013-05-17 12:27:05Z wg $
 
 PORTNAME=	irc
-PORTVERSION=	8.0.1
-PORTREVISION=	1
+PORTVERSION=	8.3
 CATEGORIES=	irc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	IRC protocol client library for Python
 
 LICENSE=	MIT
