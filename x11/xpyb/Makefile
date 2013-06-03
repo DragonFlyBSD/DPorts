@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpyb
-# Date created:		2008-08-27
-# Whom:			Ashish Shukla <wahjava@gmail.com>
-#
-# $FreeBSD: x11/xpyb/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Ashish Shukla <wahjava@gmail.com>
+# $FreeBSD: x11/xpyb/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xpyb
 PORTVERSION=	1.3.1
@@ -17,10 +13,10 @@ COMMENT=	Python bindings to access X Window System protocol via libxcb
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xcb-proto.pc:${PORTSDIR}/x11/xcb-proto \
 		xcb-proto>=1.7.1:${PORTSDIR}/x11/xcb-proto
-LIB_DEPENDS=	xcb.2:${PORTSDIR}/x11/libxcb
 
 USE_BZIP2=	yes
 USE_PYTHON=	2.5+
+USE_XORG=	xcb
 USES=	pathfix
 PORTDOCS=	README COPYING INSTALL NEWS XcbPythonBinding.txt
 
