@@ -1,12 +1,8 @@
-# New ports collection makefile for:   libXt
-# Date Created:			25 Jan, 2003
-# Whom:				Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/libXt/Makefile,v 1.32 2012/11/17 06:03:36 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11-toolkits/libXt/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libXt
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.3
 PORTEPOCH=	1
 CATEGORIES=	x11-toolkits
 
@@ -15,6 +11,7 @@ COMMENT=	X Toolkit library
 
 XORG_CAT=	lib
 USE_XORG=	x11 sm xproto:both kbproto
+CONFIGURE_ARGS=	--disable-specs
 
 MAN3=	MenuPopdown.3 \
 	MenuPopup.3 \
