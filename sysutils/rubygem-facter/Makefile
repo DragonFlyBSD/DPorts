@@ -1,9 +1,9 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: sysutils/rubygem-facter/Makefile 316944 2013-04-30 16:01:02Z demon $
+# $FreeBSD: sysutils/rubygem-facter/Makefile 319550 2013-06-01 00:52:11Z swills $
 
 PORTNAME=	facter
 PORTVERSION=	1.6.18
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG \
 		http://downloads.puppetlabs.com/facter/
@@ -21,7 +21,7 @@ PLIST_FILES=	bin/facter
 
 # Restrict dmidecode dependency to i386 and amd64 systems
 .if ${ARCH} == "x86_64" || ${ARCH} == "i386"
-RUN_DEPENDS=	dmidecode:${PORTSDIR}/sysutils/dmidecode
+RUN_DEPENDS+=	dmidecode:${PORTSDIR}/sysutils/dmidecode
 .endif
 
 .include <bsd.port.post.mk>
