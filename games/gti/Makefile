@@ -1,12 +1,8 @@
-# New ports collection makefile for:	gti
-# Date created:		2012-08-16
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/games/gti/Makefile,v 1.6 2012/11/17 05:57:40 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: games/gti/Makefile 319453 2013-05-30 21:32:54Z tota $
 
 PORTNAME=	gti
-PORTVERSION=	1.0.4
+PORTVERSION=	1.1.1
 CATEGORIES=	games
 
 MAINTAINER=	tota@FreeBSD.org
@@ -15,16 +11,26 @@ COMMENT=	Just a silly git launcher, basically. Inspired by sl
 USE_GITHUB=	yes
 GH_ACCOUNT=	rwos
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	e16ca0b
+GH_COMMIT=	92b9219
 
-ALL_TARGET=	${PORTNAME}
+MAN6=	${PORTNAME}.6
 
 PLIST_FILES=	bin/${PORTNAME}
+
+GTI_SPEED?=	50
+CFLAGS+=	-DGTI_SPEED=${GTI_SPEED}
+
+pre-everything::
+	@${ECHO_MSG}
+	@${ECHO_MSG} " You can change the speed of the car at compile time."
+	@${ECHO_MSG} " For example: \"make GTI_SPEED=100\" # default is 50"
+	@${ECHO_MSG}
 
 do-build:
 	@${CC} ${CFLAGS} -o ${WRKSRC}/${PORTNAME} ${WRKSRC}/${PORTNAME}.c
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${MAN6} ${MANPREFIX}/man/man6
 
 .include <bsd.port.mk>
