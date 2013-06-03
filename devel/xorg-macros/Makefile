@@ -1,12 +1,8 @@
-# New ports collection makefile for:	xorg-macros
-# Date Created:				24 Mar 2007
-# Whom:					Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/xorg-macros/Makefile,v 1.8 2012/11/17 05:57:06 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: devel/xorg-macros/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xorg-macros
-PORTVERSION=	1.16.1
+PORTVERSION=	1.17
 CATEGORIES=	devel x11
 DISTNAME=	util-macros-$(PORTVERSION)
 
