@@ -1,12 +1,7 @@
-# New ports collection makefile for:	libFS
-# Date Created:				21 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/libFS/Makefile,v 1.9 2012/11/17 06:03:28 svnexp Exp $
-#
+# $FreeBSD: x11-fonts/libFS/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libFS
-PORTVERSION=	1.0.3
+PORTVERSION=	1.0.4
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
