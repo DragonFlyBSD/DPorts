@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: ports/multimedia/py-guessit/Makefile,v 1.3 2013/02/19 18:53:16 svnexp Exp $
+# $FreeBSD: multimedia/py-guessit/Makefile 318257 2013-05-15 19:33:14Z wg $
 
 PORTNAME=	guessit
 PORTVERSION=	0.5.4
@@ -7,7 +7,7 @@ CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Extract as much information as possible from a video file
 
 LICENSE=	LGPL3
