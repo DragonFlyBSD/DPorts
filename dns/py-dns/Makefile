@@ -1,12 +1,9 @@
-# New ports collection makefile for:	py-dns
-# Date created:				21 September 2002
-# Whom:					Mark Linimon (linimon@lonesome.com)
-#
-# $FreeBSD: ports/dns/py-dns/Makefile,v 1.14 2012/11/17 05:57:10 svnexp Exp $
-#
+# Created by: Mark Linimon <linimon@lonesome.com>
+# $FreeBSD: dns/py-dns/Makefile 317633 2013-05-07 19:45:38Z rm $
 
 PORTNAME=	dns
 PORTVERSION=	2.3.6
+PORTREVISION=	1
 CATEGORIES=	dns python
 MASTER_SITES=	SF/py${PORTNAME}/py${PORTNAME}/py${PORTNAME}-${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,14 +12,21 @@ DISTNAME=	pydns-${PORTVERSION}
 MAINTAINER=	rm@FreeBSD.org
 COMMENT=	DNS (Domain Name Service) library for Python
 
-USE_PYTHON=	yes
+LICENSE=	CNRI
+LICENSE_NAME=	CNRI LICENSE AGREEMENT
+LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	pydns
 
 DOCS=		README.txt README-guido.txt
 DOCSDIR=	${PREFIX}/share/doc/py-dns
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${DOCSDIR}
 .for file in ${DOCS}
