@@ -1,7 +1,7 @@
-# $FreeBSD: graphics/graphite2/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: graphics/graphite2/Makefile 318550 2013-05-19 22:08:13Z bapt $
 
 PORTNAME=	graphite2
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.1
 CATEGORIES=	graphics print
 MASTER_SITES=	SF/silgraphite/${PORTNAME}
 EXTRACT_SUFX=	.tgz
