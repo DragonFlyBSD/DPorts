@@ -1,13 +1,13 @@
 # Created by: William Grzybowski
-# $FreeBSD: devel/py-hgtools/Makefile 315518 2013-03-29 02:03:32Z miwi $
+# $FreeBSD: devel/py-hgtools/Makefile 318375 2013-05-17 11:14:58Z wg $
 
 PORTNAME=	hgtools
-PORTVERSION=	2.1
+PORTVERSION=	3.0.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Classes and setuptools plugin for Mercurial repositories
 
 LICENSE=	GPLv2
