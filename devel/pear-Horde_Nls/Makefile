@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/pear-Horde_Nls/Makefile,v 1.15 2013/01/10 10:41:44 svnexp Exp $
+# $FreeBSD: devel/pear-Horde_Nls/Makefile 319377 2013-05-29 15:02:18Z mm $
 
 PORTNAME=	Horde_Nls
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.3
 CATEGORIES=	devel www pear
 MASTER_SITES=	http://pear.horde.org/get/
 PKGNAMEPREFIX=	pear-
