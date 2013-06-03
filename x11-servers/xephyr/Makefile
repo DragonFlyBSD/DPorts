@@ -1,14 +1,9 @@
-# New ports collection makefile for:	xephyr
-# Date created:				2008-05-18
-# Whom:					Max Brazhnikov <makc@issp.ac.ru>
-#
-# $FreeBSD: ports/x11-servers/xephyr/Makefile,v 1.13 2012/11/17 06:03:30 svnexp Exp $
-#
+# $FreeBSD: x11-servers/xephyr/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xephyr
 PORTREVISION=	0
 
-COMMENT=	A kdrive based X server from X.Org
+COMMENT=	X server from X.Org based on kdrive
 
 MASTERDIR=	${.CURDIR}/../xorg-server
 DESCR=		${.CURDIR}/pkg-descr
@@ -22,8 +17,7 @@ USE_XORG=	x11 xf86driproto glproto randrproto renderproto fixesproto \
 
 CONFIGURE_ARGS=	--enable-kdrive --enable-xephyr	--disable-dmx --disable-xvfb \
 		--without-xmlto --disable-docs --disable-devel-docs \
-		--disable-xorg --disable-xnest \
-		--localstatedir=/var --without-dtrace
+		--disable-xnest --localstatedir=/var --without-dtrace
 
 SLAVE_PORT=	yes
 PLIST_FILES=	bin/Xephyr
