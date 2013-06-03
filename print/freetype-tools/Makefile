@@ -2,7 +2,7 @@
 # Date created:				Jul 29, 2005
 # Whom:					rafan@infor.org
 #
-# $FreeBSD: print/freetype-tools/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/freetype-tools/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	freetype-tools
@@ -24,7 +24,7 @@ LIB_DEPENDS=	ttf.4:${PORTSDIR}/print/freetype
 RUN_DEPENDS=	t1asm:${PORTSDIR}/print/t1utils
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-USE_TEX=	tetex
+USE_TEX=	base texmf
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-nls --enable-static --enable-shared
