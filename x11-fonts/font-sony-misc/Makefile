@@ -1,9 +1,5 @@
-# New ports collection makefile for:    font-sony-misc
-# Date created:		28 Aug 2005
-# Whom:			Pawel Worach
-#
-# $FreeBSD: ports/x11-fonts/font-sony-misc/Makefile,v 1.4 2012/11/17 06:03:28 svnexp Exp $
-#
+# Created by: Pawel Worach
+# $FreeBSD: x11-fonts/font-sony-misc/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	font-sony-misc
 PORTVERSION=	1.0.3
