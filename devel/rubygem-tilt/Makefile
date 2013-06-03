@@ -1,7 +1,7 @@
-# $FreeBSD: devel/rubygem-tilt/Makefile 314084 2013-03-13 13:45:36Z rm $
+# $FreeBSD: devel/rubygem-tilt/Makefile 319598 2013-06-01 21:24:30Z swills $
 
 PORTNAME=	tilt
-PORTVERSION=	1.3.5
+PORTVERSION=	1.4.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
