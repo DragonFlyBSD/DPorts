@@ -3,7 +3,7 @@
 # Date created:			Jun w, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: print/mftrace/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/mftrace/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	mftrace
@@ -29,7 +29,7 @@ RUN_DEPENDS+=	potrace:${PORTSDIR}/graphics/potrace
 
 # Python3 ready
 USE_PYTHON=	yes
-USE_TEX=	tetex
+USE_TEX=	base texmf
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 MAKEFILE=	GNUmakefile
