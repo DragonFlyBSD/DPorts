@@ -1,10 +1,10 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: ports/devel/svn2git/Makefile,v 1.8 2013/02/12 04:43:43 svnexp Exp $
+# $FreeBSD: devel/svn2git/Makefile 318545 2013-05-19 19:17:42Z dbn $
 
 PORTNAME=	svn2git
-DISTVERSION=	1.0.8
+DISTVERSION=	1.0.10
 CATEGORIES=	devel kde
-MASTER_SITES=	LOCAL/dbn/svn2git
+MASTER_SITES=	LOCAL/dbn/${PORTNAME}
 
 MAINTAINER=	dbn@FreeBSD.org
 COMMENT=	Imports svn repositories into git
