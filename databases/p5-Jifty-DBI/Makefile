@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-Jifty-DBI/Makefile,v 1.40 2013/01/31 09:48:04 svnexp Exp $
+# $FreeBSD: databases/p5-Jifty-DBI/Makefile 311299 2013-01-31 09:03:45Z tobez $
 
 PORTNAME=	Jifty-DBI
 PORTVERSION=	0.75
