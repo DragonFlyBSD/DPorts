@@ -1,11 +1,11 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11/libxfce4util/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/libxfce4util/Makefile 317669 2013-05-08 14:59:29Z olivierd $
 
 PORTNAME=	libxfce4util
-PORTVERSION=	4.10.0
-PORTREVISION=	1
+PORTVERSION=	4.10.1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
+MASTER_SITE_SUBDIR=	src/xfce/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
@@ -14,13 +14,11 @@ COMMENT=	Extension library for the Xfce desktop environment
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	glib20 gnomehack intltool intlhack
+USE_GNOME=	glib20 intltool intlhack
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv
-USES=		pkgconfig
-
-CONFIGURE_ARGS+=--disable-gtk-doc-html
+USES=		pathfix pkgconfig
 
 OPTIONS_DEFINE=		NLS DOCS
 
@@ -41,11 +39,6 @@ PLIST_SUB+=	APIDOCS=""
 .else
 CONFIGURE_ARGS+=--without-html-dir
 PLIST_SUB+=	APIDOCS="@comment "
-.endif
-
-.if empty(PORT_OPTIONS:MNLS)
-post-patch:
-	@${REINPLACE_CMD} -e 's|po||' ${WRKSRC}/Makefile.in
 .endif
 
 .include <bsd.port.mk>
