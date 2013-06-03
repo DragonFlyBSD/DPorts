@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/swe/Makefile 317276 2013-05-03 22:02:11Z bapt $
+# $FreeBSD: astro/swe/Makefile 318123 2013-05-13 19:20:39Z lme $
 
 PORTNAME=	swe
-PORTVERSION=	1.78.00
+PORTVERSION=	1.79.00
 CATEGORIES=	astro devel
 MASTER_SITES=	ftp://ftp.astro.com/pub/swisseph/
 DISTNAME=	${PORTNAME}_unix_src_${PORTVERSION}
