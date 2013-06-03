@@ -1,5 +1,5 @@
 # Created by: Loren M. Lang
-# $FreeBSD: net/x11vnc/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: net/x11vnc/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	x11vnc
 PORTVERSION=	0.9.13
@@ -14,10 +14,10 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		dbus:${PORTSDIR}/devel/dbus \
-		xcb:${PORTSDIR}/x11/libxcb \
 		pthread-stubs:${PORTSDIR}/devel/libpthread-stubs
 
-USE_XORG=	x11 xdamage xfixes xrandr xinerama xext xtst xau xrender xdmcp recordproto
+USE_XORG=	x11 xcb xdamage xfixes xrandr xinerama xext xtst xau xrender \
+		xdmcp recordproto
 
 # Sets LDFLAGS and adds to CONFIGURE_ENV, therefore we set LDFLAGS
 LDFLAGS+=	-L${LOCALBASE}/lib
