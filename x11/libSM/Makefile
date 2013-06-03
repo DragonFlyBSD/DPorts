@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libSM/Makefile 313929 2013-03-11 19:14:28Z zeising $
+# $FreeBSD: x11/libSM/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libSM
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.1
 PORTEPOCH=	1
 CATEGORIES=	x11
 
@@ -12,7 +12,7 @@ COMMENT=	Session Management library for X11
 LICENSE=	MIT
 
 XORG_CAT=	lib
-USE_XORG=	ice xproto:both xtrans xorg-macros
+USE_XORG=	ice xproto:both xtrans
 
 CONFIGURE_ARGS+=--disable-docs --without-xmlto
 
