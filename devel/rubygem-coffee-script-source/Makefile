@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-coffee-script-source
-# Date created:		2011-09-11
 # Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-coffee-script-source/Makefile,v 1.6 2013/01/09 04:43:42 svnexp Exp $
-#
+# $FreeBSD: devel/rubygem-coffee-script-source/Makefile 319591 2013-06-01 21:21:41Z swills $
 
 PORTNAME=	coffee-script-source
-PORTVERSION=	1.4.0
+PORTVERSION=	1.6.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
