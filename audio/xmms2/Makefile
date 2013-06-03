@@ -1,9 +1,9 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: ports/audio/xmms2/Makefile,v 1.75 2012/11/17 05:54:49 svnexp Exp $
+# $FreeBSD: audio/xmms2/Makefile 319017 2013-05-24 21:32:38Z madpilot $
 
 PORTNAME?=	xmms2
 PORTVERSION=	0.8
-PORTREVISION?=	1
+PORTREVISION?=	2
 DISTVERSIONSUFFIX=DrO_o
 CATEGORIES?=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}%20${DISTVERSIONSUFFIX}
@@ -389,8 +389,10 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./waf install --without-ldconfig
+.if !defined(XMMS2_SLAVE)
 	if [ ! -d ${DATADIR}/scripts/startup.d ]; then \
 		${MKDIR} ${DATADIR}/scripts/startup.d;\
 	fi
+.endif
 
 .include <bsd.port.mk>
