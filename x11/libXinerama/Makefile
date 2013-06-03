@@ -1,12 +1,8 @@
-# New ports collection makefile for:   libXinerama
-# Date Created:			7 May, 2004
-# Whom:				Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/libXinerama/Makefile,v 1.19 2012/11/17 06:03:17 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/libXinerama/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libXinerama
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.2
 PORTEPOCH=	1
 CATEGORIES=	x11
 
