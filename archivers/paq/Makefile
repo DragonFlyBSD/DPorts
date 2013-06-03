@@ -1,11 +1,11 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: archivers/paq/Makefile 316195 2013-04-21 19:06:54Z bf $
+# $FreeBSD: archivers/paq/Makefile 318842 2013-05-23 05:48:41Z bf $
 
 PORTNAME=	paq
-PORTVERSION=	20130419
+PORTVERSION=	20130522
 CATEGORIES=	archivers
 MASTER_SITES=	http://mattmahoney.net/dc/ LOCAL/bf/paq/
-DISTFILES=	wbpe110.zip zpaq625.zip zpipe.201.zip
+DISTFILES=	wbpe110.zip zpaq628.zip zpipe.201.zip
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${DISTFILES:M*.zip}
 
@@ -28,7 +28,7 @@ SUB_FILES=	pkg-message
 .if ${ARCH} == "x86_64" || ( ${ARCH} == "i386" && !empty(MACHINE_CPU:Msse2) )
 ZPAQFLAGS=	-Dunix -msse2
 .else
-ZPAQFLAGS=	-DNOJIT
+ZPAQFLAGS=	-Dunix -DNOJIT
 .endif
 
 .if defined(WITH_DEBUG)
@@ -126,7 +126,10 @@ do-install:
 	@${CAT} ${PKGMESSAGE}
 
 check regression-test test: build
-	${WRKSRC}/zpaq -list ${_DISTDIR}/calgarytest.zpaq
-	${WRKSRC}/zpaq -list ${_DISTDIR}/calgarytest2.zpaq
+.for _f in calgarytest.zpaq calgarytest2.zpaq
+.for _c in -list -test
+	${WRKSRC}/zpaq ${_c} ${_DISTDIR}/${_f}
+.endfor
+.endfor
 
 .include <bsd.port.mk>
