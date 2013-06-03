@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-autodie/Makefile 316780 2013-04-29 08:38:42Z tobez $
+# $FreeBSD: devel/p5-autodie/Makefile 318012 2013-05-13 08:40:32Z tobez $
 
 PORTNAME=	autodie
-PORTVERSION=	2.17
+PORTVERSION=	2.19
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
