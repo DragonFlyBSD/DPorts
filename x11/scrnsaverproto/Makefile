@@ -1,12 +1,7 @@
-# New ports collection makefile for:	scrnsaverproto
-# Date Created:				21 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/scrnsaverproto/Makefile,v 1.4 2012/11/17 06:03:19 svnexp Exp $
-#
+# $FreeBSD: x11/scrnsaverproto/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	scrnsaverproto
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.2
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
