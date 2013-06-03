@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Data-Util/Makefile,v 1.14 2013/02/16 11:05:21 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Util/Makefile 318692 2013-05-21 13:29:18Z kuriyama $
 
 PORTNAME=	Data-Util
-PORTVERSION=	0.61
+PORTVERSION=	0.62
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
