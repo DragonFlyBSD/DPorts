@@ -1,11 +1,8 @@
-# Ports collection makefile for:	gem-thor
-# Date created:				1 September 2010
-# Whom:						Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/rubygem-thor/Makefile,v 1.12 2013/01/24 22:06:44 svnexp Exp $
+# Whom:	Philip M. Gollucci <pgollucci@p6m7g8.com>
+# $FreeBSD: devel/rubygem-thor/Makefile 319597 2013-06-01 21:24:11Z swills $
 
 PORTNAME=	thor
-PORTVERSION=	0.17.0
+PORTVERSION=	0.18.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
