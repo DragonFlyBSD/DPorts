@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-toolkits/qwt6/Makefile,v 1.27 2012/12/15 13:58:56 svnexp Exp $
+# $FreeBSD: x11-toolkits/qwt6/Makefile 317947 2013-05-12 11:48:49Z makc $
 
 PORTNAME=	qwt
 PORTVERSION=	6.0.2
@@ -27,6 +27,8 @@ PLIST_SUB=	INCLUDEDIR=include/${LATEST_LINK} \
 
 STRIP_FILES=	lib/libqwt6.so.${PORTVERSION} \
 		lib/libqwtmathml.so.${PORTVERSION}
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
