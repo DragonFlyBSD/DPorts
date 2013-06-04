@@ -1,9 +1,8 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: audio/lmms/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/lmms/Makefile 319118 2013-05-26 16:16:33Z wg $
 
 PORTNAME=	lmms
-PORTVERSION=	0.4.13
-PORTREVISION=	2
+PORTVERSION=	0.4.14
 PORTEPOCH=	1
 CATEGORIES=	audio
 MASTER_SITES=	SF
