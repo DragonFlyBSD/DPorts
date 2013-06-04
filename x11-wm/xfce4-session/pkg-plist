@@ -92,6 +92,7 @@ share/icons/hicolor/scalable/apps/xfsm-shutdown.svg
 %%NLS%%share/locale/si/LC_MESSAGES/xfce4-session.mo
 %%NLS%%share/locale/sk/LC_MESSAGES/xfce4-session.mo
 %%NLS%%share/locale/sq/LC_MESSAGES/xfce4-session.mo
+%%NLS%%share/locale/sr/LC_MESSAGES/xfce4-session.mo
 %%NLS%%share/locale/sv/LC_MESSAGES/xfce4-session.mo
 %%NLS%%share/locale/ta/LC_MESSAGES/xfce4-session.mo
 %%NLS%%share/locale/te/LC_MESSAGES/xfce4-session.mo
@@ -105,9 +106,6 @@ share/icons/hicolor/scalable/apps/xfsm-shutdown.svg
 %%NLS%%share/locale/zh_TW/LC_MESSAGES/xfce4-session.mo
 share/themes/Default/balou/logo.png
 share/themes/Default/balou/themerc
-@dirrmtry share/xfce4/tips
-@dirrmtry share/xfce4/panel-plugins
-@dirrmtry share/xfce4
 @dirrm share/themes/Default/balou
 @dirrmtry share/themes/Default
 @dirrmtry share/themes
@@ -135,8 +133,6 @@ share/themes/Default/balou/themerc
 @dirrmtry share/xsessions
 @dirrm lib/xfce4/session/splash-engines
 @dirrm lib/xfce4/session
-@dirrmtry lib/xfce4/panel/plugins
-@dirrmtry lib/xfce4/panel
 @dirrmtry lib/xfce4
 @dirrm include/xfce4/xfce4-session-%%VERSION%%/libxfsm
 @dirrm include/xfce4/xfce4-session-%%VERSION%%

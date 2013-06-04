@@ -1,11 +1,11 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: x11-wm/xfce4-session/Makefile 316689 2013-04-27 20:20:45Z olivierd $
+# $FreeBSD: x11-wm/xfce4-session/Makefile 317674 2013-05-08 15:20:15Z olivierd $
 
 PORTNAME=	xfce4-session
-PORTVERSION=	4.10.0
-PORTREVISION=	4
+PORTVERSION=	4.10.1
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
+MASTER_SITE_SUBDIR=	src/xfce/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
@@ -27,17 +27,17 @@ USE_GMAKE=	yes
 USE_GNOME=	gtk20 glib20 intltool intlhack
 USES=		pathfix pkgconfig
 USE_LDCONFIG=	yes
-USE_XFCE=	configenv libmenu libutil panel xfconf
+USE_XFCE=	configenv libmenu libutil xfconf
 USE_XORG=	x11 sm ice
 
 CONFIGURE_ARGS+=--enable-legacy-sm \
-		--disable-libgnome-keyring \
+		--disable-systemd \
 		--with-xsession-prefix=${PREFIX}
 
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
-OPTIONS_DEFINE=	NLS GNUPG
+OPTIONS_DEFINE=	NLS
 
 MAN1=		xfce4-session.1 xfce4-session-logout.1
 
@@ -52,10 +52,6 @@ PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MGNUPG}
-RUN_DEPENDS+=	gpg-agent:${PORTSDIR}/security/gnupg
 .endif
 
 post-install:
