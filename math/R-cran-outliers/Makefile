@@ -1,8 +1,9 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: math/R-cran-outliers/Makefile 314659 2013-03-19 15:45:03Z danfe $
+# $FreeBSD: math/R-cran-outliers/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	outliers
 PORTVERSION=	0.14
+PORTREVISION=	1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
