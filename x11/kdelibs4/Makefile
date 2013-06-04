@@ -1,9 +1,8 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: x11/kdelibs4/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/kdelibs4/Makefile 318452 2013-05-18 20:34:41Z makc $
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
 CATEGORIES=	x11 kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
