@@ -1,12 +1,8 @@
-# New ports collection makefile for:	wxGlade
-# Date created:				1 May 2003
-# Whom:					Michal Pasternak <dotz@irc.pl>
-#
-# $FreeBSD: ports/devel/wxGlade/Makefile,v 1.35 2012/11/17 05:57:06 svnexp Exp $
+# Created by: Michal Pasternak <dotz@irc.pl>
+# $FreeBSD: devel/wxGlade/Makefile 317807 2013-05-10 14:32:33Z miwi $
 
 PORTNAME=	wxglade
-PORTVERSION=	0.6.5
-PORTREVISION=	1
+PORTVERSION=	0.6.7
 CATEGORIES=	devel x11-toolkits python
 MASTER_SITES=	SF
 DISTNAME=	wxGlade-${PORTVERSION}
@@ -17,6 +13,8 @@ COMMENT=	GUI builder for wxPython/wxWidgets written in Python
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/license.txt
 
+OPTIONS_DEFINE=	DOCS
+
 WRKSRC=		${WRKDIR}/wxGlade-${PORTVERSION}
 
 USE_PYTHON=	yes
@@ -25,9 +23,16 @@ WX_COMPS=	python
 
 MAN1=		wxglade.1
 
+DESKTOP_ENTRIES="wxGlade" "" "${PYTHON_SITELIBDIR}/wxglade/icons/icon.xpm" \
+		"${PORTNAME}" "" true
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e \
 		"s|docs_path, 'html'|docs_path, 'doc', 'html'|" ${WRKSRC}/wxglade.py
+	@${REINPLACE_CMD} -e \
+		"s|^XXX|# XXX|" ${WRKSRC}/widget_builder.py
 
 do-build:
 	@(${ECHO_CMD} "#!${SH}"; ${ECHO_CMD} 'exec ${PYTHON_CMD} \
@@ -43,7 +48,8 @@ do-install:
 	@(cd ${WRKSRC} \
 		&& ${COPYTREE_SHARE} ${f} ${PYTHON_SITELIBDIR}/${PORTNAME})
 .endfor
-.if !defined(NOPORTDOCS)
+	@${PYTHON_CMD} -m compileall ${PYTHON_SITELIBDIR}/${PORTNAME}
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/epydoc.conf ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.txt ${DOCSDIR}
