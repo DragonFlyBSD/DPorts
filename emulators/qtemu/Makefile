@@ -1,4 +1,4 @@
-# $FreeBSD: ports/emulators/qtemu/Makefile,v 1.12 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: emulators/qtemu/Makefile 317947 2013-05-12 11:48:49Z makc $
 
 PORTNAME=	qtemu
 PORTVERSION=	1.0.5
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	SF
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	Qt4-based frontend for QEMU
+COMMENT=	Qt 4 based frontend for QEMU
 
 USE_BZIP2=	yes
 USE_QT4=	gui xml uic_build moc_build qmake_build rcc_build
@@ -16,6 +16,8 @@ CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 
 DESKTOP_ENTRIES="QtEmu" "QEMU frontend" "" \
 		"qtemu" "" false
+
+OPTIONS_DEFINE=	DOCS NLS
 
 .include <bsd.port.options.mk>
 
