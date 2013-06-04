@@ -1,4 +1,4 @@
-# $FreeBSD: finance/homebank/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: finance/homebank/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	homebank
 PORTVERSION=	4.5
@@ -17,14 +17,13 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
 		osp:${PORTSDIR}/textproc/opensp \
-		xcb:${PORTSDIR}/x11/libxcb \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USES=		gettext iconv
-USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext xfixes \
-		xi xinerama xrandr xrender
+USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
+		xfixes xi xinerama xrandr xrender
 USE_GNOME=	desktopfileutils gnomehier gtk20
 INSTALLS_ICONS=	yes
 
