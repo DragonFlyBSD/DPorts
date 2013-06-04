@@ -1,8 +1,8 @@
 # Created by: Gleb Smirnoff <glebius@FreeBSD.org>
-# $FreeBSD: ports/astro/osmosis/Makefile,v 1.12 2013/02/19 19:54:07 svnexp Exp $
+# $FreeBSD: astro/osmosis/Makefile 318915 2013-05-24 00:29:09Z amdmi3 $
 
 PORTNAME=	osmosis
-PORTVERSION=	0.42
+PORTVERSION=	0.43.1
 CATEGORIES=	astro java
 MASTER_SITES=	http://bretth.dev.openstreetmap.org/osmosis-build/ \
 		http://mirror.amdmi3.ru/distfiles/
