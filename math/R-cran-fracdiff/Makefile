@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-fracdiff/Makefile 317459 2013-05-06 03:03:30Z tota $
+# $FreeBSD: math/R-cran-fracdiff/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	fracdiff
 DISTVERSION=	1.4-2
+PORTREVISION=	1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
