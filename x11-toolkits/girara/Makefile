@@ -1,8 +1,8 @@
 # Created by: Mike Krutov <neko@takino.org>
-# $FreeBSD: x11-toolkits/girara/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11-toolkits/girara/Makefile 318070 2013-05-13 11:24:55Z madpilot $
 
 PORTNAME=	girara
-PORTVERSION=	0.1.5
+PORTVERSION=	0.1.6
 CATEGORIES=	x11-toolkits graphics
 MASTER_SITES=	http://pwmt.org/projects/girara/download/
 
