@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: print/kover/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: print/kover/Makefile 317967 2013-05-12 16:16:56Z makc $
 
 PORTNAME=	kover
 PORTVERSION=	6
@@ -15,7 +15,7 @@ LIB_DEPENDS=	cddb:${PORTSDIR}/audio/libcddb \
 		cdio:${PORTSDIR}/sysutils/libcdio
 
 USE_BZIP2=	yes
-USE_KDE4=	automoc4 kdehier kdeprefix kdelibs
+USE_KDE4=	automoc4 kdehier kdeprefix kdelibs sharedmime
 USE_QT4=	corelib dbus gui network svg xml \
 		qmake_build uic_build rcc_build
 USE_PERL5_BUILD=yes
@@ -27,8 +27,5 @@ MAN1=		kover.1
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/libcdio/s|>=.*)|)|' ${WRKSRC}/src/CMakeLists.txt
-
-post-install:
-	-update-mime-database ${PREFIX}/share/mime
 
 .include <bsd.port.mk>
