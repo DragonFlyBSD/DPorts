@@ -1,8 +1,7 @@
-# $FreeBSD: net-im/gajim/Makefile 317027 2013-05-01 15:19:41Z rm $
+# $FreeBSD: net-im/gajim/Makefile 319394 2013-05-29 22:28:28Z rm $
 
 PORTNAME=	gajim
-PORTVERSION=	0.15.3
-PORTREVISION=	1
+PORTVERSION=	0.15.4
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.gajim.org/downloads/0.15/
 
