@@ -1,24 +1,25 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: deskutils/orage/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: deskutils/orage/Makefile 317695 2013-05-08 16:05:21Z olivierd $
 
 PORTNAME=	orage
 PORTVERSION=	4.8.4
+PORTREVISION=	1
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=src/apps/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
-COMMENT=	A calendar application to manage your time with Xfce 4
+COMMENT=	Calendar application to manage your time with Xfce 4
 
 LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-USES=		pkgconfig gettext
+USES=		pkgconfig gettext pathfix desktop-file-utils
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtk20 intltool intlhack desktopfileutils
+USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu panel
 USE_XORG=	xext xrender xinerama xi xrandr xcursor xcomposite xdamage x11 \
 		xfixes
@@ -78,8 +79,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|(datadir)/orage/doc/C|(datadir)/doc/orage/C|' \
 		${WRKSRC}/doc/C/Makefile.in \
 		${WRKSRC}/doc/C/images/Makefile.in
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.mk>
