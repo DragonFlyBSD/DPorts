@@ -1,8 +1,8 @@
 # Created by: Stephane Legrand <stephane@freebsd-fr.org>
-# $FreeBSD: ports/www/jetty/Makefile,v 1.32 2013/01/16 10:41:38 svnexp Exp $
+# $FreeBSD: www/jetty/Makefile 319323 2013-05-28 19:34:51Z olgeni $
 
 PORTNAME=	jetty
-PORTVERSION=	8.1.8
+PORTVERSION=	8.1.11
 CATEGORIES=	www java
 MASTER_SITES=	${MASTER_SITE_ECLIPSE}
 MASTER_SITE_SUBDIR=jetty/${PORTVERSION}.${JDVDATE}/dist
@@ -11,7 +11,7 @@ DISTNAME=	jetty-distribution-${PORTVERSION}.${JDVDATE}
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Full-featured web server implemented entirely in Java
 
-JDVDATE=	v20121106
+JDVDATE=	v20130520
 USE_RC_SUBR=	${PORTNAME}
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
