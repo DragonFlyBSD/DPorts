@@ -1,5 +1,5 @@
 # Created by: smyru@heron.pl
-# $FreeBSD: ports/net-im/komclean/Makefile,v 1.10 2013/02/21 00:59:38 svnexp Exp $
+# $FreeBSD: net-im/komclean/Makefile 318333 2013-05-16 20:07:39Z rakuco $
 
 PORTNAME=	komclean
 PORTVERSION=	1.2.1
@@ -7,7 +7,7 @@ CATEGORIES=	net-im
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME:S/kom/KOM/}-${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
-MAINTAINER=	smyru@heron.pl
+MAINTAINER=	ps.ports@smyrak.com
 COMMENT=	Web based LysKOM client
 
 LICENSE=	BSD
