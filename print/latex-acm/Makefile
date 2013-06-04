@@ -2,7 +2,7 @@
 # Date created:                       Jan 25 2011
 # Whom:                               Eygene Ryabinkin <rea@FreeBSD.org>
 #
-# $FreeBSD: print/latex-acm/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-acm/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	latex-acm
@@ -17,7 +17,7 @@ MAINTAINER=	rea@FreeBSD.org
 COMMENT=	LaTeX styles for ACM journals
 
 USE_ZIP=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	yes
 
 TEXMFLOCAL=	share/texmf-local
