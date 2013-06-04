@@ -1,5 +1,5 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: devel/kdevelop-kde4/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: devel/kdevelop-kde4/Makefile 317967 2013-05-12 16:16:56Z makc $
 
 PORTNAME=	kdevelop
 DISTVERSION=	${KDEVELOP_VERSION}
@@ -53,8 +53,5 @@ PLIST_SUB+=	NLS="@comment "
 post-patch:
 	${REINPLACE_CMD} -e '/^update_xdg_mimetypes/ d; /SharedMimeInfo/ d' \
 		${PATCH_WRKSRC}/app/CMakeLists.txt
-
-post-install:
-	@-update-mime-database ${PREFIX}/share/mime
 
 .include <bsd.port.mk>
