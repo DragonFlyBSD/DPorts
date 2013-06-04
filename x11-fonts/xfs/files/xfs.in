@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/x11-fonts/xfs/files/xfs.in,v 1.7 2012/11/17 06:03:29 svnexp Exp $
+# $FreeBSD: x11-fonts/xfs/files/xfs.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # PROVIDE: xfs
