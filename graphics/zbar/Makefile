@@ -1,5 +1,5 @@
 # Created by: Oliver Heesakkers <dev2@heesakkers.info>
-# $FreeBSD: graphics/zbar/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: graphics/zbar/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	zbar
 PORTVERSION=	0.10
@@ -31,8 +31,7 @@ CONFIGURE_ARGS+=	--with-jpeg=no
 .endif
 
 .if ${PORT_OPTIONS:MX11}
-USE_XORG=	ice sm x11 xau xdmcp xext xv
-LIB_DEPENDS+=	xcb:${PORTSDIR}/x11/libxcb
+USE_XORG=	ice sm x11 xau xcb xdmcp xext xv
 CONFIGURE_ARGS+=	--with-x=yes
 .else
 CONFIGURE_ARGS+=	--with-x=no --without-xshm --without-xv
