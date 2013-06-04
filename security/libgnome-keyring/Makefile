@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: security/libgnome-keyring/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/libgnome-keyring/Makefile 319722 2013-06-02 19:15:39Z bapt $
 
 PORTNAME=	libgnome-keyring
 PORTVERSION=	2.32.0
@@ -16,7 +16,7 @@ LIB_DEPENDS=    tasn1.5:${PORTSDIR}/security/libtasn1 \
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix ltverhack intlhack gconf2
 USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
