@@ -3,7 +3,7 @@
 # Date created:			  Tue Feb 06, 2001
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
-# $FreeBSD: vietnamese/vntex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: vietnamese/vntex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	vntex
@@ -17,7 +17,7 @@ MAINTAINER=	obrien@FreeBSD.org
 COMMENT=	teTeX Vietnamese language + font support
 
 USE_ZIP=	yes
-USE_TEX=	tetex
+USE_TEX=	tex
 NO_BUILD=	yes
 
 do-install:
