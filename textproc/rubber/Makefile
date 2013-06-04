@@ -3,7 +3,7 @@
 # Date created:			Mar 27, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: textproc/rubber/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/rubber/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	rubber
@@ -20,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_PYTHON=	2.5+
 USE_GMAKE=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --infodir=${PREFIX}/${INFO_PATH} \
 		--datadir=${PYTHON_SITELIBDIR}
