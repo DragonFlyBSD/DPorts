@@ -1,4 +1,4 @@
-# $FreeBSD: x11/qt4-graphicssystems-opengl/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: x11/qt4-graphicssystems-opengl/Makefile 317896 2013-05-11 17:31:45Z rakuco $
 
 PORTNAME=	graphicssystems
 DISTVERSION=	${QT4_VERSION}
@@ -17,7 +17,6 @@ MAKE_JOBS_SAFE=	yes
 HAS_CONFIGURE=	yes
 USE_GL=		glu
 
-USE_GCC=	any
 ALL_TARGET=	first
 CONFIGURE_ENV?=	QTDIR=${WRKSRC} PATH=${WRKSRC}/bin:$$PATH
 MAKE_ENV?=	QTDIR=${WRKSRC} LD_LIBRARY_PATH=${WRKSRC}/lib:$$LD_LIBRARY_PATH \
