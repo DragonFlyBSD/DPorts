@@ -1,8 +1,9 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: finance/R-cran-timeSeries/Makefile 317139 2013-05-02 17:58:10Z dbn $
+# $FreeBSD: finance/R-cran-timeSeries/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	timeSeries
 PORTVERSION=	3010.97
+PORTREVISION=	1
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
