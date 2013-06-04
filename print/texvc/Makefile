@@ -2,7 +2,7 @@
 # Date created:		2008-06-14
 # Whom:			Max Brazhnikov <makc@issp.ac.ru>
 #
-# $FreeBSD: print/texvc/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/texvc/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	texvc
@@ -30,9 +30,8 @@ RASTER_DESC=	rasterization support
 
 .if ${PORT_OPTIONS:MRASTER}
 USE_GHOSTSCRIPT_RUN=	yes
-USE_TEX=	tetex
-RUN_DEPENDS+=	dvips:${PORTSDIR}/print/dvipsk-tetex \
-		convert:${PORTSDIR}/graphics/ImageMagick
+USE_TEX=	latex dvipsk
+RUN_DEPENDS+=	convert:${PORTSDIR}/graphics/ImageMagick
 .endif
 
 do-install:
