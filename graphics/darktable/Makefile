@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/darktable/Makefile 316997 2013-05-01 07:27:27Z danfe $
+# $FreeBSD: graphics/darktable/Makefile 317874 2013-05-11 13:14:44Z danfe $
 
 PORTNAME=	darktable
 PORTVERSION=	1.2
@@ -35,7 +35,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 OPTIONS_DEFINE=	GPHOTO GEO FLICKR FACEBOOK KWALLET GNOMEKEYRING RAWSPEED \
 		OPENJPEG SLIDESHOW NLS GCC46
 
-GEO_DESC=	Build geotagging parts
+GEO_DESC=	Geotagging support
 FACEBOOK_DESC=	Support images export to Facebook
 RAWSPEED_DESC=	Compile with rawspeed backend
 SLIDESHOW_DESC=	Build OpenGL/SDL slideshow viewer
