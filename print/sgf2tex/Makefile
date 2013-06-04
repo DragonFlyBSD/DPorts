@@ -2,7 +2,7 @@
 # Date created:				24 August 1999
 # Whom:					spcoltri@unm.edu
 #
-# $FreeBSD: print/sgf2tex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/sgf2tex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	sgf2tex
@@ -14,7 +14,7 @@ MASTER_SITES=	http://sporadic.stanford.edu/bump/
 MAINTAINER=	spcoltri@omcl.org
 COMMENT=	Convert a Go game record in SGF format into TeX and provide fonts to make a dvi
 
-USE_TEX=	tetex
+USE_TEX=	tex
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR}
 MAKE_ENV=	TEX_BIN=${TEX_BIN}
 
