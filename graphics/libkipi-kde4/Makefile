@@ -1,9 +1,8 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: graphics/libkipi-kde4/Makefile 315644 2013-03-31 21:27:00Z rakuco $
+# $FreeBSD: graphics/libkipi-kde4/Makefile 318452 2013-05-18 20:34:41Z makc $
 
 PORTNAME=	libkipi
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
 CATEGORIES=	graphics kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
