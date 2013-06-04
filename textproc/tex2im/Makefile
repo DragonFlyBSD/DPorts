@@ -3,7 +3,7 @@
 # Date created:			Nov 28, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: textproc/tex2im/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/tex2im/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	tex2im
@@ -18,7 +18,7 @@ COMMENT=	Converts LaTeX formulas into high resolution pixmap graphics
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick \
 		bash:${PORTSDIR}/shells/bash
 
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	yes
 PLIST_FILES=	bin/tex2im
 PORTEXAMPLES=	example1.png example1.tex example2.png example2.tex \
