@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: deskutils/vym/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: deskutils/vym/Makefile 318730 2013-05-21 22:40:19Z jgh $
 
 PORTNAME=	vym
 PORTVERSION=	2.2.4
@@ -38,7 +38,7 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-patch:
-.if ${PORT_OPTIONS:MDOCS}
+.if !${PORT_OPTIONS:MDOCS}
 	${REINPLACE_CMD} -e '/INSTALLS += doc/d' ${WRKSRC}/vym.pro
 .endif
 
