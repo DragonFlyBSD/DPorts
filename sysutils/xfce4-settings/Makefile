@@ -1,11 +1,11 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: sysutils/xfce4-settings/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: sysutils/xfce4-settings/Makefile 317675 2013-05-08 15:23:41Z olivierd $
 
 PORTNAME=	xfce4-settings
-PORTVERSION=	4.10.0
-PORTREVISION=	5
+PORTVERSION=	4.10.1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
+MASTER_SITE_SUBDIR=	src/xfce/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
@@ -18,10 +18,10 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack glib20 gtk20 desktopfileutils intltool intlhack
+USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_XFCE=	configenv garcon libexo libmenu libutil xfconf
 USE_XORG=	inputproto x11 xi
-USEs=		pkgconfig
+USES=		pathfix pkgconfig
 
 CONFIGURE_ARGS=	--enable-pluggable-dialogs \
 		--enable-gio-unix
@@ -88,8 +88,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|xkl_config_registry_load (settings->priv->xkl_registry)|xkl_config_registry_load (settings->priv->xkl_registry, FALSE)|g; \
 		s|xkl_engine_stop_listen (settings->priv->xkl_engine)|xkl_engine_stop_listen (settings->priv->xkl_engine, FALSE)|g' \
 		${WRKSRC}/dialogs/keyboard-settings/xfce-keyboard-settings.c
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.mk>
