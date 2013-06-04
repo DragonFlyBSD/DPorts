@@ -1,12 +1,7 @@
-# New ports collection makefile for:    xorg-fonts
-# Date created:				Jun 22 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/xorg-fonts/Makefile,v 1.8 2012/11/17 06:03:30 svnexp Exp $
-#
+# $FreeBSD: x11-fonts/xorg-fonts/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xorg-fonts
-PORTVERSION=	7.5.1
+PORTVERSION=	7.7
 CATEGORIES=	x11-fonts
 MASTER_SITES=	# none
 DISTFILES=	# none
