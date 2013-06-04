@@ -2,7 +2,7 @@
 # Date created:				20 April 2002
 # Whom:					Kay Lehmann
 #
-# $FreeBSD: print/lgrind/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/lgrind/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	lgrind
@@ -52,7 +52,7 @@ EXTRACT_ONLY=	${PORTNAME}.tar.gz
 MAINTAINER=	dereckson@gmail.com
 COMMENT=	Produce beautiful listings of source code with LaTeX
 
-USE_TEX=	tetex
+USE_TEX=	latex
 
 MAN1=		lgrind.1
 MAN5=		lgrindef.5
