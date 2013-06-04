@@ -2,7 +2,7 @@
 # Date created:	Tue Sep 17 22:08:35 BRT 2002
 # Whom:		Hammurabi Mendes <hmendes@brturbo.com>
 #
-# $FreeBSD: print/abntex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/abntex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	abntex
@@ -16,7 +16,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Both classes and styles for both LaTex and bibtex for ABNT rules
 
-USE_TEX=	tetex
+USE_TEX=	latex
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}
 
 NO_BUILD=	yes
