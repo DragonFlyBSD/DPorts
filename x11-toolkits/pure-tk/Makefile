@@ -1,19 +1,15 @@
-# New ports collection makefile for:	pure-tk
-# Date created:		2011-11-09
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: x11-toolkits/pure-tk/Makefile 316351 2013-04-23 11:51:52Z gahr $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: x11-toolkits/pure-tk/Makefile 318162 2013-05-14 14:16:52Z gahr $
 
 PORTNAME=	pure-tk
 PORTVERSION=	0.3
 CATEGORIES=	x11-toolkits
 
 MAINTAINER=	lichray@gmail.com
-COMMENT=	A basic interface between Pure and Tcl/Tk
+COMMENT=	Basic interface between Pure and Tcl/Tk
 
 USE_PURE=	yes
-USE_TK=	84+
+USE_TK=		yes
 SHORT_TCL_VER=	${TCL_VER:S/8./8/}
 
 MAKE_ARGS+=	tclvers=${TCL_VER}
