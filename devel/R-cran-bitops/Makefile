@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-bitops/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: devel/R-cran-bitops/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	bitops
 DISTVERSION=	1.0-5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
