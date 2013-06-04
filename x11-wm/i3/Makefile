@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11-wm/i3/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: x11-wm/i3/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	i3
 DISTVERSION=	4.5.1
@@ -14,9 +14,7 @@ COMMENT=	An improved dynamic tiling window manager
 
 LICENSE=	BSD
 
-BUILD_DEPENDS=	flex>=2.5.35:${PORTSDIR}/textproc/flex
-LIB_DEPENDS=	xcb:${PORTSDIR}/x11/libxcb \
-		startup-notification:${PORTSDIR}/x11/startup-notification \
+LIB_DEPENDS=	startup-notification:${PORTSDIR}/x11/startup-notification \
 		xcb-util:${PORTSDIR}/x11/xcb-util \
 		xcb-keysyms:${PORTSDIR}/x11/xcb-util-keysyms \
 		xcb-icccm:${PORTSDIR}/x11/xcb-util-wm \
@@ -30,8 +28,8 @@ RUN_DEPENDS=	p5-IPC-Run>=0:${PORTSDIR}/devel/p5-IPC-Run \
 		p5-AnyEvent-I3>=0:${PORTSDIR}/devel/p5-AnyEvent-I3
 
 USE_PERL5_RUN=	yes
-USE_XORG=	x11 xcursor
-USES=		bison pkgconfig iconv
+USE_XORG=	x11 xcb xcursor
+USES=		pkgconfig iconv
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=	yes
@@ -76,7 +74,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/|${PREFIX}/|g' ${WRKSRC}/man/i3-input.1
 	@${REINPLACE_CMD} -e 's|.SILENT||g' ${WRKSRC}/common.mk
 	@${REINPLACE_CMD} -e 's|-Iinclude|-Iinclude -Isrc|g' \
-			  -e 's|flex|${LOCALBASE}/bin/flex|g' \
 			  -e 's|/usr/local|${LOCALBASE}|g' ${WRKSRC}/common.mk
 
 do-install:
