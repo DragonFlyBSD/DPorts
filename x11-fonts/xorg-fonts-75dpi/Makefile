@@ -1,12 +1,8 @@
-# New ports collection makefile for:    xorg-fonts-75dpi
-# Date created:		30 May 2004
-# Whom:			anholt@FreeBSD.org
-#
-# $FreeBSD: ports/x11-fonts/xorg-fonts-75dpi/Makefile,v 1.17 2012/11/17 06:03:30 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11-fonts/xorg-fonts-75dpi/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xorg-fonts-75dpi
-PORTVERSION=	7.5.1
+PORTVERSION=	7.7
 CATEGORIES=	x11-fonts
 MASTER_SITES=	# none
 DISTFILES=	# none
