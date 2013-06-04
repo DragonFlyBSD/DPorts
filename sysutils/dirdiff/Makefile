@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dirdiff
-# Whom:			grog
-# Date created:		7 May 2001
-#
-# $FreeBSD: ports/sysutils/dirdiff/Makefile,v 1.12 2012/11/17 06:01:28 svnexp Exp $
-#
+# Created by: grog
+# $FreeBSD: sysutils/dirdiff/Makefile 318100 2013-05-13 15:08:04Z gahr $
 
 PORTNAME=	dirdiff
 PORTVERSION=	2.1
@@ -11,8 +7,8 @@ PORTREVISION=	3
 CATEGORIES=	sysutils tcl tk
 MASTER_SITES=	ftp://ftp.samba.org/pub/paulus/
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A graphical diff tool
+MAINTAINER=	tcltk@FreeBSD.org
+COMMENT=	Graphical diff tool
 
 LICENSE=	GPLv2 # (or later)
 LICENSE_FILE=	${WRKSRC}/COPYING
