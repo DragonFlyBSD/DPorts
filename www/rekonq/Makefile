@@ -1,8 +1,7 @@
-# $FreeBSD: www/rekonq/Makefile 315675 2013-04-02 14:00:37Z makc $
+# $FreeBSD: www/rekonq/Makefile 317854 2013-05-11 07:40:32Z makc $
 
 PORTNAME=	rekonq
-PORTVERSION=	2.2.1
-PORTREVISION=	1
+PORTVERSION=	2.3.0
 CATEGORIES=	www kde
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION:C,\..*,.0,}/
 
