@@ -2,7 +2,7 @@
 # Date created:		2006-03-22
 # Whom:			Nicola Vitale	<nivit@email.it>
 #
-# $FreeBSD: graphics/l2p/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: graphics/l2p/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	l2p
@@ -15,12 +15,11 @@ MASTER_SITES=	http://www.redsymbol.net/software/l2p/dist/ \
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Create PNG images from LaTeX math expressions
 
-RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick \
-		dvips:${PORTSDIR}/print/dvipsk-tetex
+RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 
 USE_PERL5_RUN=	yes
 USE_ZIP=	yes
-USE_TEX=	tetex
+USE_TEX=	latex dvipsk
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
