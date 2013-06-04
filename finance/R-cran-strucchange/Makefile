@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-strucchange/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: finance/R-cran-strucchange/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	strucchange
 DISTVERSION=	1.4-7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
