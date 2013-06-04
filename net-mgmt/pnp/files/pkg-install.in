@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-mgmt/pnp/files/pkg-install.in,v 1.4 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/pnp/files/pkg-install.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 SPOOL_DIRS=%%SPOOL_DIRS%%
