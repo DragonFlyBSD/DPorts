@@ -1,9 +1,5 @@
-# New ports collection makefile for:	syncterm
-# Date created:		3 October 2006
-# Whom:			shurd
-#
-# $FreeBSD: ports/games/freedink-engine/Makefile,v 1.12 2012/11/17 05:57:39 svnexp Exp $
-#
+# Created by: shurd
+# $FreeBSD: games/freedink-engine/Makefile 319495 2013-05-31 14:40:56Z jgh $
 
 PORTNAME=	freedink
 PORTVERSION=	1.08.${PORTVER}
@@ -26,11 +22,14 @@ CONFIGURE_ARGS=	--disable-static --disable-upx
 
 MAN6=		freedink.6 freedinkedit.6 dink.6 dinkedit.6
 
-OPTIONS=	EMBEDDED	"Enable Embedded Resources"	on
+OPTIONS_DEFINE=	EMBEDDED
+EMBEDDED_DESC=	Embedded Resources
 
-.include <bsd.port.pre.mk>
+OPTIONS_DEFAULT=	EMBEDDED
 
-.ifdef WITHOUT_EMBEDDED
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MEMBEDDED}
 CONFIGURE_ARGS+=	--enable-embedded-resources
 BUILD_DEPENDS+=		zip:${PORTSDIR}/archivers/zip
 LIB_DEPENDS+=		zip.3:${PORTSDIR}/archivers/libzip
@@ -39,4 +38,4 @@ RUN_DEPENDS+=		zip:${PORTSDIR}/archivers/zip
 CONFIGURE_ARGS+=	--disable-embedded-resources
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
