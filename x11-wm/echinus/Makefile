@@ -1,5 +1,5 @@
 # Created by: hrkfrd@gmail.com
-# $FreeBSD: x11-wm/echinus/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-wm/echinus/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	echinus
 PORTVERSION=	0.4.9
@@ -12,11 +12,10 @@ COMMENT=	Dynamic window manager for X11 based on dwm
 LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
-		xcb:${PORTSDIR}/x11/libxcb \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
 USES=		pkgconfig
-USE_XORG=	x11 xau xdmcp xext xft xrender xrandr
+USE_XORG=	x11 xau xcb xdmcp xext xft xrender xrandr
 
 MAN1=		echinus.1
 MANCOMPRESSED=	no
