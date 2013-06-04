@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-pixmap/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: graphics/R-cran-pixmap/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	pixmap
 DISTVERSION=	0.4-11
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
