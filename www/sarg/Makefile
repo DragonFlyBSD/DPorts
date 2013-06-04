@@ -1,8 +1,9 @@
 # Created by: mt@primats.org.ua
-# $FreeBSD: www/sarg/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: www/sarg/Makefile 319490 2013-05-31 13:17:41Z garga $
 
 PORTNAME=	sarg
 PORTVERSION=	2.3.6
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -34,7 +35,7 @@ MAN1=		sarg.1
 .if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
 USES+=		gettext
-RPL1=		-lintl
+EXTRA_LDFLAGS=	-lintl
 .else
 PLIST_SUB+=	NLS="@comment "
 CONFIGURE_ARGS+=--disable-nls
@@ -72,7 +73,7 @@ CONFIGURE_ARGS+=--without-ldap
 .if ${PORT_OPTIONS:MICONV}
 CONFIGURE_ARGS+=--with-iconv
 USES+=	iconv
-RPL2=	-liconv
+EXTRA_LDFLAGS+=	-liconv
 .else
 CONFIGURE_ARGS+=--without-iconv
 .endif
@@ -82,8 +83,11 @@ post-extract:
 	@${CHMOD} 0755 ${WRKSRC}/configure
 
 post-patch:
+	@${REINPLACE_CMD} -e '/test .*==/ s/==/=/' \
+		${WRKSRC}/configure.in
 .if ${PORT_OPTIONS:MNLS} || ${PORT_OPTIONS:MICONV}
-	@${REINPLACE_CMD} -e '/^LIBS/ s/$$/ ${RPL1} ${RPL2}/' ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e '/^LIBS/ s/$$/ ${EXTRA_LDFLAGS}/' \
+		${WRKSRC}/Makefile.in
 .endif
 
 pre-configure:
