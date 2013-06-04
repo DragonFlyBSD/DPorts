@@ -1,9 +1,8 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: emulators/fuse/Makefile 317315 2013-05-04 13:44:22Z rene $
+# $FreeBSD: emulators/fuse/Makefile 318604 2013-05-20 15:03:18Z rene $
 
 PORTNAME=	fuse
-PORTVERSION=	1.0.0.1
-PORTREVISION=	3
+PORTVERSION=	1.1.0
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}-emulator/${PORTNAME}/${PORTVERSION}
 
@@ -12,7 +11,7 @@ COMMENT=	Free Unix (Sinclair ZX-)Spectrum Emulator
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	spectrum.8:${PORTSDIR}/emulators/libspectrum \
+LIB_DEPENDS=	spectrum:${PORTSDIR}/emulators/libspectrum \
 		png15:${PORTSDIR}/graphics/png \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
@@ -34,13 +33,13 @@ SAMPLERATE_DESC=	Better beeper sound quality
 
 .if ${PORT_OPTIONS:MAO}
 CONFIGURE_ARGS+=--with-libao
-LIB_DEPENDS+=	ao.4:${PORTSDIR}/audio/libao
+LIB_DEPENDS+=	ao:${PORTSDIR}/audio/libao
 .else
 CONFIGURE_ARGS+=--without-libao
 .endif
 
 .if ${PORT_OPTIONS:MSAMPLERATE}
-LIB_DEPENDS+=	samplerate.1:${PORTSDIR}/audio/libsamplerate
+LIB_DEPENDS+=	samplerate:${PORTSDIR}/audio/libsamplerate
 .else
 CONFIGURE_ARGS+=--without-libsamplerate
 .endif
