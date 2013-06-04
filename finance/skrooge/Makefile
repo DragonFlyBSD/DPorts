@@ -1,4 +1,4 @@
-# $FreeBSD: finance/skrooge/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: finance/skrooge/Makefile 317967 2013-05-12 16:16:56Z makc $
 
 PORTNAME=	skrooge
 PORTVERSION=	1.6.0
@@ -24,8 +24,5 @@ USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB=	VERSION=${PORTVERSION}
-
-post-install:
-	@-update-mime-database ${KDE4_PREFIX}/share/mime
 
 .include <bsd.port.mk>
