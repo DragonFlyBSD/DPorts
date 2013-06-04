@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/minitube/Makefile 315222 2013-03-25 13:59:18Z makc $
+# $FreeBSD: multimedia/minitube/Makefile 317947 2013-05-12 11:48:49Z makc $
 
 PORTNAME=	minitube
 PORTVERSION=	2.0
@@ -21,6 +21,8 @@ QMAKE_PRO=	${WRKSRC}/${PORTNAME}.pro
 LRELEASE=	${LOCALBASE}/bin/lrelease-qt4
 
 STRIP_FILES=	bin/minitube
+
+OPTIONS_DEFINE=	NLS
 
 .include <bsd.port.options.mk>
 
