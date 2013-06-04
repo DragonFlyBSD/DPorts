@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: editors/tea/Makefile 316572 2013-04-26 06:34:46Z miwi $
+# $FreeBSD: editors/tea/Makefile 317930 2013-05-12 04:55:53Z danfe $
 
 PORTNAME=	tea
 DISTVERSION=	35.0.0
@@ -11,11 +11,6 @@ COMMENT=	Simple and powerful Qt4-based text editor
 
 LICENSE=	GPLv3
 
-OPTIONS_RADIO=	SPELL
-OPTIONS_RADIO_SPELL=	ASPELL HUNSPELL
-OPTIONS_DEFAULT=	ASPELL
-HUNSPELL_DESC=	Spell cheecking support via Hunspell
-
 USE_BZIP2=	yes
 USE_DOS2UNIX=	rvln.*
 USE_QT4=	gui moc_build qmake_build rcc_build
@@ -23,6 +18,9 @@ MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
+OPTIONS_RADIO=		SPELL
+OPTIONS_RADIO_SPELL=	ASPELL HUNSPELL
+OPTIONS_DEFAULT=	ASPELL
 
 .include <bsd.port.options.mk>
 
