@@ -1,11 +1,11 @@
-# $FreeBSD: x11/keybinder/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11/keybinder/Makefile 318413 2013-05-18 06:38:20Z olivierd $
 #
 
 PORTNAME=	keybinder
 PORTVERSION=	0.3.0
 PORTREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://kaizer.se/publicfiles/${PORTNAME}/
+MASTER_SITES=	GENTOO/distfiles
 
 MAINTAINER=	olivierd@FreeBSD.org
 COMMENT=	Library for registering keyboard shortcuts
@@ -16,9 +16,9 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtk20
+USE_GNOME=	gtk20
 USE_XORG=	x11 xext xrender
-USES=		pkgconfig
+USES=		pkgconfig pathfix
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	PYTHON LUA
