@@ -1,8 +1,7 @@
-# $FreeBSD: astro/marble/Makefile 317170 2013-05-03 04:56:40Z rm $
+# $FreeBSD: astro/marble/Makefile 318452 2013-05-18 20:34:41Z makc $
 
 PORTNAME=	marble
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
 CATEGORIES=	astro kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
@@ -13,7 +12,7 @@ COMMENT=	Virtual globe and world atlas for KDE
 
 CONFLICTS=	kdeedu-4.4.[0-4]
 
-USE_KDE4=	kdehier kdelibs kdeprefix automoc4
+USE_KDE4=	kdehier kdelibs kdeprefix automoc4 sharedmime
 USES=		cmake:outsource
 USE_QT4=	corelib dbus declarative designer_build gui network phonon \
 		qtestlib script sql svg webkit xml \
