@@ -3,7 +3,7 @@
 # Date created:                      2010-09-12
 # Whom:                              Eygene Ryabinkin <rea-fbsd@codelabs.ru>
 #
-# $FreeBSD: ports/www/redmine/bsd.redmine.mk,v 1.2 2012/11/17 06:03:02 svnexp Exp $
+# $FreeBSD: www/redmine/bsd.redmine.mk 319568 2013-06-01 14:13:28Z swills $
 #
 # We're assuming standard plugin installation sequence that is described
 # in the http://www.redmine.org/wiki/redmine/Plugins
@@ -45,7 +45,7 @@
 
 PKGNAMEPREFIX?=	redmine-
 
-RUN_DEPENDS+=	redmine>=0.9:${PORTSDIR}/www/redmine
+RUN_DEPENDS+=	redmine>=2.0:${PORTSDIR}/www/redmine
 
 USE_RUBY=	yes
 .if !defined(PLIST)
@@ -67,14 +67,14 @@ do-build: redmine-plugin-plist
 
 redmine-plugin-plist:
 .if defined(_GEN_PLIST)
-	cd ${WRKSRC} && ${FIND} . -type f | ${GREP} -v '\.orig$$' | ${SED} -e's|^\.|${WWWDIR_REL}/vendor/plugins/${REDMINE_PLUGIN_NAME}|' >> ${PLIST}
-	cd ${WRKSRC} && ${FIND} -d . -type d | ${SED} -e's|^\.|@dirrm ${WWWDIR_REL}/vendor/plugins/${REDMINE_PLUGIN_NAME}|' >> ${PLIST}
+	cd ${WRKSRC} && ${FIND} . -type f | ${GREP} -v '\.orig$$' | ${SED} -e's|^\.|${WWWDIR_REL}/plugins/${REDMINE_PLUGIN_NAME}|' >> ${PLIST}
+	cd ${WRKSRC} && ${FIND} -d . -type d | ${SED} -e's|^\.|@dirrm ${WWWDIR_REL}/plugins/${REDMINE_PLUGIN_NAME}|' >> ${PLIST}
 .else
 	@${DO_NADA}
 .endif
 
 do-install:
-	${MKDIR} "${WWWDIR}/vendor/plugins/${REDMINE_PLUGIN_NAME}"
-	${TAR} -C "${WRKSRC}" -cf - --exclude '*.orig' . | ${TAR} -C "${WWWDIR}/vendor/plugins/${REDMINE_PLUGIN_NAME}" -xf -
+	${MKDIR} "${WWWDIR}/vendor/${REDMINE_PLUGIN_NAME}"
+	${TAR} -C "${WRKSRC}" -cf - --exclude '*.orig' . | ${TAR} -C "${WWWDIR}/plugins/${REDMINE_PLUGIN_NAME}" -xf -
 
 .include <bsd.port.mk>

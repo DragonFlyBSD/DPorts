@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/www/redmine/files/redmine.in,v 1.6 2012/11/17 06:03:02 svnexp Exp $
+# $FreeBSD: www/redmine/files/redmine.in 300897 2012-07-14 14:29:18Z beat $
 
 # PROVIDE: redmine
 # REQUIRE: LOGIN
