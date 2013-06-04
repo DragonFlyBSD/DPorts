@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/klavaro/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: games/klavaro/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	klavaro
 PORTVERSION=	1.9.6
@@ -19,13 +19,12 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		gtkdatabox:${PORTSDIR}/x11-toolkits/gtkdatabox \
-		xcb:${PORTSDIR}/x11/libxcb
+		gtkdatabox:${PORTSDIR}/x11-toolkits/gtkdatabox
 
 USES=		pkgconfig gettext iconv
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext \
+USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
