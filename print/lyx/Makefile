@@ -1,9 +1,8 @@
 # Created by: Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: print/lyx/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: print/lyx/Makefile 319590 2013-06-01 21:15:37Z rakuco $
 
 PORTNAME=	lyx
 PORTVERSION=	${MAJOR_VERSION}.${MINOR_VERSION}
-PORTREVISION=	1
 CATEGORIES=	print editors
 MASTER_SITES=	ftp://ftp.lyx.org/pub/lyx/stable/${MAJOR_VERSION}.x/ \
 		http://www-ftp.lip6.fr/ftp/pub/lyx/stable/${MAJOR_VERSION}.x/ \
@@ -22,13 +21,13 @@ LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs \
 
 CONFLICTS=	lyx-1.[0-9]*
 MAJOR_VERSION=	2.0
-MINOR_VERSION=	5.1
+MINOR_VERSION=	6
 
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_QT4=	corelib gui moc_build uic_build rcc_build
 USE_GNOME=	desktopfileutils
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	${PTHREAD_CFLAGS}
@@ -44,7 +43,6 @@ MAN1=		lyx.1 lyxclient.1 tex2lyx.1
 OPTIONS_DEFINE=		ASPELL ENCHANT HUNSPELL NLS
 OPTIONS_DEFAULT=	HUNSPELL NLS
 ENCHANT_DESC=		Spell checking using Enchant
-HUNSPELL_DESC=		Spell checking using Hunspell
 
 .include <bsd.port.options.mk>
 
