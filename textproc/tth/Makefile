@@ -2,7 +2,7 @@
 # Date created:         19 Feb 1998
 # Whom:                 Thomas Gellekum <tg@FreeBSD.org>
 #
-# $FreeBSD: textproc/tth/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/tth/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	tth
@@ -20,7 +20,7 @@ COMMENT=	A TeX to HTML translator
 RUN_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm
 
 USE_GHOSTSCRIPT_RUN=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 
 MAN1=		tth.1
 
