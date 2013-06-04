@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pykde4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: devel/py-pykde4/Makefile 318452 2013-05-18 20:34:41Z makc $
 
 PORTNAME=	pykde4
 PORTVERSION=	${KDE4_VERSION}
@@ -39,6 +39,8 @@ MAKE_JOBS_SAFE=	yes
 SUB_FILES=	kdebindings4.pth
 SUB_LIST=	PYTHONPREFIX_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR}
 
+PLIST_SUB+=	SIPDIR=share/sip
+
 OPTIONS_DEFINE=	EXAMPLES
 
 .include <bsd.port.options.mk>
@@ -47,8 +49,6 @@ post-patch:
 	${FIND} -d ${PATCH_WRKSRC}/sip -name "*.orig" -delete
 
 pre-configure:
-	${REINPLACE_CMD} -e 's,$${SIP_DEFAULT_SIP_DIR},${PREFIX}/share/py-sip,g' \
-		${WRKSRC}/CMakeLists.txt
 	${REINPLACE_CMD} -e '/add_subdirectory(examples)/ d' \
 		-e '/add_subdirectory(tools)/ d' \
 		${WRKSRC}/CMakeLists.txt
