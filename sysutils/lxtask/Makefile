@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/lxtask/Makefile 317491 2013-05-06 09:07:58Z bapt $
+# $FreeBSD: sysutils/lxtask/Makefile 319199 2013-05-27 10:13:00Z bapt $
 
 PORTNAME=	lxtask
 PORTVERSION=	0.1.4
@@ -29,6 +29,6 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-install:
-	@${ECHO_CMD} ${PKGMESSAGE}
+	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
