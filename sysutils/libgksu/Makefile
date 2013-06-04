@@ -1,9 +1,8 @@
 # Created by: Jesse van den Kieboom <troplosti@orcaweb.cjb.net>
-# $FreeBSD: sysutils/libgksu/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/libgksu/Makefile 319154 2013-05-27 05:38:11Z bsam $
 
 PORTNAME=	libgksu
-PORTVERSION=	2.0.9
-PORTREVISION=	2
+PORTVERSION=	2.0.12
 CATEGORIES=	sysutils
 MASTER_SITES=	http://people.debian.org/~kov/gksu/
 
@@ -17,15 +16,13 @@ LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop \
 RUN_DEPENDS=	xauth:${PORTSDIR}/x11/xauth \
 		sudo:${PORTSDIR}/security/sudo
 
-USES=		pkgconfig
-USE_GNOME=	desktopfileutils glib20 gconf2
+USES=		desktop-file-utils pkgconfig
+USE_GNOME=	glib20 gconf2
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-gtk-doc=no
 GNU_CONFIGURE=	yes
 GCONF_SCHEMAS=	gksu.schemas
 USE_GMAKE=	yes
-
-post-install:
-	-update-desktop-database
+MAN1=		gksu-properties.1
 
 .include <bsd.port.mk>
