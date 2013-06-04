@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: math/rpy/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/rpy/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	rpy
 PORTVERSION=	1.0.3
-PORTREVISION=	27
+PORTREVISION=	28
 CATEGORIES=	math
 MASTER_SITES=	SF
 
@@ -24,7 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib/R/modules -L${LOCALBASE}/lib/R/lib
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,^statichere ,,' ${WRKSRC}/src/rpymodule.c
-	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/setup.py
+	@${REINPLACE_CMD} -e 's|/usr/share|${LOCALBASE}/lib|' ${WRKSRC}/setup.py
 
 pre-configure:
 	@(if [ ! -e ${LOCALBASE}/lib/R/lib/libR.so ] ; then \
