@@ -1,15 +1,11 @@
-# New ports collection makefile for:	uim-qt4
-# Date created:		2008-21-08
-# Whom:			Yamashiro Jun <yamajun@ofug.net>
-#
-# $FreeBSD: textproc/uim-qt4/Makefile 316683 2013-04-27 18:25:24Z mva $
-#
+# Created by: Yamashiro Jun <yamajun@ofug.net>
+# $FreeBSD: textproc/uim-qt4/Makefile 318178 2013-05-14 16:51:16Z nobutaka $
 
 PKGNAMESUFFIX=	-qt4
 
 COMMENT=	Qt4 modules of uim input method
 
-LIB_DEPENDS=	uim.8:${PORTSDIR}/textproc/uim
+LIB_DEPENDS=	uim:${PORTSDIR}/textproc/uim
 
 USE_QT4=	qmake_build moc_build qt3support uic
 USE_AUTOTOOLS=	libtool
