@@ -1,9 +1,9 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: math/R-cran-stabledist/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/R-cran-stabledist/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	stabledist
 DISTVERSION=	0.6-5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
