@@ -1,21 +1,21 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/qxkb/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11/qxkb/Makefile 317763 2013-05-10 06:40:09Z miwi $
 
 PORTNAME=	qxkb
-PORTVERSION=	0.4.5
+PORTVERSION=	0.4.6
 CATEGORIES=	x11
 MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Qt4-based advanced keyboard layout switcher
 
-LICENSE=	GPLv3
+LICENSE=	GPLv2 # (or later)
 
 LIB_DEPENDS=	xkbfile:${PORTSDIR}/x11/libxkbfile
 
 USE_BZIP2=	yes
 USES=		cmake
-USE_QT4=	qmake_build linguist_build moc_build rcc_build uic_build \
+USE_QT4=	linguist_build moc_build qmake_build rcc_build uic_build \
 		corelib gui svg
 
 LDFLAGS+=	-L${LOCALBASE}/lib
