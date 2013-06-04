@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: editors/zim/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: editors/zim/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	zim
 PORTVERSION=	0.57
@@ -38,7 +38,7 @@ DITAA_DESC=		Diagram editor support
 RUN_DEPENDS+=	R:${PORTSDIR}/math/R
 .endif
 .if ${PORT_OPTIONS:MLATEX}
-USE_TEX=	tetex
+USE_TEX=	latex
 .endif
 .if ${PORT_OPTIONS:MGRAPHVIZ}
 RUN_DEPENDS+=	fdp:${PORTSDIR}/graphics/graphviz
