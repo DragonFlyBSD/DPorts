@@ -2,7 +2,7 @@
 # Date created:				29 Jun 2001
 # Whom:					kapr@crosswinds.net
 #
-# $FreeBSD: russian/pscyr/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: russian/pscyr/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	PSCyr
@@ -18,7 +18,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION:S/${PATCH_LEVEL}$/-patch&/}-tex.tar.gz \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cyrillic PostScript Type1 fonts for use with TeX
 
-USE_TEX=	tetex
+USE_TEX=	base texmf
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 MAKE_ENV=	TEXMFDIR=${LOCALBASE}/share/texmf
