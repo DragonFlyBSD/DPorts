@@ -2,7 +2,7 @@
 # Date created:				18 Dec 2005
 # Whom:					Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: japanese/tomoe/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: japanese/tomoe/Makefile 317757 2013-05-10 01:46:52Z bdrewery $
 #
 
 PORTNAME=	tomoe
@@ -76,7 +76,7 @@ BROKEN=		Broken with Unihan with gcc 4.2
 .endif
 MASTER_SITES+=	ftp://ftp.unicode.org/Public/UNIDATA/:unihan
 DISTFILES+=	Unihan.zip:unihan
-EXTRACT_DEPENDS+=	unzip:${PORTSDIR}/archivers/unzip
+EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 BUILD_DEPENDS+=	\
 	${RUBY_SITEARCHLIBDIR}/uconv.so:${PORTSDIR}/japanese/ruby-uconv \
 	${RUBY_SITELIBDIR}/suikyo/suikyo.rb:${PORTSDIR}/japanese/suikyo
