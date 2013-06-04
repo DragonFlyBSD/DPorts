@@ -1,9 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/graphics/ruby-rmagick/Makefile,v 1.80 2012/12/13 14:18:49 svnexp Exp $
+# $FreeBSD: graphics/ruby-rmagick/Makefile 319717 2013-06-02 19:07:09Z swills $
 
 PORTNAME=	rmagick
-PORTVERSION=	2.13.1
-PORTREVISION=	4
+PORTVERSION=	2.13.2
 CATEGORIES=	graphics ruby
 MASTER_SITES=	RF
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
@@ -13,7 +12,18 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A Ruby binding for ImageMagick
 
+OPTIONS_DEFINE=		X11
+OPTIONS_DEFAULT=	X11
+
+OPTIONSFILE?=	${PORT_DBDIR}/ruby-${PORTNAME}/options
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MX11}
 LIB_DEPENDS=	MagickWand:${PORTSDIR}/graphics/ImageMagick
+.else
+LIB_DEPENDS=	MagickWand:${PORTSDIR}/graphics/ImageMagick-nox11
+.endif
 
 USE_BZIP2=	yes
 USE_RUBY=	yes
