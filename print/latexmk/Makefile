@@ -1,10 +1,10 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: print/latexmk/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latexmk/Makefile 319372 2013-05-29 14:24:42Z wg $
 
 PORTNAME=	latexmk
 PORTVERSION=	435
 CATEGORIES=	print
-MASTER_SITES=	http://www.phys.psu.edu/~collins/software/latexmk/
+MASTER_SITES=	http://users.phys.psu.edu/~collins/software/latexmk/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to completely automate generating output from LaTeX documents
@@ -18,7 +18,7 @@ NO_BUILD=	yes
 
 USE_ZIP=	yes
 USE_PERL5_RUN=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 
 MAN1=		latexmk.1
 PORTDOCS=	*
