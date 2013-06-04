@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-RColorBrewer/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: graphics/R-cran-RColorBrewer/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	RColorBrewer
 DISTVERSION=	1.0-5
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
