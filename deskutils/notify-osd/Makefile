@@ -1,9 +1,5 @@
-# New ports collection makefile for:	notify-osd
-# Date created:				05 May 2010
-# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/deskutils/notify-osd/Makefile,v 1.7 2012/11/17 05:55:29 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: deskutils/notify-osd/Makefile 317643 2013-05-08 08:04:04Z ehaupt $
 
 PORTNAME=	notify-osd
 PORTVERSION=	0.9.29
@@ -27,5 +23,6 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	libwnck gconf2
 USE_GMAKE=	yes
 USE_GCC=	4.4+
+MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
