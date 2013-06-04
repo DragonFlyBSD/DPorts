@@ -1,9 +1,8 @@
 # Created by: Mark Murray <markm@FreeBSD.org>
-# $FreeBSD: graphics/ufraw/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/ufraw/Makefile 318579 2013-05-20 07:50:28Z bsam $
 
 PORTNAME=	ufraw
-PORTVERSION=	0.18
-PORTREVISION=	4
+PORTVERSION=	0.19.2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -75,8 +74,9 @@ PLIST_SUB+=	GIMP="@comment "
 
 .if ${PORT_OPTIONS:MGTK2}
 LIB_DEPENDS+=	gtkimageview:${PORTSDIR}/x11-toolkits/gtkimageview
-PLIST_FILES+=	bin/ufraw
+PLIST_SUB+=	MGTK2=""
 .else
+PLIST_SUB+=	MGTK2="@comment "
 CONFIGURE_ARGS+=--without-gtk
 .endif
 
