@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/wxsvg/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/wxsvg/Makefile 317824 2013-05-10 15:57:07Z miwi $
 
 PORTNAME=	wxsvg
-PORTVERSION=	1.1.13
+PORTVERSION=	1.1.15
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
@@ -32,5 +32,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 LIBAV_PC=	libavcodec1 libavformat1 libavutil1 libswscale1
 LIBAV_CFLAGS=	$$(pkg-config --cflags ${LIBAV_PC})
 LIBAV_LIBS=	$$(pkg-config --libs ${LIBAV_PC})
+
+post-extract:
+.for i in configure install-sh
+	@${CHMOD} ${BINMODE} ${WRKSRC}/${i}
+.endfor
 
 .include <bsd.port.mk>
