@@ -1,11 +1,10 @@
-# Created by: Matthias Petermann<matthias@petermann.it>
-# $FreeBSD: ports/finance/trytond_stock_forecast/Makefile,v 1.3 2012/11/17 05:57:27 svnexp Exp $
+# $FreeBSD: finance/trytond_stock_forecast/Makefile 318647 2013-05-21 06:24:16Z wen $
 
 PORTNAME=	trytond_stock_forecast
 PORTVERSION=	2.4.0
 PORTREVISION=	1
 CATEGORIES=	finance python
-MASTER_SITES=	http://downloads2.tryton.org/${PORTVERSION:R}/
+MASTER_SITES=	http://downloads.tryton.org/${PORTVERSION:R}/
 
 MAINTAINER=	matthias@petermann.it
 COMMENT=	Tryton Application Platform (Stock Forecast Module)
@@ -17,6 +16,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dateutil>=1.5:${PORTSDIR}/devel/py-dateutil 
 		trytond_product>=2.4.0:${PORTSDIR}/finance/trytond_product \
 		trytond_stock>=2.4.0:${PORTSDIR}/finance/trytond_stock \
 		trytond_company>=2.4.0:${PORTSDIR}/finance/trytond_company
+
+CONFLICTS=	trytond_stock_forecast-2.[68].*
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
