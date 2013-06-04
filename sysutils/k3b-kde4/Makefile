@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/k3b-kde4/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/k3b-kde4/Makefile 317967 2013-05-12 16:16:56Z makc $
 
 PORTNAME=	k3b
 PORTVERSION=	2.0.2
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 USES=		cmake
 CMAKE_ARGS=	-DK3B_BUILD_K3BSETUP:BOOL=OFF \
 		-DK3B_ENABLE_MUSICBRAINZ:BOOL=OFF
-USE_KDE4=	automoc4 kdeprefix kdelibs libkcddb
+USE_KDE4=	automoc4 kdeprefix kdelibs libkcddb sharedmime
 USE_QT4=	gui dbus network phonon qt3support sql svg webkit xml \
 		qmake_build moc_build rcc_build uic_build
 USE_LDCONFIG=	yes
