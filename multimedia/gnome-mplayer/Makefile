@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: multimedia/gnome-mplayer/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: multimedia/gnome-mplayer/Makefile 318119 2013-05-13 16:11:09Z stefan $
 
 PORTNAME=	gnome-mplayer
 PORTVERSION=	1.0.8
@@ -24,6 +24,7 @@ NAUPLUG_DESC=	Enable Nautilus plugin
 MAKE_JOBS_SAFE=	yes
 
 GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
 USE_GNOME=	glib20
 USE_XORG=	x11 xscrnsaver
 INSTALLS_ICONS=	yes
