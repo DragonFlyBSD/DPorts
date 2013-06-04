@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: news/pan/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: news/pan/Makefile 318756 2013-05-22 09:30:19Z kwm $
 #   $MCom: ports/news/pan/Makefile,v 1.7 2008/01/19 22:45:42 mezz Exp $
 
 PORTNAME=	pan
 PORTVERSION=	0.139
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	news gnome
 MASTER_SITES=	http://pan.rebelbase.com/download/releases/${PORTVERSION}/source/
 DIST_SUBDIR=	gnome2
@@ -15,7 +15,7 @@ COMMENT=	Threaded GTK+ newsreader based on Agent for Windows
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre \
-		gmime-2.4:${PORTSDIR}/mail/gmime24
+		gmime-2.6:${PORTSDIR}/mail/gmime26
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -33,11 +33,11 @@ GTK3_DESC=	Use gtk+3 based UI instead of gtk+2
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK3}
-USE_GNOME+=	gtk20
-CONFIGURE_ARGS+=--without-gtk3
-.else
 USE_GNOME+=	gtk30
 CONFIGURE_ARGS+=--with-gtk3
+.else
+USE_GNOME+=	gtk20
+CONFIGURE_ARGS+=--without-gtk3
 .endif
 
 .if !${PORT_OPTIONS:MGTKSPELL} || ${PORT_OPTIONS:MGTK3}
