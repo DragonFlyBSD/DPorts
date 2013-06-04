@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: textproc/R-cran-XML/Makefile 315581 2013-03-29 23:18:19Z tota $
+# $FreeBSD: textproc/R-cran-XML/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	XML
 DISTVERSION=	3.96-1.1
+PORTREVISION=	1
 CATEGORIES=	textproc
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
