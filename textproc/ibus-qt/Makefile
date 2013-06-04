@@ -1,12 +1,11 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: textproc/ibus-qt/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: textproc/ibus-qt/Makefile 318332 2013-05-16 19:52:26Z zeising $
 
 PORTNAME=	ibus-qt
-PORTVERSION=	1.3.1
-PORTREVISION=	3
+PORTVERSION=	1.3.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
-DISTNAME=		${PORTNAME}-${PORTVERSION}-Source
+DISTNAME=	${PORTNAME}-${PORTVERSION}-Source
 
 MAINTAINER=	henry.hu.sh@gmail.com
 COMMENT=	IBus input method module for Qt4
@@ -29,13 +28,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PROJECTHOST=	ibus
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 700042
-BROKEN=		Does not build
-.endif
-
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
