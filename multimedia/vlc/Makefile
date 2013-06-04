@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 317561 2013-05-06 23:01:58Z ehaupt $
+# $FreeBSD: multimedia/vlc/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	vlc
 DISTVERSION=	2.0.6
@@ -636,9 +636,8 @@ CONFIGURE_ARGS+=--disable-x264
 .endif
 
 .if ${PORT_OPTIONS:MXCB}
-USE_XORG=	xpm
-LIB_DEPENDS+=	xcb:${PORTSDIR}/x11/libxcb \
-		xcb-keysyms:${PORTSDIR}/x11/xcb-util-keysyms
+USE_XORG=	xcb xpm
+LIB_DEPENDS+=	xcb-keysyms:${PORTSDIR}/x11/xcb-util-keysyms
 CONFIGURE_ARGS+=--enable-xcb --with-x
 .else
 CONFIGURE_ARGS+=--disable-xcb --without-x
