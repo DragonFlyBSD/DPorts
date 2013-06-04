@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/scrot/files/patch-aa,v 1.3 2012/11/17 05:58:22 svnexp Exp $
+$FreeBSD: graphics/scrot/files/patch-aa 300896 2012-07-14 13:54:48Z beat $
 
 --- Makefile.in.orig	Wed Aug 29 13:57:11 2001
 +++ Makefile.in	Sun Jan 27 10:19:21 2002
