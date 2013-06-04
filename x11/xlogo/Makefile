@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xlogo/Makefile 313929 2013-03-11 19:14:28Z zeising $
+# $FreeBSD: x11/xlogo/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xlogo
 PORTVERSION=	1.0.4
@@ -10,7 +10,7 @@ COMMENT=	Displays the X Window System logo
 LICENSE=	MIT
 
 XORG_CAT=	app
-USE_XORG=	xrender xft xext xt xaw xp xprintutil xorg-macros
+USE_XORG=	xrender xft xext xt xaw xp xprintutil
 
 MAN1=		xlogo.1
 
