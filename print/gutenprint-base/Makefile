@@ -1,10 +1,6 @@
-# ports collection makefile for: gimp-print
-# Date Created: 2002 01 02
-# Whom: dgilbert@velocet.ca
-#
-# $FreeBSD: print/gutenprint-base/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: dgilbert@velocet.ca
+# $FreeBSD: print/gutenprint-base/Makefile 319189 2013-05-27 09:25:53Z bapt $
 #    $MCom: ports/print/gutenprint-base/Makefile,v 1.8 2007/03/30 16:45:02 ahze Exp $
-#
 
 PORTNAME?=	gutenprint
 PORTVERSION=	5.2.8
