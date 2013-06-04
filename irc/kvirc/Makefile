@@ -1,9 +1,5 @@
-# New ports collection makefile for:   kvirc
-# Date created:        05 January 2004
-# Whom:                Michael Ranner
-#
-# $FreeBSD: irc/kvirc/Makefile 316596 2013-04-26 10:44:28Z ak $
-#
+# Created by: Michael Ranner
+# $FreeBSD: irc/kvirc/Makefile 317967 2013-05-12 16:16:56Z makc $
 
 PORTNAME=	kvirc
 PORTVERSION=	4.2.0
@@ -19,7 +15,7 @@ MASTER_SITES=	ftp://ftp.kvirc.de/pub/kvirc/%SUBDIR%/ \
 MASTER_SITE_SUBDIR=	${PORTVERSION}/source
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT?=	IRC client for KDE4
+COMMENT?=	IRC client for KDE 4
 
 .if !defined(PKGNAMESUFFIX)
 CONFLICTS_INSTALL=	kvirc-qt4-4.*
@@ -40,7 +36,7 @@ MAKE_JOBS_SAFE=	yes
 MAN1=		kvirc.1
 MANLANG=	"" de fr it pt uk
 
-OPTIONS_DEFINE=	AUDIOFILE GSM PERL PYTHON
+OPTIONS_DEFINE=	AUDIOFILE GSM PERL PYTHON DEBUG
 
 AUDIOFILE_DESC=	Support for various audio formats
 GSM_DESC=	u-law to gsm audio converter support
@@ -71,11 +67,11 @@ USE_QT4+=	webkit
 CMAKE_ARGS+=	-DWITHOUT_QTWEBKIT=yes
 . endif
 .else #defined(PKGNAMESUFFIX)
-USE_KDE4=	kdelibs automoc4 kdeprefix
+USE_KDE4=	kdelibs automoc4 kdeprefix sharedmime
 PLIST_SUB+=	QT="@comment " KDE=""
 .endif #defined(PKGNAMESUFFIX)
 
-.if defined(WITH_DEBUG)
+.if ${PORT_OPTIONS:MDEBUG}
 CMAKE_ARGS+=	-DWITH_DEBUG=yes -DVERBOSE=yes
 .endif
 
