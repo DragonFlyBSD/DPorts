@@ -2,7 +2,7 @@
 # Date created:         2012-05-11
 # Whom:                 Hiroto Kagotani <hiroto.kagotani@gmail.com>
 #
-# $FreeBSD: print/examplep/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/examplep/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	examplep
 PORTVERSION=	0.04
@@ -16,7 +16,7 @@ COMMENT=	LaTeX style files for typesetting verbatim source code listings
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_ZIP=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 
 PLIST=		${WRKDIR}/pkg-plist
 
