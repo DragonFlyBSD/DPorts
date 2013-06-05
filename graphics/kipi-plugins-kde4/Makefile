@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kipi-plugins-kde4/Makefile 315762 2013-04-08 17:10:56Z makc $
+# $FreeBSD: graphics/kipi-plugins-kde4/Makefile 319675 2013-06-02 15:13:14Z tijl $
 
 PORTNAME=	kipi-plugins
 PORTVERSION=	${DIGIKAM_VER}
@@ -9,6 +9,7 @@ DISTFILES=	#
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE 4 kipi graphics plugins (meta port)
 
+.MAKE.FreeBSD_UL=	yes
 LATEST_LINK=	${PORTNAME}-kde4
 
 NO_BUILD=	yes
