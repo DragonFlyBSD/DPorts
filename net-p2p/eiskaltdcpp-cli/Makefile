@@ -2,7 +2,7 @@
 # Date created:		06 Oct @011
 # Whom:			Maxim Ignatenko <gelraen.ua@gmail.com>
 #
-# $FreeBSD: ports/net-p2p/eiskaltdcpp-cli/Makefile,v 1.2 2012/11/17 06:00:39 svnexp Exp $
+# $FreeBSD: net-p2p/eiskaltdcpp-cli/Makefile 317832 2013-05-10 17:34:56Z fjoe $
 #
 
 PORTNAME=	eiskaltdcpp-cli
@@ -11,8 +11,8 @@ CATEGORIES=	net-p2p
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	eiskaltdcpp-${DISTVERSION}
 
-MAINTAINER=	gelraen.ua@gmail.com
-COMMENT=	Shared data for EiskaltDC++ GUIs
+MAINTAINER=	fjoe@FreeBSD.org
+COMMENT=	EiskaltDC++ Direct Connect command-line interface
 
 LICENSE=	GPLv3
 
