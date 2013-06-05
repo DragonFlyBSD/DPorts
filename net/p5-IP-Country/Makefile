@@ -1,12 +1,8 @@
-# New ports collection makefile for:	net/p5-IP-Countries
-# Date created:				20 June 2005
-# Whom:					dikshie <dikshie@lapi.itb.ac.id>
-#
-# $FreeBSD: ports/net/p5-IP-Country/Makefile,v 1.13 2012/11/17 06:00:10 svnexp Exp $
-#
+# Created by: dikshie <dikshie@lapi.itb.ac.id>
+# $FreeBSD: net/p5-IP-Country/Makefile 319222 2013-05-27 12:29:00Z culot $
 
 PORTNAME=	IP-Country
-PORTVERSION=	2.27
+PORTVERSION=	2.28
 CATEGORIES=	net perl5 geography
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
