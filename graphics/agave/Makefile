@@ -1,5 +1,5 @@
 # Created by: Piotr Smyrak <smyru@heron.pl>
-# $FreeBSD: graphics/agave/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/agave/Makefile 318333 2013-05-16 20:07:39Z rakuco $
 
 PORTNAME=	agave
 PORTVERSION=	0.4.2
@@ -7,7 +7,7 @@ PORTREVISION=	10
 CATEGORIES=	graphics gnome
 MASTER_SITES=	http://download.gna.org/colorscheme/releases/
 
-MAINTAINER=	smyru@heron.pl
+MAINTAINER=	ps.ports@smyrak.com
 COMMENT=	A color scheme builder for the GNOME desktop
 
 LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
