@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Net::FastCGI
-# Date created:		02 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Net-FastCGI/Makefile,v 1.8 2012/11/17 06:02:52 svnexp Exp $
-#
+# $FreeBSD: www/p5-Net-FastCGI/Makefile 318725 2013-05-21 22:19:33Z kuriyama $
 
 PORTNAME=	Net-FastCGI
-PORTVERSION=	0.13
+PORTVERSION=	0.14
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:CHANSEN
