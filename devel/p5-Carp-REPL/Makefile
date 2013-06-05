@@ -1,15 +1,11 @@
-# New ports collection makefile for:	p5-Carp-REPL
-# Date created:		2011-05-08
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Carp-REPL/Makefile,v 1.4 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Carp-REPL/Makefile 319361 2013-05-29 08:52:21Z tobez $
 
 PORTNAME=	Carp-REPL
-PORTVERSION=	0.15
+PORTVERSION=	0.16
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:SARTAK
+MASTER_SITE_SUBDIR=	CPAN:TSIBLEY
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
