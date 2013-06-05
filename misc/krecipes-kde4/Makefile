@@ -1,9 +1,4 @@
-# ports collection makefile for:	krecipies
-# Date created:				19 March 2005
-# Whom:					hank
-#
-# $FreeBSD: misc/krecipes-kde4/Makefile 316596 2013-04-26 10:44:28Z ak $
-#
+# $FreeBSD: misc/krecipes-kde4/Makefile 317967 2013-05-12 16:16:56Z makc $
 
 PORTNAME=	krecipes
 DISTVERSION=	2.0-beta2
