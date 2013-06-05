@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: emulators/catapult/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: emulators/catapult/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	catapult
 PORTVERSION=	0.9.1
@@ -24,8 +24,7 @@ LIB_DEPENDS=	mspack:${PORTSDIR}/archivers/libmspack \
 		tiff:${PORTSDIR}/graphics/tiff \
 		freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
-		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		xcb:${PORTSDIR}/x11/libxcb
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 RUN_DEPENDS=	openmsx:${PORTSDIR}/emulators/openmsx
 
 OPTIONS_DEFINE=	DEBUG DOCS
@@ -35,7 +34,7 @@ USE_WX=		2.6+
 USE_PYTHON_BUILD=yes
 USE_GMAKE=	yes
 USES=		gettext iconv
-USE_XORG=	ice pixman sm x11 xau xcomposite xcursor xdamage xdmcp \
+USE_XORG=	ice pixman sm x11 xau xcb xcomposite xcursor xdamage xdmcp \
 		xext xfixes xi xinerama xrandr xrender xxf86vm
 MAKEFILE=	GNUmakefile
 MAKE_ARGS=	INSTALL_BASE="${PREFIX}" \
