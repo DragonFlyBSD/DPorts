@@ -1,8 +1,9 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: print/tex-dvipdfmx/Makefile 317588 2013-05-07 08:44:32Z hrs $
+# $FreeBSD: print/tex-dvipdfmx/Makefile 318747 2013-05-22 08:26:53Z hrs $
 
 PORTNAME=	dvipdfmx
 PORTVERSION=	20120420
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2012/
 PKGNAMEPREFIX=	tex-
@@ -23,7 +24,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/fonts/adobe-cmaps/ai0/CMap/Identity-H:${PORTSDIR
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_TEX=	kpathsea web2c texmf texhash
+USE_TEX=	texlive kpathsea web2c texmf texhash
 TEXHASHDIR=	${TEXMFDISTDIR} ${TEXMFDIR}
 USES=		pkgconfig
 EXTRACT_AFTER_ARGS=	${EXTRACT_FILES:S,^,${DISTNAME}/,}
@@ -36,9 +37,12 @@ EXTRACT_FILES= \
 EXTRACT_AFTER_ARGS_TEXMF= \
 	| ${TAR} -xf - -C ${PREFIX}/share \
 	--strip-components 1 --no-same-permission --no-same-owner \
+	${EXCLUDE_FILES_TEXMF:S,^,--exclude ${DISTNAME_TEXMF}/,} \
 	${EXTRACT_FILES_TEXMF:S,^,${DISTNAME_TEXMF}/,}
 DISTVERSION_TEXMF=	20120701
 DISTNAME_TEXMF=	texlive-${DISTVERSION_TEXMF}-texmf
+EXCLUDE_FILES_TEXMF= \
+	texmf/fonts/map/dvipdfmx/updmap/kanjix.map
 EXTRACT_FILES_TEXMF= \
 	texmf-dist/fonts/map/dvipdfm/ \
 	texmf/dvipdfm/config/ \
