@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-applets/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/gnome-applets/Makefile 318111 2013-05-13 15:40:04Z kwm $
 #   $MCom: ports/x11/gnome-applets/Makefile,v 1.219 2011/04/10 19:41:38 mezz Exp $
 
 PORTNAME=	gnome-applets
@@ -41,13 +41,13 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas \
 		mixer.schemas multiload.schemas stickynotes.schemas
 
-OPTIONS_DEFINE=	MINI_COMMANDER
+OPTIONS_DEFINE=	MINI_COMMANDER NOTIFY
 MINI_COMMANDER_DESC=	Mini-commander applet
 
 .include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/libdata/pkgconfig/libnotify.pc) || \
-	!${PORT_OPTIONS:MNOTIFY}
+	${PORT_OPTIONS:MNOTIFY}
 LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
 .endif
 
