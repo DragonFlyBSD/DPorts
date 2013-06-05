@@ -1,8 +1,8 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: graphics/edje/Makefile 316272 2013-04-22 20:35:19Z gblach $
+# $FreeBSD: graphics/edje/Makefile 318561 2013-05-20 01:21:47Z gblach $
 
 PORTNAME=	edje
-PORTVERSION=	1.7.6
+PORTVERSION=	1.7.7
 PORTEPOCH=	2
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
@@ -12,8 +12,6 @@ MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	Edje is a complex graphical design and layout engine
 
 LICENSE=	BSD
-
-RUN_DEPENDS=	update-mime-database:${PORTSDIR}/misc/shared-mime-info
 
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
