@@ -1,38 +1,14 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: mail/claws-mail-python/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: mail/claws-mail-python/Makefile 317877 2013-05-11 14:10:28Z pawel $
 
 PORTNAME=	python
-PORTVERSION=	0.11
-CATEGORIES=	mail
-MASTER_SITES=	http://www.claws-mail.org/downloads/plugins/
-PKGNAMEPREFIX=	claws-mail-
-DISTNAME=	python_plugin-${PORTVERSION}
+PORTREVISION=	0
 
-MAINTAINER=	pawel@FreeBSD.org
 COMMENT=	Python scripting plugin for Claws Mail
 
-LICENSE=	GPLv3
-
-BUILD_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
-RUN_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
-
 USE_GNOME=	pygtk2
-USE_GMAKE=	yes
-USE_XORG=	x11
-USE_AUTOTOOLS=	autoconf
-MAKE_JOBS_SAFE=	yes
 
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+CLAWS_PLUGINS_BUILD=	python
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
-
+.include "../claws-mail/Makefile.claws"
 .include <bsd.port.mk>
