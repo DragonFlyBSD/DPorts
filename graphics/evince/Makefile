@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/evince/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: graphics/evince/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #    $MCom: ports/graphics/evince/Makefile,v 1.159 2012/09/01 23:02:10 mezz Exp $
 
 PORTNAME=	evince
@@ -55,7 +55,7 @@ DJVU_DESC=	DJVU support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDVI} || ${PORT_OPTIONS:MT1LIB}
-USE_TEX=	tetex
+USE_TEX=	latex
 
 CONFIGURE_ARGS+=	--enable-dvi
 GCONF_SCHEMAS+=	evince-thumbnailer-dvi.schemas
