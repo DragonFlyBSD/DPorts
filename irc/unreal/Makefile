@@ -1,8 +1,9 @@
 # Created by: Gerrit Beine (<tux@pinguru.net>)
-# $FreeBSD: irc/unreal/Makefile 315287 2013-03-26 12:36:21Z bapt $
+# $FreeBSD: irc/unreal/Makefile 318254 2013-05-15 18:30:49Z zi $
 
 PORTNAME=	Unreal
 PORTVERSION=	3.2.9
+PORTREVISION=	1
 CATEGORIES=	irc ipv6
 MASTER_SITES=	http://www.unrealircd.com/downloads/
 DISTNAME=	${PORTNAME}${PORTVERSION}
@@ -13,7 +14,7 @@ COMMENT=	Unreal - the next generation ircd
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	cares.2:${PORTSDIR}/dns/c-ares
+LIB_DEPENDS=	cares:${PORTSDIR}/dns/c-ares
 
 WRKSRC=		${WRKDIR}/${DISTNAME:R}
 
@@ -85,7 +86,7 @@ CONFIGURE_ARGS+=	--enable-ssl
 .endif
 
 .if ${PORT_OPTIONS:MREMOTE}
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 CONFIGURE_ARGS+=	--enable-libcurl=${LOCALBASE}
 .endif
 
