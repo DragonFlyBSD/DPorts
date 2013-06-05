@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-engine-sdl/Makefile 317205 2013-05-03 13:33:48Z bapt $
+# $FreeBSD: graphics/evas-engine-sdl/Makefile 318442 2013-05-18 19:36:31Z gblach $
 
 PORTNAME=	engine-sdl
-PORTVERSION=	1.7.6.1
+PORTVERSION=	1.7.7
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -19,9 +19,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-.if defined(.PARSEDIR)
 USE_GMAKE=	yes
-.endif
 USE_EFL=	evas librt_hack libtool_hack
 USE_SDL=	sdl
 USE_LDCONFIG=	yes
