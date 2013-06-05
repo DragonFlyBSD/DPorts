@@ -1,7 +1,8 @@
-# $FreeBSD: devel/tex-kpathsea/Makefile 317588 2013-05-07 08:44:32Z hrs $
+# $FreeBSD: devel/tex-kpathsea/Makefile 318747 2013-05-22 08:26:53Z hrs $
 
 PORTNAME=	kpathsea
 PORTVERSION=	6.1.0
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2012/
 PKGNAMEPREFIX=	tex-
@@ -12,9 +13,9 @@ MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Path searching library for TeX
 
 USE_XZ=		yes
-USE_TEX=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+USE_TEX=	texlive
 EXTRACT_AFTER_ARGS=	${EXTRACT_FILES}
 EXTRACT_FILES=	${DISTNAME}/build-aux \
 		${DISTNAME}/texk/kpathsea

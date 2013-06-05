@@ -1,4 +1,4 @@
-@comment $FreeBSD: devel/tex-kpathsea/pkg-plist 317452 2013-05-06 00:44:22Z hrs $
+@comment $FreeBSD: devel/tex-kpathsea/pkg-plist 318747 2013-05-22 08:26:53Z hrs $
 bin/kpseaccess
 bin/kpsereadlink
 bin/kpsestat
@@ -58,12 +58,6 @@ lib/libkpathsea.a
 lib/libkpathsea.la
 lib/libkpathsea.so
 lib/libkpathsea.so.7
-%%TEXMFDIR%%/web2c/mktex.opt
-%%TEXMFDIR%%/web2c/mktexdir
-%%TEXMFDIR%%/web2c/mktexdir.opt
-%%TEXMFDIR%%/web2c/mktexnam
-%%TEXMFDIR%%/web2c/mktexnam.opt
-%%TEXMFDIR%%/web2c/mktexupd
 %%TEXMFDIR%%/web2c/texmf.cnf
 @dirrmtry %%TEXMFDIR%%/web2c
 @dirrmtry %%TEXMFDIR%%
