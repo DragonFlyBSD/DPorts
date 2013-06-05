@@ -1,18 +1,17 @@
-# New ports collection makefile for:	p5-Test-Inline
-# Date created:				Mon Sep 12
-# Whom:					Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Inline/Makefile,v 1.32 2012/12/17 15:02:09 svnexp Exp $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-Inline/Makefile 318288 2013-05-16 08:53:54Z culot $
 
 PORTNAME=	Test-Inline
-PORTVERSION=	2.212
+PORTVERSION=	2.213
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	Test::Inline - Inlining your tests next to the code being tested
+COMMENT=	Inlining your tests next to the code being tested
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 RUN_DEPENDS=	p5-Algorithm-Dependency>=1.02:${PORTSDIR}/devel/p5-Algorithm-Dependency \
 		p5-Class-Autouse>=1.15:${PORTSDIR}/devel/p5-Class-Autouse \
