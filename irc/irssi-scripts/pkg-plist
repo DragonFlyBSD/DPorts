@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/irc/irssi-scripts/pkg-plist,v 1.9 2012/11/17 05:58:29 svnexp Exp $
+@comment $FreeBSD: irc/irssi-scripts/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 share/irssi/scripts/8-ball.pl
 share/irssi/scripts/UNIBG-autoident.pl
 share/irssi/scripts/accent.pl
