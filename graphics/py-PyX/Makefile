@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: graphics/py-PyX/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: graphics/py-PyX/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	PyX
 PORTVERSION=	0.12.1
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
-USE_TEX=	tetex
+USE_TEX=	latex:build
 
 OPTIONS_DEFINE=		T1CODE KPATHSEA
 OPTIONS_DEFAULT=	T1CODE KPATHSEA
