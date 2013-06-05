@@ -1,18 +1,14 @@
-# New ports collection makefile for:    zipper.app
-# Date created:         31 Aug 2006
-# Whom:                 gurkan@phys.ethz.ch
-#
-# $FreeBSD: ports/archivers/zipper/Makefile,v 1.15 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: gurkan@phys.ethz.ch
+# $FreeBSD: archivers/zipper/Makefile 317840 2013-05-10 20:43:23Z lme $
 
 PORTNAME=	zipper
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	archivers gnustep
 MASTER_SITES=	${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	gap
 DISTNAME=	Zipper-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	5u623l20@gmail.com
 COMMENT=	Tool for inspecting the contents of a compressed archive
 
 USE_GNUSTEP=	yes
