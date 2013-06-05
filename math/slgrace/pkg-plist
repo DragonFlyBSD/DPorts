@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/math/slgrace/pkg-plist,v 1.3 2012/11/17 05:59:31 svnexp Exp $
+@comment $FreeBSD: math/slgrace/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/slang/v2/modules/grace-module.so.%%VERSION%%
 lib/slang/v2/modules/grace-module.so
 share/slsh/local-packages/help/grace.hlp

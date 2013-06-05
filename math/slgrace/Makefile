@@ -1,4 +1,4 @@
-# $FreeBSD: ports/math/slgrace/Makefile,v 1.14 2012/11/17 05:59:31 svnexp Exp $
+# $FreeBSD: math/slgrace/Makefile 319524 2013-05-31 15:20:11Z miwi $
 
 PORTNAME=	slgrace
 PORTVERSION=	0.2.2
@@ -23,6 +23,8 @@ GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 PORTDOCS=	*
 PLIST_SUB=	VERSION=${PORTVERSION}
+
+.include <bsd.port.options.mk>
 
 post-patch:
 .if empty(PORT_OPTIONS:MDOCS)
