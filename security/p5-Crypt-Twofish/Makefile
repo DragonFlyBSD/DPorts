@@ -1,8 +1,8 @@
 # Created by: will
-# $FreeBSD: security/p5-Crypt-Twofish/Makefile 316702 2013-04-28 06:00:55Z culot $
+# $FreeBSD: security/p5-Crypt-Twofish/Makefile 318753 2013-05-22 09:25:12Z tobez $
 
 PORTNAME=	Crypt-Twofish
-PORTVERSION=	2.16
+PORTVERSION=	2.17
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
