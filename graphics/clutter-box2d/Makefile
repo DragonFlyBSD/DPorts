@@ -1,13 +1,9 @@
-# New ports collection makefile for:	clutter-box2d
-# Date created:		2008-12-25
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/clutter-box2d/Makefile,v 1.12 2012/11/17 05:58:02 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: graphics/clutter-box2d/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	clutter-box2d
 PORTVERSION=	0.10.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://source.clutter-project.org/sources/${PORTNAME}/0.10/
 
@@ -18,12 +14,14 @@ LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack ltverhack gnomeprefix
+USES=		pathfix
+USE_GNOME=	ltverhack gnomeprefix
+USE_GL=		gl
 USE_XORG=	xp x11
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-introspection=no
 
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
