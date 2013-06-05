@@ -2,7 +2,7 @@
 # Date created:		15 Aug 2010
 # Whom:			idolum@users.sourceforge.net
 #
-# $FreeBSD: print/latex-logreq/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-logreq/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	logreq
 PORTVERSION=	1.0
@@ -18,7 +18,7 @@ COMMENT=	Support for automation of the LaTeX workflow
 RUN_DEPENDS=	${LOCALBASE}/${TEXMFLOCAL}/tex/latex/etoolbox/etoolbox.sty:${PORTSDIR}/print/latex-etoolbox
 
 USE_ZIP=	YES
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	YES
 PLIST=		${WRKDIR}/pkg-plist
 
