@@ -1,4 +1,4 @@
-# $FreeBSD: print/latex-ltablex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-ltablex/Makefile 319647 2013-06-02 10:21:14Z rakuco $
 
 PORTNAME=	ltablex
 PORTVERSION=	1.0
@@ -11,14 +11,13 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	rakuco/latex
 PKGNAMEPREFIX=	latex-
-DISTNAME=	${PORTNAME}
 DIST_SUBDIR=	latex
 
 MAINTAINER=	rakuco@FreeBSD.org
 COMMENT=	Combines the features of both the tabularx and longtable packages
 
 USE_ZIP=	YES
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	YES
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} \
 		CLASSDIR=${CLASSDIR} \
