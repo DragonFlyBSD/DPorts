@@ -1,16 +1,18 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: devel/libiqxmlrpc/Makefile 317730 2013-05-09 10:01:26Z fjoe $
+# $FreeBSD: devel/libiqxmlrpc/Makefile 318425 2013-05-18 11:16:22Z fjoe $
 
 PORTNAME=	libiqxmlrpc
 PORTVERSION=	0.12.4
-PORTREVISION=	0
-CATEGORIES=	devel
+PORTREVISION=	1
+CATEGORIES=	devel net
 MASTER_SITES=	SF
 
 MAINTAINER=	fjoe@FreeBSD.org
 COMMENT=	Free, object-oriented XML-RPC implementation written in C++
 
+.if !defined(NOPORTDOCS)
 BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen
+.endif
 LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
 
 LICENSE=	BSD
