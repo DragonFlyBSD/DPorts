@@ -2,7 +2,7 @@
 # Date created:		2005-07-20
 # Whom:			Nicola Vitale <nivit@email.it>
 #
-# $FreeBSD: print/latex-circ/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-circ/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	circ
@@ -18,7 +18,7 @@ MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	A LaTeX package for typesetting circuit diagrams
 
 USE_ZIP=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 
 # We need to install in the global texmf-local directory
 PREFIX=		${LOCALBASE}
