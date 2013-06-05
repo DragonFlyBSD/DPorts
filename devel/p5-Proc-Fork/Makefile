@@ -1,8 +1,9 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Proc-Fork/Makefile,v 1.13 2013/01/27 08:41:34 svnexp Exp $
+# $FreeBSD: devel/p5-Proc-Fork/Makefile 318285 2013-05-16 08:39:34Z miwi $
 
 PORTNAME=	Proc-Fork
 PORTVERSION=	0.802
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,7 +13,8 @@ COMMENT=	Proc::Fork - Simple, intuitive interface to the fork() system call
 
 BUILD_DEPENDS=	p5-Exporter-Tidy>=0:${PORTSDIR}/devel/p5-Exporter-Tidy \
 		p5-Object-Tiny-Lvalue>=0:${PORTSDIR}/devel/p5-Object-Tiny-Lvalue
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	p5-Exporter-Tidy>=0:${PORTSDIR}/devel/p5-Exporter-Tidy \
+		p5-Object-Tiny-Lvalue>=0:${PORTSDIR}/devel/p5-Object-Tiny-Lvalue
 
 PERL_CONFIGURE=	yes
 
