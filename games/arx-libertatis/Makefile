@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/arx-libertatis/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/arx-libertatis/Makefile 319495 2013-05-31 14:40:56Z jgh $
 
 PORTNAME=	arx-libertatis
 PORTVERSION=	1.0.3
@@ -33,11 +33,12 @@ MAN6=		arx.6
 
 PORTDOCS=	AUTHORS CHANGELOG README.md
 
-OPTIONS=	CRASHREPORTER "Build crash reporter (requires Qt4)" off
+OPTIONS_DEFINE=	CRASHREPORTER 
+CRASHREPORTER_DESC=	Build crash reporter (requires Qt4)
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_CRASHREPORTER)
+.if ${PORT_OPTIONS:MCRASHREPORTER}
 USE_QT4=	corelib gui network rcc_build moc_build uic_build qmake_build
 CMAKE_ARGS+=	-DBUILD_CRASHREPORTER=ON
 PLIST_SUB+=	CRASHREPORTER=""
@@ -47,7 +48,7 @@ PLIST_SUB+=	CRASHREPORTER="@comment "
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
