@@ -1,9 +1,9 @@
 # Created by: chuckr@freebsd.org
-# $FreeBSD: ports/math/octave/Makefile,v 1.146 2013/01/31 13:43:58 svnexp Exp $
+# $FreeBSD: math/octave/Makefile 319398 2013-05-29 23:43:55Z bf $
 
 PORTNAME=	octave
-PORTVERSION=	3.6.3
-PORTREVISION=	3
+PORTVERSION=	3.6.4
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/octave/ \
 		ftp://ftp.u-aizu.ac.jp/pub/SciEng/numanal/Octave/bleeding-edge/
@@ -14,7 +14,6 @@ COMMENT=	High-level interactive language for numerical computations
 BUILD_DEPENDS+=	gnuplot:${PORTSDIR}/math/gnuplot \
 		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf \
 		gsed:${PORTSDIR}/textproc/gsed \
-		dvips:${PORTSDIR}/print/dvipsk-tetex \
 		${LOCALBASE}/bin/makeinfo:${PORTSDIR}/print/texinfo
 RUN_DEPENDS=	gnuplot:${PORTSDIR}/math/gnuplot \
 		gsed:${PORTSDIR}/textproc/gsed \
@@ -36,6 +35,7 @@ LIB_DEPENDS=	GraphicsMagick:${PORTSDIR}/graphics/GraphicsMagick \
 USE_BZIP2=	yes
 USE_PERL5_BUILD=yes
 USE_GMAKE=	yes
+USE_TEX=	dvipsk:build
 GNU_CONFIGURE=	yes
 #USE_AUTOTOOLS=	autoconf
 
