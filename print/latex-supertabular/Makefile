@@ -2,7 +2,7 @@
 # Date created:				Aug 20 2008
 # Whom:					Jorge Niedbalski <niedbalski@gmail.com>
 #
-# $FreeBSD: print/latex-supertabular/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-supertabular/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	latex-supertabular
@@ -16,7 +16,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	niedbalski@gmail.com
 COMMENT=	A LaTeX package for a tabular that spans multiple pages
 
-USE_TEX=	tetex
+USE_TEX=	latex
 PLIST_SUB=	TEXMFLOCAL=${TEXMFLOCAL} MKTEXLSR=${MKTEXLSR} \
 		CLASSDIR=${CLASSDIR}
 USE_GMAKE=	yes
