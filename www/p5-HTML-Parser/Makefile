@@ -1,8 +1,8 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Parser/Makefile 316904 2013-04-30 09:12:37Z jadawin $
+# $FreeBSD: www/p5-HTML-Parser/Makefile 318360 2013-05-17 08:09:57Z jadawin $
 
 PORTNAME=	HTML-Parser
-PORTVERSION=	3.70
+PORTVERSION=	3.71
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
