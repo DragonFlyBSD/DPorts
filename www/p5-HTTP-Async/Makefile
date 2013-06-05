@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-HTTP-Async
-# Date created:				2007/02/14
-# Whom:					chinsan
-#
-# $FreeBSD: ports/www/p5-HTTP-Async/Makefile,v 1.8 2012/12/05 12:05:46 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: www/p5-HTTP-Async/Makefile 319295 2013-05-28 08:24:23Z tobez $
 
 PORTNAME=	HTTP-Async
-PORTVERSION=	0.11
+PORTVERSION=	0.18
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
