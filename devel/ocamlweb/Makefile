@@ -2,7 +2,7 @@
 # Date created:				4 February 2001
 # Whom:					Patrick Doane <patrick@watson.org>
 #
-# $FreeBSD: devel/ocamlweb/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: devel/ocamlweb/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	ocamlweb
@@ -18,7 +18,7 @@ COMMENT=	A literate programming tool for Objective Caml
 
 BUILD_DEPENDS=	ocamlc:${PORTSDIR}/lang/ocaml
 
-USE_TEX=	tetex
+USE_TEX=	latex
 GNU_CONFIGURE= yes
 PLIST_SUB+=	TEXMFDIR=${TEXMFDIR} \
 		MKTEXLSR=${MKTEXLSR}
