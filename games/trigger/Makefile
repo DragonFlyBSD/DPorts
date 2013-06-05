@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: ports/games/trigger/Makefile,v 1.30 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/trigger/Makefile 317947 2013-05-12 11:48:49Z makc $
 
 PORTNAME=	trigger
 PORTVERSION=	0.6.0
@@ -32,6 +32,8 @@ DESKTOP_ENTRIES="Trigger" "${COMMENT}" "" \
 		"trigger" "" false
 
 PORTDOCS=	README-stereo.txt README.txt
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
