@@ -1,12 +1,9 @@
-# New ports collection makefile for:	gnulib
-# Date created:		20 March 2010
-# Whom:			Johans van Selst <johans@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/gnulib/Makefile,v 1.18 2012/11/17 05:55:46 svnexp Exp $
-#
+# Created by: Johans van Selst <johans@FreeBSD.org>
+# $FreeBSD: devel/gnulib/Makefile 318198 2013-05-14 20:11:14Z johans $
 
 PORTNAME=	gnulib
 PORTVERSION=	20120404
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://erislabs.net/ianb/projects/gnulib/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-stable
@@ -17,7 +14,7 @@ COMMENT=	GNU portability library
 BUILD_DEPENDS=	${LOCALBASE}/bin/makeinfo:${PORTSDIR}/print/texinfo
 
 USE_GMAKE=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	yes
 
 PLIST_FILES=	bin/check-module bin/gnulib-tool
 INFO=		${PORTNAME}
