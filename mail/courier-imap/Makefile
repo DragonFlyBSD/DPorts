@@ -1,12 +1,8 @@
-# New ports collection makefile for: courierimap
-# Date created:		19 Feb 2000
-# Whom:			Neil Blakey-Milner
-#
-# $FreeBSD: ports/mail/courier-imap/Makefile,v 1.142 2013/01/15 13:41:34 svnexp Exp $
-#
+# Created by: Neil Blakey-Milner
+# $FreeBSD: mail/courier-imap/Makefile 318826 2013-05-23 02:19:02Z jgh $
 
 PORTNAME=	courier-imap
-PORTVERSION=	4.12.0
+PORTVERSION=	4.13
 PORTEPOCH=	2
 CATEGORIES=	mail ipv6
 MASTER_SITES=	SF/courier/imap/${PORTVERSION}
@@ -36,11 +32,9 @@ MAKE_ENV:=	${CONFIGURE_ENV}
 # WITH_SYSLOG_FACILITY:         The syslogfacility to use
 #
 
-OPTIONS=	FAM		"Build in fam support for IDLE command"		off \
-		TRASHQUOTA	"Include deleted mails in the quota"		off \
-		GDBM		"Use gdbm db instead of system bdb"		off \
-		IPV6		"Build with IPv6 support"			on  \
-		DRAC		"Build with DRAC support"			off
+OPTIONS_DEFINE=	FAM TRASHQUOTA GDBM IPV6
+FAM_DESC=	Fam support for IDLE command
+TRASHQUOTA_DESC=	Include deleted mails in the quota
 
 .if exists(${.CURDIR}/../../security/courier-authlib/Makefile.opt)
 .include "${.CURDIR}/../../security/courier-authlib/Makefile.opt"
@@ -64,22 +58,16 @@ CONFIGURE_ARGS=	--sysconfdir=${CONFDIR} \
 
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_DRAC)
-PATCH_SITES=	http://www.smalltown.ne.jp/~usata/pub/patch/
-PATCHFILES=	courier-imap-4.8.1-drac.patch
-BUILD_DEPENDS+=	${LOCALBASE}/lib/libdrac.a:${PORTSDIR}/mail/drac
-.endif
-
 .if exists(${.CURDIR}/../../security/courier-authlib/Makefile.dep)
 .include "${.CURDIR}/../../security/courier-authlib/Makefile.dep"
 .endif
 
-.if defined(WITH_SYSLOG_FACILITY)
+.if ${PORT_OPTIONS:MSYSLOG_FACILITY}
 CONFIGURE_ARGS+=--with-syslog=${WITH_SYSLOG_FACILITY}
 .endif
 
-.if defined(WITH_AUTH_USERDB)
-.if defined(WITH_GDBM)
+.if ${PORT_OPTIONS:MAUTH_USERDB}
+.if ${PORT_OPTIONS:MGDBM}
 CONFIGURE_ARGS+=--with-db=gdbm --with-userdb=${USERDB}
 LIB_DEPENDS+=	gdbm.4:${PORTSDIR}/databases/gdbm
 .else
@@ -87,15 +75,15 @@ CONFIGURE_ARGS+=--with-db=db  --with-userdb=${USERDB}
 .endif
 .endif
 
-.if defined(WITHOUT_IPV6)
+.if ! ${PORT_OPTIONS:MIPV6}
 CONFIGURE_ARGS+=--without-ipv6
 .endif
 
-.if defined(WITH_TRASHQUOTA)
+.if ${PORT_OPTIONS:MTRASHQUOTA}
 CONFIGURE_ARGS+=--with-trashquota
 .endif
 
-.if defined(WITH_FAM)
+.if ${PORT_OPTIONS:MFAM}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_FAM=	yes
@@ -113,7 +101,7 @@ EXTRA_DOCS=	AUTHORS INSTALL NEWS imap/ChangeLog imap/README \
 		maildir/README.sharedfolders.txt tcpd/README.couriertls \
 
 post-patch:
-.if !defined(WITH_FAM)
+.if ! ${PORT_OPTIONS:MFAM}
 	@${REINPLACE_CMD} -e 's|$$LIBFAM||g; s|HAVE_FAM|DO_NOT_HAVE_FAM|g' \
 		${WRKSRC}/maildir/configure
 .endif
@@ -131,7 +119,7 @@ post-install:
 .for i in imapd pop3d
 	${INSTALL_DATA} ${WRKSRC}/imap/${i}.cnf ${CONFDIR}/${i}.cnf.dist
 .endfor
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for a in ${EXTRA_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${a} ${DOCSDIR}
