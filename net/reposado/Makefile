@@ -2,27 +2,29 @@
 # Date created:		23 Jun 2012
 # Whom:			Masaki TAGAWA <masaki@club.kyutech.ac.jp>
 #
-# $FreeBSD: ports/net/reposado/Makefile,v 1.3 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: net/reposado/Makefile 319424 2013-05-30 13:05:34Z swills $
 #
 
 PORTNAME=	reposado
-PORTVERSION=	0.0.20120810
+PORTVERSION=	0.0.20130415
 CATEGORIES=	net
-MASTER_SITES=	https://nodeload.github.com/wdas/reposado/zipball/${TAG}?dummy=/
-DISTNAME=	${PORTNAME}-${PORTVERSION:S/0.0.//}
 
 MAINTAINER=	masaki@club.kyutech.ac.jp
 COMMENT=	Tools for replicating the Apple's Software Update Service
 
 RUN_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	wdas
+GH_COMMIT=	${GH_TAGNAME}
+GH_PROJECT=	${PORTNAME}
+GH_TAGNAME=	1bcf4f0
+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USE_PYTHON=	2.6+
 USE_PYDISTUTILS=	yes
 
-TAG=		edfdb87
-WRKSRC=		${WRKDIR}/wdas-reposado-${TAG}
 SUB_FILES=	pkg-message
 
 post-patch:
