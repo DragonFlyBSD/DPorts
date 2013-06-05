@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Business::ISBN
-# Date created:				30 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/misc/p5-Business-ISBN/Makefile,v 1.15 2012/11/17 05:59:43 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: misc/p5-Business-ISBN/Makefile 319689 2013-06-02 17:02:45Z eadler $
 
 PORTNAME=	Business-ISBN
-PORTVERSION=	2.05
+PORTVERSION=	2.06
 CATEGORIES=	misc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
