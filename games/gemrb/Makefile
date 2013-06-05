@@ -1,7 +1,8 @@
-# $FreeBSD: games/gemrb/Makefile 314960 2013-03-22 20:06:14Z makc $
+# Created by: Timothy Beyer <beyert@cs.ucr.edu>
+# $FreeBSD: games/gemrb/Makefile 317866 2013-05-11 12:03:02Z ak $
 
 PORTNAME=	gemrb
-PORTVERSION=	0.7.2
+PORTVERSION=	0.8.0
 CATEGORIES=	games emulators
 MASTER_SITES=	SF/${PORTNAME}/GemRB%20Sources/GemRB%20${PORTVERSION}%20Sources
 
