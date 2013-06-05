@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: print/muttprint/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/muttprint/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME?=	muttprint
 PORTVERSION=	0.72d
@@ -30,7 +30,7 @@ NO_BUILD=	yes
 PLIST_SUB+=	LANGINFO="@comment "
 
 REINPLACE_ARGS=	-i ""
-USE_TEX=	tetex
+USE_TEX=	latex
 USE_GMAKE=	yes
 
 MAN1=		muttprint.1
