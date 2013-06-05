@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Math-Symbolic
-# Date created:				15 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-Symbolic/Makefile,v 1.17 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Symbolic/Makefile 318227 2013-05-15 08:24:12Z tobez $
 
 PORTNAME=	Math-Symbolic
-PORTVERSION=	0.606
+PORTVERSION=	0.609
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SMUELLER
