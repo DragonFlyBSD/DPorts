@@ -1,10 +1,10 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: x11-wm/e17-module-cpu/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11-wm/e17-module-cpu/Makefile 318126 2013-05-13 19:56:09Z gblach $
 
 PORTNAME=	cpu
-PORTVERSION=	20120918
+PORTVERSION=	20130510
 CATEGORIES=	x11-wm enlightenment
-MASTER_SITES=	http://files.roorback.net/e17/modules/
+MASTER_SITES=	LOCAL/gblach/e17/modules/
 PKGNAMEPREFIX=	e17-module-
 
 MAINTAINER=	gblach@FreeBSD.org
