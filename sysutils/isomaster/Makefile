@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-# $FreeBSD: sysutils/isomaster/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: sysutils/isomaster/Makefile 319181 2013-05-27 09:05:14Z bsam $
 
 PORTNAME=	isomaster
 PORTVERSION=	1.3.9
@@ -15,8 +15,8 @@ LIB_DEPENDS=	iniparser:${PORTSDIR}/devel/iniparser
 RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 
 USE_BZIP2=	yes
-USE_GNOME=	desktopfileutils intlhack gnomehier gtk20
-USES=		gettext
+USE_GNOME=	intlhack gnomehier gtk20
+USES=		desktop-file-utils gettext
 USE_GMAKE=	yes
 MAKE_ENV=	DEFAULT_VIEWER="xdg-open" USE_SYSTEM_INIPARSER=1
 MAKE_JOBS_SAFE=	yes
@@ -49,8 +49,5 @@ do-install:
 .endfor
 	@${MKDIR} ${DESKTOPDIR}
 	(cd ${WRKSRC} && ${INSTALL_DATA} isomaster.desktop ${DESKTOPDIR})
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.mk>
