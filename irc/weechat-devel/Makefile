@@ -1,8 +1,7 @@
-# $FreeBSD: irc/weechat-devel/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: irc/weechat-devel/Makefile 318247 2013-05-15 16:26:17Z jase $
 
 PORTNAME=	weechat
-PORTVERSION=	20130301
-PORTREVISION=	1
+PORTVERSION=	20130514
 CATEGORIES=	irc
 MASTER_SITES=	http://perturb.me.uk/distfiles/ \
 		${MASTER_SITE_LOCAL}
@@ -26,7 +25,7 @@ WANT_PERL=	yes
 LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
-GITDESC=	v0.4.0-85-g11396b3
+GITDESC=	v0.4.1-rc2-2-g0c66b91
 GITREV!=	echo "${GITDESC}" | sed -E 's/^.*-g(.{7})$$/\1/'
 #GITREV=	01a1316
 WRKSRC=	${WRKDIR}/${PORTNAME}-${GITREV}
@@ -35,7 +34,8 @@ WRKSRC=	${WRKDIR}/${PORTNAME}-${GITREV}
 # bsd.cmake.mk to set the cmake build type to Debug instead of
 # Release.
 
-OPTIONS_DEFINE=	RUBY PYTHON PERL TCL LUA CHARSET BACKTRACE DEBUG ASPELL GNUTLS NLS DOCUMENTATION COLOR256
+OPTIONS_DEFINE=	RUBY PYTHON PERL TCL LUA CHARSET BACKTRACE DEBUG ASPELL \
+		GNUTLS NLS DOCUMENTATION COLOR256 ICON
 OPTIONS_DEFAULT=CHARSET BACKTRACE DEBUG
 
 BACKTRACE_DESC=	Provide crash backtraces
@@ -47,6 +47,7 @@ PYTHON_DESC=	Python scripting support
 RUBY_DESC=	Ruby scripting support
 TCL_DESC=	Tcl scripting support
 COLOR256_DESC=	Use ncurses port for 256 color support
+ICON_DESC=	Desktop icon
 
 .include <bsd.port.options.mk>
 
@@ -150,6 +151,12 @@ CMAKE_ARGS+=	-DNCURSES_INCLUDE_PATH=${LOCALBASE}/include/ncurses
 USES+=		ncurses
 .endif
 
+.if ${PORT_OPTIONS:MICON}
+PLIST_SUB+=	ICON=""
+.else
+PLIST_SUB+=	ICON="@comment "
+.endif
+
 MAN1=	weechat-curses.1
 
 post-patch:
@@ -161,6 +168,9 @@ post-patch:
 .endfor
 .if empty(PORT_OPTIONS:MBACKTRACE)
 	@${REINPLACE_CMD} -e '/IF.*FreeBSD/,/ENDIF.*FreeBSD/d' ${WRKSRC}/src/core/CMakeLists.txt
+.endif
+.if empty(PORT_OPTIONS:MICON)
+	@${REINPLACE_CMD} -e '/^# icon$$/,/^$$/d' ${WRKSRC}/CMakeLists.txt
 .endif
 
 pre-configure:
