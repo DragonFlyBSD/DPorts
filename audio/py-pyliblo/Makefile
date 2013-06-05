@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-pyliblo
-# Date created:		2009-01-25
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/audio/py-pyliblo/Makefile,v 1.11 2012/11/17 05:54:42 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: audio/py-pyliblo/Makefile 319570 2013-06-01 14:22:35Z wen $
 
 PORTNAME=	pyliblo
 PORTVERSION=	0.9.1
