@@ -1,5 +1,5 @@
 # Created by: Aragon Gouveia <aragon@phat.za.net>
-# $FreeBSD: x11-wm/spectrwm/Makefile 316849 2013-04-29 22:07:27Z zeising $
+# $FreeBSD: x11-wm/spectrwm/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	spectrwm
 PORTVERSION=	2.3.0
@@ -12,13 +12,12 @@ COMMENT=	A small, dynamic tiling window manager for X11
 
 LICENSE=	ISCL
 
-LIB_DEPENDS+=	xcb:${PORTSDIR}/x11/libxcb \
-		xcb-util:${PORTSDIR}/x11/xcb-util \
+LIB_DEPENDS+=	xcb-util:${PORTSDIR}/x11/xcb-util \
 		xcb-icccm:${PORTSDIR}/x11/xcb-util-wm \
 		xcb-keysyms:${PORTSDIR}/x11/xcb-util-keysyms
 RUN_DEPENDS+=	dmenu:${PORTSDIR}/x11/dmenu
 
-USE_XORG=	x11 xcursor xft xrandr xt
+USE_XORG=	x11 xcb xcursor xft xrandr xt
 
 MAN1=		spectrwm.1
 USE_LDCONFIG=	yes
