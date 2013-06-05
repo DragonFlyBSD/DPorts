@@ -1,7 +1,7 @@
-# $FreeBSD: ports/math/py-pandas/Makefile,v 1.6 2013/01/25 10:04:05 svnexp Exp $
+# $FreeBSD: math/py-pandas/Makefile 317719 2013-05-08 23:02:33Z rm $
 
 PORTNAME=	pandas
-PORTVERSION=	0.10.1
+PORTVERSION=	0.11.0
 CATEGORIES=	math devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +14,8 @@ LICENSE=	BSD
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dateutil>0:${PORTSDIR}/devel/py-dateutil \
 		${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS:=	${BUILD_DEPENDS} \
+		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 
 SUB_FILES=	pkg-message
 
