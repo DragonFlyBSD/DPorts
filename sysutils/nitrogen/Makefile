@@ -1,5 +1,5 @@
 # Created by: Jonathan Liu <Net147@hotmail.com>
-# $FreeBSD: sysutils/nitrogen/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: sysutils/nitrogen/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	nitrogen
 PORTVERSION=	1.5.2
@@ -25,8 +25,7 @@ LIB_DEPENDS=	atkmm:${PORTSDIR}/accessibility/atkmm \
 		expat:${PORTSDIR}/textproc/expat2 \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
 		gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24 \
-		pangomm:${PORTSDIR}/x11-toolkits/pangomm \
-		xcb:${PORTSDIR}/x11/libxcb
+		pangomm:${PORTSDIR}/x11-toolkits/pangomm
 RUN_DEPENDS=	gnome-icon-theme>0:${PORTSDIR}/misc/gnome-icon-theme \
 		hicolor-icon-theme>0:${PORTSDIR}/misc/hicolor-icon-theme
 
@@ -35,7 +34,7 @@ OPTIONS_DEFAULT=XINERAMA
 
 USES=		gettext iconv
 USE_GNOME=	gtk20
-USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext xfixes \
+USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext xfixes \
 		xrandr xrender
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-inotify
