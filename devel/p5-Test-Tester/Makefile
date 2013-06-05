@@ -1,12 +1,8 @@
-# New ports collection makefile for:    p5-Test-Tester
-# Date created:				May 12th 2004
-# Whom:	      				Alex Kapranoff <alex@kapranoff.ru>
-#
-# $FreeBSD: ports/devel/p5-Test-Tester/Makefile,v 1.14 2012/11/17 05:56:34 svnexp Exp $
-#
+# Created by: Alex Kapranoff <alex@kapranoff.ru>
+# $FreeBSD: devel/p5-Test-Tester/Makefile 319176 2013-05-27 08:49:45Z tobez $
 
 PORTNAME=	Test-Tester
-PORTVERSION=	0.10.8
+PORTVERSION=	0.10.9
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FDALY
