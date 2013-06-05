@@ -2,7 +2,7 @@
 # Date Created:				18 March 2004
 # Whom:					NAKATA Maho <maho@FreeBSD.org>
 #
-# $FreeBSD: science/abinit/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: science/abinit/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	abinit
@@ -32,9 +32,8 @@ CONFIGURE_ARGS=	--disable-wannier90 --disable-bigdft --disable-etsf-io	\
 ALL_TARGET=	all libabinit
 
 .if !defined(NOPORTDOCS)
-USE_TEX=	tetex
-BUILD_DEPENDS+=	dvips:${PORTSDIR}/print/dvipsk-tetex	\
-		gm4:${PORTSDIR}/devel/m4		\
+USE_TEX=	latex:build dvipsk:build
+BUILD_DEPENDS+= gm4:${PORTSDIR}/devel/m4		\
 		markdown:${PORTSDIR}/textproc/markdown
 USE_GHOSTSCRIPT_BUILD=	yes
 .endif
