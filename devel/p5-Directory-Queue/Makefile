@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Directory-Queue/Makefile,v 1.10 2013/01/08 09:48:20 svnexp Exp $
+# $FreeBSD: devel/p5-Directory-Queue/Makefile 318681 2013-05-21 11:50:08Z tobez $
 
 PORTNAME=	Directory-Queue
-PORTVERSION=	1.7
+PORTVERSION=	1.8
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:LCONS
