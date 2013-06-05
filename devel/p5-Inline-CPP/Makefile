@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/devel/p5-Inline-CPP/Makefile,v 1.11 2013/01/18 16:45:25 svnexp Exp $
+# $FreeBSD: devel/p5-Inline-CPP/Makefile 318671 2013-05-21 09:58:33Z tobez $
 
 PORTNAME=	Inline-CPP
-PORTVERSION=	0.42
+PORTVERSION=	0.44
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,7 +12,7 @@ COMMENT=	Write Perl subroutines and classes in C++
 
 LICENSE=	ART10
 
-RUN_DEPENDS=	p5-Inline>=0.51:${PORTSDIR}/devel/p5-Inline \
+RUN_DEPENDS=	p5-Inline>=0.53:${PORTSDIR}/devel/p5-Inline \
 		p5-Parse-RecDescent>=0:${PORTSDIR}/devel/p5-Parse-RecDescent
 
 PERL_CONFIGURE=	yes
