@@ -1,17 +1,13 @@
-# New ports collection makefile for:	Math-Symbolic-Custom-Pattern
-# Date created:				15 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-Symbolic-Custom-Pattern/Makefile,v 1.8 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Symbolic-Custom-Pattern/Makefile 319194 2013-05-27 09:30:50Z tobez $
 
 PORTNAME=	Math-Symbolic-Custom-Pattern
-PORTVERSION=	2.00
+PORTVERSION=	2.01
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Pattern matching on Math::Symbolic trees
 
 BUILD_DEPENDS=	p5-Math-Symbolic>=0.510:${PORTSDIR}/math/p5-Math-Symbolic \
