@@ -1,8 +1,7 @@
-@comment $FreeBSD: print/texlive-base/pkg-plist 317588 2013-05-07 08:44:32Z hrs $
+@comment $FreeBSD: print/texlive-base/pkg-plist 319700 2013-06-02 17:53:46Z hrs $
 bin/a2ping
 bin/afm2afm
 bin/afm2pl
-bin/afm2tfm
 bin/allcm
 bin/allec
 bin/allneeded
@@ -15,7 +14,6 @@ bin/bg5+pdflatex
 bin/bg5conv
 bin/bg5latex
 bin/bg5pdflatex
-bin/biber
 bin/bibexport
 bin/bibtex8
 bin/bibtexu
@@ -62,7 +60,6 @@ bin/dvilj4l
 bin/dvilj6
 bin/dvipng
 bin/dvipos
-bin/dvips
 bin/dvired
 bin/dviselect
 bin/dvisvgm
@@ -125,6 +122,7 @@ bin/mkt1font
 bin/mktexfmt
 bin/mmafm
 bin/mmpfb
+bin/mptopdf
 bin/mtxrun
 bin/musixflx
 bin/musixtex
@@ -231,6 +229,7 @@ bin/xdvipdfmx
 %%TEXMFDISTDIR%%/scripts/bundledoc/arlatex
 %%TEXMFDISTDIR%%/scripts/bundledoc/bundledoc
 %%TEXMFDISTDIR%%/scripts/cachepic/cachepic.tlu
+%%TEXMFDISTDIR%%/scripts/checkcites/checkcites.lua
 %%TEXMFDISTDIR%%/scripts/context/perl/mptopdf.pl
 %%TEXMFDISTDIR%%/scripts/ctanify/ctanify
 %%TEXMFDISTDIR%%/scripts/ctanupload/ctanupload.pl
@@ -316,7 +315,6 @@ bin/xdvipdfmx
 %%TEXMFDISTDIR%%/scripts/urlbst/urlbst
 %%TEXMFDISTDIR%%/scripts/vpe/vpe.pl
 %%TEXMFDIR%%/scripts/a2ping/a2ping.pl
-%%TEXMFDIR%%/scripts/chktex/deweb.pl
 %%TEXMFDIR%%/scripts/ps2eps/ps2eps.pl
 %%TEXMFDIR%%/scripts/simpdftex/simpdftex
 %%TEXMFDIR%%/scripts/tetex/e2pall.pl
@@ -327,11 +325,10 @@ bin/xdvipdfmx
 %%TEXMFDIR%%/scripts/texlive/rungs.tlu
 %%TEXMFDIR%%/scripts/texlive/tlmgr.pl
 %%TEXMFDIR%%/web2c/fmtutil.cnf
-@exec /bin/mkdir -p %%TEXMFCONFIGDIR%%/web2c
+%%TEXMFCONFIGDIR%%/web2c/.keep_me
 @exec %%INSTALL_DATA%% %D/%%TEXMFDIR%%/web2c/fmtutil.cnf %D/%%FMTUTIL_CNF%%
 @unexec /bin/rm -f %D/%%FMTUTIL_CNF%%
 @dirrmtry %%TEXMFCONFIGDIR%%/web2c
-@unexec /bin/rm -f %D/%%TEXMFCONFIGDIR%%/ls-R
 @dirrmtry %%TEXMFCONFIGDIR%%
 @dirrmtry %%TEXMFDISTDIR%%/scripts/accfonts
 @dirrmtry %%TEXMFDISTDIR%%/scripts/authorindex
@@ -391,6 +388,7 @@ bin/xdvipdfmx
 @dirrmtry %%TEXMFDISTDIR%%/scripts/pmx
 @dirrmtry %%TEXMFDISTDIR%%/scripts/pst-pdf
 @dirrmtry %%TEXMFDISTDIR%%/scripts/cachepic
+@dirrmtry %%TEXMFDISTDIR%%/scripts/checkcites
 @dirrmtry %%TEXMFDISTDIR%%/scripts/context/perl
 @dirrmtry %%TEXMFDISTDIR%%/scripts/context
 @dirrmtry %%TEXMFDISTDIR%%/scripts/epspdf
@@ -399,13 +397,12 @@ bin/xdvipdfmx
 @dirrmtry %%TEXMFDISTDIR%%/scripts/oberdiek
 @dirrmtry %%TEXMFDISTDIR%%/scripts/pax
 @dirrmtry %%TEXMFDISTDIR%%/scripts/pedigree-perl
+@dirrmtry %%TEXMFDISTDIR%%/scripts
+@dirrmtry %%TEXMFDISTDIR%%
 @dirrmtry %%TEXMFDIR%%/scripts/a2ping
-@dirrmtry %%TEXMFDIR%%/scripts/chktex
 @dirrmtry %%TEXMFDIR%%/scripts/ps2eps
 @dirrmtry %%TEXMFDIR%%/scripts/simpdftex
 @dirrmtry %%TEXMFDIR%%/scripts/tetex
 @dirrmtry %%TEXMFDIR%%/scripts/texdoc
 @dirrmtry %%TEXMFDIR%%/scripts/texlive
 @dirrmtry %%TEXMFDIR%%/scripts
-@exec /bin/rm -f %%TEXMFVARDIR%%/ls-R
-@dirrmtry %%TEXMFVARDIR%%
