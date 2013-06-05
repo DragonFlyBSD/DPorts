@@ -1,9 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-SAX-Expat/Makefile 314288 2013-03-15 10:30:00Z bapt $
+# $FreeBSD: textproc/p5-XML-SAX-Expat/Makefile 318944 2013-05-24 09:55:10Z tobez $
 
 PORTNAME=	XML-SAX-Expat
-PORTVERSION=	0.40
-PORTREVISION=	2
+PORTVERSION=	0.50
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
