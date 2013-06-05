@@ -1,13 +1,10 @@
-# New ports collection makefile for:	gtk-murrina-aqua
-# Date created:		2006-08-20
-# Whom:			Phillip Neumann <pneumann@gmail.com>
-#
-# $FreeBSD: ports/x11-themes/gtk-murrina-aqua/Makefile,v 1.9 2012/11/17 06:03:31 svnexp Exp $
+# Created by: Phillip Neumann <pneumann@gmail.com>
+# $FreeBSD: x11-themes/gtk-murrina-aqua/Makefile 317646 2013-05-08 09:15:08Z olivierd $
 #
 
 PORTNAME=	gtk-murrina-aqua
 PORTVERSION=	0.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://www5.frugalware.org/packages/frugalware/pub/frugalware/frugalware-stable/source/gnome-extra/gtk+2-engines-murrine/
