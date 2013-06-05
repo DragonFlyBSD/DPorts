@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/rubygem-main/Makefile,v 1.16 2013/01/25 22:45:23 svnexp Exp $
+# $FreeBSD: devel/rubygem-main/Makefile 319632 2013-06-02 02:20:51Z swills $
 
 PORTNAME=	main
-PORTVERSION=	5.1.1
+PORTVERSION=	5.2.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
