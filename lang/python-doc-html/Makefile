@@ -1,14 +1,10 @@
-# New ports collection makefile for:    python-doc
-# Date created:         12 May 1999
-# Whom:                 Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/python-doc-html/Makefile,v 1.33 2012/11/17 05:58:55 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: lang/python-doc-html/Makefile 318355 2013-05-17 04:41:52Z rm $
 
 PORTNAME=	python-doc-${DOCFORMAT}
 PORTVERSION=	${PYTHON_PORTVERSION}
 CATEGORIES=	lang python
-MASTER_SITES=	${MASTER_SITE_PYTHON}
+MASTER_SITES=	PYTHON
 MASTER_SITE_SUBDIR=	ftp/python/doc/${PORTVERSION} \
 			ftp/python/doc/current
 DISTNAME=	python-${PORTVERSION}-docs-${DOCFORMAT}
