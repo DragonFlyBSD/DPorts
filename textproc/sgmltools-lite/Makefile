@@ -2,7 +2,7 @@
 # Date created:				7 Apr 2000
 # Whom:					Benno Rice <benno@netizen.com.au>
 #
-# $FreeBSD: textproc/sgmltools-lite/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/sgmltools-lite/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	sgmltools-lite
@@ -19,7 +19,7 @@ RUN_DEPENDS+=	docbook<2:${PORTSDIR}/textproc/docbook \
 		${LOCALBASE}/share/sgml/docbook/dsssl:${PORTSDIR}/textproc/dsssl-docbook-modular
 
 USE_PYTHON_BUILD=	yes
-USE_TEX=	tetex
+USE_TEX=	latex:build
 MAN1=		sgmltools-lite.1
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-etcsgml=${PREFIX}/etc/sgml --datadir=${PREFIX}/share
