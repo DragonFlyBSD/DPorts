@@ -1,8 +1,8 @@
 # Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: ports/textproc/nl-mythes/Makefile,v 1.73 2012/11/17 06:02:03 svnexp Exp $
+# $FreeBSD: textproc/nl-mythes/Makefile 317664 2013-05-08 14:48:04Z sunpoet $
 
 PORTNAME=	mythes
-PORTVERSION=	2012.10.07
+PORTVERSION=	2012.12.11
 CATEGORIES=	textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}/
 PKGNAMEPREFIX=	nl-
