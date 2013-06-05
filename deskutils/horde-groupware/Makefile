@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/horde-groupware/Makefile,v 1.4 2013/02/12 19:59:31 svnexp Exp $
+# $FreeBSD: deskutils/horde-groupware/Makefile 319412 2013-05-30 11:26:41Z mm $
 
 PORTNAME=	groupware
-PORTVERSION=	5.0.4
+PORTVERSION=	5.0.5
 CATEGORIES=	deskutils www pear
 PKGNAMEPREFIX=	horde-
 
