@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-net-dns
-# Date created:				2011-06-16
-# Whom:					rpsfa@rit.edu
-#
-# $FreeBSD: ports/dns/rubygem-net-dns/Makefile,v 1.5 2012/11/17 05:57:11 svnexp Exp $
+# Created by: rpsfa@rit.edu
+# $FreeBSD: dns/rubygem-net-dns/Makefile 319713 2013-06-02 18:56:18Z swills $
 
 PORTNAME=	net-dns
-PORTVERSION=	0.7.1
+PORTVERSION=	0.8.0
 CATEGORIES=	dns rubygems
 MASTER_SITES=	RG
 
