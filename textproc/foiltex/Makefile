@@ -2,7 +2,7 @@
 # Date created:		07 November 2003
 # Whom:			Stefan Walter <sw@gegenunendlich.de>
 #
-# $FreeBSD: textproc/foiltex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/foiltex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	foiltex
@@ -18,7 +18,7 @@ COMMENT=	A collection of LaTeX files for making foils
 
 NO_CDROM=	redistribution on a not-for-profit basis only
 
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_WRKSUBDIR=	yes
 
 LATEX_CMD=	${LOCALBASE}/bin/latex
