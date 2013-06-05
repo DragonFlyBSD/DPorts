@@ -1,7 +1,7 @@
-# $FreeBSD: databases/p5-Test-mysqld/Makefile 313140 2013-03-01 07:49:42Z kuriyama $
+# $FreeBSD: databases/p5-Test-mysqld/Makefile 318685 2013-05-21 12:02:17Z kuriyama $
 
 PORTNAME=	Test-mysqld
-PORTVERSION=	0.15
+PORTVERSION=	0.17
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -11,6 +11,7 @@ COMMENT=	Perl extension for mysqld test runner
 
 RUN_DEPENDS=	\
 	p5-Class-Accessor-Lite>0:${PORTSDIR}/devel/p5-Class-Accessor-Lite \
+	p5-File-Copy-Recursive>0:${PORTSDIR}/devel/p5-File-Copy-Recursive \
 	p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql \
 	p5-Test-SharedFork>=0.06:${PORTSDIR}/devel/p5-Test-SharedFork
 BUILD_DEPENDS:=	${RUN_DEPENDS}
