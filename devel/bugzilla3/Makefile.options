@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/bugzilla3/Makefile.options,v 1.2 2012/11/17 05:55:35 svnexp Exp $
+# $FreeBSD: devel/bugzilla3/Makefile.options 301491 2012-07-24 20:41:55Z ohauer $
 
 NO_OPTIONS_SORT=	yes
 
