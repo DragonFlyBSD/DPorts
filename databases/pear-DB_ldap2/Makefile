@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: databases/pear-DB_ldap2/Makefile 314451 2013-03-17 14:59:02Z miwi $
+# $FreeBSD: databases/pear-DB_ldap2/Makefile 319505 2013-05-31 14:46:26Z miwi $
 
 PORTNAME=	DB_ldap2
 PORTVERSION=	0.5.1
@@ -13,6 +13,7 @@ BUILD_DEPENDS=	${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB
 RUN_DEPENDS=	${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB
 
 USE_PHP=	ldap
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
