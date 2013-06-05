@@ -1,5 +1,5 @@
 # Created by: Kentaro Inagaki <JBD01226@niftyserve.ne.jp>
-# $FreeBSD: print/tex-xdvik/Makefile 317588 2013-05-07 08:44:32Z hrs $
+# $FreeBSD: print/tex-xdvik/Makefile 318464 2013-05-18 22:54:31Z hrs $
 
 PORTNAME=	xdvik
 PORTVERSION=	22.86
@@ -14,7 +14,7 @@ COMMENT=	DVI Previewer(kpathsearch) for X
 LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 		paper:${PORTSDIR}/print/libpaper
 
-USE_TEX=	web2c kpathsea texmf texhash
+USE_TEX=	texlive web2c kpathsea texmf texhash
 TEXHASHDIRS=	${TEXMFDIR}
 USE_MOTIF=	yes
 USE_GMAKE=	yes
