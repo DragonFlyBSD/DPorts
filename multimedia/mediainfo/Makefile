@@ -1,12 +1,9 @@
-# New ports collection makefile for:	mediainfo
-# Date created:		24 April 2008
-# Whom:			freebsd-ports@evilcode.net
-#
-# $FreeBSD: ports/multimedia/mediainfo/Makefile,v 1.19 2012/11/17 05:59:51 svnexp Exp $
-#
+# Created by: freebsd-ports@evilcode.net
+# $FreeBSD: multimedia/mediainfo/Makefile 319041 2013-05-25 09:42:06Z sunpoet $
 
 PORTNAME=	mediainfo
 PORTVERSION=	0.7.52
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/binary/${PORTNAME}/${PORTVERSION}
 DISTNAME=	MediaInfo_CLI_${PORTVERSION}_GNU_FromSource
@@ -20,17 +17,26 @@ LICENSE_FILE=	${WRKSRC}/MediaInfo/License.html
 
 USE_AUTOTOOLS=	aclocal:env automake:env autoconf:env libtool:env
 USE_BZIP2=	yes
+USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/MediaInfo_CLI_GNU_FromSource
 
-PLIST_FILES=	bin/mediainfo
+PLIST_FILES=	bin/mediainfo \
+		lib/libmediainfo.so \
+		lib/libmediainfo.so.0 \
+		lib/libzen.so \
+		lib/libzen.so.0
 
 do-build:
 	@(cd ${WRKSRC}/ZenLib/Project/GNU/Library/ && ${SH} ./autogen)
 	@(cd ${WRKSRC}/MediaInfoLib/Project/GNU/Library/ && ${SH} ./autogen)
 	@(cd ${WRKSRC}/MediaInfo/Project/GNU/CLI/ && ${SH} ./autogen)
-	@(cd ${WRKSRC}/ && ${SH} ./CLI_Compile.sh --prefix=${PREFIX})
+	@(cd ${WRKSRC}/ && ${SH} ./CLI_Compile.sh --prefix=${PREFIX} --enable-shared)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/MediaInfo/Project/GNU/CLI/mediainfo ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/MediaInfo/Project/GNU/CLI/.libs/mediainfo ${PREFIX}/bin/
+.for library in MediaInfo Zen
+	${INSTALL_LIB} ${WRKSRC}/${library}Lib/Project/GNU/Library/.libs/lib${library:tl}.so.0 ${PREFIX}/lib/
+	${LN} -fs lib${library:tl}.so.0 ${PREFIX}/lib/lib${library:tl}.so
+.endfor
 
 .include <bsd.port.mk>
