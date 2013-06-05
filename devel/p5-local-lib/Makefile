@@ -1,13 +1,7 @@
-# New ports collection makefile for:	local::lib
-# Date created:		14 Mar 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-local-lib/Makefile,v 1.21 2012/11/17 05:56:36 svnexp Exp $
-#
+# $FreeBSD: devel/p5-local-lib/Makefile 318707 2013-05-21 14:25:41Z kuriyama $
 
 PORTNAME=	local-lib
-PORTVERSION=	1.008004
-PORTREVISION=	1
+PORTVERSION=	1.008009
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:APEIRON
