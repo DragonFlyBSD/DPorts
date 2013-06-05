@@ -1,5 +1,5 @@
 # Created by: Stefan Walter <sw@gegenunendlich.de>
-# $FreeBSD: textproc/ppower4/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/ppower4/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	ppower4
 PORTVERSION=	0.9.4
@@ -17,7 +17,7 @@ COMMENT=	Post processor for PDF presentations made with (La)TeX
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_ZIP=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
