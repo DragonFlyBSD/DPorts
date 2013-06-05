@@ -1,9 +1,5 @@
-# New ports collection makefile for:	toycars
-# Date created:		15 Dec 2005
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/toycars/Makefile,v 1.26 2012/11/17 05:57:54 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/toycars/Makefile 318820 2013-05-23 02:03:09Z amdmi3 $
 
 PORTNAME=	toycars
 PORTVERSION=	0.3.10
@@ -27,10 +23,12 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PORTDOCS=	README
 
+.include <bsd.port.options.mk>
+
 post-extract:
 	@${RM} ${WRKSRC}/data/.*Store
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
