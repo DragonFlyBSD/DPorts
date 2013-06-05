@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: devel/geany-plugins/Makefile 314846 2013-03-21 14:43:24Z makc $
+# $FreeBSD: devel/geany-plugins/Makefile 319675 2013-06-02 15:13:14Z tijl $
 
 PORTNAME=	geany-plugins
 PORTVERSION=	${GEANY_VER}
@@ -9,6 +9,7 @@ DISTFILES=	# none
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Geany plugins (meta port)
 
+.MAKE.FreeBSD_UL=	yes
 NO_BUILD=	yes
 
 .include "${.CURDIR}/files/bsd.geany-plugins.mk"

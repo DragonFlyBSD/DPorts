@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugins/files/Makefile.common 316620 2013-04-26 15:10:57Z bapt $
+# $FreeBSD: devel/geany-plugins/files/Makefile.common 317857 2013-05-11 08:09:14Z makc $
 
 .include "${.CURDIR}/../../devel/geany-plugins/files/bsd.geany-plugins.mk"
 
@@ -17,7 +17,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS+=	libtool
-USES=		pkgconfig
+USES+=		pkgconfig
 USE_GNOME+=	gtk20
 
 # geany-plugins-l10n is not a plugin, thus special treatment
