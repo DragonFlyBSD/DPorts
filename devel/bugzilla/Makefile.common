@@ -1,11 +1,11 @@
 #
-# $FreeBSD: ports/devel/bugzilla/Makefile.common,v 1.6 2012/11/17 05:55:35 svnexp Exp $
+# $FreeBSD: devel/bugzilla/Makefile.common 318912 2013-05-23 21:49:39Z ohauer $
 #
 
 DIST_SUBDIR=	${PORTNAME}
 
 CONFLICTS=	bugzilla-3.* \
-		bugzilla-4.2.*
+		bugzilla-4.[2|4].*
 
 PORTSCOUT=	limit:^4\.0\.
 
