@@ -2,7 +2,7 @@
 # Date created:				2005-06-22
 # Whom:					Geoffrey Mainland <mainland@apeiron.net>
 #
-# $FreeBSD: net-im/pidgin-latex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: net-im/pidgin-latex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	latex
@@ -23,7 +23,7 @@ RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin \
 WRKSRC=		${WRKDIR}/${PKGNAMEPREFIX}${PORTNAME}
 
 CFLAGS+=	"-fPIC"
-USE_TEX=	tetex
+USE_TEX=	latex
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
 USE_BZIP2=	yes
