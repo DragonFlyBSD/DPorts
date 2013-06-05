@@ -1,9 +1,9 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/graphics/qiviewer/Makefile,v 1.6 2013/02/20 17:55:16 svnexp Exp $
+# $FreeBSD: graphics/qiviewer/Makefile 318130 2013-05-13 20:32:02Z stefan $
 
 PORTNAME=	qiviewer
 PORTVERSION=	0.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	GOOGLE_CODE
 
@@ -13,8 +13,8 @@ COMMENT=	Fast and lightweight image viewer
 LICENSE=	GPLv2
 
 USE_BZIP2=	yes
-USE_QT4=	gui xml dbus linguist_build qmake_build moc_build \
-		rcc_build uic_build
+USE_QT4=	gui xml dbus imageformats linguist_build qmake_build \
+		moc_build rcc_build uic_build
 QMAKEFLAGS+=	PREFIX="${PREFIX}"
 
 PLIST_FILES=	bin/qiviewer \
