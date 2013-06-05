@@ -1,11 +1,11 @@
 # Created by: Fabian Keil <fk@fabiankeil.de>
-# $FreeBSD: ports/sysutils/zogftw/Makefile,v 1.2 2013/02/10 12:36:45 svnexp Exp $
+# $FreeBSD: sysutils/zogftw/Makefile 317917 2013-05-11 21:19:22Z rakuco $
 
 PORTNAME=	zogftw
-PORTVERSION=	0.0.2013.02.08
+PORTVERSION=	0.0.2013.03.31
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.fabiankeil.de/sourcecode/zogftw/
-DISTNAME=	${PORTNAME}-2013-02-08-3b9e2c2
+DISTNAME=	${PORTNAME}-2013-03-31-80ef6e9
 
 MAINTAINER=	fk@fabiankeil.de
 COMMENT=	Creates redundant backups on encrypted ZFS pools
@@ -19,6 +19,8 @@ OPTIONS_DEFAULT=	GNUPG
 PLIST_FILES=	sbin/zogftw
 
 MAN8=		zogftw.8
+
+PORTSCOUT=	ignore:1
 
 .include <bsd.port.options.mk>
 
