@@ -1,9 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mirage/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/mirage/Makefile 318781 2013-05-22 17:42:46Z pawel $
 
 PORTNAME=	mirage
 PORTVERSION=	0.9.5.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	BERLIOS/mirageiv
 
@@ -14,7 +14,6 @@ LICENSE=	GPLv3
 
 USE_BZIP2=	yes
 USE_GNOME=	gtk20 pygtk2
-WANT_GNOME=	yes
 USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
@@ -22,9 +21,11 @@ PYDISTUTILS_PKGNAME=	Mirage
 
 PORT_VERBS=	${PORTNAME} imgfuncs
 
-.include <bsd.port.pre.mk>
+OPTIONS_DEFINE=	DOCS GNOME
 
-.if ${HAVE_GNOME:Mpygnome2}!=""
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MGNOME}
 USE_GNOME+=	pygnome2
 .endif
 
@@ -40,4 +41,4 @@ post-install:
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
