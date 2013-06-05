@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-memisc/Makefile 314908 2013-03-22 11:23:01Z tota $
+# $FreeBSD: math/R-cran-memisc/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	memisc
 DISTVERSION=	0.96-4
+PORTREVISION=	1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
