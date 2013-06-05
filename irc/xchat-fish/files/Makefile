@@ -1,5 +1,5 @@
 # Makefile
-# $FreeBSD: ports/irc/xchat-fish/files/Makefile,v 1.2 2012/11/17 05:58:30 svnexp Exp $
+# $FreeBSD: irc/xchat-fish/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 CC?= cc
 CFLAGS?= -O2 -Wall

@@ -1,12 +1,12 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/irc/xchat-fish/Makefile,v 1.17 2013/01/26 16:56:10 svnexp Exp $
+# $FreeBSD: irc/xchat-fish/Makefile 318102 2013-05-13 15:12:57Z dinoex $
 #    $MCom: ports/irc/xchat-fish/Makefile,v 1.1 2006/10/04 22:30:07 ahze Exp $
 
 PORTNAME=	fish
 DISTVERSION=	0.98
 PORTREVISION=	4
 CATEGORIES=	irc security
-MASTER_SITES=	http://fish.secure.la/xchat/ \
+MASTER_SITES=	http://wirehack7.opsys.de/FiSH/xchat/ \
 		ftp://ftp.dinoex.de/pub/FreeBSD/distfiles/
 PKGNAMEPREFIX=	xchat-
 DISTNAME=	FiSH-XChat.v${DISTVERSION}-source
