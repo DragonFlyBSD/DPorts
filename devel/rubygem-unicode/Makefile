@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-unicode
-# Date created:				Sat 31 Jul 2010
-# Whom:					Alexey V. Degtyarev <alexey@renatasystems.org>
-#
-# $FreeBSD: ports/devel/rubygem-unicode/Makefile,v 1.6 2012/11/17 05:57:01 svnexp Exp $
+# Whom: Alexey V. Degtyarev <alexey@renatasystems.org>
+# $FreeBSD: devel/rubygem-unicode/Makefile 319605 2013-06-01 21:38:36Z swills $
 
 PORTNAME=	unicode
-PORTVERSION=	0.4.3
+PORTVERSION=	0.4.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
