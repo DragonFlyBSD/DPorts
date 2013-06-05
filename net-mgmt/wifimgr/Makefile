@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: net-mgmt/wifimgr/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: net-mgmt/wifimgr/Makefile 318625 2013-05-20 20:16:03Z crees $
 
 PORTNAME=	wifimgr
 PORTVERSION=	1.10
@@ -20,11 +20,12 @@ INSTALLS_ICONS=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
+USES+=		gettext pkgconfig
 PLIST_SUB+=	NLS=""
 .else
 CFLAGS+=	-DWITHOUT_NLS
 PLIST_SUB+=	NLS="@comment "
+MAKE_ENV+=	WITHOUT_NLS=${WITHOUT_NLS}
 .endif
 
 MAN8=		wifimgr.8
