@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xorg-dmx
-# Date created:		13 Mar 2005
-# Whom:			lesi@FreeBSD.org
-#
-# $FreeBSD: ports/x11-servers/xorg-dmx/Makefile,v 1.20 2012/11/17 06:03:30 svnexp Exp $
-#
+# Created by: lesi@FreeBSD.org
+# $FreeBSD: x11-servers/xorg-dmx/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xorg-dmx
 PORTREVISION=	0
@@ -21,7 +17,7 @@ USE_XORG=	x11 xf86driproto glproto randrproto renderproto fixesproto \
 		xxf86misc xxf86vm xaw7 xmu xpm xext xrender xfixes xi dmxproto \
 		xau dmx xtst xres pixman xtrans
 
-CONFIGURE_ARGS=	--disable-xvfb --disable-xorg --disable-xnest \
+CONFIGURE_ARGS=	--disable-xvfb --disable-xnest \
 		--without-xmlto	--disable-docs --disable-devel-docs \
 		--enable-dmx --localstatedir=/var --without-dtrace
 
