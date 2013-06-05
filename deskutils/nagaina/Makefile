@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: deskutils/nagaina/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: deskutils/nagaina/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	nagaina
 PORTVERSION=	0.1.2
@@ -18,8 +18,7 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		png15:${PORTSDIR}/graphics/png \
 		freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
-		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		xcb:${PORTSDIR}/x11/libxcb
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
 OPTIONS_DEFINE=	DOCS
 
@@ -28,7 +27,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USES=		gettext iconv
 USE_GNOME=	glib20
 USE_QT4=	corelib gui xml moc_build qmake_build rcc_build uic_build
-USE_XORG=	ice sm x11 xau xdmcp xext xrender
+USE_XORG=	ice sm x11 xau xcb xdmcp xext xrender
 MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	CHANGELOG TODO
