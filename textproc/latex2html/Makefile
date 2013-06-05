@@ -2,7 +2,7 @@
 # Date created:		3 May 1998
 # Whom:			brett@peloton.physics.montana.edu
 #
-# $FreeBSD: textproc/latex2html/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/latex2html/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	latex2html
@@ -23,7 +23,7 @@ CONFLICTS=	ja-latex2html-[0-9]*
 
 USE_PERL5=		yes
 USE_GHOSTSCRIPT=	yes
-USE_TEX=		tetex
+USE_TEX=		latex dvipsk
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=	--with-perl=${PERL} \
 		--disable-gif \
