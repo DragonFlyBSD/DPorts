@@ -1,12 +1,8 @@
-# New ports collection makefile for:	math/p5-Math-Matrix
-# Date created:				08 December 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-Matrix/Makefile,v 1.4 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Matrix/Makefile 318670 2013-05-21 09:54:15Z tobez $
 
 PORTNAME=	Math-Matrix
-PORTVERSION=	0.5
+PORTVERSION=	0.7
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
