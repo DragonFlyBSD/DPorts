@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-simpy/Makefile 313303 2013-03-02 22:32:48Z lwhsu $
+# $FreeBSD: devel/py-simpy/Makefile 318650 2013-05-21 07:09:46Z jgh $
 
 PORTNAME=	simpy
 PORTVERSION=	2.3.1
@@ -17,17 +17,20 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	SimPy
 
-OPTIONS=	TKINTER		"Install py-tkinter for plot"      off
+OPTIONS_DEFINE=	TKINTER
+TKINTER_DESC=	py-tkinter for plot
+
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+.include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_TKINTER)
+.if ${PORT_OPTIONS:MTKINTER}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	(cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${DOCSDIR})
 .endif
