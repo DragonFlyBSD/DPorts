@@ -1,8 +1,8 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: math/p5-Math-Spline/Makefile 305130 2012-10-01 14:45:16Z tabthorpe $
+# $FreeBSD: math/p5-Math-Spline/Makefile 318363 2013-05-17 08:30:48Z tobez $
 
 PORTNAME=	Math-Spline
-PORTVERSION=	0.01
+PORTVERSION=	0.02
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
