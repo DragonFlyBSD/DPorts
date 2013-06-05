@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Math-Symbolic-Custom-Transformation
-# Date created:				15 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-Symbolic-Custom-Transformation/Makefile,v 1.8 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Symbolic-Custom-Transformation/Makefile 319195 2013-05-27 09:33:08Z tobez $
 
 PORTNAME=	Math-Symbolic-Custom-Transformation
-PORTVERSION=	2.01
+PORTVERSION=	2.02
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
