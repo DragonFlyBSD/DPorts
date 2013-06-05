@@ -1,9 +1,8 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: net/wireshark/Makefile 317372 2013-05-04 22:00:55Z marcus $
+# $FreeBSD: net/wireshark/Makefile 318639 2013-05-21 03:52:32Z marcus $
 
 PORTNAME?=	wireshark
-PORTVERSION=	1.8.6
-PORTREVISION=	2
+PORTVERSION=	1.8.7
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.wireshark.org/download/src/ \
 		http://ftp.uni-kl.de/pub/wireshark/src/ \
