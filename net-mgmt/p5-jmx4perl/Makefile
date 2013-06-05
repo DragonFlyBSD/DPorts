@@ -1,8 +1,7 @@
-# $FreeBSD: net-mgmt/p5-jmx4perl/Makefile 314460 2013-03-17 16:44:03Z eadler $
+# $FreeBSD: net-mgmt/p5-jmx4perl/Makefile 318630 2013-05-20 22:07:59Z tj $
 
 PORTNAME=	jmx4perl
-PORTVERSION=	1.06
-PORTREVISION=	1
+PORTVERSION=	1.07
 CATEGORIES=	net-mgmt perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN}
 MASTER_SITE_SUBDIR=	../by-authors/id/R/RO/ROLAND
