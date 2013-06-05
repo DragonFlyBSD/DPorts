@@ -2,7 +2,7 @@
 # Date created:		Sat Nov 23 01:17:35 UTC 2002
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/www/bins/Makefile,v 1.21 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: www/bins/Makefile 305672 2012-10-10 16:56:07Z az $
 #
 
 PORTNAME=	bins
