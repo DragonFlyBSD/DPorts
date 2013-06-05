@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: net/ecore-con/Makefile 317191 2013-05-03 10:07:44Z bapt $
+# $FreeBSD: net/ecore-con/Makefile 318442 2013-05-18 19:36:31Z gblach $
 
 PORTNAME=	con
-PORTVERSION=	1.7.6
+PORTVERSION=	1.7.7
 CATEGORIES=	net enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -17,11 +17,9 @@ LICENSE=	BSD
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
 USE_EFL=	ecore libtool_hack
 USES=		pkgconfig
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/src/lib/ecore_con
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
