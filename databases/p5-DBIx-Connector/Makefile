@@ -1,12 +1,7 @@
-# New ports collection makefile for:	DBIx::Connector
-# Date created:		16 Oct 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Connector/Makefile,v 1.11 2012/11/17 05:55:15 svnexp Exp $
-#
+# $FreeBSD: databases/p5-DBIx-Connector/Makefile 318631 2013-05-20 22:45:18Z kuriyama $
 
 PORTNAME=	DBIx-Connector
-PORTVERSION=	0.52
+PORTVERSION=	0.53
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
