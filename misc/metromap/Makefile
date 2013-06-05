@@ -1,9 +1,5 @@
-# New ports collection makefile for:	metromap
-# Date created:		2005-07-01
-# Whom:			Vsevolod Stakhov <vsevolod@highsecure.ru>
-#
-# $FreeBSD: misc/metromap/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
+# $FreeBSD: misc/metromap/Makefile 318822 2013-05-23 02:04:46Z amdmi3 $
 
 PORTNAME=	metromap
 PORTVERSION=	0.1.4
@@ -26,13 +22,15 @@ USES=		gettext
 
 PORTDOCS=	AUTHORS NEWS README README.data TODO
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr,${PREFIX},' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's,make,${GMAKE},' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's,/usr/bin/python,${SETENV} python,' ${WRKSRC}/metromap.py
 	@${RM} -f ${WRKSRC}/modules/ReadMap.py.orig
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
