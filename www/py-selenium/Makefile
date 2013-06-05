@@ -1,8 +1,8 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: www/py-selenium/Makefile 315943 2013-04-17 08:03:08Z culot $
+# $FreeBSD: www/py-selenium/Makefile 319332 2013-05-29 00:37:44Z miwi $
 
 PORTNAME=	selenium
-PORTVERSION=	2.32.0
+PORTVERSION=	2.33.0
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,7 +25,7 @@ FIREFOX_DESC=	Install Firefox
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFIREFOX}
-USE_FIREFOX=	10+
+USE_FIREFOX=	yes
 .endif
 
 .include <bsd.port.mk>
