@@ -1,5 +1,5 @@
 # Created by: Sarod Yatawatta <sarod@cs.pdn.ac.lk>
-# $FreeBSD: cad/pdnmesh/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: cad/pdnmesh/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	pdnmesh
 PORTVERSION=	0.2.2
@@ -20,8 +20,7 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		gtkglext:${PORTSDIR}/x11-toolkits/gtkglext \
-		xcb:${PORTSDIR}/x11/libxcb
+		gtkglext:${PORTSDIR}/x11-toolkits/gtkglext
 
 OPTIONS_DEFINE=	ATLAS DOCS EXAMPLES
 ATLAS_DESC=	Enable ATLAS support
@@ -30,8 +29,8 @@ USES=		pkgconfig gettext iconv
 USE_FORTRAN=	yes
 USE_GL=		glu
 USE_GNOME=	gdkpixbuf2 gtk20
-USE_XORG=	ice pixman sm x11 xau xcomposite xcursor xdamage xdmcp xext \
-		xfixes xmu xi xinerama xrandr xrender xt xxf86vm
+USE_XORG=	ice pixman sm x11 xau xcb xcomposite xcursor xdamage xdmcp \
+		xext xfixes xmu xi xinerama xrandr xrender xt xxf86vm
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
