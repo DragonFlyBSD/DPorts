@@ -2,7 +2,7 @@
 # Date Created:				2 June 2010
 # Whom:					Gleb Smirnoff <glebius@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-drivers/xf86-input-egalax/Makefile,v 1.7 2012/11/17 06:03:25 svnexp Exp $
+# $FreeBSD: x11-drivers/xf86-input-egalax/Makefile 319055 2013-05-25 14:37:02Z zeising $
 #
 
 PORTNAME=	xf86-input-egalax
@@ -25,7 +25,7 @@ IGNORE=         is useless without uep(4) kernel driver
 .endif
 
 .if defined(WITH_NEW_XORG)
-IGNORE=		does not build with X server 1.10
+IGNORE=		does not build with X server 1.12
 .endif
 
 .include <bsd.port.post.mk>
