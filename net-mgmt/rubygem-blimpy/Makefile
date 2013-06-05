@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-blimpy
-# Date created:		2012-08-05
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/net-mgmt/rubygem-blimpy/Makefile,v 1.6 2012/11/17 06:00:37 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: net-mgmt/rubygem-blimpy/Makefile 319622 2013-06-02 01:34:47Z swills $
 
 PORTNAME=	blimpy
-PORTVERSION=	0.6.4
+PORTVERSION=	0.6.7
 CATEGORIES=	net-mgmt rubygems
 MASTER_SITES=	RG
 
