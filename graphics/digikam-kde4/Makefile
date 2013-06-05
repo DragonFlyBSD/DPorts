@@ -1,8 +1,9 @@
 # Created by: Arjan van Leeuwen <avleeuwen@piwebs.com>
-# $FreeBSD: graphics/digikam-kde4/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/digikam-kde4/Makefile 318865 2013-05-23 11:32:27Z makc $
 
 PORTNAME=	digikam
 PORTVERSION=	${DIGIKAM_VER}
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	graphics kde
 
@@ -11,6 +12,7 @@ COMMENT=	KDE4 digital photo management application
 
 .include "${.CURDIR}/Makefile.common"
 
+BUILD_DEPENDS=	${LOCALBASE}/include/eigen3/Eigen/Eigen:${PORTSDIR}/math/eigen3
 LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff \
 		lcms:${PORTSDIR}/graphics/lcms \
 		png15:${PORTSDIR}/graphics/png \
@@ -19,7 +21,8 @@ LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff \
 		lqr-1:${PORTSDIR}/graphics/liblqr-1 \
 		kface:${PORTSDIR}/graphics/libkface \
 		pgf:${PORTSDIR}/graphics/libpgf \
-		kgeomap:${PORTSDIR}/astro/libkgeomap
+		kgeomap:${PORTSDIR}/astro/libkgeomap \
+		boost_graph:${PORTSDIR}/devel/boost-libs
 
 LATEST_LINK=	${PORTNAME}-kde4
 

@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/digikam-kde4/Makefile.common 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/digikam-kde4/Makefile.common 318451 2013-05-18 20:27:36Z makc $
 #
 # Make sure when DIGIKAM_VER is updated that the following ports are updated:
 #	astro/libkgeomap
@@ -12,7 +12,7 @@
 #	net/libkvkontakte
 #	net/libmediawiki
 
-DIGIKAM_VER=	3.1.0
+DIGIKAM_VER=	3.2.0
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/digikam
 
