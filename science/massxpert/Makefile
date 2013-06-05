@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: science/massxpert/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: science/massxpert/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	massxpert
 PORTVERSION=	3.4.0
@@ -14,15 +14,14 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		png15:${PORTSDIR}/graphics/png \
 		freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
-		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		xcb:${PORTSDIR}/x11/libxcb
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
 LICENSE=	GPLv3
 
 USE_GCC=	any
 USE_BZIP2=	yes
 USES=		cmake gettext iconv
-USE_XORG=	ice sm x11 xau xdmcp xext xrender
+USE_XORG=	ice sm x11 xau xcb xdmcp xext xrender
 USE_GNOME=	glib20
 USE_QT4=	corelib gui xml rcc_build qmake_build uic_build moc_build \
 		svg
