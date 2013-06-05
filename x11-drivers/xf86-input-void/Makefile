@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xf86-input-void
-# Date Created:				17 Feb 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-drivers/xf86-input-void/Makefile,v 1.14 2012/11/17 06:03:25 svnexp Exp $
-#
+# $FreeBSD: x11-drivers/xf86-input-void/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xf86-input-void
 PORTVERSION=	${VOID_VERSION}
@@ -14,7 +9,6 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org void input driver
 
 XORG_CAT=	driver
-USE_XORG=	xextproto videoproto
 MAN4=		void.4x
 
 .if defined(WITH_NEW_XORG)
