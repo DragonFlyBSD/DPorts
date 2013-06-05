@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann <kay_lehmann@web.de>
-# $FreeBSD: math/labplot/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: math/labplot/Makefile 319208 2013-05-27 11:07:49Z ehaupt $
 
 PORTNAME=	labplot
 DISTVERSION=	2.0.0.alpha3
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:R}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Data plotting and function analysis tool for KDE
 
-LICENCE=	GPLv2
+LICENSE=	GPLv2
 
 LIB_DEPENDS=	gsl:${PORTSDIR}/math/gsl
 
