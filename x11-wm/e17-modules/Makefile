@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/x11-wm/e17-modules/Makefile,v 1.10 2012/12/22 21:10:31 svnexp Exp $
+# $FreeBSD: x11-wm/e17-modules/Makefile 318199 2013-05-14 20:15:10Z gblach $
 
 PORTNAME=	e17-modules
-PORTVERSION=	20120918
+PORTVERSION=	20130510
 CATEGORIES=	x11-wm enlightenment
 MASTER_SITES=	# Empty
 DISTFILES=	# Empty
@@ -28,12 +28,9 @@ EVERYTHING_SHOTGUN_PATH=	evry-shotgun
 EVERYTHING_WEBSEARCH_PATH=	evry-websearch
 
 .for M in ${MODULES}
-OPTIONS+=	${M:tu:S,-,_,g} "Install ${M} module"
-. if !defined(${M:tu:S,-,_,g}_OFF)
-OPTIONS+=	on
-. else
-OPTIONS+=	off
-. endif
+OPTIONS_DEFINE+=	${M:tu:S,-,_,g}
+OPTIONS_DEFAULT+=	${M:tu:S,-,_,g}
+${M:tu:S,-,_,g}_DESC=	Install ${M} module
 .endfor
 
 .include <bsd.port.options.mk>
@@ -42,7 +39,7 @@ OPTIONS+=	off
 . if !defined(${M:tu:S,-,_,g}_PATH)
 ${M:tu:S,-,_,g}_PATH=	${M}
 . endif
-. if !defined(WITHOUT_${M:tu:S,-,_,g})
+. if ${PORT_OPTIONS:M${M:tu:S,-,_,g}}
 RUN_DEPENDS+=	${LOCALBASE}/lib/enlightenment/modules/${${M:tu:S,-,_,g}_PATH}/${E17_ARCH}/module.so:${PORTSDIR}/x11-wm/e17-module-${M}
 . endif
 .endfor
