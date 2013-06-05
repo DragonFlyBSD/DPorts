@@ -2,7 +2,7 @@
 # Date created:				24 October 2004
 # Whom:					Piotr Smyrak <smyru@heron.pl>
 #
-# $FreeBSD: ports/deskutils/gruler/Makefile,v 1.22 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: deskutils/gruler/Makefile 318333 2013-05-16 20:07:39Z rakuco $
 #
 
 PORTNAME=	gruler
@@ -11,7 +11,7 @@ PORTREVISION=	10
 CATEGORIES=	deskutils
 MASTER_SITES=	http://linuxadvocate.org/projects/gruler/downloads/
 
-MAINTAINER=	smyru@heron.pl
+MAINTAINER=	ps.ports@smyrak.com
 COMMENT=	A simple customizable GTK screen ruler
 
 USE_GNOME=	gnomeprefix gnomehack libgnomeui libglade2
