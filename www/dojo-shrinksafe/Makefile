@@ -1,8 +1,8 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: ports/www/dojo-shrinksafe/Makefile,v 1.16 2012/12/10 13:48:09 svnexp Exp $
+# $FreeBSD: www/dojo-shrinksafe/Makefile 318734 2013-05-21 23:28:01Z glarkin $
 
 PORTNAME=		shrinksafe
-PORTVERSION=		1.4.2
+PORTVERSION=		1.9.0
 CATEGORIES=		www java
 MASTER_SITES=		http://download.dojotoolkit.org/release-${PORTVERSION}/ \
 			LOCAL/glarkin
