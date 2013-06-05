@@ -1,8 +1,8 @@
 # Created by: Ache
-# $FreeBSD: ports/textproc/p5-Text-CSV_XS/Makefile,v 1.38 2013/01/14 15:16:26 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-CSV_XS/Makefile 318712 2013-05-21 14:58:55Z kuriyama $
 
 PORTNAME=	Text-CSV_XS
-PORTVERSION=	0.95
+PORTVERSION=	0.97
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:HMBRAND
