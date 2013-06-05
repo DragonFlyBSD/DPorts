@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/net-mgmt/smokeping/files/smokeping.in,v 1.8 2012/11/17 06:00:38 svnexp Exp $
+# $FreeBSD: net-mgmt/smokeping/files/smokeping.in 300897 2012-07-14 14:29:18Z beat $
 
 # PROVIDE: smokeping
 # REQUIRE: LOGIN
