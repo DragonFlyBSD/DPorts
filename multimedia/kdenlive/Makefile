@@ -1,5 +1,5 @@
 # Created by: Alberto Villa <villa.alberto@gmail.com>
-# $FreeBSD: multimedia/kdenlive/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: multimedia/kdenlive/Makefile 317967 2013-05-12 16:16:56Z makc $
 
 PORTNAME=	kdenlive
 PORTVERSION=	0.9.2
@@ -71,8 +71,5 @@ post-patch:
 		${PATCH_WRKSRC}/data/CMakeLists.txt
 	${REINPLACE_CMD} -e '/^update_xdg_mimetypes/ d; /SharedMimeInfo/ d' \
 		${PATCH_WRKSRC}/src/mimetypes/CMakeLists.txt
-
-post-install:
-	@-update-mime-database ${PREFIX}/share/mime
 
 .include <bsd.port.mk>
