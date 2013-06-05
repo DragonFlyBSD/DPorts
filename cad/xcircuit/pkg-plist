@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/cad/xcircuit/pkg-plist,v 1.23 2012/11/17 05:54:55 svnexp Exp $
+@comment $FreeBSD: cad/xcircuit/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/xcircuit
 lib/X11/app-defaults/XCircuit
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/.xcircuitrc
