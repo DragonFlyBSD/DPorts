@@ -1,12 +1,14 @@
 # Created by: MITA Yoshio <mita@FreeBSD.org>
-# $FreeBSD: japanese/xpdf/Makefile 316988 2013-05-01 04:46:29Z hrs $
+# $FreeBSD: japanese/xpdf/Makefile 317774 2013-05-10 08:08:33Z hrs $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
+PORTREVISION=	1
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 PKGNAMESUFFIX=	-jafont
 DISTNAME=	xpdf-japanese
+DIST_SUBDIR=	${DISTNAME}-${PORTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Japanese font support for xpdf
