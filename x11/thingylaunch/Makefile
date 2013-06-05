@@ -1,25 +1,25 @@
 # Created by: Pietro Cerutti <gahr@FreeBSD.org>
-# $FreeBSD: ports/x11/thingylaunch/Makefile,v 1.8 2012/11/17 06:03:19 svnexp Exp $
+# $FreeBSD: x11/thingylaunch/Makefile 318398 2013-05-17 19:28:04Z gahr $
 
 PORTNAME=	thingylaunch
-PORTVERSION=	1.1.4
+PORTVERSION=	1.1.5
 CATEGORIES=	x11
-MASTER_SITES=	http://www.gahr.ch/${PORTNAME}/	\
-   		${MASTER_SITE_LOCAL}/gahr/ \
-		http://people.freebsd.org/~gahr/distfiles/
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	A lightweight tab-completing launcher for X
+COMMENT=	Lightweight tab-completing launcher for X
 
-LICENSE=	MIT
+LICENSE=	MIT BSD
+LICENSE_COMB=	multi
 
 USE_XORG=	x11 xproto
-USE_GNOME=	pkgconfig
+USES=		cmake:outsource
 MAKE_JOBS_SAFE=	yes
 
-PLIST_FILES=	bin/${PORTNAME}
+USE_GITHUB=	yes
+GH_ACCOUNT=	gahr
+GH_TAGNAME=	${PORTVERSION}
+GH_COMMIT=	8acab93
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+PLIST_FILES=	bin/${PORTNAME}
 
 .include <bsd.port.mk>
