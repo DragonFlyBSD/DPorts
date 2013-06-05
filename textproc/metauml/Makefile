@@ -2,7 +2,7 @@
 # Date created:		2007-08-29
 # Whom:			TAKATSU Tomonari <tota@rtfm.jp>
 #
-# $FreeBSD: textproc/metauml/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/metauml/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	metauml
@@ -24,7 +24,7 @@ COMMENT=	A MetaPost library for typesetting UML diagrams
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/thrunk/License
 
-USE_TEX=	tetex
+USE_TEX=	latex
 PLIST_SUB=	TEXMFDIR=${TEXMFDIR} MKTEXLSR=${MKTEXLSR} MPDIR=${MPDIR}
 
 TEXMFDIR=	share/texmf
