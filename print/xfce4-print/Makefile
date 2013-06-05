@@ -1,9 +1,9 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: print/xfce4-print/Makefile 316672 2013-04-27 16:00:26Z hrs $
+# $FreeBSD: print/xfce4-print/Makefile 317695 2013-05-08 16:05:21Z olivierd $
 
 PORTNAME=	xfce4-print
 PORTVERSION=	4.6.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	print xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/archive/xfprint/${PORTVERSION:R}
@@ -19,9 +19,9 @@ RUN_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GMAKE=	yes
-USE_GNOME=	glib20 gnomehack gtk20 intltool intlhack pkgconfig
+USE_GNOME=	glib20 gnomehack gtk20 intltool intlhack
 USE_LDCONFIG=	yes
 USE_XFCE=	configenv libgui libutil xfconf
 
