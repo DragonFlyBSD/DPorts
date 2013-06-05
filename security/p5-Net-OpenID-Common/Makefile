@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Net-OpenID-Server
-# Date created:				7 Nov 2011
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Net-OpenID-Common/Makefile,v 1.6 2012/11/17 06:01:13 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: security/p5-Net-OpenID-Common/Makefile 318749 2013-05-22 08:48:30Z jadawin $
 
 PORTNAME=	Net-OpenID-Common
-PORTVERSION=	1.14
+PORTVERSION=	1.17
 CATEGORIES=	security net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
