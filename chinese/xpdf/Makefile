@@ -1,5 +1,5 @@
 # Created by: chshen <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/xpdf/Makefile 316988 2013-05-01 04:46:29Z hrs $
+# $FreeBSD: chinese/xpdf/Makefile 317774 2013-05-10 08:08:33Z hrs $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
@@ -12,6 +12,7 @@ MASTER_SITE_SUBDIR=	support/xpdf
 PKGNAMESUFFIX=	-zhfont
 DISTFILES=	xpdf-chinese-simplified-2011-sep-02${EXTRACT_SUFX} \
 		xpdf-chinese-traditional-2011-sep-02${EXTRACT_SUFX}
+DIST_SUBDIR=	${PORTNAME}-chinese-${PORTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Chinese font support for xpdf
