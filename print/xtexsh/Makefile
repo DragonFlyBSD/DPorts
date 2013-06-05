@@ -2,7 +2,7 @@
 # Date created:         11 August 2001
 # Whom:                 Jean-Sebastien Roy <js@jeannot.org>
 #
-# $FreeBSD: print/xtexsh/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/xtexsh/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	xtexsh
@@ -21,7 +21,7 @@ LICENSE_COMB=	dual
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}
 NO_BUILD=	yes
 
-USE_TEX=	tetex
+USE_TEX=	latex
 USE_TK_WRAPPER=	yes
 INSTALLS_ICONS=	yes
 MAN1=		xtexsh.1
