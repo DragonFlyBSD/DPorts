@@ -1,32 +1,33 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/htmlcompressor/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: www/htmlcompressor/Makefile 318837 2013-05-23 03:49:27Z az $
 
 PORTNAME=	htmlcompressor
-PORTVERSION=	0.9.4
+PORTVERSION=	1.5.3
+PORTREVISION=	1
 CATEGORIES=	www java
 MASTER_SITES=	GOOGLE_CODE
-DISTNAME=	${PORTNAME}-${PORTVERSION}-src
+DISTNAME=	${PORTNAME}-${PORTVERSION}.jar
+EXTRACT_SUFX=	# empty
+EXTRACT_ONLY=	# empty
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTML/XML Compressor
 
 LICENSE=	AL2
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-USE_ZIP=	yes
+NO_WRKSUBDIR=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.6+
+JAVA_VERSION=	1.5+
 NO_BUILD=	yes
 
-PLIST_FILES=	bin/htmlcompressor %%DATADIR%%/htmlcompressor.jar
-PLIST_DIRS=	%%DATADIR%%
+PLIST_FILES=	bin/htmlcompressor %%JAVAJARDIR%%/htmlcompressor.jar
 SUB_FILES=	htmlcompressor
 
 .include <bsd.port.pre.mk>
 
 do-install:
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/build/htmlcompressor-${PORTVERSION}.jar ${DATADIR}/htmlcompressor.jar
+	@${MKDIR} ${JAVAJARDIR}
+	${INSTALL_DATA} ${DISTDIR}/${DISTNAME} ${JAVAJARDIR}/htmlcompressor.jar
 	${INSTALL_SCRIPT} ${WRKDIR}/htmlcompressor ${PREFIX}/bin
 
 .include <bsd.port.post.mk>
