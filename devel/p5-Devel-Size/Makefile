@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Devel-Size
-# Date created:	   16 Octobre 2003
-# Whom:		   mat
-#
-# $FreeBSD: ports/devel/p5-Devel-Size/Makefile,v 1.19 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-Devel-Size/Makefile 318011 2013-05-13 08:39:06Z tobez $
 
 PORTNAME=	Devel-Size
-PORTVERSION=	0.78
+PORTVERSION=	0.79
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
