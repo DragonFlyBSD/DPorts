@@ -1,8 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSd.org>
-# $FreeBSD: math/octave-forge-database/Makefile 314604 2013-03-18 21:42:01Z stephen $
+# $FreeBSD: math/octave-forge-database/Makefile 318595 2013-05-20 12:24:35Z stephen $
 
 PORTNAME=	octave-forge-database
-PORTVERSION=	2.1.1
+PORTVERSION=	2.2.0
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -14,7 +14,6 @@ OCTSRC=		${DISTNAME}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
-#USE_AUTOTOOLS=	autoconf
 GNU_CONFIGURE=	yes
 USE_PGSQL=	yes
 ALL_TARGET=
@@ -28,6 +27,6 @@ post-build:
 
 post-patch:
 	${REINPLACE_CMD} 's#postgresql/##' ${WRKSRC}/*
-	${REINPLACE_CMD} 's#endian.h#sys/endian.h#' ${WRKSRC}/*
+	${REINPLACE_CMD} 's#endian.h#sys/endian.h#' ${WRKSRC}/wrap_endian.h
 
 .include <bsd.port.post.mk>
