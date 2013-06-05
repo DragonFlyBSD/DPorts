@@ -1,11 +1,10 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: print/qpdfview/Makefile 314805 2013-03-21 05:27:16Z mezz $
+# $FreeBSD: print/qpdfview/Makefile 319685 2013-06-02 16:41:27Z pawel $
 
 PORTNAME=	qpdfview
-PORTVERSION=	0.4
-PORTREVISION=	1
+PORTVERSION=	0.4.3
 CATEGORIES=	print
-MASTER_SITES=	https://launchpadlibrarian.net/131409309/
+MASTER_SITES=	https://launchpadlibrarian.net/140746246/
 
 MAINTAINER=	g.veniamin@googlemail.com
 COMMENT=	Tabbed PDF viewer using the poppler library
@@ -15,8 +14,8 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	poppler-qt4:${PORTSDIR}/graphics/poppler-qt4 \
 		cups:${PORTSDIR}/print/cups-client
 
-USE_QT4=	corelib dbus gui moc_build qmake_build rcc_build sql sql-sqlite3_run \
-		svg xml
+USE_QT4=	corelib dbus gui imageformats linguist_build moc_build \
+		qmake_build rcc_build sql sql-sqlite3_run svg xml
 QMAKEFLAGS+=	QMAKE_CFLAGS_RELEASE="" QMAKE_CXXFLAGS_RELEASE=""
 
 DATADIR=	${PREFIX}/share/${PORTNAME}
@@ -58,6 +57,7 @@ pre-configure:
 		${WRKSRC}/${PORTNAME}.pri
 
 do-configure:
+	cd ${WRKSRC} && lrelease-qt4 ${PORTNAME}.pro
 	cd ${WRKSRC} && ${QMAKE} ${QMAKEFLAGS} ${PORTNAME}.pro
 
 .include <bsd.port.mk>
