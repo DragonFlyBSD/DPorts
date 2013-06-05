@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-RHmm/Makefile 316119 2013-04-19 22:27:20Z tota $
+# $FreeBSD: math/R-cran-RHmm/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	RHmm
 PORTVERSION=	2.0.3
+PORTREVISION=	1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
