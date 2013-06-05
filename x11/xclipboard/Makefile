@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xclipboard/Makefile 313929 2013-03-11 19:14:28Z zeising $
+# $FreeBSD: x11/xclipboard/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xclipboard
 PORTVERSION=	1.1.2
@@ -11,7 +11,7 @@ COMMENT=	X clipboard client
 LICENSE=	MIT
 
 XORG_CAT=	app
-USE_XORG=	xt xaw xorg-macros
+USE_XORG=	xt xaw
 
 MAN1=		xclipboard.1 xcutsel.1
 
