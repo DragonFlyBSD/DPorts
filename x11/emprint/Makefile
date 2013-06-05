@@ -1,10 +1,10 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/x11/emprint/Makefile,v 1.14 2012/12/22 21:10:28 svnexp Exp $
+# $FreeBSD: x11/emprint/Makefile 318564 2013-05-20 02:15:31Z gblach $
 
 PORTNAME=	emprint
-PORTVERSION=	20120918
+PORTVERSION=	20130520
 CATEGORIES=	x11 enlightenment
-MASTER_SITES=	http://files.roorback.net/e17/extra/
+MASTER_SITES=	LOCAL/gblach/e17/extra/
 
 MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	Utility for taking screenshots for E17
@@ -14,6 +14,5 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_EFL=	eina evas ecore
 USE_EFL_ECORE=	evas file input x11
-USE_GNOME=	gnomehack pkgconfig
 
 .include <bsd.port.mk>
