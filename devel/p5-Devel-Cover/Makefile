@@ -1,8 +1,8 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Devel-Cover/Makefile 316784 2013-04-29 08:46:32Z tobez $
+# $FreeBSD: devel/p5-Devel-Cover/Makefile 319686 2013-06-02 16:59:26Z eadler $
 
 PORTNAME=	Devel-Cover
-PORTVERSION=	1.02
+PORTVERSION=	1.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,8 +20,6 @@ BUILD_DEPENDS=	p5-PPI-HTML>=1.07:${PORTSDIR}/textproc/p5-PPI-HTML \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
 		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
-
-OPTIONS_DEFINE=	DOCS
 
 PERL_CONFIGURE=	yes
 
