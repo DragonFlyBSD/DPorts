@@ -2,7 +2,7 @@
 # Date created:			Sun Feb 24, 2002
 # Whom:				Thierry Thomas <thierry@pompo.net>
 #
-# $FreeBSD: textproc/prosper/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/prosper/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	prosper
@@ -19,7 +19,7 @@ COMMENT=	LaTeX class for writing transparencies
 
 NO_BUILD=	yes
 USE_GHOSTSCRIPT_RUN=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 MKTEXLSR=	${LOCALBASE}/bin/mktexlsr
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
