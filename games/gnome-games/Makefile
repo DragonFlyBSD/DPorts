@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: games/gnome-games/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: games/gnome-games/Makefile 319055 2013-05-25 14:37:02Z zeising $
 #   $MCom: ports/games/gnome-games/Makefile,v 1.240 2012/09/01 23:02:09 mezz Exp $
 
 PORTNAME=	gnome-games
 PORTVERSION=	2.32.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -25,6 +25,7 @@ USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
+USE_GL=		gl
 USES=		pathfix gettext
 USE_GNOME=	gnomeprefix intlhack librsvg2 desktopfileutils \
 		pygnomedesktop gnomedocutils
