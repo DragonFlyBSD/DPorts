@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/graphics/ruby-gd/Makefile,v 1.37 2013/01/26 16:45:48 svnexp Exp $
+# $FreeBSD: graphics/ruby-gd/Makefile 318966 2013-05-24 13:30:55Z bapt $
 
 PORTNAME=	gd
 PORTVERSION=	0.8.0
@@ -35,7 +35,7 @@ LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
 
 # Hmm, GREP and TRUE seem to be defined in the bsd.port.post.mk stage.
 .if exists(${LOCALBASE}/bin/gd2topng)
-WITH_X11_CHECK!=	ldd ${LOCALBASE}/bin/gd2topng | grep -w 'libX11\.so' || true
+WITH_X11_CHECK!=	ldd ${LOCALBASE}/bin/gd2topng | grep -w 'libX11\.so' || ${ECHO_CMD}
 .else
 WITH_X11_CHECK=		# empty
 .endif
