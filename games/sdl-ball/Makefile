@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sdl-ball
-# Date created:		22 Apr 2008
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/games/sdl-ball/Makefile,v 1.14 2012/11/17 05:57:52 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: games/sdl-ball/Makefile 318822 2013-05-23 02:04:46Z amdmi3 $
 
 PORTNAME=	sdl-ball
 PORTVERSION=	1.01
@@ -23,11 +19,13 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PORTDOCS=	*
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sdl-ball ${PREFIX}/bin/
 	${MKDIR} ${DATADIR}
 	cd ${WRKSRC}/themes && ${COPYTREE_SHARE} . ${DATADIR}/
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
 .endif
