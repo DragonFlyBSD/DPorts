@@ -1,12 +1,11 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/www/mod_ruby/Makefile,v 1.74 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_ruby/Makefile 318110 2013-05-13 15:39:33Z dinoex $
 
 PORTNAME=	mod_ruby
 PORTVERSION=	1.3.0
 PORTREVISION=	3
 CATEGORIES=	www ruby
-MASTER_SITES=	http://www.modruby.net/archive/ \
-		ftp://ftp.dinoex.de/pub/FreeBSD/distfiles/
+MASTER_SITES=	ftp://ftp.dinoex.de/pub/FreeBSD/distfiles/
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 DIST_SUBDIR=	ruby
 
