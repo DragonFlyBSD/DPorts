@@ -2,11 +2,11 @@
 # Date created:				2011-03-16
 # Whom:					Jase Thew <freebsd@beardz.net>
 #
-# $FreeBSD: ports/devel/p5-Reflex/Makefile,v 1.9 2012/11/17 05:56:27 svnexp Exp $
+# $FreeBSD: devel/p5-Reflex/Makefile 317894 2013-05-11 16:57:07Z jase $
 #
 
 PORTNAME=	Reflex
-PORTVERSION=	0.098
+PORTVERSION=	0.099
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RCAPUTO
@@ -105,6 +105,10 @@ MAN3=		MooseX::Role::Reactive.3 \
 		Reflex::Wakeup.3
 
 .include <bsd.port.pre.mk>
+
+post-extract:
+	@${RM} ${WRKSRC}/bench.pl
+	@${REINPLACE_CMD} -e '/^bench.pl$$/d' ${WRKSRC}/MANIFEST
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
