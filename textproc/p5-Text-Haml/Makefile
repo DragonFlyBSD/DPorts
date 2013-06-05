@@ -1,7 +1,7 @@
-# $FreeBSD: ports/textproc/p5-Text-Haml/Makefile,v 1.1 2013/01/31 03:41:45 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Haml/Makefile 318763 2013-05-22 11:37:34Z kuriyama $
 
 PORTNAME=	Text-Haml
-PORTVERSION=	0.990107
+PORTVERSION=	0.990108
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,6 +14,7 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 
 PERL_CONFIGURE=	yes
 
-MAN3=	Text::Haml.3
+MAN3=	Text::Haml.3 \
+	Text::README.3
 
 .include <bsd.port.mk>
