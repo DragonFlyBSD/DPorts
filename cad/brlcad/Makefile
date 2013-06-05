@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/brlcad/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: cad/brlcad/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	brlcad
 PORTVERSION=	7.22.0
@@ -18,12 +18,11 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		rle:${PORTSDIR}/graphics/urt \
 		freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
-		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		xcb:${PORTSDIR}/x11/libxcb
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
 USE_BZIP2=	yes
 USE_GL=		gl glu
-USE_XORG=	ice inputproto sm x11 xau xdamage xdmcp xext xfixes xft xi \
+USE_XORG=	ice inputproto sm x11 xau xcb xdamage xdmcp xext xfixes xft xi \
 		xproto xrender xscrnsaver xt xxf86vm
 USE_GMAKE=	yes
 USES=		bison pathfix cmake
