@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net-im/pidgin-bs/Makefile 316340 2013-04-23 10:26:09Z ehaupt $
+# $FreeBSD: net-im/pidgin-bs/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
 
 PORTNAME=	pidgin-bs
 PORTVERSION=	1.3.0
@@ -22,6 +22,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
 USE_LDCONFIG=	${PREFIX}/lib/pidgin
+MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 
