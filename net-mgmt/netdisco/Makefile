@@ -1,9 +1,5 @@
-# New ports collection makefile for:	netdisco
-# Date created:				2006-04-08
-# Whom:					Shaun Amott <shaun@inerd.com>
-#
-# $FreeBSD: ports/net-mgmt/netdisco/Makefile,v 1.24 2012/11/17 06:00:34 svnexp Exp $
-#
+# Created by: Shaun Amott <shaun@inerd.com>
+# $FreeBSD: net-mgmt/netdisco/Makefile 317835 2013-05-10 19:11:11Z lme $
 
 PORTNAME=	netdisco
 PORTVERSION=	1.1
