@@ -1,5 +1,5 @@
 # Created by: Jung-uk Kim <jkim@FreeBSD.org>
-# $FreeBSD: korean/xpdf/Makefile 316988 2013-05-01 04:46:29Z hrs $
+# $FreeBSD: korean/xpdf/Makefile 317774 2013-05-10 08:08:33Z hrs $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
@@ -7,6 +7,7 @@ CATEGORIES=	korean
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 PKGNAMESUFFIX=	-kofont
 DISTNAME=	xpdf-korean
+DIST_SUBDIR=	${DISTNAME}-${PORTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Korean font support for xpdf
