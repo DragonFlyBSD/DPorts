@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Google-Search
-# Date created:				20 Jul 2010
-# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Google-Search/Makefile,v 1.6 2012/11/17 06:02:49 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: www/p5-Google-Search/Makefile 317643 2013-05-08 08:04:04Z ehaupt $
 
 PORTNAME=	Google-Search
 PORTVERSION=	0.028
@@ -24,6 +20,7 @@ RUN_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 PERL_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	yes
 
 MAN3=		Google::Search.3 Google::Search::Result.3
 
