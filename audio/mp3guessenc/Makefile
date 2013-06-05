@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/mp3guessenc/Makefile 315960 2013-04-17 11:50:32Z ehaupt $
+# $FreeBSD: audio/mp3guessenc/Makefile 319391 2013-05-29 22:04:52Z ehaupt $
 
 PORTNAME=	mp3guessenc
 DISTVERSION=	${DIST_REL}${BETA_REL}
@@ -12,7 +12,7 @@ COMMENT=	Utility for guessing which encoder was used to encode an mp3 file
 MAKE_JOBS_SAFE=	yes
 
 DIST_REL=	0.25
-BETA_REL=	beta1
+BETA_REL=	beta2
 
 PLIST_FILES=	bin/mp3guessenc
 SRC=		decode.c mp3guessenc.c bit_utils.c tags.c
