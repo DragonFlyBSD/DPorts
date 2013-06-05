@@ -1,40 +1,14 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: mail/claws-mail-gdata/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/claws-mail-gdata/Makefile 317877 2013-05-11 14:10:28Z pawel $
 
 PORTNAME=	gdata
-PORTVERSION=	0.5
-CATEGORIES=	mail
-MASTER_SITES=	http://www.claws-mail.org/downloads/plugins/
-PKGNAMEPREFIX=	claws-mail-
-DISTNAME=	${PORTNAME}_plugin-${PORTVERSION}
+PORTREVISION=	0
 
-MAINTAINER=	pawel@FreeBSD.org
 COMMENT=	Plugin providing Google Contacts in the Tab-address completion
 
-LICENSE=	GPLv3
-
-BUILD_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
 LIB_DEPENDS=	gdata:${PORTSDIR}/devel/libgdata
-RUN_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
 
-GNU_CONFIGURE=	yes
-USES=		iconv
-USE_GMAKE=	yes
+CLAWS_PLUGINS_BUILD=	gdata
 
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-
-CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
-		--with-libintl-prefix=${LOCALBASE}
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
-
+.include "../claws-mail/Makefile.claws"
 .include <bsd.port.mk>
