@@ -1,13 +1,8 @@
-# New ports collection makefile for:	octave-forge-octcdf
-# Date created:		8 September 2008
-# Whom:			Stephen Montgomery-Smith <stephen@math.missouri.edu>
-#
-# $FreeBSD: ports/math/octave-forge-octcdf/Makefile,v 1.21 2012/11/17 05:59:24 svnexp Exp $
-#
+# Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
+# $FreeBSD: math/octave-forge-octcdf/Makefile 317758 2013-05-10 02:13:17Z stephen $
 
 PORTNAME=	octave-forge-octcdf
-PORTVERSION=	1.1.5
-PORTREVISION=	1
+PORTVERSION=	1.1.6
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
