@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: math/petsc/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: math/petsc/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	petsc
 DISTVERSION=	2.3.3-p0
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+=	--with-umfpack-include="${LOCALBASE}/include/suitesparse"	\
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	*
-#USE_TEX=	tetex
+#USE_TEX=	latex:build
 #BUILD_DEPENDS+=	c2html:${PORTSDIR}/textproc/c2html	\
 #		doc2lt:${PORTSDIR}/textproc/sowing
 .endif
