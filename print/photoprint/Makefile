@@ -1,4 +1,4 @@
-# $FreeBSD: print/photoprint/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: print/photoprint/Makefile 319120 2013-05-26 16:20:49Z bsam $
 
 PORTNAME=	photoprint
 DISTVERSION=	0.4.2-pre2
@@ -20,13 +20,12 @@ LIB_DEPENDS=	cups:${PORTSDIR}/print/cups-client \
 		pixman:${PORTSDIR}/x11/pixman \
 		png15:${PORTSDIR}/graphics/png \
 		pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
-		tiff:${PORTSDIR}/graphics/tiff \
-		xcb:${PORTSDIR}/x11/libxcb
+		tiff:${PORTSDIR}/graphics/tiff
 
 GNU_CONFIGURE=	yes
-USES=		gettext
-USE_GNOME=	desktopfileutils pango
-USE_XORG=	x11 xau xcomposite xcursor xdamage xdmcp xext \
+USES=		desktop-file-utils gettext
+USE_GNOME=	pango
+USE_XORG=	x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
 INSTALLS_ICONS=	yes
 
@@ -35,8 +34,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/gstrfuncs.h|glib.h|g' \
 		${WRKSRC}/gp_cppsupport/gprinter.cpp
-
-post-install:
-		-@update-desktop-database
 
 .include <bsd.port.mk>
