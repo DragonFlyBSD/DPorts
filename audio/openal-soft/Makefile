@@ -1,7 +1,8 @@
-# $FreeBSD: audio/openal-soft/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/openal-soft/Makefile 319704 2013-06-02 18:07:32Z mva $
 
 PORTNAME=	openal-soft
 PORTVERSION=	1.15.1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://kcat.strangesoft.net/openal-releases/
 
