@@ -2,7 +2,7 @@
 # Date created:		2006-04-28
 # Whom:			Nicola Vitale	<nivit@email.it>
 #
-# $FreeBSD: print/py-pyscript/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/py-pyscript/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	pyscript
@@ -15,11 +15,9 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python module for producing high quality PostScript graphics
 
-RUN_DEPENDS=	dvips:${PORTSDIR}/print/dvipsk-tetex
-
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-USE_TEX=	tetex
+USE_TEX=	latex dvipsk
 
 DATADIR=	${PYTHONPREFIX_SITELIBDIR}/${PORTNAME}
 
