@@ -1,13 +1,9 @@
-# New ports collection makefile for:	monsterz
-# Date created:		Fri 29 apr 2005
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: games/monsterz/Makefile 313182 2013-03-02 03:55:25Z eadler $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: games/monsterz/Makefile 319059 2013-05-25 15:41:31Z thierry $
 
 PORTNAME=	monsterz
 PORTVERSION=	0.7.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://sam.zoy.org/monsterz/
 
