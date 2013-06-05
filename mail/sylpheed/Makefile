@@ -1,5 +1,5 @@
 # Created by: shigeri <shigeri@m10.alpha-net.ne.jp>
-# $FreeBSD: mail/sylpheed/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/sylpheed/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
 
 PORTNAME=	sylpheed
 PORTVERSION=	3.3.0
@@ -20,6 +20,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+MAKE_JOBS_SAFE=	yes
 
 # Sylpheed needs pthread if GnomeVFS is installed (GtkFileChooser uses it)
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
