@@ -1,8 +1,8 @@
 # Created by: nbm
-# $FreeBSD: databases/phpmyadmin/Makefile 317295 2013-05-04 06:24:53Z matthew $
+# $FreeBSD: databases/phpmyadmin/Makefile 319009 2013-05-24 18:59:56Z matthew $
 
 PORTNAME=	phpMyAdmin
-DISTVERSION=	4.0.0
+DISTVERSION=	4.0.2
 CATEGORIES=	databases www
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${DISTVERSION}
 DISTNAME=	${PORTNAME}-${DISTVERSION}-all-languages
@@ -12,7 +12,6 @@ COMMENT=	A set of PHP-scripts to manage MySQL over the web
 
 LICENSE=	GPLv2
 
-IGNORE_WITH_PHP=	4
 USE_XZ=	yes
 NO_BUILD=	yes
 .if !defined(WITHOUT_PHP_DEPENDS)
