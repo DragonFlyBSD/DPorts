@@ -1,19 +1,15 @@
-# New ports collection makefile for:	phpmyfaq
-# Date created:		2005-04-15
-# Whom:			chinsan <chinsan@mail2000.com.tw>
-#
-# $FreeBSD: ports/www/phpmyfaq/Makefile,v 1.72 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: chinsan <chinsan@mail2000.com.tw>
+# $FreeBSD: www/phpmyfaq/Makefile 319022 2013-05-25 01:41:22Z flo $
 
 PORTNAME=	phpmyfaq
-PORTVERSION=	2.7.9
+PORTVERSION=	2.8.0
 CATEGORIES=	www
 MASTER_SITES=	http://www.phpmyfaq.de/download/
 
 MAINTAINER=	flo@FreeBSD.org
 COMMENT=	A multilingual, completely database-driven FAQ-system
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_PHP=	filter json mysql pcre pdf session xml xmlrpc xmlwriter zlib
 FAQ_DIR=	attachments data images inc pdf xml
