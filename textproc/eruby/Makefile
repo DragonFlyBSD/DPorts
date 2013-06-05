@@ -1,12 +1,11 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/textproc/eruby/Makefile,v 1.45 2013/01/26 15:18:35 svnexp Exp $
+# $FreeBSD: textproc/eruby/Makefile 318109 2013-05-13 15:37:24Z dinoex $
 
 PORTNAME=	eruby
 PORTVERSION=	1.0.5
 PORTREVISION=	2
 CATEGORIES=	textproc www ruby
-MASTER_SITES=	http://www.modruby.net/archive/ \
-		ftp://ftp.dinoex.de/pub/FreeBSD/distfiles/
+MASTER_SITES=	ftp://ftp.dinoex.de/pub/FreeBSD/distfiles/
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
 DIST_SUBDIR=	ruby
 
