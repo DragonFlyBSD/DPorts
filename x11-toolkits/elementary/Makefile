@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-toolkits/elementary/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11-toolkits/elementary/Makefile 318442 2013-05-18 19:36:31Z gblach $
 
 PORTNAME=	elementary
-PORTVERSION=	1.7.6
+PORTVERSION=	1.7.7
 CATEGORIES=	x11-toolkits enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
