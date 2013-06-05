@@ -1,8 +1,8 @@
 # Created by: Timothy Bourke <timbob@bigpond.com>
-# $FreeBSD: ports/math/mingw32-libgmp/Makefile,v 1.11 2013/02/15 03:28:40 svnexp Exp $
+# $FreeBSD: math/mingw32-libgmp/Makefile 319010 2013-05-24 19:20:17Z pawel $
 
 PORTNAME=	libgmp
-PORTVERSION=	5.1.1
+PORTVERSION=	5.1.2
 CATEGORIES=	math devel
 MASTER_SITES=	ftp://ftp.gmplib.org/pub/gmp-${PORTVERSION}/
 PKGNAMEPREFIX=	mingw32-
