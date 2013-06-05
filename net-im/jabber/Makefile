@@ -1,5 +1,5 @@
 # Created by: joe
-# $FreeBSD: net-im/jabber/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: net-im/jabber/Makefile 319722 2013-06-02 19:15:39Z bapt $
 
 PORTNAME=	jabber
 PORTVERSION=	1.6.1.1
@@ -28,7 +28,7 @@ OPTIONS_DEFINE= IPV6 MYSQL PGSQL
 
 USE_RC_SUBR=	jabber
 USE_GMAKE=	yes
-USES=		gettext iconv
+USES=		gettext iconv pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	${PREFIX}/lib/jabber
 MAKE_JOBS_UNSAFE=	yes
