@@ -1,9 +1,5 @@
-# New ports collection makefile for: fceu-server
-# Date created:		28 July 2007
-# Whom:			Pontus Stenetorp <ninjin@kth.se>
-#
-# $FreeBSD: ports/emulators/fceu-server/Makefile,v 1.7 2012/11/17 05:57:20 svnexp Exp $
-#
+# Created by: Pontus Stenetorp <ninjin@kth.se>
+# $FreeBSD: emulators/fceu-server/Makefile 318483 2013-05-19 04:07:40Z bdrewery $
 
 PORTNAME=	fceu-server
 PORTVERSION=	0.0.5
@@ -17,6 +13,9 @@ COMMENT=	The network play server for the NES/Famicom emulator fceu
 CFLAGS+=	-DSOL_TCP=6
 USE_GMAKE=	yes
 USE_SDL=	sdl
+
+EXPIRATION_DATE=	2013-06-19
+DEPRECATED=		Replaced by the games/fceux port
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/fceu-standard.conf|${ETCDIR}/fceu-standard.conf|g' \
