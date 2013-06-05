@@ -2,7 +2,7 @@
 # Date created:               27 September 2004
 # Whom:                       Thierry Thomas <thierry@pompo.net>
 #
-# $FreeBSD: textproc/sowing/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/sowing/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	sowing
@@ -15,13 +15,12 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Text processing tools to generate documentation from source files
 
 BUILD_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm
-RUN_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm	\
-		dvips:${PORTSDIR}/print/dvipsk-tetex
+RUN_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm
 
 USE_PERL5=	yes
 USE_GHOSTSCRIPT=yes
 USE_GMAKE=	yes
-USE_TEX=	tetex
+USE_TEX=	latex dvipsk
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 CONFIGURE_ARGS=	--datadir=${DATADIR}
