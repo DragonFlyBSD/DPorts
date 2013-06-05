@@ -1,8 +1,8 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Test-Class/Makefile,v 1.38 2012/11/25 16:12:00 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Class/Makefile 318277 2013-05-16 07:30:02Z culot $
 
 PORTNAME=	Test-Class
-PORTVERSION=	0.38
+PORTVERSION=	0.39
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
