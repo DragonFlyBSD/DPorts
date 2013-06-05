@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-HTTP-Recorder
-# Date created:				1 April 2004
-# Whom:	      				mat
-#
-# $FreeBSD: ports/www/p5-HTTP-Recorder/Makefile,v 1.10 2012/11/17 06:02:51 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: www/p5-HTTP-Recorder/Makefile 318380 2013-05-17 13:16:36Z jadawin $
 
 PORTNAME=	HTTP-Recorder
-PORTVERSION=	0.06
+PORTVERSION=	0.07
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-

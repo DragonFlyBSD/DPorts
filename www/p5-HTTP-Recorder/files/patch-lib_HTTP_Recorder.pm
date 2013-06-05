@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/p5-HTTP-Recorder/files/patch-lib_HTTP_Recorder.pm,v 1.3 2012/11/17 06:02:51 svnexp Exp $
+$FreeBSD: www/p5-HTTP-Recorder/files/patch-lib_HTTP_Recorder.pm 300897 2012-07-14 14:29:18Z beat $
 
 --- lib/HTTP/Recorder.pm.orig	2012-04-23 22:20:16.000000000 +0800
 +++ lib/HTTP/Recorder.pm	2012-04-25 01:11:56.207852080 +0800
