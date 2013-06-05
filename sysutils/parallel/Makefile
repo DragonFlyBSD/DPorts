@@ -1,8 +1,8 @@
 # Created by: Chris Howey <howeyc@gmail.com>
-# $FreeBSD: sysutils/parallel/Makefile 316267 2013-04-22 19:20:17Z culot $
+# $FreeBSD: sysutils/parallel/Makefile 318985 2013-05-24 15:52:55Z wg $
 
 PORTNAME=	parallel
-PORTVERSION=	20130422
+PORTVERSION=	20130522
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU
 
