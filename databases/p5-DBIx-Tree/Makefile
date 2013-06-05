@@ -1,12 +1,9 @@
-# New ports collection makefile for:	p5-DBIx-Tree
-# Date created:				January 29th 2003
-# Whom:	      				Philip M. Gollucci <philip@p6m7g8.com>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Tree/Makefile,v 1.14 2012/12/10 09:51:25 svnexp Exp $
-#
+# Created by: Philip M. Gollucci <philip@p6m7g8.com>
+# $FreeBSD: databases/p5-DBIx-Tree/Makefile 318301 2013-05-16 09:44:15Z miwi $
 
 PORTNAME=	DBIx-Tree
 PORTVERSION=	1.96
+PORTREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
