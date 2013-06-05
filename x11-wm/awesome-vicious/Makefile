@@ -1,18 +1,16 @@
-# New ports collection makefile for:	awesome-vicious
-# Date created:				07 May 2012
-# Whom:					William Grzybowski
-#
-# $FreeBSD: ports/x11-wm/awesome-vicious/Makefile,v 1.3 2012/11/17 06:03:40 svnexp Exp $
-#
+# Created by: William Grzybowski <wg@FreeBSD.org>
+# $FreeBSD: x11-wm/awesome-vicious/Makefile 319367 2013-05-29 11:14:36Z wg $
 
 PORTNAME=	awesome-vicious
-PORTVERSION=	2.1.0
+PORTVERSION=	2.1.1
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://git.sysphere.org/vicious/snapshot/
 DISTNAME=	vicious-${PORTVERSION}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Widgets for the awesome window manager
+
+LICENSE=	GPLv2
 
 RUN_DEPENDS=	awesome:${PORTSDIR}/x11-wm/awesome
 
@@ -21,9 +19,11 @@ NO_BUILD=	yes
 NO_INSTALL=	yes
 PORTDOCS=	README TODO CHANGES LICENSE
 
+.include <bsd.port.options.mk>
+
 do-install:
 	@${MKDIR} ${PREFIX}/share/awesome/lib/vicious
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
