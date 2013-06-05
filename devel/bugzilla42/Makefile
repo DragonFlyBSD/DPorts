@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/bugzilla42/Makefile,v 1.9 2013/02/20 06:41:34 svnexp Exp $
+# $FreeBSD: devel/bugzilla42/Makefile 318912 2013-05-23 21:49:39Z ohauer $
 
 PORTNAME=	bugzilla
-PORTVERSION=	4.2.5
+PORTVERSION=	4.2.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	webtools webtools/archived
@@ -48,13 +48,8 @@ USE_APACHE_RUN=	22+
 
 .include <bsd.port.pre.mk>
 
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-Digest-SHA>=5.47:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
 .if ${PORT_OPTIONS:MMYSQL}
 USE_MYSQL=		yes
-IGNORE_WITH_MYSQL=	41
 RUN_DEPENDS+=	p5-DBD-mysql>=4.0001:${PORTSDIR}/databases/p5-DBD-mysql
 .endif
 
