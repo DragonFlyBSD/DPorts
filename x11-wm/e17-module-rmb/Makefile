@@ -1,14 +1,16 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/x11-wm/e17-module-rmb/Makefile,v 1.1 2012/12/22 21:10:31 svnexp Exp $
+# $FreeBSD: x11-wm/e17-module-rmb/Makefile 318126 2013-05-13 19:56:09Z gblach $
 
 PORTNAME=	rmb
-PORTVERSION=	20120918
+PORTVERSION=	20130510
 CATEGORIES=	x11-wm enlightenment
-MASTER_SITES=	http://files.roorback.net/e17/modules/
+MASTER_SITES=	LOCAL/gblach/e17/modules/
 PKGNAMEPREFIX=	e17-module-
 
 MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	An e17 module to emulate right mouse button
+
+LICENSE=	GPLv3
 
 BUILD_DEPENDS=	enlightenment:${PORTSDIR}/x11-wm/enlightenment
 RUN_DEPENDS=	enlightenment:${PORTSDIR}/x11-wm/enlightenment
