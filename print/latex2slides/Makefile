@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/latex2slides/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex2slides/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	latex2slides
 PORTVERSION=	1.0
@@ -15,7 +15,7 @@ RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick \
 		${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
 
 USE_PYTHON=	yes
-USE_TEX=	tetex
+USE_TEX=	dvipsk:run
 NO_BUILD=	yes
 PLIST_SUB=	PORTNAME="${PORTNAME}" PORTVERSION="${PORTVERSION}"
 
