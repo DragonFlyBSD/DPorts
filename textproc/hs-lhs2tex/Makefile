@@ -1,5 +1,5 @@
 # Created by: mainland@apeiron.net
-# $FreeBSD: textproc/hs-lhs2tex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/hs-lhs2tex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	lhs2tex
 PORTVERSION=	1.18.1
@@ -13,7 +13,7 @@ LICENSE=	GPLv2
 
 CABAL_SETUP=	Setup.hs
 USE_CABAL=	mtl regex-compat
-USE_TEX=	tetex
+USE_TEX=	latex
 
 STANDALONE=	yes
 EXECUTABLE=	lhs2TeX
