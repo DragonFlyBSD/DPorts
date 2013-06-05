@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-DOM
-# Date created:				26 Jan 2010
-# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-HTML-DOM/Makefile,v 1.19 2012/11/17 06:02:49 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: www/p5-HTML-DOM/Makefile 317643 2013-05-08 08:04:04Z ehaupt $
 
 PORTNAME=	HTML-DOM
 PORTVERSION=	0.053
@@ -25,6 +21,7 @@ BUILD_DEPENDS=	p5-CSS-DOM>=0:${PORTSDIR}/www/p5-CSS-DOM \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
 .include "${MASTERDIR}/Makefile.man"
