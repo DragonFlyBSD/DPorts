@@ -1,7 +1,7 @@
-# $FreeBSD: ports/german/bugzilla42/Makefile,v 1.9 2013/02/21 09:42:34 svnexp Exp $
+# $FreeBSD: german/bugzilla42/Makefile 318912 2013-05-23 21:49:39Z ohauer $
 
 PORTNAME=	bugzilla
-PORTVERSION=	4.2.5
+PORTVERSION=	4.2.6
 CATEGORIES=	german
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=bugzilla-de/${PORTVERSION:R}/${PORTVERSION}
