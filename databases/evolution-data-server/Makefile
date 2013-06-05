@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/evolution-data-server/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: databases/evolution-data-server/Makefile 319722 2013-06-02 19:15:39Z bapt $
 #   $MCom: ports/databases/evolution-data-server/Makefile,v 1.218 2013/03/09 09:12:37 kwm Exp $
 
 PORTNAME=	evolution-data-server
@@ -24,7 +24,7 @@ BUILD_DEPENDS+=	gperf:${PORTSDIR}/devel/gperf
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		bison pathfix gettext
+USES=		bison pathfix gettext pkgconfig
 USE_GNOME=	gnomeprefix intlhack ltverhack ltasneededhack gconf2 \
 		libxml2
 USE_OPENLDAP=	yes
