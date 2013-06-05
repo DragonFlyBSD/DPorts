@@ -1,8 +1,9 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: graphics/scantailor/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: graphics/scantailor/Makefile 318189 2013-05-14 19:13:10Z rakuco $
 
 PORTNAME=	scantailor
 PORTVERSION=	0.9.11
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
@@ -11,9 +12,9 @@ COMMENT=	Scan Tailor is an interactive post-processing tool for scanned pages
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
-		tiff.4:${PORTSDIR}/graphics/tiff \
-		jbig.1:${PORTSDIR}/graphics/jbigkit \
+LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
+		tiff:${PORTSDIR}/graphics/tiff \
+		jbig:${PORTSDIR}/graphics/jbigkit \
 		png15:${PORTSDIR}/graphics/png
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
 
