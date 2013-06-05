@@ -2,11 +2,11 @@
 # Date created:		7 Apr 2009
 # Whom:			Hajimu UMEMOTO <ume@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-INET6Glue/Makefile,v 1.8 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-INET6Glue/Makefile 319437 2013-05-30 17:33:49Z ume $
 #
 
 PORTNAME=	Net-INET6Glue
-PORTVERSION=	0.5
+PORTVERSION=	0.6
 #PORTREVISION=	0
 CATEGORIES=	net perl5 ipv6
 MASTER_SITES=	CPAN
