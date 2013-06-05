@@ -1,17 +1,18 @@
 # Created by: Jonas Kvinge <jonas@night-light.net>
-# $FreeBSD: irc/ircproxy/Makefile 315287 2013-03-26 12:36:21Z bapt $
+# $FreeBSD: irc/ircproxy/Makefile 318254 2013-05-15 18:30:49Z zi $
 
 PORTNAME=	ircproxy
 PORTVERSION=	1.3.6
+PORTREVISION=	1
 CATEGORIES=	irc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	An IRC proxy/bouncer daemon
 
-LIB_DEPENDS=	cares.2:${PORTSDIR}/dns/c-ares
-
 LICENSE=	GPLv3
+
+LIB_DEPENDS=	cares:${PORTSDIR}/dns/c-ares
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
