@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/typetools/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/typetools/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	typetools
 PORTVERSION=	2.98
@@ -12,7 +12,7 @@ COMMENT=	Tools for manipulating fonts
 
 LICENSE=	GPLv2
 
-USE_TEX=	tetex
+USE_TEX=	base
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_header_kpathsea_kpathsea_h=yes
 CONFIGURE_ARGS=	--with-kpathsea=${LOCALBASE}
