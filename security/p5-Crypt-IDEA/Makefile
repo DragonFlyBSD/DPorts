@@ -1,13 +1,9 @@
-# New ports collection makefile for:	p5-Crypt-IDEA
-# Date created:				October 20th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Crypt-IDEA/Makefile,v 1.31 2012/11/17 06:01:11 svnexp Exp $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: security/p5-Crypt-IDEA/Makefile 319190 2013-05-27 09:28:00Z bapt $
 
 PORTNAME=	Crypt-IDEA
 PORTVERSION=	1.08
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
