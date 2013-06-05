@@ -1,8 +1,8 @@
 # Created by: mat
-# $FreeBSD: www/p5-HTTP-Proxy/Makefile 314717 2013-03-20 08:38:51Z culot $
+# $FreeBSD: www/p5-HTTP-Proxy/Makefile 318728 2013-05-21 22:29:46Z kuriyama $
 
 PORTNAME=	HTTP-Proxy
-PORTVERSION=	0.29
+PORTVERSION=	0.300
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
