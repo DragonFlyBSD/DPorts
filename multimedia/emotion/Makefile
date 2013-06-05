@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: multimedia/emotion/Makefile 316272 2013-04-22 20:35:19Z gblach $
+# $FreeBSD: multimedia/emotion/Makefile 318825 2013-05-23 02:16:14Z gblach $
 
 PORTNAME=	emotion
-PORTVERSION=	1.7.6
+PORTVERSION=	1.7.7
 PORTEPOCH=	1
 CATEGORIES=	multimedia enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
@@ -62,10 +62,5 @@ CONFIGURE_ARGS+=--disable-install-examples
 post-patch:
 	@${REINPLACE_CMD} -e 's|= \$$(datadir)/\$$(PACKAGE)/examples|= $$(datadir)/examples/$$(PACKAGE)|' \
 		${WRKSRC}/src/examples/Makefile.in
-
-post-install:
-.if empty(PORT_OPTIONS:MEXAMPLES)
-	@${RMDIR} ${EXAMPLESDIR}
-.endif
 
 .include <bsd.port.mk>
