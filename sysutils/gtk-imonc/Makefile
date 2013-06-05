@@ -1,5 +1,5 @@
 # Created by: Steffen Vogelreuter
-# $FreeBSD: sysutils/gtk-imonc/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: sysutils/gtk-imonc/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	gtk-imonc
 PORTVERSION=	0.6.4.1
@@ -18,13 +18,12 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		png15:${PORTSDIR}/graphics/png \
 		freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
-		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		xcb:${PORTSDIR}/x11/libxcb
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
 GNU_CONFIGURE=	yes
 USES=		pkgconfig gettext iconv
 USE_GNOME=	gdkpixbuf2 gtk20
-USE_XORG=	pixman x11 xau xcomposite xcursor xdamage xdmcp xext \
+USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
 		xfixes xi xinerama xrandr xrender
 MAKE_JOBS_SAFE=	yes
 
