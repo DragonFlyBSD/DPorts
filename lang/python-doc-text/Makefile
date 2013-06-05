@@ -1,9 +1,5 @@
-# New ports collection makefile for:	python-doc-text
-# Date created:		12 November 2010
-# Whom:			John Hein <jhein@symmetricom.com>
-#
-# $FreeBSD: ports/lang/python-doc-text/Makefile,v 1.2 2012/11/17 05:58:55 svnexp Exp $
-#
+# Created by: John Hein <jhein@symmetricom.com>
+# $FreeBSD: lang/python-doc-text/Makefile 317865 2013-05-11 11:37:54Z rm $
 
 DOCFORMAT=	text
 MASTERDIR=	${.CURDIR}/../python-doc-html
