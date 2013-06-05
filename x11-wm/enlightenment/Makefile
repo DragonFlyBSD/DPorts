@@ -1,8 +1,8 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/enlightenment/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: x11-wm/enlightenment/Makefile 318442 2013-05-18 19:36:31Z gblach $
 
 PORTNAME=	enlightenment
-PORTVERSION=	0.17.2.1
+PORTVERSION=	0.17.3
 PORTEPOCH=	2
 CATEGORIES=	x11-wm enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
