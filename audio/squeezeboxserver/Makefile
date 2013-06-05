@@ -1,19 +1,15 @@
-# Ports collection makefile for:		squeezeboxserver
-# Date created:					Wed Apr 14, 2004
-# Whom:						Brooks Davis <brooks@freebsd.org>
-#
-# $FreeBSD: ports/audio/squeezeboxserver/Makefile,v 1.95 2012/11/17 05:54:44 svnexp Exp $
-#
+# Created by: Brooks Davis <brooks@freebsd.org>
+# $FreeBSD: audio/squeezeboxserver/Makefile 318934 2013-05-24 08:53:45Z az $
 
 PORTNAME=	squeezeboxserver
 PORTVERSION=	7.5.4
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.slimdevices.com/SqueezeboxServer_v${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-noCPAN
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	markk@knigma.org
 COMMENT=	Slim Devices audio streaming server
 
 # Defaults support playback of relativly unrestricted formats on SB2 or
@@ -52,10 +48,6 @@ USE_PERL5=	yes
 
 .include <bsd.port.pre.mk>
 
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
 USE_MYSQL=	server
 
 .if ${PORT_OPTIONS:MAPE}
@@ -93,6 +85,7 @@ EXCEPTFILES=	${DOCFILES} \
 		CPAN/Data/Page.pm \
 		CPAN/DBI.pm \
 		CPAN/EV.pm \
+		CPAN/File/Spec.pm \
 		CPAN/File/Temp.pm \
 		CPAN/File/Which.pm \
 		CPAN/GD.pm \
@@ -125,6 +118,7 @@ EXCEPTDIRS=	Bin \
 		CPAN/MRO \
 		CPAN/Path \
 		CPAN/Scope \
+		CPAN/File/Spec \
 		CPAN/Sub \
 		CPAN/SQL \
 		CPAN/Template \
@@ -172,11 +166,16 @@ post-patch:
 	    -e 's|%%TMP_SLIMDIR%%|${TMP_SLIMDIR}|g' \
 		${WRKSRC}/scanner.pl \
 		${WRKSRC}/slimserver.pl
-	${REINPLACE_CMD} \
+	@${REINPLACE_CMD} \
 		-e 's/skip-locking/skip-external-locking/' \
 		-e 's/default-character-set/character-set-server/'\
 		-e 's/default-collation/collation-server/'  ${WRKSRC}/MySQL/my.tt
-	${REINPLACE_CMD} \
+# table_open_cache was known as table_cache in MySQL 5.1.2 and earlier
+	@if [ "$(MYSQL_VER)" != "50" ] ; then \
+		${REINPLACE_CMD} \
+			-e 's/table_cache/table_open_cache/' ${WRKSRC}/MySQL/my.tt ;\
+	fi
+	@${REINPLACE_CMD} \
 		-e 's/TYPE=InnoDB/ENGINE=InnoDB/' ${WRKSRC}/SQL/mysql/schema_*.sql
 
 do-build:
