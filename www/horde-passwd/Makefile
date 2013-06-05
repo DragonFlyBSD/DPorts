@@ -2,14 +2,12 @@
 # Date created:			  Oct 28, 2011
 # Whom:				  Martin Matuska (mm@FreeBSD.org)
 #
-# $FreeBSD: ports/www/horde-passwd/Makefile,v 1.33 2012/12/18 13:28:46 svnexp Exp $
+# $FreeBSD: www/horde-passwd/Makefile 319377 2013-05-29 15:02:18Z mm $
 #
 
 PORTNAME=	passwd
-DISTVERSION=	5.0.0alpha0
+DISTVERSION=	5.0.0RC1
 CATEGORIES=	www pear
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	mm/horde
 PKGNAMEPREFIX=	horde-
 
 MAINTAINER=	horde@FreeBSD.org
