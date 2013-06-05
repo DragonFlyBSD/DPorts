@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tex-web2c/Makefile 317628 2013-05-07 19:22:36Z hrs $
+# $FreeBSD: devel/tex-web2c/Makefile 318262 2013-05-15 19:53:59Z hrs $
 
 PORTNAME=	web2c
 PORTVERSION=	20120701
@@ -18,7 +18,7 @@ LIB_DEPENDS=	openjpeg:${PORTSDIR}/graphics/openjpeg \
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_TEX=	kpathsea
+USE_TEX=	texlive kpathsea
 USES=		pkgconfig
 EXTRACT_AFTER_ARGS=	${EXTRACT_FILES}
 EXTRACT_FILES=	${DISTNAME}/build-aux \
