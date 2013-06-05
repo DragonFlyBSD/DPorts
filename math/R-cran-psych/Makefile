@@ -1,9 +1,9 @@
 # Created by: Dan Rue <drue@therub.org>
-# $FreeBSD: math/R-cran-psych/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/R-cran-psych/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	psych
 PORTVERSION=	1.2.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math science
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
