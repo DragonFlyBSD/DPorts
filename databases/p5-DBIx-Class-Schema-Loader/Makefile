@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-Loader/Makefile 313039 2013-02-27 09:30:58Z tobez $
+# $FreeBSD: databases/p5-DBIx-Class-Schema-Loader/Makefile 318930 2013-05-24 08:42:15Z az $
 
 PORTNAME=	DBIx-Class-Schema-Loader
 PORTVERSION=	0.07035
@@ -108,10 +108,4 @@ USE_PGSQL=	yes
 USE_SQLITE=	yes
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
