@@ -1,9 +1,8 @@
 # Created by: Martin Kropfinger
-# $FreeBSD: ports/games/minecraft-server/Makefile,v 1.12 2013/02/09 14:41:28 svnexp Exp $
+# $FreeBSD: games/minecraft-server/Makefile 318513 2013-05-19 10:13:03Z wg $
 
 PORTNAME=	minecraft-server
-PORTVERSION=	1.4.6
-PORTREVISION=	1
+PORTVERSION=	1.4.7
 CATEGORIES=	games java
 MASTER_SITES=	http://assets.minecraft.net/${PORTVERSION:S|.|_|g}/ \
 		http://media-mcw.cursecdn.com/f/f7/:icon
