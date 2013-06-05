@@ -1,8 +1,8 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: deskutils/sugarcrm/Makefile 314888 2013-03-22 02:27:20Z wen $
+# $FreeBSD: deskutils/sugarcrm/Makefile 319556 2013-06-01 07:16:13Z wen $
 
 PORTNAME=	sugarcrm
-PORTVERSION=	6.5.11
+PORTVERSION=	6.5.13
 CATEGORIES=	deskutils www
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/1%20-%20SugarCRM%206.5.X/SugarCommunityEdition-6.5.X
