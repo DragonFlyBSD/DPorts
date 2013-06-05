@@ -1,9 +1,5 @@
-# New ports collection makefile for:   lxappearance
-# Date created:                2008/06/20
-# Whom:                        chinsan
-#
-# $FreeBSD: x11-themes/lxappearance/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: chinsan
+# $FreeBSD: x11-themes/lxappearance/Makefile 319669 2013-06-02 15:01:45Z miwi $
 
 PORTNAME=	lxappearance
 PORTVERSION=	0.5.2
