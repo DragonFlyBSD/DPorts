@@ -1,14 +1,16 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: ports/devel/py-hghooks/Makefile,v 1.4 2013/02/19 10:29:30 svnexp Exp $
+# $FreeBSD: devel/py-hghooks/Makefile 318315 2013-05-16 13:53:13Z wg $
 
 PORTNAME=	hghooks
-PORTVERSION=	0.5.5
+PORTVERSION=	0.6.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Set of Mercurial hooks
+
+LICENSE=	LGPL3
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
