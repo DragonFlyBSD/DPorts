@@ -1,12 +1,8 @@
-# Ports collection makefile for:	py-dojango
-# Date created:			Sept 13, 2010
-# Whom:				jpaetzel
-#
-# $FreeBSD: www/py-dojango/Makefile 313599 2013-03-07 16:53:45Z miwi $
-#
+# Created by: jpaetzel
+# $FreeBSD: www/py-dojango/Makefile 318314 2013-05-16 13:50:04Z wg $
 
 PORTNAME=	dojango
-PORTVERSION=	0.5.5
+PORTVERSION=	0.5.6
 CATEGORIES=	www python java
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
