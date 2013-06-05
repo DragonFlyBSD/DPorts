@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: polish/kadu/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: polish/kadu/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	kadu
 PORTVERSION=	0.12.2
@@ -33,8 +33,7 @@ LIB_DEPENDS=	mpdclient:${PORTSDIR}/audio/libmpdclient \
 		qzeitgeist:${PORTSDIR}/sysutils/qzeitgeist \
 		enchant:${PORTSDIR}/textproc/enchant \
 		expat:${PORTSDIR}/textproc/expat2 \
-		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		xcb:${PORTSDIR}/x11/libxcb
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 RUN_DEPENDS=	qca-ossl>=2.0.0.b3:${PORTSDIR}/security/qca-ossl
 # TODO enable devel/libexecinfo
 # TODO ntrack and ntrack-qt (needs porting) ?
@@ -45,7 +44,7 @@ GG7_EMOTS_DISTFILE=	dodatkowe_emoty_GG7.tar.gz
 
 USE_BZIP2=	yes
 USES=		cmake pkgconfig gettext iconv
-USE_XORG=	ice sm x11 xau xdmcp xext xfixes xrender xscrnsaver
+USE_XORG=	ice sm x11 xau xcb xdmcp xext xfixes xrender xscrnsaver
 CMAKE_ARGS=	-DKADU_VERSION:STRING="${DISTVERSION}" -DWITH_ENCHANT=ON
 # Setting KADU_VERSION disables git invocation
 MAKE_JOBS_SAFE=	yes
