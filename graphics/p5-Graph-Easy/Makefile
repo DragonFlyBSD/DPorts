@@ -1,12 +1,8 @@
-# New ports collection makefile for:	graphics/p5-Graph-Easy
-# Date created:				22 October 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/p5-Graph-Easy/Makefile,v 1.38 2012/11/17 14:26:20 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: graphics/p5-Graph-Easy/Makefile 319196 2013-05-27 09:37:49Z tobez $
 
 PORTNAME=	Graph-Easy
-PORTVERSION=	0.72
+PORTVERSION=	0.73
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -47,6 +43,7 @@ MAN3=	Graph::Easy.3 \
 	Graph::Easy::Node::Empty.3 \
 	Graph::Easy::Parser.3 \
 	Graph::Easy::Parser::Graphviz.3 \
-	Graph::Easy::Parser::VCG.3
+	Graph::Easy::Parser::VCG.3 \
+	Graph::Easy::Util.3
 
 .include <bsd.port.mk>
