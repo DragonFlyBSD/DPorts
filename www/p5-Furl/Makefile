@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-Furl/Makefile 313692 2013-03-09 07:06:33Z kuriyama $
+# $FreeBSD: www/p5-Furl/Makefile 319086 2013-05-26 01:09:49Z kuriyama $
 
 PORTNAME=	Furl
-PORTVERSION=	2.09
+PORTVERSION=	2.16
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TOKUHIROM
@@ -23,7 +23,7 @@ TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Starlet>0:${PORTSDIR}/www/p5-Starlet \
 		p5-Net-IDN-Encode>0:${PORTSDIR}/textproc/p5-Net-IDN-Encode
 
-PERL_CONFIGURE=	yes
+PERL_MODBUILD=	yes
 
 MAN3=	Furl.3 \
 	Furl::HTTP.3 \
