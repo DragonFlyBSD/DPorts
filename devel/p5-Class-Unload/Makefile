@@ -1,13 +1,13 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Class-Unload/Makefile,v 1.7 2012/11/17 05:56:08 svnexp Exp $
+# $FreeBSD: devel/p5-Class-Unload/Makefile 319178 2013-05-27 08:51:52Z tobez $
 
 PORTNAME=	Class-Unload
-PORTVERSION=	0.07
+PORTVERSION=	0.08
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module for unloading classes
 
 BUILD_DEPENDS=	p5-Class-Inspector>=0:${PORTSDIR}/devel/p5-Class-Inspector
