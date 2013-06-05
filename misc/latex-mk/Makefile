@@ -3,7 +3,7 @@
 # Date created:			May 22, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: misc/latex-mk/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: misc/latex-mk/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	latex-mk
@@ -18,7 +18,7 @@ COMMENT=	A collection of makefile and scripts for LaTeX documents
 BUILD_DEPENDS=	texi2dvi:${PORTSDIR}/print/texinfo
 RUN_DEPENDS=	texi2dvi:${PORTSDIR}/print/texinfo
 
-USE_TEX=	tetex
+USE_TEX=	latex
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
