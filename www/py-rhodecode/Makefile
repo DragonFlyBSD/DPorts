@@ -1,5 +1,5 @@
 # Created by: gugabsd <gugabsd@mundounix.com.br>
-# $FreeBSD: www/py-rhodecode/Makefile 313915 2013-03-11 16:03:40Z culot $
+# $FreeBSD: www/py-rhodecode/Makefile 318257 2013-05-15 19:33:14Z wg $
 
 PORTNAME=	rhodecode
 PORTVERSION=	1.5.4
@@ -8,7 +8,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	RhodeCode-${PORTVERSION}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Fast and powerful management tool for Mercurial and GIT
 
 LICENSE=	GPLv3
