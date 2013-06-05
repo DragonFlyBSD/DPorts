@@ -2,7 +2,7 @@
 # Date created:		2006-04-07
 # Whom:			Nicola Vitale	<nivit@email.it>
 #
-# $FreeBSD: textproc/ecromedos/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: textproc/ecromedos/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	ecromedos
@@ -22,7 +22,7 @@ LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2 \
 
 NO_BUILD=	yes
 USE_PYTHON=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 
 FIND_DIRS=	-type d
 FIND_DATA=	-type f -not \( -name "*.orig" -or -name "*.bak" \)
