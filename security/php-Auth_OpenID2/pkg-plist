@@ -1,4 +1,4 @@
-@comment $FreeBSD: security/php-Auth_OpenID2/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: security/php-Auth_OpenID2/pkg-plist 319503 2013-05-31 14:45:46Z miwi $
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/README
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/consumer/common.php
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/consumer/finish_auth.php
@@ -60,8 +60,6 @@ share/pear/Auth/Yadis/XRDS.php
 share/pear/Auth/Yadis/XRI.php
 share/pear/Auth/Yadis/XRIRes.php
 share/pear/Auth/Yadis/Yadis.php
-@dirrmtry share/pear/Services/Yadis
-@dirrmtry share/pear/Services
 @dirrmtry share/pear/Auth/Yadis
 @dirrmtry share/pear/Auth/OpenID
 @dirrmtry share/pear/Auth
