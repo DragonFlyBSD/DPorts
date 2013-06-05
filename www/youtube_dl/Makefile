@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/youtube_dl/Makefile,v 1.70 2013/02/19 07:00:53 svnexp Exp $
+# $FreeBSD: www/youtube_dl/Makefile 318919 2013-05-24 07:53:36Z araujo $
 
 PORTNAME=	youtube_dl
-PORTVERSION=	2013.02.02
+PORTVERSION=	2013.05.10
 CATEGORIES=	www
 MASTER_SITES=	http://youtube-dl.org/downloads/${PORTVERSION}/ \
 		http://ftp.de.netbsd.org/pub/unix/Linux/MIRROR.gentoo/distfiles/
