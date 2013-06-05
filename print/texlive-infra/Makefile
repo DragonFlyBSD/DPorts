@@ -1,4 +1,4 @@
-# $FreeBSD: print/texlive-infra/Makefile 317588 2013-05-07 08:44:32Z hrs $
+# $FreeBSD: print/texlive-infra/Makefile 318245 2013-05-15 15:33:02Z hrs $
 
 PORTNAME=	texlive
 PORTVERSION=	27610
@@ -12,7 +12,7 @@ MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Basic TeXLive infrastructure
 
 USE_XZ=		yes
-USE_TEX=	texmf
+USE_TEX=	texlive texmf
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
