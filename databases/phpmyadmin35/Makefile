@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: databases/phpmyadmin35/Makefile 317295 2013-05-04 06:24:53Z matthew $
+# $FreeBSD: databases/phpmyadmin35/Makefile 318115 2013-05-13 15:47:47Z miwi $
 
 PORTNAME=	phpMyAdmin35
 DISTVERSION=	3.5.8.1
@@ -12,7 +12,6 @@ COMMENT=	A set of PHP-scripts to manage MySQL over the web
 
 LICENSE=	GPLv2
 
-IGNORE_WITH_PHP=	4
 USE_XZ=	yes
 NO_BUILD=	yes
 .if !defined(WITHOUT_PHP_DEPENDS)
