@@ -1,8 +1,8 @@
 # Created by: Brooks Davis <brooks@FreeBSD.org>
-# $FreeBSD: ports/www/coppermine/Makefile,v 1.35 2013/02/13 19:18:02 svnexp Exp $
+# $FreeBSD: www/coppermine/Makefile 319023 2013-05-25 01:51:53Z bdrewery $
 
 PORTNAME=	coppermine
-PORTVERSION=	1.5.22
+PORTVERSION=	1.5.24
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/Coppermine/1.5.x/
 DISTNAME=	cpg${PORTVERSION}
