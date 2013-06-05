@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: ports/devel/p5-Set-Object/Makefile,v 1.32 2013/02/16 16:16:28 svnexp Exp $
+# $FreeBSD: devel/p5-Set-Object/Makefile 318143 2013-05-14 08:38:47Z tobez $
 
 PORTNAME=	Set-Object
-PORTVERSION=	1.29
+PORTVERSION=	1.31
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,7 +14,7 @@ LICENSE=	ART10
 
 PERL_CONFIGURE=	yes
 
-MAN3=		Set::Object.3 Set::Object::Weak.3
+MAN3=		Set::Changes.3 Set::Object.3 Set::Object::Weak.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes.pod README
