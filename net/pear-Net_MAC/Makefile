@@ -1,26 +1,18 @@
-# Ports collection makefile for:  pear-Net_MAC
-# Date created:			  25 April 2007
-# Whom:				  Zhen REN <bg1tpt@gmail.com>
-#
-# $FreeBSD: ports/net/pear-Net_MAC/Makefile,v 1.6 2012/11/17 06:00:14 svnexp Exp $
-#
+# Created by: Zhen REN <bg1tpt@gmail.com>
+# $FreeBSD: net/pear-Net_MAC/Makefile 318026 2013-05-13 09:16:11Z miwi $
 
 PORTNAME=	Net_MAC
 PORTVERSION=	0.1.5
+PORTREVISION=	1
 CATEGORIES=	net pear
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR class that validates and formats MAC addresses
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-CATEGORY=	Net
-FILES=		MAC/MAC.php
-
-post-extract:
-	@${MKDIR} ${WRKSRC}/MAC
-	@${MV} ${WRKSRC}/Net/MAC.php ${WRKSRC}/MAC
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
