@@ -1,9 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/R-cran-eco/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: science/R-cran-eco/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	eco
-PORTVERSION=	3.1.5
-PORTREVISION=	8
+PORTVERSION=	3.1.6
+PORTREVISION=	1
 CATEGORIES=	science
 DISTNAME=	${PORTNAME}_${PORTVERSION:C/\./-/g:C/-/\./1}
 
