@@ -1,16 +1,12 @@
-# New ports collection makefile for:   uim-gnome
-# Date created:        31 August 2003
-# Whom:                MANTANI Nobutaka <nobutaka@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/uim-gnome/Makefile,v 1.15 2012/11/17 06:02:24 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: textproc/uim-gnome/Makefile 318178 2013-05-14 16:51:16Z nobutaka $
 
 PKGNAMESUFFIX=	-gnome
 
 COMMENT=	GNOME applets of uim input method
 
 USE_GNOME=	gtk20 gnomepanel libgnomeui
-LIB_DEPENDS=	uim.8:${PORTSDIR}/textproc/uim
+LIB_DEPENDS=	uim:${PORTSDIR}/textproc/uim
 RUN_DEPENDS=	uim-pref-gtk:${PORTSDIR}/textproc/uim-gtk
 
 MASTERDIR=	${.CURDIR}/../../textproc/uim
