@@ -1,5 +1,5 @@
 # Created by: William Grzybowski
-# $FreeBSD: ports/devel/py-hgsubversion/Makefile,v 1.3 2012/12/11 20:41:59 svnexp Exp $
+# $FreeBSD: devel/py-hgsubversion/Makefile 318257 2013-05-15 19:33:14Z wg $
 
 PORTNAME=	hgsubversion
 PORTVERSION=	1.5
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Mercurial extension that allows using it as a Subversion client
 
 OPTIONS_DEFINE=	SUBVERTPY
