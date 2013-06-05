@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-B-Hooks-Parser
-# Date created:		2009-03-11
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-B-Hooks-Parser/Makefile,v 1.10 2012/12/17 12:44:00 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-B-Hooks-Parser/Makefile 318009 2013-05-13 08:37:45Z tobez $
 
 PORTNAME=	B-Hooks-Parser
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,7 +11,7 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interface to perls parser variables
 
 BUILD_DEPENDS=	p5-B-Hooks-OP-Check>=0:${PORTSDIR}/devel/p5-B-Hooks-OP-Check \
-		p5-ExtUtils-Depends>=0:${PORTSDIR}/devel/p5-ExtUtils-Depends
+		p5-ExtUtils-Depends>=0.302:${PORTSDIR}/devel/p5-ExtUtils-Depends
 RUN_DEPENDS=	p5-B-Hooks-OP-Check>=0:${PORTSDIR}/devel/p5-B-Hooks-OP-Check
 TEST_DEPENDS=	p5-B-Hooks-EndOfScope>=0.05:${PORTSDIR}/devel/p5-B-Hooks-EndOfScope \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
