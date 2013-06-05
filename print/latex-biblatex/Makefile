@@ -1,5 +1,5 @@
 # Created by: vj562001@yahoo.de
-# $FreeBSD: print/latex-biblatex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-biblatex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	biblatex
 PORTVERSION=	0.9e
@@ -15,7 +15,7 @@ COMMENT=	Reimplementation of the LaTeX bibliographic facilities
 RUN_DEPENDS=	${LOCALBASE}/${TEXMFLOCAL}/tex/latex/etoolbox/etoolbox.sty:${PORTSDIR}/print/latex-etoolbox
 
 USE_ZIP=	YES
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	YES
 PLIST=		${WRKDIR}/pkg-plist
 
