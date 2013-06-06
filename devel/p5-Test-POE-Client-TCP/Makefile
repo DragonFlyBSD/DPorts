@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Test-POE-Client-TCP
-# Date created:				25 Mar 2009
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-POE-Client-TCP/Makefile,v 1.8 2012/11/17 05:56:33 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Test-POE-Client-TCP/Makefile 318370 2013-05-17 09:40:43Z lth $
 
 PORTNAME=	Test-POE-Client-TCP
-PORTVERSION=	1.10
+PORTVERSION=	1.12
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
