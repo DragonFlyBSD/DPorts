@@ -1,9 +1,9 @@
 # Created by: Cyrille Szymanski <cnszym@gmail.com>
-# $FreeBSD: math/R-cran-dlmodeler/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/R-cran-dlmodeler/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	dlmodeler
 DISTVERSION=	1.2-1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
