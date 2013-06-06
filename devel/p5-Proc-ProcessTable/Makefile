@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: ports/devel/p5-Proc-ProcessTable/Makefile,v 1.24 2013/02/16 19:46:51 svnexp Exp $
+# $FreeBSD: devel/p5-Proc-ProcessTable/Makefile 319192 2013-05-27 09:28:39Z tobez $
 
 PORTNAME=	Proc-ProcessTable
-PORTVERSION=	0.47
+PORTVERSION=	0.48
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JWB
@@ -17,7 +17,7 @@ MAN3=		Proc::ProcessTable::Process.3 \
 		Proc::Killall.3 \
 		Proc::ProcessTable.3 \
 		Proc::Killfam.3
-PORTDOCS=	README README.freebsd
+PORTDOCS=	README README.freebsd-kvm README.freebsd-procfs
 
 post-install:
 .if !defined(NOPORTDOCS)
