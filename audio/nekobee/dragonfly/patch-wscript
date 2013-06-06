@@ -1,0 +1,11 @@
+--- wscript.orig	2010-09-12 19:34:13.000000000 +0000
++++ wscript
+@@ -31,7 +31,7 @@ def build(bld):
+     # DSSI plugin
+     plugin_dssi = bld.new_task_gen('cc', 'shlib')
+     plugin_dssi.env['shlib_PATTERN'] = '%s.so'
+-    plugin_dssi.env.append_value("LINKFLAGS", "-module -avoid-version -Wc,-nostartfiles")
++    #plugin_dssi.env.append_value("LINKFLAGS", "-module -avoid-version -Wc,-nostartfiles")
+     plugin_dssi.includes = ['.', 'src']
+     plugin_dssi.defines = 'HAVE_CONFIG_H'
+     plugin_dssi.source = [
