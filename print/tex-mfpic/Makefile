@@ -2,7 +2,7 @@
 # Date created:		16 July 2011
 # Whom:			hrs
 #
-# $FreeBSD: print/tex-mfpic/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/tex-mfpic/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	mfpic
 PORTVERSION=	1.06.20110308
@@ -17,7 +17,7 @@ MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A TeX package that supports drawing pictures
 
 USE_ZIP=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} \
 		TEXMFDIR=${TEXMFDIR}
 TEXMFDIR=	share/texmf
