@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/winefish/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: editors/winefish/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	winefish
 DISTVERSION=	1.3.3
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-freedesktop_org-menu=${GNOME_LOCALSTATEDIR}/applications
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	libgnomeui desktopfileutils gnomehier
-USE_TEX=	tetex
+USE_TEX=	latex
 
 OPTIONS_DEFINE=	CONTEXT VNTEX UNIKEY_GTK NLS DOCS
 CONTEXT_DESC=		ConTexT support (Experimental)
