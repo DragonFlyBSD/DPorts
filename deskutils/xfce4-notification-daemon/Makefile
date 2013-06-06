@@ -1,9 +1,9 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 316340 2013-04-23 10:26:09Z ehaupt $
+# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 317695 2013-05-08 16:05:21Z olivierd $
 
 PORTNAME=	notification-daemon
 PORTVERSION=	0.3.7
-PORTREVISION=	18
+PORTREVISION=	19
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	CRITICAL/
 PKGNAMEPREFIX=	xfce4-
