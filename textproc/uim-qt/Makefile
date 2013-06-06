@@ -1,9 +1,5 @@
-# New ports collection makefile for:   uim-qt
-# Date created:        31 August 2003
-# Whom:                MANTANI Nobutaka <nobutaka@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/uim-qt/Makefile,v 1.21 2012/11/17 06:02:24 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: textproc/uim-qt/Makefile 318178 2013-05-14 16:51:16Z nobutaka $
 
 PKGNAMESUFFIX=	-qt
 
@@ -12,7 +8,7 @@ COMMENT=	QT modules of uim input method
 USE_QT_VER=	3
 USE_AUTOTOOLS=	libtool
 
-LIB_DEPENDS=	uim.8:${PORTSDIR}/textproc/uim
+LIB_DEPENDS=	uim:${PORTSDIR}/textproc/uim
 
 MASTERDIR=	${.CURDIR}/../../textproc/uim
 PKGDIR=		${.CURDIR}
