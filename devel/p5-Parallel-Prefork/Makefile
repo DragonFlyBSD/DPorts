@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-Parallel-Prefork
-# Date created:				23 September 2009
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Parallel-Prefork/Makefile,v 1.8 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Parallel-Prefork/Makefile 318754 2013-05-22 09:26:52Z tobez $
 
 PORTNAME=	Parallel-Prefork
-PORTVERSION=	0.13
+PORTVERSION=	0.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:KAZUHO
