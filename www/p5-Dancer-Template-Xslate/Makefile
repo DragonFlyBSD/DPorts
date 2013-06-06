@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/www/p5-Dancer-Template-Xslate/Makefile,v 1.6 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Dancer-Template-Xslate/Makefile 306964 2012-11-04 13:05:04Z gblach $
 
 PORTNAME=	Dancer-Template-Xslate
 PORTVERSION=	0.03
