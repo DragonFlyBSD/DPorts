@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-carton/Makefile 313347 2013-03-03 13:40:47Z kuriyama $
+# $FreeBSD: devel/p5-carton/Makefile 318702 2013-05-21 14:15:23Z kuriyama $
 
 PORTNAME=	carton
-PORTVERSION=	0.9.10
+PORTVERSION=	0.9.15
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
@@ -24,17 +24,8 @@ RUN_DEPENDS=	\
 	p5-local-lib>=1.008:${PORTSDIR}/devel/p5-local-lib
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+PERL_MODBUILD=	yes
 
-MAN1=	carton-check.1 \
-	carton-exec.1 \
-	carton-faq.1 \
-	carton-install.1 \
-	carton-list.1 \
-	carton-show.1 \
-	carton-tree.1 \
-	carton-version.1 \
-	carton.1
 MAN3=	Carton.3 \
 	Carton::Doc::Check.3 \
 	Carton::Doc::Exec.3 \
