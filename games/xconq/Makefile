@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: games/xconq/Makefile 314841 2013-03-21 13:03:07Z bdrewery $
+# $FreeBSD: games/xconq/Makefile 318157 2013-05-14 10:54:13Z gahr $
 
 PORTNAME=	xconq
 DISTVERSION=	7.5.0-0pre.0.20050612
@@ -17,6 +17,7 @@ USE_BZIP2=	yes
 USE_XORG=	x11
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+CFLAGS+=	-Wno-deprecated-writable-strings
 CONFIGURE_ARGS=	--enable-alternate-scoresdir=${SCOREDIR} \
 		--enable-alternate-gameuser=root \
 		--enable-alternate-gamegroup=games
