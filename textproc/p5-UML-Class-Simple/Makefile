@@ -1,18 +1,12 @@
-# New ports collection makefile for:	textproc/p5-UML-Class-Simple
-# Date created:				03 May 2007
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-UML-Class-Simple/Makefile,v 1.15 2012/11/17 06:02:11 svnexp Exp $
-#
+# $FreeBSD: textproc/p5-UML-Class-Simple/Makefile 318368 2013-05-17 09:36:04Z lth $
 
 PORTNAME=	UML-Class-Simple
-PORTVERSION=	0.18
-PORTREVISION=	4
+PORTVERSION=	0.19
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	lth@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Render simple UML class diagrams, by loading the code
 
 BUILD_DEPENDS=	p5-Class-Inspector>=1.16:${PORTSDIR}/devel/p5-Class-Inspector \
