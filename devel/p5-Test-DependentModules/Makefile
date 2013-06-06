@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-DependentModules/Makefile 314576 2013-03-18 14:47:37Z sunpoet $
+# $FreeBSD: devel/p5-Test-DependentModules/Makefile 318904 2013-05-23 20:23:18Z sunpoet $
 
 PORTNAME=	Test-DependentModules
-PORTVERSION=	0.14
+PORTVERSION=	0.15
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
