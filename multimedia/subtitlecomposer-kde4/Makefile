@@ -1,9 +1,4 @@
-# New ports collection makefile for:	subtitlecomposer
-# Date created:		2008-01-08
-# Whom:			Max Brazhnikov <makc@issp.ac.ru>
-#
-# $FreeBSD: multimedia/subtitlecomposer-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# $FreeBSD: multimedia/subtitlecomposer-kde4/Makefile 317967 2013-05-12 16:16:56Z makc $
 
 PORTNAME=	subtitlecomposer
 PORTVERSION=	0.5.3
@@ -16,7 +11,7 @@ COMMENT=	Subtitle editor for KDE
 
 USE_BZIP2=	yes
 USES=		cmake
-USE_KDE4=	kdeprefix kdelibs automoc4
+USE_KDE4=	kdeprefix kdelibs automoc4 sharedmime
 USE_QT4=	gui qmake_build moc_build rcc_build uic_build
 
 LATEST_LINK=	${PORTNAME}-kde4
