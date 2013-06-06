@@ -3,7 +3,7 @@
 # Date created:			Jul 30, 2007
 # Whom:				ijliao
 #
-# $FreeBSD: print/latex-resume/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-resume/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	resume
 PORTVERSION=	20010823
@@ -19,7 +19,7 @@ DIST_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A resume class for LaTeX
 
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 EXTRACT_CMD=	${CP}
