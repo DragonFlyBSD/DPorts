@@ -1,9 +1,8 @@
 # Created by: Nils Vogels <nivo+kw+ports.bfa274@is-root.com>
-# $FreeBSD: ports/mail/dovecot2-pigeonhole/Makefile,v 1.22 2013/02/14 08:23:29 svnexp Exp $
+# $FreeBSD: mail/dovecot2-pigeonhole/Makefile 318892 2013-05-23 17:58:48Z miwi $
 
 PORTNAME=	dovecot-pigeonhole
-PORTVERSION=	0.3.3
-PORTREVISION=	3
+PORTVERSION=	0.4.0
 CATEGORIES=	mail
 MASTER_SITES=	http://www.rename-it.nl/dovecot/${DOVECOTVERSION}/
 DISTNAME=	${PORTNAME:C/-/-${DOVECOTVERSION}-/}-${PORTVERSION}
@@ -16,7 +15,7 @@ LICENSE=	LGPL21
 BUILD_DEPENDS:=	dovecot>=${DOVECOTVERSION}:${PORTSDIR}/mail/dovecot${DOVECOTVERSION:R}
 RUN_DEPENDS:=	dovecot>=${DOVECOTVERSION}:${PORTSDIR}/mail/dovecot${DOVECOTVERSION:R}
 
-DOVECOTVERSION=	2.1
+DOVECOTVERSION=	2.2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_TARGET=--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
