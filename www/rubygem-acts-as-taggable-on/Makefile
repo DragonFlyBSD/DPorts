@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/rubygem-acts-as-taggable-on/Makefile,v 1.1 2012/12/28 14:11:05 svnexp Exp $
+# $FreeBSD: www/rubygem-acts-as-taggable-on/Makefile 319109 2013-05-26 13:36:59Z kuriyama $
 
 PORTNAME=	acts-as-taggable-on
-PORTVERSION=	2.3.3
+PORTVERSION=	2.4.1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
