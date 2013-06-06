@@ -1,4 +1,4 @@
-# $FreeBSD: UIDs 317618 2013-05-07 15:32:37Z ale $
+# $FreeBSD: UIDs 319885 2013-06-04 17:29:21Z girgen $
 # Please keep this file sorted by UID!
 operator:*:2:5::0:0:System &:/:/usr/sbin/nologin
 smmsp:*:25:25::0:0:Sendmail Submission User:/var/spool/clientmqueue:/usr/sbin/nologin
@@ -141,6 +141,7 @@ mrtg:*:279:279::0:0:MRTG daemon:/nonexistent:/usr/sbin/nologin
 xymon:*:280:280::0:0:Xymon Monitor:/nonexistent:/usr/sbin/nologin
 prelude:*:281:281::0:0:Prelude user:/nonexistent:/usr/sbin/nologin
 spread:*:282:282::0:0:Spread user:/nonexistent:/usr/sbin/nologin
+devmon:*:283:283::0:0:devmon monitor:/nonexistent:/usr/sbin/nologin
 backuppc:*:300:300::0:0:BackupPC pseudo-user:/nonexistent:/usr/sbin/nologin
 _sphinx:*:312:312::0:0:Sphinxsearch Owner:/nonexistent:/usr/sbin/nologin
 dkfilter:*:325:325::0:0:DK Filter Owner:/nonexistent:/usr/sbin/nologin
@@ -258,5 +259,6 @@ ossecm:*:967:966::0:0:OSSEC mail user:/usr/local/ossec-hids:/usr/sbin/nologin
 ossecr:*:968:966::0:0:OSSEC rem user:/usr/local/ossec-hids:/usr/sbin/nologin
 kippo:*:969:969::0:0:kippo user:/nonexistent:/usr/sbin/nologin
 colord:*:970:970::0:0:colord color management daemon:/nonexistent:/usr/sbin/nologin
+shibd:*:971:971::0:0:Shibboleth SAML daemon:/nonexistent:/usr/sbin/nologin
 avenger:*:60149:60149::0:0:Mail Avenger:/var/spool/avenger:/usr/sbin/nologin
 nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin

@@ -1,4 +1,4 @@
-# $FreeBSD: GIDs 317297 2013-05-04 08:07:59Z hrs $
+# $FreeBSD: GIDs 319885 2013-06-04 17:29:21Z girgen $
 # The 60000-60999 is reserved to resolve incompatibility from FreeBSD
 # Please keep this file sorted by GID!
 operator:*:5:amanda
@@ -134,6 +134,7 @@ mrtg:*:279:
 xymon:*:280:
 prelude:*:281:
 spread:*:282:
+devmon:*:283:
 backuppc:*:300:
 _sphinx:*:312:
 dkfilter:*:325:
@@ -252,6 +253,7 @@ elasticsearch:*:965:
 ossec:*:966:
 kippo:*:969:
 colord:*:970:
+shibd:*:971:
 avenger:*:60149:
 nogroup:*:65533:
 nobody:*:65534:
