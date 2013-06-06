@@ -1,8 +1,8 @@
 # Created by: Jason Helfman <jhelfman@experts-exchange.com>
-# $FreeBSD: graphics/rubygem-dragonfly/Makefile 313076 2013-02-28 01:46:41Z swills $
+# $FreeBSD: graphics/rubygem-dragonfly/Makefile 319718 2013-06-02 19:10:23Z swills $
 
 PORTNAME=	dragonfly
-PORTVERSION=	0.9.14
+PORTVERSION=	0.9.15
 CATEGORIES=	graphics rubygems
 MASTER_SITES=	RG
 
