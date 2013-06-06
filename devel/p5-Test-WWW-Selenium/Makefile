@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/p5-Test-WWW-Selenium/Makefile,v 1.14 2013/01/06 14:40:27 svnexp Exp $
+# $FreeBSD: devel/p5-Test-WWW-Selenium/Makefile 318303 2013-05-16 09:56:56Z tobez $
 
 PORTNAME=	Test-WWW-Selenium
-PORTVERSION=	1.35
+PORTVERSION=	1.36
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
