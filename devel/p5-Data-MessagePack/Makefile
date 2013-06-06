@@ -1,15 +1,10 @@
-# New ports collection makefile for:	Data::MessagePack
-# Date created:		22 Dec 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Data-MessagePack/Makefile,v 1.20 2012/11/17 05:56:10 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Data-MessagePack/Makefile 318551 2013-05-19 22:28:39Z kuriyama $
 
 PORTNAME=	Data-MessagePack
-PORTVERSION=	0.46
+PORTVERSION=	0.47
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:TOKUHIROM
+MASTER_SITE_SUBDIR=	CPAN:GFUJI
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	kuriyama@FreeBSD.org
