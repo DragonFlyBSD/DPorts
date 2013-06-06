@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-webservice-validator-css-w3c
-# Date created:				Oct 10, 2005
-# Whom:					toni.viemero@iki.fi
-#
-# $FreeBSD: ports/www/p5-webservice-validator-css-w3c/Makefile,v 1.6 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: toni.viemero@iki.fi
+# $FreeBSD: www/p5-webservice-validator-css-w3c/Makefile 319459 2013-05-31 01:45:25Z miwi $
 
 PORTNAME=	WebService-Validator-CSS-W3C
 PORTVERSION=	0.2
