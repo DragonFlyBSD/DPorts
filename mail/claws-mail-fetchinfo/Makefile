@@ -1,35 +1,12 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-fetchinfo/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/claws-mail-fetchinfo/Makefile 317877 2013-05-11 14:10:28Z pawel $
 
 PORTNAME=	fetchinfo
-PORTVERSION=	0.4.25
-PORTREVISION=	1
-CATEGORIES=	mail
-MASTER_SITES=	http://www.claws-mail.org/downloads/plugins/
-PKGNAMEPREFIX=	claws-mail-
-DISTNAME=	${PORTNAME}-plugin-${PORTVERSION}
+PORTREVISION=	0
 
-MAINTAINER=	pawel@FreeBSD.org
 COMMENT=	Header insertion plugin for Claws Mail
 
-LICENSE=	GPLv3
+CLAWS_PLUGINS_BUILD=	fetchinfo
 
-BUILD_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
-RUN_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
-
-USE_GMAKE=	yes
-USE_AUTOTOOLS=	autoconf
-USES=		iconv
-MAKE_JOBS_SAFE=	yes
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
-
+.include "../claws-mail/Makefile.claws"
 .include <bsd.port.mk>
