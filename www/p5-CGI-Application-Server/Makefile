@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-CGI-Application-Server
-# Date created:				14 September 2005
-# Whom:					George Hartzell <hartzell@alerce.com>
-#
-# $FreeBSD: ports/www/p5-CGI-Application-Server/Makefile,v 1.11 2012/11/17 06:02:45 svnexp Exp $
-#
+# Created by: George Hartzell <hartzell@alerce.com>
+# $FreeBSD: www/p5-CGI-Application-Server/Makefile 319517 2013-05-31 15:17:30Z miwi $
 
 PORTNAME=	CGI-Application-Server
 PORTVERSION=	0.062
