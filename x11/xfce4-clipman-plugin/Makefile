@@ -1,9 +1,9 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: x11/xfce4-clipman-plugin/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/xfce4-clipman-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
 
 PORTNAME=	xfce4-clipman-plugin
 PORTVERSION=	1.2.3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11 xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
@@ -21,14 +21,14 @@ UNIQUE_DESC=	Enable Unique (single instance) support
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtk20 intltool intlhack glib20 desktopfileutils
+USE_GNOME=	gtk20 intltool intlhack glib20
 USE_XFCE=	configenv libexo libmenu libutil panel xfconf
 USE_XORG=	xtst
-USES=		pkgconfig gettext
+USES=		pkgconfig gettext pathfix
 
 INSTALLS_ICONS=	yes
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUNIQUE}
 LIB_DEPENDS+=	unique-1:${PORTSDIR}/x11-toolkits/unique
@@ -37,7 +37,4 @@ CONFIGURE_ARGS+=	--enable-unique
 CONFIGURE_ARGS+=	--disable-unique
 .endif
 
-post-install:
-	@-update-desktop-database
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
