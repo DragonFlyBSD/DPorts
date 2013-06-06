@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Text::vFile::asData
-# Date created:		21 Apr 2005
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Text-vFile-asData/Makefile,v 1.10 2012/11/17 05:56:34 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Text-vFile-asData/Makefile 318700 2013-05-21 14:09:57Z kuriyama $
 
 PORTNAME=	Text-vFile-asData
-PORTVERSION=	0.07
+PORTVERSION=	0.08
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
