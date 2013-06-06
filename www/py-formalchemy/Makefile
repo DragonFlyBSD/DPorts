@@ -1,13 +1,9 @@
-# New ports collection makefile for:	py-formalchemy
-# Date created:		13 April 2010
-# Whom:			ghostonthewire <ghostonthewire at gmail dot com>
-#
-# $FreeBSD: ports/www/py-formalchemy/Makefile,v 1.6 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: ghostonthewire <ghostonthewire at gmail dot com>
+# $FreeBSD: www/py-formalchemy/Makefile 318321 2013-05-16 15:08:08Z rm $
 
 PORTNAME=	formalchemy
 PORTVERSION=	1.3.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
