@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Lingua-Identify/Makefile,v 1.14 2013/02/13 10:31:48 svnexp Exp $
+# $FreeBSD: textproc/p5-Lingua-Identify/Makefile 319479 2013-05-31 10:35:14Z tobez $
 
 PORTNAME=	Lingua-Identify
-PORTVERSION=	0.52
+PORTVERSION=	0.54
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -21,6 +21,7 @@ PERL_CONFIGURE=	yes
 MAN1=	langident.1 make-lingua-identify-language.1
 MAN3=	Lingua::Identify.3 \
 	Lingua::Identify::BG.3 \
+	Lingua::Identify::CY.3 \
 	Lingua::Identify::DA.3 \
 	Lingua::Identify::DE.3 \
 	Lingua::Identify::EL.3 \
