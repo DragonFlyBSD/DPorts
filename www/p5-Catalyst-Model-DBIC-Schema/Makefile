@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Catalyst-Model-DBIC-Schema
-# Date created:				13 Feb 2005
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Model-DBIC-Schema/Makefile,v 1.48 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Model-DBIC-Schema/Makefile 318955 2013-05-24 10:36:12Z az $
 
 PORTNAME=	Catalyst-Model-DBIC-Schema
 PORTVERSION=	0.60
@@ -49,10 +45,4 @@ MAN3=		Catalyst::Helper::Model::DBIC::Schema.3 \
 post-extract:
 	@${PERL} -i.bak -ne 'print unless m,^feature, .. m,;$$,' ${WRKSRC}/Makefile.PL
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
