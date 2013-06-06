@@ -1,5 +1,5 @@
 # Created by: will@cvs.kde.org
-# $FreeBSD: x11/kdelibs3/Makefile 317291 2013-05-03 23:20:01Z bapt $
+# $FreeBSD: x11/kdelibs3/Makefile 318980 2013-05-24 15:07:44Z miwi $
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE_VERSION}
@@ -74,7 +74,7 @@ FONTENCOD=	${LOCALBASE}/lib/X11/fonts/encodings/encodings.dir
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} > 1000014
-PATCH_SITES=		http://leaf.dragonflybsd.org/~marino/dports-src/
+PATCH_SITES=		http://data.gpo.zugaina.org/kde-sunset/kde-base/kdelibs/files/
 PATCHFILES=		kdelibs-3.5-openssl-1.0.0.patch
 PATCH_DIST_STRIP=	-p1
 .else
