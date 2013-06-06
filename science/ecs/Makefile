@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/ecs/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: science/ecs/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	ecs
 PORTVERSION=	2.0.2
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 .if !defined(NOPORTDOCS)
-USE_TEX=	tetex
+USE_TEX=	tex:build
 BUILD_DEPENDS+=	fig2dev:${PORTSDIR}/print/transfig
 PORTDOCS=	mi_ecs.pdf mt_ecs.pdf
 .endif
