@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-HTML-TreeBuilder-LibXML
-# Date created:		2009-04-16
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/www/p5-HTML-TreeBuilder-LibXML/Makefile,v 1.12 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: TERAMOTO Masahiro <markun@onohara.to>
+# $FreeBSD: www/p5-HTML-TreeBuilder-LibXML/Makefile 318082 2013-05-13 13:51:49Z culot $
 
 PORTNAME=	HTML-TreeBuilder-LibXML
-PORTVERSION=	0.17
+PORTVERSION=	0.22
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -24,7 +20,7 @@ BUILD_DEPENDS=	p5-Filter>=0:${PORTSDIR}/devel/p5-Filter \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Web-Query>=0:${PORTSDIR}/www/p5-Web-Query
 
-PERL_CONFIGURE=	yes
+PERL_MODBUILD=	yes
 
 MAN3=		HTML::TreeBuilder::LibXML::Node.3 \
 		HTML::TreeBuilder::LibXML.3
