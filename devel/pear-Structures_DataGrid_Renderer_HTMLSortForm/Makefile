@@ -1,23 +1,18 @@
-# Ports collection makefile for:	pear-Structures_DataGrid_Renderer_HTMLSortForm
-# Date created:				26 Jun 2008
-# Whom:					Nick Hilliard <nick@foobar.org>
-#
-# $FreeBSD: ports/devel/pear-Structures_DataGrid_Renderer_HTMLSortForm/Makefile,v 1.3 2013/01/26 19:10:03 svnexp Exp $
-#
+# Created by: Nick Hilliard <nick@foobar.org>
+# $FreeBSD: devel/pear-Structures_DataGrid_Renderer_HTMLSortForm/Makefile 318087 2013-05-13 14:32:55Z miwi $
 
 PORTNAME=	Structures_DataGrid_Renderer_HTMLSortForm
 PORTVERSION=	0.1.3
 CATEGORIES=	devel www pear
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	HTMLSortForm Renderer for pear-Structures_DataGrid
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid.php:${PORTSDIR}/devel/pear-Structures_DataGrid \
 		${PEARDIR}/HTML/QuickForm.php:${PORTSDIR}/devel/pear-HTML_QuickForm
 
-CATEGORY=	Structures
-FILES=		DataGrid/Renderer/HTMLSortForm.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
