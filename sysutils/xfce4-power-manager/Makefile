@@ -1,12 +1,10 @@
-# New ports collection makefile for:	xfce4-power-manager
-# Date created:		2009-06-20
-# Whom:			J.R. Oldroyd <fbsd@opal.com>
-#
-# $FreeBSD: sysutils/xfce4-power-manager/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: J.R. Oldroyd <fbsd@opal.com>
+# $FreeBSD: sysutils/xfce4-power-manager/Makefile 317695 2013-05-08 16:05:21Z olivierd $
 #
 
 PORTNAME=	xfce4-power-manager
 PORTVERSION=	1.2.0
+PORTREVISION=	1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/xfce/${PORTNAME}/${PORTVERSION:R}
@@ -19,9 +17,9 @@ LIB_DEPENDS=	notify:${PORTSDIR}/devel/libnotify
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GMAKE=	yes
-USE_GNOME=	gtk20 intltool intlhack pkgconfig
+USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libutil libgui panel
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-network-manager \
