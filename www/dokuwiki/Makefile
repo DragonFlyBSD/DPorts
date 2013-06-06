@@ -1,5 +1,5 @@
-# Created by:	Chin-San Huang <chinsan@mail2000.com.tw>
-# $FreeBSD: ports/www/dokuwiki/Makefile,v 1.59 2013/01/14 03:47:15 svnexp Exp $
+# Created by: Chin-San Huang <chinsan@mail2000.com.tw>
+# $FreeBSD: www/dokuwiki/Makefile 318124 2013-05-13 19:45:26Z delphij $
 
 PORTNAME=	dokuwiki
 PORTVERSION=	${DIST_VER:S/${PORTNAME}//:S/-//g}
@@ -15,7 +15,7 @@ COMMENT=	A simple and easy to use wiki, no database required
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-DIST_VER=	${PORTNAME}-2012-10-13
+DIST_VER=	${PORTNAME}-2013-05-10
 USE_PHP=	gd mbstring openssl pcre session xml zlib
 NO_BUILD=	YES
 WANT_PHP_WEB=	YES
