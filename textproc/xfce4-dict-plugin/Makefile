@@ -1,13 +1,9 @@
-# New ports collection makefile for:	dictionary plugin for xfce4
-# Date created:				23. January 2007
-# Whom:					Oliver Lehmann (oliver@FreeBSD.org)
-#
-# $FreeBSD: textproc/xfce4-dict-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: Oliver Lehmann (oliver@FreeBSD.org)
+# $FreeBSD: textproc/xfce4-dict-plugin/Makefile 319074 2013-05-25 20:17:53Z olivierd $
 #
 
 PORTNAME=	xfce4-dict
-PORTVERSION=	0.6.0
-PORTREVISION=	7
+PORTVERSION=	0.7.0
 CATEGORIES=	textproc xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/apps/${PORTNAME}/${PORTVERSION:R}
@@ -15,16 +11,17 @@ PKGNAMESUFFIX=	-plugin
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
-COMMENT=	Xfce Plugin for searching for the translation or explanation of a word
+COMMENT=	Xfce4 plugin to query different dictionaries
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-USES=		gettext
+USES=		gettext pkgconfig
 USE_GMAKE=	yes
-USE_GNOME=	gtk20 intltool intlhack pkgconfig desktopfileutils
-USE_XFCE=	configenv libgui libutil panel
+USE_GNOME=	glib20 gtk20 intltool intlhack
+USE_XFCE=	configenv libmenu libutil panel
 USE_XORG=	x11
+USE_LDCONFIG=	yes
 
 MAN1=		xfce4-dict.1
 
