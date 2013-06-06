@@ -1,9 +1,5 @@
-# Ports collection makefile for:        HTML_QuickForm_Renderer_Tableless
-# Date created:                         25 October 2010
-# Whom:                                 Chris St Denis <chris@smartt.com>
-#
-# $FreeBSD: ports/devel/pear-HTML_QuickForm_Renderer_Tableless/Makefile,v 1.4 2012/11/17 05:56:38 svnexp Exp $
-#
+# Created by: Chris St Denis <chris@smartt.com>
+# $FreeBSD: devel/pear-HTML_QuickForm_Renderer_Tableless/Makefile 318095 2013-05-13 14:38:31Z miwi $
 
 PORTNAME=	HTML_QuickForm_Renderer_Tableless
 PORTVERSION=	0.6.1
@@ -13,14 +9,9 @@ MAINTAINER=	chris@smartt.com
 COMMENT=	Implementation of Tableless Renderer for HTML_QuickForm
 
 BUILD_DEPENDS=	${PEARDIR}/HTML/QuickForm.php:${PORTSDIR}/devel/pear-HTML_QuickForm
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/HTML/QuickForm.php:${PORTSDIR}/devel/pear-HTML_QuickForm
 
-FILES=		HTML/QuickForm/Renderer/Tableless.php
-
-_EXAMPLESDIR=	docs/examples
-EXAMPLES=	contact.php
-
-DATA=		stylesheet.css
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
