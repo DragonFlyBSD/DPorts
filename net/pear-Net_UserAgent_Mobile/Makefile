@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-Net_UserAgent_Mobile
-# Date created:			  06 June 2005
-# Whom:				  Shinsuke Matsui (<smatsui@karashi.org>)
-#
-# $FreeBSD: ports/net/pear-Net_UserAgent_Mobile/Makefile,v 1.11 2012/11/17 06:00:14 svnexp Exp $
-#
+# Created by: Shinsuke Matsui (<smatsui@karashi.org>)
+# $FreeBSD: net/pear-Net_UserAgent_Mobile/Makefile 318040 2013-05-13 09:42:03Z miwi $
 
 PORTNAME=	Net_UserAgent_Mobile
 PORTVERSION=	1.0.0
@@ -14,22 +10,10 @@ MAINTAINER=	smatsui@karashi.org
 COMMENT=	PEAR class that parses HTTP mobile user agent string
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 USE_PHP=	pcre
-
-CATEGORY=	Net/UserAgent
-FILES=		Mobile.php Mobile/Common.php \
-		Mobile/Display.php Mobile/DoCoMo.php \
-		Mobile/EZweb.php Mobile/NonMobile.php \
-		Mobile/SoftBank.php Mobile/Willcom.php \
-		Mobile/DoCoMo/ScreenInfo.php
-TESTS=		AllTests.php MobileTestCase.php prepare.php \
-		Mobile/AllTests.php Mobile/DoCoMoTestCase.php \
-		Mobile/EZwebTestCase.php Mobile/NonMobileTestCase.php \
-		Mobile/SoftBankTestCase.php \
-		Mobile/WillcomTestCase.php \
-		Mobile/DoCoMoTestCase/docomo-screen.xml
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
