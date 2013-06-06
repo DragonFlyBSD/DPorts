@@ -1,9 +1,5 @@
-# Ports collection makefile for:	pear-Structures_DataGrid_Renderer_XUL
-# Date created:				26 Jun 2008
-# Whom:					Nick Hilliard <nick@foobar.org>
-#
-# $FreeBSD: ports/devel/pear-Structures_DataGrid_Renderer_XUL/Makefile,v 1.3 2013/01/26 19:10:03 svnexp Exp $
-#
+# Created by: Nick Hilliard <nick@foobar.org>
+# $FreeBSD: devel/pear-Structures_DataGrid_Renderer_XUL/Makefile 318049 2013-05-13 09:51:39Z miwi $
 
 PORTNAME=	Structures_DataGrid_Renderer_XUL
 PORTVERSION=	0.1.3
@@ -16,8 +12,7 @@ BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid.php:${PORTSDIR}/devel/pear-Structures_DataGrid \
 		${PEARDIR}/XML/Util.php:${PORTSDIR}/devel/pear-XML_Util
 
-CATEGORY=	Structures
-FILES=		DataGrid/Renderer/XUL.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
