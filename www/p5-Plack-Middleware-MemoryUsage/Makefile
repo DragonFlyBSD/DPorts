@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/p5-Plack-Middleware-MemoryUsage/Makefile,v 1.1 2013/01/21 22:48:33 svnexp Exp $
+# $FreeBSD: www/p5-Plack-Middleware-MemoryUsage/Makefile 318773 2013-05-22 15:03:11Z kuriyama $
 
 PORTNAME=	Plack-Middleware-MemoryUsage
-PORTVERSION=	0.02
+PORTVERSION=	0.03
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
