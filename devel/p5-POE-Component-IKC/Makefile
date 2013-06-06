@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/devel/p5-POE-Component-IKC/Makefile,v 1.19 2013/01/21 15:44:01 svnexp Exp $
+# $FreeBSD: devel/p5-POE-Component-IKC/Makefile 318147 2013-05-14 08:49:23Z culot $
 
 PORTNAME=	POE-Component-IKC
-PORTVERSION=	0.2303
+PORTVERSION=	0.2304
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,14 +10,14 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	5u623l20@gmail.com
 COMMENT=	POE Inter-Kernel Communication
 
-BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-POE>=1.311:${PORTSDIR}/devel/p5-POE \
 		p5-POE-API-Peek>=0:${PORTSDIR}/devel/p5-POE-API-Peek \
 		p5-POE-Component-Daemon>=0:${PORTSDIR}/devel/p5-POE-Component-Daemon \
 		p5-Proc-ProcessTable>=0:${PORTSDIR}/devel/p5-Proc-ProcessTable
-RUN_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
-		p5-POE-API-Peek>=0:${PORTSDIR}/devel/p5-POE-API-Peek \
-		p5-POE-Component-Daemon>=0:${PORTSDIR}/devel/p5-POE-Component-Daemon \
-		p5-Proc-ProcessTable>=0:${PORTSDIR}/devel/p5-Proc-ProcessTable
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
 
