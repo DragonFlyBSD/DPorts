@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-jQuery-File-Upload/Makefile 314032 2013-03-13 06:59:58Z kuriyama $
+# $FreeBSD: www/p5-jQuery-File-Upload/Makefile 319092 2013-05-26 07:09:45Z kuriyama $
 
 PORTNAME=	jQuery-File-Upload
-PORTVERSION=	0.12
+PORTVERSION=	0.16
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,7 +10,7 @@ MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for jQuery File Upload plugin
 
 RUN_DEPENDS=	\
-	ImageMagick>0:${PORTSDIR}/graphics/ImageMagick \
+	convert:${PORTSDIR}/graphics/ImageMagick \
 	p5-JSON-XS>0:${PORTSDIR}/converters/p5-JSON-XS \
 	p5-Net-SSH2>0:${PORTSDIR}/net/p5-Net-SSH2 \
 	p5-URI>0:${PORTSDIR}/net/p5-URI
