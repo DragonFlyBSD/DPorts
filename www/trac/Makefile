@@ -2,7 +2,7 @@
 # $FreeBSD: www/trac/Makefile 315597 2013-03-30 05:12:42Z miwi $
 
 PORTNAME=	trac
-PORTVERSION=	0.12.3
+PORTVERSION=	0.12.5
 CATEGORIES=	www devel python
 MASTER_SITES=	http://ftp.edgewall.com/pub/trac/ \
 		ftp://ftp.edgewall.com/pub/trac/
