@@ -1,9 +1,10 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: www/xfce4-smartbookmark-plugin/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: www/xfce4-smartbookmark-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
 #
 
 PORTNAME=	xfce4-smartbookmark-plugin
 PORTVERSION=	0.4.5
+PORTREVISION=	1
 CATEGORIES=	www xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
