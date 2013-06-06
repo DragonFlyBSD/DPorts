@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Config-IniFiles/Makefile,v 1.46 2012/11/17 05:56:08 svnexp Exp $
+# $FreeBSD: devel/p5-Config-IniFiles/Makefile 318922 2013-05-24 08:09:37Z culot $
 
 PORTNAME=	Config-IniFiles
-PORTVERSION=	2.78
+PORTVERSION=	2.82
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
