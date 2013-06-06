@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Plack-Middleware-Expires
-# Date created:		2011-02-03
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-Plack-Middleware-Expires/Makefile,v 1.4 2012/11/17 06:02:53 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-Plack-Middleware-Expires/Makefile 319028 2013-05-25 05:46:25Z az $
 
 PORTNAME=	Plack-Middleware-Expires
 PORTVERSION=	0.03
@@ -22,10 +18,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Plack::Middleware::Expires.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
