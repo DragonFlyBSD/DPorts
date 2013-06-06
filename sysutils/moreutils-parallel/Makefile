@@ -1,8 +1,8 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: sysutils/moreutils-parallel/Makefile 316742 2013-04-28 18:55:45Z eadler $
+# $FreeBSD: sysutils/moreutils-parallel/Makefile 319121 2013-05-26 16:31:15Z eadler $
 
 PORTNAME=	moreutils-parallel
-PORTVERSION=	0.47
+PORTVERSION=	0.48
 CATEGORIES=	sysutils
 MASTER_SITES=	DEBIAN
 MASTER_SITE_SUBDIR=	pool/main/m/moreutils
