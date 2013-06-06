@@ -1,9 +1,5 @@
-# New ports collection makefile for:    moosefs-chunkserver
-# Date created:         1 April 2010
-# Whom:                 Chifeng Qu <chifeng@gmail.com>
-#
-# $FreeBSD: ports/sysutils/moosefs-chunkserver/Makefile,v 1.9 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Chifeng Qu <chifeng@gmail.com>
+# $FreeBSD: sysutils/moosefs-chunkserver/Makefile 318402 2013-05-17 20:09:11Z madpilot $
 
 PORTNAME=	moosefs
 PORTVERSION=	#
@@ -20,7 +16,7 @@ USE_RC_SUBR=	mfschunkserver
 MAN5=		mfschunkserver.cfg.5 mfshdd.cfg.5
 MAN8=		mfschunkserver.8
 
-SUB_FILES+=	pkg-message
+SUB_FILES+=	pkg-message pkg-deinstall
 SUB_LIST+=	MFS_WORKDIR="${MFS_WORKDIR}"
 
 CONFIGURE_ARGS=	--localstatedir=${MFS_WORKDIR} \
@@ -42,7 +38,7 @@ post-patch:
 post-install:
 .for FILE in mfschunkserver mfshdd
 	@if [ ! -f ${PREFIX}/etc/${i}.cfg ]; then \
-		${CP} ${PREFIX}/etc/${FILE}.cfg.dist ${PREFIX}/etc/${FILE}.cfg ; \
+		${CP} ${PREFIX}/etc/mfs/${FILE}.cfg.dist ${PREFIX}/etc/${FILE}.cfg ; \
 	fi
 .endfor
 	@${CAT} ${PKGMESSAGE}
