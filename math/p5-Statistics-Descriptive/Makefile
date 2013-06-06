@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: ports/math/p5-Statistics-Descriptive/Makefile,v 1.19 2012/11/17 05:59:27 svnexp Exp $
+# $FreeBSD: math/p5-Statistics-Descriptive/Makefile 318758 2013-05-22 09:32:37Z tobez $
 
 PORTNAME=	Statistics-Descriptive
-PORTVERSION=	3.0604
+PORTVERSION=	3.0605
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
