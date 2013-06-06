@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-App-cpanminus/Makefile 313138 2013-03-01 07:04:27Z kuriyama $
+# $FreeBSD: devel/p5-App-cpanminus/Makefile 318686 2013-05-21 12:03:04Z kuriyama $
 
 PORTNAME=	App-cpanminus
-PORTVERSION=	1.6002
+PORTVERSION=	1.6915
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
