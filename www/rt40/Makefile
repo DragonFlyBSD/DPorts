@@ -1,7 +1,8 @@
-# $FreeBSD: www/rt40/Makefile 317171 2013-05-03 05:11:17Z matthew $
+# $FreeBSD: www/rt40/Makefile 318867 2013-05-23 12:32:32Z matthew $
 
 PORTNAME=	rt
-PORTVERSION=	4.0.12
+PORTVERSION=	4.0.13
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/ \
 		ftp://ftp.eu.uu.net/pub/unix/ticketing/rt/release/
@@ -14,9 +15,15 @@ LATEST_LINK=	rt40
 
 # See doc/web_deployment.pod for info on the choices of webserver /
 # webapp combinations.  Note: if using apache, apache-2.2+ is
-# recommended.  For deployment with nginx, use the SPAWN_FCGI method.
-# A standalone PSGI based webserver is always available, but this is
-# really only suitable for development usage.
+# recommended.  For deployment with nginx, use the SPAWN_FCGI method
+# or the builtin webserver with a FCGI handler.
+#
+# The builtin standalone PSGI based webserver is always available, no
+# mater what choice of web deployment platform, or none, that you
+# make.  Best Practical state that this is really only suitable for
+# development usage, although I have heard reports of people using it
+# successfully for medium sized deployments.  If you only want the
+# builtin webserver, simply deselect all of the web options.
 #
 # See doc/full_text_indexing.pod if you need to set up full text
 # indexes on your ticket database.  PostgreSQL or Oracle are
@@ -34,7 +41,6 @@ OPTIONS_DEFAULT=	AP_MODPERL GD GPG MYSQL
 
 AP_MODFASTCGI_DESC=	Deploy with apache and mod_fastcgi
 AP_MODPERL_DESC=	Deploy with apache and mod_perl
-BUILTIN_DESC=		Deploy with built-in web server (not for production)
 DEV_DESC=		Configure for Developers
 GD_DESC=		Enable GD Graphs and Charts
 GPG_DESC=		Enable GnuPG support
@@ -67,12 +73,6 @@ USE_AUTOTOOLS=	autoconf
 
 .if !${PORT_OPTIONS:MDOCS}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-noportdocs-Makefile.in
-.endif
-
-.if !${PORT_OPTIONS:MAP_MODPERL} && !${PORT_OPTIONS:MAP_MODFASTCGI} && \
-	!${PORT_OPTIONS:MLIGHTTPD} && !${PORT_OPTIONS:MSPAWN_FCGI} && \
-	!${PORT_OPTIONS:MBUILTIN}
-IGNORE=	please select one of AP_MODPERL, AP_MODFASTCGI, LIGHTTPD, SPAWN_FCGI or BUILTIN
 .endif
 
 .if ${PORT_OPTIONS:MAP_MODPERL}
