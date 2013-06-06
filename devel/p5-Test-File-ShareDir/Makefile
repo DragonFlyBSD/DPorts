@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Test-File-ShareDir/Makefile,v 1.2 2012/11/17 05:56:32 svnexp Exp $
+# $FreeBSD: devel/p5-Test-File-ShareDir/Makefile 318374 2013-05-17 10:34:23Z lth $
 
 PORTNAME=	Test-File-ShareDir
-PORTVERSION=	0.3.1
+PORTVERSION=	0.3.3
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Test
@@ -12,7 +12,7 @@ COMMENT=	Create a fake ShareDir for your modules for testing
 
 BUILD_DEPENDS=	p5-File-Copy-Recursive>0:${PORTSDIR}/devel/p5-File-Copy-Recursive \
 		p5-File-ShareDir>=1.00:${PORTSDIR}/devel/p5-File-ShareDir \
-		p5-Path-Class>0:${PORTSDIR}/devel/p5-Path-Class
+		p5-Path-Tiny>0:${PORTSDIR}/devel/p5-Path-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal
 
