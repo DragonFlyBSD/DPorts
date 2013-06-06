@@ -1,9 +1,4 @@
-# New ports collection makefile for:	pear-Date_Holidays_Brazil
-# Date created:		2008-06-04
-# Whom:			Thomas Abthorpe <tabthorpe@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-Date_Holidays_Brazil/Makefile,v 1.6 2012/11/17 05:56:38 svnexp Exp $
-#
+# $FreeBSD: devel/pear-Date_Holidays_Brazil/Makefile 319309 2013-05-28 14:06:07Z miwi $
 
 PORTNAME=	Date_Holidays_Brazil
 PORTVERSION=	0.1.2
@@ -13,10 +8,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Driver based class to calculate holidays in Brazil
 
 BUILD_DEPENDS=	${PEARDIR}/Date/Holidays.php:${PORTSDIR}/devel/pear-Date_Holidays
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/Date/Holidays.php:${PORTSDIR}/devel/pear-Date_Holidays
 
-CATEGORY=	Date
-FILES=		Holidays/Driver/Brazil.php
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
