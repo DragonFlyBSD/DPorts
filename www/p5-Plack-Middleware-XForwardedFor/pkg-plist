@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/p5-Plack-Middleware-XForwardedFor/pkg-plist,v 1.2 2012/11/17 06:02:53 svnexp Exp $
+@comment $FreeBSD: www/p5-Plack-Middleware-XForwardedFor/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Plack/Middleware/XForwardedFor/.packlist
 %%SITE_PERL%%/Plack/Middleware/XForwardedFor.pm
 @dirrmtry %%SITE_PERL%%/Plack/Middleware
