@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Exporter-Declare/Makefile,v 1.6 2013/02/16 11:28:53 svnexp Exp $
+# $FreeBSD: devel/p5-Exporter-Declare/Makefile 318697 2013-05-21 13:50:50Z kuriyama $
 
 PORTNAME=	Exporter-Declare
-PORTVERSION=	0.106
+PORTVERSION=	0.112
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:EXODIST
@@ -25,9 +25,6 @@ MAN3=	Exporter::Declare.3 \
 	Exporter::Declare::Export::Generator.3 \
 	Exporter::Declare::Export::Sub.3 \
 	Exporter::Declare::Export::Variable.3 \
-	Exporter::Declare::Magic.3 \
-	Exporter::Declare::Magic::Parser.3 \
-	Exporter::Declare::Magic::Sub.3 \
 	Exporter::Declare::Meta.3 \
 	Exporter::Declare::Specs.3
 
