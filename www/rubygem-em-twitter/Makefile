@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/rubygem-em-twitter/Makefile 313070 2013-02-27 20:41:54Z tota $
+# $FreeBSD: www/rubygem-em-twitter/Makefile 319638 2013-06-02 03:01:13Z swills $
 
 PORTNAME=	em-twitter
-PORTVERSION=	0.2.1
+PORTVERSION=	0.2.2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
