@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Data-Phrasebook/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-Data-Phrasebook/Makefile 319211 2013-05-27 11:24:50Z tobez $
 
 PORTNAME=	Data-Phrasebook
-PORTVERSION=	0.33
+PORTVERSION=	0.34
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
