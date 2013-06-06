@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/ragel/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: devel/ragel/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	ragel
 PORTVERSION=	6.8
@@ -23,7 +23,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
-USE_TEX=	tetex
+USE_TEX=	latex:build
 CONFIGURE_ARGS+=	--enable-manual
 BUILD_DEPENDS+=	fig2dev:${PORTSDIR}/print/transfig
 PLIST_SUB+=	DOCS=""
