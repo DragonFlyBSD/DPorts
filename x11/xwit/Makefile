@@ -2,7 +2,7 @@
 # Date created:				15 June 1998
 # Whom:					Thomas Gellekum <tg@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/xwit/Makefile,v 1.20 2012/11/17 06:03:23 svnexp Exp $
+# $FreeBSD: x11/xwit/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
 #
 
 PORTNAME=	xwit
@@ -18,6 +18,7 @@ COMMENT=	X interface tool
 
 USE_IMAKE=	yes
 USE_XORG=	x11 xext
+MAKE_JOBS_SAFE=	yes
 
 MAN1=		xwit.1
 PLIST_FILES=	bin/xwit
