@@ -2,7 +2,7 @@
 # Date created:		16 July 2011
 # Whom:			hrs
 #
-# $FreeBSD: print/latex-chapterfolder/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-chapterfolder/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	chapterfolder
 PORTVERSION=	2.0.20051124
@@ -18,7 +18,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package that ties section structures and folders
 
-USE_TEX=	tetex
+USE_TEX=	latex
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} \
 		TEXMFDIR=${TEXMFDIR}
 
