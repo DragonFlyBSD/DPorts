@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: games/p5-Acme-GuessNumber/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: games/p5-Acme-GuessNumber/Makefile 318015 2013-05-13 08:45:54Z tobez $
 
 PORTNAME=	Acme-GuessNumber
-PORTVERSION=	0.03
+PORTVERSION=	0.04
 CATEGORIES=	games perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Locale/IMACAT
