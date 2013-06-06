@@ -1,0 +1,74 @@
+# Created by: Stas Timokhin <stast@bsdportal.ru>
+# $FreeBSD: net-p2p/eiskaltdcpp-gtk/Makefile 317832 2013-05-10 17:34:56Z fjoe $
+
+PORTNAME=	eiskaltdcpp-gtk
+PORTVERSION=	2.2.4
+PORTREVISION=	2
+CATEGORIES=	net-p2p
+MASTER_SITES=	GOOGLE_CODE
+DISTNAME=	eiskaltdcpp-${DISTVERSION}
+
+MAINTAINER=	fjoe@FreeBSD.org
+COMMENT=	EiskaltDC++ Direct Connect client GTK GUI
+
+LICENSE=	GPLv3
+
+RUN_DEPENDS=	${LOCALBASE}/share/eiskaltdcpp/keep_me:${PORTSDIR}/net-p2p/eiskaltdcpp-data
+LIB_DEPENDS=	eiskaltdcpp:${PORTSDIR}/net-p2p/eiskaltdcpp-lib
+BUILD_DEPENDS+=	chrpath:${PORTSDIR}/devel/chrpath
+
+CMAKE_ARGS+=	-DBUILD_LIB:BOOL=OFF
+PROJECTHOST=	eiskaltdc
+
+USE_XZ=		yes
+USE_GCC=	4.6+
+USES=		cmake gettext
+USE_OPENSSL=	yes
+MAKE_JOBS_SAFE=	yes
+
+MAN1=		${PORTNAME}.1
+MANCOMPRESSED=	yes
+
+OPTIONS_DEFINE=	MINIUPNP LIBGNOME2 LIBNOTIFY
+OPTIONS_DEFAULT=	MINIUPNP LIBNOTIFY
+MINIUPNP_DESC=	UPnP support
+LIBGNOME2_DESC=	Sound notification support
+LIBNOTIFY_DESC=	Popup notification support
+
+USE_GNOME=	pango gtk20 glib20
+
+CMAKE_ARGS+=	-DUSE_QT:BOOL=OFF
+CMAKE_ARGS+=	-DUSE_GTK:BOOL=ON
+CMAKE_ARGS+=	-DEISKALTDCPP_INCLUDE_DIR:STRING="${LOCALBASE}/include/eiskaltdcpp"
+CMAKE_ARGS+=	-DCREATE_MO:BOOL=ON
+CMAKE_ARGS+=	-DCMAKE_LIBRARY_PATH:PATH="${LOCALBASE}/lib:${PREFIX}/lib"
+CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=ON
+CMAKE_ARGS+=	-DINSTALL_DATA:BOOL=OFF
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MMINIUPNP}
+LIB_DEPENDS+=	miniupnpc:${PORTSDIR}/net/miniupnpc
+CMAKE_ARGS+=	-DUSE_MINIUPNP:BOOL=ON -DLOCAL_MINIUPNP:BOOL=OFF
+.else
+CMAKE_ARGS+=	-DUSE_MINIUPNP:BOOL=OFF
+.endif
+
+.if ${PORT_OPTIONS:MLIBGNOME2}
+USE_GNOME+=	libgnome
+CMAKE_ARGS+=	-DUSE_LIBGNOME2:BOOL=ON
+.else
+CMAKE_ARGS+=	-DUSE_LIBGNOME2:BOOL=OFF
+.endif
+
+.if ${PORT_OPTIONS:MLIBNOTIFY}
+LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
+CMAKE_ARGS+=	-DUSE_LIBNOTIFY:BOOL=ON
+.else
+CMAKE_ARGS+=	-DUSE_LIBNOTIFY:BOOL=OFF
+.endif
+
+post-build:
+	${LOCALBASE}/bin/chrpath -r "${_GCC_RUNTIME}" "${WRKSRC}/${PORTNAME}/${PORTNAME}"
+
+.include <bsd.port.mk>
