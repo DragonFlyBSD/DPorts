@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net-im/jabber-pyaim/pkg-plist,v 1.3 2012/11/17 06:00:27 svnexp Exp $
+@comment $FreeBSD: net-im/jabber-pyaim/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 @unexec if cmp -s %D/%%EXAMPLESDIR%%/etc/jabber-pyaim.xml %D/etc/jabber-pyaim.xml; then rm -f %D/etc/jabber-pyaim.xml; fi
 %%EXAMPLESDIR%%/etc/jabber-pyaim.xml
 @exec [ -f %D/etc/jabber-pyaim.xml ] || cp %B/%f %D/etc/jabber-pyaim.xml
