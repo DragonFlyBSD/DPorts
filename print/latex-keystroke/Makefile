@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: print/latex-keystroke/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-keystroke/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	latex-keystroke
 PORTVERSION=	1.0.20001109
@@ -17,7 +17,7 @@ EXTRACT_ONLY=	#empty
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package for the graphical representation of the keys
 
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	YES
 PLIST_SUB=	TEXMFLOCAL=${TEXMFLOCAL} MKTEXLSR=${MKTEXLSR} \
 		CLASSDIR=${CLASSDIR}
