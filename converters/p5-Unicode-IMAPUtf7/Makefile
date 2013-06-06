@@ -1,30 +1,28 @@
-# New ports collection makefile for:	Unicode::IMAPUtf7
-# Date created:				25 Jan 2002
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/converters/p5-Unicode-IMAPUtf7/Makefile,v 1.13 2012/11/17 05:55:04 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: converters/p5-Unicode-IMAPUtf7/Makefile 318170 2013-05-14 16:30:01Z miwi $
 
 PORTNAME=	Unicode-IMAPUtf7
 PORTVERSION=	2.01
+PORTREVISION=	1
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	Unicode/FABPOT
+MASTER_SITE_SUBDIR=	CPAN:FABPOT
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl extension to deal with IMAP UTF-7
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-Unicode-String>=0:${PORTSDIR}/converters/p5-Unicode-String
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	p5-Unicode-String>=0:${PORTSDIR}/converters/p5-Unicode-String
 
 PERL_CONFIGURE=	yes
 
 MAN3=		Unicode::IMAPUtf7.3
 
 post-extract:	# breaks non-root build otherwise
-	${CHMOD} u+x ${WRKSRC}
-	${CHMOD} u+x ${WRKSRC}/t ${WRKSRC}/lib
-	${CHMOD} u+x ${WRKSRC}/lib/Unicode
+	@${FIND} ${WRKSRC} -type d | ${XARGS} ${CHMOD} a+rx
 
 .include <bsd.port.mk>
