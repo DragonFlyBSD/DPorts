@@ -1,13 +1,10 @@
-# New ports collection makefile for:	gtk-murrina-lightblue
-# Date created:		2006-08-20
-# Whom:			Phillip Neumann <pneumann@gmail.com>
-#
-# $FreeBSD: ports/x11-themes/gtk-murrina-lightblue/Makefile,v 1.8 2012/11/17 06:03:31 svnexp Exp $
+# Created by: Phillip Neumann <pneumann@gmail.com>
+# $FreeBSD: x11-themes/gtk-murrina-lightblue/Makefile 317646 2013-05-08 09:15:08Z olivierd $
 #
 
 PORTNAME=	gtk-murrina-lightblue
 PORTVERSION=	0.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://www.gnome-look.org/CONTENT/content-files/
 DISTNAME=	45384-MurrinaLightBlue
