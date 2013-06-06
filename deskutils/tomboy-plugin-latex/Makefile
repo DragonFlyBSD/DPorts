@@ -2,7 +2,7 @@
 # Date created:		2008-12-21
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD: deskutils/tomboy-plugin-latex/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: deskutils/tomboy-plugin-latex/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	tomboy-plugin-latex
@@ -20,6 +20,6 @@ RUN_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 
 .include <bsd.port.mk>
