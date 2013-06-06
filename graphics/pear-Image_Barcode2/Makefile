@@ -1,12 +1,8 @@
-# Ports collection makefile for:  pear-Image_Barcode2
-# Date created:			  16 Apr 2012
-# Whom:				  Muhammad Moinur Rahman <5u623l20@gmail.com>
-#
-# $FreeBSD: ports/graphics/pear-Image_Barcode2/Makefile,v 1.2 2012/11/17 05:58:18 svnexp Exp $
-#
+# Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
+# $FreeBSD: graphics/pear-Image_Barcode2/Makefile 318176 2013-05-14 16:35:08Z miwi $
 
 PORTNAME=	Image_Barcode2
-PORTVERSION=	0.2.1
+PORTVERSION=	0.2.3
 CATEGORIES=	graphics www pear
 
 MAINTAINER=	5u623l20@gmail.com
@@ -16,10 +12,9 @@ BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS:=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 USE_PHP=	gd
+PEAR_AUTOINSTALL=	yes
 
 LATEST_LINK=	pear-${PORTNAME}
-
-PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
