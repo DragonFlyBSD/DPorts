@@ -1,16 +1,17 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: ports/devel/p5-Algorithm-Numerical-Shuffle/Makefile,v 1.4 2012/11/17 05:56:04 svnexp Exp $
+# $FreeBSD: devel/p5-Algorithm-Numerical-Shuffle/Makefile 318224 2013-05-15 08:19:44Z miwi $
 
 PORTNAME=	Algorithm-Numerical-Shuffle
-PORTVERSION=	1.4
+PORTVERSION=	2009110301
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:ABIGAIL
 PKGNAMEPREFIX=	p5-
-DISTNAME=       Shuffle-${PORTVERSION}
-EXTRACT_SUFX=   .tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shuffle a list
+
+LICENSE=	MIT
 
 PERL_CONFIGURE=	yes
 
