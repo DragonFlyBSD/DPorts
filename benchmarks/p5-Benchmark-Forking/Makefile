@@ -1,8 +1,9 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: benchmarks/p5-Benchmark-Forking/Makefile 306244 2012-10-21 20:25:30Z eadler $
+# $FreeBSD: benchmarks/p5-Benchmark-Forking/Makefile 318286 2013-05-16 08:39:59Z miwi $
 
 PORTNAME=	Benchmark-Forking
 PORTVERSION=	1.01
+PORTREVISION=	1
 CATEGORIES=	benchmarks perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Benchmark
