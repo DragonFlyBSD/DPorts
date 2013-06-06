@@ -1,10 +1,9 @@
-# Created by: Matthias Petermann<matthias@petermann.it>
-# $FreeBSD: ports/finance/trytond_purchase_shipment_cost/Makefile,v 1.2 2012/11/17 05:57:27 svnexp Exp $
+# $FreeBSD: finance/trytond_purchase_shipment_cost/Makefile 318580 2013-05-20 08:00:57Z wen $
 
 PORTNAME=	trytond_purchase_shipment_cost
-PORTVERSION=	2.4.0
+PORTVERSION=	2.4.1
 CATEGORIES=	finance python
-MASTER_SITES=	http://downloads2.tryton.org/${PORTVERSION:R}/
+MASTER_SITES=	http://downloads.tryton.org/${PORTVERSION:R}/
 
 MAINTAINER=	matthias@petermann.it
 COMMENT=	Tryton Application Platform (Purchase Shipment Cost Module)
@@ -15,6 +14,8 @@ RUN_DEPENDS=	trytond>=2.4.0:${PORTSDIR}/finance/trytond \
 		trytond_carrier>=2.4.1:${PORTSDIR}/finance/trytond_carrier \
 		trytond_currency>=2.4.0:${PORTSDIR}/finance/trytond_currency \
 		trytond_stock>=2.4.0:${PORTSDIR}/finance/trytond_stock
+
+CONFLICTS=	trytond_purchase_shipment_cost-2.[68].*
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
