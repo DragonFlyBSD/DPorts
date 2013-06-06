@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sea-defender
-# Date created:		23 Jul 2010
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/games/sea-defender/Makefile,v 1.5 2012/11/17 05:57:52 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: games/sea-defender/Makefile 318818 2013-05-23 02:02:57Z amdmi3 $
 
 PORTNAME=	sea-defender
 PORTVERSION=	r20100723
@@ -30,10 +26,12 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PORTDOCS=	README
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sea ${PREFIX}/libexec/${PORTNAME}
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
