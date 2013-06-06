@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/p5-HTML-FillInForm-Lite/Makefile,v 1.1 2013/01/20 06:43:33 svnexp Exp $
+# $FreeBSD: www/p5-HTML-FillInForm-Lite/Makefile 318729 2013-05-21 22:38:33Z kuriyama $
 
 PORTNAME=	HTML-FillInForm-Lite
-PORTVERSION=	1.12
+PORTVERSION=	1.13
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for lightweight FillInForm module in Pure Perl
 
-PERL_CONFIGURE=	yes
+PERL_MODBUILD=	yes
 
 MAN3=	HTML::FillInForm::Lite.3 \
 	HTML::FillInForm::Lite::Compat.3 \
