@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-ExtractUse/Makefile 317080 2013-05-02 07:30:19Z culot $
+# $FreeBSD: devel/p5-Module-ExtractUse/Makefile 319473 2013-05-31 09:38:36Z tobez $
 
 PORTNAME=	Module-ExtractUse
-PORTVERSION=	0.30
+PORTVERSION=	0.31
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
