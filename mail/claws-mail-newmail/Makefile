@@ -1,26 +1,12 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: ports/mail/claws-mail-newmail/Makefile,v 1.51 2012/12/10 17:32:44 svnexp Exp $
+# $FreeBSD: mail/claws-mail-newmail/Makefile 317877 2013-05-11 14:10:28Z pawel $
 
 PORTNAME=	newmail
-PORTVERSION=	0.0.16
-CATEGORIES=	mail
-MASTER_SITES=	http://www.claws-mail.org/downloads/plugins/
-PKGNAMEPREFIX=	claws-mail-
+PORTREVISION=	0
 
-MAINTAINER=	pawel@FreeBSD.org
 COMMENT=	Message header summary logging plugin for Claws Mail
 
-LICENSE=	GPLv3
+CLAWS_PLUGINS_BUILD=	newmail
 
-BUILD_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
-RUN_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
-
-USE_GMAKE=	yes
-USE_AUTOTOOLS=	autoconf
-MAKE_JOBS_SAFE=	yes
-
-PLIST_FILES=	lib/claws-mail/plugins/newmail.a \
-		lib/claws-mail/plugins/newmail.la \
-		lib/claws-mail/plugins/newmail.so
-
+.include "../claws-mail/Makefile.claws"
 .include <bsd.port.mk>
