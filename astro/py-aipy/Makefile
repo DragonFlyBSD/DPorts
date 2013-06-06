@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-aipy
-# Date created:		2008-11-11
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/astro/py-aipy/Makefile,v 1.13 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: astro/py-aipy/Makefile 319570 2013-06-01 14:22:35Z wen $
 
 PORTNAME=	aipy
 PORTVERSION=	1.1.1
