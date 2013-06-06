@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-Plack-Middleware-ServerStatus-Lite/Makefile 313688 2013-03-09 04:06:57Z kuriyama $
+# $FreeBSD: www/p5-Plack-Middleware-ServerStatus-Lite/Makefile 318775 2013-05-22 15:16:37Z kuriyama $
 
 PORTNAME=	Plack-Middleware-ServerStatus-Lite
-PORTVERSION=	0.12
+PORTVERSION=	0.13
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -21,7 +21,7 @@ TEST_DEPENDS=	\
 	p5-Starlet>0:${PORTSDIR}/www/p5-Starlet \
 	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+PERL_MODBUILD=	yes
 
 MAN3=	Plack::Middleware::ServerStatus::Lite.3
 
