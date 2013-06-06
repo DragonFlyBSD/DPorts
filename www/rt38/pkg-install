@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/www/rt38/pkg-install,v 1.2 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: www/rt38/pkg-install 300897 2012-07-14 14:29:18Z beat $
 #
 
 if [ "$2" != "PRE-INSTALL" ]; then

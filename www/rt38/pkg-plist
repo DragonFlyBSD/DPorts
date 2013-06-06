@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/rt38/pkg-plist,v 1.15 2012/11/17 06:03:03 svnexp Exp $
+@comment $FreeBSD: www/rt38/pkg-plist 306803 2012-11-01 14:10:55Z flo $
 @unexec if cmp -s %D/etc/rt38/RT_SiteConfig.pm %D/etc/rt38/RT_SiteConfig.pm-dist; then rm -f %D/etc/rt38/RT_SiteConfig.pm; fi
 @exec [ -f %D/etc/rt38/RT_SiteConfig.pm ] || cp %D/rt38/RT_SiteConfig.pm-dist %D/etc/rt38/RT_SiteConfig.pm
 bin/fastcgi_server

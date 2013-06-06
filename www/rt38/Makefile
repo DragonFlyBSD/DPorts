@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/rt38/Makefile,v 1.55 2013/02/16 12:47:29 svnexp Exp $
+# $FreeBSD: www/rt38/Makefile 318848 2013-05-23 07:24:40Z matthew $
 
 # TODO:
 # o etc/rt38 files permissions
@@ -8,7 +8,7 @@
 #   o install a sample into etc/apache22/Includes
 
 PORTNAME=	rt
-PORTVERSION=	3.8.16
+PORTVERSION=	3.8.17
 CATEGORIES=	www
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/ \
 		ftp://ftp.eu.uu.net/pub/unix/ticketing/rt/release/
