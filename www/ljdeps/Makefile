@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/ljdeps
-# Date created:		23 July 2002
-# Whom:			Ryan T. Dean <rtdean@cytherianage.net>
-#
-# $FreeBSD: ports/www/ljdeps/Makefile,v 1.14 2012/11/17 06:02:39 svnexp Exp $
-#
+# Created by: Ryan T. Dean <rtdean@cytherianage.net>
+# $FreeBSD: www/ljdeps/Makefile 318953 2013-05-24 10:35:14Z az $
 
 PORTNAME=	ljdeps
 PORTVERSION=	1.0
@@ -37,12 +33,6 @@ EXTRACT_ONLY=	# Empty
 NO_BUILD=	yes
 USE_PERL5=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
 do-install:	# Empty
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
