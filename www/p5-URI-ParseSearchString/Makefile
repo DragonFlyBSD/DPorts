@@ -1,16 +1,12 @@
-# New ports collection makefile for:	URI-ParseSearchString
-# Date created:	   19 Aug 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-URI-ParseSearchString/Makefile,v 1.18 2012/11/17 06:02:54 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-URI-ParseSearchString/Makefile 318146 2013-05-14 08:45:32Z tobez $
 
 PORTNAME=	URI-ParseSearchString
-PORTVERSION=	3.44.2
+PORTVERSION=	3.51.0
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
+DISTNAME=	${PORTNAME}-${PORTVERSION:C/.0$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse Apache referer logs and extract search engine query strings
