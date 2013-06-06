@@ -1,8 +1,9 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: ports/www/py-flask-cache/Makefile,v 1.5 2012/12/16 07:43:15 svnexp Exp $
+# $FreeBSD: www/py-flask-cache/Makefile 317969 2013-05-12 17:18:16Z rm $
 
 PORTNAME=	Flask-Cache
 PORTVERSION=	0.9.2
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +15,7 @@ LICENSE=	BSD
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0.8:${PORTSDIR}/www/py-flask
 
-USE_PYTHON=		2.6+
+USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Flask_Cache
 
