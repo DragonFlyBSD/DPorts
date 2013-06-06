@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-Net-DNS-ZoneFile-Fast/Makefile 316892 2013-04-30 07:48:42Z culot $
+# $FreeBSD: dns/p5-Net-DNS-ZoneFile-Fast/Makefile 318931 2013-05-24 08:46:06Z tobez $
 
 PORTNAME=	Net-DNS-ZoneFile-Fast
-PORTVERSION=	1.20
+PORTVERSION=	1.21
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
