@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-MojoMojo/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-MojoMojo/Makefile 318065 2013-05-13 10:30:39Z tobez $
 
 PORTNAME=	MojoMojo
-PORTVERSION=	1.09
+PORTVERSION=	1.10
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MRAMBERG
