@@ -1,8 +1,9 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/pear-Net_Gearman/Makefile 314258 2013-03-15 06:33:19Z miwi $
+# $FreeBSD: devel/pear-Net_Gearman/Makefile 317810 2013-05-10 14:36:46Z miwi $
 
 PORTNAME=	Net_Gearman
 PORTVERSION=	0.2.3
+PORTREVISION=	1
 CATEGORIES=	devel pear
 
 MAINTAINER=	gslin@gslin.org
