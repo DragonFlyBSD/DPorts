@@ -2,7 +2,7 @@
 # Date created:		21 Jun 2002
 # Whom:			Stefan Jahn <stefan.jahn@nemesis-sektor.de>
 #
-# $FreeBSD: editors/kile/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: editors/kile/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	kile
@@ -26,7 +26,7 @@ USE_KDELIBS_VER=3
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USE_TEX=	tetex
+USE_TEX=	latex
 
 OPTIONS_DEFINE=	KPDF
 OPTIONS_DEFAULT=	KPDF
