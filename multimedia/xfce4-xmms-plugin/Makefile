@@ -1,9 +1,9 @@
 # Created by: Zahemszky, Gábor <Gabor@Zahemszky.HU>
-# $FreeBSD: multimedia/xfce4-xmms-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: multimedia/xfce4-xmms-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
 
 PORTNAME=	xfce4-xmms-plugin
 PORTVERSION=	0.5.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	multimedia audio xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
@@ -14,9 +14,9 @@ COMMENT=	Xfce4 XMMS control plugin for xfce4-panel
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext pathfix
 USE_GMAKE=	yes
-USE_GNOME=	gtk20 intltool intlhack pango pkgconfig
+USE_GNOME=	gtk20 intltool intlhack pango
 USE_XFCE=	configenv libgui libutil panel
 
 OPTIONS_DEFINE=	XMMS BEEP AUDACIOUS
