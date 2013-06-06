@@ -2,7 +2,7 @@
 # Date created: 			7 January 2008
 # Whom:					Hyogeol Lee <hyogeollee@gmail.com>
 #
-# $FreeBSD: korean/ko.TeX/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: korean/ko.TeX/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	ko.TeX
@@ -17,7 +17,7 @@ COMMENT=	Korean TeX macro and utilities
 
 RUN_DEPENDS=	${BASE_MAP}:${PORTSDIR}/korean/ko.TeX-fonts-base
 
-USE_TEX=	tetex
+USE_TEX=	latex
 CONFLICTS=	hlatex-[0-9]*
 
 NO_WRKSUBDIR=	yes
