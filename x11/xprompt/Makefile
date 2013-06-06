@@ -1,15 +1,11 @@
-# New ports collection makefile for:   xprompt
-# Date created:        23 March 1997
-# Whom:                Matthew Hunt <mph@pobox.com>
-#
-# $FreeBSD: ports/x11/xprompt/Makefile,v 1.16 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: Matthew Hunt <mph@pobox.com>
+# $FreeBSD: x11/xprompt/Makefile 319719 2013-06-02 19:11:07Z antoine $
 
 PORTNAME=	xprompt
 PORTVERSION=	1.4
 PORTREVISION=	2
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES=	LOCAL
 MASTER_SITE_SUBDIR=	mph
 
 MAINTAINER=	ports@FreeBSD.org
