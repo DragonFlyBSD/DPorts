@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: multimedia/py-subliminal/Makefile 317728 2013-05-09 09:13:39Z ehaupt $
+# $FreeBSD: multimedia/py-subliminal/Makefile 318257 2013-05-15 19:33:14Z wg $
 
 PORTNAME=	subliminal
 PORTVERSION=	0.6.3
@@ -8,7 +8,7 @@ CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Python library to search and download subtitles
 
 LICENSE=	LGPL3
