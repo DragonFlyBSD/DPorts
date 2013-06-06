@@ -1,9 +1,5 @@
-# Ports collection makefile for:	xmpppy-yahoo
-# Date created:				Thu Jul 26
-# Whom:					Michael Nottebrock <lofi@FreeBSD.org>
-#
-# $FreeBSD: ports/net-im/py-xmpppy-yahoo/Makefile,v 1.7 2012/11/17 06:00:29 svnexp Exp $
-#
+# Created by: Michael Nottebrock <lofi@FreeBSD.org>
+# $FreeBSD: net-im/py-xmpppy-yahoo/Makefile 318883 2013-05-23 16:10:43Z jgh $
 
 PORTNAME=	yahoo
 PORTVERSION=	0.3.20070314
@@ -17,7 +13,8 @@ DISTNAME=	yahoo-transport-${PORTVERSION}
 MAINTAINER=	wenheping@gmail.com
 COMMENT=	Yahoo! transport for Jabber
 
-OPTIONS=	EJABBERD "Use transport with ejabberd" off
+OPTIONS_DEFINE=	EJABBERD
+EJABBERD_DESC=	transport with ejabberd
 
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/xmpp/__init__.py:${PORTSDIR}/net-im/py-xmpppy \
 		${PYTHON_SITELIBDIR}/DNS/__init__.py:${PORTSDIR}/dns/py-dns
@@ -37,9 +34,9 @@ SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD} BINDIR=${PYTHON_SITELIBDIR}/xmpp/yahoo \
 USE_RC_SUBR=	${UNIQUENAME:S/-/_/}
 DDIR=		${PYTHON_SITELIBDIR}/xmpp/yahoo
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_EJABBERD)
+.if ${PORT_OPTIONS:MEJABBERD}
 JABBER_USER?=	ejabberd
 SUB_LIST+=	JABBER_REQUIRE=ejabberd
 .else
@@ -81,4 +78,4 @@ post-install:
 	@${ECHO_CMD} "****************************************************"
 	@${ECHO_CMD}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
