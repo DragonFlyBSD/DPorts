@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: print/latex-subfloat/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-subfloat/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	latex-subfloat
 PORTVERSION=	2.14.20030821
@@ -16,7 +16,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package that enables subnumbering of different floats
 
-USE_TEX=	tetex
+USE_TEX=	latex
 PLIST_SUB=	TEXMFLOCAL=${TEXMFLOCAL} MKTEXLSR=${MKTEXLSR} \
 		CLASSDIR=${CLASSDIR}
 
