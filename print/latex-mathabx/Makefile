@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: print/latex-mathabx/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-mathabx/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	latex-mathabx
 PORTVERSION=	1.0.20050518
@@ -15,7 +15,7 @@ MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Math series, aka mathabx MetaFont fontset for TeX/LaTeX
 
 USE_ZIP=	YES
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	YES
 PLIST_SUB=	TEXMFLOCALDIR=${TEXMFLOCALDIR} \
 		MKTEXLSR=${MKTEXLSR} \
