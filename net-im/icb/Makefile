@@ -1,11 +1,12 @@
 # Created by: David O'Brien (obrien@NUXI.ucdavis.edu)
-# $FreeBSD: net-im/icb/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: net-im/icb/Makefile 319829 2013-06-04 08:20:26Z miwi $
 
 PORTNAME=	icb
 PORTVERSION=	5.1.0
 PORTREVISION=	4
 CATEGORIES=	net-im tcl
-MASTER_SITES=	http://www.obfuscation.org/icb/
+#MASTER_SITES=	http://www.obfuscation.org/icb/
+MASTER_SITES=	http://fossies.org/linux/misc/old/
 DISTNAME=	c${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
