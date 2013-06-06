@@ -1,0 +1,4 @@
+dm-devise adds DataMapper support to devise 
+(http://github.com/plataformatec/devise) for authentication support for Rails
+
+WWW: https://github.com/jm81/dm-devise
