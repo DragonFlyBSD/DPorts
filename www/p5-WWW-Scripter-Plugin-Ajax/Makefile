@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Scripter-Plugin-Ajax
-# Date created:				28 Jan 2010
-# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-WWW-Scripter-Plugin-Ajax/Makefile,v 1.9 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: www/p5-WWW-Scripter-Plugin-Ajax/Makefile 317643 2013-05-08 08:04:04Z ehaupt $
 
 PORTNAME=	WWW-Scripter-Plugin-Ajax
 PORTVERSION=	0.09
@@ -19,6 +15,7 @@ RUN_DEPENDS=	p5-WWW-Scripter-Plugin-JavaScript>0:${PORTSDIR}/www/p5-WWW-Scripter
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 PERL_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	yes
 
 MAN3=		WWW::Scripter::Plugin::Ajax.3
 
