@@ -1,13 +1,13 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: www/py-django-tastypie/Makefile 314926 2013-03-22 13:15:36Z rm $
+# $FreeBSD: www/py-django-tastypie/Makefile 318299 2013-05-16 09:44:10Z wg $
 
 PORTNAME=	django-tastypie
-PORTVERSION=	0.9.14
+PORTVERSION=	0.9.15
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Create REST API for Django apps
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mimeparse>=0:${PORTSDIR}/devel/py-mimeparse \
