@@ -1,18 +1,18 @@
-# New ports collection makefile for:	p5-WWW-Google-SiteMap
-# Date created:				2006-04-15
-# Whom:					nork@FreeBSD.org
-#
-# $FreeBSD: textproc/p5-WWW-Google-SiteMap/Makefile 302594 2012-08-15 19:26:13Z tabthorpe $
-#
+# Created by: nork@FreeBSD.org
+# $FreeBSD: textproc/p5-WWW-Google-SiteMap/Makefile 318165 2013-05-14 16:07:16Z miwi $
 
 PORTNAME=	WWW-Google-SiteMap
 PORTVERSION=	1.10
 CATEGORIES=	textproc www perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:JASONK
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl extension for managing Google SiteMaps
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-XML-Twig>=0:${PORTSDIR}/textproc/p5-XML-Twig \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
