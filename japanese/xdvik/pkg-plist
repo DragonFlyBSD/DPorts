@@ -1,0 +1,15 @@
+@comment $FreeBSD: japanese/xdvik/pkg-plist 300896 2012-07-14 13:54:48Z beat $
+bin/t1mapper
+bin/xdvi
+bin/xdvizilla
+libexec/xdviprint
+%%XDVIETCDIR%%/vfontmap
+%%XDVIETCDIR%%/vfontmap.dist
+%%XDVIETCDIR%%/xdvi.cfg
+%%XDVIETCDIR%%/xdvipaper.dvi2ps-j
+%%XDVIETCDIR%%/xdvipaper.dvips
+%%XDVIETCDIR%%/xdvipaper.jdvi2kps
+%%XDVIETCDIR%%/XDvi
+@dirrm %%XDVIETCDIR%%
+@exec %%MKTEXLSR%%
+@unexec %%MKTEXLSR%%
