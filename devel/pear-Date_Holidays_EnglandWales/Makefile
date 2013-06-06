@@ -1,9 +1,4 @@
-# New ports collection makefile for:	pear-Date_Holidays_EnglandWales
-# Date created:		2008-06-04
-# Whom:			Thomas Abthorpe <tabthorpe@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-Date_Holidays_EnglandWales/Makefile,v 1.7 2012/11/17 05:56:38 svnexp Exp $
-#
+# $FreeBSD: devel/pear-Date_Holidays_EnglandWales/Makefile 319355 2013-05-29 08:14:48Z miwi $
 
 PORTNAME=	Date_Holidays_EnglandWales
 PORTVERSION=	0.1.4
