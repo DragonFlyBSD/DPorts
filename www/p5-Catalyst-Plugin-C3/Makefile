@@ -1,9 +1,5 @@
-# Ports collection makefile for: p5-Catalyst-Plugin-C3
-# Date created:			 Apr 6, 2007
-# Whom:				 lbr@freebsd.org
-#
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-C3/Makefile,v 1.8 2012/11/17 06:02:47 svnexp Exp $
-#
+# Created by: lbr@FreeBSD.org
+# $FreeBSD: www/p5-Catalyst-Plugin-C3/Makefile 319504 2013-05-31 14:46:01Z miwi $
 
 PORTNAME=	Catalyst-Plugin-C3
 PORTVERSION=	0.03
