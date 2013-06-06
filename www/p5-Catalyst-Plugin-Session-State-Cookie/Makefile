@@ -1,9 +1,5 @@
-# Ports collection makefile for:	p5-Catalyst-Plugin-Session-State-Cookie
-# Date created:				Nov 16, 2005
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Session-State-Cookie/Makefile,v 1.21 2012/11/17 06:02:47 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-State-Cookie/Makefile 319498 2013-05-31 14:44:06Z miwi $
 
 PORTNAME=	Catalyst-Plugin-Session-State-Cookie
 PORTVERSION=	0.17
