@@ -1,9 +1,4 @@
-# New ports collection makefile for:	pear-Date_Holidays_Denmark
-# Date created:		2008-06-04
-# Whom:			Thomas Abthorpe <tabthorpe@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-Date_Holidays_Denmark/Makefile,v 1.7 2012/11/17 05:56:38 svnexp Exp $
-#
+# $FreeBSD: devel/pear-Date_Holidays_Denmark/Makefile 319311 2013-05-28 14:06:46Z miwi $
 
 PORTNAME=	Date_Holidays_Denmark
 PORTVERSION=	0.1.3
@@ -13,12 +8,9 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Driver based class to calculate holidays in Denmark
 
 BUILD_DEPENDS=	${PEARDIR}/Date/Holidays.php:${PORTSDIR}/devel/pear-Date_Holidays
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PEARDIR}/Date/Holidays.php:${PORTSDIR}/devel/pear-Date_Holidays
 
-CATEGORY=	Date
-FILES=		Holidays/Driver/Denmark.php
-
-PLIST_SUB=      PORTVERSION=${PORTVERSION}
+PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
