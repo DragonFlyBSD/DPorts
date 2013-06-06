@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/sysutils/rubygem-fluentd/files/fluentd.in,v 1.2 2013/01/22 01:49:35 svnexp Exp $
+# $FreeBSD$
 #
 # PROVIDE: fluentd
 # REQUIRE: LOGIN

@@ -1,7 +1,7 @@
-# $FreeBSD: ports/sysutils/rubygem-fluentd/Makefile,v 1.6 2013/01/22 01:49:35 svnexp Exp $
+# $FreeBSD: sysutils/rubygem-fluentd/Makefile 320044 2013-06-06 01:37:35Z kuriyama $
 
 PORTNAME=	fluentd
-PORTVERSION=	0.10.30
+PORTVERSION=	0.10.34
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
@@ -9,7 +9,7 @@ MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Fluent event collector
 
 RUN_DEPENDS=	\
-	rubygem-msgpack>=0.4.4:${PORTSDIR}/devel/rubygem-msgpack \
+	rubygem-msgpack>=0.5.4:${PORTSDIR}/devel/rubygem-msgpack \
 	rubygem-json>=1.4.3:${PORTSDIR}/devel/rubygem-json \
 	rubygem-yajl-ruby>=1.0:${PORTSDIR}/devel/rubygem-yajl-ruby \
 	rubygem-cool.io>=1.1.0:${PORTSDIR}/devel/rubygem-cool.io \
