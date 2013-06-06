@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: print/latex-bytefield/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-bytefield/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	latex-bytefield
 PORTVERSION=	1.2.20050731
@@ -16,7 +16,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package that utilization diagram of data fields
 
-USE_TEX=	tetex
+USE_TEX=	latex
 PLIST_SUB=	TEXMFDIR=${TEXMFDIR} MKTEXLSR=${MKTEXLSR} \
 		CLASSDIR=${CLASSDIR}
 
