@@ -1,9 +1,9 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: x11/xfce4-verve-plugin/Makefile 317031 2013-05-01 16:13:45Z jgh $
+# $FreeBSD: x11/xfce4-verve-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
 
 PORTNAME=	verve-plugin
 PORTVERSION=	1.0.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	x11 xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=src/panel-plugins/${PKGNAMEPREFIX}${PORTNAME}/${PORTVERSION:R}
