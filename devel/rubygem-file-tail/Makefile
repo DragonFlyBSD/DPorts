@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-file-tail
-# Date created:				06 October 2009
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/devel/rubygem-file-tail/Makefile,v 1.8 2012/11/17 05:56:59 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: devel/rubygem-file-tail/Makefile 319702 2013-06-02 17:59:42Z swills $
 
 PORTNAME=	file-tail
-PORTVERSION=	1.0.11
+PORTVERSION=	1.0.12
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
