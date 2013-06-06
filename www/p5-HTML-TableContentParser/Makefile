@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-TableContentParser
-# Date created:		2010-11-22
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-HTML-TableContentParser/Makefile,v 1.3 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: www/p5-HTML-TableContentParser/Makefile 319512 2013-05-31 15:16:13Z miwi $
 
 PORTNAME=	HTML-TableContentParser
 PORTVERSION=	0.13
