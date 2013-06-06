@@ -1,17 +1,12 @@
-# New ports collection makefile for:	p5-Imager-QRCode
-# Date created:				2007/02/28
-# Whom:					chinsan
-#
-# $FreeBSD: ports/graphics/p5-Imager-QRCode/Makefile,v 1.15 2012/11/17 05:58:17 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: graphics/p5-Imager-QRCode/Makefile 318752 2013-05-22 09:23:43Z tobez $
 
 PORTNAME=	Imager-QRCode
-PORTVERSION=	0.03.3
-PORTREVISION=	1
+PORTVERSION=	0.03.4
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-0.033
+DISTNAME=	${PORTNAME}-0.034
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generate QR Code with Imager using libqrencode
