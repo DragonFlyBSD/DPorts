@@ -1,5 +1,5 @@
 # Created by: Rene Ladan <r.c.ladan@student.tue.nl>
-# $FreeBSD: math/coq/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: math/coq/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	coq
 PORTVERSION=	8.4.2
@@ -36,7 +36,7 @@ MAN1=	coq-tex.1 coq_makefile.1 coqc.1 coqchk.1 coqdep.1 coqdoc.1 \
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
-USE_TEX=	tetex
+USE_TEX=	latex:build dvipsk:build
 BUILD_DEPENDS+=	hevea:${PORTSDIR}/textproc/hevea \
 		${LOCALBASE}/share/texmf/tex/latex/ucs/utf8x.def:${PORTSDIR}/print/latex-ucs
 PORTDOCS=	*
