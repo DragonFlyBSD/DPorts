@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Geo-Coordinates-UTM/Makefile 315280 2013-03-26 11:05:26Z tobez $
+# $FreeBSD: math/p5-Geo-Coordinates-UTM/Makefile 318759 2013-05-22 09:33:35Z tobez $
 
 PORTNAME=	Geo-Coordinates-UTM
-PORTVERSION=	0.10
+PORTVERSION=	0.11
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Geo
