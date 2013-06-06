@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Data::MessagePack::Stream
-# Date created:		22 Jul 2012
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Data-MessagePack-Stream/Makefile,v 1.3 2012/11/17 05:56:10 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Data-MessagePack-Stream/Makefile 318553 2013-05-19 22:32:01Z kuriyama $
 
 PORTNAME=	Data-MessagePack-Stream
 PORTVERSION=	0.07
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
