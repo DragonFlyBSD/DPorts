@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: print/latex-timing/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-timing/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	latex-timing
 PORTVERSION=	1.0.19940515
@@ -17,7 +17,7 @@ EXTRACT_ONLY=	#empty
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package for drawing timing diagrams
 
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	YES
 PLIST_SUB=	TEXMFDIR=${TEXMFDIR} MKTEXLSR=${MKTEXLSR} \
 		CLASSDIR=${CLASSDIR} \
