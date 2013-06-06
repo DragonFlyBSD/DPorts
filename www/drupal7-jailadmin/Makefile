@@ -1,8 +1,8 @@
 # Created by: Shawn Webb <bsdports@wayfair.com>
-# $FreeBSD: ports/www/drupal7-jailadmin/Makefile,v 1.6 2013/02/19 18:37:55 svnexp Exp $
+# $FreeBSD: www/drupal7-jailadmin/Makefile 318571 2013-05-20 05:52:59Z miwi $
 
 PORTNAME=	jailadmin
-DISTVERSION=	7.x-0.5.2
+DISTVERSION=	7.x-0.6.0
 CATEGORIES=	www
 MASTER_SITES=	http://0xfeedface.org/~shawn/projects/jailadmin/ \
     		http://mirrors.rit.edu/zi/
@@ -20,6 +20,7 @@ DRUPAL_MODULE=	yes
 DRUPAL_VERSION=	7
 MODULE_FILES=	README \
 		jailadmin.admin.inc \
+		jailadmin.drush.inc \
 		jailadmin.helpers.inc \
 		jailadmin.info \
 		jailadmin.install \
@@ -31,7 +32,8 @@ MODULE_FILES=	README \
 		classes/Mount.php \
 		classes/Network.php \
 		classes/NetworkDevice.php \
-		classes/Service.php
+		classes/Service.php \
+		.gitignore
 
 MODULE_DIRS=	classes
 
