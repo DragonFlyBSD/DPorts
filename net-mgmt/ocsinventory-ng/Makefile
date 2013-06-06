@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-mgmt/ocsinventory-ng/Makefile,v 1.24 2012/12/16 06:16:58 svnexp Exp $
+# $FreeBSD: net-mgmt/ocsinventory-ng/Makefile 318000 2013-05-13 07:00:02Z miwi $
 
 PORTNAME=	ocsinventory-ng
 PORTVERSION=	2.0.5
@@ -25,7 +25,6 @@ USE_MYSQL=	41+
 USE_PERL5=	yes
 WANT_PHP_WEB=	yes
 DEFAULT_PHP_VER=	5
-IGNORE_WITH_PHP=	3
 USE_PHP=	mysql pcre zlib session xml gd zip openssl mbstring
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
