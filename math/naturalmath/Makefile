@@ -2,7 +2,7 @@
 # Date created:                1 November 2001
 # Whom:                        Stephen Montgomery-Smith
 #
-# $FreeBSD: math/naturalmath/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: math/naturalmath/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	naturalmath
@@ -15,7 +15,7 @@ MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Script to turn intuitively written math into latex
 
 USE_PERL5=	yes
-USE_TEX=	tetex
+USE_TEX=	latex:build
 
 post-patch:
 	@${PERL} -pi -e 's,^#!/usr/bin/perl,#!${PERL},' ${WRKSRC}/naturalmath
