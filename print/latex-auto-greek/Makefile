@@ -2,7 +2,7 @@
 # Date created:				13 March 2005
 # Whom:					EelVex
 #
-# $FreeBSD: print/latex-auto-greek/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-auto-greek/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	latex-auto-greek
 PORTVERSION=	1.0b
@@ -13,7 +13,7 @@ MASTER_SITES=	http://waterdeep.physics.upatras.gr/~eelvex/files/
 MAINTAINER=	mplekos@physics.upatras.gr
 COMMENT=	A LaTeX package for switching between greek/latintext automatically
 
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	YES
 PLIST_SUB=	TEXMFDIST=${TEXMFDIST} UPDMAP=${UPDMAP} \
 		CLASSDIR=${CLASSDIR} FMTUTIL=${FMTUTIL} \
