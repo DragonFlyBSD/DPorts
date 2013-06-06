@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-File-ShareDir-ProjectDistDir/Makefile,v 1.5 2013/02/16 11:42:40 svnexp Exp $
+# $FreeBSD: devel/p5-File-ShareDir-ProjectDistDir/Makefile 319142 2013-05-26 22:59:28Z kuriyama $
 
 PORTNAME=	File-ShareDir-ProjectDistDir
-PORTVERSION=	0.4.1
+PORTVERSION=	0.4.3
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
