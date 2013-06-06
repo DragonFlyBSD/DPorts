@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Log-Contextual/Makefile,v 1.8 2013/02/17 16:51:02 svnexp Exp $
+# $FreeBSD: devel/p5-Log-Contextual/Makefile 318705 2013-05-21 14:23:18Z kuriyama $
 
 PORTNAME=	Log-Contextual
-PORTVERSION=	0.005002
+PORTVERSION=	0.005003
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
