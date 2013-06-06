@@ -1,8 +1,8 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: ports/devel/abi-compliance-checker/Makefile,v 1.43 2013/02/08 06:30:17 svnexp Exp $
+# $FreeBSD: devel/abi-compliance-checker/Makefile 319375 2013-05-29 14:53:52Z bf $
 
 PORTNAME=	abi-compliance-checker
-PORTVERSION=	1.98.8
+PORTVERSION=	1.99
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://github.com/lvc/${PORTNAME}/archive/ \
 		LOCAL/bf/${DIST_SUBDIR}
@@ -17,12 +17,11 @@ LICENSE_COMB=	dual
 
 .if defined(MAINTAINER_MODE) || defined(PACKAGE_BUILDING)
 BUILD_DEPENDS?=	exctags:${PORTSDIR}/devel/ctags
-RUN_DEPENDS?=	exctags:${PORTSDIR}/devel/ctags
 USE_PERL5=	yes
 .else
-RUN_DEPENDS?=	exctags:${PORTSDIR}/devel/ctags
 USE_PERL5_RUN=	yes
 .endif
+RUN_DEPENDS?=	exctags:${PORTSDIR}/devel/ctags
 USE_GCC=	any
 
 FETCH_ARGS?=	-Fpr
