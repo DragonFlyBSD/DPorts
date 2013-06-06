@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/p5-Starman/files/starman.in,v 1.3 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Starman/files/starman.in 300897 2012-07-14 14:29:18Z beat $
 # PROVIDE: starman
 # REQUIRE: NETWORKING 
 # KEYWORD:  shutdown
