@@ -1,12 +1,8 @@
-# New ports collection makefile for:	textproc/p5-Text-Autoformat
-# Date created:				28 December 2000
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Autoformat/Makefile,v 1.16 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: textproc/p5-Text-Autoformat/Makefile 318066 2013-05-13 10:35:53Z tobez $
 
 PORTNAME=	Text-Autoformat
-PORTVERSION=	1.669.002
+PORTVERSION=	1.669.003
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN/Text/DCONWAY
 PKGNAMEPREFIX=	p5-
