@@ -1,23 +1,15 @@
-# Ports collection makefile for:  pear-Text_Password
-# Date created:			  29 March 2004
-# Whom:				  Attila Nagy <bra@fsn.hu>
-#
-# $FreeBSD: ports/security/pear-Text_Password/Makefile,v 1.12 2012/11/17 06:01:15 svnexp Exp $
-#
+# Created by: Attila Nagy <bra@fsn.hu>
+# $FreeBSD: security/pear-Text_Password/Makefile 318046 2013-05-13 09:50:05Z miwi $
 
 PORTNAME=	Text_password
 PORTVERSION=	1.1.1
 CATEGORIES=	security www pear
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR random password creator
 
 USE_PHP=	yes
-
-CATEGORY=	Text
-FILES=		Password.php
-TESTS=		Text_Password_Test.php
-
+PEAR_AUTOINSTALL=	yes
 WRKSRC=		${WRKDIR}/Text_Password-${PORTVERSION}
 
 .include <bsd.port.pre.mk>
