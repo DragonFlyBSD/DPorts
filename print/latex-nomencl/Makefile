@@ -2,7 +2,7 @@
 # Date created:		31 July 2011
 # Whom:			hrs
 #
-# $FreeBSD: print/latex-nomencl/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-nomencl/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	nomencl
 PORTVERSION=	4.2.20050922
@@ -18,7 +18,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package to generate a nomenclature using MakeIndex
 
-USE_TEX=	tetex
+USE_TEX=	latex
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} \
 		TEXMFDIR=${TEXMFDIR}
 
