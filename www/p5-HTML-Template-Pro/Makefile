@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/p5-HTML-Template-Pro/Makefile,v 1.1 2013/01/19 11:28:18 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Template-Pro/Makefile 318724 2013-05-21 22:19:05Z kuriyama $
 
 PORTNAME=	HTML-Template-Pro
-PORTVERSION=	0.9509
+PORTVERSION=	0.9510
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
