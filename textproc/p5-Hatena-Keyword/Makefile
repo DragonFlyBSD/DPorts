@@ -1,13 +1,9 @@
-# New ports collection makefile for:	p5-Hatena-Keyword
-# Date created:		2006-09-02
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/textproc/p5-Hatena-Keyword/Makefile,v 1.8 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: textproc/p5-Hatena-Keyword/Makefile 318293 2013-05-16 09:43:40Z miwi $
 
 PORTNAME=	Hatena-Keyword
 PORTVERSION=	0.05
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:NAOYA
@@ -23,7 +19,13 @@ BUILD_DEPENDS=	p5-Cache>=0:${PORTSDIR}/devel/p5-Cache \
 		ja-p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode \
 		p5-RPC-XML>=0:${PORTSDIR}/net/p5-RPC-XML \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	p5-Cache>=0:${PORTSDIR}/devel/p5-Cache \
+		p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
+		p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inheritable \
+		p5-Class-ErrorHandler>=0:${PORTSDIR}/devel/p5-Class-ErrorHandler \
+		ja-p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode \
+		p5-RPC-XML>=0:${PORTSDIR}/net/p5-RPC-XML \
+		p5-URI>=0:${PORTSDIR}/net/p5-URI
 
 PERL_CONFIGURE=	yes
 
