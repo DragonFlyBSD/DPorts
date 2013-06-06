@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-Amon2/Makefile 313425 2013-03-04 22:36:38Z kuriyama $
+# $FreeBSD: www/p5-Amon2/Makefile 318769 2013-05-22 14:39:29Z kuriyama $
 
 PORTNAME=	Amon2
-PORTVERSION=	3.74
+PORTVERSION=	3.80
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
