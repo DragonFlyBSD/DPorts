@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Git-Repository/Makefile 316806 2013-04-29 11:16:44Z tobez $
+# $FreeBSD: devel/p5-Git-Repository/Makefile 319114 2013-05-26 15:20:50Z wen $
 
 PORTNAME=	Git-Repository
-PORTVERSION=	1.303
+PORTVERSION=	1.304
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BOOK
