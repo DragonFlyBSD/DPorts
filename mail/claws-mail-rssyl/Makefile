@@ -1,40 +1,13 @@
 # Created by: v.velox@vvelox.net
-# $FreeBSD: mail/claws-mail-rssyl/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/claws-mail-rssyl/Makefile 317877 2013-05-11 14:10:28Z pawel $
 
 PORTNAME=	rssyl
-PORTVERSION=	0.34
+PORTREVISION=	0
 PORTEPOCH=	4
-CATEGORIES=	mail
-MASTER_SITES=	http://www.claws-mail.org/downloads/plugins/
-PKGNAMEPREFIX=	claws-mail-
 
-MAINTAINER=	pawel@FreeBSD.org
 COMMENT=	RSS/Atom feed reader plugin for Claws Mail
 
-LICENSE=	GPLv3
+CLAWS_PLUGINS_BUILD=	rssyl
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
-BUILD_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
-RUN_DEPENDS=	claws-mail>=3.9.0:${PORTSDIR}/mail/claws-mail
-
-USE_AUTOTOOLS=	autoconf
-USES=		iconv
-MAKE_JOBS_SAFE=	yes
-
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-
-CONFIGURE_ARGS=	--with-libiconv-prefix=${LOCALBASE} \
-		--with-libintl-prefix=${LOCALBASE}
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
-
+.include "../claws-mail/Makefile.claws"
 .include <bsd.port.mk>
