@@ -1,31 +1,33 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: devel/cgit/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/cgit/Makefile 319767 2013-06-03 10:49:00Z bapt $
 
 PORTNAME=	cgit
-PORTVERSION=	0.9.1
-PORTREVISION=	1
+PORTVERSION=	0.9.2
+PORTREVISION=	2
 CATEGORIES=	devel www
 MASTER_SITES=	http://git.zx2c4.com/cgit/snapshot/:cgit \
-		http://mirror.linux.org.au/software/scm/git/:git
+		GOOGLE_CODE:git
 DISTFILES=	cgit-${PORTVERSION}${EXTRACT_SUFX}:cgit \
-		git-${GIT_VERSION}.tar.bz2:git
+		git-${GIT_VERSION}.tar.gz:git
 
-MAINTAINER=	bapt@FreeBSD.org
-COMMENT=	A fast webinterface for git
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Fast webinterface for git
 
 LICENSE=	GPLv2
 
-GIT_VERSION=	1.7.4.4
+PROJECTHOST=	git-core
+GIT_VERSION=	1.8.2.3
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		iconv
+USES=		iconv shebangfix
+SHEBANG_FILES=	filters/html-converters/resources/markdown.pl
 USE_GMAKE=	yes
 USE_OPENSSL=	yes
-CFLAGS+=	-I${LOCALBASE}/include
-MAKE_ENV+=	CGIT_SCRIPT_PATH=${WWWDIR} \
-		CGIT_CONFIG=${PREFIX}/etc/cgitrc \
-		NEEDS_LIBICONV=yes
+CFLAGS+=	-I${LOCALBASE}/include -DNO_GETTEXT=1
+MAKE_ARGS+=	CGIT_SCRIPT_PATH=${WWWDIR} \
+		CGIT_CONFIG=${PREFIX}/etc/cgitrc
 LDFLAGS+=	-L${LOCALBASE}/lib
+MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 SUB_LIST+=	PORTNAME=${PORTNAME}
@@ -38,7 +40,9 @@ post-extract:
 	@${MV} ${WRKDIR}/git-${GIT_VERSION} ${WRKSRC}/git
 
 post-patch:
-	@${REINPLACE_CMD} -e '/^CC =/d' ${WRKSRC}/git/Makefile
+	@${REINPLACE_CMD} -e '/^CC =/d' -e '/^CFLAGS =/d' \
+		-e '/^LDFLAGS =/d' ${WRKSRC}/git/Makefile \
+		${WRKSRC}/git/Makefile
 	@${REINPLACE_CMD} -e 's,/usr,${PREFIX},g' \
 		-e 's,-Igit,-I.,g' ${WRKSRC}/Makefile
 
