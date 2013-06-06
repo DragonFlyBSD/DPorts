@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Validation-Class/Makefile,v 1.11 2013/01/13 03:53:08 svnexp Exp $
+# $FreeBSD: devel/p5-Validation-Class/Makefile 318699 2013-05-21 14:09:25Z kuriyama $
 
 PORTNAME=	Validation-Class
-PORTVERSION=	7.900022
+PORTVERSION=	7.900049
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:AWNCORP
