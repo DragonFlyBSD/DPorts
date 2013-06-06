@@ -3,7 +3,7 @@
 # Date created:				Saturday 2 September 2000
 # Whom:					Will Andrews <will@FreeBSD.org>
 #
-# $FreeBSD: graphics/kdegraphics3/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: graphics/kdegraphics3/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	kdegraphics
@@ -34,7 +34,7 @@ PREFIX=		${KDE_PREFIX}
 
 USE_GL=		glut
 USE_BZIP2=	yes
-USE_TEX=	tetex
+USE_TEX=	latex:build
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--without-poppler
 USE_GMAKE=	yes
