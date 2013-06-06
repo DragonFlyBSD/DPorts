@@ -1,9 +1,9 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: math/R-cran-RSvgDevice/Makefile 313562 2013-03-07 04:21:34Z bf $
+# $FreeBSD: math/R-cran-RSvgDevice/Makefile 319316 2013-05-28 15:15:05Z bf $
 
 PORTNAME=	RSvgDevice
 PORTVERSION=	0.6.4.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
