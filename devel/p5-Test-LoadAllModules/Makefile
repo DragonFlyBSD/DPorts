@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Test::LoadAllModules
-# Date created:		27 Feb 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-LoadAllModules/Makefile,v 1.4 2012/11/17 05:56:32 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Test-LoadAllModules/Makefile 318694 2013-05-21 13:31:40Z kuriyama $
 
 PORTNAME=	Test-LoadAllModules
-PORTVERSION=	0.021
+PORTVERSION=	0.022
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
