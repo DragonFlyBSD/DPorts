@@ -1,8 +1,9 @@
 # Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: net-mgmt/devmon/Makefile 313295 2013-03-02 20:20:12Z swills $
+# $FreeBSD: net-mgmt/devmon/Makefile 319777 2013-06-03 13:32:53Z swills $
 
 PORTNAME=	devmon
 DISTVERSION=	0.3.1-beta1
+PORTREVISION=	2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}
 
@@ -17,13 +18,24 @@ USE_PERL5=	yes
 NO_BUILD=	yes
 USE_RC_SUBR=	devmon
 
+USERS=	devmon
+GROUPS=	devmon
+
+SUB_LIST=	USERS=${USERS} \
+		GROUPS=${GROUPS}
+
 OPTIONS_DEFINE=	MYSQL
+
+REINPLACE_ARGS=	-i ''
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
 USE_MYSQL=	yes
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/var/run/devmon.pid|/var/run/devmon/devmon.pid|g' ${WRKSRC}/devmon.cfg ${WRKSRC}/modules/dm_config.pm
 
 pre-install:
 	(cd ${WRKSRC} && ${MV} devmon.cfg devmon.cfg.dist)
@@ -43,6 +55,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
 	${INSTALL} -d ${DOCSDIR}/docs
 	${INSTALL} -d ${DOCSDIR}/extras
+	${INSTALL} -d -o ${USERS} -g ${GROUPS} /var/run/devmon
 	(cd ${WRKSRC}/docs && ${COPYTREE_SHARE} \* ${DOCSDIR}/docs/)
 	(cd ${WRKSRC}/extras && ${COPYTREE_SHARE} \* ${DOCSDIR}/extras/)
 .endif
