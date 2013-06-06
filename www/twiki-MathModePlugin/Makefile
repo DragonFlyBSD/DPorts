@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/twiki-MathModePlugin/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: www/twiki-MathModePlugin/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	MathModePlugin
 SVNREV=		15934
@@ -10,7 +10,7 @@ COMMENT=	Include LaTeX formatted math in your TWiki pages
 
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 
-USE_TEX=	tetex
+USE_TEX=	base latex
 
 post-patch:
 	${REINPLACE_CMD} -i '' -e 's!=/usr/bin!=${LOCALBASE}/bin!g; s!=/bin!=/usr/bin!g;' \
