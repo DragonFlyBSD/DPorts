@@ -1,8 +1,9 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-gtkhtml2_viewer/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/claws-mail-gtkhtml2_viewer/Makefile 317877 2013-05-11 14:10:28Z pawel $
 
 PORTNAME=	gtkhtml2_viewer
 PORTVERSION=	0.34
+PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.claws-mail.org/downloads/plugins/
 PKGNAMEPREFIX=	claws-mail-
@@ -21,6 +22,9 @@ USE_AUTOTOOLS=	autoconf
 USE_GNOME=	gtk20
 USES=		iconv
 MAKE_JOBS_SAFE=	yes
+
+DEPRECATED=	No longer maintained, please use mail/claws-mail-fancy instead
+EXPIRATION_DATE=2013-06-11
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
