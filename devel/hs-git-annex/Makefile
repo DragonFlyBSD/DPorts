@@ -1,8 +1,9 @@
 # Created by: frase@frase.id.au
-# $FreeBSD: devel/hs-git-annex/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: devel/hs-git-annex/Makefile 317974 2013-05-12 19:39:00Z pgj $
 
 PORTNAME=	git-annex
 PORTVERSION=	4.20130323
+PORTREVISION=	1
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -22,10 +23,12 @@ USE_GMAKE=		yes
 USE_PERL5_BUILD=	yes
 
 BUILD_DEPENDS+=	rsync:${PORTSDIR}/net/rsync \
-		git:${PORTSDIR}/devel/git
+		git:${PORTSDIR}/devel/git \
+		gsha256sum:${PORTSDIR}/sysutils/coreutils
 
 RUN_DEPENDS+=	rsync:${PORTSDIR}/net/rsync \
-		git:${PORTSDIR}/devel/git
+		git:${PORTSDIR}/devel/git \
+		gsha256sum:${PORTSDIR}/sysutils/coreutils
 
 EXECUTABLE=	git-annex git-annex-shell
 STANDALONE=	yes
