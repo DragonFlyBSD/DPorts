@@ -1,9 +1,9 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-generic-slider/Makefile 316314 2013-04-23 07:14:15Z bapt $
+# $FreeBSD: deskutils/xfce4-generic-slider/Makefile 317695 2013-05-08 16:05:21Z olivierd $
 
 PORTNAME=	xfce4-generic-slider
 PORTVERSION=	0.0.20100827
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils
 MASTER_SITES=	CRITICAL/
 
@@ -14,6 +14,7 @@ LICENSE=	GPLv3
 
 USES=		pkgconfig
 USE_XFCE=	panel libutil libgui
+MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	`pkg-config --cflags libxfce4panel-1.0 libxfcegui4-1.0`
 LDFLAGS+=	`pkg-config --libs libxfce4panel-1.0 libxfcegui4-1.0`
