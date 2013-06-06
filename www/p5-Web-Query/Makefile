@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/www/p5-Web-Query/Makefile,v 1.4 2013/01/02 19:03:41 svnexp Exp $
+# $FreeBSD: www/p5-Web-Query/Makefile 319293 2013-05-28 05:54:52Z miwi $
 
 PORTNAME=	Web-Query
-PORTVERSION=	0.11
+PORTVERSION=	0.17
 CATEGORIES=	www
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TOKUHIROM
