@@ -2,7 +2,7 @@
 # Date created:		24 Jan 2004
 # Whom:			hrs@FreeBSD.org
 #
-# $FreeBSD: print/latex-biblist/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: print/latex-biblist/Makefile 317899 2013-05-11 17:58:55Z hrs $
 
 PORTNAME=	latex-biblist
 PORTVERSION=	1.4.19920113
@@ -17,7 +17,7 @@ EXTRACT_ONLY=	#empty
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A LaTeX package for printing all of a BibTeX database entries
 
-USE_TEX=	tetex
+USE_TEX=	latex
 NO_BUILD=	YES
 PLIST=		${WRKDIR}/pkg-plist
 
