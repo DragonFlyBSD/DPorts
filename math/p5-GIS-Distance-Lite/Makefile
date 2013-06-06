@@ -1,12 +1,9 @@
-# New ports collection makefile for:	p5-GIS-Distance-Lite
-# Date created:				May 17, 2010
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-GIS-Distance-Lite/Makefile,v 1.3 2012/11/17 05:59:25 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: math/p5-GIS-Distance-Lite/Makefile 318296 2013-05-16 09:43:57Z miwi $
 
 PORTNAME=	GIS-Distance-Lite
 PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JOBERO
