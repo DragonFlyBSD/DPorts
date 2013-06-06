@@ -1,5 +1,5 @@
 # Created by: pauls@utdallas.edu
-# $FreeBSD: ports/www/p5-CIF-Client/Makefile,v 1.9 2013/02/19 16:48:36 svnexp Exp $
+# $FreeBSD: www/p5-CIF-Client/Makefile 319063 2013-05-25 18:00:45Z az $
 
 PORTNAME=	CIF-Client
 PORTVERSION=	0.21
@@ -38,11 +38,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		CIF::Client.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-IO-Compress>=2.008:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS+=	p5-IO-Compress>=2.008:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
