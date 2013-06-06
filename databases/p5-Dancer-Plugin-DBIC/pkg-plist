@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/databases/p5-Dancer-Plugin-DBIC/pkg-plist,v 1.2 2012/11/17 05:55:15 svnexp Exp $
+@comment $FreeBSD: databases/p5-Dancer-Plugin-DBIC/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%SITE_PERL%%/Dancer/Plugin/DBIC.pm
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Dancer/Plugin/DBIC/.packlist
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Dancer/Plugin/DBIC
