@@ -1,0 +1,62 @@
+# Created by: Stas Timokhin <stast@bsdportal.ru>
+# $FreeBSD: net-p2p/eiskaltdcpp-daemon/Makefile 317832 2013-05-10 17:34:56Z fjoe $
+
+PORTNAME=	eiskaltdcpp-daemon
+PORTVERSION=	2.2.4
+PORTREVISION=	1
+CATEGORIES=	net-p2p
+MASTER_SITES=	GOOGLE_CODE
+DISTNAME=	eiskaltdcpp-${DISTVERSION}
+
+MAINTAINER=	fjoe@FreeBSD.org
+COMMENT=	EiskaltDC++ Direct Connect client daemon
+
+LICENSE=	GPLv3
+
+LIB_DEPENDS+=	eiskaltdcpp:${PORTSDIR}/net-p2p/eiskaltdcpp-lib
+BUILD_DEPENDS+=	chrpath:${PORTSDIR}/devel/chrpath
+
+PROJECTHOST=	eiskaltdc
+
+USE_XZ=		yes
+USE_GCC=	4.6+
+USES=		cmake gettext
+USE_OPENSSL=	yes
+MAKE_JOBS_SAFE=	yes
+
+OPTIONS_DEFINE=	XMLRPC
+OPTIONS_DEFAULT=	XMLRPC
+XMLRPC_DESC=	XMLRPC interface support
+
+MAN1=		${PORTNAME}.1
+MANCOMPRESSED=	yes
+
+PLIST_FILES=	bin/${PORTNAME}
+
+CXXFLAGS+=	-I${LOCALBASE}/include
+CMAKE_ARGS+=	-DBUILD_LIB:BOOL=OFF
+CMAKE_ARGS+=	-DUSE_QT:BOOL=OFF
+CMAKE_ARGS+=	-DUSE_GTK:BOOL=OFF
+CMAKE_ARGS+=	-DNO_UI_DAEMON:BOOL=ON
+CMAKE_ARGS+=	-DEISKALTDCPP_INCLUDE_DIR:STRING="${LOCALBASE}/include/eiskaltdcpp"
+CMAKE_ARGS+=	-DUSE_IDNA:BOOL=OFF
+CMAKE_ARGS+=	-DCREATE_MO:BOOL=OFF
+CMAKE_ARGS+=	-DCMAKE_LIBRARY_PATH:PATH="${LOCALBASE}/lib:${PREFIX}/lib"
+CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=ON
+
+BUILD_WRKSRC=	${WRKSRC}/nasdc
+INSTALL_WRKSRC=	${WRKSRC}/nasdc
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MXMLRPC}
+LIB_DEPENDS+=	xmlrpc++:${PORTSDIR}/net/xmlrpc-c-devel
+CMAKE_ARGS+=	-DXMLRPC_DAEMON:BOOL=ON
+.else
+CMAKE_ARGS+=	-DXMLRPC_DAEMON:BOOL=OFF
+.endif
+
+post-build:
+	${LOCALBASE}/bin/chrpath -r "${_GCC_RUNTIME}" "${WRKSRC}/nasdc/${PORTNAME}"
+
+.include <bsd.port.mk>
