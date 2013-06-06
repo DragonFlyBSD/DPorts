@@ -1,15 +1,11 @@
-# New ports collection makefile for:   uim-kde
-# Date created:        10 March 2007
-# Whom:                MANTANI Nobutaka <nobutaka@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/uim-kde/Makefile,v 1.12 2012/11/17 06:02:24 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: textproc/uim-kde/Makefile 318178 2013-05-14 16:51:16Z nobutaka $
 
 PKGNAMESUFFIX=	-kde
 
 COMMENT=	KDE panel applet of uim input method
 
-LIB_DEPENDS=	uim.8:${PORTSDIR}/textproc/uim
+LIB_DEPENDS=	uim:${PORTSDIR}/textproc/uim
 RUN_DEPENDS=	uim-pref-qt:${PORTSDIR}/textproc/uim-qt
 
 USE_GCC=	4.2+
