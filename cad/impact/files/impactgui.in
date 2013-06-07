@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: ports/cad/impact/files/impactgui.in,v 1.3 2012/11/17 05:54:54 svnexp Exp $
-
-cd %%DATADIR%%/bin
-JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -Xmx500m gui.ImpactGUI
-cd -
