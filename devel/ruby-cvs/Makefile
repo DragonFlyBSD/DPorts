@@ -1,20 +1,17 @@
-# New ports collection makefile for:	Ruby/CVS
-# Date created:		20 July 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/devel/ruby-cvs/Makefile,v 1.14 2012/11/17 05:56:56 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-cvs/Makefile 317274 2013-05-03 21:58:42Z bapt $
 
 PORTNAME=	cvs
 PORTVERSION=	0.2
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://cvs.m17n.org/viewcvs/ruby/
+MASTER_SITES=	http://leaf.dragonflybsd.org/~marino/dports-src/
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
-DISTNAME=	ruby-${PORTNAME}.tar.gz\?only_with_tag=ruby-${PORTNAME}-${PORTVERSION:S/./_/g}\&view=tar
+DISTNAME=	ruby-${PORTNAME}-${PORTVERSION}
 DIST_SUBDIR=	ruby
 
 MAINTAINER=	glarkin@FreeBSD.org
 COMMENT=	A Ruby library to provide a high level interface to a CVS repository
+
 
 # optional, but strongly suggested
 #RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/flex.so:${PORTSDIR}/devel/ruby-flex_rb
