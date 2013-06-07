@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann <kay_lehmann@web.de>
-# $FreeBSD: databases/qt-mysql-plugin/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: databases/qt-mysql-plugin/Makefile 318134 2013-05-13 22:16:30Z rakuco $
 
 PORTNAME=	qt-${DB}-plugin
 PORTVERSION=	3.3.8
