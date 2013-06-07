@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mpg123.el
-# Date created:		99/10/6
-# Whom:			Satoshi Taoka <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/mpg123.el/Makefile,v 1.33 2012/11/17 05:54:39 svnexp Exp $
-#
+# Created by: Satoshi Taoka <taoka@FreeBSD.org>
+# $FreeBSD: audio/mpg123.el/Makefile 317798 2013-05-10 13:34:05Z miwi $
 
 PORTNAME=	mpg123.el
 PORTVERSION=	1.52
@@ -25,6 +21,7 @@ ELISPDIR=	${PREFIX}/share/emacs/site-lisp
 XELISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 
 myFETCH_CMD=	${FETCH_CMD} -AR
+
 
 do-fetch:
 	${myFETCH_CMD} ${FETCH_BEFORE_ARGS} ${MASTER_SITES}/mpg123el.cgi?${PORTVERSION}
