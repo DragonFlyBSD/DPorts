@@ -1,7 +1,7 @@
-# $FreeBSD: ports/x11-drivers/xorg-drivers/Makefile,v 1.26 2013/01/11 23:28:30 svnexp Exp $
+# $FreeBSD: x11-drivers/xorg-drivers/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xorg-drivers
-PORTVERSION=	7.5.2
+PORTVERSION=	7.7
 CATEGORIES=	x11-drivers
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -92,9 +92,8 @@ INTEL_DESC=		Install intel video driver
 OPENCHROME_DESC=	Install openchrome video driver
 SUNFFB_DESC=		Install sunffb video driver
 
-# these drivers module name are different then the plugin they install
+# these drivers have a different module name compared to the plugin they install
 QUIRKS=		keyboard:kbd
-
 
 .include <bsd.port.options.mk>
 
