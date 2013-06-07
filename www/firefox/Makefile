@@ -1,12 +1,12 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/firefox/Makefile 315713 2013-04-03 20:27:48Z flo $
+# $FreeBSD: www/firefox/Makefile 319816 2013-06-03 22:45:05Z flo $
 
 PORTNAME=	firefox
-DISTVERSION=	20.0
+DISTVERSION=	21.0
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
-MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	${PORTNAME}/releases/${DISTVERSION}/source
+MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
 DISTNAME=	${PORTNAME}-${DISTVERSION}.source
 
 MAINTAINER=	gecko@FreeBSD.org
@@ -23,7 +23,7 @@ USE_AUTOTOOLS=	autoconf213:env
 USE_PYTHON_BUILD=-2.7
 OBJDIR_BUILD=	# in-tree build broken after bug 789837
 USE_GECKO=	gecko
-CONFLICTS=	firefox-1[07].*
+CONFLICTS=	firefox-24.* firefox-1[07].*
 MOZ_PKGCONFIG_FILES=	# empty
 USE_MOZILLA=	# empty
 MOZILLA_NAME=	Firefox
@@ -37,21 +37,19 @@ GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GL=		gl
-USE_DOS2UNIX=	media/webrtc/trunk/src/system_wrappers/source/spreadsortlib/spreadsort.hpp
+USE_DOS2UNIX=	media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
 NO_MOZPKGINSTALL=yes
 
 FIREFOX_ICON=		${MOZILLA}.png
-FIREFOX_ICON_SRC=	${PREFIX}/lib/${MOZILLA}/chrome/icons/default/default48.png
+FIREFOX_ICON_SRC=	${PREFIX}/lib/${MOZILLA}/browser/chrome/icons/default/default48.png
 MOZ_OPTIONS=	--program-transform-name='s/firefox/${MOZILLA}/' \
 		--enable-application=browser \
 		--enable-official-branding
 
-OPTIONS_DEFINE=	GSTREAMER PGO WEBRTC
-OPTIONS_DEFAULT=GIO WEBRTC
+OPTIONS_DEFINE=	PGO WEBRTC
+OPTIONS_DEFAULT=WEBRTC
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
-
-
 .include <bsd.port.pre.mk>
 
 WRKSRC:=	${WRKDIR}/mozilla-release
@@ -107,7 +105,6 @@ port-pre-install:
 post-install:
 	${MKDIR} ${PREFIX}/share/applications ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKDIR}/${MOZILLA}.desktop ${PREFIX}/share/applications/
-	${MKDIR} ${PREFIX}/lib/${MOZILLA}/chrome/icons/default
 	${LN} -sf ${FIREFOX_ICON_SRC} ${PREFIX}/share/pixmaps/${FIREFOX_ICON}
 	@${CAT} ${PKGMESSAGE}
 
