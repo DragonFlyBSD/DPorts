@@ -1,10 +1,10 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/firefox-esr-i18n/Makefile 315713 2013-04-03 20:27:48Z flo $
+# $FreeBSD: www/firefox-esr-i18n/Makefile 318268 2013-05-16 02:00:38Z flo $
 
 PORTNAME=	firefox-i18n
-PORTVERSION=	17.0.5
+PORTVERSION=	17.0.6
 CATEGORIES=	www
-MASTER_SITE_SUBDIR=	firefox/releases/${PORTVERSION}esr/linux-i686/xpi
+MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}esr/linux-i686/xpi
 PKGNAMEPREFIX=
 DISTFILES=	${FIREFOX_I18N_:S/$/.xpi/}
 DIST_SUBDIR=	xpi/${DISTNAME}
@@ -85,10 +85,10 @@ post-patch:
 	${FIND} ${WRKSRC} -name install.rdf -print0 | \
 		${XARGS} -0L1 ${REINPLACE_CMD} -i '' -e '/<?xml/,$$!d'
 
-List-Langs:
-	@fetch -o- "http://releases.mozilla.org/pub/mozilla.org/${MASTER_SITE_SUBDIR}"|\
+list-langs:
+	@fetch -qo- "https://ftp.mozilla.org/pub/mozilla.org/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}esr/linux-i686/xpi"|\
 		${PERL} -ne 'if(/.*href="([a-zA-Z-]+).xpi.*/){print "$$1\n"}' |\
-		${AWK} 'BEGIN{ORS=" "}{print $1}END{printf "\nNumber of languages: %d\n",NR}'
+		${AWK} 'BEGIN{ORS=" "}{print $$1}END{printf "\nNumber of languages: %d\n",NR}'
 
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 
