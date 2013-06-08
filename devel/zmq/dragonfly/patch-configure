@@ -1,0 +1,17 @@
+--- configure.orig	2013-06-08 10:54:37.880678000 +0000
++++ configure
+@@ -17115,6 +17115,14 @@ $as_echo "#define ZMQ_FORCE_MUTEXES 1" >
+ 
+         fi
+         ;;
++    *dragonfly*)
++        # Define on DragonFly to enable all library features
++        CPPFLAGS="-D__BSD_VISIBLE $CPPFLAGS"
++
++$as_echo "#define ZMQ_HAVE_FREEBSD 1" >>confdefs.h
++$as_echo "#define ZMQ_HAVE_DRAGONFLY 1" >>confdefs.h
++
++        ;;
+     *freebsd*)
+         # Define on FreeBSD to enable all library features
+         CPPFLAGS="-D__BSD_VISIBLE $CPPFLAGS"
