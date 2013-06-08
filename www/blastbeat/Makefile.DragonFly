@@ -1,0 +1,1 @@
+MAKE_ENV+= LIBS="-lm"
