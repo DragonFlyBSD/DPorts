@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zisofs-tools
-# Date created:				24 Nov 2003
-# Whom:					Nosov Artem <chip-set@mail.ru>
-#
-# $FreeBSD: ports/sysutils/zisofs-tools/Makefile,v 1.15 2012/11/17 06:01:51 svnexp Exp $
-#
+# Created by: Nosov Artem <chip-set@mail.ru>
+# $FreeBSD: sysutils/zisofs-tools/Makefile 316744 2013-04-28 20:01:07Z bapt $
 
 PORTNAME=	zisofs-tools
 PORTVERSION=	1.0.8
@@ -17,6 +13,8 @@ COMMENT=	User utilities for zisofs
 
 PORTDOCS=	CHANGES COPYING INSTALL MRULES README
 
+#BROKEN=		checksum mismatch
+
 USE_AUTOTOOLS=	autoconf
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -28,14 +26,18 @@ MAN1=		mkzftree.1
 
 PLIST_FILES=	bin/mkzftree
 
-OPTIONS=	LFS "Enable Large Files Support" on
+OPTIONS_DEFINE=	LFS DOCS
+OPTIONS_DEFAULT=	LFS
+LFS_DESC=	Enable Large Files Support
 
-.if defined(WITHOUT_LFS)
+.include <bsd.port.options.mk>
+
+.if ! ${PORT_OPTIONS:MLFS}
 CONFIGURE_ARGS+=	--disable-largefile
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
 .endif
