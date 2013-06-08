@@ -1,14 +1,14 @@
 # Created by: Tony Maher
-# $FreeBSD: ports/security/apache-xml-security-c/Makefile,v 1.12 2013/01/09 20:05:06 svnexp Exp $
+# $FreeBSD: security/apache-xml-security-c/Makefile 319885 2013-06-04 17:29:21Z girgen $
 
 PORTNAME=	xml-security-c
-PORTVERSION=	1.6.1
+PORTVERSION=	1.7.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=santuario/c-library
 PKGNAMEPREFIX=	apache-
 
-MAINTAINER=	jmohacsi@bsd.hu
+MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Apache XML security libraries - C++ version
 
 LICENSE=	AL2
