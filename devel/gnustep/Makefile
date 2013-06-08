@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: devel/gnustep/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: devel/gnustep/Makefile 319406 2013-05-30 08:14:20Z miwi $
 
 PORTNAME=	gnustep
 PORTVERSION=	1.24.0
@@ -10,6 +10,7 @@ EXTRACT_ONLY=	# empty
 
 MAINTAINER=	c.petrik.sosa@gmail.com
 COMMENT=	Objective-C libraries based on the OpenStep standard
+
 
 NO_BUILD=	yes
 NO_INSTALL=	yes
