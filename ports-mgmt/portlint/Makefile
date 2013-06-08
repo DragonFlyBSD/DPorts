@@ -13,6 +13,7 @@ DISTFILES=	# none
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	A verifier for FreeBSD port directory
 
+USES=		shebangfix
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/src
 USE_PERL5_RUN=	yes
@@ -21,6 +22,7 @@ SRC=		${.CURDIR}/src
 
 MAN1=		portlint.1
 PLIST_FILES=	bin/portlint
+SHEBANG_FILES=	*.pl
 
 .if !defined(NOPORTEXAMPLES)
 PLIST_FILES+=	%%EXAMPLESDIR%%/portlintgrep
@@ -30,13 +32,12 @@ PLIST_DIRS=	%%EXAMPLESDIR%%
 do-fetch:
 	@${DO_NADA}
 
-pre-patch:
-	@${CP} -R ${SRC} ${WRKDIR}
+do-extract:
+	@${MKDIR} ${WRKSRC}
+	@${CP} ${SRC}/* ${WRKSRC}/
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL}|' ${WRKSRC}/portlint.pl
-	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL}|' \
-		${WRKSRC}/portlintgrep.pl
+	@${REINPLACE_CMD} -e 's|/usr/ports|/usr/dports|g' ${WRKSRC}/portlint*
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/portlint.pl ${PREFIX}/bin/portlint
