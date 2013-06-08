@@ -1,6 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: graphics/pngcrush/Makefile 313369 2013-03-03 17:35:51Z jsa $
-#
+# $FreeBSD: graphics/pngcrush/Makefile 320273 2013-06-08 17:02:58Z mandree $
 
 PORTNAME=	pngcrush
 PORTVERSION=	1.7.51
@@ -9,7 +8,7 @@ MASTER_SITES=	SF/pmt/${PORTNAME}/old-versions/1.7/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-nolib
 
 MAINTAINER=	jsa@FreeBSD.org
-COMMENT=	An optimizer for PNG files
+COMMENT=	Optimizer for PNG files
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
