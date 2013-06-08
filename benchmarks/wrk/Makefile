@@ -1,8 +1,9 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: benchmarks/wrk/Makefile 315887 2013-04-16 18:56:53Z osa $
+# $FreeBSD: benchmarks/wrk/Makefile 317829 2013-05-10 16:45:53Z osa $
 
 PORTNAME=	wrk
-PORTVERSION=	1.2.0
+PORTVERSION=	2.0.0
+PORTREVISION=	1
 CATEGORIES=	benchmarks www
 MASTER_SITES=	http://github.com/wg/${PORTNAME}/tarball/master/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-${GITVERSION}
@@ -13,7 +14,7 @@ COMMENT=	The modern HTTP benchmarking tool
 LICENSE=	AL2
 
 FETCH_ARGS=	-pRr
-GITVERSION=	0-g6c4064c
+GITVERSION=	0-g6fd3ee1
 WRKSRC=		${WRKDIR}/wg-${PORTNAME}-${GITVERSION:S/^0-g//}
 USE_GMAKE=	yes
 CFLAGS+=	-std=c99 -D_DECLARE_C99_LDBL_MATH
