@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/security/shibboleth2-sp/files/patch-shibsp_remoting_impl_TCPListener.cpp,v 1.2 2012/11/17 06:01:20 svnexp Exp $
+$FreeBSD: security/shibboleth2-sp/files/patch-shibsp_remoting_impl_TCPListener.cpp 300897 2012-07-14 14:29:18Z beat $
 
 --- shibsp/remoting/impl/TCPListener.cpp.orig
 +++ shibsp/remoting/impl/TCPListener.cpp
