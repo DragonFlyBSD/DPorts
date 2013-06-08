@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: Mk/bsd.sites.mk 318420 2013-05-18 08:01:30Z mva $
+# $FreeBSD: Mk/bsd.sites.mk 320084 2013-06-06 12:00:15Z bdrewery $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -516,7 +516,9 @@ MASTER_SITE_GENTOO+= \
 # GH_PROJECT    - name of the project on GitHub
 #                 default: ${PORTNAME}
 #
-# GH_TAGNAME    - name of the tag to download (master, 2.0.1, ...)
+# GH_TAGNAME    - name of the tag to download (2.0.1, hash, ...)
+#                 Using the name of a branch here is incorrect. It is
+#                 possible to do GH_TAGNAME=${GH_COMMIT} to do a snapshot
 #                 default: ${DISTVERSION}
 #
 # GH_COMMIT     - first 7 digits of the commit that generated GH_TAGNAME
@@ -524,6 +526,11 @@ MASTER_SITE_GENTOO+= \
 #                 default: not set, mandatory
 #
 .if defined(USE_GITHUB)
+.if defined(GH_TAGNAME) && ${GH_TAGNAME} == master
+IGNORE?=	Using master as GH_TAGNAME is invalid. \
+		Must use a tag or commit hash so the upstream does\
+		not "reroll" as soon as the branch is updated
+.endif
 MASTER_SITE_GITHUB+=		https://nodeload.github.com/%SUBDIR% \
 				http://nodeload.github.com/%SUBDIR%
 MASTER_SITE_GITHUB_CLOUD+=	http://cloud.github.com/downloads/%SUBDIR%
@@ -1442,7 +1449,6 @@ MASTER_SITE_XORG+= \
 .if !defined(IGNORE_MASTER_SITE_KERNEL_ORG)
 MASTER_SITE_KERNEL_ORG+= \
 	http://kernel.org/pub/%SUBDIR%/ \
-	http://ftp.ntu.edu.tw/%SUBDIR%/ \
 	http://ftp.sunet.se/pub/Linux/kernel.org/%SUBDIR%/ \
 	http://ftp.yandex.ru/pub/%SUBDIR%/ \
 	http://ftp.heanet.ie/pub/%SUBDIR%/ \
