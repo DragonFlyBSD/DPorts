@@ -1,0 +1,10 @@
+--- configure.orig	2013-06-09 06:51:16.734375000 +0000
++++ configure
+@@ -17315,6 +17315,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ #ifdef __cplusplus
+ extern "C"
+ #endif
++#error sabotage this
+ char xdr_uint32_t ();
+ int
+ main ()
