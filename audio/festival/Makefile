@@ -70,7 +70,7 @@ do-configure:
 		${FALSE}; \
 	fi
 	# This step helps non-i386 systems and is harmless on i386
-	-${LN} -s ix86_FreeBSD.mak ${WRKDIR}/$d/config/systems/${ARCH}_unknown.mak
+	-${LN} -s ix86_FreeBSD.mak ${WRKDIR}/$d/config/systems/${ARCH:S/i386/ix86/}_unknown.mak
 	${REINPLACE_CMD} -E -e 's,^(CC|CXX) *=,\1 ?=,' \
 	    -e 's,^(CFLAGS|CXXFLAGS) *=,\1 +=,'	\
 	    -e 's,^OPTIMI,#OPTIMI,' \
