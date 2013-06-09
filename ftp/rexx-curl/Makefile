@@ -3,7 +3,7 @@
 # Date created:			Nov 11, 2003
 # Whom:	      			ijliao
 #
-# $FreeBSD: ports/ftp/rexx-curl/Makefile,v 1.20 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/rexx-curl/Makefile 315667 2013-04-02 10:38:36Z miwi $
 #
 
 PORTNAME=	curl
@@ -21,6 +21,7 @@ BUILD_DEPENDS=	rexx:${PORTSDIR}/lang/rexx-regina
 LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
 RUN_DEPENDS=	rexx:${PORTSDIR}/lang/rexx-regina
 
+#BROKEN=		fails to build
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	${PTHREAD_CFLAGS}
