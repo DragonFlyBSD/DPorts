@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fixesproto
-# Date Created:				08 Aug 2005
-# Whom:					Dejan Lesjak <lesi@FreeBSD.org>
-#
-# $FreeBSD: x11/fixesproto/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Dejan Lesjak <lesi@FreeBSD.org>
+# $FreeBSD: x11/fixesproto/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	fixesproto
 PORTVERSION=	5.0
