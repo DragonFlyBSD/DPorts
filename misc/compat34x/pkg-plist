@@ -1,0 +1,3 @@
+lib/compat/libc.so.7
+lib/compat/libm.so.3
+@dirrmtry lib/compat

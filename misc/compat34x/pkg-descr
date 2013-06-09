@@ -1,0 +1,12 @@
+This package allows users to install the compat34x libraries on their
+systems, so they can use legacy binaries that depend on older libraries.
+
+Ports usage example:
+
+--
+.include <bsd.port.pre.mk>
+
+.if ${DFLYVERSION} >= 300501
+LIB_DEPENDS+=	c.6:${PORTSDIR}/misc/compat34x
+.endif
+--
