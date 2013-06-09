@@ -1,0 +1,9 @@
+@comment $FreeBSD: devel/zmq/pkg-plist 300896 2012-07-14 13:54:48Z beat $
+lib/libzmq.so.1
+lib/libzmq.la
+lib/libzmq.a
+lib/libzmq.so
+libdata/pkgconfig/libzmq.pc
+include/zmq.hpp
+include/zmq_utils.h
+include/zmq.h

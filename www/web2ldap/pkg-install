@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/web2ldap/pkg-install,v 1.2 2012/11/17 06:03:10 svnexp Exp $
+# $FreeBSD: www/web2ldap/pkg-install 300897 2012-07-14 14:29:18Z beat $
 #
 
 PREFIX=${PKG_PREFIX:-/usr/local}

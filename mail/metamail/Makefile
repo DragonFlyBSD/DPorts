@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: ports/mail/metamail/Makefile,v 1.42 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/metamail/Makefile 319197 2013-05-27 09:39:48Z bapt $
 
 PORTNAME=	metamail
 PORTVERSION=	2.7
@@ -43,7 +43,7 @@ PLIST_SUB+=	X11="@comment "
 .endif
 
 post-patch:
-.if empty(PORT_OPTIONS:MX11)
+.if ! ${PORT_OPTIONS:MX11}
 	@${REINPLACE_CMD} -e '/fonts/d' ${WRKSRC}/Makefile
 .endif
 	@${RM} ${WRKSRC}/bin/*.orig

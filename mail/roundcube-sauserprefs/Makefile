@@ -1,8 +1,8 @@
 # Created by: Stefan Bethke <stb@lassitu.de>
-# $FreeBSD: ports/mail/roundcube-sauserprefs/Makefile,v 1.1 2013/02/18 02:47:34 svnexp Exp $
+# $FreeBSD: mail/roundcube-sauserprefs/Makefile 319333 2013-05-29 00:38:53Z miwi $
 
 PORTNAME=	sauserprefs
-PORTVERSION=	1.9.1
+PORTVERSION=	1.10
 CATEGORIES=	mail
 MASTER_SITES=	http://www.tehinterweb.co.uk/roundcube/plugins/
 PKGNAMEPREFIX=	roundcube-

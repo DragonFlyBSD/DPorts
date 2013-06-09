@@ -1,13 +1,9 @@
-# New ports collection makefile for:	py-svglib
-# Date created:		2008-11-11
-# Whom:			Wen Heping <wenheping@wenheping.com>
-#
-# $FreeBSD: ports/converters/py-svglib/Makefile,v 1.5 2012/11/17 05:55:04 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@wenheping.com>
+# $FreeBSD: converters/py-svglib/Makefile 317273 2013-05-03 21:56:56Z bapt $
 
 PORTNAME=	svglib
 PORTVERSION=	0.6.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	converters python
 MASTER_SITES=	CHEESESHOP \
 		http://www.dinu-gherman.net/tmp/
@@ -15,6 +11,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	An Library For Reading And Converting SVG
+
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}reportlab2>0:${PORTSDIR}/print/py-reportlab2
 

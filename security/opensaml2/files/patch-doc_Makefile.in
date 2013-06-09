@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/security/opensaml2/files/patch-doc_Makefile.in,v 1.2 2012/11/17 06:01:09 svnexp Exp $
+$FreeBSD: security/opensaml2/files/patch-doc_Makefile.in 300897 2012-07-14 14:29:18Z beat $
 
 --- doc/Makefile.in.orig
 +++ doc/Makefile.in

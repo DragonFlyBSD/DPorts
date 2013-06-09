@@ -1,12 +1,8 @@
-# New ports collection makefile for:    xorg
-# Date created:		18 Jun 2004
-# Whom:			anholt
-#
-# $FreeBSD: ports/x11/xorg/Makefile,v 1.36 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/xorg/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xorg
-PORTVERSION=	7.5.2
+PORTVERSION=	7.7
 CATEGORIES=	x11
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -23,8 +19,10 @@ RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:${PORTSDIR}/graphics/dri
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/xbitmaps.pc:${PORTSDIR}/x11/xbitmaps \
 		${LOCALBASE}/lib/X11/icons/handhelds/cursors/X_cursor:${PORTSDIR}/x11-themes/xcursor-themes
 
+.include <bsd.port.options.mk>
+
 # doc
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 RUN_DEPENDS+=	${LOCALBASE}/share/doc/xorg-docs/README.xml:${PORTSDIR}/x11/xorg-docs
 .endif
 
@@ -55,10 +53,6 @@ pre-everything::
 .if !defined(DEPENDS_TARGET:Mpackage) || empty(DEPENDS_TARGET:Mpackage)
 DEPENDS_TARGET="package"
 .endif
-.endif
-
-.if ${ARCH} != "alpha"
-RUN_DEPENDS+=	${LOCALBASE}/bin/Xorg:${PORTSDIR}/x11-servers/xorg-server
 .endif
 
 .include <bsd.port.post.mk>

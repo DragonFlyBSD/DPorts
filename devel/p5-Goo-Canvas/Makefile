@@ -2,7 +2,7 @@
 # Date created:		2010-03-10
 # Whom:			Sylvio Cesar Teixeira <sylvio@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Goo-Canvas/Makefile,v 1.6 2012/11/17 05:56:18 svnexp Exp $
+# $FreeBSD: devel/p5-Goo-Canvas/Makefile 317794 2013-05-10 13:21:32Z miwi $
 #
 
 PORTNAME=	Goo-Canvas
@@ -25,6 +25,7 @@ RUN_DEPENDS=	p5-Cairo>=0:${PORTSDIR}/graphics/p5-Cairo \
 		p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2
 
 MAKE_JOBS_UNSAFE=	yes
+
 
 MAN1=		perltetris.pl.1 perlmine.pl.1
 MAN3=		Goo::Canvas::Item.3 \

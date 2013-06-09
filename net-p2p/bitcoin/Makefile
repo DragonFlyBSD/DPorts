@@ -1,8 +1,8 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: net-p2p/bitcoin/Makefile 316400 2013-04-24 02:42:20Z swills $
+# $FreeBSD: net-p2p/bitcoin/Makefile 319413 2013-05-30 11:28:53Z swills $
 
 PORTNAME=	bitcoin
-PORTVERSION=	0.8.1
+PORTVERSION=	0.8.2
 PORTREVISION=	1
 CATEGORIES=	net-p2p finance
 
@@ -21,13 +21,14 @@ QRCODES_DESC=	Build with QR code display
 USE_GITHUB=	yes
 GH_ACCOUNT=	bitcoin
 GH_PROJECT=	bitcoin
-GH_COMMIT=	38f8657
+GH_COMMIT=	94933c3
 GH_TAGNAME=	v${PORTVERSION}
 
 USE_GMAKE=	yes
 USE_OPENSSL=	yes
 USE_BDB=	yes
 WANT_BDB_VER=	48
+MAKE_JOBS_SAFE=	yes
 
 CXXFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
 CXXFLAGS+=	-L${LOCALBASE}/lib -L${BDB_LIB_DIR}
@@ -40,7 +41,7 @@ USE_QT4=	corelib gui qmake_build linguist uic moc rcc
 BINARY=		bitcoin-qt
 .else
 BINARY=		bitcoind
-ALL_TARGET=	${BINARY}
+ALL_TARGET=	${BINARY} test
 MAKE_ARGS+=	-C ${WRKSRC}/src
 .endif
 

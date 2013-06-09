@@ -28,7 +28,7 @@ OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
-.if(${OSVERSION} >= 1000024)
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000024
 CCISCLANG!=	${CC} --version | ${HEAD} -1 | ${GREP} 'clang'
 .endif
 
