@@ -1,11 +1,10 @@
 # Created by: Brooks Davis <brooks@FreeBSD.org>
-# $FreeBSD: ports/security/ca_root_nss/Makefile,v 1.30 2013/02/20 00:52:21 svnexp Exp $
+# $FreeBSD: security/ca_root_nss/Makefile 318268 2013-05-16 02:00:38Z flo $
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	security/nss/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
+MASTER_SITES=	MOZILLA/security/nss/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 DISTNAME=	nss-${VERSION_NSS}${NSS_SUFFIX}
 
 MAINTAINER=	gecko@FreeBSD.org

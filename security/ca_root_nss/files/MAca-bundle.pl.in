@@ -34,7 +34,7 @@
 use strict;
 use MIME::Base64;
 
-my $VERSION = '$FreeBSD: ports/security/ca_root_nss/files/MAca-bundle.pl.in,v 1.2 2013/02/20 08:41:39 svnexp Exp $';
+my $VERSION = '$FreeBSD: security/ca_root_nss/files/MAca-bundle.pl.in 312617 2013-02-20 08:07:13Z mandree $';
 
 #   configuration
 print <<EOH;
