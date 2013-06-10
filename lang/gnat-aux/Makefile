@@ -80,6 +80,9 @@ INTENDED_COMPILER=BOOTSTRAP
 FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gnatgcc
 FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/bin
 DISTFILES+=	${BOOTSTRAP_COMPILER}:boot
+.if ${OPSYS} == DragonFly && ${DFLYVERSION} > 300500
+BUILD_DEPENDS+=	${LOCALBASE}/lib/compat/libc.so.7:${PORTSDIR}/misc/compat34x
+.endif
 .endif
 
 ###########
