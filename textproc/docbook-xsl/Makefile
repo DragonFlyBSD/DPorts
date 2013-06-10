@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/docbook-xsl/Makefile 316718 2013-04-28 13:34:26Z bapt $
+# $FreeBSD: textproc/docbook-xsl/Makefile 319362 2013-05-29 08:57:32Z gabor $
 
 PORTNAME=	docbook-xsl
 PORTVERSION=	1.76.1
@@ -7,7 +7,7 @@ MASTER_SITES=	SF/docbook/${PORTNAME}/${PORTVERSION}:src \
 		SF/docbook/${PORTNAME}-doc/${PORTVERSION}:doc
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:src
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	gabor@FreeBSD.org
 COMMENT=	XSL DocBook stylesheets
 
 BUILD_DEPENDS=	xmlcatmgr:${PORTSDIR}/textproc/xmlcatmgr
