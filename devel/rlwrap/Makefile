@@ -1,0 +1,38 @@
+# ex:ts=8
+# New ports collection makefile for:	rlwrap
+# Date created:			Aug 12, 2001
+# Whom:				ijliao
+#
+# $FreeBSD: ports/devel/rlwrap/Makefile,v 1.34 2012/11/17 05:56:56 svnexp Exp $
+#
+
+PORTNAME=	rlwrap
+PORTVERSION=	0.37
+CATEGORIES=	devel
+MASTER_SITES=	http://utopia.knoware.nl/~hlub/uck/rlwrap/ \
+		${MASTER_SITE_LOCAL} \
+		http://dryice.name/computer/FreeBSD/distfiles/
+MASTER_SITE_SUBDIR=	dryice
+
+MAINTAINER=	gamato@users.sf.net
+COMMENT=	Readline wrapper
+
+GNU_CONFIGURE=		yes
+
+MAN1=	rlwrap.1
+MAN3=	RlwrapFilter.3pm
+
+PORTDOCS=	AUTHORS BUGS NEWS PLEA README TODO
+
+post-patch:	.SILENT
+	${REINPLACE_CMD} 's|/dev/ptmx|${NONEXISTENT}|' ${WRKSRC}/configure
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for i in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}/
+.endfor
+.endif
+
+.include <bsd.port.mk>
