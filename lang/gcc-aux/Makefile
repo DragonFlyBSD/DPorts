@@ -1,5 +1,5 @@
 # Created by: John Marino <draco@marino.st> 
-# $FreeBSD: lang/gcc-aux/Makefile 316915 2013-04-30 11:38:19Z bapt $
+# $FreeBSD: lang/gcc-aux/Makefile 320124 2013-06-06 19:55:55Z rakuco $
 
 PORTNAME=	gcc-aux
 PORTVERSION=	${SNAPSHOT}
@@ -96,6 +96,9 @@ INTENDED_COMPILER=BOOTSTRAP
 FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gnatgcc
 FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/bin
 DISTFILES+=	${BOOTSTRAP_COMPILER}:boot
+.if ${OPSYS} == DragonFly && ${DFLYVERSION} > 300500
+BUILD_DEPENDS+=	${LOCALBASE}/lib/compat/libc.so.7:${PORTSDIR}/misc/compat34x
+.endif
 .endif
 
 # for port maintenance, invoke "make makesum PLUS_BOOTSTRAPS=1"
