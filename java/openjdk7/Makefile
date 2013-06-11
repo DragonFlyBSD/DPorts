@@ -109,11 +109,7 @@ MAKE_ENV+=	ALT_PARALLEL_COMPILE_JOBS=${MAKE_JOBS_NUMBER}
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == DragonFly && ${DFLYVERSION} > 300500
-.  if ${ARCH} == x86_64
 BOOTSTRAP_DISTFILE= bootstrap-openjdk-7.21.11.dfly-3.5-${JDK_ARCH}.tar.xz
-.  else
-BUILD_DEPENDS+=	${LOCALBASE}/lib/compat/libc.so.7:${PORTSDIR}/misc/compat34x
-.  endif
 .endif
 
 .if empty(PORT_OPTIONS:MDEBUG)
