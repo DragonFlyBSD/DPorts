@@ -105,6 +105,9 @@ EXTRA_PATCHES=	${PATCHDIR}/nopatch-.._ghc-${BOOT_GHC_VERSION}-boot_rts_package.c
 
 .elif ${OPSYS} == "DragonFly"
 
+.  if ${DFLYVERSION} > 300500
+BUILD_DEPENDS+=  ${LOCALBASE}/lib/compat/libm.so.3:${PORTSDIR}/misc/compat34x
+.  endif
 .  if ${ARCH} == "i386"
 DISTFILES+=	ghc-${BOOT_GHC_VERSION}-i386-dragonfly-boot${EXTRACT_SUFX}:dflyboot
 .  elif ${ARCH} == "x86_64"
