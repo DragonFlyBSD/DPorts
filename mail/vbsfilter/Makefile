@@ -1,10 +1,10 @@
-# $FreeBSD: ports/mail/vbsfilter/Makefile,v 1.30 2012/11/17 05:59:17 svnexp Exp $
+# $FreeBSD: mail/vbsfilter/Makefile 318103 2013-05-13 15:23:54Z dinoex $
 
 PORTNAME=	vbsfilter
 PORTVERSION=	1.15
 PORTREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://aeschi.ch.eu.org/milter/
+MASTER_SITES=	ftp://ftp.dinoex.de/pub/approved/
 EXTRACT_SUFX=	.c
 EXTRACT_ONLY=	# empty
 
