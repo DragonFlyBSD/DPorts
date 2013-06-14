@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/penguinsap/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: audio/penguinsap/Makefile 318788 2013-05-22 18:39:37Z ehaupt $
 
 PORTNAME=	penguinsap
 PORTVERSION=	0.1
@@ -24,8 +24,12 @@ PLIST_FILES=	bin/sap
 
 .include <bsd.port.pre.mk>
 
+_CLANG!=	clang --version | ${HEAD} -1 | ${SED} -e 's/.*clang version \([0-9]\)\.\([0-9]\).*/\1\2/'
+
 .if ${CXX:T} != "clang++"
+.if ${_CLANG} < 33
 CXXFLAGS+=	--no-exceptions
+.endif
 .endif
 
 post-patch:
