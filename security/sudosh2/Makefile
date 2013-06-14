@@ -2,7 +2,7 @@
 # Date created:				10/28/2004
 # Whom:					cy@FreeBSD.org
 #
-# $FreeBSD: ports/security/sudosh2/Makefile,v 1.30 2012/11/17 06:01:21 svnexp Exp $
+# $FreeBSD: security/sudosh2/Makefile 319122 2013-05-26 17:10:31Z cy $
 #
 
 PORTNAME=		sudosh2
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--with-logdir="${SUDOSH_LOGDIR}"
 .else
 CONFIGURE_ARGS+=	--with-logdir=/var/log/sudosh
 .endif
-CFLAGS+=		-lutil
+LDFLAGS+=		-lutil
 
 MAN1=			sudosh.1
 MAN5=			sudosh.conf.5
