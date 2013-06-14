@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	open-cobol
-# Date created:			Aug 6, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: lang/open-cobol/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: ijliao
+# $FreeBSD: lang/open-cobol/Makefile 319859 2013-06-04 13:58:44Z bapt $
 
 PORTNAME=	open-cobol
 PORTVERSION=	1.1
@@ -26,12 +21,14 @@ INFO=		open-cobol
 CPPFLAGS+=	-I${BDB_INCLUDE_DIR} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-.if defined(WITHOUT_NLS)
-CONFIGURE_ARGS+=	--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.else
+.include  <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
 PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=	--disable-nls
+PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-patch:
