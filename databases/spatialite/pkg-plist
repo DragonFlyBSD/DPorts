@@ -1,0 +1,19 @@
+include/spatialite.h
+include/spatialite/gaiaaux.h
+include/spatialite/gaiaexif.h
+include/spatialite/gaiageo.h
+include/spatialite/gg_advanced.h
+include/spatialite/gg_const.h
+include/spatialite/gg_core.h
+include/spatialite/gg_dynamic.h
+include/spatialite/gg_formats.h
+include/spatialite/gg_mbr.h
+include/spatialite/gg_structs.h
+include/spatialite/spatialite.h
+lib/libspatialite.a
+lib/libspatialite.la
+lib/libspatialite.so
+lib/libspatialite.so.4
+libdata/pkgconfig/spatialite.pc
+@dirrmtry libdata/pkgconfig
+@dirrm include/spatialite
