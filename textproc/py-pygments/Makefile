@@ -1,13 +1,9 @@
-# New ports collection makefile for:	py-pygments
-# Date created:		2007-04-01
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/py-pygments/Makefile,v 1.17 2012/11/17 06:02:18 svnexp Exp $
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: textproc/py-pygments/Makefile 320788 2013-06-13 11:58:43Z wg $
 #
 
 PORTNAME=	pygments
-PORTVERSION=	1.5
-PORTREVISION=	0
+PORTVERSION=	1.6
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -29,11 +25,13 @@ DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 MAN1=	pygmentize.1
 .endif
 
+.include <bsd.port.options.mk>
+
 post-install:
 .if !defined(NO_INSTALL_MANPAGES)
 	@${INSTALL_MAN} ${WRKSRC}/docs/${MAN1} ${MANPREFIX}/man/man1/
 .endif
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@cd ${WRKSRC}/docs/build && ${COPYTREE_SHARE} . ${DOCSDIR}
 .endif
