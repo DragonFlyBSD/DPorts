@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: Mk/bsd.sites.mk 320084 2013-06-06 12:00:15Z bdrewery $
+# $FreeBSD: Mk/bsd.sites.mk 320633 2013-06-11 19:43:45Z rakuco $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -1449,6 +1449,7 @@ MASTER_SITE_XORG+= \
 .if !defined(IGNORE_MASTER_SITE_KERNEL_ORG)
 MASTER_SITE_KERNEL_ORG+= \
 	http://kernel.org/pub/%SUBDIR%/ \
+	ftp://ftp.ntu.edu.tw/%SUBDIR%/ \
 	http://ftp.sunet.se/pub/Linux/kernel.org/%SUBDIR%/ \
 	http://ftp.yandex.ru/pub/%SUBDIR%/ \
 	http://ftp.heanet.ie/pub/%SUBDIR%/ \

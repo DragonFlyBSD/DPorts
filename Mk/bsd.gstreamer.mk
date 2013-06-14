@@ -5,7 +5,7 @@
 #
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.gstreamer.mk 316738 2013-04-28 17:53:47Z kwm $
+# $FreeBSD: Mk/bsd.gstreamer.mk 320443 2013-06-10 08:20:25Z bapt $
 #    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.56 2013/01/15 21:43:45 kwm Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)

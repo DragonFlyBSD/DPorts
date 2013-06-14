@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.database.mk 317925 2013-05-12 00:00:56Z girgen $
+# $FreeBSD: Mk/bsd.database.mk 320540 2013-06-11 08:15:22Z mandree $
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Database_Post_Include)
@@ -105,7 +105,6 @@ Database_Include_MAINTAINER=	ports@FreeBSD.org
 .if defined(USE_MYSQL)
 DEFAULT_MYSQL_VER?=	55
 # MySQL client version currently supported.
-MYSQL50_LIBVER=		15
 MYSQL51_LIBVER=		16
 MYSQL53m_LIBVER=	16
 MYSQL55_LIBVER=		18
@@ -190,7 +189,7 @@ IGNORE=		cannot install: unknown MySQL version: ${MYSQL_VER}
 .endif # USE_MYSQL
 
 .if defined(USE_PGSQL)
-VALID_PGSQL_VER=	83 84 90 91 92 93
+VALID_PGSQL_VER=	84 90 91 92 93
 DEFAULT_PGSQL_VER?=	92
 PGSQL83_LIBVER=		5
 PGSQL84_LIBVER=		5
@@ -295,6 +294,7 @@ db46_DEPENDS=	db-4.6.0:${PORTSDIR}/databases/db46
 db47_DEPENDS=	db-4.7.0:${PORTSDIR}/databases/db47
 db48_DEPENDS=	db-4.8.0:${PORTSDIR}/databases/db48
 db5_DEPENDS=	db-5.3.0:${PORTSDIR}/databases/db5
+db6_DEPENDS=	db-6.0.0:${PORTSDIR}/databases/db6
 # Detect db versions by finding some files
 db40_FIND=	${LOCALBASE}/include/db4/db.h
 db41_FIND=	${LOCALBASE}/include/db41/db.h
@@ -305,6 +305,7 @@ db46_FIND=	${LOCALBASE}/include/db46/db.h
 db47_FIND=	${LOCALBASE}/include/db47/db.h
 db48_FIND=	${LOCALBASE}/include/db48/db.h
 db5_FIND=	${LOCALBASE}/include/db5/db.h
+db6_FIND=	${LOCALBASE}/include/db6/db.h
 
 # For specifying [40, 41, ..]+
 _DB_40P=	40 ${_DB_41P}
@@ -315,7 +316,8 @@ _DB_44P=	44 ${_DB_46P}
 _DB_46P=	46 ${_DB_47P}
 _DB_47P=	47 ${_DB_48P}
 _DB_48P=	48 ${_DB_5P}
-_DB_5P=		5
+_DB_5P=		5 ${_DB_6P}
+_DB_6P=		6
 
 # Override the global WITH_BDB_VER with the
 # port specific <UNIQUENAME>_WITH_BDB_VER
@@ -455,6 +457,10 @@ BDB_LIB_DIR=		${LOCALBASE}/lib/db48
 BDB_LIB_NAME=		db-5.3
 BDB_LIB_CXX_NAME=	db_cxx-5.3
 BDB_LIB_DIR=		${LOCALBASE}/lib/db5
+.  elif ${_BDB_VER} == 6
+BDB_LIB_NAME=		db-6.0
+BDB_LIB_CXX_NAME=	db_cxx-6.0
+BDB_LIB_DIR=		${LOCALBASE}/lib/db6
 .  endif
 BDB_LIB_NAME?=		db${_BDB_VER}
 BDB_LIB_CXX_NAME?=	db${_BDB_VER}_cxx

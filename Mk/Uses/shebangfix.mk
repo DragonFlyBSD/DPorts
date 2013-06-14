@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/shebangfix.mk 319366 2013-05-29 10:34:57Z bapt $
+# $FreeBSD: Mk/Uses/shebangfix.mk 320453 2013-06-10 10:18:59Z bapt $
 #
 # common templates for replacing #! interpreters in scripts file
 #
@@ -6,6 +6,10 @@
 #
 # Feature:	shebangfix
 # Usage:	USES=shebangfix
+#
+# To define that the file to modify are: ${WRKSRC}/path1/file and all the .pl files in ${WRKSRC}/path2:
+#
+# SHEBANG_FILES=	path1/file path2/*.pl
 #
 # To define new shebang scheme, in the port Makefile add:
 #

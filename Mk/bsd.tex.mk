@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.tex.mk 319645 2013-06-02 09:39:31Z hrs $
+# $FreeBSD: Mk/bsd.tex.mk 320243 2013-06-08 11:48:04Z hrs $
 #
 # bsd.tex.mk - Common part for TeX related ports
 #
@@ -50,7 +50,7 @@ TEX_MAINTAINER=	hrs@FreeBSD.org
 # Examples:
 # USE_TEX=	latex:build
 # USE_TEX=	formats texlive
-# USE_TEX=	latex:build dvips:build
+# USE_TEX=	latex:build dvipsk:build
 
 # default TeX distribution.  "tetex" or "texlive"
 TEX_DEFAULT?=	tetex
@@ -102,7 +102,7 @@ _USE_TEX_BASE=		tlmgr:${PORTSDIR}/print/texlive-base
 
 _USE_TEX_DOCS=		${LOCALBASE}/${TEXMFDIR}/doc/texlive/texlive-en/README:${PORTSDIR}/print/texlive-docs
 
-_USE_TEX_INFRA=		${SITE_PERL}/TeXLive/TLConfig.pm:${PORTSDIR}/print/texlive-infra
+_USE_TEX_INFRA=		texlive-infra>=0:${PORTSDIR}/print/texlive-infra
 
 _USE_TETEX_DVIPSK=	dvips:${PORTSDIR}/print/dvipsk-tetex
 _USE_TEX_DVIPSK=	dvips:${PORTSDIR}/print/tex-dvipsk
@@ -220,6 +220,7 @@ do-fmtutil-$F:
 			TEXMFMAIN=${LOCALBASE}/${TEXMFDIR} \
 			${LOCALBASE}/bin/fmtutil-sys --byfmt $$format; \
 		done
+	@${LOCALBASE}/bin/mktexlsr ${TEXMFVARDIR:S,^,${PREFIX}/,}
 	@${ECHO_CMD} "@exec exec < ${LOCALBASE}/${FMTUTIL_CNF} && " \
 		"${RM} ${LOCALBASE}/${FMTUTIL_CNF} && " \
 		"(${GREP} -v \"\#$F\$$\"; ${PRINTF} \"%%s\t\#$F\n\" " \

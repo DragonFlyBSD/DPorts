@@ -1,5 +1,5 @@
 #-*- tab-width: 4; -*-
-# $FreeBSD: Mk/bsd.options.mk 317089 2013-05-02 09:14:10Z bapt $
+# $FreeBSD: Mk/bsd.options.mk 320450 2013-06-10 09:27:19Z bapt $
 # Global options
 #
 # OPTIONS_DEFINE		- List of options this ports accept
@@ -49,12 +49,11 @@
 .if !defined(OPTIONSMKINCLUDED)
 OPTIONSMKINCLUDED=	bsd.options.mk
 
-OPTIONSFILE?=	${PORT_DBDIR}/${UNIQUENAME}/options
-
 OPTIONS_EXCLUDE+=	ALSA
 
-#ALL_OPTIONS=	DOCS \
-#		NLS
+OPTIONSFILE?=	${PORT_DBDIR}/${UNIQUENAME}/options
+
+GLOBAL_OPTIONS=	DOCS NLS EXAMPLES IPV6
 
 # Set the default values for the global options, as defined by portmgr
 .if !defined(NOPORTDOCS)
@@ -65,16 +64,11 @@ PORT_OPTIONS+=	DOCS
 PORT_OPTIONS+=	NLS
 .endif
 
-# Set the default values for the global options, as defined by portmgr
 .if !defined(NOPORTEXAMPLES)
 PORT_OPTIONS+=	EXAMPLES
 .endif
 
-# Activate IPV6 by default
 PORT_OPTIONS+=	IPV6
-
-# Exclude per arch options
-_ALL_EXCLUDE=	${OPTIONS_EXCLUDE_${ARCH}} ${OPTIONS_EXCLUDE} ${OPTIONS_SLAVE}
 
 # Add per arch options
 .for opt in ${OPTIONS_DEFINE_${ARCH}}
@@ -84,94 +78,40 @@ OPTIONS_DEFINE+=	${opt}
 .endfor
 
 # Add per arch defaults
-.for opt in ${OPTIONS_DEFAULT_${ARCH}}
-.if empty(OPTIONS_DEFAULT:M${opt})
-OPTIONS_DEFAULT+=	${opt}
-.endif
+OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${ARCH}}
+
+# Remove options the port maintainer doesn't want
+.for opt in ${OPTIONS_EXCLUDE_${ARCH}} ${OPTIONS_EXCLUDE} ${OPTIONS_SLAVE}
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:N${opt}}
+OPTIONS_DEFINE:=	${OPTIONS_DEFINE:N${opt}}
+PORT_OPTIONS:=		${PORT_OPTIONS:N${opt}}
+.  for otype in SINGLE RADIO MULTI GROUP
+.    for m in ${OPTIONS_${otype}}
+OPTIONS_${otype}_${m}:=	${OPTIONS_${otype}_${m}:N${opt}}
+.    endfor
+.  endfor
 .endfor
 
-# Append options set by the port Makefile
-.for opt in ${OPTIONS_DEFINE}
-ALL_OPTIONS+=	${opt}
-.endfor
-
-ALL_OPTIONS:=	${ALL_OPTIONS:O:u}
-
-#XXX  to kill when old option framework won't be used anymore
-.if defined(OPTIONS)
-NO_OPTIONS_SORT=	yes
-.  undef optname
-.  for O in ${OPTIONS:S|\#|\\\#|g}
-opt:=	${O}
-.    if !defined(optname)
-optname:=	${O}
-ALL_OPTIONS+=	${O}
-.if !defined(OPTIONS_DEFINE) || empty(OPTIONS_DEFINE:M${O})
-OPTIONS_DEFINE+=	${O}
-.endif
-PORT_OPTIONS+=	${O}
-.    elif !defined(optdesc)
-optdesc:=	${opt}
-${optname}_DESC:=	${opt:S|"||g}
-.    else
-.      if ${opt:tl} == off
-.        if defined(PORT_OPTIONS) && defined(optname)
-NO_OPTIONS+=	${optname}
-NO_OPTIONS:=	${NO_OPTIONS:O:u}
-.        else
-.        endif
-.      endif
-.      undef optname
-.      undef optdesc
+# Remove empty SINGLE/GROUP/RADIO/MULTI
+# Can be empty because of exclude/slaves
+.for otype in SINGLE RADIO MULTI GROUP
+.  for m in ${OPTIONS_${otype}}
+.    if empty(OPTIONS_${otype}_${m})
+OPTIONS_${otype}:=	${OPTIONS_${otype}:N${m}}
 .    endif
 .  endfor
-.  if defined(NO_OPTIONS)
-.    for O in ${NO_OPTIONS}
-PORT_OPTIONS:=	 ${PORT_OPTIONS:N${O}}
-.    endfor
-.  endif
-#.  undef NO_OPTIONS
-.endif
-#XXX end of compatibility
+.endfor
 
-ALL_OPTIONS:=	${ALL_OPTIONS:O:u}
+# Sort options
+ALL_OPTIONS:=	${OPTIONS_DEFINE:O:u}
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:O:u}
-
-# Remove global options the port maintainer doesn't want
-.for opt in ${_ALL_EXCLUDE}
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:N${opt}}
-ALL_OPTIONS:=		${ALL_OPTIONS:N${opt}}
-.endfor
-
-# Remove illegal per-arch options
-.for opt in ${_ALL_EXCLUDE}
-.  for single in ${OPTIONS_SINGLE}
-OPTIONS_SINGLE_${single}:=	${OPTIONS_SINGLE_${single}:N${opt}}
-.  endfor
-.  for radio in ${OPTIONS_RADIO}
-OPTIONS_RADIO_${radio}:=	${OPTIONS_RADIO_${radio}:N${opt}}
-.  endfor
-.  for multi in ${OPTIONS_MULTI}
-OPTIONS_MULTI_${multi}:=	${OPTIONS_MULTI_${multi}:N${opt}}
-.  endfor
-.  for group in ${OPTIONS_GROUP}
-OPTIONS_GROUP_${group}:=	${OPTIONS_GROUP_${group}:N${opt}}
-.  endfor
-.endfor
 
 # complete list
 COMPLETE_OPTIONS_LIST=	${ALL_OPTIONS}
-.for single in ${OPTIONS_SINGLE}
-COMPLETE_OPTIONS_LIST+=	${OPTIONS_SINGLE_${single}}
-.endfor
-.for radio in ${OPTIONS_RADIO}
-COMPLETE_OPTIONS_LIST+=	${OPTIONS_RADIO_${radio}}
-.endfor
-.for multi in ${OPTIONS_MULTI}
-COMPLETE_OPTIONS_LIST+=	${OPTIONS_MULTI_${multi}}
-.endfor
-.for group in ${OPTIONS_GROUP}
-COMPLETE_OPTIONS_LIST+= ${OPTIONS_GROUP_${group}}
+.for otype in SINGLE RADIO MULTI GROUP
+.  for m in ${OPTIONS_${otype}}
+COMPLETE_OPTIONS_LIST+=	${OPTIONS_${otype}_${m}}
+.  endfor
 .endfor
 
 ## Now create the list of activated options
@@ -306,15 +246,7 @@ WITHOUT_NLS=	yes
 .endif
 
 .if defined(NO_OPTIONS_SORT)
-_SORTED_OPTIONS:=	${ALL_OPTIONS}
-ALL_OPTIONS:=
-.for opt in ${OPTIONS_DEFINE}
-.if ${_SORTED_OPTIONS:M${opt}}
-ALL_OPTIONS+=	${opt}
-.endif
-.endfor
-.undef opt
-.undef _SORTED_OPTIONS
+ALL_OPTIONS=	${OPTIONS_DEFINE}
 .endif
 
 ### to be removed once old OPTIONS disappear
@@ -332,3 +264,8 @@ WITH_${opt}:=  true
 .endfor
 .endif
 ###
+
+_OPTIONS_WITHOUT_GLOBALS:=	${COMPLETE_OPTIONS_LIST}
+.for opt in ${GLOBAL_OPTIONS}
+_OPTIONS_WITHOUT_GLOBALS:=	${_OPTIONS_WITHOUT_GLOBALS:N${opt}}
+.endfor

@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 319432 2013-05-30 15:17:29Z bapt $
+# $FreeBSD: Mk/bsd.port.mk 320886 2013-06-14 06:56:16Z bapt $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -569,6 +569,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  unpacks to.
 #				  Default: ${WRKDIR}/${DISTNAME} unless NO_WRKSUBDIR is set,
 #				  in which case simply ${WRKDIR}
+# WRKSRC_SUBDIR	- A subdirectory of ${WRKSRC} where the distribution actually
+#				  builds in.
+#				  Default: not set
 # NO_WRKSUBDIR	- Assume port unpacks directly into ${WRKDIR}.
 # PATCHDIR		- A directory containing any additional patches you made
 #				  to port this software to FreeBSD.
@@ -1550,6 +1553,9 @@ WRKSRC?=		${WRKDIR}
 .else
 WRKSRC?=		${WRKDIR}/${DISTNAME}
 .endif
+.if defined(WRKSRC_SUBDIR)
+WRKSRC:=		${WRKSRC}/${WRKSRC_SUBDIR}
+.endif
 
 PATCH_WRKSRC?=	${WRKSRC}
 CONFIGURE_WRKSRC?=	${WRKSRC}
@@ -1907,7 +1913,6 @@ LIB_DEPENDS+=		Xm.4:${PORTSDIR}/x11-toolkits/open-motif
 X_IMAKE_PORT=		${PORTSDIR}/devel/imake
 X_FONTSERVER_PORT=	${PORTSDIR}/x11-fonts/xfs
 X_VFBSERVER_PORT=	${PORTSDIR}/x11-servers/xorg-vfbserver
-X_NESTSERVER_PORT=	${PORTSDIR}/x11-servers/xorg-nestserver
 X_FONTS_ENCODINGS_PORT=	${PORTSDIR}/x11-fonts/encodings
 X_FONTS_MISC_PORT=	${PORTSDIR}/x11-fonts/xorg-fonts-miscbitmaps
 X_FONTS_100DPI_PORT=	${PORTSDIR}/x11-fonts/xorg-fonts-100dpi
@@ -3589,31 +3594,34 @@ patch-dos2unix:
 do-patch:
 .if defined(PATCHFILES)
 	@${ECHO_MSG} "===>  Applying distribution patches for ${PKGNAME}"
-	@(cd ${_DISTDIR}; \
-	  for i in ${_PATCHFILES}; do \
+	@set -e ; \
+	(cd ${_DISTDIR} ; \
+	for i  in ${_PATCHFILES}; do \
 		if [ ${PATCH_DEBUG_TMP} = yes ]; then \
-			${ECHO_MSG} "===>   Applying distribution patch $$i" ; \
-		fi; \
+			@${ECHO_MSG} "===>   Applying distribution patch $$i" ; \
+		fi ; \
 		case $$i in \
-			*.Z|*.gz) \
-				${GZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS}; \
-				;; \
-			*.bz2) \
-				${BZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS}; \
-				;; \
-			*) \
-				${PATCH} ${PATCH_DIST_ARGS} < $$i; \
-				;; \
-		esac; \
-	  done)
+		*.Z|*.gz) ${GZCAT} $$i ;; \
+		*.bz2) ${BZCAT} $$i ;; \
+		*.xz) ${XZCAT} $$i ;; \
+		*) ${CAT} $$i ;; \
+		esac | ${PATCH} ${PATCH_DIST_ARGS} ; \
+	done )
 .endif
 .if defined(EXTRA_PATCHES)
-	@for i in ${EXTRA_PATCHES}; do \
-		${ECHO_MSG} "===>  Applying extra patch $$i"; \
-		${PATCH} ${PATCH_ARGS} < $$i; \
+	@set -e ; \
+	for i in ${EXTRA_PATCHES}; do \
+		${ECHO_MSG} "===>  Applying extra patch $$i" ; \
+		case $$i in \
+		*.Z|*.gz) ${GZCAT} $$i ;; \
+		*.bz2) ${BZCAT} $$i ;; \
+		*.xz) ${XZCAT} $$i ;; \
+		*) ${CAT} $$i ;; \
+		esac | ${PATCH} ${PATCH_ARGS} ; \
 	done
 .endif
-	@if [ -d ${PATCHDIR} ]; then \
+	@set -e ;\
+	if [ -d ${PATCHDIR} ]; then \
 		if [ "`${ECHO_CMD} ${PATCHDIR}/patch-*`" != "${PATCHDIR}/patch-*" ]; then \
 			${ECHO_MSG} "===>  Applying ports patches for ${PKGNAME}" ; \
 			PATCHES_APPLIED="" ; \
@@ -4828,7 +4836,8 @@ makesum: check-checksum-algorithms
 
 .if !target(checksum)
 checksum: fetch check-checksum-algorithms
-	@${checksum_init} \
+	@set -e ; \
+	${checksum_init} \
 	if [ -f ${DISTINFO_FILE} ]; then \
 		cd ${DISTDIR}; OK="";\
 		for file in ${_CKSUMFILES}; do \
@@ -5020,7 +5029,7 @@ ${ECHO_MSG} "target = $$target and depend_args = $$depend_args"; \
 ${deptype:tl}-depends:
 .if defined(${deptype}_DEPENDS)
 .if !defined(NO_DEPENDS)
-	@for i in `${ECHO_CMD} "${${deptype}_DEPENDS}"`; do \
+	@set -e ; for i in `${ECHO_CMD} "${${deptype}_DEPENDS}"`; do \
 		prog=$${i%%:*}; \
 		if [ -z "$$prog" ]; then \
 			${ECHO_MSG} "Error: there is an empty port dependency in ${deptype}_DEPENDS."; \
@@ -5118,7 +5127,7 @@ ${deptype:tl}-depends:
 
 lib-depends:
 .if defined(LIB_DEPENDS) && !defined(NO_DEPENDS)
-	@for i in ${LIB_DEPENDS}; do \
+	@set -e ; for i in ${LIB_DEPENDS}; do \
 		lib=$${i%%:*}; \
 		pattern="`${ECHO_CMD} $$lib | ${SED} -E -e 's/\./\\\\./g' -e 's/(\\\\)?\+/\\\\+/g'`"\
 		dir=$${i#*:}; \
@@ -6110,37 +6119,17 @@ D4P_ENV+=	PKGHELP="${PKGHELP}"
 .for opt in ${ALL_OPTIONS}
 D4P_ENV+=	 ${opt}_DESC=""${${opt}_DESC:Q}""
 .endfor
-.for multi in ${OPTIONS_MULTI}
-D4P_ENV+=	OPTIONS_MULTI_${multi}="${OPTIONS_MULTI_${multi}}" \
-		${multi}_DESC=""${${multi}_DESC:Q}""
-.  for opt in ${OPTIONS_MULTI_${multi}}
+.for otype in MULTI GROUP SINGLE RADIO
+.  for m in ${OPTIONS_${otype}}
+D4P_ENV+=	OPTIONS_${otype}_${m}="${OPTIONS_${otype}_${m}}" \
+		${m}_DESC=""${${m}_DESC:Q}""
+.    for opt in ${OPTIONS_${otype}_${m}}
 D4P_ENV+=	 ${opt}_DESC=""${${opt}_DESC:Q}""
+.    endfor
 .  endfor
 .endfor
-.for single in ${OPTIONS_SINGLE}
-D4P_ENV+=	OPTIONS_SINGLE_${single}="${OPTIONS_SINGLE_${single}}" \
-		${single}_DESC=""${${single}_DESC:Q}""
-.  for opt in ${OPTIONS_SINGLE_${single}}
-D4P_ENV+=	 ${opt}_DESC=""${${opt}_DESC:Q}""
-.  endfor
-.endfor
-.for radio in ${OPTIONS_RADIO}
-D4P_ENV+=	OPTIONS_RADIO_${radio}="${OPTIONS_RADIO_${radio}}" \
-		${radio}_DESC=""${${radio}_DESC:Q}""
-.  for opt in ${OPTIONS_RADIO_${radio}}
-D4P_ENV+=	 ${opt}_DESC=""${${opt}_DESC:Q}""
-.  endfor
-.endfor
-.for group in ${OPTIONS_GROUP}
-D4P_ENV+=	OPTIONS_GROUP_${group}="${OPTIONS_GROUP_${group}}" \
-		${group}_DESC=""${${group}_DESC:Q}""
-.  for opt in ${OPTIONS_GROUP_${group}}
-D4P_ENV+=	 ${opt}_DESC=""${${opt}_DESC:Q}""
-.  endfor
-.endfor
-.undef multi
-.undef single
-.undef group
+.undef m
+.undef otype
 .undef opt
 .endif # pre-config
 
@@ -6218,7 +6207,7 @@ config-recursive:
 
 .if !target(config-conditional)
 config-conditional: pre-config
-.if defined(COMPLETE_OPTIONS_LIST) && !defined(NO_DIALOG)
+.if defined(COMPLETE_OPTIONS_LIST) && !empty(_OPTIONS_WITHOUT_GLOBALS) && !defined(NO_DIALOG)
 .  if !defined(_FILE_COMPLETE_OPTIONS_LIST) || ${COMPLETE_OPTIONS_LIST:O} != ${_FILE_COMPLETE_OPTIONS_LIST:O}
 	@cd ${.CURDIR} && ${MAKE} do-config;
 .  endif
@@ -6227,86 +6216,40 @@ config-conditional: pre-config
 
 .if !target(showconfig)
 .include "${PORTSDIR}/Mk/bsd.options.desc.mk"
+MULTI_EOL=	: you have to choose at least one of them
+SINGLE_EOL=	: you have to select exactly one of them
+RADIO_EOL=	: you can only select none or one of them
 showconfig:
-.if !empty(ALL_OPTIONS) || !empty(OPTIONS_SINGLE) || !empty(OPTIONS_MULTI) || !empty(OPTIONS_RADIO) || !empty(OPTIONS_GROUP)
+.if !empty(COMPLETE_OPTIONS_LIST)
 	@${ECHO_MSG} "===> The following configuration options are available for ${PKGNAME}":
 .for opt in ${ALL_OPTIONS}
-.  if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "     ${opt}=off"
-.  else
-	@${ECHO_MSG} -n "     ${opt}=on"
-.  endif
+	@[ -z "${PORT_OPTIONS:M${opt}}" ] || match="on" ; ${ECHO_MSG} -n "     ${opt}=$${match:-off}"
 .  if !empty(${opt}_DESC)
 	@${ECHO_MSG} -n ": "${${opt}_DESC:Q}
 .  endif
 	@${ECHO_MSG} ""
 .endfor
+
 #multi and conditional multis
-.for multi in ${OPTIONS_MULTI}
-	@${ECHO_MSG} "====> Options available for the multi ${multi}: you have to choose at least one of them"
-.  for opt in ${OPTIONS_MULTI_${multi}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "     ${opt}=off"
+.for otype in MULTI GROUP SINGLE RADIO
+.  for m in ${OPTIONS_${otype}}
+.    if empty(${m}_DESC)
+		@${ECHO_MSG} "====> Options available for the ${otype:tl} ${m}${${otype}_EOL}"
 .    else
-	@${ECHO_MSG} -n "     ${opt}=on"
+		@${ECHO_MSG} "====> ${${m}_DESC}${${otype}_EOL}"
 .    endif
-.    if !empty(${opt}_DESC)
+.    for opt in ${OPTIONS_${otype}_${m}}
+	@[ -z "${PORT_OPTIONS:M${opt}}" ] || match="on" ; ${ECHO_MSG} -n "     ${opt}=$${match:-off}"
+.      if !empty(${opt}_DESC)
 	@${ECHO_MSG} -n ": "${${opt}_DESC:Q}
-.    endif
+.      endif
 	@${ECHO_MSG} ""
-.  endfor
-.endfor
-#single and conditional singles
-
-.for single in ${OPTIONS_SINGLE}
-	@${ECHO_MSG} "====> Options available for the single ${single}: you have to select exactly one of them"
-.  for opt in ${OPTIONS_SINGLE_${single}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "     ${opt}=off"
-.    else
-	@${ECHO_MSG} -n "     ${opt}=on"
-.    endif
-.    if !empty(${opt}_DESC)
-	@${ECHO_MSG} -n ": "${${opt}_DESC:Q}
-.    endif
-	@${ECHO_MSG} ""
+.    endfor
 .  endfor
 .endfor
 
-.for radio in ${OPTIONS_RADIO}
-	@${ECHO_MSG} "====> Options available for the radio ${radio}: you can only select none or one of them"
-.  for opt in ${OPTIONS_RADIO_${radio}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "     ${opt}=off"
-.    else
-	@${ECHO_MSG} -n "     ${opt}=on"
-.    endif
-.    if !empty(${opt}_DESC)
-	@${ECHO_MSG} -n ": "${${opt}_DESC:Q}
-.    endif
-	@${ECHO_MSG} ""
-.  endfor
-.endfor
-
-.for group in ${OPTIONS_GROUP}
-	@${ECHO_MSG} "====> Options available for the group ${group}"
-.  for opt in ${OPTIONS_GROUP_${group}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "     ${opt}=off"
-.    else
-	@${ECHO_MSG} -n "     ${opt}=on"
-.    endif
-.    if !empty(${opt}_DESC)
-	@${ECHO_MSG} -n ": "${${opt}_DESC:Q}
-.    endif
-	@${ECHO_MSG} ""
-.  endfor
-.endfor
-
-.undef multi
-.undef single
-.undef radio
-.undef group
+.undef otype
+.undef m
 .undef opt
 	@${ECHO_MSG} "===> Use 'make config' to modify these settings"
 .endif
@@ -6348,62 +6291,29 @@ rmconfig-recursive:
 .endif # rmconfig-recursive
 
 .if !target(pretty-print-config)
+MULTI_START=	[
+MULTI_END=	]
+GROUP_START=	[
+GROUP_END=	]
+SINGLE_START=	(
+SINGLE_END=	)
+RADIO_START=	(
+RADIO_END=	)
 pretty-print-config:
 .for opt in ${ALL_OPTIONS}
-.  if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "-${opt} "
-.  else
-	@${ECHO_MSG} -n "+${opt} "
-.  endif
+	@[ -z "${PORT_OPTIONS:M${opt}}" ] || match="+" ; ${ECHO_MSG} -n "$${match:--}${opt} "
 .endfor
-.for multi in ${OPTIONS_MULTI}
-	@${ECHO_MSG} -n "${multi}[ "
-.  for opt in ${OPTIONS_MULTI_${multi}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "-${opt} "
-.    else
-	@${ECHO_MSG} -n "+${opt} "
-.    endif
+.for otype in MULTI GROUP SINGLE RADIO
+.  for m in ${OPTIONS_${otype}}
+	@${ECHO_MSG} -n "${m}${${otype}_START} "
+.    for opt in ${OPTIONS_${otype}_${m}}
+		@[ -z "${PORT_OPTIONS:M${opt}}" ] || match="+" ; ${ECHO_MSG} -n "$${match:--}${opt} "
+.    endfor
+	@${ECHO_MSG} -n "${${otype}_END} "
 .  endfor
-	@${ECHO_MSG} -n "] "
 .endfor
-.for single in ${OPTIONS_SINGLE}
-	@${ECHO_MSG} -n "${single}( "
-.  for opt in ${OPTIONS_SINGLE_${single}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "-${opt} "
-.    else
-	@${ECHO_MSG} -n "+${opt} "
-.    endif
-.  endfor
-	@${ECHO_MSG} -n ") "
-.endfor
-.for radio in ${OPTIONS_RADIO}
-	@${ECHO_MSG} -n "${radio}( "
-.  for opt in ${OPTIONS_RADIO_${radio}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "-${opt} "
-.    else
-	@${ECHO_MSG} -n "+${opt} "
-.    endif
-.  endfor
-	@${ECHO_MSG} -n ") "
-.endfor
-.for group in ${OPTIONS_GROUP}
-	@${ECHO_MSG} -n "${group}[ "
-.  for opt in ${OPTIONS_GROUP_${group}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "-${opt} "
-.    else
-	@${ECHO_MSG} -n "+${opt} "
-.    endif
-.  endfor
-	@${ECHO_MSG} -n "] "
-.endfor
-.undef multi
-.undef single
-.undef radio
-.undef group
+.undef otype
+.undef m
 .undef opt
 	@${ECHO_MSG} ""
 .endif # pretty-print-config

@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 319432 2013-05-30 15:17:29Z bapt $
+# $FreeBSD: Mk/bsd.pkgng.mk 320886 2013-06-14 06:56:16Z bapt $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -55,8 +55,7 @@ fake-pkg:
 	@${ECHO_CMD} "www: ${WWW}" >> ${MANIFESTF}
 .endif
 	@${ECHO_CMD} "deps: " >> ${MANIFESTF}
-
-	@${MAKE} -C ${.CURDIR} actual-package-depends | ${GREP} -v -E ${PKG_IGNORE_DEPENDS} | ${SORT} -u | ${SED} 's/^/  /' >> ${MANIFESTF}
+	@${ACTUAL-PACKAGE-DEPENDS} | ${GREP} -v -E ${PKG_IGNORE_DEPENDS} | ${SORT} -u | ${SED} 's/^/  /' >> ${MANIFESTF}
 	@${ECHO_CMD} -n "categories: [" >> ${MANIFESTF}
 .for cat in ${CATEGORIES:u}
 	@${ECHO_CMD} -n "${cat}," >> ${MANIFESTF}
@@ -83,53 +82,9 @@ fake-pkg:
 .endfor
 	@${ECHO_CMD} "]" >> ${MANIFESTF}
 	@${ECHO_CMD} -n "options: {" >> ${MANIFESTF}
-.for opt in ${ALL_OPTIONS}
-.if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_CMD} -n "${opt}: off," >> ${MANIFESTF}
-.else
-	@${ECHO_CMD} -n "${opt}: on," >> ${MANIFESTF}
-.endif
+.for opt in ${COMPLETE_OPTIONS_LIST}
+	@[ -z "${PORT_OPTIONS:M${opt}}" ] || match="on" ; ${ECHO_MSG} -n " ${opt}: $${match:-off}," >> ${MANIFESTF}
 .endfor
-.for multi in ${OPTIONS_MULTI}
-.  for opt in ${OPTIONS_MULTI_${multi}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "${opt}: off, " >> ${MANIFESTF}
-.    else
-	@${ECHO_MSG} -n "${opt}: on, " >> ${MANIFESTF}
-.    endif
-.  endfor
-.endfor
-.for single in ${OPTIONS_SINGLE}
-.  for opt in ${OPTIONS_SINGLE_${single}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "${opt}: off, " >> ${MANIFESTF}
-.    else
-	@${ECHO_MSG} -n "${opt}: on, " >> ${MANIFESTF}
-.    endif
-.  endfor
-.endfor
-.for radio in ${OPTIONS_RADIO}
-.  for opt in ${OPTIONS_RADIO_${radio}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "${opt}: off, " >> ${MANIFESTF}
-.    else
-	@${ECHO_MSG} -n "${opt}: on, " >> ${MANIFESTF}
-.    endif
-.  endfor
-.endfor
-.for group in ${OPTIONS_GROUP}
-.  for opt in ${OPTIONS_GROUP_${group}}
-.    if empty(PORT_OPTIONS:M${opt})
-	@${ECHO_MSG} -n "${opt}: off, " >> ${MANIFESTF}
-.    else
-	@${ECHO_MSG} -n "${opt}: on, " >> ${MANIFESTF}
-.    endif
-.  endfor
-.endfor
-.undef multi
-.undef single
-.undef radio
-.undef group
 .undef opt
 	@${ECHO_CMD} "}" >> ${MANIFESTF}
 	@[ -f ${PKGINSTALL} ] && ${CP} ${PKGINSTALL} ${METADIR}/+INSTALL; \
