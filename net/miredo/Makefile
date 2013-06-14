@@ -1,9 +1,9 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: net/miredo/Makefile 319428 2013-05-30 14:04:10Z sumikawa $
+# $FreeBSD: net/miredo/Makefile 320529 2013-06-11 03:42:47Z sumikawa $
 
 PORTNAME=		miredo
-PORTVERSION=	 	1.2.6
-PORTREVISION=		1
+PORTVERSION=		1.2.6
+PORTREVISION=		2
 CATEGORIES=		net ipv6
 MASTER_SITES=		http://www.remlab.net/files/miredo/archive/
 
