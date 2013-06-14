@@ -1,5 +1,5 @@
 # Created by: Martin Blapp <mbr@freebsd.org>
-# $FreeBSD: audio/uade/Makefile 313527 2013-03-06 16:52:02Z bapt $
+# $FreeBSD: audio/uade/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
 
 PORTNAME=	uade
 PORTVERSION=	2.13
@@ -16,6 +16,7 @@ LIB_DEPENDS=	ao:${PORTSDIR}/audio/libao
 HAS_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/uade2
 DATADIR=	${PREFIX}/share/uade2
