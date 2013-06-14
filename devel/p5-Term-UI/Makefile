@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Term-UI/Makefile,v 1.15 2013/01/24 09:46:57 svnexp Exp $
+# $FreeBSD: devel/p5-Term-UI/Makefile 320064 2013-06-06 09:28:12Z tobez $
 
 PORTNAME=	Term-UI
-PORTVERSION=	0.34
+PORTVERSION=	0.36
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
