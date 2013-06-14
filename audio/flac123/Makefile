@@ -2,19 +2,19 @@
 # Date created:		2004-05-14
 # Whom:			michael johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/audio/flac123/Makefile,v 1.17 2012/11/17 05:54:31 svnexp Exp $
+# $FreeBSD: audio/flac123/Makefile 320405 2013-06-09 19:30:58Z naddy $
 #
 
 PORTNAME=	flac123
 PORTVERSION=	0.0.11
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	SF/flac-tools/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Command-line player for flac audio files
 
-LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \
+LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac \
 		ao.4:${PORTSDIR}/audio/libao \
 		popt.0:${PORTSDIR}/devel/popt
 
