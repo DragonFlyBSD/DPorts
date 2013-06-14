@@ -1,9 +1,5 @@
-# New ports collection makefile for:   slack
-# Date created:                        3 October 2008
-# Whom:                                Steve Atwell
-#
-# $FreeBSD: ports/sysutils/slack/Makefile,v 1.3 2012/12/16 06:16:59 svnexp Exp $
-#
+# Created by: Steve Atwell
+# $FreeBSD: sysutils/slack/Makefile 320598 2013-06-11 14:57:58Z miwi $
 
 PORTNAME=	slack
 PORTVERSION=	0.15.2
