@@ -1,0 +1,10 @@
+bin/babysit
+bin/bsc
+bin/bsok
+bin/bswait
+bin/execlp
+bin/getlock
+bin/setugid
+bin/sockaccept
+bin/tcplisten
+bin/unixlisten
