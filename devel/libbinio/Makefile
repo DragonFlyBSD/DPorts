@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libbinio
-# Date created:				10 August 2004
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/devel/libbinio/Makefile,v 1.16 2012/11/17 05:55:53 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: devel/libbinio/Makefile 317635 2013-05-07 22:09:21Z ehaupt $
 
 PORTNAME=	libbinio
 PORTVERSION=	1.4
@@ -14,6 +10,9 @@ MASTER_SITES=	SF
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Binary I/O stream class library
 
+LICENSE=	LGPL21
+
+USES=		pathfix
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -26,8 +25,6 @@ CFLAGS+=	${CPPFLAGS}
 CXXFLAGS+=	${CPPFLAGS}
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|^\(SUBDIRS\ =\).*|\1 src|; \
-		s|^\(pkgconfigdir\).*|\1 = ${PREFIX}/libdata/pkgconfig|' \
-		${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e 's|^\(SUBDIRS\ =\).*|\1 src|' ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
