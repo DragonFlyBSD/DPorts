@@ -2,7 +2,7 @@
 # Date created:				24 Oct 2000
 # Whom:					ericb@thedeepsky.com
 #
-# $FreeBSD: ports/audio/mp3_check/Makefile,v 1.10 2012/11/17 05:54:38 svnexp Exp $
+# $FreeBSD: audio/mp3_check/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 PORTNAME=	mp3_check
