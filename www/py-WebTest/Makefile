@@ -1,5 +1,5 @@
 # Created by: Wen Heping
-# $FreeBSD: www/py-WebTest/Makefile 315326 2013-03-26 20:37:45Z cs $
+# $FreeBSD: www/py-WebTest/Makefile 320410 2013-06-09 21:25:54Z cs $
 
 PORTNAME=	WebTest
 PORTVERSION=	2.0.3
@@ -14,6 +14,10 @@ COMMENT=	Helper to test WSGI applications
 LICENSE=	MIT
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}webob>=1.2:${PORTSDIR}/www/py-webob \
+		${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six \
+		${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4:${PORTSDIR}/www/py-beautifulsoup \
+		${PYTHON_PKGNAMEPREFIX}waitress>0:${PORTSDIR}/www/py-waitress
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}webob>=1.2:${PORTSDIR}/www/py-webob \
 		${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six \
 		${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4:${PORTSDIR}/www/py-beautifulsoup \
 		${PYTHON_PKGNAMEPREFIX}waitress>0:${PORTSDIR}/www/py-waitress
