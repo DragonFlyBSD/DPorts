@@ -1,9 +1,5 @@
-# New ports collection makefile for:	zipmix
-# Date created:		Fri Jan 9 2009 00:00:37 UTC
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/archivers/zipmix/Makefile,v 1.3 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: archivers/zipmix/Makefile 319206 2013-05-27 10:34:54Z bapt $
 
 PORTNAME=	zipmix
 DISTVERSION=	20070221
