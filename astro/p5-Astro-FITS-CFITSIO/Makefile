@@ -1,12 +1,8 @@
-# Ports collection makefile for:	Astro-FITS-CFITSIO
-# Date created:				Jan 6, 2010
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/astro/p5-Astro-FITS-CFITSIO/Makefile,v 1.7 2012/11/17 05:54:25 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: astro/p5-Astro-FITS-CFITSIO/Makefile 320186 2013-06-07 08:32:56Z tobez $
 
 PORTNAME=	Astro-FITS-CFITSIO
-PORTVERSION=	1.09
+PORTVERSION=	1.10
 CATEGORIES=	astro perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
