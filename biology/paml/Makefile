@@ -1,9 +1,5 @@
-# New ports collection makefile for:	paml
-# Date created:				7 July 2000
-# Whom:					dbader@eece.unm.edu
-#
-# $FreeBSD: ports/biology/paml/Makefile,v 1.16 2012/11/17 05:54:52 svnexp Exp $
-#
+# Created by: dbader@eece.unm.edu
+# $FreeBSD: biology/paml/Makefile 319570 2013-06-01 14:22:35Z wen $
 
 PORTNAME=	paml
 PORTVERSION=	4.4c
