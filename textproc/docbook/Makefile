@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@freebsd.org>
-# $FreeBSD: textproc/docbook/Makefile 317196 2013-05-03 11:49:30Z bapt $
+# $FreeBSD: textproc/docbook/Makefile 320246 2013-06-08 12:44:05Z wg $
 
 PORTNAME=	docbook
 PORTVERSION=	1.4
@@ -35,7 +35,7 @@ DB45_XML_DESC=	DocBook XML DTD 4.5
 DB50_XML_DESC=	DocBook XML 5.0 distribution
 SDB_XML_DESC=	Simplified DocBook XML DTD
 SGMLCHARENT_DESC=	ISO 8879:1986 character entity sets (SGML)
-XMLCHARENT_DESC+	ISO 8879:1986 character entity sets (XML)
+XMLCHARENT_DESC=	ISO 8879:1986 character entity sets (XML)
 
 .include <bsd.port.options.mk>
 
