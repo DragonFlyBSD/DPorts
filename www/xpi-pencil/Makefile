@@ -2,19 +2,20 @@
 # Date created:		2009-03-09
 # Whom:			Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: ports/www/xpi-pencil/Makefile,v 1.5 2012/11/17 06:03:12 svnexp Exp $
+# $FreeBSD: www/xpi-pencil/Makefile 319750 2013-06-03 02:31:04Z ashish $
 #
 
 PORTNAME=	pencil
-PORTVERSION=	1.0.6
+DISTVERSION=	2.0-3
 DISTVERSIONSUFFIX=	-fx
 CATEGORIES=	www
+MASTER_SITES=	GOOGLE_CODE
+PROJECTHOST=	evoluspencil
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Firefox addon to do GUI prototyping and simple sketching
 
-XPI_DISTNAME=	pencil
-XPI_NUM=	8487
+XPI_DISTNAME=	Pencil
 XPI_ID=		pencil@evolus.vn
 
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
