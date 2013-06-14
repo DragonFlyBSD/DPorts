@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-pyro/Makefile 317050 2013-05-01 20:41:56Z rm $
+# $FreeBSD: devel/py-pyro/Makefile 320647 2013-06-11 21:24:41Z rm $
 
 PORTNAME=	pyro
-PORTVERSION=	4.18
+PORTVERSION=	4.20
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
