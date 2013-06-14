@@ -1,9 +1,5 @@
-# New ports collection makefile for:   libXtrans
-# Date Created:			28 Oct, 2003
-# Whom:				Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: x11/libXtrans/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/libXtrans/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	libXtrans
 PORTVERSION=	0.1
