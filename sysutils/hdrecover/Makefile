@@ -2,7 +2,7 @@
 # Date created:        18 June 2012
 # Whom:                Cy Schubert <cy@freebsd.org>
 #
-# $FreeBSD: ports/sysutils/hdrecover/Makefile,v 1.3 2012/11/17 06:01:34 svnexp Exp $
+# $FreeBSD: sysutils/hdrecover/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	hdrecover
