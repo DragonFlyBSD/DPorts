@@ -2,7 +2,7 @@
 # Date created:				04 May 2012
 # Whom:					William Grzybowski
 #
-# $FreeBSD: ports/textproc/libguess/Makefile,v 1.3 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: textproc/libguess/Makefile 318257 2013-05-15 19:33:14Z wg $
 #
 
 PORTNAME=	libguess
@@ -10,7 +10,7 @@ PORTVERSION=	1.1
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://distfiles.atheme.org/
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	A high-speed character set detection library
 
 LIB_DEPENDS=	mowgli.2:${PORTSDIR}/devel/libmowgli
