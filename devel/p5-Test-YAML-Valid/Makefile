@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Test-YAML-Valid
-# Date created:				10 April 2007
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-YAML-Valid/Makefile,v 1.8 2012/11/17 05:56:34 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-YAML-Valid/Makefile 317876 2013-05-11 13:49:05Z bapt $
 
 PORTNAME=	Test-YAML-Valid
 PORTVERSION=	0.04
@@ -22,14 +18,15 @@ PERL_CONFIGURE=	yes
 
 MAN3=	Test::YAML::Valid.3
 
-OPTIONS=	YAMLSYCK "Use YAML::Syck for testing" OFF
+OPTIONS_DEFINE=	YAMLSYCK
+YAMLSYCK_DESC=	Use YAML::Syck for testing
 
 post-patch:
 	${PERL} -pi -e '$$_="" if /auto_install/' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_YAMLSYCK)
+.if ${PORT_OPTIONS:MYAMLSYCK}
 RUN_DEPENDS+=	p5-YAML-Syck>0:${PORTSDIR}/textproc/p5-YAML-Syck
 BUILD_DEPENDS+=	p5-YAML-Syck>0:${PORTSDIR}/textproc/p5-YAML-Syck
 .endif
