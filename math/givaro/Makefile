@@ -1,9 +1,5 @@
-# New ports collection makefile for:	givaro
-# Date created: 	5 Oct 2011
-# Whom: 	b.f. <bf@FreeBSD.org>
-#
-# $FreeBSD: ports/math/givaro/Makefile,v 1.2 2012/11/17 05:59:21 svnexp Exp $
-#
+# Created by: b.f. <bf@FreeBSD.org>
+# $FreeBSD: math/givaro/Makefile 320051 2013-06-06 05:55:48Z bapt $
 
 PORTNAME=	givaro
 PORTVERSION=	3.5.0
@@ -20,25 +16,24 @@ LICENSE_PERMS=	auto-accept
 
 LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp
 
-OPTIONS=	DOCS "build HTML documents (requires doxygen)" off
-
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS =	--with-gmp="${LOCALBASE}"
 USE_LDCONFIG=	yes
 
-.include <bsd.port.pre.mk>
+OPTIONS_DEFINE=	DOXYGEN
 
-.if defined(WITH_DOCS)  && !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOXYGEN}
 BUILD_DEPENDS +=	doxygen:${PORTSDIR}/devel/doxygen
 CONFIGURE_ARGS+=	--enable-doc --with-docdir="${DOCSDIR}"
-.elifndef(NOPORTDOCS)
-NOPORTDOCS=	yes
+PLIST_SUB+=	DOXYGEN=""
+.else
+PLIST_SUB+=	DOXYGEN="@comment "
 .endif
 
-.if ${LOCALBASE} == "/usr/local"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/DEFAULT_CFLAGS=/{s/-O2 //;s/-pipe//;}' \
@@ -46,11 +41,11 @@ post-patch:
 		-e '/^WARN_CFLAGS="-Wall"/d' \
 		-e '/if test "x$$WARN" = "xyes"/s/$$/ WARN_CFLAGS="-Wall" ;/' \
 		${WRKSRC}/configure
-.if defined(WITH_DOCS)  && !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOXYGEN}
 	@${REINPLACE_CMD} -e 's/sed -i/& ""/' ${WRKSRC}/docs/Makefile.in
 .endif
 
-.if defined(WITH_DOCS)  && !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOXYGEN}
 post-install:
 	@${TOUCH} ${DOCSDIR}/givaro-dev-html/.keep-me
 
@@ -60,4 +55,4 @@ check regression-test test: build
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} ${_MAKE_JOBS} \
 	${MAKE_ARGS} check
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
