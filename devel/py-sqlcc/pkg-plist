@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/py-sqlcc/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%PYTHON_SITELIBDIR%%/sqlcc/__init__.py
 %%PYTHON_SITELIBDIR%%/sqlcc/data_src.py
 %%PYTHON_SITELIBDIR%%/sqlcc/funcs.py
