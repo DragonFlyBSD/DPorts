@@ -1,11 +1,10 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/mxml/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: textproc/mxml/Makefile 317921 2013-05-11 21:51:03Z rakuco $
 
 PORTNAME=	mxml
 PORTVERSION=	2.7
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_EASYSW}
-MASTER_SITE_SUBDIR=	mxml/${PORTVERSION}
+MASTER_SITES=	http://www.msweet.org/files/project3/
 
 MAINTAINER=	hsmtkk@gmail.com
 COMMENT=	Small XML parsing library
