@@ -2,7 +2,7 @@
 # Date Created:				2 Aug 2006
 # Whom:					alepulver
 #
-# $FreeBSD: ports/games/duke3d-data/Makefile,v 1.8 2012/11/17 05:57:36 svnexp Exp $
+# $FreeBSD: games/duke3d-data/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 PORTNAME=	data
 PORTVERSION=	1.0
