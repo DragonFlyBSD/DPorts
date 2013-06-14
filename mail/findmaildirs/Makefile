@@ -1,9 +1,5 @@
-# New ports collection makefile for:	findmaildirs
-# Date created:		24 Feb 2012
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/findmaildirs/Makefile,v 1.2 2012/11/17 05:59:03 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: mail/findmaildirs/Makefile 318822 2013-05-23 02:04:46Z amdmi3 $
 
 PORTNAME=	findmaildirs
 PORTVERSION=	0.1
@@ -18,7 +14,9 @@ PLIST_FILES=	bin/${PORTNAME}
 
 PORTDOCS=	README
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
