@@ -1,0 +1,7 @@
+bin/ksh93
+@exec echo "Updating /etc/shells"; sed -i "" "\|%D/%F|d" /etc/shells; echo %D/%F >> /etc/shells
+@unexec echo "Updating /etc/shells"; sed -i "" "\|%D/%F|d" /etc/shells
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/dirs
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/popd
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/pushd
+%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%
