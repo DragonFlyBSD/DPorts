@@ -2,7 +2,7 @@
 # Date created:				27 June 1999
 # Whom:					Richard Kiss <him@richardkiss.com>
 #
-# $FreeBSD$
+# $FreeBSD: ports/lang/lua50/Makefile,v 1.30 2012/11/17 05:58:52 svnexp Exp $
 #
 
 PORTNAME=	lua
