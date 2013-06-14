@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kbdscan/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: misc/kbdscan/Makefile 319646 2013-06-02 10:14:45Z eadler $
 
 PORTNAME=	kbdscan
 PORTVERSION=	20110507
@@ -8,11 +8,7 @@ MASTER_SITES=	http://hack.org/mc/hacks/${PORTNAME}/
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Kbdscan shows the scancodes of keys pressed
 
-LICENSE=	ISC
-LICENSE_GROUPS=	FSF GPL OSI
-LICENSE_NAME=	ISC License - ISCL
-LICENSE_FILE=	${FILESDIR}/LICENSE-kbdscan
-LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LICENSE=	ISCL
 
 USE_BZIP2=	yes
 
