@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: mail/opendkim/Makefile.features 313038 2013-02-27 08:42:44Z beech $
+# $FreeBSD: mail/opendkim/Makefile.features 319032 2013-05-25 08:06:10Z az $
 
 # This file is used to tune build time options.
 # Please refer FEATURES file distributed with the source for details.
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--enable-identity_header
 .if ${PORT_OPTIONS:MLCOV}
 BROKEN=			Does not install
 BUILD_DEPENDS+=		lcov:${PORTSDIR}/devel/lcov \
-			${SITE_PERL}/${PERL_ARCH}/GD.pm:${PORTSDIR}/graphics/p5-GD
+			p5-GD>=0:${PORTSDIR}/graphics/p5-GD
 CONFIGURE_ARGS+=	--with-lcov
 .else
 CONFIGURE_ARGS+=	--without-lcov
