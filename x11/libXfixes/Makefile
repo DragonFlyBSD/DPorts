@@ -1,9 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXfixes/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libXfixes/Makefile 319899 2013-06-04 19:31:29Z zeising $
 
 PORTNAME=	libXfixes
-PORTVERSION=	5.0
-PORTREVISION=	2
+PORTVERSION=	5.0.1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
