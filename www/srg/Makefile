@@ -1,5 +1,5 @@
 # Created by: Dmitry Semkin <lslarry@gmail.com>
-# $FreeBSD: www/srg/Makefile 317373 2013-05-04 22:01:18Z bapt $
+# $FreeBSD: www/srg/Makefile 318437 2013-05-18 17:53:41Z bapt $
 
 PORTNAME=	srg
 PORTVERSION=	1.3.6
@@ -12,10 +12,6 @@ COMMENT=	A Squid Report Generator
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
