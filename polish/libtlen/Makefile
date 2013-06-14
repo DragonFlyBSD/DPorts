@@ -3,7 +3,7 @@
 # Whom:			Piotr Smyrak <smyru@heron.pl> and
 #                       Maciek Korzen <eaquer@ceti.pl>
 #
-# $FreeBSD: ports/polish/libtlen/Makefile,v 1.8 2012/11/17 06:00:44 svnexp Exp $
+# $FreeBSD: polish/libtlen/Makefile 318333 2013-05-16 20:07:39Z rakuco $
 #
 
 PORTNAME=	libtlen
@@ -11,7 +11,7 @@ PORTVERSION=	20041113
 CATEGORIES=	polish net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	smyru@heron.pl
+MAINTAINER=	ports@freebsd.org
 COMMENT=	Backend for interoperability with Tlen.pl, Polish IM network
 
 GNU_CONFIGURE=	yes
