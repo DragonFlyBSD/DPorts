@@ -1,9 +1,5 @@
-# Ports collection makefile for:	mgeupsd
-# Date created:				12 Aug 1999
-# Whom:                                 Andreas Dobloug <andreasd@@ifi.uio.no>
-#
-# $FreeBSD: ports/sysutils/mgeupsd/Makefile,v 1.8 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Andreas Dobloug <andreasd@@ifi.uio.no>
+# $FreeBSD: sysutils/mgeupsd/Makefile 319252 2013-05-27 15:09:38Z bsam $
 
 PORTNAME=		mgeupsd
 PORTVERSION=		0.3
@@ -13,10 +9,18 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	system/ups
 
 MAINTAINER=		ports@FreeBSD.org
-COMMENT=	monitor a state of MGE Pulsar UPS connected to RS-232 port
+COMMENT=	Monitor a state of MGE Pulsar UPS connected to RS-232 port
 
 USE_GMAKE=		YES
 WRKSRC=			${WRKDIR}/MGE
+
+PLIST_FILES=		sbin/mgeupsd sbin/powerhandler etc/rc.d/mgeupsd.sh
+MAN8=			mgeupsd.8
+SUB_FILES=		pkg-message
+
+post-patch:
+		@${REINPLACE_CMD} -e '/^CC=/s:gcc:${CC}:' \
+			-e '/^CFLAGS=/s:-Wall -O2:${CFLAGS}:' ${WRKSRC}/Makefile
 
 post-install:
 		${INSTALL_SCRIPT} ${FILESDIR}/mgeupsd.sh ${PREFIX}/etc/rc.d
