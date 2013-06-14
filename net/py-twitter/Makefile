@@ -1,10 +1,10 @@
 # Created by: ijliao
-# $FreeBSD: ports/net/py-twitter/Makefile,v 1.12 2013/02/08 19:46:16 svnexp Exp $
+# $FreeBSD: net/py-twitter/Makefile 320677 2013-06-12 12:18:40Z koobs $
 
 PORTNAME=	twitter
-PORTVERSION=	0.8.5
+PORTVERSION=	1.0
 CATEGORIES=	net python
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 
@@ -13,13 +13,11 @@ COMMENT=	Python wrapper around the Twitter API
 
 LICENSE=	AL2
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}simplejson>0:${PORTSDIR}/devel/py-simplejson \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}simplejson>0:${PORTSDIR}/devel/py-simplejson \
 		${PYTHON_PKGNAMEPREFIX}oauth2>0:${PORTSDIR}/net/py-oauth2 \
 		${PYTHON_PKGNAMEPREFIX}httplib2>0:${PORTSDIR}/www/py-httplib2
-RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PROJECTHOST=	python-twitter
-USE_PYTHON=	yes
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	python_twitter
 
