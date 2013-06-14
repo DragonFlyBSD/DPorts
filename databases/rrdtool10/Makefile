@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: databases/rrdtool10/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: databases/rrdtool10/Makefile 320709 2013-06-12 17:45:02Z az $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.0.50
@@ -32,7 +32,7 @@ MAN1=		RRDp.1 RRDs.1 bin_dec_hex.1 rrdcgi.1 rrdcreate.1 rrddump.1 \
 		cdeftutorial.1 rpntutorial.1 rrdinfo.1 rrdxport.1 rrd-beginners.1 \
 		rrdfirst.1
 MAN3=		RRDp.3 RRDs.3
-MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VERSION}
+MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 
 OPTIONS_DEFINE=	LATIN2
 LATIN2_DESC=	ISO-8859-2 fonts support
