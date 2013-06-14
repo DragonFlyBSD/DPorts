@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: devel/gdb66/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/gdb66/Makefile 319339 2013-05-29 04:46:28Z jgh $
 
 PORTNAME=	gdb
 PORTVERSION=	6.6
@@ -15,9 +15,8 @@ COMMENT?=	GNU GDB of newer version than comes with the system
 
 LATEST_LINK?=	gdb66
 
-.ifndef(WITH_INSIGHT)
-OPTIONS=	INSIGHT "Build the Tcl/Tk GUI (experimental!)" off
-.endif
+OPTIONS_DEFINE=	INSIGHT
+INSIGHT_DESC=	Tcl/Tk GUI (experimental!)
 
 CONFLICTS?=	gdb-[7-9]*
 MAKE_JOBS_SAFE=	yes
@@ -40,9 +39,8 @@ MAN1=	gdb${VER}.1
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_INSIGHT)
+.if ${PORT_OPTIONS:MINSIGHT}
 PKGNAMESUFFIX=	-insight
-PORTREVISION=	0
 USE_TK=	84+
 LIB_DEPENDS=	itk:${PORTSDIR}/x11-toolkits/itk
 RUN_DEPENDS=	${LOCALBASE}/lib/iwidgets:${PORTSDIR}/x11-toolkits/iwidgets
@@ -83,7 +81,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb ${PREFIX}/bin/gdb${VER}
 	${LN} ${PREFIX}/bin/gdb${VER} ${PREFIX}/bin/gdbtui${VER}
 	${INSTALL_MAN} ${WRKSRC}/gdb/gdb.1 ${MAN1PREFIX}/man/man1/gdb${VER}.1
-.if defined(WITH_INSIGHT)
+.if ${PORT_OPTIONS:MINSIGHT}
 	${LN} ${PREFIX}/bin/gdb${VER} ${PREFIX}/bin/insight
 	${MKDIR} ${PREFIX}/share/redhat/gui
 	${CP} -p ${WRKSRC}/libgui/library/*.tcl	\
