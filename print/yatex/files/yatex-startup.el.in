@@ -1,11 +1,9 @@
 ;; a startup elisp for YaTeX
 ;;   -- S. Taoka <taoka@FreeBSD.org>
-;; $FreeBSD: print/yatex/files/yatex-startup.el.in 300897 2012-07-14 14:29:18Z beat $
-
-;;;;;;;;;;; %%TARGETNAME%% (Ver.%%VERSION%%) ;;;;;;;;;;;
+;; $FreeBSD: print/yatex/files/yatex-startup.el.in 318638 2013-05-21 03:33:12Z hrs $
 
 (setq load-path (append (list 
-        "%%ELISPDIR%%/yatex"
+        "%%PREFIX%%/%%EMACS_SITE_LISPDIR%%/yatex"
         ) load-path))
 (setq auto-mode-alist
      (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
