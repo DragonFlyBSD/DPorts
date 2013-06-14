@@ -1,8 +1,5 @@
-# New ports collection makefile for:   cidr
-# Date created:		18 Jun 2000
-# Whom:			Domas Mituzas <midom@dammit.lt>
-#
-# $FreeBSD: ports/net-mgmt/cidr/Makefile,v 1.16 2012/11/17 06:00:31 svnexp Exp $
+# Created by: Domas Mituzas <midom@dammit.lt>
+# $FreeBSD: net-mgmt/cidr/Makefile 317638 2013-05-07 22:35:42Z ehaupt $
 
 PORTNAME=	cidr
 PORTVERSION=	2.3.2
@@ -12,6 +9,8 @@ MASTER_SITES=	CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	RFC 1878 subnet calculator / helper
+
+LICENSE=	GPLv2
 
 MAKE_JOBS_SAFE=	yes
 
