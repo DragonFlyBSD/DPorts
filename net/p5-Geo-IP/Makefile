@@ -1,8 +1,8 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: net/p5-Geo-IP/Makefile 313270 2013-03-02 16:34:42Z eadler $
+# $FreeBSD: net/p5-Geo-IP/Makefile 320482 2013-06-10 14:37:15Z jadawin $
 
 PORTNAME=	Geo-IP
-PORTVERSION=	1.41
+PORTVERSION=	1.42
 CATEGORIES=	net geography perl5
 MASTER_SITES=	CPAN \
 		http://www.maxmind.com/download/geoip/api/perl/
