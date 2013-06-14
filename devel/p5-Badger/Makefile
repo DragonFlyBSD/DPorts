@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Badger
-# Date created:				06 February 2009
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Badger/Makefile,v 1.5 2012/11/17 05:56:05 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Badger/Makefile 320257 2013-06-08 14:55:06Z miwi $
 
 PORTNAME=	Badger
 PORTVERSION=	0.09
