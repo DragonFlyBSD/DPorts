@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: audio/vo-aacenc/Makefile 317264 2013-05-03 21:34:01Z bapt $
+# $FreeBSD: audio/vo-aacenc/Makefile 318438 2013-05-18 18:14:39Z bapt $
 
 PORTNAME=	vo-aacenc
 PORTVERSION=	0.1.2
@@ -11,9 +11,6 @@ COMMENT=	VisualOn AAC encoder library
 
 LICENSE=	AL2
 LICENSE_FILE=	${WRKSRC}/COPYING
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 GNU_CONFIGURE=	yes
 
