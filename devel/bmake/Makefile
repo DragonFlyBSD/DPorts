@@ -1,9 +1,8 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: devel/bmake/Makefile 318795 2013-05-22 20:40:23Z trociny $
+# $FreeBSD: devel/bmake/Makefile 320003 2013-06-05 16:59:20Z trociny $
 
 PORTNAME=	bmake
-PORTVERSION=	20130520
-PORTREVISION=	1
+PORTVERSION=	20130604
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/sjg/ \
 		http://www.gtlib.cc.gatech.edu/pub/NetBSD/misc/sjg/ \
