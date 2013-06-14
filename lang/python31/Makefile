@@ -1,15 +1,18 @@
-# $FreeBSD: lang/python31/Makefile 317469 2013-05-06 06:32:22Z jgh $
+# $FreeBSD: lang/python31/Makefile 318353 2013-05-17 04:17:22Z rm $
 
 PORTNAME=	python31
 PORTVERSION=	3.1.5
 PORTREVISION=	2
 CATEGORIES=	lang python ipv6
-MASTER_SITES=	${PYTHON_MASTER_SITES}
+MASTER_SITES=	PYTHON
 MASTER_SITE_SUBDIR=	${PYTHON_MASTER_SITE_SUBDIR}
 DISTFILES=	${PYTHON_DISTFILE}
 
 MAINTAINER=	python@FreeBSD.org
-COMMENT=	An interpreted object-oriented programming language
+COMMENT=	Interpreted object-oriented programming language
+
+DEPRECATED=	This port will reach it's EoL upstream soon, please migrate to lang/python33
+EXPIRATION_DATE=2014-06-01
 
 DIST_SUBDIR=	python
 WRKSRC=		${PYTHON_WRKSRC}/portbld.static
