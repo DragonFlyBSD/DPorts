@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p3scan
-# Date created:				20 Februari 2003
-# Whom:	      				Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: ports/mail/p3scan/Makefile,v 1.20 2012/12/10 19:24:02 svnexp Exp $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: mail/p3scan/Makefile 318975 2013-05-24 14:23:05Z bapt $
 
 PORTNAME=	p3scan
 PORTVERSION=	2.3.2
@@ -20,6 +16,7 @@ PLIST_FILES=	etc/p3scan/p3scan.conf.sample etc/p3scan/p3scan.mail.sample \
 		sbin/p3scan
 PLIST_DIRS=	etc/p3scan
 
+USE_GCC=	any
 USE_GMAKE=	yes
 MAKE_ENV=	_LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib" GMAKE=${GMAKE}
 SCRIPTS_ENV=	PKG_PREFIX=${PREFIX} NONEXISTENT=${NONEXISTENT} PASSWD=/etc/passwd
