@@ -1,9 +1,5 @@
-# New ports collection makefile for:	noffle
-# Date created:				28.06.2003
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/news/noffle/Makefile,v 1.13 2012/11/17 06:00:43 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: news/noffle/Makefile 318258 2013-05-15 19:39:20Z wg $
 
 PORTNAME=	noffle
 PORTVERSION=	1.1.5
@@ -37,6 +33,8 @@ post-patch:
 		${WRKSRC}/docs/${PORTNAME}.1 \
 		${WRKSRC}/docs/${PORTNAME}.conf.5
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} \
 		${PREFIX}/bin
@@ -59,8 +57,7 @@ do-install:
 	@${MKDIR} ${SPOOL_DIR}/overview
 	@${MKDIR} ${SPOOL_DIR}/requested
 	@${CHOWN} -R news:news ${SPOOL_DIR}
-
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
 .endif
