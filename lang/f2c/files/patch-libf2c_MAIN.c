@@ -1,7 +1,7 @@
 --- libf2c/MAIN.c.orig	Sun Jul 30 15:06:49 2006
 +++ libf2c/MAIN.c	Sun Jul 30 15:12:02 2006
 @@ -0,0 +1,18 @@
-+/* $FreeBSD: ports/lang/f2c/files/patch-libf2c_MAIN.c,v 1.2 2012/11/17 05:58:49 svnexp Exp $
++/* $FreeBSD: lang/f2c/files/patch-libf2c_MAIN.c 300896 2012-07-14 13:54:48Z beat $
 +   Add a pseudo entry point for cases where the main FOTRAN program is missing
 +   e.g. ports/cad/tochnog.
 +
