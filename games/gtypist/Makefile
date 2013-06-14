@@ -1,7 +1,7 @@
-# $FreeBSD: games/gtypist/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: games/gtypist/Makefile 320490 2013-06-10 15:46:30Z naddy $
 
 PORTNAME=	gtypist
-PORTVERSION=	2.9.2
+PORTVERSION=	2.9.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -9,6 +9,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Interactive typing tutor
 
+USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	EMACS=no
 CPPFLAGS=	-I${WRKDIR}/include
