@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/libvpx/files/patch-build_make_configure.sh,v 1.2 2012/11/17 05:59:50 svnexp Exp $
+$FreeBSD: multimedia/libvpx/files/patch-build_make_configure.sh 300896 2012-07-14 13:54:48Z beat $
 
 --- build/make/configure.sh.orig
 +++ build/make/configure.sh

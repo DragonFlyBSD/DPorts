@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/libvpx/files/patch-libs.mk,v 1.2 2012/11/17 05:59:50 svnexp Exp $
+$FreeBSD: multimedia/libvpx/files/patch-libs.mk 300896 2012-07-14 13:54:48Z beat $
 
 --- libs.mk.orig
 +++ libs.mk

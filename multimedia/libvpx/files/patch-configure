@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/libvpx/files/patch-configure,v 1.5 2012/11/17 05:59:50 svnexp Exp $
+$FreeBSD: multimedia/libvpx/files/patch-configure 300896 2012-07-14 13:54:48Z beat $
 
 --- configure.orig
 +++ configure
