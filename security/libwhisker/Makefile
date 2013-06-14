@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	libwhisker
-# Date created: 			20 September 2002
-# Whom: 				pandzilla
-#
-# $FreeBSD: ports/security/libwhisker/Makefile,v 1.13 2012/11/17 06:01:07 svnexp Exp $
-#
+# Created by: pandzilla
+# $FreeBSD: security/libwhisker/Makefile 320718 2013-06-12 19:20:40Z az $
 
 PORTNAME=	libwhisker
 PORTVERSION=	2.5
@@ -22,7 +18,7 @@ USE_PERL5=	yes
 PLIST_FILES=	${SITE_PERL_REL}/LW2.pm
 
 MAN3=		LW2.3pm
-MANPREFIX=	${LOCALBASE}/lib/perl5/${PERL_VERSION}/perl/
+MANPREFIX=	${LOCALBASE}/lib/perl5/${PERL_VER}/perl/
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	*
