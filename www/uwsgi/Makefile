@@ -1,8 +1,8 @@
 # Created by: Daniel Gerzo <danger@FreeBSD.org>
-# $FreeBSD: www/uwsgi/Makefile 318965 2013-05-24 13:27:10Z demon $
+# $FreeBSD: www/uwsgi/Makefile 320000 2013-06-05 15:15:27Z demon $
 
 PORTNAME=	uwsgi
-PORTVERSION=	1.9.10
+PORTVERSION=	1.9.12
 CATEGORIES=	www python
 MASTER_SITES=	http://projects.unbit.it/downloads/
 
@@ -14,9 +14,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 MAKE_JOBS_SAFE=	yes
 
-USE_GNOME=	libxml2
 USE_PYTHON=	yes
 USE_RC_SUBR=	uwsgi
+
+PLIST_FILES=	bin/uwsgi \
+		%%PYTHON_SITELIBDIR%%/uwsgidecorators.py
 
 post-patch:
 	${REINPLACE_CMD} -e 's|python|${PYTHON_CMD}|' ${WRKSRC}/Makefile
