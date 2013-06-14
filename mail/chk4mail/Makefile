@@ -1,12 +1,7 @@
-# New ports collection makefile for:	chk4mail
-# Date created:				18 October 2002
-# Whom:					johans
-#
-# $FreeBSD: ports/mail/chk4mail/Makefile,v 1.17 2012/11/17 18:26:12 svnexp Exp $
-#
+# $FreeBSD: mail/chk4mail/Makefile 320835 2013-06-13 19:56:33Z johans $
 
 PORTNAME=	chk4mail
-PORTVERSION=	2.26
+PORTVERSION=	2.27
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/johans/chk4mail/ \
 		ftp://mud.stack.nl/pub/chk4mail/
