@@ -1,15 +1,17 @@
 # Created by: snowchyld
-# $FreeBSD: mail/libspf2/Makefile 316592 2013-04-26 09:19:34Z sunpoet $
+# $FreeBSD: mail/libspf2/Makefile 320828 2013-06-13 18:54:38Z sunpoet $
 
 PORTNAME=	libspf2
-PORTVERSION=	1.2.9
-PORTREVISION=	2
+PORTVERSION=	1.2.10
 CATEGORIES=	mail
 MASTER_SITES=	http://www.libspf2.org/spf/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sender Rewriting Scheme 2 C Implementation
+
+LICENSE=	BSD LGPL21 LGPL3
+LICENSE_COMB=	dual
 
 CONFLICTS=	${PORTNAME}-1.0.* p5-Mail-SPF-[0-9]* p5-Mail-SPF-Query-[0-9]*
 
