@@ -1,8 +1,8 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/krb5/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: security/krb5/Makefile 319823 2013-06-04 04:45:22Z cy $
 
 PORTNAME=		krb5
-PORTVERSION=		1.11.2
+PORTVERSION=		1.11.3
 CATEGORIES=		security
 MASTER_SITES=		http://web.mit.edu/kerberos/dist/${PORTNAME}/${PORTVERSION:C/^[0-9]*\.[0-9]*/&X/:C/X\.[0-9]*$//:C/X//}/
 DISTNAME=		${PORTNAME}-${PORTVERSION}-signed
