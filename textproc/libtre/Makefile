@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/libtre/Makefile 316884 2013-04-30 07:11:19Z jgh $
+# $FreeBSD: textproc/libtre/Makefile 319665 2013-06-02 14:42:23Z danfe $
 
 PORTNAME=	libtre
 PORTVERSION=	0.8.0
@@ -25,7 +25,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	NLS OPTIMIZED_CFLAGS PGO DOCS
-PGO_DESC=	Enable Profile-Guided Optimization
 
 MAN1=	tre_agrep.1
 
