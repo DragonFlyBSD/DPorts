@@ -1,9 +1,8 @@
-# $FreeBSD: ports/devel/libshhopt/files/Makefile,v 1.4 2012/11/17 05:55:56 svnexp Exp $
+# $FreeBSD: devel/libshhopt/files/Makefile 319443 2013-05-30 18:09:52Z antoine $
 
 PREFIX	= /usr/local
 LIBDIR	= $(PREFIX)/lib
 INCSDIR	= $(PREFIX)/include
-INCDIR	= $(INCSDIR)		# for 4.x bsd.lib.mk
 
 example:
 	$(CC) -o example example.c -I$(INCDIR) -L$(LIBDIR) -lshhopt
