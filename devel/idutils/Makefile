@@ -1,5 +1,5 @@
 # Created by: pst@freebsd.org
-# $FreeBSD: devel/idutils/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: devel/idutils/Makefile 320592 2013-06-11 14:54:05Z miwi $
 
 PORTNAME=	idutils
 PORTVERSION=	4.6
@@ -11,6 +11,7 @@ COMMENT=	The classic Berkeley gid/lid tools for looking up variables in code
 
 CONFLICTS=	coreutils-[0-9]* linux-gid-[0-9]* sh-utils-[0-9]*
 
+USES+=		charsetfix
 LICENSE=	GPLv3
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
