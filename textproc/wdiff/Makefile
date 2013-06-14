@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@yy.cs.keio.ac.jp>
-# $FreeBSD: textproc/wdiff/Makefile 317494 2013-05-06 09:26:23Z bapt $
+# $FreeBSD: textproc/wdiff/Makefile 320688 2013-06-12 13:36:54Z miwi $
 
 PORTNAME=	wdiff
 PORTVERSION=	1.2.1
@@ -13,6 +13,7 @@ LICENSE=	GPLv3
 
 GNU_CONFIGURE=	yes
 
+USES=		charsetfix
 MAN1=		wdiff.1
 INFO=		wdiff
 
@@ -25,10 +26,6 @@ PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
-
-post-patch:	.SILENT
-	${REINPLACE_CMD} '/^install-exec-local:/s/install-exec-localcharset//' \
-		${WRKSRC}/lib/Makefile.in
 .endif
 
 .include <bsd.port.mk>
