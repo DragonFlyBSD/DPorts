@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: mail/mailfront/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/mailfront/Makefile 318542 2013-05-19 16:39:01Z rene $
 
 PORTNAME=	mailfront
 PORTVERSION=	1.21
@@ -13,6 +13,8 @@ COMMENT=	Mail server network protocol front-ends
 LIB_DEPENDS=	cvm-v2client:${PORTSDIR}/security/cvm
 
 OPTIONS_DEFINE=	LUA
+
+OPTIONS_DEFAULT=	LUA
 
 USES=		qmail:vars
 
