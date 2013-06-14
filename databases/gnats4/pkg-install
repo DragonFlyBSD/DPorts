@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/databases/gnats4/pkg-install,v 1.3 2012/11/17 05:55:08 svnexp Exp $
+# $FreeBSD: databases/gnats4/pkg-install 300896 2012-07-14 13:54:48Z beat $
 #
 
 ECHO_CMD=echo

@@ -2,7 +2,7 @@
 # Date created:				22 Aug 2003
 # Whom:					Oliver Eikemeier <eikemeier@fillmore-labs.com>
 #
-# $FreeBSD: ports/databases/gnats4/Makefile,v 1.14 2012/11/17 05:55:08 svnexp Exp $
+# $FreeBSD: databases/gnats4/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=		gnats
