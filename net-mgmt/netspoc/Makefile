@@ -3,7 +3,7 @@
 # Date created:			Nov 3, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/net-mgmt/netspoc/Makefile,v 1.13 2012/11/17 06:00:34 svnexp Exp $
+# $FreeBSD: net-mgmt/netspoc/Makefile 320099 2013-06-06 14:04:06Z mat $
 #
 
 PORTNAME=	netspoc
@@ -18,7 +18,6 @@ COMMENT=	A Network Security Policy Compiler
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_PERL5=	yes
 PERL_CONFIGURE=	yes
 
 MAN1=		netspoc.1 print-group.1
