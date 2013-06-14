@@ -1,4 +1,4 @@
-@comment $FreeBSD: comms/scmxx/pkg-plist 300895 2012-07-14 12:56:14Z beat $
+@comment $FreeBSD: comms/scmxx/pkg-plist 320690 2013-06-12 13:39:48Z miwi $
 bin/adr2vcf
 bin/apoconv
 bin/scmxx
@@ -24,3 +24,5 @@ share/locale/ru/LC_MESSAGES/scmxx.mo
 @dirrmtry man/de/
 @dirrmtry man/ru/man1
 @dirrmtry man/ru/
+@dirrmtry man/it/man1
+@dirrmtry man/it
