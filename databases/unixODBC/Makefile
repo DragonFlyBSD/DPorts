@@ -2,7 +2,7 @@
 # Date created:         May 11, 2000
 # Whom:                 Nick Sayer <nsayer@FreeBSD.org>
 #
-# $FreeBSD: databases/unixODBC/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: databases/unixODBC/Makefile 320321 2013-06-09 09:29:45Z fjoe $
 #
 
 PORTNAME=	unixODBC
@@ -13,7 +13,7 @@ MASTER_SITES=	http://www.unixodbc.org/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ODBC library suite for Unix
 
-CONFLICTS=	libiodbc-[0-9]* virtuoso-*
+CONFLICTS=	libiodbc-[0-9]*
 
 USES=		iconv
 GNU_CONFIGURE=	yes
