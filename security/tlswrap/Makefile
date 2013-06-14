@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tlswrap
-# Date created:		25 July 2005
-# Whom:			Daniel O'Connor <darius@dons.net.au>
-#
-# $FreeBSD: ports/security/tlswrap/Makefile,v 1.11 2012/11/17 06:01:21 svnexp Exp $
-#
+# Created by: Daniel O'Connor <darius@dons.net.au>
+# $FreeBSD: security/tlswrap/Makefile 320746 2013-06-13 09:52:06Z johans $
 
 PORTNAME=	tlswrap
 PORTVERSION=	1.0.4
@@ -24,6 +20,8 @@ PORTDOCS=	README
 post-patch:
 	@${REINPLACE_CMD} -E 's,^(CC|CFLAGS|LDFLAGS).*=,\1?=,g' \
 		${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -E 's,pipe([12]),pipe0\1,g' \
+		${WRKSRC}/misc.[ch] ${WRKSRC}/network.c ${WRKSRC}/tlswrap.c
 
 post-install:
 .if !defined(NOPORTDOCS)
