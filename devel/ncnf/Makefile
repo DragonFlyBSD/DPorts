@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/ncnf/Makefile 317355 2013-05-04 21:27:35Z bapt $
+# $FreeBSD: devel/ncnf/Makefile 317823 2013-05-10 15:56:09Z bapt $
 
 PORTNAME=	ncnf
 PORTVERSION=	3.0.1
@@ -23,7 +23,7 @@ USE_GMAKE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
-.if ${PORT_OPTIONS:MDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/doc//' ${WRKSRC}/Makefile.in
 .endif
 
