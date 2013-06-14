@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXres/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libXres/Makefile 319899 2013-06-04 19:31:29Z zeising $
 
 PORTNAME=	libXres
-PORTVERSION=	1.0.6
+PORTVERSION=	1.0.7
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
