@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: security/openvpn20/Makefile 319579 2013-06-01 16:47:41Z mandree $
+# $FreeBSD: security/openvpn20/Makefile 319805 2013-06-03 20:14:07Z mandree $
 
 PORTNAME=	openvpn
 PORTVERSION=	2.0.9
@@ -11,6 +11,8 @@ MASTER_SITES=	http://openvpn.net/release/
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Secure IP/Ethernet tunnel daemon
+
+LICENSE=	GPLv2
 
 DEPRECATED=		Please migrate to a newer OpenVPN version
 EXPIRATION_DATE=	2013-07-11
