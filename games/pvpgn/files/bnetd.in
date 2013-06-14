@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/games/pvpgn/files/bnetd.in,v 1.2 2012/11/17 05:57:49 svnexp Exp $
+# $FreeBSD: games/pvpgn/files/bnetd.in 302141 2012-08-05 23:19:36Z dougb $
 #
 
 # PROVIDE: bnetd
