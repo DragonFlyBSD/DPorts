@@ -1,9 +1,5 @@
-# Ports collection makefile for:	p5-GPS-OID
-# Date created:				June 3, 2010
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/astro/p5-GPS-OID/Makefile,v 1.2 2012/11/17 05:54:25 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: astro/p5-GPS-OID/Makefile 319570 2013-06-01 14:22:35Z wen $
 
 PORTNAME=	GPS-OID
 PORTVERSION=	0.07
