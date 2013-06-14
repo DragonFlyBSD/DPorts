@@ -1,8 +1,5 @@
-# New ports collection makefile for:	cpm(1)
-# Date created:		25 December 1994
-# Whom:			joerg
-#
-# $FreeBSD: ports/emulators/cpmtools/Makefile,v 1.23 2012/11/17 05:57:20 svnexp Exp $
+# Created by: joerg
+# $FreeBSD: emulators/cpmtools/Makefile 320434 2013-06-10 06:06:03Z joerg $
 #
 
 PORTNAME=	cpmtools
@@ -17,6 +14,8 @@ COMMENT=	Utility to transfer files from/to CP/M (R) diskettes
 
 WRKSRC=		${WRKDIR}/cpm
 MAN1=		cpm.1
+
+USE_GCC=	any
 
 #
 # need our own build target to pass PREFIX down to the make command
