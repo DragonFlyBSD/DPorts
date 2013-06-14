@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libmcal
-# Date created:		Sat Oct 13 08:45:04 GMT 2001
-# Whom:			thierry@thomas.as
-#
-# $FreeBSD: ports/misc/libmcal/Makefile,v 1.19 2012/11/17 05:59:41 svnexp Exp $
-#
+# Created by: thierry@thomas.as
+# $FreeBSD: misc/libmcal/Makefile 318984 2013-05-24 15:52:20Z thierry $
 
 PORTNAME=	libmcal
 PORTVERSION=	0.7
@@ -15,12 +11,16 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} mcaldrivers-0.9.tar.gz
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Modular Calendar Access Library
 
+DEPRECATED=	No more used and development discontinued
+EXPIRATION_DATE=2013-12-31
+
 USE_AUTOTOOLS=	libltdl
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--with-mstore --with-icap \
 		--prefix=${PREFIX} --exec-prefix=${PREFIX}
 USE_LDCONFIG=	yes
+USES=		bison
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 WRKSRCDRV=	${WRKDIR}/mcal-drivers
