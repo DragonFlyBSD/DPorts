@@ -1,9 +1,8 @@
 # Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: audio/py-musicbrainzngs/Makefile 318558 2013-05-20 01:00:10Z swills $
+# $FreeBSD: audio/py-musicbrainzngs/Makefile 320431 2013-06-10 02:32:04Z swills $
 
 PORTNAME=	musicbrainzngs
-PORTVERSION=	0.3
-PORTREVISION=	1
+PORTVERSION=	0.4
 CATEGORIES=	audio python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
