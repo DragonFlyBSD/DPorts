@@ -1,9 +1,5 @@
-# New ports collection makefile for:	enma
-# Date created:				7 Sep 2008
-# Whom:					Hirohisa Yamaguchi <umq@ueo.co.jp>
-#
-# $FreeBSD: ports/mail/enma/Makefile,v 1.12 2012/11/17 05:59:01 svnexp Exp $
-#
+# Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
+# $FreeBSD: mail/enma/Makefile 319871 2013-06-04 15:47:06Z bapt $
 
 PORTNAME=	enma
 PORTVERSION=	1.2.0
@@ -12,12 +8,13 @@ CATEGORIES=	mail
 MASTER_SITES=	SF/${PORTNAME}/ENMA/${PORTVERSION}
 
 MAINTAINER=	umq@ueo.co.jp
-COMMENT=	A sender authentication milter supporting SPF and Sender ID
+COMMENT=	Sender authentication milter supporting SPF and Sender ID
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-OPTIONS=	LIBBIND	"Link against dns/libbind instead of dns/ldns"	Off
+OPTIONS_DEFINE=	LIBBIND
+LIBBIND_DESC=	Link against dns/libbind instead of dns/ldns
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/man \
@@ -47,7 +44,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/postfix/smtpd:${PORTSDIR}/mail/postfix
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/mail/sendmail/bsd.milter.mk"
 
-.if defined(WITH_LIBBIND)
+.if ${PORT_OPTIONS:MLIBBIND}
 CONFIGURE_ARGS+=	--with-resolver=libbind \
 			--with-libbind-incdir=${LOCALBASE}/include/bind \
 			--with-libbind-libdir=${LOCALBASE}/lib
@@ -62,7 +59,7 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/enma/etc/enma.conf.sample ${PREFIX}/etc
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
