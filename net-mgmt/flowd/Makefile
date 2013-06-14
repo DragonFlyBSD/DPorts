@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: ports/net-mgmt/flowd/Makefile,v 1.21 2013/01/09 20:05:03 svnexp Exp $
+# $FreeBSD: net-mgmt/flowd/Makefile 320709 2013-06-12 17:45:02Z az $
 
 PORTNAME=	flowd
 PORTVERSION=	0.9.1
@@ -64,7 +64,7 @@ post-install:
 	${PERL} Makefile.PL INSTALLSITEMAN3DIR=${MAN3PREFIX}/man/man3 PREFIX=${PREFIX} && \
 	${GMAKE} && \
 	${GMAKE} install;
-	-@${RM} -f ${PREFIX}/lib/perl5/${PERL_VERSION}/${PERL_ARCH}/perllocal.pod
+	-@${RM} -f ${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH}/perllocal.pod
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}

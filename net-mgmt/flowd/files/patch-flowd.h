@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-mgmt/flowd/files/patch-flowd.h,v 1.2 2012/11/17 06:00:32 svnexp Exp $
+$FreeBSD: net-mgmt/flowd/files/patch-flowd.h 300897 2012-07-14 14:29:18Z beat $
 
 --- flowd.h.orig
 +++ flowd.h

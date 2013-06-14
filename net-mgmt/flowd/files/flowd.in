@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-mgmt/flowd/files/flowd.in,v 1.5 2012/11/17 06:00:32 svnexp Exp $
+# $FreeBSD: net-mgmt/flowd/files/flowd.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: flowd
 # REQUIRE: DAEMON
