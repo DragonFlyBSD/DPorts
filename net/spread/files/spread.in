@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/spread/files/spread.in,v 1.2 2012/11/17 06:00:21 svnexp Exp $
+# $FreeBSD: net/spread/files/spread.in 301241 2012-07-20 20:32:20Z ohauer $
 #
 
 # PROVIDE: spread

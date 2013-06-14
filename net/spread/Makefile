@@ -2,7 +2,7 @@
 # Date created:		11 June 2001
 # Whom:			Anders Nordby <anders@fix.no>
 #
-# $FreeBSD: ports/net/spread/Makefile,v 1.30 2012/11/17 06:00:21 svnexp Exp $
+# $FreeBSD: net/spread/Makefile 320709 2013-06-12 17:45:02Z az $
 #
 
 PORTNAME=	spread
@@ -49,7 +49,7 @@ MAN3=		libsp.3 SP_connect.3 SP_disconnect.3 SP_equal_group_ids.3 \
 PERL_CONFIGURE_ARGS=	CC="${CC}" CCFLAGS="${CFLAGS}" PREFIX="${PREFIX}" \
 			INSTALLPRIVLIB="${PREFIX}/lib" INSTALLARCHLIB="${PREFIX}/lib"
 
-_MANPAGES+=	${PREFIX}/lib/perl5/${PERL_VERSION}/man/man3/Spread.3
+_MANPAGES+=	${PREFIX}/lib/perl5/${PERL_VER}/man/man3/Spread.3
 
 post-configure:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
