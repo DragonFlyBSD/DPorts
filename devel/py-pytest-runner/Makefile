@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-pytest-runner/Makefile 318257 2013-05-15 19:33:14Z wg $
+# $FreeBSD: devel/py-pytest-runner/Makefile 320793 2013-06-13 12:25:51Z wg $
 
 PORTNAME=	pytest-runner
-PORTVERSION=	1.2
+PORTVERSION=	2.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
