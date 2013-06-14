@@ -1,5 +1,5 @@
 # Created by: Serge Gagnon <ser_gagnon@sympatico.ca>
-# $FreeBSD: ports/textproc/en-aspell/Makefile,v 1.7 2012/11/17 06:01:55 svnexp Exp $
+# $FreeBSD: textproc/en-aspell/Makefile 304800 2012-09-24 21:23:51Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-en-7.1-0
