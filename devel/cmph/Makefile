@@ -1,13 +1,13 @@
 # New ports collection makefile for: cmph
 # Date created: 30 Jul 2010
 # Whom:                 Jesse Kempf (jessekempf@gmail.com)
-# $FreeBSD: devel/cmph/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/cmph/Makefile 317922 2013-05-11 22:23:52Z rakuco $
 #
 
 PORTNAME=	cmph
 PORTVERSION=	2.0
 CATEGORIES=	devel
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
 MAINTAINER=	jessekempf@gmail.com
 COMMENT=	Minimal perfect hashes for C
