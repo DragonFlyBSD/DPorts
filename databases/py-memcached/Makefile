@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: databases/py-memcached/Makefile 317683 2013-05-08 15:38:22Z sunpoet $
+# $FreeBSD: databases/py-memcached/Makefile 320315 2013-06-09 07:11:07Z sunpoet $
 
 PORTNAME=	memcached
-PORTVERSION=	1.51
+PORTVERSION=	1.53
 CATEGORIES=	databases python
 MASTER_SITES=	http://ftp.tummy.com/pub/python-memcached/ \
 		http://ftp.tummy.com/pub/python-memcached/old-releases/ \
