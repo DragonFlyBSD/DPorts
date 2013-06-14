@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/converters/drg2sbg/Makefile,v 1.6 2012/11/28 00:12:48 svnexp Exp $
+# $FreeBSD: converters/drg2sbg/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
 
 PORTNAME=	drg2sbg
 PORTVERSION=	2.2
@@ -12,6 +12,7 @@ COMMENT=	Convert propiatary .drg file format into SBaGen format
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	yes
 
 MAN1=		drgbuilder.1 drg2sbg.1
 PLIST_FILES=	bin/drg2sbg bin/drgbuilder
