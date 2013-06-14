@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fontcacheproto
-# Date Created:				08 Aug 2005
-# Whom:					Dejan Lesjak <lesi@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/fontcacheproto/Makefile,v 1.3 2012/11/17 06:03:28 svnexp Exp $
-#
+# Created by: Dejan Lesjak <lesi@FreeBSD.org>
+# $FreeBSD: x11-fonts/fontcacheproto/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	fontcacheproto
 PORTVERSION=	0.1.3
