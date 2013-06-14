@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection Makefile for:	rot
-# Date created:			Sep 21, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/rot/Makefile,v 1.10 2012/11/17 06:02:19 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/rot/Makefile 320789 2013-06-13 11:58:57Z bsam $
 
 PORTNAME=	rot
 PORTVERSION=	1.2
@@ -17,9 +12,13 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Rotates a file so that lines become columns and vice versa
 
 ALL_TARGET=	${PORTNAME}
+CFLAGS+=	-Wno-return-type
 
 MAN1=		rot.1
 PLIST_FILES=	bin/rot
+
+post-patch:
+	@${REINPLACE_CMD} "s:^CFLAGS=:#CFLAGS=:" ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rot ${PREFIX}/bin
