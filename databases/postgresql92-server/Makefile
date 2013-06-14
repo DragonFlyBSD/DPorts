@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql92-server/Makefile 317540 2013-05-06 18:37:00Z crees $
+# $FreeBSD: databases/postgresql92-server/Makefile 317978 2013-05-12 21:09:38Z girgen $
 
 PORTNAME?=	postgresql
 DISTVERSION?=	9.2.4
@@ -181,7 +181,7 @@ CONFIGURE_ARGS+=--disable-integer-datetimes
 .  if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=--enable-nls
 PLIST_SUB+=	GETTEXT=""
-USES=	gettext
+USES+=	gettext
 .  else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	GETTEXT="@comment "
