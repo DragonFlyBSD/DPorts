@@ -1,5 +1,5 @@
-# Created by: ache
-# $FreeBSD: sysutils/less/Makefile 317890 2013-05-11 15:37:56Z wen $
+# Created by: Andrey A. Chernov <ache@FreeBSD.org>
+# $FreeBSD: sysutils/less/Makefile 320422 2013-06-10 00:48:32Z danfe $
 
 PORTNAME=	less
 PORTVERSION=	458
@@ -9,21 +9,21 @@ MASTER_SITES=	http://www.greenwoodsoftware.com/%SUBDIR%/ \
 MASTER_SITE_SUBDIR=	less
 
 MAINTAINER=	jharris@widomaker.com
-COMMENT=	A better pager utility
+COMMENT=	Better pager utility
 
 LICENSE=	GPLv3
 
-OPTIONS_DEFINE=	COLOR_LESS
-COLOR_LESS_DESC=Enables color support via escape sequence
+GNU_CONFIGURE=	yes
 
+MAN1=		less.1 lesskey.1 lessecho.1
 PLIST_FILES=	bin/less bin/lesskey bin/lessecho
+
+OPTIONS_DEFINE=	COLORS
+COLORS_DESC=	Enable colors support via escape sequence
 
 .include <bsd.port.options.mk>
 
-GNU_CONFIGURE=	yes
-MAN1=		less.1 lesskey.1 lessecho.1
-
-.if ${PORT_OPTIONS:MCOLOUR_LESS}
+.if ${PORT_OPTIONS:MCOLORS}
 CPPFLAGS+=	-DCOLOR_LESS
 
 pre-fetch:
