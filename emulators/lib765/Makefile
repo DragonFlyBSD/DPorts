@@ -1,12 +1,12 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: emulators/lib765/Makefile 315209 2013-03-25 10:09:39Z rene $
+# $FreeBSD: emulators/lib765/Makefile 319793 2013-06-03 16:37:29Z rene $
 
 PORTNAME=	lib765
 PORTVERSION=	0.4.2
 CATEGORIES=	emulators devel
 MASTER_SITES=	http://www.seasip.demon.co.uk/Unix/LibDsk/
 
-MAINTAINER=	rene@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Emulation of uPD765a Floppy Disc Controller
 
 LICENSE=	LGPL20
