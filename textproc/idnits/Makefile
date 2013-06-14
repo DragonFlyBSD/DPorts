@@ -1,8 +1,8 @@
 # Created by: fenner@FreeBSD.Org
-# $FreeBSD: textproc/idnits/Makefile 315840 2013-04-16 16:15:12Z sunpoet $
+# $FreeBSD: textproc/idnits/Makefile 320290 2013-06-08 21:07:31Z sunpoet $
 
 PORTNAME=	idnits
-PORTVERSION=	2.12.16
+PORTVERSION=	2.12.17
 CATEGORIES=	textproc
 MASTER_SITES=	http://tools.ietf.org/tools/idnits/ \
 		LOCAL/sunpoet
@@ -10,6 +10,9 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Looks for problems in internet draft formatting
+
+LICENSE=	GPLv2 GPLv3
+LICENSE_COMB=	dual
 
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
