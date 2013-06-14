@@ -2,7 +2,7 @@
 # Date created:		21 Feb 2005
 # Whom:			Rodrigo Graeff <delphus@gmail.com>
 #
-# $FreeBSD: ports/devel/libytnef/Makefile,v 1.10 2012/11/17 05:55:57 svnexp Exp $
+# $FreeBSD: devel/libytnef/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	libytnef
