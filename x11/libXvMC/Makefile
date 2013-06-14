@@ -1,8 +1,9 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXvMC/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libXvMC/Makefile 319899 2013-06-04 19:31:29Z zeising $
 
 PORTNAME=	libXvMC
 PORTVERSION=	1.0.7
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
