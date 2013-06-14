@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SDL
-# Date created:				1 April 2000
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: devel/sdl12/Makefile 316654 2013-04-27 08:50:46Z mva $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: devel/sdl12/Makefile 320086 2013-06-06 12:42:59Z mva $
 
 PORTNAME=	sdl
 PORTVERSION=	1.2.15
@@ -26,7 +22,7 @@ WANT_GNOME=	yes
 USES=		pathfix pkgconfig iconv
 CONFIGURE_ENV=	ac_cv_header_libusbhid_h=no
 
-CFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 CONFIGURE_ARGS+=--disable-alsa --disable-alsatest
@@ -35,7 +31,8 @@ CONFIGURE_ARGS+=--disable-video-directfb
 EXAMPLES=	test/*.c test/*.bmp test/*.dat test/*.xbm test/*.wav
 DOCS=		BUGS COPYING CREDITS README README-SDL.txt WhatsNew docs.html
 
-OPTIONS_DEFINE=		AALIB ARTS ESOUND GGI NAS OPENGL OSS PULSEAUDIO SVGALIB X11
+OPTIONS_DEFINE=		AALIB ARTS DOCS ESOUND EXAMPLES GGI NAS OPENGL OSS \
+			PULSEAUDIO SVGALIB X11
 OPTIONS_DEFAULT=	AALIB OPENGL OSS X11
 
 .if exists(/usr/lib/libvgl.so)
@@ -125,13 +122,13 @@ CONFIGURE_ARGS+=	--disable-video-x11
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR} &&\
 		${INSTALL_DATA} ${DOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/ &&\
 	cd ${WRKSRC} &&\
 		${COPYTREE_SHARE} docs ${DOCSDIR}/ "! -regex .*/man3.*"
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR} &&\
 		${INSTALL_DATA} ${EXAMPLES:S,^,${WRKSRC}/,} ${EXAMPLESDIR}/
 .endif
