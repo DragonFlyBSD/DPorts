@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/libp11/Makefile 317207 2013-05-03 13:45:41Z bapt $
+# $FreeBSD: security/libp11/Makefile 320331 2013-06-09 13:01:20Z miwi $
 #
 
 PORTNAME=	libp11
@@ -18,10 +18,6 @@ USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	pkgconfig ltverhack
 USE_LDCONFIG=	yes
-
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 CONFIGURE_ENV=	LTLIB_CFLAGS="-I${LOCALBASE}/include" \
 		LTLIB_LIBS="-L${LOCALBASE}/lib -lltdl" \
