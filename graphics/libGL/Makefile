@@ -1,15 +1,15 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: graphics/libGL/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: graphics/libGL/Makefile 319899 2013-06-04 19:31:29Z zeising $
 
 PORTNAME=	libGL
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL library that renders using GLX or DRI
 
 LIB_DEPENDS+=	drm:${PORTSDIR}/graphics/libdrm \
-		expat.6:${PORTSDIR}/textproc/expat2
+		expat:${PORTSDIR}/textproc/expat2
 
 USES=		pkgconfig
 USE_XORG=	glproto x11 xext xxf86vm xdamage xfixes dri2proto:both
