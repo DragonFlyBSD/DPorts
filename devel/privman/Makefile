@@ -1,9 +1,5 @@
-# New ports collection makefile for:  		privman
-# Date created:        				14.06.2003
-# Whom:               				Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/devel/privman/Makefile,v 1.24 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: devel/privman/Makefile 318628 2013-05-20 21:39:01Z bdrewery $
 
 PORTNAME=	privman
 PORTVERSION=	0.9.3
@@ -11,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	devel security
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	Library that makes it easy for programs to use privilege separation
 
 LICENSE=	BSD
