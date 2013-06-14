@@ -1,7 +1,7 @@
-# $FreeBSD: ports-mgmt/pchecker/Makefile 316043 2013-04-18 14:29:11Z ak $
+# $FreeBSD: ports-mgmt/pchecker/Makefile 319779 2013-06-03 14:01:23Z ak $
 
 PORTNAME=	pchecker
-PORTVERSION=	1.13
+PORTVERSION=	1.14
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PROJECTHOST=	ak-various-projects
