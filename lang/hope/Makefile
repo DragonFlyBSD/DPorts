@@ -2,7 +2,7 @@
 # Date created:				24 September 2001
 # Whom:					Lev Serebryakov <lev@serebryakov.spb.ru>
 #
-# $FreeBSD: lang/hope/Makefile 317455 2013-05-06 02:00:40Z hrs $
+# $FreeBSD: lang/hope/Makefile 317899 2013-05-11 17:58:55Z hrs $
 #
 
 PORTNAME=	hope
@@ -15,7 +15,7 @@ MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Hope is lazy interpreter for HOPE applicative language
 
 .if defined(WITH_DOCS)
-USE_TEX=	tetex
+USE_TEX=	latex:build
 BUILD_DEPENDS+= latex2html:${PORTSDIR}/textproc/latex2html
 MAKE_ARGS+=	WITH_DOCS=yes
 .else
