@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: ports/games/doom-data/Makefile,v 1.15 2013/01/29 23:44:09 svnexp Exp $
+# $FreeBSD: games/doom-data/Makefile 311191 2013-01-29 23:00:02Z jgh $
 
 PORTNAME=	data
 PORTVERSION=	1.0
