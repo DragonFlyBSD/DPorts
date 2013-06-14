@@ -1,9 +1,5 @@
-# New ports collection makefile for:	prips
-# Date created:		29 October 1999
-# Whom:			Jeremy Shaffner <jeremy@external.org>
-#
-# $FreeBSD: ports/sysutils/prips/Makefile,v 1.19 2012/11/17 06:01:42 svnexp Exp $
-#
+# Created by: Jeremy Shaffner <jeremy@external.org>
+# $FreeBSD: sysutils/prips/Makefile 319275 2013-05-27 16:54:49Z bsam $
 
 PORTNAME=	prips
 PORTVERSION=	0.9.9
@@ -23,14 +19,16 @@ MANCOMPRESSED=	yes
 
 MAKE_ENV+=	CFLAGS_WARN="-Wall -W"
 
-.include <bsd.port.pre.mk>
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/prips ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/prips.1.gz ${PREFIX}/man/man1/
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
