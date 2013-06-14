@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/sdl_mixer/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/sdl_mixer/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	sdl_mixer
 PORTVERSION=	1.2.12
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_mixer/release/
 DISTNAME=	SDL_mixer-${PORTVERSION}
