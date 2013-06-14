@@ -3,7 +3,7 @@
 # Date created:         Sat Dec 7, 1996
 # Whom:                 David O'Brien (obrien@cs.ucdavis.edu)
 #
-# $FreeBSD: ports/vietnamese/vnpstext/Makefile,v 1.20 2012/11/17 06:02:26 svnexp Exp $
+# $FreeBSD: vietnamese/vnpstext/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	vnpstext
