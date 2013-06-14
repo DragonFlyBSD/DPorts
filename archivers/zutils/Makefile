@@ -1,19 +1,15 @@
-# New ports collection makefile for:	zutils
-# Date created:		2011-04-12
-# Whom:			Albert Vernon <f3cun3c02@sneakemail.com>
-#
-# $FreeBSD: ports/archivers/zutils/Makefile,v 1.3 2012/12/06 16:41:43 svnexp Exp $
-#
+# Created by: Albert Vernon <f3cun3c02@sneakemail.com>
+# $FreeBSD: archivers/zutils/Makefile 320675 2013-06-12 11:53:21Z wg $
 
 PORTNAME=	zutils
-PORTVERSION=	0.9
+PORTVERSION=	1.0
 CATEGORIES=	archivers
 MASTER_SITES=	SAVANNAH/zutils
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Utilities for searching in bzip2, gzip, lzip, and xz archives
 
-GNU_CONFIGURE=	yes
+LICENSE=	GPLv3
 
 PLIST_FILES=	bin/zcat \
 		bin/zcmp \
@@ -31,6 +27,10 @@ MAN1=		zcat.1 \
 		ztest.1
 INFO=		zutils
 
-LICENSE=	GPLv3
+GNU_CONFIGURE=	yes
+
+post-patch:
+	# Remove compiler hardcoded flags and use environment
+	${REINPLACE_CMD} '23,26d' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
