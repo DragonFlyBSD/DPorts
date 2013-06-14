@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: ports/misc/nut/Makefile,v 1.110 2013/01/23 15:05:36 svnexp Exp $
+# $FreeBSD: misc/nut/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	nut
 PORTVERSION=	18.4
@@ -35,9 +35,8 @@ LIB_DEPENDS+=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		freetype:${PORTSDIR}/print/freetype2 \
 		expat:${PORTSDIR}/textproc/expat2 \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		fltk_images:${PORTSDIR}/x11-toolkits/fltk \
-		xcb:${PORTSDIR}/x11/libxcb
-USE_XORG+=	x11 xau xdmcp xext xft xinerama xrender
+		fltk_images:${PORTSDIR}/x11-toolkits/fltk
+USE_XORG+=	x11 xau xcb xdmcp xext xft xinerama xrender
 MAKE_ENV+=	HAVE_FLTK=1 FLTK_NUT="fltk/Nut"
 PLIST_FILES+=	bin/Nut
 DESKTOP_ENTRIES="Nut" "${COMMENT}" "" "Nut" \
