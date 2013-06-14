@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-mgmt/pftabled/files/pftabled.in,v 1.5 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/pftabled/files/pftabled.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: pftabled
 # REQUIRE: NETWORKING SERVERS
