@@ -1,0 +1,18 @@
+# $FreeBSD: archivers/pixz/files/Makefile.in 320063 2013-06-06 09:19:57Z hrs $
+
+PROG=	pixz
+SRCS=	pixz.c common.c endian.c cpu.c read.c write.c list.c
+MAN=	${PROG}.1
+
+CPPFLAGS+=	-I${LOCALBASE}/include -DPIXZ_VERSION='"1.0.2"'
+CFLAGS+=	${CPPFLAGS} -std=gnu99
+LDADD=		${PTHREAD_LIBS} -lm -llzma -larchive -L${LOCALBASE}/lib \
+		-Wl,-rpath,${LOCALBASE}/lib
+
+PREFIX?=	/usr/local
+LOCALBASE?=	/usr/local
+BINDIR?=	${PREFIX}/bin
+MANDIR?=	${PREFIX}/man/man
+NO_MANCOMPRESS=
+
+.include <bsd.prog.mk>
