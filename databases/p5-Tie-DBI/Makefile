@@ -2,11 +2,11 @@
 # Date created:				Thu Mar  8 06:56:59 2001
 # Whom:					clive
 #
-# $FreeBSD: ports/databases/p5-Tie-DBI/Makefile,v 1.15 2012/11/17 05:55:17 svnexp Exp $
+# $FreeBSD: databases/p5-Tie-DBI/Makefile 319955 2013-06-05 07:47:56Z mat $
 #
 
 PORTNAME=	Tie-DBI
-PORTVERSION=	1.05
+PORTVERSION=	1.06
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
