@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/py-elib.intl/Makefile 316668 2013-04-27 15:17:50Z rm $
+# $FreeBSD: textproc/py-elib.intl/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	elib.intl
 PORTVERSION=	0.0.3
@@ -12,7 +12,7 @@ COMMENT=	Enhanced internationalization services for Python modules
 LICENSE=	LGPL3
 
 GH_ACCOUNT=	dieterv
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	d09997c
 USE_GITHUB=	yes
 
