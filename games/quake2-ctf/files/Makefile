@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/quake2-ctf/files/Makefile,v 1.3 2012/11/17 05:57:50 svnexp Exp $
+# $FreeBSD: games/quake2-ctf/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 SHLIB_NAME=	game.so
 
