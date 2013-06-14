@@ -1,25 +1,26 @@
 # Created by: Randall Hopper <aa8vb@nc.rr.com>
-# $FreeBSD: misc/gctpc/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/gctpc/Makefile 320351 2013-06-09 16:57:14Z miwi $
 
 PORTNAME=	gctpc
-PORTVERSION=	1.3
-PORTREVISION=	1
+PORTVERSION=	2.0
 CATEGORIES=	misc geography
 MASTER_SITES=	http://edcftp.cr.usgs.gov/pub/software/gctpc/
-DISTNAME=	gctpc
+DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	USGS General Cartographic Transformation Package (GCTP)
 
-WRKSRC=		${WRKDIR}/${PORTNAME}/source
+OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
+WRKSRC=		${WRKDIR}/${PORTNAME}/source
 
 USE_GMAKE=	yes
 ALL_TARGET=	libgctpc.so.1
-
 USE_LDCONFIG=	yes
+MAKE_JOBS_UNSAFE=	yes
+
+.include <bsd.port.options.mk>
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libgctpc.a ${PREFIX}/lib

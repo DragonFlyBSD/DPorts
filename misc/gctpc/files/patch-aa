@@ -1,5 +1,5 @@
 
-$FreeBSD: misc/gctpc/files/patch-aa 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: misc/gctpc/files/patch-aa 320351 2013-06-09 16:57:14Z miwi $
 
 --- Makefile.orig	Fri Feb 24 17:05:37 1995
 +++ Makefile	Thu May 31 15:33:40 2001
@@ -18,7 +18,7 @@ $FreeBSD: misc/gctpc/files/patch-aa 300896 2012-07-14 13:54:48Z beat $
  
  OBJECTS=		\
  		$(ARCHIVE)(alberfor.o) $(ARCHIVE)(alberinv.o) \
-@@ -56,8 +58,13 @@
+@@ -56,6 +58,11 @@
  	  cproj.c report.c lamccfor.c lamccinv.c paksz.c untfz.c sphdz.c \
  	  br_gctp.c Makefile cproj.h proj.h
  
@@ -28,8 +28,5 @@ $FreeBSD: misc/gctpc/files/patch-aa 300896 2012-07-14 13:54:48Z beat $
 +	rm -rf objs
 +
  $(ARCHIVE):	$(OBJECTS)
--		ranlib geolib.a
-+		ranlib libgctpc.a
  
  
- $(ARCHIVE)(gctp.o):	 	$(INCS)
