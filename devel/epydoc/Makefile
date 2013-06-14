@@ -1,12 +1,12 @@
 # Created by: ijliao
-# $FreeBSD: devel/epydoc/Makefile 315209 2013-03-25 10:09:39Z rene $
+# $FreeBSD: devel/epydoc/Makefile 319793 2013-06-03 16:37:29Z rene $
 
 PORTNAME=	epydoc
 PORTVERSION=	3.0.1
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
-MAINTAINER=	rene@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python API documentation generation tool
 
 LICENSE=	MIT
