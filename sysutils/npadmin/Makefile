@@ -1,9 +1,5 @@
-# New ports collection makefile for:	npadmin
-# Date created:		13 Nov 1998
-# Whom:			Dom Mitchell <dom@happygiraffe.net>
-#
-# $FreeBSD: sysutils/npadmin/Makefile 313088 2013-02-28 10:51:58Z gahr $
-#
+# Created by: Dom Mitchell <dom@happygiraffe.net>
+# $FreeBSD: sysutils/npadmin/Makefile 319255 2013-05-27 15:39:59Z bsam $
 
 PORTNAME=	npadmin
 PORTVERSION=	0.8.7
@@ -12,7 +8,7 @@ CATEGORIES=	sysutils print
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An SNMP based command line network printer management tool
+COMMENT=	SNMP based command line network printer management tool
 
 MAN1=		npadmin.1
 PLIST_FILES=	bin/npadmin
