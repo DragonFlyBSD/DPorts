@@ -1,4 +1,4 @@
-$FreeBSD: ports/databases/rdfdb/files/patch-makefile,v 1.4 2012/11/17 05:55:23 svnexp Exp $
+$FreeBSD: databases/rdfdb/files/patch-makefile 300896 2012-07-14 13:54:48Z beat $
 
 --- makefile.orig	Sun Aug 20 15:48:46 2000
 +++ makefile	Sat Jun  8 20:25:04 2002

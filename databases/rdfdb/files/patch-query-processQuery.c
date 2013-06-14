@@ -1,4 +1,4 @@
-$FreeBSD: ports/databases/rdfdb/files/patch-query-processQuery.c,v 1.2 2012/11/17 05:55:23 svnexp Exp $
+$FreeBSD: databases/rdfdb/files/patch-query-processQuery.c 300896 2012-07-14 13:54:48Z beat $
 
 --- query/processQuery.c.orig	Mon Sep 18 17:09:01 2000
 +++ query/processQuery.c	Thu Dec 27 21:18:54 2001
