@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: games/filters/Makefile 317591 2013-05-07 08:57:37Z ehaupt $
+# $FreeBSD: games/filters/Makefile 319262 2013-05-27 15:56:54Z bapt $
 
 PORTNAME=	filters
 PORTVERSION=	2.49
@@ -17,6 +17,7 @@ CONFLICTS=	talkfilters-[0-9]* jive-[0-9]* chef-[0-9]* kenny-[0-9]* \
 USES=		shebangfix
 USE_PERL5=	yes
 USE_GMAKE=	yes
+USE_GCC=	any
 MAKE_JOBS_UNSAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
