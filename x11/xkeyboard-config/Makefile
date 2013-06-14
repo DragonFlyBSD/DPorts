@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xkeyboard-config/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xkeyboard-config/Makefile 319910 2013-06-04 21:22:13Z zeising $
 
 PORTNAME=	xkeyboard-config
-PORTVERSION=	2.8
+PORTVERSION=	2.9
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -10,13 +10,12 @@ MASTER_SITE_SUBDIR=	individual/${XORG_CAT}/${PORTNAME}
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp \
-		xsltproc:${PORTSDIR}/textproc/libxslt
+BUILD_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp
 XORG_CAT=	data
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	intlhack
+USE_GNOME=	intlhack libxslt:build
 USES=		pathfix
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
@@ -31,13 +30,14 @@ MAN7=		xkeyboard-config.7
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MNLS}
+# !nls case doesn't work correctly, comment it out.
+#.if ${PORT_OPTIONS:MNLS}
 USES+=		gettext iconv
 PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
+#.else
+#CONFIGURE_ARGS+=--disable-nls
+#PLIST_SUB+=	NLS="@comment "
+#.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/bin/bash|/bin/sh|g' -e 's|==|=|g' \
