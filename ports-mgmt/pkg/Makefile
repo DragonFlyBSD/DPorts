@@ -1,8 +1,7 @@
-# $FreeBSD: ports-mgmt/pkg/Makefile 319432 2013-05-30 15:17:29Z bapt $
+# $FreeBSD: ports-mgmt/pkg/Makefile 320556 2013-06-11 13:01:56Z bdrewery $
 
 PORTNAME=	pkg
-DISTVERSION=	1.0.12
-PORTREVISION=	1
+DISTVERSION=	1.0.13
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	LOCAL/portmgr \
 		http://files.etoilebsd.net/pkg/ \
@@ -63,6 +62,7 @@ MLINKS=	pkg-delete.8 pkg-remove.8 \
 
 .if defined(WITH_PKGNG)
 .if ${WITH_PKGNG} == devel
+NO_LATEST_LINK=	yes
 IGNORE=	WITH_PKGNG is defined to 'devel', this version is the stable one
 .endif
 .if exists(${LOCALBASE}/sbin/pkg_info) || exists(/usr/sbin/pkg_info)
