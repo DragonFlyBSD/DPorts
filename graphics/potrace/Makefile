@@ -1,12 +1,12 @@
 # Created by: Piotr Smyrak <smyru@heron.pl>
-# $FreeBSD: ports/graphics/potrace/Makefile,v 1.17 2013/02/21 01:08:02 svnexp Exp $
+# $FreeBSD: graphics/potrace/Makefile 318333 2013-05-16 20:07:39Z rakuco $
 
 PORTNAME=	potrace
 PORTVERSION=	1.11
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
-MAINTAINER=	smyru@heron.pl
+MAINTAINER=	ps.ports@smyrak.com
 COMMENT=	Transforms bitmaps into vector graphics
 
 GNU_CONFIGURE=	yes
