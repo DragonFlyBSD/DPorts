@@ -1,8 +1,8 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: games/opengfx/Makefile 316424 2013-04-24 11:35:05Z madpilot $
+# $FreeBSD: games/opengfx/Makefile 320803 2013-06-13 14:04:43Z danfe $
 
 PORTNAME=	opengfx
-PORTVERSION=	0.4.6.1
+PORTVERSION=	0.4.7
 CATEGORIES=	games
 MASTER_SITES=	http://hu.binaries.openttd.org/binaries/extra/${PORTNAME}/${PORTVERSION}/ \
 		http://us.binaries.openttd.org/binaries/extra/${PORTNAME}/${PORTVERSION}/ \
