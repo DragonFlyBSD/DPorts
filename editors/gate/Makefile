@@ -1,9 +1,5 @@
-# New ports collection makefile for:   	gate
-# Date created:					15 June 2000
-# Whom:                        		James Howard
-#
-# $FreeBSD: ports/editors/gate/Makefile,v 1.9 2012/11/17 05:57:13 svnexp Exp $
-#
+# Created by: James Howard
+# $FreeBSD: editors/gate/Makefile 320849 2013-06-13 23:06:34Z wg $
 
 PORTNAME=	gate
 PORTVERSION=	2.06
