@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXcursor/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libXcursor/Makefile 319899 2013-06-04 19:31:29Z zeising $
 
 PORTNAME=	libXcursor
-PORTVERSION=	1.1.13
+PORTVERSION=	1.1.14
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
