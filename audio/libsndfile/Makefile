@@ -2,12 +2,12 @@
 # Date created:			Jul 20, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/audio/libsndfile/Makefile,v 1.61 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/libsndfile/Makefile 320405 2013-06-09 19:30:58Z naddy $
 #
 
 PORTNAME=	libsndfile
 PORTVERSION=	1.0.25
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mega-nerd.com/libsndfile/files/
 
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--disable-cpu-clip
 .endif
 
 .if ${PORT_OPTIONS:MEXTERNAL}
-LIB_DEPENDS+=	FLAC.10:${PORTSDIR}/audio/flac \
+LIB_DEPENDS+=	FLAC:${PORTSDIR}/audio/flac \
 		vorbis.4:${PORTSDIR}/audio/libvorbis
 .else
 CONFIGURE_ARGS+=--disable-external-libs
