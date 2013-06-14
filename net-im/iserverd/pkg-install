@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-im/iserverd/pkg-install,v 1.4 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: net-im/iserverd/pkg-install 300897 2012-07-14 14:29:18Z beat $
 #
 PATH=/bin:/usr/sbin
 
