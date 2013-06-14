@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/security/libtasn1/pkg-plist,v 1.14 2013/02/06 20:52:43 svnexp Exp $
+@comment $FreeBSD: security/libtasn1/pkg-plist 311781 2013-02-06 16:59:35Z novel $
 bin/asn1Parser
 bin/asn1Coding
 bin/asn1Decoding

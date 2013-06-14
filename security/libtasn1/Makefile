@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: ports/security/libtasn1/Makefile,v 1.55 2013/02/07 11:37:12 svnexp Exp $
+# $FreeBSD: security/libtasn1/Makefile 319580 2013-06-01 16:47:48Z novel $
 
 PORTNAME=	libtasn1
 PORTVERSION=	2.14
@@ -11,7 +11,7 @@ MAINTAINER=	novel@FreeBSD.org
 COMMENT=	ASN.1 structure parser library
 
 USE_LDCONFIG=	yes
-USE_GNOME=	pkgconfig
+USES=		pkgconfig pathfix
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
@@ -55,10 +55,6 @@ MAN3=		asn1_array2tree.3 \
 		asn1_write_value.3 \
 		libtasn1_perror.3 \
 		libtasn1_strerror.3
-
-post-patch:
-	@${REINPLACE_CMD} -e 's,(libdir)/pkgconfig,(prefix)/libdata/pkgconfig,' \
-		${WRKSRC}/lib/Makefile.in
 
 .if !defined(NOPORTDOCS)
 post-install:
