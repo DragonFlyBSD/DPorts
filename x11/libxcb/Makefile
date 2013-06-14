@@ -1,8 +1,8 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11/libxcb/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/libxcb/Makefile 319899 2013-06-04 19:31:29Z zeising $
 
 PORTNAME=	libxcb
-PORTVERSION=	1.9
+PORTVERSION=	1.9.1
 CATEGORIES=	x11 python
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 
@@ -13,7 +13,6 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libcheck.a:${PORTSDIR}/devel/libcheck \
-		xsltproc:${PORTSDIR}/textproc/libxslt \
 		xcb-proto>=1.7:${PORTSDIR}/x11/xcb-proto \
 		${LOCALBASE}/libdata/pkgconfig/pthread-stubs.pc:${PORTSDIR}/devel/libpthread-stubs
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pthread-stubs.pc:${PORTSDIR}/devel/libpthread-stubs
@@ -22,6 +21,7 @@ CONFIGURE_ARGS+=	--disable-build-docs --without-doxygen --enable-xinput
 
 USE_BZIP2=	yes
 USES=		pathfix
+USE_GNOME=	libxslt:build
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_XORG=	xau xdmcp
