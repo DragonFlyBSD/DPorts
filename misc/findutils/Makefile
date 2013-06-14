@@ -1,5 +1,5 @@
 # Created by: Robert Withrow <witr@rwwa.com>
-# $FreeBSD: misc/findutils/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: misc/findutils/Makefile 320600 2013-06-11 14:59:21Z miwi $
 
 PORTNAME=	findutils
 PORTVERSION=	4.5.11
@@ -12,6 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	aehlig@linta.de
 COMMENT=	GNU find utilities
 
+USES+=		charsetfix
 SIG_FILES=	${DISTNAME}${EXTRACT_SUFX}.sig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
