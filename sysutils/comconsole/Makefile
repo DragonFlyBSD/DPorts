@@ -1,9 +1,5 @@
-# New ports collection makefile for: comconsole
-# Date created:		27 Dec 1998
-# Whom:			SADA Kenji <sada@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/comconsole/Makefile,v 1.11 2012/11/17 06:01:27 svnexp Exp $
-#
+# Created by: SADA Kenji <sada@FreeBSD.org>
+# $FreeBSD: sysutils/comconsole/Makefile 319131 2013-05-26 19:36:04Z bsam $
 
 PORTNAME=	comconsole
 PORTVERSION=	0.1
