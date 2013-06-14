@@ -1,13 +1,9 @@
-# New ports collection makefile for:	ncurses
-# Date created:				23 September 1997
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/devel/ncurses/Makefile,v 1.63 2012/11/17 05:56:01 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: devel/ncurses/Makefile 320239 2013-06-08 06:57:50Z rafan $
 
 PORTNAME=	ncurses
 PORTVERSION=	${RELEASE}
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -25,7 +21,7 @@ CONFIGURE_SCRIPT=../configure
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/misc --disable-overwrite \
 		--enable-termcap --enable-bsdpad --enable-getcap \
 		--enable-colorfgbg --disable-home-terminfo \
-		--with-pkg-config=no \
+		--with-pkg-config=yes --enable-pc-files \
 		--includedir=${PREFIX}/include/ncurses \
 		--with-shared \
 		--without-curses-h --with-termlib --program-prefix= \
@@ -33,11 +29,15 @@ CONFIGURE_ARGS=	--datadir=${PREFIX}/share/misc --disable-overwrite \
 		--with-manpage-format=gzip --srcdir=../
 MAKE_JOBS_UNSAFE=	yes
 
-OPTIONS=	EXTCOLORS "Enable 256-color support (only for ncursesw)" off
+OPTIONS_DEFINE=	EXTCOLORS TRACE DEBUG
+EXTCOLORS_DESC=	256-color support (only for ncursesw)
+TRACE_DESC=	Add trace() function to all models of ncurses
 
-CONFIGURE_ENV=	gnat_exists="no"
+CONFIGURE_ENV=	PKG_CONFIG_LIBDIR=${LOCALBASE}/libdata/pkgconfig \
+		gnat_exists="no"
 
 USE_LDCONFIG=	yes
+USES=		pkgconfig
 
 WIDEC_WRKSRC=	${WRKSRC}/build.widec
 NOWIDEC_WRKSRC=	${WRKSRC}/build.nowidec
@@ -80,19 +80,19 @@ EXAMPLES_CPP=	Makefile NEWS PROBLEMS README-first cursesapp.cc \
 		cursesw.h cursslk.cc cursslk.h demo.cc etip.h \
 		internal.h
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .include "${.CURDIR}/Makefile.man"
 
 CONFIGURE_ARGS_WIDEC=--enable-widec
-.if defined(WITH_EXTCOLORS)
+.if ${PORT_OPTIONS:MEXTCOLORS}
 CONFIGURE_ARGS_WIDEC+=--enable-ext-colors
 NCURSESW_ABI_VER=	6
 NCURSESW_REL_VER=	6.0
 .endif
 
 # needed by devel/py-ncurses port
-.if defined(WITH_TRACE)
+.if ${PORT_OPTIONS:MTRACE}
 CONFIGURE_ARGS+=	--with-trace
 .endif
 
@@ -104,7 +104,7 @@ CONFIGURE_ARGS+=--without-profile
 PLIST_SUB+=	PROFILE="@comment "
 .endif
 
-.if !defined(WITH_DEBUG)
+.if ${PORT_OPTIONS:MDEBUG}
 CONFIGURE_ARGS+=--without-debug
 PLIST_SUB+=	DEBUG="@comment "
 .else
@@ -160,7 +160,7 @@ post-install:
 	    ${MAKE} ${.MAKEFLAGS} INSTALL_WRKSRC=${WIDEC_WRKSRC} do-install
 .endif
 
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 . for i in ${EXAMPLES_TARGETS}
 	${MKDIR} ${${i}_EXAMPLESDIR}/c++
 .  for f in ${EXAMPLES}
@@ -177,11 +177,11 @@ post-install:
 	${FIND} ${PREFIX}/share/misc -name "*.terminfo" -exec ${PREFIX}/bin/tic {} \;
 .endif
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 . for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
 . endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

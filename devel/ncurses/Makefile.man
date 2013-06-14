@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/ncurses/Makefile.man,v 1.7 2012/11/17 05:56:01 svnexp Exp $
+# $FreeBSD: devel/ncurses/Makefile.man 300896 2012-07-14 13:54:48Z beat $
 
 MANCOMPRESSED=	yes
 
