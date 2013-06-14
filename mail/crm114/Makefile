@@ -1,8 +1,5 @@
-# New ports collection makefile for:	crm114
-# Date created:				23 February 2004
-# Whom:					Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: mail/crm114/Makefile 316662 2013-04-27 11:59:28Z mva $
-#
+# Created by: Meno Abels <meno.abels@adviser.com>
+# $FreeBSD: mail/crm114/Makefile 319665 2013-06-02 14:42:23Z danfe $
 
 PORTNAME=	crm114
 PORTVERSION=	20100106
@@ -46,11 +43,11 @@ CRM_FILES=	mailfilter.crm mailfilter.cf mailreaver.crm mailtrainer.crm \
 		blacklist.mfp.example whitelist.mfp.example crm114-mode.el \
 		reto_procmailrc.recipe
 
-OPTIONS=	PGO "Enable Profile-Guided Optimization" off
+OPTIONS_DEFINE=	PGO
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_PGO)
+.if ${PORT_OPTIONS:MPGO}
 MAKE_ARGS+=	CFLAGS="${CFLAGS} -fprofile-use" \
 		LDFLAGS="${LDFLAGS} -fprofile-use"
 .else
@@ -63,7 +60,7 @@ post-patch:
 	  's,^((LD|C)FLAGS),#\1,;;s,^(prefix=),#\1,;;s,^(.*-install),#\1,' \
 	  ${WRKSRC}/Makefile
 
-.if defined(WITH_PGO)
+.if ${PORT_OPTIONS:MPGO}
 .if target(pre-build)
 .error Makefile error since pre-build target has already been defined
 .endif
@@ -82,7 +79,7 @@ post-install:
 	@for i in priolist.mfp whitelist.mfp; do \
 		${CP} ${WRKSRC}/$${i}.example ${WRKSRC}/$${i}; \
 	done
-.ifdef(WITH_NORMALIZEMIME)
+.if ${PORT_OPTIONS:MNORMALIZEMIME}
 	@${REINPLACE_CMD} -Ee 's|^#(.*/normalizemime/)|\1|' \
 	  ${WRKSRC}/mailfilter.cf
 .else
@@ -100,7 +97,7 @@ post-install:
 	done
 .endif
 
-.if defined(WITH_PGO)
+.if ${PORT_OPTIONS:MPGO}
 pgo: pgo-build pgo-run pgo-clean
 
 pgo-build:
@@ -113,6 +110,6 @@ pgo-run:
 
 pgo-clean:
 	@(cd ${BUILD_WRKSRC}; ${MAKE} clean)
-.endif # if defined(WITH_PGO)
+.endif # if ${PORT_OPTIONS:MPGO}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
