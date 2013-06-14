@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xorg-cf-files
-# Date created:				Nov 18 2006
-# Whom:					Dave Grochowski
-#
-# $FreeBSD: ports/x11/xorg-cf-files/Makefile,v 1.7 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: Dave Grochowski
+# $FreeBSD: x11/xorg-cf-files/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xorg-cf-files
 PORTVERSION=	1.0.4
