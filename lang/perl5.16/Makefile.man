@@ -1,4 +1,4 @@
-# $FreeBSD: lang/perl5.16/Makefile.man 306959 2012-11-04 09:48:04Z az $
+# $FreeBSD: lang/perl5.16/Makefile.man 320830 2013-06-13 18:56:01Z sunpoet $
 
 MAN1+=	a2p.1
 MAN1+=	c2ph.1
@@ -14,7 +14,6 @@ MAN1+=	h2xs.1
 MAN1+=	instmodsh.1
 MAN1+=	json_pp.1
 MAN1+=	libnetcfg.1
-MAN1+=	perl-after-upgrade.1
 MAN1+=	perl.1
 MAN1+=	perl5004delta.1
 MAN1+=	perl5005delta.1
@@ -27,11 +26,12 @@ MAN1+=	perl5123delta.1
 MAN1+=	perl5124delta.1
 MAN1+=	perl5140delta.1
 MAN1+=	perl5141delta.1
-MAN1+=	perl5143delta.1
 MAN1+=	perl5142delta.1
+MAN1+=	perl5143delta.1
 MAN1+=	perl5160delta.1
 MAN1+=	perl5161delta.1
 MAN1+=	perl5162delta.1
+MAN1+=	perl5163delta.1
 MAN1+=	perl561delta.1
 MAN1+=	perl56delta.1
 MAN1+=	perl581delta.1
