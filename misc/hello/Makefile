@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hello
-# Date created:				Fri Jul 23, 1999
-# Whom:					shipley@dis.org
-#
-# $FreeBSD: misc/hello/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: shipley@dis.org
+# $FreeBSD: misc/hello/Makefile 320869 2013-06-14 01:57:00Z miwi $
 
 PORTNAME=	hello
 PORTVERSION=	2.8
@@ -16,11 +12,14 @@ COMMENT=	A utility for saying hello to the world and reading email
 
 USE_PERL5_BUILD=	YES
 GNU_CONFIGURE=	YES
+USES=		charsetfix
 
 MAN1=		hello.1
 INFO=		hello
 
-.if !defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
