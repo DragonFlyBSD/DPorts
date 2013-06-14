@@ -1,9 +1,9 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: audio/libbs2b/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/libbs2b/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	libbs2b
 PORTVERSION=	3.1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	SF/bs2b/bs2b/${PORTVERSION}
 
