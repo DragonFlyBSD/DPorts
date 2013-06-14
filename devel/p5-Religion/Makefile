@@ -1,20 +1,17 @@
-# New ports collection makefile for:	p5-Religion
-# Date created:				October 24th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Religion/Makefile,v 1.19 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: devel/p5-Religion/Makefile 318173 2013-05-14 16:32:23Z miwi $
 
 PORTNAME=	Religion
 PORTVERSION=	1.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:KJALB
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl5 module to install die() and warn() handlers
 
-PERL_CONFIGURE=	YES
+PERL_CONFIGURE=	yes
 
 MAN3=		Religion.3
 
