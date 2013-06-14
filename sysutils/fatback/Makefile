@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/fatback/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: sysutils/fatback/Makefile 318804 2013-05-22 23:32:12Z ehaupt $
 
 PORTNAME=	fatback
 PORTVERSION=	1.3
@@ -12,6 +12,7 @@ COMMENT=	Recover deleted files from FAT filesystems
 
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
+USE_GCC=	any
 
 MAN1=		fatback.1
 INFO=		fatback-manual
