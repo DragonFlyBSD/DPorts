@@ -1,7 +1,7 @@
-# $FreeBSD: ports/www/py-w3lib/Makefile,v 1.1 2012/11/17 17:20:43 svnexp Exp $
+# $FreeBSD: www/py-w3lib/Makefile 319874 2013-06-04 15:52:55Z rm $
 
 PORTNAME=	w3lib
-PORTVERSION=	1.2
+PORTVERSION=	1.3
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
