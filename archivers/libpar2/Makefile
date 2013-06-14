@@ -1,11 +1,12 @@
 # Created by: Jeff Burchell <toxic@doobie.com>
-# $FreeBSD: archivers/libpar2/Makefile 319229 2013-05-27 12:53:53Z wg $
+# $FreeBSD: archivers/libpar2/Makefile 319977 2013-06-05 11:15:06Z wg $
 
 PORTNAME=	libpar2
-PORTVERSION=	0.2
-PORTREVISION=	4
+PORTVERSION=	0.3
 CATEGORIES=	archivers
-MASTER_SITES=	SF/parchive/${PORTNAME}/${PORTVERSION}
+MASTER_SITES=	http://launchpad.net/${PORTNAME}/trunk/${PORTVERSION}/+download/
+
+LICENSE=	GPLv2
 
 MAINTAINER=	toxic@doobie.com
 COMMENT=	Library for manipulating PAR2 files, extracted from par2cmdline
@@ -14,22 +15,14 @@ LIB_DEPENDS=	sigc-2.0:${PORTSDIR}/devel/libsigc++20
 
 GNU_CONFIGURE=	yes
 
+FETCH_ARGS=	-pRr
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 
-USE_GCC=	any
 USE_LDCONFIG=	yes
 USES=		pkgconfig
 
-OPTIONS_DEFINE=	ENABLECANCEL
-OPTIONS_DEFAULT=	ENABLECANCEL
-ENABLECANCEL_DESC=	Enable graceful cancellation of repairs
-
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MENABLECANCEL}
-EXTRA_PATCHES=	${FILESDIR}/xpatch-addcancel-par2repairer.cpp
-.endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
