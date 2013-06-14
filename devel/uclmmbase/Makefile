@@ -1,9 +1,5 @@
-# New ports collection makefile for:	uclmmbase
-# Date created:				Thanksgiving Day, 1999
-# Whom:	      				Garrett Wollman <wollman@lcs.mit.edu>
-#
-# $FreeBSD: ports/devel/uclmmbase/Makefile,v 1.15 2012/11/17 05:57:05 svnexp Exp $
-#
+# Created by: Garrett Wollman <wollman@lcs.mit.edu>
+# $FreeBSD: devel/uclmmbase/Makefile 318988 2013-05-24 16:08:58Z bapt $
 
 PORTNAME=	uclmmbase
 PORTVERSION=	1.2.18
@@ -22,6 +18,7 @@ CONFIGURE_ARGS=	--enable-ipv6
 .endif
 USE_XZ=		yes
 MAKE_JOBS_SAFE=	yes
+MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
 post-configure:
 	@for f in ${FILESDIR}/*.bsd ; do \
