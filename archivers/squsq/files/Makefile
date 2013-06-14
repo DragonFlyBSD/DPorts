@@ -1,11 +1,11 @@
 #
-# $FreeBSD: ports/archivers/squsq/files/Makefile,v 1.2 2012/11/17 05:54:23 svnexp Exp $
+# $FreeBSD: archivers/squsq/files/Makefile 319452 2013-05-30 19:51:38Z antoine $
 #
 
 all: sq usq
 
 sq: sq.o tr1.o tr2.o sqio.o
-	${CC} -o $@ $>
+	${CC} ${CFLAGS} -o $@ $>
 
 usq: usq.o utr.o
-	${CC} -o $@ $>
+	${CC} ${CFLAGS} -o $@ $>
