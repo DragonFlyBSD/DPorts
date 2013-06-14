@@ -1,8 +1,9 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: lang/python27/Makefile 318353 2013-05-17 04:17:22Z rm $
+# $FreeBSD: lang/python27/Makefile 320442 2013-06-10 08:20:15Z rm $
 
 PORTNAME=	python27
 PORTVERSION=	2.7.5
+PORTREVISION=	1
 CATEGORIES=	lang python ipv6
 MASTER_SITES=	PYTHON
 MASTER_SITE_SUBDIR=	${PYTHON_MASTER_SITE_SUBDIR}
