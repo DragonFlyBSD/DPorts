@@ -2,7 +2,7 @@
 # Date created:				Jan 17 2004
 # Whom:					Florent Thoumie <flz@xbsd.org>
 #
-# $FreeBSD: ports/net-p2p/ctorrent/Makefile,v 1.25 2012/11/17 06:00:39 svnexp Exp $
+# $FreeBSD: net-p2p/ctorrent/Makefile 320530 2013-06-11 04:44:18Z dinoex $
 #
 
 PORTNAME=	ctorrent
@@ -12,7 +12,7 @@ CATEGORIES=	net-p2p
 MASTER_SITES=	http://www.rahul.net/dholmes/ctorrent/
 DISTNAME=	${PORTNAME}-dnh${PORTVERSION}
 
-MAINTAINER=	flz@FreeBSD.org
+MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	BitTorrent Client written in C for FreeBSD and Linux
 
 GNU_CONFIGURE=	yes
