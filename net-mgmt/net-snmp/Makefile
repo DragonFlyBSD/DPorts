@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: net-mgmt/net-snmp/Makefile 319417 2013-05-30 11:55:31Z zi $
+# $FreeBSD: net-mgmt/net-snmp/Makefile 320709 2013-06-12 17:45:02Z az $
 
 PORTNAME=	snmp
 PORTVERSION=	5.7.2
@@ -230,7 +230,7 @@ MAN3PERL=	NetSNMP::ASN.3 NetSNMP::OID.3 NetSNMP::agent.3 \
 		NetSNMP::agent::default_store.3 \
 		NetSNMP::default_store.3 \
 		NetSNMP::netsnmp_request_infoPtr.3 SNMP.3
-MAN3PERLPREFIX=	${PREFIX}/lib/perl5/${PERL_VERSION}
+MAN3PERLPREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 _MANPAGES+=	${MAN3PERL:S%^%${MAN3PERLPREFIX}/man/man3/%}
 .endif
 
