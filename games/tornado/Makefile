@@ -1,9 +1,5 @@
-# New ports collection makefile for:    tornado
-# Date created:                         1 July 2001
-# Whom:                                 minter
-#
-# $FreeBSD: games/tornado/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: minter
+# $FreeBSD: games/tornado/Makefile 320865 2013-06-14 00:43:03Z miwi $
 
 PORTNAME=	tornado
 PORTVERSION=	1.4
