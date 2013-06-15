@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Term-CallEditor/Makefile,v 1.8 2012/12/29 14:17:21 svnexp Exp $
+# $FreeBSD: devel/p5-Term-CallEditor/Makefile 320115 2013-06-06 16:51:13Z tobez $
 
 PORTNAME=	Term-CallEditor
-PORTVERSION=	0.61
+PORTVERSION=	0.62
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
