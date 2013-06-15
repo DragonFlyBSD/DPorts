@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-Getopt-GUI-Long
-# Date created:				13 Feb 2010
-# Whom:					Martin Wilke <miwi@FreeBSD.org
-#
-# $FreeBSD: ports/devel/p5-Getopt-GUI-Long/Makefile,v 1.3 2012/11/17 05:56:17 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org
+# $FreeBSD: devel/p5-Getopt-GUI-Long/Makefile 320179 2013-06-07 08:10:12Z miwi $
 
 PORTNAME=	Getopt-GUI-Long
-PORTVERSION=	0.92
+PORTVERSION=	0.93
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
