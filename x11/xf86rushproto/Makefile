@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xf86rushproto
-# Date Created:				06 Feb 2006
-# Whom:					Eric Anholt <anholt@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xf86rushproto/Makefile,v 1.2 2012/11/17 06:03:21 svnexp Exp $
-#
+# Created by: Eric Anholt <anholt@FreeBSD.org>
+# $FreeBSD: x11/xf86rushproto/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	xf86rushproto
 PORTVERSION=	1.1.2
