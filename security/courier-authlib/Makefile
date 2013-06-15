@@ -2,7 +2,7 @@
 # Date created:				19 Dec 2004
 # Whom:					Oliver Lehmann
 #
-# $FreeBSD: ports/security/courier-authlib/Makefile,v 1.56 2012/11/17 06:01:02 svnexp Exp $
+# $FreeBSD: security/courier-authlib/Makefile 318826 2013-05-23 02:19:02Z jgh $
 #
 
 PORTNAME=	courier-authlib
@@ -28,7 +28,7 @@ RUN_DEPENDS=	courierauthconfig:${PORTSDIR}/security/courier-authlib-base
 NO_BUILD=	yes
 PATCHDIR=	/dev/null
 
-OPTIONS+=	GDBM	"Use gdbm instead of system bdb"	off
+OPTIONS_DEFINE+=	GDBM
 
 .include "${.CURDIR}/Makefile.opt"
 
@@ -211,7 +211,7 @@ pre-install:
 .endif	# ${PKGNAMESUFFIX} == "-base"
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${INSTALL} ${_SHROWNGRP} -d ${DOCSDIR}
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/security/courier-authlib/files/pkg-install.in,v 1.2 2012/11/17 06:01:02 svnexp Exp $
+# $FreeBSD: security/courier-authlib/files/pkg-install.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 PKG_PREFIX=${PKG_PREFIX:=/usr/local}
