@@ -1,8 +1,8 @@
 # Created by: Michael Fausten <ports@michael-fausten.de>
-# $FreeBSD: ports/www/smarty3/Makefile,v 1.2 2012/11/17 06:03:06 svnexp Exp $
+# $FreeBSD: www/smarty3/Makefile 320097 2013-06-06 13:45:19Z culot $
 
 PORTNAME=	smarty3
-PORTVERSION=	3.1.12
+PORTVERSION=	3.1.13
 CATEGORIES=	www
 MASTER_SITES=	http://www.smarty.net/files/
 DISTNAME=	Smarty-${PORTVERSION}
