@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/engine_pkcs11/Makefile 317267 2013-05-03 21:38:18Z bapt $
+# $FreeBSD: security/engine_pkcs11/Makefile 320660 2013-06-12 06:07:33Z miwi $
 
 PORTNAME=	engine_pkcs11
 PORTVERSION=	0.1.8
@@ -16,9 +16,6 @@ USE_AUTOTOOLS=	libtool
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
 		OPENSSL_LIBS="-L${OPENSSLLIB} -lssl"
