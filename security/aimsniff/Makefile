@@ -1,5 +1,5 @@
 # Created by: Andrew Marks <andrew@amrx.net>
-# $FreeBSD: ports/security/aimsniff/Makefile,v 1.8 2012/11/17 06:01:00 svnexp Exp $
+# $FreeBSD: security/aimsniff/Makefile 320718 2013-06-12 19:20:40Z az $
 
 PORTNAME=	aimsniff
 PORTVERSION=	0.9d
@@ -29,7 +29,7 @@ PLIST_FILES=	bin/aimsniff
 
 .include <bsd.port.options.mk>
 
-.if !exists(${LOCALBASE}/lib/perl5/${PERL_VERSION}/${PERL_ARCH}/GDBM_File.pm)
+.if !exists(${LOCALBASE}/lib/perl5/${PERL_VER}/${PERL_ARCH}/GDBM_File.pm)
 #IGNORE=		You need perl compiled with GDBM support
 .endif
 
