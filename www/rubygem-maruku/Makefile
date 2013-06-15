@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-maruku
-# Date created:				26 April 2007
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/www/rubygem-maruku/Makefile,v 1.13 2012/11/17 06:03:04 svnexp Exp $
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: www/rubygem-maruku/Makefile 319751 2013-06-03 02:39:46Z swills $
 
 PORTNAME=	maruku
-PORTVERSION=	0.6.0
+PORTVERSION=	0.6.1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
