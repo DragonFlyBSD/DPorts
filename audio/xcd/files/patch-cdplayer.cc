@@ -9,3 +9,12 @@
  	if (state != i) {
  	    state = i;
  	    if (state == 0)
+@@ -90,7 +90,7 @@
+ #define S(t) toc_buffer[t].addr.msf.second
+ #define F(t) toc_buffer[t].addr.msf.frame
+ 
+-main (int argc, char **argv)
++int main (int argc, char **argv)
+ {
+     char dev[20], line[50];
+     int i;
