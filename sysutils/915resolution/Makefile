@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: ports/sysutils/915resolution/Makefile,v 1.15 2012/11/17 06:01:24 svnexp Exp $
+# $FreeBSD: sysutils/915resolution/Makefile 319126 2013-05-26 18:11:11Z bsam $
 
 PORTNAME=	915resolution
 PORTVERSION=	0.5.3
@@ -14,21 +14,23 @@ COMMENT=	Resolution tool for Intel i915 video cards
 
 USE_RC_SUBR=	915resolution
 
-DOCS=		README.txt LICENSE.txt chipset_info.txt changes.log
+PLIST_FILES=	sbin/915resolution
+OPTIONS_DEFINE=	DOCS
+PORTDOCS=	README.txt LICENSE.txt chipset_info.txt changes.log
 
 ONLY_FOR_ARCHS=	i386 amd64
-
-.include <bsd.port.pre.mk>
 
 do-build:
 	cd ${WRKSRC} && \
 		${CC} ${CFLAGS} 915resolution.c -o 915resolution
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/915resolution ${PREFIX}/sbin
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${DOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
