@@ -1,5 +1,5 @@
 # Created by: dmitry@karasik.eu.org
-# $FreeBSD: x11-toolkits/p5-Prima/Makefile 316695 2013-04-27 22:09:15Z bapt $
+# $FreeBSD: x11-toolkits/p5-Prima/Makefile 320093 2013-06-06 13:24:20Z mat $
 
 PORTNAME=	Prima
 PORTVERSION=	1.36
@@ -22,7 +22,6 @@ OPTIONS_DEFAULT=ICONV XFT
 
 CONFIGURE_ARGS=	X11BASE=${LOCALBASE}
 PERL_CONFIGURE=	yes
-USE_PERL5=	yes
 USE_XORG=	x11 xext xpm xrender
 
 MAN1=		VB.1 \
