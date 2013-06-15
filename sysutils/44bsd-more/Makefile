@@ -1,9 +1,5 @@
-# Ports collection makefile for:  more
-# Date created:			  24 May 2000
-# Whom:				  Tim van der Hoek <hoek@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/44bsd-more/Makefile,v 1.17 2012/11/17 06:01:24 svnexp Exp $
-#
+# Created by: Tim van der Hoek <hoek@FreeBSD.org>
+# $FreeBSD: sysutils/44bsd-more/Makefile 319243 2013-05-27 13:49:08Z bapt $
 
 PORTNAME=	44bsd-more
 PORTVERSION=	${RELDATE}
@@ -18,6 +14,7 @@ USE_BZIP2=	yes
 NO_WRKSUBDIR=	yes
 
 MAN1=		44bsd-more.1
+CFLAGS=		-Wno-return-type
 
 RELDATE=	20000521
 

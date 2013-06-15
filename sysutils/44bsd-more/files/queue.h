@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)queue.h	8.5 (Berkeley) 8/20/94
- * $FreeBSD: ports/sysutils/44bsd-more/files/queue.h,v 1.2 2012/11/17 06:01:24 svnexp Exp $
+ * $FreeBSD: /tmp/pcvs/ports/sysutils/44bsd-more/files/queue.h,v 1.1 2001-01-06 03:41:36 hoek Exp $
  */
 
 #ifndef _SYS_QUEUE_H_
