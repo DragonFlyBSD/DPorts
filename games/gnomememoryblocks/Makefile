@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: games/gnomememoryblocks/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: games/gnomememoryblocks/Makefile 319932 2013-06-04 22:27:58Z bapt $
 
 PORTNAME=	gnomememoryblocks
 PORTVERSION=	0.2
@@ -10,6 +10,9 @@ DISTNAME=	gnome-memblocks-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Memory Blocks game for GNOME
+
+DEPRECATED=	Unsupported upstream
+EXPIRATION_DATE=	2013-07-04
 
 USES=        pathfix gettext
 USE_GNOME=	gnomeprefix gnomelibs gdkpixbuf
