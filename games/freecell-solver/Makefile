@@ -1,13 +1,13 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: games/freecell-solver/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/freecell-solver/Makefile 319845 2013-06-04 10:00:12Z miwi $
 
 PORTNAME=	freecell-solver
-PORTVERSION=	3.16.0
+PORTVERSION=	3.18.1
 CATEGORIES=	games
 MASTER_SITES=	http://fc-solve.shlomifish.org/downloads/fc-solve/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A program that automatically solves games of Freecell
+COMMENT=	Open source framework for solving Freecell
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
@@ -16,8 +16,9 @@ OPTIONS_DEFINE=	TCMALLOC DOCS EXAMPLES
 TCMALLOC_DESC=	Use Google's TCMalloc
 
 USE_BZIP2=	yes
+USES=		cmake:outsource
 USE_PERL5_BUILD=yes
-USES=		cmake
+CMAKE_ARGS=	-DFCS_WITH_TEST_SUITE:BOOL=OFF
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
@@ -39,7 +40,10 @@ CMAKE_ARGS+=	-DFCS_AVOID_TCMALLOC:BOOL=ON
 
 post-patch:
 .for f in CMakeLists.txt
-	@${REINPLACE_CMD} -e 's|"pthread"|"${PTHREAD_LIBS}"|' ${WRKSRC}/${f}
+	@${REINPLACE_CMD} -e 's|"pthread"|"-pthread"|' ${WRKSRC}/${f}
+.endfor
+.for f in Shlomif_Common.cmake
+	@${REINPLACE_CMD} -e 's|share/man|man|' ${WRKSRC}/cmake/${f}
 .endfor
 .for f in children-playing-ball.sh sentient-pearls.sh
 	@${REINPLACE_CMD} -e 's|/bin/bash|/bin/sh|' ${WRKSRC}/Presets/presets/${f}
