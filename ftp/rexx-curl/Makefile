@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	rexx-curl
-# Date created:			Nov 11, 2003
-# Whom:	      			ijliao
-#
-# $FreeBSD: ftp/rexx-curl/Makefile 315667 2013-04-02 10:38:36Z miwi $
-#
+# Created by: ijliao
+# $FreeBSD: ftp/rexx-curl/Makefile 320466 2013-06-10 12:26:23Z az $
 
 PORTNAME=	curl
 PORTVERSION=	1.4
@@ -18,10 +13,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	External function package providing an interface to the cURL package
 
 BUILD_DEPENDS=	rexx:${PORTSDIR}/lang/rexx-regina
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 RUN_DEPENDS=	rexx:${PORTSDIR}/lang/rexx-regina
 
-#BROKEN=		fails to build
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	${PTHREAD_CFLAGS}
@@ -32,12 +26,14 @@ USE_LDCONFIG=	yes
 DOCSDIR=	${PREFIX}/share/doc/rexx${PORTNAME}
 DATADIR=	${PREFIX}/share/rexx${PORTNAME}
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e "s| -lc | |g" -e "/\$(sharedir)\/images/d" \
 		-e "/index.html/d" -e "/rxcurl64.png/d" ${WRKSRC}/Makefile.in
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/index.html ${DOCSDIR}
 	@${MKDIR} ${DOCSDIR}/images
