@@ -1,4 +1,4 @@
-# $FreeBSD: games/netwalk/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: games/netwalk/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	netwalk
 PORTVERSION=	0.4.10
@@ -19,7 +19,7 @@ LICENSE=	GPLv3
 USE_GITHUB=	yes
 GH_ACCOUNT=	blynn
 GH_PROJECT=	${PORTNAME}
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	634e7c9
 
 USE_SDL=	sdl ttf
