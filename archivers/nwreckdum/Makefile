@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: ports/archivers/nwreckdum/Makefile,v 1.11 2012/12/16 15:58:27 svnexp Exp $
+# $FreeBSD: archivers/nwreckdum/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	nwreckdum
 PORTVERSION=	0.0.6
@@ -13,7 +13,7 @@ LICENSE=	GPLv2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	danfe
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	22cbc47
 
 PLIST_FILES=	bin/${PORTNAME}
