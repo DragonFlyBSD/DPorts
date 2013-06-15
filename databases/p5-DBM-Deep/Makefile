@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: ports/databases/p5-DBM-Deep/Makefile,v 1.18 2013/01/09 20:04:28 svnexp Exp $
+# $FreeBSD: databases/p5-DBM-Deep/Makefile 319167 2013-05-27 08:11:06Z az $
 
 PORTNAME=	DBM-Deep
 PORTVERSION=	2.0008
@@ -28,10 +28,4 @@ MAN3=		DBM::Deep.3 DBM::Deep::Cookbook.3 DBM::Deep::Internals.3 \
 		DBM::Deep::Iterator::File::Index.3 DBM::Deep::Null.3 \
 		DBM::Deep::Engine::File.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
