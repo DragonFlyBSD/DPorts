@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: print/texinfo/Makefile 318196 2013-05-14 20:01:30Z johans $
+# $FreeBSD: print/texinfo/Makefile 320107 2013-06-06 15:42:55Z miwi $
 
 PORTNAME=	texinfo
 PORTVERSION=	5.1.20130419
@@ -25,6 +25,7 @@ USE_XZ=		yes
 INSTALL_TARGET=	install install-tex
 PKGDEINSTALL=	${PKGINSTALL}
 MAKE_JOBS_SAFE=	yes
+USES+=		charsetfix
 
 MAKE_ARGS=	TEXMF=${PREFIX}/${TEXMF}
 CPPFLAGS+=	-I${LOCALBASE}/lib
