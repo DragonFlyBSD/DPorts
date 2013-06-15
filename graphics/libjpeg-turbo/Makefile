@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libjpeg-turbo
-# Date created:				2010-04-09
-# Whom:					Denis Podolskiy <bytestore@yandex.ru>
-#
-# $FreeBSD: ports/graphics/libjpeg-turbo/Makefile,v 1.25 2012/11/17 05:58:13 svnexp Exp $
-#
+# Created by: Denis Podolskiy <bytestore@yandex.ru>
+# $FreeBSD: graphics/libjpeg-turbo/Makefile 319723 2013-06-02 19:37:44Z pawel $
 
 PORTNAME=	libjpeg-turbo
-PORTVERSION=	1.2.1
+PORTVERSION=	1.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}
 
@@ -32,16 +28,17 @@ PORTEXAMPLES=	*
 # chase graphics/jpeg
 SOVERSION=	11
 
-OPTIONS+=	PIC "Static library with PIC (required for VirtualGL)" off
+OPTIONS_DEFINE=	PIC
+PIC_DESC=	Static library with PIC (required for VirtualGL)
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_PIC)
+.if ${PORT_OPTIONS:MPIC}
 CONFIGURE_ARGS+=--with-pic
 .endif
 
 post-patch:
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	${REINPLACE_CMD} -e '/^install-data-am/s,install-dist_docDATA,,' \
 		${WRKSRC}/Makefile.in
 .else
@@ -49,7 +46,7 @@ post-patch:
 		${WRKSRC}/Makefile.in
 .endif
 
-.if defined(NOPORTEXAMPLES)
+.if ! ${PORT_OPTIONS:MEXAMPLES}
 	${REINPLACE_CMD} -e '/^install-data-am/s,install-dist_exampleDATA,,' \
 		${WRKSRC}/Makefile.in
 .else
