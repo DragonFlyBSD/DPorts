@@ -1,8 +1,9 @@
 # Created by: ache
-# $FreeBSD: archivers/sharutils/Makefile 316385 2013-04-23 19:14:32Z garga $
+# $FreeBSD: archivers/sharutils/Makefile 320561 2013-06-11 14:14:05Z garga $
 
 PORTNAME=	sharutils
 PORTVERSION=	4.13.5
+PORTREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	GNU
 
@@ -21,12 +22,13 @@ CONFIGURE_ARGS=	--program-prefix=g --disable-uucode
 INSTALL_TARGET=	install install-man
 MAN1=		gshar.1 gunshar.1
 INFO=		sharutils
+USES=		charsetfix
 
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MNLS}
 PLIST_SUB+=	NLS=""
-USES=		gettext
+USES+=		gettext
 CONFIGURE_ARGS+=--with-libintl-prefix="${LOCALBASE}"
 .else
 PLIST_SUB+=	NLS="@comment "
