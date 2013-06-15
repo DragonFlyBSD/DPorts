@@ -1,17 +1,12 @@
-# New ports collection makefile for:	p5-DateTime-Format-Strptime
-# Date created:	   2 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Format-Strptime/Makefile,v 1.19 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: Mathieu Arnold
+# $FreeBSD: devel/p5-DateTime-Format-Strptime/Makefile 320072 2013-06-06 10:08:26Z mat $
 
 PORTNAME=	DateTime-Format-Strptime
-PORTVERSION=	1.50.00
+PORTVERSION=	1.54
 PORTEPOCH=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-${PORTVERSION:C/\.(..)$/\1/}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse and format strp and strf time patterns
