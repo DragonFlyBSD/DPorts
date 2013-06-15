@@ -2,7 +2,7 @@
 # Date Created:                6 February 2004
 # Whom:                        Autrijus Tang <autrijus@autrijus.org>
 #
-# $FreeBSD: ports/devel/p5-subversion/Makefile,v 1.15 2012/12/16 06:16:54 svnexp Exp $
+# $FreeBSD: devel/p5-subversion/Makefile 320709 2013-06-12 17:45:02Z az $
 #
 
 PKGNAMEPREFIX=	p5-
@@ -19,7 +19,7 @@ PKGDIR=		${.CURDIR}
 
 USE_PERL5=	yes
 
-MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VERSION}
+MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 MAN3=		SVN::Base.3 \
 		SVN::Client.3 \
 		SVN::Core.3 \
