@@ -2,7 +2,7 @@
 # Date created:				Sat Jun 23 23:40:21 EDT 2001
 # Whom:					pat@databits.net
 #
-# $FreeBSD: ports/games/quake3-excessive/Makefile,v 1.8 2012/11/17 05:57:50 svnexp Exp $
+# $FreeBSD: games/quake3-excessive/Makefile 317955 2013-05-12 13:00:07Z danfe $
 #
 
 PORTNAME=	excessive
@@ -19,7 +19,6 @@ COMMENT=	Quake III Arena Mod: Excessive
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_ZIP=	yes
-USE_CRLF=	yes
 NO_BUILD=	yes
 
 DATADIR=	${Q3DIR}/${PORTNAME}
