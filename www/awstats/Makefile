@@ -1,5 +1,5 @@
 # Created by: Munish Chopra <mchopra@engmail.uwaterloo.ca>
-# $FreeBSD: www/awstats/Makefile 318455 2013-05-18 20:47:45Z rakuco $
+# $FreeBSD: www/awstats/Makefile 320174 2013-06-07 07:56:59Z az $
 
 PORTNAME=	awstats
 PORTVERSION=	7.1.1
@@ -39,10 +39,6 @@ OPTIONS_DEFINE=	IPV6
 .if ${PORT_OPTIONS:MIPV6}
 RUN_DEPENDS+=	p5-Net-IP>=0:${PORTSDIR}/net-mgmt/p5-Net-IP
 RUN_DEPENDS+=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
-.endif
-
-.if ${PERL_LEVEL} < 500800
-RUN_DEPENDS+=	p5-Storable>=0:${PORTSDIR}/devel/p5-Storable
 .endif
 
 post-patch:
