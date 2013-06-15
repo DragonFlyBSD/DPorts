@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/devel/p5-Object-Accessor/Makefile,v 1.13 2013/01/25 05:50:29 svnexp Exp $
+# $FreeBSD: devel/p5-Object-Accessor/Makefile 320100 2013-06-06 14:12:05Z tobez $
 
 PORTNAME=	Object-Accessor
-PORTVERSION=	0.46
+PORTVERSION=	0.48
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
