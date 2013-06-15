@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: dns/inadyn-mt/Makefile 314870 2013-03-21 20:38:15Z lippe $
+# $FreeBSD: dns/inadyn-mt/Makefile 318257 2013-05-15 19:33:14Z wg $
 
 PORTNAME=	inadyn-mt
 PORTVERSION=	02.24.38
@@ -7,7 +7,7 @@ CATEGORIES=	dns
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}.v.${PORTVERSION}/
 DISTNAME=	${PORTNAME}.v.${PORTVERSION}
 
-MAINTAINER=	william88@gmail.com
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Simple dynamic dns client
 
 USE_RC_SUBR=	inadyn-mt
