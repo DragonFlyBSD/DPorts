@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-crack
-# Date created:		2005-07-17
-# Whom:			Vsevolod Stakhov <vsevolod@highsecure.ru>
-#
-# $FreeBSD: ports/security/py-crack/Makefile,v 1.11 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by:Vsevolod Stakhov <vsevolod@highsecure.ru>
+# $FreeBSD: security/py-crack/Makefile 320518 2013-06-11 01:24:17Z sbz $
 
 PORTNAME=	pycrack
 PORTVERSION=	0.5.1
@@ -16,6 +12,9 @@ DISTNAME=	python-crack-${PORTVERSION}
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Python bindings to cracklib
+
+DEPRECATED=	Superseded by security/py-cracklib
+EXPIRATION_DATE=	2013-07-11
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libcrack.a:${PORTSDIR}/security/cracklib
 
