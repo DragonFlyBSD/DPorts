@@ -2,7 +2,7 @@
 # Date created:				12 February 2004
 # Whom:					Kimura Fuyuki <fuyuki@nigredo.org>
 #
-# $FreeBSD: ports/misc/ossp-uuid/Makefile,v 1.37 2012/12/16 06:16:57 svnexp Exp $
+# $FreeBSD: misc/ossp-uuid/Makefile 320709 2013-06-12 17:45:02Z az $
 #
 
 PORTNAME=	uuid
@@ -32,7 +32,7 @@ CONFIGURE_ENV+=	PERL=${PERL5}
 CONFIGURE_ARGS+=	--with-perl
 PLIST_SUB+=	WITH_PERL=''
 MAN3=		OSSP::uuid.3
-MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VERSION}
+MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 .else
 PLIST_SUB+=	WITH_PERL='@comment '
 .endif
