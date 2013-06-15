@@ -1,12 +1,8 @@
-# New ports collection makefile for:	math/p5-Statistics-Contingency
-# Date created:				Tue Dec 30 19:57:00 CST 2003
-# Whom:					Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/math/p5-Statistics-Contingency/Makefile,v 1.10 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: math/p5-Statistics-Contingency/Makefile 320455 2013-06-10 10:22:44Z tobez $
 
 PORTNAME=	Statistics-Contingency
-PORTVERSION=	0.08
+PORTVERSION=	0.09
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
