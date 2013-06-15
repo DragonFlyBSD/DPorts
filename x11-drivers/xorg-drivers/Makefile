@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xorg-drivers/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xorg-drivers/Makefile 319900 2013-06-04 19:50:50Z zeising $
 
 PORTNAME=	xorg-drivers
 PORTVERSION=	7.7
@@ -9,6 +9,8 @@ EXTRACT_ONLY=	# none
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.org drivers meta-port
+
+.MAKE.FreeBSD_UL=    yes
 
 VIDEODIR=	${PREFIX}/lib/xorg/modules/drivers
 INPUTDIR=	${PREFIX}/lib/xorg/modules/input
