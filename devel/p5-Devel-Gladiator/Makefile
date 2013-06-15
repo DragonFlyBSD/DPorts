@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Devel-Gladiator/Makefile,v 1.3 2013/02/04 10:22:46 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-Gladiator/Makefile 319878 2013-06-04 16:55:36Z miwi $
 
 PORTNAME=	Devel-Gladiator
-PORTVERSION=	0.02
+PORTVERSION=	0.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
