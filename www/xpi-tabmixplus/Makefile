@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-tabmixplus/Makefile 313260 2013-03-02 15:03:18Z miwi $
+# $FreeBSD: www/xpi-tabmixplus/Makefile 320612 2013-06-11 16:50:49Z miwi $
 
 PORTNAME=	tabmixplus
-DISTVERSION=	0.4.0.5
+DISTVERSION=	0.4.1.0
 DISTVERSIONSUFFIX=	-fx
 CATEGORIES=	www
 
