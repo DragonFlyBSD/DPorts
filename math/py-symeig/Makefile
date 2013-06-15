@@ -1,9 +1,5 @@
-# Ports collection makefile for:	Symeig
-# Date created:			September 10, 2008
-# Whom:				Li-Lun Wang <llwang@infor.org>
-#
-# $FreeBSD: ports/math/py-symeig/Makefile,v 1.6 2012/11/17 05:59:29 svnexp Exp $
-#
+# Created by: Li-Lun Wang <llwang@infor.org>
+# $FreeBSD: math/py-symeig/Makefile 319912 2013-06-04 21:26:52Z bapt $
 
 PORTNAME=	symeig
 PORTVERSION=	1.4
@@ -25,9 +21,12 @@ USE_FORTRAN=	yes
 USE_PYTHON=	2.4+
 USE_PYDISTUTILS=	yes
 
-OPTIONS=	ATLAS "Use optimized blas library" OFF
+OPTIONS_DEFINE=	ATLAS
+ATLAS_DESC=	Use optimized blas library
 
-.if defined(WITH_ATLAS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MATLAS}
 LIB_DEPENDS+=	atlas.2:${PORTSDIR}/math/atlas
 .if !exists(${LOCALBASE}/lib/libalapack.a)
 IGNORE=		atlas needs to be built with WITH_STATIC for symeig to function properly
