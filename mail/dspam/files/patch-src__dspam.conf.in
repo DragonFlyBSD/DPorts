@@ -1,0 +1,54 @@
+--- ./src/dspam.conf.in.orig	2010-01-11 23:21:58.000000000 +0200
++++ ./src/dspam.conf.in	2010-01-17 18:49:37.000000000 +0200
+@@ -56,6 +56,7 @@
+ # necessary if you plan on allowing untrusted processing.
+ #
+ #UntrustedDeliveryAgent "/usr/bin/procmail -d %u"
++#QuarantineAgent "@delivery_agent@"
+ 
+ #
+ # SMTP or LMTP Delivery: Alternatively, you may wish to use SMTP or LMTP 
+@@ -330,7 +331,7 @@
+ # Storage driver settings: Specific to a particular storage driver. Uncomment
+ # the configuration specific to your installation, if applicable.
+ #
+-#MySQLServer		/var/lib/mysql/mysql.sock
++#MySQLServer		/tmp/mysql.sock
+ #MySQLPort		
+ #MySQLUser		dspam
+ #MySQLPass		changeme
+@@ -341,7 +342,7 @@
+ # If you are using replication for clustering, you can also specify a separate
+ # server to perform all writes to.
+ #
+-#MySQLWriteServer	/var/lib/mysql/mysql.sock
++#MySQLWriteServer	/tmp/mysql.sock
+ #MySQLWritePort		
+ #MySQLWriteUser		dspam
+ #MySQLWritePass		changeme
+@@ -778,6 +779,7 @@
+ #ServerHost		127.0.0.1
+ #ServerPort		24
+ #ServerQueueSize	32
++# keep this is sync with /usr/local/etc/rc.d/dspam[.sh] rc.d script
+ #ServerPID		/var/run/dspam.pid
+ 
+ #
+@@ -814,14 +816,15 @@
+ # you are running the client and server on the same machine, as it eliminates
+ # much of the bandwidth overhead.
+ #
+-#ServerDomainSocketPath	"/tmp/dspam.sock"
++# keep this is sync with /usr/local/etc/rc.d/dspam[.sh] rc.d script
++#ServerDomainSocketPath  "/var/run/dspam.sock"
+ 
+ #
+ # Client Mode: If you are running DSPAM in client/server mode, uncomment and
+ # set these variables. A ClientHost beginning with a / will be treated as
+ # a domain socket.
+ #
+-#ClientHost	/tmp/dspam.sock
++#ClientHost	/var/run/dspam.sock
+ #ClientIdent	"secret@Relay1"
+ #
+ #ClientHost	127.0.0.1
