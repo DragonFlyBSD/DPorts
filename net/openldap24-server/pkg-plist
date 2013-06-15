@@ -1,4 +1,4 @@
-@comment $FreeBSD: net/openldap24-server/pkg-plist 305599 2012-10-09 18:33:17Z delphij $
+@comment $FreeBSD: net/openldap24-server/pkg-plist 319397 2013-05-29 23:42:40Z delphij $
 @unexec %%RC_DIR%%/etc/rc.d/slapd stop 2>&1 >/dev/null || true
 etc/openldap/slapd.ldif.default
 etc/openldap/slapd.ldif
@@ -82,6 +82,9 @@ etc/openldap/DB_CONFIG.example
 %%BACK_SQL%%libexec/openldap/back_sql-2.4.so.%%SHLIB_MAJOR%%
 %%BACK_SQL%%libexec/openldap/back_sql.la
 %%BACK_SQL%%libexec/openldap/back_sql.so
+%%SHA2%%libexec/openldap/pw-sha2.la
+%%SHA2%%libexec/openldap/pw-sha2.so
+%%SHA2%%libexec/openldap/pw-sha2.so.0
 %%SMBPWD%%libexec/openldap/smbk5pwd.la
 %%SMBPWD%%libexec/openldap/smbk5pwd.so
 %%SMBPWD%%libexec/openldap/smbk5pwd.so.0
