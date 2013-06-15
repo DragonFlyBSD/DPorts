@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/www/blastbeat/Makefile,v 1.2 2012/12/15 08:04:45 svnexp Exp $
+# $FreeBSD: www/blastbeat/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	blastbeat
 PORTVERSION=	20121205
@@ -23,7 +23,7 @@ USE_GMAKE=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	zloidemon
 GH_COMMIT=	cdac9a9
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 PORTEXAMPLES=	*
 
 CFLAGS+=	-I${LOCALBASE}/include \
