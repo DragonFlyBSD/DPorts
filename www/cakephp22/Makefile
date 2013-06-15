@@ -1,5 +1,5 @@
 # Created by: Christoph Theis <theis@gmx.at>
-# $FreeBSD: www/cakephp22/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: www/cakephp22/Makefile 320361 2013-06-09 17:40:41Z miwi $
 
 PORTNAME=	cakephp
 PORTVERSION=	2.2.7
@@ -25,7 +25,6 @@ USES=		gettext
 USE_PHP=	ctype session
 WANT_PHP_WEB=	yes
 DEFAULT_PHP_VER=5
-IGNORE_WITH_PHP=4
 
 CAKE_CONF_FILES=	\
 		app/Config/acl.php \
