@@ -1,5 +1,5 @@
 # Created by: John Chen <johnpupu@gmail.com>
-# $FreeBSD: devel/pecl-ev/Makefile 316823 2013-04-29 14:25:42Z miwi $
+# $FreeBSD: devel/pecl-ev/Makefile 320358 2013-06-09 17:34:48Z miwi $
 
 PORTNAME=	ev
 PORTVERSION=	0.2.4
@@ -19,6 +19,6 @@ USE_PHP_BUILD=	yes
 USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	ev
-IGNORE_WITH_PHP=4 52 53
+IGNORE_WITH_PHP=52 53
 
 .include <bsd.port.mk>
