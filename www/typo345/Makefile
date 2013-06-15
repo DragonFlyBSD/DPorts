@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/typo345/Makefile 319161 2013-05-27 07:23:37Z culot $
+# $FreeBSD: www/typo345/Makefile 320360 2013-06-09 17:39:29Z miwi $
 
 PORTNAME=	typo3
 PORTVERSION=	4.5.27
@@ -15,7 +15,6 @@ NO_LATEST_LINK=	yes
 NO_BUILD=	yes
 USE_PHP=	ctype filter json mysql pcre session xml
 WANT_PHP_WEB=	yes
-IGNORE_WITH_PHP=4
 
 TYPO3WWW=	www
 TYPO3RELEASE=	45
