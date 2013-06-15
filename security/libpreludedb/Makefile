@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: security/libpreludedb/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/libpreludedb/Makefile 320709 2013-06-12 17:45:02Z az $
 
 PORTNAME=	libpreludedb
 PORTVERSION=	1.0.1p1
@@ -95,7 +95,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/api/html/* ${DOCSDIR}
 .endif
 .if ${PORT_OPTIONS:MPERL}
-	@${RM} -f ${PREFIX}/lib/perl5/${PERL_VERSION}/${PERL_ARCH}/perllocal.pod
+	@${RM} -f ${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH}/perllocal.pod
 .endif
 	@${INSTALL_MAN} ${WRKSRC}/docs/manpages/*.1 ${MAN1PREFIX}/man/man1/
 
