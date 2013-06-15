@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/www/xpi-downthemall/Makefile,v 1.33 2012/11/17 20:19:16 svnexp Exp $
+# $FreeBSD: www/xpi-downthemall/Makefile 320615 2013-06-11 16:52:00Z miwi $
 
 PORTNAME=	downthemall
-PORTVERSION=	2.0.15
+PORTVERSION=	2.0.16
 DISTVERSIONSUFFIX=	-fx+sm
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA_EXTENDED}
