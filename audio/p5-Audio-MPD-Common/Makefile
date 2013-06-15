@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Audio-MPD-Common
-# Date created:				28 Oct 2008
-# Whom:	      				chinsan
-#
-# $FreeBSD: ports/audio/p5-Audio-MPD-Common/Makefile,v 1.12 2012/11/17 05:54:40 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: audio/p5-Audio-MPD-Common/Makefile 320258 2013-06-08 14:55:15Z miwi $
 
 PORTNAME=	Audio-MPD-Common
 PORTVERSION=	1.120881
