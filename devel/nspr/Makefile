@@ -2,25 +2,25 @@
 # Date created:				18 December 2001
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: devel/nspr/Makefile 315713 2013-04-03 20:27:48Z flo $
+# $FreeBSD: devel/nspr/Makefile 318268 2013-05-16 02:00:38Z flo $
 #    $MCom: ports-experimental/devel/nspr/Makefile,v 1.6 2008/03/12 13:06:56 ahze Exp $
 
 PORTNAME=	nspr
 DISTVERSION=	4.9.6
 CATEGORIES=	devel
-MASTER_SITES=	MOZILLA
-MASTER_SITE_SUBDIR=	nspr/releases/v${PORTVERSION}/src
+MASTER_SITES=	MOZILLA/${PORTNAME}/releases/v${PORTVERSION}/src
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	A platform-neutral API for system level and libc like functions
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/mozilla/nsprpub/build
+CONFIGURE_WRKSRC=${WRKSRC}/..
 
+USE_AUTOTOOLS=	autoconf213
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_SCRIPT=../configure
 CONFIGURE_ARGS=	--srcdir=${WRKSRC:H}
 
 MAKE_ENV=	DIST=${WRKSRC}/dist
@@ -36,6 +36,9 @@ BROKEN=		Does not compile on arm
 .if !defined(WITH_DEBUG)
 CONFIGURE_ARGS+=--disable-debug
 .endif
+
+do-configure:
+	cd ${WRKSRC} && ${CONFIGURE_ENV} ../${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 
 do-install:
 	${MKDIR} ${PREFIX}/include/nspr

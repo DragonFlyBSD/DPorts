@@ -1,11 +1,12 @@
---- ../pr/include/md/prosdep.h.orig	2012-03-06 13:13:55.000000000 +0000
+--- ../pr/include/md/prosdep.h.orig	2012-10-24 22:19:09.000000000 +0000
 +++ ../pr/include/md/prosdep.h
-@@ -34,7 +34,7 @@ PR_BEGIN_EXTERN_C
- #if defined(AIX)
- #include "md/_aix.h"
+@@ -43,6 +43,9 @@ PR_BEGIN_EXTERN_C
+ #elif defined(OPENBSD)
+ #include "md/_openbsd.h"
  
--#elif defined(FREEBSD)
-+#elif defined(FREEBSD) || defined(__DragonFly__)
- #include "md/_freebsd.h"
++#elif defined(__DragonFly__)
++#include "md/_dragonfly.h"
++
+ #elif defined(BSDI)
+ #include "md/_bsdi.h"
  
- #elif defined(NETBSD)
