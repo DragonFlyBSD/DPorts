@@ -1,13 +1,13 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/databases/adminer/Makefile,v 1.24 2013/01/26 11:52:53 svnexp Exp $
+# $FreeBSD: databases/adminer/Makefile 319760 2013-06-03 08:04:14Z wen $
 
 PORTNAME=	adminer
-PORTVERSION=	3.6.3
+PORTVERSION=	3.7.0
 CATEGORIES=	databases www
 MASTER_SITES=	SF/${PORTNAME}/Adminer/Adminer%20${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
-COMMENT=	A full-featured database management tool written in PHP
+COMMENT=	Full-featured database management tool written in PHP
 
 LICENSE=	AL2
 
