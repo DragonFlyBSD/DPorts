@@ -468,8 +468,8 @@
 @dirrm %%MPIDIR%%/man/man3
 @dirrm %%MPIDIR%%/man/man1
 @dirrm %%MPIDIR%%/man
-@dirrm %%MPIDIR%%/lib/pkgconfig
 @dirrm %%MPIDIR%%/lib/openmpi
+@dirrm %%MPIDIR%%/lib/pkgconfig
 @dirrm %%MPIDIR%%/lib
 @dirrm %%MPIDIR%%/include/vampirtrace
 @dirrm %%MPIDIR%%/include/openmpi/ompi/mpi/cxx

@@ -1,16 +1,15 @@
-# Created by: Brooks Davis <brooks@freebsd.org>
-# $FreeBSD: net/openmpi/Makefile 319015 2013-05-24 20:58:30Z pawel $
+# $FreeBSD: net/openmpi/Makefile 320206 2013-06-07 14:38:46Z brooks $
 
 # TODO:
 #  - etc/*.sample support
 
 PORTNAME=	openmpi
 DISTVERSION=	1.6.1
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	net parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A High Performance Message Passing Library
 
 LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
@@ -41,34 +40,21 @@ USE_LDCONFIG=	${PREFIX}/${MPIDIR}/lib \
 MANPREFIX=	${PREFIX}/${MPIDIR}
 .include "${.CURDIR}/Makefile.man"
 
-OPTIONS_DEFINE=	IPV6 SGE TORQUE
+OPTIONS_DEFINE=	IPV6 TORQUE
 
-SGE_DESC=	Enable SGE support
 TORQUE_DESC=	Enable Torque support
 
 OPTIONS_DEFAULT=	IPV6
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MSGE}
+.if ${PORT_OPTIONS:MIPV6}
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
-.if ${PORT_OPTIONS:MSGE}
-SGE_BASE?=	sge
-SGE_ROOT=	${LOCALBASE}/${SGE_BASE}
-SGE_ARCH=	fbsd-${ARCH}
-RUN_DEPENDS+=	${SGE_ROOT}/bin/fbsd-${ARCH}/qrsh:${PORTSDIR}/sysutils/sge62
-CONFIGURE_ARGS+=	--with-sge
-CONFIGURE_ENV+=	SGE_ROOT=${SGE_ROOT}
-PLIST_FILES+=	${MPIDIR}/lib/openmpi/mca_ras_gridengine.la \
-		${MPIDIR}/lib/openmpi/mca_ras_gridengine.so \
-		${MPIDIR}/share/openmpi/help-ras-gridengine.txt
-.else
 CONFIGURE_ARGS+=	--without-sge
-.endif
 
 .if ${PORT_OPTIONS:MTORQUE}
 LIB_DEPENDS+=	torque:${PORTSDIR}/sysutils/torque
