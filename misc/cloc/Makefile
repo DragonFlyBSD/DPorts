@@ -1,12 +1,8 @@
-# New ports collection makefile for:	cloc
-# Date created:		2 May 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/cloc/Makefile,v 1.19 2012/11/17 05:59:33 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: misc/cloc/Makefile 320182 2013-06-07 08:18:30Z miwi $
 
 PORTNAME=	cloc
-PORTVERSION=	1.56
+PORTVERSION=	1.58
 CATEGORIES=	misc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/v${PORTVERSION}
 EXTRACT_SUFX=	.pl
