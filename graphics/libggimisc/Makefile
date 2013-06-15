@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: graphics/libggimisc/Makefile 315112 2013-03-24 12:12:31Z antoine $
+# $FreeBSD: graphics/libggimisc/Makefile 320004 2013-06-05 17:00:14Z antoine $
 
 PORTNAME=	libggimisc
 PORTVERSION=	2.2.2
@@ -14,6 +14,9 @@ COMMENT=	Libggi extension providing support for hard to categorize features
 LICENSE=	MIT
 
 LIB_DEPENDS=	ggi:${PORTSDIR}/graphics/libggi
+
+DEPRECATED=	Unmaintained
+EXPIRATION_DATE=2013-09-01
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_BZIP2=	yes
