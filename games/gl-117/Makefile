@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/gl-117/Makefile 317437 2013-05-05 21:20:10Z bapt $
+# $FreeBSD: games/gl-117/Makefile 320511 2013-06-11 00:13:12Z miwi $
 
 PORTNAME=	gl-117
 PORTVERSION=	1.3.2
@@ -17,10 +17,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-opengl-dir=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
-
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 DESKTOP_ENTRIES=	"GL-117" \
 			"Action flight simulator" \
