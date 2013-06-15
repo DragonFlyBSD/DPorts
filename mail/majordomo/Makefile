@@ -1,5 +1,5 @@
 # Created by: jfitz@FreeBSD.org
-# $FreeBSD: mail/majordomo/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: mail/majordomo/Makefile 320155 2013-06-07 07:01:23Z az $
 
 PORTNAME=	majordomo
 PORTVERSION=	1.94.5
@@ -12,10 +12,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	anders@FreeBSD.org
 COMMENT=	A mailing list manager
-
-.if defined(WITH_SHA1_COOKIES)
-RUN_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
-.endif
 
 USES=		shebangfix
 USE_PERL5=	yes
@@ -31,12 +27,6 @@ PKGMESSAGE=	${FILESDIR}/post-install-notes
 DOCSDIR=	${PREFIX}/${PORTNAME}/doc
 
 .include <bsd.port.pre.mk>
-
-.if !defined(WITH_SHA1_COOKIES)
-. if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-Digest-MD5>=0:${PORTSDIR}/security/p5-Digest-MD5
-. endif
-.endif
 
 post-patch:
 .if defined(WITH_POSTFIX_APPROVE_PATCH)
