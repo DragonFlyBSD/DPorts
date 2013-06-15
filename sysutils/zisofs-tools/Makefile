@@ -1,5 +1,5 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: sysutils/zisofs-tools/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/zisofs-tools/Makefile 320634 2013-06-11 19:44:50Z rakuco $
 
 PORTNAME=	zisofs-tools
 PORTVERSION=	1.0.8
@@ -12,8 +12,6 @@ MAINTAINER=	chip-set@mail.ru
 COMMENT=	User utilities for zisofs
 
 PORTDOCS=	CHANGES COPYING INSTALL MRULES README
-
-#BROKEN=		checksum mismatch
 
 USE_AUTOTOOLS=	autoconf
 USE_BZIP2=	yes
