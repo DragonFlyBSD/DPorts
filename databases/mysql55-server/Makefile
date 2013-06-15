@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/mysql55-server/Makefile 316336 2013-04-23 10:19:15Z ale $
+# $FreeBSD: databases/mysql55-server/Makefile 320671 2013-06-12 07:56:24Z ale $
 
 PORTNAME?=	mysql
-PORTVERSION=	5.5.31
+PORTVERSION=	5.5.32
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	${MASTER_SITE_MYSQL}
@@ -38,6 +38,7 @@ CMAKE_ARGS+=	-DINSTALL_DOCDIR="share/doc/mysql" \
 		-DINSTALL_SHAREDIR="share" \
 		-DINSTALL_SQLBENCHDIR="share/mysql" \
 		-DINSTALL_SUPPORTFILESDIR="share/mysql" \
+		-DWITH_UNIT_TESTS=0 \
 		-DWITH_LIBEDIT=0 \
 		-DWITH_READLINE=1
 
