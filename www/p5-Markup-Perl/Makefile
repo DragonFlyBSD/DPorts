@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Markup-Perl
-# Date created:				1 September 2008
-# Whom:	      				Jeremy Chadwick <koitsu@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Markup-Perl/Makefile,v 1.9 2012/12/17 12:28:02 svnexp Exp $
-#
+# Created by: Jeremy Chadwick <koitsu@FreeBSD.org>
+# $FreeBSD: www/p5-Markup-Perl/Makefile 320095 2013-06-06 13:28:19Z mat $
 
 PORTNAME=	Markup-Perl
 PORTVERSION=	0.5
@@ -16,7 +12,6 @@ DISTNAME=	Markup-Perl-${PORTVERSION}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Support perl code inside CGI scripts using simple tags
 
-USE_PERL5=	yes
 PERL_CONFIGURE=	yes
 
 MAN3=		Markup::Perl.3
