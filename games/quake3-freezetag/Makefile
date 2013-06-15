@@ -2,7 +2,7 @@
 # Date created:				Sun Jun 24 00:08:58 EDT 2001
 # Whom:					pat@databits.net
 #
-# $FreeBSD: ports/games/quake3-freezetag/Makefile,v 1.11 2012/11/17 05:57:50 svnexp Exp $
+# $FreeBSD: games/quake3-freezetag/Makefile 317955 2013-05-12 13:00:07Z danfe $
 #
 
 PORTNAME=	freezetag
@@ -20,7 +20,6 @@ COMMENT=	Quake III Arena Mod: Freeze Tag
 WRKSRC=		${WRKDIR}/freeze
 
 USE_ZIP=	yes
-USE_CRLF=	yes
 NO_BUILD=	yes
 
 DATADIR=	${Q3DIR}/${PORTNAME}
