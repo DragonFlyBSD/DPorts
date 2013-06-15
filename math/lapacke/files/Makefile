@@ -1,4 +1,4 @@
-# $FreeBSD: ports/math/lapacke/files/Makefile,v 1.3 2012/11/17 05:59:22 svnexp Exp $
+# $FreeBSD: math/lapacke/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 SUBDIR=		lib libtmg
 %%__XLAPACKE%%SUBDIR+=	libx
