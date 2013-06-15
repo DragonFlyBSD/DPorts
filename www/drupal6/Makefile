@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6/Makefile 313262 2013-03-02 15:06:31Z miwi $
+# $FreeBSD: www/drupal6/Makefile 320363 2013-06-09 17:44:17Z miwi $
 
 PORTNAME=	drupal6
 PORTVERSION=	6.28
@@ -15,7 +15,6 @@ USE_DRUPAL=	yes
 DRUPAL6_PORT=	yes
 
 USE_PHP=	gd pcre session xml mbstring
-IGNORE_WITH_PHP=4
 WANT_PHP_WEB=	yes
 
 OPTIONS_DEFINE=	MYSQLI MYSQL PGSQL
