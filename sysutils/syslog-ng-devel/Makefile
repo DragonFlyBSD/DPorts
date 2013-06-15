@@ -1,8 +1,8 @@
 # Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/syslog-ng-devel/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/syslog-ng-devel/Makefile 320657 2013-06-12 04:12:05Z cy $
 
 PORTNAME=	syslog-ng
-PORTVERSION=	3.4.1
+PORTVERSION=	3.4.2
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 DISTVERSION=	$(PORTVERSION:S/a/alpha/:S/b/beta/:S/r/rc/)
