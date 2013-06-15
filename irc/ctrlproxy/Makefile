@@ -3,7 +3,7 @@
 # Date created:			Oct 22, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/irc/ctrlproxy/Makefile,v 1.35 2013/02/05 16:54:22 svnexp Exp $
+# $FreeBSD: irc/ctrlproxy/Makefile 320502 2013-06-10 18:48:34Z ashish $
 #
 
 PORTNAME=	ctrlproxy
@@ -22,6 +22,7 @@ USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
 
 MAN1=		ctrlproxy.1
 MAN5=		ctrlproxy_config.5

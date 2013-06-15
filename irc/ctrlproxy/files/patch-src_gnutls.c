@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/irc/ctrlproxy/files/patch-src_gnutls.c,v 1.2 2012/11/17 05:58:28 svnexp Exp $
+$FreeBSD: irc/ctrlproxy/files/patch-src_gnutls.c 300896 2012-07-14 13:54:48Z beat $
 
 --- src/gnutls.c.orig
 +++ src/gnutls.c
