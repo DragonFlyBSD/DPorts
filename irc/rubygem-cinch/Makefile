@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-cinch
-# Date created:		October 30, 2011
-# Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/irc/rubygem-cinch/Makefile,v 1.3 2012/11/17 05:58:30 svnexp Exp $
-#
+# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
+# $FreeBSD: irc/rubygem-cinch/Makefile 319943 2013-06-05 01:05:05Z swills $
 
 PORTNAME=	cinch
-PORTVERSION=	1.1.3
+PORTVERSION=	2.0.4
 CATEGORIES=	irc rubygems
 MASTER_SITES=	RG
 
