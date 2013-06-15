@@ -2,14 +2,14 @@
 # Date created:	   			09 Dec, 2009
 # Whom:		   			Wen Heping <wen@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-MooseX-Role-WithOverloading/Makefile,v 1.9 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Role-WithOverloading/Makefile 320492 2013-06-10 16:59:59Z mat $
 #
 
 PORTNAME=	MooseX-Role-WithOverloading
-PORTVERSION=	0.09
+PORTVERSION=	0.13
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:FLORA
+MASTER_SITE_SUBDIR=	CPAN:ETHER
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
