@@ -1,9 +1,5 @@
-# New ports collection makefile for:	columns
-# Date created:				26 August 1999
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/columns/Makefile,v 1.25 2012/11/17 05:57:34 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/columns/Makefile 320800 2013-06-13 13:43:36Z bsam $
 
 PORTNAME=	columns
 PORTVERSION=	1.2b
@@ -23,8 +19,12 @@ GNU_CONFIGURE=	yes
 DATADIR=	${PREFIX}/share/Columns
 PORTDOCS=	README
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
