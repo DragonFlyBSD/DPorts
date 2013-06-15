@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi
-# $FreeBSD: security/opensaml2/Makefile 319885 2013-06-04 17:29:21Z girgen $
+# $FreeBSD: security/opensaml2/Makefile 320338 2013-06-09 14:41:24Z girgen $
 
 PORTNAME=	opensaml2
 PORTVERSION=	2.5.2
@@ -14,6 +14,8 @@ LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
 		log4shib.1:${PORTSDIR}/devel/log4shib \
 		xerces-c.3:${PORTSDIR}/textproc/xerces-c3 \
 		xmltooling.6:${PORTSDIR}/devel/xmltooling
+
+BUILD_DEPENDS=	boost-libs>=0:${PORTSDIR}/devel/boost-libs
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-log4shib=${LOCALBASE} --with-openssl=${OPENSSLBASE} \
