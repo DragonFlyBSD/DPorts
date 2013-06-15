@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/libprelude/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/libprelude/Makefile 320709 2013-06-12 17:45:02Z az $
 
 PORTNAME=	libprelude
 PORTVERSION=	1.0.1
@@ -24,7 +24,7 @@ CONFIGURE_ARGS=	--localstatedir=/var \
 		--enable-gtk-doc=no \
 		--with-html-dir=${PREFIX}/share/doc
 USE_GMAKE=	yes
-USES=	pathfix pkgconfig gettext iconv
+USES=	pathfix pkgconfig gettext iconv charsetfix
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
@@ -74,7 +74,7 @@ post-install:
 .endif
 .endfor
 .if ${PORT_OPTIONS:MPERL}
-	-@${RM} -f ${PREFIX}/lib/perl5/${PERL_VERSION}/${PERL_ARCH}/perllocal.pod
+	-@${RM} -f ${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH}/perllocal.pod
 .endif
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
