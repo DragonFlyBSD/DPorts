@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-EBook-Tools
-# Date created:		20 February 2009
-# Whom:	      		simond@irrelevant.org
-#
-# $FreeBSD: ports/textproc/p5-EBook-Tools/Makefile,v 1.9 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: simond@irrelevant.org
+# $FreeBSD: textproc/p5-EBook-Tools/Makefile 320870 2013-06-14 01:57:39Z miwi $
 
 PORTNAME=	EBook-Tools
 PORTVERSION=	0.4.9
