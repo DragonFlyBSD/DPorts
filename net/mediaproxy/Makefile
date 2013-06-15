@@ -1,8 +1,5 @@
-# New ports collection makefile for:	mediaproxy
-# Date created:				08 August 2006
-# Whom:					Steve Ames <steve@energistic.com>
-#
-# $FreeBSD: ports/net/mediaproxy/Makefile,v 1.12 2012/11/17 06:00:05 svnexp Exp $
+# Created by: Steve Ames <steve@energistic.com>
+# $FreeBSD: net/mediaproxy/Makefile 319985 2013-06-05 12:22:03Z bapt $
 
 PORTNAME=	mediaproxy
 PORTVERSION=	1.8.2
@@ -20,11 +17,12 @@ USE_PYTHON=	2.5+
 
 SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 
-OPTIONS=	ACCOUNTING "ACCOUNTING support (Requires MySQL)" off
+OPTIONS_DEFINE=	ACCOUNTING
+ACCOUNTING_DESC=	ACCOUNTING support (Requires MySQL)
 
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_ACCOUNTING)
+.if ${PORT_OPTIONS:MACCOUNTING}
 USE_MYSQL=	yes
 .endif
 
