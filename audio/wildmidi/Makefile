@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: audio/wildmidi/Makefile 316012 2013-04-17 23:40:57Z ak $
+# $FreeBSD: audio/wildmidi/Makefile 319227 2013-05-27 12:45:20Z bapt $
 
 PORTNAME=	wildmidi
 PORTVERSION=	0.2.3.5
@@ -35,6 +35,9 @@ post-patch:
 			${WRKSRC}/docs/wildmidi.cfg.5
 		${REINPLACE_CMD} -e 's@/usr/local/share/wildmidi/@${DATADIR}/@' \
 			-e 's@default_timifityconf@default_wildmidiconf@' \
+			-e 's@-fexpensive-optimizations@@g' \
+			-e 's@-finline-limit=32000@@g' \
+			-e 's@-frename-registers@@g' \
 			${WRKSRC}/configure
 		${REINPLACE_CMD} -e '/WM_MixerOptions/s/ \&\& / \& /' \
 			${WRKSRC}/src/wildmidi_lib.c
