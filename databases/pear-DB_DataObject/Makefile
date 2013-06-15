@@ -1,8 +1,8 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@php.net>)
-# $FreeBSD: databases/pear-DB_DataObject/Makefile 314451 2013-03-17 14:59:02Z miwi $
+# $FreeBSD: databases/pear-DB_DataObject/Makefile 319876 2013-06-04 16:54:54Z miwi $
 
 PORTNAME=	DB_DataObject
-PORTVERSION=	1.10.0
+PORTVERSION=	1.11.2
 CATEGORIES=	databases pear
 
 MAINTAINER=	miwi@FreeBSD.org
