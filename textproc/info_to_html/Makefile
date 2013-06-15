@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	info_to_html
-# Date created:			Jun 19, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/info_to_html/Makefile,v 1.10 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/info_to_html/Makefile 318926 2013-05-24 08:22:57Z az $
 
 PORTNAME=	info_to_html
 PORTVERSION=	0.9.6
@@ -20,10 +15,6 @@ USE_PERL5=	yes
 NO_BUILD=	yes
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/info_to_html ${PREFIX}/bin
