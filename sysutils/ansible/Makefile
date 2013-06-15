@@ -1,9 +1,9 @@
-# $FreeBSD: sysutils/ansible/Makefile 318885 2013-05-23 16:36:28Z wg $
+# $FreeBSD: sysutils/ansible/Makefile 320678 2013-06-12 12:26:21Z wg $
 
 PORTNAME=	ansible
-PORTVERSION=	1.1
+PORTVERSION=	1.2
 CATEGORIES=	sysutils python
-MASTER_SITES=	http://ansible.cc/releases/
+MASTER_SITES=	http://ansibleworks.com/releases/
 
 MAINTAINER=	lifanov@mail.lifanov.com
 COMMENT=	Simple ssh-based configuration management and orchestration system
@@ -20,7 +20,7 @@ USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 
 USES=		shebangfix
-SHEBANG_FILES=	${WRKSRC}/library/*
+SHEBANG_FILES=	${WRKSRC}/library/*/*
 
 SUB_FILES=	pkg-message
 PORTEXAMPLES=	*
@@ -32,7 +32,6 @@ post-patch-script:
 		${WRKSRC}/docs/man/man1/ansible.1 \
 		${WRKSRC}/examples/ansible.cfg \
 		${WRKSRC}/examples/hosts \
-		${WRKSRC}/examples/playbooks/ansible_pull.yml \
 		${WRKSRC}/lib/ansible/constants.py \
 		${WRKSRC}/lib/ansible/playbook/__init__.py \
 		${WRKSRC}/lib/ansible/runner/__init__.py
