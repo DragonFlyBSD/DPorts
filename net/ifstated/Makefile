@@ -1,5 +1,5 @@
 # Created by: Matthew George <mdg@secureworks.net>
-# $FreeBSD: ports/net/ifstated/Makefile,v 1.16 2012/11/17 06:00:02 svnexp Exp $
+# $FreeBSD: net/ifstated/Makefile 306683 2012-10-30 16:55:15Z pawel $
 
 PORTNAME=	ifstated
 PORTVERSION=	5.1

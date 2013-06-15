@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/ifstated/files/ifstated.in,v 1.6 2012/11/17 06:00:02 svnexp Exp $
+# $FreeBSD: net/ifstated/files/ifstated.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # PROVIDE: ifstated
