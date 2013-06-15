@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Math::BaseCalc
-# Date created:				25 Jan 2002
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/math/p5-Math-BaseCalc/Makefile,v 1.11 2012/11/17 05:59:25 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: math/p5-Math-BaseCalc/Makefile 320477 2013-06-10 14:15:37Z jadawin $
 
 PORTNAME=	Math-BaseCalc
-PORTVERSION=	1.016
+PORTVERSION=	1.017
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
