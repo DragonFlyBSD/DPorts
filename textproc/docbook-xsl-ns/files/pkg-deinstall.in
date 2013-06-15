@@ -1,0 +1,12 @@
+#!/bin/sh
+# $FreeBSD: textproc/docbook-xsl-ns/files/pkg-deinstall.in 319791 2013-06-03 16:02:16Z gabor $
+# This script will remove the docbook-xsl entries added to xml catalog.
+# -- Rui Lopes <rui@ruilopes.com>
+
+if [ "$2" != "POST-DEINSTALL" ]; then
+	exit 0
+fi
+
+%%XMLCATMGR%% -c %%CATALOG_PORTS%% remove \
+	http://docbook.sourceforge.net/release/xsl/ 
+exit 0
