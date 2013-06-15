@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/audio/xmms-sapplug/Makefile,v 1.17 2012/11/17 05:54:49 svnexp Exp $
+# $FreeBSD: audio/xmms-sapplug/Makefile 320557 2013-06-11 13:08:16Z ehaupt $
 
 PORTNAME=	xmms-sapplug
 DISTVERSION=	0.3f
@@ -29,7 +29,9 @@ OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 
 .include <bsd.port.options.mk>
 
-.if ${CXX:T} != "clang++"
+_CLANG!=	clang --version | ${HEAD} -1 | ${SED} -e 's/.*clang version \([0-9]\)\.\([0-9]\).*/\1\2/'
+
+.if ${CXX:T} != "clang++" && !defined(_CLANG)
 CXXFLAGS+=	--no-exceptions
 .endif
 
