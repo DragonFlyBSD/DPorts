@@ -1,9 +1,5 @@
-# New ports collection makefile for: simplehtmldom
-# Date created:		2010-01-18
-# Whom:			Joe Horn <joehorn@gmail.com>
-#
-# $FreeBSD: ports/textproc/simplehtmldom/Makefile,v 1.5 2012/11/17 06:02:21 svnexp Exp $
-#
+# Created by: Joe Horn <joehorn@gmail.com>
+# $FreeBSD: textproc/simplehtmldom/Makefile 320355 2013-06-09 17:27:04Z miwi $
 
 PORTNAME=		simplehtmldom
 DISTVERSION=		1.5
@@ -23,7 +19,6 @@ NO_BUILD=		YES
 USE_PHP=		pcre
 
 DEFAULT_PHP_VER=	5
-IGNORE_WITH_PHP=	4
 
 SUB_FILES+=		pkg-message
 SUB_LIST+=		DATADIR=${DATADIR} PREFIX=${PREFIX}
