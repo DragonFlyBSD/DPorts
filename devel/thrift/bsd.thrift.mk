@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/devel/thrift/bsd.thrift.mk,v 1.3 2013/02/26 16:50:09 svnexp Exp $
+# $FreeBSD: devel/thrift/bsd.thrift.mk 312988 2013-02-26 16:17:26Z scheidell $
 #
 # to use:
 # in your makefile, set:
