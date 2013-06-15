@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/www/xpi-noscript/Makefile,v 1.73 2013/02/19 18:10:26 svnexp Exp $
+# $FreeBSD: www/xpi-noscript/Makefile 320613 2013-06-11 16:51:10Z miwi $
 
 PORTNAME=	noscript
-PORTVERSION=	2.6.5.7
+PORTVERSION=	2.6.6.1
 DISTVERSIONSUFFIX=	-sm+fx+fn
 CATEGORIES=	www
 
