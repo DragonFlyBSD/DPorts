@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: www/eaccelerator/Makefile 319166 2013-05-27 08:02:30Z ale $
+# $FreeBSD: www/eaccelerator/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	eaccelerator
 PORTVERSION=	0.9.7
@@ -14,7 +14,7 @@ DOCCOMM_DESC=	Retain doc-comments in internal php structures
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	${PORTNAME}
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	42067ac
 
 OPTIONS_DEFINE=	DOCCOMM
