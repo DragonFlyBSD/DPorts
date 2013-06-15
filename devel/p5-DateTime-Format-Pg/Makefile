@@ -2,11 +2,11 @@
 # Date created:	   2 july 2003
 # Whom:		   Mathieu Arnold <m@absolight.net>
 #
-# $FreeBSD: ports/devel/p5-DateTime-Format-Pg/Makefile,v 1.22 2012/11/17 05:56:12 svnexp Exp $
+# $FreeBSD: devel/p5-DateTime-Format-Pg/Makefile 320029 2013-06-05 21:48:10Z mat $
 #
 
 PORTNAME=	DateTime-Format-Pg
-PORTVERSION=	0.16.007
+PORTVERSION=	0.16.008
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
