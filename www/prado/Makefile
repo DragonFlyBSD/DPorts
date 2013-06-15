@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/prado/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/prado/Makefile 320363 2013-06-09 17:44:17Z miwi $
 
 PORTNAME=	prado
 PORTVERSION=	3.1.6.r2699
@@ -23,7 +23,6 @@ NO_BUILD=	yes
 WANT_PHP_WEB=	yes
 USE_PHP=	session
 DEFAULT_PHP_VER=5
-IGNORE_WITH_PHP=4
 
 SUB_FILES=	pkg-message
 
