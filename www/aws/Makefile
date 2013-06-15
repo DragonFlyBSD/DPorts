@@ -1,9 +1,9 @@
 # Created by: John Marino <draco@marino.st>
-# $FreeBSD: www/aws/Makefile 316923 2013-04-30 12:13:12Z bapt $
+# $FreeBSD: www/aws/Makefile 320141 2013-06-06 22:31:15Z rakuco $
 
 PORTNAME=	aws
 PORTVERSION=	2.10.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 
