@@ -1,5 +1,5 @@
 # Created by: Rodrigo OSORIO <rodrigo@bebik.net>
-# $FreeBSD: ports/textproc/p5-libsoldout/Makefile,v 1.5 2013/01/23 13:46:26 svnexp Exp $
+# $FreeBSD: textproc/p5-libsoldout/Makefile 318950 2013-05-24 10:17:00Z az $
 
 PORTNAME=	libsoldout
 PORTVERSION=	0.02
@@ -22,10 +22,4 @@ USE_LDCONFIG=	yes
 
 MAN3=		libsoldout.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
