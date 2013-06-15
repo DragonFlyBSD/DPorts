@@ -1,8 +1,8 @@
 # Whom:	Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-hike/Makefile 319592 2013-06-01 21:22:07Z swills $
+# $FreeBSD: devel/rubygem-hike/Makefile 319979 2013-06-05 11:18:30Z swills $
 
 PORTNAME=	hike
-PORTVERSION=	1.2.2
+PORTVERSION=	1.2.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
