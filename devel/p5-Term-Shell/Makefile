@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Term-Shell/Makefile,v 1.5 2012/11/17 05:56:31 svnexp Exp $
+# $FreeBSD: devel/p5-Term-Shell/Makefile 319841 2013-06-04 09:47:18Z tobez $
 
 PORTNAME=	Term-Shell
-PORTVERSION=	0.03
+PORTVERSION=	0.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
