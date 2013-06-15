@@ -1,9 +1,8 @@
 # Created by: will
-# $FreeBSD: math/p5-Bit-Vector/Makefile 310821 2013-01-22 09:45:55Z tobez $
+# $FreeBSD: math/p5-Bit-Vector/Makefile 319784 2013-06-03 14:15:40Z tobez $
 
 PORTNAME=	Bit-Vector
-PORTVERSION=	7.2
-PORTREVISION=	2
+PORTVERSION=	7.3
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
