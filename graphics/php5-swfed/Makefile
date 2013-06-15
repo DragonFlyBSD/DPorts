@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/graphics/php5-swfed/Makefile,v 1.34 2013/02/12 16:33:29 svnexp Exp $
+# $FreeBSD: graphics/php5-swfed/Makefile 320368 2013-06-09 18:11:48Z miwi $
 
 PORTNAME=	swfed
 PORTVERSION=	0.60
@@ -18,7 +18,6 @@ LIB_DEPENDS=	gif:${PORTSDIR}/graphics/giflib \
 		png15:${PORTSDIR}/graphics/png
 
 DEFAULT_PHP_VER=	5
-IGNORE_WITH_PHP=	4
 USE_PHP=	zlib
 USE_PHPEXT=	yes
 
