@@ -1,5 +1,40 @@
 --- configure.orig
 +++ configure
+@@ -100,7 +100,7 @@
+ # Use this before starting a check
+ echocheck() {
+   echo "============ Checking for $@ ============" >> "$TMPLOG"
+-  echo ${_echo_n} "Checking for $@ ... ${_echo_c}"
++  echo ${_echo_n} "Checking for $@... ${_echo_c}"
+ }
+ 
+ # Use this to echo the results of a check
+@@ -493,20 +493,20 @@
+ echores "$_target_system"
+ 
+ 
+-echo "Detected host..."$system_name
++echo "Detected host..." $system_name
+ 
+ _cdefos="-DDATADIR='\"$_datadir\"'"
+ 
+-cc_name=`$_cc -v 2>&1 | tail -n 1 | cut -d ' ' -f 1`
+-cc_version=`$_cc -dumpversion`
++eval `$_cc -v 2>&1 | sed -En \
++  '/version/s,(.* )?(.*) version ([0-9.]*).*,cc_name=\2 ; cc_version=\3,p'`
+ 
+ echocheck "C compiler name"
+ echores $cc_name
+ case $cc_name in
+-    gcc)
++    gcc|clang)
+     ;;
+     *)
+-      die "Unknown compiler name $cc_name. Project required GCC"
++      die "Unknown compiler name $cc_name. Project requires GCC or Clang"
+     ;;
+ esac
+ 
 @@ -583,10 +583,10 @@
    _osldef="$_debug $_profile $_osldef"
  elif test -z "$CFLAGS" ; then
