@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/databases/py-umemcache/Makefile,v 1.5 2013/02/09 15:58:53 svnexp Exp $
+# $FreeBSD: databases/py-umemcache/Makefile 320465 2013-06-10 12:12:21Z koobs $
 
 PORTNAME=	umemcache
-PORTVERSION=	1.6
+PORTVERSION=	1.6.3
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
