@@ -1,4 +1,4 @@
-# $FreeBSD: math/libtommath/Makefile 316040 2013-04-18 13:27:18Z gahr $
+# $FreeBSD: math/libtommath/Makefile 319380 2013-05-29 15:41:00Z miwi $
 
 PORTNAME=	libtommath
 PORTVERSION=	0.42.0
@@ -45,9 +45,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tommath.pdf ${DOCSDIR}/
 .endif
 
-regression-test:
-	(cd ${WRKSRC}; \
-	 ${SETENV} ${MAKE_ENV} ${GMAKE} -f ${MAKEFILE} mtest test; \
-	 ./mtest/mtest | ./test)
+#regression-test:
+#	(cd ${WRKSRC}; \
+#	 ${SETENV} ${MAKE_ENV} ${GMAKE} -f ${MAKEFILE} mtest test; \
+#	 ./mtest/mtest | ./test)
 
 .include <bsd.port.mk>
