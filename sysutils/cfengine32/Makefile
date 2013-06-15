@@ -1,5 +1,5 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine32/Makefile 317381 2013-05-04 22:22:03Z bapt $
+# $FreeBSD: sysutils/cfengine32/Makefile 320661 2013-06-12 06:14:26Z miwi $
 
 PORTNAME=	cfengine
 PORTVERSION=	3.2.3
@@ -21,10 +21,6 @@ CONFLICTS=	cfengine-[2]* cfengine-3.[34]* cfengine-devel-*
 USE_RC_SUBR=	cf-execd cf-serverd
 
 LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
-
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 WITH_BDB_VER?=	47
 USE_BDB=	yes
