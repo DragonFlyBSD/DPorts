@@ -1,18 +1,18 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: ports/graphics/renrot/Makefile,v 1.6 2013/02/17 12:05:20 svnexp Exp $
+# $FreeBSD: graphics/renrot/Makefile 320418 2013-06-10 00:22:51Z danfe $
 
 PORTNAME=	renrot
-PORTVERSION=	1.1
+PORTVERSION=	1.2.0
 CATEGORIES=	graphics perl5
 MASTER_SITES=	ftp://download.gnu.org.ua/pub/release/${PORTNAME}/
 
 MAINTAINER=	zeus@ibs.dn.ua
-COMMENT=	Perl utility for various processing tasks on the image files
+COMMENT=	Program to rename and rotate image files according to EXIF tags
 
 LICENSE=	ART20
 
 BUILD_DEPENDS=	p5-Image-ExifTool>=0:${PORTSDIR}/graphics/p5-Image-ExifTool
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS:=	${BUILD_DEPENDS} jpegtran:${PORTSDIR}/graphics/jpeg
 
 PERL_CONFIGURE=	yes
 
@@ -20,7 +20,7 @@ OPTIONS_DEFINE=	IMAGEMAGICK DOCS
 IMAGEMAGICK_DESC=	Image::Magick Perl module support
 
 MAN1=		${PORTNAME}.1
-PORTDOCS=	AUTHORS README ChangeLog NEWS TODO
+PORTDOCS=	AUTHORS README README.russian ChangeLog NEWS TODO
 
 .include <bsd.port.options.mk>
 
