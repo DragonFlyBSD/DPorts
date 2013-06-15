@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/tokyocabinet/Makefile 314856 2013-03-21 17:43:46Z bapt $
+# $FreeBSD: databases/tokyocabinet/Makefile 320319 2013-06-09 09:17:28Z antoine $
 
 PORTNAME=	tokyocabinet
 PORTVERSION=	1.4.48
@@ -42,8 +42,9 @@ UYIELD_DESC=	Detecting race conditions
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
-EXTRA_PATCHES=	${FILESDIR}/extra-patch-Makefile.in
 PORTDOCS=	*
+.else
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-Makefile.in
 .endif
 
 .if ${PORT_OPTIONS:MDEBUG}
