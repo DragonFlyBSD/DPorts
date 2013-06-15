@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bandwidthd
-# Date created:				Sun Nov  2
-# Whom:					Clement Laforet <sheepkiller@cultdeadsheep.org>
-#
-# $FreeBSD: net-mgmt/bandwidthd/Makefile 316662 2013-04-27 11:59:28Z mva $
-#
+# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
+# $FreeBSD: net-mgmt/bandwidthd/Makefile 320842 2013-06-13 21:19:12Z bdrewery $
 
 PORTNAME=	bandwidthd
 PORTVERSION=	2.0.1
@@ -12,14 +8,12 @@ CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	Tracks bandwidth usage by IP address
 
-LIB_DEPENDS+=	gd.4:${PORTSDIR}/graphics/gd
+LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
 
-.if ${CC} == "clang"
-USE_CSTD=	c89
-.endif
+USE_CSTD=	gnu89
 
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
