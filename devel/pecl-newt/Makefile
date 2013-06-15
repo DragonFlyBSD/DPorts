@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/pecl-newt/Makefile,v 1.13 2012/11/17 05:56:41 svnexp Exp $
+# $FreeBSD: devel/pecl-newt/Makefile 320356 2013-06-09 17:30:33Z miwi $
 
 PORTNAME=	newt
 PORTVERSION=	1.2.6
@@ -19,7 +19,6 @@ USE_PHPIZE=	yes
 USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	newt
-IGNORE_WITH_PHP=4
 
 post-patch:
 	@${REINPLACE_CMD} -e '/SEARCH_PATH/ s,=",="${LOCALBASE} ${PREFIX} ,' \
