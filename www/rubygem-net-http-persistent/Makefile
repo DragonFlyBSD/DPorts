@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/www/rubygem-net-http-persistent/Makefile,v 1.12 2012/12/04 07:04:23 svnexp Exp $
+# $FreeBSD: www/rubygem-net-http-persistent/Makefile 320766 2013-06-13 11:49:45Z sunpoet $
 
 PORTNAME=	net-http-persistent
 PORTVERSION=	2.8
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Manages persistent connections using Net::HTTP
+
+LICENSE=	MIT
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
