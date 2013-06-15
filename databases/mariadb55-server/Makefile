@@ -1,7 +1,7 @@
-# $FreeBSD: databases/mariadb55-server/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: databases/mariadb55-server/Makefile 320339 2013-06-09 14:54:38Z flo $
 
 PORTNAME?=	mariadb
-PORTVERSION=	5.5.30
+PORTVERSION=	5.5.31
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://ftp.osuosl.org/pub/mariadb/${PORTNAME}-${PORTVERSION}/kvm-tarbake-jaunty-x86/ \
