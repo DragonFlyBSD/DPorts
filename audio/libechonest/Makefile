@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/libechonest/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/libechonest/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	libechonest
 PORTVERSION=	2.0.1
@@ -15,7 +15,7 @@ LIB_DEPENDS=	qjson:${PORTSDIR}/devel/qjson
 
 GH_ACCOUNT=	dschmidt
 GH_PROJECT=	${PORTNAME}
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	f9a55d1
 
 USES=		cmake pkgconfig
