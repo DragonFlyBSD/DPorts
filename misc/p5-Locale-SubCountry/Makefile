@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: ports/misc/p5-Locale-SubCountry/Makefile,v 1.30 2013/02/15 10:11:43 svnexp Exp $
+# $FreeBSD: misc/p5-Locale-SubCountry/Makefile 318927 2013-05-24 08:34:00Z az $
 
 PORTNAME=	Locale-SubCountry
 PORTVERSION=	1.61
@@ -18,10 +18,4 @@ PERL_MODBUILD=	yes
 MAN3=	Locale::SubCountry.3 \
 	Locale::SubCountry::Data.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
