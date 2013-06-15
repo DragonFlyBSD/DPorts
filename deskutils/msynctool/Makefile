@@ -2,7 +2,7 @@
 # Date created:				11 July 2008
 # Whom:					Alexander Logvinov <ports@logvinov.com>
 #
-# $FreeBSD: ports/deskutils/msynctool/Makefile,v 1.3 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/msynctool/Makefile 319890 2013-06-04 18:14:34Z bdrewery $
 #
 
 PORTNAME=	msynctool
@@ -15,7 +15,7 @@ COMMENT=	A command line client for the OpenSync framework
 
 LIB_DEPENDS=	opensync.0:${PORTSDIR}/devel/libopensync022
 
-CONFLICTS=	msynctool-devel-[0-9]*
+CONFLICTS=	osynctool-[0-9]*
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
