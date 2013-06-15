@@ -1,4 +1,4 @@
-# $FreeBSD: devel/fossil/Makefile 314549 2013-03-18 10:23:23Z bapt $
+# $FreeBSD: devel/fossil/Makefile 317875 2013-05-11 13:15:45Z bapt $
 
 PORTNAME=	fossil
 PORTVERSION=	20130216000435
@@ -18,8 +18,6 @@ MAKE_JOBS_UNSAFE=	yes
 PLIST_FILES=	bin/fossil
 
 HAS_CONFIGURE=	yes
-
-USE_GMAKE=	yes
 
 OPTIONS_DEFINE=	JSON MARKDOWN STATIC
 JSON_DESC=	JSON API support
