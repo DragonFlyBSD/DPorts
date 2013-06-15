@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-greasemonkey/Makefile 313258 2013-03-02 15:01:51Z miwi $
+# $FreeBSD: www/xpi-greasemonkey/Makefile 320614 2013-06-11 16:51:45Z miwi $
 
 PORTNAME=	greasemonkey
-PORTVERSION=	1.8
+PORTVERSION=	1.9
 DISTVERSIONSUFFIX=	-fx
 CATEGORIES=	www
 
