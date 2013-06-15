@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-IO-Async/Makefile 316105 2013-04-19 14:35:51Z sunpoet $
+# $FreeBSD: devel/p5-IO-Async/Makefile 320748 2013-06-13 10:23:48Z tobez $
 
 PORTNAME=	IO-Async
-PORTVERSION=	0.56
+PORTVERSION=	0.58
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PEVANS
