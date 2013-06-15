@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-addressable
-# Date created:				01 March 2009
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rubygem-addressable/Makefile,v 1.13 2012/11/17 06:03:03 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: www/rubygem-addressable/Makefile 319744 2013-06-03 01:41:49Z swills $
 
 PORTNAME=	addressable
-PORTVERSION=	2.3.2
+PORTVERSION=	2.3.4
 CATEGORIES=	www devel rubygems
 MASTER_SITES=	RG
 
