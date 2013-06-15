@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@portaone.com>
-# $FreeBSD: net/asterisk10/Makefile 316277 2013-04-22 21:11:34Z flo $
+# $FreeBSD: net/asterisk10/Makefile 320887 2013-06-14 07:07:01Z flo $
 
 PORTNAME=	asterisk
 PORTVERSION=	10.12.2
