@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Module-Pluggable/Makefile 314426 2013-03-17 12:28:43Z lth $
+# $FreeBSD: devel/p5-Module-Pluggable/Makefile 320532 2013-06-11 06:38:21Z lth $
 
 PORTNAME=	Module-Pluggable
-PORTVERSION=	4.7
+PORTVERSION=	4.8
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
