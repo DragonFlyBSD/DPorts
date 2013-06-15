@@ -1,9 +1,5 @@
-# ports collection makefile for:	snmptt
-# Date created:				21 May 2004
-# Whom:					Bruce M Simpson <bms@FreeBSD.org>
-#
-# $FreeBSD: ports/net-mgmt/snmptt/Makefile,v 1.12 2012/11/17 06:00:38 svnexp Exp $
-#
+# Created by: Bruce M Simpson <bms@FreeBSD.org>
+# $FreeBSD: net-mgmt/snmptt/Makefile 320855 2013-06-13 23:46:45Z miwi $
 
 PORTNAME=		snmptt
 PORTVERSION=		1.3
