@@ -1,18 +1,16 @@
-# Ports collection makefile for:	rubygem-jammit
-# Date created:				2011-06-16
-# Whom:					rpsfa@rit.edu
-#
-# $FreeBSD: ports/devel/rubygem-jammit/Makefile,v 1.5 2012/11/17 05:56:59 svnexp Exp $
+# Created by: rpsfa@rit.edu
+# $FreeBSD: devel/rubygem-jammit/Makefile 320413 2013-06-09 21:42:08Z swills $
 
 PORTNAME=	jammit
-PORTVERSION=	0.6.5
+PORTVERSION=	0.6.6
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	An industrial strength asset packaging library for Rails
 
-RUN_DEPENDS=	devel/rubygem-yui-compressor>=0.9.3:${PORTSDIR}/devel/rubygem-yui-compressor
+RUN_DEPENDS=	rubygem-jsmin>=1.0.1:${PORTSDIR}/textproc/rubygem-jsmin \
+		rubygem-cssmin>=1.0.3:${PORTSDIR}/textproc/rubygem-cssmin
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
