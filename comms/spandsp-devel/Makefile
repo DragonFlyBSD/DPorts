@@ -1,4 +1,4 @@
-# $FreeBSD: comms/spandsp-devel/Makefile 316761 2013-04-28 22:16:02Z beech $
+# $FreeBSD: comms/spandsp-devel/Makefile 318957 2013-05-24 10:46:51Z bapt $
 
 PORTNAME=	spandsp
 DISTVERSION=	0.0.6pre21
@@ -29,11 +29,10 @@ CONFLICTS=	spandsp-[0-9]*
 
 OPTIONS_DEFINE=	DOXYGEN
 
-PORTDOCS=	*
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOXYGEN} && ${PORT_OPTIONS:MDOCS}
+PORTDOCS=	*
 CONFIGURE_ARGS+=--enable-doc
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen \
 		docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
