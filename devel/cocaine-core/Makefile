@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/cocaine-core/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: devel/cocaine-core/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	cocaine-core
 PORTVERSION=	0.10
@@ -25,7 +25,7 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	zloidemon
 GH_COMMIT=	7d0f35c
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 
 MAKE_JOBS_SAFE=	yes
 
