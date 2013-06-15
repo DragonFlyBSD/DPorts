@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/pkcs11-helper/Makefile 317262 2013-05-03 21:28:21Z bapt $
+# $FreeBSD: security/pkcs11-helper/Makefile 320662 2013-06-12 06:16:42Z miwi $
 
 PORTNAME=	pkcs11-helper
 PORTVERSION=	1.09
@@ -20,10 +20,6 @@ USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack pkgconfig
 USE_LDCONFIG=	yes
-
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
 		OPENSSL_LIBS="-L${OPENSSLLIB} -lssl"
