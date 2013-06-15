@@ -1,8 +1,9 @@
 # Created by: Edwin Groothuis <edwin2mavetju.org>
-# $FreeBSD: devel/flatzebra/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/flatzebra/Makefile 320189 2013-06-07 10:00:26Z martymac $
 
 PORTNAME=	flatzebra
 PORTVERSION=	0.1.6
+PORTREVISION=	1
 CATEGORIES=	devel games
 MASTER_SITES=	http://perso.b2b2c.ca/sarrazip/dev/
 
