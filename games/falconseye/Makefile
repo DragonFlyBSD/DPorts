@@ -1,9 +1,5 @@
-# Ports collection makefile for:  falconseye
-# Date created:			  23 Aug 2001
-# Whom:				  Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/games/falconseye/Makefile,v 1.25 2012/11/17 05:57:38 svnexp Exp $
-#
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: games/falconseye/Makefile 320817 2013-06-13 16:24:36Z bsam $
 
 PORTNAME=	falconseye
 PORTVERSION=	1.9.3
@@ -24,8 +20,9 @@ USE_SDL=	sdl
 USE_PERL5_BUILD=yes
 USE_ZIP=	yes
 USE_XORG=	x11 xpm xaw
-CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -I${LOCALBASE}/include/SDL11
-WRKSRC=		${WRKDIR}
+CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -I${LOCALBASE}/include/SDL11 \
+		-Wno-return-type
+NO_WRKSUBDIR=	yes
 MAKE_JOBS_UNSAFE=	yes
 
 post-patch:
