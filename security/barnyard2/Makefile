@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/barnyard2/Makefile,v 1.20 2013/02/15 20:18:44 svnexp Exp $
+# $FreeBSD: security/barnyard2/Makefile 312306 2013-02-15 19:25:12Z jgh $
 
 PORTNAME=	barnyard2
 PORTVERSION=	1.12
