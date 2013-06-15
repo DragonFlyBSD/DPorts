@@ -1,9 +1,5 @@
-# Ports collection makefile for:	jpgraph2
-# Date created:			7 Dec 2006
-# Whom:				Alex Dupre <ale@FreeBSD.org:
-#
-# $FreeBSD: ports/graphics/jpgraph2/Makefile,v 1.12 2012/11/17 05:58:10 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org:
+# $FreeBSD: graphics/jpgraph2/Makefile 320368 2013-06-09 18:11:48Z miwi $
 
 PORTNAME=	jpgraph
 PORTVERSION=	3.0.7
@@ -17,7 +13,6 @@ USE_BZIP2=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 USE_PHP=	gd
-IGNORE_WITH_PHP=4
 
 NO_CDROM=	The free version cannot be used in a commercial context
 
