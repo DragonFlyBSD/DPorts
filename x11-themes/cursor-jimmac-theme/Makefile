@@ -2,7 +2,7 @@
 # Date created:			17 July 2005
 # Whom:				Piotr Smyrak <smyru@heron.pl>
 #
-# $FreeBSD: ports/x11-themes/cursor-jimmac-theme/Makefile,v 1.6 2012/11/17 06:03:30 svnexp Exp $
+# $FreeBSD: x11-themes/cursor-jimmac-theme/Makefile 318333 2013-05-16 20:07:39Z rakuco $
 #
 
 PORTNAME=	cursor-jimmac-theme
@@ -12,7 +12,7 @@ CATEGORIES=	x11-themes
 MASTER_SITES=	http://www.gnome-look.org/CONTENT/content-files/
 DISTNAME=	6550-Jimmac
 
-MAINTAINER=	smyru@heron.pl
+MAINTAINER=	ps.ports@smyrak.com
 COMMENT=	The beautiful Jimmac X cursor themes
 
 NO_BUILD=	yes
