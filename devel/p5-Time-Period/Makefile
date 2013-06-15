@@ -1,14 +1,11 @@
-# New ports collection makefile for:	p5-Time-Period
-# Date created:			October 30th, 2000
-# Whom:	      			Nicholas Esborn <nick@netdot.net>
-#
-# $FreeBSD: ports/devel/p5-Time-Period/Makefile,v 1.9 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Nicholas Esborn <nick@netdot.net>
+# $FreeBSD: devel/p5-Time-Period/Makefile 318307 2013-05-16 10:31:12Z miwi $
 
 PORTNAME=	Time-Period
 PORTVERSION=	1.20
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:PRYAN
 PKGNAMEPREFIX=	p5-
 DISTNAME=	Period-${PORTVERSION}
 
