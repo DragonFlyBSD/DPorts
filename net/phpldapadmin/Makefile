@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: ports/net/phpldapadmin/Makefile,v 1.48 2012/11/25 17:00:37 svnexp Exp $
+# $FreeBSD: net/phpldapadmin/Makefile 320371 2013-06-09 18:29:06Z miwi $
 
 PORTNAME=	phpldapadmin
 PORTVERSION=	1.2.3
@@ -16,7 +16,6 @@ LICENSE=	GPLv2
 NO_BUILD=	yes
 USE_PHP=	gettext ldap openssl pcre session xml iconv hash
 DEFAULT_PHP_VER=	5
-IGNORE_WITH_PHP=	4
 
 OPTIONS_DEFINE=	SUPHP
 SUPHP_DESCR=	suPHP support
