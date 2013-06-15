@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: security/py-oauthlib/Makefile 316703 2013-04-28 06:46:43Z koobs $
+# $FreeBSD: security/py-oauthlib/Makefile 320425 2013-06-10 01:08:24Z koobs $
 
 PORTNAME=	oauthlib
-PORTVERSION=	0.4.0
+PORTVERSION=	0.4.2
 CATEGORIES=	security net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -20,7 +20,7 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
 GH_ACCOUNT=	idan
-GH_COMMIT=	a205150
+GH_COMMIT=	1ea510c
 
 .include <bsd.port.pre.mk>
 
