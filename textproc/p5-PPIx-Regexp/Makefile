@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-PPIx-Regexp
-# Date created:		2010-05-25
-# Whom:			Ashish SHUKLA <wahjava@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-PPIx-Regexp/Makefile,v 1.16 2013/01/20 18:06:04 svnexp Exp $
-#
+# Created by: Ashish SHUKLA <wahjava@gmail.com>
+# $FreeBSD: textproc/p5-PPIx-Regexp/Makefile 320158 2013-06-07 07:05:37Z az $
 
 PORTNAME=	PPIx-Regexp
 PORTVERSION=	0.029
@@ -81,10 +77,4 @@ MAN3=	PPIx::Regexp.3 \
 	PPIx::Regexp::Tokenizer.3 \
 	PPIx::Regexp::Util.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
