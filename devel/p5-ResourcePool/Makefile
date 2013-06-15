@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-ResourcePool/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-ResourcePool/Makefile 320496 2013-06-10 17:26:37Z mat $
 
 PORTNAME=	ResourcePool
-PORTVERSION=	1.0106
+PORTVERSION=	1.0107
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN \
 		http://www.fatalmind.com/projects/ResourcePool/
