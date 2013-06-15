@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	xmlindent
-# Date created:			Apr 1, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/xmlindent/Makefile,v 1.15 2012/11/17 06:02:25 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/xmlindent/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
 
 PORTNAME=	xmlindent
 PORTVERSION=	0.2.17
@@ -15,7 +10,10 @@ MASTER_SITES=	SF
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	XML stream reformatter
 
+LICENSE=	GPLv2
+
 MANCOMPRESSED=	no
+MAKE_JOBS_SAFE=	yes
 
 SOURCES=	error.c indent.c buffer.c main.c
 
@@ -24,7 +22,8 @@ PLIST_FILES=	bin/xmlindent
 
 do-build:
 	@cd ${WRKSRC}; flex xmlindent.yy
-	${CC} ${CFLAGS} ${SOURCES:C/(.*)/${WRKSRC}\/\1/} -o ${WRKSRC}/${PORTNAME} -lfl
+	${CC} ${CFLAGS} ${SOURCES:C/(.*)/${WRKSRC}\/\1/} \
+		-o ${WRKSRC}/${PORTNAME} -lfl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
