@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-unf_ext
-# Date created:				31 Mar 2012
-# Whom:					MIHIRA Yoshiro <sanpei@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/rubygem-unf_ext/Makefile,v 1.3 2012/11/17 06:02:20 svnexp Exp $
+# Created by: MIHIRA Yoshiro <sanpei@FreeBSD.org>
+# $FreeBSD: textproc/rubygem-unf_ext/Makefile 319731 2013-06-02 23:39:09Z swills $
 
 PORTNAME=	unf_ext
-PORTVERSION=	0.0.5
+PORTVERSION=	0.0.6
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
