@@ -2,7 +2,7 @@
 # Date created:		August 31, 1998
 # Whom:			Thomas Gellekum <tg@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/wdm/Makefile,v 1.89 2012/11/17 06:03:20 svnexp Exp $
+# $FreeBSD: x11/wdm/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	wdm
