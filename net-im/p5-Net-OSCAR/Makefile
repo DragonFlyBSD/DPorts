@@ -2,7 +2,7 @@
 # Date created:				26 Sep 2004
 # Whom:					Kelly Cochran <kcochran@trolans.net>
 #
-# $FreeBSD: ports/net-im/p5-Net-OSCAR/Makefile,v 1.13 2012/11/17 06:00:28 svnexp Exp $
+# $FreeBSD: net-im/p5-Net-OSCAR/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Net-OSCAR
