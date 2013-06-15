@@ -2,7 +2,7 @@
 # Date created:		25 April 2002
 # Whom:	      		Johann Visagie <wjv@FreeBSD.org>
 #
-# $FreeBSD: ports/www/phpbb/Makefile,v 1.49 2012/11/17 06:02:57 svnexp Exp $
+# $FreeBSD: www/phpbb/Makefile 304812 2012-09-25 05:37:12Z tabthorpe $
 #
 
 PORTNAME=	phpbb
