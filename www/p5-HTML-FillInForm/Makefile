@@ -1,18 +1,17 @@
-# New ports collection makefile for:	p5-HTML-FillInForm
-# Date created:				March 30th 2001
-# Whom:	      				Alex Kapranoff <kapr@crosswinds.net>
-#
-# $FreeBSD: ports/www/p5-HTML-FillInForm/Makefile,v 1.20 2012/11/17 06:02:49 svnexp Exp $
-#
+# Created by: Alex Kapranoff <kapr@crosswinds.net>
+# $FreeBSD: www/p5-HTML-FillInForm/Makefile 319840 2013-06-04 09:46:18Z tobez $
 
 PORTNAME=	HTML-FillInForm
-PORTVERSION=	2.1
+PORTVERSION=	2.11
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module for auto-filling HTML form fields from previous values
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-HTML-Parser>=3.26:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS=	p5-HTML-Parser>=3.26:${PORTSDIR}/www/p5-HTML-Parser
