@@ -2,7 +2,7 @@
 # Date created:		2006-12-22
 # Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
 #
-# $FreeBSD: ports/devel/p5-Tie-Array-Pack/Makefile,v 1.3 2012/11/17 05:56:35 svnexp Exp $
+# $FreeBSD: devel/p5-Tie-Array-Pack/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	Tie-Array-Pack
