@@ -1,12 +1,8 @@
-# New ports collection makefile for:	oauth
-# Date created:				Dec 03, 2008
-# Whom:					wenheping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/net/rubygem-oauth/Makefile,v 1.18 2012/11/17 06:00:19 svnexp Exp $
-#
+# Created by: wenheping <wenheping@gmail.com>
+# $FreeBSD: net/rubygem-oauth/Makefile 319736 2013-06-03 00:38:33Z swills $
 
 PORTNAME=	oauth
-PORTVERSION=	0.4.6
+PORTVERSION=	0.4.7
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
