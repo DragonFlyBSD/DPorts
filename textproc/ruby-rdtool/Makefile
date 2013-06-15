@@ -2,11 +2,11 @@
 # Date created:		7 Aug 2000
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/textproc/ruby-rdtool/Makefile,v 1.43 2012/11/17 06:02:19 svnexp Exp $
+# $FreeBSD: textproc/ruby-rdtool/Makefile 320536 2013-06-11 07:09:39Z knu $
 #
 
 PORTNAME=	rdtool
-PORTVERSION=	0.6.37
+PORTVERSION=	0.6.38
 CATEGORIES=	textproc ruby
 MASTER_SITES=	https://github.com/uwabami/${PORTNAME}/tarball/v${PORTVERSION}/
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
@@ -18,7 +18,7 @@ COMMENT=	RD to HTML/man/etc. converter (RD is to Ruby as POD is to Perl)
 
 BUILD_DEPENDS=	racc:${PORTSDIR}/devel/rubygem-racc
 
-GITVERSION=	82c8c7c
+GITVERSION=	c895345
 FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/uwabami-${PORTNAME}-${GITVERSION}
 
