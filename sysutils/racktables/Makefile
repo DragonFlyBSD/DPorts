@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: sysutils/racktables/Makefile 316630 2013-04-26 18:58:58Z zi $
+# $FreeBSD: sysutils/racktables/Makefile 320370 2013-06-09 18:23:55Z miwi $
 
 PORTNAME=	racktables
 DISTVERSION=	0.20.4
@@ -19,7 +19,6 @@ PORTEXAMPLES=	init-sample-racks.sql syncdomain.php
 
 WANT_PHP_WEB=	yes
 USE_PHP=	bcmath gd json mbstring mysql pdo_mysql session
-IGNORE_WITH_PHP=4
 SUB_FILES=	pkg-message
 PLIST_SUB=	WWWDIR_REL=${WWWDIR_REL} WWWDIR=${WWWDIR}
 WWWUSER?=	www
