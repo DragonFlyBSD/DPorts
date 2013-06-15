@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rspec-expectations/Makefile 319687 2013-06-02 17:01:02Z swills $
+# $FreeBSD: devel/rubygem-rspec-expectations/Makefile 320827 2013-06-13 18:52:59Z sunpoet $
 
 PORTNAME=	rspec-expectations
 PORTVERSION=	2.13.0
@@ -9,7 +9,6 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Rspec-expectations adds should and should_not to every object
 
-BUILD_DEPENDS=	rubygem-diff-lcs>=1.1.3:${PORTSDIR}/textproc/rubygem-diff-lcs
 RUN_DEPENDS=	rubygem-diff-lcs>=1.1.3:${PORTSDIR}/textproc/rubygem-diff-lcs
 
 USE_RUBY=	yes
