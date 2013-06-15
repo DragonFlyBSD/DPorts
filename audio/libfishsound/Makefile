@@ -1,9 +1,9 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: ports/audio/libfishsound/Makefile,v 1.7 2012/12/04 21:35:57 svnexp Exp $
+# $FreeBSD: audio/libfishsound/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	libfishsound
 PORTVERSION=	1.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/libfishsound/ \
 		LOCAL/sunpoet
