@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Ruby-xmlparser
-# Date created:		9 Aug 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/textproc/ruby-xmlparser/Makefile,v 1.32 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: textproc/ruby-xmlparser/Makefile 319737 2013-06-03 00:45:20Z swills $
 
 PORTNAME=	xmlparser
-PORTVERSION=	0.7.2
+PORTVERSION=	0.7.3
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.yoshidam.net/
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
