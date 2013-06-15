@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-Apache-LogFormat-Compiler/Makefile 318772 2013-05-22 15:01:02Z kuriyama $
+# $FreeBSD: www/p5-Apache-LogFormat-Compiler/Makefile 319786 2013-06-03 14:28:51Z kuriyama $
 
 PORTNAME=	Apache-LogFormat-Compiler
-PORTVERSION=	0.12
+PORTVERSION=	0.13
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
