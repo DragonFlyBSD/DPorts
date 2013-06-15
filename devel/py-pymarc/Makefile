@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/py-pymarc/Makefile,v 1.17 2013/02/16 13:40:06 svnexp Exp $
+# $FreeBSD: devel/py-pymarc/Makefile 319755 2013-06-03 06:42:36Z wen $
 
 PORTNAME=	pymarc
-PORTVERSION=	2.8.7
+PORTVERSION=	2.8.8
 PORTEPOCH=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
