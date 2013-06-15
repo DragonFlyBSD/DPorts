@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-stella
-# Date created:		2011-11-11
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: devel/rubygem-stella/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: devel/rubygem-stella/Makefile 320762 2013-06-13 11:49:15Z sunpoet $
 
 PORTNAME=	stella
 PORTVERSION=	2.1.2.004
@@ -12,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Define realistic testplans and run them against your webapps
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-benelux>=0.6.1:${PORTSDIR}/devel/rubygem-benelux \
 		rubygem-drydock>=0.6.9:${PORTSDIR}/devel/rubygem-drydock \
