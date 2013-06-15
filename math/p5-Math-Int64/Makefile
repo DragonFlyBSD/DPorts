@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/math/p5-Math-Int64/Makefile,v 1.9 2013/01/30 18:44:15 svnexp Exp $
+# $FreeBSD: math/p5-Math-Int64/Makefile 320298 2013-06-08 21:54:08Z sunpoet $
 
 PORTNAME=	Math-Int64
-PORTVERSION=	0.29
+PORTVERSION=	0.30
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
