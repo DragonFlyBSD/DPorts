@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-kramdown
-# Date created:		2011-10-29
-# Whom:			Steve Wills <swills@rubick>
-#
-# $FreeBSD: ports/textproc/rubygem-kramdown/Makefile,v 1.4 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: Steve Wills <swills@rubick>
+# $FreeBSD: textproc/rubygem-kramdown/Makefile 320420 2013-06-10 00:27:22Z swills $
 
 PORTNAME=	kramdown
-PORTVERSION=	0.13.7
+PORTVERSION=	1.0.2
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
