@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-PAR
-# Date created:				Aug 27 2003
-# Whom:					Autrijus Tang <autrijus@autrijus.org>
-#
-# $FreeBSD: ports/devel/p5-PAR/Makefile,v 1.56 2012/12/23 15:58:52 svnexp Exp $
-#
+# Created by: Autrijus Tang <autrijus@autrijus.org>
+# $FreeBSD: devel/p5-PAR/Makefile 319460 2013-05-31 01:45:47Z miwi $
 
 PORTNAME=	PAR
 PORTVERSION=	1.00.7
