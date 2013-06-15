@@ -1,5 +1,5 @@
 # Created by: markun@onohara.to
-# $FreeBSD: security/clamav/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: security/clamav/Makefile 317686 2013-05-08 15:40:14Z garga $
 
 PORTNAME=	clamav
 PORTVERSION=	0.97.8
@@ -25,7 +25,7 @@ MILTER_DESC=		Compile the milter interface
 STDERR_DESC=		Print logs to stderr instead of stdout
 EXPERIMENTAL_DESC=	Build experimental code
 
-OPTIONS_DEFAULT=	ARC ARJ LHA UNZOO UNRAR LLVM TESTS DOCS
+OPTIONS_DEFAULT=	ARC ARJ LHA UNZOO UNRAR LLVM DOCS
 
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
