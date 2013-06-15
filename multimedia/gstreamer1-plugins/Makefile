@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1-plugins/Makefile 317830 2013-05-10 16:59:15Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins/Makefile 320543 2013-06-11 09:14:26Z kwm $
 #    $MCom: kwm/multimedia/gstreamer1-plugins/Makefile 11404 2013-04-26 19:05:50Z kwm $
 
 PORTNAME=	gstreamer
@@ -25,6 +25,8 @@ LIB_DEPENDS+=	gstreamer-1.0:${PORTSDIR}/multimedia/gstreamer1 \
 		freetype:${PORTSDIR}/print/freetype2 \
 		orc-0.4:${PORTSDIR}/devel/orc
 RUN_DEPENDS+=	iso-codes>=0:${PORTSDIR}/misc/iso-codes
+
+PORTSCOUT=	limitw:1,even
 
 BASE_PORTVERSION=	1.0.7
 BASE_DISTNAME=		gst-plugins-base-${BASE_PORTVERSION}
