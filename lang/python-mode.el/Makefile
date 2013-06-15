@@ -1,5 +1,5 @@
 # Created by: Dario Freni <saturnero@gufi.org>
-# $FreeBSD: ports/lang/python-mode.el/Makefile,v 1.7 2012/12/04 20:13:16 svnexp Exp $
+# $FreeBSD: lang/python-mode.el/Makefile 317865 2013-05-11 11:37:54Z rm $
 
 PORTNAME=	python-mode.el
 PORTVERSION=	1.0
@@ -14,7 +14,6 @@ COMMENT=	Emacs lisp module for the Python language
 
 NO_BUILD=	yes
 
-CONFLICTS=	python-2.4.[012]*
 EMACSLISPDIR=	${PREFIX}/share/emacs/site-lisp
 XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 
