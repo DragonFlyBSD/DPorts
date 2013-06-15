@@ -1,17 +1,14 @@
-# Ports collection makefile for:  pear-Horde_Rpc
-# Date created:			  6 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: net/pear-Horde_Rpc/Makefile 318588 2013-05-20 09:04:41Z mm $
+# $FreeBSD: net/pear-Horde_Rpc/Makefile 319920 2013-06-04 21:52:57Z mm $
 
 PORTNAME=	Horde_Rpc
-PORTVERSION=	2.0.5
+PORTVERSION=	2.1.0
 CATEGORIES=	net www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde RPC API
 
 USE_HORDE_RUN=	Horde_Core \
+		Horde_Dav \
 		Horde_Exception \
 		Horde_Perms \
 		Horde_Serialize \
