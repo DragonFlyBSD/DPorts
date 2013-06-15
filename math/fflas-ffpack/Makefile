@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fflas-ffpack
-# Date created: 	5 Oct 2011
-# Whom: 	b.f. <bf@FreeBSD.org>
-#
-# $FreeBSD: ports/math/fflas-ffpack/Makefile,v 1.2 2012/11/17 05:59:20 svnexp Exp $
-#
+# Created by:	b.f. <bf@FreeBSD.org>
+# $FreeBSD: math/fflas-ffpack/Makefile 320663 2013-06-12 06:36:17Z bapt $
 
 PORTNAME=	fflas-ffpack
 PORTVERSION=	1.4.3
@@ -20,16 +16,13 @@ LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS =	--with-gmp="${LOCALBASE}"
 
-.if defined(PACKAGE_BUILDING)
-OPTIMIZATION_DEFAULT=	off
-.else
-OPTIMIZATION_DEFAULT=	on
+.if !defined(PACKAGE_BUILDING)
+OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 .endif
 
-OPTIONS=	DOCS "build HTML documents (requires doxygen)" off \
-		OPTIMIZATION "optimize for the build machine" ${OPTIMIZATION_DEFAULT}
+OPTIONS_DEFINE=	DOXYGEN OPTIMIZED_CFLAGS
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${LOCALBASE} == "/usr/local"
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -61,14 +54,15 @@ LIB_DEPENDS+=	gslcblas.0:${PORTSDIR}/math/gsl
 IGNORE =	unknown value of WITH_BLAS: ${WITH_BLAS}
 .endif
 
-.if defined(WITH_DOCS) && !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOXYGEN}
 BUILD_DEPENDS +=	doxygen:${PORTSDIR}/devel/doxygen
 CONFIGURE_ARGS+=	--enable-doc --with-docdir="${DOCSDIR}"
-.elifndef(NOPORTDOCS)
-NOPORTDOCS=	yes
+PLIST_SUB+=	DOXYGEN=""
+.else
+PLIST_SUB+=	DOXYGEN="@ccomment "
 .endif
 
-.if defined(WITH_OPTIMIZATION)
+.if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
 MANUAL_PACKAGE_BUILD=	: optimizes for the build machine
 .else
 CONFIGURE_ARGS+=	--disable-optimization
@@ -96,11 +90,11 @@ post-patch:
 		${WRKSRC}/utils/args-parser.h \
 		${WRKSRC}/utils/debug.h \
 		${WRKSRC}/utils/Matio.h
-.if defined(WITH_DOCS) && !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOXYGEN}
 	@${REINPLACE_CMD} -e 's/sed -i/& ""/' ${WRKSRC}/doc/Makefile.in
 .endif
 
-.if defined(WITH_DOCS) && !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOXYGEN}
 post-install:
 	@${TOUCH} ${DOCSDIR}/fflas-ffpack-dev-html/.keep-me
 
@@ -113,4 +107,4 @@ check regression-test test: build
 
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
