@@ -1,5 +1,5 @@
 # Created by: Matt Emmerton <matt@gsicomp.on.ca>
-# $FreeBSD: misc/lifelines/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: misc/lifelines/Makefile 319864 2013-06-04 14:32:59Z bapt $
 
 PORTNAME=	lifelines
 PORTVERSION=	3.0.51
@@ -16,7 +16,8 @@ USES=		bison iconv
 
 MAN1=		btedit.1 dbverify.1 llines.1
 
-.if !defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+.if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
@@ -27,7 +28,7 @@ PLIST_SUB+=	NLS="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's,ncursesw/curses.h,curses.h,' \
 		${WRKSRC}/src/hdrs/mycurses.h
-.ifdef NOPORTDOCS
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's,install-data-am: install-docDATA,install-data-am:,' \
 		${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's,install-data-am: install-dist_pkgdataDATA install-docDATA install-man,install-data-am: install-dist_pkgdataDATA,' \
