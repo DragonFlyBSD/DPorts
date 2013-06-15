@@ -1,7 +1,7 @@
-# $FreeBSD: ports/sysutils/cfengine/Makefile,v 1.52 2013/01/08 04:42:05 svnexp Exp $
+# $FreeBSD: sysutils/cfengine/Makefile 320710 2013-06-12 18:00:45Z gjb $
 
-VERSIONS=		22 32 33 34 -devel
-CFENGINE_VERSION?=	34
+VERSIONS=		22 32 33 34 35 -devel
+CFENGINE_VERSION?=	35
 
 MASTERDIR=		${.CURDIR}/../cfengine${CFENGINE_VERSION}
 
