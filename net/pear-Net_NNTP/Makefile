@@ -1,8 +1,8 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: net/pear-Net_NNTP/Makefile 318054 2013-05-13 09:55:06Z miwi $
+# $FreeBSD: net/pear-Net_NNTP/Makefile 319882 2013-06-04 16:56:55Z miwi $
 
 PORTNAME=	Net_NNTP
-PORTVERSION=	1.4.0
+PORTVERSION=	1.5.0
 PORTEPOCH=	1
 CATEGORIES=	net news pear
 
