@@ -4,7 +4,7 @@
  * You can redistribute it and/or modify it under the same terms as
  * CGI::SpeedyCGI itself.
  *
- * $FreeBSD: ports/www/p5-CGI-SpeedyCGI/files/speedy_dump.c,v 1.2 2012/11/17 06:02:46 svnexp Exp $
+ * $FreeBSD: www/p5-CGI-SpeedyCGI/files/speedy_dump.c 300897 2012-07-14 14:29:18Z beat $
  *
  */
 

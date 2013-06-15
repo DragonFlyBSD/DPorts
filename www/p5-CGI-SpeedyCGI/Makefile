@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: ports/www/p5-CGI-SpeedyCGI/Makefile,v 1.25 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CGI-SpeedyCGI/Makefile 319232 2013-05-27 13:02:14Z bapt $
 
 PORTNAME=	CGI-SpeedyCGI
 PORTVERSION=	2.22
@@ -31,6 +31,8 @@ CONFIGURE_ENV+=	WITHOUT_APACHE=yes
 .include <bsd.port.pre.mk>
 
 post-patch:
+	@${REINPLACE_CMD} -e 's/__inline__//g' \
+		${WRKSRC}/src/speedy_inc.h
 	@${PERL} -pi -e 's,apxs -q,${APXS} -q,;' \
 		${WRKSRC}/src/SpeedyMake.pl
 	@${PERL} -pi -e 's,APXS=apxs,APXS=${APXS},;' \
