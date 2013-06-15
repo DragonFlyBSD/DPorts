@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: ports/www/pecl-APC/Makefile,v 1.46 2013/02/02 15:59:39 svnexp Exp $
+# $FreeBSD: www/pecl-APC/Makefile 320364 2013-06-09 17:48:16Z miwi $
 
 PORTNAME=	APC
 PORTVERSION=	3.1.14
@@ -23,7 +23,6 @@ SPINLOCKS_DESC=	Spinlocks (experimental)
 
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS=	--enable-apc
-IGNORE_WITH_PHP=4
 PHP_MODNAME=	${PORTNAME:tl}
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
