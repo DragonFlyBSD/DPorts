@@ -2,11 +2,11 @@
 # Date created:			  Dec 18, 2012
 # Whom:				  Martin Matuska (mm@FreeBSD.org)
 #
-# $FreeBSD: www/horde-trean/Makefile 317889 2013-05-11 15:37:47Z mm $
+# $FreeBSD: www/horde-trean/Makefile 320721 2013-06-12 19:32:54Z mm $
 #
 
 PORTNAME=	trean
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.2
 CATEGORIES=	www pear
 PKGNAMEPREFIX=	horde-
 
