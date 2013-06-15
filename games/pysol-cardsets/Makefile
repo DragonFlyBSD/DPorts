@@ -2,7 +2,7 @@
 # Date created:         18 Sep 2000
 # Whom:                 Thomas Gellekum <tg@FreeBSD.org>
 #
-# $FreeBSD: ports/games/pysol-cardsets/Makefile,v 1.9 2012/11/17 05:57:49 svnexp Exp $
+# $FreeBSD: games/pysol-cardsets/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	pysol-cardsets
