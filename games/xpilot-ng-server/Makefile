@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: ports/games/xpilot-ng-server/Makefile,v 1.29 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/xpilot-ng-server/Makefile 320609 2013-06-11 16:15:53Z bsam $
 
 PORTNAME=	xpilot-ng
 PORTVERSION=	4.7.3
@@ -18,7 +18,7 @@ LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -Wno-return-type
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 CONFIGURE_ARGS=	--program-prefix=""
