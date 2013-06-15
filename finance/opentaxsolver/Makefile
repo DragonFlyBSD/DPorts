@@ -1,8 +1,7 @@
-# Created by: John Hein (jhein@timing.com)
-# $FreeBSD: finance/opentaxsolver/Makefile 316339 2013-04-23 10:23:53Z bapt $
+# $FreeBSD: finance/opentaxsolver/Makefile 320722 2013-06-12 19:42:46Z rakuco $
 
 PORTNAME=	${UPPORTNAME:tl}
-PORTVERSION=	9.01
+PORTVERSION=	10.00
 CATEGORIES=	finance
 MASTER_SITES=	SF/${PORTNAME}/OTS_${TAXYEAR}/v${PORTVERSION}
 DISTNAME=	${UPPORTNAME}${TAXYEAR}_${PORTVERSION}
@@ -14,7 +13,7 @@ COMMENT=	US tax prep software
 PLIST=		${WRKDIR}/pkg-plist
 SUB_FILES=	pkg-plist
 SUB_LIST=	TAXYEAR=${TAXYEAR}
-TAXYEAR=	2011
+TAXYEAR=	2012
 UPPORTNAME=	OpenTaxSolver
 
 .if !defined(WITHOUT_X11)
