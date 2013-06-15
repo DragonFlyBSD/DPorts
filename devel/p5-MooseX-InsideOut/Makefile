@@ -1,8 +1,5 @@
-# New ports collection makefile for:  MooseX-InsideOut
-# Whom: gugu
-# Date created: 03 December 2009
-# $FreeBSD: ports/devel/p5-MooseX-InsideOut/Makefile,v 1.9 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: gugu
+# $FreeBSD: devel/p5-MooseX-InsideOut/Makefile 320259 2013-06-08 14:55:35Z miwi $
 
 PORTNAME=	MooseX-InsideOut
 PORTVERSION=	0.106
