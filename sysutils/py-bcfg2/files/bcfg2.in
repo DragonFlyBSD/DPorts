@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/py-bcfg2/files/bcfg2.in,v 1.4 2012/11/17 06:01:42 svnexp Exp $
+# $FreeBSD: sysutils/py-bcfg2/files/bcfg2.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: bcfg2
 # REQUIRE: LOGIN
