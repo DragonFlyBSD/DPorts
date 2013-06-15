@@ -1,0 +1,20 @@
+--- config.mk.in.orig	Sun Mar 27 09:48:06 2005
++++ config.mk.in	Mon May  9 01:51:07 2005
+@@ -16,7 +16,7 @@
+ exec_prefix= @exec_prefix@
+ includedir = @includedir@
+ libdir = @libdir@
+-javadir = ${exec_prefix}/java
++javadir = ${exec_prefix}/share/java/classes
+ libexecdir = @libexecdir@
+ bindir = @bindir@
+ localstatedir = @localstatedir@
+@@ -88,7 +88,7 @@
+ # rudiments library
+ RUDIMENTSPATH = @RUDIMENTSPATH@
+ RUDIMENTSINCLUDES = @RUDIMENTSINCLUDES@
+-RUDIMENTSLIBS = @RUDIMENTSLIBS@
++RUDIMENTSLIBS = @RUDIMENTSLIBS@ -lssl -lcrypto
+ RUDIMENTSLIBSPATH = @RUDIMENTSLIBSPATH@ 
+ 
+ # perl

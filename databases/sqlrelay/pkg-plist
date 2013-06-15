@@ -1,0 +1,88 @@
+bin/backupschema
+bin/fields
+bin/query
+bin/sqlr-cachemanager
+bin/sqlr-export
+bin/sqlr-import
+bin/sqlrclient-config
+bin/sqlrclientwrapper-config
+%%IF_GTK%%bin/sqlr-config-gtk
+%%IF_FREETDS%%bin/sqlr-connection-freetds
+%%IF_MSQL%%bin/sqlr-connection-msql
+%%IF_MYSQL%%bin/sqlr-connection-mysql
+%%IF_ODBC%%bin/sqlr-connection-odbc
+%%IF_POSTGRESQL%%bin/sqlr-connection-postgresql
+%%IF_SQLITE%%bin/sqlr-connection-sqlite
+%%IF_INTERBASE%%bin/sqlr-connection-interbase
+bin/sqlr-connection-router
+bin/sqlr-listener
+bin/sqlr-status
+bin/sqlr-scaler
+bin/sqlr-start
+bin/sqlr-stop
+bin/sqlrsh
+etc/sqlrelay.conf.example
+etc/sqlrelay.dtd
+etc/sqlrelay-sample
+etc/rc.d/sqlrelay.sh-sample
+include/sqlrelay/private/bindvar.h
+include/sqlrelay/private/column.h
+include/sqlrelay/private/row.h
+include/sqlrelay/private/sqlrconnection.h
+include/sqlrelay/private/sqlrcursor.h
+include/sqlrelay/private/sqlrdefines.h
+include/sqlrelay/private/sqlrincludes.h
+include/sqlrelay/sqlrclient.h
+include/sqlrelay/sqlrclientwrapper.h
+@dirrm include/sqlrelay/private
+@dirrm include/sqlrelay
+lib/libmysql3sqlrelay.so.0
+lib/libmysql3sqlrelay.so
+lib/libmysql3sqlrelay.la
+lib/libmysql3sqlrelay.a
+lib/libmysql40sqlrelay.so.0
+lib/libmysql40sqlrelay.so
+lib/libmysql40sqlrelay.la
+lib/libmysql40sqlrelay.a
+lib/libmysql41sqlrelay.so.0
+lib/libmysql41sqlrelay.so
+lib/libmysql41sqlrelay.la
+lib/libmysql41sqlrelay.a
+lib/libmysql50sqlrelay.so.0
+lib/libmysql50sqlrelay.so
+lib/libmysql50sqlrelay.la
+lib/libmysql50sqlrelay.a
+lib/libmysql51sqlrelay.so.0
+lib/libmysql51sqlrelay.so
+lib/libmysql51sqlrelay.la
+lib/libmysql51sqlrelay.a
+lib/libsqlrclient.a
+lib/libsqlrclient.la
+lib/libsqlrclient.so
+lib/libsqlrclient.so.0
+lib/libsqlrclientwrapper.a
+lib/libsqlrclientwrapper.la
+lib/libsqlrclientwrapper.so
+lib/libsqlrclientwrapper.so.0
+lib/libpqsqlrelay.a
+lib/libpqsqlrelay.la
+lib/libpqsqlrelay.so
+lib/libpqsqlrelay.so.0
+lib/libsqlrconnection.a
+lib/libsqlrconnection.la
+lib/libsqlrconnection.so
+lib/libsqlrconnection.so.0
+lib/libsqlrutil.a
+lib/libsqlrutil.la
+lib/libsqlrutil.so
+lib/libsqlrutil.so.0
+libdata/pkgconfig/sqlrelay-c.pc
+libdata/pkgconfig/sqlrelay-c++.pc
+@cwd /var
+@dirrmtry sqlrelay/cache
+@dirrmtry sqlrelay/debug
+@dirrmtry sqlrelay/tmp/ipc
+@dirrmtry sqlrelay/tmp/pids
+@dirrmtry sqlrelay/tmp/sockets
+@dirrmtry sqlrelay/tmp
+@dirrmtry sqlrelay
