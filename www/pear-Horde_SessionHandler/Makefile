@@ -1,11 +1,7 @@
-# Ports collection makefile for:  pear-Horde_SessionHandler
-# Date created:			  6 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: www/pear-Horde_SessionHandler/Makefile 317889 2013-05-11 15:37:47Z mm $
+# $FreeBSD: www/pear-Horde_SessionHandler/Makefile 319920 2013-06-04 21:52:57Z mm $
 
 PORTNAME=	Horde_SessionHandler
-PORTVERSION=	2.1.0
+PORTVERSION=	2.2.0
 CATEGORIES=	www pear
 
 MAINTAINER=	horde@FreeBSD.org
