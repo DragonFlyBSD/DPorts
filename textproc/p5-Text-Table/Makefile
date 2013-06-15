@@ -1,8 +1,8 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: ports/textproc/p5-Text-Table/Makefile,v 1.12 2013/02/19 18:21:03 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Table/Makefile 320403 2013-06-09 19:25:14Z miwi $
 
 PORTNAME=	Text-Table
-PORTVERSION=	1.126
+PORTVERSION=	1.127
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
