@@ -2,7 +2,7 @@
 # Date created:				June 5, 2004
 # Whom:	      				Autrijus Tang <autrijus@autrijus.org>
 #
-# $FreeBSD: ports/www/libapreq2/Makefile,v 1.46 2012/11/17 06:02:38 svnexp Exp $
+# $FreeBSD: www/libapreq2/Makefile 320709 2013-06-12 17:45:02Z az $
 #
 
 PORTNAME=	libapreq2
@@ -38,7 +38,7 @@ RUN_DEPENDS+=	${P5_APREQ_DEPENDS}
 USE_PERL5=	yes
 CONFIGURE_ARGS+=	--enable-perl-glue --with-perl=${PERL5}
 
-MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VERSION}
+MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 MAN3=		APR::Request.3 \
 		APR::Request::Apache2.3 \
 		APR::Request::CGI.3 \
