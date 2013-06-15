@@ -1,9 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: ports/lang/spidermonkey185/Makefile,v 1.4 2013/02/09 15:59:23 svnexp Exp $
+# $FreeBSD: lang/spidermonkey185/Makefile 320274 2013-06-08 17:13:09Z koobs $
 
 PORTNAME=		spidermonkey185
 PORTVERSION=		1.8.5
-PORTREVISION=		1
+PORTREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	js
@@ -17,6 +17,8 @@ LIB_DEPENDS=		nspr4:${PORTSDIR}/devel/nspr
 
 CONFLICTS=		njs-[0-9]*
 
+#USES=			pkgconfig:build
+USE_AUTOTOOLS=		autoconf213:env
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_GNOME=		gnomehack
@@ -153,10 +155,13 @@ PLIST_SUB+=	SPARC=""
 PLIST_SUB+=	SPARC="@comment "
 .endif
 
+pre-configure:
+	(cd ${WRKSRC} && ${AUTOCONF})
+
 regression-test: build
 	@${ECHO_MSG} -n "===> Running jstests.py: "
 	@cd ${WRKSRC} && ${SETENV} TZ=PST8PDT ${PYTHON_CMD} tests/jstests.py \
-	--no-progress ./js
+	--no-progress --worker-count=${MAKE_JOBS_NUMBER} ./js
 .if ${PORT_OPTIONS:MMETHODJIT} || ${PORT_OPTIONS:MTRACEJIT}
 	@${ECHO_MSG} -n "===> Running jit_test.py: "
 	@cd ${WRKSRC} && ${SETENV} TZ=PST8PDT ${PYTHON_CMD} jit-test/jit_test.py \
