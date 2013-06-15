@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1/Makefile 317830 2013-05-10 16:59:15Z kwm $
+# $FreeBSD: multimedia/gstreamer1/Makefile 320543 2013-06-11 09:14:26Z kwm $
 #    $MCom: ports/multimedia/gstreamer1/Makefile,v 1.5 2013/01/15 21:43:45 kwm Exp $
 
 PORTNAME=	gstreamer1
@@ -16,6 +16,8 @@ LICENSE=	LGPL20
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 		gobject-introspection>=1.31.1:${PORTSDIR}/devel/gobject-introspection
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
+
+PORTSCOUT=	limitw:1,even
 
 CFLAGS:=	${CFLAGS} -O2 -Wno-format
 USES=		bison gettext pathfix pkgconfig
