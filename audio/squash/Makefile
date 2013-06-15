@@ -2,11 +2,11 @@
 # Date created:		5 August 2003
 # Whom:			Matthias Andree <matthias.andree@gmx.de>
 #
-# $FreeBSD: ports/audio/squash/Makefile,v 1.18 2012/11/17 05:54:44 svnexp Exp $
+# $FreeBSD: audio/squash/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=		squash
 PORTVERSION=		1.0
-PORTREVISION=		7
+PORTREVISION=		8
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -14,7 +14,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Learning console-based MP3/OGG player
 
-LIB_DEPENDS+=	FLAC.10:${PORTSDIR}/audio/flac \
+LIB_DEPENDS+=	FLAC:${PORTSDIR}/audio/flac \
 		fftw.2:${PORTSDIR}/math/fftw \
 		id3-3.8.3:${PORTSDIR}/audio/id3lib \
 		mad.2:${PORTSDIR}/audio/mad \
