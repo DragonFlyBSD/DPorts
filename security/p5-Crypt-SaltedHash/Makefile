@@ -1,7 +1,5 @@
-# New ports collection Makefile for:	p5-Crypt-SaltedHash
-# Date created:				20 Dec 2006
-# Whom:	      				Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Crypt-SaltedHash/Makefile,v 1.13 2012/11/17 06:01:11 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Crypt-SaltedHash/Makefile 320166 2013-06-07 07:45:41Z az $
 
 PORTNAME=	Crypt-SaltedHash
 PORTVERSION=	0.06
@@ -17,16 +15,4 @@ PERL_MODBUILD=	yes
 
 MAN3=		Crypt::SaltedHash.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-Digest>=1.16:${PORTSDIR}/security/p5-Digest
-BUILD_DEPENDS+=	p5-Digest>=1.16:${PORTSDIR}/security/p5-Digest
-.endif
-
-.if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-BUILD_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
