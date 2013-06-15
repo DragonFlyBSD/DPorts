@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: devel/libeio/Makefile 319310 2013-05-28 14:06:14Z osa $
+# $FreeBSD: devel/libeio/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	libeio
 PORTVERSION=	4.18.0
@@ -10,7 +10,7 @@ COMMENT=	Full-featured asynchronous I/O library for C
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	scunningham
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	e1a62ab
 USE_AUTOTOOLS=	libtoolize aclocal autoconf autoheader automake
 GNU_CONFIGURE=	yes
