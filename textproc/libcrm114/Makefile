@@ -1,5 +1,5 @@
 # Created by: Martin Schuette <info@mschuette.name>
-# $FreeBSD: ports/textproc/libcrm114/Makefile,v 1.2 2012/11/22 18:18:25 svnexp Exp $
+# $FreeBSD: textproc/libcrm114/Makefile 319208 2013-05-27 11:07:49Z ehaupt $
 
 PORTNAME=	libcrm114
 PORTVERSION=	20100726
@@ -11,7 +11,7 @@ COMMENT=	CRM114 C-callable Library
 
 LIB_DEPENDS=	tre:${PORTSDIR}/textproc/libtre
 
-LICENCE=	LGPL3
+LICENSE=	LGPL3
 
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
