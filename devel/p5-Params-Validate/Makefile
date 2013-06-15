@@ -1,8 +1,8 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: ports/devel/p5-Params-Validate/Makefile,v 1.57 2012/12/17 15:43:18 svnexp Exp $
+# $FreeBSD: devel/p5-Params-Validate/Makefile 320461 2013-06-10 11:02:29Z tobez $
 
 PORTNAME=	Params-Validate
-PORTVERSION=	1.07
+PORTVERSION=	1.08
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
