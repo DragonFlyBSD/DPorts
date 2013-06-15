@@ -1,9 +1,5 @@
-# New ports collection makefile for:	k12font
-# Date created:		24 June 1996
-# Whom:			Mita Yoshio <mita@jp.FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/k12/Makefile,v 1.24 2012/11/17 05:58:35 svnexp Exp $
-#
+# Created by: Mita Yoshio <mita@jp.FreeBSD.org>
+# $FreeBSD: japanese/k12/Makefile 320863 2013-06-13 23:50:37Z miwi $
 
 PORTNAME=	kaname12
 PORTVERSION=	1.1
