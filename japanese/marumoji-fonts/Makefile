@@ -1,9 +1,5 @@
-# New ports collection makefile for: marumoji-fonts
-# Date created:		Jun 1 2001
-# Whom:			Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-#
-# $FreeBSD: ports/japanese/marumoji-fonts/Makefile,v 1.12 2012/11/17 05:58:36 svnexp Exp $
-#
+# Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
+# $FreeBSD: japanese/marumoji-fonts/Makefile 320880 2013-06-14 03:22:02Z miwi $
 
 PORTNAME=	marumoji-fonts
 PORTVERSION=	1.0
