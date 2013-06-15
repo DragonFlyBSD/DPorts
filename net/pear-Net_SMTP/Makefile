@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: net/pear-Net_SMTP/Makefile 314363 2013-03-16 15:24:39Z wen $
+# $FreeBSD: net/pear-Net_SMTP/Makefile 320125 2013-06-06 20:24:27Z ohauer $
 
 PORTNAME=	Net_SMTP
 PORTVERSION=	1.6.1
@@ -12,7 +12,7 @@ BUILD_DEPENDS=	${PEARDIR}/Net/Socket.php:${PORTSDIR}/net/pear-Net_Socket
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 LATEST_LINK=	pear-Net_SMTP
-OPTIONS_DEiFINE=	PEAR_AUTH_SASL
+OPTIONS_DEFINE=	PEAR_AUTH_SASL
 PEAR_AUTH_SASL_DESC=	PEAR::Auth_SASL support
 
 PEAR_AUTOINSTALL=	yes
