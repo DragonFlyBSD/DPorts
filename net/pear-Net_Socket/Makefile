@@ -1,8 +1,8 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: net/pear-Net_Socket/Makefile 314201 2013-03-15 00:46:18Z miwi $
+# $FreeBSD: net/pear-Net_Socket/Makefile 320183 2013-06-07 08:19:46Z miwi $
 
 PORTNAME=	Net_Socket
-PORTVERSION=	1.0.10
+PORTVERSION=	1.0.14
 CATEGORIES=	net www pear
 
 MAINTAINER=	miwi@FreeBSD.org
