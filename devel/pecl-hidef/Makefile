@@ -1,12 +1,8 @@
-# New ports collection makefile for:	pecl-hidef
-# Date created:			2007/03/02
-# Whom:				chinsan
-#
-# $FreeBSD: ports/devel/pecl-hidef/Makefile,v 1.10 2012/11/17 05:56:40 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: devel/pecl-hidef/Makefile 320851 2013-06-13 23:44:29Z miwi $
 
 PORTNAME=	hidef
-PORTVERSION=	0.1.8
+PORTVERSION=	0.1.13
 CATEGORIES=	devel pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -20,8 +16,14 @@ LICENSE=	PHP301
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
-IGNORE_WITH_PHP=4
 
 CONFIGURE_ARGS=	--enable-hidef
+
+CFLAGS+=-I${LOCALBASE}/include
+LDFLAGS+=-L${LOCALBASE}/lib
+
+post-patch:
+	@${REINPLACE_CMD} -e 's,malloc.h,stdlib.h,g' \
+	${WRKSRC}/hidef.c
 
 .include <bsd.port.mk>
