@@ -2,12 +2,12 @@
 # Date created:		2007-01-24
 # Whom:			trasz <trasz@pin.if.uz.zgora.pl>
 #
-# $FreeBSD: audio/libgig/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: audio/libgig/Makefile 320405 2013-06-09 19:30:58Z naddy $
 #
 
 PORTNAME=	libgig
 PORTVERSION=	3.3.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	SF/qsampler/${PORTNAME}/${PORTVERSION} \
 		http://download.linuxsampler.org/packages/
@@ -17,7 +17,7 @@ COMMENT=	Gigasampler file loader library
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \
+LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac \
 		sndfile.1:${PORTSDIR}/audio/libsndfile \
 		uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid
 
