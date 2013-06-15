@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/interchange/pkg-deinstall,v 1.4 2012/11/17 06:02:37 svnexp Exp $
+# $FreeBSD: www/interchange/pkg-deinstall 300897 2012-07-14 14:29:18Z beat $
 #
 
 if [ "$2" != "POST-DEINSTALL" ]; then
