@@ -2,7 +2,7 @@
 # Date created:		23 November 1999
 # Whom:			Yoshiro MIHIRA <sanpei@sanpei.org>
 #
-# $FreeBSD: ports/japanese/kanji18/Makefile,v 1.21 2012/11/17 05:58:35 svnexp Exp $
+# $FreeBSD: japanese/kanji18/Makefile 317651 2013-05-08 11:29:45Z sanpei $
 #
 
 PORTNAME=	kanji
