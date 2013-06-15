@@ -1,5 +1,5 @@
 # Created by: lesi@FreeBSD.org
-# $FreeBSD: x11-drivers/xf86-video-intel/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-intel/Makefile 319902 2013-06-04 20:00:06Z zeising $
 
 PORTNAME=	xf86-video-intel
 PORTVERSION=	${INTEL_VERSION}
@@ -26,7 +26,7 @@ USE_XORG=	glproto \
 MAN4=		intel.4x
 
 .if defined(WITH_NEW_XORG)
-INTEL_VERSION=	2.21.6
+INTEL_VERSION=	2.21.8
 INTEL_REVISION=	0
 CONFIGURE_ARGS+=	--enable-sna
 MAKE_JOBS_UNSAFE=yes
