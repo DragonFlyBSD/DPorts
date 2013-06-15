@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Hash-Case
-# Date created:		2006-08-15
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Hash-Case/Makefile,v 1.8 2012/11/17 05:56:18 svnexp Exp $
-#
+# Created by: Gea-Suan Lin
+# $FreeBSD: devel/p5-Hash-Case/Makefile 320494 2013-06-10 17:12:21Z mat $
 
 PORTNAME=	Hash-Case
-PORTVERSION=	1.010
+PORTVERSION=	1.020
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MARKOV
