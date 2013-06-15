@@ -1,7 +1,8 @@
-# $FreeBSD: ports/audio/harp/Makefile,v 1.2 2012/11/17 05:54:34 svnexp Exp $
+# $FreeBSD: audio/harp/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	harp
 PORTVERSION=	0.5.2
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}
