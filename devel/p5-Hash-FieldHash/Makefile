@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Hash-FieldHash/Makefile 316052 2013-04-18 16:57:31Z sunpoet $
+# $FreeBSD: devel/p5-Hash-FieldHash/Makefile 320285 2013-06-08 21:01:44Z sunpoet $
 
 PORTNAME=	Hash-FieldHash
-PORTVERSION=	0.13
+PORTVERSION=	0.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
