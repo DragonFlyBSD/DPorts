@@ -1,9 +1,9 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: ports/audio/sdl_sound/Makefile,v 1.47 2012/12/28 11:57:33 svnexp Exp $
+# $FreeBSD: audio/sdl_sound/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	sdl_sound
 PORTVERSION=	1.0.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	http://offload1.icculus.org:9090/SDL_sound/downloads/ \
 		http://offload2.icculus.org:9090/SDL_sound/downloads/
