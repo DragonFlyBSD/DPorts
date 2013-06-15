@@ -1,8 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@portaone.com>
-# $FreeBSD: net/asterisk/Makefile 318436 2013-05-18 17:32:24Z flo $
+# $FreeBSD: net/asterisk/Makefile 320887 2013-06-14 07:07:01Z flo $
 
 PORTNAME=	asterisk
 PORTVERSION=	1.8.22.0
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -285,8 +286,8 @@ post-patch:
 	${REINPLACE_CMD} -e 's|/var/lib|${PREFIX}/share|g' ${WRKSRC}/configs/musiconhold.conf.sample
 
 post-configure:
-.if !empty(PORT_OPTIONS:MMYSQL) || !empty(PORT_OPTIONS:MNEWG711) || !empty(PORT_OPTIONS:MOOH323)
 	@cd ${WRKSRC} && gmake menuselect.makeopts
+	@cd ${WRKSRC} && ./menuselect/menuselect --disable res_timing_kqueue menuselect.makeopts
 .if ${PORT_OPTIONS:MMYSQL}
 	@cd ${WRKSRC} && ./menuselect/menuselect --enable res_config_mysql menuselect.makeopts
 	@cd ${WRKSRC} && ./menuselect/menuselect --enable app_mysql menuselect.makeopts
@@ -297,7 +298,6 @@ post-configure:
 .endif
 .if ${PORT_OPTIONS:MNEWG711}
 	@cd ${WRKSRC} && ./menuselect/menuselect --enable  G711_NEW_ALGORITHM menuselect.makeopts
-.endif
 .endif
 
 post-install:
