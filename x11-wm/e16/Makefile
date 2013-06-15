@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/e16/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: x11-wm/e16/Makefile 319999 2013-06-05 15:06:44Z gahr $
 
 PORTNAME=	e16
 PORTVERSION=	1.0.13
@@ -21,7 +21,6 @@ USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--disable-rpath --enable-mans SHELL=/bin/sh
-CFLAGS+=	-g -O0
 
 .include <bsd.port.options.mk>
 
