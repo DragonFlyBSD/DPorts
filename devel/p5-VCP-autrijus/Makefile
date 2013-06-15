@@ -1,5 +1,5 @@
 # Created by: autrijus@autrijus.org
-# $FreeBSD: devel/p5-VCP-autrijus/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-VCP-autrijus/Makefile 320095 2013-06-06 13:28:19Z mat $
 
 PORTNAME=	VCP
 PORTVERSION=	0.9.20050110
@@ -24,7 +24,6 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-Text-Table>=0:${PORTSDIR}/textproc/p5-Text-Table
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PERL5=	yes
 PERL_CONFIGURE=	yes
 
 
