@@ -1,8 +1,8 @@
 # Created by: scrappy
-# $FreeBSD: security/p5-IO-Socket-SSL/Makefile 314153 2013-03-14 12:36:14Z jadawin $
+# $FreeBSD: security/p5-IO-Socket-SSL/Makefile 320744 2013-06-13 09:28:22Z jadawin $
 
 PORTNAME=	IO-Socket-SSL
-PORTVERSION=	1.84
+PORTVERSION=	1.94
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SULLR
@@ -19,7 +19,8 @@ OPTIONS_DEFINE=	EXAMPLES IDN IPV6
 PERL_CONFIGURE=	yes
 INSTALL_TARGET=	pure_install
 
-MAN3=		IO::Socket::SSL.3
+MAN3=		IO::Socket::SSL.3 IO::Socket::SSL::Intercept.3 \
+		IO::Socket::SSL::Utils.3
 PORTEXAMPLES=	*
 
 .include <bsd.port.options.mk>
