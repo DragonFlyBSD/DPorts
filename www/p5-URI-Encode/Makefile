@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: www/p5-URI-Encode/Makefile 313573 2013-03-07 10:33:32Z culot $
+# $FreeBSD: www/p5-URI-Encode/Makefile 319188 2013-05-27 09:24:30Z culot $
 
 PORTNAME=	URI-Encode
 PORTVERSION=	0.09
@@ -18,11 +18,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		URI::Encode.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
