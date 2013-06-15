@@ -1,8 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-diffy/Makefile 313022 2013-02-27 02:18:50Z zi $
+# $FreeBSD: textproc/rubygem-diffy/Makefile 319738 2013-06-03 00:48:33Z swills $
 
 PORTNAME=	diffy
-PORTVERSION=	2.1.3
+PORTVERSION=	2.1.4
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
