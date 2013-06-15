@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: www/yii/Makefile 315123 2013-03-24 14:23:56Z madpilot $
+# $FreeBSD: www/yii/Makefile 320364 2013-06-09 17:48:16Z miwi $
 
 PORTNAME=	yii
 PORTVERSION=	1.1.13
@@ -16,7 +16,6 @@ LICENSE=	BSD
 NO_BUILD=	yes
 USE_PHP=	pcre spl
 WANT_PHP_WEB=	yes
-IGNORE_WITH_PHP=	4
 
 SUB_FILES=	pkg-message
 
