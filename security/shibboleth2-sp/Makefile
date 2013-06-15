@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: security/shibboleth2-sp/Makefile 319964 2013-06-05 09:02:10Z girgen $
+# $FreeBSD: security/shibboleth2-sp/Makefile 320338 2013-06-09 14:41:24Z girgen $
 
 PORTNAME=	shibboleth-sp
 PORTVERSION=	2.5.1
@@ -11,6 +11,8 @@ MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	C++ Shibboleth Service Provider (Internet2) for Apache
 
 LIB_DEPENDS=	saml.8:${PORTSDIR}/security/opensaml2
+
+BUILD_DEPENDS=	boost-libs>=0:${PORTSDIR}/devel/boost-libs
 
 MAKE_JOBS_SAFE=	yes
 USE_GMAKE=	yes
