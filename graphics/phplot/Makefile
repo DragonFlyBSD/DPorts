@@ -1,5 +1,5 @@
 # Created by: yukinopo@livedoor.com
-# $FreeBSD: graphics/phplot/Makefile 318136 2013-05-14 00:18:20Z wen $
+# $FreeBSD: graphics/phplot/Makefile 320559 2013-06-11 13:47:54Z ak $
 
 PORTNAME=	phplot
 PORTVERSION=	6.1.0
@@ -10,14 +10,13 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}:source1 \
 		${PORTNAME}docs-20130511.zip:source2
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A PHP class for creating scientific and business charts
+COMMENT=	PHP class for creating scientific and business charts
 
 LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
 
 USE_ZIP=	yes
 USE_PHP=	yes
 DEFAULT_PHP_VER=	5
-IGNORE_WITH_PHP=	4
 NO_BUILD=	YES
 
 PHPLOT_DIR=	${PREFIX}/include/php/phplot
