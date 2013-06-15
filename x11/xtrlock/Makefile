@@ -1,8 +1,9 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: x11/xtrlock/Makefile 315060 2013-03-23 18:00:59Z miwi $
+# $FreeBSD: x11/xtrlock/Makefile 320334 2013-06-09 13:15:18Z wg $
 
 PORTNAME=	xtrlock
 PORTVERSION=	2.2
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	DEBIAN
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -21,6 +22,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lX11 -lcrypt
 
 MAN1=		xtrlock.1
 PLIST_FILES=	bin/xtrlock
+BINMODE=	4555
 
 post-extract:
 	@${LN} -sf xtrlock.man ${WRKSRC}/xtrlock.1
