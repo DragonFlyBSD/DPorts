@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: graphics/libggiwmh/Makefile 315112 2013-03-24 12:12:31Z antoine $
+# $FreeBSD: graphics/libggiwmh/Makefile 320004 2013-06-05 17:00:14Z antoine $
 
 PORTNAME=	libggiwmh
 PORTVERSION=	0.3.2
@@ -14,6 +14,9 @@ COMMENT=	Libggi extension, wmh stands for Window Manager Hints
 LICENSE=	MIT
 
 LIB_DEPENDS=	ggi:${PORTSDIR}/graphics/libggi
+
+DEPRECATED=	Unmaintained
+EXPIRATION_DATE=2013-09-01
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_BZIP2=	yes
