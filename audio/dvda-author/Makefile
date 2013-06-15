@@ -1,9 +1,9 @@
 # Created by: dieringe@zedat.fu-berlin.de
-# $FreeBSD: audio/dvda-author/Makefile 314091 2013-03-13 15:31:03Z pawel $
+# $FreeBSD: audio/dvda-author/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	dvda-author
 PORTVERSION=	09.05
-PORTREVISION=	8
+PORTREVISION=	9
 PORTEPOCH=	1
 CATEGORIES=	audio
 MASTER_SITES=	SF/dvd-audio/${PORTNAME}-core/${PORTNAME}-${PORTVERSION}-core
@@ -12,7 +12,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-7
 MAINTAINER=	martin.dieringer@gmx.de
 COMMENT=	Author and playback unencrypted and uncompressed Audio-DVDs
 
-LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \
+LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac \
 	ogg:${PORTSDIR}/audio/libogg \
 	sox.1:${PORTSDIR}/audio/sox \
 	samplerate.1:${PORTSDIR}/audio/libsamplerate \
