@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/fluxcms/Makefile,v 1.20 2012/11/17 06:02:33 svnexp Exp $
+# $FreeBSD: www/fluxcms/Makefile 320363 2013-06-09 17:44:17Z miwi $
 
 PORTNAME=	fluxcms
 PORTVERSION=	1.6.0
@@ -24,7 +24,6 @@ OPTIONS_DEFINE=	TIDY
 
 USE_PHP=	dom xml simplexml iconv mysql xsl session pcre gd
 
-IGNORE_WITH_PHP=	4
 DEFAULT_PHP_VER=	5
 
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
