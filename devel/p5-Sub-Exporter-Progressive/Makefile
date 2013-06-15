@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Sub-Exporter-Progressive/Makefile,v 1.4 2012/12/05 19:03:36 svnexp Exp $
+# $FreeBSD: devel/p5-Sub-Exporter-Progressive/Makefile 320782 2013-06-13 11:52:48Z sunpoet $
 
 PORTNAME=	Sub-Exporter-Progressive
-PORTVERSION=	0.001.006
+PORTVERSION=	0.001.010
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -21,13 +21,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Sub::Exporter::Progressive.3
 
-post-patch:
-	@${REINPLACE_CMD} -e '/NAME/ s|Sub-Exporter-Progressive|Sub::Exporter::Progressive|' ${WRKSRC}/Makefile.PL
-
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.89:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
