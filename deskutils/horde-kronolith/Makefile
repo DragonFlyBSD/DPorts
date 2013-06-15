@@ -1,8 +1,8 @@
 # Created by: Thierry Thomas (<thierry@thomas.as>)
-# $FreeBSD: deskutils/horde-kronolith/Makefile 319377 2013-05-29 15:02:18Z mm $
+# $FreeBSD: deskutils/horde-kronolith/Makefile 319937 2013-06-04 22:54:26Z mm $
 
 PORTNAME=	kronolith
-PORTVERSION=	4.0.5
+PORTVERSION=	4.1.0
 CATEGORIES=	deskutils www pear
 PKGNAMEPREFIX=	horde-
 
@@ -31,6 +31,7 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_Data \
 		Horde_Date \
 		Horde_Date_Parser \
+		Horde_Dav \
 		Horde_Exception \
 		Horde_Form \
 		Horde_Group \
