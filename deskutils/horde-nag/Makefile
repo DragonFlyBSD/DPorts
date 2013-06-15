@@ -1,12 +1,7 @@
-# Ports collection makefile for:  horde-nag
-# Date created:			  Sun Dec 14, 2001
-# Whom:				  Thierry Thomas (<thierry@pompo.net>)
-#
-# $FreeBSD: deskutils/horde-nag/Makefile 319377 2013-05-29 15:02:18Z mm $
-#
+# $FreeBSD: deskutils/horde-nag/Makefile 319937 2013-06-04 22:54:26Z mm $
 
 PORTNAME=	nag
-PORTVERSION=	4.0.3
+PORTVERSION=	4.1.0
 CATEGORIES=	deskutils www pear
 PKGNAMEPREFIX=	horde-
 
