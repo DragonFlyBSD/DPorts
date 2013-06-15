@@ -1,8 +1,8 @@
 # Created by: Tim Cas <ports@stdrand.com>
-# $FreeBSD: devel/ChipmunkPhysics/Makefile 316661 2013-04-27 11:52:33Z madpilot $
+# $FreeBSD: devel/ChipmunkPhysics/Makefile 320626 2013-06-11 18:44:16Z rakuco $
 
 PORTNAME=	ChipmunkPhysics
-PORTVERSION=	6.1.4
+PORTVERSION=	6.1.5
 CATEGORIES=	devel
 MASTER_SITES=	http://chipmunk-physics.net/release/Chipmunk-6.x/ \
 		http://files.libsiege.org/chipmunk/
@@ -20,8 +20,5 @@ CMAKE_ARGS=	-DBUILD_DEMOS=OFF
 MAKE_JOBS_SAFE=	yes
 
 USE_LDCONFIG=	yes
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|6.1.3|6.1.4|g' ${WRKSRC}/src/CMakeLists.txt
 
 .include <bsd.port.mk>
