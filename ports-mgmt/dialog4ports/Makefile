@@ -1,8 +1,8 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: ports-mgmt/dialog4ports/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: ports-mgmt/dialog4ports/Makefile 320008 2013-06-05 17:38:15Z bapt $
 
 PORTNAME=	dialog4ports
-PORTVERSION=	0.1.3
+PORTVERSION=	0.1.4
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://m1cro.tk/dialog4ports/ \
 		http://files.etoilebsd.net/dialog4ports/ \
@@ -27,6 +27,8 @@ PLIST_FILES=	bin/dialog4ports
 MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.pre.mk>
+
+MAKE_ARGS+=	DEBUG_FLAGS="${DEBUG_FLAGS}"
 
 ## This is used by 'make config' via Tools/scripts/dialog4ports.sh
 ## Use caution in changing
