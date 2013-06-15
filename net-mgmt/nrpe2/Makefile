@@ -1,6 +1,6 @@
 # Created by: Paul Dlug<paul@nerdlabs.com>
 #
-# $FreeBSD: ports/net-mgmt/nrpe2/Makefile,v 1.35 2012/11/17 06:00:35 svnexp Exp $
+# $FreeBSD: net-mgmt/nrpe2/Makefile 305521 2012-10-08 08:15:28Z dougb $
 
 PORTNAME=	nrpe
 DISTVERSION=	2.13

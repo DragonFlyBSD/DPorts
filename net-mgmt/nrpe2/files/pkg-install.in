@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-mgmt/nrpe2/files/pkg-install.in,v 1.4 2012/11/17 06:00:35 svnexp Exp $
+# $FreeBSD: net-mgmt/nrpe2/files/pkg-install.in 304038 2012-09-10 15:14:14Z bdrewery $
 #
 
 NAGIOSDIR=%%NAGIOSDIR%%
