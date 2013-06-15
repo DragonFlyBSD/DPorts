@@ -2,7 +2,7 @@
 # Date created:		18 September 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/graphics/p5-ming/Makefile,v 1.18 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: graphics/p5-ming/Makefile 320709 2013-06-12 17:45:02Z az $
 #
 
 PORTNAME=	ming
@@ -15,7 +15,7 @@ COMMENT=	Perl5 module for Ming which allows you to create Flash 4/5 movies
 
 CONFIGURE_ARGS=	--enable-perl
 INSTALL_WRKSRC=	${WRKSRC}/perl_ext
-MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VERSION}
+MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 PATCH_WRKSRC=	${WRKSRC}/perl_ext
 PATCHDIR=	${.CURDIR}/files
 PLIST=		${.CURDIR}/pkg-plist
