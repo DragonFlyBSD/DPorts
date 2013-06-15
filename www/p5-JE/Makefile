@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/www/p5-JE/Makefile,v 1.19 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-JE/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
 
 PORTNAME=	JE
 PORTVERSION=	0.060
@@ -16,6 +16,7 @@ RUN_DEPENDS=	p5-TimeDate>0:${PORTSDIR}/devel/p5-TimeDate \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 PERL_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	yes
 
 MAN3=		JE::Object.3 JE::_FieldHash.3 JE::String.3 \
 		JE::Object::Boolean.3 JE::Object::Number.3 \
