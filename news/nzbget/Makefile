@@ -1,5 +1,5 @@
 # Created by: Lewis Thompson <purple@lewiz.net>
-# $FreeBSD: news/nzbget/Makefile 319135 2013-05-26 20:15:30Z wg $
+# $FreeBSD: news/nzbget/Makefile 320276 2013-06-08 19:53:32Z wg $
 
 PORTNAME=	nzbget
 PORTVERSION=	10.2
@@ -34,8 +34,6 @@ OPTIONS_DEFAULT=	PAR GNUTLS
 .if ${PORT_OPTIONS:MPAR}
  CONFIGURE_ARGS+= --enable-parcheck --disable-libpar2-bugfixes-check
  LIB_DEPENDS+=	par2:${PORTSDIR}/archivers/libpar2
- # configure fail to test libpar2 with clang
- USE_GCC=	any
 .else
  CONFIGURE_ARGS+= --disable-parcheck
 .endif
