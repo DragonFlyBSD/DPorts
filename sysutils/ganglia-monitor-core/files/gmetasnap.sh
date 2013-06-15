@@ -2,7 +2,7 @@
 #
 # gmetasnapshot - Ganglia gmetad snapshot manager
 #
-# $FreeBSD: ports/sysutils/ganglia-monitor-core/files/gmetasnap.sh,v 1.3 2012/11/17 06:01:32 svnexp Exp $
+# $FreeBSD: head/sysutils/ganglia-monitor-core/files/gmetasnap.sh 300897 2012-07-14 14:29:18Z beat $
 
 command=`basename $0`
 

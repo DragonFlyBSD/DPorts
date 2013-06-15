@@ -1,13 +1,7 @@
-# Ports collection makefile for:	ganglia-monitor-core
-# Date created:				Wed Jan 23, 2003
-# Whom:					Brooks Davis <brooks@freebsd.org>
-#
-# $FreeBSD: ports/sysutils/ganglia-monitor-core/Makefile,v 1.49 2012/12/10 19:24:05 svnexp Exp $
-#
+# $FreeBSD: sysutils/ganglia-monitor-core/Makefile 320696 2013-06-12 13:59:16Z skreuzer $
 
 PORTNAME=	monitor-core
-PORTVERSION=	3.1.7
-PORTREVISION=	5
+PORTVERSION=	3.4.0
 CATEGORIES=	sysutils net parallel
 MASTER_SITES=	SF/ganglia/ganglia%20monitoring%20core/${PORTVERSION}
 PKGNAMEPREFIX=	ganglia-
@@ -16,16 +10,19 @@ PKGNAMESUFFIX=	-${CLUSTER}
 .endif
 DISTNAME=	ganglia-${PORTVERSION}
 
-MAINTAINER=	brooks@FreeBSD.org
+MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Ganglia cluster monitor, monitoring daemon
 
 LIB_DEPENDS=	apr-1:${PORTSDIR}/devel/apr1 \
 		confuse:${PORTSDIR}/devel/libconfuse \
-		pcre:${PORTSDIR}/devel/pcre
+		pcre:${PORTSDIR}/devel/pcre \
+		expat:${PORTSDIR}/textproc/expat2
 
 PKGINSTALL=	${WRKDIR}/pkg-install
 
-OPTIONS+=	GMETAD "include gmetad" on
+OPTIONS_DEFINE=	GMETAD
+OPTIONS_DEFAULT=	GMETAD
+GMETAD_DESC=	include gmetad
 
 USE_PYTHON=	yes
 USE_AUTOTOOLS=	libtool
@@ -36,6 +33,11 @@ CONFIGURE_ARGS=	--enable-setuid=ganglia --enable-setgid=ganglia
 CONFIGURE_ENV=	GANGLIA_ACK_SYSCONFDIR=1 "LDFLAGS=${LDFLAGS}"
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+USERS=	ganglia
+GROUPS=	ganglia
+
+PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
 SUB_FILES=	pkg-install
 
@@ -55,14 +57,12 @@ IGNORE=		the variable GMOND_CONF must point to a file when defined
 GMOND_CONF=	${WRKDIR}/gmond.conf
 .endif
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 USE_RC_SUBR=	gmond
-.if defined (WITH_GMETAD)
+.if ${PORT_OPTIONS:MGMETAD}
 USE_RC_SUBR+=	gmetad
-.endif
 
-.if defined (WITH_GMETAD)
 LIB_DEPENDS+=	rrd:${PORTSDIR}/databases/rrdtool
 CONFIGURE_ARGS+=	--with-gmetad
 PLIST_SUB+=	GMETAD=
@@ -75,8 +75,8 @@ SUB_LIST+=	GMETAD="\#"
 USE_LDCONFIG=	yes
 
 MAN1=		gmetric.1 gmond.1 gstat.1
-.if defined (WITH_GMETAD)
-MAN1+=		gmetad.1
+.if ${PORT_OPTIONS:MGMETAD}
+MAN1+=		gmetad.1 gmetad.py.1
 .endif
 MAN5=		gmond.conf.5
 
@@ -118,7 +118,7 @@ post-build:
 	${WRKSRC}/gmond/gmond -t > ${WRKDIR}/gmond.conf
 
 post-install:
-.if defined(WITH_GMETAD)
+.if ${PORT_OPTIONS:MGMETAD}
 	${INSTALL_SCRIPT} ${FILESDIR}/gmetasnap.sh ${PREFIX}/sbin/gmetasnap
 	${INSTALL_MAN} ${WRKSRC}/mans/gmetad.1 ${MANPREFIX}/man/man1
 	${INSTALL_DATA} ${GMETAD_CONF} ${PREFIX}/etc/gmetad.conf.sample
@@ -130,4 +130,4 @@ post-install:
 	${INSTALL_DATA} ${GMOND_CONF} ${PREFIX}/etc/gmond.conf.sample
 	${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
