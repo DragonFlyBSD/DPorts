@@ -1,30 +1,31 @@
 #!/bin/sh
 #
-# $FreeBSD: net/turnserver/files/turnserver.in 319644 2013-06-02 09:39:19Z gabor $
+# $FreeBSD: net/turnserver/files/turnserver.in 319998 2013-06-05 14:48:56Z gabor $
 #
-
 # PROVIDE: turnserver
 # REQUIRE: LOGIN
+# KEYWORD: shutdown
 #
 # Add the following lines to /etc/rc.conf.local or /etc/rc.conf
 # to enable this service:
 #
 # turnserver_enable (bool):	Set to NO by default.
-#				Set it to YES to enable doormand.
+#				Set it to YES to enable turnserver.
 # turnserver_config (path):	Set to %%PREFIX%%/etc/turnserver.conf
 #				by default.
 
 . /etc/rc.subr
 
-: ${turnserver_enable:="NO"}
-: ${turnserver_config="%%PREFIX%%/etc/turnserver.conf"}
-
-name="turnserver"
-rcvar="`set_rcvar`"
+name=turnserver
+rcvar=turnserver_enable
 
 load_rc_config $name
 
+: ${turnserver_enable:=no}
+: ${turnserver_config=%%PREFIX%%/etc/turnserver.conf}
+
 command="%%PREFIX%%/bin/${name}"
 command_args="--daemon -c ${turnserver_config}"
+required_files=${turnserver_config}
 
 run_rc_command "$1"

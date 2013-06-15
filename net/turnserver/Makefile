@@ -1,18 +1,18 @@
-# $FreeBSD: net/turnserver/Makefile 319644 2013-06-02 09:39:19Z gabor $
+# $FreeBSD: net/turnserver/Makefile 320468 2013-06-10 12:37:37Z gabor $
 
 PORTNAME=	turnserver
-PORTVERSION=	1.8.5.3
+PORTVERSION=	1.8.6.3
 CATEGORIES=	net
 MASTER_SITES=	http://rfc5766-turn-server.googlecode.com/files/
 PKGNAMEPREFIX=
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} turn.extra.docs-1.8.4.2.tar.gz
 
 MAINTAINER=	mom040267@gmail.com
 COMMENT=	STUN/TURN Server; IPv6, DTLS support; RFCs 5389, 5766, 6062, 6156
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	ssl:${PORTSDIR}/security/openssl \
-		event-2:${PORTSDIR}/devel/libevent2
+LIB_DEPENDS=	event-2:${PORTSDIR}/devel/libevent2
 
 SUB_FILES=	pkg-message
 
@@ -35,7 +35,7 @@ OPTIONS_DEFAULT=	MYSQL PGSQL REDIS
 
 .include <bsd.port.options.mk>
 
-PORTDOCS=
+PORTDOCS=	html TURNServerRESTAPI.pdf TurnNetworks.pdf
 PORTREADMEDOCS=	README.turnserver README.turnadmin README.turnutils INSTALL
 
 _BIN_UTILS=	peer stunclient rfc5769check uclient
@@ -76,7 +76,7 @@ CONFIGURE_ENV+=	TURN_NO_MYSQL=1
 .endif
 
 .if ${PORT_OPTIONS:MREDIS}
-LIB_DEPENDS+=	hiredis:${PORTSDIR}/databases/hiredis/
+LIB_DEPENDS+=	hiredis:${PORTSDIR}/databases/hiredis
 .else
 CONFIGURE_ENV+=	TURN_NO_HIREDIS=1
 .endif
@@ -120,7 +120,7 @@ do-install:
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
-	(cd ${WRKSRC}/docs/ && ${COPYTREE_SHARE} ${f} ${DOCSDIR})
+	(cd ${WRKSRC}/../turndocs/docs/ && ${COPYTREE_SHARE} ${f} ${DOCSDIR})
 .endfor
 .for f in ${PORTREADMEDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
