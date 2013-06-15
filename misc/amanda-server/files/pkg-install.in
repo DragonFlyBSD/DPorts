@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/misc/amanda-server/files/pkg-install.in,v 1.2 2012/11/17 05:59:32 svnexp Exp $
+# $FreeBSD: misc/amanda-server/files/pkg-install.in 300896 2012-07-14 13:54:48Z beat $
 
 if [ "$2" != "POST-INSTALL" ]; then
 	exit 0
