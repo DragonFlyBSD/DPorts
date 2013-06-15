@@ -1,17 +1,13 @@
-# New ports collection makefile for:	p5-Array-PrintCols
-# Date created:				October 17th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/p5-Array-PrintCols/Makefile,v 1.24 2012/11/17 05:59:42 svnexp Exp $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: misc/p5-Array-PrintCols/Makefile 320184 2013-06-07 08:22:42Z tobez $
 
 PORTNAME=	Array-PrintCols
-PORTVERSION=	2.1
+PORTVERSION=	2.5
 CATEGORIES=	misc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to print arrays of elements in sorted columns
 
 PERL_CONFIGURE=	yes
