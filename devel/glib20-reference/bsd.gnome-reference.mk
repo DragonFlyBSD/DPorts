@@ -1,7 +1,9 @@
-# $FreeBSD: devel/glib20-reference/bsd.gnome-reference.mk 318761 2013-05-22 11:32:22Z kwm $
+# $FreeBSD: devel/glib20-reference/bsd.gnome-reference.mk 320564 2013-06-11 14:26:02Z kwm $
 
 PARENTDIR?=	${.CURDIR:S|-reference$||}
 REFERENCE_PORT=	${PKGORIGIN:S|-reference$||}
+
+PORTSCOUT=	ignore
 
 .include "${PARENTDIR}/Makefile"
 
