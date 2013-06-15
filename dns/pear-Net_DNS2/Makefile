@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: dns/pear-Net_DNS2/Makefile 314374 2013-03-16 16:21:45Z miwi $
+# $FreeBSD: dns/pear-Net_DNS2/Makefile 319881 2013-06-04 16:56:40Z miwi $
 
 PORTNAME=	Net_DNS2
-PORTVERSION=	1.2.5
+PORTVERSION=	1.3.0
 CATEGORIES=	dns net pear
 
 MAINTAINER=	miwi@FreeBSD.org
