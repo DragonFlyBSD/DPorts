@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libgiigic/Makefile 315112 2013-03-24 12:12:31Z antoine $
+# $FreeBSD: devel/libgiigic/Makefile 320004 2013-06-05 17:00:14Z antoine $
 
 PORTNAME=	libgiigic
 PORTVERSION=	1.1.2
@@ -14,6 +14,9 @@ COMMENT=	Library on top of libgii, gic stands for General Input Configuration
 LICENSE=	MIT
 
 LIB_DEPENDS=	gii:${PORTSDIR}/devel/libgii
+
+DEPRECATED=	Unmaintained
+EXPIRATION_DATE=2013-09-01
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_BZIP2=	yes
