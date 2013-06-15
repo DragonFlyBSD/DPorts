@@ -2,11 +2,12 @@
 # Date created:		20 Nov 2005
 # Whom:			Hye-Shik Chang
 #
-# $FreeBSD: devel/llvm-devel/Makefile 319542 2013-05-31 20:49:05Z brooks $
+# $FreeBSD: devel/llvm-devel/Makefile 320704 2013-06-12 16:20:51Z brooks $
 #
 
 PORTNAME=	llvm
 DISTVERSION=	3.4.r${SVN_REV}
+PORTREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	brooks
@@ -20,7 +21,7 @@ BUILD_DEPENDS+=	cmake:${PORTSDIR}/devel/cmake
 BUILD_DEPENDS+=	bash:${PORTSDIR}/shells/bash
 .endif
 
-CONFLICTS=	llvm-[23]* llvm31-[3]*
+CONFLICTS=	llvm-2* llvm-3.[012]* llvm31-[3]*
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
@@ -126,9 +127,12 @@ post-patch:
 	${REINPLACE_CMD} -e 's|\(PROJ_mandir.*:=\).*$$|\1${MANPREFIX}/man|g' \
 	    ${WRKSRC}/Makefile.config.in
 
-pre-configure:
+post-configure:
 	${MKDIR} ${WRKDIR}/cmake
 	cd ${WRKDIR}/cmake && cmake -G "Unix Makefiles" ${WRKSRC}
+	${REINPLACE_CMD} -e 's|${WRKDIR}/cmake|${PREFIX}|' \
+	    -e 's|${WRKSRC}|${DATADIR}|' \
+	    ${WRKDIR}/cmake/share/llvm/cmake/LLVMConfig.cmake
 
 post-build:
 .if ${PORT_OPTIONS:MMANPAGES}
