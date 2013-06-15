@@ -1,17 +1,13 @@
-# New ports collection makefile for:	rubygem-method_source
-# Date created:		2012-02-08
-# Whom:			Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-#
-# $FreeBSD: ports/devel/rubygem-method_source/Makefile,v 1.4 2012/11/17 05:57:00 svnexp Exp $
-#
+# Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
+# $FreeBSD: devel/rubygem-method_source/Makefile 320769 2013-06-13 11:51:31Z sunpoet $
 
 PORTNAME=	method_source
-PORTVERSION=	0.8
+PORTVERSION=	0.8.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	A tool to retrieve the sourcecode for a method
+COMMENT=	Tool to retrieve the sourcecode for a method
 
 LICENSE=	MIT
 
