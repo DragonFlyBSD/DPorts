@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: misc/help2man/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: misc/help2man/Makefile 320775 2013-06-13 11:52:18Z sunpoet $
 
 PORTNAME=	help2man
-PORTVERSION=	1.41.2
+PORTVERSION=	1.43.2
 CATEGORIES=	misc
 MASTER_SITES=	GNU/${PORTNAME}
 
