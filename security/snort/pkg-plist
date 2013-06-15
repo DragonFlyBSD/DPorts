@@ -1,4 +1,4 @@
-@comment $FreeBSD: security/snort/pkg-plist 308246 2012-12-04 16:35:08Z zi $
+@comment $FreeBSD: security/snort/pkg-plist 320878 2013-06-14 03:21:07Z miwi $
 bin/snort
 bin/u2boat
 bin/u2spewfoo
@@ -215,7 +215,6 @@ lib/snort/dynamic_output/libsf_dynamic_output.la
 %%DYNAMIC%%lib/snort/dynamicpreprocessor/lib_sfdynamic_preprocessor_example.la
 %%DYNAMIC%%@dirrmtry lib/snort/dynamicpreprocessor
 %%DYNAMIC%%@dirrmtry lib/snort
-%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/BUGS
 %%PORTDOCS%%%%DOCSDIR%%/CREDITS
