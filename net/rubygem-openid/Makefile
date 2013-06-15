@@ -2,11 +2,11 @@
 # Date created:				Dec 19, 2006
 # Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/net/rubygem-openid/Makefile,v 1.14 2012/11/17 06:00:19 svnexp Exp $
+# $FreeBSD: net/rubygem-openid/Makefile 319808 2013-06-03 21:21:10Z swills $
 #
 
 PORTNAME=	openid
-PORTVERSION=	2.2.0
+PORTVERSION=	2.2.3
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 DISTNAME=	ruby-${PORTNAME}-${PORTVERSION}
