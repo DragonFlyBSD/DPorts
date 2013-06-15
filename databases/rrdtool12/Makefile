@@ -1,5 +1,5 @@
 # Created by: Jeremy Chadwick <koitsu@FreeBSD.org>
-# $FreeBSD: ports/databases/rrdtool12/Makefile,v 1.15 2012/11/17 05:55:23 svnexp Exp $
+# $FreeBSD: databases/rrdtool12/Makefile 320709 2013-06-12 17:45:02Z az $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.2.30
@@ -75,7 +75,7 @@ MAN1=		bin_dec_hex.1 cdeftutorial.1 rpntutorial.1 rrd-beginners.1 \
 
 .if ${PORT_OPTIONS:MPERL}
 MAN3=		RRDp.3 RRDs.3
-MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VERSION}
+MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 .endif
 
 post-extract:
