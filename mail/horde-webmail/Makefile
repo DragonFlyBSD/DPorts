@@ -1,12 +1,7 @@
-# Ports collection makefile for:  horde-webmail
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: mail/horde-webmail/Makefile 319412 2013-05-30 11:26:41Z mm $
-#
+# $FreeBSD: mail/horde-webmail/Makefile 319937 2013-06-04 22:54:26Z mm $
 
 PORTNAME=	webmail
-PORTVERSION=	5.0.5
+PORTVERSION=	5.1.0
 CATEGORIES=	mail www pear
 PKGNAMEPREFIX=	horde-
 
@@ -20,6 +15,7 @@ LATEST_LINK=	horde-${PORTNAME}
 USE_HORDE_BUILD=	Horde_Role
 USE_HORDE_RUN=	Horde_Role \
 		content \
+		gollem \
 		horde \
 		imp \
 		ingo \
@@ -27,6 +23,7 @@ USE_HORDE_RUN=	Horde_Role \
 		mnemo \
 		nag \
 		timeobjects \
+		trean \
 		turba
 
 .include <bsd.port.pre.mk>
