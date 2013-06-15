@@ -1,9 +1,9 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/xmms2/Makefile 319017 2013-05-24 21:32:38Z madpilot $
+# $FreeBSD: audio/xmms2/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME?=	xmms2
 PORTVERSION=	0.8
-PORTREVISION?=	2
+PORTREVISION?=	3
 DISTVERSIONSUFFIX=DrO_o
 CATEGORIES?=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}%20${DISTVERSIONSUFFIX}
