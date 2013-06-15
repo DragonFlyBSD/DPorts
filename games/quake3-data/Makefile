@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: games/quake3-data/Makefile 317003 2013-05-01 08:44:29Z danfe $
+# $FreeBSD: games/quake3-data/Makefile 317955 2013-05-12 13:00:07Z danfe $
 
 PORTNAME=	data
 DISTVERSION=	1.32b-3
@@ -37,8 +37,8 @@ PLIST_SUB+=	TEAMARENA="@comment "
 do-extract:
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
-	@cd ${WRKDIR} && ${TAIL} +356 ${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} | \
-		${TAR} zxf - >/dev/null
+	@cd ${WRKDIR} && ${TAIL} +356 \
+		${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} | ${TAR} xzf -
 
 do-install:
 	@${MKDIR} ${DATADIR}

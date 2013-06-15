@@ -1,33 +1,22 @@
 # Makefile for defining variables used by other Quake3 related ports.  See
-# `games/quake2-data/Makefile.include' for extensive description.
-
-# Set variables
+# `games/quake2-data/Makefile.include' for extensive description and usage.
 
 Q3PKGNAMEPREFIX?=	quake3-
-Q3DIR?=		${PREFIX}/share/quake3
+Q3DIR?=		${LOCALBASE}/share/quake3
 
-# Add them to the environment
+.if defined(PKGNAMEPREFIX) && ${PKGNAMEPREFIX} == ${Q3PKGNAMEPREFIX} && defined(OPTIONSMKINCLUDED)
+.  error include before <bsd.port.options.mk> if using Q3PKGNAMEPREFIX
+.endif
 
 MAKE_ENV+=	Q3DIR="${Q3DIR}"
-PLIST_SUB+=	Q3DIR="${Q3DIR:S/${PREFIX}\///}"
+PLIST_SUB+=	Q3DIR="${Q3DIR:S/${LOCALBASE}\///}"
 SUB_LIST+=	Q3DIR="${Q3DIR}"
-
-# Add the dependency
 
 .if ${PORTNAME} != "data"
 RUN_DEPENDS+=	${Q3DIR}/baseq3/pak1.pk3:${PORTSDIR}/games/quake3-data
 .endif
 
-# DOS to Unix text conversion
-
-.if defined(USE_CRLF)
-.   if defined(USE_ZIP)
+# When extracting ZIP archives, ask it to convert text files to Unix style
+.if defined(USE_ZIP)
 EXTRACT_BEFORE_ARGS=	-aqo
-.   else
-pre-patch:
-	@${FIND} ${WRKDIR} -type f -print0 | \
-		${XARGS} -0 ${FILE} | ${GREP} 'CRLF' | \
-		${SED} -e "s/:.*//" | ${SED} -e 's/ /\\ /g' | \
-		${XARGS} ${REINPLACE_CMD} -i "" -e "s/`${PRINTF} '\r'`$$//"
-.   endif
 .endif
