@@ -1,8 +1,9 @@
 # Created by: Gabor Pali <pgj@FreeBSD.org>
-# $FreeBSD: devel/cppcheck/Makefile 316027 2013-04-18 08:24:47Z bf $
+# $FreeBSD: devel/cppcheck/Makefile 320605 2013-06-11 15:25:53Z bf $
 
 PORTNAME=	cppcheck
-PORTVERSION=	1.59
+PORTVERSION=	1.60.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/
 
@@ -11,14 +12,14 @@ COMMENT=	Static analysis of C/C++ code
 
 LICENSE=	GPLv3
 
-#LIB_DEPENDS=	tinyxml:${PORTSDIR}/textproc/tinyxml
+LIB_DEPENDS=	tinyxml2:${PORTSDIR}/textproc/tinyxml2
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 
 ALL_TARGET=	cppcheck
 LDFLAGS+=	-L${LOCALBASE}/lib
-#MAKE_ENV+=	TINYXML=-ltinyxml
+MAKE_ENV+=	TINYXML=-ltinyxml2
 
 OPTIONS_DEFINE=		MATCHCOMPILER RULES
 OPTIONS_DEFAULT=	MATCHCOMPILER RULES
@@ -44,7 +45,7 @@ post-install:
 
 .if ${PORT_OPTIONS:MMATCHCOMPILER}
 MAKE_ENV+=		SRCDIR=build
-USE_PYTHON_BUILD=	2.6+
+USE_PYTHON_BUILD=	-2.7
 .endif
 
 .if ${PORT_OPTIONS:MRULES}
@@ -53,9 +54,9 @@ MAKE_ENV+=	HAVE_RULES=yes
 .endif
 
 post-patch:
-#	@${REINPLACE_CMD} \
-#	-e 's|-Iexternals/tinyxml|-I${LOCALBASE}/include|' \
-#		${WRKSRC}/Makefile
+	@${REINPLACE_CMD} \
+	-e 's|-Iexternals/tinyxml|-I${LOCALBASE}/include|' \
+		${WRKSRC}/Makefile
 .if ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '\|DB2MAN=|d' \
 		${WRKSRC}/Makefile
