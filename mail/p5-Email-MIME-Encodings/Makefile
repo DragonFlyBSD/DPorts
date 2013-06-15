@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Email-MIME-Encodings
-# Date created:				September 7 2003
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: ports/mail/p5-Email-MIME-Encodings/Makefile,v 1.11 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: mail/p5-Email-MIME-Encodings/Makefile 319462 2013-05-31 01:46:28Z miwi $
 
 PORTNAME=	Email-MIME-Encodings
 PORTVERSION=	1.313
