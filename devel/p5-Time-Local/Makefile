@@ -2,11 +2,11 @@
 # Date created:	   1 july 2003
 # Whom:		   Mathieu Arnold <m@absolight.net>
 #
-# $FreeBSD: ports/devel/p5-Time-Local/Makefile,v 1.20 2012/12/17 13:43:44 svnexp Exp $
+# $FreeBSD: devel/p5-Time-Local/Makefile 319938 2013-06-04 23:12:46Z mat $
 #
 
 PORTNAME=	Time-Local
-PORTVERSION=	1.22.00
+PORTVERSION=	1.23.00
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
