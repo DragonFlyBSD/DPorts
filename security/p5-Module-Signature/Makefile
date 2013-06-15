@@ -1,8 +1,8 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: ports/security/p5-Module-Signature/Makefile,v 1.36 2012/12/18 09:54:02 svnexp Exp $
+# $FreeBSD: security/p5-Module-Signature/Makefile 320066 2013-06-06 09:43:39Z tobez $
 
 PORTNAME=	Module-Signature
-PORTVERSION=	0.70
+PORTVERSION=	0.73
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
