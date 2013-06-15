@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: ports/devel/p5-File-ChangeNotify/Makefile,v 1.13 2012/11/17 05:56:15 svnexp Exp $
+# $FreeBSD: devel/p5-File-ChangeNotify/Makefile 305076 2012-09-30 08:38:37Z culot $
 
 PORTNAME=	File-ChangeNotify
 PORTVERSION=	0.22
