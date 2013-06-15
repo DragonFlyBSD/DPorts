@@ -1,5 +1,5 @@
 # Created by: "Waitman Gobble" <uzimac@da3m0n8t3r.com>
-# $FreeBSD: ports-mgmt/prhistory/Makefile 313161 2013-03-01 19:06:01Z jgh $
+# $FreeBSD: ports-mgmt/prhistory/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	prhistory
 PORTVERSION=	1.0
@@ -19,7 +19,7 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	waitman
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	9113c59
 
 MAN7=	prhistory.7
