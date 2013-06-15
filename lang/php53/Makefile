@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: lang/php53/Makefile 318269 2013-05-16 02:12:57Z flo $
+# $FreeBSD: lang/php53/Makefile 320210 2013-06-07 15:19:27Z flo $
 
 PORTNAME=	php53
-PORTVERSION=	5.3.25
+PORTVERSION=	5.3.26
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
