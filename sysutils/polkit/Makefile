@@ -14,7 +14,7 @@ COMMENT=	Framework for controlling access to system-wide components
 
 BUILD_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
-LIB_DEPENDS+=	libxml2.5:${PORTSDIR}/textproc/libxml2
+LIB_DEPENDS+=	xml2:${PORTSDIR}/textproc/libxml2
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection \
 		dbus-launch:${PORTSDIR}/devel/dbus
 
