@@ -1,9 +1,9 @@
 # Created by: alex
-# $FreeBSD: multimedia/libxine/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: multimedia/libxine/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	xine
 PORTVERSION=	1.2.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia ipv6
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-lib/${PORTVERSION}
 PKGNAMEPREFIX=	lib
