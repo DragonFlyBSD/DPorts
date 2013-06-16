@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Mock-LWP-Dispatch/Makefile 315850 2013-04-16 16:54:56Z sunpoet $
+# $FreeBSD: devel/p5-Test-Mock-LWP-Dispatch/Makefile 320287 2013-06-08 21:04:22Z sunpoet $
 
 PORTNAME=	Test-Mock-LWP-Dispatch
-PORTVERSION=	0.05
+PORTVERSION=	0.06
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
