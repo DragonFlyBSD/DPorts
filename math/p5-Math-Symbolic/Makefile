@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Symbolic/Makefile 318227 2013-05-15 08:24:12Z tobez $
+# $FreeBSD: math/p5-Math-Symbolic/Makefile 320076 2013-06-06 10:21:44Z tobez $
 
 PORTNAME=	Math-Symbolic
-PORTVERSION=	0.609
+PORTVERSION=	0.611
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SMUELLER
