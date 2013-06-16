@@ -1,12 +1,7 @@
-# New ports collection makefile for:	devel/p5-Class-ErrorHandler
-# Date created:				28 July 2005
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Class-ErrorHandler/Makefile,v 1.3 2012/11/17 05:56:07 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Class-ErrorHandler/Makefile 320535 2013-06-11 07:02:22Z lth $
 
 PORTNAME=	Class-ErrorHandler
-PORTVERSION=	0.01
+PORTVERSION=	0.02
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
