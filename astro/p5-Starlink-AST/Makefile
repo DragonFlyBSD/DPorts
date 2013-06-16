@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Starlink-AST
-# Date created:				2012-07-01
-# Whom:					Wen Heping<wen@FreeBSD.org>
-#
-# $FreeBSD: ports/astro/p5-Starlink-AST/Makefile,v 1.2 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: Wen Heping<wen@FreeBSD.org>
+# $FreeBSD: astro/p5-Starlink-AST/Makefile 319570 2013-06-01 14:22:35Z wen $
 
 PORTNAME=	Starlink-AST
 PORTVERSION=	1.02
