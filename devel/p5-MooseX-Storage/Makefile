@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-MooseX-Storage/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-MooseX-Storage/Makefile 320495 2013-06-10 17:13:56Z mat $
 
 PORTNAME=	MooseX-Storage
-PORTVERSION=	0.32
+PORTVERSION=	0.33
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,7 +14,6 @@ BUILD_DEPENDS=	p5-JSON-Any>=1.15:${PORTSDIR}/converters/p5-JSON-Any \
 		p5-Moose>=0.99:${PORTSDIR}/devel/p5-Moose \
 		p5-String-RewritePrefix>=0.004:${PORTSDIR}/textproc/p5-String-RewritePrefix
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA \
 		p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
