@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: mail/sympa/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: mail/sympa/Makefile 319862 2013-06-04 14:17:16Z bapt $
 
 PORTNAME=	sympa
 PORTVERSION=	6.1.17
@@ -65,14 +65,6 @@ SUB_FILES=	pkg-install
 
 USE_RC_SUBR=	sympa
 
-.if !defined(WITHOUT_NLS)
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
-
 MAN8=		alias_manager.8 archived.8 bounced.8 sympa.8
 
 CONFLICTS=	sympa-5*
@@ -95,6 +87,14 @@ OPTIONS_SET+=	${option}
 .endif
 
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+USES+=		gettext
+PLIST_SUB+=	NLS=""
+.else
+CONFIGURE_ARGS+=--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.endif
 
 .if ${PORT_OPTIONS:MFASTCGI}
 RUN_DEPENDS+=	p5-FCGI>=0:${PORTSDIR}/www/p5-FCGI
