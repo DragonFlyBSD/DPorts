@@ -2,11 +2,11 @@
 # Date created:		10 Dec 2001
 # Whom:			Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/dns/p5-POE-Component-Client-DNS/Makefile,v 1.24 2012/11/17 05:57:10 svnexp Exp $
+# $FreeBSD: dns/p5-POE-Component-Client-DNS/Makefile 319958 2013-06-05 08:04:01Z mat $
 #
 
 PORTNAME=	POE-Component-Client-DNS
-PORTVERSION=	1.051
+PORTVERSION=	1.053
 PORTEPOCH=	1
 CATEGORIES=	dns perl5 devel
 MASTER_SITES=	CPAN
