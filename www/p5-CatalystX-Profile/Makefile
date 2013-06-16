@@ -2,7 +2,7 @@
 # Date created:		2011-05-08
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CatalystX-Profile/Makefile,v 1.3 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-CatalystX-Profile/Makefile 320095 2013-06-06 13:28:19Z mat $
 #
 
 PORTNAME=	CatalystX-Profile
@@ -26,7 +26,6 @@ RUN_DEPENDS=	p5-Catalyst-Runtime>=5.80020:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Moose>=0.93:${PORTSDIR}/devel/p5-Moose \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 
-USE_PERL5=	yes
 PERL_CONFIGURE=	yes
 
 MAN3=		CatalystX::Profile.3 CatalystX::Profile::Controller::ControlProfiling.3
