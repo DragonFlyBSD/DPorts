@@ -1,15 +1,17 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: textproc/p5-Lingua-EN-NamedEntity/Makefile 318924 2013-05-24 08:15:28Z az $
+# $FreeBSD: textproc/p5-Lingua-EN-NamedEntity/Makefile 319844 2013-06-04 10:00:08Z tobez $
 
 PORTNAME=	Lingua-EN-NamedEntity
-PORTVERSION=	1.9
-PORTREVISION=	1
+PORTVERSION=	1.92
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Basic Named Entity Extraction algorithm
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 RUN_DEPENDS=	p5-Lingua-Stem>=0:${PORTSDIR}/textproc/p5-Lingua-Stem \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
