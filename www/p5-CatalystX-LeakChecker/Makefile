@@ -2,7 +2,7 @@
 # Date created:		2011-05-08
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CatalystX-LeakChecker/Makefile,v 1.3 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-CatalystX-LeakChecker/Makefile 320095 2013-06-06 13:28:19Z mat $
 #
 
 PORTNAME=	CatalystX-LeakChecker
@@ -22,7 +22,6 @@ RUN_DEPENDS=	p5-Catalyst-Runtime>=0:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Devel-Cycle>0:${PORTSDIR}/devel/p5-Devel-Cycle \
 		p5-PadWalker>0:${PORTSDIR}/devel/p5-PadWalker
 
-USE_PERL5=	yes
 PERL_CONFIGURE=	yes
 
 MAN3=		CatalystX::LeakChecker.3
