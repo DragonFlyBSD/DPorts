@@ -1,9 +1,9 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: multimedia/vlc/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	vlc
 DISTVERSION=	2.0.6
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	3
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/p/-pre/}/ \
