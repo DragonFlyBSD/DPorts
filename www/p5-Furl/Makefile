@@ -1,7 +1,8 @@
-# $FreeBSD: www/p5-Furl/Makefile 319086 2013-05-26 01:09:49Z kuriyama $
+# $FreeBSD: www/p5-Furl/Makefile 320045 2013-06-06 01:39:33Z kuriyama $
 
 PORTNAME=	Furl
 PORTVERSION=	2.16
+PORTREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TOKUHIROM
@@ -11,6 +12,7 @@ MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension of lightning-fast URL fetcher
 
 RUN_DEPENDS=	\
+	p5-Class-Accessor-Lite>0:${PORTSDIR}/devel/p5-Class-Accessor-Lite \
 	p5-HTTP-Parser-XS>=0.11:${PORTSDIR}/www/p5-HTTP-Parser-XS \
 	p5-Mozilla-CA>0:${PORTSDIR}/www/p5-Mozilla-CA
 BUILD_DEPENDS:=	${RUN_DEPENDS}
