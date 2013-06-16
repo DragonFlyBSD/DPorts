@@ -1,7 +1,5 @@
-# Ports collection Makefile for:	p5-Digest-MD5-Reverse
-# Date created:				17 Dec 2005
-# Whom:					Gabor Kovesdan
-# $FreeBSD: ports/security/p5-Digest-MD5-Reverse/Makefile,v 1.7 2012/11/17 06:01:12 svnexp Exp $
+# Created by: Gabor Kovesdan
+# $FreeBSD: security/p5-Digest-MD5-Reverse/Makefile 320858 2013-06-13 23:48:20Z miwi $
 
 PORTNAME=	Digest-MD5-Reverse
 PORTVERSION=	1.3
