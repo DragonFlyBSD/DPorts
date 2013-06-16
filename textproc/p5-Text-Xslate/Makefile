@@ -1,8 +1,8 @@
 # Whom: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Xslate/Makefile 319481 2013-05-31 10:41:02Z tobez $
+# $FreeBSD: textproc/p5-Text-Xslate/Makefile 319782 2013-06-03 14:12:15Z tobez $
 
 PORTNAME=	Text-Xslate
-PORTVERSION=	2.0004
+PORTVERSION=	2.0006
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:GFUJI
