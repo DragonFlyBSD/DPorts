@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Plack::Middleware::AutoRefresh
-# Date created:		02 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Plack-Middleware-AutoRefresh/Makefile,v 1.3 2012/11/17 06:02:53 svnexp Exp $
-#
+# $FreeBSD: www/p5-Plack-Middleware-AutoRefresh/Makefile 320267 2013-06-08 16:25:46Z miwi $
 
 PORTNAME=	Plack-Middleware-AutoRefresh
 PORTVERSION=	0.08
