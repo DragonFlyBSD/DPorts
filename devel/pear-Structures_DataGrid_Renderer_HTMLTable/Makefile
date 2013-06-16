@@ -1,8 +1,8 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: ports/devel/pear-Structures_DataGrid_Renderer_HTMLTable/Makefile,v 1.4 2013/02/04 08:49:26 svnexp Exp $
+# $FreeBSD: devel/pear-Structures_DataGrid_Renderer_HTMLTable/Makefile 319880 2013-06-04 16:56:17Z miwi $
 
 PORTNAME=	Structures_DataGrid_Renderer_HTMLTable
-PORTVERSION=	0.1.5
+PORTVERSION=	0.1.6
 CATEGORIES=	devel www pear
 
 MAINTAINER=	miwi@FreeBSD.org
