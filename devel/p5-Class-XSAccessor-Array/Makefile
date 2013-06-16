@@ -1,19 +1,23 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Class-XSAccessor-Array/Makefile,v 1.7 2012/11/17 05:56:08 svnexp Exp $
+# $FreeBSD: devel/p5-Class-XSAccessor-Array/Makefile 318305 2013-05-16 10:29:08Z miwi $
 
 PORTNAME=	Class-XSAccessor-Array
 PORTVERSION=	1.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:SMUELLER
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl5 module for unloading classes
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-AutoXS-Header>=0:${PORTSDIR}/devel/p5-AutoXS-Header
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+PERL_CONFIGURE=	yes
 
 MAN3=		Class::XSAccessor::Array.3
 
