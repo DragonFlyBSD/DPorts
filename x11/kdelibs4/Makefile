@@ -1,5 +1,5 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: x11/kdelibs4/Makefile 318452 2013-05-18 20:34:41Z makc $
+# $FreeBSD: x11/kdelibs4/Makefile 320193 2013-06-07 11:46:34Z avilla $
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_VERSION}
@@ -58,6 +58,7 @@ CMAKE_ARGS+=	-DWITH_ACL:BOOL=Off \
 		-DWITH_FAM:BOOL=On \
 		-DWITH_ASPELL:BOOL=Off \
 		-DWITH_HSPELL:BOOL=Off \
+		-DHUPNP_ENABLED:BOOL=On \
 		-DKDE_DISTRIBUTION_TEXT:STRING="${OPSYS}" \
 		-DKDE_DEFAULT_HOME:STRING=".kde4"
 
