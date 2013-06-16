@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Instapaper-Client
-# Date created:		2011-01-05
-# Whom:			TERAMOTO Masahiro <markun@onohara.to>
-#
-# $FreeBSD: ports/www/p5-WWW-Instapaper-Client/Makefile,v 1.3 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: TERAMOTO Masahiro <markun@onohara.to>
+# $FreeBSD: www/p5-WWW-Instapaper-Client/Makefile 320269 2013-06-08 16:26:10Z miwi $
 
 PORTNAME=	WWW-Instapaper-Client
 PORTVERSION=	0.901

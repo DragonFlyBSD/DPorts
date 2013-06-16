@@ -1,6 +1,5 @@
-@comment $FreeBSD: ports/www/p5-WWW-Instapaper-Client/pkg-plist,v 1.2 2012/11/17 06:02:55 svnexp Exp $
+@comment $FreeBSD: www/p5-WWW-Instapaper-Client/pkg-plist 320269 2013-06-08 16:26:10Z miwi $
 %%SITE_PERL%%/WWW/Instapaper/Client.pm
-@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Instapaper
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW
 @dirrmtry %%SITE_PERL%%/WWW/Instapaper
 @dirrmtry %%SITE_PERL%%/WWW
