@@ -1,4 +1,4 @@
-# $FreeBSD: net/samba36/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: net/samba36/Makefile 320132 2013-06-06 22:03:35Z bapt $
 
 PORTNAME=		${SAMBA_BASENAME}36
 PORTVERSION=		3.6.13
@@ -124,10 +124,6 @@ WINBIND_DESC=		WinBIND support
 
 .include <bsd.port.options.mk>
 
-# XXX
-.if ${OSVERSION} >= 701000 && ${OSVERSION} < 702000
-IGNORE=			databases/tdb crashes on FreeBSD 7.1. Please, consider upgrading to 7.2 or higher
-.endif
 # There are reports that on ARM PIE makes binaries to core dump(#149186)
 .if ${ARCH} == "arm"
 CONFIGURE_ARGS+=	--disable-pie
@@ -465,13 +461,6 @@ INSTALL_TARGET=	installservers installbin installscripts installdat \
 INSTALL_TARGET+=installswat
 .endif
 
-.if defined(OPTIONS)
-pre-fetch:
-	@${ECHO_MSG} "===>  -------------------------------------------"
-	@${ECHO_MSG} "===>  Run 'make config' to (re)configure the port"
-	@${ECHO_MSG} "===>  -------------------------------------------"
-.endif
-
 pre-configure:
 	@${FIND} ${WRKDIR}/${DISTNAME} -type d | ${XARGS} ${CHMOD} u+w,a+rx
 	@${FIND} ${WRKDIR}/${DISTNAME} -type f | ${XARGS} ${CHMOD} u+w,a+r
@@ -484,7 +473,7 @@ post-configure:
 pre-install:
 	-@${FIND} "${SAMBA_MODULEDIR}" -type f -o -type l 2>/dev/null | ${SORT} | ${SED} -E 's|^${PREFIX}/?||;' > ${WRKDIR}/.PLIST.exclude
 	@${CAT} ${PKGDIR}/pkg-plist > ${PLIST}
-.if !defined(WITHOUT_SWAT)
+.if ${PORT_OPTIONS:MSWAT}
 	@${CAT} ${PKGDIR}/pkg-plist.swat >> ${PLIST}
 .endif
 
