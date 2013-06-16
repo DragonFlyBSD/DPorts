@@ -2,7 +2,7 @@
 # Date created:				27 Jul 2008
 # Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-MooseX-POE/Makefile,v 1.23 2012/12/17 15:16:54 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-POE/Makefile 309100 2012-12-17 15:10:35Z az $
 #
 
 PORTNAME=	MooseX-POE
