@@ -2,7 +2,7 @@
 # Date created:		2011-05-08
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CatalystX-REPL/Makefile,v 1.4 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-CatalystX-REPL/Makefile 320095 2013-06-06 13:28:19Z mat $
 #
 
 PORTNAME=	CatalystX-REPL
@@ -23,7 +23,6 @@ RUN_DEPENDS=	p5-Carp-REPL>=0:${PORTSDIR}/devel/p5-Carp-REPL \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 TEST_DEPENDS=	p5-Test-Expect>=0:${PORTSDIR}/devel/p5-Test-Expect
 
-USE_PERL5=	yes
 PERL_CONFIGURE=	yes
 
 MAN3=		CatalystX::REPL.3
