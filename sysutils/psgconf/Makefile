@@ -2,7 +2,7 @@
 # Date created:				17 Feb 2004
 # Whom:						Jim Pirzyk <pirzyk@freebsd.org>
 #
-# $FreeBSD: ports/sysutils/psgconf/Makefile,v 1.21 2012/11/17 06:01:42 svnexp Exp $
+# $FreeBSD: sysutils/psgconf/Makefile 305949 2012-10-16 05:38:25Z az $
 #
 
 PORTNAME=	psgconf
