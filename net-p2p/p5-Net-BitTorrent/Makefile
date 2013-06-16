@@ -2,7 +2,7 @@
 # Date created:		2008-04-12
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/net-p2p/p5-Net-BitTorrent/Makefile,v 1.15 2012/12/17 08:59:20 svnexp Exp $
+# $FreeBSD: net-p2p/p5-Net-BitTorrent/Makefile 309071 2012-12-17 08:50:54Z az $
 #
 
 PORTNAME=	Net-BitTorrent
