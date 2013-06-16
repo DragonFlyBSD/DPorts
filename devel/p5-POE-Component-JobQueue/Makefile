@@ -2,11 +2,11 @@
 # Date created:		10 Dec 2001
 # Whom:			Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-POE-Component-JobQueue/Makefile,v 1.10 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: devel/p5-POE-Component-JobQueue/Makefile 320493 2013-06-10 17:02:24Z mat $
 #
 
 PORTNAME=	POE-Component-JobQueue
-PORTVERSION=	0.5500
+PORTVERSION=	0.5710
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
