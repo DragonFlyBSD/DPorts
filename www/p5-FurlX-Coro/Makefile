@@ -1,15 +1,10 @@
-# New ports collection makefile for:	FurlX::Coro
-# Date created:		31 Dec 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-FurlX-Coro/Makefile,v 1.2 2012/11/17 06:02:48 svnexp Exp $
-#
+# $FreeBSD: www/p5-FurlX-Coro/Makefile 320047 2013-06-06 01:51:53Z kuriyama $
 
 PORTNAME=	FurlX-Coro
-PORTVERSION=	0.01
+PORTVERSION=	1.02
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	../../authors/id/G/GF/GFUJI
+MASTER_SITE_SUBDIR=	CPAN:GFUJI
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	kuriyama@FreeBSD.org
@@ -22,7 +17,7 @@ BUILD_DEPENDS=	\
 	${RUN_DEPENDS} \
 	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+PERL_MODBUILD=	yes
 
 MAN3=	FurlX::Coro.3 \
 	FurlX::Coro::HTTP.3
