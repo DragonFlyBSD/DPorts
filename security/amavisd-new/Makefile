@@ -1,4 +1,4 @@
-# $FreeBSD: security/amavisd-new/Makefile 317105 2013-05-02 12:56:12Z bapt $
+# $FreeBSD: security/amavisd-new/Makefile 320167 2013-06-07 07:47:25Z az $
 
 PORTNAME=	amavisd-new
 PORTVERSION=	2.8.0
@@ -212,10 +212,6 @@ RUN_DEPENDS+=	${LOCALBASE}/bin/tnef:${PORTSDIR}/converters/tnef
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|$daemon_user  = \'vscan\';|$daemon_user  = \'${AMAVISUSER}\';|" \
