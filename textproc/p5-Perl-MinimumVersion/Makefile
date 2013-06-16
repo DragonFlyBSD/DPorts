@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Perl-MinimumVersion/Makefile 314431 2013-03-17 13:26:58Z lth $
+# $FreeBSD: textproc/p5-Perl-MinimumVersion/Makefile 320161 2013-06-07 07:15:16Z az $
 
 PORTNAME=	Perl-MinimumVersion
 PORTVERSION=	1.32
@@ -27,8 +27,4 @@ MAN3=	Perl::MinimumVersion.3
 post-patch:
 	@${PERL} -pi -e '$$_="" if m/Test::/' ${WRKSRC}/Makefile.PL
 
-.include <bsd.port.pre.mk>
-.if ${PERL_LEVEL} < 501001
-RUN_DEPENDS+=	p5-Scalar-List-Utils>=1.20:${PORTSDIR}/lang/p5-Scalar-List-Utils
-.endif
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
