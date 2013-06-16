@@ -1,13 +1,11 @@
-# New ports collection makefile for:	p5-XML-Parser-Style-Elemental
-# Date created:				2004-05-23
-# Whom:					arved
-#
-# $FreeBSD: textproc/p5-XML-Parser-Style-Elemental/Makefile 300897 2012-07-14 14:29:18Z beat $
+# Created by: arved
+# $FreeBSD: textproc/p5-XML-Parser-Style-Elemental/Makefile 318171 2013-05-14 16:30:49Z miwi $
 
 PORTNAME=	XML-Parser-Style-Elemental
 PORTVERSION=	0.50
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:TIMA
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ports@FreeBSD.org
