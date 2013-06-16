@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-escape_utils
-# Date created:				13 Dec 2011
-# Whom:					Scott Sanders <scott@jssjr.com>
-#
-# $FreeBSD: ports/textproc/rubygem-escape_utils/Makefile,v 1.2 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: Scott Sanders <scott@jssjr.com>
+# $FreeBSD: textproc/rubygem-escape_utils/Makefile 319739 2013-06-03 00:51:35Z swills $
 
 PORTNAME=	escape_utils
-PORTVERSION=	0.2.4
+PORTVERSION=	0.3.2
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
