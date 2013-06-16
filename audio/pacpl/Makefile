@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/pacpl/Makefile 317573 2013-05-07 06:31:06Z bapt $
+# $FreeBSD: audio/pacpl/Makefile 320094 2013-06-06 13:25:20Z mat $
 
 PORTNAME=	pacpl
 PORTVERSION=	4.0.5
@@ -11,8 +11,7 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl Audio Converter
 
 USES=		shebangfix
-USE_PERL5_BUILD=yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	yes
 ONLY_FOR_ARCHS=	i386 amd64
 NO_BUILD=	yes
 
