@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/goffice/Makefile 317449 2013-05-05 23:08:40Z kwm $
+# $FreeBSD: devel/goffice/Makefile 320125 2013-06-06 20:24:27Z ohauer $
 #   $MCom: ports/trunk/devel/goffice/Makefile 17268 2013-04-01 05:13:11Z marcus $
 #
 # !!! When updating goffice, don't forget to update pkg-plist in:
@@ -33,7 +33,7 @@ PLIST_SUB=	VERSION=${PORTVERSION} \
 MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	GCONF
-OPTIONS_DEAFULT=GCONF
+OPTIONS_DEFAULT=GCONF
 
 .include <bsd.port.options.mk>
 
