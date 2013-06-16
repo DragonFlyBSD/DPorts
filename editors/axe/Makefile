@@ -1,9 +1,5 @@
-# New ports collection makefile for:	aXe
-# Date created:		28 December 1994
-# Whom:			jc@irbs.com John Capo
-#
-# $FreeBSD: ports/editors/axe/Makefile,v 1.17 2012/11/17 05:57:11 svnexp Exp $
-#
+# Created by: John Capo <jc@irbs.com>
+# $FreeBSD: editors/axe/Makefile 320825 2013-06-13 18:34:51Z wg $
 
 PORTNAME=	aXe
 PORTVERSION=	6.1.2
@@ -23,5 +19,6 @@ USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 ALL_TARGET=	Xaw3d all
 MAN1=		axe.1 axinfo.1
 MAKE_JOBS_UNSAFE=	yes
+CFLAGS=		-Wno-return-type
 
 .include <bsd.port.mk>
