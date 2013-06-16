@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/net/DarwinStreamingServer/pkg-install,v 1.2 2012/11/17 05:59:56 svnexp Exp $
+# $FreeBSD: net/DarwinStreamingServer/pkg-install 300897 2012-07-14 14:29:18Z beat $
 
 PATH=/bin:/usr/sbin
 
