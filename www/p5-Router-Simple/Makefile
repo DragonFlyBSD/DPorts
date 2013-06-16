@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/www/p5-Router-Simple/Makefile,v 1.6 2012/12/08 11:19:43 svnexp Exp $
+# $FreeBSD: www/p5-Router-Simple/Makefile 319036 2013-05-25 08:15:20Z sunpoet $
 
 PORTNAME=	Router-Simple
 PORTVERSION=	0.14
@@ -26,11 +26,6 @@ MAN3=		Router::Simple.3 \
 		Router::Simple::SubMapper.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
 
 .if ${PERL_LEVEL} < 501400
 TEST_DEPENDS+=	p5-Test-Simple>=0.98:${PORTSDIR}/devel/p5-Test-Simple
