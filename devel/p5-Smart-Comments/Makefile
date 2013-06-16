@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Smart-Comments
-# Date created:				24 May 2005
-# Whom:					Aaron Dalton <aaron@daltons.ca>
-#
-# $FreeBSD: ports/devel/p5-Smart-Comments/Makefile,v 1.13 2012/12/17 14:13:37 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@daltons.ca>
+# $FreeBSD: devel/p5-Smart-Comments/Makefile 320263 2013-06-08 16:24:44Z miwi $
 
 PORTNAME=	Smart-Comments
 PORTVERSION=	1.0.4
