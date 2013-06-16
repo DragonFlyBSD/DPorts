@@ -2,7 +2,7 @@
 # Date created:		00/08/25
 # Whom:			Satoshi TAOKA <taoka@FreeBSD.org>
 #
-# $FreeBSD: ports/chinese/FreeWnn-server/Makefile,v 1.14 2012/11/17 05:54:55 svnexp Exp $
+# $FreeBSD: chinese/FreeWnn-server/Makefile 300895 2012-07-14 12:56:14Z beat $
 #
 
 CATEGORIES=	chinese

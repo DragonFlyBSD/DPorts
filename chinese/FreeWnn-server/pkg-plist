@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/chinese/FreeWnn-server/pkg-plist,v 1.12 2012/11/17 05:54:55 svnexp Exp $
+@comment $FreeBSD: chinese/FreeWnn-server/pkg-plist 320862 2013-06-13 23:49:58Z miwi $
 bin/cWnn4/catod
 bin/cWnn4/catof
 bin/cWnn4/cdtoa
@@ -24,8 +24,6 @@ lib/wnn/zh_TW/dic/sys/cns_wd.dic
 lib/wnn/zh_TW/dic/sys/full.con
 lib/wnn/zh_TW/dic/sys/full.conR
 @dirrm lib/wnn/zh_CN/dic/sys
-@dirrm lib/wnn/zh_CN/dic/usr
 @dirrm lib/wnn/zh_CN/dic
 @dirrm lib/wnn/zh_TW/dic/sys
-@dirrm lib/wnn/zh_TW/dic/usr
 @dirrm lib/wnn/zh_TW/dic
