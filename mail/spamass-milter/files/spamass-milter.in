@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/spamass-milter/files/spamass-milter.in,v 1.9 2012/11/17 05:59:14 svnexp Exp $
+# $FreeBSD: mail/spamass-milter/files/spamass-milter.in 300896 2012-07-14 13:54:48Z beat $
 #
 
 # PROVIDE: spamass-milter
