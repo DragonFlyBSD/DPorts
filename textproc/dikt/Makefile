@@ -2,10 +2,10 @@
 # Date created:			28-12-2008
 # Whom:				Goran Tal <goran.tal@gmail.com>
 #
-# $FreeBSD: textproc/dikt/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: textproc/dikt/Makefile 320631 2013-06-11 19:26:42Z rakuco $
 
 PORTNAME=	dikt
-PORTVERSION=	2j
+PORTVERSION=	2l
 CATEGORIES=	textproc net kde
 MASTER_SITES=	GOOGLE_CODE
 EXTRACT_SUFX=	.txz
