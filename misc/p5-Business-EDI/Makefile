@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Business::EDI
-# Date created:				2012-08-04
-# Whom:					Martin Neubauer <m.ne@gmx.net>
-#
-# $FreeBSD: ports/misc/p5-Business-EDI/Makefile,v 1.2 2012/11/17 05:59:42 svnexp Exp $
-#
+# Created by: Martin Neubauer <m.ne@gmx.net>
+# $FreeBSD: misc/p5-Business-EDI/Makefile 319789 2013-06-03 15:24:18Z az $
 
 PORTNAME=	Business-EDI
 PORTVERSION=	0.05
@@ -35,10 +31,4 @@ MAN3=		Business::EDI.3 \
 		Business::EDI::Composite.3 \
 		Business::EDI::Spec.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
