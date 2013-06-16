@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer-plugins/Makefile.common 316693 2013-04-27 20:56:38Z kwm $
+# $FreeBSD: multimedia/gstreamer-plugins/Makefile.common 320462 2013-06-10 11:04:03Z naddy $
 #    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.81 2010/03/16 19:33:10 mezz Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
@@ -281,7 +281,7 @@ gst_faad_PLIST_FILES=	${GST_LIB_DIR}/libgstfaad.la \
 gst_faad_DIST=	bad
 
 # flac
-gst_flac_LIB_DEPENDS+=	FLAC.10:${PORTSDIR}/audio/flac
+gst_flac_LIB_DEPENDS+=	FLAC:${PORTSDIR}/audio/flac
 gst_flac_PLIST_FILES=	${GST_LIB_DIR}/libgstflac.la \
 			${GST_LIB_DIR}/libgstflac.so
 
