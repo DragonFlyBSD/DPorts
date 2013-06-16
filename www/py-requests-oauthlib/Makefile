@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-requests-oauthlib/Makefile 318159 2013-05-14 13:39:03Z koobs $
+# $FreeBSD: www/py-requests-oauthlib/Makefile 320426 2013-06-10 01:12:52Z koobs $
 
 PORTNAME=	requests-oauthlib
-PORTVERSION=	0.3.1
+PORTVERSION=	0.3.2
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,14 +11,14 @@ COMMENT=	OAuthlib authentication support for Requests
 
 LICENSE=	ISCL
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}oauthlib>=0.3.7:${PORTSDIR}/security/py-oauthlib \
-		${PYTHON_PKGNAMEPREFIX}requests>=0:${PORTSDIR}/www/py-requests
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}oauthlib>=0.4.2:${PORTSDIR}/security/py-oauthlib \
+		${PYTHON_PKGNAMEPREFIX}requests>0:${PORTSDIR}/www/py-requests
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mock>0:${PORTSDIR}/devel/py-mock
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	requests
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	a7e6030
+GH_COMMIT=	0b1fe5c
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
