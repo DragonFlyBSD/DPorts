@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/redland-bindings/pkg-plist,v 1.7 2012/11/17 06:02:19 svnexp Exp $
+@comment $FreeBSD: textproc/redland-bindings/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%WITH_PERL%%%%SITE_PERL%%/%%PERL_ARCH%%/RDF/Redland.pm
 %%WITH_PERL%%%%SITE_PERL%%/%%PERL_ARCH%%/RDF/Redland/BlankNode.pm
 %%WITH_PERL%%%%SITE_PERL%%/%%PERL_ARCH%%/RDF/Redland/CORE.pm

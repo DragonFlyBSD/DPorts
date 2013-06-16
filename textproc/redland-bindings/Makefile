@@ -1,5 +1,5 @@
 # Created by: Russell Cloran <russell@rucus.ru.ac.za>
-# $FreeBSD: ports/textproc/redland-bindings/Makefile,v 1.23 2013/02/04 01:04:44 svnexp Exp $
+# $FreeBSD: textproc/redland-bindings/Makefile 320709 2013-06-12 17:45:02Z az $
 
 PORTNAME=	redland-bindings
 PORTVERSION=	1.0.16.1
@@ -23,7 +23,7 @@ OPTIONS_DEFAULT=PYTHON
 USE_PERL5=	yes
 CONFIGURE_ARGS+=--with-perl
 PLIST_SUB+=	WITH_PERL=""
-MANPREFIX=	${LOCALBASE}/lib/perl5/${PERL_VERSION}
+MANPREFIX=	${LOCALBASE}/lib/perl5/${PERL_VER}
 MAN3=		RDF::Redland.3 \
 		RDF::Redland::BlankNode.3 \
 		RDF::Redland::Iterator.3 \
@@ -72,7 +72,7 @@ PLIST_SUB+=	WITH_RUBY="@comment "
 
 post-install:
 .if ${PORT_OPTIONS:MPERL}
-	-${RM} -f ${PREFIX}/lib/perl5/${PERL_VERSION}/mach/perllocal.pod
+	-${RM} -f ${PREFIX}/lib/perl5/${PERL_VER}/mach/perllocal.pod
 .endif
 
 .include <bsd.port.mk>
