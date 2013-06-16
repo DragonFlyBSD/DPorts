@@ -2,7 +2,7 @@
 # Date created:		2010-03-16
 # Whom:			ports@c0decafe.net
 #
-# $FreeBSD: www/p5-HTTP-Server-Simple-PSGI/Makefile 302528 2012-08-14 18:19:34Z tabthorpe $
+# $FreeBSD: www/p5-HTTP-Server-Simple-PSGI/Makefile 320099 2013-06-06 14:04:06Z mat $
 #
 
 PORTNAME=	HTTP-Server-Simple-PSGI
@@ -16,7 +16,6 @@ COMMENT=	PSGI handler for HTTP::Server::Simple
 
 RUN_DEPENDS=	p5-HTTP-Server-Simple>=0:${PORTSDIR}/www/p5-HTTP-Server-Simple
 
-USE_PERL5=	YES
 PERL_CONFIGURE=	YES
 
 MAN3=		HTTP::Server::Simple::PSGI.3
