@@ -1,12 +1,11 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Git-PurePerl/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Git-PurePerl/Makefile 320075 2013-06-06 10:13:30Z mat $
 
 PORTNAME=	Git-PurePerl
-PORTVERSION=	0.41
-PORTREVISION=	2
+PORTVERSION=	0.48
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:LBROCARD
+MASTER_SITE_SUBDIR=	CPAN:BROQ
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
