@@ -1,12 +1,8 @@
-# New ports collection makefile for:	SQL-Abstract
-# Date created:	   18 Feb 2003
-# Whom:		   Dominic Mitchell <dom@happygiraffe.net>
-#
-# $FreeBSD: ports/databases/p5-SQL-Abstract/Makefile,v 1.36 2012/12/17 09:41:16 svnexp Exp $
-#
+# Created by: Dominic Mitchell
+# $FreeBSD: databases/p5-SQL-Abstract/Makefile 320068 2013-06-06 09:55:34Z mat $
 
 PORTNAME=	SQL-Abstract
-PORTVERSION=	1.73
+PORTVERSION=	1.74
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
