@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/akode-plugins-xiph/files/patch-configure,v 1.8 2013/02/01 15:41:53 svnexp Exp $
+$FreeBSD: audio/akode-plugins-xiph/files/patch-configure 311381 2013-02-01 15:04:00Z ak $
 
 --- configure.orig
 +++ configure

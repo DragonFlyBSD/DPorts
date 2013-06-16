@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/akode-plugins-xiph/files/patch-akode_plugins_xiph__decoder_speex__decoder.cpp,v 1.7 2012/11/17 05:54:27 svnexp Exp $
+$FreeBSD: audio/akode-plugins-xiph/files/patch-akode_plugins_xiph__decoder_speex__decoder.cpp 300895 2012-07-14 12:56:14Z beat $
 
 --- akode/plugins/xiph_decoder/speex_decoder.cpp.orig
 +++ akode/plugins/xiph_decoder/speex_decoder.cpp

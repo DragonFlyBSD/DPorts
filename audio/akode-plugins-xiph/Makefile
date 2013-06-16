@@ -2,12 +2,12 @@
 # Date created:				July 09 2004
 # Whom:					Michael Nottebrock <lofi@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/akode-plugins-xiph/Makefile,v 1.33 2012/11/17 05:54:27 svnexp Exp $
+# $FreeBSD: audio/akode-plugins-xiph/Makefile 320405 2013-06-09 19:30:58Z naddy $
 #
 
 PORTNAME=	akode-plugins-${PORTNAMESUFX}
 PORTVERSION=	2.0.2
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	audio kde
 MASTER_SITES=	http://www.kde-apps.org/CONTENT/content-files/ \
