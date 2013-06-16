@@ -2,7 +2,7 @@
 # Date created:		11 March 2009
 # Whom:			Gerard Seibert <gerard@seibercom.net>
 #
-# $FreeBSD: ports/www/p5-CGI-Session-ExpireSessions/Makefile,v 1.9 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Session-ExpireSessions/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	CGI-Session-ExpireSessions
