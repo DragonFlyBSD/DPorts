@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: ports/archivers/p5-IO-Compress-Lzma/Makefile,v 1.22 2013/01/30 17:18:13 svnexp Exp $
+# $FreeBSD: archivers/p5-IO-Compress-Lzma/Makefile 320282 2013-06-08 20:58:57Z sunpoet $
 
 PORTNAME=	IO-Compress-Lzma
-PORTVERSION=	2.060
+PORTVERSION=	2.061
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PMQS
@@ -14,8 +14,8 @@ COMMENT=	Write lzma files / buffers
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Compress-Raw-Lzma>=2.060:${PORTSDIR}/archivers/p5-Compress-Raw-Lzma \
-		p5-IO-Compress>=2.060:${PORTSDIR}/archivers/p5-IO-Compress
+BUILD_DEPENDS=	p5-Compress-Raw-Lzma>=2.061:${PORTSDIR}/archivers/p5-Compress-Raw-Lzma \
+		p5-IO-Compress>=2.061:${PORTSDIR}/archivers/p5-IO-Compress
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
