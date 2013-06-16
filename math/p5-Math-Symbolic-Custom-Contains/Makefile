@@ -1,18 +1,13 @@
-# New ports collection makefile for:	Math-Symbolic-Custom-Contains
-# Date created:				15 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-Symbolic-Custom-Contains/Makefile,v 1.11 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Symbolic-Custom-Contains/Makefile 320078 2013-06-06 10:25:09Z tobez $
 
 PORTNAME=	Math-Symbolic-Custom-Contains
-PORTVERSION=	1.00
-PORTREVISION=	1
+PORTVERSION=	1.01
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Find subtrees in Math::Symbolic expressions
 
 BUILD_DEPENDS=	p5-Math-Symbolic>=0:${PORTSDIR}/math/p5-Math-Symbolic
