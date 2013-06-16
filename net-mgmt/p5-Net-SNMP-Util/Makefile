@@ -2,7 +2,7 @@
 # Date created:		2011-03-29
 # Whom:			Hsin-Han You <hhyou@cs.nctu.edu.tw>
 #
-# $FreeBSD: ports/net-mgmt/p5-Net-SNMP-Util/Makefile,v 1.3 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Net-SNMP-Util/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	Net-SNMP-Util
