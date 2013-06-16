@@ -2,7 +2,7 @@
 # Date created:			5 December 2000
 # Whom:				Jeremy Shaffner <jeremy@external.org>
 #
-# $FreeBSD: ports/astro/p5-GPS/Makefile,v 1.13 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: astro/p5-GPS/Makefile 300895 2012-07-14 12:56:14Z beat $
 
 PORTNAME=	GPS
 PORTVERSION=	0.17
