@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-MooseX-Types-DateTimeX/Makefile,v 1.5 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Types-DateTimeX/Makefile 305921 2012-10-15 16:21:11Z tabthorpe $
 
 PORTNAME=	MooseX-Types-DateTimeX
 PORTVERSION=	0.10
