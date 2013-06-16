@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/sysutils/ganglia-webfrontend/files/patch-conf.php.in,v 1.2 2012/11/17 06:01:32 svnexp Exp $
+$FreeBSD: sysutils/ganglia-webfrontend/files/patch-conf.php.in 300897 2012-07-14 14:29:18Z beat $
 
 --- conf.php.in.orig
 +++ conf.php.in
