@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Carp-REPL/Makefile 319361 2013-05-29 08:52:21Z tobez $
+# $FreeBSD: devel/p5-Carp-REPL/Makefile 320095 2013-06-06 13:28:19Z mat $
 
 PORTNAME=	Carp-REPL
 PORTVERSION=	0.16
@@ -25,7 +25,6 @@ RUN_DEPENDS=	devel/p5-Data-Dump-Streamer>=0:${PORTSDIR}/devel/p5-Data-Dump-Strea
 		p5-namespace-clean>=0:${PORTSDIR}/devel/p5-namespace-clean
 TEST_DEPENDS=	p5-Test-Expect>=0:${PORTSDIR}/devel/p5-Test-Expect
 
-USE_PERL5=	yes
 PERL_CONFIGURE=	yes
 
 MAN3=		Carp::REPL.3 Devel::REPL::Plugin::Carp::REPL.3
