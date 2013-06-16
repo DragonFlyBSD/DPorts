@@ -1,8 +1,8 @@
 # Created by: Thomas Abthorpe <thomas@goodking.ca>
-# $FreeBSD: ports/archivers/p5-Compress-Raw-Zlib/Makefile,v 1.45 2013/01/30 17:02:46 svnexp Exp $
+# $FreeBSD: archivers/p5-Compress-Raw-Zlib/Makefile 320279 2013-06-08 20:58:44Z sunpoet $
 
 PORTNAME=	Compress-Raw-Zlib
-PORTVERSION=	2.060
+PORTVERSION=	2.061
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PMQS
