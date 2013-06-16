@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Spreadsheet::WriteExcel
-# Date created:		25 Dec 2000
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-Spreadsheet-WriteExcel/Makefile,v 1.42 2012/12/16 16:01:03 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel/Makefile 320062 2013-06-06 08:51:09Z tobez $
 
 PORTNAME=	Spreadsheet-WriteExcel
-PORTVERSION=	2.38
+PORTVERSION=	2.39
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
