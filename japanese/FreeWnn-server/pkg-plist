@@ -1,4 +1,4 @@
-@comment $FreeBSD: japanese/FreeWnn-server/pkg-plist 300896 2012-07-14 13:54:48Z beat $
+@comment $FreeBSD: japanese/FreeWnn-server/pkg-plist 320873 2013-06-14 01:58:45Z miwi $
 bin/Wnn4/atod
 bin/Wnn4/atof
 bin/Wnn4/dtoa
@@ -37,5 +37,4 @@ lib/wnn/ja_JP/dic/wnncons/tankan3.dic
 @dirrm lib/wnn/ja_JP/dic/pubdic
 @dirrm lib/wnn/ja_JP/dic/src
 @dirrm lib/wnn/ja_JP/dic/wnncons
-@dirrmtry lib/wnn/ja_JP/dic/usr
 @dirrmtry lib/wnn/ja_JP/dic
