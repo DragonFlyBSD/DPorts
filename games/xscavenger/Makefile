@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xscavenger
-# Date created:		19 Feb 1998
-# Whom:			eivind
-#
-# $FreeBSD: ports/games/xscavenger/Makefile,v 1.22 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: eivind
+# $FreeBSD: games/xscavenger/Makefile 320607 2013-06-11 15:43:23Z bsam $
 
 PORTNAME=	xscavenger
 PORTVERSION=	1.4.4
@@ -13,13 +9,15 @@ MASTER_SITES=	http://www.xdr.com/dash/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A Lode Runner clone for X11
+COMMENT=	Lode Runner clone for X11
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+WRKSRC_SUBDIR=	src
 
 USE_IMAKE=	yes
 USE_XORG=	x11 xext
 MAN6=		scavenger.6
+
+CFLAGS+=	-Wno-return-type -Wno-pointer-sign
 
 pre-configure:
 	@${LN} -sf scavenger.6 ${WRKSRC}/scavenger.man
