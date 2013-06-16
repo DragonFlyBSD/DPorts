@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Log-Dispatch-File-Rolling/Makefile,v 1.2 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: devel/p5-Log-Dispatch-File-Rolling/Makefile 305997 2012-10-17 02:06:42Z tj $
 
 PORTNAME=	Log-Dispatch-File-Rolling
 PORTVERSION=	1.06
