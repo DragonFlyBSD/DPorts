@@ -2,12 +2,11 @@
 # Date created:		2006-08-24
 # Whom:			sumikawa
 #
-# $FreeBSD: ports/multimedia/p5-FFmpeg-Command/Makefile,v 1.15 2012/11/17 05:59:52 svnexp Exp $
+# $FreeBSD: multimedia/p5-FFmpeg-Command/Makefile 320514 2013-06-11 00:39:03Z sumikawa $
 #
 
 PORTNAME=	FFmpeg-Command
-PORTVERSION=	0.18
-PORTREVISION=	1
+PORTVERSION=	0.19
 CATEGORIES=	multimedia perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIZZY
