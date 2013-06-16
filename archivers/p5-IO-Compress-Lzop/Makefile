@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/archivers/p5-IO-Compress-Lzop/Makefile,v 1.18 2013/01/30 17:21:13 svnexp Exp $
+# $FreeBSD: archivers/p5-IO-Compress-Lzop/Makefile 320283 2013-06-08 20:59:01Z sunpoet $
 
 PORTNAME=	IO-Compress-Lzop
-PORTVERSION=	2.060
+PORTVERSION=	2.061
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PMQS
@@ -15,7 +15,7 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Compress-LZO>=0:${PORTSDIR}/archivers/p5-Compress-LZO \
-		p5-IO-Compress>=2.060:${PORTSDIR}/archivers/p5-IO-Compress
+		p5-IO-Compress>=2.061:${PORTSDIR}/archivers/p5-IO-Compress
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
