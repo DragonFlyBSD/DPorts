@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Symbolic-Custom-CCompiler/Makefile 318229 2013-05-15 08:30:40Z tobez $
+# $FreeBSD: math/p5-Math-Symbolic-Custom-CCompiler/Makefile 320079 2013-06-06 10:26:39Z tobez $
 
 PORTNAME=	Math-Symbolic-Custom-CCompiler
-PORTVERSION=	1.03
+PORTVERSION=	1.04
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
