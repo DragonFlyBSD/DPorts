@@ -1,5 +1,5 @@
 # Created by:				Dave Grochowski
-# $FreeBSD: ports/devel/gccmakedep/Makefile,v 1.4 2013/01/08 03:41:47 svnexp Exp $
+# $FreeBSD: devel/gccmakedep/Makefile 319055 2013-05-25 14:37:02Z zeising $
 
 PORTNAME=	gccmakedep
 PORTVERSION=	1.0.2
@@ -16,16 +16,12 @@ PLIST_FILES=	bin/gccmakedep
 
 .include <bsd.port.pre.mk>
 
-.if defined(CC) && ${CC:T:M*clang*} == "clang" || ${OSVERSION} >= 1000024
-BUILD_DEPENDS+=	ucpp:${PORTSDIR}/devel/ucpp
-RUN_DEPENDS+=	ucpp:${PORTSDIR}/devel/ucpp
-CONFIGURE_ENV+=	ac_cv_path_RAWCPP="ucpp -s"
-
-post-build:
-	${REINPLACE_CMD} -e 's|^CC= *|CC=|' \
-		-e 's|^RM= *|RM=|' \
-		-e 's|^LN= *|LN=|' \
-		-e 's|^MV= *|MV=|' ${WRKSRC}/gccmakedep
+# Attempt to force use of GNU cpp, if it is installed as /usr/bin/gcpp.
+.if exists(/usr/bin/gcpp)
+CONFIGURE_ENV+=	ac_cv_path_RAWCPP="gcpp"
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} 's/test.*-traditional.*;/true;/' ${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
