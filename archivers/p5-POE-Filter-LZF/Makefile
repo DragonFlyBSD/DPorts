@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/archivers/p5-POE-Filter-LZF/Makefile,v 1.13 2012/12/18 07:13:55 svnexp Exp $
+# $FreeBSD: archivers/p5-POE-Filter-LZF/Makefile 319959 2013-06-05 08:08:59Z mat $
 
 PORTNAME=	POE-Filter-LZF
-PORTVERSION=	1.6.8
+PORTVERSION=	1.7.0
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
