@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/p5-ExtUtils-MakeMaker/Makefile 316130 2013-04-20 07:52:33Z sunpoet $
+# $FreeBSD: devel/p5-ExtUtils-MakeMaker/Makefile 320718 2013-06-12 19:20:40Z az $
 
 PORTNAME=	ExtUtils-MakeMaker
 PORTVERSION=	6.66
@@ -41,7 +41,7 @@ post-patch:
 	@${REINPLACE_CMD} -e '/EXE_FILES/d; /my::bundles/d' ${WRKSRC}/Makefile.PL
 	@${REINPLACE_CMD} -e '/^bundled\//d' ${WRKSRC}/MANIFEST
 	@${RM} -fr ${WRKSRC}/bundled/
-	@[ -e ${LOCALBASE}/lib/perl5/${PERL_VERSION}/mach/CORE/cc_runtime.h ] || \
+	@[ -e ${LOCALBASE}/lib/perl5/${PERL_VER}/mach/CORE/cc_runtime.h ] || \
 		${SED} -i '' -e '/cc_runtime.h/d' ${WRKSRC}/lib/ExtUtils/MM_Unix.pm
 
 .include <bsd.port.post.mk>
