@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/korean/FreeWnn-server/pkg-plist,v 1.8 2012/11/17 05:58:46 svnexp Exp $
+@comment $FreeBSD: korean/FreeWnn-server/pkg-plist 320881 2013-06-14 03:22:42Z miwi $
 bin/kWnn4/katod
 bin/kWnn4/katof
 bin/kWnn4/kdtoa
@@ -13,5 +13,4 @@ lib/wnn/ko_KR/dic/sys/full.fzk
 lib/wnn/ko_KR/dic/sys/hword.dic
 lib/wnn/ko_KR/dic/sys/single.dic
 @dirrm lib/wnn/ko_KR/dic/sys
-@dirrm lib/wnn/ko_KR/dic/usr
 @dirrm lib/wnn/ko_KR/dic
