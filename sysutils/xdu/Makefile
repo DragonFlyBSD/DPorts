@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xdu
-# Date created:		9 February 1995
-# Whom:			asami
-#
-# $FreeBSD: ports/sysutils/xdu/Makefile,v 1.21 2012/11/17 06:01:50 svnexp Exp $
-#
+# Created by: asami
+# $FreeBSD: sysutils/xdu/Makefile 320845 2013-06-13 22:27:01Z madpilot $
 
 PORTNAME=	xdu
 PORTVERSION=	3.0
