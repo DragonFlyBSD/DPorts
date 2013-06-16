@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-POP3-SSLWrapper
-# Date created:				16 December 2009
-# Whom:					johnpupu <johnpupu@gmail.com>
-#
-# $FreeBSD: ports/mail/p5-Net-POP3-SSLWrapper/Makefile,v 1.5 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: johnpupu <johnpupu@gmail.com>
+# $FreeBSD: mail/p5-Net-POP3-SSLWrapper/Makefile 320154 2013-06-07 06:55:05Z az $
 
 PORTNAME=	Net-POP3-SSLWrapper
 PORTVERSION=	0.06
@@ -21,11 +17,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Net::POP3::SSLWrapper.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
