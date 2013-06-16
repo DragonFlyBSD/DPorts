@@ -1,8 +1,8 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/p5-CPAN-Meta/Makefile 315558 2013-03-29 18:45:23Z sunpoet $
+# $FreeBSD: devel/p5-CPAN-Meta/Makefile 320772 2013-06-13 11:52:03Z sunpoet $
 
 PORTNAME=	CPAN-Meta
-PORTVERSION=	2.130880
+PORTVERSION=	2.131560
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
