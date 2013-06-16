@@ -1,13 +1,9 @@
-# New ports collection makefile for:   emulators/generator-cbiere
-# Date created:        7 Jun 2005
-# Whom:                Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/emulators/generator-cbiere/Makefile,v 1.21 2012/11/17 05:57:20 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: emulators/generator-cbiere/Makefile 320807 2013-06-13 15:30:22Z bsam $
 
 PORTNAME=	generator
 PORTVERSION=	0.35.r4
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.squish.net/generator/cbiere/generator/
@@ -17,7 +13,9 @@ DISTNAME=	${PORTNAME}-0.35${PKGNAMESUFFIX}-r4
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SEGA Genesis emulator
 
-LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
+
+LICENSE=	GPLv2
 
 USE_BZIP2=	yes
 USE_SDL=	sdl
@@ -41,7 +39,7 @@ LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
 .include <bsd.port.pre.mk>
 
-.if empty(PORT_OPTIONS:MOPTIIMIZED_CFLAGS)
+.if empty(PORT_OPTIONS:MOPTIMIZED_CFLAGS)
 CONFIGURE_ARGS+=	--without-gcc
 .endif
 
