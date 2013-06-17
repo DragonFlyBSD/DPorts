@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/morla/Makefile 317444 2013-05-05 22:01:12Z bapt $
+# $FreeBSD: editors/morla/Makefile 320330 2013-06-09 13:00:09Z miwi $
 
 PORTNAME=	morla
 PORTVERSION=	0.16.1
@@ -20,10 +20,6 @@ RUN_DEPENDS=	dot:${PORTSDIR}/graphics/graphviz
 
 OPTIONS_DEFINE=	XULRUNNER
 XULRUNNER_DESC=	Xulrunner as JavaScript engine
-
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
