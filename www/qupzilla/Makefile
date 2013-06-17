@@ -1,7 +1,7 @@
-# $FreeBSD: www/qupzilla/Makefile 316252 2013-04-22 18:03:25Z madpilot $
+# $FreeBSD: www/qupzilla/Makefile 319764 2013-06-03 09:27:24Z danfe $
 
 PORTNAME=	qupzilla
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.3
 CATEGORIES=	www
 MASTER_SITES=	http://www.qupzilla.com/uploads/
 DISTNAME=	QupZilla-${PORTVERSION}
