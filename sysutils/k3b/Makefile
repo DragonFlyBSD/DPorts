@@ -1,9 +1,9 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/k3b/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/k3b/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	k3b
 PORTVERSION=	1.0.5
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	sysutils multimedia kde
 MASTER_SITES=	SF
 
