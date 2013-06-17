@@ -3,12 +3,12 @@
 # Date created:				Saturday 7 December 2002
 # Whom:					Alan Eldridge <alane@freebsd.org>
 #
-# $FreeBSD: multimedia/kdemultimedia3/Makefile 316391 2013-04-23 20:41:49Z mi $
+# $FreeBSD: multimedia/kdemultimedia3/Makefile 320405 2013-06-09 19:30:58Z naddy $
 #
 
 PORTNAME=	kdemultimedia
 PORTVERSION=	${KDE_VERSION}
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	multimedia kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTVERSION:S/.0//}/src
