@@ -1,8 +1,8 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: net/wireshark/Makefile 318639 2013-05-21 03:52:32Z marcus $
+# $FreeBSD: net/wireshark/Makefile 320299 2013-06-08 22:16:58Z marcus $
 
 PORTNAME?=	wireshark
-PORTVERSION=	1.8.7
+PORTVERSION=	1.10.0
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.wireshark.org/download/src/ \
 		http://ftp.uni-kl.de/pub/wireshark/src/ \
@@ -41,7 +41,8 @@ DESKTOP_ENTRIES=	"Wireshark" "Network Protocol Analyzer" \
 
 WIRESHARK_LIBS=
 
-.for x in capinfos editcap mergecap rawshark text2pcap dftest randpkt
+.for x in capinfos editcap mergecap rawshark text2pcap dftest randpkt \
+    reordercap
 .if defined(LITE)
 PLIST_SUB+=		${x:tu}="@comment $x not installed"
 CONFIGURE_ARGS+=	--enable-$x=no
