@@ -1,7 +1,8 @@
-# $FreeBSD: audio/kid3-kde4/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: audio/kid3-kde4/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	kid3
 PORTVERSION=	2.3
+PORTREVISION=	1
 CATEGORIES=	audio kde
 MASTER_SITES=	SF
 
@@ -31,7 +32,7 @@ CHROMAPRINT_DESC=	Support for Chromaprint audio fingerprints
 
 .if ${PORT_OPTIONS:MFLAC}
 CMAKE_ARGS+=	-DWITH_FLAC=ON
-LIB_DEPENDS+=	FLAC.10:${PORTSDIR}/audio/flac
+LIB_DEPENDS+=	FLAC:${PORTSDIR}/audio/flac
 .else
 CMAKE_ARGS+=	-DWITH_FLAC=OFF
 .endif
