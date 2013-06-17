@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# $FreeBSD: games/robocode/files/robocode.sh.in 314872 2013-03-21 20:42:46Z pawel $
+# $FreeBSD: games/robocode/files/robocode.sh.in 320232 2013-06-08 02:28:17Z miwi $
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
-  
+
 cd "%%DATADIR%%" && exec "%%LOCALBASE%%/bin/java" \
 -Djava.ext.dirs="%%DATADIR%%" -jar "%%DATADIR%%/libs/robocode.jar" "${@}"
