@@ -1,9 +1,9 @@
 # Created by: xaa@stack.nl
-# $FreeBSD: games/xboard/Makefile 318248 2013-05-15 16:58:53Z johans $
+# $FreeBSD: games/xboard/Makefile 320822 2013-06-13 17:24:09Z johans $
 
 PORTNAME=	xboard
 PORTVERSION=	4.7.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	GNU
 
@@ -12,7 +12,7 @@ COMMENT=	X frontend for Crafty, GNUChess, Chess Servers, or e-mail chess
 
 LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
 
-OPTIONS_DEFINE=	CRAFTY FAIRYMAX GNUCHESS KNIGHTCAP PHALANX
+OPTIONS_DEFINE=	NLS CRAFTY FAIRYMAX GNUCHESS KNIGHTCAP PHALANX
 OPTIONS_DEFAULT=
 CRAFTY_DESC=	Install crafty engine
 FAIRYMAX_DESC=	Install fairymax engine
@@ -20,6 +20,7 @@ GNUCHESS_DESC=	Install GnuChess engine
 KNIGHTCAP_DESC=	Install KnightCap engine
 PHALANX_DESC=	Install phalanx engine
 
+USES=		desktop-file-utils pkgconfig shared-mime-info
 USE_XORG=	xt xpm xaw
 USE_GNOME=	librsvg2
 GNU_CONFIGURE=	yes
@@ -30,7 +31,9 @@ MAN6=		xboard.6
 INFO=		xboard
 USE_PERL5_BUILD=yes
 INSTALLS_ICONS=	yes
-USES=		shared-mime-info
+DATADIR=	${PREFIX}/share/games/${PORTNAME}
+
+PORTDOCS=	AUTHORS ChangeLog NEWS README SHORTLOG TODO
 
 .include <bsd.port.options.mk>
 
@@ -78,5 +81,9 @@ post-patch:
 post-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/cmail ${PREFIX}/bin/
 	@${CP} -pn ${PREFIX}/etc/xboard.conf.dist ${PREFIX}/etc/xboard.conf
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+.endif
 
 .include <bsd.port.post.mk>
