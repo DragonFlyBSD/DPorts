@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11-themes/clearlooks/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-themes/clearlooks/Makefile 320138 2013-06-06 22:11:38Z bapt $
 #   $MCom: ports/x11-themes/clearlooks/Makefile,v 1.8 2007/08/07 04:34:29 mezz Exp $
 
 PORTNAME?=	clearlooks
@@ -21,11 +21,13 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 .if defined(PORTNAME) && !defined(PKGNAMESUFFIX)
-OPTIONS+=	ANIMATION "Enable experimental animated progressbars" Off \
-		METACITY "Depend on MetaCity Theme" On
+OPTIONS_DEFINE=	ANIMATION METACITY
+OPTIONS_DEFAULT=	METACITY
+ANIMATION_DESC=	Enable experimental animated progressbars
+METACITY_DESC=	Depend on MetaCity Theme
 .endif
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if !defined(PKGNAMESUFFIX)
 CONFLICTS+=	gtk-engines2-[0-9]* clearlooks-themes[0-9]*
@@ -42,11 +44,11 @@ INSTALL_WRKSRC=	${WRKSRC}/themes
 PLIST_SUB+=	ENGINE="@comment "
 .endif
 
-.if !defined(WITHOUT_METACITY) && !defined(PKGNAMESUFFIX)
+.if ${PORT_OPTIONS:MMETACITY} && !defined(PKGNAMESUFFIX)
 RUN_DEPENDS+=	${LOCALBASE}/share/themes/Clearlooks/metacity-1/metacity-theme-1.xml:${PORTSDIR}/x11-themes/clearlooks-metacity
 .endif
 
-.if defined(WITH_ANIMATION)
+.if ${PORT_OPTIONS:MANIMATION}
 CONFIGURE_ARGS+=	--enable-animation
 .endif
 
@@ -67,4 +69,4 @@ post-patch:
 		${WRKSRC}/themes/Clearlooks/gtk-2.0/Makefile.in
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
