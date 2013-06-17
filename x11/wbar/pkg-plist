@@ -1,4 +1,4 @@
-@comment $FreeBSD: x11/wbar/pkg-plist 311772 2013-02-06 14:52:39Z nivit $
+@comment $FreeBSD: x11/wbar/pkg-plist 320691 2013-06-12 13:40:53Z miwi $
 bin/wbar
 %%WBARCONFIG%%bin/wbar-config
 etc/bash_completion.d/wbar
@@ -15,3 +15,5 @@ share/pixmaps/wbar/wbar.png
 @dirrm %%DATADIR%%
 @dirrmtry etc/bash_completion.d
 @dirrm etc/wbar.d
+@dirrmtry man/es/man1
+@dirrmtry man/es
