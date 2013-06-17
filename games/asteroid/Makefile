@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/asteroid/Makefile 316770 2013-04-28 23:25:25Z beech $
+# $FreeBSD: games/asteroid/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	asteroid
 PORTVERSION=	1.2.1
@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 USE_GITHUB=	yes
 GH_ACCOUNT=	chazomaticus
 GH_PROJECT=	asteroid
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	6d23595
 
 USE_GL=		glut
