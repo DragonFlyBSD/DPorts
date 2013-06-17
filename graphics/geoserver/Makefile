@@ -1,5 +1,5 @@
 # Created by: Wen heping<wenheping@gmail.com>
-# $FreeBSD: ports/graphics/geoserver/Makefile,v 1.18 2013/02/20 16:45:23 svnexp Exp $
+# $FreeBSD: graphics/geoserver/Makefile 312628 2013-02-20 16:08:58Z fluffy $
 
 PORTNAME=	geoserver
 PORTVERSION=	2.1.1
