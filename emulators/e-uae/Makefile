@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: ports/emulators/e-uae/Makefile,v 1.23 2012/11/17 05:57:20 svnexp Exp $
+# $FreeBSD: emulators/e-uae/Makefile 319830 2013-06-04 08:22:22Z miwi $
 
 PORTNAME=	e-uae
 DISTVERSION=	0.8.29.w4
@@ -11,25 +11,36 @@ DISTNAME=	e-uae-0.8.29-WIP4
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Enhanced version of UAE, the Amiga emulator
 
+LICENSE=	GPLv2
+
+OPTIONS_DEFINE=	DOCS
+
 CONFLICTS=	uae-[0-9]*
-USE_GMAKE=	yes
+
 USE_BZIP2=	yes
-GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20
 USE_SDL=	sdl
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-sdl --with-sdl-gfx
 MAKE_JOBS_UNSAFE=	yes
 
-PLIST_FILES=	bin/uae bin/readdisk
 PORTDOCS=	ChangeLog README bsdsocket.txt cmd-line.txt \
 		compiling.txt configuration.txt floppies.txt \
 		joystick.txt keyboard.txt scsi.txt
+PLIST_FILES=	bin/readdisk bin/uae
+
+.include <bsd.port.options.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		'/X11\/xkb\/rules/s|/usr/X11R6/lib|${LOCALBASE}/share|' \
+		${WRKSRC}/configure
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/uae ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/readdisk ${PREFIX}/bin
-
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
@@ -42,9 +53,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/keyboard.txt ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/scsi.txt ${DOCSDIR}
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/X11R6/lib/X11/xkb/rules|${LOCALBASE}/share/X11/xkb/rules|' \
-	${WRKSRC}/configure
 
 .include <bsd.port.mk>
