@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/apache-solr/Makefile 314772 2013-03-20 22:34:03Z pawel $
+# $FreeBSD: textproc/apache-solr/Makefile 320733 2013-06-13 05:54:33Z vanilla $
 
 PORTNAME=	apache-solr
-PORTVERSION=	4.2.0
+PORTVERSION=	4.3.0
 CATEGORIES=	textproc java
 MASTER_SITES=	APACHE
 MASTER_SITE_SUBDIR=	lucene/solr/${PORTVERSION}
