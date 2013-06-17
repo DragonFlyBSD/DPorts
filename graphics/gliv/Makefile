@@ -2,7 +2,7 @@
 # Date created:				16 March 2001
 # Whom:					Jeremy Norris <ishmael27@home.com>
 #
-# $FreeBSD: graphics/gliv/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/gliv/Makefile 320867 2013-06-14 01:55:31Z miwi $
 #
 
 PORTNAME=	gliv
@@ -28,7 +28,7 @@ MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOMAKE="${TRUE}" \
 		AUTOHEADER="${TRUE}"
 
 MAN1=		gliv.1
-MANLANG=	"" de fr ru
+MANLANG=	"" de fr ru cs
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
