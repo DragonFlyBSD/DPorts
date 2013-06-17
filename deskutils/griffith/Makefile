@@ -1,9 +1,5 @@
-# New ports collection makefile for:	griffith
-# Date created:		27 January 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: deskutils/griffith/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: deskutils/griffith/Makefile 320840 2013-06-13 20:45:23Z antoine $
 
 PORTNAME=	griffith
 PORTVERSION=	0.13
