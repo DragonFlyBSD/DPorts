@@ -1,7 +1,7 @@
-# $FreeBSD: java/icedtea-web/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: java/icedtea-web/Makefile 320655 2013-06-11 23:18:45Z jkim $
 
 PORTNAME=	icedtea-web
-PORTVERSION=	1.3.2
+PORTVERSION=	1.4
 CATEGORIES=	java www
 MASTER_SITES=	http://icedtea.wildebeest.org/download/source/ \
 		http://icedtea.classpath.org/download/source/
@@ -23,7 +23,9 @@ JAVA_VENDOR=	openjdk
 JAVA_VERSION=	1.6+
 USE_PERL5_BUILD=yes
 USE_XORG=	x11
-USES=		pkgconfig
+USES=		pkgconfig shebangfix
+SHEBANG_FILES=	javac.in jrunscript.in
+
 WANT_GNOME=	yes
 
 EXTRACT_CMD=	${GZIP_CMD}
@@ -35,11 +37,12 @@ PLIST_FILES=	bin/itweb-javaws bin/itweb-settings \
 		share/applications/itweb-javaws.desktop \
 		share/applications/itweb-settings.desktop \
 		share/pixmaps/itweb-javaws.png
-PORTDATA=	about.jar about.jnlp netx.jar
+PORTDATA=	about.jar about.jnlp javaws_splash.png netx.jar
 PORTDOCS=	netx
 
-CONFIGURE_ARGS=	--with-ecj=no --with-jdk-home="${JAVA_HOME}"
-SH=		${LOCALBASE}/bin/bash
+CONFIGURE_ARGS=	--with-asm=no --with-ecj=no --with-emma=no --with-jacoco=no
+CONFIGURE_ARGS+=--with-jdk-home="${JAVA_HOME}"
+SH=		${bash_CMD}
 
 OPTIONS_DEFINE=	PLUGIN RHINO TEST
 OPTIONS_DEFAULT=PLUGIN
@@ -55,7 +58,7 @@ CONFIGURE_ARGS+=--disable-docs
 
 .if ${PORT_OPTIONS:MPLUGIN}
 USE_GECKO=	libxul libxul19
-USE_GNOME=	glib20 gtk20
+USE_GNOME=	glib20
 USE_WEBPLUGINS=	native
 WEBPLUGINS_DIR=	${PREFIX}/lib
 WEBPLUGINS_FILES=IcedTeaPlugin.so
@@ -64,7 +67,6 @@ PLIST_FILES+=	lib/IcedTeaPlugin.so
 PORTDATA+=	plugin.jar
 PORTDOCS+=	plugin
 
-CONFIGURE_ARGS+=--with-gtk=2
 .include "${PORTSDIR}/www/firefox/Makefile.webplugins"
 .else
 CONFIGURE_ARGS+=--disable-plugin
@@ -97,9 +99,14 @@ pre-extract:
 .endif
 
 post-patch:
-	${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL}|' ${WRKSRC}/javac.in
-	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
-	    ${WRKSRC}/launcher/javaws.in
+	${REINPLACE_CMD} -e 's|^Icon=javaws|Icon=itweb-javaws|' \
+	    ${WRKSRC}/*.desktop.in
+	${REINPLACE_CMD} -E 's|/bin/(ba)?sh|${bash_CMD}|' \
+	    ${WRKSRC}/launcher/*.in \
+	    ${WRKSRC}/plugin/tests/LiveConnect/build \
+	    ${WRKSRC}/tests/netx/unit/net/sourceforge/jnlp/runtime/JNLPClassLoaderTest.java
+	${REINPLACE_CMD} -e 's|%%JAR%%|${JAR}|' \
+	    ${WRKSRC}/tests/netx/unit/net/sourceforge/jnlp/runtime/JNLPClassLoaderTest.java
 
 .if ${PORT_OPTIONS:MTEST}
 post-build:
@@ -110,10 +117,7 @@ post-build:
 
 post-install:
 	${MKDIR} ${DESKTOPDIR}
-	${REINPLACE_CMD} -e 's|^Icon=javaws|Icon=itweb-javaws|' \
-	    ${WRKSRC}/itweb-javaws.desktop ${WRKSRC}/itweb-settings.desktop
-	${INSTALL_DATA} ${WRKSRC}/itweb-javaws.desktop \
-	    ${WRKSRC}/itweb-settings.desktop ${DESKTOPDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.desktop ${DESKTOPDIR}
 	${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/javaws.png \
 	    ${PREFIX}/share/pixmaps/itweb-javaws.png
