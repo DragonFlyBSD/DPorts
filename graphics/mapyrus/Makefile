@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: ports/graphics/mapyrus/Makefile,v 1.35 2012/12/10 14:00:58 svnexp Exp $
+# $FreeBSD: graphics/mapyrus/Makefile 320836 2013-06-13 20:18:12Z nivit $
 
 PORTNAME=	mapyrus
-PORTVERSION=	1.202
-PORTREVISION=	1
+PORTVERSION=	1.302
+PORTREVISION=	0
 CATEGORIES=	graphics print java
 MASTER_SITES=	SF
 
@@ -21,7 +21,8 @@ USE_ZIP=	yes
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 SUB_FILES=	${PORTNAME} pkg-message
-SUB_LIST=	MAPYRUSJAR=${MAPYRUSJAR}
+SUB_LIST=	JAVA_VERSION=${JAVA_VERSION} \
+		MAPYRUSJAR=${MAPYRUSJAR}
 
 MAPYRUSJAR=	${PORTNAME}.jar
 MAPYRUSDOCS=	${PORTNAME}.pdf
