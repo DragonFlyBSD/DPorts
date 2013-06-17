@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/py-matplotlib/Makefile 319996 2013-06-05 14:28:24Z bapt $
+# $FreeBSD: math/py-matplotlib/Makefile 320074 2013-06-06 10:10:06Z bapt $
 
 PORTNAME=	matplotlib
 PORTVERSION=	1.2.0
@@ -36,7 +36,7 @@ UNIQUENAME=	${PORTNAME}
 
 .if defined(PACKAGE_BUILDING) && \
     ( ${PORT_OPTIONS:MGTKBACKEND} || ${PORT_OPTIONS:MGTKAGGBACKEND} || \
-    ${PORT_OPTIONS:MTKAGGBACKEND} || ${PORT_OPTIONS:MWXAGGBACKEND})
+    ${PORT_OPTIONS:MTKAGGBACKEND} || ${PORT_OPTIONS:MWXAGGBACKEND} )
 BUILD_DEPENDS+=	Xvfb:${X_VFBSERVER_PORT}
 .endif
 
