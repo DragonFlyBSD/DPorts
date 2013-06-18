@@ -2,7 +2,7 @@
 # Date created:         Thu Jan 30 13:27:44 CET 2003
 # Whom:                 Miguel Mendez <flynn@energyhq.homeip.net>
 #
-# $FreeBSD: ports/x11-themes/gtk-qnxtheme/Makefile,v 1.15 2012/11/17 06:03:31 svnexp Exp $
+# $FreeBSD: x11-themes/gtk-qnxtheme/Makefile 320125 2013-06-06 20:24:27Z ohauer $
 #
 
 PORTNAME=	gtk-qnxtheme
@@ -16,7 +16,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	QNX-inspired theme for GTK1 and GTK2
 
 OPTIONS_DEFINE=	GTK2
-OPTIONS_DEFALT=	GTK2
+OPTIONS_DEFAULT=	GTK2
 GTK2_DESC=	Build the GTK2 theme as well
 
 NO_WRKSUBDIR=	yes
