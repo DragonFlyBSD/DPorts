@@ -1,8 +1,9 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: x11-wm/xfce4-session/Makefile 317674 2013-05-08 15:20:15Z olivierd $
+# $FreeBSD: x11-wm/xfce4-session/Makefile 320384 2013-06-09 18:47:34Z rene $
 
 PORTNAME=	xfce4-session
 PORTVERSION=	4.10.1
+PORTREVISION=	1
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/xfce/${PORTNAME}/${PORTVERSION:R}
@@ -17,7 +18,9 @@ RUN_DEPENDS=	iceauth:${PORTSDIR}/x11/iceauth \
 LIB_DEPENDS=	wnck-1:${PORTSDIR}/x11-toolkits/libwnck \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		upower-glib:${PORTSDIR}/sysutils/upower \
-		polkit:${PORTSDIR}/sysutils/policykit
+		polkit.2:${PORTSDIR}/sysutils/policykit
+# explicitly add SHLIB version number for policykit to prevent LIB_DEPENDS
+# matching sysutils/polkit instead (which has libpolkit-agent.so.1)
 
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
