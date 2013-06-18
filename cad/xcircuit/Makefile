@@ -1,8 +1,8 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/xcircuit/Makefile 318742 2013-05-22 01:49:31Z bdrewery $
+# $FreeBSD: cad/xcircuit/Makefile 320623 2013-06-11 18:31:39Z rakuco $
 
 PORTNAME=	xcircuit
-PORTVERSION=	3.7.49
+PORTVERSION=	3.7.50
 PORTEPOCH=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://opencircuitdesign.com/xcircuit/archive/ \
