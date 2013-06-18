@@ -1,4 +1,4 @@
-# $FreeBSD: ports/deskutils/preferences/Makefile,v 1.3 2012/11/17 05:55:30 svnexp Exp $
+# $FreeBSD: deskutils/preferences/Makefile 305832 2012-10-13 13:39:56Z dinoex $
 
 PORTNAME=	preferences
 PORTVERSION=	1.2.0
