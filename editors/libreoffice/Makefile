@@ -52,7 +52,6 @@ LIB_DEPENDS=	icutu:${PORTSDIR}/devel/icu \
 		wpd-0.9.9:${PORTSDIR}/textproc/libwpd \
 		wps-0.2.2:${PORTSDIR}/textproc/libwps \
 		mythes-1.2.0:${PORTSDIR}/textproc/mythes \
-		odbc.2:${PORTSDIR}/databases/unixODBC \
 		cups:${PORTSDIR}/print/cups-client \
 		rdf.0:${PORTSDIR}/textproc/redland
 
@@ -142,6 +141,7 @@ CONFIGURE_ARGS+=	--without-afms \
 			--without-java \
 			--without-myspell-dicts \
 			--without-ppds \
+			--without-system-odbc \
 			--without-system-jars \
 			--without-system-npapi-headers
 
