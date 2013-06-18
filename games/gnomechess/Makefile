@@ -1,5 +1,5 @@
 # Created by: Jeremy Lea <reg@shale.csir.co.za>
-# $FreeBSD: games/gnomechess/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: games/gnomechess/Makefile 319932 2013-06-04 22:27:58Z bapt $
 
 PORTNAME=	gnomechess
 PORTVERSION=	0.3.3
@@ -11,6 +11,9 @@ DISTNAME=	gnome-chess-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A GUI chess front-end to crafy, for the GNOME Desktop Environment
+
+DEPRECATED=	Unsupported upstream
+EXPIRATION_DATE=	2013-07-04
 
 BUILD_DEPENDS=	crafty:${PORTSDIR}/games/crafty
 RUN_DEPENDS=	crafty:${PORTSDIR}/games/crafty
