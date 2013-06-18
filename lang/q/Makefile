@@ -1,5 +1,5 @@
 # Created by: ag@muwiinfa.geschichte.uni-mainz.de Albert Graef
-# $FreeBSD: lang/q/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: lang/q/Makefile 320476 2013-06-10 14:11:40Z gahr $
 
 PORTNAME=	q
 PORTVERSION=	7.11
@@ -9,6 +9,9 @@ MASTER_SITES=	SF/${PORTNAME}-lang/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Q -- equational programming language
+
+DEPRECATED=	Q-Lang is no longer supported. See lang/pure instead
+EXPIRATION_DATE=2013-08-10 
 
 LIB_DEPENDS=	MagickWand:${PORTSDIR}/graphics/ImageMagick \
     		curl.6:${PORTSDIR}/ftp/curl \
@@ -25,7 +28,7 @@ USE_GCC=	any
 USE_TK=		84+
 USE_LDCONFIG=	yes
 
-CFLAGS+=	-I${LOCALBASE}/include
+CFLAGS+=	-I${LOCALBASE}/include -fPIC
 LDFLAGS+=	-L${LOCALBASE}/lib
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-magick="`pkg-config ImageMagick --libs`" \
