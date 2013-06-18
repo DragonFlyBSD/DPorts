@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/lafontaine/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: lang/lafontaine/Makefile 319859 2013-06-04 13:58:44Z bapt $
 
 PORTNAME=	lafontaine
 PORTVERSION=	0.4.1
@@ -19,7 +19,9 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_CSTD=	gnu89
 
-.if !defined(WITHOUT_NLS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
