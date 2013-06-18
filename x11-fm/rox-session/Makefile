@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fm/rox-session/Makefile,v 1.36 2013/01/26 15:07:30 svnexp Exp $
+# $FreeBSD: x11-fm/rox-session/Makefile 311016 2013-01-26 14:50:30Z olgeni $
 
 PORTNAME=	rox-session
 PORTVERSION=	0.40.0

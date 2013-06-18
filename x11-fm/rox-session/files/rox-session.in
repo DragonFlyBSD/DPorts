@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/x11-fm/rox-session/files/rox-session.in,v 1.3 2012/11/17 06:03:26 svnexp Exp $
+# $FreeBSD: x11-fm/rox-session/files/rox-session.in 304126 2012-09-11 21:59:23Z olgeni $
 
 echo "ROX Session: Starting up..." 
 cd "%%DATADIR%%"
