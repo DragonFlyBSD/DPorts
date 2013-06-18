@@ -1,0 +1,8 @@
+@comment $FreeBSD: print/latex-ifluatex/pkg-plist 319892 2013-06-04 18:45:47Z pgj $
+%%PORTDOCS%%%%DOCSDIR%%/ifluatex.pdf
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%CLASSDIR%%/ifluatex.dtx
+%%CLASSDIR%%/ifluatex.sty
+@dirrm %%CLASSDIR%%
+@exec %%MKTEXLSR%%
+@unexec %%MKTEXLSR%%
