@@ -1,11 +1,11 @@
 # Created by: Joseph Koshy <jkoshy@freebsd.org>
-# $FreeBSD: math/ocaml-ocamlgraph/Makefile 313476 2013-03-05 20:22:02Z bf $
+# $FreeBSD: math/ocaml-ocamlgraph/Makefile 320883 2013-06-14 05:12:34Z johans $
 
 PORTNAME=	ocamlgraph
-PORTVERSION=	1.8.2
-PORTREVISION=	1
+PORTVERSION=	1.8.3
 CATEGORIES=	math
-MASTER_SITES=	http://ocamlgraph.lri.fr/download/
+MASTER_SITES=	http://ocamlgraph.lri.fr/download/ \
+		ftp://ftp.stack.nl/pub/users/johans/ocamlgraph/
 PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	johans@FreeBSD.org
@@ -51,10 +51,6 @@ post-patch:
 .if empty(PORT_OPTIONS:MGUI)
 	# Override auto-detection
 	@${REINPLACE_CMD} -Ee 's/(LABLGTK2)=yes/\1=no/' ${WRKSRC}/configure
-.else
-	@${REINPLACE_CMD} -Ee 's@(\+|/)(lablgtk2)@\1site-lib/\2@' \
-		${WRKSRC}/configure \
-		${WRKSRC}/view_graph/Makefile
 .endif
 
 post-install:
