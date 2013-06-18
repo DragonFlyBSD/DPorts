@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: x11/xfce4-conf/Makefile 317689 2013-05-08 15:49:02Z olivierd $
+# $FreeBSD: x11/xfce4-conf/Makefile 320709 2013-06-12 17:45:02Z az $
 
 PORTNAME=	xfce4-conf
 PORTVERSION=	4.10.0
@@ -27,7 +27,7 @@ USES=		pathfix pkgconfig
 
 OPTIONS_DEFINE=		DOCS PERL NLS
 
-MAN3PREFIX?=	${PREFIX}/lib/perl5/${PERL_VERSION}
+MAN3PREFIX?=	${PREFIX}/lib/perl5/${PERL_VER}
 
 .include <bsd.port.options.mk>
 
