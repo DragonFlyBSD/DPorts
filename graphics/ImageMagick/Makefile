@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ImageMagick/Makefile 316345 2013-04-23 10:53:21Z bapt $
+# $FreeBSD: graphics/ImageMagick/Makefile 320709 2013-06-12 17:45:02Z az $
 
 PORTNAME=	ImageMagick
 PORTREVISION=	1
@@ -91,7 +91,7 @@ _IMAGEMAGICK_THREADS_IGNORE_MSG=. Define WITH_THREADS
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 PLIST_SUB+=		WITH_PERL=''
 MAN3=			Image::Magick.3
-MAN3PREFIX=		${PREFIX}/lib/perl5/${PERL_VERSION}
+MAN3PREFIX=		${PREFIX}/lib/perl5/${PERL_VER}
 # PerlMagick not works with threads, if perl is not threaded, and vice versa
 . if defined(PERL_THREADED)
 _IMAGEMAGICK_THREADS_PERL_MSG=Perl is threaded
@@ -420,7 +420,7 @@ pre-configure:
 
 post-install: test
 .if ${PORT_OPTIONS:MPERL}
-	@${RM} -f ${PREFIX}/lib/perl5/${PERL_VERSION}/mach/perllocal.pod
+	@${RM} -f ${PREFIX}/lib/perl5/${PERL_VER}/mach/perllocal.pod
 .endif
 .if ${PORT_OPTIONS:MMODULES}
 . if ${PORT_OPTIONS:M16BIT_PIXEL}
