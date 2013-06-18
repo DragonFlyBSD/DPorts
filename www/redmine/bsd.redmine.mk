@@ -3,7 +3,7 @@
 # Date created:                      2010-09-12
 # Whom:                              Eygene Ryabinkin <rea-fbsd@codelabs.ru>
 #
-# $FreeBSD: www/redmine/bsd.redmine.mk 319568 2013-06-01 14:13:28Z swills $
+# $FreeBSD: www/redmine/bsd.redmine.mk 320119 2013-06-06 18:42:21Z swills $
 #
 # We're assuming standard plugin installation sequence that is described
 # in the http://www.redmine.org/wiki/redmine/Plugins
