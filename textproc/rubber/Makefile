@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection Makefile for:	rubber
-# Date created:			Mar 27, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: textproc/rubber/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/rubber/Makefile 320811 2013-06-13 16:07:05Z antoine $
 
 PORTNAME=	rubber
 PORTVERSION=	1.1
