@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/growl-for-linux/Makefile 316314 2013-04-23 07:14:15Z bapt $
+# $FreeBSD: deskutils/growl-for-linux/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
 
 PORTNAME=	growl-for-linux
 PORTVERSION=	0.6.8
@@ -15,7 +15,7 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 
 GH_ACCOUNT=	mattn
 GH_COMMIT=	cab80f2
-GH_TAGNAME=	master
+GH_TAGNAME=	${GH_COMMIT}
 
 GNU_CONFIGURE=	yes
 
