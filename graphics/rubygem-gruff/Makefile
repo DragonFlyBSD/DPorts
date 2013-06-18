@@ -1,14 +1,8 @@
-# ex:ts=8
-# Ports collection makefile for:	rubygem-gruff
-# Date created:			Jan 7, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: ports/graphics/rubygem-gruff/Makefile,v 1.15 2012/11/17 05:58:22 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: graphics/rubygem-gruff/Makefile 319727 2013-06-02 21:50:42Z swills $
 
 PORTNAME=	gruff
-PORTVERSION=	0.3.6
-PORTREVISION=	2
+PORTVERSION=	0.3.7
 CATEGORIES=	graphics rubygems
 MASTER_SITES=	RG
 
