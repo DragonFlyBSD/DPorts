@@ -1,16 +1,14 @@
-# $FreeBSD: sysutils/hs-angel/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: sysutils/hs-angel/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	angel
 PORTVERSION=	0.3.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Process management and supervision daemon
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	configurator>=0.1 MissingH mtl stm>=2.0 text>=0.11 \
 		unordered-containers>=0.1.4
