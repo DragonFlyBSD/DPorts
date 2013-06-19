@@ -1,5 +1,5 @@
 # Created by: ag@muwiinfa.geschichte.uni-mainz.de Albert Graef
-# $FreeBSD: audio/q-audio/Makefile 317336 2013-05-04 19:51:02Z bapt $
+# $FreeBSD: audio/q-audio/Makefile 320473 2013-06-10 13:32:07Z gahr $
 
 PORTNAME=	audio
 PORTVERSION=	2.7
@@ -11,6 +11,9 @@ DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Q-Audio -- digital audio interface for the Q language
+
+DEPRECATED=	Q-Lang is no longer supported. See lang/pure instead
+EXPIRATION_DATE=2013-08-10
 
 LIB_DEPENDS=	q.8:${PORTSDIR}/lang/q \
     		jack.0:${PORTSDIR}/audio/jack \
