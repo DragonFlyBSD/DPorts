@@ -1,12 +1,12 @@
 # Created by: markm
-# $FreeBSD: misc/dejagnu/Makefile 315135 2013-03-24 16:03:16Z miwi $
+# $FreeBSD: misc/dejagnu/Makefile 319928 2013-06-04 22:20:51Z bf $
 
 PORTNAME=	dejagnu
 PORTVERSION=	1.5.1
 CATEGORIES=	misc tcl tk
 MASTER_SITES=	GNU
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Automated program/system tester
 
 LICENSE=	GPLv3
