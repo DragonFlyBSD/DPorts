@@ -1,20 +1,17 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: ports/x11-toolkits/hs-GLUT/Makefile,v 1.21 2013/02/05 22:47:15 svnexp Exp $
+# $FreeBSD: x11-toolkits/hs-GLUT/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	GLUT
-PORTVERSION=	2.1.2.1
-PORTREVISION=	7
+PORTVERSION=	2.4.0.0
 PORTEPOCH=	1
 CATEGORIES=	x11-toolkits haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A Haskell binding for the OpenGL Utility Toolkit
+COMMENT=	Haskell binding for the OpenGL Utility Toolkit
 
 LICENSE=	BSD
 
-CABAL_SETUP=	Setup.hs
-
-USE_CABAL=	OpenGL>=2.2
+USE_CABAL=	OpenGL>=2.8 OpenGLRaw>=1.3
 USE_GL=		glut
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
