@@ -1,9 +1,9 @@
 # Created by: Samy Al Bahra <sbahra@kerneled.org>
-# $FreeBSD: ports/ports-mgmt/hs-porte/Makefile,v 1.21 2013/02/05 22:47:13 svnexp Exp $
+# $FreeBSD: ports-mgmt/hs-porte/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	porte
 PORTVERSION=	0.0.4
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	ports-mgmt haskell
 
 MAINTAINER=	sbahra@repnop.org
@@ -11,8 +11,7 @@ COMMENT=	FreeBSD ports index search and statistical analysis tool
 
 LICENSE=	BSD
 
-CABAL_SETUP=	Setup.hs
-USE_CABAL=	stringsearch
+USE_CABAL=	extensible-exceptions stringsearch
 
 EXECUTABLE=	porte
 
