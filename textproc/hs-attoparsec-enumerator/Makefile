@@ -1,17 +1,15 @@
-# $FreeBSD: textproc/hs-attoparsec-enumerator/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: textproc/hs-attoparsec-enumerator/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	attoparsec-enumerator
 PORTVERSION=	0.3.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Pass input from an enumerator to an Attoparsec parser
 
 LICENSE=	MIT
-FILE_LICENSE=	license.txt
 
-CABAL_SETUP=	Setup.hs
 USE_CABAL=	attoparsec>=0.10 enumerator>=0.4 text
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
