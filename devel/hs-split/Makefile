@@ -1,9 +1,8 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: ports/devel/hs-split/Makefile,v 1.12 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-split/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	split
-PORTVERSION=	0.2.1.1
-PORTREVISION=	1
+PORTVERSION=	0.2.2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
