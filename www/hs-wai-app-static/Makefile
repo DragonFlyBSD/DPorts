@@ -1,7 +1,8 @@
-# $FreeBSD: www/hs-wai-app-static/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: www/hs-wai-app-static/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	wai-app-static
 PORTVERSION=	1.3.1.2
+PORTREVISION=	1
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
