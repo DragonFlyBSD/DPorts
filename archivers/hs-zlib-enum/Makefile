@@ -1,16 +1,14 @@
-# $FreeBSD: ports/archivers/hs-zlib-enum/Makefile,v 1.6 2013/02/05 22:47:08 svnexp Exp $
+# $FreeBSD: archivers/hs-zlib-enum/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	zlib-enum
 PORTVERSION=	0.2.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	archivers haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Enumerator interface for zlib compression
 
 LICENSE=	MIT
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	enumerator transformers>=0.2 zlib-bindings
 
