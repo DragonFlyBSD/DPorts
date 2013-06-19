@@ -1,16 +1,14 @@
-# $FreeBSD: ports/ftp/hs-curl/Makefile,v 1.10 2013/02/05 22:47:10 svnexp Exp $
+# $FreeBSD: ftp/hs-curl/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	curl
 PORTVERSION=	1.3.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	ftp haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Haskell binding to libcurl
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
