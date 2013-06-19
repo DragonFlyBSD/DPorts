@@ -1,16 +1,14 @@
-# $FreeBSD: security/hs-pwstore-fast/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: security/hs-pwstore-fast/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	pwstore-fast
 PORTVERSION=	2.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Secure password storage
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	base64-bytestring>=0.1 cryptohash>=0.6 random>=1
 
