@@ -1,9 +1,9 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: ports/devel/hs-hdoc/Makefile,v 1.22 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-hdoc/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	hdoc
 PORTVERSION=	0.8.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	devel haskell
 MASTER_SITES=	http://staff.fmi.uni-passau.de/~groessli/hdoc/
 PKGNAMEPREFIX=	hs-
