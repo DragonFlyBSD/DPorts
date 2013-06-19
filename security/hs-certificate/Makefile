@@ -1,8 +1,7 @@
-# $FreeBSD: security/hs-certificate/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: security/hs-certificate/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	certificate
-PORTVERSION=	1.3.5
-PORTREVISION=	1
+PORTVERSION=	1.3.7
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -10,13 +9,10 @@ COMMENT=	Certificates and Key Reader/Writer
 
 LICENSE=	BSD
 
-CABAL_SETUP=	Setup.hs
-
-USE_CABAL=	asn1-data>=0.7.1 crypto-pubkey-types>=0.1 cryptohash mtl \
-		pem>=0.1
+USE_CABAL=	asn1-data>=0.7.1 crypto-pubkey-types>=0.3 cryptohash \
+		mtl pem>=0.1
 
 OPTIONS_DEFINE=		EXECUTABLE
-OPTIONS_DEFAULT=	
 
 EXECUTABLE_DESC=	Build the executable
 
