@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: ports/math/hs-mwc-random/Makefile,v 1.16 2013/02/05 22:47:12 svnexp Exp $
+# $FreeBSD: math/hs-mwc-random/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	mwc-random
 PORTVERSION=	0.12.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math haskell
 
 MAINTAINER=	haskell@FreeBSD.org
