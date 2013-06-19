@@ -1,8 +1,8 @@
-# $FreeBSD: ports/math/hs-ieee754/Makefile,v 1.5 2013/02/05 22:47:12 svnexp Exp $
+# $FreeBSD: math/hs-ieee754/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	ieee754
 PORTVERSION=	0.7.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math haskell
 
 MAINTAINER=	haskell@FreeBSD.org
