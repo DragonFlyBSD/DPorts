@@ -1,8 +1,8 @@
-# $FreeBSD: ports/devel/hs-attempt/Makefile,v 1.6 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-attempt/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	attempt
 PORTVERSION=	0.4.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
