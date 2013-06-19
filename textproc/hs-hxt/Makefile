@@ -1,12 +1,12 @@
-# $FreeBSD: textproc/hs-hxt/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: textproc/hs-hxt/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	hxt
 PORTVERSION=	9.3.1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A collection of tools for processing XML with Haskell
+COMMENT=	Collection of tools for processing XML with Haskell
 
 LICENSE=	MIT
 
