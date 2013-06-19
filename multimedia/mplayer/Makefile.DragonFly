@@ -1,4 +1,4 @@
-LIB_DEPENDS+=		libdvdread:${PORTSDIR}/multimedia/libdvdread
+LIB_DEPENDS+=		dvdread:${PORTSDIR}/multimedia/libdvdread
 
 CONFIGURE_ARGS+=	--disable-dvdread-internal
 CONFIGURE_ARGS+=	--with-dvdread-config=${PREFIX}/bin/dvdread-config
