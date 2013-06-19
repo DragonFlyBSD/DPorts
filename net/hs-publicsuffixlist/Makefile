@@ -1,7 +1,7 @@
-# $FreeBSD: net/hs-publicsuffixlist/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: net/hs-publicsuffixlist/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	publicsuffixlist
-PORTVERSION=	0.0.3
+PORTVERSION=	0.1
 CATEGORIES=	net haskell
 
 MAINTAINER=	haskell@FreeBSD.org
