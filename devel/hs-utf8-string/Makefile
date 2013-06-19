@@ -1,8 +1,8 @@
-# $FreeBSD: ports/devel/hs-utf8-string/Makefile,v 1.19 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-utf8-string/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	utf8-string
 PORTVERSION=	0.3.7
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
