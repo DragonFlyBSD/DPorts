@@ -1,17 +1,16 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: ports/www/hs-oeis/Makefile,v 1.12 2013/02/05 22:47:14 svnexp Exp $
+# $FreeBSD: www/hs-oeis/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	oeis
 PORTVERSION=	0.3.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A Haskell interface to the Online Encyclopedia of Integer Sequences
+COMMENT=	Haskell interface to the Online Encyclopedia of Integer Sequences
 
 LICENSE=	BSD
 
-CABAL_SETUP=	Setup.hs
 USE_CABAL=	HTTP>=4000.0.2 network>=2
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
