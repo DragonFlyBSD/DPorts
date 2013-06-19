@@ -1,12 +1,12 @@
-# $FreeBSD: ports/devel/hs-cereal/Makefile,v 1.7 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-cereal/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	cereal
 PORTVERSION=	0.3.5.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A binary serialization library for Haskell
+COMMENT=	Binary serialization library for Haskell
 
 LICENSE=	BSD
 
