@@ -1,17 +1,15 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: x11/hs-X11/Makefile 317973 2013-05-12 19:30:28Z pgj $
+# $FreeBSD: x11/hs-X11/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	X11
 PORTVERSION=	1.6.1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Binding to the X11 graphics library
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	data-default
 USE_XORG=	x11 xrandr xext
