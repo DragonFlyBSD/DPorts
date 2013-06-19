@@ -1,16 +1,14 @@
-# $FreeBSD: ports/devel/hs-activehs-base/Makefile,v 1.2 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-activehs-base/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	activehs-base
 PORTVERSION=	0.3.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Basic definitions for activehs
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	QuickCheck>=2.4
 
