@@ -1,7 +1,8 @@
-# $FreeBSD: ports/archivers/hs-zlib-bindings/Makefile,v 1.6 2013/02/05 22:47:08 svnexp Exp $
+# $FreeBSD: archivers/hs-zlib-bindings/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	zlib-bindings
 PORTVERSION=	0.1.1.3
+PORTREVISION=	1
 CATEGORIES=	archivers haskell
 
 MAINTAINER=	haskell@FreeBSD.org
