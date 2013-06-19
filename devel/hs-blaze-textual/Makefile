@@ -1,8 +1,8 @@
-# $FreeBSD: ports/devel/hs-blaze-textual/Makefile,v 1.7 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-blaze-textual/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	blaze-textual
 PORTVERSION=	0.2.0.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
