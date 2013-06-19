@@ -1,16 +1,13 @@
-# $FreeBSD: ports/devel/hs-cabal-install/Makefile,v 1.8 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-cabal-install/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	cabal-install
-PORTVERSION=	0.14.0
-PORTREVISION=	4
+PORTVERSION=	1.16.0.2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	The command-line interface for Cabal and Hackage
+COMMENT=	Command-line interface for Cabal and Hackage
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	network>=1 random>=1 HTTP>=4000.0.2 zlib>=0.4
 
