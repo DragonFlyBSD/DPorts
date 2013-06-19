@@ -1,15 +1,14 @@
-# $FreeBSD: ports/security/hs-crypto-random-api/Makefile,v 1.1 2013/02/05 22:47:13 svnexp Exp $
+# $FreeBSD: security/hs-crypto-random-api/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	crypto-random-api
 PORTVERSION=	0.2.0
+PORTREVISION=	1
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Simple random generators API for cryptography related code
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	entropy
 
