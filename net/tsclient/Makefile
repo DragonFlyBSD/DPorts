@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: net/tsclient/Makefile 316948 2013-04-30 16:26:32Z jgh $
+# $FreeBSD: net/tsclient/Makefile 320847 2013-06-13 22:48:26Z bapt $
 
 PORTNAME=	tsclient
 PORTVERSION=	0.150
@@ -43,7 +43,7 @@ RUN_DEPENDS+=	vncviewer:${PORTSDIR}/net/tightvnc
 .endif
 
 .if ${PORT_OPTIONS:MXNEST}
-RUN_DEPENDS+=	Xnest:${X_NESTSERVER_PORT}
+RUN_DEPENDS+=	Xnest:${PORTSDIR}/x11-servers/xorg-nestserver
 .endif
 
 .include <bsd.port.pre.mk>
