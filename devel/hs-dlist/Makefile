@@ -1,13 +1,13 @@
 # Created by: Samy Al Bahra <sbahra@kerneled.org>
-# $FreeBSD: ports/devel/hs-dlist/Makefile,v 1.14 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-dlist/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	dlist
 PORTVERSION=	0.5
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A list-like type supporting O(1) append for Haskell
+COMMENT=	List-like type supporting O(1) append for Haskell
 
 LICENSE=	BSD
 
