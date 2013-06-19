@@ -1,7 +1,8 @@
-# $FreeBSD: ports/math/hs-nats/Makefile,v 1.1 2013/02/05 22:47:12 svnexp Exp $
+# $FreeBSD: math/hs-nats/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	nats
 PORTVERSION=	0.1
+PORTREVISION=	1
 CATEGORIES=	math haskell
 
 MAINTAINER=	haskell@FreeBSD.org
