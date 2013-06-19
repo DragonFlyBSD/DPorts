@@ -1,9 +1,9 @@
 # Created by: Simon Marlow <simonmar@microsoft.com>
-# $FreeBSD: ports/devel/hs-happy/Makefile,v 1.39 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-happy/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	happy
 PORTVERSION=	1.18.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
