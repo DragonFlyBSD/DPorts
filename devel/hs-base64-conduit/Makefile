@@ -1,7 +1,8 @@
-# $FreeBSD: devel/hs-base64-conduit/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: devel/hs-base64-conduit/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	base64-conduit
 PORTVERSION=	1.0.0
+PORTREVISION=	1
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
