@@ -1,17 +1,15 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: ports/converters/hs-json/Makefile,v 1.12 2013/02/05 22:47:08 svnexp Exp $
+# $FreeBSD: converters/hs-json/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	json
 PORTVERSION=	0.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	converters haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Support for serialising Haskell to and from JSON
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	mtl syb>=0.3.3 text
 
