@@ -1,7 +1,7 @@
-# $FreeBSD: www/hs-hamlet/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: www/hs-hamlet/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	hamlet
-PORTVERSION=	1.1.6.3
+PORTVERSION=	1.1.7.1
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
