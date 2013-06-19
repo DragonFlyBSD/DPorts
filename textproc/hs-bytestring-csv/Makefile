@@ -1,9 +1,9 @@
 # Created by: Samy Al Bahra <sbahra@kerneled.org>
-# $FreeBSD: ports/textproc/hs-bytestring-csv/Makefile,v 1.14 2013/02/05 22:47:14 svnexp Exp $
+# $FreeBSD: textproc/hs-bytestring-csv/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	bytestring-csv
 PORTVERSION=	0.1.2
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
