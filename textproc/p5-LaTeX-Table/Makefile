@@ -2,7 +2,7 @@
 # Date created:				4th June, 2009
 # Whom:					Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/textproc/p5-LaTeX-Table/Makefile,v 1.11 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: textproc/p5-LaTeX-Table/Makefile 320091 2013-06-06 13:22:19Z mat $
 #
 
 PORTNAME=	LaTeX-Table
@@ -40,7 +40,6 @@ RUN_DEPENDS=	p5-Test-NoWarnings>=0.084:${PORTSDIR}/devel/p5-Test-NoWarnings \
 		p5-Readonly>=0:${PORTSDIR}/devel/p5-Readonly \
 		p5-MooseX-FollowPBP>=0.03:${PORTSDIR}/devel/p5-MooseX-FollowPBP
 
-PERL_CONFIGURE=	yes
 PERL_MODBUILD=	yes
 
 MAN1=	csv2pdf.1 ltpretty.1
