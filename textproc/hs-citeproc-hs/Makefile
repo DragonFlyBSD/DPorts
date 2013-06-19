@@ -1,11 +1,12 @@
-# $FreeBSD: textproc/hs-citeproc-hs/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: textproc/hs-citeproc-hs/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	citeproc-hs
 PORTVERSION=	0.3.8
+PORTREVISION=	1
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A Citation Style Language implementation in Haskell
+COMMENT=	Citation Style Language implementation in Haskell
 
 LICENSE=	BSD
 
