@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: ports/deskutils/checkrdf/Makefile,v 1.25 2013/02/05 22:47:08 svnexp Exp $
+# $FreeBSD: deskutils/checkrdf/Makefile 319939 2013-06-04 23:27:19Z pgj $
 
 PORTNAME=	checkrdf
 PORTVERSION=	39.4444
@@ -8,7 +8,7 @@ CATEGORIES=	deskutils
 MASTER_SITES=	SF
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A tool for RDF site summaries based news-check
+COMMENT=	Tool for RDF site summaries based news-check
 
 LICENSE=	BSD
 
