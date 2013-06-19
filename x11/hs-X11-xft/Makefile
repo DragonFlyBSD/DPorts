@@ -1,8 +1,8 @@
-# $FreeBSD: x11/hs-X11-xft/Makefile 317973 2013-05-12 19:30:28Z pgj $
+# $FreeBSD: x11/hs-X11-xft/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	X11-xft
 PORTVERSION=	0.3.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11 haskell
 
 MAINTAINER=	haskell@FreeBSD.org
