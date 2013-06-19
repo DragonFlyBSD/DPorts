@@ -1,20 +1,19 @@
---- configure.intermediate	2012-12-28 14:02:35.000000000 +0100
-+++ configure	2012-12-28 14:03:10.000000000 +0100
-@@ -2926,7 +2926,7 @@
- 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
- 	    TCL_LIB_VERSIONS_OK=nodots
+--- configure.intermediate	2013-06-19 13:39:38.329390000 +0000
++++ configure
+@@ -2922,7 +2922,7 @@ echo "$ac_t""$tcl_cv_ld_elf" 1>&6
+ 		;;
+ 	    esac
  	    ;;
 -	FreeBSD-*)
 +	FreeBSD-*|DragonFly-*)
- 	    # FreeBSD 3.* and greater have ELF.
+ 	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
- 	    TCL_SHLIB_LD_EXTRAS="-Wl,-soname,\$@"
-@@ -2945,7 +2945,7 @@
- 	    	LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
- 	    fi
- 	    case $system in
--	    FreeBSD-*)
-+	    FreeBSD-*|DragonFly-*)
- 	    	# FreeBSD-3 doesn't handle version numbers with dots.
- 	    	UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
- 		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}${DBGX}.so.1'
+ 	    SHLIB_LD="${CC} -shared"
+@@ -3770,6 +3770,7 @@ fi
+ 	    CYGWIN_*|MINGW32_*) ;;
+ 	    IRIX*) ;;
+ 	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
++	    DragonFly-*) ;;
+ 	    Darwin-*) ;;
+ 	    RISCos-*) ;;
+ 	    SCO_SV-3.2*) ;;
