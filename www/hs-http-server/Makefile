@@ -1,16 +1,15 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: www/hs-http-server/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: www/hs-http-server/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	http-server
 PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Library for writing Haskell web servers
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	HTTP>=4000.2.0 mime>=0.3 network>=2 url>=2 utf8-string>=0.3.4
 
