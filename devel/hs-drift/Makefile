@@ -1,9 +1,9 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: ports/devel/hs-drift/Makefile,v 1.31 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-drift/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	drift
 PORTVERSION=	2.2.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	devel haskell
 MASTER_SITES=	http://repetae.net/computer/haskell/DrIFT/drop/
 PKGNAMEPREFIX=	hs-
