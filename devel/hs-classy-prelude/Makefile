@@ -1,15 +1,13 @@
-# $FreeBSD: devel/hs-classy-prelude/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: devel/hs-classy-prelude/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	classy-prelude
-PORTVERSION=	0.5.3
+PORTVERSION=	0.5.7
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A typeclass-based Prelude
+COMMENT=	Typeclass-based Prelude
 
 LICENSE=	MIT
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	basic-prelude>=0.3.4 hashable lifted-base>=0.2 \
 		system-filepath>=0.4 text transformers unordered-containers \
