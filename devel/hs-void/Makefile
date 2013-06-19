@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/hs-void/Makefile,v 1.7 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-void/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	void
-PORTVERSION=	0.5.11
+PORTVERSION=	0.6
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -9,7 +9,7 @@ COMMENT=	Haskell 98 logically uninhabited data type
 
 LICENSE=	BSD
 
-USE_CABAL=	semigroups>=0.8.2
+USE_CABAL=	hashable>=1.1 semigroups>=0.8.2
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
