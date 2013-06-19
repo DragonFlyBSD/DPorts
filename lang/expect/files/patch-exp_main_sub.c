@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/lang/expect/files/patch-exp_main_sub.c,v 1.2 2012/11/17 05:58:49 svnexp Exp $
+$FreeBSD: lang/expect/files/patch-exp_main_sub.c 300896 2012-07-14 13:54:48Z beat $
 
 --- exp_main_sub.c	2002/08/24 08:04:43	1.1
 +++ exp_main_sub.c	2002/08/24 08:15:33

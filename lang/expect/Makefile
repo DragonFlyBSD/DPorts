@@ -2,15 +2,15 @@
 # Date created:		20 November 1994
 # Whom:			pst
 #
-# $FreeBSD: ports/lang/expect/Makefile,v 1.83 2013/02/01 02:44:31 svnexp Exp $
+# $FreeBSD: lang/expect/Makefile 319928 2013-06-04 22:20:51Z bf $
 
 PORTNAME=	expect
 PORTVERSION=	5.43.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	lang tcl tk
 MASTER_SITES=	http://mirror.amdmi3.ru/distfiles/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	A sophisticated scripter based on tcl/tk
 
 CONFLICTS=	expect-5.44* weather-[0-9]*
@@ -64,6 +64,9 @@ MAN3=		libexpect.3
 .endif
 
 post-patch:
+	${REINPLACE_CMD} -e \
+		's|@TCLHDIRDASHI@|& -I${LOCALBASE}/include/tcl8.4/unix|' \
+		${WRKSRC}/Makefile.in ${WRKSRC}/DbgMkfl.in
 	${TOUCH} ${WRKSRC}/configure
 
 post-install:
