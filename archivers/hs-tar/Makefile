@@ -1,8 +1,8 @@
-# $FreeBSD: ports/archivers/hs-tar/Makefile,v 1.9 2013/02/05 22:47:08 svnexp Exp $
+# $FreeBSD: archivers/hs-tar/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	tar
 PORTVERSION=	0.4.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	archivers haskell
 
 MAINTAINER=	haskell@FreeBSD.org
