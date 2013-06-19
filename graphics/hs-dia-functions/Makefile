@@ -1,16 +1,14 @@
-# $FreeBSD: ports/graphics/hs-dia-functions/Makefile,v 1.2 2013/02/05 22:47:11 svnexp Exp $
+# $FreeBSD: graphics/hs-dia-functions/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	dia-functions
 PORTVERSION=	0.2.1.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	An EDSL for teaching Haskell with diagrams - functions
+COMMENT=	EDSL for teaching Haskell with diagrams - functions
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	data-pprint>=0.2 dia-base>=0.1 mtl>=2.0 xhtml>=3000.2
 
