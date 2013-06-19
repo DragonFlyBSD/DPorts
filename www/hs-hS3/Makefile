@@ -1,15 +1,14 @@
-# $FreeBSD: www/hs-hS3/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: www/hs-hS3/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	hS3
 PORTVERSION=	0.5.7
+PORTREVISION=	1
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Interface to Amazon's Simple Storage Service (S3)
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	Crypto>=4.1.0 dataenc HTTP>=4000.0.0 hxt>=9.0.0 \
 		MissingH>=0.18.6 network random regex-compat utf8-string
