@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-ZConf-RSS-GUI-GTK
-# Date created:		2009-11-09
-# Whom:			Zane C, Bowers <vvelox@vvelox.net>
-#
-# $FreeBSD: ports/www/p5-ZConf-RSS-GUI-GTK/Makefile,v 1.8 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Zane C, Bowers <vvelox@vvelox.net>
+# $FreeBSD: www/p5-ZConf-RSS-GUI-GTK/Makefile 320567 2013-06-11 14:41:30Z miwi $
 
 PORTNAME=	ZConf-RSS-GUI-GTK
 PORTVERSION=	0.0.1
