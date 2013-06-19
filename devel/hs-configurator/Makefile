@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-configurator/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: devel/hs-configurator/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	configurator
 PORTVERSION=	0.2.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
