@@ -1,15 +1,14 @@
-# $FreeBSD: www/hs-snap-core/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: www/hs-snap-core/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	snap-core
 PORTVERSION=	0.9.3.1
+PORTREVISION=	1
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Snap: A Haskell Web Framework (core interfaces and types)
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	attoparsec>=0.10 attoparsec-enumerator>=0.3 \
 		blaze-builder>=0.2.1.4 blaze-builder-enumerator>=0.2 \
