@@ -1,8 +1,8 @@
-# $FreeBSD: ports/www/hs-path-pieces/Makefile,v 1.6 2013/02/05 22:47:15 svnexp Exp $
+# $FreeBSD: www/hs-path-pieces/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	path-pieces
 PORTVERSION=	0.1.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
