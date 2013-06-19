@@ -1,12 +1,12 @@
-# $FreeBSD: ports/devel/hs-failure/Makefile,v 1.6 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-failure/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	failure
 PORTVERSION=	0.2.0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A simple type class for success/failure computations
+COMMENT=	Simple type class for success/failure computations
 
 LICENSE=	BSD
 
