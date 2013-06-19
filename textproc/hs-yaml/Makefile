@@ -1,7 +1,7 @@
-# $FreeBSD: textproc/hs-yaml/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: textproc/hs-yaml/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	yaml
-PORTVERSION=	0.8.2.3
+PORTVERSION=	0.8.2.4
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
