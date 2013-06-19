@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-test-framework-hunit/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: devel/hs-test-framework-hunit/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	test-framework-hunit
 PORTVERSION=	0.3.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
