@@ -1,13 +1,12 @@
 # Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-# $FreeBSD: ports/devel/hs-alex/Makefile,v 1.41 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-alex/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	alex
-PORTVERSION=	3.0.2
-PORTREVISION=	1
+PORTVERSION=	3.0.5
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	Alex is a tool for generating lexical analysers in Haskell
+COMMENT=	Tool for generating lexical analysers in Haskell
 
 LICENSE=	BSD
 
