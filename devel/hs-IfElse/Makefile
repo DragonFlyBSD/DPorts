@@ -1,16 +1,14 @@
-# $FreeBSD: ports/devel/hs-IfElse/Makefile,v 1.5 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-IfElse/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	IfElse
 PORTVERSION=	0.85
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Anaphoric and miscellaneous useful control-flow
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	mtl
 
