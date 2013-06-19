@@ -1,9 +1,9 @@
 # Created by: Kay Lehmann
-# $FreeBSD: audio/prokyon3/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: audio/prokyon3/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	prokyon3
 PORTVERSION=	0.9.6
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
