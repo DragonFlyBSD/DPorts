@@ -50,7 +50,7 @@ WEATHER_DESC=	Weather calendar backend
 .if ${PORT_OPTIONS:MKERBEROS}
 CONFIGURE_ARGS+=	--with-krb5=/usr
 KRB5_LIB=		`${LOCALBASE}/bin/krb5-config gssapi --libs`
-BUILD_DEPENDS+= 	/usr/bin/krb5-config:${PORTSDIR}/security/krb5
+BUILD_DEPENDS+= 	krb5-config:${PORTSDIR}/security/krb5
 .endif
 
 .if ${PORT_OPTIONS:MWEATHER}
