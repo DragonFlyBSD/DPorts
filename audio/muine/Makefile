@@ -1,17 +1,17 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: audio/muine/Makefile 317576 2013-05-07 06:45:39Z bapt $
+# $FreeBSD: audio/muine/Makefile 320405 2013-06-09 19:30:58Z naddy $
 #   $Id: Makefile,v 1.54 2007/01/26 03:17:25 tmclau02 Exp $
 
 PORTNAME=	muine
 PORTVERSION=	0.8.11
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Mono based Gnome audio player
 
-LIB_DEPENDS=	FLAC.10:${PORTSDIR}/audio/flac \
+LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac \
 		id3tag.0:${PORTSDIR}/audio/libid3tag \
 		gdbm:${PORTSDIR}/databases/gdbm \
 		vorbis.4:${PORTSDIR}/audio/libvorbis
