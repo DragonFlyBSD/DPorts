@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/x11-toolkits/p5-Alien-wxWidgets/Makefile,v 1.22 2013/02/13 06:44:09 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Alien-wxWidgets/Makefile 320163 2013-06-07 07:28:44Z az $
 
 PORTNAME=	Alien-wxWidgets
 PORTVERSION=	0.62
@@ -20,16 +20,6 @@ WX_COMPS=	wx contrib
 PERL_MODBUILD=	yes
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500809
-BUILD_DEPENDS+=	p5-Module-Pluggable>=0:${PORTSDIR}/devel/p5-Module-Pluggable
-.elsif ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Module-Build>=0:${PORTSDIR}/devel/p5-Module-Build
-.endif
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-ExtUtils-CBuilder>=0:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
-.endif
 
 .if ${PORT_OPTIONS:MUNICODE}
 WX_UNICODE=	yes
