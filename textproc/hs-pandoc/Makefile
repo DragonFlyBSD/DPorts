@@ -1,18 +1,15 @@
 # Created by: John MacFarlane <jgm@berkeley.edu>
-# $FreeBSD: textproc/hs-pandoc/Makefile 315636 2013-03-31 13:43:10Z pgj $
+# $FreeBSD: textproc/hs-pandoc/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	pandoc
 PORTVERSION=	1.11.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Conversion between markup formats
 
 LICENSE=	GPLv2
-FILE_LICENSE=	COPYING
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	base64-bytestring>=0.1 blaze-html>=0.6 blaze-markup>=0.5.1 \
 		citeproc-hs>=0.3.7 data-default>=0.4 highlighting-kate>=0.5.3.7 \
@@ -22,6 +19,10 @@ USE_CABAL=	base64-bytestring>=0.1 blaze-html>=0.6 blaze-markup>=0.5.1 \
 		text>=0.11 xml>=1.3.12 zip-archive>=0.1.3.3 zlib>=0.5
 
 EXECUTABLE=	pandoc
+
+# For PDF generation
+RUN_DEPENDS+=	latex-ifluatex>=1.3:${PORTSDIR}/print/latex-ifluatex \
+		ifxetex>=0:${PORTSDIR}/print/ifxetex
 
 MAN1=		pandoc.1
 MAN5=		pandoc_markdown.5
