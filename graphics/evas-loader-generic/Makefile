@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-generic/Makefile 318442 2013-05-18 19:36:31Z gblach $
+# $FreeBSD: graphics/evas-loader-generic/Makefile 320111 2013-06-06 15:59:25Z bapt $
 
 PORTNAME=	loader-generic
 PORTVERSION=	1.7.7
@@ -16,8 +16,13 @@ LICENSE=	BSD
 
 EVAS_GENERIC_LOADERS=	gst pdf ps raw svg xcf
 
+#bmake compatibility
+.MAKE.FreeBSD_UL= yes
+
 .for NODE in ${EVAS_GENERIC_LOADERS}
-OPTIONS+=	${NODE:tu} "Install ${NODE} evas generic loader" on
+OPTIONS_DEFINE+=	${NODE:tu}
+OPTIONS_DEFAULT+=	${NODE:tu}
+${NODE:tu}_DESC=	Install ${NODE} evas generic loader
 .endfor
 
 DIST_SUBDIR=	e17
@@ -36,7 +41,7 @@ CONFIGURE_ARGS+=	--enable-image-loader-generic
 .include <bsd.port.options.mk>
 
 .for NODE in ${EVAS_GENERIC_LOADERS}
-. if !defined(WITHOUT_${NODE:tu})
+. if ${PORT_OPTIONS:M${NODE:tu}}
 RUN_DEPENDS+=	${LOCALBASE}/lib/evas/utils/evas_image_loader.${NODE}:${PORTSDIR}/graphics/evas_generic_loaders-${NODE}
 . endif
 .endfor
