@@ -2,7 +2,7 @@
 # Date created:		14 August 2003
 # Whom:			ag@muwiinfa.geschichte.uni-mainz.de Albert Graef
 #
-# $FreeBSD: ports/graphics/q-graph/Makefile,v 1.17 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/q-graph/Makefile 320473 2013-06-10 13:32:07Z gahr $
 #
 
 PORTNAME=	graph
@@ -14,6 +14,9 @@ PKGNAMEPREFIX=	q-
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Q-Graph -- graph library and editor for the Q language
+
+DEPRECATED=	Q-Lang is no longer supported. See lang/pure instead
+EXPIRATION_DATE=2013-08-10 
 
 LIB_DEPENDS=	q.8:${PORTSDIR}/lang/q
 RUN_DEPENDS=	${LOCALBASE}/lib/bwidget/init.tcl:${PORTSDIR}/x11-toolkits/bwidget
