@@ -1,16 +1,14 @@
-# $FreeBSD: ports/devel/hs-threadscope/Makefile,v 1.7 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-threadscope/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	threadscope
 PORTVERSION=	0.2.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A graphical tool for profiling parallel Haskell programs
+COMMENT=	Graphical tool for profiling parallel Haskell programs
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	cairo ghc-events>=0.4.2 glib gtk>=0.12 gtk2hs-buildtools mtl \
 		pango
