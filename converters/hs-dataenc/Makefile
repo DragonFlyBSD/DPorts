@@ -1,15 +1,14 @@
-# $FreeBSD: ports/converters/hs-dataenc/Makefile,v 1.11 2013/02/05 22:47:08 svnexp Exp $
+# $FreeBSD: converters/hs-dataenc/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	dataenc
 PORTVERSION=	0.14.0.5
+PORTREVISION=	1
 CATEGORIES=	converters haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Data encoding library
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
