@@ -1,16 +1,14 @@
-# $FreeBSD: ports/x11-toolkits/hs-wxdirect/Makefile,v 1.6 2013/02/05 22:47:15 svnexp Exp $
+# $FreeBSD: x11-toolkits/hs-wxdirect/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	wxdirect
 PORTVERSION=	0.90.0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Helper tool for building wxHaskell
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	parsec>=2.1.0 strict
 
