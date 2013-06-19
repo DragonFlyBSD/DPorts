@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gosa
-# Date created:				Wed Dec 26 18:41:49 MSK 2007
-# Whom:					Denis Shaposhnikov <dsh@wizard.volgograd.ru>
-#
-# $FreeBSD: ports/sysutils/gosa/Makefile,v 1.11 2012/11/17 06:01:33 svnexp Exp $
-#
+# Created by: Denis Shaposhnikov <dsh@wizard.volgograd.ru>
+# $FreeBSD: sysutils/gosa/Makefile 320586 2013-06-11 14:51:51Z miwi $
 
 PORTNAME=	gosa
 PORTVERSION=	2.6.10
