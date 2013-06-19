@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kactivitymanagerd/Makefile 318452 2013-05-18 20:34:41Z makc $
+# $FreeBSD: x11/kactivitymanagerd/Makefile 320192 2013-06-07 11:45:03Z avilla $
 
 PORTNAME=	kactivitymanagerd
 PORTVERSION=	${KDE4_VERSION}
@@ -26,12 +26,20 @@ DISTINFO_FILE=	${.CURDIR}/../kactivities/distinfo
 # https://bugs.kde.org/show_bug.cgi?id=305529#c10
 CMAKE_ARGS+=	-DCMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS=-rdynamic
 
-# 'USES= moderncompiler' would help, for now force dependence on gcc
+# 'USES= moderncompiler' would help, for now force dependency on gcc
 USE_GCC=	4.6+
+
+.include <bsd.port.pre.mk>
+
+# Workaround to keep kactivitymanagerd from crashing:
+# http://lists.freebsd.org/pipermail/freebsd-current/2012-May/033972.html
+.if ${OSVERSION} > 1000000
+CXXFLAGS+=	-fno-use-cxa-atexit
+.endif
 
 post-patch:
 	${REINPLACE_CMD} -e "/add_subdirectory (lib)/d" \
 		-e "/add_subdirectory (ontologies)/d" \
 		${WRKSRC}/src/CMakeLists.txt \
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
