@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: misc/gnome2-reference/Makefile 314632 2013-03-19 10:40:22Z kwm $
+# $FreeBSD: misc/gnome2-reference/Makefile 320146 2013-06-07 05:36:30Z bapt $
 #   $MCom: ports/misc/gnome2-reference/Makefile,v 1.9 2008/08/23 18:22:59 mezz Exp $
 
 PORTNAME=	gnome2-reference
@@ -54,17 +54,21 @@ REF_LIST=	accessibility/at-spi-reference \
 
 NO_BUILD=	yes
 
+.MAKE.FreeBSD_UL= yes
+
 REF_LIST_INC=	${.CURDIR}/Makefile.inc
 .include "${REF_LIST_INC}"
 
-.include <bsd.port.pre.mk>
-
 .for ref in ${_PORT_REF_LIST:C/^([^:]+).*/\1/}
-OPTIONS+=	${ref:C|^[^/]+/([^/]+).*|\1|:S/-reference//:S/-/_/:tu} "Install ${ref:C|^[^/]+/([^/]+).*|\1|:S/-reference//} programing reference " on
+OPTIONS_DEFINE+=	${ref:C|^[^/]+/([^/]+).*|\1|:S/-reference//:S/-/_/:tu}
+OPTIONS_DEFAULT+=	${ref:C|^[^/]+/([^/]+).*|\1|:S/-reference//:S/-/_/:tu}
+${ref:C|^[^/]+/([^/]+).*|\1|:S/-reference//:S/-/_/:tu}_DESC=	Install ${ref:C|^[^/]+/([^/]+).*|\1|:S/-reference//} programing reference
 .endfor
 
+.include <bsd.port.options.mk>
+
 .for ref in ${_PORT_REF_LIST}
-.if !defined(WITHOUT_${ref:C|^[^/]+/([^/]+).*|\1|:S/-reference//:S/-/_/:tu:C/^([^:]+).*/\1/})
+.if ${PORT_OPTIONS:M${ref:C|^[^/]+/([^/]+).*|\1|:S/-reference//:S/-/_/:tu:C/^([^:]+).*/\1/}}
 RUN_DEPENDS+=	${ref:C|^[^:]+:([^:]+).*|\1|:C|^[^/]+/([^/]+).*|\1|}>0:${PORTSDIR}/${ref:C/^([^:]+).*/\1/}
 .endif
 .endfor
@@ -78,4 +82,4 @@ create-ref-list:
 	(cd ${PORTSDIR}/${port} && ${ECHO_CMD} "${port}:`${MAKE} -V PORTNAME` \\" >> ${REF_LIST_INC})
 .endfor
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
