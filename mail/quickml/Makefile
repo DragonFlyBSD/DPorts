@@ -1,9 +1,5 @@
-# New ports collection makefile for:	quickml
-# Date created:				11 June 2004
-# Whom:					Yuichiro AIZAWA <yaizawa@mdbl.sfc.keio.ac.jp>
-#
-# $FreeBSD: ports/mail/quickml/Makefile,v 1.25 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: Yuichiro AIZAWA <yaizawa@mdbl.sfc.keio.ac.jp>
+# $FreeBSD: mail/quickml/Makefile 319851 2013-06-04 10:32:49Z bapt $
 
 PORTNAME=	quickml
 PORTVERSION=	0.7
@@ -32,8 +28,10 @@ CONFIGURE_ARGS=	--datadir="${PREFIX}/share/quickml" \
 
 SUB_LIST=	RUBY=${RUBY}
 
-OPTIONS=	ANALOG "Enable quickml-analog" on \
-		LIMIT  "Enable Creators and Members Limitation Patch" off
+OPTIONS_DEFINE=	ANALOG LIMIT DOCS
+OPTIONS_DEFAULT=	ANALOG
+ANALOG_DESC=	quickml-analog
+LIMIT_DESC=	Creators and Members Limitation Patch
 
 .include <bsd.port.pre.mk>
 
@@ -41,7 +39,7 @@ OPTIONS=	ANALOG "Enable quickml-analog" on \
 EXTRA_PATCHES+=		${PATCHDIR}/extra-patch-ruby19-*
 .endif
 
-.if !defined(WITHOUT_ANALOG)
+.if ${PORT_OPTIONS:MANALOG}
 USE_GHOSTSCRIPT_RUN=	yes
 RUN_DEPENDS+=	gnuplot:${PORTSDIR}/math/gnuplot \
 		convert:${PORTSDIR}/graphics/ImageMagick
@@ -51,14 +49,14 @@ PLIST_SUB+=	ANALOG="@comment "
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-woanalog-Makefile.in
 .endif
 
-.if !defined(WITHOUT_LIMIT)
+.if ${PORT_OPTIONS:MLIMIT}
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-limit-*
 .endif
 
 post-install:
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/messages.ja ${DATADIR}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/ml-usage.en.rd ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/quickml.en.rd ${DOCSDIR}
