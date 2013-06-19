@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-terminfo/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: devel/hs-terminfo/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	terminfo
 PORTVERSION=	0.3.2.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
