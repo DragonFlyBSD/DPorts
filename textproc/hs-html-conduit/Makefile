@@ -1,15 +1,14 @@
-# $FreeBSD: textproc/hs-html-conduit/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: textproc/hs-html-conduit/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	html-conduit
 PORTVERSION=	1.1.0
+PORTREVISION=	1
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Parse HTML documents using xml-conduit datatypes
 
 LICENSE=	MIT
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	conduit>=1.0 filesystem-conduit>=1.0 resourcet>=0.3 \
 		system-filepath>=0.4 tagstream-conduit>=0.4 text \
