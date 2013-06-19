@@ -1,15 +1,14 @@
-# $FreeBSD: www/hs-activehs/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: www/hs-activehs/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	activehs
 PORTVERSION=	0.3.1
+PORTREVISION=	1
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Haskell code presentation tool
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	activehs-base>=0.2 blaze-html>=0.5 blaze-markup>=0.5.1.0 \
 		cmdargs>=0.7 data-pprint>=0.2 dia-base>=0.1 \
