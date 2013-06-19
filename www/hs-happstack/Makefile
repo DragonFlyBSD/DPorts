@@ -1,17 +1,14 @@
-# $FreeBSD: www/hs-happstack/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: www/hs-happstack/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	happstack
 PORTVERSION=	7.0.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	The haskell application server stack + code generation
 
 LICENSE=	BSD
-FILE_LICENSE=	COPYING
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	happstack-server>=7.0
 
