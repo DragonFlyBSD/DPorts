@@ -1,17 +1,14 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: ports/textproc/hs-xml/Makefile,v 1.14 2013/02/05 22:47:14 svnexp Exp $
+# $FreeBSD: textproc/hs-xml/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	xml
-PORTVERSION=	1.3.12
-PORTREVISION=	4
+PORTVERSION=	1.3.13
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A simple XML library for Haskell
+COMMENT=	Simple XML library for Haskell
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	text
 
