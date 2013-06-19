@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-xss-sanitize/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: www/hs-xss-sanitize/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	xss-sanitize
 PORTVERSION=	0.3.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
