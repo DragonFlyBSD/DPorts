@@ -1,15 +1,15 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: devel/hs-darcs/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: devel/hs-darcs/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	darcs
 PORTVERSION=	2.8.4
+PORTREVISION=	1
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	A distributed, interactive, smart revision control system
 
 LICENSE=	GPLv2
-FILE_LICENSE=	COPYING
 
 USE_CABAL=	hashed-storage>=0.5.6 haskeline>=0.6.3 html \
 		mtl>=1.0 parsec>=2.2 random regex-compat>=0.95.1 \
