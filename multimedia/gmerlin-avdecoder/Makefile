@@ -1,8 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: multimedia/gmerlin-avdecoder/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: multimedia/gmerlin-avdecoder/Makefile 320405 2013-06-09 19:30:58Z naddy $
 
 PORTNAME=	gmerlin-avdecoder
 PORTVERSION=	1.2.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/gmerlin/${PORTNAME}/${PORTVERSION}
 
@@ -113,7 +114,7 @@ PLIST_SUB+=	DVDREAD="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MFLAC}
-LIB_DEPENDS+=	FLAC.10:${PORTSDIR}/audio/flac
+LIB_DEPENDS+=	FLAC:${PORTSDIR}/audio/flac
 .else
 CONFIGURE_ARGS+=--disable-flac
 .endif
