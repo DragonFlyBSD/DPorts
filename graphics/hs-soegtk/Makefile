@@ -1,17 +1,14 @@
-# $FreeBSD: ports/graphics/hs-soegtk/Makefile,v 1.9 2013/02/05 22:47:11 svnexp Exp $
+# $FreeBSD: graphics/hs-soegtk/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	soegtk
 PORTVERSION=	0.12.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	GUI functions as used in the book "The Haskell School of Expression"
 
 LICENSE=	LGPL21
-FILE_LICENSE=	COPYING
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	cairo>=0.12 gtk>=0.11 mtl stm>=2
 USE_GNOME=	gtk20
