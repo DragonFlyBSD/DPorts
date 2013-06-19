@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: deskutils/kdepim4/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: deskutils/kdepim4/Makefile 320191 2013-06-07 11:42:10Z avilla $
 
 PORTNAME=	kdepim
 PORTVERSION=	${KDE4_VERSION}
@@ -35,6 +35,9 @@ USE_QT4=	corelib dbus declarative designer_build gui network opengl \
 USE_XORG=	x11 xscrnsaver
 CMAKE_ARGS+=	-DKDEPIM_BUILD_MOBILE:BOOL=FALSE
 USE_GMAKE=	yes
+# Avoids Clang error:
+# https://git.reviewboard.kde.org/r/108617
+CXXFLAGS+=	-Wno-error=return-type
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
