@@ -150,7 +150,7 @@ _WX_PORT_wx_2.6=		x11-toolkits/wxgtk26${_WX_UCL}
 _WX_LIB_wx_2.6=			wx_base${_WX_UC}-2.6
 
 _WX_PORT_common_2.6=	x11-toolkits/wxgtk26-common
-_WX_FILE_common_2.6=	include/wx-2.6/wx/wxprec.h
+_WX_FILE_common_2.6=	${LOCALBASE}/include/wx-2.6/wx/wxprec.h
 
 _WX_PORT_contrib_2.6=	x11-toolkits/wxgtk26${_WX_UCL}-contrib
 _WX_LIB_contrib_2.6=	wx_gtk2${_WX_UC}_animate-2.6
@@ -163,7 +163,7 @@ _WX_PORT_wx_2.8=		x11-toolkits/wxgtk28${_WX_UCL}
 _WX_LIB_wx_2.8=			wx_base${_WX_UC}-2.8
 
 _WX_PORT_common_2.8=	x11-toolkits/wxgtk28-common
-_WX_FILE_common_2.8=	include/wx-2.8/wx/wxprec.h
+_WX_FILE_common_2.8=	${LOCALBASE}/include/wx-2.8/wx/wxprec.h
 
 _WX_PORT_contrib_2.8=	x11-toolkits/wxgtk28${_WX_UCL}-contrib
 _WX_LIB_contrib_2.8=	wx_gtk2${_WX_UC}_fl-2.8
