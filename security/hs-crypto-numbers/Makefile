@@ -1,15 +1,14 @@
-# $FreeBSD: ports/security/hs-crypto-numbers/Makefile,v 1.1 2013/02/05 22:47:13 svnexp Exp $
+# $FreeBSD: security/hs-crypto-numbers/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	crypto-numbers
 PORTVERSION=	0.1.3
+PORTREVISION=	1
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Cryptographic numbers: functions and algorithms
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	crypto-random-api>=0.2 vector
 
