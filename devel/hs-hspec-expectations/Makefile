@@ -1,8 +1,7 @@
-# $FreeBSD: ports/devel/hs-hspec-expectations/Makefile,v 1.2 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-hspec-expectations/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	hspec-expectations
-PORTVERSION=	0.3.0.3
-PORTREVISION=	1
+PORTVERSION=	0.3.2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
