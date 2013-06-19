@@ -1,8 +1,8 @@
-# $FreeBSD: ports/textproc/hs-parsec/Makefile,v 1.8 2013/02/05 22:47:14 svnexp Exp $
+# $FreeBSD: textproc/hs-parsec/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	parsec
 PORTVERSION=	3.1.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -10,7 +10,6 @@ COMMENT=	Monadic parser combinators
 
 LICENSE=	BSD
 
-CABAL_SETUP=	Setup.hs
 USE_CABAL=	mtl text>=0.2
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
