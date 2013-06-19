@@ -1,15 +1,14 @@
-# $FreeBSD: net/hs-sendfile/Makefile 315580 2013-03-29 22:43:58Z pgj $
+# $FreeBSD: net/hs-sendfile/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	sendfile
 PORTVERSION=	0.7.9
+PORTREVISION=	1
 CATEGORIES=	net haskell
 
 MAINTAINER=	haskell@FreeBSD.org
-COMMENT=	A portable sendfile library
+COMMENT=	Portable sendfile library
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	network>=2
 
