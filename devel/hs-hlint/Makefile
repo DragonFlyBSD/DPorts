@@ -1,15 +1,13 @@
-# $FreeBSD: ports/devel/hs-hlint/Makefile,v 1.4 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-hlint/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	hlint
-PORTVERSION=	1.8.43
+PORTVERSION=	1.8.45
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Source code suggestions
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	cpphs>=1.11 haskell-src-exts>=1.11 hscolour>=1.17 \
 		transformers>=0.0 uniplate>=1.5
