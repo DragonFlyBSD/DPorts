@@ -1,16 +1,13 @@
-# $FreeBSD: ports/devel/hs-monad-control/Makefile,v 1.6 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-monad-control/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	monad-control
-PORTVERSION=	0.3.1.4
-PORTREVISION=	1
+PORTVERSION=	0.3.2.1
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Lift control operations through monad transformers
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	base-unicode-symbols>=0.1.1 transformers>=0.2 \
 		transformers-base>=0.4.1
