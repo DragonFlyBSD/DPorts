@@ -1,8 +1,8 @@
-# $FreeBSD: ports/www/hs-cookie/Makefile,v 1.6 2013/02/05 22:47:14 svnexp Exp $
+# $FreeBSD: www/hs-cookie/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	cookie
 PORTVERSION=	0.4.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
