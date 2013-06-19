@@ -1,15 +1,13 @@
-# $FreeBSD: ports/devel/hs-lifted-base/Makefile,v 1.6 2013/02/05 22:47:09 svnexp Exp $
+# $FreeBSD: devel/hs-lifted-base/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	lifted-base
-PORTVERSION=	0.2.0.2
+PORTVERSION=	0.2.0.5
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Lifted IO operations from the base library
 
 LICENSE=	BSD
-
-CABAL_SETUP=	Setup.hs
 
 USE_CABAL=	base-unicode-symbols>=0.1.1 monad-control>=0.3 \
 		transformers-base>=0.4
