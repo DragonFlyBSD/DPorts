@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: print/foomatic-filters/Makefile 316674 2013-04-27 16:13:34Z hrs $
+# $FreeBSD: print/foomatic-filters/Makefile 319897 2013-06-04 19:05:00Z crees $
 
 PORTNAME=	foomatic-filters
 PORTVERSION=	4.0.7
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.openprinting.org/download/foomatic/
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Foomatic wrapper scripts
+
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_AUTOTOOLS=	autoheader
 USE_PERL5=	yes
@@ -29,8 +32,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	A2PS CUPS_IMAGE MPAGE
-OPTIONS_SINGLE=	ENSCRIPT
-OPTIONS_SINGLE_ENSCRIPT=	ENSCRIPT_A4 ENSCRIPT_LETTER ENSCRIPT_LETTERDJ
+OPTIONS_RADIO=	ENSCRIPT
+OPTIONS_RADIO_ENSCRIPT=	ENSCRIPT_A4 ENSCRIPT_LETTER ENSCRIPT_LETTERDJ
 OPTIONS_DEFAULT=	CUPS_IMAGE A2PS ENSCRIPT_A4 MPAGE
 CUPS_IMAGE_DESC=	Install cups image utilities
 A2PS_DESC=		Install a2ps convertor
