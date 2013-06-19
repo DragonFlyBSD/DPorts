@@ -1,17 +1,14 @@
-# $FreeBSD: devel/hs-gio/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/hs-gio/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	gio
 PORTVERSION=	0.12.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Binding to the GIO
 
 LICENSE=	LGPL21
-FILE_LICENSE=	COPYING
-
-CABAL_SETUP=	Setup.hs
 
 USES=		pkgconfig
 USE_CABAL=	glib>=0.12.0 mtl
