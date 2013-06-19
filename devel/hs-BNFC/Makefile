@@ -1,9 +1,9 @@
 # Created by: Kai Wang <kaiw27@gmail.com>
-# $FreeBSD: devel/hs-BNFC/Makefile 315636 2013-03-31 13:43:10Z pgj $
+# $FreeBSD: devel/hs-BNFC/Makefile 319894 2013-06-04 18:53:40Z pgj $
 
 PORTNAME=	BNFC
 PORTVERSION=	2.6.0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
