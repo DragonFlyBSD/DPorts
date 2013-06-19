@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/x11-toolkits/p5-Wx/Makefile,v 1.21 2013/02/13 06:44:09 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Wx/Makefile 320164 2013-06-07 07:30:36Z az $
 
 PORTNAME=	Wx
 PORTVERSION=	0.99.16
@@ -47,11 +47,6 @@ MAN3=		Wx.3 \
 		Wx::build::Utils.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.48:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
-RUN_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.48:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
-.endif
 
 .if ${PERL_LEVEL} < 501508
 BUILD_DEPENDS+=	p5-ExtUtils-ParseXS>=3.15:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
