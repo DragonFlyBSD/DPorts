@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bogofilter-tc
-# Date created:				2008-08-29
-# Whom:				   	Zach Thompson <hideo@lastamericanempire.com>
-#
-# $FreeBSD: ports/mail/bogofilter-tc/Makefile,v 1.22 2012/12/03 20:19:05 svnexp Exp $
-#
+# Created by: Zach Thompson <hideo@lastamericanempire.com>
+# $FreeBSD: mail/bogofilter-tc/Makefile 320668 2013-06-12 07:41:34Z mandree $
 
 PORTNAME=	bogofilter
 PORTREVISION=	0
