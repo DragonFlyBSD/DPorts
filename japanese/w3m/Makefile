@@ -10,8 +10,6 @@ CATEGORIES=	japanese
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	A pager/text-based WWW browser with Japanese support
 
-PKGNAMEPREFIX=	ja-
-
 MASTERDIR=	${.CURDIR}/../../www/w3m
 PKGDIR=		${.CURDIR}
 PLIST=		${MASTERDIR}/pkg-plist
