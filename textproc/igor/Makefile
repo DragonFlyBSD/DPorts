@@ -1,7 +1,7 @@
-# $FreeBSD: ports/textproc/igor/Makefile,v 1.8 2013/01/23 03:41:37 svnexp Exp $
+# $FreeBSD: textproc/igor/Makefile 320645 2013-06-11 21:23:04Z rakuco $
 
 PORTNAME=	igor
-PORTVERSION=	1.355
+PORTVERSION=	1.376
 CATEGORIES=	textproc
 MASTER_SITES=	https://docscripts.glenbarber.us/tags/${PORTNAME}/${PORTVERSION}/
 
