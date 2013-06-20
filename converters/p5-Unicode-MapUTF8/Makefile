@@ -1,7 +1,4 @@
-# New ports collection makefile for:	p5-Unicode-MapUTF8
-# Date created:				28 February 2002
-# Whom:					Ryan T. Dean <rtdean@cytherianage.net>
-#
+# Created by: Ryan T. Dean <rtdean@cytherianage.net>
 # $FreeBSD: ports/converters/p5-Unicode-MapUTF8/Makefile,v 1.12 2012/11/17 05:55:04 svnexp Exp $
 
 PORTNAME=	Unicode-MapUTF8
@@ -16,7 +13,7 @@ COMMENT=	Perl class that implements conversion between arbitrary charsets
 BUILD_DEPENDS=	p5-Unicode-Map>=0:${PORTSDIR}/converters/p5-Unicode-Map \
 		p5-Unicode-String>=0:${PORTSDIR}/converters/p5-Unicode-String \
 		p5-Unicode-Map8>=0:${PORTSDIR}/converters/p5-Unicode-Map8 \
-		ja-p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode
+		p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
