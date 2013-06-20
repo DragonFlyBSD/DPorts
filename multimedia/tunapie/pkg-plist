@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/multimedia/tunapie/pkg-plist,v 1.13 2012/11/17 05:59:54 svnexp Exp $
+@comment $FreeBSD: multimedia/tunapie/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/tunapie
 @unexec if cmp -s %D/etc/tunapie.config %D/etc/tunapie.config.default; then rm -f %D/etc/tunapie.config; fi
 etc/tunapie.config.default
