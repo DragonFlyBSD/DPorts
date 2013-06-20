@@ -7,7 +7,6 @@
 
 PORTREVISION=	1
 CATEGORIES=	japanese
-PKGNAMEPREFIX=	ja-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X11 IRC client using the GTK+ toolkit, and optionally, GNOME
