@@ -6,7 +6,6 @@
 #
 
 PKGNAMESUFFIX=	-slang
-PKGNAMEPREFIX=	ja-
 
 CATEGORIES=	japanese
 
