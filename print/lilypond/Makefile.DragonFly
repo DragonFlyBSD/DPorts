@@ -1,1 +1,1 @@
-BUILD_DEPENDS+=	bin/makeinfo:${PORTSDIR}/print/texinfo
+BUILD_DEPENDS+=	${LOCALBASE}/bin/makeinfo:${PORTSDIR}/print/texinfo
