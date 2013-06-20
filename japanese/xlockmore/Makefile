@@ -6,7 +6,6 @@
 #
 
 CATEGORIES=	japanese x11
-PKGNAMEPREFIX=	ja-
 
 MAINTAINER=	umeno@rr.iij4u.or.jp
 
