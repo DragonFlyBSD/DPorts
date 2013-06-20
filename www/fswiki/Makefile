@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fswiki
-# Date created:		Oct 10, 2004
-# Whom:			kuriyama@FreeBSD.org
-#
+# Created by: kuriyama@FreeBSD.org
 # $FreeBSD: ports/www/fswiki/Makefile,v 1.10 2012/11/17 06:02:33 svnexp Exp $
-#
 
 PORTNAME=	fswiki
 PORTVERSION=	3.6.2
@@ -15,8 +11,8 @@ DISTNAME=	wiki${PORTVERSION:S|.|_|g}
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	FreeStyle Wiki (perl based wiki clone)
 
-RUN_DEPENDS=	ja-p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode \
-	p5-HTML-Template>=0:${PORTSDIR}/www/p5-HTML-Template
+RUN_DEPENDS=	p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode \
+		p5-HTML-Template>=0:${PORTSDIR}/www/p5-HTML-Template
 
 USE_ZIP=	yes
 USE_PERL5=	yes
