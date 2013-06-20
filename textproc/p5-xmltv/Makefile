@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmltv
-# Date created:		Mon Nov 4 02:56:34 UTC 2002
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD: ports/textproc/p5-xmltv/Makefile,v 1.43 2012/11/17 06:02:14 svnexp Exp $
-#
 
 PORTNAME=	xmltv
 PORTVERSION=	0.5.61
@@ -29,7 +25,7 @@ XMLTV_DEPENDS=	\
 	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree \
 	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 	p5-Tk-TableMatrix>=0:${PORTSDIR}/x11-toolkits/p5-Tk-TableMatrix \
-	ja-p5-Text-Kakasi>=0:${PORTSDIR}/japanese/p5-Text-Kakasi \
+	p5-Text-Kakasi>=0:${PORTSDIR}/japanese/p5-Text-Kakasi \
 	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML \
 	p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite \
 	p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey \
