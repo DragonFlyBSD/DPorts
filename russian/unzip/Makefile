@@ -12,6 +12,4 @@ EXTRA_PATCHES=	${.CURDIR}/files/patch-ebcdic.h
 
 MASTERDIR=	${.CURDIR}/../../archivers/unzip
 
-PKGNAMEPREFIX=	ru-
-
 .include "${MASTERDIR}/Makefile"
