@@ -1,11 +1,11 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/vertx/Makefile 313847 2013-03-10 22:23:05Z nivit $
+# $FreeBSD: www/vertx/Makefile 321158 2013-06-17 22:32:05Z nivit $
 
 PORTNAME=	vertx
 PORTVERSION=	1.3.1
 #PORTREVISION=	0
 CATEGORIES=	www
-MASTER_SITES=	http://vertx.io/downloads/
+MASTER_SITES=	http://vert-x.github.io/vertx-downloads/downloads/
 DISTNAME=	vert.x-${PORTVERSION}.final
 
 MAINTAINER=	nivit@FreeBSD.org
