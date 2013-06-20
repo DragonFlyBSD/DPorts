@@ -1,3 +1,0 @@
-.if !defined(PKGNAMEPREFIX)
-PKGNAMEPREFIX= ja-
-.endif
