@@ -5,7 +5,7 @@ PORTNAME=	MT
 PORTVERSION=	5.2.3
 PORTEPOCH=	1
 CATEGORIES?=	www
-MASTER_SITES?=	http://www.movabletype.org/downloads/stable/
+MASTER_SITES?=	http://www.movabletype.org/downloads/archives/5.x/
 DISTNAME?=	MTOS-${PORTVERSION}
 
 MAINTAINER?=	takefu@airport.fm
