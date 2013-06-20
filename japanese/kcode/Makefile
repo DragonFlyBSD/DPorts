@@ -1,9 +1,5 @@
-# New ports collection makefile for:	kcode
-# Date created:		26 October 2004
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
 # $FreeBSD: japanese/kcode/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
 
 PORTNAME=	kcode
 PORTVERSION=	1.0
@@ -24,7 +20,7 @@ MANLANG=	ja
 MAN1=		kcode.1
 MANCOMPRESSED=	no
 
-RUN_DEPENDS=	ja-p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode
+RUN_DEPENDS=	p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode
 
 do-extract:
 	${MKDIR} ${WRKSRC}
