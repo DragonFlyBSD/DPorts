@@ -1,5 +1,5 @@
 # Created by: bms
-# $FreeBSD: devel/chrpath/Makefile 317289 2013-05-03 23:12:12Z bapt $
+# $FreeBSD: devel/chrpath/Makefile 319793 2013-06-03 16:37:29Z rene $
 
 PORTNAME=	chrpath
 PORTVERSION=	0.13
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	devel sysutils
 MASTER_SITES=	http://ftp.tux.org/pub/X-Windows/ftp.hungry.com/chrpath/
 
-MAINTAINER=	rene@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to modify DT_RPATH in existing ELF binaries
 
 LICENSE=	GPLv2
@@ -16,11 +16,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 GNU_CONFIGURE=	yes
 
 MAN1=		chrpath.1
-
-.if defined(.PARSEDIR)
-MAKE_ARGS=	RPATH=""
-USE_GMAKE=	yes
-.endif
 
 PLIST_FILES=	bin/chrpath
 
