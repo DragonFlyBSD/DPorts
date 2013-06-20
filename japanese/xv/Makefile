@@ -6,8 +6,6 @@ CATEGORIES=	japanese
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An X11 program that displays images of various formats with japanization
 
-PKGNAMEPREFIX=	ja-
-
 MASTERDIR=	${.CURDIR}/../../graphics/xv
 PKGDIR=		${.CURDIR}
 
