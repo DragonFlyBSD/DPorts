@@ -6,7 +6,6 @@
 #
 
 CATEGORIES=	chinese
-PKGNAMEPREFIX=	zh-
 
 MAINTAINER=	rafan@FreeBSD.org
 
