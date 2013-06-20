@@ -7,7 +7,6 @@
 
 PORTREVISION=	0
 CATEGORIES=	chinese
-PKGNAMEPREFIX=	zh-
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	A zh-tw cursor movement friendly, wrapping clean irssi
