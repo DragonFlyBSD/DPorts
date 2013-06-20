@@ -1,1 +1,1 @@
-RUN_DEPENDS+=	p5-Socket-INET6>=0:${PORTSDIR}/net/p5-IO-Socket-INET6
+RUN_DEPENDS+=	p5-IO-Socket-INET6>=0:${PORTSDIR}/net/p5-IO-Socket-INET6
