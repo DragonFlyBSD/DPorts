@@ -1,8 +1,8 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: graphics/pngcrush/Makefile 320273 2013-06-08 17:02:58Z mandree $
+# $FreeBSD: graphics/pngcrush/Makefile 320275 2013-06-08 17:18:33Z mandree $
 
 PORTNAME=	pngcrush
-PORTVERSION=	1.7.51
+PORTVERSION=	1.7.59
 CATEGORIES=	graphics
 MASTER_SITES=	SF/pmt/${PORTNAME}/old-versions/1.7/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-nolib
@@ -13,7 +13,6 @@ COMMENT=	Optimizer for PNG files
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
 USE_XZ=		yes
-USE_GMAKE=	yes
 CFLAGS+=	-DPNGCRUSH_COUNT_COLORS -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ARGS+=	CC="${CC}" CFLAGS="${CFLAGS}" LD="${CC}" LDFLAGS="${LDFLAGS}"
