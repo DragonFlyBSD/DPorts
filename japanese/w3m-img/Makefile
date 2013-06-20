@@ -7,7 +7,6 @@
 
 CATEGORIES=	japanese
 PKGNAMESUFFIX=	-img
-PKGNAMEPREFIX=	ja-
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	A pager/text-based WWW browser with Japanese and inline image support
