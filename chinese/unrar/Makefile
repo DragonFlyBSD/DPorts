@@ -9,8 +9,6 @@ CATEGORIES=	chinese
 
 MAINTAINER=	sunpoet@FreeBSD.org
 
-PKGNAMEPREFIX=	zh-
-
 MASTERDIR=	${.CURDIR}/../../archivers/unrar
 
 EXTRA_PATCHES=	${.CURDIR}/files/patch-arcread.cpp \
