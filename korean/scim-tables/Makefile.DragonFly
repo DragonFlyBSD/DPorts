@@ -1,3 +1,1 @@
-PKGNAMEPREFIX= ko-
-
 BUILD_DEPENDS+= scim:${PORTSDIR}/textproc/scim
