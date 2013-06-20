@@ -1,1 +1,1 @@
-LIB_DEPENDS+= openssl:${PORTSDIR}/security/openssl
+LIB_DEPENDS+= ssl:${PORTSDIR}/security/openssl
