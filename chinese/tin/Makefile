@@ -9,7 +9,6 @@
 # Don't reset PORTREVISION and keep bumping it even if PORTVERSION is changed.
 PORTREVISION=	6
 CATEGORIES=	chinese
-PKGNAMEPREFIX=	zh-
 
 MAINTAINER=	ports@FreeBSD.org
 
