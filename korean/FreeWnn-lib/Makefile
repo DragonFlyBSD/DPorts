@@ -7,7 +7,6 @@
 
 CATEGORIES=	korean
 PKGNAMESUFFIX=	-lib
-PKGNAMEPREFIX=	ko-
 
 COMMENT=	A Japanese/Chinese/Korean input method (Korean client libraries)
 
