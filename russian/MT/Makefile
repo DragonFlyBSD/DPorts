@@ -4,7 +4,6 @@
 CATEGORIES=	russian www
 MASTER_SITES=	http://movable-type.ru/downloads/
 DISTNAME=	MTOS-${PORTVERSION}-${PKGNAMEPREFIX:S,-,,}
-PKGNAMEPREFIX=	ru-
 
 COMMENT=	Russian localization of the MovableType publishing system
 
