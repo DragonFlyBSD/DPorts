@@ -7,7 +7,6 @@
 
 CATEGORIES=	chinese
 PKGNAMESUFFIX=	-lib
-PKGNAMEPREFIX=	zh-
 
 COMMENT=	A Japanese/Chinese/Korean input method (Chinese client libraries)
 
