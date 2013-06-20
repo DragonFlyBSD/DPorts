@@ -14,7 +14,7 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	A simple SSL tunneling tool (uses netcat)
 
-RUN_DEPENDS=	nc:${PORTSDIR}/net/netcat
+RUN_DEPENDS=	netcat:${PORTSDIR}/net/netcat
 
 USE_OPENSSL=	YES
 MAN1=		sst.1
