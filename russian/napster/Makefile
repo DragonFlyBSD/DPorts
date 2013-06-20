@@ -7,7 +7,6 @@
 
 PORTNAME=	nap
 CATEGORIES=	russian
-PKGNAMEPREFIX=	ru-
 
 MAINTAINER=	sam@brj.pp.ru
 COMMENT=	Client for the OpenNAP network with koi8 <> win1251 encoding patch
