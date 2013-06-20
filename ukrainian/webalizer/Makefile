@@ -7,7 +7,6 @@
 
 MASTERDIR=	${.CURDIR}/../../www/webalizer
 CATEGORIES=	ukrainian
-PKGNAMEPREFIX=	uk-
 
 MAINTAINER=	mikef@LITech.lviv.ua
 
