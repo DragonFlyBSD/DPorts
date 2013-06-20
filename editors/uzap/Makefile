@@ -1,17 +1,19 @@
 # Created by: joerg
-# $FreeBSD: editors/uzap/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: editors/uzap/Makefile 321155 2013-06-17 21:17:50Z joerg $
 
 PORTNAME=	uzap
 PORTVERSION=	1.0
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.interface-business.de/pub/outgoing/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	joerg
 DISTNAME=	${PORTNAME}
 
 MAINTAINER=	joerg@FreeBSD.org
 COMMENT=	Visual binary file editor
 
-# restrictive Copyright; the author is no longer reachable, however :-(
-RESTRICTED=	Restrictive copyright
+# Has been posted to alt.sources in 1989
+# http://www.megalextoria.com/usenet-archive/news097f1/b120/alt/sources/00000521.html
+NO_CDROM=	This software may not be used to make a profit in any way.
 NO_WRKSUBDIR=	yes
 MAN1=		uzap.1
 PLIST_FILES=	bin/uzap
