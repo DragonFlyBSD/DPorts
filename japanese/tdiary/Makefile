@@ -2,7 +2,6 @@
 # $FreeBSD: ports/japanese/tdiary/Makefile,v 1.12 2013/01/29 13:44:11 svnexp Exp $
 
 CATEGORIES=	japanese www ruby
-PKGNAMEPREFIX=	ja-
 
 MAINTAINER=	tota@FreeBSD.org
 
