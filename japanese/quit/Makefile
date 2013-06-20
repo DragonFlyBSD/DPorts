@@ -6,7 +6,6 @@
 #
 
 CATEGORIES=	japanese games
-PKGNAMEPREFIX=	ja-
 
 MAINTAINER=	ports@FreeBSD.org
 
