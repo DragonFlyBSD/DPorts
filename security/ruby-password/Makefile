@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby/Password
-# Date created:		18 September 2002
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
 # $FreeBSD: ports/security/ruby-password/Makefile,v 1.17 2012/11/17 06:01:19 svnexp Exp $
-#
 
 PORTNAME=	password
 PORTVERSION=	0.5.3
@@ -17,7 +13,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A Ruby library to create, verify, and manipulate passwords
 
-LIB_DEPENDS=	crack.10:${PORTSDIR}/security/cracklib
+LIB_DEPENDS=	crack:${PORTSDIR}/security/cracklib
 RUN_DEPENDS=	rubygem-ruby-termios>=0:${PORTSDIR}/comms/rubygem-ruby-termios
 
 USE_RUBY=	yes
