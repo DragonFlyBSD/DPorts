@@ -7,7 +7,6 @@
 
 PORTNAME=	xmms
 CATEGORIES=	russian
-PKGNAMEPREFIX=	ru-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	RusXMMS - X Multimedia System with Russian encoding patch
