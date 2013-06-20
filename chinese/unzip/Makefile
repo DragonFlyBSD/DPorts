@@ -15,6 +15,4 @@ MASTERDIR=	${.CURDIR}/../../archivers/unzip
 
 EXTRA_PATCHES=	${.CURDIR}/files/patch-fileio.c
 
-PKGNAMEPREFIX=	zh-
-
 .include "${MASTERDIR}/Makefile"
