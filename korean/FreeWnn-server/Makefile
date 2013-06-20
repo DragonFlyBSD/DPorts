@@ -3,7 +3,6 @@
 
 CATEGORIES=	korean
 PKGNAMESUFFIX=	-server
-PKGNAMEPREFIX=	ko-
 
 COMMENT=	A Japanese/Chinese/Korean input method (Korean server)
 
