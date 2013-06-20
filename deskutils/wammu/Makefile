@@ -1,5 +1,5 @@
 # Created by: bsam
-# $FreeBSD: deskutils/wammu/Makefile 319001 2013-05-24 17:59:35Z bsam $
+# $FreeBSD: deskutils/wammu/Makefile 320604 2013-06-11 15:19:11Z miwi $
 
 PORTNAME=		wammu
 PORTVERSION=		0.36
@@ -23,7 +23,7 @@ USE_WX=			2.6+
 WX_COMPS=		python:lib
 WX_UNICODE=		yes
 
-MANLANG=		"" cs de it nl pt_BR
+MANLANG=		"" cs de it nl pt_BR es fr ru sk
 MAN1=			wammu.1 wammu-configure.1
 
 .include <bsd.port.mk>
