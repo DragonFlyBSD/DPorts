@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports/databases/mysql56-client/Makefile,v 1.1 2013/02/14 15:55:41 svnexp Exp $
+# $FreeBSD: databases/mysql56-client/Makefile 312234 2013-02-14 15:04:05Z ale $
 
 PORTNAME=	mysql
 PKGNAMESUFFIX=	-client
