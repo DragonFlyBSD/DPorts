@@ -1,3 +1,8 @@
+This is not a good solution.  It's not understand why libsnappyjava wants
+gcc44 stdc++ specifically, especially when gcc47 version is linked by
+default.  This will probably break when compiler defaults are alterned
+inevitably in the future.
+
 --- Makefile.common.intermediate	2013-06-21 09:56:07.342028000 +0000
 +++ Makefile.common
 @@ -51,7 +51,7 @@ endif
