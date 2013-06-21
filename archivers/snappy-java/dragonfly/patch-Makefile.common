@@ -1,0 +1,11 @@
+--- Makefile.common.intermediate	2013-06-21 09:56:07.342028000 +0000
++++ Makefile.common
+@@ -51,7 +51,7 @@ endif
+ Default_CXX          := g++
+ Default_STRIP        := strip
+ Default_CXXFLAGS     := -Ilib/inc_linux -I$(JAVA_HOME)/include -Ilib/inc_mac -O2 -fPIC -fvisibility=hidden
+-Default_LINKFLAGS    := -lc -shared
++Default_LINKFLAGS    := -lc -shared /usr/lib/gcc44/libstdc++.so
+ Default_LIBNAME      := libsnappyjava.so
+ Default_SNAPPY_FLAGS := 
+ 
