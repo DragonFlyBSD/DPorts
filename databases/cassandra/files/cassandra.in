@@ -28,7 +28,7 @@
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
 #
-# $FreeBSD: ports/databases/cassandra/files/cassandra.in,v 1.9 2012/12/12 00:15:41 svnexp Exp $
+# $FreeBSD: databases/cassandra/files/cassandra.in 319455 2013-05-31 01:32:45Z bdrewery $
 
 . /etc/rc.subr
 
@@ -46,7 +46,7 @@ command_args="-p /var/run/cassandra.pid >/dev/null"
 stop_precmd="${name}_prestop"
 sig_stop="KILL"
 
-procname="%%LOCALBASE%%/openjdk6/bin/java"
+procname="%%LOCALBASE%%/openjdk7/bin/java"
 pidfile=/var/run/cassandra.pid
 
 export MAX_HEAP_SIZE="$cassandra_memory"
@@ -60,9 +60,7 @@ export JAVA_VENDOR=openjdk
 export JAVA_VERSION=1.7
 
 cassandra_prestop() {
-	$CASSANDRA_HOME/bin/nodetool -h localhost disablegossip
-	sleep 15
-	$CASSANDRA_HOME/bin/nodetool -h localhost drain 
+	$CASSANDRA_HOME/bin/nodetool -h localhost drain
 	return 0
 }
 
