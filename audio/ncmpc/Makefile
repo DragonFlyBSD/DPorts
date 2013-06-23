@@ -1,5 +1,5 @@
 # Created by: Mark Reidel <ports@mark.reidel.info>
-# $FreeBSD: audio/ncmpc/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: audio/ncmpc/Makefile 321067 2013-06-16 19:16:13Z crees $
 
 PORTNAME=	ncmpc
 PORTVERSION=	0.20
@@ -22,7 +22,7 @@ LYRICS_DESC=	Compile with lyrics screen
 
 .include <bsd.port.options.mk>
 
-USES=		iconv
+USES=		iconv pkgconfig
 PLIST_FILES=	bin/ncmpc \
 		%%EXAMPLESDIR%%/config \
 		%%EXAMPLESDIR%%/keys \
