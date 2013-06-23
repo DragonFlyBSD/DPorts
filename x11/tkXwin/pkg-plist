@@ -1,6 +1,0 @@
-lib/libtkXwin.la
-lib/libtkXwin.so
-lib/libtkXwin.so.1
-lib/tkXwin/pkgIndex.tcl
-lib/tkXwin/test.tcl
-@dirrm lib/tkXwin

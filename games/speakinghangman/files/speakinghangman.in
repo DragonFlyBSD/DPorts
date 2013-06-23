@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: ports/games/speakinghangman/files/speakinghangman.in,v 1.2 2012/11/17 05:57:53 svnexp Exp $
-#
-
-export JAVA_VERSION="%%JAVA_VERSION%%"
-
-cd "%%DATADIR%%" && exec "%%LOCALBASE%%/bin/java" \
--Djava.ext.dirs="%%DATADIR%%" -jar "%%DATADIR%%/HangmanFree_V1.0.0.jar" "${@}"
