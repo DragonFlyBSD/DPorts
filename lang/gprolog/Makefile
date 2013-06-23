@@ -1,10 +1,11 @@
 # Created by: Douglas Anestad <yotta@dougdidit.com>
-# $FreeBSD: ports/lang/gprolog/Makefile,v 1.35 2012/11/17 05:58:51 svnexp Exp $
+# $FreeBSD: lang/gprolog/Makefile 321594 2013-06-22 21:23:22Z rakuco $
 
 PORTNAME=	gprolog
 PORTVERSION=	1.4.1
 CATEGORIES=	lang
-MASTER_SITES=	http://www.gprolog.org/
+# MASTER_SITES=	http://www.gprolog.org/
+MASTER_SITES=	http://gprolog.univ-paris1.fr/old_versions/
 
 MAINTAINER=	nsmoot@make.sh
 COMMENT=	Free Prolog compiler
@@ -14,6 +15,7 @@ ONLY_FOR_ARCHS=	i386 amd64
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 
 USE_GMAKE=	yes
+USE_GCC=	any
 USE_AUTOTOOLS=	autoconf
 CONFIGURE_ARGS=	--with-c-flags="${CFLAGS}"
 CONFIGURE_TARGET=	${ARCH:S/amd64/x86_64/}-portbld-freebsd${OSREL}
