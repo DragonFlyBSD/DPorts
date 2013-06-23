@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: mail/elmo/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/elmo/Makefile 319862 2013-06-04 14:17:16Z bapt $
 
 PORTNAME=	elmo
 PORTVERSION=	1.3.0
@@ -26,16 +26,16 @@ MAKE_JOBS_SAFE=	yes
 
 MAN1=		elmo.1 elmoconf.pl.1
 
-.if defined(WITHOUT_NLS)
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.else
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=--with-libintl-prefix="${LOCALBASE}"
 PLIST_SUB+=	NLS=""
 USES+=		gettext
+.else
+CONFIGURE_ARGS+=--disable-nls
+PLIST_SUB+=	NLS="@comment "
 .endif
-
-.include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libgpgme.so) || defined(WITH_GPGME)
 LIB_DEPENDS+=	gpgme.19:${PORTSDIR}/security/gpgme
