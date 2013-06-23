@@ -1,5 +1,5 @@
---- src/gallium/include/pipe/p_config.h.orig	2011-10-15 02:43:58.000000000 +0200
-+++ src/gallium/include/pipe/p_config.h	2012-06-28 21:27:06.000000000 +0200
+--- src/gallium/include/pipe/p_config.h.orig	2012-10-24 19:03:59.000000000 +0000
++++ src/gallium/include/pipe/p_config.h
 @@ -106,6 +106,13 @@
  #endif
  #endif
@@ -14,7 +14,7 @@
  
  /*
   * Endian detection.
-@@ -133,7 +140,7 @@
+@@ -142,7 +149,7 @@
  
  #if defined(PIPE_ARCH_X86) || defined(PIPE_ARCH_X86_64)
  #define PIPE_ARCH_LITTLE_ENDIAN
@@ -23,3 +23,12 @@
  #define PIPE_ARCH_BIG_ENDIAN
  #endif
  
+@@ -171,7 +178,7 @@
+ #define PIPE_OS_ANDROID
+ #endif
+ 
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #define PIPE_OS_FREEBSD
+ #define PIPE_OS_BSD
+ #define PIPE_OS_UNIX

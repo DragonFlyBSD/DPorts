@@ -57,6 +57,8 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-configure \
 		${PATCHDIR}/extra-src__mesa__drivers__dri__nouveau__nouveau_array.c \
 		${PATCHDIR}/extra-src__mesa__drivers__dri__nouveau__nouveau_render_t.c \
 		${PATCHDIR}/extra-src_glx_XF86dri.c
+EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-newxorg-bin_mklib
+EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-newxorg-src_gallium_include_pipe_p__config.h
 .else
 EXTRA_PATCHES+=	${PATCHDIR}/extra-configure-old \
 		${PATCHDIR}/extra-mach64_context.h-old \
@@ -65,6 +67,9 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-configure-old \
 		${PATCHDIR}/extra-src__mesa__x86__glapi_x86.S \
 		${PATCHDIR}/extra-src__mesa__x86__read_rgba_span_x86.S \
 		${PATCHDIR}/extra-src_glx_x11_XF86dri.c
+EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-oldxorg-bin_mklib
+EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-oldxorg-src_gallium_include_pipe_p__config.h
+EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-oldxorg-src_mesa_drivers_dri_mach64_mach64__context.h
 CONFIGURE_ARGS+=--disable-glut --disable-glw
 .endif
 

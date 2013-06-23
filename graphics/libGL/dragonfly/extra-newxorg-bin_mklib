@@ -1,0 +1,20 @@
+--- bin/mklib.orig	2012-10-24 19:03:58.000000000 +0000
++++ bin/mklib
+@@ -307,7 +307,7 @@ fi
+ #
+ case $ARCH in
+ 
+-    'Linux' | 'OpenBSD' | 'DragonFly' | 'GNU' | GNU/* | 'NetBSD')
++    'Linux' | 'OpenBSD' | 'GNU' | GNU/* | 'NetBSD')
+ 	# we assume gcc
+ 
+ 	if [ "x$LINK" = "x" ] ; then
+@@ -529,7 +529,7 @@ case $ARCH in
+ 	fi
+ 	;;
+ 
+-    'FreeBSD')
++    'FreeBSD' | 'DragonFly')
+ 	# we assume gcc
+ 
+ 	if [ "x$LINK" = "x" ] ; then
