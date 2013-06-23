@@ -1,7 +1,7 @@
-# $FreeBSD: comms/fldigi/Makefile 316620 2013-04-26 15:10:57Z bapt $
+# $FreeBSD: comms/fldigi/Makefile 320730 2013-06-13 00:06:17Z db $
 
 PORTNAME=	fldigi
-PORTVERSION=	3.21.68
+PORTVERSION=	3.21.72
 CATEGORIES=	comms hamradio
 MASTER_SITES=	http://www.w1hkj.com/downloads/fldigi/\
 		${MASTER_SITE_LOCAL}
