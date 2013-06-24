@@ -35,7 +35,7 @@ OPTIONS_DEFAULT+=	MANPAGES
 
 .if ${PORT_OPTIONS:MKMS}
 CONFIGURE_ARGS+=--enable-libkms
-EXTRA_PATCHES+=	${FILESDIR}/extra-xf86drmMode.c
+EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-xf86drmMode.c
 PLIST_SUB+=	KMS=""
 .else
 PLIST_SUB+=	KMS="@comment "
