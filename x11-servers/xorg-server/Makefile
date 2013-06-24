@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-server/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-servers/xorg-server/Makefile 321157 2013-06-17 21:51:48Z jkim $
 
 PORTNAME?=	xorg-server
 PORTVERSION=	${XORG_VERSION}
@@ -27,12 +27,13 @@ PLIST_SUB+=	OLD="@comment " NEW=""
 EXTRA_PATCHES+=	${FILESDIR}/extra-clang
 .else
 XORG_VERSION=	1.7.7
-XORG_REVISION=	6
+XORG_REVISION=	7
 PLIST_SUB+=	OLD="" NEW="@comment "
-EXTRA_PATCHES+=	${FILESDIR}/extra-include_eventstr.h \
-		${FILESDIR}/extra-os-utils.c \
+EXTRA_PATCHES+=	${FILESDIR}/extra-Xext-xace.c \
 		${FILESDIR}/extra-Xserver-hw-xfree86-os-support-bsd-sparc64_video.c \
 		${FILESDIR}/extra-Xserver-os-xprintf.c \
+		${FILESDIR}/extra-include_eventstr.h \
+		${FILESDIR}/extra-os-utils.c \
 		${FILESDIR}/extra-servermd.h
 .endif
 
@@ -127,7 +128,11 @@ PLIST_SUB+=	IA64_NA=""
 
 .if ${ARCH} == powerpc || ${ARCH} == powerpc64
 PLIST_SUB+=	PPC_NA="@comment "
-EXTRA_PATCHES=	${.CURDIR}/files/extra-arch-powerpc
+.if defined(WITH_NEW_XORG)
+EXTRA_PATCHES=	${.CURDIR}/files/extra-new-arch-powerpc
+.else
+EXTRA_PATCHES=	${.CURDIR}/files/extra-old-arch-powerpc
+.endif
 .else
 PLIST_SUB+=	PPC_NA=""
 .endif

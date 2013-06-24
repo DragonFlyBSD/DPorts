@@ -1,3 +1,10 @@
 # Disable HAL as a default option
 
 OPTIONS_EXCLUDE+= HAL
+
+.if defined(WITH_NEW_XORG)
+EXTRA_PATCHES+= ${DFLY_PATCHDIR}/extra-newxorg-hw_xfree86_os-support_xf86__OSlib.h
+.else
+EXTRA_PATCHES+= ${DFLY_PATCHDIR}/extra-oldxorg-hw_xfree86_os-support_xf86__OSlib.h
+.endif
+
