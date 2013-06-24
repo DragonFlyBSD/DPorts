@@ -1,10 +1,3 @@
-libexec/xpdf/pdffonts
-libexec/xpdf/pdfimages
-libexec/xpdf/pdfinfo
-libexec/xpdf/pdfdetach
-libexec/xpdf/pdftoppm
-libexec/xpdf/pdftops
-libexec/xpdf/pdftotext
 libexec/xpdf/xpdf
 %%X11%%bin/xpdf
 etc/xpdfrc

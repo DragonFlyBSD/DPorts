@@ -1,0 +1,25 @@
+--- Makefile.in.intermediate	2013-06-24 21:13:53.340888000 +0000
++++ Makefile.in
+@@ -84,22 +84,8 @@ dummy:
+ install: dummy
+ 	-mkdir -p $(DESTDIR)@bindir@
+ @X@	$(INSTALL_PROGRAM) xpdf/xpdf$(EXE) $(DESTDIR)@bindir@/xpdf$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdftops$(EXE) $(DESTDIR)@bindir@/pdftops$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdftotext$(EXE) $(DESTDIR)@bindir@/pdftotext$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdfinfo$(EXE) $(DESTDIR)@bindir@/pdfinfo$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdffonts$(EXE) $(DESTDIR)@bindir@/pdffonts$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdfdetach$(EXE) $(DESTDIR)@bindir@/pdfdetach$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdftoppm$(EXE) $(DESTDIR)@bindir@/pdftoppm$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdfimages$(EXE) $(DESTDIR)@bindir@/pdfimages$(EXE)
+ 	-mkdir -p $(DESTDIR)@mandir@/man1
+ @X@	$(INSTALL_DATA) $(srcdir)/doc/xpdf.1 $(DESTDIR)@mandir@/man1/xpdf.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdftops.1 $(DESTDIR)@mandir@/man1/pdftops.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdftotext.1 $(DESTDIR)@mandir@/man1/pdftotext.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdfinfo.1 $(DESTDIR)@mandir@/man1/pdfinfo.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdffonts.1 $(DESTDIR)@mandir@/man1/pdffonts.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdfdetach.1 $(DESTDIR)@mandir@/man1/pdfdetach.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdftoppm.1 $(DESTDIR)@mandir@/man1/pdftoppm.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdfimages.1 $(DESTDIR)@mandir@/man1/pdfimages.1
+ 	-mkdir -p $(DESTDIR)@mandir@/man5
+ 	$(INSTALL_DATA) $(srcdir)/doc/xpdfrc.5 $(DESTDIR)@mandir@/man5/xpdfrc.5
+ 	-mkdir -p $(DESTDIR)@sysconfdir@

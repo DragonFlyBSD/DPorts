@@ -46,13 +46,6 @@ CONFIGURE_ARGS+=--without-libpaper-library
 CONFIGURE_ARGS+=	--enable-a4-paper
 .endif
 
-MAN1=		pdffonts.1 \
-		pdfimages.1 \
-		pdfinfo.1 \
-		pdfdetach.1 \
-		pdftoppm.1 \
-		pdftops.1 \
-		pdftotext.1
 MAN5=		xpdfrc.5
 
 .if ${PORT_OPTIONS:MX11}
