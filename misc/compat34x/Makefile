@@ -2,7 +2,7 @@
 # $FreeBSD: misc/compat6x/Makefile 319931 2013-06-04 22:24:50Z eadler $
 
 PORTNAME=	compat34x
-PORTVERSION=	20130609
+PORTVERSION=	20130624
 CATEGORIES=	misc
 MASTER_SITES=	http://leaf.dragonflybsd.org/~marino/dports-src/
 PKGNAMESUFFIX=	-${ARCH}
