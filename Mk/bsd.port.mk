@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 320886 2013-06-14 06:56:16Z bapt $
+# $FreeBSD: Mk/bsd.port.mk 321737 2013-06-25 12:24:10Z bapt $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -1637,6 +1637,10 @@ PATCH_DEPENDS+=		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 .endif
 .endif
 
+.if !defined(UID)
+UID!=	${ID} -u
+.endif
+
 # Check the compatibility layer for amd64/ia64
 
 .if ${ARCH} == "amd64" || ${ARCH} =="ia64"
@@ -1644,7 +1648,10 @@ PATCH_DEPENDS+=		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 HAVE_COMPAT_IA32_LIBS?=  YES
 .endif
 .if !defined(HAVE_COMPAT_IA32_KERN)
-HAVE_COMPAT_IA32_KERN!= if ${SYSCTL} -n compat.ia32.maxvmem >/dev/null 2>&1; then echo YES; fi
+HAVE_COMPAT_IA32_KERN!= if ${SYSCTL} -n compat.ia32.maxvmem >/dev/null 2>&1; then echo YES; fi; echo
+.if empty(HAVE_COMPAT_IA32_KERN)
+.undef HAVE_COMPAT_IA32_KERN
+.endif
 .endif
 .endif
 
@@ -2315,9 +2322,6 @@ MTREE_ARGS?=	-U ${MTREE_FOLLOWS_SYMLINKS} -f ${MTREE_FILE} -d -e -p
 READLINK_CMD?=	/usr/bin/readlink
 
 # Determine whether or not we can use rootly owner/group functions.
-.if !defined(UID)
-UID!=	${ID} -u
-.endif
 .if ${UID} == 0
 _BINOWNGRP=	-o ${BINOWN} -g ${BINGRP}
 _SHROWNGRP=	-o ${SHAREOWN} -g ${SHAREGRP}
@@ -3598,7 +3602,7 @@ do-patch:
 	(cd ${_DISTDIR} ; \
 	for i  in ${_PATCHFILES}; do \
 		if [ ${PATCH_DEBUG_TMP} = yes ]; then \
-			@${ECHO_MSG} "===>   Applying distribution patch $$i" ; \
+			${ECHO_MSG} "===>   Applying distribution patch $$i" ; \
 		fi ; \
 		case $$i in \
 		*.Z|*.gz) ${GZCAT} $$i ;; \
@@ -6105,6 +6109,7 @@ D4P_ENV=	PKGNAME="${PKGNAME}" \
 		OPTIONS_SINGLE="${OPTIONS_SINGLE}" \
 		OPTIONS_RADIO="${OPTIONS_RADIO}" \
 		OPTIONS_GROUP="${OPTIONS_GROUP}" \
+		NEW_OPTIONS="${NEW_OPTIONS}" \
 		DIALOG4PORTS="${DIALOG4PORTS}" \
 		PREFIX="${PREFIX}" \
 		LOCALBASE="${LOCALBASE}" \
@@ -6206,11 +6211,9 @@ config-recursive:
 .endif # config-recursive
 
 .if !target(config-conditional)
-config-conditional: pre-config
-.if defined(COMPLETE_OPTIONS_LIST) && !empty(_OPTIONS_WITHOUT_GLOBALS) && !defined(NO_DIALOG)
-.  if !defined(_FILE_COMPLETE_OPTIONS_LIST) || ${COMPLETE_OPTIONS_LIST:O} != ${_FILE_COMPLETE_OPTIONS_LIST:O}
-	@cd ${.CURDIR} && ${MAKE} do-config;
-.  endif
+config-conditional:
+.if !empty(NEW_OPTIONS)
+	@cd ${.CURDIR} && ${MAKE} config;
 .endif
 .endif # config-conditional
 

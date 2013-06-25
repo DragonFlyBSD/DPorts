@@ -7,7 +7,7 @@
 # Please send all suggested changes to the maintainer instead of committing
 # them to SVN yourself.
 #
-# $FreeBSD: Mk/bsd.php.mk 319224 2013-05-27 12:32:13Z ale $
+# $FreeBSD: Mk/bsd.php.mk 321684 2013-06-24 14:32:11Z ale $
 #
 # Adding 'USE_PHP=yes' to a port includes this Makefile after bsd.ports.pre.mk.
 # If the port requires a predefined set of PHP extensions, they can be
@@ -52,6 +52,9 @@ PHP_VER?=	${DEFAULT_PHP_VER}
 PHP_EXT_DIR=	20060613
 .elif ${PHP_VER}  == 53
 PHP_EXT_DIR=	20090626
+PHP_EXT_INC=	pcre spl
+.elif ${PHP_VER}  == 55
+PHP_EXT_DIR=	20121212
 PHP_EXT_INC=	pcre spl
 .else
 PHP_EXT_DIR=	20100525
@@ -268,6 +271,7 @@ _USE_PHP_ALL=	apc bcmath bitset bz2 calendar ctype curl dba dom \
 _USE_PHP_VER5=	${_USE_PHP_ALL} phar sqlite3
 _USE_PHP_VER52=	${_USE_PHP_ALL} dbase mhash ming ncurses oci8 sqlite
 _USE_PHP_VER53=	${_USE_PHP_ALL} phar sqlite sqlite3
+_USE_PHP_VER55=	${_USE_PHP_ALL} phar sqlite3
 
 apc_DEPENDS=	www/pecl-APC
 bcmath_DEPENDS=	math/php${PHP_VER}-bcmath

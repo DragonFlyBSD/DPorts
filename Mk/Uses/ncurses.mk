@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/ncurses.mk 317550 2013-05-06 21:34:57Z bapt $
+# $FreeBSD: Mk/Uses/ncurses.mk 321369 2013-06-20 09:57:54Z bapt $
 #
 # handle dependency on the ncurses port
 #

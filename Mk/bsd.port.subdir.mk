@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
-# $FreeBSD: Mk/bsd.port.subdir.mk 317176 2013-05-03 06:56:03Z bapt $
+# $FreeBSD: Mk/bsd.port.subdir.mk 321739 2013-06-25 12:34:12Z bapt $
 #
 # The include file <bsd.port.subdir.mk> contains the default targets
 # for building ports subdirectories.
@@ -94,7 +94,10 @@ OPSYS!=	${UNAME} -s
 
 .if ${ARCH} == "amd64" || ${ARCH} =="ia64"
 .if !defined(HAVE_COMPAT_IA32_KERN)
-HAVE_COMPAT_IA32_KERN!= if ${SYSCTL} -n compat.ia32.maxvmem >/dev/null 2>&1; then echo YES; fi
+HAVE_COMPAT_IA32_KERN!= if ${SYSCTL} -n compat.ia32.maxvmem >/dev/null 2>&1; then echo YES; fi; echo
+.if empty(HAVE_COMPAT_IA32_KERN)
+.undef HAVE_COMPAT_IA32_KERN
+.endif
 .endif
 .endif
 
@@ -136,7 +139,7 @@ _JAVA_PORTS_INSTALLED!=		${MAKE} -V _JAVA_PORTS_INSTALLED USE_JAVA=1 -f ${PORTSD
 UID!=	${ID} -u
 .endif
 
-PKGINSTALLVER?= 20100403
+.endif
 
 INDEXDIR?=	${PORTSDIR}
 INDEXFILE?=	INDEX-${DFLYVERSION:C/([0-9]*)[0-9]{5}/\1/}
@@ -362,7 +365,6 @@ README.html:
 	OSVERSION="${OSVERSION:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
 	DFLYVERSION="${DFLYVERSION:Q}" \
 	UID="${UID:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
-	PKGINSTALLVER="${PKGINSTALLVER:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
 	HAVE_COMPAT_IA32_KERN="${HAVE_COMPAT_IA32_KERN}" \
 	CONFIGURE_MAX_CMD_LEN="${CONFIGURE_MAX_CMD_LEN}" \
 	PYTHON_DEFAULT_VERSION="${PYTHON_DEFAULT_VERSION}" \

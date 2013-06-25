@@ -1,59 +1,83 @@
 #-*- tab-width: 4; -*-
-# $FreeBSD: Mk/bsd.options.mk 320450 2013-06-10 09:27:19Z bapt $
-# Global options
+# ex:ts=4
 #
-# OPTIONS_DEFINE		- List of options this ports accept
+# $FreeBSD: Mk/bsd.options.mk 320926 2013-06-14 14:18:45Z bapt $
+#
+# These variables are used in port makefiles to define the options for a port.
+#
+# OPTIONS_DEFINE			- List of options this ports accept
 # OPTIONS_DEFINE_${ARCH}	- List of options this ports accept and are
-#				specific to ${ARCH}
-# OPTIONS_DEFAULT		- List of options activated by default
+#							  specific to ${ARCH}
+# OPTIONS_DEFAULT			- List of options activated by default
 # OPTIONS_DEFAULT_${ARCH}	- List of options activated by default for a
-#				given arch
+#							  given arch
 #
-# OPTIONS_EXCLUDE		- List of options unsupported (useful for slave ports)
-# OPTIONS_EXCLUDE_${ARCH}	- List of options unsupported on a given ${ARCH}
-# ${OPTION}_DESC		- Description the the ${OPTION}
+# ${OPTION}_DESC			- Description of the ${OPTION}
 #
-# OPTIONS_SINGLE		- List of single-choice grouped options: 1 and
-# 				  only 1 among N
-# OPTIONS_RADIO			- List of radio-choice grouped options: 0 or 1
-#				  among N
-# OPTIONS_MULTI			- List of multiple-choice grouped options: at
-#				  least 1 among N
-# OPTIONS_GROUP			- List of group-choice grouped options: 0 or
-#				  more among N
+# OPTIONS_SINGLE			- List of single-choice grouped options: 1 and
+# 							  only 1 among N
+# OPTIONS_RADIO				- List of radio-choice grouped options: 0 or 1
+#							  among N
+# OPTIONS_MULTI				- List of multiple-choice grouped options: at
+#							  least 1 among N
+# OPTIONS_GROUP				- List of group-choice grouped options: 0 or
+#							  more among N
 #
 # OPTIONS_SINGLE_${NAME}	- List of OPTIONS grouped as single choice (for
-#				the single named as ${NAME} as defined in
-#				OPTIONS_SINGLE)
+#							  the single named as ${NAME} as defined in
+#							  OPTIONS_SINGLE)
 # OPTIONS_RADIO_${NAME}		- List of OPTIONS grouped as radio choice (for
-#				the radio named as ${NAME} as defined in
-#				OPTIONS_RADIO)
+#							  the radio named as ${NAME} as defined in
+#							  OPTIONS_RADIO)
 # OPTIONS_MULTI_${NAME}		- List of OPTIONS grouped as multiple-choice
-#				(for the multi named as ${NAME} as defined in
-#				OPTIONS_MULTI)
+#							  (for the multi named as ${NAME} as defined in
+#							  OPTIONS_MULTI)
 # OPTIONS_GROUP_${NAME}		- List of OPTIONS grouped as group-choice (for
-#				the group named as ${NAME} as defined in
-#				OPTIONS_GROUP)
+#							  the group named as ${NAME} as defined in
+#							  OPTIONS_GROUP)
 #
-# WITH				Set options from the command line
-# WITHOUT			Unset options from the command line
+# OPTIONS_EXCLUDE			- List of options unsupported (useful for slave ports)
+# OPTIONS_EXCLUDE_${ARCH}	- List of options unsupported on a given ${ARCH}
+# OPTIONS_SLAVE				- This is designed for slave ports, it removes an
+#							  option from the options list inherited from the
+#							  master port and it always adds it to PORT_OPTIONS
+#							  meaning activated
 #
-# OPTIONS_SLAVE			This is designed for slave ports, it removes an option
-# 				from the options list inherited from the master port
-# 				and it always adds it to PORT_OPTIONS meaning activated
+# These variables can be used in make.conf to configure options.  They are
+# processed in the order listed below, i.e. later variables override the effects
+# of previous variables.  Options saved using the options dialog are processed
+# right before OPTIONS_SET_FORCE.  When building a port a dialog to configure
+# options will only appear if there are new options, i.e. options which have not
+# been configured before either using the option dialog in a previous build or
+# using the variables below.  You can force the dialog to appear by running
+# "make config".
+#
+# OPTIONS_SET				- List of options to enable for all ports.
+# OPTIONS_UNSET				- List of options to disable for all ports. 
+# ${UNIQUENAME}_SET			- List of options to enable for a specific port.
+# ${UNIQUENAME}_UNSET		- List of options to disable for a specific port.
+#
+# OPTIONS_SET_FORCE			- List of options to enable for all ports.
+# OPTIONS_UNSET_FORCE		- List of options to disable for all ports.
+# ${UNIQUENAME}_SET_FORCE	- List of options to enable for a specific port.
+# ${UNIQUENAME}_UNSET_FORCE	- List of options to disable for a specific port.
+#
+# These variables can be used on the command line. They override the effects of
+# the make.conf variables above.
+#
+# WITH						- Set options from the command line
+# WITHOUT					- Unset options from the command line
 
 ##
 # Set all the options available for the ports, beginning with the
 # global ones and ending with the ones decided by the maintainer.
-# Options global to the entire ports tree
+
 .if !defined(OPTIONSMKINCLUDED)
 OPTIONSMKINCLUDED=	bsd.options.mk
 
 OPTIONS_EXCLUDE+=	ALSA
 
 OPTIONSFILE?=	${PORT_DBDIR}/${UNIQUENAME}/options
-
-GLOBAL_OPTIONS=	DOCS NLS EXAMPLES IPV6
 
 # Set the default values for the global options, as defined by portmgr
 .if !defined(NOPORTDOCS)
@@ -118,39 +142,40 @@ COMPLETE_OPTIONS_LIST+=	${OPTIONS_${otype}_${m}}
 .if defined(OPTIONS_OVERRIDE)
 # Special case $OPTIONS_OVERRIDE; if it is defined forget about anything done
 # before
+NEW_OPTIONS=
 PORT_OPTIONS:=	${OPTIONS_OVERRIDE}
 .else
+NEW_OPTIONS=	${COMPLETE_OPTIONS_LIST}
 
 ## Set default options defined by the port maintainer
-.  for opt in ${OPTIONS_DEFAULT}
-PORT_OPTIONS+=	${opt}
-.  endfor
-PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
+PORT_OPTIONS+=	${OPTIONS_DEFAULT}
 
 ## Set system-wide defined options (set by user in make.conf)
 .  for opt in ${OPTIONS_SET}
 .    if !empty(COMPLETE_OPTIONS_LIST:M${opt})
 PORT_OPTIONS+=	${opt}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .    endif
 .  endfor
-PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
 
 ## Remove the options excluded system-wide (set by user in make.conf)
 .  for opt in ${OPTIONS_UNSET}
 PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  endfor
 
 ## Set the options specified per-port (set by user in make.conf)
 .  for opt in ${${UNIQUENAME}_SET}
 .    if !empty(COMPLETE_OPTIONS_LIST:M${opt})
 PORT_OPTIONS+=	${opt}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .    endif
 .  endfor
-PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
 
 ## Unset the options excluded per-port (set by user in make.conf)
 .  for opt in ${${UNIQUENAME}_UNSET}
 PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  endfor
 
 ## options files (from dialog)
@@ -165,7 +190,6 @@ PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
 .for opt in ${ALL_OPTIONS}
 .if defined(WITH_${opt})
 PORT_OPTIONS+=	${opt}
-PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
 .endif
 .if defined(WITHOUT_${opt})
 PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
@@ -176,14 +200,14 @@ PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
 .  for opt in ${OPTIONS_FILE_SET}
 .    if !empty(COMPLETE_OPTIONS_LIST:M${opt})
 PORT_OPTIONS+=	${opt}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .    endif
 .  endfor
-PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
 
 .for opt in ${OPTIONS_FILE_UNSET}
 PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .endfor
-.undef opt
 
 .endif
 
@@ -192,26 +216,28 @@ PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
 .  for opt in ${OPTIONS_SET_FORCE}
 .    if !empty(COMPLETE_OPTIONS_LIST:M${opt})
 PORT_OPTIONS+=	${opt}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .    endif
 .  endfor
-PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
 
 ## Remove the options excluded system-wide (set by user in make.conf)
 .  for opt in ${OPTIONS_UNSET_FORCE}
 PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  endfor
 
 ## Set the options specified per-port (set by user in make.conf)
 .  for opt in ${${UNIQUENAME}_SET_FORCE}
 .    if !empty(COMPLETE_OPTIONS_LIST:M${opt})
 PORT_OPTIONS+=	${opt}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .    endif
 .  endfor
-PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
 
 ## Unset the options excluded per-port (set by user in make.conf)
 .  for opt in ${${UNIQUENAME}_UNSET_FORCE}
 PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  endfor
 
 
@@ -219,18 +245,20 @@ PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
 .for opt in ${WITH}
 .  if !empty(COMPLETE_OPTIONS_LIST:M${opt})
 PORT_OPTIONS+=	${opt}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  endif
 .endfor
-PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
 
 .for opt in ${WITHOUT}
 PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .endfor
 
-.for opt in ${OPTIONS_SLAVE}
-PORT_OPTIONS+=	${opt}
-.endfor
-.undef opt
+# Finally, add options required by slave ports
+PORT_OPTIONS+=	${OPTIONS_SLAVE}
+
+# Sort options and eliminate duplicates
+PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
 
 ## Now some compatibility
 .if empty(PORT_OPTIONS:MDOCS)
@@ -260,12 +288,54 @@ WITHOUT_${opt}:=	true
 WITH_${opt}:=  true
 .   endif
 .endif
-.      undef opt
 .endfor
-.endif
 ###
 
-_OPTIONS_WITHOUT_GLOBALS:=	${COMPLETE_OPTIONS_LIST}
-.for opt in ${GLOBAL_OPTIONS}
-_OPTIONS_WITHOUT_GLOBALS:=	${_OPTIONS_WITHOUT_GLOBALS:N${opt}}
+.for opt in ${COMPLETE_OPTIONS_LIST}
+# PLIST_SUB
+PLIST_SUB?=
+.  if defined(OPTIONS_SUB)
+.    if ! ${PLIST_SUB:M${opt}=*}
+.      if ${PORT_OPTIONS:M${opt}}
+PLIST_SUB:=	${PLIST_SUB} ${opt}=""
+.      else
+PLIST_SUB:=	${PLIST_SUB} ${opt}="@comment "
+.      endif
+.    endif
+.  endif
+
+.  if ${PORT_OPTIONS:M${opt}}
+.    if defined(${opt}_CONFIGURE_ENABLE)
+CONFIGURE_ARGS+=	--enable-${${opt}_CONFIGURE_ENABLE}
+.    endif
+.    if defined(${opt}_CONFIGURE_ON)
+CONFIGURE_ARGS+=	${${opt}_CONFIGURE_ON}
+.    endif
+.    if defined(${opt}_CMAKE_ON)
+CMAKE_ARGS+=	${${opt}_CMAKE_ON}
+.    endif
+.    for flags in CFLAGS CXXFLAGS LDFLAGS CONFIGURE_ENV MAKE_ENV USES DISTFILES
+.      if defined(${opt}_${flags})
+${flags}+=	${${opt}_${flags}}
+.      endif
+.    endfor
+.    for deptype in PKG EXTRACT PATCH FETCH BUILD LIB RUN
+.      if defined(${opt}_${deptype}_DEPENDS)
+${deptype}_DEPENDS+=	${${opt}_${deptype}_DEPENDS}
+.      endif
+.    endfor
+.  else
+.    if defined(${opt}_CONFIGURE_ENABLE)
+CONFIGURE_ARGS+=	--disable-${${opt}_CONFIGURE_ENABLE}
+.    endif
+.    if defined(${opt}_CONFIGURE_OFF)
+CONFIGURE_ARGS+=	${${opt}_CONFIGURE_OFF}
+.    endif
+.    if defined(${opt}_CMAKE_OFF)
+CMAKE_ARGS+=	${${opt}_CMAKE_OFF}
+.    endif
+.  endif
 .endfor
+
+
+.endif

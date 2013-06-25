@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/ada.mk 316916 2013-04-30 11:41:44Z bapt $
+# $FreeBSD: Mk/Uses/ada.mk 321369 2013-06-20 09:57:54Z bapt $
 #
 # Establish Ada-capable compiler as a build dependency
 #

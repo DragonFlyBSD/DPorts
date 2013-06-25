@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 320886 2013-06-14 06:56:16Z bapt $
+# $FreeBSD: Mk/bsd.pkgng.mk 321737 2013-06-25 12:24:10Z bapt $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -20,7 +20,9 @@ PKGUPGRADE?=		${PKGDIR}/pkg-upgrade
 _FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
 						fonts.dir fonts.scale gtk-update-icon-cache \
 						gio-querymodules \
+						gtk-query-immodules \
 						ldconfig \
+						load-octave-pkg \
 						update-desktop-database update-mime-database \
 						gdk-pixbuf-query-loaders catalog.ports \
 						glib-compile-schemas
@@ -260,6 +262,12 @@ check-already-installed:
 
 .if !target(deinstall)
 deinstall:
+.if ${UID} != 0 && !defined(INSTALL_AS_USER)
+	@${ECHO_MSG} "===>  Switching to root credentials for '${.TARGET}' target"
+	@cd ${.CURDIR} && \
+		${SU_CMD} "${MAKE} ${.TARGET}"
+	@${ECHO_MSG} "===>  Returning to user credentials"
+.else
 	@${ECHO_MSG} "===>  Deinstalling for ${PKGORIGIN}"
 	@if ${PKG_INFO} -e ${PKGORIGIN}; then \
 		p=`${PKG_INFO} -q ${PKGORIGIN}`; \
@@ -269,6 +277,7 @@ deinstall:
 		${ECHO_MSG} "===>   ${PKGBASE} not installed, skipping"; \
 	fi
 	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
+.endif
 .endif
 
 .endif # defined(_POSTMKINCLUDED)

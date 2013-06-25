@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: Mk/bsd.sites.mk 320633 2013-06-11 19:43:45Z rakuco $
+# $FreeBSD: Mk/bsd.sites.mk 321489 2013-06-21 17:53:33Z mandree $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -1052,10 +1052,16 @@ MASTER_SITE_QMAIL+= \
 
 .if !defined(IGNORE_MASTER_SITE_QT)
 MASTER_SITE_QT+= \
-	http://releases.qt-project.org/qt4/source/%SUBDIR%/ \
-	ftp://ftp.heanet.ie/mirrors/trolltech/pub/qt/source/%SUBDIR%/ \
-	http://download.qt.nokia.com/qt/source/%SUBDIR%/ \
-	ftp://ftp.trolltech.com/qt/source/%SUBDIR%/
+	http://download.qt-project.org/%SUBDIR%/ \
+	http://master.qt-project.org/%SUBDIR%/ \
+	http://www.mirrorservice.org/sites/download.qt-project.org/%SUBDIR%/ \
+	http://www.nic.funet.fi/pub/mirrors/download.qt-project.org/%SUBDIR%/ \
+	http://qtmirror.ics.com/pub/qtproject/%SUBDIR%/ \
+	http://anychimirror101.mirrors.tds.net/pub/Qt/%SUBDIR%/ \
+	http://www.las.ic.unicamp.br/pub/qtproject/%SUBDIR%/ \
+	http://linorg.usp.br/Qt/%SUBDIR%/ \
+	http://ftp.jaist.ac.jp/pub/qtproject/%SUBDIR%/ \
+	http://mirrors.neusoft.edu.cn/qt/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_REDHAT_LINUX)
@@ -1448,7 +1454,7 @@ MASTER_SITE_XORG+= \
 
 .if !defined(IGNORE_MASTER_SITE_KERNEL_ORG)
 MASTER_SITE_KERNEL_ORG+= \
-	http://kernel.org/pub/%SUBDIR%/ \
+	https://www.kernel.org/pub/%SUBDIR%/ \
 	ftp://ftp.ntu.edu.tw/%SUBDIR%/ \
 	http://ftp.sunet.se/pub/Linux/kernel.org/%SUBDIR%/ \
 	http://ftp.yandex.ru/pub/%SUBDIR%/ \

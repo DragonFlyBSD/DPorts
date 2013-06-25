@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.qt.mk 317119 2013-05-02 14:12:58Z bapt $
+# $FreeBSD: Mk/bsd.qt.mk 321482 2013-06-21 17:24:13Z rakuco $
 #
 # Variables:
 # QT_NONSTANDARD	- Suppress modification of configure and make environment.
@@ -29,6 +29,7 @@ MAKE_ENV+=	QMAKESPEC="${QMAKESPEC}"
 .if defined(QT_DIST)
 DISTINFO_FILE=	${PORTSDIR}/devel/qt4/distinfo
 MASTER_SITES=	${MASTER_SITE_QT}
+MASTER_SITE_SUBDIR=	official_releases/qt/${QT4_VERSION:R}/${QT4_VERSION}
 DISTNAME=	qt-everywhere-opensource-src-${QT4_VERSION}
 DIST_SUBDIR=	KDE
 #CONFLICTS+=	Currently there are no conflicts \o/
