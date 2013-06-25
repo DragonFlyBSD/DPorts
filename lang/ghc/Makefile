@@ -104,6 +104,9 @@ EXTRA_PATCHES=	${PATCHDIR}/nopatch-.._ghc-${BOOT_GHC_VERSION}-boot_rts_package.c
 
 .elif ${OPSYS} == "DragonFly"
 
+.  if ${DFLYVERSION} > 300500
+BUILD_DEPENDS+=  ${LOCALBASE}/lib/compat/libm.so.3:${PORTSDIR}/misc/compat34x
+.  endif
 .  if ${ARCH} == "i386"
 DISTFILES+=	ghc-${BOOT_GHC_VERSION}-i386-dragonfly-boot${EXTRACT_SUFX}:dflyboot
 .  elif ${ARCH} == "x86_64"
@@ -113,10 +116,6 @@ DISTFILES+=	ghc-${BOOT_GHC_VERSION}-x86_64-dragonfly-boot${EXTRACT_SUFX}:dflyboo
 CONFIGURE_TARGET=	${ARCH}-portbld-dragonfly
 BOOT_GHC_VERSION=	7.4.2
 EXTRA_PATCHES=	${DFLY_PATCHDIR}/nopatch-ghc-${BOOT_GHC_VERSION}-boot_rts_package.conf.in
-
-.  if ${DFLYVERSION} > 300500
-LIB_DEPENDS+=	m.3:${PORTSDIR}/misc/compat34x
-.  endif
 
 .else
 IGNORE=		unsupported ${OPSYS} Operating System
