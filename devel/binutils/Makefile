@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/binutils/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: devel/binutils/Makefile 321747 2013-06-25 14:55:37Z zeising $
 
 PORTNAME=	binutils
-PORTVERSION=	2.23.1
+PORTVERSION=	2.23.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEWARE}
 MASTER_SITE_SUBDIR=	binutils/releases
@@ -83,7 +83,9 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 .if ${ARCH} == "x86_64"
-ARCH=		x86_64
+CONFIGURE_TARGET=	x86_64-portbld-freebsd${OSREL}
+.else
+CONFIGURE_TARGET=	${ARCH}-portbld-freebsd${OSREL}
 .endif
 
 post-install:
