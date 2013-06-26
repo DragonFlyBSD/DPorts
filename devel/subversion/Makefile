@@ -1,48 +1,38 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion/Makefile 319546 2013-05-31 22:30:57Z ohauer $
+# $FreeBSD: devel/subversion/Makefile 321477 2013-06-21 16:39:15Z lev $
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
 
-CONFLICTS_INSTALL=	subversion-1.[6|8].[0-9]*
+CONFLICTS_INSTALL=	subversion-1.[6|7].[0-9]*
 
 USE_RC_SUBR=	svnserve
 
 MAN1=		svn.1 svnadmin.1 svnlook.1 svndumpfilter.1 svnrdump.1 \
-		svnsync.1 svnversion.1
+		svnsync.1 svnversion.1 svnmucc.1
 MAN5=		svnserve.conf.5
 MAN8=		svnserve.8
 
 TXT_DOCS=	BUGS CHANGES COMMITTERS INSTALL README
 
-OPTIONS_DEFINE=	P4_STYLE_MARKERS ENHANCED_KEYWORD FREEBSD_TEMPLATE \
-		MOD_DAV_SVN MOD_DONTDOTHAT SVNAUTHZ_VALIDATE \
-		NEON SERF \
-		SASL BDB \
-		MAINTAINER_DEBUG \
-		SVNSERVE_WRAPPER SVNMUCC \
-		STATIC \
-		GNOME_KEYRING KDE_KWALLET \
-		BOOK TEST
+OPTIONS_DEFINE=	BDB BOOK GNOME_KEYRING KDE_KWALLET MAINTAINER_DEBUG \
+		MOD_DAV_SVN P4_STYLE_MARKERS FREEBSD_TEMPLATE SASL \
+		SERF STATIC SVNSERVE_WRAPPER TEST TOOLS \
 
-OPTIONS_DEFAULT=P4_STYLE_MARKERS ENHANCED_KEYWORD FREEBSD_TEMPLATE NEON
+OPTIONS_DEFAULT=P4_STYLE_MARKERS FREEBSD_TEMPLATE SERF
 
-P4_STYLE_MARKERS_DESC=	Perforce-style conflict markers
-ENHANCED_KEYWORD_DESC=	Enhanced svn:keyword support
-FREEBSD_TEMPLATE_DESC=	FreeBSD Project log template
-MOD_DAV_SVN_DESC=	mod_dav_svn module for Apache 2.X
-MOD_DONTDOTHAT_DESC=	mod_dontdothat for Apache 2.X
-NEON_DESC=		WebDAV/Delta-V repo access module (neon)
-SERF_DESC=		WebDAV/Delta-V repo access module (serf)
-MAINTAINER_DEBUG_DESC=	Build debug version
-SVNSERVE_WRAPPER_DESC=	Enable svnserve wrapper
-SVNMUCC_DESC=		Install Multiple URL Command Client
-SVNAUTHZ_VALIDATE_DESC=	install svnauthz-validate
-STATIC_DESC=		Build static version (no shared libs)
+BOOK_DESC=		Install the Subversion Book
 GNOME_KEYRING_DESC=	Build with GNOME Keyring auth support
 KDE_KWALLET_DESC=	Build with KDE KWallet auth support
-BOOK_DESC=		Install the Subversion Book
+MAINTAINER_DEBUG_DESC=	Build debug version
+MOD_DAV_SVN_DESC=	mod_dav_svn module for Apache 2.X
+P4_STYLE_MARKERS_DESC=	Perforce-style conflict markers
+FREEBSD_TEMPLATE_DESC=	FreeBSD Project log template
+SERF_DESC=		WebDAV/Delta-V (HTTP/HTTPS) repo access module
+STATIC_DESC=		Build static version (no shared libs)
+SVNSERVE_WRAPPER_DESC=	Enable svnserve wrapper (umask setter)
 TEST_DESC=		Run subversion test suite
+TOOLS_DESC=		Install several tools (svnauthz-validate and mod_dontdothat are among them)
 
 .include "Makefile.common"
 
@@ -54,7 +44,7 @@ SVNFSTYPE?=	fsfs
 SUB_FILES=	pkg-install \
 		pkg-deinstall
 		
-BOOK_VERSION=	4304
+BOOK_VERSION=	4515
 
 .if make(repository)
 WITH_REPOSITORY_CREATION=	yes
@@ -67,9 +57,6 @@ MKREPOS_TARGET=	_mkrepos
 # Patches required for use with the FreeBSD Project repository only
 .if ${PORT_OPTIONS:MP4_STYLE_MARKERS}
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-3way-conflict-markers
-.endif
-.if ${PORT_OPTIONS:MENHANCED_KEYWORD}
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-enhanced-keyword
 .endif
 .if ${PORT_OPTIONS:MFREEBSD_TEMPLATE}
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-fbsd-template
@@ -88,10 +75,10 @@ PLIST_SUB+=	SVNSERVE_WRAPPER="@comment "
 SUB_LIST+=	SVNSERVE_BIN_EXT=""
 .endif
 
-.if ${PORT_OPTIONS:MSVNMUCC}
-PLIST_SUB+=	SVNMUCC=""
+.if ${PORT_OPTIONS:MTOOLS}
+PLIST_SUB+=	TOOLS=""
 .else
-PLIST_SUB+=	SVNMUCC="@comment "
+PLIST_SUB+=	TOOLS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MDOCS} && ${PORT_OPTIONS:MBOOK}
@@ -133,12 +120,6 @@ LIB_DEPENDS=
 
 pre-everything::
 	@${ECHO_MSG} ""
-.if ${PORT_OPTIONS:MNEON}
-	@${ECHO_MSG} "WebDAV/Delta-V repository access module enabled."
-.else
-	@${ECHO_MSG} "WebDAV/Delta-V repository access module disabled."
-.endif
-	@${ECHO_MSG} ""
 .if ${PORT_OPTIONS:MBDB}
 	@${ECHO_MSG} "Berkeley DB (4 or 5) repository backend enabled."
 .else
@@ -149,13 +130,19 @@ pre-everything::
 	@${ECHO_MSG} "Build debug version."
 	@${ECHO_MSG} ""
 .endif
+.if ${PORT_OPTIONS:MTOOLS}
+	@${ECHO_MSG} "Several tools enabled."
+.else
+	@${ECHO_MSG} "You can enable installation fo tools"
+.endif
+	@${ECHO_MSG} ""
 .if ${PORT_OPTIONS:MMOD_DAV_SVN}
 	@${ECHO_MSG} "mod_dav_svn module for Apache 2.X enabled."
 .else
 	@${ECHO_MSG} "You can enable the mod_dav_svn module for Apache 2.X"
 .endif
 	@${ECHO_MSG} ""
-.if ${PORT_OPTIONS:MMOD_DONTDOTHAT} && ${PORT_OPTIONS:MMOD_DAV_SVN}
+.if ${PORT_OPTIONS:MTOOLS} && ${PORT_OPTIONS:MMOD_DAV_SVN}
 	@${ECHO_MSG} "mod_dontdothat module for Apache 2.X enabled."
 .else
 	@${ECHO_MSG} "You can enable the mod_dontdothat module for Apache 2.X"
@@ -163,10 +150,6 @@ pre-everything::
 	@${ECHO_MSG} ""
 .if ${PORT_OPTIONS:MSVNSERVE_WRAPPER}
 	@${ECHO_MSG} "svnserve wrapper enabled."
-	@${ECHO_MSG} ""
-.endif
-.if ${PORT_OPTIONS:MSVNAUTHZ_VALIDATE}
-	@${ECHO_MSG} "svnauthz-validate enabled."
 	@${ECHO_MSG} ""
 .endif
 .if defined(WITH_REPOSITORY_CREATION)
@@ -261,19 +244,19 @@ pre-install:
 .endif
 
 post-install:	${MKREPOS_TARGET}
+.if ${PORT_OPTIONS:MTOOLS}
+	cd ${WRKSRC} && ${MAKE} install-tools
+.endif
 .if ${PORT_OPTIONS:MMOD_DAV_SVN}
 	${APXS} -e -S LIBEXECDIR=${PREFIX}/${APACHEMODDIR} -a -n dav_svn ${PREFIX}/${APACHEMODDIR}/mod_dav_svn.so
 	${APXS} -e -S LIBEXECDIR=${PREFIX}/${APACHEMODDIR} -a -n authz_svn ${PREFIX}/${APACHEMODDIR}/mod_authz_svn.so
-.if ${PORT_OPTIONS:MMOD_DONTDOTHAT}
+.if ${PORT_OPTIONS:MTOOLS}
 	${APXS} -e -S LIBEXECDIR=${PREFIX}/${APACHEMODDIR} -a -n dontdothat ${PREFIX}/${APACHEMODDIR}/mod_dontdothat.so
 .endif
 .endif
-.if ${PORT_OPTIONS:MSVNAUTHZ_VALIDATE}
-	${LIBTOOL} --mode=install ${INSTALL} ${COPY} ${_BINOWNGRP} -m ${BINMODE} ${WRKSRC}/tools/server-side/svnauthz-validate ${PREFIX}/bin
-.endif
 	@${MKDIR} ${DATADIR}
 	cd ${WRKSRC}/tools ; \
-	  ${TAR} --exclude '*.in' --exclude '.libs' --exclude '*.o' --exclude '*.lo' --exclude='*.slo' -cf - * | ${TAR} -C ${DATADIR} -xf -
+	  ${TAR} --exclude '*.in' --exclude '.libs' --exclude '*.o' --exclude '*.lo' --exclude '*.la' --exclude='*.slo' -cf - * | ${TAR} -C ${DATADIR} -xf -
 # ugly hack to remove libtool scripts ...
 	@${GREP} -R ${WRKSRC} ${DATADIR} | ${CUT} -d\: -f 1 | ${XARGS} ${RM} -f
 	@${CHMOD} -R a-st,o+rX ${DATADIR}
@@ -292,13 +275,6 @@ post-install:	${MKREPOS_TARGET}
 .endif
 .if ${PORT_OPTIONS:MSVNSERVE_WRAPPER}
 	@${INSTALL_SCRIPT} ${FILESDIR}/svnserve.wrapper ${PREFIX}/bin/svnserve
-.endif
-.if ${PORT_OPTIONS:MSVNMUCC}
-. if ${PORT_OPTIONS:MSTATIC}
-	@${INSTALL} ${WRKSRC}/tools/client-side/svnmucc/svnmucc ${PREFIX}/bin
-. else
-	@${INSTALL} ${WRKSRC}/tools/client-side/svnmucc/.libs/svnmucc ${PREFIX}/bin
-. endif
 .endif
 
 repository:	_mkrepos
