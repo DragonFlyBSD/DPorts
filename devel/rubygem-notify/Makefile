@@ -1,21 +1,20 @@
-# New ports collection makefile for:	rubygem-notify
-# Date created:		2010-05-01
-# Whom:			ports@c0decafe.net <ports@c0decafe.net>
-#
-# $FreeBSD: ports/devel/rubygem-notify/Makefile,v 1.7 2012/11/17 05:57:00 svnexp Exp $
-#
+# Created by: ports@c0decafe.net <ports@c0decafe.net>
+# $FreeBSD: devel/rubygem-notify/Makefile 321638 2013-06-23 13:45:53Z sunpoet $
 
 PORTNAME=	notify
-PORTVERSION=	0.4.0
+PORTVERSION=	0.5.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Provides notification functionalities on cross platforms
+MAINTAINER=	meta+ports@vmeta.jp
+COMMENT=	Desktop notify for many platform
 
-USE_RUBY=		yes
-USE_RUBYGEMS=		yes
+LICENSE=	MIT
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
+
 PLIST_FILES=	bin/notify
 
 .include <bsd.port.mk>
