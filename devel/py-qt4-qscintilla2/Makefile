@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: ports/devel/py-qt4-qscintilla2/Makefile,v 1.25 2013/02/03 22:23:03 svnexp Exp $
+# $FreeBSD: devel/py-qt4-qscintilla2/Makefile 321498 2013-06-21 19:13:05Z rakuco $
 
 PORTNAME=	qscintilla2
 PORTVERSION=	${QSCI2_VERSION}
@@ -21,7 +21,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 DISTINFO_FILE=	${QSCI2_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
 USE_PYTHON=	2.5+
-USE_QT4=	gui
+USE_QT4=	gui qmake_build
 
 OPTIONS_DEFINE=	API
 OPTIONS_DEFAULT=API
@@ -30,7 +30,8 @@ API_DESC=	Install binding API for QScintilla2
 OPTIONSFILE?=	${PORT_DBDIR}/py-qt4-${PORTNAME}/options
 SIPDIR=		${PREFIX}/share/py-sip
 QSCIDIR=	${PREFIX}/share/qt4/qsci
-ARGS=		-p 4 -d ${PYTHONPREFIX_SITELIBDIR}/PyQt4 -v ${SIPDIR}
+ARGS=		--pyqt PyQt4 -d ${PYTHONPREFIX_SITELIBDIR}/PyQt4 -v ${SIPDIR} \
+		--qmake ${QMAKE} --pyqt-sipdir ${SIPDIR}
 WRKSRC=		${WRKDIR}/${DISTNAME}/Python
 ALL_TARGET=	#empty
 
