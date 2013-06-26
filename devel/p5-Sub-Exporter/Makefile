@@ -1,14 +1,17 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Exporter/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Sub-Exporter/Makefile 321028 2013-06-16 08:48:15Z culot $
 
 PORTNAME=	Sub-Exporter
-PORTVERSION=	0.985
+PORTVERSION=	0.986
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Sophisticated exporter for custom-built routines
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Data-OptList>=0.100:${PORTSDIR}/devel/p5-Data-OptList \
 		p5-Params-Util>=0.14:${PORTSDIR}/devel/p5-Params-Util \
