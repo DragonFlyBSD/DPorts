@@ -2,7 +2,7 @@
 # Date created:		20 May 2004
 # Whom:			Jie Gao	<gaoj@cpsc.ucalgary.ca>
 #
-# $FreeBSD: textproc/scim/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/scim/Makefile 321140 2013-06-17 16:18:54Z antoine $
 #
 
 PORTNAME=	scim
@@ -36,7 +36,7 @@ post-patch:
 		${WRKSRC}/src/Makefile.in
 
 post-install:
-	@gtk-query-immodules-2.0 > ${LOCALBASE}/etc/gtk-2.0/gtk.immodules
+	@${LOCALBASE}/bin/gtk-query-immodules-2.0 > ${LOCALBASE}/etc/gtk-2.0/gtk.immodules
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO} To display this message again, type ${PKG_INFO} -D ${PKGNAME}
 
