@@ -1,7 +1,7 @@
-# $FreeBSD: x11/pixman/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/pixman/Makefile 321463 2013-06-21 11:55:39Z zeising $
 
 PORTNAME=	pixman
-PORTVERSION=	0.28.2
+PORTVERSION=	0.30.0
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
