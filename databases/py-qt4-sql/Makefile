@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: ports/databases/py-qt4-sql/Makefile,v 1.22 2013/02/03 22:22:46 svnexp Exp $
+# $FreeBSD: databases/py-qt4-sql/Makefile 311475 2013-02-03 18:16:07Z makc $
 
 PORTNAME=	sql
 PORTVERSION=	${PYQT4_VERSION}
