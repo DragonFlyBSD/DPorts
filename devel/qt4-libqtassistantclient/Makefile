@@ -1,11 +1,12 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: ports/devel/qt4-libqtassistantclient/Makefile,v 1.24 2013/02/03 21:43:08 svnexp Exp $
+# $FreeBSD: devel/qt4-libqtassistantclient/Makefile 321482 2013-06-21 17:24:13Z rakuco $
 
 PORTNAME=	libQtAssistantClient
 PORTVERSION=	4.6.3
 PORTREVISION=	1
 CATEGORIES?=	devel
 MASTER_SITES=	${MASTER_SITE_QT}
+MASTER_SITE_SUBDIR=	archive/qt/${PORTVERSION:R}
 PKGNAMEPREFIX=	qt4-
 DISTNAME=	qt-assistant-qassistantclient-library-compat-src-${PORTVERSION}
 DIST_SUBDIR=	KDE
