@@ -2,7 +2,7 @@
 # Date created:				2 January 2010
 # Whom:					Greg Lewis <glewis@FreeBSD.org>
 #
-# $FreeBSD: java/openjdk7/Makefile 317431 2013-05-05 20:10:26Z glewis $
+# $FreeBSD: java/openjdk7/Makefile 321655 2013-06-23 20:45:14Z glewis $
 #
 
 PORTNAME=	openjdk
@@ -42,8 +42,8 @@ DEBUG_DESC=		Enable extra debugging info
 POLICY_DESC=		Install the Unlimited Strength Policy Files
 TZUPDATE_DESC=		Update the time zone data
 
-PORT_MINOR_VERSION=	21
-PORT_BUILD_NUMBER=	11
+PORT_MINOR_VERSION=	25
+PORT_BUILD_NUMBER=	15
 JDK_MAJOR_VERSION=	7
 JDK_MINOR_VERSION=	6
 JDK_BUILD_NUMBER=	24
@@ -63,6 +63,8 @@ BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip \
 		${LOCALBASE}/include/cups/cups.h:${PORTSDIR}/print/cups-client
 RUN_DEPENDS+=	javavm:${PORTSDIR}/java/javavmwrapper \
 		${LOCALBASE}/lib/X11/fonts/dejavu:${PORTSDIR}/x11-fonts/dejavu
+
+USE_DOS2UNIX=	jdk/src/share/classes/com/sun/org/apache/xml/internal/security/resource/xmlsecurity_en.properties
 
 JDK_ARCH=	${ARCH:S/x86_64/amd64/}
 OPENJDK_OSARCH=	bsd-${JDK_ARCH:S/i386/i586/}
@@ -106,6 +108,19 @@ MAKE_ENV+=	LANG="C" \
 MAKE_ENV+=	HOTSPOT_BUILD_JOBS=${MAKE_JOBS_NUMBER}
 MAKE_ENV+=	ALT_PARALLEL_COMPILE_JOBS=${MAKE_JOBS_NUMBER}
 
+SECURITY_ICONS= security-icon-bw16.png \
+		security-icon-bw24.png \
+		security-icon-bw32.png \
+		security-icon-bw48.png \
+		security-icon-interim16.png \
+		security-icon-interim24.png \
+		security-icon-interim32.png \
+		security-icon-interim48.png \
+		security-icon-yellow16.png \
+		security-icon-yellow24.png \
+		security-icon-yellow32.png \
+		security-icon-yellow48.png
+
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == DragonFly && ${DFLYVERSION} > 300500
@@ -121,6 +136,14 @@ RUN_DEPENDS+=  ${LOCALBASE}/share/java/zi:${PORTSDIR}/java/java-zoneinfo
 .endif
 
 BOOTSTRAPJDKDIR=	${WRKDIR}/bootstrap
+
+post-extract:
+	# Move icons to their new home.
+	@${MKDIR} ${WRKSRC}/jdk/src/share/classes/sun/awt/resources
+.for icon in ${SECURITY_ICONS}
+	@${MV} ${WRKSRC}/jdk/src/solaris/classes/sun/awt/X11/${icon} \
+		${WRKSRC}/jdk/src/share/classes/sun/awt/resources/
+.endfor
 
 post-patch:
 	@${REINPLACE_CMD} "s|%%LOCALBASE%%|${LOCALBASE}|" \
