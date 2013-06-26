@@ -1,8 +1,8 @@
-# $FreeBSD: devel/libpciaccess/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: devel/libpciaccess/Makefile 321224 2013-06-18 23:36:00Z jkim $
 
 PORTNAME=	libpciaccess
 PORTVERSION=	0.13.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	x11@FreeBSD.org
