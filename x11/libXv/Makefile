@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXv/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libXv/Makefile 321625 2013-06-23 10:06:13Z zeising $
 
 PORTNAME=	libXv
-PORTVERSION=	1.0.8
+PORTVERSION=	1.0.9
 PORTEPOCH=	1
 CATEGORIES=	x11
 
