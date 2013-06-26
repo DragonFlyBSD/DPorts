@@ -1,9 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/py-django-pipeline/Makefile 313467 2013-03-05 18:09:08Z lwhsu $
+# $FreeBSD: www/py-django-pipeline/Makefile 320941 2013-06-14 14:44:51Z miwi $
 
 PORTNAME=	django-pipeline
-PORTVERSION=	1.2.22
-PORTREVISION=	1
+PORTVERSION=	1.2.24
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
