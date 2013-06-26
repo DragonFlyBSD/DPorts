@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/freerdp/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/freerdp/Makefile 321660 2013-06-24 02:43:38Z fluffy $
 
 PORTNAME=	freerdp
 PORTVERSION=	1.0.2
@@ -37,7 +37,7 @@ BUILD_DEPENDS+=	xmlto:${PORTSDIR}/textproc/xmlto
 MAN1=		xfreerdp.1
 PLIST_SUB+=	X11=""
 .else
-CMAKE_ARGS+=	-DWITH_X11=OFF
+CMAKE_ARGS+=	-DWITH_X11=OFF -DWITH_XKBFILE=OFF
 PLIST_SUB+=	X11="@comment "
 .endif
 
