@@ -1,13 +1,11 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: print/texinfo/Makefile 320107 2013-06-06 15:42:55Z miwi $
+# $FreeBSD: print/texinfo/Makefile 321738 2013-06-25 12:28:55Z johans $
 
 PORTNAME=	texinfo
-PORTVERSION=	5.1.20130419
-PORTREVISION=	1
+PORTVERSION=	5.1.20130623
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_GNU} \
+MASTER_SITES=	GNU \
 		ftp://ftp.stack.nl/pub/users/johans/texinfo/${PORTVERSION:E}/
-MASTER_SITE_SUBDIR=	${PORTNAME}
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} htmlxref.cnf texinfo.tex texi2dvi
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
