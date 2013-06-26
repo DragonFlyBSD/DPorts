@@ -1,4 +1,4 @@
-@comment $FreeBSD: databases/gdbm/pkg-plist 300896 2012-07-14 13:54:48Z beat $
+@comment $FreeBSD: databases/gdbm/pkg-plist 321709 2013-06-24 19:30:46Z johans $
 bin/testgdbm
 include/gdbm.h
 %%GDBM_COMPAT%%include/dbm.h
@@ -11,3 +11,8 @@ lib/libgdbm.so.4
 %%GDBM_COMPAT%%lib/libgdbm_compat.la
 %%GDBM_COMPAT%%lib/libgdbm_compat.so
 %%GDBM_COMPAT%%lib/libgdbm_compat.so.4
+%%NLS%%share/locale/de/LC_MESSAGES/gdbm.mo
+%%NLS%%share/locale/fi/LC_MESSAGES/gdbm.mo
+%%NLS%%share/locale/ja/LC_MESSAGES/gdbm.mo
+%%NLS%%share/locale/pl/LC_MESSAGES/gdbm.mo
+%%NLS%%share/locale/uk/LC_MESSAGES/gdbm.mo
