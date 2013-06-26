@@ -2,12 +2,12 @@
 # Date created:		13 Oct 1999
 # Whom:			Jing-Tang Keith Jang <keith@FreeBSD.org>
 #
-# $FreeBSD: ports/chinese/arphicttf/Makefile,v 1.27 2012/11/17 05:54:55 svnexp Exp $
+# $FreeBSD: chinese/arphicttf/Makefile 321284 2013-06-19 16:03:12Z rafan $
 #
 
 PORTNAME=	arphicttf
 PORTVERSION=	2.11
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	chinese x11-fonts
 MASTER_SITES=	LOCAL/rafan/chinese/
 DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
