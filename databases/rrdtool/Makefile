@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: databases/rrdtool/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: databases/rrdtool/Makefile 320947 2013-06-14 16:00:57Z antoine $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.4.7
@@ -107,7 +107,7 @@ MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 
 post-extract:
 	@${REINPLACE_CMD} -e 's/^POD3/#POD3/' ${WRKSRC}/doc/Makefile.in
-.if ${PORT_OPTIONS:MDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's/[[:space:]]install-idocDATA//g' \
 		-e 's/[[:space:]]install-ihtmlDATA//g' \
 		-e 's/^[[:space:]].*cd .* rrdtool.html index.html/	#/' \
