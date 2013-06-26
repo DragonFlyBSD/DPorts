@@ -1,23 +1,19 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: net/fping/Makefile 316242 2013-04-22 15:44:41Z ak $
+# $FreeBSD: net/fping/Makefile 321077 2013-06-16 21:52:44Z wg $
 
 PORTNAME=	fping
-PORTVERSION=	3.4
-PORTREVISION=	1
+PORTVERSION=	3.5
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://fping.org/dist/
-
-PATCH_SITES=	https://raw.github.com/tohojo/netperf-wrapper/master/misc/
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	jharris@widomaker.com
 COMMENT=	Quickly ping N hosts w/o flooding the network
 
-OPTIONS_DEFINE=		TIMESTAMPS
+LICENSE=	GFDL
+
 OPTIONS_MULTI=		NET
 OPTIONS_MULTI_NET=	IPV4 IPV6
 OPTIONS_DEFAULT=	IPV4
-TIMESTAMPS_DESC=	Enable timestamps
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--bindir="${PREFIX}/sbin"
@@ -38,10 +34,6 @@ PLIST_FILES+=sbin/fping6
 MAN8+=	fping6.8
 .else
 CONFIGURE_ARGS+=--disable-ipv6
-.endif
-
-.if ${PORT_OPTIONS:MTIMESTAMPS}
-PATCHFILES+=	fping_timestamps.patch
 .endif
 
 post-install:
