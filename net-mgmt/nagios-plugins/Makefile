@@ -1,9 +1,9 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: net-mgmt/nagios-plugins/Makefile 317075 2013-05-02 06:49:34Z jgh $
+# $FreeBSD: net-mgmt/nagios-plugins/Makefile 321396 2013-06-20 15:57:33Z antoine $
 
 PORTNAME=	nagios-plugins
 PORTVERSION=	1.4.16
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/nagiosplug/nagiosplug/${PORTVERSION}
@@ -11,6 +11,8 @@ MASTER_SITES=	SF/nagiosplug/nagiosplug/${PORTVERSION}
 MAINTAINER=	jarrod@downtools.com.au
 COMMENT=	Plugins for Nagios
 
+USES=		charsetfix
+CHARSETFIX_MAKEFILEIN=Makefile.am
 USE_SUBMAKE=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
