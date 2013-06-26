@@ -1,13 +1,9 @@
-# New ports collection makefile for:	jinja
-# Date created:		2007-02-14
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-Jinja2/Makefile,v 1.15 2012/11/17 05:56:44 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: devel/py-Jinja2/Makefile 321094 2013-06-17 11:04:34Z nivit $
 
 PORTNAME=	Jinja2
-PORTVERSION=	2.6
-PORTREVISION=	1
+PORTVERSION=	2.7
+PORTREVISION=	0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +14,9 @@ COMMENT?=	Fast and easy to use stand-alone template engine
 
 LICENSE=	BSD
 
-USE_PYTHON=	2.5+
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}MarkupSafe>=0.11:${PORTSDIR}/textproc/py-MarkupSafe
+
+USE_PYTHON=	yes
 .if empty(PKGNAMESUFFIX)
 USE_PYDISTUTILS=	easy_install
 .endif
@@ -76,7 +74,6 @@ post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	@cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${EXAMPLESDIR}
 .endif
-
 
 check regression-test test: build
 .if empty(PKGNAMESUFFIX)
