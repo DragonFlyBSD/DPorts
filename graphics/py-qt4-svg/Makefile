@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: ports/graphics/py-qt4-svg/Makefile,v 1.22 2013/02/03 22:23:19 svnexp Exp $
+# $FreeBSD: graphics/py-qt4-svg/Makefile 311475 2013-02-03 18:16:07Z makc $
 
 PORTNAME=	svg
 PORTVERSION=	${PYQT4_VERSION}
