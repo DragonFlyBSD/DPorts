@@ -2,10 +2,10 @@
 # Date created:			  6 July 2011
 # Whom:				  Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: devel/pear-Horde_Icalendar/Makefile 317889 2013-05-11 15:37:47Z mm $
+# $FreeBSD: devel/pear-Horde_Icalendar/Makefile 321209 2013-06-18 17:55:12Z mm $
 
 PORTNAME=	Horde_Icalendar
-PORTVERSION=	2.0.5
+PORTVERSION=	2.0.6
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
