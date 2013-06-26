@@ -1,9 +1,5 @@
-# New ports collection makefile for: ftgl
-# Date created:		16 Jan 2004
-# Whom:			Igor Pokrovsky <tiamat@comset.net>
-#
-# $FreeBSD: graphics/ftgl/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Igor Pokrovsky <tiamat@comset.net>
+# $FreeBSD: graphics/ftgl/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	ftgl
 DISTVERSION=	2.1.3-rc5
@@ -14,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/FTGL%20Source/2.1.3%7Erc5
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	An OpenGL FreeType fonts rendering library
 
-LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
 
 USE_GMAKE=	yes
 USE_GL=		gl glu
