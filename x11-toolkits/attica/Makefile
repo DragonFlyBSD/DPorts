@@ -1,8 +1,8 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: x11-toolkits/attica/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11-toolkits/attica/Makefile 321459 2013-06-21 11:26:03Z rakuco $
 
 PORTNAME=	attica
-PORTVERSION=	0.4.1
+PORTVERSION=	0.4.2
 PORTEPOCH=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_KDE}
@@ -16,7 +16,8 @@ USE_QT4=	network qtestlib_build xml \
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USES=		cmake
-CMAKE_ARGS=	-DATTICA_ENABLE_TESTS:BOOL=OFF
+CMAKE_ARGS=	-DATTICA_ENABLE_TESTS:BOOL=OFF \
+		-DQT4_BUILD:BOOL=ON
 MAKE_JOBS_SAFE=	yes
 
 post-patch:
