@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: ports/textproc/py-qt4-xml/Makefile,v 1.24 2013/02/03 22:24:02 svnexp Exp $
+# $FreeBSD: textproc/py-qt4-xml/Makefile 311475 2013-02-03 18:16:07Z makc $
 
 PORTNAME=	xml
 PORTVERSION=	${PYQT4_VERSION}
