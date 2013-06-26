@@ -1,9 +1,9 @@
 # Created by: gmc@sonologic.nl
-# $FreeBSD: mail/p5-Mail-SPF/Makefile 318188 2013-05-14 19:12:23Z stefan $
+# $FreeBSD: mail/p5-Mail-SPF/Makefile 321065 2013-06-16 18:16:16Z stefan $
 
 PORTNAME=	Mail-SPF
 PORTVERSION=	2.007
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -25,6 +25,7 @@ CONFLICTS=	p5-Mail-SPF-Query-[0-9]*
 PERL_MODBUILD=	yes
 CONFIGURE_ARGS=	--install_path sbin=${PREFIX}/sbin
 
+MAN1=		spfquery.pl.1
 MAN3=		Mail::SPF.3 Mail::SPF::Mech::PTR.3 Mail::SPF::Mech.3 \
 		Mail::SPF::SenderIPAddrMech.3 Mail::SPF::MacroString.3 \
 		Mail::SPF::Mech::IP4.3 Mail::SPF::Mech::A.3 \
@@ -36,35 +37,15 @@ MAN3=		Mail::SPF.3 Mail::SPF::Mech::PTR.3 Mail::SPF::Mech.3 \
 		Mail::SPF::Base.3 Mail::SPF::Mech::All.3 Mail::SPF::Term.3 \
 		Mail::SPF::v1::Record.3 Mail::SPF::Mech::Exists.3
 
-OPTIONS_DEFINE=	SPFQUERY SPFQUERY_SUFFIX DOCS
-SPFQUERY_DESC=	Install spfquery command-line tool
-SPFQUERY_SUFFIX_DESC=Add .pl suffix to spfquery
-OPTIONS_DEFAULT=SPFQUERY SPFQUERY_SUFFIX
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.pre.mk>
 
 DOCSDIR=	${PREFIX}/share/doc/p5-Mail-SPF
 DOCS=		CHANGES INSTALL LICENSE README TODO
 
-.if ${PORT_OPTIONS:MSPFQUERY}
-PLIST_SUB+=	SPFQUERY=""
-
-.if ${PORT_OPTIONS:MSPFQUERY_SUFFIX}
-PLIST_SUB+=	SPFQUERY_SUFFIX=".pl"
-MAN1+=		spfquery.pl.1
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-spfquery-suffix
 post-extract:
 	${MV} ${WRKSRC}/bin/spfquery ${WRKSRC}/bin/spfquery.pl
-.else
-PLIST_SUB+=	SPFQUERY_SUFFIX=""
-MAN1+=		spfquery.1
-CONFLICTS+=	libspf2-[0-9]*
-.endif
-
-.else
-PLIST_SUB+=	SPFQUERY="@comment "
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-no-spfquery
-.endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
