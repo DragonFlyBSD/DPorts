@@ -1,12 +1,7 @@
-# Ports collection makefile for:  horde-timeobjects
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/horde-timeobjects/Makefile,v 1.4 2013/02/12 17:38:58 svnexp Exp $
-#
+# $FreeBSD: devel/horde-timeobjects/Makefile 321450 2013-06-21 08:28:05Z mm $
 
 PORTNAME=	timeobjects
-PORTVERSION=	2.0.3
+PORTVERSION=	2.0.4
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	horde-
 
