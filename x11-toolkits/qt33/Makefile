@@ -1,11 +1,12 @@
 # Created by: will@cvs.kde.org
-# $FreeBSD: x11-toolkits/qt33/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: x11-toolkits/qt33/Makefile 321482 2013-06-21 17:24:13Z rakuco $
 
 PORTNAME=	qt
 PORTVERSION=	3.3.8
 PORTREVISION=	14
 CATEGORIES?=	x11-toolkits ipv6
 MASTER_SITES=	${MASTER_SITE_QT}
+MASTER_SITE_SUBDIR=	archive/qt/${PORTVERSION:R:R}
 DISTNAME=	qt-x11-free-${PORTVERSION}
 DIST_SUBDIR=	KDE
 
