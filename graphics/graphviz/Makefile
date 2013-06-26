@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/graphviz/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: graphics/graphviz/Makefile 321714 2013-06-24 20:21:17Z dinoex $
 
 PORTNAME=	graphviz
 PORTVERSION=	2.30.1
@@ -150,7 +150,7 @@ PLIST_SUB+=		WITH_XPM="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USES+=	gettext
+USES+=			gettext
 .else
 CONFIGURE_ARGS+=	--disable-nls
 .endif
@@ -431,8 +431,9 @@ post-patch:
 		${XARGS} ${REINPLACE_CMD} \
 		-e 's|libdir=@libdir@|libdir=@libdir@/@PACKAGE@|';
 	@${REINPLACE_CMD} -e "s|/usr/include/php|${LOCALBASE}/include/php|g" \
-		-e "s|vendorarch|installsitearch|g" \
+		-e "s|vendorarchdir|sitearchdir|g" \
 		-e "s|-lruby|-lruby${RUBY_SUFFIX}|g" \
+		-e "s|Config::|RbConfig::|" \
 		-e '/if test/ s| == | = |g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|#include "gui.h"|#include "gui/gui.h"|' \
 		${WRKSRC}/cmd/smyrna/tvnodes.h
