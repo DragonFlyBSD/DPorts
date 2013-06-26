@@ -1,10 +1,10 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/gtk20/Makefile 318764 2013-05-22 12:03:16Z kwm $
+# $FreeBSD: x11-toolkits/gtk20/Makefile 321068 2013-06-16 19:25:27Z kwm $
 #   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.237 2013/03/04 17:44:38 kwm Exp $
 # Remember to update graphics/gtk-update-icon-cache too.
 
 PORTNAME=	gtk
-PORTVERSION=	2.24.18
+PORTVERSION=	2.24.19
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
