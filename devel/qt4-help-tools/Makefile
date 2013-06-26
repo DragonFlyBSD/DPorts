@@ -1,10 +1,9 @@
 # Created by: danny@ricin.com
-# $FreeBSD: devel/qt4-help-tools/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/qt4-help-tools/Makefile 321480 2013-06-21 17:13:51Z rakuco $
 
 PORTNAME=	help
 DISTVERSION=	${QT4_VERSION}
 CATEGORIES?=	devel
-MASTER_SITES=	${MASTER_SITE_QT}
 PKGNAMEPREFIX=	qt4-
 PKGNAMESUFFIX=	-tools
 
