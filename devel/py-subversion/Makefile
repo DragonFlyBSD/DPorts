@@ -2,7 +2,7 @@
 # Date Created:                April 17 2004
 # Whom:                        thinker@branda.to
 #
-# $FreeBSD: ports/devel/py-subversion/Makefile,v 1.14 2012/11/17 05:56:51 svnexp Exp $
+# $FreeBSD: devel/py-subversion/Makefile 321328 2013-06-19 21:13:34Z ohauer $
 #
 
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,6 +12,8 @@ COMMENT=	Python bindings for version control system
 
 .if defined(WITH_SUBVERSION_VER) && ${WITH_SUBVERSION_VER} == 16
 MASTERDIR=	${.CURDIR}/../../devel/subversion16
+.elif defined(WITH_SUBVERSION_VER) && ${WITH_SUBVERSION_VER} == 17
+MASTERDIR=	${.CURDIR}/../../devel/subversion17
 .else
 MASTERDIR=	${.CURDIR}/../../devel/subversion
 .endif
