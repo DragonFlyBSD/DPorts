@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: ports/x11-toolkits/py-qt4-gui/Makefile,v 1.29 2013/02/03 22:24:14 svnexp Exp $
+# $FreeBSD: x11-toolkits/py-qt4-gui/Makefile 311475 2013-02-03 18:16:07Z makc $
 
 PORTNAME=	gui
 PORTVERSION=	${PYQT4_VERSION}
