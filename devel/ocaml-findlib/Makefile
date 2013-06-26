@@ -1,13 +1,8 @@
-# ex:ts=8
-# Ports collection makefile for:	findlib
-# Date created:			Jul 10, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/ocaml-findlib/Makefile,v 1.34 2012/11/17 05:56:02 svnexp Exp $
-#
+# Created by: 			ijliao
+# $FreeBSD: devel/ocaml-findlib/Makefile 320893 2013-06-14 11:30:21Z johans $
 
 PORTNAME=	findlib
-PORTVERSION=	1.3.3
+PORTVERSION=	1.4
 CATEGORIES=	devel
 MASTER_SITES=	http://download.camlcity.org/download/
 PKGNAMEPREFIX=	ocaml-
