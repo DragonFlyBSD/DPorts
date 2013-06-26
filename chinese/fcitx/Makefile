@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/fcitx/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: chinese/fcitx/Makefile 321140 2013-06-17 16:18:54Z antoine $
 
 PORTNAME=	fcitx
 PORTVERSION=	4.2.6.1
@@ -113,10 +113,10 @@ EXTRA_PATCHES+=	${FILESDIR}/getline-src_lib_fcitx-utils_utils.c \
 
 post-install:
 .if ${PORT_OPTIONS:MGTK2}
-	-gtk-query-immodules-2.0 > ${LOCALBASE}/etc/gtk-2.0/gtk.immodules
+	-${LOCALBASE}/bin/gtk-query-immodules-2.0 > ${LOCALBASE}/etc/gtk-2.0/gtk.immodules
 .endif
 .if ${PORT_OPTIONS:MGTK3}
-	-gtk-query-immodules-3.0 > ${LOCALBASE}/lib/gtk-3.0/${GTK3_VERSION}/immodules.cache
+	-${LOCALBASE}/bin/gtk-query-immodules-3.0 > ${LOCALBASE}/lib/gtk-3.0/${GTK3_VERSION}/immodules.cache
 .endif
 	@${ECHO_CMD}
 	@${CAT} ${PKGMESSAGE}
