@@ -2,11 +2,11 @@
 # Date created:				June 26th 1997
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: misc/p5-Locale-Codes/Makefile 313906 2013-03-11 14:21:24Z demon $
+# $FreeBSD: misc/p5-Locale-Codes/Makefile 321668 2013-06-24 07:11:47Z demon $
 #
 
 PORTNAME=	Locale-Codes
-PORTVERSION=	3.25
+PORTVERSION=	3.26
 CATEGORIES=	misc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
