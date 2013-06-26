@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: ports/devel/py-qt4-designer/Makefile,v 1.23 2013/02/03 22:23:03 svnexp Exp $
+# $FreeBSD: devel/py-qt4-designer/Makefile 311475 2013-02-03 18:16:07Z makc $
 
 PORTNAME=	designer
 PORTVERSION=	${PYQT4_VERSION}
