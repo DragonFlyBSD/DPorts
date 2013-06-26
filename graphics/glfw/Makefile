@@ -1,8 +1,8 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/glfw/Makefile 320230 2013-06-08 02:27:06Z miwi $
+# $FreeBSD: graphics/glfw/Makefile 320929 2013-06-14 14:27:03Z miwi $
 
 PORTNAME=	glfw
-PORTVERSION=	2.7.8
+PORTVERSION=	2.7.9
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
