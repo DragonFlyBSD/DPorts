@@ -1,9 +1,5 @@
-# New ports collection makefile for:   subversion-perl
-# Date Created:                6 February 2004
-# Whom:                        Autrijus Tang <autrijus@autrijus.org>
-#
-# $FreeBSD: devel/p5-subversion/Makefile 320709 2013-06-12 17:45:02Z az $
-#
+# Created By: Autrijus Tang <autrijus@autrijus.org>
+# $FreeBSD: devel/p5-subversion/Makefile 321328 2013-06-19 21:13:34Z ohauer $
 
 PKGNAMEPREFIX=	p5-
 
@@ -12,6 +8,8 @@ COMMENT=	Perl bindings for Version control system
 
 .if defined(WITH_SUBVERSION_VER) && ${WITH_SUBVERSION_VER} == 16
 MASTERDIR=	${.CURDIR}/../../devel/subversion16
+.elif defined(WITH_SUBVERSION_VER) && ${WITH_SUBVERSION_VER} == 17
+MASTERDIR=	${.CURDIR}/../../devel/subversion17
 .else
 MASTERDIR=	${.CURDIR}/../../devel/subversion
 .endif
