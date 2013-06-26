@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/glog/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: devel/glog/Makefile 321203 2013-06-18 16:25:47Z wg $
 
 PORTNAME=	glog
-PORTVERSION=	0.3.2
+PORTVERSION=	0.3.3
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
@@ -15,7 +15,6 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 GNU_CONFIGURE=	yes
 USES=	pathfix
 USE_LDCONFIG=	yes
-USE_GCC=	4.2+
 PROJECTHOST=	google-glog
 
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -23,17 +22,9 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lexecinfo
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "x86_64" || ${ARCH} =="ia64" || ${ARCH} =="powerpc" || ${ARCH} =="sparc64"
-EXTRA_PATCHES=	${FILESDIR}/extra-patch-src-utilities.cc
-.endif
-
-.if ${ARCH} == "x86_64"
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-src-utilities.h
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|^docdir.*|docdir = ${DOCSDIR}|' ${WRKSRC}/Makefile.in
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -E -e '/^install-data-am/,/^$$/ s,install-(dist_doc|dist_html|html)DATA,,g' \
 	    ${WRKSRC}/Makefile.in
 .endif
