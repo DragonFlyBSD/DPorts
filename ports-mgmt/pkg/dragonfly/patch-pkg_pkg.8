@@ -1,18 +1,18 @@
---- pkg/pkg.8.orig	2012-11-06 14:40:24.000000000 +0100
-+++ pkg/pkg.8	2012-11-10 04:15:04.000000000 +0100
-@@ -28,7 +28,7 @@
- .Nm
- .Op Fl v
+--- pkg/pkg.8.orig	2013-06-25 09:55:11.000000000 +0000
++++ pkg/pkg.8
+@@ -30,7 +30,7 @@
  .Op Fl d
+ .Op Fl l
+ .Op Fl N
 -.Op Fl j Ao jail name or id Ac | Fl c Ao chroot path Ac
 +.Op Fl c Ao chroot path Ac
+ .Op Fl C Ao configuration file Ac
  .Ao command Ac Ao Ar flags Ac
  .\" ---------------------------------------------------------------------------
- .Sh DESCRIPTION
-@@ -53,22 +53,6 @@
- .Nm
- .It Fl d
- Show debug information
+@@ -128,22 +128,6 @@ is installed and activated:
+     # pkg_install-specifics
+   fi
+ .Ed
 -.It Fl j Ao jail name or id Ac
 -.Nm
 -will execute in the given
