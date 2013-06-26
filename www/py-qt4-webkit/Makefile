@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: ports/www/py-qt4-webkit/Makefile,v 1.14 2013/02/03 22:24:09 svnexp Exp $
+# $FreeBSD: www/py-qt4-webkit/Makefile 311475 2013-02-03 18:16:07Z makc $
 
 PORTNAME=	webkit
 PORTVERSION=	${PYQT4_VERSION}
