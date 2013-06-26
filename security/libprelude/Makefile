@@ -1,9 +1,9 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/libprelude/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: security/libprelude/Makefile 321326 2013-06-19 21:03:41Z antoine $
 
 PORTNAME=	libprelude
 PORTVERSION=	1.0.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	https://www.prelude-ids.org/attachments/download/241/
 

@@ -1,4 +1,4 @@
-@comment $FreeBSD: security/libprelude/pkg-plist 308968 2012-12-15 22:22:37Z pawel $
+@comment $FreeBSD: security/libprelude/pkg-plist 321326 2013-06-19 21:03:41Z antoine $
 bin/libprelude-config
 bin/prelude-adduser
 bin/prelude-admin
@@ -101,3 +101,5 @@ share/aclocal/libprelude.m4
 @dirrm etc/prelude/default
 @dirrmtry etc/prelude/profile
 @dirrmtry etc/prelude
+@exec install -d -o root -g wheel -m 711 /var/spool/prelude
+@unexec rmdir /var/spool/prelude 2>/dev/null || true
