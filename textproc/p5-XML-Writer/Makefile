@@ -1,8 +1,8 @@
 # Created by: Adam Herzog <adam@herzogdesigns.com>
-# $FreeBSD: textproc/p5-XML-Writer/Makefile 319358 2013-05-29 08:28:48Z tobez $
+# $FreeBSD: textproc/p5-XML-Writer/Makefile 320891 2013-06-14 10:01:22Z tobez $
 
 PORTNAME=	XML-Writer
-PORTVERSION=	0.622
+PORTVERSION=	0.623
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JOSEPHW
