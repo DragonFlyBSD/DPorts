@@ -1,11 +1,8 @@
-# New ports collection makefile for:	py-mutagen
-# Date created:			15 May 2006
-# Whom:				Byung-Hee HWANG <bh@izb.knu.ac.kr>
-#
-# $FreeBSD: ports/audio/py-mutagen/Makefile,v 1.17 2012/11/17 05:54:42 svnexp Exp $
+# Created by: Byung-Hee HWANG <bh@izb.knu.ac.kr>
+# $FreeBSD: audio/py-mutagen/Makefile 321575 2013-06-22 14:49:53Z swills $
 
 PORTNAME=	mutagen
-PORTVERSION=	1.20
+PORTVERSION=	1.21
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,4 +22,9 @@ MAN1=		mid3iconv.1 \
 		mutagen-inspect.1 \
 		mutagen-pony.1
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|share/man/man1|man/man1|' ${WRKSRC}/setup.py
+
+.include <bsd.port.post.mk>
