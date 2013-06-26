@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: ports/devel/py-sip/Makefile,v 1.47 2013/02/03 22:23:03 svnexp Exp $
+# $FreeBSD: devel/py-sip/Makefile 321498 2013-06-21 19:13:05Z rakuco $
 
 PORTNAME=	sip
 PORTVERSION=	${SIP_VERSION}
@@ -35,7 +35,7 @@ do-configure:
 	cd ${WRKSRC} && ${PYTHON_CMD} configure.py ${ARGS}
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR} && cd ${WRKSRC}/doc/html && \
 		${COPYTREE_SHARE} \. ${DOCSDIR}
 .endif
