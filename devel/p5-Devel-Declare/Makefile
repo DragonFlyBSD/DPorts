@@ -2,7 +2,7 @@
 # Date created:	   16 Aug 2008
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-Devel-Declare/Makefile,v 1.27 2012/11/17 05:56:13 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-Declare/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Devel-Declare
@@ -27,10 +27,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Devel::Declare.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
