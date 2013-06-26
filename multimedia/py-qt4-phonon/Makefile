@@ -1,4 +1,4 @@
-# $FreeBSD: ports/multimedia/py-qt4-phonon/Makefile,v 1.16 2013/02/03 22:23:37 svnexp Exp $
+# $FreeBSD: multimedia/py-qt4-phonon/Makefile 311475 2013-02-03 18:16:07Z makc $
 
 PORTNAME=	phonon
 PORTVERSION=	${PYQT4_VERSION}
