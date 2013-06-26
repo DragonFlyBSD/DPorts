@@ -1,15 +1,13 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: textproc/gsed/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/gsed/Makefile 321705 2013-06-24 18:54:47Z johans $
 
 PORTNAME=	sed
-PORTVERSION=	4.2.1
-PORTREVISION=	2
+PORTVERSION=	4.2.2
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNU}
-MASTER_SITE_SUBDIR=	${PORTNAME}
+MASTER_SITES=	GNU
 PKGNAMEPREFIX=	g
 
-MAINTAINER=	gabor@FreeBSD.org
+MAINTAINER=	johans@FreeBSD.org
 COMMENT=	The GNU stream editor
 
 GNU_CONFIGURE=	yes
@@ -25,6 +23,8 @@ DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 USE_GMAKE=	yes
 INFO=		sed
 MAN1=		gsed.1
+
+OPTIONS_DEFINE=	NLS DOCS
 
 .include <bsd.port.pre.mk>
 
