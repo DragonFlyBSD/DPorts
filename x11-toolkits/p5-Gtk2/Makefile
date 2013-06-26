@@ -2,7 +2,7 @@
 # Date created:					Oct 27 2003
 # Whom:						clsung@dragon2.net
 #
-# $FreeBSD: ports/x11-toolkits/p5-Gtk2/Makefile,v 1.47 2012/11/17 06:03:37 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Gtk2/Makefile 321371 2013-06-20 11:38:20Z swills $
 #
 
 PORTNAME=	Gtk2
@@ -27,6 +27,7 @@ USE_GNOME=	gtk20 pango
 PERL_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ENV+=	FORCE_GMAKE=yes
+MAKE_ENV+=	LANG=C
 
 post-install:
 	@cd ${WRKSRC}/blib/man3 && ${FIND} * -name "*.3" | ${SED} \
