@@ -3,11 +3,11 @@
 # Date created:				Feb 13 2008
 # Whom:					vanilla
 #
-# $FreeBSD: devel/log4shib/Makefile 320341 2013-06-09 15:17:04Z girgen $
+# $FreeBSD: devel/log4shib/Makefile 321135 2013-06-17 15:31:58Z girgen $
 #
 
 PORTNAME=	log4shib
-DISTVERSION=	1.0.6
+DISTVERSION=	1.0.7
 CATEGORIES=	devel
 MASTER_SITES=	http://shibboleth.net/downloads/${PORTNAME}/${DISTVERSION}/
 
