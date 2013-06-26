@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-qt4-declarative/Makefile,v 1.9 2013/02/03 22:23:03 svnexp Exp $
+# $FreeBSD: devel/py-qt4-declarative/Makefile 311475 2013-02-03 18:16:07Z makc $
 
 PORTNAME=	declarative
 PORTVERSION=	${PYQT4_VERSION}
