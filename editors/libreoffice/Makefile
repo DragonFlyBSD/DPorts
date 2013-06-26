@@ -1,4 +1,4 @@
-# $FreeBSD: editors/libreoffice/Makefile 318880 2013-05-23 15:35:17Z tijl $
+# $FreeBSD: editors/libreoffice/Makefile 321324 2013-06-19 20:52:13Z jkim $
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -92,7 +92,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${LOVERSION}
 CONFIGURE_ENV=		DMAKE=${LOCALBASE}/bin/dmake \
 			GPERF=${LOCALBASE}/bin/gperf \
 			PYTHON_CFLAGS="`${PYTHON_VERSION}-config --cflags`" \
-			PYTHON_LIBS="`${PYTHON_VERSION}-config --libs`"
+			PYTHON_LIBS="`${PYTHON_VERSION}-config --libs`" \
+			TMPDIR=${WRKDIR}
 
 CONFIGURE_ARGS+=	--disable-dbus \
 			--disable-epm \
@@ -170,8 +171,6 @@ MAKE_ENV+=	ENVLINKFLAGS="${LDFLAGS}"
 MAKE_ENV+=	LANG=C LC_ALL=C
 MAKE_ENV+=	SED="${LOCALBASE}/bin/gsed" USE_GMAKE=1
 
-TMPDIR?=	/tmp
-
 do-configure:
 	cd ${WRKSRC} && ./autogen.sh ${CONFIGURE_ARGS}
 
@@ -219,9 +218,5 @@ post-install:
 	@${MKDIR} ${PREFIX}/etc/bash_completion.d
 	@${INSTALL_SCRIPT} ${LODESTDIR}/etc/bash_completion.d/libreoffice.sh \
 	    ${PREFIX}/etc/bash_completion.d
-
-post-clean:
-	@${RM} -f ${TMPDIR}/lobuild
-	@${RM} -fr ${TMPDIR}/LibreOffice ${TMPDIR}/LibreOffice_SDK
 
 .include <bsd.port.post.mk>

@@ -1,8 +1,8 @@
-# $FreeBSD: editors/libreoffice/Makefile.common 317743 2013-05-09 18:26:51Z jkim $
+# $FreeBSD: editors/libreoffice/Makefile.common 321324 2013-06-19 20:52:13Z jkim $
 
 PORTNAME=	libreoffice
-PORTVERSION=	4.0.3
-RCVER=		3
+PORTVERSION=	4.0.4
+RCVER=		2
 #PRERELEASE=	yes
 LOVERSION=	${PORTVERSION}.${RCVER}
 CATEGORIES?=	editors
