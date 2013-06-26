@@ -1,9 +1,5 @@
-# New Ports collection makefile for:	Radius Engine
-# Date created:		2012-05-17
-# Whom:			nemysis@gmx.ch
-#
-# $FreeBSD: ports/graphics/radius-engine/Makefile,v 1.3 2012/11/17 05:58:21 svnexp Exp $
-#
+# Created by: nemysis <nemysis@gmx.ch>
+# $FreeBSD: graphics/radius-engine/Makefile 321683 2013-06-24 13:56:07Z wg $
 
 PORTNAME=	radius-engine
 PORTVERSION=	1.1
@@ -19,11 +15,12 @@ LIB_DEPENDS=	lua-5.1:${PORTSDIR}/lang/lua \
 		png15:${PORTSDIR}/graphics/png \
 		physfs.1:${PORTSDIR}/devel/physfs
 
+USES=		pathfix
+USE_SDL=	sdl sound
+USE_GL=		glu
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CFLAGS+=	-I${LOCALBASE}/include
-USE_SDL=	sdl sound
-USE_GL=		glu
 MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	include/radius.h \
@@ -34,6 +31,5 @@ PLIST_DIRSTRY=	libdata/pkgconfig
 post-patch:
 	@${REINPLACE_CMD} -e 's|lua5.1|lua-5.1|g' \
 		${WRKSRC}/acinclude.m4 ${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|(pkgconfigdir)|{PREFIX}/libdata/pkgconfig|g' ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
