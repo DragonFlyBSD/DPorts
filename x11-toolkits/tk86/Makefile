@@ -1,9 +1,9 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/tk86/Makefile 318766 2013-05-22 13:04:58Z gahr $
+# $FreeBSD: x11-toolkits/tk86/Makefile 321364 2013-06-20 09:30:13Z gahr $
 
 PORTNAME=	tk
 PORTVERSION=	8.6.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/tcl/Tcl/${PORTVERSION} \
 		${MASTER_SITE_TCLTK}
@@ -28,7 +28,7 @@ INSTALL_TARGET=	install
 
 USE_LDCONFIG=	yes
 USE_TCL=	${SHORT_TK_VER}
-USE_XORG=	x11
+USE_XORG=	x11 xt
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared \
 		--enable-man-suffix=.${MAN_SUFFIX} \
