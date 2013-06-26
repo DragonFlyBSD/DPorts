@@ -1,11 +1,10 @@
 # Created by: Dima Sivachenko <dima@Chg.RU>
-# $FreeBSD: x11-toolkits/fltk/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-toolkits/fltk/Makefile 321172 2013-06-18 06:43:13Z gahr $
 
 PORTNAME=	fltk
 PORTVERSION=	1.3.2
 CATEGORIES=	x11-toolkits
-MASTER_SITES=	${MASTER_SITE_EASYSW}
-MASTER_SITE_SUBDIR=	fltk/${PORTVERSION}
+MASTER_SITES=	http://fltk.org/pub/${PORTNAME}/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
 MAINTAINER=	gahr@FreeBSD.org
