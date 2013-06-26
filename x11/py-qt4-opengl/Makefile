@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: ports/x11/py-qt4-opengl/Makefile,v 1.23 2013/02/03 22:24:11 svnexp Exp $
+# $FreeBSD: x11/py-qt4-opengl/Makefile 311475 2013-02-03 18:16:07Z makc $
 
 PORTNAME=	opengl
 PORTVERSION=	${PYQT4_VERSION}
