@@ -1,8 +1,8 @@
 # Created by: Leo Vandewoestijne <freebsd@dns-lab.com>
-# $FreeBSD: sysutils/liburcu/Makefile 320197 2013-06-07 12:36:07Z koobs $
+# $FreeBSD: sysutils/liburcu/Makefile 321591 2013-06-22 21:05:04Z rakuco $
 
 PORTNAME=	liburcu
-PORTVERSION=	0.7.6
+PORTVERSION=	0.7.7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://lttng.org/files/urcu/
 DISTNAME=	userspace-rcu-${PORTVERSION}
@@ -12,7 +12,8 @@ COMMENT=	Userspace read-copy-update (RCU) data synchronization library
 
 LICENSE=	LGPL21
 
-PORTDOCS=	ChangeLog README cds-api.txt rcu-api.txt uatomic-api.txt
+PORTDOCS=	ChangeLog CodingStyle LICENSE README \
+		cds-api.txt rcu-api.txt uatomic-api.txt
 
 USES=		pathfix
 USE_BZIP2=	yes
