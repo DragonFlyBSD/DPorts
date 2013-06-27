@@ -1,7 +1,7 @@
-# $FreeBSD: math/eigen3/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: math/eigen3/Makefile 321466 2013-06-21 12:07:03Z rakuco $
 
 PORTNAME=	eigen
-PORTVERSION=	3.1.2
+PORTVERSION=	3.1.3
 CATEGORIES=	math
 MASTER_SITES=	https://bitbucket.org/${PORTNAME}/${PORTNAME}/get/
 DISTNAME=	${PORTVERSION}
@@ -20,6 +20,6 @@ NO_BUILD=	yes
 
 LATEST_LINK=	${PORTNAME}3
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-5097c01bcdc4
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-2249f9c22fe8
 
 .include <bsd.port.mk>
