@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-foreach/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: devel/R-cran-foreach/Makefile 321461 2013-06-21 11:29:56Z tota $
 
 PORTNAME=	foreach
-PORTVERSION=	1.4.0
-PORTREVISION=	5
+PORTVERSION=	1.4.1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
