@@ -1,9 +1,5 @@
-# New ports collection makefile for:	quesoglc
-# Date created:		04 Jun 2009
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: graphics/quesoglc/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: graphics/quesoglc/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	quesoglc
 PORTVERSION=	0.7.2
@@ -14,14 +10,14 @@ MASTER_SITES=	SF/${PORTNAME}/QuesoGLC/${PORTVERSION}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Free implementation of the OpenGL Character Renderer
 
-LIB_DEPENDS=	fribidi.3:${PORTSDIR}/converters/fribidi \
-		freetype.9:${PORTSDIR}/print/freetype2 \
-		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig
+LIB_DEPENDS=	fribidi:${PORTSDIR}/converters/fribidi \
+		freetype:${PORTSDIR}/print/freetype2 \
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USES=	pathfix
+USES=		pathfix
 USE_GL=		gl glu glut
 USE_LDCONFIG=	yes
 
@@ -32,7 +28,9 @@ CONFIGURE_ARGS=	--without-glew --with-fribidi
 
 PORTDOCS=	README
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
