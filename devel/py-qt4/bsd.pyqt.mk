@@ -1,6 +1,6 @@
 # bsd.pyqt.mk - Global definitions for PyQt related ports
 #
-# $FreeBSD: ports/devel/py-qt4/bsd.pyqt.mk,v 1.1 2013/02/03 22:23:03 svnexp Exp $
+# $FreeBSD: devel/py-qt4/bsd.pyqt.mk 321498 2013-06-21 19:13:05Z rakuco $
 #
 
 PYQT_MAINTAINER=	kde@FreeBSD.org
@@ -14,11 +14,11 @@ MASTER_SITES_PYQT4=	SF/pyqt/PyQt4/PyQt-${PORTVERSION} \
 MASTER_SITES_QSCI2=	SF/pyqt/QScintilla2/QScintilla-${PORTVERSION} \
 			${MASTER_SITE_GENTOO:S,%SUBDIR%,distfiles,}
 
-SIP_VERSION=		4.14.3
+SIP_VERSION=		4.14.7
 #SIP_SNAP=		-snapshot-20100102
-PYQT4_VERSION=		4.9.6
+PYQT4_VERSION=		4.10.2
 #PYQT4_SNAP=		-snapshot-20100110
-QSCI2_VERSION=		2.7
+QSCI2_VERSION=		2.7.2
 #QSCI2_SNAP=		-snapshot-20091222
 
 SIP_DISTNAME=		sip-${SIP_VERSION}${SIP_SNAP}
