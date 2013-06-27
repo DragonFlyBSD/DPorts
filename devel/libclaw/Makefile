@@ -1,8 +1,8 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/libclaw/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: devel/libclaw/Makefile 320902 2013-06-14 12:23:58Z amdmi3 $
 
 PORTNAME=	libclaw
-PORTVERSION=	1.7.2
+PORTVERSION=	1.7.3
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
