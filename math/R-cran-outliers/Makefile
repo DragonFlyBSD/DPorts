@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: math/R-cran-outliers/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: math/R-cran-outliers/Makefile 321195 2013-06-18 15:31:17Z danfe $
 
 PORTNAME=	outliers
 PORTVERSION=	0.14
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
-MAINTAINER=	danfe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Collection of some tests commonly used for identifying outliers
 
 USE_R_MOD=	yes
