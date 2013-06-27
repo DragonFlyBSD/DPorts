@@ -1,15 +1,14 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: misc/mbuffer/Makefile 319758 2013-06-03 07:40:32Z jgh $
+# $FreeBSD: misc/mbuffer/Makefile 321549 2013-06-22 07:40:17Z mm $
 
 PORTNAME=	mbuffer
-PORTVERSION=	2011.07.24
-PORTREVISION=	1
+PORTVERSION=	2013.02.20
 CATEGORIES=	misc
 MASTER_SITES=	http://www.maier-komor.de/software/mbuffer/
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//g}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	rafan@FreeBSD.org
+MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Tool for buffering data streams
 
 LICENSE=	GPLv3
