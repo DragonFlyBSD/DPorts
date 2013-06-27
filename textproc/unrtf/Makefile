@@ -1,8 +1,8 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: textproc/unrtf/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/unrtf/Makefile 321405 2013-06-20 17:09:09Z bf $
 
 PORTNAME=	unrtf
-PORTVERSION=	0.21.3
+PORTVERSION=	0.21.4
 CATEGORIES=	textproc
 MASTER_SITES=	GNU
 
