@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-dnsruby
-# Date created:				26 Aug, 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/dns/rubygem-dnsruby/Makefile,v 1.23 2012/11/17 05:57:11 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: dns/rubygem-dnsruby/Makefile 321618 2013-06-23 05:14:11Z swills $
 
 PORTNAME=	dnsruby
-PORTVERSION=	1.53
+PORTVERSION=	1.54
 CATEGORIES=	dns rubygems
 MASTER_SITES=	RG
 
