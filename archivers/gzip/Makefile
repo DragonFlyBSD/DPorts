@@ -1,14 +1,12 @@
 # Created by: Cyrille Lefevre <cyrille.lefevre@laposte.net>
-# $FreeBSD: archivers/gzip/Makefile 315731 2013-04-05 09:22:10Z bapt $
+# $FreeBSD: archivers/gzip/Makefile 321707 2013-06-24 19:04:49Z johans $
 
 PORTNAME=	gzip
-PORTVERSION=	1.4
-PORTREVISION=	2
+PORTVERSION=	1.6
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_GNU}
-MASTER_SITE_SUBDIR=	${PORTNAME}
+MASTER_SITES=	GNU
 
-MAINTAINER=	gabor@FreeBSD.org
+MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Compression utility designed to be a replacement for compress
 
 USES=		charsetfix
