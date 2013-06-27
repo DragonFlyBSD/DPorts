@@ -1,4 +1,4 @@
-@comment $FreeBSD: sysutils/ganglia-monitor-core/pkg-plist 320696 2013-06-12 13:59:16Z skreuzer $
+@comment $FreeBSD: sysutils/ganglia-monitor-core/pkg-plist 321257 2013-06-19 14:46:21Z miwi $
 bin/ganglia-config
 bin/gstat
 bin/gmetric
@@ -34,5 +34,3 @@ lib/ganglia/modsys.so
 sbin/gmond
 @dirrmtry etc/gmond.conf.d
 @dirrm lib/ganglia
-@dirrmtry var/db/ganglia/rrds
-@dirrmtry var/db/ganglia
