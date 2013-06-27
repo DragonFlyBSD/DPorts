@@ -1,20 +1,16 @@
 # Created by: Guixing Bai<khsing.cn@gmail.com>
-# $FreeBSD: www/py-tornado/Makefile 317579 2013-05-07 07:18:48Z rm $
+# $FreeBSD: www/py-tornado/Makefile 320985 2013-06-15 11:25:09Z rm $
 
 PORTNAME=	tornado
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	www python
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	khsing.cn@gmail.com
 COMMENT=	Python Web Server from FriendFeed
 
 LICENSE=	AL2
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	facebook
-GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	31cef1a
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
