@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Class-Load-XS/Makefile,v 1.8 2012/12/04 09:24:19 svnexp Exp $
+# $FreeBSD: devel/p5-Class-Load-XS/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	Class-Load-XS
 PORTVERSION=	0.06
@@ -23,10 +23,4 @@ PERL_MODBUILD=	yes
 
 MAN3=		Class::Load::XS.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
