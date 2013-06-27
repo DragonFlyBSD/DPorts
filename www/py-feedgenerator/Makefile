@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-feedgenerator
-# Date created:		2011-06-19
-# Whom:			Julien Laffaye <jlaffaye@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-feedgenerator/Makefile,v 1.2 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: Julien Laffaye <jlaffaye@FreeBSD.org>
+# $FreeBSD: www/py-feedgenerator/Makefile 321032 2013-06-16 10:29:45Z koobs $
 
 PORTNAME=	feedgenerator
-PORTVERSION=	1.2.1
+PORTVERSION=	1.5
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +12,13 @@ COMMENT=	Standalone version of django.utils.feedgenerator
 
 LICENSE=	BSD
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=yes
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz \
+		${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six
+
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	easy_install
+
+regression-test: build
+	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
 .include <bsd.port.mk>
