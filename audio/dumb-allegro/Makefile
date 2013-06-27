@@ -1,11 +1,7 @@
-# New ports collection makefile for:    audio/dumb-allegro
-# Date created:                 13 Oct 2009
-# Whom:                         Stas Timokhin <stast@bsdportal.ru>
-#
-# $FreeBSD: ports/audio/dumb-allegro/Makefile,v 1.2 2012/11/17 05:54:30 svnexp Exp $
-#
+# Created by: Stas Timokhin <stast@bsdportal.ru>
+# $FreeBSD: audio/dumb-allegro/Makefile 320972 2013-06-14 22:25:52Z bapt $
 
-WITH_ALLEGRO=	yes
+OPTIONS_SLAVE=	ALLEGRO
 MASTERDIR=	${.CURDIR}/../dumb
 
 .include "${MASTERDIR}/Makefile"
