@@ -1,18 +1,18 @@
-# $FreeBSD: devel/libgit2/Makefile 316953 2013-04-30 17:32:00Z bapt $
+# $FreeBSD: devel/libgit2/Makefile 321599 2013-06-22 22:22:07Z wg $
 
 PORTNAME=	libgit2
-PORTVERSION=	0.17.0
+PORTVERSION=	0.18.0
 CATEGORIES=	devel
-MASTER_SITES=	GHC
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Portable, pure C implementation of the Git core
 
 LICENSE=	GPLv2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	libgit2
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+GH_TAGNAME=	v${PORTVERSION}
+GH_COMMIT=	a50086d
 
 USES=		cmake
 USE_LDCONFIG=	yes
