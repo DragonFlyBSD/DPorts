@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/p5-MooseX-Types-Perl/pkg-plist,v 1.2 2012/11/17 05:56:23 svnexp Exp $
+@comment $FreeBSD: devel/p5-MooseX-Types-Perl/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/MooseX/Types/Perl/.packlist
 %%SITE_PERL%%/MooseX/Types/Perl.pm
 @dirrmtry %%SITE_PERL%%/MooseX/Types

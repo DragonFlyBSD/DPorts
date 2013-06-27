@@ -2,7 +2,7 @@
 # Date created:		2011-02-16
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/devel/p5-MooseX-Types-Perl/Makefile,v 1.6 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Types-Perl/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	MooseX-Types-Perl
@@ -23,11 +23,6 @@ PERL_CONFIGURE=	yes
 MAN3=		MooseX::Types::Perl.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-BUILD_DEPENDS+=	p5-version>=0.82:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0.82:${PORTSDIR}/devel/p5-version
-.endif
 
 .if ${PERL_LEVEL} < 501400
 TEST_DEPENDS+=	p5-Test-Simple>=0.96:${PORTSDIR}/devel/p5-Test-Simple
