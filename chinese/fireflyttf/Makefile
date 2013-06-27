@@ -1,13 +1,9 @@
-# New ports collection makefile for:	firefly TrueType Font
-# Date created:		2 Sep 2004
-# Whom:			Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-#
-# $FreeBSD: ports/chinese/fireflyttf/Makefile,v 1.13 2012/11/17 05:54:56 svnexp Exp $
-#
+# Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
+# $FreeBSD: chinese/fireflyttf/Makefile 321295 2013-06-19 17:05:08Z rafan $
 
 PORTNAME=	fireflyttf
 PORTVERSION=	1.3.0
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	chinese x11-fonts
 MASTER_SITES?=	http://firefly.idv.tw/apt/firefly-font/ \
 		http://www.study-area.org/apt/firefly-font/
