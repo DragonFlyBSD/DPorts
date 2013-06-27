@@ -2,7 +2,7 @@
 # Date created:		2009-04-22
 # Whom:			TERAMOTO Masahiro <markun@onohara.to>
 #
-# $FreeBSD: ports/devel/p5-MouseX-Types-Path-Class/Makefile,v 1.6 2012/11/17 05:56:24 svnexp Exp $
+# $FreeBSD: devel/p5-MouseX-Types-Path-Class/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	MouseX-Types-Path-Class
@@ -30,10 +30,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		MouseX::Types::Path::Class.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
