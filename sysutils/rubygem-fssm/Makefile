@@ -1,7 +1,7 @@
-# $FreeBSD: ports/sysutils/rubygem-fssm/Makefile,v 1.5 2012/11/17 06:01:44 svnexp Exp $
+# $FreeBSD: sysutils/rubygem-fssm/Makefile 321659 2013-06-24 00:58:54Z swills $
 
 PORTNAME=	fssm
-PORTVERSION=	0.2.8.1
+PORTVERSION=	0.2.10
 CATEGORIES=	sysutils ruby
 MASTER_SITES=	RG
 
