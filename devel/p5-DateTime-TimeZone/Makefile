@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 316893 2013-04-30 08:03:14Z jadawin $
+# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	DateTime-TimeZone
 PORTVERSION=	1.59
@@ -35,14 +35,4 @@ post-install:
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500806
-RUN_DEPENDS+=	p5-PathTools>=3:${PORTSDIR}/devel/p5-PathTools
-.endif
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-parent>=0.223:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
