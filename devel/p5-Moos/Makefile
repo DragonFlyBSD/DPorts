@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Moos/Makefile,v 1.1 2012/12/05 03:21:43 svnexp Exp $
+# $FreeBSD: devel/p5-Moos/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	Moos
 PORTVERSION=	0.15
@@ -26,11 +26,4 @@ MAN3=		Moos.3 \
 		Moos::Role.3 \
 		oos.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat
-RUN_DEPENDS+=	p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
