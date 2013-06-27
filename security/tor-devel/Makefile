@@ -1,8 +1,8 @@
 # Created by: peter.thoenen@yahoo.com
-# $FreeBSD: security/tor-devel/Makefile 316073 2013-04-18 19:31:53Z bf $
+# $FreeBSD: security/tor-devel/Makefile 321351 2013-06-20 04:37:30Z bf $
 
 PORTNAME=	tor
-DISTVERSION=	0.2.4.12-alpha
+DISTVERSION=	0.2.4.14-alpha
 CATEGORIES=	security net ipv6
 MASTER_SITES=	https://www.torproject.org/dist/ \
 		ftp://ftp.bit.nl/mirror/tor/ \
@@ -30,7 +30,6 @@ MASTER_SITES=	https://www.torproject.org/dist/ \
 		http://tor.spline.de/dist/ \
 		http://tor.taiga-san.net/dist/ \
 		http://tor.vesta.nu/dist/ \
-		http://tordistua.reactor-xg.kiev.ua/ \
 		http://torproj.xpdm.us/dist/ \
 		https://torproject.antagonism.org/dist/ \
 		https://torproject.crypto.is/dist/ \
