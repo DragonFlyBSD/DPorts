@@ -1,8 +1,8 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-Catalyst-Authentication-Store-DBIx-Class/Makefile 320568 2013-06-11 14:42:06Z miwi $
+# $FreeBSD: www/p5-Catalyst-Authentication-Store-DBIx-Class/Makefile 321167 2013-06-18 03:18:43Z az $
 
 PORTNAME=	Catalyst-Authentication-Store-DBIx-Class
-PORTVERSION=	0.1503
+PORTVERSION=	0.1505
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
