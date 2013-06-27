@@ -1,10 +1,10 @@
 # Created by: ade, archie
-# $FreeBSD: x11-fm/nautilus/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: x11-fm/nautilus/Makefile 321088 2013-06-17 08:16:03Z kwm $
 #   $MCom: ports/x11-fm/nautilus/Makefile,v 1.212 2012/09/03 16:28:29 mezz Exp $
 
 PORTNAME=	nautilus
 PORTVERSION=	2.32.2.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -23,8 +23,9 @@ INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USES=		gettext
+USES=		desktop-file-utils shared-mime-info
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
-		librsvg2 desktopfileutils ltverhack gvfs ltasneededhack
+		librsvg2 ltverhack gvfs ltasneededhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS} -L${LOCALBASE}/lib -liconv" \
@@ -43,9 +44,10 @@ post-patch:
 		${WRKSRC}/eel/eel-*.[ch] \
 		${WRKSRC}/libnautilus-private/*.[ch] \
 		${WRKSRC}/src/nautilus-zoom-control.c
+	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
+		${WRKSRC}/configure ${WRKSRC}/eel/Makefile.in
 
 post-install:
 	@${MKDIR} ${PREFIX}/lib/nautilus/extensions-2.0
-	@-update-desktop-database
 
 .include <bsd.port.mk>
