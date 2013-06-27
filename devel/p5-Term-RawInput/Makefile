@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-Term-RawInput
-# Date created:				2011-02-06
-# Whom:					Frederic Culot <culot@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Term-RawInput/Makefile,v 1.3 2012/11/17 05:56:31 svnexp Exp $
-#
+# Created by: Frederic Culot <culot@FreeBSD.org>
+# $FreeBSD: devel/p5-Term-RawInput/Makefile 321552 2013-06-22 08:22:38Z culot $
 
 PORTNAME=	Term-RawInput
-PORTVERSION=	1.14
+PORTVERSION=	1.15
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:REEDFISH
