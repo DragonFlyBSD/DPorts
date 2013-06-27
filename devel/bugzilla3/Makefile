@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bugzilla3/Makefile 318912 2013-05-23 21:49:39Z ohauer $
+# $FreeBSD: devel/bugzilla3/Makefile 321428 2013-06-20 21:54:02Z ohauer $
 
 PORTNAME=	bugzilla
 PORTVERSION=	3.6.13
@@ -143,7 +143,7 @@ post-patch:
 	@${PERL} -pi -e 's/(default => ON_WINDOWS.+)apache/$$1www/' \
 		${WRKSRC}/Bugzilla/Install/Localconfig.pm
 
-.if ${PORT_OPTIONS:MPGSQL} && empty(PORT_OPTIONS:MMYSQL)
+.if ${PORT_OPTIONS:MPGSQL} && ! ${PORT_OPTIONS:MMYSQL}
 	@${PERL} -pi -e 's/(default =>.+|Default is )mysql/$$1Pg/' \
 		${WRKSRC}/Bugzilla/Install/Localconfig.pm
 .endif
