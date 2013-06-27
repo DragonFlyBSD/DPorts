@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: ports/misc/py-qt4-doc/Makefile,v 1.15 2013/02/03 22:23:35 svnexp Exp $
+# $FreeBSD: misc/py-qt4-doc/Makefile 311475 2013-02-03 18:16:07Z makc $
 
 PORTNAME=	doc
 PORTVERSION=	${PYQT4_VERSION}
