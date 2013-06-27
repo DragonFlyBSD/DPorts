@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-urca/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: finance/R-cran-urca/Makefile 321454 2013-06-21 10:52:51Z tota $
 
 PORTNAME=	urca
-DISTVERSION=	1.2-7
-PORTREVISION=	3
+DISTVERSION=	1.2-8
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
