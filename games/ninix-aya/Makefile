@@ -1,5 +1,5 @@
 # Created by: UMENO Takashi
-# $FreeBSD: games/ninix-aya/Makefile 316650 2013-04-27 06:18:58Z culot $
+# $FreeBSD: games/ninix-aya/Makefile 321201 2013-06-18 16:09:58Z antoine $
 
 PORTNAME=	ninix-aya
 PORTVERSION=	4.4
@@ -24,6 +24,8 @@ USE_PYTHON=	yes
 USE_GNOME=	pygtk2
 USE_GMAKE=	yes
 
+OPTIONS_DEFINE=	DOCS NLS
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
@@ -43,11 +45,11 @@ post-patch:
 		-e 's,lib/ninix,libexec/ninix,'	\
 		-e 's,/doc,/share/doc/ninix,' \
 		${WRKSRC}/Makefile
-.if ${PORT_OPTIONS:MDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/docdir)$$/d' \
 		${WRKSRC}/Makefile
 .endif
-.if ${PORT_OPTIONS:MNLS}
+.if ! ${PORT_OPTIONS:MNLS}
 	@${REINPLACE_CMD} -e '/localedir/d' \
 		${WRKSRC}/Makefile
 .endif
