@@ -1,8 +1,8 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: www/p5-HTML-TreeBuilder-LibXML/Makefile 318082 2013-05-13 13:51:49Z culot $
+# $FreeBSD: www/p5-HTML-TreeBuilder-LibXML/Makefile 321551 2013-06-22 08:04:10Z culot $
 
 PORTNAME=	HTML-TreeBuilder-LibXML
-PORTVERSION=	0.22
+PORTVERSION=	0.23
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
