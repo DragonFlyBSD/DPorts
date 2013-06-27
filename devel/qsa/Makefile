@@ -2,15 +2,14 @@
 # Date created:				Thu 02 Sep 2004 18:00:00 CEST
 # Whom:					Michael Nottebrock <lofi@freebsd.org>
 #
-# $FreeBSD: ports/devel/qsa/Makefile,v 1.25 2012/12/30 18:55:53 svnexp Exp $
+# $FreeBSD: devel/qsa/Makefile 321481 2013-06-21 17:20:54Z rakuco $
 #
 
 PORTNAME=	qsa
 PORTVERSION=	1.1.5
 PORTREVISION=	1
 CATEGORIES=	devel lang
-MASTER_SITES=	${MASTER_SITE_QT}
-MASTER_SITE_SUBDIR=../../${PORTNAME}/source
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 DISTNAME=	${PORTNAME}-x11-free-${PORTVERSION}
 DIST_SUBDIR=	KDE
 
