@@ -2,7 +2,7 @@
 # Date created:				Wed Mar  7 20:14:32 CET 2007
 # Whom:					lth@FreeBSD.org
 #
-# $FreeBSD: ports/devel/p5-Test-Script/Makefile,v 1.9 2012/11/17 05:56:33 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Script/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Test-Script
@@ -23,10 +23,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Test::Script.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500808
-BUILD_DEPENDS+=	p5-Test-Simple>=0.62:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
