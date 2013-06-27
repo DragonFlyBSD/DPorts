@@ -1,9 +1,5 @@
-# New ports collection makefile for:	FElt
-# Date created:		19 October 1996
-# Whom:			Pedro Giffuni
-#
-# $FreeBSD: ports/science/felt/Makefile,v 1.46 2012/12/01 01:35:16 svnexp Exp $
-#
+# Created by: Pedro Giffuni
+# $FreeBSD: science/felt/Makefile 321374 2013-06-20 12:46:30Z bsam $
 
 PORTNAME=	felt
 PORTVERSION=	3.07
@@ -12,7 +8,7 @@ CATEGORIES=	science
 MASTER_SITES=	SF/${PORTNAME}/FElt/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A system for Finite Element Analysis
+COMMENT=	System for Finite Element Analysis
 
 LICENSE=	GPLv2
 
@@ -43,7 +39,7 @@ post-patch:
 	@${REINPLACE_CMD} -e \
 		'/which CC/s|^|#| ; \
 		 /CCOPTS=-O3/s|^.*|CCOPTS=$${CFLAGS}| ; \
-		 s|lib/felt|share/felt|' ${WRKSRC}/configure	
+		 s|lib/felt|share/felt|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e \
 		's|-lpthread|$$(MOTIFLIB)|' ${WRKSRC}/src/Velvet/Makefile
 
