@@ -1,11 +1,12 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: ports/devel/qt4-assistant-adp/Makefile,v 1.14 2013/02/03 21:43:07 svnexp Exp $
+# $FreeBSD: devel/qt4-assistant-adp/Makefile 321482 2013-06-21 17:24:13Z rakuco $
 
 PORTNAME=	assistant
 PORTVERSION=	4.6.3
 PORTREVISION=	1
 CATEGORIES?=	devel
 MASTER_SITES=	${MASTER_SITE_QT}
+MASTER_SITE_SUBDIR=	archive/qt/${PORTVERSION:R}
 PKGNAMEPREFIX=	qt4-
 PKGNAMESUFFIX=	-adp
 DISTNAME=	qt-assistant-qassistantclient-library-compat-src-${PORTVERSION}
