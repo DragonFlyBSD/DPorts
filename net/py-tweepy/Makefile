@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/net/py-tweepy/Makefile,v 1.5 2013/02/12 17:02:33 svnexp Exp $
+# $FreeBSD: net/py-tweepy/Makefile 321437 2013-06-21 03:24:55Z clsung $
 
 PORTNAME=	tweepy
-PORTVERSION=	1.13
+PORTVERSION=	2.0
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,9 +12,7 @@ COMMENT=	A library for accessing the Twitter.com API
 
 LICENSE=	MIT
 
-USE_PYTHON=	yes
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
-
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
 .include <bsd.port.mk>
