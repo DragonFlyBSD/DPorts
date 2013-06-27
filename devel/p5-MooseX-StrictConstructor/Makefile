@@ -2,7 +2,7 @@
 # Date created:		2008-10-23
 # Whom:			glarkin
 #
-# $FreeBSD: ports/devel/p5-MooseX-StrictConstructor/Makefile,v 1.13 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-StrictConstructor/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	MooseX-StrictConstructor
@@ -27,10 +27,4 @@ MAN3=		MooseX::StrictConstructor.3 \
 		MooseX::StrictConstructor::Trait::Class.3 \
 		MooseX::StrictConstructor::Trait::Method::Constructor.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
