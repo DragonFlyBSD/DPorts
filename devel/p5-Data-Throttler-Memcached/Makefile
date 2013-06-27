@@ -2,7 +2,7 @@
 # Date created:		2008-01-30
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/devel/p5-Data-Throttler-Memcached/Makefile,v 1.6 2012/11/17 05:56:11 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Throttler-Memcached/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Data-Throttler-Memcached
@@ -27,11 +27,4 @@ PERL_CONFIGURE=	yes
 MAN3=		Data::Throttler::Memcached.3 \
 		Data::Throttler::BucketChain::Memcached.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-BUILD_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
