@@ -2,7 +2,7 @@
 # Date created:		2011-12-12
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-MouseX-App-Cmd/Makefile,v 1.5 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: devel/p5-MouseX-App-Cmd/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	MouseX-App-Cmd
@@ -31,10 +31,4 @@ PERL_CONFIGURE=	yes
 MAN3=		MouseX::App::Cmd.3 \
 		MouseX::App::Cmd::Command.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
