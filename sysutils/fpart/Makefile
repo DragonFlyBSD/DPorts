@@ -1,19 +1,21 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: ports/sysutils/fpart/Makefile,v 1.8 2013/02/18 09:58:59 svnexp Exp $
+# $FreeBSD: sysutils/fpart/Makefile 321736 2013-06-25 12:10:02Z martymac $
 
 PORTNAME=	fpart
-PORTVERSION=	0.7
+PORTVERSION=	0.8
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 		http://contribs.martymac.org/fpart/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Sort and pack files into partitions
 
 LICENSE=	BSD
 
-MANCOMPRESSED=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-embfts
+
+MANCOMPRESSED=	no
 MAN1=		fpart.1
 PLIST_FILES=	bin/fpart
 PORTDOCS=	Changelog README TODO
