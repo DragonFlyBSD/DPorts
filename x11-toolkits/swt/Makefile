@@ -1,5 +1,5 @@
 # Created by: Robert C. Noland III <rnoland@FreeBSD.org>
-# $FreeBSD: x11-toolkits/swt/Makefile 314894 2013-03-22 08:16:07Z bapt $
+# $FreeBSD: x11-toolkits/swt/Makefile 320984 2013-06-15 11:10:34Z flo $
 
 PORTNAME=	swt
 DISTVERSION=	3.5.2
@@ -43,7 +43,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${OUTPUT_JAR} \
 NO_WRKSUBDIR=	yes
 
 OPTIONS_DEFINE=	CAIRO GNOMEVFS BROWSER
-OPTIONS_DEFAULT=	CAIRO GNOMEVFS BROWSER
+OPTIONS_DEFAULT=	CAIRO GNOMEVFS
 GNOMEVFS_DESC=	Gnome VFS Support
 BROWSER_DESC=	Gecko Browser Support
 
@@ -62,7 +62,8 @@ MAKE_GNOME=	make_gnome
 .endif
 
 .if ${PORT_OPTIONS:MBROWSER}
-USE_GECKO=	libxul19
+USE_GECKO=	libxul
+BROKEN=		Does not build with newer libxul
 PLIST_FILES+=	lib/libswt-xulrunner-gtk-%%BUILD%%.so
 MAKE_MOZILLA=	make_xulrunner
 .endif
