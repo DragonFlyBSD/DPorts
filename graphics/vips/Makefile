@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
-# $FreeBSD: graphics/vips/Makefile 320111 2013-06-06 15:59:25Z bapt $
+# $FreeBSD: graphics/vips/Makefile 321692 2013-06-24 17:00:40Z antoine $
 
 PORTNAME=	vips
 PORTVERSION=	7.26.3
@@ -46,7 +46,7 @@ post-configure:
 
 .include <bsd.port.options.mk>
 # Don't extract doc/ subdirectory - the simplest way:
-.if ${PORT_OPTIONS:MDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 EXTRACT_AFTER_ARGS=	--exclude doc
 EXTRA_PATCHES=	${FILESDIR}/nodoc-patch
 .endif
