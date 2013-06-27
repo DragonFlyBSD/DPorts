@@ -1,16 +1,13 @@
-# New ports collection makefile for:    hcode
-# Date created:         31 Mar 1997
-# Whom:                 Choi Jun Ho <junker@jazz.snu.ac.kr>
-#
-# $FreeBSD: ports/korean/hcode/Makefile,v 1.15 2012/11/17 05:58:46 svnexp Exp $
-#
+# Created by: Junho CHOI <junho.choi@gmail.com>
+# $FreeBSD: korean/hcode/Makefile 321494 2013-06-21 18:25:08Z bsam $
 
 PORTNAME=	hcode
 PORTVERSION=	2.1.3
+PORTREVISION=	1
 CATEGORIES=	korean
-MASTER_SITES=	ftp://ftp.kr.FreeBSD.org/pub/FreeBSD-kr/distfiles/ \
-		ftp://ftp.kreonet.re.kr/pub/hangul/cair-archive/incoming/
-
+MASTER_SITES=	http://ftp.kaist.ac.kr/hangul/incoming/ \
+		ftp://ftp.kaist.ac.kr/hangul/incoming/ \
+		ftp://ftp.kr.FreeBSD.org/pub/FreeBSD-kr/distfiles/
 DISTNAME=	hcode2.1-mailpatch3
 
 MAINTAINER=	ports@FreeBSD.org
