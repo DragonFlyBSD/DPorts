@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-TryCatch/Makefile 315085 2013-03-24 00:43:24Z swills $
+# $FreeBSD: lang/p5-TryCatch/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	TryCatch
 PORTVERSION=	1.003002
@@ -41,10 +41,4 @@ BUILD_DEPENDS+=	p5-B-Hooks-OP-Check>=0.18:${PORTSDIR}/devel/p5-B-Hooks-OP-Check 
 		p5-B-Hooks-OP-PPAddr>=0.03:${PORTSDIR}/devel/p5-B-Hooks-OP-PPAddr
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
