@@ -2,11 +2,11 @@
 # Date created:         Aug 03 2012
 # Whom:                 demon@FreeBSD.org
 #
-# $FreeBSD: math/glm/Makefile 314896 2013-03-22 08:47:26Z demon $
+# $FreeBSD: math/glm/Makefile 321669 2013-06-24 07:17:25Z demon $
 #
 
 PORTNAME=	glm
-PORTVERSION=	0.9.4.3
+PORTVERSION=	0.9.4.4
 CATEGORIES=	math graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	ogl-math/${PORTNAME}-${PORTVERSION}
