@@ -2,7 +2,7 @@
 # Date created:		9 February 2011
 # Whom:		milki <milki@rescomp.berkeley.edu>
 #
-# $FreeBSD: ports/devel/p5-Dist-CheckConflicts/Makefile,v 1.5 2012/11/17 05:56:14 svnexp Exp $
+# $FreeBSD: devel/p5-Dist-CheckConflicts/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Dist-CheckConflicts
@@ -23,14 +23,8 @@ RUN_DEPENDS=	p5-List-MoreUtils>=0.12:${PORTSDIR}/lang/p5-List-MoreUtils \
 
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-PERL_CONFIGURE=	YES
+PERL_CONFIGURE=	yes
 
 MAN3=		Dist::CheckConflicts.3
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
