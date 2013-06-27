@@ -1,8 +1,8 @@
 # Created by: trevor
-# $FreeBSD: ports/textproc/diffstat/Makefile,v 1.37 2013/02/12 16:45:00 svnexp Exp $
+# $FreeBSD: textproc/diffstat/Makefile 321439 2013-06-21 04:03:57Z clsung $
 
 PORTNAME=	diffstat
-PORTVERSION=	1.56
+PORTVERSION=	1.57
 CATEGORIES=	textproc devel
 MASTER_SITES=	ftp://invisible-island.net/${PORTNAME}/
 EXTRACT_SUFX=	.tgz
