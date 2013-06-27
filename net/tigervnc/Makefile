@@ -1,5 +1,5 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: net/tigervnc/Makefile 319382 2013-05-29 16:29:40Z swills $
+# $FreeBSD: net/tigervnc/Makefile 321686 2013-06-24 14:48:38Z wg $
 
 PORTNAME=	tigervnc
 PORTVERSION=	1.2.0
@@ -16,7 +16,8 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENCE.TXT
 
 PATCH_DEPENDS=	${NONEXISTENT}:${PORTSDIR}/x11-servers/xorg-server:patch
-BUILD_DEPENDS=  ${LOCALBASE}/include/GL/internal/dri_interface.h:${PORTSDIR}/graphics/dri
+BUILD_DEPENDS=	${LOCALBASE}/include/GL/internal/dri_interface.h:${PORTSDIR}/graphics/dri \
+		${LOCALBASE}/libdata/pkgconfig/fontutil.pc:${PORTSDIR}/x11-fonts/font-util
 # almost equivalent to x11-servers/xorg-server's
 RUN_DEPENDS=	${LOCALBASE}/share/X11/xkb/rules/base:${PORTSDIR}/x11/xkeyboard-config \
 		xkbcomp:${PORTSDIR}/x11/xkbcomp
