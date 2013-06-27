@@ -1,15 +1,15 @@
 # Created by: Evan Sarmiento <bsdports@wayfair.com>
-# $FreeBSD: devel/rubygem-mongo/Makefile 319628 2013-06-02 02:06:14Z swills $
+# $FreeBSD: devel/rubygem-mongo/Makefile 321617 2013-06-23 05:02:20Z swills $
 
 PORTNAME=	mongo
-PORTVERSION=	1.8.6
+PORTVERSION=	1.9.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby library for mongo
 
-RUN_DEPENDS=	rubygem-bson>=1.8.2:${PORTSDIR}/devel/rubygem-bson
+RUN_DEPENDS=	rubygem-bson>=1.9.0:${PORTSDIR}/devel/rubygem-bson
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
