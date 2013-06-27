@@ -2,7 +2,7 @@
 # Date created:		2011-05-31
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Bread-Board/Makefile,v 1.13 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: devel/p5-Bread-Board/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Bread-Board
@@ -87,10 +87,4 @@ post-patch:
 .else
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
