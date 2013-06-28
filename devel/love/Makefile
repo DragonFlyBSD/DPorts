@@ -1,9 +1,5 @@
-# New ports collection makefile for:	love
-# Date created:		01 Aug 2008
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/love/Makefile,v 1.21 2012/11/17 05:55:58 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: devel/love/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	love
 PORTVERSION=	0.8.0
@@ -40,11 +36,13 @@ PLIST_FILES=	bin/love
 
 PORTDOCS=	*
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e '/^prefix=/ d; /^bindir=/ d; /^libdir=/ d; \
 		/test/ s|==|=|' ${WRKSRC}/configure
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${DOCSDIR}
 .for f in changes.txt readme.md
