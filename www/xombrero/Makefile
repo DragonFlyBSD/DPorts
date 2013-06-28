@@ -1,8 +1,8 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: www/xombrero/Makefile 318765 2013-05-22 12:46:46Z zeising $
+# $FreeBSD: www/xombrero/Makefile 320968 2013-06-14 22:18:25Z zeising $
 
 PORTNAME=	xombrero
-PORTVERSION=	1.5.0
+PORTVERSION=	1.6.0
 CATEGORIES=	www
 MASTER_SITES=	https://opensource.conformal.com/snapshots/xombrero/
 EXTRACT_SUFX=	.tgz
