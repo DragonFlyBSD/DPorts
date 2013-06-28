@@ -1,17 +1,17 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: devel/cgit/Makefile 319767 2013-06-03 10:49:00Z bapt $
+# $FreeBSD: devel/cgit/Makefile 321081 2013-06-16 23:14:41Z antoine $
 
 PORTNAME=	cgit
 PORTVERSION=	0.9.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel www
 MASTER_SITES=	http://git.zx2c4.com/cgit/snapshot/:cgit \
 		GOOGLE_CODE:git
 DISTFILES=	cgit-${PORTVERSION}${EXTRACT_SUFX}:cgit \
 		git-${GIT_VERSION}.tar.gz:git
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Fast webinterface for git
+MAINTAINER=	kevinz5000@gmail.com
+COMMENT=	Fast web frontend for Git repositories
 
 LICENSE=	GPLv2
 
@@ -23,15 +23,15 @@ USES=		iconv shebangfix
 SHEBANG_FILES=	filters/html-converters/resources/markdown.pl
 USE_GMAKE=	yes
 USE_OPENSSL=	yes
-CFLAGS+=	-I${LOCALBASE}/include -DNO_GETTEXT=1
+CFLAGS+=	-I${LOCALBASE}/include
 MAKE_ARGS+=	CGIT_SCRIPT_PATH=${WWWDIR} \
-		CGIT_CONFIG=${PREFIX}/etc/cgitrc
+		CGIT_CONFIG=${PREFIX}/etc/cgitrc NO_GETTEXT=1
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 SUB_LIST+=	PORTNAME=${PORTNAME}
-PLIST_SUB+=	PORTNAME=${PORTNAME}
+PLIST_SUB+=	PORTNAME=${PORTNAME} WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 
 .include <bsd.port.options.mk>
 
