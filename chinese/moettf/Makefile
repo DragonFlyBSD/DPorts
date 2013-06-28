@@ -2,12 +2,12 @@
 # Date created:		9 July 1999
 # Whom:			Jing-Tang Keith Jang <keith@FreeBSD.org>
 #
-# $FreeBSD: ports/chinese/moettf/Makefile,v 1.22 2012/11/17 05:54:57 svnexp Exp $
+# $FreeBSD: chinese/moettf/Makefile 321284 2013-06-19 16:03:12Z rafan $
 #
 
 PORTNAME=	moettf
 PORTVERSION=	2.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	chinese x11-fonts
 MASTER_SITES=	http://ftp.riken.go.jp/pub/FreeBSD/distfiles/zh-moettf/ \
 		http://ftp.math.uni-bielefeld.de/pub/unix/FreeBSD/distfiles/zh-moettf/
