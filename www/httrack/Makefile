@@ -1,11 +1,11 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: www/httrack/Makefile 320316 2013-06-09 07:15:53Z sunpoet $
+# $FreeBSD: www/httrack/Makefile 321537 2013-06-22 03:40:17Z sunpoet $
 
 PORTNAME=	httrack
-PORTVERSION=	3.47.18
+PORTVERSION=	3.47.19
 CATEGORIES=	www
 MASTER_SITES=	http://download.httrack.com/ \
-		http://mirror.httrack.com/ \
+		http://mirror.httrack.com/historical/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -32,13 +32,13 @@ post-patch:
 	@${REINPLACE_CMD} -e '/DEFAULT_CFLAGS=/ s|-O -g3 ||g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e '/ install-data-hook/d' ${WRKSRC}/html/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|' ${WRKSRC}/html/server/div/WebHTTrack*
-.if empty(PORT_OPTIONS:MDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/^SUBDIRS = / s| html||' ${WRKSRC}/Makefile.in
 .endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${INSTALL_DATA} ${WRKSRC}/html/httrack.css ${DOCSDIR}/html/httrack.css
+	${INSTALL_DATA} ${WRKSRC}/html/httrack.css ${DOCSDIR}/httrack.css
 .endif
 
 .include <bsd.port.mk>
