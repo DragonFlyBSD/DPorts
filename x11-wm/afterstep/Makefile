@@ -1,5 +1,5 @@
 # Created by: jfitz@FreeBSD.org
-# $FreeBSD: ports/x11-wm/afterstep/Makefile,v 1.61 2013/01/26 15:29:09 svnexp Exp $
+# $FreeBSD: x11-wm/afterstep/Makefile 321451 2013-06-21 09:10:25Z dinoex $
 
 PORTNAME=	afterstep
 PORTVERSION=	1.0
@@ -22,6 +22,8 @@ MANCOMPRESSED=	yes
 MAN1=		afterstep.1 Animate.1 Audio.1 Auto.1 Banner.1 Pager.1 Wharf.1
 CONFLICTS?=	afterstep-2*
 PORTSCOUT=	limit:^1\.[0-9.]*$$
+CFLAGS+=	-Wno-return-type
+USE_CSTD=	gnu89
 
 SRCDIRS=	afterstep \
 		modules/Animate modules/Audio modules/Auto \
