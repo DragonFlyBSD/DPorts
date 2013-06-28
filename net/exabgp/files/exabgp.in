@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/exabgp/files/exabgp.in 310014 2013-01-06 21:01:02Z zi $
+# $FreeBSD: net/exabgp/files/exabgp.in 321293 2013-06-19 16:53:56Z zi $
 #
 # PROVIDE: exabgp
 # REQUIRE: LOGIN
@@ -24,7 +24,7 @@ pidfile=/var/run/${name}/${name}.pid
 
 required_files=${exabgp_conf}
 
-command="%%PYTHON_SITELIBDIR%%/${name}/application.py"
+command="%%PYTHON_SITELIBDIR%%/${name}/application/bgp.py"
 procname="%%PYTHON_CMD%%"
 
 start_cmd="exabgp_start"
