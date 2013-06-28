@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/biology/libgenome/pkg-plist,v 1.6 2012/11/17 05:54:52 svnexp Exp $
+@comment $FreeBSD: biology/libgenome/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 include/gn/gnABISource.h
 include/gn/gnBaseFeature.h
 include/gn/gnBaseFilter.h
