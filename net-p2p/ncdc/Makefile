@@ -1,8 +1,8 @@
 # Created by: Dmitriy Limonov
-# $FreeBSD: net-p2p/ncdc/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: net-p2p/ncdc/Makefile 321197 2013-06-18 15:48:06Z wg $
 
 PORTNAME=	ncdc
-PORTVERSION=	1.16.1
+PORTVERSION=	1.17
 PORTREVISION=	1
 CATEGORIES=	net-p2p
 MASTER_SITES=	SF \
@@ -11,6 +11,8 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	earl1k@mail.ru
 COMMENT=	Lightweight direct connect client with ncurses interface
+
+LICENSE=	MIT
 
 LIB_DEPENDS=	sqlite3:${PORTSDIR}/databases/sqlite3 \
 		pcre:${PORTSDIR}/devel/pcre \
