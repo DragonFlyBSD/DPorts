@@ -1,8 +1,8 @@
 # Created By: Ying-Chieh Liao
-# $FreeBSD: ports/editors/hte/Makefile,v 1.60 2012/12/09 09:17:33 svnexp Exp $
+# $FreeBSD: editors/hte/Makefile 321301 2013-06-19 18:17:13Z mva $
 
 PORTNAME=	hte
-PORTVERSION=	2.0.21
+PORTVERSION=	2.0.22
 CATEGORIES=	editors
 MASTER_SITES=	SF/${PORTNAME}/ht-source
 DISTNAME=	ht-${PORTVERSION}
