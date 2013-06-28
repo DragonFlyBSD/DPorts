@@ -1,9 +1,5 @@
-# New ports collection makefile for:	torrent
-# Date created:		10 Nov 2005
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/torrent/Makefile,v 1.19 2012/11/17 05:57:54 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/torrent/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
 
 PORTNAME=	torrent
 PORTVERSION=	0.8.2
