@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# $FreeBSD: devel/subversion17/files/svnserve.wrapper 300896 2012-07-14 13:54:48Z beat $
+
+SVNSERVE=$(dirname $(realpath $0))/svnserve.bin
+
+umask 002
+$SVNSERVE "$@"
+
