@@ -1,9 +1,5 @@
-# New ports collection makefile for:	uniconvw
-# Date created:		28 Oct 2010
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/graphics/uniconvw/Makefile,v 1.3 2012/11/17 05:58:24 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: graphics/uniconvw/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	uniconvw
 PORTVERSION=	1.1.5
