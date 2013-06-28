@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nimuh
-# Date created:		27 Jan 2008
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/nimuh/Makefile,v 1.15 2012/11/17 05:57:47 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/nimuh/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	nimuh
 PORTVERSION=	1.02
@@ -15,7 +11,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} ${PORTNAME}-data-${PORTVERS
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Puzzle game destined to improve the knowledge of Andalusia
 
-LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
