@@ -1,8 +1,9 @@
 # Created by: Alexander Kojevnikov <alexander@kojevnikov.com>
-# $FreeBSD: audio/spek/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: audio/spek/Makefile 321725 2013-06-25 07:41:26Z mm $
 
 PORTNAME=	spek
 PORTVERSION=	0.8.2
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
