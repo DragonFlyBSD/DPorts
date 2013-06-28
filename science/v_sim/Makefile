@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: science/v_sim/Makefile 319865 2013-06-04 14:40:29Z bapt $
+# $FreeBSD: science/v_sim/Makefile 320899 2013-06-14 12:00:22Z miwi $
 
 PORTNAME=	v_sim
 PORTVERSION=	3.6.1.1
@@ -69,7 +69,7 @@ pre-configure:
 	${REINPLACE_CMD} -e 's|	po ||'	\
 		${WRKSRC}/Makefile.in
 .endif
-.if ${PORT_OPTIONS:MDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 	${REINPLACE_CMD} -e 's|Documentation||'	\
 		${WRKSRC}/Makefile.in
 .endif
