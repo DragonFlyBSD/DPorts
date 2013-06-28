@@ -1,9 +1,5 @@
-# New ports collection makefile for:	glosm
-# Date created:		15 Jan 2011
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: graphics/glosm/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: graphics/glosm/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	glosm
 PORTVERSION=	0.0.2
@@ -16,7 +12,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	3D OpenGL renderer for OpenStreetMap
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
-		expat.6:${PORTSDIR}/textproc/expat2
+		expat:${PORTSDIR}/textproc/expat2
 
 USE_BZIP2=	yes
 USES=		cmake
@@ -26,11 +22,13 @@ MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README ChangeLog
 
+.include <bsd.port.options.mk>
+
 regression-test:
 	cd ${BUILD_WRKSRC} && ctest
 
-.if !defined(NOPORTDOCS)
 post-install:
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
