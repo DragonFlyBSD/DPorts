@@ -1,11 +1,11 @@
-# $FreeBSD: ports/russian/bugzilla42/Makefile,v 1.7 2013/02/23 10:03:42 svnexp Exp $
+# $FreeBSD: russian/bugzilla42/Makefile 321428 2013-06-20 21:54:02Z ohauer $
 
 PORTNAME=	bugzilla
-PORTVERSION=	4.2.5
+PORTVERSION=	4.2.6
 CATEGORIES=	russian
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=bugzilla-ru/bugzilla-${PORTVERSION:R}-ru/${PORTVERSION}
-DISTNAME=	bugzilla-${PORTVERSION}-ru-20130222
+DISTNAME=	bugzilla-${PORTVERSION}-ru-20130618
 
 MAINTAINER=	bugzilla@FreeBSD.org
 COMMENT=	Russian localization for Bugzilla
