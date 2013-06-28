@@ -1,8 +1,8 @@
 # Created by: Albert Vernon <f3cun3c02@sneakemail.com>
-# $FreeBSD: ports/archivers/lzlib/Makefile,v 1.7 2012/12/05 02:01:39 svnexp Exp $
+# $FreeBSD: archivers/lzlib/Makefile 321168 2013-06-18 03:38:38Z delphij $
 
 PORTNAME=	lzlib
-PORTVERSION=	1.3
+PORTVERSION=	1.4
 CATEGORIES=	archivers
 MASTER_SITES=	SAVANNAH/lzip
 
