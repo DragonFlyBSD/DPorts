@@ -1,5 +1,5 @@
 # Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-# $FreeBSD: dns/opendnssec/Makefile 319813 2013-06-03 22:13:11Z wg $
+# $FreeBSD: dns/opendnssec/Makefile 321504 2013-06-21 21:00:44Z wg $
 
 PORTNAME=	opendnssec
 PORTVERSION=	1.4.0
@@ -46,6 +46,7 @@ PLIST_SUB+=	MYSQL=""
 PORTDATA=	migrate_adapters_1.mysql migrate_keyshare_mysql.pl \
 		migrate_zone_delete.mysql migrate_id_mysql.pl migrate_to_ng_mysql.pl
 .else
+CONFIGURE_ARGS+=--with-sqlite3=${LOCALBASE}
 BUILD_DEPENDS+=	sqlite3>=3.3.9:${PORTSDIR}/databases/sqlite3
 LIB_DEPENDS+=	sqlite3:${PORTSDIR}/databases/sqlite3
 PLIST_SUB+=	SQLITE=""
