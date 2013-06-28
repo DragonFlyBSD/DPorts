@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net-mgmt/netdisco/files/netdisco.in 317835 2013-05-10 19:11:11Z lme $
+# $FreeBSD: net-mgmt/netdisco/files/netdisco.in 321675 2013-06-24 11:19:03Z wg $
 # 
 # PROVIDE: netdisco
 # REQUIRE: DAEMON LOGIN
@@ -25,13 +25,12 @@ status_cmd=${name}_status
 command="%%PREFIX%%/bin/netdisco"
 command_interpreter="/usr/bin/perl"
 netdisco_config="%%ETCDIR%%/netdisco.conf"
-pidfile=$(grep ^daemon_pid $netdisco_config | sed -E 's/.*=\s+//')
+pidfile=$(grep ^daemon_pid $netdisco_config | cut -d= -f2 | tail -1)
 flags="-p start"
 
 required_files="$netdisco_config"
 
 netdisco_prestart() {
-	test -d ${pidfile%/*} || install -d -m 0700 -o $netdisco_user -g $netdisco_group ${pidfile%/*}
 	touch $pidfile && chown $netdisco_user $pidfile
 	test -d %%NETDISCO_DBDIR%% || install -d -m 0700 -o $netdisco_user -g $netdisco_group %%NETDISCO_DBDIR%%
 }
