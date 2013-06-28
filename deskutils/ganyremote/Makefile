@@ -1,8 +1,8 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/ganyremote/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/ganyremote/Makefile 321127 2013-06-17 15:15:37Z miwi $
 
 PORTNAME=	ganyremote
-PORTVERSION=	6.1
+PORTVERSION=	6.2
 CATEGORIES=	deskutils comms gnome
 MASTER_SITES=	SF/anyremote/${PORTNAME}/${PORTVERSION}
 
@@ -15,9 +15,9 @@ RUN_DEPENDS=	anyremote:${PORTSDIR}/comms/anyremote
 
 OPTIONS_DEFINE=	DOCS
 
+USES=		gettext
 USE_GNOME=	pygtk2
 USE_PYTHON=	yes
-USES=		gettext
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
