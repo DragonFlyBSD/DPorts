@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wings
-# Date Created:				5 March 2003
-# Whom:				 	olgeni@FreeBSD.org
-#
-# $FreeBSD: ports/graphics/wings/Makefile,v 1.39 2012/11/17 05:58:24 svnexp Exp $
-#
+# Created by: olgeni@FreeBSD.org
+# $FreeBSD: graphics/wings/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	wings
 PORTVERSION=	1.4.1
