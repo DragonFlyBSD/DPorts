@@ -1,5 +1,5 @@
-# Created by: nemysis@gmx.ch
-# $FreeBSD: games/thegrind/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# Created by: nemysis <nemysis@gmx.ch>
+# $FreeBSD: games/thegrind/Makefile 321682 2013-06-24 13:54:22Z wg $
 
 PORTNAME=	thegrind
 PORTVERSION=	0.1.2
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	SF/radius-engine/ld21/
 
 MAINTAINER=	nemysis@gmx.ch
-COMMENT=	A simple game about escaping from work
+COMMENT=	Simple game about escaping from work
 
 LICENSE=	GPLv2
 
@@ -19,27 +19,30 @@ LIB_DEPENDS=	lua-5.1:${PORTSDIR}/lang/lua \
 RUN_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 
 USES=		pkgconfig
-GNU_CONFIGURE=	yes
-ALL_TARGET=	${PORTNAME}
 USE_SDL=	sdl sound
 USE_GL=		glu
+GNU_CONFIGURE=	yes
+ALL_TARGET=	${PORTNAME}
+
 MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/${PORTNAME}.desktop \
-		share/pixmaps/${PORTNAME}.png
+		share/pixmaps/${PORTNAME}.png \
+		%%DATADIR%%/${PORTNAME}.zip
+PLIST_DIRS=	%%DATADIR%%
 PLIST_DIRSTRY=	share/applications
 
-PORTDATA=	*
 PORTDOCS=	ChangeLog
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
 post-install:
-# Documentation
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DOCSDIR}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
