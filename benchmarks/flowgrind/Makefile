@@ -1,10 +1,10 @@
 # Created by: Lars Eggert <lars@eggert.org>
-# $FreeBSD: benchmarks/flowgrind/Makefile 313611 2013-03-08 02:44:53Z beech $
+# $FreeBSD: benchmarks/flowgrind/Makefile 320993 2013-06-15 12:35:27Z culot $
 
 PORTNAME=	flowgrind
-PORTVERSION=	0.5.9
+PORTVERSION=	0.6.0
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://launchpad.net/flowgrind/trunk/${PORTNAME}-${PORTVERSION}/+download/
+MASTER_SITES=	https://launchpad.net/flowgrind/trunk/${PORTNAME}-0.6/+download/
 
 MAINTAINER=	lars@eggert.org
 COMMENT=	Measure throughput and other metrics for TCP
