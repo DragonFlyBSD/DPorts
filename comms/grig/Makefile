@@ -1,5 +1,5 @@
 # Created by: Matt Dawson <matt@mattsnetwork.co.uk>
-# $FreeBSD: comms/grig/Makefile 320588 2013-06-11 14:52:34Z miwi $
+# $FreeBSD: comms/grig/Makefile 321188 2013-06-18 13:52:06Z zi $
 
 PORTNAME=	grig
 PORTVERSION=	0.8.0
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	comms hamradio
 MASTER_SITES=	SF/groundstation/Grig/${PORTVERSION}
 
-MAINTAINER=	matt@chronos.org.uk
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Amateur Radio control front-end
 
 LICENSE=	GPLv2
