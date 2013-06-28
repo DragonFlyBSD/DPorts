@@ -1,7 +1,8 @@
-# $FreeBSD: multimedia/kdenlive/Makefile 320205 2013-06-07 14:36:48Z avilla $
+# $FreeBSD: multimedia/kdenlive/Makefile 321725 2013-06-25 07:41:26Z mm $
 
 PORTNAME=	kdenlive
 PORTVERSION=	0.9.6
+PORTREVISION=	1
 CATEGORIES=	multimedia kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTNAME}/${PORTVERSION}/src/
