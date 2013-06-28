@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jag
-# Date created:		03 Jul 2009
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/games/jag/Makefile,v 1.14 2012/11/17 05:57:42 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: games/jag/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	jag
 PORTVERSION=	0.3.2
