@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/spacejunk/Makefile 318819 2013-05-23 02:03:03Z amdmi3 $
+# $FreeBSD: games/spacejunk/Makefile 320912 2013-06-14 13:18:53Z amdmi3 $
 
 PORTNAME=	spacejunk
 PORTVERSION=	1.0.5
@@ -9,6 +9,8 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A video game about traveling in 2D planetary systems
+
+LICENSE=	GPLv3
 
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl mixer image
