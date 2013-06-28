@@ -1,14 +1,11 @@
-# New ports collection makefile for:	graphics/pqiv
-# Date created:				March 28 2008
-# Whom:					Martin Tournoij <carpetsmoker@xs4all.nl>
-#
-# $FreeBSD: ports/graphics/pqiv/Makefile,v 1.17 2012/11/17 05:58:19 svnexp Exp $
-#
+# Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
+# $FreeBSD: graphics/pqiv/Makefile 321130 2013-06-17 15:24:17Z miwi $
 
 PORTNAME=	pqiv
 PORTVERSION=	0.12
+PORTREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.pberndt.com/raw/Programme/Linux/pqiv/_download/
+MASTER_SITES=	GHC
 EXTRACT_SUFX=	.tbz
 
 MAINTAINER=	ports@FreeBSD.org
@@ -24,6 +21,11 @@ FADING_DESC=	Enable support for fading images
 COMMANDS_DESC=	Enable support for external command execution
 CONFIG_DESC=	Enable support for a configuration file
 ANIMATIONS_DESC=Enable support for animations
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	phillipberndt
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
