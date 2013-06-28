@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-mgmt/ndpmon/files/patch-neighbor__list.xml.in,v 1.2 2012/11/17 06:00:34 svnexp Exp $
+$FreeBSD: net-mgmt/ndpmon/files/patch-neighbor__list.xml.in 300897 2012-07-14 14:29:18Z beat $
 
 --- neighbor_list.xml.in.orig
 +++ neighbor_list.xml.in

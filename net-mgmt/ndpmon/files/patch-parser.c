@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-mgmt/ndpmon/files/patch-parser.c,v 1.4 2012/11/17 06:00:34 svnexp Exp $
+$FreeBSD: net-mgmt/ndpmon/files/patch-parser.c 300897 2012-07-14 14:29:18Z beat $
 
 --- parser.c.orig
 +++ parser.c
