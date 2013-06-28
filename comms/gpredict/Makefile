@@ -1,5 +1,5 @@
 # Created by: Matt Dawson <matt@mattsnetwork.co.uk>
-# $FreeBSD: comms/gpredict/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: comms/gpredict/Makefile 321414 2013-06-20 19:25:21Z bsam $
 
 PORTNAME=	gpredict
 PORTVERSION=	1.2
@@ -7,8 +7,10 @@ PORTREVISION=	2
 CATEGORIES=	comms hamradio
 MASTER_SITES=	SF/gpredict/Gpredict/${PORTVERSION}
 
-MAINTAINER=	matt@chronos.org.uk
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Amateur Radio satellite tracking and prediction
+
+LICENSE=	GPLv2
 
 LIB_DEPENDS=	hamlib:${PORTSDIR}/comms/hamlib \
 		goocanvas:${PORTSDIR}/graphics/goocanvas
@@ -21,8 +23,6 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} --localedir=${PREFIX}/share/locale
 USE_GMAKE=	yes
 
 MAN1=		gpredict.1
-
-LICENSE=	GPLv2
 
 .include <bsd.port.options.mk>
 
