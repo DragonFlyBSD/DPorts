@@ -2,7 +2,7 @@
 # Date created:				16 January 2012
 # Whom:					Nick Hilliard
 #
-# $FreeBSD: ports/net-mgmt/netdot/Makefile,v 1.6 2013/02/19 18:07:05 svnexp Exp $
+# $FreeBSD: net-mgmt/netdot/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	netdot
@@ -59,13 +59,6 @@ SUB_LIST=	WWWDIR="${WWWDIR}"	\
 PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-Digest-SHA>=5.47:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Module-Build>=0:${PORTSDIR}/devel/p5-Module-Build
-.endif
 
 INSTALL_TARGET=	install		\
 	PREFIX=${WWWDIR}	\
