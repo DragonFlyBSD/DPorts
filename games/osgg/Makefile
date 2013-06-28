@@ -1,9 +1,5 @@
-# New ports collection makefile for:	osgg
-# Date created:		29 Dec 2008
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/games/osgg/Makefile,v 1.10 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: games/osgg/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	osgg
 PORTVERSION=	0.99
