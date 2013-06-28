@@ -1,9 +1,9 @@
 # Created by: Adam Weinberger
-# $FreeBSD: audio/cmus/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: audio/cmus/Makefile 321725 2013-06-25 07:41:26Z mm $
 
 PORTNAME=	cmus
 PORTVERSION=	2.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}
 DISTNAME=	${PORTNAME}-v${PORTVERSION}
