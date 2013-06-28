@@ -1,9 +1,5 @@
-# New ports collection makefile for:	scramble
-# Date created:				10 Nov 2005
-# Whom:					Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/scramble/Makefile,v 1.19 2012/11/17 05:57:52 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/scramble/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	scramble
 PORTVERSION=	0.9.5
