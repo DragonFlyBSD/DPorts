@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: devel/ocaml-res/Makefile 309291 2012-12-20 05:48:36Z araujo $
+# $FreeBSD: devel/ocaml-res/Makefile 321121 2013-06-17 15:00:02Z miwi $
 
 PORTNAME=	res
-PORTVERSION=	4.0.2
+PORTVERSION=	4.0.3
 CATEGORIES=	devel
 MASTER_SITES=	http://cdn.bitbucket.org/mmottl/res/downloads/
 PKGNAMEPREFIX=	ocaml-
