@@ -1,8 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: misc/gonvert/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: misc/gonvert/Makefile 320931 2013-06-14 14:28:42Z miwi $
 
 PORTNAME=	gonvert
-PORTVERSION=	0.2.32
+PORTVERSION=	0.2.33
 CATEGORIES=	misc python gnome
 MASTER_SITES=	http://www.unihedron.com/projects/gonvert/downloads/
 
