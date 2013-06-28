@@ -1,8 +1,8 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: www/jmeter/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: www/jmeter/Makefile 321205 2013-06-18 17:23:00Z mi $
 
 PORTNAME=	apache-jmeter
-PORTVERSION=	2.8
+PORTVERSION=	2.9
 CATEGORIES=	www benchmarks java
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=	jmeter/binaries
