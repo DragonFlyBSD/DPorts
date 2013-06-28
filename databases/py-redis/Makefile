@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/py-redis/Makefile 316756 2013-04-28 21:57:02Z koobs $
+# $FreeBSD: databases/py-redis/Makefile 321029 2013-06-16 09:10:19Z koobs $
 
 PORTNAME=	redis
-PORTVERSION=	2.7.4
+PORTVERSION=	2.7.6
 CATEGORIES=	databases python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -14,7 +14,7 @@ LICENSE=	MIT
 USE_GITHUB=		yes
 GH_ACCOUNT=		andymccurdy
 GH_PROJECT=		${PORTNAME}-py
-GH_COMMIT=		b5ccc73
+GH_COMMIT=		a6302d9
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
