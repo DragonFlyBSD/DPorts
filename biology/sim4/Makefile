@@ -1,18 +1,17 @@
-# New ports collection makefile for:	sim4
-# Date created:		27 July 2000
-# Whom:	      		Johann Visagie <johann@egenetics.com>
-#
-# $FreeBSD: ports/biology/sim4/Makefile,v 1.13 2012/11/17 05:54:53 svnexp Exp $
-#
+# Created by: Johann Visagie <johann@egenetics.com>
+# $FreeBSD: biology/sim4/Makefile 321290 2013-06-19 16:36:53Z bsam $
 
 PORTNAME=	sim4
 PORTVERSION=	2003.09.21
+PORTREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://globin.cse.psu.edu/ftp/dist/sim4/
 DISTNAME=	${PORTNAME}.${PORTVERSION:S/./-/g}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An algorithm for aligning expressed DNA with genomic sequences
+COMMENT=	Algorithm for aligning expressed DNA with genomic sequences
+
+LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/sim4.${PORTVERSION:S/./-/g}
 
