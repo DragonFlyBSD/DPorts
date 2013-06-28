@@ -1,9 +1,8 @@
 # Created by: Nikolay Pavlov <qpadla@gmail.com>
-# $FreeBSD: net-im/openfire/Makefile 313505 2013-03-06 08:39:55Z gahr $
+# $FreeBSD: net-im/openfire/Makefile 321674 2013-06-24 10:54:32Z gahr $
 
 PORTNAME=	openfire
-PORTVERSION=	3.8.1
-PORTREVISION=	1
+PORTVERSION=	3.8.2
 PORTEPOCH=	1
 CATEGORIES=	net-im java
 MASTER_SITES=	http://download.igniterealtime.org/openfire/
@@ -23,6 +22,7 @@ PLUGINS_DESC=	Install bundled plugins
 
 USE_ZIP=	yes
 USE_LDCONFIG=	yes
+USE_DOS2UNIX=	src/java/org/jivesoftware/openfire/server/ServerDialback.java
 USE_ANT=	yes
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
