@@ -1,12 +1,8 @@
-# New ports collection makefile for: mkfile
-# Date created:		18 November 2001
-# Whom:			HATANOU Tomomi <hatanou@infolab.ne.jp>
-#
-# $FreeBSD: ports/sysutils/mkfile/Makefile,v 1.5 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: HATANO Tomomi <hatanou@infolab.ne.jp>
+# $FreeBSD: sysutils/mkfile/Makefile 321569 2013-06-22 12:18:39Z wg $
 
 PORTNAME=	mkfile
-PORTVERSION=	1.1
+PORTVERSION=	1.1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.infolab.ne.jp/~hatanou/freebsd/mkfile/
 
