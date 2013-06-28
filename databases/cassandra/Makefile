@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/cassandra/Makefile 319455 2013-05-31 01:32:45Z bdrewery $
+# $FreeBSD: databases/cassandra/Makefile 321580 2013-06-22 16:30:34Z bdrewery $
 
 PORTNAME=	cassandra
-PORTVERSION=	1.1.11
+PORTVERSION=	1.1.12
 CATEGORIES=	databases java
 MASTER_SITES=	APACHE
 MASTER_SITE_SUBDIR=	cassandra/${PORTVERSION}
