@@ -1,4 +1,4 @@
-# $FreeBSD: java/icedtea-web/Makefile 320655 2013-06-11 23:18:45Z jkim $
+# $FreeBSD: java/icedtea-web/Makefile 320984 2013-06-15 11:10:34Z flo $
 
 PORTNAME=	icedtea-web
 PORTVERSION=	1.4
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=--disable-docs
 .endif
 
 .if ${PORT_OPTIONS:MPLUGIN}
-USE_GECKO=	libxul libxul19
+USE_GECKO=	libxul
 USE_GNOME=	glib20
 USE_WEBPLUGINS=	native
 WEBPLUGINS_DIR=	${PREFIX}/lib
