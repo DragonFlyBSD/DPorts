@@ -2,12 +2,12 @@
 # Date created:		2007/01/27
 # Whom:			chinsan
 #
-# $FreeBSD: ports/vietnamese/urwvn/Makefile,v 1.6 2012/11/17 06:02:26 svnexp Exp $
+# $FreeBSD: vietnamese/urwvn/Makefile 321284 2013-06-19 16:03:12Z rafan $
 #
 
 PORTNAME=	urwvn
 PORTVERSION=	3.04
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	vietnamese x11-fonts
 MASTER_SITES=	http://vntex.org/urwvn/download/ LOCAL/chinsan
 DISTNAME=	urwvn-${PORTVERSION}-ttf
