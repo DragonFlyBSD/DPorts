@@ -2,7 +2,7 @@
 # Date created:				18 Oct 2003
 # Whom:				Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
 #
-# $FreeBSD: chinese/wenju/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: chinese/wenju/Makefile 321140 2013-06-17 16:18:54Z antoine $
 #
 
 PORTNAME=	wenju
@@ -31,6 +31,6 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-install:
-	gtk-query-immodules-2.0 > ${PREFIX}/etc/gtk-2.0/gtk.immodules
+	${LOCALBASE}/bin/gtk-query-immodules-2.0 > ${PREFIX}/etc/gtk-2.0/gtk.immodules
 
 .include <bsd.port.mk>
