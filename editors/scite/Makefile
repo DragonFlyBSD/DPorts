@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/scite/Makefile 317248 2013-05-03 20:50:15Z madpilot $
+# $FreeBSD: editors/scite/Makefile 321588 2013-06-22 20:09:24Z rakuco $
 
 PORTNAME=	scite
-PORTVERSION=	3.3.1
+PORTVERSION=	3.3.3
 CATEGORIES=	editors gnome
 MASTER_SITES=	SF/scintilla/SciTE/${PORTVERSION}
 DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
