@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gkrellflynn
-# Date Created:				Fri Aug 17 15:57:42 EDT 2001
-# Whom:					Patrick Li <pat@databits.net>
-#
-# $FreeBSD: ports/sysutils/gkrellflynn/Makefile,v 1.25 2012/11/17 06:01:33 svnexp Exp $
-#
+# Created by: Patrick Li <pat@databits.net>
+# $FreeBSD: sysutils/gkrellflynn/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
 
 PORTNAME=	gkrellflynn
 PORTVERSION=	0.8
