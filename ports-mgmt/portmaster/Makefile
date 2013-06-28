@@ -1,7 +1,7 @@
-# $FreeBSD: ports-mgmt/portmaster/Makefile 320240 2013-06-08 11:28:13Z bdrewery $
+# $FreeBSD: ports-mgmt/portmaster/Makefile 321581 2013-06-22 16:38:09Z bdrewery $
 
 PORTNAME=	portmaster
-PORTVERSION=	3.16
+PORTVERSION=	3.17
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	LOCAL/bdrewery/${PORTNAME}/ \
   		http://mirror.shatow.net/freebsd/portmaster/ \
@@ -15,7 +15,7 @@ LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
-GH_COMMIT=	2a29846
+GH_COMMIT=	e0c7943
 GH_TAGNAME=	${GH_COMMIT}
 
 OPTIONS_DEFINE=	BASH ZSH
