@@ -1,9 +1,10 @@
-# $FreeBSD: finance/skrooge/Makefile 317967 2013-05-12 16:16:56Z makc $
+# $FreeBSD: finance/skrooge/Makefile 321658 2013-06-23 22:03:56Z rakuco $
 
 PORTNAME=	skrooge
 PORTVERSION=	1.6.0
 CATEGORIES=	finance kde
-MASTER_SITES=	http://skrooge.org/files/
+MASTER_SITES=	${MASTER_SITE_KDE}
+MASTER_SITE_SUBDIR=	stable/${PORTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE4 personal finance manager
