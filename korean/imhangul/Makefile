@@ -1,34 +1,52 @@
-# Created by: CHOI Junho <cjh@kr.freebsd.org>
-# $FreeBSD: korean/imhangul/Makefile 317521 2013-05-06 15:18:38Z bapt $
+# Created by: Junho CHOI <junho.choi@gmail.com>
+# $FreeBSD: korean/imhangul/Makefile 321507 2013-06-21 23:40:27Z jkim $
 
 PORTNAME=	imhangul
-PORTVERSION=	2.1.0
-PORTREVISION=	1
+PORTVERSION=	${GTKVER}.1.1
 CATEGORIES=	korean
-MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
+MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	jkim@FreeBSD.org
-COMMENT=	GTK+-2.0 Hangul input module
+COMMENT=	GTK+ Hangul input module
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	hangul.1:${PORTSDIR}/korean/libhangul
+LIB_DEPENDS=	hangul:${PORTSDIR}/korean/libhangul
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
+USES=		pkgconfig
+
+OPTIONS_DEFINE=	GTK3 NLS
 
 .include <bsd.port.options.mk>
 
+.if ${PORT_OPTIONS:MGTK3}
+USE_GNOME=	gtk30
+GTKVER=	3
+PLIST_SUB=	GTK2="@comment " GTK3=""
+.else
+USE_GNOME=	gtk20
+GTKVER=	2
+PLIST_SUB=	GTK2="" GTK3="@comment "
+.endif
+PLIST_SUB+=	GTKVER="${GTKVER}.0"
+
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
-LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MGTK3}
+post-install:
+	@${LOCALBASE}/bin/gtk-query-immodules-3.0 > \
+	    ${LOCALBASE}/lib/gtk-3.0/${GTK3_VERSION}/immodules.cache
 .endif
 
 .include <bsd.port.mk>
