@@ -1,10 +1,10 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/darktable/Makefile 317874 2013-05-11 13:14:44Z danfe $
+# $FreeBSD: graphics/darktable/Makefile 321448 2013-06-21 07:30:14Z danfe $
 
 PORTNAME=	darktable
-PORTVERSION=	1.2
+PORTVERSION=	1.2.1
 CATEGORIES=	graphics
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:R}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Virtual lighttable and darkroom for photographers
