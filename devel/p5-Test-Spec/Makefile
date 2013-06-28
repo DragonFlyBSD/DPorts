@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Test-Spec/Makefile,v 1.11 2012/11/17 05:56:33 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Spec/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	Test-Spec
 PORTVERSION=	0.46
@@ -24,10 +24,4 @@ PERL_CONFIGURE=	yes
 MAN3=		Test::Spec.3 \
 		Test::Spec::Mocks.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	Test-Harness>=0:${PORTSDIR}/devel/p5-Test-Harness
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
