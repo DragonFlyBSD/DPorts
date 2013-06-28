@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: security/pinentry/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: security/pinentry/Makefile 321253 2013-06-19 14:14:13Z makc $
 
 PORTNAME=	pinentry
 PORTVERSION=	0.8.1
@@ -27,7 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .if !defined(PINENTRY_SLAVE)
 OPTIONS_MULTI=	FRONTEND
 OPTIONS_MULTI_FRONTEND=	NCURSES GTK GTK2 QT3 QT4
-OPTIONS_DEFAULT=	${OPTIONS_MULTI_FRONTEND}
+OPTIONS_DEFAULT=	${OPTIONS_MULTI_FRONTEND:NQT3}
 
 NCURSES_DESC=	Curses frontend
 GTK_DESC=	Gtk+1 frontend
