@@ -1,9 +1,5 @@
-# New ports collection makefile for:	freera
-# Date created:		01 Feb 2007
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/freera/Makefile,v 1.11 2012/11/17 05:57:39 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/freera/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	freera
 PORTVERSION=	080203
