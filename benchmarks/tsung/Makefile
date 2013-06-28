@@ -1,12 +1,8 @@
-# New ports collection makefile for:	tsung
-# Date created:	   04 June 2007
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/benchmarks/tsung/Makefile,v 1.5 2012/11/17 05:54:51 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: benchmarks/tsung/Makefile 321757 2013-06-25 18:37:55Z swills $
 
 PORTNAME=	tsung
-PORTVERSION=	1.4.2
+PORTVERSION=	1.5.0
 CATEGORIES=	benchmarks sysutils
 MASTER_SITES=	http://tsung.erlang-projects.org/dist/
 
