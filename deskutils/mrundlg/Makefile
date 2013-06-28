@@ -2,14 +2,15 @@
 # Date created:		12 July 2005
 # Whom:			Matthew Holder <sixxgate@hotmail.com>
 #
-# $FreeBSD: ports/deskutils/mrundlg/Makefile,v 1.5 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/mrundlg/Makefile 321597 2013-06-22 21:44:24Z rakuco $
 #
 
 PORTNAME=	mrundlg
 PORTVERSION=	1.0
 PORTREVISION=	3
 CATEGORIES=	deskutils
-MASTER_SITES=	http://matt.sixxgate.com/files/
+# MASTER_SITES=	http://matt.sixxgate.com/files/
+MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
 MAINTAINER=	sixxgate@hotmail.com
 COMMENT=	An application / program launcher for Motif
