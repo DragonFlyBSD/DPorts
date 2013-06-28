@@ -1,10 +1,10 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/java/visualvm/Makefile,v 1.2 2013/01/26 03:43:53 svnexp Exp $
+# $FreeBSD: java/visualvm/Makefile 321341 2013-06-19 22:35:23Z swills $
 
 PORTNAME=	visualvm
 PORTVERSION=	1.3.5
 CATEGORIES=	java devel
-MASTER_SITES=	http://java.net/downloads/visualvm/release${PORTVERSION:S/.//g}/
+MASTER_SITES=	https://java.net/downloads/visualvm/release${PORTVERSION:S/.//g}/
 DISTNAME=	visualvm_${PORTVERSION:S/.//g}
 
 MAINTAINER=	swills@FreeBSD.org
