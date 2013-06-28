@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/morla/Makefile 320330 2013-06-09 13:00:09Z miwi $
+# $FreeBSD: editors/morla/Makefile 320984 2013-06-15 11:10:34Z flo $
 
 PORTNAME=	morla
 PORTVERSION=	0.16.1
@@ -45,7 +45,7 @@ post-patch:
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXULRUNNER}
-USE_GECKO=	libxul19
+USE_GECKO=	libxul
 CONFIGURE_ARGS+=	--with-javascript=xulrunner
 .else
 CONFIGURE_ARGS+=	--with-javascript=none
