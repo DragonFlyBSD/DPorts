@@ -1,9 +1,5 @@
-# New ports collection makefile for:	biloba
-# Date created:		02 Oct 2005
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/biloba/Makefile,v 1.21 2013/01/23 15:05:34 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/biloba/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	biloba
 PORTVERSION=	0.9.3
