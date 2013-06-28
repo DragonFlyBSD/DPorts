@@ -1,12 +1,8 @@
-# New ports collection makefile for:   numdiff
-# Date created:        18 October 2006
-# Whom:                Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/math/numdiff/Makefile,v 1.7 2012/11/17 05:59:23 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: math/numdiff/Makefile 321138 2013-06-17 16:17:41Z wg $
 
 PORTNAME=	numdiff
-PORTVERSION=	5.2.1
+PORTVERSION=	5.6.1
 CATEGORIES=	math textproc
 MASTER_SITES=	SAVANNAH
 
@@ -17,15 +13,23 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --exec-prefix=${PREFIX} --infodir=${PREFIX}/${INFO_PATH} LIBS=-lm --disable-nls
+CONFIGURE_ARGS+=	--prefix=${PREFIX} \
+		--mandir=${PREFIX}/man \
+		--exec-prefix=${PREFIX} \
+		--infodir=${PREFIX}/${INFO_PATH} \
+		LIBS=-lm \
+		--disable-nls
 USE_GMAKE=	yes
 
 INFO=	numdiff
+MAN1=	ndselect.1 numdiff.1
 
-.include <bsd.port.pre.mk>
+OPTIONS_DEFINE=	DOCS
 
-.if defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ! ${PORT_OPTIONS:MDOCS}
 CONFIGURE_ARGS+=	--docdir=${WRKDIR}/doc
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
