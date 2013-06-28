@@ -1,8 +1,9 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net-im/jabberd/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: net-im/jabberd/Makefile 321681 2013-06-24 13:53:29Z mm $
 
 PORTNAME=	jabberd
 PORTVERSION=	2.2.17
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	http://cloud.github.com/downloads/jabberd2/jabberd2/
 
