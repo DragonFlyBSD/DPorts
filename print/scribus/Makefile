@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/scribus/Makefile 318996 2013-05-24 17:20:27Z bsam $
+# $FreeBSD: print/scribus/Makefile 321333 2013-06-19 21:37:29Z bsam $
 
 PORTNAME=	scribus
 PORTVERSION=	1.4.2
@@ -34,7 +34,7 @@ USE_PYTHON=	yes
 USES=		cmake desktop-file-utils pkgconfig shared-mime-info
 USE_LDCONFIG=	yes
 
-CMAKE_ARGS+=	-DWITH_ASPELL=NO -DWANT_HUNSPELL=YES
+CMAKE_ARGS+=	-DWITH_ASPELL=NO -DWANT_HUNSPELL=YES -Wno-ferror-limit
 
 MAN1=		scribus.1
 MANLANG=	"" pl de
