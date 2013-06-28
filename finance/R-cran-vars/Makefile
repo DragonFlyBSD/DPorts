@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-vars/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: finance/R-cran-vars/Makefile 321460 2013-06-21 11:28:12Z tota $
 
 PORTNAME=	vars
-DISTVERSION=	1.5-0
-PORTREVISION=	3
+DISTVERSION=	1.5-1
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
