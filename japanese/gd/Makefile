@@ -14,6 +14,4 @@ MASTERDIR=	${.CURDIR}/../../graphics/gd
 
 CPPFLAGS+=	-DJISX0208
 
-PKGNAMEPREFIX=	ja-
-
 .include "${MASTERDIR}/Makefile"
