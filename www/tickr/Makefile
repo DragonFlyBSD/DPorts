@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/tickr/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: www/tickr/Makefile 321049 2013-06-16 13:54:02Z nivit $
 
 PORTNAME=	tickr
-PORTVERSION=	0.6.3
+PORTVERSION=	0.6.4
 #PORTREVISION=	0
 CATEGORIES=	www
 MASTER_SITES=	http://www.newsrssticker.com/src/ \
