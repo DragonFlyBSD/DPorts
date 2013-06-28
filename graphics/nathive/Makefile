@@ -1,13 +1,9 @@
-# New ports collection makefile for:	nathive
-# Date created:		24 Nov 2008
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/nathive/Makefile,v 1.9 2012/11/17 05:58:15 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: graphics/nathive/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	nathive
 PORTVERSION=	0.813
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.nathive.org/packages/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -16,7 +12,8 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}_source
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Lightweight image editor
 
-USE_GNOME=	pkgconfig glib20 gtk20
+USE_GNOME=	glib20 gtk20
+USE_PKGCONFIG=	build
 ALL_TARGET=	default
 
 post-patch:
