@@ -1,17 +1,17 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: ftp/yafc/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: ftp/yafc/Makefile 321104 2013-06-17 12:52:05Z wg $
 
 PORTNAME=	yafc
-PORTVERSION=	1.2.4
+PORTVERSION=	1.2.5
 CATEGORIES=	ftp ipv6
 MASTER_SITES=	http://www.yafc-ftp.com/upload/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Yet another ftp client. Similar to ftp(1)
 
 LICENSE=	GPLv2 # (or later)
 
-OPTIONS_DEFINE=	BASH EXAMPLES NLS SSH
+OPTIONS_DEFINE=	BASH EXAMPLES NLS SSH READLINE
 OPTIONS_DEFAULT=BASH NLS SSH
 
 USE_XZ=		yes
@@ -36,6 +36,7 @@ PLIST_FILES=	bin/yafc
 .if ${PORT_OPTIONS:MNLS}
 USE_GNOME+=	intltool
 USES+=		gettext
+CONFIGURE_ARGS+=	--with-gettext=${LOCALBASE}
 PLIST_FILES+=	share/locale/de/LC_MESSAGES/yafc.mo \
 		share/locale/sv/LC_MESSAGES/yafc.mo
 .else
