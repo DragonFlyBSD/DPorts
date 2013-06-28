@@ -1,5 +1,5 @@
 # Created by: igor@zynaps.ru
-# $FreeBSD: mail/cucipop/Makefile 316862 2013-04-30 00:42:58Z miwi $
+# $FreeBSD: mail/cucipop/Makefile 321291 2013-06-19 16:39:43Z antoine $
 
 # NOTE: APOP works only for virtual hosts as designed!
 #       Virtual hosts works only with Berkeley DB2.
@@ -7,7 +7,7 @@
 
 PORTNAME=	cucipop
 PORTVERSION=	1.31
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail ipv6
 MASTER_SITES=	ftp://ftp.informatik.rwth-aachen.de/pub/packages/cucipop/ \
 		http://ftp.riken.go.jp/archives/net/mail/pop/cucipop/ \
@@ -27,5 +27,10 @@ MAKE_JOBS_SAFE=	yes
 
 MAN8=		cucipop.8 #makevpopdb.8
 PLIST_FILES=	libexec/cucipop
+
+post-install:
+	@${ECHO_CMD} "@exec mkdir -p /var/spool/cucipop/bulletins" >> ${TMPPLIST}
+	@${ECHO_CMD} "@unexec rmdir /var/spool/cucipop/bulletins 2>/dev/null || true" >> ${TMPPLIST}
+	@${ECHO_CMD} "@unexec rmdir /var/spool/cucipop 2>/dev/null || true" >> ${TMPPLIST}
 
 .include <bsd.port.mk>
