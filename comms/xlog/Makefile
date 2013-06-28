@@ -1,5 +1,5 @@
 # Created by: Patrick Gardella <patrick@FreeBSD.org>
-# $FreeBSD: comms/xlog/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: comms/xlog/Makefile 321394 2013-06-20 15:31:48Z bsam $
 
 PORTNAME=	xlog
 PORTVERSION=	2.0.5
@@ -9,8 +9,10 @@ MASTER_SITES=	${MASTER_SITE_SAVANNAH} \
 		http://www.chronos.org.uk/download/
 MASTER_SITE_SUBDIR=	xlog
 
-MAINTAINER=	matt@chronos.org.uk
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Amateur Radio logging application
+
+LICENSE=	GPLv3
 
 USES=		gettext
 USE_GNOME=	gtk20
@@ -22,7 +24,6 @@ CONFIGURE_ARGS=	--with-mime-update \
 LIB_DEPENDS+=	hamlib:${PORTSDIR}/comms/hamlib
 
 MAN1=		xlog.1
-LICENSE=	GPLv3
 
 .include <bsd.port.options.mk>
 
