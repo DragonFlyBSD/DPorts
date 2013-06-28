@@ -2,7 +2,7 @@
 # Date created:		20 November 1999
 # Whom:			torstenb
 #
-# $FreeBSD: ports/net-mgmt/cricket/Makefile,v 1.44 2012/11/17 06:00:31 svnexp Exp $
+# $FreeBSD: net-mgmt/cricket/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	cricket
@@ -30,11 +30,6 @@ USERS=	cricket
 GROUPS=	www
 
 .include <bsd.port.pre.mk>
-
-# A reliable version of Time::HiRes is included with perl 5.8.7 and later.
-.if ${PERL_LEVEL} < 500807
-RUN_DEPENDS+=	p5-Time-HiRes>=0:${PORTSDIR}/devel/p5-Time-HiRes
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/home/cricket,${PREFIX},g' \
