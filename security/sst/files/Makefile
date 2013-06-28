@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/sst/files/Makefile,v 1.2 2012/11/17 06:01:21 svnexp Exp $
+# $FreeBSD: security/sst/files/Makefile 321436 2013-06-21 03:10:20Z mi $
 
 PROG=sst
 
@@ -6,8 +6,12 @@ BINDIR=${PREFIX}/sbin
 MANDIR=${PREFIX}/man/man
 
 CFLAGS+=	-DCONFDIR='"${OPENSSLDIR}"' -DCERTF='"certs/sst.pem"' \
-		-DNETCAT='"${PREFIX}/bin/nc"' -I${OPENSSLINC}
-
+		-I${OPENSSLINC}
+.if exists(/usr/bin/nc)
+CFLAGS+=	-DNETCAT='"/usr/bin/nc"' 
+.else
+CFLAGS+=	-DNETCAT='"${LOCALBASE}/bin/netcat"'
+.endif
 LDADD+=	-L${OPENSSLLIB} -lssl -lcrypto
 
 .include <bsd.prog.mk>

@@ -2,11 +2,12 @@
 # Date created:		Nov 7, 2000
 # Whom:			Mikhail Teterin <mi@aldan.algebra.com>
 #
-# $FreeBSD: ports/security/sst/Makefile,v 1.4 2012/11/17 06:01:21 svnexp Exp $
+# $FreeBSD: security/sst/Makefile 321436 2013-06-21 03:10:20Z mi $
 #
 
 PORTNAME=	sst
 PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://utcc.utoronto.ca/~pkern/stuff/sst/
 DISTNAME=	${PORTNAME}
@@ -14,7 +15,9 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	A simple SSL tunneling tool (uses netcat)
 
+.if !exists(/usr/bin/nc)
 RUN_DEPENDS=	netcat:${PORTSDIR}/net/netcat
+.endif
 
 USE_OPENSSL=	YES
 MAN1=		sst.1
