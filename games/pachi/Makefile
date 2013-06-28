@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pachi
-# Date created:		18 Sep 2005
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/pachi/Makefile,v 1.13 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/pachi/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	pachi
 PORTVERSION=	1.0

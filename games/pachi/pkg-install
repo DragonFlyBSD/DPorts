@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/games/pachi/pkg-install,v 1.2 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/pachi/pkg-install 300896 2012-07-14 13:54:48Z beat $
 
 SCOREDIR="/var/games/pachi"
 SCOREFILE="/var/games/pachi/scores.dat"
