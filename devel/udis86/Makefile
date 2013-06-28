@@ -1,8 +1,9 @@
 # Created by: Lutz Boehne <lboehne@damogran.de>
-# $FreeBSD: devel/udis86/Makefile 319385 2013-05-29 17:36:03Z bf $
+# $FreeBSD: devel/udis86/Makefile 321042 2013-06-16 12:18:57Z bf $
 
 PORTNAME=	udis86
 PORTVERSION=	1.7.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME:tl}/${PORTNAME:tl}/${PORTVERSION:R}
@@ -13,9 +14,10 @@ COMMENT=	Minimalistic x86 and x86-64 disassembler library
 LICENSE=	BSD
 
 USE_GMAKE=	yes
+USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--without-sphinx-build
+CONFIGURE_ARGS=	--without-sphinx-build  --enable-shared
 
 INFO=		udis86
 PORTDOCS=	x86
