@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tomatoes
-# Date created:				2005 07 Feb
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: ports/games/tomatoes/Makefile,v 1.23 2013/01/23 15:05:34 svnexp Exp $
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: games/tomatoes/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
 
 PORTNAME=	tomatoes
 PORTVERSION=	1.5
