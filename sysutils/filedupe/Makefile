@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/filedupe/Makefile 319158 2013-05-27 06:27:31Z bsam $
+# $FreeBSD: sysutils/filedupe/Makefile 320946 2013-06-14 15:32:31Z bsam $
 
 PORTNAME=	filedupe
 PORTVERSION=	1.1
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://sammy.net/~sammy/hacks/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	utility for quickly finding duplicate files
+COMMENT=	Utility for quickly finding duplicate files
 
 LIB_DEPENDS=	gdbm:${PORTSDIR}/databases/gdbm
 
@@ -19,6 +19,6 @@ post-patch:
 		s|your_database|/var/db/filedupe.db|' ${WRKSRC}/filedupe.c
 
 do-install:
-	$(INSTALL_PROGRAM) ${WRKSRC}/filedupe ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/filedupe ${PREFIX}/bin
 
 .include <bsd.port.mk>
