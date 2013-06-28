@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: chinese/oxim/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: chinese/oxim/Makefile 321140 2013-06-17 16:18:54Z antoine $
 
 PORTNAME=	oxim
 PORTVERSION=	1.2.2
@@ -84,7 +84,7 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MGTK2}
-	@gtk-query-immodules-2.0 > ${PREFIX}/etc/gtk-2.0/gtk.immodules
+	@${LOCALBASE}/bin/gtk-query-immodules-2.0 > ${PREFIX}/etc/gtk-2.0/gtk.immodules
 .endif
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO} To display this message again, type ${PKG_INFO} -D ${PKGNAME}
