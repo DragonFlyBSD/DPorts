@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/sysutils/mcollective/files/mcollectived.in,v 1.5 2012/11/17 06:01:38 svnexp Exp $
+# $FreeBSD: sysutils/mcollective/files/mcollectived.in 303359 2012-08-30 03:08:13Z swills $
 #
 # PROVIDE: mcollectived
 # REQUIRE: LOGIN

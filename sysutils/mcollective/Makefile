@@ -1,13 +1,8 @@
-# New ports collection makefile for:	mcollective
-# Date created:		2011-08-09
-# Whom:			Russell Jackson <raj@csub.edu>
-#
-# $FreeBSD: ports/sysutils/mcollective/Makefile,v 1.11 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Russell Jackson <raj@csub.edu>
+# $FreeBSD: sysutils/mcollective/Makefile 321721 2013-06-25 02:57:53Z swills $
 
 PORTNAME=	mcollective
-PORTVERSION=	2.1.1
-PORTREVISION=	1
+PORTVERSION=	2.2.4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://downloads.puppetlabs.com/${PORTNAME}/
 EXTRACT_SUFX=	.tgz
