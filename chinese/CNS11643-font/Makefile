@@ -1,9 +1,9 @@
 # Created by: chinsan
-# $FreeBSD: chinese/CNS11643-font/Makefile 314755 2013-03-20 19:08:49Z lwhsu $
+# $FreeBSD: chinese/CNS11643-font/Makefile 321284 2013-06-19 16:03:12Z rafan $
 
 PORTNAME=	CNS11643-font
 PORTVERSION=	98.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	chinese x11-fonts
 MASTER_SITES=	http://www.cns11643.gov.tw/AIDB/file.do?path=download/%E5%AD%97%E5%9E%8B%E4%B8%8B%E8%BC%89%601q%60%E5%85%A8%E5%AD%97%E5%BA%AB%E6%AD%A3%E6%A5%B7%E9%AB%94/name/:kai \
 		http://www.cns11643.gov.tw/AIDB/file.do?path=download/%E5%AD%97%E5%9E%8B%E4%B8%8B%E8%BC%89%601q%60%E5%85%A8%E5%AD%97%E5%BA%AB%E6%AD%A3%E5%AE%8B%E9%AB%94/name/:sung
