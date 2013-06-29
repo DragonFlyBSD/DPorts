@@ -1,7 +1,7 @@
-# $FreeBSD: textproc/rubygem-hikidoc/Makefile 320424 2013-06-10 01:08:08Z swills $
+# $FreeBSD: textproc/rubygem-hikidoc/Makefile 321652 2013-06-23 20:35:33Z swills $
 
 PORTNAME=	hikidoc
-PORTVERSION=	0.0.4
+PORTVERSION=	0.0.6
 CATEGORIES=	textproc ruby
 MASTER_SITES=	RG
 
