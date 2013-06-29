@@ -2,12 +2,12 @@
 # Date created:		2 Sep 2004
 # Whom:			Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
 #
-# $FreeBSD: ports/chinese/opendesktop-fonts/Makefile,v 1.13 2012/11/17 05:54:57 svnexp Exp $
+# $FreeBSD: chinese/opendesktop-fonts/Makefile 321295 2013-06-19 17:05:08Z rafan $
 #
 
 PORTNAME=	opendesktop-fonts
 PORTVERSION=	1.4.2
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	chinese x11-fonts
 MASTER_SITES?=	ftp://ftp.opendesktop.org.tw/odp/ODOFonts/OpenFonts/ \
 		LOCAL/chinsan/fonts
