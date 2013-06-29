@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fishsupper
-# Date created:		25 Mar 2006
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/fishsupper/Makefile,v 1.22 2013/01/23 15:05:34 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/fishsupper/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	fishsupper
 PORTVERSION=	0.1.6
@@ -34,8 +30,10 @@ DESKTOP_ENTRIES="Fish Supper" \
 		"Game;ArcadeGame;" \
 		false
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
 post-install:
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
