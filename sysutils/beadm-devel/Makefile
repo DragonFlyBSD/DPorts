@@ -1,7 +1,7 @@
-# $FreeBSD: sysutils/beadm-devel/Makefile 315283 2013-03-26 11:39:02Z bdrewery $
+# $FreeBSD: sysutils/beadm-devel/Makefile 321577 2013-06-22 15:04:02Z bdrewery $
 
 PORTNAME=	beadm
-PORTVERSION=	0.8.99.20130326
+PORTVERSION=	0.8.99.20130622
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
@@ -12,7 +12,7 @@ LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	vermaden
-GH_COMMIT=	9a7d8b4
+GH_COMMIT=	5d0667b
 GH_TAGNAME=	${GH_COMMIT}
 
 NO_BUILD=	YES
