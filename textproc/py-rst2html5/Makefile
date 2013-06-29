@@ -1,9 +1,9 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: textproc/py-rst2html5/Makefile 319322 2013-05-28 18:54:09Z olivierd $
+# $FreeBSD: textproc/py-rst2html5/Makefile 321207 2013-06-18 17:36:23Z olivierd $
 #
 
 PORTNAME=	rst2html5
-PORTVERSION=	0.10
+PORTVERSION=	1.0
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,8 +11,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	olivierd@FreeBSD.org
 COMMENT=	Produces HTML5 documents from reStructuredText sources
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Genshi>=0.6:${PORTSDIR}/textproc/py-genshi \
-	${PYTHON_PKGNAMEPREFIX}pygments>=1.5:${PORTSDIR}/textproc/py-pygments \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Genshi>=0.7:${PORTSDIR}/textproc/py-genshi \
+	${PYTHON_PKGNAMEPREFIX}pygments>=1.6:${PORTSDIR}/textproc/py-pygments \
 	${PYTHON_PKGNAMEPREFIX}docutils>=0.10:${PORTSDIR}/textproc/py-docutils
 
 USE_PYTHON=	yes
