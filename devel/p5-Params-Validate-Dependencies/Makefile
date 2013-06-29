@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Params-Validate-Dependencies/Makefile,v 1.3 2012/12/04 18:07:08 svnexp Exp $
+# $FreeBSD: devel/p5-Params-Validate-Dependencies/Makefile 321544 2013-06-22 03:52:14Z sunpoet $
 
 PORTNAME=	Params-Validate-Dependencies
-PORTVERSION=	1.13
+PORTVERSION=	1.21
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
