@@ -1,9 +1,9 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: ports/www/mod_rpaf2/Makefile,v 1.11 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_rpaf2/Makefile 321585 2013-06-22 19:59:57Z ohauer $
 
 PORTNAME=	mod_rpaf2
 PORTVERSION=	0.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://stderr.net/apache/rpaf/download/
 DISTNAME=	mod_rpaf-${PORTVERSION}
@@ -13,7 +13,7 @@ COMMENT=	Make proxied requests appear with client IP
 
 MAKE_JOBS_SAFE=  yes
 
-USE_APACHE=	22
+USE_APACHE=	22+
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 SHORTMODNAME=	rpaf
