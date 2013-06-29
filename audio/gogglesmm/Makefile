@@ -1,5 +1,5 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: audio/gogglesmm/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: audio/gogglesmm/Makefile 320924 2013-06-14 14:07:34Z bapt $
 
 PORTNAME=	gogglesmm
 PORTVERSION=	0.12.7
@@ -26,6 +26,8 @@ FOX17_DESC=	Use development branch of FOX
 NEWREMOTE_DESC=	Use new remote player
 GCRYPT_DESC=	Use libgcrypt for md5 calculation
 
+OPTIONS_SUB=	yes
+
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man --prefix=${PREFIX}
 MAKE_JOBS_SAFE=	yes
@@ -38,49 +40,25 @@ MAN1=		gogglesmm.1
 
 PORTDOCS=	README AUTHORS
 
+FOX16_LIB_DEPENDS=	FOX-1.6:${PORTSDIR}/x11-toolkits/fox16
+FOX17_LIB_DEPENDS=	FOX-1.7:${PORTSDIR}/x11-toolkits/fox17
+
+GCRYPT_LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
+GCRYPT_CONFIGURE_ON=	--with-md5=gcrypt
+GCRYPT_CONFIGURE_OFF=	--with-md5=internal
+
+DBUS_LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
+DBUS_CONFIGURE_OFF=	--with-dbus
+
+CURL_LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+CURL_CONFIGURE_OFF=	--without-curl
+
+NLS_USES=		gettext
+NLS_CONFIGURE_OFF=	--disable-nls
+
+NEWREMOTE_CONFIGURE_OFF=	--without-new-remote
+
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MFOX16}
-LIB_DEPENDS+=	FOX-1.6:${PORTSDIR}/x11-toolkits/fox16
-.endif
-
-.if ${PORT_OPTIONS:MFOX17}
-LIB_DEPENDS+=	FOX-1.7:${PORTSDIR}/x11-toolkits/fox17
-.endif
-
-.if ${PORT_OPTIONS:MGCRYPT}
-LIB_DEPENDS+=	gcrypt:${PORTSDIR}/security/libgcrypt
-CONFIGURE_ARGS+=	--with-md5=gcrypt
-.else
-CONFIGURE_ARGS+=	--with-md5=internal
-.endif
-
-.if ${PORT_OPTIONS:MDBUS}
-LIB_DEPENDS+=	dbus-1:${PORTSDIR}/devel/dbus
-.else
-CONFIGURE_ARGS+=	--without-dbus
-.endif
-
-.if ${PORT_OPTIONS:MCURL}
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
-.else
-CONFIGURE_ARGS+=	--without-curl
-.endif
-
-.if ${PORT_OPTIONS:MNLS}
-PLIST_SUB=	NLS=""
-USES+=		gettext
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB=	NLS="@comment "
-.endif
-
-.if empty(PORT_OPTIONS:MNEWREMOTE)
-CONFIGURE_ARGS+=--without-new-remote
-.endif
-
-post-patch:
-	@${ECHO_CMD} ${SUBPORT}
 
 pre-install:
 	@${MKDIR} ${PREFIX}/share/applications
