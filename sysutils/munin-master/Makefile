@@ -1,5 +1,5 @@
 # Created by: Lupe Christoph <lupe@lupe-christoph.de>
-# $FreeBSD: sysutils/munin-master/Makefile 312351 2013-02-16 13:30:41Z flo $
+# $FreeBSD: sysutils/munin-master/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	munin
 PORTVERSION=	${MUNIN_VERSION}
@@ -76,11 +76,6 @@ PLIST_SUB=	DBDIR=${DBDIR}
 SUB_FILES=	pkg-message
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-BUILD_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-.endif
 
 pre-install:
 	@${SETENV} ${SCRIPTS_ENV} PKG_PREFIX=${PREFIX} \
