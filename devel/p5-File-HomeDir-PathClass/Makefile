@@ -2,7 +2,7 @@
 # Date created:		2011-10-10
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-File-HomeDir-PathClass/Makefile,v 1.5 2012/12/16 06:16:54 svnexp Exp $
+# $FreeBSD: devel/p5-File-HomeDir-PathClass/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	File-HomeDir-PathClass
@@ -26,10 +26,4 @@ PERL_MODBUILD=	yes
 
 MAN3=		File::HomeDir::PathClass.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
