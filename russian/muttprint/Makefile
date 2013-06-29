@@ -8,7 +8,6 @@
 PORTNAME=	muttprint
 PORTREVISION=	5
 CATEGORIES=	russian print
-PKGNAMEPREFIX=	ru-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Print in Russian
