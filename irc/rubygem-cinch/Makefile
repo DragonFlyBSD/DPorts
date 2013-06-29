@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: irc/rubygem-cinch/Makefile 319943 2013-06-05 01:05:05Z swills $
+# $FreeBSD: irc/rubygem-cinch/Makefile 321619 2013-06-23 05:27:38Z swills $
 
 PORTNAME=	cinch
-PORTVERSION=	2.0.4
+PORTVERSION=	2.0.5
 CATEGORIES=	irc rubygems
 MASTER_SITES=	RG
 
