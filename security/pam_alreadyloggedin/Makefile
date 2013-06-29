@@ -1,5 +1,5 @@
 # Created by: green@FreeBSD.org
-# $FreeBSD: security/pam_alreadyloggedin/Makefile 316397 2013-04-23 22:31:27Z mi $
+# $FreeBSD: security/pam_alreadyloggedin/Makefile 318971 2013-05-24 14:02:52Z bapt $
 
 PORTNAME=	pam_alreadyloggedin
 PORTVERSION=	0.3
@@ -14,6 +14,12 @@ COMMENT=	PAM module based on whether a user is already logged in
 
 MANCOMPRESSED=	yes
 
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} >= 900007
+#BROKEN=		Does not build with utmpx.
+.endif
+
 MAN8=		pam_alreadyloggedin.8
 MAKE_JOBS_SAFE=	yes
 PLIST_FILES=	lib/pam_alreadyloggedin.so lib/pam_alreadyloggedin.so.2
@@ -21,4 +27,4 @@ PLIST_FILES=	lib/pam_alreadyloggedin.so lib/pam_alreadyloggedin.so.2
 do-configure:
 	${LN} -s ${FILESDIR}/Makefile.inc ${WRKDIR}/
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
