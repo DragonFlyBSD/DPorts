@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/astro/mkgmap-splitter/files/splitter.sh.in,v 1.3 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: astro/mkgmap-splitter/files/splitter.sh.in 300895 2012-07-14 12:56:14Z beat $
 
 JAVA="%%LOCALBASE%%/bin/java"
 

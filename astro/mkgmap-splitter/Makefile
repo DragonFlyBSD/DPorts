@@ -1,12 +1,8 @@
-# New ports collection makefile for:	mkgmap-splitter
-# Date created:		03 May 2011
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/astro/mkgmap-splitter/Makefile,v 1.4 2013/02/20 19:17:43 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: astro/mkgmap-splitter/Makefile 321166 2013-06-18 01:53:28Z amdmi3 $
 
 PORTNAME=	splitter
-PORTVERSION=	r289
+PORTVERSION=	r304
 CATEGORIES=	astro converters java
 MASTER_SITES=	http://www.mkgmap.org.uk/download/ \
 		http://mirror.amdmi3.ru/distfiles/
