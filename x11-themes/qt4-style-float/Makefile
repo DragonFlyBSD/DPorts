@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qt4-style-float
-# Date created:		26 Nov 2010
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/qt4-style-float/Makefile,v 1.4 2012/11/17 06:03:33 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: x11-themes/qt4-style-float/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	float
 PORTVERSION=	0.1a2
