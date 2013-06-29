@@ -1,8 +1,8 @@
 # Created by: Jimmy Olgeni <olgeni@uli.it>
-# $FreeBSD: deskutils/egroupware/Makefile 319981 2013-06-05 11:44:37Z bdrewery $
+# $FreeBSD: deskutils/egroupware/Makefile 321626 2013-06-23 11:32:25Z wg $
 
 PORTNAME=	eGroupware
-PORTVERSION=	1.8.004.20130531
+PORTVERSION=	1.8.004.20130620
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}-1.8/${PORTNAME}-${PORTVERSION}
 DISTFILES=	${PORTNAME}-${PORTVERSION}.tar.bz2 \
