@@ -1,8 +1,8 @@
 # Created by: Sergei Vyshenski <svysh@pn.sinp.msu.ru>
-# $FreeBSD: devel/p5-Proc-SafeExec/Makefile 313266 2013-03-02 15:55:17Z miwi $
+# $FreeBSD: devel/p5-Proc-SafeExec/Makefile 321085 2013-06-17 05:38:19Z az $
 
 PORTNAME=	Proc-SafeExec
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
