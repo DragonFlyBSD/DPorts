@@ -1,9 +1,9 @@
 # Created by: wollman
-# $FreeBSD: ports/www/mod_auth_kerb2/Makefile,v 1.34 2012/11/28 16:22:06 svnexp Exp $
+# $FreeBSD: www/mod_auth_kerb2/Makefile 321221 2013-06-18 20:46:01Z ohauer $
 
 PORTNAME=	mod_auth_kerb
 PORTVERSION=	5.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	SF/modauthkerb/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
