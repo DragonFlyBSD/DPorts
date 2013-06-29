@@ -2,7 +2,7 @@
 # Date created:				3 March 2005
 # Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-CPAN-YACSmoke/Makefile,v 1.8 2012/11/17 05:56:06 svnexp Exp $
+# $FreeBSD: devel/p5-CPAN-YACSmoke/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	CPAN-YACSmoke
@@ -30,15 +30,4 @@ MAN3=		CPAN::YACSmoke.3 \
 		CPAN::YACSmoke::Plugin::SmokeDB.3 \
 		CPAN::YACSmoke::Plugin::Recent.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500806
-RUN_DEPENDS+=	p5-PathTools>=0.88:${PORTSDIR}/devel/p5-PathTools
-.endif
-
-.if ${PERL_LEVEL} < 500905
-RUN_DEPENDS+=	p5-CPANPLUS>=0:${PORTSDIR}/devel/p5-CPANPLUS \
-		p5-Module-Pluggable>=2.5:${PORTSDIR}/devel/p5-Module-Pluggable
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
