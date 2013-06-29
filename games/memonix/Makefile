@@ -1,9 +1,5 @@
-# New ports collection makefile for:	memonix
-# Date created:		12 Jul 2007
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: games/memonix/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/memonix/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	memonix
 PORTVERSION=	1.6.070713
