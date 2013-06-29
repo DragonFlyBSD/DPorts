@@ -2,11 +2,12 @@
 # Date created:		10 Dec 2004
 # Whom:			Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
 #
-# $FreeBSD: ports/chinese/CJKUnifonts/Makefile,v 1.16 2012/11/17 05:54:55 svnexp Exp $
+# $FreeBSD: chinese/CJKUnifonts/Makefile 321284 2013-06-19 16:03:12Z rafan $
 #
 
 PORTNAME=	CJKUnifonts
 PORTVERSION=	0.2.20080216.1
+PORTREVISION=	1
 CATEGORIES=	chinese x11-fonts
 MASTER_SITES=	LOCAL/chinsan/fonts/:uming \
 		http://ftp.debian.org/debian/pool/main/t/ttf-arphic-uming/:uming \
