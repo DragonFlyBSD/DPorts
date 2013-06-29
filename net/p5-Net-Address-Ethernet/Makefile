@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-Address-Ethernet/Makefile 320548 2013-06-11 11:12:53Z tobez $
+# $FreeBSD: net/p5-Net-Address-Ethernet/Makefile 321378 2013-06-20 13:22:34Z jadawin $
 
 PORTNAME=	Net-Address-Ethernet
-PORTVERSION=	1.119
+PORTVERSION=	1.122
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
