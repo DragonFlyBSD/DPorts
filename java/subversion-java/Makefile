@@ -1,5 +1,5 @@
 # Created by: Lev Serebryako <lev@FreeBSD.org>
-# $FreeBSD: ports/java/subversion-java/Makefile,v 1.12 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/subversion-java/Makefile 321479 2013-06-21 16:41:01Z lev $
 
 PKGNAMESUFFIX=	-java
 CATEGORIES=	java
@@ -8,6 +8,8 @@ MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Java bindings for Version control system
 
 .if defined(WITH_SUBVERSION_VER) && ${WITH_SUBVERSION_VER} == 16
+MASTERDIR=	${.CURDIR}/../../devel/subversion16
+.elif defined(WITH_SUBVERSION_VER) && ${WITH_SUBVERSION_VER} == 17
 MASTERDIR=	${.CURDIR}/../../devel/subversion16
 .else
 MASTERDIR=	${.CURDIR}/../../devel/subversion
@@ -24,7 +26,7 @@ SVN_BUILD_BINDINGS=yes
 
 .include "${MASTERDIR}/Makefile.common"
 
-CONFIGURE_ARGS+=	--enable-javahl --with-jdk=${JAVA_HOME}
+CONFIGURE_ARGS+=	--enable-javahl --with-jdk=${JAVA_HOME} --with-jikes=no
 
 do-build:
 	@${MKDIR} ${WRKSRC}/subversion/bindings/java/javahl/classes
