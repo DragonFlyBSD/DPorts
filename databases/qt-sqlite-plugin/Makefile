@@ -1,11 +1,12 @@
 # Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: databases/qt-sqlite-plugin/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: databases/qt-sqlite-plugin/Makefile 321482 2013-06-21 17:24:13Z rakuco $
 
 PORTNAME=	qt-${DB}-plugin
 PORTVERSION=	3.3.8
 PORTREVISION=	9
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_QT}
+MASTER_SITE_SUBDIR=	archive/qt/${PORTVERSION:R:R}
 DISTNAME=	qt-x11-free-${PORTVERSION}
 DIST_SUBDIR=	KDE
 
