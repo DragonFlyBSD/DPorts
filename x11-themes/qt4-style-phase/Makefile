@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qt4-style-phase
-# Date created:		26 Nov 2010
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/qt4-style-phase/Makefile,v 1.5 2012/11/17 06:03:33 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: x11-themes/qt4-style-phase/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	phase
 PORTVERSION=	0.8
