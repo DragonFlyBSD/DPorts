@@ -1,13 +1,7 @@
-# New ports collection makefile for:	devel/p5-Test-Group
-# Date created:				10 April 2007
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Group/Makefile,v 1.10 2012/11/17 05:56:32 svnexp Exp $
-#
+# $FreeBSD: devel/p5-Test-Group/Makefile 321353 2013-06-20 06:56:31Z lth $
 
 PORTNAME=	Test-Group
-PORTVERSION=	0.18
-PORTREVISION=	1
+PORTVERSION=	0.19
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
