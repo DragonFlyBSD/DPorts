@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/gecko-mediaplayer/Makefile 319872 2013-06-04 15:47:49Z flo $
+# $FreeBSD: www/gecko-mediaplayer/Makefile 320984 2013-06-15 11:10:34Z flo $
 
 PORTNAME=	gecko-mediaplayer
 PORTVERSION=	1.0.8
@@ -25,7 +25,7 @@ CACHE_DESC=	Enable caching of remote media to local storage
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
 USE_GNOME=	glib20
-USE_GECKO=	libxul libxul19
+USE_GECKO=	libxul
 USE_WEBPLUGINS=	native
 
 WEBPLUGINS_FILES=	${PORTNAME}.so
