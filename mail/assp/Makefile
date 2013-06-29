@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: mail/assp/Makefile 317065 2013-05-01 23:20:50Z bdrewery $
+# $FreeBSD: mail/assp/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	assp
 PORTVERSION=	1.9.9.13107
@@ -33,7 +33,7 @@ SUB_LIST=	ASSP_USER="${ASSP_USER}" ASSP_GROUP="${ASSP_GROUP}" \
 
 USE_RC_SUBR=	${PORTNAME}
 
-OPTIONS_DEFINE=	EMVALID LDAP SPF SRS SEND FBACKW ZLIB CLAMAV DNSBL MYSQL \
+OPTIONS_DEFINE=	EMVALID LDAP SPF SRS SEND FBACKW CLAMAV DNSBL MYSQL \
 		MATCHRE SENDERB MIMEMOD SSL IPV6
 
 EMVALID_DESC=	RFC822 recipient address validator
@@ -42,7 +42,6 @@ SPF_DESC=	SPF validation of client IP
 SRS_DESC=	Sender Rewriting Scheme
 SEND_DESC=	Resending .eml files
 FBACKW_DESC=	File Reading Backwards
-ZLIB_DESC=	HTTP Header Compression on Admin Interface
 CLAMAV_DESC=	ClamAV virus scanner
 DNSBL_DESC=	DNS block list checking
 MYSQL_DESC=	Use MySQL db to store white/red/delaylists
@@ -52,7 +51,7 @@ MIMEMOD_DESC=	Multiple Attachement detection
 SSL_DESC=	SSL secure sockets support
 IPV6_DESC=	IPv6 sockets support
 
-OPTIONS_DEFAULT=	EMVALID SPF SRS SEND FBACKW ZLIB CLAMAV DNSBL MATCHRE SENDERB MIMEMOD SSL IPV6
+OPTIONS_DEFAULT=	EMVALID SPF SRS SEND FBACKW CLAMAV DNSBL MATCHRE SENDERB MIMEMOD SSL IPV6
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/ASSP_1.99_13107_install/${PORTNAME:tu}
 
@@ -84,12 +83,6 @@ RUN_DEPENDS+=	p5-Email-Send>=2.198:${PORTSDIR}/mail/p5-Email-Send
 
 .if ${PORT_OPTIONS:MFBACKW}
 RUN_DEPENDS+=	p5-File-ReadBackwards>=1.05:${PORTSDIR}/devel/p5-File-ReadBackwards
-.endif
-
-.if ${PORT_OPTIONS:MZLIB}
-. if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.052:${PORTSDIR}/archivers/p5-IO-Compress
-. endif
 .endif
 
 .if ${PORT_OPTIONS:MCLAMAV}
