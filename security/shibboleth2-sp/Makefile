@@ -1,9 +1,8 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: security/shibboleth2-sp/Makefile 320338 2013-06-09 14:41:24Z girgen $
+# $FreeBSD: security/shibboleth2-sp/Makefile 321194 2013-06-18 15:15:48Z girgen $
 
 PORTNAME=	shibboleth-sp
-PORTVERSION=	2.5.1
-PORTREVISION=	1
+PORTVERSION=	2.5.2
 CATEGORIES=	security www
 MASTER_SITES=	http://shibboleth.net/downloads/service-provider/${PORTVERSION}/
 
