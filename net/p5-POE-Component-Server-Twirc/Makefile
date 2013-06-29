@@ -1,14 +1,11 @@
-# New ports collection makefile for:	net/p5-POE-Component-Server-Twirc
-# Date created:				25 February 2009
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-POE-Component-Server-Twirc/Makefile,v 1.7 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: net/p5-POE-Component-Server-Twirc/Makefile 320892 2013-06-14 10:20:30Z tobez $
 
 PORTNAME=	POE-Component-Server-Twirc
-PORTVERSION=	0.15
+PORTVERSION=	0.16
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:MMIMS
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
