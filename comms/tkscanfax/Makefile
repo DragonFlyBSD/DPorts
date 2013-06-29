@@ -1,14 +1,10 @@
-# New ports collection makefile for:	tkscanfax
-# Date created:			11 Mai 2002
-# Whom:				MITA Yoshio <mita@FreeBSD.org>
-#
-# $FreeBSD: ports/comms/tkscanfax/Makefile,v 1.14 2012/11/17 05:55:01 svnexp Exp $
-#
+# Created by: MITA Yoshio <mita@FreeBSD.org>
+# $FreeBSD: comms/tkscanfax/Makefile 321415 2013-06-20 19:28:27Z bsam $
 
 PORTNAME=	tkscanfax
 PORTVERSION=	1.1.8
-PORTEPOCH=	1
 PORTREVISION=	1
+PORTEPOCH=	1
 CATEGORIES=	comms tk
 MASTER_SITES=	http://shino.pos.to/linux/tkscanfax/
 
