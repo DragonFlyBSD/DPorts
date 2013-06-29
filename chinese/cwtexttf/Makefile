@@ -2,12 +2,12 @@
 # Date created:		18 Dec 2002
 # Whom:			Shen Chuan-Hsing <satue@freebsd.sinica.edu.tw>
 #
-# $FreeBSD: ports/chinese/cwtexttf/Makefile,v 1.12 2012/11/17 05:54:56 svnexp Exp $
+# $FreeBSD: chinese/cwtexttf/Makefile 321284 2013-06-19 16:03:12Z rafan $
 #
 
 PORTNAME=	cwtexttf
 PORTVERSION=	1.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	chinese x11-fonts
 MASTER_SITES=	http://ftp.wustl.edu/pub/FreeBSD/distfiles/ \
 		http://ftp.jaist.ac.jp/pub/FreeBSD/distfiles/
