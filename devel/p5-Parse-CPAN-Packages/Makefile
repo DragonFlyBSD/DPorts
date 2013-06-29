@@ -2,7 +2,7 @@
 # Date created:				Mar 27 2004
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: devel/p5-Parse-CPAN-Packages/Makefile 314425 2013-03-17 12:22:45Z lth $
+# $FreeBSD: devel/p5-Parse-CPAN-Packages/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Parse-CPAN-Packages
@@ -33,10 +33,4 @@ MAN3=	Parse::CPAN::Packages.3 \
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
