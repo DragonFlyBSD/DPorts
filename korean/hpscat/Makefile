@@ -1,45 +1,43 @@
-# New ports collection makefile for:    hpscat-1.3jshin
-# Date created:         4 Apr 1997
-# Whom:                 Choi Jun Ho <junker@jazz.snu.ac.kr>
-#
-# $FreeBSD: ports/korean/hpscat/Makefile,v 1.17 2012/11/17 05:58:46 svnexp Exp $
-#
+# Created by: Junho CHOI <junho.choi@gmail.com>
+# $FreeBSD: korean/hpscat/Makefile 321164 2013-06-17 23:33:49Z jkim $
 
 PORTNAME=	hpscat
-PORTVERSION=	1.3jshin
+PORTVERSION=	1.3.1
+PORTEPOCH=	1
 CATEGORIES=	korean print
-MASTER_SITES=	ftp://ftp.kr.FreeBSD.org/pub/FreeBSD-kr/distfiles/ \
-		ftp://ftp.kreonet.re.kr/pub/hangul/cair-archive/print/hpscat/ \
-		ftp://ftp.kreonet.re.kr/pub/hangul/cair-archive/editor/ked/
-DISTNAME=	hpscat-jshin
-DISTFILES=	hpscat-jshin.tar.gz ked.tar.gz
+MASTER_SITES=	http://ftp.kaist.ac.kr/hangul/print/hpscat/ \
+		ftp://ftp.kaist.ac.kr/hangul/print/hpscat/ \
+		http://ftp.kaist.ac.kr/hangul/editor/ked/:ked \
+		ftp://ftp.kaist.ac.kr/hangul/editor/ked/:ked \
+		ftp://ftp.kr.FreeBSD.org/pub/FreeBSD-kr/distfiles/
+PKGNAMESUFFIX=	-jshin
+DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ked.tar.gz:ked
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Hangul Text Printing Utility
 
 RUN_DEPENDS=    hcode:${PORTSDIR}/korean/hcode
 
+FONTDIR=	${PREFIX}/${FONTDIR_REL}
+FONTDIR_REL=	share/fonts/ked-${PORTNAME}
+FONTFILES=	Gotic Header Munjo MunjoBold PCMunjo
+README_FILES=	README README.jshin README.jshin.ks
+PLIST_FILES=	bin/hpscat bin/hpscat.bin
+.for i in ${FONTFILES} ${README_FILES}
+PLIST_FILES+=	${FONTDIR_REL}/${i}
+.endfor
+PLIST_DIRS=	${FONTDIR_REL}
+PLIST_DIRSTRY=	share/fonts
+SUB_FILES=	hpscat.sh pkg-message
+SUB_LIST=	FONTDIR=${FONTDIR}
 USE_PERL5=	yes
 
-pre-patch:
-	@${REINPLACE_CMD} -e 's,<malloc.h>,<stdlib.h>,' \
-		${WRKSRC}/hpscat.h
-
-pre-configure:
-	${CP} ${FILESDIR}/hpscat.sh ${WRKSRC}/
-
 do-install:
-	@cd ${WRKSRC}; \
-	${MKDIR} ${PREFIX}/share/fonts/ked-hpscat; \
-	${INSTALL_PROGRAM} hpscat ${PREFIX}/bin/hpscat.bin; \
-	${INSTALL_SCRIPT} hpscat.sh ${PREFIX}/bin/hpscat; \
-	${INSTALL_DATA} ${WRKDIR}/ked/Header ${PREFIX}/share/fonts/ked-hpscat; \
-	${INSTALL_DATA} ${WRKDIR}/ked/Munjo ${PREFIX}/share/fonts/ked-hpscat; \
-	${INSTALL_DATA} ${WRKDIR}/ked/MunjoBold ${PREFIX}/share/fonts/ked-hpscat; \
-	${INSTALL_DATA} ${WRKDIR}/ked/PCMunjo ${PREFIX}/share/fonts/ked-hpscat; \
-	${INSTALL_DATA} ${WRKDIR}/ked/Gotic ${PREFIX}/share/fonts/ked-hpscat; \
-	${INSTALL_DATA} README ${PREFIX}/share/fonts/ked-hpscat; \
-	${INSTALL_DATA} README.jshin ${PREFIX}/share/fonts/ked-hpscat;\
-	${INSTALL_DATA} README.jshin.ks ${PREFIX}/share/fonts/ked-hpscat
+	@${INSTALL_PROGRAM} ${WRKSRC}/hpscat ${PREFIX}/bin/hpscat.bin
+	@${INSTALL_SCRIPT} ${WRKDIR}/hpscat.sh ${PREFIX}/bin/hpscat
+	@cd ${WRKSRC} && ${COPYTREE_SHARE} "${README_FILES}" ${FONTDIR}
+	@cd ${WRKDIR}/ked && ${COPYTREE_SHARE} "${FONTFILES}" ${FONTDIR}
+	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
