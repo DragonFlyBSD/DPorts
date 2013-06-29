@@ -2,12 +2,12 @@
 # Date created:		2007/01/06
 # Whom:			chinsan
 #
-# $FreeBSD: ports/vietnamese/vietunicode-trichlor/Makefile,v 1.5 2012/11/17 06:02:26 svnexp Exp $
+# $FreeBSD: vietnamese/vietunicode-trichlor/Makefile 321284 2013-06-19 16:03:12Z rafan $
 #
 
 PORTNAME=	vietunicode-trichlor
 PORTVERSION=	2004.04.30
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	vietnamese x11-fonts
 MASTER_SITES=	SF/vietunicode/VietFonts-TriChlor/TrichlorSet%20v2004
 DISTNAME=	VietFonts_TriChlor_ttf
