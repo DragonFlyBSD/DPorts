@@ -2,7 +2,7 @@
 # Date created:		2011-10-24
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Data-Printer/Makefile,v 1.9 2012/11/17 05:56:10 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Printer/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Data-Printer
@@ -39,10 +39,6 @@ MAN3=		Data::Printer.3 \
 		Data::Printer::Filter::DateTime.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
 
 .if ${PERL_LEVEL} < 501400
 BUILD_DEPENDS+=	p5-Term-ANSIColor>=3:${PORTSDIR}/devel/p5-Term-ANSIColor
