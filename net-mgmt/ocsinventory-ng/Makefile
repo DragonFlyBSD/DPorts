@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/ocsinventory-ng/Makefile 318000 2013-05-13 07:00:02Z miwi $
+# $FreeBSD: net-mgmt/ocsinventory-ng/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	ocsinventory-ng
 PORTVERSION=	2.0.5
@@ -30,10 +30,6 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
 
 do-install:
 	@${MKDIR} ${DATADIR}
