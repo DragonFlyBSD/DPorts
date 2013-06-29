@@ -2,7 +2,7 @@
 # Date created:					20040825
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/www/gecko-sharp20/Makefile,v 1.28 2012/11/17 06:02:34 svnexp Exp $
+# $FreeBSD: www/gecko-sharp20/Makefile 320984 2013-06-15 11:10:34Z flo $
 #   $Id: Makefile,v 1.19 2007/02/07 15:49:20 killfill Exp $
 #
 
@@ -16,7 +16,7 @@ DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono bindings to embed Mozilla
 
-USE_GECKO=	libxul19
+USE_GECKO=	libxul
 USE_GNOME=	gtksharp20
 LATEST_LINK=	gecko-sharp20
 GNU_CONFIGURE=	yes
