@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/cakephp11/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/cakephp11/Makefile 321716 2013-06-24 20:55:09Z madpilot $
 
 PORTNAME=	cakephp
 PORTVERSION=	1.1.19.6305
@@ -19,7 +19,7 @@ USE_BZIP2=	yes
 USE_APACHE_RUN=	22+
 SLAVE_PORT_MODULES=	REWRITE
 
-CONFLICTS=	cakephp-1.[23].*
+CONFLICTS=	cakephp-1.[23].* cakephp-2.*
 NO_BUILD=	yes
 
 USE_PHP=	pcre session
