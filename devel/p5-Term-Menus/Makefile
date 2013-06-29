@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Term-Menus/Makefile 314937 2013-03-22 15:09:27Z culot $
+# $FreeBSD: devel/p5-Term-Menus/Makefile 321554 2013-06-22 08:34:28Z culot $
 
 PORTNAME=	Term-Menus
-PORTVERSION=	2.25
+PORTVERSION=	2.31
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:REEDFISH
@@ -14,8 +14,8 @@ COMMENT=	Create Powerful Terminal, Console, and CMD Environment Menus
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	p5-Data-Dump-Streamer>0:${PORTSDIR}/devel/p5-Data-Dump-Streamer \
-		p5-Term-RawInput>=0:${PORTSDIR}/devel/p5-Term-RawInput \
-		p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey
+		p5-Term-RawInput>0:${PORTSDIR}/devel/p5-Term-RawInput \
+		p5-Term-ReadKey>0:${PORTSDIR}/devel/p5-Term-ReadKey
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
