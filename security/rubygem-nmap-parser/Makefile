@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-nmap-parser
-# Date created:				2009-02-09
-# Whom:					Daniel Roethlisberger <daniel@roe.ch>
-#
-# $FreeBSD: ports/security/rubygem-nmap-parser/Makefile,v 1.6 2012/11/17 06:01:19 svnexp Exp $
+# Created by: Daniel Roethlisberger <daniel@roe.ch>
+# $FreeBSD: security/rubygem-nmap-parser/Makefile 321640 2013-06-23 14:24:07Z swills $
 
 PORTNAME=	nmap-parser
-PORTVERSION=	0.3.2
-PORTREVISION=	1
+PORTVERSION=	0.3.5
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
