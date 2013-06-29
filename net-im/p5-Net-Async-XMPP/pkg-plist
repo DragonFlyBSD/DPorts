@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net-im/p5-Net-Async-XMPP/pkg-plist,v 1.2 2012/11/17 06:00:28 svnexp Exp $
+@comment $FreeBSD: net-im/p5-Net-Async-XMPP/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%SITE_PERL%%/Net/Async/XMPP.pm
 %%SITE_PERL%%/Net/Async/XMPP/Client.pm
 %%SITE_PERL%%/Net/Async/XMPP/Protocol.pm
