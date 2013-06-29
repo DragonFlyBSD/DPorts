@@ -1,9 +1,8 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: devel/p5-Test-YAML-Meta/Makefile 318287 2013-05-16 08:40:11Z miwi $
+# $FreeBSD: devel/p5-Test-YAML-Meta/Makefile 321715 2013-06-24 20:25:23Z lippe $
 
 PORTNAME=	Test-YAML-Meta
-PORTVERSION=	0.19
-PORTREVISION=	1
+PORTVERSION=	0.20
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
