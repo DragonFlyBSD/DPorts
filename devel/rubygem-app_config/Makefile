@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/rubygem-app_config/Makefile,v 1.3 2013/02/18 19:31:40 svnexp Exp $
+# $FreeBSD: devel/rubygem-app_config/Makefile 321621 2013-06-23 06:35:15Z swills $
 
 PORTNAME=	app_config
-PORTVERSION=	1.0.2
+PORTVERSION=	1.1.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
