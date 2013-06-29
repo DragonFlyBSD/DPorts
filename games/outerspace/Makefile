@@ -1,9 +1,5 @@
-# New ports collection makefile for:	outerspace
-# Date created:		27 Mar 2007
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/outerspace/Makefile,v 1.9 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/outerspace/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	outerspace
 PORTVERSION=	0.2.2
