@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-rdiscount
-# Date created:				2008-11-02
-# Whom:					Daniel Roethlisberger <daniel@roe.ch>
-#
-# $FreeBSD: ports/textproc/rubygem-rdiscount/Makefile,v 1.10 2012/11/17 06:02:20 svnexp Exp $
+# Created by: Daniel Roethlisberger <daniel@roe.ch>
+# $FreeBSD: textproc/rubygem-rdiscount/Makefile 321657 2013-06-23 21:26:52Z swills $
 
 PORTNAME=	rdiscount
-PORTVERSION=	1.6.8
+PORTVERSION=	2.1.6
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
