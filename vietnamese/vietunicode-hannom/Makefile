@@ -2,12 +2,12 @@
 # Date created:		2007/01/06
 # Whom:			chinsan
 #
-# $FreeBSD: ports/vietnamese/vietunicode-hannom/Makefile,v 1.5 2012/11/17 06:02:26 svnexp Exp $
+# $FreeBSD: vietnamese/vietunicode-hannom/Makefile 321284 2013-06-19 16:03:12Z rafan $
 #
 
 PORTNAME=	vietunicode-hannom
 PORTVERSION=	2005.02.06
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	vietnamese x11-fonts
 MASTER_SITES=	SF/vietunicode/hannom/hannom%20v2005
 DISTNAME=	hannom
