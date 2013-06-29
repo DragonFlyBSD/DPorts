@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Validator-Custom
-# Date created:		2010-07-02
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-#
-# $FreeBSD: ports/textproc/p5-Validator-Custom/Makefile,v 1.21 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
+# $FreeBSD: textproc/p5-Validator-Custom/Makefile 321521 2013-06-22 02:21:07Z sunpoet $
 
 PORTNAME=	Validator-Custom
-PORTVERSION=	0.1500
+PORTVERSION=	0.1800
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:KIMOTO
