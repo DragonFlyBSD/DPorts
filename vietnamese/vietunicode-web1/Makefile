@@ -2,12 +2,12 @@
 # Date created:		2007/01/06
 # Whom:			chinsan
 #
-# $FreeBSD: ports/vietnamese/vietunicode-web1/Makefile,v 1.5 2012/11/17 06:02:26 svnexp Exp $
+# $FreeBSD: vietnamese/vietunicode-web1/Makefile 321284 2013-06-19 16:03:12Z rafan $
 #
 
 PORTNAME=	vietunicode-web1
 PORTVERSION=	2004.04.30
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	vietnamese x11-fonts
 MASTER_SITES=	SF/vietunicode/VietFonts-Web1/Web1%20Package%20v2004
 DISTNAME=	VietFontsWeb1_ttf
