@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xorgramana
-# Date created:		27 Mar 2009
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/games/xorgramana/Makefile,v 1.11 2013/01/23 15:05:34 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: games/xorgramana/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	xorgramana
 PORTVERSION=	0.0.8
@@ -26,6 +22,9 @@ ALL_TARGET=	${PORTNAME}
 MKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README
+PORTDATA=	*
+
+PLIST_FILES=	bin/${PORTNAME}
 
 DESKTOP_ENTRIES="XorGramana" \
 		"Logic word puzzle game set inside a series of mazes" \
@@ -34,15 +33,18 @@ DESKTOP_ENTRIES="XorGramana" \
 		"Game;LogicGame;" \
 		false
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|GFX/|${DATADIR}/&|' ${WRKSRC}/icons.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+.if !defined(NOPORTDATA)
 	${MKDIR} ${DATADIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} "data GFX" ${DATADIR}
-
-.if !defined(NOPORTDOCS)
+.endif
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
