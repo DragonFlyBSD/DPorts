@@ -1,9 +1,5 @@
-# New ports collection makefile for:    dvdisaster
-# Date created:                         2006/08/13
-# Whom:                                 Heiner <h.eichmann@gmx.de>
-#
-# $FreeBSD: sysutils/dvdisaster/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Heiner <h.eichmann@gmx.de>
+# $FreeBSD: sysutils/dvdisaster/Makefile 321272 2013-06-19 14:52:37Z miwi $
 
 PORTNAME=	dvdisaster
 PORTVERSION=	0.72.4
