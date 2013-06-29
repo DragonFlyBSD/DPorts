@@ -1,13 +1,9 @@
-# New ports collection makefile for:	mod_xsendfile Apache module
-# Date created:			2006-11-23
-# Whom:				Andrew T. Bennett <potatosaladx@gmail.com>
-#
-# $FreeBSD: ports/www/mod_xsendfile/Makefile,v 1.7 2012/11/17 06:02:42 svnexp Exp $
-#
+# Created by: Andrew T. Bennett <potatosaladx@gmail.com>
+# $FreeBSD: www/mod_xsendfile/Makefile 321590 2013-06-22 20:24:57Z ohauer $
 
 PORTNAME=	mod_xsendfile
 PORTVERSION=	0.12
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	https://tn123.org/mod_xsendfile/ \
 		http://cloud.github.com/downloads/potatosalad/mod_xsendfile/
