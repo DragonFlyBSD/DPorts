@@ -1,12 +1,8 @@
-# New ports collection makefile for:	flexmock
-# Date created:				4 Nov 2011
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/py-flexmock/Makefile,v 1.5 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/py-flexmock/Makefile 321438 2013-06-21 03:34:36Z clsung $
 
 PORTNAME=	flexmock
-PORTVERSION=	0.9.6
+PORTVERSION=	0.9.7
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
