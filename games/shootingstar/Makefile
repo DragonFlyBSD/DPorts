@@ -1,9 +1,5 @@
-# New ports collection makefile for:	shootingstar
-# Date created:				20 Nov 2005
-# Whom:					Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/shootingstar/Makefile,v 1.17 2012/11/17 05:57:52 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/shootingstar/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	shootingstar
 PORTVERSION=	1.2.0
