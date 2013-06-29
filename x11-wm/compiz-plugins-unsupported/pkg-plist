@@ -1,4 +1,4 @@
-@comment $FreeBSD: x11-wm/compiz-plugins-unsupported/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: x11-wm/compiz-plugins-unsupported/pkg-plist 321268 2013-06-19 14:51:24Z miwi $
 include/compiz/compiz-elements.h
 lib/compiz/libatlantis.so
 lib/compiz/libatlantis.la
@@ -67,6 +67,4 @@ share/compiz/snow1.png
 share/compiz/snow2.png
 share/compiz/snowflake.png
 share/compiz/stars1.png
-@dirrmtry share/locale/pl_PL/LC_MESSAGES
-@dirrmtry share/locale/pl_PL
 @dirrmtry include/compiz
