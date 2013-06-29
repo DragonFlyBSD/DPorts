@@ -1,20 +1,23 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: dns/fpdns/Makefile 316381 2013-04-23 17:16:16Z bdrewery $
+# $FreeBSD: dns/fpdns/Makefile 321133 2013-06-17 15:29:25Z miwi $
 
 PORTNAME=	fpdns
-PORTVERSION=	0.9.3.20121019
+PORTVERSION=	0.10.0.${GH_TAGNAME}
 CATEGORIES=	dns net perl5
-DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${GH_COMMIT}
+MASTER_SITES=	GH
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	FPDNS - Fingerprinting DNS servers
+COMMENT=	Fingerprinting DNS servers
+
+LICENSE=	BSD
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	p5-Net-DNS>0:${PORTSDIR}/dns/p5-Net-DNS
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	kirei
-GH_COMMIT=	24a2f18
-GH_TAGNAME=	${GH_COMMIT}
+GH_COMMIT=	23eb0bf
+GH_TAGNAME=	20130404
 
 PERL_CONFIGURE=	yes
 
