@@ -1,8 +1,9 @@
 # Created by: Denis Shaposhnikov <dsh@bamus.cz>
-# $FreeBSD: mail/dovecot2-antispam-plugin/Makefile 319040 2013-05-25 09:39:23Z olgeni $
+# $FreeBSD: mail/dovecot2-antispam-plugin/Makefile 321740 2013-06-25 12:36:58Z wg $
 
 PORTNAME=	dovecot2-antispam-plugin
 PORTVERSION=	20130429
+PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://olgeni.olgeni.com/~olgeni/distfiles/ \
 		LOCAL/olgeni
