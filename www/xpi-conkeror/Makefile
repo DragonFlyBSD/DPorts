@@ -2,7 +2,7 @@
 # Date created:		27 April 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/www/xpi-conkeror/Makefile,v 1.22 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: www/xpi-conkeror/Makefile 320984 2013-06-15 11:10:34Z flo $
 #
 
 PORTNAME=	conkeror
@@ -18,7 +18,7 @@ MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	A completely keyboard driven browser based on firefox
 
 WRKSRC=	${WRKDIR}/conkeror
-USE_GECKO=	libxul19
+USE_GECKO=	libxul
 
 BUILD_ID=echo -n `whoami`@`hostname`_`date +%s`
 
