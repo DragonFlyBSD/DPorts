@@ -1,8 +1,8 @@
 # Created by: Hugo Saro <hugo@barafranca.com>
-# $FreeBSD: net/haproxy-devel/Makefile 315706 2013-04-03 11:47:15Z demon $
+# $FreeBSD: net/haproxy-devel/Makefile 321118 2013-06-17 14:40:01Z demon $
 
 PORTNAME=	haproxy
-DISTVERSION=	1.5-dev18
+DISTVERSION=	1.5-dev19
 CATEGORIES=	net
 MASTER_SITES=	http://haproxy.1wt.eu/download/1.5/src/devel/
 PKGNAMESUFFIX=	-devel
@@ -15,7 +15,7 @@ LICENSE_COMB=	multi
 
 CONFLICTS=	haproxy-[1234567890]\*
 USE_RC_SUBR=	haproxy
-USE_GMAKE=	YES
+USE_GMAKE=	yes
 SUB_FILES=	pkg-message
 MAN1=		haproxy.1
 
