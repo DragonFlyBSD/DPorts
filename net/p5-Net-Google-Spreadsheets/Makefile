@@ -2,7 +2,7 @@
 # Date created:				23 March 2010
 # Whom:					Gunter Wambaugh <gunter@six-two.net>
 #
-# $FreeBSD: ports/net/p5-Net-Google-Spreadsheets/Makefile,v 1.7 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Google-Spreadsheets/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Net-Google-Spreadsheets
@@ -37,10 +37,4 @@ MAN3=		Net::Google::Spreadsheets.3 \
 		Net::Google::Spreadsheets::Table.3 \
 		Net::Google::Spreadsheets::Worksheet.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
