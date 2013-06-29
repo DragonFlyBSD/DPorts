@@ -1,7 +1,7 @@
-# $FreeBSD: deskutils/xfce4-xkb-plugin/Makefile 318186 2013-05-14 19:04:10Z olivierd $
+# $FreeBSD: deskutils/xfce4-xkb-plugin/Makefile 321408 2013-06-20 18:38:42Z olivierd $
 
 PORTNAME=	xfce4-xkb-plugin
-PORTVERSION=	0.5.5
+PORTVERSION=	0.5.6
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
@@ -18,7 +18,5 @@ USE_GMAKE=	yes
 USE_GNOME=	gtk20 intltool intlhack librsvg2 libwnck
 USE_XFCE=	configenv libmenu libutil panel
 USE_XORG=	x11
-
-CONFIGURE_ARGS=--disable-librsvg_2.36.2
 
 .include <bsd.port.mk>
