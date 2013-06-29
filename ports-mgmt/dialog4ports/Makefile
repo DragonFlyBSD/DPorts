@@ -1,8 +1,9 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: ports-mgmt/dialog4ports/Makefile 320008 2013-06-05 17:38:15Z bapt $
+# $FreeBSD: ports-mgmt/dialog4ports/Makefile 321701 2013-06-24 18:35:04Z eadler $
 
 PORTNAME=	dialog4ports
-PORTVERSION=	0.1.4
+PORTVERSION=	0.1.5
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://m1cro.tk/dialog4ports/ \
 		http://files.etoilebsd.net/dialog4ports/ \
