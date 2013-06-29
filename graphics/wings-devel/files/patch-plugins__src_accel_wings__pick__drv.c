@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/wings-devel/files/patch-plugins__src_accel_wings__pick__drv.c,v 1.2 2012/11/17 05:58:24 svnexp Exp $
+$FreeBSD: graphics/wings-devel/files/patch-plugins__src_accel_wings__pick__drv.c 302570 2012-08-15 10:58:34Z olgeni $
 
 --- plugins_src/accel/wings_pick_drv.c.orig
 +++ plugins_src/accel/wings_pick_drv.c

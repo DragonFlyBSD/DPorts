@@ -1,17 +1,13 @@
-# New ports collection makefile for:	wings
-# Date Created:				5 March 2003
-# Whom:				 	olgeni@FreeBSD.org
-#
-# $FreeBSD: ports/graphics/wings-devel/Makefile,v 1.39 2012/11/17 05:58:24 svnexp Exp $
-#
+# Created by: olgeni@FreeBSD.org
+# $FreeBSD: graphics/wings-devel/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	wings
 PORTVERSION=	1.3.1
 PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF
-DIST_SUBDIR=	erlang
 PKGNAMESUFFIX=	-devel
+DIST_SUBDIR=	erlang
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A polygon mesh modeler written in Erlang
