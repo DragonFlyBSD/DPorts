@@ -1,9 +1,5 @@
-# New ports collection makefile for:    gtamsanalyzer
-# Date created:         26 Sep 2006
-# Whom:                 gurkan@phys.ethz.ch
-#
-# $FreeBSD: ports/science/gtamsanalyzer/Makefile,v 1.14 2012/11/17 06:00:57 svnexp Exp $
-#
+# Created by: gurkan@phys.ethz.ch
+# $FreeBSD: science/gtamsanalyzer/Makefile 321377 2013-06-20 13:06:02Z bsam $
 
 PORTNAME=	gtamsanalyzer
 PORTVERSION=	0.42
@@ -24,7 +20,7 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/Source
 
-post-patch:	
+post-patch:
 	${RM} "${WRKSRC}/obj"
 
 .include <bsd.port.mk>
