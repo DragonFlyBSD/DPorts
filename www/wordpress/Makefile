@@ -1,8 +1,8 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: ports/www/wordpress/Makefile,v 1.82 2013/01/30 02:41:55 svnexp Exp $
+# $FreeBSD: www/wordpress/Makefile 321607 2013-06-23 02:26:26Z sunpoet $
 
 PORTNAME=	wordpress
-PORTVERSION=	3.5.1
+PORTVERSION=	3.5.2
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://wordpress.org/
