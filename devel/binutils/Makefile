@@ -82,12 +82,6 @@ CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
 
-.if ${ARCH} == "x86_64"
-CONFIGURE_TARGET=	x86_64-portbld-freebsd${OSREL}
-.else
-CONFIGURE_TARGET=	${ARCH}-portbld-freebsd${OSREL}
-.endif
-
 post-install:
 .if ${OSVERSION} >= 900044
 	${INSTALL_DATA} ${WRKSRC}/include/plugin-api.h ${PREFIX}/include/
