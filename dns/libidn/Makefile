@@ -1,8 +1,8 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: dns/libidn/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: dns/libidn/Makefile 321775 2013-06-25 23:19:35Z rakuco $
 
 PORTNAME=	libidn
-PORTVERSION=	1.26
+PORTVERSION=	1.27
 CATEGORIES=	dns
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -10,8 +10,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 MAINTAINER=	gaod@hychen.org
 COMMENT=	Internationalized Domain Names command line tool
 
-USE_GNOME=	gnomehack pkgconfig
-USES=		iconv
+USES=		iconv pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_PERL5_BUILD=	yes
