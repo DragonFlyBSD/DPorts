@@ -1,8 +1,8 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/osc/Makefile 319449 2013-05-30 19:31:47Z amdmi3 $
+# $FreeBSD: devel/osc/Makefile 321869 2013-06-27 08:21:45Z amdmi3 $
 
 PORTNAME=	osc
-PORTVERSION=	0.139.2
+PORTVERSION=	0.140.0
 CATEGORIES=	devel
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	openSUSE
-GH_COMMIT=	c1cf6a8
+GH_COMMIT=	87df33f
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}m2crypto>0:${PORTSDIR}/security/py-m2crypto
 
