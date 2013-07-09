@@ -1,0 +1,5 @@
+@comment $FreeBSD: devel/p5-Lvalue/pkg-plist 322242 2013-07-03 18:22:27Z zi $
+%%SITE_PERL%%/Lvalue.pm
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Lvalue/.packlist
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Lvalue/Path
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Lvalue
