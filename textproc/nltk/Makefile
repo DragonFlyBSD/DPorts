@@ -1,7 +1,7 @@
-# $FreeBSD: ports/textproc/nltk/Makefile,v 1.24 2012/11/17 06:02:03 svnexp Exp $
+# $FreeBSD: textproc/nltk/Makefile 321944 2013-06-28 04:29:03Z clsung $
 
 PORTNAME=	nltk
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.4
 PORTEPOCH=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
