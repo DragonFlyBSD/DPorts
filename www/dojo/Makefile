@@ -1,12 +1,12 @@
-# $FreeBSD: www/dojo/Makefile 318721 2013-05-21 20:13:05Z glarkin $
+# $FreeBSD: www/dojo/Makefile 322338 2013-07-05 15:37:00Z wg $
 
 PORTNAME=		dojo
-PORTVERSION=		1.9.0
+PORTVERSION=		1.9.1
 CATEGORIES=		www
 MASTER_SITES=		http://download.dojotoolkit.org/release-${PORTVERSION}/
 DISTNAME=		dojo-release-${PORTVERSION}
 
-MAINTAINER=		glarkin@FreeBSD.org
+MAINTAINER=		wg@FreeBSD.org
 COMMENT=		Open-source DHTML toolkit written in JavaScript
 
 NO_BUILD=		yes
