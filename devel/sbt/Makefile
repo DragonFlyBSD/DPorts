@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/sbt/Makefile 316095 2013-04-19 11:01:57Z ale $
+# $FreeBSD: devel/sbt/Makefile 321963 2013-06-28 14:12:16Z ale $
 
 PORTNAME=	sbt
-PORTVERSION=	0.12.3
+PORTVERSION=	0.12.4
 CATEGORIES=	devel java
 MASTER_SITES=	http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt/${PORTVERSION}/
 DISTNAME=	${PORTNAME}
