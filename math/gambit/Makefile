@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: math/gambit/Makefile 321673 2013-06-24 10:42:25Z gahr $
+# $FreeBSD: math/gambit/Makefile 322547 2013-07-09 07:15:05Z gahr $
 
 PORTNAME=	gambit
-PORTVERSION=	13.0.0
+PORTVERSION=	13.0.1
 CATEGORIES=	math
 MASTER_SITES=	SF/gambit/${PORTNAME}13/${PORTVERSION}/
 
