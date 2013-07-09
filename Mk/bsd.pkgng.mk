@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 321737 2013-06-25 12:24:10Z bapt $
+# $FreeBSD: Mk/bsd.pkgng.mk 322320 2013-07-05 12:29:35Z bdrewery $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -35,7 +35,6 @@ ACTUAL-PACKAGE-DEPENDS?= \
 		${PKG_QUERY} "%n: {origin: %o, version: \"%v\"}" " " ${_LIB_RUN_DEPENDS:C,[^:]*:([^:]*):?.*,\1,:C,${PORTSDIR}/,,} 2>/dev/null || : ; \
 		${PKG_QUERY} "%dn: {origin: %do, version: \"%dv\"}" " " ${_LIB_RUN_DEPENDS:C,[^:]*:([^:]*):?.*,\1,:C,${PORTSDIR}/,,} 2>/dev/null || : ; \
 	fi
-
 
 .if !target(fake-pkg)
 fake-pkg:
@@ -262,7 +261,7 @@ check-already-installed:
 
 .if !target(deinstall)
 deinstall:
-.if ${UID} != 0 && !defined(INSTALL_AS_USER)
+.if defined(UID) && ${UID} != 0 && !defined(INSTALL_AS_USER)
 	@${ECHO_MSG} "===>  Switching to root credentials for '${.TARGET}' target"
 	@cd ${.CURDIR} && \
 		${SU_CMD} "${MAKE} ${.TARGET}"

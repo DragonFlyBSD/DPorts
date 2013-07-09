@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.linux-apps.mk 319410 2013-05-30 09:11:52Z rene $
+# $FreeBSD: Mk/bsd.linux-apps.mk 322233 2013-07-03 15:32:01Z rene $
 #
 # Please view me with 4 column tabs!
 
@@ -141,7 +141,7 @@ dbuslibs_PORT=		${PORTSDIR}/devel/linux${LINUX_DIST_SUFFIX}-dbus-libs
 
 dri_f10_FILE=		${LINUXBASE}/usr/lib/libGL.so.1.2
 dri_DETECT=		${dri${LINUX_DIST_SUFFIX:S/-/_/}_FILE}
-dri_PORT=		${PORTSDIR}/graphics/linux-dri74
+dri_PORT=		${PORTSDIR}/graphics/linux${LINUX_DIST_SUFFIX}-dri
 dri_DEPENDS=		xorglibs
 
 esound_f10_FILE=	${LINUXBASE}/usr/lib/libesd.so.0.2.39

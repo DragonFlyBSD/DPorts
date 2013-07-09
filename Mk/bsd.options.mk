@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.options.mk 320926 2013-06-14 14:18:45Z bapt $
+# $FreeBSD: Mk/bsd.options.mk 321785 2013-06-26 07:22:06Z bapt $
 #
 # These variables are used in port makefiles to define the options for a port.
 #
@@ -77,7 +77,9 @@ OPTIONSMKINCLUDED=	bsd.options.mk
 
 OPTIONS_EXCLUDE+=	ALSA
 
+OPTIONS_NAME?=	${PKGORIGIN:S/\//_/}
 OPTIONSFILE?=	${PORT_DBDIR}/${UNIQUENAME}/options
+OPTIONS_FILE?=	${PORT_DBDIR}/${OPTIONS_NAME}/options
 
 # Set the default values for the global options, as defined by portmgr
 .if !defined(NOPORTDOCS)
@@ -164,6 +166,7 @@ PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
 NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  endfor
 
+# XXX To remove once UNIQUENAME will be removed
 ## Set the options specified per-port (set by user in make.conf)
 .  for opt in ${${UNIQUENAME}_SET}
 .    if !empty(COMPLETE_OPTIONS_LIST:M${opt})
@@ -177,13 +180,37 @@ NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
 NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  endfor
+# XXX To remove once UNIQUENAME will be removed
 
+## Set the options specified per-port (set by user in make.conf)
+.  for opt in ${${OPTIONS_NAME}_SET}
+.    if !empty(COMPLETE_OPTIONS_LIST:M${opt})
+PORT_OPTIONS+=	${opt}
+.    endif
+.  endfor
+PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
+
+## Unset the options excluded per-port (set by user in make.conf)
+.  for opt in ${${OPTIONS_NAME}_UNSET}
+PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
+.  endfor
+
+# XXX to remove once UNIQUENAME is removed
 ## options files (from dialog)
 .  if exists(${OPTIONSFILE}) && !make(rmconfig)
 .  include "${OPTIONSFILE}"
 .  endif
 .  if exists(${OPTIONSFILE}.local)
 .  include "${OPTIONSFILE}.local"
+.  endif
+# XXX to remove once UNIQUENAME is removed
+
+## options files (from dialog)
+.  if exists(${OPTIONS_FILE}) && !make(rmconfig)
+.  include "${OPTIONS_FILE}"
+.  endif
+.  if exists(${OPTIONS_FILE}.local)
+.  include "${OPTIONS_FILE}.local"
 .  endif
 
 ### convert WITH and WITHOUT found in make.conf or reloaded from old optionsfile

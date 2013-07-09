@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.octave.mk,v 1.16 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.octave.mk 322361 2013-07-06 01:48:53Z stephen $
 #
 # bsd.octave.mk - Octave related macro
 # Common code to install octave-forge packages.
@@ -22,7 +22,7 @@ RUN_DEPENDS+=	octave:${PORTSDIR}/math/octave \
 LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
 
 USE_FORTRAN=	yes
-USE_GMAKE=	yes
+USES+=		gmake
 
 DIST_SUBDIR=	octave-forge
 OCTAVE_PKGNAME=	${PORTNAME:S/octave-forge-//}

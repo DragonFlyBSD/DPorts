@@ -3,7 +3,7 @@
 #
 # Created by: Akinori MUSHA <knu@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.ruby.mk 321622 2013-06-23 06:57:46Z tota $
+# $FreeBSD: Mk/bsd.ruby.mk 322391 2013-07-06 12:53:57Z bapt $
 #
 
 .if !defined(Ruby_Include)
@@ -473,9 +473,9 @@ do-extract:
 
 do-build:
 	@(cd ${BUILD_WRKSRC}; if ! ${SETENV} ${GEM_ENV} ${RUBYGEMBIN} build --force ${GEMFILES}spec ; then \
-		if [ x != x${BUILD_FAIL_MESSAGE} ] ; then \
+		if [ -n "${BUILD_FAIL_MESSAGE}" ] ; then \
 			${ECHO_MSG} "===> Compilation failed unexpectedly."; \
-			(${ECHO_CMD} ${BUILD_FAIL_MESSAGE}) | ${FMT} 75 79 ; \
+			(${ECHO_CMD} "${BUILD_FAIL_MESSAGE}") | ${FMT} 75 79 ; \
 			fi; \
 		${FALSE}; \
 		fi)

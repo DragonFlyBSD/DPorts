@@ -1,6 +1,6 @@
 #
 # $MBSDlabs: portmk/bsd.efl.mk,v 1.17 2006/10/02 14:57:48 stas Exp $
-# $FreeBSD: ports/Mk/bsd.efl.mk,v 1.10 2012/12/22 21:09:32 svnexp Exp $
+# $FreeBSD: Mk/bsd.efl.mk 322288 2013-07-04 20:31:44Z gblach $
 #
 # bsd.efl.mk - Support for Enlightenment Foundation Libraries (EFL)
 #
@@ -130,7 +130,7 @@ _${LIB}_PREFIX=${LOCALBASE}
 
 # All components that are currently supported
 _EFL_EVAS_ENGINES_ALL=	buffer opengl sdl x11
-_EFL_EVAS_LOADERS_ALL=	bmp edb eet generic gif ico jpeg \
+_EFL_EVAS_LOADERS_ALL=	bmp eet generic gif ico jpeg \
 			png pmaps psd svg tga tiff wbmp xpm
 
 #

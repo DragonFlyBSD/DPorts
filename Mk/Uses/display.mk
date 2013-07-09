@@ -1,10 +1,10 @@
-# $FreeBSD: Mk/Uses/display.mk 321369 2013-06-20 09:57:54Z bapt $
+# $FreeBSD: Mk/Uses/display.mk 322506 2013-07-08 13:43:38Z bapt $
 #
 # MAINTAINER: x11@FreeBSD.org
 #
 # Feature:	display
 # Usage:	USES=display or USES=display:ARGS
-# Valid ARGS:	install (default, implicit), build
+# Valid ARGS:	install (default, implicit), any target
 # 
 # Except the target where the DISPLAY is needed
 #
@@ -13,14 +13,11 @@
 _INCLUDE_USES_DISPLAY_MK=	yes
 
 display_ARGS?=	install
-.if ${display_ARGS} != build && ${display_ARGS} != install
-IGNORE=	USES=display can only take 'build', 'install' and none
-.endif
 
 .if !defined(DISPLAY)
 BUILD_DEPENDS+=	Xvfb:${PORTSDIR}/x11-servers/xorg-vfbserver \
-	${LOCALBASE}/lib/X11/fonts/misc/8x13O.pcf.gz:${X_FONTS_MISC_PORT} \
-	${LOCALBASE}/lib/X11/fonts/misc/fonts.alias:${X_FONTS_ALIAS_PORT} \
+	${LOCALBASE}/lib/X11/fonts/misc/8x13O.pcf.gz:${PORTSDIR}/x11-fonts/xorg-fonts-miscbitmaps \
+	${LOCALBASE}/lib/X11/fonts/misc/fonts.alias:${PORTSDIR}/x11-fonts/font-alias \
 	${LOCALBASE}/share/X11/xkb/rules/base:${PORTSDIR}/x11/xkeyboard-config \
 	xkbcomp:${PORTSDIR}/x11/xkbcomp
 
@@ -36,7 +33,7 @@ start-display:
 	daemon -p ${XVFBPIDFILE} Xvfb :${XVFBPORT}
 
 stop-display:
-	pkill -15 ${XVFBPIDFILE}
+	pkill -15 -F ${XVFBPIDFILE}
 
 .endif
 .endif
