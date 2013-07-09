@@ -1,32 +1,29 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: devel/imake/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: devel/imake/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	imake
 PORTVERSION=	1.0.5
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Imake and other utilities from X.Org
 
+BUILD_DEPENDS=	tradcpp:${PORTSDIR}/devel/tradcpp
 RUN_DEPENDS=	gccmakedep:${PORTSDIR}/devel/gccmakedep \
 		makedepend:${PORTSDIR}/devel/makedepend \
 		${LOCALBASE}/lib/X11/config/xorg.cf:${PORTSDIR}/x11/xorg-cf-files
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=	shebangfix
+USE_PERL5_RUN=	yes
+
+SHEBANG_FILES=	mkhtmlindex.pl
 
 XORG_CAT=	util
 USE_XORG=	xproto
-SHEBANG_FILES=	mkhtmlindex.pl
 
-# clang's cpp destroys whitespace, particularly hard tabs in makefiles,
-# which is fatal for imake.
-CPPFLAGS+=	-DDEFAULT_CC=\\\"gcc\\\"
-
-.ifdef USE_IMAKE
-.error You have 'USE_IMAKE' variable defined either in environment or in make(1) arguments. Please undefine and try again.
-.endif
+CONFIGURE_ENV=	ac_cv_path_RAWCPP=tradcpp
 
 MAN1=		ccmakedep.1 \
 		cleanlinks.1 \
@@ -38,14 +35,4 @@ MAN1=		ccmakedep.1 \
 		revpath.1 \
 		xmkmf.1
 
-post-patch:
-	@${REINPLACE_CMD} 's/test.*-traditional.*;/true;/' ${WRKSRC}/configure
-
-.include <bsd.port.pre.mk>
-
-# Attempt to force use of GNU cpp, if it is installed as /usr/bin/gcpp.
-.if exists(/usr/bin/gcpp)
-CONFIGURE_ENV+=       ac_cv_path_RAWCPP="gcpp"
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
