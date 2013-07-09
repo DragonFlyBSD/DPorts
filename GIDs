@@ -1,4 +1,4 @@
-# $FreeBSD: GIDs 319885 2013-06-04 17:29:21Z girgen $
+# $FreeBSD: GIDs 321902 2013-06-27 20:40:35Z feld $
 # The 60000-60999 is reserved to resolve incompatibility from FreeBSD
 # Please keep this file sorted by GID!
 operator:*:5:amanda
@@ -135,6 +135,7 @@ xymon:*:280:
 prelude:*:281:
 spread:*:282:
 devmon:*:283:
+vnstat:*:284:
 backuppc:*:300:
 _sphinx:*:312:
 dkfilter:*:325:
