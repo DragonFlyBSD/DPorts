@@ -1,8 +1,8 @@
 # Created by: Devin Teske <dteske@FreeBSD.org>
-# $FreeBSD: ports/sysutils/sysrc/Makefile,v 1.7 2012/11/17 06:01:47 svnexp Exp $
+# $FreeBSD: sysutils/sysrc/Makefile 322348 2013-07-05 18:58:02Z wxs $
 
 PORTNAME=	sysrc
-PORTVERSION=	5.1
+PORTVERSION=	5.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://druidbsd.sourceforge.net/download/
 
