@@ -1,14 +1,14 @@
 # Created by: Michael Fausten <ports@michael-fausten.de>
-# $FreeBSD: www/smarty3/Makefile 320097 2013-06-06 13:45:19Z culot $
+# $FreeBSD: www/smarty3/Makefile 322166 2013-07-02 12:36:41Z wg $
 
 PORTNAME=	smarty3
-PORTVERSION=	3.1.13
+PORTVERSION=	3.1.14
 CATEGORIES=	www
 MASTER_SITES=	http://www.smarty.net/files/
 DISTNAME=	Smarty-${PORTVERSION}
 
 MAINTAINER=	ports@michael-fausten.de
-COMMENT=	The PHP compiling template engine
+COMMENT=	PHP compiling template engine
 
 WRKSRC=		${WRKDIR}/Smarty-${PORTVERSION}
 
@@ -22,12 +22,12 @@ SUB_FILES=	pkg-message
 do-install:
 	@${MKDIR} ${DATADIR}
 .for f in Smarty.class.php SmartyBC.class.php debug.tpl
-	@${INSTALL_DATA} ${WRKSRC}/libs/$f ${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/libs/$f ${DATADIR}
 .endfor
 	@${MKDIR} ${DATADIR}/plugins
-	@${INSTALL_DATA} ${WRKSRC}/libs/plugins/* ${DATADIR}/plugins
+	${INSTALL_DATA} ${WRKSRC}/libs/plugins/* ${DATADIR}/plugins
 	@${MKDIR} ${DATADIR}/sysplugins
-	@${INSTALL_DATA} ${WRKSRC}/libs/sysplugins/* ${DATADIR}/sysplugins
+	${INSTALL_DATA} ${WRKSRC}/libs/sysplugins/* ${DATADIR}/sysplugins
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
