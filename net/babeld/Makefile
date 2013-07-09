@@ -1,8 +1,8 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: net/babeld/Makefile 319285 2013-05-27 20:22:55Z wg $
+# $FreeBSD: net/babeld/Makefile 321858 2013-06-27 07:00:26Z miwi $
 
 PORTNAME=	babeld
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.2
 CATEGORIES=	net
 MASTER_SITES=	http://www.pps.univ-paris-diderot.fr/~jch/software/files/
 
