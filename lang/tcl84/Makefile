@@ -1,8 +1,9 @@
 # Created by: jkh
-# $FreeBSD: lang/tcl84/Makefile 319853 2013-06-04 10:37:25Z gahr $
+# $FreeBSD: lang/tcl84/Makefile 322508 2013-07-08 14:31:35Z gahr $
 
 PORTNAME=	tcl
 DISTVERSION=	8.4.20
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	lang tcl
 MASTER_SITES=	${MASTER_SITE_TCLTK} \
