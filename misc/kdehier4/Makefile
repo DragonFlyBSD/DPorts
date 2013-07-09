@@ -1,7 +1,7 @@
-# $FreeBSD: misc/kdehier4/Makefile 317851 2013-05-11 07:31:11Z makc $
+# $FreeBSD: misc/kdehier4/Makefile 322191 2013-07-02 19:04:18Z rakuco $
 
 PORTNAME=	kdehier4
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.1
 CATEGORIES=	misc kde
 MASTER_SITES=	# none
 DISTFILES=	# none
