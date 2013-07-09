@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/adminer/Makefile 319760 2013-06-03 08:04:14Z wen $
+# $FreeBSD: databases/adminer/Makefile 322118 2013-07-01 08:37:23Z wen $
 
 PORTNAME=	adminer
-PORTVERSION=	3.7.0
+PORTVERSION=	3.7.1
 CATEGORIES=	databases www
 MASTER_SITES=	SF/${PORTNAME}/Adminer/Adminer%20${PORTVERSION}
 
