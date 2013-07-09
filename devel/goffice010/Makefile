@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/goffice010/Makefile 317450 2013-05-05 23:39:59Z kwm $
+# $FreeBSD: devel/goffice010/Makefile 321880 2013-06-27 11:43:43Z kwm $
 #   $MCom: ports/trunk/devel/goffice/Makefile 18385 2013-04-22 12:56:25Z kwm $
 
 PORTNAME=	goffice
-PORTVERSION=	0.10.2
+PORTVERSION=	0.10.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
