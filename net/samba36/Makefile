@@ -1,8 +1,8 @@
-# $FreeBSD: net/samba36/Makefile 320132 2013-06-06 22:03:35Z bapt $
+# $FreeBSD: net/samba36/Makefile 322112 2013-07-01 02:41:31Z timur $
 
 PORTNAME=		${SAMBA_BASENAME}36
-PORTVERSION=		3.6.13
-PORTREVISION?=		0
+PORTVERSION=		3.6.16
+PORTREVISION?=		1
 CATEGORIES?=		net
 MASTER_SITES=		${MASTER_SITE_SAMBA}
 MASTER_SITE_SUBDIR=	samba samba/stable samba/pre
@@ -90,6 +90,10 @@ CONFIGURE_ARGS+=	--without-libtdb --enable-external-libtdb
 BUILD_DEPENDS+=		talloc>=2.0.1:${PORTSDIR}/devel/talloc
 RUN_DEPENDS+=		talloc>=2.0.1:${PORTSDIR}/devel/talloc
 CONFIGURE_ARGS+=	--without-libtalloc --enable-external-libtalloc
+# tevent
+BUILD_DEPENDS+=		tevent>=0.9.11:${PORTSDIR}/devel/tevent
+RUN_DEPENDS+=		tevent>=0.9.11:${PORTSDIR}/devel/tevent
+CONFIGURE_ARGS+=	--without-libtevent --enable-external-libtevent
 # These options are common for all (sub)ports
 CONFIGURE_ARGS+=	--with-libiconv="${LOCALBASE}" \
 			--disable-as-needed
