@@ -1,8 +1,7 @@
-# $FreeBSD: x11/luit/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/luit/Makefile 321804 2013-06-26 17:42:21Z zeising $
 
 PORTNAME=	luit
-PORTVERSION=	1.1.0
-PORTREVISION=	1
+PORTVERSION=	1.1.1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -12,9 +11,6 @@ XORG_CAT=	app
 USE_XORG=	x11 fontenc
 
 CONFIGURE_ARGS=	--datadir=${LOCALBASE}/lib
-
-# Use openpty(), FreeBSD 7 has grantpt but not /dev/ptmx
-CONFIGURE_ENV=	ac_cv_func_grantpt=no
 
 PLIST_FILES=	bin/luit
 
