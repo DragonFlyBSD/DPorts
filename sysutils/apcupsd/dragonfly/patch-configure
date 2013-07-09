@@ -1,0 +1,30 @@
+--- configure.orig	2010-09-02 14:23:39.000000000 +0000
++++ configure
+@@ -10575,7 +10575,7 @@ if test "${enable_usb+set}" = set; then
+             echo "$as_me:$LINENO: result: Using Linux USB driver." >&5
+ echo "${ECHO_T}Using Linux USB driver." >&6
+             ;;
+-         *-*-freebsd* | *-*-openbsd* | *-*-netbsd*)
++         *-*-dragonfly* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd*)
+             LIBUSBHIDINC="-I\$(topdir)/src/libusbhid"
+             LIBUSBHID=libusbhid
+             APCDRVLIBS="$APCDRVLIBS \$(topdir)/src/libusbhid/libusbhid.a"
+@@ -12197,6 +12197,9 @@ then
+ elif test $HAVE_UNAME=yes -a x`uname -s` = xSunOS
+ then
+    DISTNAME=sun
++elif test $HAVE_UNAME=yes -a x`uname -s` = xDragonFly
++then
++   DISTNAME=freebsd
+ elif test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
+ then
+    DISTNAME=freebsd
+@@ -12331,7 +12334,7 @@ debian)
+       platforms/debian/apcupsd \
+       platforms/debian/ups-monitor"
+    ;;
+-freebsd)
++freebsd|dragonfly)
+    DISTVER=`uname -a |awk '{print $3}'`
+    SERIALDEV=/dev/cuaa0
+    nologdir=/var/run
