@@ -1,8 +1,8 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: audio/atunes/Makefile 317783 2013-05-10 10:03:58Z lme $
+# $FreeBSD: audio/atunes/Makefile 322538 2013-07-08 20:22:33Z lme $
 
 PORTNAME=	atunes
-PORTVERSION=	3.0.9
+PORTVERSION=	3.1.0
 CATEGORIES=	audio java
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/aTunes%20${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
