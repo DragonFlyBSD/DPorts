@@ -1,14 +1,14 @@
 # Created by: Carlo Strub <c-s@c-s.li>
-# $FreeBSD: www/ach/Makefile 320364 2013-06-09 17:48:16Z miwi $
+# $FreeBSD: www/ach/Makefile 322028 2013-06-29 07:52:25Z ak $
 
 PORTNAME=	ACH
-PORTVERSION=	1.0.2
+PORTVERSION=	1.0.3
 CATEGORIES=	www
 MASTER_SITES=	http://cloud.github.com/downloads/Burton/Analysis-of-Competing-Hypotheses/
 EXTRACT_SUFX=	-alpha.tar
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A free, open source tool for complex research problems
+MAINTAINER=	danilogondolfo@gmail.com
+COMMENT=	Free, open source tool for complex research problems
 
 LICENSE=	GPLv3
 
