@@ -1,14 +1,14 @@
-# $FreeBSD: sysutils/entr/Makefile 321247 2013-06-19 13:10:36Z wg $
+# $FreeBSD: sysutils/entr/Makefile 322240 2013-07-03 18:17:23Z pawel $
 
 PORTNAME=	entr
-PORTVERSION=	2.0
+PORTVERSION=	2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://entrproject.org/code/
 
 MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Runs arbitrary commands when files change
 
-WRKSRC=	${WRKDIR}/eradman-entr-6b1f1d242775/
+WRKSRC=	${WRKDIR}/eradman-entr-b621ace9ecba/
 
 PLIST_FILES=	bin/entr
 MAN1=	entr.1
