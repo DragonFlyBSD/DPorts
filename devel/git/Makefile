@@ -1,8 +1,8 @@
 # Created by: Eric Anholt
-# $FreeBSD: devel/git/Makefile 320731 2013-06-13 00:30:02Z wxs $
+# $FreeBSD: devel/git/Makefile 322351 2013-07-05 19:16:50Z wxs $
 
 PORTNAME=	git
-PORTVERSION=	1.8.3.1
+PORTVERSION=	1.8.3.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
@@ -328,7 +328,8 @@ IGNORE=	using GITWEB support requires PERL support
 .if ${PORT_OPTIONS:MCONTRIB}
 PLIST_SUB+=	CONTRIB=""
 BUILD_DEPENDS+=	xmlto:${PORTSDIR}/textproc/xmlto \
-		asciidoc:${PORTSDIR}/textproc/asciidoc
+		asciidoc:${PORTSDIR}/textproc/asciidoc \
+		${LOCALBASE}/share/xml/docbook/4.5/docbookx.dtd:${PORTSDIR}/textproc/docbook-xml-450
 MAN1+=		git-subtree.1
 .else
 PLIST_SUB+=	CONTRIB="@comment "
