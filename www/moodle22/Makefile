@@ -1,8 +1,8 @@
 # Created by: Javier Martin Rueda <jmrueda@diatel.upm.es>
-# $FreeBSD: www/moodle22/Makefile 319846 2013-06-04 10:01:59Z bapt $
+# $FreeBSD: www/moodle22/Makefile 322483 2013-07-08 06:10:06Z wen $
 
 PORTNAME=	moodle
-PORTVERSION=	2.2.10
+PORTVERSION=	2.2.11
 CATEGORIES=	www
 MASTER_SITES=	SF/moodle/Moodle/stable22/
 EXTRACT_SUFX=	.tgz
