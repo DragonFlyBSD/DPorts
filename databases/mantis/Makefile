@@ -1,8 +1,8 @@
 # Created by: Sebastien Gioria <gioria@FreeBSD.ORG>
-# $FreeBSD: databases/mantis/Makefile 314081 2013-03-13 12:57:45Z bdrewery $
+# $FreeBSD: databases/mantis/Makefile 322253 2013-07-03 20:20:19Z lippe $
 
 PORTNAME=	mantis
-PORTVERSION=	1.2.14
+PORTVERSION=	1.2.15
 CATEGORIES=	databases www
 MASTER_SITES=	SF/${PORTNAME}bt/${PORTNAME}-stable/${PORTVERSION}
 DISTNAME=	mantisbt-${PORTVERSION}
