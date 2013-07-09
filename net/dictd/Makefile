@@ -1,9 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: net/dictd/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: net/dictd/Makefile 321934 2013-06-28 03:08:13Z clsung $
 
 PORTNAME=	dictd
-PORTVERSION=	1.12.0
-PORTREVISION=	1
+PORTVERSION=	1.12.1
 CATEGORIES+=	net textproc
 MASTER_SITES=	SF/dict/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
