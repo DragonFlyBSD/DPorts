@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: net-mgmt/icinga/Makefile 318793 2013-05-22 19:52:49Z lme $
+# $FreeBSD: net-mgmt/icinga/Makefile 322482 2013-07-08 05:50:15Z lme $
 
 PORTNAME=	icinga
-PORTVERSION=	1.9.1
+PORTVERSION=	1.9.3
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF
 
