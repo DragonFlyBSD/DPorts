@@ -1,21 +1,24 @@
 # Created by: Matthew Donovan <kitchetech@gmail.com>
-# $FreeBSD: ports/x11/sterm/Makefile,v 1.5 2012/11/27 13:20:37 svnexp Exp $
+# $FreeBSD: x11/sterm/Makefile 322262 2013-07-04 06:14:25Z jgh $
 
 PORTNAME=	sterm
-PORTVERSION=	0.3
+PORTVERSION=	0.4.1
 CATEGORIES=	x11
 MASTER_SITES=	http://dl.suckless.org/st/
 DISTNAME=	st-${PORTVERSION}
 
 MAINTAINER=	kitche@kitchetech.com
-COMMENT=	A simple X terminal
+COMMENT=	Simple X terminal
 
-LICENSE=	BSD
+LICENSE=	MITX
+LICENSE_NAME=	MIT/X Consortium License
+LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 LIB_DEPENDS=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
 		freetype:${PORTSDIR}/print/freetype2
-RUN_DEPENDS=	${LOCALBASE}/share/misc/terminfo.db:${PORTSDIR}/devel/ncurses
 
+USES=	pkgconfig ncurses:port
 USE_XORG=	x11 xext xft
 MAN1=	st.1
 PLIST_FILES=	bin/st
