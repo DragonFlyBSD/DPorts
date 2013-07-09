@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/textproc/py-pss/Makefile,v 1.4 2013/02/01 01:41:55 svnexp Exp $
+# $FreeBSD: textproc/py-pss/Makefile 321943 2013-06-28 04:24:33Z clsung $
 
 PORTNAME=	pss
-PORTVERSION=	0.36
+PORTVERSION=	1.38
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
