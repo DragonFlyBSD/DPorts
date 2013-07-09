@@ -1,8 +1,8 @@
 # Created by: chuckr@freebsd.org
-# $FreeBSD: ports/devel/global/Makefile,v 1.51 2013/02/12 17:21:12 svnexp Exp $
+# $FreeBSD: devel/global/Makefile 321927 2013-06-28 02:30:22Z clsung $
 
 PORTNAME=	global
-PORTVERSION=	6.2.7
+PORTVERSION=	6.2.8
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
