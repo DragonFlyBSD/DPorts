@@ -1,8 +1,8 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: ports/textproc/libroxml/Makefile,v 1.7 2013/02/07 01:32:55 svnexp Exp $
+# $FreeBSD: textproc/libroxml/Makefile 321859 2013-06-27 07:00:53Z miwi $
 
 PORTNAME=	libroxml
-PORTVERSION=	2.2.1
+PORTVERSION=	2.2.2
 CATEGORIES=	textproc
 MASTER_SITES=	GOOGLE_CODE
 
