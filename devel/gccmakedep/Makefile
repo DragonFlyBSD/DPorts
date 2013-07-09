@@ -1,8 +1,9 @@
-# Created by:				Dave Grochowski
-# $FreeBSD: devel/gccmakedep/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# Created by: Dave Grochowski
+# $FreeBSD: devel/gccmakedep/Makefile 321952 2013-06-28 08:13:57Z bapt $
 
 PORTNAME=	gccmakedep
 PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	x11@FreeBSD.org
@@ -10,18 +11,11 @@ COMMENT=	Create dependencies in makefiles using 'gcc -M'
 
 XORG_CAT=	util
 
+BUILD_DEPENDS=	tradcpp:${PORTSDIR}/devel/tradcpp
+
 MAN1=		gccmakedep.1
 
 PLIST_FILES=	bin/gccmakedep
+CONFIGURE_ENV+=	ac_cv_path_RAWCPP=tradcpp
 
-.include <bsd.port.pre.mk>
-
-# Attempt to force use of GNU cpp, if it is installed as /usr/bin/gcpp.
-.if exists(/usr/bin/gcpp)
-CONFIGURE_ENV+=	ac_cv_path_RAWCPP="gcpp"
-.endif
-
-post-patch:
-	@${REINPLACE_CMD} 's/test.*-traditional.*;/true;/' ${WRKSRC}/configure
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
