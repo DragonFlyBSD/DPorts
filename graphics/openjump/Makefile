@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/openjump/Makefile 317836 2013-05-10 19:25:02Z lme $
+# $FreeBSD: graphics/openjump/Makefile 322186 2013-07-02 17:14:19Z lme $
 
 PORTNAME=	OpenJUMP
-PORTVERSION=	1.6.2
+PORTVERSION=	1.6.3
 CATEGORIES=	graphics java geography
 MASTER_SITES=	SF/jump-pilot/OpenJUMP/${PORTVERSION}
 DISTNAME=	${PORTNAME}-Portable-${PORTVERSION}-r${PLUS_REV}-PLUS
@@ -44,7 +44,7 @@ USE_ZIP=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}-r${PLUS_REV}-PLUS
-PLUS_REV=	3528
+PLUS_REV=	3576
 
 do-install:
 	@${ECHO_CMD} "---> Installing JAR files"
