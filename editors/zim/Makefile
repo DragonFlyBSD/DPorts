@@ -1,8 +1,8 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: editors/zim/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: editors/zim/Makefile 322453 2013-07-07 16:47:36Z rm $
 
 PORTNAME=	zim
-PORTVERSION=	0.57
+PORTVERSION=	0.60
 CATEGORIES=	editors python
 MASTER_SITES=	http://www.zim-wiki.org/downloads/
 
@@ -16,8 +16,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xdg>=0:${PORTSDIR}/devel/py-xdg \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:${PORTSDIR}/databases/py-sqlite3
 
 INSTALLS_ICONS=	yes
-USES=		gettext
-USE_GNOME=	desktopfileutils gtk20 pygtk2 pygobject
+USES=		gettext desktop-file-utils
+USE_GNOME=	gtk20 pygtk2 pygobject
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 
