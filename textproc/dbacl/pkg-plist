@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/dbacl/pkg-plist,v 1.5 2012/11/17 06:01:53 svnexp Exp $
+@comment $FreeBSD: textproc/dbacl/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/bayesol
 bin/dbacl
 bin/hmine
