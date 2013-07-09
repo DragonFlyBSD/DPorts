@@ -1,16 +1,12 @@
-# New ports collection makefile for: lout
-# Date created:      10/22/96
-# Whom:              oly@world.std.com
-#
-# $FreeBSD: ports/print/lout/Makefile,v 1.32 2012/11/17 06:00:52 svnexp Exp $
-#
+# Created by: oly@world.std.com
+# $FreeBSD: print/lout/Makefile 322038 2013-06-29 10:05:00Z pawel $
 
 PORTNAME=	lout
-PORTVERSION=	3.39
+PORTVERSION=	3.40
 CATEGORIES=	print
 MASTER_SITES=	SAVANNAH
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	LaTeX like document creation system with PostScript/PDF output
 
 LICENSE=	GPLv3 # (or later)
