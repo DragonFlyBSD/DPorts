@@ -1,12 +1,8 @@
-# New ports collection makefile for:	pigz
-# Date created:		2008-06-06
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/archivers/pigz/Makefile,v 1.8 2012/11/17 05:54:23 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: archivers/pigz/Makefile 321801 2013-06-26 17:15:45Z delphij $
 
 PORTNAME=	pigz
-PORTVERSION=	2.2.5
+PORTVERSION=	2.3
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.zlib.net/pigz/ \
 		http://freebsd.unixfreunde.de/sources/
@@ -14,9 +10,14 @@ MASTER_SITES=	http://www.zlib.net/pigz/ \
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Parallel GZIP
 
+USE_GMAKE=	yes
+
 .if !defined(NO_INSTALL_MANPAGES)
 MAN1=	pigz.1
 .endif
+
+post-patch:
+	${REINPLACE_CMD} -e 's/ -lz/ -lm -lz/g' ${WRKSRC}/Makefile
 
 do-install:
 .for FILE in pigz pigzn pigzt unpigz
