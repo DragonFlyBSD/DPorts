@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/smpeg/files/patch-configure,v 1.3 2012/11/17 05:59:53 svnexp Exp $
+$FreeBSD: multimedia/smpeg/files/patch-configure 300896 2012-07-14 13:54:48Z beat $
 
 --- configure	2002/07/02 12:33:37	1.1
 +++ configure	2002/07/02 12:34:01
