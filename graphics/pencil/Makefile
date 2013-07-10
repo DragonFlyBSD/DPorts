@@ -1,13 +1,9 @@
-# New ports collection makefile for:	pencil
-# Date created:		2008-04-16
-# Whom:			Ganael Laplanche <ganael.laplanche@martymac.org>
-#
-# $FreeBSD: graphics/pencil/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
+# $FreeBSD: graphics/pencil/Makefile 321962 2013-06-28 13:50:25Z martymac $
 
 PORTNAME=	pencil
 PORTVERSION=	0.4.4b
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}-planner/Pencil/${PORTVERSION}eta
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src${EXTRACT_SUFFIX}
