@@ -1,8 +1,8 @@
 # Created by: Munish Chopra <mchopra@engmail.uwaterloo.ca>
-# $FreeBSD: www/awstats/Makefile 320174 2013-06-07 07:56:59Z az $
+# $FreeBSD: www/awstats/Makefile 322676 2013-07-10 12:08:05Z wg $
 
 PORTNAME=	awstats
-PORTVERSION=	7.1.1
+PORTVERSION=	7.2
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/AWStats/${PORTVERSION}
@@ -11,7 +11,6 @@ MAINTAINER=	samm@os2.kiev.ua
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/docs/LICENSE.TXT
 
 RUN_DEPENDS=	p5-Net-XWhois>=0:${PORTSDIR}/net/p5-Net-XWhois
 
@@ -32,7 +31,7 @@ USE_DOS2UNIX=	tools/*.pl \
 
 SUB_FILES=	pkg-message
 
-OPTIONS_DEFINE=	IPV6
+OPTIONS_DEFINE=	DOCS IPV6
 
 .include <bsd.port.pre.mk>
 
