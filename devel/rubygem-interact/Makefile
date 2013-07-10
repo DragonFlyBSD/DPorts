@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-interact
-# Date created:		2011-12-04
 # Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-interact/Makefile,v 1.3 2012/11/17 05:56:59 svnexp Exp $
-#
+# $FreeBSD: devel/rubygem-interact/Makefile 321826 2013-06-27 00:59:09Z swills $
 
 PORTNAME=	interact
-PORTVERSION=	0.4
+PORTVERSION=	0.5.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
