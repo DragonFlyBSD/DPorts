@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-Flickr-API/Makefile 318943 2013-05-24 09:52:59Z tobez $
+# $FreeBSD: www/p5-Flickr-API/Makefile 321930 2013-06-28 02:36:01Z clsung $
 
 PORTNAME=	Flickr-API
-PORTVERSION=	1.07
+PORTVERSION=	1.08
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
