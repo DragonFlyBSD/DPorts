@@ -1,4 +1,4 @@
-# $FreeBSD: astro/marble/Makefile 318452 2013-05-18 20:34:41Z makc $
+# $FreeBSD: astro/marble/Makefile 322191 2013-07-02 19:04:18Z rakuco $
 
 PORTNAME=	marble
 PORTVERSION=	${KDE4_VERSION}
@@ -21,6 +21,7 @@ USE_XZ=		yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
+MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 CMAKE_ARGS=	-DMOBILE:BOOL=FALSE
 
 OPTIONS_DEFINE=	GPS
