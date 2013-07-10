@@ -1,12 +1,8 @@
-# New ports collection makefile for:	JSON-Any
-# Date created:		7 Apr 2007
-# Whom:			Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/p5-JSON-Any/Makefile,v 1.24 2012/11/17 05:55:04 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: converters/p5-JSON-Any/Makefile 321946 2013-06-28 04:31:57Z clsung $
 
 PORTNAME=	JSON-Any
-PORTVERSION=	1.29
+PORTVERSION=	1.30
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
