@@ -1,5 +1,5 @@
 # Created by: itojun@itojun.org
-# $FreeBSD: misc/magicpoint/Makefile 316615 2013-04-26 13:50:31Z bapt $
+# $FreeBSD: misc/magicpoint/Makefile 322250 2013-07-03 19:22:22Z dinoex $
 
 PORTNAME=	magicpoint
 PORTVERSION=	1.13a
@@ -14,11 +14,12 @@ LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png \
 		mng:${PORTSDIR}/graphics/libmng
 RUN_DEPENDS+=	pnmscale:${PORTSDIR}/graphics/netpbm
 
-USE_IMAKE=	yes
+USES=		imake:env
 USE_XORG=	x11 xext xmu xt sm ice xi xtst
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-vflib --enable-locale
+LATE_INSTALL_ARGS=	install.man
 
 MAN1=	mgp.1 mgp2ps.1 mgpembed.1 mgpnet.1 xwintoppm.1 xmindpath.1
 
@@ -81,6 +82,7 @@ post-patch:
 		${WRKSRC}/configure
 
 post-configure:
+	(cd ${CONFIGURE_WRKSRC} && ${SETENV} ${MAKE_ENV} ${XMKMF})
 	cd ${WRKSRC}/contrib/xmindpath && \
 		${SH} ${CONFIGURE_SCRIPT} --prefix=${PREFIX}
 
@@ -90,7 +92,7 @@ post-build:
 
 post-install:
 	cd ${WRKSRC}/contrib/xmindpath && \
-		${MAKE} ${INSTALL_TARGET}
+		${MAKE} install
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && \
