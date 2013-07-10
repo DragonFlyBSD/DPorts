@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-workspace/Makefile 318452 2013-05-18 20:34:41Z makc $
+# $FreeBSD: x11/kde4-workspace/Makefile 322191 2013-07-02 19:04:18Z rakuco $
 
 PORTNAME=	kde-workspace
 PORTVERSION=	${KDE4_VERSION}
@@ -146,6 +146,8 @@ post-patch:
 		${PATCH_WRKSRC}/kdm/backend/client.c \
 		${PATCH_WRKSRC}/kdm/kfrontend/genkdmconf.c \
 		${PATCH_WRKSRC}/CMakeLists.txt
+	${RM} ${WRKSRC}/plasma/generic/applets/batterymonitor/contents/code/logic.js.orig
+	${RM} ${WRKSRC}/plasma/generic/applets/batterymonitor/contents/ui/batterymonitor.qml.orig
 
 pre-configure:
 	${REINPLACE_CMD} -e '/ksysguardd/ d' \
