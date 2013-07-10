@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-amq-protocol
-# Date created:				28 Sep 2011
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/net/rubygem-amq-protocol/Makefile,v 1.7 2012/11/17 06:00:18 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: net/rubygem-amq-protocol/Makefile 322470 2013-07-08 01:50:31Z clsung $
 
 PORTNAME=	amq-protocol
-PORTVERSION=	0.9.4
+PORTVERSION=	1.6.0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
