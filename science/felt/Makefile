@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: science/felt/Makefile 321374 2013-06-20 12:46:30Z bsam $
+# $FreeBSD: science/felt/Makefile 322622 2013-07-10 07:00:44Z bapt $
 
 PORTNAME=	felt
 PORTVERSION=	3.07
@@ -16,8 +16,8 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+USES=		motif
 USE_BZIP2=	yes
-USE_MOTIF=	yes
 USE_GL=		glu glw
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix="${PREFIX}" \
