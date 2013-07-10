@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/bzflag/Makefile,v 1.56 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/bzflag/Makefile 322562 2013-07-09 14:51:00Z bdrewery $
 
 PORTNAME=	bzflag
 PORTVERSION=	2.4.2
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20source/${PORTVERSION}
 
 MAINTAINER=	kevinz5000@gmail.com
-COMMENT=	A multiplayer 3D tank battle game
+COMMENT=	Multiplayer 3D tank battle game
 
 LICENSE=	LGPL21
 
