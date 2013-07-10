@@ -1,8 +1,8 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: misc/tvbrowser/Makefile 317788 2013-05-10 11:08:28Z lme $
+# $FreeBSD: misc/tvbrowser/Makefile 322341 2013-07-05 17:29:27Z lme $
 
 PORTNAME=	tvbrowser
-PORTVERSION=	3.3
+PORTVERSION=	3.3.1
 CATEGORIES=	misc java
 MASTER_SITES=	SF/${PORTNAME}/TV-Browser%20Releases%20%28Java%206%20and%20higher%29/${PORTVERSION}/
 DISTNAME=	${PORTNAME}_${PORTVERSION}_bin
