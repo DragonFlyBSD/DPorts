@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: ports/graphics/lcms2/Makefile,v 1.15 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: graphics/lcms2/Makefile 322609 2013-07-10 03:41:06Z sunpoet $
 
 PORTNAME=	lcms2
-PORTVERSION=	2.4
+PORTVERSION=	2.5
 CATEGORIES=	graphics
 MASTER_SITES=	SF/lcms/lcms/${PORTVERSION} \
 		http://www.littlecms.com/
