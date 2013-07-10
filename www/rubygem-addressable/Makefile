@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/rubygem-addressable/Makefile 319744 2013-06-03 01:41:49Z swills $
+# $FreeBSD: www/rubygem-addressable/Makefile 322113 2013-07-01 02:59:20Z swills $
 
 PORTNAME=	addressable
-PORTVERSION=	2.3.4
+PORTVERSION=	2.3.5
 CATEGORIES=	www devel rubygems
 MASTER_SITES=	RG
 
