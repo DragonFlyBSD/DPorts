@@ -1,8 +1,9 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: multimedia/ffmpeg1/Makefile 321725 2013-06-25 07:41:26Z mm $
+# $FreeBSD: multimedia/ffmpeg1/Makefile 322298 2013-07-04 23:13:54Z mm $
 
 PORTNAME=	ffmpeg
 PORTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
 PKGNAMESUFFIX=	1
@@ -92,6 +93,7 @@ CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--enable-gpl \
 		--enable-postproc \
 		--enable-avfilter \
+		--enable-avresample \
 		--enable-pthreads \
 		--enable-memalign-hack \
 		--disable-libstagefright-h264 \
