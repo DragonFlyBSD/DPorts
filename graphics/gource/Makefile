@@ -1,8 +1,8 @@
 # Created by: demon@FreeBSD.org
-# $FreeBSD: graphics/gource/Makefile 313875 2013-03-11 12:36:26Z demon $
+# $FreeBSD: graphics/gource/Makefile 321729 2013-06-25 10:18:27Z demon $
 
 PORTNAME=	gource
-PORTVERSION=	0.39
+PORTVERSION=	0.40
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -19,6 +19,7 @@ LIB_DEPENDS=	SDL_image:${PORTSDIR}/graphics/sdl_image \
 RUN_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:${PORTSDIR}/math/glm
 
 GNU_CONFIGURE=	yes
+USE_GCC=	yes
 USE_GMAKE=	yes
 MANCOMPRESSED=	yes
 
