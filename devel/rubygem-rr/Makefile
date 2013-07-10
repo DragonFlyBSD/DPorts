@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/rubygem-rr/Makefile 319684 2013-06-02 16:39:26Z swills $
+# $FreeBSD: devel/rubygem-rr/Makefile 321848 2013-06-27 05:16:59Z swills $
 
 PORTNAME=	rr
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
