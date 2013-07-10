@@ -2,7 +2,7 @@
 # Date created:				29 Mar 2009
 # Whom:					Vadim Vatlin
 #
-# $FreeBSD: ports/devel/p5-JSON-RPC/Makefile,v 1.10 2012/11/17 05:56:20 svnexp Exp $
+# $FreeBSD: devel/p5-JSON-RPC/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	JSON-RPC
@@ -12,7 +12,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DMAKI
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl implementation of JSON-RPC 1.1 protocol
 
 BUILD_DEPENDS=	p5-Class-Accessor-Lite>=0:${PORTSDIR}/devel/p5-Class-Accessor-Lite \
@@ -41,11 +41,6 @@ MAN3=		JSON::RPC.3 \
 		JSON::RPC::Test.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
 
 .if ${PERL_LEVEL} < 501400
 TEST_DEPENDS+=	p5-Test-Simple>=0.98:${PORTSDIR}/devel/p5-Test-Simple
