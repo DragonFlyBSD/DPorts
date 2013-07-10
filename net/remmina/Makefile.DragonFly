@@ -1,1 +1,2 @@
-LDFLAGS+= -L${LOCALBASE}/lib -lintl
+LDFLAGS+= -L${LOCALBASE}/lib -lintl -lX11 -lgio-2.0 -lgobject-2.0 -lgthread-2.0
+LDFLAGS+= -lgmodule-2.0
