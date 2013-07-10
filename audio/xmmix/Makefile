@@ -1,5 +1,5 @@
 # Created by: Erik Cederstrand <erich@FreeBSD.org>
-# $FreeBSD: audio/xmmix/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/xmmix/Makefile 322579 2013-07-09 21:20:28Z bapt $
 
 PORTNAME=	xmmix
 PORTVERSION=	1.2.2
@@ -12,8 +12,7 @@ COMMENT=	Motif-based audio mixer
 
 WRKSRC=		${WRKDIR}/xmmix-1.2
 
-USE_IMAKE=	yes
-USE_MOTIF=	yes
+USES=		imake motif
 USE_XORG=	x11 xext sm ice xt xp
 
 MAN1=		xmmix.1
