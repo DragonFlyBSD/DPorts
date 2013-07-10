@@ -1,8 +1,8 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: devel/py-pyflakes/Makefile 316719 2013-04-28 13:37:45Z koobs $
+# $FreeBSD: devel/py-pyflakes/Makefile 322421 2013-07-07 08:03:20Z koobs $
 
 PORTNAME=	pyflakes
-PORTVERSION=	0.7.2
+PORTVERSION=	0.7.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,16 +11,6 @@ MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Program to analyze Python programs and detect various errors
 
 LICENSE=	MIT
-
-OPTIONS_DEFINE=	TESTS
-TESTS_DESC=	Include tools for unit tests
-OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MTESTS}
-BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}unittest2>0:${PORTSDIR}/devel/py-unittest2
-.endif
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
