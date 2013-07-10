@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/xmms2/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: audio/xmms2/Makefile 322302 2013-07-05 05:55:18Z bapt $
 
 PORTNAME?=	xmms2
 PORTVERSION=	0.8
@@ -13,6 +13,7 @@ COMMENT?=	Rewrite of xmms as a client/server system (developer release)
 
 USE_BZIP2=	yes
 USE_PYTHON_BUILD=	yes
+USES+=		pkgconfig
 
 .if !defined(XMMS2_SLAVE)
 USE_GNOME=	glib20
@@ -56,10 +57,6 @@ XML_DESC=	Support XML based playlists (XSPF, RSS)
 .endif # !XMMS_SLAVE
 
 .include <bsd.port.options.mk>
-
-.if ${OSVERSION} < 800030
-BROKEN=		Does not compile on 7.x: Requires fstatat(2)
-.endif
 
 .if defined(XMMS2_SLAVE)
 EXCLUDE+=	--without-xmms2d
