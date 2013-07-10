@@ -1,8 +1,8 @@
 # Created by: Kimo <kimor79@yahoo.com>
-# $FreeBSD: ports/devel/rubygem-pry-remote-em/Makefile,v 1.1 2013/01/23 02:51:41 svnexp Exp $
+# $FreeBSD: devel/rubygem-pry-remote-em/Makefile 321845 2013-06-27 03:27:59Z swills $
 
 PORTNAME=	pry-remote-em
-PORTVERSION=	0.7.3
+PORTVERSION=	0.7.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
