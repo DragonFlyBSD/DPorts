@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: mail/bogofilter-sqlite/Makefile 320668 2013-06-12 07:41:34Z mandree $
+# $FreeBSD: mail/bogofilter-sqlite/Makefile 322264 2013-07-04 06:37:48Z mandree $
 
 PORTNAME=	bogofilter
 PORTREVISION=	0
