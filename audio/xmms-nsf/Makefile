@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmms-nsf
-# Date created:				18 Aug 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/audio/xmms-nsf/Makefile,v 1.18 2012/11/17 05:54:49 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: audio/xmms-nsf/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
 
 PORTNAME=	xmms-nsf
 PORTVERSION=	0.0.3
