@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-AnyEvent-RabbitMQ/Makefile 320187 2013-06-07 08:40:54Z tobez $
+# $FreeBSD: net/p5-AnyEvent-RabbitMQ/Makefile 322479 2013-07-08 02:09:17Z clsung $
 
 PORTNAME=	AnyEvent-RabbitMQ
-PORTVERSION=	1.14
+PORTVERSION=	1.15
 CATEGORIES=	net devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BOBTFISH
