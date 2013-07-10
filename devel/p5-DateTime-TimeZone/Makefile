@@ -1,8 +1,8 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 322514 2013-07-08 16:00:24Z culot $
 
 PORTNAME=	DateTime-TimeZone
-PORTVERSION=	1.59
+PORTVERSION=	1.60
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,10 +10,14 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	Time zone object base class and factory
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 RUN_DEPENDS=	p5-Class-Load>0:${PORTSDIR}/devel/p5-Class-Load \
 		p5-Class-Singleton>=1.03:${PORTSDIR}/devel/p5-Class-Singleton \
 		p5-Params-Validate>=0.72:${PORTSDIR}/devel/p5-Params-Validate
 BUILD_DEPENDS:=	${RUN_DEPENDS}
+TEST_DEPENDS=	p5-Test-Output>0:${PORTSDIR}/devel/p5-Test-Output
 
 PERL_CONFIGURE=	yes
 
