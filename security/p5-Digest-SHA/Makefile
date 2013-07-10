@@ -1,8 +1,8 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: security/p5-Digest-SHA/Makefile 313901 2013-03-11 13:53:37Z sunpoet $
+# $FreeBSD: security/p5-Digest-SHA/Makefile 321928 2013-06-28 02:32:59Z clsung $
 
 PORTNAME=	Digest-SHA
-PORTVERSION=	5.84
+PORTVERSION=	5.85
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
