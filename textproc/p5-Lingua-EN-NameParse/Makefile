@@ -1,12 +1,8 @@
-# New ports collection makefile for:	Lingua::EN::NameParse
-# Date created:				30 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/textproc/p5-Lingua-EN-NameParse/Makefile,v 1.17 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-Lingua-EN-NameParse/Makefile 321929 2013-06-28 02:34:26Z clsung $
 
 PORTNAME=	Lingua-EN-NameParse
-PORTVERSION=	1.30
+PORTVERSION=	1.31
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
