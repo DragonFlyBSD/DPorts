@@ -1,5 +1,5 @@
 # Created by: Ted Faber <faber@isi.edu>
-# $FreeBSD: mail/xfaces/Makefile 316958 2013-04-30 20:00:28Z bdrewery $
+# $FreeBSD: mail/xfaces/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xfaces
 PORTVERSION=	3.3
@@ -24,8 +24,8 @@ LIB_DEPENDS=	compface:${PORTSDIR}/mail/faces
 
 # GNU make properly processes some overridden rules in the makefile that
 # imake generates.  Specifically, installing the html docs.
+USES=		imake
 USE_GMAKE=	yes
-USE_IMAKE=	yes
 USE_XORG=	ice sm x11 xaw xext xmu xt xpm
 
 MAN1=		xfaces.1
