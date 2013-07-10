@@ -1,8 +1,9 @@
 # Created by: Eric L. Camachat <eric@camachat.org>
-# $FreeBSD: chinese/ibus-chewing/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: chinese/ibus-chewing/Makefile 321831 2013-06-27 01:48:13Z clsung $
 
 PORTNAME=	ibus-chewing
 PORTVERSION=	1.4.3
+PORTREVISION=	1
 CATEGORIES=	chinese
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}-${PORTVERSION}-Source
