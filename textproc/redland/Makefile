@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/redland/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/redland/Makefile 322185 2013-07-02 17:14:08Z rakuco $
 
 PORTNAME=	redland
 PORTVERSION=	1.0.16
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-raptor=system \
 		--with-threestore=no
 USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
 MAN1=		rdfproc.1 redland-config.1 \
