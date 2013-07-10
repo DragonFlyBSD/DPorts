@@ -1,15 +1,15 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Tiny/Makefile 321644 2013-06-23 16:53:46Z sunpoet $
+# $FreeBSD: www/p5-HTTP-Tiny/Makefile 322602 2013-07-10 03:34:14Z sunpoet $
 
 PORTNAME=	HTTP-Tiny
-PORTVERSION=	0.033
+PORTVERSION=	0.034
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DAGOLDEN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	A small, simple, correct HTTP/1.1 client
+COMMENT=	Small, simple, correct HTTP/1.1 client
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
