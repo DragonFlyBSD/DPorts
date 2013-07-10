@@ -1,8 +1,8 @@
 # Created by: Joe Horn <joehorn@gmail.com>
-# $FreeBSD: ports/chinese/wordpress-zh_CN/Makefile,v 1.22 2013/01/30 06:43:20 svnexp Exp $
+# $FreeBSD: chinese/wordpress-zh_CN/Makefile 321865 2013-06-27 07:05:00Z miwi $
 
 PORTNAME=	wordpress
-PORTVERSION=	3.5.1
+PORTVERSION=	3.5.2
 CATEGORIES=	chinese www
 MASTER_SITES=	http://cn.wordpress.org/ \
 		http://mirror.joehorn.idv.tw/wordpress/
