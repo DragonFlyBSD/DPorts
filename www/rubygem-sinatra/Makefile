@@ -1,20 +1,17 @@
-# Ports collection makefile for:	rubygem-sinatra
-# Date created:				2008-11-02
-# Whom:					Daniel Roethlisberger <daniel@roe.ch>
-#
-# $FreeBSD: ports/www/rubygem-sinatra/Makefile,v 1.30 2012/11/17 06:03:05 svnexp Exp $
+# Created by: Daniel Roethlisberger <daniel@roe.ch>
+# $FreeBSD: www/rubygem-sinatra/Makefile 321776 2013-06-26 02:12:08Z swills $
 
 PORTNAME=	sinatra
-PORTVERSION=	1.3.2
+PORTVERSION=	1.4.3
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A classy web development framework in ruby
 
-RUN_DEPENDS=	rubygem-rack>=1.3:${PORTSDIR}/www/rubygem-rack \
-		rubygem-tilt>=1.3:${PORTSDIR}/devel/rubygem-tilt \
-		rubygem-rack-protection>=1.2:${PORTSDIR}/www/rubygem-rack-protection
+RUN_DEPENDS=	rubygem-rack>=1.4:${PORTSDIR}/www/rubygem-rack \
+		rubygem-tilt>=1.3.4:${PORTSDIR}/devel/rubygem-tilt \
+		rubygem-rack-protection>=1.4:${PORTSDIR}/www/rubygem-rack-protection
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
