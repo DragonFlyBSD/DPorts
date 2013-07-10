@@ -1,13 +1,9 @@
-# New ports collection makefile for:	BBBike
-# Date created:		Fri Aug 14 15:32:26 CEST 1998
-# Whom:			Slaven Rezic <eserte@cs.tu-berlin.de>
-#
-# $FreeBSD: german/BBBike/Makefile 316659 2013-04-27 10:04:58Z stefan $
-#
+# Created by: Slaven Rezic <eserte@cs.tu-berlin.de>
+# $FreeBSD: german/BBBike/Makefile 322373 2013-07-06 09:18:27Z lme $
 
 PORTNAME=	BBBike
 PORTVERSION=	3.18
-#PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	german
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${PORTVERSION}
 
