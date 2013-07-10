@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/devel/p5-App-Rad/Makefile,v 1.2 2012/11/17 05:56:04 svnexp Exp $
+# $FreeBSD: devel/p5-App-Rad/Makefile 321861 2013-06-27 07:02:45Z miwi $
 
 PORTNAME=	App-Rad
-PORTVERSION=	1.04
+PORTVERSION=	1.05
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
