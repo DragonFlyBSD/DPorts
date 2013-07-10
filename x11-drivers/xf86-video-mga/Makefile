@@ -1,7 +1,7 @@
-# $FreeBSD: x11-drivers/xf86-video-mga/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-mga/Makefile 321797 2013-06-26 15:34:37Z zeising $
 
 PORTNAME=	xf86-video-mga
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.2
 PORTEPOCH=	3
 CATEGORIES=	x11-drivers
 
