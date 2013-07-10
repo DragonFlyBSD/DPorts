@@ -1,9 +1,9 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-IDEA/Makefile 319190 2013-05-27 09:28:00Z bapt $
+# $FreeBSD: security/p5-Crypt-IDEA/Makefile 322205 2013-07-02 21:22:25Z zi $
 
 PORTNAME=	Crypt-IDEA
 PORTVERSION=	1.08
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
