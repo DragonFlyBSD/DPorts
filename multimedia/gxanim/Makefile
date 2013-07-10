@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xanim
-# Date created:         Sat Nov 5 11:43:03 PST 1994
-# Whom:                 Rod Taylor
-#
-# $FreeBSD: ports/multimedia/gxanim/Makefile,v 1.20 2012/11/17 05:59:49 svnexp Exp $
-#
+# Created by: Rod Taylor
+# $FreeBSD: multimedia/gxanim/Makefile 321038 2013-06-16 11:31:31Z wg $
 
 PORTNAME=	gxanim
 PORTVERSION=	0.50
@@ -14,6 +10,8 @@ DISTNAME=	GXAnim-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical front end to Xanim
+
+LICENSE=	GPLv2
 
 RUN_DEPENDS=	xanim:${PORTSDIR}/multimedia/xanim
 
