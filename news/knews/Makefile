@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: ports/news/knews/Makefile,v 1.58 2013/01/26 16:45:50 svnexp Exp $
+# $FreeBSD: news/knews/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	knews
 PORTVERSION=	1.0b.1
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=dinoex
 
 MAINTAINER=	dinoex@FreeBSD.org
-COMMENT=	A threaded nntp newsreader for X
+COMMENT=	Threaded nntp newsreader for X
 
 LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png \
@@ -18,7 +18,7 @@ RUN_DEPENDS=	newsp:${PORTSDIR}/print/mp-letter
 
 LICENSE=	GPLv2
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xmu xpm xt sm ice xext x11
 MAKE_FLAGS=	BINDIR=${PREFIX}/bin MANDIR=${PREFIX}/man/man1 CC="${CC}" \
 		XAPPLOADDIR=${PREFIX}/lib/X11/app-defaults  -f
