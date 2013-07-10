@@ -1,5 +1,5 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: emulators/libspectrum/Makefile 319775 2013-06-03 12:41:32Z rene $
+# $FreeBSD: emulators/libspectrum/Makefile 322337 2013-07-05 15:17:15Z rene $
 
 PORTNAME=	libspectrum
 PORTVERSION=	1.1.1
@@ -14,10 +14,9 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
-USES=		pkgconfig
+USES=		gmake pkgconfig
 
 MAN3=		libspectrum.3
 
