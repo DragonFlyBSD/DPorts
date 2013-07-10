@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: x11/xvkbd/Makefile 316610 2013-04-26 13:34:25Z miwi $
+# $FreeBSD: x11/xvkbd/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xvkbd
 PORTVERSION=	3.4a
@@ -16,8 +16,8 @@ OPTIONS_DEFAULT=	XTEST
 XAW3D_DESC=	Xaw3d widget library support
 XTEST_DESC=	XTEST extensions support
 
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
-USE_IMAKE=	yes
 
 MAN1=		xvkbd.1
 
