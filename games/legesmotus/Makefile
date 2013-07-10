@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/legesmotus/Makefile 313104 2013-02-28 16:29:04Z amdmi3 $
+# $FreeBSD: games/legesmotus/Makefile 322101 2013-06-30 21:09:00Z antoine $
 
 PORTNAME=	legesmotus
 PORTVERSION=	0.4.0
@@ -17,8 +17,6 @@ CONFIGURE_ARGS=	--prefix="${PREFIX}" \
 USE_GMAKE=	yes
 MAKE_ENV=	XDIR=${LOCALBASE}
 MAKE_JOBS_SAFE=	yes
-
-PORTDOCS=	*
 
 OPTIONS_MULTI=	COMPONENTS
 OPTIONS_MULTI_COMPONENTS=CLIENT SERVER METASERVER SERVERSCANNER
