@@ -1,12 +1,12 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: games/freecell-solver/Makefile 319845 2013-06-04 10:00:12Z miwi $
+# $FreeBSD: games/freecell-solver/Makefile 322241 2013-07-03 18:19:59Z pawel $
 
 PORTNAME=	freecell-solver
-PORTVERSION=	3.18.1
+PORTVERSION=	3.20.1
 CATEGORIES=	games
 MASTER_SITES=	http://fc-solve.shlomifish.org/downloads/fc-solve/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Open source framework for solving Freecell
 
 LICENSE=	MIT
@@ -17,7 +17,7 @@ TCMALLOC_DESC=	Use Google's TCMalloc
 
 USE_BZIP2=	yes
 USES=		cmake:outsource
-USE_PERL5_BUILD=yes
+USE_PERL5_BUILD=	yes
 CMAKE_ARGS=	-DFCS_WITH_TEST_SUITE:BOOL=OFF
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
