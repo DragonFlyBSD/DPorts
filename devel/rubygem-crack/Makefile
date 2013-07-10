@@ -1,16 +1,15 @@
-# Ports collection makefile for:	rubygem-crack
-# Date created:				April 04, 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/rubygem-crack/Makefile,v 1.11 2013/01/23 20:57:04 svnexp Exp $
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/rubygem-crack/Makefile 321781 2013-06-26 03:21:29Z swills $
 
 PORTNAME=	crack
-PORTVERSION=	0.3.2
+PORTVERSION=	0.4.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby Library of Simple JSON and XML Parsing
+
+RUN_DEPENDS=	rubygem-safe_yaml>=0.9.0:${PORTSDIR}/devel/rubygem-safe_yaml
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
