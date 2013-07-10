@@ -2,11 +2,11 @@
 # Date created:		7 April 2009
 # Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
 #
-# $FreeBSD: ports/devel/rubygem-ruport/Makefile,v 1.9 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: devel/rubygem-ruport/Makefile 321917 2013-06-28 01:12:53Z swills $
 #
 
 PORTNAME=	ruport
-PORTVERSION=	1.2.3
+PORTVERSION=	1.6.3
 PORTREVISION=	1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
