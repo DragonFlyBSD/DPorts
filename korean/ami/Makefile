@@ -1,5 +1,5 @@
-# Created by: CHOI Junho <cjh@kr.freebsd.org>
-# $FreeBSD: korean/ami/Makefile 317521 2013-05-06 15:18:38Z bapt $
+# Created by: Junho CHOI <junho.choi@gmail.com>
+# $FreeBSD: korean/ami/Makefile 321160 2013-06-17 23:04:51Z jkim $
 
 PORTNAME=	ami
 PORTVERSION=	1.2.3
