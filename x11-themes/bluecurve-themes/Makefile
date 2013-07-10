@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-themes/bluecurve-themes/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-themes/bluecurve-themes/Makefile 322222 2013-07-03 11:53:12Z rene $
 
 # NOTE TO VISITING COMMITTER: if you need to bump the port revisions
 # of the slave ports, you should add PORTREVISION?= to the "master
@@ -18,7 +18,7 @@ PORTVERSION=	1.0
 # added to the global section by someone (with the intent of bumping
 # the revisions of the slave ports) and it cannot be removed without
 # causing a version downgrade or using PORTEPOCH.
-PORTREVISION=	5
+PORTREVISION=	6
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
@@ -26,7 +26,6 @@ EXTRACT_ONLY=	# empty
 # note: gtk-/icon-/metacity- are brought in by gnome-
 RUN_DEPENDS=	${LOCALBASE}/lib/X11/icons/Bluecurve/cursors/X_cursor:${PORTSDIR}/x11-themes/cursor-bluecurve-theme \
 		${LOCALBASE}/share/themes/Bluecurve/index.theme:${PORTSDIR}/x11-themes/gnome-bluecurve-theme \
-		${LOCALBASE}/lib/plugins/styles/bluecurve.so:${PORTSDIR}/x11-themes/qt-bluecurve-theme \
 		${LOCALBASE}/share/xmms/Skins/Bluecurve-xmms.zip:${PORTSDIR}/x11-themes/xmms-bluecurve-theme
 
 NO_BUILD=	yes
