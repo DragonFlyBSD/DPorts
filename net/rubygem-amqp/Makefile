@@ -2,11 +2,11 @@
 # Date created:				20 Feb 2011
 # Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
 #
-# $FreeBSD: ports/net/rubygem-amqp/Makefile,v 1.8 2012/11/17 06:00:18 svnexp Exp $
+# $FreeBSD: net/rubygem-amqp/Makefile 322472 2013-07-08 01:52:27Z clsung $
 #
 
 PORTNAME=	amqp
-PORTVERSION=	0.9.7
+PORTVERSION=	1.0.2
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
