@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/rubygem-streetaddress/Makefile 319697 2013-06-02 17:40:26Z swills $
+# $FreeBSD: devel/rubygem-streetaddress/Makefile 322059 2013-06-29 21:30:08Z swills $
 
 PORTNAME=	StreetAddress
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.5
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
