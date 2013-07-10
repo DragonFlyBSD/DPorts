@@ -1,8 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-jquery-ui-themes/Makefile 314494 2013-03-17 20:57:55Z zi $
+# $FreeBSD: devel/rubygem-jquery-ui-themes/Makefile 321827 2013-06-27 01:03:05Z swills $
 
 PORTNAME=	jquery-ui-themes
-PORTVERSION=	0.0.8
+PORTVERSION=	0.0.11
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
