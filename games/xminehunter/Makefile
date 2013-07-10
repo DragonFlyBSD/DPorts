@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xminehunter
-# Date created:		09 January 1997
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/games/xminehunter/Makefile,v 1.20 2012/11/17 05:57:57 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: games/xminehunter/Makefile 322621 2013-07-10 06:55:28Z bapt $
 
 PORTNAME=	xminehunter
 PORTVERSION=	0.4
@@ -13,11 +9,11 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	games
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A Motif minesweeper game
+COMMENT=	Motif minesweeper game
 
+USES=		motif
 USE_XORG=	xpm
 WRKSRC=		${WRKDIR}/xminehunter
-USE_MOTIF=	yes
 ALL_TARGET=	xminehunter
 
 .include <bsd.port.mk>
