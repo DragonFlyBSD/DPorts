@@ -1,9 +1,8 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: sysutils/nepomuk-core/Makefile 321725 2013-06-25 07:41:26Z mm $
+# $FreeBSD: sysutils/nepomuk-core/Makefile 322191 2013-07-02 19:04:18Z rakuco $
 
 PORTNAME=	nepomuk-core
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
 CATEGORIES=	sysutils kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
@@ -25,6 +24,7 @@ USES=		cmake:outsource
 USE_QT4=	corelib dbus gui qmake_build moc_build rcc_build uic_build
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
+MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 
 SUB_FILES=	nepomuk-env.sh
 
