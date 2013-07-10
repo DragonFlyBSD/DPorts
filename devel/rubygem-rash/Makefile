@@ -1,19 +1,15 @@
-# New ports collection makefile for:	rubygem-rash
-# Date created:		                May 03, 2011
-# Whom:			                Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-rash/Makefile,v 1.6 2012/11/17 05:57:00 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/rubygem-rash/Makefile 321840 2013-06-27 02:38:27Z clsung $
 
 PORTNAME=	rash
-PORTVERSION=	0.3.2
+PORTVERSION=	0.4.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	Simple extension to Hashie::Mash for rubyfied keys
 
-RUN_DEPENDS=	rubygem-hashie>=1.2.0:${PORTSDIR}/devel/rubygem-hashie
+RUN_DEPENDS=	rubygem-hashie>=2.0.0:${PORTSDIR}/devel/rubygem-hashie
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
