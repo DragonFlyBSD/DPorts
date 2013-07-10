@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: net-mgmt/bandwidthd/Makefile 320842 2013-06-13 21:19:12Z bdrewery $
+# $FreeBSD: net-mgmt/bandwidthd/Makefile 322331 2013-07-05 14:32:27Z bdrewery $
 
 PORTNAME=	bandwidthd
 PORTVERSION=	2.0.1
@@ -11,13 +11,14 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	Tracks bandwidth usage by IP address
 
+LICENSE=	GPLv2
+
 LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
 
 USE_CSTD=	gnu89
 
-USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
-USES=		iconv
+USES=		iconv gmake
 
 post-install:
 	@${INSTALL_SCRIPT} ${FILESDIR}/bandwidthd.sh \
