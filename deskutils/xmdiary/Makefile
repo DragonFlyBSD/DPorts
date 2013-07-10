@@ -1,5 +1,5 @@
 # Created by: mi@aldan.ziplink.net
-# $FreeBSD: deskutils/xmdiary/Makefile 315428 2013-03-28 02:10:57Z mi $
+# $FreeBSD: deskutils/xmdiary/Makefile 322620 2013-07-10 06:49:35Z bapt $
 
 PORTNAME=	xmdiary
 PORTVERSION=	3.0.3
@@ -14,13 +14,12 @@ COMMENT=	Personal and group calendar utility
 
 NO_CDROM=	Don't sell for profit
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-USE_MOTIF=	yes
-USE_IMAKE=	yes
+USES=		imake motif
+USE_GCC=	any
 USE_XORG=	x11 xext xp xpm xt
 MAN1=		xdaclunix.1 xdalarm.1 xdcustom.1 xddump.1 xdiary.1 xdinitdb.1 \
 		xdlight.1 xdnotify.1 xdprformat.1 xdremind.1 xdremove.1 \
 		xdrestore.1
-CFLAGS+=	-Werror
 MAKE_JOBS_SAFE=	yes
 
 post-patch:
