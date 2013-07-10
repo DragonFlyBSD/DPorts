@@ -1,9 +1,7 @@
-# Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: audio/kio-audiocd/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: audio/kio-audiocd/Makefile 322191 2013-07-02 19:04:18Z rakuco $
 
 PORTNAME=	kio-audiocd
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
 CATEGORIES=	audio kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
