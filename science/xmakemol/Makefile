@@ -1,8 +1,5 @@
-# New ports collection makefile for: xmakemol
-# Date created:	8 June, 2001
-# Whom:		Chi
-# $FreeBSD: ports/science/xmakemol/Makefile,v 1.15 2012/11/17 06:01:00 svnexp Exp $
-#
+# Created by: Chi
+# $FreeBSD: science/xmakemol/Makefile 322622 2013-07-10 07:00:44Z bapt $
 
 PORTNAME=	xmakemol
 PORTVERSION=	5.16
@@ -13,10 +10,9 @@ MASTER_SITES=	SAVANNAH
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Molecule Viewer Program Based on Motif Widget
 
+USES=		gmake motif
 USE_XORG=	xpm
 USE_GL=		glut glw
-USE_MOTIF=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 MAN1=		xmakemol.1
