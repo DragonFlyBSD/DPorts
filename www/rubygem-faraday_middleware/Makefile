@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-faraday_middleware
-# Date created:				07 March 2011
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rubygem-faraday_middleware/Makefile,v 1.7 2012/11/17 06:03:04 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: www/rubygem-faraday_middleware/Makefile 321837 2013-06-27 02:32:44Z clsung $
 
 PORTNAME=	faraday_middleware
-PORTVERSION=	0.8.4
+PORTVERSION=	0.9.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
