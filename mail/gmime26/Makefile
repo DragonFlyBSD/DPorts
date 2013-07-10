@@ -1,8 +1,8 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: mail/gmime26/Makefile 318963 2013-05-24 12:25:00Z kwm $
+# $FreeBSD: mail/gmime26/Makefile 322163 2013-07-02 11:52:15Z wg $
 
 PORTNAME=	gmime
-PORTVERSION=	2.6.15
+PORTVERSION=	2.6.16
 PORTREVISION?=	0
 CATEGORIES?=	mail
 MASTER_SITES=	GNOME
@@ -35,6 +35,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 LATEST_LINK?=	${PORTNAME}26
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
