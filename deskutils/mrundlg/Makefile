@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mrundlg
-# Date created:		12 July 2005
-# Whom:			Matthew Holder <sixxgate@hotmail.com>
-#
-# $FreeBSD: deskutils/mrundlg/Makefile 321597 2013-06-22 21:44:24Z rakuco $
-#
+# Created by: Matthew Holder <sixxgate@hotmail.com>
+# $FreeBSD: deskutils/mrundlg/Makefile 322620 2013-07-10 06:49:35Z bapt $
 
 PORTNAME=	mrundlg
 PORTVERSION=	1.0
@@ -13,11 +9,10 @@ CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
 MAINTAINER=	sixxgate@hotmail.com
-COMMENT=	An application / program launcher for Motif
+COMMENT=	Application / program launcher for Motif
 
-USE_MOTIF=	yes
+USES=		imake motif
 USE_BZIP2=	yes
-USE_IMAKE=	yes
 USE_XORG=	x11 xmu xt
 MAN1=		mrundlg.1
 MANCOMPRESSED=	yes
