@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/xshisen/files/patch-readxpm.C,v 1.5 2012/11/17 05:57:58 svnexp Exp $
+$FreeBSD: games/xshisen/files/patch-readxpm.C 300896 2012-07-14 13:54:48Z beat $
 
 --- readxpm.C.orig	Sun Jul  7 01:34:47 2002
 +++ readxpm.C	Thu Sep 15 13:56:38 2005
