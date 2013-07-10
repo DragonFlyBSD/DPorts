@@ -1,8 +1,7 @@
-# $FreeBSD: misc/bibletime/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: misc/bibletime/Makefile 322025 2013-06-29 05:16:04Z tabthorpe $
 
 PORTNAME=	bibletime
-PORTVERSION=	2.9.1
-PORTREVISION=	3
+PORTVERSION=	2.9.2
 CATEGORIES=	misc kde
 MASTER_SITES=	SF/${PORTNAME}/BibleTime%202/BibleTime%202%20source%20code
 
