@@ -2,7 +2,7 @@
 # Date created:				6 Sep 2001
 # Whom:					Dominic Mitchell <dom@happygiraffe.net>
 #
-# $FreeBSD: net/p5-RPC-XML/Makefile 316342 2013-04-23 10:39:26Z des $
+# $FreeBSD: net/p5-RPC-XML/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	RPC-XML
@@ -35,10 +35,4 @@ MAN3=		Apache::RPC::Server.3 \
 		RPC::XML::Procedure.3 \
 		RPC::XML::Server.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
