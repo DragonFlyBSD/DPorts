@@ -1,4 +1,4 @@
-@comment $FreeBSD: audio/libechonest/pkg-plist 313551 2013-03-06 22:53:30Z nivit $
+@comment $FreeBSD: audio/libechonest/pkg-plist 321987 2013-06-28 21:17:09Z nivit $
 include/echonest/Artist.h
 include/echonest/ArtistTypes.h
 include/echonest/AudioSummary.h
@@ -16,6 +16,6 @@ include/echonest/Util.h
 include/echonest/echonest_export.h
 lib/libechonest.so
 lib/libechonest.so.2
-lib/libechonest.so.2.0.1
+lib/libechonest.so.%%PORTVERSION%%
 libdata/pkgconfig/libechonest.pc
 @dirrm include/echonest

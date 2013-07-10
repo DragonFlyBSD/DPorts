@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/libechonest/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
+# $FreeBSD: audio/libechonest/Makefile 321987 2013-06-28 21:17:09Z nivit $
 
 PORTNAME=	libechonest
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.3
 #PORTREVISION=	0
 CATEGORIES=	audio
 
@@ -13,10 +13,11 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	qjson:${PORTSDIR}/devel/qjson
 
-GH_ACCOUNT=	dschmidt
+GH_ACCOUNT=	lfranchi
 GH_PROJECT=	${PORTNAME}
-GH_TAGNAME=	${GH_COMMIT}
-GH_COMMIT=	f9a55d1
+GH_COMMIT=	c02854c
+
+PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 USES=		cmake pkgconfig
 USE_GITHUB=	yes
