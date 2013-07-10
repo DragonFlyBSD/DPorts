@@ -1,4 +1,4 @@
-@comment $FreeBSD: security/lasso/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: security/lasso/pkg-plist 321262 2013-06-19 14:48:53Z miwi $
 %%PORTDOCS%%%%DOCSDIR%%/book.rst
 %%PORTDOCS%%%%DOCSDIR%%/common-knowledge.rst
 %%PORTDOCS%%%%DOCSDIR%%/getting-lasso.rst
@@ -319,7 +319,6 @@ libdata/pkgconfig/lasso.pc
 @dirrmtry include/lasso/id-wsf
 @dirrmtry include/lasso/id-ff
 @dirrmtry include/lasso
-@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/lasso
 %%WITH_PYTHON%%@dirrmtry %%PYTHON_SITELIBDIR%%
 %%WITH_PHP5%%@dirrmtry lib/php/%%PHP_EXT_DIR%%
 %%WITH_PHP5%%@dirrmtry lib/php
