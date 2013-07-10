@@ -1,5 +1,5 @@
 # Created by: Lars Köller <Lars.Koeller@Uni-Bielefeld.de>
-# $FreeBSD: ports/math/grace/Makefile,v 1.71 2012/12/08 06:17:51 svnexp Exp $
+# $FreeBSD: math/grace/Makefile 322622 2013-07-10 07:00:44Z bapt $
 
 PORTNAME=	grace
 PORTVERSION=	5.1.23
@@ -26,9 +26,8 @@ OPTIONS_DEFAULT=FFTW NETCDF PDF XMHTML
 PDF_DESC=	PDF output
 XMHTML_DESC=	Use XmHTML widget for on-line help
 
-USE_MOTIF=	yes
 USE_GCC=	any
-USE_GMAKE=	yes
+USES=		gmake motif
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-grace-home=${DATADIR} \
 		--with-extra-incpath=${LOCALBASE}/include \
