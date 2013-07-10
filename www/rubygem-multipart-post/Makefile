@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-multipart-post
-# Date created:				Mar 03, 2011
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rubygem-multipart-post/Makefile,v 1.6 2012/11/17 06:03:04 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: www/rubygem-multipart-post/Makefile 321838 2013-06-27 02:35:06Z clsung $
 
 PORTNAME=	multipart-post
-PORTVERSION=	1.1.5
+PORTVERSION=	1.2.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
