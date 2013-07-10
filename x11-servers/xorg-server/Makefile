@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-server/Makefile 321157 2013-06-17 21:51:48Z jkim $
+# $FreeBSD: x11-servers/xorg-server/Makefile 321899 2013-06-27 18:38:27Z zeising $
 
 PORTNAME?=	xorg-server
 PORTVERSION=	${XORG_VERSION}
@@ -22,19 +22,21 @@ SLAVE_PORT?=	no
 
 .if defined(WITH_NEW_XORG)
 XORG_VERSION=	1.12.4
-XORG_REVISION=	0
+XORG_REVISION=	1
 PLIST_SUB+=	OLD="@comment " NEW=""
 EXTRA_PATCHES+=	${FILESDIR}/extra-clang
 .else
 XORG_VERSION=	1.7.7
-XORG_REVISION=	7
+XORG_REVISION=	8
 PLIST_SUB+=	OLD="" NEW="@comment "
 EXTRA_PATCHES+=	${FILESDIR}/extra-Xext-xace.c \
 		${FILESDIR}/extra-Xserver-hw-xfree86-os-support-bsd-sparc64_video.c \
 		${FILESDIR}/extra-Xserver-os-xprintf.c \
 		${FILESDIR}/extra-include_eventstr.h \
 		${FILESDIR}/extra-os-utils.c \
-		${FILESDIR}/extra-servermd.h
+		${FILESDIR}/extra-servermd.h \
+		${FILESDIR}/extra-dix_events.c \
+		${FILESDIR}/extra-Xserver-hw-xfree86-common-xf86Config.c
 .endif
 
 USE_BZIP2=	yes
