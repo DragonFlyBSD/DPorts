@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: mail/mpop/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: mail/mpop/Makefile 322306 2013-07-05 06:33:58Z bapt $
 
 PORTNAME=	mpop
 PORTVERSION=	1.0.27
@@ -16,6 +16,7 @@ OPTIONS_DEFINE=	GNUTLS GSASL NLS
 GNUTLS_DESC=	GNUTLS Enable gnuTLS support
 GSASL_DESC=	GSASL GNU SASL authentication support
 
+USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-libidn
