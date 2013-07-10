@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: mail/bogofilter-tc/Makefile 320668 2013-06-12 07:41:34Z mandree $
+# $FreeBSD: mail/bogofilter-tc/Makefile 322264 2013-07-04 06:37:48Z mandree $
 
 PORTNAME=	bogofilter
 PORTREVISION=	0
