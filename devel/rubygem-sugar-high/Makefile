@@ -2,10 +2,10 @@
 # Date created:				2011-06-16
 # Whom:					rpsfa@rit.edu
 #
-# $FreeBSD: ports/devel/rubygem-sugar-high/Makefile,v 1.4 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: devel/rubygem-sugar-high/Makefile 322062 2013-06-29 21:36:53Z swills $
 
 PORTNAME=	sugar-high
-PORTVERSION=	0.2.12
+PORTVERSION=	0.7.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
