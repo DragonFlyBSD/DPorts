@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 322503 2013-07-08 13:34:24Z bapt $
+# $FreeBSD: Mk/bsd.port.mk 322626 2013-07-10 07:41:13Z bapt $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -353,13 +353,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Supported components are: glut, glu, glw, and gl.
 #				  If set to "yes", this is equivalent to "glu". Note that
 #				  glew and glut depend on glu, glw and glu depend on gl.
-# USE_MOTIF		- If set, this port uses a Motif toolkit. Implies USE_XORG+= xpm
-# NO_OPENMOTIF	- If set, this port uses a custom Motif toolkit
-#				  instead of Openmotif.
-#				  Used only when USE_MOTIF is set.
-# WANT_LESSTIF	- If set, this port uses Lesstif as Motif toolkit.
-#				  Used only when USE_MOTIF is set.  Implies
-#				  NO_OPENMOTIF.
 ##
 # USE_SDL		- If set, this port uses the sdl libraries.
 #				  See bsd.sdl.mk for more information.
@@ -1904,17 +1897,6 @@ IGNORE=		cannot be built: there is no emulators/linux_base-${USE_LINUX}, perhaps
 RUN_DEPENDS+=	${LINUX_BASE_PORT}
 .endif
 
-.if defined(USE_MOTIF)
-USE_XORG+=			xpm
-.if defined(WANT_LESSTIF)
-LIB_DEPENDS+=		Xm:${PORTSDIR}/x11-toolkits/lesstif
-NO_OPENMOTIF=		yes
-.endif
-.if !defined(NO_OPENMOTIF)
-LIB_DEPENDS+=		Xm.4:${PORTSDIR}/x11-toolkits/open-motif
-.endif
-.endif
-
 .if defined(USE_DISPLAY) && !defined(DISPLAY)
 BUILD_DEPENDS+=	Xvfb:${PORTSDIR}/x11-servers/xorg-vfbserver \
 	${LOCALBASE}/lib/X11/fonts/misc/8x13O.pcf.gz:${PORTSDIR}/x11-fonts/xorg-fonts-miscbitmaps \
@@ -2153,7 +2135,7 @@ MAKE_FLAGS?=	-f
 MAKEFILE?=		Makefile
 MAKE_ENV+=		PREFIX=${PREFIX} \
 			LOCALBASE=${LOCALBASE} \
-			MOTIFLIB="${MOTIFLIB}" LIBDIR="${LIBDIR}" \
+			LIBDIR="${LIBDIR}" \
 			CC="${CC}" CFLAGS="${CFLAGS}" \
 			CPP="${CPP}" CPPFLAGS="${CPPFLAGS}" \
 			LDFLAGS="${LDFLAGS}" \
@@ -2408,8 +2390,6 @@ PKG_SUFX?=		.tbz
 .endif
 # where pkg_add records its dirty deeds.
 PKG_DBDIR?=		/var/db/pkg
-
-MOTIFLIB?=	-L${LOCALBASE}/lib -lXm -lXp
 
 ALL_TARGET?=		all
 INSTALL_TARGET?=	install
@@ -6135,14 +6115,14 @@ do-config:
 		(${ECHO_MSG} "===> Cannot create $${optionsdir}, check permissions"; exit 1); \
 	${ECHO_MSG} "===>  Returning to user credentials"
 .else
-	@(optionsdir=${OPTIONS_FILE}; optionsdir=$${optionsdir%/*}; \
+	@optionsdir=${OPTIONS_FILE}; optionsdir=$${optionsdir%/*}; \
 	oldoptionsdir=${OPTIONSFILE}; oldoptionsdir=$${oldoptionsdir%/*}; \
 	if [ -d $${oldoptionsdir} -a ! -d $${optionsdir} ]; then \
 		${MV} $${oldoptionsdir} $${optionsdir}; \
 	elif [ -d $${oldoptionsdir} -a -d $${optionsdir} ]; then \
 		${RM} -rf $${oldoptionsdir} ; \
 	fi ; \
-	${MKDIR} $${optionsdir} 2> /dev/null) || \
+	${MKDIR} $${optionsdir} 2> /dev/null || \
 	(${ECHO_MSG} "===> Cannot create $${optionsdir}, check permissions"; exit 1)
 .endif
 	@TMPOPTIONSFILE=$$(mktemp -t portoptions); \

@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.gnome.mk 317433 2013-05-05 20:47:42Z kwm $
+# $FreeBSD: Mk/bsd.gnome.mk 322631 2013-07-10 09:28:01Z rene $
 #	$NetBSD: $
 #     $MCom: ports/Mk/bsd.gnome.mk,v 1.574 2012/12/18 12:15:14 kwm Exp $
 #
@@ -74,7 +74,7 @@ _USE_GNOME_ALL= esound intlhack intltool ltasneededhack lthack ltverhack \
 
 # GNOME 1 components
 _USE_GNOME_ALL+= bonobo gconf gdkpixbuf glib12 \
-		gnomecanvas gnomedb gnomelibs gnomeprint gnomevfs gtk12 \
+		gnomecanvas gnomedb gnomelibs gnomeprint gtk12 \
 		libgda libghttp libglade libxml imlib oaf orbit
 
 # GNOME 2 components
@@ -280,13 +280,6 @@ gconf_CONFIGURE_ENV=	GCONF_CONFIG="${GCONF_CONFIG}"
 gconf_MAKE_ENV=		GCONF_CONFIG="${GCONF_CONFIG}"
 gconf_DETECT=		${GCONF_CONFIG}
 gconf_USE_GNOME_IMPL=	oaf
-
-GNOME_VFS_CONFIG?=	${LOCALBASE}/bin/gnome-vfs-config
-gnomevfs_LIB_DEPENDS=	gnomevfs.0:${PORTSDIR}/devel/gnome-vfs1
-gnomevfs_CONFIGURE_ENV=	GNOME_VFS_CONFIG="${GNOME_VFS_CONFIG}"
-gnomevfs_MAKE_ENV=	GNOME_VFS_CONFIG="${GNOME_VFS_CONFIG}"
-gnomevfs_DETECT=	${GNOME_VFS_CONFIG}
-gnomevfs_USE_GNOME_IMPL=gnomemimedata gconf gnomelibs
 
 gnomeprint_LIB_DEPENDS=	gnomeprint.16:${PORTSDIR}/print/gnome-print
 gnomeprint_DETECT=	${LOCALBASE}/etc/printConf.sh
