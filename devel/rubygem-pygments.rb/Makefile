@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-pygments.rb/Makefile 320417 2013-06-10 00:22:34Z swills $
+# $FreeBSD: devel/rubygem-pygments.rb/Makefile 322096 2013-06-30 19:07:58Z swills $
 
 PORTNAME=	pygments.rb
-PORTVERSION=	0.5.0
+PORTVERSION=	0.5.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
