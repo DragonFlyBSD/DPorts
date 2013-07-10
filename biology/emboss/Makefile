@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: ports/biology/emboss/Makefile,v 1.66 2012/11/17 05:54:51 svnexp Exp $
+# $FreeBSD: biology/emboss/Makefile 322587 2013-07-09 21:49:35Z bapt $
 
 PORTNAME=	emboss
 PORTVERSION=	6.2.0
@@ -22,12 +22,11 @@ CONFLICTS=	qmail-ldap-[0-9]* digest-[0-9]*
 
 PREFIX?=	${LOCALBASE}/emboss
 NO_MTREE=	yes
+USES=		gmake
 USE_SUBMAKE=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_MOTIF=	yes
 SUB_FILES=	pkg-message
 SUB_LIST=	PREFIX=${PREFIX} DATADIR=${DATADIR}
 
@@ -38,7 +37,7 @@ CONFIGURE_ARGS+= --with-docroot=${DOCSDIR}
 
 .if !defined(WITHOUT_X11)
 USE_XORG=	x11
-USE_MOTIF=	yes
+USES+=		motif
 LIB_DEPENDS+=	gd.4:${PORTSDIR}/graphics/gd \
 		png15:${PORTSDIR}/graphics/png
 .else
