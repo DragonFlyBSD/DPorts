@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mmore
-# Date created:		8 July 2005
-# Whom:			Matthew Holder <sixxgate@hotmail.com>
-#
-# $FreeBSD: ports/sysutils/mmore/Makefile,v 1.6 2012/11/17 06:01:38 svnexp Exp $
-#
+# Created by: Matthew Holder <sixxgate@hotmail.com>
+# $FreeBSD: sysutils/mmore/Makefile 322622 2013-07-10 07:00:44Z bapt $
 
 PORTNAME=	mmore
 PORTVERSION=	1.01
@@ -12,11 +8,10 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://matt.sixxgate.com/files/
 
 MAINTAINER=	sixxgate@hotmail.com
-COMMENT=	An Motif/X file/stream viewer
+COMMENT=	Motif/X file/stream viewer
 
-USE_MOTIF=	yes
+USES=		imake motif
 USE_BZIP2=	yes
-USE_IMAKE=	yes
 USE_XORG=	x11 xmu xt
 MAN1=		mmore.1
 MANCOMPRESSED=	yes
