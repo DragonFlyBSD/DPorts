@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/rubygem-transactionsimple/Makefile,v 1.18 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: devel/rubygem-transactionsimple/Makefile 321916 2013-06-28 01:12:39Z swills $
 
 PORTNAME=	transactionsimple
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.0.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 DISTNAME=	transaction-simple-${PORTVERSION}
