@@ -1,5 +1,5 @@
 # Created by: Mark A. Wicks <mwicks@kettering.edu>
-# $FreeBSD: devel/monotone/Makefile 318783 2013-05-22 18:09:24Z madpilot $
+# $FreeBSD: devel/monotone/Makefile 322507 2013-07-08 13:58:22Z bapt $
 
 PORTNAME=	monotone
 PORTVERSION=	1.0
@@ -22,8 +22,7 @@ LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre \
 SUB_FILES=	pkg-message
 USE_BZIP2=	yes
 USE_PERL5_BUILD=yes
-USES=		iconv
-USE_GMAKE=	yes
+USES=		iconv pkgconfig gmake
 USE_LUA=	5.1+
 MAKE_JOBS_SAFE=	yes
 
