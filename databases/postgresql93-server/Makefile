@@ -2,11 +2,11 @@
 # Date created:		November 13, 1998
 # Whom:			Marc G. Fournier <scrappy@FreeBSD.org>
 #
-# $FreeBSD: databases/postgresql93-server/Makefile 318267 2013-05-15 23:21:28Z girgen $
+# $FreeBSD: databases/postgresql93-server/Makefile 321954 2013-06-28 10:50:51Z girgen $
 #
 
-DISTVERSION?=	9.3beta1
-PORTREVISION?=	1
+DISTVERSION?=	9.3beta2
+PORTREVISION?=	0
 PKGNAMESUFFIX?=	-server
 
 MAINTAINER?=	pgsql@FreeBSD.org
