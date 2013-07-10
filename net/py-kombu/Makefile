@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/py-kombu/Makefile 321748 2013-06-25 16:09:15Z wg $
+# $FreeBSD: net/py-kombu/Makefile 322458 2013-07-07 19:57:31Z wg $
 
 PORTNAME=	kombu
-PORTVERSION=	2.5.11
+PORTVERSION=	2.5.12
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -27,7 +27,7 @@ ZMQ_DESC=	Include ZMQ transport support
 # Ports infrastructure bug
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
-USE_PYTHON=	2.7-
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
 
 .include <bsd.port.pre.mk>
