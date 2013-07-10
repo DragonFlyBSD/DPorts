@@ -1,5 +1,5 @@
 # Created by: Chung-Kie Tung <tung@turtle.ee.ncku.edu.tw>
-# $FreeBSD: net/tcpview/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: net/tcpview/Makefile 322622 2013-07-10 07:00:44Z bapt $
 
 PORTNAME=	tcpview
 PORTVERSION=	1.0
@@ -9,10 +9,9 @@ MASTER_SITES=	ftp://ftp.cac.washington.edu/pub/noc-tools/tcpview/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	cy@FreeBSD.org
-COMMENT=	A Motif-based TCP/IP protocol analyzer
+COMMENT=	Motif-based TCP/IP protocol analyzer
 
-USES=		bison
-USE_MOTIF=	yes
+USES=		bison motif
 
 MAN1=		tcpview.1
 
