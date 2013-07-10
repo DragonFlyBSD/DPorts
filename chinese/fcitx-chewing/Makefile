@@ -2,11 +2,12 @@
 # Date created:				6 Feb 2012
 # Whom:			Zhihao Yuan <lichray@gmail.com>
 #
-# $FreeBSD: chinese/fcitx-chewing/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: chinese/fcitx-chewing/Makefile 321830 2013-06-27 01:47:52Z clsung $
 #
 
 PORTNAME=	fcitx-chewing
 PORTVERSION=	0.1.3
+PORTREVISION=	1
 CATEGORIES=	chinese
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DIST_SUBDIR=	fcitx
