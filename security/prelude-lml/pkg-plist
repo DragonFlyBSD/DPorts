@@ -1,4 +1,4 @@
-@comment $FreeBSD: security/prelude-lml/pkg-plist 308968 2012-12-15 22:22:37Z pawel $
+@comment $FreeBSD: security/prelude-lml/pkg-plist 322061 2013-06-29 21:35:45Z antoine $
 bin/prelude-lml
 @unexec if cmp -s %D/etc/prelude-lml/plugins.rules %D/etc/prelude-lml/plugins.rules-dist; then rm -f %D/etc/prelude-lml/plugins.rules; fi
 etc/prelude-lml/plugins.rules-dist
@@ -79,4 +79,6 @@ lib/prelude-lml/pcre.so
 @dirrm include/prelude-lml
 @dirrm etc/prelude-lml/ruleset
 @dirrmtry etc/prelude-lml
+@exec install -d -o root -g wheel -m 700 /var/spool/prelude-lml
+@unexec rmdir /var/spool/prelude-lml 2>/dev/null || true
 @unexec echo "If you are permanently removing this port, you should remove ${PKG_PREFIX}/etc/prelude-lml and /var/spool/prelude-lml directories to clean up any configuration and logfile metadata files left." | fmt

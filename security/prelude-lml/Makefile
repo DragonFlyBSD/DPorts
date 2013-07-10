@@ -1,9 +1,9 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/prelude-lml/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/prelude-lml/Makefile 322061 2013-06-29 21:35:45Z antoine $
 
 PORTNAME=	prelude-lml
 PORTVERSION=	1.0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	https://www.prelude-ids.org/attachments/download/242/
 
@@ -25,7 +25,7 @@ USE_AUTOTOOLS=	libltdl
 GNU_CONFIGURE=	yes
 USE_RC_SUBR=	prelude-lml
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
-USES=		pkgconfig gettext iconv
+USES=		charsetfix gettext iconv pkgconfig
 
 OPTIONS_DEFINE=	FAM
 
