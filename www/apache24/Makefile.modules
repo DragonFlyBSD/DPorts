@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache24/Makefile.modules 315335 2013-03-26 21:35:33Z ohauer $
+# $FreeBSD: www/apache24/Makefile.modules 322370 2013-07-06 08:56:37Z ohauer $
 #
 # Note by Clement Laforet: (to generate PLIST_SUB entries for modules)
 #	gsed 's/^\(.*\)mod\(.*\)\.so/%%\MOD\U\2%%\L\1mod\2\.so/' pkg-plist > tmp
@@ -41,7 +41,7 @@ IGNORE=	LDAP and AUTHNZ_LDAP requires APR-util to have LDAP support built in.\
 .  endif
 
 .  if ${PORT_OPTIONS:MSESSION_CRYPTO}
-.    if !exists(${APU_CRYPTO_OPENSSL})
+.    if !exists(${APU_CRYPTO_OPENSSL}) && !exists(${APU_CRYPTO_NSS})
 IGNORE=	SESSION_CRYPTO requires APR-util to have crypto openssl support build in.\
 	Please rebuild APR with crypto openssl support
 .    endif
