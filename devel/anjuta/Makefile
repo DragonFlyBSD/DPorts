@@ -1,10 +1,10 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/anjuta/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/anjuta/Makefile 322372 2013-07-06 09:04:54Z ohauer $
 #   $MCom: ports/devel/anjuta/Makefile,v 1.72 2012/12/13 20:33:05 kwm Exp $
 
 PORTNAME=	anjuta
 PORTVERSION=	2.32.1.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -31,8 +31,7 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 CONFLICTS=	anjuta-3.[0-9]*
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gmake gettext
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PERL5=	yes
