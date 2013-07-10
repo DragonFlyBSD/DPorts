@@ -1,12 +1,7 @@
-# New ports collection makefile for:	freecode-submit (before freshmeat-submit)
-# Date created:		2 Jan 2005
-# Whom:			x
-#
-# $FreeBSD: ports/misc/freecode-submit/Makefile,v 1.10 2012/11/17 05:59:36 svnexp Exp $
-#
+# $FreeBSD: misc/freecode-submit/Makefile 321949 2013-06-28 04:43:11Z cs $
 
 PORTNAME=	freecode-submit
-PORTVERSION=	2.4
+PORTVERSION=	2.5
 CATEGORIES=	misc
 MASTER_SITES=	http://www.catb.org/~esr/freecode-submit/ \
 		http://www.c-s.li/ports/
