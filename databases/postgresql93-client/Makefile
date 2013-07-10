@@ -1,11 +1,10 @@
 # Created by: Palle Girgensohn <girgen@FreeBSD.org>
-# $FreeBSD: databases/postgresql93-client/Makefile 317984 2013-05-12 22:28:38Z girgen $
+# $FreeBSD: databases/postgresql93-client/Makefile 321954 2013-06-28 10:50:51Z girgen $
 #
 # To depend on postgresql-client, set USE_PGSQL=yes.
 # See Mk/bsd.databases.mk for more info
 
 PORTNAME=	postgresql
-PORTREVISION=	2
 PKGNAMESUFFIX=	-client
 
 COMMENT=	PostgreSQL database (client)
