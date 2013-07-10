@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: net-im/loudmouth/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: net-im/loudmouth/Makefile 322497 2013-07-08 11:55:14Z bapt $
 
 PORTNAME=	loudmouth
 PORTVERSION=	1.4.3
@@ -13,8 +13,7 @@ COMMENT=	Lightweight Jabber client library
 LIB_DEPENDS=	idn:${PORTSDIR}/dns/libidn
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack glib20 ltverhack
