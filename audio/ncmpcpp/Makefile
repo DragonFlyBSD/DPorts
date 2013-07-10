@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: audio/ncmpcpp/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: audio/ncmpcpp/Makefile 322313 2013-07-05 07:13:14Z bapt $
 
 PORTNAME=	ncmpcpp
 PORTVERSION=	0.5.10
@@ -13,7 +13,7 @@ COMMENT=	A ncurses mpd client, clone of ncmpc with some new features
 LIB_DEPENDS=	mpdclient:${PORTSDIR}/audio/libmpdclient \
 		fftw3:${PORTSDIR}/math/fftw3
 
-USES=		iconv ncurses
+USES=		iconv ncurses pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
