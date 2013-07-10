@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xli
-# Date created:				24 November 1994
-# Whom:					Satoshi Asami <asami@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/xli/Makefile,v 1.44 2012/11/17 05:58:25 svnexp Exp $
-#
+# Created by: Satoshi Asami <asami@FreeBSD.org>
+# $FreeBSD: graphics/xli/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xli
 PORTVERSION=	1.17.0
@@ -20,9 +16,9 @@ CONFLICTS_INSTALL=	xloadimage-*
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		jpeg.11:${PORTSDIR}/graphics/jpeg
 
+USES=		imake
 USE_XORG=	xi
 USE_GCC=	any
-USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/xli-${XLI_SNAPVER}
 
 MAN1=		xli.1 xlito.1
