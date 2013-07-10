@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/floatator/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/floatator/Makefile 322622 2013-07-10 07:00:44Z bapt $
 
 PORTNAME=	floatator
 PORTVERSION=	0.2.1
@@ -13,7 +13,7 @@ COMMENT=	Interactive fluid dynamics simulation
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PORTCOUT=	skipv:0.9.1
-USE_MOTIF=	yes
+USES=		motif
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DNDEBUG" \
 		X11INCLUDE="-I${LOCALBASE}/include" X11LIB="-L${LOCALBASE}/lib"
 PLIST_FILES=	bin/floatator bin/floatator_X_interface
