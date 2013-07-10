@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Mapquest/Makefile 316379 2013-04-23 17:13:28Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-Mapquest/Makefile 322610 2013-07-10 03:42:12Z sunpoet $
 
 PORTNAME=	Geo-Coder-Mapquest
-PORTVERSION=	0.05
+PORTVERSION=	0.06
 CATEGORIES=	misc geography perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
