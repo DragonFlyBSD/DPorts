@@ -1,8 +1,8 @@
 # Created by: Tony Maher
-# $FreeBSD: security/apache-xml-security-c/Makefile 321194 2013-06-18 15:15:48Z girgen $
+# $FreeBSD: security/apache-xml-security-c/Makefile 321955 2013-06-28 11:07:48Z girgen $
 
 PORTNAME=	xml-security-c
-PORTVERSION=	1.7.1
+PORTVERSION=	1.7.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=santuario/c-library
