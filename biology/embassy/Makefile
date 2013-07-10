@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsamn.edu.ar>
-# $FreeBSD: biology/embassy/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: biology/embassy/Makefile 322587 2013-07-09 21:49:35Z bapt $
 
 PORTNAME=	embassy
 PORTVERSION=	6.2.0
@@ -16,11 +16,9 @@ LIB_DEPENDS=	nucleus.6:${PORTSDIR}/biology/emboss
 PREFIX?=	${LOCALBASE}/emboss
 NO_MTREE=	yes
 USE_SUBMAKE=	yes
-USES=		iconv
-USE_GMAKE=	yes
+USES=		iconv gmake motif
 GNU_CONFIGURE=	yes
 USE_XORG=	x11
-USE_MOTIF=	yes
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOMAINATRIX DOMALIGN DOMSEARCH SIGNATURE STRUCTURE \
