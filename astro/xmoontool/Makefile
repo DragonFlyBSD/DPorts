@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmoontool
-# Date created:			31 December 2005
-# Whom:				Frank W. Josellis <frank@dynamical-systems.org>
-#
-# $FreeBSD: ports/astro/xmoontool/Makefile,v 1.13 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: Frank W. Josellis <frank@dynamical-systems.org>
+# $FreeBSD: astro/xmoontool/Makefile 322578 2013-07-09 21:06:22Z bapt $
 
 PORTNAME=	xmoontool
 PORTVERSION=	3.0.3
@@ -14,7 +10,7 @@ MASTER_SITES=	http://www.senax.net/xmoontool/
 MAINTAINER=	frank@dynamical-systems.org
 COMMENT=	A version of John Walker's classical moontool for X11/Motif
 
-USE_MOTIF=	yes
+USES=		motif
 
 MAN1=		xmoontool.1
 PORTDOCS=	NOTES
