@@ -2,11 +2,11 @@
 # Date created:		2011-11-28
 # Whom:			Steve Wills <swills@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/rubygem-SyslogLogger/Makefile,v 1.4 2012/11/17 06:01:44 svnexp Exp $
+# $FreeBSD: sysutils/rubygem-SyslogLogger/Makefile 322109 2013-07-01 01:16:45Z swills $
 #
 
 PORTNAME=	SyslogLogger
-PORTVERSION=	1.4.1
+PORTVERSION=	2.0
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
