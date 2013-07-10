@@ -1,8 +1,8 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: www/httrack/Makefile 321537 2013-06-22 03:40:17Z sunpoet $
+# $FreeBSD: www/httrack/Makefile 322603 2013-07-10 03:34:45Z sunpoet $
 
 PORTNAME=	httrack
-PORTVERSION=	3.47.19
+PORTVERSION=	3.47.21
 CATEGORIES=	www
 MASTER_SITES=	http://download.httrack.com/ \
 		http://mirror.httrack.com/historical/ \
