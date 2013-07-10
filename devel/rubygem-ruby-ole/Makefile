@@ -1,8 +1,8 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: devel/rubygem-ruby-ole/Makefile 319690 2013-06-02 17:13:35Z swills $
+# $FreeBSD: devel/rubygem-ruby-ole/Makefile 322097 2013-06-30 19:13:49Z swills $
 
 PORTNAME=	ruby-ole
-PORTVERSION=	1.2.11.6
+PORTVERSION=	1.2.11.7
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
