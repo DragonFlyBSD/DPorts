@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports-mgmt/portupgrade-devel/Makefile 321107 2013-06-17 13:17:03Z bdrewery $
+# $FreeBSD: ports-mgmt/portupgrade-devel/Makefile 322042 2013-06-29 11:06:03Z bdrewery $
 
 PORTNAME=	portupgrade
-PORTVERSION=	20130617
+PORTVERSION=	20130629
 PORTEPOCH=	3
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	GH \
@@ -20,7 +20,7 @@ CONFLICTS_INSTALL=	portupgrade-[0-9]*
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
 GH_PROJECT=	portupgrade
-GH_COMMIT=	685cb60
+GH_COMMIT=	0738b3c
 GH_TAGNAME=	${GH_COMMIT}
 
 DIST_SUBDIR=	${PORTNAME}
