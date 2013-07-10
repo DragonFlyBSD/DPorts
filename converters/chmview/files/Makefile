@@ -1,4 +1,4 @@
-# $FreeBSD: ports/converters/chmview/files/Makefile,v 1.5 2012/11/17 05:55:02 svnexp Exp $
+# $FreeBSD: converters/chmview/files/Makefile 300895 2012-07-14 12:56:14Z beat $
 
 BINDIR?=	${PREFIX}/bin
 
