@@ -1,8 +1,8 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: ports/dns/p5-Net-Nslookup/Makefile,v 1.15 2013/02/14 21:45:39 svnexp Exp $
+# $FreeBSD: dns/p5-Net-Nslookup/Makefile 321932 2013-06-28 02:39:11Z clsung $
 
 PORTNAME=	Net-Nslookup
-PORTVERSION=	2.02
+PORTVERSION=	2.03
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
