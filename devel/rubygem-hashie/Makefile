@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-hashie
-# Date created:		                Mar 03, 2011
-# Whom:			                Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/rubygem-hashie/Makefile,v 1.4 2012/11/17 05:56:59 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/rubygem-hashie/Makefile 321839 2013-06-27 02:37:08Z clsung $
 
 PORTNAME=	hashie
-PORTVERSION=	1.2.0
+PORTVERSION=	2.0.5
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
