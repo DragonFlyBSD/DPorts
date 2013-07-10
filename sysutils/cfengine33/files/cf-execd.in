@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/cfengine33/files/cf-execd.in,v 1.2 2012/11/17 06:01:26 svnexp Exp $
+# $FreeBSD: sysutils/cfengine33/files/cf-execd.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: cf-execd
 # REQUIRE: LOGIN
