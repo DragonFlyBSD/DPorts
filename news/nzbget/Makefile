@@ -1,5 +1,5 @@
 # Created by: Lewis Thompson <purple@lewiz.net>
-# $FreeBSD: news/nzbget/Makefile 320276 2013-06-08 19:53:32Z wg $
+# $FreeBSD: news/nzbget/Makefile 321819 2013-06-26 21:53:51Z wg $
 
 PORTNAME=	nzbget
 PORTVERSION=	10.2
@@ -39,7 +39,10 @@ OPTIONS_DEFAULT=	PAR GNUTLS
 .endif
 
 .if ${PORT_OPTIONS:MOPENSSL}
- CONFIGURE_ARGS+= --with-tlslib=OpenSSL
+ USE_OPENSSL=	yes
+ CONFIGURE_ARGS+= --with-tlslib=OpenSSL \
+		--with-openssl-includes=${OPENSSLINC} \
+		--with-openssl-libraries=${OPENSSLLIB}
 .endif
 
 .if ${PORT_OPTIONS:MGNUTLS}
