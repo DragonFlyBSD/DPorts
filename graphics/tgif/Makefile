@@ -1,5 +1,5 @@
 # Created by: bmc@WillsCreek.COM
-# $FreeBSD: graphics/tgif/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/tgif/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	tgif
 PORTVERSION=	4.2.2
@@ -18,8 +18,8 @@ RUN_DEPENDS=	giftopnm:${PORTSDIR}/graphics/netpbm
 OPTIONS_DEFINE=	NLS A4SIZE DOCS
 A4SIZE_DESC=	Set default paper size to A4
 
+USES=		imake
 USE_GCC=	any
-USE_IMAKE=	yes
 PORTDOCS=	HISTORY README
 USE_XORG=	x11 xext xt sm ice
 MAKE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}"
