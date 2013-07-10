@@ -1,21 +1,19 @@
-# New ports collection makefile for:	rubygem-shoulda
-# Date created:		21 September 2010
-# Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/rubygem-shoulda/Makefile,v 1.2 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
+# $FreeBSD: devel/rubygem-shoulda/Makefile 321941 2013-06-28 04:05:17Z swills $
 
 PORTNAME=	shoulda
-PORTVERSION=	2.11.3
+PORTVERSION=	3.5.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Making tests easy on the fingers and eyes
 
+RUN_DEPENDS=	rubygem-shoulda-context>=1.0.1:${PORTSDIR}/devel/rubygem-shoulda-context \
+		rubygem-shoulda-matchers>=1.4.1:${PORTSDIR}/devel/rubygem-shoulda-matchers
+
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-PLIST_FILES=	bin/convert_to_should_syntax
 
 .include <bsd.port.mk>
