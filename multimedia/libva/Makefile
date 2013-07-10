@@ -1,7 +1,7 @@
-# $FreeBSD: multimedia/libva/Makefile 314696 2013-03-19 21:34:36Z madpilot $
+# $FreeBSD: multimedia/libva/Makefile 321903 2013-06-27 20:43:18Z madpilot $
 
 PORTNAME=	libva
-PORTVERSION=	1.1.1
+PORTVERSION=	1.2.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://cgit.freedesktop.org/${PORTNAME}/snapshot/
 
