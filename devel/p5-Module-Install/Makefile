@@ -2,7 +2,7 @@
 # Date created:				Sep 15 2004
 # Whom:                			clsung
 #
-# $FreeBSD: ports/devel/p5-Module-Install/Makefile,v 1.48 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Install/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Module-Install
@@ -46,22 +46,4 @@ MAN3=		inc::Module::Install.3 \
 		Module::Install::Share.3 \
 		Module::Install::With.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} == 501000
-BUILD_DEPENDS+=	p5-Module-CoreList>=2.17:${PORTSDIR}/devel/p5-Module-CoreList
-RUN_DEPENDS+=	p5-Module-CoreList>=2.17:${PORTSDIR}/devel/p5-Module-CoreList
-.endif
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Archive-Tar>=1.44:${PORTSDIR}/archivers/p5-Archive-Tar \
-		p5-Devel-PPPort>=3.16:${PORTSDIR}/devel/p5-Devel-PPPort \
-		p5-Module-Build>=0.29:${PORTSDIR}/devel/p5-Module-Build \
-		p5-Parse-CPAN-Meta>=1.39:${PORTSDIR}/devel/p5-Parse-CPAN-Meta
-RUN_DEPENDS+=	p5-Archive-Tar>=1.44:${PORTSDIR}/archivers/p5-Archive-Tar \
-		p5-Devel-PPPort>=3.16:${PORTSDIR}/devel/p5-Devel-PPPort \
-		p5-Module-Build>=0.29:${PORTSDIR}/devel/p5-Module-Build \
-		p5-Parse-CPAN-Meta>=1.39:${PORTSDIR}/devel/p5-Parse-CPAN-Meta
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
