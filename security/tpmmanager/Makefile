@@ -1,49 +1,42 @@
-# New ports collection makefile for:	tpmmanager
-# Date created:				2011-01-02
-# Whom:					Norikatsu Shigemura <nork@FreeBSD.org>
-#
-# $FreeBSD: ports/security/tpmmanager/Makefile,v 1.6 2012/11/17 06:01:21 svnexp Exp $
-#
+# Created by: Norikatsu Shigemura <nork@FreeBSD.org>
+# $FreeBSD: security/tpmmanager/Makefile 322284 2013-07-04 17:59:48Z wg $
 
-PORTNAME=		tpmmanager
-PORTVERSION=		0.8
-PORTREVISION=	1
-CATEGORIES=		security
-MASTER_SITES=		SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}/${PORTNAME}-${PORTVERSION}
+PORTNAME=	tpmmanager
+PORTVERSION=	0.8.1
+CATEGORIES=	security
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION:C/\.1//}/
 
-MAINTAINER=		ports@FreeBSD.org
-COMMENT=		TPM Manager
+MAINTAINER=	danilogondolfo@gmail.com
+COMMENT=	TPM Manager
 
-LIB_DEPENDS=		tspi.2:${PORTSDIR}/security/trousers
+LICENSE=	GPLv2
 
-LICENSE=		GPLv2
-LICENSE_FILE=		${WRKSRC}/COPYING
+LIB_DEPENDS=	tspi:${PORTSDIR}/security/trousers
 
-QT_NONSTANDARD=		YES
-USE_QT4=		gui moc_build qmake_build rcc_build uic_build
+QT_NONSTANDARD=	YES
+USE_QT4=	gui moc_build qmake_build rcc_build uic_build
 
-HAS_CONFIGURE=		YES
-MAKE_JOBS_SAFE=		YES
+HAS_CONFIGURE=	YES
+MAKE_JOBS_SAFE=	YES
 
-PLIST_FILES=		bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME}
+
+PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.pre.mk>
-.if !defined(NOPORTDOCS)
-PLIST_FILES+=		${DOCSDIR_REL}/${PORTNAME}.pdf \
-			${DOCSDIR_REL}/TPM_Manager.odt
-PLIST_DIRSTRY=		${DOCSDIR_REL}
-.endif
 
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 		${QMAKE} PREFIX=${PREFIX} tpmmanager.pro
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME}        ${PREFIX}/bin/
-.if !defined(NOPORTDOCS)
-	${INSTALL} -d -m 0755 ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${PREFIX}/bin/
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/latex/${PORTNAME}.pdf ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/doc/TPM_Manager.odt       ${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/TPM_Manager.odt ${DOCSDIR}/
 .endif
 
 .include <bsd.port.post.mk>
