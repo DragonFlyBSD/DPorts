@@ -1,8 +1,8 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: mail/bogofilter/Makefile 317736 2013-05-09 12:06:38Z bdrewery $
+# $FreeBSD: mail/bogofilter/Makefile 322264 2013-07-04 06:37:48Z mandree $
 
 PORTNAME=	bogofilter
-PORTVERSION=	1.2.3
+PORTVERSION=	1.2.4
 PORTREVISION?=	0
 CATEGORIES?=	mail
 MASTER_SITES=	SF/bogofilter/bogofilter-current/bogofilter-${PORTVERSION}
