@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/xpdf/Makefile,v 1.112 2013/02/02 00:50:56 svnexp Exp $
+# $FreeBSD: graphics/xpdf/Makefile 322621 2013-07-10 06:55:28Z bapt $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
@@ -14,7 +14,7 @@ COMMENT=	Display PDF files and convert them to other formats
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -50,7 +50,7 @@ MAN5=		xpdfrc.5
 
 .if ${PORT_OPTIONS:MX11}
 CONFIGURE_ARGS+=	--with-x
-USE_MOTIF=		yes
+USES+=			motif
 MAN1+=			xpdf.1
 PLIST_SUB+=		X11=""
 .else
