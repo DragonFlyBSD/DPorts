@@ -2,10 +2,10 @@
 # Date created:				21 April 2009
 # Whom:						pgollucci@p6m7g8.com
 #
-# $FreeBSD: ports/textproc/rubygem-xml-simple/Makefile,v 1.7 2012/11/17 06:02:20 svnexp Exp $
+# $FreeBSD: textproc/rubygem-xml-simple/Makefile 322110 2013-07-01 01:52:10Z swills $
 
 PORTNAME=	xml-simple
-PORTVERSION=	1.0.16
+PORTVERSION=	1.1.2
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
