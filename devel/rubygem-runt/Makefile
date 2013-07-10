@@ -2,11 +2,11 @@
 # Date created:		7 April 2009
 # Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
 #
-# $FreeBSD: ports/devel/rubygem-runt/Makefile,v 1.4 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: devel/rubygem-runt/Makefile 322053 2013-06-29 21:08:44Z swills $
 #
 
 PORTNAME=	runt
-PORTVERSION=	0.7.0
+PORTVERSION=	0.9.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
