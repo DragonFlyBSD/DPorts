@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/rubygem-icalendar/Makefile 320225 2013-06-07 20:27:46Z swills $
+# $FreeBSD: devel/rubygem-icalendar/Makefile 322070 2013-06-30 00:21:08Z swills $
 
 PORTNAME=	icalendar
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
