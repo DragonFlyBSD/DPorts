@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/logwatch/files/Makefile,v 1.4 2012/11/17 06:01:37 svnexp Exp $
+# $FreeBSD: sysutils/logwatch/files/Makefile 300897 2012-07-14 14:29:18Z beat $
 
 PORTNAME?=logwatch
 PREFIX?=/usr/local/${PORTNAME}

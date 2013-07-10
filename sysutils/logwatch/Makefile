@@ -2,7 +2,7 @@
 # Date created:	       8 December 2007
 # Whom:		       John D. "Trix" Farrar <trix@basement.net>
 #
-# $FreeBSD: ports/sysutils/logwatch/Makefile,v 1.5 2012/11/17 06:01:37 svnexp Exp $
+# $FreeBSD: sysutils/logwatch/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	logwatch
