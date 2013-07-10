@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/rubygem-stomp/Makefile,v 1.12 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: devel/rubygem-stomp/Makefile 322057 2013-06-29 21:28:12Z swills $
 
 PORTNAME=	stomp
-PORTVERSION=	1.1.10
+PORTVERSION=	1.2.9
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
