@@ -1,9 +1,5 @@
-# New ports collection makefile for:	plotutils
-# Date created:		19 June 1998
-# Whom:			Chuck Robey (chuckr)
-#
-# $FreeBSD: ports/graphics/plotutils/Makefile,v 1.49 2012/11/17 05:58:19 svnexp Exp $
-#
+# Created by: Chuck Robey (chuckr)
+# $FreeBSD: graphics/plotutils/Makefile 322621 2013-07-10 06:55:28Z bapt $
 
 PORTNAME=	plotutils
 PORTVERSION=	2.6
@@ -13,11 +9,11 @@ CATEGORIES=	graphics
 MASTER_SITES=	GNU
 
 MAINTAINER=	stephen@FreeBSD.org
-COMMENT=	A plotting library and toolkit
+COMMENT=	Plotting library and toolkit
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
-USE_MOTIF=	yes
+USES=		motif
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-libplotter --enable-libxmi --with-motif
 USE_LDCONFIG=	yes
