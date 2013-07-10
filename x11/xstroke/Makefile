@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xstroke/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# $FreeBSD: x11/xstroke/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xstroke
 PORTVERSION=	0.5.12
@@ -13,9 +13,8 @@ COMMENT=	Fullscreen gesture recognition
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USES=		bison
+USES=		bison imake
 USE_XORG=	xft x11 xext xi xtst
-USE_IMAKE=	yes
 
 MAN1=		xstroke.1
 PLIST_FILES=	bin/xstroke %%ETCDIR%%/alphabet
