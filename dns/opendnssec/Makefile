@@ -1,8 +1,8 @@
 # Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-# $FreeBSD: dns/opendnssec/Makefile 321504 2013-06-21 21:00:44Z wg $
+# $FreeBSD: dns/opendnssec/Makefile 322168 2013-07-02 13:12:23Z wg $
 
 PORTNAME=	opendnssec
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.1
 CATEGORIES=	dns
 MASTER_SITES=	http://dist.opendnssec.org/source/
 
