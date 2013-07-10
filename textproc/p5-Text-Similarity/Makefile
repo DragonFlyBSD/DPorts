@@ -1,18 +1,16 @@
-# New ports collection makefile for:	Text::Similarity
-# Date created:				Oct 28 2004
-# Whom:					clsung
-#
-# $FreeBSD: ports/textproc/p5-Text-Similarity/Makefile,v 1.10 2013/01/23 14:52:38 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: textproc/p5-Text-Similarity/Makefile 321796 2013-06-26 14:43:13Z culot $
 
 PORTNAME=	Text-Similarity
-PORTVERSION=	0.09
+PORTVERSION=	0.10
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	Perl module for measuring the similarity of text documents
+COMMENT=	Measure the similarity of text documents
+
+LICENSE=	GPLv2 # (or later)
 
 PERL_CONFIGURE=	yes
 
