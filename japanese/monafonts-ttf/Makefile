@@ -1,13 +1,9 @@
-# New ports collection makefile for:	Mona TrueType fonts
-# Date created:		14 October 2003
-# Whom:			MANTANI Nobutaka <nobutaka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/monafonts-ttf/Makefile,v 1.6 2012/11/17 05:58:37 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: japanese/monafonts-ttf/Makefile 321898 2013-06-27 18:31:06Z antoine $
 
 PORTNAME=	monafonts-ttf
 PORTVERSION=	2.90
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	SF/monafont/monafont/monafont-${PORTVERSION}
 DISTNAME=	monafont-ttf-${PORTVERSION}
