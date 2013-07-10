@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/textproc/trang/files/trang.sh.in,v 1.2 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/trang/files/trang.sh.in 300897 2012-07-14 14:29:18Z beat $
 
 "%%LOCALBASE%%/bin/java" -jar "%%JAVAJARDIR%%/trang.jar" "$@"
