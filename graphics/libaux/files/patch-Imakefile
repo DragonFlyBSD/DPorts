@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/libaux/files/patch-Imakefile,v 1.2 2012/11/17 05:58:12 svnexp Exp $
+$FreeBSD: graphics/libaux/files/patch-Imakefile 300896 2012-07-14 13:54:48Z beat $
 
 --- Imakefile	2001/03/14 10:33:44	1.1
 +++ Imakefile	2001/03/14 10:34:01

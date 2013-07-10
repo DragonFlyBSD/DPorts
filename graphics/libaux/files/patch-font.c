@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/libaux/files/patch-font.c,v 1.2 2012/11/17 05:58:12 svnexp Exp $
+$FreeBSD: graphics/libaux/files/patch-font.c 300896 2012-07-14 13:54:48Z beat $
 
 --- font.c	2001/03/14 10:51:36	1.1
 +++ font.c	2001/03/14 10:51:48
