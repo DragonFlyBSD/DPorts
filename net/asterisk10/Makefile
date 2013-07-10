@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@portaone.com>
-# $FreeBSD: net/asterisk10/Makefile 320887 2013-06-14 07:07:01Z flo $
+# $FreeBSD: net/asterisk10/Makefile 322295 2013-07-04 22:46:33Z flo $
 
 PORTNAME=	asterisk
 PORTVERSION=	10.12.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -24,7 +24,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gsm=${LOCALBASE}
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/openh323
-USE_GCC=	any
+USE_CSTD=	gnu89
 USE_GMAKE=	yes
 USE_GNOME=	libxml2
 USES=		bison
@@ -279,7 +279,7 @@ post-patch:
 
 post-configure:
 .if !empty(PORT_OPTIONS:MMYSQL) || !empty(PORT_OPTIONS:MNEWG711) || !empty(PORT_OPTIONS:MOOH323) || !empty(PORT_OPTIONS:MH323)
-	@cd ${WRKSRC} && gmake menuselect.makeopts
+	@cd ${WRKSRC} && ${GMAKE} menuselect.makeopts
 .if ${PORT_OPTIONS:MMYSQL}
 	@cd ${WRKSRC} && ./menuselect/menuselect --enable res_config_mysql menuselect.makeopts
 	@cd ${WRKSRC} && ./menuselect/menuselect --enable app_mysql menuselect.makeopts
