@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-multi_xml/Makefile 319747 2013-06-03 02:18:28Z swills $
+# $FreeBSD: textproc/rubygem-multi_xml/Makefile 321835 2013-06-27 02:29:31Z clsung $
 
 PORTNAME=	multi_xml
-PORTVERSION=	0.5.3
+PORTVERSION=	0.5.4
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
