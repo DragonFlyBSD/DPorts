@@ -1,8 +1,9 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/httest/Makefile 319861 2013-06-04 14:11:21Z ehaupt $
+# $FreeBSD: www/httest/Makefile 322372 2013-07-06 09:04:54Z ohauer $
 
 PORTNAME=	httest
-PORTVERSION=	2.4.3
+PORTVERSION=	2.4.5
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	SF/htt/htt${PORTVERSION:R}/${PORTNAME}-${PORTVERSION}
 
@@ -28,9 +29,9 @@ MAKE_JOBS_SAFE=	yes
 USES=		iconv
 USE_LUA=	yes
 USE_OPENSSL=	yes
+USE_LDCONFIG=	yes
 
 MAN1=		htntlm.1 htproxy.1 htremote.1 httest.1
-PLIST_FILES=	bin/htntlm bin/htproxy bin/htremote bin/httest
 PORTEXAMPLES=	*
 
 post-patch:
