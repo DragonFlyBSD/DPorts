@@ -1,11 +1,12 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: graphics/libGL/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: graphics/libGL/Makefile 322249 2013-07-03 19:02:01Z eadler $
 
 PORTNAME=	libGL
 PORTVERSION=	${MESAVERSION}
 PORTREVISION=	4
 CATEGORIES=	graphics
 
+MAINTAINER=	x11@FreeBSD.org
 COMMENT=	OpenGL library that renders using GLX or DRI
 
 LIB_DEPENDS+=	drm:${PORTSDIR}/graphics/libdrm \
