@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-tins/Makefile 319701 2013-06-02 17:58:48Z swills $
+# $FreeBSD: devel/rubygem-tins/Makefile 321915 2013-06-28 01:01:52Z swills $
 
 PORTNAME=	tins
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
