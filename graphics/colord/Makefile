@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/colord/Makefile 321478 2013-06-21 16:40:56Z antoine $
+# $FreeBSD: graphics/colord/Makefile 321988 2013-06-28 21:19:31Z bapt $
 #    $MCom: ports/graphics/colord/Makefile,v 1.10 2012/12/17 23:50:40 kwm Exp $
 
 PORTNAME=	colord
@@ -30,6 +30,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	USB_CFLAGS="-I/usr/include" \
 		USB_LIBS="-L/usr/lib -lusb"
+MAKE_ENV+=	GI_SCANNER_DISABLE_CACHE=yes
 
 OPTIONS_DEFINE=	SANE MANPAGES
 
