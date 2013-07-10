@@ -1,12 +1,8 @@
-# New ports collection makefile for:    p5-MIME-Base64
-# Date created:                         June 21th 1997
-# Whom:                                 ache@freebsd.org
-#
-# $FreeBSD: ports/converters/p5-MIME-Base64/Makefile,v 1.50 2012/11/17 05:55:04 svnexp Exp $
-#
+# Created by: ache@freebsd.org
+# $FreeBSD: converters/p5-MIME-Base64/Makefile 322473 2013-07-08 01:55:36Z clsung $
 
 PORTNAME=	MIME-Base64
-PORTVERSION=	3.13
+PORTVERSION=	3.14
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
