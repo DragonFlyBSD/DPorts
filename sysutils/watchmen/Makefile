@@ -2,7 +2,7 @@
 # Date created:		2009-07-16
 # Whom:			Oleg Alexeenkov <proler@gmail.com>
 #
-# $FreeBSD: ports/sysutils/watchmen/Makefile,v 1.9 2012/12/28 19:22:03 svnexp Exp $
+# $FreeBSD: sysutils/watchmen/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	watchmen
@@ -37,10 +37,6 @@ PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/App/watchmen \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/App
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500805
-RUN_DEPENDS+=	p5-Time-HiRes>=0:${PORTSDIR}/devel/p5-Time-HiRes
-.endif
 
 .if ${PORT_OPTIONS:MMYSQL}
 USE_MYSQL=	yes
