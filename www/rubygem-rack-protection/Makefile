@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-rack-protection
-# Date created:		2011-10-27
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/www/rubygem-rack-protection/Makefile,v 1.4 2012/11/17 06:03:04 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: www/rubygem-rack-protection/Makefile 321764 2013-06-25 20:09:38Z swills $
 
 PORTNAME=	rack-protection
-PORTVERSION=	1.2.0
+PORTVERSION=	1.5.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
