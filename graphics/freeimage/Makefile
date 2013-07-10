@@ -1,9 +1,9 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: graphics/freeimage/Makefile 317740 2013-05-09 16:46:32Z gahr $
+# $FreeBSD: graphics/freeimage/Makefile 322509 2013-07-08 15:01:51Z gahr $
 
 PORTNAME=	freeimage
 PORTVERSION=	3.15.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Source%20Distribution/${PORTVERSION}
 DISTNAME=	FreeImage${PORTVERSION:S/.//g}
@@ -45,7 +45,7 @@ post-build:
 
 post-install:
 	cd ${WRKSRC} && ${GMAKE} -f Makefile.fip ${INSTALL_TARGET}
-	${LN} -s libfreeimageplus-${PORTVERSION} ${PREFIX}/lib/libfreeimageplus.so.3
-	${LN} -s libfreeimageplus-${PORTVERSION} ${PREFIX}/lib/libfreeimageplus.so
+	${LN} -s libfreeimageplus-${PORTVERSION}.so.3 ${PREFIX}/lib/libfreeimageplus.so
+	${LN} -s libfreeimageplus-${PORTVERSION}.so ${PREFIX}/lib/libfreeimageplus.so.3
 
 .include <bsd.port.post.mk>
