@@ -1,8 +1,9 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-GlobalDestruction/Makefile 317174 2013-05-03 06:48:24Z culot $
+# $FreeBSD: devel/p5-Devel-GlobalDestruction/Makefile 322440 2013-07-07 13:09:48Z culot $
 
 PORTNAME=	Devel-GlobalDestruction
 PORTVERSION=	0.11
+PORTREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -23,9 +24,8 @@ MAN3=		Devel::GlobalDestruction.3
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
-PLIST_SUB+=	PP="@comment " XS=""
-.else
-PLIST_SUB+=	PP="" XS="@comment "
+BUILD_DEPENDS+=	p5-Devel-GlobalDestruction-XS>0:${PORTSDIR}/devel/p5-Devel-GlobalDestruction-XS
+RUN_DEPENDS+=	p5-Devel-GlobalDestruction-XS>0:${PORTSDIR}/devel/p5-Devel-GlobalDestruction-XS
 .endif
 
 .include <bsd.port.post.mk>
