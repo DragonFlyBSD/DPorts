@@ -15,7 +15,7 @@ BUILD_DEPENDS=  gsed:${PORTSDIR}/textproc/gsed
 
 USE_GITHUB=     yes
 GH_ACCOUNT=     haiwen
-GH_TAGNAME=     master
+GH_TAGNAME=     ${GH_COMMIT}
 GH_COMMIT=      4f28361
 GNU_CONFIGURE=	yes
 
