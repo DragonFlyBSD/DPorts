@@ -1,8 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: sysutils/racktables/Makefile 320370 2013-06-09 18:23:55Z miwi $
+# $FreeBSD: sysutils/racktables/Makefile 321793 2013-06-26 11:27:52Z zi $
 
 PORTNAME=	racktables
-DISTVERSION=	0.20.4
+DISTVERSION=	0.20.5
 CATEGORIES?=	sysutils www
 MASTER_SITES=	SF/${PORTNAME}/
 DISTNAME=	RackTables-${DISTVERSION}
