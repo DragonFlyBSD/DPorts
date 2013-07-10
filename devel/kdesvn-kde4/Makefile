@@ -1,8 +1,9 @@
 # Created by: Yuan Jue <yuanjue@yuanjue.net>
-# $FreeBSD: devel/kdesvn-kde4/Makefile 316620 2013-04-26 15:10:57Z bapt $
+# $FreeBSD: devel/kdesvn-kde4/Makefile 322537 2013-07-08 20:12:17Z rakuco $
 
 PORTNAME=	kdesvn
 DISTVERSION=	1.6.0
+PORTREVISION=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	http://kdesvn.alwins-world.de/downloads/
 
