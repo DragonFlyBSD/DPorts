@@ -1,7 +1,7 @@
-# $FreeBSD: net/get_iplayer/Makefile 316959 2013-04-30 20:10:53Z crees $
+# $FreeBSD: net/get_iplayer/Makefile 322142 2013-07-01 19:58:55Z crees $
 
 PORTNAME=	get_iplayer
-PORTVERSION=	2.82
+PORTVERSION=	2.83
 CATEGORIES=	net multimedia
 MASTER_SITES=	ftp://ftp.infradead.org/pub/${PORTNAME}/ \
 		http://www.bayofrum.net/dist/${PORTNAME}/
@@ -12,7 +12,9 @@ COMMENT=	Search, index, or stream archive video from BBC iPlayer
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-RUN_DEPENDS=	flvstreamer:${PORTSDIR}/multimedia/flvstreamer
+RUN_DEPENDS=	flvstreamer:${PORTSDIR}/multimedia/flvstreamer \
+		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
+		p5-HTTP-Cookies>=0:${PORTSDIR}/www/p5-HTTP-Cookies
 
 USE_PERL5_RUN=	yes
 NO_BUILD=	yes
@@ -31,7 +33,7 @@ DATADIR=	${WWWDIR}
 PORTDATA=	html plugins
 
 PORTDOCS=	CHANGELOG-get_iplayer.cgi.txt CHANGELOG.txt \
-		README-get_iplayer.cgi.txt README.txt web.sh
+		README-get_iplayer.cgi.txt README.md web.sh
 
 .include <bsd.port.options.mk>
 
