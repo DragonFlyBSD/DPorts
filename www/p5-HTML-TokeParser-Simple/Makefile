@@ -1,12 +1,8 @@
-# New ports collection makefile for:	HTML-TokeParser-Simple
-# Date created:			18 April 2004
-# Whom:				Lars Eggert <lars.eggert@gmx.net>
-#
-# $FreeBSD: ports/www/p5-HTML-TokeParser-Simple/Makefile,v 1.11 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: Lars Eggert <lars.eggert@gmx.net>
+# $FreeBSD: www/p5-HTML-TokeParser-Simple/Makefile 321931 2013-06-28 02:37:39Z clsung $
 
 PORTNAME=	HTML-TokeParser-Simple
-PORTVERSION=	3.15
+PORTVERSION=	3.16
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
