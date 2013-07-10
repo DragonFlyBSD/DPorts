@@ -1,0 +1,1 @@
+CONFIGURE_ARGS+= LDFLAGS="-L${PREFIX}/lib -lintl"
