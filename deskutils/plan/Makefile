@@ -1,9 +1,6 @@
-# New ports collection makefile for:	plan
-# Date created:				14 April 1996
-# Whom:	Daniel Eischen <deischen@freebsd.org>
-#
-# $FreeBSD: ports/deskutils/plan/Makefile,v 1.37 2012/11/17 05:55:30 svnexp Exp $
-#
+# Created by: Daniel Eischen <deischen@freebsd.org>
+# $FreeBSD: deskutils/plan/Makefile 322620 2013-07-10 06:49:35Z bapt $
+
 # Also update	ports/japanese/plan/ (ja-plan) when this port is updated
 
 PORTNAME=	plan
@@ -13,9 +10,9 @@ MASTER_SITES=	ftp://plan.ftp.fu-berlin.de/
 MASTER_SITE_SUBDIR=	applications
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An X/Motif schedule planner with calendar
+COMMENT=	X/Motif schedule planner with calendar
 
-USE_MOTIF=	yes
+USES=		motif
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 ALL_TARGET=	freebsd
 MAN1=		netplan.1 plan.1
