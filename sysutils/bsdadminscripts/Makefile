@@ -1,9 +1,9 @@
 # Created by: Dominic Fandrey <lon_kamikaze@gmx.de>
-# $FreeBSD: sysutils/bsdadminscripts/Makefile 313441 2013-03-05 07:40:45Z jgh $
+# $FreeBSD: sysutils/bsdadminscripts/Makefile 321873 2013-06-27 08:32:59Z lme $
 
 PORTNAME=	bsdadminscripts
 PORTVERSION=	6.1.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils ports-mgmt
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
