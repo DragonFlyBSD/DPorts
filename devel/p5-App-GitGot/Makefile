@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-App-GitGot/Makefile 318376 2013-05-17 12:16:26Z jadawin $
+# $FreeBSD: devel/p5-App-GitGot/Makefile 322475 2013-07-08 02:00:21Z clsung $
 
 PORTNAME=	App-GitGot
-PORTVERSION=	1.07
+PORTVERSION=	1.08
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:GENEHACK
