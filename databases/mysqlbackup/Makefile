@@ -1,18 +1,14 @@
-# New ports collection makefile for:	mysqlbackup
-# Date created:				Sun 07 Jun 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: ports/databases/mysqlbackup/Makefile,v 1.7 2012/11/17 05:55:12 svnexp Exp $
-#
+# Created by: Alexey Degtyarev <alexey@renatasystems.org>
+# $FreeBSD: databases/mysqlbackup/Makefile 322050 2013-06-29 16:17:05Z feld $
 
 PORTNAME=	mysqlbackup
-PORTVERSION=	2.6
+PORTVERSION=	2.7
 CATEGORIES=	databases
 MASTER_SITES=	GOOGLE_CODE \
 		ftp://ftp.renatasystems.org/pub/FreeBSD/ports/distfiles/
 
 MAINTAINER=	alexey@renatasystems.org
-COMMENT=	Program to create everyday MySQL-database servers backup
+COMMENT=	Creates MySQL backups on a periodic basis
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
