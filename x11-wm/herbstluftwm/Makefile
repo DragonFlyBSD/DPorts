@@ -1,9 +1,9 @@
-# $FreeBSD: ports/x11-wm/herbstluftwm/Makefile,v 1.1 2013/01/30 06:45:15 svnexp Exp $
+# $FreeBSD: x11-wm/herbstluftwm/Makefile 322120 2013-07-01 09:49:34Z danfe $
 
 PORTNAME=	herbstluftwm
-PORTVERSION=	0.5.1
+PORTVERSION=	0.5.2
 CATEGORIES=	x11-wm
-MASTER_SITES=	http://wwwcip.cs.fau.de/~re06huxa/herbstluftwm/tarballs/
+MASTER_SITES=	http://herbstluftwm.org/tarballs/
 
 MAINTAINER=	crshd@mail.com
 COMMENT=	Manual tiling window manager for X11
@@ -40,7 +40,7 @@ PLIST_SUB+=	ZSH="@comment "
 .endif
 
 post-patch:
-	${REINPLACE_CMD} -e '/-[LI]\/usr/s,usr,${LOCALBASE},' \
+	${REINPLACE_CMD} -e '/-[LI]\/usr/s,/usr,${LOCALBASE},' \
 		${WRKSRC}/config.mk
 	${REINPLACE_CMD} -e '/LICENSEDIR/d' ${WRKSRC}/Makefile
 	${GREP} -Rl --null '^#!/bin/bash' ${WRKSRC} | ${XARGS} -0 \
