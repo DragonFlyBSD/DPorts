@@ -1,11 +1,10 @@
-# $FreeBSD: multimedia/phonon-vlc/Makefile 317561 2013-05-06 23:01:58Z ehaupt $
+# $FreeBSD: multimedia/phonon-vlc/Makefile 322189 2013-07-02 17:34:39Z rakuco $
 
 PORTNAME=	phonon
-PORTVERSION=	0.6.1
-PORTREVISION=	1
+PORTVERSION=	0.6.2
 CATEGORIES=	multimedia kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
-MASTER_SITE_SUBDIR=	${PHONON_BRANCH}/${PORTNAME}/${PORTNAME}-backend${PKGNAMESUFFIX}/${PORTVERSION}/src
+MASTER_SITE_SUBDIR=	${PHONON_BRANCH}/${PORTNAME}/${PORTNAME}-backend${PKGNAMESUFFIX}/${PORTVERSION}
 PKGNAMESUFFIX=	-vlc
 DISTNAME=	${PORTNAME}-backend${PKGNAMESUFFIX}-${PORTVERSION}
 DIST_SUBDIR=	KDE
@@ -19,7 +18,7 @@ LIB_DEPENDS=	vlc:${PORTSDIR}/multimedia/vlc
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
 USE_KDE4=	kdehier kdeprefix automoc4
-USE_QT4=	gui phonon \
+USE_QT4=	corelib gui phonon \
 		qmake_build moc_build rcc_build uic_build
 USE_XZ=		yes
 USES=		cmake
