@@ -1,5 +1,5 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: devel/kdevelop-kde4/Makefile 317967 2013-05-12 16:16:56Z makc $
+# $FreeBSD: devel/kdevelop-kde4/Makefile 322195 2013-07-02 19:34:19Z rakuco $
 
 PORTNAME=	kdevelop
 DISTVERSION=	${KDEVELOP_VERSION}
@@ -19,7 +19,7 @@ LATEST_LINK=	${PORTNAME}-kde4
 USE_KDE4=	kdehier kdelibs kdeprefix sharedmime workspace automoc4
 USE_QT4=	qmake_build moc_build uic_build rcc_build
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake shared-mime-info
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 
