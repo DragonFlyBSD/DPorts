@@ -1,9 +1,9 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/net-mgmt/ramond/Makefile,v 1.11 2013/01/09 20:05:04 svnexp Exp $
+# $FreeBSD: net-mgmt/ramond/Makefile 322372 2013-07-06 09:04:54Z ohauer $
 
 PORTNAME=	ramond
 PORTVERSION=	0.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-mgmt ipv6
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/_${PORTVERSION}/
 

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-mgmt/ramond/files/patch-src_main.c,v 1.2 2012/11/17 06:00:37 svnexp Exp $
+$FreeBSD: net-mgmt/ramond/files/patch-src_main.c 300897 2012-07-14 14:29:18Z beat $
 
 --- src/main.c.orig
 +++ src/main.c
