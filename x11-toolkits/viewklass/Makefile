@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	viewklass
-# Date created:			Jun 4, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/x11-toolkits/viewklass/Makefile,v 1.22 2012/11/17 06:03:40 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: x11-toolkits/viewklass/Makefile 322622 2013-07-10 07:00:44Z bapt $
 
 PORTNAME=	viewklass
 PORTVERSION=	0.7.2
@@ -18,7 +13,7 @@ COMMENT=	C++ Framework for Motif
 
 BUILD_DEPENDS=	imake:${PORTSDIR}/devel/imake
 
-USE_MOTIF=	yes
+USES=		motif
 GNU_CONFIGURE=	yes
 
 post-patch:
