@@ -1,7 +1,8 @@
-# $FreeBSD: net-im/plasma-applet-ktp/Makefile 317154 2013-05-02 21:42:57Z avilla $
+# $FreeBSD: net-im/plasma-applet-ktp/Makefile 322191 2013-07-02 19:04:18Z rakuco $
 
 PORTNAME=	ktp
 PORTVERSION=	${KTP_VERSION}
+PORTREVISION=	1
 CATEGORIES=	net-im kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KTP_BRANCH}/kde-telepathy/${PORTVERSION}/src
