@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-amq-client
-# Date created:				29 Sep 2011
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/net/rubygem-amq-client/Makefile,v 1.10 2012/11/17 06:00:18 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: net/rubygem-amq-client/Makefile 322471 2013-07-08 01:51:45Z clsung $
 
 PORTNAME=	amq-client
-PORTVERSION=	0.9.4
+PORTVERSION=	1.0.2
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
