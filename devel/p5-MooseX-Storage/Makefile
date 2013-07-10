@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-MooseX-Storage/Makefile 320495 2013-06-10 17:13:56Z mat $
+# $FreeBSD: devel/p5-MooseX-Storage/Makefile 321948 2013-06-28 04:35:42Z clsung $
 
 PORTNAME=	MooseX-Storage
-PORTVERSION=	0.33
+PORTVERSION=	0.34
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
