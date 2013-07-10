@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Log-Dispatch/Makefile 316545 2013-04-26 02:39:17Z sunpoet $
+# $FreeBSD: devel/p5-Log-Dispatch/Makefile 322477 2013-07-08 02:05:40Z clsung $
 
 PORTNAME=	Log-Dispatch
-PORTVERSION=	2.39
+PORTVERSION=	2.40
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -30,6 +30,7 @@ MAN3=		Log::Dispatch.3 \
 		Log::Dispatch::ApacheLog.3 \
 		Log::Dispatch::Base.3 \
 		Log::Dispatch::Code.3 \
+		Log::Dispatch::Conflicts.3 \
 		Log::Dispatch::Email.3 \
 		Log::Dispatch::Email::MIMELite.3 \
 		Log::Dispatch::Email::MailSend.3 \
