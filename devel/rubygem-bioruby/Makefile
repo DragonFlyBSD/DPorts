@@ -2,11 +2,11 @@
 # Date created:		20 June, 2009
 # Whom:			Wen Heping <wenheping@gmail.com>
 #
-# $FreeBSD: ports/devel/rubygem-bioruby/Makefile,v 1.9 2012/11/17 05:56:58 svnexp Exp $
+# $FreeBSD: devel/rubygem-bioruby/Makefile 322068 2013-06-29 22:10:31Z swills $
 #
 
 PORTNAME=	bioruby
-PORTVERSION=	1.4.3
+PORTVERSION=	1.4.3.0001
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RF RG
 DISTNAME=	bio-${PORTVERSION}
