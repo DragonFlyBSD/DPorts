@@ -1,5 +1,5 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: x11/trayer/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: x11/trayer/Makefile 322531 2013-07-08 18:44:24Z madpilot $
 
 PORTNAME=	trayer
 PORTVERSION=	1.1.5
@@ -13,9 +13,8 @@ COMMENT=	Lightweight GTK2-based systray for UNIX desktop
 GITVERSION=	0-g5353f80
 FETCH_ARGS=	-pRr
 USE_GNOME=	gtk20 glib20 pango atk
-USES=		iconv
+USES=		iconv gmake
 USE_XORG=	xmu
-USE_GMAKE=	yes
 MAKE_ARGS=	"PREFIX=${PREFIX}"
 MAKE_JOBS_SAFE=	yes
 WRKSRC=		${WRKDIR}/sargon-${PORTNAME}-srg-${GITVERSION:S/^0-g//}
