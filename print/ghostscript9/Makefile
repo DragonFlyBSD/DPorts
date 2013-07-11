@@ -1,4 +1,4 @@
-# $FreeBSD: print/ghostscript9/Makefile 317150 2013-05-02 21:14:26Z hrs $
+# $FreeBSD: print/ghostscript9/Makefile 322666 2013-07-10 11:45:24Z bapt $
 
 PORTNAME=	ghostscript
 PORTVERSION=	9.06
@@ -37,14 +37,14 @@ CONFLICTS_INSTALL= \
 		ghostscript9-agpl-[0-9]* \
 		ghostscript9-agpl-nox11-[0-9]*
 
+USES=		gmake
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 WANT_GNOME=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoconf
 GNU_CONFIGURE=	yes
 
-MAKE_JOBS_SAFE=	yes
+MAKE_JOBS_UNSAFE=	yes
 MAKE_ENV=	CFLAGS_STANDARD="${CFLAGS}" \
 		XCFLAGS="${XCFLAGS}" XLDFLAGS="${XLDFLAGS}" \
 		EXTRALIBS="${EXTRALIBS}" \
