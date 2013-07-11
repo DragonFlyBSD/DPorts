@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notifyd/Makefile 317709 2013-05-08 21:15:17Z olivierd $
+# $FreeBSD: deskutils/xfce4-notifyd/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
 
 PORTNAME=	xfce4-notifyd
 PORTVERSION=	0.2.4
@@ -16,11 +16,10 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	dbus-glib:${PORTSDIR}/devel/dbus-glib \
 		notify:${PORTSDIR}/devel/libnotify
 
-USES=		pkgconfig
+USES=		pkgconfig gmake
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil xfconf
 INSTALLS_ICONS=	yes
