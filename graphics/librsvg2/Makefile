@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: graphics/librsvg2/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: graphics/librsvg2/Makefile 321988 2013-06-28 21:19:31Z bapt $
 #   $MCom: ports/graphics/librsvg2/Makefile,v 1.147 2012/10/16 08:58:47 kwm Exp $
 
 PORTNAME=	librsvg
@@ -31,6 +31,7 @@ CONFIGURE_ARGS=	--with-svgz \
 		--enable-gtk-theme
 CROCO_VERSION=	0.6
 MAN1=		rsvg-convert.1
+MAKE_ENV+=	GI_SCANNER_DISABLE_CACHE=yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|GTK3_REQUIRED=3.0.0|GTK3_REQUIRED=9.90.0|g' \
