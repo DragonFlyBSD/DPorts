@@ -2,7 +2,7 @@
 # Date created:			Jun 26, 2003
 # Whom:				Pav Lucistnik <pav@oook.cz>
 #
-# $FreeBSD: ports/editors/conglomerate/Makefile,v 1.41 2012/11/17 05:57:12 svnexp Exp $
+# $FreeBSD: editors/conglomerate/Makefile 322581 2013-07-09 21:26:48Z pav $
 
 PORTNAME=	conglomerate
 PORTVERSION=	0.9.1
@@ -10,7 +10,7 @@ PORTREVISION=	11
 CATEGORIES=	editors
 MASTER_SITES=	SF/${PORTNAME}/Conglomerate%20XML%20Editor/${PORTVERSION}
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNOME2 visual XML editor with emphasis on DocBook editing
 
 INSTALLS_OMF=	yes
