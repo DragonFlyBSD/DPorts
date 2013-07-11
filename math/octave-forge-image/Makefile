@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: ports/math/octave-forge-image/Makefile,v 1.20 2012/11/17 05:59:24 svnexp Exp $
+# $FreeBSD: math/octave-forge-image/Makefile 322356 2013-07-05 20:59:44Z stephen $
 
 PORTNAME=	octave-forge-image
 PORTVERSION=	2.0.0
@@ -16,8 +16,8 @@ WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
 RUN_DEPENDS+=	${TARBALLS_DIR}/signal.tar.gz:${PORTSDIR}/math/octave-forge-signal
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/Mk/bsd.octave.mk"
+.include "${.CURDIR}/../../Mk/bsd.octave.mk"
+
 post-patch:
 	${REINPLACE_CMD} s/-Wall// ${WRKSRC}/Makefile
 
@@ -25,4 +25,4 @@ post-build:
 	${RM} -f ${WRKSRC}/Makefile ${WRKSRC}/configure
 	cd ${WRKDIR} && ${TAR} cfz ${DISTNAME}.tar.gz ${OCTSRC}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
