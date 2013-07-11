@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmms-xymms
-# Date created:				27 Jun 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/audio/xmms-xymms/Makefile,v 1.13 2012/11/17 05:54:49 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: audio/xmms-xymms/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
 
 PORTNAME=	xymms
 DISTVERSION=	0.9.1
