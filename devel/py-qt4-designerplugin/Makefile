@@ -1,8 +1,9 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: devel/py-qt4-designerplugin/Makefile 311475 2013-02-03 18:16:07Z makc $
+# $FreeBSD: devel/py-qt4-designerplugin/Makefile 322573 2013-07-09 20:57:12Z rakuco $
 
 PORTNAME=	designerplugin
 PORTVERSION=	${PYQT4_VERSION}
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITES_PYQT4}
