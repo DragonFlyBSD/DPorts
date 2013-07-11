@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: editors/ted/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: editors/ted/Makefile 322620 2013-07-10 06:49:35Z bapt $
 
 PORTNAME=	ted
 PORTVERSION=	2.23
@@ -50,7 +50,7 @@ INDDIR=		${DATADIR}/dfa
 USE_GNOME=	gtk20
 CONFIGURE_ARGS+=--with-GTK
 .else
-USE_MOTIF=	yes
+USES+=		motif
 CONFIGURE_ARGS+=--with-MOTIF
 .endif
 
