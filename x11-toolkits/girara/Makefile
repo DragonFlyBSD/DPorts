@@ -1,5 +1,5 @@
 # Created by: Mike Krutov <neko@takino.org>
-# $FreeBSD: x11-toolkits/girara/Makefile 318070 2013-05-13 11:24:55Z madpilot $
+# $FreeBSD: x11-toolkits/girara/Makefile 322531 2013-07-08 18:44:24Z madpilot $
 
 PORTNAME=	girara
 PORTVERSION=	0.1.6
@@ -10,7 +10,7 @@ MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	GTK2 Interface Library for Zathura PDF Viewer
 
 USE_GNOME=	glib20 gtk20
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 
 .include <bsd.port.options.mk>
