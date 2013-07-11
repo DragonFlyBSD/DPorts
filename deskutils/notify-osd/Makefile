@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/notify-osd/Makefile 317643 2013-05-08 08:04:04Z ehaupt $
+# $FreeBSD: deskutils/notify-osd/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
 
 PORTNAME=	notify-osd
 PORTVERSION=	0.9.29
@@ -20,8 +20,8 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus
 
 GNU_CONFIGURE=	yes
+USES=		gmake
 USE_GNOME=	libwnck gconf2
-USE_GMAKE=	yes
 USE_GCC=	4.4+
 MAKE_JOBS_SAFE=	yes
 
