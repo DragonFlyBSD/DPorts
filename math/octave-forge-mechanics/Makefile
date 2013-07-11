@@ -1,9 +1,5 @@
-# New ports collection makefile for:	octave-forge-mechanics
-# Date created:		27 September 2011
-# Whom:			Stephen Montgomery-Smith <stephen@math.missouri.edu>
-#
-# $FreeBSD: ports/math/octave-forge-mechanics/Makefile,v 1.11 2012/11/17 05:59:24 svnexp Exp $
-#
+# Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
+# $FreeBSD: math/octave-forge-mechanics/Makefile 322356 2013-07-05 20:59:44Z stephen $
 
 PORTNAME=	octave-forge-mechanics
 PORTVERSION=	1.3.1
@@ -22,11 +18,10 @@ OCTSRC=		${OCTAVE_PKGNAME}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/inst/molecularDynamics/src
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/Mk/bsd.octave.mk"
+.include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
 	${RM} -f ${WRKSRC}/Makefile ${WRKSRC}/configure
 	cd ${WRKDIR} && ${TAR} cfz ${DISTNAME}.tar.gz ${OCTSRC}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
