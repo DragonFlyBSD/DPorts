@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: x11-toolkits/p5-Wx/Makefile 320164 2013-06-07 07:30:36Z az $
+# $FreeBSD: x11-toolkits/p5-Wx/Makefile 322518 2013-07-08 17:12:21Z bapt $
 
 PORTNAME=	Wx
 PORTVERSION=	0.99.16
@@ -24,7 +24,6 @@ UNICODE_DESC=	Build with Unicode support
 
 USE_WX=		2.6+
 WX_COMPS=	wx contrib
-USE_DISPLAY=	yes
 PERL_CONFIGURE=	yes
 CC=		${CXX}
 CFLAGS+=	-pthread -Wno-write-strings
