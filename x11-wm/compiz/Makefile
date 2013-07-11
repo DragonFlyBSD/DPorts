@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/compiz/Makefile 317466 2013-05-06 06:27:42Z jgh $
+# $FreeBSD: x11-wm/compiz/Makefile 322169 2013-07-02 13:20:09Z rene $
 
 PORTNAME=	compiz
 PORTVERSION=	0.8.4
@@ -64,7 +64,7 @@ GCONF_SCHEMAS=	gwd.schemas \
 CONFIGURE_ARGS=	--disable-kde4
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-OPTIONS_DEFINE=	SVG GTK2 METACITY GNOME DBUS FUSE KDE3
+OPTIONS_DEFINE=	SVG GTK2 METACITY GNOME DBUS FUSE
 OPTIONS_DEFAULT=	SVG GTK2 METACITY GNOME DBUS
 
 METACITY_DESC=	Enable Metacity support
@@ -151,15 +151,7 @@ CONFIGURE_ARGS+=	--disable-fuse
 PLIST_SUB+=		FUSE="@comment "
 .endif
 
-.if ${PORT_OPTIONS:MKDE3}
-USE_KDEBASE_VER=	3
-CONFIGURE_ARGS+=	--enable-kde
-PLIST_SUB+=	KDE3=""
-# allow bsd.kde.mk to be included after bsd.port.mk
-.include "${PORTSDIR}/Mk/bsd.kde.mk"
-.else
 CONFIGURE_ARGS+=	--disable-kde
 PLIST_SUB+=	KDE3="@comment "
-.endif
 
 .include <bsd.port.post.mk>
