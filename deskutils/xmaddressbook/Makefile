@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmaddressbook
-# Date created:		31 Jul 1996
-# Whom:			shanee@augusta.de
-#
-# $FreeBSD: ports/deskutils/xmaddressbook/Makefile,v 1.14 2012/11/17 05:55:31 svnexp Exp $
-#
+# Created by: shanee@augusta.de
+# $FreeBSD: deskutils/xmaddressbook/Makefile 322620 2013-07-10 06:49:35Z bapt $
 
 PORTNAME=	xmaddressbook
 PORTVERSION=	1.5.3
@@ -16,8 +12,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X11/Motif-based addressbook program
 
-USE_MOTIF=	yes
-USE_IMAKE=	yes
+USES=		imake motif
 USE_XORG=	ice sm x11 xext xi xp xt oldx
 WRKSRC=		${WRKDIR}/xmaddressbook
 MAN1=		xmaddressbook.1
