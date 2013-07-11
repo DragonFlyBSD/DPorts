@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-sapplug/Makefile 320557 2013-06-11 13:08:16Z ehaupt $
+# $FreeBSD: audio/xmms-sapplug/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
 
 PORTNAME=	xmms-sapplug
 DISTVERSION=	0.3f
@@ -16,7 +16,7 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_GNOME=	glib12
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=	yes
@@ -29,7 +29,7 @@ OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 
 .include <bsd.port.options.mk>
 
-_CLANG!=	clang --version | ${HEAD} -1 | ${SED} -e 's/.*clang version \([0-9]\)\.\([0-9]\).*/\1\2/'
+_CLANG!=	${CC} --version | ${HEAD} -1 | ${SED} -e 's/.*clang version \([0-9]\)\.\([0-9]\).*/\1\2/'
 
 .if ${CXX:T} != "clang++" && !defined(_CLANG)
 CXXFLAGS+=	--no-exceptions
