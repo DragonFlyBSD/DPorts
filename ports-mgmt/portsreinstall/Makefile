@@ -1,10 +1,10 @@
 # Created by: Mamoru Sakaue / MwGhennndo
-# $FreeBSD: ports-mgmt/portsreinstall/Makefile 320672 2013-06-12 09:01:38Z culot $
+# $FreeBSD: ports-mgmt/portsreinstall/Makefile 322630 2013-07-10 09:24:11Z culot $
 
 PORTNAME=	portsreinstall
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	ports-mgmt
-MASTER_SITES=	SFJP/${PORTNAME}/58980/ \
+MASTER_SITES=	SFJP/${PORTNAME}/59115/ \
 		http://www.mwghennndo.com/software/${PORTNAME}/
 
 MAINTAINER=	sakaue.mamoru@samurai.mwghennn.net
