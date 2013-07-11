@@ -1,8 +1,5 @@
-# New ports collection makefile for:	chemical-mime-data
-# Date created:				21 May 2007
-# Whom:					Pav Lucistnik <pav@FreeBSD.org>
-#
-# $FreeBSD: ports/science/chemical-mime-data/Makefile,v 1.9 2012/11/17 06:00:56 svnexp Exp $
+# Created by: Pav Lucistnik <pav@FreeBSD.org>
+# $FreeBSD: science/chemical-mime-data/Makefile 322589 2013-07-09 22:06:15Z kwm $
 
 PORTNAME=	chemical-mime-data
 PORTVERSION=	0.1.94
@@ -10,17 +7,16 @@ PORTREVISION=	5
 CATEGORIES=	science
 MASTER_SITES=	SF/chemical-mime/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	A collection of chemical MIME types for UNIX desktops
 
 BUILD_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
-		${LOCALBASE}/libdata/pkgconfig/librsvg-2.0.pc:${PORTSDIR}/graphics/librsvg2 \
-		xsltproc:${PORTSDIR}/textproc/libxslt
+		${LOCALBASE}/libdata/pkgconfig/librsvg-2.0.pc:${PORTSDIR}/graphics/librsvg2
 RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomemimedata intltool
+USE_GNOME=	gnomemimedata intltool libxslt:build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
