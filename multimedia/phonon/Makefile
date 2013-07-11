@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/phonon/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: multimedia/phonon/Makefile 322187 2013-07-02 17:32:22Z rakuco $
 
 PORTNAME=	phonon
 PORTVERSION=	4.6.0
@@ -42,10 +42,6 @@ CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=OFF
 .endif
 
 PLIST_SUB+=	QT_PREFIX=${QT_PREFIX}
-
-.ifdef(WITH_QT_PHONON)
-IGNORE=		conflicts with Qt 4 phonon. Please, deinstall qt4-phonon and unset WITH_QT_PHONON to continue
-.endif
 
 pre-configure:
 	${REINPLACE_CMD} -e '/phonon.pc/s|pkgconfig|../libdata/pkgconfig|' \
