@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: ports/math/octave-forge-quaternion/Makefile,v 1.13 2012/11/17 05:59:25 svnexp Exp $
+# $FreeBSD: math/octave-forge-quaternion/Makefile 322356 2013-07-05 20:59:44Z stephen $
 
 PORTNAME=	octave-forge-quaternion
 PORTVERSION=	2.0.2
@@ -14,10 +14,10 @@ OCTSRC=		${OCTAVE_PKGNAME}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/Mk/bsd.octave.mk"
+.include "${.CURDIR}/../../Mk/bsd.octave.mk"
+
 post-build:
 	${RM} -f ${WRKSRC}/Makefile ${WRKSRC}/configure
 	cd ${WRKDIR} && ${TAR} cfz ${DISTNAME}.tar.gz ${OCTSRC}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
