@@ -1,9 +1,5 @@
-# New ports collection Makefile for: rasmol
-# Date created:         Dec 4 1997
-# Whom:                 frankch@waru.life.nthu.edu.tw
-#
-# $FreeBSD: ports/biology/rasmol/Makefile,v 1.21 2012/11/17 05:54:53 svnexp Exp $
-#
+# Created by: frankch@waru.life.nthu.edu.tw
+# $FreeBSD: biology/rasmol/Makefile 321974 2013-06-28 18:32:25Z bapt $
 
 PORTNAME=	rasmol
 PORTVERSION=	2.7.2.1.1
@@ -17,7 +13,7 @@ COMMENT=	Fast Molecular Visualization Program
 
 WRKSRC=		${WRKDIR}/RasMol_${PORTVERSION}/src
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext xi
 MANCOMPRESSED=	no
 XFREE86_HTML_MAN=	no
@@ -29,10 +25,8 @@ PLIST_FILES=	bin/rasmol bin/rasmol-16 bin/rasmol-32 bin/rasmol-8 \
 		lib/X11/rasmol/rasmol.hlp
 PLIST_DIRS=	lib/X11/rasmol
 
-.include <bsd.port.pre.mk>
-
 do-build:
-	${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/build_viewer
+	${SETENV} ${MAKE_ENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/build_viewer
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rasmol-* ${PREFIX}/bin
@@ -43,4 +37,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/../data/1crn.pdb ${PREFIX}/lib/X11/rasmol
 	${INSTALL_DATA} ${WRKSRC}/../data/3cro.pdb ${PREFIX}/lib/X11/rasmol
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
