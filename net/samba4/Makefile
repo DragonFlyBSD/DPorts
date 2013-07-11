@@ -1,9 +1,9 @@
 # Created by: timur@FreeBSD.org
-# $FreeBSD: net/samba4/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: net/samba4/Makefile 322565 2013-07-09 15:30:00Z timur $
 
 PORTNAME?=		${SAMBA4_PORTNAME}
 PORTVERSION?=		${SAMBA4_VERSION}
-PORTREVISION?=	1
+PORTREVISION?=		0
 CATEGORIES?=		net
 MASTER_SITES=		${MASTER_SITE_SAMBA}
 MASTER_SITE_SUBDIR=	samba/stable samba/rc
@@ -20,7 +20,7 @@ MAKE_JOBS_SAFE=		yes
 
 SAMBA4_BASENAME=	samba
 SAMBA4_PORTNAME=	${SAMBA4_BASENAME}4
-SAMBA4_VERSION=		4.0.4
+SAMBA4_VERSION=		4.0.7
 SAMBA4_DISTNAME=	${SAMBA4_BASENAME}-${SAMBA4_VERSION:S|.p|pre|:S|.r|rc|:S|.t|tp|:S|.a|alpha|}
 
 WRKSRC?=		${WRKDIR}/${DISTNAME}
@@ -98,8 +98,8 @@ BUILD_DEPENDS+=		talloc>=2.0.8:${PORTSDIR}/devel/talloc
 RUN_DEPENDS+=		talloc>=2.0.8:${PORTSDIR}/devel/talloc
 SAMBA4_BUNDLED_LIBS+=	!talloc
 # tevent
-BUILD_DEPENDS+=		tevent>=0.9.17:${PORTSDIR}/devel/tevent
-RUN_DEPENDS+=		tevent>=0.9.17:${PORTSDIR}/devel/tevent
+BUILD_DEPENDS+=		tevent>=0.9.18:${PORTSDIR}/devel/tevent
+RUN_DEPENDS+=		tevent>=0.9.18:${PORTSDIR}/devel/tevent
 SAMBA4_BUNDLED_LIBS+=	!tevent
 # tdb
 BUILD_DEPENDS+=		tdb>=1.2.11:${PORTSDIR}/databases/tdb
@@ -269,15 +269,14 @@ CONFIGURE_ARGS+=	--with-dnsupdate
 CONFIGURE_ARGS+=	--without-dnsupdate
 .endif
 
-.if 0
+# https://bugzilla.samba.org/show_bug.cgi?id=9545
 .if ${PORT_OPTIONS:MFAM_SUPPORT}
 USE_FAM=		yes
-CONFIGURE_ARGS+=	--enable-fam
+CONFIGURE_ARGS+=	--with-fam
 WANT_EXP_MODULES+=	vfs_notify_fam
 SAMBA4_MODULES+=	vfs_notify_fam
 .else
-CONFIGURE_ARGS+=	--disable-fam
-.endif
+CONFIGURE_ARGS+=	--without-fam
 .endif
 
 .if ${PORT_OPTIONS:MLDAP}
