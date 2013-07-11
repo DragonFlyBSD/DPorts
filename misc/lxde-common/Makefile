@@ -1,5 +1,5 @@
 # Created by: sahne
-# $FreeBSD: misc/lxde-common/Makefile 321566 2013-06-22 11:44:56Z wg $
+# $FreeBSD: misc/lxde-common/Makefile 322129 2013-07-01 14:42:37Z wg $
 
 PORTNAME=	lxde-common
 PORTVERSION=	0.5.5
@@ -37,12 +37,10 @@ OPTIONS_DEFINE=	DOCS
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/desktop.conf ${PREFIX}/etc/xdg/lxsession/LXDE/desktop.conf.sample
 	${INSTALL_DATA} ${WRKSRC}/pcmanfm/pcmanfm.conf ${PREFIX}/etc/xdg/pcmanfm/LXDE/pcmanfm.conf.sample
-.if ! exists(${PREFIX}/etc/xdg/lxsession/LXDE/desktop.conf)
-	${INSTALL_DATA} ${WRKSRC}/desktop.conf ${PREFIX}/etc/xdg/lxsession/LXDE/desktop.conf
-.endif
-.if ! exists(${PREFIX}/etc/xdg/pcmanfm/LXDE/pcmanfm.conf)
-	${INSTALL_DATA} ${WRKSRC}/pcmanfm/pcmanfm.conf ${PREFIX}/etc/xdg/pcmanfm/LXDE/pcmanfm.conf
-.endif
+	@[ -f ${PREFIX}/etc/xdg/lxsession/LXDE/desktop.conf ] || \
+		${INSTALL_DATA} ${WRKSRC}/desktop.conf ${PREFIX}/etc/xdg/lxsession/LXDE/desktop.conf
+	@[ -f ${PREFIX}/etc/xdg/pcmanfm/LXDE/pcmanfm.conf ] || \
+		${INSTALL_DATA} ${WRKSRC}/pcmanfm/pcmanfm.conf ${PREFIX}/etc/xdg/pcmanfm/LXDE/pcmanfm.conf
 
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
