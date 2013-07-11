@@ -1,5 +1,5 @@
 # Created by: MITA Yoshio <mita@FreeBSD.org>
-# $FreeBSD: comms/efax/Makefile 320868 2013-06-14 01:56:31Z miwi $
+# $FreeBSD: comms/efax/Makefile 321402 2013-06-20 16:43:43Z bsam $
 
 PORTNAME=	efax-0.9a
 PORTVERSION=	001114a7
@@ -16,25 +16,32 @@ USE_GMAKE=	YES
 MAN1=		fax.1 \
 		efax.1 \
 		efix.1
-DOCDIR=		${PREFIX}/share/doc/efax
+DOCSDIR=	${PREFIX}/share/doc/efax
+PORTDOCS=	COPYING README printcap.sample efax.html fax.html
 MAKE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 		INSTALL_DATA="${INSTALL_DATA}"
 
 CONFLICTS=	efax-gtk-*
 
+OPTIONS_DEFINE=	DOCS
+
 post-build:
 	${MV} ${WRKSRC}/fax ${WRKSRC}/fax.orig
 	${CAT} ${WRKSRC}/fax.orig | ${SED} -e s!%%PREFIX%%!${PREFIX}!g > \
 		${WRKSRC}/fax
 
+.include <bsd.port.options.mk>
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/efax.rc.sample ${PREFIX}/etc
 	${INSTALL_DATA} ${WRKSRC}/efax.rc.sample.ja ${PREFIX}/etc
-	${MKDIR}	${DOCDIR}
-.for i in COPYING README printcap.sample efax.html fax.html
-	${INSTALL_DATA}	${WRKSRC}/${i}	${DOCDIR}
-.endfor
-	${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+.endif
+	@${ECHO_CMD}
+	@${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+	@${ECHO_CMD}
 
 .include <bsd.port.mk>
