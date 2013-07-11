@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: editors/emacs/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: editors/emacs/Makefile 322620 2013-07-10 06:49:35Z bapt $
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}
@@ -22,8 +22,7 @@ CONFLICTS=	emacs-19.* emacs-21.* emacs-22.* emacs-23.* \
 
 EMACS_VER=	24.3
 GNU_CONFIGURE=	yes
-USES=		ncurses
-USE_GMAKE=	yes
+USES=		ncurses gmake
 USE_XZ=		yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -111,7 +110,7 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 USE_XORG=	xaw
 CONFIGURE_ARGS+=	--with-x-toolkit=athena --without-xaw3d
 .elif ${PORT_OPTIONS:MMOTIF}
-USE_MOTIF=	yes
+USES+=		motif
 CONFIGURE_ARGS+=	--with-x-toolkit=motif
 .endif
 
