@@ -1,9 +1,5 @@
-# New ports collection makefile for:	octave-forge-base
-# Date created:		8 September 2008
-# Whom:			Stephen Montgomery-Smith <stephen@math.missouri.edu>
-#
-# $FreeBSD: math/octave-forge-base/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
+# $FreeBSD: math/octave-forge-base/Makefile 322356 2013-07-05 20:59:44Z stephen $
 
 PORTNAME=	octave-forge-base
 PORTVERSION=	1.2
