@@ -2,7 +2,7 @@
 # Date created:				02 August 2007
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/rarian/Makefile,v 1.9 2012/11/17 06:02:18 svnexp Exp $
+# $FreeBSD: textproc/rarian/Makefile 300897 2012-07-14 14:29:18Z beat $
 #   $MCom: ports/textproc/rarian/Makefile,v 1.12 2008/03/09 21:41:22 mezz Exp $
 #
 
