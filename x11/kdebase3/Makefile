@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kdebase3/Makefile 315474 2013-03-28 15:51:16Z eadler $
+# $FreeBSD: x11/kdebase3/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	kdebase
 PORTVERSION=	${KDE_VERSION}
@@ -14,8 +14,7 @@ COMMENT=	Basic applications for the KDE system
 RUN_DEPENDS=	${KDE_PREFIX}/env/xdg-env.sh:${PORTSDIR}/misc/kde-xdg-env \
 		kompmgr:${PORTSDIR}/x11-wm/kompmgr \
 		${LOCALBASE}/etc/pam.d/kde:${PORTSDIR}/security/pam_kde
-BUILD_DEPENDS=	imake:${PORTSDIR}/devel/imake \
-		bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
+BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir
 LIB_DEPENDS=	sasl2:${PORTSDIR}/security/cyrus-sasl2 \
 		smbclient:${PORTSDIR}/net/samba-libsmbclient
@@ -27,6 +26,7 @@ EXPIRATION_DATE=	2013-07-01
 
 USE_KDELIBS_VER=3
 
+USES=		imake:env
 USE_OPENLDAP=	yes
 USE_OPENSSL=	yes
 
