@@ -2,7 +2,7 @@
 # Date created:			25 Nov 2003
 # Whom:				Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/multisync/Makefile,v 1.30 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/multisync/Makefile 322581 2013-07-09 21:26:48Z pav $
 
 PORTNAME?=	multisync
 PORTVERSION=	0.82
@@ -11,7 +11,7 @@ CATEGORIES=	deskutils
 MASTER_SITES=	SF/multisync/OldFiles
 DISTNAME=	multisync-${PORTVERSION}
 
-MAINTAINER?=	pav@FreeBSD.org
+MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	Synchronize calendars, addressbooks, and other PIM data
 
 WRKSRC?=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
