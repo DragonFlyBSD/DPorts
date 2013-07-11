@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/goffice/Makefile 320125 2013-06-06 20:24:27Z ohauer $
+# $FreeBSD: devel/goffice/Makefile 321967 2013-06-28 16:53:57Z kwm $
 #   $MCom: ports/trunk/devel/goffice/Makefile 17268 2013-04-01 05:13:11Z marcus $
 #
 # !!! When updating goffice, don't forget to update pkg-plist in:
@@ -16,6 +16,8 @@ COMMENT=	GLib/GTK+ set of document centric objects and utilities
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+PORTSCOUT=	ignore
 
 LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
