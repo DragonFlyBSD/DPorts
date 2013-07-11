@@ -1,7 +1,8 @@
 # Created by: Michael Nottebrock <lofi@freebsd.org>
-# $FreeBSD: ports/security/pinentry-gtk/Makefile,v 1.6 2013/02/06 13:14:25 svnexp Exp $
+# $FreeBSD: security/pinentry-gtk/Makefile 322559 2013-07-09 13:37:13Z makc $
 
 PORTNAME=	pinentry
+PORTREVISION=	3
 
 COMMENT=	GTK version of the gnupg password dialog
 
