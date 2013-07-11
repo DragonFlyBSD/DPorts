@@ -1,5 +1,5 @@
 # Created by: lofi@freebsd.org
-# $FreeBSD: x11-toolkits/qt4-gui/Makefile 317896 2013-05-11 17:31:45Z rakuco $
+# $FreeBSD: x11-toolkits/qt4-gui/Makefile 322490 2013-07-08 11:42:01Z bapt $
 
 PORTNAME=	gui
 DISTVERSION=	${QT4_VERSION}
@@ -74,8 +74,8 @@ CONFIGURE_ARGS+=-no-gtkstyle
 .endif
 
 .if defined(PACKAGE_BUILDING)
-RUN_DEPENDS+=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
-		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT}
+RUN_DEPENDS+=	${FONTSCALE}:${PORTSDIR}/x11-fonts/xorg-fonts-truetype \
+		${FONTENCOD}:${PORTSDIR}/x11-fonts/encodings
 .endif
 
 .include <bsd.port.pre.mk>
