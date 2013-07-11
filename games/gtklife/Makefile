@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/gtklife/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: games/gtklife/Makefile 322403 2013-07-06 17:27:41Z eadler $
 
 PORTNAME=	gtklife
 PORTVERSION=	5.1
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
+USES=	gmake
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" PREFIX="${PREFIX}" docdir="${DOCSDIR}"
 
 PLIST=		${WRKDIR}/pkg-plist
