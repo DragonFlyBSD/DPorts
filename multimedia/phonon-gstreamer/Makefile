@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/phonon-gstreamer/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: multimedia/phonon-gstreamer/Makefile 322188 2013-07-02 17:32:59Z rakuco $
 
 PORTNAME=	phonon
 PORTVERSION=	4.6.3
@@ -32,10 +32,6 @@ USES=		cmake
 MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB+=	QT_PREFIX=${QT_PREFIX}
-
-.if defined(WITH_QT_PHONON)
-IGNORE=		conflicts with Qt 4 Phonon. Please, deinstall qt4-phonon-gst and unset WITH_QT_PHONON to continue
-.endif
 
 OPTIONS_DEFINE=	GST_PLUGINS
 
