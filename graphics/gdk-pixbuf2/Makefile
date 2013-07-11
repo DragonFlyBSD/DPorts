@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@lovett.com>
-# $FreeBSD: graphics/gdk-pixbuf2/Makefile 316515 2013-04-25 13:44:38Z ak $
+# $FreeBSD: graphics/gdk-pixbuf2/Makefile 321988 2013-06-28 21:19:31Z bapt $
 #    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.28 2012/12/10 12:09:15 kwm Exp $
 
 PORTNAME=	gdk-pixbuf
@@ -26,6 +26,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-introspection=yes --with-x11
+MAKE_ENV+=	GI_SCANNER_DISABLE_CACHE=yes
 
 MAN1=		gdk-pixbuf-csource.1 gdk-pixbuf-query-loaders.1
 
