@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSd.org>
-# $FreeBSD: math/octave-forge-database/Makefile 318595 2013-05-20 12:24:35Z stephen $
+# $FreeBSD: math/octave-forge-database/Makefile 322356 2013-07-05 20:59:44Z stephen $
 
 PORTNAME=	octave-forge-database
 PORTVERSION=	2.2.0
@@ -18,8 +18,7 @@ GNU_CONFIGURE=	yes
 USE_PGSQL=	yes
 ALL_TARGET=
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/Mk/bsd.octave.mk"
+.include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
 	${RM} -f ${WRKSRC}/Makefile ${WRKSRC}/configure
@@ -29,4 +28,4 @@ post-patch:
 	${REINPLACE_CMD} 's#postgresql/##' ${WRKSRC}/*
 	${REINPLACE_CMD} 's#endian.h#sys/endian.h#' ${WRKSRC}/wrap_endian.h
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
