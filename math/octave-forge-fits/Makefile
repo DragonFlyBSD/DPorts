@@ -1,9 +1,5 @@
-# New ports collection makefile for:	octave-forge-fits
-# Date created:		13 Janurary 2011
-# Whom:			Stephen Montgomery-Smith <stephen@math.missouri.edu>
-#
-# $FreeBSD: ports/math/octave-forge-fits/Makefile,v 1.12 2012/11/17 05:59:24 svnexp Exp $
-#
+# Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
+# $FreeBSD: math/octave-forge-fits/Makefile 322356 2013-07-05 20:59:44Z stephen $
 
 PORTNAME=	octave-forge-fits
 PORTVERSION=	1.0.2
@@ -20,10 +16,10 @@ WRKSRC=	${WRKDIR}/${OCTSRC}/src
 
 LIB_DEPENDS+=	cfitsio:${PORTSDIR}/astro/cfitsio
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/Mk/bsd.octave.mk"
+.include "${.CURDIR}/../../Mk/bsd.octave.mk"
+
 post-build:
 	${RM} -f ${WRKSRC}/Makefile ${WRKSRC}/configure
 	cd ${WRKDIR} && ${TAR} cfz ${DISTNAME}.tar.gz ${OCTSRC}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
