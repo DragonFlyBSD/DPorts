@@ -1,16 +1,12 @@
-# New ports collection makefile for:	torrentsniff
-# Date created:				06 July 2003
-# Whom:					Pav Lucistnik <pav@oook.cz>
-#
-# $FreeBSD: ports/net-p2p/torrentsniff/Makefile,v 1.4 2012/11/17 06:00:41 svnexp Exp $
-#
+# Created by: Pav Lucistnik <pav@oook.cz>
+# $FreeBSD: net-p2p/torrentsniff/Makefile 322612 2013-07-10 04:14:31Z miwi $
 
 PORTNAME=	torrentsniff
 PORTVERSION=	0.3.0
 CATEGORIES=	net-p2p perl5
 MASTER_SITES=	http://www.highprogrammer.com/alan/perl/
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	jharris@widomaker.com
 COMMENT=	Commandline tool for getting status of torrent
 
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
