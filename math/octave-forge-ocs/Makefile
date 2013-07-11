@@ -1,9 +1,5 @@
-# New ports collection makefile for:	octave-forge-ocs
-# Date created:		8 September 2008
-# Whom:			Stephen Montgomery-Smith <stephen@math.missouri.edu>
-#
-# $FreeBSD: ports/math/octave-forge-ocs/Makefile,v 1.19 2012/11/17 05:59:24 svnexp Exp $
-#
+# Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
+# $FreeBSD: math/octave-forge-ocs/Makefile 322356 2013-07-05 20:59:44Z stephen $
 
 PORTNAME=	octave-forge-ocs
 PORTVERSION=	0.1.3
@@ -21,10 +17,10 @@ WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
 RUN_DEPENDS+=	${TARBALLS_DIR}/odepkg.tar.gz:${PORTSDIR}/math/octave-forge-odepkg
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/Mk/bsd.octave.mk"
+.include "${.CURDIR}/../../Mk/bsd.octave.mk"
+
 post-build:
 	${RM} -f ${WRKSRC}/Makefile ${WRKSRC}/configure
 	cd ${WRKDIR} && ${TAR} cfz ${DISTNAME}.tar.gz ${OCTSRC}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
