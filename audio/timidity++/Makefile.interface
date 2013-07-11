@@ -1,4 +1,4 @@
-#$FreeBSD: audio/timidity++/Makefile.interface 300895 2012-07-14 12:56:14Z beat $
+#$FreeBSD: audio/timidity++/Makefile.interface 322579 2013-07-09 21:20:28Z bapt $
 
 # Shared by timidity++ interface ports
 
@@ -47,7 +47,7 @@ USE_GNOME=	gtk12
 .if ${INTERFACE} == "motif"
 LINK=		xmmidi
 
-USE_MOTIF=	yes
+USES+=		motif
 
 CONFIGURE_ENV+=	MOTIFLIB="${MOTIFLIB}"
 .endif

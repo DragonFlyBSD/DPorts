@@ -1,5 +1,5 @@
 # Created by: Yoichi Asai <yatt@luna2.org>
-# $FreeBSD: audio/timidity++/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: audio/timidity++/Makefile 322582 2013-07-09 21:35:14Z bapt $
 
 PORTNAME=	timidity++
 PORTVERSION=	2.13.2
@@ -19,9 +19,9 @@ RUN_DEPENDS=	${LOCALBASE}/share/timidity/timidity.cfg:${PORTSDIR}/audio/eawpats
 CONFLICTS=	timidity-0.*
 .endif
 
+USES=		gmake
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
 MAKE_JOBS_SAFE=	yes
 
@@ -29,6 +29,8 @@ PLIST_SUB+=	TIMID_LIBDIR=${TIMID_LIBDIR} EUCJP_LOCALE=${EUCJP_LOCALE}
 
 EUCJP_LOCALE=	ja_JP.eucJP
 TIMID_LIBDIR=	lib/timidity
+
+.include <bsd.port.options.mk>
 
 .if !defined(PKGNAMESUFFIX)
 WANT_GNOME=	yes
@@ -43,8 +45,6 @@ LDFLAGS+=	-export-dynamic
 DOCFILES=	README.alsaseq README.dl README.m2m README.mts README.sf
 DOCLANG=	C ja_JP.eucJP
 
-.include <bsd.port.pre.mk>
-
 MANLANG=	"" ja
 MAN1=		timidity.1
 MAN5=		timidity.cfg.5
@@ -57,6 +57,8 @@ USE_XORG=	x11 xext
 LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png
 CPPFLAGS+=	-I${LOCALBASE}/include/libpng15
 .endif
+
+.include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mesound}!=""
 USE_GNOME=	esound
