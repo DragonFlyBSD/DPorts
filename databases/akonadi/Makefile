@@ -1,8 +1,8 @@
 # Created by: miwi
-# $FreeBSD: databases/akonadi/Makefile 317853 2013-05-11 07:39:39Z makc $
+# $FreeBSD: databases/akonadi/Makefile 322634 2013-07-10 09:48:36Z rakuco $
 
 PORTNAME=	akonadi
-PORTVERSION=	1.9.2
+PORTVERSION=	1.10.0
 CATEGORIES=	databases kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTNAME}/src/
