@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/gnudoku/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: games/gnudoku/Makefile 322366 2013-07-06 07:59:09Z bapt $
 
 PORTNAME=	GNUDoku
 PORTVERSION=	0.93
@@ -13,9 +13,8 @@ COMMENT=	A free program for creating and solving Su Doku puzzles
 
 LIB_DEPENDS=	gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24
 
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 MAKE_ENV=	CXXLAGS="${CXXFLAGS}"
-USE_PKGCONFIG=	build
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|PREFIX=|PREFIX?=|' ${WRKSRC}/Makefile
