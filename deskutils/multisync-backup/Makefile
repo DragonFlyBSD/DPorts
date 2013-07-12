@@ -2,11 +2,11 @@
 # Date created:			3 Dec 2003
 # Whom:				Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/multisync-backup/Makefile,v 1.5 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/multisync-backup/Makefile 322581 2013-07-09 21:26:48Z pav $
 
 PORTNAME=	multisync-backup
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multisync backup plugin
 
 RUN_DEPENDS=	multisync:${PORTSDIR}/deskutils/multisync
