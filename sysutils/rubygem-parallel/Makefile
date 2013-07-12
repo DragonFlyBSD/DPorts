@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-parallel/Makefile 321524 2013-06-22 02:37:31Z sunpoet $
+# $FreeBSD: sysutils/rubygem-parallel/Makefile 322598 2013-07-10 03:31:56Z sunpoet $
 
 PORTNAME=	parallel
-PORTVERSION=	0.7.0
+PORTVERSION=	0.7.1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
