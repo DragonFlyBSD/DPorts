@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: emulators/e-uae/Makefile 319830 2013-06-04 08:22:22Z miwi $
+# $FreeBSD: emulators/e-uae/Makefile 322285 2013-07-04 18:08:34Z tijl $
 
 PORTNAME=	e-uae
 DISTVERSION=	0.8.29.w4
@@ -33,8 +33,9 @@ PLIST_FILES=	bin/readdisk bin/uae
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e \
-		'/X11\/xkb\/rules/s|/usr/X11R6/lib|${LOCALBASE}/share|' \
+	@${REINPLACE_CMD} \
+		-e '\,X11/xkb/rules,s,/usr/X11R6/lib,${LOCALBASE}/share,' \
+		-e 's,-W ,&-Wno-unused-parameter ,' \
 		${WRKSRC}/configure
 
 do-install:
