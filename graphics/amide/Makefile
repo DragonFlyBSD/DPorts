@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/amide/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/amide/Makefile 322531 2013-07-08 18:44:24Z madpilot $
 
 PORTNAME=	amide
 PORTVERSION=	1.0.4
@@ -13,11 +13,10 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_CSTD=	gnu89
 MAKE_JOBS_UNSAFE=	yes
-USES=		gettext
+USES=		gettext gmake
 USE_GNOME=	gtk20 libgnomecanvas libgnomeui libxml2
 INSTALLS_OMF=	yes
 
