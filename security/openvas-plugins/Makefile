@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openvas-plugins
-# Date created:		2008-04-27
-# Whom:			Tomoyuki Sakurai <cherry@trombik.org>
-#
-# $FreeBSD: security/openvas-plugins/Makefile 311722 2013-02-05 16:17:06Z novel $
-#
+# Created by: Tomoyuki Sakurai <cherry@trombik.org>
+# $FreeBSD: security/openvas-plugins/Makefile 321486 2013-06-21 17:48:03Z wg $
 
 PORTNAME=	openvas-plugins
 PORTVERSION=	1.0.7
@@ -23,6 +19,7 @@ RUN_DEPENDS=	openvasd:${PORTSDIR}/security/openvas-server \
 		${LOCALBASE}/bin/gmd5sum:${PORTSDIR}/sysutils/coreutils \
 		${LOCALBASE}/bin/rsync:${PORTSDIR}/net/rsync
 
+USES=		pkgconfig
 GNU_CONFIGURE=	yes
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 CPPFLAGS+=	"`${LIBNET_CONFIG} --cflags`"
