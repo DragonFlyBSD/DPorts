@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: ports/audio/gxmms2/Makefile,v 1.27 2012/12/10 20:43:11 svnexp Exp $
+# $FreeBSD: audio/gxmms2/Makefile 322531 2013-07-08 18:44:24Z madpilot $
 
 PORTNAME=	gxmms2
 PORTVERSION=	0.7.1
@@ -19,7 +19,7 @@ LIB_DEPENDS=	xmmsclient.6:${PORTSDIR}/audio/xmms2
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
+USES=		gmake
 ALL_TARGET=	${PORTNAME}
 MAKE_JOBS_SAFE=	yes
 
