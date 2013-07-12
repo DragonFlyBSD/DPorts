@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/diacanvas2/Makefile 318677 2013-05-21 11:35:49Z kwm $
+# $FreeBSD: graphics/diacanvas2/Makefile 322553 2013-07-09 09:12:19Z bapt $
 
 PORTNAME=	diacanvas2
 PORTVERSION=	0.15.4
@@ -9,17 +9,15 @@ MASTER_SITES=	SF/diacanvas/DiaCanvas2/${PORTVERSION}
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A general drawing canvas from dia dialog editor
+COMMENT=	General drawing canvas from dia dialog editor
 
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	pygnome2
 USE_PYTHON=	2.2+
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
-USE_DISPLAY=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
