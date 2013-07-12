@@ -1,5 +1,5 @@
 # Created by: Dan Pelleg <dpelleg+unison@cs.cmu.edu>
-# $FreeBSD: net/unison/Makefile 313476 2013-03-05 20:22:02Z bf $
+# $FreeBSD: net/unison/Makefile 322531 2013-07-08 18:44:24Z madpilot $
 
 PORTNAME=	unison
 PORTVERSION=	2.40.102
@@ -16,7 +16,7 @@ COMMENT?=	User-level file synchronization tool
 LICENSE=	GPLv3
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
-USE_GMAKE=	yes
+USES=		gmake
 WANT_GNOME=	yes
 MAKE_ARGS=	CFLAGS=""
 CONFLICTS?=	unison-devel-[0-9]* unison-nox11-[0-9]*
