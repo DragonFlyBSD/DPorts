@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkunique/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11-toolkits/gtkunique/Makefile 322581 2013-07-09 21:26:48Z pav $
 
 PORTNAME=	gtkunique
 PORTVERSION=	0.9.1
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	pav
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Single instance application library
 
 USE_AUTOTOOLS=	libtool
