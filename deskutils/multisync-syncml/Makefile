@@ -2,11 +2,11 @@
 # Date created:			25 Nov 2003
 # Whom:				Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/multisync-syncml/Makefile,v 1.5 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/multisync-syncml/Makefile 322581 2013-07-09 21:26:48Z pav $
 
 PORTNAME=	multisync-syncml
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multisync plugin for SyncML targets
 
 RUN_DEPENDS=	multisync:${PORTSDIR}/deskutils/multisync
