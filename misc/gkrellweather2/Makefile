@@ -2,7 +2,7 @@
 # Date Created:		24 Nov 2002
 # Whom:			Jean-Yves Lefort <jylefort@brutele.be>
 #
-# $FreeBSD: ports/misc/gkrellweather2/Makefile,v 1.26 2012/11/17 05:59:37 svnexp Exp $
+# $FreeBSD: misc/gkrellweather2/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	gkrellweather
@@ -12,7 +12,7 @@ CATEGORIES=	misc geography
 MASTER_SITES=	http://makovick.googlepages.com/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GKrellWeather is a weather plugin for GKrellM
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
