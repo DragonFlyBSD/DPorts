@@ -1,15 +1,14 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/dvdisaster/Makefile 321272 2013-06-19 14:52:37Z miwi $
+# $FreeBSD: sysutils/dvdisaster/Makefile 321782 2013-06-26 04:35:10Z ak $
 
 PORTNAME=	dvdisaster
 PORTVERSION=	0.72.4
 PORTREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	SF \
-		http://dvdisaster.net/downloads/
+MASTER_SITES=	http://dvdisaster.net/downloads/
 
 MAINTAINER=	chalpin@cs.wisc.edu
-COMMENT=	A CD/DVD error recovery tool
+COMMENT=	CD/DVD error recovery tool
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
