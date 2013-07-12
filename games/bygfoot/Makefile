@@ -2,7 +2,7 @@
 # Date created:				6th July 2004
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/games/bygfoot/Makefile,v 1.34 2012/11/17 05:57:34 svnexp Exp $
+# $FreeBSD: games/bygfoot/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	bygfoot
@@ -12,7 +12,7 @@ CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Football (soccer) management game
 
 # needed to save/load games
