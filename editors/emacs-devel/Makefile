@@ -1,5 +1,5 @@
 # Created by: Kenneth Vestergaard Schmidt <kvs@pil.dk>
-# $FreeBSD: editors/emacs-devel/Makefile 317997 2013-05-13 05:33:57Z ashish $
+# $FreeBSD: editors/emacs-devel/Makefile 322620 2013-07-10 06:49:35Z bapt $
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}.${EMACS_REV}
@@ -105,7 +105,7 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 USE_XORG=	xaw
 CONFIGURE_ARGS+=	--with-x-toolkit=athena --without-xaw3d
 .elif ${PORT_OPTIONS:MMOTIF}
-USE_MOTIF=	yes
+USES+=		motif
 CONFIGURE_ARGS+=	--with-x-toolkit=motif
 .endif
 
