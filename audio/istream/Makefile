@@ -2,7 +2,7 @@
 # Date created:				31 August 2009
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/istream/Makefile,v 1.7 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: audio/istream/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	istream
@@ -11,7 +11,7 @@ PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://www.jochen-baier.de/istream/
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Internet radio player applet for GNOME Panel
 
 USE_GMAKE=	yes
