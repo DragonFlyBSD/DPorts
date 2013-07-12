@@ -1,11 +1,7 @@
-# Ports collection makefile for:  pear-Horde_Share
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: security/pear-Horde_Share/Makefile 316218 2013-04-21 22:16:15Z mm $
+# $FreeBSD: security/pear-Horde_Share/Makefile 322568 2013-07-09 17:18:06Z mm $
 
 PORTNAME=	Horde_Share
-PORTVERSION=	2.0.3
+PORTVERSION=	2.0.4
 CATEGORIES=	security www pear
 
 MAINTAINER=	horde@FreeBSD.org
