@@ -2,7 +2,7 @@
 # Date Created:				Jun 24 2003
 # Whom:					Pav Lucistnik <pav@oook.cz>
 #
-# $FreeBSD: ports/misc/gkrellm-xkb/Makefile,v 1.24 2012/11/17 05:59:37 svnexp Exp $
+# $FreeBSD: misc/gkrellm-xkb/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	gkrellm-xkb
@@ -11,7 +11,7 @@ PORTREVISION=	10
 CATEGORIES=	misc x11
 MASTER_SITES=	http://www.sweb.cz/tripie/gkrellm/xkb/dist/
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X keyboard layout plugin for GKrellM
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
