@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/nathive/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: graphics/nathive/Makefile 322366 2013-07-06 07:59:09Z bapt $
 
 PORTNAME=	nathive
 PORTVERSION=	0.813
@@ -12,8 +12,8 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}_source
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Lightweight image editor
 
+USES=		pkgconfig
 USE_GNOME=	glib20 gtk20
-USE_PKGCONFIG=	build
 ALL_TARGET=	default
 
 post-patch:
