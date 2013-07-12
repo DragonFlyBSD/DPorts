@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Eval-Context
-# Date Created:				22 Apr 2008
-# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Eval-Context/Makefile,v 1.10 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: devel/p5-Eval-Context/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
 
 PORTNAME=	Eval-Context
 PORTVERSION=	0.09.11
