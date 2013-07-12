@@ -2,7 +2,7 @@
 # Date created:			Sep 28, 2003
 # Whom:				Pav Lucistnik <pav@oook.cz>
 #
-# $FreeBSD: ports/mail/mboxcheck-applet/Makefile,v 1.16 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/mboxcheck-applet/Makefile 322581 2013-07-09 21:26:48Z pav $
 
 PORTNAME=	mboxcheck-applet
 PORTVERSION=	0.3
@@ -10,7 +10,7 @@ PORTREVISION=	12
 CATEGORIES=	mail
 MASTER_SITES=	http://perso.orange.fr/seb128/fichiers/
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Mailbox checking applet for GNOME 2
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py:${PORTSDIR}/x11-toolkits/py-gnome2
