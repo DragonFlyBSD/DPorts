@@ -1,5 +1,5 @@
 # Created by: Yeti <yeti@gwyddion.net>
-# $FreeBSD: science/gwyddion/Makefile 321375 2013-06-20 12:52:25Z bsam $
+# $FreeBSD: science/gwyddion/Makefile 322105 2013-06-30 21:25:03Z antoine $
 
 PORTNAME=	gwyddion
 PORTVERSION=	2.31
@@ -20,8 +20,8 @@ OPTIONS_DEFAULT=PERL PYTHON UNIQUE
 UNIQUE_DESC=	Remote controle backend support
 
 USE_XZ=		yes
-USES=		pathfix gettext
-USE_GNOME=	desktopfileutils gconf2 gtk20 libxml2
+USES=		desktop-file-utils gettext pathfix shared-mime-info
+USE_GNOME=	gconf2 gtk20 libxml2
 USE_GL=		glu
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
