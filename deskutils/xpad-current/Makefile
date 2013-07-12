@@ -1,5 +1,5 @@
 # Created by: Jaosn Helfman <jgh@FreeBSD.org>
-# $FreeBSD: deskutils/xpad-current/Makefile 316484 2013-04-24 23:04:22Z jgh $
+# $FreeBSD: deskutils/xpad-current/Makefile 322360 2013-07-06 01:22:56Z jgh $
 
 PORTNAME=	xpad
 PORTVERSION=	4.1
@@ -20,12 +20,11 @@ FETCH_ARGS=	-p
 USE_BZIP2=	yes
 USE_XORG=	x11 sm
 USE_GNOME=	gtk20 gnomehier intltool
-USES=	pkgconfig
+USES=	pkgconfig gmake
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
 .include <bsd.port.options.mk>
 
