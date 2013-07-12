@@ -2,7 +2,7 @@
 # Date Created:				Jun 26 2003
 # Whom:					Pav Lucistnik <pav@oook.cz>
 #
-# $FreeBSD: ports/misc/gkrellm-gamma/Makefile,v 1.20 2012/11/17 05:59:37 svnexp Exp $
+# $FreeBSD: misc/gkrellm-gamma/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	gkrellm-gamma
@@ -11,7 +11,7 @@ PORTREVISION=	13
 CATEGORIES=	misc
 MASTER_SITES=	http://www.sweb.cz/tripie/gkrellm/gamma/dist/
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XFree86 gamma correction plugin for GKrellM
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
