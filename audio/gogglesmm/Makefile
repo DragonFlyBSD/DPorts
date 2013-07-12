@@ -1,5 +1,5 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: audio/gogglesmm/Makefile 320924 2013-06-14 14:07:34Z bapt $
+# $FreeBSD: audio/gogglesmm/Makefile 322325 2013-07-05 13:44:31Z bapt $
 
 PORTNAME=	gogglesmm
 PORTVERSION=	0.12.7
@@ -32,8 +32,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man --prefix=${PREFIX}
 MAKE_JOBS_SAFE=	yes
 
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		pkgconfig gmake
 USE_XZ=		yes
 INSTALLS_ICONS=	yes
 MAN1=		gogglesmm.1
