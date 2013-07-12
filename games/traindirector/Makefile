@@ -1,4 +1,4 @@
-# $FreeBSD: ports/games/traindirector/Makefile,v 1.28 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/traindirector/Makefile 322531 2013-07-08 18:44:24Z madpilot $
 
 PORTNAME=	traindirector
 PORTVERSION=	3.6
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 NO_WRKSUBDIR=	yes
 
 MAKE_JOBS_SAFE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_GNOME=	gtk20
 USE_ZIP=	yes
 
