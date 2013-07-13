@@ -23,8 +23,13 @@ PLIST_FILES=	bin/whowatch
 
 .include <bsd.port.pre.mk>
 
+.if ${OSVERSION} > 900006
+EXTRA_PATCHES=	${PATCHDIR}/utmpx-whowatch.h \
+		${PATCHDIR}/utmpx-whowatch.c
+.endif
+
 pre-patch:
 	@${FIND} ${WRKSRC} -name 'proc????.c' | ${XARGS} ${REINPLACE_CMD} -E \
-		-e 's/kp_.?proc\.._/ki_/ ; s/pcred\.p_//'
+		-e 's/kp_.?proc\.._/kp_/ ; s/pcred\.p_//'
 
 .include <bsd.port.post.mk>
