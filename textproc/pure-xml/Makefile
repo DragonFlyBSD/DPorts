@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pure-xml
-# Date created:		2011-03-18
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/textproc/pure-xml/Makefile,v 1.3 2012/11/17 06:02:17 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: textproc/pure-xml/Makefile 322734 2013-07-10 21:28:56Z bapt $
 
 PORTNAME=	pure-xml
 PORTVERSION=	0.6
@@ -19,6 +15,5 @@ USE_GNOME=	libxml2 libxslt
 PLIST_FILES=	lib/pure/xml.pure \
 		lib/pure/xml.so
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/pure/bsd.pure.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+.include <bsd.port.mk>
