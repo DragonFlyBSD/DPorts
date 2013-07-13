@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pure-gtk
-# Date created:		2011-03-18
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/graphics/pure-gl/Makefile,v 1.4 2012/11/17 05:58:19 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: graphics/pure-gl/Makefile 322734 2013-07-10 21:28:56Z bapt $
 
 PORTNAME=	pure-gl
 PORTVERSION=	0.8
@@ -20,6 +16,5 @@ USE_GL=	glut
 
 MAKE_ARGS+=	LinkGL="-lglut -lGLU -lGL"
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/pure/bsd.pure.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+.include <bsd.port.mk>
