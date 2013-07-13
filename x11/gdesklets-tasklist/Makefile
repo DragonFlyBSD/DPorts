@@ -2,7 +2,7 @@
 # Date created:                		04 January 2004
 # Whom:                    		Vincent Tantardini <vinc@FreeBSD-fr.org>
 #
-# $FreeBSD: ports/x11/gdesklets-tasklist/Makefile,v 1.16 2012/11/17 06:03:15 svnexp Exp $
+# $FreeBSD: x11/gdesklets-tasklist/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	tasklist
@@ -13,7 +13,7 @@ MASTER_SITES=	http://gdesklets.zencomputer.ca/
 PKGNAMEPREFIX=	gdesklets-
 DISTNAME=	${PORTNAME}-desklet-${PORTVERSION}
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Displays the GNOME tasklist and floats above the other windows
 
 RUN_DEPENDS=	gdesklets:${PORTSDIR}/deskutils/gdesklets
