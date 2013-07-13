@@ -2,7 +2,7 @@
 # Date created:				24 November 2006
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/scribes/Makefile,v 1.18 2012/11/17 05:57:18 svnexp Exp $
+# $FreeBSD: editors/scribes/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	scribes
@@ -11,7 +11,7 @@ PORTREVISION=	7
 CATEGORIES=	editors
 MASTER_SITES=	SF/${PORTNAME}/Stable%20Branch/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Slick yet powerful text editor for GNOME
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
