@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: graphics/gthumb/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: graphics/gthumb/Makefile 322581 2013-07-09 21:26:48Z pav $
 
 PORTNAME=	gthumb
 PORTVERSION=	2.14.1
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An image viewer and browser for the GNOME 2 environment
 
 LIB_DEPENDS=	unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
