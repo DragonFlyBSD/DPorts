@@ -2,7 +2,7 @@
 # Date created:        01 November 2009
 # Whom:                ddurieux <d.durieux@siprossii.com>
 #
-# $FreeBSD: ports/net-mgmt/glpi-plugins-tracker-agent/Makefile,v 1.5 2012/11/17 06:00:32 svnexp Exp $
+# $FreeBSD: net-mgmt/glpi-plugins-tracker-agent/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	agent
@@ -32,10 +32,6 @@ CPIOARGS=	--quiet -pdum
 TRACKERAGENTDIR?=	share/tracker_agent
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
 
 post-configure:
 	@${SED} -e 's,%%PREFIX%%,${PREFIX},g' \
