@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net-im/pidgin-bs/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
+# $FreeBSD: net-im/pidgin-bs/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
 
 PORTNAME=	pidgin-bs
 PORTVERSION=	1.3.0
@@ -17,9 +17,8 @@ LIB_DEPENDS=	purple:${PORTSDIR}/net-im/libpurple
 RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
 GNU_CONFIGURE=	yes
-USES=		gettext
+USES=		gettext gmake
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gtk20
 USE_LDCONFIG=	${PREFIX}/lib/pidgin
 MAKE_JOBS_SAFE=	yes
