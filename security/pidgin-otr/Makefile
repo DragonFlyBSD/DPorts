@@ -1,4 +1,4 @@
-# $FreeBSD: security/pidgin-otr/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/pidgin-otr/Makefile 322360 2013-07-06 01:22:56Z jgh $
 
 PORTNAME=	otr
 PORTVERSION=	4.0.0
@@ -21,9 +21,8 @@ LIB_DEPENDS=	otr:${PORTSDIR}/security/libotr \
 
 MAKE_JOBS_SAFE=	yes
 
-USE_GMAKE=	yes
 USE_GNOME=	intltool
-USES=		gettext
+USES=		gettext gmake
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
