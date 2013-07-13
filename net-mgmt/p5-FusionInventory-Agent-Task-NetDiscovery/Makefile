@@ -1,5 +1,5 @@
 # Created by: Emil Smolenski <am@raisa.eu.org>
-# $FreeBSD: ports/net-mgmt/p5-FusionInventory-Agent-Task-NetDiscovery/Makefile,v 1.1 2013/02/18 00:46:02 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-FusionInventory-Agent-Task-NetDiscovery/Makefile 321188 2013-06-18 13:52:06Z zi $
 
 PORTNAME=	FusionInventory-Agent-Task-NetDiscovery
 PORTVERSION=	1.5
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FUSINV
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	am@raisa.eu.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Network discovery support for FusionInventory Agent
 
 LICENSE=	GPLv2
@@ -30,10 +30,5 @@ PERL_CONFIGURE=	yes
 
 post-patch:
 	${RM} ${WRKSRC}/lib/FusionInventory/Agent/Task/NetDiscovery.pm.orig
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS+=	p5-IO-Compress>=0:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
 
 .include <bsd.port.post.mk>
