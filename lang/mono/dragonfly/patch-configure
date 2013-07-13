@@ -1,6 +1,6 @@
---- configure.orig	2013-01-03 20:50:14.080428000 +0100
-+++ configure	2013-01-03 21:21:18.363032000 +0100
-@@ -3875,7 +3875,7 @@
+--- configure.orig	2013-07-13 17:44:49.766393000 +0000
++++ configure
+@@ -3845,7 +3845,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		mono_cv_clang=no
  		if test "x$cross_compiling" = "xno"; then
  			target_win32=yes
@@ -9,7 +9,7 @@
  
  $as_echo "#define TARGET_WIN32 1" >>confdefs.h
  
-@@ -3932,7 +3932,7 @@
+@@ -3902,7 +3902,7 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  		with_sigaltstack=no
  		use_sigposix=yes
  		;;
@@ -18,8 +18,8 @@
  		host_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -3948,7 +3948,8 @@
- 			LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
+@@ -3918,7 +3918,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+ 			LDFLAGS="$LDFLAGS $PTHREAD_LIBS -L/usr/local/lib"
  			libmono_ldflags="$PTHREAD_LIBS"
  		fi
 -		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
@@ -28,12 +28,12 @@
  		need_link_unlink=yes
  
  $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
-@@ -24502,7 +24503,7 @@
- 	LIBC="libc.so.12"
- 	INTL="libintl.so.0"
+@@ -25141,7 +25142,7 @@ case "$host" in
+ 	SQLITE="libsqlite.so"
+ 	SQLITE3="libsqlite3.so"
  	;;
--    *-*-*freebsd*)
-+    *-*-*freebsd*|*-*-dragonfly*)
+-    *-*-*openbsd*)
++    *-*-*openbsd*|*-*-*dragonfly*)
      	LIBC="libc.so"
  	INTL="libintl.so"
- 	SQLITE="libsqlite.so"
+         SQLITE="libsqlite.so"

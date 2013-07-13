@@ -1,15 +1,15 @@
---- mono/utils/mono-semaphore.c.orig	2012-09-06 21:09:51.000000000 +0200
-+++ mono/utils/mono-semaphore.c	2013-01-03 21:10:53.452159000 +0100
-@@ -22,7 +22,7 @@
- #  ifdef USE_MACH_SEMA
- #    define TIMESPEC mach_timespec_t
- #    define WAIT_BLOCK(a,b) semaphore_timedwait (*(a), *(b))
+--- mono/utils/mono-semaphore.c.orig	2013-06-15 00:15:40.000000000 +0000
++++ mono/utils/mono-semaphore.c
+@@ -25,7 +25,7 @@
+ #  elif defined(__native_client__) && defined(USE_NEWLIB)
+ #    define TIMESPEC struct timespec
+ #    define WAIT_BLOCK(a, b) sem_trywait(a)
 -#  elif defined(__OpenBSD__)
 +#  elif defined(__OpenBSD__) || defined(__DragonFly__)
  #    define TIMESPEC struct timespec
  #    define WAIT_BLOCK(a) sem_trywait(a)
  #  else
-@@ -37,8 +37,8 @@
+@@ -40,8 +40,8 @@ mono_sem_timedwait (MonoSemType *sem, gu
  	TIMESPEC ts, copy;
  	struct timeval t;
  	int res = 0;
@@ -20,7 +20,7 @@
  #endif
  
  #ifndef USE_MACH_SEMA
-@@ -48,6 +48,19 @@
+@@ -51,6 +51,19 @@ mono_sem_timedwait (MonoSemType *sem, gu
  	if (timeout_ms == (guint32) 0xFFFFFFFF)
  		return mono_sem_wait (sem, alertable);
  
@@ -40,7 +40,7 @@
  #ifdef USE_MACH_SEMA
  	memset (&t, 0, sizeof (TIMESPEC));
  #else
-@@ -59,19 +72,6 @@
+@@ -62,19 +75,6 @@ mono_sem_timedwait (MonoSemType *sem, gu
  		ts.tv_nsec -= NSEC_PER_SEC;
  		ts.tv_sec++;
  	}
