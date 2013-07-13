@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: ports/x11-toolkits/hs-frantk/Makefile,v 1.22 2012/12/20 02:32:33 svnexp Exp $
+# $FreeBSD: x11-toolkits/hs-frantk/Makefile 322710 2013-07-10 16:51:48Z bapt $
 
 PORTNAME=	frantk
 PORTVERSION=	1.1
@@ -14,6 +14,8 @@ COMMENT=	A GUI library for Haskell on top of Tcl-Tk
 
 LIB_DEPENDS=	tk84.1:${PORTSDIR}/x11-toolkits/tk84
 
+USES=		gmake
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
@@ -22,7 +24,6 @@ CFLAGS+=	-fPIC
 BROKEN=		Does not compile
 .endif
 
-USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/FranTk1.1/src
 
 ALL_TARGET=	hugs
