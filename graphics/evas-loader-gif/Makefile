@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-gif/Makefile 318442 2013-05-18 19:36:31Z gblach $
+# $FreeBSD: graphics/evas-loader-gif/Makefile 322768 2013-07-11 15:04:56Z miwi $
 
 PORTNAME=	loader-gif
 PORTVERSION=	1.7.7
@@ -20,7 +20,7 @@ LIB_DEPENDS=	gif:${PORTSDIR}/graphics/giflib \
 DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		pkgconfig gmake
 USE_EFL=	evas librt_hack libtool_hack
 USE_LDCONFIG=	yes
 
