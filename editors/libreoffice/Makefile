@@ -1,8 +1,8 @@
-# $FreeBSD: editors/libreoffice/Makefile 321324 2013-06-19 20:52:13Z jkim $
+# $FreeBSD: editors/libreoffice/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	0
+PORTREVISION=	1
 MASTER_SITES+=	http://dev-www.libreoffice.org/src/:src \
 		http://dev-www.libreoffice.org/extern/:ext
 MASTER_SITE_SUBDIR=	src/${PORTVERSION}/
@@ -26,8 +26,8 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:${PORTSDIR}/archivers/p5-Archive-Zip \
 
 LIB_DEPENDS=	icutu:${PORTSDIR}/devel/icu \
 		langtag:${PORTSDIR}/devel/liblangtag \
-		orcus-0.4:${PORTSDIR}/devel/liborcus \
-		curl.6:${PORTSDIR}/ftp/curl \
+		orcus-0.6:${PORTSDIR}/devel/liborcus \
+		curl:${PORTSDIR}/ftp/curl \
 		cairo.2:${PORTSDIR}/graphics/cairo \
 		graphite2:${PORTSDIR}/graphics/graphite2 \
 		jpeg.11:${PORTSDIR}/graphics/jpeg \
@@ -144,7 +144,8 @@ CONFIGURE_ARGS+=	--without-afms \
 			--without-ppds \
 			--without-system-odbc \
 			--without-system-jars \
-			--without-system-npapi-headers
+			--without-system-npapi-headers \
+			--without-system-mozilla
 
 MAN1=	libreoffice.1 \
 	lobase.1 \
@@ -171,8 +172,8 @@ MAKE_ENV+=	ENVLINKFLAGS="${LDFLAGS}"
 MAKE_ENV+=	LANG=C LC_ALL=C
 MAKE_ENV+=	SED="${LOCALBASE}/bin/gsed" USE_GMAKE=1
 
-do-configure:
-	cd ${WRKSRC} && ./autogen.sh ${CONFIGURE_ARGS}
+pre-configure:
+	@${TOUCH} ${WRKSRC}/autogen.lastrun
 
 post-configure:
 	@${TOUCH} ${WRKSRC}/src.downloaded

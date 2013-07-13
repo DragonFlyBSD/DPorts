@@ -1,4 +1,4 @@
-# $FreeBSD: editors/libreoffice/Makefile.common 321324 2013-06-19 20:52:13Z jkim $
+# $FreeBSD: editors/libreoffice/Makefile.common 321774 2013-06-25 22:46:13Z jkim $
 
 PORTNAME=	libreoffice
 PORTVERSION=	4.0.4
@@ -39,6 +39,8 @@ PLISTD?=	${WRKDIR}/plist_dirs
 PLISTF?=	${WRKDIR}/plist_files
 
 .if defined(LO_I18N)
+PORTREVISION=	1
+
 NO_BUILD=	yes
 
 RUN_DEPENDS=	libreoffice:${PORTSDIR}/editors/libreoffice
@@ -61,7 +63,8 @@ DISTFILES+=	${LO_I18N_FILE}_helppack_${LO_I18N:S/_/-/}${EXTRACT_SUFX}
 .endif
 COMMENT?=	${LO_I18N} language pack for ${PORTNAME}
 
-EXTRACT_AFTER_ARGS=	--strip-components 1
+EXTRACT_AFTER_ARGS=	--exclude '${PORTNAME}*-dict-*.deb' \
+			--strip-components 1
 
 post-extract:
 	@${MKDIR} ${WRKSRC}; \
