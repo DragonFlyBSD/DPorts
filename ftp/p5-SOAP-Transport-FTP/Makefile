@@ -2,7 +2,7 @@
 # Date created:		2011-08-20
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/ftp/p5-SOAP-Transport-FTP/Makefile,v 1.4 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/p5-SOAP-Transport-FTP/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	SOAP-Transport-FTP
@@ -21,10 +21,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		SOAP::Transport::FTP.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-BUILD_DEPENDS+=	p5-Module-Build>=0.3600:${PORTSDIR}/devel/p5-Module-Build
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
