@@ -1,25 +1,24 @@
 # Created by: eivind/dima/jseger
-# $FreeBSD: www/seamonkey/Makefile 318877 2013-05-23 15:30:07Z flo $
+# $FreeBSD: www/seamonkey/Makefile 322692 2013-07-10 13:28:54Z flo $
 
 PORTNAME=	seamonkey
-DISTVERSION=	2.17.1
+DISTVERSION=	2.19
 CATEGORIES?=	www ipv6
-MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	${PORTNAME}/releases/${DISTVERSION}/source
+MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
 DISTFILES=	${PORTNAME}-${DISTVERSION}.source${EXTRACT_SUFX}
 EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	The open source, standards compliant web browser
 
-BUILD_DEPENDS=	nspr>=4.9.4:${PORTSDIR}/devel/nspr \
+BUILD_DEPENDS=	nspr>=4.9.6:${PORTSDIR}/devel/nspr \
 		nss>=3.14.3:${PORTSDIR}/security/nss \
-		sqlite3>=3.7.14.1:${PORTSDIR}/databases/sqlite3 \
+		sqlite3>=3.7.16.1:${PORTSDIR}/databases/sqlite3 \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		unzip:${PORTSDIR}/archivers/unzip
 
-EM_VERSION=	1.5.1
-L_VERSION=	2.2b1
+EM_VERSION=	1.5.2
+L_VERSION=	2.4b1
 
 USE_AUTOTOOLS=	autoconf213:env
 USE_PYTHON_BUILD=-2.7
@@ -34,7 +33,7 @@ WANT_PERL=	yes
 GNU_CONFIGURE=	yes
 ALL_TARGET=	default
 USE_GL=		gl
-USE_DOS2UNIX=	mozilla/media/webrtc/trunk/src/system_wrappers/source/spreadsortlib/spreadsort.hpp
+USE_DOS2UNIX=	mozilla/media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
 MAKE_JOBS_SAFE=	yes
 MOZ_PIS_SCRIPTS=	moz_pis_S50cleanhome
 
@@ -47,8 +46,8 @@ MOZ_PKGCONFIG_FILES=
 
 NOT_FOR_ARCHS=	ia64
 
-OPTIONS_DEFINE=	CHATZILLA COMPOSER ENIGMAIL GSTREAMER LDAP LIGHTNING MAILNEWS WEBRTC
-OPTIONS_DEFAULT=CHATZILLA COMPOSER ENIGMAIL GIO LDAP LIGHTNING MAILNEWS WEBRTC
+OPTIONS_DEFINE=	CHATZILLA COMPOSER ENIGMAIL LDAP LIGHTNING MAILNEWS WEBRTC
+OPTIONS_DEFAULT=CHATZILLA COMPOSER LDAP LIGHTNING MAILNEWS WEBRTC
 
 CHATZILLA_DESC?=Chatzilla IRC module
 COMPOSER_DESC?=	HTML Composer module
@@ -57,7 +56,8 @@ MAILNEWS_DESC?=	Mail and News modules
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 
-OPTIONS_DEFAULT:=${OPTIONS_DEFAULT:S/OSS/ALSA/}
+# OSS is gone after bug 852401
+OPTIONS_SINGLE_AUDIO:=${OPTIONS_SINGLE_AUDIO:S/OSS//}
 
 .include <bsd.port.options.mk>
 
@@ -73,8 +73,7 @@ MOZSRC:=	${WRKSRC}/mozilla
 XPI_LIBDIR=	${PREFIX}/lib/xpi
 
 .if ! ${PORT_OPTIONS:MMAILNEWS}
-EXTRA_PATCHES+=	${FILESDIR}/extra-mailnews-patch-bridge-bridge.mk \
-		${FILESDIR}/extra-patch-configure.in
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-configure.in
 MOZ_OPTIONS+=	--disable-ldap --disable-mailnews
 .else
 # mail and news desired, but not LDAP
@@ -84,6 +83,7 @@ MOZ_OPTIONS+=	--disable-ldap --enable-mailnews
 MOZ_OPTIONS+=	--enable-ldap --enable-mailnews
 .endif
 .if ${PORT_OPTIONS:MENIGMAIL}
+BROKEN=		Does not build see https://bugzilla.mozilla.org/show_bug.cgi?id=886095
 MASTER_SITES+=	http://www.enigmail.net/download/source/:enigmail
 DISTFILES+=	${EM_DISTFILE}:enigmail
 RUN_DEPENDS+=	gpg:${PORTSDIR}/security/gnupg
@@ -122,7 +122,6 @@ post-extract:
 
 post-patch:
 	@${REINPLACE_CMD} -e '/MOZPNG/s/=[0-9]*/=10511/' \
-		-e '/^SQLITE_VERSION/s/=.*/=3.7.14.1/' \
 		${MOZSRC}/configure.in ${WRKSRC}/configure.in
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/suite/app/nsSuiteApp.cpp
