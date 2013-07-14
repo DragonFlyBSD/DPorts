@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmotd
-# Date created:		29 January 2001
-# Whom:			Matthew West <mwest@uct.ac.za>
-#
-# $FreeBSD: ports/x11/xmotd/Makefile,v 1.13 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: Matthew West <mwest@uct.ac.za>
+# $FreeBSD: x11/xmotd/Makefile 322622 2013-07-10 07:00:44Z bapt $
 
 PORTNAME=	xmotd
 DISTVERSION=	1.17.3b
@@ -12,9 +8,9 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www.ee.ryerson.ca/~elf/pub/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A message-of-the-day browser for X11 and dumb-terminals
+COMMENT=	message-of-the-day browser for X11 and dumb-terminals
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xt
 NO_INSTALL_MANPAGES=	yes
 XFREE86_HTML_MAN=	no
@@ -34,7 +30,7 @@ BROKEN=		Does not compile when WITH_HTML is set
 
 .if ${PORT_OPTIONS:MMOTIF}
 MAKE_ARGS+=	-DMOTIF
-USE_MOTIF=	yes
+USES+=		motif
 .endif
 
 .if ${PORT_OPTIONS:MXPM}
