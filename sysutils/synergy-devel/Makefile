@@ -2,11 +2,11 @@
 # Date created:		6 February 2012
 # Whom:			George Neville-Neil <gnn@freebsd.org>
 #
-# $FreeBSD: sysutils/synergy-devel/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: sysutils/synergy-devel/Makefile 321694 2013-06-24 17:24:37Z gnn $
 #
 
 PORTNAME=	synergy
-PORTVERSION=	1.4.10
+PORTVERSION=	1.4.12
 DISTVERSIONSUFFIX=	-Source
 CATEGORIES=	sysutils
 MASTER_SITES=	GOOGLE_CODE
@@ -25,6 +25,11 @@ CFLAGS+=	-L${LOCALBASE}/lib -I${LOCALBASE}/include
 PLIST_FILES=	bin/synergys bin/synergyc
 PORTEXAMPLES=	synergy.conf.example synergy.conf.example-basic \
 		synergy.conf.example-advanced
+
+post-extract:
+	cd ${WRKSRC}/tools/
+	mkdir ${WRKSRC}/tools/cryptopp562
+	(cd ${WRKSRC}/tools/cryptopp562 && unzip ${WRKSRC}/tools/cryptopp562.zip)
 
 do-install:
 .for f in synergys synergyc
