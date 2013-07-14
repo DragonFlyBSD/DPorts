@@ -1,8 +1,8 @@
 # Created by: pgf
-# $FreeBSD: editors/xvile/Makefile 316824 2013-04-29 14:26:14Z miwi $
+# $FreeBSD: editors/xvile/Makefile 322770 2013-07-11 15:15:30Z miwi $
 
 PORTNAME=	xvile
-PORTVERSION=	9.8j
+PORTVERSION=	9.8k
 CATEGORIES=	editors
 MASTER_SITES=	ftp://dickey.his.com/vile/current/ \
 		ftp://invisible-island.net/vile/current/
@@ -26,7 +26,8 @@ MENUS_DESC=	Support for menus
 XAW_DESC=	X Athena Widgets
 XAW3D_DESC=	X Athena Widgets with 3D effect
 
-USES=		pkgconfig
+USES=		pkgconfig shebangfix
+SHEBANG_FILES=	perl/vileget
 USE_XORG=	x11 xext xpm
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-imake \
@@ -74,7 +75,7 @@ CONFIGURE_ARGS+=	--with-screen=x11
 .endif
 
 .if ${PORT_OPTIONS:MMOTIF}
-USE_MOTIF=	yes
+USES+=		motif
 CONFIGURE_ARGS+=	--with-screen=motif
 .endif
 
@@ -94,7 +95,7 @@ post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^DOCDIR|#DOCDIR|' ${WRKSRC}/makefile.in
 	@${REINPLACE_CMD} -e \
-		's|^#!.*|#!${PERL}|' ${WRKSRC}/perl/vileget
+		's|defined(FLEX_BETA)|0|' ${WRKSRC}/filters/filters.h
 
 post-install:
 	@${MKDIR} ${DATADIR}/macros
