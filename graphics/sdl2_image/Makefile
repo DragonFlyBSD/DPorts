@@ -1,7 +1,7 @@
-# $FreeBSD: graphics/sdl2_image/Makefile 321500 2013-06-21 19:56:27Z mva $
+# $FreeBSD: graphics/sdl2_image/Makefile 322379 2013-07-06 10:26:12Z mva $
 
 PORTNAME=	sdl2_image
-PORTVERSION=	2.0.p1
+PORTVERSION=	2.0.p2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.libsdl.org/tmp/SDL_image/release/
 DISTNAME=	SDL2_image-2.0.0
