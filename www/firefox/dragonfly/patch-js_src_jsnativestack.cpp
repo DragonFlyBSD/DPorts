@@ -1,6 +1,6 @@
---- js/src/jsnativestack.cpp.orig	2012-11-30 04:12:25.000000000 +0100
-+++ js/src/jsnativestack.cpp	2012-12-26 13:38:18.131938000 +0100
-@@ -19,10 +19,16 @@
+--- js/src/jsnativestack.cpp.orig	2013-06-18 11:01:26.000000000 +0000
++++ js/src/jsnativestack.cpp
+@@ -19,7 +19,7 @@
  #elif defined(XP_MACOSX) || defined(DARWIN) || defined(XP_UNIX)
  # include <pthread.h>
  
@@ -9,16 +9,7 @@
  #  include <pthread_np.h>
  # endif
  
-+# if defined(__FreeBSD__) 
-+_Pragma("GCC visibility push(default)")
-+#  include <pthread_np.h>
-+_Pragma("GCC visibility pop")
-+# endif
-+
- #else
- # error "Unsupported platform"
- 
-@@ -114,7 +120,8 @@
+@@ -117,7 +117,8 @@ js::GetNativeStackBaseImpl()
      pthread_attr_init(&sattr);
  #  if defined(__OpenBSD__)
      stack_t ss;

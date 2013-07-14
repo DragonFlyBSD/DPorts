@@ -1,6 +1,6 @@
 # DragonFly doesn't have ALSA support, so WEBRTC is gone too
 OPTIONS_EXCLUDE+= WEBRTC
-OPTIONS_DEFAULT+= OSS
+OPTIONS_DEFAULT+= PULSEAUDIO
 
 CONFIGURE_ARGS+=--disable-webrtc
 
