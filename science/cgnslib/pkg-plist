@@ -1,16 +1,14 @@
 bin/adf2hdf
 bin/cgconfig
-bin/cgnames
 bin/cgnscalc
 bin/cgnscheck
+bin/cgnscompress
 bin/cgnsconvert
 bin/cgnsdiff
 bin/cgnslist
+bin/cgnsnames
 bin/cgnsnodes
 bin/cgnsplot
-bin/cgnsupdate
-bin/cgnsview
-bin/unitconv
 %%TOOLS%%bin/cgnstools/calcwish
 %%TOOLS%%bin/cgnstools/cgiowish
 %%TOOLS%%bin/cgnstools/cgns_to_plot3d
@@ -25,14 +23,18 @@ bin/unitconv
 %%TOOLS%%bin/cgnstools/plot3d_to_cgns
 %%TOOLS%%bin/cgnstools/plotwish
 %%TOOLS%%bin/cgnstools/tecplot_to_cgns
+bin/cgnsupdate
 bin/cgnsversion
+bin/cgnsview
 bin/hdf2adf
-include/cgnslib.h
-include/cgnswin_f.h
-include/cgnslib_f.h
+bin/unitconv
+include/cgnsBuild.defs
 include/cgns_io.h
+include/cgnslib.h
+include/cgnslib_f.h
 include/cgnstypes.h
 include/cgnstypes_f.h
+include/cgnswin_f.h
 lib/libcgns.a
 lib/libcgns.so
 lib/libcgns.so.3
@@ -55,6 +57,7 @@ lib/libcgns.so.3.1
 %%TOOLS%%share/cgnstools/cgnsplot.png
 %%TOOLS%%share/cgnstools/cgnsplot.tcl
 %%TOOLS%%share/cgnstools/cgnsview.tcl
+%%TOOLS%%share/cgnstools/color.tcl
 %%TOOLS%%share/cgnstools/combobox.tcl
 %%TOOLS%%share/cgnstools/config.tcl
 %%TOOLS%%share/cgnstools/conserved.cnv
@@ -214,12 +217,12 @@ lib/libcgns.so.3.1
 %%TOOLS%%share/cgnstools/util.tcl
 %%TOOLS%%share/cgnstools/utilities.mnu
 %%TOOLS%%share/cgnstools/vtk.tcl
-%%TOOLS%%@dirrm bin/cgnstools
-%%TOOLS%%@dirrm share/cgnstools/help/utilities/images
-%%TOOLS%%@dirrm share/cgnstools/help/utilities
 %%TOOLS%%@dirrm share/cgnstools/help/cgnsview/images
 %%TOOLS%%@dirrm share/cgnstools/help/cgnsview
+%%TOOLS%%@dirrm share/cgnstools/help/utilities/images
+%%TOOLS%%@dirrm share/cgnstools/help/utilities
 %%TOOLS%%@dirrm share/cgnstools/help/cgnsplot/images
 %%TOOLS%%@dirrm share/cgnstools/help/cgnsplot
 %%TOOLS%%@dirrm share/cgnstools/help
 %%TOOLS%%@dirrm share/cgnstools
+%%TOOLS%%@dirrm bin/cgnstools

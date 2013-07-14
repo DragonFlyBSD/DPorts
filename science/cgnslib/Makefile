@@ -1,10 +1,11 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/cgnslib/Makefile 319838 2013-06-04 09:33:05Z gahr $
+# $FreeBSD: science/cgnslib/Makefile 322695 2013-07-10 13:40:57Z thierry $
 
 PORTNAME=	cgnslib
-DISTVERSION=	3.1.3-4
+DISTVERSION=	3.1.4
+PORTEPOCH=	1
 CATEGORIES=	science
-MASTER_SITES=	SF/cgns/${PORTNAME}_${PORTVERSION:R:R}/
+MASTER_SITES=	SF/cgns/${PORTNAME}_${PORTVERSION:R}/
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -60,8 +61,7 @@ PLIST_SUB=	TOOLS=""
 PLIST_SUB=	TOOLS="@comment "
 .endif
 
-WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION:R}
-LIBVER=		${PORTVERSION:R:R}
+LIBVER=		${PORTVERSION:R}
 
 .if ${PORT_OPTIONS:MTESTS}
 regression-test:
