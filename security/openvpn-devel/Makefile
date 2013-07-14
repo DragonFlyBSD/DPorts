@@ -1,8 +1,8 @@
 # Created by: Eric F Crist <ecrist@secure-computing.net>
-# $FreeBSD: security/openvpn-devel/Makefile 318735 2013-05-21 23:32:54Z jpaetzel $
+# $FreeBSD: security/openvpn-devel/Makefile 322134 2013-07-01 18:10:27Z lme $
 
 PORTNAME=	openvpn
-DISTVERSION=	201321
+DISTVERSION=	201326
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.secure-computing.net/pub/FreeBSD/ports/openvpn-devel/ \
 		ftp://ftp2.secure-computing.net/pub/FreeBSD/ports/openvpn-devel/
@@ -30,7 +30,7 @@ SNAPPY_DESC=	Enable the Snappy compression library
 LZO_DESC=		Enable the LZO compression library
 PKCS11_DESC=	Use security/pkcs11-helper
 POLARSSL_DESC=	Build with PolarSSL instead of OpenSSL
-OPTIONS_DEFAULT= LZO SNAPPY
+OPTIONS_DEFAULT=	LZO SNAPPY
 
 USE_RC_SUBR=	openvpn
 USE_LDCONFIG=	${PREFIX}/lib
