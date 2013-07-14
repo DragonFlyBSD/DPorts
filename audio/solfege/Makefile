@@ -1,11 +1,6 @@
-# ex:ts=8
-# Ports collection makefile for:	solfege
-# Date created:			Apr 10, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: audio/solfege/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: ijliao
+# $FreeBSD: audio/solfege/Makefile 322521 2013-07-08 17:16:47Z bapt $
 #   $MCom: ports/audio/solfege/Makefile,v 1.7 2007/09/09 23:47:50 mezz Exp $
-#
 
 PORTNAME=	solfege
 PORTVERSION=	3.20.6
@@ -22,14 +17,13 @@ BUILD_DEPENDS=	${STYLESHEET}:${PORTSDIR}/textproc/docbook-xsl \
 USE_GNOME=	gnomehack pygtk2
 WANT_GNOME=	yes
 USE_PYTHON=	yes
-USES=		gettext
+USES=		gettext display
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_XML2PO=""
 CONFIGURE_ARGS=	--disable-oss-sound \
 		--enable-docbook-stylesheet=${STYLESHEET}
 MAKE_ARGS=	skipmanual=yes
-USE_DISPLAY=	yes
 
 MAN1=		solfege.1
 
