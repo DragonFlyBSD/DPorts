@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/seamonkey-i18n/Makefile 318877 2013-05-23 15:30:07Z flo $
+# $FreeBSD: www/seamonkey-i18n/Makefile 322292 2013-07-04 21:55:52Z flo $
 
 PORTNAME=	seamonkey-i18n
-PORTVERSION=	2.17.1
+PORTVERSION=	2.19
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}/langpack
 PKGNAMEPREFIX=
@@ -71,9 +71,14 @@ do-install:
 	@${ECHO_CMD} '@exec ${INSTALL} -d ${XPI_SLDIRS_ALL:S,^${PREFIX},%D,}' ${_A}
 	@${ECHO_CMD} '@exec for _dir in ${XPI_LINKFARMS} ; { \
 		${LN} -sf ${XPI_LIBDIR}/${WDIR} $$_dir/ ${_Q}; }' ${_A}
-	@${ECHO_CMD} '@unexec for _dir in ${XPI_LINKFARMS} ${XPI_LIBDIR}; { ${RM} -fR $$_dir/${WDIR} ; }' ${_A}
-
-	@${ECHO_CMD} '@unexec ${RMDIR} ${XPI_DIRS_TRY:S,^,%D/,} ${_Q}' ${_A}
+	@for lang in ${SEAMONKEY_I18N_}; do \
+		for xpi in ${XPI_LINKFARMS} ; do \
+			if [ -d $${xpi} ] ; \
+			then \
+				${ECHO_CMD} $$xpi/langpack-$$lang@seamonkey.mozilla.org ${_A} ; \
+			fi ; \
+		done ; \
+	done
 
 post-patch:
 	${FIND} ${WRKSRC} -name install.rdf -print0 | \
