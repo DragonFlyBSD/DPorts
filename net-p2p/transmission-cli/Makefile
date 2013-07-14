@@ -1,8 +1,8 @@
-# $FreeBSD: net-p2p/transmission-cli/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net-p2p/transmission-cli/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	transmission
-PORTVERSION=	2.77
-PORTREVISION?=	0
+PORTVERSION=	2.80
+PORTREVISION?=	1
 CATEGORIES?=	net-p2p
 #MASTER_SITES=	http://download.m0k.org/${PORTNAME}/files/
 MASTER_SITES=	http://transmission.cachefly.net/
@@ -12,6 +12,14 @@ MAINTAINER?=	crees@FreeBSD.org
 COMMENT?=	Lightweight CLI (command line) BitTorrent client and utilities
 
 SLAVEPORT?=	cli
+
+# Odd arrangement here-- cli is MIT, everything else is GPL
+.if ${SLAVEPORT} == cli
+LICENSE=	MIT
+.else
+LICENSE=	GPLv2
+.endif
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS_INSTALL=	${PORTNAME}${PKGNAMESUFFIX}-2.5*
 
@@ -23,7 +31,7 @@ OPTIONS_DEFINE=	LITE
 LIB_DEPENDS?=	${GEN_LIB_DEPENDS}
 
 # General dependencies
-GEN_LIB_DEPENDS=curl.6:${PORTSDIR}/ftp/curl \
+GEN_LIB_DEPENDS=curl:${PORTSDIR}/ftp/curl \
 		event-2.0.6:${PORTSDIR}/devel/libevent2
 GEN_RUN_DEPENDS=${LOCALBASE}/share/transmission/web/index.html:${PORTSDIR}/www/transmission-web
 
@@ -52,13 +60,13 @@ EXTRA_PATCHES=	${PATCHDIR}/disable-web
 
 USE_XZ=		yes
 
-DOCS=		AUTHORS COPYING NEWS README
+DOCS=		AUTHORS NEWS README
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 
 general-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 		's|noinst_PROGRAMS = |noinst_PROGRAMS = #|g'
-.if ${SLAVEPORT} != gtk2
+.if ${SLAVEPORT} != gtk
 	@${REINPLACE_CMD} -e '/#define DISABLE_GETTEXT/s,/\* \(.*\) \*/,\1,' \
 		${WRKSRC}/libtransmission/utils.h
 .endif
