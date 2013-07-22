@@ -1,7 +1,8 @@
-# $FreeBSD: textproc/flex/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/flex/Makefile 322739 2013-07-11 04:54:06Z johans $
 
 PORTNAME=	flex
 PORTVERSION=	2.5.37
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}
 
@@ -10,12 +11,14 @@ COMMENT=	Fast lexical analyzer generator
 
 BUILD_DEPENDS=	help2man:${PORTSDIR}/misc/help2man \
 		gm4:${PORTSDIR}/devel/m4
+RUN_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USES=		bison
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 # install flex header to its own dir to avoid conflict with system flex.
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/flex
+CONFIGURE_ENV=	M4=${LOCALBASE}/bin/gm4
 USE_GMAKE=	yes
 MAN1=		flex.1
 INFO=		flex
