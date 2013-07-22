@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22/Makefile.modules 313287 2013-03-02 19:31:49Z ohauer $
+# $FreeBSD: www/apache22/Makefile.modules 322728 2013-07-10 19:01:44Z ohauer $
 #
 # Note by Clement Laforet: (to generate PLIST_SUB entries for modules)
 #	gsed 's/^\(.*\)mod\(.*\)\.so/%%\MOD\U\2%%\L\1mod\2\.so/' pkg-plist > tmp
@@ -72,7 +72,7 @@ LATEST_LINK=		apache22-${WITH_MPM}-mpm
 .if ${WITH_MPM} == "worker" || ${WITH_MPM} == "event"
 PORT_OPTIONS+=		CGID
 .if ${PORT_OPTIONS:MCGI}
-IGNORE= When using a multi-threaded MPM, the module CGID should be used in place CGI. \
+IGNORE=	When using a multi-threaded MPM, the module CGID should be used in place CGI. \
 	Please de-select CGI and select CGID instead. \
 	See http://httpd.apache.org/docs/2.2/mod/mod_cgi.html
 .endif
