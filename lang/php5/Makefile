@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/php5/Makefile 320229 2013-06-07 23:49:53Z flo $
+# $FreeBSD: lang/php5/Makefile 323097 2013-07-16 06:47:02Z ale $
 
 PORTNAME=	php5
-PORTVERSION=	5.4.16
+PORTVERSION=	5.4.17
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
@@ -53,7 +53,7 @@ IPV6_DESC=	Enable ipv6 support
 MAILHEAD_DESC=	Enable mail header patch
 LINKTHR_DESC=	Link thread lib (for threaded extensions)
 
-CONFLICTS=	php52-5* php53-5*
+CONFLICTS=	php52-5* php53-5* php55-5*
 
 MAN1=		php-config.1 phpize.1
 
