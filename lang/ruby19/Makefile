@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/ruby19/Makefile 319130 2013-05-26 19:22:51Z swills $
+# $FreeBSD: lang/ruby19/Makefile 322794 2013-07-11 20:07:33Z swills $
 
 PORTNAME=	ruby
 PORTVERSION=	${RUBY_PORTVERSION}
@@ -222,7 +222,7 @@ post-install:
 
 	@${CAT} ${PKGMESSAGE}
 
-plist::
+plist:
 	truncate -s0 pkg-plist
 .for FILE in ${INSTALLED_SCRIPTS}
 	@${ECHO_CMD} "bin/${FILE}%%RUBY_SUFFIX%%" >> pkg-plist
