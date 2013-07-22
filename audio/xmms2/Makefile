@@ -1,9 +1,9 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/xmms2/Makefile 322302 2013-07-05 05:55:18Z bapt $
+# $FreeBSD: audio/xmms2/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME?=	xmms2
 PORTVERSION=	0.8
-PORTREVISION?=	3
+PORTREVISION?=	4
 DISTVERSIONSUFFIX=DrO_o
 CATEGORIES?=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}%20${DISTVERSIONSUFFIX}
