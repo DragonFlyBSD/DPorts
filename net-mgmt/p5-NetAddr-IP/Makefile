@@ -1,8 +1,9 @@
 # Created by: Christopher N. Harrell <cnh@ivmg.net>
-# $FreeBSD: net-mgmt/p5-NetAddr-IP/Makefile 319175 2013-05-27 08:48:15Z tobez $
+# $FreeBSD: net-mgmt/p5-NetAddr-IP/Makefile 322696 2013-07-10 13:42:41Z tobez $
 
 PORTNAME=	NetAddr-IP
 PORTVERSION=	4.069
+PORTREVISION=	1
 CATEGORIES=	net-mgmt perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
