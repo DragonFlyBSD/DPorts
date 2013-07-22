@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.options.desc.mk 317928 2013-05-12 04:48:06Z danfe $
+# $FreeBSD: Mk/bsd.options.desc.mk 322819 2013-07-12 08:11:42Z sunpoet $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -51,6 +51,7 @@ CUE_DESC?=		Embedded CUE sheets support
 CUPS_DESC?=		CUPS printing system support
 CURL_DESC?=		Data transfer support via cURL
 CXX_DESC?=		C++ support
+CYASSL_DESC?=		SSL/TLS support via CyaSSL
 DAGRAB_DESC?=		CD ripping support (dagrab)
 DATA_DESC?=		Install data files
 DBM_DESC?=		DBM support
@@ -321,6 +322,7 @@ NLS_DESC?=		Native Language Support
 NMAP_DESC?=		NMAP support
 NNTP_DESC?=		NNTP (News) support
 NOTIFY_DESC?=		Startup notification support
+NSS_DESC?=		SSL/TLS support via NSS
 NTLM_DESC?=		NTLM authentication support
 NUMPY_DESC?=		NumPy mathematical computing support
 OBJC_DESC?=		Objective C support
@@ -353,6 +355,7 @@ PIXBUF_DESC?=		GDK-PixBuf library support
 PLUGINS_DESC?=		Build and/or install plugins
 PNG_DESC?=		PNG image format support
 PNM_DESC?=		PNM image format support
+POLARSSL_DESC?=		SSL/TLS support via PolarSSL
 POPPLER_DESC?=		PDF and PS file support
 PORTAUDIO_DESC?=	PortAudio library support
 POSTGIS_DESC?=		PostGIS support

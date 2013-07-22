@@ -28,7 +28,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: Tools/scripts/chkversion.pl 306176 2012-10-20 10:36:27Z beat $
+# $FreeBSD: Tools/scripts/chkversion.pl 321177 2013-06-18 09:45:58Z tijl $
 #
 # MAINTAINER=   erwin@FreeBSD.org
 #
@@ -123,7 +123,7 @@ sub readfrom {
     return wantarray ? @childout : $childout[0];
 }
 
-foreach (qw(ARCH OPSYS OSREL OSVERSION PKGINSTALLVER UID)) {
+foreach (qw(ARCH OPSYS OSREL OSVERSION UID)) {
     my @cachedenv = readfrom $portsdir, $make, "-V$_";
     $ENV{$_} = $cachedenv[0];
 }

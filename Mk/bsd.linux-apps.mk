@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.linux-apps.mk 322233 2013-07-03 15:32:01Z rene $
+# $FreeBSD: Mk/bsd.linux-apps.mk 322861 2013-07-12 18:34:22Z rene $
 #
 # Please view me with 4 column tabs!
 
@@ -58,13 +58,13 @@ _LINUX_APPS_ALL=	allegro alsalib arts aspell atk cairo cups-libs curl dri esound
 					freealut gdkpixbuf gnutls gtk gtk2 hicontheme imlib jpeg libaudiofile \
 					libg2c libgcrypt libglade libglade2 libglu libgpg-error libmng libogg \
 					libsigcpp20 libtasn1 libtheora 	libvorbis libxml libxml2 mikmod naslibs \
-					ncurses-base openal openmotif openssl pango png png10 qt33 scimgtk \
+					ncurses-base openal openmotif openssl pango png png10 scimgtk \
 					scimlibs sdl12 sdlimage sdlmixer tiff xorglibs ucl ungif upx webauth
 
 # 2.6.16 components
 _LINUX_26_APPS=		alsa-plugins-oss blt cyrus-sasl2 dbusglib dbuslibs \
 			libasyncns libidn libssh2 libv4l nspr nss openal-soft \
-			openldap pulseaudio-libs sqlite3 tcl84 tk84
+			openldap pulseaudio-libs qt45 sqlite3 tcl84 tk84
 
 _LINUX_APPS_ALL+=	${_LINUX_26_APPS}
 
@@ -335,10 +335,9 @@ pulseaudio-libs_f10_FILE=	${LINUXBASE}/usr/lib/libpulse.so.0
 pulseaudio-libs_DETECT=		${pulseaudio-libs${LINUX_DIST_SUFFIX:S/-/_/}_FILE}
 pulseaudio-libs_PORT=		${PORTSDIR}/audio/linux${LINUX_DIST_SUFFIX}-pulseaudio-libs
 
-qt33_f10_FILE=		${LINUXBASE}/usr/lib/qt-3.3/lib/libqt-mt.so.3.3.8
-qt33_DETECT=		${qt33${LINUX_DIST_SUFFIX:S/-/_/}_FILE}
-qt33_PORT=			${PORTSDIR}/x11-toolkits/linux${LINUX_DIST_SUFFIX}-qt33
-qt33_DEPENDS=		fontconfig libmng png
+qt45_f10_FILE=		${LINUXBASE}/usr/lib/libQtCore.so.4.5.3
+qt45_DETECT=		${qt45${LINUX_DIST_SUFFIX:S/-/_/}_FILE}
+qt45_DEPENDS=		fontconfig libmng png
 
 sdl12_f10_FILE=		${LINUXBASE}/usr/lib/libSDL-1.2.so.0.11.2
 sdl12_DETECT=		${sdl12${LINUX_DIST_SUFFIX:S/-/_/}_FILE}

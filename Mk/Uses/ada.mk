@@ -1,8 +1,8 @@
-# $FreeBSD: Mk/Uses/ada.mk 321369 2013-06-20 09:57:54Z bapt $
+# $FreeBSD: Mk/Uses/ada.mk 322832 2013-07-12 13:40:50Z marino $
 #
 # Establish Ada-capable compiler as a build dependency
 #
-# MAINTAINER: draco@marino.st
+# MAINTAINER: marino@FreeBSD.org
 #
 # Feature:      ada
 # Usage:        USES=ada
