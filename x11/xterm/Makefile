@@ -1,8 +1,8 @@
 # Created by: krion
-# $FreeBSD: x11/xterm/Makefile 322552 2013-07-09 09:07:52Z ehaupt $
+# $FreeBSD: x11/xterm/Makefile 322763 2013-07-11 11:38:38Z ehaupt $
 
 PORTNAME=	xterm
-PORTVERSION=	295
+PORTVERSION=	296
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/:src1 \
 		CRITICAL:src1 CRITICAL:src2
@@ -27,11 +27,12 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 ICONVERSION=	1
 
-OPTIONS_DEFINE=	WCHAR LUIT DECTERM PCRE GNOME DABBREV 256COLOR
+OPTIONS_DEFINE=	WCHAR LUIT DECTERM PCRE GNOME DABBREV 256COLOR SIXEL
 
 DABBREV_DESC=	Enable support for dabbrev-expand
 DECTERM_DESC=	Enable DECterm Locator support
 LUIT_DESC=	Use LUIT for locale convertion from/to UTF-8
+SIXEL_DESC=	Enable Sixel graphics support
 WCHAR_DESC=	Enable wide-character support
 256COLOR_DESC=	Enable 256-color support
 
@@ -63,6 +64,10 @@ LIB_DEPENDS=		pcre:${PORTSDIR}/devel/pcre
 
 .if ${PORT_OPTIONS:MDABBREV}
 CONFIGURE_ARGS+=	--enable-dabbrev
+.endif
+
+.if ${PORT_OPTIONS:MSIXEL}
+CONFIGURE_ARGS+=	--enable-sixel-graphics
 .endif
 
 .if ${PORT_OPTIONS:MGNOME}
