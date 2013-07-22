@@ -1,8 +1,9 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/flac/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: audio/flac/Makefile 323248 2013-07-18 17:47:53Z naddy $
 
 PORTNAME=	flac
 PORTVERSION=	1.3.0
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/flac/
 
@@ -20,7 +21,6 @@ CONFIGURE_ARGS=	--enable-sse \
 		--disable-silent-rules \
 		--disable-thorough-tests \
 		--disable-xmms-plugin
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	DOCS ICONV
 OPTIONS_DEFAULT=ICONV
