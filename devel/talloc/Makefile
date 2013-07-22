@@ -1,4 +1,4 @@
-# $FreeBSD: devel/talloc/Makefile 318827 2013-05-23 02:23:34Z jgh $
+# $FreeBSD: devel/talloc/Makefile 322111 2013-07-01 02:36:07Z timur $
 
 PORTNAME=		talloc
 PORTVERSION=		2.0.8
@@ -28,7 +28,11 @@ MAKE_JOBS_SAFE=		yes
 PKGCONFIGDIR?=		${PREFIX}/libdata/pkgconfig
 PLIST_SUB+=		PKGCONFIGDIR=${PKGCONFIGDIR:S;${PREFIX}/;;}
 
-OPTIONS_DEFINE=	PYTHON
+CONFIGURE_ARGS+=	--prefix=${PREFIX} \
+			--mandir=${MANPREFIX}/man \
+			--infodir=${PREFIX}/${INFO_PATH}/${INFO_SUBDIR}
+
+OPTIONS_DEFINE=		PYTHON
 OPTIONS_DEFAULT=	PYTHON
 
 .include <bsd.port.options.mk>
@@ -43,8 +47,6 @@ PLIST_FILES=		include/talloc.h \
 CONFIGURE_ENV+=		XSLTPROC="/usr/bin/true"
 CONFIGURE_ENV+=		NOCOLOR=yes
 MAKE_ENV+=		NOCOLOR=yes
-
-CONFIGURE_ARGS+=	--mandir=${MANPREFIX}/man
 
 .if !defined(DISABLE_MAKE_JOBS) && !defined(MAKE_JOBS_UNSAFE)
 .if defined(MAKE_JOBS_SAFE) || defined(FORCE_MAKE_JOBS)
