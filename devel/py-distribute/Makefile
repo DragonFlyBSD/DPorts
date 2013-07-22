@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-distribute/Makefile 313436 2013-03-05 06:20:28Z rm $
+# $FreeBSD: devel/py-distribute/Makefile 321041 2013-06-16 11:46:51Z koobs $
 
 PORTNAME=	distribute
 PORTVERSION=	0.6.35
@@ -65,7 +65,7 @@ post-install:
 	${PYTHON_CMD} -m py_compile ${SITE_PY}
 	${PYTHON_CMD} -OO -m py_compile ${SITE_PY}
 	${CP} ${EASYINSTALL_PTH} ${EASYINSTALL_PTH}.dist
-	${LN} ${EASYINSTALL_PTH}.dist ${PYTHON_SITELIBDIR}/distribute.pth
+	${LN} -sf ${EASYINSTALL_PTH}.dist ${PYTHON_SITELIBDIR}/distribute.pth
 	PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 	if [ -f ${PKGMESSAGE} ]; then ${CAT} ${PKGMESSAGE}; fi
 
