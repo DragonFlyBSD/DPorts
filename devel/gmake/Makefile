@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: devel/gmake/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: devel/gmake/Makefile 322731 2013-07-10 20:45:52Z ade $
 
 PORTNAME=	gmake
 PORTVERSION=	3.82
@@ -18,6 +18,8 @@ COMMENT=	GNU version of 'make' utility
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--program-prefix=g
+
+OPTIONS_DEFINE=	NLS
 
 .include <bsd.port.options.mk>
 
