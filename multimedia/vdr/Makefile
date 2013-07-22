@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@freebsd.org>
-# $FreeBSD: multimedia/vdr/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: multimedia/vdr/Makefile 322722 2013-07-10 17:44:45Z nox $
 
 PORTNAME=	vdr
 PORTVERSION=	1.7.29
@@ -22,10 +22,9 @@ DVBPATCH_DESC=		DVB audio patch for some countries
 STB0899_SIGNAL_DESC=	STB0899 signal strength patch
 OPTIONS_DEFAULT=	IPTVPATCH TTXPATCH
 
-USES=		pkgconfig gettext iconv
+USES=		pkgconfig gettext iconv gmake
 DIST_SUBDIR=	vdr
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 PORTDOCS=	COPYING INSTALL MANUAL README HISTORY
 MAKE_JOBS_SAFE=	yes
 MAN1=		vdr.1
