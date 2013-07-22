@@ -1,9 +1,9 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: devel/tcllib/Makefile 317192 2013-05-03 10:48:58Z gahr $
+# $FreeBSD: devel/tcllib/Makefile 323251 2013-07-18 18:14:51Z gahr $
 
 PORTNAME=	tcllib
 PORTVERSION=	1.15
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel tcl
 MASTER_SITES=	SF
 
