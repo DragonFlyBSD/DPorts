@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: lang/gawk/Makefile 318249 2013-05-15 17:03:17Z johans $
+# $FreeBSD: lang/gawk/Makefile 322035 2013-06-29 09:30:23Z johans $
 
 PORTNAME=	gawk
 PORTVERSION=	4.1.0
@@ -10,6 +10,9 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	The GNU version of Awk
 
 LIB_DEPENDS=	sigsegv:${PORTSDIR}/devel/libsigsegv
+
+OPTIONS_DEFINE=	MPFR
+MPFR_DESC?=	Support multiple-precision floating-point computation
 
 INFO=		gawk gawkinet
 
@@ -33,6 +36,12 @@ PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MMPFR}
+LIB_DEPENDS=	mpfr:${PORTSDIR}/math/mpfr
+.else
+CONFIGURE_ARGS+=--without-gmp --without-mpfr
 .endif
 
 post-patch:
