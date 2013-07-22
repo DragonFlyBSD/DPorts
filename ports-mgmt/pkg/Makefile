@@ -1,7 +1,8 @@
-# $FreeBSD: ports-mgmt/pkg/Makefile 322385 2013-07-06 11:29:18Z bdrewery $
+# $FreeBSD: ports-mgmt/pkg/Makefile 323162 2013-07-17 12:11:59Z bapt $
 
 PORTNAME=	pkg
 DISTVERSION=	1.1.4
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://files.etoilebsd.net/pkg/ \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
