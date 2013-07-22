@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/py-dbus/Makefile 321732 2013-06-25 11:09:26Z kwm $
+# $FreeBSD: devel/py-dbus/Makefile 323195 2013-07-18 03:41:38Z miwi $
 #   $MCom: ports/trunk/devel/py-dbus/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	dbus
@@ -39,7 +39,7 @@ PLIST_SUB+=	HTML="@comment "
 .endif
 
 post-patch:
-.if ! ${PORT_OPTIONS:MHTMLDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's|HEADERS install-dist_docDATA|HEADERS|g ; \
 		s|PYTHON install-nodist_docDATA|PYTHON|g' \
 			${WRKSRC}/Makefile.in
