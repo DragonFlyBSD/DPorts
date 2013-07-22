@@ -2,10 +2,11 @@
 # Date created:			7 Jul 2004
 # Whom:				Alex Dupre <ale@FreeBSD.org>
 #
-# $FreeBSD: ports/ftp/php5-curl/Makefile,v 1.6 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/php5-curl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 CATEGORIES=	ftp
+PORTREVISION=	1
 
 MASTERDIR=	${.CURDIR}/../../lang/php5
 
