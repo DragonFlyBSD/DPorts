@@ -1,7 +1,7 @@
-# $FreeBSD: devel/tradcpp/Makefile 322636 2013-07-10 10:10:44Z bapt $
+# $FreeBSD: devel/tradcpp/Makefile 323079 2013-07-15 21:00:15Z bapt $
 
 PORTNAME=	tradcpp
-PORTVERSION=	0.3.1
+PORTVERSION=	0.4
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/dholland/
 
