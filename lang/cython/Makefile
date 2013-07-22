@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenhping@gmail.com>
-# $FreeBSD: lang/cython/Makefile 317011 2013-05-01 11:14:06Z wen $
+# $FreeBSD: lang/cython/Makefile 323271 2013-07-19 08:28:34Z wen $
 
 PORTNAME=	cython
-PORTVERSION=	0.19
+PORTVERSION=	0.19.1
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.cython.org/release/ \
 		CHEESESHOP
