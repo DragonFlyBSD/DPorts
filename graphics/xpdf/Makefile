@@ -1,14 +1,14 @@
-# $FreeBSD: graphics/xpdf/Makefile 322621 2013-07-10 06:55:28Z bapt $
+# $FreeBSD: graphics/xpdf/Makefile 322813 2013-07-12 04:33:25Z cy $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		${MASTER_SITE_TEX_CTAN}
 MASTER_SITE_SUBDIR=	support/xpdf
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Display PDF files and convert them to other formats
 
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
@@ -21,7 +21,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-opi \
 		--with-freetype2-library="${LOCALBASE}/lib" \
 		--with-freetype2-includes="${LOCALBASE}/include/freetype2" \
-		--bindir="${PREFIX}/libexec/xpdf"
+		--bindir="${PREFIX}/libexec/xpdf" \
+		--mandir="${PREFIX}/share/xpdf/man"
+
+MANPREFIX=	${PREFIX}/share/xpdf
 
 OPTIONS_DEFINE=	LIBPAPER TYPE1 X11
 LIBPAPER_DESC=	Enable libpaper
