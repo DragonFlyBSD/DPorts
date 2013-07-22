@@ -1,5 +1,5 @@
 # Created by: Brooks Davis <brooks@FreeBSD.org>
-# $FreeBSD: security/ca_root_nss/Makefile 318268 2013-05-16 02:00:38Z flo $
+# $FreeBSD: security/ca_root_nss/Makefile 322687 2013-07-10 13:01:52Z flo $
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
@@ -24,9 +24,9 @@ PLIST_SUB+=	CERTDIR=${CERTDIR}
 # !!!  Please DO NOT submit patches for new version until it has !!!
 # !!!  been committed there first.                               !!!
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-VERSION_NSS=	3.14.3
+VERSION_NSS=	3.15.1
 #NSS_SUFFIX=	.with.ckbi.1.93
-CERTDATA_TXT_PATH=	nss-${VERSION_NSS}/mozilla/security/nss/lib/ckfw/builtins/certdata.txt
+CERTDATA_TXT_PATH=	nss-${VERSION_NSS}/nss/lib/ckfw/builtins/certdata.txt
 BUNDLE_PROCESSOR=	MAca-bundle.pl
 SUB_FILES=	MAca-bundle.pl
 SUB_LIST=	VERSION_NSS=${VERSION_NSS}
