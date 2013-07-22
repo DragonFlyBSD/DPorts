@@ -1,16 +1,16 @@
-# Created by: John Marino <draco@marino.st> 
-# $FreeBSD: lang/gcc-aux/Makefile 320124 2013-06-06 19:55:55Z rakuco $
+# Created by: John Marino <marino@FreeBSD.org>
+# $FreeBSD: lang/gcc-aux/Makefile 323380 2013-07-21 13:00:46Z marino $
 
 PORTNAME=	gcc-aux
 PORTVERSION=	${SNAPSHOT}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://downloads.dragonlace.net/src/:boot \
 		${MASTER_SITE_GCC}
 MASTER_SITE_SUBDIR=	releases/gcc-${GCC_VERSION}
 DISTFILES=	gcc-${GCC_VERSION}.tar.bz2
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	marino@FreeBSD.org
 COMMENT=	Version of GCC ${GCC_BRANCH} with full Ada support
 
 .include "${.CURDIR}/Makefile.common"
@@ -293,7 +293,7 @@ test-c:
 
 do-install:
 	cd ${BUILDDIR} && ${SETENV} ${ADA_MAKE_ENV} ${GMAKE} install-strip DESTDIR=${DESTINY}
-	cd ${DESTINY}${PREFIX}; ${FIND} * -type d -empty -print | xargs rmdir
+	cd ${DESTINY}${PREFIX}; ${FIND} * -type d -empty -print | ${XARGS} ${RMDIR}
 	${CP} -pR ${DESTINY}${PREFIX}/ ${PREFIX}/
 
 post-install:

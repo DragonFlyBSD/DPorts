@@ -1,0 +1,6 @@
+# $FreeBSD: lang/gcc-aux/Makefile.version 323380 2013-07-21 13:00:46Z marino $
+
+GCC_BRANCH=		4.7
+GCC_POINT=		3
+GCC_VERSION=		${GCC_BRANCH}.${GCC_POINT}
+SNAPSHOT=		20130411
