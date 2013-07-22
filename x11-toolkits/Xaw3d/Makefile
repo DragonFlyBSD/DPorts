@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: x11-toolkits/Xaw3d/Makefile 316994 2013-05-01 07:20:26Z jgh $
+# $FreeBSD: x11-toolkits/Xaw3d/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	Xaw3d
 PORTVERSION=	1.5E
@@ -14,8 +14,8 @@ COMMENT=	3-D Athena Widget set that looks like Motif
 LICENSE=	MIT
 
 WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
+USES=		imake
 USE_GCC=	any
-USE_IMAKE=	yes
 USE_XORG=	x11 xext xmu xt sm ice xpm
 USE_LDCONFIG=	yes
 
