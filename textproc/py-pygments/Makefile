@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: textproc/py-pygments/Makefile 320788 2013-06-13 11:58:43Z wg $
+# $FreeBSD: textproc/py-pygments/Makefile 322463 2013-07-07 22:46:13Z nivit $
 #
 
 PORTNAME=	pygments
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	Pygments-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A syntax highlighter written in Python
+COMMENT=	Syntax highlighter written in Python
 
 LICENSE=	BSD
 
@@ -36,4 +36,10 @@ post-install:
 	@cd ${WRKSRC}/docs/build && ${COPYTREE_SHARE} . ${DOCSDIR}
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PYTHON_REL} >= 320
+.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
+.endif
+
+.include <bsd.port.post.mk>
