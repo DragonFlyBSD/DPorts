@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: ports/devel/autoconf-wrapper/files/autotools-wrapper.sh,v 1.6 2012/11/17 05:55:34 svnexp Exp $
+# $FreeBSD: devel/autoconf-wrapper/files/autotools-wrapper.sh 300896 2012-07-14 13:54:48Z beat $
 #
 
 bindir=%%PREFIX%%/bin
