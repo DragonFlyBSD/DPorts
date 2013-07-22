@@ -1,8 +1,9 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/dssi/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/dssi/Makefile 322948 2013-07-13 17:23:19Z deischen $
 
 PORTNAME=	dssi
 PORTVERSION=	1.1.1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
@@ -14,7 +15,7 @@ LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 LIB_DEPENDS=	dssialsacompat.0:${PORTSDIR}/audio/libdssialsacompat \
-		lo.7:${PORTSDIR}/audio/liblo \
+		lo:${PORTSDIR}/audio/liblo \
 		samplerate.1:${PORTSDIR}/audio/libsamplerate \
 		sndfile.1:${PORTSDIR}/audio/libsndfile \
 		jack.0:${PORTSDIR}/audio/jack
