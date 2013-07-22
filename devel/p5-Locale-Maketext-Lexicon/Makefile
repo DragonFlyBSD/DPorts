@@ -1,8 +1,8 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Locale-Maketext-Lexicon/Makefile 317602 2013-05-07 12:44:42Z tobez $
+# $FreeBSD: devel/p5-Locale-Maketext-Lexicon/Makefile 323287 2013-07-19 13:07:06Z culot $
 
 PORTNAME=	Locale-Maketext-Lexicon
-PORTVERSION=	0.94
+PORTVERSION=	0.96
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Locale/DRTECH
