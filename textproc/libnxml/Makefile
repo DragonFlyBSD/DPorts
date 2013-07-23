@@ -2,12 +2,12 @@
 # Date created:		2006-04-09
 # Whom:			Nicola Vitale	<nivit@email.it>
 #
-# $FreeBSD: ports/textproc/libnxml/Makefile,v 1.26 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: textproc/libnxml/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	libnxml
 PORTVERSION=	0.18.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://www.autistici.org/bakunin/libnxml/ \
 		http://nivi.interfree.it/distfiles/${PORTNAME}/${PORTVERSION}/
@@ -15,7 +15,7 @@ MASTER_SITES=	http://www.autistici.org/bakunin/libnxml/ \
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	A C library for writing XML 1.0/1.1 files or streams
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
