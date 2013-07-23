@@ -1,5 +1,5 @@
-# Created by: Jason Helfman <jhelfman@experts-exchange.com>
-# $FreeBSD: www/rubygem-jquery-rails/Makefile 320429 2013-06-10 01:44:30Z swills $
+# Created by: Jason Helfman <jgh@FreeBSD.org>
+# $FreeBSD: www/rubygem-jquery-rails/Makefile 322868 2013-07-12 22:35:46Z jgh $
 
 PORTNAME=	jquery-rails
 PORTVERSION=	3.0.1
