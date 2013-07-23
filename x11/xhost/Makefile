@@ -1,7 +1,7 @@
-# $FreeBSD: ports/x11/xhost/Makefile,v 1.6 2013/02/04 04:04:03 svnexp Exp $
+# $FreeBSD: x11/xhost/Makefile 323172 2013-07-17 14:21:10Z zeising $
 
 PORTNAME=	xhost
-PORTVERSION=	1.0.5
+PORTVERSION=	1.0.6
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
