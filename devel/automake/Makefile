@@ -2,11 +2,11 @@
 # Date created:		5th December 2006
 # Whom:			Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/automake/Makefile,v 1.46 2012/12/19 20:37:08 svnexp Exp $
+# $FreeBSD: devel/automake/Makefile 323088 2013-07-16 05:42:36Z ade $
 #
 
 PORTNAME=	automake
-PORTVERSION=	1.12.6
+PORTVERSION=	1.14
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	automake
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${AUTOCONF_DEPENDS} \
 		automake-wrapper:${PORTSDIR}/devel/automake-wrapper
 
 USE_AUTOTOOLS=	autoconf:env
-BUILD_VERSION=	1.12
+BUILD_VERSION=	1.14
 PLIST_SUB=	BUILD_VERSION=${BUILD_VERSION}
 USE_XZ=		yes
 USE_PERL5=	yes
