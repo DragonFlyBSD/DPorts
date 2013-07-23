@@ -2,12 +2,12 @@
 # Date created:			01 March 2003
 # Whom:				Dima Dorfman <dima@unixfreak.org>
 #
-# $FreeBSD: ports/print/foomatic-db/Makefile,v 1.36 2012/11/17 06:00:49 svnexp Exp $
+# $FreeBSD: print/foomatic-db/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	db
 PORTVERSION=	20090530
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_LOCAL:S,$,acm/foomatic/,} \
 		${MASTER_SITE_GOOGLE_CODE}
@@ -19,7 +19,7 @@ MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Foomatic database
 
 LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2 \
-		curl.6:${PORTSDIR}/ftp/curl
+		curl:${PORTSDIR}/ftp/curl
 
 PROJECTHOST=	bsdistfiles
 USE_GMAKE=	yes
