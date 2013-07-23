@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/percona55-client/Makefile,v 1.114 2013/01/17 16:56:03 svnexp Exp $
+# $FreeBSD: databases/percona55-client/Makefile 310554 2013-01-17 16:43:07Z flo $
 
 PORTNAME=	percona
 PKGNAMESUFFIX=	-client
