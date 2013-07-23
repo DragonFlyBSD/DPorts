@@ -1,9 +1,9 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: multimedia/quvi/Makefile 320307 2013-06-08 22:45:17Z sunpoet $
+# $FreeBSD: multimedia/quvi/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	quvi
 PORTVERSION=	0.4.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION:R}/${PORTNAME}/ \
 		GOOGLE_CODE
