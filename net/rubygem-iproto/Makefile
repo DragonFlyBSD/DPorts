@@ -1,15 +1,15 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: net/rubygem-iproto/Makefile 319335 2013-05-29 00:42:21Z miwi $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: net/rubygem-iproto/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	iproto
-PORTVERSION=	0.3.8
+PORTVERSION=	0.3.10
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Ruby implementation of Mail.Ru iproto protocol
 
-RUN_DEPENDS=	rubygem-bin_utils=0.0.3:${PORTSDIR}/devel/rubygem-bin_utils
+RUN_DEPENDS=	rubygem-bin_utils>=0.0.3:${PORTSDIR}/devel/rubygem-bin_utils
 
 RUBY_VER=	1.9
 USE_RUBY=	yes
