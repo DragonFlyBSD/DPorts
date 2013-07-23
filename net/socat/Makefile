@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: net/socat/Makefile 319300 2013-05-28 09:27:19Z ehaupt $
+# $FreeBSD: net/socat/Makefile 323029 2013-07-15 12:56:17Z ehaupt $
 
 PORTNAME=	socat
 PORTVERSION=	1.7.2.2
+PORTREVISION=	1
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.dest-unreach.org/socat/download/ \
 		CRITICAL
@@ -27,6 +28,11 @@ PORTDOCS=	EXAMPLES README SECURITY FAQ
 OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
+
+.if defined(WITH_OPENSSL_PORT)
+CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+.endif
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000024
 CCISCLANG!=	${CC} --version | ${HEAD} -1 | ${GREP} 'clang'
