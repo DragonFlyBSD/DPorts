@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: x11/gnome-libs/Makefile 316950 2013-04-30 16:37:46Z bdrewery $
+# $FreeBSD: x11/gnome-libs/Makefile 323446 2013-07-22 13:24:50Z kwm $
 #   $MCom: ports/x11/gnome-libs/Makefile,v 1.7 2007/08/04 03:51:32 marcus Exp $
 
 PORTNAME=	gnome-libs
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
+MAKE_JOBS_UNSAFE=yes
 USES=		charsetfix gettext pathfix
 USE_BZIP2=	yes
 USE_XORG=	xpm ice x11
