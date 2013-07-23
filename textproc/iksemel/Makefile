@@ -1,5 +1,5 @@
 # Created by: trasz
-# $FreeBSD: textproc/iksemel/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/iksemel/Makefile 323111 2013-07-16 14:57:23Z miwi $
 
 PORTNAME=	iksemel
 PORTVERSION=	1.4
@@ -14,6 +14,7 @@ LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls
 
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtool
 ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
+AUTOMAKE_ARGS=	--add-missing
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
