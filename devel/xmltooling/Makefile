@@ -1,15 +1,16 @@
 # Created by: Janos Mohacsi
-# $FreeBSD: devel/xmltooling/Makefile 321194 2013-06-18 15:15:48Z girgen $
+# $FreeBSD: devel/xmltooling/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	xmltooling
 PORTVERSION=	1.5.3
+PORTREVISION=	1
 CATEGORIES=	devel security
 MASTER_SITES=	http://shibboleth.net/downloads/c++-opensaml/2.5.3/
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Low level XML support for SAML
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		log4shib.1:${PORTSDIR}/devel/log4shib \
 		xerces-c.3:${PORTSDIR}/textproc/xerces-c3 \
 		xml-security-c.17:${PORTSDIR}/security/apache-xml-security-c
