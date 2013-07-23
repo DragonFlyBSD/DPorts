@@ -1,4 +1,4 @@
-@comment $FreeBSD: security/py-oauthlib/pkg-plist 320425 2013-06-10 01:08:24Z koobs $
+@comment $FreeBSD: security/py-oauthlib/pkg-plist 320922 2013-06-14 14:04:38Z koobs $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/dependency_links.txt
@@ -110,6 +110,10 @@
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/oauthlib/uri_validate.py
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/oauthlib/uri_validate.pyc
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/oauthlib/uri_validate.pyo
+@dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/oauthlib/oauth2/rfc6749/grant_types
+@dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/oauthlib/oauth2/rfc6749/endpoints
+@dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/oauthlib/oauth2/rfc6749/clients
+@dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/oauthlib/oauth2/rfc6749
 @dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/oauthlib/oauth2
 @dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/oauthlib/oauth1/rfc5849
 @dirrm %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/oauthlib/oauth1
