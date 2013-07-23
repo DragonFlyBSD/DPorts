@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: graphics/pfstools/Makefile 318829 2013-05-23 02:35:26Z jgh $
+# $FreeBSD: graphics/pfstools/Makefile 322192 2013-07-02 19:06:29Z rene $
 
 PORTNAME=	pfstools
 PORTVERSION=	1.6.4
@@ -29,8 +29,7 @@ USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USES=	pkgconfig
 
-OPTIONS_DEFINE=	NETPBM OPENEXR TIFF QT IMAGEMAGICK OCTAVE OPENGL
-QT_DESC=	QT library support
+OPTIONS_DEFINE=	NETPBM OPENEXR TIFF IMAGEMAGICK OCTAVE OPENGL
 OCTAVE_DESC=	Compile octave interface functions
 
 OPTIONS_DEFAULT=	TIFF
@@ -100,17 +99,8 @@ CONFIGURE_ARGS+=--disable-tiff
 PLIST_SUB+=	TIFF="@comment "
 .endif
 
-.if ${PORT_OPTIONS:MQT}
-CONFIGURE_ARGS+=--enable-qt
-USE_QT_VER=	3
-.include "${PORTSDIR}/Mk/bsd.kde.mk"
-PLIST_SUB+=	QT=""
-MAN1+=		pfsview.1 \
-		pfsv.1
-.else
 CONFIGURE_ARGS+=--disable-qt
 PLIST_SUB+=	QT="@comment "
-.endif
 
 .if ${PORT_OPTIONS:MIMAGEMAGICK}
 CONFIGURE_ARGS+=--enable-imagemagick
