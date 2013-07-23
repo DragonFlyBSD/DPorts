@@ -1,7 +1,8 @@
-# $FreeBSD: ports/security/ykclient/Makefile,v 1.1 2013/01/26 01:47:22 svnexp Exp $
+# $FreeBSD: security/ykclient/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	ykclient
 PORTVERSION=	2.9
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	GOOGLE_CODE
 
