@@ -1,10 +1,11 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/liblnk/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/liblnk/Makefile 321965 2013-06-28 15:30:07Z antoine $
 
 PORTNAME=	liblnk
 PORTVERSION=	20130413
 CATEGORIES=	devel
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSQmluVC1YeDVvZWM/ \
+		LOCAL/antoine
 DISTNAME=	${PORTNAME}-alpha-${PORTVERSION}
 
 MAINTAINER=	antoine@FreeBSD.org
