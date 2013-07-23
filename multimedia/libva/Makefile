@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libva/Makefile 321903 2013-06-27 20:43:18Z madpilot $
+# $FreeBSD: multimedia/libva/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	libva
 PORTVERSION=	1.2.1
@@ -65,6 +65,11 @@ post-patch:	.SILENT
 	${REINPLACE_CMD} '/^export VA_HEADER_/d' \
 		${WRKSRC}/doc/Makefile.am
 	${REINPLACE_CMD} 's/-ldl//' ${WRKSRC}/va/Makefile.am
+
+# XXX: work around an issue with automake-1.13 erroring out on a
+#      non-existent m4 directory before libtoolize creates it
+pre-configure::
+	@${MKDIR} ${WRKSRC}/m4
 
 post-configure:	.SILENT
 	${REINPLACE_CMD} 's/-lpthread/${PTHREAD_LIBS}/' \
