@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/bacula-client/Makefile,v 1.7 2012/12/16 16:36:39 svnexp Exp $
+# $FreeBSD: sysutils/bacula-client/Makefile 323275 2013-07-19 09:44:58Z rm $
 
 PORTNAME=	bacula
 PKGNAMESUFFIX=	-client
@@ -11,7 +11,7 @@ USE_RC_SUBR=	bacula-fd
 PLIST=		${PKGDIR}/pkg-plist.client
 MASTERDIR=	${.CURDIR}/../../sysutils/bacula-server
 
-OPTIONS_DEFINE=	NLS OPENSSL
+OPTIONS_DEFINE=	NLS OPENSSL PYTHON
 OPTIONS_DEFAULT=NLS OPENSSL
 
 .include "${MASTERDIR}/Makefile"
