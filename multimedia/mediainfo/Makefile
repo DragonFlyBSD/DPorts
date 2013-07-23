@@ -1,9 +1,9 @@
 # Created by: freebsd-ports@evilcode.net
-# $FreeBSD: multimedia/mediainfo/Makefile 319041 2013-05-25 09:42:06Z sunpoet $
+# $FreeBSD: multimedia/mediainfo/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	mediainfo
 PORTVERSION=	0.7.52
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/binary/${PORTNAME}/${PORTVERSION}
 DISTNAME=	MediaInfo_CLI_${PORTVERSION}_GNU_FromSource
