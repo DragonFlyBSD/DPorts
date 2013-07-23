@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: www/rubygem-webmock/Makefile 322095 2013-06-30 18:09:37Z swills $
+# $FreeBSD: www/rubygem-webmock/Makefile 322969 2013-07-13 20:27:20Z swills $
 
 PORTNAME=	webmock
-PORTVERSION=	1.12.3
+PORTVERSION=	1.13.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
