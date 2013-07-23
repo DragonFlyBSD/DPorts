@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql84-server/Makefile 316740 2013-04-28 18:15:06Z crees $
+# $FreeBSD: databases/postgresql84-server/Makefile 322415 2013-07-07 00:15:47Z jgh $
 
 PORTNAME?=	postgresql
 DISTVERSION?=	8.4.17
@@ -27,11 +27,9 @@ LATEST_LINK?=	${PKGNAMEPREFIX}${UNIQUENAME}${PKGNAMESUFFIX}
 
 PKGINSTALL?=	${PKGDIR}/pkg-install${PKGNAMESUFFIX}
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+.if !defined(NO_BUILD)
+USES+=	gmake
 GNU_CONFIGURE=	yes
-.if defined(NO_BUILD)
-.undef USE_GMAKE
-.undef GNU_CONFIGURE
 .endif
 
 PG_USER=	pgsql
