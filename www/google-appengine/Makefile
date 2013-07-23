@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/google-appengine/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: www/google-appengine/Makefile 323081 2013-07-15 21:22:15Z nivit $
 
 PORTNAME=	google-appengine
-PORTVERSION=	1.7.5
+PORTVERSION=	1.8.1
 PORTREVISION=	0
 CATEGORIES=	www devel python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
@@ -40,10 +40,10 @@ XARGS_ARGS=	-0
 REINPLACE_ARGS=	-e 's,/usr/bin/env python,&${PYTHON_VER},' -i.bak
 
 GAEDATADIR=	google lib new_project_template tools
-GAESCRIPTS=	_python_runtime.py api_server.py appcfg.py bulkload_client.py \
-		bulkloader.py dev_appserver.py devappserver2.py \
+GAESCRIPTS=	_php_runtime.py _python_runtime.py api_server.py appcfg.py \
+		bulkload_client.py bulkloader.py dev_appserver.py \
 		download_appstats.py endpointscfg.py gen_protorpc.py \
-		google_sql.py remote_api_shell.py
+		google_sql.py old_dev_appserver.py remote_api_shell.py run_tests.py
 
 post-patch:
 	@${FIND} ${FIND_FILES} | ${XARGS} ${XARGS_ARGS} ${REINPLACE_CMD}
