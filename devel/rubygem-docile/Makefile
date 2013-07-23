@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-docile/Makefile 321637 2013-06-23 13:30:28Z swills $
+# $FreeBSD: devel/rubygem-docile/Makefile 322950 2013-07-13 17:32:43Z swills $
 
 PORTNAME=	docile
-PORTVERSION=	1.0.2
+PORTVERSION=	1.0.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
