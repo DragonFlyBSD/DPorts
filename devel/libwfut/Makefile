@@ -1,8 +1,9 @@
 # Created by: Oliver Lehmann
-# $FreeBSD: devel/libwfut/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/libwfut/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	libwfut
 PORTVERSION=	0.2.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/worldforge/libwfut%20%28updates%20library%29/${PORTVERSION}
 
@@ -10,7 +11,7 @@ MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	WorldForge update library
 
 LIB_DEPENDS=	sigc-2.0:${PORTSDIR}/devel/libsigc++20 \
-		curl.6:${PORTSDIR}/ftp/curl
+		curl:${PORTSDIR}/ftp/curl
 
 CONFIGURE_ARGS+=--without-python
 GNU_CONFIGURE=	yes
