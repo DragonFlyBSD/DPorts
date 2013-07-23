@@ -1,7 +1,7 @@
-# $FreeBSD: textproc/libexttextcat/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: textproc/libexttextcat/Makefile 323077 2013-07-15 20:19:26Z jkim $
 
 PORTNAME=	libexttextcat
-PORTVERSION=	3.4.0
+PORTVERSION=	3.4.3
 CATEGORIES=	textproc
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libexttextcat/
 
@@ -10,11 +10,10 @@ COMMENT=	Language guessing by N-Gram-Based Text Categorization
 
 LICENSE=	BSD
 
-USE_XZ=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=	pathfix
 USE_LDCONFIG=	yes
+USE_XZ=		yes
+USES=		gmake pathfix
 
 PORTDOCS=	README README.libtextcat TODO
 
