@@ -1,7 +1,7 @@
-# $FreeBSD: ports/security/rubygem-bcrypt-ruby/Makefile,v 1.5 2012/11/17 06:01:19 svnexp Exp $
+# $FreeBSD: security/rubygem-bcrypt-ruby/Makefile 322966 2013-07-13 19:44:38Z swills $
 
 PORTNAME=	bcrypt-ruby
-PORTVERSION=	3.0.1
+PORTVERSION=	3.1.1
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
