@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/liblqr-1/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/liblqr-1/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	liblqr-1
 DISTVERSION=	0.4.1
@@ -14,8 +14,8 @@ COMMENT=	An easy to use C/C++ seam carving library
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	_glib20 pkgconfig
-USES=		gettext
+USE_GNOME=	_glib20
+USES=		gettext pkgconfig
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 
