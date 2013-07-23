@@ -2,10 +2,10 @@
 # Date created:				2011-06-16
 # Whom:					Ryan Steinmetz <rpsfa@rit.edu>
 #
-# $FreeBSD: ports/devel/rubygem-warden/Makefile,v 1.8 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: devel/rubygem-warden/Makefile 322963 2013-07-13 18:29:04Z swills $
 
 PORTNAME=	warden
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
