@@ -1,10 +1,11 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libevtx/Makefile 317303 2013-05-04 09:38:46Z antoine $
+# $FreeBSD: devel/libevtx/Makefile 322947 2013-07-13 17:08:39Z antoine $
 
 PORTNAME=	libevtx
-DISTVERSION=	alpha-20130421
+DISTVERSION=	alpha-20130713
 CATEGORIES=	devel
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSRnQ0SExzX3JjdFE/ \
+		LOCAL/antoine
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tooling to access the Windows XML Event Log (EVTX) format
@@ -22,6 +23,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:E}
 
 MAN1=		evtxinfo.1
 MAN3=		libevtx.3
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 PORTDOCS=	AUTHORS ChangeLog
 PORTEXAMPLES=	*
