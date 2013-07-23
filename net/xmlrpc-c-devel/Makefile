@@ -1,8 +1,9 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: net/xmlrpc-c-devel/Makefile 315232 2013-03-25 15:16:54Z garga $
+# $FreeBSD: net/xmlrpc-c-devel/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	xmlrpc-c
 PORTVERSION=	1.33.2
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	LOCAL/garga/xmlrpc-c
 PKGNAMESUFFIX=	-devel
