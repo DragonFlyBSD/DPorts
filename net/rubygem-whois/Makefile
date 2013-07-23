@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-whois
-# Date created:				22 May 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/net/rubygem-whois/Makefile,v 1.16 2012/11/17 06:00:19 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: net/rubygem-whois/Makefile 322880 2013-07-13 05:19:53Z swills $
 
 PORTNAME=	whois
-PORTVERSION=	2.6.4
+PORTVERSION=	3.1.3
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
