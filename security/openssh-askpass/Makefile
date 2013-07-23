@@ -1,15 +1,18 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: security/openssh-askpass/Makefile 317465 2013-05-06 06:18:19Z hrs $
+# $FreeBSD: security/openssh-askpass/Makefile 323449 2013-07-22 14:02:17Z hrs $
 
 PORTNAME=	OpenSSH-askpass
 PORTVERSION=	1.2.4.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.jmknoble.net/software/x11-ssh-askpass/
 DISTNAME=	x11-ssh-askpass-${PORTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Graphical password applet for entering SSH passphrase
+
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/README
 
 USE_XORG=	x11 xt sm ice
 DOCSDIR=	${PREFIX}/share/doc/ssh-askpass
