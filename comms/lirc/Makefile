@@ -1,5 +1,5 @@
 # Created by: Mike Heffner <mikeh@FreeBSD.org>
-# $FreeBSD: ports/comms/lirc/Makefile,v 1.49 2013/02/08 22:53:00 svnexp Exp $
+# $FreeBSD: comms/lirc/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	lirc
 PORTVERSION=	0.9.0
@@ -68,6 +68,11 @@ RUN_DEPENDS+=		uartlirc>=0.3:${PORTSDIR}/comms/uartlirc
 MAN1=		ircat.1 irexec.1 irpty.1 irrecord.1 irsend.1 irw.1 \
 		irxevent.1 lircrcd.1 mode2.1 smode2.1 xmode2.1
 MAN8=		lircd.8 lircmd.8
+
+# XXX: work around an issue with automake-1.13 erroring out on a
+#      non-existent m4 directory before libtoolize creates it
+pre-configure::
+	@${MKDIR} ${WRKSRC}/m4
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
