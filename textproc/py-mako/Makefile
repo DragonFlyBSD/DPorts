@@ -1,8 +1,8 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: textproc/py-mako/Makefile 317012 2013-05-01 11:23:40Z wen $
+# $FreeBSD: textproc/py-mako/Makefile 323098 2013-07-16 06:57:38Z wen $
 
 PORTNAME=	mako
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.1
 CATEGORIES=	textproc www python
 MASTER_SITES=	http://www.makotemplates.org/downloads/ \
 		CHEESESHOP
