@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: net-mgmt/nagios-plugins/Makefile 321396 2013-06-20 15:57:33Z antoine $
+# $FreeBSD: net-mgmt/nagios-plugins/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	nagios-plugins
 PORTVERSION=	1.4.16
@@ -18,6 +18,7 @@ USE_GMAKE=	yes
 USE_PERL5=	yes
 USE_AUTOTOOLS=	libtool aclocal autoconf automake
 ACLOCAL_ARGS=	-I m4 -I gl/m4
+AUTOMAKE_ARGS=	--add-missing
 
 OPTIONS_DEFINE=	QSTAT FPING NETSNMP RADIUS MYSQL PGSQL LDAP IPV6 JAIL NLS
 OPTIONS_DEFAULT=IPV6
