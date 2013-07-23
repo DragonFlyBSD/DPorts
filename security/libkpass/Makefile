@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: security/libkpass/Makefile 317096 2013-05-02 12:06:21Z pawel $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: security/libkpass/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	libkpass
 PORTVERSION=	5
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Library for a reading/writing KeePass 1.x DB
 
 LICENSE=	GPLv3
