@@ -1,12 +1,8 @@
-# New ports collection makefile for:	rubygem-simple-rss
-# Date created:		2009-07-13
-# Whom:			TERAMOTO Masahiro <markun@onohara.to>
-#
-# $FreeBSD: ports/www/rubygem-simple-rss/Makefile,v 1.3 2012/11/17 06:03:05 svnexp Exp $
-#
+# Created by: TERAMOTO Masahiro <markun@onohara.to>
+# $FreeBSD: www/rubygem-simple-rss/Makefile 322897 2013-07-13 06:50:08Z swills $
 
 PORTNAME=	simple-rss
-PORTVERSION=	1.2
+PORTVERSION=	1.2.3
 CATEGORIES=	www textproc rubygems
 MASTER_SITES=	RG
 
