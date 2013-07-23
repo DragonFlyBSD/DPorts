@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/m17n-db/Makefile 319708 2013-06-02 18:50:08Z pawel $
+# $FreeBSD: devel/m17n-db/Makefile 322366 2013-07-06 07:59:09Z bapt $
 
 PORTNAME=	m17n-db
 PORTVERSION=	1.6.4
@@ -15,8 +15,7 @@ EXTRACT_ONLY=	${M17N_DISTFILE}
 MAINTAINER=	nikola.lecic@anthesphoria.net
 COMMENT=	Data files for the m17n library
 
-USE_PKGCONFIG=	yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-charmaps=${CHARMAPSDIR}
 
