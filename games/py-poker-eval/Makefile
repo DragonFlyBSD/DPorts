@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/py-poker-eval/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: games/py-poker-eval/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	poker-eval
 PORTVERSION=	0.138
@@ -20,6 +20,7 @@ USES=		pkgconfig
 USE_PYTHON=	2.5-2.7
 USE_AUTOTOOLS=	aclocal autoconf automake libtool
 ACLOCAL_ARGS=	-I config
+AUTOMAKE_ARGS=	--add-missing
 CONFIGURE_ARGS=	PYTHON=""
 MAKE_JOBS_SAFE=	yes
 
