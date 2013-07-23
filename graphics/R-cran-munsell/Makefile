@@ -1,16 +1,19 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-munsell/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: graphics/R-cran-munsell/Makefile 323222 2013-07-18 11:05:47Z tota $
 
 PORTNAME=	munsell
-PORTVERSION=	0.4
-PORTREVISION=	3
+PORTVERSION=	0.4.2
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Munsell colour system
 
-LICENSE=	MIT
+LICENSE=	MIT CW
+LICENSE_COMB=	multi
+LICENSE_NAME_CW=	Charlotte Wickham COPYRIGHT
+LICENSE_FILE_CW=	${WRKSRC}/LICENSE
+LICENSE_PERMS_CW=	auto-accept
 
 RUN_DEPENDS=	R-cran-colorspace>0:${PORTSDIR}/graphics/R-cran-colorspace
 
