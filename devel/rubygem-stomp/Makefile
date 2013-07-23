@@ -1,7 +1,7 @@
-# $FreeBSD: devel/rubygem-stomp/Makefile 322057 2013-06-29 21:28:12Z swills $
+# $FreeBSD: devel/rubygem-stomp/Makefile 322961 2013-07-13 18:16:32Z swills $
 
 PORTNAME=	stomp
-PORTVERSION=	1.2.9
+PORTVERSION=	1.2.10
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
