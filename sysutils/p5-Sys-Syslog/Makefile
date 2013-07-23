@@ -1,12 +1,7 @@
-# New ports collection makefile for:	sysutils/p5-Sys-Syslog
-# Date created:				27 May 2008
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/p5-Sys-Syslog/Makefile,v 1.8 2012/11/17 06:01:40 svnexp Exp $
-#
+# $FreeBSD: sysutils/p5-Sys-Syslog/Makefile 322835 2013-07-12 14:16:12Z bapt $
 
 PORTNAME=	Sys-Syslog
-PORTVERSION=	0.32
+PORTVERSION=	0.33
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,10 +10,8 @@ MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Perl interface to the UNIX syslog(3) calls
 
 PERL_CONFIGURE=	yes
+MAKE_JOBS_UNSAFE=	yes
 
 MAN3=	Sys::Syslog.3
-
-regression-test: build
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
 .include <bsd.port.mk>
