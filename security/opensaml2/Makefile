@@ -1,8 +1,9 @@
 # Created by: Janos Mohacsi
-# $FreeBSD: security/opensaml2/Makefile 321194 2013-06-18 15:15:48Z girgen $
+# $FreeBSD: security/opensaml2/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	opensaml2
 PORTVERSION=	2.5.3
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://shibboleth.net/downloads/c++-opensaml/${PORTVERSION}/
 DISTNAME=	opensaml-${PORTVERSION}
@@ -10,7 +11,7 @@ DISTNAME=	opensaml-${PORTVERSION}
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Open source implementation of SAML2
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		log4shib.1:${PORTSDIR}/devel/log4shib \
 		xerces-c.3:${PORTSDIR}/textproc/xerces-c3 \
 		xmltooling.6:${PORTSDIR}/devel/xmltooling
