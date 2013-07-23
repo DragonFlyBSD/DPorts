@@ -1,8 +1,8 @@
-# $FreeBSD: audio/musicpd/Makefile 322137 2013-07-01 18:37:10Z crees $
+# $FreeBSD: audio/musicpd/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	musicpd
 PORTVERSION=	0.17.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio ipv6
 MASTER_SITES=	SF/${PORTNAME}/mpd/${PORTVERSION}
 DISTNAME=	mpd-${PORTVERSION}
@@ -11,7 +11,7 @@ MAINTAINER=	crees@FreeBSD.org
 COMMENT=	A remote-controllable music daemon
 
 LIB_DEPENDS+=	mad.2:${PORTSDIR}/audio/libmad \
-		curl.6:${PORTSDIR}/ftp/curl
+		curl:${PORTSDIR}/ftp/curl
 
 LICENSE=	GPLv2
 
