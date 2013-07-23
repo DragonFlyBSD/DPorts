@@ -1,9 +1,9 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: science/netcdf4/Makefile 316757 2013-04-28 22:08:22Z bapt $
+# $FreeBSD: science/netcdf4/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	netcdf
 PORTVERSION=	4.1.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	http://www.unidata.ucar.edu/downloads/netcdf/ftp/ \
 		ftp://ftp.unidata.ucar.edu/pub/netcdf/ \
@@ -41,7 +41,7 @@ MAN3=		netcdf.3
 .if ${PORT_OPTIONS:MDAP}
 CONFIGURE_ARGS+=--enable-dap --with-curl=${LOCALBASE} \
 		--with-curl-config=${LOCALBASE}/bin/curl-config
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 .else
 CONFIGURE_ARGS+=--disable-dap
 .endif
