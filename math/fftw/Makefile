@@ -2,7 +2,7 @@
 # Date created:		Dec 28 1998
 # Whom:			Lars Koeller <Lars.Koeller@Uni-Bielefeld.DE>
 #
-# $FreeBSD: ports/math/fftw/Makefile,v 1.48 2012/11/17 05:59:20 svnexp Exp $
+# $FreeBSD: math/fftw/Makefile 323109 2013-07-16 14:45:25Z miwi $
 #
 
 PORTNAME=	fftw
@@ -28,6 +28,7 @@ USE_FORTRAN=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	aclocal automake autoconf libtool
 ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
+AUTOMAKE_ARGS=	--add-missing
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 CONFIGURE_ARGS=	--enable-shared
 USE_LDCONFIG=	yes
