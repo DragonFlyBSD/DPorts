@@ -1,8 +1,8 @@
 # Created by: Sergei Vyshenski
-# $FreeBSD: devel/p5-Workflow/Makefile 322489 2013-07-08 11:31:23Z culot $
+# $FreeBSD: devel/p5-Workflow/Makefile 323143 2013-07-17 04:04:51Z miwi $
 
 PORTNAME=	Workflow
-PORTVERSION=	1.36
+PORTVERSION=	1.38
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -42,6 +42,7 @@ BUILD_DEPENDS=	p5-Class-Observable>=1.04:${PORTSDIR}/devel/p5-Class-Observable \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp
 
+USE_PERL5=	5.10+
 PERL_CONFIGURE=	yes
 
 MAN3=	Workflow.3 \
