@@ -1,8 +1,8 @@
 # Created by: Jin-Sih Lin <linpct@gmail.com>
-# $FreeBSD: www/node/Makefile 321325 2013-06-19 21:03:00Z swills $
+# $FreeBSD: www/node/Makefile 322796 2013-07-11 20:24:30Z swills $
 
 PORTNAME=	node
-PORTVERSION=	0.10.12
+PORTVERSION=	0.10.13
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 DISTNAME=	${PORTNAME}-v${PORTVERSION}
