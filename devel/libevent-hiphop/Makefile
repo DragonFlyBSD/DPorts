@@ -2,10 +2,11 @@
 # Date created:				16 July 2012
 # Whom:					Martin Matuska <mm@FreeBSd.org>
 #
-# $FreeBSD: ports/devel/libevent-hiphop/Makefile,v 1.2 2012/11/17 05:55:54 svnexp Exp $
+# $FreeBSD: devel/libevent-hiphop/Makefile 323374 2013-07-21 11:17:23Z mm $
 #
 
 PKGNAMESUFFIX=	-hiphop
+PORTREVISION=	3
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Static libevent with custom patches for HipHop
