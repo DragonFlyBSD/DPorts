@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/rubygem-sumbur/Makefile 319336 2013-05-29 00:44:15Z miwi $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: devel/rubygem-sumbur/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	sumbur
 PORTVERSION=	0.1.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Consistent spreading for server balancing
 
 RUBY_VER=	1.9
