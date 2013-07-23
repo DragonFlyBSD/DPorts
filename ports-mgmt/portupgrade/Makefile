@@ -1,12 +1,13 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports-mgmt/portupgrade/Makefile 322041 2013-06-29 11:05:42Z bdrewery $
+# $FreeBSD: ports-mgmt/portupgrade/Makefile 323387 2013-07-21 13:57:25Z bdrewery $
 
 PORTNAME=	portupgrade
-PORTVERSION=	2.4.10.6
+PORTVERSION=	2.4.11
 PORTEPOCH=	2
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	SF/portupgrade/pkgtools/dist/ \
-		http://mirror.shatow.net/freebsd/pkgtools/
+		http://mirror.shatow.net/freebsd/pkgtools/ \
+		LOCAL/bdrewery/pkgtools/
 DISTNAME=	pkgtools-${PORTVERSION}
 
 MAINTAINER=	bdrewery@FreeBSD.org
