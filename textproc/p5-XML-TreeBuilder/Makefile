@@ -1,18 +1,17 @@
-# New ports collection makefile for:	XML-TreeBuilder
-# Date created:				Tue Jan  2 00:03:51 2001
-# Whom:					will
-#
-# $FreeBSD: ports/textproc/p5-XML-TreeBuilder/Makefile,v 1.16 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: Will Andrews <will@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-TreeBuilder/Makefile 323274 2013-07-19 09:19:53Z culot $
 
 PORTNAME=	XML-TreeBuilder
-PORTVERSION=	4.1
+PORTVERSION=	4.3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	culot@FreeBSD.org
 COMMENT=	Perl module to make XML document trees
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-HTML-Tagset>=3.02:${PORTSDIR}/www/p5-HTML-Tagset \
 		p5-HTML-Tree>=4.1:${PORTSDIR}/www/p5-HTML-Tree \
