@@ -2,12 +2,12 @@
 # Date created:		2006-04-01
 # Whom:			Alexander Botero-Lowry <alex@foxybanana.com>
 #
-# $FreeBSD: audio/libofa/Makefile 314640 2013-03-19 13:04:30Z eadler $
+# $FreeBSD: audio/libofa/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	libofa
 PORTVERSION=	0.9.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	GOOGLE_CODE
 
