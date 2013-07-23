@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-CACertOrg-CA
-# Date created:		2011-12-21
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-CACertOrg-CA/Makefile,v 1.2 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: security/p5-CACertOrg-CA/Makefile 322839 2013-07-12 14:31:56Z sunpoet $
 
 PORTNAME=	CACertOrg-CA
-PORTVERSION=	20110724.001
+PORTVERSION=	20110724.002
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BDFOY
