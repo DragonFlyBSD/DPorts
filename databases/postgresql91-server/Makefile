@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql91-server/Makefile 317540 2013-05-06 18:37:00Z crees $
+# $FreeBSD: databases/postgresql91-server/Makefile 322415 2013-07-07 00:15:47Z jgh $
 
 PORTNAME?=	postgresql
 DISTVERSION?=	9.1.9
@@ -32,11 +32,9 @@ LATEST_LINK?=	${PKGNAMEPREFIX}${UNIQUENAME}
 
 PKGINSTALL?=	${PKGDIR}/pkg-install${PKGNAMESUFFIX}
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+.if !defined(NO_BUILD)
+USES+=	gmake
 GNU_CONFIGURE=	yes
-.if defined(NO_BUILD)
-.undef USE_GMAKE
-.undef GNU_CONFIGURE
 .endif
 
 PG_USER=	pgsql
