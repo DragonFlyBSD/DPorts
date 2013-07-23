@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/iolib/Makefile 316940 2013-04-30 15:41:49Z culot $
+# $FreeBSD: biology/iolib/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	io_lib
 PORTVERSION=	1.13.0
+PORTREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	staden/${PORTNAME}/${PORTVERSION}
