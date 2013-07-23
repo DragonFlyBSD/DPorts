@@ -1,7 +1,7 @@
-# $FreeBSD: devel/libgit2/Makefile 321599 2013-06-22 22:22:07Z wg $
+# $FreeBSD: devel/libgit2/Makefile 323065 2013-07-15 16:34:26Z wg $
 
 PORTNAME=	libgit2
-PORTVERSION=	0.18.0
+PORTVERSION=	0.19.0
 CATEGORIES=	devel
 
 MAINTAINER=	wg@FreeBSD.org
@@ -12,7 +12,7 @@ LICENSE=	GPLv2
 USE_GITHUB=	yes
 GH_ACCOUNT=	libgit2
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	a50086d
+GH_COMMIT=	eddc1f1
 
 USES=		cmake
 USE_LDCONFIG=	yes
