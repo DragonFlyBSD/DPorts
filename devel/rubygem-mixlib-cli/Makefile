@@ -2,11 +2,11 @@
 # Date created:				18 Mar 2010
 # Whom:					renchap@cocoa-x.com
 #
-# $FreeBSD: ports/devel/rubygem-mixlib-cli/Makefile,v 1.6 2012/11/17 05:57:00 svnexp Exp $
+# $FreeBSD: devel/rubygem-mixlib-cli/Makefile 323288 2013-07-19 13:20:19Z swills $
 #
 
 PORTNAME=	mixlib-cli
-PORTVERSION=	1.2.2
+PORTVERSION=	1.3.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
