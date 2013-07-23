@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: audio/normalize/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: audio/normalize/Makefile 322838 2013-07-12 14:20:01Z bapt $
 
 PORTNAME=	normalize
 PORTVERSION=	0.7.7
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-helper-search
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
+MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		normalize.1 normalize-mp3.1
 
