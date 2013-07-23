@@ -1,8 +1,8 @@
 # Created by: Toby Allsopp <toby@mi6.gen.nz>
-# $FreeBSD: ports/textproc/p5-Text-Tabs+Wrap/Makefile,v 1.9 2012/12/27 16:09:08 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Tabs+Wrap/Makefile 323444 2013-07-22 13:13:20Z culot $
 
 PORTNAME=	Text-Tabs+Wrap
-PORTVERSION=	2012.0818
+PORTVERSION=	2013.0523
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
