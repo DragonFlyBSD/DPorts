@@ -1,7 +1,7 @@
-# $FreeBSD: security/libsodium/Makefile 318683 2013-05-21 11:55:16Z wg $
+# $FreeBSD: security/libsodium/Makefile 322906 2013-07-13 11:16:05Z madpilot $
 
 PORTNAME=	libsodium
-PORTVERSION=	0.4.1
+PORTVERSION=	0.4.2
 CATEGORIES=	security
 MASTER_SITES=	http://download.dnscrypt.org/libsodium/releases/
 
