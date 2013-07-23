@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: textproc/meld/Makefile 320102 2013-06-06 14:37:23Z pawel $
+# $FreeBSD: textproc/meld/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	meld
 PORTVERSION=	1.7.3
@@ -13,24 +13,19 @@ LICENSE=	GPLv2
 
 USE_XZ=		yes
 USE_GNOME=	pygnome2
-USES=		desktop-file-utils
+USES=		gmake desktop-file-utils
 USE_PYTHON=	-2.7
-USE_GMAKE=	yes
 MAKE_ARGS=	prefix=${PREFIX}
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 
-OPTIONS_DEFINE=		PYGNOMEDESKTOP
+OPTIONS_DEFINE=		NLS PYGNOMEDESKTOP
+OPTIONS_SUB=		yes
 PYGNOMEDESKTOP_DESC=	Code syntax highlighting (many dependencies)
 
-.include <bsd.port.options.mk>
+NLS_USES=	gettext
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-PLIST_SUB+=	NLS="@comment "
-.endif
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} '/docdir_/d' ${WRKSRC}/Makefile
