@@ -1,8 +1,9 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: net/xmlrpc-c/Makefile 316388 2013-04-23 19:17:16Z garga $
+# $FreeBSD: net/xmlrpc-c/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	xmlrpc-c
 PORTVERSION=	1.25.23
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/Xmlrpc-c%20Super%20Stable/${PORTVERSION}
 EXTRACT_SUFX=	.tgz
