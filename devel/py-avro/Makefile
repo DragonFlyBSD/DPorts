@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/py-avro/Makefile 317717 2013-05-08 22:59:36Z rm $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: devel/py-avro/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	avro
 PORTVERSION=	1.7.4
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/stable
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Data serialization system for python
 
 USE_PYDISTUTILS=	easy_install
