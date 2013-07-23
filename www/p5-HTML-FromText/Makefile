@@ -1,8 +1,8 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: www/p5-HTML-FromText/Makefile 322525 2013-07-08 18:09:49Z culot $
+# $FreeBSD: www/p5-HTML-FromText/Makefile 323234 2013-07-18 14:05:18Z culot $
 
 PORTNAME=		HTML-FromText
-PORTVERSION=		2.06
+PORTVERSION=		2.07
 CATEGORIES=		www perl5
 MASTER_SITES=		CPAN
 PKGNAMEPREFIX=		p5-
