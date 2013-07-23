@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-safe_yaml/Makefile 321780 2013-06-26 03:20:44Z swills $
+# $FreeBSD: devel/rubygem-safe_yaml/Makefile 322959 2013-07-13 18:02:50Z swills $
 
 PORTNAME=	safe_yaml
-PORTVERSION=	0.9.3
+PORTVERSION=	0.9.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
