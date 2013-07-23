@@ -1,11 +1,11 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Role-Tiny/Makefile,v 1.10 2013/02/01 22:03:10 svnexp Exp $
+# $FreeBSD: devel/p5-Role-Tiny/Makefile 323167 2013-07-17 13:51:56Z sunpoet $
 
 PORTNAME=	Role-Tiny
-PORTVERSION=	1.002.005
+PORTVERSION=	1.003.001
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:MSTROUT
+MASTER_SITE_SUBDIR=	CPAN:HAARG
 PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
