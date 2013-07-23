@@ -1,9 +1,5 @@
-# New ports collection makefile for:	avahi-libdns
-# Date created:				31 July 2007
-# Whom:					Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/net/avahi-libdns/Makefile,v 1.6 2012/11/17 05:59:56 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: net/avahi-libdns/Makefile 323006 2013-07-14 21:17:21Z kwm $
 
 PORTREVISION=	0
 CATEGORIES=	net
@@ -12,7 +8,7 @@ PKGNAMESUFFIX=	-libdns
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	mDNSResponder compatibility from Avahi
 
-LIB_DEPENDS=	avahi-common.3:${PORTSDIR}/net/avahi-app
+LIB_DEPENDS=	avahi-common:${PORTSDIR}/net/avahi-app
 
 MASTERDIR=	${.CURDIR}/../avahi-app
 BUILD_WRKSRC=	${WRKSRC}/avahi-compat-libdns_sd
