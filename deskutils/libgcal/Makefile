@@ -1,8 +1,9 @@
 # Created by: Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
-# $FreeBSD: deskutils/libgcal/Makefile 315830 2013-04-16 16:00:08Z rene $
+# $FreeBSD: deskutils/libgcal/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	libgcal
 PORTVERSION=	0.9.6
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
