@@ -2,10 +2,10 @@
 # Date created:				14th April 2007
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/autotools/Makefile,v 1.14 2012/11/17 05:55:34 svnexp Exp $
+# $FreeBSD: devel/autotools/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	autotools
-PORTVERSION=	20120427
+PORTVERSION=	20130627
 CATEGORIES=	devel
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -20,7 +20,7 @@ RUN_DEPENDS=	libtool:${PORTSDIR}/devel/libtool \
 		autoconf-2.13:${PORTSDIR}/devel/autoconf213 \
 		autoconf-2.69:${PORTSDIR}/devel/autoconf \
 		automake-1.4:${PORTSDIR}/devel/automake14 \
-		automake-1.12:${PORTSDIR}/devel/automake
+		automake-1.14:${PORTSDIR}/devel/automake
 
 PLIST_FILES=	share/${PORTNAME}
 NO_BUILD=	yes
