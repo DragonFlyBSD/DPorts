@@ -1,4 +1,4 @@
-# $FreeBSD: mail/claws-mail/Makefile.claws 320700 2013-06-12 15:32:54Z pawel $
+# $FreeBSD: mail/claws-mail/Makefile.claws 322729 2013-07-10 19:41:30Z pawel $
 
 PORTVERSION=	3.9.2
 CATEGORIES?=	mail
@@ -9,7 +9,7 @@ MAINTAINER=	pawel@FreeBSD.org
 LICENSE=	GPLv3
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES+=		gmake
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
