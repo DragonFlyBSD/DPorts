@@ -2,10 +2,11 @@
 # Date created:			12 Apr 2012
 # Whom:				Florian Smeets <flo@FreeBSD.org>
 #
-# $FreeBSD: ports/ftp/php53-curl/Makefile,v 1.2 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/php53-curl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 CATEGORIES=	ftp
+PORTREVISION=	1
 
 MASTERDIR=	${.CURDIR}/../../lang/php53
 
