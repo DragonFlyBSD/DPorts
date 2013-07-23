@@ -1,5 +1,5 @@
 # Created by: Robert Jenssen
-# $FreeBSD: ports/math/qrupdate/Makefile,v 1.7 2012/11/17 05:59:29 svnexp Exp $
+# $FreeBSD: math/qrupdate/Makefile 322830 2013-07-12 12:49:09Z bapt $
 
 PORTNAME=	qrupdate
 PORTVERSION=	1.1.2
@@ -14,6 +14,8 @@ LIB_DEPENDS=	blas.2:${PORTSDIR}/math/blas lapack.4:${PORTSDIR}/math/lapack
 
 FETCH_ARGS=	-p
 
+USES=		gmake
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
@@ -24,7 +26,6 @@ PICFLAG?=	-fpic
 .endif
 
 USE_FORTRAN=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
 pre-build:
