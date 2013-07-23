@@ -1,9 +1,9 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: multimedia/cclive/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/cclive/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	cclive
 PORTVERSION=	0.7.11
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia net
 MASTER_SITES=	SF/${PORTNAME}/0.7 \
 		GOOGLE_CODE
@@ -14,7 +14,7 @@ COMMENT=	Lightweight command line video extraction tool
 LICENSE=	GPLv3
 
 LIB_DEPENDS=	boost_system:${PORTSDIR}/devel/boost-libs \
-		curl.6:${PORTSDIR}/ftp/curl \
+		curl:${PORTSDIR}/ftp/curl \
 		pcre.3:${PORTSDIR}/devel/pcre \
 		quvi.7:${PORTSDIR}/multimedia/libquvi
 
