@@ -2,7 +2,7 @@
 # Date created:		2011-10-25
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/p5-Marpa-XS/Makefile,v 1.13 2012/12/16 06:16:56 svnexp Exp $
+# $FreeBSD: lang/p5-Marpa-XS/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Marpa-XS
@@ -44,17 +44,4 @@ MAN3=		Marpa::XS.3 \
 		Marpa::XS::Tracing.3 \
 		Marpa::XS::Vocabulary.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Scalar-List-Utils>=1.21:${PORTSDIR}/lang/p5-Scalar-List-Utils
-RUN_DEPENDS+=	p5-Scalar-List-Utils>=1.21:${PORTSDIR}/lang/p5-Scalar-List-Utils
-.endif
-
-.if ${PERL_LEVEL} < 501200
-BUILD_DEPENDS+=	p5-Data-Dumper>=2.125:${PORTSDIR}/devel/p5-Data-Dumper
-RUN_DEPENDS+=	p5-Data-Dumper>=2.125:${PORTSDIR}/devel/p5-Data-Dumper
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
