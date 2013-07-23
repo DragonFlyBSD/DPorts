@@ -1,9 +1,9 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/libmrss/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/libmrss/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	libmrss
 PORTVERSION=	0.19.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.autistici.org/bakunin/libmrss/
 
