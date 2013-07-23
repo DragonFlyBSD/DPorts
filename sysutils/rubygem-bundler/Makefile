@@ -1,11 +1,8 @@
-# Ports collection makefile for:	rubygem-bundler
-# Date created:				7 November 2009
-# Whom:					Robert Gogolok <gogo@cs.uni-sb.de>
-#
-# $FreeBSD: ports/sysutils/rubygem-bundler/Makefile,v 1.20 2013/01/22 03:17:54 svnexp Exp $
+# Whom:	Robert Gogolok <gogo@cs.uni-sb.de>
+# $FreeBSD: sysutils/rubygem-bundler/Makefile 323313 2013-07-19 15:52:59Z swills $
 
 PORTNAME=	bundler
-PORTVERSION=	1.2.3
+PORTVERSION=	1.3.5
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
