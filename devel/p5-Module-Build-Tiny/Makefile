@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Build-Tiny/Makefile 322569 2013-07-09 18:56:53Z sunpoet $
+# $FreeBSD: devel/p5-Module-Build-Tiny/Makefile 322905 2013-07-13 10:02:42Z sunpoet $
 
 PORTNAME=	Module-Build-Tiny
-PORTVERSION=	0.024
+PORTVERSION=	0.025
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
