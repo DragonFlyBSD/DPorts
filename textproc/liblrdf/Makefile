@@ -1,9 +1,9 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: textproc/liblrdf/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/liblrdf/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	liblrdf
 PORTVERSION=	0.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	GENTOO/distfiles
 
@@ -17,7 +17,7 @@ LIB_DEPENDS=	icuuc:${PORTSDIR}/devel/icu \
 		raptor2:${PORTSDIR}/textproc/raptor2
 
 USE_AUTOTOOLS=	libtoolize automake autoconf aclocal
-ACLOCAL_ARGS=	-I${LOCALBASE}/share/aclocal
+ACLOCAL_ARGS=	-I${LOCALBASE}/share/aclocal -I.
 AUTOMAKE_ARGS=	--add-missing
 GNU_CONFIGURE=	yes
 USES=		pathfix pkgconfig iconv
@@ -31,5 +31,12 @@ CFLAGS+=	-I${OPENSSLINC} ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${OPENSSLLIB} ${PTHREAD_LIBS}
 
 WRKSRC=		${WRKDIR}/swh-LRDF-7ebc032
+
+# XXX: work around an issue with automake-1.13 erroring out on a
+#      partially configured m4 directory before libtoolize creates it
+pre-configure::
+	@${RM} -rf ${WRKSRC}/m4
+	@${MKDIR} ${WRKSRC}/m4
+
 
 .include <bsd.port.mk>
