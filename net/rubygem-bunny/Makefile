@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-bunny
-# Date created:				19 Mar 2010
-# Whom:					renchap@cocoa-x.com
-#
-# $FreeBSD: ports/net/rubygem-bunny/Makefile,v 1.5 2012/11/17 06:00:18 svnexp Exp $
-#
+# Created by: renchap@cocoa-x.com
+# $FreeBSD: net/rubygem-bunny/Makefile 322879 2013-07-13 05:10:37Z swills $
 
 PORTNAME=	bunny
-PORTVERSION=	0.6.0
+PORTVERSION=	0.8.0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
