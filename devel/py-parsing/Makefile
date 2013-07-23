@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-parsing
-# Date created:		1 Jul 2004
-# Whom:			Hye-Shik Chang
-#
-# $FreeBSD: ports/devel/py-parsing/Makefile,v 1.21 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Hye-Shik Chang
+# $FreeBSD: devel/py-parsing/Makefile 323263 2013-07-19 00:53:43Z wen $
 
 PORTNAME=	parsing
-PORTVERSION=	1.5.6
+PORTVERSION=	2.0.1
 CATEGORIES=	devel python
 MASTER_SITES=	SF/py${PORTNAME}/py${PORTNAME}/py${PORTNAME}-${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
