@@ -1,17 +1,18 @@
-# $FreeBSD: net/sofia-sip/Makefile 316284 2013-04-22 22:33:35Z bapt $
+# $FreeBSD: net/sofia-sip/Makefile 322496 2013-07-08 11:52:46Z bapt $
 
 PORTNAME=	sofia-sip
 PORTVERSION=	1.12.11
 CATEGORIES=	net
 MASTER_SITES=	SF
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open-source SIP User-Agent library
 
 USES=		pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USE_GNOME=	glib20
+MAKE_JOBS_UNSAFE=	yes
 
 MAN1=	sip-date.1 \
 	sip-options.1 \
