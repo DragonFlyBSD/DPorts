@@ -1,8 +1,8 @@
 # Created by: Espen Volden aka voldern <voldern@hoeggen.net>
-# $FreeBSD: ports/devel/rubygem-ruby_parser/Makefile,v 1.13 2013/02/24 17:45:37 svnexp Exp $
+# $FreeBSD: devel/rubygem-ruby_parser/Makefile 323321 2013-07-19 17:22:16Z swills $
 
 PORTNAME=	ruby_parser
-PORTVERSION=	3.1.1
+PORTVERSION=	3.2.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
