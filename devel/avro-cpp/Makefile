@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/avro-cpp/Makefile 317418 2013-05-05 14:42:01Z rakuco $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: devel/avro-cpp/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	avro
 PORTVERSION=	1.7.4
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/stable
 PKGNAMESUFFIX=	-cpp
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Data serialization system for C++
 
 LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
