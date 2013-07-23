@@ -1,7 +1,7 @@
-# $FreeBSD: ports/x11/xconsole/Makefile,v 1.6 2013/02/04 03:11:42 svnexp Exp $
+# $FreeBSD: x11/xconsole/Makefile 323283 2013-07-19 12:34:35Z zeising $
 
 PORTNAME=	xconsole
-PORTVERSION=	1.0.5
+PORTVERSION=	1.0.6
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
