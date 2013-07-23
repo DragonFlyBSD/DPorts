@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: ports/graphics/devil/Makefile,v 1.43 2013/01/30 22:51:59 svnexp Exp $
+# $FreeBSD: graphics/devil/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	devil
 PORTVERSION=	1.7.8
@@ -29,7 +29,7 @@ SIMD_DESC=	Enable SIMD autodetection (AltiVec, SSE3,...)
 WRKSRC=		${WRKDIR}/${DISTNAME:tl}
 
 USE_GCC=	any
-USE_GNOME=	pkgconfig
+USES=		pkgconfig
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtool
 ACLOCAL_ARGS=	-I m4 -I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing --copy --force-missing
@@ -44,28 +44,28 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJPEG}
-LIB_DEPENDS+=	jpeg.11:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg
 CONFIGURE_ARGS+=--enable-jpeg
 .else
 CONFIGURE_ARGS+=--disable-jpeg
 .endif
 
 .if ${PORT_OPTIONS:MJASPER}
-LIB_DEPENDS+=	jasper.4:${PORTSDIR}/graphics/jasper
+LIB_DEPENDS+=	jasper:${PORTSDIR}/graphics/jasper
 CONFIGURE_ARGS+=--enable-jp2
 .else
 CONFIGURE_ARGS+=--disable-jp2
 .endif
 
 .if ${PORT_OPTIONS:MLCMS}
-LIB_DEPENDS+=	lcms.1:${PORTSDIR}/graphics/lcms
+LIB_DEPENDS+=	lcms:${PORTSDIR}/graphics/lcms
 CONFIGURE_ARGS+=--enable-lcms
 .else
 CONFIGURE_ARGS+=--disable-lcms
 .endif
 
 .if ${PORT_OPTIONS:MMNG}
-LIB_DEPENDS+=	mng.1:${PORTSDIR}/graphics/libmng
+LIB_DEPENDS+=	mng:${PORTSDIR}/graphics/libmng
 CONFIGURE_ARGS+=--enable-mng
 .else
 CONFIGURE_ARGS+=--disable-mng
@@ -79,7 +79,7 @@ CONFIGURE_ARGS+=--disable-png
 .endif
 
 .if ${PORT_OPTIONS:MTIFF}
-LIB_DEPENDS+=	tiff.4:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS+=	tiff:${PORTSDIR}/graphics/tiff
 CONFIGURE_ARGS+=--enable-tiff
 .else
 CONFIGURE_ARGS+=--disable-tiff
