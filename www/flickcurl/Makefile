@@ -1,8 +1,9 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: www/flickcurl/Makefile 316822 2013-04-29 14:24:58Z miwi $
+# $FreeBSD: www/flickcurl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	flickcurl
 PORTVERSION=	1.24
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.dajobe.org/flickcurl/
 
