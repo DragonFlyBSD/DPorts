@@ -1,8 +1,8 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: textproc/unrtf/Makefile 321405 2013-06-20 17:09:09Z bf $
+# $FreeBSD: textproc/unrtf/Makefile 322978 2013-07-14 06:45:34Z bf $
 
 PORTNAME=	unrtf
-PORTVERSION=	0.21.4
+PORTVERSION=	0.21.5
 CATEGORIES=	textproc
 MASTER_SITES=	GNU
 
@@ -11,8 +11,7 @@ COMMENT=	A converter from RTF to several formats, including HTML and LaTeX
 
 LICENSE=	GPLv3
 
-USES=		iconv
-USE_GMAKE=	yes
+USES=		gmake iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/share
 
