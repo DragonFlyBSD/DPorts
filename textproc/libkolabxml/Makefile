@@ -1,7 +1,8 @@
-# $FreeBSD: textproc/libkolabxml/Makefile 321598 2013-06-22 21:47:06Z rakuco $
+# $FreeBSD: textproc/libkolabxml/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	libkolabxml
 PORTVERSION=	0.8.4
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://mirror.kolabsys.com/pub/releases/
 
