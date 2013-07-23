@@ -1,8 +1,8 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/devel/p5-Package-Stash/Makefile,v 1.26 2013/01/05 16:44:45 svnexp Exp $
+# $FreeBSD: devel/p5-Package-Stash/Makefile 323268 2013-07-19 07:07:29Z culot $
 
 PORTNAME=	Package-Stash
-PORTVERSION=	0.34
+PORTVERSION=	0.35
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DOY
@@ -16,8 +16,7 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	\
 	p5-Dist-CheckConflicts>=0.02:${PORTSDIR}/devel/p5-Dist-CheckConflicts \
-	p5-Module-Implementation>=0:${PORTSDIR}/devel/p5-Module-Implementation \
-	p5-Package-DeprecationManager>=0:${PORTSDIR}/devel/p5-Package-DeprecationManager \
+	p5-Module-Implementation>=0.06:${PORTSDIR}/devel/p5-Module-Implementation \
 	p5-Package-Stash-XS>=0.22:${PORTSDIR}/devel/p5-Package-Stash-XS
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
@@ -25,7 +24,9 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 
 PERL_CONFIGURE=	yes
 
+MAN1=		package-stash-conflicts.1
 MAN3=		Package::Stash.3 \
+		Package::Stash::Conflicts.3 \
 		Package::Stash::PP.3
 
 .include <bsd.port.mk>
