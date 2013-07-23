@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sk1libs
-# Date created:		30 Jun 2010
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/sk1libs/Makefile,v 1.2 2012/11/17 05:58:23 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: graphics/sk1libs/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	sk1libs
 PORTVERSION=	0.9.1
@@ -14,9 +10,9 @@ MASTER_SITES=	GOOGLE_CODE \
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A set of python libraries for sK1 Project
 
-LIB_DEPENDS=	lcms.1:${PORTSDIR}/graphics/lcms \
-		freetype.9:${PORTSDIR}/print/freetype2 \
-		jpeg.11:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	lcms:${PORTSDIR}/graphics/lcms \
+		freetype:${PORTSDIR}/print/freetype2 \
+		jpeg:${PORTSDIR}/graphics/jpeg
 
 PROJECTHOST=	uniconvertor
 
