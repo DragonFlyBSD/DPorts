@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/science/py-scipy/Makefile,v 1.36 2012/11/17 06:00:59 svnexp Exp $
+# $FreeBSD: science/py-scipy/Makefile 323443 2013-07-22 12:44:32Z rm $
 
 PORTNAME=	scipy
 PORTVERSION=	0.11.0
@@ -11,7 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:source \
 		scipy-ref.pdf:doc
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Scientific tools for Python
 
 LICENSE=	BSD
@@ -26,10 +26,10 @@ LATEST_LINK=	py-${PORTNAME}
 OPTIONSFILE=	${PORT_DBDIR}/py-numpy/options
 
 USE_FORTRAN=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
-OPTIONS_DEFINE=	ATLAS SUITESPARSE
+OPTIONS_DEFINE=	ATLAS DOCS SUITESPARSE
 OPTIONS_DEFAULT=SUITESPARSE
 ATLAS_DESC=	Use optimized blas library
 SUITESPARSE_DESC=	Use AMD and UMFPACK in SuiteSparse
@@ -66,7 +66,7 @@ post-install:
 		${SED} 's,^${PREFIX}/,,' >> ${TMPPLIST}
 	@${FIND} ${PYTHONPREFIX_SITELIBDIR}/scipy -type d | ${SORT} -r | \
 		${SED} 's,^${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKDIR}/scipy-ref.pdf ${DOCSDIR}
 	@${ECHO_CMD} ${DOCSDIR}/scipy-ref.pdf | \
