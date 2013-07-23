@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-beaker
-# Date created:		Jun 16 2007
-# Whom:			Dryice Liu <dryice@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-beaker/Makefile,v 1.26 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: Dryice Liu <dryice@FreeBSD.org>
+# $FreeBSD: www/py-beaker/Makefile 323086 2013-07-16 05:02:29Z wen $
 
 PORTNAME=	beaker
 PORTVERSION=	1.6.4
