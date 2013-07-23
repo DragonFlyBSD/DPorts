@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xrandr/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xrandr/Makefile 323160 2013-07-17 11:46:14Z zeising $
 
 PORTNAME=	xrandr
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
