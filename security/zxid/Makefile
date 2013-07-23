@@ -1,8 +1,9 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/zxid/Makefile 319235 2013-05-27 13:20:35Z bapt $
+# $FreeBSD: security/zxid/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	zxid
 PORTVERSION=	1.05
+PORTREVISION=	1
 CATEGORIES=	security www
 MASTER_SITES=	http://zxid.org/
 EXTRACT_SUFX=	.tgz
