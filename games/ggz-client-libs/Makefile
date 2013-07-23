@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/ggz-client-libs/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: games/ggz-client-libs/Makefile 323493 2013-07-22 18:57:44Z marino $
 
 PORTNAME=	ggz-client-libs
 PORTVERSION=	${GGZ_VERSION}
@@ -43,6 +43,5 @@ post-patch:
 post-install:
 	@${TOUCH} ${PREFIX}/etc/ggz.modules
 
-.include <bsd.port.pre.mk>
-.include "../../games/libggz/bsd.ggz.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../libggz/bsd.ggz.mk"
+.include <bsd.port.mk>
