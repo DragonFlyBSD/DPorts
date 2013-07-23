@@ -1,8 +1,10 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/dns/py-ldns/Makefile,v 1.2 2012/11/22 12:55:54 svnexp Exp $
+# $FreeBSD: dns/py-ldns/Makefile 322766 2013-07-11 12:40:54Z mat $
 
 MASTERDIR=	${.CURDIR}/../../dns/ldns
 
-OPTIONS_SET=	PYLDNS
+BUILD_PYLDNS=yes
+
+PLIST=	${.CURDIR}/pkg-plist
 
 .include "${MASTERDIR}/Makefile"
