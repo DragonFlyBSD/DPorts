@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-DateTime-Event-Sunrise
-# Date created:	   2 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Event-Sunrise/Makefile,v 1.11 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by:	Mathieu Arnold <m@absolight.net>
+# $FreeBSD: devel/p5-DateTime-Event-Sunrise/Makefile 322693 2013-07-10 13:36:21Z skreuzer $
 
 PORTNAME=	DateTime-Event-Sunrise
-PORTVERSION=	0.05.01
+PORTVERSION=	0.05.02
 DISTVERSION=	${PORTVERSION:C/\.(..)$/\1/}
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
