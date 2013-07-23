@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: finance/qhacc/Makefile 321137 2013-06-17 15:33:12Z miwi $
+# $FreeBSD: finance/qhacc/Makefile 323465 2013-07-22 15:25:04Z miwi $
 
 PORTNAME=	qhacc
 PORTVERSION=	4.1
@@ -20,6 +20,8 @@ USE_QT4=	corelib gui sql moc_build qmake_build rcc_build uic_build
 USE_GCC=	4.6+
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
+
+CXXFLAGS+=	-fpermissive
 
 DESKTOP_ENTRIES="QHacc" "" "" "${PORTNAME}" "" ""
 
