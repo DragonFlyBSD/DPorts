@@ -1,9 +1,9 @@
 # Created by: ag@muwiinfa.geschichte.uni-mainz.de Albert Graef
-# $FreeBSD: lang/q/Makefile 320476 2013-06-10 14:11:40Z gahr $
+# $FreeBSD: lang/q/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	q
 PORTVERSION=	7.11
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	lang
 MASTER_SITES=	SF/${PORTNAME}-lang/${PORTNAME}/${PORTVERSION}
 
@@ -14,7 +14,7 @@ DEPRECATED=	Q-Lang is no longer supported. See lang/pure instead
 EXPIRATION_DATE=2013-08-10 
 
 LIB_DEPENDS=	MagickWand:${PORTSDIR}/graphics/ImageMagick \
-    		curl.6:${PORTSDIR}/ftp/curl \
+    		curl:${PORTSDIR}/ftp/curl \
 		freetype.9:${PORTSDIR}/print/freetype2 \
 		gdbm.4:${PORTSDIR}/databases/gdbm \
 		gmp.10:${PORTSDIR}/math/gmp \
