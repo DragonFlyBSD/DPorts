@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-# $FreeBSD: devel/newfile/Makefile 313674 2013-03-08 20:37:29Z eadler $
+# $FreeBSD: devel/newfile/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	newfile
 PORTVERSION=	1.0.14
@@ -10,13 +10,13 @@ MASTER_SITES=	SF
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Tool for creating starter files in various languages
 
+LICENSE=	BSD
+
 USE_RUBY=	yes
 GNU_CONFIGURE=	yes
 
 MAN1=		newfile.1
 PORTDOCS=	newfile.html
-
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
