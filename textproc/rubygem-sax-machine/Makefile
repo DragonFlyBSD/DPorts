@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-sax-machine
-# Date created:		29 May 2010
-# Whom:			Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/textproc/rubygem-sax-machine/Makefile,v 1.3 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: textproc/rubygem-sax-machine/Makefile 322893 2013-07-13 06:21:41Z swills $
 
 PORTNAME=	sax-machine
-PORTVERSION=	0.0.16
+PORTVERSION=	0.1.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
