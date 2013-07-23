@@ -1,9 +1,9 @@
 # Created by: Russell Francis <johntabularasa@users.sf.net>
-# $FreeBSD: devel/libgutenfetch/Makefile 316958 2013-04-30 20:00:28Z bdrewery $
+# $FreeBSD: devel/libgutenfetch/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	libgutenfetch
 PORTVERSION=	1.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
