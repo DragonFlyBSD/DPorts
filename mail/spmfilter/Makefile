@@ -1,8 +1,8 @@
-# $FreeBSD: mail/spmfilter/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/spmfilter/Makefile 323328 2013-07-19 20:57:59Z cs $
 
 PORTNAME=	spmfilter
 PORTVERSION=	0.4.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	http://www.${PORTNAME}.org/attachments/download/60/
 
