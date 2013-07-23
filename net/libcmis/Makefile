@@ -1,7 +1,8 @@
-# $FreeBSD: net/libcmis/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: net/libcmis/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	libcmis
 PORTVERSION=	0.3.1
+PORTREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	SF/${PORTNAME}
 
