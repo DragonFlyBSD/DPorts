@@ -1,8 +1,9 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: multimedia/gnome-mplayer/Makefile 318119 2013-05-13 16:11:09Z stefan $
+# $FreeBSD: multimedia/gnome-mplayer/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	gnome-mplayer
 PORTVERSION=	1.0.8
+PORTREVISION=	1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GOOGLE_CODE
 
