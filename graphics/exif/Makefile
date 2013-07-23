@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: graphics/exif/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: graphics/exif/Makefile 322581 2013-07-09 21:26:48Z pav $
 
 PORTNAME=	exif
 PORTVERSION=	0.6.20
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF/lib${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command line utility to read and manipulate EXIF data
 
 LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
