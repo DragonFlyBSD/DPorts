@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/ggz-gtk-client/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: games/ggz-gtk-client/Makefile 323493 2013-07-22 18:57:44Z marino $
 
 PORTNAME=	ggz-gtk-client
 PORTVERSION=	${GGZ_VERSION}
@@ -30,6 +30,5 @@ CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
 
-.include <bsd.port.pre.mk>
-.include "../../games/libggz/bsd.ggz.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../libggz/bsd.ggz.mk"
+.include <bsd.port.mk>
