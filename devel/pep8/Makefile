@@ -1,8 +1,8 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/pep8/Makefile 314171 2013-03-14 17:04:32Z sbz $
+# $FreeBSD: devel/pep8/Makefile 323232 2013-07-18 13:31:19Z sbz $
 
 PORTNAME=	pep8
-PORTVERSION=	1.4.5
+PORTVERSION=	1.4.6
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,6 +19,7 @@ PYDISTUTILS_PKGVERSION=	${PORTVERSION}
 PYDISTUTILS_NOEGGINFO=	yes
 
 regression-test: extract
-	@(cd ${WRKSRC}; ${PYTHON_CMD} ${PORTNAME}.py --doctest --testsuite=testsuite)
+	@(cd ${WRKSRC}; ${PYTHON_CMD} ${PORTNAME}.py \
+		--doctest --testsuite=testsuite)
 
 .include <bsd.port.mk>
