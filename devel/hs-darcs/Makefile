@@ -1,9 +1,9 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: devel/hs-darcs/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-darcs/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	darcs
 PORTVERSION=	2.8.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
