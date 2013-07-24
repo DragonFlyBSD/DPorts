@@ -1,13 +1,9 @@
-# New ports collection makefile for:	chexedit
-# Date Created:				8 Jul 2000
-# Whom:					Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: ports/editors/chexedit/Makefile,v 1.16 2013/01/28 18:41:50 svnexp Exp $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: editors/chexedit/Makefile 323483 2013-07-22 17:29:52Z amdmi3 $
 
 PORTNAME=	chexedit
 PORTVERSION=	0.9.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	http://www.rogoyski.com/adam/programs/hexedit/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -15,6 +11,9 @@ DISTNAME=	hexedit-${PORTVERSION}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Full screen text mode Hex editor using the [n]curses library
+
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/chexedit
