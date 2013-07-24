@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/love/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
+# $FreeBSD: devel/love/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	love
 PORTVERSION=	0.8.0
@@ -12,12 +12,12 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-linux-src
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Open-source 2D game engine
 
-LIB_DEPENDS=	IL.2:${PORTSDIR}/graphics/devil \
-		modplug.1:${PORTSDIR}/audio/libmodplug \
-		mpg123.0:${PORTSDIR}/audio/mpg123 \
-		vorbisfile.6:${PORTSDIR}/audio/libvorbis \
-		physfs.1:${PORTSDIR}/devel/physfs \
-		freetype.9:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	IL:${PORTSDIR}/graphics/devil \
+		modplug:${PORTSDIR}/audio/libmodplug \
+		mpg123:${PORTSDIR}/audio/mpg123 \
+		vorbisfile:${PORTSDIR}/audio/libvorbis \
+		physfs:${PORTSDIR}/devel/physfs \
+		freetype:${PORTSDIR}/print/freetype2
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
 
 USE_GMAKE=	yes
@@ -31,6 +31,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/freetype2 \
 LDFLAGS+=	-L${LOCALBASE}/lib -L${LUA_LIBDIR}
 CONFIGURE_ARGS=	--bindir=${PREFIX}/bin --libdir=${PREFIX}/lib
 WRKSRC=		${WRKDIR}/love-${PORTVERSION}
+USE_DOS2UNIX=	yes
 
 PLIST_FILES=	bin/love
 
