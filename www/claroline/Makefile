@@ -1,11 +1,10 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: www/claroline/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# $FreeBSD: www/claroline/Makefile 323347 2013-07-20 13:33:44Z wen $
 
 PORTNAME=	claroline
-PORTVERSION=	1.10.2
+PORTVERSION=	1.11.7
 CATEGORIES=	www
-MASTER_SITES=	SF/${PORTNAME}/Claroline/claroline%20${PORTVERSION}
-DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
+MASTER_SITES=	SF/${PORTNAME}/Claroline/Claroline_${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Open Source eLearning and eWorking platform
