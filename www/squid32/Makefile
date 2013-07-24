@@ -1,5 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@FreeBSD.org>
-# $FreeBSD: www/squid32/Makefile 317862 2013-05-11 10:59:52Z tmseck $
+# $FreeBSD: www/squid32/Makefile 323084 2013-07-16 00:33:53Z delphij $
 #
 # Note:
 # Starting with Squid 3.1 SQUID_LANGUAGES and SQUID_DEFAULT_LANG are no longer
@@ -38,7 +38,6 @@
 
 PORTNAME=	squid
 PORTVERSION=	3.2.${SQUID_STABLE_VER}
-PORTREVISION=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	ftp://ftp.squid-cache.org/pub/%SUBDIR%/ \
 		http://mirrors.ccs.neu.edu/Squid/ \
@@ -77,7 +76,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	squid32
 
-SQUID_STABLE_VER=	11
+SQUID_STABLE_VER=	13
 
 CONFLICTS_INSTALL=	squid-2.[0-9].* squid-3.[!2].* cacheboy-[0-9]* lusca-head-[0-9]*
 GNU_CONFIGURE=	yes
