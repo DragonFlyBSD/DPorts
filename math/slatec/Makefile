@@ -1,5 +1,5 @@
 # Created by: Anton Shterenlikht
-# $FreeBSD: math/slatec/Makefile 315619 2013-03-30 14:37:13Z bf $
+# $FreeBSD: math/slatec/Makefile 323101 2013-07-16 12:15:05Z madpilot $
 
 PORTNAME=	slatec
 PORTVERSION=	4.1
@@ -13,7 +13,7 @@ DISTFILES=	guide:slatec slatec_chk.tgz:slatec slatec_src.tgz:slatec \
 DIST_SUBDIR=	slatec
 EXTRACT_ONLY=	slatec_src.tgz slatec_chk.tgz
 
-MAINTAINER=	mexas@bristol.ac.uk
+MAINTAINER=	mexas@bris.ac.uk
 COMMENT=	SLATEC Common Mathematical Library
 
 USE_LDCONFIG=	yes
