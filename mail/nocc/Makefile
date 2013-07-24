@@ -1,19 +1,18 @@
-# New ports collection makefile for:	nocc
-# Date created:		Fri Feb 3 13:31:37 CET 2002
-# Whom:			Alex Dupre <sysadmin@alexdupre.com>
-#
-# $FreeBSD: ports/mail/nocc/Makefile,v 1.32 2012/11/17 05:59:07 svnexp Exp $
-#
+# Created by: Alex Dupre <sysadmin@alexdupre.com>
+# $FreeBSD: mail/nocc/Makefile 322759 2013-07-11 08:11:51Z ale $
 
 PORTNAME=	nocc
 PORTVERSION=	1.9.3
+PORTREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	SF/${PORTNAME}/NOCC/${PORTVERSION}
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	A webmail system which access POP3 and IMAP mail servers
 
-USE_PHP=	iconv imap mbstring pcre session
+OPTIONS_DEFINE=	DOCS
+
+USE_PHP=	ctype iconv imap mbstring pcre session
 WANT_PHP_WEB=	yes
 
 SUB_FILES=	pkg-message
@@ -28,13 +27,15 @@ NOCCCOMP=	.htaccess favicon.ico robots.txt \
 
 PORTDOCS=	*
 
+.include <bsd.port.options.mk>
+
 do-install:
 	@${MKDIR} ${WWWDIR}
 .for i in ${NOCCCOMP}
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} ${i} ${WWWDIR}
 .endfor
 	@${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/docs/* ${DOCSDIR}
 .endif
