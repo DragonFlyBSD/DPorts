@@ -1,22 +1,20 @@
-# Ports collection makefile for:	rubygem-rubytree
-# Date created:				2012-01-13
-# Whom:					Mikhail T. <m.tsatsenko@gmail.com>
-#
-# $FreeBSD: ports/devel/rubygem-rubytree/Makefile,v 1.2 2012/11/17 05:57:01 svnexp Exp $
+# Created by: Mikhail T. <m.tsatsenko@gmail.com>
+# $FreeBSD: devel/rubygem-rubytree/Makefile 322793 2013-07-11 19:59:02Z swills $
 
 PORTNAME=	rubytree
-PORTVERSION=	0.8.2
+PORTVERSION=	0.8.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	m.tsatsenko@gmail.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Implementation of the Tree data structure for the Ruby
+
+RUN_DEPENDS=	rubygem-structured_warnings>=0:${PORTSDIR}/devel/rubygem-structured_warnings \
+		rubygem-json>=0:${PORTSDIR}/devel/rubygem-json
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 USE_RUBY_RDOC=	yes
 RUBYGEM_AUTOPLIST=	yes
-# doc broken for now, upstream bug #28835
-NOPORTDOCS=	yes
 
 .include <bsd.port.mk>
