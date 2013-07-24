@@ -2,11 +2,11 @@
 # Date created:				05.01.2004
 # Whom:					Ulrich Spoerlein <uspoerlein@gmail.com>
 #
-# $FreeBSD: ports/ftp/wmget/Makefile,v 1.17 2012/11/17 05:57:31 svnexp Exp $
+# $FreeBSD: ftp/wmget/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	wmget
 PORTVERSION=	0.6.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	ftp
 MASTER_SITES=	http://amtrickey.net/download/ \
 		${MASTER_SITE_LOCAL}
@@ -16,7 +16,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	uqs@FreeBSD.org
 COMMENT=	Dock app for Window Maker providing wget functionality
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USE_XORG=	x11 xpm
 USE_GMAKE=	yes
