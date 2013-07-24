@@ -1,9 +1,5 @@
-# New ports collection makefile for:	phlipple
-# Date created:		01 Nov 2011
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/games/phlipple/Makefile,v 1.7 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: games/phlipple/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	phlipple
 PORTVERSION=	0.8.5
@@ -14,8 +10,8 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Flipping squares will never be the same
 
 LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg \
-		vorbis.4:${PORTSDIR}/audio/libvorbis \
-		GLEW.1:${PORTSDIR}/graphics/glew
+		vorbis:${PORTSDIR}/audio/libvorbis \
+		GLEW:${PORTSDIR}/graphics/glew
 
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl mixer image
@@ -27,9 +23,11 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PORTDOCS=	*
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|' ${WRKSRC}/src/*.c
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/install-data-am:/ s|install-dist_docDATA||' \
 		${WRKSRC}/Makefile.in
 .endif
