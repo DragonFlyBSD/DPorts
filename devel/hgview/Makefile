@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hgview
-# Date created:		20 Nov 2008
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/hgview/Makefile,v 1.23 2013/02/03 22:42:58 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: devel/hgview/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	hgview
 PORTVERSION=	1.6.2
@@ -31,6 +27,8 @@ PORTDOCS=	*
 
 MAN1=		hgview.1
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|share/python-support/mercurial-common|${PYTHON_SITELIBDIR:C,^${PYTHONBASE}/,,}|' \
 		${WRKSRC}/hgviewlib/__pkginfo__.py
@@ -40,8 +38,8 @@ post-patch:
 		${WRKSRC}/README
 	@${REINPLACE_CMD} -e 's|'make'|'${GMAKE}'|' ${WRKSRC}/setup.py
 
-.if !defined(NOPORTDOCS)
 post-install:
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
