@@ -3,7 +3,7 @@
 # Date created:			Jun 30, 2005
 # Whom:				ijliao
 #
-# $FreeBSD: ports/misc/cs/Makefile,v 1.8 2012/11/17 05:59:33 svnexp Exp $
+# $FreeBSD: misc/cs/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	cs
@@ -15,7 +15,7 @@ MASTER_SITES=	http://njhurst.org/programming/cross-stitch/ \
 MASTER_SITE_SUBDIR=	pav
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cross Stitch software
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/PIL/Image.py:${PORTSDIR}/graphics/py-imaging
