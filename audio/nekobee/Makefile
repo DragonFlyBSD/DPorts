@@ -1,8 +1,9 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/nekobee/Makefile 318308 2013-05-16 10:32:07Z miwi $
+# $FreeBSD: audio/nekobee/Makefile 322948 2013-07-13 17:23:19Z deischen $
 
 PORTNAME=	nekobee
 PORTVERSION=	0.1.8
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	GH
 
