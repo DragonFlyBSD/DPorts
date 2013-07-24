@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: ftp/curlpp/Makefile 317691 2013-05-08 15:54:54Z sunpoet $
+# $FreeBSD: ftp/curlpp/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	curlpp
 PORTVERSION=	0.7.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	ftp
 MASTER_SITES=	GOOGLE_CODE
 
