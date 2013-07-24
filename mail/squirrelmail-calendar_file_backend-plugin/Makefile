@@ -1,5 +1,5 @@
 # Created by:		Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/mail/squirrelmail-calendar_file_backend-plugin/Makefile,v 1.5 2012/11/17 05:59:15 svnexp Exp $
+# $FreeBSD: mail/squirrelmail-calendar_file_backend-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
 
 PORTNAME=		calendar_file_backend
 PORTVERSION=		1.0
@@ -12,7 +12,5 @@ COMMENT=		File backend for SquirrelMail Calendar plugin
 
 SQUIRREL_PLUGIN_NAME=	${PORTNAME}
 
-
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/mail/squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
+.include <bsd.port.mk>
