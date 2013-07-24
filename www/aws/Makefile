@@ -1,12 +1,12 @@
-# Created by: John Marino <draco@marino.st>
-# $FreeBSD: www/aws/Makefile 322273 2013-07-04 12:58:37Z wg $
+# Created by: John Marino <marino@FreeBSD.org>
+# $FreeBSD: www/aws/Makefile 322832 2013-07-12 13:40:50Z marino $
 
 PORTNAME=	aws
 PORTVERSION=	3.1.0.0
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	marino@FreeBSD.org
 COMMENT=	Adacore Ada Web Server and framework
 
 BUILD_DEPENDS=	gprbuild>=20120510:${PORTSDIR}/devel/gprbuild \
