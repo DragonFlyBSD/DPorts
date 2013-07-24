@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/kudu/Makefile 320904 2013-06-14 12:31:57Z amdmi3 $
+# $FreeBSD: graphics/kudu/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	kudu
 PORTVERSION=	0.1.2
@@ -12,7 +12,7 @@ COMMENT=	3D skeletal animation tool, powered by GTK+ and OpenGL
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	gtkglext-x11-1.0.0:${PORTSDIR}/x11-toolkits/gtkglext
+LIB_DEPENDS=	gtkglext-x11-1.0:${PORTSDIR}/x11-toolkits/gtkglext
 
 USE_GL=		gl
 USE_PYTHON=	yes
