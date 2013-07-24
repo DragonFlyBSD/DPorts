@@ -2,12 +2,12 @@
 # Date created:		16 February 2007
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/www/castget/Makefile,v 1.11 2012/11/17 06:02:29 svnexp Exp $
+# $FreeBSD: www/castget/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	castget
 PORTVERSION=	1.0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	SAVANNAH CENKES
 
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command-line podcast downloader
 
 LIB_DEPENDS=	id3-3.8.3:${PORTSDIR}/audio/id3lib \
-		curl.6:${PORTSDIR}/ftp/curl
+		curl:${PORTSDIR}/ftp/curl
 
 USE_LDCONFIG=	yes
 USE_GNOME=	glib20 libxml2
