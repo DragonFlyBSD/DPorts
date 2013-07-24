@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/games/apricots/Makefile,v 1.17 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/apricots/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	apricots
 PORTVERSION=	0.2.6
@@ -15,6 +15,7 @@ USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_SDL=	sdl
+USE_DOS2UNIX=	yes
 MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
