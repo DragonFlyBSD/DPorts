@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@pobox.com>
-# $FreeBSD: games/angband/Makefile 315405 2013-03-27 18:43:08Z pawel $
+# $FreeBSD: games/angband/Makefile 322581 2013-07-09 21:26:48Z pav $
 
 PORTNAME=	angband
 PORTVERSION=	3.4.1
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://rephial.org/downloads/${PORTVERSION:R}/
 DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Rogue-like game with color, X11 support
 
 USE_GMAKE=	yes
