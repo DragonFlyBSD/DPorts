@@ -2,7 +2,7 @@
 # Date created:		29 Aug 2005
 # Whom:			Alex Varju <freebsd-ports@varju.ca>
 #
-# $FreeBSD: www/gallery2/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: www/gallery2/Makefile 322899 2013-07-13 06:56:30Z sunpoet $
 #
 
 PORTNAME=	gallery2
@@ -25,7 +25,7 @@ NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=		DCRAW FFMPEG GD GRAPHMAGICK IMAGEMAGICK JHEAD \
-			NETPBM NLS UNZIP
+			NETPBM NLS PGSQL UNZIP
 OPTIONS_DEFAULT=	IMAGEMAGICK JHEAD UNZIP
 
 .include <bsd.port.options.mk>
