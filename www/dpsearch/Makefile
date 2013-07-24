@@ -1,5 +1,5 @@
 # Created by: Maxim Zakharov <maxime@maxime.net.ru>
-# $FreeBSD: ports/www/dpsearch/Makefile,v 1.49 2013/02/07 14:08:05 svnexp Exp $
+# $FreeBSD: www/dpsearch/Makefile 321713 2013-06-24 20:16:33Z antoine $
 
 PORTNAME=	dpsearch
 PORTVERSION=	4.53
@@ -111,7 +111,7 @@ CONFIGURE_ARGS+=	--with-sqlite=${LOCALBASE}
 .endif
 
 post-extract:
-.if ${PORT_OPTIONS:MDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-doc_Makefile.in
 .endif
 
