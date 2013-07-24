@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/geomorph/Makefile 317521 2013-05-06 15:18:38Z bapt $
+# $FreeBSD: graphics/geomorph/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	geomorph
 PORTVERSION=	0.50
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Height field generator and editor
 
-LIB_DEPENDS=	gtkglext-x11-1.0.0:${PORTSDIR}/x11-toolkits/gtkglext \
+LIB_DEPENDS=	gtkglext-x11-1.0:${PORTSDIR}/x11-toolkits/gtkglext \
 		png15:${PORTSDIR}/graphics/png
 
 USE_GL=		yes
