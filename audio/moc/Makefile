@@ -1,9 +1,9 @@
 # Created by: Revis Zinkov <rzinkov@gmail.com>
-# $FreeBSD: audio/moc/Makefile 314853 2013-03-21 17:32:34Z bapt $
+# $FreeBSD: audio/moc/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	moc
 PORTVERSION=	2.4.4
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.daper.net/pub/soft/moc/stable/
 
@@ -105,7 +105,7 @@ CONFIGURE_ARGS+=	--without-samplerate
 .endif
 
 .if ${PORT_OPTIONS:MCURL}
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 .else
 CONFIGURE_ARGS+=	--without-curl
 .endif
