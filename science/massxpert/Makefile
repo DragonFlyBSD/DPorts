@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: science/massxpert/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: science/massxpert/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	massxpert
 PORTVERSION=	3.4.0
 CATEGORIES=	science
 MASTER_SITES=	http://download.tuxfamily.org/massxpert/source/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	The massXpert software for (bio)chemists
 
 LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
