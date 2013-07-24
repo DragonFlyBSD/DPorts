@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: databases/recutils/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: databases/recutils/Makefile 322066 2013-06-29 21:46:23Z antoine $
 
 PORTNAME=	recutils
 PORTVERSION=	1.5
@@ -15,6 +15,7 @@ OPTIONS_DEFINE=	NLS DOCS
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+USES=		charsetfix
 
 INFO=		${PORTNAME}
 MAN1=		csv2rec.1 rec2csv.1 recdel.1 recfix.1 recfmt.1 recinf.1 \
