@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net-p2p/libbt/files/patch-src_btlist.c,v 1.2 2012/11/17 06:00:40 svnexp Exp $
+$FreeBSD: net-p2p/libbt/files/patch-src_btlist.c 300897 2012-07-14 14:29:18Z beat $
 
 --- src/btlist.c.orig
 +++ src/btlist.c

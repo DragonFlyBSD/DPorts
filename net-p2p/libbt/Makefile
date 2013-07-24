@@ -2,19 +2,19 @@
 # Date created:				Feb 26 2004
 # Whom:					Florent Thoumie <flz@xbsd.org>
 #
-# $FreeBSD: ports/net-p2p/libbt/Makefile,v 1.24 2012/11/17 06:00:40 svnexp Exp $
+# $FreeBSD: net-p2p/libbt/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	libbt
 PORTVERSION=	1.05
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net-p2p devel
 MASTER_SITES=	SF
 
 MAINTAINER=	flz@FreeBSD.org
 COMMENT=	C library implementing the core BitTorrent protocol
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
