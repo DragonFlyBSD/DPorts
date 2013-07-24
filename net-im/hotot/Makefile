@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: net-im/hotot/Makefile 319756 2013-06-03 06:47:55Z danfe $
+# $FreeBSD: net-im/hotot/Makefile 323290 2013-07-19 13:48:11Z danfe $
 
 PORTNAME=	hotot
 PORTVERSION=	0.9.8.14
@@ -62,8 +62,8 @@ post-patch:
 # Remove `sourceid' parameter from Google search string
 	@${REINPLACE_CMD} -e 's,sourceid=chrome&,,' \
 		${WRKSRC}/data/js/ui.context_menu.js
-# Sanitize font selection list and correct version
-	@${REINPLACE_CMD} -e "/font_list/s/\[.*/['DejaVu Sans', 'Bitstream Vera Sans', 'Droid Sans', 'Verdana', 'Arial', 'Helvetica']/ ; /version/s,11,${PORTVERSION:E}," \
+# Sanitize font selection list
+	@${REINPLACE_CMD} -e "/font_list/s/\[.*/['DejaVu Sans', 'Bitstream Vera Sans', 'Droid Sans', 'Verdana', 'Arial', 'Helvetica']/" \
 		${WRKSRC}/data/js/conf.js
 # Remove stale backup files (prevent pkg-plist pollution)
 	@${FIND} ${WRKSRC} -type f -name '*.bak' -delete
