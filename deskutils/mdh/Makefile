@@ -2,12 +2,12 @@
 # Date created:				12 November 2003
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/mdh/Makefile,v 1.29 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/mdh/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	mdh
 PORTVERSION=	1.9.60
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	http://www.gozer.org/programs/gtk/files/
 
@@ -31,7 +31,7 @@ LIB_DEPENDS+=	gtop-2.0:${PORTSDIR}/devel/libgtop
 .if defined(WITHOUT_CURL)
 CONFIGURE_ARGS+=	--disable-curl
 .else
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 .endif
 
 post-patch:
