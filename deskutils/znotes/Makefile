@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/deskutils/znotes/Makefile,v 1.14 2013/02/08 12:24:47 svnexp Exp $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: deskutils/znotes/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	znotes
 PORTVERSION=	0.4.5
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Simple notes based on QT4
 
 LICENSE=	GPLv3
