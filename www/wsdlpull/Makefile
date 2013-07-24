@@ -3,11 +3,12 @@
 # Date created:			Mar 18, 2005
 # Whom:				ijliao
 #
-# $FreeBSD: ports/www/wsdlpull/Makefile,v 1.37 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: www/wsdlpull/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	wsdlpull
 PORTVERSION=	1.24
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 
