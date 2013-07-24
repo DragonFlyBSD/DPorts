@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: ftp/yafc/Makefile 321104 2013-06-17 12:52:05Z wg $
+# $FreeBSD: ftp/yafc/Makefile 322334 2013-07-05 14:41:15Z wg $
 
 PORTNAME=	yafc
 PORTVERSION=	1.2.5
@@ -14,9 +14,9 @@ LICENSE=	GPLv2 # (or later)
 OPTIONS_DEFINE=	BASH EXAMPLES NLS SSH READLINE
 OPTIONS_DEFAULT=BASH NLS SSH
 
+USES=		gmake
 USE_XZ=		yes
 USE_OPENSSL=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_ipv6=yes
 CONFIGURE_ARGS=	--with-socks=no --with-socks5=no --with-krb4=no \
