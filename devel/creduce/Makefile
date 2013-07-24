@@ -1,4 +1,4 @@
-# $FreeBSD: devel/creduce/Makefile 317980 2013-05-12 21:31:26Z eadler $
+# $FreeBSD: devel/creduce/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	creduce
 #PORTVERSION=	2.0.1
@@ -26,9 +26,8 @@ GH_TAGNAME=	a2422d5
 GH_COMMIT=	a2422d5
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_PERL5=	yes
 
-MAKE_JOBS_SAFE=	yes
+USES=	gmake
 
 .include <bsd.port.mk>
