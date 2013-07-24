@@ -1,5 +1,5 @@
 # Created by: Philippe Lefebvre <nemesis@balistik.net>
-# $FreeBSD: editors/nano/Makefile 316459 2013-04-24 17:47:51Z eadler $
+# $FreeBSD: editors/nano/Makefile 323130 2013-07-16 22:04:52Z eadler $
 
 PORTNAME=	nano
 PORTVERSION=	2.2.6
@@ -11,16 +11,15 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Nano's ANOther editor, an enhanced free Pico clone
 
-CONFLICTS=	nano-2*
-
 LICENSE=	GPLv3
+
+CONFLICTS=	nano-devel-2*
 
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS=	--docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
