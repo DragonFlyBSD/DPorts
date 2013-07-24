@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: mail/mutt14/Makefile 320512 2013-06-11 00:19:18Z mandree $
+# $FreeBSD: mail/mutt14/Makefile 323108 2013-07-16 14:43:38Z miwi $
 
 PORTNAME=	mutt
 PORTVERSION=	1.4.2.3
@@ -95,6 +95,7 @@ DIST_SUBDIR=	mutt
 WRKSRC=		${WRKDIR}/${DISTNAME:S/i$//}
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	automake autoconf
+AUTOMAKE_ARGS=	--add-missing
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	CC="${CC} -I${LOCALBASE}/include"
 CONFIGURE_ARGS=	--enable-pop --enable-imap --disable-fcntl \
