@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: security/ckpass/Makefile 317096 2013-05-02 12:06:21Z pawel $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: security/ckpass/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	ckpass
 PORTVERSION=	0.2
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Ncurses based password database client
 
 LICENSE=	GPLv3
