@@ -1,9 +1,5 @@
-# New ports collection makefile for:	irrd
-# Date created:				Fri Apr  9 14:12:06 JST 2004
-# Whom:					TAKANO Yuji <takano@net-chef.net>
-#
-# $FreeBSD: ports/net/irrd/Makefile,v 1.15 2012/11/17 06:00:03 svnexp Exp $
-#
+# Created by: TAKANO Yuji <takano@net-chef.net>
+# $FreeBSD: net/irrd/Makefile 322737 2013-07-10 23:59:46Z jgh $
 
 PORTNAME=	irrd
 PORTVERSION=	2.3.10
@@ -27,6 +23,7 @@ IRRD_CONFDIR=	${PREFIX}/etc
 USE_RC_SUBR=	irrd
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	YACC="${YACC}"
+MAKE_JOBS_UNSAFE=	yes
 #CONFIGURE_ARGS+=	--disable-thread
 
 .if defined(WITHOUT_IPV6)
