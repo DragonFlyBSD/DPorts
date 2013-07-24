@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: multimedia/smtube/Makefile 317701 2013-05-08 17:38:08Z pawel $
+# $FreeBSD: multimedia/smtube/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	smtube
 PORTVERSION=	1.7
@@ -12,13 +12,15 @@ COMMENT=	SMPlayer YouTube browser
 RUN_DEPENDS=	${LOCALBASE}/bin/smplayer:${PORTSDIR}/multimedia/smplayer
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 ALL_TARGET=	#empty
 USE_QT4=	linguist_build moc_build qmake_build rcc_build uic_build
 QMAKEFLAGS+=	QMAKE_CXXFLAGS_RELEASE=""
 INSTALLS_ICONS=	yes
 
 PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
