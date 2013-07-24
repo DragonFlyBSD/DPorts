@@ -1,5 +1,5 @@
 # Created by: John Capo <jc@irbs.com>
-# $FreeBSD: editors/axe/Makefile 320825 2013-06-13 18:34:51Z wg $
+# $FreeBSD: editors/axe/Makefile 321986 2013-06-28 20:59:11Z bapt $
 
 PORTNAME=	aXe
 PORTVERSION=	6.1.2
@@ -14,7 +14,7 @@ COMMENT=	Simple to use text editor for X
 
 LIB_DEPENDS=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 ALL_TARGET=	Xaw3d all
 MAN1=		axe.1 axinfo.1
