@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/pecl-http/Makefile 313734 2013-03-09 17:26:27Z miwi $
+# $FreeBSD: www/pecl-http/Makefile 323059 2013-07-15 15:07:06Z miwi $
 
 PORTNAME=	http
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 CATEGORIES=	www
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Extended HTTP Support
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
