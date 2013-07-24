@@ -1,9 +1,9 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: games/deng/Makefile 314736 2013-03-20 14:26:46Z makc $
+# $FreeBSD: games/deng/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	deng
 PORTVERSION=	1.9.0b6.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Doomsday%20Engine/1.9.0-beta6.9
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/b/-beta/}
@@ -12,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Enhanced Doom, Heretic, and Hexen source port
 
 BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		png15:${PORTSDIR}/graphics/png
 RUN_DEPENDS=	timidity:${PORTSDIR}/audio/timidity
 
