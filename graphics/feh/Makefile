@@ -1,9 +1,9 @@
 # Created by: Jeremy Norris <ishmael127@home.com>
-# $FreeBSD: graphics/feh/Makefile 321583 2013-06-22 19:14:49Z zeising $
+# $FreeBSD: graphics/feh/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	feh
 PORTVERSION=	2.9.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://feh.finalrewind.org/ \
 		${MASTER_SITE_LOCAL}
@@ -14,7 +14,7 @@ COMMENT=	An image viewer that utilizes Imlib2
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		giblib.1:${PORTSDIR}/graphics/giblib
 
 USE_XORG=	x11 xt xinerama
