@@ -2,12 +2,12 @@
 # Date created:				09 Sep 2004
 # Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
 #
-# $FreeBSD: deskutils/ljit/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/ljit/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	ljit
 PORTVERSION=	0.2.5
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	deskutils
 MASTER_SITES=	http://kir.vtx.ru/ljit/dl/ \
 		http://freebsd.nsu.ru/distfiles/
@@ -17,7 +17,7 @@ COMMENT=	GUI tool to help LiveJournal users post images
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 
 GNU_CONFIGURE=	yes
