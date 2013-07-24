@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: deskutils/menumaker/Makefile 317396 2013-05-05 06:10:24Z jgh $
+# $FreeBSD: deskutils/menumaker/Makefile 322360 2013-07-06 01:22:56Z jgh $
 
 PORTNAME=	menumaker
 PORTVERSION=	0.99.7
@@ -10,7 +10,7 @@ MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Menu generator for X Window Managers and desktop environments
 
 USE_PYTHON=	yes
-USE_GMAKE=	yes
+USES=	gmake
 GNU_CONFIGURE=	yes
 
 INFO=		mmaker
