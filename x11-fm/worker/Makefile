@@ -2,7 +2,7 @@
 # Date created:				14 March 2001
 # Whom:					Simon Dick <simond@irrelevant.org>
 #
-# $FreeBSD: ports/x11-fm/worker/Makefile,v 1.40 2012/11/17 06:03:26 svnexp Exp $
+# $FreeBSD: x11-fm/worker/Makefile 302564 2012-08-15 06:43:29Z rm $
 #
 
 PORTNAME=	worker
