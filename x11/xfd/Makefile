@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xfd/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/xfd/Makefile 323159 2013-07-17 11:45:00Z zeising $
 
 PORTNAME=	xfd
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.2
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
