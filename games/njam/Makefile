@@ -1,9 +1,5 @@
-# New ports collection makefile for: njam
-# Date created:		10 November 2003
-# Whom:			<janos.mohacsi@bsd.hu>
-#
-# $FreeBSD: ports/games/njam/Makefile,v 1.23 2012/11/17 05:57:47 svnexp Exp $
-#
+# Created by: <janos.mohacsi@bsd.hu>
+# $FreeBSD: games/njam/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	njam
 PORTVERSION=	1.25
@@ -22,6 +18,8 @@ USE_SDL=	mixer image net sdl
 MAKE_JOBS_SAFE=	yes
 PORTDOCS=	*
 
+.include <bsd.port.options.mk>
+
 post-extract:
 	@${RM} -f ${WRKSRC}/src/*.o
 
@@ -32,7 +30,7 @@ post-patch:
 post-install:
 	${CHOWN} :games ${PREFIX}/bin/njam
 	${CHMOD} g+s ${PREFIX}/bin/njam
-.ifndef(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/html/* ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
