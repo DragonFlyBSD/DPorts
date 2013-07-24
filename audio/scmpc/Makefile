@@ -1,8 +1,9 @@
 # Created by: Pavel Motyrev <legioner.r@gmail.com>
-# $FreeBSD: audio/scmpc/Makefile 317246 2013-05-03 20:44:34Z bapt $
+# $FreeBSD: audio/scmpc/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	scmpc
 PORTVERSION=	0.3.1
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://cloud.github.com/downloads/cmende/${PORTNAME}/
 
@@ -12,7 +13,7 @@ COMMENT=	An Audioscrobbler client for MPD
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	confuse.0:${PORTSDIR}/devel/libconfuse \
-		curl.6:${PORTSDIR}/ftp/curl
+		curl:${PORTSDIR}/ftp/curl
 
 USES=		pkgconfig
 USE_BZIP2=	yes
