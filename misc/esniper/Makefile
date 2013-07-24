@@ -1,8 +1,9 @@
 # Created by: Lewis Thompson <lewiz@compsoc.man.ac.uk>
-# $FreeBSD: ports/misc/esniper/Makefile,v 1.21 2012/11/17 05:59:34 svnexp Exp $
+# $FreeBSD: misc/esniper/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	esniper
 DISTVERSION=	2-28-0
+PORTREVISION=	1
 CATEGORIES=	misc net
 MASTER_SITES=	SF
 EXTRACT_SUFX=	.tgz
