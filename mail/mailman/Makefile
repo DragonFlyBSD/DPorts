@@ -1,5 +1,5 @@
 # Created by: n_hibma@qubesoft.com
-# $FreeBSD: mail/mailman/Makefile 320010 2013-06-05 17:53:50Z bapt $
+# $FreeBSD: mail/mailman/Makefile 322407 2013-07-06 19:24:51Z wxs $
 
 PORTNAME=	mailman
 DISTVERSION=	2.1.14
@@ -73,7 +73,7 @@ COURIER_DESC=	fr use with courier
 HTDIG_DESC=	htdig integration patches
 INTEGRATION_DESC=	integrating postfix and mailman
 NAMAZU2_DESC=	make private archives searchable with namazu2
-MTA_DESC=	integrate with a MTA
+MTA_DESC=	integrate with an MTA
 
 .include <bsd.port.options.mk>
 
