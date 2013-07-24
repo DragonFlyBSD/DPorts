@@ -1,5 +1,5 @@
 # Created by George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: devel/fnccheck/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: devel/fnccheck/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	fnccheck
 PORTVERSION=	3.2.0
@@ -43,5 +43,10 @@ post-patch:
 		 s|-Wall -O3|-Wall|'
 	@${REINPLACE_CMD} -e \
 		'/^SUBDIRS/s|test||' ${WRKSRC}/Makefile.am
+
+# XXX: work around an issue with automake-1.13 erroring out on a
+#      non-existent m4 directory before libtoolize creates it
+pre-configure::
+	@${MKDIR} ${WRKSRC}/m4
 
 .include <bsd.port.mk>
