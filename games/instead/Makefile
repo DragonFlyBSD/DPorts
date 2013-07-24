@@ -1,10 +1,10 @@
 # Created by: neuroworker@gmail.com
-# $FreeBSD: games/instead/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: games/instead/Makefile 323031 2013-07-15 13:23:32Z amdmi3 $
 
 PORTNAME=	instead
-PORTVERSION=	1.9.0
+PORTVERSION=	1.9.1
 CATEGORIES=	games
-MASTER_SITES=	GOOGLE_CODE \
+MASTER_SITES=	SF/instead/instead/${PORTVERSION}/ \
 		http://mirror.amdmi3.ru/distfiles/
 DISTNAME=	instead_${PORTVERSION}
 
