@@ -1,8 +1,8 @@
 # Created by: rehsack@liwing.de
-# $FreeBSD: devel/gaphor/Makefile 317359 2013-05-04 21:35:42Z bapt $
+# $FreeBSD: devel/gaphor/Makefile 323467 2013-07-22 15:27:08Z miwi $
 
 PORTNAME=	gaphor
-PORTVERSION=	0.17.1
+PORTVERSION=	0.17.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	CHEESESHOP/source/e/etk.docking:docking \
 		CHEESESHOP/source/g/gaphas:gaphas \
@@ -45,8 +45,6 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|\(Icon=gaphor\).*|\1|' ${WRKSRC}/gaphor.desktop
-	@${REINPLACE_CMD} -e \
-		's|iteable|iterable|' ${WRKSRC}/gaphor/misc/listmixins.py
 
 post-build:
 	@${PYTHON_CMD} -m compileall ${WRKDIR}/${DOCKING_DISTNAME}/lib/etk
