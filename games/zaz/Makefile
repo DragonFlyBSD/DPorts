@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/zaz/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: games/zaz/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	zaz
 PORTVERSION=	1.0.0
@@ -10,10 +10,10 @@ MASTER_SITES=	SF/${PORTNAME}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A puzzle game where the player has to arrange balls in triplets
 
-LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
-		theora.0:${PORTSDIR}/multimedia/libtheora \
-		vorbis.4:${PORTSDIR}/audio/libvorbis \
-		ftgl.2:${PORTSDIR}/graphics/ftgl
+LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
+		theora:${PORTSDIR}/multimedia/libtheora \
+		vorbis:${PORTSDIR}/audio/libvorbis \
+		ftgl:${PORTSDIR}/graphics/ftgl
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
