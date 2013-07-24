@@ -1,11 +1,11 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: ports/audio/jack_umidi/Makefile,v 1.6 2012/11/24 20:38:55 svnexp Exp $
+# $FreeBSD: audio/jack_umidi/Makefile 322984 2013-07-14 14:19:10Z nox $
 
 PORTNAME=	jack_umidi
 PORTVERSION=	1.0.4
 CATEGORIES=	audio
 MASTER_SITES=	http://www.selasky.org/hans_petter/distfiles/ \
-		http://hselasky.homeunix.org:8192/distfiles/
+		http://home.selasky.org:8192/distfiles/
 
 MAINTAINER=	hselasky@FreeBSD.org
 COMMENT=	Daemon that converts a raw MIDI device into a JACK MIDI device
