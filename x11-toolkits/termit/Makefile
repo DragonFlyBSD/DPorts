@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/termit/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-toolkits/termit/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	termit
 PORTVERSION=	2.9.6
@@ -34,21 +34,15 @@ MAN1=		${PORTNAME}.1
 
 TERMIT_ETC=	${PREFIX}/etc/xdg/${PORTNAME}
 
-OPTIONS_DEFINE=	DEBUG
+OPTIONS_DEFINE=	DEBUG DOCS NLS
+OPTIONS_SUB=	yes
+
+DEBUG_CMAKE_ON=	-DDEBUG:BOOL=YES
+
+NLS_CMAKE_OFF=	-DENABLE_NLS:BOOL=NO
+NLS_USES=	gettext
 
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDEBUG}
-CMAKE_ARGS+=	-DDEBUG:BOOL=YES
-.endif
-
-.if ${PORT_OPTIONS:MNLS}
-PLIST_SUB+=	NLS=""
-USES+=		gettext
-.else
-CMAKE_ARGS+=	-DENABLE_NLS:BOOL=NO
-PLIST_SUB+=	NLS="@comment "
-.endif
 
 post-patch:
 .if ${PORT_OPTIONS:MDOCS}
