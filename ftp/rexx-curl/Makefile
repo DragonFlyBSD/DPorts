@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: ftp/rexx-curl/Makefile 320466 2013-06-10 12:26:23Z az $
+# $FreeBSD: ftp/rexx-curl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	curl
 PORTVERSION=	1.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	ftp
 MASTER_SITES=	SF/rexx${PORTNAME}/rexx${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	rexx-
