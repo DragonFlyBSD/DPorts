@@ -1,7 +1,8 @@
-# $FreeBSD: audio/linnya/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: audio/linnya/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	linnya
 PORTVERSION=	2.3.0
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	ghw@7axu.com
