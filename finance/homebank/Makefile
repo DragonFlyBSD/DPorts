@@ -1,4 +1,4 @@
-# $FreeBSD: finance/homebank/Makefile 320992 2013-06-15 12:16:03Z pawel $
+# $FreeBSD: finance/homebank/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	homebank
 PORTVERSION=	4.5
@@ -14,8 +14,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	osp:${PORTSDIR}/textproc/opensp
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		desktop-file-utils
+USES=		desktop-file-utils gmake shared-mime-info
 USE_GNOME=	gnomehier gtk20
 INSTALLS_ICONS=	yes
 
