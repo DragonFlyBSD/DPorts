@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: audio/gvolwheel/Makefile 316652 2013-04-27 08:24:14Z bapt $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: audio/gvolwheel/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	gvolwheel
 PORTVERSION=	1.0
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Volume mixer
 
 LICENSE=	GPLv3
