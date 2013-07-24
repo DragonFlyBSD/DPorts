@@ -2,24 +2,25 @@
 # Date created:				8 January 2004
 # Whom:					Nosov Artem <chip-set@mail.ru>
 #
-# $FreeBSD: ports/ftp/urlgfe/Makefile,v 1.25 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/urlgfe/Makefile 322785 2013-07-11 16:37:50Z sunpoet $
 #
 
 PORTNAME=	urlgfe
 PORTVERSION=	0.7.1
-PORTREVISION?=	14
+PORTREVISION?=	15
 CATEGORIES=	ftp www
 MASTER_SITES=	SF/urlget/Urlgfe%20%28legacy%29/${PORTVERSION}
 
 MAINTAINER=	chip-set@mail.ru
 COMMENT=	A download manager
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USE_GNOME=	gtk20 lthack
 WANT_GNOME=	yes
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	libtool
+USE_DOS2UNIX=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
@@ -33,12 +34,10 @@ PLIST_SUB+=	GNOME:="@comment "
 .endif
 
 post-patch:
-	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
-		's|$$||g'
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${TOUCH} -f
 	@${REINPLACE_CMD} -e 's|[$$]{prefix}/doc/urlgfe|${DOCSDIR}|g' \
 		${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e 's|$$||g ; s|urlgfe_icon|urlgfe-icon|g ; \
+	@${REINPLACE_CMD} -e 's|urlgfe_icon|urlgfe-icon|g ; \
 		s|/usr/share/pixmaps/urlgfe/||g' ${WRKSRC}/${PORTNAME}.desktop
 	@${REINPLACE_CMD} -e 's|	 -g|	 ${CFLAGS}|g' \
 		${WRKSRC}/src/Makefile.in
