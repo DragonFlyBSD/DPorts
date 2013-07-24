@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/clawsker/Makefile 318767 2013-05-22 13:28:47Z pawel $
+# $FreeBSD: mail/clawsker/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	clawsker
 PORTVERSION=	0.7.10
@@ -22,14 +22,12 @@ USE_PERL5=	yes
 MAN1=		clawsker.1
 PORTDOCS=	NEWS README
 
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS NLS
+OPTIONS_SUB=	yes
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-PLIST_SUB+=	NLS="@comment "
-.endif
+NLS_USES=	gettext
+
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} '/^DATADIR/s|/share||' ${WRKSRC}/Makefile
