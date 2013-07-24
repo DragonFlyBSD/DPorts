@@ -2,11 +2,12 @@
 # Date created:		2006-03-31
 # Whom:			Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
 #
-# $FreeBSD: ports/net-im/cli-msn/Makefile,v 1.13 2012/11/17 06:00:26 svnexp Exp $
+# $FreeBSD: net-im/cli-msn/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	msn
 PORTVERSION=	2.3.2
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	http://mor-pah.net/code/
 PKGNAMEPREFIX=	cli-
@@ -15,7 +16,7 @@ DISTNAME=	CLI-MSN-${PORTVERSION}
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Command line msn messenger
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
