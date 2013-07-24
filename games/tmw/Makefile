@@ -1,9 +1,9 @@
 # Created by: Tobias Gion
-# $FreeBSD: games/tmw/Makefile 316741 2013-04-28 18:39:40Z ak $
+# $FreeBSD: games/tmw/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	tmw
 PORTVERSION=	0.5.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF/themanaworld/The%20Mana%20World/${PORTVERSION}/:src
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}:src
