@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: print/qpdfview/Makefile 319685 2013-06-02 16:41:27Z pawel $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: print/qpdfview/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	qpdfview
 PORTVERSION=	0.4.3
 CATEGORIES=	print
 MASTER_SITES=	https://launchpadlibrarian.net/140746246/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Tabbed PDF viewer using the poppler library
 
 LICENSE=	GPLv2
