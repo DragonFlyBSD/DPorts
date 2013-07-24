@@ -1,11 +1,11 @@
 # Created by: Antonios Anastasiadis <antonakis@gmail.com>
-# $FreeBSD: ports/ports-mgmt/xps/Makefile,v 1.6 2013/01/29 04:41:50 svnexp Exp $
+# $FreeBSD: ports-mgmt/xps/Makefile 322209 2013-07-02 22:55:44Z rakuco $
 
 PORTNAME=	xps
 PORTVERSION=	0.4.1
 CATEGORIES=	ports-mgmt
 
-MAINTAINER=	anastasiadis@datalive.gr
+MAINTAINER=	serpent7776@gmail.com
 COMMENT=	Tool that searches the ports tree by various criteria
 
 LICENSE=	MIT
