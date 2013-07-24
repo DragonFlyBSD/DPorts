@@ -1,8 +1,9 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: audio/ncmpcpp/Makefile 322313 2013-07-05 07:13:14Z bapt $
+# $FreeBSD: audio/ncmpcpp/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	ncmpcpp
 PORTVERSION=	0.5.10
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://unkart.ovh.org/ncmpcpp/ \
 		http://mirror.mcx2.org/
@@ -18,7 +19,8 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
 USE_AUTOTOOLS=	automake aclocal libtool
-ACLOCAL_ARGS=	--acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal
+AUTOMAKE_ARGS=	--add-missing
+ACLOCAL_ARGS=	--automake-acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
@@ -44,7 +46,7 @@ PLIST_FILES=	bin/ncmpcpp \
 PLIST_DIRS=	%%DOCSDIR%%
 
 .if ${PORT_OPTIONS:MCURL}
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 CONFIGURE_ARGS+=	--with-curl
 .else
 CONFIGURE_ARGS+=	--with-curl=no
