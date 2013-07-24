@@ -2,7 +2,7 @@
 # Date created:		2010-06-15
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/deskutils/epoch/Makefile,v 1.6 2013/01/23 15:05:32 svnexp Exp $
+# $FreeBSD: deskutils/epoch/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	epoch
@@ -12,7 +12,7 @@ CATEGORIES=	deskutils
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}${PORTVERSION}src
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Epoch is small and handy timeline application
 
 LINCENSE=	GPLv3
