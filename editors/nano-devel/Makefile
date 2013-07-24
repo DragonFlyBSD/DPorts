@@ -1,5 +1,4 @@
-#
-# $FreeBSD: editors/nano-devel/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: editors/nano-devel/Makefile 323131 2013-07-16 22:07:56Z eadler $
 
 PORTNAME=	nano
 PORTVERSION=	2.3.2
@@ -11,16 +10,15 @@ PKGNAMESUFFIX=	-devel
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Nano's ANOther editor, an enhanced free Pico clone
 
-CONFLICTS=	nano-2*
-
 LICENSE=	GPLv3
+
+CONFLICTS=	nano-2*
 
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS=	--docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
