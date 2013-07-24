@@ -1,8 +1,9 @@
 # Created by: "Waitman Gobble" <uzimac@da3m0n8t3r.com>
-# $FreeBSD: ports-mgmt/prhistory/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
+# $FreeBSD: ports-mgmt/prhistory/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	prhistory
 PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	GH
 
