@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: benchmarks/hpl/Makefile 318160 2013-05-14 13:40:09Z oliver $
+# $FreeBSD: benchmarks/hpl/Makefile 322713 2013-07-10 17:04:49Z bapt $
 
 PORTNAME=	hpl
 PORTVERSION=	2.1
@@ -14,6 +14,7 @@ COMMENT=	High Performance Computing Linpack Benchmark
 LIB_DEPENDS=	blas:${PORTSDIR}/math/blas \
 		mpich:${PORTSDIR}/net/mpich2
 
+MAKE_JOBS_UNSAFE=	yes
 USE_FORTRAN=	yes
 USE_LDCONFIG=	yes
 HPL_ARCH?=	FreeBSD_PIV_CBLAS
