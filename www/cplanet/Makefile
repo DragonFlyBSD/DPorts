@@ -1,7 +1,8 @@
-# $FreeBSD: ports/www/cplanet/Makefile,v 1.8 2012/12/31 15:09:56 svnexp Exp $
+# $FreeBSD: www/cplanet/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	cplanet
 PORTVERSION=	0.9
+PORTREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	http://files.etoilebsd.net/cplanet/
 
