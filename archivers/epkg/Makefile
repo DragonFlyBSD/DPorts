@@ -2,12 +2,12 @@
 # Date created:				12 May 2006
 # Whom:						Jim Pirzyk <pirzyk@freebsd.org>
 #
-# $FreeBSD: ports/archivers/epkg/Makefile,v 1.9 2012/11/17 05:54:20 svnexp Exp $
+# $FreeBSD: archivers/epkg/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	epkg
 PORTVERSION=	2.3.9
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.feep.net/pub/encap/epkg/
 
@@ -15,7 +15,7 @@ MAINTAINER=	pirzyk@FreeBSD.org
 COMMENT=	Encap Package Manager
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libfget.a:${PORTSDIR}/ftp/fget
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		expat.6:${PORTSDIR}/textproc/expat2
 
 HAS_CONFIGURE=	YES
