@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/games/biniax2/Makefile,v 1.13 2013/02/04 07:33:08 svnexp Exp $
+# $FreeBSD: games/biniax2/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	biniax2
 PORTVERSION=	1.30
@@ -13,6 +13,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Original logic game with arcade and tactics modes
 
 USE_SDL=	sdl mixer image
+USE_DOS2UNIX=	yes
 NO_WRKSUBDIR=	yes
 
 post-patch:
