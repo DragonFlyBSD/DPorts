@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/ltris/Makefile 316624 2013-04-26 16:39:14Z bapt $
+# $FreeBSD: games/ltris/Makefile 323302 2013-07-19 15:12:46Z johans $
 
 PORTNAME=	ltris
 PORTVERSION=	1.0.18
@@ -28,9 +28,11 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/icons|/pixmaps|g' ${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e 's|= @mixer_flag@|= @INTLLIBS@ @mixer_flag@|g ; \
-		 s|--mode=666||g' ${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e 's/\/icons/\/pixmaps/g' ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e 's/= @mixer_flag@/= @INTLLIBS@ @mixer_flag@/g ; \
+		 s/--mode=666//g' ${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e 's/^inline //' \
+		${WRKSRC}/src/sdl.h ${WRKSRC}/src/tools.h
 
 post-install:
 	@${CHMOD} 2755 ${PREFIX}/bin/${PORTNAME}
