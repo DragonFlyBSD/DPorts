@@ -1,8 +1,9 @@
 # Created by: Kai Wang <kaiwang27@gmail.com>
-# $FreeBSD: ports/games/frobtads/Makefile,v 1.1 2013/02/22 16:04:45 svnexp Exp $
+# $FreeBSD: games/frobtads/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	frobtads
 PORTVERSION=	1.2.2
+PORTREVISION=	1
 CATEGORIES=	games lang
 MASTER_SITES=	http://www.tads.org/${PORTNAME}/ \
 		http://www.ifarchive.org/if-archive/programming/tads3/source/
