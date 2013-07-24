@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: security/nmapsi4/Makefile 317858 2013-05-11 09:00:05Z makc $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: security/nmapsi4/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	nmapsi4
 PORTVERSION=	0.4.1
 CATEGORIES=	security
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	GUI frontend for the nmap scanning utility
 
 LICENSE=	GPLv2
