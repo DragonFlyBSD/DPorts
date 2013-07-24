@@ -1,8 +1,9 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-shoulda-context/Makefile 321940 2013-06-28 04:04:49Z swills $
+# $FreeBSD: devel/rubygem-shoulda-context/Makefile 323365 2013-07-21 04:45:05Z swills $
 
 PORTNAME=	shoulda-context
 PORTVERSION=	1.1.4
+PORTREVISION=	1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -13,5 +14,9 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES+=	bin/convert_to_should_syntax
+
+post-patch:
+	@${FIND} ${WRKSRC} -type d -exec ${CHMOD} g+rx '{}' +
+	@${FIND} ${WRKSRC} -type f -exec ${CHMOD} g+r  '{}' +
 
 .include <bsd.port.mk>
