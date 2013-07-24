@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: irc/quassel/Makefile 317937 2013-05-12 08:42:18Z makc $
+# $FreeBSD: irc/quassel/Makefile 323341 2013-07-20 11:08:11Z makc $
 
 PORTNAME=	quassel
 PORTVERSION=	0.9.0
@@ -40,7 +40,7 @@ USE_QT4+=	linguist_build
 
 .if ${PORT_OPTIONS:MMONO} || ${PORT_OPTIONS:MCLIENT}
 . if ${PORT_OPTIONS:MKDE}
-USE_KDE4=	automoc4 kdelibs
+USE_KDE4=	automoc4 kdelibs kdeprefix
 CMAKE_ARGS+=	-DWITH_KDE=ON
 PLIST=		${PKGDIR}/pkg-plist.kde
 . else
