@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: net-mgmt/icinga/Makefile 322482 2013-07-08 05:50:15Z lme $
+# $FreeBSD: net-mgmt/icinga/Makefile 323338 2013-07-20 08:16:37Z lme $
 
 PORTNAME=	icinga
 PORTVERSION=	1.9.3
@@ -18,6 +18,8 @@ USES=		iconv
 USE_PERL5_BUILD=	yes
 USE_AUTOTOOLS=	autoconf libltdl
 USE_RC_SUBR=	icinga
+
+MAKE_JOBS_UNSAFE=yes
 
 GNU_CONFIGURE=	yes
 
