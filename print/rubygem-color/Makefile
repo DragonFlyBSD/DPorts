@@ -1,7 +1,7 @@
-# $FreeBSD: ports/print/rubygem-color/Makefile,v 1.10 2012/11/17 06:00:54 svnexp Exp $
+# $FreeBSD: print/rubygem-color/Makefile 322965 2013-07-13 19:40:18Z swills $
 
 PORTNAME=	color
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.2
 CATEGORIES=	print rubygems
 MASTER_SITES=	RG
 
