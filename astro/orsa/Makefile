@@ -3,7 +3,7 @@
 # Date created:			Dec 9, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/astro/orsa/Makefile,v 1.49 2012/12/30 18:55:36 svnexp Exp $
+# $FreeBSD: astro/orsa/Makefile 323199 2013-07-18 05:30:07Z miwi $
 #
 
 PORTNAME=	orsa
@@ -28,6 +28,7 @@ USE_GL=		gl
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtool
 ACLOCAL_ARGS=	-I macros -I ${LOCALBASE}/share/aclocal
+AUTOMAKE_ARGS=	--add-missing
 CONFIGURE_ENV=	ac_cv_c_inline=no
 USE_LDCONFIG=	yes
 
