@@ -1,9 +1,8 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine35/Makefile 322232 2013-07-03 15:12:04Z gjb $
+# $FreeBSD: sysutils/cfengine35/Makefile 322874 2013-07-12 23:47:58Z gjb $
 
 PORTNAME=	cfengine
-PORTVERSION=	3.5.0
-PORTREVISION=	1
+PORTVERSION=	3.5.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine.com/source-code/download?file=
 
@@ -26,6 +25,7 @@ USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+USE_GCC=	any
 # EXAMPLESDIR=	${PREFIX}/share/examples/cfengine3
 DOCSDIR=	${PREFIX}/share/doc/cfengine
 CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
