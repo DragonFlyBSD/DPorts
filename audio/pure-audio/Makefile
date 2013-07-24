@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pure-gtk
-# Date created:		2011-03-18
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/audio/pure-audio/Makefile,v 1.5 2012/11/17 05:54:41 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: audio/pure-audio/Makefile 322734 2013-07-10 21:28:56Z bapt $
 
 PORTNAME=	pure-audio
 PORTVERSION=	0.5
@@ -25,6 +21,5 @@ post-patch:
 		-e "s|portaudio.h|portaudio2/portaudio.h|g" \
 	   	${WRKSRC}/Makefile
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/pure/bsd.pure.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+.include <bsd.port.mk>
