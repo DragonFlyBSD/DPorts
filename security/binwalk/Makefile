@@ -1,7 +1,8 @@
-# $FreeBSD: ports/security/binwalk/Makefile,v 1.7 2012/12/25 11:18:19 svnexp Exp $
+# $FreeBSD: security/binwalk/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	binwalk
 PORTVERSION=	0.5.0
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	GOOGLE_CODE
 
