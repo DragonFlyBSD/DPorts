@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/chroma/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: games/chroma/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	chroma
 PORTVERSION=	1.08
@@ -37,7 +37,7 @@ PLIST_SUB+=	CURSES="@comment "
 
 .if ${PORT_OPTIONS:MSDL}
 USE_SDL=	sdl image
-LIB_DEPENDS+=	freetype.9:${PORTSDIR}/print/freetype2
+LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2
 PLIST_SUB+=	SDL=""
 .else
 CONFIGURE_ARGS+=--disable-sdl
