@@ -2,12 +2,12 @@
 # Date created:		17 August 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/jp2a/Makefile,v 1.15 2012/11/17 05:58:10 svnexp Exp $
+# $FreeBSD: graphics/jp2a/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	jp2a
 PORTVERSION=	1.0.6
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Converts JPG images to ASCII
 
 LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
-		curl.6:${PORTSDIR}/ftp/curl
+		curl:${PORTSDIR}/ftp/curl
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
