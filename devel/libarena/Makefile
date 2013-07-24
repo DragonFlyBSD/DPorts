@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: ports/devel/libarena/Makefile,v 1.8 2013/01/12 13:02:13 svnexp Exp $
+# $FreeBSD: devel/libarena/Makefile 322995 2013-07-14 18:15:44Z wg $
 
 PORTNAME=	libarena
-PORTVERSION=	0.3.5
+PORTVERSION=	0.3.6
 CATEGORIES=	devel
 MASTER_SITES=	http://www.25thandclement.com/~william/projects/releases/
 EXTRACT_SUFX=	.tgz
@@ -12,8 +12,7 @@ COMMENT=	Custom Memory Allocator Interface
 
 LICENSE=	MIT
 
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
+USES=		gmake
 
 PLIST_FILES=	include/arena/align.h \
 		include/arena/arena.h \
