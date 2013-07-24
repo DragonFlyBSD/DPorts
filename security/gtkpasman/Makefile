@@ -1,5 +1,5 @@
 # Created by: Philippe Rocques
-# $FreeBSD: security/gtkpasman/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/gtkpasman/Makefile 323088 2013-07-16 05:42:36Z ade $
 #
 
 PORTNAME=	gtkpasman
@@ -24,7 +24,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 DOCS=		README data/gpasman4.sample
 PLIST_FILES=	bin/gtkpasman share/applications/gtkpasman.desktop
-ACLOCAL_ARGS?=	--acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal
+ACLOCAL_ARGS?=	--automake-acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	README gpasman4.sample
