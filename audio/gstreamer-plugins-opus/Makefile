@@ -1,6 +1,6 @@
-# $FreeBSD: audio/gstreamer-plugins-opus/Makefile 315020 2013-03-23 09:58:02Z kwm $
+# $FreeBSD: audio/gstreamer-plugins-opus/Makefile 323078 2013-07-15 20:24:59Z naddy $
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	audio
 
 COMMENT=	Gstreamer Opus audio encoder/decoder plugin
