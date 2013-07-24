@@ -2,19 +2,19 @@
 # Date created:				6 January 2002
 # Whom:				Sergei Barbarash <sgt@outline.ru>
 #
-# $FreeBSD: ports/net/wmlj/Makefile,v 1.23 2012/11/17 06:00:24 svnexp Exp $
+# $FreeBSD: net/wmlj/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	wmlj
 PORTVERSION=	0.4.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A dockapp that monitors your friends list at LiveJournal.com
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk12
