@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: databases/gtksql/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: databases/gtksql/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	gtksql
 PORTVERSION=	0.4.5
@@ -14,8 +14,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	avahi-client:${PORTSDIR}/net/avahi-app
 
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	aclocal libtool
-ACLOCAL_ARGS=	-I${LOCALBASE}/share/aclocal
+USE_AUTOTOOLS=	libtool
 USES=		pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
