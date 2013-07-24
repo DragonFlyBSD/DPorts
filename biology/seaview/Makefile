@@ -1,8 +1,8 @@
 # Created by: frankch@waru.life.nthu.edu.tw
-# $FreeBSD: biology/seaview/Makefile 315253 2013-03-26 01:08:40Z miwi $
+# $FreeBSD: biology/seaview/Makefile 323044 2013-07-15 14:49:02Z miwi $
 
 PORTNAME=	seaview
-PORTVERSION=	4.4.1
+PORTVERSION=	4.4.2
 PORTEPOCH=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://pbil.univ-lyon1.fr/software/seaview_data/archive/
