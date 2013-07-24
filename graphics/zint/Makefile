@@ -2,7 +2,7 @@
 # Date created:		2010-03-13
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: graphics/zint/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/zint/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	zint
@@ -11,7 +11,7 @@ PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Zint Barcode Generator
 
 LICENSE=	GPLv3
