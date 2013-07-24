@@ -1,8 +1,8 @@
-# $FreeBSD: games/bzflag/Makefile 322562 2013-07-09 14:51:00Z bdrewery $
+# $FreeBSD: games/bzflag/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	bzflag
 PORTVERSION=	2.4.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20source/${PORTVERSION}
 
