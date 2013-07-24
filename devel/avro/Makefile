@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/devel/avro/Makefile,v 1.1 2013/02/01 13:45:40 svnexp Exp $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: devel/avro/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	avro
 PORTVERSION=	1.7.3
@@ -8,7 +8,7 @@ MASTER_SITES=	# none
 DISTFILES=	# none
 EXTRACT_ONLY=	# none
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Data serialization system
 
 NO_BUILD=	yes
