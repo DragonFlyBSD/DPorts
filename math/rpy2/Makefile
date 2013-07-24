@@ -1,12 +1,10 @@
 # Created by: ijliao
-# $FreeBSD: math/rpy2/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: math/rpy2/Makefile 323345 2013-07-20 13:08:14Z wen $
 
 PORTNAME=	rpy2
-PORTVERSION=	2.2.6
-PORTREVISION=	6
+PORTVERSION=	2.3.6
 CATEGORIES=	math
-MASTER_SITES=	CHEESESHOP \
-		SF
+MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Python interface to the R Programming Language
