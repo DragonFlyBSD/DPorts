@@ -1,7 +1,8 @@
-# $FreeBSD: net/liboauth/Makefile 314475 2013-03-17 17:57:15Z johans $
+# $FreeBSD: net/liboauth/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	liboauth
 PORTVERSION=	1.0.1
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}
 
