@@ -1,12 +1,8 @@
-# New ports collection makefile for:	inplace(1)
-# Date created:		2 May 2004
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/misc/inplace/Makefile,v 1.10 2012/11/17 05:59:38 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: misc/inplace/Makefile 323246 2013-07-18 17:12:33Z knu $
 
 PORTNAME=	inplace
-PORTVERSION=	1.2.2
+PORTVERSION=	1.2.3
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.iDaemons.org/pub/distfiles/ \
 		${MASTER_SITE_LOCAL}
@@ -21,18 +17,13 @@ USE_RUBY=	yes
 MAKE_ARGS=	PREFIX="${PREFIX}" MANPREFIX="${MANPREFIX}"
 MAKEFILE=	BSDmakefile
 
-RUBY_SHEBANG_FILES=	inplace.rb
+RUBY_SHEBANG_FILES=	lib/inplace.rb
 
 MAN1=		inplace.1
 MANCOMPRESSED=	maybe
 PLIST_FILES=	bin/inplace
 
-RUBY_REQUIRE=	Ruby > 182
+test: build
+	cd ${WRKSRC}; ${MAKE} test
 
-.include <bsd.port.pre.mk>
-
-.if !defined(RUBY_PROVIDED)
-IGNORE=		only works with Ruby 1.8.0 or later
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
