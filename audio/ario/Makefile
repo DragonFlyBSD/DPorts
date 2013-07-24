@@ -1,9 +1,9 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: audio/ario/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: audio/ario/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	ario
 PORTVERSION=	1.5.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	SF/ario-player/ario-player/${PORTVERSION}
 
