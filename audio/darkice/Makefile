@@ -1,9 +1,9 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/darkice/Makefile 312981 2013-02-26 14:40:41Z danfe $
+# $FreeBSD: audio/darkice/Makefile 323460 2013-07-22 15:18:53Z miwi $
 
 PORTNAME=	darkice
-PORTVERSION=	1.1
-PORTREVISION?=	2
+PORTVERSION=	1.2
+PORTREVISION?=	0
 CATEGORIES=	audio net
 MASTER_SITES=	GOOGLE_CODE
 
@@ -12,18 +12,18 @@ COMMENT=	IceCast, IceCast2, and ShoutCast live audio streamer
 
 LICENSE=	GPLv3
 
-OPTIONS_DEFINE=	JACK
+OPTIONS_DEFINE=	JACK PULSEAUDIO
 OPTIONS_MULTI=	CODEC
-OPTIONS_MULTI_CODEC=	VORBIS LAME TWOLAME FAAC AACPLUS
+OPTIONS_MULTI_CODEC=	VORBIS OPUS LAME TWOLAME FAAC AACPLUS
 OPTIONS_DEFAULT=	VORBIS
 
+OPUS_DESC=	Ogg Opus audio codec support
 AACPLUS_DESC=	AAC HEv2 and libsamplerate support
 
-USE_AUTOTOOLS=	aclocal autoconf
-GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	aclocal automake autoconf
+ACLOCAL_ARGS=	# none
+AUTOMAKE_ARGS=	--add-missing --copy --foreign
 CONFIGURE_ENV=	ac_cv_prog_acx_pthread_config=no
-CPPFLAGS+=	${PTHREAD_CFLAGS}
-LDFLAGS+=	${PTHREAD_LIBS}
 CONFIGURE_ARGS=	--without-alsa
 
 SUB_FILES=	pkg-message
@@ -34,11 +34,32 @@ MAN5=		darkice.cfg.5
 
 .include <bsd.port.options.mk>
 
+.if ${PORT_OPTIONS:MJACK}
+LIB_DEPENDS+=	jack:${PORTSDIR}/audio/jack
+CONFIGURE_ARGS+=	--with-jack-prefix=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-jack
+.endif
+
+.if ${PORT_OPTIONS:MPULSEAUDIO}
+LIB_DEPENDS+=	pulse-simple:${PORTSDIR}/audio/pulseaudio
+CONFIGURE_ARGS+=	--with-pulseaudio-prefix=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-pulseaudio
+.endif
+
 .if ${PORT_OPTIONS:MVORBIS}
 LIB_DEPENDS+=	vorbis:${PORTSDIR}/audio/libvorbis
 CONFIGURE_ARGS+=	--with-vorbis-prefix=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-vorbis
+.endif
+
+.if ${PORT_OPTIONS:MOPUS}
+LIB_DEPENDS+=	opus:${PORTSDIR}/audio/opus
+CONFIGURE_ARGS+=	--with-opus-prefix=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-opus
 .endif
 
 .if ${PORT_OPTIONS:MLAME}
@@ -62,13 +83,6 @@ CONFIGURE_ARGS+=	--with-faac-prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--without-faac
 .endif
 
-.if ${PORT_OPTIONS:MJACK}
-LIB_DEPENDS+=	jack:${PORTSDIR}/audio/jack
-CONFIGURE_ARGS+=	--with-jack-prefix=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=	--without-jack
-.endif
-
 .if ${PORT_OPTIONS:MAACPLUS}
 LIB_DEPENDS+=	aacplus:${PORTSDIR}/audio/libaacplus \
 		samplerate:${PORTSDIR}/audio/libsamplerate
@@ -79,9 +93,7 @@ CONFIGURE_ARGS+=	--without-aacplus --without-samplerate
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e '/test/s|==|=|g'\
-	 -e 's/sbr_main.h/libaacplus\/sbr_main.h/' ${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|-O2 -pedantic||g' ${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e 's|-O2 -pedantic||g' ${WRKSRC}/src/Makefile.am
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin
