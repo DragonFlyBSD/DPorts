@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/doclifter/Makefile 321722 2013-06-25 03:18:25Z araujo $
+# $FreeBSD: textproc/doclifter/Makefile 321808 2013-06-26 19:17:59Z eadler $
 #
 
 PORTNAME=	doclifter
@@ -10,11 +10,14 @@ MASTER_SITES=	http://www.catb.org/~esr/doclifter/
 MAINTAINER=	araujo@FreeBSD.org
 COMMENT=	Translates documents written in troff macros to DocBook
 
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 NO_BUILD=	yes
 
 MAN1=		doclifter.1 manlifter.1
 PLIST_FILES=	bin/doclifter bin/manlifter
+
+post-patch:
+	${REINPLACE_CMD} '1s/python/python2/' ${WRKSRC}/doclifter
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/doclifter ${PREFIX}/bin
