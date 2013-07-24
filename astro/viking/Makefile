@@ -1,8 +1,9 @@
 # Created by: David Le Brun <david@trucs.org>
-# $FreeBSD: astro/viking/Makefile 320215 2013-06-07 15:37:47Z miwi $
+# $FreeBSD: astro/viking/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	viking
 PORTVERSION=	1.4.1
+PORTREVISION=	1
 CATEGORIES=	astro
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/
 
