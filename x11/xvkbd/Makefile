@@ -1,8 +1,8 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: x11/xvkbd/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: x11/xvkbd/Makefile 323466 2013-07-22 15:25:58Z miwi $
 
 PORTNAME=	xvkbd
-PORTVERSION=	3.4a
+PORTVERSION=	3.5
 CATEGORIES=	x11
 MASTER_SITES=	http://homepage3.nifty.com/tsato/xvkbd/
 
