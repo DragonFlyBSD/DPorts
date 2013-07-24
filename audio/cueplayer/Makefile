@@ -2,7 +2,7 @@
 # Date created:		2010-01-17
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/audio/cueplayer/Makefile,v 1.14 2013/01/23 15:05:31 svnexp Exp $
+# $FreeBSD: audio/cueplayer/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	cueplayer
@@ -11,7 +11,7 @@ PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	CUE player
 
 LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify
