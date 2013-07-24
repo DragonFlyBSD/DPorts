@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/qross/Makefile 314960 2013-03-22 20:06:14Z makc $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: devel/qross/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	qross
 PORTVERSION=	0.2.2
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://cloud.github.com/downloads/0xd34df00d/Qross/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Qt-only fork of Kross, the KDE scripting framework
 
 USE_BZIP2=	yes
