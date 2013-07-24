@@ -1,4 +1,4 @@
-# $FreeBSD: comms/qtel/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: comms/qtel/Makefile 322679 2013-07-10 12:24:05Z bapt $
 
 PORTNAME=	qtel
 PORTVERSION=	11.05
@@ -31,8 +31,8 @@ MAN5=	svxlink.conf.5 \
 	ModuleSelCallEnc.conf.5 \
 	remotetrx.conf.5
 MANCOMPRESSED=	yes
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		pkgconfig gmake
+MAKE_JOBS_UNSAFE=	yes
 USE_QT_VER=	3
 USE_TCL=	yes
 USE_RC_SUBR=	svxlink remotetrx
