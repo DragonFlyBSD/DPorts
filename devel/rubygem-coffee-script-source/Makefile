@@ -1,8 +1,8 @@
 # Whom:			Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-coffee-script-source/Makefile 319591 2013-06-01 21:21:41Z swills $
+# $FreeBSD: devel/rubygem-coffee-script-source/Makefile 322949 2013-07-13 17:28:01Z swills $
 
 PORTNAME=	coffee-script-source
-PORTVERSION=	1.6.2
+PORTVERSION=	1.6.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
