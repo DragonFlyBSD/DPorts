@@ -2,7 +2,7 @@
 # Date created:				4 Aug 2005
 # Whom:					Elias Mandouvalos <ocean@mail.gr>
 #
-# $FreeBSD: ports/devel/pecl-runkit/Makefile,v 1.11 2012/11/17 05:56:41 svnexp Exp $
+# $FreeBSD: devel/pecl-runkit/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	runkit
@@ -14,7 +14,7 @@ DISTNAME=	runkit-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	PECL
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PECL extension to modify constants, user-defined functions, and classes
 
 USE_PHP=	yes
