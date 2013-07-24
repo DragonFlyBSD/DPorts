@@ -1,16 +1,13 @@
-# New ports collection makefile for:	rubygem-twitter-stream
-# Date created:		2010-11-03
-# Whom:			TAKATSU Tomonari <tota@FreeBSD.org>
-#
-# $FreeBSD: ports/net/rubygem-twitter-stream/Makefile,v 1.8 2012/11/17 06:00:19 svnexp Exp $
-#
+# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
+# $FreeBSD: net/rubygem-twitter-stream/Makefile 323414 2013-07-21 19:59:36Z tota $
 
 PORTNAME=	twitter-stream
 PORTVERSION=	0.1.16
+PORTREVISION=	1
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	tota@FreeBSD.org
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Twitter realtime API client
 
 RUN_DEPENDS=	rubygem-eventmachine>=0.12.8:${PORTSDIR}/devel/rubygem-eventmachine \
