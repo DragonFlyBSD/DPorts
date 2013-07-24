@@ -1,5 +1,5 @@
 # Created by: shoemaker@bluebottle.com (Jonathan Shoemaker)
-# $FreeBSD: games/quackle/Makefile 320999 2013-06-15 13:56:08Z pawel $
+# $FreeBSD: games/quackle/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	quackle
 PORTVERSION=	0.97
@@ -18,7 +18,7 @@ LICENSE_COMB=	dual
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 BUILD_WRKSRC=	${WRKSRC}/quacker
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_GCC=	any
 USE_QT4=	gui moc_build qmake_build
 MAKE_JOBS_SAFE=	yes
