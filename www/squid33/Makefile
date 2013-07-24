@@ -1,5 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@FreeBSD.org>
-# $FreeBSD: www/squid33/Makefile 320406 2013-06-09 19:47:46Z tmseck $
+# $FreeBSD: www/squid33/Makefile 323084 2013-07-16 00:33:53Z delphij $
 #
 # Note:
 # Starting with Squid 3.1 SQUID_LANGUAGES and SQUID_DEFAULT_LANG are no longer
@@ -67,13 +67,6 @@ PATCH_SITES=	http://www.squid-cache.org/%SUBDIR%/ \
 		http://www1.jp.squid-cache.org/%SUBDIR%/ \
 		http://www2.tw.squid-cache.org/%SUBDIR%/
 PATCH_SITE_SUBDIR=	Versions/v3/${PORTVERSION:R}/changesets
-PATCHFILES=		squid-3.3-12566.patch \
-			squid-3.3-12567.patch \
-			squid-3.3-12568.patch \
-			squid-3.3-12569.patch \
-			squid-3.3-12570.patch \
-			squid-3.3-12571.patch \
-			squid-3.3-12572.patch
 
 MAINTAINER=	tmseck@FreeBSD.org
 COMMENT=	HTTP Caching Proxy
@@ -83,7 +76,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	squid33
 
-SQUID_STABLE_VER=	5
+SQUID_STABLE_VER=	8
 
 CONFLICTS_INSTALL=	squid-2.[0-9].* squid-3.[!3].* cacheboy-[0-9]* lusca-head-[0-9]*
 GNU_CONFIGURE=	yes
