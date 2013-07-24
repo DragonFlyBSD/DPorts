@@ -1,10 +1,10 @@
 # Created by: ijliao
-# $FreeBSD: science/linsmith/Makefile 321134 2013-06-17 15:31:12Z miwi $
+# $FreeBSD: science/linsmith/Makefile 323464 2013-07-22 15:23:15Z miwi $
 
 PORTNAME=	linsmith
-PORTVERSION=	0.99.25
+PORTVERSION=	0.99.26
 CATEGORIES=	science hamradio
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Smith charting program
