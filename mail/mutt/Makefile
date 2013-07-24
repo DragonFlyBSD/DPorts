@@ -1,5 +1,5 @@
 # Created by: Udo Schweigert
-# $FreeBSD: mail/mutt/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: mail/mutt/Makefile 323108 2013-07-16 14:43:38Z miwi $
 #
 # In addition to the options you can enable other configuration
 # options of mutt by adding them to the MUTT_CONFIGURE_ARGS variable. For
@@ -53,6 +53,7 @@ CONFIGURE_ARGS+=	${MUTT_CONFIGURE_ARGS}
 .endif
 
 USE_AUTOTOOLS=	automake autoconf
+AUTOMAKE_ARGS=	--add-missing
 USE_OPENSSL=	yes
 
 .if defined (MUTT_LITE)
