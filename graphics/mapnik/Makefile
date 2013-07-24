@@ -1,9 +1,10 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/mapnik/Makefile 322387 2013-07-06 11:51:07Z wg $
+# $FreeBSD: graphics/mapnik/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	mapnik
 PORTVERSION=	2.2.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://mapnik.s3.amazonaws.com/dist/v${PORTVERSION}/
 
