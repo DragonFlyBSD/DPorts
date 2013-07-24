@@ -2,12 +2,12 @@
 # Date created:				2008-02-21
 # Whom:					Thomas M. Hermann <tmh.public@gmail.com>
 #
-# $FreeBSD: ports/audio/gbemol/Makefile,v 1.14 2012/11/17 05:54:32 svnexp Exp $
+# $FreeBSD: audio/gbemol/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	gbemol
 PORTVERSION=	0.3.2
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
@@ -15,7 +15,7 @@ MAINTAINER=	tmh.public@gmail.com
 COMMENT=	Graphical frontend for the Music Player Daemon
 
 LIB_DEPENDS=	mpd.4:${PORTSDIR}/audio/libmpd \
-		curl.6:${PORTSDIR}/ftp/curl \
+		curl:${PORTSDIR}/ftp/curl \
 		xml2.5:${PORTSDIR}/textproc/libxml2
 
 GNU_CONFIGURE=	yes
