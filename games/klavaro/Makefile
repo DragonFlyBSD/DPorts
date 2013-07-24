@@ -1,8 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/klavaro/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: games/klavaro/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	klavaro
 PORTVERSION=	1.9.6
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/
 
