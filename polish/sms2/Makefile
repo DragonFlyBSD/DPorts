@@ -2,12 +2,12 @@
 # Date created:		04 sep 2004
 # Whom:			Krzysztof Kowalewski <pyzmen@kam.pl>
 #
-# $FreeBSD: ports/polish/sms2/Makefile,v 1.27 2012/12/10 19:24:04 svnexp Exp $
+# $FreeBSD: polish/sms2/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	sms
 PORTVERSION=	2.1.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	polish
 MASTER_SITES=	http://ceti.pl/~miki/komputery/download/sms/ \
 		http://radioemiter.pl/~mjd/slackware/sms2/ \
@@ -17,7 +17,7 @@ MASTER_SITES=	http://ceti.pl/~miki/komputery/download/sms/ \
 MAINTAINER=	pyzmen@kam.pl
 COMMENT=	Send SMS to cellular phones in Poland (Idea, ERA, Plus)
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		pcre.3:${PORTSDIR}/devel/pcre \
 		gdbm.4:${PORTSDIR}/databases/gdbm \
 		pcre\\+\\+.0:${PORTSDIR}/devel/pcre++
