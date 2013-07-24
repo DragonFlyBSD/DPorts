@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/games/hangman/Makefile,v 1.20 2012/12/09 16:55:09 svnexp Exp $
+# $FreeBSD: games/hangman/Makefile 308541 2012-12-09 16:49:24Z amdmi3 $
 
 PORTNAME=	hangman
 PORTVERSION=	0.9.2
