@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gtg/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: deskutils/gtg/Makefile 323220 2013-07-18 10:42:14Z rm $
 
 PORTNAME=	gtg
 PORTVERSION=	0.3
@@ -17,8 +17,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}configobj>=0:${PORTSDIR}/devel/py-configobj 
 		xset:${PORTSDIR}/x11/xset
 
 FETCH_ARGS=	-pRr
-USE_GNOME=	desktopfileutils pygobject pygtk2
-USES=		gettext
+USE_GNOME=	pygobject pygtk2
+USES=		gettext desktop-file-utils
 INSTALLS_ICONS=	yes
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
@@ -39,8 +39,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|share/man|man|' ${WRKSRC}/setup.py
 	@${REINPLACE_CMD} -e 's|/usr/bin|${PREFIX}/bin|' \
 		${WRKSRC}/org.gnome.GTG.service
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.mk>
