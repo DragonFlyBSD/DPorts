@@ -1,5 +1,5 @@
 # Created by: yinjieh
-# $FreeBSD: games/ggz-gtk-games/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: games/ggz-gtk-games/Makefile 323493 2013-07-22 18:57:44Z marino $
 
 PORTNAME=	ggz-gtk-games
 PORTVERSION=	${GGZ_VERSION}
@@ -40,6 +40,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/spades/module.dsc ${PREFIX}/share/ggz/spades.dsc
 	${INSTALL_DATA} ${WRKSRC}/tictactoe/module.dsc ${PREFIX}/share/ggz/tictactoe.dsc
 
-.include <bsd.port.pre.mk>
-.include "../../games/libggz/bsd.ggz.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../libggz/bsd.ggz.mk"
+.include <bsd.port.mk>
