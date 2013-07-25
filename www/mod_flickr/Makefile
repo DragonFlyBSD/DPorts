@@ -2,19 +2,19 @@
 # Date created:				2009-08-24
 # Whom:						vshankar
 #
-# $FreeBSD: ports/www/mod_flickr/Makefile,v 1.7 2012/11/17 06:02:41 svnexp Exp $
+# $FreeBSD: www/mod_flickr/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	mod_flickr
 PORTVERSION=	1.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.vshank.com/modcode/
 
 MAINTAINER=	venkyshankar@yahoo.com
 COMMENT=	Apache module for Flickr API access
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 MAKE_JOBS_SAFE=	yes
 
