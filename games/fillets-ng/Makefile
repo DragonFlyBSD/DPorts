@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: ports/games/fillets-ng/Makefile,v 1.38 2013/01/23 15:05:34 svnexp Exp $
+# $FreeBSD: games/fillets-ng/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	fillets-ng
 PORTVERSION=	1.0.1
@@ -44,7 +44,7 @@ OPTIONS_DEFINE=	FRIBIDI
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MFRIBIDI}
-LIB_DEPENDS+=	fribidi.3:${PORTSDIR}/converters/fribidi
+LIB_DEPENDS+=	fribidi:${PORTSDIR}/converters/fribidi
 .endif
 
 post-patch:
