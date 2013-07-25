@@ -1,7 +1,7 @@
-# $FreeBSD: ports/x11-toolkits/qwt6-designerplugin/Makefile,v 1.9 2012/12/15 13:58:56 svnexp Exp $
+# $FreeBSD: x11-toolkits/qwt6-designerplugin/Makefile 322988 2013-07-14 15:27:05Z makc $
 
 PORTNAME=	qwt
-PORTVERSION=	6.0.2
+PORTVERSION=	6.1.0
 CATEGORIES=	x11-toolkits devel
 MASTER_SITES=	SF
 PKGNAMESUFFIX=	-designerplugin
