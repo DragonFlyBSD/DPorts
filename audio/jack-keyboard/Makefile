@@ -1,12 +1,12 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/jack-keyboard/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/jack-keyboard/Makefile 322984 2013-07-14 14:19:10Z nox $
 
 PORTNAME=	jack-keyboard
 DISTVERSION=	2.7.1
 PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	SF \
-		http://hselasky.homeunix.org:8192/distfiles/
+		http://home.selasky.org:8192/distfiles/
 
 MAINTAINER=	hselasky@FreeBSD.org
 COMMENT=	Virtual keyboard for JACK MIDI
