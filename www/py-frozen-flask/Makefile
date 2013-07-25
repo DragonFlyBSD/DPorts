@@ -1,8 +1,8 @@
 # Created by: Oleg Pudeyev <oleg@bsdpower.com>
-# $FreeBSD: ports/www/py-frozen-flask/Makefile,v 1.1 2013/02/18 02:54:44 svnexp Exp $
+# $FreeBSD: www/py-frozen-flask/Makefile 323478 2013-07-22 16:47:52Z olivierd $
 
 PORTNAME=	Frozen-Flask
-PORTVERSION=	0.9
+PORTVERSION=	0.11
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
