@@ -1,19 +1,23 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-MooseX-MultiInitArg/Makefile,v 1.4 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-MultiInitArg/Makefile 322754 2013-07-11 06:56:41Z culot $
 
 PORTNAME=	MooseX-MultiInitArg
-PORTVERSION=	0.01
+PORTVERSION=	0.02
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilogondolfo@gmail.com
 COMMENT=	Attributes with aliases for constructor arguments for MooseX
 
-RUN_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+RUN_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
+BUILD_DEPENDS:=	${RUN_DEPENDS} \
+		p5-Module-Build-Tiny>=0.023:${PORTSDIR}/devel/p5-Module-Build-Tiny
+
+PERL_MODBUILD=	yes
 
 MAN3=		MooseX::MultiInitArg.3 \
 		MooseX::MultiInitArg::Trait.3 \
