@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pipepanic
-# Date created:		20 May 2006
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/games/pipepanic/Makefile,v 1.11 2012/11/17 05:57:49 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/pipepanic/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	pipepanic
 PORTVERSION=	0.1.3
@@ -24,6 +20,8 @@ PORTDOCS=	README
 DATAFILES=	ascii15.bmp ascii30.bmp digits24.bmp \
 		digits48.bmp tiles24.bmp tiles48.bmp
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} \
 		-e '/^#define DATADIR/ s|.*|#define DATADIR "${DATADIR}/"|' \
@@ -35,8 +33,7 @@ do-install:
 .for f in ${DATAFILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DATADIR}
 .endfor
-
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
