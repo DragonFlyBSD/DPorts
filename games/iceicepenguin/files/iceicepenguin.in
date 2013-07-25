@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: games/iceicepenguin/files/iceicepenguin.in 314190 2013-03-14 22:55:23Z beech $
+#
+
+cd "%%DATADIR%%"
+exec /usr/bin/env python ./iceicepengui.py "${@}"
