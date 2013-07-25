@@ -2,7 +2,7 @@
 # Date created:		2010-03-24
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: cad/qelectrotech/Makefile 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: cad/qelectrotech/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	qelectrotech
@@ -12,7 +12,7 @@ CATEGORIES=	cad
 MASTER_SITES=	http://download.tuxfamily.org/qet/tags/20100313/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	QElectroTech is application to design electric diagrams
 
 USE_QT4=	gui network svg xml \
