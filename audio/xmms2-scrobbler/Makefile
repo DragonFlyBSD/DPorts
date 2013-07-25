@@ -1,9 +1,9 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/xmms2-scrobbler/Makefile 322303 2013-07-05 05:56:12Z bapt $
+# $FreeBSD: audio/xmms2-scrobbler/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	xmms2-scrobbler
 PORTVERSION=	0.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.code-monkey.de/pub/${PORTNAME}/
 
@@ -13,7 +13,7 @@ COMMENT=	Last.fm submission client for XMMS2
 LICENSE=	MIT
 
 LIB_DEPENDS=	xmmsclient.6:${PORTSDIR}/audio/xmms2 \
-		curl.6:${PORTSDIR}/ftp/curl
+		curl:${PORTSDIR}/ftp/curl
 
 USES=		pkgconfig
 USE_GMAKE=	yes
