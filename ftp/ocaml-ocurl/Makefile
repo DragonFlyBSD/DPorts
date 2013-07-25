@@ -1,11 +1,11 @@
 # Ports collection makefile for:	ocurl
 # Date created:			Aug 6, 2004
 # Whom:				Marwan BURELLE <marwan.burelle@lri.fr>
-# $FreeBSD: ports/ftp/ocaml-ocurl/Makefile,v 1.22 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/ocaml-ocurl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	ocurl
 PORTVERSION=	0.5.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	ftp
 MASTER_SITES=	SF
 PKGNAMEPREFIX=	ocaml-
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	ocamlc:${PORTSDIR}/lang/ocaml \
 		ocamlfind:${PORTSDIR}/devel/ocaml-findlib
 RUN_DEPENDS=	ocamlc:${PORTSDIR}/lang/ocaml \
 		ocamlfind:${PORTSDIR}/devel/ocaml-findlib
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_GMAKE=	yes
