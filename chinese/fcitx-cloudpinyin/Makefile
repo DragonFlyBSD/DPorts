@@ -2,11 +2,12 @@
 # Date created:				11 Nov 2011
 # Whom:			Zhihao Yuan <lichray@gmail.com>
 #
-# $FreeBSD: chinese/fcitx-cloudpinyin/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: chinese/fcitx-cloudpinyin/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	fcitx-cloudpinyin
 PORTVERSION=	0.3.0
+PORTREVISION=	1
 CATEGORIES=	chinese
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DIST_SUBDIR=	fcitx
