@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: ports/deskutils/treeline/Makefile,v 1.37 2013/02/14 20:59:32 svnexp Exp $
+# $FreeBSD: deskutils/treeline/Makefile 322730 2013-07-10 20:28:50Z pawel $
 
 PORTNAME=	treeline
 PORTVERSION=	1.4.1
@@ -39,26 +39,16 @@ ISPELL_DESC=	Install with ispell support
 PYXML_DESC=	Use pythons py-xml instead of textproc/expat2
 
 OPTIONS_DEFAULT=	ASPELL PYXML
+OPTIONS_SUB=		yes
+
+ASPELL_BUILD_DEPENDS=	aspell:${PORTSDIR}/textproc/aspell
+HTTPLOAD_DISTFILES=	httpload2.py:plugins
+ISPELL_BUILD_DEPENDS=	ispell:${PORTSDIR}/textproc/ispell
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MASPELL}
-BUILD_DEPENDS+=	aspell:${PORTSDIR}/textproc/aspell
-.endif
-
-.if ${PORT_OPTIONS:MISPELL}
-BUILD_DEPENDS+=	ispell:${PORTSDIR}/textproc/ispell
-.endif
-
 .if !${PORT_OPTIONS:MPYXML}
 LIB_DEPENDS+=	expat:${PORTSDIR}/textproc/expat2
-.endif
-
-.if ${PORT_OPTIONS:MHTTPLOAD}
-DISTFILES+=	httpload2.py:plugins
-PLIST_SUB+=	HTTPLOAD=""
-.else
-PLIST_SUB+=	HTTPLOAD="@comment "
 .endif
 
 do-install:
