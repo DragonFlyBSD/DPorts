@@ -1,9 +1,5 @@
-# New ports collection makefile for: math/parmgirdgen
-# Date created:		22 Nov 2010
-# Whom:			Stas Timokhin <devel@stasyan.com>
-#
-# $FreeBSD: ports/math/parmgridgen/Makefile,v 1.4 2012/11/17 05:59:28 svnexp Exp $
-#
+# Created by: Stas Timokhin <devel@stasyan.com>
+# $FreeBSD: math/parmgridgen/Makefile 322922 2013-07-13 13:16:02Z bapt $
 
 PORTNAME=	parmgridgen
 PORTVERSION=	1.0
@@ -20,7 +16,8 @@ COMMENT=	Library for obtaining a sequence of successive coarse grids
 ALL_TARGET=	parallel
 
 LIB_DEPENDS+=	mpi.1:${PORTSDIR}/net/openmpi
-USE_GMAKE=	yes
+USES=		gmake
+MAKE_JOBS_UNSAFE=	yes
 
 post-patch:
 #respect CFLAGS
