@@ -1,8 +1,8 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: ports/science/rubygem-ai4r/Makefile,v 1.3 2013/02/26 02:47:10 svnexp Exp $
+# $FreeBSD: science/rubygem-ai4r/Makefile 322808 2013-07-12 03:36:30Z swills $
 
 PORTNAME=	ai4r
-PORTVERSION=	1.9
+PORTVERSION=	1.12
 CATEGORIES=	science rubygems
 MASTER_SITES=	RG
 
