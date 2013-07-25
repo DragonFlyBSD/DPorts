@@ -1,12 +1,9 @@
-# Ports collection makefile for:	logcheck
-# Date created:		9 December 1999
-# Whom:			Dan Langille <dan@freebsddiary.org>
-#
-# $FreeBSD: ports/security/logcheck/Makefile,v 1.42 2012/12/16 06:16:58 svnexp Exp $
-#
+# Created by: Dan Langille <dan@freebsddiary.org>
+# $FreeBSD: security/logcheck/Makefile 323257 2013-07-18 21:52:19Z glarkin $
 
 PORTNAME=	logcheck
 PORTVERSION=	1.3.15
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN_POOL}
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -29,6 +26,12 @@ BASEDIR?=	# None. portlint compliance
 DBDIR=		${BASEDIR}/var/db/${PORTNAME}
 RUNDIR=		${BASEDIR}/var/run/${PORTNAME}
 
+OPTIONS_DEFINE=	CRON
+CRON_DESC=	Install cron script automatically
+.if !defined(BATCH)
+OPTIONS_DEFAULT=CRON
+.endif
+
 # Enable Perl dependency for logtail script
 USE_PERL5=	yes
 
@@ -39,7 +42,7 @@ SUB_LIST+=	LOGCHECK_USER=${LOGCHECK_USER} \
 		LOGCHECK_UID=${LOGCHECK_UID} \
 		LOGCHECK_GROUP=${LOGCHECK_GROUP} \
 		LOGCHECK_GID=${LOGCHECK_GID} \
-		PW=${PW}
+		PW=${PW} CRON=${PORT_OPTIONS:MCRON}
 SUB_FILES=	pkg-install pkg-deinstall pkg-message
 PLIST_SUB+=	DBDIR=${DBDIR} RUNDIR=${RUNDIR}
 CONFIG_DIRS=	cracking.d ignore.d.paranoid ignore.d.server \
