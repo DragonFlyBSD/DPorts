@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: polish/kadu/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: polish/kadu/Makefile 322999 2013-07-14 19:56:12Z pawel $
 
 PORTNAME=	kadu
 PORTVERSION=	0.12.2
@@ -57,17 +57,13 @@ WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	GG_EMOTS
+OPTIONS_SUB=	yes
 GG_EMOTS_DESC=	Install GG-compatible emoticons
 
-.include <bsd.port.options.mk>
+GG_EMOTS_DISTFILES=	${GG6_EMOTS_DISTFILE}:additions \
+			${GG7_EMOTS_DISTFILE}:additions
 
-.if ${PORT_OPTIONS:MGG_EMOTS}
-PLIST_SUB+=	GG_EMOTS=""
-DISTFILES+=	${GG6_EMOTS_DISTFILE}:additions \
-		${GG7_EMOTS_DISTFILE}:additions
-.else
-PLIST_SUB+=	GG_EMOTS="@comment "
-.endif
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
