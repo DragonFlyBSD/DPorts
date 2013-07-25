@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: sysutils/gsmartcontrol/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: sysutils/gsmartcontrol/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	gsmartcontrol
 PORTVERSION=	0.8.7
@@ -37,6 +37,8 @@ INSTALLS_ICONS=	yes
 MAN1=		gsmartcontrol.1
 
 CONFIGURE_ARGS=	--disable-libglade
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
