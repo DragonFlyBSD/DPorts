@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul <beech@FreeBSD.org>
-# $FreeBSD: www/horde3-meta/Makefile 319952 2013-06-05 06:59:44Z bapt $
+# $FreeBSD: www/horde3-meta/Makefile 323405 2013-07-21 17:19:25Z marino $
 
 PORTNAME=	meta
 PORTVERSION=	1.0
