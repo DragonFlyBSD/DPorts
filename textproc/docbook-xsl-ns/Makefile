@@ -1,8 +1,8 @@
-# $FreeBSD: textproc/docbook-xsl-ns/Makefile 322577 2013-07-09 21:06:11Z gabor $
+# $FreeBSD: textproc/docbook-xsl-ns/Makefile 322789 2013-07-11 17:37:49Z gabor $
 
 PORTNAME=	docbook-xsl-ns
 PORTVERSION=	1.78.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	SF/docbook/${PORTNAME}/${PORTVERSION}:src \
 		SF/docbook/docbook-xsl-doc/${PORTVERSION}:doc
@@ -85,6 +85,7 @@ plist:
 	@cd ${WRKSRC} && \
 	${FIND} . -type d -exec echo @dirrm ${INSTDIR}/{} \; | ${SED} 's|/./|/|g' | ${SORT} -r
 	@${ECHO_CMD} @dirrmtry ${INSTDIR}
+	@${ECHO_CMD} @dirrmtry share/xsl
 	@cd ${DOCSRC}/doc && \
 	${FIND} . -type f -exec echo %%PORTDOCS%%%%DOCSDIR%%/{} \; | ${SED} 's|/./|/|g'
 	@cd ${DOCSRC}/doc && \
