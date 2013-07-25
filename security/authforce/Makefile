@@ -1,9 +1,9 @@
 # Created by: ache
-# $FreeBSD: security/authforce/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: security/authforce/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	authforce
 PORTVERSION=	0.9.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security www
 MASTER_SITES=	http://cloud.github.com/downloads/zlandau/authforce/
 
