@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/diacanvas2/Makefile 322553 2013-07-09 09:12:19Z bapt $
+# $FreeBSD: graphics/diacanvas2/Makefile 322929 2013-07-13 13:58:02Z bapt $
 
 PORTNAME=	diacanvas2
 PORTVERSION=	0.15.4
@@ -18,6 +18,7 @@ USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
+MAKE_JOBS_UNSAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
