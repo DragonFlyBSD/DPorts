@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: converters/osm2pgsql/Makefile 314580 2013-03-18 15:14:27Z vanilla $
+# $FreeBSD: converters/osm2pgsql/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	osm2pgsql
 PORTVERSION=	r29250
@@ -10,9 +10,9 @@ MASTER_SITES=	http://mirror.amdmi3.ru/distfiles/
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Convert OSM XML data to PostgreSQL database
 
-LIB_DEPENDS=	proj.7:${PORTSDIR}/graphics/proj \
-		geos.0:${PORTSDIR}/graphics/geos \
-		protobuf-c.0:${PORTSDIR}/devel/protobuf-c
+LIB_DEPENDS=	proj:${PORTSDIR}/graphics/proj \
+		geos:${PORTSDIR}/graphics/geos \
+		protobuf-c:${PORTSDIR}/devel/protobuf-c
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
