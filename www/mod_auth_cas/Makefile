@@ -2,11 +2,12 @@
 # Date created:            				Thursday December 24, 2009
 # Whom:                				 	Kimo <kimor79@yahoo.com>
 #
-# $FreeBSD: ports/www/mod_auth_cas/Makefile,v 1.6 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_auth_cas/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	mod_auth_cas
 PORTVERSION=	1.0.9.1
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://source.jasig.org/cas-clients/mod_auth_cas/tags/mod_auth_cas-${PORTVERSION}/src/
 # SVN tags only, *sigh*
