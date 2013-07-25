@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/ggz-txt-client/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: games/ggz-txt-client/Makefile 323493 2013-07-22 18:57:44Z marino $
 
 PORTNAME=	ggz-txt-client
 PORTVERSION=	${GGZ_VERSION}
@@ -32,6 +32,5 @@ post-install:
 	${MKDIR} ${PREFIX}/share/ggz
 	@${INSTALL_DATA} ${WRKSRC}/tttxt/module.dsc ${PREFIX}/share/ggz/tttxt.dsc
 
-.include <bsd.port.pre.mk>
-.include "../../games/libggz/bsd.ggz.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../libggz/bsd.ggz.mk"
+.include <bsd.port.mk>
