@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-sinatra-respond_to
-# Date created:				5 Aug 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/www/rubygem-sinatra-respond_to/Makefile,v 1.9 2012/11/17 06:03:05 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: www/rubygem-sinatra-respond_to/Makefile 322895 2013-07-13 06:29:54Z swills $
 
 PORTNAME=	sinatra-respond_to
-PORTVERSION=	0.8.0
+PORTVERSION=	0.9.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
