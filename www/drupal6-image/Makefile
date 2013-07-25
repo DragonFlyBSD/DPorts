@@ -1,16 +1,12 @@
-# New ports collection makefile for:	drupal6-image
-# Date created:		09 Feb 2010
-# Whom:			anderson@cnpm.embrapa.br
-#
-# $FreeBSD: ports/www/drupal6-image/Makefile,v 1.4 2012/11/17 06:02:31 svnexp Exp $
-#
+# Created by: anderson@cnpm.embrapa.br
+# $FreeBSD: www/drupal6-image/Makefile 322743 2013-07-11 05:53:09Z bapt $
 
 PORTNAME=	image
 DISTVERSION=	6.x-1.0-beta5
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 
-MAINTAINER=	anderson@cnpm.embrapa.br
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Drupal 6.x image upload module
 
 USE_DRUPAL=	yes
