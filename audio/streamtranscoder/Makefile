@@ -2,12 +2,12 @@
 # Date created:				29 August 2005
 # Whom:					Mark Kane <mark@mkproductions.org>
 #
-# $FreeBSD: ports/audio/streamtranscoder/Makefile,v 1.16 2012/11/17 05:54:45 svnexp Exp $
+# $FreeBSD: audio/streamtranscoder/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	streamtranscoder
 PORTVERSION=	1.2.8
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	audio
 MASTER_SITES=	http://www.oddsock.org/tools/streamTranscoder/
 
