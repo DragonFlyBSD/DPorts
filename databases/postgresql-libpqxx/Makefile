@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: ports/databases/postgresql-libpqxx/Makefile,v 1.35 2013/02/07 07:41:41 svnexp Exp $
+# $FreeBSD: databases/postgresql-libpqxx/Makefile 322415 2013-07-07 00:15:47Z jgh $
 
 PORTNAME=	libpqxx
 PORTVERSION=	4.0
@@ -15,7 +15,7 @@ CONFLICTS=	postgresql-libpqxx-3.*
 PORTSCOUT=	limit:^2\.
 
 USE_PGSQL=	yes
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 SOVERSION=	4
