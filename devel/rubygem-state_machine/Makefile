@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-state_machine
-# Date created:				27 April 2011
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/devel/rubygem-state_machine/Makefile,v 1.2 2012/11/17 05:57:01 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: devel/rubygem-state_machine/Makefile 322898 2013-07-13 06:54:18Z swills $
 
 PORTNAME=	state_machine
-PORTVERSION=	0.10.4
+PORTVERSION=	1.2.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
