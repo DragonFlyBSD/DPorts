@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: polish/qnapi/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: polish/qnapi/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	qnapi
 PORTVERSION=	0.1.6.r2
@@ -31,6 +31,8 @@ INSTALLS_ICONS=	yes
 MAN1=		qnapi.1
 MANCOMPRESSED=	yes
 PORTDOCS=	ChangeLog README.pl COPYRIGHT
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
