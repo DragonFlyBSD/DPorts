@@ -1,11 +1,7 @@
-# Ports collection makefile for:  pear-Horde_Icalendar
-# Date created:			  6 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: devel/pear-Horde_Icalendar/Makefile 321209 2013-06-18 17:55:12Z mm $
+# $FreeBSD: devel/pear-Horde_Icalendar/Makefile 323135 2013-07-16 23:00:57Z mm $
 
 PORTNAME=	Horde_Icalendar
-PORTVERSION=	2.0.6
+PORTVERSION=	2.0.7
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
