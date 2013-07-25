@@ -1,8 +1,9 @@
 # Created by: Frank Altpeter <frank@altpeter.de>
-# $FreeBSD: net-im/centerim-devel/Makefile 317036 2013-05-01 18:06:30Z jgh $
+# $FreeBSD: net-im/centerim-devel/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	centerim
 PORTVERSION=	4.22.10.11
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.centerim.org/download/mobshots/ \
 		ftp://ftp.centerim.org/mobshots/
@@ -13,7 +14,7 @@ COMMENT=	Text mode menu- and window-driven IM interface
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USE_PERL5_RUN=	yes
 USE_PYTHON_RUN=	yes
