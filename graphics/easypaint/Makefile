@@ -2,7 +2,7 @@
 # Date created:		2012-01-06
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/graphics/easypaint/Makefile,v 1.5 2013/01/23 15:05:35 svnexp Exp $
+# $FreeBSD: graphics/easypaint/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	easypaint
@@ -12,7 +12,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://qt-apps.org/CONTENT/content-files/
 DISTNAME=	140877-easyPaint
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Easy graphic editing program
 
 LICENSE=	GPLv3
