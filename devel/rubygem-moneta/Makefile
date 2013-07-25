@@ -2,11 +2,11 @@
 # Date created:				19 Mar 2010
 # Whom:					renchap@cocoa-x.com
 #
-# $FreeBSD: ports/devel/rubygem-moneta/Makefile,v 1.5 2012/11/17 05:57:00 svnexp Exp $
+# $FreeBSD: devel/rubygem-moneta/Makefile 323291 2013-07-19 13:55:24Z swills $
 #
 
 PORTNAME=	moneta
-PORTVERSION=	0.6.0
+PORTVERSION=	0.7.19
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
