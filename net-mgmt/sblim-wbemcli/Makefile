@@ -2,12 +2,12 @@
 # Date created:		20 Dec 2008
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/sblim-wbemcli/Makefile,v 1.7 2012/11/17 06:00:37 svnexp Exp $
+# $FreeBSD: net-mgmt/sblim-wbemcli/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	sblim-wbemcli
 PORTVERSION=	1.6.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/sblim/${PORTNAME}/${PORTVERSION}
 
