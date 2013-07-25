@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-pygit2/Makefile 321600 2013-06-22 22:32:14Z wg $
+# $FreeBSD: devel/py-pygit2/Makefile 323068 2013-07-15 16:39:21Z wg $
 
 PORTNAME=	pygit2
-PORTVERSION=	0.18.1
+PORTVERSION=	0.19.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
