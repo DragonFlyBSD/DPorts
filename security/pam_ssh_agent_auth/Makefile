@@ -1,13 +1,8 @@
-# Ports collection makefile for:	pam_ssh_agent_auth
-# Date created:				26 December 2009
-# Whom:					Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/security/pam_ssh_agent_auth/Makefile,v 1.7 2013/02/19 18:31:42 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: security/pam_ssh_agent_auth/Makefile 323142 2013-07-17 04:02:02Z miwi $
 
 PORTNAME=	pam_ssh_agent_auth
-PORTVERSION=	0.9.4
-PORTREVISION=	1
+PORTVERSION=	0.9.5
 CATEGORIES=	security
 MASTER_SITES=	SF/pamsshagentauth/${PORTNAME}/v${PORTVERSION}/
 
@@ -16,6 +11,7 @@ COMMENT=	PAM module which permits authentication via ssh-agent
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	ac_cv_func_strnvis=no
 CONFIGURE_ARGS=	--libexecdir=${LOCALBASE}/lib
 USE_PERL5=	yes
 
