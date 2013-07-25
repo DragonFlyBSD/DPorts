@@ -1,9 +1,9 @@
 # Created by: Björn König <bkoenig@alpha-tierchen.de>
-# $FreeBSD: net/linknx/Makefile 319985 2013-06-05 12:22:03Z bapt $
+# $FreeBSD: net/linknx/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	linknx
 PORTVERSION=	0.0.1.25
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--disable-smtp
 .endif
 
 .if ${PORT_OPTIONS:MLIBCURL}
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 CONFIGURE_ARGS+=	--with-libcurl=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-libcurl
