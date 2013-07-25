@@ -1,4 +1,4 @@
-# $FreeBSD: games/neverball/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: games/neverball/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	neverball
 PORTVERSION=	1.5.4
@@ -12,9 +12,9 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Tilt the floor to guide a ball through an obstacle course
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
-		jpeg.11:${PORTSDIR}/graphics/jpeg \
-		vorbis.4:${PORTSDIR}/audio/libvorbis \
-		physfs.1:${PORTSDIR}/devel/physfs
+		jpeg:${PORTSDIR}/graphics/jpeg \
+		vorbis:${PORTSDIR}/audio/libvorbis \
+		physfs:${PORTSDIR}/devel/physfs
 
 USE_GL=		gl
 USE_SDL=	sdl ttf
