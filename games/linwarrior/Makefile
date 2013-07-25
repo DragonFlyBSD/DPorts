@@ -1,9 +1,5 @@
-# New ports collection makefile for:	linwarrior
-# Date created:		31 Dec 2008
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/games/linwarrior/Makefile,v 1.13 2013/01/23 15:05:34 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: games/linwarrior/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	linwarrior
 PORTVERSION=	20100320
