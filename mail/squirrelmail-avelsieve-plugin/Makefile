@@ -1,8 +1,5 @@
-# New ports collection makefile for:	squirrelmail-avelsieve-plugin
-# Date created:		28 Jun 2007
-# Whom:			Neil Darlow <neil@darlow.co.uk>
-#
-# $FreeBSD: ports/mail/squirrelmail-avelsieve-plugin/Makefile,v 1.5 2012/11/17 05:59:15 svnexp Exp $
+# Created by: Neil Darlow <neil@darlow.co.uk>
+# $FreeBSD: mail/squirrelmail-avelsieve-plugin/Makefile 321866 2013-06-27 07:12:45Z bapt $
 
 PORTNAME=	avelsieve
 PORTVERSION=	1.9.7
@@ -14,12 +11,11 @@ COMMENT=	SquirrelMail plugin for Server-Side Mail Filtering management
 
 USE_PERL5_RUN=	yes
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/mail/squirrelmail/bsd.squirrelmail.mk"
+.include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 
 pre-install:
 	${RM} -Rf ${WRKSRC}/${SQUIRREL_PLUGIN_NAME}/po
 	${FIND} ${WRKSRC}/${SQUIRREL_PLUGIN_NAME} -type f \
 		\( -name '.cvsignore' -o -name '*.bak' -o -name '*.orig' \) -exec ${RM} {} \;
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
