@@ -1,8 +1,8 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: ports/textproc/p5-HTML-HTML5-Parser/Makefile,v 1.11 2012/12/08 16:35:44 svnexp Exp $
+# $FreeBSD: textproc/p5-HTML-HTML5-Parser/Makefile 322761 2013-07-11 09:30:44Z culot $
 
 PORTNAME=	HTML-HTML5-Parser
-PORTVERSION=	0.208
+PORTVERSION=	0.301
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TOBYINK
