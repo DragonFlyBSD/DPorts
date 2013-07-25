@@ -2,7 +2,7 @@
 # Date created:		2010-07-06
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/audio/minitunes/Makefile,v 1.5 2012/11/17 05:54:38 svnexp Exp $
+# $FreeBSD: audio/minitunes/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	minitunes
@@ -11,7 +11,7 @@ PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://flavio.tordini.org/files/${PORTNAME}/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Minitunes is just another music player
 
 LIB_DEPENDS=	tag.1:${PORTSDIR}/audio/taglib
