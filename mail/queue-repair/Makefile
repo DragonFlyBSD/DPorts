@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: mail/queue-repair/Makefile 314507 2013-03-18 00:20:56Z bdrewery $
+# $FreeBSD: mail/queue-repair/Makefile 322321 2013-07-05 12:46:45Z bdrewery $
 
 PORTNAME=	queue-repair
 PORTVERSION=	0.9.0
@@ -10,17 +10,17 @@ MASTER_SITES=	http://pyropus.ca/software/${PORTNAME}/
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	Qmail queue diagnostic and repair tool
 
+LICENSE=	GPLv2
+
 USE_PYTHON=	yes
 
 OPTIONS_DEFINE=		DOCS QMAIL_PORT
 OPTIONS_DEFAULT=	QMAIL_PORT
 QMAIL_PORT_DESC=	Depend on qmail port
 
-.include <bsd.port.options.mk>
+QMAIL_PORT_USES=	qmail:run
 
-.if ${PORT_OPTIONS:MQMAIL_PORT}
-USES=		qmail:run
-.endif
+.include <bsd.port.options.mk>
 
 PLIST_FILES=	bin/queue-repair
 PORTDOCS=	BLURB CHANGELOG TODO
