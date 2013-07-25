@@ -2,10 +2,10 @@
 # Date created:				27 July 2007
 # Whom:					Robert Gogolok <gogo@cs.uni-sb.de>
 #
-# $FreeBSD: ports/devel/rubygem-ruby-prof/Makefile,v 1.21 2013/01/22 02:50:12 svnexp Exp $
+# $FreeBSD: devel/rubygem-ruby-prof/Makefile 322900 2013-07-13 06:56:33Z swills $
 
 PORTNAME=	ruby-prof
-PORTVERSION=	0.11.3
+PORTVERSION=	0.13.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
