@@ -1,9 +1,5 @@
-# New ports collection makefile for:	squirrelmail-spam-buttons-plugin
-# Date created:				2008-02-16
-# Whom:					Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/squirrelmail-spam-buttons-plugin/Makefile,v 1.8 2012/11/17 05:59:16 svnexp Exp $
-#
+# Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
+# $FreeBSD: mail/squirrelmail-spam-buttons-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
 
 PORTNAME=	spam-buttons
 PORTVERSION=	2.3.1
@@ -18,9 +14,7 @@ USE_PERL5_RUN=	yes
 
 SQUIRREL_PLUGIN_NAME=	${PORTNAME:S/-/_/}
 
-.include <bsd.port.pre.mk>
-
-.include "${PORTSDIR}/mail/squirrelmail/bsd.squirrelmail.mk"
+.include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 
 post-extract:
 	@${MV} ${WRKSRC}/${_SMSRCDIR}/config_example.php ${WRKSRC}/${_SMSRCDIR}/config.sample.php
@@ -31,4 +25,4 @@ post-extract:
 	@${MV} ${WRKSRC}/${_SMSRCDIR}/docs ${WRKSRC}/${_SMSRCDIR}/doc
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
