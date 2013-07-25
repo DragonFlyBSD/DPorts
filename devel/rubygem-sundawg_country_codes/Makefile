@@ -2,11 +2,11 @@
 # Date created:				27 April 2011
 # Whom:					Eric Freeman <freebsdports@chillibear.com>
 #
-# $FreeBSD: ports/devel/rubygem-sundawg_country_codes/Makefile,v 1.2 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: devel/rubygem-sundawg_country_codes/Makefile 322914 2013-07-13 12:51:19Z swills $
 #
 
 PORTNAME=	sundawg_country_codes
-PORTVERSION=	0.0.6
+PORTVERSION=	0.0.7
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
