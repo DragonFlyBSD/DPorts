@@ -1,8 +1,9 @@
 # Created by: Harald Wille <harald.wille@students.jku.at>
-# $FreeBSD: misc/wmweather+/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: misc/wmweather+/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=		wmweather+
 PORTVERSION=		2.13
+PORTREVISION=	1
 CATEGORIES=		misc windowmaker geography
 MASTER_SITES=		SF/wmweatherplus/wmweather%2B/
 DISTNAME=		wmweather%2B-${PORTVERSION}
