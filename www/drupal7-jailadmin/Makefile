@@ -1,8 +1,8 @@
 # Created by: Shawn Webb <bsdports@wayfair.com>
-# $FreeBSD: www/drupal7-jailadmin/Makefile 320347 2013-06-09 16:49:26Z miwi $
+# $FreeBSD: www/drupal7-jailadmin/Makefile 322773 2013-07-11 15:20:03Z miwi $
 
 PORTNAME=	jailadmin
-DISTVERSION=	7.x-0.6.1
+DISTVERSION=	7.x-0.6.2
 CATEGORIES=	www
 MASTER_SITES=	http://0xfeedface.org/~shawn/projects/jailadmin/ \
     		http://mirrors.rit.edu/zi/
