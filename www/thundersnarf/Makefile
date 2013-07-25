@@ -1,8 +1,8 @@
-# $FreeBSD: www/thundersnarf/Makefile 316958 2013-04-30 20:00:28Z bdrewery $
+# $FreeBSD: www/thundersnarf/Makefile 322886 2013-07-13 05:38:21Z sunpoet $
 
 PORTNAME=	thundersnarf
 PORTVERSION=	1.3
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.tracanelli.com.br/l/dev/thunder/ \
@@ -42,7 +42,7 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/pdo_pgsql.so:${PORTSDIR}/datab
 USE_PHP+=	curl pcre bcmath pdo mcrypt mhash session pgsql spl dom xmlrpc ctype openssl simplexml soap json
 .endif
 
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 
 SUB_FILES=	pkg-message
 
