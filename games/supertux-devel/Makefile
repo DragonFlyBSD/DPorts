@@ -1,7 +1,7 @@
-# $FreeBSD: games/supertux-devel/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: games/supertux-devel/Makefile 323315 2013-07-19 16:30:10Z makc $
 
 PORTNAME=	supertux
-PORTVERSION=	0.3.3
+PORTVERSION=	0.3.4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMESUFFIX=	-devel
@@ -11,19 +11,17 @@ COMMENT=	SuperTux is a side-scroller similar to Super Mario Brothers
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/smart_ptr.hpp:${PORTSDIR}/devel/boost-libs
 LIB_DEPENDS=	physfs.1:${PORTSDIR}/devel/physfs \
-		curl.6:${PORTSDIR}/ftp/curl \
+		curl:${PORTSDIR}/ftp/curl \
 		vorbis.4:${PORTSDIR}/audio/libvorbis
 
 USE_BZIP2=	yes
-USE_SDL=	image mixer
+USE_SDL=	image
 USE_OPENAL=	al
 USE_GL=		glew
-USES=		cmake
+USES=		cmake:outsource
 MAKE_JOBS_SAFE=	yes
 
 post-patch:
-	${REINPLACE_CMD} -e '/^#.*<curl\/types.h>/d' \
-		${WRKSRC}/src/addon/addon_manager.cpp
 	${REINPLACE_CMD} -e '/^Icon=/s,supertux.png,supertux2.png,' \
 		${WRKSRC}/supertux2.desktop
 
