@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pyx12
-# Date created:		29 Jan 2004
-# Whom:			john@zoner.org
-#
-# $FreeBSD: ports/textproc/py-pyx12/Makefile,v 1.11 2012/11/17 06:02:18 svnexp Exp $
-#
+# Created by: john@zoner.org
+# $FreeBSD: textproc/py-pyx12/Makefile 323433 2013-07-22 07:03:15Z rm $
 
 PORTNAME=	pyx12
 PORTVERSION=	1.5.0
@@ -12,7 +8,7 @@ MASTER_SITES=	SF
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyx12-${PORTVERSION:S/.b/b/}
 
-MAINTAINER=	jholland@kazoocmh.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Validate and convert HIPAA X12 documents
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:${PORTSDIR}/textproc/py-libxml2 \
