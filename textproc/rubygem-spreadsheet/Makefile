@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/rubygem-spreadsheet/Makefile 319743 2013-06-03 01:30:51Z swills $
+# $FreeBSD: textproc/rubygem-spreadsheet/Makefile 322968 2013-07-13 20:23:35Z swills $
 
 PORTNAME=	spreadsheet
-PORTVERSION=	0.8.5
+PORTVERSION=	0.8.6
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
