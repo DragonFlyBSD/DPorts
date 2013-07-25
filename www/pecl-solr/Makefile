@@ -1,8 +1,9 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: ports/www/pecl-solr/Makefile,v 1.2 2013/02/21 06:45:36 svnexp Exp $
+# $FreeBSD: www/pecl-solr/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	solr
 PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
