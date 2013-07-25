@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: graphics/qiviewer/Makefile 318130 2013-05-13 20:32:02Z stefan $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: graphics/qiviewer/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	qiviewer
 PORTVERSION=	0.5.0
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Fast and lightweight image viewer
 
 LICENSE=	GPLv2
