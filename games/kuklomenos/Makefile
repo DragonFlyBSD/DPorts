@@ -2,12 +2,12 @@
 # Date created:				2008/08/31
 # Whom:					chinsan
 #
-# $FreeBSD: ports/games/kuklomenos/Makefile,v 1.25 2012/11/17 05:57:43 svnexp Exp $
+# $FreeBSD: games/kuklomenos/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	kuklomenos
 PORTVERSION=	0.4.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://mbays.freeshell.org/kuklomenos/src/
 
@@ -16,7 +16,7 @@ COMMENT=	Simple but challenging abstract shoot-em-up game
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 OPTIONS_DEFINE=	VORBIS
 OPTIONS_DEFAULT=	VORBIS
