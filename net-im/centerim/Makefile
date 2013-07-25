@@ -1,8 +1,9 @@
 # Created by: Frank Altpeter <frank@altpeter.de>
-# $FreeBSD: net-im/centerim/Makefile 317036 2013-05-01 18:06:30Z jgh $
+# $FreeBSD: net-im/centerim/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	centerim
 PORTVERSION=	4.22.10
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.centerim.org/download/releases/ \
 		ftp://ftp.centerim.org/releases/
@@ -10,7 +11,7 @@ MASTER_SITES=	http://www.centerim.org/download/releases/ \
 MAINTAINER=	frank@altpeter.de
 COMMENT=	Text mode menu- and window-driven IM interface
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USES=		iconv
 USE_OPENSSL=	yes
