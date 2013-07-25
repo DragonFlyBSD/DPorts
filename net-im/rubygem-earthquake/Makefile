@@ -1,8 +1,8 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: net-im/rubygem-earthquake/Makefile 313027 2013-02-27 02:59:45Z swills $
+# $FreeBSD: net-im/rubygem-earthquake/Makefile 321350 2013-06-20 04:21:07Z swills $
 
 PORTNAME=	earthquake
-PORTVERSION=	0.9.4
+PORTVERSION=	1.0.0
 CATEGORIES=	net-im rubygems
 MASTER_SITES=	RG
 
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	rubygem-twitter-stream>=0.1.15:${PORTSDIR}/net/rubygem-twitter-st
 		rubygem-awesome_print>=1.0.2:${PORTSDIR}/devel/rubygem-awesome_print \
 		rubygem-launchy>=2.0.5:${PORTSDIR}/devel/rubygem-launchy \
 		rubygem-oauth>=0.4.5:${PORTSDIR}/net/rubygem-oauth \
-		rubygem-twitter_oauth>=0.4.3:${PORTSDIR}/security/rubygem-twitter_oauth \
+		rubygem-jugyo-twitter_oauth>=0.5.0.pre5:${PORTSDIR}/security/rubygem-jugyo-twitter_oauth \
 		rubygem-slop>=2.4.4:${PORTSDIR}/devel/rubygem-slop
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
