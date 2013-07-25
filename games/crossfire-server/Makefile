@@ -1,9 +1,9 @@
 # Created by: Jasper Jongmans <j.jongmans@aprogas.net>
-# $FreeBSD: games/crossfire-server/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: games/crossfire-server/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	crossfire
 PORTVERSION=	1.70.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 PKGNAMESUFFIX=	-server
@@ -14,7 +14,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Server for multiplayer graphical arcade and adventure game
 
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl \
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		png15:${PORTSDIR}/graphics/png
 
 LICENSE=	GPLv2 GPLv3
