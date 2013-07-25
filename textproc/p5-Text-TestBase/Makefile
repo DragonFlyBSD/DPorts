@@ -1,8 +1,8 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-TestBase/Makefile 320101 2013-06-06 14:32:38Z culot $
+# $FreeBSD: textproc/p5-Text-TestBase/Makefile 323436 2013-07-22 08:11:24Z culot $
 
 PORTNAME=	Text-TestBase
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
