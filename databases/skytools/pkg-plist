@@ -1,0 +1,121 @@
+bin/bulk_loader.py
+bin/cube_dispatcher.py
+bin/londiste.py
+bin/pgqadm.py
+bin/queue_mover.py
+bin/queue_splitter.py
+bin/scriptmgr.py
+bin/skytools_upgrade.py
+bin/table_dispatcher.py
+bin/walmgr.py
+%%PYTHON_SITELIBDIR%%/londiste/__init__.py
+%%PYTHON_SITELIBDIR%%/londiste/__init__.pyc
+%%PYTHON_SITELIBDIR%%/londiste/compare.py
+%%PYTHON_SITELIBDIR%%/londiste/compare.pyc
+%%PYTHON_SITELIBDIR%%/londiste/file_read.py
+%%PYTHON_SITELIBDIR%%/londiste/file_read.pyc
+%%PYTHON_SITELIBDIR%%/londiste/file_write.py
+%%PYTHON_SITELIBDIR%%/londiste/file_write.pyc
+%%PYTHON_SITELIBDIR%%/londiste/installer.py
+%%PYTHON_SITELIBDIR%%/londiste/installer.pyc
+%%PYTHON_SITELIBDIR%%/londiste/playback.py
+%%PYTHON_SITELIBDIR%%/londiste/playback.pyc
+%%PYTHON_SITELIBDIR%%/londiste/repair.py
+%%PYTHON_SITELIBDIR%%/londiste/repair.pyc
+%%PYTHON_SITELIBDIR%%/londiste/setup.py
+%%PYTHON_SITELIBDIR%%/londiste/setup.pyc
+%%PYTHON_SITELIBDIR%%/londiste/syncer.py
+%%PYTHON_SITELIBDIR%%/londiste/syncer.pyc
+%%PYTHON_SITELIBDIR%%/londiste/table_copy.py
+%%PYTHON_SITELIBDIR%%/londiste/table_copy.pyc
+%%PYTHON_SITELIBDIR%%/pgq/__init__.py
+%%PYTHON_SITELIBDIR%%/pgq/__init__.pyc
+%%PYTHON_SITELIBDIR%%/pgq/consumer.py
+%%PYTHON_SITELIBDIR%%/pgq/consumer.pyc
+%%PYTHON_SITELIBDIR%%/pgq/event.py
+%%PYTHON_SITELIBDIR%%/pgq/event.pyc
+%%PYTHON_SITELIBDIR%%/pgq/maint.py
+%%PYTHON_SITELIBDIR%%/pgq/maint.pyc
+%%PYTHON_SITELIBDIR%%/pgq/producer.py
+%%PYTHON_SITELIBDIR%%/pgq/producer.pyc
+%%PYTHON_SITELIBDIR%%/pgq/status.py
+%%PYTHON_SITELIBDIR%%/pgq/status.pyc
+%%PYTHON_SITELIBDIR%%/pgq/ticker.py
+%%PYTHON_SITELIBDIR%%/pgq/ticker.pyc
+%%PYTHON_SITELIBDIR%%/skytools/__init__.py
+%%PYTHON_SITELIBDIR%%/skytools/__init__.pyc
+%%PYTHON_SITELIBDIR%%/skytools/_cquoting.so
+%%PYTHON_SITELIBDIR%%/skytools/_pyquoting.py
+%%PYTHON_SITELIBDIR%%/skytools/_pyquoting.pyc
+%%PYTHON_SITELIBDIR%%/skytools/config.py
+%%PYTHON_SITELIBDIR%%/skytools/config.pyc
+%%PYTHON_SITELIBDIR%%/skytools/dbstruct.py
+%%PYTHON_SITELIBDIR%%/skytools/dbstruct.pyc
+%%PYTHON_SITELIBDIR%%/skytools/gzlog.py
+%%PYTHON_SITELIBDIR%%/skytools/gzlog.pyc
+%%PYTHON_SITELIBDIR%%/skytools/installer_config.py
+%%PYTHON_SITELIBDIR%%/skytools/installer_config.pyc
+%%PYTHON_SITELIBDIR%%/skytools/parsing.py
+%%PYTHON_SITELIBDIR%%/skytools/parsing.pyc
+%%PYTHON_SITELIBDIR%%/skytools/psycopgwrapper.py
+%%PYTHON_SITELIBDIR%%/skytools/psycopgwrapper.pyc
+%%PYTHON_SITELIBDIR%%/skytools/quoting.py
+%%PYTHON_SITELIBDIR%%/skytools/quoting.pyc
+%%PYTHON_SITELIBDIR%%/skytools/scripting.py
+%%PYTHON_SITELIBDIR%%/skytools/scripting.pyc
+%%PYTHON_SITELIBDIR%%/skytools/skylog.py
+%%PYTHON_SITELIBDIR%%/skytools/skylog.pyc
+%%PYTHON_SITELIBDIR%%/skytools/sqltools.py
+%%PYTHON_SITELIBDIR%%/skytools/sqltools.pyc
+%%EXAMPLESDIR%%/conf/bulk_loader.ini.templ
+%%EXAMPLESDIR%%/conf/cube_dispatcher.ini.templ
+%%EXAMPLESDIR%%/conf/londiste.ini
+%%EXAMPLESDIR%%/conf/pgqadm.ini
+%%EXAMPLESDIR%%/conf/queue_mover.ini.templ
+%%EXAMPLESDIR%%/conf/queue_splitter.ini.templ
+%%EXAMPLESDIR%%/conf/scriptmgr.ini.templ
+%%EXAMPLESDIR%%/conf/skylog.ini
+%%EXAMPLESDIR%%/conf/table_dispatcher.ini.templ
+%%EXAMPLESDIR%%/conf/wal-master.ini
+%%EXAMPLESDIR%%/conf/wal-slave.ini
+lib/postgresql/logtriga.so
+lib/postgresql/pgq_lowlevel.so
+lib/postgresql/pgq_triggers.so
+share/doc/postgresql/contrib/README.londiste
+share/doc/postgresql/contrib/README.pgq
+share/doc/postgresql/contrib/README.pgq_ext
+share/postgresql/contrib/logtriga.sql
+share/postgresql/contrib/londiste.sql
+share/postgresql/contrib/londiste.upgrade.sql
+share/postgresql/contrib/pgq.sql
+share/postgresql/contrib/pgq.upgrade.sql
+share/postgresql/contrib/pgq_ext.sql
+share/postgresql/contrib/pgq_lowlevel.sql
+share/postgresql/contrib/pgq_triggers.sql
+share/postgresql/contrib/uninstall_pgq.sql
+@dirrmtry lib/postgresql
+@dirrmtry share/doc/postgresql/contrib
+@dirrmtry share/doc/postgresql
+@dirrmtry share/postgresql/contrib
+@dirrmtry share/postgresql
+%%DATADIR%%/logtriga.sql
+%%DATADIR%%/londiste.sql
+%%DATADIR%%/pgq.sql
+%%DATADIR%%/pgq_ext.sql
+%%DATADIR%%/upgrade/final/v2.1.5_londiste.sql
+%%DATADIR%%/upgrade/final/v2.1.5_pgq_core.sql
+%%DATADIR%%/upgrade/final/v2.1.5_pgq_ext.sql
+%%DATADIR%%/upgrade/final/v2.1.6_londiste.sql
+%%DATADIR%%/upgrade/final/v2.1.6_pgq_ext.sql
+%%DATADIR%%/upgrade/final/v2.1.7_londiste.sql
+%%DATADIR%%/upgrade/final/v2.1.7_pgq_core.sql
+%%DATADIR%%/upgrade/final/v2.1.8_pgq_core.sql
+@dirrm %%DATADIR%%/upgrade/final
+@dirrm %%DATADIR%%/upgrade
+@dirrm %%DATADIR%%
+@dirrm %%EXAMPLESDIR%%/conf
+@dirrm %%EXAMPLESDIR%%
+@dirrm %%PYTHON_SITELIBDIR%%/skytools
+@dirrm %%PYTHON_SITELIBDIR%%/pgq
+@dirrm %%PYTHON_SITELIBDIR%%/londiste
+@dirrmtry %%PYTHON_SITELIBDIR%%
