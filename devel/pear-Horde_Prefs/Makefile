@@ -1,11 +1,7 @@
-# Ports collection makefile for:  pear-Horde_Prefs
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: devel/pear-Horde_Prefs/Makefile 318588 2013-05-20 09:04:41Z mm $
+# $FreeBSD: devel/pear-Horde_Prefs/Makefile 323135 2013-07-16 23:00:57Z mm $
 
 PORTNAME=	Horde_Prefs
-PORTVERSION=	2.4.1
+PORTVERSION=	2.5.0
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
