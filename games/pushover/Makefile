@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pushover
-# Date created:		15 Nov 2008
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: games/pushover/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: games/pushover/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	pushover
 PORTVERSION=	0.0.3
@@ -34,8 +30,10 @@ DESKTOP_ENTRIES="Pushover" \
 		"Game;LogicGame;" \
 		false
 
+.include <bsd.port.options.mk>
+
 post-patch:
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/install-data-am/ s|install-dist_docDATA||' \
 		${WRKSRC}/Makefile.in
 .endif
