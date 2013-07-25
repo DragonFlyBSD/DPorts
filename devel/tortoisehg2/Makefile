@@ -1,7 +1,7 @@
-# $FreeBSD: devel/tortoisehg2/Makefile 320017 2013-06-05 20:38:54Z pawel $
+# $FreeBSD: devel/tortoisehg2/Makefile 323196 2013-07-18 05:20:29Z miwi $
 
 PORTNAME=	tortoisehg
-PORTVERSION=	2.8
+PORTVERSION=	2.8.2
 CATEGORIES=	devel
 MASTER_SITES=	http://cdn.bitbucket.org/tortoisehg/targz/downloads/
 
