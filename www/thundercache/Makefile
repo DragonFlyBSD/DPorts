@@ -1,8 +1,8 @@
-# $FreeBSD: www/thundercache/Makefile 316958 2013-04-30 20:00:28Z bdrewery $
+# $FreeBSD: www/thundercache/Makefile 322885 2013-07-13 05:38:02Z sunpoet $
 
 PORTNAME=	thundercache
 PORTVERSION=	6.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://www.thundercache.com.br/dist/ \
 		http://www.bmsoftware.org/packs/ \
@@ -62,7 +62,7 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/pgsql.so:${PORTSDIR}/databases
 USE_PHP+=	curl pcre bcmath pdo mcrypt mhash session
 .endif
 
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 
 SUB_FILES=	pkg-message log.sh test-deps.sh
 SUB_LIST=	"GREP=${GREP}"
