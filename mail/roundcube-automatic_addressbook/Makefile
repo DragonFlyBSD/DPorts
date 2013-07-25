@@ -1,9 +1,10 @@
-# $FreeBSD: ports/mail/roundcube-automatic_addressbook/Makefile,v 1.2 2012/11/17 05:59:13 svnexp Exp $
+# $FreeBSD: mail/roundcube-automatic_addressbook/Makefile 323144 2013-07-17 04:05:33Z miwi $
 
 PORTNAME=	automatic_addressbook
-PORTVERSION=	0.3.1
+PORTVERSION=	0.4
+PORTREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://code.crapouillou.net/attachments/download/16/
+MASTER_SITES=	http://code.crapouillou.net/attachments/download/19/
 PKGNAMEPREFIX=	roundcube-
 
 MAINTAINER=	anes@anes.su
@@ -11,11 +12,13 @@ COMMENT=	Roundcube webmail automatic addressbook plugin
 
 LICENSE=	GPLv3
 
+BUILD_DEPENDS=	roundcube>=0.8:${PORTSDIR}/mail/roundcube
 RUN_DEPENDS=	roundcube>=0.8:${PORTSDIR}/mail/roundcube
 
 USE_BZIP2=	yes
 NO_BUILD=	yes
 
+WRKSRC?=	${WRKDIR}/${PORTNAME}
 RCDIR=	${PREFIX}/www/roundcube
 WWWDIR=	${RCDIR}/plugins/automatic_addressbook
 
@@ -26,10 +29,10 @@ SUB_LIST=	RCDIR=${RCDIR} PLUGINDIR=${WWWDIR}
 x-generate-plist: build
 	cd ${WRKSRC}; \
 	${FIND} . ! -type d ! -name '*.orig' | ${SORT} | \
-		${SED} -e "s,^\.,%%WWWDIR%%," >${.CURDIR}/pkg-plist.tmp ; \
+		${SED} -e "s,^\.,%%WWWDIR%%," >${WRKDIR}/pkg-plist.tmp ; \
 	${FIND} . -type d | ${SORT} -r | ${SED} \
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
-		-e "s,^\.,@dirrm %%WWWDIR%%," >>${.CURDIR}/pkg-plist.tmp
+		-e "s,^\.,@dirrm %%WWWDIR%%," >>${WRKDIR}/pkg-plist.tmp
 
 do-install:
 	@${MKDIR} ${WWWDIR}
