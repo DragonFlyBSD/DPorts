@@ -1,8 +1,8 @@
 # Created by: johnpupu <johnpupu@gmail.com>
-# $FreeBSD: databases/pecl-mysqlnd_ms/Makefile 316607 2013-04-26 13:25:36Z miwi $
+# $FreeBSD: databases/pecl-mysqlnd_ms/Makefile 323360 2013-07-20 20:38:41Z miwi $
 
 PORTNAME=	mysqlnd_ms
-PORTVERSION=	1.5.0
+PORTVERSION=	1.5.2
 CATEGORIES=	databases
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
