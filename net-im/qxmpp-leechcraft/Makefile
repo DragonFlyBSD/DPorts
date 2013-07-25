@@ -2,7 +2,7 @@
 # Date created:				2012-01-07
 # Whom:				Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/net-im/qxmpp-leechcraft/Makefile,v 1.3 2012/11/17 06:00:29 svnexp Exp $
+# $FreeBSD: net-im/qxmpp-leechcraft/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	qxmpp
@@ -12,7 +12,7 @@ MASTER_SITES=	http://cloud.github.com/downloads/0xd34df00d/qxmpp-dev/
 PKGNAMESUFFIX=	-leechcraft
 DISTNAME=	qxmpp-${PORTVERSION}-extras
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	XMPP client library based on C++ and Qt
 
 LICENSE=	LGPL21
