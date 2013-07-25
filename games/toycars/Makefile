@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/toycars/Makefile 318820 2013-05-23 02:03:09Z amdmi3 $
+# $FreeBSD: games/toycars/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	toycars
 PORTVERSION=	0.3.10
@@ -10,7 +10,7 @@ MASTER_SITES=	SF
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Physics-based 2D racing game
 
-LIB_DEPENDS=	fltk.1:${PORTSDIR}/x11-toolkits/fltk
+LIB_DEPENDS=	fltk:${PORTSDIR}/x11-toolkits/fltk
 
 USE_SDL=	image sdl
 USE_GL=		gl glu
