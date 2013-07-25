@@ -2,7 +2,7 @@
 # Date created:		2011-09-23
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Math-Prime-XS/Makefile,v 1.7 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: math/p5-Math-Prime-XS/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Math-Prime-XS
@@ -27,10 +27,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Math::Prime::XS.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-ExtUtils-CBuilder>=0:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
