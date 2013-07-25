@@ -1,5 +1,5 @@
 # Created by: itojun@itojun.org
-# $FreeBSD: misc/magicpoint/Makefile 322250 2013-07-03 19:22:22Z dinoex $
+# $FreeBSD: misc/magicpoint/Makefile 322684 2013-07-10 12:29:44Z bapt $
 
 PORTNAME=	magicpoint
 PORTVERSION=	1.13a
@@ -20,6 +20,7 @@ WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-vflib --enable-locale
 LATE_INSTALL_ARGS=	install.man
+MAKE_JOBS_UNSAFE=	yes
 
 MAN1=	mgp.1 mgp2ps.1 mgpembed.1 mgpnet.1 xwintoppm.1 xmindpath.1
 
