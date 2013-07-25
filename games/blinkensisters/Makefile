@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/blinkensisters/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/blinkensisters/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	blinkensisters
 PORTVERSION=	0.5.3
@@ -63,7 +63,7 @@ PLIST_SUB+=	SDL_NET="@comment "
 .if ${PORT_OPTIONS:MTHEORA}
 CMAKE_ARGS+=	-DUSE_THEORA:BOOL=ON
 .else
-LIB_DEPENDS+=	theora.0:${PORTSDIR}/multimedia/libtheora
+LIB_DEPENDS+=	theora:${PORTSDIR}/multimedia/libtheora
 .endif
 
 post-patch:
