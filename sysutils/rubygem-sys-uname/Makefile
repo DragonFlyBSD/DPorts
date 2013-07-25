@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-sys-uname
-# Date created:				30 July 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/sysutils/rubygem-sys-uname/Makefile,v 1.5 2012/11/17 06:01:44 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: sysutils/rubygem-sys-uname/Makefile 322889 2013-07-13 05:57:02Z swills $
 
 PORTNAME=	sys-uname
-PORTVERSION=	0.9.0
+PORTVERSION=	0.9.2
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
