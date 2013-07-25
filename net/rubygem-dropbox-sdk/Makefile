@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/rubygem-dropbox-sdk/Makefile 320783 2013-06-13 11:54:04Z sunpoet $
+# $FreeBSD: net/rubygem-dropbox-sdk/Makefile 323067 2013-07-15 16:38:25Z sunpoet $
 
 PORTNAME=	dropbox-sdk
-PORTVERSION=	1.5.1
+PORTVERSION=	1.6.1
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
