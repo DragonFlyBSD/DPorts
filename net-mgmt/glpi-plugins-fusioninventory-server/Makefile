@@ -2,7 +2,7 @@
 # Date created:		2011-02-18
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/net-mgmt/glpi-plugins-fusioninventory-server/Makefile,v 1.5 2012/11/17 06:00:32 svnexp Exp $
+# $FreeBSD: net-mgmt/glpi-plugins-fusioninventory-server/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	server
@@ -13,7 +13,7 @@ MASTER_SITES=	http://forge.fusioninventory.org/attachments/download/668/
 PKGNAMEPREFIX=	glpi-plugins-fusioninventory-
 DISTNAME=	fusioninventory-for-glpi-metapackage_${GLPI_VER}+${FUNV_VER}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Plugin of glpi to get information of networking devices
 
 RUN_DEPENDS=	glpi>=0.80:${PORTSDIR}/www/glpi
