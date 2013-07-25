@@ -1,7 +1,8 @@
-# $FreeBSD: irc/weechat-devel/Makefile 318247 2013-05-15 16:26:17Z jase $
+# $FreeBSD: irc/weechat-devel/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	weechat
 PORTVERSION=	20130514
+PORTREVISION=	1
 CATEGORIES=	irc
 MASTER_SITES=	http://perturb.me.uk/distfiles/ \
 		${MASTER_SITE_LOCAL}
