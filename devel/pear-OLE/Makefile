@@ -1,11 +1,11 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: devel/pear-OLE/Makefile 314232 2013-03-15 02:32:56Z miwi $
+# $FreeBSD: devel/pear-OLE/Makefile 322581 2013-07-09 21:26:48Z pav $
 
 PORTNAME=	OLE
 DISTVERSION=	1.0.0RC1
 CATEGORIES=	devel www pear
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PEAR class for reading and writing OLE containers
 
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
