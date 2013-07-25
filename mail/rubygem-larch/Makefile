@@ -1,21 +1,17 @@
-# Ports collection makefile for:	rubygem-larch
-# Date created:				28 June 2011
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/mail/rubygem-larch/Makefile,v 1.2 2012/11/17 05:59:14 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: mail/rubygem-larch/Makefile 323308 2013-07-19 15:42:15Z swills $
 
 PORTNAME=	larch
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.2
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	freebsdports@chillibear.com
 COMMENT=	Larch copies messages from one IMAP server to another
 
-RUN_DEPENDS=	rubygem-amalgalite>=1.0:${PORTSDIR}/databases/rubygem-amalgalite \
-		rubygem-highline>=1.5:${PORTSDIR}/devel/rubygem-highline \
-		rubygem-sequel>=3.14:${PORTSDIR}/devel/rubygem-sequel \
+RUN_DEPENDS=	rubygem-highline>=1.5:${PORTSDIR}/devel/rubygem-highline \
+		rubygem-sequel>=3.14:${PORTSDIR}/devel/rubygem-sequel3 \
+		rubygem-sqlite3>=1.3:${PORTSDIR}/databases/rubygem-sqlite3 \
 		rubygem-trollop>=1.13:${PORTSDIR}/devel/rubygem-trollop
 
 PLIST_FILES=	bin/larch
