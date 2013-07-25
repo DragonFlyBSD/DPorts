@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/textproc/py-pystache/Makefile,v 1.7 2012/11/17 06:02:18 svnexp Exp $
+# $FreeBSD: textproc/py-pystache/Makefile 322459 2013-07-07 21:41:02Z gblach $
 
 PORTNAME=	pystache
 PORTVERSION=	0.5.3
@@ -16,4 +16,10 @@ LICENSE=	MIT
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PYTHON_REL} >= 320
+.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
+.endif
+
+.include <bsd.port.post.mk>
