@@ -2,7 +2,7 @@
 # Date created:		2009-11-12
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/audio/mehdiaplayer/Makefile,v 1.6 2012/11/17 05:54:38 svnexp Exp $
+# $FreeBSD: audio/mehdiaplayer/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	mehdiaplayer
@@ -11,7 +11,7 @@ PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	A simple media player using Qt/Phonon
 
 USE_BZIP2=	yes
