@@ -1,8 +1,5 @@
-# New ports collection makefile for:	squirrelmail-vlogin-plugin
-# Date created:		10 Oct 2005
-# Whom:		Matt Emmerton <matt@gsicomp.on.ca>
-#
-# $FreeBSD: ports/mail/squirrelmail-vlogin-plugin/Makefile,v 1.16 2012/11/17 05:59:16 svnexp Exp $
+# Created by: Matt Emmerton <matt@gsicomp.on.ca>
+# $FreeBSD: mail/squirrelmail-vlogin-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
 
 PORTNAME=	vlogin
 PORTVERSION=	3.10.2
@@ -21,8 +18,7 @@ USE_SM_COMPAT=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/mail/squirrelmail/bsd.squirrelmail.mk"
+.include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 
 # We need to rearrange, install and cleanup documentation pre-install
 # because bsd.squirrelmail.mk installs everything under ${WRKSRC}/${PORTNAME}.
@@ -38,4 +34,4 @@ pre-install::
 	cd ${WRKSRC}/${PORTNAME} && ${RM} -rf README docs
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
