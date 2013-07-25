@@ -1,8 +1,8 @@
 # Created by: Oleg Pudeyev <oleg@bsdpower.com>
-# $FreeBSD: ports/www/py-flask-flatpages/Makefile,v 1.1 2013/02/18 03:03:35 svnexp Exp $
+# $FreeBSD: www/py-flask-flatpages/Makefile 323477 2013-07-22 16:41:20Z olivierd $
 
 PORTNAME=	Flask-FlatPages
-PORTVERSION=	0.3
+PORTVERSION=	0.5
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
