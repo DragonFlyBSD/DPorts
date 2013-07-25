@@ -2,19 +2,19 @@
 # Date created:		2009-02-01
 # Whom:			Dennis Herrmann <adox@mcx2.org>
 #
-# $FreeBSD: ports/textproc/rss2html/Makefile,v 1.5 2012/11/17 06:02:19 svnexp Exp $
+# $FreeBSD: textproc/rss2html/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	rss2html
 PORTVERSION=	0.8.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://mirror.mcx2.org/
 
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	RSS to HTML converter
 
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 
 GNU_CONFIGURE=	yes
 CFLAGS+=	"-I${LOCALBASE}/include" "-L${LOCALBASE}/lib"
