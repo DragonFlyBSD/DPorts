@@ -1,8 +1,8 @@
 # Created by: Oleg A. Mamontov <oleg@mamontov.net>
-# $FreeBSD: ports/sysutils/p5-Tail-Stat/Makefile,v 1.8 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Tail-Stat/Makefile 323164 2013-07-17 12:56:23Z culot $
 
 PORTNAME=	Tail-Stat
-PORTVERSION=	0.20
+PORTVERSION=	0.21
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:LONERR
