@@ -2,11 +2,11 @@
 # Date created:				30 July 2010
 # Whom:					Eric Freeman <freebsdports@chillibear.com>
 #
-# $FreeBSD: ports/devel/rubygem-test-unit/Makefile,v 1.9 2012/11/17 05:57:01 svnexp Exp $
+# $FreeBSD: devel/rubygem-test-unit/Makefile 322916 2013-07-13 13:00:56Z swills $
 #
 
 PORTNAME=	test-unit
-PORTVERSION=	2.5.1
+PORTVERSION=	2.5.5
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
