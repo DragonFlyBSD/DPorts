@@ -1,9 +1,8 @@
 # Created by:	Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: ports/www/phpvirtualbox/Makefile,v 1.12 2013/01/17 15:44:00 svnexp Exp $
+# $FreeBSD: www/phpvirtualbox/Makefile 323161 2013-07-17 11:57:34Z decke $
 
 PORTNAME=	phpvirtualbox
-DISTVERSION=	4.2-4
-PORTREVISION=	1
+DISTVERSION=	4.2-5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 		LOCAL/decke

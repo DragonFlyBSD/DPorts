@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/phpvirtualbox/pkg-plist,v 1.8 2013/01/03 14:04:41 svnexp Exp $
+@comment $FreeBSD: www/phpvirtualbox/pkg-plist 309877 2013-01-03 13:42:26Z decke $
 @unexec if cmp -s %D/%%WWWDIR%%/config.php-example %D/%%WWWDIR%%/config.php; then rm -f %D/%%WWWDIR%%/config.php; fi
 %%WWWDIR%%/config.php-example
 @exec if [ ! -f %D/%%WWWDIR%%/config.php ]; then cp -p %D/%%WWWDIR%%/config.php-example %D/%%WWWDIR%%/config.php; fi
