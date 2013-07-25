@@ -1,11 +1,8 @@
-# New ports collection makefile for:	p5-DBD-XBase
-# Date created:				10th September 2000
-# Whom:					Ilia Chipitsine <ilia@jane.cgu.chel.su>
-#
-# $FreeBSD: ports/databases/p5-DBD-XBase/Makefile,v 1.14 2012/11/17 05:55:14 svnexp Exp $
+# Created by: Ilia Chipitsine <ilia@jane.cgu.chel.su>
+# $FreeBSD: databases/p5-DBD-XBase/Makefile 323348 2013-07-20 13:55:43Z wen $
 
 PORTNAME=	DBD-XBase
-PORTVERSION=	1.03
+PORTVERSION=	1.05
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
