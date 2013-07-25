@@ -1,8 +1,9 @@
 # Created by: Tom Judge <tom@tomjudge.com>
-# $FreeBSD: ports/www/mod_auth_mellon/Makefile,v 1.6 2012/12/09 18:03:54 svnexp Exp $
+# $FreeBSD: www/mod_auth_mellon/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=		mod_auth_mellon
 PORTVERSION=		0.5.0
+PORTREVISION=	1
 CATEGORIES=		www
 MASTER_SITES=		http://modmellon.googlecode.com/files/
 DIST_SUBDIR=		apache2
@@ -11,7 +12,7 @@ MAINTAINER=		tj@FreeBSD.org
 COMMENT=		Apache auth module for identifying SSO users
 
 LIB_DEPENDS=		lasso.8:${PORTSDIR}/security/lasso \
-			curl.6:${PORTSDIR}/ftp/curl
+			curl:${PORTSDIR}/ftp/curl
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-apxs2=${APXS}
