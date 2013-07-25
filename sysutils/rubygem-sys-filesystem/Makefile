@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-sys-filesystem
-# Date created:				30 July 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/sysutils/rubygem-sys-filesystem/Makefile,v 1.4 2012/11/17 06:01:44 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: sysutils/rubygem-sys-filesystem/Makefile 322887 2013-07-13 05:42:30Z swills $
 
 PORTNAME=	sys-filesystem
-PORTVERSION=	1.0.0
+PORTVERSION=	1.1.0
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
