@@ -1,8 +1,9 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: sysutils/powerman/Makefile 319274 2013-05-27 16:48:01Z bsam $
+# $FreeBSD: sysutils/powerman/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	powerman
 PORTVERSION=	2.3.16
+PORTREVISION=	1
 CATEGORIES=	sysutils parallel
 MASTER_SITES=	GOOGLE_CODE
 
