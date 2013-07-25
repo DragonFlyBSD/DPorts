@@ -2,7 +2,7 @@
 # Date created:		24 Feb 2006
 # Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
 #
-# $FreeBSD: ports/graphics/sharpconstruct/Makefile,v 1.20 2012/11/17 05:58:23 svnexp Exp $
+# $FreeBSD: graphics/sharpconstruct/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 #
 
 PORTNAME=	sharpconstruct
@@ -14,8 +14,8 @@ MASTER_SITES=	SF/sharp3d/SharpConstruct/${PORTVERSION}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	3D modeller for organic shapes
 
-LIB_DEPENDS=	gtkglextmm-x11-1.2.0:${PORTSDIR}/x11-toolkits/gtkglextmm \
-		glademm-2.4.1:${PORTSDIR}/devel/libglademm24
+LIB_DEPENDS=	gtkglextmm-x11-1.2:${PORTSDIR}/x11-toolkits/gtkglextmm \
+		glademm-2.4:${PORTSDIR}/devel/libglademm24
 
 USE_BZIP2=	yes
 USE_GL=		yes
