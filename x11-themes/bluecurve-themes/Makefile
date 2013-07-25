@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-themes/bluecurve-themes/Makefile 322222 2013-07-03 11:53:12Z rene $
+# $FreeBSD: x11-themes/bluecurve-themes/Makefile 323270 2013-07-19 08:26:55Z rene $
 
 # NOTE TO VISITING COMMITTER: if you need to bump the port revisions
 # of the slave ports, you should add PORTREVISION?= to the "master
@@ -18,7 +18,7 @@ PORTVERSION=	1.0
 # added to the global section by someone (with the intent of bumping
 # the revisions of the slave ports) and it cannot be removed without
 # causing a version downgrade or using PORTEPOCH.
-PORTREVISION=	6
+PORTREVISION=	7
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
