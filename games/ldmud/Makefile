@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ldmud
-# Date created:		13 August 2003
-# Whom:			glewis@FreeBSD.org
-#
-# $FreeBSD: games/ldmud/Makefile 316654 2013-04-27 08:50:46Z mva $
-#
+# Created by: glewis@FreeBSD.org
+# $FreeBSD: games/ldmud/Makefile 322991 2013-07-14 16:16:58Z johans $
 
 PORTNAME=	ldmud
 PORTVERSION=	3.3.720
@@ -39,7 +35,7 @@ OPTIONS_DEFINE=	MYSQL PGSQL SQLITE IPV6 LPMUD
 OPTIONS_DEFAULT=MYSQL PGSQL SQLITE IPV6 LPMUD
 LPMUD_DESC=	Install default mudlib (LP-245)
 
-PORTSCOUT=	skipv:3.4
+PORTSCOUT=	skipv:3.4.2
 
 .include <bsd.port.options.mk>
 
