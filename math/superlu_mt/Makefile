@@ -2,7 +2,7 @@
 # Date created:		31 Apr 2003
 # Whom:			Pedro Giffuni <giffunip@asme.org>
 #
-# $FreeBSD: ports/math/superlu_mt/Makefile,v 1.30 2012/11/17 05:59:31 svnexp Exp $
+# $FreeBSD: math/superlu_mt/Makefile 322308 2013-07-05 06:38:03Z bapt $
 #
 
 PORTNAME=	superlu_mt
@@ -22,6 +22,7 @@ MAINTAINER=	bf@FreeBSD.org
 COMMENT=	Routines for performing multithreaded sparse factorization
 
 USE_FORTRAN=	yes
+USE_GMAKE=	yes
 
 .include <bsd.port.pre.mk>
 
@@ -56,7 +57,6 @@ BROKEN=		Does not link on sparc64
 .endif
 
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/SuperLU_MT_2.0
 WRKSRC_SHARED=	${WRKDIR}/SuperLU_MT_2.0_shared
 ALL_TARGET=	lib
