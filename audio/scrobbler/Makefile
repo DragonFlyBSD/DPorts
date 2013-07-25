@@ -2,11 +2,11 @@
 # Date created:							2004-12-06
 # Whom:									arved
 #
-# $FreeBSD: audio/scrobbler/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: audio/scrobbler/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME?=	scrobbler
 PORTVERSION=	0.3.8.1
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	audio
 MASTER_SITES=	http://static.audioscrobbler.com/plugins/ \
 		http://www.pipian.com/stuffforchat/
@@ -15,7 +15,7 @@ DISTNAME=	xmms-scrobbler-${PORTVERSION}
 MAINTAINER?=	novel@FreeBSD.org
 COMMENT?=	XMMS/BMP plugin for Audioscrobbler.com
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 CONFLICTS=	bmp-scrobbler-[0-9]* \
 		xmms-scrobbler-[0-9]*
