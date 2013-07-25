@@ -1,5 +1,5 @@
 # Create by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/warzone2100/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: games/warzone2100/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	warzone2100
 PORTVERSION=	3.1.0
@@ -45,10 +45,6 @@ PORTDOCS=	*
 USE_GCC=	4.6+
 
 .include <bsd.port.options.mk>
-
-.if ${OSVERSION} < 800000
-IGNORE=		does not build on < 8.x
-.endif
 
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
