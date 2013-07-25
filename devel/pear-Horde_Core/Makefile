@@ -1,7 +1,7 @@
-# $FreeBSD: devel/pear-Horde_Core/Makefile 322568 2013-07-09 17:18:06Z mm $
+# $FreeBSD: devel/pear-Horde_Core/Makefile 323135 2013-07-16 23:00:57Z mm $
 
 PORTNAME=	Horde_Core
-PORTVERSION=	2.6.1
+PORTVERSION=	2.6.2
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	pear-
 
