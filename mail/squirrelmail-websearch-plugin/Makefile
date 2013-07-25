@@ -1,8 +1,5 @@
-# New ports collection makefile for:		squirrelmail-websearch-plugin
-# Date created:		10 August
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/squirrelmail-websearch-plugin/Makefile,v 1.5 2012/11/17 05:59:16 svnexp Exp $
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: mail/squirrelmail-websearch-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
 
 PORTNAME=	websearch
 PORTVERSION=	0.1.6
@@ -19,6 +16,5 @@ RUN_DEPENDS+=	${SQUIRRELDIR}/plugins/compatibility:${PORTSDIR}/mail/squirrelmail
 
 SQUIRREL_PLUGIN_NAME=	web_search
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/mail/squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
+.include <bsd.port.mk>
