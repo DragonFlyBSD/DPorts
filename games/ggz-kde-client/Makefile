@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ggz-kde-client
-# Date created:				Feb. 19, 2006
-# Whom:					yinjieh
-#
-# $FreeBSD: ports/games/ggz-kde-client/Makefile,v 1.18 2012/12/30 18:55:58 svnexp Exp $
-#
+# Created by: yinjieh
+# $FreeBSD: games/ggz-kde-client/Makefile 323493 2013-07-22 18:57:44Z marino $
 
 PORTNAME=	ggz-kde-client
 PORTVERSION=	${GGZ_VERSION}
@@ -17,7 +13,7 @@ DEPRECATED=	Depends on QT3; unmaintained
 EXPIRATION_DATE=	2013-07-01
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_KDELIBS_VER=	3
 USE_GGZ=	client
 
@@ -27,6 +23,5 @@ MAN6=		compcal.6 ggzap.6 keepalivecontrol.6 \
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}| ; s|echo aout|echo elf|' ${WRKSRC}/configure
 
-.include <bsd.port.pre.mk>
-.include "../../games/libggz/bsd.ggz.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../libggz/bsd.ggz.mk"
+.include <bsd.port.mk>
