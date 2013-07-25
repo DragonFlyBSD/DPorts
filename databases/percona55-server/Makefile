@@ -1,8 +1,8 @@
-# $FreeBSD: databases/percona55-server/Makefile 319020 2013-05-25 00:31:10Z flo $
+# $FreeBSD: databases/percona55-server/Makefile 322935 2013-07-13 15:19:32Z flo $
 
 PORTNAME?=	percona
-PORTVERSION=	5.5.31.30.3
-DISTNAME=	Percona-Server-5.5.31-rel30.3
+PORTVERSION=	5.5.32.31.0
+DISTNAME=	Percona-Server-5.5.32-rel31.0
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://www.percona.com/downloads/Percona-Server-5.5/${DISTNAME:S/rel//}/source/
@@ -40,7 +40,8 @@ CMAKE_ARGS+=	-DINSTALL_DOCDIR="share/doc/mysql" \
 		-DINSTALL_SUPPORTFILESDIR="share/mysql" \
 		-DWITH_LIBEDIT=0 \
 		-DWITH_LIBWRAP=1 \
-		-DHAVE_PAM=0
+		-DHAVE_PAM=0 \
+		-DWITH_UNIT_TESTS=0
 
 .ifdef USE_MYSQL
 .error You have `USE_MYSQL' variable defined either in environment or in make(1) arguments. Please undefine and try again.
