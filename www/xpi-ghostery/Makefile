@@ -1,8 +1,8 @@
 # Created by: clutton <mbsd@isgroup.com.ua>
-# $FreeBSD: www/xpi-ghostery/Makefile 319104 2013-05-26 09:12:26Z bar $
+# $FreeBSD: www/xpi-ghostery/Makefile 323091 2013-07-16 05:44:41Z miwi $
 
 PORTNAME=	ghostery
-PORTVERSION=	2.9.5
+PORTVERSION=	2.9.6
 DISTVERSIONSUFFIX=-fx+sm
 CATEGORIES=	www
 
