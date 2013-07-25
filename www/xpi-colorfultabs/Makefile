@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-colorfultabs/Makefile 320616 2013-06-11 16:52:13Z miwi $
+# $FreeBSD: www/xpi-colorfultabs/Makefile 323322 2013-07-19 17:51:18Z miwi $
 
 PORTNAME=	colorfultabs
-PORTVERSION=	18.6
+PORTVERSION=	19.0
 DISTVERSIONSUFFIX=	-fx+sm
 PORTEPOCH=	1
 CATEGORIES=	www
