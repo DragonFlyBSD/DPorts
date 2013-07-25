@@ -1,9 +1,5 @@
-# New ports collection makefile for:	drupal6-ckeditor
-# Date created:		02 jun 2010
-# Whom:			Anderson Soares Ferreira <anderson@cnpm.embrapa.br>
-#
-# $FreeBSD: ports/www/drupal6-ckeditor/Makefile,v 1.5 2012/11/17 06:02:31 svnexp Exp $
-#
+# Created by: Anderson Soares Ferreira <anderson@cnpm.embrapa.br>
+# $FreeBSD: www/drupal6-ckeditor/Makefile 322743 2013-07-11 05:53:09Z bapt $
 
 PORTNAME=	ckeditor
 DISTVERSION=	6.x-1.1
@@ -15,7 +11,7 @@ DISTFILES=	ckeditor-6.x-1.1.tar.gz:1 \
 		ckeditor_3.3.tar.gz:2
 EXTRACT_ONLY=	ckeditor-6.x-1.1.tar.gz
 
-MAINTAINER=	anderson@cnpm.embrapa.br
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Drupal 6.x Ckeditor WYSIWYG HTML editor
 
 USE_DRUPAL=	yes
