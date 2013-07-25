@@ -1,9 +1,9 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: games/crossfire-client/Makefile 322384 2013-07-06 11:24:41Z wg $
+# $FreeBSD: games/crossfire-client/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	crossfire-client
 PORTVERSION=	1.70.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	SF/crossfire/crossfire-${PORTVERSION}
 
