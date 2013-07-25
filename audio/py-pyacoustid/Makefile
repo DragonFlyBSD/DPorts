@@ -1,8 +1,9 @@
 # Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: audio/py-pyacoustid/Makefile 316303 2013-04-23 02:29:29Z swills $
+# $FreeBSD: audio/py-pyacoustid/Makefile 322705 2013-07-10 15:25:37Z makc $
 
 PORTNAME=	pyacoustid
 PORTVERSION=	1.0.0
+PORTREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
