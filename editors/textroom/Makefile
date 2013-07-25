@@ -1,9 +1,9 @@
 # Created by: admin@mjbrune.org
-# $FreeBSD: editors/textroom/Makefile 317578 2013-05-07 07:10:52Z jgh $
+# $FreeBSD: editors/textroom/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	textroom
 PORTVERSION=	0.8.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	SF
 
@@ -12,7 +12,7 @@ COMMENT=	Full screen text editor
 
 LIB_DEPENDS=	hunspell-1.3:${PORTSDIR}/textproc/hunspell \
 		xml++-2.6.2:${PORTSDIR}/textproc/libxml++26 \
-		curl.6:${PORTSDIR}/ftp/curl
+		curl:${PORTSDIR}/ftp/curl
 
 USES=	shared-mime-info
 USE_SDL=	mixer
