@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/bacula-server/files/bacula-sd.in 309025 2012-12-16 16:32:45Z rm $
+# $FreeBSD: sysutils/bacula-server/files/bacula-sd.in 323486 2013-07-22 17:51:39Z rm $
 #
 # PROVIDE: bacula_sd
 # REQUIRE: DAEMON
@@ -17,13 +17,13 @@
 . /etc/rc.subr
 
 name="bacula_sd"
-rcvar=`set_rcvar`
+rcvar=${name}_enable
 command=%%PREFIX%%/sbin/bacula-sd
 
 load_rc_config $name
 
 : ${bacula_sd_enable="NO"}
-: ${bacula_sd_flags=" -u bacula -g bacula -v -c %%PREFIX%%/etc/bacula-sd.conf"}
+: ${bacula_sd_flags=" -u bacula -g bacula -v -c %%PREFIX%%/etc/bacula/bacula-sd.conf"}
 : ${bacula_sd_pidfile="/var/run/bacula-sd.9103.pid"}
 
 pidfile="${bacula_sd_pidfile}"

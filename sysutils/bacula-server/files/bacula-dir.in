@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/bacula-server/files/bacula-dir.in 309025 2012-12-16 16:32:45Z rm $
+# $FreeBSD: sysutils/bacula-server/files/bacula-dir.in 323275 2013-07-19 09:44:58Z rm $
 #
 # PROVIDE: bacula_dir
 # REQUIRE: DAEMON %%REQ_MYSQL%% %%REQ_PGSQL%%
@@ -23,7 +23,7 @@ command=%%PREFIX%%/sbin/bacula-dir
 load_rc_config $name
 
 : ${bacula_dir_enable="NO"}
-: ${bacula_dir_flags=" -u bacula -g bacula -v -c %%PREFIX%%/etc/bacula-dir.conf"}
+: ${bacula_dir_flags=" -u bacula -g bacula -v -c %%PREFIX%%/etc/bacula/bacula-dir.conf"}
 : ${bacula_dir_pidfile="/var/run/bacula-dir.9101.pid"}
 
 pidfile="${bacula_dir_pidfile}"

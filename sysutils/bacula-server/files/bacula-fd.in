@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/bacula-server/files/bacula-fd.in 309025 2012-12-16 16:32:45Z rm $
+# $FreeBSD: sysutils/bacula-server/files/bacula-fd.in 323275 2013-07-19 09:44:58Z rm $
 #
 # PROVIDE: bacula_fd
 # REQUIRE: DAEMON
@@ -23,7 +23,7 @@ command=%%PREFIX%%/sbin/bacula-fd
 load_rc_config $name
 
 : ${bacula_fd_enable="NO"}
-: ${bacula_fd_flags=" -u root -g wheel -v -c %%PREFIX%%/etc/bacula-fd.conf"}
+: ${bacula_fd_flags=" -u root -g wheel -v -c %%PREFIX%%/etc/bacula/bacula-fd.conf"}
 : ${bacula_fd_pidfile="/var/run/bacula-fd.9102.pid"}
 
 pidfile="${bacula_fd_pidfile}"
