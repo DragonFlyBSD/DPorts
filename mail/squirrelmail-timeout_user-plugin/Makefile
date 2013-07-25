@@ -1,9 +1,5 @@
-# New ports collection makefile for:	squirrelmail-timeout_user-plugin
-# Date created:		2006-07-07
-# Whom:			Thomas Abthorpe <thomas@goodking.ca>
-#
-# $FreeBSD: ports/mail/squirrelmail-timeout_user-plugin/Makefile,v 1.7 2012/11/17 05:59:16 svnexp Exp $
-#
+# Created by: Thomas Abthorpe <thomas@goodking.ca>
+# $FreeBSD: mail/squirrelmail-timeout_user-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
 
 PORTNAME=	timeout_user
 PORTVERSION=	1.1.1
@@ -18,6 +14,5 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS+=	${SQUIRRELDIR}/plugins/compatibility:${PORTSDIR}/mail/squirrelmail-compatibility-plugin
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/mail/squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
+.include <bsd.port.mk>
