@@ -2,7 +2,7 @@
 # Date created:		15 Aug 2000
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-locale/Makefile,v 1.14 2012/11/17 05:56:57 svnexp Exp $
+# $FreeBSD: devel/ruby-locale/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=	locale
