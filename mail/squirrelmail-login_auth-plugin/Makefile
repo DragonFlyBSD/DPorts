@@ -1,5 +1,5 @@
 # Created by: Stefan Bethke <stb@lassitu.de>
-# $FreeBSD: ports/mail/squirrelmail-login_auth-plugin/Makefile,v 1.5 2012/12/10 21:50:45 svnexp Exp $
+# $FreeBSD: mail/squirrelmail-login_auth-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
 
 PORTNAME=		login_auth
 PORTVERSION=		3.0
@@ -13,6 +13,5 @@ COMMENT=		Automatically log in user based on HTTP authentication
 
 SQUIRREL_PLUGIN_NAME=	${PORTNAME}
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/mail/squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
+.include <bsd.port.mk>
