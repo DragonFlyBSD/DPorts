@@ -1,8 +1,9 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: audio/osd-lyrics/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: audio/osd-lyrics/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	osdlyrics
 PORTVERSION=	0.4.3
+PORTREVISION=	1
 CATEGORIES=	audio deskutils
 MASTER_SITES=	GOOGLE_CODE
 PROJECTHOST=	osd-lyrics
