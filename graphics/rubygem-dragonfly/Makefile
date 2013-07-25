@@ -1,5 +1,5 @@
-# Created by: Jason Helfman <jhelfman@experts-exchange.com>
-# $FreeBSD: graphics/rubygem-dragonfly/Makefile 319718 2013-06-02 19:10:23Z swills $
+# Created by: Jason Helfman <jgh@FreeBSD.org>
+# $FreeBSD: graphics/rubygem-dragonfly/Makefile 322818 2013-07-12 07:12:34Z jgh $
 
 PORTNAME=	dragonfly
 PORTVERSION=	0.9.15
