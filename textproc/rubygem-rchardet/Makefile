@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-rchardet
-# Date created:				29 May 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/textproc/rubygem-rchardet/Makefile,v 1.2 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: textproc/rubygem-rchardet/Makefile 322882 2013-07-13 05:25:46Z swills $
 
 PORTNAME=	rchardet
-PORTVERSION=	1.3
+PORTVERSION=	1.3.1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
