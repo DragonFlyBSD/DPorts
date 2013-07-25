@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: graphics/impressive/Makefile 315171 2013-03-24 22:22:15Z beech $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: graphics/impressive/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	impressive
 PORTVERSION=	0.10.3
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Impressive/${PORTVERSION}/
 DISTNAME=	Impressive-${PORTVERSION}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	The stylish way of giving presentations
 
 LICENSE=	GPLv2
