@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: editors/leafpad/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: editors/leafpad/Makefile 323325 2013-07-19 18:36:42Z jgh $
 
 PORTNAME=	leafpad
 PORTVERSION=	0.8.18.1
@@ -8,12 +8,11 @@ CATEGORIES=	editors
 MASTER_SITES=	SAVANNAH
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	wen@FreeBSD.org
+MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	GTK+ based simple text editor
 
-USE_GNOME=	gtk20 desktopfileutils intlhack
-USES=		gettext
-USE_GMAKE=	yes
+USE_GNOME=	gtk20 intlhack
+USES=		desktop-file-utils gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-chooser
 INSTALLS_ICONS=	yes
@@ -22,16 +21,27 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL README
 
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
+
+NLS_USES=	gettext
+NLS_CONFIGURE_ENABLE=	nls
+
+.include <bsd.port.options.mk>
+
 post-extract:
 	@${CHMOD} a+x ${WRKSRC}/install-sh
 
-.include <bsd.port.options.mk>
+post-patch:
+.if ! ${PORT_OPTIONS:MNLS}
+	@${REINPLACE_CMD} -e 's|SUBDIRS = src data po|SUBDIRS = src data|g' \
+		${WRKSRC}/Makefile.in
+.endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
 	@${INSTALL} -d ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
 .endif
-	-@update-desktop-database
 
 .include <bsd.port.mk>
