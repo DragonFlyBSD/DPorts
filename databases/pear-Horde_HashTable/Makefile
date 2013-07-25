@@ -1,7 +1,7 @@
-# $FreeBSD: databases/pear-Horde_HashTable/Makefile 319911 2013-06-04 21:25:59Z mm $
+# $FreeBSD: databases/pear-Horde_HashTable/Makefile 323135 2013-07-16 23:00:57Z mm $
 
 PORTNAME=	Horde_HashTable
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.1
 CATEGORIES=	databases www pear
 PKGNAMEPREFIX=	pear-
 
