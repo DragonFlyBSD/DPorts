@@ -1,7 +1,8 @@
-# $FreeBSD: ports/security/p5-Net-SAML/Makefile,v 1.17 2013/02/14 09:52:52 svnexp Exp $
+# $FreeBSD: security/p5-Net-SAML/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	Net-SAML
 PORTVERSION=	1.11
+PORTREVISION=	1
 CATEGORIES=	security perl5
 MASTER_SITES=	http://zxid.org/ \
 		CPAN
