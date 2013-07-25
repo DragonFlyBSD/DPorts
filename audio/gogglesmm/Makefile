@@ -1,9 +1,9 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: audio/gogglesmm/Makefile 322325 2013-07-05 13:44:31Z bapt $
+# $FreeBSD: audio/gogglesmm/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	gogglesmm
 PORTVERSION=	0.12.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	GOOGLE_CODE
 
