@@ -1,8 +1,8 @@
 # Created by: miwi
-# $FreeBSD: ports/german/wordpress/Makefile,v 1.49 2013/01/30 00:50:50 svnexp Exp $
+# $FreeBSD: german/wordpress/Makefile 323324 2013-07-19 18:02:44Z miwi $
 
 PORTNAME=	wordpress
-PORTVERSION=	3.5.1
+PORTVERSION=	3.5.2
 CATEGORIES=	german www
 MASTER_SITES=	http://de.wordpress.org/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-de_DE
