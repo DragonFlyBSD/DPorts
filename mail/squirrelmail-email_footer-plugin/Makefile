@@ -1,8 +1,5 @@
-# New ports collection makefile for:		squirrelmail-email_footer-plugin
-# Date created:		10 Feb 2006
-# Whom:		Gerrit Beine <gerrit.beine@gmx.de>
-#
-# $FreeBSD: ports/mail/squirrelmail-email_footer-plugin/Makefile,v 1.8 2012/11/17 05:59:15 svnexp Exp $
+# Created by: Gerrit Beine <gerrit.beine@gmx.de>
+# $FreeBSD: mail/squirrelmail-email_footer-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
 
 PORTNAME=	email_footer
 PORTVERSION=	0.6
@@ -16,6 +13,5 @@ RUN_DEPENDS+=	${SQUIRRELDIR}/plugins/compatibility:${PORTSDIR}/mail/squirrelmail
 
 LICENSE=	GPLv2
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/mail/squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
+.include <bsd.port.mk>
