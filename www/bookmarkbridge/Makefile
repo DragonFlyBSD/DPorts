@@ -1,5 +1,5 @@
 # Created by: Marco Molteni <molter@gufi.org>
-# $FreeBSD: www/bookmarkbridge/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: www/bookmarkbridge/Makefile 323110 2013-07-16 14:56:10Z miwi $
 
 PORTNAME=	bookmarkbridge
 PORTVERSION=	0.76
@@ -20,5 +20,6 @@ USE_GMAKE=	yes
 USES=		pkgconfig
 USE_AUTOTOOLS=	aclocal automake autoconf
 ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
+AUTOMAKE_ARGS=	--add-missing
 
 .include <bsd.port.mk>
