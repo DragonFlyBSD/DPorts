@@ -2,7 +2,7 @@
 # Date created:                2010-01-10
 # Whom:                        Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/science/qtresistors/Makefile,v 1.5 2012/11/17 06:00:59 svnexp Exp $
+# $FreeBSD: science/qtresistors/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	qtresistors
@@ -12,7 +12,7 @@ CATEGORIES=	science
 MASTER_SITES=	http://qt-apps.org/CONTENT/content-files/
 DISTNAME=	118297-qtResistors-201001102229
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Calculate resistance of resistor by the colors on the resistor
 
 USE_QT4=	gui qmake_build uic_build moc_build
