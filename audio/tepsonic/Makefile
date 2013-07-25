@@ -2,7 +2,7 @@
 # Date created:		2010-05-18
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: audio/tepsonic/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: audio/tepsonic/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	tepsonic
@@ -12,7 +12,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.tepsonic.org/files/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	TepSonic is a simple and fast audio player
 
 LIB_DEPENDS=	tag.1:${PORTSDIR}/audio/taglib
