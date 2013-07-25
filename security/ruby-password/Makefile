@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports/security/ruby-password/Makefile,v 1.17 2012/11/17 06:01:19 svnexp Exp $
+# $FreeBSD: security/ruby-password/Makefile 321605 2013-06-23 02:15:09Z swills $
 
 PORTNAME=	password
 PORTVERSION=	0.5.3
