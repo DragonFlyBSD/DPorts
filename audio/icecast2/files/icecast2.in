@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/audio/icecast2/files/icecast2.in,v 1.2 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: audio/icecast2/files/icecast2.in 302141 2012-08-05 23:19:36Z dougb $
 #
 
 # PROVIDE: icecast2

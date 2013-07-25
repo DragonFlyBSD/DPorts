@@ -2,12 +2,12 @@
 # Date created:         28 Jan 1999
 # Whom:                 Chip Marshall <chip@eboai.org>
 #
-# $FreeBSD: ports/audio/icecast2/Makefile,v 1.74 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: audio/icecast2/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	icecast2
 PORTVERSION=	2.3.2
-PORTREVISION=	9
+PORTREVISION=	10
 PORTEPOCH=	1
 CATEGORIES=	audio net ipv6
 MASTER_SITES=	http://downloads.xiph.org/releases/icecast/ \
