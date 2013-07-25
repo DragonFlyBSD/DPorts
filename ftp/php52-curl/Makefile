@@ -2,10 +2,11 @@
 # Date created:			17 Apr 2010
 # Whom:				Alex Keda <admin@lissyara.su>
 #
-# $FreeBSD: ports/ftp/php52-curl/Makefile,v 1.2 2012/11/17 05:57:30 svnexp Exp $
+# $FreeBSD: ftp/php52-curl/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 CATEGORIES=	ftp
+PORTREVISION=	15
 
 MASTERDIR=	${.CURDIR}/../../lang/php52
 
