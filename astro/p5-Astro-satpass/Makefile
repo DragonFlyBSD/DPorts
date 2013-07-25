@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/astro/p5-Astro-satpass/Makefile,v 1.35 2012/12/17 06:20:42 svnexp Exp $
+# $FreeBSD: astro/p5-Astro-satpass/Makefile 323301 2013-07-19 15:02:52Z wen $
 
 PORTNAME=	Astro-satpass
-PORTVERSION=	0.056
+PORTVERSION=	0.057
 CATEGORIES=	astro perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:WYANT
