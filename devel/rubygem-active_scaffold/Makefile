@@ -1,8 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-active_scaffold/Makefile 322067 2013-06-29 22:06:35Z swills $
+# $FreeBSD: devel/rubygem-active_scaffold/Makefile 322701 2013-07-10 14:54:21Z zi $
 
 PORTNAME=	active_scaffold
-PORTVERSION=	3.3.1
+PORTVERSION=	3.3.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
