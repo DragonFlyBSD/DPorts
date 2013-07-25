@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xcolorsel
-# Date Created:			11 November 1998
-# Whom:				Wayne Cuddy <wayne@crb-web.com>
-#
-# $FreeBSD: ports/x11/xcolorsel/Makefile,v 1.16 2012/11/17 06:03:21 svnexp Exp $
-#
+# Created by: Wayne Cuddy <wayne@crb-web.com>
+# $FreeBSD: x11/xcolorsel/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xcolorsel
 PORTVERSION=	1.1a
@@ -20,7 +16,7 @@ LIB_DEPENDS=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d
 RUN_DEPENDS=	rgb>=1.0.3:${PORTSDIR}/x11/rgb
 
 WRKSRC=		${WRKDIR}/xcolorsel
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xpm
 
 .if !defined(NO_INSTALL_MANPAGES)
