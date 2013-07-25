@@ -1,9 +1,9 @@
 # Created by: gpalmer
-# $FreeBSD: misc/amanda26-server/Makefile 320050 2013-06-06 05:45:44Z bapt $
+# $FreeBSD: misc/amanda26-server/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	amanda
 PORTVERSION=	2.6.1p2
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	misc
 MASTER_SITES=	SF/amanda/amanda%20-%20stable/${PORTVERSION}
