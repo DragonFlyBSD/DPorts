@@ -2,7 +2,7 @@
 # Date created:		2011-09-11
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/print/p5-Net-CUPS/Makefile,v 1.3 2012/11/17 06:00:53 svnexp Exp $
+# $FreeBSD: print/p5-Net-CUPS/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	Net-CUPS
@@ -12,7 +12,7 @@ CATEGORIES=	print perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Interface to the CUPS API
 
 BUILD_DEPENDS=	cups-config:${PORTSDIR}/print/cups-client
