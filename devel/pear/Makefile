@@ -1,11 +1,11 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/pear/Makefile 317389 2013-05-04 22:48:03Z flo $
+# $FreeBSD: devel/pear/Makefile 323244 2013-07-18 16:33:02Z miwi $
 
 PORTNAME=	pear
 PORTVERSION=	1.9.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	http://bsdcrew.de/distfiles/
+MASTER_SITES=	http://miwibox.org/distfiles/
 
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PEAR framework for PHP
