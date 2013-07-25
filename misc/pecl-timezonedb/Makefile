@@ -1,8 +1,8 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: misc/pecl-timezonedb/Makefile 320359 2013-06-09 17:36:03Z miwi $
+# $FreeBSD: misc/pecl-timezonedb/Makefile 322910 2013-07-13 11:44:48Z sunpoet $
 
 PORTNAME=	timezonedb
-DISTVERSION=	2013.3
+DISTVERSION=	2013.4
 CATEGORIES=	misc
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
