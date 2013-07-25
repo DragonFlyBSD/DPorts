@@ -1,20 +1,24 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Aggregate/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Test-Aggregate/Makefile 323105 2013-07-16 14:03:14Z culot $
 
 PORTNAME=	Test-Aggregate
-PORTVERSION=	0.364
-PORTREVISION=	1
+PORTVERSION=	0.366
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	Aggregate perl tests for better performance
+COMMENT=	Aggregate Perl tests for better performance
 
-BUILD_DEPENDS=	p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most \
-		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
-RUN_DEPENDS=	p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most \
-		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-Test-Most>=0.21:${PORTSDIR}/devel/p5-Test-Most \
+		p5-Test-NoWarnings>0:${PORTSDIR}/devel/p5-Test-NoWarnings \
+		p5-Test-Trap>0:${PORTSDIR}/devel/p5-Test-Trap
+RUN_DEPENDS=	p5-Test-Most>=0.21:${PORTSDIR}/devel/p5-Test-Most \
+		p5-Test-NoWarnings>0:${PORTSDIR}/devel/p5-Test-NoWarnings \
+		p5-Test-Trap>0:${PORTSDIR}/devel/p5-Test-Trap
 
 PERL_CONFIGURE=	yes
 
