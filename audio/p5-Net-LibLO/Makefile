@@ -2,11 +2,12 @@
 # Date created:		01 May 2010
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/p5-Net-LibLO/Makefile,v 1.2 2012/11/17 05:54:40 svnexp Exp $
+# $FreeBSD: audio/p5-Net-LibLO/Makefile 322948 2013-07-13 17:23:19Z deischen $
 #
 
 PORTNAME=	Net-LibLO
 PORTVERSION=	0.06
+PORTREVISION=	1
 CATEGORIES=	audio perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
