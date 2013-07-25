@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: ports/x11-fonts/gentium-plus/Makefile,v 1.1 2012/12/15 22:09:51 svnexp Exp $
+# $FreeBSD: x11-fonts/gentium-plus/Makefile 323427 2013-07-22 06:44:10Z bapt $
 
 PORTNAME=	GentiumPlus
 PORTVERSION=	1.510
@@ -12,7 +12,7 @@ COMMENT=	Gentium Plus TrueType font collection
 LICENSE=	OFL
 LICENSE_NAME=	SIL Open Font License (OFL)
 LICENSE_FILE=	${WRKSRC}/OFL.txt
-LICENSE_PERMS=	auto-accept
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USE_ZIP=	yes
 XORG_CAT=	font
