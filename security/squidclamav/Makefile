@@ -2,12 +2,12 @@
 # Date created:		2008-06-02
 # Whom: 		Laurent LEVIER <llevier@argosnet.com>
 #
-# $FreeBSD: ports/security/squidclamav/Makefile,v 1.12 2012/11/17 06:01:20 svnexp Exp $
+# $FreeBSD: security/squidclamav/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 #
 
 PORTNAME=	squidclamav
 PORTVERSION=	5.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	SF
 
