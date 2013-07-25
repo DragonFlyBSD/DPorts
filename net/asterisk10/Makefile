@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@portaone.com>
-# $FreeBSD: net/asterisk10/Makefile 322295 2013-07-04 22:46:33Z flo $
+# $FreeBSD: net/asterisk10/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	asterisk
 PORTVERSION=	10.12.2
@@ -213,7 +213,7 @@ CONFIGURE_ARGS+=	--without-gsm
 .if ${PORT_OPTIONS:MCURL}
 PLIST_SUB+=	WITH_CURL=""
 CONFIGURE_ARGS+=	--with-libcurl
-LIB_DEPENDS+=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 .else
 PLIST_SUB+=	WITH_CURL="@comment "
 CONFIGURE_ARGS+=	--with-libcurl=no
