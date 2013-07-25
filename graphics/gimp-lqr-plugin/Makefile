@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/gimp-lqr-plugin/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: graphics/gimp-lqr-plugin/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	gimp-lqr-plugin
 PORTVERSION=	0.7.1
@@ -12,7 +12,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Liquid rescale GIMP plug-in
 
 LIB_DEPENDS=	gimp-2.0:${PORTSDIR}/graphics/gimp-app \
-		lqr-1.3:${PORTSDIR}/graphics/liblqr-1
+		lqr-1:${PORTSDIR}/graphics/liblqr-1
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
