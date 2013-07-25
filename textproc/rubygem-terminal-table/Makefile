@@ -1,12 +1,8 @@
-# Ports collection makefile for:	rubygem-terminal-table
-# Date created:				15 April 2011
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/textproc/rubygem-terminal-table/Makefile,v 1.4 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: textproc/rubygem-terminal-table/Makefile 322892 2013-07-13 06:11:53Z swills $
 
 PORTNAME=	terminal-table
-PORTVERSION=	1.4.4
+PORTVERSION=	1.4.5
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
