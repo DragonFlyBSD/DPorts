@@ -1,5 +1,5 @@
---- ../../security/coreconf/config.mk.orig	2013-01-08 16:19:07.000000000 +0000
-+++ ../../security/coreconf/config.mk
+--- coreconf/config.mk.orig	2013-06-27 17:58:08.000000000 +0000
++++ coreconf/config.mk
 @@ -31,7 +31,7 @@ endif
  #######################################################################
  
@@ -9,8 +9,3 @@
  
  ifeq (,$(filter-out $(TARGET_OSES),$(OS_TARGET)))
  include $(CORE_DEPTH)/coreconf/$(OS_TARGET).mk
-@@ -175,3 +175,4 @@ endif
- DEFINES += -DUSE_UTIL_DIRECTLY
- USE_UTIL_DIRECTLY = 1
- 
-+EXTRA_SHARED_LIBS+=	-Wl,-R${PREFIX}/lib/${MOZILLA_PKG_NAME} -L${PREFIX}/lib

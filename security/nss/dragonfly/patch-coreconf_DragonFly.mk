@@ -1,5 +1,5 @@
 --- /dev/null	2012-12-27 22:34:01.846650771 +0100
-+++ ../../security/coreconf/DragonFly.mk	2012-12-27 22:54:07.000000000 +0100
++++ coreconf/DragonFly.mk
 @@ -0,0 +1,54 @@
 +#
 +# This Source Code Form is subject to the terms of the Mozilla Public
@@ -28,7 +28,7 @@
 +OS_CFLAGS		= $(DSO_CFLAGS) -ansi -Wall -Wno-switch -DFREEBSD -DHAVE_STRERROR -DHAVE_BSD_FLOCK
 +
 +DSO_CFLAGS		= -fPIC
-+DSO_LDOPTS		= -shared -Wl,-soname -Wl,$(notdir $@) -L$(PREFIX)/lib
++DSO_LDOPTS		= -shared -Wl,-soname -Wl,$(notdir $@)
 +
 +#
 +# The default implementation strategy for FreeBSD is pthreads.

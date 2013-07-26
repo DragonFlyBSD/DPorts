@@ -1,6 +1,6 @@
---- ../../security/coreconf/arch.mk.intermediate	2012-12-27 22:55:58.000000000 +0100
-+++ ../../security/coreconf/arch.mk	2012-12-27 22:56:24.000000000 +0100
-@@ -113,7 +113,7 @@
+--- coreconf/arch.mk.intermediate	2013-07-22 22:45:26.067756000 +0000
++++ coreconf/arch.mk
+@@ -113,7 +113,7 @@ endif
  # IRIX 6.5-ALPHA-1289139620.
  #
  

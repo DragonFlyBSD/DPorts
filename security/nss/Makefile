@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: security/nss/Makefile 318268 2013-05-16 02:00:38Z flo $
+# $FreeBSD: security/nss/Makefile 322687 2013-07-10 13:01:52Z flo $
 
 PORTNAME=	nss
-PORTVERSION=	3.14.3
+PORTVERSION=	3.15.1
 #DISTVERSIONSUFFIX=	.with.ckbi.1.93
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
 LIB_DEPENDS=	nspr4.1:${PORTSDIR}/devel/nspr \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/mozilla/security/nss
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/nss
 
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	${PREFIX}/lib/nss
@@ -25,14 +25,12 @@ USE_PERL5_BUILD=yes
 MAKE_ENV=	LIBRARY_PATH="${LOCALBASE}/lib" \
 		SQLITE_INCLUDE_DIR="${LOCALBASE}/include" \
 		NSS_ENABLE_ECC=1 NSS_USE_SYSTEM_SQLITE=1
-ALL_TARGET=	nss_build_all
 CFLAGS+=	-I${LOCALBASE}/include/nspr
 
 SUB_FILES=	nss-config nss.pc
-SUB_LIST=	MAJOR_VERSION=${PORTVERSION:R:R} \
-		PORTVERSION=${PORTVERSION}
+SUB_LIST=	PORTVERSION=${PORTVERSION}
 
-DIST=		${WRKSRC:H:H}/dist
+DIST=		${WRKSRC:H}/dist
 
 EXTERNALS=	CVS dbm security/nss/lib/zlib nsprpub security/dbm
 EXTRACT_AFTER_ARGS=| ${TAR} -xf -	\
