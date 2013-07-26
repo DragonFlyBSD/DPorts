@@ -1,8 +1,8 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: audio/soundkonverter/Makefile 321105 2013-06-17 13:04:08Z dbn $
+# $FreeBSD: audio/soundkonverter/Makefile 323346 2013-07-20 13:22:20Z dbn $
 
 PORTNAME=	soundkonverter
-DISTVERSION=	2.0.3
+DISTVERSION=	2.0.4
 CATEGORIES=	audio kde
 MASTER_SITES=	http://kde-apps.org/CONTENT/content-files/
 DISTNAME=	29024-${PORTNAME}-${DISTVERSION}
