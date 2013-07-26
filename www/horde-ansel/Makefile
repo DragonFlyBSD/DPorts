@@ -1,7 +1,7 @@
-# $FreeBSD: www/horde-ansel/Makefile 321232 2013-06-19 07:13:39Z mm $
+# $FreeBSD: www/horde-ansel/Makefile 323134 2013-07-16 22:41:04Z mm $
 
 PORTNAME=	ansel
-DISTVERSION=	3.0.0beta1
+DISTVERSION=	3.0.0RC1
 CATEGORIES=	www pear graphics
 PKGNAMEPREFIX=	horde-
 
