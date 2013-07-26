@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/morla/Makefile 320984 2013-06-15 11:10:34Z flo $
+# $FreeBSD: editors/morla/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	morla
 PORTVERSION=	0.16.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	editors textproc
 MASTER_SITES=	http://www.morlardf.net/src/ \
 		http://nivi.interfree.it/distfiles/${PORTNAME}/${PORTVERSION}/
@@ -14,7 +14,7 @@ COMMENT=	A RDF editor
 LIB_DEPENDS=	nxml.18:${PORTSDIR}/textproc/libnxml \
 		rdf.0:${PORTSDIR}/textproc/redland \
 		raptor2.0:${PORTSDIR}/textproc/raptor2 \
-		curl.6:${PORTSDIR}/ftp/curl
+		curl:${PORTSDIR}/ftp/curl
 BUILD_DEPENDS=	dot:${PORTSDIR}/graphics/graphviz
 RUN_DEPENDS=	dot:${PORTSDIR}/graphics/graphviz
 
