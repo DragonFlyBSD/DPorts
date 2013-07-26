@@ -1,9 +1,9 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/gecko-mediaplayer/Makefile 320984 2013-06-15 11:10:34Z flo $
+# $FreeBSD: www/gecko-mediaplayer/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	gecko-mediaplayer
 PORTVERSION=	1.0.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www multimedia gnome
 MASTER_SITES=	GOOGLE_CODE
 
