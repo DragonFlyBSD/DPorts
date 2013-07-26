@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/gnash/Makefile 322412 2013-07-06 20:08:45Z madpilot $
+# $FreeBSD: graphics/gnash/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	gnash
 PORTVERSION=	0.8.10
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	GNU/${PORTNAME}/${PORTVERSION}/
 
