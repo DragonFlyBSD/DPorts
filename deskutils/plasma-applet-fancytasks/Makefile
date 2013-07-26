@@ -2,7 +2,7 @@
 # Date created:		2009-12-06
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: deskutils/plasma-applet-fancytasks/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: deskutils/plasma-applet-fancytasks/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	fancytasks
@@ -13,7 +13,7 @@ MASTER_SITES=	http://kde-look.org/CONTENT/content-files/
 PKGNAMEPREFIX=	plasma-applet-
 DISTNAME=	99737-${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Plasmoid fancy representation of your tasks and launchers
 
 LICENSE=	GPLv2
