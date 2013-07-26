@@ -1,7 +1,7 @@
-# $FreeBSD: mail/horde-webmail/Makefile 319937 2013-06-04 22:54:26Z mm $
+# $FreeBSD: mail/horde-webmail/Makefile 323135 2013-07-16 23:00:57Z mm $
 
 PORTNAME=	webmail
-PORTVERSION=	5.1.0
+PORTVERSION=	5.1.1
 CATEGORIES=	mail www pear
 PKGNAMEPREFIX=	horde-
 
