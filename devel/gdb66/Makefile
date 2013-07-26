@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: devel/gdb66/Makefile 319339 2013-05-29 04:46:28Z jgh $
+# $FreeBSD: devel/gdb66/Makefile 323530 2013-07-23 12:28:56Z gahr $
 
 PORTNAME=	gdb
 PORTVERSION=	6.6
@@ -46,7 +46,9 @@ LIB_DEPENDS=	itk:${PORTSDIR}/x11-toolkits/itk
 RUN_DEPENDS=	${LOCALBASE}/lib/iwidgets:${PORTSDIR}/x11-toolkits/iwidgets
 DISTFILES+=	gdbtk-6.6${EXTRACT_SUFX}:gdbtk
 PLIST_SUB+=	INSIGHT=''
-EXTRA_PATCHES=	${FILESDIR}/itcl33-patch
+EXTRA_PATCHES=	${FILESDIR}/itcl33-patch \
+		${FILESDIR}/extra-gdb-gdbtk-generic-gdbtk.c \
+		${FILESDIR}/extra-gdb-gdbtk-generic-gdbtk-hooks.c
 CONFIGURE_ARGS+=--enable-gdbtk \
 		--with-tclconfig=${LOCALBASE}/lib/tcl${TCL_VER} \
 		--with-tclinclude=${LOCALBASE}/include/tcl${TCL_VER}/generic \
