@@ -1,12 +1,7 @@
-# Ports collection makefile for:  horde-whups
-# Date created:			  Oct 11, 2011
-# Whom:				  Martin Matuska (mm@FreeBSD.org)
-#
-# $FreeBSD: ports/devel/horde-whups/Makefile,v 1.18 2012/12/18 13:28:40 svnexp Exp $
-#
+# $FreeBSD: devel/horde-whups/Makefile 323132 2013-07-16 22:23:18Z mm $
 
 PORTNAME=	whups
-PORTVERSION=	2.0.2
+DISTVERSION=	3.0.0RC1
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	horde-
 
@@ -18,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LATEST_LINK=	horde-${PORTNAME}
 
-USE_PHP=	gettext
+USE_PHP=	gettext json
 USE_HORDE_BUILD=	Horde_Role
 USE_HORDE_RUN=	Horde_Role \
 		horde \
