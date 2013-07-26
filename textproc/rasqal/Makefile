@@ -11,18 +11,12 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	High-level interface for RDF
 
 LIB_DEPENDS=	raptor2:${PORTSDIR}/textproc/raptor2 \
-		curl.6:${PORTSDIR}/ftp/curl \
-		icuuc.50:${PORTSDIR}/devel/icu \
-		xml2.5:${PORTSDIR}/textproc/libxml2 \
-		xslt.2:${PORTSDIR}/textproc/libxslt \
-		yajl.2:${PORTSDIR}/devel/yajl \
 		pcre:${PORTSDIR}/devel/pcre
 
 USE_GNOME=	gnomehack lthack
 USE_OPENSSL=	yes
 USE_PERL5_BUILD=yes
 USES=		pkgconfig
-USES+=		iconv
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
