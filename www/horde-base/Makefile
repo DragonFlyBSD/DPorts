@@ -1,7 +1,7 @@
-# $FreeBSD: www/horde-base/Makefile 321209 2013-06-18 17:55:12Z mm $
+# $FreeBSD: www/horde-base/Makefile 323135 2013-07-16 23:00:57Z mm $
 
 PORTNAME=	horde
-PORTVERSION=	5.1.1
+PORTVERSION=	5.1.2
 CATEGORIES=	www pear
 PKGNAMEPREFIX=
 
