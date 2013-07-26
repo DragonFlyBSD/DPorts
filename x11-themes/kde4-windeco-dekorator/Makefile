@@ -2,7 +2,7 @@
 # Date created:         2009-01-03
 # Whom:                 Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: x11-themes/kde4-windeco-dekorator/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11-themes/kde4-windeco-dekorator/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	dekorator
@@ -13,7 +13,7 @@ MASTER_SITES=	http://www.kde-look.org/CONTENT/content-files/
 PKGNAMEPREFIX=	kde4-windeco-
 DISTNAME=	87921-${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Transparent KDE4 window decoration
 
 LICENSE=	GPLv2
