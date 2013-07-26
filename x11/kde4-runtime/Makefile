@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-runtime/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: x11/kde4-runtime/Makefile 323453 2013-07-22 14:25:27Z makc $
 
 PORTNAME=	kde-runtime
 PORTVERSION=	${KDE4_VERSION}
@@ -35,6 +35,7 @@ USE_XORG=	x11 xcursor
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
+MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 
 MAN1=		kdesu.1 plasmapkg.1
 MAN8=		nepomukserver.8 nepomukservicestub.8
