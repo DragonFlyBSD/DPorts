@@ -1,7 +1,7 @@
-# $FreeBSD: deskutils/horde-nag/Makefile 319937 2013-06-04 22:54:26Z mm $
+# $FreeBSD: deskutils/horde-nag/Makefile 323135 2013-07-16 23:00:57Z mm $
 
 PORTNAME=	nag
-PORTVERSION=	4.1.0
+PORTVERSION=	4.1.1
 CATEGORIES=	deskutils www pear
 PKGNAMEPREFIX=	horde-
 
