@@ -1,5 +1,5 @@
 # Created by: decept
-# $FreeBSD: x11-themes/kde4-windeco-crystal/Makefile 315725 2013-04-04 15:54:28Z makc $
+# $FreeBSD: x11-themes/kde4-windeco-crystal/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	crystal
 PORTVERSION=	2.2.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.kde-look.org/CONTENT/content-files/
 PKGNAMEPREFIX=	kde-windeco-
 DISTNAME=	75140-${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Transparent KDE window decoration
 
 LICENSE=	GPLv2
