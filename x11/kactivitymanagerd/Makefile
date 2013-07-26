@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kactivitymanagerd/Makefile 320192 2013-06-07 11:45:03Z avilla $
+# $FreeBSD: x11/kactivitymanagerd/Makefile 323453 2013-07-22 14:25:27Z makc $
 
 PORTNAME=	kactivitymanagerd
 PORTVERSION=	${KDE4_VERSION}
@@ -22,6 +22,7 @@ USE_QT4=	declarative opengl script sql \
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 DISTINFO_FILE=	${.CURDIR}/../kactivities/distinfo
+MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 
 # https://bugs.kde.org/show_bug.cgi?id=305529#c10
 CMAKE_ARGS+=	-DCMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS=-rdynamic
