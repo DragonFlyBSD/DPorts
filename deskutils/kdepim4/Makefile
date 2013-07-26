@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: deskutils/kdepim4/Makefile 320191 2013-06-07 11:42:10Z avilla $
+# $FreeBSD: deskutils/kdepim4/Makefile 323453 2013-07-22 14:25:27Z makc $
 
 PORTNAME=	kdepim
 PORTVERSION=	${KDE4_VERSION}
@@ -40,6 +40,7 @@ USE_GMAKE=	yes
 CXXFLAGS+=	-Wno-error=return-type
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
+MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 
 MAN1=		kabcclient.1
 
