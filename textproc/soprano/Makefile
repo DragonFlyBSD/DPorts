@@ -1,8 +1,8 @@
 # Created by: arved
-# $FreeBSD: textproc/soprano/Makefile 317868 2013-05-11 12:19:49Z rakuco $
+# $FreeBSD: textproc/soprano/Makefile 322992 2013-07-14 16:17:59Z rakuco $
 
 PORTNAME=	soprano
-PORTVERSION=	2.9.2
+PORTVERSION=	2.9.3
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/Soprano/${PORTVERSION}
 
