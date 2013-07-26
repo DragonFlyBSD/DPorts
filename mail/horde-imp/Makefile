@@ -1,7 +1,7 @@
-# $FreeBSD: mail/horde-imp/Makefile 321209 2013-06-18 17:55:12Z mm $
+# $FreeBSD: mail/horde-imp/Makefile 323135 2013-07-16 23:00:57Z mm $
 
 PORTNAME=	imp
-PORTVERSION=	6.1.2
+PORTVERSION=	6.1.3
 CATEGORIES=	mail www pear
 PKGNAMEPREFIX=	horde-
 
