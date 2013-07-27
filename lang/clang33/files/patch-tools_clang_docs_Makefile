@@ -1,0 +1,13 @@
+
+$FreeBSD: lang/clang33/files/patch-tools_clang_docs_Makefile 321475 2013-06-21 15:17:40Z brooks $
+
+--- tools/clang/docs/Makefile.orig
++++ tools/clang/docs/Makefile
+@@ -8,7 +8,6 @@
+ ##===----------------------------------------------------------------------===##
+ 
+ CLANG_LEVEL := ..
+-DIRS       := tools
+ 
+ ifdef BUILD_FOR_WEBSITE
+ PROJ_OBJ_DIR = .
