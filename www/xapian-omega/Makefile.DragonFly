@@ -1,0 +1,4 @@
+LDFLAGS+= -liconv
+
+CONFIGURE_ENV+=	ac_cv_search_magic_open=-lmagic
+	
