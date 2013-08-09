@@ -4,7 +4,7 @@
 PORTNAME=	po4a
 PORTVERSION=	0.44
 CATEGORIES=	textproc perl5
-MASTER_SITES=	http://alioth.debian.org/frs/download.php/3341/
+MASTER_SITES=	http://leaf.dragonflybsd.org/~marino/dports-src/
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Brings gettext translation tools to all kinds of docs
