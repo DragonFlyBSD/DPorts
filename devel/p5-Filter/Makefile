@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Filter/Makefile 316879 2013-04-30 05:43:26Z culot $
+# $FreeBSD: devel/p5-Filter/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Filter
 PORTVERSION=	1.49
@@ -14,7 +14,8 @@ COMMENT=	Number of source filters for perl5 programs
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAKE_JOBS_UNSAFE=	yes
 
 MAN3=		Filter::Util::Call.3 \
