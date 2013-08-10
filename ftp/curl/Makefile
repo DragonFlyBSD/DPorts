@@ -1,8 +1,9 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: ftp/curl/Makefile 322824 2013-07-12 09:02:43Z sunpoet $
+# $FreeBSD: ftp/curl/Makefile 324450 2013-08-09 16:39:42Z sunpoet $
 
 PORTNAME=	curl
 PORTVERSION=	7.31.0
+PORTREVISION=	1
 CATEGORIES=	ftp ipv6 www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		LOCAL/sunpoet
@@ -249,6 +250,16 @@ CONFIGURE_ARGS+=--disable-tls-srp
 post-patch:
 	@${REINPLACE_CMD} -e 's|\(flags_dbg_off=\)".*"|\1""|; s|\(flags_opt_off=\)".*"|\1""|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e '/^SUBDIRS = / s|$$| docs|; /^DIST_SUBDIRS = / s| docs||; /cd docs &&/d' ${WRKSRC}/Makefile.in
+
+pre-configure:
+.if ${PORT_OPTIONS:MLDAP}
+	@${ECHO_MSG} "Note:"
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "  Enabling LDAP option is known to fail with unpatched Mk/bsd.ldap.mk."
+	@${ECHO_MSG} "  See PR/177401 for detailed information."
+	@${ECHO_MSG} "  URL: http://www.freebsd.org/cgi/query-pr.cgi?pr=ports/177401"
+	@${ECHO_MSG} ""
+.endif
 
 post-install:
 .if !defined(BUILDING_HIPHOP)
