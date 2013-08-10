@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ImageMagick/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: graphics/ImageMagick/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	ImageMagick
 PORTREVISION=	1
@@ -32,9 +32,9 @@ COMMENT=	Image processing tools
 
 LICENSE=	AL2
 
-USES=		pkgconfig pathfix
+USES=		pkgconfig pathfix perl5
 USE_XZ=		yes
-USE_PERL5=	yes
+USE_PERL5=	run build patch
 WANT_GNOME=	yes
 USE_AUTOTOOLS=	libltdl
 # For some reason, using our libtool breaks the build into pieces:
