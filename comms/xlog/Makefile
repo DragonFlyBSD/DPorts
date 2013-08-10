@@ -1,11 +1,10 @@
 # Created by: Patrick Gardella <patrick@FreeBSD.org>
-# $FreeBSD: comms/xlog/Makefile 321933 2013-06-28 03:02:51Z jgh $
+# $FreeBSD: comms/xlog/Makefile 324109 2013-08-01 14:52:58Z wg $
 
 PORTNAME=	xlog
-PORTVERSION=	2.0.8
+PORTVERSION=	2.0.10
 CATEGORIES=	comms hamradio
-MASTER_SITES=	SAVANNAH \
-		http://www.chronos.org.uk/download/
+MASTER_SITES=	SAVANNAH
 MASTER_SITE_SUBDIR=	xlog
 
 MAINTAINER=	danilogondolfo@gmail.com
@@ -16,6 +15,7 @@ LICENSE=	GPLv3
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-mime-update
+CONFIGURE_ENV+=	ac_cv_c_compiler_gnu=no
 
 PORTDOCS=	*
 
