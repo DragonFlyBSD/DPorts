@@ -1,10 +1,10 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/fcitx/Makefile 321140 2013-06-17 16:18:54Z antoine $
+# $FreeBSD: chinese/fcitx/Makefile 324037 2013-07-31 11:57:45Z kwm $
 
 PORTNAME=	fcitx
 PORTVERSION=	4.2.6.1
 CATEGORIES=	chinese x11
-PORTREVISION=	1
+PORTREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		pinyin.tar.gz table.tar.gz en_dict-${_DICT_VER}.tar.gz
@@ -30,10 +30,10 @@ SUB_LIST+=	PORTSDIR=${PORTSDIR}
 CONFLICTS=	zh-scim-fcitx-3.*
 
 USE_XZ=		yes
-USE_GNOME=	pango intltool libxml2 gnomehack
+USE_GNOME=	pango intltool libxml2 introspection
 USE_XORG=	x11 xext xkbfile
 USE_LDCONFIG=	yes
-USES=		cmake gettext
+USES=		cmake gettext pathfix
 INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	GTK2 GTK3 QT4 OPENCC TPUNC
