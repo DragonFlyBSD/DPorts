@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Message/Makefile 315769 2013-04-09 06:31:08Z culot $
+# $FreeBSD: www/p5-HTTP-Message/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTTP-Message
 PORTVERSION=	6.06
@@ -21,7 +21,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS=	p5-libwww-5*
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTTP::Config.3 \
 		HTTP::Headers.3 \
