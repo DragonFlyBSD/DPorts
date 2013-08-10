@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: deskutils/gtimer/Makefile 320819 2013-06-13 16:34:20Z bsam $
+# $FreeBSD: deskutils/gtimer/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	gtimer
 PORTVERSION=	2.0.0
@@ -16,8 +16,7 @@ RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 
 USE_XORG=	xscrnsaver
 USE_GNOME=	gtk20
-USE_PERL5_BUILD=yes
-USES=		gettext
+USES=		gettext perl5
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
