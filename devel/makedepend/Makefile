@@ -1,8 +1,8 @@
 # Created by: Ian Vaudrey <i.vaudrey@bigfoot.com>
-# $FreeBSD: devel/makedepend/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: devel/makedepend/Makefile 324208 2013-08-03 23:55:49Z bapt $
 
 PORTNAME=	makedepend
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.5
 PORTEPOCH=	1
 CATEGORIES=	devel
 
