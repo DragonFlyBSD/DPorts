@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: audio/soundkonverter/Makefile 323346 2013-07-20 13:22:20Z dbn $
+# $FreeBSD: audio/soundkonverter/Makefile 323850 2013-07-28 20:28:32Z dbn $
 
 PORTNAME=	soundkonverter
 DISTVERSION=	2.0.4
@@ -20,7 +20,6 @@ USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_KDE4=	automoc4 kdehier kdeprefix kdelibs libkcddb
 INSTALLS_ICONS=	yes
 
-MAKE_JOBS_SAFE=	yes
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 OPTIONS_DEFAULT=	VORBISTOOLS FLAC NORMALIZE VORBISGAIN
