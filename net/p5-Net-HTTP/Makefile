@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: net/p5-Net-HTTP/Makefile 313888 2013-03-11 13:13:22Z tobez $
+# $FreeBSD: net/p5-Net-HTTP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-HTTP
 PORTVERSION=	6.06
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-IO-Socket-SSL>=1.38:${PORTSDIR}/security/p5-IO-Socket-SSL
 
 CONFLICTS=	p5-libwww-5*
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::HTTP.3 \
 		Net::HTTPS.3 \
