@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: databases/sqlite3/Makefile 319770 2013-06-03 11:14:38Z lev $
+# $FreeBSD: databases/sqlite3/Makefile 321787 2013-06-26 07:37:32Z tijl $
 
 PORTNAME=	sqlite3
 PORTVERSION=	3.7.17
@@ -18,7 +18,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 CONFLICTS=	sqlite34-[0-9]* sqlcipher-[0-9]*
 
-USES=		pkgconfig
+USES=		pathfix
 USE_LDCONFIG=	YES
 GNU_CONFIGURE=	YES
 
@@ -153,9 +153,6 @@ CONFIGURE_ARGS+=	--enable-dynamic-extensions
 .else
 CONFIGURE_ARGS+=	--disable-dynamic-extensions
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} '/^pkgconf/s,$${libdir},$${prefix}/libdata,' ${WRKSRC}/Makefile.in
 
 post-build:
 .if ${ARCH}=="i386"
