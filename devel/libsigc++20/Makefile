@@ -1,9 +1,9 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: devel/libsigc++20/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#   $MCom: ports/devel/libsigc++20/Makefile,v 1.17 2011/07/25 09:19:14 kwm Exp $
+# $FreeBSD: devel/libsigc++20/Makefile 324037 2013-07-31 11:57:45Z kwm $
+#   $MCom: ports/trunk/devel/libsigc++20/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	libsigc++
-PORTVERSION=	2.2.10
+PORTVERSION=	2.3.1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
@@ -14,16 +14,17 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_AUTOTOOLS=	libtool
 USE_XZ=		yes
-USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 LATEST_LINK=	libsigc++20
 USE_LDCONFIG=	yes
-USES=	pathfix
+USES=		gmake pathfix
 GNU_CONFIGURE=	yes
 
 PLIST_SUB=	VERSION="2.0" API_VERSION="2.0"
 
-.if defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ! ${PORT_OPTIONS:MDOCS}
 CONFIGURE_ARGS+=--enable-documentation=no
 .endif
 
