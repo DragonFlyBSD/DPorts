@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/libxul/Makefile 321792 2013-06-26 11:01:34Z flo $
+# $FreeBSD: www/libxul/Makefile 324409 2013-08-08 18:42:03Z flo $
 
 PORTNAME=	libxul
-DISTVERSION=	17.0.7
+DISTVERSION=	17.0.8
 CATEGORIES?=	www devel
 MASTER_SITES=	MOZILLA/firefox/releases/${DISTVERSION}esr/source
 DISTNAME=	firefox-${DISTVERSION}esr.source
