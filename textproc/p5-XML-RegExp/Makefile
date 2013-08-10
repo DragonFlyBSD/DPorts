@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::RegExp
-# Date created:		7 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-XML-RegExp/Makefile,v 1.8 2012/11/17 06:02:13 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-XML-RegExp/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-RegExp
 PORTVERSION=	0.04
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Regular expressions for XML tokens
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::RegExp.3
 
