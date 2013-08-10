@@ -1,9 +1,8 @@
 # Created by: mm
-# $FreeBSD: ports/devel/orc/Makefile,v 1.16 2012/12/31 13:42:56 svnexp Exp $
+# $FreeBSD: devel/orc/Makefile 323993 2013-07-30 20:43:20Z mm $
 
 PORTNAME=	orc
-PORTVERSION=	0.4.16
-PORTREVISION=	1
+PORTVERSION=	0.4.17
 CATEGORIES=	devel
 MASTER_SITES=	http://code.entropywave.com/download/orc/
 
