@@ -30,12 +30,10 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 .include "../evas-core/Makefile.inc"
 CONFIGURE_ARGS+=	--enable-gl-xlib
 
-LDFLAGS+=	-L${LOCALBASE}/lib -levas
-
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's,\$$\(top_builddir\)/src/lib/\.libs,${LOCALBASE}/lib,' \
-		-e 's,\$$\(top_builddir\)/src/lib/libevas\.la,,' \
+		-e 's,\$$\(top_builddir\)/src/lib/libevas\.la,-levas,' \
 		${BUILD_WRKSRC}/Makefile.in \
 		${WRKSRC}/src/modules/engines/gl_common/Makefile.in
 
