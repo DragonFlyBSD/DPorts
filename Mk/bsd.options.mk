@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.options.mk 321785 2013-06-26 07:22:06Z bapt $
+# $FreeBSD: Mk/bsd.options.mk 324101 2013-08-01 12:32:52Z mat $
 #
 # These variables are used in port makefiles to define the options for a port.
 #
@@ -54,19 +54,52 @@
 #
 # OPTIONS_SET				- List of options to enable for all ports.
 # OPTIONS_UNSET				- List of options to disable for all ports. 
-# ${UNIQUENAME}_SET			- List of options to enable for a specific port.
-# ${UNIQUENAME}_UNSET		- List of options to disable for a specific port.
+# ${OPTIONS_NAME}_SET		- List of options to enable for a specific port.
+# ${OPTIONS_NAME}_UNSET		- List of options to disable for a specific port.
 #
 # OPTIONS_SET_FORCE			- List of options to enable for all ports.
 # OPTIONS_UNSET_FORCE		- List of options to disable for all ports.
-# ${UNIQUENAME}_SET_FORCE	- List of options to enable for a specific port.
-# ${UNIQUENAME}_UNSET_FORCE	- List of options to disable for a specific port.
+# ${OPTIONS_NAME}_SET_FORCE	- List of options to enable for a specific port.
+# ${OPTIONS_NAME}_UNSET_FORCE
+#							- List of options to disable for a specific port.
 #
 # These variables can be used on the command line. They override the effects of
 # the make.conf variables above.
 #
 # WITH						- Set options from the command line
 # WITHOUT					- Unset options from the command line
+#
+#
+# The following knobs are there to simplfy the handling of OPTIONS in simple
+# cases :
+#
+# OPTIONS_SUB				When defined it will add to PLIST_SUB:
+#							Option enabled  ${opt}=""
+#							Option disabled ${opt}="@comment "
+#
+# ${opt}_CONFIGURE_ON		When option is enabled, it will add its content to
+#							the CONFIGURE_ARGS.
+# ${opt}_CONFIGURE_OFF		When option is disabled, it will add its content to
+#							the CONFIGURE_ARGS.
+# ${opt}_CONFIGURE_ENABLE	Will add to CONFIGURE_ARGS:
+#							Option enabled  --enable-${content}
+#							Option disabled --disable-${content}
+# ${opt}_CONFIGURE_WITH		Will add to CONFIGURE_ARGS:
+#							Option enabled  --with-${content}
+#							Option disabled --without-${content}
+#			
+# ${opt}_CMAKE_ON			When option is enabled, it will add its content to
+#							the CMAKE_ARGS.
+# ${opt}_CMAKE_OFF			When option is disabled, it will add its content to
+#							the CMAKE_ARGS.
+#
+# For each of CFLAGS CXXFLAGS LDFLAGS CONFIGURE_ENV MAKE_ENV USES DISTFILES,
+# defining ${opt}_${variable} will add it to the actual variable when the
+# option is enabled.
+#
+# For each of the depends target PKG EXTRACT PATCH FETCH BUILD LIB RUN,
+# defining ${opt}_${deptype}_DEPENDS will add it to the actual dependency when
+# the option is enabled.
 
 ##
 # Set all the options available for the ports, beginning with the
@@ -186,13 +219,14 @@ NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  for opt in ${${OPTIONS_NAME}_SET}
 .    if !empty(COMPLETE_OPTIONS_LIST:M${opt})
 PORT_OPTIONS+=	${opt}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .    endif
 .  endfor
-PORT_OPTIONS:=	${PORT_OPTIONS:O:u}
 
 ## Unset the options excluded per-port (set by user in make.conf)
 .  for opt in ${${OPTIONS_NAME}_UNSET}
 PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  endfor
 
 # XXX to remove once UNIQUENAME is removed
@@ -253,6 +287,7 @@ PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
 NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  endfor
 
+# XXX To remove once UNIQUENAME will be removed
 ## Set the options specified per-port (set by user in make.conf)
 .  for opt in ${${UNIQUENAME}_SET_FORCE}
 .    if !empty(COMPLETE_OPTIONS_LIST:M${opt})
@@ -263,6 +298,21 @@ NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 
 ## Unset the options excluded per-port (set by user in make.conf)
 .  for opt in ${${UNIQUENAME}_UNSET_FORCE}
+PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
+.  endfor
+# XXX To remove once UNIQUENAME will be removed
+
+## Set the options specified per-port (set by user in make.conf)
+.  for opt in ${${OPTIONS_NAME}_SET_FORCE}
+.    if !empty(COMPLETE_OPTIONS_LIST:M${opt})
+PORT_OPTIONS+=	${opt}
+NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
+.    endif
+.  endfor
+
+## Unset the options excluded per-port (set by user in make.conf)
+.  for opt in ${${OPTIONS_NAME}_UNSET_FORCE}
 PORT_OPTIONS:=	${PORT_OPTIONS:N${opt}}
 NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 .  endfor
@@ -335,6 +385,9 @@ PLIST_SUB:=	${PLIST_SUB} ${opt}="@comment "
 .    if defined(${opt}_CONFIGURE_ENABLE)
 CONFIGURE_ARGS+=	--enable-${${opt}_CONFIGURE_ENABLE}
 .    endif
+.    if defined(${opt}_CONFIGURE_WITH)
+CONFIGURE_ARGS+=	--with-${${opt}_CONFIGURE_WITH}
+.    endif
 .    if defined(${opt}_CONFIGURE_ON)
 CONFIGURE_ARGS+=	${${opt}_CONFIGURE_ON}
 .    endif
@@ -354,6 +407,9 @@ ${deptype}_DEPENDS+=	${${opt}_${deptype}_DEPENDS}
 .  else
 .    if defined(${opt}_CONFIGURE_ENABLE)
 CONFIGURE_ARGS+=	--disable-${${opt}_CONFIGURE_ENABLE}
+.    endif
+.    if defined(${opt}_CONFIGURE_WITH)
+CONFIGURE_ARGS+=	--without-${${opt}_CONFIGURE_WITH}
 .    endif
 .    if defined(${opt}_CONFIGURE_OFF)
 CONFIGURE_ARGS+=	${${opt}_CONFIGURE_OFF}

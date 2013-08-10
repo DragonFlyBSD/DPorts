@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.qt.mk 321482 2013-06-21 17:24:13Z rakuco $
+# $FreeBSD: Mk/bsd.qt.mk 323748 2013-07-26 19:19:20Z rene $
 #
 # Variables:
 # QT_NONSTANDARD	- Suppress modification of configure and make environment.
@@ -34,6 +34,7 @@ DISTNAME=	qt-everywhere-opensource-src-${QT4_VERSION}
 DIST_SUBDIR=	KDE
 #CONFLICTS+=	Currently there are no conflicts \o/
 
+# rene: can go after a while
 CONFLICTS_BUILD=	qt-3.* qt-copy-3.*
 
 # Let configure handle its well known compilers defined in the mkspecs

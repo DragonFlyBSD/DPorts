@@ -5,7 +5,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.commands.mk 322033 2013-06-29 09:16:29Z bapt $
+# $FreeBSD: Mk/bsd.commands.mk 323942 2013-07-30 06:32:01Z bapt $
 #
 # DO NOT COMMIT CHANGES TO THIS FILE BY YOURSELF, EVEN IF YOU DID NOT GET
 # A RESPONSE FROM THE MAINTAINER(S) WITHIN A REASONABLE TIMEFRAME! ALL

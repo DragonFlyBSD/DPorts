@@ -1,4 +1,4 @@
-# $FreeBSD: UIDs 322350 2013-07-05 19:15:48Z lwhsu $
+# $FreeBSD: UIDs 324371 2013-08-07 23:35:39Z feld $
 # Please keep this file sorted by UID!
 operator:*:2:5::0:0:System &:/:/usr/sbin/nologin
 smmsp:*:25:25::0:0:Sendmail Submission User:/var/spool/clientmqueue:/usr/sbin/nologin
@@ -100,6 +100,9 @@ twms:*:175:175::0:0:tWMS pseudo-user:/nonexistent:/usr/sbin/nologin
 nagios:*:181:181::0:0:Nagios pseudo-user:/var/spool/nagios:/usr/sbin/nologin
 noc:*:182:182::0:0:NOC pseudo-user:/usr/local/noc:/bin/sh
 icinga:*:183:183::0:0:Icinga pseudo-user:/var/spool/icinga:/usr/sbin/nologin
+dnscache:*:184:184::0:0:dnscache pseudo-user:/nonexistent:/usr/sbin/nologin
+tinydns:*:185:185::0:0:tinydns pseudo-user:/nonexistent:/usr/sbin/nologin
+dnslog:*:186:186::0:0:dnslog pseudo-user:/nonexistent:/usr/sbin/nologin
 moinmoin:*:192:192::0:0:MoinMoin User:/nonexistent:/usr/sbin/nologin
 cups:*:193:193::0:0:Cups Owner:/nonexistent:/usr/sbin/nologin
 saned:*:194:194::0:0:SANE Scanner Daemon:/nonexistent:/bin/sh
@@ -261,5 +264,6 @@ ossecr:*:968:966::0:0:OSSEC rem user:/usr/local/ossec-hids:/usr/sbin/nologin
 kippo:*:969:969::0:0:kippo user:/nonexistent:/usr/sbin/nologin
 colord:*:970:970::0:0:colord color management daemon:/nonexistent:/usr/sbin/nologin
 shibd:*:971:971::0:0:Shibboleth SAML daemon:/nonexistent:/usr/sbin/nologin
+plex:*:972:972::0:0:Plex Media Server:/nonexistent:/usr/sbin/nologin
 avenger:*:60149:60149::0:0:Mail Avenger:/var/spool/avenger:/usr/sbin/nologin
 nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin

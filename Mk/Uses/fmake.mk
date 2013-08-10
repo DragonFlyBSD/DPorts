@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/fmake.mk 322391 2013-07-06 12:53:57Z bapt $
+# $FreeBSD: Mk/Uses/fmake.mk 323942 2013-07-30 06:32:01Z bapt $
 #
 # Provide support to use the legacy FreeBSD make
 #
@@ -19,21 +19,6 @@ IGNORE=	Incorrect 'USES+= fmake:${fmake_ARGS}' fmake takes no arguments
 FMAKE=			${LOCALBASE}/bin/fmake
 BUILD_DEPENDS+=		${FMAKE}:${PORTSDIR}/devel/fmake
 CONFIGURE_ENV+=		MAKE=${FMAKE}
-
-.if !target(do-build)
-do-build:
-	@set -e ; (cd ${BUILD_WRKSRC}; if ! ${SETENV} ${MAKE_ENV} ${FMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS} ${ALL_TARGET}; then \
-		if [ -n "${BUILD_FAIL_MESSAGE}" ] ; then \
-			${ECHO_MSG} "===> Compilation failed unexpectedly."; \
-			(${ECHO_CMD} "${BUILD_FAIL_MESSAGE}") | ${FMT} 75 79 ; \
-		fi; \
-		${FALSE}; \
-	fi)
-.endif
-
-.if !target(do-install)
-do-install:
-	@set -e ; (cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${FMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
-.endif
+MAKE_CMD?=		${FMAKE}
 .endif
 .endif

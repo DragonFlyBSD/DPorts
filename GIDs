@@ -1,5 +1,4 @@
-# $FreeBSD: GIDs 321902 2013-06-27 20:40:35Z feld $
-# The 60000-60999 is reserved to resolve incompatibility from FreeBSD
+# $FreeBSD: GIDs 324371 2013-08-07 23:35:39Z feld $
 # Please keep this file sorted by GID!
 operator:*:5:amanda
 mail:*:6:postfix,clamav
@@ -94,6 +93,9 @@ rt:*:180:
 nagios:*:181:
 noc:*:182:
 icinga:*:183:
+dnscache:*:184:
+tinydns:*:185:
+dnslog:*:186:
 moinmoin:*:192:
 cups:*:193:
 saned:*:194:
@@ -255,6 +257,7 @@ ossec:*:966:
 kippo:*:969:
 colord:*:970:
 shibd:*:971:
+plex:*:972:
 avenger:*:60149:
 nogroup:*:65533:
 nobody:*:65534:

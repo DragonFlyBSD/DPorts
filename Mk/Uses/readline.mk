@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/readline.mk 321369 2013-06-20 09:57:54Z bapt $
+# $FreeBSD: Mk/Uses/readline.mk 323917 2013-07-29 20:51:23Z bapt $
 #
 # handle dependency on the readline port
 #
@@ -17,7 +17,7 @@ readline_ARGS=	port
 .endif
 
 .if defined(readline_ARGS) && ${readline_ARGS} == port
-LIB_DEPENDS+=		readline.6:${PORTSDIR}/devel/readline
+LIB_DEPENDS+=		libreadline.so.6:${PORTSDIR}/devel/readline
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib -lreadline
 .endif
