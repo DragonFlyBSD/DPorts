@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-SAX-Expat/Makefile 318944 2013-05-24 09:55:10Z tobez $
+# $FreeBSD: textproc/p5-XML-SAX-Expat/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	XML-SAX-Expat
 PORTVERSION=	0.50
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-XML-NamespaceSupport>=0:${PORTSDIR}/textproc/p5-XML-NamespaceSupport
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 
 MAN3=		XML::SAX::Expat.3
 
