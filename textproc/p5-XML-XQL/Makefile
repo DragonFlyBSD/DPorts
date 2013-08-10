@@ -2,7 +2,7 @@
 # Date created:				Sat Nov 23 17:24:19 UTC 2002
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-XML-XQL/Makefile,v 1.11 2012/11/17 06:02:14 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-XQL/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	XML-XQL
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-XML-DOM>=0:${PORTSDIR}/textproc/p5-XML-DOM
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::XQL.3 XML::XQL::DOM.3 XML::XQL::Date.3 \
 		XML::XQL::Query.3 XML::XQL::Tutorial.3
