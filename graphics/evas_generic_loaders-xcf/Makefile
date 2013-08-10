@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas_generic_loaders-xcf/Makefile 318442 2013-05-18 19:36:31Z gblach $
+# $FreeBSD: graphics/evas_generic_loaders-xcf/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	xcf
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
