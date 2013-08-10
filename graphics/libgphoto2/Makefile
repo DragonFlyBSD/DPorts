@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: graphics/libgphoto2/Makefile 322596 2013-07-10 01:57:14Z danfe $
+# $FreeBSD: graphics/libgphoto2/Makefile 323662 2013-07-25 18:55:01Z kwm $
 
 PORTNAME=	libgphoto2
 PORTVERSION=	2.4.14
@@ -22,7 +22,7 @@ USE_AUTOTOOLS=	libtool libltdl
 LIBTOOLFILES=	configure libgphoto2_port/configure
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	LTDLINCL="-I${LOCALBASE}/include" \
-		LIBLTDL="-L${LOCALBASE}/lib -lltdl" \
+		LIBLTDL="-L${LOCALBASE}/lib -lltdl"
 
 PLIST_SUB=	VERSION="${PORTVERSION}" VERSION_PORT=0.8.0
 
@@ -30,10 +30,14 @@ MAN3=		libgphoto2.3 libgphoto2_port.3
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == DragonFly
-USES+= usb
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000040
+CONFIGURE_ENV+=	LIBUSB_CFLAGS="-I/usr/include" \
+		LIBUSB_LIBS="-lusb"
+.elif ${OPSYS} == DragonFly
+USES+=		usb
 .else
-CONFIGURE_ENV+=	LIBUSB_LIBS="-lusb" LIBUSB_CFLAGS="-I/usr/include"
+# Safe because it's never used
+CFLAGS+=	-DENODATA=0
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
