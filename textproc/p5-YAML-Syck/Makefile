@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-YAML-Syck/Makefile 318660 2013-05-21 08:46:11Z tobez $
+# $FreeBSD: textproc/p5-YAML-Syck/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	YAML-Syck
 PORTVERSION=	1.27
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Fast, lightweight YAML and JSON loader and dumper
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS+=	< /dev/null
 
 MAN3=		JSON::Syck.3 YAML::Syck.3
