@@ -22,7 +22,6 @@ OPTIONS_DEFINE=	DOCS
 
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} `pkg-config --cflags --libs gtk+-2.0` \
-		-lintl \
 		gperiodic.c -o gperiodic
 .for lang in ${LANGS}
 	cd ${WRKSRC}/po && msgfmt -f -v -o ${lang}.mo ${lang}.po
