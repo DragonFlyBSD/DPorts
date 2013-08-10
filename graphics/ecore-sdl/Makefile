@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/ecore-sdl/Makefile 318442 2013-05-18 19:36:31Z gblach $
+# $FreeBSD: graphics/ecore-sdl/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	sdl
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -30,14 +30,12 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 CONFIGURE_ARGS+=	--enable-ecore-sdl \
 			--enable-ecore-input
 
-LDFLAGS+=	-L${LOCALBASE}/lib -lecore -lecore_input
-
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's,\$$\(top_builddir\)/src/lib/ecore/\.libs,${LOCALBASE}/lib,'\
 		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/\.libs,${LOCALBASE}/lib,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/libecore_input\.la,,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,-lecore,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/libecore_input\.la,-lecore_input,'\
 		${BUILD_WRKSRC}/Makefile.in
 
 post-install:
