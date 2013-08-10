@@ -1,1 +1,1 @@
-LDFLAGS+= -lm -L${LOCALBASE}/lib -lintl -logg
+LDFLAGS+= -lm
