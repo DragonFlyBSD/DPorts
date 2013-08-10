@@ -1,6 +1,0 @@
-USES+=		gettext
-USE_XORG=	xt xext
-
-LIB_DEPENDS+=	idn:${PORTSDIR}/dns/libidn
-
-LDFLAGS+=	-lintl
