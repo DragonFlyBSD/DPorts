@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTTP-Daemon
-# Date created:				2011-04-15
-# Whom:					Frederic Culot <culot@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-HTTP-Daemon/Makefile,v 1.4 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: Frederic Culot <culot@FreeBSD.org>
+# $FreeBSD: www/p5-HTTP-Daemon/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTTP-Daemon
 PORTVERSION=	6.01
@@ -21,7 +17,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS=	p5-libwww-5*
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTTP::Daemon.3
 
