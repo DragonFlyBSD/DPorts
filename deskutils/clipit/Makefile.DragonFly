@@ -1,1 +1,0 @@
-CONFIGURE_ENV+= LIBS="-L${LOCALBASE}/lib -lintl"
