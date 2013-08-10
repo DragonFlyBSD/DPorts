@@ -1,8 +1,8 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/eet/Makefile 318823 2013-05-23 02:13:40Z gblach $
+# $FreeBSD: devel/eet/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	eet
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 PORTEPOCH=	2
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
