@@ -1,5 +1,5 @@
 # Created by: Anton Yuzhaninov <citrin@citrin.ru>
-# $FreeBSD: audio/libmp3splt/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: audio/libmp3splt/Makefile 323660 2013-07-25 18:30:17Z marino $
 
 PORTNAME=	libmp3splt
 PORTVERSION=	0.8.2
@@ -16,7 +16,6 @@ CONFIGURE_ARGS=	--disable-cutter --disable-doxygen_doc
 USES=	pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libltdl
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_MULTI=	plugin
 OPTIONS_MULTI_plugin=	MAD VORBIS
@@ -65,7 +64,6 @@ CONFIGURE_ARGS+=	--disable-pcre
 
 .if ${PORT_OPTIONS:MID3}
 LIB_DEPENDS+=	id3tag:${PORTSDIR}/audio/libid3tag
-LDFLAGS+=	-lz
 .else
 CONFIGURE_ARGS+=	--disable-id3tag
 .endif
