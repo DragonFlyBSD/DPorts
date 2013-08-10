@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-generic/Makefile 320111 2013-06-06 15:59:25Z bapt $
+# $FreeBSD: graphics/evas-loader-generic/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	loader-generic
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -46,12 +46,10 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/evas/utils/evas_image_loader.${NODE}:${PORTSDIR}/
 . endif
 .endfor
 
-LDFLAGS+=	-L${LOCALBASE}/lib -levas
-
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's,\$$\(top_builddir\)/src/lib/\.libs,${LOCALBASE}/lib,' \
-		-e 's,\$$\(top_builddir\)/src/lib/libevas\.la,,' \
+		-e 's,\$$\(top_builddir\)/src/lib/libevas\.la,-levas,' \
 		${MAKEDIRS:S,$,/Makefile.in,}
 
 do-build:
