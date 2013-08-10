@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-libxml
-# Date created:		13 March 2001
-# Whom:	      		Johann Visagie <johann@egenetics.com>
-#
-# $FreeBSD: ports/textproc/p5-libxml/Makefile,v 1.12 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: Johann Visagie <johann@egenetics.com>
+# $FreeBSD: textproc/p5-libxml/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	libxml
 PORTVERSION=	0.08
@@ -18,7 +14,8 @@ COMMENT=	Collection of Perl5 modules for working with XML
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Grove.3 Data::Grove::Parent.3 Data::Grove::Visitor.3 \
 		XML::ESISParser.3 XML::Handler::CanonXMLWriter.3 \
