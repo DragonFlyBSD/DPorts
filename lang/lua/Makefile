@@ -1,9 +1,9 @@
 # Created by: Richard Kiss
-# $FreeBSD: lang/lua/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: lang/lua/Makefile 324286 2013-08-05 20:37:35Z mandree $
 
 PORTNAME=	lua
 PORTVERSION=	5.1.5
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	http://www.lua.org/ftp/ \
 		ftp://ftp.ntua.gr/pub/lang/lua/ \
@@ -33,7 +33,7 @@ MAKE_ENV=	LUA_SONAME="liblua-${LUA_VER}.so.${LUA_VER_SH}"
 MAKE_ARGS=	__MAKE_CONF=${NONEXISTENT}
 # liblua.so requires libm, so make sure it has an explicit dependency
 # so that applications need not second-guess lua's dependencies.
-LDFLAGS+=	-lm
+LDFLAGS+=	-lm -pthread
 
 MAN1=		lua-${LUA_VER}.1 luac-${LUA_VER}.1
 DOCSDIR=	${PREFIX}/share/doc/${LUA_SUBDIR}
