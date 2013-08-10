@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: security/p5-Net-SSLeay/Makefile 320460 2013-06-10 11:01:08Z tobez $
+# $FreeBSD: security/p5-Net-SSLeay/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-SSLeay
 PORTVERSION=	1.55
@@ -16,7 +16,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 
 OPTIONS_DEFINE=	EXAMPLES
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ENV=	OPENSSL_PREFIX=${OPENSSLBASE}
 REINPLACE_ARGS=	-i ''
 USE_OPENSSL=	yes
