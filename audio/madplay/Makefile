@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: audio/madplay/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: audio/madplay/Makefile 323645 2013-07-25 14:43:20Z marino $
 
 PORTNAME=	madplay
 PORTVERSION=	0.15.2b
@@ -8,20 +8,19 @@ CATEGORIES=	audio
 MASTER_SITES=	SF/mad/${PORTNAME}/${PORTVERSION} \
 		ftp://ftp.mars.org/pub/mpeg/
 
-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Madplay MP3 player (part of MAD project)
 
-LIB_DEPENDS=	mad.2:${PORTSDIR}/audio/libmad \
-		id3tag.0:${PORTSDIR}/audio/libid3tag
-
 LICENSE=	GPLv2
+
+LIB_DEPENDS=	mad:${PORTSDIR}/audio/libmad \
+		id3tag:${PORTSDIR}/audio/libid3tag
 
 WANT_GNOME=	yes
 
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lz
 ALL_TARGET=	all madtime
 
 MAN1=		abxtest.1 madplay.1
