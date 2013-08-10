@@ -1,9 +1,8 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: print/harfbuzz/Makefile 321503 2013-06-21 20:40:28Z kwm $
+# $FreeBSD: print/harfbuzz/Makefile 323778 2013-07-27 10:49:39Z kwm $
 
 PORTNAME=	harfbuzz
-PORTVERSION=	0.9.18
-PORTREVISION=	1
+PORTVERSION=	0.9.19
 CATEGORIES=	print
 MASTER_SITES=	http://www.freedesktop.org/software/harfbuzz/release/
 
@@ -15,9 +14,8 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 		graphite2:${PORTSDIR}/graphics/graphite2
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	cairo glib20 ltverhack
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-graphite2
