@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/ecore-evas/Makefile 318442 2013-05-18 19:36:31Z gblach $
+# $FreeBSD: graphics/ecore-evas/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	evas
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -39,8 +39,6 @@ X11_DESC=	Enable X11 evas engine
 
 .include <bsd.port.options.mk>
 
-LDFLAGS+=	-L${LOCALBASE}/lib
-
 .if ${PORT_OPTIONS:MBUFFER}
 CONFIGURE_ARGS+=	--enable-ecore-evas-software-buffer
 USE_EFL_EVAS_ENGINES+=	buffer
@@ -60,7 +58,6 @@ CONFIGURE_ARGS+=	--disable-ecore-evas-opengl-x11
 CONFIGURE_ARGS+=	--enable-ecore-sdl
 USE_EFL_EVAS_ENGINES+=	sdl
 USE_EFL_ECORE+=	sdl
-LDFLAGS+=		-lecore_sdl
 .else
 CONFIGURE_ARGS+=	--disable-ecore-sdl
 .endif
@@ -69,12 +66,9 @@ CONFIGURE_ARGS+=	--disable-ecore-sdl
 CONFIGURE_ARGS+=	--enable-ecore-x
 USE_EFL_ECORE+=		x11
 USE_EFL_EVAS_ENGINES+=	x11
-LDFLAGS+=		-lecore_x
 .else
 CONFIGURE_ARGS+=	--disable-ecore-x
 .endif
-
-LDFLAGS+=	-lecore -lecore_input -lecore_input_evas
 
 post-patch:
 	@${REINPLACE_CMD} -E \
@@ -83,11 +77,11 @@ post-patch:
 		-e 's,\$$\(top_builddir\)/src/lib/ecore_sdl/\.libs,${LOCALBASE}/lib,'\
 		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/\.libs,${LOCALBASE}/lib,'\
 		-e 's,\$$\(top_builddir\)/src/lib/ecore_input_evas/\.libs,${LOCALBASE}/lib,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore_x/libecore_x\.la,,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore_sdl/libecore_sdl\.la,,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/libecore_input\.la,,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore_input_evas/libecore_input_evas\.la,,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,-lecore,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore_x/libecore_x\.la,-lecore_x,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore_sdl/libecore_sdl\.la,-lecore_sdl,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/libecore_input\.la,-lecore_input,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore_input_evas/libecore_input_evas\.la,-lecore_input_evas,'\
 		${BUILD_WRKSRC}/Makefile.in
 
 post-install:
