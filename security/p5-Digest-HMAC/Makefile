@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Digest-HMAC
-# Date created:				2001/12/11
-# Whom:					nork@cityfujisawa.ne.jp
-#
-# $FreeBSD: ports/security/p5-Digest-HMAC/Makefile,v 1.11 2012/11/17 06:01:12 svnexp Exp $
-#
+# Created by: nork@cityfujisawa.ne.jp
+# $FreeBSD: security/p5-Digest-HMAC/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Digest-HMAC
 PORTVERSION=	1.03
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 interface to HMAC Message-Digest Algorithms
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Digest::HMAC.3 \
 		Digest::HMAC_MD5.3 \
