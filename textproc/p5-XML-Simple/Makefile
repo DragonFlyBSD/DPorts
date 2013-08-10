@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-Simple
-# Date created:				October 10th 2000
-# Whom:	      				Andrew <andrew@ugh.net.au>
-#
-# $FreeBSD: ports/textproc/p5-XML-Simple/Makefile,v 1.25 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: Andrew <andrew@ugh.net.au>
+# $FreeBSD: textproc/p5-XML-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Simple
 PORTVERSION=	2.20
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAKE_JOBS_UNSAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Simple.3 XML::Simple::FAQ.3
 
