@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libX11/Makefile 319899 2013-06-04 19:31:29Z zeising $
+# $FreeBSD: x11/libX11/Makefile 324227 2013-08-04 12:53:54Z az $
 
 PORTNAME=	libX11
 PORTVERSION=	1.6.0
@@ -11,11 +11,12 @@ COMMENT=	X11 library
 
 LICENSE=	MIT
 
+USES=		perl5
 XORG_CAT=	lib
 USE_XORG=	bigreqsproto xau xcmiscproto xdmcp xextproto xtrans \
 		kbproto:both inputproto xf86bigfontproto xproto:both \
 		xcb
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/lib \
 			--without-xmlto \
