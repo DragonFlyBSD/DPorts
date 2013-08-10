@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: graphics/png/Makefile 322425 2013-07-07 09:55:10Z dinoex $
+# $FreeBSD: graphics/png/Makefile 322738 2013-07-11 04:02:06Z dinoex $
 
 PORTNAME=	png
 PORTVERSION=	1.5.17
@@ -30,10 +30,6 @@ OPTIONS_DEFAULT=APNG
 APNG_DESC=Enable Animated PNG support
 
 .include <bsd.port.options.mk>
-
-.if defined(WITH_DEBUG)
-BROKEN=		Please remove WITH_DEBUG for this port
-.endif
 
 .if ${PORT_OPTIONS:MAPNG} || make(makesum) || defined(FETCH_ALL)
 MASTER_SITES+=	SF/apng/libpng/libpng15/:apng
