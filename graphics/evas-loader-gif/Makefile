@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-gif/Makefile 322768 2013-07-11 15:04:56Z miwi $
+# $FreeBSD: graphics/evas-loader-gif/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	loader-gif
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -29,12 +29,10 @@ MAKEDIRS=	${WRKSRC}/src/modules/loaders/gif
 .include "../evas-core/Makefile.inc"
 CONFIGURE_ARGS+=	--enable-image-loader-gif
 
-LDFLAGS+=	-L${LOCALBASE}/lib -levas
-
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's,\$$\(top_builddir\)/src/lib/\.libs,${LOCALBASE}/lib,' \
-		-e 's,\$$\(top_builddir\)/src/lib/libevas\.la,,' \
+		-e 's,\$$\(top_builddir\)/src/lib/libevas\.la,-levas,' \
 		${MAKEDIRS:S,$,/Makefile.in,}
 
 do-build:
