@@ -1,5 +1,5 @@
 # Created by: Kyle Martin <mkm@ieee.org>
-# $FreeBSD: devel/cmake/Makefile 322628 2013-07-10 08:15:49Z rakuco $
+# $FreeBSD: devel/cmake/Makefile 324203 2013-08-03 21:15:54Z rakuco $
 
 PORTNAME=	cmake
 PORTVERSION=	2.8.11.2
@@ -14,7 +14,8 @@ LICENSE=	BSD
 CONFIGURE_ENV=	MAKE=make
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--datadir="/${DATADIR_REL}" \
-		--docdir="/${DOCSDIR_REL}"
+		--docdir="/${DOCSDIR_REL}" \
+		--init="${PATCHDIR}/InitialCache.cmake"
 MAKE_JOBS_SAFE=	yes
 
 .if defined(STRIP) && ${STRIP} != ""
