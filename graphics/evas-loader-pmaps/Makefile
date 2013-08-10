@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-pmaps/Makefile 318442 2013-05-18 19:36:31Z gblach $
+# $FreeBSD: graphics/evas-loader-pmaps/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	loader-pmaps
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -27,12 +27,10 @@ MAKEDIRS=	${WRKSRC}/src/modules/loaders/pmaps
 .include "../evas-core/Makefile.inc"
 CONFIGURE_ARGS+=	--enable-image-loader-pmaps
 
-LDFLAGS+=	-L${LOCALBASE}/lib -levas
-
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's,\$$\(top_builddir\)/src/lib/\.libs,${LOCALBASE}/lib,' \
-		-e 's,\$$\(top_builddir\)/src/lib/libevas\.la,,' \
+		-e 's,\$$\(top_builddir\)/src/lib/libevas\.la,-levas,' \
 		${MAKEDIRS:S,$,/Makefile.in,}
 
 do-build:
