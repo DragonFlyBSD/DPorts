@@ -1,8 +1,8 @@
-# $FreeBSD: print/ghostscript9/Makefile 323070 2013-07-15 17:17:01Z hrs $
+# $FreeBSD: print/ghostscript9/Makefile 323630 2013-07-25 09:25:16Z hrs $
 
 PORTNAME=	ghostscript
 PORTVERSION=	9.06
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://downloads.ghostscript.com/public/:gs_srcs \
 		SF/ghostscript/GPL%20Ghostscript/${PORTVERSION}:gs_srcs \
@@ -97,8 +97,10 @@ MLINKS=		gslp.1 gsbj.1 \
 EXCLUDE_DIRS=	freetype jbig2dec jpeg expat jasper lcms lcms2 libpng tiff zlib
 
 .include "Makefile.drivers"
-.include <bsd.port.pre.mk>
-.include "${FILESDIR}/Makefile.drivers_post"
+.include <bsd.port.options.mk>
+
+MASTERDIR?=	${.CURDIR}
+.include "${MASTERDIR}/files/Makefile.drivers_post"
 
 .for D in ${OPTIONS_DEFINE:MGS_*:S/^GS_//} \
 	${OPTIONS_MULTI_X11:MGS_*:S/^GS_//} \
@@ -201,4 +203,4 @@ post-install:
 post-install: post-install-docs
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

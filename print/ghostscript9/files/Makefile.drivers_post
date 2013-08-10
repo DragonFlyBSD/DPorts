@@ -1,14 +1,14 @@
-# $FreeBSD: print/ghostscript9/files/Makefile.drivers_post 316695 2013-04-27 22:09:15Z bapt $
+# $FreeBSD: print/ghostscript9/files/Makefile.drivers_post 323630 2013-07-25 09:25:16Z hrs $
 # pre/postprocessing driver variables
 
 # dmprt specific
 .if ${PORT_OPTIONS:MGS_dmprt}
-.include "${FILESDIR}/Makefile.dmprt"
+.include "${MASTERDIR}/files/Makefile.dmprt"
 .endif
 
 # epag specific
 .if ${PORT_OPTIONS:MGS_epag}
-.include "${FILESDIR}/Makefile.epag"
+.include "${MASTERDIR}/files/Makefile.epag"
 .endif
 
 EPAG_BASE=	epag
@@ -24,7 +24,7 @@ post-extract: post-extract-epag
 
 # pcl3 specific
 .if ${PORT_OPTIONS:MGS_pcl3}
-.include "${FILESDIR}/Makefile.pcl3"
+.include "${MASTERDIR}/files/Makefile.pcl3"
 .endif
 
 # cups specific
