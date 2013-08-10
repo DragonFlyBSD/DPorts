@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br>
-# $FreeBSD: mail/qmail/Makefile 315553 2013-03-29 18:12:28Z bdrewery $
+# $FreeBSD: mail/qmail/Makefile 321223 2013-06-18 23:03:14Z bdrewery $
 
 PORTNAME=	qmail
 PORTVERSION?=	${QMAIL_VERSION}
@@ -452,7 +452,7 @@ PATCHFILES+=	qmail-spf-rc5.patch:spf
 PLIST_SUB+=		EXTTODO=""
 DOCFILES_WRKSRC+=	EXTTODO
 
-. if !empty{PORT_OPTIONS:MBIG_TODO_PATCH) || !empty(PORT_OPTIONS:MBIGTODO)
+. if !empty(PORT_OPTIONS:MBIG_TODO_PATCH) || !empty(PORT_OPTIONS:MBIGTODO)
 MASTER_SITES+=	${MASTER_SITE_LOCAL:S/$/:ext_big_todo/}
 MASTER_SITE_SUBDIR+=	garga/qmail/:ext_big_todo
 EXT_BIG_TODO_PATCH=	ext_todo-20030105+big-todo.103.patch
@@ -679,7 +679,9 @@ post-patch:
 . endif
 .endif
 .if defined(SLAVE_MYSQL)
-	@${REINPLACE_CMD} 's|/opt/mysql|${LOCALBASE}|' \
+	@${REINPLACE_CMD} \
+	  -e 's|/opt/mysql|${LOCALBASE}|' \
+	  -e "s,MYSQL_LIBS=.*,MYSQL_LIBS=\`${LOCALBASE}/bin/mysql_config --libs\`," \
 		${WRKSRC}/Makefile
 .elif defined(SLAVE_SPAMCONTROL)
 	@${ECHO_CMD} ${WRKDIR} > ${WRKSRC}/conf-qmail
@@ -780,7 +782,7 @@ post-patch:
 			   s!QUEUE_EXTRALEN 0!QUEUE_EXTRALEN 5!g' \
 			   ${WRKSRC}/extra.h
 .endif
-.if !defined(SLAVE_LDAP)
+.if ( ${ARCH} == "x86_64" || ${ARCH} == "ia64" ) && !defined(SLAVE_LDAP)
 	@${PATCH} -d ${WRKSRC} < ${FILESDIR}/extra-patch-amd64
 .endif
 	@${REINPLACE_CMD} -e "s/void *main/int main/g" ${WRKSRC}/*.c
