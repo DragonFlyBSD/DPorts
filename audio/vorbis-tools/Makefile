@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: audio/vorbis-tools/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: audio/vorbis-tools/Makefile 324122 2013-08-01 20:22:27Z naddy $
 
 PORTNAME=	vorbis-tools
 PORTVERSION=	1.4.0
@@ -23,7 +23,6 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
