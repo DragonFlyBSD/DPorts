@@ -1,1 +1,0 @@
-LIB_DEPENDS+= ffi:${PORTSDIR}/devel/libffi

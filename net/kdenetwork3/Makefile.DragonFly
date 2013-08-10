@@ -1,3 +1,0 @@
-BUILD_DEPENDS+= 	mcopidl:${PORTSDIR}/audio/arts
-LIB_DEPENDS+=		fam:${PORTSDIR}/devel/gamin
-LIB_DEPENDS+=		pcreposix:${PORTSDIR}/devel/pcre

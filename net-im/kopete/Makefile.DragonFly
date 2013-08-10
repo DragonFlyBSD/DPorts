@@ -1,1 +1,0 @@
-CONFIGURE_ARGS+=	--disable-jingle
