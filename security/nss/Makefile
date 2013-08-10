@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: security/nss/Makefile 322687 2013-07-10 13:01:52Z flo $
+# $FreeBSD: security/nss/Makefile 324409 2013-08-08 18:42:03Z flo $
 
 PORTNAME=	nss
 PORTVERSION=	3.15.1
@@ -11,7 +11,7 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Libraries to support development of security-enabled applications
 
 BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
-		nspr>=4.8.8:${PORTSDIR}/devel/nspr \
+		nspr>=4.10:${PORTSDIR}/devel/nspr \
 		sqlite3>=3.7.15:${PORTSDIR}/databases/sqlite3
 LIB_DEPENDS=	nspr4.1:${PORTSDIR}/devel/nspr \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3
@@ -32,9 +32,7 @@ SUB_LIST=	PORTVERSION=${PORTVERSION}
 
 DIST=		${WRKSRC:H}/dist
 
-EXTERNALS=	CVS dbm security/nss/lib/zlib nsprpub security/dbm
-EXTRACT_AFTER_ARGS=| ${TAR} -xf -	\
-	${EXTERNALS:C,^,--exclude ${PORTNAME}-${PORTVERSION}/mozilla/,}
+EXTRACT_AFTER_ARGS=--exclude */lib/zlib --exclude */lib/dbm --exclude */lib/sqlite
 
 INSTALL_BINS=	certcgi certutil checkcert cmsutil crlutil derdump makepqg \
 		mangle modutil ocspclnt oidcalc p7content p7env p7sign \
@@ -56,8 +54,8 @@ check regression-test test:
 		    LD_LIBRARY_PATH="${BINS}/lib" \
 		    ${MAKE_ENV}	\
 			./all.sh
-	@if ${GREP} -F '>Failed<'	\
-	    ${WRKSRC:H:H}/tests_results/security/*/results.html; then	\
+	@if ${GREP} -Fh '>Failed<'	\
+	    ${WRKSRC:H}/tests_results/security/*/results.html; then	\
 		echo "Some tests have failed. Let ${MAINTAINER} know.";	\
 		exit 1;	\
 	else	\
