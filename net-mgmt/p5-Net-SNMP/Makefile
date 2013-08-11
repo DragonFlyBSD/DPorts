@@ -2,7 +2,7 @@
 # Date created:				30 June 2000
 # Whom:					Christopher N. Harrell <cnh@ivmg.net>
 #
-# $FreeBSD: ports/net-mgmt/p5-Net-SNMP/Makefile,v 1.26 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Net-SNMP/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Net-SNMP
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Crypt-DES>=0:${PORTSDIR}/security/p5-Crypt-DES \
 		p5-Digest-HMAC>=0:${PORTSDIR}/security/p5-Digest-HMAC
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFLICTS=	p5-Net-SNMP3-[0-9]*
 
 MAN1=		snmpkey.1
