@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-MessagePack-Stream/Makefile 318553 2013-05-19 22:32:01Z kuriyama $
+# $FreeBSD: devel/p5-Data-MessagePack-Stream/Makefile 322850 2013-07-12 16:30:29Z bapt $
 
 PORTNAME=	Data-MessagePack-Stream
 PORTVERSION=	0.07
@@ -13,6 +13,7 @@ COMMENT=	Perl extension for yet another messagepack streaming deserializer
 BUILD_DEPENDS=	p5-Data-MessagePack>0:${PORTSDIR}/devel/p5-Data-MessagePack
 
 PERL_CONFIGURE=	yes
+MAKE_JOBS_UNSAFE=	yes
 
 MAN3=	Data::MessagePack::Stream.3
 
