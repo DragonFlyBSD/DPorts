@@ -1,19 +1,17 @@
-# $FreeBSD: ports/graphics/libpuzzle/Makefile,v 1.10 2012/12/31 14:24:31 svnexp Exp $
+# $FreeBSD: graphics/libpuzzle/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	libpuzzle
 PORTVERSION=	0.11
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/misc/libpuzzle/releases/
 
 MAINTAINER=	bapt@FreeBSD.org
-COMMENT=	A library to find similar pictures
+COMMENT=	Library to find similar pictures
 
 LICENSE=	BSD
 
 LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
-
-MAKE_JOBS_SAFE=	yes
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
