@@ -2,21 +2,22 @@
 # Date created:				21 May 2007
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/science/bodr/Makefile,v 1.5 2012/11/17 06:00:56 svnexp Exp $
+# $FreeBSD: science/bodr/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	bodr
 PORTVERSION=	9
 CATEGORIES=	science
 MASTER_SITES=	SF
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Chemistry data like element and isotope properties, atomic radii, etc
 
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 
+USES=		perl5
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 
 post-patch:
