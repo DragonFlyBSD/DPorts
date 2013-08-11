@@ -1,5 +1,5 @@
 # Created by: Shell Hung <shell@shellhung.org>
-# $FreeBSD: graphics/p5-Image-Info/Makefile 323286 2013-07-19 12:56:29Z culot $
+# $FreeBSD: graphics/p5-Image-Info/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Image-Info
 PORTVERSION=	1.36
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
 		p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Bundle::Image::Info::Everything.3 \
 		Bundle::Image::Info::PNG.3 \
