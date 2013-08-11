@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tie-Cache
-# Date created:				March 30th 2001
-# Whom:	      				Alex Kapranoff <kapr@crosswinds.net>
-#
-# $FreeBSD: ports/devel/p5-Tie-Cache/Makefile,v 1.10 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Alex Kapranoff <kapr@crosswinds.net>
+# $FreeBSD: devel/p5-Tie-Cache/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Tie-Cache
 PORTVERSION=	0.19
@@ -16,7 +12,8 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	LRU Cache in Memory through a tie interface
 
 INSTALL_TARGET=	pure_install
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Tie::Cache.3
 
