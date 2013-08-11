@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SGMLSpm
-# Date created:		4 May 2004
-# Whom:			Brian Candler <B.Candler@pobox.com>
-#
-# $FreeBSD: ports/textproc/p5-SGMLSpm/Makefile,v 1.9 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Brian Candler <B.Candler@pobox.com>
+# $FreeBSD: textproc/p5-SGMLSpm/Makefile 324190 2013-08-03 12:51:18Z mat $
 
 PORTNAME=	SGMLSpm
 PORTVERSION=	1.03
@@ -14,35 +10,38 @@ MASTER_SITE_SUBDIR=	SGMLS
 PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION}ii
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for postprocessing the output from sgmls and nsgmls
 
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
+USES=		shebangfix perl5
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
+
+SHEBANG_FILES=	sgmlspl.pl \
+		DOC/HTML/SGMLSpm/sample.pl \
+		DOC/HTML/SGMLSpm/example.html
 
 INSTALL_TARGET=	install BINDIR=${PREFIX}/bin \
 		PERL5DIR=${SITE_PERL} SPECDIR=${EXAMPLESDIR}
 
-.ifndef(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=       *
 INSTALL_TARGET+=docs install_html HTMLDIR=${DOCSDIR}
 .endif
-.ifdef(NOPORTEXAMPLES)
+
+.if ! ${PORT_OPTIONS:MEXAMPLES}
 EXTRA_PATCHES=	${PATCHDIR}/noportexamples-patch-Makefile
 .endif
 
 pre-su-install:
-.ifndef(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .endif
-.ifndef(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}
-.endif
-
-.ifndef(NOPORTDOCS)
-PORTDOCS=	*
-INSTALL_TARGET+=docs install_html HTMLDIR=${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
