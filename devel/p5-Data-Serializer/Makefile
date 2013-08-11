@@ -2,7 +2,7 @@
 # Date created:	   07 June 2002
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: devel/p5-Data-Serializer/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: devel/p5-Data-Serializer/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Data-Serializer
@@ -38,10 +38,4 @@ MAN3=		Data::Serializer.3 Data::Serializer::Bencode.3 \
 		Data::Serializer::XML::Simple.3 Data::Serializer::YAML.3 \
 		Data::Serializer::YAML::Syck.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
