@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-Accessor-Installer
-# Date created:		2012-02-09
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Class-Accessor-Installer/Makefile,v 1.2 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Class-Accessor-Installer/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Accessor-Installer
 PORTVERSION=	1.100880
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Sub-Name>=0:${PORTSDIR}/devel/p5-Sub-Name \
 		p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Accessor::Installer.3
 
