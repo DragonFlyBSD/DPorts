@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Locale-Maketext-Lexicon/Makefile 323287 2013-07-19 13:07:06Z culot $
+# $FreeBSD: devel/p5-Locale-Maketext-Lexicon/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Locale-Maketext-Lexicon
 PORTVERSION=	0.96
@@ -15,7 +15,8 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	p5-Locale-Maketext>=1.17:${PORTSDIR}/devel/p5-Locale-Maketext
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		xgettext.pl.1
 MAN3=		Locale::Maketext::Extract.3 \
