@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: textproc/p5-XML-Compile/Makefile 322125 2013-07-01 13:32:56Z culot $
+# $FreeBSD: textproc/p5-XML-Compile/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Compile
 PORTVERSION=	1.35
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0.095:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-XML-Compile-Tester>=0.90:${PORTSDIR}/devel/p5-XML-Compile-Tester
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		schema2example.1 \
 		xml2yaml.1
