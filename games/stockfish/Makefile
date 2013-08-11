@@ -1,5 +1,5 @@
 # Created by: Gautam Mani <execve@gmail.com>
-# $FreeBSD: games/stockfish/Makefile 319703 2013-06-02 18:00:04Z pawel $
+# $FreeBSD: games/stockfish/Makefile 322063 2013-06-29 21:39:34Z antoine $
 
 PORTNAME=	stockfish
 PORTVERSION=	3
@@ -27,8 +27,6 @@ PORTDATA=	Book.bin
 FETCH_ARGS=	-Fpr
 
 PLIST_FILES=	bin/stockfish
-PLIST_DIRSTRY=	share/data/${PORTNAME} \
-		share/docs/${PORTNAME}
 
 TGTBLD=		build
 MYCC=		gcc
