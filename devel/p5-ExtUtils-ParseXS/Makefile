@@ -2,7 +2,7 @@
 # Date created:				29 June 2003
 # Whom:                			Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-ExtUtils-ParseXS/Makefile,v 1.27 2013/02/06 16:38:36 svnexp Exp $
+# $FreeBSD: devel/p5-ExtUtils-ParseXS/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	ExtUtils-ParseXS
@@ -27,10 +27,6 @@ MAN3=		ExtUtils::ParseXS.3 \
 		ExtUtils::Typemaps::Type.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-ExtUtils-CBuilder>=0:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
