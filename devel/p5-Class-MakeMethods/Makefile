@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class::MakeMethods
-# Date created:				24 Jan 2002
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: devel/p5-Class-MakeMethods/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: devel/p5-Class-MakeMethods/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-MakeMethods
 PORTVERSION=	1.010
@@ -15,7 +11,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/.$//}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generate common types of methods
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::MakeMethods.3 \
 		Class::MakeMethods::Attribute.3 \
@@ -79,6 +76,6 @@ MAN3=		Class::MakeMethods.3 \
 
 post-extract:
 		@${RM} ${WRKSRC}/benchmark.pl
-		@${PERL} -pi -e '$$_="" if m|benchmark.pl|' ${WRKSRC}/MANIFEST
+		@${REINPLACE_CMD} -i '' '/benchmark.pl/d' ${WRKSRC}/MANIFEST
 
 .include <bsd.port.mk>
