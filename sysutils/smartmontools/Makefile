@@ -1,8 +1,8 @@
 # Created by: Eduard Martinescu
-# $FreeBSD: sysutils/smartmontools/Makefile 314695 2013-03-19 21:02:40Z pawel $
+# $FreeBSD: sysutils/smartmontools/Makefile 323770 2013-07-27 03:39:55Z vanilla $
 
 PORTNAME=	smartmontools
-PORTVERSION=	6.1
+PORTVERSION=	6.2
 CATEGORIES=	sysutils
 MASTER_SITES=	SF
 
