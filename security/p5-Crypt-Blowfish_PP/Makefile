@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Crypt-Blowfish_PP
-# Date created:				Sep 30, 2002
-# Whom:					Jim Geovedi <jim@corebsd.or.id>
-#
-# $FreeBSD: security/p5-Crypt-Blowfish_PP/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Jim Geovedi <jim@corebsd.or.id>
+# $FreeBSD: security/p5-Crypt-Blowfish_PP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Crypt-Blowfish_PP
 PORTVERSION=	1.12
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Blowfish encryption algorithm implemented purely in Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::Blowfish_PP.3
 
