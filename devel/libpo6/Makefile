@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/libpo6/Makefile 316153 2013-04-20 15:07:06Z pawel $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: devel/libpo6/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	libpo6
 PORTVERSION=	0.3.1
 CATEGORIES=	devel
 MASTER_SITES=	http://hyperdex.org/src/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	POSIX wrappers for C++
 
 LICENSE=	BSD
