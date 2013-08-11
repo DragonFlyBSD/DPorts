@@ -1,8 +1,8 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/rubygem-bin_utils/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: devel/rubygem-bin_utils/Makefile 324334 2013-08-07 08:36:50Z vg $
 
 PORTNAME=	bin_utils
-PORTVERSION=	0.0.3
+PORTVERSION=	0.0.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
