@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-PPI-HTML
-# Date created:				24 March 2005
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-PPI-HTML/Makefile,v 1.12 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: textproc/p5-PPI-HTML/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	PPI-HTML
 PORTVERSION=	1.08
@@ -20,11 +16,12 @@ BUILD_DEPENDS=	p5-PPI>=0.990:${PORTSDIR}/textproc/p5-PPI \
 		p5-Params-Util>=0.05:${PORTSDIR}/devel/p5-Params-Util
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	PPI::HTML.3
 
 post-patch:
-	@${PERL} -pi -e '$$_="" if m/Test::More/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' '/Test::More/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
