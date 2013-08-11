@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/misc/figlet/pkg-plist,v 1.9 2012/11/17 05:59:34 svnexp Exp $
+@comment $FreeBSD: misc/figlet/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/chkfont
 bin/figlet
 bin/figlist
