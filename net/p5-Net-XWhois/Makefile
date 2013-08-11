@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-XWhois
-# Date created:				11 June 2001
-# Whom:	      				Danny Howard <dannyman@tellme.com>
-#
-# $FreeBSD: ports/net/p5-Net-XWhois/Makefile,v 1.16 2012/11/17 06:00:12 svnexp Exp $
-#
+# Created by: Danny Howard <dannyman@tellme.com>
+# $FreeBSD: net/p5-Net-XWhois/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-XWhois
 PORTVERSION=	0.90
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Whois Client Interface for Perl5
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::XWhois.3
 
