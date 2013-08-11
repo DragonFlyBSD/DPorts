@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xkeyboard-config/Makefile 319910 2013-06-04 21:22:13Z zeising $
+# $FreeBSD: x11/xkeyboard-config/Makefile 324227 2013-08-04 12:53:54Z az $
 
 PORTNAME=	xkeyboard-config
 PORTVERSION=	2.9
@@ -16,8 +16,8 @@ XORG_CAT=	data
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	intlhack libxslt:build
-USES=		pathfix
-USE_PERL5_BUILD=yes
+USES=		pathfix perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
 
