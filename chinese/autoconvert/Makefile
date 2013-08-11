@@ -1,9 +1,5 @@
-# New ports collection makefile for:	autoconvert
-# Date created:		26 Oct 1999
-# Whom:			Yin-Jieh Chen <yinjieh@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/chinese/autoconvert/Makefile,v 1.28 2012/11/17 05:54:55 svnexp Exp $
-#
+# Created by: Yin-Jieh Chen <yinjieh@csie.nctu.edu.tw>
+# $FreeBSD: chinese/autoconvert/Makefile 324096 2013-08-01 06:46:31Z bapt $
 
 PORTNAME=	autoconvert
 PORTVERSION=	0.3.16
@@ -21,6 +17,7 @@ LICENSE_COMB=	dual
 OPTIONS_DEFINE=	DOCS
 
 MAKE_ENV=	CFLAG="${CPPFLAGS}" LIBS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC}
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
