@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Getopt-Declare
-# Date created:				16 Sep 2001
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Getopt-Declare/Makefile,v 1.10 2012/11/17 05:56:17 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Getopt-Declare/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Getopt-Declare
 PORTVERSION=	1.14
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Declaratively Expressed Command-Line Arguments via Regular Expressions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Getopt::Declare.3
 
