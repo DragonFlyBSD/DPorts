@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Compress-LZF
-# Date created:		2006-09-10
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/archivers/p5-Compress-LZF/Makefile,v 1.13 2012/11/17 05:54:22 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: archivers/p5-Compress-LZF/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Compress-LZF
 PORTVERSION=	3.43
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extremely lightweight Lempel-Ziv-Free compression
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Compress::LZF.3
 
