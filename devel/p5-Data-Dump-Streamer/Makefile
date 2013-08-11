@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Data-Dump-Streamer
-# Date created:	   23 March 2003
-# Whom:		   mat
-#
-# $FreeBSD: ports/devel/p5-Data-Dump-Streamer/Makefile,v 1.34 2012/12/17 15:02:09 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-Data-Dump-Streamer/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Dump-Streamer
 PORTVERSION=	2.34
@@ -21,7 +17,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS
 
 CONFIGURE_ARGS=	DDS
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		DDS.3 Data::Dump::Streamer.3
 
