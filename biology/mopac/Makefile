@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mopac
-# Date created:				1997-04-23
-# Whom:					Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-#
-# $FreeBSD: biology/mopac/Makefile 316832 2013-04-29 17:30:09Z delphij $
-#
+# Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
+# $FreeBSD: biology/mopac/Makefile 321303 2013-06-19 18:38:46Z bsam $
 
 PORTNAME=	mopac
 PORTVERSION=	7.${MOPAC_SUBVERSION}
@@ -30,6 +26,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MOPAC_SUBVERSION=	1.11
 
+PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	EXAMPLES
+
 post-patch:
 	@${REINPLACE_CMD} -e '/pkgconfig/s|$$(libdir)|$$(prefix)/libdata|g' \
 		${WRKSRC}/Makefile.am
@@ -37,10 +37,12 @@ post-patch:
 		-e 's|./src/mopac7|${PREFIX}/libexec/mopac7|g' \
 		${WRKSRC}/run_${PORTNAME}7
 
+.include <bsd.port.options.mk>
+
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/run_${PORTNAME}7 ${PREFIX}/bin/${PORTNAME}7
 	${INSTALL_PROGRAM} ${WRKSRC}/src/.libs/${PORTNAME}7 ${PREFIX}/libexec/${PORTNAME}7
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}/test
 	${INSTALL_DATA} ${WRKSRC}/tests/*.dat ${EXAMPLESDIR}/test
 .endif
