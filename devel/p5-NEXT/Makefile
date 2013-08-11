@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-NEXT
-# Date created:				3 october 2003
-# Whom:					mat
-#
-# $FreeBSD: ports/devel/p5-NEXT/Makefile,v 1.9 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-NEXT/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	NEXT
 PORTVERSION=	0.65
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Provide a pseudo-class NEXT (et al) that allows method redispatch
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		NEXT.3
 
