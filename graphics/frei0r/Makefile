@@ -44,7 +44,7 @@ FREI0R_PLUGINS=	rgbparade scale0tilt vectorscope
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	APIDOC
-OPTIONS_DEFINE_amd64=	MMX
+OPTIONS_DEFINE_x86_64=	MMX
 APIDOC_DESC=	Install full documentation (requires doxygen)
 MMX_DESC=	MMX CPU instructions
 
