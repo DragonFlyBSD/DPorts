@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Unicode-Normalize/Makefile,v 1.20 2012/11/18 04:53:40 svnexp Exp $
+# $FreeBSD: textproc/p5-Unicode-Normalize/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Unicode-Normalize
 PORTVERSION=	1.16
@@ -14,7 +14,8 @@ COMMENT=	Unicode Normalization Forms
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Unicode::Normalize.3
 
