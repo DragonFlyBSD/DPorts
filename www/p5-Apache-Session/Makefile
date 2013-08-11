@@ -1,5 +1,5 @@
 # Created by: Frank Mayhar <frank@exit.com>
-# $FreeBSD: www/p5-Apache-Session/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Apache-Session/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Apache-Session
 PORTVERSION=	1.90
@@ -10,15 +10,14 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Persistence framework for session data
 
-MAKE_JOBS_SAFE=	yes
-
 BUILD_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS+=	p5-Test-Deep>=0.082:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Exception>=0.15:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Database>=0:${PORTSDIR}/databases/p5-Test-Database
 
-PERL_MODBUILD=  yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Apache::Session.3 \
 		Apache::Session::DB_File.3 \
