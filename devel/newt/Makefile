@@ -1,8 +1,7 @@
-# $FreeBSD: devel/newt/Makefile 317805 2013-05-10 14:29:29Z miwi $
+# $FreeBSD: devel/newt/Makefile 324395 2013-08-08 12:48:53Z bdrewery $
 
 PORTNAME=	newt
-PORTVERSION=	0.52.15
-PORTREVISION=	1
+PORTVERSION=	0.52.16
 CATEGORIES=	devel
 MASTER_SITES=	https://fedorahosted.org/releases/n/e/newt/
 
