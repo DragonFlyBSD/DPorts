@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Kwiki
-# Date created:				Sat Jul 17 16:00:09 CST 2004
-# Whom:	      				Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/www/p5-Kwiki/Makefile,v 1.12 2012/11/17 06:02:51 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: www/p5-Kwiki/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Kwiki
 PORTVERSION=	0.39
