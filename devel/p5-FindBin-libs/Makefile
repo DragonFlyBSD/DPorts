@@ -1,17 +1,12 @@
-# New ports collection makefile for:	FindBin::libs
-# Date created:		20 Jan 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-FindBin-libs/Makefile,v 1.11 2012/11/17 05:56:17 svnexp Exp $
-#
+# $FreeBSD: devel/p5-FindBin-libs/Makefile 324502 2013-08-10 13:20:30Z kuriyama $
 
 PORTNAME=	FindBin-libs
-PORTVERSION=	1.6400
+PORTVERSION=	1.8000
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:LEMBARK
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-${PORTVERSION:C/00$//}
+DISTNAME=	${PORTNAME}-${PORTVERSION:C/000$//}
 
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to locate and use lib directories
