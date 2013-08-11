@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: ports/x11-clocks/asclock/Makefile,v 1.27 2013/01/26 15:02:46 svnexp Exp $
+# $FreeBSD: x11-clocks/asclock/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	asclock
 PORTVERSION=	1.0
@@ -17,8 +17,8 @@ CONFLICTS=	asclock-gtk-[0-9]* asclock-xlib-[0-9]*
 
 # clang's cpp destroys whitespace, particularly hard tabs in makefiles,
 # which is fatal for imake.
+USES=		imake
 USE_GCC=	any
-USE_IMAKE=	yes
 USE_XORG=	xpm xext x11
 MAN1=		asclock.1
 PLIST_FILES=	bin/asclock
