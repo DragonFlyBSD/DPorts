@@ -1,5 +1,5 @@
 # Created by: Alexander Timoshenko <gonzo@univ.kiev.ua>
-# $FreeBSD: misc/p5-Asterisk/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: misc/p5-Asterisk/Makefile 324054 2013-07-31 14:36:21Z az $
 
 PORTNAME=	Asterisk
 PORTVERSION=	1.03
@@ -12,7 +12,8 @@ DISTNAME=	asterisk-perl-${PORTVERSION}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Asterisk perl library
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/asterisk-perl-${PORTVERSION}
 
 MAN3=		Asterisk::AGI.3 \
