@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: audio/vo-aacenc/Makefile 318438 2013-05-18 18:14:39Z bapt $
+# $FreeBSD: audio/vo-aacenc/Makefile 323861 2013-07-28 22:48:07Z mm $
 
 PORTNAME=	vo-aacenc
-PORTVERSION=	0.1.2
+PORTVERSION=	0.1.3
 CATEGORIES=	audio
 MASTER_SITES=	SF/opencore-amr/${PORTNAME}
 
