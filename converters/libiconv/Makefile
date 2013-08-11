@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: converters/libiconv/Makefile 316695 2013-04-27 22:09:15Z bapt $
+# $FreeBSD: converters/libiconv/Makefile 322405 2013-07-06 17:45:15Z kwm $
 
 PORTNAME=	libiconv
 PORTVERSION=	1.14
@@ -10,7 +10,6 @@ MASTER_SITES=	GNU
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A character set conversion library
 
-USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 LIBTOOLFILES=	configure libcharset/configure preload/configure
 CONFIGURE_ARGS=	--enable-static \
@@ -49,6 +48,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's:gawk:awk:g' ${WRKSRC}/configure \
 		${WRKSRC}/libcharset/configure \
 		${WRKSRC}/preload/configure
-
 
 .include <bsd.port.mk>
