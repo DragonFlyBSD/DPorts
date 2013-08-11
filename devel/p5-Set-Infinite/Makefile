@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: ports/devel/p5-Set-Infinite/Makefile,v 1.23 2013/02/05 18:52:49 svnexp Exp $
+# $FreeBSD: devel/p5-Set-Infinite/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Set-Infinite
 PORTVERSION=	0.65
@@ -12,7 +12,8 @@ COMMENT=	Set::Infinite - Sets of intervals
 
 OPTIONS_DEFINE=	DOCS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Set::Infinite.3 Set::Infinite::Arithmetic.3 Set::Infinite::Basic.3
 PORTDOCS=	Changes README TODO
