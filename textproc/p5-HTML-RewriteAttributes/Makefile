@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/textproc/p5-HTML-RewriteAttributes/Makefile,v 1.7 2012/12/26 13:58:44 svnexp Exp $
+# $FreeBSD: textproc/p5-HTML-RewriteAttributes/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-RewriteAttributes
 PORTVERSION=	0.05
@@ -15,13 +15,12 @@ BUILD_DEPENDS=	p5-HTML-Parser>0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-URI>0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAKE_JOBS_SAFE=  yes
-
 MAN3=	HTML::RewriteAttributes::Resources.3 \
   		HTML::RewriteAttributes::Links.3 \
 		HTML::RewriteAttributes.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 PLIST_FILES=	%%SITE_PERL%%/HTML/RewriteAttributes.pm \
 			%%SITE_PERL%%/HTML/RewriteAttributes/Resources.pm \
