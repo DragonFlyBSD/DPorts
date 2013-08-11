@@ -1,8 +1,8 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Devel-CheckLib/Makefile 315862 2013-04-16 17:28:53Z culot $
+# $FreeBSD: devel/p5-Devel-CheckLib/Makefile 323868 2013-07-29 07:26:18Z culot $
 
 PORTNAME=	Devel-CheckLib
-PORTVERSION=	0.99
+PORTVERSION=	1.01
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
