@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fonts/p5-Font-TTF/Makefile,v 1.21 2013/02/14 10:50:56 svnexp Exp $
+# $FreeBSD: x11-fonts/p5-Font-TTF/Makefile 324166 2013-08-02 16:55:05Z az $
 
 PORTNAME=	Font-TTF
 PORTVERSION=	1.02
@@ -14,7 +14,8 @@ LICENSE=	ART20
 BUILD_DEPENDS=	p5-IO-String>0:${PORTSDIR}/devel/p5-IO-String
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	\
 	Font::TTF.3 \
