@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Lexical-Var
-# Date created:		2012-02-24
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Lexical-Var/Makefile,v 1.7 2012/12/17 13:43:44 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Lexical-Var/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Lexical-Var
 PORTVERSION=	0.007
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for static variables without namespace pollution
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Lexical::Sub.3 Lexical::Var.3
 
