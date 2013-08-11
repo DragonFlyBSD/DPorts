@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: math/p5-Math-GMP/Makefile 314566 2013-03-18 14:40:29Z sunpoet $
+# $FreeBSD: math/p5-Math-GMP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-GMP
 PORTVERSION=	2.06
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp
 
 CONFIGURE_ARGS=	INC=-I${LOCALBASE}/include LIBS="-L${LOCALBASE}/lib -lgmp"
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::GMP.3
 
