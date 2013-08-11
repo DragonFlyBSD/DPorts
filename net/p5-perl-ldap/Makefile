@@ -1,5 +1,5 @@
 # Created by: scrappy@freebsd.org
-# $FreeBSD: net/p5-perl-ldap/Makefile 320459 2013-06-10 10:59:04Z tobez $
+# $FreeBSD: net/p5-perl-ldap/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	perl-ldap
 PORTVERSION=	0.5600
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Authen-SASL>=2.00:${PORTSDIR}/security/p5-Authen-SASL \
 		p5-XML-SAX-Writer>0:${PORTSDIR}/textproc/p5-XML-SAX-Writer
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Bundle::Net::LDAP.3 \
 		LWP::Protocol::ldap.3 \
