@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/libao/files/patch-doc_Makefile.in,v 1.4 2012/11/17 05:54:36 svnexp Exp $
+$FreeBSD: audio/libao/files/patch-doc_Makefile.in 300895 2012-07-14 12:56:14Z beat $
 
 --- doc/Makefile.in.orig
 +++ doc/Makefile.in

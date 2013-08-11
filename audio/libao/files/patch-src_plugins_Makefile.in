@@ -1,4 +1,4 @@
-$FreeBSD: ports/audio/libao/files/patch-src_plugins_Makefile.in,v 1.2 2012/11/17 05:54:36 svnexp Exp $
+$FreeBSD: audio/libao/files/patch-src_plugins_Makefile.in 300895 2012-07-14 12:56:14Z beat $
 --- src/plugins/Makefile.in.orig	2010-06-05 15:49:54.000000000 +0200
 +++ src/plugins/Makefile.in	2010-06-05 15:50:28.000000000 +0200
 @@ -295,7 +295,7 @@ $(RECURSIVE_TARGETS):

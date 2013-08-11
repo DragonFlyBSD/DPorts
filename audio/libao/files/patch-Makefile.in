@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/libao/files/patch-Makefile.in,v 1.5 2012/11/17 05:54:35 svnexp Exp $
+$FreeBSD: audio/libao/files/patch-Makefile.in 300895 2012-07-14 12:56:14Z beat $
 
 --- Makefile.in.orig	2007-07-14 18:06:32.000000000 -0400
 +++ Makefile.in	2007-07-14 18:06:52.000000000 -0400

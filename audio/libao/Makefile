@@ -2,7 +2,7 @@
 # Date created:				18 October 2000
 # Whom:					t.vanklaveren@student.utwente.nl
 #
-# $FreeBSD: ports/audio/libao/Makefile,v 1.50 2012/11/17 05:54:35 svnexp Exp $
+# $FreeBSD: audio/libao/Makefile 324122 2013-08-01 20:22:27Z naddy $
 #
 
 PORTNAME=	libao
@@ -19,11 +19,11 @@ WANT_GNOME=	yes
 USE_GNOME=	gnomehack pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
+CONFIGURE_ARGS=	--disable-arts
 
 MAN5=		libao.conf.5
 
-OPTIONS_DEFINE=	DOCS ARTS ESOUND NAS PULSEAUDIO
+OPTIONS_DEFINE=	DOCS ESOUND NAS PULSEAUDIO
 
 .include <bsd.port.options.mk>
 
@@ -31,14 +31,6 @@ OPTIONS_DEFINE=	DOCS ARTS ESOUND NAS PULSEAUDIO
 MAKE_ENV=	DOC=doc
 .else
 MAKE_ENV=	DOC=""
-.endif
-
-.if ${PORT_OPTIONS:MARTS}
-LIB_DEPENDS+=	artsc.0:${PORTSDIR}/audio/arts
-PLIST_SUB+=	ARTS=""
-.else
-CONFIGURE_ARGS+=--disable-arts
-PLIST_SUB+=	ARTS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MESOUND}

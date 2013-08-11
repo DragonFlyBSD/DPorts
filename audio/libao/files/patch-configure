@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/libao/files/patch-configure,v 1.10 2012/11/17 05:54:36 svnexp Exp $
+$FreeBSD: audio/libao/files/patch-configure 300895 2012-07-14 12:56:14Z beat $
 
 --- configure.orig	2011-06-08 21:32:18.000000000 +0200
 +++ configure	2011-06-08 21:32:18.000000000 +0200
