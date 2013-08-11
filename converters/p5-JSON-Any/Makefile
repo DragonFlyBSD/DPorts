@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: converters/p5-JSON-Any/Makefile 321946 2013-06-28 04:31:57Z clsung $
+# $FreeBSD: converters/p5-JSON-Any/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	JSON-Any
 PORTVERSION=	1.30
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-JSON>=2.02:${PORTSDIR}/converters/p5-JSON
 RUN_DEPENDS=	p5-JSON>=2.02:${PORTSDIR}/converters/p5-JSON
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		JSON::Any.3
 
