@@ -2,7 +2,7 @@
 # Date created:				24 March 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-ClassAPI/Makefile,v 1.7 2012/11/17 05:56:31 svnexp Exp $
+# $FreeBSD: devel/p5-Test-ClassAPI/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-ClassAPI
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-Class-Inspector>=1.12:${PORTSDIR}/devel/p5-Class-Inspector \
 		p5-Params-Util>=1.00:${PORTSDIR}/devel/p5-Params-Util
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::ClassAPI.3
 
