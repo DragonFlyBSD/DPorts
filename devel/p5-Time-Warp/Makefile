@@ -2,7 +2,7 @@
 # Date created:				28 April 2009
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Time-Warp/Makefile,v 1.2 2012/11/17 05:56:35 svnexp Exp $
+# $FreeBSD: devel/p5-Time-Warp/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Time-Warp
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Control over the flow of time
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Time::Warp.3
 
