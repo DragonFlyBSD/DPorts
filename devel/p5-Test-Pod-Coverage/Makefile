@@ -2,7 +2,7 @@
 # Date created:				20 november 2004
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-Pod-Coverage/Makefile,v 1.9 2012/11/17 05:56:33 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Pod-Coverage/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-Pod-Coverage
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Pod-Coverage>0:${PORTSDIR}/devel/p5-Pod-Coverage \
 		p5-Test-Simple>0:${PORTSDIR}/devel/p5-Test-Simple
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Pod::Coverage.3
 
