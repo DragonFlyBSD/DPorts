@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: textproc/p5-podlators/Makefile 313141 2013-03-01 07:49:51Z culot $
+# $FreeBSD: textproc/p5-podlators/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	podlators
 PORTVERSION=	2.5.1
@@ -14,7 +14,8 @@ COMMENT=	Modules to convert and parse POD (Plain Old Documentation)
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Pod::Man.3 Pod::ParseLink.3 Pod::Text.3 Pod::Text::Color.3 \
 		Pod::Text::Overstrike.3 Pod::Text::Termcap.3
