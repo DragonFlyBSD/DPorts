@@ -2,7 +2,7 @@
 # Date created:				Nov 23 2003
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/devel/p5-Class-Base/Makefile,v 1.8 2012/11/17 05:56:06 svnexp Exp $
+# $FreeBSD: devel/p5-Class-Base/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Class-Base
 PORTVERSION=	0.05
@@ -13,7 +13,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Useful base class for deriving other modules
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Base.3
 
