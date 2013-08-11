@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-File-pushd/Makefile 315221 2013-03-25 13:47:31Z tobez $
+# $FreeBSD: devel/p5-File-pushd/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	File-pushd
 PORTVERSION=	1.005
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	File::pushd - temporary chdir for a limited scope
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	File::pushd.3
 
