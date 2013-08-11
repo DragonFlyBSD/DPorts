@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	Text::Quote
-# Date created:			Jul 29, 2006
-# Whom:	      			ijliao
-#
-# $FreeBSD: ports/textproc/p5-Text-Quote/Makefile,v 1.9 2012/12/17 06:36:02 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/p5-Text-Quote/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Quote
 PORTVERSION=	0.3
@@ -19,7 +16,8 @@ COMMENT=	Quotes strings as required for perl to eval them back correctly
 RUN_DEPENDS=	p5-Carp-Assert>=0.13:${PORTSDIR}/devel/p5-Carp-Assert
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Quote.3
 
