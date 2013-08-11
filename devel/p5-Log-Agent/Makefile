@@ -1,5 +1,5 @@
 # Created by: Jesse McConnell <jesse@gallup.com>
-# $FreeBSD: devel/p5-Log-Agent/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Log-Agent/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Log-Agent
 PORTVERSION=	0.307
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Set of perl modules that allows you to enhance logging capabilities
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Log::Agent.3 \
 		Log::Agent::Channel.3 \
