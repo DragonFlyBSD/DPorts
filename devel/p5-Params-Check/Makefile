@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Params-Check/Makefile 321724 2013-06-25 07:23:07Z culot $
+# $FreeBSD: devel/p5-Params-Check/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Params-Check
 PORTVERSION=	0.38
@@ -13,7 +13,8 @@ COMMENT=	Generic input parsing/checking mechanism for Perl
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Params::Check.3
 PORTDOCS=	CHANGES
