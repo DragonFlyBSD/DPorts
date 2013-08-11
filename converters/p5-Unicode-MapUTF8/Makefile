@@ -2,7 +2,7 @@
 # Date created:				28 February 2002
 # Whom:					Ryan T. Dean <rtdean@cytherianage.net>
 #
-# $FreeBSD: ports/converters/p5-Unicode-MapUTF8/Makefile,v 1.12 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/p5-Unicode-MapUTF8/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Unicode-MapUTF8
 PORTVERSION=	1.11
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Unicode-Map>=0:${PORTSDIR}/converters/p5-Unicode-Map \
 		ja-p5-Jcode>=0:${PORTSDIR}/japanese/p5-Jcode
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Unicode::MapUTF8.3
 
