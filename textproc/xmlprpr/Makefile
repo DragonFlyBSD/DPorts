@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul+ports@it.ca>
-# $FreeBSD: textproc/xmlprpr/Makefile 317595 2013-05-07 09:39:35Z ehaupt $
+# $FreeBSD: textproc/xmlprpr/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	xmlprpr
 PORTVERSION=	1.32
@@ -12,8 +12,7 @@ DISTFILES=	xmlpp.pl
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An XML pretty printer
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
