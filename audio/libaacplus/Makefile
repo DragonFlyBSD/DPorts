@@ -1,5 +1,5 @@
 # Created by: takefu <takefu@airport.fm>
-# $FreeBSD: ports/audio/libaacplus/Makefile,v 1.15 2012/11/30 03:12:15 svnexp Exp $
+# $FreeBSD: audio/libaacplus/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	libaacplus
 PORTVERSION=	2.0.2
@@ -27,7 +27,7 @@ GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
 AUTOMAKE_ARGS=	--add-missing
-ACLOCAL_ARGS=	--acdir=${ACLOCAL_DIR} \
+ACLOCAL_ARGS=	--automake-acdir=${ACLOCAL_DIR} \
 		-I ${LOCALBASE}/share/aclocal -I ${WRKSRC}/m4
 LIBTOOLIZE_ARGS=--automake
 
