@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Exporter/Makefile 321028 2013-06-16 08:48:15Z culot $
+# $FreeBSD: devel/p5-Sub-Exporter/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Sub-Exporter
 PORTVERSION=	0.986
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Data-OptList>=0.100:${PORTSDIR}/devel/p5-Data-OptList \
 		p5-Sub-Install>=0.920:${PORTSDIR}/devel/p5-Sub-Install
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sub::Exporter.3 \
 		Sub::Exporter::Cookbook.3 \
