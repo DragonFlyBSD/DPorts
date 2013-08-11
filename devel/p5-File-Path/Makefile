@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: ports/devel/p5-File-Path/Makefile,v 1.7 2013/01/18 09:47:34 svnexp Exp $
+# $FreeBSD: devel/p5-File-Path/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-Path
 PORTVERSION=	2.09
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Create or remove directory trees
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Path.3
 
