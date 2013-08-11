@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Test-use-ok/Makefile,v 1.8 2012/12/31 16:49:50 svnexp Exp $
+# $FreeBSD: devel/p5-Test-use-ok/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-use-ok
 PORTVERSION=	0.11
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Alternative to Test::More::use_ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::use::ok.3 ok.3
 
