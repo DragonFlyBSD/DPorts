@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/japanese/Wnn6-lib/pkg-plist,v 1.11 2012/11/17 05:58:31 svnexp Exp $
+@comment $FreeBSD: japanese/Wnn6-lib/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 include/wnn6/wnn/commonhd.h
 include/wnn6/wnn/config.h
 include/wnn6/wnn/copyright.h
