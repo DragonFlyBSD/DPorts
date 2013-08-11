@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Carp-Assert-More/Makefile,v 1.11 2012/11/18 01:01:22 svnexp Exp $
+# $FreeBSD: devel/p5-Carp-Assert-More/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Carp-Assert-More
 PORTVERSION=	1.14
@@ -18,6 +18,7 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
 MAN3=	Carp::Assert::More.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
