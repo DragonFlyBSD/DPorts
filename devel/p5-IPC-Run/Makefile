@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-IPC-Run/Makefile,v 1.20 2012/11/17 05:56:19 svnexp Exp $
+# $FreeBSD: devel/p5-IPC-Run/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IPC-Run
 PORTVERSION=	0.92
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-IO-Tty>=1.08:${PORTSDIR}/devel/p5-IO-Tty
 RUN_DEPENDS=	p5-IO-Tty>=1.08:${PORTSDIR}/devel/p5-IO-Tty
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IPC::Run.3 \
 		IPC::Run::Debug.3 \
