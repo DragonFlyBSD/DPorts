@@ -1,5 +1,5 @@
 # Created by: Nicolas Jombart <Nicolas.Jombart@hsc-labs.com>
-# $FreeBSD: devel/p5-Parallel-ForkManager/Makefile 313514 2013-03-06 13:29:04Z tobez $
+# $FreeBSD: devel/p5-Parallel-ForkManager/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Parallel-ForkManager
 PORTVERSION=	1.03
@@ -13,7 +13,8 @@ COMMENT=	Simple parallel processing fork manager
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Parallel::ForkManager.3
 
