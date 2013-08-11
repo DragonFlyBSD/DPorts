@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: ports/dns/p5-Net-DNS-SEC/Makefile,v 1.29 2013/01/30 18:15:06 svnexp Exp $
+# $FreeBSD: dns/p5-Net-DNS-SEC/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-DNS-SEC
 PORTVERSION=	0.16
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Crypt-OpenSSL-Bignum>=0.03:${PORTSDIR}/security/p5-Crypt-OpenS
 		p5-Net-DNS>=0.64:${PORTSDIR}/dns/p5-Net-DNS
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::DNS::Keyset.3 Net::DNS::RR::DS.3 Net::DNS::RR::KEY.3 \
 		Net::DNS::RR::NXT.3 Net::DNS::RR::SIG.3 \
