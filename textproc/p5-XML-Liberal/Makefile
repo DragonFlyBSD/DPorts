@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/textproc/p5-XML-Liberal/Makefile,v 1.17 2013/01/26 16:48:35 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-Liberal/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Liberal
 PORTVERSION=	0.30
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-XML-LibXML>=1.58:${PORTSDIR}/textproc/p5-XML-LibXML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Liberal.3 XML::Liberal::Error.3
 
