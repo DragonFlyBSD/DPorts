@@ -1,9 +1,5 @@
-# New ports collection makefile for:	namespace-autoclean
-# Date created:	   13 May 2009
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-namespace-autoclean/Makefile,v 1.13 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-namespace-autoclean/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	namespace-autoclean
 PORTVERSION=	0.13
@@ -22,7 +18,8 @@ RUN_DEPENDS=	p5-B-Hooks-EndOfScope>=0:${PORTSDIR}/devel/p5-B-Hooks-EndOfScope \
 		p5-Moose>=2:${PORTSDIR}/devel/p5-Moose \
 		p5-namespace-clean>=0.20:${PORTSDIR}/devel/p5-namespace-clean
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		namespace::autoclean.3
 
