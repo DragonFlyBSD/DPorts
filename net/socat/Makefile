@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/socat/Makefile 323029 2013-07-15 12:56:17Z ehaupt $
+# $FreeBSD: net/socat/Makefile 324242 2013-08-04 15:57:40Z ehaupt $
 
 PORTNAME=	socat
 PORTVERSION=	1.7.2.2
@@ -17,7 +17,6 @@ GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_RC_SUBR=	socat
 USE_OPENSSL=	yes
-MAKE_JOBS_SAFE=	yes
 
 PORTSCOUT=	skipv:2.0.0-b2
 
@@ -34,11 +33,9 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000024
-CCISCLANG!=	${CC} --version | ${HEAD} -1 | ${GREP} 'clang'
-.endif
+CCISCLANG!=	${CC} --version
 
-.if ${CC} == clang || defined(CCISCLANG)
+.if !empty(CCISCLANG:M*clang*)
 CFLAGS+=	-Wno-unused-comparison
 .endif
 
