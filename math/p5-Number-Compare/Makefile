@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Number-Compare
-# Date created:	   19 May 2003
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/math/p5-Number-Compare/Makefile,v 1.5 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: math/p5-Number-Compare/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Number-Compare
 PORTVERSION=	0.03
@@ -17,7 +13,8 @@ COMMENT=	Numeric comparisons
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Number::Compare.3
 
