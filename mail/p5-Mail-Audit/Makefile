@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Mail-Audit
-# Date created:				Wed Jan  3 12:31:10 2001
-# Whom:					will
-#
-# $FreeBSD: ports/mail/p5-Mail-Audit/Makefile,v 1.40 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: mail/p5-Mail-Audit/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-Audit
 PORTVERSION=	2.2.27
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-File-HomeDir>=0.61:${PORTSDIR}/devel/p5-File-HomeDir \
 		p5-Mail-Tools>=0:${PORTSDIR}/mail/p5-Mail-Tools
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Audit.3 \
 		Mail::Audit::KillDups.3 \
@@ -37,7 +34,8 @@ PORTDOCS=	Changes FAQ README
 PORTEXAMPLES=	popread proc2ma
 
 post-patch:
-	@${PERL} -pi -e 's,/var/spool/mail,/var/mail,g' ${WRKSRC}/lib/Mail/Audit.pm
+	@${REINPLACE_CMD} -i '' -e 's|/var/spool/mail|/var/mail|g' \
+		${WRKSRC}/lib/Mail/Audit.pm
 
 post-install:
 .if !defined(NOPORTDOCS)
