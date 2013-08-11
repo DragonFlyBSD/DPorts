@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: ports/audio/libmad/Makefile,v 1.19 2012/11/17 05:54:36 svnexp Exp $
+# $FreeBSD: audio/libmad/Makefile 320976 2013-06-14 22:41:54Z bapt $
 
 PORTNAME=	libmad
 PORTVERSION=	0.15.1b
@@ -12,17 +12,17 @@ MASTER_SITES=	SF/mad/${PORTNAME}/${PORTVERSION} \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Libmad library (part of MAD project)
 
+OPTIONS_DEFINE=	SPEED
+SPEED_DESC=	Optimize for speed over accuracy
+
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USE_GNOME=	pkgconfig
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-debugging \
 		--enable-sso
-.if defined(WITH_SPEED)
-CONFIGURE_ARGS+=	--enable-speed
-.else
-CONFIGURE_ARGS+=	--enable-accuracy
-.endif
+
+SPEED_CONFIGURE_ON=	--enable-speed
+SPEED_CONFIGURE_OFF=	--enable-accuracy
 
 post-patch:
 	@${SED} -e 's|%PREFIX%|${PREFIX}|g ; s|%VERSION%|${PORTVERSION}|g' \
