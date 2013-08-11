@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Shell-Command
-# Date created:		2012-02-10
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/p5-Shell-Command/Makefile,v 1.2 2012/11/17 06:01:40 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: sysutils/p5-Shell-Command/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Shell-Command
 PORTVERSION=	0.06
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Cross-platform functions emulating common shell commands
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Shell::Command.3
 
