@@ -2,7 +2,7 @@
 # Date created:		24 Dec 2007
 # Whom:			Diane Bruce <db@db.net>
 #
-# $FreeBSD: ports/comms/unixcw/Makefile,v 1.8 2012/11/17 05:55:02 svnexp Exp $
+# $FreeBSD: comms/unixcw/Makefile 323749 2013-07-26 19:21:10Z rene $
 #
 
 PORTNAME=	unixcw
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--includedir="${LOCALBASE}/include" \
 MAN1=		cw.1 cwgen.1 cwcp.1
 MAN3=		cwlib.3
 .if defined(WITH_XCWCP)
+BROKEN=		Depends on QT3 which is removed, update is in progress
 MAN1+=		xcwcp.1
 USE_QT_VER=	3
 CONFIGURE_ARGS+=	QTLIB=qt-mt
