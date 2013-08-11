@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-C3/Makefile 322476 2013-07-08 02:01:52Z clsung $
+# $FreeBSD: devel/p5-Class-C3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-C3
 PORTVERSION=	0.25
@@ -13,7 +13,8 @@ COMMENT=	Pragma to use the C3 method resolution order algorithm
 OPTIONS_DEFINE=	XS
 XS_DESC=	XS speed optimizations
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::C3.3 \
 		Class::C3::next.3
