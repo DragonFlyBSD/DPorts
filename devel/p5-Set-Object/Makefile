@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Set-Object/Makefile 318143 2013-05-14 08:38:47Z tobez $
+# $FreeBSD: devel/p5-Set-Object/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Set-Object
 PORTVERSION=	1.31
@@ -12,7 +12,8 @@ COMMENT=	Perl module to manage sets of objects
 
 LICENSE=	ART10
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Set::Changes.3 Set::Object.3 Set::Object::Weak.3
 
