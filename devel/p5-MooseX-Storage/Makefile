@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-MooseX-Storage/Makefile 321948 2013-06-28 04:35:42Z clsung $
+# $FreeBSD: devel/p5-MooseX-Storage/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-Storage
 PORTVERSION=	0.34
@@ -23,7 +23,8 @@ TEST_DEPENDS=	p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA \
 		p5-Test-Without-Module>=0:${PORTSDIR}/devel/p5-Test-Without-Module \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Storage.3 \
 		MooseX::Storage::Base::WithChecksum.3 \
