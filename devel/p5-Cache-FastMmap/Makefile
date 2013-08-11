@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Cache-FastMmap
-# Date created:	   25 January 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Cache-FastMmap/Makefile,v 1.23 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Cache-FastMmap/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Cache-FastMmap
 PORTVERSION=	1.40
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Uses an mmap'ed file to act as a shared memory interprocess cache
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Cache::FastMmap.3
 
