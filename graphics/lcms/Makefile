@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: ports/graphics/lcms/Makefile,v 1.43 2012/11/17 05:58:11 svnexp Exp $
+# $FreeBSD: graphics/lcms/Makefile 324356 2013-08-07 16:06:21Z sunpoet $
 
 PORTNAME=	lcms
 PORTVERSION=	1.19
@@ -36,7 +36,7 @@ PLIST_SUB+=	JPEGICC="@comment "
 
 .if ${PORT_OPTIONS:MTIFFICC}
 LIB_DEPENDS+=	tiff:${PORTSDIR}/graphics/tiff
-CONFIGURE_ARGS=	--with-tiff=${LOCALBASE}
+CONFIGURE_ARGS+=--with-tiff=${LOCALBASE}
 MAN1+=		tifficc.1
 PLIST_SUB+=	TIFFICC=""
 .else
