@@ -2,7 +2,7 @@
 # Date created:				23 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-Expect/Makefile,v 1.9 2012/11/17 05:56:32 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Expect/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Test-Expect
@@ -20,6 +20,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Test::Expect.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
