@@ -1,9 +1,9 @@
 # Created by: Neil Blakey-Milner
-# $FreeBSD: mail/vpopmail/Makefile 322331 2013-07-05 14:32:27Z bdrewery $
+# $FreeBSD: mail/vpopmail/Makefile 323537 2013-07-23 16:01:03Z bdrewery $
 
 PORTNAME=	vpopmail
 PORTVERSION=	5.4.32
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-stable/${PORTVERSION} \
 		SF/${PORTNAME}/${PORTNAME}-devel/${PORTVERSION}
