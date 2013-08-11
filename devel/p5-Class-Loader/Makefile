@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class::Loader
-# Date created:		5 Jul 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Class-Loader/Makefile,v 1.8 2012/11/17 05:56:07 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Class-Loader/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Loader
 PORTVERSION=	2.03
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Load modules and create objects on demand
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Loader.3
 
