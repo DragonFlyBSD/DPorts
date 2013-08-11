@@ -2,7 +2,7 @@
 # Date created:			Mar 17, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/mpg321/Makefile,v 1.39 2012/11/17 05:54:39 svnexp Exp $
+# $FreeBSD: audio/mpg321/Makefile 324122 2013-08-01 20:22:27Z naddy $
 #
 
 PORTNAME=	mpg321
@@ -33,7 +33,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-mpg123-symlink
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		mpg321.1
 

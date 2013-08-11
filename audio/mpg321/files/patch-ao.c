@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/mpg321/files/patch-ao.c,v 1.2 2012/11/17 05:54:39 svnexp Exp $
+$FreeBSD: audio/mpg321/files/patch-ao.c 300895 2012-07-14 12:56:14Z beat $
 
 --- ao.c.orig
 +++ ao.c
