@@ -2,7 +2,7 @@
 # Date created:				Jul 27 2004
 # Whom:					Florent Thoumie <flz@xbsd.org>
 #
-# $FreeBSD: ports/security/p5-Crypt-SmbHash/Makefile,v 1.6 2012/11/17 06:01:11 svnexp Exp $
+# $FreeBSD: security/p5-Crypt-SmbHash/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Crypt-SmbHash
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module implementing lanman and nt md4 hash functions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::SmbHash.3
 
