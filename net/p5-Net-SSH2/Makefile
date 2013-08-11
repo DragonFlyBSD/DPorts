@@ -1,8 +1,8 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-SSH2/Makefile 320743 2013-06-13 09:01:24Z jadawin $
+# $FreeBSD: net/p5-Net-SSH2/Makefile 324379 2013-08-08 07:55:11Z jadawin $
 
 PORTNAME=	Net-SSH2
-PORTVERSION=	0.48
+PORTVERSION=	0.51
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,7 +15,8 @@ LICENSE_COMB=	dual
 
 LIB_DEPENDS=	ssh2.1:${PORTSDIR}/security/libssh2
 
-PERL_CONFIGURE=	yes
+USES=	perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SSH2.3 Net::SSH2::Channel.3 \
 		Net::SSH2::Dir.3 Net::SSH2::File.3 \
