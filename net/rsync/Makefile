@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: net/rsync/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: net/rsync/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	rsync
 PORTVERSION=	3.0.9
@@ -22,7 +22,6 @@ LICENSE=	GPLv3
 GNU_CONFIGURE=	yes
 USE_RC_SUBR=	rsyncd
 SUB_LIST=	NAME=rsyncd
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS=	--disable-debug --enable-ipv6 \
 		--with-rsyncd-conf=${PREFIX}/etc/rsyncd.conf
