@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: math/p5-Math-GSL/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: math/p5-Math-GSL/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-GSL
 PORTVERSION=	0.27
@@ -20,7 +20,8 @@ TEST_DEPENDS=	p5-Test-Class>=0.12:${PORTSDIR}/devel/p5-Test-Class \
 		p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most
 
 CFLAGS+=	-I${LOCALBASE}/include
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		smolder_smoke_signal.1
 MAN3=		Math::GSL.3 \
