@@ -2,7 +2,7 @@
 # Date created:		2009-07-21
 # Whom:			Mons Anderson <mons@cpan.org>
 #
-# $FreeBSD: ports/devel/p5-lib-abs/Makefile,v 1.6 2012/11/17 05:56:36 svnexp Exp $
+# $FreeBSD: devel/p5-lib-abs/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	lib-abs
@@ -18,11 +18,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		lib::abs.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500808
-BUILD_DEPENDS+=	p5-PathTools>=3.12:${PORTSDIR}/devel/p5-PathTools
-RUN_DEPENDS+=	p5-PathTools>=3.12:${PORTSDIR}/devel/p5-PathTools
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
