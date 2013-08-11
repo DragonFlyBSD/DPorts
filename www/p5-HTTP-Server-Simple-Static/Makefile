@@ -2,7 +2,7 @@
 # Date created:				30 March 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-Server-Simple-Static/Makefile,v 1.9 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-Server-Simple-Static/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	HTTP-Server-Simple-Static
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-HTTP-Server-Simple>=0:${PORTSDIR}/www/p5-HTTP-Server-Simple \
 		p5-File-MMagic>=0:${PORTSDIR}/devel/p5-File-MMagic
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	HTTP::Server::Simple::Static.3
 
