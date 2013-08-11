@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Pod-Coverage/Makefile 317092 2013-05-02 10:08:24Z tobez $
+# $FreeBSD: devel/p5-Pod-Coverage/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Coverage
 PORTVERSION=	0.23
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Devel-Symdump>=2.01:${PORTSDIR}/devel/p5-Devel-Symdump
 
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Pod::Coverage.3 \
 		Pod::Coverage::CountParents.3 \
