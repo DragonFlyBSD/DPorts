@@ -2,7 +2,7 @@
 # Date created:				01 September 2011
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-Regexp-Common-net-CIDR/Makefile,v 1.2 2012/11/17 06:02:07 svnexp Exp $
+# $FreeBSD: textproc/p5-Regexp-Common-net-CIDR/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Regexp-Common-net-CIDR
@@ -17,7 +17,8 @@ COMMENT=	Provide patterns for CIDR blocks
 BUILD_DEPENDS=	p5-Regexp-Common>0:${PORTSDIR}/textproc/p5-Regexp-Common
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Regexp::Common::net::CIDR.3
 
