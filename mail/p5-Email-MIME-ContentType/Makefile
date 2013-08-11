@@ -2,7 +2,7 @@
 # Date created:				2004-08-29
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/mail/p5-Email-MIME-ContentType/Makefile,v 1.8 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Email-MIME-ContentType/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Email-MIME-ContentType
@@ -16,7 +16,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C|\.([0-9])$|\1|}
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Parse a MIME Content-Type Header
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Email::MIME::ContentType.3
 
