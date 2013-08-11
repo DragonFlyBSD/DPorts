@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Data-Dump/Makefile 318031 2013-05-13 09:23:40Z tobez $
+# $FreeBSD: devel/p5-Data-Dump/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Dump
 PORTVERSION=	1.22
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Pretty printing of data structures
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Dump.3 Data::Dump::Filtered.3 Data::Dump::Trace.3
 
