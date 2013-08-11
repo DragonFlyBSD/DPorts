@@ -1,10 +1,11 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libevt/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/libevt/Makefile 323921 2013-07-29 21:17:23Z antoine $
 
 PORTNAME=	libevt
-DISTVERSION=	alpha-20130415
+DISTVERSION=	alpha-20130726
 CATEGORIES=	devel
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSYm01VnUtLXNUZ2M/ \
+		LOCAL/antoine
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tooling to access the Windows Event Log (EVT) format
@@ -13,8 +14,8 @@ LICENSE=	LGPL3
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python
-USES=		pathfix gettext iconv
-USE_PYTHON=	yes
+USES=		gettext iconv pathfix
+USE_PYTHON=	-2.7
 USE_LDCONFIG=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
