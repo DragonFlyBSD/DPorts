@@ -1,9 +1,9 @@
 # Created by: nik
-# $FreeBSD: graphics/scr2png/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: graphics/scr2png/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	scr2png
 PORTVERSION=	1.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	nik
@@ -18,8 +18,6 @@ NO_WRKSUBDIR=	yes
 MAN1=		scr2png.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/scr2png
-
-MAKE_JOBS_SAFE=	yes
 
 post-extract:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/Makefile
