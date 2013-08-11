@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/p5-Imager/Makefile 318684 2013-05-21 11:58:09Z tobez $
+# $FreeBSD: graphics/p5-Imager/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Imager
 PORTVERSION=	0.96
@@ -23,7 +23,8 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 TEST_DEPENDS=	p5-CPAN-Meta>=0:${PORTSDIR}/devel/p5-CPAN-Meta \
 		p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ENV=	IM_CFLAGS="${CFLAGS}" \
 		IM_INCPATH=${LOCALBASE}/include \
 		IM_LIBPATH=${LOCALBASE}/lib
