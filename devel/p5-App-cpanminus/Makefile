@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-App-cpanminus/Makefile 318686 2013-05-21 12:03:04Z kuriyama $
+# $FreeBSD: devel/p5-App-cpanminus/Makefile 324488 2013-08-10 11:53:31Z kuriyama $
 
 PORTNAME=	App-cpanminus
-PORTVERSION=	1.6915
+PORTVERSION=	1.6940
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
@@ -10,9 +10,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to get, unpack, build, and install modules from CPAN
 
-PERL_CONFIGURE=	yes
+USES=	perl5
+USE_PERL5=	configure
 
 MAN1=	cpanm.1
-MAN3=	App::cpanminus.3
+MAN3=	App::cpanminus.3 \
+	App::cpanminus::fatscript.3
 
 .include <bsd.port.mk>
