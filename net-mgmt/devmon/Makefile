@@ -1,5 +1,5 @@
-# Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: net-mgmt/devmon/Makefile 319777 2013-06-03 13:32:53Z swills $
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: net-mgmt/devmon/Makefile 323891 2013-07-29 15:03:58Z feld $
 
 PORTNAME=	devmon
 DISTVERSION=	0.3.1-beta1
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Device monitoring addition to Xymon/Hobbit/BigBrother
 
 LICENSE=	GPLv2
