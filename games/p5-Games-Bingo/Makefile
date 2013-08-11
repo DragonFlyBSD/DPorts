@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Games-Bingo
-# Date created:				14. August 2003
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: ports/games/p5-Games-Bingo/Makefile,v 1.10 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: games/p5-Games-Bingo/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Games-Bingo
 PORTVERSION=	0.15
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	A bingo game Perl implementation
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		bingo.pl.1
 MAN3=		Games::Bingo.3 \
@@ -26,6 +23,6 @@ MAN3=		Games::Bingo.3 \
 .include <bsd.port.pre.mk>
 
 post-patch:
-	@${PERL} -pi -e '$$_="" if m|Test::|' ${WRKSRC}/Build.PL
+	@${REINPLACE_CMD} -i '' '/Test::/d' ${WRKSRC}/Build.PL
 
 .include <bsd.port.post.mk>
