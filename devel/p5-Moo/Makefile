@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Moo/Makefile 323170 2013-07-17 14:18:19Z wen $
+# $FreeBSD: devel/p5-Moo/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Moo
 PORTVERSION=	1.003000
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-Class-Method-Modifiers>=1.10:${PORTSDIR}/devel/p5-Class-Method
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0.003:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Moo.3 \
 		Moo::Role.3 \
