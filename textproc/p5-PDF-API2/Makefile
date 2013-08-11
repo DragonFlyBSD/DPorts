@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/textproc/p5-PDF-API2/Makefile,v 1.59 2013/01/22 09:43:20 svnexp Exp $
+# $FreeBSD: textproc/p5-PDF-API2/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	PDF-API2
 PORTVERSION=	2.020
@@ -13,7 +13,8 @@ COMMENT=	'The Next Generation' of Text::PDF::API
 
 RUN_DEPENDS=	p5-Font-TTF>0:${PORTSDIR}/x11-fonts/p5-Font-TTF
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	PDF::API2.3 \
 	PDF::API2::Annotation.3 \
