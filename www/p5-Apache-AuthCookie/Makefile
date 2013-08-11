@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-Apache-AuthCookie/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Apache-AuthCookie/Makefile 324259 2013-08-05 05:58:29Z az $
 
 PORTNAME=	Apache-AuthCookie
 PORTVERSION=	3.19
@@ -16,13 +16,14 @@ BUILD_DEPENDS=	${APACHE_PKGNAMEPREFIX}mod_perl2>=0:${PORTSDIR}/www/mod_perl2 \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_APACHE=	22+
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.pre.mk>
 
 CURUSER?=	`whoami`
 CURGRP?=	`groups | ${AWK} '{print $$1}'`
 TESTPORT?=	8228
-PERL_CONFIGURE=	yes
 CONFIGURE_ENV+=	APACHE="${HTTPD}" \
 		TESTUSER="${CURUSER}" \
 		TESTGRP="${CURGRP}" \
