@@ -1,5 +1,5 @@
 # Created by: Bill "I hate Perl" Fumerola
-# $FreeBSD: ports/textproc/p5-Text-Template/Makefile,v 1.21 2013/02/11 17:04:31 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Template/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Template
 PORTVERSION=	1.46
@@ -14,7 +14,8 @@ COMMENT=	Expand template text with embedded Perl
 LICENSE=	ART10 GPLv2
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Template.3 Text::Template::Preprocess.3
 
