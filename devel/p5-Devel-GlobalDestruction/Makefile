@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-GlobalDestruction/Makefile 322440 2013-07-07 13:09:48Z culot $
+# $FreeBSD: devel/p5-Devel-GlobalDestruction/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Devel-GlobalDestruction
 PORTVERSION=	0.11
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Sub-Exporter-Progressive>=0.001.006:${PORTSDIR}/devel/p5-Sub-Exporter-Progressive
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::GlobalDestruction.3
 
