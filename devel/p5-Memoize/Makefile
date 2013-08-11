@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Memoize/Makefile,v 1.12 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: devel/p5-Memoize/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Memoize
 PORTVERSION=	1.03
@@ -11,7 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Transparently speed up perl functions by caching return values
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Memoize.3 \
 		Memoize::AnyDBM_File.3 \
