@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-MooseX-Clone/Makefile 313900 2013-03-11 13:51:37Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Clone/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-Clone
 PORTVERSION=	0.05
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-Data-Visitor>=0.24:${PORTSDIR}/devel/p5-Data-Visitor \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Clone.3 \
 		MooseX::Clone::Meta::Attribute::Trait::NoClone.3 \
