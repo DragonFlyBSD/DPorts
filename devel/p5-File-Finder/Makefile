@@ -2,7 +2,7 @@
 # Date created:				Mar 21 2007
 # Whom:					lth@FreeBSD.org
 #
-# $FreeBSD: ports/devel/p5-File-Finder/Makefile,v 1.4 2012/11/17 05:56:16 svnexp Exp $
+# $FreeBSD: devel/p5-File-Finder/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	File-Finder
@@ -22,6 +22,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 MAN3=		File::Finder.3 \
 		File::Finder::Steps.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
