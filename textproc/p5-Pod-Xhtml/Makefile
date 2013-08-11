@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Pod-Xhtml
-# Date created:		2006-07-13
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/textproc/p5-Pod-Xhtml/Makefile,v 1.7 2012/11/17 06:02:07 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: textproc/p5-Pod-Xhtml/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Xhtml
 PORTVERSION=	1.61
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Assertions>0:${PORTSDIR}/devel/p5-Test-Assertions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pod2xhtml.1
 MAN3=		Pod::Hyperlink::BounceURL.3 Pod::Xhtml.3
