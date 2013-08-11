@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::SAX::Writer
-# Date created:		28 Nov 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-XML-SAX-Writer/Makefile,v 1.13 2012/11/17 06:02:13 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-XML-SAX-Writer/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-SAX-Writer
 PORTVERSION=	0.53
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX \
 		p5-XML-Filter-BufferText>=1.00:${PORTSDIR}/textproc/p5-XML-Filter-BufferText
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::SAX::Writer.3 XML::SAX::Writer::XML.3
 
