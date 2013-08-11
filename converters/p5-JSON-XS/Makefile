@@ -1,5 +1,5 @@
 # Created by: Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: converters/p5-JSON-XS/Makefile 318864 2013-05-23 11:14:03Z tobez $
+# $FreeBSD: converters/p5-JSON-XS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	JSON-XS
 PORTVERSION=	2.34
@@ -13,7 +13,8 @@ COMMENT=	JSON serialising/deserialising, done correctly and fast
 BUILD_DEPENDS=	p5-common-sense>0:${PORTSDIR}/devel/p5-common-sense
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		json_xs.1
 MAN3=		JSON::XS.3 JSON::XS::Boolean.3
