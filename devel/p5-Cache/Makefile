@@ -2,7 +2,7 @@
 # Date created:				13 December 2004
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Cache/Makefile,v 1.8 2012/11/17 05:56:06 svnexp Exp $
+# $FreeBSD: devel/p5-Cache/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Cache
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-Digest-SHA1>=2.01:${PORTSDIR}/security/p5-Digest-SHA1 \
 		p5-IO-String>=1.02:${PORTSDIR}/devel/p5-IO-String \
 		p5-TimeDate>=2.24:${PORTSDIR}/devel/p5-TimeDate
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Cache.3 \
 		Cache::Entry.3 \
