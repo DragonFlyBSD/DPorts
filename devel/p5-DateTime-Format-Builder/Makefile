@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-Builder/Makefile 319962 2013-06-05 08:50:32Z mat $
+# $FreeBSD: devel/p5-DateTime-Format-Builder/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Format-Builder
 PORTVERSION=	0.81
@@ -21,7 +21,8 @@ TEST_DEPENDS=	p5-Devel-Cycle>=1.07:${PORTSDIR}/devel/p5-Devel-Cycle \
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Format::Builder.3 DateTime::Format::Builder::Parser.3 \
 		DateTime::Format::Builder::Parser::Dispatch.3 \
