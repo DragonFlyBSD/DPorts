@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-threads/Makefile 319482 2013-05-31 10:42:15Z tobez $
+# $FreeBSD: devel/p5-threads/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	threads
 PORTVERSION=	1.87
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interpreter-based threads
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		threads.3
 
