@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wavplay
-# Date created:				14 January 2000
-# Whom:					greg
-#
-# $FreeBSD: ports/audio/wavplay/Makefile,v 1.19 2012/11/17 05:54:47 svnexp Exp $
-#
+# Created by: greg
+# $FreeBSD: audio/wavplay/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	wavplay
 PORTVERSION=	1.4
