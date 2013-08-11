@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Class/Makefile 318277 2013-05-16 07:30:02Z culot $
+# $FreeBSD: devel/p5-Test-Class/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Class
 PORTVERSION=	0.39
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-MRO-Compat>=0.11:${PORTSDIR}/devel/p5-MRO-Compat
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 BUILD_DEPENDS+=	p5-Test-Exception>=0.25:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Test::Class.3 \
 		Test::Class::Load.3 \
