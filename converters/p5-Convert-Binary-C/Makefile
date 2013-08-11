@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Convert-Binary-C
-# Date created:	   26 May 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/converters/p5-Convert-Binary-C/Makefile,v 1.24 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: converters/p5-Convert-Binary-C/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Convert-Binary-C
 PORTVERSION=	0.76
@@ -19,7 +15,8 @@ LICENSE_COMB=	dual
 
 MAKE_JOBS_UNSAFE=	yes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		ccconfig.1
 MAN3=		Convert::Binary::C.3 Convert::Binary::C::Cached.3
