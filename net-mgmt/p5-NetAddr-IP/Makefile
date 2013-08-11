@@ -1,5 +1,5 @@
 # Created by: Christopher N. Harrell <cnh@ivmg.net>
-# $FreeBSD: net-mgmt/p5-NetAddr-IP/Makefile 322696 2013-07-10 13:42:41Z tobez $
+# $FreeBSD: net-mgmt/p5-NetAddr-IP/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	NetAddr-IP
 PORTVERSION=	4.069
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl module for working with IP addresses and blocks thereof
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	patch configure
 
 MAN3=		NetAddr::IP.3 \
 	NetAddr::IP::InetBase.3 \
