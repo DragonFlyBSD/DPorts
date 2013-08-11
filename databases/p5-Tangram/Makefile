@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Tangram
-# Date created:	   08 April 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/databases/p5-Tangram/Makefile,v 1.13 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: databases/p5-Tangram/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Tangram
 PORTVERSION=	2.10
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-Set-Object>=0:${PORTSDIR}/devel/p5-Set-Object \
 		p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Tangram.3 \
 	Tangram::Complicity.3 \
