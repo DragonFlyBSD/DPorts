@@ -1,9 +1,4 @@
-# New ports collection makefile for:	yajl
-# Date created:		2010-03-29
-# Whom:			Bapt <baptiste.daroussin@gmail.com>
-#
-# $FreeBSD: devel/yajl/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# $FreeBSD: devel/yajl/Makefile 323909 2013-07-29 20:17:36Z bapt $
 
 PORTNAME=	yajl
 PORTVERSION=	2.0.4
@@ -11,7 +6,7 @@ PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	bapt@FreeBSD.org
-COMMENT=	A Portable JSON parsing and serialization library in ANSI C
+COMMENT=	Portable JSON parsing and serialization library in ANSI C
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	lloyd
