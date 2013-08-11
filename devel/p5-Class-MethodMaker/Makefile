@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/devel/p5-Class-MethodMaker/Makefile,v 1.24 2013/01/27 06:41:37 svnexp Exp $
+# $FreeBSD: devel/p5-Class-MethodMaker/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=		Class-MethodMaker
 PORTVERSION=		2.18
@@ -13,7 +13,8 @@ COMMENT=		Perl module for creating generic methods
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Class::MethodMaker.3 \
 	Class::MethodMaker::Constants.3 \
