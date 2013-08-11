@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	Hash::AsObject
-# Date created:			Jul 29, 2006
-# Whom:	      			ijliao
-#
-# $FreeBSD: ports/devel/p5-Hash-AsObject/Makefile,v 1.7 2012/11/17 05:56:18 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-Hash-AsObject/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Hash-AsObject
 PORTVERSION=	0.13
@@ -15,7 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Hashes with accessors/mutators
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Hash::AsObject.3
 
