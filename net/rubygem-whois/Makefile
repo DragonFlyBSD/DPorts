@@ -1,12 +1,12 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: net/rubygem-whois/Makefile 322880 2013-07-13 05:19:53Z swills $
+# $FreeBSD: net/rubygem-whois/Makefile 323799 2013-07-27 17:10:26Z swills $
 
 PORTNAME=	whois
-PORTVERSION=	3.1.3
+PORTVERSION=	3.2.1
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby whois library
 
 USE_RUBY=	yes
