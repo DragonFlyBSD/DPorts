@@ -2,7 +2,7 @@
 # Date created:		Sun Jan 18 07:27:41 CST 2004
 # Whom:					dcf@aracnet.com
 #
-# $FreeBSD: ports/devel/p5-IO-Tee/Makefile,v 1.6 2012/11/17 05:56:19 svnexp Exp $
+# $FreeBSD: devel/p5-IO-Tee/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	IO-Tee
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multiplex output to multiple output handles
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::Tee.3
 
