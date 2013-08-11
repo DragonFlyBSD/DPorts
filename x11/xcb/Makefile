@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: ports/x11/xcb/Makefile,v 1.18 2012/11/17 06:03:20 svnexp Exp $
+# $FreeBSD: x11/xcb/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xcb
 PORTVERSION=	2.4
@@ -14,7 +14,7 @@ COMMENT=	Tool for managing x11 cut-buffers
 
 LICENSE=	MIT
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xt
 
 MAN1=		xcb.1
