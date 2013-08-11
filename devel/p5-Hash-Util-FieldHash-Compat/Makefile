@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Hash-Util-FieldHash-Compat/Makefile 313898 2013-03-11 13:50:29Z sunpoet $
+# $FreeBSD: devel/p5-Hash-Util-FieldHash-Compat/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Hash-Util-FieldHash-Compat
 PORTVERSION=	0.03
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Tie-RefHash>=1.38:${PORTSDIR}/devel/p5-Tie-RefHash \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Hash::Util::FieldHash::Compat.3 \
 		Hash::Util::FieldHash::Compat::Heavy.3
