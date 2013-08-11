@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/mbrolavox/Makefile 317312 2013-05-04 12:52:28Z crees $
+# $FreeBSD: audio/mbrolavox/Makefile 323062 2013-07-15 15:48:15Z tijl $
 
 PORTNAME=	mbrolavox
 PORTVERSION=	3.0.1
@@ -44,8 +44,7 @@ do-extract:
 .endfor
 
 do-install:
-	@${MKDIR} ${DATADIR}
-	@cd ${WRKSRC} && ${COPYTREE_SHARE} * ${DATADIR}/
+	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${DATADIR}
 
 # Generates OPTIONS file from voices.conf -- really for maintainer use
 # Only included for compatibility with anyone who wants to modify voices.conf
