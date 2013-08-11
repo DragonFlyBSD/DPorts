@@ -1,13 +1,7 @@
-# New ports collection makefile for:	p5-Email-Abstract
-# Date created:		2004-07-26
-# Whom:			Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/p5-Email-Abstract/Makefile,v 1.15 2012/11/17 05:59:07 svnexp Exp $
-#
+# $FreeBSD: mail/p5-Email-Abstract/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Email-Abstract
-PORTVERSION=	3.004
-PORTREVISION=	1
+PORTVERSION=	3.005
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Email
@@ -20,7 +14,8 @@ RUN_DEPENDS=	p5-Email-Simple>=1.91:${PORTSDIR}/mail/p5-Email-Simple \
 		p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Email::Abstract.3 \
 		Email::Abstract::EmailMIME.3 \
