@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Config-Any/Makefile,v 1.25 2013/02/01 21:51:04 svnexp Exp $
+# $FreeBSD: devel/p5-Config-Any/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Config-Any
 PORTVERSION=	0.23
@@ -17,7 +17,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 OPTIONS_DEFINE=	INI JSON XML YAML
 OPTIONS_DEFAULT=INI JSON XML YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Config::Any.3 \
 		Config::Any::Base.3 \
