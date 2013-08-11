@@ -2,7 +2,7 @@
 # Date created:				20 September 2000
 # Whom:					Ilia Chipitsine <ilia@jane.cgu.chel.su>
 #
-# $FreeBSD: ports/converters/p5-Unicode-Map8/Makefile,v 1.11 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/p5-Unicode-Map8/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Unicode-Map8
 PORTVERSION=	0.13
@@ -16,7 +16,8 @@ COMMENT=	Mapping table between 8-bit chars and Unicode
 BUILD_DEPENDS=	p5-Unicode-String>=2:${PORTSDIR}/converters/p5-Unicode-String
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		umap.1
 MAN3=		Unicode::Map8.3
