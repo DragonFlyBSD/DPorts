@@ -1,9 +1,6 @@
 # Ports collection Makefile for:		SVN::Notify
-# Date created:					22 Feb 2005
-# Whom:						dom@happygiraffe.net
-#
-# $FreeBSD: ports/devel/p5-SVN-Notify/Makefile,v 1.32 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: dom@happygiraffe.net
+# $FreeBSD: devel/p5-SVN-Notify/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SVN-Notify
 PORTVERSION=	2.83
@@ -22,7 +19,8 @@ RUN_DEPENDS=	p5-Net-SMTP_auth>=0:${PORTSDIR}/mail/p5-Net-SMTP_auth \
 		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		svnnotify.1
 MAN3=		SVN::Notify.3 SVN::Notify::Alternative.3 SVN::Notify::HTML.3 \
