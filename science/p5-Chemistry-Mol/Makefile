@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/science/p5-Chemistry-Mol/Makefile,v 1.3 2012/12/06 02:16:09 svnexp Exp $
+# $FreeBSD: science/p5-Chemistry-Mol/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Chemistry-Mol
 PORTVERSION=	0.37
@@ -13,7 +13,8 @@ COMMENT=	Perl toolkit to describe molecules
 BUILD_DEPENDS=	p5-Math-VectorReal>=1.02:${PORTSDIR}/math/p5-Math-VectorReal
 RUN_DEPENDS=	p5-Math-VectorReal>=1.02:${PORTSDIR}/math/p5-Math-VectorReal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Chemistry::Atom.3 Chemistry::Bond.3 \
 	Chemistry::Obj.3 Chemistry::File.3 \
