@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Danga-Socket
-# Date created:		2005-08-08
-# Whom:			Jacques Marneweck <jacques@php.net>
-#
-# $FreeBSD: ports/devel/p5-Danga-Socket/Makefile,v 1.17 2012/11/17 05:56:09 svnexp Exp $
-#
+# Created by: Jacques Marneweck <jacques@php.net>
+# $FreeBSD: devel/p5-Danga-Socket/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Danga-Socket
 PORTVERSION=	1.61
@@ -17,7 +13,8 @@ COMMENT=	Event loop and event-driven async socket base class
 RUN_DEPENDS=	p5-IO-KQueue>=0:${PORTSDIR}/devel/p5-IO-KQueue \
 		p5-Sys-Syscall>=0:${PORTSDIR}/devel/p5-Sys-Syscall
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Danga::Socket.3
 
