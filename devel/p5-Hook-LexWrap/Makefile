@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Hook-LexWrap
-# Date created:				Wed Jul 7 2004
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/devel/p5-Hook-LexWrap/Makefile,v 1.7 2012/11/17 05:56:18 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: devel/p5-Hook-LexWrap/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Hook-LexWrap
 PORTVERSION=	0.24
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lexically scoped subroutine wrappers for Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Hook::LexWrap.3
 
