@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-Strip
-# Date Created:				13 Oct 2003
-# Whom:					vanilla
-#
-# $FreeBSD: ports/www/p5-HTML-Strip/Makefile,v 1.9 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: vanilla
+# $FreeBSD: www/p5-HTML-Strip/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-Strip
 PORTVERSION=	1.06
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module for strip HTML tag
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Strip.3
 
