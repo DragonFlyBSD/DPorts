@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IO-AIO
-# Date created:		2006-12-09
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-IO-AIO/Makefile,v 1.21 2013/02/14 10:22:14 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-IO-AIO/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IO-AIO
 PORTVERSION=	4.18
@@ -20,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-common-sense>=0:${PORTSDIR}/devel/p5-common-sense
 RUN_DEPENDS=	p5-common-sense>=0:${PORTSDIR}/devel/p5-common-sense
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::AIO.3
 
