@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Path-Tiny/Makefile 320751 2013-06-13 10:29:00Z tobez $
+# $FreeBSD: devel/p5-Path-Tiny/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Path-Tiny
 PORTVERSION=	0.023
@@ -20,7 +20,8 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Devel-Hide>=0:${PORTSDIR}/devel/p5-Devel-Hide \
 		p5-File-pushd>=0:${PORTSDIR}/devel/p5-File-pushd
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Path::Tiny.3
 
