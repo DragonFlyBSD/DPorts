@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Set-Scalar
-# Date created:				03 January 2001
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/devel/p5-Set-Scalar/Makefile,v 1.23 2012/11/17 05:56:29 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: devel/p5-Set-Scalar/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Set-Scalar
 PORTVERSION=	1.25
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl module containing a set of scalars, including references
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Set::Scalar.3 \
 		Set::Scalar::Base.3 \
