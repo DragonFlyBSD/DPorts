@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/p5-List-AllUtils/pkg-plist,v 1.2 2012/11/17 05:56:20 svnexp Exp $
+@comment $FreeBSD: devel/p5-List-AllUtils/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/List/AllUtils/.packlist
 %%SITE_PERL%%/List/AllUtils.pm
 @dirrmtry %%SITE_PERL%%/List
