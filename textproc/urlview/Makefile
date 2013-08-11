@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  urlview
-# Date created:			  21 April 1998
-# Whom:				  Josh Gilliam <josh@quick.net>
-#
-# $FreeBSD: ports/textproc/urlview/Makefile,v 1.38 2012/11/17 06:02:24 svnexp Exp $
-#
+# Created by: Josh Gilliam <josh@quick.net>
+# $FreeBSD: textproc/urlview/Makefile 323101 2013-07-16 12:15:05Z madpilot $
 
 PORTNAME=	urlview
 PORTVERSION=	0.9
@@ -17,7 +12,7 @@ MASTER_SITES=	ftp://ftp.mutt.org/mutt/contrib/ \
 		ftp://ftp.gwdg.de/pub/unix/mail/mutt/international/contrib/ \
 		http://seis.bris.ac.uk/~mexas/
 
-MAINTAINER=	mexas@bristol.ac.uk
+MAINTAINER=	mexas@bris.ac.uk
 COMMENT=	URL extractor/launcher
 
 GNU_CONFIGURE=	yes
