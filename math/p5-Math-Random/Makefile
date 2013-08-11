@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math::Random
-# Date created:		5 Jul 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/math/p5-Math-Random/Makefile,v 1.12 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: math/p5-Math-Random/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-Random
 PORTVERSION=	0.71
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Random number generators
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::Random.3
 
