@@ -2,7 +2,7 @@
 # Date created:				1 March 2004
 # Whom:					Sergey Matveychuk <sem@ciam.ru>
 #
-# $FreeBSD: ports/devel/argp-standalone/Makefile,v 1.16 2012/11/17 05:55:33 svnexp Exp $
+# $FreeBSD: devel/argp-standalone/Makefile 323088 2013-07-16 05:42:36Z ade $
 #
 
 PORTNAME=	argp-standalone
@@ -20,7 +20,7 @@ USE_GCC=	any
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	aclocal autoconf automake libtool
 AUTOMAKE_ARGS=	-c -a
-ACLOCAL_ARGS=	--acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal
+ACLOCAL_ARGS=	--automake-acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal
 USE_LDCONFIG=	yes
 
 PLIST_FILES=	lib/libargp.la lib/libargp.a \
