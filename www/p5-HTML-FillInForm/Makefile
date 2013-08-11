@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: www/p5-HTML-FillInForm/Makefile 319840 2013-06-04 09:46:18Z tobez $
+# $FreeBSD: www/p5-HTML-FillInForm/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-FillInForm
 PORTVERSION=	2.11
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=3.26:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS=	p5-HTML-Parser>=3.26:${PORTSDIR}/www/p5-HTML-Parser
 
 INSTALL_TARGET=	pure_install
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::FillInForm.3
 
