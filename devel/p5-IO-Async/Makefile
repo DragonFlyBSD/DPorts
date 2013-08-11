@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-IO-Async/Makefile 320748 2013-06-13 10:23:48Z tobez $
+# $FreeBSD: devel/p5-IO-Async/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IO-Async
 PORTVERSION=	0.58
@@ -21,7 +21,8 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Refcount>=0:${PORTSDIR}/devel/p5-Test-Refcount
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::Async.3 \
 		IO::Async::Channel.3 \
