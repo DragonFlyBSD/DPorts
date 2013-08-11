@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/patchutils/Makefile 317328 2013-05-04 17:29:38Z johans $
+# $FreeBSD: misc/patchutils/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	patchutils
 PORTVERSION=	0.3.3
@@ -10,7 +10,8 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	A small collection of programs that operate on patch files
 
 USE_XZ=		yes
-USE_PERL5=	yes
+USES=		perl5
+USE_PERL5=	run build patch
 GNU_CONFIGURE=	yes
 
 MAN1=	combinediff.1 dehtmldiff.1 editdiff.1 espdiff.1 filterdiff.1 \
