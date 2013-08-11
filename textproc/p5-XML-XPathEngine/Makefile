@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-XPathEngine/Makefile 318365 2013-05-17 08:34:08Z tobez $
+# $FreeBSD: textproc/p5-XML-XPathEngine/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-XPathEngine
 PORTVERSION=	0.14
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Re-usable XPath engine for DOM-like trees
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 REINPLACE_ARGS=	-i ''
 
 MAN3=		XML::XPathEngine.3 \
