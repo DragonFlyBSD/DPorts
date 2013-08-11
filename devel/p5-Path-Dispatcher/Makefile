@@ -1,5 +1,5 @@
 # Created by: Baptiste Daroussin <bapt@FreeBSD.org>
-# $FreeBSD: devel/p5-Path-Dispatcher/Makefile 314181 2013-03-14 19:30:16Z sunpoet $
+# $FreeBSD: devel/p5-Path-Dispatcher/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Path-Dispatcher
 PORTVERSION=	1.05
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Any-Moose>=0.12:${PORTSDIR}/devel/p5-Any-Moose \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Path::Dispatcher.3 \
 		Path::Dispatcher::Cookbook.3 \
