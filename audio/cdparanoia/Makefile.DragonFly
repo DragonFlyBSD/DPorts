@@ -1,5 +1,2 @@
-# This is cheap, but I don't feel like making multiple patches
-# It builds at least.
-
 CFLAGS+=	-D__FreeBSD__=1
 CFLAGS+=	-D__FreeBSD_version=900001
