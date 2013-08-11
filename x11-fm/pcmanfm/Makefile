@@ -1,8 +1,8 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: x11-fm/pcmanfm/Makefile 321226 2013-06-19 00:11:07Z wen $
+# $FreeBSD: x11-fm/pcmanfm/Makefile 323616 2013-07-24 20:06:46Z pawel $
 
 PORTNAME=	pcmanfm
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.1
 CATEGORIES=	x11-fm
 MASTER_SITES=	SF/${PORTNAME}/PCManFM%20%2B%20Libfm%20%28tarball%20release%29/PCManFM/
 
@@ -24,15 +24,16 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		pcmanfm.1
 
 OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
+
+NLS_USES=	gettext
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
+post-patch:
+.if ! ${PORT_OPTIONS:MNLS}
+	@${REINPLACE_CMD} -e 's|src po|src|' \
+		${WRKSRC}/Makefile.in
 .endif
 
 .include <bsd.port.mk>
