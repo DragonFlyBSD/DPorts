@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/p5-ExtUtils-MakeMaker/Makefile 320718 2013-06-12 19:20:40Z az $
+# $FreeBSD: devel/p5-ExtUtils-MakeMaker/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	ExtUtils-MakeMaker
 PORTVERSION=	6.66
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Designed to write a Makefile for an extension module
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ExtUtils::Command::MM.3 ExtUtils::Liblist.3 ExtUtils::MM.3 \
 		ExtUtils::MM_AIX.3 ExtUtils::MM_Any.3 ExtUtils::MM_BeOS.3 \
