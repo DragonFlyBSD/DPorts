@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-OptList/Makefile 323155 2013-07-17 08:10:37Z culot $
+# $FreeBSD: devel/p5-Data-OptList/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-OptList
 PORTVERSION=	0.108
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-Params-Util>=0.14:${PORTSDIR}/devel/p5-Params-Util \
 		p5-Sub-Install>=0.92:${PORTSDIR}/devel/p5-Sub-Install
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::OptList.3
 
