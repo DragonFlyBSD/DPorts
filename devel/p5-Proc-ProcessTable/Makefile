@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/p5-Proc-ProcessTable/Makefile 319192 2013-05-27 09:28:39Z tobez $
+# $FreeBSD: devel/p5-Proc-ProcessTable/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Proc-ProcessTable
 PORTVERSION=	0.48
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to the unix process table
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Proc::ProcessTable::Process.3 \
 		Proc::Killall.3 \
