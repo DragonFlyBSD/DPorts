@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Sys-Syscall/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Sys-Syscall/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Sys-Syscall
 PORTVERSION=	0.25
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Access system calls that Perl doesn\'t provide access to
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sys::Syscall.3 Sys::README.3
 
