@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/sqlrelay/Makefile 320195 2013-06-07 11:59:11Z wg $
+# $FreeBSD: databases/sqlrelay/Makefile 320961 2013-06-14 20:24:11Z antoine $
 
 PORTNAME=	${SQLRELAY_PORTNAME}
 PORTVERSION=	${SQLRELAY_PORTVERSION}
@@ -136,7 +136,7 @@ post-patch:
 	@${REINPLACE_CMD} -e '/EXAMPLEDIR/d' ${WRKSRC}/etc/Makefile
 	${FIND} ${WRKSRC} -name Makefile | ${XARGS} ${REINPLACE_CMD} -E \
 		-e 's#-release \$$\(SQLR_VERSION\)##g;'
-.if ${PORT_OPTIONS:MDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 	 @${REINPLACE_CMD} '/$$(MAKE) -C doc/d' ${WRKSRC}/Makefile
 .endif
 
