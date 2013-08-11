@@ -1,8 +1,8 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: databases/p5-DBD-SQLite/Makefile 320454 2013-06-10 10:21:14Z tobez $
+# $FreeBSD: databases/p5-DBD-SQLite/Makefile 324106 2013-08-01 13:37:21Z jadawin $
 
 PORTNAME=	DBD-SQLite
-PORTVERSION=	1.39
+PORTVERSION=	1.40
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ISHIGAKI
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-DBI>=1.57:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS=	p5-DBI>=1.57:${PORTSDIR}/databases/p5-DBI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBD::SQLite.3 DBD::SQLite::Cookbook.3
 
