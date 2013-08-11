@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-C3-Componentised
-# Date created:	   2007-08-13
-# Whom:		   Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Class-C3-Componentised/Makefile,v 1.14 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: devel/p5-Class-C3-Componentised/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-C3-Componentised
 PORTVERSION=	1.0009
@@ -26,11 +22,12 @@ TEST_DEPENDS=	p5-Class-Inspector>=0:${PORTSDIR}/devel/p5-Class-Inspector \
 	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::C3::Componentised.3
 
 post-extract:
-	@${PERL} -i.bak -ne 'print unless m,Test::,' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' -e '/Test::/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
