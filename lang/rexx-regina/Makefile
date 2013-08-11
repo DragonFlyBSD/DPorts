@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	rexx-regina
-# Date created:			Nov 11, 2003
-# Whom:	      			ijliao
-#
-# $FreeBSD: ports/lang/rexx-regina/Makefile,v 1.13 2013/02/23 23:10:00 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: lang/rexx-regina/Makefile 321320 2013-06-19 20:12:38Z linimon $
 
 PORTNAME=	regina
 PORTVERSION=	3.7
@@ -13,7 +8,7 @@ MASTER_SITES=	SF/${PORTNAME}-rexx/${PORTNAME}-rexx/${PORTVERSION}
 PKGNAMEPREFIX=	rexx-
 DISTNAME=	Regina-REXX-${PORTVERSION}
 
-MAINTAINER=	g.gonter@ieee.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Rexx interpreter
 
 CONFLICTS=	rexx-imc-* oorexx-[0-9]*
