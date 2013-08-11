@@ -1,5 +1,5 @@
 # Created by: Olexandr Davydenko <o.davydenko@gmail.com>
-# $FreeBSD: devel/libftdi/Makefile 317460 2013-05-06 05:39:13Z mandree $
+# $FreeBSD: devel/libftdi/Makefile 321292 2013-06-19 16:49:25Z stefan $
 
 PORTNAME=	libftdi
 PORTVERSION=	0.20
@@ -33,8 +33,10 @@ PLIST_SUB+=		BOOST="@comment "
 CONFIGURE_ARGS+=	--without-boost
 .endif
 .if ${PORT_OPTIONS:MPYTHON}
-PLIST_SUB+=		PYTHON=""
+PLIST_SUB+=		PYTHON="" PYDISTUTILS_EGGINFO=${PYDISTUTILS_EGGINFO}
 CONFIGURE_ARGS+=	--enable-python-binding
+CONFIGURE_ENV+=		SWIG="${LOCALBASE}/bin/swig2.0"
+BUILD_DEPENDS+=		swig2.0:${PORTSDIR}/devel/swig20
 USE_PYTHON=		yes
 .else
 PLIST_SUB+=		PYTHON="@comment "
