@@ -2,7 +2,7 @@
 # Date created:		16 November 2004
 # Whom:			Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CGI-Simple/Makefile,v 1.16 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Simple/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	CGI-Simple
@@ -18,6 +18,8 @@ COMMENT=	A simple totally OO CGI interface that is CGI.pm compliant
 TEST_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy
 
 PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Simple.3 \
 		CGI::Simple::Cookie.3 \
