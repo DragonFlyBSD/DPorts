@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-UNIVERSAL-isa
-# Date Created:				16 Nov, 2005
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-UNIVERSAL-isa/Makefile,v 1.14 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: devel/p5-UNIVERSAL-isa/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	UNIVERSAL-isa
 PORTVERSION=	1.20120726
@@ -17,7 +13,8 @@ COMMENT=	Try to recover from people calling UNIVERSAL::isa as a function
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		UNIVERSAL::isa.3
 
