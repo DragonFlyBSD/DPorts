@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net
-# Date created:				September 30th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-Net/Makefile,v 1.54 2012/11/17 06:00:10 svnexp Exp $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: net/p5-Net/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net
 PORTVERSION=	1.22
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL
 
 PORTSCOUT=	skipv:1.0901
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Cmd.3 \
 		Net::Config.3 \
