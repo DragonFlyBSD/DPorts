@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-File-ShareDir/Makefile 313975 2013-03-12 13:39:43Z bapt $
+# $FreeBSD: devel/p5-File-ShareDir/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-ShareDir
 PORTVERSION=	1.03
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-Class-Inspector>=1.12:${PORTSDIR}/devel/p5-Class-Inspector \
 		p5-Params-Util>=0.07:${PORTSDIR}/devel/p5-Params-Util
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	File::ShareDir.3
 
