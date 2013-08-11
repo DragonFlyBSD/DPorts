@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Object-Role/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Object-Role/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Object-Role
 PORTVERSION=	0.001
@@ -13,7 +13,8 @@ COMMENT=	Perl base class for non-Moose roles
 BUILD_DEPENDS=	p5-Sub-Name>=0:${PORTSDIR}/devel/p5-Sub-Name
 RUN_DEPENDS=	p5-Sub-Name>=0:${PORTSDIR}/devel/p5-Sub-Name
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Object::Role.3
 
