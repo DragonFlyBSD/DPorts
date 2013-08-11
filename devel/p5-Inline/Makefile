@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline/Makefile 317008 2013-05-01 09:46:19Z tobez $
+# $FreeBSD: devel/p5-Inline/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Inline
 PORTVERSION=	0.53
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Parse-RecDescent>=1.800:${PORTSDIR}/devel/p5-Parse-RecDescent
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Inline-Files>=0:${PORTSDIR}/devel/p5-Inline-Files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Inline.3 \
 		Inline-API.3 \
