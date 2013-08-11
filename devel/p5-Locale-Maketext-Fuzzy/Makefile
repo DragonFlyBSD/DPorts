@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Locale-Maketext-Fuzzy
-# Date created:				Mon April 14th, 2003
-# Whom:					Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Locale-Maketext-Fuzzy/Makefile,v 1.8 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: devel/p5-Locale-Maketext-Fuzzy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Locale-Maketext-Fuzzy
 PORTVERSION=	0.11
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Locale::Maketext::Fuzzy - Maketext from already interpolated strings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Locale::Maketext::Fuzzy.3
 
