@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Sub-Delete
-# Date created:		2008-11-16
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Sub-Delete/Makefile,v 1.7 2012/12/16 06:16:54 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Sub-Delete/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Sub-Delete
 PORTVERSION=	1.00002
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module enabling one to delete subroutines
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sub::Delete.3
 
