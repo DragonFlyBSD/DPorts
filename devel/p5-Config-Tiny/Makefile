@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Config-Tiny
-# Date created:	   11 December 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Config-Tiny/Makefile,v 1.20 2012/11/17 05:56:09 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Config-Tiny/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Config-Tiny
 PORTVERSION=	2.14
@@ -17,7 +13,8 @@ COMMENT=	Read/Write .ini style files with as little code as possible
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Config::Tiny.3
 
