@@ -2,7 +2,7 @@
 # Date created:				May 26 2001
 # Whom:					vanilla
 #
-# $FreeBSD: ports/www/p5-HTML-SimpleParse/Makefile,v 1.9 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTML-SimpleParse/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	HTML-SimpleParse
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTML::SimpleParse - a bare-bones HTML parser
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::SimpleParse.3
 
