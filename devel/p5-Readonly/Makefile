@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Readonly/Makefile 316231 2013-04-22 13:30:08Z bapt $
+# $FreeBSD: devel/p5-Readonly/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Readonly
 PORTVERSION=	1.03
@@ -13,7 +13,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Facility for creating read-only scalars, arrays, hashes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	DIR="${PORTNAME}-XS-${PORTVERSION_XS}"
 PORTVERSION_XS=	1.05
 
