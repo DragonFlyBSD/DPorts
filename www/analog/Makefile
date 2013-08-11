@@ -1,9 +1,9 @@
 # Created by: jfitz
-# $FreeBSD: www/analog/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: www/analog/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	analog
 PORTVERSION=	6.0
-PORTREVISION=	8
+PORTREVISION=	9
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.analog.cx/ \
@@ -17,8 +17,8 @@ COMMENT=	Extremely fast program for analysing WWW logfiles
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd \
-		jpeg.11:${PORTSDIR}/graphics/jpeg \
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
+		jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png
 
 BUILD_WRKSRC=	${WRKSRC}/src
