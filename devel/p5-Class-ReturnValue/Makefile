@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class::ReturnValue
-# Date created:				26 Jan 2003
-# Whom:					tobez
-#
-# $FreeBSD: ports/devel/p5-Class-ReturnValue/Makefile,v 1.12 2012/12/16 06:16:54 svnexp Exp $
-#
+# Created by: tobez
+# $FreeBSD: devel/p5-Class-ReturnValue/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Class-ReturnValue
 PORTVERSION=	0.55
@@ -17,7 +13,8 @@ COMMENT=	A return-value object that can be treated as a boolean, array, or objec
 BUILD_DEPENDS=	p5-Devel-StackTrace>=0:${PORTSDIR}/devel/p5-Devel-StackTrace
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::ReturnValue.3
 
