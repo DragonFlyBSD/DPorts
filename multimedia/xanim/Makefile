@@ -1,5 +1,5 @@
 # Created by: piero
-# $FreeBSD: ports/multimedia/xanim/Makefile,v 1.50 2013/01/26 17:01:00 svnexp Exp $
+# $FreeBSD: multimedia/xanim/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xanim
 PORTVERSION=	2.92.0
@@ -19,8 +19,8 @@ NO_CDROM=	redistributed without fee
 
 # clang's cpp destroys whitespace, particularly hard tabs in makefiles,
 # which is fatal for imake.
+USES=		imake
 USE_GCC=	any
-USE_IMAKE=	yes
 USE_XORG=	xext xt sm ice xext x11
 MAN1=		xanim.1
 MAKE_ARGS+=	-j 2 # safe and helps even the single-CPU machines
