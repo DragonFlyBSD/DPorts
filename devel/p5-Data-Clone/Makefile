@@ -2,7 +2,7 @@
 # Date created:		2011-10-04
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Data-Clone/Makefile,v 1.4 2012/11/17 05:56:09 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Clone/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Data-Clone
@@ -20,17 +20,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Data::Clone.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Devel-PPPort>=3.19:${PORTSDIR}/devel/p5-Devel-PPPort
-RUN_DEPENDS+=	p5-Devel-PPPort>=3.19:${PORTSDIR}/devel/p5-Devel-PPPort
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.if ${PERL_LEVEL} < 501200
-BUILD_DEPENDS+=	p5-ExtUtils-ParseXS>=2.21:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
-RUN_DEPENDS+=	p5-ExtUtils-ParseXS>=2.21:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
