@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gnatdroid-sysroot
-# Date created:				2011-07-20
-# Whom:					John Marino <draco@marino>
-#
-# $FreeBSD: ports/lang/gnatdroid-sysroot/Makefile,v 1.2 2012/11/17 05:58:50 svnexp Exp $
-#
+# Created by: John Marino <marino@FreeBSD.org>
+# $FreeBSD: lang/gnatdroid-sysroot/Makefile 322832 2013-07-12 13:40:50Z marino $
 
 PORTNAME=	sysroot
 PORTVERSION=	9
@@ -13,7 +9,7 @@ MASTER_SITES=	http://downloads.dragonlace.net/src/ \
 PKGNAMEPREFIX=	gnatdroid-
 DISTNAME=	android-9-arm
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	marino@FreeBSD.org
 COMMENT=	Android-9 sysroot for C/Ada Android cross-compiler
 
 USE_BZIP2=	YES
