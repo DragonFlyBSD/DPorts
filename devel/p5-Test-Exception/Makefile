@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Exception/Makefile 316788 2013-04-29 09:13:02Z sunpoet $
+# $FreeBSD: devel/p5-Test-Exception/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Exception
 PORTVERSION=	0.32
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 RUN_DEPENDS=	p5-Sub-Uplevel>=0.18:${PORTSDIR}/devel/p5-Sub-Uplevel
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Exception.3
 
