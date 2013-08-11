@@ -2,7 +2,7 @@
 # Date created:				18 March 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-IO-Capture/Makefile,v 1.5 2012/11/17 05:56:18 svnexp Exp $
+# $FreeBSD: devel/p5-IO-Capture/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	IO-Capture
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Abstract Base Class to build modules to capture output
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	IO::Capture.3 \
 	IO::Capture::Overview.3 \
