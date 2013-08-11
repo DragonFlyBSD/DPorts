@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Text-Balanced
-# Date created:				16 Sep 2001
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Balanced/Makefile,v 1.15 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-Text-Balanced/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Balanced
 PORTVERSION=	2.02
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extract delimited text sequences from strings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Balanced.3
 
