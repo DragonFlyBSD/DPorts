@@ -1,5 +1,5 @@
 # Created by: Tom Hukins <tom@eborcom.com>
-# $FreeBSD: mail/maildrop/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: mail/maildrop/Makefile 324039 2013-07-31 12:16:16Z madpilot $
 
 # The following compile-time options are available:
 # WITH_AUTHLIB=yes	Enable optional support for Courier Auth Library
@@ -26,12 +26,11 @@ COMMENT=	Mail delivery agent (MDA) with filtering abilities
 
 LICENSE=	GPLv3
 
-.if defined(.PARSEDIR)
-USE_GMAKE=	yes
-.endif
 USE_BZIP2=	yes
-USE_PERL5=	yes
-USES=		iconv shebangfix
+USES=		iconv shebangfix perl5
+.if defined(.PARSEDIR)
+USES+=		gmake
+.endif
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--enable-syslog=1 \
