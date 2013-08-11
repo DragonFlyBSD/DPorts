@@ -1,5 +1,5 @@
 # Created by: Christian Laursen <xi@borderworlds.dk>
-# $FreeBSD: mail/mlmmj/Makefile 317214 2013-05-03 15:12:02Z bapt $
+# $FreeBSD: mail/mlmmj/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	mlmmj
 PORTVERSION=	1.2.17.1
@@ -55,12 +55,6 @@ MAKE_JOBS_SAFE=	yes
 MAN1=		mlmmj-bounce.1 mlmmj-list.1 mlmmj-maintd.1 mlmmj-make-ml.sh.1 mlmmj-process.1 mlmmj-recieve.1 mlmmj-send.1 mlmmj-sub.1 mlmmj-unsub.1
 
 .include <bsd.port.pre.mk>
-
-.if defined(WITH_PERL_WEBINTERFACE)
-. if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-. endif
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|g" ${WRKSRC}/src/mlmmj-make-ml.sh
