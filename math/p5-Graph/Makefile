@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: math/p5-Graph/Makefile 319171 2013-05-27 08:20:49Z tobez $
+# $FreeBSD: math/p5-Graph/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Graph
 PORTVERSION=	0.96
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Heap>=0:${PORTSDIR}/devel/p5-Heap \
 		p5-Scalar-List-Utils>=0:${PORTSDIR}/lang/p5-Scalar-List-Utils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Graph.3 \
 		Graph::AdjacencyMap.3 \
