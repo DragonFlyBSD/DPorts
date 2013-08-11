@@ -1,5 +1,5 @@
-# Whom: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Xslate/Makefile 319782 2013-06-03 14:12:15Z tobez $
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-Text-Xslate/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Text-Xslate
 PORTVERSION=	2.0006
@@ -25,7 +25,8 @@ TEST_DEPENDS=	p5-File-Copy-Recursive>=0:${PORTSDIR}/devel/p5-File-Copy-Recursive
 
 MAKE_JOBS_UNSAFE=	yes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	xslate.1
 MAN3=	Text::Xslate.3 \
