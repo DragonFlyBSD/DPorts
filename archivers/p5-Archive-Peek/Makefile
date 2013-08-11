@@ -2,7 +2,7 @@
 # Date created:				01 September 2011
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/p5-Archive-Peek/Makefile,v 1.5 2012/11/17 05:54:21 svnexp Exp $
+# $FreeBSD: archivers/p5-Archive-Peek/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Archive-Peek
@@ -22,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Archive::Peek.3
 
