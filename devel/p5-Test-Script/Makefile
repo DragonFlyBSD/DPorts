@@ -2,7 +2,7 @@
 # Date created:				Wed Mar  7 20:14:32 CET 2007
 # Whom:					lth@FreeBSD.org
 #
-# $FreeBSD: devel/p5-Test-Script/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: devel/p5-Test-Script/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-Script
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-IPC-Run3>=0.034:${PORTSDIR}/devel/p5-IPC-Run3 \
 		p5-Probe-Perl>=0.01:${PORTSDIR}/sysutils/p5-Probe-Perl
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Script.3
 
