@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Badger/Makefile 320257 2013-06-08 14:55:06Z miwi $
+# $FreeBSD: devel/p5-Badger/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Badger
 PORTVERSION=	0.09
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl Application Programming Toolkit
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Badger.3 \
 	Badger::Base.3 \
