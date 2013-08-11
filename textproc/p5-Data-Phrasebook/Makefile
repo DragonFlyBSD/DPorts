@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Data-Phrasebook/Makefile 319211 2013-05-27 11:24:50Z tobez $
+# $FreeBSD: textproc/p5-Data-Phrasebook/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Phrasebook
 PORTVERSION=	0.34
@@ -12,7 +12,8 @@ COMMENT=	Accessing phrasebooks from various data sources
 
 LICENSE=	ART20
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Phrasebook.3 \
 	Data::Phrasebook::Debug.3 \
