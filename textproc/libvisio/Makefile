@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/libvisio/Makefile 323076 2013-07-15 20:01:37Z jkim $
+# $FreeBSD: textproc/libvisio/Makefile 324225 2013-08-04 12:47:44Z az $
 
 PORTNAME=	libvisio
 PORTVERSION=	0.0.30
@@ -20,9 +20,9 @@ CONFIGURE_ARGS=	--disable-werror
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_XZ=		yes
-USES=		gmake pathfix pkgconfig
+USES=		gmake pathfix pkgconfig perl5
 
 .include <bsd.port.pre.mk>
 
