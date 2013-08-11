@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-Multiplex/Makefile 314017 2013-03-13 03:14:55Z miwi $
+# $FreeBSD: devel/p5-IO-Multiplex/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	IO-Multiplex
 PORTVERSION=	1.13
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	IO::Multiplex - Manage IO on many file handles
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::Multiplex.3
 # http://search.cpan.org/dist/IO-Multiplex/Changes
