@@ -1,9 +1,5 @@
-# New ports collection makefile for:    unrar4
-# Date created:				30 May 2011
-# Whom:					Joris Vandalon
-#
-# $FreeBSD: ports/archivers/libunrar4/Makefile,v 1.5 2012/11/17 05:54:21 svnexp Exp $
-#
+# Created by: Joris Vandalon
+# $FreeBSD: archivers/libunrar4/Makefile 324100 2013-08-01 11:57:14Z bapt $
 
 PORTNAME=	libunrar4
 PORTVERSION=	4.2.4
@@ -16,7 +12,8 @@ COMMENT=	Library to work with RAR archives
 
 WRKSRC=		${WRKDIR}/unrar
 
-USE_GMAKE=	yes
+USES=		gmake
+MAKE_ARGS=	CC="${CC}" CXX="${CXX}"
 MAKEFILE=	makefile.unix
 ALL_TARGET=	lib
 USE_LDCONFIG=	yes
