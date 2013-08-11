@@ -2,7 +2,7 @@
 # Date created:	   18 May 2003
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-Array-Window/Makefile,v 1.11 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: devel/p5-Array-Window/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Array-Window
@@ -17,7 +17,8 @@ COMMENT=	Calculate windows/subsets/pages of arrays
 BUILD_DEPENDS=	p5-Params-Util>=0.12:${PORTSDIR}/devel/p5-Params-Util
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Array::Window.3
 
