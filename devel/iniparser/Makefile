@@ -1,9 +1,5 @@
-# New ports collection makefile for:	iniparser
-# Date created:		01 July 2011
-# Whom:			Kevin Lo <kevlo@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/iniparser/Makefile,v 1.4 2012/11/17 05:55:50 svnexp Exp $
-#
+# Created by: Kevin Lo <kevlo@FreeBSD.org>
+# $FreeBSD: devel/iniparser/Makefile 324095 2013-08-01 06:43:44Z bapt $
 
 PORTNAME=	iniparser
 PORTVERSION=	3.1
@@ -17,13 +13,12 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_LDCONFIG=	yes
+MAKE_ARGS=	CC=${CC}
+ALL_TARGET=	
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	include/dictionary.h include/iniparser.h lib/libiniparser.a \
 		lib/libiniparser.so lib/libiniparser.so.0
-
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/dictionary.h ${PREFIX}/include
