@@ -1,5 +1,5 @@
 # Created by: krion
-# $FreeBSD: x11/xterm/Makefile 322763 2013-07-11 11:38:38Z ehaupt $
+# $FreeBSD: x11/xterm/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	xterm
 PORTVERSION=	296
@@ -18,7 +18,6 @@ CONFLICTS=	x11iraf-[0-9]*
 USE_XORG=	xaw xft
 WANT_GNOME=	desktopfileutils
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--with-utempter --enable-narrowproto
