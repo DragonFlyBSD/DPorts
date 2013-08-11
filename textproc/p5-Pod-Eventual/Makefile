@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: ports/textproc/p5-Pod-Eventual/Makefile,v 1.6 2013/02/08 02:12:15 svnexp Exp $
+# $FreeBSD: textproc/p5-Pod-Eventual/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Eventual
 PORTVERSION=	0.093330
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Mixin-Linewise>=0.001:${PORTSDIR}/devel/p5-Mixin-Linewise
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Pod::Eventual.3 \
 		Pod::Eventual::Simple.3
