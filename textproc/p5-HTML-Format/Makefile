@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: textproc/p5-HTML-Format/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-HTML-Format/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-Format
 PORTVERSION=	2.10
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Font-AFM>=0:${PORTSDIR}/x11-fonts/p5-Font-AFM \
 		p5-HTML-Tree>=3.15:${PORTSDIR}/www/p5-HTML-Tree
 TEST_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 INSTALL_TARGET=	pure_install
 
 MAN3=		HTML::FormatPS.3 \
