@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Sub-Uplevel
-# Date created:				January 27th 2003
-# Whom:	      				Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Sub-Uplevel/Makefile,v 1.21 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: devel/p5-Sub-Uplevel/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Sub-Uplevel
 PORTVERSION=	0.2400
@@ -15,7 +11,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/00$//}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Sub::Uplevel - apparently run a function in a higher stack frame
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sub::Uplevel.3
 
