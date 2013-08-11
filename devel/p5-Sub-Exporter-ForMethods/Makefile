@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Sub-Exporter-ForMethods
-# Date created:				May 27, 2010
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Sub-Exporter-ForMethods/Makefile,v 1.3 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: devel/p5-Sub-Exporter-ForMethods/Makefile 324306 2013-08-06 08:50:49Z az $
 
 PORTNAME=	Sub-Exporter-ForMethods
 PORTVERSION=	0.100050
@@ -18,7 +14,8 @@ RUN_DEPENDS=	p5-Sub-Name>=0:${PORTSDIR}/devel/p5-Sub-Name \
 		p5-Sub-Exporter>=0.978:${PORTSDIR}/devel/p5-Sub-Exporter
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sub::Exporter::ForMethods.3
 
