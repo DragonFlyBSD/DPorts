@@ -1,9 +1,5 @@
-# New ports collection makefile for:	File-NCopy
-# Date created:	   18 May 2003
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-File-NCopy/Makefile,v 1.8 2012/11/17 05:56:16 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-File-NCopy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-NCopy
 PORTVERSION=	0.36
@@ -16,7 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Copy file(s) to directories/file
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::NCopy.3
 
