@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-MongoDB
-# Date created:				23 Dec, 2009
-# Whom:	      				Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-MongoDB/Makefile,v 1.21 2012/12/17 09:41:16 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: databases/p5-MongoDB/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MongoDB
 PORTVERSION=	0.45
@@ -35,7 +31,8 @@ TEST_DEPENDS=	p5-Data-Types>=0:${PORTSDIR}/devel/p5-Data-Types \
 		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
 
 MAKE_JOBS_UNSAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MongoDB.3 \
 		MongoDB::BSON.3 \
