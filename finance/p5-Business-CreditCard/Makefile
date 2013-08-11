@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: ports/finance/p5-Business-CreditCard/Makefile,v 1.26 2013/02/24 17:04:39 svnexp Exp $
+# $FreeBSD: finance/p5-Business-CreditCard/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Business-CreditCard
 PORTVERSION=	0.32
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl5 module to validate/generate credit card checksums/names
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::CreditCard.3
 
