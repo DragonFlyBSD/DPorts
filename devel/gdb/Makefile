@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/gdb/Makefile 318323 2013-05-16 17:07:13Z rakuco $
+# $FreeBSD: devel/gdb/Makefile 322388 2013-07-06 12:07:36Z tijl $
 
 PORTNAME=	gdb
 PORTVERSION=	7.6
@@ -13,6 +13,7 @@ COMMENT=	GNU GDB of newer version than comes with the system
 LICENSE=	GPLv3
 
 USE_BZIP2=	yes
+USE_CSTD=	gnu89
 USE_GMAKE=	yes
 USES=		iconv
 GNU_CONFIGURE=	yes
