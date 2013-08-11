@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: sysutils/tmux/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/tmux/Makefile 323874 2013-07-29 08:30:06Z gahr $
 
 PORTNAME=	tmux
 PORTVERSION=	1.8
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
