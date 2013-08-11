@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/net/p5-Net-Pcap/Makefile,v 1.25 2012/12/22 18:13:50 svnexp Exp $
+# $FreeBSD: net/p5-Net-Pcap/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Pcap
 PORTVERSION=	0.17
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-IO-Interface>=0:${PORTSDIR}/net/p5-IO-Interface
 TEST_DEPENDS=	p5-Socket>=0:${PORTSDIR}/net/p5-Socket \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pcapinfo.1
 MAN3=		Net::Pcap.3
