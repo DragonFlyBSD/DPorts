@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/smake/Makefile 313309 2013-03-02 23:56:09Z eadler $
+# $FreeBSD: devel/smake/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	smake
 PORTVERSION=	1.2.3
@@ -17,10 +17,8 @@ LICENSE_FILE_CDDL=	${WRKSRC}/CDDL.Schily.txt
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:C/.a.*//g}
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=	gmake
 MAKE_ARGS=	INS_BASE=${PREFIX} DEFMANBASE=.
-
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		smake.1
 MAN5=		makefiles.5 makerules.5
