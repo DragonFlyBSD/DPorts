@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Symbolic/Makefile 321727 2013-06-25 09:07:16Z culot $
+# $FreeBSD: math/p5-Math-Symbolic/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-Symbolic
 PORTVERSION=	0.612
@@ -37,6 +37,7 @@ MAN3=	Math::Symbolic.3 \
 	Math::Symbolic::Variable.3 \
 	Math::Symbolic::VectorCalculus.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
