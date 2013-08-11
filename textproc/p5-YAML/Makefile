@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-YAML/Makefile,v 1.25 2012/11/17 06:02:14 svnexp Exp $
+# $FreeBSD: textproc/p5-YAML/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	YAML
 PORTVERSION=	0.84
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	YAML implementation in Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	\
 	Test::YAML.3 \
