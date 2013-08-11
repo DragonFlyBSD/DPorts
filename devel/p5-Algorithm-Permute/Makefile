@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Algorithm::Permute
-# Date created:				04 Nov 2000
-# Whom:					will
-#
-# $FreeBSD: ports/devel/p5-Algorithm-Permute/Makefile,v 1.10 2012/11/17 05:56:04 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: devel/p5-Algorithm-Permute/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Algorithm-Permute
 PORTVERSION=	0.12
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl interface to handy and fast permutation
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Algorithm::Permute.3
 
