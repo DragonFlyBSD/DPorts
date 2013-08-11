@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: ports/devel/p5-Class-Tom/Makefile,v 1.19 2012/12/18 12:10:17 svnexp Exp $
+# $FreeBSD: devel/p5-Class-Tom/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Class-Tom
 PORTVERSION=	3.02
@@ -15,7 +15,8 @@ COMMENT=	A perl module to transport objects from one system to another
 BUILD_DEPENDS=	p5-Devel-Symdump>=0:${PORTSDIR}/devel/p5-Devel-Symdump
 RUN_DEPENDS=	p5-Devel-Symdump>=0:${PORTSDIR}/devel/p5-Devel-Symdump
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Tom.3
 
