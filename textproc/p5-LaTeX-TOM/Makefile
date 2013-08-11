@@ -1,9 +1,5 @@
-# New ports collection makefile for:	LaTeX-TOM
-# Date created:				4th June, 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-LaTeX-TOM/Makefile,v 1.6 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: textproc/p5-LaTeX-TOM/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	LaTeX-TOM
 PORTVERSION=	1.03
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for parsing, analyzing, and manipulating LaTeX documents
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	LaTeX::TOM.3
 
