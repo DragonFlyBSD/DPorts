@@ -2,7 +2,7 @@
 # Date created:		25 February 2000
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: japanese/p5-Text-Kakasi/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: japanese/p5-Text-Kakasi/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Text-Kakasi
@@ -15,7 +15,8 @@ COMMENT=	Kakasi library module for Perl5
 
 LIB_DEPENDS=	kakasi.3:${PORTSDIR}/japanese/kakasi
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Text::Kakasi.3 Text::Kakasi::JP.3
 
 .include <bsd.port.pre.mk>
