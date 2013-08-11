@@ -2,19 +2,17 @@
 # Date created:		17 July 1999
 # Whom:			Jim Mock <jim@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-wm/libdockapp/Makefile,v 1.35 2012/11/17 06:03:43 svnexp Exp $
+# $FreeBSD: x11-wm/libdockapp/Makefile 322787 2013-07-11 17:13:36Z xride $
 #
 
 PORTNAME=	libdockapp
 PORTVERSION=	0.6.2
 CATEGORIES=	x11-wm
-MASTER_SITES=	http://solfertje.student.utwente.nl/~dalroi/libdockapp/files/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	xride
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	xride@FreeBSD.org
 COMMENT=	Standard library for Window Maker dock apps
-
-DEPRECATED=	Abandonware, upstream disappeared
-EXPIRATION_DATE=	2012-10-20
 
 USE_BZIP2=	yes
 USE_XORG=	xext xpm
