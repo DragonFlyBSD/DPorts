@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Visitor/Makefile 323229 2013-07-18 13:18:50Z culot $
+# $FreeBSD: devel/p5-Data-Visitor/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Visitor
 PORTVERSION=	0.30
@@ -22,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Data-Alias>=0:${PORTSDIR}/devel/p5-Data-Alias \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Visitor.3 \
 	Data::Visitor::Callback.3
