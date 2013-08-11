@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: security/p5-Module-Signature/Makefile 320066 2013-06-06 09:43:39Z tobez $
+# $FreeBSD: security/p5-Module-Signature/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Module-Signature
 PORTVERSION=	0.73
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-IPC-Run>=0:${PORTSDIR}/devel/p5-IPC-Run \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFIGURE_ENV=	PERL_MM_USE_DEFAULT="yes"
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		cpansign.1
 MAN3=		Module::Signature.3
