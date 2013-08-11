@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-ResourcePool/Makefile 320496 2013-06-10 17:26:37Z mat $
+# $FreeBSD: devel/p5-ResourcePool/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	ResourcePool
 PORTVERSION=	1.0107
@@ -12,7 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generic way to use connection caching for any kind of resources
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	ResourcePool.3 \
 	ResourcePool::BigPicture.3 \
