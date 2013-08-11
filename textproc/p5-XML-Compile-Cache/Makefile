@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-XML-Compile-Cache/Makefile 318149 2013-05-14 08:54:55Z tobez $
+# $FreeBSD: textproc/p5-XML-Compile-Cache/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Compile-Cache
 PORTVERSION=	0.99.4
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Log-Report>=0.19:${PORTSDIR}/devel/p5-Log-Report \
 TEST_DEPENDS=	p5-Test-Pod>=1.00:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-XML-Compile-Tester>=0.02:${PORTSDIR}/devel/p5-XML-Compile-Tester
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Compile::Cache.3
 
