@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MooseX-SemiAffordanceAccessor
-# Date created:				Fri 14 Aug 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: ports/devel/p5-MooseX-SemiAffordanceAccessor/Makefile,v 1.6 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: devel/p5-MooseX-SemiAffordanceAccessor/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-SemiAffordanceAccessor
 PORTVERSION=	0.09
@@ -21,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 MAN3=		MooseX::SemiAffordanceAccessor.3 \
 		MooseX::SemiAffordanceAccessor::Role::Attribute.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
