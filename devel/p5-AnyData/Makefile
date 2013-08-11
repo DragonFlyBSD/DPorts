@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-AnyData/Makefile 320069 2013-06-06 09:57:42Z mat $
+# $FreeBSD: devel/p5-AnyData/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	AnyData
 PORTVERSION=	0.11
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Easy access to data in many formats
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	AnyData.3 \
 	AnyData::Format::CSV.3 \
