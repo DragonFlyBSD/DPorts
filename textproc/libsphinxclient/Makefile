@@ -1,5 +1,5 @@
 # Created by: Max Baryshnikov <mephius@gmail.com>
-# $FreeBSD: ports/textproc/libsphinxclient/Makefile,v 1.3 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: textproc/libsphinxclient/Makefile 322869 2013-07-12 22:43:29Z bapt $
 
 PORTNAME=	libsphinxclient
 DISTVERSION=	2.0.5
@@ -17,8 +17,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/api/libsphinxclient
 USE_LDCONFIG=	yes
 
 USE_AUTOTOOLS=	libtool
-
-.include <bsd.port.options.mk>
+MAKE_JOBS_UNSAFE=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CC=${CC}
