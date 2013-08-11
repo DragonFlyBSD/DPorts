@@ -2,7 +2,7 @@
 # Date created:				12th May 2004
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/libdca/Makefile,v 1.9 2012/11/17 05:59:50 svnexp Exp $
+# $FreeBSD: multimedia/libdca/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	libdca
@@ -10,7 +10,7 @@ PORTVERSION=	0.0.5
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${PORTVERSION}/
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free DTS Coherent Acoustics decoder
 
 GNU_CONFIGURE=	yes
