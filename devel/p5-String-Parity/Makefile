@@ -2,7 +2,7 @@
 # Date created:				24 October 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-String-Parity/Makefile,v 1.9 2012/11/17 05:56:30 svnexp Exp $
+# $FreeBSD: devel/p5-String-Parity/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	String-Parity
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A perl5 module to generate and test even, odd, mark, and space parity
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		String::Parity.3
 
