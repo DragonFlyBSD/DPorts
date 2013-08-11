@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-Flow
-# Date created:		2006-07-27
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Flow/Makefile,v 1.9 2012/11/17 06:02:12 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: textproc/p5-XML-Flow/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Flow
 PORTVERSION=	0.86
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-XML-Writer>=0:${PORTSDIR}/textproc/p5-XML-Writer
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Flow.3
 
