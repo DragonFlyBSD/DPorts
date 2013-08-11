@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Text-Query
-# Date created:				31 December 2000
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Query/Makefile,v 1.7 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: textproc/p5-Text-Query/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Text-Query
 PORTVERSION=	0.07
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Query processing framework
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 
 MAN3=		Text::Query.3 Text::Query::Build.3 \
 		Text::Query::BuildAdvancedString.3 \
