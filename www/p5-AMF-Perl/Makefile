@@ -1,13 +1,9 @@
-# New ports collection makefile for:	Flash-FLAP
-# Date created:	   20 May 2003
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-AMF-Perl/Makefile,v 1.13 2012/11/17 06:02:44 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-AMF-Perl/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	AMF-Perl
 PORTVERSION=	0.15
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SIMONF
@@ -19,7 +15,8 @@ COMMENT=	Flash Remoting in Perl
 RUN_DEPENDS=	p5-Exception-Class>=0:${PORTSDIR}/devel/p5-Exception-Class \
 		p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 
 NO_MANCOMPRESS=	no
 MAN3=		AMF::Perl.3 AMF::Perl::App::Executive.3 \
