@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Object-Tiny
-# Date created:		2007-09-05
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Object-Tiny/Makefile,v 1.6 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Object-Tiny/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Object-Tiny
 PORTVERSION=	1.08
@@ -17,7 +13,8 @@ COMMENT=	Class building as simple as it gets
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Object::Tiny.3
 
