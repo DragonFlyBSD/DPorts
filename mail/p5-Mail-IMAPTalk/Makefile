@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mail-IMAPTalk
-# Date created:				24 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/p5-Mail-IMAPTalk/Makefile,v 1.11 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: mail/p5-Mail-IMAPTalk/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-IMAPTalk
 PORTVERSION=	3.01
@@ -17,8 +13,8 @@ COMMENT=	IMAP client interface with lots of features
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-MAKE_JOBS_SAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::IMAPTalk.3
 
