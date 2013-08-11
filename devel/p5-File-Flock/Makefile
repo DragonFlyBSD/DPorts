@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Flock/Makefile 316129 2013-04-20 07:50:27Z sunpoet $
+# $FreeBSD: devel/p5-File-Flock/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-Flock
 PORTVERSION=	2013.08
@@ -20,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 		p5-Test-SharedFork>=0:${PORTSDIR}/devel/p5-Test-SharedFork
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Flock.3 \
 		File::Flock::Forking.3 \
