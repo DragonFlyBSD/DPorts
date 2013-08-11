@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: ports/x11-toolkits/p5-Gtk/Makefile,v 1.58 2012/12/16 19:54:13 svnexp Exp $
+# $FreeBSD: x11-toolkits/p5-Gtk/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Gtk
 PORTVERSION=	0.7010
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-XML-Writer>=0:${PORTSDIR}/textproc/p5-XML-Writer \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
 USE_GNOME=	gtk12
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	--without-guessing --lazy-load
 MAKE_JOBS_UNSAFE=	yes
 
