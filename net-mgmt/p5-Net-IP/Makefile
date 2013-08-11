@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: net-mgmt/p5-Net-IP/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: net-mgmt/p5-Net-IP/Makefile 324222 2013-08-04 12:30:54Z az $
 
 PORTNAME=	Net-IP
 PORTVERSION=	1.26
@@ -10,9 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Perl extension for manipulating IPv4/IPv6 addresses
 
-PERL_CONFIGURE=	yes
-
-MAKE_JOBS_SAFE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::IP.3
 
