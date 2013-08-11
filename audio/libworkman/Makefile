@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libworkman
-# Date created:			8 August 1999
-# Whom:				Jim Mock <jim@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/libworkman/Makefile,v 1.19 2012/11/17 05:54:37 svnexp Exp $
-#
+# Created by: Jim Mock <jim@FreeBSD.org>
+# $FreeBSD: audio/libworkman/Makefile 321970 2013-06-28 18:19:20Z bapt $
 
 PORTNAME=	libworkman
 PORTVERSION=	1.4
@@ -19,8 +15,8 @@ COMMENT=	Workman library required by some audio apps
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
+USES=		imake
 WRKSRC=		${WRKDIR}/libworkman
-USE_IMAKE=	yes
 USE_LDCONFIG=	yes
 CFLAGS+=	-fPIC
 
