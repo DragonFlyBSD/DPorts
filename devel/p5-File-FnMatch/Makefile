@@ -2,7 +2,7 @@
 # Date created:				24 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-File-FnMatch/Makefile,v 1.4 2012/11/17 05:56:16 svnexp Exp $
+# $FreeBSD: devel/p5-File-FnMatch/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	File-FnMatch
@@ -16,6 +16,7 @@ COMMENT=	Simple filename and pathname matching
 
 MAN3=	File::FnMatch.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
