@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/p5-Bio-SCF/Makefile 319570 2013-06-01 14:22:35Z wen $
+# $FreeBSD: biology/p5-Bio-SCF/Makefile 324306 2013-08-06 08:50:49Z az $
 
 PORTNAME=	Bio-SCF
 PORTVERSION=	1.03
@@ -16,7 +16,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Bio::SCF.3
 
