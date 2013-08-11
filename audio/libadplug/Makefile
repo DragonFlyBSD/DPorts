@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/libadplug/Makefile 316287 2013-04-22 23:19:08Z bapt $
+# $FreeBSD: audio/libadplug/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	libadplug
 PORTVERSION=	2.2.1
@@ -19,8 +19,6 @@ USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_CSTD=	gnu89
-
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 
