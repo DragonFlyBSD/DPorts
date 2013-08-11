@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Moose/Makefile 322549 2013-07-09 08:51:35Z tobez $
+# $FreeBSD: devel/p5-Moose/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Moose
 PORTVERSION=	2.0802
@@ -41,7 +41,8 @@ TEST_DEPENDS=	\
 
 CFLAGS+=	-I.	# mop.h
 MAKE_JOBS_UNSAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure extract
 
 MAN3=	Class::MOP.3 \
 	Class::MOP::Attribute.3 \
