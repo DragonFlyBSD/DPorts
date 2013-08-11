@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-Tangram
-# Date created:	   08 April 2002
-# Whom:		   Sergey Skvortsov <skv@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Class-Tangram/Makefile,v 1.15 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@FreeBSD.org>
+# $FreeBSD: devel/p5-Class-Tangram/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Tangram
 PORTVERSION=	1.57
@@ -19,12 +15,13 @@ BUILD_DEPENDS=	p5-Set-Object>=0:${PORTSDIR}/devel/p5-Set-Object \
 		p5-Tangram>=0:${PORTSDIR}/databases/p5-Tangram
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Tangram.3 Class::Tangram::Containers.3 \
 		Class::Tangram::Generator.3
 
 post-patch:
-		@${PERL} -pi -e 's/\@/\\@/' ${WRKSRC}/Makefile.PL
+		@${REINPLACE_CMD} -i '' -e 's|\@|\\@|' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
