@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/p5-Chatbot-Eliza/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/p5-Chatbot-Eliza/Makefile 324167 2013-08-02 17:11:34Z az $
 
 PORTNAME=	Chatbot-Eliza
 PORTVERSION=	1.04
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Clone of the classic Eliza program
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Chatbot::Eliza.3
 
