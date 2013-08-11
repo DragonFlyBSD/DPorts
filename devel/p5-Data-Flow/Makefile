@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Data-Flow
-# Date created:				October 20th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Data-Flow/Makefile,v 1.21 2012/11/17 05:56:10 svnexp Exp $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: devel/p5-Data-Flow/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Data-Flow
 PORTVERSION=	1.02
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl extension for simple-minded recipe-controlled build of data
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Flow.3
 
