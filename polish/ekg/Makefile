@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: polish/ekg/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: polish/ekg/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	ekg
 DISTVERSION=	1.8rc2
@@ -14,9 +14,8 @@ COMMENT=	Text-mode Gadu-Gadu client
 LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 		gadu:${PORTSDIR}/polish/libgadu
 
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USES=	pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS= --without-libungif \
@@ -33,16 +32,10 @@ MANCOMPRESSED=	no
 OPTIONS_DEFINE=		ASPELL OPENSSL
 OPTIONS_DEFAULT=	OPENSSL
 
-.include <bsd.port.options.mk>
+ASPELL_CONFIGURE_ON=	--enable-aspell
+ASPELL_LIB_DEPENDS=	aspell:${PORTSDIR}/polish/aspell
 
-.if ${PORT_OPTIONS:MASPELL}
-LIB_DEPENDS+=		aspell:${PORTSDIR}/polish/aspell
-CONFIGURE_ARGS+=	--enable-aspell
-.endif
-
-.if ! ${PORT_OPTIONS:MOPENSSL}
-CONFIGURE_ARGS+=	--without-openssl
-.endif
+OPENSSL_CONFIGURE_OFF=	--without-openssl
 
 post-install:
 	${STRIP_CMD} ${PREFIX}/bin/ekg
