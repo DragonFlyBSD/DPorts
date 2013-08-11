@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/p5-MeCab/Makefile 314727 2013-03-20 12:41:52Z tota $
+# $FreeBSD: japanese/p5-MeCab/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MeCab
 PORTVERSION=	0.995
@@ -19,7 +19,8 @@ LICENSE_FILE_LGPL21=	${WRKSRC}/LGPL
 
 LIB_DEPENDS=	mecab:${PORTSDIR}/japanese/mecab
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 OPTIONS_DEFINE=	EXAMPLES
 OPTIONSFILE=	${PORT_DBDIR}/ja-p5-${PORTNAME}/options
