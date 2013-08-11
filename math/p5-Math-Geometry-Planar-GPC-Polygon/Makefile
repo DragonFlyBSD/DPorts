@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Math-Geometry-Planar-GPC-Polygon
-# Date created:		03 Mar 2011
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-Geometry-Planar-GPC-Polygon/Makefile,v 1.4 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Geometry-Planar-GPC-Polygon/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	Math-Geometry-Planar-GPC-Polygon
 PORTVERSION=	0.05
