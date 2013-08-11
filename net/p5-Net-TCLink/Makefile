@@ -2,7 +2,7 @@
 # Date created:				24 October 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-TCLink/Makefile,v 1.8 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-TCLink/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-TCLink
@@ -15,7 +15,8 @@ DISTNAME=	Net_TCLink.pm-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A module to for connecting to the TrustCommerce payment gateway
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::TCLink.3
 
