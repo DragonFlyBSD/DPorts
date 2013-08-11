@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Regexp-Common/Makefile 314292 2013-03-15 10:41:22Z tobez $
+# $FreeBSD: textproc/p5-Regexp-Common/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Regexp-Common
 PORTVERSION=	2013031301
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Regexp::Common - Provide commonly requested regular expressions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		\
 		Regexp::Common.3 \
