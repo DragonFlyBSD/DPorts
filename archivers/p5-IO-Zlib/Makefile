@@ -2,7 +2,7 @@
 # Date created:		15 Feb 2002
 # Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/p5-IO-Zlib/Makefile,v 1.16 2012/11/17 05:54:22 svnexp Exp $
+# $FreeBSD: archivers/p5-IO-Zlib/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	IO-Zlib
@@ -19,11 +19,4 @@ COMMENT=	IO:: style interface to Compress::Zlib
 PERL_CONFIGURE=	yes
 MAN3=		IO::Zlib.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-BUILD_DEPENDS=	p5-IO-Compress>=2:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS=	p5-IO-Compress>=2:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
