@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-User
-# Date created:                         May 28th, 2002
-# Whom:                                 Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/p5-User/Makefile,v 1.10 2012/11/17 06:01:40 svnexp Exp $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: sysutils/p5-User/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	User
 PORTVERSION=	1.9
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	User - API for locating user information regardless of OS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		User.3
 
