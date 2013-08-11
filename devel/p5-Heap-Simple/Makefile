@@ -2,7 +2,7 @@
 # Date created:				26 August 2004
 # Whom:					Aaron Dalton <aaron@daltons.ca>
 #
-# $FreeBSD: ports/devel/p5-Heap-Simple/Makefile,v 1.9 2012/11/17 05:56:18 svnexp Exp $
+# $FreeBSD: devel/p5-Heap-Simple/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Heap-Simple
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast and easy to use classic heaps
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Heap::Simple.3
 
