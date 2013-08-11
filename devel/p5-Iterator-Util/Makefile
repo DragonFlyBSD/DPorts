@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Iterator-Util
-# Date created:				18 Feb 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Iterator-Util/Makefile,v 1.10 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: devel/p5-Iterator-Util/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Iterator-Util
 PORTVERSION=	0.02
@@ -19,6 +15,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Iterator::Util.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
