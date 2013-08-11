@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Sub-Identify
-# Date created:	   04 Jun 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Sub-Identify/Makefile,v 1.4 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Sub-Identify/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Sub-Identify
 PORTVERSION=	0.04
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Retrieve names of code references
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sub::Identify.3
 
