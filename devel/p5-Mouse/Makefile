@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Mouse/Makefile 316781 2013-04-29 08:41:44Z tobez $
+# $FreeBSD: devel/p5-Mouse/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mouse
 PORTVERSION=	1.11
@@ -19,7 +19,8 @@ TEST_DEPENDS=	p5-Test-Exception-LessClever>=0.005:${PORTSDIR}/devel/p5-Test-Exce
 		p5-Test-Requires>=0.06:${PORTSDIR}/devel/p5-Test-Requires
 
 MAKE_JOBS_UNSAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mouse.3 \
 		Mouse::Exporter.3 \
