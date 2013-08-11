@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/devel/p5-Scope-Upper/Makefile,v 1.14 2013/01/31 20:12:05 svnexp Exp $
+# $FreeBSD: devel/p5-Scope-Upper/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Scope-Upper
 PORTVERSION=	0.22
@@ -13,7 +13,8 @@ COMMENT=	Act on upper scopes
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Scope::Upper.3
 
