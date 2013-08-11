@@ -2,7 +2,7 @@
 # Date created:				31 Dec 2001
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/databases/p5-DBIx-AnyDBD/Makefile,v 1.13 2012/11/17 05:55:14 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-AnyDBD/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	DBIx-AnyDBD
@@ -17,7 +17,8 @@ COMMENT=	DBD independent class
 BUILD_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::AnyDBD.3
 
