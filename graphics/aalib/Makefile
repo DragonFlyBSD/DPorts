@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: graphics/aalib/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: graphics/aalib/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	aalib
 PORTVERSION=	1.4.r5
@@ -17,8 +17,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-1.4.0
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INFO=		aalib
-
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
