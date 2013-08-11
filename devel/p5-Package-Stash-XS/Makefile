@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Package-Stash-XS/Makefile,v 1.9 2013/01/13 20:43:17 svnexp Exp $
+# $FreeBSD: devel/p5-Package-Stash-XS/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	Package-Stash-XS
 PORTVERSION=	0.26
@@ -14,16 +14,10 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
-	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
+		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
 PERL_CONFIGURE=	yes
 
 MAN3=		Package::Stash::XS.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
