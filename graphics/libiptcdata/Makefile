@@ -2,7 +2,7 @@
 # Date created:				3rd December 2006
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: graphics/libiptcdata/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: graphics/libiptcdata/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	libiptcdata
@@ -10,7 +10,7 @@ PORTVERSION=	1.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for manipulating IPTC metadata stored in image files
 
 USE_AUTOTOOLS=	libtool
