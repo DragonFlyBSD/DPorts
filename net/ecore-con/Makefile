@@ -1,9 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: net/ecore-con/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: net/ecore-con/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	con
-PORTVERSION=	1.7.7
-PORTREVISION=	1
+PORTVERSION=	1.7.8
 CATEGORIES=	net enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -55,12 +54,10 @@ CONFIGURE_ARGS+=	--enable-openssl
 CONFIGURE_ARGS+=	--disable-openssl
 .endif
 
-LDFLAGS+=	-L${LOCALBASE}/lib -lecore
-
 post-patch:
 	@${REINPLACE_CMD} -E -e \
 		's,\$$\(top_builddir\)/src/lib/ecore/\.libs,${LOCALBASE}/lib,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,-lecore,'\
 		${BUILD_WRKSRC}/Makefile.in
 
 post-install:
