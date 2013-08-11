@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Git-Wrapper/Makefile 317652 2013-05-08 11:38:07Z tobez $
+# $FreeBSD: devel/p5-Git-Wrapper/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Git-Wrapper
 PORTVERSION=	0.029
@@ -22,7 +22,8 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Git::Wrapper.3 \
 		Git::Wrapper::Exception.3 \
