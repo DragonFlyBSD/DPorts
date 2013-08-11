@@ -2,7 +2,7 @@
 # Date created:				2005-12-17
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
-# $FreeBSD: ports/x11-fonts/freefont-ttf/Makefile,v 1.14 2012/11/17 06:03:28 svnexp Exp $
+# $FreeBSD: x11-fonts/freefont-ttf/Makefile 322729 2013-07-10 19:41:30Z pawel $
 #
 
 PORTNAME=	freefont-ttf
@@ -23,6 +23,9 @@ USE_ZIP=	yes
 
 WRKSRC=		${WRKDIR}/freefont-${PORTVERSION}
 INSTALLDIR=	${PREFIX}/lib/X11/fonts/${PORTNAME}
+PORTDOCS=	AUTHORS ChangeLog CREDITS README
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
@@ -32,12 +35,8 @@ do-build:
 
 do-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCSDIR}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 .endif
 	${MKDIR} ${INSTALLDIR}
 	cd ${WRKSRC} && \
