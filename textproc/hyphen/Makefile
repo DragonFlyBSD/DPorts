@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hyphen/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/hyphen/Makefile 324225 2013-08-04 12:47:44Z az $
 
 PORTNAME=	hyphen
 PORTVERSION=	2.8.6
@@ -12,9 +12,9 @@ COMMENT=	Library for high quality hyphenation and justification
 BUILD_DEPENDS=	gawk:${PORTSDIR}/lang/gawk
 
 GNU_CONFIGURE=	yes
-USES=	pathfix
+USES=	pathfix perl5
+USE_PERL5=	build
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=	yes
 
 CONFIGURE_ENV+=	ac_cv_prog_AWK=gawk
 
