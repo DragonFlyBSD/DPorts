@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-SQL-ReservedWords
-# Date created:				29 August 2006
-# Whom:					Zach Thompson <hideo@lastamericanempire.com>
-#
-# $FreeBSD: ports/databases/p5-SQL-ReservedWords/Makefile,v 1.10 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: Zach Thompson <hideo@lastamericanempire.com>
+# $FreeBSD: databases/p5-SQL-ReservedWords/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SQL-ReservedWords
 PORTVERSION=	0.8
@@ -20,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	sqlrw.1
 MAN3=	SQL::ReservedWords.3 \
