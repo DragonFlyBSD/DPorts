@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars.eggert@gmx.net>
-# $FreeBSD: www/p5-HTML-TokeParser-Simple/Makefile 321931 2013-06-28 02:37:39Z clsung $
+# $FreeBSD: www/p5-HTML-TokeParser-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-TokeParser-Simple
 PORTVERSION=	3.16
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-Sub-Override>=0:${PORTSDIR}/devel/p5-Sub-Override
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::TokeParser::Simple.3 HTML::TokeParser::Simple::Token.3 \
 		HTML::TokeParser::Simple::Token::Comment.3 \
