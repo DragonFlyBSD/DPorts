@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin
-# $FreeBSD: devel/p5-ShipIt/Makefile 320497 2013-06-10 17:34:38Z mat $
+# $FreeBSD: devel/p5-ShipIt/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	ShipIt
 PORTVERSION=	0.60
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Software release tool
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		shipit.1
 MAN3=		ShipIt.3 ShipIt::Conf.3 ShipIt::ProjectType.3 \
