@@ -1,8 +1,8 @@
 # Created by: Ulf Lilleengen
-# $FreeBSD: security/py-paramiko/Makefile 315823 2013-04-16 15:31:40Z sbz $
+# $FreeBSD: security/py-paramiko/Makefile 324152 2013-08-02 08:19:28Z sbz $
 
 PORTNAME=	paramiko
-PORTVERSION=	1.10.1
+PORTVERSION=	1.11.0
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,7 @@ COMMENT=	Python SSH2 protocol library
 
 LICENSE=	GPLv2
 
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/Crypto/__init__.py:${PORTSDIR}/security/py-pycrypto
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycrypto>0:${PORTSDIR}/security/py-pycrypto
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
