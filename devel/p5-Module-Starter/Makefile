@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Module-Starter/Makefile 320491 2013-06-10 16:56:54Z mat $
+# $FreeBSD: devel/p5-Module-Starter/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Module-Starter
 PORTVERSION=	1.60
@@ -13,7 +13,8 @@ COMMENT=	Simple starter kit for any Perl module
 BUILD_DEPENDS=	p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class
 RUN_DEPENDS=	p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		module-starter.1
 MAN3=		Module::Starter.3 \
