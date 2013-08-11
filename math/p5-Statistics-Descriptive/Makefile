@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: math/p5-Statistics-Descriptive/Makefile 318758 2013-05-22 09:32:37Z tobez $
+# $FreeBSD: math/p5-Statistics-Descriptive/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Statistics-Descriptive
 PORTVERSION=	3.0605
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl module that supplies statistical methods for perl5
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Statistics::Descriptive.3 \
 	Statistics::Descriptive::Smoother.3 \
