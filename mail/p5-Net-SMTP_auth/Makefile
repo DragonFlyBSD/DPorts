@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-SMTP_auth
-# Date created:		2006-10-31
-# Whom:			Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/p5-Net-SMTP_auth/Makefile,v 1.8 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: mail/p5-Net-SMTP_auth/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-SMTP_auth
 PORTVERSION=	0.08
@@ -17,7 +13,8 @@ COMMENT=	Simple Mail Transfer Protocol Client with AUTHentication
 BUILD_DEPENDS=	p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL \
 		p5-Digest-HMAC>=0:${PORTSDIR}/security/p5-Digest-HMAC
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SMTP_auth.3
 
