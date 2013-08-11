@@ -2,7 +2,7 @@
 # Date created:				September 29th, 2005
 # Whom:	      				Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/p5-Net-FreeDB/Makefile,v 1.13 2012/11/17 05:54:40 svnexp Exp $
+# $FreeBSD: audio/p5-Net-FreeDB/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-FreeDB
@@ -18,7 +18,8 @@ COMMENT=	Get the CDID of an audio CD and query the FreeDB servers
 BUILD_DEPENDS=	p5-CDDB-File>=0:${PORTSDIR}/audio/p5-CDDB-File
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::FreeDB.3
 
