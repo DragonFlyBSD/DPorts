@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Time-Duration/Makefile 317177 2013-05-03 07:38:11Z culot $
+# $FreeBSD: devel/p5-Time-Duration/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Time-Duration
 PORTVERSION=	1.1
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Time::Duration.3
 
