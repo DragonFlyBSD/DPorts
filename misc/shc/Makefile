@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: misc/shc/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: misc/shc/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	shc
 PORTVERSION=	3.8.9
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Generic script compiler
-
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		shc.1
 PLIST_FILES=	bin/shc
