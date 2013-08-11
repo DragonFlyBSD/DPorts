@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Peek/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Data-Peek/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Peek
 PORTVERSION=	0.38
@@ -13,7 +13,8 @@ COMMENT=	Collection of low-level debug facilities
 
 TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Peek.3 Data::DP.3
 
