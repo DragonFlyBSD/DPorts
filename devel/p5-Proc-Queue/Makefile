@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Proc-Queue
-# Date created:				28 December 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Proc-Queue/Makefile,v 1.12 2012/11/17 05:56:27 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Proc-Queue/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Proc-Queue
 PORTVERSION=	1.23
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Proc::Queue - limit the number of child processes running
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Proc::Queue.3
 
