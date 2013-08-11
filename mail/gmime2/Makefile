@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: mail/gmime2/Makefile 317707 2013-05-08 20:26:42Z bdrewery $
+# $FreeBSD: mail/gmime2/Makefile 324037 2013-07-31 11:57:45Z kwm $
 
 PORTNAME=	gmime
 PORTVERSION=	2.2.27
@@ -36,6 +36,8 @@ PORTDOCS=	*
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|stdint.h|inttypes.h|" ${WRKSRC}/zentimer.h
+	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
+		${WRKSRC}/gmime/Makefile.in
 
 post-install:
 .if !defined(NOPORTDOCS)
