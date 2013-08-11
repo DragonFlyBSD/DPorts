@@ -1,6 +1,6 @@
 # ex:ts=8
 #
-# $FreeBSD: ports/lang/pure/bsd.pure.mk,v 1.3 2012/11/17 05:58:55 svnexp Exp $
+# $FreeBSD: lang/pure/bsd.pure.mk 324440 2013-08-09 14:29:39Z danfe $
 #
 # bsd.pure.mk - Support for the Pure language packages
 #
@@ -22,7 +22,7 @@ PURE_include=	bsd.pure.mk
 MASTER_SITES?=	http://pure-lang.googlecode.com/files/
 DIST_SUBDIR=	pure
 
-USE_GMAKE=	yes
+USES+=		gmake
 
 _PURE_audio_cat=	audio
 _PURE_csv_cat=		textproc
@@ -46,7 +46,7 @@ CATEGORIES=		_PURE_${PORTNAME}_cat
 .if ${PORTNAME} != pure
 
 .if ${USE_PURE} == yes
-LIB_DEPENDS+=	pure.8:${PORTSDIR}/lang/pure
+LIB_DEPENDS+=	libpure.so.8:${PORTSDIR}/lang/pure
 .else
 . for dep in ${USE_PURE}
 _PURE_LIBDIR=	${LOCALBASE}/lib/pure
@@ -88,7 +88,7 @@ PORTEXAMPLES=	*
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}
-	(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR})
+	(cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${EXAMPLESDIR})
 .endif
 
 .endif
