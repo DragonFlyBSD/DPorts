@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/ecore-ipc/Makefile 318442 2013-05-18 19:36:31Z gblach $
+# $FreeBSD: devel/ecore-ipc/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	ipc
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
