@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Pod-Tests
-# Date created:				20 Nov 2005
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Pod-Tests/Makefile,v 1.7 2012/11/17 05:56:27 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: devel/p5-Pod-Tests/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Tests
 PORTVERSION=	1.19
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extracts embedded tests and code examples from POD
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pod2test.1
 MAN3=		Pod::Tests.3
