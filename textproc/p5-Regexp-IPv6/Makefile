@@ -2,7 +2,7 @@
 # Date created:				01 September 2011
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-Regexp-IPv6/Makefile,v 1.2 2012/11/17 06:02:07 svnexp Exp $
+# $FreeBSD: textproc/p5-Regexp-IPv6/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Regexp-IPv6
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Regular expression for IPv6 addresses
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Regexp::IPv6.3
 
