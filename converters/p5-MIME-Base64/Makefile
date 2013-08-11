@@ -1,5 +1,5 @@
 # Created by: ache@freebsd.org
-# $FreeBSD: converters/p5-MIME-Base64/Makefile 322473 2013-07-08 01:55:36Z clsung $
+# $FreeBSD: converters/p5-MIME-Base64/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MIME-Base64
 PORTVERSION=	3.14
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module for Base64 and Quoted-Printable encodings
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MIME::Base64.3 \
 		MIME::QuotedPrint.3
