@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Method-Modifiers/Makefile 316875 2013-04-30 04:43:26Z culot $
+# $FreeBSD: devel/p5-Class-Method-Modifiers/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Method-Modifiers
 PORTVERSION=	2.04
@@ -15,7 +15,8 @@ LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Method::Modifiers.3
 
