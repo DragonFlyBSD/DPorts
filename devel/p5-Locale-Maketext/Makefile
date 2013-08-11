@@ -1,5 +1,5 @@
 # Created by: Frank Mayhar <frank@exit.com>
-# $FreeBSD: ports/devel/p5-Locale-Maketext/Makefile,v 1.28 2012/12/06 12:55:42 svnexp Exp $
+# $FreeBSD: devel/p5-Locale-Maketext/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Locale-Maketext
 PORTVERSION=	1.23
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Locale::Maketext.3 \
 		Locale::Maketext::Cookbook.3 \
