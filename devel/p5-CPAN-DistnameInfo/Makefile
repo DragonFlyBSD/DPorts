@@ -2,7 +2,7 @@
 # Date created:				Mar 27 2004
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/devel/p5-CPAN-DistnameInfo/Makefile,v 1.12 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: devel/p5-CPAN-DistnameInfo/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	CPAN-DistnameInfo
 PORTVERSION=	0.12
@@ -13,7 +13,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Extract distribution name and version from a CPAN filename
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CPAN::DistnameInfo.3
 
