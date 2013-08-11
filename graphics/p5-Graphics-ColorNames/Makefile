@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: graphics/p5-Graphics-ColorNames/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: graphics/p5-Graphics-ColorNames/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Graphics-ColorNames
 PORTVERSION=	2.11
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Module-Load>=0.10:${PORTSDIR}/devel/p5-Module-Load \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Graphics::ColorNames.3 \
 	Graphics::ColorNames::HTML.3 \
