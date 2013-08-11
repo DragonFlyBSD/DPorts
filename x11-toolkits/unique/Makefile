@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/unique/Makefile 318071 2013-05-13 11:44:07Z kwm $
+# $FreeBSD: x11-toolkits/unique/Makefile 324186 2013-08-03 10:29:52Z kwm $
 #   $MCom: ports/x11-toolkits/unique/Makefile,v 1.12 2012/09/03 16:28:30 mezz Exp $
 
 PORTNAME=	unique
@@ -20,7 +20,7 @@ USE_GMAKE=	yes
 USES=		gettext
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gtk20 gnomeprefix ltverhack:2
+USE_GNOME=	gtk20 gnomeprefix introspection:build ltverhack:2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-maintainer-flags
 CPPFLAGS+=	-I${LOCALBASE}/include
