@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: dns/p5-Net-DNS-ToolKit/Makefile 316881 2013-04-30 06:23:15Z culot $
+# $FreeBSD: dns/p5-Net-DNS-ToolKit/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-DNS-ToolKit
 PORTVERSION=	0.47
@@ -16,7 +16,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAKE_JOBS_UNSAFE=	yes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::DNS::ToolKit.3 \
 		Net::DNS::ToolKit::Debug.3 \
