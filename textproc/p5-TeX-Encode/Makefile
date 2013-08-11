@@ -1,9 +1,5 @@
-# New ports collection makefile for:	TeX-Encode
-# Date created:				15 May2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-TeX-Encode/Makefile,v 1.18 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: textproc/p5-TeX-Encode/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	TeX-Encode
 PORTVERSION=	1.3
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=3.35:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS=	p5-HTML-Parser>=3.35:${PORTSDIR}/www/p5-HTML-Parser
 TEST_DEPENDS=	p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		TeX::Encode.3 TeX::Encode::BibTeX.3 TeX::Encode::charmap.3
 
