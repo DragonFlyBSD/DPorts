@@ -1,9 +1,5 @@
-# New ports collection makefile for:	MooseX-SetOnce
-# Date created:				2011-04-03
-# Whom:					Frederic Culot <culot@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-MooseX-SetOnce/Makefile,v 1.6 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Frederic Culot <culot@FreeBSD.org>
+# $FreeBSD: devel/p5-MooseX-SetOnce/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-SetOnce
 PORTVERSION=	0.200001
@@ -22,7 +18,8 @@ RUN_DEPENDS=	p5-Moose>=0.90:${PORTSDIR}/devel/p5-Moose
 
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::SetOnce.3
 
