@@ -1,5 +1,5 @@
 # Created by: Tuc <freebsd-ports@t-b-o-h.net>
-# $FreeBSD: net-mgmt/p5-Data-Validate-IP/Makefile 314056 2013-03-13 10:50:51Z bapt $
+# $FreeBSD: net-mgmt/p5-Data-Validate-IP/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Data-Validate-IP
 PORTVERSION=	0.14
@@ -14,7 +14,8 @@ COMMENT=	Common data validation methods for IPs
 BUILD_DEPENDS=	p5-Net-Netmask>=0:${PORTSDIR}/net-mgmt/p5-Net-Netmask
 RUN_DEPENDS=	p5-Net-Netmask>=0:${PORTSDIR}/net-mgmt/p5-Net-Netmask
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Validate::IP.3
 
