@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-No-Worries/Makefile 318680 2013-05-21 11:48:38Z tobez $
+# $FreeBSD: devel/p5-No-Worries/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	No-Worries
 PORTVERSION=	1.0
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-HTTP-Date>=0:${PORTSDIR}/www/p5-HTTP-Date \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	No::Worries.3 \
 	No::Worries::DN.3 \
