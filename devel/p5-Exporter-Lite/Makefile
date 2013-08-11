@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Exporter-Lite
-# Date created:		16 April 2003
-# Whom:			Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/devel/p5-Exporter-Lite/Makefile,v 1.7 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: devel/p5-Exporter-Lite/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Exporter-Lite
 PORTVERSION=	0.02
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lightweight exporting of variables
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Exporter::Lite.3
 
