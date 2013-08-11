@@ -1,9 +1,9 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: ports/net-mgmt/mrtg/Makefile,v 1.117 2012/11/17 06:00:33 svnexp Exp $
+# $FreeBSD: net-mgmt/mrtg/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	mrtg
 PORTVERSION=	2.17.4
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt ipv6
 MASTER_SITES=	http://oss.oetiker.ch/mrtg/pub/ \
