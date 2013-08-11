@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ois
-# Date created:		16 Jun 2008
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: devel/ois/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: devel/ois/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	ois
 PORTVERSION=	1.2.0
@@ -17,7 +13,7 @@ COMMENT=	Object Oriented Input System
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USES=	pathfix
+USES=		pathfix
 USE_AUTOTOOLS=	libtool:env aclocal:env autoheader:env automake:env autoconf:env
 USE_XORG=	x11 xaw
 USE_LDCONFIG=	yes
