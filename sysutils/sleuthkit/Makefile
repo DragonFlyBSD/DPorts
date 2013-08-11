@@ -1,5 +1,5 @@
 # Created by: Pieter Danhieux <opr@bsdaemon.be>
-# $FreeBSD: sysutils/sleuthkit/Makefile 321297 2013-06-19 17:17:11Z antoine $
+# $FreeBSD: sysutils/sleuthkit/Makefile 324183 2013-08-03 09:24:26Z antoine $
 
 PORTNAME=	sleuthkit
 PORTVERSION=	4.1.0
@@ -15,7 +15,7 @@ RUN_DEPENDS=	p5-DateTime-TimeZone>=0:${PORTSDIR}/devel/p5-DateTime-TimeZone \
 CONFLICTS=	ja-ls-[0-9]* icat-[0-9]*
 
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_LDCONFIG=	yes
 DATADIR=	${PREFIX}/share/tsk
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -31,14 +31,11 @@ OPTIONS_DEFINE=	DOCS LIBEWF
 LIBEWF_DESC=	Build with EWF support
 OPTIONS_DEFAULT=LIBEWF
 
-.include <bsd.port.options.mk>
+LIBEWF_LIB_DEPENDS=	libewf.so:${PORTSDIR}/devel/libewf
+LIBEWF_CONFIGURE_ON=	--with-libewf=${LOCALBASE}
+LIBEWF_CONFIGURE_OFF=	--without-libewf
 
-.if ${PORT_OPTIONS:MLIBEWF}
-LIB_DEPENDS+=		ewf:${PORTSDIR}/devel/libewf
-CONFIGURE_ARGS+=	--with-libewf=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=	--without-libewf
-.endif
+.include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
