@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CSS-Tiny
-# Date created:		2003-10-31
-# Whom:			Hansjoerg Pehofer <hansjoerg.pehofer@uibk.ac.at>
-#
-# $FreeBSD: ports/textproc/p5-CSS-Tiny/Makefile,v 1.17 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Hansjoerg Pehofer <hansjoerg.pehofer@uibk.ac.at>
+# $FreeBSD: textproc/p5-CSS-Tiny/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CSS-Tiny
 PORTVERSION=	1.19
@@ -17,7 +13,8 @@ COMMENT=	Read/Write .css files with as little code as possible
 RUN_DEPENDS=	p5-Clone>=0:${PORTSDIR}/devel/p5-Clone
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CSS::Tiny.3
 
