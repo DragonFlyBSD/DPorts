@@ -1,4 +1,4 @@
-# $FreeBSD: ports/audio/nas/Makefile.man,v 1.3 2012/11/17 05:54:39 svnexp Exp $
+# $FreeBSD: audio/nas/Makefile.man 300895 2012-07-14 12:56:14Z beat $
 
 MAN1=	auconvert.1 \
 	auctl.1 \
