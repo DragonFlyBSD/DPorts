@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-C3-XS
-# Date created:	   25 May 2007
-# Whom:		   Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Class-C3-XS/Makefile,v 1.12 2012/11/17 05:56:07 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: devel/p5-Class-C3-XS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-C3-XS
 PORTVERSION=	0.13
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	XS speedups for Class::C3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::C3::XS.3
 
