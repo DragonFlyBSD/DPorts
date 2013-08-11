@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Screen
-# Date created:				Dec 17, 2000
-# Whom:					Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/devel/p5-Term-Screen/Makefile,v 1.16 2012/11/17 05:56:31 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
+# $FreeBSD: devel/p5-Term-Screen/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Term-Screen
 PORTVERSION=	1.03
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Basic screen + input class
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Term::Screen.3
 
