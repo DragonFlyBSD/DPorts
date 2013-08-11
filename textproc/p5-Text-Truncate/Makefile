@@ -2,7 +2,7 @@
 # Date created:				25 February 2009
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-Text-Truncate/Makefile,v 1.3 2012/11/17 06:02:10 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Truncate/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Text-Truncate
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Perl module with simple string truncating routine
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Truncate.3
 
