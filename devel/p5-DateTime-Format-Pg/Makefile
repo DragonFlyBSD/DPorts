@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Format-Pg
-# Date created:	   2 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: devel/p5-DateTime-Format-Pg/Makefile 320029 2013-06-05 21:48:10Z mat $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: devel/p5-DateTime-Format-Pg/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Format-Pg
 PORTVERSION=	0.16.008
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-DateTime>=0.10:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-TimeZone>=0.05:${PORTSDIR}/devel/p5-DateTime-TimeZone
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Format::Pg.3
 
