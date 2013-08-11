@@ -2,7 +2,7 @@
 # Date created:				August 31 2003
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/mail/p5-Email-FolderType/Makefile,v 1.9 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Email-FolderType/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Email-FolderType
@@ -16,7 +16,8 @@ DISTNAME=	${PORTNAME}-0.813
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Determine the type of a mail folder
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Email::FolderType.3 \
 		Email::FolderType::Ezmlm.3 \
