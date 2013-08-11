@@ -1,5 +1,5 @@
 # Created by: Pierre David <pdagog@gmail.com>, Jean Benoit <jean@unistra.fr>
-# $FreeBSD: net-mgmt/netmagis-common/Makefile 321799 2013-06-26 16:56:56Z mat $
+# $FreeBSD: net-mgmt/netmagis-common/Makefile 323779 2013-07-27 11:12:27Z danfe $
 
 PORTNAME?=	netmagis
 DISTVERSION?=	2.2.0
@@ -64,6 +64,13 @@ ALL_TARGET=nothing
 .endif
 
 INSTALL_TARGET=	install${PKGNAMESUFFIX}
+
+# Change "cd foo; make" into "$(MAKE) -C foo" to unbreak parallel builds
+post-patch:
+	@${FIND} ${WRKSRC} -type f -name Makefile -print0 | ${XARGS} -0 \
+		${REINPLACE_CMD} -E 's,cd(.+) (;|&&) make,$$(MAKE) -C\1,'
+	@${REINPLACE_CMD} -E 's,cd (.+) ; (ln -s en ),\2\1/,' \
+		${WRKSRC}/www/Makefile
 
 .if !target(post-install)
 post-install:
