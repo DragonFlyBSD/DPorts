@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: textproc/html2text/Makefile 313311 2013-03-03 00:21:22Z eadler $
+# $FreeBSD: textproc/html2text/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	html2text
 PORTVERSION=	1.3.2a
@@ -11,6 +11,8 @@ MASTER_SITE_SUBDIR=	apps/www/converters
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Converts HTML documents into plain text
 
+LICENSE=	GPLv2
+
 HAS_CONFIGURE=	yes
 
 MANCOMPRESSED=	yes
@@ -18,8 +20,6 @@ MAN1=		html2text.1
 MAN5=		html2textrc.5
 PORTDOCS=	CHANGES CREDITS KNOWN_BUGS README TODO
 PLIST_FILES=	bin/html2text
-
-MAKE_JOBS_SAFE=	yes
 
 CONFLICTS=	py27-html2text-[0-9]*
 
