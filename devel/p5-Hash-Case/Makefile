@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin
-# $FreeBSD: devel/p5-Hash-Case/Makefile 320494 2013-06-10 17:12:21Z mat $
+# $FreeBSD: devel/p5-Hash-Case/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Hash-Case
 PORTVERSION=	1.020
@@ -15,7 +15,8 @@ COMMENT=	Base class for hashes with key-casing requirements
 BUILD_DEPENDS=	p5-Log-Report>=0.26:${PORTSDIR}/devel/p5-Log-Report
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Hash::Case.3 Hash::Case::Lower.3 Hash::Case::Preserve.3 \
 		Hash::Case::Upper.3
