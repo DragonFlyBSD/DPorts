@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/security/bcrypt/Makefile,v 1.10 2013/01/15 13:46:57 svnexp Exp $
+# $FreeBSD: security/bcrypt/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	bcrypt
 PORTVERSION=	1.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://bcrypt.sourceforge.net/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Cross-platform blowfish encryption utility
-
-MAKE_JOBS_SAFE=	yes
 
 ALL_TARGET=	${PORTNAME}
 
