@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-Default
-# Date created:	   10 December 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Class-Default/Makefile,v 1.16 2012/11/17 05:56:07 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Class-Default/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Class-Default
 PORTVERSION=	1.51
@@ -17,11 +13,9 @@ COMMENT=	Static calls apply to a default instantiation
 BUILD_DEPENDS=	p5-Class-Inspector>=0:${PORTSDIR}/devel/p5-Class-Inspector
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Default.3
-
-post-patch:
-	@${PERL} -pi -e 's/^auto_install.*$$//' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
