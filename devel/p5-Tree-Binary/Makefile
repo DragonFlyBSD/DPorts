@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Tree-Binary/Makefile 317670 2013-05-08 15:00:53Z wen $
+# $FreeBSD: devel/p5-Tree-Binary/Makefile 324306 2013-08-06 08:50:49Z az $
 
 PORTNAME=	Tree-Binary
 PORTVERSION=	1.05
@@ -25,6 +25,7 @@ MAN3=		Tree::Binary.3 Tree::Binary::Search.3 \
 		Tree::Binary::Visitor::PreOrderTraversal.3 \
 		Tree::Binary::VisitorFactory.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
