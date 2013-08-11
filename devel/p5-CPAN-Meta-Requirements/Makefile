@@ -2,7 +2,7 @@
 # Date created:		2012-04-02
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-CPAN-Meta-Requirements/Makefile,v 1.3 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: devel/p5-CPAN-Meta-Requirements/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	CPAN-Meta-Requirements
@@ -21,12 +21,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		CPAN::Meta::Requirements.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-version>=0.77:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0.77:${PORTSDIR}/devel/p5-version
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
