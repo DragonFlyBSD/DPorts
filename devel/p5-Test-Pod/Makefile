@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Test-Pod/Makefile 317479 2013-05-06 08:19:55Z tobez $
+# $FreeBSD: devel/p5-Test-Pod/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Pod
 PORTVERSION=	1.48
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Check for POD errors in files
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Test::Pod.3
 
