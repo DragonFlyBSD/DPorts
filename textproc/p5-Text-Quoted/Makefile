@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Quoted/Makefile 318757 2013-05-22 09:31:27Z tobez $
+# $FreeBSD: textproc/p5-Text-Quoted/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Quoted
 PORTVERSION=	2.08
@@ -13,7 +13,8 @@ COMMENT=	Text::Quoted - Extract the structure of a quoted mail message
 BUILD_DEPENDS=	p5-Text-Autoformat>=0:${PORTSDIR}/textproc/p5-Text-Autoformat
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Quoted.3
 
