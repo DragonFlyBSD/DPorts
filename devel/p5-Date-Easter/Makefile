@@ -2,7 +2,7 @@
 # Date created:				Sun May 23 11:36:48 CEST 2004
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/devel/p5-Date-Easter/Makefile,v 1.5 2012/11/17 05:56:11 svnexp Exp $
+# $FreeBSD: devel/p5-Date-Easter/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Date-Easter
 PORTVERSION=	1.14
@@ -13,7 +13,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Calculates Easter for any given year
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Date::Easter.3
 
