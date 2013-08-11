@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Cache-Memcached-Managed
-# Date created:		2006-01-02
-# Whom:			Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-Cache-Memcached-Managed/Makefile,v 1.14 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: databases/p5-Cache-Memcached-Managed/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Cache-Memcached-Managed
 PORTVERSION=	0.24
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-Cache-Memcached>=0:${PORTSDIR}/databases/p5-Cache-Memcached
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	memcached:${PORTSDIR}/databases/memcached
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure extract
 
 MAN3=	Cache::Memcached::Managed.3 \
 	Cache::Memcached::Managed::Inactive.3 \
