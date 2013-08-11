@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Cmd
-# Date created:				2004-04-26
-# Whom:	      				mat
-#
-# $FreeBSD: ports/devel/p5-Test-Cmd/Makefile,v 1.4 2012/11/17 05:56:31 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-Test-Cmd/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Cmd
 PORTVERSION=	1.05
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for portable testing of commands and scripts
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Cmd.3 Test::Common.3
 
