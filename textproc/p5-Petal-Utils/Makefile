@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Petal-Utils
-# Date created:				26 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Petal-Utils/Makefile,v 1.8 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: textproc/p5-Petal-Utils/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Petal-Utils
 PORTVERSION=	0.06
@@ -21,6 +17,7 @@ RUN_DEPENDS=	p5-Petal>=0:${PORTSDIR}/textproc/p5-Petal \
 
 MAN3=	Petal::Utils.3
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 .include <bsd.port.mk>
