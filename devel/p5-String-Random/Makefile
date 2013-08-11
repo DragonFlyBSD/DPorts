@@ -1,9 +1,5 @@
-# New ports collection makefile for:	String-Random
-# Date created:				Mon Jan  1 11:19:27 2001
-# Whom:					will
-#
-# $FreeBSD: ports/devel/p5-String-Random/Makefile,v 1.13 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: devel/p5-String-Random/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	String-Random
 PORTVERSION=	0.22
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to generate "random" strings
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		String::Random.3
 
