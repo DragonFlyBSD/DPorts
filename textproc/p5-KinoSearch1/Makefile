@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/p5-KinoSearch1/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-KinoSearch1/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	KinoSearch1
 PORTVERSION=	1.01
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Lingua-StopWords>=0.02:${PORTSDIR}/textproc/p5-Lingua-StopWord
 		p5-Clone>=0.18:${PORTSDIR}/devel/p5-Clone
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	KinoSearch1.3 \
 	KinoSearch1::Analysis::Analyzer.3 \
