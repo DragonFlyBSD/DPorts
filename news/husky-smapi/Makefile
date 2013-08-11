@@ -1,9 +1,5 @@
-# New ports collection makefile for:    husky-smapi
-# Date created:                         6 January 2003
-# Whom:                                 Max Khon
-#
-# $FreeBSD: news/husky-smapi/Makefile 317723 2013-05-09 06:59:06Z fjoe $
-#
+# Created by: Max Khon
+# $FreeBSD: news/husky-smapi/Makefile 322828 2013-07-12 12:28:43Z bapt $
 
 PORTNAME=	smapi
 PORTVERSION=	2.2.4
@@ -20,6 +16,5 @@ CONFLICTS=	husky-smapi-devel-[0-9]*
 MAKE_ARGS=	ADDCDEFS=-fPIC
 USE_LDCONFIG=	yes
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/news/husky-base/Makefile.inc"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../husky-base/Makefile.inc"
+.include <bsd.port.mk>
