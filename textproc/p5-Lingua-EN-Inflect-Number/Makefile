@@ -2,7 +2,7 @@
 # Date created:				Apr 4 2004
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/textproc/p5-Lingua-EN-Inflect-Number/Makefile,v 1.7 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: textproc/p5-Lingua-EN-Inflect-Number/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Lingua-EN-Inflect-Number
 PORTVERSION=	1.1
@@ -16,7 +16,8 @@ COMMENT=	Force number of words to singular or plural
 BUILD_DEPENDS=	p5-Lingua-EN-Inflect>=0:${PORTSDIR}/textproc/p5-Lingua-EN-Inflect
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Lingua::EN::Inflect::Number.3
 
