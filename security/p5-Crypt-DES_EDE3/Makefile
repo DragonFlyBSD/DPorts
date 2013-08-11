@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Crypt-DES_EDE3
-# Date created:				2002/03/14
-# Whom:					jesper
-#
-# $FreeBSD: ports/security/p5-Crypt-DES_EDE3/Makefile,v 1.11 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: jesper
+# $FreeBSD: security/p5-Crypt-DES_EDE3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Crypt-DES_EDE3
 PORTVERSION=	0.01
@@ -18,7 +14,8 @@ COMMENT=	Perl5 interface to a implementing 3-DES EDE encryption and decryption
 BUILD_DEPENDS=	p5-Crypt-DES>=0:${PORTSDIR}/security/p5-Crypt-DES
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::DES_EDE3.3
 
