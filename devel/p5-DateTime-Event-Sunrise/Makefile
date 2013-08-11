@@ -1,5 +1,5 @@
 # Created by:	Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Event-Sunrise/Makefile 322693 2013-07-10 13:36:21Z skreuzer $
+# $FreeBSD: devel/p5-DateTime-Event-Sunrise/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Event-Sunrise
 PORTVERSION=	0.05.02
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Set>=0:${PORTSDIR}/devel/p5-DateTime-Set
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Event::Sunrise.3
 
