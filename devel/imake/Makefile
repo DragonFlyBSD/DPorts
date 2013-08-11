@@ -1,9 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: devel/imake/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: devel/imake/Makefile 324227 2013-08-04 12:53:54Z az $
 
 PORTNAME=	imake
-PORTVERSION=	1.0.5
-PORTREVISION=	1
+PORTVERSION=	1.0.6
 PORTEPOCH=	1
 CATEGORIES=	devel
 
@@ -15,8 +14,8 @@ RUN_DEPENDS=	gccmakedep:${PORTSDIR}/devel/gccmakedep \
 		makedepend:${PORTSDIR}/devel/makedepend \
 		${LOCALBASE}/lib/X11/config/xorg.cf:${PORTSDIR}/x11/xorg-cf-files
 
-USES=	shebangfix
-USE_PERL5_RUN=	yes
+USES=	shebangfix perl5
+USE_PERL5=	run
 
 SHEBANG_FILES=	mkhtmlindex.pl
 
