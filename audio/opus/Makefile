@@ -1,4 +1,4 @@
-# $FreeBSD: audio/opus/Makefile 323083 2013-07-16 00:16:52Z mandree $
+# $FreeBSD: audio/opus/Makefile 324122 2013-08-01 20:22:27Z naddy $
 
 PORTNAME=	opus
 PORTVERSION=	1.0.3
@@ -17,7 +17,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-custom-modes \
 		--disable-maintainer-mode \
 		--disable-doc   # requires doxygen
-MAKE_JOBS_SAFE=	yes
 
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
