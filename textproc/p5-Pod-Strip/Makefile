@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Pod-Strip
-# Date created:	   			Feb 13 2007
-# Whom:		   			Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Pod-Strip/Makefile,v 1.7 2012/12/17 06:36:02 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: textproc/p5-Pod-Strip/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Strip
 PORTVERSION=	1.02
@@ -16,7 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Remove POD from Perl code
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Pod::Strip.3
 
