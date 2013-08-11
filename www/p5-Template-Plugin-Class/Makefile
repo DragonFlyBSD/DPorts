@@ -2,7 +2,7 @@
 # Date created:		24 June 2004
 # Whom:			Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Template-Plugin-Class/Makefile,v 1.7 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Plugin-Class/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Template-Plugin-Class
@@ -17,7 +17,8 @@ COMMENT=	Allow calling of class methods on arbitrary classes
 BUILD_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Template::Plugin::Class.3
 
