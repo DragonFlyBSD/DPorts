@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Package-DeprecationManager
-# Date created:				05 August 2010
-# Whom:					Frederic Culot <frederic@culot.org>
-#
-# $FreeBSD: ports/devel/p5-Package-DeprecationManager/Makefile,v 1.9 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: Frederic Culot <frederic@culot.org>
+# $FreeBSD: devel/p5-Package-DeprecationManager/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Package-DeprecationManager
 PORTVERSION=	0.13
@@ -26,7 +22,8 @@ RUN_DEPENDS=	p5-Params-Util>=0:${PORTSDIR}/devel/p5-Params-Util \
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure extract
 
 MAN3=		Package::DeprecationManager.3
 
