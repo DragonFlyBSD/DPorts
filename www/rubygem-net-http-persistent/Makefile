@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/rubygem-net-http-persistent/Makefile 320766 2013-06-13 11:49:45Z sunpoet $
+# $FreeBSD: www/rubygem-net-http-persistent/Makefile 323804 2013-07-27 20:14:22Z sunpoet $
 
 PORTNAME=	net-http-persistent
-PORTVERSION=	2.8
+PORTVERSION=	2.9
 CATEGORIES=	www net rubygems
 MASTER_SITES=	RG
 
