@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: devel/libbinio/Makefile 317635 2013-05-07 22:09:21Z ehaupt $
+# $FreeBSD: devel/libbinio/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	libbinio
 PORTVERSION=	1.4
@@ -16,7 +16,6 @@ USES=		pathfix
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
