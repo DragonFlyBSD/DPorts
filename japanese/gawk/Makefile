@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gawk+mb
-# Date created:		5 April 1995
-# Whom:			Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
-#
-# $FreeBSD: ports/japanese/gawk/Makefile,v 1.29 2012/11/17 05:58:34 svnexp Exp $
-#
+# Created by: Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
+# $FreeBSD: japanese/gawk/Makefile 322852 2013-07-12 16:32:50Z bapt $
 
 PORTNAME=	gawk
 PORTVERSION=	3.0.6
@@ -20,6 +16,7 @@ COMMENT=	GNU awk + multi-byte extension
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-bitops --enable-non-decimal-data
+MAKE_JOBS_UNSAFE=	yes
 
 INFO=		gawk
 
