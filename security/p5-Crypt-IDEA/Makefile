@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-IDEA/Makefile 322205 2013-07-02 21:22:25Z zi $
+# $FreeBSD: security/p5-Crypt-IDEA/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Crypt-IDEA
 PORTVERSION=	1.08
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 interface to IDEA block cipher
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::IDEA.3
 
