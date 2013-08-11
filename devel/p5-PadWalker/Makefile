@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-PadWalker/Makefile,v 1.19 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: devel/p5-PadWalker/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	PadWalker
 PORTVERSION=	1.96
@@ -14,7 +14,8 @@ COMMENT=	PadWalker - play with Perl lexical variables
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		PadWalker.3
 
