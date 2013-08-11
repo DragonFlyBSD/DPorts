@@ -1,9 +1,5 @@
-# New ports collection makefile for:	converters/p5-Text-Unidecode
-# Date created:				15 December 2004
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/p5-Text-Unidecode/Makefile,v 1.4 2012/11/17 05:55:04 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: converters/p5-Text-Unidecode/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Text-Unidecode
 PORTVERSION=	0.04
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Text::Unidecode -- US-ASCII transliterations of Unicode text
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::Unidecode.3
 
