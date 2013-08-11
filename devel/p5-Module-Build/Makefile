@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Build/Makefile 316802 2013-04-29 10:53:19Z tobez $
+# $FreeBSD: devel/p5-Module-Build/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Module-Build
 PORTVERSION=	0.4005
@@ -17,7 +17,8 @@ OPTIONS_DEFINE=	DOCS
 
 PORTSCOUT=	skipv:0.31012
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		inc::latest.3 \
 		Module::Build.3 \
