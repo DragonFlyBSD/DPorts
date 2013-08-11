@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-String-Koremutake
-# Date created:				27 December 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-String-Koremutake/Makefile,v 1.6 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-String-Koremutake/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	String-Koremutake
 PORTVERSION=	0.30
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Error>=0:${PORTSDIR}/lang/p5-Error \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	String::Koremutake.3
 
