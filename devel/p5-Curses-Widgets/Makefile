@@ -2,7 +2,7 @@
 # Date created:				5 July 2001
 # Whom:					petef@FreeBSD.org
 #
-# $FreeBSD: ports/devel/p5-Curses-Widgets/Makefile,v 1.11 2012/11/17 05:56:09 svnexp Exp $
+# $FreeBSD: devel/p5-Curses-Widgets/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Curses-Widgets
@@ -18,7 +18,8 @@ COMMENT=	Curses-based widgets and functions
 BUILD_DEPENDS=	p5-Curses>=0:${PORTSDIR}/devel/p5-Curses
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Curses::Widgets::Label.3 \
 	Curses::Widgets.3 \
