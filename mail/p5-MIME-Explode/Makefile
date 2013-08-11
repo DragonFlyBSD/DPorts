@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-MIME-Explode
-# Date created:		2006/12/22
-# Whom:	      		chinsan
-#
-# $FreeBSD: ports/mail/p5-MIME-Explode/Makefile,v 1.5 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: mail/p5-MIME-Explode/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MIME-Explode
 PORTVERSION=	0.39
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for explode MIME messages
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MIME::Explode.3
 
