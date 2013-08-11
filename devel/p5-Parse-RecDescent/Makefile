@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Parse-RecDescent
-# Date created:				July 9th 1999
-# Whom:	      				Jerry Hicks <wghicks@bellsouth.net>
-#
-# $FreeBSD: ports/devel/p5-Parse-RecDescent/Makefile,v 1.32 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: Jerry Hicks <wghicks@bellsouth.net>
+# $FreeBSD: devel/p5-Parse-RecDescent/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Parse-RecDescent
 PORTVERSION=	1.967.009
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-ExtUtils-MakeMaker>=6.62:${PORTSDIR}/devel/p5-ExtUtils-MakeMak
 
 TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Parse::RecDescent.3
 
