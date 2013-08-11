@@ -30,14 +30,12 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 CONFIGURE_ARGS+=	--enable-ecore-input \
 			--enable-ecore-input_evas
 
-LDFLAGS+=	-L${LOCALBASE}/lib -lecore
-
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's,\$$\(top_builddir\)/src/lib/ecore/\.libs,${LOCALBASE}/lib,'\
 		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/\.libs,${LOCALBASE}/lib,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/libecore_input\.la,,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,-lecore,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/libecore_input\.la,-lecore_input,'\
 		${BUILD_WRKSRC}/Makefile.in
 
 post-install:
