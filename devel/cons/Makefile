@@ -2,7 +2,7 @@
 # Date created:		11 December 1998
 # Whom:			rv@gnu.org
 #
-# $FreeBSD: ports/devel/cons/Makefile,v 1.30 2012/11/17 05:55:38 svnexp Exp $
+# $FreeBSD: devel/cons/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	cons
@@ -29,10 +29,6 @@ DOCS=		CHANGES COPYING COPYRIGHT INSTALL MANIFEST README RELEASE \
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-.endif
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cons ${PREFIX}/bin/cons
