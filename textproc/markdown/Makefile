@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/textproc/markdown/Makefile,v 1.7 2012/12/18 11:42:43 svnexp Exp $
+# $FreeBSD: textproc/markdown/Makefile 323714 2013-07-26 12:25:46Z az $
 
 PORTNAME=	markdown
 PORTVERSION=	1.0.1
@@ -14,15 +14,14 @@ COMMENT=	A text-to-HTML conversion tool for web writers
 USE_ZIP=	yes
 USE_PERL5=	yes
 NO_BUILD=	yes
+USES=		shebangfix
+SHEBANG_FILES=	Markdown.pl
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	License.text Markdown-Readme.text
 .endif
 
 PLIST_FILES=	bin/markdown
-
-post-patch:
-	${PERL} -pi -e "s#/usr/bin/perl#${PERL}#" ${WRKSRC}/Markdown.pl
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Markdown.pl ${PREFIX}/bin/markdown
