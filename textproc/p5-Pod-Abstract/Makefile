@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/textproc/p5-Pod-Abstract/Makefile,v 1.8 2012/11/17 06:02:06 svnexp Exp $
+# $FreeBSD: textproc/p5-Pod-Abstract/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Pod-Abstract
 PORTVERSION=	0.20
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
 		p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		paf.1
 MAN3=		Pod::Abstract.3 \
