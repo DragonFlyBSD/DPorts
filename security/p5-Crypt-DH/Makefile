@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Crypt-DH
-# Date created:				2002/03/14
-# Whom:					jesper
-#
-# $FreeBSD: ports/security/p5-Crypt-DH/Makefile,v 1.17 2012/11/17 06:01:11 svnexp Exp $
-#
+# Created by: jesper
+# $FreeBSD: security/p5-Crypt-DH/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Crypt-DH
 PORTVERSION=	0.07
@@ -17,7 +13,8 @@ COMMENT=	Perl5 interface to a Diffie-Hellman key exchange system
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::DH.3
 PLIST_FILES=	%%SITE_PERL%%/Crypt/DH.pm \
