@@ -2,7 +2,7 @@
 # Date created:        22 January 1999
 # Whom:                Yukihiro Nakai <Nacai@iname.com>
 #
-# $FreeBSD: ports/net/p5-Socks/Makefile,v 1.13 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-Socks/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	SOCKS
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl5 module to communicate with socks v4 and v5 servers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SOCKS.3
 
