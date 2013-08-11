@@ -1,8 +1,8 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: devel/lfcxml/Makefile 319855 2013-06-04 12:26:13Z culot $
+# $FreeBSD: devel/lfcxml/Makefile 324378 2013-08-08 07:43:45Z culot $
 
 PORTNAME=	lfcxml
-PORTVERSION=	1.1.4
+PORTVERSION=	1.1.5
 CATEGORIES=	devel
 MASTER_SITES=	http://www.lemke-it.com/
 
