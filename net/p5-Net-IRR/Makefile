@@ -1,9 +1,5 @@
-# New ports collection makefile for:	net/p5-Net-IRR
-# Date created:				05 May 2010
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-Net-IRR/Makefile,v 1.2 2012/11/17 06:00:11 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: net/p5-Net-IRR/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-IRR
 PORTVERSION=	0.08
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to the Internet Route Registry Daemon
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::IRR.3
 
