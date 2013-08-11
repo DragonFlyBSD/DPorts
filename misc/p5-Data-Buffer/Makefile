@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Data-Buffer
-# Date created:				Tue Sep 11 02:08:49 PDT 2001
-# Whom:	      				Michael Haro <mharo@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/p5-Data-Buffer/Makefile,v 1.6 2012/11/17 05:59:43 svnexp Exp $
-#
+# Created by: Michael Haro <mharo@FreeBSD.org>
+# $FreeBSD: misc/p5-Data-Buffer/Makefile 324167 2013-08-02 17:11:34Z az $
 
 PORTNAME=	Data-Buffer
 PORTVERSION=	0.04
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read/write buffer class
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Buffer.3
 
