@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@fruitfly.org>
-# $FreeBSD: ports/textproc/p5-Text-Shellwords/Makefile,v 1.10 2012/11/17 06:02:10 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Shellwords/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Text-Shellwords
 PORTVERSION=	1.08
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	This is a thin wrapper around the shellwords.pl package
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Shellwords.3
 
