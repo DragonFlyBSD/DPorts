@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Text::Affixes
-# Date created:				Nov 3 2004
-# Whom:					clsung
-#
-# $FreeBSD: ports/textproc/p5-Text-Affixes/Makefile,v 1.7 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: clsung
+# $FreeBSD: textproc/p5-Text-Affixes/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Affixes
 PORTVERSION=	0.07
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for prefixes and suffixes analisys of text
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Affixes.3
 
