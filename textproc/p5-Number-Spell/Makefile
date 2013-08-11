@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Number-Spell
-# Date created:				2007/02/14
-# Whom:					chinsan
-#
-# $FreeBSD: ports/textproc/p5-Number-Spell/Makefile,v 1.4 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: textproc/p5-Number-Spell/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Number-Spell
 PORTVERSION=	0.04
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for spelling out numbers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Number::Spell.3
 
