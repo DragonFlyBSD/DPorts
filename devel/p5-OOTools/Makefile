@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-OOTools/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-OOTools/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	OOTools
 PORTVERSION=	2.21
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module collection to easily create constructors methods
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::constr.3 \
 		Class::groups.3 \
