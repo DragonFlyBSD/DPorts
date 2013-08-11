@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/www/p5-CGI-Expand/Makefile,v 1.8 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Expand/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	CGI-Expand
 PORTVERSION=	2.03
@@ -13,7 +13,8 @@ COMMENT=	Convert flat hash to nested data using TT2's dot convention
 BUILD_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::Expand.3
 
