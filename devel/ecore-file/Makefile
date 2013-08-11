@@ -1,9 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/ecore-file/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: devel/ecore-file/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	file
-PORTVERSION=	1.7.7
-PORTREVISION=	1
+PORTVERSION=	1.7.8
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
