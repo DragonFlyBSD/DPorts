@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Pod-POM/Makefile 319480 2013-05-31 10:37:08Z tobez $
+# $FreeBSD: textproc/p5-Pod-POM/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-POM
 PORTVERSION=	0.28
@@ -13,7 +13,8 @@ COMMENT=	POD Object Model
 BUILD_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		podlint.1 pom2.1 pomdump.1
 MAN3=		Pod::POM.3 \
