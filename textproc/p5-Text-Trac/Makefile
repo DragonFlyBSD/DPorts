@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-Trac
-# Date created:		2006-07-19
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Trac/Makefile,v 1.18 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: textproc/p5-Text-Trac/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Trac
 PORTVERSION=	0.15
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Trac.3
 
