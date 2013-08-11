@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-MooseX-AttributeHelpers
-# Date created:				27 Jul 2008
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-MooseX-AttributeHelpers/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: devel/p5-MooseX-AttributeHelpers/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-AttributeHelpers
 PORTVERSION=	0.23
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Moose>=0.56:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MooseX::AttributeHelpers.3 \
 	MooseX::AttributeHelpers::Bool.3 \
@@ -53,6 +50,6 @@ MAN3=	MooseX::AttributeHelpers.3 \
 	MooseX::AttributeHelpers::Trait::String.3
 
 post-extract:
-	@${PERL} -i -ne 'print unless m,build_requires,' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' '/build_requires/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
