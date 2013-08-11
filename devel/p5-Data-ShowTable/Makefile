@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-ShowTable/Makefile 319839 2013-06-04 09:43:35Z tobez $
+# $FreeBSD: devel/p5-Data-ShowTable/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-ShowTable
 PORTVERSION=	4.1
@@ -12,7 +12,8 @@ COMMENT=	Perl5 module to pretty-print arrays of data
 
 LICENSE=	GPLv2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		showtable.1
 MAN3=		Data::ShowTable.3
