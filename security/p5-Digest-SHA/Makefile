@@ -1,5 +1,5 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: security/p5-Digest-SHA/Makefile 321928 2013-06-28 02:32:59Z clsung $
+# $FreeBSD: security/p5-Digest-SHA/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Digest-SHA
 PORTVERSION=	5.85
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0.08:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Digest::SHA.3
 
