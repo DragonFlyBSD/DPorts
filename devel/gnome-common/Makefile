@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/gnome-common/Makefile 323358 2013-07-20 20:35:56Z kwm $
+# $FreeBSD: devel/gnome-common/Makefile 324037 2013-07-31 11:57:45Z kwm $
 #    $MCom: ports/trunk/devel/gnome-common/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-common
@@ -13,7 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Common automake macros for GNOME 2 and GNOME 3
 
 USE_XZ=		yes
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>
