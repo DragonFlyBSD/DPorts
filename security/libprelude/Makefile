@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/libprelude/Makefile 321326 2013-06-19 21:03:41Z antoine $
+# $FreeBSD: security/libprelude/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	libprelude
 PORTVERSION=	1.0.1
@@ -37,7 +37,7 @@ PORTDOCS=	*
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 CONFIGURE_ARGS+=--with-perl
 PLIST_SUB+=	PERL=""
 .else
