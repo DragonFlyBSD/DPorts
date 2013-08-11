@@ -2,7 +2,7 @@
 # Date created:				Wed Jan  3 10:24:19 2001
 # Whom:					will
 #
-# $FreeBSD: ports/devel/p5-Proc-Daemon/Makefile,v 1.14 2012/11/17 05:56:27 svnexp Exp $
+# $FreeBSD: devel/p5-Proc-Daemon/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Proc-Daemon
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Perl module that provides a method to daemonify a Perl script
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Proc::Daemon.3
 
