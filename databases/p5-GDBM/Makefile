@@ -1,5 +1,5 @@
 # Created by: Nick Sayer <nsayer@FreeBSD.ORG>
-# $FreeBSD: databases/p5-GDBM/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: databases/p5-GDBM/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	GDBM
 PORTVERSION=	1.14
@@ -18,8 +18,8 @@ LIB_DEPENDS=	gdbm.4:${PORTSDIR}/databases/gdbm
 EXTRACT_AFTER_ARGS=	${DISTNAME}/ext/GDBM_File ${DISTNAME}/t/lib
 
 CFLAGS+=	-I${LOCALBASE}/include
-MAKE_JOBS_SAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_BZIP2=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/ext/GDBM_File
 
