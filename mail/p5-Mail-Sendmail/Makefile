@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mail-Sendmail
-# Date created:				Jan 28 2000
-# Whom:					Wei-chun Chao
-#
-# $FreeBSD: ports/mail/p5-Mail-Sendmail/Makefile,v 1.10 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: Wei-chun Chao
+# $FreeBSD: mail/p5-Mail-Sendmail/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-Sendmail
 PORTVERSION=	0.79
@@ -14,9 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module implementing a simple, platform-independent mailer
 
-MAKE_JOBS_SAFE=  yes
-
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Sendmail.3
 
