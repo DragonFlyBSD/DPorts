@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime/Makefile 320247 2013-06-08 12:56:56Z culot $
+# $FreeBSD: devel/p5-DateTime/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime
 PORTVERSION=	1.03
@@ -23,7 +23,8 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 OPTIONS_DEFINE=	DOCS
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		DateTime.3 DateTime::Duration.3 \
 		DateTime::Infinite.3 \
