@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Unix-Syslog
-# Date created:				November 19th 2000
-# Whom:					Blaz Zupan <blaz@amis.net>
-#
-# $FreeBSD: ports/sysutils/p5-Unix-Syslog/Makefile,v 1.14 2012/11/17 06:01:40 svnexp Exp $
-#
+# Created by: Blaz Zupan <blaz@amis.net>
+# $FreeBSD: sysutils/p5-Unix-Syslog/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Unix-Syslog
 PORTVERSION=	1.1
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 interface to the UNIX syslog(3) calls
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Unix::Syslog.3
 
