@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: textproc/p5-Pod-Simple/Makefile 317480 2013-05-06 08:21:24Z tobez $
+# $FreeBSD: textproc/p5-Pod-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Simple
 PORTVERSION=	3.28
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 
 PORTSCOUT=	skipv:31337-0.02
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Pod::Simple.3 \
 		Pod::Simple::Checker.3 \
