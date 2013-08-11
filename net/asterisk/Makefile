@@ -1,9 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@portaone.com>
-# $FreeBSD: net/asterisk/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: net/asterisk/Makefile 323586 2013-07-24 09:47:33Z flo $
 
 PORTNAME=	asterisk
-PORTVERSION=	1.8.22.0
-PORTREVISION=	2
+PORTVERSION=	1.8.23.0
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
