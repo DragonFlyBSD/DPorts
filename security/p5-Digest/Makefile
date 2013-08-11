@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Digest
-# Date created:	   28 May 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/security/p5-Digest/Makefile,v 1.21 2012/11/17 06:01:12 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: security/p5-Digest/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Digest
 PORTVERSION=	1.17
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Modules that calculate message digests
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Digest.3 Digest::base.3 Digest::file.3
 
