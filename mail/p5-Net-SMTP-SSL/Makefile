@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Net-SMTP-SSL/Makefile 315513 2013-03-29 00:59:45Z eadler $
+# $FreeBSD: mail/p5-Net-SMTP-SSL/Makefile 324222 2013-08-04 12:30:54Z az $
 
 PORTNAME=	Net-SMTP-SSL
 PORTVERSION=	1.01
@@ -12,10 +12,9 @@ COMMENT=	SMTP client supporting SSL
 
 BUILD_DEPENDS=	p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SMTP::SSL.3
-
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
