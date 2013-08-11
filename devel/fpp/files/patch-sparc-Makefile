@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/fpp/files/patch-sparc::Makefile,v 1.2 2012/11/17 05:55:43 svnexp Exp $
+$FreeBSD$
 
 --- sparc/Makefile.orig	Tue Mar 18 21:23:25 1997
 +++ sparc/Makefile	Mon Oct 21 14:10:57 2002
