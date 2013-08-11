@@ -1,5 +1,5 @@
 # Created by: Kostya Lukin <lukin@okbmei.msk.su>
-# $FreeBSD: ports/dns/adns/Makefile,v 1.30 2012/11/17 05:57:07 svnexp Exp $
+# $FreeBSD: dns/adns/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	adns
 PORTVERSION=	1.4
@@ -12,8 +12,8 @@ COMMENT=	Easy to use asynchronous-capable DNS client library and utilities
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
+
+USES=	gmake
 
 LIBVERSION=	1
 PLIST_SUB+=	LIBVERSION="${LIBVERSION}"
