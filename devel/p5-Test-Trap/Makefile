@@ -2,7 +2,7 @@
 # Date created:		2011-09-10
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-Trap/Makefile,v 1.6 2012/11/17 05:56:34 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Trap/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Test-Trap
@@ -28,11 +28,4 @@ MAN3=		Test::Trap.3 \
 		Test::Trap::Builder::SystemSafe.3 \
 		Test::Trap::Builder::TempFile.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-RUN_DEPENDS+=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
