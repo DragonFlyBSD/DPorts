@@ -1,5 +1,5 @@
 # Created by: jaharkes
-# $FreeBSD: devel/rpc2/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/rpc2/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	rpc2
 PORTVERSION=	2.10
@@ -14,10 +14,9 @@ COMMENT=	An interprocess communication library
 
 LIB_DEPENDS=	lwp.2:${PORTSDIR}/devel/lwp
 
-USES=		pkgconfig
+USES=		pkgconfig perl5
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
 
 USE_LDCONFIG=	yes
 
