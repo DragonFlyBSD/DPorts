@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Class-Accessor-Chained
-# Date created:				03 November 2004
-# Whom:					mat
-#
-# $FreeBSD: ports/devel/p5-Class-Accessor-Chained/Makefile,v 1.7 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-Class-Accessor-Chained/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Accessor-Chained
 PORTVERSION=	0.01
@@ -18,7 +14,8 @@ COMMENT=	Make chained accessors
 RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Accessor::Chained.3 \
 		Class::Accessor::Chained::Fast.3
