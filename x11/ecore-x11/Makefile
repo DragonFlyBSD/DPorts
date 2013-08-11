@@ -87,14 +87,12 @@ USE_XORG+=	xscrnsaver
 WITH_X11=	yes
 .endif
 
-LDFLAGS+=	-L${LOCALBASE}/lib -lecore -lecore_input
-
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's,\$$\(top_builddir\)/src/lib/ecore/\.libs,${LOCALBASE}/lib,'\
 		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/\.libs,${LOCALBASE}/lib,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/libecore_input\.la,,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,-lecore,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore_input/libecore_input\.la,-lecore_input,'\
 		${BUILD_WRKSRC}/Makefile.in \
 		${BUILD_WRKSRC}/xcb/Makefile.in \
 		${BUILD_WRKSRC}/xlib/Makefile.in
