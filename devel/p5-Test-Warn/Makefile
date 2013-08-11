@@ -1,5 +1,5 @@
 # Created by: Brian Minard <bminard@flatfoot.ca>
-# $FreeBSD: devel/p5-Test-Warn/Makefile 314023 2013-03-13 04:23:41Z miwi $
+# $FreeBSD: devel/p5-Test-Warn/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Warn
 PORTVERSION=	0.24
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Carp>=1.22:${PORTSDIR}/devel/p5-Carp \
 		p5-Tree-DAG_Node>=1.02:${PORTSDIR}/devel/p5-Tree-DAG_Node
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Warn.3
 
