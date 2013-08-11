@@ -1,9 +1,5 @@
-# New ports collection makefile for:	IO::All
-# Date created:		15 July 2004
-# Whom:			Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-#
-# $FreeBSD: ports/devel/p5-IO-All/Makefile,v 1.20 2012/11/17 05:56:18 svnexp Exp $
-#
+# Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
+# $FreeBSD: devel/p5-IO-All/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IO-All
 PORTVERSION=	0.46
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-File-ReadBackwards>=0:${PORTSDIR}/devel/p5-File-ReadBackwards 
 		p5-IO-String>=1.08:${PORTSDIR}/devel/p5-IO-String
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::All.3 \
 		IO::All::DBM.3 \
