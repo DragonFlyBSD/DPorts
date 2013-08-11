@@ -1,5 +1,5 @@
 # Created by: markm@FreeBSD.org
-# $FreeBSD: textproc/p5-Text-CSV/Makefile 320747 2013-06-13 10:16:48Z tobez $
+# $FreeBSD: textproc/p5-Text-CSV/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-CSV
 PORTVERSION=	1.32
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Composition and decomposition of comma-separated values
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::CSV.3 Text::CSV_PP.3
 
