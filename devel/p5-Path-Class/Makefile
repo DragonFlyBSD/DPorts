@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: devel/p5-Path-Class/Makefile 314649 2013-03-19 14:21:21Z culot $
+# $FreeBSD: devel/p5-Path-Class/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Path-Class
 PORTVERSION=	0.32
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 
 OPTIONS_DEFINE=	DOCS
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Path::Class.3 \
 		Path::Class::Dir.3 \
