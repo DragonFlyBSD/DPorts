@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/botan/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/botan/Makefile 321200 2013-06-18 16:07:39Z antoine $
 
 PORTNAME=	botan
 PORTVERSION=	1.8.13
@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=--with-tr1-implementation=none
 post-patch:
 	${REINPLACE_CMD} -e "s|#!/usr/bin/env python|#!${PYTHON_CMD}|" \
 			${WRKSRC}/configure.py
-.if ${PORT_OPTIONS:MDOCS}
+.if ! ${PORT_OPTIONS:MDOCS}
 	${REINPLACE_CMD} -e '/$$(MKDIR_INSTALL) $$(DOCDIR)/d' \
 			-e '/$$(INSTALL_CMD_DATA) $$$$i $$(DOCDIR); /d' \
 			${WRKSRC}/src/build-data/makefile/unix_shr.in
