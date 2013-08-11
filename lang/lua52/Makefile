@@ -1,8 +1,9 @@
 # Created by: GreenDog <fiziologus@gmail.com>
-# $FreeBSD: lang/lua52/Makefile 315560 2013-03-29 18:49:03Z mandree $
+# $FreeBSD: lang/lua52/Makefile 324286 2013-08-05 20:37:35Z mandree $
 
 PORTNAME=	lua
 PORTVERSION=	5.2.2
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.lua.org/ftp/
 
@@ -30,7 +31,7 @@ MAKE_ENV=	LUA_SONAME="liblua-${LUA_VER}.so.${LUA_VER_SH}" \
 		MYCFLAGS="${CFLAGS}" MYLDFLAGS="${LDFLAGS}"
 # liblua.so requires libm, so make sure it has an explicit dependency
 # so that applications need not second-guess lua's dependencies.
-LDFLAGS+=	-lm
+LDFLAGS+=	-lm -pthread
 
 MAN1=		lua-${LUA_VER}.1 luac-${LUA_VER}.1
 DOCSDIR=	${PREFIX}/share/doc/${LUA_SUBDIR}
