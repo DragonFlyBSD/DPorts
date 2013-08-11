@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: textproc/p5-Text-Aligner/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-Text-Aligner/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Aligner
 PORTVERSION=	0.07
@@ -12,7 +12,8 @@ COMMENT=	Align text in columns
 
 RUN_DEPENDS=	p5-Term-ANSIColor>=2.01:${PORTSDIR}/devel/p5-Term-ANSIColor
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Aligner.3
 
