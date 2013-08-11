@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Throwable/Makefile 317002 2013-05-01 08:35:22Z tobez $
+# $FreeBSD: devel/p5-Throwable/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Throwable
 PORTVERSION=	0.200008
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-Class-Load>=0.20:${PORTSDIR}/devel/p5-Class-Load \
 		p5-MooX-Types-MooseLike>=0:${PORTSDIR}/devel/p5-MooX-Types-MooseLike
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		StackTrace::Auto.3 Throwable.3 Throwable::Error.3
 
