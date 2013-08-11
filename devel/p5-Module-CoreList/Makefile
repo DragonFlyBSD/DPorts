@@ -1,8 +1,8 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-Module-CoreList/Makefile 321556 2013-06-22 08:43:40Z az $
+# $FreeBSD: devel/p5-Module-CoreList/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Module-CoreList
-PORTVERSION=	2.92
+PORTVERSION=	2.94
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,10 +13,10 @@ COMMENT=	See what modules shipped with versions of Perl
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
-MAN3=		Module::CoreList.3 \
-		Module::CoreList::Utils.3
+MAN3=		Module::CoreList.3
 
 post-patch:
 	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
