@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Crypt-Blowfish
-# Date created:				2000/09/18
-# Whom:					patrick@mindstep.com
-#
-# $FreeBSD: ports/security/p5-Crypt-Blowfish/Makefile,v 1.11 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: patrick@mindstep.com
+# $FreeBSD: security/p5-Crypt-Blowfish/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Crypt-Blowfish
 PORTVERSION=	2.12
@@ -17,7 +13,8 @@ COMMENT=	Perl5 interface to the Blowfish encryption alogorithm
 BUILD_DEPENDS=	p5-Crypt-CBC>=0:${PORTSDIR}/security/p5-Crypt-CBC
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a$//}
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::Blowfish.3
 
