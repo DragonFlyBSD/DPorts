@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Array::RefElem
-# Date created:				31 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/misc/p5-Array-RefElem/Makefile,v 1.7 2012/11/17 05:59:42 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: misc/p5-Array-RefElem/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Array-RefElem
 PORTVERSION=	1.00
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Set up array elements as aliases
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Array::RefElem.3
 
