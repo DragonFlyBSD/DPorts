@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell
-# $FreeBSD: databases/p5-SQL-Abstract/Makefile 320068 2013-06-06 09:55:34Z mat $
+# $FreeBSD: databases/p5-SQL-Abstract/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SQL-Abstract
 PORTVERSION=	1.74
@@ -20,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::Class::Storage::Debug::PrettyPrint.3 \
 		SQL::Abstract.3 \
