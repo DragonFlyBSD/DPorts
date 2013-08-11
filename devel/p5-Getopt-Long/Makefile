@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Getopt-Long/Makefile 314046 2013-03-13 09:33:38Z tobez $
+# $FreeBSD: devel/p5-Getopt-Long/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Getopt-Long
 PORTVERSION=	2.39
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl module for extended processing of command line options
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Getopt::Long.3
 
