@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-namespace-clean/Makefile,v 1.19 2012/12/17 13:43:44 svnexp Exp $
+# $FreeBSD: devel/p5-namespace-clean/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	namespace-clean
 PORTVERSION=	0.24
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-B-Hooks-EndOfScope>=0.12:${PORTSDIR}/devel/p5-B-Hooks-EndOfSco
 		p5-Sub-Name>=0.04:${PORTSDIR}/devel/p5-Sub-Name
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		namespace::clean.3
 
