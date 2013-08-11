@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-Std/Makefile 318225 2013-05-15 08:22:11Z miwi $
+# $FreeBSD: devel/p5-Config-Std/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Config-Std
 DISTVERSION=	0.900
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 
 RUN_DEPENDS=	p5-Class-Std>=0:${PORTSDIR}/devel/p5-Class-Std
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Config::Std.3
 
