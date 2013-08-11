@@ -1,6 +1,6 @@
 # Created by:	Rong-En Fan <rafan@infor.org>
 #
-# $FreeBSD: converters/p5-Encode/Makefile 316681 2013-04-27 18:15:50Z rafan $
+# $FreeBSD: converters/p5-Encode/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Encode
 PORTVERSION=	2.49
@@ -15,7 +15,8 @@ COMMENT=	Provides interfaces between strings and the rest of the system
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=	perl5
+USE_PERL5=	patch configure
 
 MAN3=		Encode.3 \
 		Encode::Alias.3 \
