@@ -2,7 +2,7 @@
 # Date created:         4 Sep 1999
 # Whom:                 Donald Burr <dburr@FreeBSD.org>
 #
-# $FreeBSD: ports/emulators/xmame/Makefile,v 1.128 2012/11/17 05:57:24 svnexp Exp $
+# $FreeBSD: emulators/xmame/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME?=	xmame
@@ -23,8 +23,8 @@ LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
 NO_CDROM=	License does not permit selling
 
+USES=		perl5
 USE_BZIP2=	yes
-USE_PERL5=	yes
 USE_GMAKE=	yes
 MAKE_ARGS+=	ARCH=freebsd
 WANT_SDL=	yes

@@ -1,4 +1,4 @@
-$FreeBSD: ports/emulators/xmame/files/patch-src-unix-video-drivers-xf86_dga2.c,v 1.2 2012/11/17 05:57:24 svnexp Exp $
+$FreeBSD: emulators/xmame/files/patch-src-unix-video-drivers-xf86_dga2.c 300896 2012-07-14 13:54:48Z beat $
 
 --- src/unix/video-drivers/xf86_dga2.c.orig	Sun Mar 20 22:16:38 2005
 +++ src/unix/video-drivers/xf86_dga2.c	Sun Mar 20 22:16:53 2005
