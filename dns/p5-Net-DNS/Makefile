@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: ports/dns/p5-Net-DNS/Makefile,v 1.93 2013/01/30 18:21:21 svnexp Exp $
+# $FreeBSD: dns/p5-Net-DNS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-DNS
 PORTVERSION=	0.72
@@ -18,8 +18,8 @@ TEST_DEPENDS=	p5-Digest-BubbleBabble>=0:${PORTSDIR}/security/p5-Digest-BubbleBab
 OPTIONS_DEFINE=	IDN IPV6 DOCS
 
 CONFIGURE_ARGS=	--no-IPv6-tests --no-online-tests
-MAKE_JOBS_SAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 DOCSDIR=	${PREFIX}/share/doc/p5-Net-DNS
 
 MAN3=		Net::DNS.3 Net::DNS::Domain.3 Net::DNS::DomainName.3 \
