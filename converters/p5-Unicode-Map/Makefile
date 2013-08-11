@@ -2,7 +2,7 @@
 # Date created:				9 April 2002
 # Whom:					Ryan T. Dean <rtdean@cytherianage.net>
 #
-# $FreeBSD: ports/converters/p5-Unicode-Map/Makefile,v 1.6 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/p5-Unicode-Map/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Unicode-Map
 PORTVERSION=	0.112
@@ -13,7 +13,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl class that converts strings to/from 2-byte Unicode UCS2 format
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		map.1 mkmapfile.1
 MAN3=		Unicode::Map.3
