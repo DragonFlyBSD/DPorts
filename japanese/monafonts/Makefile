@@ -1,9 +1,5 @@
-# New ports collection makefile for:	monafonts
-# Date created:		14 February 2001
-# Whom:			MANTANI Nobutaka <nobutaka@nobutaka.com>
-#
-# $FreeBSD: ports/japanese/monafonts/Makefile,v 1.22 2012/11/17 05:58:37 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
+# $FreeBSD: japanese/monafonts/Makefile 321277 2013-06-19 14:58:42Z miwi $
 
 PORTNAME=	monafonts
 PORTVERSION=	2.90
