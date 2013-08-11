@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Parallel-Prefork/Makefile 318754 2013-05-22 09:26:52Z tobez $
+# $FreeBSD: devel/p5-Parallel-Prefork/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Parallel-Prefork
 PORTVERSION=	0.14
@@ -20,7 +20,8 @@ TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-SharedFork>=0:${PORTSDIR}/devel/p5-Test-SharedFork \
 		p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Parallel::Prefork.3 Parallel::Prefork::SpareWorkers.3
 
