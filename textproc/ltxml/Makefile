@@ -1,9 +1,5 @@
-# New ports collection makefile for:	LT XML
-# Date created:		20 Oct 2000
-# Whom:			Samuel Tardieu <sam@inf.enst.fr>
-#
-# $FreeBSD: ports/textproc/ltxml/Makefile,v 1.15 2012/11/17 06:02:02 svnexp Exp $
-#
+# Created by: Samuel Tardieu <sam@inf.enst.fr>
+# $FreeBSD: textproc/ltxml/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	ltxml
 PORTVERSION=	1.2.9
@@ -21,7 +17,7 @@ OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/XML
 
-USE_PERL5=	yes
+USES=		perl5
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-zlib=/usr --datadir=${PREFIX}/lib/ltxml12
