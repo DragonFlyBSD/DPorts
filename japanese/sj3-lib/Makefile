@@ -1,5 +1,5 @@
 # Created by: Hidekazu Kuroki <hidekazu@cs.titech.ac.jp>
-# $FreeBSD: japanese/sj3-lib/Makefile 317298 2013-05-04 08:11:13Z hrs $
+# $FreeBSD: japanese/sj3-lib/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	sj3
 PORTVERSION=	2.0.1.20
@@ -13,10 +13,10 @@ PATCHFILES=	${PORTNAME}-qq-2.0.1.21.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	hrs@FreeBSD.org
-COMMENT=	A Japanese input method, library part
+COMMENT=	Japanese input method, library part
 
+USES=		imake
 USE_GCC=	any
-USE_IMAKE=	yes
 USE_LDCONFIG=	yes
 NO_INSTALL_MANPAGES=	yes
 SUB_FILES=	sj3_freebsd.tmpl
