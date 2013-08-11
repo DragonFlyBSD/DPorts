@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-Regexp-Assemble/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Regexp-Assemble/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Regexp-Assemble
 PORTVERSION=	0.35
@@ -13,7 +13,8 @@ COMMENT=	Assemble multiple Regular Expressions into one RE
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Regexp::Assemble.3
 
