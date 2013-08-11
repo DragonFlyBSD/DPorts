@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Data::Stream::Bulk
-# Date created:				2008-11-28
-# Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Data-Stream-Bulk/Makefile,v 1.10 2012/12/17 15:43:18 svnexp Exp $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: devel/p5-Data-Stream-Bulk/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Stream-Bulk
 PORTVERSION=	0.11
@@ -25,7 +21,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Stream::Bulk.3 \
 		Data::Stream::Bulk::Array.3 \
