@@ -1,9 +1,5 @@
-# New ports collection makefile for:	prefork
-# Date created:	   14 November 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-prefork/Makefile,v 1.13 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-prefork/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	prefork
 PORTVERSION=	1.04
@@ -18,11 +14,9 @@ COMMENT=	Optimize module loading across forking and non-forking scenarios
 BUILD_DEPENDS=	p5-Scalar-List-Utils>=0:${PORTSDIR}/lang/p5-Scalar-List-Utils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		prefork.3
-
-post-patch:
-	@${PERL} -pi -e 's/^auto_install.*$$//' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
