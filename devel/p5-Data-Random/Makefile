@@ -1,9 +1,5 @@
-# New Ports Collection Makefile for:	p5-Data-Random
-# Date created:				2004-07-07
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Data-Random/Makefile,v 1.13 2012/12/17 15:16:53 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Data-Random/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Random
 PORTVERSION=	0.08
@@ -24,7 +20,8 @@ OPTIONS_DEFAULT=	DATE_CALC
 DATE_CALC_DESC=	Support for rand_date()
 GD_DESC=	Support for rand_image()
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Random.3 Data::Random::WordList.3
 
