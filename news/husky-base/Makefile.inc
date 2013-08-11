@@ -12,7 +12,7 @@ CFLAGS+=	-D__FreeBSD__=1
 .if ${PORTNAME} != "base"
 BUILD_DEPENDS=	${LOCALBASE}/etc/fido/huskymak.cfg:${PORTSDIR}/news/husky-base
 
-USE_GMAKE=	yes
+USES+=		gmake
 
 MAKE_ARGS+=	PREFIX="${PREFIX}" LOCALBASE="${LOCALBASE}" \
 		CC="${CC}" CXX="${CXX}" GPP="${CXX}" MKSHARED="${CC}" \

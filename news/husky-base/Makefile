@@ -1,9 +1,5 @@
-# New ports collection makefile for:    husky-base
-# Date created:                         6 January 2003
-# Whom:                                 Max Khon
-#
-# $FreeBSD: news/husky-base/Makefile 317723 2013-05-09 06:59:06Z fjoe $
-#
+# Created by: Max Khon
+# $FreeBSD: news/husky-base/Makefile 322828 2013-07-12 12:28:43Z bapt $
 
 PORTNAME=	base
 PORTVERSION=	1.0
@@ -28,6 +24,5 @@ do-install:
 	@${CHOWN} fido:fido ${PREFIX}/etc/fido
 	@${INSTALL_DATA} ${WRKSRC}/huskymak.cfg ${PREFIX}/etc/fido
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/news/husky-base/Makefile.inc"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../husky-base/Makefile.inc"
+.include <bsd.port.mk>
