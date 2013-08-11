@@ -1,9 +1,5 @@
-# New ports collection makefile for:	RDFStore
-# Date created:	   30 May 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-RDFStore/Makefile,v 1.16 2012/11/17 06:02:07 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-RDFStore/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	RDFStore
 PORTVERSION=	0.51
@@ -23,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BDB=	yes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBD::RDFStore.3 DBMS.3 RDFStore.3 \
 		RDFStore::Digest::Digestable.3 RDFStore::Literal.3 \
