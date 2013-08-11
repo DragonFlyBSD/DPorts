@@ -1,16 +1,16 @@
 # Created by: trevor
-# $FreeBSD: ports/devel/cvsgraph/Makefile,v 1.36 2013/01/27 06:41:37 svnexp Exp $
+# $FreeBSD: devel/cvsgraph/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	cvsgraph
 PORTVERSION=	1.7.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel graphics
 MASTER_SITES=	http://www.akhphd.au.dk/~bertho/cvsgraph/release/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graph the life story of a file under CVS or RCS
 
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
