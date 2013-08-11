@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/p5-Package-Stash/Makefile 323268 2013-07-19 07:07:29Z culot $
+# $FreeBSD: devel/p5-Package-Stash/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Package-Stash
 PORTVERSION=	0.35
@@ -22,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		package-stash-conflicts.1
 MAN3=		Package::Stash.3 \
