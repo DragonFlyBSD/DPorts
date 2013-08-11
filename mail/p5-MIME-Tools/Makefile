@@ -1,5 +1,5 @@
 # Created by: Eivind Eklund <eivind@FreeBSD.org>
-# $FreeBSD: mail/p5-MIME-Tools/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: mail/p5-MIME-Tools/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MIME-Tools
 PORTVERSION=	5.504
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-Convert-BinHex>=0:${PORTSDIR}/converters/p5-Convert-BinHex \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MIME::Body.3 \
 	MIME::Decoder.3	\
