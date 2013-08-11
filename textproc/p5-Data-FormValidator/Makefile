@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: ports/textproc/p5-Data-FormValidator/Makefile,v 1.38 2012/12/22 17:44:20 svnexp Exp $
+# $FreeBSD: textproc/p5-Data-FormValidator/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-FormValidator
 PORTVERSION=	4.80
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-CGI.pm>=3.48:${PORTSDIR}/www/p5-CGI.pm \
 		p5-Regexp-Common>=0:${PORTSDIR}/textproc/p5-Regexp-Common
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Data::FormValidator.3 \
 		Data::FormValidator::ConstraintsFactory.3 \
