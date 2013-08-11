@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: x11/ecore-imf/Makefile 318442 2013-05-18 19:36:31Z gblach $
+# $FreeBSD: x11/ecore-imf/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	imf
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 CATEGORIES=	x11 enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
 		LOCAL/gblach/e17/
@@ -29,14 +29,12 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 CONFIGURE_ARGS+=	--enable-ecore-con \
 			--enable-ecore-imf
 
-LDFLAGS+=		-L${LOCALBASE}/lib -lecore
-
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's,\$$\(top_builddir\)/src/lib/ecore/\.libs,${LOCALBASE}/lib,'\
 		-e 's,\$$\(top_builddir\)/src/lib/ecore_con/\.libs,${LOCALBASE}/lib,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,,'\
-		-e 's,\$$\(top_builddir\)/src/lib/ecore_con/libecore_con\.la,,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore/libecore\.la,-lecore,'\
+		-e 's,\$$\(top_builddir\)/src/lib/ecore_con/libecore_con\.la,-lecore_con,'\
 		${BUILD_WRKSRC}/Makefile.in
 
 post-install:
