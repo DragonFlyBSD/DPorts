@@ -2,7 +2,7 @@
 # Date created:				16 April 2008
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-Block/Makefile,v 1.6 2012/12/16 06:16:54 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Block/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-Block
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Test-Exception>=0.15:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Simple>=0.47:${PORTSDIR}/devel/p5-Test-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::Block.3
 
