@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <d.marks@student.umist.ac.uk>
-# $FreeBSD: devel/ccache/Makefile 317706 2013-05-08 20:06:48Z bdrewery $
+# $FreeBSD: devel/ccache/Makefile 320928 2013-06-14 14:22:51Z bdrewery $
 
 PORTNAME=	ccache
 PORTVERSION=	3.1.9
@@ -28,6 +28,8 @@ OPTIONS_DEFINE=	CLANGLINK LLVMLINK STATIC DOCS
 CLANGLINK_DESC=	Create clang compiler links if clang is installed
 LLVMLINK_DESC=	Create llvm compiler links if llvm is installed
 
+STATIC_LDFLAGS=	-static
+
 .include <bsd.port.options.mk>
 
 PLIST_SUB+=	CCLINKDIR="${CCLINKDIR}"
@@ -45,10 +47,6 @@ CCACHE_COMPILERS+=	clang clang++
 
 .if ${PORT_OPTIONS:MLLVMLINK}
 CCACHE_COMPILERS+=	llvm-gcc llvm-c++ llvm-g++
-.endif
-
-.if ${PORT_OPTIONS:MSTATIC}
-LDFLAGS+=		"--static"
 .endif
 
 CCACHE_COMPILERS+=	${EXTRA_COMPILERS}
