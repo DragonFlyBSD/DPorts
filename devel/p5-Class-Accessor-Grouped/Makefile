@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Accessor-Grouped/Makefile 316419 2013-04-24 10:20:19Z tobez $
+# $FreeBSD: devel/p5-Class-Accessor-Grouped/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Accessor-Grouped
 PORTVERSION=	0.10010
@@ -22,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Accessor::Grouped.3
 
