@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-IPC-Cmd/Makefile 313412 2013-03-04 15:49:13Z tobez $
+# $FreeBSD: devel/p5-IPC-Cmd/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	IPC-Cmd
 PORTVERSION=	0.80
@@ -15,7 +15,8 @@ COMMON_DEPENDS=	p5-IPC-Run>=0.55:${PORTSDIR}/devel/p5-IPC-Run
 BUILD_DEPENDS=	${COMMON_DEPENDS}
 RUN_DEPENDS=	${COMMON_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	IPC::Cmd.3
 
