@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Clone/Makefile,v 1.18 2012/12/10 09:38:20 svnexp Exp $
+# $FreeBSD: devel/p5-Clone/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Clone
 PORTVERSION=	0.34
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Clone - recursively copy Perl datatypes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	patch configure
 
 MAN3=		Clone.3
 
