@@ -2,7 +2,7 @@
 # Date created:		Sept 11 2004
 # Whom:			Simon Barner <barner@gmx.de>
 #
-# $FreeBSD: ports/audio/p5-Ogg-Vorbis-Header/Makefile,v 1.14 2012/11/17 05:54:40 svnexp Exp $
+# $FreeBSD: audio/p5-Ogg-Vorbis-Header/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Ogg-Vorbis-Header
@@ -21,7 +21,8 @@ LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAKE_JOBS_UNSAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Ogg::Vorbis::Header.3
 
