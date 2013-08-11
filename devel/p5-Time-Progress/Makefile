@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Time-Progress/Makefile 323106 2013-07-16 14:17:41Z culot $
+# $FreeBSD: devel/p5-Time-Progress/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Time-Progress
 PORTVERSION=	1.8
@@ -12,6 +12,7 @@ COMMENT=	Elapsed and estimated finish time reporting
 
 MAN3=	Time::Progress.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
