@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: ports/textproc/p5-Text-Filter/Makefile,v 1.11 2013/01/28 11:07:35 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Filter/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Text-Filter
 PORTVERSION=	1.10
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Base class for objects that can read and write text lines
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Filter.3 Text::Filter::Cooked.3
 
