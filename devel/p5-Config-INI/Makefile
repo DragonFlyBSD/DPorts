@@ -1,5 +1,5 @@
 # Created by: bapt <baptiste.daroussin@gmail.com>
-# $FreeBSD: devel/p5-Config-INI/Makefile 322161 2013-07-02 08:17:39Z culot $
+# $FreeBSD: devel/p5-Config-INI/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Config-INI
 PORTVERSION=	0.020
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 RUN_DEPENDS+=	p5-Mixin-Linewise>=0:${PORTSDIR}/devel/p5-Mixin-Linewise \
 		p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Config::INI.3 \
 		Config::INI::Reader.3 \
