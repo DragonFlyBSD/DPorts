@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Exception-Class/Makefile,v 1.41 2013/02/25 12:50:01 svnexp Exp $
+# $FreeBSD: devel/p5-Exception-Class/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Exception-Class
 PORTVERSION=	1.37
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Class-Data-Inheritable>=0.02:${PORTSDIR}/devel/p5-Class-Data-I
 		p5-Devel-StackTrace>=1.20:${PORTSDIR}/devel/p5-Devel-StackTrace
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Exception::Class.3 Exception::Class::Base.3
 
