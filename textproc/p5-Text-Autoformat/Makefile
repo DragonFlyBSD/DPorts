@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-Autoformat/Makefile 318066 2013-05-13 10:35:53Z tobez $
+# $FreeBSD: textproc/p5-Text-Autoformat/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Text-Autoformat
 PORTVERSION=	1.669.003
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-version>=0:${PORTSDIR}/devel/p5-version \
 		p5-Text-Reform>=1.11:${PORTSDIR}/textproc/p5-Text-Reform
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Autoformat.3
 
