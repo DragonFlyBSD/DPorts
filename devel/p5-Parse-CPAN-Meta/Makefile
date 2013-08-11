@@ -2,7 +2,7 @@
 # Date created:				26 February 2009
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Parse-CPAN-Meta/Makefile,v 1.12 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: devel/p5-Parse-CPAN-Meta/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Parse-CPAN-Meta
@@ -19,7 +19,8 @@ COMMENT=	Parse META.yml and other similar CPAN metadata files
 BUILD_DEPENDS=	p5-CPAN-Meta-YAML>=0.008:${PORTSDIR}/devel/p5-CPAN-Meta-YAML
 RUN_DEPENDS=	p5-CPAN-Meta-YAML>=0.008:${PORTSDIR}/devel/p5-CPAN-Meta-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Parse::CPAN::Meta.3
 
