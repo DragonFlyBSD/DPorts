@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-Flow
-# Date created:				2008/08/30
-# Whom:					chinsan
-#
-# $FreeBSD: ports/textproc/p5-Text-Flow/Makefile,v 1.4 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: textproc/p5-Text-Flow/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Flow
 DISTVERSION=	0.01
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Moose>=0.45:${PORTSDIR}/devel/p5-Moose \
 		p5-Test-LongString>=0:${PORTSDIR}/devel/p5-Test-LongString
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		${PORTNAME:S/-/::/g}.3 Text::Flow::Wrap.3
 
