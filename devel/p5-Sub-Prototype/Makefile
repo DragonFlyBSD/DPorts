@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Sub-Prototype
-# Date created:		2012-09-08
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Sub-Prototype/Makefile,v 1.2 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Sub-Prototype/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Sub-Prototype
 PORTVERSION=	0.02
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Set a subs prototype
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sub::Prototype.3
 
