@@ -1,5 +1,5 @@
 # Created by: Yoshiaki Uchikawa
-# $FreeBSD: audio/mikmod/Makefile 317613 2013-05-07 14:20:56Z ehaupt $
+# $FreeBSD: audio/mikmod/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	mikmod
 PORTVERSION=	3.2.1
@@ -15,9 +15,8 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	mikmod:${PORTSDIR}/audio/libmikmod
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		mikmod.1
 PLIST_FILES=	bin/mikmod
