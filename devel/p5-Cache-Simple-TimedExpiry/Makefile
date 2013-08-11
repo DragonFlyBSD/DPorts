@@ -2,7 +2,7 @@
 # Date created:	   8 September 2004
 # Whom:		   Palle Girgensohn <girgen@pingpong.net>
 #
-# $FreeBSD: ports/devel/p5-Cache-Simple-TimedExpiry/Makefile,v 1.10 2012/11/17 05:56:06 svnexp Exp $
+# $FreeBSD: devel/p5-Cache-Simple-TimedExpiry/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Cache-Simple-TimedExpiry
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A lightweight cache with timed expiration
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Cache::Simple::TimedExpiry.3
 
