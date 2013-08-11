@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/p5-Log-Report/pkg-plist,v 1.7 2012/11/17 05:56:21 svnexp Exp $
+@comment $FreeBSD: devel/p5-Log-Report/pkg-plist 303582 2012-09-03 01:35:19Z linimon $
 bin/xgettext-perl
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Log/Report/.packlist
 %%SITE_PERL%%/Log/Report.pm

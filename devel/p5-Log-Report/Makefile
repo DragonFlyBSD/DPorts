@@ -2,7 +2,7 @@
 # Date created:		2007-08-14
 # Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
 #
-# $FreeBSD: ports/devel/p5-Log-Report/Makefile,v 1.27 2012/12/09 15:58:18 svnexp Exp $
+# $FreeBSD: devel/p5-Log-Report/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Log-Report
@@ -16,7 +16,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/\.(.)$/\1/}
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Report a problem, pluggable handlers and language support
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Log::Report.3 \
 	Log::Report::Die.3 \
