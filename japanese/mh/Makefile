@@ -2,7 +2,7 @@
 # Date created:		28 March 1995
 # Whom:			Akito FUJITA <fujita@zoo.ncl.omron.co.jp>
 #
-# $FreeBSD: ports/japanese/mh/Makefile,v 1.38 2012/11/17 05:58:36 svnexp Exp $
+# $FreeBSD: japanese/mh/Makefile 322398 2013-07-06 15:45:10Z motoyuki $
 #
 
 PORTNAME=	mh
@@ -10,7 +10,6 @@ PORTVERSION=	${VERSION}.j${JP_VERSION}
 PORTREVISION=	1
 CATEGORIES=	japanese mail
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
-		ftp://komadori.planet.sci.kobe-u.ac.jp/pub/MH/ \
 		ftp://ftp.laic.u-hyogo.ac.jp/pub/net/mh/
 MASTER_SITE_SUBDIR=	motoyuki
 DISTNAME=	${PORTNAME}-${VERSION}-JP-${JP_VERSION}
