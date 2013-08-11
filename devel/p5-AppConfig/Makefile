@@ -2,7 +2,7 @@
 # Date created:				23 October 1999
 # Whom:					Igor Vinokurov <igor@zynaps.ru>
 #
-# $FreeBSD: ports/devel/p5-AppConfig/Makefile,v 1.13 2012/11/17 05:56:04 svnexp Exp $
+# $FreeBSD: devel/p5-AppConfig/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	AppConfig
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	A Perl module for reading configuration files
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AppConfig.3 \
 		AppConfig::Args.3 \
