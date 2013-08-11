@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <az@FreeBSD.org>
-# $FreeBSD: ports/net/p5-Net-OpenSSH/Makefile,v 1.28 2013/02/16 14:29:44 svnexp Exp $
+# $FreeBSD: net/p5-Net-OpenSSH/Makefile 324224 2013-08-04 12:39:45Z az $
 
 PORTNAME=	Net-OpenSSH
 PORTVERSION=	0.60
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-IO-Tty>=0:${PORTSDIR}/devel/p5-IO-Tty
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::OpenSSH::Constants.3 \
 	Net::OpenSSH::ConnectionCache.3 \
