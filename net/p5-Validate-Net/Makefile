@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Validate-Net
-# Date created:	   10 December 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/net/p5-Validate-Net/Makefile,v 1.9 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: net/p5-Validate-Net/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Validate-Net
 PORTVERSION=	0.6
@@ -18,7 +14,8 @@ COMMENT=	Format validation and more for Net:: related strings
 BUILD_DEPENDS=	p5-Class-Default>=0:${PORTSDIR}/devel/p5-Class-Default
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Validate::Net.3
 
