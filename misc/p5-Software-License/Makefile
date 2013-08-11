@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/misc/p5-Software-License/Makefile,v 1.13 2012/12/13 09:19:46 svnexp Exp $
+# $FreeBSD: misc/p5-Software-License/Makefile 324054 2013-07-31 14:36:21Z az $
 
 PORTNAME=	Software-License
 PORTVERSION=	0.103005
@@ -22,7 +22,8 @@ RUN_DEPENDS=	p5-Data-Section>=0:${PORTSDIR}/devel/p5-Data-Section \
 		p5-Text-Template>=0:${PORTSDIR}/textproc/p5-Text-Template \
 		p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Software::License.3 \
 		Software::License::AGPL_3.3 \
