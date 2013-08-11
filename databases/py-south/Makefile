@@ -1,8 +1,8 @@
 # Created by: Stanislav Svirid <count@211.ru>
-# $FreeBSD: databases/py-south/Makefile 318947 2013-05-24 10:07:22Z wg $
+# $FreeBSD: databases/py-south/Makefile 324481 2013-08-10 11:45:03Z wg $
 
 PORTNAME=	south
-PORTVERSION=	0.8.1
+PORTVERSION=	0.8.2
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
