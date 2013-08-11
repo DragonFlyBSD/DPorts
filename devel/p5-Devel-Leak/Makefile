@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Devel-Leak
-# Date created:	   09 September 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Devel-Leak/Makefile,v 1.6 2012/11/17 05:56:13 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Devel-Leak/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Devel-Leak
 PORTVERSION=	0.03
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Utility for looking for perl objects that are not reclaimed
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::Leak.3
 
