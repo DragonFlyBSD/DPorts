@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline-CPP/Makefile 318671 2013-05-21 09:58:33Z tobez $
+# $FreeBSD: devel/p5-Inline-CPP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Inline-CPP
 PORTVERSION=	0.44
@@ -15,7 +15,8 @@ LICENSE=	ART10
 RUN_DEPENDS=	p5-Inline>=0.53:${PORTSDIR}/devel/p5-Inline \
 		p5-Parse-RecDescent>=0:${PORTSDIR}/devel/p5-Parse-RecDescent
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Inline::CPP.3 \
 		Inline::CPP::Config.3 \
