@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gcc-aux/Makefile 323380 2013-07-21 13:00:46Z marino $
+# $FreeBSD: lang/gcc-aux/Makefile 324090 2013-08-01 06:31:18Z bapt $
 
 PORTNAME=	gcc-aux
 PORTVERSION=	${SNAPSHOT}
@@ -34,6 +34,9 @@ FORT_DESC=		Build Fortran language
 OBJC_DESC=      	Build Objective-C language
 STATIC_DESC=    	Build with no shared libraries other than libc
 TESTSUITE_DESC=		Activate test support
+
+USES+=		perl5
+USE_PERL5=	extract
 
 .include <bsd.port.options.mk>
 
