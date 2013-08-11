@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: lang/mono/Makefile 322532 2013-07-08 19:05:27Z romain $
+# $FreeBSD: lang/mono/Makefile 323877 2013-07-29 09:10:32Z bapt $
 
 PORTNAME=	mono
 PORTVERSION=	3.0.12
@@ -13,9 +13,8 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
     		bash:${PORTSDIR}/shells/bash
 
 USE_BZIP2=	yes
-USES=		bison pathfix gettext
+USES=		bison pathfix gettext gmake
 USE_GNOME=	glib20
-USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -62,6 +61,7 @@ post-patch:
 		${WRKSRC}/mcs/class/Mono.WebBrowser/build-csproj2k5
 	@${FIND} ${WRKSRC} -name '*.sh' | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|^#!/bin/bash|#!/bin/sh|g'
+	@${REINPLACE_CMD} 's/(1)/(1.0)/g' ${WRKSRC}/configure
 
 tests: build
 	@${ECHO_MSG} "===> Running mono regression tests"
