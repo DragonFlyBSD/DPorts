@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-enum
-# Date created:				25th March 2003
-# Whom:					Maxim Maximov (mcsi@agava.com)
-#
-# $FreeBSD: ports/devel/p5-enum/Makefile,v 1.6 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Maxim Maximov (mcsi@agava.com)
+# $FreeBSD: devel/p5-enum/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	enum
 PORTVERSION=	1.016
@@ -15,7 +11,8 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	\
 	Defines symbolic constants with ordered numeric values, like C enums
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		enum.3
 
