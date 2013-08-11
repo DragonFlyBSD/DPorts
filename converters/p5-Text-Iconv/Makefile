@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Text::Iconv
-# Date created:		26 Dec 2000
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: converters/p5-Text-Iconv/Makefile 316654 2013-04-27 08:50:46Z mva $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: converters/p5-Text-Iconv/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Iconv
 PORTVERSION=	1.7
@@ -14,9 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to iconv() codeset conversion function
 
-USES=	iconv
-
-PERL_CONFIGURE=	yes
+USES=		perl5 iconv
+USE_PERL5=	configure
 CONFIGURE_ARGS+=	INC="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -liconv"
 
