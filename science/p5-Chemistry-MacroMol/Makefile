@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/science/p5-Chemistry-MacroMol/Makefile,v 1.4 2012/12/07 07:16:15 svnexp Exp $
+# $FreeBSD: science/p5-Chemistry-MacroMol/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Chemistry-MacroMol
 PORTVERSION=	0.06
@@ -13,7 +13,8 @@ COMMENT=	Perl toolkit to describe macromolecules
 BUILD_DEPENDS=	p5-Chemistry-Mol>=0.37:${PORTSDIR}/science/p5-Chemistry-Mol
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Chemistry::MacroMol.3 Chemistry::Domain.3
 
