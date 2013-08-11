@@ -1,8 +1,8 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: irc/py-irc/Makefile 323230 2013-07-18 13:25:19Z wg $
+# $FreeBSD: irc/py-irc/Makefile 323532 2013-07-23 12:51:41Z wg $
 
 PORTNAME=	irc
-PORTVERSION=	8.3.2
+PORTVERSION=	8.4
 CATEGORIES=	irc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,12 +12,13 @@ COMMENT=	IRC protocol client library for Python
 
 LICENSE=	MIT
 
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hgtools>0:${PORTSDIR}/devel/py-hgtools \
+		${PYTHON_PKGNAMEPREFIX}pytest-runner>0:${PORTSDIR}/devel/py-pytest-runner
+
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
-
-BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}hgtools>0:${PORTSDIR}/devel/py-hgtools \
-		${PYTHON_PKGNAMEPREFIX}pytest-runner>0:${PORTSDIR}/devel/py-pytest-runner
 
 PORTEXAMPLES=	irccat.py irccat2.py servermap.py testbot.py \
 		dccreceive.py dccsend.py
@@ -32,7 +33,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}argparse>0:${PORTSDIR}/devel/py-argparse
 
 post-patch:
 	@${REINPLACE_CMD} -e \
-		's|use_2to3=True,|use_2to3=True, zip_safe=False,|' ${WRKSRC}/setup.py
+		's|license="MIT",|license="MIT", zip_safe=False,|' ${WRKSRC}/setup.py
 	${CHMOD} -R o-w ${WRKSRC}/irc.egg-info
 
 .if ${PORT_OPTIONS:MEXAMPLES}
