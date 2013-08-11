@@ -1,4 +1,4 @@
-$FreeBSD: ports/graphics/glew/files/patch-config_Makefile.freebsd,v 1.8 2012/11/17 05:58:07 svnexp Exp $
+$FreeBSD: graphics/glew/files/patch-config_Makefile.freebsd 305282 2012-10-04 21:29:54Z mva $
 --- config/Makefile.freebsd.orig	2012-10-04 19:47:46.000000000 +0200
 +++ config/Makefile.freebsd	2012-10-04 19:49:06.000000000 +0200
 @@ -1,22 +1,22 @@
