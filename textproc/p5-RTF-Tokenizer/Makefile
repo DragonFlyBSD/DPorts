@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-RTF-Tokenizer
-# Date created:				Oct 15th 2003
-# Whom:					clsung@dragon2.net
-#
-# $FreeBSD: ports/textproc/p5-RTF-Tokenizer/Makefile,v 1.12 2012/11/17 06:02:07 svnexp Exp $
-#
+# Created by: clsung@dragon2.net
+# $FreeBSD: textproc/p5-RTF-Tokenizer/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	RTF-Tokenizer
 PORTVERSION=	1.13
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for reading RTF files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	RTF::Tokenizer.3
 
