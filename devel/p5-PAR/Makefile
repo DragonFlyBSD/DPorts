@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-PAR/Makefile 319460 2013-05-31 01:45:47Z miwi $
+# $FreeBSD: devel/p5-PAR/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	PAR
 PORTVERSION=	1.00.7
@@ -26,10 +26,6 @@ MAN3=		PAR.3 \
 		PAR::SetupTemp.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
 
 regression-test:
 	cd ${WRKSRC} && ${MAKE} test
