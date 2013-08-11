@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MKDoc-XML
-# Date created:				25 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-MKDoc-XML/Makefile,v 1.8 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: textproc/p5-MKDoc-XML/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MKDoc-XML
 PORTVERSION=	0.75
@@ -29,6 +25,7 @@ MAN3=	MKDoc::XML.3 \
 	MKDoc::XML::TreeBuilder.3 \
 	MKDoc::XML::TreePrinter.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
