@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: print/libotf/Makefile 319711 2013-06-02 18:54:51Z pawel $
+# $FreeBSD: print/libotf/Makefile 322366 2013-07-06 07:59:09Z bapt $
 
 PORTNAME=	libotf
 PORTVERSION=	0.9.13
@@ -12,14 +12,10 @@ COMMENT=	Library for handling OpenType fonts
 
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
 
+USES=		pathfix pkgconfig
 USE_XORG=	x11 xt xaw xmu
-USE_PKGCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g' \
-		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
