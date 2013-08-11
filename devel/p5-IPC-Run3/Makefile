@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-IPC-Run3/Makefile 320752 2013-06-13 10:31:37Z tobez $
+# $FreeBSD: devel/p5-IPC-Run3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IPC-Run3
 PORTVERSION=	0.046
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Run a subprocess in batch mode
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IPC::Run3.3 \
 		IPC::Run3::ProfArrayBuffer.3 \
