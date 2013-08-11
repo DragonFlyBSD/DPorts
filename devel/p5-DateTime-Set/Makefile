@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: ports/devel/p5-DateTime-Set/Makefile,v 1.30 2013/02/05 18:55:59 svnexp Exp $
+# $FreeBSD: devel/p5-DateTime-Set/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Set
 PORTVERSION=	0.31
@@ -16,7 +16,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 OPTIONS_DEFINE=	DOCS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Set.3 \
 		DateTime::Span.3 \
