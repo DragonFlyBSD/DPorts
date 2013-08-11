@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.ORG>
-# $FreeBSD: devel/p5-PathTools/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-PathTools/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	PathTools
 PORTVERSION=	3.4000
@@ -12,7 +12,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/00$//}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for portably manipulating file specifications
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Cwd.3 File::Spec.3 File::Spec::Cygwin.3 File::Spec::Epoc.3 \
 		File::Spec::Functions.3 File::Spec::Mac.3 File::Spec::OS2.3 \
