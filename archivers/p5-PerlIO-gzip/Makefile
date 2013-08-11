@@ -1,9 +1,5 @@
-# New ports collection makefile for:	PerlIO-gzip
-# Date created:	   08 December 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/archivers/p5-PerlIO-gzip/Makefile,v 1.8 2012/11/17 05:54:22 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: archivers/p5-PerlIO-gzip/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	PerlIO-gzip
 PORTVERSION=	0.18
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to provide a PerlIO layer to gzip/gunzip
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		PerlIO::gzip.3
 
