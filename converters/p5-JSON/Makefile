@@ -1,7 +1,7 @@
-# $FreeBSD: converters/p5-JSON/Makefile 319087 2013-05-26 01:14:14Z kuriyama $
+# $FreeBSD: converters/p5-JSON/Makefile 324470 2013-08-10 10:17:49Z kuriyama $
 
 PORTNAME=	JSON
-PORTVERSION=	2.58
+PORTVERSION=	2.59
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,7 +10,8 @@ MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to convert to JSON (JavaScript Object Notation)
 
 CONFLICTS=	p5-JSON-1.*
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		JSON.3 \
 		JSON::backportPP.3 \
