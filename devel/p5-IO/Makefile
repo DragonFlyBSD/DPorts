@@ -1,9 +1,5 @@
-# New ports collection makefile for:	IO
-# Date created:		27 Dec 2000
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-IO/Makefile,v 1.12 2012/11/17 05:56:18 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-IO/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IO
 PORTVERSION=	1.25
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Various IO modules for Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	INSTALLDIRS=site POLLUTE=1
 
 MAN3=		IO.3 IO::Dir.3 IO::File.3 IO::Handle.3 IO::Pipe.3 IO::Poll.3 \
