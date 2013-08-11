@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: www/p5-Apache-Session-Wrapper/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Apache-Session-Wrapper/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Apache-Session-Wrapper
 PORTVERSION=	0.34
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Class-Container>=0:${PORTSDIR}/devel/p5-Class-Container \
 		p5-Apache-Session>=0:${PORTSDIR}/www/p5-Apache-Session
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Apache::Session::Wrapper.3
 
