@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Regexp-Log
-# Date created:				03 March 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Regexp-Log/Makefile,v 1.9 2012/11/17 06:02:07 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-Regexp-Log/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Regexp-Log
 PORTVERSION=	0.06
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Regexp::Log - A base class for log files regexp builders
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Regexp::Log.3
 
