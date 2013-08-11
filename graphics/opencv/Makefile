@@ -1,5 +1,5 @@
 # Created by: Marc Abramowitz (http://marc.abramowitz.info)
-# $FreeBSD: graphics/opencv/Makefile 318829 2013-05-23 02:35:26Z jgh $
+# $FreeBSD: graphics/opencv/Makefile 324558 2013-08-10 20:35:10Z marino $
 
 PORTNAME?=	opencv
 PORTVERSION=	2.3.1
@@ -32,7 +32,7 @@ PLIST_SUB+=	VERSION=${DISTVERSION}
 .if !defined(_BUILDING_OPENCV_CORE) && !defined(_BUILDING_OPENCV_PYTHON)
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-opencv
 LIB_DEPENDS+=	opencv_core.2:${PORTSDIR}/graphics/opencv-core
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lopencv_core
 
 PORTDOCS=	*
 

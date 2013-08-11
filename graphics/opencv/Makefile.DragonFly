@@ -1,3 +1,0 @@
-.if !defined(_BUILDING_OPENCV_CORE)
-LDFLAGS+=	-lopencv_core
-.endif
