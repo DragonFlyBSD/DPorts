@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Locale-Codes
-# Date created:				28 December 2002
-# Whom:	      				Sebastien gioria <gioria@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/p5-Locale-Msgcat/Makefile,v 1.10 2012/11/17 05:59:43 svnexp Exp $
-#
+# Created by: Sebastien gioria <gioria@FreeBSD.org>
+# $FreeBSD: misc/p5-Locale-Msgcat/Makefile 324054 2013-07-31 14:36:21Z az $
 
 PORTNAME=	Msgcat
 PORTVERSION=	1.03
@@ -17,6 +13,7 @@ COMMENT=	Perl module for systems to support the XPG4 message catalog functions
 
 MAN3=		Locale::Msgcat.3
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
