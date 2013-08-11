@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-B-Deobfuscate
-# Date created:	   7 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/devel/p5-B-Deobfuscate/Makefile,v 1.15 2012/11/17 05:56:05 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: devel/p5-B-Deobfuscate/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	B-Deobfuscate
 PORTVERSION=	0.20
@@ -18,7 +14,8 @@ RUN_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML \
 		p5-B-Keywords>=0:${PORTSDIR}/devel/p5-B-Keywords
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		B::Deobfuscate.3 B::Deobfuscate::Dict::Flowers.3 B::Deobfuscate::Dict::PGPHashWords.3
 
