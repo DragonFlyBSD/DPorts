@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/lang/p5-Try-Tiny/Makefile,v 1.10 2013/01/04 09:41:45 svnexp Exp $
+# $FreeBSD: lang/p5-Try-Tiny/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Try-Tiny
 PORTVERSION=	0.12
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Minimal try/catch with proper localization of $$@
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Try::Tiny.3
 
