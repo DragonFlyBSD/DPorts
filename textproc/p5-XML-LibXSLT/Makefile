@@ -1,5 +1,5 @@
 # Created by: Dom Mitchell <dom@happygiraffe.net>
-# $FreeBSD: textproc/p5-XML-LibXSLT/Makefile 322128 2013-07-01 14:33:42Z culot $
+# $FreeBSD: textproc/p5-XML-LibXSLT/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-LibXSLT
 PORTVERSION=	1.80
@@ -18,7 +18,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2 \
 		xslt.2:${PORTSDIR}/textproc/libxslt
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	INC="-I${LOCALBASE}/include -I${LOCALBASE}/include/libxml2" \
 		LIBS="-L${LOCALBASE}/lib"
 
