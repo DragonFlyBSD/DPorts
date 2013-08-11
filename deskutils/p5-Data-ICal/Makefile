@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: deskutils/p5-Data-ICal/Makefile 317086 2013-05-02 08:49:43Z tobez $
+# $FreeBSD: deskutils/p5-Data-ICal/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-ICal
 PORTVERSION=	0.20
@@ -24,7 +24,8 @@ TEST_DEPENDS=	p5-Test-LongString>=0:${PORTSDIR}/devel/p5-Test-LongString \
 		p5-Test-Pod-Coverage>=1.04:${PORTSDIR}/devel/p5-Test-Pod-Coverage \
 		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::ICal.3 \
 	Data::ICal::Entry.3 \
