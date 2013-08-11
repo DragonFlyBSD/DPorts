@@ -1,6 +1,6 @@
 # Ports collection makefile for:	Config-Simple
 # Created by: mig
-# $FreeBSD: ports/devel/p5-Config-Simple/Makefile,v 1.11 2012/11/17 05:56:09 svnexp Exp $
+# $FreeBSD: devel/p5-Config-Simple/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Config-Simple
 PORTVERSION=	4.59
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple configuration file class
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Config::Simple.3
 
