@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Guard
-# Date created:				28 April 2009
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Guard/Makefile,v 1.5 2012/11/17 05:56:18 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Guard/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Guard
 PORTVERSION=	1.022
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Safe cleanup blocks
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Guard.3
 
