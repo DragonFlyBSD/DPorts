@@ -1,5 +1,5 @@
 # Created by: Gregory Shapiro <gshapiro@FreeBSD.org>
-# $FreeBSD: devel/p5-Date-Pcalc/Makefile 320256 2013-06-08 14:54:55Z miwi $
+# $FreeBSD: devel/p5-Date-Pcalc/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Date-Pcalc
 PORTVERSION=	6.1
@@ -14,7 +14,8 @@ COMMENT=	Gregorian calendar date calculations
 BUILD_DEPENDS=	p5-Carp-Clan>=5.3:${PORTSDIR}/devel/p5-Carp-Clan \
 		p5-Bit-Vector>=7.0:${PORTSDIR}/math/p5-Bit-Vector
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	</dev/null
 
 MAN3=		Date::Pcalc.3 \
