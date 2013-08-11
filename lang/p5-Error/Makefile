@@ -1,5 +1,5 @@
 # Created by: Peter van Heusden <pvh@egenetics.com>
-# $FreeBSD: lang/p5-Error/Makefile 317493 2013-05-06 09:23:05Z tobez $
+# $FreeBSD: lang/p5-Error/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Error
 PORTVERSION=	0.17020
@@ -13,8 +13,8 @@ COMMENT=	Perl module to provide Error/exception support for perl: Error
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-MAKE_JOBS_SAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Error.3 Error::Simple.3
 
