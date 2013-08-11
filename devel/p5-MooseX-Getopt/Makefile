@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Getopt/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-MooseX-Getopt/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-Getopt
 PORTVERSION=	0.56
@@ -28,7 +28,8 @@ TEST_DEPENDS=	p5-MooseX-ConfigFromFile>=0:${PORTSDIR}/devel/p5-MooseX-ConfigFrom
 		p5-Test-Warn>=0.21:${PORTSDIR}/devel/p5-Test-Warn \
 		p5-Path-Tiny>=0:${PORTSDIR}/devel/p5-Path-Tiny
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MooseX::Getopt.3 \
 	MooseX::Getopt::Basic.3 \
