@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion/Makefile 322938 2013-07-13 15:36:50Z lev $
+# $FreeBSD: devel/subversion/Makefile 323611 2013-07-24 17:18:50Z lev $
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
@@ -118,6 +118,14 @@ OLD_LIB_DEPENDS:=	${LIB_DEPENDS:S!^!${LOCALBASE}/lib/lib!:C!(\.[0-9]+)?:!.a:!}
 BUILD_DEPENDS+=		${OLD_LIB_DEPENDS}
 LIB_DEPENDS=
 .endif
+
+TOOLS_STATIC_BINARIES=	client-side/svn-bench/svn-bench server-side/svnauthz \
+			server-side/fsfs-stats \
+			server-side/svn-populate-node-origins-index \
+			server-side/svnauthz-validate \
+			server-side/svn-rep-sharing-stats dev/fsfs-reorg \
+			dev/svnraisetreeconflict/svnraisetreeconflict \
+			dev/fsfs-access-map diff/diff3 diff/diff diff/diff4
 
 pre-everything::
 	@${ECHO_MSG} ""
@@ -256,6 +264,10 @@ post-install:	${MKREPOS_TARGET}
 .endif
 .endif
 	@${MKDIR} ${DATADIR}
+.if ${PORT_OPTIONS:MSTATIC}
+	cd ${WRKSRC}/tools ; \
+	  ${RM} ${TOOLS_STATIC_BINARIES}
+.endif
 	cd ${WRKSRC}/tools ; \
 	  ${TAR} --exclude '*.in' --exclude '.libs' --exclude '*.o' --exclude '*.lo' --exclude '*.la' --exclude='*.slo' -cf - * | ${TAR} -C ${DATADIR} -xf -
 # ugly hack to remove libtool scripts ...
