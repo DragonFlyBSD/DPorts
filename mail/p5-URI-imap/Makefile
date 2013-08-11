@@ -2,7 +2,7 @@
 # Date created:				30 December 2004
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-URI-imap/Makefile,v 1.5 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-URI-imap/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	URI-imap
@@ -17,7 +17,8 @@ COMMENT=	URI::imap - Support IMAP URI
 BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	URI::imap.3
 
