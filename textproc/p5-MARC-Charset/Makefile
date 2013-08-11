@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/textproc/p5-MARC-Charset/Makefile,v 1.8 2013/02/11 21:05:33 svnexp Exp $
+# $FreeBSD: textproc/p5-MARC-Charset/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MARC-Charset
 PORTVERSION=	1.34
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MARC::Charset.3 \
 		MARC::Charset::Code.3 \
