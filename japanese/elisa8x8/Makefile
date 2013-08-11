@@ -2,7 +2,7 @@
 # Date created:		17 Aug. 1998
 # Whom: Toshihiko SHIMOKAWA <toshi@tea.forus.or.jp> & ELISA Font Project
 #
-# $FreeBSD: ports/japanese/elisa8x8/Makefile,v 1.15 2012/11/17 05:58:32 svnexp Exp $
+# $FreeBSD: japanese/elisa8x8/Makefile 301684 2012-07-29 11:17:02Z cs $
 #
 
 PORTNAME=	elisa8x8
