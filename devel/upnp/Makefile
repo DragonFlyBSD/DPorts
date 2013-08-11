@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: ports/devel/upnp/Makefile,v 1.45 2013/02/14 10:22:24 svnexp Exp $
+# $FreeBSD: devel/upnp/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	upnp
 PORTVERSION=	1.6.18
@@ -19,18 +19,13 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
-CONFIGURE_ARGS+=	--with-documentation=${DOCSDIR}
 PORTDOCS=	*
-.else
-CONFIGURE_ARGS+=	--without-documentation
-.endif
 
-.if ${PORT_OPTIONS:MDEBUG}
-CONFIGURE_ARGS+=	--enable-debug
-.endif
+OPTIONS_DEFINE=	DEBUG DOCS
+
+DEBUG_CONFIGURE_ON=	--enable-debug
+DOCS_CONFIGURE_ON=	--with-documentation=${DOCSDIR}
+DOCS_CONFIGURE_OFF=	--without-documentation
 
 post-patch:	.SILENT
 	${REINPLACE_CMD} '/^pkgconfigexecdir/s|$$(libdir)|$$(prefix)/libdata|' \
