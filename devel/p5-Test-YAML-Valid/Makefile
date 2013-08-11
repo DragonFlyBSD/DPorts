@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-YAML-Valid/Makefile 317876 2013-05-11 13:49:05Z bapt $
+# $FreeBSD: devel/p5-Test-YAML-Valid/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Test-YAML-Valid
 PORTVERSION=	0.04
@@ -14,7 +14,8 @@ COMMENT=	Test for valid YAML
 RUN_DEPENDS=	p5-YAML>=0.60:${PORTSDIR}/textproc/p5-YAML
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::YAML::Valid.3
 
@@ -22,7 +23,8 @@ OPTIONS_DEFINE=	YAMLSYCK
 YAMLSYCK_DESC=	Use YAML::Syck for testing
 
 post-patch:
-	${PERL} -pi -e '$$_="" if /auto_install/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' -e '/auto_install.*/d' \
+		${WRKSRC}/Makefile.PL
 
 .include <bsd.port.options.mk>
 
