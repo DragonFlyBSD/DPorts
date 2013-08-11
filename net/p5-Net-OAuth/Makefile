@@ -3,7 +3,7 @@
 # Date created:			Oct 24, 2007
 # Whom:				ijliao
 #
-# $FreeBSD: ports/net/p5-Net-OAuth/Makefile,v 1.24 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-OAuth/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Net-OAuth
@@ -49,11 +49,4 @@ MAN3=	Net::OAuth.3 \
 	Net::OAuth::XauthAccessTokenRequest.3 \
 	Net::OAuth::YahooAccessTokenRefreshRequest.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Encode>=2.35:${PORTSDIR}/converters/p5-Encode
-RUN_DEPENDS+=	p5-Encode>=2.35:${PORTSDIR}/converters/p5-Encode
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
