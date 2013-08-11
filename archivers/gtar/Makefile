@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: archivers/gtar/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: archivers/gtar/Makefile 324122 2013-08-01 20:22:27Z naddy $
 
 PORTNAME=	tar
 PORTVERSION=	1.26
@@ -16,11 +16,10 @@ COMMENT=	GNU version of the traditional tape archiver
 
 INFO=		tar
 
-USES=	iconv
+USES=		iconv
 USE_AUTOTOOLS=	autoconf:env	# autom4te
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--program-prefix=g \
 		--disable-silent-rules
 CPPFLAGS+=	-I${LOCALBASE}/include
