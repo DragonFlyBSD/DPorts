@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-crack/Makefile 321781 2013-06-26 03:21:29Z swills $
+# $FreeBSD: devel/rubygem-crack/Makefile 323512 2013-07-23 04:00:06Z swills $
 
 PORTNAME=	crack
-PORTVERSION=	0.4.0
+PORTVERSION=	0.4.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
