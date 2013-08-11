@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/devel/p5-Clone-Fast/Makefile,v 1.8 2012/11/18 07:14:14 svnexp Exp $
+# $FreeBSD: devel/p5-Clone-Fast/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Clone-Fast
 PORTVERSION=	0.97
@@ -14,7 +14,8 @@ LICENSE=	ART20
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Clone::Fast.3
 
