@@ -1,8 +1,8 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Log-Minimal/Makefile 316666 2013-04-27 14:13:28Z culot $
+# $FreeBSD: devel/p5-Log-Minimal/Makefile 324274 2013-08-05 13:14:53Z culot $
 
 PORTNAME=	Log-Minimal
-PORTVERSION=	0.15
+PORTVERSION=	0.16
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,7 +13,11 @@ COMMENT=	Minimal but customizable logger
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	modbuild
+
+PLIST_FILES=	%%SITE_PERL%%/Log/Minimal.pm
+PLIST_DIRSTRY=	%%SITE_PERL%%/Log
 
 MAN3=		Log::Minimal.3
 
