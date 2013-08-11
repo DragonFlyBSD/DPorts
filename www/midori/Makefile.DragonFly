@@ -1,5 +1,0 @@
-LIB_DEPENDS+=	icuuc:${PORTSDIR}/devel/icu
-LIB_DEPENDS+=	xslt:${PORTSDIR}/textproc/libxslt
-LIB_DEPENDS+=	enchant:${PORTSDIR}/textproc/enchant
-
-LDFLAGS+= -L${LOCALBASE}/lib -lintl
