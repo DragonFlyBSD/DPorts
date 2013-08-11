@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-LibXML/Makefile 320888 2013-06-14 07:50:03Z culot $
+# $FreeBSD: textproc/p5-XML-LibXML/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-LibXML
 PORTVERSION=	2.0018
@@ -20,7 +20,8 @@ LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
 RUN_DEPENDS=	p5-XML-NamespaceSupport>=1.07:${PORTSDIR}/textproc/p5-XML-NamespaceSupport \
 		p5-XML-SAX>=0.11:${PORTSDIR}/textproc/p5-XML-SAX
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ENV=	XMLPREFIX=${LOCALBASE}
 
 PKGDEINSTALL=	${PKGINSTALL}
