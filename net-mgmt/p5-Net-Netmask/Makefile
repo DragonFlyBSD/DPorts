@@ -2,7 +2,7 @@
 # Date created:				Jan 28 2000
 # Whom:					Wei-chun Chao
 #
-# $FreeBSD: ports/net-mgmt/p5-Net-Netmask/Makefile,v 1.21 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Net-Netmask/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Net-Netmask
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Perl module to parse, manipulate, and lookup IP network blocks
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Netmask.3
 
