@@ -1,5 +1,5 @@
 # Creaed by: Peter Mutsaers
-# $FreeBSD: www/wwwoffle/Makefile 315139 2013-03-24 16:12:25Z miwi $
+# $FreeBSD: www/wwwoffle/Makefile 324180 2013-08-03 07:52:55Z az $
 
 PORTNAME=	wwwoffle
 PORTVERSION=	2.9i
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls
 
-USE_PERL5=	yes
+USES=		perl5
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 
