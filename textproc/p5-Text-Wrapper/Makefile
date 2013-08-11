@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-Text-Wrapper/Makefile,v 1.11 2012/11/17 20:07:04 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Wrapper/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Text-Wrapper
 PORTVERSION=	1.04
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Simple word wrapping routine
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Wrapper.3
 
