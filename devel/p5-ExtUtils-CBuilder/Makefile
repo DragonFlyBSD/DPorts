@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ExtUtils::CBuilder
-# Date created:				20 Feb 2004
-# Whom:                			Mathieu Arnold <mat@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-ExtUtils-CBuilder/Makefile,v 1.38 2012/12/17 15:02:09 svnexp Exp $
-#
+# Created by: Mathieu Arnold <mat@FreeBSD.org>
+# $FreeBSD: devel/p5-ExtUtils-CBuilder/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	ExtUtils-CBuilder
 PORTVERSION=	0.2802.05
@@ -17,7 +13,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Compile and link C code for Perl modules
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ExtUtils::CBuilder.3 ExtUtils::CBuilder::Platform::Windows.3
 
