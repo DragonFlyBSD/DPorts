@@ -1,5 +1,5 @@
 # Created by: Sander Vesik <sander@haldjas.folklore.ee>
-# $FreeBSD: math/p5-MatrixReal/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: math/p5-MatrixReal/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MatrixReal
 PORTVERSION=	2.09
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::MatrixReal.3 Math::Kleene.3
 
