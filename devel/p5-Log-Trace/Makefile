@@ -2,7 +2,7 @@
 # Date created:				27 May 2007
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Log-Trace/Makefile,v 1.2 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: devel/p5-Log-Trace/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Log-Trace
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Provides a unified approach to tracing
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Log::Trace.3 \
 	Log::Trace::Manual.3
