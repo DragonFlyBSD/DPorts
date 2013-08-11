@@ -1,5 +1,5 @@
 # Created by: Dominik Brettnacher <domi@saargate.de>
-# $FreeBSD: ports/dns/p5-Net-LibIDN/Makefile,v 1.19 2012/12/29 04:51:30 svnexp Exp $
+# $FreeBSD: dns/p5-Net-LibIDN/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Net-LibIDN
 PORTVERSION=	0.12
@@ -13,7 +13,8 @@ COMMENT=	This module provides access to the libidn library
 
 LIB_DEPENDS=	idn.17:${PORTSDIR}/dns/libidn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS+=	--with-libidn=${PREFIX}/lib --with-libidn-inc=${PREFIX}/include
 
 MAN3=		Net::LibIDN.3
