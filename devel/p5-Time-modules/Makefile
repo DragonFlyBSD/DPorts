@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Time-modules
-# Date created:	   09 December 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Time-modules/Makefile,v 1.9 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Time-modules/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Time-modules
 PORTVERSION=	2011.0517
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Set of modules for time manipulation
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Time::CTime.3 Time::DaysInMonth.3 Time::JulianDay.3 \
 		Time::ParseDate.3 Time::Timezone.3
