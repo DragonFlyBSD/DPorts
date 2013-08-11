@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-Config-Auto/Makefile 317876 2013-05-11 13:49:05Z bapt $
+# $FreeBSD: devel/p5-Config-Auto/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Config-Auto
 PORTVERSION=	0.42
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Config-IniFiles>=0:${PORTSDIR}/devel/p5-Config-IniFiles \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 OPTIONS_DEFINE=	XMLSIMPLE
 XMLSIMPLE_DESC=	Support for XML config files
