@@ -1,8 +1,9 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/m17n-lib/Makefile 322366 2013-07-06 07:59:09Z bapt $
+# $FreeBSD: devel/m17n-lib/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	m17n-lib
 PORTVERSION=	1.6.4
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	m17n
