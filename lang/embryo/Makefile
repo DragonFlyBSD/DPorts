@@ -1,8 +1,8 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: lang/embryo/Makefile 318442 2013-05-18 19:36:31Z gblach $
+# $FreeBSD: lang/embryo/Makefile 324364 2013-08-07 20:57:26Z gblach $
 
 PORTNAME=	embryo
-PORTVERSION=	1.7.7
+PORTVERSION=	1.7.8
 PORTEPOCH=	2
 CATEGORIES=	lang enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
