@@ -2,12 +2,12 @@
 # Date created:				20 June 2001
 # Whom:					Pete Fritchman <petef@databits.net>
 #
-# $FreeBSD: ports/devel/libevent/Makefile,v 1.53 2012/11/17 05:55:54 svnexp Exp $
+# $FreeBSD: devel/libevent/Makefile 323374 2013-07-21 11:17:23Z mm $
 #
 
 PORTNAME=	libevent
 PORTVERSION=	1.4.14b
-PORTREVISION=	2
+PORTREVISION?=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://monkey.org/~provos/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-stable
