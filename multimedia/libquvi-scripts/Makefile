@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: multimedia/libquvi-scripts/Makefile 321531 2013-06-22 02:53:28Z sunpoet $
+# $FreeBSD: multimedia/libquvi-scripts/Makefile 324473 2013-08-10 11:27:04Z sunpoet $
 
 PORTNAME=	libquvi-scripts
-PORTVERSION=	0.4.16
+PORTVERSION=	0.4.17
 CATEGORIES=	multimedia devel
 MASTER_SITES=	SF/quvi/${PORTVERSION:R}/${PORTNAME}/ \
 		GOOGLE_CODE
