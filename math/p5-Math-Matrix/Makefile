@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Matrix/Makefile 318670 2013-05-21 09:54:15Z tobez $
+# $FreeBSD: math/p5-Math-Matrix/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-Matrix
 PORTVERSION=	0.7
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Math::Matrix - multiply and invert matrices
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Math::Matrix.3
 
