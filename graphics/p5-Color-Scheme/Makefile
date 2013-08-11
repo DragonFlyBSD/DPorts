@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/p5-Color-Scheme/Makefile,v 1.5 2013/01/07 09:51:30 svnexp Exp $
+# $FreeBSD: graphics/p5-Color-Scheme/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Color-Scheme
 PORTVERSION=	1.04
@@ -13,7 +13,8 @@ COMMENT=	Generate pleasant color schemes
 BUILD_DEPENDS=	p5-Test-Differences>=0.47:${PORTSDIR}/devel/p5-Test-Differences
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Color::Scheme.3
 
