@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-YAPE-Regex
-# Date created:	   3 juin 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/textproc/p5-YAPE-Regex/Makefile,v 1.9 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: textproc/p5-YAPE-Regex/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	YAPE-Regex
 PORTVERSION=	4.00
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Yet Another Parser/Extractor for Regular Expressions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		YAPE::Regex.3 YAPE::Regex::Element.3
 
