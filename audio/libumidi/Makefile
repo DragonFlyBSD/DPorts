@@ -1,11 +1,12 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/libumidi/Makefile 318236 2013-05-15 10:37:13Z kwm $
+# $FreeBSD: audio/libumidi/Makefile 323824 2013-07-28 12:44:43Z nox $
 
 PORTNAME=	libumidi
-PORTVERSION=	2.0.6
+PORTVERSION=	2.0.7
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.selasky.org/hans_petter/distfiles/ \
-		http://hselasky.homeunix.org:8192/distfiles/
+		http://home.selasky.org:8192/distfiles/
 
 MAINTAINER=	hselasky@FreeBSD.org
 COMMENT=	A universal general purpose MIDI library
@@ -16,6 +17,8 @@ MAN3=		umidi20.3
 MANCOMPRESSED=	yes
 
 OPTIONS_DEFINE=	DEBUG JACK
+OPTIONS_DEFAULT=JACK
+
 .include <bsd.port.options.mk>
 
 MAKE_ARGS+=" PTHREAD_LIBS=${PTHREAD_LIBS}"
