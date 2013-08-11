@@ -1,8 +1,8 @@
 # Created by: Sergei Vyshenski <svysh@pn.sinp.msu.ru>
-# $FreeBSD: devel/p5-Sys-SigAction/Makefile 313266 2013-03-02 15:55:17Z miwi $
+# $FreeBSD: devel/p5-Sys-SigAction/Makefile 323529 2013-07-23 12:27:51Z culot $
 
 PORTNAME=	Sys-SigAction
-PORTVERSION=	0.15
+PORTVERSION=	0.17
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
