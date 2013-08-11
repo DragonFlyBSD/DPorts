@@ -2,7 +2,7 @@
 # Date created:				05 February 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Filesys-Virtual-Plain/Makefile,v 1.9 2012/11/17 05:56:17 svnexp Exp $
+# $FreeBSD: devel/p5-Filesys-Virtual-Plain/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Filesys-Virtual-Plain
@@ -17,7 +17,8 @@ COMMENT=	A Plain virtual filesystem
 BUILD_DEPENDS=	p5-Filesys-Virtual>=0.05:${PORTSDIR}/devel/p5-Filesys-Virtual
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Filesys::Virtual::Plain.3
 
