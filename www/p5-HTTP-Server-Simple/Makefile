@@ -2,7 +2,7 @@
 # Date created:				30 March 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTTP-Server-Simple/Makefile,v 1.30 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-HTTP-Server-Simple/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	HTTP-Server-Simple
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	A very simple standalone HTTP daemon
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTTP::Server::Simple.3 \
 	HTTP::Server::Simple::CGI.3 \
