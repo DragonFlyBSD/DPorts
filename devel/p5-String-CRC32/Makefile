@@ -1,9 +1,5 @@
-# New ports collection makefile for:    String-CRC32
-# Date created:                         25.08.2001
-# Whom:                                 ache
-#
-# $FreeBSD: ports/devel/p5-String-CRC32/Makefile,v 1.10 2012/11/17 05:56:29 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: devel/p5-String-CRC32/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	String-CRC32
 PORTVERSION=	1.4
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface for cyclic redundancy check generation
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		String::CRC32.3
 
