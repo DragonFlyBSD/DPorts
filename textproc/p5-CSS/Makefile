@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CSS
-# Date created:				2006/07/21
-# Whom:					chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-CSS/Makefile,v 1.8 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: textproc/p5-CSS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CSS
 PORTVERSION=	1.09
@@ -21,6 +17,7 @@ MAN3=	CSS.3 CSS::Value.3 CSS::Parse::Compiled.3 CSS::Property.3 CSS::Parse::Heav
 	CSS::Parse::PRDGrammar.3 CSS::Style.3 CSS::Parse::Lite.3 CSS::Selector.3 \
 	CSS::Adaptor::Debug.3 CSS::Adaptor::Pretty.3 CSS::Parse.3 CSS::Adaptor.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
