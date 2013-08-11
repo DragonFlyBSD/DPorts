@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: devel/p5-MooseX-Types-Common/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-MooseX-Types-Common/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-Types-Common
 PORTVERSION=	0.001008
@@ -20,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Capture-Tiny>=0:${PORTSDIR}/devel/p5-Capture-Tiny \
 		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Types::Common.3 \
 		MooseX::Types::Common::Numeric.3 \
