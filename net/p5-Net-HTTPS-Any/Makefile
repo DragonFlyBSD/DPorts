@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/net/p5-Net-HTTPS-Any/Makefile,v 1.1 2013/02/03 11:46:04 svnexp Exp $
+# $FreeBSD: net/p5-Net-HTTPS-Any/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Net-HTTPS-Any
 PORTVERSION=	0.10
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Tie-IxHash>=0:${PORTSDIR}/devel/p5-Tie-IxHash \
 		p5-Net-SSLeay>=1.30:${PORTSDIR}/security/p5-Net-SSLeay
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::HTTPS::Any.3
 
