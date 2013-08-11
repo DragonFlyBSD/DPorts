@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/p5-Lvalue/Makefile 323119 2013-07-16 18:10:30Z zi $
+# $FreeBSD: devel/p5-Lvalue/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Lvalue
 PORTVERSION=	0.21
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Carp>=0:${PORTSDIR}/devel/p5-Carp \
     		p5-Scalar-List-Utils>=0:${PORTSDIR}/lang/p5-Scalar-List-Utils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Lvalue.3
 
