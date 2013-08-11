@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: graphics/icoutils/Makefile 319247 2013-05-27 14:23:04Z miwi $
+# $FreeBSD: graphics/icoutils/Makefile 324215 2013-08-04 06:42:42Z az $
 
 PORTNAME=	icoutils
 PORTVERSION=	0.31.0
@@ -21,7 +21,6 @@ USES=		shebangfix
 SHEBANG_FILES=	extresso/*.in
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-nls
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -34,7 +33,8 @@ PLIST_FILES=	bin/icotool \
 
 .if ${PORT_OPTIONS:MRESSCRIPTS}
 RUN_DEPENDS+=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
-USE_PERL5_RUN=	yes
+USES+=		perl5
+USE_PERL5=	run
 MAN1+=		extresso.1 genresscript.1
 PLIST_FILES+=	bin/extresso \
 		bin/genresscript
