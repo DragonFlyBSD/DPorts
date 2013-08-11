@@ -1,7 +1,7 @@
-# $FreeBSD: x11/iceauth/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11/iceauth/Makefile 324209 2013-08-03 23:58:37Z bapt $
 
 PORTNAME=	iceauth
-PORTVERSION=	1.0.5
+PORTVERSION=	1.0.6
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
