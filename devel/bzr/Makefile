@@ -1,10 +1,10 @@
 # Created by: Ulf Lilleengen
-# $FreeBSD: devel/bzr/Makefile 317020 2013-05-01 14:04:38Z jgh $
+# $FreeBSD: devel/bzr/Makefile 323831 2013-07-28 13:59:37Z motoyuki $
 
 PORTNAME=	bzr
-PORTVERSION=	2.5.1
+PORTVERSION=	2.6.0
 CATEGORIES=	devel
-MASTER_SITES=	https://launchpadlibrarian.net/106470036/
+MASTER_SITES=	https://launchpadlibrarian.net/145980211/
 DISTNAME=	bzr-${PORTVERSION}
 
 MAINTAINER=	fullermd@over-yonder.net
