@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: databases/p5-DBI/Makefile 318366 2013-05-17 08:37:32Z tobez $
+# $FreeBSD: databases/p5-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBI
-PORTVERSION=	1.627
+PORTVERSION=	1.628
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -18,7 +18,8 @@ PROXY_DESC=	Build DBI::Proxy
 
 CONFLICTS=	p5-DBI-1.3*
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		dbilogstrip.1 dbiprof.1 dbiproxy.1
 MAN3=		Bundle::DBI.3 \
