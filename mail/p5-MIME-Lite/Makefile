@@ -1,5 +1,5 @@
 # Created by: Alex Perel <veers@disturbed.net>
-# $FreeBSD: mail/p5-MIME-Lite/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: mail/p5-MIME-Lite/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MIME-Lite
 PORTVERSION=	3.02.9
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Email-Date-Format>=1.000:${PORTSDIR}/mail/p5-Email-Date-Format
 		p5-Mail-Tools>=1.62:${PORTSDIR}/mail/p5-Mail-Tools
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MIME::Lite.3 MIME::changes.3
 
