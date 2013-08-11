@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Algorithm-C3/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Algorithm-C3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Algorithm-C3
 PORTVERSION=	0.08
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Module for merging hierarchies using the C3 algorithm
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Algorithm::C3.3
 
