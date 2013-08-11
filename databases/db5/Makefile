@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: ports/databases/db5/Makefile,v 1.19 2013/02/07 00:32:18 svnexp Exp $
+# $FreeBSD: databases/db5/Makefile 323621 2013-07-24 21:35:51Z mandree $
 
 PORTNAME=	db5
 PORTVERSION=	5.3.21.0
@@ -81,6 +81,7 @@ CONFIGURE_ARGS+=	--enable-debug --enable-umrw
 
 post-patch:
 	${REINPLACE_CMD} -e '/^DOCLIST/{s/csharp//;}' ${WRKSRC}/../dist/Makefile.in
+	${REINPLACE_CMD} -Ee 's/[[:<:]]atomic_init[[:>:]]/db_atomic_init/g' ${WRKSRC}/../src/mp/mp* ${WRKSRC}/../src/mutex/mut_*
 
 post-install:
 .for i in libdb libdb_cxx libdb_stl ${libdb_sql} ${libdb_java}
