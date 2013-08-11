@@ -2,7 +2,7 @@
 # Date created:		11 June 2001
 # Whom:			Anders Nordby <anders@fix.no>
 #
-# $FreeBSD: net/spread/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: net/spread/Makefile 324172 2013-08-02 18:39:11Z az $
 #
 
 PORTNAME=	spread
@@ -20,7 +20,7 @@ MAKE_JOBS_UNSAFE=	yes
 PORTSCOUT=	limit:^3
 
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 USE_RC_SUBR=	spread
 USE_LDCONFIG=	yes
 
