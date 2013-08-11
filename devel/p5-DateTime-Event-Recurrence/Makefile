@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: ports/devel/p5-DateTime-Event-Recurrence/Makefile,v 1.21 2013/02/05 19:01:46 svnexp Exp $
+# $FreeBSD: devel/p5-DateTime-Event-Recurrence/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Event-Recurrence
 DISTVERSION=	0.16
@@ -16,7 +16,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 OPTIONS_DEFINE=	DOCS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Event::Recurrence.3
 PORTDOCS=	CREDITS Changes README TODO
