@@ -1,5 +1,5 @@
 # Created by: gugu
-# $FreeBSD: www/p5-HTML-FormHandler/Makefile 323267 2013-07-19 07:07:15Z az $
+# $FreeBSD: www/p5-HTML-FormHandler/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-FormHandler
 PORTVERSION=	0.40026
@@ -41,7 +41,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle \
 		p5-PadWalker>=0:${PORTSDIR}/devel/p5-PadWalker
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	\
 	HTML::FormHandler::Widget::Field::Role::HTMLAttributes.3 \
