@@ -1,9 +1,5 @@
-# New ports collection makefile for:	spandsp
-# Date created:		23 June 2005
-# Whom:			wlloyd@slap.net
-#
-# $FreeBSD: ports/comms/spandsp/Makefile,v 1.24 2012/11/17 05:55:01 svnexp Exp $
-#
+# Created by: wlloyd@slap.net
+# $FreeBSD: comms/spandsp/Makefile 321419 2013-06-20 20:04:50Z bsam $
 
 PORTNAME=	spandsp
 PORTVERSION=	0.0.5
@@ -13,9 +9,9 @@ MASTER_SITES=	http://www.soft-switch.org/downloads/spandsp/ \
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A DSP library and software FAX machine
+COMMENT=	DSP library and software FAX machine
 
-LIB_DEPENDS=	tiff.4:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool autoconf
