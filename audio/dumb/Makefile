@@ -1,9 +1,5 @@
-# New ports collection makefile for:   dumb
-# Date created:        26 January 2005
-# Whom:                Andreas Kohn <andreas@syndrom23.de>
-#
-# $FreeBSD: ports/audio/dumb/Makefile,v 1.14 2012/11/17 05:54:30 svnexp Exp $
-#
+# Created by: Andreas Kohn <andreas@syndrom23.de>
+# $FreeBSD: audio/dumb/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	dumb
 PORTVERSION=	0.9.3
@@ -22,7 +18,7 @@ ALLEGRO_DESC=	Enable allegro support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MALLEGRO}
-LIB_DEPENDS+=	alleg.42:${PORTSDIR}/devel/allegro
+LIB_DEPENDS+=	alleg:${PORTSDIR}/devel/allegro
 PLIST_SUB+=	ALLEGRO=""
 MAKE_ARGS=	_PORT_ALLEGRO_CFLAGS="`allegro-config --cflags`"
 MAKE_ARGS+=	LINK_ALLEGRO="-lm -L${LOCALBASE}/lib -lalleg ${LOCALBASE}/lib/liballeg_unsharable.a"
@@ -41,7 +37,7 @@ CFLAGS+=	-fPIC
 pre-configure:
 	@${CP} ${FILESDIR}/config.txt ${WRKSRC}/make
 	@${REINPLACE_CMD} -e "s,@LOCALBASE@,${LOCALBASE}," ${WRKSRC}/make/config.txt
-.if defined(WITH_ALLEGRO)
+.if ${PORT_OPTIONS:MALLEGRO}
 	@${REINPLACE_CMD} -e "s,@ALLEGRO@,," ${WRKSRC}/make/config.txt
 .else
 	@${REINPLACE_CMD} -e "s,@ALLEGRO@,#," ${WRKSRC}/make/config.txt
