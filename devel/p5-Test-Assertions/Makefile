@@ -2,7 +2,7 @@
 # Date created:				27 May 2007
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-Assertions/Makefile,v 1.3 2012/11/17 05:56:31 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Assertions/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-Assertions
@@ -18,7 +18,8 @@ COMMENT=	A simple set of building blocks for both unit and runtime testing
 RUN_DEPENDS=	p5-Log-Trace>0:${PORTSDIR}/devel/p5-Log-Trace
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::Assertions.3 \
 	Test::Assertions::Manual.3 \
