@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Dump/Makefile 319785 2013-06-03 14:17:06Z tobez $
+# $FreeBSD: devel/p5-SVN-Dump/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SVN-Dump
 PORTVERSION=	0.06
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to Subversion dumps
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		SVN::Dump.3 \
 		SVN::Dump::Headers.3 \
