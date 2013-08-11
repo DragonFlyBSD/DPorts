@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: textproc/p5-Text-ParseWords/Makefile 314553 2013-03-18 11:33:28Z tobez $
+# $FreeBSD: textproc/p5-Text-ParseWords/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-ParseWords
 PORTVERSION=	3.29
@@ -10,9 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse text into an array of tokens or array of arrays
 
-MAKE_JOBS_SAFE=	yes
-
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::ParseWords.3
 
