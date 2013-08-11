@@ -2,7 +2,7 @@
 # Date created: 			21 June 2002
 # Whom:					Joseph Koshy <jkoshy@freebsd.org>
 #
-# $FreeBSD: textproc/p5-Text-EtText/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: textproc/p5-Text-EtText/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Text-EtText
@@ -18,7 +18,8 @@ COMMENT=	A simple plain-text to HTML converter
 BUILD_DEPENDS=	p5-HTML-Parser>0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::EtText.3 Text::EtText::DefaultGlossary.3 \
 		Text::EtText::LinkGlossary.3 Text::EtText::EtText2HTML.3 \
