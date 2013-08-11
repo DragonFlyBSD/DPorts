@@ -3,7 +3,7 @@
 # Date created:			Feb 27, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/naturaldocs/Makefile,v 1.12 2012/11/17 05:56:01 svnexp Exp $
+# $FreeBSD: devel/naturaldocs/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	naturaldocs
@@ -16,8 +16,9 @@ DISTNAME=	NaturalDocs-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An extensible, multi-language source code documentation generator
 
+USES=		perl5
 USE_ZIP=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
