@@ -1,9 +1,5 @@
-# New ports collection makefile for:	AutoXS-Header
-# Date created:		                12 Nov 2008
-# Whom:			                Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-AutoXS-Header/Makefile,v 1.8 2012/11/17 05:56:05 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/p5-AutoXS-Header/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	AutoXS-Header
 PORTVERSION=	1.02
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Container for the AutoXS header files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AutoXS::Header.3
 
