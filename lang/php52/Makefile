@@ -1,9 +1,9 @@
 # Created by: Alex Keda <admin@lissyara.su>
-# $FreeBSD: lang/php52/Makefile 319990 2013-06-05 13:45:33Z bapt $
+# $FreeBSD: lang/php52/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
 
 PORTNAME=	php52
 PORTVERSION=	5.2.17
-PORTREVISION=	14
+PORTREVISION?=	14
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
 MASTER_SITE_SUBDIR=	distributions
