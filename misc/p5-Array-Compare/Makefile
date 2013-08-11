@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Array-Compare
-# Date created:				30 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/misc/p5-Array-Compare/Makefile,v 1.16 2012/11/17 05:59:42 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: misc/p5-Array-Compare/Makefile 324167 2013-08-02 17:11:34Z az $
 
 PORTNAME=	Array-Compare
 PORTVERSION=	2.02
@@ -22,7 +18,8 @@ TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Array::Compare.3
 
