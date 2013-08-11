@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Time-Local
-# Date created:	   1 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: devel/p5-Time-Local/Makefile 319938 2013-06-04 23:12:46Z mat $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: devel/p5-Time-Local/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Time-Local
 PORTVERSION=	1.23.00
@@ -20,7 +16,8 @@ LICENSE_COMB=	dual
 
 OPTIONS_DEFINE=	DOCS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Time::Local.3
 PORTDOCS=	Changes
