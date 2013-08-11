@@ -1,9 +1,5 @@
-# New ports collection makefile for: 	p5-Audio-Scan
-# Date created:				11 July, 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/audio/p5-Audio-Scan/Makefile,v 1.42 2012/11/17 05:54:40 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: audio/p5-Audio-Scan/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Audio-Scan
 PORTVERSION=	0.93
@@ -19,7 +15,8 @@ LICENSE=	GPLv2
 
 TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Audio::Scan.3
 
