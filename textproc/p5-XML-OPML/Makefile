@@ -3,7 +3,7 @@
 # Date created:			Nov 21, 2005
 # Whom:				ijliao
 #
-# $FreeBSD: ports/textproc/p5-XML-OPML/Makefile,v 1.8 2012/11/17 06:02:13 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-OPML/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	XML-OPML
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-XML-SimpleObject>=0:${PORTSDIR}/textproc/p5-XML-SimpleObject
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::OPML.3
 
