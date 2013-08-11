@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: devel/p5-Params-Validate/Makefile 320461 2013-06-10 11:02:29Z tobez $
+# $FreeBSD: devel/p5-Params-Validate/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Params-Validate
 PORTVERSION=	1.08
@@ -18,7 +18,8 @@ TEST_DEPENDS=	p5-Readonly>=0:${PORTSDIR}/devel/p5-Readonly \
 		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Taint>=0.02:${PORTSDIR}/devel/p5-Test-Taint
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Attribute::Params::Validate.3 \
 		Params::Validate.3
