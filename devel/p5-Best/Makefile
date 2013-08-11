@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Best/Makefile,v 1.9 2012/12/07 15:21:49 svnexp Exp $
+# $FreeBSD: devel/p5-Best/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Best
 PORTVERSION=	0.15
@@ -13,7 +13,8 @@ COMMENT=	Fallbackable module loader
 BUILD_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Best.3
 
