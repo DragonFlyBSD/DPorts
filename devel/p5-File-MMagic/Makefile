@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/p5-File-MMagic/Makefile 323237 2013-07-18 14:53:22Z culot $
+# $FreeBSD: devel/p5-File-MMagic/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-MMagic
 PORTVERSION=	1.30
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to guess file type like file(1)
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::MMagic.3
 
