@@ -1,8 +1,8 @@
 # Created by: Alex Kapranoff <kappa@rambler-co.ru>
-# $FreeBSD: devel/p5-CPANPLUS/Makefile 318662 2013-05-21 08:56:40Z tobez $
+# $FreeBSD: devel/p5-CPANPLUS/Makefile 324465 2013-08-10 06:17:53Z culot $
 
 PORTNAME=	CPANPLUS
-PORTVERSION=	0.9138
+PORTVERSION=	0.9140
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
@@ -23,7 +23,8 @@ TEST_REPORTER_DESC=	Send reports to cpan-testers
 CONFIGURE_ARGS=	AUTOINSTALL=1
 INSTALL_TARGET=	pure_install
 MAKE_JOBS_UNSAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CPANPLUS.3 \
 		CPANPLUS::Backend.3 \
