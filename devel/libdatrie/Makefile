@@ -1,12 +1,12 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: devel/libdatrie/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: devel/libdatrie/Makefile 321195 2013-06-18 15:31:17Z danfe $
 
 PORTNAME=	libdatrie
 PORTVERSION=	0.2.6
 CATEGORIES=	devel
 MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/
 
-MAINTAINER=	danfe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Double-array trie implementation library
 
 LICENSE=	LGPL21
