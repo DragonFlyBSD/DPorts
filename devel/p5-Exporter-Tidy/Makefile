@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Exporter-Tidy/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Exporter-Tidy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Exporter-Tidy
 PORTVERSION=	0.07
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Another way of exporting symbols
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Exporter::Tidy.3
 
