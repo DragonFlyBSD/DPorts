@@ -2,7 +2,7 @@
 # Date created:				27 December 2004
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-IO-CaptureOutput/Makefile,v 1.13 2012/11/17 05:56:18 svnexp Exp $
+# $FreeBSD: devel/p5-IO-CaptureOutput/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	IO-CaptureOutput
@@ -15,7 +15,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Capture STDOUT/STDERR from subprocesses and XS/C modules
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	IO::CaptureOutput.3
 
