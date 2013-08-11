@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-Object-Simple/Makefile 315559 2013-03-29 18:46:25Z sunpoet $
+# $FreeBSD: devel/p5-Object-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Object-Simple
 PORTVERSION=	3.0900
@@ -14,7 +14,8 @@ COMMENT=	Simple class builder
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Object::Simple.3 \
 		Object::Simple::Accessor.3 \
