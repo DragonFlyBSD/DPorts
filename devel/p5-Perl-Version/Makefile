@@ -2,7 +2,7 @@
 # Date created:				10 April 2008
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Perl-Version/Makefile,v 1.9 2012/11/17 05:56:26 svnexp Exp $
+# $FreeBSD: devel/p5-Perl-Version/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Perl-Version
@@ -18,16 +18,10 @@ RUN_DEPENDS=	p5-File-Slurp>=9999.12:${PORTSDIR}/devel/p5-File-Slurp \
 		p5-Scalar-List-Utils>=0:${PORTSDIR}/lang/p5-Scalar-List-Utils
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		perl-reversion.1
 MAN3=		Perl::Version.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 5.008007
-RUN_DEPENDS+=	p5-Pod-Parser>=1.3:${PORTSDIR}/textproc/p5-Pod-Parser
-BUILD_DEPENDS+=	p5-Pod-Parser>=1.3:${PORTSDIR}/textproc/p5-Pod-Parser
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
