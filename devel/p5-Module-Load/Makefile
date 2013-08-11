@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Module-Load/Makefile,v 1.9 2013/02/01 22:07:55 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Load/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Module-Load
 PORTVERSION=	0.24
@@ -13,7 +13,8 @@ COMMENT=	Runtime require of both modules and files
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Module::Load.3
 
