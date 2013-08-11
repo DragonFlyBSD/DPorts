@@ -1,5 +1,5 @@
-# Created by: John Marino <draco@marino.st>
-# $FreeBSD: devel/gprbuild/Makefile 316921 2013-04-30 12:03:14Z bapt $
+# Created by: John Marino <marino@FreeBSD.org>
+# $FreeBSD: devel/gprbuild/Makefile 322832 2013-07-12 13:40:50Z marino $
 
 PORTNAME=	gprbuild
 PORTVERSION=	${SNAPSHOT}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://downloads.dragonlace.net/src/
 DISTNAME=	gprbuild-gpl-2012-src
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	marino@FreeBSD.org
 COMMENT=	Adacore multi-language software build tool
 
 LICENSE=	GPLv3
