@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kappa@rambler-co.ru>
-# $FreeBSD: devel/p5-Set-Array/Makefile 322478 2013-07-08 02:07:00Z clsung $
+# $FreeBSD: devel/p5-Set-Array/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Set-Array
 PORTVERSION=	0.29
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-Try-Tiny>=0.11:${PORTSDIR}/lang/p5-Try-Tiny \
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Set::Array.3
 
