@@ -1,12 +1,8 @@
-# New ports collection makefile for:	devel/p5-Data-Alias
-# Date created:				27 August 2007
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Data-Alias/Makefile,v 1.12 2012/11/17 05:56:09 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: devel/p5-Data-Alias/Makefile 324439 2013-08-09 14:26:21Z culot $
 
 PORTNAME=	Data-Alias
-PORTVERSION=	1.16
+PORTVERSION=	1.17
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -17,7 +13,8 @@ COMMENT=	Comprehensive set of aliasing operations
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Alias.3
 
