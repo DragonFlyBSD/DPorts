@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xerces-c3
-# Date created:				23 June 2010
-# Whom:					gahr@FreeBSD.org
-#
-# $FreeBSD: textproc/xerces-c3/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#
+# Created by: gahr
+# $FreeBSD: textproc/xerces-c3/Makefile 322512 2013-07-08 15:22:48Z gahr $
 
 PORTNAME=	xerces-c3
 PORTVERSION=	3.1.1
@@ -23,7 +19,8 @@ USES=	pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
-		--enable-transcoder-iconv
+		--enable-transcoder-iconv \
+		--enable-netaccessor-socket
 MAKE_ENV+=	XERCESCROOT=${WRKSRC}
 
 MAKE_JOBS_UNSAFE=yes
