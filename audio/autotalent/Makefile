@@ -1,5 +1,5 @@
 # Created by: Rich Neese <r.neese@gmail.com>
-# $FreeBSD: audio/autotalent/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/autotalent/Makefile 324093 2013-08-01 06:37:46Z bapt $
 
 PORTNAME=	autotalent
 PORTVERSION=	0.2
@@ -15,7 +15,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_GMAKE=	yes
 
-MAKE_ARGS=	CXX="${CXX}" \
+MAKE_ARGS=	CXX="${CXX}" CC=${CC} CPP=${CPP} \
 		CXXFLAGS="${CXXFLAGS} -fPIC -I${LOCALBASE}/include"
 
 ALL_TARGET=	targets
