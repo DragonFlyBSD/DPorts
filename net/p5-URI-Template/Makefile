@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-URI-Template/Makefile 313965 2013-03-12 10:48:35Z tobez $
+# $FreeBSD: net/p5-URI-Template/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	URI-Template
 PORTVERSION=	0.17
@@ -18,6 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		URI::Template.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
