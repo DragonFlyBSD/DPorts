@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: audio/libvorbis/Makefile 318777 2013-05-22 15:29:09Z naddy $
+# $FreeBSD: audio/libvorbis/Makefile 324122 2013-08-01 20:22:27Z naddy $
 
 PORTNAME=	libvorbis
 PORTVERSION=	1.3.3
@@ -21,7 +21,6 @@ USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ogg=${LOCALBASE} \
 		--disable-docs		# don't rebuild
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	DOCS
 
