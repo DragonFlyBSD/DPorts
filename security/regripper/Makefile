@@ -1,5 +1,5 @@
 # Created by: antoine@FreeBSD.org
-# $FreeBSD: security/regripper/Makefile 317306 2013-05-04 10:29:06Z antoine $
+# $FreeBSD: security/regripper/Makefile 324182 2013-08-03 09:23:18Z antoine $
 
 PORTNAME=	regripper
 DISTVERSION=	2.8
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Parse-Win32Registry>=0:${PORTSDIR}/devel/p5-Parse-Win32Registry
 NO_WRKSUBDIR=	yes
 USE_DOS2UNIX=	yes
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 PLIST_FILES=	bin/rip.pl
 
 post-patch:
