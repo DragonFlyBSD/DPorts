@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-Data-Section/Makefile 321746 2013-06-25 14:37:12Z culot $
+# $FreeBSD: devel/p5-Data-Section/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Section
 PORTVERSION=	0.101622
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Sub-Exporter>=0.979:${PORTSDIR}/devel/p5-Sub-Exporter \
 RUN_DEPENDS=	p5-Sub-Exporter>=0.979:${PORTSDIR}/devel/p5-Sub-Exporter \
 		p5-MRO-Compat>=0.09:${PORTSDIR}/devel/p5-MRO-Compat
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Section.3
 
