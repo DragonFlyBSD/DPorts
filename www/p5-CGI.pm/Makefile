@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-CGI.pm/Makefile,v 1.56 2012/11/26 12:19:07 svnexp Exp $
+# $FreeBSD: www/p5-CGI.pm/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	CGI.pm
 PORTVERSION=	3.63
@@ -14,7 +14,8 @@ COMMENT=	Simple Common Gateway Interface Class for Perl
 LICENSE=	ART20 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI.3 CGI::Apache.3 CGI::Carp.3 CGI::Cookie.3 \
 		CGI::Fast.3 CGI::Pretty.3 CGI::Push.3 CGI::Switch.3 \
