@@ -1,5 +1,5 @@
 # Created by: aaron@FreeBSD.org
-# $FreeBSD: devel/p5-Log-Message/Makefile 316798 2013-04-29 10:41:09Z tobez $
+# $FreeBSD: devel/p5-Log-Message/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Log-Message
 PORTVERSION=	0.08
@@ -21,6 +21,7 @@ MAN3=	Log::Message.3 \
 	Log::Message::Handlers.3 \
 	Log::Message::Item.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
