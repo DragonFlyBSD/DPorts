@@ -1,5 +1,5 @@
 # Created by: Shell Hung <shell@shellhung.org>
-# $FreeBSD: devel/p5-Test-Harness/Makefile 317500 2013-05-06 10:17:06Z tobez $
+# $FreeBSD: devel/p5-Test-Harness/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Harness
 PORTVERSION=	3.28
@@ -13,7 +13,8 @@ COMMENT=	Run perl standard test scripts with statistics
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		App::Prove.3 \
 		App::Prove::State.3 \
@@ -70,8 +71,8 @@ MAN1=		p5prove.1
 
 pre-patch:
 	@${MV} ${WRKSRC}/bin/prove ${WRKSRC}/bin/p5prove
-	@${PERL} -pi -e "s,^bin/prove$$,bin/p5prove," ${WRKSRC}/MANIFEST
-	@${PERL} -pi -e "s,'bin/prove','bin/p5prove'," ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} "s,^bin/prove$$,bin/p5prove," ${WRKSRC}/MANIFEST
+	@${REINPLACE_CMD} "s,'bin/prove','bin/p5prove'," ${WRKSRC}/Makefile.PL
 
 post-patch:
 	@${REINPLACE_CMD} -e '/INSTALLDIRS/d' ${WRKSRC}/${CONFIGURE_SCRIPT}
