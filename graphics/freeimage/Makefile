@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: graphics/freeimage/Makefile 322509 2013-07-08 15:01:51Z gahr $
+# $FreeBSD: graphics/freeimage/Makefile 324091 2013-08-01 06:35:28Z bapt $
 
 PORTNAME=	freeimage
 PORTVERSION=	3.15.4
@@ -11,11 +11,12 @@ DISTNAME=	FreeImage${PORTVERSION:S/.//g}
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Simple C/C++ bitmap graphics library
 
+USES=		gmake
 USE_ZIP=	yes
 USE_DOS2UNIX=	Source/LibOpenJPEG/opj_malloc.h
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/FreeImage
+MAKE_ARGS=	CC=${CC} CPP=${CPP} CXX=${CXX}
 
 CFLAGS+=	-fexceptions -fvisibility=hidden
 
