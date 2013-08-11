@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hdf-szip
-# Date created:		3 March 2005
-# Whom:			glewis
-#
-# $FreeBSD: ports/science/szip/Makefile,v 1.12 2012/11/17 06:01:00 svnexp Exp $
-#
+# Created by: glewis
+# $FreeBSD: science/szip/Makefile 321376 2013-06-20 13:01:27Z bsam $
 
 PORTNAME=	szip
 PORTVERSION=	2.1
@@ -13,7 +9,7 @@ MASTER_SITES=	ftp://ftp.hdfgroup.org/lib-external/szip/2.1/src/:src \
 		http://www.hdfgroup.org/doc_resource/SZIP/:doc
 PKGNAMEPREFIX=	hdf-
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:src \
-		${DOCFILE}:doc
+		${PORTDOCS}:doc
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
@@ -22,14 +18,20 @@ COMMENT=	Lossless compression library for scientific data
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-DOCFILE=	Release_notes_2_0.pdf
 LDFLAGS+=	-lm
 CONFIGURE_ARGS+=	LDFLAGS="${LDFLAGS}"
+PLIST_FILES=	include/ricehdf.h include/szip_adpt.h include/szlib.h \
+		lib/libsz.a lib/libsz.la lib/libsz.so lib/libsz.so.2
+PORTDOCS=	Release_notes_2_0.pdf
+
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${DISTDIR}/${DOCFILE} ${DOCSDIR}
+	${INSTALL_DATA} ${DISTDIR}/${PORTDOCS} ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
