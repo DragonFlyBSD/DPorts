@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Proc-Wait3
-# Date created:				23 September 2009
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Proc-Wait3/Makefile,v 1.3 2012/11/17 05:56:27 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Proc-Wait3/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Proc-Wait3
 PORTVERSION=	0.04
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl extension for wait3 system call
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Proc::Wait3.3
 
