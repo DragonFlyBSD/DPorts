@@ -1,9 +1,6 @@
 # Ports collection makefile for:	p5-PostScript
-# Date created:				10.Jun.2008
-# Whom:					Fernan Aguero <fernan.aguero@gmail.com>
-#
-# $FreeBSD: ports/print/p5-PostScript/Makefile,v 1.2 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: Fernan Aguero <fernan.aguero@gmail.com>
+# $FreeBSD: print/p5-PostScript/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	PostScript
 PORTVERSION=	0.06
@@ -14,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	PostScript - Produce PostScript files from Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	PostScript::TextBlock.3 PostScript::Elements.3 PostScript::Metrics.3
 
