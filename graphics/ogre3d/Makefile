@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: graphics/ogre3d/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: graphics/ogre3d/Makefile 324342 2013-08-07 10:38:16Z oliver $
 
 PORTNAME=	ogre3d
 PORTVERSION=	1.8.1
@@ -37,10 +37,6 @@ PLIST_SUB+=	BOOSTFALSE=""
 
 .if ${ARCH} == "powerpc"
 BROKEN=		Does not install on powerpc
-.endif
-
-.if ${CXX:M*clang*}
-CMAKE_ARGS+=	-DCMAKE_COMPILER_IS_GNUCXX:BOOL=YES
 .endif
 
 post-patch:
