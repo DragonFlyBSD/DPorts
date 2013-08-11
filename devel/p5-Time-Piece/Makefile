@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Time-Piece
-# Date created:			14 June 2002
-# Whom:				Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Time-Piece/Makefile,v 1.19 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Time-Piece/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Time-Piece
 PORTVERSION=	1.20
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Time::Piece - Object Oriented time objects
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Time::Piece.3 Time::Seconds.3
 
