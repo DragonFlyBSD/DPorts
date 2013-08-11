@@ -2,7 +2,7 @@
 # Date created:				18 Feb 2006
 # Whom:	      				Bill Fenner <fenner@FreeBSD.Org>
 #
-# $FreeBSD: ports/net/p5-Net-NBName/Makefile,v 1.6 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-NBName/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Net-NBName
 PORTVERSION=	0.26
@@ -13,7 +13,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Performs simple NetBIOS Name Service Requests
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 MAN3=	Net::NBName.3 Net::NBName::NameQuery.3 Net::NBName::NameQuery::RR.3 \
 	Net::NBName::NodeStatus.3 Net::NBName::NodeStatus::RR.3
 
