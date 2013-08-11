@@ -1,5 +1,5 @@
 # Created by: T. William Wells <bill@twwells.com>
-# $FreeBSD: databases/p5-BerkeleyDB/Makefile 320185 2013-06-07 08:26:29Z tobez $
+# $FreeBSD: databases/p5-BerkeleyDB/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	BerkeleyDB
 PORTVERSION=	0.52
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 TEST_DEPENDS=	p5-MLDBM>=0:${PORTSDIR}/databases/p5-MLDBM \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_BDB=	47+
 
 MAN3=		BerkeleyDB.3
