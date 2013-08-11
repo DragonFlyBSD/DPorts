@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-PlRPC
-# Date Created:				27 Feb 2000
-# Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-PlRPC/Makefile,v 1.25 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
+# $FreeBSD: net/p5-PlRPC/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	PlRPC
 PORTVERSION=	0.2020
@@ -19,7 +15,8 @@ COMMENT=	Perl module for writing RPC servers and clients
 BUILD_DEPENDS=	p5-Net-Daemon>=0:${PORTSDIR}/net/p5-Net-Daemon
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAN3=		Bundle::PlRPC.3 \
@@ -28,6 +25,7 @@ MAN3=		Bundle::PlRPC.3 \
 
 post-patch:
 	@${FIND} ${WRKSRC} -name ".svn" | ${XARGS} ${RM} -rf
-	@${PERL} -pi -e 's/perldoc -t/echo perldoc -t/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' -e 's/perldoc -t/echo perldoc -t/' \
+		${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
