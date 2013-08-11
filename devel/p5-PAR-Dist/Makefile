@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: ports/devel/p5-PAR-Dist/Makefile,v 1.38 2012/11/17 05:56:24 svnexp Exp $
+# $FreeBSD: devel/p5-PAR-Dist/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	PAR-Dist
 PORTVERSION=	0.49
@@ -13,7 +13,8 @@ COMMENT=	Create and manipulate PAR distributions
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		PAR::Dist.3
 
