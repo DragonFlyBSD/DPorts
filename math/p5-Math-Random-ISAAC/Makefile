@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math::Random::ISAAC
-# Date created:				07 Dec, 2009
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-Random-ISAAC/Makefile,v 1.6 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Random-ISAAC/Makefile 324306 2013-08-06 08:50:49Z az $
 
 PORTNAME=	Math-Random-ISAAC
 PORTVERSION=	1.004
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Test-NoWarnings>0:${PORTSDIR}/devel/p5-Test-NoWarnings
 RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		p5-Math-Random-ISAAC-XS>0:${PORTSDIR}/math/p5-Math-Random-ISAAC-XS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::Random::ISAAC::PP.3 \
 		Math::Random::ISAAC.3
