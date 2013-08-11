@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-File-SafeDO/Makefile 315981 2013-04-17 16:02:36Z crees $
+# $FreeBSD: devel/p5-File-SafeDO/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-SafeDO
 PORTVERSION=	0.12
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Safer do file for perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		 File::SafeDO.3
 
