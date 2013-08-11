@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Data-Lazy
-# Date created:	   30 September 2005
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Data-Lazy/Makefile,v 1.5 2012/11/17 05:56:10 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Data-Lazy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Lazy
 PORTVERSION=	0.6
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	"lazy" variables
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Lazy.3
 
