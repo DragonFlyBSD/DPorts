@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-MRO-Define
-# Date created:		2011-12-11
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-MRO-Define/Makefile,v 1.4 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-MRO-Define/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MRO-Define
 PORTVERSION=	0.01
@@ -17,7 +13,8 @@ COMMENT=	Define your own method resolution order
 
 TEST_DEPENDS=	p5-Variable-Magic>=0:${PORTSDIR}/devel/p5-Variable-Magic
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MRO::Define.3
 
