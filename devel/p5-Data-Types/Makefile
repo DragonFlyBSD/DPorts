@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Data-Types
-# Date created:				10 February 2006
-# Whom:					Zach Thompson <hideo@lastamericanempire.com>
-#
-# $FreeBSD: ports/devel/p5-Data-Types/Makefile,v 1.8 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: Zach Thompson <hideo@lastamericanempire.com>
+# $FreeBSD: devel/p5-Data-Types/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Types
 PORTVERSION=	0.09
@@ -17,7 +13,8 @@ COMMENT=	Validate and convert data types
 LICENSE_COMB=	dual
 LICENSE=	ART10 GPLv1
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Data::Types.3
 
