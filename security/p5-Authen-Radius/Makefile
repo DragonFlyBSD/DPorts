@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: security/p5-Authen-Radius/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: security/p5-Authen-Radius/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Authen-Radius
 PORTVERSION=	0.22
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Data-HexDump>=0.02:${PORTSDIR}/devel/p5-Data-HexDump
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Authen::Radius.3
 
 RADDBFILES=	dictionary \
