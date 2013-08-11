@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Algorithm-Dependency/Makefile,v 1.15 2012/11/17 05:56:03 svnexp Exp $
+# $FreeBSD: devel/p5-Algorithm-Dependency/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Algorithm-Dependency
 PORTVERSION=	1.110
@@ -23,6 +23,7 @@ MAN3=	Algorithm::Dependency.3 \
 	Algorithm::Dependency::Source::Invert.3 \
 	Algorithm::Dependency::Weight.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
