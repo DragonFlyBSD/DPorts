@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<tux@pinguru.net>)
-# $FreeBSD: irc/unreal/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: irc/unreal/Makefile 323881 2013-07-29 11:30:33Z mat $
 
 PORTNAME=	Unreal
 PORTVERSION=	3.2.9
@@ -44,7 +44,7 @@ CONFIGURE_ARGS=	--with-listen=5 \
 		--with-fd-setsize=1024 \
 		--enable-dynamic-linking
 
-OPTIONS_DEFINE=	HIB NOSPOOF ZIPLINKS SSL IPV6 PREFIXAQ REMOTE DOCS
+OPTIONS_DEFINE=	HUB NOSPOOF ZIPLINKS SSL IPV6 PREFIXAQ REMOTE DOCS
 OPTIONS_DEFAULT=	HUB
 HUB_DESC=	Configure as a hub (otherwise configure as a leaf)
 NOSPOOF_DESC=	Enable anti-spoof protection
