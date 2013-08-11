@@ -2,11 +2,11 @@
 # Date created:				23 Aug 2012
 # Whom:					ndewing@experts-exchange.com
 #
-# $FreeBSD: ports/devel/rubygem-mixlib-shellout/Makefile,v 1.3 2012/11/17 05:57:00 svnexp Exp $
+# $FreeBSD: devel/rubygem-mixlib-shellout/Makefile 323788 2013-07-27 14:06:13Z swills $
 #
 
 PORTNAME=	mixlib-shellout
-PORTVERSION=	1.1.0
+PORTVERSION=	1.2.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
