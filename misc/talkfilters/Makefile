@@ -1,9 +1,5 @@
-# New ports collection makefile for:	talkfilters
-# Date created:				03 July 2003
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/talkfilters/Makefile,v 1.28 2012/11/17 05:59:45 svnexp Exp $
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: misc/talkfilters/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	talkfilters
 PORTVERSION=	2.3.8
@@ -20,7 +16,6 @@ CONFLICTS=	jive* chef* filters-*
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=	talkfilters.1 wrap.1
 MLINKS=	talkfilters.1 austro.1 \
