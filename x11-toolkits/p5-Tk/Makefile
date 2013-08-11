@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: x11-toolkits/p5-Tk/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Tk
 PORTVERSION=	804.030
@@ -20,7 +20,8 @@ XFT_DESC=	Client-side fonts via libXft
 
 CONFIGURE_ARGS=	X11INC=${LOCALBASE}/include X11LIB=${LOCALBASE}/lib
 MAKE_JOBS_UNSAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_XORG=	x11
 
 MAN1=		ptked.1 \
