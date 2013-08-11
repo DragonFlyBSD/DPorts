@@ -2,7 +2,7 @@
 # Date created:	   16 January 2004
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-Devel-Cycle/Makefile,v 1.15 2012/11/17 05:56:13 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-Cycle/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Devel-Cycle
@@ -17,7 +17,8 @@ COMMENT=	Find memory cycles in objects
 BUILD_DEPENDS=	p5-Scalar-List-Utils>=0:${PORTSDIR}/lang/p5-Scalar-List-Utils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::Cycle.3
 
