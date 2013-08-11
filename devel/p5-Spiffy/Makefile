@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Spiffy
-# Date created:		15 Jul 2004
-# Whom:			Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-#
-# $FreeBSD: ports/devel/p5-Spiffy/Makefile,v 1.19 2012/11/17 05:56:29 svnexp Exp $
-#
+# Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
+# $FreeBSD: devel/p5-Spiffy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Spiffy
 PORTVERSION=	0.31
@@ -20,7 +16,8 @@ LICENSE_COMB=	dual
 
 OPTIONS_DEFINE=	DOCS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Spiffy.3
 PORTDOCS=	Changes README
