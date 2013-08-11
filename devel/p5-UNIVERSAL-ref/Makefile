@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-UNIVERSAL-ref/Makefile,v 1.1 2012/12/13 10:31:59 svnexp Exp $
+# $FreeBSD: devel/p5-UNIVERSAL-ref/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	UNIVERSAL-ref
 PORTVERSION=	0.14
@@ -13,7 +13,8 @@ COMMENT=	Turns ref() into a multimethod
 BUILD_DEPENDS=	p5-B-Utils>=0:${PORTSDIR}/devel/p5-B-Utils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	UNIVERSAL::ref.3
 
