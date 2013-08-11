@@ -2,7 +2,7 @@
 # Date created:				31 Dec 2001
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/textproc/p5-XML-Grove/Makefile,v 1.8 2012/11/17 06:02:12 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-Grove/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	XML-Grove
@@ -16,7 +16,8 @@ COMMENT=	Perl-style XML objects
 
 RUN_DEPENDS=	p5-libxml>=0:${PORTSDIR}/textproc/p5-libxml
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::DOM-ecmascript.3 \
 	XML::Grove.3 \
