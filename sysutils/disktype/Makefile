@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: ports/sysutils/disktype/Makefile,v 1.10 2013/01/15 13:46:58 svnexp Exp $
+# $FreeBSD: sysutils/disktype/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	disktype
 PORTVERSION=	9
@@ -9,8 +9,7 @@ MASTER_SITES=	SF
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Disk formatting type autodetector
 
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
+USES=		gmake
 
 PLIST_FILES=	bin/disktype
 PORTDOCS=	README
