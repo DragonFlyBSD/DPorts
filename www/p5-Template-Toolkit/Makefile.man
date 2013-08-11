@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Template-Toolkit/Makefile.man,v 1.5 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Toolkit/Makefile.man 300897 2012-07-14 14:29:18Z beat $
 MAN1+=	tpage.1
 MAN1+=	ttree.1
 

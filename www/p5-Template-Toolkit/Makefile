@@ -1,5 +1,5 @@
 # Created by: clive
-# $FreeBSD: ports/www/p5-Template-Toolkit/Makefile,v 1.40 2013/02/12 13:57:22 svnexp Exp $
+# $FreeBSD: www/p5-Template-Toolkit/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Template-Toolkit
 PORTVERSION=	2.24
@@ -23,7 +23,8 @@ IMAGE_INFO_DESC=	With Image::Info Plugin
 IMAGE_SIZE_DESC=	With Image::Size Plugin
 POD_POM_DESC=		With Pod::POM Plugin
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	TT_ACCEPT=y
 
 .include "Makefile.man"
