@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pure-ffi
-# Date created:		2011-03-18
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/devel/pure-ffi/Makefile,v 1.4 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: devel/pure-ffi/Makefile 322847 2013-07-12 16:24:55Z bapt $
 
 PORTNAME=	pure-ffi
 PORTVERSION=	0.12
@@ -20,6 +16,5 @@ USE_PURE=	yes
 PLIST_FILES=	lib/pure/ffi.pure \
 		lib/pure/ffi.so
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/pure/bsd.pure.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+.include <bsd.port.mk>
