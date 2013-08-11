@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: devel/p5-Term-ProgressBar/Makefile 323447 2013-07-22 13:42:10Z culot $
+# $FreeBSD: devel/p5-Term-ProgressBar/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Term-ProgressBar
 PORTVERSION=	2.14
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Capture-Tiny>=0.13:${PORTSDIR}/devel/p5-Capture-Tiny \
 		p5-Test-Exception>=0.31:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Term::ProgressBar.3
 
