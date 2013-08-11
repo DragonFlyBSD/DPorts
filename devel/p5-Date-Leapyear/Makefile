@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	p5-Date-Leapyear
-# Date created:			Jul 11, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/p5-Date-Leapyear/Makefile,v 1.10 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-Date-Leapyear/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Date-Leapyear
 PORTVERSION=	1.72
@@ -15,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl module to determine if a particular year a leap year
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Date::Leapyear.3
 
