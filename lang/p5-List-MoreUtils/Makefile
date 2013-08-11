@@ -2,7 +2,7 @@
 # Date created:				24 March 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/p5-List-MoreUtils/Makefile,v 1.15 2012/11/17 05:58:54 svnexp Exp $
+# $FreeBSD: lang/p5-List-MoreUtils/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	List-MoreUtils
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Provide the stuff missing in List::Util
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	List::MoreUtils.3
 
