@@ -2,7 +2,7 @@
 # Date created:        27 June 2004
 # Whom:                Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Filesys-Virtual/Makefile,v 1.7 2012/11/17 05:56:17 svnexp Exp $
+# $FreeBSD: devel/p5-Filesys-Virtual/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Filesys-Virtual
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Perl extension to provide a framework for a virtual filesystem
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Filesys::Virtual.3
 
