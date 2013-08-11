@@ -1,3 +1,4 @@
+@comment $FreeBSD: security/opencryptoki/pkg-plist 324060 2013-07-31 15:45:20Z hrs $
 include/opencryptoki/apiclient.h
 include/opencryptoki/pkcs11.h
 include/opencryptoki/pkcs11types.h
