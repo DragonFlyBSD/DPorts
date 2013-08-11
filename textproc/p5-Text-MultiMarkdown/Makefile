@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-MultiMarkdown
-# Date created:				23 Oct, 2009
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-MultiMarkdown/Makefile,v 1.8 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: textproc/p5-Text-MultiMarkdown/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-MultiMarkdown
 PORTVERSION=	1.000034
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	\
 RUN_DEPENDS=	\
 	p5-Text-Markdown>=1.0.26:${PORTSDIR}/textproc/p5-Text-Markdown
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		MultiMarkdown.pl.1
 MAN3=		Text::MultiMarkdown.3
