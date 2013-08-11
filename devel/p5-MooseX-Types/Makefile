@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MooseX-Types/Makefile,v 1.26 2013/02/04 15:38:36 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Types/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-Types
 PORTVERSION=	0.35
@@ -24,7 +24,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Types.3 \
 		MooseX::Types::Base.3 \
