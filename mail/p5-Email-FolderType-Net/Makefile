@@ -2,7 +2,7 @@
 # Date created:				30 December 2004
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Email-FolderType-Net/Makefile,v 1.6 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Email-FolderType-Net/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Email-FolderType-Net
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-URI>=1.35:${PORTSDIR}/net/p5-URI \
 		p5-Email-FolderType>=0.8:${PORTSDIR}/mail/p5-Email-FolderType
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::FolderType::Net.3
 
