@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/p5-Digest-MD4/Makefile 314905 2013-03-22 11:18:42Z tobez $
+# $FreeBSD: security/p5-Digest-MD4/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Digest-MD4
 PORTVERSION=	1.9
@@ -15,7 +15,8 @@ LICENSE_COMB=	dual
 
 OPTIONS_DEFINE=	DOCS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Digest::MD4.3
 PORTDOCS=	Changes rfc1320.txt
