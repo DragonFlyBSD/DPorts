@@ -1,5 +1,5 @@
 # Created by: bf@FreeBSD.org
-# $FreeBSD: math/xblas/Makefile 319912 2013-06-04 21:26:52Z bapt $
+# $FreeBSD: math/xblas/Makefile 324413 2013-08-09 01:49:55Z danfe $
 
 PORTNAME=	xblas
 PORTVERSION=	1.0.248
@@ -65,6 +65,9 @@ post-patch:
 	@${CP} -af ${WRKSRC} ${WRKSRC}_STATIC
 .endif
 	@${PRINTF} "\nCFLAGS+=\t${PICFLAG}\n" >> ${WRKSRC}/make.inc
+# Fix parallel (-jX) builds
+	@${FIND} ${WRKSRC} -name Makefile | ${XARGS} ${REINPLACE_CMD} \
+		-E 's/cd (.+) && (\$$\(MAKE\))/\2 -C \1/'
 
 do-build: build-shared build-static
 
