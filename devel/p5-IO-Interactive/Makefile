@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-IO-Interactive/Makefile 313696 2013-03-09 08:46:44Z sunpoet $
+# $FreeBSD: devel/p5-IO-Interactive/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IO-Interactive
 PORTVERSION=	0.0.6
@@ -15,7 +15,8 @@ COMMENT=	Utilities for interactive I/O
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::Interactive.3
 
