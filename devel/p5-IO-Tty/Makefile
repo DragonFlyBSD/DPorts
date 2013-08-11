@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IO-Tty
-# Date created:		14 Jan 2000
-# Whom:			Will Andrews <andrews@technologist.com>
-#
-# $FreeBSD: ports/devel/p5-IO-Tty/Makefile,v 1.25 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: Will Andrews <andrews@technologist.com>
+# $FreeBSD: devel/p5-IO-Tty/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IO-Tty
 PORTVERSION=	1.10
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Flexible I/O Perl5 module that allows manipulation of pseudo-TTYs
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::Pty.3 \
 		IO::Tty.3 \
