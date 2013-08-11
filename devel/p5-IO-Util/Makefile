@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-IO-Util/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-IO-Util/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IO-Util
 PORTVERSION=	1.5
@@ -14,7 +14,8 @@ COMMENT=	Selection of general-utility IO function
 
 PORTSCOUT=	skipv:1.48
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IO::Util.3
 
