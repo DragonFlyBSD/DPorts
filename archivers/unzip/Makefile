@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unzip
-# Date created:		17 October 1994
-# Whom:			jmz
-#
-# $FreeBSD: archivers/unzip/Makefile 316654 2013-04-27 08:50:46Z mva $
-#
+# Created by: jmz
+# $FreeBSD: archivers/unzip/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
 
 PORTNAME=	unzip
 PORTVERSION=	6.0
