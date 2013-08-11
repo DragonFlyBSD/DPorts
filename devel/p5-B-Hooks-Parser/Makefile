@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-B-Hooks-Parser/Makefile 318009 2013-05-13 08:37:45Z tobez $
+# $FreeBSD: devel/p5-B-Hooks-Parser/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	B-Hooks-Parser
 PORTVERSION=	0.12
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-B-Hooks-OP-Check>=0:${PORTSDIR}/devel/p5-B-Hooks-OP-Check
 TEST_DEPENDS=	p5-B-Hooks-EndOfScope>=0.05:${PORTSDIR}/devel/p5-B-Hooks-EndOfScope \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		B::Hooks::Parser.3
 
