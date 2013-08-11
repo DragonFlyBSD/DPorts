@@ -1,8 +1,8 @@
 # Created by: Elisey Savateev <b3k@mail.ru>
-# $FreeBSD: www/c-icap/Makefile 317389 2013-05-04 22:48:03Z flo $
+# $FreeBSD: www/c-icap/Makefile 323989 2013-07-30 20:14:27Z mm $
 
 PORTNAME=	c-icap
-PORTVERSION=	0.2.3
+PORTVERSION=	0.2.5
 PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.2.x/
