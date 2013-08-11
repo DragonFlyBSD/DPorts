@@ -2,7 +2,7 @@
 # Date created:				6 December 2009
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-String-Truncate/Makefile,v 1.6 2012/11/17 06:02:08 svnexp Exp $
+# $FreeBSD: textproc/p5-String-Truncate/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	String-Truncate
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Sub-Exporter>=0.953:${PORTSDIR}/devel/p5-Sub-Exporter \
 		p5-Sub-Install>=0.03:${PORTSDIR}/devel/p5-Sub-Install
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		String::Truncate.3
 
