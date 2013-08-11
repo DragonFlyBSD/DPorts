@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: shells/p5-Term-ShellUI/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: shells/p5-Term-ShellUI/Makefile 324166 2013-08-02 16:55:05Z az $
 
 PORTNAME=	Term-ShellUI
 PORTVERSION=	0.92
@@ -14,7 +14,8 @@ COMMENT=	Fully-featured shell-like command line environment
 BUILD_DEPENDS=	p5-ReadLine-Gnu>=0:${PORTSDIR}/devel/p5-ReadLine-Gnu
 RUN_DEPENDS=	p5-ReadLine-Gnu>=0:${PORTSDIR}/devel/p5-ReadLine-Gnu
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Term::ShellUI.3 \
 		Text::Shellwords::Cursor.3
