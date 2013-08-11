@@ -1,12 +1,13 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: net-mgmt/nagios/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: net-mgmt/nagios/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	nagios
 PORTVERSION=	3.5.0
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-3.x/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	jarrod@downtools.com.au
+MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Extremely powerful network monitoring system
 
 LICENSE=	GPLv2
