@@ -1,5 +1,5 @@
 # Created by: Yoshisato YANAGISAWA
-# $FreeBSD: mail/p5-Mail-DKIM/Makefile 313668 2013-03-08 19:27:22Z az $
+# $FreeBSD: mail/p5-Mail-DKIM/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-DKIM
 PORTVERSION=	0.40
@@ -17,7 +17,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 MASTER_SITE_BACKUP+=	http://jason.long.name/dkimproxy/
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::DKIM.3 \
 		Mail::DKIM::Algorithm::Base.3 \
