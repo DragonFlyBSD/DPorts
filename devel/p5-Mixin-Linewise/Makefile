@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mixin-Linewise
-# Date created:		2009-03-10
-# Whom:			bapt <baptiste.daroussin@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-Mixin-Linewise/Makefile,v 1.12 2012/12/17 12:44:00 svnexp Exp $
-#
+# Created by: bapt <baptiste.daroussin@gmail.com>
+# $FreeBSD: devel/p5-Mixin-Linewise/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mixin-Linewise
 PORTVERSION=	0.003
@@ -24,7 +20,8 @@ BUILD_DEPENDS+=	p5-Sub-Exporter>=0.900:${PORTSDIR}/devel/p5-Sub-Exporter \
 RUN_DEPENDS+=	p5-Sub-Exporter>=0.900:${PORTSDIR}/devel/p5-Sub-Exporter \
 	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mixin::Linewise::Readers.3 \
 		Mixin::Linewise::Writers.3 \
