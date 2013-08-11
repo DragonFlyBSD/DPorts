@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tree-R
-# Date created:		03 Mar 2011
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Tree-R/Makefile,v 1.2 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: devel/p5-Tree-R/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	Tree-R
 PORTVERSION=	0.06
