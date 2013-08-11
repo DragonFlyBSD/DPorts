@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Authen-SASL
-# Date created:				January 3rd 2003
-# Whom:	      				Blaz Zupan <blaz@si.FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Authen-SASL/Makefile,v 1.28 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: Blaz Zupan <blaz@si.FreeBSD.org>
+# $FreeBSD: security/p5-Authen-SASL/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Authen-SASL
 PORTVERSION=	2.16
@@ -20,7 +16,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 OPTIONS_DEFINE=	KERBEROS
 OPTIONS_DEFAULT=	KERBEROS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ENV+=	AUTOMATED_TESTING=yes
 
 MAN3=		Authen::SASL.3 \
