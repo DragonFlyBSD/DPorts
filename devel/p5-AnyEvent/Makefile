@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/devel/p5-AnyEvent/Makefile,v 1.37 2012/11/18 07:10:15 svnexp Exp $
+# $FreeBSD: devel/p5-AnyEvent/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	AnyEvent
 PORTVERSION=	7.04
@@ -15,7 +15,8 @@ COMMENT=	Provide framework for multiple event loops
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AE.3 \
 		AnyEvent.3 \
