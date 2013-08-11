@@ -2,7 +2,7 @@
 # Date created:		2006-07-12
 # Whom:			Yuan-Chung Hsiao <ychsiao@ychsiao.org>
 #
-# $FreeBSD: ports/devel/p5-IO-Toolkit/Makefile,v 1.10 2012/11/17 05:56:19 svnexp Exp $
+# $FreeBSD: devel/p5-IO-Toolkit/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	IO-Toolkit
@@ -23,11 +23,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=	IO::Toolkit.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-BUILD_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
