@@ -1,5 +1,5 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: www/p5-Apache-DBI/Makefile 321519 2013-06-22 02:06:33Z sunpoet $
+# $FreeBSD: www/p5-Apache-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Apache-DBI
 PORTVERSION=	1.12
@@ -19,9 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS=	p5-Apache-DBI-mp[12]*
 
-MAKE_JOBS_SAFE=	yes
-
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_APACHE?=	22+
 
 MAN3=		Apache::DBI.3 Apache::AuthDBI.3
