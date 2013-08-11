@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Perl6-Junction/Makefile,v 1.6 2013/01/09 08:55:24 svnexp Exp $
+# $FreeBSD: devel/p5-Perl6-Junction/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Perl6-Junction
 PORTVERSION=	1.50000
@@ -13,7 +13,8 @@ COMMENT=	Perl6 style Junction operators in Perl5
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Perl6::Junction.3
 
