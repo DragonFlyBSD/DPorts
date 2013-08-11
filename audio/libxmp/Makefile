@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/libxmp/Makefile 319294 2013-05-28 08:05:48Z ehaupt $
+# $FreeBSD: audio/libxmp/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	libxmp
 PORTVERSION=	4.1.5
@@ -9,11 +9,9 @@ MASTER_SITES=	SF/xmp/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Module rendering library for xmp
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	include/xmp.h lib/libxmp.so lib/libxmp.so.4 \
 		lib/libxmp.so.${PORTVERSION} libdata/pkgconfig/libxmp.pc
