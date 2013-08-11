@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-ReadLine-Perl
-# Date created:				20 February 1998
-# Whom:	      				Matthew Hunt <mph@pobox.com>
-#
-# $FreeBSD: ports/devel/p5-ReadLine-Perl/Makefile,v 1.22 2012/11/17 05:56:27 svnexp Exp $
-#
+# Created by: Matthew Hunt <mph@pobox.com>
+# $FreeBSD: devel/p5-ReadLine-Perl/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	ReadLine-Perl
 PORTVERSION=	1.0303
@@ -17,6 +13,7 @@ DISTNAME=	Term-${PORTNAME}-${PORTVERSION:C/0+$//}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl 5 module for Term::ReadLine editing without GNU readline
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
