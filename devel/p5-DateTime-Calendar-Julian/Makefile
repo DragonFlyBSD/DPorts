@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Calendar-Julian
-# Date created:	   26 june 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Calendar-Julian/Makefile,v 1.7 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: devel/p5-DateTime-Calendar-Julian/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Calendar-Julian
 PORTVERSION=	0.04
@@ -17,7 +13,8 @@ COMMENT=	Dates in the Julian calendar
 BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Calendar::Julian.3
 
