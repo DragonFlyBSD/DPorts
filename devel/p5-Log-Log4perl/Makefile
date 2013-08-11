@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Log-Log4perl/Makefile 320196 2013-06-07 12:35:36Z lth $
+# $FreeBSD: devel/p5-Log-Log4perl/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Log-Log4perl
-PORTVERSION=	1.41
+PORTVERSION=	1.42
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Log4j implementation for Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		l4p-tmpl.1
 MAN3=		Log::Log4perl.3 \
