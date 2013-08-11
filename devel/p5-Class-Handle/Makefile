@@ -2,7 +2,7 @@
 # Date created:	   12 February 2005
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-Class-Handle/Makefile,v 1.9 2012/11/17 05:56:07 svnexp Exp $
+# $FreeBSD: devel/p5-Class-Handle/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Class-Handle
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Class-ISA>=0:${PORTSDIR}/devel/p5-Class-ISA \
 		p5-Class-Inspector>=0:${PORTSDIR}/devel/p5-Class-Inspector \
 		p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Handle.3
 
