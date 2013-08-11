@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: x11-fonts/liberation-fonts-ttf/Makefile 315792 2013-04-12 18:12:31Z thierry $
+# $FreeBSD: x11-fonts/liberation-fonts-ttf/Makefile 323427 2013-07-22 06:44:10Z bapt $
 
 PORTNAME=	liberation-fonts-ttf
 PORTVERSION=	2.00.1
@@ -15,7 +15,7 @@ COMMENT=	Liberation fonts from Red Hat to replace MS TTF fonts
 LICENSE=	OFL
 LICENSE_NAME=	SIL Open Font License (OFL)
 LICENSE_FILE=	${WRKSRC}/LICENSE
-LICENSE_PERMS=	auto-accept
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BUILD_DEPENDS=	mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale	\
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir
