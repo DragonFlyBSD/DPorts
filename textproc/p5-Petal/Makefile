@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Petal/Makefile,v 1.13 2013/02/24 17:00:15 svnexp Exp $
+# $FreeBSD: textproc/p5-Petal/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Petal
 PORTVERSION=	2.22
@@ -20,6 +20,7 @@ MAN3=	Petal.3 \
 	Petal::Hash::Test.3 \
 	Petal::I18N.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
