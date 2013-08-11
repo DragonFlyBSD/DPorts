@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-B-Hooks-EndOfScope/Makefile,v 1.15 2012/12/17 13:43:43 svnexp Exp $
+# $FreeBSD: devel/p5-B-Hooks-EndOfScope/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	B-Hooks-EndOfScope
 PORTVERSION=	0.12
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Module-Implementation>=0.05:${PORTSDIR}/devel/p5-Module-Implem
 		p5-Sub-Exporter-Progressive>=0.001.006:${PORTSDIR}/devel/p5-Sub-Exporter-Progressive
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		B::Hooks::EndOfScope.3 \
 		B::Hooks::EndOfScope::PP.3 \
