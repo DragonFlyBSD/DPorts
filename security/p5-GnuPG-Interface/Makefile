@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/security/p5-GnuPG-Interface/Makefile,v 1.38 2013/01/27 06:41:41 svnexp Exp $
+# $FreeBSD: security/p5-GnuPG-Interface/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	GnuPG-Interface
 PORTVERSION=	0.46
@@ -17,7 +17,8 @@ RUN_DEPENDS=	gpg2:${PORTSDIR}/security/gnupg \
 		p5-Any-Moose>=0.04:${PORTSDIR}/devel/p5-Any-Moose
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	GnuPG::Fingerprint.3 \
 	GnuPG::Handles.3 \
