@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/p5-Data-Entropy/Makefile 314069 2013-03-13 11:17:39Z bapt $
+# $FreeBSD: security/p5-Data-Entropy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Entropy
 PORTVERSION=	0.007
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Crypt-Rijndael>=0:${PORTSDIR}/security/p5-Crypt-Rijndael \
 		p5-HTTP-Lite>=0.22:${PORTSDIR}/www/p5-HTTP-Lite \
 		p5-Params-Classify>=0:${PORTSDIR}/devel/p5-Params-Classify
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Data::Entropy.3 \
 		Data::Entropy::Algorithms.3 \
