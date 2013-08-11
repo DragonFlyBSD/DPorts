@@ -2,7 +2,7 @@
 # Date created:		2004-03-30
 # Whom:			michael johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/multimedia/lsdvd/Makefile,v 1.22 2012/11/17 05:59:51 svnexp Exp $
+# $FreeBSD: multimedia/lsdvd/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	lsdvd
@@ -11,7 +11,7 @@ PORTREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}%20-%20I%20hate%20James%20Blunt
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Print information about the contents and structure of a DVD
 
 LIB_DEPENDS=	dvdread.4:${PORTSDIR}/multimedia/libdvdread
