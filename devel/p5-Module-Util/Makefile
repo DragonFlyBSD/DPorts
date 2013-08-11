@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Module-Util/Makefile,v 1.7 2013/02/02 15:50:59 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Util/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Module-Util
 PORTVERSION=	1.09
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl module name tools and transformations
 
-PERL_MODBUILD=	YES
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=	pm_which.1
 MAN3=	Module::Util.3
