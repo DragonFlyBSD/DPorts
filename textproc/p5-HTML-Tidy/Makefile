@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-Tidy
-# Date Created:				8 june 2004
-# Whom:					mat
-#
-# $FreeBSD: ports/textproc/p5-HTML-Tidy/Makefile,v 1.15 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: textproc/p5-HTML-Tidy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-Tidy
 PORTVERSION=	1.54
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 LIB_DEPENDS=	tidyp:${PORTSDIR}/textproc/tidyp
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Tidy.3 HTML::Tidy::Message.3
 
