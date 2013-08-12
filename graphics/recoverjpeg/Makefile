@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/graphics/recoverjpeg/Makefile,v 1.18 2012/11/17 18:03:30 svnexp Exp $
+# $FreeBSD: graphics/recoverjpeg/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	recoverjpeg
 PORTVERSION=	2.2
@@ -13,7 +13,6 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 MANCOMPRESSED=	no
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/recoverjpeg
 MAN1=		recoverjpeg.1
