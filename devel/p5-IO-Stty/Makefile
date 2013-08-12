@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-IO-Stty
-# Date created:		1 Oct 2011
-# Whom:			Stephon Chen <stephon@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-IO-Stty/Makefile,v 1.14 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: Stephon Chen <stephon@gmail.com>
+# $FreeBSD: devel/p5-IO-Stty/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IO-Stty
 PORTVERSION=	0.03
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Change and print terminal line settings
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		IO::Stty.3
 
