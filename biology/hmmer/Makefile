@@ -1,5 +1,5 @@
 # Created by: barnhart@genetics.wustl.edu
-# $FreeBSD: biology/hmmer/Makefile 323349 2013-07-20 15:08:45Z wen $
+# $FreeBSD: biology/hmmer/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	hmmer
 PORTVERSION=	3.0
@@ -11,7 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Profile hidden Markov models for biological sequence analysis
 
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 CONFIGURE_ARGS+=--enable-threads --enable-lfs
 
 DOCFILES=	COPYRIGHT INSTALL LICENSE Userguide.pdf
