@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Olson-Abbreviations/Makefile,v 1.7 2013/02/24 17:09:57 svnexp Exp $
+# $FreeBSD: devel/p5-Olson-Abbreviations/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Olson-Abbreviations
 PORTVERSION=	0.04
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-Moose>=0.41:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-ClassAttribute>=0:${PORTSDIR}/devel/p5-MooseX-ClassAttribute
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Olson::Abbreviations.3
 
