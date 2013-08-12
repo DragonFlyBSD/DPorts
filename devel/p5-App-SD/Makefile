@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-App-SD/Makefile 320108 2013-06-06 15:43:52Z bapt $
+# $FreeBSD: devel/p5-App-SD/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	App-SD
 PORTVERSION=	0.75
@@ -27,7 +27,8 @@ HIVEMINDER_DESC=	Enable huveminder sync
 TRAC_DESC=		Enable trac sync
 RT_DESC=		Enable rt sync
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	App::SD::ForeignReplica::PullEncoder.3 \
 	App::SD::Server.3 \
