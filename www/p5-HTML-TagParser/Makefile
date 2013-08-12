@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-TagParser
-# Date Created:				8 Jul 2006
-# Whom:					clsung
-#
-# $FreeBSD: ports/www/p5-HTML-TagParser/Makefile,v 1.6 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: clsung
+# $FreeBSD: www/p5-HTML-TagParser/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-TagParser
 PORTVERSION=	0.20
@@ -17,7 +13,8 @@ COMMENT=	Yet another HTML tag parser by pure Perl implementation
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::TagParser.3
 
