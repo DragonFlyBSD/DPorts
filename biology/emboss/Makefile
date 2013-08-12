@@ -1,10 +1,10 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: biology/emboss/Makefile 322587 2013-07-09 21:49:35Z bapt $
+# $FreeBSD: biology/emboss/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	emboss
 PORTVERSION=	6.2.0
 RELEASE=	${PORTNAME:tu}-${PORTVERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	biology
 MASTER_SITES=	ftp://emboss.open-bio.org/pub/EMBOSS/
 DISTNAME=	${RELEASE}
@@ -15,7 +15,7 @@ COMMENT=	A collection of open source tools for genetic sequence analysis
 
 BUILD_DEPENDS=	clustalw:${PORTSDIR}/biology/clustalw \
 		primer3:${PORTSDIR}/biology/primer3
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd \
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
 		png15:${PORTSDIR}/graphics/png
 
 CONFLICTS=	qmail-ldap-[0-9]* digest-[0-9]*
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+= --with-docroot=${DOCSDIR}
 .if !defined(WITHOUT_X11)
 USE_XORG=	x11
 USES+=		motif
-LIB_DEPENDS+=	gd.4:${PORTSDIR}/graphics/gd \
+LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd \
 		png15:${PORTSDIR}/graphics/png
 .else
 CONFIGURE_ARGS+= --without-x
