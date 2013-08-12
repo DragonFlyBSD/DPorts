@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier
-# $FreeBSD: ports/sysutils/tenshi/Makefile,v 1.20 2012/11/18 04:30:10 svnexp Exp $
+# $FreeBSD: sysutils/tenshi/Makefile 324031 2013-07-31 10:17:10Z az $
 
 PORTNAME=		tenshi
 PORTVERSION=		0.14
@@ -14,7 +14,8 @@ RUN_DEPENDS=		${LOCALBASE}/bin/gtail:${PORTSDIR}/sysutils/coreutils \
 
 MAN8=			tenshi.8
 
-USE_PERL5=		yes
+USES=			perl5
+USE_PERL5=		run build patch
 NO_BUILD=		yes
 USE_RC_SUBR=		tenshi
 SUB_LIST=		PERL=${PERL}
