@@ -2,7 +2,7 @@
 # Date created:				Jul 25 2004
 # Whom:					Cheng-Lung Sung <clsung@dragon2.net>
 #
-# $FreeBSD: ports/textproc/p5-Lingua-Stem-Fr/Makefile,v 1.5 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: textproc/p5-Lingua-Stem-Fr/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=		Lingua-Stem-Fr
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=		p5-
 MAINTAINER=		ports@FreeBSD.org
 COMMENT=		Perl French Stemming
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Lingua::Stem::Fr.3
 
