@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Rcs
-# Date created:				21 November 2002
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Rcs/Makefile,v 1.6 2012/11/17 05:56:27 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Rcs/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Rcs
 PORTVERSION=	1.05
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl Object Class for Revision Control System (RCS)
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Rcs.3
 
