@@ -1,9 +1,8 @@
 # Created by: Ben Hutchinson <benhutch@xfiles.org.uk>
-# $FreeBSD: irc/epic4/Makefile 315287 2013-03-26 12:36:21Z bapt $
+# $FreeBSD: irc/epic4/Makefile 324300 2013-08-06 05:43:59Z jpaetzel $
 
 PORTNAME=	epic4
-PORTVERSION=	2.10.1
-PORTREVISION=	1
+PORTVERSION=	2.10.2
 CATEGORIES=	irc ipv6
 MASTER_SITES=	http://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/ \
 		http://tehran.lain.pl/epic-mirror/EPIC4-PRODUCTION/ \
