@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: ports/mail/nbsmtp/Makefile,v 1.24 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: mail/nbsmtp/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	nbsmtp
 PORTVERSION=	1.00
@@ -13,7 +13,6 @@ COMMENT=	Simple program for outgoing SMTP delivery
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS+=	--enable-ssl --enable-ipv6
 
