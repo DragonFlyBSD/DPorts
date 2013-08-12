@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-Class-DBI-FromForm
-# Date created:				29 May 2005
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Class-DBI-FromForm/Makefile,v 1.10 2012/11/17 06:02:48 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Class-DBI-FromForm/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-DBI-FromForm
 PORTVERSION=	0.04
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
 		p5-Data-FormValidator>=0:${PORTSDIR}/textproc/p5-Data-FormValidator
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::DBI::FromForm.3
 
