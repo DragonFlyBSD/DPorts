@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-PopulateMore/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: databases/p5-DBIx-Class-Schema-PopulateMore/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Class-Schema-PopulateMore
 PORTVERSION=	0.17
@@ -27,7 +27,8 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-SQL-Translator>0.11007:${PORTSDIR}/databases/p5-SQL-Translator \
 		p5-YAML-Tiny>=1.38:${PORTSDIR}/textproc/p5-YAML-Tiny
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::Class::Schema::PopulateMore.3 \
 	DBIx::Class::Schema::PopulateMore::Command.3 \
