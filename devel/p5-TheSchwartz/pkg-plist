@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/devel/p5-TheSchwartz/pkg-plist,v 1.5 2012/11/17 05:56:34 svnexp Exp $
+@comment $FreeBSD: devel/p5-TheSchwartz/pkg-plist 303403 2012-08-31 09:34:08Z kuriyama $
 bin/check_schwartz
 bin/schwartzmon
 bin/thetop
