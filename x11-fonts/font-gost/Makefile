@@ -2,7 +2,7 @@
 # Date created:		2010-01-15
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/x11-fonts/font-gost/Makefile,v 1.3 2012/11/17 06:03:28 svnexp Exp $
+# $FreeBSD: x11-fonts/font-gost/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	gost
@@ -14,7 +14,7 @@ MASTER_SITES=	http://sd.ascon.ru/ftp/Public/Utils/DWG-DXF/ \
 PKGNAMEPREFIX=	font-
 DISTNAME=	TTF_FON
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	GOST TrueType fonts
 
 RUN_DEPENDS=	fc-cache:${PORTSDIR}/x11-fonts/fontconfig
