@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/mail/grepmail/files/patch-Makefile.PL,v 1.2 2012/11/17 05:59:03 svnexp Exp $
+$FreeBSD: mail/grepmail/files/patch-Makefile.PL 300896 2012-07-14 13:54:48Z beat $
 
 --- Makefile.PL.orig
 +++ Makefile.PL

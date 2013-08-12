@@ -2,7 +2,7 @@
 # Date created:				20 November 1999
 # Whom:					Chris D. Faulhaber <jedgar@fxp.org>
 #
-# $FreeBSD: ports/mail/grepmail/Makefile,v 1.40 2012/11/17 05:59:03 svnexp Exp $
+# $FreeBSD: mail/grepmail/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	grepmail
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate \
 		p5-Mail-Mbox-MessageParser>=0:${PORTSDIR}/mail/p5-Mail-Mbox-MessageParser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		grepmail.1
 
