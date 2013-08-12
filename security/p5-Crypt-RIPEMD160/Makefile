@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Crypt-RIPEMD160
-# Date created:				2001-09-12
-# Whom:					Michael Haro <mharo@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Crypt-RIPEMD160/Makefile,v 1.7 2012/11/17 06:01:11 svnexp Exp $
-#
+# Created by: Michael Haro <mharo@FreeBSD.org>
+# $FreeBSD: security/p5-Crypt-RIPEMD160/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Crypt-RIPEMD160
 PORTVERSION=	0.05
@@ -17,7 +13,8 @@ COMMENT=	RIPEMD-160 message digest algorithm
 LICENSE_COMB=	dual
 LICENSE=	ART20 GPLv1
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::RIPEMD160::MAC.3 Crypt::RIPEMD160.3
 
