@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: ports/devel/p5-DateTime-Event-ICal/Makefile,v 1.13 2012/11/18 07:39:11 svnexp Exp $
+# $FreeBSD: devel/p5-DateTime-Event-ICal/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Event-ICal
 PORTVERSION=	0.11
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Event-Recurrence>=0.11:${PORTSDIR}/devel/p5-DateTime-Event-Recurrence
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Event::ICal.3
 
