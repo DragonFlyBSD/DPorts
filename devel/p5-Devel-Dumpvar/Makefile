@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Devel-Dumpvar/Makefile,v 1.8 2012/11/17 05:56:13 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-Dumpvar/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Devel-Dumpvar
 PORTVERSION=	1.06
@@ -14,7 +14,8 @@ COMMENT=	A pure-OO reimplementation of dumpvar.pl
 BUILD_DEPENDS=	p5-Scalar-List-Utils>=0:${PORTSDIR}/lang/p5-Scalar-List-Utils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::Dumpvar.3
 
