@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/devel/p5-App-Cmd/Makefile,v 1.12 2013/02/01 10:41:49 svnexp Exp $
+# $FreeBSD: devel/p5-App-Cmd/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	App-Cmd
 PORTVERSION=	0.320
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Capture-Tiny>=0.13:${PORTSDIR}/devel/p5-Capture-Tiny \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		App::Cmd.3 \
 		App::Cmd::ArgProcessor.3 \
