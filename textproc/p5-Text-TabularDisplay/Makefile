@@ -1,7 +1,7 @@
-# $FreeBSD: textproc/p5-Text-TabularDisplay/Makefile 314430 2013-03-17 13:25:19Z lth $
+# $FreeBSD: textproc/p5-Text-TabularDisplay/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Text-TabularDisplay
-PORTVERSION=	1.34
+PORTVERSION=	1.35
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Display text in formatted table output
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::TabularDisplay.3
 
