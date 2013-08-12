@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-App-Cache
-# Date created:			09 May 2006
-# Whom:				Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-App-Cache/Makefile,v 1.13 2012/11/17 05:56:04 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: devel/p5-App-Cache/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	App-Cache
 PORTVERSION=	0.37
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-Class-Accessor-Chained>=0:${PORTSDIR}/devel/p5-Class-Accessor-Ch
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		App::Cache.3
 
