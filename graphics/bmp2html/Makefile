@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/bmp2html/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: graphics/bmp2html/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	bmp2html
 PORTVERSION=	0.1
@@ -12,7 +12,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	BMP to HTML converter
 
 USE_SDL=	yes
-MAKE_JOBS_SAFE=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 SDL_FLAGS=	-I${LOCALBASE}/include/SDL -I${LOCALBASE}/include
