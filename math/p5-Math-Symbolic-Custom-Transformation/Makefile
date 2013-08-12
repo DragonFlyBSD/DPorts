@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Symbolic-Custom-Transformation/Makefile 319195 2013-05-27 09:33:08Z tobez $
+# $FreeBSD: math/p5-Math-Symbolic-Custom-Transformation/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-Symbolic-Custom-Transformation
 PORTVERSION=	2.02
@@ -16,6 +16,7 @@ RUN_DEPENDS=	p5-Math-Symbolic>=0.507:${PORTSDIR}/math/p5-Math-Symbolic \
 MAN3=	Math::Symbolic::Custom::Transformation.3 \
 	Math::Symbolic::Custom::Transformation::Group.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
