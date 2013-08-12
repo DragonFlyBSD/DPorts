@@ -1,12 +1,12 @@
-# Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: devel/py-pyechonest/Makefile 316438 2013-04-24 14:21:12Z swills $
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: devel/py-pyechonest/Makefile 323891 2013-07-29 15:03:58Z feld $
 
 PORTNAME=	pyechonest
 PORTVERSION=	7.1.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Python interface to The Echo Nest APIs
 
 LICENSE=	MIT
