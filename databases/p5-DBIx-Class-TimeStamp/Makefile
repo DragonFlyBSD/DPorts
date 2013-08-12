@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-DBIx-Class-TimeStamp
-# Date created:				28 April 2009
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-TimeStamp/Makefile,v 1.8 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: databases/p5-DBIx-Class-TimeStamp/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	DBIx-Class-TimeStamp
 PORTVERSION=	0.14
@@ -25,11 +21,12 @@ RUN_DEPENDS=	p5-DBIx-Class-DynamicDefault>=0.03:${PORTSDIR}/databases/p5-DBIx-Cl
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::Class::TimeStamp.3
 
 post-patch:
-	${PERL} -pi -e '$$_="" if /auto_install/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' '/auto_install/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
