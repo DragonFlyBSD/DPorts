@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	p5-Pod-Tree
-# Date created:			Aug 10, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/p5-Pod-Tree/Makefile,v 1.15 2012/12/17 08:35:06 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/p5-Pod-Tree/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Tree
 PORTVERSION=	1.17
@@ -20,7 +17,8 @@ RUN_DEPENDS=	p5-HTML-Stream>=1.49:${PORTSDIR}/www/p5-HTML-Stream \
 		p5-Text-Template>=1:${PORTSDIR}/textproc/p5-Text-Template
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		mod2html.1 perl2html.1 pods2html.1 podtree2html.1
 MAN3=		Pod::Tree.3 \
