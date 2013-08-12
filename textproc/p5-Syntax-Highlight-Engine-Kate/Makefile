@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Syntax-Highlight-Engine-Kate/Makefile 319200 2013-05-27 10:14:10Z tobez $
+# $FreeBSD: textproc/p5-Syntax-Highlight-Engine-Kate/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Syntax-Highlight-Engine-Kate
 PORTVERSION=	0.08
@@ -148,7 +148,8 @@ MAN3=	Syntax::Highlight::Engine::Kate.3 \
 	Syntax::Highlight::Engine::Kate::Yacas.3 \
 	Syntax::Highlight::Engine::Kate::Yacc_Bison.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 post-install:
 .if !defined(NOPORTDOCS)
