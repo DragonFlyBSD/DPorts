@@ -1,8 +1,6 @@
 # Ports collection Makefile for:	p5-Geo-IP-PurePerl
-# Date created:				26 Jan, 2006
-# Whom:					Joe Horn <joehorn@gmail.com>
-#
-# $FreeBSD: ports/net/p5-Geo-IP-PurePerl/Makefile,v 1.10 2012/11/17 06:00:09 svnexp Exp $
+# Created by: Joe Horn <joehorn@gmail.com>
+# $FreeBSD: net/p5-Geo-IP-PurePerl/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Geo-IP-PurePerl
 PORTVERSION=	1.25
@@ -13,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Look up country by IP Address
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	geoip-lookup.1
 MAN3=	Geo::IP::PurePerl.3
