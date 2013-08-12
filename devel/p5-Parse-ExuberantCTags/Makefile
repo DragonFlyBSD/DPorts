@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Parse-ExuberantCTags/Makefile,v 1.5 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: devel/p5-Parse-ExuberantCTags/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Parse-ExuberantCTags
 PORTVERSION=	1.02
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module to efficiently parse exuberant ctags files
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Parse::ExuberantCTags.3
 
