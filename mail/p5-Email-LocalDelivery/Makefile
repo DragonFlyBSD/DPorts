@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Email-LocalDelivery
-# Date created:				August 31 2003
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: ports/mail/p5-Email-LocalDelivery/Makefile,v 1.15 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: mail/p5-Email-LocalDelivery/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Email-LocalDelivery
 PORTVERSION=	0.21.7
@@ -20,7 +16,8 @@ RUN_DEPENDS=	p5-Email-Simple>=0:${PORTSDIR}/mail/p5-Email-Simple \
 		p5-File-Path-Expand>=0:${PORTSDIR}/devel/p5-File-Path-Expand
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Email::LocalDelivery.3
 
