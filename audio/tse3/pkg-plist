@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/audio/tse3/pkg-plist,v 1.7 2012/11/17 05:54:46 svnexp Exp $
+@comment $FreeBSD: /tmp/pcvs/ports/audio/tse3/pkg-plist,v 1.6 2006-02-23 10:34:43 ade Exp $
 bin/tse3play
 include/tse3/DisplayParams.h
 include/tse3/Error.h

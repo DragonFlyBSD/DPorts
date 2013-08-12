@@ -1,5 +1,5 @@
 # Created by: Mathew Kanner <mat@hak.cnd.mcgill.ca>
-# $FreeBSD: ports/audio/tse3/Makefile,v 1.23 2013/02/26 18:08:24 svnexp Exp $
+# $FreeBSD: audio/tse3/Makefile 323767 2013-07-26 23:46:21Z bapt $
 
 PORTNAME=	tse3
 PORTVERSION=	0.3.1
@@ -14,7 +14,8 @@ LICENSE=	GPLv2
 
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ARGS=	--without-doc-install
+CONFIGURE_ARGS=	--without-doc-install \
+		--without-aRts
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=	yes
 
@@ -24,15 +25,9 @@ LDFLAGS+=	${PTHREAD_LIBS}
 MAN1=		tse3play.1
 MAN3=		tse3.3
 
-OPTIONS_DEFINE=	ARTS DOCS
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MARTS}
-LIB_DEPENDS+=	artsmidi:${PORTSDIR}/multimedia/kdemultimedia3
-.else
-CONFIGURE_ARGS+=	--without-aRts
-.endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
