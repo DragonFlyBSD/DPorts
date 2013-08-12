@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Tie-DB_File-SplitHash/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Tie-DB_File-SplitHash/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Tie-DB_File-SplitHash
 PORTVERSION=	1.05
@@ -13,7 +13,8 @@ COMMENT=	Wrapper around the DB_File Berkeley database system
 BUILD_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Tie::DB_File::SplitHash.3
 
