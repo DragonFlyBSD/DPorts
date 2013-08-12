@@ -1,9 +1,5 @@
-# New ports collection makefile for: p5-WDDX
-# Date created: 		18 September 2001
-# Whom: 			Eric A. Griff <eric@talesfromthereal.com>
-#
-# $FreeBSD: ports/textproc/p5-WDDX/Makefile,v 1.13 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Eric A. Griff <eric@talesfromthereal.com>
+# $FreeBSD: textproc/p5-WDDX/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WDDX
 PORTVERSION=	1.02
@@ -19,7 +15,8 @@ COMMENT=	Perl module to parse WDDX Packets
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WDDX.3
 
