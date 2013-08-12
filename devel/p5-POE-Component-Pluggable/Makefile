@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-POE-Component-Pluggable/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-POE-Component-Pluggable/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Pluggable
 PORTVERSION=	1.26
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-POE>=1.004:${PORTSDIR}/devel/p5-POE \
 		p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Pluggable.3 POE::Component::Pluggable::Pipeline.3 \
 		POE::Component::Pluggable::Constants.3
