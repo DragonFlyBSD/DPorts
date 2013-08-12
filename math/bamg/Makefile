@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bamg
-# Date created:        16 December 2003
-# Whom:                thierry@pompo.net
-#
-# $FreeBSD: ports/math/bamg/Makefile,v 1.16 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: math/bamg/Makefile 322689 2013-07-10 13:12:03Z bapt $
 
 PORTNAME=	bamg
 PORTVERSION=	1.01
@@ -23,7 +19,8 @@ RESTRICTED=	No resale, contact author for commercial usage
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_XORG=	x11
-USE_GMAKE=	yes
+USES=		gmake
+MAKE_JOBS_UNSAFE=	yes
 
 ALL_TARGET=	world
 INSTALL_TARGET=	install-world
