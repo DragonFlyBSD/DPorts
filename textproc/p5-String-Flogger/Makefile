@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-String-Flogger/Makefile,v 1.7 2013/02/07 20:33:00 svnexp Exp $
+# $FreeBSD: textproc/p5-String-Flogger/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	String-Flogger
 PORTVERSION=	1.101243
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Params-Util>0:${PORTSDIR}/devel/p5-Params-Util \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Simple>=0.82:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	String::Flogger.3
 
