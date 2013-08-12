@@ -1,5 +1,5 @@
 # Created by: Hubert Tournier <hubert@frbsd.org>
-# $FreeBSD: ports/security/smtpscan/Makefile,v 1.14 2012/11/17 06:01:20 svnexp Exp $
+# $FreeBSD: security/smtpscan/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	smtpscan
 PORTVERSION=	0.5
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 MAN1=		smtpscan.1
 PLIST_FILES=	bin/smtpscan \
