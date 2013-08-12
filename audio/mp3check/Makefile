@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: audio/mp3check/Makefile 317573 2013-05-07 06:31:06Z bapt $
+# $FreeBSD: audio/mp3check/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	mp3check
 PORTVERSION=	1.6
@@ -13,8 +13,8 @@ COMMENT=	Tool for checking and fixing MP3 archive inconsistencies
 RUN_DEPENDS=	${LOCALBASE}/bin/id3tool:${PORTSDIR}/audio/id3tool \
 		${LOCALBASE}/bin/mp3_check:${PORTSDIR}/audio/mp3_check
 
-USES=		shebangfix
-USE_PERL5_RUN=	yes
+USES=		shebangfix perl5
+USE_PERL5=	run
 NO_WRKSUBDIR=	yes
 EXTRACT_CMD=	${CP}
 EXTRACT_BEFORE_ARGS=
