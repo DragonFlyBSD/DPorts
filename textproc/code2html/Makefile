@@ -2,7 +2,7 @@
 # Date created:				01 October 1999
 # Whom:					Chris D. Faulhaber <jedgar@fxp.org>
 #
-# $FreeBSD: ports/textproc/code2html/Makefile,v 1.23 2012/11/17 06:01:53 svnexp Exp $
+# $FreeBSD: textproc/code2html/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	code2html
@@ -16,7 +16,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sourcecode to HTML converter
 
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 MAN1=		code2html.1
 PLIST_FILES=	bin/code2html
