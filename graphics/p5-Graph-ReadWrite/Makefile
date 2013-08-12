@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Graph-ReadWrite
-# Date created:				2004-08-12
-# Whom:					arved
-#
-# $FreeBSD: ports/graphics/p5-Graph-ReadWrite/Makefile,v 1.12 2012/12/17 06:20:46 svnexp Exp $
-#
+# Created by: arved
+# $FreeBSD: graphics/p5-Graph-ReadWrite/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Graph-ReadWrite
 PORTVERSION=	2.03
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Graph>=0.50:${PORTSDIR}/math/p5-Graph \
 		p5-XML-Writer>=0:${PORTSDIR}/textproc/p5-XML-Writer
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Graph::Reader.3 \
 		Graph::Reader::Dot.3 \
