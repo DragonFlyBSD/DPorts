@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-guard/Makefile 321541 2013-06-22 03:45:39Z sunpoet $
+# $FreeBSD: sysutils/rubygem-guard/Makefile 324320 2013-08-06 15:57:36Z sunpoet $
 
 PORTNAME=	guard
-PORTVERSION=	1.8.1
+PORTVERSION=	1.8.2
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
