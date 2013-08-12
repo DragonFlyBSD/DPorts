@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: databases/p5-Class-DBI-AbstractSearch/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: databases/p5-Class-DBI-AbstractSearch/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-DBI-AbstractSearch
 PORTVERSION=	0.07
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
 		p5-SQL-Abstract-Limit>=0:${PORTSDIR}/databases/p5-SQL-Abstract-Limit
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::DBI::AbstractSearch.3
 
