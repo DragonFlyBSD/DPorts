@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/shells/rssh/pkg-plist,v 1.5 2012/12/04 20:36:55 svnexp Exp $
+@comment $FreeBSD: shells/rssh/pkg-plist 308265 2012-12-04 20:17:47Z pav $
 bin/rssh
 @exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak; echo %D/%F) >/etc/shells; rm -f /etc/shells.bak
 @unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak) >/etc/shells; rm -f /etc/shells.bak
