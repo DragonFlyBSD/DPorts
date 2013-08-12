@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/p5-MasonX-Request-WithApacheSession/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-MasonX-Request-WithApacheSession/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MasonX-Request-WithApacheSession
 PORTVERSION=	0.31
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-HTML-Mason>=0:${PORTSDIR}/www/p5-HTML-Mason \
 		p5-Apache-Session-Wrapper>=0:${PORTSDIR}/www/p5-Apache-Session-Wrapper
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		MasonX::Request::WithApacheSession.3 \
 		MasonX::Request::WithMultiSession.3
