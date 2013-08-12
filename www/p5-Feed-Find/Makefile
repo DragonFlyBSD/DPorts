@@ -2,7 +2,7 @@
 # Date created:				28 July 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Feed-Find/Makefile,v 1.8 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Feed-Find/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Feed-Find
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-Class-ErrorHandler>=0:${PORTSDIR}/devel/p5-Class-ErrorHandler
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Feed::Find.3
 
