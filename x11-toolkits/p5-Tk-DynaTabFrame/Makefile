@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tk-DynaTabFrame
-# Date created:		28 August 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-toolkits/p5-Tk-DynaTabFrame/Makefile,v 1.10 2012/11/17 06:03:37 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: x11-toolkits/p5-Tk-DynaTabFrame/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Tk-DynaTabFrame
 PORTVERSION=	0.23
@@ -18,7 +14,8 @@ COMMENT=	NoteBook widget with orientable, dynamically stacking tabs
 BUILD_DEPENDS=	p5-Tk>=804.027:${PORTSDIR}/x11-toolkits/p5-Tk
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	${PORTNAME:S/-/::/g}.3
 
