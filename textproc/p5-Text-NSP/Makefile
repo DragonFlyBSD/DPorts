@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: ports/textproc/p5-Text-NSP/Makefile,v 1.19 2013/02/18 12:50:30 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-NSP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-NSP
 PORTVERSION=	1.27
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 modules for Ngram Statistics Package
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	combig.pl.1 count.pl.1 \
 	count2huge.pl.1 \
