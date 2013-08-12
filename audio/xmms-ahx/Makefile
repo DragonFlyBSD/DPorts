@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-ahx/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: audio/xmms-ahx/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	xmms-ahx
 PORTVERSION=	0.6
@@ -14,8 +14,6 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
-
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	lib/xmms/Input/libahx.la \
 		lib/xmms/Input/libahx.so
