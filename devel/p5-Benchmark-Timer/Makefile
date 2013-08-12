@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Benchmark-Timer/Makefile 316447 2013-04-24 16:17:39Z eadler $
+# $FreeBSD: devel/p5-Benchmark-Timer/Makefile 324222 2013-08-04 12:30:54Z az $
 
 PORTNAME=	Benchmark-Timer
 PORTVERSION=	0.7102
@@ -14,9 +14,8 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	p5-Module-Install>0:${PORTSDIR}/devel/p5-Module-Install
 
-PERL_CONFIGURE=	yes
-
-MAKE_JOBS_SAFE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Benchmark::Timer.3 Benchmark::delta.3
 
