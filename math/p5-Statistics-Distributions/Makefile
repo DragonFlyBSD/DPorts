@@ -1,9 +1,5 @@
-# New ports collection makefile for:	math/p5-Statistics-Distributions
-# Date created:				01 January 2001
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/math/p5-Statistics-Distributions/Makefile,v 1.10 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: math/p5-Statistics-Distributions/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Statistics-Distributions
 PORTVERSION=	1.02
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl module that calculates critical values of common statistical distributions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Statistics::Distributions.3
 
