@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/floatator/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: misc/floatator/Makefile 322749 2013-07-11 06:39:14Z bapt $
 
 PORTNAME=	floatator
 PORTVERSION=	0.2.1
@@ -17,6 +17,7 @@ USES=		motif
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DNDEBUG" \
 		X11INCLUDE="-I${LOCALBASE}/include" X11LIB="-L${LOCALBASE}/lib"
 PLIST_FILES=	bin/floatator bin/floatator_X_interface
+MAKE_JOBS_UNSAFE=	yes
 
 do-install:
 .for f in floatator floatator_X_interface
