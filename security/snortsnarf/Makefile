@@ -2,7 +2,7 @@
 # Date created:		29 July 2001
 # Whom:			Kris Kennaway <kris@FreeBSD.org>
 #
-# $FreeBSD: ports/security/snortsnarf/Makefile,v 1.20 2012/11/17 06:01:20 svnexp Exp $
+# $FreeBSD: security/snortsnarf/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	snortsnarf
@@ -17,8 +17,9 @@ COMMENT=	Generate HTML report summaries from snort incident alerts
 
 RUN_DEPENDS=	p5-Time-modules>=0:${PORTSDIR}/devel/p5-Time-modules
 
+USES=		perl5
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 post-patch:
 	@${SED} -e 's|\./include|${PREFIX}/libdata/${PORTNAME}|' \
