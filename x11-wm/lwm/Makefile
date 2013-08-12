@@ -1,5 +1,5 @@
 # Created by: J Han <hjh@photino.com>
-# $FreeBSD: x11-wm/lwm/Makefile 323039 2013-07-15 14:45:20Z miwi $
+# $FreeBSD: x11-wm/lwm/Makefile 323701 2013-07-26 07:06:30Z bapt $
 
 PORTNAME=	lwm
 PORTVERSION=	1.2.3
@@ -18,8 +18,8 @@ USE_XORG=	sm x11 xext
 MAKEFILE=	no_xmkmf_makefile
 MAKE_ARGS=	LDFLAGS="${LDFLAGS}"
 
-CFLAGS+=	`pkg-config --cflags sm x11 xext` -DSHAPE
-LDFLAGS+=	`pkg-config --libs sm x11 xext`
+CFLAGS+=	`pkg-config --cflags sm x11 xext ice` -DSHAPE
+LDFLAGS+=	`pkg-config --libs sm x11 xext ice`
 
 MAN1=		${PORTNAME}.1
 PORTDOCS=	AUTHORS BUGS ChangeLog README TODO
