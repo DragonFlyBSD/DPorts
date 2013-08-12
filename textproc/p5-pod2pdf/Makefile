@@ -2,7 +2,7 @@
 # Date created:				02 October 2008
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-pod2pdf/Makefile,v 1.5 2012/11/17 06:02:14 svnexp Exp $
+# $FreeBSD: textproc/p5-pod2pdf/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	pod2pdf
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-PDF-API2>=0.60:${PORTSDIR}/textproc/p5-PDF-API2 \
 		p5-Getopt-ArgvFile>0:${PORTSDIR}/devel/p5-Getopt-ArgvFile
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pod2pdf.1
 
