@@ -2,7 +2,7 @@
 # Date created:				14 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: deskutils/p5-Goo/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: deskutils/p5-Goo/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Goo
@@ -159,6 +159,7 @@ MAN3=	Goo.3 \
 	Goo::WebDBLite.3 \
 	Goo::Zone.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
