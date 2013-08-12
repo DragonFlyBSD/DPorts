@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-EncodedColumn/Makefile 316899 2013-04-30 08:42:04Z tobez $
+# $FreeBSD: databases/p5-DBIx-Class-EncodedColumn/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	DBIx-Class-EncodedColumn
 PORTVERSION=	0.00012
@@ -21,7 +21,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Dir-Self>=0:${PORTSDIR}/devel/p5-Dir-Self
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure extract
 
 MAN3=	DBIx::Class::EncodedColumn.3 \
 	DBIx::Class::EncodedColumn::Crypt.3 \
