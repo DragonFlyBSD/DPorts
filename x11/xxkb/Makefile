@@ -1,5 +1,5 @@
 # Created by: Alexander Matey <matey@cis.ohio-state.edu>
-# $FreeBSD: ports/x11/xxkb/Makefile,v 1.13 2012/11/17 18:17:53 svnexp Exp $
+# $FreeBSD: x11/xxkb/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xxkb
 PORTVERSION=	1.11
@@ -12,10 +12,8 @@ COMMENT=	XKB keyboard layout indicator and switcher
 
 LICENSE=	ART10
 
-BUILD_DEPENDS=	iconv:${PORTSDIR}/converters/libiconv
-
+USES=		iconv imake
 USE_XORG=	xpm
-USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAN1=		${PORTNAME}.1
