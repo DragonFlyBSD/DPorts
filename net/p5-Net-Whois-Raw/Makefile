@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kappa@freebsd.org.ua>
-# $FreeBSD: ports/net/p5-Net-Whois-Raw/Makefile,v 1.57 2013/02/12 14:59:57 svnexp Exp $
+# $FreeBSD: net/p5-Net-Whois-Raw/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Whois-Raw
 PORTVERSION=	2.46
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pwhois.1
 MAN3=		Net::Whois::Raw.3
