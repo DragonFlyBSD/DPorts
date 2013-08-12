@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Module-Extract/Makefile,v 1.6 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Extract/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Module-Extract
 PORTVERSION=	0.01
@@ -14,7 +14,8 @@ COMMENT=	Base class for working with Perl distributions
 BUILD_DEPENDS=	p5-Archive-Extract>=0:${PORTSDIR}/archivers/p5-Archive-Extract
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Module::Extract.3
 
