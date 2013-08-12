@@ -1,9 +1,5 @@
-# New ports collection makefile for:    2d-rewriter
-# Date created:                         8 December 2007
-# Whom:                                 Igor Serikov <iserikov@acm.org>
-#
-# $FreeBSD: ports/science/2d-rewriter/Makefile,v 1.6 2012/11/17 06:00:56 svnexp Exp $
-#
+# Created by: Igor Serikov <iserikov@acm.org>
+# $FreeBSD: science/2d-rewriter/Makefile 322001 2013-06-28 22:25:57Z bapt $
 
 PORTNAME=	2d-rewriter
 PORTVERSION=	1.4
@@ -15,10 +11,12 @@ COMMENT=	Cellular automata simulator
 
 MAN1=		2d-rewriter.1
 MANCOMPRESSED=	yes
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 
-.if !defined(NOPORTEXAMPLES)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MEXAMPLES}
 post-install:
 	${MKDIR} ${EXAMPLESDIR}
 	(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR})
