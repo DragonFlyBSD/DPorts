@@ -2,7 +2,7 @@
 # Date created:				21 June 2007
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-mocked/Makefile,v 1.6 2012/11/17 05:56:36 svnexp Exp $
+# $FreeBSD: devel/p5-mocked/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	mocked
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	mocked.3 \
 	unmocked.3
