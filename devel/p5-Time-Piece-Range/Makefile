@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Time-Piece-Range
-# Date created:				05 February 2006
-# Whom:					Zach Thompson <hideo@lastamericanempire.com>
-#
-# $FreeBSD: ports/devel/p5-Time-Piece-Range/Makefile,v 1.6 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Zach Thompson <hideo@lastamericanempire.com>
+# $FreeBSD: devel/p5-Time-Piece-Range/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Time-Piece-Range
 PORTVERSION=	1.2
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Time-Piece>=0:${PORTSDIR}/devel/p5-Time-Piece \
 		p5-Date-Range>=0:${PORTSDIR}/devel/p5-Date-Range
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Time::Piece::Range.3
 
