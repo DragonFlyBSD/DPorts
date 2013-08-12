@@ -1,9 +1,5 @@
-# New ports collection makefile for:   zangband
-# Date created:        29 May 2000
-# Whom:                Makoto YAMAKURA <makoto@pinpott.spnet.ne.jp>
-#
-# $FreeBSD: ports/games/zangband/Makefile,v 1.33 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: Makoto YAMAKURA <makoto@pinpott.spnet.ne.jp>
+# $FreeBSD: games/zangband/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	zangband
 PORTVERSION=	2.6.2
@@ -15,9 +11,10 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Zangband (Zelazny Angband) with color, X11 support
 
+USES=		perl5
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	automake14 autoconf
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 CONFIGURE_ARGS=	--datadir=${PREFIX}/lib --mandir=${PREFIX}/man \
 		--with-setgid=${SHAREGRP}
 
@@ -38,10 +35,11 @@ ANGBANDLIB?=	lib/${PORTNAME}
 ANGBANDBIN?=	bin/${PORTNAME}
 
 pre-patch:
-	@${PERL} -pi.orig -e 's|^aclocal|${ACLOCAL}|; \
-		s|^autoheader|${AUTOHEADER}|; \
-		s|^automake|${AUTOMAKE}|; s|^autoconf|${AUTOCONF}|' \
-		${WRKSRC}/bootstrap
+	@${REINPLACE_CMD} -i '' -e 's|^aclocal|${ACLOCAL}|' \
+		-e 's|^autoheader|${AUTOHEADER}|' \
+		-e 's|^automake|${AUTOMAKE}|' \
+		-e 's|^autoconf|${AUTOCONF}|' \
+			${WRKSRC}/bootstrap
 
 pre-configure:
 	(cd ${WRKSRC} ; ${SH} bootstrap)
