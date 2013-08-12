@@ -1,5 +1,5 @@
 # Created by: Dave Chapeskie <dchapes@ddm.on.ca>
-# $FreeBSD: games/xmemory/Makefile 320632 2013-06-11 19:40:17Z bsam $
+# $FreeBSD: games/xmemory/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xmemory
 PORTVERSION=	3.7
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multi-player memory game
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN1=		xmemory.1
 
