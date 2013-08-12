@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: ports/games/xataxx/Makefile,v 1.16 2013/02/04 15:11:45 svnexp Exp $
+# $FreeBSD: games/xataxx/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xataxx
 PORTVERSION=	1.0
@@ -14,8 +14,8 @@ COMMENT=	Strategy game of position and movement for X Window System
 
 OPTIONS_DEFINE=	DOCS
 
+USES=		imake
 USE_XORG=	x11 xext
-USE_IMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 
 MAN6=		xataxx.6
