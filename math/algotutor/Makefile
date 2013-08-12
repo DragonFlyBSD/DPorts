@@ -1,4 +1,4 @@
-# $FreeBSD: math/algotutor/Makefile 320738 2013-06-13 07:01:20Z az $
+# $FreeBSD: math/algotutor/Makefile 323702 2013-07-26 07:33:41Z az $
 
 PORTNAME=	algotutor
 PORTVERSION=	0.8.6
@@ -23,11 +23,13 @@ LIBFILES=	BST.pm Board.pm Collection.pm Configurable.pm DCEdge.pm \
 		RecCanvas.pm RecDialog.pm TreeNode.pm Vector.pm Vector2.pm \
 		Vector3.pm Vertex.pm basic.pl utilalgo
 
+USES=		shebangfix
+SHEBANG_FILES=	algotutor
+
 post-patch:
-	${REINPLACE_CMD}  -e 's,#!/usr/bin/perl,#!${PERL},' ${WRKSRC}/algotutor
-	${PERL} -pi -e "s'!!PREFIX!!'${PREFIX}'g" ${WRKSRC}/algotutor
-	${REINPLACE_CMD} -e 's,!!SITE_PERL!!,${SITE_PERL},' \
-		${WRKSRC}/algotutor
+	@${REINPLACE_CMD} -e 's,!!SITE_PERL!!,${SITE_PERL},' \
+		-e 's|!!PREFIX!!|${PREFIX}|g' \
+			${WRKSRC}/algotutor
 
 do-install:
 	${MKDIR} ${SITE_PERL}/algotutor
