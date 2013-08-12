@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/ocropus/Makefile 317482 2013-05-06 08:31:29Z bapt $
+# $FreeBSD: graphics/ocropus/Makefile 323110 2013-07-16 14:56:10Z miwi $
 
 PORTNAME=	ocropus
 PORTVERSION=	0.4
@@ -25,6 +25,7 @@ LEPTONICA_DESC=	Enable Leptonica image analysis
 MAKE_JOBS_UNSAFE=	yes
 USE_PYTHON_BUILD=	yes
 USE_AUTOTOOLS=	aclocal automake autoconf
+AUTOMAKE_ARGS=	--add-missing
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--without-fst --without-tesseract --with-iulib=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include
