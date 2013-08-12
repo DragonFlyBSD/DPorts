@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-Client-DNS
-# Date created:		10 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: dns/p5-POE-Component-Client-DNS/Makefile 319958 2013-06-05 08:04:01Z mat $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: dns/p5-POE-Component-Client-DNS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Client-DNS
 PORTVERSION=	1.053
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-POE>=1.007:${PORTSDIR}/devel/p5-POE \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Client::DNS.3
 
