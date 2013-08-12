@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Geocoder-US/Makefile 316378 2013-04-23 17:12:34Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-Geocoder-US/Makefile 324441 2013-08-09 14:32:28Z sunpoet $
 
 PORTNAME=	Geo-Coder-Geocoder-US
-PORTVERSION=	0.003
+PORTVERSION=	0.004
 CATEGORIES=	misc geography perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:WYANT
