@@ -1,9 +1,6 @@
 # Ports collection makefile for: p5-Catalyst-Log-Handler
-# Date created:			 		 October 27, 2011
-# Whom:				 			 Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Log-Handler/Makefile,v 1.2 2012/11/17 06:02:47 svnexp Exp $
-#
+# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
+# $FreeBSD: www/p5-Catalyst-Plugin-Log-Handler/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Plugin-Log-Handler
 PORTVERSION=	0.08
@@ -18,7 +15,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
   				p5-Log-Handler>=0:${PORTSDIR}/devel/p5-Log-Handler \
   				p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Catalyst::Plugin::Log::Handler.3
 
