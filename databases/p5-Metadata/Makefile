@@ -2,7 +2,7 @@
 # Date created:				31 Dec 2001
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/databases/p5-Metadata/Makefile,v 1.9 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: databases/p5-Metadata/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Metadata
@@ -17,7 +17,8 @@ COMMENT=	Perl implementation of Dublin Core compatible metadata
 BUILD_DEPENDS=	p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Metadata::Base.3 \
 	Metadata::HTTP.3 \
