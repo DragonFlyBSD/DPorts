@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: security/pkcrack/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: security/pkcrack/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	pkcrack
 PORTVERSION=	1.2.2
@@ -10,8 +10,7 @@ MASTER_SITES=	http://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack/ \
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Utility for breaking pkzip encryption
 
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
+USES=		gmake
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 PLIST_FILES=	bin/pkextract bin/pkfindkey bin/pkmakekey bin/pkcrack bin/zipdecrypt
