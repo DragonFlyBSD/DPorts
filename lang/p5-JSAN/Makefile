@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-JSAN
-# Date created:		2006/12/23
-# Whom:	      		chinsan
-#
-# $FreeBSD: ports/lang/p5-JSAN/Makefile,v 1.14 2012/11/17 05:58:54 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: lang/p5-JSAN/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	JSAN
 PORTVERSION=	0.07
@@ -28,7 +24,8 @@ BUILD_DEPENDS=	p5-Class-DBI-SQLite>=0:${PORTSDIR}/databases/p5-Class-DBI-SQLite 
 		p5-XML-XPath>=0:${PORTSDIR}/textproc/p5-XML-XPath
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	JSAN::Shell.3 JSAN.3 JSAN::Indexer::Creator.3 JSAN::Indexer.3
 
