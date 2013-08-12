@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/paexec/Makefile 315138 2013-03-24 16:07:38Z miwi $
+# $FreeBSD: devel/paexec/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	paexec
 PORTVERSION=	0.18.0
@@ -17,7 +17,8 @@ RUN_DEPENDS=	runawk:${PORTSDIR}/lang/runawk
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 MAKE_ENV=	SUBPRJ_DFLT="${SUBPRJ_DFLT}"
 
 CFLAGS+=	-I${LOCALBASE}/include
