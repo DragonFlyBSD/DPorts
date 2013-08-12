@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Catalyst-TraitFor-Request-BrowserDetect
-# Date created:							January 31, 2010
-# Whom:									Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/www/p5-Catalyst-TraitFor-Request-BrowserDetect/Makefile,v 1.3 2012/11/17 06:02:48 svnexp Exp $
-#
+# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
+# $FreeBSD: www/p5-Catalyst-TraitFor-Request-BrowserDetect/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-TraitFor-Request-BrowserDetect
 PORTVERSION=	0.02
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=0:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-HTTP-BrowserDetect>=0:${PORTSDIR}/www/p5-HTTP-BrowserDetect
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::TraitFor::Request::BrowserDetect.3
 
