@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	Flickr::Upload
-# Date created:			Apr 27, 2005
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/p5-Flickr-Upload/Makefile,v 1.13 2012/11/17 06:02:48 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/p5-Flickr-Upload/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Flickr-Upload
 PORTVERSION=	1.32
@@ -20,7 +17,8 @@ RUN_DEPENDS=	p5-Flickr-API>=0:${PORTSDIR}/www/p5-Flickr-API \
 		p5-XML-Parser-Lite-Tree>=0:${PORTSDIR}/textproc/p5-XML-Parser-Lite-Tree
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		flickr_upload.1
 MAN3=		Flickr::Upload.3
