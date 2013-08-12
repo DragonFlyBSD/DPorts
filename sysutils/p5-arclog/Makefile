@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/p5-arclog/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: sysutils/p5-arclog/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	arclog
 PORTVERSION=	3.04
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate \
 		p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN1=		arclog.1
 
 PLIST_FILES=	bin/arclog \
