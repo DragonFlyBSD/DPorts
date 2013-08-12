@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ip6_int
-# Date created:        22 November 2001
-# Whom:                Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: ports/net/ip6_int/Makefile,v 1.6 2012/11/17 06:00:02 svnexp Exp $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: net/ip6_int/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	ip6_int
 PORTVERSION=	1.0
@@ -18,14 +14,12 @@ COMMENT=	Convert an IPv4/IPv6 address to an in-addr.arpa/ip6.int PTR value
 
 PLIST_FILES=	bin/ip6_int
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		shebangfix perl5
+SHEBANG_FILES=	ip6_int
 
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
-
-post-patch:
-	@${PERL} -pi -e 's,^#!/usr/bin/perl,#!${PERL},' ${WRKSRC}/ip6_int
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ip6_int ${PREFIX}/bin
