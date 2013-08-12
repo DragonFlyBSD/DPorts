@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/3dc/Makefile 313760 2013-03-09 21:43:02Z bapt $
+# $FreeBSD: games/3dc/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	3dc
 PORTVERSION=	0.8.1
@@ -16,13 +16,15 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	Xaw3d:${PORTSDIR}/x11-toolkits/Xaw3d
 
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 USE_XORG=	x11 xaw xext xmu xpm xt
 WRKSRC=		${WRKDIR}/3Dc/src
 
 post-patch:
 .for file in init.c main.c piece.c stack.c xif.c
-	@${PERL} -pi -e "s/malloc.h/stdlib.h/g" ${WRKSRC}/${file}
+	@${REINPLACE_CMD} -i '' -e 's|malloc.h|stdlib.h|' \
+		${WRKSRC}/${file}
 .endfor
 
 do-install:
