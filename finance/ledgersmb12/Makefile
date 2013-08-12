@@ -1,5 +1,5 @@
 # Created by: anarcat@anarcat.ath.cx
-# $FreeBSD: ports/finance/ledgersmb12/Makefile,v 1.11 2012/11/20 19:16:19 svnexp Exp $
+# $FreeBSD: finance/ledgersmb12/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	ledgersmb
 PORTVERSION=	1.2.17
@@ -18,7 +18,8 @@ LATEST_LINK=	ledgersmb12
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
+USE_PERL5=	run build patch
 
 SUB_FILES=	pkg-message
 
