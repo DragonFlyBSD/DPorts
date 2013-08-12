@@ -2,7 +2,7 @@
 # Date created:				1 October 2000
 # Whom:					Per Wigren
 #
-# $FreeBSD: ports/archivers/unadf/Makefile,v 1.12 2012/11/17 05:54:24 svnexp Exp $
+# $FreeBSD: archivers/unadf/Makefile 323088 2013-07-16 05:42:36Z ade $
 #
 
 PORTNAME=	unadf
@@ -47,6 +47,11 @@ FAQS=		FAQ/adf_info.html FAQ/adf_info.txt FAQ/adf_info_V0_9.txt
 FAQSIMGS=	FAQ/image/adf_dir.gif FAQ/image/adf_file.gif
 
 PORTDOCS=	*
+
+# XXX: work around an issue with automake-1.13 erroring out on a
+#      non-existent m4 directory before libtoolize creates it
+pre-configure::
+	@${MKDIR} ${WRKSRC}/m4
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/examples/unadf ${PREFIX}/bin
