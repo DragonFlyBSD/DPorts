@@ -1,5 +1,5 @@
 # Created by: ports@rbt.ca
-# $FreeBSD: ports/security/p5-GD-SecurityImage/Makefile,v 1.27 2012/11/17 06:01:13 svnexp Exp $
+# $FreeBSD: security/p5-GD-SecurityImage/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	GD-SecurityImage
 PORTVERSION=	1.72
@@ -19,7 +19,8 @@ IMAGEMAGICK_DESC=	Build ImageMagick module
 
 PORTSCOUT=	skipv:1.581
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		GD::SecurityImage.3 \
 		GD::SecurityImage::GD.3 \
