@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xbrightness
-# Date Created:				30 January 2010
-# Whom:					Michiel Overtoom <motoom@xs4all.nl>
-#
-# $FreeBSD: ports/x11/xbrightness/Makefile,v 1.2 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Michiel Overtoom <motoom@xs4all.nl>
+# $FreeBSD: x11/xbrightness/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xbrightness
 PORTVERSION=	0.3
@@ -14,7 +10,7 @@ MAINTAINER=	motoom@xs4all.nl
 COMMENT=	Brightness and gamma correction through the X server
 
 USE_XORG=	x11 xxf86vm ice xmu xt xaw
-USE_IMAKE=	yes
+USES=		imake
 
 PLIST_FILES=	bin/xbrightness
 
