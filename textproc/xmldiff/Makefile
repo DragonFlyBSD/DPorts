@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul+ports@it.ca>
-# $FreeBSD: textproc/xmldiff/Makefile 317595 2013-05-07 09:39:35Z ehaupt $
+# $FreeBSD: textproc/xmldiff/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	xmldiff
 PORTVERSION=	0.01
@@ -14,8 +14,7 @@ COMMENT=	Display meaningful differences between XML files
 
 RUN_DEPENDS=	xmlprpr:${PORTSDIR}/textproc/xmlprpr
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_BUILD=	yes
 
 SHEBANG_FILES=	xmldiff.pl
