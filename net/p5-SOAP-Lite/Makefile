@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: net/p5-SOAP-Lite/Makefile 319075 2013-05-25 23:43:05Z sunpoet $
+# $FreeBSD: net/p5-SOAP-Lite/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SOAP-Lite
 PORTVERSION=	0.716
@@ -28,7 +28,8 @@ CONFLICTS=	p5-SOAP-Lite-0.60* p5-SOAP-[0-9]*
 
 CONFIGURE_ARGS=	--noprompt
 INSTALL_TARGET=	pure_install
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		SOAPsh.pl.1 XMLRPCsh.pl.1 stubmaker.pl.1
 MAN3=		Apache::SOAP.3 \
