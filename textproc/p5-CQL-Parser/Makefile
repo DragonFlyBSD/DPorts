@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-CQL-Parser/Makefile 309673 2012-12-30 14:12:19Z tobez $
+# $FreeBSD: textproc/p5-CQL-Parser/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CQL-Parser
 PORTVERSION=	1.12
@@ -34,6 +34,7 @@ MAN3=	CQL::AndNode.3 \
 	CQL::Token.3 \
 	CQL::Visitor.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
