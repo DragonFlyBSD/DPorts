@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Socket-Multicast6
-# Date created:		2007-03-10
-# Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-#
-# $FreeBSD: net/p5-Socket-Multicast6/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
+# $FreeBSD: net/p5-Socket-Multicast6/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Socket-Multicast6
 PORTVERSION=	0.04
@@ -11,19 +7,14 @@ CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Constructors and constants for IPv4/IPv6 multicast socket operations
 
 RUN_DEPENDS=	p5-Socket6>=0.19:${PORTSDIR}/net/p5-Socket6
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Socket::Multicast6.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-BUILD_DEPENDS+=	p5-ExtUtils-CBuilder>=0:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
