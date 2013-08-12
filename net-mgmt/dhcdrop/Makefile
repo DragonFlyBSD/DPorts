@@ -1,8 +1,9 @@
 # Created by: Nick F <ffault@gmail.com>
-# $FreeBSD: net-mgmt/dhcdrop/Makefile 317790 2013-05-10 11:28:32Z bapt $
+# $FreeBSD: net-mgmt/dhcdrop/Makefile 324040 2013-07-31 12:34:35Z antoine $
 
 PORTNAME=	dhcdrop
 PORTVERSION=	0.5
+PORTREVISION=	1
 CATEGORIES=	net-mgmt sysutils
 MASTER_SITES=	http://www.netpatch.ru/projects/dhcdrop/
 
@@ -10,12 +11,14 @@ MAINTAINER=	ffault@gmail.com
 COMMENT=	Tool for searching and suppressing false DHCP servers
 
 USE_BZIP2=	yes
+USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 
 MAN8=		${PORTNAME}.8
 MANLANG=	"" ru
 
 PLIST_FILES=	sbin/dhcdrop
+PLIST_DIRSTRY=	man/ru/man8 man/ru
 
 OPTIONS_DEFINE=	STATIC
 STATIC_DESC=	Build a static version of dhcdrop
@@ -25,10 +28,5 @@ STATIC_DESC=	Build a static version of dhcdrop
 .if ${PORT_OPTIONS:MSTATIC}
 CONFIGURE_ARGS+=--enable-static-build
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e \
-		's,inline void rand_ether_addr,static void rand_ether_addr,' \
-			${WRKSRC}/src/dhcdrop.[c,h]
 
 .include <bsd.port.mk>
