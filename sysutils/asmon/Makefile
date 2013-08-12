@@ -1,9 +1,5 @@
-# New ports collection makefile for:	asmon
-# Date created:		27 Sep 1999
-# Whom:			jack
-#
-# $FreeBSD: ports/sysutils/asmon/Makefile,v 1.22 2012/11/17 06:01:25 svnexp Exp $
-#
+# Created by: jack
+# $FreeBSD: sysutils/asmon/Makefile 324077 2013-07-31 22:59:47Z bapt $
 
 PORTNAME=	asmon
 PORTVERSION=	0.61
@@ -19,7 +15,8 @@ USE_XORG=	xpm x11
 
 BUILD_WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/asmon
 CFLAGS+=	-I${LOCALBASE}/include
-USE_GMAKE=	yes
+USES=		gmake
+USE_CSTD=	gnu89
 ALL_TARGET=	asmon
 MAKE_ARGS+=	LIBDIR="-L${LOCALBASE}/lib" \
 		SOLARIS_LIBS=-lkvm
