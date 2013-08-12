@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: net/ssvnc/Makefile 321957 2013-06-28 11:51:05Z bapt $
+# $FreeBSD: net/ssvnc/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	ssvnc
 PORTVERSION=	1.0.29
@@ -20,13 +20,13 @@ RUN_DEPENDS=	stunnel:${PORTSDIR}/security/stunnel \
 OPTIONS_DEFINE=	ULTRAFTP DOCS
 ULTRAFTP_DESC=	UltraVNC File Transfer support (Java required)
 
-USES=		imake:env
+USES=		imake:env gmake perl5
 USE_XORG=	xi xmu xt xaw ice xpm xext sm
 USE_TK_WRAPPER=	yes
-USE_PERL5_RUN=	yes
-USE_GMAKE=	yes
+USE_PERL5=	run
 
-MAN1=		ssvnc-gui.1 ssvncviewer.1
+MAN1=		ssvnc.1 ssvncviewer.1 ssvnc-gui.1
+NO_INSTALL_MANPAGES=	yes
 
 .include <bsd.port.options.mk>
 
@@ -37,7 +37,7 @@ PLIST_SUB+=	ULTRAFTP=""
 PLIST_SUB+=	ULTRAFTP="@comment "
 .endif
 
-.if empty(PORT_OPTIONS:MDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 MAKE_ARGS+=	DOCS=""
 .endif
 
@@ -46,7 +46,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|[[:<:]]ssvnc[[:>:]]|ssvnc-gui|' ${WRKSRC}/man/man1/ssvnc.1
 	@${REINPLACE_CMD} -e 's|/usr/local/bin|${LOCALBASE}/bin|' \
 		-e 's|^CC =|CC ?=|' ${WRKSRC}/vncstorepw/Makefile
-.if empty(PORT_OPTIONS:MULTRAFTP)
+.if ! ${PORT_OPTIONS:MULTRAFTP}
 	@${REINPLACE_CMD} -e "s|sh -c 'type javac'|:|" \
 		-e "s|sh -c 'type jar'|:|" \
 		-e 's|cd $$(JSRC);|: |' \
@@ -59,5 +59,11 @@ do-configure:
 
 post-install:
 	@${ECHO_CMD}; ${CAT} ${PKGMESSAGE}; ${ECHO_CMD}
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${MAN1PREFIX}/man/man1
+.for man in ssvnc.1 ssvncviewer.1
+	${INSTALL_MAN} ${WRKSRC}/man/man1/${man} ${MAN1PREFIX}/man/man1
+.endfor
+.endif
 
 .include <bsd.port.mk>
