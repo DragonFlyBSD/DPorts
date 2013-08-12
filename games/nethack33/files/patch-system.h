@@ -1,4 +1,4 @@
-$FreeBSD: ports/games/nethack33/files/patch-system.h,v 1.2 2012/11/17 05:57:46 svnexp Exp $
+$FreeBSD: games/nethack33/files/patch-system.h 300896 2012-07-14 13:54:48Z beat $
 
 --- include/system.h.orig	Mon Apr 19 23:27:53 2004
 +++ include/system.h	Mon Apr 19 23:31:54 2004

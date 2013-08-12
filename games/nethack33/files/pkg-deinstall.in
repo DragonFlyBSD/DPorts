@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/games/nethack33/files/pkg-deinstall.in,v 1.2 2012/11/17 05:57:46 svnexp Exp $
+# $FreeBSD: games/nethack33/files/pkg-deinstall.in 300896 2012-07-14 13:54:48Z beat $
 
 if [ "${2}" = "POST-DEINSTALL" ]; then
 	if [ -d "${PKG_PREFIX}/%%HACKDIR%%" ]; then

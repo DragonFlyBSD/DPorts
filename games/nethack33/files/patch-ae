@@ -1,4 +1,4 @@
-$FreeBSD: ports/games/nethack33/files/patch-ae,v 1.6 2012/11/17 05:57:46 svnexp Exp $
+$FreeBSD: games/nethack33/files/patch-ae 300896 2012-07-14 13:54:48Z beat $
 
 --- sys/unix/Makefile.top.orig	Mon Jul  3 18:42:05 2000
 +++ sys/unix/Makefile.top	Mon Apr 19 14:42:45 2004

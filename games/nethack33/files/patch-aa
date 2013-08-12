@@ -1,4 +1,4 @@
-$FreeBSD: ports/games/nethack33/files/patch-aa,v 1.6 2012/11/17 05:57:46 svnexp Exp $
+$FreeBSD: games/nethack33/files/patch-aa 300896 2012-07-14 13:54:48Z beat $
 
 --- include/config.h.orig	Sat Jul 22 10:13:51 2000
 +++ include/config.h	Sat May 18 06:27:54 2002
