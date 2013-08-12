@@ -2,7 +2,7 @@
 # Date created:		3 March 1997
 # Whom:			fenner
 #
-# $FreeBSD: ports/math/xplot/Makefile,v 1.17 2012/11/17 05:59:32 svnexp Exp $
+# $FreeBSD: math/xplot/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	xplot
@@ -14,8 +14,9 @@ MASTER_SITES=	http://www.xplot.org/xplot/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X11 plotting package
 
+USES=		perl5
 USE_XORG=	x11
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 GNU_CONFIGURE=	yes
 
 MAN1=		tcpdump2xplot.1 xplot.1
