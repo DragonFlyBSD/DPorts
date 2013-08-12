@@ -1,5 +1,5 @@
 # Created by: gnn
-# $FreeBSD: ports/net/click/Makefile,v 1.20 2012/11/17 05:59:58 svnexp Exp $
+# $FreeBSD: net/click/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 # XXX: TODO: fix kernel module
 
@@ -11,7 +11,8 @@ MASTER_SITES=	http://www.read.cs.ucla.edu/click/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The Click Modular Router
 
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
