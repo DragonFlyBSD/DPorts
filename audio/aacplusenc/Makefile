@@ -2,7 +2,7 @@
 # Date created:				28 July 2007
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/aacplusenc/Makefile,v 1.18 2012/11/17 05:54:27 svnexp Exp $
+# $FreeBSD: audio/aacplusenc/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	aacplusenc
@@ -11,7 +11,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://ppa.launchpad.net/teknoraver/ppa/ubuntu/pool/main/a/aacplusenc/
 DISTFILES=	${DISTNAME:S,-,_,}${EXTRACT_SUFX}
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An aacPlus v2 command-line encoder
 
 USE_GMAKE=	yes
