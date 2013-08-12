@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gupsc
-# Date created:				13 March 2001
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: sysutils/gupsc/Makefile 313088 2013-02-28 10:51:58Z gahr $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: sysutils/gupsc/Makefile 323714 2013-07-26 12:25:46Z az $
 
 PORTNAME=	gupsc
 PORTVERSION=	0.3.1
@@ -23,8 +19,8 @@ CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 pre-patch:
-	@${PERL} -pi -e 's|/usr/local|${PREFIX}|; \
-		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure \
-		${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -i '' -e 's|/usr/local|${PREFIX}|' \
+			-e 's|DATADIRNAME=lib|DATADIRNAME=share|' \
+		${WRKSRC}/configure ${WRKSRC}/src/Makefile.in
 
 .include <bsd.port.mk>
