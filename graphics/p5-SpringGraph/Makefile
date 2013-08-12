@@ -1,5 +1,5 @@
 # Created by: fernan@iib.unsam.edu.ar
-# $FreeBSD: ports/graphics/p5-SpringGraph/Makefile,v 1.12 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: graphics/p5-SpringGraph/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	SpringGraph
 PORTVERSION=	0.05
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD
 
 MAN3=	SpringGraph.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
