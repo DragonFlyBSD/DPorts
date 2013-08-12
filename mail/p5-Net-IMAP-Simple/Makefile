@@ -1,8 +1,8 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: mail/p5-Net-IMAP-Simple/Makefile 320500 2013-06-10 18:02:16Z mat $
+# $FreeBSD: mail/p5-Net-IMAP-Simple/Makefile 324443 2013-08-09 14:47:22Z jadawin $
 
 PORTNAME=	Net-IMAP-Simple
-PORTVERSION=	1.2200
+PORTVERSION=	1.2201
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JETTERO
@@ -30,7 +30,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::IMAP::Simple.3 \
 		Net::IMAP::Simple::PipeSocket.3
