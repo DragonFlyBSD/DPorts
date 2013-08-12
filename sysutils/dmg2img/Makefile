@@ -2,7 +2,7 @@
 # Date created:		2009-11-27
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/sysutils/dmg2img/Makefile,v 1.4 2012/11/17 06:01:28 svnexp Exp $
+# $FreeBSD: sysutils/dmg2img/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	dmg2img
@@ -12,7 +12,7 @@ MASTER_SITES=	http://fbsd.zlonet.ru/distfiles/ \
 		http://tourservice.kz/zloidemon/distfiles/ \
 		http://z-up.ru/zloidemon/distfiles/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	DMG2IMG convert tool
 
 PLIST_FILES=	bin/${PORTNAME} \
