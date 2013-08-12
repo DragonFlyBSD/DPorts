@@ -1,4 +1,4 @@
-# $FreeBSD: ports/irc/sirc/Makefile,v 1.24 2012/11/17 05:58:30 svnexp Exp $
+# $FreeBSD: irc/sirc/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	sirc
 PORTVERSION=	2.211
@@ -15,7 +15,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small (150k), fast, perl-based IRC client
 
-USE_PERL5=	yes
+USES=		perl5
 
 OPTIONS_DEFINE=	IPV6 SIRC_SCRIPTS SOCKS
 OPTIONS_DEFAULT=IPV6 SIRC_SCRIPTS
