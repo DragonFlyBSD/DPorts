@@ -1,5 +1,5 @@
 # Created by: Jeff Putsch <jdputsch@comcast.net>
-# $FreeBSD: textproc/p5-POE-Filter-XML/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-POE-Filter-XML/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Filter-XML
 PORTVERSION=	1.102960
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-XML-SAX>=0.16:${PORTSDIR}/textproc/p5-XML-SAX
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Filter::XML.3 \
 		POE::Filter::XML::Handler.3 \
