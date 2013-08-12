@@ -1,5 +1,5 @@
 # Created by: Joe Barbish
-# $FreeBSD: sysutils/qjail/Makefile 321546 2013-06-22 06:37:59Z culot $
+# $FreeBSD: sysutils/qjail/Makefile 322339 2013-07-05 16:21:49Z pawel $
 
 PORTNAME=	qjail
 PORTVERSION=	3.1
@@ -14,7 +14,7 @@ NO_BUILD=	yes
 
 MAN8=		qjail.8 qjail-intro.8 qjail-howto.8
 
-CONFLICTS_INSTALL=	qjail-2.*
+CONFLICTS_INSTALL=	qjail-1.* qjail-2.*
 
 post-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} \
