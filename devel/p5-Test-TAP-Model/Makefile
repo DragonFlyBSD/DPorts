@@ -2,7 +2,7 @@
 # Date created:	   08 July 2007
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-Test-TAP-Model/Makefile,v 1.7 2012/11/17 05:56:33 svnexp Exp $
+# $FreeBSD: devel/p5-Test-TAP-Model/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Test-TAP-Model
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Method-Alias>=0:${PORTSDIR}/devel/p5-Method-Alias \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Simple>=0.53:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::TAP::Model.3 Test::TAP::Model::Consolidated.3 \
 		Test::TAP::Model::File.3 \
