@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Jifty/Makefile.man,v 1.13 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-Jifty/Makefile.man 300897 2012-07-14 14:29:18Z beat $
 
 MAN3+=	Jifty.3
 MAN3+=	Jifty::API.3
