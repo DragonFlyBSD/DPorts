@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Plucene
-# Date created:				29 July 2004
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Plucene/Makefile,v 1.16 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-Plucene/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Plucene
 PORTVERSION=	1.25
@@ -26,7 +22,8 @@ BUILD_DEPENDS=	p5-Tie-Array-Sorted>=0:${PORTSDIR}/devel/p5-Tie-Array-Sorted \
 		p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Plucene.3 \
 	Plucene::Analysis::Analyzer.3 \
