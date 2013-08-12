@@ -1,9 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/mp3plot/Makefile 317440 2013-05-05 21:39:31Z bapt $
+# $FreeBSD: audio/mp3plot/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	mp3plot
 DISTVERSION=	0.6.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	http://p.outlyer.net/mp3plot/files/
 
@@ -35,7 +35,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGD}
-LIB_DEPENDS+=	gd.4:${PORTSDIR}/graphics/gd
+LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
 .else
 CONFIGURE_ARGS+=	--disable-gd
 .endif
