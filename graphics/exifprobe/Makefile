@@ -1,9 +1,5 @@
-# New ports collection makefile for:	exifprobe
-# Date created:		2004-07-21
-# Whom:			Michael Johnson <ahze@ahze.net>
-#
-# $FreeBSD: ports/graphics/exifprobe/Makefile,v 1.13 2012/11/17 05:58:04 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@ahze.net>
+# $FreeBSD: graphics/exifprobe/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	exifprobe
 DISTVERSION=	2.0.1
@@ -24,7 +20,7 @@ do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/exifgrep ${PREFIX}/bin
 	@${INSTALL_PROGRAM} ${WRKSRC}/exifprobe ${PREFIX}/bin
 .for i in ${MAN1}
-	@${INSTALL_MAN} ${WRKSRC}/${i} ${MANPREFIX}/man/man1
+	@${INSTALL_MAN} ${WRKSRC}/${i} ${MAN1PREFIX}/man/man1
 .endfor
 
 .include <bsd.port.mk>
