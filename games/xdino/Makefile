@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xdino
-# Date created:		12 October 1996
-# Whom:			Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/games/xdino/Makefile,v 1.17 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: games/xdino/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xdino
 PORTVERSION=	5.5.2
@@ -16,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dino puzzle game for X11
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext xt sm ice
 MAN1=		xdino.1
 MANCOMPRESSED=	no
