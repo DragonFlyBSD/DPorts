@@ -1,5 +1,5 @@
 # Created by: cnh@ivmg.net
-# $FreeBSD: net-mgmt/tcpreplay/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: net-mgmt/tcpreplay/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	tcpreplay
 PORTVERSION=	3.4.4
@@ -12,7 +12,6 @@ COMMENT=	Tool to replay saved packet capture files
 BUILD_DEPENDS=	pcapnav-config:${PORTSDIR}/net/libpcapnav
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS=	--program-transform-name='s|.*\(tcp.*\)|\1|' \
 		--with-pcapnav-config=${LOCALBASE}/bin/pcapnav-config \
