@@ -2,7 +2,7 @@
 # Date created:				25 February 2009
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-LWP-UserAgent-POE/Makefile,v 1.4 2012/11/17 06:02:51 svnexp Exp $
+# $FreeBSD: www/p5-LWP-UserAgent-POE/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	LWP-UserAgent-POE
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-POE>=0.9999:${PORTSDIR}/devel/p5-POE \
 		p5-Log-Log4perl>=1:${PORTSDIR}/devel/p5-Log-Log4perl
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		LWP::UserAgent::POE.3
 
