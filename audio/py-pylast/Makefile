@@ -1,12 +1,12 @@
-# Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: audio/py-pylast/Makefile 315156 2013-03-24 20:09:00Z swills $
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: audio/py-pylast/Makefile 323891 2013-07-29 15:03:58Z feld $
 
 PORTNAME=	pylast
 PORTVERSION=	0.5.11
 CATEGORIES=	audio python
 MASTER_SITES=	CHEESESHOP
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	A Python interface to Last.fm
 
 LICENSE=	AL2
