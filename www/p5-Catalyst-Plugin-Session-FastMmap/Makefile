@@ -2,7 +2,7 @@
 # Date created:				08 May 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Session-FastMmap/Makefile,v 1.11 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-FastMmap/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Catalyst-Plugin-Session-FastMmap
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-Cache-FastMmap>0:${PORTSDIR}/devel/p5-Cache-FastMmap \
 		p5-URI>0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::Session::FastMmap.3
 
