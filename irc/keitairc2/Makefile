@@ -1,5 +1,5 @@
-# Created by: Makoto Matsushita <matusita@FreeBSD.ORG>
-# $FreeBSD: irc/keitairc2/Makefile 317596 2013-05-07 10:00:57Z ehaupt $
+# Created by: Makoto Matsushita <matusita@FreeBSD.org>
+# $FreeBSD: irc/keitairc2/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=		keitairc
 PORTVERSION=		2.0
@@ -20,8 +20,7 @@ RUN_DEPENDS=	p5-POE-Component-IRC>=0:${PORTSDIR}/irc/p5-POE-Component-IRC \
 
 CONFLICTS=	keitairc-1.*
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_BUILD=	yes
 
 SHEBANG_FILES=	keitairc
