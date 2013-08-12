@@ -1,5 +1,5 @@
 # Created by: Jun-ichiro itojun Itoh <itojun@itojun.org>
-# $FreeBSD: graphics/qvplay/Makefile 314524 2013-03-18 03:42:57Z beech $
+# $FreeBSD: graphics/qvplay/Makefile 324080 2013-08-01 05:27:54Z bapt $
 
 PORTNAME=	qvplay
 PORTVERSION=	0.95
@@ -12,6 +12,8 @@ COMMENT=	Digital camera downloading tool for Casio QV series
 
 WRKSRC=		${WRKDIR}/QVplay095/obj/FreeBSD
 
+CFLAGS+=	-Wno-return-type
+USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/qvalldel \
