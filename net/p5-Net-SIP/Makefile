@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: ports/net/p5-Net-SIP/Makefile,v 1.33 2012/12/19 07:51:43 svnexp Exp $
+# $FreeBSD: net/p5-Net-SIP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-SIP
 PORTVERSION=	0.68
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Net-DNS>=0.56:${PORTSDIR}/dns/p5-Net-DNS
 RUN_DEPENDS=	p5-Net-DNS>=0.56:${PORTSDIR}/dns/p5-Net-DNS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SIP.3 \
 		Net::SIP::Authorize.3 \
