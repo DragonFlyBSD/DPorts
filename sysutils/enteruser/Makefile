@@ -1,5 +1,5 @@
 # Created by: Danny Howard <dannyman@toldme.com>
-# $FreeBSD: sysutils/enteruser/Makefile 317596 2013-05-07 10:00:57Z ehaupt $
+# $FreeBSD: sysutils/enteruser/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	enteruser
 PORTVERSION=	1.0
@@ -12,8 +12,7 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extensible script for adding new users
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
