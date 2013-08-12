@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmix
-# Date created:		30 June 1995
-# Whom:			janek@gaja.ipan.lublin.pl
-#
-# $FreeBSD: ports/audio/xmix/Makefile,v 1.20 2012/11/17 05:54:48 svnexp Exp $
-#
+# Created by: janek@gaja.ipan.lublin.pl
+# $FreeBSD: audio/xmix/Makefile 321970 2013-06-28 18:19:20Z bapt $
 
 PORTNAME=	xmix
 PORTVERSION=	2.1
@@ -19,7 +15,7 @@ PATCHFILES=	xmix-2.1.mixers.patch
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Mixer for X Window System
 
-USE_IMAKE=	yes
+USES=		imake
 WRKSRC=		${WRKDIR}/xmix
 USE_XORG=	x11 xext xmu xaw xt sm ice
 
