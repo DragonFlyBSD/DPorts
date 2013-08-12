@@ -2,7 +2,7 @@
 # Date created:				30 December 2004
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Email-Folder-IMAP/Makefile,v 1.6 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: mail/p5-Email-Folder-IMAP/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Email-Folder-IMAP
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-Email-FolderType-Net>=0:${PORTSDIR}/mail/p5-Email-FolderType-Net
 		p5-URI-imap>=0:${PORTSDIR}/mail/p5-URI-imap
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::Folder::IMAP.3
 
