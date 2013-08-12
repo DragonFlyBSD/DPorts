@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-HTTP-Response-Encoding/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-HTTP-Response-Encoding/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTTP-Response-Encoding
 PORTVERSION=	0.06
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTTP::Response::Encoding.3
 
