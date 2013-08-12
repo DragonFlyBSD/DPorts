@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@freebsd.org>
-# $FreeBSD: sysutils/dd_rescue/Makefile 313595 2013-03-07 15:08:38Z nobutaka $
+# $FreeBSD: sysutils/dd_rescue/Makefile 323953 2013-07-30 10:06:51Z bapt $
 
 PORTNAME=	dd_rescue
 PORTVERSION=	1.32
@@ -8,12 +8,13 @@ MASTER_SITES=	http://www.garloff.de/kurt/linux/ddrescue/ \
 		http://fossies.org/unix/privat/
 
 MAINTAINER=	nobutaka@FreeBSD.org
-COMMENT=	A dd tool suitable for rescuing data from a medium with errors
+COMMENT=	dd tool suitable for rescuing data from a medium with errors
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GMAKE=	yes
+USES=		gmake
+USE_CSTD=	gnu89
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 ALL_TARGET=	default
