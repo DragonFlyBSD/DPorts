@@ -1,11 +1,12 @@
-# $FreeBSD: finance/trytond_analytic_invoice/Makefile 318580 2013-05-20 08:00:57Z wen $
+# Created by: Matthias Petermann <matthias@petermann-it.de>
+# $FreeBSD: finance/trytond_analytic_invoice/Makefile 324495 2013-08-10 12:51:43Z wg $
 
 PORTNAME=	trytond_analytic_invoice
-PORTVERSION=	2.4.1
+PORTVERSION=	2.4.2
 CATEGORIES=	finance python
 MASTER_SITES=	http://downloads.tryton.org/${PORTVERSION:R}/
 
-MAINTAINER=	matthias@petermann.it
+MAINTAINER=	matthias@petermann-it.de
 COMMENT=	Tryton Application Platform (Analytic Invoice Module)
 
 LICENSE=	GPLv3
