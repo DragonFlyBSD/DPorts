@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: databases/p5-Jifty-DBI/Makefile 321947 2013-06-28 04:33:39Z clsung $
+# $FreeBSD: databases/p5-Jifty-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Jifty-DBI
 PORTVERSION=	0.76
@@ -41,7 +41,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Warn>=0.1:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Jifty::DBI.3 \
 	Jifty::DBI::Collection.3 \
