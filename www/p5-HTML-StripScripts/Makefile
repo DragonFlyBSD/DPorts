@@ -2,7 +2,7 @@
 # Date Created:				May 08, 2008
 # Whom:					kftseng@iyard.org
 #
-# $FreeBSD: ports/www/p5-HTML-StripScripts/Makefile,v 1.4 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTML-StripScripts/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	HTML-StripScripts
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Strip scripting constructs out of HTML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::StripScripts.3
 
