@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-DBI-Sweet
-# Date created:		6 Jul 2005
-# Whom:			Lars Balker Rasmussen <lbr@FreeBSD.org
-#
-# $FreeBSD: ports/databases/p5-Class-DBI-Sweet/Makefile,v 1.16 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org
+# $FreeBSD: databases/p5-Class-DBI-Sweet/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-DBI-Sweet
 PORTVERSION=	0.11
@@ -23,7 +19,8 @@ RUN_DEPENDS=	p5-Class-DBI>=3.0.12:${PORTSDIR}/databases/p5-Class-DBI \
 		p5-Data-Page>=0:${PORTSDIR}/databases/p5-Data-Page \
 		p5-SQL-Abstract>=1.55:${PORTSDIR}/databases/p5-SQL-Abstract
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Class::DBI::Sweet.3 Class::DBI::Sweet::Topping.3
 
