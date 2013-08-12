@@ -1,9 +1,5 @@
-# New ports collection makefile for:   onis
-# Date created:                                29 March 2003
-# Whom:                                        koji@jet.es
-#
-# $FreeBSD: ports/irc/onis/Makefile,v 1.7 2012/11/17 05:58:29 svnexp Exp $
-#
+# Created by: koji@jet.es
+# $FreeBSD: irc/onis/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	onis
 PORTVERSION=	0.8.2
@@ -13,8 +9,8 @@ MASTER_SITES=	http://verplant.org/onis/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A script that converts IRC logfiles into an HTML statistics page
 
+USES=		perl5
 NO_BUILD=	YES
-USE_PERL5=	YES
 
 do-install:
 	@if [ ! -d ${DATADIR} ]; then \
