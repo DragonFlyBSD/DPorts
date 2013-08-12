@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Has-Options/Makefile 318674 2013-05-21 10:16:53Z tobez $
+# $FreeBSD: devel/p5-MooseX-Has-Options/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-Has-Options
 PORTVERSION=	0.003
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Class-Load>=0:${PORTSDIR}/devel/p5-Class-Load \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MooseX::Has::Options.3 \
 	MooseX::Has::Options::Handler::Accessors.3 \
