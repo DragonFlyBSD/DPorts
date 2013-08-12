@@ -1,5 +1,5 @@
 # Created by: Andrew Greenwood <greenwood.andy@gmail.com>
-# $FreeBSD: ports/dns/p5-Net-DNSBL-MultiDaemon/Makefile,v 1.9 2012/11/17 05:57:10 svnexp Exp $
+# $FreeBSD: dns/p5-Net-DNSBL-MultiDaemon/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Net-DNSBL-MultiDaemon
 PORTVERSION=	0.29
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Unix-Syslog>=0:${PORTSDIR}/sysutils/p5-Unix-Syslog \
 RUN_DEPENDS:=	${BUILD_DEPENDS} \
 				p5-File-SafeDO>=0:${PORTSDIR}/devel/p5-File-SafeDO
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::DNSBL::MultiDaemon.3 Net::DNSBL::Utilities.3
 
