@@ -2,7 +2,7 @@
 # Date created:		1 June 2010
 # Whom:			Kevin Lo <kevlo@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Math-RPN/Makefile,v 1.8 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: math/p5-Math-RPN/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Math-RPN
@@ -20,10 +20,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Math::RPN.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.50:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
