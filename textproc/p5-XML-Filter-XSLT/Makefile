@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::Filter::XSLT
-# Date created:		28 Jan 2002
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-XML-Filter-XSLT/Makefile,v 1.8 2012/11/17 06:02:12 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-XML-Filter-XSLT/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Filter-XSLT
 PORTVERSION=	0.03
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX \
 		p5-XML-LibXSLT>=0:${PORTSDIR}/textproc/p5-XML-LibXSLT
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Filter::XSLT.3 XML::Filter::XSLT::LibXSLT.3
 
