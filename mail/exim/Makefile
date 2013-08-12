@@ -1,5 +1,5 @@
 # Created by: markm@FreeBSD.org
-# $FreeBSD: mail/exim/Makefile 320335 2013-06-09 14:00:10Z bapt $
+# $FreeBSD: mail/exim/Makefile 321586 2013-06-22 20:00:56Z rea $
 
 PORTNAME=	exim
 PORTVERSION?=	${EXIM_VERSION}
@@ -286,14 +286,13 @@ SEDLIST+=	-e 's,^(DBMLIB=),\# \1,'
 SEDLIST+=	-e 's,XX_DB_LIBS_XX,${DB_LIBS:S/,/\\,/g},' \
 		-e 's,XX_DB_INCLUDES_XX,${DB_INCLUDES:S/,/\\,/g},'
 
-.if ${PORT_OPTIONS:MMYSQL_VER} && ${WITH_MYSQL_VER:tl} != "auto"
-WANT_MYSQL_VER=	${WITH_MYSQL_VER}
-.else
-.undef WITH_MYSQL_VER
-.endif
-
 .if ${PORT_OPTIONS:MMYSQL}
+.if defined(WITH_MYSQL_VER) && ${WITH_MYSQL_VER:tl} == "auto"
+IGNORE=		WITH_MYSQL_VER set to "${WITH_MYSQL_VER}" is no longer supported.
+IGNORE+=	Just don't set WITH_MYSQL_VER if you want to use system-default version
+.else
 USE_MYSQL=	yes
+.endif
 SEDLIST+=	-e 's,XX_MYSQL_LIBS_XX,-L${LOCALBASE:S/,/\\,/g}/lib/mysql -lmysqlclient,' \
 		-e 's,XX_MYSQL_INCLUDE_XX,-I${LOCALBASE:S/,/\\,/g}/include/mysql,' \
 		-e 's,^\# (LOOKUP_MYSQL=),\1,'
