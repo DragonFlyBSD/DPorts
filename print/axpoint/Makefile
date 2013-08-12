@@ -3,7 +3,7 @@
 # Date created:			May 13, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/print/axpoint/Makefile,v 1.15 2012/11/17 06:00:48 svnexp Exp $
+# $FreeBSD: print/axpoint/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	axpoint
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-Text-Iconv>=0:${PORTSDIR}/converters/p5-Text-Iconv \
 		p5-PDFLib>=0.14:${PORTSDIR}/print/p5-PDFLib
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::Handler::AxPoint.3
 
