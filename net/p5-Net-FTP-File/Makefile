@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-FTP-File
-# Date created:				25 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-Net-FTP-File/Makefile,v 1.8 2012/11/17 06:00:10 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: net/p5-Net-FTP-File/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-FTP-File
 PORTVERSION=	0.06
@@ -17,6 +13,7 @@ COMMENT=	Perl extension for simplifying FTP file operations
 
 MAN3=	Net::FTP::File.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
