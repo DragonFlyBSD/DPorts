@@ -1,9 +1,5 @@
-# New ports collection makefile for:	math/p5-Set-IntSpan-Fast
-# Date created:				15 February 2007
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Set-IntSpan-Fast/Makefile,v 1.12 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: math/p5-Set-IntSpan-Fast/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Set-IntSpan-Fast
 PORTVERSION=	1.15
@@ -17,7 +13,8 @@ COMMENT=	Fast handling of sets containing integer spans
 BUILD_DEPENDS=	p5-Data-Types>=0:${PORTSDIR}/devel/p5-Data-Types
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Set::IntSpan::Fast.3 Set::IntSpan::Fast::PP.3
 
