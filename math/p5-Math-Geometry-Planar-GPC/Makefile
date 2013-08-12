@@ -2,7 +2,7 @@
 # Date created:				21 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Math-Geometry-Planar-GPC/Makefile,v 1.5 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: math/p5-Math-Geometry-Planar-GPC/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Math-Geometry-Planar-GPC
@@ -16,6 +16,7 @@ COMMENT=	Perl wrapper for Alan Murta's gpc library
 
 MAN3=	Math::Geometry::Planar::GPC.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
