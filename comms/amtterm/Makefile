@@ -1,8 +1,8 @@
-# $FreeBSD: comms/amtterm/Makefile 316959 2013-04-30 20:10:53Z crees $
+# $FreeBSD: comms/amtterm/Makefile 324267 2013-08-05 09:06:31Z crees $
 
 PORTNAME=	amtterm
 PORTVERSION=	1.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	https://www.kraxel.org/releases/${PORTNAME}/
 
@@ -12,12 +12,12 @@ COMMENT=	Serial-over-lan client for Intel AMT
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20
 RUN_DEPENDS=	p5-SOAP-Lite>=0.5:${PORTSDIR}/net/p5-SOAP-Lite
 
 USE_GMAKE=	yes
 MAKEFILE=	GNUmakefile
 MAKE_ENV+=	mandir=${MANPREFIX}/man
+MAKE_ARGS+=	HAVE_GTK=no
 
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/amttool \
