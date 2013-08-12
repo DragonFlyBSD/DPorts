@@ -3,7 +3,7 @@
 # Date created:			Apr 22, 2005
 # Whom:	      			ijliao
 #
-# $FreeBSD: ports/graphics/p5-GD-Arrow/Makefile,v 1.8 2012/11/17 05:58:16 svnexp Exp $
+# $FreeBSD: graphics/p5-GD-Arrow/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	GD-Arrow
@@ -18,7 +18,8 @@ COMMENT=	Draw arrows using GD
 
 RUN_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		GD::Arrow.3
 
