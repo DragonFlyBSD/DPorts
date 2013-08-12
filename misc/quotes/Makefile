@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko
-# $FreeBSD: misc/quotes/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/quotes/Makefile 324054 2013-07-31 14:36:21Z az $
 
 PORTNAME=	quotes
 DISTVERSION=	1.7-2
@@ -13,16 +13,14 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Quote, currency, and Slashdot headline fetcher based on Perl
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		shebangfix perl5
+SHEBANG_FILES=	quotes quotesmailer QuExample.pm
 
 .include <bsd.port.options.mk>
 
 post-patch:
-	@ ${PERL} -pi -e "s:/usr/bin/perl:${PERL}:g" ${WRKSRC}/quotes
-	@ ${PERL} -pi -e "s:/usr/local/lib/Quotes:${PREFIX}/etc:g" ${WRKSRC}/quotes
-	@ ${PERL} -pi -e "s:/usr/local:${PREFIX}:g" ${WRKSRC}/quotes
-	@ ${PERL} -pi -e "s:/usr/bin/perl:${PERL}:g" ${WRKSRC}/quotesmailer
-	@ ${PERL} -pi -e "s:/usr/bin/perl:${PERL}:g" ${WRKSRC}/QuExample.pm
+	@${REINPLACE_CMD} -i '' -e "s:/usr/local/lib/Quotes:${PREFIX}/etc:" \
+		-e "s:/usr/local:${PREFIX}:" ${WRKSRC}/quotes
 
 do-install:
 	@ ${INSTALL_SCRIPT} ${WRKSRC}/quotes ${PREFIX}/bin
