@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math::Calc::Units
-# Date created:				25 Jan 2002
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/math/p5-Math-Calc-Units/Makefile,v 1.12 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: math/p5-Math-Calc-Units/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-Calc-Units
 PORTVERSION=	1.07
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Human-readable unit-aware calculator
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::Calc::Units.3
 
