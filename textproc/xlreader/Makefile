@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xlreader
-# Date created:				25 Jun 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/textproc/xlreader/Makefile,v 1.8 2012/11/17 06:02:25 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: textproc/xlreader/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	xlreader
 PORTVERSION=	0.9.0
@@ -13,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Convert .xls spread sheets to tab delimited CSV or SQL inserts
-
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/xlreader
 
