@@ -1,9 +1,5 @@
-# Ports collection makefile for:  sing
-# Date created:			  Oct 6 2000
-# Whom:				  Roman Shterenzon <roman@xpert.com>
-#
-# $FreeBSD: ports/net-mgmt/sing/Makefile,v 1.12 2012/11/17 06:00:37 svnexp Exp $
-#
+# Created by: Roman Shterenzon <roman@xpert.com>
+# $FreeBSD: net-mgmt/sing/Makefile 321547 2013-06-22 06:46:05Z culot $
 
 PORTNAME=	sing
 PORTVERSION=	1.1
@@ -15,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for sending customized ICMP packets
+
+LICENSE=	GPLv2
 
 BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet10
 
