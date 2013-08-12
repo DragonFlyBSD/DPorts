@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xpostit
-# Date created:        6 May 1996
-# Whom:                joerg
-#
-# $FreeBSD: ports/deskutils/xpostit/Makefile,v 1.17 2012/11/17 05:55:31 svnexp Exp $
-#
+# Created by: joerg
+# $FreeBSD: deskutils/xpostit/Makefile 321984 2013-06-28 20:56:05Z bapt $
 
 PORTNAME=	xpostit
 PORTVERSION=	3.3.1
@@ -16,7 +12,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	joerg@FreeBSD.org
 COMMENT=	PostIt (R) messages onto your X11 screen
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 WRKSRC=		${WRKDIR}/xpostit
 MAN1=		xpostit.1
