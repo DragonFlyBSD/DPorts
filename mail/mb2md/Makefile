@@ -1,5 +1,5 @@
 # Created by: Andy Gilligan
-# $FreeBSD: mail/mb2md/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: mail/mb2md/Makefile 323702 2013-07-26 07:33:41Z az $
 
 PORTNAME=	mb2md
 PORTVERSION=	3.20
@@ -21,11 +21,10 @@ EXTRACT_AFTER_ARGS=	> ${WRKDIR}/${PORTNAME}
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 USE_PERL5=	yes
+USES=		shebangfix
+SHEBANG_FILES=	mb2md
 
 PLIST_FILES=	bin/mb2md
-
-post-patch:
-	@${PERL} -pi -e 's|/usr/bin/perl|${PERL}|g' ${WRKSRC}/${PORTNAME}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
