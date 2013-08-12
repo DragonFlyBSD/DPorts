@@ -2,7 +2,7 @@
 # Date created:         25 October 2002
 # Whom:                 Bruce M Simpson <bms@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/picasm/Makefile,v 1.13 2012/11/17 05:56:42 svnexp Exp $
+# $FreeBSD: devel/picasm/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	picasm
@@ -19,7 +19,8 @@ USE_BZIP2=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION:S/.//g}
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" PERL5="${PERL5}"
 ALL_TARGET=
