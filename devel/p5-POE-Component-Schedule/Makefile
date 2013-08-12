@@ -2,7 +2,7 @@
 # Date created:	   December 21 2010
 # Whom:		   mat
 #
-# $FreeBSD: ports/devel/p5-POE-Component-Schedule/Makefile,v 1.3 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: devel/p5-POE-Component-Schedule/Makefile 324168 2013-08-02 17:16:28Z mat $
 #
 
 PORTNAME=	POE-Component-Schedule
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple \
 RUN_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-DateTime-Set>=0:${PORTSDIR}/devel/p5-DateTime-Set
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		POE::Component::Schedule.3
 
