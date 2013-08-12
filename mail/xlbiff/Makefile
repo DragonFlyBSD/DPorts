@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:  xlbiff
-# Date created:			  23-Aug-1995
-# Whom:				  David O'Brien <obrien@cs.ucdavis.edu>
-#
-# $FreeBSD: ports/mail/xlbiff/Makefile,v 1.20 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: David O'Brien <obrien@cs.ucdavis.edu>
+# $FreeBSD: mail/xlbiff/Makefile 321995 2013-06-28 22:06:54Z bapt $
 
 PORTNAME=	xlbiff
 PORTVERSION=	3.0
@@ -16,7 +11,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	obrien@FreeBSD.org
 COMMENT=	The X Literate Biff - displays the from and subject from incoming mails
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		xlbiff.1
 
