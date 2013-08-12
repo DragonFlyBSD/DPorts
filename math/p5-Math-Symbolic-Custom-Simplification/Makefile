@@ -2,7 +2,7 @@
 # Date created:				15 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Math-Symbolic-Custom-Simplification/Makefile,v 1.7 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: math/p5-Math-Symbolic-Custom-Simplification/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Math-Symbolic-Custom-Simplification
@@ -19,6 +19,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Math::Symbolic::Custom::Simplification.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
