@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gwee
-# Date created:        2005-05-04
-# Whom:                chinsan <chinsan@mail2000.com.tw>
-#
-# $FreeBSD: ports/security/gwee/Makefile,v 1.6 2012/11/17 06:01:05 svnexp Exp $
-#
+# Created by: chinsan <chinsan@mail2000.com.tw>
+# $FreeBSD: security/gwee/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	gwee
 PORTVERSION=	1.36
@@ -14,8 +10,8 @@ MASTER_SITE_SUBDIR=	UNIX/utilities
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to exploit command execution vulnerabilities in web scripts
 
+USES=		perl5
 USE_OPENSSL=	yes
-USE_PERL5=	yes
 USE_PYTHON=	yes
 
 LDFLAGS+=	-lssl -lcrypto
