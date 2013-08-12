@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: graphics/pixmap/Makefile 321122 2013-06-17 15:01:02Z miwi $
+# $FreeBSD: graphics/pixmap/Makefile 321988 2013-06-28 21:19:31Z bapt $
 
 PORTNAME=	pixmap
 PORTVERSION=	2.6
@@ -20,8 +20,8 @@ BUILD_DEPENDS=	showrgb:${PORTSDIR}/x11/rgb \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+USES=		imake
 USE_XORG=	xpm xbitmaps x11 xaw xmu xt sm ice xext
-USE_IMAKE=	yes
 
 CFLAGS+=	-D_X_SENTINEL\(x\)= -D_X_ATTRIBUTE_PRINTF\(x,y\)= \
 		-D_X_DEPRECATED= -DUSG
