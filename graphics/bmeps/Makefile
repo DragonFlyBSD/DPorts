@@ -1,5 +1,5 @@
 # Created by: Hideyuki KURASHINA <rushani@FreeBSD.org>
-# $FreeBSD: ports/graphics/bmeps/Makefile,v 1.21 2013/01/21 04:42:13 svnexp Exp $
+# $FreeBSD: graphics/bmeps/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	bmeps
 PORTVERSION=	2.2.26
@@ -17,8 +17,8 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		png15:${PORTSDIR}/graphics/png \
 		tiff:${PORTSDIR}/graphics/tiff
 
+USES=		perl5
 USE_ZIP=	yes
-USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_header_sys_termios_h=no
 CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/dktools\
