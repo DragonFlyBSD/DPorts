@@ -1,4 +1,4 @@
-# $FreeBSD: x11/i3status/Makefile 314674 2013-03-19 18:38:14Z bapt $
+# $FreeBSD: x11/i3status/Makefile 322326 2013-07-05 13:51:13Z bapt $
 
 PORTNAME=	i3status
 PORTVERSION=	2.7
@@ -15,8 +15,8 @@ LIB_DEPENDS=	confuse:${PORTSDIR}/devel/libconfuse \
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+USES=		gmake
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 
 PLIST_FILES=	bin/i3status \
 		etc/i3status.conf.sample
