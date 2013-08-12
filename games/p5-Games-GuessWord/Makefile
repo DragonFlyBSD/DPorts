@@ -2,7 +2,7 @@
 # Date created:				23 Dec 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/games/p5-Games-GuessWord/Makefile,v 1.6 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/p5-Games-GuessWord/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Games-GuessWord
@@ -16,6 +16,7 @@ COMMENT=	Guess the letters in a word (ie Hangman)
 
 MAN3=	Games::GuessWord.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
