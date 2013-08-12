@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonym@biolateral.com.au>
-# $FreeBSD: biology/wise/Makefile 317247 2013-05-03 20:48:34Z bapt $
+# $FreeBSD: biology/wise/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	wise
 PORTVERSION=	2.4.1
@@ -17,7 +17,6 @@ BUILD_WRKSRC=	${WRKSRC}/src
 USES=		pkgconfig
 USE_GNOME=	glib20
 MAKEFILE=	makefile
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 
