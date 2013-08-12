@@ -1,5 +1,5 @@
 # Created by: lth@FreeBSD.org
-# $FreeBSD: finance/sql-ledger/Makefile 317913 2013-05-11 21:00:04Z rakuco $
+# $FreeBSD: finance/sql-ledger/Makefile 323655 2013-07-25 17:45:09Z az $
 
 PORTNAME=	sql-ledger
 PORTVERSION=	3.0.4
@@ -18,10 +18,8 @@ NO_BUILD=	yes
 USE_PERL5=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 SUB_FILES=	pkg-message sql-ledger-httpd.conf
-
-post-patch:
-	@${PERL} -pi -e 's|/usr/bin/perl|${PERL}|' \
-		`${FIND} ${WRKSRC} -name \*.pl`
+USES=		shebangfix
+SHEBANG_FILES=	*.pl locale/*/*.pl bin/*/*.pl
 
 do-install:
 	@cd ${WRKDIR} ; \
