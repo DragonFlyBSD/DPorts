@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-XML-Validator-Schema
-# Date created:				Oct 14th 2003
-# Whom:					clsung@dragon2.net
-#
-# $FreeBSD: ports/textproc/p5-XML-Validator-Schema/Makefile,v 1.14 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: clsung@dragon2.net
+# $FreeBSD: textproc/p5-XML-Validator-Schema/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Validator-Schema
 PORTVERSION=	1.10
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Tree-DAG_Node>=0:${PORTSDIR}/devel/p5-Tree-DAG_Node \
 		p5-XML-Filter-BufferText>=0:${PORTSDIR}/textproc/p5-XML-Filter-BufferText
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Validator::Schema.3 \
 		XML::Validator::Schema::Attribute.3 \
