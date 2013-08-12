@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: ports/net/ldap2dns/Makefile,v 1.17 2012/11/17 06:00:04 svnexp Exp $
+# $FreeBSD: net/ldap2dns/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	ldap2dns
 PORTVERSION=	0.4.2
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS \
 
 OPTIONS_DEFINE=	DOCS
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 USE_GMAKE=	yes
 USE_OPENLDAP=	yes
 
