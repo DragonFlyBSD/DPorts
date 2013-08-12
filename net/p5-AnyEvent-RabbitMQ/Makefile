@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-AnyEvent-RabbitMQ/Makefile 322479 2013-07-08 02:09:17Z clsung $
+# $FreeBSD: net/p5-AnyEvent-RabbitMQ/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	AnyEvent-RabbitMQ
 PORTVERSION=	1.15
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AnyEvent::RabbitMQ.3 \
     		AnyEvent::RabbitMQ::Channel.3
