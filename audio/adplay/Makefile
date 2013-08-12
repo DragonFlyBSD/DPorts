@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/audio/adplay/Makefile,v 1.29 2012/11/17 05:54:27 svnexp Exp $
+# $FreeBSD: audio/adplay/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	adplay
 PORTVERSION=	1.7
@@ -19,7 +19,6 @@ LIB_DEPENDS=	adplug:${PORTSDIR}/audio/libadplug
 
 GNU_CONFIGURE=	yes
 WANT_SDL=	yes
-MAKE_JOBS_SAFE=	yes
 
 DBFILE=		adplug.db
 DBVERSION=	2006-07-07
