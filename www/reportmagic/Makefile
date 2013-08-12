@@ -2,7 +2,7 @@
 # Date created:		3 December 2000
 # Whom:			Jeremy Shaffner <jeremy@external.org>
 #
-# $FreeBSD: ports/www/reportmagic/Makefile,v 1.18 2012/11/17 06:03:03 svnexp Exp $
+# $FreeBSD: www/reportmagic/Makefile 324180 2013-08-03 07:52:55Z az $
 #
 
 PORTNAME=	reportmagic
@@ -18,7 +18,7 @@ DISTNAME=	rmagic-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A web site statistics post-processor for Analog
 
-USE_PERL5=	yes
+USES=		perl5
 
 RUN_DEPENDS=	analog:${PORTSDIR}/www/analog \
 		p5-GD-Graph3d>=0:${PORTSDIR}/graphics/p5-GD-Graph3d \
