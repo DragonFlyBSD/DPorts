@@ -2,7 +2,7 @@
 # Date created:				01 Jun 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Class-Multimethods/Makefile,v 1.4 2012/11/17 05:56:08 svnexp Exp $
+# $FreeBSD: devel/p5-Class-Multimethods/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Class-Multimethods
@@ -16,6 +16,7 @@ COMMENT=	Support multimethods and function overloading in Perl
 
 MAN3=	Class::Multimethods.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
