@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Module-CPANfile/Makefile 320533 2013-06-11 06:44:39Z lth $
+# $FreeBSD: devel/p5-Module-CPANfile/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Module-CPANfile
-PORTVERSION=	0.9034
+PORTVERSION=	1.0001
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Module
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Parse cpanfile
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	mymeta-cpanfile.1
 MAN3=	Module::CPANfile.3 \
