@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-DBI-Loader
-# Date created:	   21 july 2003
-# Whom:		   mat
-#
-# $FreeBSD: ports/databases/p5-Class-DBI-Loader/Makefile,v 1.31 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: databases/p5-Class-DBI-Loader/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-DBI-Loader
 PORTVERSION=	0.34
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-Class-DBI>=0.89:${PORTSDIR}/databases/p5-Class-DBI \
 		p5-Lingua-EN-Inflect>=0:${PORTSDIR}/textproc/p5-Lingua-EN-Inflect
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::DBI::Loader.3 \
 		Class::DBI::Loader::Generic.3 \
