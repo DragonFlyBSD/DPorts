@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xoids
-# Date created:				16 March 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/xoids/Makefile,v 1.17 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/xoids/Makefile 321994 2013-06-28 21:58:01Z bapt $
 
 PORTNAME=	xoids
 PORTVERSION=	1.5
@@ -15,15 +11,17 @@ MASTER_SITE_SUBDIR=	games
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X Window Asteroids style game with full color pixmaps
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xpm
 MAN6=		xoids.6
+
+.include <bsd.port.options.mk>
 
 post-extract:
 	@${CP} ${WRKSRC}/xoids.1x ${WRKSRC}/xoids.man
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
