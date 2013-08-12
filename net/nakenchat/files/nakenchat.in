@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/nakenchat/files/nakenchat.in,v 1.3 2012/11/17 06:00:06 svnexp Exp $
+# $FreeBSD: net/nakenchat/files/nakenchat.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: nakenchat
 # REQUIRE: DAEMON
