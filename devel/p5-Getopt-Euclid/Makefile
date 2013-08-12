@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Getopt-Euclid/Makefile 323454 2013-07-22 14:30:05Z culot $
+# $FreeBSD: devel/p5-Getopt-Euclid/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Getopt-Euclid
 PORTVERSION=	0.4.3
@@ -13,7 +13,8 @@ COMMENT=	Executable Uniform Command-Line Interface Descriptions
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Getopt::Euclid.3
 
