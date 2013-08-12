@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xcolors
-# Date created:		10 May 1995
-# Whom:			asami
-#
-# $FreeBSD: ports/x11/xcolors/Makefile,v 1.31 2012/11/17 06:03:21 svnexp Exp $
-#
+# Created by: asami
+# $FreeBSD: x11/xcolors/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xcolors
 PORTVERSION=	1.3
@@ -20,7 +16,7 @@ RUN_DEPENDS=	showrgb:${PORTSDIR}/x11/rgb
 
 WRKSRC=		${WRKDIR}/xcolors
 USE_XORG=	xaw xmu xt sm ice xpm xp xext x11
-USE_IMAKE=	yes
+USES=		imake
 MAN1=		xcolors.1
 
 .include <bsd.port.mk>
