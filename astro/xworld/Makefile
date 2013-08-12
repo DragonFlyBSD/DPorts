@@ -2,7 +2,7 @@
 # Date created:			  24 Aug 2001
 # Whom:				  Kris Kennaway <kris@FreeBSD.org
 #
-# $FreeBSD: ports/astro/xworld/Makefile,v 1.12 2012/11/17 05:54:26 svnexp Exp $
+# $FreeBSD: astro/xworld/Makefile 324122 2013-08-01 20:22:27Z naddy $
 #
 
 PORTNAME=	xworld
@@ -23,7 +23,6 @@ CONFIGURE_ENV=	CAT=${CAT} \
 		INCLUDES="-I${LOCALBASE}/include" \
 		LDLIBS="-lm -L${LOCALBASE}/lib -lX11" \
 		MORELIBS=""
-MAKE_JOBS_SAFE=	yes
 PLIST_FILES=	bin/xworld
 STRIP=		#don't strip out image data on install
 
