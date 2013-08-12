@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xtacy
-# Date created:         25 July 1996
-# Whom:                 matt@bdd.net
-#
-# $FreeBSD: ports/x11/xtacy/Makefile,v 1.17 2012/11/17 06:03:23 svnexp Exp $
-#
+# Created by: matt@bdd.net
+# $FreeBSD: x11/xtacy/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xtacy
 PORTVERSION=	1.14
@@ -15,9 +11,9 @@ MASTER_SITE_SUBDIR=	apps/graphics/hacks/X
 DISTNAME=	${PORTNAME}114
 
 MAINTAINER=	matt@bdd.net
-COMMENT=	An X11 trippy color-cycling toy
+COMMENT=	X11 trippy color-cycling toy
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN1=		xtacy.1
 PLIST_FILES=	bin/xtacy
