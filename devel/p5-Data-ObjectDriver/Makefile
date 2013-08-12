@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Data-ObjectDriver
-# Date created:		2007-02-25
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Data-ObjectDriver/Makefile,v 1.13 2012/11/17 05:56:10 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Data-ObjectDriver/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-ObjectDriver
 PORTVERSION=	0.09
@@ -22,7 +18,8 @@ RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI \
 		p5-Text-SimpleTable>=0:${PORTSDIR}/textproc/p5-Text-SimpleTable
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::ObjectDriver.3 Data::ObjectDriver::BaseObject.3 \
 		Data::ObjectDriver::Driver::BaseCache.3 \
