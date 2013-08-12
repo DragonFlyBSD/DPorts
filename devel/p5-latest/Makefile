@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-latest
-# Date created:		2012-02-13
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-latest/Makefile,v 1.2 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-latest/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	latest
 PORTVERSION=	0.03
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Use the latest Perl features
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	latest.3
 
