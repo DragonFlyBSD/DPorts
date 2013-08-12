@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bugzilla/Makefile 321428 2013-06-20 21:54:02Z ohauer $
+# $FreeBSD: devel/bugzilla/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	bugzilla
 PORTVERSION=	4.0.10
@@ -24,7 +24,8 @@ RUN_DEPENDS=	\
 		p5-TimeDate>=1.19:${PORTSDIR}/devel/p5-TimeDate \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 
-USE_PERL5=	yes
+USES=		perl5
+USE_PERL5=	patch run build
 
 BINMODE=	700
 
