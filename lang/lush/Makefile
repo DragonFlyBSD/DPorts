@@ -1,8 +1,5 @@
-# New ports collection makefile for:	lush
-# Date created:				20 May 2003
-# Whom:					David Yeske <dyeske@gmail.com>
-#
-# $FreeBSD: lang/lush/Makefile 316464 2013-04-24 18:10:30Z ak $
+# Created by: David Yeske <dyeske@gmail.com>
+# $FreeBSD: lang/lush/Makefile 323720 2013-07-26 14:23:12Z bapt $
 
 PORTNAME=	lush
 PORTVERSION=	1.2.1
@@ -11,7 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A high level object-oriented programming language
+COMMENT=	High level object-oriented programming language
 
 USES=		gettext
 USE_XORG=	xt xft
@@ -21,7 +18,7 @@ GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/lush
 
-CONFIGURE_ENV=	LIBS="${LIBS} ${PTHREAD_LIBS} -lintl -L${LOCALBASE}/lib"
+CONFIGURE_ENV=	LIBS="${LIBS} ${PTHREAD_LIBS} -lintl -lfontconfig -L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 CONFIGURE_ARGS=	--without-bfd
