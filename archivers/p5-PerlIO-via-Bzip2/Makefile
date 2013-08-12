@@ -1,9 +1,5 @@
-# New ports collection makefile for:	PerlIO-via-Bzip2
-# Date created:	   18 December 2006
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/archivers/p5-PerlIO-via-Bzip2/Makefile,v 1.8 2012/11/17 05:54:22 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: archivers/p5-PerlIO-via-Bzip2/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	PerlIO-via-Bzip2
 PORTVERSION=	0.02
@@ -17,7 +13,8 @@ COMMENT=	Perl extension to provide a PerlIO layer to bzip2/bunzip2
 BUILD_DEPENDS=	p5-Compress-Bzip2>=0:${PORTSDIR}/archivers/p5-Compress-Bzip2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		PerlIO::via::Bzip2.3
 
