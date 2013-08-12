@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Algorithm::NaiveBayes
-# Date created:				Oct 25 2003
-# Whom:					clsung@dragon2.net
-#
-# $FreeBSD: ports/devel/p5-Algorithm-NaiveBayes/Makefile,v 1.8 2012/11/17 05:56:04 svnexp Exp $
-#
+# Created by: clsung@dragon2.net
+# $FreeBSD: devel/p5-Algorithm-NaiveBayes/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Algorithm-NaiveBayes
 PORTVERSION=	0.04
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl class performing Bayesian prediction of categories
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Algorithm::NaiveBayes.3
 
