@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/graphics/py-gdal/Makefile,v 1.4 2012/12/09 06:25:08 svnexp Exp $
+# $FreeBSD: graphics/py-gdal/Makefile 324401 2013-08-08 16:47:32Z sunpoet $
 
 PORTNAME=	gdal
 PORTVERSION=	1.9.2
@@ -11,6 +11,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python binding for GDAL
+
+LICENSE=	MIT
 
 LIB_DEPENDS=	gdal:${PORTSDIR}/graphics/gdal
 
