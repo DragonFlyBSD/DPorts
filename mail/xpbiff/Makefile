@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xpbiff
-# Date created:         2 April 1997
-# Whom:                 Yoshiro MIHIRA <sanpei@yy.cs.keio.ac.jp>
-#
-# $FreeBSD: ports/mail/xpbiff/Makefile,v 1.35 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: Yoshiro MIHIRA <sanpei@yy.cs.keio.ac.jp>
+# $FreeBSD: mail/xpbiff/Makefile 321995 2013-06-28 22:06:54Z bapt $
 
 PORTNAME?=	xpbiff
 PORTVERSION?=	1.27
@@ -16,9 +12,10 @@ DISTNAME=	xpbiff
 DISTFILES=	xpbiff-1.27-with-YOUBIN.tar.gz.uu
 
 MAINTAINER?=	sanpei@FreeBSD.org
-COMMENT?=	A replacement for xbiff that handles popup window with mail header
+COMMENT?=	Replacement for xbiff that handles popup window with mail header
 
-USE_IMAKE=	yes
+USES=		imake
+USE_GCC=	any
 USE_XORG=	xpm xaw xmu
 NO_INSTALL_MANPAGES=	yes
 PLIST_FILES=	bin/xpbiff
