@@ -1,9 +1,5 @@
-# New ports collection makefile for:    tclock
-# Date created:		So   7 Feb 1999 20:50:43 MET
-# Whom:			Lars Koeller <lkoeller@cc.fh-lippe.de>
-#
-# $FreeBSD: ports/x11-clocks/tclock/Makefile,v 1.16 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Lars Koeller <lkoeller@cc.fh-lippe.de>
+# $FreeBSD: x11-clocks/tclock/Makefile 322014 2013-06-28 23:05:59Z bapt $
 
 PORTNAME=	tclock
 PORTVERSION=	1.0.1
@@ -17,7 +13,7 @@ MAINTAINER=	aehlig@linta.de
 COMMENT=	Transparent analog clock for x11
 
 NO_WRKSUBDIR=	yes
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN1=		tclock.1
 PLIST_FILES=	bin/tclock
