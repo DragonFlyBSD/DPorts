@@ -1,7 +1,7 @@
-# $FreeBSD: mail/pear-Horde_Mime/Makefile 323135 2013-07-16 23:00:57Z mm $
+# $FreeBSD: mail/pear-Horde_Mime/Makefile 324467 2013-08-10 07:46:18Z mm $
 
 PORTNAME=	Horde_Mime
-PORTVERSION=	2.2.3
+PORTVERSION=	2.2.4
 CATEGORIES=	mail www pear
 
 MAINTAINER=	horde@FreeBSD.org
