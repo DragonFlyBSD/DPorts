@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Manual/Makefile 317583 2013-05-07 08:29:51Z tobez $
+# $FreeBSD: www/p5-Catalyst-Manual/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Manual
 PORTVERSION=	5.9007
@@ -14,7 +14,8 @@ COMMENT=	Catalyst developer\'s manual
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Manual.3 \
 		Catalyst::Manual::About.3 \
