@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-Client-Keepalive
-# Date created:	   24 June 2005
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/net/p5-POE-Component-Client-Keepalive/Makefile,v 1.21 2012/11/17 06:00:12 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: net/p5-POE-Component-Client-Keepalive/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Client-Keepalive
 PORTVERSION=	0.2710
@@ -24,7 +20,8 @@ BUILD_DEPENDS=	p5-Net-IP-Minimal>=0.02:${PORTSDIR}/net/p5-Net-IP-Minimal  \
 		p5-POE-Component-Resolver>=0.917:${PORTSDIR}/dns/p5-POE-Component-Resolver
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Client::Keepalive.3 \
 		POE::Component::Connection::Keepalive.3
