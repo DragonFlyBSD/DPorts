@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-DateTime-Format-Flexible/Makefile 313445 2013-03-05 11:03:37Z tobez $
+# $FreeBSD: devel/p5-DateTime-Format-Flexible/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	DateTime-Format-Flexible
 PORTVERSION=	0.25
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockTime>=0:${PORTSDIR}/devel/p5-Test-MockTime
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DateTime::Format::Flexible.3 \
 	DateTime::Format::Flexible::lang.3 \
