@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: ports/games/xchomp/Makefile,v 1.22 2013/02/04 15:20:00 svnexp Exp $
+# $FreeBSD: games/xchomp/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xchomp
 PORTVERSION=	pl1
@@ -12,8 +12,8 @@ COMMENT=	Pac-man-like game under X11
 
 WRKSRC=		${WRKDIR}/xchomp
 
+USES=		imake
 USE_XORG=	x11 xext
-USE_IMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/xchomp
