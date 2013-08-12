@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/dns/nsd/files/nsd.in,v 1.12 2013/02/25 22:42:44 svnexp Exp $
+# $FreeBSD: dns/nsd/files/nsd.in 312942 2013-02-25 21:59:11Z beech $
 #
 # PROVIDE: nsd
 # REQUIRE: DAEMON
