@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: ports/security/p5-Crypt-OpenPGP/Makefile,v 1.27 2012/12/18 11:50:00 svnexp Exp $
+# $FreeBSD: security/p5-Crypt-OpenPGP/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Crypt-OpenPGP
 PORTVERSION=	1.06
@@ -27,7 +27,8 @@ RUN_DEPENDS= \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::OpenPGP::ErrorHandler.3 Crypt::OpenPGP::Key.3 \
 		Crypt::OpenPGP::CFB.3 Crypt::OpenPGP::SKSessionKey.3 \
