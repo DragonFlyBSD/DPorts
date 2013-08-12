@@ -1,5 +1,5 @@
 # Created by: lbr
-# $FreeBSD: www/p5-Catalyst-Runtime/Makefile 321536 2013-06-22 03:39:22Z sunpoet $
+# $FreeBSD: www/p5-Catalyst-Runtime/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Runtime
 PORTVERSION=	5.90040
@@ -64,7 +64,8 @@ TEST_DEPENDS=	p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inher
 		p5-Test-Without-Module>=0:${PORTSDIR}/devel/p5-Test-Without-Module \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	catalyst.pl.1
 MAN3=	Catalyst.3 \
