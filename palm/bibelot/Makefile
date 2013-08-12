@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	bibelot
-# Date created:		Jan 8, 2001
-# Whom:			Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/palm/bibelot/Makefile,v 1.12 2012/11/17 06:00:43 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: palm/bibelot/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	bibelot
 PORTVERSION=	0.9.4
@@ -15,7 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Formats and converts text documents into compressed PalmDoc .pdb files
 
 PLIST_FILES=	bin/bibelot
-USE_PERL5=	yes
+USES=		perl5
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
