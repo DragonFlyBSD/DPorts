@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: ports/graphics/cadubi/Makefile,v 1.14 2012/12/04 16:32:46 svnexp Exp $
+# $FreeBSD: graphics/cadubi/Makefile 323680 2013-07-26 05:33:51Z az $
 
 PORTNAME=	cadubi
 PORTVERSION=	1.3
@@ -25,8 +25,8 @@ PORTDOCS=	*
 .include <bsd.port.options.mk>
 
 do-configure:
-	@${PERL} -pi -e \
-		's|Bin/help|Bin/../share/cadubi/help|g' ${WRKSRC}/cadubi
+	@${REINPLACE_CMD} -i '' -e 's|Bin/help|Bin/../share/cadubi/help|' \
+		${WRKSRC}/cadubi
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
