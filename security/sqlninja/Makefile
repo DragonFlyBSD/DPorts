@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sqlninja
-# Date created:				2007-10-17
-# Whom:					Valerio Daelli <valerio.daelli@gmail.com>
-#
-# $FreeBSD: ports/security/sqlninja/Makefile,v 1.7 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Valerio Daelli <valerio.daelli@gmail.com>
+# $FreeBSD: security/sqlninja/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	sqlninja
 DISTVERSION=	0.2.6
@@ -22,7 +18,7 @@ RUN_DEPENDS=	p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL \
 		p5-Net-RawIP>=0:${PORTSDIR}/net/p5-Net-RawIP \
 		p5-NetPacket>=0:${PORTSDIR}/net/p5-NetPacket
 
-USE_PERL5=	yes
+USES=		perl5
 
 NO_BUILD=	yes
 
