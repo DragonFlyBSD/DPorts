@@ -2,7 +2,7 @@
 # Date created:		Tue Dec 20 14:31:48 UTC 2005
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/converters/p5-Unicode-UTF8simple/Makefile,v 1.5 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/p5-Unicode-UTF8simple/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Unicode-UTF8simple
 PORTVERSION=	1.06
@@ -13,7 +13,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Conversions to/from UTF-8 from/to charactersets
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Unicode::UTF8simple.3
 
