@@ -2,7 +2,7 @@
 # Date created:				01 April 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-Class-DBI-Plugin/Makefile,v 1.6 2012/11/17 05:55:13 svnexp Exp $
+# $FreeBSD: databases/p5-Class-DBI-Plugin/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Class-DBI-Plugin
@@ -17,7 +17,8 @@ COMMENT=	Abstract base class for Class::DBI plugins
 BUILD_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Class::DBI::Plugin.3
 
