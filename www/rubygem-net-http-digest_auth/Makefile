@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/rubygem-net-http-digest_auth/Makefile 320765 2013-06-13 11:49:28Z sunpoet $
+# $FreeBSD: www/rubygem-net-http-digest_auth/Makefile 323803 2013-07-27 20:11:24Z sunpoet $
 
 PORTNAME=	net-http-digest_auth
-PORTVERSION=	1.3
+PORTVERSION=	1.4
 CATEGORIES=	www net rubygems
 MASTER_SITES=	RG
 
