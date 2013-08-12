@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-RecordParser/Makefile 321189 2013-06-18 13:53:16Z lth $
+# $FreeBSD: textproc/p5-Text-RecordParser/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Text-RecordParser
 PORTVERSION=	1.6.1
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		tablify.1 tabmerge.1 tab2graph.1
 MAN3=		Text::RecordParser.3 \
