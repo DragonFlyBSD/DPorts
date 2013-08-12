@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: multimedia/avbin/Makefile 319202 2013-05-27 10:17:59Z bapt $
+# $FreeBSD: multimedia/avbin/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	avbin
 PORTVERSION=	7
@@ -12,7 +12,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	FFmpeg wrapper
 
-LIB_DEPENDS=	avcodec.1:${PORTSDIR}/multimedia/ffmpeg
+LIB_DEPENDS=	avcodec:${PORTSDIR}/multimedia/ffmpeg
 
 LIBNAME=	libavbin.so.${PORTVERSION}
 PLIST_FILES=	lib/${LIBNAME} include/avbin.h
