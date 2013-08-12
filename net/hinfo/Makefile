@@ -2,7 +2,7 @@
 # Date created:				Mon Mar 31 22:37:48 CST 2003
 # Whom:					Mark Linimon <linimon@lonesome.com>
 #
-# $FreeBSD: ports/net/hinfo/Makefile,v 1.14 2012/11/17 06:00:02 svnexp Exp $
+# $FreeBSD: net/hinfo/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	hinfo
@@ -20,7 +20,8 @@ COMMENT=	Utility primarily designed to find the owner of an IP block
 RUN_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS \
 		wget:${PORTSDIR}/ftp/wget
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 DATADIR?=	${PREFIX}/lib/${PORTNAME}
 
