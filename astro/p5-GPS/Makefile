@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-GPS
-# Date created:			5 December 2000
-# Whom:				Jeremy Shaffner <jeremy@external.org>
-#
-# $FreeBSD: astro/p5-GPS/Makefile 300895 2012-07-14 12:56:14Z beat $
+# Created by: Jeremy Shaffner <jeremy@external.org>
+# $FreeBSD: astro/p5-GPS/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	GPS
 PORTVERSION=	0.17
@@ -18,7 +15,6 @@ BUILD_DEPENDS=	p5-Device-SerialPort>=0.07:${PORTSDIR}/comms/p5-Device-SerialPort
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN3=		GPS::Serial.3 \
 		GPS::NMEA.3 \
