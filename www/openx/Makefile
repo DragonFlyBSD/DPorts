@@ -1,8 +1,8 @@
 # Created by: Piotr Rybicki <meritus@innervision.pl>
-# $FreeBSD: ports/www/openx/Makefile,v 1.14 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/openx/Makefile 324444 2013-08-09 14:59:19Z erwin $
 
 PORTNAME=	openx
-PORTVERSION=	2.8.10
+PORTVERSION=	2.8.11
 CATEGORIES=	www
 MASTER_SITES=	http://download.openx.org/
 
