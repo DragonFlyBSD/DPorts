@@ -1,9 +1,5 @@
-# New ports collection makefile for:    emovix
-# Date created:                         2003/10/31
-# Whom:                                 Heiner <h.eichmann@gmx.de>
-#
-# $FreeBSD: multimedia/emovix/Makefile 320099 2013-06-06 14:04:06Z mat $
-#
+# Created by: Heiner <h.eichmann@gmx.de>
+# $FreeBSD: multimedia/emovix/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	emovix
 PORTVERSION=	0.9.0
@@ -14,7 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Mini Linux distro to create bootable video CDs
 
 GNU_CONFIGURE=	yes
+USES=		perl5
 USE_GMAKE=	yes
-USE_PERL5=	yes
 
 .include <bsd.port.mk>
