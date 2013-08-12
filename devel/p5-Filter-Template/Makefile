@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Filter-Template/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Filter-Template/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Filter-Template
 PORTVERSION=	1.040
@@ -15,6 +15,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Filter::Template.3 Filter::Template::UseBytes.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
