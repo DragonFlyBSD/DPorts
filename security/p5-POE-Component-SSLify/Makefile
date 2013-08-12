@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-SSLify
-# Date created:	   05 November 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/security/p5-POE-Component-SSLify/Makefile,v 1.19 2012/12/17 09:58:11 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: security/p5-POE-Component-SSLify/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-SSLify
 PORTVERSION=	1.008
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-Net-SSLeay>=1.36:${PORTSDIR}/security/p5-Net-SSLeay \
 		p5-Task-Weaken>=1.03:${PORTSDIR}/devel/p5-Task-Weaken
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::SSLify.3 \
 		POE::Component::SSLify::ClientHandle.3 \
