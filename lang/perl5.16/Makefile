@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: lang/perl5.16/Makefile 320679 2013-06-12 13:00:55Z az $
+# $FreeBSD: lang/perl5.16/Makefile 323474 2013-07-22 15:56:27Z az $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
@@ -45,7 +45,6 @@ SITE_PERL?=	${LOCALBASE}/${SITE_PERL_REL}
 
 USE_BZIP2=	yes
 HAS_CONFIGURE=	yes
-MAKE_JOBS_UNSAFE=	yes
 CONFIGURE_SCRIPT=Configure
 CONFIGURE_ARGS=	-sde -Dprefix=${PREFIX} \
 	-Darchlib=${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH} \
