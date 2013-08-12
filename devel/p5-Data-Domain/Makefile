@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Domain/Makefile 321539 2013-06-22 03:44:10Z sunpoet $
+# $FreeBSD: devel/p5-Data-Domain/Makefile 324405 2013-08-08 17:41:06Z sunpoet $
 
 PORTNAME=	Data-Domain
-PORTVERSION=	1.04
+PORTVERSION=	1.05
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
