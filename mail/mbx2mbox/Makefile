@@ -2,7 +2,7 @@
 # Date created:		23 November 1998
 # Whom:			Josh Gilliam <josh@quick.net>
 #
-# $FreeBSD: ports/mail/mbx2mbox/Makefile,v 1.20 2012/11/17 05:59:05 svnexp Exp $
+# $FreeBSD: mail/mbx2mbox/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	mbx2mbox
@@ -16,7 +16,8 @@ COMMENT=	MS Outlook Express .mbx to mbox file converter
 BUILD_DEPENDS=	p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	mbx2mbox.1
 
