@@ -1,9 +1,5 @@
-# New ports collection makefile for:	osm2mp
-# Date created:		21 Jun 2011
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/converters/osm2mp/Makefile,v 1.4 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: converters/osm2mp/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
 
 PORTNAME=	osm2mp
 PORTVERSION=	r475
