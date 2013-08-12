@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/p5-DBIx-ContextualFetch/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: databases/p5-DBIx-ContextualFetch/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-ContextualFetch
 PORTVERSION=	1.03
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::ContextualFetch.3
 
