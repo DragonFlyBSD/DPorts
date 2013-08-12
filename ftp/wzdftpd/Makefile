@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy
-# $FreeBSD: ftp/wzdftpd/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: ftp/wzdftpd/Makefile 324036 2013-07-31 11:56:17Z az $
 
 PORTNAME=	wzdftpd
 PORTVERSION=	0.8.3
@@ -70,7 +70,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 MAN3+=		wzdftpd.3
 PLIST_SUB+=	PERL=""
