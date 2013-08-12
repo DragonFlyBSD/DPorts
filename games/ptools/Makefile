@@ -2,7 +2,7 @@
 # Date created:				2008-01-15
 # Whom:					alepulver
 #
-# $FreeBSD: ports/games/ptools/Makefile,v 1.3 2012/11/17 05:57:49 svnexp Exp $
+# $FreeBSD: games/ptools/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	ptools
@@ -19,8 +19,9 @@ EXTRACT_ONLY=	${DISTFILES:C/:[[:alpha:]]+$//:N*.pl:N*.c}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Accessory programs for pMARS (Core War simulator)
 
+USES=		perl5
 USE_ZIP=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 MAKEFILE=	makefile.ptools
 ALL_TARGET=	mopt mts pname
 NO_WRKSUBDIR=	yes
