@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/wwwstat/Makefile,v 1.38 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: www/wwwstat/Makefile 324180 2013-08-03 07:52:55Z az $
 
 PORTNAME=	wwwstat
 PORTVERSION=	2.01
@@ -17,7 +17,7 @@ COMMENT=	Webserver logfile analysis package
 MAKE_JOBS_SAFE=	yes
 
 USE_APACHE_RUN=	22+
-USE_PERL5=	yes
+USES=		perl5
 MAKE_ENV+=	PERL5=${PERL5}
 
 MAN1=	wwwstat.1 splitlog.1

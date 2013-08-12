@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/wwwstat/files/patch-monthly.pl,v 1.2 2012/11/17 06:03:11 svnexp Exp $
+$FreeBSD: www/wwwstat/files/patch-monthly.pl 300897 2012-07-14 14:29:18Z beat $
 
 --- monthly.pl.orig	Thu Jul 17 14:24:55 2003
 +++ monthly.pl	Thu Jul 17 14:26:02 2003
