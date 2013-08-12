@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE/Makefile 314022 2013-03-13 04:23:14Z miwi $
+# $FreeBSD: devel/p5-POE/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE
 PORTVERSION=	1.354
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-Curses>=1.08:${PORTSDIR}/devel/p5-Curses \
 		p5-libwww>=5.79:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	--default
 
 MAN3=		POE.3 POE::Component.3 POE::Component::Client::TCP.3 \
