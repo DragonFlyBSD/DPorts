@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-MooseX-POE
-# Date created:				27 Jul 2008
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-MooseX-POE/Makefile 309100 2012-12-17 15:10:35Z az $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: devel/p5-MooseX-POE/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-POE
 PORTVERSION=	0.215
@@ -25,7 +21,8 @@ TEST_DEPENDS=	p5-MooseX-Daemonize>=0:${PORTSDIR}/devel/p5-MooseX-Daemonize \
 		p5-MooseX-Declare>=0:${PORTSDIR}/devel/p5-MooseX-Declare \
 		p5-Test-Fatal>=0.003:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::POE.3 \
 		MooseX::POE::Aliased.3 \
