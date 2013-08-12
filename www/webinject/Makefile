@@ -1,9 +1,5 @@
-# New ports collection makefile for:	webinject
-# Date created:				August 22nd 2006
-# Whom:	      				Gerrit Beine <gerrit.beine@gmx.de>
-#
-# $FreeBSD: ports/www/webinject/Makefile,v 1.8 2012/12/16 06:17:00 svnexp Exp $
-#
+# Created by: Gerrit Beine <gerrit.beine@gmx.de>
+# $FreeBSD: www/webinject/Makefile 324180 2013-08-03 07:52:55Z az $
 
 PORTNAME=	webinject
 PORTVERSION=	1.41
@@ -25,7 +21,7 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 #RUN_DEPENDS+=	p5-Tk>=0:${PORTSDIR}/x11-toolkits/p5-Tk
 .endif
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
