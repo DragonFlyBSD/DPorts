@@ -1,9 +1,9 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: security/py-itsdangerous/Makefile 323480 2013-07-22 17:18:01Z olivierd $
+# $FreeBSD: security/py-itsdangerous/Makefile 324430 2013-08-09 12:16:33Z olivierd $
 #
 
 PORTNAME=	itsdangerous
-PORTVERSION=	0.22
+PORTVERSION=	0.23
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
