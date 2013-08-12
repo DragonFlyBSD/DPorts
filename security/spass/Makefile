@@ -1,4 +1,4 @@
-# $FreeBSD: security/spass/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: security/spass/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	spass
 PORTVERSION=	3.0
@@ -24,7 +24,5 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_FILES=	bin/spass
-
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
