@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Makefile-Parser
-# Date created:				11 April 2006
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Makefile-Parser/Makefile,v 1.12 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-Makefile-Parser/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Makefile-Parser
 PORTVERSION=	0.215
@@ -27,7 +23,8 @@ RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
 		p5-Makefile-DOM>=0.005:${PORTSDIR}/textproc/p5-Makefile-DOM
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		makesimple.1 \
 		pgmake-db.1 \
