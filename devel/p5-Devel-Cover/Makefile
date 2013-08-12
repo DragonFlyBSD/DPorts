@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Devel-Cover/Makefile 323173 2013-07-17 14:58:36Z sunpoet $
+# $FreeBSD: devel/p5-Devel-Cover/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Devel-Cover
 PORTVERSION=	1.06
@@ -21,7 +21,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
 		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		cover.1 cpancover.1 gcov2perl.1
 MAN3=		Devel::Cover.3 \
