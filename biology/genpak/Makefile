@@ -3,12 +3,12 @@
 # Date created:			Feb 28, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/biology/genpak/Makefile,v 1.17 2012/11/17 05:54:51 svnexp Exp $
+# $FreeBSD: biology/genpak/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	genpak
 PORTVERSION=	0.26
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	biology
 MASTER_SITES=	http://www.bioinformatics.org/genpak/download/
 DISTNAME=	gp-${PORTVERSION}
@@ -17,7 +17,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A set of small utilities to manipulate DNA sequences
 
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
 
 USE_GMAKE=	yes
 MAKE_ENV=	GMAKE="${GMAKE}"
