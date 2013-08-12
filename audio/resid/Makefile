@@ -1,9 +1,5 @@
-# New ports collection makefile for:	resid
-# Date created:				6 October 2002
-# Whom:					Anders Nordby <anders@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/resid/Makefile,v 1.25 2012/11/17 05:54:43 svnexp Exp $
-#
+# Created by: Anders Nordby <anders@FreeBSD.org>
+# $FreeBSD: audio/resid/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	resid
 PORTVERSION=	0.16
@@ -19,7 +15,6 @@ LICENSE=	GPLv2
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_ARGS=		--enable-shared
 
