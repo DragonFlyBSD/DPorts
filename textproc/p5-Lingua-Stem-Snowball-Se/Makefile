@@ -1,5 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: textproc/p5-Lingua-Stem-Snowball-Se/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-Lingua-Stem-Snowball-Se/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=		Lingua-Stem-Snowball-Se
 PORTVERSION=		1.2
@@ -12,7 +12,8 @@ DISTNAME=		Snowball-Swedish-${PORTVERSION}
 MAINTAINER=		perl@FreeBSD.org
 COMMENT=		Stemmer for Swedish
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Lingua::Stem::Snowball::Se.3
 
