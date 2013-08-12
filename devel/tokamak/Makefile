@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tokamak
-# Date created:		24 Jun 2008
-# Whom:			Dmitry Marakasov <amdmi3@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/tokamak/Makefile,v 1.5 2012/11/17 05:57:05 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
+# $FreeBSD: devel/tokamak/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	tokamak
 PORTVERSION=	1.0.5a
@@ -26,7 +22,7 @@ BUILD_WRKSRC=	${WRKSRC}/build/gnu
 
 PORTDOCS=	*
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if !defined(WITH_DEBUG)
 CPPFLAGS+=	-DNDEBUG
@@ -43,11 +39,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/tokamak.h ${PREFIX}/include/
 	${INSTALL_DATA} ${WRKSRC}/include/math/*.h ${PREFIX}/include/math/
 	${INSTALL_DATA} ${WRKSRC}/lib/libtokamak_m.a ${PREFIX}/lib/
-
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/license.txt ${WRKSRC}/readme.txt ${DOCSDIR}
 	cd ${WRKSRC}/documentation && ${COPYTREE_SHARE} . ${DOCSDIR}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
