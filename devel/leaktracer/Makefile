@@ -2,7 +2,7 @@
 # Date created:				04 Feb 2004
 # Whom:					Alexey Dokuchaev <danfe@regency.nsu.ru>
 #
-# $FreeBSD: ports/devel/leaktracer/Makefile,v 1.7 2013/02/14 10:22:09 svnexp Exp $
+# $FreeBSD: devel/leaktracer/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	leaktracer
@@ -15,9 +15,10 @@ DISTNAME=	LeakTracer
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Trace and analyze memory leaks in C++ programs
 
+USES=		perl5
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 PLIST_FILES=	bin/LeakCheck bin/leak-analyze lib/LeakTracer.so
 PORTDOCS=	README README.html
 
