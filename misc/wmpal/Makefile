@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: misc/wmpal/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/wmpal/Makefile 323729 2013-07-26 15:06:12Z bapt $
 
 PORTNAME=	wmpal
 PORTVERSION=	0.6.1
@@ -12,7 +12,7 @@ COMMENT=	One of the most useless dockapps in the world
 USE_XORG=	xpm
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lX11
 
 PORTDOCS=	README
 PLIST_FILES=	bin/wmpal
