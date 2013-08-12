@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: devel/p5-ExtUtils-XSBuilder/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-ExtUtils-XSBuilder/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	ExtUtils-XSBuilder
 PORTVERSION=	0.28
@@ -14,7 +14,8 @@ COMMENT=	Autogenerating XS-glue Code
 RUN_DEPENDS=	p5-Tie-IxHash>=0:${PORTSDIR}/devel/p5-Tie-IxHash
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ExtUtils::XSBuilder.3 ExtUtils::XSBuilder::C::grammar.3 \
 		ExtUtils::XSBuilder::PODTemplate.3 \
