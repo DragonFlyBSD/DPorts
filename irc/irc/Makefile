@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Irc Server
-# Date created:		23 August 1994
-# Whom:			torstenb
-#
-# $FreeBSD: ports/irc/irc/Makefile,v 1.52 2012/11/17 05:58:28 svnexp Exp $
-#
+# Created by: torstenb
+# $FreeBSD: irc/irc/Makefile 324559 2013-08-10 22:54:58Z marino $
 
 PORTNAME=	irc
 PORTVERSION=	2.11.2p3
