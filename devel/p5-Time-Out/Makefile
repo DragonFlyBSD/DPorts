@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Time-Out
-# Date created:				18 November 2010
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Time-Out/Makefile,v 1.2 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Time-Out/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Time-Out
 PORTVERSION=	0.11
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Easily timeout long running operations
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Time::Out.3
 
