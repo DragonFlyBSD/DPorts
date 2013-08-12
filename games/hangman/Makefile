@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/hangman/Makefile 308541 2012-12-09 16:49:24Z amdmi3 $
+# $FreeBSD: games/hangman/Makefile 324071 2013-07-31 22:48:51Z bapt $
 
 PORTNAME=	hangman
 PORTVERSION=	0.9.2
@@ -14,7 +14,8 @@ COMMENT=	Challenge your spelling skills in the old western style
 CONFLICTS=	bsdgames-*
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
+USE_CSTD=	gnu89
 USE_SDL=	sdl mixer image ttf
 
 CONFIGURE_ENV=	SDL_CONFIG="${SDL_CONFIG}"
