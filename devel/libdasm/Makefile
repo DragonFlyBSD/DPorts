@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libdasm/Makefile 315147 2013-03-24 17:18:56Z rm $
+# $FreeBSD: devel/libdasm/Makefile 324133 2013-08-01 21:40:20Z antoine $
 
 PORTNAME=	libdasm
 PORTVERSION=	1.5
@@ -11,6 +11,8 @@ MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Simple x86 disassembly library
 
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 PORTDOCS=	HISTORY.txt README.txt
 PORTEXAMPLES=	README.txt das.c simple.c
@@ -25,7 +27,7 @@ post-patch:
 	@${REINPLACE_CMD} -E 's,^(CC|CFLAGS|PREFIX).*=,\1 ?=,; \
 			      s,libdasm.so.1.0,libdasm.so.1,g; \
 			      s,cp ,${INSTALL_DATA} ,g' \
-		${WRKSRC}/Makefile
+		${WRKSRC}/Makefile ${WRKSRC}/examples/Makefile
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
