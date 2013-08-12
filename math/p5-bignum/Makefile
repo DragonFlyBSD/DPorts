@@ -1,4 +1,4 @@
-# $FreeBSD: math/p5-bignum/Makefile 318369 2013-05-17 09:38:55Z lth $
+# $FreeBSD: math/p5-bignum/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	bignum
 PORTVERSION=	0.32
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Transparent BigNumber/BigRational support for Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		bigint.3 \
 		bignum.3 \
