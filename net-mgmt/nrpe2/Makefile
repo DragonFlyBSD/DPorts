@@ -1,6 +1,6 @@
 # Created by: Paul Dlug<paul@nerdlabs.com>
 #
-# $FreeBSD: net-mgmt/nrpe2/Makefile 305521 2012-10-08 08:15:28Z dougb $
+# $FreeBSD: net-mgmt/nrpe2/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	nrpe
 DISTVERSION=	2.13
@@ -8,14 +8,15 @@ PORTREVISION=	2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/nagios/${PORTNAME}-2.x/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	jarrod@downtools.com.au
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Nagios Remote Plugin Executor
 
 RUN_DEPENDS=	${LOCALBASE}/libexec/nagios/check_nagios:${PORTSDIR}/net-mgmt/nagios-plugins
 
 LATEST_LINK=	nrpe2
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 USE_RC_SUBR=	nrpe2
 
 CONFLICTS=	nrpe-1.*
