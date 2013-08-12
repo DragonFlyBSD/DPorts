@@ -2,7 +2,7 @@
 # Date created:			October 30th, 2000
 # Whom:	      			Nicholas Esborn <nick@netdot.net>
 #
-# $FreeBSD: ports/net-mgmt/p5-Mon/Makefile,v 1.9 2012/11/17 06:00:35 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Mon/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Mon
@@ -15,7 +15,8 @@ DISTNAME=	Mon-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A perl module that supports mon, a network and system monitoring daemon
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mon::SNMP.3 \
 		Mon::Client.3 \
