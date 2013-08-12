@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xcut
-# Date created:			23 September 1999
-# Whom:				Cy Schubert <Cy.Schubert@uumail.gov.bc.ca>
-#
-# $FreeBSD: ports/x11/xcut/Makefile,v 1.15 2012/11/17 06:03:21 svnexp Exp $
-#
+# Created by: Cy Schubert <Cy.Schubert@uumail.gov.bc.ca>
+# $FreeBSD: x11/xcut/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xcut
 PORTVERSION=	0.2
@@ -16,7 +12,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-src/${PORTVERSION} \
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Manipulate X cut buffers from the commandline
 
-USE_IMAKE=	YES
+USES=		imake
 USE_XORG=	x11
 MAN1=		xcut.1
 PLIST_FILES=	bin/xcut
