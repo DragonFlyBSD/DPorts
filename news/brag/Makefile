@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/news/brag/Makefile,v 1.9 2013/01/15 13:46:57 svnexp Exp $
+# $FreeBSD: news/brag/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	brag
 PORTVERSION=	1.4.1
@@ -12,8 +12,6 @@ COMMENT=	Download and assemble multipart binaries from newsgroups
 
 RUN_DEPENDS=	uudeview:${PORTSDIR}/converters/uudeview \
 		${TCLSH}:${PORTSDIR}/lang/tcl84
-
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		brag.1
 PLIST_FILES=	bin/brag
