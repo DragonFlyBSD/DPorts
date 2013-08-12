@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	ipfmeta
-# Date created:			Feb 22, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/security/ipfmeta/Makefile,v 1.5 2012/11/17 06:01:05 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: security/ipfmeta/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	ipfmeta
 PORTVERSION=	1.3
@@ -14,7 +9,7 @@ MASTER_SITES=	http://www.sentia.org/downloads/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ipfmeta - use objects in IPfilter files
 
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=	ipfmeta.1
 POD2MAN?=	pod2man
