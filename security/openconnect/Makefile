@@ -1,8 +1,8 @@
 # Created by: Damian Gerow
-# $FreeBSD: security/openconnect/Makefile 318439 2013-05-18 18:25:58Z zi $
+# $FreeBSD: security/openconnect/Makefile 324412 2013-08-08 23:58:12Z zi $
 
 PORTNAME=	openconnect
-PORTVERSION=	4.99
+PORTVERSION=	5.01
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/ \
 		http://mirrors.rit.edu/zi/
@@ -18,17 +18,17 @@ RUN_DEPENDS=	vpnc-script:${PORTSDIR}/sysutils/vpnc-scripts
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-nls --with-vpnc-script=${LOCALBASE}/sbin/vpnc-script \
-		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
-USE_AUTOTOOLS=	aclocal autoconf libtool
-USES=	pathfix pkgconfig
+		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
+		--without-openssl-version-check
+USE_AUTOTOOLS=	aclocal autoconf automake libtool
+USES=		pathfix pkgconfig
 USE_GMAKE=	yes
 USE_OPENSSL=	yes
 MAKE_JOBS_SAFE=	yes
 ACLOCAL_ARGS=	-I .
+AUTOMAKE_ARGS=	--add-missing
 USE_LDCONFIG=	yes
 PORTDOCS=	*
-
-PORTSCOUT=	skipv:5.00
 
 MAN8=		openconnect.8
 
@@ -41,7 +41,10 @@ GNUTLS_DESC=	Use GnuTLS instead of OpenSSL(EXPERIMENTAL)
 
 .if ${PORT_OPTIONS:MGNUTLS}
 LIB_DEPENDS+=	gnutls:${PORTSDIR}/security/gnutls
-CONFIGURE_ARGS+=--with-gnutls
+CONFIGURE_ARGS+=--with-gnutls \
+		--with-system-cafile=${LOCALBASE}/share/certs/ca-root-nss.crt
+RUN_DEPENDS+=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+BUILD_DEPENDS+=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 .endif
 
 .include <bsd.port.pre.mk>
