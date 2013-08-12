@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unclutter
-# Date created:		03 Aug 1996
-# Whom:			shanee@augusta.de
-#
-# $FreeBSD: ports/misc/unclutter/Makefile,v 1.17 2012/11/17 05:59:45 svnexp Exp $
-#
+# Created by: shanee@augusta.de
+# $FreeBSD: misc/unclutter/Makefile 321997 2013-06-28 22:10:14Z bapt $
 
 PORTNAME=	unclutter
 PORTVERSION=	8
@@ -17,7 +13,7 @@ MAINTAINER=	simon@olofsson.de
 COMMENT=	Remove idle cursor image from screen
 
 WRKSRC=		${WRKDIR}/unclutter
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN1=		unclutter.1
 PLIST_FILES=	bin/unclutter
