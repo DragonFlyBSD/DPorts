@@ -1,9 +1,5 @@
-# New ports collection makefile for:	op
-# Date created:				30 Sep 2008
-# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/security/op/Makefile,v 1.21 2012/11/17 06:01:09 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: security/op/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	op
 PORTVERSION=	1.32
@@ -15,7 +11,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Controlled privilege escalation tool
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		op.1
 
