@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: games/xbattle/Makefile 320639 2013-06-11 20:46:48Z bsam $
+# $FreeBSD: games/xbattle/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xbattle
 PORTVERSION=	5.4.1
@@ -11,11 +11,13 @@ MASTER_SITE_SUBDIR=	distfiles
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Concurrent multi-player battle strategy game
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN1=		xbattle.1
 
 CFLAGS+=	-Wno-return-type
+
+.include <bsd.port.options.mk>
 
 post-install:
 	$(MKDIR) $(PREFIX)/share/xbattle
@@ -29,7 +31,7 @@ post-install:
 	@${CHMOD} 644 ${PREFIX}/share/xbattle/xbos/*
 	@${CHMOD} 755 ${PREFIX}/share/xbattle/xbts
 	@${CHMOD} 644 ${PREFIX}/share/xbattle/xbts/*
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/tutorial* ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
