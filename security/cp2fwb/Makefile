@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <chris@unixpages.org>
-# $FreeBSD: security/cp2fwb/Makefile 318936 2013-05-24 09:11:48Z az $
+# $FreeBSD: security/cp2fwb/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	cp2fwb
 PORTVERSION=	0.6
@@ -14,7 +14,7 @@ COMMENT=	Checkpoint FW1 to Firewall Builder ruleset converter
 RUN_DEPENDS=	p5-XML-Writer>=0:${PORTSDIR}/textproc/p5-XML-Writer
 
 PLIST_FILES=	bin/cp2fwbuilder
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 .include <bsd.port.pre.mk>
