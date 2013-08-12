@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	ipa
-# Date created:			Aug 13, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/graphics/IPA/Makefile,v 1.23 2012/11/17 05:58:00 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: graphics/IPA/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IPA
 PORTVERSION=	1.08
@@ -18,7 +15,8 @@ COMMENT=	Image Processing Algorithms
 RUN_DEPENDS=	p5-Prima>1.24:${PORTSDIR}/x11-toolkits/p5-Prima
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 MAKE_JOBS_UNSAFE=	yes
 
