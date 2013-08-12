@@ -1,12 +1,12 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: mail/rubygem-pony/Makefile 322807 2013-07-12 03:35:10Z swills $
+# $FreeBSD: mail/rubygem-pony/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	pony
 PORTVERSION=	1.5
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	The express way to send mail from Ruby
 
 RUN_DEPENDS=	rubygem-mail>=2.0:${PORTSDIR}/mail/rubygem-mail
