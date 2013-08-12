@@ -1,5 +1,5 @@
 # Created by: Conrad Sabatier <conrads@home.com>
-# $FreeBSD: misc/xless/Makefile 315240 2013-03-25 18:44:20Z eadler $
+# $FreeBSD: misc/xless/Makefile 322663 2013-07-10 11:42:07Z bapt $
 
 PORTNAME=	xless
 PORTVERSION=	1.7
@@ -12,7 +12,8 @@ MASTER_SITE_SUBDIR=	applications
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X11 viewer for text files.  Useful as an add-on tool for other apps
 
-USE_IMAKE=	yes
+MAKE_JOBS_UNSAFE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		xless.1
 MANCOMPRESSED=	yes
