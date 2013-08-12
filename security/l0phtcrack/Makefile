@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: security/l0phtcrack/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: security/l0phtcrack/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	l0phtcrack
 PORTVERSION=	1.5
@@ -12,17 +12,18 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cracks SAMBA or Windows NT passwords
 
+USES=		perl5
 DOCDIR=		share/doc/${PORTNAME}
 RESTRICTED=	uses GNU getopt with BSDish-licensed code from OpenSSL
 NO_WRKSUBDIR=	yes
 PLIST=		${WRKDIR}/pkg-plist
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_ZIP=	yes
+USE_DOS2UNIX=	yes
 
 post-extract:
 	${RM} ${WRKDIR}/*exe
-	${PERL} -pi -e "s:\r::g" ${WRKDIR}/*
-	${PERL} -pi -e "s:ommited:omitted:g" ${WRKDIR}/util.c
+	${REINPLACE_CMD} -i '' -e 's|ommited|omitted|' ${WRKDIR}/util.c
 
 do-build:
 	cd ${WRKDIR} && ${CC} ${CFLAGS} -DMPU8086 *.c -o lc_CLI
