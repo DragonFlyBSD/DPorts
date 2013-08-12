@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Algorithm-Merge
-# Date created:				29 Mar 2009
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Algorithm-Merge/Makefile,v 1.4 2012/11/17 05:56:04 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: devel/p5-Algorithm-Merge/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Algorithm-Merge
 PORTVERSION=	0.08
@@ -17,7 +13,8 @@ COMMENT=	Three-way merge and diff
 RUN_DEPENDS=	p5-Algorithm-Diff>=1.15:${PORTSDIR}/devel/p5-Algorithm-Diff
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Algorithm::Merge.3
 
