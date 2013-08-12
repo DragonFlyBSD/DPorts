@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: print/latexmk/Makefile 319372 2013-05-29 14:24:42Z wg $
+# $FreeBSD: print/latexmk/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	latexmk
 PORTVERSION=	435
@@ -16,8 +16,9 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
+USES=		perl5
 USE_ZIP=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_TEX=	latex
 
 MAN1=		latexmk.1
