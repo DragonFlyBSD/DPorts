@@ -3,7 +3,7 @@
 # Date created:			Jul 30, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/www/htmlobject/Makefile,v 1.16 2012/11/17 06:02:36 svnexp Exp $
+# $FreeBSD: www/htmlobject/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	htmlobject
@@ -18,7 +18,8 @@ COMMENT=	HTML Document Object
 BUILD_DEPENDS=	p5-Data-FormValidator>=0:${PORTSDIR}/textproc/p5-Data-FormValidator \
 		p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTMLObject::Base.3 HTMLObject::Form.3 \
 		HTMLObject::FrameSet.3 HTMLObject::HDMLCard.3 \
