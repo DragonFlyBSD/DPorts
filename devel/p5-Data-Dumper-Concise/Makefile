@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Data-Dumper-Concise
-# Date created:         2009-11-24
-# Whom:                 Christopher Key <cjk32@cam.ac.uk>
-#
-# $FreeBSD: ports/devel/p5-Data-Dumper-Concise/Makefile,v 1.10 2012/11/17 05:56:10 svnexp Exp $
-#
+# Created by: Christopher Key <cjk32@cam.ac.uk>
+# $FreeBSD: devel/p5-Data-Dumper-Concise/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Dumper-Concise
 PORTVERSION=	2.020
@@ -31,7 +27,8 @@ BUILD_DEPENDS+=	p5-Devel-ArgNames>=0.03:${PORTSDIR}/devel/p5-Devel-ArgNames
 RUN_DEPENDS+=	p5-Devel-ArgNames>=0.03:${PORTSDIR}/devel/p5-Devel-ArgNames
 .endif
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Dumper::Concise.3 \
 		Data::Dumper::Concise::Sugar.3 \
