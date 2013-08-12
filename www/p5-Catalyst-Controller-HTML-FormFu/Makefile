@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <andrey.zverev@electro-com.ru>
-# $FreeBSD: ports/www/p5-Catalyst-Controller-HTML-FormFu/Makefile,v 1.20 2013/02/08 12:02:40 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Controller-HTML-FormFu/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Controller-HTML-FormFu
 PORTVERSION=	0.09004
@@ -40,7 +40,8 @@ TEST_DEPENDS=	p5-Test-Simple>=0.92:${PORTSDIR}/devel/p5-Test-Simple \
 		p5-Test-WWW-Mechanize>=1.16:${PORTSDIR}/devel/p5-Test-WWW-Mechanize \
 		p5-Test-WWW-Mechanize-Catalyst>=0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize-Catalyst
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Controller::HTML::FormFu.3 \
 		Catalyst::Helper::HTML::FormFu.3 \
