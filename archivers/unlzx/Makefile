@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unlzx
-# Date created:				Sat 3 June 2000
-# Whom:					will
-#
-# $FreeBSD: ports/archivers/unlzx/Makefile,v 1.15 2012/11/17 05:54:24 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: archivers/unlzx/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	unlzx
 PORTVERSION=	1.1
@@ -14,8 +10,6 @@ EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Extracts .lzx archives from Amiga systems
-
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/unlzx
 
