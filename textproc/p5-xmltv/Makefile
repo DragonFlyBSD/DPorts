@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmltv
-# Date created:		Mon Nov 4 02:56:34 UTC 2002
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-xmltv/Makefile,v 1.43 2012/11/17 06:02:14 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: textproc/p5-xmltv/Makefile 324012 2013-07-31 07:23:26Z bapt $
 
 PORTNAME=	xmltv
 PORTVERSION=	0.5.61
@@ -47,8 +43,9 @@ XMLTV_DEPENDS=	\
 BUILD_DEPENDS=	${XMLTV_DEPENDS}
 RUN_DEPENDS=	${XMLTV_DEPENDS}
 
+USES=		perl5
 USE_BZIP2=	yes
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
 
