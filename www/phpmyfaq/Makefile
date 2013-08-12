@@ -1,8 +1,8 @@
 # Created by: chinsan <chinsan@mail2000.com.tw>
-# $FreeBSD: www/phpmyfaq/Makefile 321966 2013-06-28 16:47:42Z flo $
+# $FreeBSD: www/phpmyfaq/Makefile 323665 2013-07-25 20:34:34Z flo $
 
 PORTNAME=	phpmyfaq
-PORTVERSION=	2.8.1
+PORTVERSION=	2.8.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.phpmyfaq.de/download/
 
