@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-MooseX-Types-VariantTable
-# Date created:				Dec 26, 2010
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-MooseX-Types-VariantTable/Makefile,v 1.5 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: devel/p5-MooseX-Types-VariantTable/Makefile 324306 2013-08-06 08:50:49Z az $
 
 PORTNAME=	MooseX-Types-VariantTable
 PORTVERSION=	0.04
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-MooseX-Types-Structured>=0.12:${PORTSDIR}/devel/p5-MooseX-Types-
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Types::VariantTable::Declare.3 \
 		MooseX::Types::VariantTable.3
