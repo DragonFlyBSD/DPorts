@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xzoom
-# Date created:        30 June 1997
-# Whom:                Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/x11/xzoom/Makefile,v 1.14 2012/11/17 06:03:23 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: x11/xzoom/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xzoom
 PORTVERSION=	0.3
@@ -16,7 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Magnify, rotate, mirror the image on the X screen
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN1=		xzoom.1
 PLIST_FILES=	bin/xzoom
