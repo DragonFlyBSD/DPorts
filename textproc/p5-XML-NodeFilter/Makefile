@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier <eikemeier@fillmore-labs.com>
-# $FreeBSD: textproc/p5-XML-NodeFilter/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-XML-NodeFilter/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-NodeFilter
 PORTVERSION=	0.01
@@ -13,7 +13,8 @@ COMMENT=	XML::NodeFilter is an object that know how to "filter out" nodes
 BUILD_DEPENDS=	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::NodeFilter.3
 
