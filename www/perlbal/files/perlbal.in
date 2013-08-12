@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/perlbal/files/perlbal.in,v 1.5 2012/11/17 06:02:57 svnexp Exp $
+# $FreeBSD: www/perlbal/files/perlbal.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # PROVIDE: perlbal

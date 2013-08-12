@@ -1,9 +1,5 @@
-# New ports collection makefile for:	perlbal
-# Date created:		2005-08-08
-# Whom:			Jacques Marneweck <jacques@php.net>
-#
-# $FreeBSD: ports/www/perlbal/Makefile,v 1.27 2012/11/17 06:02:57 svnexp Exp $
-#
+# Created by: Jacques Marneweck <jacques@php.net>
+# $FreeBSD: www/perlbal/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Perlbal
 PORTVERSION=	1.80
@@ -24,7 +20,8 @@ RUN_DEPENDS=	p5-BSD-Resource>=0:${PORTSDIR}/devel/p5-BSD-Resource \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_RC_SUBR=	perlbal
 
 MAN1=		perlbal.1
