@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/sam2p/Makefile 314491 2013-03-17 20:49:20Z beech $
+# $FreeBSD: graphics/sam2p/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	sam2p
 PORTVERSION=	0.49.1
@@ -17,14 +17,14 @@ RUN_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
 		cjpeg:${PORTSDIR}/graphics/jpeg \
 		tif22pnm:${PORTSDIR}/graphics/tif22pnm
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 USE_GHOSTSCRIPT_RUN=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_pts_bash="${SH}"
 MAKE_ARGS=	CXXX="${CXX}" LDALL="${CXX}" CXXFLAGSB="${CXXFLAGS}"
 ALL_TARGET=	${PORTNAME}
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	README
 PORTEXAMPLES=	*
