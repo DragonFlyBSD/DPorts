@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: mail/spamstats/Makefile 319788 2013-06-03 15:15:51Z leeym $
+# $FreeBSD: mail/spamstats/Makefile 323702 2013-07-26 07:33:41Z az $
 
 PORTNAME=	spamstats
 PORTVERSION=	0.6c
@@ -19,9 +19,12 @@ USE_PERL5=	yes
 NO_BUILD=	yes
 PORTDOCS=	QUICK README copyright
 PLIST_FILES=	bin/spamstats.pl
+USES=		shebangfix
+SHEBANG_FILES=	${PORTNAME}${PORTVERSION}.pl
 
 post-patch:
-	@${PERL} -pi.bak -e 's,/mail.log,/maillog,g' ${WRKSRC}/${PORTNAME}${PORTVERSION}.pl
+	@${REINPLACE_CMD} -i '' -e 's|mail.log|maillog|g' \
+		${WRKSRC}/${PORTNAME}${PORTVERSION}.pl
 
 .include <bsd.port.options.mk>
 
