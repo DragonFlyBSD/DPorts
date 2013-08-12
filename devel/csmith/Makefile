@@ -1,4 +1,4 @@
-# $FreeBSD: devel/csmith/Makefile 316295 2013-04-23 01:44:40Z eadler $
+# $FreeBSD: devel/csmith/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	csmith
 PORTVERSION=	2.1.0
@@ -11,14 +11,13 @@ COMMENT=	Generates random C programs that conform to the C99 standard
 LICENSE=	BSD
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	autoconf
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAKE_JOBS_SAFE=	yes
+USES=	gmake
 
 ONLY_FOR_ARCHS=	i386 amd64
 
