@@ -1,5 +1,5 @@
 # Created by: andreas@marvin.robin.de
-# $FreeBSD: graphics/xmandel/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: graphics/xmandel/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	xmandel
 PORTVERSION=	1.0
@@ -17,14 +17,14 @@ COMMENT=	Window based interface to Mandelbrot sets and Julia sets
 EXTRACT_CMD=	${SH}
 EXTRACT_BEFORE_ARGS=	# empty
 EXTRACT_AFTER_ARGS=	# empty
-USE_IMAKE=	yes
+USES=		imake perl5
 USE_XORG=	ice sm x11 xaw xext xmu xt
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 NO_WRKSUBDIR=	yes
 MAN1=		xmandel.1
 PLIST_FILES=	bin/xmandel
 
 pre-patch:
-	@${PERL} -pi.orig -e 's|malloc.h|stdlib.h|' ${WRKSRC}/mandel.c
+	@${REINPLACE_CMD} -i '' -e 's|malloc.h|stdlib.h|' ${WRKSRC}/mandel.c
 
 .include <bsd.port.mk>
