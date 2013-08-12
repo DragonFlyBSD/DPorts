@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pmw
-# Date Created:				28 May 2004
-# Whom:					Brian Candler <B.Candler@pobox.com>
-#
-# $FreeBSD: ports/print/pmw/Makefile,v 1.9 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: Brian Candler <B.Candler@pobox.com>
+# $FreeBSD: print/pmw/Makefile 321320 2013-06-19 20:12:38Z linimon $
 
 PORTNAME=	pmw
 PORTVERSION=	4.12
@@ -11,7 +7,7 @@ CATEGORIES=	print audio
 MASTER_SITES=	ftp://ftp.univie.ac.at/applications/www.quercite.com/ \
 		http://www.quercite.com/
 
-MAINTAINER=	g.gonter@ieee.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High quality music typesetting program
 
 GNU_CONFIGURE=	yes
