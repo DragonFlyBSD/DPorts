@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-DBIx-Class-DateTime-Epoch/Makefile,v 1.12 2013/01/21 10:05:17 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-Class-DateTime-Epoch/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Class-DateTime-Epoch
 PORTVERSION=	0.10
@@ -21,7 +21,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-DBICx-TestDatabase>=0:${PORTSDIR}/databases/p5-DBICx-TestDatabase \
 		p5-DateTime-Format-SQLite>=0:${PORTSDIR}/devel/p5-DateTime-Format-SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::Class::DateTime::Epoch.3
 
