@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmball
-# Date created:				21 May 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/xmball/Makefile,v 1.13 2012/11/17 05:57:57 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/xmball/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xmball
 PORTVERSION=	5.5.2
@@ -16,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Masterball puzzle for X Window System
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext xt sm ice
 MAN1=		xmball.1
 MANCOMPRESSED=	no
