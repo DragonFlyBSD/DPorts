@@ -1,4 +1,4 @@
-# $FreeBSD: mail/prayer/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: mail/prayer/Makefile 324223 2013-08-04 12:33:50Z az $
 
 PORTNAME=	prayer
 PORTVERSION=	1.3.5
@@ -12,9 +12,8 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	c-client4:${PORTSDIR}/mail/cclient
 
-USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
-USES=		iconv shebangfix
+USES=		iconv shebangfix gmake perl5
+USE_PERL5=	build
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 SHEBANG_FILES=	utils/ucsnews.pl \
