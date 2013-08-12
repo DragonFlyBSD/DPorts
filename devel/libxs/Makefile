@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/libxs/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: devel/libxs/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	libxs
 PORTVERSION=	1.2.0
 CATEGORIES=	devel
 MASTER_SITES=	http://download.crossroads.io/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Open source lightweight messaging layer
 
 GNU_CONFIGURE=	yes
