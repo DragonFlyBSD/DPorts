@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/net/minissdpd/Makefile,v 1.8 2012/11/17 06:00:06 svnexp Exp $
+# $FreeBSD: net/minissdpd/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	minissdpd
 PORTVERSION=	1.2
@@ -10,9 +10,8 @@ MASTER_SITES=	http://miniupnp.free.fr/files/ \
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	UPnP IGD discovery speed enhancer
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_RC_SUBR=	minissdpd
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-D_GNU_SOURCE
 
