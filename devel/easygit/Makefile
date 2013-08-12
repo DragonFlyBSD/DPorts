@@ -2,7 +2,7 @@
 # Date created:				11 March 2009
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/easygit/Makefile,v 1.2 2012/11/17 05:55:41 svnexp Exp $
+# $FreeBSD: devel/easygit/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	easygit
@@ -19,7 +19,8 @@ COMMENT=	Easy wrapper for git
 RUN_DEPENDS=	git:${PORTSDIR}/devel/git
 
 DIST_SUBDIR=	eg/${PORTVERSION}_${PORTREVISION}
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/eg bin/easygit
