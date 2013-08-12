@@ -1,5 +1,5 @@
 # Created by: Bartlomiej Rutkowski <r@robakdesign.com>
-# $FreeBSD: net-mgmt/pftabled/Makefile 317790 2013-05-10 11:28:32Z bapt $
+# $FreeBSD: net-mgmt/pftabled/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	pftabled
 PORTVERSION=	1.09
@@ -25,9 +25,6 @@ PYTHONC_DESC=	A Sample Python Client
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPERLC}
-. if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-. endif
 PLIST_FILES+=	bin/pftabled-client.pl
 .endif
 
