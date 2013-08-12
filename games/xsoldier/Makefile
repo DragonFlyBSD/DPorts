@@ -2,7 +2,7 @@
 # Date created:		22 January 1997
 # Whom:			Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
 #
-# $FreeBSD: ports/games/xsoldier/Makefile,v 1.26 2012/11/17 05:57:58 svnexp Exp $
+# $FreeBSD: games/xsoldier/Makefile 324122 2013-08-01 20:22:27Z naddy $
 #
 
 PORTNAME=	xsoldier
@@ -16,7 +16,6 @@ COMMENT=	Space-based shoot-em up game for X11
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=/var
 MAKE_ARGS=	CC_OPTIMIZE="${CFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 USE_XORG=	x11 ice sm xpm
 MAN6=		xsoldier.6

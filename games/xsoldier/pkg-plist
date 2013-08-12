@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/games/xsoldier/pkg-plist,v 1.6 2012/11/17 05:57:58 svnexp Exp $
+@comment $FreeBSD: games/xsoldier/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/xsoldier
 share/examples/xsoldier/xsoldier.scores
 @exec cp %D/share/examples/xsoldier/xsoldier.scores %%SCOREFILE%% && chgrp games %%SCOREFILE%% && chmod 664 %%SCOREFILE%%
