@@ -2,7 +2,7 @@
 # Date created:		28 August 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/namefix/Makefile,v 1.17 2012/11/17 06:01:39 svnexp Exp $
+# $FreeBSD: sysutils/namefix/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	namefix
@@ -30,7 +30,8 @@ EXTRACT_AFTER_ARGS=	-bd -y >/dev/null 2>&1
 WRKSRC=		${WRKDIR}/${PORTNAME}.pl
 NO_BUILD=	yes
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 do-configure:
 .for bin in ${PORTNAME} ${PORTNAME}-cli
