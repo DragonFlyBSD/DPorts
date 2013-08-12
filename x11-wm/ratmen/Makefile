@@ -2,7 +2,7 @@
 # Date created:				2008-02-20
 # Whom:					alepulver
 #
-# $FreeBSD: x11-wm/ratmen/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: x11-wm/ratmen/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	ratmen
@@ -14,8 +14,9 @@ MASTER_SITES=	http://www.update.uu.se/~zrajm/programs/ratmen/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple program for displaying a menu in a window
 
+USES=		perl5
 USE_XORG=	x11
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 MAN1=		ratmen.1
 PLIST_FILES=	bin/ratmen
 
