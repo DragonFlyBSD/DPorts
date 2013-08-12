@@ -2,7 +2,7 @@
 # Date created:		24-Jul-2000
 # Whom:			Leo Kim <leo@florida.sarang.net>
 #
-# $FreeBSD: ports/devel/p5-B-Graph/Makefile,v 1.8 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: devel/p5-B-Graph/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	B-Graph
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl Compiler backend to diagram OP trees
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		B::Graph.3
 
 .include <bsd.port.mk>
