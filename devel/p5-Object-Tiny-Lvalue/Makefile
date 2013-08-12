@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Object-Tiny-Lvalue/Makefile,v 1.1 2013/01/07 10:58:51 svnexp Exp $
+# $FreeBSD: devel/p5-Object-Tiny-Lvalue/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Object-Tiny-Lvalue
 PORTVERSION=	1.07
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Minimal class builder with lvalue accessors
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Object::Tiny::Lvalue.3
 
