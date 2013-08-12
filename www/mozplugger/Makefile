@@ -1,10 +1,10 @@
 # Created by: Loren M. Lang <loren@north-winds.org>
-# $FreeBSD: ports/www/mozplugger/Makefile,v 1.21 2013/02/25 16:30:59 svnexp Exp $
+# $FreeBSD: www/mozplugger/Makefile 321579 2013-06-22 15:52:44Z miwi $
 
 PORTNAME=	mozplugger
 PORTVERSION=	2.1.3
 CATEGORIES=	www
-MASTER_SITES=	http://mozplugger.mozdev.org/files/
+MASTER_SITES=	http://www.ringofsaturn.com/distfiles/
 
 MAINTAINER=	rnejdl@ringofsaturn.com
 COMMENT=	Framework for loading web content in external viewers
