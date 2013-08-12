@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: ports/security/cksfv/Makefile,v 1.27 2013/01/15 13:46:57 svnexp Exp $
+# $FreeBSD: security/cksfv/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	cksfv
 PORTVERSION=	1.3.14
@@ -13,7 +13,6 @@ COMMENT=	Create or manipulate Simple File Verification (SFV) checksum files
 LICENSE=	GPLv2
 
 HAS_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--mandir=${PREFIX}/man --prefix=${PREFIX}
 
 MAN1=		cksfv.1
