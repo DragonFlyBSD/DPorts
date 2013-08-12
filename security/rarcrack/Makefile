@@ -1,7 +1,5 @@
-# New ports collection makefile for:   snoopy
-# Date created:			24 October 2007
-# Whom:                        Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: ports/security/rarcrack/Makefile,v 1.4 2012/11/17 06:01:18 svnexp Exp $
+# Created by: Philippe Audeoud <jadawin@tuxaco.net>
+# $FreeBSD: security/rarcrack/Makefile 323957 2013-07-30 12:27:03Z bapt $
 
 PORTNAME=	rarcrack
 PORTVERSION=	0.2
@@ -20,11 +18,14 @@ USE_BZIP2=	yes
 PLIST_FILES=	bin/rarcrack
 PORTDOCS=	README
 USE_GNOME=	libxml2
+USE_CSTD=	gnu89
 MAKE_ENV+=	PTHREAD_LIBS="${PTHREAD_LIBS}" PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
+
+.include <bsd.port.options.mk>
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rarcrack ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
