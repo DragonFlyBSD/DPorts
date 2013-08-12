@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/p5-File-Map/Makefile 319174 2013-05-27 08:38:56Z tobez $
+# $FreeBSD: devel/p5-File-Map/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-Map
 PORTVERSION=	0.57
@@ -20,7 +20,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings \
 		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		File::Map.3
 
