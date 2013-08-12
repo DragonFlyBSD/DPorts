@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Mail-Webmail-Gmail
-# Date created:				Jul 25 2004
-# Whom:					Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/mail/p5-Mail-Webmail-Gmail/Makefile,v 1.20 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: mail/p5-Mail-Webmail-Gmail/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-Webmail-Gmail
 PORTVERSION=	1.09
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Webmail::Gmail.3
 
