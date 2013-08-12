@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: security/tthsum/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: security/tthsum/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	tthsum
 PORTVERSION=	1.3.1
@@ -15,10 +15,8 @@ LICENSE=	GPLv3
 
 CONFLICTS=	microdc2-[0-9]*
 
-USE_GMAKE=	yes
+USES=		gmake
 MANCOMPRESSED=	yes
-
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		tthsum.1
 PLIST_FILES=	bin/tthsum
