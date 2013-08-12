@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/gcpio/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: archivers/gcpio/Makefile 324122 2013-08-01 20:22:27Z naddy $
 
 PORTNAME=	cpio
 PORTVERSION=	2.11
@@ -13,7 +13,6 @@ COMMENT=	GNU cpio copies files to and from archives
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--program-prefix=g \
 		--disable-silent-rules \
 		--with-rmt=/etc/rmt
