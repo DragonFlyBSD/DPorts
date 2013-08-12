@@ -1,5 +1,5 @@
 # Created by: rene
-# $FreeBSD: emulators/fuse-utils/Makefile 319775 2013-06-03 12:41:32Z rene $
+# $FreeBSD: emulators/fuse-utils/Makefile 323852 2013-07-28 20:35:56Z rene $
 
 PORTNAME=	fuse-utils
 PORTVERSION=	1.1.1
@@ -12,9 +12,8 @@ COMMENT=	Utilities from the Free Unix Spectrum Emulator
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-MAKE_JOBS_SAFE=	yes
-
 USES=		pkgconfig
+
 LIB_DEPENDS=	spectrum:${PORTSDIR}/emulators/libspectrum
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libspectrum-prefix=${LOCALBASE} \
