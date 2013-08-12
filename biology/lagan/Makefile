@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/biology/lagan/Makefile,v 1.6 2012/11/17 22:22:43 svnexp Exp $
+# $FreeBSD: biology/lagan/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	lagan
 PORTVERSION=	2.0
@@ -12,7 +12,8 @@ COMMENT=	Efficient tools for large-scale multiple alignments of genomic DNA
 
 LICENSE=	GPLv2
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 MAKE_JOBS_UNSAFE=yes
 
 SUB_FILES=	pkg-message
