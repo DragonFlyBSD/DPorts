@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: x11-wm/tvtwm/Makefile 320640 2013-06-11 20:49:22Z bsam $
+# $FreeBSD: x11-wm/tvtwm/Makefile 322010 2013-06-28 22:57:16Z bapt $
 
 PORTNAME=	tvtwm
 PORTVERSION=	pl11
@@ -13,7 +13,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Twm with a virtual desktop
 
 WRKSRC=		${WRKDIR}/tvtwm
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xbitmaps xpm xmu
 MAN1=		tvtwm.1
 MANCOMPRESSED=	no
