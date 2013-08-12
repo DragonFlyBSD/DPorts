@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: ports/games/xneko/Makefile,v 1.26 2013/01/26 16:56:10 svnexp Exp $
+# $FreeBSD: games/xneko/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xneko
 PORTVERSION=	1.0
@@ -14,7 +14,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	The classic cat-and-mouse
 
 NO_WRKSUBDIR=	yes
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11
 MAN6=		xneko.6
 PLIST_FILES=	bin/xneko
