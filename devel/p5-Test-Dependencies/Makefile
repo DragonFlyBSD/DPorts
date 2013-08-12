@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Test-Dependencies
-# Date created:				2006-07-12
-# Whom:	      				Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-#
-# $FreeBSD: ports/devel/p5-Test-Dependencies/Makefile,v 1.14 2012/11/17 05:56:32 svnexp Exp $
-#
+# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
+# $FreeBSD: devel/p5-Test-Dependencies/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Dependencies
 PORTVERSION=	0.12
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-rpm-build-perl>=0:${PORTSDIR}/devel/p5-rpm-build-perl \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Dependencies.3 \
 		Test::Dependencies::Heavy.3 \
