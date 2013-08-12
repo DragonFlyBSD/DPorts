@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-XML-Feed/Makefile 313179 2013-03-02 02:15:03Z tobez $
+# $FreeBSD: textproc/p5-XML-Feed/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Feed
 PORTVERSION=	0.52
@@ -28,7 +28,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-XML-RSS-LibXML>=0.30.04:${PORTSDIR}/textproc/p5-XML-RSS-LibXML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Feed.3 \
 		XML::Feed::Content.3 \
