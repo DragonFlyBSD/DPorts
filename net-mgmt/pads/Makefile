@@ -1,5 +1,5 @@
 # Created by: Andrew Thompson <andy@fud.org.nz>
-# $FreeBSD: net-mgmt/pads/Makefile 320742 2013-06-13 08:43:35Z bsam $
+# $FreeBSD: net-mgmt/pads/Makefile 321037 2013-06-16 11:29:27Z wg $
 
 PORTNAME=	pads
 PORTVERSION=	1.2
@@ -9,6 +9,9 @@ MASTER_SITES=	SF/passive/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Passively detect network assets
+
+CFLAGS+=	-Wno-return-type
+USE_CSTD=	gnu89
 
 LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
