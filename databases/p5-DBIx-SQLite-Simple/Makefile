@@ -2,7 +2,7 @@
 # Date created:		26 May 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-DBIx-SQLite-Simple/Makefile,v 1.10 2012/11/17 05:55:15 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-SQLite-Simple/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	DBIx-SQLite-Simple
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Class-Gomor>=0:${PORTSDIR}/devel/p5-Class-Gomor \
 		p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::SQLite::Simple.3 \
 	DBIx::SQLite::Simple::Table.3
