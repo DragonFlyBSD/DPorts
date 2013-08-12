@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: emulators/gngeo/Makefile 316753 2013-04-28 21:20:28Z bapt $
+# $FreeBSD: emulators/gngeo/Makefile 324056 2013-07-31 14:39:37Z bapt $
 
 PORTNAME=	gngeo
 PORTVERSION=	0.7
@@ -21,6 +21,8 @@ MAKE_JOBS_UNSAFE=	yes
 
 CPPFLAGS+=	${CFLAGS} `${SDL_CONFIG} --cflags` -I${LOCALBASE}/include
 LDFLAGS+=	`${SDL_CONFIG} --libs` -L${LOCALBASE}/lib
+USE_CSTD=	gnu89
+MAKE_ARGS+=	CC_FOR_BUILD=${CC}
 
 SUB_FILES=	pkg-message
 
