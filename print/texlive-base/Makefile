@@ -1,8 +1,8 @@
-# $FreeBSD: print/texlive-base/Makefile 319700 2013-06-02 17:53:46Z hrs $
+# $FreeBSD: print/texlive-base/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	texlive
 PORTVERSION=	20120701
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2012/
 PKGNAMESUFFIX=	-base
