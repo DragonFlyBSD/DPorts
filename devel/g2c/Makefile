@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/g2c/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: devel/g2c/Makefile 323926 2013-07-29 21:59:12Z bapt $
 
 PORTNAME=	g2c
 PORTVERSION=	0.4
@@ -9,6 +9,9 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Glade to C translator
+
+DEPRECATED=	Not supported upstream anymore
+EXPIRATION_DATE=	2013-08-29
 
 PLIST_FILES=	bin/g2c
 USES=        pathfix
