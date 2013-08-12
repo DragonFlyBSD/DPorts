@@ -1,5 +1,5 @@
-# Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: dns/p5-Net-DRI/Makefile 317236 2013-05-03 20:26:49Z swills $
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: dns/p5-Net-DRI/Makefile 323891 2013-07-29 15:03:58Z feld $
 #
 
 PORTNAME=	Net-DRI
@@ -8,7 +8,7 @@ CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	A Perl library to access Domain Name Registries/Registrars
 
 RUN_DEPENDS=	p5-DateTime>0:${PORTSDIR}/devel/p5-DateTime \
