@@ -2,7 +2,7 @@
 # Date created:		2009-01-19
 # Whom:			Christopher Key <cjk32@cam.ac.uk>
 #
-# $FreeBSD: www/p5-WebService-MusicBrainz/Makefile 302967 2012-08-22 21:42:37Z linimon $
+# $FreeBSD: www/p5-WebService-MusicBrainz/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	WebService-MusicBrainz
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WebService::MusicBrainz.3 \
 		WebService::MusicBrainz::Artist.3 \
