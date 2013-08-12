@@ -3,7 +3,7 @@
 # Date created:			Fab 21, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: devel/make++/Makefile 313795 2013-03-10 03:11:05Z linimon $
+# $FreeBSD: devel/make++/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	make++
@@ -45,10 +45,6 @@ MAN1=		makepp.1 makepp_build_algorithm.1 \
 		perl_performance.1
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-.endif
 
 .if defined(NOPORTDOCS)
 CONFIGURE_ARGS+=--htmldir=none
