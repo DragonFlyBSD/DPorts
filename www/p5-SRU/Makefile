@@ -1,5 +1,5 @@
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/www/p5-SRU/Makefile,v 1.13 2013/01/23 16:48:23 svnexp Exp $
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: www/p5-SRU/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SRU
 PORTVERSION=	1.00
@@ -43,6 +43,7 @@ MAN3=	Catalyst::Controller::SRU.3 \
 	SRU::Utils::XML.3 \
 	SRU::Utils::XMLTest.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
