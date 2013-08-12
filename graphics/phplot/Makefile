@@ -1,8 +1,9 @@
 # Created by: yukinopo@livedoor.com
-# $FreeBSD: graphics/phplot/Makefile 320559 2013-06-11 13:47:54Z ak $
+# $FreeBSD: graphics/phplot/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	phplot
 PORTVERSION=	6.1.0
+PORTREVISION=	1
 CATEGORIES=	graphics www
 MASTER_SITES=	SF:source1 \
 		SF/${PORTNAME}/Manual/20130511:source2
