@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: finance/p5-Business-OnlinePayment/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Business-OnlinePayment
 PORTVERSION=	3.02
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::OnlinePayment.3 \
 		Business::FraudDetect.3 \
