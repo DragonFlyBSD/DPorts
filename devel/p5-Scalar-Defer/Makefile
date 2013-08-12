@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Scalar-Defer
-# Date created:		2006-07-20
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Scalar-Defer/Makefile,v 1.18 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Scalar-Defer/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Scalar-Defer
 PORTVERSION=	0.23
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Class-InsideOut>=0:${PORTSDIR}/devel/p5-Class-InsideOut \
 		p5-Exporter-Lite>=0:${PORTSDIR}/devel/p5-Exporter-Lite
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Scalar::Defer.3
 
