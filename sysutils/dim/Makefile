@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/dim/Makefile 318212 2013-05-15 01:23:13Z miwi $
+# $FreeBSD: sysutils/dim/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	dim
 PORTVERSION=	1.1
@@ -16,9 +16,9 @@ LICENSE=	GPLv2 # (or later)
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	dim.pl
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 PLIST_FILES=	bin/dim
 
