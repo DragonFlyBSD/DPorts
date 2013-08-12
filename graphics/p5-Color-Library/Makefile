@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Color-Library/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: graphics/p5-Color-Library/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Color-Library
 PORTVERSION=	0.02.1
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Color::Library.3 \
 		Color::Library::Color.3 \
