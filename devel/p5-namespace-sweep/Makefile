@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-namespace-sweep/Makefile,v 1.1 2013/01/14 11:44:48 svnexp Exp $
+# $FreeBSD: devel/p5-namespace-sweep/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	namespace-sweep
 PORTVERSION=	0.006
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-B-Hooks-EndOfScope>=0.09:${PORTSDIR}/devel/p5-B-Hooks-EndOfSco
 		p5-Sub-Name>=0:${PORTSDIR}/devel/p5-Sub-Name
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	namespace::sweep.3
 
