@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/telak/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: graphics/telak/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	telak
 PORTVERSION=	0.6
@@ -18,7 +18,6 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 
 USES=		gmake
 USE_EFL=	imlib2
-MAKE_JOBS_SAFE=	yes
 
 ALL_TARGET=	${PORTNAME}
 
