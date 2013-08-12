@@ -2,7 +2,7 @@
 # Date created:				19 Feb 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-String-Tokenizer/Makefile,v 1.5 2012/11/17 06:02:08 svnexp Exp $
+# $FreeBSD: textproc/p5-String-Tokenizer/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	String-Tokenizer
@@ -16,6 +16,7 @@ COMMENT=	A simple string tokenizer
 
 MAN3=	String::Tokenizer.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
