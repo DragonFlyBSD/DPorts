@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/archivers/p5-POE-Filter-Zlib/Makefile,v 1.23 2012/12/18 07:13:55 svnexp Exp $
+# $FreeBSD: archivers/p5-POE-Filter-Zlib/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Filter-Zlib
 PORTVERSION=	2.0.2
@@ -15,7 +15,8 @@ COMMENT=	POE filter wrapped around Compress::Zlib
 BUILD_DEPENDS=	p5-POE>=0.38:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Filter::Zlib.3 \
 		POE::Filter::Zlib::Stream.3
