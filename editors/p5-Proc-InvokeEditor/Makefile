@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Proc-InvokeEditor
-# Date created:		2011-04-05
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/editors/p5-Proc-InvokeEditor/Makefile,v 1.5 2012/11/17 05:57:17 svnexp Exp $
-#
+# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
+# $FreeBSD: editors/p5-Proc-InvokeEditor/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Proc-InvokeEditor
 PORTVERSION=	1.06
@@ -22,7 +18,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Carp-Assert>=0:${PORTSDIR}/devel/p5-Carp-Assert
 RUN_DEPENDS=	p5-Carp-Assert>=0:${PORTSDIR}/devel/p5-Carp-Assert
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Proc::InvokeEditor.3
 
