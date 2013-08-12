@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	sig2dot
-# Date created:			Aug 8, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: ports/security/sig2dot/Makefile,v 1.10 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: security/sig2dot/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	sig2dot
 PORTVERSION=	0.35
@@ -19,15 +14,13 @@ COMMENT=	GPG/PGP Keyring Graph Generator
 CONFLICTS_INSTALL=signing-party-[0-9]*
 
 PLIST_FILES=	bin/sig2dot
-USE_PERL5=	yes
 EXTRACT_CMD=	${CP}
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	${WRKDIR}
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
-
-post-patch:
-	@${PERL} -pi -e "s|/usr/bin/perl|${PERL}|g" ${WRKSRC}/sig2dot.pl
+USES=		shebangfix perl5
+SHEBANG_FILES=	sig2dot.pl
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sig2dot.pl ${PREFIX}/bin/sig2dot
