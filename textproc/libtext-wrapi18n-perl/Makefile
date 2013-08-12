@@ -2,7 +2,7 @@
 # Date created:				08 Januar 2006
 # Whom:					Meno Abels <meno.abels@adviser.com>
 #
-# $FreeBSD: ports/textproc/libtext-wrapi18n-perl/Makefile,v 1.5 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: textproc/libtext-wrapi18n-perl/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	libtext-wrapi18n-perl
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	libtext-charwidth-perl>=0:${PORTSDIR}/textproc/libtext-charwidth-
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::WrapI18N.3
 
