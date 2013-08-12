@@ -1,8 +1,9 @@
 # Created by: Lars Köller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: sysutils/apcupsd/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/apcupsd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	apcupsd
 PORTVERSION=	3.14.10
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20-%20Stable/${PORTVERSION}:src_sf \
 		http://T32.TecNik93.com/FreeBSD/ports/${PORTNAME}/sources/:src_bk \
