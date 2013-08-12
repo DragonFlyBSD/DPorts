@@ -2,7 +2,7 @@
 # Date created:				Mar  2004
 # Whom:					Autrijus Tang <autrijus@autrijus.org>
 #
-# $FreeBSD: ports/devel/p5-Algorithm-Annotate/Makefile,v 1.6 2012/11/17 05:56:03 svnexp Exp $
+# $FreeBSD: devel/p5-Algorithm-Annotate/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Algorithm-Annotate
@@ -17,7 +17,8 @@ COMMENT=	Represent a series of changes in annotate form
 BUILD_DEPENDS=	p5-Algorithm-Diff>=0:${PORTSDIR}/devel/p5-Algorithm-Diff
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Algorithm::Annotate.3
 
