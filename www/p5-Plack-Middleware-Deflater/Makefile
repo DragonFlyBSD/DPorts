@@ -1,12 +1,7 @@
-# New ports collection makefile for:	Plack::Middleware::Deflater
-# Date created:		30 Nov 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Plack-Middleware-Deflater/Makefile,v 1.8 2012/11/17 06:02:53 svnexp Exp $
-#
+# $FreeBSD: www/p5-Plack-Middleware-Deflater/Makefile 324545 2013-08-10 15:35:19Z kuriyama $
 
 PORTNAME=	Plack-Middleware-Deflater
-PORTVERSION=	0.08
+PORTVERSION=	0.11
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:KAZEBURO
@@ -22,7 +17,8 @@ TEST_DEPENDS=	\
 	p5-IO-Handle-Util>0:${PORTSDIR}/devel/p5-IO-Handle-Util \
 	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 
-PERL_CONFIGURE=	yes
+USES=	perl5
+USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::Deflater.3
 
