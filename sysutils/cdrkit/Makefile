@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cdrkit
-# Date created:				12 Dec 2007
-# Whom:					Pav Lucistnik <pav@FreeBSD.org>
-#
-# $FreeBSD: sysutils/cdrkit/Makefile 316683 2013-04-27 18:25:24Z mva $
-#
+# Created by: Pav Lucistnik <pav@FreeBSD.org>
+# $FreeBSD: sysutils/cdrkit/Makefile 322611 2013-07-10 04:05:14Z miwi $
 
 PORTNAME=	cdrkit
 PORTVERSION=	1.1.11
@@ -11,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://cdrkit.org/releases/ \
 		http://debburn.alioth.debian.org/
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	jharris@widomaker.com
 COMMENT=	Command-line CD/DVD writing suite
 
 USES=		cmake iconv
