@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-HTML-SuperForm
-# Date created:			14 Jul 2009
-# Whom:					Philip M. Goillucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/textproc/p5-HTML-SuperForm/Makefile,v 1.6 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Philip M. Goillucci <pgollucci@p6m7g8.com>
+# $FreeBSD: textproc/p5-HTML-SuperForm/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-SuperForm
 PORTVERSION=	1.09
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	HTML form generator
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
