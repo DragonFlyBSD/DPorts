@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-POE-Component-PubSub
-# Date created:		2012-03-07
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-POE-Component-PubSub/Makefile,v 1.2 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: net/p5-POE-Component-PubSub/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-PubSub
 PORTVERSION=	0.05
@@ -18,7 +14,8 @@ COMMENT=	A generic publish/subscribe POE::Component
 BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	POE::Component::PubSub.3
 
