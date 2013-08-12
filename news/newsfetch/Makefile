@@ -2,7 +2,7 @@
 # Date created:		12 September 1997
 # Whom:			Jun-ichiro itojun Itoh <itojun@itojun.org>
 #
-# $FreeBSD: ports/news/newsfetch/Makefile,v 1.21 2012/11/17 06:00:42 svnexp Exp $
+# $FreeBSD: news/newsfetch/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	newsfetch
@@ -12,7 +12,7 @@ CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	system/news/readers
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Download news articles from NNTP server
 
 MAKE_ENV=	BINDIR="${PREFIX}/bin" MANDIR="${PREFIX}/man/man"
