@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-constant-lexical
-# Date created:		2008-11-16
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-constant-lexical/Makefile,v 1.6 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-constant-lexical/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	constant-lexical
 PORTVERSION=	2.0001
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Sub-Delete>=0:${PORTSDIR}/devel/p5-Sub-Delete \
 		p5-Lexical-Var>=0:${PORTSDIR}/devel/p5-Lexical-Var
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		constant::lexical.3
 
