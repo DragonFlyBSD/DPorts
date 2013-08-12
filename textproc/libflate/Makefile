@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/textproc/libflate/Makefile,v 1.1 2013/02/08 12:59:05 svnexp Exp $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: textproc/libflate/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	libflate
 PORTVERSION=	2.0
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://flate.dead-inside.org/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Template library used to deal with html code in CGI applications
 
 PLIST_FILES=	lib/${PORTNAME}.a \
