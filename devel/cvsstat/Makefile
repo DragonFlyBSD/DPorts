@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cvsstat
-# Date created:				27 August 2001
-# Whom:					petef
-#
-# $FreeBSD: ports/devel/cvsstat/Makefile,v 1.12 2012/11/17 05:55:39 svnexp Exp $
-#
+# Created by: petef
+# $FreeBSD: devel/cvsstat/Makefile 323795 2013-07-27 16:06:25Z az $
 
 PORTNAME=	cvsstat
 PORTVERSION=	2.24
@@ -26,7 +22,7 @@ do-extract:
 	@${CP} -p ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${WRKSRC}
 
 post-patch:
-	@${PERL} -pi -e 's,^#!/usr/bin/perl,#!${PERL},' ${WRKSRC}/cvsstat
+	@${REINPLACE_CMD} -i '' -e 's|perl -S|${PERL} -S|' ${WRKSRC}/cvsstat
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cvsstat ${PREFIX}/bin
