@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Similarity/Makefile 321796 2013-06-26 14:43:13Z culot $
+# $FreeBSD: textproc/p5-Text-Similarity/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Similarity
 PORTVERSION=	0.10
@@ -12,7 +12,8 @@ COMMENT=	Measure the similarity of text documents
 
 LICENSE=	GPLv2 # (or later)
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		text_similarity.pl.1
 MAN3=		Text::OverlapFinder.3 \
