@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Perl6-Export-Attrs
-# Date created:				2007/07/28
-# Whom:					chinsan
-#
-# $FreeBSD: ports/devel/p5-Perl6-Export-Attrs/Makefile,v 1.5 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: devel/p5-Perl6-Export-Attrs/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Perl6-Export-Attrs
 PORTVERSION=	0.0.3
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Attribute-Handlers>=0:${PORTSDIR}/devel/p5-Attribute-Handlers 
 		p5-version>=0:${PORTSDIR}/devel/p5-version
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Perl6::Export::Attrs.3
 
