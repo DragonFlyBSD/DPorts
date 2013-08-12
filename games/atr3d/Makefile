@@ -1,9 +1,5 @@
-# New ports collection makefile for:	atr3d
-# Date created:				11 Jun 2003
-# Whom:					Kirill Ponomarew <ponomarew@oberon.net>
-#
-# $FreeBSD: ports/games/atr3d/Makefile,v 1.43 2012/11/17 05:57:32 svnexp Exp $
-#
+# Created by: Kirill Ponomarew <ponomarew@oberon.net>
+# $FreeBSD: games/atr3d/Makefile 323795 2013-07-27 16:06:25Z az $
 
 PORTNAME=	atr3d
 PORTVERSION=	0.6
@@ -44,8 +40,9 @@ CONFIGURE_ARGS+=	--disable-sound
 .endif
 
 pre-patch:
-	@${PERL} -pi.orig -e 's|^aclocal|${ACLOCAL}|; \
-		s|^autoconf|${AUTOCONF}|; s|^automake|${AUTOMAKE}|' \
+	@${REINPLACE_CMD} -i '' -e 's|^aclocal|${ACLOCAL}|' \
+			-e 's|^autoconf|${AUTOCONF}|' \
+			-e  's|^automake|${AUTOMAKE}|' \
 		${WRKSRC}/autogen.sh
 	@${REINPLACE_CMD} -e 's|-lopenal|& -lalut|' ${WRKSRC}/Makefile.am
 
