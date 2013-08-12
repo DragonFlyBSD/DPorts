@@ -1,9 +1,5 @@
-# New ports collection makefile for:	MooseX-Declare
-# Date created:	   13 May 2009
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-MooseX-Declare/Makefile,v 1.8 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-MooseX-Declare/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-Declare
 PORTVERSION=	0.35
@@ -26,7 +22,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Declare.3 MooseX::Declare::Context.3 \
 		MooseX::Declare::Context::Namespaced.3 \
