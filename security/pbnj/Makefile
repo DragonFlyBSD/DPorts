@@ -2,7 +2,7 @@
 # Date created:					July 26, 2006
 # Whom:						Joshua D. Abraham <jabra@ccs.neu.edu>
 #
-# $FreeBSD: ports/security/pbnj/Makefile,v 1.9 2012/11/17 06:01:14 svnexp Exp $
+# $FreeBSD: security/pbnj/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	pbnj
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML \
 RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		nmap:${PORTSDIR}/security/nmap
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	scanpbnj.1p \
 	outputpbnj.1p \
