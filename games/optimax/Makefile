@@ -2,7 +2,7 @@
 # Date created:				2008-01-15
 # Whom:					alepulver
 #
-# $FreeBSD: games/optimax/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: games/optimax/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	optimax
@@ -21,8 +21,9 @@ COMMENT=	A Core War optimizer written in Perl
 
 RUN_DEPENDS=	p5-Tk>=0:${PORTSDIR}/x11-toolkits/p5-Tk
 
+USES=		perl5
 USE_ZIP=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 WRKSRC=		${WRKDIR}/publish_${PORTVERSION:S/.//}
 BUILD_WRKSRC=	${WRKSRC}/optimars/optimars_0.1
 ALL_TARGET=	exmars
