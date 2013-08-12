@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/security/pure-sfv/Makefile,v 1.9 2013/01/15 13:46:58 svnexp Exp $
+# $FreeBSD: security/pure-sfv/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	pure-sfv
 PORTVERSION=	0.3
@@ -12,8 +12,7 @@ COMMENT=	Utility to test and create .sfv files
 
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
+USES=		gmake
 
 WRKSRC=		${WRKDIR}
 
