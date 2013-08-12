@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Every
-# Date created:				05 September 2008
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Every/Makefile,v 1.6 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Every/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Every
 PORTVERSION=	0.08
@@ -18,7 +14,8 @@ COMMENT=	Return true every N cycles or S seconds
 BUILD_DEPENDS=	p5-Devel-Callsite>=0.04:${PORTSDIR}/devel/p5-Devel-Callsite
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Every.3
 
