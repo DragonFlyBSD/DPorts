@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Shout
-# Date created:				18 April 2001
-# Whom:					leo
-#
-# $FreeBSD: ports/audio/p5-Shout/Makefile,v 1.13 2012/11/17 05:54:40 svnexp Exp $
-#
+# Created by: leo
+# $FreeBSD: audio/p5-Shout/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Shout
 PORTVERSION=	2.1
@@ -16,14 +12,15 @@ COMMENT=	Perl glue for libshout MP3 streaming source library
 
 LIB_DEPENDS=	shout.5:${PORTSDIR}/audio/libshout2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Shout.3
 
 DOCSDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 
 post-patch:
-	@${PERL} -i -pe 's/CCFLAGS/INC/;' ${WRKSRC}/Makefile.PL
+	${REINPLACE_CMD} -i '' -e 's/CCFLAGS/INC/' ${WRKSRC}/Makefile.PL
 
 post-configure:
 	@${PERL} -i -pe '$$_ .= " ${PTHREAD_LIBS}" if /^LDDLFLAGS/;' ${WRKSRC}/Makefile
