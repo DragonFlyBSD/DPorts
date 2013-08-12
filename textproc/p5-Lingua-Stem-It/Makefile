@@ -2,7 +2,7 @@
 # Date created:				31 Dec 2003
 # Whom:					Thorsten Greiner <thorsten.greiner@web.de>
 #
-# $FreeBSD: ports/textproc/p5-Lingua-Stem-It/Makefile,v 1.7 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: textproc/p5-Lingua-Stem-It/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=		Lingua-Stem-It
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=		p5-
 MAINTAINER=		ports@FreeBSD.org
 COMMENT=		Stemmer for Italian
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Lingua::Stem::It.3
 
