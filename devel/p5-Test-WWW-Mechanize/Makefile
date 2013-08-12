@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Mechanize
-# Date created:				2005-02-13
-# Whom:	      				aturetta@commit.it
-#
-# $FreeBSD: ports/devel/p5-Test-WWW-Mechanize/Makefile,v 1.24 2012/11/17 05:56:34 svnexp Exp $
-#
+# Created by: aturetta@commit.it
+# $FreeBSD: devel/p5-Test-WWW-Mechanize/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-WWW-Mechanize
 PORTVERSION=	1.44
@@ -26,7 +22,8 @@ BUILD_DEPENDS=	p5-Carp-Assert-More>=0:${PORTSDIR}/devel/p5-Carp-Assert-More \
 		p5-libwww>=6.02:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::WWW::Mechanize.3
 
