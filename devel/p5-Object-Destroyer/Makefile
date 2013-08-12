@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Object-Destroyer
-# Date created:		2010-11-16
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Object-Destroyer/Makefile,v 1.3 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Object-Destroyer/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Object-Destroyer
 PORTVERSION=	2.01
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Make objects with circular references DESTROY normally
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Object::Destroyer.3
 
