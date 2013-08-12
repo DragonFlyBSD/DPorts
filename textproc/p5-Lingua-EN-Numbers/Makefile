@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua::EN::Numbers
-# Date created:				31 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/textproc/p5-Lingua-EN-Numbers/Makefile,v 1.9 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-Lingua-EN-Numbers/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Lingua-EN-Numbers
 PORTVERSION=	1.04
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Converts numeric values into their English string equivalents
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Lingua::EN::Numbers.3
 
