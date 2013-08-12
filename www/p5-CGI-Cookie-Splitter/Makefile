@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	CGI::Cookie::Splitter
-# Date created:			Nov 29, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/p5-CGI-Cookie-Splitter/Makefile,v 1.4 2012/11/17 06:02:45 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/p5-CGI-Cookie-Splitter/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CGI-Cookie-Splitter
 PORTVERSION=	0.02
@@ -19,7 +16,8 @@ BUILD_DEPENDS=	p5-CGI-Simple>=0:${PORTSDIR}/www/p5-CGI-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::Cookie::Splitter.3
 
