@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-GitHub-Gist
-# Date created:				2010-09-02
-# Whom:					Denny Lin <dennylin93@hs.ntnu.edu.tw>
-#
-# $FreeBSD: ports/www/p5-WWW-GitHub-Gist/Makefile,v 1.10 2012/11/17 06:02:54 svnexp Exp $
-#
+# Created by: Denny Lin <dennylin93@hs.ntnu.edu.tw>
+# $FreeBSD: www/p5-WWW-GitHub-Gist/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-GitHub-Gist
 PORTVERSION=	0.17
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
 		p5-Moo>=0:${PORTSDIR}/devel/p5-Moo
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::GitHub::Gist.3 \
 		WWW::GitHub::Gist::v3.3
