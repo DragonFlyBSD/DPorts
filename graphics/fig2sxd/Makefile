@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/graphics/fig2sxd/Makefile,v 1.14 2012/11/17 05:58:05 svnexp Exp $
+# $FreeBSD: graphics/fig2sxd/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	fig2sxd
 PORTVERSION=	0.21
@@ -10,8 +10,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Convert .xfig files to the OpenOffice draw format
 
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
+USES=		gmake
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
