@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: deskutils/jlj/Makefile 317593 2013-05-07 09:15:49Z ehaupt $
+# $FreeBSD: deskutils/jlj/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	jlj
 PORTVERSION=	2.12
@@ -13,8 +13,8 @@ COMMENT=	Jerry's command-line LiveJournal.com entry system
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=		shebangfix
-USE_PERL5_RUN=	yes
+USES=		shebangfix perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
