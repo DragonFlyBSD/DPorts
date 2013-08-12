@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/p5-v6/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: lang/p5-v6/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	v6
 PORTVERSION=	0.017
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Data-Bind>=0.28:${PORTSDIR}/devel/p5-Data-Bind \
 		p5-YAML-Syck>=0:${PORTSDIR}/textproc/p5-YAML-Syck
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	v6.3 \
 	Pugs::Compiler::Perl6.3 \
