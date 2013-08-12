@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/devel/bunny/Makefile,v 1.10 2013/01/15 13:46:53 svnexp Exp $
+# $FreeBSD: devel/bunny/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	bunny
 PORTVERSION=	0.93
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Closed loop, high-performance, general purpose protocol-blind fuzzer
-
-MAKE_JOBS_SAFE=	yes
 
 PROJECTHOST=	bunny-the-fuzzer
 WRKSRC=		${WRKDIR}/${PORTNAME}
