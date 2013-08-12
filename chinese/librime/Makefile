@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/librime/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: chinese/librime/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	librime
 PORTVERSION=	0.9.7
@@ -18,10 +18,10 @@ LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs \
 		opencc:${PORTSDIR}/chinese/opencc \
 		yaml-cpp:${PORTSDIR}/devel/yaml-cpp
 
-USES=		cmake pkgconfig gettext
+USES=		cmake pkgconfig gettext perl5
+USE_PERL5=	build patch
 USE_LDCONFIG=	yes
 USE_XORG=	xproto
-USE_PERL5_BUILD=	yes
 LDFLAGS+=	-lintl
 
 PLIST_SUB=	VER=${PORTVERSION}
