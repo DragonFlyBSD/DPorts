@@ -2,7 +2,7 @@
 # Date created:				12 December 2000
 # Whom:					dannyman <dannyman@tellme.com>
 #
-# $FreeBSD: ports/textproc/sdf/Makefile,v 1.9 2012/11/17 06:02:21 svnexp Exp $
+# $FreeBSD: textproc/sdf/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	sdf
@@ -16,7 +16,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple Document Format - "author-friendly" mark-up system
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pod2sdf.1
 
