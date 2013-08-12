@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-DocSet/Makefile 315981 2013-04-17 16:02:36Z crees $
+# $FreeBSD: textproc/p5-DocSet/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DocSet
 PORTVERSION=	0.19
@@ -13,8 +13,6 @@ COMMENT=	Documentation projects builder in HTML, PS, and PDF formats
 
 BUILD_DEPENDS=	p5-Pod-POM>=0:${PORTSDIR}/textproc/p5-Pod-POM \
 		p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit
-
-MAKE_JOBS_SAFE=  yes
 
 MAN1=	docset_build.1
 
@@ -39,6 +37,7 @@ MAN3=	DocSet.3 \
 	DocSet::DocSet::PSPDF.3 \
 	DocSet::Util.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
