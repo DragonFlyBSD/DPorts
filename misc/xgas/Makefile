@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xgas
-# Date created:         20 Oct 1996
-# Whom:                 Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/misc/xgas/Makefile,v 1.15 2012/11/17 05:59:46 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: misc/xgas/Makefile 321997 2013-06-28 22:10:14Z bapt $
 
 PORTNAME=	xgas
 PORTVERSION=	1.0
@@ -16,7 +12,7 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The animated simulation of an ideal gas
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xt
 MAN1=		xgas.1
 PLIST_FILES=	bin/xgas lib/X11/app-defaults/XGas
