@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: news/grn/Makefile 315433 2013-03-28 03:28:30Z eadler $
+# $FreeBSD: news/grn/Makefile 324036 2013-07-31 11:56:17Z az $
 
 PORTNAME=	grn
 PORTVERSION=	0.0.28
@@ -11,8 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A NNTP client for Gnome
 
 USE_BZIP2=	yes
-USE_PERL5=	yes
-USES=        pathfix
+USES=        pathfix perl5
 USE_GNOME=	gnomelibs gnomeprefix
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
