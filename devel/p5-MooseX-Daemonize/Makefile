@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Daemonize/Makefile 318155 2013-05-14 09:46:26Z tobez $
+# $FreeBSD: devel/p5-MooseX-Daemonize/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-Daemonize
 PORTVERSION=	0.18
@@ -21,7 +21,8 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 DEPRECATED=	Deprecated by upstream, use devel/p5-Daemon-Control instead
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MooseX::Daemonize.3 \
 	MooseX::Daemonize::Core.3 \
