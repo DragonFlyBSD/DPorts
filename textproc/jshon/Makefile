@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/jshon/Makefile,v 1.1 2013/01/23 14:46:36 svnexp Exp $
+# $FreeBSD: textproc/jshon/Makefile 322325 2013-07-05 13:44:31Z bapt $
 
 PORTNAME=	jshon
 PORTVERSION=	20121210
@@ -11,7 +11,7 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	jansson:${PORTSDIR}/devel/jansson
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	keenerd
 GH_COMMIT=	b21bc98
