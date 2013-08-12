@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Config-AutoConf/Makefile,v 1.11 2012/12/31 17:46:31 svnexp Exp $
+# $FreeBSD: devel/p5-Config-AutoConf/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Config-AutoConf
 PORTVERSION=	0.22
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Capture-Tiny>=0:${PORTSDIR}/devel/p5-Capture-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Config::AutoConf.3
 
