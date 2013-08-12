@@ -2,7 +2,7 @@
 # Date created:				02 September 2011
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTML-Mason-PSGIHandler/Makefile,v 1.3 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Mason-PSGIHandler/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	HTML-Mason-PSGIHandler
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-CGI-PSGI>0:${PORTSDIR}/www/p5-CGI-PSGI \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Plack>=0:${PORTSDIR}/www/p5-Plack
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Mason::PSGIHandler.3
 
