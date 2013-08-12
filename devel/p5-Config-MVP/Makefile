@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: ports/devel/p5-Config-MVP/Makefile,v 1.13 2013/02/01 10:59:45 svnexp Exp $
+# $FreeBSD: devel/p5-Config-MVP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Config-MVP
 PORTVERSION=	2.200003
@@ -26,7 +26,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Config::MVP.3 \
 		Config::MVP::Assembler.3 \
