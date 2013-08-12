@@ -1,17 +1,13 @@
-# Ports collection makefile for:	rubygem-rack-cache
-# Date created:				8 Sept 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/www/rubygem-rack-cache/Makefile,v 1.6 2012/11/17 06:03:04 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: www/rubygem-rack-cache/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	rack-cache
 PORTVERSION=	1.2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
-COMMENT=	A piece of rack middleware to enable HTTP caching
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Rack middleware to enable HTTP caching
 
 RUN_DEPENDS=	rubygem-rack>=0.4:${PORTSDIR}/www/rubygem-rack
 
