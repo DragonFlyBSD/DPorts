@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/MooseX-SimpleConfig
-# Date created:				25 February 2009
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-MooseX-SimpleConfig/Makefile,v 1.8 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-MooseX-SimpleConfig/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	MooseX-SimpleConfig
 PORTVERSION=	0.09
@@ -19,11 +15,13 @@ RUN_DEPENDS=	p5-Moose>=0.35:${PORTSDIR}/devel/p5-Moose \
 		p5-Config-Any>=0.13:${PORTSDIR}/devel/p5-Config-Any
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::SimpleConfig.3
 
 post-patch:
-	@${PERL} -pi -e '$$_="" if m/Test::More|auto_install/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -e '/auto_install/d' -e '/Test::More/d' \
+		${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
