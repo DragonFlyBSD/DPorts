@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Perlanet/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Perlanet/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Perlanet
 PORTVERSION=	0.56
@@ -28,7 +28,8 @@ BUILD_DEPENDS=	p5-CHI>=0:${PORTSDIR}/devel/p5-CHI \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		perlanet.1
 MAN3=		Perlanet.3 \
