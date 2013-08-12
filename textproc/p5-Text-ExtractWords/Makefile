@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Text-ExtractWords
-# Date created:				Oct 24 2003
-# Whom:					clsung@dragon2.net
-#
-# $FreeBSD: ports/textproc/p5-Text-ExtractWords/Makefile,v 1.5 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: clsung@dragon2.net
+# $FreeBSD: textproc/p5-Text-ExtractWords/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-ExtractWords
 PORTVERSION=	0.08
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for extract words from strings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::ExtractWords.3
 
