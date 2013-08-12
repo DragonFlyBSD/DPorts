@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Munhwa fonts collection(cid)
-# Date created:		30 Jun 1999
-# Whom:			CHOI Junho <cjh@kr.freebsd.org>
-#
-# $FreeBSD: ports/korean/munhwafonts-cid/Makefile,v 1.10 2012/11/17 05:58:47 svnexp Exp $
-#
+# Created by: Junho CHOI <junho.choi@gmail.com>
+# $FreeBSD: korean/munhwafonts-cid/Makefile 321160 2013-06-17 23:04:51Z jkim $
 
 PORTNAME=	munhwafonts-cid
 PORTVERSION=	1.0
