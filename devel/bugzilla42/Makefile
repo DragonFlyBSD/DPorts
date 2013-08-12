@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bugzilla42/Makefile 321428 2013-06-20 21:54:02Z ohauer $
+# $FreeBSD: devel/bugzilla42/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	bugzilla
 PORTVERSION=	4.2.6
@@ -27,7 +27,8 @@ RUN_DEPENDS=	\
 
 LATEST_LINK=	bugzilla42
 
-USE_PERL5=	yes
+USES=		perl5
+USE_PERL5=	patch run build
 
 BINMODE=	700
 
