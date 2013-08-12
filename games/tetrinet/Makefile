@@ -2,7 +2,7 @@
 # Date created:		23 Februari 2001
 # Whom:			Fredrik Carlsson <fredrik@wasadata.com>
 #
-# $FreeBSD: ports/games/tetrinet/Makefile,v 1.11 2012/12/18 22:59:15 svnexp Exp $
+# $FreeBSD: games/tetrinet/Makefile 323300 2013-07-19 14:59:11Z johans $
 #
 
 PORTNAME=	tetrinet
@@ -21,6 +21,10 @@ PLIST_FILES=	bin/tetrinet bin/tetrinet-server
 .if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	README tetrinet.txt
 .endif
+
+post-patch:
+	${REINPLACE_CMD} -e '/-log/n; s/[[:<:]]log[[:>:]]/dolog/g' \
+		${WRKSRC}/tetrinet.h ${WRKSRC}/tetrinet.c ${WRKSRC}/sockets.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tetrinet ${PREFIX}/bin
