@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Tie-FileLRUCache/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Tie-FileLRUCache/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Tie-FileLRUCache
 PORTVERSION=	1.05
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Class-NamedParms>=0:${PORTSDIR}/devel/p5-Class-NamedParms \
 		p5-Class-ParmList>=0:${PORTSDIR}/devel/p5-Class-ParmList
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Tie::FileLRUCache.3
 
