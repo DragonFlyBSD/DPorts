@@ -3,12 +3,12 @@
 # Date created:			Jan 23, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/math/ploticus/Makefile,v 1.37 2012/11/17 05:59:28 svnexp Exp $
+# $FreeBSD: math/ploticus/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	ploticus
 PORTVERSION=	2.40
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	math
 MASTER_SITES=	SF
 DISTNAME=	pl${PORTVERSION:S/.//}src
@@ -16,11 +16,11 @@ DISTNAME=	pl${PORTVERSION:S/.//}src
 MAINTAINER?=	linimon@FreeBSD.org
 COMMENT?=	Generates plots and graphs from data
 
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd \
-		jpeg.11:${PORTSDIR}/graphics/jpeg \
-		ming.5:${PORTSDIR}/graphics/ming \
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
+		jpeg:${PORTSDIR}/graphics/jpeg \
+		ming:${PORTSDIR}/graphics/ming \
 		png15:${PORTSDIR}/graphics/png \
-		freetype.9:${PORTSDIR}/print/freetype2
+		freetype:${PORTSDIR}/print/freetype2
 
 BUILD_WRKSRC=	${WRKSRC}/src
 
