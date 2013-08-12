@@ -1,11 +1,12 @@
-# $FreeBSD: finance/trytond_sale/Makefile 318500 2013-05-19 08:58:53Z wen $
+# Created by: Matthias Petermann <matthias@petermann-it.de>
+# $FreeBSD: finance/trytond_sale/Makefile 324509 2013-08-10 13:31:25Z wg $
 
 PORTNAME=	trytond_sale
-PORTVERSION=	2.4.2
+PORTVERSION=	2.4.3
 CATEGORIES=	finance python
 MASTER_SITES=	http://downloads.tryton.org/${PORTVERSION:R}/
 
-MAINTAINER=	matthias@petermann.it
+MAINTAINER=	matthias@petermann-it.de
 COMMENT=	Tryton Application Platform (Sale Module)
 
 LICENSE=	GPLv3
