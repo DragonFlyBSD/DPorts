@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xbelld
-# Date created:				17 September 2004
-# Whom:					Nosov Artem <chip-set@mail.ru>
-#
-# $FreeBSD: ports/x11/xbelld/Makefile,v 1.4 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Nosov Artem <chip-set@mail.ru>
+# $FreeBSD: x11/xbelld/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xbelld
 PORTVERSION=	0.2b2
@@ -18,7 +14,7 @@ COMMENT=	XBellD is a small daemon for replacing the standard X terminal bell
 
 LIB_DEPENDS=	audiofile.0:${PORTSDIR}/audio/libaudiofile
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm xtrap xmu xt
 USE_GNOME=	esound
 

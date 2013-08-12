@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/xbelld/files/patch-xbelld.c,v 1.2 2012/11/17 06:03:20 svnexp Exp $
+$FreeBSD: x11/xbelld/files/patch-xbelld.c 300897 2012-07-14 14:29:18Z beat $
 
 --- xbelld.c.orig
 +++ xbelld.c
