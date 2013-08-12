@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Devel-Callsite/Makefile,v 1.3 2012/11/17 05:56:13 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-Callsite/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Devel-Callsite
 PORTVERSION=	0.06
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Gets current callsite and interpreter context
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Devel::Callsite.3
 
