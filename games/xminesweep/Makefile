@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xminesweep
-# Date created:		31 Januar 1995
-# Whom:			janek
-#
-# $FreeBSD: ports/games/xminesweep/Makefile,v 1.22 2012/11/17 05:57:57 svnexp Exp $
-#
+# Created by: janek
+# $FreeBSD: games/xminesweep/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xminesweep
 PORTVERSION=	3.0
@@ -19,7 +15,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X11 minesweeper game
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext xmu xaw xt xpm sm ice
 MAN1=		xminesweep.1
 PLIST_FILES=	bin/xminesweep
