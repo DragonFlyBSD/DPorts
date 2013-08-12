@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Address-IPv4-Local
-# Date created:				25 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-Net-Address-IPv4-Local/Makefile,v 1.7 2012/11/17 06:00:10 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: net/p5-Net-Address-IPv4-Local/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	Net-Address-IPv4-Local
 PORTVERSION=	0.12
@@ -19,6 +15,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Net::Address::IPv4::Local.3
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 .include <bsd.port.mk>
