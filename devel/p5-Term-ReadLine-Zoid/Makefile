@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	Term::ReadLine::Zoid
-# Date created:			Sep 24, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/p5-Term-ReadLine-Zoid/Makefile,v 1.9 2012/11/17 05:56:31 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-Term-ReadLine-Zoid/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Term-ReadLine-Zoid
 PORTVERSION=	0.07
@@ -19,7 +16,8 @@ COMMENT=	Provides an interactive input buffer written in plain PERL
 BUILD_DEPENDS=	p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Term::ReadLine::Zoid.3 \
 	Term::ReadLine::Zoid::Base.3 \
