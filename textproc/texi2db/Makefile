@@ -3,7 +3,7 @@
 # Date created:			May 27, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/textproc/texi2db/Makefile,v 1.11 2012/11/17 06:02:23 svnexp Exp $
+# $FreeBSD: textproc/texi2db/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	texi2db
@@ -17,7 +17,8 @@ COMMENT=	Converts a Texinfo file into DocBook XML
 BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		texi2db.1
 PLIST_FILES=	bin/texi2db \
