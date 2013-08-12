@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Mail-DomainKeys
-# Date created:	   23 May 2005
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/mail/p5-Mail-DomainKeys/Makefile,v 1.17 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: mail/p5-Mail-DomainKeys/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-DomainKeys
 PORTVERSION=	1.0
@@ -20,11 +16,12 @@ RUN_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-Mail-Tools>=0:${PORTSDIR}/mail/p5-Mail-Tools
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::DomainKeys.3
 
 post-patch:
-	@${PERL} -pi -e '$$_="" if $$.>=6 && $$.<=38' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' '6,38d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
