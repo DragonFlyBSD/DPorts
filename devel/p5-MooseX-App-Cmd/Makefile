@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-MooseX-App-Cmd/Makefile 318675 2013-05-21 10:30:45Z tobez $
+# $FreeBSD: devel/p5-MooseX-App-Cmd/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-App-Cmd
 PORTVERSION=	0.10
@@ -26,7 +26,8 @@ TEST_DEPENDS=	p5-Test-Output>=0:${PORTSDIR}/devel/p5-Test-Output \
 		p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::App::Cmd.3 \
 		MooseX::App::Cmd::Command.3
