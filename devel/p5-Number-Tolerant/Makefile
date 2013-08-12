@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Number-Tolerant
-# Date created:		2010-11-18
-# Whom:			Kurt Lidl <kurt.lidl@cello.com>
-#
-# $FreeBSD: ports/devel/p5-Number-Tolerant/Makefile,v 1.6 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: Kurt Lidl <kurt.lidl@cello.com>
+# $FreeBSD: devel/p5-Number-Tolerant/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Number-Tolerant
 PORTVERSION=	1.701
@@ -24,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Tester>=0:${PORTSDIR}/devel/p5-Test-Tester
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Number::Tolerant.3 \
 		Number::Tolerant::Constant.3 \
