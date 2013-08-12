@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xrot
-# Date created:				Apr 2, 2001
-# Whom:					Mark Pulford <mark@kyne.com.au>
-#
-# $FreeBSD: ports/games/xrot/Makefile,v 1.13 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Mark Pulford <mark@kyne.com.au>
+# $FreeBSD: games/xrot/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xrot
 PORTVERSION=	1.3.2
@@ -18,13 +14,14 @@ MASTER_SITES=	http://hanzubon.jp/mirrors/Vine/%SUBDIR%/ \
 MASTER_SITE_SUBDIR=	VinePlus/1.1/JG-0.9.1/sources
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A falling ball puzzle game for X
+COMMENT=	Falling ball puzzle game for X
 
 WRKSRC=		${WRKDIR}/xrot
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xpm
 ALL_TARGET=	xrot
+CFLAGS+=	-Wno-return-type
 
 PLIST_FILES=	bin/xrot
 
