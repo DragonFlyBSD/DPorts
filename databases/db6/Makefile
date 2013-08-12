@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: databases/db6/Makefile 320540 2013-06-11 08:15:22Z mandree $
+# $FreeBSD: databases/db6/Makefile 323622 2013-07-24 21:57:54Z mandree $
 
 PORTNAME=	db6
 PORTVERSION=	6.0.19.0
@@ -84,6 +84,9 @@ CONFIGURE_ARGS+=	--enable-debug --enable-umrw
 
 post-patch:
 	${REINPLACE_CMD} -e '/^DOCLIST/{s/csharp//;}' ${WRKSRC}/../dist/Makefile.in
+	${REINPLACE_CMD} -Ee 's/[[:<:]]atomic_init[[:>:]]/db_atomic_init/g' \
+	    ${WRKSRC}/../src/mp/mp* ${WRKSRC}/../src/mutex/mut_* \
+	    ${WRKSRC}/../src/dbinc/atomic.h
 
 post-install:
 .for i in libdb libdb_cxx libdb_stl ${libdb_sql} ${libdb_java}
