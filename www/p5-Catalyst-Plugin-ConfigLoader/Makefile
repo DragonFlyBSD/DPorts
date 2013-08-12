@@ -1,5 +1,5 @@
 # Changes: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-ConfigLoader/Makefile 314286 2013-03-15 09:53:40Z tobez $
+# $FreeBSD: www/p5-Catalyst-Plugin-ConfigLoader/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Plugin-ConfigLoader
 PORTVERSION=	0.32
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-Catalyst-Runtime>=5.7008:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-MRO-Compat>=0.09:${PORTSDIR}/devel/p5-MRO-Compat
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::ConfigLoader.3 \
 	Catalyst::Plugin::ConfigLoader::Manual.3
