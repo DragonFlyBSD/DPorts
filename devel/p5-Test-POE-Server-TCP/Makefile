@@ -2,7 +2,7 @@
 # Date created:				23 Feb 2009
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-POE-Server-TCP/Makefile,v 1.11 2012/11/17 05:56:33 svnexp Exp $
+# $FreeBSD: devel/p5-Test-POE-Server-TCP/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-POE-Server-TCP
@@ -17,7 +17,8 @@ COMMENT=	A POE Component providing TCP server services for test cases
 BUILD_DEPENDS=	p5-POE>=1.004:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::POE::Server::TCP.3
 
