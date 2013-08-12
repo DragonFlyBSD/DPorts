@@ -1,9 +1,5 @@
-# New ports collection makefile for:   wmtime
-# Date created:        1 July 1998
-# Whom:                Rich Neswold <rneswold@mcs.net>
-#
-# $FreeBSD: ports/x11-clocks/wmtime/Makefile,v 1.22 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Rich Neswold <rneswold@mcs.net>
+# $FreeBSD: x11-clocks/wmtime/Makefile 322014 2013-06-28 23:05:59Z bapt $
 
 PORTNAME=	wmtime
 PORTVERSION=	1.0b2
@@ -18,7 +14,7 @@ COMMENT=	Time/Date applet for WindowMaker
 
 PLIST_FILES=	bin/wmtime
 WRKSRC=		${WRKDIR}/wmtime.app/wmtime
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xpm
 
 post-extract:
