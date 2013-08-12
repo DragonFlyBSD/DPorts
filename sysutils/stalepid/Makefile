@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: sysutils/stalepid/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: sysutils/stalepid/Makefile 324222 2013-08-04 12:30:54Z az $
 
 PORTNAME=	stalepid
 PORTVERSION=	1.0.b1
@@ -12,14 +12,13 @@ COMMENT=	Check for stale pid files and remove them
 
 RUN_DEPENDS=	p5-Error>=0:${PORTSDIR}/lang/p5-Error
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 MAN1=		stalepid.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/stalepid
-
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
