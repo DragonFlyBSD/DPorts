@@ -1,8 +1,8 @@
 # Created by: Gabor Pali <pgj@FreeBSD.org>
-# $FreeBSD: devel/cppcheck/Makefile 320605 2013-06-11 15:25:53Z bf $
+# $FreeBSD: devel/cppcheck/Makefile 324407 2013-08-08 18:10:37Z bf $
 
 PORTNAME=	cppcheck
-PORTVERSION=	1.60.1
+PORTVERSION=	1.61
 PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/
@@ -12,10 +12,10 @@ COMMENT=	Static analysis of C/C++ code
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	tinyxml2:${PORTSDIR}/textproc/tinyxml2
+LIB_DEPENDS=	libtinyxml2.so:${PORTSDIR}/textproc/tinyxml2
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 
 ALL_TARGET=	cppcheck
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -49,13 +49,13 @@ USE_PYTHON_BUILD=	-2.7
 .endif
 
 .if ${PORT_OPTIONS:MRULES}
-LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre
 MAKE_ENV+=	HAVE_RULES=yes
 .endif
 
 post-patch:
 	@${REINPLACE_CMD} \
-	-e 's|-Iexternals/tinyxml|-I${LOCALBASE}/include|' \
+	-e 's|-Iexternals -Iexternals/tinyxml|-I${LOCALBASE}/include|' \
 		${WRKSRC}/Makefile
 .if ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '\|DB2MAN=|d' \
@@ -79,7 +79,7 @@ do-install:
 
 check regression-test test: build
 	@(cd ${BUILD_WRKSRC}; \
-		${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} \
+		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} \
 		${_MAKE_JOBS} ${MAKE_ARGS} test)
 
 .include <bsd.port.mk>
