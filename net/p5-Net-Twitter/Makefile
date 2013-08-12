@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-Twitter/Makefile 319477 2013-05-31 09:51:20Z tobez $
+# $FreeBSD: net/p5-Net-Twitter/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Twitter
 PORTVERSION=	4.00006
@@ -36,7 +36,8 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Net::Identica.3 \
 		Net::Twitter.3 \
