@@ -1,9 +1,5 @@
-# New ports collection makefile for:   libsrtp
-# Date created:        2 May 2011
-# Whom:                Alexander Brovikov <alexander@brovikov.ru>
-#
-# $FreeBSD: ports/net/libsrtp/Makefile,v 1.3 2012/11/17 06:00:05 svnexp Exp $
-#
+# Created by: Alexander Brovikov <alexander@brovikov.ru>
+# $FreeBSD: net/libsrtp/Makefile 324083 2013-08-01 05:39:16Z bapt $
 
 PORTNAME=	libsrtp
 PORTVERSION=	1.4.4
@@ -14,13 +10,14 @@ DISTNAME=	${ORIGNAME}-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	alexander@brovikov.ru
-COMMENT=	A library implementing Secure RTP
+COMMENT=	Library implementing Secure RTP
 
 WRKSRC=		${WRKDIR}/${ORIGNAME}
 ORIGNAME=	srtp
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
+USE_CSTD=	gnu89
 CFLAGS+=	-fPIC
 
 .include <bsd.port.mk>
