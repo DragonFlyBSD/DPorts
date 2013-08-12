@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/icat/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: graphics/icat/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	icat
 PORTVERSION=	0.4
@@ -15,8 +15,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	atextor
 GH_TAGNAME=	v${PORTVERSION}
 GH_COMMIT=	e8bee81
-
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
