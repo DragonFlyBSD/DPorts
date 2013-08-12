@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/iec16022/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: graphics/iec16022/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	iec16022
 PORTVERSION=	0.2.4
@@ -17,8 +17,6 @@ LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USES=		pkgconfig
-
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
