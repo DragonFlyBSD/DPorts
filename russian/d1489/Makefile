@@ -1,9 +1,5 @@
-# New ports collection makefile for: d1489
-# Date created:         1 May 1995
-# Whom:                 ache
-#
-# $FreeBSD: ports/russian/d1489/Makefile,v 1.21 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: russian/d1489/Makefile 320915 2013-06-14 13:33:23Z bsam $
 
 PORTNAME=	d1489
 PORTVERSION=	1.5.1
@@ -12,8 +8,9 @@ MASTER_SITES=	http://koi8.pp.ru/dist/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Cp866<->koi8-r and cp1251<->koi8-r decoders and font converter acc. to RFC1489
+COMMENT=	Cp866<->koi8-r and cp1251<->koi8-r decoders, font converter (RFC1489)
 
 MAKE_ARGS=	PREFIX=${PREFIX}
+PLIST_FILES=	bin/a2kfcnv bin/fromdos bin/todos bin/fromwin bin/towin
 
 .include <bsd.port.mk>
