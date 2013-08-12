@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-Incomplete/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-DateTime-Incomplete/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Incomplete
 PORTVERSION=	0.07.00
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Event-Recurrence>=0:${PORTSDIR}/devel/p5-DateTime-Event-Recurrence
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Incomplete.3
 
