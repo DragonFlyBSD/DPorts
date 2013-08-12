@@ -1,9 +1,5 @@
-# New ports collection makefile for:    viewfax
-# Date created:         16 sept 1995
-# Whom:                 jmz
-#
-# $FreeBSD: ports/comms/viewfax/Makefile,v 1.26 2012/11/17 05:55:02 svnexp Exp $
-#
+# Created by: jmz
+# $FreeBSD: comms/viewfax/Makefile 321975 2013-06-28 18:37:20Z bapt $
 
 PORTNAME=	viewfax
 PORTVERSION=	2.6
@@ -15,7 +11,7 @@ MASTER_SITES=	ftp://ftp.ping.de/pub/unix/ \
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	Display files containing g3 and/or g4 coded fax pages
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 
 PLIST_FILES=	bin/viewfax lib/viewfax.tif
