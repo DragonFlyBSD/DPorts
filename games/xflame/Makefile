@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kkennawa@physics.adelaide.edu.au>
-# $FreeBSD: ports/games/xflame/Makefile,v 1.14 2012/11/17 05:57:56 svnexp Exp $
+# $FreeBSD: games/xflame/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xflame
 PORTVERSION=	1.1.1
@@ -9,11 +9,11 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=kris
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A cool animated flame
+COMMENT=	cool animated flame
 
 DEPRECATED=	No more public distfiles
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 
 NO_INSTALL_MANPAGES=	yes
