@@ -2,7 +2,7 @@
 # Date created:				12 Jun 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Class-STL-Containers/Makefile,v 1.7 2012/11/17 05:56:08 svnexp Exp $
+# $FreeBSD: devel/p5-Class-STL-Containers/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Class-STL-Containers
@@ -14,6 +14,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl extension for STL-like object management
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
