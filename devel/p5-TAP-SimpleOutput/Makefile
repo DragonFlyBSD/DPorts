@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-TAP-SimpleOutput/Makefile,v 1.1 2012/12/09 17:42:18 svnexp Exp $
+# $FreeBSD: devel/p5-TAP-SimpleOutput/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	TAP-SimpleOutput
 PORTVERSION=	0.001
@@ -13,7 +13,8 @@ COMMENT=	Simple closure-driven TAP generator
 BUILD_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	TAP::SimpleOutput.3
 
