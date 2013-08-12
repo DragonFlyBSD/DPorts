@@ -1,9 +1,5 @@
-# New ports collection makefile for:	htmlise
-# Date created:				2 Sep 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/textproc/htmlise/Makefile,v 1.7 2012/11/17 06:01:59 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: textproc/htmlise/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	htmlise
 PORTVERSION=	0.2
@@ -13,8 +9,6 @@ MASTER_SITES=	http://www.ex-parrot.com/~chris/stuff/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Formats plain text as HTML
-
-MAKE_JOBS_SAFE=	yes
 
 TABSIZE?=	8
 
