@@ -1,11 +1,12 @@
-# $FreeBSD: finance/trytond_stock_supply/Makefile 318580 2013-05-20 08:00:57Z wen $
+# Created by: Matthias Petermann <matthias@petermann-it.de>
+# $FreeBSD: finance/trytond_stock_supply/Makefile 324521 2013-08-10 14:07:39Z wg $
 
 PORTNAME=	trytond_stock_supply
-PORTVERSION=	2.4.2
+PORTVERSION=	2.4.4
 CATEGORIES=	finance python
 MASTER_SITES=	http://downloads.tryton.org/${PORTVERSION:R}/
 
-MAINTAINER=	matthias@petermann.it
+MAINTAINER=	matthias@petermann-it.de
 COMMENT=	Tryton Application Platform (Stock Supply Module)
 
 LICENSE=	GPLv3
