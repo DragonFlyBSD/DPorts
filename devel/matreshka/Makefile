@@ -1,12 +1,12 @@
-# Created by: John Marino <draco@marino.st>
-# $FreeBSD: devel/matreshka/Makefile 322140 2013-07-01 19:18:17Z wg $
+# Created by: John Marino <marino@FreeBSD.org>
+# $FreeBSD: devel/matreshka/Makefile 322832 2013-07-12 13:40:50Z marino $
 
 PORTNAME=	matreshka
 PORTVERSION=	0.5.0
 CATEGORIES=	devel
 MASTER_SITES=	http://forge.ada-ru.org/matreshka/downloads/
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	marino@FreeBSD.org
 COMMENT=	Ada framework for information systems development
 
 LICENSE=	BSD
