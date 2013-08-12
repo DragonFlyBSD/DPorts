@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-Amazon-S3/Makefile 314557 2013-03-18 11:47:10Z tobez $
+# $FreeBSD: net/p5-Net-Amazon-S3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Amazon-S3
 PORTVERSION=	0.59
@@ -33,7 +33,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Amazon::S3.3 Net::Amazon::S3::Bucket.3 \
 		Net::Amazon::S3::Request::GetObjectAccessControl.3 \
