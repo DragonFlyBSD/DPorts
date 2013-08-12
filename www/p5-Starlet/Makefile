@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-Starlet/Makefile 318774 2013-05-22 15:12:26Z kuriyama $
+# $FreeBSD: www/p5-Starlet/Makefile 324554 2013-08-10 16:52:43Z kuriyama $
 
 PORTNAME=	Starlet
-PORTVERSION=	0.18
+PORTVERSION=	0.19
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:KAZUHO
@@ -16,8 +16,10 @@ RUN_DEPENDS=	\
 	p5-Server-Starter>=0.06:${PORTSDIR}/net/p5-Server-Starter
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
+# TODO: maybe need p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=	perl5
+USE_PERL5=	configure
 
 MAN3=	Starlet.3
 
