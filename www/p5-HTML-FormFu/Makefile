@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <andrey.zverev@electro-com.ru>
-# $FreeBSD: ports/www/p5-HTML-FormFu/Makefile,v 1.32 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-FormFu/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-FormFu
 PORTVERSION=	0.09010
@@ -49,7 +49,8 @@ TEST_DEPENDS=	p5-CGI-Simple>=0:${PORTSDIR}/www/p5-CGI-Simple \
 		p5-Test-Aggregate>=0:${PORTSDIR}/devel/p5-Test-Aggregate \
 		p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::FormFu.3 \
 		HTML::FormFu::Attribute.3 \
