@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/science/p5-Geo-WebService-Elevation-USGS/Makefile,v 1.8 2013/01/29 09:43:44 svnexp Exp $
+# $FreeBSD: science/p5-Geo-WebService-Elevation-USGS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Geo-WebService-Elevation-USGS
 PORTVERSION=	0.011
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Geo::WebService::Elevation::USGS.3
 
