@@ -1,8 +1,8 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-DBIC/Makefile 321234 2013-06-19 08:20:45Z culot $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-DBIC/Makefile 324156 2013-08-02 09:23:44Z culot $
 
 PORTNAME=	Catalyst-Plugin-Session-Store-DBIC
-PORTVERSION=	0.13
+PORTVERSION=	0.14
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::Session::Store::DBIC.3 \
 	Catalyst::Plugin::Session::Store::DBIC::Delegate.3
