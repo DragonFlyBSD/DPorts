@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: games/spider/Makefile 319467 2013-05-31 08:08:28Z antoine $
+# $FreeBSD: games/spider/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	spider
 PORTVERSION=	1.1
@@ -13,7 +13,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Challenging double decked solitaire game
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext xaw xmu xt sm ice xpm
 INSTALL_TARGET=	install install.doc
 MAN1=		spider.1
