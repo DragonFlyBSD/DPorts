@@ -2,7 +2,7 @@
 # Date created:		2012-02-07
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-DynaLoader-Functions/Makefile,v 1.4 2012/11/17 05:56:14 svnexp Exp $
+# $FreeBSD: devel/p5-DynaLoader-Functions/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	DynaLoader-Functions
@@ -21,11 +21,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		DynaLoader::Functions.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
