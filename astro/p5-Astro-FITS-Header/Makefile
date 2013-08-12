@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-FITS-Header/Makefile 314063 2013-03-13 11:08:15Z bapt $
+# $FreeBSD: astro/p5-Astro-FITS-Header/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Astro-FITS-Header
 PORTVERSION=	3.07
@@ -12,8 +12,8 @@ COMMENT=	Object Orientated interface to FITS HDUs
 
 LICENSE=	GPLv3
 
-MAKE_JOBS_SAFE=	yes
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Astro::FITS::Header.3 \
 	Astro::FITS::Header::AST.3 \
