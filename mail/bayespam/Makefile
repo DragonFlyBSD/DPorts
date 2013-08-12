@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: mail/bayespam/Makefile 317596 2013-05-07 10:00:57Z ehaupt $
+# $FreeBSD: mail/bayespam/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	bayespam
 PORTVERSION=	0.9.2
@@ -12,8 +12,7 @@ COMMENT=	qmail spam filter written in Perl using Bayesian classification
 
 RUN_DEPENDS=	p5-MIME-Tools>=0:${PORTSDIR}/mail/p5-MIME-Tools
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 NO_BUILD=	yes
 
 SHEBANG_FILES=	*.pl
