@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Catalyst-View-Mason
-# Date created:				07 Dec 2005
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-View-Mason/Makefile,v 1.18 2012/12/17 12:20:07 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-View-Mason/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-View-Mason
 PORTVERSION=	0.18
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Helper::View::Mason.3 \
 		Catalyst::View::Mason.3
