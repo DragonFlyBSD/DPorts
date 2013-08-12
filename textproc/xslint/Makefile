@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: textproc/xslint/Makefile 317595 2013-05-07 09:39:35Z ehaupt $
+# $FreeBSD: textproc/xslint/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	xslint
 PORTVERSION=	005
@@ -12,9 +12,9 @@ COMMENT=	XSL(T) stylesheet checker
 
 RUN_DEPENDS=	p5-XML-DOM>=0:${PORTSDIR}/textproc/p5-XML-DOM
 
-USES=		shebangfix
+USES=		shebangfix perl5
 USE_ZIP=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-0.05
 NO_BUILD=	yes
