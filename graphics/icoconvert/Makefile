@@ -2,12 +2,12 @@
 # Date created:				Apr 30 2004
 # Whom:					Florent Thoumie <flz@xbsd.org>
 #
-# $FreeBSD: ports/graphics/icoconvert/Makefile,v 1.11 2012/11/17 05:58:09 svnexp Exp $
+# $FreeBSD: graphics/icoconvert/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	icoconvert
 PORTVERSION=	2.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.mox.net/downloads/ \
 		http://www.xunix.org/~flz/distfiles/
@@ -15,7 +15,7 @@ MASTER_SITES=	http://www.mox.net/downloads/ \
 MAINTAINER=	flz@FreeBSD.org
 COMMENT=	A small utility to convert Windows icon files into .xpm and .png files
 
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
 
 PLIST_FILES=	bin/icoconvert
 
