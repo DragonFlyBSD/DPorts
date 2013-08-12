@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/iulib/Makefile 317482 2013-05-06 08:31:29Z bapt $
+# $FreeBSD: graphics/iulib/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	iulib
 PORTVERSION=	0.4
@@ -23,7 +23,7 @@ MAKE_JOBS_SAFE=	yes
 USE_GCC=	any
 USE_PYTHON_BUILD=	yes
 USE_AUTOTOOLS=	libtool aclocal automake autoconf
-ACLOCAL_ARGS=	--acdir=${ACLOCAL_DIR} -I${LOCALBASE}/share/aclocal
+ACLOCAL_ARGS=	--automake-acdir=${ACLOCAL_DIR} -I${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
