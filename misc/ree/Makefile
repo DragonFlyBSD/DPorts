@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: misc/ree/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: misc/ree/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	ree
 PORTVERSION=	1.3
@@ -12,8 +12,6 @@ COMMENT=	Tool to dump your ROM extensions
 
 PLIST_FILES=	bin/rom-ree bin/fontdump
 PORTDOCS=	readme
-
-MAKE_JOBS_SAFE=	yes
 
 ONLY_FOR_ARCHS=	i386 amd64
 
