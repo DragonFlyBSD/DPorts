@@ -1,5 +1,5 @@
 # Created by: Mark Blackman <tmb_ports@maddog.u-net.com>
-# $FreeBSD: ports/sysutils/cronolog/Makefile,v 1.26 2012/12/12 02:32:26 svnexp Exp $
+# $FreeBSD: sysutils/cronolog/Makefile 322321 2013-07-05 12:46:45Z bdrewery $
 
 PORTNAME=	cronolog
 PORTVERSION=	1.6.2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://cronolog.org/download/
 
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	Web log rotation utility that provides datestamp filenames
+
+LICENSE=	GPLv2
 
 CONFLICTS_INSTALL=      cronolog-devel-[0-9]*
 
