@@ -1,5 +1,5 @@
 # Created by: Jesper Skriver <jesper@FreeBSD.org>
-# $FreeBSD: ports/net/p5-Net-SSH-Perl/Makefile,v 1.28 2012/12/19 08:12:49 svnexp Exp $
+# $FreeBSD: net/p5-Net-SSH-Perl/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-SSH-Perl
 PORTVERSION=	1.35
@@ -64,7 +64,8 @@ MAN3=	Net::SSH::Perl.3 \
 	Net::SSH::Perl::Util.3
 
 CONFIGURE_ENV+=	PERL_MM_USE_DEFAULT="1"
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 OPTIONS_DEFINE=	GMP
 OPTIONS_DEFAULT=	GMP
