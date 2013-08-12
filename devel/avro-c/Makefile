@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/avro-c/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: devel/avro-c/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	avro
 PORTVERSION=	1.7.3
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/stable
 PKGNAMESUFFIX=	-c
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Data serialization system for ANSI C
 
 USES=		cmake pkgconfig
