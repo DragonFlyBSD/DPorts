@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/p5-SOAP-WSDL/Makefile,v 1.6 2012/11/17 05:56:28 svnexp Exp $
+# $FreeBSD: devel/p5-SOAP-WSDL/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SOAP-WSDL
 PORTVERSION=	2.00.10
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-Class-Std-Fast>=0:${PORTSDIR}/devel/p5-Class-Std-Fast \
 		p5-XML-Parser>=2.36:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_MODBUILD=	YES
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		wsdl2perl.pl.1
 MAN3=		SOAP::WSDL.3 \
