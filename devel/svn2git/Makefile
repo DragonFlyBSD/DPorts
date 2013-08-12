@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: devel/svn2git/Makefile 318545 2013-05-19 19:17:42Z dbn $
+# $FreeBSD: devel/svn2git/Makefile 323850 2013-07-28 20:28:32Z dbn $
 
 PORTNAME=	svn2git
 DISTVERSION=	1.0.10
@@ -18,7 +18,6 @@ RUN_DEPENDS+=	git:${PORTSDIR}/devel/git \
 
 USE_XZ=		yes
 USE_QT4=	corelib qmake_build
-MAKE_JOBS_SAFE=	yes
 
 OPTIONS_DEFINE=	FREEBSD_REPO
 FREEBSD_REPO_DESC=	FreeBSD-repo only mode
