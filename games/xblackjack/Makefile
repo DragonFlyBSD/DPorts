@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: games/xblackjack/Makefile 319469 2013-05-31 08:11:55Z antoine $
+# $FreeBSD: games/xblackjack/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xblackjack
 PORTVERSION=	2.2
@@ -14,7 +14,7 @@ COMMENT=	X11/Motif blackjack game
 
 LIB_DEPENDS=	Xm:${PORTSDIR}/x11-toolkits/lesstif
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext xp xt xmu
 MAN1=		xblackjack.1
 CFLAGS+=	-Wno-error=return-type
