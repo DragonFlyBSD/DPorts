@@ -2,7 +2,7 @@
 # Date created:		2009-11-13
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/x11-themes/cursor-ecliz/Makefile,v 1.2 2012/11/17 06:03:30 svnexp Exp $
+# $FreeBSD: x11-themes/cursor-ecliz/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	ecliz
@@ -12,7 +12,7 @@ MASTER_SITES=	http://kde-look.org/CONTENT/content-files/
 PKGNAMEPREFIX=	cursor-
 DISTNAME=	76605-Ecliz_Port
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Ecliz X cursor theme
 
 NO_BUILD=	yes
