@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xaniroc
-# Date created:        20 Sep 1997
-# Whom:                Stefan Zehl <sec@42.org>
-#
-# $FreeBSD: ports/x11/xaniroc/Makefile,v 1.13 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Stefan Zehl <sec@42.org>
+# $FreeBSD: x11/xaniroc/Makefile 322009 2013-06-28 22:52:39Z bapt $
 
 PORTNAME=	xaniroc
 PORTVERSION=	1.02
@@ -16,7 +12,7 @@ EXTRACT_SUFX=	.src.tar.Z
 MAINTAINER=	sec@42.org
 COMMENT=	Animate your root-cursor
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		xaniroc.1
 PLIST_FILES=	bin/xaniroc
