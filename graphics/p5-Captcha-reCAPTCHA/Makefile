@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Captcha-reCAPTCHA/Makefile 320499 2013-06-10 17:42:37Z mat $
+# $FreeBSD: graphics/p5-Captcha-reCAPTCHA/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Captcha-reCAPTCHA
 PORTVERSION=	0.97
@@ -17,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		Captcha::reCAPTCHA.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
