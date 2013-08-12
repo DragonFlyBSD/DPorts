@@ -1,9 +1,5 @@
-# New ports collection makefile for:	MooseX-Meta-TypeConstraint-ForceCoercion
-# Date created:	   13 May 2009
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-MooseX-Meta-TypeConstraint-ForceCoercion/Makefile,v 1.4 2012/11/17 05:56:23 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-MooseX-Meta-TypeConstraint-ForceCoercion/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-Meta-TypeConstraint-ForceCoercion
 PORTVERSION=	0.01
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Meta::TypeConstraint::ForceCoercion.3
 
