@@ -1,9 +1,5 @@
-# New ports collection makefile for:	speyes
-# Date created:				03 November 1999
-# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: ports/games/speyes/Makefile,v 1.13 2012/11/17 05:57:53 svnexp Exp $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: games/speyes/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	speyes
 PORTVERSION=	1.2.0
@@ -15,7 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	WindowMaker dockapp/xeyes clone using SouthPark characters
 
 PLIST_FILES=	bin/speyes
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xpm xmu
 
 .include <bsd.port.mk>
