@@ -1,14 +1,11 @@
-# New ports collection makefile for:	htable
-# Date created:				13 Aug 2010
-# Whom:					Frederic Culot <frederic@culot.org>
-#
-# $FreeBSD: ports/devel/htable/Makefile,v 1.4 2012/11/17 05:55:50 svnexp Exp $
-#
+# Created by: Frederic Culot <frederic@culot.org>
+# $FreeBSD: devel/htable/Makefile 321005 2013-06-15 16:11:19Z culot $
 
 PORTNAME=	htable
 PORTVERSION=	1.2
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp2.culot.org/culot/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	culot
 
 MAINTAINER=	culot@FreeBSD.org
 COMMENT=	Lightweight implementation of hash tables in C
