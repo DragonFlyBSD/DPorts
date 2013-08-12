@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: ports/devel/p5-Getargs-Long/Makefile,v 1.12 2012/11/17 05:56:17 svnexp Exp $
+# $FreeBSD: devel/p5-Getargs-Long/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Getargs-Long
 PORTVERSION=	1.1003
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Log-Agent>=0.105:${PORTSDIR}/devel/p5-Log-Agent \
 		p5-Module-Install>=0:${PORTSDIR}/devel/p5-Module-Install
 RUN_DEPENDS=	p5-Log-Agent>=0.105:${PORTSDIR}/devel/p5-Log-Agent
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Getargs::Long.3
 
