@@ -1,5 +1,5 @@
 # Created by: Yasuhiro Fukuma <yasuf@big.or.jp>
-# $FreeBSD: ports/ftp/ftpmirror/Makefile,v 1.24 2012/11/17 05:57:29 svnexp Exp $
+# $FreeBSD: ftp/ftpmirror/Makefile 323655 2013-07-25 17:45:09Z az $
 
 PORTNAME=	ftpmirror
 PORTVERSION=	1.96
@@ -18,15 +18,15 @@ USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 
+USES=		shebangfix
+SHEBANG_FILES=	ftpmirror rotate
+
 CONFIGURE_ENV+=	PERL="${PERL}" INSTALL_PROGRAM="${INSTALL_SCRIPT}"
 
 PORTDOCS=	README.jis RELEASE.jis
 
 post-configure:
-	@${PERL} -i.bak -pe 's,%%PREFIX%%,${PREFIX},g' ${WRKSRC}/Fan/Fan.pm
-.for f in ftpmirror rotate
-	@${PERL} -i.bak -pe 's,^#!.*$$,#!${PERL}, if $$. == 1' ${WRKSRC}/${f}
-.endfor
+	@${REINPLACE_CMD} -i '' -e 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/Fan/Fan.pm
 
 .include <bsd.port.pre.mk>
 
