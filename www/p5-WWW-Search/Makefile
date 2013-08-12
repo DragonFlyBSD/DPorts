@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Search/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-WWW-Search/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-Search
 PORTVERSION=	2.509
@@ -32,7 +32,8 @@ RUN_DEPENDS=	p5-Bit-Vector>=0:${PORTSDIR}/math/p5-Bit-Vector \
 		p5-libwww>=2:${PORTSDIR}/www/p5-libwww \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_DOS2UNIX=	yes
 
 MAN1=		AutoSearch.1 \
