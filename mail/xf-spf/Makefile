@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippe@freebsdbrasil.com.br>
-# $FreeBSD: mail/xf-spf/Makefile 319266 2013-05-27 16:06:02Z bapt $
+# $FreeBSD: mail/xf-spf/Makefile 322689 2013-07-10 13:12:03Z bapt $
 
 PORTNAME=	xf-spf
 PORTVERSION=	0.2
@@ -15,6 +15,7 @@ LIB_DEPENDS+=	spf2.3:${PORTSDIR}/mail/libspf2
 USES=		qmail
 USE_BZIP2=	yes
 USE_GCC=	any
+MAKE_JOBS_UNSAFE=	yes
 
 SUB_FILES=	pkg-message
 SUB_LIST=	QMAIL_PREFIX=${QMAIL_PREFIX}
