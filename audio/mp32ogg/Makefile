@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	mp32ogg
-# Date created:			Nov 4, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/audio/mp32ogg/Makefile,v 1.15 2012/11/17 05:54:38 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: audio/mp32ogg/Makefile 323795 2013-07-27 16:06:25Z az $
 
 PORTNAME=	mp32ogg
 PORTVERSION=	0.11
@@ -24,6 +19,8 @@ RUN_DEPENDS=	mpg123:${PORTSDIR}/audio/mpg123 \
 		p5-String-ShellQuote>=0:${PORTSDIR}/textproc/p5-String-ShellQuote
 
 USE_PERL5=	yes
+USES=		shebangfix
+SHEBANG_FILES=	mp32ogg
 NO_WRKSUBDIR=	yes
 EXTRACT_CMD=	${CP}
 EXTRACT_BEFORE_ARGS=	#
@@ -32,7 +29,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/mp32ogg
 
 post-patch:
-	@${PERL} -pi -e "s,%%LOCALBASE%%,${LOCALBASE},g" ${WRKSRC}/mp32ogg
+	@${REINPLACE_CMD} -i '' -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/mp32ogg
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mp32ogg ${PREFIX}/bin
