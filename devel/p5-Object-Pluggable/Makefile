@@ -2,7 +2,7 @@
 # Date created:	   2010-09-29
 # Whom:		   Jase Thew <freebsd@beardz.net>
 #
-# $FreeBSD: ports/devel/p5-Object-Pluggable/Makefile,v 1.7 2012/11/17 05:56:24 svnexp Exp $
+# $FreeBSD: devel/p5-Object-Pluggable/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Object-Pluggable
@@ -28,10 +28,6 @@ MAN3=		Object::Pluggable.3 \
 		Object::Pluggable::Pipeline.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Pod-Parser>=1.36:${PORTSDIR}/textproc/p5-Pod-Parser
-.endif
 
 post-install:
 .ifndef(NOPORTEXAMPLES)
