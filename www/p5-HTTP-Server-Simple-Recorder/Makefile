@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-HTTP-Server-Simple-Recorder
-# Date created:				27 December 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-HTTP-Server-Simple-Recorder/Makefile,v 1.8 2012/11/17 06:02:51 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: www/p5-HTTP-Server-Simple-Recorder/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	HTTP-Server-Simple-Recorder
 PORTVERSION=	0.03
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-HTTP-Server-Simple>=0:${PORTSDIR}/www/p5-HTTP-Server-Simple \
 		p5-IO-Tee>=0:${PORTSDIR}/devel/p5-IO-Tee
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTTP::Server::Simple::Recorder.3
 
