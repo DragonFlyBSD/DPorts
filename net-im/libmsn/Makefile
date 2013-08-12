@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-im/libmsn/Makefile 317910 2013-05-11 20:48:41Z rakuco $
+# $FreeBSD: net-im/libmsn/Makefile 323776 2013-07-27 10:19:30Z marino $
 
 PORTNAME=	libmsn
 DISTVERSION=	4.2.1
@@ -10,6 +10,9 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	A library for connecting to MSN Messenger service
 
 LICENSE=	GPLv2
+
+DEPRECATED=	Primary MSN Messenger service terminated 30 APR 2013
+EXPIRATION_DATE=2013-10-31
 
 USE_BZIP2=	yes
 USES=		cmake
