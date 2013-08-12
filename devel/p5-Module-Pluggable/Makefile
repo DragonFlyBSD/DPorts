@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Pluggable/Makefile 320532 2013-06-11 06:38:21Z lth $
+# $FreeBSD: devel/p5-Module-Pluggable/Makefile 324354 2013-08-07 14:10:21Z vsevolod $
 
 PORTNAME=	Module-Pluggable
 PORTVERSION=	4.8
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Automatically give your module the ability to have plugins
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::InnerPackage.3 \
 		Module::Pluggable.3 \
