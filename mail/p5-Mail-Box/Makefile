@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: ports/mail/p5-Mail-Box/Makefile,v 1.44 2012/12/31 16:43:58 svnexp Exp $
+# $FreeBSD: mail/p5-Mail-Box/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Mail-Box
 PORTVERSION=	2.107
@@ -30,7 +30,8 @@ BUILD_DEPENDS=	${COMMON_DEPENDS}
 RUN_DEPENDS=	${COMMON_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1.00:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	</dev/null
 CONFIGURE_ENV+=	MAILBOX_INSTALL_OPTIONALS=n
 
