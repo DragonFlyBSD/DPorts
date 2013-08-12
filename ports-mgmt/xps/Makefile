@@ -1,8 +1,8 @@
 # Created by: Antonios Anastasiadis <antonakis@gmail.com>
-# $FreeBSD: ports-mgmt/xps/Makefile 322209 2013-07-02 22:55:44Z rakuco $
+# $FreeBSD: ports-mgmt/xps/Makefile 324108 2013-08-01 14:39:03Z wg $
 
 PORTNAME=	xps
-PORTVERSION=	0.4.1
+PORTVERSION=	0.5.2
 CATEGORIES=	ports-mgmt
 
 MAINTAINER=	serpent7776@gmail.com
@@ -11,8 +11,8 @@ COMMENT=	Tool that searches the ports tree by various criteria
 LICENSE=	MIT
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	antanst
-GH_COMMIT=	997c66f
+GH_ACCOUNT=	serpent7776
+GH_COMMIT=	719165b
 
 USE_PYTHON=	yes
 NO_BUILD=	yes
