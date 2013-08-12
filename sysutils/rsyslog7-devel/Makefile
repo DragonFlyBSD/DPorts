@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rsyslog7-devel/Makefile 319072 2013-05-25 20:10:11Z brd $
+# $FreeBSD: sysutils/rsyslog7-devel/Makefile 323442 2013-07-22 12:41:39Z erwin $
 
 PORTNAME=	rsyslog
 PORTVERSION=	7.3.15
@@ -23,6 +23,7 @@ BUILD_DEPENDS=	libgcrypt-config:${PORTSDIR}/security/libgcrypt \
 PORTSCOUT=	limit:^7\.3
 PORTDOCS=	*
 PORTEXAMPLES=	*
+LATEST_LINK=	rsyslog-devel
 
 OPTIONS_DEFINE=	DBI DOCS GNUTLS GSSAPI MYSQL PGSQL RELP RFC3195 SNMP
 
