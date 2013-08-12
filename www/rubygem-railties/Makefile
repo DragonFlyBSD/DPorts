@@ -1,8 +1,9 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: www/rubygem-railties/Makefile 315783 2013-04-11 11:30:00Z bdrewery $
+# $FreeBSD: www/rubygem-railties/Makefile 323826 2013-07-28 13:21:04Z swills $
 
 PORTNAME=	railties
 PORTVERSION=	3.2.13
+PORTREVISION=	1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -12,8 +13,7 @@ COMMENT=	Rails internals bootup, plugins, generators, and rake tasks
 RUN_DEPENDS=	rubygem-activesupport>=${PORTVERSION}:${PORTSDIR}/devel/rubygem-activesupport \
 		rubygem-actionpack>=${PORTVERSION}:${PORTSDIR}/www/rubygem-actionpack \
 		rubygem-thor>=0.14.6:${PORTSDIR}/devel/rubygem-thor \
-		rubygem-rack-ssl>=1.3.2:${PORTSDIR}/www/rubygem-rack-ssl \
-		rubygem-rdoc>=3.4:${PORTSDIR}/devel/rubygem-rdoc
+		rubygem-rack-ssl>=1.3.2:${PORTSDIR}/www/rubygem-rack-ssl
 
 USE_RUBY=	yes
 USE_RAKE=	yes
