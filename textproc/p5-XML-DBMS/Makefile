@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::DBMS
-# Date created:		18 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-XML-DBMS/Makefile,v 1.10 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-XML-DBMS/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	XML-DBMS
 PORTVERSION=	1.03
@@ -23,11 +19,9 @@ BUILD_DEPENDS=	p5-libxml>=0:${PORTSDIR}/textproc/p5-libxml \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-PERL_CONFIGURE=	yes
-
-post-extract:
-	@${FIND} ${WRKSRC} -type f | \
-		${XARGS} ${PERL} -pi -e 's/\x0D(?=\x0A)//g'
+USES=		perl5
+USE_PERL5=	configure
+USE_DOS2UNIX=	yes
 
 post-install:
 .ifndef(NOPORTDOCS)
