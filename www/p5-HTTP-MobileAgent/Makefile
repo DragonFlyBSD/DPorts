@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/p5-HTTP-MobileAgent/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-HTTP-MobileAgent/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTTP-MobileAgent
 PORTVERSION=	0.36
@@ -22,7 +22,8 @@ RUN_DEPENDS=	p5-Filter>=0:${PORTSDIR}/devel/p5-Filter \
 		p5-YAML>0:${PORTSDIR}/textproc/p5-YAML
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTTP::MobileAgent.3 \
 		HTTP::MobileAgent::AirHPhone.3 \
