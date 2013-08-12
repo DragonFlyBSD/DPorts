@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Session/Makefile,v 1.42 2013/02/26 10:10:37 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Catalyst-Plugin-Session
 PORTVERSION=	0.37
@@ -24,7 +24,8 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-WWW-Mechanize-PSGI>=0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize-PSGI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure extract
 
 MAN3=		Catalyst::Plugin::Session.3 \
 		Catalyst::Plugin::Session::State.3 \
