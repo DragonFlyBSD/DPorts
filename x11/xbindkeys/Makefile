@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xbindkeys/Makefile 317952 2013-05-12 12:40:30Z eadler $
+# $FreeBSD: x11/xbindkeys/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	xbindkeys
 PORTVERSION=	1.8.5
@@ -23,8 +23,6 @@ PLIST_FILES=	bin/xbindkeys %%EXAMPLESDIR%%/xbindkeysrc
 PLIST_DIRS=	%%EXAMPLESDIR%%
 
 WISH=		${LOCALBASE}/bin/wish8.4
-
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
