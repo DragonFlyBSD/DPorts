@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-MyXML/Makefile 320889 2013-06-14 08:08:44Z culot $
+# $FreeBSD: textproc/p5-XML-MyXML/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-MyXML
 PORTVERSION=	0.09.91
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::MyXML.3
 
