@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Object-Accessor/Makefile 320100 2013-06-06 14:12:05Z tobez $
+# $FreeBSD: devel/p5-Object-Accessor/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Object-Accessor
 PORTVERSION=	0.48
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Params-Check>=0.34:${PORTSDIR}/devel/p5-Params-Check
 RUN_DEPENDS=	p5-Params-Check>=0.34:${PORTSDIR}/devel/p5-Params-Check
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Object::Accessor.3
 
