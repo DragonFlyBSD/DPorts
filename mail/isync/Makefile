@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: ports/mail/isync/Makefile,v 1.28 2013/02/22 15:46:43 svnexp Exp $
+# $FreeBSD: mail/isync/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	isync
 PORTVERSION=	1.0.6
@@ -14,7 +14,6 @@ LICENSE=	GPLv2
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USE_BDB=	42+
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		isync.1 mbsync.1 mdconvert.1
 PORTDOCS=	AUTHORS ChangeLog NEWS README TODO
