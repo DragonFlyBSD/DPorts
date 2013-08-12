@@ -1,21 +1,25 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Parse-ErrorString-Perl/Makefile,v 1.7 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: devel/p5-Parse-ErrorString-Perl/Makefile 324421 2013-08-09 08:39:09Z culot $
 
 PORTNAME=	Parse-ErrorString-Perl
-PORTVERSION=	0.15
+PORTVERSION=	0.19
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	culot@FreeBSD.org
 COMMENT=	Parse error messages from the Perl interpreter
 
-BUILD_DEPENDS=	p5-Pod-POM>=0:${PORTSDIR}/textproc/p5-Pod-POM \
-		p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-Pod-POM>=0.27:${PORTSDIR}/textproc/p5-Pod-POM \
 		p5-Class-XSAccessor>=0:${PORTSDIR}/devel/p5-Class-XSAccessor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		check_perldiag.1
 MAN3=		Parse::ErrorString::Perl.3 \
