@@ -1,12 +1,7 @@
-# New ports collection makefile for:	www/p5-POE-Component-Server-SimpleHTTP
-# Date created:				12 October 2005
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-POE-Component-Server-SimpleHTTP/Makefile,v 1.26 2012/11/17 06:02:52 svnexp Exp $
-#
+# $FreeBSD: www/p5-POE-Component-Server-SimpleHTTP/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	POE-Component-Server-SimpleHTTP
-PORTVERSION=	2.16
+PORTVERSION=	2.18
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -23,7 +18,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-POE-Filter-HTTP-Parser>=1.06:${PORTSDIR}/www/p5-POE-Filter-HTTP-Parser \
 		p5-Test-POE-Client-TCP>0:${PORTSDIR}/devel/p5-Test-POE-Client-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Server::SimpleHTTP.3 \
 		POE::Component::Server::SimpleHTTP::Connection.3 \
