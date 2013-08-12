@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-Search-Xapian
-# Date created:				Feb 22 2006
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-Search-Xapian10/Makefile,v 1.37 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: databases/p5-Search-Xapian10/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Search-Xapian10
 PORTVERSION=	1.0.23.0
@@ -23,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS=	p5-Search-Xapian-1.[^0]*
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CC=		${CXX}
 
 MAN3=	Search::Xapian.3 \
