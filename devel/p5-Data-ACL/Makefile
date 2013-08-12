@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Data-ACL
-# Date created:				22 September 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Data-ACL/Makefile,v 1.6 2012/11/17 05:56:09 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Data-ACL/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Data-ACL
 PORTVERSION=	0.02
@@ -17,7 +13,8 @@ COMMENT=	Data::ACL - Perl extension for simple ACL lists
 BUILD_DEPENDS=	p5-Set-NestedGroups>=0:${PORTSDIR}/devel/p5-Set-NestedGroups
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::ACL.3
 
