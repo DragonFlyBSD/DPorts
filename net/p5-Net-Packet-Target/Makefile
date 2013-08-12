@@ -2,7 +2,7 @@
 # Date created:		28 September 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-Packet-Target/Makefile,v 1.6 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-Packet-Target/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-Packet-Target
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Class-Gomor>=1.00:${PORTSDIR}/devel/p5-Class-Gomor \
 		p5-Net-Packet>=3.00:${PORTSDIR}/net/p5-Net-Packet
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=	${PORTNAME:S/-/::/g}.3
 
 .include <bsd.port.mk>
