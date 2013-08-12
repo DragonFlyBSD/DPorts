@@ -2,7 +2,7 @@
 # Date created:                         Fri Dec  9 18:46:07 CET 2005
 # Whom:                                 Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Devel-TraceCalls/Makefile,v 1.5 2012/11/17 05:56:14 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-TraceCalls/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Devel-TraceCalls
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Track calls to subs, classes, and object instances
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::TraceCalls.3
 
