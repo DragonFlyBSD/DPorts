@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/textproc/p5-LaTeX-Encode/Makefile,v 1.4 2013/02/10 16:00:43 svnexp Exp $
+# $FreeBSD: textproc/p5-LaTeX-Encode/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	LaTeX-Encode
 PORTVERSION=	0.08
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Encode characters for LaTeX formatting
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 RUN_DEPENDS=	p5-Readonly>=0:${PORTSDIR}/devel/p5-Readonly
 BUILD_DEPENDS:=	${RUN_DEPENDS}
