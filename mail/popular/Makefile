@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: ports/mail/popular/Makefile,v 1.14 2012/12/30 06:25:20 svnexp Exp $
+# $FreeBSD: mail/popular/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	popular
 PORTVERSION=	1.5.5
@@ -7,18 +7,18 @@ PORTREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.remote.org/jochen/mail/popular/download/
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Suite of programs for setting up large POP3 server systems
 
 BUILD_DEPENDS=	p5-XML-DOM>=0:${PORTSDIR}/textproc/p5-XML-DOM
 
 CONFLICTS=	pserv-[0-9]* synce-librapi2-[0-9]*
 
+USES=		perl5
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
-USE_PERL5=	yes
 PDM_MODULES=	any master
 CONFIGURE_ARGS=	--without-bdb --disable-docbook --with-confdir=${PREFIX}/etc/popular \
 		--enable-ssl --with-pdm="${PDM_MODULES}"
