@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/biology/ariadne/Makefile,v 1.4 2012/11/17 05:54:51 svnexp Exp $
+# $FreeBSD: biology/ariadne/Makefile 321252 2013-06-19 14:10:02Z bsam $
 
 PORTNAME=	ariadne
 PORTVERSION=	1.3
@@ -13,16 +13,23 @@ COMMENT=	Programs to compare protein sequences and profiles
 WRKSRC=		${WRKDIR}/SRC-${PORTVERSION}
 USE_GMAKE=	yes
 
+PLIST_FILES+=	bin/ariadne bin/prospero
+PORTDOCS=	README
+
+OPTIONS_DEFINE=	DOCS
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}| ; \
 		s|CC =|CC ?=| ; \
 		s|CFLAGS =|CFLAGS +=| ; \
 		s|-c $(OPTIMISE)|-c $(CFLAGS) $(OPTIMIZE)|g' ${WRKSRC}/Makefile
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${OPSYS}/ariadne ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/${OPSYS}/prospero ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
