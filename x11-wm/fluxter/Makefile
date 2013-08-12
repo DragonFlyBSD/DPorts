@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger
-# $FreeBSD: x11-wm/fluxter/Makefile 313037 2013-02-27 07:52:50Z jgh $
+# $FreeBSD: x11-wm/fluxter/Makefile 322360 2013-07-06 01:22:56Z jgh $
 
 PORTNAME=	fluxter
 PORTVERSION=	0.2.0
@@ -11,7 +11,7 @@ COMMENT=	Desktop pager for the Fluxbox Slit
 
 USE_XORG=	x11 ice xproto xt xaw xext
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|/fluxbox|/${PORTNAME}|g" \
