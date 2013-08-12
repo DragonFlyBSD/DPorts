@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/p5-Uniq/Makefile 317643 2013-05-08 08:04:04Z ehaupt $
+# $FreeBSD: devel/p5-Uniq/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	Uniq
 PORTVERSION=	0.01
@@ -12,7 +12,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Perl extension for managing a uniq list of values
 
 PERL_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN3=		Uniq.3
 
