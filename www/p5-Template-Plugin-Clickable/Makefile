@@ -2,7 +2,7 @@
 # Date created:				26 January 2006
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Template-Plugin-Clickable/Makefile,v 1.6 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Plugin-Clickable/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Template-Plugin-Clickable
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-URI-Find>=0.13:${PORTSDIR}/textproc/p5-URI-Find \
 		p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Template::Plugin::Clickable.3
 
