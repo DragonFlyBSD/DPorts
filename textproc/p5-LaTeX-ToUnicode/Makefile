@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-LaTeX-ToUnicode
-# Date created:				March 16, 2011
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-LaTeX-ToUnicode/Makefile,v 1.2 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: textproc/p5-LaTeX-ToUnicode/Makefile 324306 2013-08-06 08:50:49Z az $
 
 PORTNAME=	LaTeX-ToUnicode
 PORTVERSION=	0.03
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Convert LaTeX commands to Unicode
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		LaTeX::ToUnicode::Tables.3 \
 		LaTeX::ToUnicode.3
