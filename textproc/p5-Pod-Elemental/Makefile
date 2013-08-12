@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Pod-Elemental
-# Date created:				May 26, 2010
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Pod-Elemental/Makefile,v 1.6 2012/11/17 06:02:07 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: textproc/p5-Pod-Elemental/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Elemental
 PORTVERSION=	0.102362
@@ -30,7 +26,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Pod::Elemental.3 \
 		Pod::Elemental::Autoblank.3 \
