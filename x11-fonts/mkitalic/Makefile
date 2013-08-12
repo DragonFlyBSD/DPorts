@@ -1,5 +1,5 @@
 # Created by: KOMATSU Shinichiro
-# $FreeBSD: x11-fonts/mkitalic/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: x11-fonts/mkitalic/Makefile 323800 2013-07-27 17:20:42Z az $
 
 PORTNAME=	mkitalic
 PORTVERSION=	1.0
@@ -20,9 +20,11 @@ EXTRACT_BEFORE_ARGS=	#
 EXTRACT_AFTER_ARGS=	> ${WRKSRC}/mkitalic
 NO_WRKSUBDIR=	yes
 USE_BZIP2=	yes
+USES=		shebangfix
+SHEBANG_FILES=	mkitalic
 
 do-build:
-	${PERL} -pi.orig -e 's|^#!/usr/bin/perl|#! ${PERL}|' ${WRKSRC}/mkitalic
+	@${DO_NADA}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mkitalic ${PREFIX}/bin
