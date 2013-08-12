@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Typography/Makefile 317539 2013-05-06 18:30:15Z zi $
+# $FreeBSD: textproc/p5-Text-Typography/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Typography
 PORTVERSION=	0.01
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to markup ASCII text with correct typography for HTML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Typography.3
 
