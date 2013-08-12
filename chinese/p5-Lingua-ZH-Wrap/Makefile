@@ -2,7 +2,7 @@
 # Date Created:			Oct 13th 2003
 # Whom:				clsung@dragon2.net
 #
-# $FreeBSD: ports/chinese/p5-Lingua-ZH-Wrap/Makefile,v 1.4 2012/11/17 05:54:57 svnexp Exp $
+# $FreeBSD: chinese/p5-Lingua-ZH-Wrap/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Lingua-ZH-Wrap
 PORTVERSION=	0.03
@@ -13,7 +13,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A simple Chinese text Wrapper
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Lingua::ZH::Wrap.3
 
