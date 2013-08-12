@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-Loader/Makefile 318930 2013-05-24 08:42:15Z az $
+# $FreeBSD: databases/p5-DBIx-Class-Schema-Loader/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Class-Schema-Loader
 PORTVERSION=	0.07035
@@ -46,7 +46,8 @@ TEST_DEPENDS=	p5-Config-General>=0:${PORTSDIR}/devel/p5-Config-General \
 OPTIONS_DEFINE=	MYSQL ORACLE PGSQL SQLITE
 ORACLE_DESC=	Enable Oracle backend (experimental)
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	dbicdump.1
 MAN3=	DBIx::Class::Schema::Loader.3 \
