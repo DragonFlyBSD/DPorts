@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: dns/p5-POE-Component-Client-DNSBL/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: dns/p5-POE-Component-Client-DNSBL/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Client-DNSBL
 PORTVERSION=	1.08
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-POE>=1.004:${PORTSDIR}/devel/p5-POE \
 		p5-POE-Component-Client-DNS>=0:${PORTSDIR}/dns/p5-POE-Component-Client-DNS
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	POE::Component::Client::DNSBL.3
 
