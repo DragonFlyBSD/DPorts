@@ -1,9 +1,5 @@
-# New ports collection makefile for:  Crypt-DH-GMP
-# Date created: 04 February 2010
-# Whom: andrey@kostenko.name
-#
-# $FreeBSD: ports/net/p5-Crypt-DH-GMP/Makefile,v 1.10 2012/12/17 15:43:22 svnexp Exp $
-#
+# Created by: andrey@kostenko.name
+# $FreeBSD: net/p5-Crypt-DH-GMP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Crypt-DH-GMP
 PORTVERSION=	0.00010
@@ -20,7 +16,8 @@ LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp
 TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
 MAKE_JOBS_UNSAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::DH::GMP.3 \
 		Crypt::DH::GMP::Compat.3
