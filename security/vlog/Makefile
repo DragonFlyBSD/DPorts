@@ -1,9 +1,5 @@
-# New ports collection makefile for:   vlog
-# Date created:                31 March 2002
-# Whom:                        hannes sowa <satbran@web.de>
-#
-# $FreeBSD: ports/security/vlog/Makefile,v 1.14 2012/11/17 06:01:22 svnexp Exp $
-#
+# Created by: hannes sowa <satbran@web.de>
+# $FreeBSD: security/vlog/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	vlog
 PORTVERSION=	1.1f
@@ -20,7 +16,7 @@ ALL_TARGET=	it
 MAKE_ARGS=	CFLAGS="${CFLAGS} ${PTHREAD_CFLAGS}" \
 		LIBS="${PTHREAD_LIBS} -lcurses"
 WRKSRC=		${WRKDIR}/vlog
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		vlog.1
 MANCOMPRESSED=	no
