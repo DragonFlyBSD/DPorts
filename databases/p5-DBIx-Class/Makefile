@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class/Makefile 316908 2013-04-30 10:04:34Z tobez $
+# $FreeBSD: databases/p5-DBIx-Class/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Class
 PORTVERSION=	0.08250
@@ -58,7 +58,8 @@ TEST_DEPENDS=	p5-Class-DBI-Plugin-DeepAbstractSearch>=0:${PORTSDIR}/databases/p5
 OPTIONS_DEFINE=	SQLT
 SQLT_DESC=	SQL::Translator (generate DDL from schema)
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ENV=	DBICTEST_NO_SQLITE_CHECK=1
 
 MAN1=		dbicadmin.1
