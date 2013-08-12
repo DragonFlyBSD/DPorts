@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-MetaCPAN-API/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-MetaCPAN-API/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MetaCPAN-API
 PORTVERSION=	0.43
@@ -21,7 +21,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-TinyMocker>=0:${PORTSDIR}/devel/p5-Test-TinyMocker
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		MetaCPAN::API.3 MetaCPAN::API::Author.3 \
 		MetaCPAN::API::Module.3 \
