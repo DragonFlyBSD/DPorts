@@ -1,7 +1,7 @@
-# $FreeBSD: ports/devel/p5-Filesys-Notify-Simple/Makefile,v 1.8 2013/02/16 12:02:05 svnexp Exp $
+# $FreeBSD: devel/p5-Filesys-Notify-Simple/Makefile 324501 2013-08-10 13:19:59Z kuriyama $
 
 PORTNAME=	Filesys-Notify-Simple
-PORTVERSION=	0.10
+PORTVERSION=	0.12
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for simple and dumb file system watcher
 
-PERL_CONFIGURE=	yes
+USES=	perl5
+USE_PERL5=	configure
 
 MAN3=	Filesys::Notify::Simple.3
 
