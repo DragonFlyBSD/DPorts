@@ -2,7 +2,7 @@
 # Date created:		2010-10-28
 # Whom:			Andreev Maxim <andreevmaxim@gmail.com>
 #
-# $FreeBSD: ports/devel/qconf/Makefile,v 1.3 2012/11/17 05:56:54 svnexp Exp $
+# $FreeBSD: devel/qconf/Makefile 324298 2013-08-06 01:13:53Z mandree $
 #
 
 PORTNAME=	qconf
@@ -10,7 +10,7 @@ PORTVERSION=	1.4
 CATEGORIES=	devel
 MASTER_SITES=	http://delta.affinix.com/download/
 
-MAINTAINER=	andreevmaxim@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to create configure script for qmake-based project
 
 USE_BZIP2=	yes
