@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/fldiff/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: textproc/fldiff/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	fldiff
 PORTVERSION=	1.1
@@ -17,7 +17,6 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	fltk:${PORTSDIR}/x11-toolkits/fltk
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
