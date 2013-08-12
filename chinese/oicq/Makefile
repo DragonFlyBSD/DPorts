@@ -2,7 +2,7 @@
 # Date created:		10 Nov 2003
 # Whom:			Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
 #
-# $FreeBSD: ports/chinese/oicq/Makefile,v 1.19 2012/11/17 05:54:57 svnexp Exp $
+# $FreeBSD: chinese/oicq/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	oicq
@@ -17,7 +17,8 @@ COMMENT=	Implements OICQ messaging protocol
 BUILD_DEPENDS=	p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey \
 		p5-Crypt-OICQ>=0:${PORTSDIR}/security/p5-Crypt-OICQ
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::OICQ.3
 
