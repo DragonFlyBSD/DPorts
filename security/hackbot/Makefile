@@ -1,12 +1,12 @@
 # Created by: mich@freebsdcluster.org
-# $FreeBSD: security/hackbot/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/hackbot/Makefile 324164 2013-08-02 13:23:34Z mich $
 #
 
 PORTNAME=	hackbot
 PORTVERSION=	2.21
 CATEGORIES=	security
 MASTER_SITES=	http://freebsdcluster.org/~mich/software/ \
-		http://ws.obit.nl/hackbot/
+		http://hackbot.stream-portal.org/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	mich@FreeBSD.org
