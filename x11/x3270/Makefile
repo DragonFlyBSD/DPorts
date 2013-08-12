@@ -1,9 +1,5 @@
-# New ports collection makefile for:	x3270
-# Date created:		31 January 1995
-# Whom:			janek
-#
-# $FreeBSD: x11/x3270/Makefile 316683 2013-04-27 18:25:24Z mva $
-#
+# Created by: janek
+# $FreeBSD: x11/x3270/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	x3270
 PORTVERSION=	3.3.10
@@ -18,8 +14,7 @@ BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
 
-USE_IMAKE=	yes
-USES=		iconv
+USES=		iconv imake:env
 USE_XORG=	ice sm x11 xaw xext xmu xt
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-fontdir=${PREFIX}/lib/X11/fonts/local --disable-dbcs
