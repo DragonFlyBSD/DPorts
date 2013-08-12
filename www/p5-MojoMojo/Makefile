@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-MojoMojo/Makefile 318065 2013-05-13 10:30:39Z tobez $
+# $FreeBSD: www/p5-MojoMojo/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MojoMojo
 PORTVERSION=	1.10
@@ -85,7 +85,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-WWW-Mechanize-Catalyst>=0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize-Catalyst
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	mojomojo_cgi.pl.1 \
 	mojomojo_create.pl.1 \
