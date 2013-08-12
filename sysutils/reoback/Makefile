@@ -1,9 +1,5 @@
-# New ports collection makefile for:   reoback
-# Date created:        19 April 2003
-# Whom:                kiesel
-#
-# $FreeBSD: ports/sysutils/reoback/Makefile,v 1.7 2012/11/17 06:01:43 svnexp Exp $
-#
+# Created by: kiesel
+# $FreeBSD: sysutils/reoback/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	reoback
 PORTVERSION=	1.0
@@ -17,7 +13,7 @@ COMMENT=	Simple but flexible ftp/nfs backup script
 RUN_DEPENDS=	p5-Net>=0:${PORTSDIR}/net/p5-Net
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		reoback.1 reoback.pl.1
 MANCOMPRESSED=	yes
