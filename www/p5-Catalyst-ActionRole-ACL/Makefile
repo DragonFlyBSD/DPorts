@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Catalyst-ActionRole-ACL
-# Date created:		2011-05-08
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-ActionRole-ACL/Makefile,v 1.4 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-ActionRole-ACL/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-ActionRole-ACL
 PORTVERSION=	0.07
@@ -24,7 +20,8 @@ BUILD_DEPENDS=	p5-Catalyst-Controller-ActionRole>=0:${PORTSDIR}/www/p5-Catalyst-
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Action::Role::ACL.3 \
 		Catalyst::ActionRole::ACL.3
