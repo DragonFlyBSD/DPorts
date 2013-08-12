@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kbdscan/Makefile 319646 2013-06-02 10:14:45Z eadler $
+# $FreeBSD: misc/kbdscan/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	kbdscan
 PORTVERSION=	20110507
@@ -11,8 +11,6 @@ COMMENT=	Kbdscan shows the scancodes of keys pressed
 LICENSE=	ISCL
 
 USE_BZIP2=	yes
-
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
