@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Template-Plugin-HTML-SuperForm
-# Date created:			14 Jul 2009
-# Whom:					Philip M. Goillucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/textproc/p5-Template-Plugin-HTML-SuperForm/Makefile,v 1.2 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: Philip M. Goillucci <pgollucci@p6m7g8.com>
+# $FreeBSD: textproc/p5-Template-Plugin-HTML-SuperForm/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Template-Plugin-HTML-SuperForm
 PORTVERSION=	1.0
@@ -17,7 +13,8 @@ COMMENT=	Interface Template Toolkit to Lingua::EN::Inflect module
 RUN_DEPENDS=	p5-Template-Toolkit>0:${PORTSDIR}/www/p5-Template-Toolkit \
   				p5-HTML-SuperForm>0:${PORTSDIR}/textproc/p5-HTML-SuperForm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
