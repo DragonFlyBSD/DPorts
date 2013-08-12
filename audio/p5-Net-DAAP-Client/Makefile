@@ -2,7 +2,7 @@
 # Date created:        27 June 2004
 # Whom:                Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/p5-Net-DAAP-Client/Makefile,v 1.10 2012/11/17 05:54:40 svnexp Exp $
+# $FreeBSD: audio/p5-Net-DAAP-Client/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Net-DAAP-Client
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Digest-MD5-M4p>=0:${PORTSDIR}/security/p5-Digest-MD5-M4p \
 		p5-Net-DAAP-DMAP>=0:${PORTSDIR}/audio/p5-Net-DAAP-DMAP
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Net::DAAP::Client.3
 
