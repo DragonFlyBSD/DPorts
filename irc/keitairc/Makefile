@@ -1,5 +1,5 @@
-# Created by: Makoto Matsushita <matusita@FreeBSD.ORG>
-# $FreeBSD: irc/keitairc/Makefile 317596 2013-05-07 10:00:57Z ehaupt $
+# Created by: Makoto Matsushita <matusita@FreeBSD.org>
+# $FreeBSD: irc/keitairc/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	keitairc
 PORTVERSION=	1.33
@@ -30,8 +30,7 @@ EXTRACT_CMD=		${CP}
 EXTRACT_BEFORE_ARGS=	-p
 EXTRACT_AFTER_ARGS=	${WRKDIR}
 
-USES=		shebangfix
-USE_PERL5=	yes
+USES=		shebangfix perl5
 
 SHEBANG_FILES=	keitairc
 
