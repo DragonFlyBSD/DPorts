@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: databases/p5-Pg/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: databases/p5-Pg/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pg
 PORTVERSION=	2.1.1
@@ -15,7 +15,8 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interface for using perl5 to access PostgreSQL databases
 
 USE_PGSQL=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Pg.3
 
