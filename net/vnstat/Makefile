@@ -1,9 +1,9 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: net/vnstat/Makefile 322827 2013-07-12 11:27:12Z feld $
+# $FreeBSD: net/vnstat/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	vnstat
 PORTVERSION=	1.11
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	http://humdi.net/vnstat/ \
 		http://mirror.mcx2.org/
