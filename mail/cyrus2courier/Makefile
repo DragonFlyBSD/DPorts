@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: mail/cyrus2courier/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: mail/cyrus2courier/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	cyrus2courier
 DISTVERSION=	1.4
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Cyrus-IMAP to Maildir++ conversion utility
-
-MAKE_JOBS_SAFE=	yes
 
 ALL_TARGET=	build
 
