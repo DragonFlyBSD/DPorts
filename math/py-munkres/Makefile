@@ -1,5 +1,5 @@
-# Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: math/py-munkres/Makefile 318559 2013-05-20 01:03:43Z swills $
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: math/py-munkres/Makefile 323891 2013-07-29 15:03:58Z feld $
 
 PORTNAME=	munkres
 PORTVERSION=	1.0.5.4
@@ -8,7 +8,7 @@ CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	A Python implementation of the munkres algorithm
 
 LICENSE=	BSD
