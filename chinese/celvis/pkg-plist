@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/chinese/celvis/pkg-plist,v 1.4 2012/11/17 05:54:56 svnexp Exp $
+@comment $FreeBSD: chinese/celvis/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/celvis
 bin/cvi
 bin/virec
