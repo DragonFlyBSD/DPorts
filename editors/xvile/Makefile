@@ -1,5 +1,5 @@
 # Created by: pgf
-# $FreeBSD: editors/xvile/Makefile 322770 2013-07-11 15:15:30Z miwi $
+# $FreeBSD: editors/xvile/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	xvile
 PORTVERSION=	9.8k
@@ -63,7 +63,7 @@ PLIST_SUB+=	ICONV="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USE_PERL5=	yes
+USES+=		perl5
 CONFIGURE_ARGS+=	--with-perl
 PLIST_SUB+=	PERL=""
 .else
