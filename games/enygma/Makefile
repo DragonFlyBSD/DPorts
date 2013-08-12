@@ -2,7 +2,7 @@
 # Date created:                14 September 2008
 # Whom:                        Wouter Reckman <gennerate@zonnet.nl>
 #
-# $FreeBSD: ports/games/enygma/Makefile,v 1.2 2012/11/17 05:57:37 svnexp Exp $
+# $FreeBSD: games/enygma/Makefile 300896 2012-07-14 13:54:48Z beat $
 #
 
 PORTNAME=		enygma
