@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann
-# $FreeBSD: sysutils/cdbkup/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/cdbkup/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	cdbkup
 PORTVERSION=	1.0
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/sbin/eject:${PORTSDIR}/sysutils/eject \
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
+USES=		perl5
 CONFIGURE_ENV+=	PATH=${PATH}:${LOCALBASE}/sbin
 
 MAN1=		cdbkup.1 cdappend.1 cdcat.1 cdrstr.1 cdsplit.1
