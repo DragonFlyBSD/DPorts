@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/httpry/files/httpry.in,v 1.4 2012/11/17 06:00:02 svnexp Exp $
+# $FreeBSD: net/httpry/files/httpry.in 300897 2012-07-14 14:29:18Z beat $
 #
 # PROVIDE: httpry
 # REQUIRE: DAEMON

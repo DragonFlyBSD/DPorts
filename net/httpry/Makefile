@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/httpry/Makefile,v 1.8 2012/12/12 18:51:46 svnexp Exp $
+# $FreeBSD: net/httpry/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	httpry
 PORTVERSION=	0.1.7
@@ -22,9 +22,6 @@ EXTRASCRIPTS_DESC=	Install additional scripts
 PLIST_SUB=	EXTRASCRIPTS=""
 USE_PERL5_RUN=	yes
 RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
-. if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-. endif
 .else
 PLIST_SUB=	EXTRASCRIPTS="@comment "
 .endif
