@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-IO-YAML/Makefile 320527 2013-06-11 03:14:19Z miwi $
+# $FreeBSD: devel/p5-IO-YAML/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IO-YAML
 PORTVERSION=	0.08
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
 RUN_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		IO::YAML.3
 
