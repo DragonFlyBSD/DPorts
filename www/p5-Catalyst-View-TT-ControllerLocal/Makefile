@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Catalyst-View-TT-ControllerLocal
-# Date created:				11 Feb 2006
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-View-TT-ControllerLocal/Makefile,v 1.10 2012/11/17 06:02:48 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-View-TT-ControllerLocal/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-View-TT-ControllerLocal
 PORTVERSION=	0.02
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Catalyst-View-TT>=0:${PORTSDIR}/www/p5-Catalyst-View-TT
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Helper::View::TTControllerLocal.3 \
 	Catalyst::View::TT::ControllerLocal.3
