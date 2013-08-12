@@ -1,4 +1,4 @@
-# $FreeBSD: dns/p5-pgeodns/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: dns/p5-pgeodns/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	pgeodns
 PORTVERSION=	1.41
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Geo-IP>=0:${PORTSDIR}/net/p5-Geo-IP \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 NO_MANCOMPRESS=	no
 MAN1=	pgeodns.1
