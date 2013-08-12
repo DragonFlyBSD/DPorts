@@ -1,4 +1,4 @@
-# $FreeBSD: www/foswiki/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: www/foswiki/Makefile 324180 2013-08-03 07:52:55Z az $
 
 PORTNAME=	foswiki
 PORTVERSION=	1.1.5
@@ -17,7 +17,7 @@ RUN_DEPENDS=	p5-Error>=0.15:${PORTSDIR}/lang/p5-Error \
 
 LICENSE=	GPLv2
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 OPTIONS_DEFINE=	OPTINT OPTOTH APACHE
