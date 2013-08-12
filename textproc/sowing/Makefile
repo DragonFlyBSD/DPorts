@@ -1,9 +1,5 @@
-# New ports collection makefile for:  sowing
-# Date created:               27 September 2004
-# Whom:                       Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: textproc/sowing/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/sowing/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	sowing
 PORTVERSION=	1.1.16
@@ -17,7 +13,7 @@ COMMENT=	Text processing tools to generate documentation from source files
 BUILD_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm
 RUN_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm
 
-USE_PERL5=	yes
+USES=		perl5
 USE_GHOSTSCRIPT=yes
 USE_GMAKE=	yes
 USE_TEX=	latex dvipsk
