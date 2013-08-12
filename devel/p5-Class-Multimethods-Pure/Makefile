@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-Multimethods-Pure
-# Date created:		2006-07-16
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Class-Multimethods-Pure/Makefile,v 1.6 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Class-Multimethods-Pure/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Multimethods-Pure
 PORTVERSION=	0.13
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Method-ordered multimethod dispatch
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Multimethods::Pure.3
 
