@@ -16,7 +16,7 @@
  {
  @private
 -  void           *_file;    // the file pointer
-+  gzFile         _file;    // the file pointer
++  gzFile          _file;    // the file pointer
  }
  
  #endif

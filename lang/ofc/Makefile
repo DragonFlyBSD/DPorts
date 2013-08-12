@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: lang/ofc/Makefile 317128 2013-05-02 15:37:13Z vanilla $
+# $FreeBSD: lang/ofc/Makefile 323810 2013-07-28 04:20:32Z vanilla $
 
 PORTNAME=	ofc
 PORTVERSION=	0.8.1
@@ -18,7 +18,7 @@ LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2 \
 PROJECTHOST=	${PORTNAME}
 USE_SDL=	sdl
 USE_AUTOTOOLS=	libtool
-USES=	pathfix
+USES=		pathfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15 ${PTHREAD_CFLAGS}
