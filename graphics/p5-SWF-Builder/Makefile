@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SWF-Builder
-# Date created:	   25 December 2003
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/graphics/p5-SWF-Builder/Makefile,v 1.20 2012/11/17 05:58:18 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: graphics/p5-SWF-Builder/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SWF-Builder
 PORTVERSION=	0.16
@@ -19,7 +15,9 @@ BUILD_DEPENDS=	p5-SWF-File>=0:${PORTSDIR}/graphics/p5-SWF-File \
 		p5-Font-TTF>=0:${PORTSDIR}/x11-fonts/p5-Font-TTF
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
+USE_DOS2UNIX=	yes
 
 MAN3=		SWF::Builder.3 SWF::Builder::ActionScript.3 \
 		SWF::Builder::Character::Bitmap.3 \
@@ -30,10 +28,6 @@ MAN3=		SWF::Builder.3 SWF::Builder::ActionScript.3 \
 		SWF::Builder::Character::Sound.3 \
 		SWF::Builder::Character::Text.3 SWF::Builder::Gradient.3
 MAN1=		asc.plx.1
-
-post-patch:
-	@${FIND} ${WRKSRC} -type f |\
-		${XARGS} ${PERL} -pi -e 's/\x0d(?=\x0a)//'
 
 post-configure:
 	@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 --lax/;' ${WRKSRC}/Makefile
