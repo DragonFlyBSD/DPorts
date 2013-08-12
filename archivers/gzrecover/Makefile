@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: archivers/gzrecover/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: archivers/gzrecover/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	gzrecover
 PORTVERSION=	0.7
@@ -12,8 +12,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	GZIP recovery toolkit
 
 LICENSE=	GPLv2
-
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -lz
 
