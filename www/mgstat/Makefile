@@ -2,19 +2,19 @@
 # Date created:		11 May 2001
 # Whom:			jeh@FreeBSD.org
 #
-# $FreeBSD: ports/www/mgstat/Makefile,v 1.19 2012/11/17 06:02:39 svnexp Exp $
+# $FreeBSD: www/mgstat/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	mgstat
 PORTVERSION=	0.12
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://wizard.ae.krakow.pl/~mike/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Produce graphs from mod_gzip log files
 
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
 
 GNU_CONFIGURE=	yes
 
