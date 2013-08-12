@@ -1,9 +1,5 @@
-# New ports collection makefile for:	EmiClock
-# Date created:		15 March 1995
-# Whom:			Nobuhiro Yasutomi
-#
-# $FreeBSD: ports/x11-clocks/emiclock/Makefile,v 1.32 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Nobuhiro Yasutomi
+# $FreeBSD: x11-clocks/emiclock/Makefile 322014 2013-06-28 23:05:59Z bapt $
 
 PORTNAME=	emiclock
 PORTVERSION=	2.0.2
@@ -14,7 +10,7 @@ MASTER_SITES=	http://ftp.vector.co.jp/pack/unix/personal/tokei/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Hyper-animated face analog clock for X11
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		emiclock.1
 
