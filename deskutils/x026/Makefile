@@ -1,9 +1,5 @@
-# New ports collection makefile for:	x026
-# Date created:		2010-10-23
-# Whom:			Marcin Cieslak <saper@saper.info>
-#
-# $FreeBSD: ports/deskutils/x026/Makefile,v 1.2 2012/11/17 05:55:31 svnexp Exp $
-#
+# Created by: Marcin Cieslak <saper@saper.info>
+# $FreeBSD: deskutils/x026/Makefile 321984 2013-06-28 20:56:05Z bapt $
 
 PORTNAME=	x026
 PORTVERSION=	1.2
@@ -14,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	saper@saper.info
 COMMENT=	IBM 026 Keypunch Emulator for the X Window System
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xaw7 xpm xt
 
 PLIST_FILES=	bin/${PORTNAME}
