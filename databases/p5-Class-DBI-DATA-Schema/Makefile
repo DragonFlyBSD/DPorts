@@ -2,7 +2,7 @@
 # Date created:				24 October 2004
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-Class-DBI-DATA-Schema/Makefile,v 1.7 2012/11/17 05:55:13 svnexp Exp $
+# $FreeBSD: databases/p5-Class-DBI-DATA-Schema/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Class-DBI-DATA-Schema
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 BUILD_DEPENDS+=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Class::DBI::DATA::Schema.3
 
