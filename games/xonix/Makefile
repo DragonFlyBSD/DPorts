@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xonix
-# Date created:		3 May 1995
-# Whom:			joerg
-#
-# $FreeBSD: ports/games/xonix/Makefile,v 1.19 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: joerg
+# $FreeBSD: games/xonix/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xonix
 PORTVERSION=	1.4
@@ -14,7 +10,7 @@ MASTER_SITES=	ftp://ftp.interface-business.de/pub/outgoing/
 MAINTAINER=	joerg@FreeBSD.org
 COMMENT=	Try to win land without colliding with `flyers' and `eaters'
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xaw
 MAN1=		xonix.1
 
