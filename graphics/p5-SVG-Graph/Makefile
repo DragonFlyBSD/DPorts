@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/graphics/p5-SVG-Graph/Makefile,v 1.9 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: graphics/p5-SVG-Graph/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	SVG-Graph
 PORTVERSION=	0.04
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Math-Spline>=0:${PORTSDIR}/math/p5-Math-Spline \
 		p5-Tree-DAG_Node>=0:${PORTSDIR}/devel/p5-Tree-DAG_Node
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		SVG::Graph.3 \
 		SVG::Graph::Data.3 \
