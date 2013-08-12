@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xcoloredit
-# Date created:		6 Jun 1997
-# Whom:			Satoshi TAOKA
-#
-# $FreeBSD: ports/x11/xcoloredit/Makefile,v 1.14 2013/02/04 15:16:58 svnexp Exp $
-#
+# Created by: Satoshi TAOKA
+# $FreeBSD: x11/xcoloredit/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xcoloredit
 PORTVERSION=	1.2
@@ -16,8 +12,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Find colour values by graphical colour mixing
 
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
-USE_IMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 
 MANCOMPRESSED=	yes
