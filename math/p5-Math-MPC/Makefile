@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-MPC/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: math/p5-Math-MPC/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-MPC
 PORTVERSION=	1.00
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
 MAKE_ENV=	INC="-I${LOCALBASE}/include"
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::MPC.3
 
