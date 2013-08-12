@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
-# $FreeBSD: ports/audio/p5-xmms2/Makefile,v 1.9 2012/11/17 05:54:41 svnexp Exp $
+# $FreeBSD: audio/p5-xmms2/Makefile 324039 2013-07-31 12:16:16Z madpilot $
 
 PORTREVISION=	1
 CATEGORIES=	audio perl5
@@ -12,7 +12,7 @@ LIB_DEPENDS+=	xmmsclient.6:${PORTSDIR}/audio/xmms2
 
 MASTERDIR=	${.CURDIR}/../xmms2
 
-USE_PERL5=	yes
+USES=		perl5
 
 PLIST=		${.CURDIR}/pkg-plist
 
