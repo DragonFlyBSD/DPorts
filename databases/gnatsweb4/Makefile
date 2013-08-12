@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier <eikemeier@fillmore-labs.com>
-# $FreeBSD: databases/gnatsweb4/Makefile 317657 2013-05-08 12:47:16Z ehaupt $
+# $FreeBSD: databases/gnatsweb4/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	gnatsweb
 PORTVERSION=	4.00
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64
 
 USE_APACHE_RUN=	22+
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 CGI_DIR?=	${WWWDIR}/cgi-bin
