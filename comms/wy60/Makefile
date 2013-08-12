@@ -1,4 +1,4 @@
-# $FreeBSD: ports/comms/wy60/Makefile,v 1.10 2012/11/17 05:55:02 svnexp Exp $
+# $FreeBSD: comms/wy60/Makefile 324122 2013-08-01 20:22:27Z naddy $
 
 PORTNAME=	wy60
 PORTVERSION=	2.0.9
@@ -9,7 +9,6 @@ MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Curses-based emulator for the Wyse 60 terminal
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAKE_ARGS=	etc_DATA=wy60.rc.sample
 
