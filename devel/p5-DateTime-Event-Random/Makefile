@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Event-Random
-# Date created:	   8 Jan 2004
-# Whom:		   Mathieu Arnold <mat@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Event-Random/Makefile,v 1.8 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: Mathieu Arnold <mat@FreeBSD.org>
+# $FreeBSD: devel/p5-DateTime-Event-Random/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Event-Random
 PORTVERSION=	0.03
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Set>=0:${PORTSDIR}/devel/p5-DateTime-Set
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Event::Random.3
 
