@@ -1,9 +1,5 @@
-# ports collection makefile for:	rdb
-# Date created:				2000 Feb. 8
-# Whom:					Abel Chow <abel_chow@yahoo.com>
-#
-# $FreeBSD: ports/databases/rdb/Makefile,v 1.10 2012/11/17 05:55:23 svnexp Exp $
-#
+# Created by: Abel Chow <abel_chow@yahoo.com>
+# $FreeBSD: databases/rdb/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	rdb
 PORTVERSION=	2.6d
@@ -15,7 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A fast, portable, relational database management system
 
 WRKSRC=		${WRKDIR}/rdb
-USE_PERL5=	yes
+USES=		perl5
 
 BINFILES=	column compute dataent etbl headchg jointbl lst2tbl \
 		mergetbl mktbl ptbl rdb rdbt repair reporttbl row search \
