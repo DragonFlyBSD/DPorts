@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-XML-Compile-SOAP/Makefile 323273 2013-07-19 09:02:54Z culot $
+# $FreeBSD: net/p5-XML-Compile-SOAP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Compile-SOAP
 PORTVERSION=	2.37
@@ -26,7 +26,8 @@ RUN_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 TEST_DEPENDS=	p5-Test-Deep>=0.095:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-XML-Compile-Tester>=0.90:${PORTSDIR}/devel/p5-XML-Compile-Tester
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Compile::SOAP.3 \
 		XML::Compile::SOAP10.3 \
