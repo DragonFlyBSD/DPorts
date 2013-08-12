@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Attribute-Handlers-Prospective
-# Date created:				5 Jan 2004
-# Whom:					Mathieu Arnold <mat@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Attribute-Handlers-Prospective/Makefile,v 1.5 2012/11/17 05:56:05 svnexp Exp $
-#
+# Created by: Mathieu Arnold <mat@FreeBSD.org>
+# $FreeBSD: devel/p5-Attribute-Handlers-Prospective/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Attribute-Handlers-Prospective
 PORTVERSION=	0.01
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Richer semantics for attribute handlers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Attribute::Handlers::Prospective.3
 
