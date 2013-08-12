@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: ports/news/p5-News-Article/Makefile,v 1.23 2012/11/17 06:00:43 svnexp Exp $
+# $FreeBSD: news/p5-News-Article/Makefile 324036 2013-07-31 11:56:17Z az $
 
 PORTNAME=	News-Article
 PORTVERSION=	1.27
@@ -14,7 +14,8 @@ COMMENT=	Object for handling Usenet articles in mail or news form
 BUILD_DEPENDS=	p5-Net>=0:${PORTSDIR}/net/p5-Net
 RUN_DEPENDS=	p5-Net>=0:${PORTSDIR}/net/p5-Net
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		News::Article.3 News::AutoReply.3 News::FormArticle.3 \
 		News::FormReply.3
