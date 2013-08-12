@@ -2,7 +2,7 @@
 # Date created:                 17 April 2002
 # Whom:                         Christian Brueffer <chris@unixpages.org>
 #
-# $FreeBSD: ports/deskutils/mencal/Makefile,v 1.9 2012/11/17 05:55:29 svnexp Exp $
+# $FreeBSD: deskutils/mencal/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	mencal
@@ -17,7 +17,8 @@ LICENSE=	GPLv2
 
 NO_BUILD=	yes
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES=	bin/mencal
 
