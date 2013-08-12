@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <michaelnottebrock@gmx.net>
-# $FreeBSD: audio/ices0/Makefile 314074 2013-03-13 11:54:25Z danfe $
+# $FreeBSD: audio/ices0/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	ices
 PORTVERSION=	0.4
@@ -16,9 +16,9 @@ LIB_DEPENDS=	shout:${PORTSDIR}/audio/libshout2 \
 OPTIONS_DEFINE=	FLAC FAAD VORBIS PYTHON
 OPTIONS_DEFAULT=	PYTHON
 
+USES=		perl5
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PERL5=	yes
 USE_RC_SUBR=	ices0
 
 LATEST_LINK=	ices0
