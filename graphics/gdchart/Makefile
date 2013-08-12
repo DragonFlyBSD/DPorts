@@ -2,12 +2,12 @@
 # Date created:         4 June 2001
 # Whom:                 Anders Nordby <anders@fix.no>
 #
-# $FreeBSD: ports/graphics/gdchart/Makefile,v 1.25 2012/11/17 05:58:06 svnexp Exp $
+# $FreeBSD: graphics/gdchart/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	gdchart
 PORTVERSION=	0.11.5
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.fred.net/brv/chart/ \
 		ftp://ftp.nuug.no/pub/anders/distfiles/
@@ -16,7 +16,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}dev
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Easy to use fast C API for creating charts and graphs
 
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd \
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
 		jpeg:${PORTSDIR}/graphics/jpeg \
 		freetype:${PORTSDIR}/print/freetype2
 
@@ -27,7 +27,7 @@ USE_LDCONFIG=	yes
 DOCS=		README.txt
 EXAMPLES=	ft_samp.c gdc_pie_samp.c gdc_samp1.c gdc_samp2.c
 
-.if defined(NOPROFILE)
+.if defined(NO_PROFILE)
 PLIST_SUB+=	PROFILE="@comment "
 .else
 PLIST_SUB+=	PROFILE=

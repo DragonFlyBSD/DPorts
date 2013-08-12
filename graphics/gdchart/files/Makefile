@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/gdchart/files/Makefile,v 1.4 2012/11/17 05:58:06 svnexp Exp $
+# $FreeBSD: graphics/gdchart/files/Makefile 300896 2012-07-14 13:54:48Z beat $
 
 LIB=		gdc
 CFLAGS+=	-I${LOCALBASE}/include
