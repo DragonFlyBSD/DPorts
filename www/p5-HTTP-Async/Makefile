@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-HTTP-Async/Makefile 323226 2013-07-18 12:20:23Z culot $
+# $FreeBSD: www/p5-HTTP-Async/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTTP-Async
 PORTVERSION=	0.20
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-HTTP-Server-Simple>=0:${PORTSDIR}/www/p5-HTTP-Server-Simple \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-HTTP-Server-Simple>=0:${PORTSDIR}/www/p5-Test-HTTP-Server-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTTP::Async.3 HTTP::Async::Polite.3
 
