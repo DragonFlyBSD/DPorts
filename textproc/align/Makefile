@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/align/Makefile 317595 2013-05-07 09:39:35Z ehaupt $
+# $FreeBSD: textproc/align/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	align
 PORTVERSION=	1.7.2
@@ -14,8 +14,8 @@ LICENSE=	GPLv2 # (or later)
 
 NO_BUILD=	yes
 
-USES=		shebangfix
-USE_PERL5_RUN=	yes
+USES=		shebangfix perl5
+USE_PERL5=	run
 
 SHEBANG_FILES=	align width
 
