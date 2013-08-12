@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pure-sockets
-# Date created:		2011-03-18
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/net/pure-sockets/Makefile,v 1.4 2012/11/17 06:00:15 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: net/pure-sockets/Makefile 322734 2013-07-10 21:28:56Z bapt $
 
 PORTNAME=	pure-sockets
 PORTVERSION=	0.6
@@ -17,6 +13,5 @@ USE_PURE=	yes
 PLIST_FILES=	lib/pure/sockets.pure \
 		lib/pure/sockets.so
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/pure/bsd.pure.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+.include <bsd.port.mk>
