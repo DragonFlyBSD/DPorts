@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ftp/weex/Makefile 316340 2013-04-23 10:26:09Z ehaupt $
+# $FreeBSD: ftp/weex/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	weex
 PORTVERSION=	2.6.1.5
@@ -12,7 +12,6 @@ COMMENT=	Non-interactive FTP client
 
 GNU_CONFIGURE=	yes
 MANCOMPRESSED=	no
-MAKE_JOBS_SAFE=	yes
 
 PORTDOCS=	ChangeLog README
 MAN1=		weex.1
