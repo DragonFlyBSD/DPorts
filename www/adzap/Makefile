@@ -2,7 +2,7 @@
 # Date created:		03 March 2001
 # Whom:			Kris Kennaway <kris@FreeBSD.org>
 #
-# $FreeBSD: www/adzap/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/adzap/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	adzap
 PORTVERSION=	20110915
@@ -12,8 +12,9 @@ MASTER_SITES=	http://adzapper.sourceforge.net/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Filter out animated ad banners from web pages
 
+USES=		perl5
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 SUB_FILES=	adzap.conf pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
