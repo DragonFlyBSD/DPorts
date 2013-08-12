@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/filepp/pkg-plist,v 1.8 2012/11/17 06:01:56 svnexp Exp $
+@comment $FreeBSD: textproc/filepp/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/filepp
 %%DATADIR%%/modules/bigdef.pm
 %%DATADIR%%/modules/bigfunc.pm
