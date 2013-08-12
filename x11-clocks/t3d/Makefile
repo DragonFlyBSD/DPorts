@@ -1,5 +1,5 @@
 # Created by: J Han <hjh@best.com>
-# $FreeBSD: x11-clocks/t3d/Makefile 317812 2013-05-10 14:38:28Z miwi $
+# $FreeBSD: x11-clocks/t3d/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	t3d
 PORTVERSION=	1.1
@@ -19,7 +19,7 @@ EXTRACT_BEFORE_ARGS=	-dc
 EXTRACT_AFTER_ARGS=	| ${SH}
 
 NO_WRKSUBDIR=	yes
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 
 MAN1=		t3d.1
