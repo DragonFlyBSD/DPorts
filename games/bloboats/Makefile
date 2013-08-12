@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: games/bloboats/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: games/bloboats/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	bloboats
 PORTVERSION=	1.0.2
@@ -14,7 +14,6 @@ COMMENT=	Boat racing game in the spirit of Elasto Mania or X-Moto
 USES=		gmake
 USE_SDL=	mixer image net sdl
 USE_GL=		yes
-MAKE_JOBS_SAFE=	yes
 
 MAKE_ENV+=	DATADIR="${DATADIR}"
 
