@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Text::FormatTable
-# Date created:				24 Jan 2002
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/textproc/p5-Text-FormatTable/Makefile,v 1.10 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-Text-FormatTable/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=		Text-FormatTable
 PORTVERSION=		1.03
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=		p5-
 MAINTAINER=		perl@FreeBSD.org
 COMMENT=	Renders simple tables as text
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Text::FormatTable.3
 
