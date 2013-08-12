@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Template-Alloy
-# Date created:				22 June 2007
-# Whom:					mat
-#
-# $FreeBSD: ports/www/p5-Template-Alloy/Makefile,v 1.12 2012/11/17 06:02:54 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: www/p5-Template-Alloy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Template-Alloy
 PORTVERSION=	1.016
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Mixing of all of the major template systems
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Template::Alloy.3 Template::Alloy::Compile.3 \
 	Template::Alloy::Context.3 Template::Alloy::Exception.3 \
