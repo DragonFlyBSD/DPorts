@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	Sub::Multi
-# Date created:			Aug 1, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/p5-Sub-Multi/Makefile,v 1.4 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-Sub-Multi/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Sub-Multi
 PORTVERSION=	0.003
@@ -20,7 +17,8 @@ BUILD_DEPENDS=	p5-Class-Multimethods-Pure>=0.11:${PORTSDIR}/devel/p5-Class-Multi
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sub::Multi.3
 
