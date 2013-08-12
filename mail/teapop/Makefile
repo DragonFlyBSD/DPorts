@@ -2,7 +2,7 @@
 # Date created:			18 May 2000
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/teapop/Makefile,v 1.28 2012/11/17 05:59:16 svnexp Exp $
+# $FreeBSD: mail/teapop/Makefile 322581 2013-07-09 21:26:48Z pav $
 #
 
 PORTNAME=	teapop
@@ -11,7 +11,7 @@ CATEGORIES=	mail ipv6
 MASTER_SITES=	ftp://ftp.toontown.org/pub/teapop/ \
 		http://www.toontown.org/pub/teapop/
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet another RFC1939 compliant POP3 server
 
 GNU_CONFIGURE=		yes
