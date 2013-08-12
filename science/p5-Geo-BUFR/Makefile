@@ -1,5 +1,5 @@
 # Created by:	Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/p5-Geo-BUFR/Makefile 318211 2013-05-15 00:29:31Z wen $
+# $FreeBSD: science/p5-Geo-BUFR/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Geo-BUFR
 PORTVERSION=	1.23
@@ -27,6 +27,7 @@ MAN3=		Geo::BUFR.3 \
 		Geo::bufralter.3 \
 		Geo::bufrencode.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
