@@ -1,5 +1,5 @@
 # Created by: lbr@freebsd.org
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Cache/Makefile,v 1.15 2013/02/26 10:07:08 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-Cache/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Catalyst-Plugin-Cache
 PORTVERSION=	0.12
@@ -19,7 +19,8 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-WWW-Mechanize-Catalyst>=0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize-Catalyst
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 
 MAN3=	Catalyst::Plugin::Cache.3 \
 	Catalyst::Plugin::Cache::Backend.3 \
