@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: mail/rubygem-mail/Makefile 319600 2013-06-01 21:25:32Z swills $
+# $FreeBSD: mail/rubygem-mail/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	mail
 PORTVERSION=	2.5.4
@@ -7,8 +7,8 @@ PORTEPOCH=	1
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
-COMMENT=	A Ruby email handler
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Ruby email handler
 
 LICENSE=	MIT
 
