@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11-wm/wmii/Makefile 317404 2013-05-05 08:26:08Z bapt $
+# $FreeBSD: x11-wm/wmii/Makefile 323685 2013-07-26 06:07:28Z bapt $
 
 PORTNAME=	wmii
 DISTVERSION=	3.6	# this is stable version; for 3.9.x, use -devel port
