@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Text-Context
-# Date created:				29 Mar 2009
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Context/Makefile,v 1.5 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: textproc/p5-Text-Context/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Context
 PORTVERSION=	3.7
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Text-Context-EitherSide>=1.1:${PORTSDIR}/textproc/p5-Text-Contex
 		p5-HTML-Parser>0:${PORTSDIR}/www/p5-HTML-Parser
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::Context.3 \
 	Text::Context::Para.3
