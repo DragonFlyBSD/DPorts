@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: net-mgmt/cidr/Makefile 317638 2013-05-07 22:35:42Z ehaupt $
+# $FreeBSD: net-mgmt/cidr/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	cidr
 PORTVERSION=	2.3.2
@@ -11,8 +11,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	RFC 1878 subnet calculator / helper
 
 LICENSE=	GPLv2
-
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		cidr.1
 PLIST_FILES=	bin/cidr
