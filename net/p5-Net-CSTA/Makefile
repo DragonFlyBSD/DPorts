@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-CSTA
-# Date created:		2006-07-19
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/net/p5-Net-CSTA/Makefile,v 1.7 2012/11/17 06:00:10 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/p5-Net-CSTA/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-CSTA
 PORTVERSION=	0.04
@@ -17,7 +13,8 @@ COMMENT=	Perl extension for ECMA CSTA
 RUN_DEPENDS=	p5-Convert-ASN1>=0:${PORTSDIR}/converters/p5-Convert-ASN1 \
 		p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::CSTA.3
 
