@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xtypo
-# Date created:		07 May 2001
-# Whom:			Takeshi MUTOH <tmutoh@mx10.freecom.ne.jp>
-#
-# $FreeBSD: ports/misc/xtypo/Makefile,v 1.9 2012/11/17 05:59:46 svnexp Exp $
-#
+# Created by: Takeshi MUTOH <tmutoh@mx10.freecom.ne.jp>
+# $FreeBSD: misc/xtypo/Makefile 321997 2013-06-28 22:10:14Z bapt $
 
 PORTNAME=	xtypo
 PORTVERSION=	1.02
@@ -15,7 +11,7 @@ MAINTAINER=	mutoh@openedu.org
 COMMENT=	X-based keyboard trainer
 
 PLIST_FILES=	bin/xtypo
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 ALL_TARGET=	xtypo
 
