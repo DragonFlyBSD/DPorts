@@ -2,7 +2,7 @@
 # Date created:		16 May 2004
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/p5-POE-Component-TSTP/Makefile,v 1.6 2012/11/17 05:56:25 svnexp Exp $
+# $FreeBSD: devel/p5-POE-Component-TSTP/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	POE-Component-TSTP
@@ -17,7 +17,8 @@ COMMENT=	POE component to correctly handle Ctrl-Z in your program
 BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::TSTP.3
 
