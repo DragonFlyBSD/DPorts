@@ -1,5 +1,5 @@
 # Created by: Eric Blood <eblood@cs.unr.edu>
-# $FreeBSD: ports/x11/xautolock/Makefile,v 1.23 2012/12/30 06:16:31 svnexp Exp $
+# $FreeBSD: x11/xautolock/Makefile 324016 2013-07-31 08:13:51Z danfe $
 
 PORTNAME=	xautolock
 PORTVERSION=	2.2
@@ -10,20 +10,17 @@ MASTER_SITE_SUBDIR=	X11/screensavers
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	romain@FreeBSD.org
-COMMENT=	Used to activate xlock after a user defined time of inactivity
+COMMENT=	Activate xlock after a user defined time of inactivity
+
+USES=		imake gmake		# gmake is needed for -jX builds
+USE_XORG=	x11 xext xscrnsaver
 
 OPTIONS_DEFINE=	XLOCK
 OPTIONS_DEFAULT=	XLOCK
 XLOCK_DESC=	Force dependency on x11/xlockmore
 
-.include <bsd.port.options.mk>
+XLOCK_RUN_DEPENDS=	xlock:${PORTSDIR}/x11/xlockmore
 
-.if ${PORT_OPTIONS:MXLOCK}
-RUN_DEPENDS+=	xlock:${PORTSDIR}/x11/xlockmore
-.endif
-
-USE_IMAKE=	yes
-USE_XORG=	x11 xext xscrnsaver
 MAN1=		xautolock.1
 PLIST_FILES=	bin/xautolock
 
