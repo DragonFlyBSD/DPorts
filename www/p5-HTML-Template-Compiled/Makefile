@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: www/p5-HTML-Template-Compiled/Makefile 317484 2013-05-06 08:50:39Z tobez $
+# $FreeBSD: www/p5-HTML-Template-Compiled/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-Template-Compiled
 PORTVERSION=	1.001
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Template::Compiled.3 \
 		HTML::Template::Compiled::Classic.3 \
