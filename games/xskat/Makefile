@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/xskat/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: games/xskat/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xskat
 PORTVERSION=	4.0
@@ -16,7 +16,7 @@ DISTFILES+=	xskat-cards.tar.gz
 RESTRICTED=	The altenburger card file is NOT freely redistributable!
 .endif
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11
 MAN1=		xskat.1 xskat-de.1
 PLIST_FILES=	bin/xskat
