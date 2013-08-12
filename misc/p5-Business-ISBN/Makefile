@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Business-ISBN/Makefile 320304 2013-06-08 22:43:25Z sunpoet $
+# $FreeBSD: misc/p5-Business-ISBN/Makefile 324167 2013-08-02 17:11:34Z az $
 
 PORTNAME=	Business-ISBN
 PORTVERSION=	2.06
@@ -21,7 +21,8 @@ OPTIONS_DEFINE=	BARCODE XISBN
 BARCODE_DESC=	Barcode support
 XISBN_DESC=	xISBN support
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::ISBN.3 \
 		Business::ISBN10.3 \
