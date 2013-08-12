@@ -1,5 +1,5 @@
 # created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: ports/devel/p5-IPC-Run-SafeHandles/Makefile,v 1.5 2012/12/08 19:49:18 svnexp Exp $
+# $FreeBSD: devel/p5-IPC-Run-SafeHandles/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IPC-Run-SafeHandles
 PORTVERSION=	0.04
@@ -13,9 +13,8 @@ COMMENT=	Safe guarding for IPC::Run(3)
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-MAKE_JOBS_SAFE=	yes
-
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	IPC::Run::SafeHandles.3
 
