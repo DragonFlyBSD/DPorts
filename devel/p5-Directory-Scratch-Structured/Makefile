@@ -2,7 +2,7 @@
 # Date created:				22 April 2008
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Directory-Scratch-Structured/Makefile,v 1.5 2012/11/17 05:56:14 svnexp Exp $
+# $FreeBSD: devel/p5-Directory-Scratch-Structured/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Directory-Scratch-Structured
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Creates temporary files and directories from a structured description
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 RUN_DEPENDS=	p5-Readonly>=0:${PORTSDIR}/devel/p5-Readonly \
 		p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter \
