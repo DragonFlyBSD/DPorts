@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/net-p2p/bitflu/Makefile,v 1.23 2012/11/17 06:00:39 svnexp Exp $
+# $FreeBSD: net-p2p/bitflu/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	bitflu
 PORTVERSION=	1.35
@@ -17,7 +17,7 @@ RUN_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
 
 PLUGINSDIR_BASE=lib/perl5
 PLUGINSDIR=	${PLUGINSDIR_BASE}/Bitflu
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
