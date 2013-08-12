@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/autozen/Makefile 319832 2013-06-04 08:24:32Z miwi $
+# $FreeBSD: audio/autozen/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	autozen
 PORTVERSION=	2.1
@@ -15,9 +15,9 @@ LICENSE=	GPLv2
 
 OPTIONS_DEFINE=	GTK2 DOCS
 
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	zentime
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 DESKTOP_ENTRIES="AutoZen" \
 		"BrainWave Generator/Synchronizator" \
