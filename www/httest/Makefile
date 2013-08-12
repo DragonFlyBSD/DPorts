@@ -1,9 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/httest/Makefile 322372 2013-07-06 09:04:54Z ohauer $
+# $FreeBSD: www/httest/Makefile 324241 2013-08-04 15:43:18Z ehaupt $
 
 PORTNAME=	httest
-PORTVERSION=	2.4.5
-PORTREVISION=	1
+PORTVERSION=	2.4.6
 CATEGORIES=	www
 MASTER_SITES=	SF/htt/htt${PORTVERSION:R}/${PORTNAME}-${PORTVERSION}
 
@@ -25,7 +24,6 @@ CONFIGURE_ARGS=	--enable-lua-module \
 		--with-ssl="${OPENSSLLIB}"
 CPPFLAGS+=	-I${LUA_INCDIR}
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 USES=		iconv
 USE_LUA=	yes
 USE_OPENSSL=	yes
