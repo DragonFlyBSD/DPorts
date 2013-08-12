@@ -1,8 +1,8 @@
 # Created by: Andrey V. Pevnev <andrey@mgul.ac.ru>
-# $FreeBSD: mail/mimedefang/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/mimedefang/Makefile 323790 2013-07-27 14:24:13Z swills $
 
 PORTNAME=	mimedefang
-PORTVERSION=	2.73
+PORTVERSION=	2.74
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mimedefang.org/static/
 
