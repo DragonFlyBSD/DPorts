@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: ports/databases/gqlplus/Makefile,v 1.17 2013/01/21 16:45:40 svnexp Exp $
+# $FreeBSD: databases/gqlplus/Makefile 323088 2013-07-16 05:42:36Z ade $
 #
 
 PORTNAME=	gqlplus
@@ -16,6 +16,7 @@ USE_GMAKE=	yes
 PORTDOCS=	README ChangeLog
 PLIST_FILES=	bin/gqlplus
 USE_AUTOTOOLS=	autoconf automake aclocal
+AUTOMAKE_ARGS=	--add-missing
 
 .include <bsd.port.options.mk>
 
