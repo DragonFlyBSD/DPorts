@@ -1,9 +1,5 @@
-# New ports collection makefile for:	baekmuk fonts(x11)
-# Date created:		23 Jul 1999
-# Whom:			CHOI Junho <cjh@kr.freebsd.org>
-#
-# $FreeBSD: ports/korean/baekmukfonts-bdf/Makefile,v 1.27 2012/11/17 05:58:46 svnexp Exp $
-#
+# Created by: Junho CHOI <junho.choi@gmail.com>
+# $FreeBSD: korean/baekmukfonts-bdf/Makefile 324036 2013-07-31 11:56:17Z az $
 
 PORTNAME=	baekmukfonts
 PORTVERSION=	2.0
@@ -41,7 +37,8 @@ CHARSETSUB=	s/ksx1001.1997/ksc5601.1987/g
 FONTSDIR=	lib/X11/fonts/local
 MAKE_ENV=	FONTSDIR=${FONTSDIR}
 PLIST_SUB=	FONTSDIR=${FONTSDIR}
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 
 # manually install hinted fonts
 do-configure:
@@ -59,7 +56,7 @@ do-build:
 .endfor
 
 do-install:
-	-mkdir -p ${PREFIX}/${FONTSDIR}
+	@${MKDIR} ${PREFIX}/${FONTSDIR}
 .for FONTNAME in ${FONTLIST}
 	${INSTALL_DATA} ${WRKDIR}/${FONTNAME}.pcf.gz \
 			${PREFIX}/${FONTSDIR}
