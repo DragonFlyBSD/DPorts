@@ -1,9 +1,9 @@
 # Created by: Romain Tartiere <romain@FreeBSD.org>
-# $FreeBSD: ports/graphics/mscgen/Makefile,v 1.5 2012/12/30 06:16:26 svnexp Exp $
+# $FreeBSD: graphics/mscgen/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	mscgen
 PORTVERSION=	0.20
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.mcternan.me.uk/mscgen/software/ \
 		http://romain.blogreen.org/distfiles/
@@ -19,7 +19,7 @@ OPTIONS_DEFAULT=	PNG
 
 .if ${PORT_OPTIONS:MPNG}
 CONFIGURE_ARGS+=--with-png
-LIB_DEPENDS+=	gd.4:${PORTSDIR}/graphics/gd
+LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
 .else
 CONFIGURE_ARGS+=--without-png
 .endif
