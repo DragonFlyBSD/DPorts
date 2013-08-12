@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: graphics/p5-PGPLOT/Makefile 320709 2013-06-12 17:45:02Z az $
+# $FreeBSD: graphics/p5-PGPLOT/Makefile 324190 2013-08-03 12:51:18Z mat $
 
 PORTNAME=	PGPLOT
 PORTVERSION=	2.21
@@ -18,7 +18,7 @@ LIB_DEPENDS=	pgplot.5:${PORTSDIR}/graphics/pgplot
 INSTALL_TARGET=	pure_install
 SCRIPTS_ENV=	PERL=${PERL}
 USE_FORTRAN=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 MAN3=		PGPLOT.3
 MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
