@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: ports/devel/nglogc/Makefile,v 1.1 2013/01/31 01:43:03 svnexp Exp $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: devel/nglogc/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	nglogc
 PORTVERSION=	1.1.0
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Flexible C logging API
 
 GNU_CONFIGURE=	yes
