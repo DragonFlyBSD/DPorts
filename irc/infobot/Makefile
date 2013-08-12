@@ -1,9 +1,5 @@
-# New ports collection makefile for:	infobot
-# Date created:				17 November 1999
-# Whom:					perlguy@perlguy.com
-#
-# $FreeBSD: ports/irc/infobot/Makefile,v 1.7 2012/11/17 05:58:28 svnexp Exp $
-#
+# Created by: perlguy@perlguy.com
+# $FreeBSD: irc/infobot/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	infobot
 PORTVERSION=	0.45.3
@@ -14,7 +10,7 @@ MASTER_SITES=	http://www.infobot.org/src/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Bot written in Perl with a rabid AI
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 do-install:
