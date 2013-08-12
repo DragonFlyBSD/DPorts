@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/exrtools/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: graphics/exrtools/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	exrtools
 PORTVERSION=	0.4
@@ -19,7 +19,6 @@ LIB_DEPENDS=	IlmImf:${PORTSDIR}/graphics/OpenEXR \
 
 GNU_CONFIGURE=	yes
 USES=		pkgconfig gmake
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
