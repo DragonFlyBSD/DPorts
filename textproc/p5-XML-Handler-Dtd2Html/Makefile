@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML-Handler-Dtd2Html
-# Date created:	   			2006/07/11
-# Whom:		   			chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-XML-Handler-Dtd2Html/Makefile,v 1.8 2012/11/17 06:02:12 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: textproc/p5-XML-Handler-Dtd2Html/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Handler-Dtd2Html
 PORTVERSION=	0.42
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-Parse-RecDescent>=1.94:${PORTSDIR}/devel/p5-Parse-RecDescent \
 		p5-libxml>=0.08:${PORTSDIR}/textproc/p5-libxml
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		dtd2html.pl.1
 MAN3=		XML::Handler::Dtd2Html.3
