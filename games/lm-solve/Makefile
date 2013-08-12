@@ -3,7 +3,7 @@
 # Date created:			Sep 5, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/games/lm-solve/Makefile,v 1.10 2012/11/17 05:57:44 svnexp Exp $
+# $FreeBSD: games/lm-solve/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	lm-solve
@@ -16,7 +16,8 @@ DISTNAME=	Games-LMSolve-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Computerized Solver for Logic Mazes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	lm-solve.1
 MAN3=	Games::LMSolve.3 Games::LMSolve::Base.3 Games::LMSolve::Input.3 \
