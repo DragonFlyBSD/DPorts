@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Config-Record/Makefile,v 1.11 2012/11/17 05:56:09 svnexp Exp $
+# $FreeBSD: devel/p5-Config-Record/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Config-Record
 PORTVERSION=	1.1.2
@@ -15,6 +15,7 @@ TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 
 MAN3=	Config::Record.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
