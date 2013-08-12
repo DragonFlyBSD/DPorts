@@ -1,5 +1,5 @@
 # Created by: Olivier Girard <Olivier.Girard@univ-angers.fr>
-# $FreeBSD: ports/textproc/p5-Unicode-LineBreak/Makefile,v 1.5 2013/01/28 08:42:14 svnexp Exp $
+# $FreeBSD: textproc/p5-Unicode-LineBreak/Makefile 323541 2013-07-23 17:15:43Z culot $
 
 PORTNAME=	Unicode-LineBreak
 PORTVERSION=	2012.10
@@ -16,6 +16,8 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-MIME-Charset>=0:${PORTSDIR}/mail/p5-MIME-Charset
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+MAKE_JOBS_UNSAFE=	yes
 
 PERL_CONFIGURE=	yes
 
