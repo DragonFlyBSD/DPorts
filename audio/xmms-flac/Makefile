@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmms-flac/Makefile 320405 2013-06-09 19:30:58Z naddy $
+# $FreeBSD: audio/xmms-flac/Makefile 324122 2013-08-01 20:22:27Z naddy $
 
 PORTNAME=	xmms-flac
 PORTVERSION=	1.3.0
@@ -26,7 +26,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAKE_ARGS=	LIBTOOL="${LIBTOOL} --tag=disable-static"
 MAKEFILE=	${FILESDIR}/Makefile
-MAKE_JOBS_SAFE=	yes
 
 # XXX
 post-install:
