@@ -1,5 +1,5 @@
 # Created by: Hubert Tournier <hubert@frbsd.org>
-# $FreeBSD: ports/www/geneweb/Makefile,v 1.18 2013/02/13 11:55:28 svnexp Exp $
+# $FreeBSD: www/geneweb/Makefile 322658 2013-07-10 11:31:14Z bapt $
 
 PORTNAME=	geneweb
 PORTVERSION=	6.06
@@ -17,6 +17,7 @@ BUILD_DEPENDS=	ocamlc:${PORTSDIR}/lang/ocaml \
 		camlp5:${PORTSDIR}/devel/ocaml-camlp5
 
 HAS_CONFIGURE=	yes
+MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFINE=	GTK2
 
