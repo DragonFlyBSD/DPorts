@@ -1,5 +1,5 @@
 # Created by: Carl Johan Madestrand <calle.madestrand@norrgarden.se>
-# $FreeBSD: ports/security/saint/Makefile,v 1.42 2013/02/23 07:44:16 svnexp Exp $
+# $FreeBSD: security/saint/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	saint
 PORTVERSION=	3.5.8
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	smbclient:${PORTSDIR}/${SAMBA_PORT}
 
 SAMBA_PORT?=	net/samba36
 
-USE_PERL5=	yes
+USES=		perl5
 MANCOMPRESSED=	no
 MAN1=		saint.1
 GNU_CONFIGURE=	yes
