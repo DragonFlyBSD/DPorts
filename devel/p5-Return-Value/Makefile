@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Return-Value/Makefile,v 1.10 2013/01/03 09:52:32 svnexp Exp $
+# $FreeBSD: devel/p5-Return-Value/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Return-Value
 PORTVERSION=	1.666002
@@ -12,11 +12,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Return::Value - Polymorphic Return Values
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Return::Value.3
 
 post-patch:
-	${PERL} -pi -e 's/^Carp::cluck/# Carp::cluck/' ${WRKSRC}/lib/Return/Value.pm
+	@${REINPLACE_CMD} -i '' -e 's/^Carp::cluck/# Carp::cluck/' ${WRKSRC}/lib/Return/Value.pm
 
 .include <bsd.port.mk>
