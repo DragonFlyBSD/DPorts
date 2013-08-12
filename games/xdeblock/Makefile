@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xdeblock
-# Date created:		28 December 1996
-# Whom:			Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/games/xdeblock/Makefile,v 1.20 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: games/xdeblock/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xdeblock
 PORTVERSION=	1.0
@@ -17,7 +13,7 @@ COMMENT=	Block action game
 
 WRKSRC=		${WRKDIR}/xdeblo_v1.0
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xpm
 NO_INSTALL_MANPAGES=	yes
 
