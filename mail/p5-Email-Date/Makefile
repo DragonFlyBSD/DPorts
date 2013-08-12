@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-Date/Makefile 320254 2013-06-08 14:54:35Z miwi $
+# $FreeBSD: mail/p5-Email-Date/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Email-Date
 PORTVERSION=	1.10.3
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Email-Abstract>=2.10:${PORTSDIR}/mail/p5-Email-Abstract \
 		p5-TimeDate>=1.16:${PORTSDIR}/devel/p5-TimeDate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Email::Date.3
 
