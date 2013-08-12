@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-OpenID-Consumer/Makefile 319368 2013-05-29 13:35:42Z jadawin $
+# $FreeBSD: net/p5-Net-OpenID-Consumer/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-OpenID-Consumer
 PORTVERSION=	1.14
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::OpenID::Association.3 Net::OpenID::ClaimedIdentity.3 \
 		Net::OpenID::Consumer.3 Net::OpenID::VerifiedIdentity.3
