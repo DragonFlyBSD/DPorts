@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-SVN-Web/Makefile,v 1.32 2012/11/17 06:36:12 svnexp Exp $
+# $FreeBSD: devel/p5-SVN-Web/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SVN-Web
 PORTVERSION=	0.63
@@ -34,7 +34,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		p5-Test-HTML-Tidy>=0:${PORTSDIR}/devel/p5-Test-HTML-Tidy \
 		p5-Test-WWW-Mechanize>=0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	--skip_questions
 
 MAN1=		svnweb-install.1
