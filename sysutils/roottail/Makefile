@@ -1,9 +1,5 @@
-# New ports collection makefile for:	roottail
-# Date created:			30 September 1999
-# Whom:				Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: ports/sysutils/roottail/Makefile,v 1.19 2012/11/17 06:01:43 svnexp Exp $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: sysutils/roottail/Makefile 322004 2013-06-28 22:32:28Z bapt $
 
 PORTNAME=	roottail
 PORTVERSION=	1.2
@@ -23,7 +19,7 @@ COMMENT=	Print text directly to X11 root window
 
 MAN1=		root-tail.1
 PLIST_FILES=	bin/root-tail
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAKE_ARGS=	CC="${CC}"
 
