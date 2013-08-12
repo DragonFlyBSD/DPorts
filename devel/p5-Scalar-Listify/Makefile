@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Scalar-Listify
-# Date created:				2007/02/14
-# Whom:					chinsan
-#
-# $FreeBSD: ports/devel/p5-Scalar-Listify/Makefile,v 1.4 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: devel/p5-Scalar-Listify/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Scalar-Listify
 PORTVERSION=	0.02
@@ -16,6 +12,7 @@ COMMENT=	Poduces an array(ref)? from a scalar value or array ref
 
 MAN3=		Scalar::Listify.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
