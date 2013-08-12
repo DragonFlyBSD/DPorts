@@ -2,7 +2,7 @@
 # Date created:				04 November 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-XML/Makefile,v 1.7 2012/11/17 05:56:34 svnexp Exp $
+# $FreeBSD: devel/p5-Test-XML/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-XML
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-XML-SemanticDiff>=0:${PORTSDIR}/textproc/p5-XML-SemanticDiff \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::XML.3 \
 	Test::XML::SAX.3 \
