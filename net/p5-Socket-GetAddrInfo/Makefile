@@ -2,7 +2,7 @@
 # Date created:				29 November 2009
 # Whom:					Sahil Tandon <sahil@tandon.net>
 #
-# $FreeBSD: ports/net/p5-Socket-GetAddrInfo/Makefile,v 1.13 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-Socket-GetAddrInfo/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Socket-GetAddrInfo
@@ -26,10 +26,6 @@ MAN3=		Socket::GetAddrInfo.3 \
 PERL_CONFIGURE=	yes
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-Module-Build>=0:${PORTSDIR}/devel/p5-Module-Build
-.endif
 
 .if ${PERL_LEVEL} < 501400
 PLIST_SUB+=	OLD_PERL="" NEW_PERL="@comment "
