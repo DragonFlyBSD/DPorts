@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Catalyst-Action-RenderView
-# Date created:				July 11, 2006
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Action-RenderView/Makefile,v 1.19 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Action-RenderView/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Action-RenderView
 PORTVERSION=	0.16
@@ -23,11 +19,12 @@ RUN_DEPENDS=	p5-Catalyst-Runtime>=5.70:${PORTSDIR}/www/p5-Catalyst-Runtime \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 BUILD_DEPENDS+=	p5-HTTP-Request-AsCGI>=0:${PORTSDIR}/www/p5-HTTP-Request-AsCGI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Action::RenderView.3
 
 post-extract:
-	@${PERL} -i.bak -ne 'print unless /^(test_requires|auto_install|recommends|configure_requires)/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' '/test_requires/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
