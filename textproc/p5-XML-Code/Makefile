@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-XML-Code/Makefile,v 1.4 2012/12/12 18:51:48 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-Code/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	XML-Code
 PORTVERSION=	0.4
@@ -11,6 +11,7 @@ COMMENT=	Module for converting XML hash structures into plain text
 
 MAN3=		XML::Code.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
