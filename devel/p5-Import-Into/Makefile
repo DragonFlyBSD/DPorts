@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Import-Into/Makefile,v 1.2 2012/11/17 05:56:19 svnexp Exp $
+# $FreeBSD: devel/p5-Import-Into/Makefile 324306 2013-08-06 08:50:49Z az $
 
 PORTNAME=	Import-Into
 PORTVERSION=	1.001000
@@ -14,7 +14,8 @@ COMMENT=	Import packages into other packages
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Import::Into.3
 
