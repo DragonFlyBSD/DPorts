@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ja-lynx-current
-# Date created:         10 August 1998
-# Whom:                 Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-#
-# $FreeBSD: japanese/lynx-current/Makefile 316662 2013-04-27 11:59:28Z mva $
-#
+# Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
+# $FreeBSD: japanese/lynx-current/Makefile 322735 2013-07-10 21:32:34Z bapt $
 
 PORTNAME=	lynx
 DISTVERSION=	${VERSION}.${MINOR_VERSION:S/.//}
@@ -23,6 +19,7 @@ CONFLICTS=	lynx-2.* ja-lynx-2.8.7.*
 WRKSRC=		${WRKDIR}/${PORTNAME}${VERSION:S/./-/g}
 USE_BZIP2=	yes
 NO_LATEST_LINK=	yes
+MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-screen=ncurses --with-zlib --libdir="${L_LIB}" \
 		--enable-nsl-fork --enable-ipv6 \
