@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	mp3mover
-# Date created:			Apr 18, 2001
-# Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/mp3mover/Makefile,v 1.15 2012/11/17 05:54:39 svnexp Exp $
-#
+# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
+# $FreeBSD: audio/mp3mover/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	mp3mover
 PORTVERSION=	2.1.1
@@ -16,7 +11,7 @@ COMMENT=	Rename mp3s and manipulate them
 
 RUN_DEPENDS=	p5-tagged>=0:${PORTSDIR}/audio/p5-tagged
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 PORTDOCS=	readme
