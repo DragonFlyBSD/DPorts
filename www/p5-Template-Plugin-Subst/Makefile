@@ -2,7 +2,7 @@
 # Date created:				27 January 2006
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Template-Plugin-Subst/Makefile,v 1.5 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Plugin-Subst/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Template-Plugin-Subst
@@ -17,7 +17,8 @@ COMMENT=	TT plugin for s/// functionality in templates
 BUILD_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Template::Plugin::Subst.3
 
