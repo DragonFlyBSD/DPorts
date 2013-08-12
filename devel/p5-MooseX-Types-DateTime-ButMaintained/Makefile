@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-MooseX-Types-DateTime-ButMaintained/Makefile,v 1.9 2012/11/17 05:56:23 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Types-DateTime-ButMaintained/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	MooseX-Types-DateTime-ButMaintained
 PORTVERSION=	0.16
@@ -21,7 +21,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0.27:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-use-ok>=0.02:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MooseX::Types::DateTime::ButMaintained.3
 
