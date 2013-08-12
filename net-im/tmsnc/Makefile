@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: net-im/tmsnc/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: net-im/tmsnc/Makefile 323776 2013-07-27 10:19:30Z marino $
 
 PORTNAME=	tmsnc
 PORTVERSION=	0.3.2
@@ -8,6 +8,9 @@ MASTER_SITES=	SF/${PORTNAME}/Source%20code%20and%20binaries/${PORTVERSION}
 
 MAINTAINER=	snowfly@yuntech.edu.tw
 COMMENT=	A textbased (console) MSN client
+
+DEPRECATED=	Primary MSN Messenger service terminated 30 APR 2013
+EXPIRATION_DATE=2013-10-31
 
 GNU_CONFIGURE=	yes
 USES=		ncurses
