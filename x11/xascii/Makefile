@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xascii
-# Date created:			10 April 2012
-# Whom:				Cy Schubert <cy@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xascii/Makefile,v 1.5 2012/11/17 06:03:20 svnexp Exp $
-#
+# Created by: Cy Schubert <cy@FreeBSD.org>
+# $FreeBSD: x11/xascii/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xascii
 PORTVERSION=	1.0
@@ -17,7 +13,7 @@ MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Display an ASCII table in decimal, octal, and hexadecimal.
 
 MAKE_ARGS+=	PREFIX=${PREFIX}
-USE_IMAKE=	YES
+USES=		imake
 USE_XORG=	x11 xt xaw
 MAN1=		xascii.1
 PLIST_FILES=	bin/xascii
