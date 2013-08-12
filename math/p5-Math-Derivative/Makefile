@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/math/p5-Math-Derivative/Makefile,v 1.4 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: math/p5-Math-Derivative/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Math-Derivative
 PORTVERSION=	0.01
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Numeric 1st and 2nd order differentiation
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::Derivative.3
 
