@@ -2,7 +2,7 @@
 # Date created:				04 November 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-XML-SemanticDiff/Makefile,v 1.8 2012/11/17 06:02:14 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-SemanticDiff/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	XML-SemanticDiff
@@ -18,7 +18,8 @@ COMMENT=	Perl extension for comparing XML documents
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::SemanticDiff.3 \
 	XML::SemanticDiff::BasicHandler.3
