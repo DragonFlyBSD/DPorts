@@ -1,8 +1,8 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: textproc/tinyxml2/Makefile 320560 2013-06-11 13:49:32Z bf $
+# $FreeBSD: textproc/tinyxml2/Makefile 324407 2013-08-08 18:10:37Z bf $
 
 PORTNAME=	tinyxml2
-PORTVERSION=	20130520
+PORTVERSION=	20130805
 CATEGORIES=	textproc
 MASTER_SITES=	LOCAL/bf GH
 
@@ -11,12 +11,13 @@ COMMENT=	Small C++ XML Parser
 
 LICENSE=	ZLIB
 
+USE_DOS2UNIX=	yes
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 USES=		cmake
 
 GH_ACCOUNT=	leethomason
-GH_COMMIT=	392bcd2
+GH_COMMIT=	0323851
 GH_TAGNAME=	${GH_COMMIT}
 
 PLIST_FILES=	include/tinyxml2.h \
@@ -34,7 +35,7 @@ post-patch:
 		${WRKSRC}/CMakeLists.txt
 
 check regression-test test: build
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_ARGS} test ; \
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test ; \
 	./test
 
 .if ${PORT_OPTIONS:MEXAMPLES}
