@@ -1,5 +1,5 @@
-# Created by: Martin Blapp <mbr@freebsd.org>
-# $FreeBSD: audio/uade/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
+# Created by: Martin Blapp <mbr@FreeBSD.org>
+# $FreeBSD: audio/uade/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	uade
 PORTVERSION=	2.13
@@ -13,10 +13,9 @@ COMMENT=	Unix Amiga Delitracker Emulator
 
 LIB_DEPENDS=	ao:${PORTSDIR}/audio/libao
 
+USES=		gmake
 HAS_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/uade2
 DATADIR=	${PREFIX}/share/uade2
