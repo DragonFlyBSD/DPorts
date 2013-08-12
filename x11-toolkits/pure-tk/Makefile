@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-toolkits/pure-tk/Makefile 318162 2013-05-14 14:16:52Z gahr $
+# $FreeBSD: x11-toolkits/pure-tk/Makefile 322734 2013-07-10 21:28:56Z bapt $
 
 PORTNAME=	pure-tk
 PORTVERSION=	0.3
@@ -25,6 +25,5 @@ post-patch:
  		-e "s|-ltk\$$(tclvers)|-ltk${SHORT_TCL_VER}|" \
 		${WRKSRC}/Makefile
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/pure/bsd.pure.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+.include <bsd.port.mk>
