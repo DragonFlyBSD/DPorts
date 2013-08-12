@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-pip/Makefile 322633 2013-07-10 09:30:20Z nivit $
+# $FreeBSD: devel/py-pip/Makefile 323626 2013-07-25 07:28:34Z nivit $
 
 PORTNAME=	pip
-PORTVERSION=	1.3.1
+PORTVERSION=	1.4
 PORTREVISION=	0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP \
