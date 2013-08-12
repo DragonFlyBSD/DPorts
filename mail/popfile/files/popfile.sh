@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/mail/popfile/files/popfile.sh,v 1.4 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: mail/popfile/files/popfile.sh 300896 2012-07-14 13:54:48Z beat $
 #
 case "${HOME}" in
 "")

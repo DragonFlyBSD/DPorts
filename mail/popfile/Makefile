@@ -1,5 +1,5 @@
 # Created by: matusita@FreeBSD.org
-# $FreeBSD: ports/mail/popfile/Makefile,v 1.28 2013/02/05 10:45:07 svnexp Exp $
+# $FreeBSD: mail/popfile/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	popfile
 PORTVERSION=	1.1.3
@@ -33,8 +33,9 @@ MECABU_DESC=	\
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
+USES=		perl5
 USE_ZIP=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
