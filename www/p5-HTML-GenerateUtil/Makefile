@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-GenerateUtil
-# Date Created:		2010-11-18
-# Whom:			Kurt Lidl (kurt.lidl@cello.com)
-#
-# $FreeBSD: ports/www/p5-HTML-GenerateUtil/Makefile,v 1.3 2012/11/17 06:02:49 svnexp Exp $
-#
+# Created by: Kurt Lidl (kurt.lidl@cello.com)
+# $FreeBSD: www/p5-HTML-GenerateUtil/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-GenerateUtil
 PORTVERSION=	1.11
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module for generating HTML on the fly
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::GenerateUtil.3
 
