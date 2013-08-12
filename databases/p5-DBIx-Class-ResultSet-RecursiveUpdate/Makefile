@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-ResultSet-RecursiveUpdate/Makefile 322474 2013-07-08 01:58:43Z clsung $
+# $FreeBSD: databases/p5-DBIx-Class-ResultSet-RecursiveUpdate/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Class-ResultSet-RecursiveUpdate
 PORTVERSION=	0.30
@@ -30,7 +30,8 @@ TEST_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-Test-Warn>=0.20:${PORTSDIR}/devel/p5-Test-Warn \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::Class::ResultSet::RecursiveUpdate.3
 
