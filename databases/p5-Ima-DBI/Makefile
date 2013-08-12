@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ima-DBI
-# Date created:		17 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/databases/p5-Ima-DBI/Makefile,v 1.18 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: databases/p5-Ima-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Ima-DBI
 PORTVERSION=	0.35
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-DBIx-ContextualFetch>=0:${PORTSDIR}/databases/p5-DBIx-Contextu
 		p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inheritable
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Ima::DBI.3
 
