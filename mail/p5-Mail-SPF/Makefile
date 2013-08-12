@@ -1,5 +1,5 @@
 # Created by: gmc@sonologic.nl
-# $FreeBSD: mail/p5-Mail-SPF/Makefile 321065 2013-06-16 18:16:16Z stefan $
+# $FreeBSD: mail/p5-Mail-SPF/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	Mail-SPF
 PORTVERSION=	2.007
@@ -22,7 +22,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 CONFLICTS=	p5-Mail-SPF-Query-[0-9]*
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 CONFIGURE_ARGS=	--install_path sbin=${PREFIX}/sbin
 
 MAN1=		spfquery.pl.1
