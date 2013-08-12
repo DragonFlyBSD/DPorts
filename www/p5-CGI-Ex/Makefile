@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CGI-Ex
-# Date created:		2006-07-20
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-CGI-Ex/Makefile,v 1.24 2012/11/17 06:02:45 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-CGI-Ex/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CGI-Ex
 PORTVERSION=	2.38
@@ -17,7 +13,8 @@ COMMENT=	CGI utility suite - makes powerful application writing fun and easy
 BUILD_DEPENDS=	p5-Template-Alloy>=1.004:${PORTSDIR}/www/p5-Template-Alloy
 RUN_DEPENDS=	p5-Template-Alloy>=1.004:${PORTSDIR}/www/p5-Template-Alloy
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Ex.3 CGI::Ex::App.3 CGI::Ex::App::Constants.3 \
 		CGI::Ex::Auth.3 CGI::Ex::Conf.3 \
