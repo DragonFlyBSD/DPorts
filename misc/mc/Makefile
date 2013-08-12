@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: misc/mc/Makefile 319758 2013-06-03 07:40:32Z jgh $
+# $FreeBSD: misc/mc/Makefile 323813 2013-07-28 07:56:47Z fjoe $
 
 PORTNAME=	mc
 PORTVERSION=	4.8.8
@@ -11,6 +11,8 @@ MAINTAINER=	fjoe@FreeBSD.org
 COMMENT=	Midnight Commander, a free Norton Commander Clone
 
 LICENSE=	GPLv3
+
+LIB_DEPENDS=	ssh2:${PORTSDIR}/security/libssh2
 
 CONFLICTS=	mc-light-4*
 
@@ -75,7 +77,7 @@ PLIST_SUB+=	EDITOR=""
 .if ! ${PORT_OPTIONS:MSLANG} && !defined(MINIMAL)
 CONFIGURE_ARGS+=--with-screen=ncurses
 .else
-LIB_DEPENDS+=	slang.2:${PORTSDIR}/devel/libslang2
+LIB_DEPENDS+=	slang:${PORTSDIR}/devel/libslang2
 CONFIGURE_ARGS+=--with-screen=slang --with-slang-includes=${LOCALBASE}/include
 .endif
 
