@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: misc/kcd/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: misc/kcd/Makefile 324054 2013-07-31 14:36:21Z az $
 
 PORTNAME=	kcd
 PORTVERSION=	7.15.0
@@ -12,8 +12,7 @@ COMMENT=	Change directory in full-screen visual mode
 
 LICENSE=	GPLv2
 
-USES=		gettext
-USE_PERL5=	yes
+USES=		gettext perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc
 CPPFLAGS+=	-I${LOCALBASE}/include
