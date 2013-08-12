@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/www/p5-HTML-Lint/Makefile,v 1.9 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Lint/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	HTML-Lint
 PORTVERSION=	2.20
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-HTML-Tagset>0:${PORTSDIR}/www/p5-HTML-Tagset \
 		p5-HTML-Parser>0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTML::Lint.3 \
 	HTML::Lint::Error.3 \
