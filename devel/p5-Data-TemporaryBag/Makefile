@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Data::TemporaryBag
-# Date created:		30 Nov 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Data-TemporaryBag/Makefile,v 1.13 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Data-TemporaryBag/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-TemporaryBag
 PORTVERSION=	0.09
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Handle long size data using temporary file
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::TemporaryBag.3
 
