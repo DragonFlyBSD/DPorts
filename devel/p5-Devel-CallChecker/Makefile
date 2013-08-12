@@ -2,7 +2,7 @@
 # Date created:		2012-02-07
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Devel-CallChecker/Makefile,v 1.5 2012/11/17 05:56:13 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-CallChecker/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Devel-CallChecker
@@ -24,10 +24,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Devel::CallChecker.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-TEST_DEPENDS+=	p5-ExtUtils-CBuilder>=0.1500:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
