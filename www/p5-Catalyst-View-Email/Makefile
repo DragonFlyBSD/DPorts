@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: ports/www/p5-Catalyst-View-Email/Makefile,v 1.24 2013/02/14 14:31:00 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-View-Email/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-View-Email
 PORTVERSION=	0.33
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Helper::View::Email.3 \
 		Catalyst::Helper::View::Email::Template.3 \
