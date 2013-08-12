@@ -2,7 +2,7 @@
 # Date created:		Wed Nov 20 11:37:33 CET 2002
 # Whom:			Jens Rehsack <rehsack@liwing.de>
 #
-# $FreeBSD: ports/databases/WWWdb/Makefile,v 1.6 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: databases/WWWdb/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	WWWdb
@@ -13,7 +13,8 @@ MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Perl based generic WWW DB interface / frontend
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWWdb::Base.3 WWWdb::DbSession.3 WWWdb::List.3 \
 		WWWdb::Session.3 WWWdb::Plugin.3 WWWdb::Hash.3 \
