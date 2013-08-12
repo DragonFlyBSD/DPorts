@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmclock
-# Date created:				05 May 2001
-# Whom:					Per Otterstr=F6m <pelle@fukt.bth.se>
-#
-# $FreeBSD: ports/x11-clocks/wmclock/Makefile,v 1.12 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Per Otterstr=F6m <pelle@fukt.bth.se>
+# $FreeBSD: x11-clocks/wmclock/Makefile 322014 2013-06-28 23:05:59Z bapt $
 
 PORTNAME=	wmclock
 PORTVERSION=	1.0.14
@@ -12,10 +8,10 @@ MASTER_SITES=	http://www.bluestop.org/wmclock/ \
 		${MASTER_SITE_GENTOO}
 MASTER_SITE_SUBDIR=	distfiles
 
-MAINTAINER=	brucec@FreeBSD.org
-COMMENT=	A dockable clock applet for Window Maker
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Dockable clock applet for Window Maker
 
-USE_IMAKE=	yes
+USES=		imake
 MAKE_JOBS_SAFE=	yes
 USE_XORG=	xpm
 MAN1=		wmclock.1
