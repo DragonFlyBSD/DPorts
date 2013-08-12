@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::Filter::SAXT
-# Date created:		13 Mar 2002
-# Whom:			Sergey Skvortsov <skv@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Filter-SAXT/Makefile,v 1.6 2012/11/17 06:02:12 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-Filter-SAXT/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Filter-SAXT
 PORTVERSION=	0.01
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Replicates SAX events to several SAX event handlers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Filter::SAXT.3
 
