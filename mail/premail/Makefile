@@ -1,9 +1,5 @@
-# New ports collection makefile for:	premail
-# Date created:				31 Jan 1997
-# Whom:					ache
-#
-# $FreeBSD: ports/mail/premail/Makefile,v 1.26 2012/11/17 05:59:11 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: mail/premail/Makefile 323680 2013-07-26 05:33:51Z az $
 
 PORTNAME=	premail
 PORTVERSION=	0.46
@@ -20,11 +16,8 @@ BUILD_DEPENDS+=	pgp:${PORTSDIR}/security/pgp
 WRKSRC=		${WRKDIR}/premail
 USE_PERL5=	yes
 NO_BUILD=	yes
-
-post-patch:
-	cd ${WRKSRC}; \
-	${CP} premail premail.old; \
-	${SED} 's=#!/usr/local/bin/perl=#!${PERL} -w=' < premail.old > premail
+USES=		shebangfix
+SHEBANG_FILES=	premail
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_SCRIPT} premail ${PREFIX}/bin
