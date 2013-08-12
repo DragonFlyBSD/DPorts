@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xisola
-# Date created:				9 May 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/xisola/Makefile,v 1.13 2012/11/17 05:57:57 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/xisola/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xisola
 PORTVERSION=	1.0
@@ -16,12 +12,13 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple board game for X Window System
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext xaw xmu xt sm ice
 NO_INSTALL_MANPAGES=	yes
 
+.include <bsd.port.options.mk>
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
