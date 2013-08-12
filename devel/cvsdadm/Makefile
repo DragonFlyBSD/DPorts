@@ -1,5 +1,5 @@
 # Created by: Serge Gagnon <serge.gagnon.1@ulaval.ca>
-# $FreeBSD: devel/cvsdadm/Makefile 317594 2013-05-07 09:30:51Z ehaupt $
+# $FreeBSD: devel/cvsdadm/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	cvsdadm
 PORTVERSION=	0.3.2
@@ -14,9 +14,9 @@ COMMENT=	Tool for CVSd pserver user administration
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=		shebangfix
+USES=		shebangfix perl5
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 POD2TEXT?=	pod2text
 PORTDOCS=	cvsdadm.README
 
