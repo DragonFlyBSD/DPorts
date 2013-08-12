@@ -2,7 +2,7 @@
 # Date created:		4 January 2000
 # Whom:			Greg Hewgill <greg@hewgill.com>
 #
-# $FreeBSD: ports/security/zebedee/Makefile,v 1.23 2012/11/17 06:01:23 svnexp Exp $
+# $FreeBSD: security/zebedee/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	zebedee
@@ -13,8 +13,9 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-src/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Encrypted, secure compressed TCP tunnel
 
+USES=		perl5
 USE_OPENSSL=	YES
-USE_PERL5_BUILD=YES
+USE_PERL5=	build
 
 MAKE_ENV+=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS=${PTHREAD_LIBS}
