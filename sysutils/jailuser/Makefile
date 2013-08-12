@@ -1,5 +1,5 @@
 # Created by: Vaida Bogdan <vaida.bogdan@gmail.com>
-# $FreeBSD: sysutils/jailuser/Makefile 319204 2013-05-27 10:23:45Z bsam $
+# $FreeBSD: sysutils/jailuser/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	jailuser
 PORTVERSION=	1.9
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/jail_1-9_stable/src
 WRKDOC=		${WRKDIR}/jail_1-9_stable/doc
-USE_PERL5=	yes
+USES=		perl5
 
 OPTIONS_DEFINE=	DOCS
 PORTDOCS=	CHANGELOG INSTALL README SECURITY VERSION \
