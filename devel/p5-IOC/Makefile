@@ -1,9 +1,5 @@
-# New ports collection makefile for:	IOC
-# Date created:	   22 Feb 2007
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-IOC/Makefile,v 1.8 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-IOC/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	IOC
 PORTVERSION=	0.29
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	p5-Class-Throwable>=0:${PORTSDIR}/devel/p5-Class-Throwable \
 		p5-Class-Interfaces>=0:${PORTSDIR}/devel/p5-Class-Interfaces
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		IOC.3 IOC::Config::XML.3 IOC::Config::XML::SAX::Handler.3 \
 		IOC::Container.3 IOC::Container::MethodResolution.3 \
