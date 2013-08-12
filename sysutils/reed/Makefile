@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: sysutils/reed/Makefile 316959 2013-04-30 20:10:53Z crees $
+# $FreeBSD: sysutils/reed/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	reed
 PORTVERSION=	5.4
@@ -13,7 +13,8 @@ COMMENT=	A text pager with autoscrolling and more
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_PERL5=	yes
+USES=		perl5
+USE_PERL5=	run build patch
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	configures
 
