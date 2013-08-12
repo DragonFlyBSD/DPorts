@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/p5-Geo-KML/Makefile 320582 2013-06-11 14:49:23Z miwi $
+# $FreeBSD: graphics/p5-Geo-KML/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Geo-KML
 PORTVERSION=	0.94
@@ -19,6 +19,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		Geo::KML.3 Geo::KML::Util.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
