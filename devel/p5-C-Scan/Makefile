@@ -2,7 +2,7 @@
 # Date created:				October 20th 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-C-Scan/Makefile,v 1.26 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: devel/p5-C-Scan/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	C-Scan
@@ -16,7 +16,8 @@ COMMENT=	Perl5 module to scan C language files for easily recognized constructs
 
 BUILD_DEPENDS=	p5-Data-Flow>=0:${PORTSDIR}/devel/p5-Data-Flow
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		C::Scan.3
 
