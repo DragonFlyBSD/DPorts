@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WeakRef
-# Date created:		14 Jun 2006
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/devel/p5-WeakRef/Makefile,v 1.6 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: devel/p5-WeakRef/Makefile 321181 2013-06-18 11:46:51Z amdmi3 $
 
 PORTNAME=	WeakRef
 PORTVERSION=	0.01
