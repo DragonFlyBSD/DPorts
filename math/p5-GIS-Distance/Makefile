@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-GIS-Distance
-# Date created:		2006-10-23
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/math/p5-GIS-Distance/Makefile,v 1.10 2012/11/17 05:59:25 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: math/p5-GIS-Distance/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	GIS-Distance
 PORTVERSION=	0.08
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	p5-Any-Moose>=0.18:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		GIS::Distance.3 \
 		GIS::Distance::Formula.3 \
