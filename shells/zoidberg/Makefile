@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: shells/zoidberg/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: shells/zoidberg/Makefile 324166 2013-08-02 16:55:05Z az $
 
 PORTNAME=	zoidberg
 PORTVERSION=	0.96
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-Exporter-Tidy>=0:${PORTSDIR}/devel/p5-Exporter-Tidy \
 		p5-Term-ReadLine-Zoid>=0:${PORTSDIR}/devel/p5-Term-ReadLine-Zoid \
 		p5-Env-PS1>=0:${PORTSDIR}/devel/p5-Env-PS1
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 CONFIGURE_ARGS=	install_path=share="${DATADIR}" \
 		install_path=share="${ETCDIR}"
 
