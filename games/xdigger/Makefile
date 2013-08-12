@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xdigger
-# Date created:				29 June 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/xdigger/Makefile,v 1.21 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/xdigger/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xdigger
 PORTVERSION=	1.0.10
@@ -16,9 +12,11 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Boulderdash-like KC85 Digger for X Window System
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN6=		xdigger.6
+
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|g" ${WRKSRC}/configure.h
@@ -28,7 +26,7 @@ post-install:
 	@${CHOWN} root:games ${PREFIX}/bin/xdigger
 	@${CHMOD} 664 ${PREFIX}/share/xdigger/xdigger.hiscore
 	@${CHOWN} root:games ${PREFIX}/share/xdigger/xdigger.hiscore
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
