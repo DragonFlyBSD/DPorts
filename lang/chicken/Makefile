@@ -1,8 +1,8 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: lang/chicken/Makefile 313997 2013-03-12 18:49:10Z culot $
+# $FreeBSD: lang/chicken/Makefile 324282 2013-08-05 19:05:48Z wg $
 
 PORTNAME=	chicken
-PORTVERSION=	4.8.0.3
+PORTVERSION=	4.8.0.4
 CATEGORIES=	lang scheme
 MASTER_SITES=	http://code.call-cc.org/releases/4.8.0/
 
