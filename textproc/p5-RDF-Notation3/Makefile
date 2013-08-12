@@ -1,9 +1,5 @@
-# New ports collection makefile for:	RDF::Notation3
-# Date created:		21 Nov 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-RDF-Notation3/Makefile,v 1.18 2012/11/17 06:02:07 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-RDF-Notation3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	RDF-Notation3
 PORTVERSION=	0.91
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX \
 		p5-RDFStore>=0:${PORTSDIR}/textproc/p5-RDFStore
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		RDF::Notation3.3 RDF::Notation3::PrefTriples.3 \
 		RDF::Notation3::RDFCore.3 RDF::Notation3::RDFStore.3 \
@@ -32,7 +29,7 @@ MAN3=		RDF::Notation3.3 RDF::Notation3::PrefTriples.3 \
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.pm" | \
-	${XARGS} ${PERL} -pi -e 's!^require 5.005_62;!!'
+	${XARGS} ${REINPLACE_CMD} -i '' -e 's!^require 5.005_62;!!'
 	${MV} ${WRKSRC}/doc/*.pod ${WRKSRC}/lib/RDF
 
 .include <bsd.port.mk>
