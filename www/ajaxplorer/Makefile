@@ -1,7 +1,7 @@
-# $FreeBSD: www/ajaxplorer/Makefile 322446 2013-07-07 15:48:16Z madpilot $
+# $FreeBSD: www/ajaxplorer/Makefile 324245 2013-08-04 17:52:01Z madpilot $
 
 PORTNAME=	ajaxplorer
-PORTVERSION=	5.0.1
+PORTVERSION=	5.0.2
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/stable-channel/${PORTVERSION}
 DISTNAME=	${PORTNAME}-core-${PORTVERSION}
