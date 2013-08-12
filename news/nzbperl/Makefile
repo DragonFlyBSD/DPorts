@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nzbperl
-# Date created:				20 May 2006
-# Whom:					Tim Welch <ports@thepentagon.org>
-#
-# $FreeBSD: ports/news/nzbperl/Makefile,v 1.9 2012/11/17 06:00:43 svnexp Exp $
-#
+# Created by: Tim Welch <ports@thepentagon.org>
+# $FreeBSD: news/nzbperl/Makefile 324036 2013-07-31 11:56:17Z az $
 
 PORTNAME=	nzbperl
 PORTVERSION=	0.6.8
@@ -24,7 +20,8 @@ RUN_DEPENDS=	p5-XML-DOM>=0:${PORTSDIR}/textproc/p5-XML-DOM \
 
 PLIST_FILES=	bin/nzbperl
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 .if defined(WITH_SSL)
 RUN_DEPENDS+=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay
