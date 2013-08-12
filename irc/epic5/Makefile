@@ -1,8 +1,8 @@
 # Created by: Josh Paetzel <josh@tcbug.org>
-# $FreeBSD: irc/epic5/Makefile 315287 2013-03-26 12:36:21Z bapt $
+# $FreeBSD: irc/epic5/Makefile 324301 2013-08-06 06:12:20Z jpaetzel $
 
 PORTNAME=	epic5
-PORTVERSION=	1.1.5
+PORTVERSION=	1.1.6
 CATEGORIES=	irc ipv6
 MASTER_SITES=	http://ftp.epicsol.org/pub/epic/EPIC5-PRODUCTION/ \
 		http://tehran.lain.pl/epic-mirror/EPIC5-PRODUCTION/ \
