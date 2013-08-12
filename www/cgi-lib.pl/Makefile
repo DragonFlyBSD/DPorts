@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cgi-lib.pl
-# Date created:		23 June 2002
-# Whom:			sada
-#
-# $FreeBSD: www/cgi-lib.pl/Makefile 316786 2013-04-29 08:57:12Z bapt $
-#
+# Created by: sada
+# $FreeBSD: www/cgi-lib.pl/Makefile 324180 2013-08-03 07:52:55Z az $
 
 PORTNAME=	cgi-lib_pl
 PORTVERSION=	2.18
@@ -16,7 +12,7 @@ EXTRACT_SUFX=	.gz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	De facto standard library for creating CGI in perl
 
-USE_PERL5=	YES
+USES=		perl5
 NO_BUILD=	YES
 NO_WRKSUBDIR=	YES
 PLIST_FILES=	%%SITE_PERL%%/cgi-lib.pl
