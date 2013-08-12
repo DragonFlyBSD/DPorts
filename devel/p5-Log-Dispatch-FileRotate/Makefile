@@ -2,7 +2,7 @@
 # Date created:				Tue Jul  1 15:14:38 CEST 2003
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/devel/p5-Log-Dispatch-FileRotate/Makefile,v 1.14 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: devel/p5-Log-Dispatch-FileRotate/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Log-Dispatch-FileRotate
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Log-Dispatch>=0:${PORTSDIR}/devel/p5-Log-Dispatch \
 		p5-Log-Log4perl>=0:${PORTSDIR}/devel/p5-Log-Log4perl
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Log::Dispatch::FileRotate.3
 
