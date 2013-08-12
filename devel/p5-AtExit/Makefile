@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-AtExit/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-AtExit/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	AtExit
 PORTVERSION=	2.01
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	AtExit - Perform exit processing for a program or object
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		AtExit.3
 
