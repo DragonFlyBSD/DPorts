@@ -1,9 +1,5 @@
-# New ports collection makefile for:	entity
-# Date created:				15 June 2000
-# Whom:					Jesse McConnell <jesse@cylant.com>
-#
-# $FreeBSD: ports/devel/entity/Makefile,v 1.26 2012/12/10 19:23:59 svnexp Exp $
-#
+# Created by: Jesse McConnell <jesse@cylant.com>
+# $FreeBSD: devel/entity/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	entity
 PORTVERSION=	0.7.2
@@ -20,11 +16,11 @@ RUN_DEPENDS=	python:${PORTSDIR}/lang/python
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-tcl=no
 
+USES=		perl5
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_GNOME=	gtk12
 USE_LDCONFIG=	${PREFIX}/lib/entity/clib
-USE_PERL5=	yes
 MAKE_JOBS_UNSAFE=	yes
 
 MAN1=		entity.1
