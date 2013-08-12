@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: games/xmille/Makefile 319277 2013-05-27 17:49:44Z antoine $
+# $FreeBSD: games/xmille/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xmille
 PORTVERSION=	2.0
@@ -14,7 +14,7 @@ COMMENT=	X window mille bourne game
 
 WRKSRC=		${WRKDIR}/Mille
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN1=		xmille.1
 MANCOMPRESSED=	no
