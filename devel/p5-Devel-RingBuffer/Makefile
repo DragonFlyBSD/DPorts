@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Devel-RingBuffer
-# Date created:	   28 August 2006
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Devel-RingBuffer/Makefile,v 1.6 2012/11/17 05:56:14 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Devel-RingBuffer/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Devel-RingBuffer
 PORTVERSION=	0.31
@@ -17,7 +13,8 @@ COMMENT=	Shared memory ring buffers for Perl scripts diagnosis/debug
 RUN_DEPENDS=	p5-IPC-Mmap>=0:${PORTSDIR}/devel/p5-IPC-Mmap
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::RingBuffer.3 Devel::RingBuffer::Ring.3
 
