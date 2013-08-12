@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/shells/bashc/pkg-install,v 1.2 2012/11/17 06:01:23 svnexp Exp $
+# $FreeBSD: /tmp/pcvs/ports/shells/bashc/pkg-install,v 1.1 2008-03-11 22:38:46 alepulver Exp $
 #
 
 BASHC="$(echo ${PKG_PREFIX-/usr/local}/bin/bashc | /usr/bin/sed -e 's|//|/|g')"

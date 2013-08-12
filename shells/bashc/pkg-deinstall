@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/shells/bashc/pkg-deinstall,v 1.2 2012/11/17 06:01:23 svnexp Exp $
+# $FreeBSD: shells/bashc/pkg-deinstall 300897 2012-07-14 14:29:18Z beat $
 #
 
 BASHC="$(echo ${PKG_PREFIX-/usr/local}/bin/bashc | /usr/bin/sed -e 's|//|/|g')"

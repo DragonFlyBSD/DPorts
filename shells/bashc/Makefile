@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: ports/shells/bashc/Makefile,v 1.5 2012/12/03 13:23:46 svnexp Exp $
+# $FreeBSD: shells/bashc/Makefile 322689 2013-07-10 13:12:03Z bapt $
 
 PORTNAME=	bashc
 PORTVERSION=	3.2.33.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNU bash shell extended with visual two-panel file browser
+
+MAKE_JOBS_UNSAFE=	yes
 
 GNU_CONFIGURE=	yes
 
