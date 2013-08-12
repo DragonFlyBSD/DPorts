@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Validation-Class/Makefile 318699 2013-05-21 14:09:25Z kuriyama $
+# $FreeBSD: devel/p5-Validation-Class/Makefile 324512 2013-08-10 13:51:27Z kuriyama $
 
 PORTNAME=	Validation-Class
-PORTVERSION=	7.900049
+PORTVERSION=	7.900051
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:AWNCORP
@@ -22,7 +22,8 @@ TEST_DEPENDS=	\
 	p5-DBD-SQLite>0:${PORTSDIR}/databases/p5-DBD-SQLite \
 	p5-Class-Method-Modifiers>0:${PORTSDIR}/devel/p5-Class-Method-Modifiers
 
-PERL_CONFIGURE=	yes
+USES=	perl5
+USE_PERL5=	configure
 
 MAN3=	\
 	Validation::Class.3 \
