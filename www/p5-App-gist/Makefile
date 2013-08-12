@@ -1,5 +1,5 @@
 # Created by: Denny Lin <dennylin93@hs.ntnu.edu.tw>
-# $FreeBSD: www/p5-App-gist/Makefile 315219 2013-03-25 13:42:16Z tobez $
+# $FreeBSD: www/p5-App-gist/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	App-gist
 PORTVERSION=	0.14
@@ -21,7 +21,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS=	gist-[0-9]*
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		gist.1
 MAN3=		App::gist.3
