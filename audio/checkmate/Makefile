@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/checkmate/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: audio/checkmate/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	checkmate
 PORTVERSION=	0.19
@@ -13,7 +13,6 @@ COMMENT=	Command-line utility for checking mp3 files for errors
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		mpck.1
 MLINKS=		mpck.1 checkmate.1
