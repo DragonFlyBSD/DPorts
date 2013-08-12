@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Log-Any-Adapter-Log4perl
-# Date created:				January 13th 2011
-# Whom:	      				Evgeniy Kosov <evgeniy@kosov.su>
-#
-# $FreeBSD: ports/devel/p5-Log-Any-Adapter-Log4perl/Makefile,v 1.3 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Evgeniy Kosov <evgeniy@kosov.su>
+# $FreeBSD: devel/p5-Log-Any-Adapter-Log4perl/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Log-Any-Adapter-Log4perl
 PORTVERSION=	0.06
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-File-Temp>=0.20:${PORTSDIR}/devel/p5-File-Temp \
 		p5-Log-Log4perl>0:${PORTSDIR}/devel/p5-Log-Log4perl
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Log::Any::Adapter::Log4perl.3
 
