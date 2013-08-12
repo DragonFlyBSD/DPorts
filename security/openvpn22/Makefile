@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: security/openvpn22/Makefile 319579 2013-06-01 16:47:41Z mandree $
+# $FreeBSD: security/openvpn22/Makefile 324469 2013-08-10 09:20:09Z mandree $
 
 PORTNAME=	openvpn
 DISTVERSION=	2.2.2
@@ -20,6 +20,10 @@ CONFLICTS_INSTALL=	openvpn-devel-[0-9]* openvpn-2.[!2]* openvpn-beta-[0-9]*
 
 DEPRECATED=		Please migrate to a newer OpenVPN version
 EXPIRATION_DATE=	2013-09-01
+
+NO_PACKAGE=	do not build package for obsolete OpenVPN version
+
+PORTSCOUT=	limit:^2\.2\.
 
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
