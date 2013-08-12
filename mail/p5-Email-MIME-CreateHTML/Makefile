@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mail/p5-Email-MIME-CreateHTML
-# Date created:				August 26, 2007
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/p5-Email-MIME-CreateHTML/Makefile,v 1.8 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: mail/p5-Email-MIME-CreateHTML/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Email-MIME-CreateHTML
 PORTVERSION=	1.030
@@ -27,7 +23,8 @@ BUILD_DEPENDS=	p5-File-Policy>=0:${PORTSDIR}/devel/p5-File-Policy \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Assertions>0:${PORTSDIR}/devel/p5-Test-Assertions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::MIME::CreateHTML.3 \
 	Email::MIME::CreateHTML::Resolver.3 \
