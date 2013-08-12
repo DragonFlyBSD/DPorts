@@ -1,4 +1,4 @@
-$FreeBSD: ports/net/openntpd/files/patch-parse.y,v 1.2 2012/11/17 06:00:09 svnexp Exp $
+$FreeBSD: net/openntpd/files/patch-parse.y 300897 2012-07-14 14:29:18Z beat $
 --- parse.y.orig	2009-08-01 20:29:44.000000000 +0200
 +++ parse.y	2009-08-01 21:17:58.000000000 +0200
 @@ -200,6 +200,7 @@ main		: LISTEN ON address	{

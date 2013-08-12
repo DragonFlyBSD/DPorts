@@ -1,4 +1,4 @@
-$FreeBSD: ports/net/openntpd/files/patch-log.c,v 1.3 2012/11/17 06:00:09 svnexp Exp $
+$FreeBSD: net/openntpd/files/patch-log.c 300897 2012-07-14 14:29:18Z beat $
 --- log.c.orig	2007-08-22 23:04:30.000000000 +0200
 +++ log.c	2009-08-01 22:08:01.000000000 +0200
 @@ -26,6 +26,10 @@

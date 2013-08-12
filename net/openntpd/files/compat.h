@@ -1,7 +1,7 @@
 /*
  * This file is in the public domain.
  *
- * $FreeBSD: ports/net/openntpd/files/compat.h,v 1.2 2012/11/17 06:00:09 svnexp Exp $
+ * $FreeBSD: net/openntpd/files/compat.h 324112 2013-08-01 15:40:49Z naddy $
  */
 
 #ifndef SA_LEN
@@ -20,6 +20,3 @@
 
 /* adjfreq.c */
 int			adjfreq(const int64_t *, int64_t *);
-
-/* arc4random.c */
-u_int32_t		arc4random_uniform(u_int32_t);

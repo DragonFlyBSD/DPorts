@@ -1,4 +1,4 @@
-$FreeBSD: ports/net/openntpd/files/patch-ntp.c,v 1.3 2012/11/17 06:00:09 svnexp Exp $
+$FreeBSD: net/openntpd/files/patch-ntp.c 300897 2012-07-14 14:29:18Z beat $
 --- ntp.c.orig	2009-11-23 20:47:16.000000000 +0100
 +++ ntp.c	2009-11-23 20:55:59.000000000 +0100
 @@ -34,9 +34,14 @@

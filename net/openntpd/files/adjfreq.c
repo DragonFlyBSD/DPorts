@@ -1,7 +1,7 @@
 /*
  * This file is in the public domain.
  *
- * $FreeBSD: ports/net/openntpd/files/adjfreq.c,v 1.2 2012/11/17 06:00:09 svnexp Exp $
+ * $FreeBSD: net/openntpd/files/adjfreq.c 300897 2012-07-14 14:29:18Z beat $
  */
 
 #include <sys/types.h>

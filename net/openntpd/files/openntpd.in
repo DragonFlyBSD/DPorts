@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/openntpd/files/openntpd.in,v 1.6 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/openntpd/files/openntpd.in 301005 2012-07-17 14:35:46Z naddy $
 #
 # PROVIDE: openntpd
 # REQUIRE: DAEMON ntpdate

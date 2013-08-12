@@ -1,4 +1,4 @@
-$FreeBSD: ports/net/openntpd/files/patch-ntpd.c,v 1.3 2012/11/17 06:00:09 svnexp Exp $
+$FreeBSD: net/openntpd/files/patch-ntpd.c 300897 2012-07-14 14:29:18Z beat $
 
 Drift file in ppm for compatibility with reference ntpd.
 
