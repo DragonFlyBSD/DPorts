@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xsokoban
-# Date created:		16 November 1996
-# Whom:			Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/games/xsokoban/Makefile,v 1.21 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: games/xsokoban/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xsokoban
 PORTVERSION=	3.3c
@@ -13,17 +9,16 @@ MASTER_SITES=	http://www.cs.cornell.edu/andru/release/ \
 		ftp://ftp.pmg.lcs.mit.edu/pub/xsokoban/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A puzzle of pushing objects to the goals
+COMMENT=	Puzzle of pushing objects to the goals
 
-USE_IMAKE=	yes
-USE_PERL5_BUILD=yes
+USES=		imake
 USE_XORG=	xpm
 WRKSRC=		${WRKDIR}/xsokoban
 ALL_TARGET=	xsokoban
 MAN1=		xsokoban.1
 
 post-patch:
-	@${PERL} -pi -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/config.h
+	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/config.h
 
 post-install:
 	@${MKDIR} ${PREFIX}/lib/X11/xsokoban/scores \
