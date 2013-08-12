@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-HTML-TableTiler/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-HTML-TableTiler/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-TableTiler
 PORTVERSION=	1.21
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-IO-Util>=0:${PORTSDIR}/devel/p5-IO-Util
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::TableTiler.3
 
