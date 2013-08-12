@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-rpm-build-perl/Makefile,v 1.20 2013/02/14 10:30:41 svnexp Exp $
+# $FreeBSD: devel/p5-rpm-build-perl/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	rpm-build-perl
 PORTVERSION=	0.82
@@ -12,7 +12,8 @@ COMMENT=	This module is required to build Perl RPM packages
 
 TEST_DEPENDS=	p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		perl.prov.1 \
 		perl.req.1
