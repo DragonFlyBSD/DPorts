@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net-im/bsflite/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: net-im/bsflite/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	bsflite
 DISTVERSION=	0.85
@@ -8,8 +8,6 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Lightweight command line AIM client
-
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/bsflite %%EXAMPLESDIR%%/config-example
 PLIST_DIRS=	%%EXAMPLESDIR%%
