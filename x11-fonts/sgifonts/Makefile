@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-fonts/sgifonts/Makefile 315987 2013-04-17 16:56:04Z bapt $
+# $FreeBSD: x11-fonts/sgifonts/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	sgifonts
 PORTVERSION=	1.0.1
@@ -19,7 +19,7 @@ BUILD_DEPENDS=		bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 PLIST=		${WRKDIR}/pkg-plist
 PLIST_DIRS=	lib/X11/fonts/local/sgi
 PKGMESSAGE=	${WRKDIR}/pkg-message
-USE_IMAKE=	yes
+USES=		imake
 EXTRACT_CMD=	${TAR}
 EXTRACT_BEFORE_ARGS=	-O -xf
 EXTRACT_AFTER_ARGS=	sgi-fonts.tar.gz | ${TAR} -xf -
