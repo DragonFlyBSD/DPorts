@@ -2,12 +2,12 @@
 # Date created:				11 November 1999
 # Whom:					Chris D. Faulhaber <jedgar@fxp.org>
 #
-# $FreeBSD: ports/graphics/png2html/Makefile,v 1.20 2012/11/17 05:58:19 svnexp Exp $
+# $FreeBSD: graphics/png2html/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	png2html
 PORTVERSION=	1.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.geoffholden.com/content/projects/png2html/
 
@@ -18,7 +18,7 @@ LICENSE=	GPLv2 # (or later)
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
-		gd.4:${PORTSDIR}/graphics/gd
+		gd:${PORTSDIR}/graphics/gd
 
 PLIST_FILES=	bin/png2html
 
