@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: security/snort-rep/Makefile 317005 2013-05-01 09:02:50Z stefan $
+# $FreeBSD: security/snort-rep/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	snort-rep
 PORTVERSION=	1.10
@@ -10,12 +10,9 @@ MASTER_SITES=	http://david.schweikert.ch/software/snort-rep/pub/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Snort reporting tool that can produce text or HTML from logs
 
-USE_PERL5=	yes
 MAN1=		snort-rep.1
-
-post-patch:
-	@${PERL} -pi -e "s|#!/usr/bin/perl|#!${PERL}|" \
-		${WRKSRC}/snort-rep ${WRKSRC}/snort-rep-mail
+USES=		shebangfix perl5
+SHEBANG_FILES=	snort-rep snort-rep-mail
 
 do-build:
 	cd ${BUILD_WRKSRC} ; pod2man --lax snort-rep > snort-rep.1
