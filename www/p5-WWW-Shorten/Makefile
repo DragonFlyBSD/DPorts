@@ -2,7 +2,7 @@
 # Date created:				August 29 2003
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/www/p5-WWW-Shorten/Makefile,v 1.23 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Shorten/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	WWW-Shorten
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-libwww>=5.75:${PORTSDIR}/www/p5-libwww \
 		p5-URI>=1.27:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		shorten.1
 MAN3=		WWW::Shorten.3 \
