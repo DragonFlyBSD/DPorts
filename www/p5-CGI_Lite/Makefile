@@ -2,7 +2,7 @@
 # Date created:				September 30th 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CGI_Lite/Makefile,v 1.27 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CGI_Lite/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	CGI-Lite
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Process and decode WWW forms and cookies
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Lite.3
 
