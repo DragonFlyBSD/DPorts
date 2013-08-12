@@ -2,7 +2,7 @@
 # Date created:		2010-07-20
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/x11-fonts/pingwi/Makefile,v 1.2 2012/11/17 06:03:29 svnexp Exp $
+# $FreeBSD: x11-fonts/pingwi/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	pingwi
@@ -13,7 +13,7 @@ MASTER_SITES=	http://www.pingwinsoft.ru/system/uploads/16/original/ \
 PKGNAMEPREFIX=	font-
 DISTNAME=	fonts_test
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	PingWi Typography fonts
 
 RUN_DEPENDS=	fc-cache:${PORTSDIR}/x11-fonts/fontconfig
