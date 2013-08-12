@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: databases/p5-Rose-DB-Object/Makefile 320456 2013-06-10 10:32:51Z tobez $
+# $FreeBSD: databases/p5-Rose-DB-Object/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Rose-DB-Object
 PORTVERSION=	0.8060
@@ -27,7 +27,8 @@ BUILD_DEPENDS=	p5-Bit-Vector>=0:${PORTSDIR}/math/p5-Bit-Vector \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Rose::DB::Object.3 \
 		Rose::DB::Object::Cached.3 \
