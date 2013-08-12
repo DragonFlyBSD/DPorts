@@ -1,9 +1,5 @@
-# New ports collection makefile for:	recvnet
-# Date created:				27 Sep 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/net/recvnet/Makefile,v 1.6 2012/11/17 06:00:17 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: net/recvnet/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	recvnet
 PORTVERSION=	0.0.1
@@ -14,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Recvnet (inverse telnet) is a utility for debugging tcp connections
-
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-DVERSION=\"${PORTVERSION}\"
 LDFLAGS+=	-lcurses
