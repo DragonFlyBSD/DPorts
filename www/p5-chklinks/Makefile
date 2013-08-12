@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-chklinks/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-chklinks/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	chklinks
 PORTVERSION=	3.09
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN1=		chklinks.1
 
 PLIST_FILES=	bin/chklinks \
