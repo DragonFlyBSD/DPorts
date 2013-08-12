@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/mp-player/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: audio/mp-player/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	mp-player
 PORTVERSION=	0.6
@@ -12,8 +12,6 @@ COMMENT=	Curses based module tracker using libmikmod
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	mikmod.2:${PORTSDIR}/audio/libmikmod
-
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lmikmod ${PTHREAD_LIBS} -lncurses -lpanel
