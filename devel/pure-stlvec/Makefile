@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pure-stlvec
-# Date created:		2011-10-19
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/devel/pure-stlvec/Makefile,v 1.2 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: devel/pure-stlvec/Makefile 322734 2013-07-10 21:28:56Z bapt $
 
 PORTNAME=	pure-stlvec
 PORTVERSION=	0.2
@@ -14,12 +10,10 @@ COMMENT=	Pure interface to C++ STL vector
 
 USE_PURE=	yes
 
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^PROD_FLAGS =.*|PROD_FLAGS = $$(CPPFLAGS) $$(CFLAGS) $$(LDFLAGS)|' \
 		${WRKSRC}/Makefile
 
-.include "${PORTSDIR}/lang/pure/bsd.pure.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+.include <bsd.port.mk>
