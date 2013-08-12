@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Locale-Msgfmt/Makefile,v 1.5 2012/11/17 05:56:20 svnexp Exp $
+# $FreeBSD: devel/p5-Locale-Msgfmt/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Locale-Msgfmt
 PORTVERSION=	0.15
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Compile .po files to .mo files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Locale::Msgfmt::Utils.3 \
 		Locale::Msgfmt::mo.3 \
