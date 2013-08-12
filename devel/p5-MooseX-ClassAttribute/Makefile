@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-ClassAttribute/Makefile 315844 2013-04-16 16:46:42Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-ClassAttribute/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-ClassAttribute
 PORTVERSION=	0.27
@@ -23,7 +23,8 @@ TEST_DEPENDS=	p5-MooseX-AttributeHelpers>=0:${PORTSDIR}/devel/p5-MooseX-Attribut
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
 		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::ClassAttribute.3 \
 		MooseX::ClassAttribute::Meta::Role::Attribute.3 \
