@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cdircmp
-# Date created:				21 Sep 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/sysutils/cdircmp/Makefile,v 1.9 2012/11/17 06:01:26 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: sysutils/cdircmp/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	cdircmp
 PORTVERSION=	0.3
@@ -14,8 +10,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Compare directories and select files to copy
 
 LICENSE=	GPLv2
-
-MAKE_JOBS_SAFE=	yes
 
 LDFLAGS+=	-lncurses -lform
 
