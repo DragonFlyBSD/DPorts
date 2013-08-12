@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-VT102-Boundless/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Term-VT102-Boundless/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Term-VT102-Boundless
 PORTVERSION=	0.04
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Term-VT102>=0:${PORTSDIR}/devel/p5-Term-VT102
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Term::VT102::Boundless.3
 
