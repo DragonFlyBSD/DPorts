@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Proc-Background
-# Date created:				Wed Jan  3 10:32:39 2001
-# Whom:					will
-#
-# $FreeBSD: ports/devel/p5-Proc-Background/Makefile,v 1.13 2012/11/17 05:56:27 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: devel/p5-Proc-Background/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Proc-Background
 PORTVERSION=	1.10
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl interface to running background processes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		timed-process.1
 MAN3=		Proc::Background.3 \
