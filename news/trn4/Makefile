@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: news/trn4/Makefile 314490 2013-03-17 20:39:10Z johans $
+# $FreeBSD: news/trn4/Makefile 323297 2013-07-19 14:28:59Z johans $
 
 PORTNAME=	trn
 PORTVERSION=	4.0.b77
@@ -16,6 +16,9 @@ NO_LATEST_LINK=	yes
 MAN1=		trn.1 Pnews.1 Rnmail.1
 
 .include <bsd.port.pre.mk>
+
+post-patch:
+	@${REINPLACE_CMD} -e 's/pipe[12]/z&/g' ${WRKSRC}/filter.c
 
 pre-configure:
 	@${ECHO_MSG} "===>  Running pre-configure target for ${DISTNAME}"
