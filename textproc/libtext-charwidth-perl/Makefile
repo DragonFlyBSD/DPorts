@@ -2,7 +2,7 @@
 # Date created:				08 Januar 2006
 # Whom:					Meno Abels <meno.abels@adviser.com>
 #
-# $FreeBSD: ports/textproc/libtext-charwidth-perl/Makefile,v 1.6 2012/11/17 06:02:01 svnexp Exp $
+# $FreeBSD: textproc/libtext-charwidth-perl/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	libtext-charwidth-perl
@@ -17,7 +17,8 @@ COMMENT=	Documentation gettext tools
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::CharWidth.3
 
