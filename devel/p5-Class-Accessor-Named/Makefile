@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-Accessor-Named
-# Date created:		2006-07-21
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Class-Accessor-Named/Makefile,v 1.9 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Class-Accessor-Named/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Accessor-Named
 PORTVERSION=	0.009
@@ -20,7 +16,8 @@ RUN_DEPENDS=	p5-Sub-Name>=0:${PORTSDIR}/devel/p5-Sub-Name \
 		p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Accessor::Named.3
 
