@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmalbum
-# Date created:				2005-01-27
-# Whom:					lx@redundancy.redundancy.org
-#
-# $FreeBSD: ports/audio/wmalbum/Makefile,v 1.10 2012/11/17 05:54:47 svnexp Exp $
-#
+# Created by: lx@redundancy.redundancy.org
+# $FreeBSD: audio/wmalbum/Makefile 324069 2013-07-31 22:40:38Z bapt $
 
 PORTNAME=	wmalbum
 PORTVERSION=	0.1.5
@@ -18,6 +14,7 @@ LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
 		gdk_pixbuf_xlib.2:${PORTSDIR}/graphics/gdk-pixbuf
 
 GNU_CONFIGURE=	yes
+USE_CSTD=	gnu89
 
 MAN1=		wmalbum.1
 PLIST_FILES=	bin/wmalbum
