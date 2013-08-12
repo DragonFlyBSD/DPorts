@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Net-BGP4
-# Date created:	   10 September 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/net/p5-Net-BGP/Makefile,v 1.15 2012/11/17 06:00:10 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: net/p5-Net-BGP/Makefile 324224 2013-08-04 12:39:45Z az $
 
 PORTNAME=	Net-BGP
 PORTVERSION=	0.14
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	az@FreeBSD.org
 COMMENT=	Border Gateway Protocol version 4 speaker/listener library
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::BGP.3 Net::BGP::ASPath.3 Net::BGP::NLRI.3 \
 		Net::BGP::Notification.3 Net::BGP::Peer.3 Net::BGP::Process.3 \
