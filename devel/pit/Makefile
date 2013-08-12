@@ -1,9 +1,5 @@
-# Ports collection makefile for:	pit
-# Date created:				19 Mar 2011
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/devel/pit/Makefile,v 1.2 2012/11/17 05:56:42 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: devel/pit/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	pit
 PORTVERSION=	0.1.0
@@ -12,7 +8,7 @@ MASTER_SITES=	http://github.com/michaeldv/${PORTNAME}/tarball/
 DISTNAME=	${PORTVERSION}
 EXTRACT_SUFX=	# none
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command-line project manager that integrates with Git
 
 FETCH_ARGS=	-pRr
