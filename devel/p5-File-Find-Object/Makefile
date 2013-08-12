@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-File-Find-Object/Makefile 319240 2013-05-27 13:33:21Z jadawin $
+# $FreeBSD: devel/p5-File-Find-Object/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-Find-Object
 PORTVERSION=	0.2.7
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Class-XSAccessor>=0:${PORTSDIR}/devel/p5-Class-XSAccessor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Find::Object.3 \
 		File::Find::Object::Base.3 \
