@@ -1,8 +1,6 @@
 # Ports collection Makefile for:		p5-Object-MultiType
-# Date created:					Oct 10 2003
-# Whom:						clsung@dragon2.net
-#
-# $FreeBSD: ports/devel/p5-Object-MultiType/Makefile,v 1.8 2012/11/17 05:56:24 svnexp Exp $
+# Created by: clsung@dragon2.net
+# $FreeBSD: devel/p5-Object-MultiType/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Object-MultiType
 PORTVERSION=	0.05
@@ -15,6 +13,7 @@ COMMENT=	Perl Objects as Hash, Array, and Scalar at the same time
 
 MAN3=		Object::MultiType.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
