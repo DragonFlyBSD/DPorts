@@ -1,5 +1,5 @@
 # Created by: janek
-# $FreeBSD: ports/games/xboing/Makefile,v 1.30 2013/01/26 16:56:09 svnexp Exp $
+# $FreeBSD: games/xboing/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xboing
 PORTVERSION=	2.4
@@ -14,7 +14,7 @@ COMMENT=	X11 arcade game
 
 LICENSE=	MIT
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xpm xext x11
 WRKSRC=		${WRKDIR}/xboing
 MAN1=		xboing.1
