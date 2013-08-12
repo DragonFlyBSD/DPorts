@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/openrm/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: graphics/openrm/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	openrm
 PORTVERSION=	1.6.0.2
@@ -18,11 +18,11 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 WRKSRC=		${WRKDIR}/rm${PORTVERSION:R:S/.//g}
 
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	doc/*.pl
 USE_GL=		glu
 USE_XORG=	xmu
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 ALL_TARGET=	freebsd docs
 MAKE_ARGS=	AR="${AR}" \
 		CC="${CC}" \
