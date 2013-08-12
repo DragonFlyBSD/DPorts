@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: ports/sysutils/lookat/Makefile,v 1.22 2013/01/04 16:44:41 svnexp Exp $
+# $FreeBSD: sysutils/lookat/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
 PORTNAME=	lookat
 PORTVERSION=	1.4.2
@@ -11,9 +11,11 @@ MAINTAINER=	pawel@FreeBSD.org
 COMMENT=	Program to view Un*x text files and manual pages
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 
 MAN1=		lookat.1
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
