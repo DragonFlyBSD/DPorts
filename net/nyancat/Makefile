@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net/nyancat/Makefile 319587 2013-06-01 19:50:52Z ehaupt $
+# $FreeBSD: net/nyancat/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	nyancat
 PORTVERSION=	1.2
@@ -13,7 +13,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	klange
 GH_TAGNAME=	${PORTVERSION}
 GH_COMMIT=	89c5bc8
-MAKE_JOBS_SAFE=	yes
 
 SUB_FILES=	pkg-message
 PLIST_FILES=	bin/nyancat
