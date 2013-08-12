@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xfishtank
-# Date created:        24th April 1997
-# Whom:                jacs
-#
-# $FreeBSD: ports/x11/xfishtank/Makefile,v 1.11 2012/11/17 06:03:21 svnexp Exp $
-#
+# Created by: jacs
+# $FreeBSD: x11/xfishtank/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xfishtank
 PORTVERSION=	2.2
@@ -15,7 +11,7 @@ MAINTAINER=	jacs@gnome.co.uk
 COMMENT=	Make fish swim in the background of your screen
 
 PLIST_FILES=	bin/xfishtank
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 WRKSRC=		${WRKDIR}/xfishtank2.0
 
