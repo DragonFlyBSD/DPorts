@@ -1,5 +1,5 @@
 # Created by: bapt <baptiste.daroussin@gmail.com>
-# $FreeBSD: www/p5-App-Nopaste/Makefile 316809 2013-04-29 11:56:15Z tobez $
+# $FreeBSD: www/p5-App-Nopaste/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	App-Nopaste
 PORTVERSION=	0.92
@@ -27,7 +27,8 @@ CLIPBOARD_DESC=	Support X11 clipboard
 GITHUB_DESC=	Support github.com
 PASTEBIN_DESC=	Support pastebin.com
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 CONFLICTS=	p5-WebService-NoPaste-[0-9]*
 
