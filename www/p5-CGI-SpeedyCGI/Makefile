@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: www/p5-CGI-SpeedyCGI/Makefile 319232 2013-05-27 13:02:14Z bapt $
+# $FreeBSD: www/p5-CGI-SpeedyCGI/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	CGI-SpeedyCGI
 PORTVERSION=	2.22
@@ -12,7 +12,8 @@ MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Speed up perl CGI scripts by running them persistently
 
 MAKE_JOBS_UNSAFE=	yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 
 OPTIONS_DEFINE=	APACHE
 OPTIONS_DEFAULT=APACHE
