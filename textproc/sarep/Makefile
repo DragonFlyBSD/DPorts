@@ -1,9 +1,5 @@
-# Ports collection makefile for:  sarep
-# Date created:                   Feb 18, 1999
-# Whom:                           ache
-#
-# $FreeBSD: ports/textproc/sarep/Makefile,v 1.22 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: textproc/sarep/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	sarep
 PORTVERSION=	1.1
@@ -20,9 +16,9 @@ EXTRACT_CMD=	$(SED)
 EXTRACT_BEFORE_ARGS=	's=^\#!/usr/bin/perl =\#!${PERL} =' <
 EXTRACT_AFTER_ARGS=	| ${TR} -d '\r' > ${WRKSRC}/sarep
 
+USES=		perl5
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-USE_PERL5=	yes
 PLIST_FILES=	bin/sarep
 
 do-install:
