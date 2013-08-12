@@ -1,9 +1,6 @@
 # Ports collection makefile for:	Perl::Critic
-# Date created:			Nov 26, 2005
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/p5-Perl-Critic/Makefile,v 1.44 2012/12/17 06:36:02 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/p5-Perl-Critic/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Perl-Critic
 PORTVERSION=	1.11.8
@@ -39,7 +36,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=	perlcritic.1
 MAN3=	Perl::Critic.3 \
