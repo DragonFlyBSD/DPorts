@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: mail/p5-Net-SMTP-TLS-ButMaintained/Makefile 318633 2013-05-20 23:26:09Z kuriyama $
+# $FreeBSD: mail/p5-Net-SMTP-TLS-ButMaintained/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-SMTP-TLS-ButMaintained
 PORTVERSION=	0.24
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Digest-HMAC>=0:${PORTSDIR}/security/p5-Digest-HMAC \
 		p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay
 TEST_DEPENDS=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SMTP::TLS::ButMaintained.3
 
