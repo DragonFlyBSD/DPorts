@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-AlzaboWrapper
-# Date created:				13 Oct 2004
-# Whom:	      				mat
-#
-# $FreeBSD: ports/devel/p5-Class-AlzaboWrapper/Makefile,v 1.11 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-Class-AlzaboWrapper/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-AlzaboWrapper
 PORTVERSION=	0.14
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate \
 		p5-Alzabo>=0:${PORTSDIR}/devel/p5-Alzabo
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Class::AlzaboWrapper.3 Class::AlzaboWrapper::Cursor.3
 
