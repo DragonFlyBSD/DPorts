@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: security/p5-Authen-Libwrap/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: security/p5-Authen-Libwrap/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Authen-Libwrap
 PORTVERSION=	0.22
@@ -12,7 +12,8 @@ COMMENT=	Authen::Libwrap - access to TCP Wrappers library
 
 TEST_DEPENDS=	p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Authen::Libwrap.3
 
