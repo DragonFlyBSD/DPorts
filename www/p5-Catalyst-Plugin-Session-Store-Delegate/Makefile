@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Session-Store-Delegate/Makefile,v 1.11 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-Delegate/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Catalyst-Plugin-Session-Store-Delegate
 PORTVERSION=	0.06
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Catalyst-Plugin-Session>=0.27:${PORTSDIR}/www/p5-Catalyst-Plug
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::Session::Store::Delegate.3
 
