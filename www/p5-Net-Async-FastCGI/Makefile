@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/www/p5-Net-Async-FastCGI/Makefile,v 1.4 2013/02/18 13:33:53 svnexp Exp $
+# $FreeBSD: www/p5-Net-Async-FastCGI/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Async-FastCGI
 PORTVERSION=	0.25
@@ -21,7 +21,8 @@ TEST_DEPENDS=	p5-Test-HexString>=0:${PORTSDIR}/devel/p5-Test-HexString \
 		p5-Test-Refcount>0:${PORTSDIR}/devel/p5-Test-Refcount \
 		p5-Test-Identity>=0:${PORTSDIR}/devel/p5-Test-Identity
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::Async::FastCGI.3 \
 	Net::Async::FastCGI::PSGI.3 \
