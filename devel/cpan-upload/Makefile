@@ -2,7 +2,7 @@
 # Date created:				Nov 30 2003
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/devel/cpan-upload/Makefile,v 1.9 2012/11/17 05:55:38 svnexp Exp $
+# $FreeBSD: devel/cpan-upload/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	cpan-upload
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-AppConfig-Std>=1.05:${PORTSDIR}/devel/p5-AppConfig-Std \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	cpan-upload.1
 
