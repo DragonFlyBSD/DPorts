@@ -1,10 +1,5 @@
-# New ports collection makefile for:	xcruise
-# Date created:		22 December 1999
-# Whom:			minoura@netbsd.org
-#
-# $NetBSD: Makefile,v 1.3 1999/12/22 15:37:13 sakamoto Exp $
-# $FreeBSD: ports/x11-fm/xcruise/Makefile,v 1.12 2012/11/17 06:03:26 svnexp Exp $
-#
+# Created by: minoura@netbsd.org
+# $FreeBSD: x11-fm/xcruise/Makefile 322013 2013-06-28 23:01:51Z bapt $
 
 PORTNAME=	xcruiser
 PORTVERSION=	0.30
@@ -15,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	sanpei@FreeBSD.org
 COMMENT=	Navigate through a three-dimensional view of a file system
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAN1=		xcruiser.1
 
