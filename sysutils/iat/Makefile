@@ -1,9 +1,5 @@
-# New ports collection makefile for:	iat
-# Date created:		29 Mar 2007
-# Whom:			Dmitry Marakasov <amdmi3@amdmi3.ru>
-#
-# $FreeBSD: ports/sysutils/iat/Makefile,v 1.5 2012/11/17 06:01:34 svnexp Exp $
-#
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: sysutils/iat/Makefile 321132 2013-06-17 15:27:58Z amdmi3 $
 
 PORTNAME=	iat
 PORTVERSION=	0.1.7
