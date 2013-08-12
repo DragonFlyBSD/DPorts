@@ -2,7 +2,7 @@
 # Date created:				Mon Jan  1 11:03:15 2001
 # Whom:					will
 #
-# $FreeBSD: ports/devel/p5-String-Checker/Makefile,v 1.11 2012/11/17 05:56:29 svnexp Exp $
+# $FreeBSD: devel/p5-String-Checker/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	String-Checker
@@ -17,7 +17,8 @@ COMMENT=	Perl module implementing an extensible string validation interface
 BUILD_DEPENDS=	p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		String::Checker.3
 
