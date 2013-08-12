@@ -3,7 +3,7 @@
 # Date created:			Jul 26, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: devel/elfio/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: devel/elfio/Makefile 323088 2013-07-16 05:42:36Z ade $
 #
 
 PORTNAME=	elfio
@@ -22,7 +22,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	aclocal automake autoconf libtool
 AUTOMAKE_ARGS=	-c -a
-ACLOCAL_ARGS=	--acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal
+ACLOCAL_ARGS=	--automake-acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal
 
 OPTIONE_DEFINE=	EXAMPLES DOCS
 
