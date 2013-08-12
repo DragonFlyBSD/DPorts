@@ -1,4 +1,4 @@
-# $FreeBSD: net/get_iplayer/Makefile 322142 2013-07-01 19:58:55Z crees $
+# $FreeBSD: net/get_iplayer/Makefile 324433 2013-08-09 12:44:17Z crees $
 
 PORTNAME=	get_iplayer
 PORTVERSION=	2.83
@@ -13,6 +13,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	flvstreamer:${PORTSDIR}/multimedia/flvstreamer \
+		rtmpdump:${PORTSDIR}/multimedia/rtmpdump \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-HTTP-Cookies>=0:${PORTSDIR}/www/p5-HTTP-Cookies
 
