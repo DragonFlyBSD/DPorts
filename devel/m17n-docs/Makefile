@@ -1,11 +1,10 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: ports/devel/m17n-docs/Makefile,v 1.12 2012/12/27 04:29:16 svnexp Exp $
+# $FreeBSD: devel/m17n-docs/Makefile 322871 2013-07-12 22:54:10Z marino $
 
 PORTNAME=	m17n-docs
 PORTVERSION=	1.5.5
 CATEGORIES=	devel
-MASTER_SITES=	http://www.m17n.org/m17n-lib-download/ \
-		http://anthesphoria.net/FreeBSD/ports/distfiles/
+MASTER_SITES=	http://anthesphoria.net/FreeBSD/ports/distfiles/
 
 MAINTAINER=	nikola.lecic@anthesphoria.net
 COMMENT=	m17n library documentation

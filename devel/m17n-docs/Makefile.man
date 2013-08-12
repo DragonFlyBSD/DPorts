@@ -1,6 +1,6 @@
 # This file defines the man pages to not bloat Makefile
 
-# $FreeBSD: ports/devel/m17n-docs/Makefile.man,v 1.1 2012/12/27 04:29:16 svnexp Exp $
+# $FreeBSD: devel/m17n-docs/Makefile.man 309533 2012-12-27 04:25:05Z jgh $
 
 MAN1=		m17n-config.1 m17n-db.1
 MAN3=		m17nCharacter.3m17n \
