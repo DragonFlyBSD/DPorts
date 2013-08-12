@@ -3,7 +3,7 @@
 # Date created:			Jan 29, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/cad/chipvault/Makefile,v 1.5 2012/11/17 05:54:53 svnexp Exp $
+# $FreeBSD: cad/chipvault/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	chipvault
@@ -22,7 +22,8 @@ EXTRACT_BEFORE_ARGS=	# empty
 EXTRACT_AFTER_ARGS=	> ${DISTNAME}
 NO_BUILD=	yes
 PLIST_FILES=	bin/cv
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cv.pl ${PREFIX}/bin/cv
