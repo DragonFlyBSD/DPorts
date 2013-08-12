@@ -1,8 +1,9 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: graphics/py-gd/Makefile 319249 2013-05-27 14:28:06Z miwi $
+# $FreeBSD: graphics/py-gd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	gd
 PORTVERSION=	0.58
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
