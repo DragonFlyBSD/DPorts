@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-pQuery/Makefile,v 1.5 2012/11/17 20:04:20 svnexp Exp $
+# $FreeBSD: www/p5-pQuery/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	pQuery
 PORTVERSION=	0.09
@@ -14,7 +14,8 @@ COMMON_DEPENDS=	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree
 BUILD_DEPENDS=	${COMMON_DEPENDS}
 RUN_DEPENDS=	${COMMON_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	pQuery.3 \
 	pQuery::DOM.3
