@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: ports/games/xrubik/Makefile,v 1.22 2013/01/26 16:56:10 svnexp Exp $
+# $FreeBSD: games/xrubik/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xrubik
 PORTVERSION=	5.5.2
@@ -12,7 +12,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	X-based rubik's cube(tm)
 
 WRKSRC=		${WRKDIR}/xrubik
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xt sm ice xext x11
 MAN1=		xrubik.1
 XFREE86_HTML_MAN=	no
