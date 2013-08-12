@@ -2,7 +2,7 @@
 # Date created:		2011-10-25
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/p5-Marpa/Makefile,v 1.6 2012/12/16 06:16:56 svnexp Exp $
+# $FreeBSD: lang/p5-Marpa/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Marpa
@@ -38,10 +38,4 @@ MAN3=		Marpa::Advanced::Algorithm.3 \
 		Marpa::Support.3 \
 		Marpa::Tracing.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-TEST_DEPENDS+=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
