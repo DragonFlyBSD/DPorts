@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/sysutils/tmpreaper/Makefile,v 1.15 2013/01/15 13:46:58 svnexp Exp $
+# $FreeBSD: sysutils/tmpreaper/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	tmpreaper
 PORTVERSION=	1.6.13
@@ -12,8 +12,7 @@ COMMENT=	Cleans up files in directories based on their age
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
+USES=		gmake
 
 PLIST_FILES=	sbin/tmpreaper
 PORTDOCS=	README
