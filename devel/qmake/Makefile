@@ -1,11 +1,12 @@
 # Created by: mi@aldan.algebra.com
-# $FreeBSD: devel/qmake/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: devel/qmake/Makefile 321482 2013-06-21 17:24:13Z rakuco $
 
 PORTNAME=	qmake
 PORTVERSION=	3.3.8
 PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_QT}
+MASTER_SITE_SUBDIR=	archive/qt/${PORTVERSION:R:R}
 DISTNAME=	qt-x11-free-${PORTVERSION}
 DIST_SUBDIR=	KDE
 
