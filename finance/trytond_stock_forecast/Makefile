@@ -1,12 +1,12 @@
-# $FreeBSD: finance/trytond_stock_forecast/Makefile 318647 2013-05-21 06:24:16Z wen $
+# Created by: Matthias Petermann <matthias@petermann-it.de>
+# $FreeBSD: finance/trytond_stock_forecast/Makefile 324511 2013-08-10 13:46:27Z wg $
 
 PORTNAME=	trytond_stock_forecast
-PORTVERSION=	2.4.0
-PORTREVISION=	1
+PORTVERSION=	2.4.1
 CATEGORIES=	finance python
 MASTER_SITES=	http://downloads.tryton.org/${PORTVERSION:R}/
 
-MAINTAINER=	matthias@petermann.it
+MAINTAINER=	matthias@petermann-it.de
 COMMENT=	Tryton Application Platform (Stock Forecast Module)
 
 LICENSE=	GPLv3
