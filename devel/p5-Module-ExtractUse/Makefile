@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-ExtractUse/Makefile 319473 2013-05-31 09:38:36Z tobez $
+# $FreeBSD: devel/p5-Module-ExtractUse/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Module-ExtractUse
 PORTVERSION=	0.31
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-UNIVERSAL-require>=0.11:${PORTSDIR}/devel/p5-UNIVERSAL-require \
 		p5-Test-Deep>0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Module::ExtractUse.3 Module::ExtractUse::Grammar.3
 
