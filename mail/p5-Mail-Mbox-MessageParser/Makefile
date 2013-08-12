@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: mail/p5-Mail-Mbox-MessageParser/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: mail/p5-Mail-Mbox-MessageParser/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-Mbox-MessageParser
 PORTVERSION=	1.5002
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Text-Diff>=0:${PORTSDIR}/textproc/p5-Text-Diff \
 		p5-FileHandle-Unget>=0:${PORTSDIR}/devel/p5-FileHandle-Unget
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS+=	</dev/null
 
 MAN3=		Mail::Mbox::MessageParser.3 \
