@@ -1,5 +1,5 @@
 # Created by: Sue Blake <sue@FreeBSD.org>
-# $FreeBSD: audio/abcselect/Makefile 317556 2013-05-06 22:24:39Z bapt $
+# $FreeBSD: audio/abcselect/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	abcselect
 PORTVERSION=	1.5
@@ -10,8 +10,8 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extract parts, movements, etc from abc music files
 
-USES=		shebangfix
-USE_PERL5_RUN=	yes
+USES=		shebangfix perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 SHEBANG_FILES=	abcselect
