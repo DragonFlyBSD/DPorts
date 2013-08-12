@@ -1,9 +1,5 @@
-# New ports collection makefile for:	oneko-sakura
-# Date created:		25 May 1999
-# Whom:			HOTARU-YA <hotaru@tail.net>
-#
-# $FreeBSD: ports/games/oneko-sakura/Makefile,v 1.17 2012/11/17 05:57:47 svnexp Exp $
-#
+# Created by: HOTARU-YA <hotaru@tail.net>
+# $FreeBSD: games/oneko-sakura/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	oneko
 PORTVERSION=	1.2
@@ -17,7 +13,7 @@ COMMENT=	A cat, Sakura or Tomoyo chasing a mouse all over the screen
 
 CONFLICTS=	oneko-2.*
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN6=		oneko.6
 PLIST_FILES=	bin/oneko
