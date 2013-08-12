@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bestfit-0.2.0
-# Date created:				09 Oct 2001
-# Whom:					Steven Enderle <enderle@mdn.de>
-#
-# $FreeBSD: ports/misc/bestfit/Makefile,v 1.13 2012/11/17 05:59:33 svnexp Exp $
-#
+# Created by: Steven Enderle <enderle@mdn.de>
+# $FreeBSD: misc/bestfit/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	bestfit
 PORTVERSION=	0.2.0
@@ -17,7 +13,6 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 MANCOMPRESSED=	no
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		bestfit.1
 PLIST_FILES=	bin/bestfit
