@@ -1,5 +1,5 @@
-# Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: emulators/ia64sim/Makefile 319926 2013-06-04 22:17:12Z eadler $
+# Created by: David O'Brien <obrien@NUXI.com>
+# $FreeBSD: emulators/ia64sim/Makefile 324139 2013-08-02 04:17:33Z danfe $
 
 PORTNAME=	ia64sim
 PORTVERSION=	0.5
@@ -12,22 +12,21 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	IA64 simulator (Intel(R) Architecture 64)
 
 USE_ZIP=	yes
-
-.include <bsd.port.pre.mk>
-
-EXTRACT_BEFORE_ARGS=	-qLa
-WRKSRC=		${WRKDIR}/home/chuck/ia64simcc
-USE_GMAKE=	yes
+USES=		gmake
 MAKEFILE=	makefile.unx
+MAKE_ARGS=	CC="${CC}"
+
+WRKSRC=		${WRKDIR}/home/chuck/ia64simcc
 
 PLIST_FILES=	bin/ia64sim
 PORTDOCS=	ia64user.txt readme
 
-pre-build:
-	${RM} -f ${WRKSRC}/obj/*.o
-	${RM} -f ${WRKSRC}/ia64sim
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
+
+pre-build:
+	${RM} -f ${WRKSRC}/obj/*.o ${WRKSRC}/ia64sim
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ia64sim ${PREFIX}/bin
@@ -36,4 +35,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/ia64user.txt ${WRKSRC}/readme ${DOCSDIR}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
