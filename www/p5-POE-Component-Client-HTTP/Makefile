@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-POE-Component-Client-HTTP/Makefile 317586 2013-05-07 08:35:40Z tobez $
+# $FreeBSD: www/p5-POE-Component-Client-HTTP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Client-HTTP
 PORTVERSION=	0.9480
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-POE>=1.312:${PORTSDIR}/devel/p5-POE \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-POE-Server-TCP>=1.14:${PORTSDIR}/devel/p5-Test-POE-Server-TCP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Client::HTTP.3 \
 		POE::Component::Client::HTTP::Request.3 \
