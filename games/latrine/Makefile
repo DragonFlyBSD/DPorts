@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: games/latrine/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: games/latrine/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	latrine
 PORTVERSION=	1.0.0
@@ -17,11 +17,10 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 USE_CSTD=	gnu89
 USE_SQLITE=	3
-USE_PERL5_BUILD=yes
-USES=		gettext ncurses
+USE_PERL5=	build
+USES=		gettext ncurses perl5
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include -D_XOPEN_SOURCE_EXTENDED
 LDFLAGS+=	-L${LOCALBASE}/lib
