@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: net-mgmt/p5-FusionInventory-Agent/Makefile 313599 2013-03-07 16:53:45Z miwi $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: net-mgmt/p5-FusionInventory-Agent/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	FusionInventory-Agent
 PORTVERSION=	2.2.5
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FUSINV
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Agent for OCS Inventory server and FusionInventory for GLPI servers
 
 LICENSE=	GPLv2
