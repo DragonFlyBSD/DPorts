@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-PPI-XS/Makefile 318371 2013-05-17 09:42:14Z lth $
+# $FreeBSD: textproc/p5-PPI-XS/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	PPI-XS
 PORTVERSION=	0.902
@@ -13,7 +13,8 @@ COMMENT=	XS acceleration for the PPI perl parser
 RUN_DEPENDS=	p5-PPI>=1.000:${PORTSDIR}/textproc/p5-PPI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	PPI::XS.3
 
