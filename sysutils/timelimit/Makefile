@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: sysutils/timelimit/Makefile 315828 2013-04-16 15:46:00Z eadler $
+# $FreeBSD: sysutils/timelimit/Makefile 323129 2013-07-16 21:59:48Z eadler $
 
 PORTNAME=	timelimit
 PORTVERSION=	1.8
@@ -15,8 +15,6 @@ CONFLICTS=	netpipes-[0-9]*
 
 MAN1=		timelimit.1
 PLIST_FILES=	bin/timelimit
-
-MAKE_JOBS_SAFE=	yes
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/timelimit ${PREFIX}/bin
