@@ -1,9 +1,5 @@
-# New ports collection makefile for:	weblint++
-# Date created:				24 Jun 2006
-# Whom:					aaron@FreeBSD.org
-#
-# $FreeBSD: ports/www/weblint++/Makefile,v 1.9 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: aaron@FreeBSD.org
+# $FreeBSD: www/weblint++/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	weblint++
 PORTVERSION=	1.15
@@ -31,7 +27,8 @@ BUILD_DEPENDS=	p5-ConfigReader-Simple>=1.15:${PORTSDIR}/devel/p5-ConfigReader-Si
 		p5-URI>0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		weblint++.1
 
