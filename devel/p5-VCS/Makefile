@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-VCS
-# Date created:                27 February 2002
-# Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
-#
-# $FreeBSD: ports/devel/p5-VCS/Makefile,v 1.14 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
+# $FreeBSD: devel/p5-VCS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	VCS
 PORTVERSION=	0.16
@@ -17,7 +13,8 @@ COMMENT=	Library for generic Version Control System access in Perl
 RUN_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		diff-hist.1
 MAN3=		VCS.3 VCS::Cvs.3 VCS::Dir.3 VCS::File.3 \
