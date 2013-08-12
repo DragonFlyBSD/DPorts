@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-LDAP-Server
-# Date created:		2nd Oct, 2009
-# Whom:			Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-Net-LDAP-Server/Makefile,v 1.4 2012/11/17 06:00:11 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: net/p5-Net-LDAP-Server/Makefile 324306 2013-08-06 08:50:49Z az $
 
 PORTNAME=	Net-LDAP-Server
 PORTVERSION=	0.43
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Convert-ASN1>=0.22:${PORTSDIR}/converters/p5-Convert-ASN1 \
 		p5-perl-ldap>=0.39:${PORTSDIR}/net/p5-perl-ldap
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::LDAP::Server.3
 
