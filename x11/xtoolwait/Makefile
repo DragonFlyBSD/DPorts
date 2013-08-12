@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xtoolwait
-# Date created:		31 May 1997
-# Whom:			jonny
-#
-# $FreeBSD: ports/x11/xtoolwait/Makefile,v 1.12 2012/11/17 06:03:23 svnexp Exp $
-#
+# Created by: jonny
+# $FreeBSD: x11/xtoolwait/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xtoolwait
 PORTVERSION=	1.3
@@ -15,7 +11,7 @@ MASTER_SITE_SUBDIR=	utilities
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool startup utility for X11
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN1=		xtoolwait.1
 PLIST_FILES=	bin/xtoolwait
