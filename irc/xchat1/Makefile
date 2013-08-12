@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xchat
-# Date created:			17 Nov 1998
-# Whom:				Jim Mock <jim@FreeBSD.org>
-#
-# $FreeBSD: irc/xchat1/Makefile 316662 2013-04-27 11:59:28Z mva $
-#
+# Created by: Jim Mock <jim@FreeBSD.org>
+# $FreeBSD: irc/xchat1/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=		xchat
 PORTVERSION=		1.8.11
@@ -21,8 +17,7 @@ COMMENT=	X11 IRC client using the GTK+ toolkit, and optionally, GNOME
 
 USE_BZIP2=		yes
 USE_GMAKE=		yes
-USES=			iconv
-USE_PERL5=		yes
+USES=			iconv perl5
 USE_GNOME=		gtk12
 WANT_GNOME=		yes
 GNU_CONFIGURE=		yes
@@ -66,8 +61,7 @@ CONFIGURE_ARGS+=	--disable-gnome --disable-zvt
 .endif
 
 post-patch:
-	@${PERL} -pi \
-		-e 's|-lpthread|${PTHREAD_LIBS}|g;' \
+	@${REINPLACE_CMD} -i '' -e 's|-lpthread|${PTHREAD_LIBS}|g' \
 		${WRKSRC}/configure
 
 post-install:
