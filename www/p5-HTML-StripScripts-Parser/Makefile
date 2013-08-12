@@ -2,7 +2,7 @@
 # Date Created:				May 08, 2008
 # Whom:					kftseng@iyard.org
 #
-# $FreeBSD: ports/www/p5-HTML-StripScripts-Parser/Makefile,v 1.5 2012/11/17 06:02:50 svnexp Exp $
+# $FreeBSD: www/p5-HTML-StripScripts-Parser/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	HTML-StripScripts-Parser
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-HTML-Parser>=3.56:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-HTML-StripScripts>=1.05:${PORTSDIR}/www/p5-HTML-StripScripts
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::StripScripts::Parser.3
 
