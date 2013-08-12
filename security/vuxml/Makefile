@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/vuxml/Makefile 315412 2013-03-27 20:44:50Z delphij $
+# $FreeBSD: security/vuxml/Makefile 321330 2013-06-19 21:20:50Z eadler $
 
 PORTNAME=	vuxml
 PORTVERSION=	1.1
@@ -17,6 +17,8 @@ COMMENT=	Vulnerability and eXposure Markup Language DTD
 RUN_DEPENDS=	${XMLCATMGR}:${PORTSDIR}/textproc/xmlcatmgr \
 		${LOCALBASE}/share/xml/dtd/xhtml-modularization/VERSION:${PORTSDIR}/textproc/xhtml-modularization \
 		${LOCALBASE}/share/xml/dtd/xhtml-basic/xhtml-basic10.dtd:${PORTSDIR}/textproc/xhtml-basic
+
+USE_PYTHON_RUN=	yes
 
 NO_MTREE=	YES
 NO_BUILD=	YES
@@ -91,6 +93,7 @@ validate: tidy
 		${ECHO_CMD} Consider using ${VUXML_FILE}.unexpanded for final commit; \
 		return 1; \
 	fi
+	${PYTHON_CMD} files/extra-validation.py
 
 tidy: vuln.xml
 	@if [ ! -e ${LOCALBASE}/share/xml/dtd/vuxml/catalog.xml ]; \

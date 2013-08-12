@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: security/vuxml/vuln.xml 320884 2013-06-14 06:21:13Z ak $
+  $FreeBSD: security/vuxml/vuln.xml 324462 2013-08-09 20:52:29Z delphij $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -51,6 +51,1421 @@ Note:  Please add new entries to the beginning of this file.
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="e21c7c7a-0116-11e3-9e83-3c970e169bc2">
+    <topic>samba -- denial of service vulnerability</topic>
+    <affects>
+      <package>
+	<name>samba34</name>
+	<range><gt>0</gt></range>
+      </package>
+      <package>
+	<name>samba35</name>
+	<range><gt>0</gt></range>
+      </package>
+      <package>
+	<name>samba36</name>
+	<range><gt>3.6.*</gt><lt>3.6.17</lt></range>
+      </package>
+      <package>
+	<name>samba4</name>
+	<range><gt>4.0.*</gt><lt>4.0.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Samba project reports:</p>
+	<blockquote cite="http://www.samba.org/samba/security/CVE-2013-4124">
+	  <p>All current released versions of Samba are vulnerable to
+	    a denial of service on an authenticated or guest connection.
+	    A malformed packet can cause the smbd server to loop the CPU
+	    performing memory allocations and preventing any further service.</p>
+	  <p>A connection to a file share, or a local account is needed
+	    to exploit this problem, either authenticated or unauthenticated
+	    if guest connections are allowed.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4124</cvename>
+      <url>http://www.samba.org/samba/security/CVE-2013-4124</url>
+    </references>
+    <dates>
+      <discovery>2013-08-05</discovery>
+      <entry>2013-08-09</entry>
+      <modified>2013-08-09</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="0998e79d-0055-11e3-905b-0025905a4771">
+    <topic>mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><gt>18.0,1</gt><lt>23.0,1</lt></range>
+	<range><lt>17.0.8,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>17.0.8,1</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.20</lt></range>
+      </package>
+      <package>
+	<name>linux-thunderbird</name>
+	<range><lt>17.0.8</lt></range>
+      </package>
+      <package>
+	<name>seamonkey</name>
+	<range><lt>2.20</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><gt>11.0</gt><lt>17.0.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="http://www.mozilla.org/security/known-vulnerabilities/">
+	  <p>MFSA 2013-63 Miscellaneous memory safety hazards (rv:23.0 /
+	    rv:17.0.8)</p>
+	  <p>MFSA 2013-64 Use after free mutating DOM during SetBody</p>
+	  <p>MFSA 2013-65 Buffer underflow when generating CRMF requests</p>
+	  <p>MFSA 2013-66 Buffer overflow in Mozilla Maintenance Service and
+	    Mozilla Updater</p>
+	  <p>MFSA 2013-67 Crash during WAV audio file decoding</p>
+	  <p>MFSA 2013-68 Document URI misrepresentation and masquerading</p>
+	  <p>MFSA 2013-69 CRMF requests allow for code execution and XSS
+	    attacks</p>
+	  <p>MFSA 2013-70 Bypass of XrayWrappers using XBL Scopes</p>
+	  <p>MFSA 2013-71 Further Privilege escalation through Mozilla Updater</p>
+	  <p>MFSA 2013-72 Wrong principal used for validating URI for some
+	    Javascript components</p>
+	  <p>MFSA 2013-73 Same-origin bypass with web workers and
+	    XMLHttpRequest</p>
+	  <p>MFSA 2013-74 Firefox full and stub installer DLL hijacking</p>
+	  <p>MFSA 2013-75 Local Java applets may read contents of local file
+	    system</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+	<cvename>CVE-2013-1701</cvename>
+	<cvename>CVE-2013-1702</cvename>
+	<cvename>CVE-2013-1704</cvename>
+	<cvename>CVE-2013-1705</cvename>
+	<cvename>CVE-2013-1706</cvename>
+	<cvename>CVE-2013-1707</cvename>
+	<cvename>CVE-2013-1708</cvename>
+	<cvename>CVE-2013-1709</cvename>
+	<cvename>CVE-2013-1710</cvename>
+	<cvename>CVE-2013-1711</cvename>
+	<cvename>CVE-2013-1712</cvename>
+	<cvename>CVE-2013-1713</cvename>
+	<cvename>CVE-2013-1714</cvename>
+	<cvename>CVE-2013-1715</cvename>
+	<cvename>CVE-2013-1717</cvename>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-63.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-64.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-65.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-66.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-67.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-68.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-69.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-70.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-71.html</url>
+	<url>https://www.mozilla.org/security/announce/2013/mfsa2013-72.html</url>
+	<url>http://www.mozilla.org/security/known-vulnerabilities/</url>
+    </references>
+    <dates>
+      <discovery>2013-08-06</discovery>
+      <entry>2013-08-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4b448a96-ff73-11e2-b28d-080027ef73ec">
+    <topic>PuTTY -- Four security holes in versions before 0.63</topic>
+    <affects>
+      <package>
+	<name>putty</name>
+	<range><lt>0.63</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Simon Tatham reports:</p>
+	<blockquote cite="http://lists.tartarus.org/pipermail/putty-announce/2013/000018.html">
+	  <p>This [0.63] release fixes multiple security holes in previous versions of
+	    PuTTY, which can allow an SSH-2 server to make PuTTY overrun or
+	    underrun buffers and crash. [...]
+	  </p><p>
+	    These vulnerabilities can be triggered before host key verification,
+	    which means that you are not even safe if you trust the server you
+	    <em>think</em> you're connecting to, since it could be spoofed over the
+	    network and the host key check would not detect this before the attack
+	    could take place.
+	  </p><p>
+	    Additionally, when PuTTY authenticated with a user's private key, the
+	    private key or information equivalent to it was accidentally kept in
+	    PuTTY's memory for the rest of its run, where it could be retrieved by
+	    other processes reading PuTTY's memory, or written out to swap files
+	    or crash dumps. This release fixes that as well.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4206</cvename>
+      <cvename>CVE-2013-4207</cvename>
+      <cvename>CVE-2013-4208</cvename>
+      <cvename>CVE-2013-4852</cvename>
+      <mlist msgid="E1V6lUs-0007kP-40@atreus.tartarus.org">http://lists.tartarus.org/pipermail/putty-announce/2013/000018.html</mlist>
+      <url>http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/vuln-modmul.html</url>
+      <url>http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/vuln-bignum-division-by-zero.html</url>
+      <url>http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/private-key-not-wiped.html</url>
+      <url>http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/vuln-signature-stringlen.html</url>
+    </references>
+    <dates>
+      <discovery>2013-07-08</discovery>
+      <entry>2013-08-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e6839625-fdfa-11e2-9430-20cf30e32f6d">
+    <topic>typo3 -- Multiple vulnerabilities in TYPO3 Core</topic>
+    <affects>
+      <package>
+	<name>typo3</name>
+	<range><ge>4.5.0</ge><lt>4.5.29</lt></range>
+	<range><ge>4.7.0</ge><lt>4.7.14</lt></range>
+	<range><ge>6.1.0</ge><lt>6.1.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Typo Security Team reports:</p>
+	<blockquote cite="http://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2013-002/">
+	  <p>It has been discovered that TYPO3 Core is vulnerable to
+	    Cross-Site Scripting and Remote Code Execution.</p>
+	  <p>TYPO3 bundles flash files for video and audio playback. Old
+	    versions of FlowPlayer and flashmedia are susceptible to
+	    Cross-Site Scripting. No authentication is required to exploit
+	    this vulnerability.</p>
+	  <p>The file upload component and the File Abstraction Layer are
+	    failing to check for denied file extensions, which allows
+	    authenticated editors (even with limited permissions) to
+	    upload php files with arbitrary code, which can then be
+	    executed in web server's context.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2011-3642</cvename>
+      <cvename>CVE-2013-1464</cvename>
+    </references>
+    <dates>
+      <discovery>2013-07-30</discovery>
+      <entry>2013-08-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="17326fd5-fcfb-11e2-9bb9-6805ca0b3d42">
+    <topic>phpMyAdmin -- clickJacking protection can be bypassed</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<range><lt>4.0.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyAdmin development team reports:</p>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-10.php">
+	  <p> phpMyAdmin has a number of mechanisms to avoid a
+	  clickjacking attack, however these mechanisms either work
+	  only in modern browser versions, or can be bypassed.</p>
+	  <p>"We have no solution for 3.5.x, due to the proposed
+	  solution requiring JavaScript. We don't want to introduce a
+	  dependency to JavaScript in the 3.5.x family."</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2013-10.php</url>
+    </references>
+    <dates>
+      <discovery>2013-08-04</discovery>
+      <entry>2013-08-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="69098c5c-fc4b-11e2-8ad0-00262d5ed8ee">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>28.0.1500.95</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/">
+	  <p>Eleven vulnerabilities, including:</p>
+	  <p>[257748] Medium CVE-2013-2881: Origin bypass in frame handling.
+	    Credit to Karthik Bhargavan.</p>
+	  <p>[260106] High CVE-2013-2882: Type confusion in V8. Credit to
+	    Cloudfuzzer.</p>
+	  <p>[260165] High CVE-2013-2883: Use-after-free in MutationObserver.
+	    Credit to Cloudfuzzer.</p>
+	  <p>[248950] High CVE-2013-2884: Use-after-free in DOM. Credit to Ivan
+	    Fratric of Google Security Team.</p>
+	  <p>[249640] [257353] High CVE-2013-2885: Use-after-free in input
+	    handling. Credit to Ivan Fratric of Google Security Team.</p>
+	  <p>[261701] High CVE-2013-2886: Various fixes from internal audits,
+	    fuzzing and other initiatives.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2881</cvename>
+      <cvename>CVE-2013-2882</cvename>
+      <cvename>CVE-2013-2883</cvename>
+      <cvename>CVE-2013-2884</cvename>
+      <cvename>CVE-2013-2885</cvename>
+      <cvename>CVE-2013-2886</cvename>
+      <url>http://www.googlechromereleases.blogspot.nl/</url>
+    </references>
+    <dates>
+      <discovery>2013-07-30</discovery>
+      <entry>2013-08-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f4a0212f-f797-11e2-9bb9-6805ca0b3d42">
+    <topic>phpMyAdmin -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<range><ge>4.0</ge><lt>4.0.4.2</lt></range>
+      </package>
+      <package>
+	<name>phpMyAdmin35</name>
+	<range><ge>3.5</ge><lt>3.5.8.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyAdmin development team reports:</p>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-8.php">
+	  <p>XSS due to unescaped HTML Output when executing a SQL query.</p>
+	  <p>Using a crafted SQL query, it was possible to produce an
+	  XSS on the SQL query form.</p>
+	  <p>This vulnerability can be triggered only by someone who
+	  logged in to phpMyAdmin, as the usual token protection
+	  prevents non-logged-in users from accessing the required
+	  form.</p>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-9.php">
+	  <p>5 XSS vulnerabilities in setup, chart display, process
+	  list, and logo link.</p>
+	  <ul>
+	    <li>In the setup/index.php, using a crafted # hash with a
+	    Javascript event, untrusted JS code could be
+	    executed.</li>
+	    <li>In the Display chart view, a chart title containing
+	    HTML code was rendered unescaped, leading to possible
+	    JavaScript code execution via events.</li>
+	    <li>A malicious user with permission to create databases
+	    or users having HTML tags in their name, could trigger an
+	    XSS vulnerability by issuing a sleep query with a long
+	    delay. In the server status monitor, the query parameters
+	    were shown unescaped.</li>
+	    <li>By configuring a malicious URL for the phpMyAdmin logo
+	    link in the navigation sidebar, untrusted script code
+	    could be executed when a user clicked the logo.</li>
+	    <li>The setup field for "List of trusted proxies for IP
+	    allow/deny" Ajax validation code returned the unescaped
+	    input on errors, leading to possible JavaScript execution
+	    by entering arbitrary HTML.</li>
+	  </ul>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-11.php">
+	  <p>If a crafted version.json would be presented, an XSS
+	  could be introduced.</p>
+	  <p>Due to not properly validating the version.json file,
+	  which is fetched from the phpMyAdmin.net website, could lead
+	  to an XSS attack, if a crafted version.json file would be
+	  presented.</p>
+	  <p>This vulnerability can only be exploited with a
+	  combination of complicated techniques and tricking the user
+	  to visit a page.</p>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-12.php">
+	  <p>Full path disclosure vulnerabilities.</p>
+	  <p>By calling some scripts that are part of phpMyAdmin in an
+	  unexpected way, it is possible to trigger phpMyAdmin to
+	  display a PHP error message which contains the full path of
+	  the directory where phpMyAdmin is installed.</p>
+	  <p>This path disclosure is possible on servers where the
+	  recommended setting of the PHP configuration directive
+	  display_errors is set to on, which is against the
+	  recommendations given in the PHP manual.</p>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-13.php">
+	  <p> XSS vulnerability when a text to link transformation is
+	  used.</p>
+	  <p>When the TextLinkTransformationPlugin is used to create a
+	  link to an object when displaying the contents of a table,
+	  the object name is not properly escaped, which could lead to
+	  an XSS, if the object name has a crafted value.</p>
+	  <p>The stored XSS vulnerabilities can be triggered only by
+	  someone who logged in to phpMyAdmin, as the usual token
+	  protection prevents non-logged-in users from accessing the
+	  required forms.</p>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-14.php">
+	  <p>Self-XSS due to unescaped HTML output in schema
+	  export.</p>
+	  <p>When calling schema_export.php with crafted parameters,
+	  it is possible to trigger an XSS.</p>
+	  <p>This vulnerability can be triggered only by someone who
+	  logged in to phpMyAdmin, as the usual token protection
+	  prevents non-logged-in users from accessing the required
+	  form.</p>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-15.php">
+	  <p>SQL injection vulnerabilities, producing a privilege
+	  escalation (control user).</p>
+	  <p>Due to a missing validation of parameters passed to
+	  schema_export.php and pmd_pdf.php, it was possible to inject
+	  SQL statements that would run with the privileges of the
+	  control user. This gives read and write access to the tables
+	  of the configuration storage database, and if the control
+	  user has the necessary privileges, read access to some
+	  tables of the mysql database.</p>
+	  <p>These vulnerabilities can be triggered only by someone
+	  who logged in to phpMyAdmin, as the usual token protection
+	  prevents non-logged-in users from accessing the required
+	  form. Moreover, a control user must have been created and
+	  configured as part of the phpMyAdmin configuration storage
+	  installation.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2013-8.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2013-9.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2013-11.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2013-12.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2013-13.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2013-14.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2013-15.php</url>
+      <url>http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/3.5.8.2/phpMyAdmin-3.5.8.2-notes.html/view</url>
+      <url>http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/4.0.4.2/phpMyAdmin-4.0.4.2-notes.html/view</url>
+    </references>
+    <dates>
+      <discovery>2013-07-28</discovery>
+      <entry>2013-07-28</entry>
+      <modified>2013-07-29</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="049332d2-f6e1-11e2-82f3-000c29ee3065">
+    <topic>wordpress -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>wordpress</name>
+	<range><lt>3.5.2,1</lt></range>
+      </package>
+      <package>
+	<name>zh-wordpress-zh_CN</name>
+	<name>zh-wordpress-zh_TW</name>
+	<name>de-wordpress</name>
+	<name>ja-wordpress</name>
+	<name>ru-wordpress</name>
+	<range><lt>3.5.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The wordpress development team reports:</p>
+	<blockquote cite="https://wordpress.org/news/2013/06/wordpress-3-5-2/">
+	  <ul>
+	    <li>Blocking server-side request forgery attacks, which could
+	      potentially enable an attacker to gain access to a site</li>
+	    <li>Disallow contributors from improperly publishing posts</li>
+	    <li>An update to the SWFUpload external library to fix cross-site
+	    scripting vulnerabilities</li>
+	    <li>Prevention of a denial of service attack, affecting sites
+	      using password-protected posts</li>
+	    <li>An update to an external TinyMCE library to fix a cross-site
+	      scripting vulnerability</li>
+	    <li>Multiple fixes for cross-site scripting</li>
+	    <li>Avoid disclosing a full file path when a upload fails</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2199</cvename>
+      <cvename>CVE-2013-2200</cvename>
+      <cvename>CVE-2013-2201</cvename>
+      <cvename>CVE-2013-2202</cvename>
+      <cvename>CVE-2013-2203</cvename>
+      <cvename>CVE-2013-2204</cvename>
+      <cvename>CVE-2013-2205</cvename>
+      <url>https://wordpress.org/news/2013/06/wordpress-3-5-2/</url>
+    </references>
+    <dates>
+      <discovery>2013-06-21</discovery>
+      <entry>2013-07-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7943e521-f648-11e2-8607-3c970e169bc2">
+    <topic>bind -- denial of service vulnerability</topic>
+    <affects>
+      <package>
+	<name>bind99</name>
+	<name>bind99-base</name>
+	<range><gt>9.9.3</gt><lt>9.9.3.2</lt></range>
+      </package>
+      <package>
+	<name>bind98</name>
+	<name>bind98-base</name>
+	<range><gt>9.8.5</gt><lt>9.8.5.2</lt></range>
+      </package>
+      <package>
+	<name>FreeBSD</name>
+	<range><gt>9.0</gt><lt>9.1_5</lt></range>
+	<range><gt>8.4</gt><lt>8.4_2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ISC reports:</p>
+	<blockquote cite="https://kb.isc.org/article/AA-01015/0">
+	  <p>A specially crafted query that includes malformed
+	    rdata can cause named to terminate with an assertion
+	    failure while rejecting the malformed query.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4854</cvename>
+      <freebsdsa>SA-13:07.bind</freebsdsa>
+      <url>https://kb.isc.org/article/AA-01015/0</url>
+    </references>
+    <dates>
+      <discovery>2013-07-26</discovery>
+      <entry>2013-07-26</entry>
+      <modified>2013-07-27</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="80771b89-f57b-11e2-bf21-b499baab0cbe">
+    <topic>gnupg -- side channel attack on RSA secret keys</topic>
+    <affects>
+      <package>
+	<name>gnupg</name>
+	<range><lt>1.4.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>A Yarom and Falkner paper reports:</p>
+	<blockquote cite="http://lists.gnupg.org/pipermail/gnupg-announce/2013q3/000330.html">
+	  <p>Flush+Reload is a cache side-channel attack that monitors access to
+	    data in shared pages. In this paper we demonstrate how to use the
+	    attack to extract private encryption keys from GnuPG.  The high
+	    resolution and low noise of the Flush+Reload attack enables a spy
+	    program to recover over 98% of the bits of the private key in a
+	    single decryption or signing round. Unlike previous attacks, the
+	    attack targets the last level L3 cache.  Consequently, the spy
+	    program and the victim do not need to share the execution core of
+	    the CPU.  The attack is not limited to a traditional OS and can be
+	    used in a virtualised environment, where it can attack programs
+	    executing in a different VM.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://eprint.iacr.org/2013/448</url>
+      <url>http://lists.gnupg.org/pipermail/gnupg-announce/2013q3/000330.html</url>
+    </references>
+    <dates>
+      <discovery>2013-07-18</discovery>
+      <entry>2013-07-25</entry>
+      <modified>2013-07-26</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="c4d412c8-f4d1-11e2-b86c-000c295229d5">
+    <topic>openafs -- single-DES cell-wide key brute force vulnerability</topic>
+    <affects>
+      <package>
+	<name>openafs</name>
+	<range><lt>1.6.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OpenAFS Project reports:</p>
+	<blockquote cite="http://openafs.org/pages/security/OPENAFS-SA-2013-003.txt">
+	  <p>The small size of the DES key space permits an attacker to brute
+	    force a cell's service key and then forge traffic from any user
+	    within the cell.  The key space search can be performed in under 1
+	    day at a cost of around $100 using publicly available services.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4134</cvename>
+      <url>http://openafs.org/pages/security/OPENAFS-SA-2013-003.txt</url>
+      <url>http://openafs.org/pages/security/how-to-rekey.txt</url>
+      <url>http://openafs.org/pages/security/install-rxkad-k5-1.6.txt</url>
+    </references>
+    <dates>
+      <discovery>2013-07-24</discovery>
+      <entry>2013-07-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2ae24334-f2e6-11e2-8346-001e8c75030d">
+    <topic>subversion -- remotely triggerable "Assertion failed" DoS vulnerability or read overflow.</topic>
+    <affects>
+      <package>
+	<name>subversion</name>
+	<range><ge>1.8.0</ge><lt>1.8.1</lt></range>
+	<range><ge>1.7.0</ge><lt>1.7.11</lt></range>
+       </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Subversion Project reports:</p>
+	<blockquote cite="http://subversion.apache.org/security/CVE-2013-4131-advisory.txt">
+	  <p>Subversion's mod_dav_svn Apache HTTPD server module will trigger an assertion
+	    on some requests made against a revision root.  This can lead to a DoS.
+	    If assertions are disabled it will trigger a read overflow which may cause a
+	    SEGFAULT (or equivalent) or undefined behavior.</p>
+	  <p>Commit access is required to exploit this.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4131</cvename>
+      <url>http://subversion.apache.org/security/CVE-2013-4131-advisory.txt</url>
+    </references>
+    <dates>
+      <discovery>2013-07-19</discovery>
+      <entry>2013-07-24</entry>
+      <modified>2013-07-25</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="2fbfd455-f2d0-11e2-8a46-000d601460a4">
+    <topic>suPHP -- Privilege escalation</topic>
+    <affects>
+      <package>
+	<name>suphp</name>
+	<range><lt>0.7.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>suPHP developer Sebastian Marsching reports:</p>
+	<blockquote cite="https://lists.marsching.com/pipermail/suphp/2013-May/002552.html">
+	  <p>When the suPHP_PHPPath was set, mod_suphp would use the specified PHP
+	    executable to pretty-print PHP source files (MIME type
+	    x-httpd-php-source or application/x-httpd-php-source).</p>
+	  <p>However, it would not sanitize the environment. Thus a user that was
+	    allowed to use the SetEnv directive in a .htaccess file (AllowOverride
+	    FileInfo) could make PHP load a malicious configuration file (e.g.
+	    loading malicious extensions).</p>
+	  <p>As the PHP process for highlighting the source file was run with the
+	    privileges of the user Apache HTTPd was running as, a local attacker
+	    could probably execute arbitrary code with the privileges of this user.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://lists.marsching.com/pipermail/suphp/2013-May/002552.html</url>
+    </references>
+    <dates>
+      <discovery>2013-05-20</discovery>
+      <entry>2013-07-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ca4d63fb-f15c-11e2-b183-20cf30e32f6d">
+    <topic>apache24 -- several vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>apache24</name>
+	<range><lt>2.4.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Apache HTTP SERVER PROJECT reports:</p>
+	<blockquote cite="http://www.apache.org/dist/httpd/Announcement2.4.html">
+	  <p>mod_dav: Sending a MERGE request against a URI handled by mod_dav_svn
+	    with the source href (sent as part of the request body as XML) pointing
+	    to a URI that is not configured for DAV will trigger a segfault.</p>
+	  <p>mod_session_dbd: Make sure that dirty flag is respected when saving
+	    sessions, and ensure the session ID is changed each time the session
+	    changes. This changes the format of the updatesession SQL statement.
+	    Existing configurations must be changed.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1896</cvename>
+      <cvename>CVE-2013-2249</cvename>
+      <url>http://www.apache.org/dist/httpd/Announcement2.4.html</url>
+    </references>
+    <dates>
+      <discovery>2013-07-11</discovery>
+      <entry>2013-07-20</entry>
+      <modified>2013-07-21</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="9b037a0d-ef2c-11e2-b4a0-8c705af55518">
+    <topic>gallery -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gallery3</name>
+	<range><lt>3.0.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Red Hat Security Response Team reports:</p>
+	<blockquote cite="http://www.openwall.com/lists/oss-security/2013/07/04/7">
+	  <p>Gallery upstream has released 3.0.9 version, correcting two
+	    security flaws:</p>
+	  <p>Issue #1 - Improper stripping of URL fragments in flowplayer
+	    SWF file might lead to reply attacks (a different flaw than
+	    CVE-2013-2138).</p>
+	  <p>Issue #2 - gallery3: Multiple information exposure flaws in
+	    data rest core module.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2240</cvename>
+      <cvename>CVE-2013-2241</cvename>
+      <url>http://sourceforge.net/apps/trac/gallery/ticket/2073</url>
+      <url>https://bugzilla.redhat.com/show_bug.cgi?id=981197</url>
+      <url>http://sourceforge.net/apps/trac/gallery/ticket/2074</url>
+      <url>https://bugzilla.redhat.com/show_bug.cgi?id=981198</url>
+      <url>http://galleryproject.org/gallery_3_0_9</url>
+    </references>
+    <dates>
+      <discovery>2013-06-28</discovery>
+      <entry>2013-07-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="31b145f2-d9d3-49a9-8023-11cf742205dc">
+    <topic>PHP5 -- Heap corruption in XML parser</topic>
+    <affects>
+      <package>
+	<name>php53</name>
+	<range><lt>5.3.27</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PHP development team reports:</p>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4113">
+	  <p>ext/xml/xml.c in PHP before 5.3.27 does not properly
+	    consider parsing depth, which allows remote attackers to
+	    cause a denial of service (heap memory corruption) or
+	    possibly have unspecified other impact via a crafted
+	    document that is processed by the xml_parse_into_struct
+	    function.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4113</cvename>
+      <url>https://bugs.php.net/bug.php?id=65236</url>
+    </references>
+    <dates>
+      <discovery>2013-07-10</discovery>
+      <entry>2013-07-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5def3175-f3f9-4476-ba40-b46627cc638c">
+    <topic>PHP5 -- Integer overflow in Calendar module</topic>
+    <affects>
+      <package>
+	<name>php5</name>
+	<range><ge>5.4.0</ge><lt>5.4.16</lt></range>
+      </package>
+      <package>
+	<name>php53</name>
+	<range><lt>5.3.26</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PHP development team reports:</p>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4635">
+	  <p>Integer overflow in the SdnToJewish function in jewish.c
+	    in the Calendar component in PHP before 5.3.26 and 5.4.x
+	    before 5.4.16 allows context-dependent attackers to cause a
+	    denial of service (application hang) via a large argument to
+	    the jdtojewish function.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4635</cvename>
+      <url>https://bugs.php.net/bug.php?id=64895</url>
+    </references>
+    <dates>
+      <discovery>2013-05-22</discovery>
+      <entry>2013-07-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="df428c01-ed91-11e2-9466-98fc11cdc4f5">
+    <topic>linux-flashplugin -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-f10-flashplugin</name>
+	<range><lt>11.2r202.297</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="http://www.adobe.com/support/security/bulletins/apsb13-17.html">
+	  <p>These updates address vulnerabilities that could cause a crash
+	    and potentially allow an attacker to take control of the affected system.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-3344</cvename>
+      <cvename>CVE-2013-3345</cvename>
+      <cvename>CVE-2013-3347</cvename>
+      <url>http://www.adobe.com/support/security/bulletins/apsb13-17.html</url>
+    </references>
+    <dates>
+      <discovery>2013-07-09</discovery>
+      <entry>2013-07-15</entry>
+      <modified>2013-07-18</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="30a04ab4-ed7b-11e2-8643-8c705af55518">
+    <topic>squid -- denial of service</topic>
+    <affects>
+      <package>
+	<name>squid</name>
+	<range><ge>3.2</ge><lt>3.2.12</lt></range>
+	<range><ge>3.3</ge><lt>3.3.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Squid project reports:</p>
+	<blockquote cite="http://www.squid-cache.org/Advisories/SQUID-2013_3.txt">
+	  <p>Due to incorrect data validation Squid is vulnerable to a
+	    denial of service attack when processing specially crafted
+	    HTTP requests</p>
+	  <p>This problem allows any client who can generate HTTP requests
+	    to perform a denial of service attack on the Squid service.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4123</cvename>
+      <url>http://www.squid-cache.org/Advisories/SQUID-2013_3.txt</url>
+    </references>
+    <dates>
+      <discovery>2013-07-13</discovery>
+      <entry>2013-07-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="04320e7d-ea66-11e2-a96e-60a44c524f57">
+    <topic>libzrtpcpp -- multiple security vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libzrtpcpp</name>
+	<range><lt>2.3.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mark Dowd reports:</p>
+	<blockquote cite="http://blog.azimuthsecurity.com/2013/06/attacking-crypto-phones-weaknesses-in.html">
+	  <p>Vulnerability 1. Remote Heap Overflow: If an attacker sends a
+	    packet larger than 1024 bytes that gets stored temporarily (which
+	    occurs many times - such as when sending a ZRTP Hello packet), a
+	    heap overflow will occur, leading to potential arbitrary code
+	    execution on the vulnerable host.</p>
+	  <p>Vulnerability 2. Multiple Stack Overflows: ZRTPCPP contains
+	    multiple stack overflows that arise when preparing a response
+	    to a client's ZRTP Hello packet.</p>
+	  <p>Vulnerability 3. Information Leaking / Out of Bounds Reads:
+	    The ZRTPCPP library performs very little validation regarding the
+	    expected size of a packet versus the actual amount of data
+	    received. This can lead to both information leaking and out
+	    of bounds data reads (usually resulting in a crash).
+	    Information leaking can be performed for example by sending
+	    a malformed ZRTP Ping packet.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2221</cvename>
+      <cvename>CVE-2013-2222</cvename>
+      <cvename>CVE-2013-2223</cvename>
+    </references>
+    <dates>
+      <discovery>2013-06-27</discovery>
+      <entry>2013-07-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ebd877b9-7ef4-4375-b1fd-c67780581898">
+    <topic>ruby -- Hostname check bypassing vulnerability in SSL client</topic>
+    <affects>
+      <package>
+	<name>ruby19</name>
+	<range><lt>1.9.3.448,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Ruby Developers report:</p>
+	<blockquote cite="http://www.ruby-lang.org/en/news/2013/06/27/hostname-check-bypassing-vulnerability-in-openssl-client-cve-2013-4073/">
+	  <p>Ruby's SSL client implements hostname identity check but it does
+	     not properly handle hostnames in the certificate that contain null
+	     bytes.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4073</cvename>
+      <url>http://www.ruby-lang.org/en/news/2013/06/27/hostname-check-bypassing-vulnerability-in-openssl-client-cve-2013-4073/</url>
+    </references>
+    <dates>
+      <discovery>2013-06-27</discovery>
+      <entry>2013-07-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e3e788aa-e9fd-11e2-a96e-60a44c524f57">
+    <topic>otrs -- Sql Injection + Xss Issue</topic>
+    <affects>
+      <package>
+	<name>otrs</name>
+	<range><lt>3.2.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OTRS Project reports:</p>
+	<blockquote cite="http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2013-05/">
+	  <p>An attacker with a valid agent login could manipulate URLs leading to SQL injection. An attacker with a valid agent login could manipulate URLs in the ITSM ConfigItem search, leading to a JavaScript code injection (XSS) problem.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4717</cvename>
+      <cvename>CVE-2013-4718</cvename>
+      <url>http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2013-05/</url>
+    </references>
+    <dates>
+      <discovery>2013-07-09</discovery>
+      <entry>2013-07-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3b80104f-e96c-11e2-8bac-00262d5ed8ee">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>28.0.1500.71</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/">
+	  <p>A special reward for Andrey Labunets for his combination of
+	    CVE-2013-2879 and CVE-2013-2868 along with some (since fixed)
+	    server-side bugs.</p>
+	  <p>[252216] Low CVE-2013-2867: Block pop-unders in various
+	    scenarios.</p>
+	  <p>[252062] High CVE-2013-2879: Confusion setting up sign-in and sync.
+	    Credit to Andrey Labunets.</p>
+	  <p>[252034] Medium CVE-2013-2868: Incorrect sync of NPAPI extension
+	    component. Credit to Andrey Labunets.</p>
+	  <p>[245153] Medium CVE-2013-2869: Out-of-bounds read in JPEG2000
+	    handling. Credit to Felix Groebert of Google Security Team.</p>
+	  <p>[244746] [242762] Critical CVE-2013-2870: Use-after-free with
+	    network sockets. Credit to Collin Payne.</p>
+	  <p>[244260] Medium CVE-2013-2853: Man-in-the-middle attack against
+	    HTTP in SSL. Credit to Antoine Delignat-Lavaud and Karthikeyan
+	    Bhargavan from Prosecco at INRIA Paris.</p>
+	  <p>[243991] [243818] High CVE-2013-2871: Use-after-free in input
+	    handling. Credit to miaubiz.</p>
+	  <p>[Mac only] [242702] Low CVE-2013-2872: Possible lack of entropy in
+	    renderers. Credit to Eric Rescorla.</p>
+	  <p>[241139] High CVE-2013-2873: Use-after-free in resource loading.
+	    Credit to miaubiz.</p>
+	  <p>[233848] Medium CVE-2013-2875: Out-of-bounds-read in SVG. Credit
+	    to miaubiz.</p>
+	  <p>[229504] Medium CVE-2013-2876: Extensions permissions confusion
+	    with interstitials. Credit to Dev Akhawe.</p>
+	  <p>[229019] Low CVE-2013-2877: Out-of-bounds read in XML parsing.
+	    Credit to Aki Helin of OUSPG.</p>
+	  <p>[196636] None: Remove the "viewsource" attribute on iframes.
+	    Credit to Collin Jackson.</p>
+	  <p>[177197] Medium CVE-2013-2878: Out-of-bounds read in text
+	    handling. Credit to Atte Kettunen of OUSPG.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2853</cvename>
+      <cvename>CVE-2013-2867</cvename>
+      <cvename>CVE-2013-2868</cvename>
+      <cvename>CVE-2013-2869</cvename>
+      <cvename>CVE-2013-2870</cvename>
+      <cvename>CVE-2013-2871</cvename>
+      <cvename>CVE-2013-2872</cvename>
+      <cvename>CVE-2013-2873</cvename>
+      <cvename>CVE-2013-2875</cvename>
+      <cvename>CVE-2013-2876</cvename>
+      <cvename>CVE-2013-2877</cvename>
+      <cvename>CVE-2013-2878</cvename>
+      <cvename>CVE-2013-2879</cvename>
+      <url>http://googlechromereleases.blogspot.nl/</url>
+    </references>
+    <dates>
+      <discovery>2013-07-09</discovery>
+      <entry>2013-07-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f3d24aee-e5ad-11e2-b183-20cf30e32f6d">
+    <topic>apache22 -- several vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>apache22</name>
+	<range><gt>2.2.0</gt><lt>2.2.25</lt></range>
+      </package>
+      <package>
+	<name>apache22-event-mpm</name>
+	<range><gt>2.2.0</gt><lt>2.2.25</lt></range>
+      </package>
+      <package>
+	<name>apache22-itk-mpm</name>
+	<range><gt>2.2.0</gt><lt>2.2.25</lt></range>
+      </package>
+      <package>
+	<name>apache22-peruser-mpm</name>
+	<range><gt>2.2.0</gt><lt>2.2.25</lt></range>
+      </package>
+      <package>
+	<name>apache22-worker-mpm</name>
+	<range><gt>2.2.0</gt><lt>2.2.25</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Apache HTTP SERVER PROJECT reports:</h1>
+	<blockquote cite="http://www.apache.org/dist/httpd/CHANGES_2.2.25">
+	  <p>The mod_rewrite module in the Apache HTTP Server 2.2.x before
+	    2.2.25 writes data to a log file without sanitizing
+	    non-printable characters, which might allow remote attackers to
+	    execute arbitrary commands via an HTTP request containing an
+	    escape sequence for a terminal emulator.</p>
+	  <p>mod_dav: Sending a MERGE request against a URI handled by
+	    mod_dav_svn with the source href (sent as part of the request
+	    body as XML) pointing to a URI that is not configured for DAV
+	    will trigger a segfault.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1862</cvename>
+      <cvename>CVE-2013-1896</cvename>
+    </references>
+    <dates>
+      <discovery>2013-06-21</discovery>
+      <entry>2013-07-05</entry>
+      <modified>2013-07-10</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="1b93f6fe-e1c1-11e2-948d-6805ca0b3d42">
+    <topic>phpMyAdmin -- Global variable scope injection</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<range><ge>4.0</ge><lt>4.0.4.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyAdmin development team reports:</p>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2013-7.php">
+	  <p>The import.php script was vulnerable to GLOBALS variable
+	  injection. Therefore, an attacker could manipulate any
+	  configuration parameter.</p>
+	  <p>This vulnerability can be triggered only by someone who
+	  logged in to phpMyAdmin, as the usual token protection
+	  prevents non-logged-in users from accessing the required
+	  form.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2013-7.php</url>
+      <cvename>CVE-2013-4729</cvename>
+    </references>
+    <dates>
+      <discovery>2013-06-30</discovery>
+      <entry>2013-06-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="81da673e-dfe1-11e2-9389-08002798f6ff">
+    <topic>apache-xml-security-c -- heap overflow during XPointer evaluation</topic>
+    <affects>
+      <package>
+	<name>apache-xml-security-c</name>
+	<range><lt>1.7.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache Software Foundation reports:</p>
+	<blockquote cite="http://santuario.apache.org/secadv.data/CVE-2013-2210.txt">
+	  <p>The attempted fix to address CVE-2013-2154 introduced the
+	  possibility of a heap overflow, possibly leading to arbitrary code
+	  execution, in the processing of malformed XPointer expressions in the
+	  XML Signature Reference processing code.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2210</cvename>
+      <url>http://santuario.apache.org/secadv.data/CVE-2013-2210.txt</url>
+    </references>
+    <dates>
+      <discovery>2013-06-27</discovery>
+      <entry>2013-06-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b3fcb387-de4b-11e2-b1c6-0025905a4771">
+    <topic>mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><gt>18.0,1</gt><lt>22.0,1</lt></range>
+	<range><lt>17.0.7,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>17.0.7,1</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.19</lt></range>
+      </package>
+      <package>
+	<name>linux-thunderbird</name>
+	<range><lt>17.0.7</lt></range>
+      </package>
+      <package>
+	<name>seamonkey</name>
+	<range><lt>2.19</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><gt>11.0</gt><lt>17.0.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="http://www.mozilla.org/security/known-vulnerabilities/">
+	  <p>Miscellaneous memory safety hazards (rv:22.0 / rv:17.0.7)</p>
+	  <p>Title: Memory corruption found using Address Sanitizer</p>
+	  <p>Privileged content access and execution via XBL</p>
+	  <p>Arbitrary code execution within Profiler</p>
+	  <p>Execution of unmapped memory through onreadystatechange</p>
+	  <p>Data in the body of XHR HEAD requests leads to CSRF attacks</p>
+	  <p>SVG filters can lead to information disclosure</p>
+	  <p>PreserveWrapper has inconsistent behavior</p>
+	  <p>Sandbox restrictions not applied to nested frame elements</p>
+	  <p>X-Frame-Options ignored when using server push with multi-part
+	    responses</p>
+	  <p>XrayWrappers can be bypassed to run user defined methods in a
+	    privileged context</p>
+	  <p>getUserMedia permission dialog incorrectly displays location</p>
+	  <p>Homograph domain spoofing in .com, .net and .name</p>
+	  <p>Inaccessible updater can lead to local privilege escalation</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+	<cvename>CVE-2013-1682</cvename>
+	<cvename>CVE-2013-1683</cvename>
+	<cvename>CVE-2013-1684</cvename>
+	<cvename>CVE-2013-1685</cvename>
+	<cvename>CVE-2013-1686</cvename>
+	<cvename>CVE-2013-1687</cvename>
+	<cvename>CVE-2013-1688</cvename>
+	<cvename>CVE-2013-1690</cvename>
+	<cvename>CVE-2013-1692</cvename>
+	<cvename>CVE-2013-1693</cvename>
+	<cvename>CVE-2013-1694</cvename>
+	<cvename>CVE-2013-1695</cvename>
+	<cvename>CVE-2013-1696</cvename>
+	<cvename>CVE-2013-1697</cvename>
+	<cvename>CVE-2013-1698</cvename>
+	<cvename>CVE-2013-1699</cvename>
+	<cvename>CVE-2013-1700</cvename>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-49.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-50.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-51.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-52.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-53.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-54.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-55.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-56.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-57.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-58.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-59.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-60.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-61.html</url>
+	<url>http://www.mozilla.org/security/announce/2013/mfsa2013-62.html</url>
+	<url>http://www.mozilla.org/security/known-vulnerabilities/</url>
+    </references>
+    <dates>
+      <discovery>2013-06-25</discovery>
+      <entry>2013-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="01cf67b3-dc3b-11e2-a6cd-c48508086173">
+    <topic>cURL library -- heap corruption in curl_easy_unescape</topic>
+    <affects>
+      <package>
+	<name>curl</name>
+	<range><ge>7.7</ge><lt>7.24.0_4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cURL developers report:</p>
+	<blockquote cite="http://curl.haxx.se/docs/adv_20130622.html">
+	  <p>libcurl is vulnerable to a case of bad checking of the
+	    input data which may lead to heap corruption.</p>
+	  <p>The function curl_easy_unescape() decodes URL-encoded
+	    strings to raw binary data. URL-encoded octets are
+	    represented with %HH combinations where HH is a two-digit
+	    hexadecimal number.  The decoded string is written to an
+	    allocated memory area that the function returns to the
+	    caller.</p>
+	  <p>The function takes a source string and a length
+	    parameter, and if the length provided is 0 the function will
+	    instead use strlen() to figure out how much data to
+	    parse.</p>
+	  <p>The "%HH" parser wrongly only considered the case where a
+	    zero byte would terminate the input.  If a length-limited
+	    buffer was passed in which ended with a '%' character which
+	    was followed by two hexadecimal digits outside of the buffer
+	    libcurl was allowed to parse alas without a terminating
+	    zero, libcurl would still parse that sequence as well.  The
+	    counter for remaining data to handle would then be decreased
+	    too much and wrap to become a very large integer and the
+	    copying would go on too long and the destination buffer that
+	    is allocated on the heap would get overwritten.</p>
+	  <p>We consider it unlikely that programs allow user-provided
+	    strings unfiltered into this function.  Also, only the not
+	    zero-terminated input string use case is affected by this
+	    flaw.  Exploiting this flaw for gain is probably possible for
+	    specific circumstances but we consider the general risk for
+	    this to be low.</p>
+	  <p>The curl command line tool is not affected by this
+	    problem as it doesn't use this function.</p>
+	  <p>There are no known exploits available at this time.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2174</cvename>
+      <url>http://curl.haxx.se/docs/adv_20130622.html</url>
+    </references>
+    <dates>
+      <discovery>2013-06-22</discovery>
+      <entry>2013-06-23</entry>
+      <modified>2013-07-01</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="b162b218-c547-4ba2-ae31-6fdcb61bc763">
+    <topic>puppet -- Unauthenticated Remote Code Execution Vulnerability</topic>
+    <affects>
+      <package>
+	<name>puppet</name>
+	<range><ge>2.7</ge><lt>2.7.22</lt></range>
+	<range><ge>3.0</ge><lt>3.2.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Puppet Developers report:</p>
+	<blockquote cite="http://puppetlabs.com/security/cve/cve-2013-3567/">
+	  <p>When making REST api calls, the puppet master takes YAML from an
+	      untrusted client, deserializes it, and then calls methods on the
+	      resulting object. A YAML payload can be crafted to cause the
+	      deserialization to construct an instance of any class available in
+	      the ruby process, which allows an attacker to execute code
+	      contained in the payload.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-3567</cvename>
+    </references>
+    <dates>
+      <discovery>2013-06-13</discovery>
+      <entry>2013-06-22</entry>
+      <modified>2013-08-01</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="8b97d289-d8cf-11e2-a1f5-60a44c524f57">
+    <topic>otrs -- information disclosure</topic>
+    <affects>
+      <package>
+	<name>otrs</name>
+	<range><lt>3.2.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OTRS Project reports:</p>
+	<blockquote cite="http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2013-04/">
+	  <p>An attacker with a valid agent login could manipulate URLs in the ticket
+	    watch mechanism to see contents of tickets they are not permitted to see.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4088</cvename>
+      <url>http://www.otrs.com/en/open-source/community-news/security-advisories/security-advisory-2013-04/</url>
+    </references>
+    <dates>
+      <discovery>2013-06-18</discovery>
+      <entry>2013-06-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="abef280d-d829-11e2-b71c-8c705af55518">
+    <topic>FreeBSD -- Privilege escalation via mmap</topic>
+    <affects>
+      <package>
+	<name>FreeBSD</name>
+	<range><gt>9.0</gt><lt>9.1_4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<blockquote cite="http://www.freebsd.org/security/advisories/FreeBSD-SA-13%3a06.mmap.asc">
+	  <p>Due to insufficient permission checks in the virtual memory
+	    system, a tracing process (such as a debugger) may be able to
+	    modify portions of the traced process's address space to which
+	    the traced process itself does not have write access.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2171</cvename>
+      <freebsdsa>SA-13:06.mmap</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2013-06-18</discovery>
+      <entry>2013-06-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="279e5f4b-d823-11e2-928e-08002798f6ff">
+    <topic>apache-xml-security-c -- heap overflow</topic>
+    <affects>
+      <package>
+	<name>apache-xml-security-c</name>
+	<range><lt>1.7.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache Software Foundation reports:</p>
+	<blockquote cite="http://santuario.apache.org/secadv.data/CVE-2013-2156.txt">
+	  <p>A heap overflow exists in the processing of the PrefixList
+	  attribute optionally used in conjunction with Exclusive
+	  Canonicalization, potentially allowing arbitary code execution.
+	  If verification of the signature occurs prior to actual evaluation of a
+	  signing key, this could be exploited by an unauthenticated attacker.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2156</cvename>
+      <url>http://santuario.apache.org/secadv.data/CVE-2013-2156.txt</url>
+    </references>
+    <dates>
+      <discovery>2013-06-18</discovery>
+      <entry>2013-06-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="80af2677-d6c0-11e2-8f5e-001966155bea">
+    <topic>tor -- guard discovery</topic>
+    <affects>
+      <package>
+	<name>tor-devel</name>
+	<range><lt>0.2.4.13.a_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Tor Project reports:</p>
+	<blockquote cite="https://gitweb.torproject.org/tor.git/commit/2a95f3171681ee53c97ccba9d80f4454b462aaa7">
+	  <p>Disable middle relay queue overfill detection code due to possible guard discovery attack</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://trac.torproject.org/projects/tor/ticket/9072</url>
+    </references>
+    <dates>
+      <discovery>2013-06-15</discovery>
+      <entry>2013-06-16</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="4e9e410b-d462-11e2-8d57-080027019be0">
     <topic>dbus -- local dos</topic>
     <affects>
@@ -102,8 +1517,9 @@ Note:  Please add new entries to the beginning of this file.
       <cvename>CVE-2013-3343</cvename>
     </references>
     <dates>
-      <discovery>2013-08-11</discovery>
-      <entry>2013-08-14</entry>
+      <discovery>2013-06-11</discovery>
+      <entry>2013-06-14</entry>
+      <modified>2013-06-18</modified>
     </dates>
   </vuln>
 
@@ -814,7 +2230,7 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="6d87c2e9-c64d-11e2-9c22-50465d9ff992">
-    <topic>soccat -- FD leak</topic>
+    <topic>socat -- FD leak</topic>
     <affects>
       <package>
 	<name>socat</name>
@@ -908,7 +2324,7 @@ Note:  Please add new entries to the beginning of this file.
     <affects>
       <package>
 	<name>otrs</name>
-	<range><lt>3.1.16</lt></range>
+	<range><lt>3.2.7</lt></range>
       </package>
     </affects>
     <description>
@@ -1275,7 +2691,6 @@ Note:  Please add new entries to the beginning of this file.
 	  <p>MFSA 2013-46 Use-after-free with video and onresize event</p>
 	  <p>MFSA 2013-47 Uninitialized functions in DOMSVGZoomEvent</p>
 	  <p>MFSA 2013-48 Memory corruption found using Address Sanitizer</p>
-	  <p> </p>
 	</blockquote>
       </body>
     </description>
@@ -1851,7 +3266,7 @@ Note:  Please add new entries to the beginning of this file.
     <affects>
       <package>
 	<name>nvidia-driver</name>
-	<range><gt>304.88</gt><lt>310.44</lt></range>
+	<range><ge>310.14</ge><lt>310.44</lt></range>
 	<range><ge>195.22</ge><lt>304.88</lt></range>
       </package>
     </affects>
@@ -6904,7 +8319,8 @@ executed in your Internet Explorer while displaying the email.</p>
     </references>
     <dates>
       <discovery>2012-10-02</discovery>
-      <entry>2012-08-31</entry>
+      <entry>2012-10-22</entry>
+      <modified>2013-06-19</modified>
     </dates>
   </vuln>
 
@@ -11811,9 +13227,9 @@ executed in your Internet Explorer while displaying the email.</p>
     <affects>
       <package>
 	<name>nvidia-driver</name>
-	<range><gt>173.14.35_1</gt><lt>295.71</lt></range>
-	<range><gt>96.43.20_2</gt><lt>173.14.35</lt></range>
-	<range><gt>71.86.15_2</gt><lt>96.43.20_2</lt></range>
+	<range><gt>173.14.35_2</gt><lt>295.71</lt></range>
+	<range><gt>96.43.20_3</gt><lt>173.14.35</lt></range>
+	<range><gt>71.86.15_3</gt><lt>96.43.20_2</lt></range>
 	<range><lt>71.86.15_2</lt></range>
       </package>
     </affects>
@@ -14226,7 +15642,8 @@ executed in your Internet Explorer while displaying the email.</p>
     </references>
     <dates>
       <discovery>2011-07-20</discovery>
-      <entry>2011-02-10</entry>
+      <entry>2012-02-10</entry>
+      <modified>2013-06-19</modified>
     </dates>
   </vuln>
 
@@ -14717,8 +16134,9 @@ executed in your Internet Explorer while displaying the email.</p>
       <freebsdsa>SA-11:09.pam_ssh</freebsdsa>
     </references>
     <dates>
-      <discovery>2012-12-23</discovery>
+      <discovery>2011-12-23</discovery>
       <entry>2012-01-29</entry>
+      <modified>2013-06-18</modified>
     </dates>
   </vuln>
 
@@ -15122,7 +16540,8 @@ executed in your Internet Explorer while displaying the email.</p>
     </references>
     <dates>
       <discovery>2012-01-15</discovery>
-      <entry>2011-12-19</entry>
+      <entry>2012-01-20</entry>
+      <modified>2013-06-19</modified>
     </dates>
   </vuln>
 
@@ -16156,10 +17575,12 @@ executed in your Internet Explorer while displaying the email.</p>
     <references>
       <cvename>CVE-2011-4607</cvename>
       <mlist>http://lists.tartarus.org/pipermail/putty-announce/2011/000017.html</mlist>
+      <url>http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/password-not-wiped.html</url>
     </references>
     <dates>
       <discovery>2011-12-10</discovery>
       <entry>2011-12-12</entry>
+      <modified>2013-08-07</modified>
     </dates>
   </vuln>
 
@@ -26710,7 +28131,7 @@ executed in your Internet Explorer while displaying the email.</p>
     <dates>
       <discovery>2010-04-21</discovery>
       <entry>2010-04-24</entry>
-      <modified>2010-05-12</modified>
+      <modified>2013-06-16</modified>
     </dates>
   </vuln>
 
@@ -27147,8 +28568,9 @@ executed in your Internet Explorer while displaying the email.</p>
       <url>http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2010-002.txt</url>
     </references>
     <dates>
-      <discovery>2010-04-23</discovery>
-      <entry>2010-04-18</entry>
+      <discovery>2010-02-16</discovery>
+      <entry>2010-04-19</entry>
+      <modified>2013-06-16</modified>
     </dates>
   </vuln>
 
@@ -31932,9 +33354,9 @@ executed in your Internet Explorer while displaying the email.</p>
       <url>http://securityreason.com/achievement_securityalert/58</url>
     </references>
     <dates>
-      <discovery>2009-11-28</discovery>
+      <discovery>2008-11-28</discovery>
       <entry>2009-05-16</entry>
-      <modified>2010-05-02</modified>
+      <modified>2013-06-16</modified>
     </dates>
   </vuln>
 
@@ -34024,8 +35446,9 @@ executed in your Internet Explorer while displaying the email.</p>
       <url>http://typo3.org/teams/security/security-bulletins/typo3-sa-2009-001/</url>
     </references>
     <dates>
-      <discovery>2009-02-27</discovery>
+      <discovery>2009-02-07</discovery>
       <entry>2009-02-09</entry>
+      <modified>2013-06-19</modified>
     </dates>
   </vuln>
 
@@ -48616,8 +50039,8 @@ executed in your Internet Explorer while displaying the email.</p>
     </references>
     <dates>
       <discovery>2006-12-06</discovery>
-      <entry>2006-10-12</entry>
-      <modified>2010-05-12</modified>
+      <entry>2006-12-12</entry>
+      <modified>2013-06-19</modified>
     </dates>
   </vuln>
 
@@ -56451,7 +57874,6 @@ executed in your Internet Explorer while displaying the email.</p>
     <dates>
       <discovery>2006-01-11</discovery>
       <entry>2006-01-27</entry>
-      <modified>2006-01-11</modified>
     </dates>
   </vuln>
 
@@ -68271,6 +69693,7 @@ executed in your Internet Explorer while displaying the email.</p>
     <dates>
       <discovery>2004-10-18</discovery>
       <entry>2005-01-21</entry>
+      <modified>2013-06-19</modified>
     </dates>
   </vuln>
 
@@ -72569,7 +73992,7 @@ http_access deny Gopher</pre>
       </references>
     <dates>
       <discovery>2004-08-18</discovery>
-      <entry>2004-08-16</entry>
+      <entry>2004-10-18</entry>
     </dates>
   </vuln>
 
@@ -73995,9 +75418,9 @@ http_access deny Gopher</pre>
       <bid>10724</bid>
     </references>
     <dates>
-      <discovery>2007-07-07</discovery>
+      <discovery>2004-07-07</discovery>
       <entry>2004-09-27</entry>
-      <modified>2004-10-02</modified>
+      <modified>2013-06-19</modified>
     </dates>
   </vuln>
 
@@ -74059,7 +75482,7 @@ http_access deny Gopher</pre>
       <bid>10725</bid>
     </references>
     <dates>
-      <discovery>2007-07-07</discovery>
+      <discovery>2004-07-07</discovery>
       <entry>2004-09-27</entry>
       <modified>2004-10-02</modified>
     </dates>
@@ -75806,6 +77229,7 @@ http_access deny Gopher</pre>
     <dates>
       <discovery>2004-08-18</discovery>
       <entry>2004-08-22</entry>
+      <modified>2013-06-19</modified>
     </dates>
   </vuln>
 
@@ -76866,9 +78290,9 @@ http_access deny Gopher</pre>
       <mlist>http://asg.web.cmu.edu/archive/message.php?mailbox=archive.cyrus-announce&amp;msg=25</mlist>
     </references>
     <dates>
-      <discovery>2004-12-12</discovery>
-      <entry>2004-05-12</entry>
-      <modified>2004-06-27</modified>
+      <discovery>2004-05-12</discovery>
+      <entry>2004-09-20</entry>
+      <modified>2013-06-19</modified>
     </dates>
   </vuln>
 
