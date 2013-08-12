@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-PV
-# Date created:				April 18th 1997
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-PV/Makefile,v 1.23 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: devel/p5-PV/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	PV
 PORTVERSION=	1.5
@@ -17,7 +13,7 @@ COMMENT=	A perl5 library for text-mode user interface widgets
 
 RUN_DEPENDS=	p5-Curses>=0:${PORTSDIR}/devel/p5-Curses
 
-USE_PERL5=	YES
+USES=		perl5
 
 NO_BUILD=	YES
 PLIST_FILES=	%%SITE_PERL%%/PV.pm
