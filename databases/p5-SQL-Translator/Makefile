@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: ports/databases/p5-SQL-Translator/Makefile,v 1.35 2013/01/01 15:00:14 svnexp Exp $
+# $FreeBSD: databases/p5-SQL-Translator/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SQL-Translator
 PORTVERSION=	0.11016
@@ -37,7 +37,8 @@ TEST_DEPENDS=	p5-Test-Differences>=0.61:${PORTSDIR}/devel/p5-Test-Differences \
 OPTIONS_DEFINE=	DIAGRAM
 DIAGRAM_DESC=	Diagram generation support
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		sqlt-diagram.1 \
 		sqlt-diff-old.1 \
