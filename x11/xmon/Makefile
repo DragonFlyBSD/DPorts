@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xmon
-# Date created:         27 December 2001
-# Whom:                 Bruce M Simpson <bms@spc.org>
-#
-# $FreeBSD: ports/x11/xmon/Makefile,v 1.13 2012/11/17 06:03:22 svnexp Exp $
-#
+# Created by: Bruce M Simpson <bms@spc.org>
+# $FreeBSD: x11/xmon/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xmon
 PORTVERSION=	1.5.6
@@ -17,7 +13,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Raw X11 protocol analyser
 
 WRKSRC=		${WRKDIR}/xmon.${PORTVERSION}
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xt
 
 MAN1=		xmon.1 xmond.1 xmonui.1
