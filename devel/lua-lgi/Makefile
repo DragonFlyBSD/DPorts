@@ -1,11 +1,12 @@
-# $FreeBSD: devel/lua-lgi/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/lua-lgi/Makefile 324297 2013-08-06 01:01:30Z mandree $
 
 PORTNAME=	lgi
 PORTVERSION=	0.7.1
+PORTREVISION=	1
 CATEGORIES=	devel
 PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
-MAINTAINER=	andreevmaxim@gmail.com
+MAINTAINER=	lua@FreeBSD.org
 COMMENT=	Lua bindings to libraries using GObject-Introspection
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
