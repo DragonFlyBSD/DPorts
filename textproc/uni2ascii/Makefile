@@ -1,9 +1,5 @@
-# New ports collection makefile for:	uni2ascii
-# Date created:				12 Sep 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/textproc/uni2ascii/Makefile,v 1.39 2012/11/17 06:02:24 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: textproc/uni2ascii/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	uni2ascii
 PORTVERSION=	4.18
@@ -18,7 +14,6 @@ LICENSE=	GPLv3
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 
