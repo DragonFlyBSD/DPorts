@@ -2,7 +2,7 @@
 # Date created:		2011-07-20
 # Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
 #
-# $FreeBSD: ports/hebrew/hunspell/Makefile,v 1.9 2012/11/17 05:58:27 svnexp Exp $
+# $FreeBSD: hebrew/hunspell/Makefile 324225 2013-08-04 12:47:44Z az $
 #
 
 PORTNAME=	hunspell
@@ -18,11 +18,12 @@ COMMENT=	Hebrew hunspell dictionaries
 
 BUILD_DEPENDS=	iconv:${PORTSDIR}/converters/libiconv
 
+USES=		perl5
 ALL_TARGET=	hunspell
 CONFIGURE_ARGS=	--enable-fatverb
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 
 PLIST_FILES=	%%DATADIR%%/he.aff \
 		%%DATADIR%%/he.dic
