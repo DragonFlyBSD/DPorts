@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mail/p5-Email-MessageID
-# Date created:				27 December 2004
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/p5-Email-MessageID/Makefile,v 1.9 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: mail/p5-Email-MessageID/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Email-MessageID
 PORTVERSION=	1.402
@@ -17,7 +13,8 @@ COMMENT=	Generate world unique message-ids
 RUN_DEPENDS=	p5-Email-Address>=1.80:${PORTSDIR}/mail/p5-Email-Address
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::MessageID.3
 
