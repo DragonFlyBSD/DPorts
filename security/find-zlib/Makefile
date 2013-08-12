@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/security/find-zlib/Makefile,v 1.12 2012/11/17 06:01:03 svnexp Exp $
+# $FreeBSD: security/find-zlib/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	find_zlib
 PORTVERSION=	1.9
@@ -16,7 +16,8 @@ LICENSE=	GPLv2
 
 NO_BUILD=	none
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 PLIST_FILES=	bin/find-zlib
 
