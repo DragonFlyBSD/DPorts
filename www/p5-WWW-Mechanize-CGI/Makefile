@@ -2,7 +2,7 @@
 # Date created:				25 November 2008
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-WWW-Mechanize-CGI/Makefile,v 1.3 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Mechanize-CGI/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	WWW-Mechanize-CGI
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-HTTP-Request-AsCGI>=0.2:${PORTSDIR}/www/p5-HTTP-Request-AsCGI \
 		p5-WWW-Mechanize>=0:${PORTSDIR}/www/p5-WWW-Mechanize
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	WWW::Mechanize::CGI.3
 
