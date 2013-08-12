@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: ports/security/snoopy/Makefile,v 1.15 2012/12/31 14:53:07 svnexp Exp $
+# $FreeBSD: security/snoopy/Makefile 322325 2013-07-05 13:44:31Z bapt $
 
 PORTNAME=	snoopy
 PORTVERSION=	1.8.0
@@ -15,8 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 PLIST_FILES=	lib/snoopy.so bin/detect
 PORTDOCS=	README
 
+USES=		gmake
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
 .include <bsd.port.options.mk>
 
