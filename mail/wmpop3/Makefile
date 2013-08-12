@@ -1,9 +1,5 @@
-# New ports collection makefile for:	wmpop3
-# Date created:			28 Mar 1999
-# Whom:				Jim Mock <jim@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/wmpop3/Makefile,v 1.22 2012/11/17 05:59:18 svnexp Exp $
-#
+# Created by: Jim Mock <jim@FreeBSD.org>
+# $FreeBSD: mail/wmpop3/Makefile 324137 2013-08-02 02:50:14Z danfe $
 
 PORTNAME=	wmpop3
 PORTVERSION=	0.5.6a
@@ -13,25 +9,32 @@ MASTER_SITES=	#
 DISTNAME=	WMPop3-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A POP3 mail check for the Window Maker dock
+COMMENT=	Dockapp to check email via POP3 protocol
 
-WRKSRC=		${WRKDIR}/${DISTNAME:tl}/wmpop3
+LICENSE=	GPLv2
 
 USE_CSTD=	gnu89
 USE_XORG=	xpm
-ALL_TARGET=	clean all
 
-PLIST_FILES=	bin/wmpop3 %%EXAMPLESDIR%%/wmpop3rc
-PLIST_DIRS=	%%EXAMPLESDIR%%
-PORTDOCS=	README
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/${PORTNAME}
+
+PLIST_FILES=	bin/wmpop3
+PORTDOCS=	CHANGE_LOG README
+PORTEXAMPLES=	wmpop3rc
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
+.include <bsd.port.options.mk>
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmpop3 ${PREFIX}/bin
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/wmpop3rc ${EXAMPLESDIR}
-.if !defined(NOPORTDOCS)
+.endif
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKDIR}/${PORTNAME}-${PORTVERSION}/README ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/../,} ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
