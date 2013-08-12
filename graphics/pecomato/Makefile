@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/pecomato/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: graphics/pecomato/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	pecomato
 PORTVERSION=	0.0.15
@@ -10,9 +10,8 @@ MASTER_SITES=	http://www.mollux.org/projects/pecomato/download/sources/ \
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Command-line picture metadata processor
 
-USE_GMAKE=		yes
+USES=			gmake
 USE_PYTHON_BUILD=	yes
-MAKE_JOBS_SAFE=		yes
 
 MAKEFILE=	Makefile.unix
 
