@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/sysutils/downtimed/files/downtimed.in,v 1.4 2012/11/17 06:01:28 svnexp Exp $
+# $FreeBSD: sysutils/downtimed/files/downtimed.in 300897 2012-07-14 14:29:18Z beat $
 
 # PROVIDE: downtimed
 # REQUIRE: LOGIN syslogd

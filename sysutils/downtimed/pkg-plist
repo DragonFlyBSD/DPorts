@@ -1,4 +1,3 @@
-@comment $FreeBSD: ports/sysutils/downtimed/pkg-plist,v 1.3 2012/11/17 06:01:28 svnexp Exp $
 bin/downtimes
 sbin/downtimed
 @exec /bin/mkdir -p /var/db/downtimed
