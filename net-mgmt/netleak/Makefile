@@ -2,7 +2,7 @@
 # Date created:				1 Nov 2005
 # Whom:					Vaida Bogdan
 #
-# $FreeBSD: ports/net-mgmt/netleak/Makefile,v 1.7 2012/11/17 06:00:34 svnexp Exp $
+# $FreeBSD: net-mgmt/netleak/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	netleak
@@ -25,7 +25,8 @@ RUN_DEPENDS=	p5-Net-PcapUtils>=0:${PORTSDIR}/net/p5-Net-PcapUtils \
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 MAN8=		netleak.8 netleakd.8
 
 PLIST_FILES=	etc/netleak.conf etc/netleakd.conf sbin/netleak sbin/netleakd
