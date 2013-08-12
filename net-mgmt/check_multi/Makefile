@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/check_multi/Makefile 317596 2013-05-07 10:00:57Z ehaupt $
+# $FreeBSD: net-mgmt/check_multi/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	check_multi
 PORTVERSION=	0.19
@@ -14,8 +14,8 @@ COMMENT=	A multi purpose wrapper plugin for Nagios
 
 LICENSE=	GPLv2
 
-USES=		shebangfix
-USE_PERL5_RUN=	yes
+USES=		shebangfix perl5
+USE_PERL5=	run
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
