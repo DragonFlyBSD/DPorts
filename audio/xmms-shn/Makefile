@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.Org>
-# $FreeBSD: ports/audio/xmms-shn/Makefile,v 1.32 2012/12/18 21:34:11 svnexp Exp $
+# $FreeBSD: audio/xmms-shn/Makefile 324122 2013-08-01 20:22:27Z naddy $
 
 PORTNAME=	xmms-shn
 PORTVERSION=	2.4.1
@@ -15,7 +15,6 @@ RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.options.mk>
 
