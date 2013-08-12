@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-WWW-Mechanize
-# Date created:				02 April 2003
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-WWW-Mechanize/Makefile,v 1.39 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: www/p5-WWW-Mechanize/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-Mechanize
 PORTVERSION=	1.72
@@ -35,7 +31,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Taint>=0:${PORTSDIR}/devel/p5-Test-Taint \
 		p5-Test-Warn>=0.11:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		mech-dump.1
 MAN3=		WWW::Mechanize.3 WWW::Mechanize::Cookbook.3 \
