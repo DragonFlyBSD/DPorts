@@ -1,5 +1,5 @@
 # Created by: Henrik Andersen
-# $FreeBSD: sysutils/bontmia/Makefile 314660 2013-03-19 16:04:52Z tabthorpe $
+# $FreeBSD: sysutils/bontmia/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	bontmia
 PORTVERSION=	0.14
@@ -12,7 +12,8 @@ COMMENT=	A small tool for incremental backups over network
 
 RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 NO_BUILD=	yes
 
