@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/ddrescue/Makefile 316083 2013-04-19 02:59:09Z ak $
+# $FreeBSD: sysutils/ddrescue/Makefile 323935 2013-07-30 02:46:59Z jgh $
 
 PORTNAME=	ddrescue
 PORTVERSION=	1.16
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jharris@widomaker.com
 COMMENT=	Data recovery tool
 
 LICENSE=	GPLv3
@@ -18,7 +18,6 @@ OPTIONS_DEFINE=	DOCS
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	CC="${CC}" CXX="${CXX}" CFLAGS="${CFLAGS}" \
 		CXXFLAGS="${CXXFLAGS}"
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		ddrescue.1 ddrescuelog.1
 INFO=		ddrescue
