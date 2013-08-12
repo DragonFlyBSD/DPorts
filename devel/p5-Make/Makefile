@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Make
-# Date created:				Wed Jan  3 12:14:41 2001
-# Whom:					will
-#
-# $FreeBSD: ports/devel/p5-Make/Makefile,v 1.9 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: devel/p5-Make/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Make
 PORTVERSION=	1.00
@@ -11,16 +7,18 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module implementing 'make' and script
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		perlmake.1
 MAN3=		Make.3
 
-pre-configure:
-	${PERL} -pi -e "s:pmake:perlmake:g" ${WRKSRC}/Makefile.PL
-	${CP} ${WRKSRC}/pmake ${WRKSRC}/perlmake
+post-patch:
+	@${REINPLACE_CMD} -i '' -e 's|pmake|perlmake|' \
+		${WRKSRC}/Makefile.PL
+	@${CP} ${WRKSRC}/pmake ${WRKSRC}/perlmake
 
 .include <bsd.port.mk>
