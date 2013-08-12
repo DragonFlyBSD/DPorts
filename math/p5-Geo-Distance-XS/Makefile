@@ -1,9 +1,5 @@
-# New ports collection makefile for:	math/p5-Geo-Distance-XS
-# Date created:				30 September 2009
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Geo-Distance-XS/Makefile,v 1.7 2012/11/17 05:59:25 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: math/p5-Geo-Distance-XS/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Geo-Distance-XS
 PORTVERSION=	0.11
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Geo-Distance>=0.16:${PORTSDIR}/math/p5-Geo-Distance
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Simple>=0.94:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Geo::Distance::XS.3
 
