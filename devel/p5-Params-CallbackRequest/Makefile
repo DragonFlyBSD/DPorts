@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Params::CallbackRequest
-# Date created:				21 May 2004
-# Whom:					Rod Taylor <ports@rbt.ca>
-#
-# $FreeBSD: ports/devel/p5-Params-CallbackRequest/Makefile,v 1.13 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: Rod Taylor <ports@rbt.ca>
+# $FreeBSD: devel/p5-Params-CallbackRequest/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Params-CallbackRequest
 PORTVERSION=	1.20
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate \
 		p5-Class-ISA>=0:${PORTSDIR}/devel/p5-Class-ISA
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Params::Callback.3 Params::CallbackRequest.3 \
 		Params::CallbackRequest::Exceptions.3
