@@ -2,7 +2,7 @@
 # Date created:				04 Nov 2000
 # Whom:					will
 #
-# $FreeBSD: ports/devel/p5-Agent/Makefile,v 1.11 2012/11/17 05:56:03 svnexp Exp $
+# $FreeBSD: devel/p5-Agent/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Agent
@@ -17,7 +17,8 @@ COMMENT=	Perl module that provides a foundation for software agent developers
 BUILD_DEPENDS=	p5-Class-Tom>=0:${PORTSDIR}/devel/p5-Class-Tom
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Agent.3 Agent::Transport::TCP.3 \
 		Agent::Transport.3 Agent::Message.3
