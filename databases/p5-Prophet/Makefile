@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Prophet
-# Date created:		2011-04-05
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: databases/p5-Prophet/Makefile 320485 2013-06-10 15:06:51Z mat $
-#
+# Created by: Baptiste Daroussin <bapt@FreeBSD.org>
+# $FreeBSD: databases/p5-Prophet/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Prophet
 PORTVERSION=	0.751
@@ -48,7 +44,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-Test-Exception>=0.26:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=	prophet.1
 MAN3=	Prophet.3 \
