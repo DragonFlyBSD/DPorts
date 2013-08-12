@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xmlink
-# Date created:				19 May 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/xmlink/Makefile,v 1.13 2012/11/17 05:57:57 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: games/xmlink/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xmlink
 PORTVERSION=	5.5.2
@@ -16,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Missing Link puzzle for X Window System
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext xt sm ice
 MAN1=		xmlink.1
 MANCOMPRESSED=	no
