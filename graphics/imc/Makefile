@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: graphics/imc/Makefile 315155 2013-03-24 19:58:04Z beech $
+# $FreeBSD: graphics/imc/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	imc
 PORTVERSION=	4.3
@@ -16,9 +16,9 @@ BUILD_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD \
 		p5-CGI.pm>=0:${PORTSDIR}/www/p5-CGI.pm
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
+USES=		perl5
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PERL5=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 MAN1=		${PORTNAME}.1
