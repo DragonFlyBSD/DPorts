@@ -1,5 +1,5 @@
 # Created by: Tim Vanderhoek <hoek@FreeBSD.org>
-# $FreeBSD: devel/cc65/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: devel/cc65/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	cc65
 PORTVERSION=	2.13.3
@@ -15,9 +15,9 @@ COMMENT=	Cross-compiler for 6502-based systems, includes 65816 assembler
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-USES=		shebangfix
+USES=		shebangfix perl5
 USE_BZIP2=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_GMAKE=	yes
 MAKEFILE=	${WRKSRC}/make/gcc.mak
 MAKE_JOBS_UNSAFE=yes
