@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-DBI-Pager
-# Date created:	   21 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/databases/p5-Class-DBI-Pager/Makefile,v 1.11 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: databases/p5-Class-DBI-Pager/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-DBI-Pager
 PORTVERSION=	0.08
@@ -20,7 +16,8 @@ RUN_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
 		p5-Data-Page>=0:${PORTSDIR}/databases/p5-Data-Page \
 		p5-Clone>=0:${PORTSDIR}/devel/p5-Clone
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::DBI::Pager.3
 
