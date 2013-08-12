@@ -1,9 +1,5 @@
-# New ports collection makefile for:   w9wm
-# Date created:        25 February 2001
-# Whom:                George Reid <greid@ukug.uk.freebsd.org>
-#
-# $FreeBSD: ports/x11-wm/w9wm/Makefile,v 1.11 2012/11/17 06:03:44 svnexp Exp $
-#
+# Created by: George Reid <greid@ukug.uk.freebsd.org>
+# $FreeBSD: x11-wm/w9wm/Makefile 322010 2013-06-28 22:57:16Z bapt $
 
 PORTNAME=	w9wm
 PORTVERSION=	0.4.2
@@ -12,11 +8,11 @@ CATEGORIES=	x11-wm
 MASTER_SITES=	http://www.drieu.org/code/w9wm/src/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A hack of 9wm to give virtual screens
+COMMENT=	Hack of 9wm to give virtual screens
 
 WRKSRC=		${WRKDIR}/${DISTNAME}.orig
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 
 MAN1=		w9wm.1
