@@ -1,7 +1,7 @@
-# $FreeBSD: www/pear-Horde_SessionHandler/Makefile 319920 2013-06-04 21:52:57Z mm $
+# $FreeBSD: www/pear-Horde_SessionHandler/Makefile 323620 2013-07-24 21:04:41Z mm $
 
 PORTNAME=	Horde_SessionHandler
-PORTVERSION=	2.2.0
+PORTVERSION=	2.2.1
 CATEGORIES=	www pear
 
 MAINTAINER=	horde@FreeBSD.org
