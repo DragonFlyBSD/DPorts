@@ -2,7 +2,7 @@
 # Date created:				Sat Nov  1 2003
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/devel/p5-File-Path-Expand/Makefile,v 1.5 2012/11/17 05:56:16 svnexp Exp $
+# $FreeBSD: devel/p5-File-Path-Expand/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	File-Path-Expand
 PORTVERSION=	1.02
@@ -13,7 +13,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Expand filenames
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Path::Expand.3
 
