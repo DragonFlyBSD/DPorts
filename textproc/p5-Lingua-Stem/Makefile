@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua::Stem
-# Date created:				29 Dec 2003
-# Whom:					Thorsten Greiner <thorsten.greiner@web.de>
-#
-# $FreeBSD: ports/textproc/p5-Lingua-Stem/Makefile,v 1.14 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Thorsten Greiner <thorsten.greiner@web.de>
+# $FreeBSD: textproc/p5-Lingua-Stem/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=		Lingua-Stem
 PORTVERSION=		0.84
@@ -25,7 +21,8 @@ BUILD_DEPENDS=		p5-Lingua-PT-Stemmer>=0:${PORTSDIR}/textproc/p5-Lingua-PT-Stemme
 			p5-Text-German>=0:${PORTSDIR}/textproc/p5-Text-German
 RUN_DEPENDS:=		${BUILD_DEPENDS}
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Lingua::Stem.3 Lingua::Stem::AutoLoader.3 \
 			Lingua::Stem::En.3 Lingua::Stem::Pt.3 \
