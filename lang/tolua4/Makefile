@@ -1,10 +1,5 @@
-#
-# New ports collection makefile for:	tolua
-# Date created:				21 November 2004
-# Whom:					Edwin Groothuis <edwin@mavetju.org>
-#
-# $FreeBSD: ports/lang/tolua4/Makefile,v 1.4 2012/11/17 05:58:58 svnexp Exp $
-#
+# Created by: Edwin Groothuis <edwin@mavetju.org>
+# $FreeBSD: lang/tolua4/Makefile 324265 2013-08-05 08:27:46Z danfe $
 
 PORTNAME=	tolua
 PORTVERSION=	4.0a
@@ -12,14 +7,13 @@ PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/users/celes/tolua/ \
 		http://www.tecgraf.puc-rio.br/~celes/tolua/
-DISTNAME=	tolua-4.0a
 
 MAINTAINER=	edwin@mavetju.org
-COMMENT=	toLua: accessing C/C++ code from Lua
+COMMENT=	Tool for easy access of C/C++ code from Lua
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_LUA=	4.0
-WRKSRC=		${WRKDIR}/tolua
+WRKSRC=		${WRKDIR}/${PORTNAME}
 
 LATEST_LINK=	${PORTNAME}${LUA_VER_STR}
 
@@ -30,6 +24,8 @@ post-patch:
 		 s|^(LUA(INC\|LIB)=.*)|\1/lua${LUA_VER_STR}|; \
 		 s|^(CFLAGS)(=.*)|\1+\2|;' \
 		${WRKSRC}/config
+	@${REINPLACE_CMD} -E 's|cd (.+); make|$$(MAKE) -C \1|' \
+		${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/tolua ${LUA_BINDIR}
