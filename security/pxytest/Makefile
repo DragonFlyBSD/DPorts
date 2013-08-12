@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pxytest
-# Date created:				Fri Jun 13 05:57:43 EDT 2003
-# Whom:					Paul Chvostek <paul@it.ca>
-#
-# $FreeBSD: ports/security/pxytest/Makefile,v 1.7 2012/11/17 06:01:16 svnexp Exp $
-#
+# Created by: Paul Chvostek <paul@it.ca>
+# $FreeBSD: security/pxytest/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	pxytest
 PORTVERSION=	1.36
@@ -20,7 +16,7 @@ EXTRACT_AFTER_ARGS=	> ${WRKDIR}/${PORTNAME}
 
 NO_WRKSUBDIR=	yes
 
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		pxytest.1
 PLIST_FILES=	bin/pxytest
