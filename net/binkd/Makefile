@@ -1,9 +1,5 @@
-# New ports collection makefile for:	binkd
-# Date created:		19 August 1998
-# Whom:			Andrey Zakhvatov
-#
-# $FreeBSD: ports/net/binkd/Makefile,v 1.24 2012/11/17 05:59:57 svnexp Exp $
-#
+# Created by: Andrey Zakhvatov
+# $FreeBSD: net/binkd/Makefile 322644 2013-07-10 11:15:54Z bapt $
 
 PORTNAME=	binkd
 PORTVERSION=	0.9.9
@@ -19,6 +15,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_ZIP=	yes
 USE_RC_SUBR=	binkd
 GNU_CONFIGURE=	yes
+
+MAKE_JOBS_UNSAFE=	yes
 
 MAN8=		binkd.8
 
