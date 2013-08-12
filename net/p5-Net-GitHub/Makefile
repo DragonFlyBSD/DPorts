@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-GitHub/Makefile 317111 2013-05-02 13:16:33Z culot $
+# $FreeBSD: net/p5-Net-GitHub/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-GitHub
 DISTVERSION=	0.52
@@ -27,7 +27,8 @@ BUILD_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockModule>=0:${PORTSDIR}/devel/p5-Test-MockModule
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::GitHub.3 \
 		Net::GitHub::V3.3 \
