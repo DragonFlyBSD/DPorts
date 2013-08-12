@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: mail/qmhandle/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/qmhandle/Makefile 322321 2013-07-05 12:46:45Z bdrewery $
 
 PORTNAME=	qmhandle
 PORTVERSION=	1.3.2
@@ -9,6 +9,8 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-1.3/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	Tool to view and manage a qmail queue
+
+LICENSE=	GPLv2
 
 OPTIONS_DEFINE=	DOCS
 
