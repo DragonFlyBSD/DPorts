@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/devel/p5-Class-AutoClass/Makefile,v 1.11 2012/11/17 05:56:06 svnexp Exp $
+# $FreeBSD: devel/p5-Class-AutoClass/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Class-AutoClass
 PORTVERSION=	1.01
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy
 BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/AutoClass
 
 MAN3=		Class::AutoClass::Root.3 Class::AutoClass.3 Class::AutoClass::Args.3
