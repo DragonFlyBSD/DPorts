@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua::Preferred
-# Date created:				30 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/textproc/p5-Lingua-Preferred/Makefile,v 1.14 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-Lingua-Preferred/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=		Lingua-Preferred
 PORTVERSION=		0.2.4
@@ -18,7 +14,8 @@ COMMENT=	Perl extension to choose a language
 BUILD_DEPENDS=	p5-Log-TraceMessages>=0:${PORTSDIR}/devel/p5-Log-TraceMessages
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Lingua::Preferred.3
 
