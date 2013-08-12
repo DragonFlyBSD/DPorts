@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qlas
-# Date created:		14 Oct 2000
-# Whom:			Denis Shaposhnikov <dsh@vlink.ru>
-#
-# $FreeBSD: ports/misc/qlas/Makefile,v 1.5 2012/11/17 05:59:44 svnexp Exp $
-#
+# Created by: Denis Shaposhnikov <dsh@vlink.ru>
+# $FreeBSD: misc/qlas/Makefile 323702 2013-07-26 07:33:41Z az $
 
 PORTNAME=	qlas
 PORTVERSION=	1.93
@@ -16,10 +12,9 @@ COMMENT=	Qico FIDO mailer log analyzer and statistic builder
 USE_PERL5=	yes
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
-
-post-patch:
-	@ ${PERL} -pi -e 's!/usr/bin/perl!${PERL}!; tr/\r//d' ${WRKSRC}/qlas
-	@ ${PERL} -pi -e 'tr/\r//d' ${WRKSRC}/qlas.conf.default
+USES=		shebangfix
+SHEBANG_FILES=	qlas
+USE_DOS2UNIX=	qlas qlas.conf.default
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/qlas ${PREFIX}/bin/
