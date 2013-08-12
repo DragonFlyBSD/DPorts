@@ -2,7 +2,7 @@
 # Date created:			Jul 31, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: mail/anubis/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: mail/anubis/Makefile 323553 2013-07-23 21:39:06Z ade $
 #
 
 PORTNAME=	anubis
@@ -30,7 +30,7 @@ SOCKS_DESC=	SOCKS proxy support
 USE_RC_SUBR=	anubis
 USE_AUTOTOOLS=	aclocal autoheader autoconf automake
 ACLOCAL_ARGS=	-I m4 -I am
-AUTOMAKE_ARGS=	--force
+AUTOMAKE_ARGS=	--force --add-missing
 
 MAN1=		anubis.1
 INFO=		anubis
