@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/sidplayer/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: audio/sidplayer/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	sidplayer
 PORTVERSION=	4.4
@@ -16,7 +16,6 @@ LICENSE=	GPLv2
 
 USE_SDL=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 SDLINCLUDEDIR=	SDL
 
