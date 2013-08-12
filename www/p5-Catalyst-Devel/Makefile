@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Devel/Makefile 318945 2013-05-24 09:56:49Z az $
+# $FreeBSD: www/p5-Catalyst-Devel/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Devel
 PORTVERSION=	1.37
@@ -34,7 +34,8 @@ BUILD_DEPENDS+=	p5-Module-Install>=1.02:${PORTSDIR}/devel/p5-Module-Install
 TEST_DEPENDS=	p5-IPC-Run3>=0:${PORTSDIR}/devel/p5-IPC-Run3 \
 		p5-Test-Fatal>=0.003:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Devel.3 \
 		Catalyst::Helper.3 \
