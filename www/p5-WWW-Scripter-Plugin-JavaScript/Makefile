@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Scripter-Plugin-JavaScript/Makefile 317643 2013-05-08 08:04:04Z ehaupt $
+# $FreeBSD: www/p5-WWW-Scripter-Plugin-JavaScript/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	WWW-Scripter-Plugin-JavaScript
 PORTVERSION=	0.008
@@ -15,7 +15,6 @@ RUN_DEPENDS=	p5-WWW-Scripter>0:${PORTSDIR}/www/p5-WWW-Scripter \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 PERL_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN3=		WWW::Scripter::Plugin::JavaScript.3 \
 		WWW::Scripter::Plugin::JavaScript::JE.3
