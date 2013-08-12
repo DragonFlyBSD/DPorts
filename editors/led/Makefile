@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/led/Makefile 313307 2013-03-02 23:41:11Z eadler $
+# $FreeBSD: editors/led/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	led
 PORTVERSION=	2.0
@@ -11,8 +11,8 @@ COMMENT=	A tiny text editor, with a number of useful programming features
 
 LICENSE=	BSD
 
+USES=		perl5
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
 MAKE_JOBS_UNSAFE=	yes
 
 .include <bsd.port.mk>
