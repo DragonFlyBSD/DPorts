@@ -2,7 +2,7 @@
 # Date created:		2005-09-01
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-qdbm/Makefile,v 1.6 2012/11/17 05:55:17 svnexp Exp $
+# $FreeBSD: databases/p5-qdbm/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PKGNAMEPREFIX=	p5-
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 COMMENT=	Perl API for QDBM
 
 SLAVEPORT=	perl
-USE_PERL5=	yes
+USES=		perl5
 
 MASTERDIR=	${.CURDIR}/../../databases/qdbm
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/perl
