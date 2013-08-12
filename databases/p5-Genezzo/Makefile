@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/p5-Genezzo/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: databases/p5-Genezzo/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Genezzo
 PORTVERSION=	0.72
@@ -13,7 +13,8 @@ COMMENT=	Extensible database with SQL and DBI
 RUN_DEPENDS=	p5-Parse-RecDescent>=0:${PORTSDIR}/devel/p5-Parse-RecDescent
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		gendba.pl.1 genexp.pl.1
 MAN3=		Genezzo.3 Genezzo::Block::RDBArray.3 \
