@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11/xlogout/Makefile,v 1.13 2012/11/17 06:03:21 svnexp Exp $
+# $FreeBSD: x11/xlogout/Makefile 324122 2013-08-01 20:22:27Z naddy $
 
 PORTNAME=	xlogout
 PORTVERSION=	1.1
@@ -10,10 +10,9 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Simple logout button
 
+USES=		imake
 WRKSRC=		${WRKDIR}/xlogout
-USE_IMAKE=	yes
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
-MAKE_JOBS_SAFE=	yes
 MAN1=		xlogout.1
 
 PLIST_FILES=	bin/xlogout \
