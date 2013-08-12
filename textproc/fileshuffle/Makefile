@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fileshuffle
-# Date created:		2008-05-29
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/fileshuffle/Makefile,v 1.3 2012/11/17 06:01:56 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: textproc/fileshuffle/Makefile 323535 2013-07-23 15:41:48Z glarkin $
 
 PORTNAME=	fileshuffle
 PORTVERSION=	0.1
@@ -11,8 +7,14 @@ CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.eskimo.com/u/s/scs/src/
 DISTNAME=	shuffle
 
-MAINTAINER=	glarkin@FreeBSD.org
-COMMENT=	A filter for shuffling lines in a text file into random order
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Filter for shuffling lines in a text file into random order
+
+.if ${CC:Mclang}
+BROKEN=		Does not compile with clang, use gshuf from sysutils/coreutils instead
+.endif
+DEPRECATED=	Does not work, use gshuf from sysutils/coreutils instead
+EXPIRATION_DATE=2013-09-23
 
 MANPAGE=	shuffle.1
 
