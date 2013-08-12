@@ -2,7 +2,7 @@
 # Date created:				Apr 3 2004
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/databases/p5-Class-DBI-AsForm/Makefile,v 1.10 2012/11/17 05:55:13 svnexp Exp $
+# $FreeBSD: databases/p5-Class-DBI-AsForm/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Class-DBI-AsForm
 PORTVERSION=	2.42
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
 		p5-Class-DBI-Plugin-Type>=0:${PORTSDIR}/databases/p5-Class-DBI-Plugin-Type
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::DBI::AsForm.3
 
