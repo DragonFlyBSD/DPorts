@@ -1,6 +1,6 @@
 # Created by: Dominic Marks <dom@wirespeed.org.uk>
 # $Tecnik: ports/mail/dspam/Makefile,v 1.18 2006/06/07 23:40:55 itetcu Exp $
-# $FreeBSD: mail/dspam/Makefile 322713 2013-07-10 17:04:49Z bapt $
+# $FreeBSD: mail/dspam/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 # Note to commiters: If don't commit a maintainer patch and as a result PKGNAME
 # or user variables (WITH*) changes please add an entry in ${FILESDIR}/UPDATING
@@ -8,7 +8,7 @@
 
 PORTNAME=	dspam
 PORTVERSION=	3.9.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	SF \
 		http://T32.TecNik93.com/FreeBSD/ports/${PORTNAME}/sources/
