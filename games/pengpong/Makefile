@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pengpong
-# Date created:				Fri Aug 24 18:21:25 EDT 2001
-# Whom:					Patrick Li <pat@databits.net>
-#
-# $FreeBSD: ports/games/pengpong/Makefile,v 1.20 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: Patrick Li <pat@databits.net>
+# $FreeBSD: games/pengpong/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	pengpong
 PORTVERSION=	0.3
@@ -14,19 +10,18 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}-linux
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A cross-platform pong game written in SDL
 
+USES=		perl5
 USE_SDL=	image sdl
 NO_WRKSUBDIR=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 
 DATAFILES=	24P_Copperplate_Blue.png ball.tga logo.jpg \
 		paddle.tga red.png
 
 pre-patch:
-	@${PERL} -pi.orig -e \
-		's|/usr/local/share/games/pengpong|${DATADIR}|' \
+	@${REINPLACE_CMD} -i '' -e 's|/usr/local/share/games/pengpong|${DATADIR}|' \
 		${WRKSRC}/files.h
-	@${PERL} -pi.orig -e 's|0.2|${PORTVERSION}|' \
-		${WRKSRC}/pengpong.cpp
+	@${REINPLACE_CMD} -i '' -e 's|V 0.2|V ${PORTVERSION}|' ${WRKSRC}/pengpong.cpp
 
 do-install:
 .ifndef(NOPORTDOCS)
