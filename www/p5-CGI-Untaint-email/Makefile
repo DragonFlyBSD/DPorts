@@ -1,9 +1,5 @@
-# New ports collection makefile for:	CGI-Untaint-email
-# Date created:	   17 August 2004
-# Whom:		   Marc G. Fournier <scrappy@hub.org>
-#
-# $FreeBSD: ports/www/p5-CGI-Untaint-email/Makefile,v 1.7 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: Marc G. Fournier <scrappy@hub.org>
+# $FreeBSD: www/p5-CGI-Untaint-email/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CGI-Untaint-email
 PORTVERSION=	0.03
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-CGI-Untaint>=0:${PORTSDIR}/www/p5-CGI-Untaint \
 		p5-Mail-Tools>=0:${PORTSDIR}/mail/p5-Mail-Tools
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Untaint::email.3
 
