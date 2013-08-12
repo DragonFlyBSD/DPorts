@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-STX/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-XML-STX/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	XML-STX
 PORTVERSION=	0.43
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX \
 		p5-XML-NamespaceSupport>=0:${PORTSDIR}/textproc/p5-XML-NamespaceSupport
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 
 MAN3=		XML::STX.3 XML::STX::Base.3 XML::STX::Buffer.3 \
 		XML::STX::Functions.3 XML::STX::Parser.3 XML::STX::Runtime.3 \
