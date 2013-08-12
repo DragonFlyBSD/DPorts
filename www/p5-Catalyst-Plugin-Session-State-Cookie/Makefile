@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-State-Cookie/Makefile 319498 2013-05-31 14:44:06Z miwi $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-State-Cookie/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Catalyst-Plugin-Session-State-Cookie
 PORTVERSION=	0.17
@@ -18,7 +18,8 @@ RUN_DEPENDS=	\
 	p5-namespace-autoclean>0:${PORTSDIR}/devel/p5-namespace-autoclean
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure extract
 
 MAN3=	Catalyst::Plugin::Session::State::Cookie.3
 
