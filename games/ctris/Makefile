@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/ctris/Makefile 317643 2013-05-08 08:04:04Z ehaupt $
+# $FreeBSD: games/ctris/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	ctris
 PORTVERSION=	0.42
@@ -14,7 +14,6 @@ LICENSE=	GPLv2
 
 USE_BZIP2=	yes
 MANCOMPRESSED=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN6=		ctris.6
 PLIST_FILES=	bin/ctris
