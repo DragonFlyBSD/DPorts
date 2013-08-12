@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/wol/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: net/wol/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	wol
 PORTVERSION=	0.7.1
@@ -10,8 +10,9 @@ MASTER_SITES=	SF/ahh/OldFiles
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to wake up Wake-On-LAN compliant computers
 
+USES=		perl5
 GNU_CONFIGURE=		yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
 
