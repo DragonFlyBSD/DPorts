@@ -1,9 +1,5 @@
-# New ports collection makefile for:	yamsweeper
-# Date created:		14 Sep 1996
-# Whom:			Hidekazu Kuroki <hidekazu@cs.titech.ac.jp>
-#
-# $FreeBSD: ports/games/yamsweeper/Makefile,v 1.21 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: Hidekazu Kuroki <hidekazu@cs.titech.ac.jp>
+# $FreeBSD: games/yamsweeper/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	yamsweeper
 PORTVERSION=	1.9
@@ -21,7 +17,7 @@ EXTRACT_SUFX=	.taz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet Another Mine Sweeper
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xaw xext xmu xt xpm sm ice
 MAN1=		yamsweeper.1
 
