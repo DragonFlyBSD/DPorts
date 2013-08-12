@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Event-ExecFlow/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Event-ExecFlow/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Event-ExecFlow
 PORTVERSION=	0.64
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-Locale-libintl>=0:${PORTSDIR}/devel/p5-Locale-libintl
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Event::ExecFlow::Job::Code.3 Event::ExecFlow::Frontend.3 \
 		Event::ExecFlow::Job::Group.3 \
