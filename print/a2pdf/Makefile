@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/print/a2pdf/Makefile,v 1.7 2012/11/17 06:00:47 svnexp Exp $
+# $FreeBSD: print/a2pdf/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	a2pdf
 PORTVERSION=	1.13
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-PDF-API2>=0:${PORTSDIR}/textproc/p5-PDF-API2 \
 		p5-File-Type>=0:${PORTSDIR}/devel/p5-File-Type
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN1=	${PORTNAME}.1
 
 .include <bsd.port.mk>
