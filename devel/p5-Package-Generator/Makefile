@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/p5-Package-Generator/Makefile 322542 2013-07-08 22:14:29Z ehaupt $
+# $FreeBSD: devel/p5-Package-Generator/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	Package-Generator
 PORTVERSION=	1.105
@@ -11,7 +11,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	This module lets you quickly and easily construct new packages
 
 PERL_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN3=		Package::Reaper.3 Package::Generator.3
 
