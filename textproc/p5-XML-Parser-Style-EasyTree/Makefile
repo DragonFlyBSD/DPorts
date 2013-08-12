@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-XML-Parser-Style-EasyTree
-# Date created:				28 July 2009
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Parser-Style-EasyTree/Makefile,v 1.5 2012/11/17 06:02:13 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-Parser-Style-EasyTree/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	XML-Parser-Style-EasyTree
 PORTVERSION=	0.09
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-XML-Parser>0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-ex-lib>=0.03:${PORTSDIR}/devel/p5-ex-lib
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::Parser::Style::EasyTree.3 XML::Parser::Style::ETree.3
 
