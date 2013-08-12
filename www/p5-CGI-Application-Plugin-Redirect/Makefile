@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/www/p5-CGI-Application-Plugin-Redirect/Makefile,v 1.9 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-Plugin-Redirect/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	CGI-Application-Plugin-Redirect
 PORTVERSION=	1.00
@@ -13,7 +13,8 @@ COMMENT=	Easy external redirects in CGI::Application
 RUN_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	CGI::Application::Plugin::Redirect.3
 
