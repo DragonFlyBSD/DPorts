@@ -1,9 +1,5 @@
-# New ports collection makefile for:    sdpa
-# Date created:                         October 4 2003
-# Whom:                                 NAKATA, Maho <maho@FreeBSD.org>
-#
-# $FreeBSD: ports/math/sdpa/Makefile,v 1.46 2012/11/17 05:59:31 svnexp Exp $
-#
+# Created by: NAKATA, Maho <maho@FreeBSD.org>
+# $FreeBSD: math/sdpa/Makefile 323694 2013-07-26 06:38:59Z danfe $
 
 PORTNAME=	sdpa
 PORTVERSION=	7.3.1
@@ -14,7 +10,9 @@ DISTNAME=	${PORTNAME}.${PORTVERSION}.src-${SRCDATE}
 DIST_SUBDIR=	sdpa
 
 MAINTAINER=	maho@FreeBSD.org
-COMMENT=	SDPA(SemiDefinite Programming Algorithm) Very efficient SDP Solver
+COMMENT=	Very efficient SDP (semidefinite programming) solver
+
+USES=		gmake
 
 .include <bsd.port.pre.mk>
 
@@ -22,7 +20,6 @@ SRCDATE=	20090729
 MANUALFILE=	sdpa7-manual.pdf
 USE_FORTRAN=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}.${PORTVERSION}.src
 
 .if exists(${LOCALBASE}/lib/libgoto2.so)
@@ -52,6 +49,11 @@ LAPACK=		-lalapack -lptcblas
 CONFIGURE_ARGS+=--with-blas="-L${LOCALBASE}/lib ${BLAS}" --with-lapack="-L${LOCALBASE}/lib ${LAPACK}"
 
 PLIST_SUB+=	MANUALFILE=${MANUALFILE}
+
+post-patch:
+# Register missing target dependency to unbreak parallel builds
+	@${REINPLACE_CMD} -e 's,^sdpa_DEPENDENCIES =,& $$(lib_LIBRARIES),' \
+		${WRKSRC}/Makefile.in
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sdpa ${PREFIX}/bin
