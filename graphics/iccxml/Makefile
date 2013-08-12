@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/iccxml/Makefile 316343 2013-04-23 10:47:02Z bapt $
+# $FreeBSD: graphics/iccxml/Makefile 324044 2013-07-31 13:03:12Z bsam $
 
 PORTNAME=	iccxml
 PORTVERSION=	0.9.6
@@ -11,10 +11,8 @@ COMMENT=	Tools for reading and writing the ICC profile contents as XML files
 
 LIB_DEPENDS=	SampleICC:${PORTSDIR}/graphics/sampleicc
 
-USES=		pkgconfig
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GCC=	any
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 
