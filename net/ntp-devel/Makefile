@@ -1,5 +1,5 @@
 # Created by: andreas
-# $FreeBSD: net/ntp-devel/Makefile 315766 2013-04-08 21:26:54Z jgh $
+# $FreeBSD: net/ntp-devel/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	ntp
 PORTVERSION=	4.2.7p364
@@ -18,6 +18,7 @@ LATEST_LINK=	${PORTNAME}-dev
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	automake libtool
+AUTOMAKE_ARGS=	--add-missing
 USES=	pathfix
 LIB_DEPENDS=	event-2.0:${PORTSDIR}/devel/libevent2
 
