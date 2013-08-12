@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: ports/x11/dynamag/Makefile,v 1.12 2013/01/27 06:41:42 svnexp Exp $
+# $FreeBSD: x11/dynamag/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	dynamag
 PORTVERSION=	1.1
@@ -15,7 +15,7 @@ COMMENT=	Magnifying utility which updates continuously
 ALL_TARGET=	dynamag
 NO_INSTALL_MANPAGES=	yes
 PLIST_FILES=	bin/dynamag
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xaw xext xmu xt xpm sm ice
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
