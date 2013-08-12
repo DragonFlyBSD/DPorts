@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: ports/benchmarks/siege/Makefile,v 1.34 2012/12/31 13:56:42 svnexp Exp $
+# $FreeBSD: benchmarks/siege/Makefile 324006 2013-07-31 06:47:15Z bapt $
 
 PORTNAME=	siege
 PORTVERSION=	2.70
@@ -8,14 +8,14 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://sid.joedog.org/pub/siege/
 
 MAINTAINER=	bapt@FreeBSD.org
-COMMENT=	A http regression testing and benchmarking utility
+COMMENT=	HTTP regression testing and benchmarking utility
 
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 
-USE_PERL5=	yes
+USES=		perl5
 
 CONFIGURE_ARGS=	--with-ssl=${OPENSSLBASE} --disable-shared
 
