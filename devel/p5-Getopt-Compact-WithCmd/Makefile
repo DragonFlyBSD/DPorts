@@ -1,5 +1,5 @@
 # Created by: Kan Sasaki <sasaki@fcc.ad.jp>
-# $FreeBSD: ports/devel/p5-Getopt-Compact-WithCmd/Makefile,v 1.7 2012/12/17 15:43:18 svnexp Exp $
+# $FreeBSD: devel/p5-Getopt-Compact-WithCmd/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Getopt-Compact-WithCmd
 PORTVERSION=	0.21
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Text-Table>=0:${PORTSDIR}/textproc/p5-Text-Table
 TEST_DEPENDS=	p5-Test-Output>=0:${PORTSDIR}/devel/p5-Test-Output \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Getopt::Compact::WithCmd.3
 
