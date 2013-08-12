@@ -1,9 +1,5 @@
-# New ports collection makefile for:   xbat
-# Date created:        30 January 1997
-# Whom:                Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/games/xbat/Makefile,v 1.16 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: games/xbat/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xbat
 PORTVERSION=	1.11
@@ -18,7 +14,7 @@ COMMENT=	XEVIOUS like shooting game
 
 NO_CDROM=	Possible copyright infringement
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 WRKSRC=		${WRKDIR}/Xev111
 ALL_TARGET=	xbat
