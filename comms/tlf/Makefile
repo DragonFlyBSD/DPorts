@@ -2,7 +2,7 @@
 # Date created:		10 July 2004
 # Whom:			db
 #
-# $FreeBSD: ports/comms/tlf/Makefile,v 1.18 2012/11/17 05:55:01 svnexp Exp $
+# $FreeBSD: comms/tlf/Makefile 323088 2013-07-16 05:42:36Z ade $
 #
 
 PORTNAME=	tlf
@@ -19,6 +19,7 @@ COMMENT=	Amateur Radio curses based logging program
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_AUTOTOOLS=	autoconf libtool aclocal automake
+AUTOMAKE_ARGS=	--add-missing
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--includedir="${LOCALBASE}/include" \
 		--libdir="${LOCALBASE}/lib"
