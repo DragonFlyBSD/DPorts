@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/p5-Eval-Context/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: devel/p5-Eval-Context/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	Eval-Context
 PORTVERSION=	0.09.11
@@ -29,7 +29,6 @@ BUILD_DEPENDS=	p5-Test-Output>=0:${PORTSDIR}/devel/p5-Test-Output \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_MODBUILD=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN3=		Eval::Context.3
 
