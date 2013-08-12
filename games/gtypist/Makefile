@@ -1,4 +1,4 @@
-# $FreeBSD: games/gtypist/Makefile 320490 2013-06-10 15:46:30Z naddy $
+# $FreeBSD: games/gtypist/Makefile 324122 2013-08-01 20:22:27Z naddy $
 
 PORTNAME=	gtypist
 PORTVERSION=	2.9.3
@@ -13,7 +13,6 @@ USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	EMACS=no
 CPPFLAGS=	-I${WRKDIR}/include
-MAKE_JOBS_SAFE=	yes
 
 INFO=		gtypist gtypist.cs gtypist.es
 MAN1=		gtypist.1 typefortune.1
