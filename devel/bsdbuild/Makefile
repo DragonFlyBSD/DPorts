@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/bsdbuild/Makefile,v 1.6 2012/12/31 14:02:05 svnexp Exp $
+# $FreeBSD: devel/bsdbuild/Makefile 324006 2013-07-31 06:47:15Z bapt $
 
 PORTNAME=	bsdbuild
 PORTVERSION=	3.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://stable.hypertriton.com/bsdbuild/
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	BSD-licensed portable build system
 
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 
 LICENSE=	BSD
