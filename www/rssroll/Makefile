@@ -1,13 +1,15 @@
-# $FreeBSD: www/rssroll/Makefile 318644 2013-05-21 06:10:06Z miwi $
+# $FreeBSD: www/rssroll/Makefile 324170 2013-08-02 17:37:19Z wg $
 
 PORTNAME=	rssroll
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 CATEGORIES=	www
 MASTER_SITES=	http://chaosophia.net/downloads/rssroll/ \
 		http://ns1.chaosophia.net/downloads/rssroll/
 
 MAINTAINER=	koue@chaosophia.net
 COMMENT=	RSS collector in C
+
+LICENSE=	BSD
 
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		xml2:${PORTSDIR}/textproc/libxml2 \
