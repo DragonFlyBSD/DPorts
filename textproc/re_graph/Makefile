@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/re_graph/Makefile 316786 2013-04-29 08:57:12Z bapt $
+# $FreeBSD: textproc/re_graph/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	re_graph
 PORTVERSION=	0.2
@@ -15,9 +15,10 @@ COMMENT=	Regular Expression Graphing Program
 RUN_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD \
 		p5-GD-Arrow>=0:${PORTSDIR}/graphics/p5-GD-Arrow
 
+USES=		perl5
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 
 PLIST_FILES=	bin/re_graph
 
