@@ -1,9 +1,5 @@
-# New ports collection makefile for:   html2wml
-# Date created:        15 January 2001
-# Whom:                George Reid <greid@ukug.uk.freebsd.org>
-#
-# $FreeBSD: ports/www/html2wml/Makefile,v 1.14 2012/11/17 06:02:36 svnexp Exp $
-#
+# Created by: George Reid <greid@ukug.uk.freebsd.org>
+# $FreeBSD: www/html2wml/Makefile 324180 2013-08-03 07:52:55Z az $
 
 PORTNAME=	html2wml
 PORTVERSION=	0.4.11
@@ -17,7 +13,7 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Text-Template>=0:${PORTSDIR}/textproc/p5-Text-Template \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
-USE_PERL5=	yes
+USES=		perl5
 MAKE_ARGS=	PREFIX=${PREFIX} DOCDIR=${DOCDIR}
 
 PLIST_FILES=	bin/html2wml
