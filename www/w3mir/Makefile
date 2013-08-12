@@ -1,9 +1,5 @@
-# New ports collection makefile for:    w3mir
-# Date created:                         9 May 1998
-# Whom:                                 ache
-#
-# $FreeBSD: ports/www/w3mir/Makefile,v 1.34 2012/11/17 06:03:10 svnexp Exp $
-#
+# Created by: ache
+# $FreeBSD: www/w3mir/Makefile 324180 2013-08-03 07:52:55Z az $
 
 PORTNAME=	w3mir
 PORTVERSION=	1.0.10
@@ -17,7 +13,7 @@ COMMENT=	All-purpose HTTP copying and mirroring tool
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		w3mir.1 w3mfix.1
 
