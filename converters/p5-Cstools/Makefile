@@ -2,7 +2,7 @@
 # Date created:				12th October 2003
 # Whom:					Pav Lucistnik <pav@oook.cz>
 #
-# $FreeBSD: ports/converters/p5-Cstools/Makefile,v 1.5 2012/11/17 05:55:03 svnexp Exp $
+# $FreeBSD: converters/p5-Cstools/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Cstools
@@ -13,10 +13,11 @@ MASTER_SITES=	http://www.adelton.com/perl/Cstools/ \
 MASTER_SITE_SUBDIR=	Cz
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	pav@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tools for dealing with Czech encodings in Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		cssort.1 cstocs.1 dbfcstocs.1
 MAN3=		Cz::Cstocs.3 Cz::Sort.3 Cz::Time.3
