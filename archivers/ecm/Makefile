@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/archivers/ecm/Makefile,v 1.12 2013/01/15 13:46:52 svnexp Exp $
+# $FreeBSD: archivers/ecm/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	ecm
 PORTVERSION=	1.0
@@ -13,8 +13,6 @@ COMMENT=	Compresses CD images by stripping unnecessary EDC/ECC data
 LICENSE=	GPLv2
 
 CONFLICTS=	gmp-ecm-[0-9]*
-
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/ecm bin/unecm
 PORTDOCS=	format.txt
