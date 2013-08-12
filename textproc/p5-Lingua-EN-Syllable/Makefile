@@ -2,7 +2,7 @@
 # Date created:				31 Dec 2001
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/textproc/p5-Lingua-EN-Syllable/Makefile,v 1.6 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: textproc/p5-Lingua-EN-Syllable/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Lingua-EN-Syllable
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Routine for estimating syllable count in words
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Lingua::EN::Syllable.3
 
