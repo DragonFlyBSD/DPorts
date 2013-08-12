@@ -1,5 +1,5 @@
 # Created by: Andrew Marks <andrew@amrx.net>
-# $FreeBSD: security/aimsniff/Makefile 320718 2013-06-12 19:20:40Z az $
+# $FreeBSD: security/aimsniff/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	aimsniff
 PORTVERSION=	0.9d
@@ -22,8 +22,8 @@ SUID_ROOT_DESC=	Install aimsniff with set-uid bit
 
 PORTDOCS=	README table.struct rc.aimsniff
 
+USES=		perl5
 NO_BUILD=	yes
-USE_PERL5=	yes
 
 PLIST_FILES=	bin/aimsniff
 
