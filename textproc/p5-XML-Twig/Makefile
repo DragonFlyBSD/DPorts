@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Twig/Makefile 318036 2013-05-13 09:37:25Z tobez $
+# $FreeBSD: textproc/p5-XML-Twig/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Twig
 PORTVERSION=	3.44
@@ -25,7 +25,8 @@ TEST_DEPENDS=	p5-IO-CaptureOutput>=0:${PORTSDIR}/devel/p5-IO-CaptureOutput \
 		p5-XML-SAX-Writer>=0:${PORTSDIR}/textproc/p5-XML-SAX-Writer \
 		p5-XML-Simple>=2:${PORTSDIR}/textproc/p5-XML-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	-y
 
 MAN1=		xml_grep.1 xml_merge.1 xml_pp.1 xml_spellcheck.1 xml_split.1
