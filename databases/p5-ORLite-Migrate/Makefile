@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/databases/p5-ORLite-Migrate/Makefile,v 1.12 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: databases/p5-ORLite-Migrate/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	ORLite-Migrate
 PORTVERSION=	1.10
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-File-pushd>=1.00:${PORTSDIR}/devel/p5-File-pushd \
 		p5-File-Which>=0.05:${PORTSDIR}/sysutils/p5-File-Which
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ORLite::Migrate.3 \
 		ORLite::Migrate::Timeline.3
