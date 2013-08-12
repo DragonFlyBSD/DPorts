@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nslint
-# Date created:		27 October 1997
-# Whom:			dglo@ssec.wisc.edu
-#
-# $FreeBSD: ports/dns/nslint/Makefile,v 1.26 2012/11/17 05:57:09 svnexp Exp $
-#
+# Created by: dglo@ssec.wisc.edu
+# $FreeBSD: dns/nslint/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	nslint
 PORTVERSION=	3.1
@@ -16,7 +12,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Perform consistency checks on DNS zone files
 
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 ALL_TARGET=	${PORTNAME}
 INSTALL_TARGET=	install
