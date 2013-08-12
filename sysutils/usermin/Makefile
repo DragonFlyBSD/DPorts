@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/usermin/Makefile 318424 2013-05-18 11:02:45Z olgeni $
+# $FreeBSD: sysutils/usermin/Makefile 323714 2013-07-26 12:25:46Z az $
 
 PORTNAME=	usermin
 PORTVERSION=	1.550
@@ -37,7 +37,7 @@ post-patch:
 	@${REINPLACE_CMD} -e "s=%%PREFIX%%=${PREFIX}=" ${WRKSRC}/setup.sh
 
 .for file in filter/config commands/config htaccess/config
-	@${PERL} -pi -e "s|=/etc/webmin|=${PREFIX}/etc/webmin|g" ${WRKSRC}/${file}
+	@${REINPLACE_CMD} -i '' -e 's|=/etc/webmin|=${PREFIX}/etc/webmin|' ${WRKSRC}/${file}
 .endfor
 
 	@${FIND} ${WRKSRC} -name config-freebsd\* \
