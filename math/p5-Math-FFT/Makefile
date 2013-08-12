@@ -2,7 +2,7 @@
 # Date created:				12 Mar 2001
 # Whom:			Mario S F Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Math-FFT/Makefile,v 1.10 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: math/p5-Math-FFT/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Math-FFT
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module providing an interface to Fast Fourier Transform routines
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::FFT.3
 
