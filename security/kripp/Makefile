@@ -2,7 +2,7 @@
 # Date created:			Apr 23, 2003
 # Whom:				Jim Geovedi <jim@corebsd.or.id>
 #
-# $FreeBSD: ports/security/kripp/Makefile,v 1.6 2012/11/17 06:01:06 svnexp Exp $
+# $FreeBSD: security/kripp/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	kripp
@@ -15,7 +15,8 @@ MASTER_SITE_SUBDIR=	sniffers
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight network password sniffer
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 
 NO_BUILD=	yes
 MAN1=		kripp.1
