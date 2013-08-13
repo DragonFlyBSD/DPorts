@@ -1,11 +1,12 @@
-# $FreeBSD: finance/trytond_purchase_shipment_cost/Makefile 318580 2013-05-20 08:00:57Z wen $
+# Created by: Matthias Petermann <matthias@petermann-it.de>
+# $FreeBSD: finance/trytond_purchase_shipment_cost/Makefile 324508 2013-08-10 13:29:36Z wg $
 
 PORTNAME=	trytond_purchase_shipment_cost
-PORTVERSION=	2.4.1
+PORTVERSION=	2.4.2
 CATEGORIES=	finance python
 MASTER_SITES=	http://downloads.tryton.org/${PORTVERSION:R}/
 
-MAINTAINER=	matthias@petermann.it
+MAINTAINER=	matthias@petermann-it.de
 COMMENT=	Tryton Application Platform (Purchase Shipment Cost Module)
 
 LICENSE=	GPLv3
