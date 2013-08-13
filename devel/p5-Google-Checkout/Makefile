@@ -2,7 +2,7 @@
 # Date created:				20 July 2007
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Google-Checkout/Makefile,v 1.5 2012/11/17 05:56:18 svnexp Exp $
+# $FreeBSD: devel/p5-Google-Checkout/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Google-Checkout
@@ -67,6 +67,7 @@ MAN3=	Google::Checkout::Command::AddMerchantOrderNumber.3 \
 		Google::Checkout::Notification::RefundAmount.3 \
 		Google::Checkout::Notification::RiskInformation.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
