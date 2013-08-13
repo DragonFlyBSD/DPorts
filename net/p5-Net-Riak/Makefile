@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-Riak/Makefile 314733 2013-03-20 13:26:41Z tobez $
+# $FreeBSD: net/p5-Net-Riak/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Riak
 PORTVERSION=	0.17.02
@@ -27,7 +27,8 @@ BUILD_DEPENDS=	p5-Data-Dump>=0:${PORTSDIR}/devel/p5-Data-Dump \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Riak.3 \
 		Net::Riak::Bucket.3 \
