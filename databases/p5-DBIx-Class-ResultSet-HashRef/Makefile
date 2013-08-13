@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/databases/p5-DBIx-Class-ResultSet-HashRef/Makefile,v 1.5 2012/11/17 05:55:15 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-Class-ResultSet-HashRef/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	DBIx-Class-ResultSet-HashRef
 PORTVERSION=	1.002
@@ -13,7 +13,8 @@ COMMENT=	Adds syntactic sugar to skip the fancy objects
 BUILD_DEPENDS=	p5-DBIx-Class>=0.04001:${PORTSDIR}/databases/p5-DBIx-Class
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::Class::ResultSet::HashRef.3
 
