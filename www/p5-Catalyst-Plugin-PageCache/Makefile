@@ -1,9 +1,6 @@
 # Ports collection makefile for:	p5-Catalyst-Plugin-PageCache
-# Date created:				Dec 19, 2005
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-PageCache/Makefile,v 1.18 2012/11/17 06:02:47 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Plugin-PageCache/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Plugin-PageCache
 PORTVERSION=	0.31
@@ -23,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Cache-Cache>=0:${PORTSDIR}/devel/p5-Cache-Cache \
 		p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inheritable \
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::PageCache.3
 
