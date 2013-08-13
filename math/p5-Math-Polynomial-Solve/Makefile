@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: math/p5-Math-Polynomial-Solve/Makefile 317486 2013-05-06 08:53:02Z tobez $
+# $FreeBSD: math/p5-Math-Polynomial-Solve/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-Polynomial-Solve
 PORTVERSION=	2.67
@@ -14,7 +14,8 @@ COMMENT=	Find the roots of polynomial equations
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::Polynomial::Solve.3
 
