@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-HTML-SBC
-# Date created:				05 April 2007
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-HTML-SBC/Makefile,v 1.6 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-HTML-SBC/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	HTML-SBC
 PORTVERSION=	0.15
@@ -18,7 +14,8 @@ COMMENT=	Simple blog code to valid XHTML
 BUILD_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTML::SBC.3
 
