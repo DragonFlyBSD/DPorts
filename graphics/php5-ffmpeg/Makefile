@@ -2,12 +2,12 @@
 # Date created:		2006-10-19
 # Whom:			Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/php5-ffmpeg/Makefile,v 1.14 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: graphics/php5-ffmpeg/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	ffmpeg
 PORTVERSION=	0.6.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}-php/${PORTNAME}-php/${PORTVERSION}
 PKGNAMEPREFIX=	php5-
@@ -17,7 +17,7 @@ EXTRACT_SUFX=	.tbz2
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	The ffmpeg shared extension for php
 
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd \
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd \
 		avutil.1:${PORTSDIR}/multimedia/ffmpeg
 
 CFLAGS+=	-I${LOCALBASE}/include
