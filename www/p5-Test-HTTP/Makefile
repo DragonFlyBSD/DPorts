@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Test-HTTP
-# Date created:	   11 Jul 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-Test-HTTP/Makefile,v 1.10 2012/11/17 06:02:54 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-Test-HTTP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-HTTP
 PORTVERSION=	0.18
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Class-Field>=0:${PORTSDIR}/devel/p5-Class-Field \
 		p5-libwww>=5.827:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::HTTP.3 Test::HTTP::Syntax.3
 
