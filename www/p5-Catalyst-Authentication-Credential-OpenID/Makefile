@@ -1,9 +1,5 @@
-# New ports collection makefile for:  Catalyst-Authentication-Credential-OpenID
-# Date created: 22 December 2009
-# Whom: andrey@kostenko.name
-#
-# $FreeBSD: ports/www/p5-Catalyst-Authentication-Credential-OpenID/Makefile,v 1.8 2012/12/17 10:27:26 svnexp Exp $
-#
+# Created by: andrey@kostenko.name
+# $FreeBSD: www/p5-Catalyst-Authentication-Credential-OpenID/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Authentication-Credential-OpenID
 PORTVERSION=	0.17
@@ -29,7 +25,8 @@ BUILD_DEPENDS=	p5-Cache-FastMmap>=1.28:${PORTSDIR}/devel/p5-Cache-FastMmap \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Authentication::Credential::OpenID.3
 
