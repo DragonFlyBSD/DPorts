@@ -2,7 +2,7 @@
 # Date created:				Jul  2, 2010
 # Whom:					Kurt Jaeger <fbsd-ports@opsec.eu>
 #
-# $FreeBSD: ports/security/p5-Auth-YubikeyDecrypter/Makefile,v 1.6 2012/11/17 06:01:10 svnexp Exp $
+# $FreeBSD: security/p5-Auth-YubikeyDecrypter/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Auth-YubikeyDecrypter
 PORTVERSION=	0.07
@@ -18,7 +18,8 @@ COMMENT=	Decrypting the output from the yubikey token
 RUN_DEPENDS=	p5-Crypt-Rijndael>=1:${PORTSDIR}/security/p5-Crypt-Rijndael
 
 LICENSE=	GPLv2
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Auth::Yubikey_Decrypter.3
 
