@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WWW-Spinn3r/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-WWW-Spinn3r/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-Spinn3r
 PORTVERSION=	3.00700001
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Spinn3r.3 \
 		WWW::Spinn3r::Synced.3
