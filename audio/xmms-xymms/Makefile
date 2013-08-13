@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-xymms/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: audio/xmms-xymms/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	xymms
 DISTVERSION=	0.9.1
@@ -17,7 +17,6 @@ RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk12
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	${PTHREAD_CFLAGS}
 LDFLAGS+=	${PTHREAD_LIBS}
