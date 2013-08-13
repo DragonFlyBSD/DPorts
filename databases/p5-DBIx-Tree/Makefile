@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <philip@p6m7g8.com>
-# $FreeBSD: databases/p5-DBIx-Tree/Makefile 318301 2013-05-16 09:44:15Z miwi $
+# $FreeBSD: databases/p5-DBIx-Tree/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Tree
 PORTVERSION=	1.96
@@ -16,9 +16,8 @@ BUILD_DEPENDS=	p5-DBI>=1.622:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS=	p5-DBI>=1.622:${PORTSDIR}/databases/p5-DBI
 TEST_DEPENDS=	p5-DBD-SQLite>=1.37:${PORTSDIR}/databases/p5-DBD-SQLite
 
-MAKE_JOBS_SAFE=  yes
-
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::Tree.3
 
