@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	Finance::TW::TSEQuote
-# Date created:			Apr 28, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/finance/p5-Finance-TW-TSEQuote/Makefile,v 1.9 2012/11/17 05:57:26 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: finance/p5-Finance-TW-TSEQuote/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Finance-TW-TSEQuote
 PORTVERSION=	0.2.8
@@ -25,7 +22,8 @@ BUILD_DEPENDS=	p5-App-Cache>=0:${PORTSDIR}/devel/p5-App-Cache \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pfq.1
 MAN3=		Finance::TW::TSEQuote.3
