@@ -1,8 +1,9 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Task-Catalyst/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Task-Catalyst/Makefile 324240 2013-08-04 15:08:42Z az $
 
 PORTNAME=	Task-Catalyst
 PORTVERSION=	4.02
+PORTREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -27,7 +28,6 @@ BUILD_DEPENDS=	p5-Catalyst-ActionRole-ACL>=0:${PORTSDIR}/www/p5-Catalyst-ActionR
 		p5-Catalyst-Plugin-Session-Store-File>=0.07:${PORTSDIR}/www/p5-Catalyst-Plugin-Session-Store-File \
 		p5-Catalyst-Plugin-Session>=0.05:${PORTSDIR}/www/p5-Catalyst-Plugin-Session \
 		p5-Catalyst-Plugin-StackTrace>=0.02:${PORTSDIR}/www/p5-Catalyst-Plugin-StackTrace \
-		p5-Catalyst-Plugin-Unicode-Encoding>=0:${PORTSDIR}/www/p5-Catalyst-Plugin-Unicode-Encoding \
 		p5-Catalyst-Runtime>=5.80:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Catalyst-View-Email>=0:${PORTSDIR}/www/p5-Catalyst-View-Email \
 		p5-Catalyst-View-TT>=0.22:${PORTSDIR}/www/p5-Catalyst-View-TT \
@@ -56,7 +56,6 @@ RUN_DEPENDS=	p5-Catalyst-ActionRole-ACL>=0:${PORTSDIR}/www/p5-Catalyst-ActionRol
 		p5-Catalyst-Plugin-Session-Store-File>=0.07:${PORTSDIR}/www/p5-Catalyst-Plugin-Session-Store-File \
 		p5-Catalyst-Plugin-Session>=0.05:${PORTSDIR}/www/p5-Catalyst-Plugin-Session \
 		p5-Catalyst-Plugin-StackTrace>=0.02:${PORTSDIR}/www/p5-Catalyst-Plugin-StackTrace \
-		p5-Catalyst-Plugin-Unicode-Encoding>=0:${PORTSDIR}/www/p5-Catalyst-Plugin-Unicode-Encoding \
 		p5-Catalyst-Runtime>=5.80:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Catalyst-View-Email>=0:${PORTSDIR}/www/p5-Catalyst-View-Email \
 		p5-Catalyst-View-TT>=0.22:${PORTSDIR}/www/p5-Catalyst-View-TT \
@@ -71,7 +70,8 @@ RUN_DEPENDS=	p5-Catalyst-ActionRole-ACL>=0:${PORTSDIR}/www/p5-Catalyst-ActionRol
 		p5-YAML-Tiny>=0:${PORTSDIR}/textproc/p5-YAML-Tiny \
 		p5-local-lib>=0:${PORTSDIR}/devel/p5-local-lib
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Task::Catalyst.3
 
