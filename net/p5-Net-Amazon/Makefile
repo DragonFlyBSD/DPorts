@@ -1,6 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: ports/net/p5-Net-Amazon/Makefile,v 1.42 2013/01/28 00:51:24 svnexp Exp $
-#
+# $FreeBSD: net/p5-Net-Amazon/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Amazon
 PORTVERSION=	0.62
@@ -20,7 +19,8 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Log-Log4perl>=0:${PORTSDIR}/devel/p5-Log-Log4perl
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include "Makefile.man"
 

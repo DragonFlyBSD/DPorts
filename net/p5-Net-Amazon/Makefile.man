@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/p5-Net-Amazon/Makefile.man,v 1.9 2013/01/28 00:51:24 svnexp Exp $
+# $FreeBSD: net/p5-Net-Amazon/Makefile.man 311085 2013-01-28 00:00:48Z leeym $
 
 MAN3+=	Net::Amazon.3 
 MAN3+=	Net::Amazon::Attribute::Review.3
