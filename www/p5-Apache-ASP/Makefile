@@ -1,5 +1,5 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: www/p5-Apache-ASP/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Apache-ASP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Apache-ASP
 PORTVERSION=	2.61
@@ -30,7 +30,8 @@ RUN_DEPENDS=	p5-Devel-Symdump>=0:${PORTSDIR}/devel/p5-Devel-Symdump \
 #MODPERL_SUFFIX?=+mod_perl
 #.endif
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		asp-perl.1
 MAN3=		Apache::ASP.3 \
