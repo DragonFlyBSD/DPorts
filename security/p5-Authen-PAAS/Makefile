@@ -2,7 +2,7 @@
 # Date created:				22 Jun 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/security/p5-Authen-PAAS/Makefile,v 1.6 2012/11/17 06:01:10 svnexp Exp $
+# $FreeBSD: security/p5-Authen-PAAS/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Authen-PAAS
@@ -31,6 +31,7 @@ MAN3=	Authen::PAAS.3 \
 	Authen::PAAS::SimpleCallback.3 \
 	Authen::PAAS::Subject.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
