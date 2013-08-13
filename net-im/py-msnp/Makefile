@@ -3,7 +3,7 @@
 # Date created:			Dec 26, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/net-im/py-msnp/Makefile,v 1.8 2012/11/17 06:00:29 svnexp Exp $
+# $FreeBSD: net-im/py-msnp/Makefile 323776 2013-07-27 10:19:30Z marino $
 #
 
 PORTNAME=	msnp
@@ -16,6 +16,9 @@ DISTNAME=	${PORTNAME}.py-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MSN messaging in Python
+
+DEPRECATED=	Primary MSN Messenger service terminated 30 APR 2013
+EXPIRATION_DATE=2013-10-31
 
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
