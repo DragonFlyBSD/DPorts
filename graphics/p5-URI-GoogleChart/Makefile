@@ -1,9 +1,5 @@
-# New ports collection makefile for:	graphics/p5-URI-GoogleChart
-# Date created:				28 March 2009
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/p5-URI-GoogleChart/Makefile,v 1.7 2012/11/17 05:58:18 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: graphics/p5-URI-GoogleChart/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	URI-GoogleChart
 PORTVERSION=	1.02
@@ -18,7 +14,8 @@ COMMENT=	Generate Google Chart URIs
 BUILD_DEPENDS=	p5-URI>0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	URI::GoogleChart.3
 
