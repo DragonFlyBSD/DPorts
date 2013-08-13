@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-WWW-Mediawiki-Client/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-WWW-Mediawiki-Client/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-Mediawiki-Client
 PORTVERSION=	0.31
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Test-Differences>0:${PORTSDIR}/devel/p5-Test-Differences \
 		p5-Exception-Class>0:${PORTSDIR}/devel/p5-Exception-Class
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	mvs.1
 MAN3=	WWW::Mediawiki::Client.3 WWW::Mediawiki::Client::Exceptions.3
