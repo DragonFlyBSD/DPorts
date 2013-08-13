@@ -1,8 +1,5 @@
-# New ports collection makefile for:	XML::Handler::HTMLWriter
-# Date created:				Oct 13th 2003
-# Whom:					clsung@dragon2.net
-#
-# $FreeBSD: ports/textproc/p5-XML-Hadler-HTMLWriter/Makefile,v 1.7 2012/11/17 06:02:12 svnexp Exp $
+# Created by: clsung@dragon2.net
+# $FreeBSD: textproc/p5-XML-Hadler-HTMLWriter/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Handler-HTMLWriter
 PORTVERSION=	2.01
@@ -17,7 +14,8 @@ RUN_DEPENDS=	p5-XML-SAX-Writer>=0:${PORTSDIR}/textproc/p5-XML-SAX-Writer \
 		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Handler::HTMLWriter.3
 
