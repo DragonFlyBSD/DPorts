@@ -2,7 +2,7 @@
 # Date created:		2 August 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-Text-Flowed/Makefile,v 1.3 2012/11/17 06:02:10 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Flowed/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Text-Flowed
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	RFC2646 format=flowed
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		${PORTNAME:S/-/::/g}.3
 
