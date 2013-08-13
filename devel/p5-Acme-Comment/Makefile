@@ -2,7 +2,7 @@
 # Date created:				2012-07-18
 # Whom:					Marcello Coutinho <marcellocoutinho@gmail.com>
 #
-# $FreeBSD: ports/devel/p5-Acme-Comment/Makefile,v 1.2 2012/11/17 05:56:03 svnexp Exp $
+# $FreeBSD: devel/p5-Acme-Comment/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Acme-Comment
@@ -21,11 +21,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Acme::Comment.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-Text-Balanced>=1.99:${PORTSDIR}/textproc/p5-Text-Balanced
-RUN_DEPENDS+=	p5-Text-Balanced>=1.99:${PORTSDIR}/textproc/p5-Text-Balanced
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
