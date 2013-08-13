@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-DBD-PgLite
-# Date created:				03 November 2008
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBD-PgLite/Makefile,v 1.6 2012/11/17 05:55:14 svnexp Exp $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: databases/p5-DBD-PgLite/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	DBD-PgLite
 PORTVERSION=	0.11
@@ -20,7 +16,8 @@ RUN_DEPENDS=	p5-DBD-SQLite>=1.0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-DBI>=1.30:${PORTSDIR}/databases/p5-DBI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBD::PgLite.3 \
 	DBD::PgLite::MirrorPgToSQLite.3
