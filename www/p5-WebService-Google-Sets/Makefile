@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-WebService-Google-Sets
-# Date created:				14 August 2009
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-WebService-Google-Sets/Makefile,v 1.3 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: www/p5-WebService-Google-Sets/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	WebService-Google-Sets
 PORTVERSION=	0.03
@@ -18,7 +14,8 @@ COMMENT=	Perl access to Google Labs Sets site
 BUILD_DEPENDS=	p5-libwww>0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	WebService::Google::Sets.3
 
