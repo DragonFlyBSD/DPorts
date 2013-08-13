@@ -1,5 +1,5 @@
 # Created by: David Bremner <bremner@unb.ca>
-# $FreeBSD: ports/textproc/p5-Text-BibTeX/Makefile,v 1.24 2013/01/09 13:56:21 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-BibTeX/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-BibTeX
 PORTVERSION=	0.66
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Config-AutoConf>=0.16:${PORTSDIR}/devel/p5-Config-AutoConf \
 		p5-ExtUtils-LibBuilder>=0.02:${PORTSDIR}/devel/p5-ExtUtils-LibBuilder
 TEST_DEPENDS=	p5-Capture-Tiny>=0.06:${PORTSDIR}/devel/p5-Capture-Tiny
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 USE_LDCONFIG=	yes
 
 MAN1=		bt_format_names.1 bt_input.1 bt_language.1 \
