@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Search-MSN
-# Date created:		2006-07-14
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-WWW-Search-MSN/Makefile,v 1.11 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-WWW-Search-MSN/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-Search-MSN
 PORTVERSION=	0.0106
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree \
 		p5-WWW-Search>=0:${PORTSDIR}/www/p5-WWW-Search
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Search::MSN.3
 
