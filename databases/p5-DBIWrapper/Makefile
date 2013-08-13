@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dbiwrapper
-# Date Created:				30 June 2001
-# Whom:					Pete Fritchman <petef@databits.net>
-#
-# $FreeBSD: ports/databases/p5-DBIWrapper/Makefile,v 1.25 2012/11/17 05:55:14 svnexp Exp $
-#
+# Created by: Pete Fritchman <petef@databits.net>
+# $FreeBSD: databases/p5-DBIWrapper/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIWrapper
 PORTVERSION=	0.24
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML \
 		p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIWrapper.3 DBIWrapper::ResultSet.3 DBIWrapper::XMLParser.3
 
