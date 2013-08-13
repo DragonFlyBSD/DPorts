@@ -1,8 +1,5 @@
-# New ports collection makefile for:  CSS-Croco
-# Date created: 26 December 2009
-# Whom: andrey@kostenko.name
-#
-# $FreeBSD: ports/textproc/p5-CSS-Croco/Makefile,v 1.5 2012/11/17 06:02:04 svnexp Exp $
+# Created by: andrey@kostenko.name
+# $FreeBSD: textproc/p5-CSS-Croco/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CSS-Croco
 PORTVERSION=	0.09
@@ -17,7 +14,8 @@ BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		libcroco>=0.6:${PORTSDIR}/textproc/libcroco
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=	CSS::Croco.3\
 	CSS::Croco::Selector.3\
 	CSS::Croco::Statement.3\
