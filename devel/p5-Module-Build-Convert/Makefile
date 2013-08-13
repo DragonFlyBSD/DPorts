@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Module::Build::Convert
-# Date created:				Apr 27 2006
-# Whom:                			clsung
-#
-# $FreeBSD: ports/devel/p5-Module-Build-Convert/Makefile,v 1.22 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: clsung
+# $FreeBSD: devel/p5-Module-Build-Convert/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Module-Build-Convert
 PORTVERSION=	0.49
@@ -23,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1.04:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Module::Build::Convert.3
 MAN1=		make2build.1
