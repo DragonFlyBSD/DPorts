@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gmtk/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: multimedia/gmtk/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	gmtk
 PORTVERSION=	1.0.8
@@ -16,9 +16,9 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 USE_XORG=	x11
-USES=		pathfix pkgconfig
+USES=		pathfix pkgconfig perl5
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README
 
