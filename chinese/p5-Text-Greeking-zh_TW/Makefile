@@ -3,7 +3,7 @@
 # Date created:			Jul 31, 2007
 # Whom:				ijliao
 #
-# $FreeBSD: ports/chinese/p5-Text-Greeking-zh_TW/Makefile,v 1.5 2012/11/17 05:54:58 svnexp Exp $
+# $FreeBSD: chinese/p5-Text-Greeking-zh_TW/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Text-Greeking-zh_TW
@@ -18,7 +18,8 @@ COMMENT=	Generate meaningless Chinese text that creates the illusion of the docu
 RUN_DEPENDS=	p5-common-sense>=2.02:${PORTSDIR}/devel/p5-common-sense
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::Greeking::zh_TW.3
 
