@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: ports/graphics/p5-GD-Thumbnail/Makefile,v 1.18 2013/01/14 09:48:31 svnexp Exp $
+# $FreeBSD: graphics/p5-GD-Thumbnail/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	GD-Thumbnail
 PORTVERSION=	1.41
@@ -13,7 +13,8 @@ COMMENT=	Thumbnail maker for GD
 BUILD_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		GD::Thumbnail.3
 
