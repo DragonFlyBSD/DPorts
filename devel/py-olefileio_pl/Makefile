@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-olefileio_pl/Makefile 322091 2013-06-30 16:01:18Z antoine $
+# $FreeBSD: devel/py-olefileio_pl/Makefile 323943 2013-07-30 06:37:29Z antoine $
 
 PORTNAME=	olefileio_pl
-PORTVERSION=	0.25
+PORTVERSION=	0.26
 CATEGORIES=	devel python
 MASTER_SITES=	http://cdn.bitbucket.org/decalage/olefileio_pl/downloads/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
