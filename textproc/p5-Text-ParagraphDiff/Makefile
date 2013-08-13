@@ -2,7 +2,7 @@
 # Date created:				Nov 3 2003
 # Whom:					Cheng-Lung Sung <clsung@dragon2.net>
 #
-# $FreeBSD: textproc/p5-Text-ParagraphDiff/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: textproc/p5-Text-ParagraphDiff/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Text-ParagraphDiff
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Algorithm-Diff>=0:${PORTSDIR}/devel/p5-Algorithm-Diff \
 		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
