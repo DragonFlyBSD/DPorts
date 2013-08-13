@@ -2,7 +2,7 @@
 # Date created:				5 October 2004
 # Whom:					Aaron Dalton <aaron@daltons.ca>
 #
-# $FreeBSD: ports/devel/p5-Decision-ACL/Makefile,v 1.5 2012/11/17 05:56:13 svnexp Exp $
+# $FreeBSD: devel/p5-Decision-ACL/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Decision-ACL
@@ -16,7 +16,8 @@ COMMENT=	Manage and Build Access Control Lists
 
 MAN3=		Decision::ACL.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.pre.mk>
 
