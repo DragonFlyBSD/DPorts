@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: benchmarks/p5-Benchmark-Forking/Makefile 318286 2013-05-16 08:39:59Z miwi $
+# $FreeBSD: benchmarks/p5-Benchmark-Forking/Makefile 324222 2013-08-04 12:30:54Z az $
 
 PORTNAME=	Benchmark-Forking
 PORTVERSION=	1.01
@@ -12,7 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Run benchmarks in separate processes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Benchmark::Forking.3
 
