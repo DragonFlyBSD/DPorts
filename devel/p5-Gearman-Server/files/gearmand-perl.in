@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/p5-Gearman-Server/files/gearmand-perl.in,v 1.3 2012/11/17 05:56:17 svnexp Exp $
+# $FreeBSD: devel/p5-Gearman-Server/files/gearmand-perl.in 300896 2012-07-14 13:54:48Z beat $
 #
 
 # PROVIDE: %%NAME%%
