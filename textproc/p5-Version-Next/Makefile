@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-Version-Next/Makefile,v 1.2 2012/11/17 06:02:11 svnexp Exp $
+# $FreeBSD: textproc/p5-Version-Next/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Version-Next
 PORTVERSION=	0.002
@@ -13,7 +13,8 @@ COMMENT=	Increment module version numbers simply and correctly
 BUILD_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Version::Next.3
 
