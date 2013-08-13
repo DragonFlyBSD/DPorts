@@ -2,12 +2,12 @@
 # Date created:		2008-08-17
 # Whom:			Gea-Suan Lin <gslin@gslin.org>
 #
-# $FreeBSD: ports/graphics/repng2jpeg/Makefile,v 1.6 2012/11/17 05:58:21 svnexp Exp $
+# $FreeBSD: graphics/repng2jpeg/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	repng2jpeg
 PORTVERSION=	1.0.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://sugachan.dip.jp/obsolete/arch/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
