@@ -2,7 +2,7 @@
 # Date created:				March 17th 2002
 # Whom:	      				Autrijus Tang <autrijus@autrijus.org>
 #
-# $FreeBSD: ports/databases/p5-DBIx-Password/Makefile,v 1.15 2012/11/17 05:55:15 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-Password/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	DBIx-Password
@@ -17,7 +17,8 @@ COMMENT=	Allows you to create a global password file for DB passwords
 BUILD_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::Password.3
 
