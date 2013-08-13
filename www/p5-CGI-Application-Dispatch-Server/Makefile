@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Dispatch-Server/Makefile 305216 2012-10-03 18:31:53Z tabthorpe $
+# $FreeBSD: www/p5-CGI-Application-Dispatch-Server/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	CGI-Application-Dispatch-Server
 PORTVERSION=	0.53
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-HTTP-Server-Simple-Static>=0:${PORTSDIR}/www/p5-HTTP-Server-Simple-Static \
 		p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	CGI::Application::Dispatch::Server.3
 
