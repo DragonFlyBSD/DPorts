@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xphoon
-# Date created:		14 February 1995
-# Whom:			asami
-#
-# $FreeBSD: ports/astro/xphoon/Makefile,v 1.26 2012/11/17 05:54:26 svnexp Exp $
-#
+# Created by: asami
+# $FreeBSD: astro/xphoon/Makefile 321971 2013-06-28 18:22:43Z bapt $
 
 PORTNAME=	xphoon
 PORTVERSION=	2000.06.13
@@ -15,7 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//g}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Set the root window to the moon in its current phase
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 
 MAN1=		xphoon.1
