@@ -2,7 +2,7 @@
 # Date created:				05 September 2006
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-Object/Makefile,v 1.5 2012/11/17 05:56:33 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Object/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-Object
@@ -16,7 +16,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Thoroughly testing objects via registered handlers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Object.3
 
