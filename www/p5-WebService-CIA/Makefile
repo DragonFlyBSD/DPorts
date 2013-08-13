@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WebService-CIA
-# Date created:		2007-05-02
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-WebService-CIA/Makefile,v 1.8 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-WebService-CIA/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WebService-CIA
 PORTVERSION=	1.4
@@ -20,7 +16,8 @@ RUN_DEPENDS=	p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 CONFIGURE_ARGS=	</dev/null
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		WebService::CIA.3 WebService::CIA::Parser.3 \
 		WebService::CIA::Source.3 WebService::CIA::Source::DBM.3 \
