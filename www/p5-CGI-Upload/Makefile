@@ -2,7 +2,7 @@
 # Date created:                        21 June 2003
 # Whom:                                Daniel B. Hemmerich
 #
-# $FreeBSD: ports/www/p5-CGI-Upload/Makefile,v 1.8 2012/11/17 06:02:46 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Upload/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	CGI-Upload
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-HTTP-BrowserDetect>=0:${PORTSDIR}/www/p5-HTTP-BrowserDetect \
 		p5-File-MMagic>=0:${PORTSDIR}/devel/p5-File-MMagic \
 		p5-CGI.pm>=0:${PORTSDIR}/www/p5-CGI.pm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Upload.3
 
