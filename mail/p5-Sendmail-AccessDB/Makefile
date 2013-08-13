@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Sendmail-AccessDB
-# Date created:				29 Jun 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/mail/p5-Sendmail-AccessDB/Makefile,v 1.11 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: mail/p5-Sendmail-AccessDB/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	Sendmail-AccessDB
 PORTVERSION=	1.03
@@ -18,7 +14,6 @@ BUILD_DEPENDS=	p5-BerkeleyDB>=0:${PORTSDIR}/databases/p5-BerkeleyDB
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN3=		Sendmail::AccessDB.3
 
