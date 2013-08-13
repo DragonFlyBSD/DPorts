@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Convert-Bencode_XS
-# Date created:		2006-08-23
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/converters/p5-Convert-Bencode_XS/Makefile,v 1.7 2012/11/17 05:55:03 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: converters/p5-Convert-Bencode_XS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Convert-Bencode_XS
 PORTVERSION=	0.06
@@ -16,7 +12,8 @@ COMMENT=	Faster conversions to/from Bencode format
 
 RUN_DEPENDS=	p5-Convert-Bencode>=0:${PORTSDIR}/converters/p5-Convert-Bencode
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Convert::Bencode_XS.3
 
