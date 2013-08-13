@@ -1,12 +1,12 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: mail/rubygem-larch/Makefile 323308 2013-07-19 15:42:15Z swills $
+# $FreeBSD: mail/rubygem-larch/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	larch
 PORTVERSION=	1.1.2
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Larch copies messages from one IMAP server to another
 
 RUN_DEPENDS=	rubygem-highline>=1.5:${PORTSDIR}/devel/rubygem-highline \
