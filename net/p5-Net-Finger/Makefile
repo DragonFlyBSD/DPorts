@@ -2,7 +2,7 @@
 # Date created:                10 October 2002
 # Whom:                        Kimura Fuyuki <fuyuki@hadaly.org>
 #
-# $FreeBSD: ports/net/p5-Net-Finger/Makefile,v 1.5 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-Finger/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-Finger
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Perl implementation of a finger client
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Finger.3
 
