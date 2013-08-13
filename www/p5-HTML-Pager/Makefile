@@ -2,7 +2,7 @@
 # Date created:				Mon Jan  1 11:59:43 2001
 # Whom:					will
 #
-# $FreeBSD: ports/www/p5-HTML-Pager/Makefile,v 1.11 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Pager/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	HTML-Pager
@@ -17,7 +17,8 @@ COMMENT=	Perl module for handling CGI HTML paging of arbitrary data
 BUILD_DEPENDS=	p5-HTML-Template>=0:${PORTSDIR}/www/p5-HTML-Template
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Pager.3
 
