@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Inline::Tcl
-# Date created:		14 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Inline-Tcl/Makefile,v 1.9 2012/11/17 05:56:19 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Inline-Tcl/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Inline-Tcl
 PORTVERSION=	0.09
@@ -18,13 +14,14 @@ BUILD_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
 LIB_DEPENDS=	tcl84:${PORTSDIR}/lang/tcl84
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	INC="-I${PREFIX}/include/tcl8.4" \
 		LIBS="-L${PREFIX}/lib -R${PREFIX}/lib -ltcl84"
 
 MAN3=		Inline::Tcl.3
 
 post-patch:
-	@${PERL} -pi -e '$$_="" if $$.>1 && $$.<100' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i.bak '2,99d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
