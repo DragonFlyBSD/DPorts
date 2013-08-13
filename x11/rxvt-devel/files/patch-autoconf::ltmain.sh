@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/rxvt-devel/files/patch-autoconf::ltmain.sh,v 1.3 2012/11/17 06:03:19 svnexp Exp $
+$FreeBSD: x11/rxvt-devel/files/patch-autoconf::ltmain.sh 300897 2012-07-14 14:29:18Z beat $
 
 --- autoconf/ltmain.sh	2001/08/27 09:51:26	1.1
 +++ autoconf/ltmain.sh	2001/08/27 09:51:42
