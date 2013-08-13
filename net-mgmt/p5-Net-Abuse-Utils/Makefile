@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/net-mgmt/p5-Net-Abuse-Utils/Makefile,v 1.6 2012/12/12 08:59:46 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-Net-Abuse-Utils/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Abuse-Utils
 PORTVERSION=	0.13
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Email-Address>0:${PORTSDIR}/mail/p5-Email-Address \
 		p5-Net-Whois-IP>0:${PORTSDIR}/net/p5-Net-Whois-IP
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Abuse::Utils.3
 
