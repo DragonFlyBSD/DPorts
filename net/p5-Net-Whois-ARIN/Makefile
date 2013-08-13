@@ -2,7 +2,7 @@
 # Date created:				03 Jan 2007
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-Net-Whois-ARIN/Makefile,v 1.8 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Whois-ARIN/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-Whois-ARIN
@@ -16,7 +16,8 @@ COMMENT=	ARIN whois client
 
 TEST_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Whois::ARIN.3 \
 		Net::Whois::ARIN::AS.3 \
