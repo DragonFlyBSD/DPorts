@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mail-Graph
-# Date created:				Nov 4 2003
-# Whom:					Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/mail/p5-Mail-Graph/Makefile,v 1.21 2012/12/17 05:50:24 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: mail/p5-Mail-Graph/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-Graph
 PORTVERSION=	0.14
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD \
 		p5-Date-Calc>=0:${PORTSDIR}/devel/p5-Date-Calc
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 EXAMPLESCRIPT=	samples/*pl
 EXAMPLEDUMMY=	samples/index/dummy.txt
 EXAMPLEOUTPUT=	samples/output/w3c.png samples/output/spam.css
