@@ -3,7 +3,7 @@
 # Date Created:			Jan 22, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/chinese/p5-Lingua-ZH-Numbers/Makefile,v 1.5 2012/11/17 05:54:57 svnexp Exp $
+# $FreeBSD: chinese/p5-Lingua-ZH-Numbers/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Lingua-ZH-Numbers
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Converts numeric values into their Chinese string equivalents
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Lingua::ZH::Numbers.3 Lingua::ZH::Numbers::Currency.3
 
