@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Sub-Installer
-# Date created:				12 January 2006
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Sub-Installer/Makefile,v 1.6 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Sub-Installer/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Sub-Installer
 PORTVERSION=	0.0.3
@@ -18,7 +14,8 @@ COMMENT=	Sub::Installer - A clean way to (re)install package subroutines
 BUILD_DEPENDS=	p5-version>0:${PORTSDIR}/devel/p5-version
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sub::Installer.3
 
