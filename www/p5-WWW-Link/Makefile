@@ -2,7 +2,7 @@
 # Date created:				31 Dec 2001
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/www/p5-WWW-Link/Makefile,v 1.11 2012/11/17 06:02:55 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Link/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	WWW-Link
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Getopt-Long>=0:${PORTSDIR}/devel/p5-Getopt-Long
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	WWW::Link.3 \
 	WWW::Link::Change.3 \
