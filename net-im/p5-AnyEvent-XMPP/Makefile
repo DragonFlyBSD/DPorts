@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: net-im/p5-AnyEvent-XMPP/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net-im/p5-AnyEvent-XMPP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	AnyEvent-XMPP
 PORTVERSION=	0.54
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-Object-Event>=0.7:${PORTSDIR}/devel/p5-Object-Event
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	AnyEvent::XMPP.3 \
 	AnyEvent::XMPP::Connection.3 \
