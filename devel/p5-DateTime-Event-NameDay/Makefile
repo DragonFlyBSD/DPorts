@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Event-NameDay
-# Date created:	   2 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Event-NameDay/Makefile,v 1.12 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: devel/p5-DateTime-Event-NameDay/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Event-NameDay
 PORTVERSION=	0.02
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		DateTime::Event::NameDay.3
 
