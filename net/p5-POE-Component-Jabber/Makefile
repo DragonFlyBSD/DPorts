@@ -1,5 +1,5 @@
 # Created by: Jeff Putsch <jdputsch@comcast.net>
-# $FreeBSD: net/p5-POE-Component-Jabber/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-POE-Component-Jabber/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Jabber
 PORTVERSION=	3.00
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL \
 		p5-POE>=0:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 CONFIGURE_ARGS=	</dev/null
 
 PORTEXAMPLES=	*
