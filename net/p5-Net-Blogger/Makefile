@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/p5-Net-Blogger/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-Net-Blogger/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Blogger
 PORTVERSION=	1.02
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Error>=0:${PORTSDIR}/lang/p5-Error \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Net::Blogger.3 \
 	Net::Blogger::API::Core.3 \
