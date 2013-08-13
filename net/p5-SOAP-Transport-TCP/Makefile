@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SOAP::Transport::TCP
-# Date created:		2011-09-09
-# Whom:			Andrej Zverev <az@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-SOAP-Transport-TCP/Makefile,v 1.2 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Andrej Zverev <az@FreeBSD.org>
+# $FreeBSD: net/p5-SOAP-Transport-TCP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SOAP-Transport-TCP
 PORTVERSION=	0.715
@@ -18,7 +14,8 @@ COMMENT=	TCP Transport Support for SOAP::Lite
 RUN_DEPENDS=	p5-SOAP-Lite>=0.714:${PORTSDIR}/net/p5-SOAP-Lite
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	SOAP::Transport::TCP.3
 
