@@ -1,5 +1,5 @@
 # Created by: Wen Heping
-# $FreeBSD: databases/p5-Rose-DBx-Object-Renderer/Makefile 320083 2013-06-06 11:08:34Z mat $
+# $FreeBSD: databases/p5-Rose-DBx-Object-Renderer/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Rose-DBx-Object-Renderer
 PORTVERSION=	0.77
@@ -19,7 +19,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Rose::DBx::Object::Renderer.3
 
