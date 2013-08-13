@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpuzzletama
-# Date created:		18 January 1997
-# Whom:			Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/games/xpuzzletama/Makefile,v 1.19 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: games/xpuzzletama/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xpuzzletama
 PORTVERSION=	1.5b
@@ -21,7 +17,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Puzzle tama, a Tetris like game
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	xpm
 NO_INSTALL_MANPAGES=	yes
 
