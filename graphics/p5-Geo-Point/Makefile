@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/graphics/p5-Geo-Point/Makefile,v 1.10 2012/12/22 07:17:52 svnexp Exp $
+# $FreeBSD: graphics/p5-Geo-Point/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Geo-Point
 PORTVERSION=	0.94
@@ -17,6 +17,7 @@ RUN_DEPENDS=	p5-Geo-Distance>=0.06:${PORTSDIR}/math/p5-Geo-Distance \
 MAN3=		Geo::Point.3 Geo::Shape.3 Geo::Surface.3 \
 		Geo::Line.3 Geo::Proj.3 Geo::Space.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
