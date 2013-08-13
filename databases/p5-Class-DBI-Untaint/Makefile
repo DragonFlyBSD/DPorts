@@ -2,7 +2,7 @@
 # Date created:				Apr 26 2004
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/databases/p5-Class-DBI-Untaint/Makefile,v 1.8 2012/11/17 05:55:13 svnexp Exp $
+# $FreeBSD: databases/p5-Class-DBI-Untaint/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Class-DBI-Untaint
 PORTVERSION=	1.00
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::DBI::Untaint.3
 
