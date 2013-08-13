@@ -2,7 +2,7 @@
 # Date created:				18 Feb 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-Iterator-DBI/Makefile,v 1.9 2012/11/17 05:55:16 svnexp Exp $
+# $FreeBSD: databases/p5-Iterator-DBI/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Iterator-DBI
@@ -19,6 +19,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Iterator::DBI.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
