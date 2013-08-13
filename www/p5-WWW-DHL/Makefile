@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-DHL
-# Date created:		2008-01-10
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-WWW-DHL/Makefile,v 1.4 2012/11/17 06:02:54 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-WWW-DHL/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-DHL
 PORTVERSION=	0.03
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::DHL.3
 
