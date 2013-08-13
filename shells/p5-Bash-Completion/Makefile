@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Bash-Completion
-# Date created:		2011-10-23
-# Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
-# $FreeBSD: ports/shells/p5-Bash-Completion/Makefile,v 1.4 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
+# $FreeBSD: shells/p5-Bash-Completion/Makefile 321545 2013-06-22 05:27:54Z sunpoet $
 
 PORTNAME=	Bash-Completion
 PORTVERSION=	0.008
@@ -15,11 +11,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extensible system to provide bash completion
 
+LICENSE=	ART20
+
 BUILD_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
 		p5-Module-Load>=0.22:${PORTSDIR}/devel/p5-Module-Load
-RUN_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
-		p5-Module-Load>=0.22:${PORTSDIR}/devel/p5-Module-Load
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
 PERL_CONFIGURE=	yes
@@ -35,10 +31,6 @@ MAN3=		App::BashComplete.3 \
 		Bash::Completion::Utils.3
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
 
 .if ${PERL_LEVEL} < 501400
 TEST_DEPENDS+=	p5-Test-Simple>=0.98:${PORTSDIR}/devel/p5-Test-Simple
