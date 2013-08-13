@@ -1,9 +1,5 @@
-# New ports collection makefile for:	AI-Perceptron
-# Date created:				04 Nov 2000
-# Whom:					will
-#
-# $FreeBSD: ports/math/p5-AI-Perceptron/Makefile,v 1.14 2012/11/17 05:59:25 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: math/p5-AI-Perceptron/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	AI-Perceptron
 PORTVERSION=	1.0
@@ -17,7 +13,8 @@ COMMENT=	Perl module for introducing to internal operations of neural networks
 BUILD_DEPENDS=	p5-accessors>=0:${PORTSDIR}/devel/p5-accessors
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		AI::Perceptron.3
 
