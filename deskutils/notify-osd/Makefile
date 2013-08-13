@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/notify-osd/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: deskutils/notify-osd/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	notify-osd
 PORTVERSION=	0.9.29
@@ -23,6 +23,5 @@ GNU_CONFIGURE=	yes
 USES=		gmake
 USE_GNOME=	libwnck gconf2
 USE_GCC=	4.4+
-MAKE_JOBS_SAFE=	yes
 
 .include <bsd.port.mk>
