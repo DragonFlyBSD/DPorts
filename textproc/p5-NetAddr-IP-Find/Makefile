@@ -2,7 +2,7 @@
 # Date created:				May 14th 2002
 # Whom:					Alex Kapranoff <kappa@freebsd.org.ua>
 #
-# $FreeBSD: ports/textproc/p5-NetAddr-IP-Find/Makefile,v 1.10 2012/11/17 06:02:06 svnexp Exp $
+# $FreeBSD: textproc/p5-NetAddr-IP-Find/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	NetAddr-IP-Find
@@ -16,7 +16,8 @@ COMMENT=	Iterates over all IP addresses in a text similar to Email::Find
 
 RUN_DEPENDS=	p5-NetAddr-IP>0:${PORTSDIR}/net-mgmt/p5-NetAddr-IP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
 MAN3=		NetAddr::IP::Find.3
