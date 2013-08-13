@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Pluggable/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Catalyst-Plugin-Pluggable/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Plugin-Pluggable
 PORTVERSION=	0.04
@@ -14,7 +14,8 @@ COMMENT=	Plugin for pluggable Catalyst applications
 BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::Pluggable.3
 
