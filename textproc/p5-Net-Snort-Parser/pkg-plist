@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/p5-Net-Snort-Parser/pkg-plist,v 1.1 2013/02/20 19:26:27 svnexp Exp $
+@comment $FreeBSD$
 bin/snortconfig
 bin/verify-rule
 %%SITE_PERL%%/Net/Snort/Parser/File.pm
