@@ -2,7 +2,7 @@
 # Date created:				Wed Jan  3 10:40:02 2001
 # Whom:					will
 #
-# $FreeBSD: ports/math/p5-Math-Bezier/Makefile,v 1.8 2012/11/17 05:59:25 svnexp Exp $
+# $FreeBSD: math/p5-Math-Bezier/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Math-Bezier
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module to solve Bezier curves
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::Bezier.3
 
