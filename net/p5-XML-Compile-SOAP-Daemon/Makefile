@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: net/p5-XML-Compile-SOAP-Daemon/Makefile 317506 2013-05-06 10:56:17Z tobez $
+# $FreeBSD: net/p5-XML-Compile-SOAP-Daemon/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Compile-SOAP-Daemon
 PORTVERSION=	3.06
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Log-Report>=0.90:${PORTSDIR}/devel/p5-Log-Report \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-XML-Compile-Tester>=0.90:${PORTSDIR}/devel/p5-XML-Compile-Tester
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::Compile::SOAP::Daemon.3 \
 	XML::Compile::SOAP::Daemon::AnyDaemon.3 \
