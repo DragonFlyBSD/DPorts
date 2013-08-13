@@ -1,3 +1,4 @@
+@comment $FreeBSD: emulators/tpm-emulator/pkg-plist 323772 2013-07-27 04:27:19Z hrs $
 bin/tpmd
 include/tddl.h
 lib/libtddl.a
