@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Group/Makefile 321353 2013-06-20 06:56:31Z lth $
+# $FreeBSD: devel/p5-Test-Group/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Test-Group
 PORTVERSION=	0.19
@@ -13,7 +13,8 @@ BUILD_DEPENDS=	p5-File-Slurp>0:${PORTSDIR}/devel/p5-File-Slurp \
 		p5-Test-Cmd>=0:${PORTSDIR}/devel/p5-Test-Cmd
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Test::Group.3 \
 		Test::Group::Extending.3 \
