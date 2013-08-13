@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bsdftpd-ssl
-# Date created:				5 Apr 2003
-# Whom:					Nick Leuta
-#
-# $FreeBSD: ports/ftp/bsdftpd-ssl/Makefile,v 1.15 2012/11/17 05:57:28 svnexp Exp $
-#
+# Created by: Nick Leuta
+# $FreeBSD: ftp/bsdftpd-ssl/Makefile 323294 2013-07-19 14:09:28Z bapt $
 
 PORTNAME=	bsdftpd-ssl
 PORTVERSION=	1.1.0
@@ -23,6 +19,8 @@ COMMENT=	FTP command-line client utility with the TLS/SSL support
 
 USE_OPENSSL=	yes
 
+MAKE_ENV+=	OBJFORMAT=elf
+
 .include <bsd.port.pre.mk>
 
 # Client only part
@@ -37,7 +35,7 @@ MAN1=	ftps.1
 MAN5=	ftpchroot.5 xferlog.5
 MAN8=	ftpd.8
 MLINKS=	ftpd.8 ftpd-ssl.8 ftpchroot.5 ftpchroot-ssl.5
-.ifndef NOPORTEXAMPLES
+.if ${PORT_OPTIONS:MEXAMPLES}
 SUB_FILES=	pkg-message
 .endif
 USE_RC_SUBR=	${PORTNAME}
@@ -63,10 +61,10 @@ pre-build:
 
 do-build:
 # Client part
-	(cd ${WRKSRC}/port && make && cd ${WRKSRC}/ftp && make) || exit
+	(cd ${WRKSRC}/port && ${SETENV} ${MAKE_ENV} make && cd ${WRKSRC}/ftp && ${SETENV} ${MAKE_ENV} make) || exit
 # Server part
 .if !defined(CLIENT_ONLY)
-	(cd ${WRKSRC}/ftpd && make) || exit
+	(cd ${WRKSRC}/ftpd && ${SETENV} ${MAKE_ENV} make) || exit
 .endif
 
 do-install:
@@ -82,7 +80,7 @@ do-install:
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCDIR}
 	${INSTALL_DATA} -p ${WRKSRC}/COPYRIGHT ${DOCDIR}/COPYRIGHT
 	${INSTALL_DATA} -p ${WRKSRC}/README ${DOCDIR}/README
@@ -106,7 +104,7 @@ post-install:
 	${INSTALL_SCRIPT} -p ${WRKSRC}/cert/xCA.sh ${DOCDIR}/cert/xCA.sh
 .endif
 .if !defined(CLIENT_ONLY)
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}/rc.conf.d
 	${INSTALL_DATA} -p ${FILESDIR}/README.examples ${EXAMPLESDIR}/README
 	${INSTALL_DATA} -p ${FILESDIR}/ftpchroot ${EXAMPLESDIR}/ftpchroot
