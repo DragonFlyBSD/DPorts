@@ -1,7 +1,7 @@
-# $FreeBSD: databases/p5-DBIx-QueryLog/Makefile 319141 2013-05-26 22:59:08Z kuriyama $
+# $FreeBSD: databases/p5-DBIx-QueryLog/Makefile 324482 2013-08-10 11:45:25Z kuriyama $
 
 PORTNAME=	DBIx-QueryLog
-PORTVERSION=	0.35
+PORTVERSION=	0.37
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
