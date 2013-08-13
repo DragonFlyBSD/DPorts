@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math-Geometry-Voronoi
-# Date created:				12 July, 2009
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/math/p5-Math-Geometry-Voronoi/Makefile,v 1.3 2012/11/17 05:59:26 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: math/p5-Math-Geometry-Voronoi/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-Geometry-Voronoi
 PORTVERSION=	1.3
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0.18:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Math::Geometry::Voronoi.3
 
