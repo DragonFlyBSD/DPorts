@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Catalyst-Model-DBIC-Plain
-# Date created:				16 Nov 2005
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Model-DBIC-Plain/Makefile,v 1.11 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Model-DBIC-Plain/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Model-DBIC-Plain
 PORTVERSION=	0.03
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-DBIx-Class>=0.01:${PORTSDIR}/databases/p5-DBIx-Class
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Helper::Model::DBIC::Plain.3 \
 	Catalyst::Model::DBIC::Plain.3
