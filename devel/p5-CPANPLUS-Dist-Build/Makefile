@@ -1,9 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-CPANPLUS-Dist-Build/Makefile,v 1.29 2013/01/26 18:55:06 svnexp Exp $
-#
+# $FreeBSD: devel/p5-CPANPLUS-Dist-Build/Makefile 324466 2013-08-10 06:22:46Z culot $
 
 PORTNAME=	CPANPLUS-Dist-Build
-PORTVERSION=	0.70
+PORTVERSION=	0.74
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,7 +13,8 @@ COMMENT=	CPANPLUS plug-in to use Module-Build
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CPANPLUS::Dist::Build.3 CPANPLUS::Dist::Build::Constants.3
 
