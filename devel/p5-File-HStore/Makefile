@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-File-HStore
-# Date created:		2006-07-21
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-File-HStore/Makefile,v 1.11 2012/12/17 13:43:44 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-File-HStore/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-HStore
 PORTVERSION=	0.10
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Store files on a filesystem using a very simple hash-based storage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::HStore.3
 
