@@ -1,9 +1,5 @@
-# New ports collection makefile for:	HTTP::GHTTP
-# Date created:		11 Jan 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-HTTP-GHTTP/Makefile,v 1.9 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-HTTP-GHTTP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTTP-GHTTP
 PORTVERSION=	1.07
@@ -16,7 +12,8 @@ COMMENT=	Perl interface to the gnome ghttp library
 
 LIB_DEPENDS=	ghttp.1:${PORTSDIR}/www/libghttp
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	LIBS="-L${LOCALBASE}/lib -lghttp" INC="-I${LOCALBASE}/include"
 
 MAN3=		HTTP::GHTTP.3
