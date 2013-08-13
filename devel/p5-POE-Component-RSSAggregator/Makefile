@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-RSSAggregator
-# Date created:		                Aug 1, 2006
-# Whom:			                Cheng-Lung Sung
-#
-# $FreeBSD: ports/devel/p5-POE-Component-RSSAggregator/Makefile,v 1.10 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung
+# $FreeBSD: devel/p5-POE-Component-RSSAggregator/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-RSSAggregator
 PORTVERSION=	1.11
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
     		p5-POE-Component-Client-HTTP>=0.51:${PORTSDIR}/www/p5-POE-Component-Client-HTTP
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::RSSAggregator.3
 
