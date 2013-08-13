@@ -2,7 +2,7 @@
 # Date created:		2011-09-23
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/net/p5-URI-Query/Makefile,v 1.5 2012/11/17 06:00:13 svnexp Exp $
+# $FreeBSD: net/p5-URI-Query/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	URI-Query
@@ -24,10 +24,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		URI::Query.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
