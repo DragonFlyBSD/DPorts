@@ -1,12 +1,9 @@
-# New ports collection makefile for:	c-icap-modules
-# Date created:				15 August 2012
-# Whom:					Martin Matuska <mm@FreeBSD.org>
+# Created by: Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: www/c-icap-modules/Makefile 317389 2013-05-04 22:48:03Z flo $
-#
+# $FreeBSD: www/c-icap-modules/Makefile 323990 2013-07-30 20:20:40Z mm $
 
 PORTNAME=	c-icap
-PORTVERSION=	0.2.3
+PORTVERSION=	0.2.4
 CATEGORIES=	www security
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}${PKGNAMESUFFIX}/0.2.x/
 PKGNAMESUFFIX=	-modules
