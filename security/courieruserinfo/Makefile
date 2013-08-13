@@ -1,13 +1,10 @@
-# New ports collection makefile for:	courieruserinfo
-# Date created:				27th July 2006
-# Whom:					Andrew St. Jean <andrew@arda.homeunix.net>
-#
-# $FreeBSD: ports/security/courieruserinfo/Makefile,v 1.4 2012/11/17 06:01:02 svnexp Exp $
+# Created by: Andrew St. Jean <andrew@arda.homeunix.net>
+# $FreeBSD: security/courieruserinfo/Makefile 323796 2013-07-27 16:45:26Z marino $
 
 PORTNAME=	courieruserinfo
 PORTVERSION=	1.1.2
 CATEGORIES=	security mail
-MASTER_SITES=	http://www.arda.homeunix.net/store/
+MASTER_SITES=	http://www.arda.homeunix.net/software-downloads/
 
 MAINTAINER=	andrew@arda.homeunix.net
 COMMENT=	User account information retrieval utility
@@ -16,14 +13,18 @@ BUILD_DEPENDS=	courierauthconfig:${PORTSDIR}/security/courier-authlib-base
 RUN_DEPENDS=	courierauthconfig:${PORTSDIR}/security/courier-authlib-base
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN8=		courieruserinfo.8
 
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DOCSDIR}
