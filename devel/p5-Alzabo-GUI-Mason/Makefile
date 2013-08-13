@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Alzabo-GUI-Mason/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Alzabo-GUI-Mason/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Alzabo-GUI-Mason
 PORTVERSION=	0.12.01
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Alzabo>=0:${PORTSDIR}/devel/p5-Alzabo \
 		p5-HTTP-BrowserDetect>=0:${PORTSDIR}/www/p5-HTTP-BrowserDetect
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 CONFIGURE_ENV=	DATADIR=${DATADIR}
 MAKE_ENV=	WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 
