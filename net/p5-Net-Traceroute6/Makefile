@@ -2,7 +2,7 @@
 # Date created:				13 August 2001
 # Whom:					petef
 #
-# $FreeBSD: ports/net/p5-Net-Traceroute6/Makefile,v 1.10 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Traceroute6/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-Traceroute6
@@ -18,7 +18,8 @@ COMMENT=	Perl module to parse traceroute6(8) output
 BUILD_DEPENDS=	p5-Socket6>=0:${PORTSDIR}/net/p5-Socket6
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Traceroute6.3
 
