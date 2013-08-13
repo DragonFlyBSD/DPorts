@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: x11/gtk-launch/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: x11/gtk-launch/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	gtk-launch
 DISTVERSION=	1.1b
@@ -12,7 +12,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Fast GTK+ program launcher
 
 USE_GNOME=	gtk12
-MAKE_JOBS_SAFE=	yes
 
 PLIST_FILES=	bin/gtk-launch
 PORTDOCS=	INSTALL
