@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-VNC/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-Net-VNC/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-VNC
 PORTVERSION=	0.40
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-Crypt-DES>=0:${PORTSDIR}/security/p5-Crypt-DES \
 		p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		vnccapture.1
 MAN3=		Net::VNC.3
