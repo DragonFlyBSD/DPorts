@@ -2,7 +2,7 @@
 # Date created:   31.7.2003
 # Whom:           Hansjoerg Pehofer <hansjoerg.pehofer@uibk.ac.at>
 #
-# $FreeBSD: ports/databases/p5-DBIx-SQLEngine/Makefile,v 1.14 2012/11/17 05:55:15 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-SQLEngine/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	DBIx-SQLEngine
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-DBIx-AnyDBD>=0:${PORTSDIR}/databases/p5-DBIx-AnyDBD \
 		p5-Class-MixinFactory>=0:${PORTSDIR}/devel/p5-Class-MixinFactory
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::SQLEngine.3 \
 	DBIx::SQLEngine::Cache::BasicCache.3 \
