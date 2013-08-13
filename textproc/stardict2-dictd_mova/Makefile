@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <timur@gnome.org>
-# $FreeBSD: textproc/stardict2-dictd_mova/Makefile 316718 2013-04-28 13:34:26Z bapt $
+# $FreeBSD: textproc/stardict2-dictd_mova/Makefile 321289 2013-06-19 16:32:41Z tijl $
 
 PORTNAME=	stardict
 PORTVERSION=	2.4.2
@@ -12,6 +12,7 @@ DIST_SUBDIR=	stardict
 MAINTAINER=	timur@FreeBSD.org
 COMMENT=	Dictionaries from www.mova.org for StarDict
 
+.MAKE.FreeBSD_UL=	yes
 NO_BUILD=	yes
 USE_BZIP2=	yes
 
