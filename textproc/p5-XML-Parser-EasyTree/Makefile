@@ -3,7 +3,7 @@
 # Date created:			Oct 24, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/textproc/p5-XML-Parser-EasyTree/Makefile,v 1.5 2012/11/17 06:02:13 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-Parser-EasyTree/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	XML-Parser-EasyTree
@@ -18,7 +18,8 @@ COMMENT=	Easier tree style for XML::Parser
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::Parser::EasyTree.3
 
