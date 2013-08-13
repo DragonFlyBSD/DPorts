@@ -1,5 +1,5 @@
 # Created by: Ruben van Staveren
-# $FreeBSD: ports/devel/p5-Thread-Cancel/Makefile,v 1.7 2012/11/17 05:56:34 svnexp Exp $
+# $FreeBSD: devel/p5-Thread-Cancel/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Thread-Cancel
 PORTVERSION=	1.13
@@ -13,7 +13,8 @@ COMMENT=	Cancel (i.e., kill) threads
 RUN_DEPENDS=	p5-threads>=1.34:${PORTSDIR}/devel/p5-threads
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Thread::Cancel.3
 
