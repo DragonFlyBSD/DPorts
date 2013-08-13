@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Data-JavaScript
-# Date created:				09 October 2001
-# Whom:					tobez
-#
-# $FreeBSD: ports/lang/p5-Data-JavaScript/Makefile,v 1.8 2012/11/17 05:58:54 svnexp Exp $
-#
+# Created by: tobez
+# $FreeBSD: lang/p5-Data-JavaScript/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Data-JavaScript
 PORTVERSION=	1.13
@@ -16,7 +12,8 @@ MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Data::JavaScript - Dump perl structures to JavaScript code
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::JavaScript.3
 
