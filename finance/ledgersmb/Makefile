@@ -1,5 +1,5 @@
 # Created by: anarcat@anarcat.ath.cx
-# $FreeBSD: finance/ledgersmb/Makefile 307595 2012-11-20 19:06:23Z tabthorpe $
+# $FreeBSD: finance/ledgersmb/Makefile 324180 2013-08-03 07:52:55Z az $
 
 PORTNAME=	ledger-smb
 PORTVERSION=	1.1.12
@@ -14,19 +14,11 @@ BUILD_DEPENDS=	p5-DBD-Pg>=0:${PORTSDIR}/databases/p5-DBD-Pg
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 NO_BUILD=	yes
-USE_PERL5=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PKGMESSAGE=	${WRKDIR}/pkg-message
-
-post-patch:
-	@${PERL} -pi -e 's|/usr/bin/perl|${PERL}|' \
-		`${FIND} ${WRKSRC} -name \*.pl`
-	@${PERL} -pe 's|%%PREFIX%%|${PREFIX}|g' \
-		${FILESDIR}/${PORTNAME}-httpd.conf.in \
-		> ${WRKDIR}/${PORTNAME}-httpd.conf
-	@${PERL} -pe 's|%%PREFIX%%|${PREFIX}|g' \
-		${PKGDIR}/pkg-message \
-		> ${PKGMESSAGE}
+USES=		shebangfix perl5
+SHEBANG_FILES=	*.pl locale/*/*.pl bin/*/*.pl utils/*/*.pl
+SUB_FILES=	${PORTNAME}-httpd.conf pkg-message
 
 do-install:
 	@cd ${WRKDIR} ; \
