@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-DWH_File
-# Date created:                         Thu Jan  8 13:16:46 PST 2004
-# Whom:                                 mharo@FreeBSD.org
-#
-# $FreeBSD: ports/databases/p5-DWH_File/Makefile,v 1.5 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: mharo@FreeBSD.org
+# $FreeBSD: databases/p5-DWH_File/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DWH_File
 PORTVERSION=	0.24
@@ -18,7 +14,8 @@ COMMENT=	Store deep and wide hashes in single level tied hash
 BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DWH_File.3 DWH_File::Registry::URI.3 DWH_File::Value::Factory.3 \
 		DWH_File::Tie::Array::Node.3 DWH_File::Value.3 DWH_File::Aware.3 \
