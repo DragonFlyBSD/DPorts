@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/www/p5-CGI-Application-Plugin-Authorization/Makefile,v 1.7 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-Plugin-Authorization/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	CGI-Application-Plugin-Authorization
 PORTVERSION=	0.07
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
 		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	CGI::Application::Plugin::Authorization::Driver::Generic.3 \
 	CGI::Application::Plugin::Authorization::Driver.3 \
