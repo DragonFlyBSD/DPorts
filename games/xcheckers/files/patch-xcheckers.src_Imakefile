@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/xcheckers/files/patch-xcheckers.src_Imakefile,v 1.2 2012/11/17 05:57:56 svnexp Exp $
+$FreeBSD: games/xcheckers/files/patch-xcheckers.src_Imakefile 300896 2012-07-14 13:54:48Z beat $
 
 --- xcheckers.src/Imakefile.orig	Sun Dec  9 19:43:13 2001
 +++ xcheckers.src/Imakefile	Wed Jul 30 20:46:21 2003

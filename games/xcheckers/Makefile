@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xcheckers
-# Date created:				25 January 2003
-# Whom:					Simon Barner <barner@gmx.de>
-#
-# $FreeBSD: ports/games/xcheckers/Makefile,v 1.10 2012/11/17 05:57:56 svnexp Exp $
-#
+# Created by: Simon Barner <barner@gmx.de>
+# $FreeBSD: games/xcheckers/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xcheckers
 PORTVERSION=	2.2.3
@@ -12,9 +8,9 @@ CATEGORIES=	games
 MASTER_SITES=	http://arton.cunst.net/xcheckers/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A checkers game for X11
+COMMENT=	Checkers game for X11
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext xpm
 
 MAN6=		xcheckers.6 simplech.6
