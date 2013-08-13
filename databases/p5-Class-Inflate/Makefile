@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-Inflate
-# Date created:		2006-07-21
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/databases/p5-Class-Inflate/Makefile,v 1.8 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: databases/p5-Class-Inflate/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Inflate
 PORTVERSION=	0.07
@@ -19,7 +15,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 BUILD_DEPENDS+=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Test-Debugger>=0:${PORTSDIR}/devel/p5-Test-Debugger
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Class::Inflate.3
 
