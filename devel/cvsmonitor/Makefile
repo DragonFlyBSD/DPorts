@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: devel/cvsmonitor/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: devel/cvsmonitor/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	cvsmonitor
 PORTVERSION=	0.6.3
@@ -43,7 +43,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 NO_BUILD=	yes
 
-USE_PERL5=	yes
+USES=		perl5
+USE_PERL5=	patch run build
 
 # stolen from cvsweb
 .if !exists(${PREFIX}/www) && exists(${PREFIX}/share/apache)
