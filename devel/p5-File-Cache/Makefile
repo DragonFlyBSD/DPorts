@@ -2,7 +2,7 @@
 # Date created:				Mon Jan  1 11:28:15 2001
 # Whom:					will
 #
-# $FreeBSD: ports/devel/p5-File-Cache/Makefile,v 1.11 2012/11/17 05:56:15 svnexp Exp $
+# $FreeBSD: devel/p5-File-Cache/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	File-Cache
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module implementing a persistent object store
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Cache.3
 
