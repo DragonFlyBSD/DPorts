@@ -1,5 +1,5 @@
 # Created by: Jasper Jongmans <j.jongmans@aprogas.net>
-# $FreeBSD: games/crossfire-server/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: games/crossfire-server/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	crossfire
 PORTVERSION=	1.70.0
@@ -20,9 +20,9 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
+USES=		perl5
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 USE_SQLITE=	3
-USE_PERL5=	yes
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
