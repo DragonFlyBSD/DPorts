@@ -2,7 +2,7 @@
 # Date created:				1996/10/24
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-File-BasicFlock/Makefile,v 1.22 2012/11/17 05:56:15 svnexp Exp $
+# $FreeBSD: devel/p5-File-BasicFlock/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	File-BasicFlock
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl5 module for file locking with flock
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::BasicFlock.3
 
