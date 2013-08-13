@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/audio/xmms-sexypsf/Makefile,v 1.15 2013/01/15 13:46:53 svnexp Exp $
+# $FreeBSD: audio/xmms-sexypsf/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	xmms-sexypsf
 PORTVERSION=	0.4.8
@@ -18,7 +18,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_BZIP2=	yes
 USE_GNOME=	gtk12
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 CFLAGS+=	-I${WRKSRC} -fPIC
 DEFINES=	-DSPSFVERSION=\""${PORTVERSION}\"" -DPSS_STYLE=1
