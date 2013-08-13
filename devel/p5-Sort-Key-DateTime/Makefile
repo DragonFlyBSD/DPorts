@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Sort-Key-DateTime
-# Date created:				14 October 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Sort-Key-DateTime/Makefile,v 1.7 2012/11/17 05:56:29 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Sort-Key-DateTime/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Sort-Key-DateTime
 PORTVERSION=	0.07
@@ -18,7 +14,8 @@ RUN_DEPENDS=	p5-DateTime>=0.28:${PORTSDIR}/devel/p5-DateTime \
 		p5-Sort-Key>=1.28:${PORTSDIR}/devel/p5-Sort-Key
 BUILD_DEPENDS=  ${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sort::Key::DateTime.3
 
