@@ -1,4 +1,4 @@
-# $FreeBSD: german/hunspell/Makefile 317605 2013-05-07 13:12:31Z bapt $
+# $FreeBSD: german/hunspell/Makefile 324225 2013-08-04 12:47:44Z az $
 
 PORTNAME=	hunspell
 PORTVERSION=	20120607
@@ -13,11 +13,11 @@ COMMENT=	German hunspell dictionaries
 BUILD_DEPENDS=	buildhash:${PORTSDIR}/textproc/ispell \
 		hunspell:${PORTSDIR}/textproc/hunspell
 
-USES=		shebangfix
+USES=		shebangfix perl5
 USE_BZIP2=	yes
 ALL_TARGET=	hunspell-all
 USE_GMAKE=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 SHEBANG_FILES=	bin/*.pl
 
 PLIST_FILES=	%%DATADIR%%/de_AT.aff \
