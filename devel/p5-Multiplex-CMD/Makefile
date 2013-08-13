@@ -2,7 +2,7 @@
 # Date created:		21 March 2011
 # Whom:			Andrey Ignatov <rdna@rdna.ru>
 #
-# $FreeBSD: ports/devel/p5-Multiplex-CMD/Makefile,v 1.4 2012/11/17 05:56:24 svnexp Exp $
+# $FreeBSD: devel/p5-Multiplex-CMD/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Multiplex-CMD
@@ -19,10 +19,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Multiplex::CMD.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS=	p5-version>=0:${PORTSDIR}/devel/p5-version
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
