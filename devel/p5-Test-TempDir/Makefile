@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Test-TempDir
-# Date created:				2008/09/06
-# Whom:					chinsan
-#
-# $FreeBSD: ports/devel/p5-Test-TempDir/Makefile,v 1.7 2012/11/17 05:56:34 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: devel/p5-Test-TempDir/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-TempDir
 PORTVERSION=	0.05
@@ -23,7 +19,8 @@ RUN_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok \
 		p5-namespace-clean>=0.08:${PORTSDIR}/devel/p5-namespace-clean
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::TempDir.3 Test::TempDir::Factory.3 Test::TempDir::Handle.3
 
