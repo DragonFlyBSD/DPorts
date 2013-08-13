@@ -1,16 +1,11 @@
-# New ports collection makefile for:	py-scimath
-# Date created:				Jan 26, 2011
-# Whom:					Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/science/py-scimath/Makefile,v 1.4 2012/11/17 06:00:59 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: science/py-scimath/Makefile 323513 2013-07-23 04:27:27Z wen $
 
 PORTNAME=	scimath
-PORTVERSION=	3.0.7
+PORTVERSION=	4.1.2
 CATEGORIES=	science math python
 MASTER_SITES=	http://www.enthought.com/repo/ets/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	SciMath-${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Scientific and Mathematical calculations
@@ -21,6 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=		yes
 PYEASYINSTALL_ARCHDEP=	yes
 USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	SciMath
 
 .include <bsd.port.mk>
