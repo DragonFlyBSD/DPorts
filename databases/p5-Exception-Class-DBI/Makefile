@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Exception-Class
-# Date created:				15 October 2005
-# Whom:	      				Rod Taylor <ports@rbt.ca>
-#
-# $FreeBSD: ports/databases/p5-Exception-Class-DBI/Makefile,v 1.14 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: Rod Taylor <ports@rbt.ca>
+# $FreeBSD: databases/p5-Exception-Class-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Exception-Class-DBI
 PORTVERSION=	1.01
@@ -20,7 +16,8 @@ RUN_DEPENDS=	p5-Exception-Class>=0:${PORTSDIR}/devel/p5-Exception-Class \
 LICENSE_COMB=	dual
 LICENSE=	ART10 GPLv1
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Exception::Class::DBI.3
 
