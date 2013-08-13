@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: emulators/tme/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: emulators/tme/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	tme
 PORTVERSION=	0.8
@@ -21,9 +21,8 @@ LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
 		expat:${PORTSDIR}/textproc/expat2 \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 
-USES=		pkgconfig gettext iconv
+USES=		pkgconfig gettext iconv perl5
 USE_GNOME=	gdkpixbuf2 gtk20
-USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool libltdl
 CONFIGURE_ENV=	ac_cv_have_isinff=no
