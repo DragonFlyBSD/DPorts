@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Thread-Queue/Makefile,v 1.9 2013/02/25 04:47:25 svnexp Exp $
+# $FreeBSD: devel/p5-Thread-Queue/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	Thread-Queue
 PORTVERSION=	3.02
@@ -17,11 +17,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=	Thread::Queue.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-threads-shared>=1.21:${PORTSDIR}/devel/p5-threads-shared
-RUN_DEPENDS:=	${BUILD_DEPENDS}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
