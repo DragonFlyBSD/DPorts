@@ -1,13 +1,8 @@
-# New ports collection makefile for:	p5-GD-Graph-ohlc
-# Date created:		2009-10-02
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/p5-GD-Graph-ohlc/Makefile,v 1.9 2012/11/17 05:58:16 svnexp Exp $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: graphics/p5-GD-Graph-ohlc/Makefile 323979 2013-07-30 18:28:34Z skreuzer $
 
 PORTNAME=	GD-Graph-ohlc
-PORTVERSION=	0.9605
-PORTREVISION=	3
+PORTVERSION=	0.9703
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JETTERO
