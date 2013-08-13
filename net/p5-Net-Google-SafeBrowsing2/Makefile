@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: net/p5-Net-Google-SafeBrowsing2/Makefile 321702 2013-06-24 18:36:18Z lippe $
+# $FreeBSD: net/p5-Net-Google-SafeBrowsing2/Makefile 323711 2013-07-26 10:46:37Z az $
 
 PORTNAME=	Net-Google-SafeBrowsing2
 PORTVERSION=	1.09
@@ -57,8 +57,5 @@ RUN_DEPENDS+=	p5-DBD-mysql>=4:${PORTSDIR}/databases/p5-DBD-mysql
 BUILD_DEPENDS+=	p5-DBD-Pg>=2:${PORTSDIR}/databases/p5-DBD-Pg
 RUN_DEPENDS+=	p5-DBD-Pg>=2:${PORTSDIR}/databases/p5-DBD-Pg
 .endif
-
-post-patch:
-	@${PERL} -pi -e 's/CPAN/ExtUtils/' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
