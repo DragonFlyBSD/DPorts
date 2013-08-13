@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Catalyst-Plugin-Captcha
-# Date created:	   05 August 2007
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Captcha/Makefile,v 1.11 2012/11/17 06:02:47 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-Catalyst-Plugin-Captcha/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Plugin-Captcha
 PORTVERSION=	0.04
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-GD-SecurityImage>=0:${PORTSDIR}/security/p5-GD-SecurityImage
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::Captcha.3
 
