@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: games/xscavenger/Makefile 320607 2013-06-11 15:43:23Z bsam $
+# $FreeBSD: games/xscavenger/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xscavenger
 PORTVERSION=	1.4.4
@@ -13,7 +13,7 @@ COMMENT=	Lode Runner clone for X11
 
 WRKSRC_SUBDIR=	src
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 MAN6=		scavenger.6
 
