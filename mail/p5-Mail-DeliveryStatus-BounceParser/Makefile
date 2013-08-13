@@ -1,12 +1,8 @@
-# New ports collection makefile for:	p5-Mail-DeliveryStatus-BounceParser
-# Date created:				Thu Mar 25 20:40:31 MSK 2004
-# Whom:					Alexander Zhuravlev <zaa@zaa.pp.ru>
-#
-# $FreeBSD: ports/mail/p5-Mail-DeliveryStatus-BounceParser/Makefile,v 1.14 2012/11/17 05:59:08 svnexp Exp $
-#
+# Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
+# $FreeBSD: mail/p5-Mail-DeliveryStatus-BounceParser/Makefile 323864 2013-07-29 01:53:34Z zi $
 
 PORTNAME=	Mail-DeliveryStatus-BounceParser
-PORTVERSION=	1.5.24
+PORTVERSION=	1.5.34
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
