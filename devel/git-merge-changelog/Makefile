@@ -2,7 +2,7 @@
 # Date created:		19 April 2010
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/git-merge-changelog/Makefile,v 1.10 2012/11/17 05:55:45 svnexp Exp $
+# $FreeBSD: devel/git-merge-changelog/Makefile 323553 2013-07-23 21:39:06Z ade $
 #
 
 PORTNAME=	git-merge-changelog
@@ -17,7 +17,7 @@ MAINTAINER=	knu@FreeBSD.org
 COMMENT=	Git "merge" driver for GNU style ChangeLog files
 
 EXTRACT_DEPENDS=	${GNULIB_DIR}/lib/${PORTNAME}.c:${GNULIB_PORTDIR}	\
-			automake-1.12:${PORTSDIR}/devel/automake		\
+			automake-1.14:${PORTSDIR}/devel/automake		\
 			autoconf-2.69:${PORTSDIR}/devel/autoconf
 
 GNU_CONFIGURE=	yes
