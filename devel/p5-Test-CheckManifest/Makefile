@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Test-CheckManifest
-# Date created:				27 June 2012
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-CheckManifest/Makefile,v 1.3 2012/11/17 05:56:31 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-CheckManifest/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-CheckManifest
 PORTVERSION=	1.26
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Check if your Manifest matches your distro
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::CheckManifest.3
 
