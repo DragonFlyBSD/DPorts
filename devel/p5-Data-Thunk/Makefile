@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Data-Thunk/Makefile,v 1.1 2012/12/13 10:39:16 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Thunk/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Data-Thunk
 PORTVERSION=	0.07
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Check-ISA>=0:${PORTSDIR}/devel/p5-Check-ISA \
 		p5-namespace-clean>=0:${PORTSDIR}/devel/p5-namespace-clean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Thunk.3 \
 	Data::Thunk::Code.3 \
