@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Parse-CPAN-Packages-Fast
-# Date created:				April 11 2010
-# Whom:					jupengfei <jupengfei@gmail.com>
-#
-# $FreeBSD: ports/devel/p5-Parse-CPAN-Packages-Fast/Makefile,v 1.7 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: jupengfei <jupengfei@gmail.com>
+# $FreeBSD: devel/p5-Parse-CPAN-Packages-Fast/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Parse-CPAN-Packages-Fast
 PORTVERSION=	0.06
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-CPAN-DistnameInfo>=0:${PORTSDIR}/devel/p5-CPAN-DistnameInfo \
 		p5-PerlIO-gzip>=0:${PORTSDIR}/archivers/p5-PerlIO-gzip
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Parse::CPAN::Packages::Fast.3
 
