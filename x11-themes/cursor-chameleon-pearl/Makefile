@@ -2,7 +2,7 @@
 # Date created:		2009-11-14
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/x11-themes/cursor-chameleon-pearl/Makefile,v 1.2 2012/11/17 06:03:30 svnexp Exp $
+# $FreeBSD: x11-themes/cursor-chameleon-pearl/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	chameleon
@@ -13,7 +13,7 @@ PKGNAMEPREFIX=	cursor-
 PKGNAMESUFFIX=	-pearl
 DISTNAME=	Chameleon-Pearl-${PORTVERSION}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Chameleon Xcursors theme
 
 THEME=		Pearl
