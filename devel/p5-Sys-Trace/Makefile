@@ -2,7 +2,7 @@
 # Date created:				06 July 2010
 # Whom:					Ju Pengfei <jupengfei@gmail.com>
 #
-# $FreeBSD: ports/devel/p5-Sys-Trace/Makefile,v 1.3 2012/11/17 05:56:30 svnexp Exp $
+# $FreeBSD: devel/p5-Sys-Trace/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Sys-Trace
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Interface to system call tracing interfaces
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sys::Trace.3 \
 		Sys::Trace::Impl::Ktrace.3 \
