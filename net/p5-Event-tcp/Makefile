@@ -2,7 +2,7 @@
 # Date created:				2009-11-15
 # Whom:					steinex
 #
-# $FreeBSD: net/p5-Event-tcp/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: net/p5-Event-tcp/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Event-tcp
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Event>=0:${PORTSDIR}/devel/p5-Event \
 		p5-Ioctl>=0:${PORTSDIR}/devel/p5-Ioctl
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Event::tcpsession.3
 
