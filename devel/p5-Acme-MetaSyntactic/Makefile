@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Acme-MetaSyntactic/Makefile,v 1.39 2013/01/18 10:19:30 svnexp Exp $
+# $FreeBSD: devel/p5-Acme-MetaSyntactic/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Acme-MetaSyntactic
 PORTVERSION=	1.008
@@ -13,7 +13,8 @@ COMMENT=	Themed metasyntactic variables names
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		meta.1 \
 		metafy.1
