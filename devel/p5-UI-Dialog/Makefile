@@ -1,5 +1,5 @@
 # Created by: Dmitry Karasik <dmitry@karasik.eu.org>
-# $FreeBSD: ports/devel/p5-UI-Dialog/Makefile,v 1.6 2012/11/17 05:56:35 svnexp Exp $
+# $FreeBSD: devel/p5-UI-Dialog/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	UI-Dialog
 PORTVERSION=	1.08
@@ -29,7 +29,8 @@ RUN_DEPENDS+=	kdialog:${PORTSDIR}/x11/kdebase3
 RUN_DEPENDS+=	zenity:${PORTSDIR}/x11/zenity
 .endif
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		UI::Dialog.3 UI::Dialog::Backend::XDialog.3 \
 		UI::Dialog::Backend::KDialog.3 UI::Dialog::Backend::ASCII.3 \
