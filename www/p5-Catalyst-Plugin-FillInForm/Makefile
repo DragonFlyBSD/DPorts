@@ -1,5 +1,5 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-FillInForm/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Catalyst-Plugin-FillInForm/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Plugin-FillInForm
 PORTVERSION=	0.12
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 RUN_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-HTML-FillInForm>=0:${PORTSDIR}/www/p5-HTML-FillInForm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::FillInForm.3
 
