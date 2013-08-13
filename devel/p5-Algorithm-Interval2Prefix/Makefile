@@ -2,7 +2,7 @@
 # Date created:				Dec 5 2003
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/devel/p5-Algorithm-Interval2Prefix/Makefile,v 1.5 2012/11/17 05:56:04 svnexp Exp $
+# $FreeBSD: devel/p5-Algorithm-Interval2Prefix/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Algorithm-Interval2Prefix
 PORTVERSION=	0.02
@@ -15,7 +15,8 @@ COMMENT=	Generate prefixes from intervals
 
 TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Algorithm::Interval2Prefix.3
 
