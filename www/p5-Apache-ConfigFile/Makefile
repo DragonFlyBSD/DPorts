@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: www/p5-Apache-ConfigFile/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Apache-ConfigFile/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Apache-ConfigFile
 PORTVERSION=	1.23
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Apache::ConfigFile - Parse Apache style httpd.conf configuration files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Apache::ConfigFile.3
 
