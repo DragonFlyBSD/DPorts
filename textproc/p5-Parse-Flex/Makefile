@@ -2,7 +2,7 @@
 # Date created:				30 May 2006
 # Whom:	      				Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-Parse-Flex/Makefile,v 1.8 2012/11/17 06:02:06 svnexp Exp $
+# $FreeBSD: textproc/p5-Parse-Flex/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Parse-Flex
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The Fastest Lexer in the West
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Parse::Flex.3 Parse::Flex::Generate.3
 
