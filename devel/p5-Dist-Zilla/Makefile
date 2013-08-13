@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-Dist-Zilla/Makefile,v 1.6 2013/02/04 00:03:12 svnexp Exp $
+# $FreeBSD: devel/p5-Dist-Zilla/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Dist-Zilla
 PORTVERSION=	4.300030
@@ -58,7 +58,8 @@ BUILD_DEPENDS=	p5-App-Cmd>=0.309:${PORTSDIR}/devel/p5-App-Cmd \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	dzil.1
 MAN3=	Dist::Zilla.3 \
