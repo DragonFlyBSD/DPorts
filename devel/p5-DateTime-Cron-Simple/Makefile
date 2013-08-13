@@ -1,5 +1,5 @@
 # Created by:	Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-DateTime-Cron-Simple/Makefile,v 1.1 2012/11/26 22:42:01 svnexp Exp $
+# $FreeBSD: devel/p5-DateTime-Cron-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Cron-Simple
 PORTVERSION=	0.2
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse a cron entry and check against current time
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Cron::Simple.3
 
