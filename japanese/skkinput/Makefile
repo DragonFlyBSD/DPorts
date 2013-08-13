@@ -1,5 +1,5 @@
 # Created by: Murata Shuuichirou <mrt@mickey.ai.kyutech.ac.jp>
-# $FreeBSD: japanese/skkinput/Makefile 319081 2013-05-26 00:33:54Z jgh $
+# $FreeBSD: japanese/skkinput/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	skkinput
 PORTVERSION=	2.06.4
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	skkinput2/6273
 MAINTAINER=	koma2@lovepeers.org
 COMMENT=	SKK-like Japanese input method for X11
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	ice sm x11 xext xt xmu
 
 OPTIONS_RADIO=	RG1
