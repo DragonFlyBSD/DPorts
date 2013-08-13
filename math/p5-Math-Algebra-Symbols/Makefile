@@ -2,7 +2,7 @@
 # Date created:				25 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Math-Algebra-Symbols/Makefile,v 1.8 2012/11/17 05:59:25 svnexp Exp $
+# $FreeBSD: math/p5-Math-Algebra-Symbols/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Math-Algebra-Symbols
@@ -22,6 +22,7 @@ MAN3=	Math::Algebra::Symbols.3 \
 	Math::Algebra::Symbols::Symbols.3 \
 	Math::Algebra::Symbols::Term.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
