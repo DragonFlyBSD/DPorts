@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Test-Signature
-# Date created:		2012-03-06
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Test-Signature/Makefile,v 1.2 2012/11/17 05:56:33 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Test-Signature/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Signature
 PORTVERSION=	1.10
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl Automated SIGNATURE testing
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::Signature.3
 
