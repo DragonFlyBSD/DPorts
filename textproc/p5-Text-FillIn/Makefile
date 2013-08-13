@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Text-FillIn
-# Date created:				29 December 2000
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-FillIn/Makefile,v 1.7 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: textproc/p5-Text-FillIn/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Text-FillIn
 PORTVERSION=	0.05
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	A class implementing a fill-in template
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::FillIn.3
 
