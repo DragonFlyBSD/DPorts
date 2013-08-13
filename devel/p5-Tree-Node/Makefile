@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Tree-Node
-# Date created: 			01 July 2005
-# Whom: 				Aaron Dalton <aaron@daltons.ca>
-#
-# $FreeBSD: ports/devel/p5-Tree-Node/Makefile,v 1.10 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@daltons.ca>
+# $FreeBSD: devel/p5-Tree-Node/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	Tree-Node
 PORTVERSION=	0.08
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Memory-efficient tree nodes in Perl
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Tree::Node.3
 
