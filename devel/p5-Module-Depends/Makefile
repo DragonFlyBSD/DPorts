@@ -2,7 +2,7 @@
 # Date created:				2008-10-17
 # Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Module-Depends/Makefile,v 1.7 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Depends/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Module-Depends
@@ -22,10 +22,4 @@ PERL_MODBUILD=	yes
 
 MAN3=		Module::Depends::Intrusive.3 Module::Depends.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-RUN_DEPENDS+=	p5-Parse-CPAN-Meta>=0:${PORTSDIR}/devel/p5-Parse-CPAN-Meta
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
