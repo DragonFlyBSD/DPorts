@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-Decorator
-# Date created:				05 Jun 06
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Decorator/Makefile,v 1.7 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: textproc/p5-Text-Decorator/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	Text-Decorator
 PORTVERSION=	1.65
@@ -28,6 +24,7 @@ MAN3=	Text::Decorator.3 \
 	Text::Decorator::Group.3 \
 	Text::Decorator::Node.3
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 .include <bsd.port.mk>
