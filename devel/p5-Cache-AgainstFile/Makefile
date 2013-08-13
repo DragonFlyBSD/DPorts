@@ -1,9 +1,5 @@
-# Ports collection makefile for:	devel-p5-Cache-AgainstFile
-# Date created:				10 April 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/devel/p5-Cache-AgainstFile/Makefile,v 1.5 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: devel/p5-Cache-AgainstFile/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=		Cache-AgainstFile
 PORTVERSION=		1.016
@@ -12,14 +8,15 @@ MASTER_SITES=		CPAN
 MASTER_SITE_SUBDIR=	Cache
 PKGNAMEPREFIX=		p5-
 
-MAINTAINER=		freebsdports@chillibear.com
+MAINTAINER=		ports@FreeBSd.org
 COMMENT=		Cache data structures parsed from files, watching for updates
 
 RUN_DEPENDS=	p5-Log-Trace>0:${PORTSDIR}/devel/p5-Log-Trace \
-	p5-Test-Assertions>0:${PORTSDIR}/devel/p5-Test-Assertions
+		p5-Test-Assertions>0:${PORTSDIR}/devel/p5-Test-Assertions
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Cache::AgainstFile::Memory.3 \
 	Cache::AgainstFile.3 \
