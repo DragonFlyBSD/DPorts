@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-StateMachine/Makefile 316045 2013-04-18 14:48:31Z eadler $
+# $FreeBSD: devel/p5-Class-StateMachine/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-StateMachine
 PORTVERSION=	0.23
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-MRO-Define>=0.01:${PORTSDIR}/devel/p5-MRO-Define \
 		p5-Sub-Name>=0.05:${PORTSDIR}/devel/p5-Sub-Name
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::StateMachine.3
 
