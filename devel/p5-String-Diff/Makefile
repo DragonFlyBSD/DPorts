@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-String-Diff
-# Date created:				29 Mar 2009
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-String-Diff/Makefile,v 1.7 2012/11/17 05:56:29 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: devel/p5-String-Diff/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	String-Diff
 PORTVERSION=	0.06
@@ -22,7 +18,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		String::Diff.3
 
