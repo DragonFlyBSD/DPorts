@@ -2,7 +2,7 @@
 # Date created:				April 20th, 2006
 # Whom:	      				Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: www/p5-Net-Akismet/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/p5-Net-Akismet/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-Akismet
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-libwww>=5.09:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS+=	p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 .endif
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Akismet.3
 
