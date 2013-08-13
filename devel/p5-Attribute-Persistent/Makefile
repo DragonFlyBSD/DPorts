@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: devel/p5-Attribute-Persistent/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Attribute-Persistent/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=		Attribute-Persistent
 PORTVERSION=		1.1
@@ -13,7 +13,8 @@ COMMENT=		Attribute::Persistent - Really lazy persistence
 BUILD_DEPENDS=		p5-Attribute-Handlers-Prospective>=0:${PORTSDIR}/devel/p5-Attribute-Handlers-Prospective \
 			p5-MLDBM>=0:${PORTSDIR}/databases/p5-MLDBM
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Attribute::Persistent.3
 
