@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/www/p5-URI-Title/Makefile,v 1.9 2012/12/18 11:58:44 svnexp Exp $
+# $FreeBSD: www/p5-URI-Title/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	URI-Title
 PORTVERSION=	1.86
@@ -20,7 +20,8 @@ COMMON_DEPENDS=	p5-File-Type>=0.22:${PORTSDIR}/devel/p5-File-Type \
 BUILD_DEPENDS=	${COMMON_DEPENDS}
 RUN_DEPENDS=	${COMMON_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	URI::Title.3
 
