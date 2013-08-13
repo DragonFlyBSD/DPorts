@@ -2,7 +2,7 @@
 # Date created:				May 9th 2002
 # Whom:					Alex Kapranoff <kappa@freebsd.org.ua>
 #
-# $FreeBSD: ports/devel/p5-Devel-ptkdb/Makefile,v 1.12 2012/11/17 05:56:14 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-ptkdb/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Devel-ptkdb
@@ -17,7 +17,8 @@ COMMENT=	Tk debugger for Perl
 
 RUN_DEPENDS=	p5-Tk>=0:${PORTSDIR}/x11-toolkits/p5-Tk
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::ptkdb.3
 
