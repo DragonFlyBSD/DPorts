@@ -2,7 +2,7 @@
 # Date created:				March 17, 2005
 # Whom:					clsung
 #
-# $FreeBSD: www/p5-Apache-Session-SQLite3/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/p5-Apache-Session-SQLite3/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Apache-Session-SQLite3
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Apache-Session>=0:${PORTSDIR}/www/p5-Apache-Session \
 		p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Apache::Session::SQLite3.3
 
