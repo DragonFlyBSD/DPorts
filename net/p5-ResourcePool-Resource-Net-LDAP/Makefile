@@ -1,5 +1,5 @@
 # Created by: erwin@FreeBSD.org
-# $FreeBSD: net/p5-ResourcePool-Resource-Net-LDAP/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-ResourcePool-Resource-Net-LDAP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	ResourcePool-Resource-Net-LDAP
 PORTVERSION=	1.0002
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-ResourcePool>=0:${PORTSDIR}/devel/p5-ResourcePool \
 		p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ResourcePool::Resource::Net::LDAP.3 ResourcePool::Factory::Net::LDAP.3
 
