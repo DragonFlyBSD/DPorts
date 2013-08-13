@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Algorithm-Evolutionary/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Algorithm-Evolutionary/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Algorithm-Evolutionary
 PORTVERSION=	0.78
@@ -29,7 +29,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Pod-Escapes>=0:${PORTSDIR}/textproc/p5-Pod-Escapes \
 		p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		canonical-genetic-algorithm.pl.1 \
 		rectangle-coverage.pl.1 \
