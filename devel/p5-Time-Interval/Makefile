@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Time-Interval/Makefile,v 1.7 2013/02/07 19:32:08 svnexp Exp $
+# $FreeBSD: devel/p5-Time-Interval/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Time-Interval
 PORTVERSION=	1.232
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-TimeDate>0:${PORTSDIR}/devel/p5-TimeDate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Time::Interval.3
 
