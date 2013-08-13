@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Date-Calc-Iterator
-# Date created:	   03 Jul 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Date-Calc-Iterator/Makefile,v 1.6 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Date-Calc-Iterator/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Date-Calc-Iterator
 PORTVERSION=	1.00
@@ -17,7 +13,8 @@ COMMENT=	Iterate over a range of dates
 BUILD_DEPENDS=	p5-Date-Calc>=0:${PORTSDIR}/devel/p5-Date-Calc
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Date::Calc::Iterator.3
 
