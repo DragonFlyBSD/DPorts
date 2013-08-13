@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/devel/p5-Module-Inspector/Makefile,v 1.5 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Inspector/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Module-Inspector
 PORTVERSION=	1.05
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-File-Find-Rule-VCS>=0:${PORTSDIR}/devel/p5-File-Find-Rule-VCS 
 		p5-version>=0:${PORTSDIR}/devel/p5-version
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Module::Inspector.3
 
