@@ -1,8 +1,9 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: graphics/lua-gd/Makefile 315650 2013-04-01 10:10:33Z miwi $
+# $FreeBSD: graphics/lua-gd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	lua-gd
 PORTVERSION=	2.0.33r2
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://files.luaforge.net/releases/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}forLua5.1/
 
