@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::Filter::GenericChunk
-# Date created:				2.7.2003
-# Whom:					Hansjoerg Pehofer <hansjoerg.pehofer@uibk.ac.at>
-#
-# $FreeBSD: ports/textproc/p5-XML-Filter-GenericChunk/Makefile,v 1.9 2012/11/17 06:02:12 svnexp Exp $
-#
+# Created by: Hansjoerg Pehofer <hansjoerg.pehofer@uibk.ac.at>
+# $FreeBSD: textproc/p5-XML-Filter-GenericChunk/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	XML-Filter-GenericChunk
 PORTVERSION=	0.07
@@ -18,15 +14,16 @@ BUILD_DEPENDS=	p5-XML-LibXML>=1.4:${PORTSDIR}/textproc/p5-XML-LibXML \
 		p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Filter::CharacterChunk.3 \
 		XML::Filter::GenericChunk.3
 
 post-patch:
-	${PERL} -pi -e '$$_="" if /use warnings/;' \
-			${WRKSRC}/t/02filter.t \
-			${WRKSRC}/CharacterChunk.pm \
-			${WRKSRC}/GenericChunk.pm
+	@${REINPLACE_CMD} -i '' '/use warnings/d' \
+		${WRKSRC}/t/02filter.t \
+		${WRKSRC}/CharacterChunk.pm \
+		${WRKSRC}/GenericChunk.pm
 
 .include <bsd.port.mk>
