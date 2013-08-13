@@ -2,7 +2,7 @@
 # Date created:				May 28th 1997
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Penguin-Easy/Makefile,v 1.18 2012/11/17 05:56:26 svnexp Exp $
+# $FreeBSD: devel/p5-Penguin-Easy/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Penguin-Easy
@@ -16,7 +16,8 @@ COMMENT=	A quick and easy implementation of the p5-Penguin module
 
 BUILD_DEPENDS=	p5-Penguin>=0:${PORTSDIR}/devel/p5-Penguin
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Penguin::Easy.3
 
