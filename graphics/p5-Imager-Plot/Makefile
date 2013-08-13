@@ -3,7 +3,7 @@
 # Date created:			Aug 31, 2004
 # Whom:				ijliao
 #
-# $FreeBSD: ports/graphics/p5-Imager-Plot/Makefile,v 1.9 2012/11/17 05:58:17 svnexp Exp $
+# $FreeBSD: graphics/p5-Imager-Plot/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Imager-Plot
@@ -19,7 +19,8 @@ COMMENT=	Perl extension for generating fancy graphic plots in color
 BUILD_DEPENDS=	p5-Imager>=0:${PORTSDIR}/graphics/p5-Imager
 RUN_DEPENDS=	p5-Imager>=0:${PORTSDIR}/graphics/p5-Imager
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Imager::Plot.3 Imager::Plot::Axis.3
 
