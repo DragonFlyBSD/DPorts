@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Samba-LDAP
-# Date created:		2006-09-18
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/net/p5-Samba-LDAP/Makefile,v 1.6 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/p5-Samba-LDAP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Samba-LDAP
 PORTVERSION=	0.05
@@ -28,13 +24,14 @@ BUILD_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
 		p5-Unicode-MapUTF8>=0:${PORTSDIR}/converters/p5-Unicode-MapUTF8
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Samba::LDAP.3 Samba::LDAP::Base.3 Samba::LDAP::Config.3 \
 		Samba::LDAP::Group.3 Samba::LDAP::Machine.3 \
 		Samba::LDAP::User.3
 
 post-patch:
-		${PERL} -pi -e '$$_ = "" if m|auto_install|' ${WRKSRC}/Makefile.PL
+		@${REINPLACE_CMD} -i '' -e '/auto_install/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
