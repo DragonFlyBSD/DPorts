@@ -1,12 +1,12 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: textproc/confetti/Makefile 317438 2013-05-05 21:22:26Z bapt $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: textproc/confetti/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	confetti
 PORTVERSION=	0.0.${DATE}
 CATEGORIES=	textproc
 MASTER_SITES=	http://fbsd.zlonet.ru/distfiles/
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Configuration file parser generator
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
