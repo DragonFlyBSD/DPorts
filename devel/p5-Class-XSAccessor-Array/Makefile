@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Class-XSAccessor-Array/Makefile 318305 2013-05-16 10:29:08Z miwi $
+# $FreeBSD: devel/p5-Class-XSAccessor-Array/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Class-XSAccessor-Array
 PORTVERSION=	1.04
@@ -17,7 +17,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-AutoXS-Header>=0:${PORTSDIR}/devel/p5-AutoXS-Header
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::XSAccessor::Array.3
 
