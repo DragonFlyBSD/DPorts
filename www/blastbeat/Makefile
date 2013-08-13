@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: www/blastbeat/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: www/blastbeat/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	blastbeat
 PORTVERSION=	20121205
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	GH GHC
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	High-performance HTTP/HTTPS/SPDY proxy
 
 LICENSE=	UNBIT
