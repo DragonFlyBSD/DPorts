@@ -1,5 +1,5 @@
 # Created by:			Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: ports/www/p5-Mojolicious-Plugin-Database/Makefile,v 1.9 2012/12/23 12:44:14 svnexp Exp $
+# $FreeBSD: www/p5-Mojolicious-Plugin-Database/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mojolicious-Plugin-Database
 PORTVERSION=	1.08
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mojolicious::Plugin::Database.3 \
 		Mojolicious::Plugin::README.3
