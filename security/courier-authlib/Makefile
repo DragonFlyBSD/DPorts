@@ -2,7 +2,7 @@
 # Date created:				19 Dec 2004
 # Whom:					Oliver Lehmann
 #
-# $FreeBSD: security/courier-authlib/Makefile 318826 2013-05-23 02:19:02Z jgh $
+# $FreeBSD: security/courier-authlib/Makefile 322423 2013-07-07 09:03:44Z oliver $
 #
 
 PORTNAME=	courier-authlib
@@ -34,6 +34,7 @@ OPTIONS_DEFINE+=	GDBM
 
 .else	# !defined(PKGNAMESUFFIX)
 
+USES=		iconv
 USE_AUTOTOOLS=	libltdl
 USE_BZIP2=	yes
 USE_GMAKE=	yes
