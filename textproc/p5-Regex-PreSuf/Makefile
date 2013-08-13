@@ -1,8 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Regex-PreSuf
-# Date created:				11 Octobor 2003
-# Whom:					Cheng-Lung Sung <clsung@dragon2.net>
-#
-# $FreeBSD: ports/textproc/p5-Regex-PreSuf/Makefile,v 1.7 2012/11/17 06:02:07 svnexp Exp $
+# Created by: Cheng-Lung Sung <clsung@dragon2.net>
+# $FreeBSD: textproc/p5-Regex-PreSuf/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Regex-PreSuf
 PORTVERSION=	1.17
@@ -14,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Regex::PreSuf - Given word lists, create regular expressions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Regex::PreSuf.3
 
