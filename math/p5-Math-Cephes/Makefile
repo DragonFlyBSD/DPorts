@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: ports/math/p5-Math-Cephes/Makefile,v 1.15 2013/01/28 11:00:08 svnexp Exp $
+# $FreeBSD: math/p5-Math-Cephes/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-Cephes
 PORTVERSION=	0.5302
@@ -19,6 +19,7 @@ MAN3=	Math::Cephes.3 \
 	Math::Cephes::Matrix.3 \
 	Math::Cephes::Polynomial.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
