@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: ports/finance/p5-Business-OnlinePayment-PaymenTech/Makefile,v 1.13 2013/02/03 12:13:20 svnexp Exp $
+# $FreeBSD: finance/p5-Business-OnlinePayment-PaymenTech/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Business-OnlinePayment-PaymenTech
 PORTVERSION=	2.05
@@ -16,11 +16,9 @@ BUILD_DEPENDS=	p5-Business-OnlinePayment>=0:${PORTSDIR}/finance/p5-Business-Onli
 		p5-Net-HTTPS-Any>=0.10:${PORTSDIR}/net/p5-Net-HTTPS-Any
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::OnlinePayment::PaymenTech.3
-
-post-extract:
-	@${PERL} -i.bak -ne 'print unless /^(test_requires|auto_install|recommends|configure_requires)/' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
