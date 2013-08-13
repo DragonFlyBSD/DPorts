@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/falconseye/Makefile 320817 2013-06-13 16:24:36Z bsam $
+# $FreeBSD: games/falconseye/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	falconseye
 PORTVERSION=	1.9.3
@@ -13,11 +13,12 @@ COMMENT=	NetHack derivative
 
 RUN_DEPENDS=	timidity:${PORTSDIR}/audio/timidity
 
+USES=		perl5
 NHDIR=		"${PREFIX}/share/falconseyedir"
 MAKE_ENV=	NHDIR="${NHDIR}" NETHACKCONFIG="${NETHACKCONFIG}"
 NETHACKCONFIG=	${FILESDIR}/x-config
 USE_SDL=	sdl
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_ZIP=	yes
 USE_XORG=	x11 xpm xaw
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -I${LOCALBASE}/include/SDL11 \
@@ -26,7 +27,7 @@ NO_WRKSUBDIR=	yes
 MAKE_JOBS_UNSAFE=	yes
 
 post-patch:
-	@${PERL} -pi -e "s@<malloc.h>@<stdlib.h>@g" \
+	@${REINPLACE_CMD} -i '' -e "s|<malloc.h>|<stdlib.h>|" \
 	${WRKSRC}/include/jtp_gen.h ${WRKSRC}/win/jtp/jtp_dirx.c \
 	${WRKSRC}/win/jtp/jtp_keys.c ${WRKSRC}/win/jtp/jtp_sdl.c \
 	${WRKSRC}/win/Qt/qt_win.cpp
