@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-XML-DOM2
-# Date created:		2006-07-14
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-DOM2/Makefile,v 1.7 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: textproc/p5-XML-DOM2/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-DOM2
 PORTVERSION=	0.06
@@ -19,7 +15,8 @@ COMMENT=	DOM controlled, strict XML module for extentable xml objects
 BUILD_DEPENDS=	p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::DOM2::Attribute.3 XML::DOM2::Element.3 \
 		XML::DOM2::Element::Document.3 \
