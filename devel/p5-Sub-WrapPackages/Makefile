@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/devel/p5-Sub-WrapPackages/Makefile,v 1.10 2012/11/17 05:56:30 svnexp Exp $
+# $FreeBSD: devel/p5-Sub-WrapPackages/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Sub-WrapPackages
 PORTVERSION=	2.0
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Hook-LexWrap>=0:${PORTSDIR}/devel/p5-Hook-LexWrap \
 		p5-Sub-Prototype>=0.02:${PORTSDIR}/devel/p5-Sub-Prototype
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sub::WrapPackages.3
 
