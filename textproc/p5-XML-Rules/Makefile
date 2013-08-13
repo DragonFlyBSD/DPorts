@@ -1,4 +1,4 @@
-# $FreeBSD: ports/textproc/p5-XML-Rules/Makefile,v 1.7 2012/12/14 13:38:02 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-Rules/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	XML-Rules
 PORTVERSION=	1.16
@@ -12,7 +12,8 @@ COMMENT=	Parse XML and specify rules for individual tags
 RUN_DEPENDS=	p5-XML-Parser>=2.00:${PORTSDIR}/textproc/p5-XML-Parser
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	XML::Rules.3
 
