@@ -1,5 +1,5 @@
 # Created by: Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: net/p5-Net-Subnet/Makefile 319780 2013-06-03 14:06:43Z tobez $
+# $FreeBSD: net/p5-Net-Subnet/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Subnet
 PORTVERSION=	1.03
@@ -15,7 +15,8 @@ LICENSE=	ART10
 BUILD_DEPENDS=	p5-Socket6>=0.23:${PORTSDIR}/net/p5-Socket6
 RUN_DEPENDS=	p5-Socket6>=0.23:${PORTSDIR}/net/p5-Socket6
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Subnet.3
 
