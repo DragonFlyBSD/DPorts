@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Atom-Stream/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-XML-Atom-Stream/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Atom-Stream
 PORTVERSION=	0.11
@@ -23,6 +23,7 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 
 MAN3=	XML::Atom::Stream.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
