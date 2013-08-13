@@ -1,5 +1,5 @@
-# Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: devel/py-bluelet/Makefile 316304 2013-04-23 02:34:34Z swills $
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: devel/py-bluelet/Makefile 323891 2013-07-29 15:03:58Z feld $
 
 PORTNAME=	bluelet
 PORTVERSION=	0.2.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Pure-Python asynchronous I/O using coroutines
 
 LICENSE=	MIT
