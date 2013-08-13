@@ -1,9 +1,5 @@
-# New ports collection makefile for:    tolua++
-# Date created:         18 Jan 2006
-# Whom:                 aaron@FreeBSD.org
-#
-# $FreeBSD: ports/lang/tolua++50/Makefile,v 1.14 2012/11/17 05:58:58 svnexp Exp $
-#
+# Created by: aaron@FreeBSD.org
+# $FreeBSD: lang/tolua++50/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
 
 PORTNAME=	tolua++
 PORTVERSION=	1.0.92
