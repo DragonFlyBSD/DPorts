@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-File-Attributes-Recursive
-# Date created:				04 April 2007
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-File-Attributes-Recursive/Makefile,v 1.7 2012/11/17 05:56:15 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-File-Attributes-Recursive/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	File-Attributes-Recursive
 PORTVERSION=	0.02
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Directory-Scratch>=0:${PORTSDIR}/devel/p5-Directory-Scratch \
 		p5-File-Attributes>=0:${PORTSDIR}/devel/p5-File-Attributes
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	File::Attributes::Recursive.3
 
