@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/p5-Geo-IPfree/Makefile,v 1.25 2013/02/15 10:52:43 svnexp Exp $
+# $FreeBSD: net/p5-Geo-IPfree/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Geo-IPfree
 PORTVERSION=	1.130450
@@ -12,15 +12,9 @@ COMMENT=	Look up country from an IP Address
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Geo::IPfree.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501200
-BUILD_DEPENDS+=	p5-Memoize>=0:${PORTSDIR}/devel/p5-Memoize
-RUN_DEPENDS+=	p5-Memoize>=0:${PORTSDIR}/devel/p5-Memoize
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
