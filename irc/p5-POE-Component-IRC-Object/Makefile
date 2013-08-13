@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: irc/p5-POE-Component-IRC-Object/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: irc/p5-POE-Component-IRC-Object/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-IRC-Object
 PORTVERSION=	0.02
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PLIST_SUB=	EXAMPLESDIR="share/examples/${PORTNAME}"
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::IRC::Object.3
 
