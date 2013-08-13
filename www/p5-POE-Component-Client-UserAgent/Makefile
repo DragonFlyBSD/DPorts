@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-Client-UserAgent
-# Date created:		10 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-POE-Component-Client-UserAgent/Makefile,v 1.14 2012/11/17 06:02:52 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-POE-Component-Client-UserAgent/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Client-UserAgent
 PORTVERSION=	0.08
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-ParallelUA>=0:${PORTSDIR}/www/p5-ParallelUA
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Client::UserAgent.3
 
