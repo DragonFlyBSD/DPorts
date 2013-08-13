@@ -2,7 +2,7 @@
 # Date created:				October 20th 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-HTML-QuickCheck/Makefile,v 1.21 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-QuickCheck/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	HTML-QuickCheck
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A simple and fast HTML syntax checking package for perl 4 and perl 5
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::QuickCheck.3
 
