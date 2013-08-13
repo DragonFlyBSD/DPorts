@@ -2,7 +2,7 @@
 # Date created:				24 Jan 2002
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/textproc/p5-Text-Repository/Makefile,v 1.6 2012/11/17 06:02:10 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Repository/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=		Text-Repository
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=		p5-
 MAINTAINER=		ports@FreeBSD.org
 COMMENT=	A simple way to manage text without mixing it with Perl
 
-PERL_CONFIGURE=		yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=			Text::Repository.3
 
