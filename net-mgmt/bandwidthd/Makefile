@@ -1,9 +1,9 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: net-mgmt/bandwidthd/Makefile 322331 2013-07-05 14:32:27Z bdrewery $
+# $FreeBSD: net-mgmt/bandwidthd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	bandwidthd
 PORTVERSION=	2.0.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 EXTRACT_SUFX=	.tgz
