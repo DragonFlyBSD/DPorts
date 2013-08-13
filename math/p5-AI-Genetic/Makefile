@@ -2,7 +2,7 @@
 # Date created:				19 Feb 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-AI-Genetic/Makefile,v 1.5 2012/11/17 05:59:25 svnexp Exp $
+# $FreeBSD: math/p5-AI-Genetic/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	AI-Genetic
@@ -20,6 +20,7 @@ MAN3=	AI::Genetic.3 \
 	AI::Genetic::OpMutation.3 \
 	AI::Genetic::OpSelection.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
