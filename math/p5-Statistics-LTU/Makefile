@@ -1,9 +1,5 @@
-# New ports collection makefile for:	math/p5-Statistics-LTU
-# Date created:				01 January 2001
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/math/p5-Statistics-LTU/Makefile,v 1.7 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: math/p5-Statistics-LTU/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Statistics-LTU
 PORTVERSION=	2.8
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl implementation of Linear Threshold Units
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Statistics::LTU.3
 
