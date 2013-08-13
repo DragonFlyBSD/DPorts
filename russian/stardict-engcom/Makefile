@@ -2,7 +2,7 @@
 # Date created:		2010-03-16
 # Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
 #
-# $FreeBSD: ports/russian/stardict-engcom/Makefile,v 1.3 2012/11/17 06:00:56 svnexp Exp $
+# $FreeBSD: russian/stardict-engcom/Makefile 323455 2013-07-22 14:34:22Z vg $
 #
 
 PORTNAME=	stardict-engcom
@@ -11,7 +11,7 @@ CATEGORIES=	russian
 MASTER_SITES=	http://yeelou.com/huzheng/stardict-dic/ru/
 DISTNAME=	${PORTNAME}-ru-${PORTVERSION}
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	English-Russian Dictionary of Computer Terms
 
 .include "${.CURDIR}/../stardict-mueller7/files/Makefile.common"
