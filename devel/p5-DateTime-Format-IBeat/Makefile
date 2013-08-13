@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Format-IBeat
-# Date created:	   3 october 2003
-# Whom:		   mat
-#
-# $FreeBSD: ports/devel/p5-DateTime-Format-IBeat/Makefile,v 1.8 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-DateTime-Format-IBeat/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Format-IBeat
 PORTVERSION=	0.16.1
@@ -18,7 +14,8 @@ COMMENT=	Format times in .beat notation
 BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Format::IBeat.3
 
