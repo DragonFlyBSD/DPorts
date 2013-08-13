@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Crypt-Serpent
-# Date created:				2002/09/20
-# Whom:					nork@FreeBSD.org
-#
-# $FreeBSD: ports/security/p5-Crypt-Serpent/Makefile,v 1.8 2012/11/17 06:01:11 svnexp Exp $
-#
+# Created by: nork@FreeBSD.org
+# $FreeBSD: security/p5-Crypt-Serpent/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Crypt-Serpent
 PORTVERSION=	1.01
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl implementation of the Serpent encryption algorithm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::Serpent.3
 
