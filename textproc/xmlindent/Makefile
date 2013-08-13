@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/xmlindent/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
+# $FreeBSD: textproc/xmlindent/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	xmlindent
 PORTVERSION=	0.2.17
@@ -13,7 +13,6 @@ COMMENT=	XML stream reformatter
 LICENSE=	GPLv2
 
 MANCOMPRESSED=	no
-MAKE_JOBS_SAFE=	yes
 
 SOURCES=	error.c indent.c buffer.c main.c
 
