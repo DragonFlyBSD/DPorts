@@ -1,24 +1,25 @@
 # Created by: Jarrod Sayers <jarrod@netleader.com.au>
-# $FreeBSD: net-mgmt/nagios-devel/Makefile 319898 2013-06-04 19:13:31Z bapt $
+# $FreeBSD: net-mgmt/nagios-devel/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	nagios
 DISTVERSIONPREFIX=HEAD-
 DISTVERSION=	20101122
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	http://www.downtools.com.au/~jarrod/nagios/
 PKGNAMESUFFIX=	-devel
 
-MAINTAINER=	jarrod@downtools.com.au
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extremely powerful network monitoring system
 
-LIB_DEPENDS=	gd.4:${PORTSDIR}/graphics/gd
+LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
 RUN_DEPENDS=	${LOCALBASE}/libexec/nagios/check_nagios:${PORTSDIR}/net-mgmt/nagios-plugins
 
 MASTER_SITE_FREEBSD=	yes
 LATEST_LINK=	nagios-devel
 
-USES=		iconv
-USE_PERL5_BUILD=yes
+USES=		iconv perl5
+USE_PERL5=	build
 USE_AUTOTOOLS=	autoconf libltdl
 USE_RC_SUBR=	nagios
 
