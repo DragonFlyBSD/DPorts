@@ -1,8 +1,9 @@
 # Created by: Jille Timmermans (jille@quis.cx)
-# $FreeBSD: multimedia/oggvideotools/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: multimedia/oggvideotools/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	oggvideotools
 PORTVERSION=	0.8a
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTNAME}
 
