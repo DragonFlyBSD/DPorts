@@ -2,7 +2,7 @@
 # Date created:				May 28 2001
 # Whom:					vanilla
 #
-# $FreeBSD: ports/graphics/p5-GD-Barcode/Makefile,v 1.16 2012/11/17 05:58:16 svnexp Exp $
+# $FreeBSD: graphics/p5-GD-Barcode/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	GD-Barcode
@@ -18,7 +18,8 @@ COMMENT=	GD::Barcode - Create barcode image with GD
 BUILD_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		GD::Barcode.3 \
 		GD::Barcode::COOP2of5.3 \
