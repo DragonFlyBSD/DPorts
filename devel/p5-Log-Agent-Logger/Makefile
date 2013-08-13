@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Log-Agent-Logger
-# Date created:		4 Aug 2002
-# Whom:			devin@spamcop.net
-#
-# $FreeBSD: ports/devel/p5-Log-Agent-Logger/Makefile,v 1.10 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: devin@spamcop.net
+# $FreeBSD: devel/p5-Log-Agent-Logger/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Log-Agent-Logger
 PORTVERSION=	0.2
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Log-Agent>=0:${PORTSDIR}/devel/p5-Log-Agent \
 		p5-Getargs-Long>=0:${PORTSDIR}/devel/p5-Getargs-Long
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Log::Agent::Logger.3
 
