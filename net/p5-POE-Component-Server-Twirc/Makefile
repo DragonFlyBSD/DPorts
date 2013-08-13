@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: net/p5-POE-Component-Server-Twirc/Makefile 320892 2013-06-14 10:20:30Z tobez $
+# $FreeBSD: net/p5-POE-Component-Server-Twirc/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Server-Twirc
 PORTVERSION=	0.16
@@ -32,7 +32,8 @@ BUILD_DEPENDS=	p5-AnyEvent-Twitter-Stream>=0:${PORTSDIR}/net/p5-AnyEvent-Twitter
 		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		App::Twirc.3 \
 		App::Twirc::Manual.3 \
@@ -42,6 +43,6 @@ MAN3=		App::Twirc.3 \
 		POE::Component::Server::Twirc.3
 
 post-patch:
-	@${PERL} -pi -e '$$_="" if m/auto_install/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' -e '/auto_install/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
