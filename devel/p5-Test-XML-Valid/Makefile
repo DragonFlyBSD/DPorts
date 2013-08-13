@@ -2,7 +2,7 @@
 # Date created:				10 April 2007
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-XML-Valid/Makefile,v 1.3 2012/11/17 05:56:34 svnexp Exp $
+# $FreeBSD: devel/p5-Test-XML-Valid/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-XML-Valid
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-XML-LibXML>0:${PORTSDIR}/textproc/p5-XML-LibXML \
 		p5-Test-Simple>0:${PORTSDIR}/devel/p5-Test-Simple
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Test::XML::Valid.3
 
