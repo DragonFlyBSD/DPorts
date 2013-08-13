@@ -2,7 +2,7 @@
 # Date created:				Apr 19 2007
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: net-im/pymsn/Makefile 315474 2013-03-28 15:51:16Z eadler $
+# $FreeBSD: net-im/pymsn/Makefile 323776 2013-07-27 10:19:30Z marino $
 #
 
 PORTNAME=	pymsn
@@ -14,6 +14,9 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MSN Connection library
+
+DEPRECATED=	Primary MSN Messenger service terminated 30 APR 2013
+EXPIRATION_DATE=2013-10-31
 
 LIB_PC_DEPENDS=	pygobject-2.0.pc:${PORTSDIR}/devel/py-gobject
 
