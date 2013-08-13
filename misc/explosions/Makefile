@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: misc/explosions/Makefile 315192 2013-03-25 04:30:31Z eadler $
+# $FreeBSD: misc/explosions/Makefile 324054 2013-07-31 14:36:21Z az $
 
 PORTNAME=	explosions
 PORTVERSION=	0.2005.07.31
@@ -13,15 +13,16 @@ COMMENT=	3D objects flying around resembling explosions with various effects
 
 USE_SDL=	sdl image
 USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${PERL} -pi -e 's!CFLAGS=-Wall -O2!CFLAGS+=-Wall!; \
-		s!sdl-config!${SDL_CONFIG}!' \
+	@${REINPLACE_CMD} -i '' -e 's!CFLAGS=-Wall -O2!CFLAGS+=-Wall!; \
+			s!sdl-config!${SDL_CONFIG}!' \
 		${WRKSRC}/Makefile
-	@${PERL} -pi -e 's!spark%d.png!${DATADIR}/spark%d.png!' \
+	@${REINPLACE_CMD} -i '' -e 's!spark%d.png!${DATADIR}/spark%d.png!' \
 		${WRKSRC}/explosions.c
 
 do-install:
