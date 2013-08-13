@@ -1,5 +1,5 @@
 # Created by:	Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Data-Diver/Makefile,v 1.1 2012/11/26 22:51:05 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Diver/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Data-Diver
 PORTVERSION=	1.0101
@@ -11,7 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple, ad-hoc access to elements of deeply nested structures
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Diver.3
 
