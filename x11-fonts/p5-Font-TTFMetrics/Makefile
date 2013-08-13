@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Font-TTFMetrics
-# Date created:				18 Mar 2007
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-fonts/p5-Font-TTFMetrics/Makefile,v 1.5 2012/11/17 06:03:29 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: x11-fonts/p5-Font-TTFMetrics/Makefile 324166 2013-08-02 16:55:05Z az $
 
 PORTNAME=	Font-TTFMetrics
 PORTVERSION=	0.1
@@ -16,6 +12,7 @@ COMMENT=	A parser for the TTF file
 
 MAN3=	Font::TTFMetrics.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
