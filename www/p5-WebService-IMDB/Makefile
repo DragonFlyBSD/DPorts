@@ -2,7 +2,7 @@
 # Date created:		2011-06-13
 # Whom:			Christopher Key <cjk32@cam.ac.uk>
 #
-# $FreeBSD: ports/www/p5-WebService-IMDB/Makefile,v 1.4 2012/11/17 06:02:56 svnexp Exp $
+# $FreeBSD: www/p5-WebService-IMDB/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	WebService-IMDB
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-Cache-Cache>=0:${PORTSDIR}/devel/p5-Cache-Cache \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WebService::IMDB.3 \
 		WebService::IMDB::Birth.3 \
