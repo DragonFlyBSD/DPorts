@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Spread-Message
-# Date created:				12 Jun 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-Spread-Message/Makefile,v 1.9 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: net/p5-Spread-Message/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Spread-Message
 PORTVERSION=	0.21
@@ -20,6 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Spread::Message.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
