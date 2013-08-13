@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WWW-Myspace/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-WWW-Myspace/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-Myspace
 PORTVERSION=	0.92
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Config-General>=0:${PORTSDIR}/devel/p5-Config-General \
 		p5-YAML>=0.39:${PORTSDIR}/textproc/p5-YAML \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		approve_friends.1 comment_myspace.1 \
 		message_group.1
