@@ -1,9 +1,5 @@
-# New ports collection makefile for:    husky-bsopack
-# Date created:                         6 January 2003
-# Whom:                                 Max Khon
-#
-# $FreeBSD: news/husky-bsopack/Makefile 317723 2013-05-09 06:59:06Z fjoe $
-#
+# Created by: Max Khon
+# $FreeBSD: news/husky-bsopack/Makefile 322828 2013-07-12 12:28:43Z bapt $
 
 PORTNAME=	bsopack
 PORTVERSION=	0.2.4
@@ -21,6 +17,5 @@ MAN1=		bsopack.1
 MANCOMPRESSED=	yes
 INFO=		bsopack
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/news/husky-base/Makefile.inc"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../husky-base/Makefile.inc"
+.include <bsd.port.mk>
