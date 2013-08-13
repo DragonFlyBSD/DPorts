@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WordPress-XMLRPC
-# Date created:		2009-02-23
-# Whom:			bapt <baptiste.daroussin@gmail.com>
-#
-# $FreeBSD: ports/www/p5-WordPress-XMLRPC/Makefile,v 1.9 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: bapt <baptiste.daroussin@gmail.com>
+# $FreeBSD: www/p5-WordPress-XMLRPC/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WordPress-XMLRPC
 PORTVERSION=	1.23
@@ -17,7 +13,8 @@ COMMENT=	Perl 5 API to WordPress XML-RPC services
 
 BUILD_DEPENDS+=	p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		WordPress::XMLRPC.3
 PLIST_FILES=	%%SITE_PERL%%/WordPress/XMLRPC.pm \
 				%%SITE_PERL%%/WordPress/XMLRPC.pod \
