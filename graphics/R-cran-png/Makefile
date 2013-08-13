@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-png/Makefile 319904 2013-06-04 21:05:11Z tota $
+# $FreeBSD: graphics/R-cran-png/Makefile 324293 2013-08-05 21:24:18Z tota $
 
 PORTNAME=	png
-DISTVERSION=	0.1-5
+DISTVERSION=	0.1-6
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -11,6 +11,8 @@ COMMENT=	Read and write PNG images
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
+
+LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
