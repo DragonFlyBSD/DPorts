@@ -1,11 +1,12 @@
-# $FreeBSD: finance/trytond_account_stock_anglo_saxon/Makefile 318580 2013-05-20 08:00:57Z wen $
+# Created by: Matthias Petermann <matthias@petermann-it.de>
+# $FreeBSD: finance/trytond_account_stock_anglo_saxon/Makefile 324496 2013-08-10 13:03:31Z wg $
 
 PORTNAME=	trytond_account_stock_anglo_saxon
-PORTVERSION=	2.4.4
+PORTVERSION=	2.4.5
 CATEGORIES=	finance python
 MASTER_SITES=	http://downloads.tryton.org/${PORTVERSION:R}/
 
-MAINTAINER=	matthias@petermann.it
+MAINTAINER=	matthias@petermann-it.de
 COMMENT=	Tryton Application Platform (Account Stock Anglo Saxon Module)
 
 LICENSE=	GPLv3
