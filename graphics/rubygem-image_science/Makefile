@@ -1,12 +1,12 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: graphics/rubygem-image_science/Makefile 322811 2013-07-12 04:02:44Z swills $
+# $FreeBSD: graphics/rubygem-image_science/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	image_science
 PORTVERSION=	1.2.5
 CATEGORIES=	graphics rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby library that generates thumbnails
 
 RUN_DEPENDS=	rubygem-inline>=3.8.5:${PORTSDIR}/devel/rubygem-inline
