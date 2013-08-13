@@ -2,7 +2,7 @@
 # Date created:				Tue Nov 23 16:42:07 CET 2004
 # Whom:					Martijn Lina <martijn@pacno.net>
 #
-# $FreeBSD: ports/net-im/jabber-pymsn/Makefile,v 1.33 2012/11/17 06:00:27 svnexp Exp $
+# $FreeBSD: net-im/jabber-pymsn/Makefile 323776 2013-07-27 10:19:30Z marino $
 
 PORTNAME=	pymsn
 DISTVERSION=	0.11.3
@@ -17,6 +17,9 @@ DIST_SUBDIR=	jabber
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python MSN-Transport for Jabber
+
+DEPRECATED=	Primary MSN Messenger service terminated 30 APR 2013
+EXPIRATION_DATE=2013-10-31
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/OpenSSL/__init__.py:${PORTSDIR}/security/py-openssl \
 		${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging

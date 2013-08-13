@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-im/jabber-pymsn/files/jabber-pymsn-transport.in,v 1.2 2012/11/17 06:00:27 svnexp Exp $
+# $FreeBSD: net-im/jabber-pymsn/files/jabber-pymsn-transport.in 302141 2012-08-05 23:19:36Z dougb $
 #
 # PROVIDE: jabber_pymsn
 # REQUIRE: DAEMON %%JABBER_REQUIRE%%
