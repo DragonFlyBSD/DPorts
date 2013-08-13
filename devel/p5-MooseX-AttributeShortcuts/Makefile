@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-AttributeShortcuts/Makefile 314427 2013-03-17 12:30:41Z lth $
+# $FreeBSD: devel/p5-MooseX-AttributeShortcuts/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	MooseX-AttributeShortcuts
 PORTVERSION=	0.017
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	MooseX::AttributeShortcuts.3
 
