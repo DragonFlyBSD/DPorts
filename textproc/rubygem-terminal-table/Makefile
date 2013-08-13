@@ -1,12 +1,12 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: textproc/rubygem-terminal-table/Makefile 322892 2013-07-13 06:11:53Z swills $
+# $FreeBSD: textproc/rubygem-terminal-table/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	terminal-table
 PORTVERSION=	1.4.5
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Simple, feature rich ASCII table generation library
 
 USE_RUBY=		yes
