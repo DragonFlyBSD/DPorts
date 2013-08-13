@@ -2,7 +2,7 @@
 # Date created:		2007-11-22
 # Whom:			Masahiro Teramoto <markun@onohara.to>
 #
-# $FreeBSD: ports/net/p5-Net-GrowlClient/Makefile,v 1.6 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-GrowlClient/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Net-GrowlClient
@@ -20,11 +20,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Net::GrowlClient.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-Digest-SHA>=5.47:${PORTSDIR}/security/p5-Digest-SHA
-BUILD_DEPENDS+=	p5-Digest-SHA>=5.47:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
