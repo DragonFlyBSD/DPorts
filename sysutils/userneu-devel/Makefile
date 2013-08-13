@@ -2,7 +2,7 @@
 # Date created:		22 November 2003
 # Whom:			Andreas Fehlner (fehlner@gmx.de)
 #
-# $FreeBSD: ports/sysutils/userneu-devel/Makefile,v 1.14 2012/11/17 06:01:49 svnexp Exp $
+# $FreeBSD: sysutils/userneu-devel/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	userneu
@@ -36,10 +36,6 @@ PORTDOCS=	${LDOCS1} ${LDOCS2}
 EXAMPLES=	userlist userneu.conf.example
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500703
-RUN_DEPENDS+=	p5-Digest-MD5>=2.16:${PORTSDIR}/security/p5-Digest-MD5
-.endif
 
 do-install:
 	cd ${WRKSRC}/doc && ${INSTALL_MAN} ${MAN8} ${MANPREFIX}/man/man8
