@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-Template-Magic/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-Template-Magic/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Template-Magic
 PORTVERSION=	1.39
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-IO-Util>=0:${PORTSDIR}/devel/p5-IO-Util \
 		p5-HTML-TableTiler>=0:${PORTSDIR}/www/p5-HTML-TableTiler
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Template::Magic.3 \
 		Bundle::Template::Magic.3 \
