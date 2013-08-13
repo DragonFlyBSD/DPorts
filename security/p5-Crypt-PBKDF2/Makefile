@@ -1,5 +1,5 @@
 # Created by: Victor Popov <v.a.popov@gmail.com>
-# $FreeBSD: security/p5-Crypt-PBKDF2/Makefile 319026 2013-05-25 05:40:00Z az $
+# $FreeBSD: security/p5-Crypt-PBKDF2/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Crypt-PBKDF2
 PORTVERSION=	0.121930
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Digest-HMAC>=1.01:${PORTSDIR}/security/p5-Digest-HMAC \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::PBKDF2.3 \
 		Crypt::PBKDF2::Hash.3 \
