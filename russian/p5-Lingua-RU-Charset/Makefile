@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Lingua-RU-Charset
-# Date created:				December 28th 2000
-# Whom:	      				Alex Kapranoff <kapr@crosswinds.net>
-#
-# $FreeBSD: ports/russian/p5-Lingua-RU-Charset/Makefile,v 1.8 2012/11/17 06:00:56 svnexp Exp $
-#
+# Created by: Alex Kapranoff <kapr@crosswinds.net>
+# $FreeBSD: russian/p5-Lingua-RU-Charset/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Lingua-RU-Charset
 PORTVERSION=	0.02
@@ -12,9 +8,10 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Perl extension for detecting and converting various Russian character sets
+COMMENT=	Perl extension for detecting and converting Russian character sets
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Lingua::RU::Charset.3
 
