@@ -1,9 +1,5 @@
-# New ports collection makefile for:	schwobifyer
-# Date created:				30 Jul 2005
-# Whom:					Emanuel Haupt <ehaupt@critical.ch>
-#
-# $FreeBSD: ports/german/schwobifyer/Makefile,v 1.9 2012/11/17 05:58:00 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@critical.ch>
+# $FreeBSD: german/schwobifyer/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
 
 PORTNAME=	schwobifyer
 PORTVERSION=	20050730
