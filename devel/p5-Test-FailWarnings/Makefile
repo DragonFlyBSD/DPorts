@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-FailWarnings/Makefile 318278 2013-05-16 07:43:44Z culot $
+# $FreeBSD: devel/p5-Test-FailWarnings/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-FailWarnings
 PORTVERSION=	0.005
@@ -16,7 +16,8 @@ LICENSE=	AL2
 BUILD_DEPENDS=	p5-Capture-Tiny>=0.21:${PORTSDIR}/devel/p5-Capture-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::FailWarnings.3
 
