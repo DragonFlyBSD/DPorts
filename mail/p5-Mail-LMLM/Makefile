@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mail-LMLM
-# Date created:		2007-03-17
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/mail/p5-Mail-LMLM/Makefile,v 1.6 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: mail/p5-Mail-LMLM/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-LMLM
 PORTVERSION=	0.6802
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	List of Mailing Lists Manager
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::LMLM.3 Mail::LMLM::Object.3 Mail::LMLM::Render.3 \
 		Mail::LMLM::Render::HTML.3 Mail::LMLM::Types::Base.3 \
