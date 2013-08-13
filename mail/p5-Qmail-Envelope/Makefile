@@ -2,7 +2,7 @@
 # Date created:				1 November 2004
 # Whom:	      				Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Qmail-Envelope/Makefile,v 1.7 2012/11/17 05:59:09 svnexp Exp $
+# $FreeBSD: mail/p5-Qmail-Envelope/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Qmail-Envelope
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Examine and modify qmail envelope strings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Qmail::Envelope.3
 
