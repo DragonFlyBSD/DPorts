@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: mail/p5-Net-SMTP-Server/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: mail/p5-Net-SMTP-Server/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-SMTP-Server
 PORTVERSION=	1.1
@@ -16,7 +16,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MASTER_SITE_BACKUP+=	http://www.macgyver.org/software/perl/
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SMTP::Server.3 \
 		Net::SMTP::Server::Client.3 \
