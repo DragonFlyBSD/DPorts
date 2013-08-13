@@ -2,7 +2,7 @@
 # Date created:					8 Jan 2002
 # Whom:						dom@happygiraffe.net
 #
-# $FreeBSD: ports/devel/p5-Time-Object/Makefile,v 1.10 2012/11/17 05:56:35 svnexp Exp $
+# $FreeBSD: devel/p5-Time-Object/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Time-Object
@@ -17,6 +17,7 @@ COMMENT=	A Perl OO interface to time and dates
 
 MAN3=		Time::Object.3 Time::Seconds.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
