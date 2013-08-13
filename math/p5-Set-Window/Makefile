@@ -1,9 +1,5 @@
-# New ports collection makefile for:	math/p5-Set-Window
-# Date created:				03 January 2001
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/math/p5-Set-Window/Makefile,v 1.8 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: math/p5-Set-Window/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Set-Window
 PORTVERSION=	1.01
@@ -14,11 +10,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl module to manage an interval on the integer line
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Set::Window.3
 
 post-patch:
-	${PERL} -pi -e '$$_="" if /use 5/;' ${WRKSRC}/Window.pm
+	@${REINPLACE_CMD} -i '' '/use 5/d' ${WRKSRC}/Window.pm
 
 .include <bsd.port.mk>
