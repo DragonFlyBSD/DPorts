@@ -2,7 +2,7 @@
 # Date created:				07 Nov 2009
 # Whom:					Sahil Tandon <sahil@tandon.net>
 #
-# $FreeBSD: ports/net/p5-AnyEvent-Twitter/Makefile,v 1.9 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-AnyEvent-Twitter/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	AnyEvent-Twitter
@@ -26,10 +26,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		AnyEvent::Twitter.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-RUN_DEPENDS+=	p5-Digest-SHA>=5.47:${PORTSDIR}/security/p5-Digest-SHA
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
