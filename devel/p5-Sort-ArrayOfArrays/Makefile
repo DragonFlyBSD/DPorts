@@ -2,7 +2,7 @@
 # Date created:				31 Dec 2001
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/devel/p5-Sort-ArrayOfArrays/Makefile,v 1.6 2012/11/17 05:56:29 svnexp Exp $
+# $FreeBSD: devel/p5-Sort-ArrayOfArrays/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Sort-ArrayOfArrays
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sort an arbitrary array of arrays
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sort::ArrayOfArrays.3
 
