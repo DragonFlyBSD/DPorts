@@ -2,7 +2,7 @@
 # Date created:				August 18th 2004
 # Whom:	      				Alex Kapranoff <alex@kapranoff.ru>
 #
-# $FreeBSD: ports/devel/p5-Devel-StealthDebug/Makefile,v 1.6 2012/11/17 05:56:14 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-StealthDebug/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Devel-StealthDebug
@@ -17,7 +17,8 @@ COMMENT=	Simple non-intrusive debug module
 BUILD_DEPENDS=	p5-Filter-Simple>=0:${PORTSDIR}/textproc/p5-Filter-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
 MAN3=		Devel::StealthDebug.3
