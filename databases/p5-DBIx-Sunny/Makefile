@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Sunny/Makefile 315670 2013-04-02 11:00:04Z miwi $
+# $FreeBSD: databases/p5-DBIx-Sunny/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Sunny
 PORTVERSION=	0.21
@@ -24,7 +24,8 @@ TEST_DEPENDS=	p5-DBD-SQLite>=1.31:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
     		p5-Capture-Tiny>=0:${PORTSDIR}/devel/p5-Capture-Tiny
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		DBIx::Sunny.3 \
 		DBIx::Sunny::Schema.3
