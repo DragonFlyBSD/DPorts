@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::SAX::Simple
-# Date created:		21 Nov 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-XML-SAX-Simple/Makefile,v 1.8 2012/11/17 06:02:13 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-XML-SAX-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-SAX-Simple
 PORTVERSION=	0.02
@@ -19,7 +15,8 @@ RUN_DEPENDS=	p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX \
 		p5-XML-Handler-Trees>=0:${PORTSDIR}/textproc/p5-XML-Handler-Trees
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::SAX::Simple.3
 
