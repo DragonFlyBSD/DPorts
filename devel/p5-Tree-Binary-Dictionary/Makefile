@@ -2,7 +2,7 @@
 # Date created:				24 May 2006
 # Whom:					Aaron Dalton <aaron@daltons.ca>
 #
-# $FreeBSD: ports/devel/p5-Tree-Binary-Dictionary/Makefile,v 1.8 2012/11/17 05:56:35 svnexp Exp $
+# $FreeBSD: devel/p5-Tree-Binary-Dictionary/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Tree-Binary-Dictionary
@@ -19,6 +19,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 MAN3=		Tree::Binary::Dictionary.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
