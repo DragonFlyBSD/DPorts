@@ -2,7 +2,7 @@
 # Date created:				18 Feb 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-RandomResults/Makefile,v 1.6 2012/11/17 05:56:33 svnexp Exp $
+# $FreeBSD: devel/p5-Test-RandomResults/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Test-RandomResults
@@ -17,6 +17,7 @@ COMMENT=	Test non-deterministic functions
 
 MAN3=	Test::RandomResults.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
