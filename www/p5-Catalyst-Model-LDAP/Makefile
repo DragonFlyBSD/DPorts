@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Catalyst-Model-LDAP
-# Date created:		2008-06-30
-# Whom:			Andrej Zverev <az@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Model-LDAP/Makefile,v 1.10 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: Andrej Zverev <az@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Model-LDAP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Model-LDAP
 PORTVERSION=	0.17
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-Catalyst-Runtime>=5.7:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Model::LDAP::Entry.3 Catalyst::Model::LDAP::Search.3 \
 	Catalyst::Helper::Model::LDAP.3 Catalyst::Model::LDAP::Connection.3 \
