@@ -1,9 +1,5 @@
-# Ports collection makefile for:	devel-p5-File-Pid-Quick
-# Date created:				03 April 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/devel/p5-File-Pid-Quick/Makefile,v 1.4 2012/11/17 05:56:16 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: devel/p5-File-Pid-Quick/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=		File-Pid-Quick
 PORTVERSION=		1.02
@@ -12,10 +8,11 @@ MASTER_SITES=		CPAN
 MASTER_SITE_SUBDIR=	File
 PKGNAMEPREFIX=		p5-
 
-MAINTAINER=		freebsdports@chillibear.com
+MAINTAINER=		ports@FreeBSD.org
 COMMENT=		Associates a PID file with your script
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	File::Pid::Quick.3
 
