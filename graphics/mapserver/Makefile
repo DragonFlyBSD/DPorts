@@ -1,9 +1,9 @@
 # Created by: Douglas K. Rand <rand@meridian-enviro.com>
-# $FreeBSD: graphics/mapserver/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: graphics/mapserver/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=		mapserver
-PORTVERSION=		6.2.0
-PORTREVISION=		2
+PORTVERSION=		6.2.1
+PORTREVISION=		1
 CATEGORIES=		graphics www geography
 MASTER_SITES=		http://download.osgeo.org/mapserver/
 
@@ -173,6 +173,8 @@ PROG_FILES=		legend scalebar shp2img shptree shptreetst shptreevis \
 			sortshp msencrypt tile4ms
 
 post-patch:
+	# fix broken version check for libgd
+	${REINPLACE_CMD} -e 's#-lt 28#-lt 0#' ${WRKSRC}/configure
 .if ${PORT_OPTIONS:MMING}
 	${REINPLACE_CMD} -e 's#with_ming/include#with_ming/include/ming#g' \
 		${WRKSRC}/configure
@@ -187,11 +189,11 @@ do-install:
 .for f in ${PROG_FILES}
 	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${PREFIX}/bin
 .endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/.libs/libmapserver-6.2.0.so ${PREFIX}/lib
+	${INSTALL_PROGRAM} ${WRKSRC}/.libs/libmapserver-${PORTVERSION}.so ${PREFIX}/lib
 
 .if ${PORT_OPTIONS:MMAPSERV}
 	${MKDIR} ${LOCALBASE}/www/apache${APACHE_VERSION}/cgi-bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/mapserv ${LOCALBASE}/www/apache${APACHE_VERSION}/cgi-bin/mapserv
+	${INSTALL_SCRIPT} ${WRKSRC}/.libs/mapserv ${LOCALBASE}/www/apache${APACHE_VERSION}/cgi-bin/mapserv
 .endif
 
 .if ${PORT_OPTIONS:MPHP}
