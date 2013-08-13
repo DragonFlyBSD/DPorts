@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML-Compile-SOAP-AnyEvent
-# Date created:	   12 Jan 2011
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/net/p5-XML-Compile-SOAP-AnyEvent/Makefile,v 1.4 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: net/p5-XML-Compile-SOAP-AnyEvent/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Compile-SOAP-AnyEvent
 PORTVERSION=	0.01
@@ -22,7 +18,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Compile::Transfer::SOAPHTTP_AnyEvent.3
 
