@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: graphics/claraocr/Makefile 317596 2013-05-07 10:00:57Z ehaupt $
+# $FreeBSD: graphics/claraocr/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	claraocr
 PORTVERSION=	20031214
@@ -14,9 +14,8 @@ COMMENT=	Optical character recognition (OCR) utility
 
 RUN_DEPENDS=	pnmenlarge:${PORTSDIR}/graphics/netpbm
 
-USES=		shebangfix
+USES=		shebangfix perl5
 USE_XORG=	x11
-USE_PERL5=	yes
 MAKE_ENV=	MKDIR="${MKDIR}"
 MAKE_JOBS_SAFE=	yes
 
