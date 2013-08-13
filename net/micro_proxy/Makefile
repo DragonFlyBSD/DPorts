@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net/micro_proxy/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: net/micro_proxy/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	micro_proxy
 PORTVERSION=	20021030
@@ -10,8 +10,6 @@ DISTNAME=	${PORTNAME}_30oct2002
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Really small HTTP/HTTPS proxy
-
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	libexec/micro_proxy
