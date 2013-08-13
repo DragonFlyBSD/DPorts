@@ -2,7 +2,7 @@
 # Date created:		28 March 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/www/xpi-adblock/Makefile,v 1.11 2012/11/17 06:03:11 svnexp Exp $
+# $FreeBSD: www/xpi-adblock/Makefile 300897 2012-07-14 14:29:18Z beat $
 #
 
 PORTNAME=	adblock
