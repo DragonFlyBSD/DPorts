@@ -1,11 +1,12 @@
-# $FreeBSD: finance/trytond_project_plan/Makefile 318520 2013-05-19 12:51:48Z wen $
+# Created by: Matthias Petermann <matthias@petermann-it.de>
+# $FreeBSD: finance/trytond_project_plan/Makefile 324507 2013-08-10 13:27:30Z wg $
 
 PORTNAME=	trytond_project_plan
-PORTVERSION=	2.4.1
+PORTVERSION=	2.4.2
 CATEGORIES=	finance python
 MASTER_SITES=	http://downloads.tryton.org/${PORTVERSION:R}/
 
-MAINTAINER=	matthias@petermann.it
+MAINTAINER=	matthias@petermann-it.de
 COMMENT=	Tryton Application Platform (Project Plan Module)
 
 LICENSE=	GPLv3
