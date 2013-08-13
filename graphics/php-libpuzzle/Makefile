@@ -2,11 +2,12 @@
 # Date created:				18 May 2010
 # Whom:					Naram Qashat <cyberbotx@cyberbotx.com>
 #
-# $FreeBSD: ports/graphics/php-libpuzzle/Makefile,v 1.2 2012/11/17 05:58:18 svnexp Exp $
+# $FreeBSD: graphics/php-libpuzzle/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	libpuzzle
 PORTVERSION=	0.11
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.pureftpd.org/pub/pure-ftpd/misc/libpuzzle/release/ \
 		ftp://ftp.pureftpd.org/pub/pure-ftpd/misc/libpuzzle/releases/
@@ -16,7 +17,7 @@ MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	PHP extension for Puzzle library to find similar pictures
 
 LIB_DEPENDS=	puzzle.1:${PORTSDIR}/graphics/libpuzzle \
-		gd.4:${PORTSDIR}/graphics/gd
+		gd:${PORTSDIR}/graphics/gd
 
 LICENSE=	BSD
 LICENSE_FILES=	${WRKSRC}/COPYING
