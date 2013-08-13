@@ -2,7 +2,7 @@
 # Date created:				April 03 2001
 # Whom:	      				vanilla
 #
-# $FreeBSD: ports/www/p5-Apache-Session-SharedMem/Makefile,v 1.13 2012/11/17 06:02:44 svnexp Exp $
+# $FreeBSD: www/p5-Apache-Session-SharedMem/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Apache-Session-SharedMem
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-IPC-Cache>=0:${PORTSDIR}/devel/p5-IPC-Cache \
 		p5-Apache-Session>=0:${PORTSDIR}/www/p5-Apache-Session
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Apache::Session::Store::SharedMem.3 \
 		Apache::Session::SharedMem.3
