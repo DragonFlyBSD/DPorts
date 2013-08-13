@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Inline/Makefile 318288 2013-05-16 08:53:54Z culot $
+# $FreeBSD: devel/p5-Test-Inline/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Inline
 PORTVERSION=	2.213
@@ -27,7 +27,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 BUILD_DEPENDS+=	p5-Test-ClassAPI>=1.02:${PORTSDIR}/devel/p5-Test-ClassAPI \
 		p5-Test-Script>=1.02:${PORTSDIR}/devel/p5-Test-Script
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	inline2test.1
 MAN3=	Test::Inline.3 \
