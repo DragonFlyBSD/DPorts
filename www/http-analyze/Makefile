@@ -1,8 +1,9 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: www/http-analyze/Makefile 315053 2013-03-23 17:54:23Z miwi $
+# $FreeBSD: www/http-analyze/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	http-analyze
 PORTVERSION=	2.4.4
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.rent-a-guru.de/pub/
 DIST_SUBDIR=	${PORTNAME}
