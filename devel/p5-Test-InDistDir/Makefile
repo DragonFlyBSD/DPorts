@@ -2,7 +2,7 @@
 # Date created:				05 October 2011
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-InDistDir/Makefile,v 1.4 2012/11/17 05:56:32 svnexp Exp $
+# $FreeBSD: devel/p5-Test-InDistDir/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-InDistDir
@@ -15,7 +15,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Test environment setup for development with IDE
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::InDistDir.3
 
