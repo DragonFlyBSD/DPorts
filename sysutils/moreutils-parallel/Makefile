@@ -1,8 +1,8 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: sysutils/moreutils-parallel/Makefile 319121 2013-05-26 16:31:15Z eadler $
+# $FreeBSD: sysutils/moreutils-parallel/Makefile 324098 2013-08-01 09:16:04Z koobs $
 
 PORTNAME=	moreutils-parallel
-PORTVERSION=	0.48
+PORTVERSION=	0.49
 CATEGORIES=	sysutils
 MASTER_SITES=	DEBIAN
 MASTER_SITE_SUBDIR=	pool/main/m/moreutils
@@ -20,8 +20,6 @@ WRKSRC=		${WRKDIR}/moreutils
 MAN1=		parallel.1
 MANCOMPRESSED=	no
 PLIST_FILES=	bin/parallel
-
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	${CP} ${FILESDIR}/parallel.1 ${WRKSRC}/
