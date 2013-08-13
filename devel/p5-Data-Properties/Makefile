@@ -2,7 +2,7 @@
 # Date created:		26 March 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/p5-Data-Properties/Makefile,v 1.5 2012/11/17 05:56:10 svnexp Exp $
+# $FreeBSD: devel/p5-Data-Properties/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Data-Properties
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Data::Properties - persistent properties
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Data::Properties.3
 
