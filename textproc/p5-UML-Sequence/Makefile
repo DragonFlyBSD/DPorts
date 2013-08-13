@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-UML-Sequence/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-UML-Sequence/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	UML-Sequence
 PORTVERSION=	0.08
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-XML-DOM>=1.25:${PORTSDIR}/textproc/p5-XML-DOM \
 		p5-GD>=2.30:${PORTSDIR}/graphics/p5-GD \
 		p5-GD-TextUtil>=0.86:${PORTSDIR}/graphics/p5-GD-TextUtil
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		seq2svg.pl.1 genericseq.pl.1 seq2rast.pl.1
 MAN3=	Devel::CallSeq.3 Devel::OOCallSeq.3 \
