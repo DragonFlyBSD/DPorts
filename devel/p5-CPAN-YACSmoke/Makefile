@@ -2,7 +2,7 @@
 # Date created:				3 March 2005
 # Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
 #
-# $FreeBSD: devel/p5-CPAN-YACSmoke/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: devel/p5-CPAN-YACSmoke/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	CPAN-YACSmoke
@@ -24,7 +24,8 @@ RUN_DEPENDS=	p5-Config-IniFiles>=0:${PORTSDIR}/devel/p5-Config-IniFiles \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CPAN::YACSmoke.3 \
 		CPAN::YACSmoke::Plugin::SmokeDB.3 \
