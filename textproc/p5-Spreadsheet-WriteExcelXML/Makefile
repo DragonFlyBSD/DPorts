@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Spreadsheet-WriteExcelXML/Makefile,v 1.12 2012/12/16 16:03:37 svnexp Exp $
+# $FreeBSD: textproc/p5-Spreadsheet-WriteExcelXML/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Spreadsheet-WriteExcelXML
 PORTVERSION=	0.14
@@ -14,7 +14,8 @@ COMMENT=	Create an Excel file in XML format
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Spreadsheet::WriteExcelXML.3 \
 		Spreadsheet::WriteExcelXML::Format.3 \
