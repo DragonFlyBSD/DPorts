@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-binplist/Makefile 322089 2013-06-30 14:51:11Z antoine $
+# $FreeBSD: devel/py-binplist/Makefile 324448 2013-08-09 16:02:28Z antoine $
 
 PORTNAME=	binplist
-PORTVERSION=	0.1.1
+PORTVERSION=	0.1.3
 CATEGORIES=	devel python
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
