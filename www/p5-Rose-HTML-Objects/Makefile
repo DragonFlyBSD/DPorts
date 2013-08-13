@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/p5-Rose-HTML-Objects/Makefile 315842 2013-04-16 16:30:13Z sunpoet $
+# $FreeBSD: www/p5-Rose-HTML-Objects/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Rose-HTML-Objects
 PORTVERSION=	0.618
@@ -29,7 +29,8 @@ TEST_DEPENDS=	p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle
 
 PORTSCOUT=	skipv:0.6061
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Rose::HTML::Anchor.3 \
 		Rose::HTML::Form.3 \
