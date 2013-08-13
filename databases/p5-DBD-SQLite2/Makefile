@@ -1,5 +1,5 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: databases/p5-DBD-SQLite2/Makefile 320488 2013-06-10 15:32:29Z jadawin $
+# $FreeBSD: databases/p5-DBD-SQLite2/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBD-SQLite2
 PORTVERSION=	0.36
@@ -13,7 +13,8 @@ COMMENT=	Provides access to SQLite2 databases through the DBI
 BUILD_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBD::SQLite2.3
 
