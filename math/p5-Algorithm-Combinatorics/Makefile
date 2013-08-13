@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Algorithm-Combinatorics
-# Date created:				05 Nov 2005
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Algorithm-Combinatorics/Makefile,v 1.16 2012/11/17 05:59:25 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Algorithm-Combinatorics/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Algorithm-Combinatorics
 PORTVERSION=	0.27
@@ -20,6 +16,7 @@ LICENSE_COMB=	dual
 
 MAN3=		Algorithm::Combinatorics.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
