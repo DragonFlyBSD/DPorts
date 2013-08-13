@@ -2,7 +2,7 @@
 # Date created:				26 April 2007
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-JSON/Makefile,v 1.9 2012/11/17 05:56:32 svnexp Exp $
+# $FreeBSD: devel/p5-Test-JSON/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-JSON
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-Test-Differences>=0.47:${PORTSDIR}/devel/p5-Test-Differences \
 		p5-JSON-Any>=1.20:${PORTSDIR}/converters/p5-JSON-Any
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::JSON.3
 
