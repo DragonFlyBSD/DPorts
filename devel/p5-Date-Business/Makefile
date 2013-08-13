@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Date-Business
-# Date created:				Aug 05, 2011
-# Whom:						Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/devel/p5-Date-Business/Makefile,v 1.2 2012/11/17 05:56:11 svnexp Exp $
-
+# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
+# $FreeBSD: devel/p5-Date-Business/Makefile 324174 2013-08-02 18:52:07Z mat $
 PORTNAME=	Date-Business
 PORTVERSION=	1.2
 CATEGORIES=	devel perl5
@@ -13,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Fast calendar and business date calculations
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Date::Business.3
 
