@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Git-PurePerl/Makefile 320075 2013-06-06 10:13:30Z mat $
+# $FreeBSD: devel/p5-Git-PurePerl/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Git-PurePerl
 PORTVERSION=	0.48
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-Archive-Extract>=0:${PORTSDIR}/archivers/p5-Archive-Extract \
 		p5-IO-Digest>0:${PORTSDIR}/devel/p5-IO-Digest
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Git::PurePerl.3
 
