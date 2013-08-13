@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-BIND-Conf_Parser
-# Date created:				2002/06/18
-# Whom:					andrew@ugh.net.au
-#
-# $FreeBSD: ports/dns/p5-BIND-Conf_Parser/Makefile,v 1.8 2012/11/17 05:57:09 svnexp Exp $
-#
+# Created by: andrew@ugh.net.au
+# $FreeBSD: dns/p5-BIND-Conf_Parser/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	BIND-Conf_Parser
 PORTVERSION=	0.95
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to parse BIND 8 configuration files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	BIND::Conf_Parser.3
 
