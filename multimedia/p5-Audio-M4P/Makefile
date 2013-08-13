@@ -2,7 +2,7 @@
 # Date created:		2009-01-19
 # Whom:			Christopher Key <cjk32@cam.ac.uk>
 #
-# $FreeBSD: multimedia/p5-Audio-M4P/Makefile 302967 2012-08-22 21:42:37Z linimon $
+# $FreeBSD: multimedia/p5-Audio-M4P/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Audio-M4P
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Crypt-Rijndael>=0:${PORTSDIR}/security/p5-Crypt-Rijndael \
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Audio::M4P.3 \
 		Audio::M4P::Atom.3 \
