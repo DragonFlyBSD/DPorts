@@ -2,7 +2,7 @@
 # Date created:				5 November 2004
 # Whom:	      				Peter Pentchev <roam@FreeBSD.org>
 #
-# $FreeBSD: dns/p5-Stanford-DNSserver/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: dns/p5-Stanford-DNSserver/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Stanford-DNSserver
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A DNS name server framework with a Perl backend
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Stanford::DNS.3 Stanford::DNSserver.3
 
