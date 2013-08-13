@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-POE-Component-Client-MSN
-# Date created:				2007/02/14
-# Whom:					chinsan
-#
-# $FreeBSD: ports/net-im/p5-POE-Component-Client-MSN/Makefile,v 1.7 2012/11/17 06:00:28 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: net-im/p5-POE-Component-Client-MSN/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Client-MSN
 PORTVERSION=	0.03
@@ -15,6 +11,9 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	POE Component for MSN Messenger
 
+DEPRECATED=	Primary MSN Messenger service terminated 30 APR 2013
+EXPIRATION_DATE=2013-10-31
+
 BUILD_DEPENDS=	p5-Mail-Tools>=0:${PORTSDIR}/mail/p5-Mail-Tools \
 		p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-POE-Component-Client-HTTP>=0:${PORTSDIR}/www/p5-POE-Component-Client-HTTP \
@@ -25,6 +24,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=		POE::Component::Client::MSN.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
