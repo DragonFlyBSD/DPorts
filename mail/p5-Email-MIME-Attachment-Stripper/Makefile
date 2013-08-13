@@ -2,7 +2,7 @@
 # Date created:				2004-08-30
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Email-MIME-Attachment-Stripper/Makefile,v 1.13 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-Email-MIME-Attachment-Stripper/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Email-MIME-Attachment-Stripper
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Email-MIME>=1.861:${PORTSDIR}/mail/p5-Email-MIME \
 		p5-Email-MIME-ContentType>=1.0:${PORTSDIR}/mail/p5-Email-MIME-ContentType
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Email::MIME::Attachment::Stripper.3
 
