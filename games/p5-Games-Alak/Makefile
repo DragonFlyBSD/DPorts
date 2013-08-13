@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Games-Alak
-# Date created:		2006-08-28
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/games/p5-Games-Alak/Makefile,v 1.5 2012/11/17 05:57:48 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: games/p5-Games-Alak/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Games-Alak
 PORTVERSION=	0.19
@@ -17,7 +13,8 @@ COMMENT=	Simple game-tree implementation of a gomoku-like game
 TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Games::Alak.3
 
