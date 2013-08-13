@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Devel-KYTProf/Makefile 313351 2013-03-03 14:43:23Z kuriyama $
+# $FreeBSD: devel/p5-Devel-KYTProf/Makefile 324498 2013-08-10 13:18:44Z kuriyama $
 
 PORTNAME=	Devel-KYTProf
-PORTVERSION=	0.04
+PORTVERSION=	0.05
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,7 +15,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-DBI>0:${PORTSDIR}/databases/p5-DBI \
 		p5-DBD-SQLite>0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USES=	perl5
+USE_PERL5=	configure
 
 MAN3=	Devel::KYTProf.3 \
 	Devel::KYTProf::Logger::LTSV.3 \
