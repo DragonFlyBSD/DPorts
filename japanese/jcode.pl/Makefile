@@ -2,7 +2,7 @@
 # Date created:		20 February 1998
 # Whom:			sada
 #
-# $FreeBSD: ports/japanese/jcode.pl/Makefile,v 1.14 2012/11/17 05:58:35 svnexp Exp $
+# $FreeBSD: japanese/jcode.pl/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=	jcode.pl
@@ -16,7 +16,8 @@ EXTRACT_SUFX=	# none
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl library for Japanese character code conversion
 
-USE_PERL5_RUN=		yes
+USES=			perl5
+USE_PERL5=		run
 NO_WRKSUBDIR=		yes
 NO_BUILD=		yes
 EXTRACT_CMD=		${CP}
