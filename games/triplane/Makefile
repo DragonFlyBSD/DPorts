@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/triplane/Makefile 315938 2013-04-17 07:11:47Z martymac $
+# $FreeBSD: games/triplane/Makefile 323733 2013-07-26 15:16:14Z danfe $
 
 PORTNAME=	triplane
 PORTVERSION=	1.08.r20130224
@@ -13,15 +13,17 @@ COMMENT=	Port of the original Triplane Turmoil game
 
 LICENSE=	GPLv3
 
+USES=		gmake
 USE_SDL=	sdl mixer
-USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 CFLAGS+=	-DTRIPLANE_DATA=\\\"${DATADIR}\\\"
 MAKE_ENV=	DATADIR="${DATADIR}"
 
-ALL_TARGET=	depend all
+MAN6=		triplane.6
 
-MAN6=	triplane.6
+# ALL_TARGET="depend all" would not work in -jX case due to races
+pre-build:
+	${GMAKE} -C ${BUILD_WRKSRC} depend
 
 .include <bsd.port.mk>
