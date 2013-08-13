@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: ports/textproc/p5-Text-Ngrams/Makefile,v 1.15 2012/12/16 15:55:36 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Ngrams/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Ngrams
 PORTVERSION=	2.003
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 modules for Flexible Ngram analysis
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		ngrams.pl.1
 MAN3=		Text::Ngrams.3
