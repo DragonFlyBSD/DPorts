@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ports/print/p5-PostScript-PPD/Makefile,v 1.6 2012/12/14 08:26:28 svnexp Exp $
+# $FreeBSD: print/p5-PostScript-PPD/Makefile 321510 2013-06-22 00:35:43Z sunpoet $
 
 PORTNAME=	PostScript-PPD
 PORTVERSION=	0.0205
@@ -20,14 +20,7 @@ PERL_CONFIGURE=	yes
 
 MAN3=		PostScript::PPD.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-IO-Compress>=2:${PORTSDIR}/archivers/p5-IO-Compress
-RUN_DEPENDS+=	p5-IO-Compress>=2:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e '/lj4515.ppd/d' ${WRKSRC}/t/30_difficult.t
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
