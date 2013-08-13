@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-SOAP-Amazon-S3/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-SOAP-Amazon-S3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SOAP-Amazon-S3
 PORTVERSION=	0.040.1
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-Time-Piece>=0:${PORTSDIR}/devel/p5-Time-Piece \
 		p5-XML-MyXML>=0:${PORTSDIR}/textproc/p5-XML-MyXML
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SOAP::Amazon::S3.3
 
