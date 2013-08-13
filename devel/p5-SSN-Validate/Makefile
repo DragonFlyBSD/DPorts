@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-SSN-Validate
-# Date created:        17 Jan 2006
-# Whom:                tiger <tiger@whitetigersd.com>
-#
-# $FreeBSD: ports/devel/p5-SSN-Validate/Makefile,v 1.11 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: tiger <tiger@whitetigersd.com>
+# $FreeBSD: devel/p5-SSN-Validate/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SSN-Validate
 PORTVERSION=	0.18
@@ -16,7 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to do SSN Validation
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SSN::Validate.3
 
