@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-FillInForm-ForceUTF8
-# Date created:		2007-06-05
-# Whom:			Tomoyuki Sakurai <cherry@trombik.org>
-#
-# $FreeBSD: ports/www/p5-HTML-FillInForm-ForceUTF8/Makefile,v 1.8 2012/11/17 06:02:49 svnexp Exp $
-#
+# Created by: Tomoyuki Sakurai <cherry@trombik.org>
+# $FreeBSD: www/p5-HTML-FillInForm-ForceUTF8/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-FillInForm-ForceUTF8
 PORTVERSION=	0.02
@@ -18,7 +14,8 @@ COMMENT=	FillInForm with UTF-8 encoding
 RUN_DEPENDS=	p5-HTML-FillInForm>0:${PORTSDIR}/www/p5-HTML-FillInForm
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTML::FillInForm::ForceUTF8.3
 
