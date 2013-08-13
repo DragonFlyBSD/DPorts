@@ -2,7 +2,7 @@
 # Date created:				31 Dec 2001
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/www/p5-FAQ-OMatic/Makefile,v 1.7 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-FAQ-OMatic/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	FAQ-OMatic
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl API to manipulate FAQ-O-Matics
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		FAQ::OMatic::API.3
 
