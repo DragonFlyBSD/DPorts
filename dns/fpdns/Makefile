@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: dns/fpdns/Makefile 321133 2013-06-17 15:29:25Z miwi $
+# $FreeBSD: dns/fpdns/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	fpdns
 PORTVERSION=	0.10.0.${GH_TAGNAME}
@@ -19,7 +19,8 @@ GH_ACCOUNT=	kirei
 GH_COMMIT=	23eb0bf
 GH_TAGNAME=	20130404
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		fpdns.1
 
