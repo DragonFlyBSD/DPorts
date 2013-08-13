@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-JSON-RPC-Dispatcher/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-JSON-RPC-Dispatcher/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	JSON-RPC-Dispatcher
 PORTVERSION=	0.0506
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-JSON>=2.16:${PORTSDIR}/converters/p5-JSON \
 		p5-Plack>=0.9913:${PORTSDIR}/www/p5-Plack
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		JSON::RPC::Dispatcher.3 \
 		JSON::RPC::Dispatcher::App.3 \
