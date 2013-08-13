@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: devel/p5-Cache-LRU/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Cache-LRU/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Cache-LRU
 PORTVERSION=	0.03
@@ -13,7 +13,8 @@ COMMENT=	Simple, fast implementation of an in-memory LRU cache
 
 TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Cache::LRU.3
 
