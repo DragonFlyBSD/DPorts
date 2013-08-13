@@ -2,7 +2,7 @@
 # Date created:				Sat Jan 31 10:41:28 EST 2004
 # Whom:					Christopher Nehren <apeiron@comcast.net>
 #
-# $FreeBSD: ports/devel/p5-Shell-Base/Makefile,v 1.10 2012/11/17 05:56:29 svnexp Exp $
+# $FreeBSD: devel/p5-Shell-Base/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Shell-Base
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Term-Size>=0:${PORTSDIR}/devel/p5-Term-Size \
 		p5-Text-Shellwords>=0:${PORTSDIR}/textproc/p5-Text-Shellwords
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Shell::Base.3
 
