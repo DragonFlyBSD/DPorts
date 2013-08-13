@@ -2,7 +2,7 @@
 # Date created:				02 January 2008
 # Whom:					Tuc <freebsd-ports@t-b-o-h.net>
 #
-# $FreeBSD: ports/www/p5-Data-Validate-URI/Makefile,v 1.6 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Data-Validate-URI/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Data-Validate-URI
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Data-Validate-Domain>=0:${PORTSDIR}/dns/p5-Data-Validate-Domai
 RUN_DEPENDS=	p5-Data-Validate-Domain>=0:${PORTSDIR}/dns/p5-Data-Validate-Domain \
 		p5-Data-Validate-IP>=0:${PORTSDIR}/net-mgmt/p5-Data-Validate-IP
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Data::Validate::URI.3
 
