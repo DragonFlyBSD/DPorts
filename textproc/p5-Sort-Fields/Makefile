@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Sort-Fields
-# Date created:				01 January 2001
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/textproc/p5-Sort-Fields/Makefile,v 1.7 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: textproc/p5-Sort-Fields/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Sort-Fields
 PORTVERSION=	0.90
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl module to sort lines containing delimited fields
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sort::Fields.3
 
