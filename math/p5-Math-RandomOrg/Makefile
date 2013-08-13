@@ -2,7 +2,7 @@
 # Date created:				29 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: math/p5-Math-RandomOrg/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: math/p5-Math-RandomOrg/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Math-RandomOrg
@@ -20,6 +20,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Math::RandomOrg.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
