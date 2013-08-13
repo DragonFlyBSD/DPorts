@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Aggregate/Makefile 323105 2013-07-16 14:03:14Z culot $
+# $FreeBSD: devel/p5-Test-Aggregate/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Aggregate
 PORTVERSION=	0.366
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-Test-Most>=0.21:${PORTSDIR}/devel/p5-Test-Most \
 		p5-Test-NoWarnings>0:${PORTSDIR}/devel/p5-Test-NoWarnings \
 		p5-Test-Trap>0:${PORTSDIR}/devel/p5-Test-Trap
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::Aggregate.3 Test::Aggregate::Base.3 \
 	Test::Aggregate::Builder.3 Test::Aggregate::Nested.3
