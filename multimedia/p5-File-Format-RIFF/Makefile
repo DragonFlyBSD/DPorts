@@ -2,7 +2,7 @@
 # Date created:		23 July 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/p5-File-Format-RIFF/Makefile,v 1.6 2012/11/17 05:59:52 svnexp Exp $
+# $FreeBSD: multimedia/p5-File-Format-RIFF/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	File-Format-RIFF
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Read, manipulate, and write RIFF files
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Format::RIFF.3 \
 		File::Format::RIFF::Chunk.3 \
