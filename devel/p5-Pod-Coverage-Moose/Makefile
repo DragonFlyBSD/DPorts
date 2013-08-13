@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Pod-Coverage-Moose
-# Date created:				2008/08/30
-# Whom:					chinsan
-#
-# $FreeBSD: ports/devel/p5-Pod-Coverage-Moose/Makefile,v 1.11 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: devel/p5-Pod-Coverage-Moose/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Coverage-Moose
 PORTVERSION=	0.04
@@ -22,7 +18,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-MooseX-AttributeHelpers>=0:${PORTSDIR}/devel/p5-MooseX-AttributeHelpers
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Pod::Coverage::Moose.3
 
