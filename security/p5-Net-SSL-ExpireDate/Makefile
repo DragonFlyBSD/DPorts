@@ -1,5 +1,5 @@
 # Created by: Stephon Chen <stephon@gmail.com>
-# $FreeBSD: security/p5-Net-SSL-ExpireDate/Makefile 316909 2013-04-30 10:08:29Z tobez $
+# $FreeBSD: security/p5-Net-SSL-ExpireDate/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-SSL-ExpireDate
 PORTVERSION=	1.11
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate \
 		p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::SSL::ExpireDate.3
 
