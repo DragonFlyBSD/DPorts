@@ -2,7 +2,7 @@
 # Date created:				12 September 2001
 # Whom:					Tom Hukins <tom@FreeBSD.org>
 #
-# $FreeBSD: ports/ports-mgmt/p5-FreeBSD-Ports/Makefile,v 1.7 2012/11/17 06:00:45 svnexp Exp $
+# $FreeBSD: ports-mgmt/p5-FreeBSD-Ports/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	FreeBSD-Ports
@@ -17,7 +17,8 @@ COMMENT=	Perl modules for parsing FreeBSD's Ports INDEX file
 
 USE_BZIP2=	yes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		FreeBSD::Ports::Port.3 \
 		FreeBSD::Ports.3
 .include <bsd.port.mk>
