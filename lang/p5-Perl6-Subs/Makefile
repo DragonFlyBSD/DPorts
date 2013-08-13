@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lang/p5-Perl6-Subs
-# Date created:				07 January 2006
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/p5-Perl6-Subs/Makefile,v 1.8 2012/11/17 05:58:54 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: lang/p5-Perl6-Subs/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Perl6-Subs
 PORTVERSION=	0.05
@@ -18,7 +14,8 @@ COMMENT=	Perl6::Subs - Define your subroutines in the Perl 6 style
 BUILD_DEPENDS=	p5-Parse-RecDescent>=0:${PORTSDIR}/devel/p5-Parse-RecDescent
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Perl6::Subs.3
 
