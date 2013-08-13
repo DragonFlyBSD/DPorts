@@ -3,7 +3,7 @@
 # Date created:			May 25, 2005
 # Whom:				ijliao
 #
-# $FreeBSD: ports/www/p5-WebService-Technorati/Makefile,v 1.6 2012/11/17 06:02:56 svnexp Exp $
+# $FreeBSD: www/p5-WebService-Technorati/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	WebService-Technorati
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-XML-XPath>=0:${PORTSDIR}/textproc/p5-XML-XPath \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	WebService::Technorati.3 \
 	WebService::Technorati::ApiQuery.3 \
