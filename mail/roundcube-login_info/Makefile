@@ -1,5 +1,5 @@
-# Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: ports/mail/roundcube-login_info/Makefile,v 1.3 2012/11/24 02:26:34 svnexp Exp $
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: mail/roundcube-login_info/Makefile 323891 2013-07-29 15:03:58Z feld $
 
 PORTNAME=	login_info
 DISTVERSION=	1.2
@@ -9,7 +9,7 @@ MASTER_SITES=	https://www.std-soft.de/webmail/plugins/
 PKGNAMEPREFIX=	roundcube-
 DISTNAME=	${PORTNAME}_rc0.5_v${DISTVERSION}
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Roundcube login info plugin
 
 LICENSE=	GPLv2
