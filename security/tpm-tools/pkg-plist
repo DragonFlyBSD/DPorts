@@ -1,3 +1,4 @@
+@comment $FreeBSD: security/tpm-tools/pkg-plist 323634 2013-07-25 10:49:53Z hrs $
 bin/tpm_sealdata
 bin/tpm_unsealdata
 bin/tpmtoken_import
