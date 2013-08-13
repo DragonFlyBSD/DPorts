@@ -2,7 +2,7 @@
 # Date created:		10 Feb 2006
 # Whom:		Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: mail/squirrelmail-quota_usage-plugin/Makefile 315341 2013-03-27 00:34:41Z miwi $
+# $FreeBSD: mail/squirrelmail-quota_usage-plugin/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=		squirrelmail-${SQUIRREL_PLUGIN_NAME}-plugin
 PORTVERSION=		1.3.1
@@ -37,9 +37,10 @@ SUB_LIST+=		"SQUIRRELDIR=squirrelmail"
 
 SUB_FILES=		pkg-message
 
+USES=			perl5
 NO_BUILD=		yes
 NO_WRKSUBDIR=		yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=		build
 USE_PHP=		yes
 WANT_PHP_WEB=		yes
 IGNORE_WITH_PHP=	5 # known incompatibilities with php-5.4, use 5.3 for now
