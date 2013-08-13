@@ -2,7 +2,7 @@
 # Date created:				20. August 2003
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/games/p5-Games-Bingo-Bot/Makefile,v 1.6 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/p5-Games-Bingo-Bot/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Games-Bingo-Bot
@@ -17,7 +17,8 @@ COMMENT=	A simple class holding IRC related methods for bingo
 BUILD_DEPENDS=	p5-Games-Bingo>=0:${PORTSDIR}/games/p5-Games-Bingo
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Games::Bingo::Bot.3
 
