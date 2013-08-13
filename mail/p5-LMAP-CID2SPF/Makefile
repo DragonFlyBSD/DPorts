@@ -2,7 +2,7 @@
 # Date Created:				2006-11-03
 # Whom:					Shaun Amott <shaun@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-LMAP-CID2SPF/Makefile,v 1.7 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-LMAP-CID2SPF/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	LMAP-CID2SPF
@@ -16,7 +16,8 @@ COMMENT=	Module to convert between Microsoft's Caller-ID and SPF		#'
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_SCRIPT=Makefile.PL
 
 PLIST_FILES+=	bin/cid2spf %%SITE_PERL%%/LMAP/CID2SPF.pm
