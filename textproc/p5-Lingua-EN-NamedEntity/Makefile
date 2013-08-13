@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: textproc/p5-Lingua-EN-NamedEntity/Makefile 319844 2013-06-04 10:00:08Z tobez $
+# $FreeBSD: textproc/p5-Lingua-EN-NamedEntity/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Lingua-EN-NamedEntity
 PORTVERSION=	1.92
@@ -17,7 +17,8 @@ RUN_DEPENDS=	p5-Lingua-Stem>=0:${PORTSDIR}/textproc/p5-Lingua-Stem \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Lingua::EN::NamedEntity.3
 
