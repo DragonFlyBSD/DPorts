@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-List-Cycle/Makefile,v 1.6 2012/12/26 13:28:24 svnexp Exp $
+# $FreeBSD: devel/p5-List-Cycle/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	List-Cycle
 PORTVERSION=	1.02
@@ -11,7 +11,8 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	List::Cycle - Objects for cycling through a list of values
 TAGS=		list cycle
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	List::Cycle.3
 
