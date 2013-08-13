@@ -2,7 +2,7 @@
 # Date created:				11 June 2001
 # Whom:	      				Danny Howard <dannyman@tellme.com>
 #
-# $FreeBSD: ports/net/p5-Net-DLookup/Makefile,v 1.7 2012/11/17 06:00:10 svnexp Exp $
+# $FreeBSD: net/p5-Net-DLookup/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-DLookup
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perform domain lookups on 2-letter and 3-letter TLDs
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::DLookup.3
 
