@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Perl-OSType/Makefile 314828 2013-03-21 09:20:32Z tobez $
+# $FreeBSD: devel/p5-Perl-OSType/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Perl-OSType
 PORTVERSION=	1.003
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Map Perl operating system names to generic types
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Perl::OSType.3
 
