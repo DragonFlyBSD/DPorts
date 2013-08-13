@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	p5-Date-DayOfWeek
-# Date created:			Jun 5, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/devel/p5-Date-DayOfWeek/Makefile,v 1.10 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: devel/p5-Date-DayOfWeek/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Date-DayOfWeek
 PORTVERSION=	1.22
@@ -19,7 +14,8 @@ BUILD_DEPENDS=	p5-Date-Leapyear>=0:${PORTSDIR}/devel/p5-Date-Leapyear \
 		p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Date::DayOfWeek.3 Date::DayOfWeek::Birthday.3 \
 	Date::DayOfWeek::Nails.3 Date::DayOfWeek::Sneeze.3 Date::Doomsday.3
