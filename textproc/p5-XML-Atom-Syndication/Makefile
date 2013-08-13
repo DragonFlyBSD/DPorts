@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-XML-Atom-Syndication
-# Date created:				2003-05-23
-# Whom:					arved
-#
-# $FreeBSD: ports/textproc/p5-XML-Atom-Syndication/Makefile,v 1.14 2012/11/17 06:02:11 svnexp Exp $
+# Created by: arved
+# $FreeBSD: textproc/p5-XML-Atom-Syndication/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Atom-Syndication
 PORTVERSION=	0.94.2
@@ -21,7 +18,8 @@ RUN_DEPENDS=	p5-Class-ErrorHandler>=0:${PORTSDIR}/devel/p5-Class-ErrorHandler \
 		p5-XML-Writer>=0.6:${PORTSDIR}/textproc/p5-XML-Writer
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::Atom::Syndication.3 \
 	XML::Atom::Syndication::Category.3 \
