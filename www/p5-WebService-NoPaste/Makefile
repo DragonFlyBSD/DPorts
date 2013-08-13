@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@netnews.NCTU.edu.tw>
-# $FreeBSD: www/p5-WebService-NoPaste/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/p5-WebService-NoPaste/Makefile 323742 2013-07-26 18:02:28Z az $
 
 PORTNAME=	WebService-NoPaste
 PORTVERSION=	0.03
@@ -16,6 +16,8 @@ BUILD_DEPENDS=	p5-IO-All>=0:${PORTSDIR}/devel/p5-IO-All \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
+USES=		shebangfix
+SHEBANG_FILES=	nopaste
 
 MAN3=		WebService::NoPaste.3
 
@@ -31,7 +33,6 @@ EXTRA_PATCHES+=	${FILESDIR}/extrapatch-lib-WebService-NoPaste.pm
 .endif
 
 post-patch:
-	@${PERL} -pi -e "s|/usr/bin/perl|${PERL}|;" ${WRKSRC}/nopaste
 .if ! ${PORT_OPTIONS:MX11}
 	@${RM} ${WRKSRC}/lib/WebService/NoPaste.pm.orig
 .endif
