@@ -2,7 +2,7 @@
 # Date created:	   07 July 2002
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/textproc/p5-CSS-SAC/Makefile,v 1.11 2012/11/17 06:02:04 svnexp Exp $
+# $FreeBSD: textproc/p5-CSS-SAC/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	CSS-SAC
@@ -18,7 +18,8 @@ COMMENT=	SAC CSS (Simple API for CSS) parser
 RUN_DEPENDS=	p5-Class-ArrayObjects>=0.04:${PORTSDIR}/devel/p5-Class-ArrayObjects
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CSS::SAC.3 CSS::SAC::Condition.3 \
 		CSS::SAC::Condition::Attribute.3 \
