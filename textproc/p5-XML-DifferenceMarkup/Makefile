@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML-DifferenceMarkup
-# Date created:	   18 January 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-XML-DifferenceMarkup/Makefile,v 1.7 2012/11/17 06:02:12 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-XML-DifferenceMarkup/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-DifferenceMarkup
 PORTVERSION=	0.11
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML \
 		p5-Algorithm-Diff>=0:${PORTSDIR}/devel/p5-Algorithm-Diff
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::DifferenceMarkup.3
 
