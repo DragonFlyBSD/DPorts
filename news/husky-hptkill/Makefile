@@ -1,9 +1,5 @@
-# New ports collection makefile for:    husky-hptkill
-# Date created:                         6 January 2003
-# Whom:                                 Max Khon
-#
-# $FreeBSD: news/husky-hptkill/Makefile 317723 2013-05-09 06:59:06Z fjoe $
-#
+# Created by: Max Khon
+# $FreeBSD: news/husky-hptkill/Makefile 322828 2013-07-12 12:28:43Z bapt $
 
 PORTNAME=	hptkill
 PORTVERSION=	1.10.4
@@ -21,6 +17,5 @@ MAN1=		hptkill.1
 MANCOMPRESSED=	yes
 PLIST_FILES=	bin/hptkill
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/news/husky-base/Makefile.inc"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../husky-base/Makefile.inc"
+.include <bsd.port.mk>
