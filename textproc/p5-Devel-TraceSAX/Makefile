@@ -2,7 +2,7 @@
 # Date created:                         Dec  9 2005
 # Whom:                                 Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-Devel-TraceSAX/Makefile,v 1.5 2012/11/17 06:02:04 svnexp Exp $
+# $FreeBSD: textproc/p5-Devel-TraceSAX/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Devel-TraceSAX
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Devel-TraceCalls>=0.03:${PORTSDIR}/devel/p5-Devel-TraceCalls \
 		p5-XML-SAX-Machines>=0:${PORTSDIR}/textproc/p5-XML-SAX-Machines
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::TraceSAX.3
 
