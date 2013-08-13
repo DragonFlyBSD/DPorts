@@ -1,4 +1,4 @@
-# $FreeBSD: ports/lang/p5-signatures/Makefile,v 1.5 2012/11/17 22:41:55 svnexp Exp $
+# $FreeBSD: lang/p5-signatures/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	signatures
 PORTVERSION=	0.07
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-B-Hooks-OP-Check>=0.18:${PORTSDIR}/devel/p5-B-Hooks-OP-Check \
 		p5-B-Hooks-EndOfScope>=0.08:${PORTSDIR}/devel/p5-B-Hooks-EndOfScope
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	signatures.3
 
