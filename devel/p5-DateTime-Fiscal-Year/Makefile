@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Fiscal-Year
-# Date created:	   3 october 2003
-# Whom:		   mat
-#
-# $FreeBSD: ports/devel/p5-DateTime-Fiscal-Year/Makefile,v 1.6 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-DateTime-Fiscal-Year/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Fiscal-Year
 PORTVERSION=	0.02
@@ -17,7 +13,8 @@ COMMENT=	Calculate the day or week of the Fiscal Year with an arbitrary start da
 BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		DateTime::Fiscal::Year.3
 
