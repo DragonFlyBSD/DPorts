@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-Address-Ethernet/Makefile 321378 2013-06-20 13:22:34Z jadawin $
+# $FreeBSD: net/p5-Net-Address-Ethernet/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Address-Ethernet
 PORTVERSION=	1.122
@@ -17,7 +17,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Address::Ethernet.3
 
