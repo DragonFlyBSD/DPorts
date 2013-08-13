@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-API-Hooks
-# Date created:	   17 October 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-POE-API-Hooks/Makefile,v 1.11 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-POE-API-Hooks/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-API-Hooks
 PORTVERSION=	1.0800
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::API::Hooks.3
 
