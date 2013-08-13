@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/devel/p5-Test-WWW-Declare/Makefile,v 1.5 2012/11/17 05:56:34 svnexp Exp $
+# $FreeBSD: devel/p5-Test-WWW-Declare/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-WWW-Declare
 PORTVERSION=	0.02
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Test-WWW-Mechanize>=0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Tester>=0:${PORTSDIR}/devel/p5-Test-Tester
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::WWW::Declare.3
 
