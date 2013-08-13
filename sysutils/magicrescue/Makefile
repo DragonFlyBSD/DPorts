@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/magicrescue/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: sysutils/magicrescue/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	magicrescue
 PORTVERSION=	1.1.9
@@ -15,7 +15,6 @@ LICENSE=	GPLv2
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
 USE_PERL5_RUN=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		dupemap.1 magicrescue.1 magicsort.1
 
