@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-TCLink/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: finance/p5-Business-OnlinePayment-TCLink/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Business-OnlinePayment-TCLink
 PORTVERSION=	1.03
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Business-CreditCard>=0:${PORTSDIR}/finance/p5-Business-CreditC
 		p5-Net-TCLink>=0:${PORTSDIR}/net/p5-Net-TCLink
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::OnlinePayment::TCLink.3
 
