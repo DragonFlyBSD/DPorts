@@ -2,7 +2,7 @@
 # Date created:		07 Sep 2006
 # Whom:		Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: ports/mail/squirrelmail-multilogin-plugin/Makefile,v 1.7 2012/11/17 05:59:15 svnexp Exp $
+# $FreeBSD: mail/squirrelmail-multilogin-plugin/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	multilogin
 PORTVERSION=	2.4
@@ -38,9 +38,10 @@ SUB_LIST+=		"SQUIRRELDIR=squirrelmail"
 
 SUB_FILES=		pkg-message
 
+USES=			perl5
 NO_BUILD=		yes
 NO_WRKSUBDIR=		yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=		build
 USE_PHP=		yes
 WANT_PHP_WEB=		yes
 
