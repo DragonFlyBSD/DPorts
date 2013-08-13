@@ -2,7 +2,7 @@
 # Date created:		2011-11-05
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-XS-Object-Magic/Makefile,v 1.4 2012/11/17 05:56:36 svnexp Exp $
+# $FreeBSD: devel/p5-XS-Object-Magic/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	XS-Object-Magic
@@ -24,11 +24,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		XS::Object::Magic.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-BUILD_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-RUN_DEPENDS+=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
