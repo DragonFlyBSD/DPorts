@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: ports/converters/p5-Format-Human-Bytes/Makefile,v 1.5 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/p5-Format-Human-Bytes/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Format-Human-Bytes
 PORTVERSION=	0.06
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module to format a bytecount and make it human readable
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Format::Human::Bytes.3
 
