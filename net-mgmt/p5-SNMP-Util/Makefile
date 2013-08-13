@@ -2,7 +2,7 @@
 # Date created:				September 7 1999
 # Whom:					Bill Fenner <fenner@FreeBSD.org>
 #
-# $FreeBSD: ports/net-mgmt/p5-SNMP-Util/Makefile,v 1.15 2012/11/17 06:00:36 svnexp Exp $
+# $FreeBSD: net-mgmt/p5-SNMP-Util/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	SNMP-Util
@@ -19,7 +19,8 @@ RUN_DEPENDS=	net-snmp>=0:${PORTSDIR}/net-mgmt/net-snmp
 
 EXTRA_PATCHES=	${PATCHDIR}/extra-net-snmp-patch-Makefile.PL
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SNMP::Util.3
 
