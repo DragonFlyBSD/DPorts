@@ -2,7 +2,7 @@
 # Date created:				30 September 2001
 # Whom:	      				Anders Nordby <anders@fix.no>
 #
-# $FreeBSD: ports/net/p5-Net-ParseWhois/Makefile,v 1.8 2012/11/17 06:00:11 svnexp Exp $
+# $FreeBSD: net/p5-Net-ParseWhois/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-ParseWhois
@@ -15,7 +15,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/0$//}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extendable perl5 module for parsing whois information
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::ParseWhois.3
 
