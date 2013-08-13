@@ -2,7 +2,7 @@
 # Date created:				18 March 2006
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Test-Data/Makefile,v 1.10 2012/11/17 05:56:32 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Data/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Test-Data
@@ -18,7 +18,8 @@ COMMENT=	Test functions for particular variable types
 RUN_DEPENDS=	p5-Scalar-List-Utils>0:${PORTSDIR}/lang/p5-Scalar-List-Utils
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Data.3 \
 		Test::Data::Array.3 \
