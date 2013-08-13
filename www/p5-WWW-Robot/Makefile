@@ -1,9 +1,5 @@
-# New ports collection makefile for:	WWW-Robot
-# Date created:				Wed Jan  3 08:06:35 2001
-# Whom:					will
-#
-# $FreeBSD: ports/www/p5-WWW-Robot/Makefile,v 1.13 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: www/p5-WWW-Robot/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-Robot
 PORTVERSION=	0.026
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-HTML-Tagset>=0:${PORTSDIR}/www/p5-HTML-Tagset
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Robot.3
 
