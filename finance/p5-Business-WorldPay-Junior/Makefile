@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Business::OnlinePayment::WorldPay::Junior
-# Date created:				24 October 2002
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: ports/finance/p5-Business-WorldPay-Junior/Makefile,v 1.16 2012/11/17 05:57:26 svnexp Exp $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: finance/p5-Business-WorldPay-Junior/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Business-WorldPay-Junior
 PORTVERSION=	1.07
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Business-CreditCard>=0:${PORTSDIR}/finance/p5-Business-CreditC
 		p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 
 MAN3=		Business::WorldPay::Junior.3
 
