@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-Cron
-# Date created:	   December 21 2010
-# Whom:		   mat
-#
-# $FreeBSD: ports/devel/p5-POE-Component-Cron/Makefile,v 1.3 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-POE-Component-Cron/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Cron
 PORTVERSION=	0.021
@@ -24,7 +20,8 @@ RUN_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-DateTime-Event-Random>=0:${PORTSDIR}/devel/p5-DateTime-Event-Random \
 		p5-DateTime-Event-Cron>=0:${PORTSDIR}/devel/p5-DateTime-Event-Cron
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Cron.3
 
