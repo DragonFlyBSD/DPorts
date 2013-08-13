@@ -2,7 +2,7 @@
 # Date created:				7 May 2004
 # Whom:					Bill Swingle <unfurl@freebsd.org>
 #
-# $FreeBSD: ports/textproc/p5-Spreadsheet-WriteExcel-FromXML/Makefile,v 1.10 2012/11/17 06:02:08 svnexp Exp $
+# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel-FromXML/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Spreadsheet-WriteExcel-FromXML
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-OLE-Storage_Lite>=0:${PORTSDIR}/devel/p5-OLE-Storage_Lite \
 		p5-Spreadsheet-WriteExcel>=0:${PORTSDIR}/textproc/p5-Spreadsheet-WriteExcel
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Spreadsheet::WriteExcel::FromXML::Workbook.3 \
 		Spreadsheet::WriteExcel::FromXML::Worksheet.3 \
