@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/www/p5-CGI-Application-Plugin-MessageStack/Makefile,v 1.9 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Application-Plugin-MessageStack/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	CGI-Application-Plugin-MessageStack
 PORTVERSION=	0.34
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
 		p5-CGI-Application-Plugin-TT>=0:${PORTSDIR}/www/p5-CGI-Application-Plugin-TT
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	CGI::Application::Plugin::MessageStack.3
 
