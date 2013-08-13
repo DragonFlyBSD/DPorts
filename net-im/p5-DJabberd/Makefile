@@ -1,9 +1,5 @@
-# New ports collection makefile for:	DJabberd
-# Date created:	   28 February 2007
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/net-im/p5-DJabberd/Makefile,v 1.8 2012/11/17 06:00:28 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: net-im/p5-DJabberd/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DJabberd
 PORTVERSION=	0.85
@@ -27,7 +23,8 @@ BUILD_DEPENDS=	p5-Danga-Socket>=0:${PORTSDIR}/devel/p5-Danga-Socket \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DJabberd.3\
 	DJabberd::Agent.3\
