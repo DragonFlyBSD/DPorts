@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-HTML-TagFilter/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-HTML-TagFilter/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-TagFilter
 PORTVERSION=	1.03
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTML::TagFilter.3
 
