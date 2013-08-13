@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <martin@matuska.org>
-# $FreeBSD: www/p5-Apache-Clean2/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-Apache-Clean2/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Apache-Clean
 PORTVERSION=	2.00
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	${APACHE_PKGNAMEPREFIX}mod_perl2>=0:${PORTSDIR}/www/mod_perl2 \
 
 LATEST_LINK=	${PKGNAMEPREFIX}${PORTNAME}2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_APACHE=	22+
 
 MAN3=		Apache::Clean.3
