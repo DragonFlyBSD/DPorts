@@ -1,5 +1,5 @@
 # Created by: Jeremy Chadwick <koitsu@FreeBSD.org>
-# $FreeBSD: www/p5-Markup-Perl/Makefile 320095 2013-06-06 13:28:19Z mat $
+# $FreeBSD: www/p5-Markup-Perl/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Markup-Perl
 PORTVERSION=	0.5
@@ -12,7 +12,8 @@ DISTNAME=	Markup-Perl-${PORTVERSION}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Support perl code inside CGI scripts using simple tags
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Markup::Perl.3
 
