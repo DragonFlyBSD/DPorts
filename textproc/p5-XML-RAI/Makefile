@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-XML-RAI
-# Date created:				2004-05-22
-# Whom:					arved
-#
-# $FreeBSD: ports/textproc/p5-XML-RAI/Makefile,v 1.24 2012/11/17 06:02:13 svnexp Exp $
+# Created by: arved
+# $FreeBSD: textproc/p5-XML-RAI/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-RAI
 PORTVERSION=	1.30.31
@@ -19,7 +16,8 @@ RUN_DEPENDS=	p5-XML-RSS-Parser>=0:${PORTSDIR}/textproc/p5-XML-RSS-Parser \
 		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::RAI.3 \
 	XML::RAI::Channel.3 \
