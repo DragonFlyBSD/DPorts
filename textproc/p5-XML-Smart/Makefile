@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: ports/textproc/p5-XML-Smart/Makefile,v 1.30 2013/02/13 17:31:17 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-Smart/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Smart
 PORTVERSION=	1.77
@@ -19,7 +19,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Devel-Cycle>=0:${PORTSDIR}/devel/p5-Devel-Cycle \
 		p5-Data-Dump>=0:${PORTSDIR}/devel/p5-Data-Dump
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Smart.3 \
 		XML::Smart::DTD.3 \
