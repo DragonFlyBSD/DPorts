@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Devel-Profiler/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Devel-Profiler/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Devel-Profiler
 PORTVERSION=	0.04
@@ -13,7 +13,8 @@ COMMENT=	Perl profiler compatible with dprofpp
 BUILD_DEPENDS=	p5-Time-HiRes>=0:${PORTSDIR}/devel/p5-Time-HiRes
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::Profiler.3 Devel::Profiler::Apache.3 \
 		Devel::Profiler::Test.3
