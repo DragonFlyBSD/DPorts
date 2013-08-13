@@ -1,9 +1,5 @@
-# New Ports Collection Makefile for:	p5-WWW-Mechanize-Shell
-# Date created:				2004-07-08
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-WWW-Mechanize-Shell/Makefile,v 1.23 2012/12/17 12:28:02 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: www/p5-WWW-Mechanize-Shell/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-Mechanize-Shell
 PORTVERSION=	0.52
@@ -28,7 +24,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 TEST_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Mechanize::Shell.3
 
