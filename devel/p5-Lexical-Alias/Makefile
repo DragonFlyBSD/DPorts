@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Lexical-Alias
-# Date created:				24 March 2007
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Lexical-Alias/Makefile,v 1.3 2012/11/17 05:56:20 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Lexical-Alias/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Lexical-Alias
 PORTVERSION=	0.04
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Makes a lexical an alias for another variable
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Lexical::Alias.3
 
