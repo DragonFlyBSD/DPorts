@@ -1,8 +1,8 @@
 # Created by: nbm
-# $FreeBSD: databases/phpmyadmin35/Makefile 318115 2013-05-13 15:47:47Z miwi $
+# $FreeBSD: databases/phpmyadmin35/Makefile 324220 2013-08-04 12:13:50Z matthew $
 
 PORTNAME=	phpMyAdmin35
-DISTVERSION=	3.5.8.1
+DISTVERSION=	3.5.8.2
 CATEGORIES=	databases www
 MASTER_SITES=	SF/${PORTNAME:tl:S/35//}/${PORTNAME:S/35//}/${DISTVERSION}
 DISTNAME=	${PORTNAME:S/35//}-${DISTVERSION}-all-languages
@@ -11,6 +11,9 @@ MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	A set of PHP-scripts to manage MySQL over the web
 
 LICENSE=	GPLv2
+
+DEPRECATED=	Has unresolved security problems: http://www.phpmyadmin.net/home_page/security/PMASA-2013-10.php
+EXPIRATION_DATE=	2013-09-04
 
 USE_XZ=	yes
 NO_BUILD=	yes
