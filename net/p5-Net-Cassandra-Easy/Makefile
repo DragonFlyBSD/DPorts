@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Cassandra-Easy
-# Date created:		2010-04-03
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/net/p5-Net-Cassandra-Easy/Makefile,v 1.5 2012/12/16 06:16:57 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/p5-Net-Cassandra-Easy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Cassandra-Easy
 PORTVERSION=	0.15
@@ -21,7 +17,8 @@ RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-Time-HiRes>=0:${PORTSDIR}/devel/p5-Time-HiRes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Cassandra::Easy.3
 
