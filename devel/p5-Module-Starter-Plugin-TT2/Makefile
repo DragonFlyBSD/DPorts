@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/devel/p5-Module-Starter-Plugin-TT2/Makefile,v 1.5 2012/11/17 05:56:22 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Starter-Plugin-TT2/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Module-Starter-Plugin-TT2
 PORTVERSION=	0.125
@@ -13,7 +13,8 @@ COMMENT=	TT2 templates for Module::Starter::Template
 BUILD_DEPENDS=	p5-Module-Starter>=1.47.0:${PORTSDIR}/devel/p5-Module-Starter \
 		p5-Template-Toolkit>=2:${PORTSDIR}/www/p5-Template-Toolkit
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Module::Starter::Plugin::TT2.3
 
