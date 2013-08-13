@@ -2,7 +2,7 @@
 # Date created:				9 May 2009
 # Whom:					Kurt Jaeger <fbsd-ports@opsec.eu>
 #
-# $FreeBSD: ports/www/p5-HTML-Perlinfo/Makefile,v 1.5 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-HTML-Perlinfo/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	HTML-Perlinfo
@@ -18,7 +18,8 @@ LICENSE_COMB=	dual
 LICENSE=	ART10 GPLv1
 
 PERL5=		yes
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		perlinfo.1
 MAN3=		HTML::Perlinfo.3 HTML::Perlinfo::HTML.3 \
