@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: mail/p5-qpsmtpd/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: mail/p5-qpsmtpd/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	qpsmtpd
 PORTVERSION=	0.84
@@ -32,10 +32,9 @@ USE_APACHE_RUN=	22+
 RUN_DEPENDS+=	${APACHE_PKGNAMEPREFIX}mod_perl2>=0:${PORTSDIR}/www/mod_perl2
 .endif
 
-MAKE_JOBS_SAFE=	yes
-
 WRKSRC=		${WRKDIR}/${DISTNAME}
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	qpsmtpd-async.1
 MAN3=		Qpsmtpd::Command.3 \
