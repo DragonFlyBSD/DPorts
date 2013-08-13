@@ -1,9 +1,9 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/ruby-gd/Makefile 318966 2013-05-24 13:30:55Z bapt $
+# $FreeBSD: graphics/ruby-gd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 
 PORTNAME=	gd
 PORTVERSION=	0.8.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://www.daifukuya.com/archive/kagemai/lib/
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
