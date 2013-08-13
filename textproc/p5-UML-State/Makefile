@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-UML-State/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-UML-State/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	UML-State
 PORTVERSION=	0.02
@@ -13,7 +13,8 @@ COMMENT=	Perl module that produce simple UML state diagrams
 BUILD_DEPENDS=	p5-XML-DOM>=0:${PORTSDIR}/textproc/p5-XML-DOM
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		drawstatexml.pl.1 drawstate.pl.1
 MAN3=		UML::drawstate.3 \
