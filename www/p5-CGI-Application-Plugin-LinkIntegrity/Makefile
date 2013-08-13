@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-LinkIntegrity/Makefile 314460 2013-03-17 16:44:03Z eadler $
+# $FreeBSD: www/p5-CGI-Application-Plugin-LinkIntegrity/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	CGI-Application-Plugin-LinkIntegrity
 PORTVERSION=	0.06
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
 		p5-CGI-Application-Plugin-AutoRunmode>=0:${PORTSDIR}/www/p5-CGI-Application-Plugin-AutoRunmode
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	CGI::Application::Plugin::LinkIntegrity.3
 
