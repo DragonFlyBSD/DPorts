@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: graphics/p5-Graph-Easy/Makefile 319196 2013-05-27 09:37:49Z tobez $
+# $FreeBSD: graphics/p5-Graph-Easy/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Graph-Easy
 PORTVERSION=	0.73
@@ -13,7 +13,8 @@ COMMENT=	Render graphs as ASCII, HTML, SVG, or Graphviz
 BUILD_DEPENDS=	p5-Heap>0:${PORTSDIR}/devel/p5-Heap
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	graph-easy.1
 
