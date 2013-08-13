@@ -2,12 +2,12 @@
 # Date created:		12 Oct 2006
 # Whom:			Martin Matuska <mm@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/aolserver-nsgd/Makefile,v 1.16 2013/02/06 19:12:12 svnexp Exp $
+# $FreeBSD: graphics/aolserver-nsgd/Makefile 324437 2013-08-09 14:05:52Z dinoex $
 #
 
 PORTNAME=	nsgd
 PORTVERSION=	2.0
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	graphics www
 MASTER_SITES=	http://www.aolserver.cz/download/
 PKGNAMEPREFIX=	aolserver-
@@ -23,7 +23,7 @@ LICENSE=	GPLv2
 WRKSRC=		${WRKDIR}
 
 AOLSERVERBASE?=	aolserver
-LIB_DEPENDS+=	gd.4:${PORTSDIR}/graphics/gd
+LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
 BUILD_DEPENDS+=	${LOCALBASE}/${AOLSERVERBASE}/bin/nsd:${PORTSDIR}/www/aolserver
 RUN_DEPENDS+=	${LOCALBASE}/${AOLSERVERBASE}/bin/nsd:${PORTSDIR}/www/aolserver
 
