@@ -2,7 +2,7 @@
 # Date created:				18 Feb 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Geo-Caching/Makefile,v 1.9 2012/11/17 06:02:49 svnexp Exp $
+# $FreeBSD: www/p5-Geo-Caching/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Geo-Caching
@@ -22,6 +22,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Geo::Caching.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
