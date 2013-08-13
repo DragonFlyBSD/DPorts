@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: sysutils/log_analysis/Makefile 319239 2013-05-27 13:30:32Z bsam $
+# $FreeBSD: sysutils/log_analysis/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	log_analysis
 PORTVERSION=	0.46
@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 
 OPTIONS_DEFINE=	DOCS EXAMPLES TK
 
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PERL="${PERL}"
 
