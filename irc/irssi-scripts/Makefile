@@ -1,8 +1,8 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: irc/irssi-scripts/Makefile 318967 2013-05-24 13:35:38Z jadawin $
+# $FreeBSD: irc/irssi-scripts/Makefile 324041 2013-07-31 12:34:39Z jadawin $
 
 PORTNAME=	irssi-scripts
-PORTVERSION=	20130508
+PORTVERSION=	20130629
 CATEGORIES=	irc
 MASTER_SITES=	http://ftp.debian.org/debian/pool/main/i/${PORTNAME}/
 DISTFILES=	${PORTNAME}_${PORTVERSION}${EXTRACT_SUFX}
