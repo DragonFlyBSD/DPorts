@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: ports/www/p5-WWW-Wikipedia/Makefile,v 1.25 2013/02/21 22:05:35 svnexp Exp $
+# $FreeBSD: www/p5-WWW-Wikipedia/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-Wikipedia
 PORTVERSION=	2.01
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Text-Autoformat>=0:${PORTSDIR}/textproc/p5-Text-Autoformat
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		wikipedia.1
 MAN3=		WWW::Wikipedia.3 \
