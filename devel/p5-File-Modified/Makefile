@@ -1,7 +1,5 @@
-# New Ports Collection Makefile for:	p5-File-Modified
-# Date created:				2004-07-08
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-File-Modified/Makefile,v 1.10 2012/11/17 05:56:16 svnexp Exp $
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-File-Modified/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-Modified
 PORTVERSION=	0.07
@@ -16,7 +14,8 @@ COMMENT=	Perl module for checking intelligently if files have changed
 BUILD_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Modified.3
 
