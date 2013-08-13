@@ -1,5 +1,5 @@
 # Created by: Hammurabi Mendes <hmendes@brturbo.com>
-# $FreeBSD: security/proxytunnel/Makefile 316318 2013-04-23 07:59:07Z ehaupt $
+# $FreeBSD: security/proxytunnel/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	proxytunnel
 PORTVERSION=	1.9.0
@@ -10,9 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Connects stdin and stdout to an origin server through an HTTPS proxy
 
-USE_GMAKE=	yes
-USES=		pkgconfig:build
-MAKE_JOBS_SAFE=	yes
+USES=		pkgconfig gmake
 
 ALL_TARGET=	${PORTNAME}
 
