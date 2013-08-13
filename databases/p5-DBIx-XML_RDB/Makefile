@@ -2,7 +2,7 @@
 # Date created:				May 26 2001
 # Whom:					vanilla
 #
-# $FreeBSD: ports/databases/p5-DBIx-XML_RDB/Makefile,v 1.11 2012/11/17 05:55:15 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-XML_RDB/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	DBIx-XML_RDB
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::XML_RDB.3
 
