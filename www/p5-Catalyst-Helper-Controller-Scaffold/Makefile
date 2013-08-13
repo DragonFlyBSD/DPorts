@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Catalyst-Helper-Controller-Scaffold
-# Date created:		2005-07-11
-# Whom:			Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Helper-Controller-Scaffold/Makefile,v 1.12 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Helper-Controller-Scaffold/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Helper-Controller-Scaffold
 PORTVERSION=	0.04
@@ -25,7 +21,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=0:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Template-Plugin-Class>=0:${PORTSDIR}/www/p5-Template-Plugin-Class
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Helper::Controller::Scaffold.3
 
