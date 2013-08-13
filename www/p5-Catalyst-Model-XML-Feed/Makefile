@@ -1,9 +1,6 @@
 # Ports collection makefile for:	p5-Catalyst-Model-XML-Feed
-# Date created:			Apr 5, 2007
-# Whom:				lbr@freebsd.org
-#
-# $FreeBSD: ports/www/p5-Catalyst-Model-XML-Feed/Makefile,v 1.9 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: lbr@freebsd.org
+# $FreeBSD: www/p5-Catalyst-Model-XML-Feed/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Model-XML-Feed
 PORTVERSION=	0.04
@@ -20,7 +17,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Model::XML::Feed.3 \
 	Catalyst::Model::XML::Feed::Item.3
