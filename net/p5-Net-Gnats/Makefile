@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	Net-Gnats
-# Date created:			May 6, 2004
-# Whom:				ijliao
-#
-# $FreeBSD: ports/net/p5-Net-Gnats/Makefile,v 1.11 2012/11/17 06:00:10 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: net/p5-Net-Gnats/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Gnats
 PORTVERSION=	0.06
@@ -16,9 +13,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to GNU Gnats daemon
 
-MAKE_JOBS_SAFE=	yes
-
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::Gnats.3 Net::Gnats::PR.3
 
