@@ -1,9 +1,6 @@
 # Ports collection makefile for:	p5-Finance-QuoteTW
-# Date created:				2008/08/31
-# Whom:					chinsan
-#
-# $FreeBSD: ports/finance/p5-Finance-QuoteTW/Makefile,v 1.6 2012/11/17 05:57:26 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: finance/p5-Finance-QuoteTW/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Finance-QuoteTW
 PORTVERSION=	0.09
@@ -24,7 +21,8 @@ RUN_DEPENDS=	p5-Data-TreeDumper>=0:${PORTSDIR}/devel/p5-Data-TreeDumper \
 		p5-version>=0.76:${PORTSDIR}/devel/p5-version
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Finance::QuoteTW.3 \
 		Finance::QuoteTW::Allianz.3 \
