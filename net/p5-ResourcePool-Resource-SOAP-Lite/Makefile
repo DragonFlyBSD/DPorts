@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: net/p5-ResourcePool-Resource-SOAP-Lite/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-ResourcePool-Resource-SOAP-Lite/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	ResourcePool-Resource-SOAP-Lite
 PORTVERSION=	1.0103
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-ResourcePool>=1.0100:${PORTSDIR}/devel/p5-ResourcePool \
 		p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite-060
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		ResourcePool::Command::SOAP::Lite::Call.3 \
 		ResourcePool::Factory::SOAP::Lite.3
