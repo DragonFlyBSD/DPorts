@@ -1,9 +1,5 @@
-# New ports collection makefile for:	alignmargins
-# Date created:		2005-01-28
-# Whom:			Michael Nottebrock <lofi@FreeBSD.org>
-#
-# $FreeBSD: print/alignmargins/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Michael Nottebrock <lofi@FreeBSD.org>
+# $FreeBSD: print/alignmargins/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	alignmargins
 PORTVERSION=	1.0
@@ -18,7 +14,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility script to generate custom margins in PPDs for CUPS
 
 NO_BUILD=	yes
-USE_PERL5=	yes
+USES=		perl5
 
 do-extract:
 	@${RM} -rf ${WRKDIR}
