@@ -1,6 +1,6 @@
---- config.orig	2011-11-14 22:12:53.000000000 +0100
-+++ config	2013-01-11 22:54:38.526339000 +0100
-@@ -214,6 +214,10 @@
+--- config.orig	2013-08-11 09:32:04.790805000 +0000
++++ config
+@@ -214,6 +214,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
          echo "${MACH}-${ARCH}-freebsd${VERS}"; exit 0
          ;;
  
@@ -11,12 +11,12 @@
      FreeBSD:*)
  	echo "${MACHINE}-whatever-freebsd"; exit 0
  	;;
-@@ -734,6 +738,8 @@
+@@ -733,6 +737,8 @@ case "$GUESSOS" in
+   powerpc64-*-*bsd*)	OUT="BSD-generic64"; options="$options -DB_ENDIAN" ;;
    sparc64-*-*bsd*)	OUT="BSD-sparc64" ;;
    ia64-*-*bsd*)		OUT="BSD-ia64" ;;
-   amd64-*-*bsd*)	OUT="BSD-x86_64" ;;
 +  x86_64-*-dragonfly*)	OUT="BSD-x86_64" ;;
 +  *86-*-dragonfly*)	OUT="BSD-x86-elf" ;;
-   *86*-*-*bsd*)		# mimic ld behaviour when it's looking for libc...
- 			if [ -L /usr/lib/libc.so ]; then	# [Free|Net]BSD
- 			    libc=/usr/lib/libc.so
+   amd64-*-*bsd*)	OUT="BSD-x86_64" ;;
+   *86*-*-*bsd*)	
+ 			case "`(file -L /bin/sh) 2>/dev/null`" in
