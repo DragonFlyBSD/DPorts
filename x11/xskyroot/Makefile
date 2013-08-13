@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xskyroot
-# Date created:		20 April 1997
-# Whom:			nkazushi@highway.or.jp
-#
-# $FreeBSD: ports/x11/xskyroot/Makefile,v 1.14 2012/11/17 06:03:23 svnexp Exp $
-#
+# Created by: nkazushi@highway.or.jp
+# $FreeBSD: x11/xskyroot/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xskyroot
 PORTVERSION=	920428
@@ -21,7 +17,7 @@ EXTRACT_AFTER_ARGS=	| ${SED} -e "/^...bin.sh/,/exit 0/!d" | ${SH}
 
 DIST_SUBDIR=	${PORTNAME}
 NO_WRKSUBDIR=	yes
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11
 NO_INSTALL_MANPAGES=	yes
 PLIST_FILES=	bin/xskyroot
