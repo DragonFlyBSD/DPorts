@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-FormBuilder/Makefile,v 1.7 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-FormBuilder/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Catalyst-Plugin-FormBuilder
 PORTVERSION=	1.07
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-CGI-FormBuilder>=3.02:${PORTSDIR}/www/p5-CGI-FormBuilder
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::FormBuilder.3
 
