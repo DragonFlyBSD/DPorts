@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-HTML-EscapeEvil
-# Date created:				13 February 2006
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-HTML-EscapeEvil/Makefile,v 1.9 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-HTML-EscapeEvil/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-EscapeEvil
 PORTVERSION=	0.05
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree \
 		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTML::EscapeEvil.3
 
