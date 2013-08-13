@@ -1,9 +1,5 @@
-# New ports collection makefile for:	asclock-xlib
-# Date created:		24 April 1999
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-clocks/asclock-xlib/Makefile,v 1.20 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
+# $FreeBSD: x11-clocks/asclock-xlib/Makefile 322014 2013-06-28 23:05:59Z bapt $
 
 PORTNAME=	asclock-xlib
 PORTVERSION=	2.0.11
@@ -19,7 +15,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 WRKSRC=		${WRKDIR}/asclock-xlib
 USE_XORG=	xpm x11
-USE_IMAKE=	YES
+USES=		imake
 
 .if !defined(BATCH) && !defined(PACKAGE_BUILDING)
 IS_INTERACTIVE=	YES
