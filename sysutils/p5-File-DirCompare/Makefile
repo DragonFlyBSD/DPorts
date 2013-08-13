@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/sysutils/p5-File-DirCompare/Makefile,v 1.3 2012/11/17 06:01:39 svnexp Exp $
+# $FreeBSD: sysutils/p5-File-DirCompare/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	File-DirCompare
 PORTVERSION=	0.7
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to compare two directories using callbacks
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::DirCompare.3
 
