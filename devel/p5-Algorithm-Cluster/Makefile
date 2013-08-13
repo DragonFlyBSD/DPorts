@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-Algorithm-Cluster/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Algorithm-Cluster/Makefile 324272 2013-08-05 12:14:07Z culot $
 
 PORTNAME=	Algorithm-Cluster
-PORTVERSION=	1.50
+PORTVERSION=	1.52
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MDEHOON
@@ -13,7 +13,8 @@ COMMENT=	Perl interface to C clustering library
 
 MAKE_JOBS_UNSAFE=	yes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Algorithm::Cluster.3
 
