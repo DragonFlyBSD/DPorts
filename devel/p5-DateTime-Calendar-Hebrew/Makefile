@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Calendar-Hebrew
-# Date created:	   3 octobre 2003
-# Whom:		   mat
-#
-# $FreeBSD: ports/devel/p5-DateTime-Calendar-Hebrew/Makefile,v 1.7 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: mat
+# $FreeBSD: devel/p5-DateTime-Calendar-Hebrew/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Calendar-Hebrew
 PORTVERSION=	0.05
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Event-Sunrise>=0:${PORTSDIR}/devel/p5-DateTime-Event-Sunrise
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Calendar::Hebrew.3
 
