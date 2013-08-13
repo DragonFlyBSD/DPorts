@@ -1,5 +1,5 @@
 # Created by: Anes Muhametov <anes@anes.su>
-# $FreeBSD: www/p5-FCGI-Engine/Makefile 319379 2013-05-29 15:24:35Z jadawin $
+# $FreeBSD: www/p5-FCGI-Engine/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	FCGI-Engine
 PORTVERSION=	0.21
@@ -23,7 +23,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-WWW-Mechanize>=0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		FCGI::Engine.3 \
 		FCGI::Engine::Core.3 \
