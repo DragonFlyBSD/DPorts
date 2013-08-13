@@ -1,10 +1,10 @@
 # Created by: Mamoru Sakaue / MwGhennndo
-# $FreeBSD: ports-mgmt/portsreinstall/Makefile 322630 2013-07-10 09:24:11Z culot $
+# $FreeBSD: ports-mgmt/portsreinstall/Makefile 324135 2013-08-01 22:20:24Z wg $
 
 PORTNAME=	portsreinstall
-PORTVERSION=	3.0.2
+PORTVERSION=	3.0.3
 CATEGORIES=	ports-mgmt
-MASTER_SITES=	SFJP/${PORTNAME}/59115/ \
+MASTER_SITES=	SFJP/${PORTNAME}/59240/ \
 		http://www.mwghennndo.com/software/${PORTNAME}/
 
 MAINTAINER=	sakaue.mamoru@samurai.mwghennn.net
@@ -12,7 +12,7 @@ COMMENT=	Ports upgrading utility for massive forced reinstall
 
 LICENSE=	BSD
 
-MAN8=	${PORTNAME}.8
+MAN8=		${PORTNAME}.8
 MANCOMPRESSED=	yes
 
 post-install:
