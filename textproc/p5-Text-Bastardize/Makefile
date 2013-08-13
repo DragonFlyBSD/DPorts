@@ -2,7 +2,7 @@
 # Date created:		26 July 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-Text-Bastardize/Makefile,v 1.6 2012/11/17 06:02:09 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Bastardize/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Text-Bastardize
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Corruptor of innocent text
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Bastardize.3
 
