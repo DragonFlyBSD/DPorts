@@ -2,7 +2,7 @@
 # Date created:				15 Dec 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Statistics-Descriptive-Discrete/Makefile,v 1.5 2012/11/17 05:59:27 svnexp Exp $
+# $FreeBSD: math/p5-Statistics-Descriptive-Discrete/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Statistics-Descriptive-Discrete
@@ -16,6 +16,7 @@ COMMENT=	Compute descriptive statistics for discrete data sets
 
 MAN3=	Statistics::Descriptive::Discrete.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
