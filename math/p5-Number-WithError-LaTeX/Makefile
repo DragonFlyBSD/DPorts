@@ -2,7 +2,7 @@
 # Date created:				15 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Number-WithError-LaTeX/Makefile,v 1.13 2012/11/17 05:59:27 svnexp Exp $
+# $FreeBSD: math/p5-Number-WithError-LaTeX/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Number-WithError-LaTeX
@@ -24,6 +24,7 @@ TEST_DEPENDS=	p5-Test-LectroTest>=0:${PORTSDIR}/devel/p5-Test-LectroTest
 
 MAN3=	Number::WithError::LaTeX.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
