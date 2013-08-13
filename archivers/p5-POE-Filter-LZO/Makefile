@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-POE-Filter-LZO/Makefile 319960 2013-06-05 08:09:23Z mat $
+# $FreeBSD: archivers/p5-POE-Filter-LZO/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Filter-LZO
 PORTVERSION=	1.7.0
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Compress-LZO>=1.08:${PORTSDIR}/archivers/p5-Compress-LZO \
 		p5-POE>=0.38:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Filter::LZO.3
 
