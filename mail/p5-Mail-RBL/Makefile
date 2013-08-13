@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mail-RBL
-# Date created:				July 24th 2002
-# Whom:	      				Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/p5-Mail-RBL/Makefile,v 1.15 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: mail/p5-Mail-RBL/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-RBL
 PORTVERSION=	1.10
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-NetAddr-IP>0:${PORTSDIR}/net-mgmt/p5-NetAddr-IP
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::RBL.3
 
