@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sysutils/p5-Filesys-SmbClient
-# Date created:				August 10, 2003
-# Whom:					Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-Filesys-SmbClient/Makefile,v 1.9 2012/12/31 12:58:53 svnexp Exp $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: net/p5-Filesys-SmbClient/Makefile 323711 2013-07-26 10:46:37Z az $
 
 PORTNAME=	Filesys-SmbClient
 PORTVERSION=	3.2
@@ -22,7 +18,7 @@ PERL_CONFIGURE=	yes
 MAN3=		Filesys::SmbClient.3
 
 post-patch:
-	${PERL} -pi -e 's!%%LOCALBASE%%!${LOCALBASE}!g' \
+	@${REINPLACE_CMD} -i '' -e 's!%%LOCALBASE%%!${LOCALBASE}!g' \
 		${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
