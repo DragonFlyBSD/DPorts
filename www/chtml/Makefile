@@ -2,7 +2,7 @@
 # Date created:         1 Aug 2001
 # Whom:                 David Bushong <david+ports@bushong.net>
 #
-# $FreeBSD: ports/www/chtml/Makefile,v 1.7 2012/11/17 06:02:30 svnexp Exp $
+# $FreeBSD: www/chtml/Makefile 324191 2013-08-03 13:44:00Z mat $
 #
 
 PORTNAME=       chtml
@@ -17,7 +17,8 @@ COMMENT=	Chunked HTML templating engine
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/csiod:${PORTSDIR}/lang/siod
 
-USE_PERL5_RUN=	yes
+USES=		perl5
+USE_PERL5=	run
 MAKE_ENV=	SITE_PERL=${SITE_PERL}
 NO_WRKSUBDIR=	yes
 MAKEFILE=	makefile
