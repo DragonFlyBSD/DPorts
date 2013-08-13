@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/info_to_html/Makefile 318926 2013-05-24 08:22:57Z az $
+# $FreeBSD: textproc/info_to_html/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	info_to_html
 PORTVERSION=	0.9.6
@@ -11,7 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Translate GNU info files into HTML pages
 
 PLIST_FILES=	bin/info_to_html
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 .include <bsd.port.pre.mk>
