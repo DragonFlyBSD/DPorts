@@ -2,7 +2,7 @@
 # Date created:				April 01 2010
 # Whom:					jupengfei <jupengfei@gmail.com>
 #
-# $FreeBSD: ports/net/p5-Net-Traceroute-PurePerl/Makefile,v 1.5 2012/11/17 06:00:12 svnexp Exp $
+# $FreeBSD: net/p5-Net-Traceroute-PurePerl/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-Traceroute-PurePerl
@@ -17,7 +17,8 @@ COMMENT=	Traceroute(1) functionality in perl via raw sockets
 BUILD_DEPENDS=	p5-Net-Traceroute>=0:${PORTSDIR}/net/p5-Net-Traceroute
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Traceroute::PurePerl.3
 
