@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-POE-XS-Queue-Array
-# Date created:				22 May 2006
-# Whom:					Zach Thompson <hideo@lastamericanempire.com>
-#
-# $FreeBSD: ports/devel/p5-POE-XS-Queue-Array/Makefile,v 1.11 2012/11/17 05:56:25 svnexp Exp $
-#
+# Created by: Zach Thompson <hideo@lastamericanempire.com>
+# $FreeBSD: devel/p5-POE-XS-Queue-Array/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-XS-Queue-Array
 PORTVERSION=	0.006
@@ -17,7 +13,8 @@ COMMENT=	XS implementation of POE::Queue::Array
 BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	POE::XS::Queue::Array.3
 
