@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/p5-JSON-Path/Makefile 322244 2013-07-03 18:42:54Z zi $
+# $FreeBSD: devel/p5-JSON-Path/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	JSON-Path
 PORTVERSION=	0.204
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter \
 		p5-Lvalue>=0:${PORTSDIR}/devel/p5-Lvalue
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		JSON::Path.3
 
