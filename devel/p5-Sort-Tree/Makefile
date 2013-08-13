@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Sort-Tree/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Sort-Tree/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Sort-Tree
 PORTVERSION=	1.09
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for sorting a objects into a tree structure
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sort::Tree.3
 
