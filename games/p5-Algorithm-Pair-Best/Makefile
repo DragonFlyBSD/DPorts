@@ -2,7 +2,7 @@
 # Date created:				12 Jun 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/games/p5-Algorithm-Pair-Best/Makefile,v 1.6 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/p5-Algorithm-Pair-Best/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Algorithm-Pair-Best
@@ -16,7 +16,8 @@ COMMENT=	Perl module to generate tournament pairings
 
 DEPRECATED=	Use games/p5-Algorithm-Pair-Best2 instead
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Algorithm::Pair::Best.3
 
