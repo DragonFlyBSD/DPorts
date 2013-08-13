@@ -2,7 +2,7 @@
 # Date created:				05 Jun 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/math/p5-Set-Partition/Makefile,v 1.6 2012/11/17 05:59:27 svnexp Exp $
+# $FreeBSD: math/p5-Set-Partition/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Set-Partition
@@ -16,6 +16,7 @@ COMMENT=	Enumerate all arrangements of a set in fixed subsets
 
 MAN3=	Set::Partition.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
