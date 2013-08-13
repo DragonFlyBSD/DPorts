@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Perl-MinimumVersion/Makefile 320161 2013-06-07 07:15:16Z az $
+# $FreeBSD: textproc/p5-Perl-MinimumVersion/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Perl-MinimumVersion
 PORTVERSION=	1.32
@@ -19,12 +19,13 @@ BUILD_DEPENDS=	p5-File-Find-Rule>=0.32:${PORTSDIR}/devel/p5-File-Find-Rule \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Script>=0:${PORTSDIR}/devel/p5-Test-Script
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	perlver.1
 MAN3=	Perl::MinimumVersion.3
 
 post-patch:
-	@${PERL} -pi -e '$$_="" if m/Test::/' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -i '' -e '/Test::/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
