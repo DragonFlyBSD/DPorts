@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Chess-PGN-Parse
-# Date created: 			23 July 2005
-# Whom: 				Aaron Dalton <aaron@daltons.ca>
-#
-# $FreeBSD: ports/textproc/p5-Chess-PGN-Parse/Makefile,v 1.8 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@daltons.ca>
+# $FreeBSD: textproc/p5-Chess-PGN-Parse/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Chess-PGN-Parse
 PORTVERSION=	0.19
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Reads and parses PGN (Portable Game Notation) Chess files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Chess::PGN::Parse.3
 
