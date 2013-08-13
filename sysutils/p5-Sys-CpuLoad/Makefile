@@ -2,7 +2,7 @@
 # Date created:				Sun Jan  5 09:13:46 CET 2003
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/sysutils/p5-Sys-CpuLoad/Makefile,v 1.6 2012/11/17 06:01:40 svnexp Exp $
+# $FreeBSD: sysutils/p5-Sys-CpuLoad/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Sys-CpuLoad
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Perl5 module to retrieve CPU load averages
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Sys::CpuLoad.3
 
