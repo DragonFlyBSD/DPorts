@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-Data-Report
-# Date created:				24 May 2006
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Data-Report/Makefile,v 1.9 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-Data-Report/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Data-Report
 PORTVERSION=	0.10
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-Module-Build>=0.28:${PORTSDIR}/devel/p5-Module-Build \
 		${COMMON_DEPENDS}
 RUN_DEPENDS=	${COMMON_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	Data::Report.3 Data::Report::Base.3
 
