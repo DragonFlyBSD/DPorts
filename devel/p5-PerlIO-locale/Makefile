@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-PerlIO-locale
-# Date created:		2012-03-15
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-PerlIO-locale/Makefile,v 1.2 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-PerlIO-locale/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	PerlIO-locale
 PORTVERSION=	0.08
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	PerlIO layer to use the encoding of the current locale
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	PerlIO::locale.3
 
