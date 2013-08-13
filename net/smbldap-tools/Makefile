@@ -1,8 +1,8 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: ports/net/smbldap-tools/Makefile,v 1.36 2012/12/31 13:43:00 svnexp Exp $
+# $FreeBSD: net/smbldap-tools/Makefile 323996 2013-07-30 20:49:36Z mm $
 
 PORTNAME=	smbldap-tools
-PORTVERSION=	0.9.9
+PORTVERSION=	0.9.10
 CATEGORIES=	net
 MASTER_SITES=	http://download.gna.org/smbldap-tools/sources/${PORTVERSION}/
 
