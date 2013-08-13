@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: graphics/p5-Chart-Clicker/Makefile 315103 2013-03-24 06:14:36Z sunpoet $
+# $FreeBSD: graphics/p5-Chart-Clicker/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Chart-Clicker
 PORTVERSION=	2.85
@@ -29,7 +29,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Chart::Clicker.3 \
 		Chart::Clicker::Axis.3 \
