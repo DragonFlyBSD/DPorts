@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/p5-Time-Human/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: textproc/p5-Time-Human/Makefile 324222 2013-08-04 12:30:54Z az $
 
 PORTNAME=	Time-Human
 PORTVERSION=	1.03
@@ -10,11 +10,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Convert localtime() format to "speaking clock" time
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Time::Human.3
-
-MAKE_JOBS_SAFE=	yes
 
 test:		build
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test
