@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Authen-Simple-Net
-# Date created:				21 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Authen-Simple-Net/Makefile,v 1.9 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: security/p5-Authen-Simple-Net/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Authen-Simple-Net
 PORTVERSION=	0.2
@@ -20,6 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Authen::Simple::FTP.3 Authen::Simple::POP3.3 Authen::Simple::SMTP.3
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 .include <bsd.port.mk>
