@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: security/p5-Authen-PluggableCaptcha/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: security/p5-Authen-PluggableCaptcha/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Authen-PluggableCaptcha
 PORTVERSION=	0.05
@@ -33,6 +33,7 @@ MAN3=		Authen::PluggableCaptcha.3 \
 		Authen::PluggableCaptcha::Tutorial.3 \
 		Authen::PluggableCaptcha::ValidityObject.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
