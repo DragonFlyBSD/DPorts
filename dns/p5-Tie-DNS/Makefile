@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: dns/p5-Tie-DNS/Makefile 314830 2013-03-21 09:27:13Z tobez $
+# $FreeBSD: dns/p5-Tie-DNS/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Tie-DNS
 PORTVERSION=	0.6.2
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-Net-DNS>=0.12:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-Tie-Cache>=0.01:${PORTSDIR}/devel/p5-Tie-Cache
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Tie::DNS.3
 
