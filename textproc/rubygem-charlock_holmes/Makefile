@@ -1,8 +1,7 @@
-# $FreeBSD: ports/textproc/rubygem-charlock_holmes/Makefile,v 1.3 2012/12/18 23:19:37 svnexp Exp $
+# $FreeBSD: textproc/rubygem-charlock_holmes/Makefile 324471 2013-08-10 10:26:36Z kuriyama $
 
 PORTNAME=	charlock_holmes
-PORTVERSION=	0.6.8
-PORTRESIVION=	1
+PORTVERSION=	0.6.9
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
