@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textmail
-# Date created:		8 August 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/textmail/Makefile,v 1.8 2012/11/17 05:59:16 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: mail/textmail/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	textmail
 PORTVERSION=	20070803
@@ -20,7 +16,7 @@ RUN_DEPENDS=	antiword:${PORTSDIR}/textproc/antiword \
 		lynx:${PORTSDIR}/www/lynx \
 		pdftotext:${PORTSDIR}/graphics/poppler-utils
 
-USE_PERL5=	yes
+USES=		perl5
 PLIST_FILES=	bin/${PORTNAME}
 NO_WRKSUBDIR=	yes
 MAN1=	${PORTNAME}.1
