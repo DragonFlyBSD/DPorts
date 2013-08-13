@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Tie-Hash-TwoWay
-# Date created:				15 November 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Tie-Hash-TwoWay/Makefile,v 1.4 2012/11/17 05:56:35 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Tie-Hash-TwoWay/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Tie-Hash-TwoWay
 PORTVERSION=	1.08
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Tie::Hash::TwoWay - two-way mapping between disjoint sets
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Tie::Hash::TwoWay.3
 
