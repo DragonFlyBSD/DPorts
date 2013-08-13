@@ -1,7 +1,7 @@
-# $FreeBSD: www/youtube_dl/Makefile 322812 2013-07-12 04:04:42Z araujo $
+# $FreeBSD: www/youtube_dl/Makefile 323584 2013-07-24 09:33:59Z araujo $
 
 PORTNAME=	youtube_dl
-PORTVERSION=	2013.07.12
+PORTVERSION=	2013.07.23.1
 CATEGORIES=	www
 MASTER_SITES=	http://youtube-dl.org/downloads/${PORTVERSION}/ \
 		http://ftp.de.netbsd.org/pub/unix/Linux/MIRROR.gentoo/distfiles/
