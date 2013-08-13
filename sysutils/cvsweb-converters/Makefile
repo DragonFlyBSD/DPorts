@@ -2,7 +2,7 @@
 # Date created:		4 Mar 2001
 # Whom:			Martin Kammerhofer <mkamm@gmx.net>
 #
-# $FreeBSD: ports/sysutils/cvsweb-converters/Makefile,v 1.21 2012/11/17 06:01:27 svnexp Exp $
+# $FreeBSD: sysutils/cvsweb-converters/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	cvsweb-converters
@@ -30,10 +30,6 @@ PLIST_FILES=	bin/commitlog2cvsweb bin/cvsrdiff2cvsweb \
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-.endif
 
 post-install:
 	@${SED} -e 's|$${PREFIX}|${PREFIX}|g' -- \
