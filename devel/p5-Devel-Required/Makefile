@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: ports/devel/p5-Devel-Required/Makefile,v 1.10 2012/12/23 13:56:08 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-Required/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Devel-Required
 PORTVERSION=	0.14
@@ -13,7 +13,8 @@ COMMENT=	Automatic update of required modules documentation
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::Required.3
 
