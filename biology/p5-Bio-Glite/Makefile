@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/p5-Bio-Glite/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: biology/p5-Bio-Glite/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Bio-Glite
 PORTVERSION=	0.10
@@ -14,7 +14,8 @@ COMMENT=	Perl Interface to G-language
 BUILD_DEPENDS=	p5-libwww>=5:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Bio::Glite.3
 
