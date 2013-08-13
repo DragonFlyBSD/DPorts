@@ -1,9 +1,4 @@
-# New ports collection makefile for:	DBIx::Class::MooseColumns
-# Date created:		2010-11-20
-# Whom:			Andrej Zverev <az@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-MooseColumns/Makefile,v 1.9 2012/11/17 05:55:15 svnexp Exp $
-#
+# $FreeBSD: databases/p5-DBIx-Class-MooseColumns/Makefile 324224 2013-08-04 12:39:45Z az $
 
 PORTNAME=	DBIx-Class-MooseColumns
 PORTVERSION=	0.22
@@ -35,7 +30,8 @@ TEST_DEPENDS=	p5-Test-Aggregate>=0.363:${PORTSDIR}/devel/p5-Test-Aggregate \
 		p5-Test-Deep>=0.103:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-DBIx-Class>=0.10:${PORTSDIR}/devel/p5-Test-DBIx-Class
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	\
 	DBIx::Class::MooseColumns.3 \
