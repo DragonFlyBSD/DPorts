@@ -1,9 +1,5 @@
-# New ports collection makefile for:	WWW-Yandex-TIC
-# Date created:	   29 September 2007
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-WWW-Yandex-TIC/Makefile,v 1.9 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-WWW-Yandex-TIC/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-Yandex-TIC
 PORTVERSION=	0.07
@@ -17,7 +13,8 @@ COMMENT=	Query Yandex Thematic Index of Citing (TIC) for domain
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Yandex::TIC.3
 
