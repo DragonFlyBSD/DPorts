@@ -1,12 +1,12 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/rubygem-state_machine/Makefile 322898 2013-07-13 06:54:18Z swills $
+# $FreeBSD: devel/rubygem-state_machine/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	state_machine
 PORTVERSION=	1.2.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Support for creating state machines for attributes on any Ruby class
 
 USE_RUBY=		yes
