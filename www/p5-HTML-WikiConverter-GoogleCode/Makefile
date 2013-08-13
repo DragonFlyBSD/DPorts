@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-WikiConverter-GoogleCode
-# Date created:				2008/05/18
-# Whom:	      				chinsan
-#
-# $FreeBSD: ports/www/p5-HTML-WikiConverter-GoogleCode/Makefile,v 1.5 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: www/p5-HTML-WikiConverter-GoogleCode/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-WikiConverter-GoogleCode
 PORTVERSION=	0.12
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-HTML-WikiConverter>=0.60:${PORTSDIR}/www/p5-HTML-WikiConverter
 		p5-URI>=1.35:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::WikiConverter::GoogleCode.3
 
