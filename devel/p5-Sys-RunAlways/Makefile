@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Sys-RunAlways
-# Date created:				27 November 2008
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Sys-RunAlways/Makefile,v 1.3 2012/11/17 05:56:30 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Sys-RunAlways/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Sys-RunAlways
 PORTVERSION=	0.05
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Make sure there is always one invocation of a script active
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Sys::RunAlways.3
 
