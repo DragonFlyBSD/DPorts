@@ -1,5 +1,5 @@
-# Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: ports/mail/roundcube-veximaccountadmin/Makefile,v 1.3 2012/11/24 02:28:30 svnexp Exp $
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: mail/roundcube-veximaccountadmin/Makefile 323891 2013-07-29 15:03:58Z feld $
 
 PORTNAME=	veximaccountadmin
 PORTVERSION=	0.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://axel.sjostedt.no/misc/files/
 PKGNAMEPREFIX=	roundcube-
 DISTNAME=	rcube_plg_veximaccountadmin
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Roundcube vexim account admin plugin
 
 LICENSE=	GPLv3
