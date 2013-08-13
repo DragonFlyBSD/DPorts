@@ -1,5 +1,5 @@
 # Created by: lbr@FreeBSD.org
-# $FreeBSD: www/p5-Catalyst-Plugin-C3/Makefile 319504 2013-05-31 14:46:01Z miwi $
+# $FreeBSD: www/p5-Catalyst-Plugin-C3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Plugin-C3
 PORTVERSION=	0.03
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7006:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Class-C3>=0.19:${PORTSDIR}/devel/p5-Class-C3
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::C3.3
 
