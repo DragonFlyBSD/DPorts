@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/p5-libvorbis/files/patch-Makefile.PL,v 1.2 2012/11/17 05:54:41 svnexp Exp $
+$FreeBSD: audio/p5-libvorbis/files/patch-Makefile.PL 300895 2012-07-14 12:56:14Z beat $
 
 --- Makefile.PL.orig	Mon Oct 23 08:53:08 2000
 +++ Makefile.PL	Wed Jul 31 16:09:47 2002
