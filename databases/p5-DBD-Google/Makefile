@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ports/databases/p5-DBD-Google/Makefile,v 1.14 2012/11/17 05:55:14 svnexp Exp $
+# $FreeBSD: databases/p5-DBD-Google/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBD-Google
 PORTVERSION=	0.51
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Net-Google>=0:${PORTSDIR}/net/p5-Net-Google \
 		p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBD::Google.3 SQL::Dialects::Google.3
 
