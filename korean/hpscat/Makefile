@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/hpscat/Makefile 321164 2013-06-17 23:33:49Z jkim $
+# $FreeBSD: korean/hpscat/Makefile 324054 2013-07-31 14:36:21Z az $
 
 PORTNAME=	hpscat
 PORTVERSION=	1.3.1
@@ -31,7 +31,7 @@ PLIST_DIRS=	${FONTDIR_REL}
 PLIST_DIRSTRY=	share/fonts
 SUB_FILES=	hpscat.sh pkg-message
 SUB_LIST=	FONTDIR=${FONTDIR}
-USE_PERL5=	yes
+USES=		perl5
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/hpscat ${PREFIX}/bin/hpscat.bin
