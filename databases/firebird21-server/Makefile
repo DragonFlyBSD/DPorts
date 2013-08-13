@@ -1,5 +1,5 @@
 # Created by: Max Kochubey <root@hangover.org.ru>
-# $FreeBSD: databases/firebird21-server/Makefile 315591 2013-03-30 04:33:48Z acm $
+# $FreeBSD: databases/firebird21-server/Makefile 323088 2013-07-16 05:42:36Z ade $
 
 PORTNAME=	firebird
 PORTVERSION=	2.1.5
@@ -23,7 +23,7 @@ USE_GCC=	any
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf aclocal libtool
-ACLOCAL_ARGS=	--acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal \
+ACLOCAL_ARGS=	--automake-acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal \
 		-I ${WRKSRC}/m4
 MAKE_JOBS_UNSAFE=	yes
 
