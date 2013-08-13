@@ -2,7 +2,7 @@
 # Date created:		2004-07-24
 # Whom:			Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Module-Info-File/Makefile,v 1.7 2012/11/17 05:56:21 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Info-File/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Module-Info-File
@@ -18,7 +18,8 @@ COMMENT=	Retrieves module information from a file or script
 RUN_DEPENDS=	p5-Module-Info>0.20:${PORTSDIR}/devel/p5-Module-Info
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	YES
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		version.pl.1
 MAN3=		Module::Info::File.3
