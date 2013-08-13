@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::Schematron
-# Date created:				25 Jan 2002
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/textproc/p5-XML-Schematron/Makefile,v 1.12 2012/11/17 06:02:13 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-XML-Schematron/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Schematron
 PORTVERSION=	1.09
@@ -24,7 +20,8 @@ BUILD_DEPENDS=	p5-libxml>=0:${PORTSDIR}/textproc/p5-libxml \
 		p5-XML-Filter-BufferText>=0:${PORTSDIR}/textproc/p5-XML-Filter-BufferText
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::Schematron::XPath.3 \
 		XML::Schematron::LibXSLT.3 \
