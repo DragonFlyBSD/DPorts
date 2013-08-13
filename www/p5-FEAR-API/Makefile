@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	FEAR::API
-# Date created:			Jun 5, 2006
-# Whom:				ijliao
-#
-# $FreeBSD: ports/www/p5-FEAR-API/Makefile,v 1.14 2012/12/17 10:27:26 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: www/p5-FEAR-API/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	FEAR-API
 PORTVERSION=	0.489
@@ -46,7 +43,8 @@ RUN_DEPENDS=	p5-Email-Find>=0:${PORTSDIR}/mail/p5-Email-Find \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	fear.1
 MAN3=	FEAR::API.3 \
