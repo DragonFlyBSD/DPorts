@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Test-TAP-HTMLMatrix
-# Date created:	   08 July 2007
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Test-TAP-HTMLMatrix/Makefile,v 1.6 2012/11/17 05:56:33 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Test-TAP-HTMLMatrix/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-TAP-HTMLMatrix
 PORTVERSION=	0.09
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Test-TAP-Model>=0:${PORTSDIR}/devel/p5-Test-TAP-Model \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::TAP::HTMLMatrix.3 Test::TAP::Model::Colorful.3 \
 		Test::TAP::Model::File::Visual.3 \
