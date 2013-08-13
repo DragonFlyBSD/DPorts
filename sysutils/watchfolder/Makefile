@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ports/sysutils/watchfolder/Makefile,v 1.12 2013/01/15 13:46:58 svnexp Exp $
+# $FreeBSD: sysutils/watchfolder/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	watchfolder
 PORTVERSION=	0.3.3
@@ -11,8 +11,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Watch folders for new files and process them
 
 LICENSE=	GPLv2
-
-MAKE_JOBS_SAFE=	yes
 
 WRKSRC=		${WRKDIR}/watchd-${PORTVERSION}
 USE_RC_SUBR=	watchd
