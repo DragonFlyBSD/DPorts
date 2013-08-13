@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: mail/p5-Mail-Procmailrc/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: mail/p5-Mail-Procmailrc/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-Procmailrc
 PORTVERSION=	1.09
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl OO interface to procmail rc files
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Mail::Procmailrc.3
 
