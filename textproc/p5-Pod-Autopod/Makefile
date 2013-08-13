@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-Autopod/Makefile 315230 2013-03-25 14:56:08Z tobez $
+# $FreeBSD: textproc/p5-Pod-Autopod/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Autopod
 PORTVERSION=	1.12
@@ -16,7 +16,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		autopod.1
 MAN3=		Pod::Autopod.3
