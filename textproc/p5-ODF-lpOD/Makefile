@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-ODF-lpOD/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-ODF-lpOD/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	ODF-lpOD
 PORTVERSION=	1.121
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Archive-Zip>=1.30:${PORTSDIR}/archivers/p5-Archive-Zip \
 		p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		lpod_test.1
 MAN3=		ODF::lpOD.3 \
