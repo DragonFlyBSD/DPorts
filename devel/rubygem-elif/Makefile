@@ -1,16 +1,12 @@
-# Ports collection makefile for:	rubygem-elif
-# Date created:				03 May 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/devel/rubygem-elif/Makefile,v 1.3 2012/11/17 05:56:58 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: devel/rubygem-elif/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	elif
 PORTVERSION=	0.1.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Read file in reverse order
 
 USE_RUBY=		yes
