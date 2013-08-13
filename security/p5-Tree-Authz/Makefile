@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Tree-Authz
-# Date created:				22 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Tree-Authz/Makefile,v 1.8 2012/11/17 06:01:14 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: security/p5-Tree-Authz/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	Tree-Authz
 PORTVERSION=	0.03
@@ -22,6 +18,7 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
 MAN3=	Tree::Authz.3 Tree::Authz::Role.3
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 .include <bsd.port.mk>
