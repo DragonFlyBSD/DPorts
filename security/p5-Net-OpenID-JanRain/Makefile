@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-OpenID-JanRain
-# Date created:				2006-12-19
-# Whom:					Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/security/p5-Net-OpenID-JanRain/Makefile,v 1.10 2012/11/17 06:01:13 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: security/p5-Net-OpenID-JanRain/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-OpenID-JanRain
 PORTVERSION=	1.1.1
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-Crypt-DH>=0:${PORTSDIR}/security/p5-Crypt-DH \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::OpenID::JanRain::Consumer.3 \
 		Net::OpenID::JanRain::Server.3 \
