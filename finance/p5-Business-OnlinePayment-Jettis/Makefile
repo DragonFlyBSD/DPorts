@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-Jettis/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: finance/p5-Business-OnlinePayment-Jettis/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Business-OnlinePayment-Jettis
 PORTVERSION=	0.02
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Business-CreditCard>=0:${PORTSDIR}/finance/p5-Business-CreditC
 		p5-Business-OnlinePayment>=0:${PORTSDIR}/finance/p5-Business-OnlinePayment
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::OnlinePayment::Jettis.3
 
