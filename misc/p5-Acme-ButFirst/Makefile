@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Acme-ButFirst
-# Date created:				18 Feb 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/p5-Acme-ButFirst/Makefile,v 1.6 2012/11/17 05:59:42 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: misc/p5-Acme-ButFirst/Makefile 324167 2013-08-02 17:11:34Z az $
 
 PORTNAME=	Acme-ButFirst
 PORTVERSION=	1.00
@@ -16,6 +12,7 @@ COMMENT=	Do something, but first do something else
 
 MAN3=	Acme::ButFirst.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
