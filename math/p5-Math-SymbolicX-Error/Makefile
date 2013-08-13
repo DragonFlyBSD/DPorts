@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math-SymbolicX-Error
-# Date created:				15 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/math/p5-Math-SymbolicX-Error/Makefile,v 1.8 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Math-SymbolicX-Error/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Math-SymbolicX-Error
 PORTVERSION=	1.01
@@ -21,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Math::SymbolicX::Error.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
