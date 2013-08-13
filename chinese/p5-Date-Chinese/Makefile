@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Date-Chinese
-# Date Created:				13 Aug 2001
-# Whom:					Shell Hung <shell@shellhung.org>
-#
-# $FreeBSD: ports/chinese/p5-Date-Chinese/Makefile,v 1.10 2012/11/17 05:54:57 svnexp Exp $
-#
+# Created by: Shell Hung <shell@shellhung.org>
+# $FreeBSD: chinese/p5-Date-Chinese/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Date-Chinese
 PORTVERSION=	1.12
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to calculate dates in the Chinese calendar
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Date::Chinese.3
 
