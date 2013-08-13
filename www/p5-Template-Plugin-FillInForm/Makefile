@@ -2,7 +2,7 @@
 # Date created:				07 November 2007
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Template-Plugin-FillInForm/Makefile,v 1.4 2012/11/17 06:02:54 svnexp Exp $
+# $FreeBSD: www/p5-Template-Plugin-FillInForm/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Template-Plugin-FillInForm
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-HTML-FillInForm>=0:${PORTSDIR}/www/p5-HTML-FillInForm \
 		p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Template::Plugin::FillInForm.3
 
