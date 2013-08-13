@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-DBI-Lite
-# Date created:				16th March, 2010
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-Class-DBI-Lite/Makefile,v 1.33 2012/12/17 08:59:15 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: databases/p5-Class-DBI-Lite/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-DBI-Lite
 PORTVERSION=	1.034
@@ -29,7 +25,8 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 
 DEPRECATED=	deprecated by upstream
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::DBI::Lite.3 \
 		Class::DBI::Lite::CacheManager.3 \
