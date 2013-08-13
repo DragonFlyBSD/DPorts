@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-WikiConverter-Oddmuse
-# Date created:				2006/06/27
-# Whom:	      				chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/www/p5-HTML-WikiConverter-Oddmuse/Makefile,v 1.8 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: www/p5-HTML-WikiConverter-Oddmuse/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-WikiConverter-Oddmuse
 PORTVERSION=	0.52
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-HTML-WikiConverter>=0.60:${PORTSDIR}/www/p5-HTML-WikiConverter
 		p5-URI>=1.35:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::WikiConverter::Oddmuse.3
 
