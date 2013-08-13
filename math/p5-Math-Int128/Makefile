@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: ports/math/p5-Math-Int128/Makefile,v 1.2 2013/01/03 09:44:05 svnexp Exp $
+# $FreeBSD: math/p5-Math-Int128/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Math-Int128
@@ -17,7 +17,8 @@ LICENSE=	ART10
 BUILD_DEPENDS=  p5-Math-Int64>=0.28:${PORTSDIR}/math/p5-Math-Int64
 RUN_DEPENDS=    p5-Math-Int64>=0.28:${PORTSDIR}/math/p5-Math-Int64
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 USE_GCC=	4.6+
 
