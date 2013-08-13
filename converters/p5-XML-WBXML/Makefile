@@ -2,7 +2,7 @@
 # Date created:				25 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/converters/p5-XML-WBXML/Makefile,v 1.9 2012/11/17 05:55:04 svnexp Exp $
+# $FreeBSD: converters/p5-XML-WBXML/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	XML-WBXML
@@ -18,7 +18,8 @@ LIB_DEPENDS=	wbxml2:${PORTSDIR}/textproc/wbxml2
 
 MAN3=	XML::WBXML.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,-I.,-I. -I${LOCALBASE}/include,' ${WRKSRC}/Makefile.PL
