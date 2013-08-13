@@ -1,4 +1,4 @@
-# $FreeBSD: ports/security/p5-Crypt-PassGen/Makefile,v 1.11 2012/11/17 06:01:11 svnexp Exp $
+# $FreeBSD: security/p5-Crypt-PassGen/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Crypt-PassGen
 PORTVERSION=	0.06
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Crypt::PassGen - Generate a random password that looks like a real word
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::PassGen.3
 
