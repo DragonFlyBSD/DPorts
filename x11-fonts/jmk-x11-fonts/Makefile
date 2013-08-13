@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fonts/jmk-x11-fonts/Makefile,v 1.13 2013/01/26 15:07:30 svnexp Exp $
+# $FreeBSD: x11-fonts/jmk-x11-fonts/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	jmk-x11-fonts
 PORTVERSION=	3.0
@@ -13,7 +13,7 @@ BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
 
-USE_IMAKE=	yes
+USES=		imake
 
 do-install:
 	@${MKDIR} ${PREFIX}/lib/X11/fonts/jmk
