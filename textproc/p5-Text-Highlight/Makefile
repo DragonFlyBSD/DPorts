@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Text-Highlight
-# Date created:	   05 August 2007
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-Text-Highlight/Makefile,v 1.5 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-Text-Highlight/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Highlight
 PORTVERSION=	0.04
@@ -16,7 +12,8 @@ DISTNAME=	text-highlight-${PORTVERSION}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Syntax highlighting framework
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Highlight.3
 
