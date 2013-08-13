@@ -1,9 +1,5 @@
-# New ports collection makefile for:   Algorithm::LCS
-# Date created:        26 July 2005
-# Whom:                tiger@whitetigersd.com
-#
-# $FreeBSD: ports/devel/p5-Algorithm-LCS/Makefile,v 1.7 2012/11/17 05:56:04 svnexp Exp $
-#
+# Created by: tiger@whitetigersd.com
+# $FreeBSD: devel/p5-Algorithm-LCS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Algorithm-LCS
 PORTVERSION=	1.04
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Fast (XS) implementation of the Longest Common Subsequence Algorithm
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Algorithm::LCS.3
 
