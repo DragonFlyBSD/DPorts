@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	Finance::TW::EmergingQuote
-# Date created:			Feb 16, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: ports/finance/p5-Finance-TW-EmergingQuote/Makefile,v 1.3 2012/11/17 05:57:26 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: finance/p5-Finance-TW-EmergingQuote/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Finance-TW-EmergingQuote
 PORTVERSION=	0.26
@@ -18,7 +15,8 @@ COMMENT=	Check stock quotes from Taiwan Emerging Stock
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Finance::TW::EmergingQuote.3
 
