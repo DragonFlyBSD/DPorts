@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Statistics-Forecast
-# Date created:		2006/12/23
-# Whom:			chinsan
-#
-# $FreeBSD: ports/math/p5-Statistics-Forecast/Makefile,v 1.5 2012/11/17 05:59:27 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: math/p5-Statistics-Forecast/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Statistics-Forecast
 PORTVERSION=	0.3
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Calculates a future value
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Statistics::Forecast.3
 
