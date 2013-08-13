@@ -2,7 +2,7 @@
 # Date created:	   December 22, 2010
 # Whom:		   mat
 #
-# $FreeBSD: ports/security/p5-POE-Filter-SSL/Makefile,v 1.4 2012/11/17 06:01:13 svnexp Exp $
+# $FreeBSD: security/p5-POE-Filter-SSL/Makefile 324168 2013-08-02 17:16:28Z mat $
 #
 
 PORTNAME=	POE-Filter-SSL
@@ -28,7 +28,8 @@ RUN_DEPENDS=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay \
 
 WRKSRC=	${WRKDIR}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Filter::SSL.3
 
