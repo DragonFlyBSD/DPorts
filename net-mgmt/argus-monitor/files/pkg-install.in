@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net-mgmt/argus-monitor/files/pkg-install.in,v 1.2 2012/11/17 06:00:30 svnexp Exp $
+# $FreeBSD: net-mgmt/argus-monitor/files/pkg-install.in 305501 2012-10-07 18:44:44Z ohauer $
 
 ETCDIR=%%ETCDIR%%
 WWWDIR=%%WWWDIR%%

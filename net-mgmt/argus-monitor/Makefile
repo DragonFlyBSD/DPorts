@@ -1,5 +1,5 @@
 # Created by: brock@cotcomsol.com
-# $FreeBSD: ports/net-mgmt/argus-monitor/Makefile,v 1.15 2012/11/17 06:00:30 svnexp Exp $
+# $FreeBSD: net-mgmt/argus-monitor/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	argus-monitor
 PORTVERSION=	20100109
@@ -20,7 +20,7 @@ EXTRA_PATCHES=	${FILESDIR}/patch.001
 LICENSE=	ART10
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_PERL5=	yes
+USES=		perl5
 USE_RC_SUBR=	argusd
 HAS_CONFIGURE=	yes
 USE_APACHE_RUN=	22+
