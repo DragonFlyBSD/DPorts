@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-REST-Google/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-REST-Google/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	REST-Google
 PORTVERSION=	1.0.8
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-JSON-Any>=1.16:${PORTSDIR}/converters/p5-JSON-Any
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	REST::Google.3 \
 	REST::Google::Feeds.3 \
