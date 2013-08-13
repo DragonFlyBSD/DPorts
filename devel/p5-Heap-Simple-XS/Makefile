@@ -2,7 +2,7 @@
 # Date created:				11 November 2004
 # Whom:					Aaron Dalton <aaron@daltons.ca>
 #
-# $FreeBSD: ports/devel/p5-Heap-Simple-XS/Makefile,v 1.10 2012/11/17 05:56:18 svnexp Exp $
+# $FreeBSD: devel/p5-Heap-Simple-XS/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Heap-Simple-XS
@@ -17,7 +17,8 @@ COMMENT=	An XS implementation of the Heap::Simple interface
 BUILD_DEPENDS=	p5-Heap-Simple>=0:${PORTSDIR}/devel/p5-Heap-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS+=-n
 
 MAN3=		Heap::Simple::XS.3
