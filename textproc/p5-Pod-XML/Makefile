@@ -1,9 +1,6 @@
 # Ports collection makefile for:	p5-Pod-XML
-# Date created:			2006/07/11
-# Whom:				chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/textproc/p5-Pod-XML/Makefile,v 1.10 2012/11/17 06:02:07 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: textproc/p5-Pod-XML/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-XML
 PORTVERSION=	0.99
@@ -19,7 +16,8 @@ BUILD_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
 		p5-Test-File-Contents>=0:${PORTSDIR}/devel/p5-Test-File-Contents
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pod2xml.1
 MAN3=		Pod::XML.3
