@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-DBI-DDL
-# Date created:	   18 january 2005
-# Whom:		   Daniel Wijnands <daniel@itxl.nl>
-#
-# $FreeBSD: ports/databases/p5-Class-DBI-DDL/Makefile,v 1.9 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: Daniel Wijnands <daniel@itxl.nl>
+# $FreeBSD: databases/p5-Class-DBI-DDL/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	Class-DBI-DDL
 PORTVERSION=	1.02
@@ -17,7 +13,8 @@ COMMENT=	DDL for Class-DBI
 RUN_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Class::DBI::DDL.3 \
 		Class::DBI::DDL::Pg.3
