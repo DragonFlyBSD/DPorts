@@ -2,7 +2,7 @@
 # Date Created:		15 December 1999
 # Whom:			Garrett Wollman <wollman@lcs.mit.edu>
 #
-# $FreeBSD: ports/graphics/p5-Chart-PNGgraph/Makefile,v 1.21 2012/11/17 05:58:16 svnexp Exp $
+# $FreeBSD: graphics/p5-Chart-PNGgraph/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Chart-PNGgraph
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD \
 		p5-GD-Graph>=0:${PORTSDIR}/graphics/p5-GD-Graph
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Chart::PNGgraph.3
 
