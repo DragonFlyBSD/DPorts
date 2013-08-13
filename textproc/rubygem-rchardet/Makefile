@@ -1,12 +1,12 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: textproc/rubygem-rchardet/Makefile 322882 2013-07-13 05:25:46Z swills $
+# $FreeBSD: textproc/rubygem-rchardet/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	rchardet
 PORTVERSION=	1.3.1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Character encoding auto-detection in Ruby
 
 USE_RUBY=		yes
