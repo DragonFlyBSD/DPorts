@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: ports/textproc/p5-XML-SAX-ExpatXS/Makefile,v 1.23 2012/12/11 11:49:48 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-SAX-ExpatXS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-SAX-ExpatXS
 PORTVERSION=	1.33
@@ -14,7 +14,8 @@ RUN_DEPENDS=	p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ARGS=	EXPATLIBPATH=${LOCALBASE}/lib \
 		EXPATINCPATH=${LOCALBASE}/include </dev/null
 
