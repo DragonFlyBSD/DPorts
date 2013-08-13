@@ -1,12 +1,12 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: finance/rubygem-money/Makefile 322804 2013-07-12 03:26:24Z swills $
+# $FreeBSD: finance/rubygem-money/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	money
 PORTVERSION=	5.1.1
 CATEGORIES=	finance rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Library for handling money and different currencies
 
 RUN_DEPENDS=	rubygem-i18n>=0.6:${PORTSDIR}/devel/rubygem-i18n
