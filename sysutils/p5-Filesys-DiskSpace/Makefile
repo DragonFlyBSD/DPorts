@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sysutils/p5-Filesys-DiskSpace
-# Date created:				26 February 2001
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/sysutils/p5-Filesys-DiskSpace/Makefile,v 1.10 2012/11/17 06:01:40 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: sysutils/p5-Filesys-DiskSpace/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Filesys-DiskSpace
 PORTVERSION=	0.05
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Perl equivalent of statfs(2)
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Filesys::DiskSpace.3
 
