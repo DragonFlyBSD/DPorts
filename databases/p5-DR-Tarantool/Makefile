@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: databases/p5-DR-Tarantool/Makefile 319057 2013-05-25 14:41:37Z az $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: databases/p5-DR-Tarantool/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	DR-Tarantool
 PORTVERSION=	0.37
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:UNERA
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Perl driver for Tarantool
 
 LICENSE=	ART10
