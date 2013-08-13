@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::Filter::Reindent
-# Date created:		13 Mar 2002
-# Whom:			Sergey Skvortsov <skv@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Filter-Reindent/Makefile,v 1.8 2012/11/17 06:02:12 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-Filter-Reindent/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Filter-Reindent
 PORTVERSION=	0.03
@@ -17,7 +13,8 @@ COMMENT=	Reformats whitespace for pretty printing XML
 RUN_DEPENDS=	p5-XML-Filter-DetectWS>=0:${PORTSDIR}/textproc/p5-XML-Filter-DetectWS
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Filter::Reindent.3
 
