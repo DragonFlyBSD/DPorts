@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: games/p5-Baseball-Sabermetrics/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: games/p5-Baseball-Sabermetrics/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Baseball-Sabermetrics
 PORTVERSION=	0.03
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Data-Serializer>=0.29:${PORTSDIR}/devel/p5-Data-Serializer \
 		p5-libwww>=5.801:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Baseball::Sabermetrics.3
 
