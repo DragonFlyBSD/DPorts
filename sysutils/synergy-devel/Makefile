@@ -1,9 +1,5 @@
-# New ports collection makefile for:	synergy-devel
-# Date created:		6 February 2012
-# Whom:			George Neville-Neil <gnn@freebsd.org>
-#
-# $FreeBSD: sysutils/synergy-devel/Makefile 321694 2013-06-24 17:24:37Z gnn $
-#
+# Created by: George Neville-Neil <gnn@freebsd.org>
+# $FreeBSD: sysutils/synergy-devel/Makefile 323422 2013-07-21 22:48:14Z marino $
 
 PORTNAME=	synergy
 PORTVERSION=	1.4.12
@@ -14,6 +10,8 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	gnn@FreeBSD.org
 COMMENT=	Mouse and keyboard sharing utility
+
+BUILD_DEPENDS=	unzip:${PORTSDIR}/archivers/unzip
 
 CONFLICTS=	synergy-[0-9]*
 USES=		cmake
@@ -28,7 +26,7 @@ PORTEXAMPLES=	synergy.conf.example synergy.conf.example-basic \
 
 post-extract:
 	cd ${WRKSRC}/tools/
-	mkdir ${WRKSRC}/tools/cryptopp562
+	${MKDIR} ${WRKSRC}/tools/cryptopp562
 	(cd ${WRKSRC}/tools/cryptopp562 && unzip ${WRKSRC}/tools/cryptopp562.zip)
 
 do-install:
