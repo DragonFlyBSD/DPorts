@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mldonkey perlreactor
-# Date created:				Sat Feb 23 13:13:08 BRT 2002
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/net-p2p/mldonkey-perlreactor/Makefile,v 1.10 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: net-p2p/mldonkey-perlreactor/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	mldonkey
 PORTVERSION=	0.2
@@ -17,16 +13,15 @@ COMMENT=	Automatically add links found in web pages to MLDonkey queue
 
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-USE_PERL5=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
+USES=		shebangfix perl5
+SHEBANG_FILES$=${BINARY_NAME}
 
 BINARY_NAME=	perlreactor
 
 post-patch:
-	@${PERL} -pi -e 's|#!/usr/bin/perl\n||; \
-		s|/usr/local/bin/perl|${PERL}|' \
-		${WRKSRC}/${BINARY_NAME}
+	@${REINPLACE_CMD} -i '' -e '1d'	${WRKSRC}/${BINARY_NAME}
 
 do-install:
 .ifndef(NOPORTDOCS)
