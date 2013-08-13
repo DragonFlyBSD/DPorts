@@ -2,7 +2,7 @@
 # Date created:				16 March 2001
 # Whom:					Jeremy Norris <ishmael27@home.com>
 #
-# $FreeBSD: ports/graphics/p5-Imlib2/Makefile,v 1.21 2012/11/17 05:58:17 svnexp Exp $
+# $FreeBSD: graphics/p5-Imlib2/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Imlib2
@@ -18,7 +18,8 @@ COMMENT=	Perl bindings for Imlib2
 
 USE_EFL=	imlib2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Imlib2.3
 
