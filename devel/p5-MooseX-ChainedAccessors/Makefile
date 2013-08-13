@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-ChainedAccessors/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-MooseX-ChainedAccessors/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-ChainedAccessors
 PORTVERSION=	0.02
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Moose::Meta::Attribute::Custom::Trait::Chained.3 \
 		MooseX::ChainedAccessors.3 \
