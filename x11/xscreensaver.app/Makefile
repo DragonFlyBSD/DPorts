@@ -1,9 +1,5 @@
-# New ports collection makefile for:   XScreenSaver.App
-# Date created:        26 September 2004
-# Whom:                hemi@puresimplicity.net
-#
-# $FreeBSD: ports/x11/xscreensaver.app/Makefile,v 1.10 2012/11/17 06:03:23 svnexp Exp $
-#
+# Created by: hemi@puresimplicity.net
+# $FreeBSD: x11/xscreensaver.app/Makefile 323416 2013-07-21 21:33:40Z rene $
 
 PORTNAME=	XScreenSaver.App
 PORTVERSION=	2.3
