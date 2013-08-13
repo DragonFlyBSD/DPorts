@@ -1,10 +1,7 @@
 # ex:ts=8
 # Ports collection makefile for:	Text::Greeking
-# Date created:			Jul 31, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: ports/textproc/p5-Text-Greeking/Makefile,v 1.3 2012/11/17 06:02:10 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/p5-Text-Greeking/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Greeking
 PORTVERSION=	0.12
@@ -15,7 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generate meaningless text that creates the illusion of the document
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Text::Greeking.3
 
