@@ -1,5 +1,5 @@
-# Created by: John Marino <draco@marino.st>
-# $FreeBSD: www/aws-demos/Makefile 322271 2013-07-04 12:35:35Z wg $
+# Created by: John Marino <marino@FreeBSD.org>
+# $FreeBSD: www/aws-demos/Makefile 322832 2013-07-12 13:40:50Z marino $
 
 PORTNAME=	aws
 PORTVERSION=	3.1.0.0
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 PKGNAMESUFFIX=	-demos
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	marino@FreeBSD.org
 COMMENT=	Adacore Ada Web Server demos
 
 BUILD_DEPENDS+=	gprbuild>=20120510:${PORTSDIR}/devel/gprbuild \
