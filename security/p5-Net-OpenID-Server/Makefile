@@ -2,7 +2,7 @@
 # Date created:				July 25th 2005
 # Whom:					Alex Kapranoff <kappa@rambler-co.ru>
 #
-# $FreeBSD: ports/security/p5-Net-OpenID-Server/Makefile,v 1.11 2012/11/17 06:01:13 svnexp Exp $
+# $FreeBSD: security/p5-Net-OpenID-Server/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Net-OpenID-Server
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Crypt-DH>=0:${PORTSDIR}/security/p5-Crypt-DH \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
 MAN3=		Net::OpenID::Server.3
