@@ -2,7 +2,7 @@
 # Date created:				Mar 27 2004
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: devel/p5-Parse-CPAN-Packages/Makefile 321187 2013-06-18 13:49:02Z az $
+# $FreeBSD: devel/p5-Parse-CPAN-Packages/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Parse-CPAN-Packages
@@ -24,7 +24,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-InDistDir>0:${PORTSDIR}/devel/p5-Test-InDistDir \
 		p5-File-Slurp>0:${PORTSDIR}/devel/p5-File-Slurp
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Parse::CPAN::Packages.3 \
 	Parse::CPAN::Packages::Distribution.3 \
