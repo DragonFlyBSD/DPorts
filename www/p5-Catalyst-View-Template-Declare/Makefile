@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Catalyst-View-Template-Declare
-# Date created:		2012-04-03
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-View-Template-Declare/Makefile,v 1.2 2012/11/17 06:02:48 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-View-Template-Declare/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-View-Template-Declare
 PORTVERSION=	0.04
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Template-Declare>=0.26:${PORTSDIR}/textproc/p5-Template-Declare
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Helper::View::Template::Declare.3 \
 	Catalyst::View::Template::Declare.3
