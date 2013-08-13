@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xgraph
-# Date created:		24 November 1994
-# Whom:			asami
-#
-# $FreeBSD: ports/math/xgraph/Makefile,v 1.23 2012/11/17 05:59:32 svnexp Exp $
-#
+# Created by: asami
+# $FreeBSD: math/xgraph/Makefile 321996 2013-06-28 22:07:55Z bapt $
 
 PORTNAME=	xgraph
 PORTVERSION=	11.3.2.20000910
@@ -14,9 +10,9 @@ DISTNAME=	xgraph-11
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	sanpei@FreeBSD.org
-COMMENT=	A program that helps you plot graphs
+COMMENT=	Program that helps you plot graphs
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAN1=		xgraph.1
