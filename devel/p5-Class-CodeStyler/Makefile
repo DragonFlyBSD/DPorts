@@ -2,7 +2,7 @@
 # Date created:				12 Jun 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Class-CodeStyler/Makefile,v 1.10 2012/11/17 05:56:07 svnexp Exp $
+# $FreeBSD: devel/p5-Class-CodeStyler/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Class-CodeStyler
@@ -17,6 +17,7 @@ COMMENT=	Perl extension for code generation program formatting and execution
 BUILD_DEPENDS=	p5-Class-STL-Containers>=0:${PORTSDIR}/devel/p5-Class-STL-Containers
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
