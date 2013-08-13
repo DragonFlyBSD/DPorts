@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-View-XML-Feed/Makefile 317656 2013-05-08 12:24:26Z ehaupt $
+# $FreeBSD: www/p5-Catalyst-View-XML-Feed/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	Catalyst-View-XML-Feed
 PORTVERSION=	0.07
@@ -16,7 +16,6 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>0:${PORTSDIR}/www/p5-Catalyst-Runtime \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN3=		Catalyst::View::XML::Feed.3
 
