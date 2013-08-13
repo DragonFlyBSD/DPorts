@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Spread-Session
-# Date created:				May 24th 2002
-# Whom:	      				Joshua Goodall <joshua@roughtrade.net>
-#
-# $FreeBSD: ports/net/p5-Spread-Session/Makefile,v 1.10 2012/11/17 06:00:13 svnexp Exp $
-#
+# Created by: Joshua Goodall <joshua@roughtrade.net>
+# $FreeBSD: net/p5-Spread-Session/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Spread-Session
 PORTVERSION=	0.4
@@ -18,7 +14,8 @@ COMMENT=	Perl OO wrapper for Spread messaging toolkit
 BUILD_DEPENDS=	spread>=0:${PORTSDIR}/net/spread
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Spread::Session.3
 
