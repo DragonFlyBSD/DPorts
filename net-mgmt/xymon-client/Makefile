@@ -1,13 +1,13 @@
-# $FreeBSD: net-mgmt/xymon-client/Makefile 317389 2013-05-04 22:48:03Z flo $
+# $FreeBSD: net-mgmt/xymon-client/Makefile 323891 2013-07-29 15:03:58Z feld $
 
 PORTNAME=	xymon
-PORTVERSION=	4.3.11
+PORTVERSION=	4.3.12
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	SF/xymon/Xymon/${PORTVERSION}
 PKGNAMESUFFIX=	-client${PKGNAMESUFFIX2}
 DIST_SUBDIR=	repacked
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	System for monitoring servers and networks - Client
 
 LICENSE=	GPLv2
