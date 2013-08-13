@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-ConfigReader/Makefile,v 1.20 2012/11/17 05:56:09 svnexp Exp $
+# $FreeBSD: devel/p5-ConfigReader/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	ConfigReader
 PORTVERSION=	0.5
@@ -11,8 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl5 module to read directives from a configuration file
 
-USE_PERL5=	YES
-
+USES=		perl5
 NO_BUILD=	YES
 
 do-install:
