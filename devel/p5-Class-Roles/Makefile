@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-Roles
-# Date Created:				17 Feb, 2004
-# Whom:					Alex Kapranoff <kappa@freebsd.org.ua>
-#
-# $FreeBSD: ports/devel/p5-Class-Roles/Makefile,v 1.6 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: Alex Kapranoff <kappa@freebsd.org.ua>
+# $FreeBSD: devel/p5-Class-Roles/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	Class-Roles
 PORTVERSION=	0.30
@@ -17,7 +13,8 @@ COMMENT=	Provides a role-based system of OOP (emulates Perl6)
 
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Class::Roles.3
 
