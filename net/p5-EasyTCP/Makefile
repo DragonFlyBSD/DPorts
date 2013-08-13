@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: net/p5-EasyTCP/Makefile 318283 2013-05-16 08:38:49Z miwi $
+# $FreeBSD: net/p5-EasyTCP/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	EasyTCP
 PORTVERSION=	0.26
@@ -15,7 +15,8 @@ COMMENT=	Easily create TCP/IP clients and servers
 BUILD_DEPENDS=	p5-Crypt-RSA>=0:${PORTSDIR}/security/p5-Crypt-RSA
 RUN_DEPENDS=	p5-Crypt-RSA>=0:${PORTSDIR}/security/p5-Crypt-RSA
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::EasyTCP.3
 
