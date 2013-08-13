@@ -2,7 +2,7 @@
 # Date created:				31 December 2004
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/p5-Email-Delete/Makefile,v 1.6 2012/11/17 05:59:07 svnexp Exp $
+# $FreeBSD: mail/p5-Email-Delete/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Email-Delete
@@ -23,7 +23,8 @@ RUN_DEPENDS=	p5-Email-Folder>=0.84:${PORTSDIR}/mail/p5-Email-Folder \
 		p5-File-Find-Rule>=0.28:${PORTSDIR}/devel/p5-File-Find-Rule
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Email::Delete.3 \
 	Email::Delete::Maildir.3 \
