@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Functions
-# Date created:	   8 Jan 2004
-# Whom:		   Mathieu Arnold <mat@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Functions/Makefile,v 1.7 2012/11/17 05:56:12 svnexp Exp $
-#
+# Created by: Mathieu Arnold <mat@FreeBSD.org>
+# $FreeBSD: devel/p5-DateTime-Functions/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Functions
 PORTVERSION=	0.10
@@ -17,7 +13,8 @@ COMMENT=	Procedural interface to DateTime functions
 BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Functions.3
 
