@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: databases/p5-DBIx-Custom/Makefile 313411 2013-03-04 15:46:04Z tobez $
+# $FreeBSD: databases/p5-DBIx-Custom/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Custom
 PORTVERSION=	0.2800
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-DBD-SQLite>=1.25:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Object-Simple>=3.0621:${PORTSDIR}/devel/p5-Object-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::Custom.3 \
 		DBIx::Custom::Mapper.3 \
