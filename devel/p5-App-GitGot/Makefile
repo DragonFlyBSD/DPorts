@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-App-GitGot/Makefile 322475 2013-07-08 02:00:21Z clsung $
+# $FreeBSD: devel/p5-App-GitGot/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	App-GitGot
 PORTVERSION=	1.08
@@ -36,7 +36,8 @@ TEST_DEPENDS=	p5-Test-Class>=0:${PORTSDIR}/devel/p5-Test-Class \
 		p5-Test-Kwalitee>=0:${PORTSDIR}/devel/p5-Test-Kwalitee \
 		p5-Sort-Versions>=0:${PORTSDIR}/devel/p5-Sort-Versions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		got.1 \
 		got-complete.1
