@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-Random/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-Net-Random/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Random
 PORTVERSION=	2.2.2
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Random.3
 
