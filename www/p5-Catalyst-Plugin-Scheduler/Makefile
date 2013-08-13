@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-Scheduler/Makefile,v 1.9 2012/11/17 06:02:47 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-Scheduler/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Catalyst-Plugin-Scheduler
 PORTVERSION=	0.10
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::Scheduler.3
 
