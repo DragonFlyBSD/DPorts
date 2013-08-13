@@ -1,9 +1,5 @@
-# New ports collection makefile for:	CGI-Cache
-# Date created:				Mon Jan  1 11:26:17 2001
-# Whom:					will
-#
-# $FreeBSD: ports/www/p5-CGI-Cache/Makefile,v 1.20 2012/11/17 06:02:45 svnexp Exp $
-#
+# Created by: will
+# $FreeBSD: www/p5-CGI-Cache/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CGI-Cache
 PORTVERSION=	1.42.01
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Cache>=0:${PORTSDIR}/devel/p5-Cache \
 		p5-Tie-Restore>=0:${PORTSDIR}/devel/p5-Tie-Restore
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Cache.3
 
