@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/databases/p5-DBIx-NoSQL/Makefile,v 1.8 2013/02/01 11:05:30 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-NoSQL/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-NoSQL
 PORTVERSION=	0.0020
@@ -28,7 +28,8 @@ RUN_DEPENDS=	p5-Any-Moose>0:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-DBIx-Class>=0.08124:${PORTSDIR}/databases/p5-DBIx-Class
 TEST_DEPENDS=	p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::NoSQL.3 \
 		DBIx::NoSQLite.3
