@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: www/p5-Text-MultiMarkdown-ApacheHandler/Makefile 317541 2013-05-06 18:39:43Z zi $
+# $FreeBSD: www/p5-Text-MultiMarkdown-ApacheHandler/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-MultiMarkdown-ApacheHandler
 PORTVERSION=	0.01
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Text-MultiMarkdown>=0:${PORTSDIR}/textproc/p5-Text-MultiMarkdo
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_APACHE_RUN=	22+
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 SUB_FILES=	pkg-message
 
 MAN3=		Text::MultiMarkdown::ApacheHandler.3
