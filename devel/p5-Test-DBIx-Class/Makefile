@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-DBIx-Class/Makefile 319478 2013-05-31 10:22:05Z tobez $
+# $FreeBSD: devel/p5-Test-DBIx-Class/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-DBIx-Class
 PORTVERSION=	0.40
@@ -32,7 +32,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0.106:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::DBIx::Class.3 \
 	Test::DBIx::Class::Example::Schema.3 \
