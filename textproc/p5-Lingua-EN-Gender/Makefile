@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua::EN::Gender
-# Date created:				30 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/textproc/p5-Lingua-EN-Gender/Makefile,v 1.10 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-Lingua-EN-Gender/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Lingua-EN-Gender
 PORTVERSION=	0.02
@@ -16,7 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Inflect pronouns for gender
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Lingua::EN::Gender.3
 
