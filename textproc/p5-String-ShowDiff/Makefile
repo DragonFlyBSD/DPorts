@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-String-ShowDiff
-# Date created:				April 26, 2003
-# Whom:					Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/textproc/p5-String-ShowDiff/Makefile,v 1.8 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: textproc/p5-String-ShowDiff/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	String-ShowDiff
 PORTVERSION=	0.03
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Algorithm-Diff>=0:${PORTSDIR}/devel/p5-Algorithm-Diff \
 		p5-Term-ANSIColor>=0:${PORTSDIR}/devel/p5-Term-ANSIColor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		String::ShowDiff.3
 
