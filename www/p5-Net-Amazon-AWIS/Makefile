@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Amazon-AWIS
-# Date created:		2007-05-02
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-Net-Amazon-AWIS/Makefile,v 1.6 2012/11/17 06:02:52 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-Net-Amazon-AWIS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Amazon-AWIS
 PORTVERSION=	0.36
@@ -23,7 +19,8 @@ RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Amazon::AWIS.3
 
