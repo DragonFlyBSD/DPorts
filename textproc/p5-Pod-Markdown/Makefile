@@ -1,9 +1,6 @@
 # Ports collection makefile for:	p5-Pod-Markdown
-# Date created:			18 November, 2011
-# Whom:				Cheng-Lung Sung <clsung@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Pod-Markdown/Makefile,v 1.6 2012/12/17 06:36:02 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
+# $FreeBSD: textproc/p5-Pod-Markdown/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-Markdown
 PORTVERSION=	1.320000
@@ -23,7 +20,8 @@ RUN_DEPENDS=	p5-Pod-Parser>=0:${PORTSDIR}/textproc/p5-Pod-Parser
 
 TEST_DEPENDS=	p5-Test-Difference>=0:${PORTSDIR}/devel/p5-Test-Differences
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pod2markdown.1
 MAN3=		Pod::Markdown.3
