@@ -1,5 +1,5 @@
-# Created by: CHOI Junho <cjh@FreeBSD.org>
-# $FreeBSD: korean/hmconv/Makefile 320724 2013-06-12 19:46:23Z jkim $
+# Created by: Junho CHOI <junho.choi@gmail.com>
+# $FreeBSD: korean/hmconv/Makefile 321159 2013-06-17 22:50:28Z jkim $
 
 PORTNAME=	hmconv
 PORTVERSION=	1.0.3
