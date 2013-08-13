@@ -2,7 +2,7 @@
 # Date created:				12 September 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Module-Starter-PBP/Makefile,v 1.7 2012/11/17 05:56:22 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Starter-PBP/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Module-Starter-PBP
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Module-Starter>=0:${PORTSDIR}/devel/p5-Module-Starter \
 		p5-version>=0:${PORTSDIR}/devel/p5-version
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Module::Starter::PBP.3
 
