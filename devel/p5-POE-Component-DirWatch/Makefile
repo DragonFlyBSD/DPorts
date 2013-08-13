@@ -2,7 +2,7 @@
 # Date created:	   06 July 2002
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/devel/p5-POE-Component-DirWatch/Makefile,v 1.13 2012/11/17 05:56:24 svnexp Exp $
+# $FreeBSD: devel/p5-POE-Component-DirWatch/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	POE-Component-DirWatch
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-POE>=0.12:${PORTSDIR}/devel/p5-POE \
 		p5-File-Signature>0:${PORTSDIR}/sysutils/p5-File-Signature
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
 MAN3=	POE::Component::DirWatch.3 \
