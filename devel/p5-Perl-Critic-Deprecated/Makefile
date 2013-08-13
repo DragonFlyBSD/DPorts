@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Perl-Critic-Deprecated
-# Date created:		2012-03-14
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Perl-Critic-Deprecated/Makefile,v 1.3 2012/11/17 05:56:26 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Perl-Critic-Deprecated/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Perl-Critic-Deprecated
 PORTVERSION=	1.108
@@ -17,7 +13,8 @@ COMMENT=	Policies that were formally included with Perl::Critic itself, but whic
 BUILD_DEPENDS=	p5-Perl-Critic>=0:${PORTSDIR}/textproc/p5-Perl-Critic
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Perl::Critic::Deprecated.3 \
 	Perl::Critic::Policy::NamingConventions::ProhibitMixedCaseSubs.3 \
