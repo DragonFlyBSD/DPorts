@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: textproc/p5-WWW-Google-SiteMap/Makefile 318165 2013-05-14 16:07:16Z miwi $
+# $FreeBSD: textproc/p5-WWW-Google-SiteMap/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	WWW-Google-SiteMap
 PORTVERSION=	1.10
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-XML-Twig>=0:${PORTSDIR}/textproc/p5-XML-Twig \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::Google::SiteMap.3		\
 		WWW::Google::SiteMap::Index.3	\
