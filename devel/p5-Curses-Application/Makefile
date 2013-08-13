@@ -3,7 +3,7 @@
 # Date created:			Apr 3, 2003
 # Whom:				ijliao
 #
-# $FreeBSD: ports/devel/p5-Curses-Application/Makefile,v 1.7 2012/11/17 05:56:09 svnexp Exp $
+# $FreeBSD: devel/p5-Curses-Application/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Curses-Application
@@ -19,7 +19,8 @@ COMMENT=	Curses application development framework
 BUILD_DEPENDS=	p5-Curses-Forms>=0:${PORTSDIR}/devel/p5-Curses-Forms
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Curses::Application.3
 
