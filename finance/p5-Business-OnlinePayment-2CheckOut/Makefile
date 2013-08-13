@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-2CheckOut/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: finance/p5-Business-OnlinePayment-2CheckOut/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Business-OnlinePayment-2CheckOut
 PORTVERSION=	0.02
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Business-CreditCard>=0:${PORTSDIR}/finance/p5-Business-CreditC
 		p5-Text-CSV_XS>=0:${PORTSDIR}/textproc/p5-Text-CSV_XS
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 
 MAN3=		Business::OnlinePayment::2CheckOut.3
 
