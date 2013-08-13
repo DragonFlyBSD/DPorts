@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: irc/netwalker-ircc/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: irc/netwalker-ircc/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	netwalker-ircc
 PORTVERSION=	0.5.0
@@ -11,8 +11,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Lightweight curses-based IRC client
 
 LICENSE=	GPLv2
-
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		netwalker.1
 
