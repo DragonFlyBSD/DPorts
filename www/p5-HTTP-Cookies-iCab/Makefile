@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTTP-Cookies-iCab
-# Date created:		2006-07-21
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/p5-HTTP-Cookies-iCab/Makefile,v 1.9 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-HTTP-Cookies-iCab/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTTP-Cookies-iCab
 PORTVERSION=	1.131
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-HTTP-Cookies>=0:${PORTSDIR}/www/p5-HTTP-Cookies
 RUN_DEPENDS=	p5-HTTP-Cookies>=0:${PORTSDIR}/www/p5-HTTP-Cookies
 TEST_DEPENDS=	p5-Text-Diff>=0:${PORTSDIR}/textproc/p5-Text-Diff
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTTP::Cookies::iCab.3
 
