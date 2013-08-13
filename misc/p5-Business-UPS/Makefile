@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Business-UPS/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: misc/p5-Business-UPS/Makefile 324167 2013-08-02 17:11:34Z az $
 
 PORTNAME=	Business-UPS
 PORTVERSION=	2.0
@@ -14,7 +14,8 @@ COMMENT=	UPS Interface Module
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::UPS.3
 
