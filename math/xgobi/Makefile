@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonym@biolateral.com.au>
-# $FreeBSD: math/xgobi/Makefile 320638 2013-06-11 20:44:04Z bsam $
+# $FreeBSD: math/xgobi/Makefile 321957 2013-06-28 11:51:05Z bapt $
 
 PORTNAME=	xgobi
 PORTVERSION=	2002.06.20
@@ -19,7 +19,7 @@ CONFIGURE_WRKSRC=	${PATCH_WRKSRC}
 BUILD_WRKSRC=	${PATCH_WRKSRC}
 CFLAGS+=	-Wno-return-type
 
-USE_IMAKE=	true
+USES=		imake
 USE_XORG=	xbitmaps xaw
 
 XFREE86_HTML_MAN=	no
