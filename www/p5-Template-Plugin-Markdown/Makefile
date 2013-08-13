@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: www/p5-Template-Plugin-Markdown/Makefile 305130 2012-10-01 14:45:16Z tabthorpe $
+# $FreeBSD: www/p5-Template-Plugin-Markdown/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Template-Plugin-Markdown
 PORTVERSION=	0.02
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit \
 		p5-Text-Markdown>=0:${PORTSDIR}/textproc/p5-Text-Markdown
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Template::Plugin::Markdown.3
 
