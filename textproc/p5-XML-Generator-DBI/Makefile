@@ -1,9 +1,5 @@
-# New ports collection makefile for:	XML::Generator::DBI
-# Date created:		28 Jan 2002
-# Whom:			Sergey Skvortsov <skv@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-XML-Generator-DBI/Makefile,v 1.9 2012/11/17 06:02:12 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@FreeBSD.org>
+# $FreeBSD: textproc/p5-XML-Generator-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	XML-Generator-DBI
 PORTVERSION=	1.00
@@ -18,7 +14,8 @@ COMMENT=	Generate SAX events from SQL queries
 RUN_DEPENDS=	p5-XML-SAX>=0:${PORTSDIR}/textproc/p5-XML-SAX
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		XML::Generator::DBI.3
 
