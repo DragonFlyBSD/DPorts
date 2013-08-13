@@ -2,7 +2,7 @@
 # Date created:				1 August 2004
 # Whom:					Aaron Dalton <aaron@daltons.ca>
 #
-# $FreeBSD: ports/devel/p5-Tree-Parser/Makefile,v 1.14 2012/11/17 05:56:35 svnexp Exp $
+# $FreeBSD: devel/p5-Tree-Parser/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Tree-Parser
@@ -22,6 +22,7 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
 MAN3=		Tree::Parser.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
