@@ -1,9 +1,5 @@
-# New ports collection makefile for:  Module-Install-Template
-# Date created:		07 December 2009
-# Whom:			gugu
-#
-# $FreeBSD: ports/devel/p5-Module-Install-Template/Makefile,v 1.5 2012/11/17 05:56:22 svnexp Exp $
-#
+# Created by: gugu
+# $FreeBSD: devel/p5-Module-Install-Template/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Module-Install-Template
 PORTVERSION=	0.08
@@ -18,7 +14,8 @@ BUILD_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit \
 		p5-Module-Install>=0:${PORTSDIR}/devel/p5-Module-Install
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=	Module::Install::Template.3
 
 .include <bsd.port.mk>
