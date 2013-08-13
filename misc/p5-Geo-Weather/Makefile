@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Geo-Weather
-# Date created:				2 August 2001
-# Whom:					Pete Fritchman <petef@databits.net>
-#
-# $FreeBSD: ports/misc/p5-Geo-Weather/Makefile,v 1.16 2012/11/17 05:59:43 svnexp Exp $
-#
+# Created by: Pete Fritchman <petef@databits.net>
+# $FreeBSD: misc/p5-Geo-Weather/Makefile 324167 2013-08-02 17:11:34Z az $
 
 PORTNAME=	Geo-Weather
 PORTVERSION=	1.41
@@ -17,7 +13,8 @@ COMMENT=	Perl module to retrieve weather information from weather.com
 
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Geo::Weather.3
 
