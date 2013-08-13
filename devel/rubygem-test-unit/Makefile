@@ -1,16 +1,12 @@
-# Ports collection makefile for:	rubygem-test-unit
-# Date created:				30 July 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: devel/rubygem-test-unit/Makefile 322916 2013-07-13 13:00:56Z swills $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: devel/rubygem-test-unit/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	test-unit
 PORTVERSION=	2.5.5
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Improved version of Test::Unit bundled in Ruby
 
 USE_RUBY=		yes
