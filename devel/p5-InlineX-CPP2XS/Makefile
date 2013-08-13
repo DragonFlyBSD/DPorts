@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-InlineX-CPP2XS/Makefile,v 1.11 2013/01/15 12:46:51 svnexp Exp $
+# $FreeBSD: devel/p5-InlineX-CPP2XS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	InlineX-CPP2XS
 PORTVERSION=	0.24
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-Inline>=0.50:${PORTSDIR}/devel/p5-Inline \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Warn>=0.24:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		InlineX::CPP2XS.3 InlineX::CPP2XS-Cookbook.3
 
