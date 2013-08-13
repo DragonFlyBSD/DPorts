@@ -2,7 +2,7 @@
 # Date created:				22 December 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/p5-XML-SAX-Expat-Incremental/Makefile,v 1.6 2012/11/17 06:02:13 svnexp Exp $
+# $FreeBSD: textproc/p5-XML-SAX-Expat-Incremental/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	XML-SAX-Expat-Incremental
@@ -19,7 +19,8 @@ RUN_DEPENDS=	p5-XML-Parser>0:${PORTSDIR}/textproc/p5-XML-Parser \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	XML::SAX::Expat::Incremental.3
 
