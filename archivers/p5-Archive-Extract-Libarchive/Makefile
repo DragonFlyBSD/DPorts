@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: archivers/p5-Archive-Extract-Libarchive/Makefile 315049 2013-03-23 17:11:40Z glewis $
+# $FreeBSD: archivers/p5-Archive-Extract-Libarchive/Makefile 321187 2013-06-18 13:49:02Z az $
 
 PORTNAME=	Archive-Extract-Libarchive
 PORTVERSION=	0.38
@@ -22,10 +22,4 @@ PERL_MODBUILD=	yes
 
 MAN3=		Archive::Extract::Libarchive.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501000
-BUILD_DEPENDS+=	p5-ExtUtils-CBuilder>=0:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
