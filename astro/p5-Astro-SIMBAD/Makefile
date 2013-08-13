@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-SIMBAD/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: astro/p5-Astro-SIMBAD/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Astro-SIMBAD
 PORTVERSION=	2.0.0
@@ -14,9 +14,8 @@ COMMENT=	OO Perl interface to the SIMBAD astronomical database
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 
-MAKE_JOBS_SAFE=  yes
-
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Astro::SIMBAD.3 \
 	Astro::SIMBAD::Query.3 \
