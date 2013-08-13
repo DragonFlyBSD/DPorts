@@ -2,7 +2,7 @@
 # Date created:				October 27, 2000
 # Whom:	      				Marc Fournier <scrappy@FreeBSD.org>
 #
-# $FreeBSD: ports/converters/p5-Convert-BER/Makefile,v 1.8 2012/11/17 05:55:03 svnexp Exp $
+# $FreeBSD: converters/p5-Convert-BER/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Convert-BER
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl5 module to encode and decode objects using Basic Encoding Rules (BER)
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Convert::BER.3
 
