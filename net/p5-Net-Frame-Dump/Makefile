@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: ports/net/p5-Net-Frame-Dump/Makefile,v 1.16 2012/12/05 17:59:46 svnexp Exp $
+# $FreeBSD: net/p5-Net-Frame-Dump/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Frame-Dump
 PORTVERSION=	1.13
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Bit-Vector>=0:${PORTSDIR}/math/p5-Bit-Vector \
     		p5-Class-Gomor>=1.00:${PORTSDIR}/devel/p5-Class-Gomor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Frame::Dump.3 \
 		Net::Frame::Dump::Offline.3 \
