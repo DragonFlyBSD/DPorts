@@ -1,5 +1,5 @@
 # Created by: Nick Hibma <n_hibma@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Sys-Gamin/Makefile 315563 2013-03-29 19:04:28Z bdrewery $
+# $FreeBSD: sysutils/p5-Sys-Gamin/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Sys-Gamin
 PORTVERSION=	0.1
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl interface to Gamin (File Access Monitor implementation)
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 USE_FAM=	yes
 MAN1=	gamin-monitor.1
 MAN3=	Sys::Gamin.3
