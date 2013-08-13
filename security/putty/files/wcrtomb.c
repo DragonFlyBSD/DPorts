@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: ports/security/putty/files/wcrtomb.c,v 1.2 2012/11/17 06:01:16 svnexp Exp $");
+__FBSDID("$FreeBSD: /tmp/pcvs/ports/security/putty/files/wcrtomb.c,v 1.1 2004-02-13 17:45:39 dinoex Exp $");
 
 #include <errno.h>
 #include <limits.h>

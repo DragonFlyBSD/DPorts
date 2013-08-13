@@ -1,8 +1,7 @@
-# $FreeBSD: ports/security/putty/Makefile,v 1.31 2013/01/06 13:46:59 svnexp Exp $
+# $FreeBSD: security/putty/Makefile 324357 2013-08-07 16:11:17Z mandree $
 
 PORTNAME=	putty
-PORTVERSION=	0.62
-PORTREVISION=	3
+PORTVERSION=	0.63
 CATEGORIES=	security ipv6
 MASTER_SITES=	http://the.earth.li/~sgtatham/putty/%SUBDIR%/ \
 		ftp://ftp.chiark.greenend.org.uk/users/sgtatham/putty-latest/
