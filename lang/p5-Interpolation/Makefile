@@ -1,9 +1,5 @@
-# New ports collection makefile for:	lang/p5-Interpolation
-# Date created:				08 December 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/lang/p5-Interpolation/Makefile,v 1.12 2012/11/17 05:58:54 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: lang/p5-Interpolation/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Interpolation
 PORTVERSION=	0.74
@@ -18,7 +14,8 @@ COMMENT=	Implement arbitrary string interpolation semantics for Perl
 BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Interpolation.3
 
