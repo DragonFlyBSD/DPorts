@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-NioTV
-# Date created:				2008/08/31
-# Whom:					chinsan
-#
-# $FreeBSD: ports/www/p5-WWW-NioTV/Makefile,v 1.4 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: www/p5-WWW-NioTV/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WWW-NioTV
 PORTVERSION=	0.04
@@ -22,7 +18,8 @@ RUN_DEPENDS=	p5-HTML-SimpleLinkExtor>=1.19:${PORTSDIR}/www/p5-HTML-SimpleLinkExt
 		p5-WWW-Mechanize>=1.34:${PORTSDIR}/www/p5-WWW-Mechanize \
 		p5-version>=0.76:${PORTSDIR}/devel/p5-version
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		WWW::NioTV.3
 
