@@ -1,9 +1,5 @@
-# New ports collection makefile for:	graphics/p5-Color-Palette
-# Date created:				02 September 2009
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/p5-Color-Palette/Makefile,v 1.6 2012/11/17 05:58:16 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: graphics/p5-Color-Palette/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Color-Palette
 PORTVERSION=	0.100002
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-MooseX-Types>=0:${PORTSDIR}/devel/p5-MooseX-Types \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Color::Palette.3 \
 	Color::Palette::Schema.3 \
