@@ -1,9 +1,5 @@
-# Ports collection makefile for:	devel-p5-File-Touch
-# Date created:				03 April 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/devel/p5-File-Touch/Makefile,v 1.2 2012/11/17 05:56:17 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: devel/p5-File-Touch/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=		File-Touch
 PORTVERSION=		0.08
@@ -12,10 +8,11 @@ MASTER_SITES=		CPAN
 MASTER_SITE_SUBDIR=	File
 PKGNAMEPREFIX=		p5-
 
-MAINTAINER=		freebsdports@chillibear.com
+MAINTAINER=		ports@FreeBSD.org
 COMMENT=		Module to 'touch' files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	File::Touch.3
 
