@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-DebugShell
-# Date created:	   28 February 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-POE-Component-DebugShell/Makefile,v 1.10 2012/11/17 05:56:24 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-POE-Component-DebugShell/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-DebugShell
 PORTVERSION=	1.412
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Distribution>=0:${PORTSDIR}/devel/p5-Test-Distribution
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::DebugShell.3
 
