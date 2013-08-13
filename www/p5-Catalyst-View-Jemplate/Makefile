@@ -2,7 +2,7 @@
 # Date created:				05 April 2007
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-Catalyst-View-Jemplate/Makefile,v 1.5 2012/11/17 06:02:48 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-View-Jemplate/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Catalyst-View-Jemplate
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-File-Find-Rule>0:${PORTSDIR}/devel/p5-File-Find-Rule \
 		p5-Jemplate>=0.19:${PORTSDIR}/www/p5-Jemplate
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Helper::View::Jemplate.3 \
 	Catalyst::View::Jemplate.3
