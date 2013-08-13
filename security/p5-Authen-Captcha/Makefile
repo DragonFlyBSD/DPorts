@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Authen-Captcha
-# Date created:				Mon May 10 13:27:28 CEST 2004
-# Whom:					tobez@FreeBSD.org
-#
-# $FreeBSD: ports/security/p5-Authen-Captcha/Makefile,v 1.13 2012/11/17 06:01:10 svnexp Exp $
-#
+# Created by: tobez@FreeBSD.org
+# $FreeBSD: security/p5-Authen-Captcha/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Authen-Captcha
 PORTVERSION=	1.023
@@ -18,7 +14,8 @@ COMMENT=	Perl module to verify the human element in transactions
 BUILD_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Authen::Captcha.3
 
