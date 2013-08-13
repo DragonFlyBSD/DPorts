@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-Diff3
-# Date created:				29 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Text-Diff3/Makefile,v 1.9 2012/11/17 06:02:09 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: textproc/p5-Text-Diff3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Text-Diff3
 PORTVERSION=	0.10
@@ -27,6 +23,7 @@ MAN3=	Text::Diff3.3 \
 	Text::Diff3::Range3.3 \
 	Text::Diff3::Text.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
