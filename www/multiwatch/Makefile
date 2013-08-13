@@ -1,7 +1,8 @@
-# $FreeBSD: www/multiwatch/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: www/multiwatch/Makefile 324037 2013-07-31 11:57:45Z kwm $
 
 PORTNAME=	multiwatch
 PORTVERSION=	1.0.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.lighttpd.net/multiwatch/releases-1.x/
 
@@ -15,7 +16,7 @@ GNU_CONFIGURE=	yes
 MAN1=		multiwatch.1
 USES=		pkgconfig
 USE_BZIP2=	yes
-USE_GNOME=	_glib20
+USE_GNOME=	glib20
 
 # Help configure find libev.
 CFLAGS+=	-I${LOCALBASE}/include
