@@ -2,7 +2,7 @@
 # Date created:	   24 Dec 2008
 # Whom:		   Sergey Skvortsov <skv@protey.ru>
 #
-# $FreeBSD: ports/textproc/p5-Text-Diff-Parser/Makefile,v 1.5 2012/11/17 06:02:09 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Diff-Parser/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Text-Diff-Parser
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Parse patch files containing unified and standard diffs
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Text::Diff::Parser.3
 
