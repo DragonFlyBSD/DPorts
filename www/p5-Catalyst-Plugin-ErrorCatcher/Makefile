@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: ports/www/p5-Catalyst-Plugin-ErrorCatcher/Makefile,v 1.8 2013/02/08 12:38:56 svnexp Exp $
+# $FreeBSD: www/p5-Catalyst-Plugin-ErrorCatcher/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Plugin-ErrorCatcher
 PORTVERSION=	0.0.8.13
@@ -40,7 +40,8 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-NoTabs>=0:${PORTSDIR}/devel/p5-Test-NoTabs \
 		p5-Test-UseAllModules>=0:${PORTSDIR}/devel/p5-Test-UseAllModules
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::ErrorCatcher.3 \
 		Catalyst::Plugin::ErrorCatcher::Email.3 \
