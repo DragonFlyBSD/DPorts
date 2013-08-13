@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: www/p5-HTML-Breadcrumbs/Makefile 304807 2012-09-25 03:41:31Z tabthorpe $
+# $FreeBSD: www/p5-HTML-Breadcrumbs/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	HTML-Breadcrumbs
 PORTVERSION=	0.7
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Module to produce HTML 'breadcrumb trails'
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::Breadcrumbs.3
 
