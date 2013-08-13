@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Proc-Fork/Makefile 318285 2013-05-16 08:39:34Z miwi $
+# $FreeBSD: devel/p5-Proc-Fork/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Proc-Fork
 PORTVERSION=	0.802
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Exporter-Tidy>=0:${PORTSDIR}/devel/p5-Exporter-Tidy \
 RUN_DEPENDS=	p5-Exporter-Tidy>=0:${PORTSDIR}/devel/p5-Exporter-Tidy \
 		p5-Object-Tiny-Lvalue>=0:${PORTSDIR}/devel/p5-Object-Tiny-Lvalue
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Proc::Fork.3
 
