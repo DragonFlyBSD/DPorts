@@ -2,7 +2,7 @@
 # Date created:				17 December 2003
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/finance/p5-Business-OnlinePayment-iAuthorizer/Makefile,v 1.6 2012/11/17 05:57:26 svnexp Exp $
+# $FreeBSD: finance/p5-Business-OnlinePayment-iAuthorizer/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Business-OnlinePayment-iAuthorizer
@@ -20,7 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::OnlinePayment::iAuthorizer.3
 
