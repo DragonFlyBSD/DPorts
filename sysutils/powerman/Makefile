@@ -1,5 +1,5 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: sysutils/powerman/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: sysutils/powerman/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	powerman
 PORTVERSION=	2.3.16
@@ -14,12 +14,12 @@ LICENSE=	GPLv2 # (or later)
 
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
-USE_PERL5_BUILD=yes
+USES=		perl5
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-httppower --localstatedir=${DESTDIR}/var \
 		--with-pkgconfig-dir=${PREFIX}/libdata/pkgconfig
 USE_LDCONFIG=	yes
-MAKE_JOBS_SAFE=	yes
 
 USE_RC_SUBR=	powerman
 
