@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Pod-DocBook
-# Date created:	   29 July 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/textproc/p5-Pod-DocBook/Makefile,v 1.10 2012/11/17 06:02:07 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-Pod-DocBook/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Pod-DocBook
 PORTVERSION=	1.2
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-podlators>=0:${PORTSDIR}/textproc/p5-podlators \
 		p5-Text-Tabs+Wrap>=0:${PORTSDIR}/textproc/p5-Text-Tabs+Wrap
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pod2docbook.1
 MAN3=		Pod::DocBook.3
