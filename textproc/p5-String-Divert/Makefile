@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/p5-String-Divert
-# Date created:				29 November 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-String-Divert/Makefile,v 1.4 2012/11/17 06:02:08 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: textproc/p5-String-Divert/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	String-Divert
 PORTVERSION=	0.96
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	String::Divert - String Object supporting Folding and Diversions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	String::Divert.3
 
