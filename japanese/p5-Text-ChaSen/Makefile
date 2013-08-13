@@ -2,7 +2,7 @@
 # Date created:		2 March 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: japanese/p5-Text-ChaSen/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: japanese/p5-Text-ChaSen/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Text-ChaSen
@@ -23,7 +23,8 @@ DISTINFO_FILE=	${.CURDIR}/../chasen-base/distinfo
 CHASEN_VERSION=	2.4.4
 
 WRKSRC=		${WRKDIR}/chasen-${CHASEN_VERSION}/perl
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CONFIGURE_ENV=	PREFIX="${PREFIX}"
 MAN3=		Text::ChaSen.3
 DOCSDIR=	${PREFIX}/share/doc/chasen
