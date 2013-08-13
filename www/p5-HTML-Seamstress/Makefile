@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-Seamstress
-# Date created:				2007/02/14
-# Whom:					chinsan
-#
-# $FreeBSD: ports/www/p5-HTML-Seamstress/Makefile,v 1.10 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: www/p5-HTML-Seamstress/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-Seamstress
 PORTVERSION=	5.0h
@@ -33,6 +29,7 @@ MAN3=		HTML::Seamstress.3 \
 		HTML::spkg.3 \
 		XML::Seamstress.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
