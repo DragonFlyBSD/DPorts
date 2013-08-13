@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: ports/archivers/p5-POE-Filter-Bzip2/Makefile,v 1.13 2012/12/18 07:13:55 svnexp Exp $
+# $FreeBSD: archivers/p5-POE-Filter-Bzip2/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Filter-Bzip2
 PORTVERSION=	1.5.8
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-Compress-Bzip2>=2.08:${PORTSDIR}/archivers/p5-Compress-Bzip2 \
 		p5-POE>=0.38:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Filter::Bzip2.3
 
