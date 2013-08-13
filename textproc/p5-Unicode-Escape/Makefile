@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Unicode-Escape
-# Date created:				29 Mar 2009
-# Whom:					Vadim Vatlin
-#
-# $FreeBSD: ports/textproc/p5-Unicode-Escape/Makefile,v 1.4 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: Vadim Vatlin
+# $FreeBSD: textproc/p5-Unicode-Escape/Makefile 324175 2013-08-02 21:38:09Z mat $
 
 PORTNAME=	Unicode-Escape
 PORTVERSION=	0.0.2
@@ -17,7 +13,8 @@ COMMENT=	Escape and unescape Unicode characters other than ASCII
 BUILD_DEPENDS=	p5-Unicode-String>=0:${PORTSDIR}/converters/p5-Unicode-String
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Unicode::Escape.3
 
