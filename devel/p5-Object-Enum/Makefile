@@ -2,7 +2,7 @@
 # Date created:				21 May 2006
 # Whom:					Aaron Dalton <aaron@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Object-Enum/Makefile,v 1.9 2012/11/17 05:56:24 svnexp Exp $
+# $FreeBSD: devel/p5-Object-Enum/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Object-Enum
@@ -23,6 +23,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 MAN3=	Object::Enum.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
