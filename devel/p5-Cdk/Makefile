@@ -1,5 +1,5 @@
 # Created by: Chia-liang Kao <clkao@clkao.org>
-# $FreeBSD: devel/p5-Cdk/Makefile 318642 2013-05-21 05:47:45Z miwi $
+# $FreeBSD: devel/p5-Cdk/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	Cdk
 PORTVERSION=	5.20120324
@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	cdk:${PORTSDIR}/devel/cdk
 
-USE_PERL5=	yes
+USES=		perl5
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	pure_install
 
