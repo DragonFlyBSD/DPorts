@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: net/p5-REST-Application/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-REST-Application/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	REST-Application
 PORTVERSION=	0.992
@@ -17,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 MAN3=	REST::Application.3 \
 	REST::Application::Routes.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
