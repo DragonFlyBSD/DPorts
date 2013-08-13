@@ -2,7 +2,7 @@
 # Date created:				20 May 2001
 # Whom:					petef@FreeBSD.org
 #
-# $FreeBSD: ports/net/p5-File-Rsync/Makefile,v 1.19 2012/11/17 06:00:09 svnexp Exp $
+# $FreeBSD: net/p5-File-Rsync/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	File-Rsync
@@ -17,7 +17,8 @@ COMMENT=	Perl convenience wrapper for the rsync(1) program
 RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Rsync.3
 
