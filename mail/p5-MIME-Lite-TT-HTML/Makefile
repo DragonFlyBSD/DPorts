@@ -2,7 +2,7 @@
 # Date created:				22 March 2008
 # Whom:					Tuc <freebsd-ports@t-b-o-h.net>
 #
-# $FreeBSD: ports/mail/p5-MIME-Lite-TT-HTML/Makefile,v 1.3 2012/11/17 05:59:08 svnexp Exp $
+# $FreeBSD: mail/p5-MIME-Lite-TT-HTML/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	MIME-Lite-TT-HTML
@@ -25,7 +25,8 @@ RUN_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit \
 		p5-MIME-Lite>=0:${PORTSDIR}/mail/p5-MIME-Lite \
 		p5-HTML-FormatText-WithLinks>=0:${PORTSDIR}/textproc/p5-HTML-FormatText-WithLinks
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 PERL_MODBUILD=	yes
 
 MAN3=	MIME::Lite::TT::HTML.3
