@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	GuitarTeX
-# Date created:			Jul 23, 2001
-# Whom:				ijliao
-#
-# $FreeBSD: ports/print/guitartex/Makefile,v 1.16 2012/11/17 06:00:50 svnexp Exp $
-#
+# Created by: ijliao
+# $FreeBSD: print/guitartex/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	guitartex
 PORTVERSION=	2.8.2
@@ -21,7 +16,7 @@ COMMENT=	GuitarTeX converts the Chord format into "normal" LaTeX format
 RUN_DEPENDS=	p5-Tk>=0:${PORTSDIR}/x11-toolkits/p5-Tk \
 		latex:${PORTSDIR}/print/latex
 
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 do-configure:
