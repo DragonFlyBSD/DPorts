@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-github_creator
-# Date created:		2008-11-15
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-github_creator/Makefile,v 1.5 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-github_creator/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	github_creator
 PORTVERSION=	0.15
@@ -23,7 +19,8 @@ BUILD_DEPENDS=	p5-Config-IniFiles>0:${PORTSDIR}/devel/p5-Config-IniFiles	\
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Output>=0:${PORTSDIR}/devel/p5-Test-Output
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		github_creator.1
 
