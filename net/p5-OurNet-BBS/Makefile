@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-OurNet-BBS
-# Date created:		2006-07-14
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/net/p5-OurNet-BBS/Makefile,v 1.13 2012/11/17 06:00:12 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/p5-OurNet-BBS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	OurNet-BBS
 PORTVERSION=	1.66
@@ -44,7 +40,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PORTSCOUT=	skipv:1.67
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		bbsboard.1 bbscomd.1 bbsmail.1
 MAN3=		OurNet::BBS.3 OurNet::BBS::Roadmap.3 OurNet::BBS::Tutorial.3
