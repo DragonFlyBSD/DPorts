@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Business::ISSN
-# Date created:				30 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/misc/p5-Business-ISSN/Makefile,v 1.7 2012/11/17 05:59:43 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: misc/p5-Business-ISSN/Makefile 324167 2013-08-02 17:11:34Z az $
 
 PORTNAME=		Business-ISSN
 PORTVERSION=		0.91
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=		p5-
 MAINTAINER=		ports@FreeBSD.org
 COMMENT=	Perl extension for International Standard Serial Numbers
 
-PERL_CONFIGURE=		yes
+USES=			perl5
+USE_PERL5=		configure
 
 MAN3=			Business::ISSN.3
 
