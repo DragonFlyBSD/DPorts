@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Geo-Postcodes-DK
-# Date created:		2006-07-19
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/misc/p5-Geo-Postcodes-DK/Makefile,v 1.10 2012/11/17 05:59:43 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: misc/p5-Geo-Postcodes-DK/Makefile 324167 2013-08-02 17:11:34Z az $
 
 PORTNAME=	Geo-Postcodes-DK
 PORTVERSION=	0.32
@@ -17,7 +13,8 @@ COMMENT=	Danish postcodes with associated information
 BUILD_DEPENDS=	p5-Geo-Postcodes>=0.31:${PORTSDIR}/misc/p5-Geo-Postcodes
 RUN_DEPENDS=	p5-Geo-Postcodes>=0.31:${PORTSDIR}/misc/p5-Geo-Postcodes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Geo::Postcodes::DK.3
 
