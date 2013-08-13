@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-Client-POP3
-# Date created:	   17 March 2002
-# Whom:		   Sergey Skvortsov <skv@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/p5-POE-Component-Client-POP3/Makefile,v 1.9 2012/11/17 05:59:09 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@FreeBSD.org>
+# $FreeBSD: mail/p5-POE-Component-Client-POP3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Client-POP3
 PORTVERSION=	0.02
@@ -17,7 +13,8 @@ COMMENT=	Implement a POP3 client POE component
 BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Client::POP3.3
 
