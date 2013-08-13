@@ -1,9 +1,5 @@
-# New ports collection makefile for:    keylaunch
-# Date created:         Sat Nov 17 10:10:07 CDT 2001
-# Whom:                 mwm@mired.org
-#
-# $FreeBSD: ports/x11/keylaunch/Makefile,v 1.10 2012/11/17 06:03:16 svnexp Exp $
-#
+# Created by: mwm@mired.org
+# $FreeBSD: x11/keylaunch/Makefile 323742 2013-07-26 18:02:28Z az $
 
 PORTNAME=	keylaunch
 PORTVERSION=	1.3.0
@@ -22,7 +18,7 @@ USE_XORG=	x11
 PKGMESSAGE=	${WRKSRC}/pkg-message
 
 post-patch:
-	@${PERL} -pi -e 's,%%LOCALBASE%%,${LOCALBASE},g' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -i '' -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/keylaunch ${PREFIX}/bin
