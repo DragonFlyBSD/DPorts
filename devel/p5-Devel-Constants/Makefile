@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Devel-Constants
-# Date created:				10 October 2001
-# Whom:					tobez
-#
-# $FreeBSD: ports/devel/p5-Devel-Constants/Makefile,v 1.9 2012/11/17 05:56:13 svnexp Exp $
-#
+# Created by: tobez
+# $FreeBSD: devel/p5-Devel-Constants/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Devel-Constants
 PORTVERSION=	1.01
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to translate constants back to their named symbols
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Devel::Constants.3
 
