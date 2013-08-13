@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/astro/p5-Astro-Hipparcos/Makefile,v 1.4 2012/11/17 05:54:25 svnexp Exp $
+# $FreeBSD: astro/p5-Astro-Hipparcos/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Astro-Hipparcos
 PORTVERSION=	0.09
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-ExtUtils-XSpp>=0.06:${PORTSDIR}/devel/p5-ExtUtils-XSpp \
 		p5-ExtUtils-ParseXS>=2.22:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
 
 MAKE_ARGS+=	"CC=g++"
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Astro::Hipparcos::Record.3 \
 		Astro::Hipparcos.3
