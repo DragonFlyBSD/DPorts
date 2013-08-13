@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: textproc/p5-Plucene-Simple/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: textproc/p5-Plucene-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Plucene-Simple
 DISTVERSION=	1.04
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	p5-Time-Piece>=1.08:${PORTSDIR}/devel/p5-Time-Piece \
 		p5-Test-Class>=0.03:${PORTSDIR}/devel/p5-Test-Class
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	YES
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		${PORTNAME:S/-/::/g}.3
 
