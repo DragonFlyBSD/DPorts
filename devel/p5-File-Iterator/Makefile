@@ -1,9 +1,5 @@
-# Ports collection makefile for:	devel-p5-File-Iterator
-# Date created:				02 April 2010
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/devel/p5-File-Iterator/Makefile,v 1.2 2012/11/17 05:56:16 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: devel/p5-File-Iterator/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=		File-Iterator
 PORTVERSION=		0.14
@@ -12,10 +8,11 @@ MASTER_SITES=		CPAN
 MASTER_SITE_SUBDIR=	File
 PKGNAMEPREFIX=		p5-
 
-MAINTAINER=		freebsdports@chillibear.com
+MAINTAINER=		ports@FreeBSD.org
 COMMENT=		Module for iterating across files in a directory tree
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	File::Iterator.3
 
