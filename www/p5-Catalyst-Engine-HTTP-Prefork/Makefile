@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Catalyst-Engine-HTTP-Prefork
-# Date created:	   18 Apr 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Engine-HTTP-Prefork/Makefile,v 1.13 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-Catalyst-Engine-HTTP-Prefork/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Engine-HTTP-Prefork
 PORTVERSION=	0.51
@@ -21,7 +17,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7012:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-HTTP-Body>=0:${PORTSDIR}/www/p5-HTTP-Body
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Engine::HTTP::Prefork.3
 
