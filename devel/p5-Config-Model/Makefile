@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Config-Model/Makefile 319173 2013-05-27 08:37:15Z tobez $
+# $FreeBSD: devel/p5-Config-Model/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Config-Model
 PORTVERSION=	2.036
@@ -42,7 +42,8 @@ TEST_DEPENDS=	p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class \
 		p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle \
 		p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN1=		cme.1 config-edit.1
 MAN3=		Config::Model.3 \
