@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: games/p5-Acme-GuessNumber/Makefile 318015 2013-05-13 08:45:54Z tobez $
+# $FreeBSD: games/p5-Acme-GuessNumber/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Acme-GuessNumber
 PORTVERSION=	0.04
@@ -11,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Automatic number guessing game robot
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Acme::GuessNumber.3
 
 PLIST_FILES=	%%SITE_PERL%%/Acme/GuessNumber.pm \
