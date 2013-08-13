@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: ports/security/p5-Crypt-GeneratePassword/Makefile,v 1.5 2012/11/17 06:01:11 svnexp Exp $
+# $FreeBSD: security/p5-Crypt-GeneratePassword/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Crypt-GeneratePassword
 PORTVERSION=	0.03
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generate secure random pronounceable passwords
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Crypt::GeneratePassword.3
 
