@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: ports/databases/p5-DBIx-Class-QueryLog/Makefile,v 1.10 2013/01/21 10:10:50 svnexp Exp $
+# $FreeBSD: databases/p5-DBIx-Class-QueryLog/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Class-QueryLog
 PORTVERSION=	1.3.3
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-DBIx-Class>=0.07000:${PORTSDIR}/databases/p5-DBIx-Class \
 		p5-Moose>=0.90:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::Class::QueryLog.3 \
 		DBIx::Class::QueryLog::Analyzer.3 \
