@@ -2,7 +2,7 @@
 # Date created:				Mon Jan  1 10:24:49 2001
 # Whom:					will
 #
-# $FreeBSD: ports/math/p5-Bit-ShiftReg/Makefile,v 1.8 2012/11/17 05:59:25 svnexp Exp $
+# $FreeBSD: math/p5-Bit-ShiftReg/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Bit-ShiftReg
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module implementing various bit shifting operations
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Bit::ShiftReg.3
 
