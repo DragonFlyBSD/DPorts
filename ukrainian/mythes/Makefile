@@ -2,7 +2,7 @@
 # Date created:		2011-07-21
 # Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
 #
-# $FreeBSD: ports/ukrainian/mythes/Makefile,v 1.5 2012/11/17 06:02:26 svnexp Exp $
+# $FreeBSD: ukrainian/mythes/Makefile 324225 2013-08-04 12:47:44Z az $
 #
 
 PORTNAME=	mythes
@@ -20,7 +20,8 @@ COMMENT=	Ukrainian thesaurus
 LICENSE=	LGPL21 GPLv2
 LICENSE_COMB=	dual
 
-USE_PERL5_BUILD=	yes
+USES=		perl5
+USE_PERL5=	build
 
 PLIST_FILES=	%%DATADIR%%/th_uk_UA.dat \
 		%%DATADIR%%/th_uk_UA.idx
