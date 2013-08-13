@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/modplugplay/Makefile 313649 2013-03-08 14:00:30Z ehaupt $
+# $FreeBSD: audio/modplugplay/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	modplugplay
 PORTVERSION=	1.0
@@ -15,8 +15,6 @@ COMMENT=	Command-line music mod player using libmodplug
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	modplug.1:${PORTSDIR}/audio/libmodplug
-
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		modplugplay.1
 PLIST_FILES=	bin/modplugplay
