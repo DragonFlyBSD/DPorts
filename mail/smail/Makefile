@@ -1,9 +1,5 @@
-# New ports collection makefile for:	smail
-# Date created:		16 Oct 1994
-# Whom:			torstenb
-#
-# $FreeBSD: ports/mail/smail/Makefile,v 1.50 2012/12/10 19:24:02 svnexp Exp $
-#
+# Created by: torstenb
+# $FreeBSD: mail/smail/Makefile 322713 2013-07-10 17:04:49Z bapt $
 
 PORTNAME=	smail
 PORTVERSION=	3.2.0.121
@@ -38,6 +34,8 @@ LIBS+=		-lident -lwrap -lpcre
 CYRUS_USER?=	cyrus
 CYRUS_GROUP?=	cyrus
 CYRUS_DELIVER_PATH?=	${LOCALBASE}/cyrus/bin/deliver
+
+MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_SINGLE=	CYRUS
 OPTIONS_SINGLE_CYRUS=	CYRUS22 CYRUS23
