@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pure-readline
-# Date created:		2011-10-21
-# Whom:			Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/devel/pure-readline/Makefile,v 1.2 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: devel/pure-readline/Makefile 322734 2013-07-10 21:28:56Z bapt $
 
 PORTNAME=	pure-readline
 PORTVERSION=	0.1
@@ -18,6 +14,5 @@ NO_PURE_EXAMPLES=	yes
 PLIST_FILES=	lib/pure/readline.pure \
 		lib/pure/readline.so
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/lang/pure/bsd.pure.mk"
-.include <bsd.port.post.mk>
+.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+.include <bsd.port.mk>
