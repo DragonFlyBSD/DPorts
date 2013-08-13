@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-HTML-Copy
-# Date created:				2007/08/25
-# Whom:	      				chinsan
-#
-# $FreeBSD: ports/textproc/p5-HTML-Copy/Makefile,v 1.6 2012/11/17 06:02:04 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: textproc/p5-HTML-Copy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-Copy
 PORTVERSION=	1.30
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		htmlcopy.1
 MAN3=		HTML::Copy.3
