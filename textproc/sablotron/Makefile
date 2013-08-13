@@ -1,10 +1,10 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/sablotron/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/sablotron/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Sablot
 PORTVERSION=	1.0.3
 CATEGORIES=	textproc
-MASTER_SITES=	http://download-1.gingerall.cz/download/sablot/
+MASTER_SITES=	SF/sablotron/sablotron-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XML toolkit implementing XSLT 1.0, XPath 1.0 and DOM Level2
@@ -20,6 +20,15 @@ CHECK_LEAKS_DESC=	Enable memory leaks checking
 DEBUGGER_DESC=	Enable debugger
 OPTIONS_DEFAULT=	DOM DOCUMENT_ERRORS
 
+DISABLE_META_CONFIGURE_ON=		--disable-adding-meta
+ICONV_TYPECAST_CONFIGURE_ENABLE=	iconv-typecast
+DOM_CONFIGURE_ENABLE=			dom
+DOCUMENT_ERRORS_CONFIGURE_ENABLE=	document-errors
+CHECK_LEAKS_CONFIGURE_ENABLE=		check-leaks
+DEBUGGER_CONFIGURE_ENABLE=		debugger
+DOCS_BUILD_DEPENDS=			p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
+DOCS_CONFIGURE_ON=			--with-html-dir=${DOCSDIR}
+
 USE_LDCONFIG=	yes
 
 SHLIB_MAJOR=	70	# API changes counter
@@ -30,43 +39,13 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lexpat -liconv
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USES=		iconv
+USES=		iconv perl5
 GNU_CONFIGURE=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build patch
 
 MAN1=	sabcmd.1
 
 .include <bsd.port.pre.mk>
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDISABLE_META}
-CONFIGURE_ARGS+=	--disable-adding-meta
-.endif
-
-.if ${PORT_OPTIONS:MICONV_TYPECAST}
-CONFIGURE_ARGS+=	--enable-iconv-typecast
-.endif
-
-.if ! ${PORT_OPTIONS:MDOM}
-CONFIGURE_ARGS+=	--disable-dom
-.endif
-
-.if ! ${PORT_OPTIONS:MDOCUMENT_ERRORS}
-CONFIGURE_ARGS+=	--disable-document-errors
-.endif
-
-.if ${PORT_OPTIONS:MCHECK_LEAKS}
-CONFIGURE_ARGS+=	--enable-check-leaks
-.endif
-
-.if ${PORT_OPTIONS:MDEBUGGER}
-CONFIGURE_ARGS+=	--enable-debugger
-.endif
-
-.if ${PORT_OPTIONS:MDOCS}
-BUILD_DEPENDS+=		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
-CONFIGURE_ARGS+=	--with-html-dir=${DOCSDIR}
-.endif
 
 DOCSLIST=	README README_JS RELEASE doc/misc/DEBUGGER doc/misc/NOTES
 
@@ -75,7 +54,7 @@ post-patch:
 	's!(?<=libsablot_la_LDFLAGS = -version-info )(\d+):(\d+):\1!${SHLIB_MAJOR}:$$1:${SHLIB_MAJOR}!;' \
 		${WRKSRC}/src/engine/Makefile.in
 	@${PERL} -pi -e 's!se // !! if $$. = 407' ${WRKSRC}/src/engine/base.h
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${PERL} -pi -e 's!(?<=SUBDIRS = )(.*)!man!' ${WRKSRC}/doc/Makefile.in
 .endif
 
