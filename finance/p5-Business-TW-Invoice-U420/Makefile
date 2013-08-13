@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Business-TW-Invoice-U420
-# Date created:				2007/10/04
-# Whom:	      				chinsan
-#
-# $FreeBSD: ports/finance/p5-Business-TW-Invoice-U420/Makefile,v 1.4 2012/11/17 05:57:26 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: finance/p5-Business-TW-Invoice-U420/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Business-TW-Invoice-U420
 PORTVERSION=	0.01
@@ -17,7 +13,8 @@ COMMENT=	Print Taiwan Unified Invoice with U420 printer
 BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Business::TW::Invoice::U420.3
 
