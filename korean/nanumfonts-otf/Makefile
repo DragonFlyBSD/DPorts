@@ -1,9 +1,11 @@
-# $FreeBSD: korean/nanumfonts-otf/Makefile 315889 2013-04-16 19:33:30Z jkim $
+# $FreeBSD: korean/nanumfonts-otf/Makefile 322534 2013-07-08 19:37:40Z jkim $
 
 PORTNAME=	nanumfonts
 PORTVERSION=	3.1
 CATEGORIES=	korean
-MASTER_SITES=	http://cdn.naver.com/naver/NanumFont/fontfiles/
+MASTER_SITES=	http://cdn.naver.com/naver/NanumFont/fontfiles/ \
+		LOCAL
+MASTER_SITE_SUBDIR=	jkim
 PKGNAMESUFFIX=	-${FONTTYPE}
 DISTFILES=	NanumFont_${FONTTYPE:tu}_ALL${EXTRACT_SUFX} \
 		NanumFontSetup_${FONTTYPE:tu}_GOTHICECO${EXTRACT_SUFX} \
