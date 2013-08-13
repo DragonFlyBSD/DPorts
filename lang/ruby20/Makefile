@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/ruby20/Makefile 319289 2013-05-28 00:46:32Z swills $
+# $FreeBSD: lang/ruby20/Makefile 321362 2013-06-20 08:41:57Z knu $
 
 PORTNAME=	ruby
 PORTVERSION=	${RUBY_PORTVERSION}
@@ -136,7 +136,7 @@ post-patch:
 #
 # Prepare modules we are wanting to build via external ports
 #
-.for d in gdbm iconv tk
+.for d in gdbm tk
 	${MV} ${BUILD_WRKSRC}/ext/${d} ${WRKDIR}/
 .endfor
 
