@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: net/openldap24-server/Makefile 319397 2013-05-29 23:42:40Z delphij $
+# $FreeBSD: net/openldap24-server/Makefile 321662 2013-06-24 05:29:24Z delphij $
 
 PORTNAME=		openldap
 DISTVERSION=		2.4.35
@@ -11,7 +11,8 @@ MASTER_SITES=		ftp://ftp.OpenLDAP.org/pub/OpenLDAP/%SUBDIR%/ \
 			ftp://ftp.dti.ad.jp/pub/net/OpenLDAP/%SUBDIR%/ \
 			ftp://ftp.u-aizu.ac.jp/pub/net/openldap/%SUBDIR%/ \
 			ftp://ftp.nl.uu.net/pub/unix/db/openldap/%SUBDIR%/ \
-			ftp://sunsite.cnlab-switch.ch/mirror/OpenLDAP/%SUBDIR%/
+			ftp://sunsite.cnlab-switch.ch/mirror/OpenLDAP/%SUBDIR%/ \
+			http://www.openldap.org/software/download/OpenLDAP/%SUBDIR%/
 MASTER_SITE_SUBDIR=	openldap-release
 
 .if defined(CLIENT_ONLY)
