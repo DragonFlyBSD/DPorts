@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/logstalgia/Makefile 322530 2013-07-08 18:42:15Z ehaupt $
+# $FreeBSD: sysutils/logstalgia/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	logstalgia
 PORTVERSION=	1.0.3
@@ -24,8 +24,6 @@ USE_SDL=	sdl image
 CFLAGS+=	-L/usr/local/lib -I/usr/local/include
 
 MANCOMPRESSED=	yes
-
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		logstalgia.1
 
