@@ -1,17 +1,17 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: security/shibboleth2-sp/Makefile 321194 2013-06-18 15:15:48Z girgen $
+# $FreeBSD: security/shibboleth2-sp/Makefile 323889 2013-07-29 14:49:11Z girgen $
 
 PORTNAME=	shibboleth-sp
 PORTVERSION=	2.5.2
+PORTREVISION=	1
 CATEGORIES=	security www
 MASTER_SITES=	http://shibboleth.net/downloads/service-provider/${PORTVERSION}/
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	C++ Shibboleth Service Provider (Internet2) for Apache
 
-LIB_DEPENDS=	saml.8:${PORTSDIR}/security/opensaml2
-
 BUILD_DEPENDS=	boost-libs>=0:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	saml.8:${PORTSDIR}/security/opensaml2
 
 MAKE_JOBS_SAFE=	yes
 USE_GMAKE=	yes
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--with-openssl=${OPENSSLBASE} --with-xmltooling=${LOCALBASE}
 CONFIGURE_ARGS+=	--disable-doxygen-doc
 
 post-install:
-	${CHOWN} -R ${USERS}:${GROUPS} /var/cache/shibboleth ;\
+	${CHOWN} -R ${USERS}:${GROUPS} /var/db/shibboleth ;\
 	${CHOWN} -R ${USERS}:${GROUPS} /var/log/shibboleth ;\
        	${CHOWN} -R ${USERS}:${WWWGRP} /var/run/shibboleth ;\
        	${CHMOD} -R u=rwx,g=rx,o= /var/run/shibboleth
