@@ -1,9 +1,5 @@
-# New ports collection makefile for:	databases/p5-DBIx-Class-Loader
-# Date created:				16 Nov 2005
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-Loader/Makefile,v 1.20 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: databases/p5-DBIx-Class-Loader/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Class-Loader
 PORTVERSION=	0.21
@@ -22,7 +18,8 @@ BUILD_DEPENDS=	p5-DBI>=1.3:${PORTSDIR}/databases/p5-DBI \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	DBIx::Class::Loader.3 \
 	DBIx::Class::Loader::DB2.3 \
