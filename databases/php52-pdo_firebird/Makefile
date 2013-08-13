@@ -2,10 +2,9 @@
 # Date created:			17 Apr 2010
 # Whom:				Alex Keda <admin@lissyara.su>
 #
-# $FreeBSD: databases/php52-pdo_firebird/Makefile 315592 2013-03-30 04:37:26Z acm $
+# $FreeBSD: databases/php52-pdo_firebird/Makefile 323158 2013-07-17 10:21:39Z erwin $
 #
 
-PORTREVISION=	1
 CATEGORIES=	databases
 
 MASTERDIR=	${.CURDIR}/../../lang/php52
