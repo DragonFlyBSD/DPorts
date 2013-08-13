@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-POE-Component-Client-Whois/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: net/p5-POE-Component-Client-Whois/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-Client-Whois
 PORTVERSION=	1.28
@@ -13,7 +13,8 @@ COMMENT=	One shot non-blocking RFC 812 WHOIS query
 RUN_DEPENDS=	p5-POE>=0.38:${PORTSDIR}/devel/p5-POE \
 		p5-Net-Netmask>=1.9012:${PORTSDIR}/net-mgmt/p5-Net-Netmask
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::Client::Whois.3 \
 		POE::Component::Client::Whois::IPBlks.3 \
