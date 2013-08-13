@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: mail/p5-Mail-GnuPG/Makefile 317483 2013-05-06 08:42:40Z tobez $
+# $FreeBSD: mail/p5-Mail-GnuPG/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Mail-GnuPG
 PORTVERSION=	0.19
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	p5-GnuPG-Interface>=0:${PORTSDIR}/security/p5-GnuPG-Interface \
 		p5-Mail-Tools>=0:${PORTSDIR}/mail/p5-Mail-Tools
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Mail::GnuPG.3
 
