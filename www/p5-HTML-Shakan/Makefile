@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-HTML-Shakan/Makefile 318731 2013-05-21 22:40:30Z kuriyama $
+# $FreeBSD: www/p5-HTML-Shakan/Makefile 324540 2013-08-10 15:16:34Z kuriyama $
 
 PORTNAME=	HTML-Shakan
-PORTVERSION=	0.16
+PORTVERSION=	0.17
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TOKUHIROM
@@ -27,7 +27,8 @@ TEST_DEPENDS=	\
 	p5-DBIx-Skinny>0:${PORTSDIR}/databases/p5-DBIx-Skinny \
 	p5-Plack>0:${PORTSDIR}/www/p5-Plack
 
-PERL_MODBUILD=	yes
+USES=	perl5
+USE_PERL5=	modbuild
 
 MAN3=	HTML::Shakan.3 \
 	HTML::Shakan::Declare.3 \
