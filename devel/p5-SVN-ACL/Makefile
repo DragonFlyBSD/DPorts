@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-SVN-ACL/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-SVN-ACL/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SVN-ACL
 PORTVERSION=	0.02
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	\
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		SVN::ACL.3
 
