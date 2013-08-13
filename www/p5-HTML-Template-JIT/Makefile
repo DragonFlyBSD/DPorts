@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-Template-JIT
-# Date Created:				2004/04/30
-# Whom:					alex@kapranoff.ru
-#
-# $FreeBSD: ports/www/p5-HTML-Template-JIT/Makefile,v 1.9 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: alex@kapranoff.ru
+# $FreeBSD: www/p5-HTML-Template-JIT/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-Template-JIT
 PORTVERSION=	0.05
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-HTML-Template>=2.8:${PORTSDIR}/www/p5-HTML-Template \
 		p5-Inline>=0.43:${PORTSDIR}/devel/p5-Inline
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
 MAN3=		HTML::Template::JIT.3 HTML::Template::JIT::Compiler.3 \
@@ -28,8 +25,7 @@ MAN3=		HTML::Template::JIT.3 HTML::Template::JIT::Compiler.3 \
 .include <bsd.port.pre.mk>
 
 post-patch:
-	@${PERL} -i -pe 's/indent -kr/indent/' \
+	@${REINPLACE_CMD} -i '' -e 's/indent -kr/indent/' \
 			${WRKSRC}/JIT/Compiler.pm
-	@${FIND} ${WRKSRC} -name '*.orig' -delete
 
 .include <bsd.port.post.mk>
