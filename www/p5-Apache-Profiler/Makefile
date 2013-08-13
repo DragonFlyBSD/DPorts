@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Apache-Profiler
-# Date created:	   11 August 2004
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-Apache-Profiler/Makefile,v 1.6 2012/11/17 06:02:44 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-Apache-Profiler/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Apache-Profiler
 PORTVERSION=	0.10
@@ -17,7 +13,8 @@ COMMENT=	Profiles time seconds needed for every request
 BUILD_DEPENDS=	mp2bug:${PORTSDIR}/www/mod_perl2
 RUN_DEPENDS=	mp2bug:${PORTSDIR}/www/mod_perl2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Apache::Profiler.3 Apache2::Profiler.3
 
