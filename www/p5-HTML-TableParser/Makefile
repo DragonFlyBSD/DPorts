@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-TableParser
-# Date created:				2006/08/14
-# Whom:	      				chinsan <chinsan.tw@gmail.com>
-#
-# $FreeBSD: ports/www/p5-HTML-TableParser/Makefile,v 1.9 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: chinsan <chinsan.tw@gmail.com>
+# $FreeBSD: www/p5-HTML-TableParser/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-TableParser
 PORTVERSION=	0.38
@@ -17,7 +13,8 @@ COMMENT=	Extract data from an HTML table
 BUILD_DEPENDS=	p5-HTML-Parser>=3.34:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::TableParser.3 HTML::TableParser::Table.3
 
