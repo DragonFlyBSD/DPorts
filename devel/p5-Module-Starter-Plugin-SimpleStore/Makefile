@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/devel/p5-Module-Starter-Plugin-SimpleStore/Makefile,v 1.6 2012/11/17 05:56:22 svnexp Exp $
+# $FreeBSD: devel/p5-Module-Starter-Plugin-SimpleStore/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Module-Starter-Plugin-SimpleStore
 PORTVERSION=	0.144
@@ -12,7 +12,8 @@ COMMENT=	Provide methods of retrieving templates for Module::Starter
 
 BUILD_DEPENDS=	p5-Module-Starter>=1.32:${PORTSDIR}/devel/p5-Module-Starter
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Module::Starter::Plugin::InlineStore.3 \
 	Module::Starter::Plugin::DirStore.3 \
