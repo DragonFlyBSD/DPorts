@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xtriangles
-# Date created:		12 October 1996
-# Whom:			Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-#
-# $FreeBSD: ports/games/xtriangles/Makefile,v 1.17 2012/11/17 05:57:58 svnexp Exp $
-#
+# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
+# $FreeBSD: games/xtriangles/Makefile 321991 2013-06-28 21:48:59Z bapt $
 
 PORTNAME=	xtriangles
 PORTVERSION=	5.5.2
@@ -16,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Triangles puzzle
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext xt sm ice
 MAN1=		xtriangles.1
 MANCOMPRESSED=	no
