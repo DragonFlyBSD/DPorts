@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: archivers/amigadepacker/Makefile 317643 2013-05-08 08:04:04Z ehaupt $
+# $FreeBSD: archivers/amigadepacker/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	amigadepacker
 PORTVERSION=	0.04
@@ -21,8 +21,6 @@ ALL_TARGET=	${PORTNAME}
 
 MAN1=		amigadepacker.1
 PLIST_FILES=	bin/amigadepacker
-
-MAKE_JOBS_SAFE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -E '/^(CC|CFLAGS)/d' ${WRKSRC}/Makefile.in
