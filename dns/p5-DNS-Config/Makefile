@@ -1,9 +1,5 @@
-# New ports collection makefile for:		p5-DNS-Config
-# Date created:					22 February 2003
-# Whom:	      					Clement Laforet <sheepkiller@cultdeadsheep.org>
-#
-# $FreeBSD: ports/dns/p5-DNS-Config/Makefile,v 1.9 2012/11/17 05:57:09 svnexp Exp $
-#
+# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
+# $FreeBSD: dns/p5-DNS-Config/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	DNS-Config
 PORTVERSION=	0.66
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DNS::Config is set of perl modules for name service configurations
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 
 post-patch:
 	${FIND} ${WRKSRC} -name '*.pm' -o -name '*.t' -o -name '*.PL' | \
