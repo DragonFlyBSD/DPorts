@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-HTML-TagCloud-Extended
-# Date created:				07 October 2005
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-HTML-TagCloud-Extended/Makefile,v 1.8 2012/11/17 06:02:50 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: www/p5-HTML-TagCloud-Extended/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	HTML-TagCloud-Extended
 PORTVERSION=	0.10
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Readonly>=0:${PORTSDIR}/devel/p5-Readonly
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	HTML::TagCloud::Extended.3
 
