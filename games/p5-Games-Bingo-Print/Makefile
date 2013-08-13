@@ -2,7 +2,7 @@
 # Date created:				14. August 2003
 # Whom:					Lars Thegler <lars@thegler.dk>
 #
-# $FreeBSD: ports/games/p5-Games-Bingo-Print/Makefile,v 1.10 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/p5-Games-Bingo-Print/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Games-Bingo-Print
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	p5-Games-Bingo>=0:${PORTSDIR}/games/p5-Games-Bingo \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		bingo_print.pl.1
 MAN3=		Games::Bingo::Print.3
