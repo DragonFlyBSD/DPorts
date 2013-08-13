@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/p5-B-Generate/Makefile,v 1.18 2012/11/17 17:39:11 svnexp Exp $
+# $FreeBSD: devel/p5-B-Generate/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	B-Generate
 PORTVERSION=	1.47
@@ -13,7 +13,8 @@ COMMON_DEPENDS=	p5-ExtUtils-CBuilder>=0:${PORTSDIR}/devel/p5-ExtUtils-CBuilder
 BUILD_DEPENDS=	${COMMON_DEPENDS}
 RUN_DEPENDS=	${COMMON_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	B::Generate.3
 
