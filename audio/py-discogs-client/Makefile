@@ -1,5 +1,5 @@
-# Created by: Mark Felder <feld@feld.me>
-# $FreeBSD: audio/py-discogs-client/Makefile 322923 2013-07-13 13:24:27Z feld $
+# Created by: Mark Felder <feld@FreeBSD.org>
+# $FreeBSD: audio/py-discogs-client/Makefile 323891 2013-07-29 15:03:58Z feld $
 
 PORTNAME=	discogs-client
 PORTVERSION=	1.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	audio python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	feld@feld.me
+MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Python interface to Discogs website
 
 LICENSE=	BSD
