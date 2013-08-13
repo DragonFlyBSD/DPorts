@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-WebService-ISBNDB/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: www/p5-WebService-ISBNDB/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	WebService-ISBNDB
 PORTVERSION=	0.34
@@ -18,7 +18,8 @@ RUN_DEPENDS=	p5-Business-ISBN>=1.80:${PORTSDIR}/misc/p5-Business-ISBN \
 		p5-TimeDate>=1.16:${PORTSDIR}/devel/p5-TimeDate
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	WebService::ISBNDB.3 \
 	WebService::ISBNDB::API.3 \
