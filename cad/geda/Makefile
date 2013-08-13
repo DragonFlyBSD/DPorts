@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: cad/geda/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: cad/geda/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	geda
 PORTVERSION=	1.8.1
@@ -20,16 +20,15 @@ RUN_DEPENDS=	gawk:${PORTSDIR}/lang/gawk
 
 OPTIONS_DEFINE=	DOCS
 
-USES=        pathfix gettext
+USES=		pathfix gettext perl5
 USE_GNOME=	desktopfileutils gtk20
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 USE_PYTHON=	run
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-libstroke=${LOCALBASE}
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
