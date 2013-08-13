@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: russian/p5-XML-Parser-encodings/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: russian/p5-XML-Parser-encodings/Makefile 324193 2013-08-03 13:52:53Z mat $
 
 PORTNAME=	XML-Parser-encodings
 PORTVERSION=	1.03
@@ -16,8 +16,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		${NONEXISTENT}:${PORTSDIR}/converters/iconv:extract \
 		${NONEXISTENT}:${PORTSDIR}/converters/iconv-extra:extract
 
+USES=		perl5
 NO_WRKSUBDIR=	YES
-USE_PERL5=	YES
 RUSSIANENC=	cp1251 cp866 mac-cyrillic
 
 post-extract:
