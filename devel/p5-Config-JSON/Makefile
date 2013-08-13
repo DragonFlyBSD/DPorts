@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: devel/p5-Config-JSON/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Config-JSON/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Config-JSON
 PORTVERSION=	1.5100
@@ -18,7 +18,8 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS=  ${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
-PERL_CONFIGURE=	Yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Config::JSON.3
 
 .include <bsd.port.mk>
