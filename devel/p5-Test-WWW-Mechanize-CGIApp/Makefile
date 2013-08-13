@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/devel/p5-Test-WWW-Mechanize-CGIApp/Makefile,v 1.5 2012/11/17 05:56:34 svnexp Exp $
+# $FreeBSD: devel/p5-Test-WWW-Mechanize-CGIApp/Makefile 324171 2013-08-02 18:21:05Z az $
 
 PORTNAME=	Test-WWW-Mechanize-CGIApp
 PORTVERSION=	0.05
@@ -15,7 +15,8 @@ RUN_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
 		p5-HTTP-Request-AsCGI>=0:${PORTSDIR}/www/p5-HTTP-Request-AsCGI
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::WWW::Mechanize::CGIApp.3
 
