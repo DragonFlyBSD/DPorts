@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-Astro-satpass/Makefile 323301 2013-07-19 15:02:52Z wen $
+# $FreeBSD: astro/p5-Astro-satpass/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Astro-satpass
 PORTVERSION=	0.057
@@ -27,7 +27,8 @@ SPACETRACK_DESC=	Add support for Astro::SpaceTrack
 USGS_DESC=		Add support for Geo::WebService::Elevation::USGS
 
 CONFIGURE_ARGS=	-y
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		satpass.1
 MAN3=		Astro::Coord::ECI.3 \
