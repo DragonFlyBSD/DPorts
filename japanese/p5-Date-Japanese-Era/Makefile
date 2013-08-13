@@ -2,7 +2,7 @@
 # Date created:                7 March 2002
 # Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
 #
-# $FreeBSD: ports/japanese/p5-Date-Japanese-Era/Makefile,v 1.11 2012/11/17 05:58:38 svnexp Exp $
+# $FreeBSD: japanese/p5-Date-Japanese-Era/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Date-Japanese-Era
@@ -17,7 +17,8 @@ BUILD_DEPENDS=	p5-Date-Calc>=0:${PORTSDIR}/devel/p5-Date-Calc \
 		p5-Lingua-JA-Numbers>=0:${PORTSDIR}/japanese/p5-Lingua-JA-Numbers
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Date::Japanese::Era.3 \
 		Date::Japanese::Era::Table.3 \
