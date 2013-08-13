@@ -2,7 +2,7 @@
 # Date created:				12 October 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-POE-Component-Server-SOAP/Makefile,v 1.9 2012/11/17 06:02:52 svnexp Exp $
+# $FreeBSD: www/p5-POE-Component-Server-SOAP/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	POE-Component-Server-SOAP
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-SOAP-Lite>=0.55:${PORTSDIR}/net/p5-SOAP-Lite \
 		p5-POE>=0:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	POE::Component::Server::SOAP.3 \
 	POE::Component::Server::SOAP::Response.3
