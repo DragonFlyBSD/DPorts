@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-TheSchwartz-Simple
-# Date created:		2010-11-18
-# Whom:			Kurt Lidl <kurt.lidl@cello.com>
-#
-# $FreeBSD: ports/devel/p5-TheSchwartz-Simple/Makefile,v 1.5 2012/11/17 05:56:34 svnexp Exp $
-#
+# Created by: Kurt Lidl <kurt.lidl@cello.com>
+# $FreeBSD: devel/p5-TheSchwartz-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	TheSchwartz-Simple
 PORTVERSION=	0.05
@@ -18,7 +14,8 @@ COMMENT=	DBI only job dispatcher for TheSchwartz
 BUILD_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	TheSchwartz::Simple.3
 
