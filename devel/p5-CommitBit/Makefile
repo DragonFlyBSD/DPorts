@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-CommitBit/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-CommitBit/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CommitBit
 PORTVERSION=	0.02
@@ -16,7 +16,8 @@ RUN_DEPENDS=	p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require \
 		p5-Jifty>=0.60728:${PORTSDIR}/www/p5-Jifty \
 		p5-Text-Password-Pronounceable>=0:${PORTSDIR}/security/p5-Text-Password-Pronounceable
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CommitBit.3 \
 		CommitBit::Action::ConfirmEmail.3 \
