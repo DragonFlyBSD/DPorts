@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Dump/Makefile 315307 2013-03-26 15:39:08Z zi $
+# $FreeBSD: databases/p5-DBIx-Dump/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Dump
 PORTVERSION=	0.04
@@ -16,7 +16,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
     		p5-Spreadsheet-WriteExcel>=0:${PORTSDIR}/textproc/p5-Spreadsheet-WriteExcel \
 		p5-Text-CSV_XS>=0:${PORTSDIR}/textproc/p5-Text-CSV_XS
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DBIx::Dump.3
 
