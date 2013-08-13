@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-CallEditor/Makefile 320115 2013-06-06 16:51:13Z tobez $
+# $FreeBSD: devel/p5-Term-CallEditor/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Term-CallEditor
 PORTVERSION=	0.62
@@ -12,7 +12,8 @@ COMMENT=	Solicit for data from an external editor
 
 LICENSE=	ART10
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Term::CallEditor.3
 
