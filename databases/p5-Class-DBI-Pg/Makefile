@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-DBI-Pg
-# Date created:	   21 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/databases/p5-Class-DBI-Pg/Makefile,v 1.18 2012/11/17 05:55:13 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: databases/p5-Class-DBI-Pg/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-DBI-Pg
 PORTVERSION=	0.09
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
 		p5-DBD-Pg>=0:${PORTSDIR}/databases/p5-DBD-Pg
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Class::DBI::Pg.3
 
