@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/p5-Scrappy/Makefile,v 1.5 2012/11/17 22:46:01 svnexp Exp $
+# $FreeBSD: www/p5-Scrappy/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Scrappy
 PORTVERSION=	0.94112090
@@ -30,7 +30,8 @@ BUILD_DEPENDS=	p5-File-ShareDir-Install>=0.03:${PORTSDIR}/devel/p5-File-ShareDir
 		p5-YAML-Syck>=0:${PORTSDIR}/textproc/p5-YAML-Syck
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	scrappy.1
 MAN3=	Scrappy.3 \
