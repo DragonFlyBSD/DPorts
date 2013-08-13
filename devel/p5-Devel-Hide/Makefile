@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-Devel-Hide/Makefile,v 1.1 2013/02/11 11:33:26 svnexp Exp $
+# $FreeBSD: devel/p5-Devel-Hide/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Devel-Hide
 PORTVERSION=	0.0009
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Forces the unavailability of specified Perl modules (for testing)
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Devel::Hide.3
 
