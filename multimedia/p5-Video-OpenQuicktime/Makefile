@@ -2,7 +2,7 @@
 # Date created:                         Sun Feb 22 23:06:26 EST 2004
 # Whom:                                 Michael Johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/multimedia/p5-Video-OpenQuicktime/Makefile,v 1.14 2012/11/17 05:59:52 svnexp Exp $
+# $FreeBSD: multimedia/p5-Video-OpenQuicktime/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Video-OpenQuicktime
@@ -21,7 +21,8 @@ RUN_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
 
 MAKE_JOBS_UNSAFE=	yes
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Video::OpenQuicktime.3
 
