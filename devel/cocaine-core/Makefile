@@ -1,5 +1,5 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: devel/cocaine-core/Makefile 320228 2013-06-07 22:29:01Z bdrewery $
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: devel/cocaine-core/Makefile 323455 2013-07-22 14:34:22Z vg $
 
 PORTNAME=	cocaine-core
 PORTVERSION=	0.10
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GH GHC
 
-MAINTAINER=	g.veniamin@googlemail.com
+MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Cocaine Application Engine
 
 LICENSE=	GPLv3
