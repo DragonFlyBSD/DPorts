@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net/p5-Net-RawSock/Makefile,v 1.6 2012/12/12 21:45:13 svnexp Exp $
+# $FreeBSD: net/p5-Net-RawSock/Makefile 324007 2013-07-31 06:54:09Z az $
 
 PORTNAME=	Net-RawSock
 PORTVERSION=	1.0
@@ -9,7 +9,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ecu@200ok.org
 COMMENT=	Net::RawSock provides a base function to send raw IP packets from Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure patch
 
 MAN3=		Net::RawSock.3
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
