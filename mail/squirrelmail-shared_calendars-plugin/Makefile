@@ -2,7 +2,7 @@
 # Date created:		02 Jan 2008
 # Whom:		Gerrit Beine <gerrit.beine@gmx.de>
 #
-# $FreeBSD: ports/mail/squirrelmail-shared_calendars-plugin/Makefile,v 1.6 2012/11/17 05:59:16 svnexp Exp $
+# $FreeBSD: mail/squirrelmail-shared_calendars-plugin/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=		shared_calendars
 PORTVERSION=		2.0.1
@@ -39,9 +39,10 @@ SUB_LIST+=		"SQUIRRELDIR=squirrelmail"
 
 SUB_FILES=		pkg-message
 
+USES=			perl5
 NO_BUILD=		yes
 NO_WRKSUBDIR=		yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=		build
 USE_PHP=		yes
 WANT_PHP_WEB=		yes
 
