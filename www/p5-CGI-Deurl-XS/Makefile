@@ -1,9 +1,5 @@
-# New ports collection makefile for:	CGI-Deurl-XS
-# Date created:	   19 Aug 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-CGI-Deurl-XS/Makefile,v 1.3 2012/11/17 06:02:45 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-CGI-Deurl-XS/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CGI-Deurl-XS
 PORTVERSION=	0.07
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Fast decoder for URL parameter strings
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CGI::Deurl::XS.3
 
