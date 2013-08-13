@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Algorithm-IncludeExclude
-# Date created:				03 April 2007
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Algorithm-IncludeExclude/Makefile,v 1.5 2012/11/17 05:56:04 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: devel/p5-Algorithm-IncludeExclude/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Algorithm-IncludeExclude
 PORTVERSION=	0.01
@@ -17,7 +13,8 @@ COMMENT=	Build and evaluate include/exclude lists
 BUILD_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Algorithm::IncludeExclude.3
 
