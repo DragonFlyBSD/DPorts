@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Lazy/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Test-Lazy/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Lazy
 PORTVERSION=	0.061
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Test-Deep>0:${PORTSDIR}/devel/p5-Test-Deep
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::Lazy.3 Test::Lazy::Template.3 Test::Lazy::Tester.3
 
