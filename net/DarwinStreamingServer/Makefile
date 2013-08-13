@@ -1,9 +1,5 @@
-# New ports collection makefile for:	DarwinStreamingServer
-# Date created:				2002/02/23
-# Whom:					steve@stevenwills.com
-#
-# $FreeBSD: net/DarwinStreamingServer/Makefile 320099 2013-06-06 14:04:06Z mat $
-#
+# Created by: steve@stevenwills.com
+# $FreeBSD: net/DarwinStreamingServer/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	DarwinStreamingServer
 PORTVERSION=	6.0.3
@@ -28,7 +24,7 @@ RUN_DEPENDS=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay
 
 NOT_FOR_ARCHS=	ia64 powerpc sparc64
 
-USE_PERL5=	yes
+USES=		perl5
 USE_RC_SUBR=	streamingadminserver darwin_streaming_server
 SUB_LIST+=	PERL=${PERL}
 
