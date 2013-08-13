@@ -1,12 +1,9 @@
-# New ports collection makefile for:	phoronix
-# Date created:				Jul 1, 2009
-# Whom:					Kris Moore <kmoore@FreeBSD.org>
+# Created by:	Kris Moore <kmoore@FreeBSD.org>
 #
-# $FreeBSD: ports/benchmarks/phoronix-test-suite/Makefile,v 1.17 2012/12/02 10:20:34 svnexp Exp $
-#
+# $FreeBSD: benchmarks/phoronix-test-suite/Makefile 323998 2013-07-30 22:35:46Z mm $
 
 PORTNAME=	phoronix-test-suite
-PORTVERSION=	4.0.1
+PORTVERSION=	4.6.1
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.phoronix-test-suite.com/releases/
 
