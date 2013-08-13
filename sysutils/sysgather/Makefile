@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: sysutils/sysgather/Makefile 315137 2013-03-24 16:06:49Z miwi $
+# $FreeBSD: sysutils/sysgather/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	sysgather
 DISTVERSION=	1.0pre10
@@ -16,7 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 OPTIONS_DEFINE=	EXAMPLES
 
-USE_PERL5=	yes
+USES=		perl5
 
 MAN1=		sysgather.1
 
