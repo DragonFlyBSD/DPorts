@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: ports/devel/p5-MooseX-Role-Loggable/Makefile,v 1.5 2013/01/14 11:47:11 svnexp Exp $
+# $FreeBSD: devel/p5-MooseX-Role-Loggable/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	MooseX-Role-Loggable
 PORTVERSION=	0.112
@@ -22,7 +22,8 @@ BUILD_DEPENDS=	p5-Log-Dispatchouli>=0:${PORTSDIR}/devel/p5-Log-Dispatchouli \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		MooseX::Role::Loggable.3
 
