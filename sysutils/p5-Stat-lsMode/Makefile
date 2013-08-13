@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sysutils/p5-Stat-lsMode
-# Date created:				25 April 2001
-# Whom:					Anton Berezin <tobez@tobez.org>
-#
-# $FreeBSD: ports/sysutils/p5-Stat-lsMode/Makefile,v 1.6 2012/11/17 06:01:40 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@tobez.org>
+# $FreeBSD: sysutils/p5-Stat-lsMode/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Stat-lsMode
 PORTVERSION=	0.50
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Stat::lsMode - format file modes like the ls -l command does
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Stat::lsMode.3
 
