@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-Null
-# Date created:		2012-04-08
-# Whom:			Steve Wills <swills@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Class-Null/Makefile,v 1.2 2012/11/17 05:56:08 svnexp Exp $
-#
+# Created by: Steve Wills <swills@FreeBSD.org>
+# $FreeBSD: devel/p5-Class-Null/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Null
 PORTVERSION=	2.110730
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module which implements the Null Class design pattern
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Class::Null.3
 
