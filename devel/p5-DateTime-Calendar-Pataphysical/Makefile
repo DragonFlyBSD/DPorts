@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Calendar-Pataphysical
-# Date created:	   1 july 2003
-# Whom:		   Mathieu Arnold <m@absolight.net>
-#
-# $FreeBSD: ports/devel/p5-DateTime-Calendar-Pataphysical/Makefile,v 1.9 2012/11/17 05:56:11 svnexp Exp $
-#
+# Created by: Mathieu Arnold <m@absolight.net>
+# $FreeBSD: devel/p5-DateTime-Calendar-Pataphysical/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-Calendar-Pataphysical
 PORTVERSION=	0.04
@@ -17,7 +13,8 @@ COMMENT=	Dates in the pataphysical calendar
 BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Calendar::Pataphysical.3
 
