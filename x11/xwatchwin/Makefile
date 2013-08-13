@@ -1,8 +1,5 @@
-# New ports collection makefile for:	xwatchwin
-# Date created:		1 Sep 2000
-# Whom:			Kris Kennaway <kris@FreeBSD.org>
-#
-# $FreeBSD: ports/x11/xwatchwin/Makefile,v 1.10 2012/11/17 06:03:23 svnexp Exp $
+# Created by: Kris Kennaway <kris@FreeBSD.org>
+# $FreeBSD: x11/xwatchwin/Makefile 322008 2013-06-28 22:51:40Z bapt $
 
 PORTNAME=	xwatchwin
 PORTVERSION=	1.1.1
@@ -19,7 +16,7 @@ COMMENT=	Watch a window on another X server
 MAN1=		xwatchwin.1
 PLIST_FILES=	bin/xwatchwin
 
-USE_IMAKE=	yes
+USES=		imake
 USE_XORG=	x11 xext
 
 .include <bsd.port.mk>
