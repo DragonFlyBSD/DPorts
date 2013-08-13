@@ -1,10 +1,11 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: security/py-python-registry/Makefile 316202 2013-04-21 19:15:11Z antoine $
+# $FreeBSD: security/py-python-registry/Makefile 324486 2013-08-10 11:51:31Z antoine $
 
 PORTNAME=	python-registry
-PORTVERSION=	0.2.5
+PORTVERSION=	0.2.6
 CATEGORIES=	security devel python
-MASTER_SITES=	GH
+MASTER_SITES=	GH \
+		LOCAL/antoine
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
@@ -15,16 +16,21 @@ LICENSE=	AL2
 USE_GITHUB=	yes
 GH_ACCOUNT=	williballenthin
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	8ea7e05
+GH_COMMIT=	f4930a1
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
+PORTDOCS=	*
+PORTEXAMPLES=	*
+
 .include <bsd.port.options.mk>
 
 post-patch:
-	${REINPLACE_CMD} -e 's|0.2.4.1|${PORTVERSION}|' ${WRKSRC}/Registry/__init__.py
-	${REINPLACE_CMD} -i '' -e 's|/usr/bin/python|${PYTHON_CMD}|' ${WRKSRC}/samples/*
+	${REINPLACE_CMD} 's|0.2.4.1|${PORTVERSION}|' ${WRKSRC}/Registry/__init__.py
+	${REINPLACE_CMD} 's|/usr/bin/python|${PYTHON_CMD}|' ${WRKSRC}/samples/*.py
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
@@ -33,7 +39,7 @@ post-install:
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/samples/* ${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/samples/*.py ${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
