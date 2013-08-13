@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Test-Unit
-# Date created:	   26 September 2002
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/devel/p5-Test-Unit/Makefile,v 1.13 2012/11/17 05:56:34 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Test-Unit/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Test-Unit
 PORTVERSION=	0.25
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-Class-Inner>=0:${PORTSDIR}/devel/p5-Class-Inner \
 		p5-Error>=0:${PORTSDIR}/lang/p5-Error
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Test::Unit.3 Test::Unit::Assert.3 Test::Unit::Assertion.3 \
 		Test::Unit::Assertion::Boolean.3 \
