@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Class-Constant
-# Date created:		2006-08-27
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/devel/p5-Class-Constant/Makefile,v 1.7 2012/11/17 05:56:07 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: devel/p5-Class-Constant/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Class-Constant
 PORTVERSION=	0.06
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Build constant classes
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=		Class::Constant.3
 
