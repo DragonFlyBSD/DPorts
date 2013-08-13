@@ -1,9 +1,5 @@
-# New ports collection makefile for:	DBIx-Class-WebForm
-# Date created:		11 Feb 2006
-# Whom:			Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/p5-DBIx-Class-WebForm/Makefile,v 1.10 2012/11/17 05:55:15 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: databases/p5-DBIx-Class-WebForm/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DBIx-Class-WebForm
 PORTVERSION=	0.02
@@ -20,7 +16,8 @@ RUN_DEPENDS=	p5-DBIx-Class>=0:${PORTSDIR}/databases/p5-DBIx-Class \
 		p5-Data-FormValidator>=0:${PORTSDIR}/textproc/p5-Data-FormValidator
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 MAN3=	DBIx::Class::WebForm.3
 
