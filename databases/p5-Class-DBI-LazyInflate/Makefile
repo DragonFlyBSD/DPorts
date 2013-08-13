@@ -2,7 +2,7 @@
 # Date created:				05 February 2006
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/p5-Class-DBI-LazyInflate/Makefile,v 1.5 2012/11/17 05:55:13 svnexp Exp $
+# $FreeBSD: databases/p5-Class-DBI-LazyInflate/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Class-DBI-LazyInflate
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Data-Lazy>=0:${PORTSDIR}/devel/p5-Data-Lazy \
 		p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Class::DBI::LazyInflate.3
 
