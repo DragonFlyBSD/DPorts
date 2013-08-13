@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sysutils/p5-Dir-Purge
-# Date created:				4 July 2006
-# Whom:					Emanuel Haupt <ehaupt@FreeBSD.org>
-#
-# $FreeBSD: ports/sysutils/p5-Dir-Purge/Makefile,v 1.5 2012/11/17 06:01:39 svnexp Exp $
-#
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD: sysutils/p5-Dir-Purge/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
 
 PORTNAME=	Dir-Purge
 PORTVERSION=	1.02
@@ -15,7 +11,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Purge directories to a given number of files
 
 PERL_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN3=		Dir::Purge.3
 
