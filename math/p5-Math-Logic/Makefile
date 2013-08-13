@@ -2,7 +2,7 @@
 # Date created:				20 Sep 2000
 # Whom:			Mario S F Ferreira <lioux@linf.unb.br> et al.
 #
-# $FreeBSD: ports/math/p5-Math-Logic/Makefile,v 1.11 2012/11/17 05:59:26 svnexp Exp $
+# $FreeBSD: math/p5-Math-Logic/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Math-Logic
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module providing pure 2, 3, or multi-value logic
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 MAN3=		Math::Logic.3
 
 .include <bsd.port.mk>
