@@ -1,8 +1,9 @@
 # Created by: gugu
-# $FreeBSD: www/p5-Catalyst-Plugin-AutoCRUD/Makefile 317090 2013-05-02 09:34:19Z tobez $
+# $FreeBSD: www/p5-Catalyst-Plugin-AutoCRUD/Makefile 324240 2013-08-04 15:08:42Z az $
 
 PORTNAME=	Catalyst-Plugin-AutoCRUD
 PORTVERSION=	2.131.210
+PORTREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,7 +15,6 @@ COMMENT=	Instant AJAX web front-end for DBIx::Class
 BUILD_DEPENDS=	p5-Catalyst-Action-RenderView>=0:${PORTSDIR}/www/p5-Catalyst-Action-RenderView \
 		p5-Catalyst-Model-DBIC-Schema>=0:${PORTSDIR}/www/p5-Catalyst-Model-DBIC-Schema \
 		p5-Catalyst-Plugin-ConfigLoader>=0:${PORTSDIR}/www/p5-Catalyst-Plugin-ConfigLoader \
-		p5-Catalyst-Plugin-Unicode-Encoding>=0:${PORTSDIR}/www/p5-Catalyst-Plugin-Unicode-Encoding \
 		p5-Catalyst-Runtime>=5.70000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Catalyst-View-JSON>=0:${PORTSDIR}/www/p5-Catalyst-View-JSON \
 		p5-Catalyst-View-TT>=0:${PORTSDIR}/www/p5-Catalyst-View-TT \
@@ -31,7 +31,8 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS \
 		p5-Test-WWW-Mechanize-Catalyst>=0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize-Catalyst
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::AutoCRUD.3 \
 		Catalyst::Plugin::AutoCRUD::Manual::DBICTips.3 \
