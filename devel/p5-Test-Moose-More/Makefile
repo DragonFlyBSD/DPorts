@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Moose-More/Makefile 314449 2013-03-17 14:47:31Z lth $
+# $FreeBSD: devel/p5-Test-Moose-More/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Test-Moose-More
 PORTVERSION=	0.019
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	p5-Data-OptList>=0:${PORTSDIR}/devel/p5-Data-OptList \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::Moose::More.3
 
