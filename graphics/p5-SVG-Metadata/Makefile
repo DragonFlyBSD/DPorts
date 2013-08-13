@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-SVG-Metadata
-# Date created:		2005-03-13
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/p5-SVG-Metadata/Makefile,v 1.10 2012/11/17 05:58:18 svnexp Exp $
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
+# $FreeBSD: graphics/p5-SVG-Metadata/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	SVG-Metadata
 PORTVERSION=	0.28
@@ -17,7 +13,8 @@ COMMENT=	Perl module to capture metadata info about an SVG file
 BUILD_DEPENDS=	xml_grep:${PORTSDIR}/textproc/p5-XML-Twig
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=	svg_validate.1 svg_annotate.1
 MAN3=	SVG::Metadata.3
