@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua::Conjunction
-# Date created:				31 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: ports/textproc/p5-Lingua-Conjunction/Makefile,v 1.7 2012/11/17 06:02:05 svnexp Exp $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-Lingua-Conjunction/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Lingua-Conjunction
 PORTVERSION=	2.00
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert Perl lists into linguistic conjunctions
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Lingua::Conjunction.3
 
