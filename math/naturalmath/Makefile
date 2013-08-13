@@ -1,9 +1,5 @@
-# New ports collection makefile for:    naturalmath
-# Date created:                1 November 2001
-# Whom:                        Stephen Montgomery-Smith
-#
-# $FreeBSD: math/naturalmath/Makefile 320110 2013-06-06 15:59:14Z stephen $
-#
+# Created by: Stephen Montgomery-Smith
+# $FreeBSD: math/naturalmath/Makefile 323702 2013-07-26 07:33:41Z az $
 
 PORTNAME=	naturalmath
 PORTVERSION=	0.5
@@ -16,9 +12,8 @@ COMMENT=	Script to turn intuitively written math into latex
 
 USE_PERL5=	yes
 USE_TEX=	latex:build dvipsk:build
-
-post-patch:
-	@${PERL} -pi -e 's,^#!/usr/bin/perl,#!${PERL},' ${WRKSRC}/naturalmath
+USES=		shebangfix
+SHEBANG_FILES=	naturalmath
 
 do-build:
 	(cd ${WRKSRC}; ./naturalmath tutor.nat; \
