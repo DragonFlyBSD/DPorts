@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Tree-Suffix
-# Date created:				Apr 17 2006
-# Whom:					clsung
-#
-# $FreeBSD: ports/textproc/p5-Tree-Suffix/Makefile,v 1.9 2012/11/17 06:02:11 svnexp Exp $
-#
+# Created by: clsung
+# $FreeBSD: textproc/p5-Tree-Suffix/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Tree-Suffix
 PORTVERSION=	0.21
@@ -16,7 +12,8 @@ COMMENT=	Perl interface to the libstree library
 
 LIB_DEPENDS=	stree.0:${PORTSDIR}/textproc/libstree
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 CFLAGS+=	-I${LOCALBASE}/include
 
 MAN3=		Tree::Suffix.3
