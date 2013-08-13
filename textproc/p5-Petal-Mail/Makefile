@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Petal-Mail
-# Date created:				26 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/p5-Petal-Mail/Makefile,v 1.10 2012/11/17 06:02:06 svnexp Exp $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: textproc/p5-Petal-Mail/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Petal-Mail
 PORTVERSION=	0.31
@@ -21,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAN3=	Petal::Mail.3
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
