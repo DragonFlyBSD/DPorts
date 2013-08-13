@@ -1,12 +1,8 @@
-# New ports collection makefile for:	vo-amrwbenc
-# Date created:		23 Jun 2011
-# Whom:			Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/vo-amrwbenc/Makefile,v 1.5 2012/11/17 05:54:46 svnexp Exp $
-#
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: audio/vo-amrwbenc/Makefile 323861 2013-07-28 22:48:07Z mm $
 
 PORTNAME=	vo-amrwbenc
-PORTVERSION=	0.1.2
+PORTVERSION=	0.1.3
 CATEGORIES=	audio
 MASTER_SITES=	SF/opencore-amr/${PORTNAME}
 
