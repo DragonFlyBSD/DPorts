@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Net-SAML/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: security/p5-Net-SAML/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-SAML
 PORTVERSION=	1.11
@@ -18,7 +18,8 @@ LICENSE=	AL2
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		zxid:${PORTSDIR}/security/zxid
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/${DISTNAME}/Net
 
 MAN3=		Net::SAML.3
