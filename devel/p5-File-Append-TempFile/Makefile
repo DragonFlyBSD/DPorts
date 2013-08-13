@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Append-TempFile/Makefile 313672 2013-03-08 20:23:38Z eadler $
+# $FreeBSD: devel/p5-File-Append-TempFile/Makefile 324222 2013-08-04 12:30:54Z az $
 
 PORTNAME=	File-Append-TempFile
 PORTVERSION=	0.05
@@ -13,13 +13,12 @@ COMMENT=	Append data to files using a temporary copy
 
 TEST_DEPENDS=	p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		File::Append::TempFile.3
 
 PORTDOCS=	Changes README
-
-MAKE_JOBS_SAFE=	yes
 
 test:		build
 		@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test
