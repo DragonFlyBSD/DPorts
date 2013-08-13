@@ -1,5 +1,5 @@
-# Created by: John Marino <draco@marino>
-# $FreeBSD: lang/gnatdroid-armv7/Makefile 316928 2013-04-30 12:38:52Z bapt $
+# Created by: John Marino <marino@FreeBSD.org>
+# $FreeBSD: lang/gnatdroid-armv7/Makefile 322832 2013-07-12 13:40:50Z marino $
 
 PORTNAME=	armv7
 PORTVERSION=	${SNAPSHOT}
@@ -12,7 +12,7 @@ DISTFILES=	gcc-core-${GCC_VERSION}.tar.bz2 \
 		gcc-ada-${GCC_VERSION}.tar.bz2 \
 		gcc-testsuite-${GCC_VERSION}.tar.bz2
 
-MAINTAINER=	draco@marino.st
+MAINTAINER=	marino@FreeBSD.org
 COMMENT=	C/Ada cross-compiler, target: Android ARMv7
 
 BUILD_DEPENDS=	gnatdroid-sysroot>=9:${PORTSDIR}/lang/gnatdroid-sysroot \
