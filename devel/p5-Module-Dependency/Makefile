@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Module-Dependency
-# Date created:				Jul 12 2006
-# Whom:					Cheng-Lung Sung
-#
-# $FreeBSD: ports/devel/p5-Module-Dependency/Makefile,v 1.7 2012/11/17 05:56:21 svnexp Exp $
-#
+# Created by: Cheng-Lung Sung
+# $FreeBSD: devel/p5-Module-Dependency/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Module-Dependency
 PORTVERSION=	1.86
@@ -14,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Collection of modules for examining dependencies
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		pmd_indexer.plx.1 pmd_grapher.plx.1 pmd_dump.pl.1
 MAN3=		Module::Dependency.3 \
