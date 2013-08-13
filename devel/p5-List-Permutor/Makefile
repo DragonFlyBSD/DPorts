@@ -2,7 +2,7 @@
 # Date created:				Wed Aug 9 2006
 # Whom:					Anish Mistry <amistry@am-productions.biz>
 #
-# $FreeBSD: ports/devel/p5-List-Permutor/Makefile,v 1.4 2012/11/17 05:56:20 svnexp Exp $
+# $FreeBSD: devel/p5-List-Permutor/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	List-Permutor
@@ -14,7 +14,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Allow you to process all possible permutations of a list
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		List::Permutor.3
 
