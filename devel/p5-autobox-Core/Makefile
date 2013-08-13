@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-autobox-Core/Makefile 323264 2013-07-19 01:29:54Z wen $
+# $FreeBSD: devel/p5-autobox-Core/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	autobox-Core
 PORTVERSION=	1.27
@@ -16,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-autobox>=2.71:${PORTSDIR}/devel/p5-autobox
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		autobox::Core.3
 
