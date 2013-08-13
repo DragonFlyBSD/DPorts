@@ -2,7 +2,7 @@
 # Date created:				31 Dec 2001
 # Whom:					Seamus Venasse <svenasse@polaris.ca>
 #
-# $FreeBSD: ports/textproc/p5-Lingua-EN-Summarize/Makefile,v 1.9 2012/11/17 06:02:05 svnexp Exp $
+# $FreeBSD: textproc/p5-Lingua-EN-Summarize/Makefile 324171 2013-08-02 18:21:05Z az $
 #
 
 PORTNAME=	Lingua-EN-Summarize
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	p5-HTML-Summary>=0:${PORTSDIR}/www/p5-HTML-Summary \
 		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Lingua::EN::Filters.3 \
 	Lingua::EN::Summarize.3
