@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-LocalDelivery-Ezmlm/Makefile 319535 2013-05-31 16:45:23Z miwi $
+# $FreeBSD: mail/p5-Email-LocalDelivery-Ezmlm/Makefile 324352 2013-08-07 13:20:32Z az $
 
 PORTNAME=	Email-LocalDelivery-Ezmlm
 PORTVERSION=	0.10
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Email-LocalDelivery>=0:${PORTSDIR}/mail/p5-Email-LocalDelivery
 		p5-Email-FolderType>=0:${PORTSDIR}/mail/p5-Email-FolderType
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Email::LocalDelivery::Ezmlm.3
 
