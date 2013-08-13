@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Yahoo-Search
-# Date created:				21 March 2007
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Yahoo-Search/Makefile,v 1.5 2012/11/17 06:02:56 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: www/p5-Yahoo-Search/Makefile 324276 2013-08-05 15:05:29Z az $
 
 PORTNAME=	Yahoo-Search
 PORTVERSION=	1.11.3
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-URI>=1.54:${PORTSDIR}/net/p5-URI \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Yahoo::Search.3 \
 	Yahoo::Search::Request.3 \
