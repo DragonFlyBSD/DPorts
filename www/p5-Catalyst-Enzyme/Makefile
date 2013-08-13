@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Catalyst-Enzyme
-# Date created:				12 Feb 2006
-# Whom:					Lars Balker Rasmussen <lbr@FreeBSD.org>
-#
-# $FreeBSD: ports/www/p5-Catalyst-Enzyme/Makefile,v 1.10 2012/11/17 06:02:46 svnexp Exp $
-#
+# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Enzyme/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Catalyst-Enzyme
 PORTVERSION=	0.11
@@ -36,7 +32,8 @@ BUILD_DEPENDS=	\
 	p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Catalyst::Enzyme.3 \
 	Catalyst::Enzyme::CRUD::Controller.3 \
