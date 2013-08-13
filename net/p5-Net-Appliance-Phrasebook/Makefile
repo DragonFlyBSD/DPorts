@@ -1,9 +1,5 @@
-# New ports collection makefile for:	net/p5-Net-Appliance-Phrasebook
-# Date created:				05 May 2010
-# Whom:					Anton Berezin <tobez@FreeBSD.org>
-#
-# $FreeBSD: ports/net/p5-Net-Appliance-Phrasebook/Makefile,v 1.3 2012/11/17 06:00:10 svnexp Exp $
-#
+# Created by: Anton Berezin <tobez@FreeBSD.org>
+# $FreeBSD: net/p5-Net-Appliance-Phrasebook/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Appliance-Phrasebook
 PORTVERSION=	2.103.642
@@ -24,7 +20,8 @@ RUN_DEPENDS=	p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inheri
 		p5-Data-Phrasebook-Loader-YAML>=0:${PORTSDIR}/textproc/p5-Data-Phrasebook-Loader-YAML \
 		p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Appliance::Phrasebook.3
 
