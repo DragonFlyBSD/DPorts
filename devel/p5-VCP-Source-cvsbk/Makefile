@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-VCP-Source-cvsbk
-# Date created:				Sep 1 2004
-# Whom:					June-Yen Huang <jihuang@gate.sinica.edu.tw>
-#
-# $FreeBSD: ports/devel/p5-VCP-Source-cvsbk/Makefile,v 1.10 2012/11/17 05:56:36 svnexp Exp $
-#
+# Created by: June-Yen Huang <jihuang@gate.sinica.edu.tw>
+# $FreeBSD: devel/p5-VCP-Source-cvsbk/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	VCP-Source-cvsbk
 PORTVERSION=	0.11
@@ -18,7 +14,8 @@ COMMENT=	VCP source driver for bk exported cvs repository
 BUILD_DEPENDS=	p5-VCP-autrijus>=0:${PORTSDIR}/devel/p5-VCP-autrijus
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		VCP::Source::cvsbk.3 \
 		VCP::Filter::cvsbkchangeset.3
