@@ -2,7 +2,7 @@
 # Date created:				28 October 2005
 # Whom:					Anton Berezin <tobez@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Date-Holidays-DK/Makefile,v 1.7 2012/11/17 05:56:11 svnexp Exp $
+# $FreeBSD: devel/p5-Date-Holidays-DK/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	Date-Holidays-DK
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	p5-Date-Simple>=0:${PORTSDIR}/devel/p5-Date-Simple \
 		p5-Date-Easter>=0:${PORTSDIR}/devel/p5-Date-Easter
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Date::Holidays::DK.3
 
