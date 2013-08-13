@@ -2,7 +2,7 @@
 # Date created:				19 September 2005
 # Whom:					Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/www/p5-CGI-Ajax/Makefile,v 1.28 2012/11/17 06:02:45 svnexp Exp $
+# $FreeBSD: www/p5-CGI-Ajax/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	CGI-Ajax
@@ -18,7 +18,8 @@ COMMENT=	A module for writing AJAX/DHTML-based web apps
 BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	CGI::Ajax.3
 
