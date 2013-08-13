@@ -2,7 +2,7 @@
 # Date created:				26 December 2009
 # Whom:					Alex Deiter <Alex.Deiter@Gmail.COM>
 #
-# $FreeBSD: ports/textproc/p5-Text-Emoticon-MSN/Makefile,v 1.3 2012/11/17 06:02:09 svnexp Exp $
+# $FreeBSD: textproc/p5-Text-Emoticon-MSN/Makefile 323776 2013-07-27 10:19:30Z marino $
 #
 
 PORTNAME=	Text-Emoticon-MSN
@@ -13,6 +13,9 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	alex.deiter@gmail.com
 COMMENT=	Emoticon filter of MSN Messenger
+
+DEPRECATED=	Primary MSN Messenger service terminated 30 APR 2013
+EXPIRATION_DATE=2013-10-31
 
 BUILD_DEPENDS=	p5-Text-Emoticon>=0.02:${PORTSDIR}/textproc/p5-Text-Emoticon
 RUN_DEPENDS:=	${BUILD_DEPENDS}
