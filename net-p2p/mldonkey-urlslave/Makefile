@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mldonkey link submitter
-# Date created:				Fri Feb 21 14:11:00 UTC 2003
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/net-p2p/mldonkey-urlslave/Makefile,v 1.13 2012/11/17 06:00:40 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: net-p2p/mldonkey-urlslave/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	mldonkey
 PORTVERSION=	0.0.1
@@ -18,16 +14,14 @@ COMMENT=	GTK+ enabled Perl script for adding ed2k:// links to MLDonkey
 
 BUILD_DEPENDS=	p5-Gtk>=0:${PORTSDIR}/x11-toolkits/p5-Gtk
 
-USE_PERL5=	yes
 NO_BUILD=	yes
+USES=		shebangfix perl5
+SHEBANG_FILES=	${BINARY_NAME}
 
 BINARY_NAME=	mlurlslave
 
 post-extract:
 	@${GREP} '^#' ${WRKSRC}/${BINARY_NAME} | ${GREP} -v '/usr/bin/perl' > ${WRKDIR}/README
-
-post-patch:
-	@${PERL} -pi -e 's|/usr/bin/perl|${PERL}|' ${WRKSRC}/${BINARY_NAME}
 
 do-install:
 .ifndef(NOPORTDOCS)
