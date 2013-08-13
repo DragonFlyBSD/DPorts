@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Radius-Server
-# Date created:		2009-08-25
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/security/p5-Net-Radius-Server/Makefile,v 1.4 2012/12/16 06:16:58 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: security/p5-Net-Radius-Server/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Radius-Server
 PORTVERSION=	1.116
@@ -23,7 +19,8 @@ RUN_DEPENDS=	p5-Authen-PAM>=0:${PORTSDIR}/security/p5-Authen-PAM \
 		p5-NetAddr-IP>=4:${PORTSDIR}/net-mgmt/p5-NetAddr-IP \
 		p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		nrsd.1 \
 		nrsdbtoyaml.1 \
