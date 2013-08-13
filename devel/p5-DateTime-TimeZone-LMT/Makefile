@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: devel/p5-DateTime-TimeZone-LMT/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-DateTime-TimeZone-LMT/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	DateTime-TimeZone-LMT
 PORTVERSION=	1.00
@@ -13,7 +13,8 @@ COMMENT=	Local Mean Time time zone for DateTime
 BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::TimeZone::LMT.3
 
