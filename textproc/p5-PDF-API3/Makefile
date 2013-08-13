@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: ports/textproc/p5-PDF-API3/Makefile,v 1.53 2012/11/17 06:02:06 svnexp Exp $
+# $FreeBSD: textproc/p5-PDF-API3/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	PDF-API3
 PORTVERSION=	3.001
@@ -10,7 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	The Next Generation of Text::PDF::API2
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	PDF::API3::Compat::API2::Basic::TTF::GDEF.3 \
 	PDF::API3::Compat::API2::Resource::XObject::Form::BarCode::codabar.3 \
