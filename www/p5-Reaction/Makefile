@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Reaction
-# Date created:	   20 Aug 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/www/p5-Reaction/Makefile,v 1.10 2012/11/17 06:02:53 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: www/p5-Reaction/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Reaction
 PORTVERSION=	0.001001
@@ -43,7 +39,8 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7002:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Devel-Declare>=0:${PORTSDIR}/devel/p5-Devel-Declare
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN1=		componentui_cgi.pl.1 componentui_create.pl.1 \
 		componentui_fastcgi.pl.1 componentui_server.pl.1 \
