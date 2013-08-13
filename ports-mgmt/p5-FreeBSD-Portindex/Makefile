@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: ports-mgmt/p5-FreeBSD-Portindex/Makefile 315902 2013-04-16 20:53:16Z matthew $
+# $FreeBSD: ports-mgmt/p5-FreeBSD-Portindex/Makefile 324134 2013-08-01 22:04:01Z matthew $
 
 PORTNAME=	FreeBSD-Portindex
 PORTVERSION=	3.2
@@ -27,8 +27,9 @@ GRAPHVIS_DESCR=	Add GraphViz run-time dependency
 RUN_DEPENDS+=	dot:${PORTSDIR}/graphics/graphviz
 .endif
 
+USES+=		perl5
 USE_XZ=		yes
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
 
 CACHE_DIR?=	/var/db/portindex
 CACHE_OWNER?=	root
