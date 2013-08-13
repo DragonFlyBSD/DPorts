@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: ports/textproc/p5-Regexp-Log-Common/Makefile,v 1.11 2012/11/17 06:02:07 svnexp Exp $
+# $FreeBSD: textproc/p5-Regexp-Log-Common/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Regexp-Log-Common
 PORTVERSION=	0.07
@@ -15,7 +15,8 @@ LICENSE=	ART20
 RUN_DEPENDS=	p5-Regexp-Log>=0:${PORTSDIR}/textproc/p5-Regexp-Log
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Regexp::Log::Common.3
 
