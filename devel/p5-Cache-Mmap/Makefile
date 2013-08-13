@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Cache-Mmap
-# Date created:				January 25th 2003
-# Whom:	      				Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-Cache-Mmap/Makefile,v 1.14 2012/11/17 05:56:06 svnexp Exp $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: devel/p5-Cache-Mmap/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Cache-Mmap
 PORTVERSION=	0.11
@@ -15,7 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Cache::Mmap - Shared data cache using memory mapped files
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Cache::Mmap.3
 
