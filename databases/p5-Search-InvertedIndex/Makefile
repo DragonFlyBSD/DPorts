@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: databases/p5-Search-InvertedIndex/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: databases/p5-Search-InvertedIndex/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Search-InvertedIndex
 PORTVERSION=	1.14
@@ -16,7 +16,8 @@ BUILD_DEPENDS=	p5-Class-NamedParms>=0:${PORTSDIR}/devel/p5-Class-NamedParms \
 		p5-Tie-FileLRUCache>=0:${PORTSDIR}/devel/p5-Tie-FileLRUCache
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Search::InvertedIndex.3 \
 		Search::InvertedIndex::AutoLoader.3 \
