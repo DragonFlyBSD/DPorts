@@ -1,20 +1,16 @@
-# Ports collection makefile for:	rubygem-typhoeus
-# Date created:				26 June 2011
-# Whom:					Eric Freeman <freebsdports@chillibear.com>
-#
-# $FreeBSD: ports/www/rubygem-typhoeus/Makefile,v 1.3 2012/11/17 06:03:05 svnexp Exp $
-#
+# Created by: Eric Freeman <freebsdports@chillibear.com>
+# $FreeBSD: www/rubygem-typhoeus/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	typhoeus
-PORTVERSION=	0.3.3
+PORTVERSION=	0.6.3
+PORTREVISION=	1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Parallel HTTP request library
 
-RUN_DEPENDS=	rubygem-mime-types>=0:${PORTSDIR}/misc/rubygem-mime-types
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+RUN_DEPENDS=	rubygem-ethon>=0.5.11:${PORTSDIR}/www/rubygem-ethon
 
 USE_RUBY=		yes
 USE_RUBYGEMS=		yes
