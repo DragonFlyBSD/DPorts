@@ -1,13 +1,13 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: science/rubygem-ai4r/Makefile 322808 2013-07-12 03:36:30Z swills $
+# $FreeBSD: science/rubygem-ai4r/Makefile 323794 2013-07-27 16:06:01Z swills $
 
 PORTNAME=	ai4r
 PORTVERSION=	1.12
 CATEGORIES=	science rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	freebsdports@chillibear.com
-COMMENT=	Ruby implementations of artificial intelligence algorithms
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Various Ruby artificial intelligence algorithm implementations 
 
 USE_RUBY=		yes
 USE_RUBYGEMS=		yes
