@@ -2,7 +2,7 @@
 # Date created:		2011-08-15
 # Whom:			Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-Any-Moose-Convert/Makefile,v 1.6 2012/11/17 05:56:04 svnexp Exp $
+# $FreeBSD: devel/p5-Any-Moose-Convert/Makefile 321187 2013-06-18 13:49:02Z az $
 #
 
 PORTNAME=	Any-Moose-Convert
@@ -25,10 +25,4 @@ PERL_CONFIGURE=	yes
 
 MAN3=		Any::Moose::Convert.3
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 501001
-TEST_DEPENDS+=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
