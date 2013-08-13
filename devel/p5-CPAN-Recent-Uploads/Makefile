@@ -2,7 +2,7 @@
 # Date created:		2011-08-26
 # Whom:			Lars Thegler <lth@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/p5-CPAN-Recent-Uploads/Makefile,v 1.2 2012/11/17 05:56:05 svnexp Exp $
+# $FreeBSD: devel/p5-CPAN-Recent-Uploads/Makefile 324352 2013-08-07 13:20:32Z az $
 #
 
 PORTNAME=	CPAN-Recent-Uploads
@@ -20,7 +20,8 @@ RUN_DEPENDS=	p5-libwww>=5.835:${PORTSDIR}/www/p5-libwww \
 		p5-YAML-Syck>=1.15:${PORTSDIR}/textproc/p5-YAML-Syck
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		CPAN::Recent::Uploads.3 \
 		CPAN::Recent::Uploads::Retriever.3
