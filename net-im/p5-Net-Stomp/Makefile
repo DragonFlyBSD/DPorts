@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Net-Stomp
-# Date created:	   08 February 2007
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/net-im/p5-Net-Stomp/Makefile,v 1.13 2012/11/17 06:00:28 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: net-im/p5-Net-Stomp/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Net-Stomp
 PORTVERSION=	0.45
@@ -20,7 +16,8 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Net::Stomp.3 Net::Stomp::Frame.3
 
