@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gtkgraph
-# Date created:				12 October 1999
-# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: graphics/gtkgraph/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: graphics/gtkgraph/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME=	gtkgraph
 PORTVERSION=	0.6.1
@@ -15,16 +11,16 @@ MASTER_SITE_SUBDIR= jedgar
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphing calculator using GTK+
 
-USES=		gettext
+USES=		gettext perl5
 USE_GMAKE=	yes
 USE_GNOME=	imlib
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 pre-patch:
-	@${PERL} -pi -e 's|-lpthread|${PTHREAD_LIBS}|g ; s|-O2|${CFLAGS}| ; \
+	@${REINPLACE_CMD} -i '' -e 's|-O2|${CFLAGS}| ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
