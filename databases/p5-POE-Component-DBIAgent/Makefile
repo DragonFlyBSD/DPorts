@@ -1,9 +1,5 @@
-# New ports collection makefile for:	POE-Component-DBIAgent
-# Date created:		10 Dec 2001
-# Whom:			Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: ports/databases/p5-POE-Component-DBIAgent/Makefile,v 1.16 2012/11/17 05:55:16 svnexp Exp $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: databases/p5-POE-Component-DBIAgent/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	POE-Component-DBIAgent
 PORTVERSION=	0.26
@@ -20,7 +16,8 @@ BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		POE::Component::DBIAgent.3 POE::Component::DBIAgent::Helper.3 \
 		POE::Component::DBIAgent::Queue.3
