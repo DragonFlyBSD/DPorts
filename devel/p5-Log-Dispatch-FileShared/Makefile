@@ -1,5 +1,5 @@
 # Created by: Craig Manley
-# $FreeBSD: devel/p5-Log-Dispatch-FileShared/Makefile 315509 2013-03-29 00:44:53Z eadler $
+# $FreeBSD: devel/p5-Log-Dispatch-FileShared/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	Log-Dispatch-FileShared
 PORTVERSION=	1.02
@@ -14,7 +14,8 @@ BUILD_DEPENDS=	p5-Log-Dispatch>=0:${PORTSDIR}/devel/p5-Log-Dispatch \
 		p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Log::Dispatch::FileShared.3
 
