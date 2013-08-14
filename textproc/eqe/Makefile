@@ -1,8 +1,5 @@
-# New ports collection makefile for:	eqe
-# Date created:				2007/02/13
-# Whom:					chinsan
-#
-# $FreeBSD: textproc/eqe/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: chinsan
+# $FreeBSD: textproc/eqe/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	eqe
 PORTVERSION=	1.3.0
@@ -18,8 +15,8 @@ BUILD_DEPENDS=	p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit \
 		Magick++-config:${PORTSDIR}/graphics/ImageMagick
 
+USES=		perl5
 USE_BZIP2=	yes
-USE_PERL5=	yes
 USE_TEX=	tex
 
 MAKE_ARGS=	PREFIX=${PREFIX}
