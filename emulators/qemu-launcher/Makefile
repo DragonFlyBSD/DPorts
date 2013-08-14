@@ -1,4 +1,4 @@
-# $FreeBSD: emulators/qemu-launcher/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: emulators/qemu-launcher/Makefile 324181 2013-08-03 08:45:51Z az $
 
 PORTNAME=	qemu-launcher
 PORTVERSION=	1.7.4
@@ -15,11 +15,10 @@ RUN_DEPENDS=	p5-Gtk2>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		p5-Locale-gettext>=0:${PORTSDIR}/devel/p5-Locale-gettext
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USE_PERL5=	yes
 NO_BUILD=	yes
 USE_GNOME=	gtk20
 INSTALLS_ICONS=	yes
-USES=		gettext
+USES=		gettext perl5
 
 MAN1=	qemu-launcher.1
 
