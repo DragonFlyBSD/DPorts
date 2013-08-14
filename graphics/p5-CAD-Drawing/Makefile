@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: graphics/p5-CAD-Drawing/Makefile 318921 2013-05-24 07:57:15Z az $
+# $FreeBSD: graphics/p5-CAD-Drawing/Makefile 324174 2013-08-02 18:52:07Z mat $
 
 PORTNAME=	CAD-Drawing
 PORTVERSION=	0.26
@@ -32,6 +32,7 @@ MAN3=	CAD::Drawing.3 \
 	CAD::Drawing::Manipulate::Graphics.3 \
 	CAD::Drawing::Manipulate::Transform.3
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
 .include <bsd.port.mk>
