@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: print/muttprint/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: print/muttprint/Makefile 324191 2013-08-03 13:44:00Z mat $
 
 PORTNAME?=	muttprint
 PORTVERSION=	0.72d
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/muttprint/muttprint/muttprint-${PORTVERSION}
 MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	Utility to print mail for most any mail client
 
-USE_PERL5=	yes
+USES=		perl5
 
 .if !defined(PAPERSIZE)
 PAPERSIZE=	letter
