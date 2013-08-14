@@ -1,4 +1,4 @@
-# $FreeBSD: editors/libreoffice/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: editors/libreoffice/Makefile 324231 2013-08-04 13:18:24Z az $
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -69,12 +69,12 @@ GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf aclocal
 USE_GCC=	4.7
 USE_GMAKE=	yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 USE_PYTHON=	3.3+
 USE_QT4=	# empty but required
 USE_XORG=	xaw xrandr
 USE_XZ=		yes
-USES=		bison pkgconfig
+USES=		bison pkgconfig perl5
 USE_GNOME+=	gtk20 desktopfileutils
 INSTALLS_ICONS= yes
 
